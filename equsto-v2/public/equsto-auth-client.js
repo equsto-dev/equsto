@@ -145,7 +145,7 @@
       if (j && j.success) {
         applySession(j);
         setMsg('');
-        var next = new URLSearchParams(location.search).get('next') || 'index.html';
+        var next = new URLSearchParams(location.search).get('next') || '/';
         setTimeout(function () {
           if (typeof window.eqGo === 'function') window.eqGo('home');
           else location.href = next;
@@ -169,7 +169,7 @@
           setMsg('');
           setTimeout(function () {
             if (typeof window.eqGo === 'function') window.eqGo('home');
-            else location.href = 'index.html';
+            else location.href = '/';
           }, 400);
         } else if (j && j.error) {
           setMsg(j.error, false);
@@ -234,7 +234,7 @@
             mode === 'register' ? 'Kayıt tamamlandı. Yönlendiriliyorsunuz…' : 'Giriş başarılı. Yönlendiriliyorsunuz…',
             true,
           );
-          var next = new URLSearchParams(location.search).get('next') || 'index.html';
+          var next = new URLSearchParams(location.search).get('next') || '/';
           setTimeout(function () {
             if (typeof window.eqGo === 'function' && /index|home/i.test(next)) window.eqGo('home');
             else location.href = next;

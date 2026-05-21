@@ -126,7 +126,7 @@
 
     root.innerHTML =
       '<nav class="bm-crumb" aria-label="Breadcrumb">' +
-      '<a href="/index.html">Equsto</a> · <a href="' +
+      '<a href="/">Equsto</a> · <a href="' +
       esc(besosHref()) +
       '">Bar Design</a> · <span>' +
       esc(name) +

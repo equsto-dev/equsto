@@ -255,7 +255,7 @@
     var slash = filePart.lastIndexOf("/");
     var file = slash >= 0 ? filePart.slice(slash + 1) : filePart;
     if (file === "pfos.html") return window.equstoUrl("pfos") + query + hash;
-    if (file === "index.html") return window.equstoUrl("shop") + query + hash;
+    if (file === "index.html") return window.equstoUrl("home") + query + hash;
     if (file === "admin.html") return window.equstoUrl("admin") + query + hash;
     if (file === "bar.html" || file === "bar-design.html") return window.equstoUrl("besos") + query + hash;
     if (file === "contact.html") return window.equstoUrl("contact") + query + hash;
@@ -574,7 +574,7 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     if (typeof window.eqFixDataImagesInDom === "function") window.eqFixDataImagesInDom(document);
-    document.querySelectorAll('a.logo[href="index.html"]').forEach(function (a) {
+    document.querySelectorAll('a.logo[href="index.html"], a.logo[href="/index.html"]').forEach(function (a) {
       a.href = window.equstoUrl("home");
     });
     document.querySelectorAll('a[href="admin.html"], a[href^="admin.html#"]').forEach(function (a) {
