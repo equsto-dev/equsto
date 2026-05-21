@@ -34,8 +34,22 @@
     var img = hit && hit.image;
     if (!img) return "";
     img = String(img).replace(/\\/g, "/");
-    if (img.indexOf("http") === 0 || img.indexOf("/") === 0) return img;
-    return "/" + img;
+    if (/^https?:\/\//i.test(img)) return img;
+    if (typeof window.equstoDataAssetHref === "function") {
+      try {
+        var href = window.equstoDataAssetHref(img);
+        if (href) return href;
+      } catch (_) {}
+    }
+    if (/^images\//i.test(img)) {
+      var root =
+        typeof window.equstoCatalogImagesWebRoot === "function"
+          ? window.equstoCatalogImagesWebRoot()
+          : "/data/images/";
+      return root + img.replace(/^images\//i, "");
+    }
+    if (img.charAt(0) === "/") return img;
+    return "/data/" + img.replace(/^data\//, "");
   }
 
   function formatPrice(p) {
@@ -87,6 +101,7 @@
     grid.innerHTML = hits
       .map(function (h) {
         var href = productHref(h);
+        var rawImg = h.image ? String(h.image).replace(/\\/g, "/") : "";
         var src = imgSrc(h);
         var cartBtn =
           window.EqustoCart && window.EqustoCart.cartAddButtonAttrs
@@ -106,7 +121,15 @@
           esc(href) +
           '">' +
           (src
-            ? '<img src="' + esc(src) + '" alt="" loading="lazy">'
+            ? '<img src="' +
+              esc(src) +
+              '"' +
+              (rawImg
+                ? ' data-eq-img-raw="' +
+                  esc(rawImg) +
+                  '" data-eq-img-step="0"'
+                : "") +
+              ' alt="" loading="lazy" decoding="async" onerror="typeof __eqImgFail===\'function\'&&__eqImgFail(this)">'
             : '<span class="eq-dept-plp-card__ph">Görsel</span>') +
           "</a>" +
           '<a class="eq-dept-plp-card__name" href="' +

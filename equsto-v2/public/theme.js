@@ -565,7 +565,7 @@
 
   if (!document.querySelector('script[src*="eq-header-search"]')) {
     var meiliHdr = document.createElement("script");
-    meiliHdr.src = "/eq-header-search.js?v=20260521panel";
+    meiliHdr.src = "/eq-header-search.js?v=20260521img";
     meiliHdr.defer = true;
     document.head.appendChild(meiliHdr);
   }

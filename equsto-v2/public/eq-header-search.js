@@ -47,8 +47,35 @@
     var img = hit && hit.image;
     if (!img) return "";
     img = String(img).replace(/\\/g, "/");
-    if (img.indexOf("http") === 0 || img.indexOf("/") === 0) return img;
-    return "/" + img;
+    if (/^https?:\/\//i.test(img)) return img;
+    if (typeof window.equstoDataAssetHref === "function") {
+      try {
+        var href = window.equstoDataAssetHref(img);
+        if (href) return href;
+      } catch (_) {}
+    }
+    if (/^images\//i.test(img)) {
+      var root =
+        typeof window.equstoCatalogImagesWebRoot === "function"
+          ? window.equstoCatalogImagesWebRoot()
+          : "/data/images/";
+      return root + img.replace(/^images\//i, "");
+    }
+    if (img.charAt(0) === "/") return img;
+    return "/data/" + img.replace(/^data\//, "");
+  }
+
+  function imgTag(hit) {
+    var raw = hit && hit.image ? String(hit.image).replace(/\\/g, "/") : "";
+    var src = imgSrc(hit);
+    if (!src) return '<span class="eq-srch-panel__thumb eq-srch-panel__thumb--ph"></span>';
+    return (
+      '<img class="eq-srch-panel__thumb" src="' +
+      esc(src) +
+      '"' +
+      (raw ? ' data-eq-img-raw="' + esc(raw) + '" data-eq-img-step="0"' : "") +
+      ' alt="" loading="lazy" decoding="async" onerror="typeof __eqImgFail===\'function\'&&__eqImgFail(this)">'
+    );
   }
 
   function getSrchRoot() {
@@ -110,16 +137,13 @@
     var html = "";
     for (var i = 0; i < hits.length; i++) {
       var h = hits[i];
-      var src = imgSrc(h);
       html +=
         '<a class="eq-srch-panel__item" role="option" data-idx="' +
         i +
         '" href="' +
         esc(productHref(h)) +
         '">' +
-        (src
-          ? '<img class="eq-srch-panel__thumb" src="' + esc(src) + '" alt="" loading="lazy">'
-          : '<span class="eq-srch-panel__thumb eq-srch-panel__thumb--ph"></span>') +
+        imgTag(h) +
         '<span class="eq-srch-panel__text">' +
         '<span class="eq-srch-panel__name">' +
         esc(h.name || "") +
