@@ -1,5 +1,11 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { db } from "@/lib/db";
+import {
+  formatSpecsRows,
+  parseProductSpecs,
+  resolveProductImageUrl,
+} from "@/lib/product-specs";
 
 export default async function UrunPage({
   params,
@@ -13,30 +19,85 @@ export default async function UrunPage({
   });
   if (!product || product.status !== "PUBLISHED") notFound();
 
-  const img = product.images.find((i) => i.isPrimary) ?? product.images[0];
+  const specs = parseProductSpecs(product.specs);
+  const primary = product.images.find((i) => i.isPrimary) ?? product.images[0];
+  const imgUrl = resolveProductImageUrl(primary?.url, specs);
+  const specRows = formatSpecsRows(specs, product.modelCode);
 
   return (
-    <article>
+    <article className="max-w-3xl">
+      <nav className="text-sm text-neutral-500 mb-4">
+        <Link href="/" className="hover:text-neutral-800">
+          Ana sayfa
+        </Link>
+        {" · "}
+        <Link
+          href={`/kategori/${product.category.slug}`}
+          className="hover:text-neutral-800"
+        >
+          {product.category.name}
+        </Link>
+      </nav>
+
       <p className="text-sm text-neutral-500 mb-1">
         {product.brand.name} · {product.category.name}
       </p>
       <h1 className="text-2xl font-semibold text-neutral-900">{product.name}</h1>
-      <p className="text-sm text-neutral-600 mt-1">Model: {product.modelCode}</p>
+
       {product.priceListTl != null ? (
-        <p className="mt-4 text-lg font-medium">
-          {Number(product.priceListTl).toLocaleString("tr-TR")} {product.priceCurrency}
+        <p className="mt-4 text-2xl font-semibold text-neutral-900">
+          {Number(product.priceListTl).toLocaleString("tr-TR")}{" "}
+          <span className="text-base font-normal text-neutral-600">
+            {product.priceCurrency}
+          </span>
         </p>
       ) : null}
-      {img ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={img.url}
-          alt={img.alt || product.name}
-          className="mt-6 max-h-64 border border-neutral-200 rounded"
-        />
+
+      {specs.fiyat_euro_katalog != null ? (
+        <p className="mt-1 text-sm text-neutral-500">
+          Liste {specs.fiyat_euro_katalog.toLocaleString("tr-TR")} EUR
+          {specs.fiyat_euro_site != null
+            ? ` · Site (≈%40 iskonto): ${specs.fiyat_euro_site.toLocaleString("tr-TR")} EUR`
+            : null}
+        </p>
       ) : null}
+
+      <div className="mt-6 flex flex-col sm:flex-row gap-8">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={imgUrl}
+          alt={primary?.alt || product.name}
+          width={400}
+          height={300}
+          className="w-full sm:w-80 h-auto object-contain border border-neutral-200 rounded-lg bg-neutral-50 p-4"
+        />
+
+        <div className="flex-1 min-w-0">
+          <h2 className="text-sm font-semibold text-neutral-800 uppercase tracking-wide mb-3">
+            Teknik özellikler
+          </h2>
+          <table className="w-full text-sm border border-neutral-200 rounded-lg overflow-hidden">
+            <tbody>
+              {specRows.map((row) => (
+                <tr key={row.label} className="border-b border-neutral-100 last:border-0">
+                  <th className="text-left font-medium text-neutral-600 bg-neutral-50 px-3 py-2 w-40">
+                    {row.label}
+                  </th>
+                  <td className="px-3 py-2 text-neutral-900">{row.value}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          {imgUrl.includes("_placeholder") ? (
+            <p className="mt-3 text-xs text-neutral-500">
+              Ürün fotoğrafı yakında eklenecek.
+            </p>
+          ) : null}
+        </div>
+      </div>
+
       {product.description ? (
-        <p className="mt-6 text-neutral-700 whitespace-pre-wrap">{product.description}</p>
+        <p className="mt-8 text-neutral-600 text-sm leading-relaxed">{product.description}</p>
       ) : null}
     </article>
   );

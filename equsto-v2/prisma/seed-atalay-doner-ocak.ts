@@ -68,9 +68,11 @@ async function main() {
     },
   });
 
+  const PLACEHOLDER = "/images/catalog/atalay/doner/_placeholder.svg";
+
   let n = 0;
   for (const p of raw.products) {
-    await prisma.product.upsert({
+    const product = await prisma.product.upsert({
       where: { slug: p.slug },
       update: {
         name: p.name,
@@ -122,12 +124,23 @@ async function main() {
         },
         images: {
           create: {
-            url: p.imagePath,
+            url: PLACEHOLDER,
             alt: p.name,
             isPrimary: true,
             order: 0,
           },
         },
+      },
+    });
+
+    await prisma.productImage.deleteMany({ where: { productId: product.id } });
+    await prisma.productImage.create({
+      data: {
+        productId: product.id,
+        url: PLACEHOLDER,
+        alt: p.name,
+        isPrimary: true,
+        order: 0,
       },
     });
     n++;
