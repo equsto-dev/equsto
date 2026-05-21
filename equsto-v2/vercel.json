@@ -6,7 +6,7 @@
   "crons": [
     {
       "path": "/api/cron/tcmb-kur",
-      "schedule": "0 * * * *"
+      "schedule": "30 12 * * *"
     }
   ]
 }

@@ -39,7 +39,7 @@ GET https://equsto.com/api/kur
 
 ## Vercel Cron (DB senkronu)
 
-`vercel.json` → hafta içi **12:30 UTC** (15:30 TR) → `GET /api/cron/tcmb-kur`
+`vercel.json` → günde **1 kez** **12:30 UTC** (15:30 TR) → `GET /api/cron/tcmb-kur` (Vercel Hobby: saatlik cron deploy’u reddeder)
 
 Vercel env:
 
