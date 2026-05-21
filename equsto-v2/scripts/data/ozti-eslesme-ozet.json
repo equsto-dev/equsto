@@ -1,24 +1,24 @@
 {
-  "fiyat_listesi_urun": 4901,
+  "fiyat_listesi_urun": 5250,
   "pdf_kod_sayisi": 4906,
   "eslesen": 4335,
   "eslesen_soft_kod": 8,
-  "sadece_fiyat_listesinde": 565,
+  "sadece_fiyat_listesinde": 909,
   "sadece_pdf_katalogda": 654,
   "iskonto_gruplari": {
-    "0.65": 2425,
-    "0.55": 1250,
+    "0.65": 2631,
+    "0.55": 1310,
     "0.6": 1044,
-    "nan": 142,
-    "0.5": 40
+    "nan": 156,
+    "0.5": 109
   },
   "kategori_leaf_sayilari": {
     "YER IZGARALARI": 335,
     "GURMEAID MUTFAK AKSESUARLARI": 179,
+    "AKSESUARLAR": 154,
     "ÇALIŞMA TEZGAHLARI": 136,
     "SERVİS GEREÇLERİ": 134,
     "LAVA DÖKÜM TENCERE VE TAVALAR": 125,
-    "AKSESUARLAR": 116,
     "GURMEAID PROFESYONEL BIÇAKLAR": 114,
     "EVYE TABLALARI": 76,
     "PASTANE EKİPMANLARI": 76,
@@ -35,8 +35,8 @@
     "KÖŞE DESENLİ GASTRONORM KÜVETLER": 45,
     "SOĞUK ODALAR": 44,
     "DERİN DONDURUCU ODALAR": 44,
+    "CHAFING DISHLER": 43,
     "TEMİZLİK VE HİJYEN ÜRÜNLERİ": 41,
-    "CHAFING DISHLER": 41,
     "GASTRONORM KAPAKLAR": 41,
     "BUZ MAKİNELERİ": 40,
     "EVYELİ TEZGAHLAR": 40,
@@ -44,6 +44,7 @@
     "BUZDOLAPLARI VE DERİN DONDURUCULAR": 38,
     "BULAŞIK MAKİNESİ GİRİŞ VE ÇIKIŞ TEZGAHLARI": 36,
     "ÇALIŞMA TEZGAHLARI (BULAŞIK MAKİNESİ TEZGAHLARI)": 36,
+    "ANKASTRE SELF SERVİS TEŞHİR ÜNİTELERİ": 36,
     "DELİKLİ KÖŞE DESENLİ GASTRONORM KÜVETLER": 36,
     "PRES BASKI TEPSİLER": 36,
     "EL YIKAMA EVYELERİ": 35,
@@ -51,6 +52,7 @@
     "BAR AKSESUARLARI": 34,
     "POLİPROPİLEN TABLALI İSTİF RAFLARI": 33,
     "EVYELİ TEZGAHLAR (TEK EVYELİ VE PERDELİ TEZGAHLAR)": 30,
+    "DUVAR TİPİ TEŞHİR ÜNİTELERİ": 30,
     "GN KÜVETLER YAPIŞMAZ KAPLAMALI": 30,
     "GURMEAID SİLİKON PASTA KALIPLARI": 30,
     "ÇAY OCAKLARI VE KAHVE MAKİNELERİ": 29,
@@ -60,9 +62,7 @@
     "ÇALIŞMA TEZGAHLARI (TABAN RAFLI, SIRTSIZ ÇALIŞMA TEZGAHI)": 28,
     "ARABALAR": 28,
     "SAPLI GASTRONORM KÜVETLER": 28,
-    "TAVALAR": 28,
-    "MİKSER AKSESUAR": 27,
-    "TAŞIMA EKİPMANLARI": 27
+    "TAVALAR": 28
   },
   "fiyatlandirma": "satis_fiyati_eur = liste_fiyati_eur × (1 − bayi_iskonto); ör. bayi_iskonto 0,65 → %65 indirim, ödeme ×0,35",
   "ornek_eslesen": [

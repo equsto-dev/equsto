@@ -2157,6 +2157,424 @@
         ]
       },
       {
+        "urun_kodu": "5R1X.28110.00",
+        "urun_tanimi": "ROBOT COUPE KÜP KESME 5X5X5 MM",
+        "liste_fiyati_eur": 573.4868694912,
+        "satis_fiyati_eur": 258.07,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.28111.00",
+        "urun_tanimi": "ROBOT COUPE KESME DISKI 8*8 MM",
+        "liste_fiyati_eur": 525.6962970336,
+        "satis_fiyati_eur": 236.56,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.28112.00",
+        "urun_tanimi": "ROBOT COUPE KUP KESME 10*10 MM",
+        "liste_fiyati_eur": 525.6962970336,
+        "satis_fiyati_eur": 236.56,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.28113.00",
+        "urun_tanimi": "ROBOT COUPE KESME DISKI 14*14 MM",
+        "liste_fiyati_eur": 525.6962970336,
+        "satis_fiyati_eur": 236.56,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.28114.00",
+        "urun_tanimi": "ROBOT COUPE KESME DISKI 20*20 MM",
+        "liste_fiyati_eur": 525.6962970336,
+        "satis_fiyati_eur": 236.56,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.28115.00",
+        "urun_tanimi": "ROBOT COUPE KESME DISKI 25*25 MM",
+        "liste_fiyati_eur": 525.6962970336,
+        "satis_fiyati_eur": 236.56,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.28056.00",
+        "urun_tanimi": "ROBOT COUPE RENDE 1,5 MM",
+        "liste_fiyati_eur": 191.16228983040003,
+        "satis_fiyati_eur": 86.02,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.28057.00",
+        "urun_tanimi": "ROBOT COUPE RENDE 2 MM",
+        "liste_fiyati_eur": 191.16228983040003,
+        "satis_fiyati_eur": 86.02,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.28058.00",
+        "urun_tanimi": "ROBOT COUPE RENDE 3 MM",
+        "liste_fiyati_eur": 191.16228983040003,
+        "satis_fiyati_eur": 86.02,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.28073.00",
+        "urun_tanimi": "ROBOT COUPE RENDE 4MM",
+        "liste_fiyati_eur": 191.16228983040003,
+        "satis_fiyati_eur": 86.02,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.28059.00",
+        "urun_tanimi": "ROBOT COUPE RENDE 5 MM",
+        "liste_fiyati_eur": 191.16228983040003,
+        "satis_fiyati_eur": 86.02,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.28016.00",
+        "urun_tanimi": "ROBOT COUPE RENDE 7MM",
+        "liste_fiyati_eur": 191.16228983040003,
+        "satis_fiyati_eur": 86.02,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.28060.00",
+        "urun_tanimi": "ROBOT COUPE RG 9 RENDE 9 mm",
+        "liste_fiyati_eur": 191.16228983040003,
+        "satis_fiyati_eur": 86.02,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.28061.00",
+        "urun_tanimi": "ROBOT COUPE PARMASAN",
+        "liste_fiyati_eur": 191.16228983040003,
+        "satis_fiyati_eur": 86.02,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.28055.00",
+        "urun_tanimi": "ROBOT COUPE KESME DISKI RADISH 0,7",
+        "liste_fiyati_eur": 245.0,
+        "satis_fiyati_eur": 110.25,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.28051.00",
+        "urun_tanimi": "ROBOT COUPE SERIT KESICI 2*2 MM",
+        "liste_fiyati_eur": 342.7737610752,
+        "satis_fiyati_eur": 154.25,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.27072.00",
+        "urun_tanimi": "ROBOT COUPE SERIT KESICI  J2*4",
+        "liste_fiyati_eur": 342.7737610752,
+        "satis_fiyati_eur": 154.25,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.27066.00",
+        "urun_tanimi": "ROBOT COUPE SERIT KESICI 2*6 MM",
+        "liste_fiyati_eur": 342.7737610752,
+        "satis_fiyati_eur": 154.25,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.27067.00",
+        "urun_tanimi": "ROBOT COUPE KESME ALETI 2*8",
+        "liste_fiyati_eur": 342.7737610752,
+        "satis_fiyati_eur": 154.25,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.28101.00",
+        "urun_tanimi": "ROBOT COUPE SERIT KESICI 3*3 MM",
+        "liste_fiyati_eur": 342.7737610752,
+        "satis_fiyati_eur": 154.25,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.28052.00",
+        "urun_tanimi": "ROBOT COUPE SERIT KESICI 4*4MM",
+        "liste_fiyati_eur": 342.7737610752,
+        "satis_fiyati_eur": 154.25,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.28053.00",
+        "urun_tanimi": "ROBOT COUPE SERIT KESICI 6*6 MM",
+        "liste_fiyati_eur": 342.7737610752,
+        "satis_fiyati_eur": 154.25,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.28054.00",
+        "urun_tanimi": "ROBOT COUPE SERITKESICI 8*8 MM",
+        "liste_fiyati_eur": 342.7737610752,
+        "satis_fiyati_eur": 154.25,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.28134.00",
+        "urun_tanimi": "ROBOT COUPE PARMAK PATATES 8 MM",
+        "liste_fiyati_eur": 545.4717063264001,
+        "satis_fiyati_eur": 245.46,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.28135.00",
+        "urun_tanimi": "ROBOT COUPE FRENCH FRIES KESME DISKI 10x10 mm",
+        "liste_fiyati_eur": 545.4717063264001,
+        "satis_fiyati_eur": 245.46,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.28158.00",
+        "urun_tanimi": "ROBOT COUPE DISC",
+        "liste_fiyati_eur": 545.4717063264001,
+        "satis_fiyati_eur": 245.46,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.28069.00",
+        "urun_tanimi": "ROBOT COUPE DILIMLEYICI 0.8 MM",
+        "liste_fiyati_eur": 257.08032080640004,
+        "satis_fiyati_eur": 115.69,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.28062.00",
+        "urun_tanimi": "ROBOT COUPE DİLİMLEYİCİ BIÇAK 1MM",
+        "liste_fiyati_eur": 257.08032080640004,
+        "satis_fiyati_eur": 115.69,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.28063.00",
+        "urun_tanimi": "ROBOT COUPE KESME DISKI 2 MM",
+        "liste_fiyati_eur": 257.08032080640004,
+        "satis_fiyati_eur": 115.69,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.28064.00",
+        "urun_tanimi": "ROBOT COUPE KESME ALETI 3 MM",
+        "liste_fiyati_eur": 257.08032080640004,
+        "satis_fiyati_eur": 115.69,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.28004.00",
+        "urun_tanimi": "ROBOT COUPE BIÇAK 4MM",
+        "liste_fiyati_eur": 257.08032080640004,
+        "satis_fiyati_eur": 115.69,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.28065.00",
+        "urun_tanimi": "ROBOT COUPE İNCE DİLİMLEYİCİ 5 mm",
+        "liste_fiyati_eur": 257.08032080640004,
+        "satis_fiyati_eur": 115.69,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.28066.00",
+        "urun_tanimi": "ROBOT COUPE KESME ALETI 8 MM",
+        "liste_fiyati_eur": 257.08032080640004,
+        "satis_fiyati_eur": 115.69,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.28067.00",
+        "urun_tanimi": "ROBOT COUPE KESME DISKI 10 MM",
+        "liste_fiyati_eur": 257.08032080640004,
+        "satis_fiyati_eur": 115.69,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.28068.00",
+        "urun_tanimi": "ROBOT COUPE BIÇAK 14mm",
+        "liste_fiyati_eur": 257.08032080640004,
+        "satis_fiyati_eur": 115.69,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.27068.00",
+        "urun_tanimi": "ROBOT COUPE ÇİFT BIÇAK DİLİMLEYİCİ 2 MM",
+        "liste_fiyati_eur": 309.81474558720004,
+        "satis_fiyati_eur": 139.42,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.27069.00",
+        "urun_tanimi": "ROBOT COUPE CIPS KESME DISKI 3 MM",
+        "liste_fiyati_eur": 309.81474558720004,
+        "satis_fiyati_eur": 139.42,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.27070.00",
+        "urun_tanimi": "ROBOT COUPE KESME DISKI TIRTILLI",
+        "liste_fiyati_eur": 309.81474558720004,
+        "satis_fiyati_eur": 139.42,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
         "urun_kodu": "8841.SDC10.00",
         "urun_tanimi": "SEBZE DOGRAMA MAK. KUBIK KESME DISKI C10",
         "liste_fiyati_eur": 125.0,
@@ -4902,6 +5320,17 @@
           76,
           77
         ]
+      },
+      {
+        "urun_kodu": "GBRA.06585.01",
+        "urun_tanimi": "TABAK TAŞIMA ARABASI TERMAL ÖRTÜ 650*850*1355",
+        "liste_fiyati_eur": 397.8375,
+        "satis_fiyati_eur": 179.03,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
       }
     ]
   },
@@ -5368,8 +5797,159 @@
       }
     ]
   },
+  "RATIONAL BANKET": {
+    "_urunler": [
+      {
+        "urun_kodu": "5RRX.60708.01",
+        "urun_tanimi": "OZTI RATINAL BANKETLER  IÇIN MODEL 101 26 TABAKLIK",
+        "liste_fiyati_eur": NaN,
+        "satis_fiyati_eur": NaN,
+        "bayi_iskonto": NaN,
+        "iskonto_yuzde": 0.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      }
+    ]
+  },
+  "DAVLUMBAZLAR": {
+    "_urunler": [
+      {
+        "urun_kodu": "5RRX.60738.65",
+        "urun_tanimi": "RATIONAL UltraVent XS yogusturma davlumbazı 60.73.865",
+        "liste_fiyati_eur": 7426.0,
+        "satis_fiyati_eur": 3713.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60743.94",
+        "urun_tanimi": "RATIONAL ULTRAVENT PLUS YOĞUŞTURMA DAVLUMBAZI TİP XS 6-2/3",
+        "liste_fiyati_eur": 11511.0,
+        "satis_fiyati_eur": 5755.5,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60751.34",
+        "urun_tanimi": "RATIONAL ULTRAVENT DAVLUMBAZ TİP 6-1/1, 10-1/1",
+        "liste_fiyati_eur": 9644.0,
+        "satis_fiyati_eur": 4822.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60751.42",
+        "urun_tanimi": "RATIONAL ULTRAVENT YOĞUŞTURMA DAVLUMBAZI",
+        "liste_fiyati_eur": 14949.0,
+        "satis_fiyati_eur": 7474.5,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60751.35",
+        "urun_tanimi": "RATIONAL ULTRAVENT DAVLUMBAZ TİP 6-2/1, 10-2/1",
+        "liste_fiyati_eur": 11960.0,
+        "satis_fiyati_eur": 5980.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60751.43",
+        "urun_tanimi": "RATIONAL ULTRAVENT PLUS DAVLUMBAZ TİP 6-2/1, 10-2/1",
+        "liste_fiyati_eur": 18537.0,
+        "satis_fiyati_eur": 9268.5,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60751.36",
+        "urun_tanimi": "RATIONAL ULTRAVENT DAVLUMBAZ TİP 20-1/1",
+        "liste_fiyati_eur": 11960.0,
+        "satis_fiyati_eur": 5980.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60751.37",
+        "urun_tanimi": "RATIONAL ULTRAVENT DAVLUMBAZ TİP 20-2/1",
+        "liste_fiyati_eur": 15623.0,
+        "satis_fiyati_eur": 7811.5,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      }
+    ]
+  },
   "20 2/1-20 2/2 MOBİL TEPSİ STANDLARI": {
     "_urunler": [
+      {
+        "urun_kodu": "5RRX.60213.31",
+        "urun_tanimi": "RATIONAL MOBIL TEPSI STANDI, TİP 20-1/1 STANDART, 20 RAFLI",
+        "liste_fiyati_eur": 4588.0,
+        "satis_fiyati_eur": 2294.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60212.87",
+        "urun_tanimi": "Rational Mobil tepsi standı, Tip 20-1/1 15 raflı",
+        "liste_fiyati_eur": 4588.0,
+        "satis_fiyati_eur": 2294.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60212.88",
+        "urun_tanimi": "Rational Mobil tepsi standı, Tip 20-1/1 16 raflı",
+        "liste_fiyati_eur": 4588.0,
+        "satis_fiyati_eur": 2294.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60212.89",
+        "urun_tanimi": "Rational Mobil tepsi standı, Tip 20-1/1 17 raflı",
+        "liste_fiyati_eur": 4588.0,
+        "satis_fiyati_eur": 2294.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
       {
         "urun_kodu": "9999.60224.90",
         "urun_tanimi": "RATIONAL MOBIL TEPSI STANDI TIP 20-2/1  20 RAFLI RAY MESAFESİ 65MM",
@@ -5382,11 +5962,317 @@
         "pdf_sayfalar": [
           83
         ]
+      },
+      {
+        "urun_kodu": "5RRX.60223.94",
+        "urun_tanimi": "Rational Mobil tepsi standı, Tip 20-2/1 15 raflı",
+        "liste_fiyati_eur": 5780.0,
+        "satis_fiyati_eur": 2890.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60223.95",
+        "urun_tanimi": "Rational Mobile oven rack, Type 20-2/1 , 16 rack",
+        "liste_fiyati_eur": 5780.0,
+        "satis_fiyati_eur": 2890.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60223.96",
+        "urun_tanimi": "Rational Mobil tepsi standı, Tip 20-2/1 17 raflı",
+        "liste_fiyati_eur": 5780.0,
+        "satis_fiyati_eur": 2890.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      }
+    ]
+  },
+  "6 1/1-6 1/2-10 1/1-10 1/2 MOBİL TEPSİ STANDLARI": {
+    "_urunler": [
+      {
+        "urun_kodu": "5RRX.60614.20",
+        "urun_tanimi": "RATIONAL MOBİL TEPSİ STANDI, TİP 6-1/1 STANDART, 6 RAFLI",
+        "liste_fiyati_eur": 1387.0,
+        "satis_fiyati_eur": 693.5,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60116.00",
+        "urun_tanimi": "MOBIL TEPSİ STANDI, TİP 10-1/1 STANDART, 10 RAFLI",
+        "liste_fiyati_eur": 1804.0,
+        "satis_fiyati_eur": 811.8,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60621.50",
+        "urun_tanimi": "RATIONAL MOBIL TEPSI STANDI, TİP 6-2/1 STANDART, 6 RAFLI",
+        "liste_fiyati_eur": 1942.0,
+        "satis_fiyati_eur": 971.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60121.15",
+        "urun_tanimi": "RATIONAL MOBIL TEPSI ASKI RAFI 2/1 10 RAFLI",
+        "liste_fiyati_eur": 2359.0,
+        "satis_fiyati_eur": 1179.5,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      }
+    ]
+  },
+  "6 1/1-6 1/2-10 1/1-10 1/2 MOBİL TEPSİ STANDI TAŞIMA ARABALARI": {
+    "_urunler": [
+      {
+        "urun_kodu": "5RRX.60740.00",
+        "urun_tanimi": "RATIONAL MOBIL TEPSI STANDI IÇIN TAŞIMA ARABASI TİP 6-1/1 VE 10-1/1",
+        "liste_fiyati_eur": 1955.0,
+        "satis_fiyati_eur": 977.5,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60739.99",
+        "urun_tanimi": "RATIONAL MOBIL TEPSI STANDI IÇIN TAŞIMA ARABASI, TİP 6-2/1 VE 10-2/1",
+        "liste_fiyati_eur": 2540.0,
+        "satis_fiyati_eur": 1270.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      }
+    ]
+  },
+  "6 1/1-6 1/2-10 1/1-10 1/2 MOBİL TABAK STANDLARI": {
+    "_urunler": [
+      {
+        "urun_kodu": "5RRX.60617.02",
+        "urun_tanimi": "RATIONAL MOBIL TABAK STANDI TİP 6-1/1, 20 TABAK",
+        "liste_fiyati_eur": 1853.0,
+        "satis_fiyati_eur": 926.5,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60617.01",
+        "urun_tanimi": "RATIONAL MOBIL TABAK STANDI TİP 6-1/1, 15 TABAK",
+        "liste_fiyati_eur": 1685.0,
+        "satis_fiyati_eur": 842.5,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60115.81",
+        "urun_tanimi": "RATIONAL MOBIL TABAK STANDI TİP 10-1/1, 32 TABAK",
+        "liste_fiyati_eur": 2223.0,
+        "satis_fiyati_eur": 1111.5,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60116.02",
+        "urun_tanimi": "RATIONAL MOBIL TABAK STANDI TİP 10-1/1, 26 TABAK",
+        "liste_fiyati_eur": 2022.0,
+        "satis_fiyati_eur": 1011.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60620.17",
+        "urun_tanimi": "RATIONAL MOBIL TABAK RAFI 34 TABAK",
+        "liste_fiyati_eur": 2629.0,
+        "satis_fiyati_eur": 1314.5,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60120.22",
+        "urun_tanimi": "RATIONAL MOBIL TABAK RAFI 52 TABAK 10 2/1 GN ICIN",
+        "liste_fiyati_eur": 3285.0,
+        "satis_fiyati_eur": 1642.5,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60120.62",
+        "urun_tanimi": "RATIONAL MOBIL TABAK RAFI 42 TABAK",
+        "liste_fiyati_eur": 2780.0,
+        "satis_fiyati_eur": 1390.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      }
+    ]
+  },
+  "20 2/1-20 2/2 MOBİL TABAK STANDLARI": {
+    "_urunler": [
+      {
+        "urun_kodu": "5RRX.60212.93",
+        "urun_tanimi": "RATIONAL MOBIL TABAK STANDI TİP 20-1/1, 60 TABAK",
+        "liste_fiyati_eur": 5374.0,
+        "satis_fiyati_eur": 2687.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60212.94",
+        "urun_tanimi": "RATIONAL MOBIL TABAK STANDI TİP 20-1/1, 60 TABAK",
+        "liste_fiyati_eur": 4886.0,
+        "satis_fiyati_eur": 2443.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60224.00",
+        "urun_tanimi": "RATIONAL MOBIL TABAK STANDI TİP 20-2/1, 120 TABAK",
+        "liste_fiyati_eur": 7884.0,
+        "satis_fiyati_eur": 3942.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60223.99",
+        "urun_tanimi": "RATIONAL MOBIL TABAK RAFI 20-2/1 60.22.399",
+        "liste_fiyati_eur": 7556.0,
+        "satis_fiyati_eur": 3778.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      }
+    ]
+  },
+  "6 1/1-6 1/2-10 1/1-10 1/2 FINISHING SİSTEMLERİ": {
+    "_urunler": [
+      {
+        "urun_kodu": "5RRX.60617.41",
+        "urun_tanimi": "RATIONAL BANKET IÇIN FINISHING SISTEMLERI TİP 6-1/1, 20 TABAK",
+        "liste_fiyati_eur": 4242.0,
+        "satis_fiyati_eur": 2121.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60116.28",
+        "urun_tanimi": "Rational Banket için Finishing sistemleri Tip 10-1/1, 32 tabak",
+        "liste_fiyati_eur": 4858.0,
+        "satis_fiyati_eur": 2429.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60621.96",
+        "urun_tanimi": "RATIONAL BANKET IÇIN FINISHING TİP 6-2/1, 34 TABAK",
+        "liste_fiyati_eur": 5802.0,
+        "satis_fiyati_eur": 2901.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60121.54",
+        "urun_tanimi": "Rational Banket için Finishing sistemleri Tip 10-2/1, 42 tabak",
+        "liste_fiyati_eur": 6232.0,
+        "satis_fiyati_eur": 3116.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
       }
     ]
   },
   "20 2/1-20 2/2 FINISHING SİSTEMLERİ": {
     "_urunler": [
+      {
+        "urun_kodu": "5RRX.60213.32",
+        "urun_tanimi": "RATIONAL BANKET IÇIN FINISHING SISTEMLERI TİP 20-1/1, 60 TABAK",
+        "liste_fiyati_eur": 6981.0,
+        "satis_fiyati_eur": 3490.5,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60213.33",
+        "urun_tanimi": "RATIONAL BANKET IÇIN FINISHING SISTEMLERI TİP 20-1/1, 50 TABAK",
+        "liste_fiyati_eur": 6566.0,
+        "satis_fiyati_eur": 3283.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
       {
         "urun_kodu": "9890.60224.93",
         "urun_tanimi": "RATIONAL FINISHING SISTEM BANKET ARABASI 120 TABAK 20-2/1",
@@ -5399,6 +6285,406 @@
         "pdf_sayfalar": [
           84
         ]
+      },
+      {
+        "urun_kodu": "5RRX.60224.92",
+        "urun_tanimi": "RATIONAL FINISHING SISTEM BANKET ARABASI 20-2/1 60.22.492",
+        "liste_fiyati_eur": 9742.0,
+        "satis_fiyati_eur": 4871.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      }
+    ]
+  },
+  "MUFFIN VE TIMBAL KALIPLARI": {
+    "_urunler": [
+      {
+        "urun_kodu": "5RRX.60141.202",
+        "urun_tanimi": "RATIONAL 1/2 GN FIRIN TEPSISI 20 MM",
+        "liste_fiyati_eur": 149.0,
+        "satis_fiyati_eur": 74.5,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60141.204",
+        "urun_tanimi": "RATIONAL 1/2 GN FIRIN TEPSISI 40 MM",
+        "liste_fiyati_eur": 164.0,
+        "satis_fiyati_eur": 82.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60141.206",
+        "urun_tanimi": "RATIONAL 1/2 GN FIRIN TEPSISI 60 MM",
+        "liste_fiyati_eur": 203.0,
+        "satis_fiyati_eur": 101.5,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60141.102",
+        "urun_tanimi": "RATIONAL 1/1 GN FIRIN TEPSISI 20 MM",
+        "liste_fiyati_eur": 199.0,
+        "satis_fiyati_eur": 99.5,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60141.104",
+        "urun_tanimi": "RATIONAL 1/1 GN FIRIN TEPSISI 40 MM",
+        "liste_fiyati_eur": 220.0,
+        "satis_fiyati_eur": 110.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60141.106",
+        "urun_tanimi": "RATIONAL 1/1 GN FIRIN TEPSISI 60 MM",
+        "liste_fiyati_eur": 270.0,
+        "satis_fiyati_eur": 135.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60142.102",
+        "urun_tanimi": "RATIONAL FIRIN TEPSIS 2/1 GN 20 MM",
+        "liste_fiyati_eur": 296.0,
+        "satis_fiyati_eur": 148.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60142.104",
+        "urun_tanimi": "RATIONAL FIRIN TEPSIS 2/1 GN 40 MM",
+        "liste_fiyati_eur": 324.0,
+        "satis_fiyati_eur": 162.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60142.106",
+        "urun_tanimi": "RATIONAL FIRIN TEPSISI 2/1 GN 60 MM",
+        "liste_fiyati_eur": 400.0,
+        "satis_fiyati_eur": 200.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60171.002",
+        "urun_tanimi": "RATIONAL MUFFIN VETIMBAL KALIPLARI (1/1  GN)",
+        "liste_fiyati_eur": 203.0,
+        "satis_fiyati_eur": 101.5,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60171.001",
+        "urun_tanimi": "RATIONAL MUFFIN VETIMBAL KALIPLARI (2/1  GN)",
+        "liste_fiyati_eur": 374.0,
+        "satis_fiyati_eur": 187.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      }
+    ]
+  },
+  "YAĞ DAMLAMA KAPLARI": {
+    "_urunler": [
+      {
+        "urun_kodu": "5RRX.87101.135",
+        "urun_tanimi": "RATIONAL YAG DAMLAMA KABI 1/1 GN",
+        "liste_fiyati_eur": 838.0,
+        "satis_fiyati_eur": 419.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60707.76",
+        "urun_tanimi": "RATIONAL YAG TOPLAMA KABI",
+        "liste_fiyati_eur": 1240.0,
+        "satis_fiyati_eur": 620.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      }
+    ]
+  },
+  "KUZU ÇEVİRME ŞİŞİ": {
+    "_urunler": [
+      {
+        "urun_kodu": "5RRX.60708.19",
+        "urun_tanimi": "RATIONAL KUZU CEVIRME SISI MODEL 101/102/201/202 (1/1GN)",
+        "liste_fiyati_eur": 361.0,
+        "satis_fiyati_eur": 180.5,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60351.003",
+        "urun_tanimi": "RATIONAL KUZU CEVIRME STANDI",
+        "liste_fiyati_eur": 1212.0,
+        "satis_fiyati_eur": 606.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60351.002",
+        "urun_tanimi": "RATIONAL KUZU CEVIRME SISI MODEL 202 (DESTEKLI SIS ILE)",
+        "liste_fiyati_eur": 1268.0,
+        "satis_fiyati_eur": 634.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      }
+    ]
+  },
+  "KIZARTMA TELLERİ": {
+    "_urunler": [
+      {
+        "urun_kodu": "5RRX.60351.015",
+        "urun_tanimi": "RATIONAL TAVUK KIZARTMA TELI H 4",
+        "liste_fiyati_eur": 108.0,
+        "satis_fiyati_eur": 54.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60351.016",
+        "urun_tanimi": "RATIONAL TAVUK KIZARTMA TELI H 6",
+        "liste_fiyati_eur": 130.0,
+        "satis_fiyati_eur": 65.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60351.006",
+        "urun_tanimi": "RATIONAL TAVUK KIZARTMA TELI H 8",
+        "liste_fiyati_eur": 143.0,
+        "satis_fiyati_eur": 71.5,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60351.010",
+        "urun_tanimi": "RATIONAL TAVUK KIZARTMA TELI H 10",
+        "liste_fiyati_eur": 164.0,
+        "satis_fiyati_eur": 82.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60351.009",
+        "urun_tanimi": "RATIONAL ORDEK KIZARTMA TELI E 8",
+        "liste_fiyati_eur": 257.0,
+        "satis_fiyati_eur": 128.5,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      }
+    ]
+  },
+  "IZGARA VE PİZZA TEPSİSİ": {
+    "_urunler": [
+      {
+        "urun_kodu": "5RRX.60709.43",
+        "urun_tanimi": "RATIONAL FIRIN GRILL VE PIZZA TEPSISI",
+        "liste_fiyati_eur": 393.0,
+        "satis_fiyati_eur": 196.5,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      }
+    ]
+  },
+  "PATATES FIRINLAMA TELİ": {
+    "_urunler": [
+      {
+        "urun_kodu": "5RRX.60351.019",
+        "urun_tanimi": "RATIONAL PATATES PISIRME UNITESI",
+        "liste_fiyati_eur": 287.0,
+        "satis_fiyati_eur": 143.5,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      }
+    ]
+  },
+  "KABURGA IZFARASI": {
+    "_urunler": [
+      {
+        "urun_kodu": "5RRX.60351.018",
+        "urun_tanimi": "RATIONAL ET PISIRME UNITESI",
+        "liste_fiyati_eur": 287.0,
+        "satis_fiyati_eur": 143.5,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      }
+    ]
+  },
+  "PİZZA TAVASI": {
+    "_urunler": [
+      {
+        "urun_kodu": "5RRX.60711.58",
+        "urun_tanimi": "RATIONAL PIZZA TAVASI",
+        "liste_fiyati_eur": 56.0,
+        "satis_fiyati_eur": 28.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      }
+    ]
+  },
+  "MUFFIN KALIPLARI": {
+    "_urunler": [
+      {
+        "urun_kodu": "5RRX.60171.002",
+        "urun_tanimi": "RATIONAL MUFFIN VETIMBAL KALIPLARI (1/1  GN)",
+        "liste_fiyati_eur": 203.0,
+        "satis_fiyati_eur": 101.5,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60171.001",
+        "urun_tanimi": "RATIONAL MUFFIN VETIMBAL KALIPLARI (2/1  GN)",
+        "liste_fiyati_eur": 374.0,
+        "satis_fiyati_eur": 187.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      }
+    ]
+  },
+  "COMBIFRY": {
+    "_urunler": [
+      {
+        "urun_kodu": "5RRX.60191.150",
+        "urun_tanimi": "RATIONAL PATATES KIZARTMA SEPETI 1/1 GN 50 MM",
+        "liste_fiyati_eur": 242.0,
+        "satis_fiyati_eur": 121.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5RRX.60191.250",
+        "urun_tanimi": "RATIONAL PATATES KIZARTMA SEPETI 1/2 GN 50 MM",
+        "liste_fiyati_eur": 181.0,
+        "satis_fiyati_eur": 90.5,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      }
+    ]
+  },
+  "YÜKLEME IZGARALI COMBIGRILL IZGARA": {
+    "_urunler": [
+      {
+        "urun_kodu": "5RRX.60351.017",
+        "urun_tanimi": "RATIONAL FIRIN TEPSISI COMBI GRILL",
+        "liste_fiyati_eur": 322.0,
+        "satis_fiyati_eur": 161.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      }
+    ]
+  },
+  "MULTUBAKER": {
+    "_urunler": [
+      {
+        "urun_kodu": "5RRX.60711.57",
+        "urun_tanimi": "RATIONAL YUMURTA PSIRME KALIBI",
+        "liste_fiyati_eur": 238.0,
+        "satis_fiyati_eur": 119.0,
+        "bayi_iskonto": 0.5,
+        "iskonto_yuzde": 50.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
       }
     ]
   },
@@ -7890,6 +9176,50 @@
         ]
       },
       {
+        "urun_kodu": "5GUR.EF708.KM",
+        "urun_tanimi": "ÖZTİRYAKİLER GURMEAID EF708 STAND MİKSER KIYMA APARATI",
+        "liste_fiyati_eur": 66.0,
+        "satis_fiyati_eur": 29.7,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "USD",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5GUR.EF708.MK",
+        "urun_tanimi": "ÖZTİRYAKİLER GURMEAID EF708 STAND MİKSER MAKARNA KESME APARATI İNCE 1,5 MM",
+        "liste_fiyati_eur": 176.0,
+        "satis_fiyati_eur": 79.2,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "USD",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5GUR.EF708.MK5",
+        "urun_tanimi": "ÖZTİRYAKİLER GURMEAID EF708 STAND MİKSER MAKARNA KESME APARATI KALIN 5 MM",
+        "liste_fiyati_eur": 176.0,
+        "satis_fiyati_eur": 79.2,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "USD",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5GUR.EF708.SLT",
+        "urun_tanimi": "ÖZTİRYAKİLER GURMEAID EF708 STAND MİKSER SALATA RENDESİ APARATI",
+        "liste_fiyati_eur": 99.0,
+        "satis_fiyati_eur": 44.55,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "USD",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
         "urun_kodu": "0810.00010.15",
         "urun_tanimi": "MIKSER 10 LT MONOFAZE CE DKP",
         "liste_fiyati_eur": 5568.695,
@@ -8773,6 +10103,76 @@
       }
     ]
   },
+  "KESME DİSKLERİ": {
+    "_urunler": [
+      {
+        "urun_kodu": "5I1X.00060.00",
+        "urun_tanimi": "IMPERIA MAKARNA KESME DISKI R 220 NO.1  CAPELLİ D’ANGELO 1,5 mm",
+        "liste_fiyati_eur": 272.0,
+        "satis_fiyati_eur": 122.4,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5I1X.00070.00",
+        "urun_tanimi": "IMPERIA MAKARNA KESME DISKI R 220 NO.2 TAGLİATELLE 2 mm",
+        "liste_fiyati_eur": 272.0,
+        "satis_fiyati_eur": 122.4,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5I1X.00080.00",
+        "urun_tanimi": "IMPERIA MAKARNA KESME DISKI R 220 NO.3 TRENETTE 4 mm",
+        "liste_fiyati_eur": 272.0,
+        "satis_fiyati_eur": 122.4,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5I1X.00090.00",
+        "urun_tanimi": "IMPERIA MAKARNA KESME DİSKİ R 220 NO.4 FETTUCCİNE 6,5 mm",
+        "liste_fiyati_eur": 272.0,
+        "satis_fiyati_eur": 122.4,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5I1X.00095.00",
+        "urun_tanimi": "IMPERIA MAKARNA KESME DISKI R 220 NO.5 LASAGNETTE 12 mm",
+        "liste_fiyati_eur": 272.0,
+        "satis_fiyati_eur": 122.4,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5I1X.00097.00",
+        "urun_tanimi": "IMPERIA MAKARNA KESME DISKI R 220 NO.6 SPAGHETTİ 2 mm",
+        "liste_fiyati_eur": 272.0,
+        "satis_fiyati_eur": 122.4,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      }
+    ]
+  },
   "ERİŞTE MAKİNESİ": {
     "_urunler": [
       {
@@ -9019,6 +10419,17 @@
         ]
       },
       {
+        "urun_kodu": "5R1X.01927.00",
+        "urun_tanimi": "ROBOT COUPE 8 BICAKLI  DISK SETI",
+        "liste_fiyati_eur": 1906.0,
+        "satis_fiyati_eur": 857.7,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
         "urun_kodu": "9840.CL52D.00",
         "urun_tanimi": "ROBOT COUPE SEBZE DOGRAMA MAKINESI CL52 BICAKSIZ İTME KAFALI",
         "liste_fiyati_eur": 6222.0,
@@ -9030,6 +10441,17 @@
         "pdf_sayfalar": [
           151
         ]
+      },
+      {
+        "urun_kodu": "5R1X.01927.00",
+        "urun_tanimi": "ROBOT COUPE 8 BICAKLI  DISK SETI",
+        "liste_fiyati_eur": 1905.0,
+        "satis_fiyati_eur": 857.25,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
       },
       {
         "urun_kodu": "9840.CL55D.00",
@@ -9045,6 +10467,28 @@
         ]
       },
       {
+        "urun_kodu": "5R1X.01927.00",
+        "urun_tanimi": "ROBOT COUPE 8 BICAKLI  DISK SETI",
+        "liste_fiyati_eur": 1905.0,
+        "satis_fiyati_eur": 857.25,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.28170.00",
+        "urun_tanimi": "ROBOT COUPE KAFA",
+        "liste_fiyati_eur": 3325.0,
+        "satis_fiyati_eur": 1496.25,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
         "urun_kodu": "9840.CL60D.00",
         "urun_tanimi": "ROBOT COUPE SEBZE DOGRAMA MAKINASI CL60 BIÇAKSIZ OTOMATIK KAFALI",
         "liste_fiyati_eur": 17943.0,
@@ -9056,6 +10500,39 @@
         "pdf_sayfalar": [
           152
         ]
+      },
+      {
+        "urun_kodu": "5R1X.01942.00",
+        "urun_tanimi": "ROBOT COUPE 12 BICAKLI  DISK SETI",
+        "liste_fiyati_eur": 3154.0,
+        "satis_fiyati_eur": 1419.3,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.39680.00",
+        "urun_tanimi": "ROBOT COUPE CL 60 ICIN İTME KAFA",
+        "liste_fiyati_eur": 3435.0,
+        "satis_fiyati_eur": 1545.75,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "5R1X.28157.00",
+        "urun_tanimi": "ROBOT COUPE CL60 ICIN DÜZ VE EGIK KAFA",
+        "liste_fiyati_eur": 3360.0,
+        "satis_fiyati_eur": 1512.0,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
       },
       {
         "urun_kodu": "9840.R201E.00",
@@ -9071,6 +10548,17 @@
         ]
       },
       {
+        "urun_kodu": "5R1X.01946.00",
+        "urun_tanimi": "ROBOT COUPE R 201/301 SEBZE DOGRAMA KESME DISK TK. (5 ADET)",
+        "liste_fiyati_eur": 708.618832992,
+        "satis_fiyati_eur": 318.88,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
         "urun_kodu": "9840.R301C.00",
         "urun_tanimi": "ROBOT COUPE SEBZE DOĞRAMA VE PARÇALAMA MAKİNESİ R301",
         "liste_fiyati_eur": 2826.235578096,
@@ -9082,6 +10570,17 @@
         "pdf_sayfalar": [
           153
         ]
+      },
+      {
+        "urun_kodu": "5R1X.01946.00",
+        "urun_tanimi": "ROBOT COUPE R 201/301 SEBZE DOGRAMA KESME DISK TK. (5 ADET)",
+        "liste_fiyati_eur": 708.618832992,
+        "satis_fiyati_eur": 318.88,
+        "bayi_iskonto": 0.55,
+        "iskonto_yuzde": 55.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
       },
       {
         "urun_kodu": "9860.000R2.00",
@@ -38495,6 +39994,17 @@
         "pdf_sayfalar": null
       },
       {
+        "urun_kodu": "7ETX.51000.02",
+        "urun_tanimi": "PİZZA PİDE STANDI - 80x50 - HALOJEN ISITICILI",
+        "liste_fiyati_eur": 1349.0,
+        "satis_fiyati_eur": 472.15,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
         "urun_kodu": "7912.16894.O0",
         "urun_tanimi": "SALADBAR (MEŞE)",
         "liste_fiyati_eur": 4534.0,
@@ -38571,6 +40081,1872 @@
         "pdf_sayfalar": [
           319
         ]
+      },
+      {
+        "urun_kodu": "7EKO.OSBEC.01",
+        "urun_tanimi": "SALAD BAR - SOĞUK - GN HAVUZLU",
+        "liste_fiyati_eur": 3156.0,
+        "satis_fiyati_eur": 1104.6,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7EKO.OSBEH.01",
+        "urun_tanimi": "SALAD BAR - SICAK - GN HAVUZLU",
+        "liste_fiyati_eur": 2828.0,
+        "satis_fiyati_eur": 989.8,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7EKO.OSBEC.02",
+        "urun_tanimi": "SALAD BAR - SOGUK - DUZ ZEMINLI",
+        "liste_fiyati_eur": 2564.0,
+        "satis_fiyati_eur": 897.4,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7EKO.OSBEH.02",
+        "urun_tanimi": "SALAD BAR - SICAK - DÜZ ZEMİNLİ",
+        "liste_fiyati_eur": 2117.0,
+        "satis_fiyati_eur": 740.95,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      }
+    ]
+  },
+  "TEŞHİR ÜNİTELERİ (BOMBE CAMLI)": {
+    "_urunler": [
+      {
+        "urun_kodu": "7ETD.11C10.SS",
+        "urun_tanimi": "TESHIR - PASTANE - BOMBE - SOGUK - 100 CM",
+        "liste_fiyati_eur": 5673.0,
+        "satis_fiyati_eur": 1985.55,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.11C12.SS",
+        "urun_tanimi": "TESHIR - PASTANE - BOMBE - SOGUK - 120 CM",
+        "liste_fiyati_eur": 6258.0,
+        "satis_fiyati_eur": 2190.3,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.11C15.SS",
+        "urun_tanimi": "TESHIR - PASTANE - BOMBE - SOGUK - 150 CM",
+        "liste_fiyati_eur": 7088.0,
+        "satis_fiyati_eur": 2480.8,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.11C18.SS",
+        "urun_tanimi": "TESHIR - PASTANE - BOMBE - SOGUK - 180 CM",
+        "liste_fiyati_eur": 8905.0,
+        "satis_fiyati_eur": 3116.75,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.11C20.SS",
+        "urun_tanimi": "TESHIR - PASTANE - BOMBE - SOGUK - 200 CM",
+        "liste_fiyati_eur": 9800.0,
+        "satis_fiyati_eur": 3430.0,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.11H10.SS",
+        "urun_tanimi": "TESHIR - PASTANE - BOMBE - SICAK - 100 CM",
+        "liste_fiyati_eur": 3885.0,
+        "satis_fiyati_eur": 1359.75,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.11H12.SS",
+        "urun_tanimi": "TESHIR - PASTANE - BOMBE - SICAK - 120 CM",
+        "liste_fiyati_eur": 4467.0,
+        "satis_fiyati_eur": 1563.45,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.11H15.SS",
+        "urun_tanimi": "TESHIR - PASTANE - BOMBE - SICAK - 150 CM",
+        "liste_fiyati_eur": 5097.0,
+        "satis_fiyati_eur": 1783.95,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.11H18.SS",
+        "urun_tanimi": "TESHIR - PASTANE - BOMBE - SICAK - 180 CM",
+        "liste_fiyati_eur": 6167.0,
+        "satis_fiyati_eur": 2158.45,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.11H20.SS",
+        "urun_tanimi": "TESHIR - PASTANE - BOMBE - SICAK - 200 CM",
+        "liste_fiyati_eur": 6529.0,
+        "satis_fiyati_eur": 2285.15,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.11N10.SS",
+        "urun_tanimi": "TESHIR - PASTANE - BOMBE - NOTR - 100 CM",
+        "liste_fiyati_eur": 3351.0,
+        "satis_fiyati_eur": 1172.85,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.11N12.SS",
+        "urun_tanimi": "TESHIR - PASTANE - BOMBE - NOTR - 120 CM",
+        "liste_fiyati_eur": 3857.0,
+        "satis_fiyati_eur": 1349.95,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.11N15.SS",
+        "urun_tanimi": "TESHIR - PASTANE - BOMBE - NOTR - 150 CM",
+        "liste_fiyati_eur": 4457.0,
+        "satis_fiyati_eur": 1559.95,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.11N18.SS",
+        "urun_tanimi": "TESHIR - PASTANE - BOMBE - NOTR - 180 CM",
+        "liste_fiyati_eur": 5107.0,
+        "satis_fiyati_eur": 1787.45,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.11N20.SS",
+        "urun_tanimi": "TESHIR - PASTANE - BOMBE - NOTR - 200 CM",
+        "liste_fiyati_eur": 5595.0,
+        "satis_fiyati_eur": 1958.25,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      }
+    ]
+  },
+  "TEŞHİR ÜNİTELERİ (DÜZ CAMLI)": {
+    "_urunler": [
+      {
+        "urun_kodu": "7ETD.12C10.SS",
+        "urun_tanimi": "TESHIR - PASTANE - DUZ - SOGUK - 100 CM",
+        "liste_fiyati_eur": 6472.0,
+        "satis_fiyati_eur": 2265.2,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.12C12.SS",
+        "urun_tanimi": "TESHIR - PASTANE - DUZ - SOGUK - 120 CM",
+        "liste_fiyati_eur": 6800.0,
+        "satis_fiyati_eur": 2380.0,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.12C15.SS",
+        "urun_tanimi": "TESHIR - PASTANE - DUZ - SOGUK - 150 CM",
+        "liste_fiyati_eur": 8301.0,
+        "satis_fiyati_eur": 2905.35,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.12C18.SS",
+        "urun_tanimi": "TESHIR - PASTANE - DUZ - SOGUK - 180 CM",
+        "liste_fiyati_eur": 10615.0,
+        "satis_fiyati_eur": 3715.25,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.12C20.SS",
+        "urun_tanimi": "TESHIR - PASTANE - DUZ - SOGUK - 200 CM",
+        "liste_fiyati_eur": 11442.0,
+        "satis_fiyati_eur": 4004.7,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.12H10.SS",
+        "urun_tanimi": "TESHIR - PASTANE - DUZ - SICAK - 100 CM",
+        "liste_fiyati_eur": 4682.0,
+        "satis_fiyati_eur": 1638.7,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.12H12.SS",
+        "urun_tanimi": "TESHIR - PASTANE - DUZ - SICAK - 120 CM",
+        "liste_fiyati_eur": 5007.0,
+        "satis_fiyati_eur": 1752.45,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.12H15.SS",
+        "urun_tanimi": "TESHIR - PASTANE - DUZ - SICAK - 150 CM",
+        "liste_fiyati_eur": 6758.0,
+        "satis_fiyati_eur": 2365.3,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.12H18.SS",
+        "urun_tanimi": "TESHIR - PASTANE - DUZ - SICAK - 180 CM",
+        "liste_fiyati_eur": 7866.0,
+        "satis_fiyati_eur": 2753.1,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.12H20.SS",
+        "urun_tanimi": "TESHIR - PASTANE - DUZ - SICAK - 200 CM",
+        "liste_fiyati_eur": 8159.0,
+        "satis_fiyati_eur": 2855.65,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.12N10.SS",
+        "urun_tanimi": "TESHIR - PASTANE - DUZ - NOTR - 100 CM",
+        "liste_fiyati_eur": 4153.0,
+        "satis_fiyati_eur": 1453.55,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.12N12.SS",
+        "urun_tanimi": "TESHIR - PASTANE - DUZ - NOTR - 120 CM",
+        "liste_fiyati_eur": 4400.0,
+        "satis_fiyati_eur": 1540.0,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.12N15.SS",
+        "urun_tanimi": "TESHIR - PASTANE - DUZ - NOTR - 150 CM",
+        "liste_fiyati_eur": 6121.0,
+        "satis_fiyati_eur": 2142.35,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.12N18.SS",
+        "urun_tanimi": "TESHIR - PASTANE - DUZ - NOTR - 180 CM",
+        "liste_fiyati_eur": 6818.0,
+        "satis_fiyati_eur": 2386.3,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.12N20.SS",
+        "urun_tanimi": "TESHIR - PASTANE - DUZ - NOTR - 200 CM",
+        "liste_fiyati_eur": 7237.0,
+        "satis_fiyati_eur": 2532.95,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      }
+    ]
+  },
+  "TEŞHİR ÜNİTELERİ (EĞİK CAMLI)": {
+    "_urunler": [
+      {
+        "urun_kodu": "7ETD.13C10.SS",
+        "urun_tanimi": "TESHIR - PASTANE - EĞİK - SOGUK - 100 CM",
+        "liste_fiyati_eur": 6714.0,
+        "satis_fiyati_eur": 2349.9,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.13C12.SS",
+        "urun_tanimi": "TESHIR - PASTANE - EĞİK - SOGUK - 120 CM",
+        "liste_fiyati_eur": NaN,
+        "satis_fiyati_eur": NaN,
+        "bayi_iskonto": NaN,
+        "iskonto_yuzde": 0.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.13C15.SS",
+        "urun_tanimi": "TESHIR - PASTANE - EĞİK - SOGUK - 150 CM",
+        "liste_fiyati_eur": NaN,
+        "satis_fiyati_eur": NaN,
+        "bayi_iskonto": NaN,
+        "iskonto_yuzde": 0.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.13C18.SS",
+        "urun_tanimi": "TESHIR - PASTANE - EĞİK - SOGUK - 180 CM",
+        "liste_fiyati_eur": NaN,
+        "satis_fiyati_eur": NaN,
+        "bayi_iskonto": NaN,
+        "iskonto_yuzde": 0.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.13C20.SS",
+        "urun_tanimi": "TESHIR - PASTANE - EĞİK - SOGUK - 200 CM",
+        "liste_fiyati_eur": NaN,
+        "satis_fiyati_eur": NaN,
+        "bayi_iskonto": NaN,
+        "iskonto_yuzde": 0.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.13H10.SS",
+        "urun_tanimi": "TESHIR - PASTANE - EĞİK - SICAK - 100 CM",
+        "liste_fiyati_eur": 4923.0,
+        "satis_fiyati_eur": 1723.05,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.13H12.SS",
+        "urun_tanimi": "TESHIR - PASTANE - EĞİK - SICAK - 120 CM",
+        "liste_fiyati_eur": NaN,
+        "satis_fiyati_eur": NaN,
+        "bayi_iskonto": NaN,
+        "iskonto_yuzde": 0.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.13H15.SS",
+        "urun_tanimi": "TESHIR - PASTANE - EĞİK - SICAK - 150 CM",
+        "liste_fiyati_eur": NaN,
+        "satis_fiyati_eur": NaN,
+        "bayi_iskonto": NaN,
+        "iskonto_yuzde": 0.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.13H18.SS",
+        "urun_tanimi": "TESHIR - PASTANE - EĞİK - SICAK - 180 CM",
+        "liste_fiyati_eur": NaN,
+        "satis_fiyati_eur": NaN,
+        "bayi_iskonto": NaN,
+        "iskonto_yuzde": 0.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.13H20.SS",
+        "urun_tanimi": "TESHIR - PASTANE - EĞİK - SICAK - 200 CM",
+        "liste_fiyati_eur": NaN,
+        "satis_fiyati_eur": NaN,
+        "bayi_iskonto": NaN,
+        "iskonto_yuzde": 0.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.13N10.SS",
+        "urun_tanimi": "TESHIR - PASTANE - EĞİK - NOTR - 100 CM",
+        "liste_fiyati_eur": NaN,
+        "satis_fiyati_eur": NaN,
+        "bayi_iskonto": NaN,
+        "iskonto_yuzde": 0.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.13N12.SS",
+        "urun_tanimi": "TESHIR - PASTANE - EĞİK - NOTR - 120 CM",
+        "liste_fiyati_eur": NaN,
+        "satis_fiyati_eur": NaN,
+        "bayi_iskonto": NaN,
+        "iskonto_yuzde": 0.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.13N15.SS",
+        "urun_tanimi": "TESHIR - PASTANE - EĞİK - NOTR - 150 CM",
+        "liste_fiyati_eur": NaN,
+        "satis_fiyati_eur": NaN,
+        "bayi_iskonto": NaN,
+        "iskonto_yuzde": 0.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.13N18.SS",
+        "urun_tanimi": "TESHIR - PASTANE - EĞİK - NOTR - 180 CM",
+        "liste_fiyati_eur": NaN,
+        "satis_fiyati_eur": NaN,
+        "bayi_iskonto": NaN,
+        "iskonto_yuzde": 0.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.13N20.SS",
+        "urun_tanimi": "TESHIR - PASTANE - EĞİK - NOTR - 200 CM",
+        "liste_fiyati_eur": NaN,
+        "satis_fiyati_eur": NaN,
+        "bayi_iskonto": NaN,
+        "iskonto_yuzde": 0.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      }
+    ]
+  },
+  "TEŞHİR ÜNİTELERİ (BORULU TİP)": {
+    "_urunler": [
+      {
+        "urun_kodu": "7ETD.14C10.SS",
+        "urun_tanimi": "TESHIR - PASTANE - BORULU - SOGUK - 100 CM",
+        "liste_fiyati_eur": 5595.0,
+        "satis_fiyati_eur": 1958.25,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.14C12.SS",
+        "urun_tanimi": "TESHIR - PASTANE - BORULU - SOGUK - 120 CM",
+        "liste_fiyati_eur": 6171.0,
+        "satis_fiyati_eur": 2159.85,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.14C15.SS",
+        "urun_tanimi": "TESHIR - PASTANE - BORULU - SOGUK - 150 CM",
+        "liste_fiyati_eur": 6948.0,
+        "satis_fiyati_eur": 2431.8,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.14C18.SS",
+        "urun_tanimi": "TESHIR - PASTANE - BORULU - SOGUK - 180 CM",
+        "liste_fiyati_eur": 8892.0,
+        "satis_fiyati_eur": 3112.2,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.14C20.SS",
+        "urun_tanimi": "TESHIR - PASTANE - BORULU - SOGUK - 200 CM",
+        "liste_fiyati_eur": 9750.0,
+        "satis_fiyati_eur": 3412.5,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.14H10.SS",
+        "urun_tanimi": "TESHIR - PASTANE - BORULU - SICAK - 100 CM",
+        "liste_fiyati_eur": 3902.0,
+        "satis_fiyati_eur": 1365.7,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.14H12.SS",
+        "urun_tanimi": "TESHIR - PASTANE - BORULU - SICAK - 120 CM",
+        "liste_fiyati_eur": 4487.0,
+        "satis_fiyati_eur": 1570.45,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.14H15.SS",
+        "urun_tanimi": "TESHIR - PASTANE - BORULU - SICAK - 150 CM",
+        "liste_fiyati_eur": 5088.0,
+        "satis_fiyati_eur": 1780.8,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.14H18.SS",
+        "urun_tanimi": "TESHIR - PASTANE - BORULU - SICAK - 180 CM",
+        "liste_fiyati_eur": 6299.0,
+        "satis_fiyati_eur": 2204.65,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.14H20.SS",
+        "urun_tanimi": "TESHIR - PASTANE - BORULU - SICAK - 200 CM",
+        "liste_fiyati_eur": 6640.0,
+        "satis_fiyati_eur": 2324.0,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.14N10.SS",
+        "urun_tanimi": "TESHIR - PASTANE - BORULU - NOTR - 100 CM",
+        "liste_fiyati_eur": 3371.0,
+        "satis_fiyati_eur": 1179.85,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.14N12.SS",
+        "urun_tanimi": "TESHIR - PASTANE - BORULU - NOTR - 120 CM",
+        "liste_fiyati_eur": 3875.0,
+        "satis_fiyati_eur": 1356.25,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.14N15.SS",
+        "urun_tanimi": "TESHIR - PASTANE - BORULU - NOTR - 150 CM",
+        "liste_fiyati_eur": 4451.0,
+        "satis_fiyati_eur": 1557.85,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.14N18.SS",
+        "urun_tanimi": "TESHIR - PASTANE - BORULU - NOTR - 180 CM",
+        "liste_fiyati_eur": 5251.0,
+        "satis_fiyati_eur": 1837.85,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.14N20.SS",
+        "urun_tanimi": "TESHIR - PASTANE - BORULU - NOTR - 200 CM",
+        "liste_fiyati_eur": 5718.0,
+        "satis_fiyati_eur": 2001.3,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      }
+    ]
+  },
+  "ÖN DEKORLAR (MEŞE)": {
+    "_urunler": [
+      {
+        "urun_kodu": "7ETX.21A10.00",
+        "urun_tanimi": "AKSESUAR - ON DEKOR - AHSAP - MESE - 100X47 CM",
+        "liste_fiyati_eur": 128.0,
+        "satis_fiyati_eur": 44.8,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.21A12.00",
+        "urun_tanimi": "AKSESUAR - ON DEKOR - AHSAP - MESE - 120X47 CM",
+        "liste_fiyati_eur": 151.0,
+        "satis_fiyati_eur": 52.85,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.21A15.00",
+        "urun_tanimi": "AKSESUAR - ON DEKOR - AHSAP - MESE - 150X47 CM",
+        "liste_fiyati_eur": 187.0,
+        "satis_fiyati_eur": 65.45,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.21A18.00",
+        "urun_tanimi": "AKSESUAR - ON DEKOR - AHSAP - MESE - 180X47 CM",
+        "liste_fiyati_eur": 222.0,
+        "satis_fiyati_eur": 77.7,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.21A20.00",
+        "urun_tanimi": "AKSESUAR - ON DEKOR - AHSAP - MESE - 200X47 CM",
+        "liste_fiyati_eur": 246.0,
+        "satis_fiyati_eur": 86.1,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.22A06.00",
+        "urun_tanimi": "AKSESUAR - ON DEKOR - AHSAP - MESE - 60X67 CM",
+        "liste_fiyati_eur": 116.0,
+        "satis_fiyati_eur": 40.6,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.22A09.00",
+        "urun_tanimi": "AKSESUAR - ON DEKOR - AHSAP - MESE - 90X67 CM",
+        "liste_fiyati_eur": 162.0,
+        "satis_fiyati_eur": 56.7,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.22A10.00",
+        "urun_tanimi": "AKSESUAR - ON DEKOR - AHSAP - MESE - 100X67 CM",
+        "liste_fiyati_eur": 180.0,
+        "satis_fiyati_eur": 63.0,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.22A12.00",
+        "urun_tanimi": "AKSESUAR - ON DEKOR - AHSAP - MESE - 120X67 CM",
+        "liste_fiyati_eur": 212.0,
+        "satis_fiyati_eur": 74.2,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.22A15.00",
+        "urun_tanimi": "AKSESUAR - ON DEKOR - AHSAP - MESE - 150X67 CM",
+        "liste_fiyati_eur": 261.0,
+        "satis_fiyati_eur": 91.35,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.22A18.00",
+        "urun_tanimi": "AKSESUAR - ON DEKOR - AHSAP - MESE - 180X67 CM",
+        "liste_fiyati_eur": 311.0,
+        "satis_fiyati_eur": 108.85,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.22A20.00",
+        "urun_tanimi": "AKSESUAR - ON DEKOR - AHSAP - MESE - 200X67 CM",
+        "liste_fiyati_eur": 342.0,
+        "satis_fiyati_eur": 119.7,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      }
+    ]
+  },
+  "ÖN DEKORLAR (MAUN)": {
+    "_urunler": [
+      {
+        "urun_kodu": "7ETX.21A10.M0",
+        "urun_tanimi": "AKSESUAR - ON DEKOR - AHSAP - MAUN - 100X47 CM",
+        "liste_fiyati_eur": 128.0,
+        "satis_fiyati_eur": 44.8,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.21A12.M0",
+        "urun_tanimi": "AKSESUAR - ON DEKOR - AHSAP - MAUN - 120X47 CM",
+        "liste_fiyati_eur": 151.0,
+        "satis_fiyati_eur": 52.85,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.21A15.M0",
+        "urun_tanimi": "AKSESUAR - ON DEKOR - AHSAP - MAUN - 150X47 CM",
+        "liste_fiyati_eur": 187.0,
+        "satis_fiyati_eur": 65.45,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.21A18.M0",
+        "urun_tanimi": "AKSESUAR - ON DEKOR - AHSAP - MAUN - 180X47 CM",
+        "liste_fiyati_eur": 222.0,
+        "satis_fiyati_eur": 77.7,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.21A20.M0",
+        "urun_tanimi": "AKSESUAR - ON DEKOR - AHSAP - MAUN - 200X47 CM",
+        "liste_fiyati_eur": 246.0,
+        "satis_fiyati_eur": 86.1,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.22A06.M0",
+        "urun_tanimi": "AKSESUAR - ON DEKOR - AHSAP - MAUN - 60X67 CM",
+        "liste_fiyati_eur": 116.0,
+        "satis_fiyati_eur": 40.6,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.22A09.M0",
+        "urun_tanimi": "AKSESUAR - ON DEKOR - AHSAP - MAUN - 90X67 CM",
+        "liste_fiyati_eur": 162.0,
+        "satis_fiyati_eur": 56.7,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.22A10.M0",
+        "urun_tanimi": "AKSESUAR - ON DEKOR - AHSAP - MAUN - 100X67 CM",
+        "liste_fiyati_eur": 180.0,
+        "satis_fiyati_eur": 63.0,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.22A12.M0",
+        "urun_tanimi": "AKSESUAR - ON DEKOR - AHSAP - MAUN - 120X67 CM",
+        "liste_fiyati_eur": 212.0,
+        "satis_fiyati_eur": 74.2,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.22A15.M0",
+        "urun_tanimi": "AKSESUAR - ON DEKOR - AHSAP - MAUN - 150X67 CM",
+        "liste_fiyati_eur": 261.0,
+        "satis_fiyati_eur": 91.35,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.22A18.M0",
+        "urun_tanimi": "AKSESUAR - ON DEKOR - AHSAP - MAUN - 180X67 CM",
+        "liste_fiyati_eur": 311.0,
+        "satis_fiyati_eur": 108.85,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.22A20.M0",
+        "urun_tanimi": "AKSESUAR - ON DEKOR - AHSAP - MAUN - 200X67 CM",
+        "liste_fiyati_eur": 342.0,
+        "satis_fiyati_eur": 119.7,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      }
+    ]
+  },
+  "ÖN DEKORLAR (CEVİZ)": {
+    "_urunler": [
+      {
+        "urun_kodu": "7ETX.21A10.W0",
+        "urun_tanimi": "AKSESUAR - ON DEKOR - AHSAP - CEVIZ - 100X47 CM",
+        "liste_fiyati_eur": 128.0,
+        "satis_fiyati_eur": 44.8,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.21A12.W0",
+        "urun_tanimi": "AKSESUAR - ON DEKOR - AHSAP - CEVIZ - 120X47 CM",
+        "liste_fiyati_eur": 151.0,
+        "satis_fiyati_eur": 52.85,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.21A15.W0",
+        "urun_tanimi": "AKSESUAR - ON DEKOR - AHSAP - CEVIZ - 150X47 CM",
+        "liste_fiyati_eur": 187.0,
+        "satis_fiyati_eur": 65.45,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.21A18.W0",
+        "urun_tanimi": "AKSESUAR - ON DEKOR - AHSAP - CEVIZ - 180X47 CM",
+        "liste_fiyati_eur": 222.0,
+        "satis_fiyati_eur": 77.7,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.21A20.W0",
+        "urun_tanimi": "AKSESUAR - ON DEKOR - AHSAP - CEVIZ - 200X47 CM",
+        "liste_fiyati_eur": 246.0,
+        "satis_fiyati_eur": 86.1,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.22A06.W0",
+        "urun_tanimi": "AKSESUAR - ON DEKOR - AHSAP - CEVIZ - 60X67 CM",
+        "liste_fiyati_eur": 116.0,
+        "satis_fiyati_eur": 40.6,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.22A09.W0",
+        "urun_tanimi": "AKSESUAR - ON DEKOR - AHSAP - CEVIZ - 90X67 CM",
+        "liste_fiyati_eur": 162.0,
+        "satis_fiyati_eur": 56.7,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.22A10.W0",
+        "urun_tanimi": "AKSESUAR - ON DEKOR - AHSAP - CEVIZ - 100X67 CM",
+        "liste_fiyati_eur": 180.0,
+        "satis_fiyati_eur": 63.0,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.22A12.W0",
+        "urun_tanimi": "AKSESUAR - ON DEKOR - AHSAP - CEVIZ - 120X67 CM",
+        "liste_fiyati_eur": 212.0,
+        "satis_fiyati_eur": 74.2,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.22A15.W0",
+        "urun_tanimi": "AKSESUAR - ON DEKOR - AHSAP - CEVIZ - 150X67 CM",
+        "liste_fiyati_eur": 261.0,
+        "satis_fiyati_eur": 91.35,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.22A18.W0",
+        "urun_tanimi": "AKSESUAR - ON DEKOR - AHSAP - CEVIZ - 180X67 CM",
+        "liste_fiyati_eur": 311.0,
+        "satis_fiyati_eur": 108.85,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.22A20.W0",
+        "urun_tanimi": "AKSESUAR - ON DEKOR - AHSAP - CEVIZ - 200X67 CM",
+        "liste_fiyati_eur": 342.0,
+        "satis_fiyati_eur": 119.7,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      }
+    ]
+  },
+  "DUVAR TİPİ TEŞHİR ÜNİTELERİ": {
+    "_urunler": [
+      {
+        "urun_kodu": "7ETD.25C10.SS",
+        "urun_tanimi": "TESHIR - SELF SERVIS - SOGUK - 100 CM",
+        "liste_fiyati_eur": 8115.0,
+        "satis_fiyati_eur": 2840.25,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.25C12.SS",
+        "urun_tanimi": "TESHIR - SELF SERVIS - SOGUK - 120 CM",
+        "liste_fiyati_eur": 9306.0,
+        "satis_fiyati_eur": 3257.1,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.25C15.SS",
+        "urun_tanimi": "TESHIR - SELF SERVIS - SOGUK - 150 CM",
+        "liste_fiyati_eur": 10371.0,
+        "satis_fiyati_eur": 3629.85,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.25C18.SS",
+        "urun_tanimi": "TESHIR - SELF SERVIS - SOGUK - 180 CM",
+        "liste_fiyati_eur": 11742.0,
+        "satis_fiyati_eur": 4109.7,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.25C20.SS",
+        "urun_tanimi": "TESHIR - SELF SERVIS - SOGUK - 200 CM",
+        "liste_fiyati_eur": 12062.0,
+        "satis_fiyati_eur": 4221.7,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.25H10.SS",
+        "urun_tanimi": "TESHIR - SELF SERVIS - SICAK - 100 CM",
+        "liste_fiyati_eur": 4566.0,
+        "satis_fiyati_eur": 1598.1,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.25H12.SS",
+        "urun_tanimi": "TESHIR - SELF SERVIS - SICAK - 120 CM",
+        "liste_fiyati_eur": 5036.0,
+        "satis_fiyati_eur": 1762.6,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.25H15.SS",
+        "urun_tanimi": "TESHIR - SELF SERVIS - SICAK - 150 CM",
+        "liste_fiyati_eur": 5737.0,
+        "satis_fiyati_eur": 2007.95,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.25H18.SS",
+        "urun_tanimi": "TESHIR - SELF SERVIS - SICAK - 180 CM",
+        "liste_fiyati_eur": 7042.0,
+        "satis_fiyati_eur": 2464.7,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.25H20.SS",
+        "urun_tanimi": "TESHIR - SELF SERVIS - SICAK - 200 CM",
+        "liste_fiyati_eur": 7413.0,
+        "satis_fiyati_eur": 2594.55,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.25N10.SS",
+        "urun_tanimi": "TESHIR - SELF SERVIS - NOTR - 100 CM",
+        "liste_fiyati_eur": 3858.0,
+        "satis_fiyati_eur": 1350.3,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.25N12.SS",
+        "urun_tanimi": "TESHIR - SELF SERVIS - NOTR - 120 CM",
+        "liste_fiyati_eur": 4333.0,
+        "satis_fiyati_eur": 1516.55,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.25N15.SS",
+        "urun_tanimi": "TESHIR - SELF SERVIS - NOTR - 150 CM",
+        "liste_fiyati_eur": 5003.0,
+        "satis_fiyati_eur": 1751.05,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.25N18.SS",
+        "urun_tanimi": "TESHIR - SELF SERVIS - NOTR - 180 CM",
+        "liste_fiyati_eur": 5886.0,
+        "satis_fiyati_eur": 2060.1,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETD.25N20.SS",
+        "urun_tanimi": "TESHIR - SELF SERVIS - NOTR - 200 CM",
+        "liste_fiyati_eur": 6376.0,
+        "satis_fiyati_eur": 2231.6,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      }
+    ],
+    "DUVAR TİPİ TEŞHİR ÜNİTELERİ": {
+      "_urunler": [
+        {
+          "urun_kodu": "7ETD.35C10.SS",
+          "urun_tanimi": "TESHIR - ICECEK - SUTLUK - SOGUK - 100 CM",
+          "liste_fiyati_eur": 9953.0,
+          "satis_fiyati_eur": 3483.55,
+          "bayi_iskonto": 0.65,
+          "iskonto_yuzde": 65.0,
+          "para_birimi": "EUR",
+          "pdf_eslesme": false,
+          "pdf_sayfalar": null
+        },
+        {
+          "urun_kodu": "7ETD.35C12.SS",
+          "urun_tanimi": "TESHIR - ICECEK - SUTLUK - SOGUK - 120 CM",
+          "liste_fiyati_eur": 10981.0,
+          "satis_fiyati_eur": 3843.35,
+          "bayi_iskonto": 0.65,
+          "iskonto_yuzde": 65.0,
+          "para_birimi": "EUR",
+          "pdf_eslesme": false,
+          "pdf_sayfalar": null
+        },
+        {
+          "urun_kodu": "7ETD.35C15.SS",
+          "urun_tanimi": "TESHIR - ICECEK - SUTLUK - SOGUK - 150 CM",
+          "liste_fiyati_eur": 12926.0,
+          "satis_fiyati_eur": 4524.1,
+          "bayi_iskonto": 0.65,
+          "iskonto_yuzde": 65.0,
+          "para_birimi": "EUR",
+          "pdf_eslesme": false,
+          "pdf_sayfalar": null
+        },
+        {
+          "urun_kodu": "7ETD.35C18.SS",
+          "urun_tanimi": "TESHIR - ICECEK - SUTLUK - SOGUK - 180 CM",
+          "liste_fiyati_eur": 13814.0,
+          "satis_fiyati_eur": 4834.9,
+          "bayi_iskonto": 0.65,
+          "iskonto_yuzde": 65.0,
+          "para_birimi": "EUR",
+          "pdf_eslesme": false,
+          "pdf_sayfalar": null
+        },
+        {
+          "urun_kodu": "7ETD.35C20.SS",
+          "urun_tanimi": "TESHIR - ICECEK - SUTLUK - SOGUK - 200 CM",
+          "liste_fiyati_eur": 14781.0,
+          "satis_fiyati_eur": 5173.35,
+          "bayi_iskonto": 0.65,
+          "iskonto_yuzde": 65.0,
+          "para_birimi": "EUR",
+          "pdf_eslesme": false,
+          "pdf_sayfalar": null
+        },
+        {
+          "urun_kodu": "7ETD.35H10.SS",
+          "urun_tanimi": "TESHIR - ICECEK - SUTLUK - SICAK - 100 CM",
+          "liste_fiyati_eur": 5946.0,
+          "satis_fiyati_eur": 2081.1,
+          "bayi_iskonto": 0.65,
+          "iskonto_yuzde": 65.0,
+          "para_birimi": "EUR",
+          "pdf_eslesme": false,
+          "pdf_sayfalar": null
+        },
+        {
+          "urun_kodu": "7ETD.35H12.SS",
+          "urun_tanimi": "TESHIR - ICECEK - SUTLUK - SICAK - 120 CM",
+          "liste_fiyati_eur": 6443.0,
+          "satis_fiyati_eur": 2255.05,
+          "bayi_iskonto": 0.65,
+          "iskonto_yuzde": 65.0,
+          "para_birimi": "EUR",
+          "pdf_eslesme": false,
+          "pdf_sayfalar": null
+        },
+        {
+          "urun_kodu": "7ETD.35H15.SS",
+          "urun_tanimi": "TESHIR - ICECEK - SUTLUK - SICAK - 150 CM",
+          "liste_fiyati_eur": 8173.0,
+          "satis_fiyati_eur": 2860.55,
+          "bayi_iskonto": 0.65,
+          "iskonto_yuzde": 65.0,
+          "para_birimi": "EUR",
+          "pdf_eslesme": false,
+          "pdf_sayfalar": null
+        },
+        {
+          "urun_kodu": "7ETD.35H18.SS",
+          "urun_tanimi": "TESHIR - ICECEK - SUTLUK - SICAK - 180 CM",
+          "liste_fiyati_eur": 9285.0,
+          "satis_fiyati_eur": 3249.75,
+          "bayi_iskonto": 0.65,
+          "iskonto_yuzde": 65.0,
+          "para_birimi": "EUR",
+          "pdf_eslesme": false,
+          "pdf_sayfalar": null
+        },
+        {
+          "urun_kodu": "7ETD.35H20.SS",
+          "urun_tanimi": "TESHIR - ICECEK - SUTLUK - SICAK - 200 CM",
+          "liste_fiyati_eur": 10001.0,
+          "satis_fiyati_eur": 3500.35,
+          "bayi_iskonto": 0.65,
+          "iskonto_yuzde": 65.0,
+          "para_birimi": "EUR",
+          "pdf_eslesme": false,
+          "pdf_sayfalar": null
+        },
+        {
+          "urun_kodu": "7ETD.35N10.SS",
+          "urun_tanimi": "TESHIR - ICECEK - SUTLUK - NOTR - 100 CM",
+          "liste_fiyati_eur": 5124.0,
+          "satis_fiyati_eur": 1793.4,
+          "bayi_iskonto": 0.65,
+          "iskonto_yuzde": 65.0,
+          "para_birimi": "EUR",
+          "pdf_eslesme": false,
+          "pdf_sayfalar": null
+        },
+        {
+          "urun_kodu": "7ETD.35N12.SS",
+          "urun_tanimi": "TESHIR - ICECEK - SUTLUK - NOTR - 120 CM",
+          "liste_fiyati_eur": 5639.0,
+          "satis_fiyati_eur": 1973.65,
+          "bayi_iskonto": 0.65,
+          "iskonto_yuzde": 65.0,
+          "para_birimi": "EUR",
+          "pdf_eslesme": false,
+          "pdf_sayfalar": null
+        },
+        {
+          "urun_kodu": "7ETD.35N15.SS",
+          "urun_tanimi": "TESHIR - ICECEK - SUTLUK - NOTR - 150 CM",
+          "liste_fiyati_eur": 7211.0,
+          "satis_fiyati_eur": 2523.85,
+          "bayi_iskonto": 0.65,
+          "iskonto_yuzde": 65.0,
+          "para_birimi": "EUR",
+          "pdf_eslesme": false,
+          "pdf_sayfalar": null
+        },
+        {
+          "urun_kodu": "7ETD.35N18.SS",
+          "urun_tanimi": "TESHIR - ICECEK - SUTLUK - NOTR - 180 CM",
+          "liste_fiyati_eur": 7847.0,
+          "satis_fiyati_eur": 2746.45,
+          "bayi_iskonto": 0.65,
+          "iskonto_yuzde": 65.0,
+          "para_birimi": "EUR",
+          "pdf_eslesme": false,
+          "pdf_sayfalar": null
+        },
+        {
+          "urun_kodu": "7ETD.35N20.SS",
+          "urun_tanimi": "TESHIR - ICECEK - SUTLUK - NOTR - 200 CM",
+          "liste_fiyati_eur": 8747.0,
+          "satis_fiyati_eur": 3061.45,
+          "bayi_iskonto": 0.65,
+          "iskonto_yuzde": 65.0,
+          "para_birimi": "EUR",
+          "pdf_eslesme": false,
+          "pdf_sayfalar": null
+        }
+      ]
+    }
+  },
+  "ANKASTRE SELF SERVİS TEŞHİR ÜNİTELERİ": {
+    "_urunler": [
+      {
+        "urun_kodu": "7ETA.21C10.SS",
+        "urun_tanimi": "ANKASTRE - SELF SERVIS - SOGUK - 100 CM",
+        "liste_fiyati_eur": 7835.0,
+        "satis_fiyati_eur": 2742.25,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETA.21C12.SS",
+        "urun_tanimi": "ANKASTRE - SELF SERVIS - SOGUK - 120 CM",
+        "liste_fiyati_eur": 8731.0,
+        "satis_fiyati_eur": 3055.85,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETA.21C15.SS",
+        "urun_tanimi": "ANKASTRE - SELF SERVIS - SOGUK - 150 CM",
+        "liste_fiyati_eur": 9893.0,
+        "satis_fiyati_eur": 3462.55,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETA.21C18.SS",
+        "urun_tanimi": "ANKASTRE - SELF SERVIS - SOGUK - 180 CM",
+        "liste_fiyati_eur": 10167.0,
+        "satis_fiyati_eur": 3558.45,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETA.21C20.SS",
+        "urun_tanimi": "ANKASTRE - SELF SERVIS - SOGUK - 200 CM",
+        "liste_fiyati_eur": 11487.0,
+        "satis_fiyati_eur": 4020.45,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETA.21H10.SS",
+        "urun_tanimi": "ANKASTRE - SELF SERVIS - SICAK - 100 CM",
+        "liste_fiyati_eur": 4293.0,
+        "satis_fiyati_eur": 1502.55,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETA.21H12.SS",
+        "urun_tanimi": "ANKASTRE - SELF SERVIS - SICAK - 120 CM",
+        "liste_fiyati_eur": 4467.0,
+        "satis_fiyati_eur": 1563.45,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETA.21H15.SS",
+        "urun_tanimi": "ANKASTRE - SELF SERVIS - SICAK - 150 CM",
+        "liste_fiyati_eur": 5266.0,
+        "satis_fiyati_eur": 1843.1,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETA.21H18.SS",
+        "urun_tanimi": "ANKASTRE - SELF SERVIS - SICAK - 180 CM",
+        "liste_fiyati_eur": 5515.0,
+        "satis_fiyati_eur": 1930.25,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETA.21H20.SS",
+        "urun_tanimi": "ANKASTRE - SELF SERVIS - SICAK - 200 CM",
+        "liste_fiyati_eur": 6805.0,
+        "satis_fiyati_eur": 2381.75,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETA.22C06.SS",
+        "urun_tanimi": "ANKASTRE - MINI SELF SERVIS - SOGUK - 60 CM",
+        "liste_fiyati_eur": 3764.0,
+        "satis_fiyati_eur": 1317.4,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETA.22C09.SS",
+        "urun_tanimi": "ANKASTRE - MINI SELF SERVIS - SOGUK - 90 CM",
+        "liste_fiyati_eur": 4510.0,
+        "satis_fiyati_eur": 1578.5,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETA.22C12.SS",
+        "urun_tanimi": "ANKASTRE - MINI SELF SERVIS - SOGUK - 120 CM",
+        "liste_fiyati_eur": 5269.0,
+        "satis_fiyati_eur": 1844.15,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETA.22H06.SS",
+        "urun_tanimi": "ANKASTRE - MINI SELF SERVIS - SICAK - 60 CM",
+        "liste_fiyati_eur": 2257.0,
+        "satis_fiyati_eur": 789.95,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETA.22H09.SS",
+        "urun_tanimi": "ANKASTRE - MINI SELF SERVIS - SICAK - 90 CM",
+        "liste_fiyati_eur": 2796.0,
+        "satis_fiyati_eur": 978.6,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETA.22H12.SS",
+        "urun_tanimi": "ANKASTRE - MINI SELF SERVIS - SICAK - 120 CM",
+        "liste_fiyati_eur": 3392.0,
+        "satis_fiyati_eur": 1187.2,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETA.11C2G.SS",
+        "urun_tanimi": "ANKASTRE - PASLANMAZ HAVUZ - SOGUK - 2 GN",
+        "liste_fiyati_eur": 2216.0,
+        "satis_fiyati_eur": 775.6,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETA.11C3G.SS",
+        "urun_tanimi": "ANKASTRE - PASLANMAZ HAVUZ - SOGUK - 3 GN",
+        "liste_fiyati_eur": 2785.0,
+        "satis_fiyati_eur": 974.75,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETA.11C4G.SS",
+        "urun_tanimi": "ANKASTRE - PASLANMAZ HAVUZ - SOGUK - 4 GN",
+        "liste_fiyati_eur": 2966.0,
+        "satis_fiyati_eur": 1038.1,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETA.11C5G.SS",
+        "urun_tanimi": "ANKASTRE - PASLANMAZ HAVUZ - SOGUK - 5 GN",
+        "liste_fiyati_eur": 3269.0,
+        "satis_fiyati_eur": 1144.15,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETA.11C6G.SS",
+        "urun_tanimi": "ANKASTRE - PASLANMAZ HAVUZ - SOGUK - 6 GN",
+        "liste_fiyati_eur": 3630.0,
+        "satis_fiyati_eur": 1270.5,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETA.11H2G.SS",
+        "urun_tanimi": "ANKASTRE - PASLANMAZ HAVUZ - SICAK - 2 GN",
+        "liste_fiyati_eur": 1367.0,
+        "satis_fiyati_eur": 478.45,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETA.11H3G.SS",
+        "urun_tanimi": "ANKASTRE - PASLANMAZ HAVUZ - SICAK - 3 GN",
+        "liste_fiyati_eur": 1891.0,
+        "satis_fiyati_eur": 661.85,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETA.11H4G.SS",
+        "urun_tanimi": "ANKASTRE - PASLANMAZ HAVUZ - SICAK - 4 GN",
+        "liste_fiyati_eur": 2154.0,
+        "satis_fiyati_eur": 753.9,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETA.11H5G.SS",
+        "urun_tanimi": "ANKASTRE - PASLANMAZ HAVUZ - SICAK - 5 GN",
+        "liste_fiyati_eur": 2204.0,
+        "satis_fiyati_eur": 771.4,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETA.11H6G.SS",
+        "urun_tanimi": "ANKASTRE - PASLANMAZ HAVUZ - SICAK - 6 GN",
+        "liste_fiyati_eur": 2701.0,
+        "satis_fiyati_eur": 945.35,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETA.12C2G.SS",
+        "urun_tanimi": "ANKASTRE - PASLANMAZ YUZEY - SOGUK - 90 CM",
+        "liste_fiyati_eur": 1918.0,
+        "satis_fiyati_eur": 671.3,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETA.12C3G.SS",
+        "urun_tanimi": "ANKASTRE - PASLANMAZ YUZEY - SOGUK - 112 CM",
+        "liste_fiyati_eur": 2100.0,
+        "satis_fiyati_eur": 735.0,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETA.12C4G.SS",
+        "urun_tanimi": "ANKASTRE - PASLANMAZ YUZEY - SOGUK - 144 CM",
+        "liste_fiyati_eur": 2293.0,
+        "satis_fiyati_eur": 802.55,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETA.12C5G.SS",
+        "urun_tanimi": "ANKASTRE - PASLANMAZ YUZEY - SOGUK - 177 CM",
+        "liste_fiyati_eur": 2472.0,
+        "satis_fiyati_eur": 865.2,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETA.12C6G.SS",
+        "urun_tanimi": "ANKASTRE - PASLANMAZ YUZEY - SOGUK - 210 CM",
+        "liste_fiyati_eur": 2647.0,
+        "satis_fiyati_eur": 926.45,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETA.12H2G.SS",
+        "urun_tanimi": "ANKASTRE - PASLANMAZ YUZEY - SICAK - 90 CM",
+        "liste_fiyati_eur": 1322.0,
+        "satis_fiyati_eur": 462.7,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETA.12H3G.SS",
+        "urun_tanimi": "ANKASTRE - PASLANMAZ YUZEY - SICAK - 112 CM",
+        "liste_fiyati_eur": 1398.0,
+        "satis_fiyati_eur": 489.3,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETA.12H4G.SS",
+        "urun_tanimi": "ANKASTRE - PASLANMAZ YUZEY - SICAK - 144 CM",
+        "liste_fiyati_eur": 1557.0,
+        "satis_fiyati_eur": 544.95,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETA.12H5G.SS",
+        "urun_tanimi": "ANKASTRE - PASLANMAZ YUZEY - SICAK - 177 CM",
+        "liste_fiyati_eur": 1862.0,
+        "satis_fiyati_eur": 651.7,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETA.12H6G.SS",
+        "urun_tanimi": "ANKASTRE - PASLANMAZ YUZEY - SICAK - 209 CM",
+        "liste_fiyati_eur": 3476.0,
+        "satis_fiyati_eur": 1216.6,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
       }
     ]
   },
@@ -38595,6 +41971,513 @@
         "bayi_iskonto": 0.55,
         "iskonto_yuzde": 55.0,
         "para_birimi": "USD",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      }
+    ]
+  },
+  "NEFESLİKLER (BOMBE CAMLI)": {
+    "_urunler": [
+      {
+        "urun_kodu": "7ETX.11F09.BC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - BOMBE CAMLI - FLORESAN - 79 CM",
+        "liste_fiyati_eur": 1255.0,
+        "satis_fiyati_eur": 439.25,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11F12.BC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - BOMBE CAMLI - FLORESAN - 111 CM",
+        "liste_fiyati_eur": 1362.0,
+        "satis_fiyati_eur": 476.7,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11F15.BC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - BOMBE CAMLI - FLORESAN - 144 CM",
+        "liste_fiyati_eur": 1534.0,
+        "satis_fiyati_eur": 536.9,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11F18.BC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - BOMBE CAMLI - FLORESAN - 176 CM",
+        "liste_fiyati_eur": 1703.0,
+        "satis_fiyati_eur": 596.05,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11F20.BC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - BOMBE CAMLI - FLORESAN - 208 CM",
+        "liste_fiyati_eur": 1916.0,
+        "satis_fiyati_eur": 670.6,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11L09.BC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - BOMBE CAMLI - LED - 79 CM",
+        "liste_fiyati_eur": 1221.0,
+        "satis_fiyati_eur": 427.35,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11L12.BC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - BOMBE CAMLI - LED - 111 CM",
+        "liste_fiyati_eur": 1312.0,
+        "satis_fiyati_eur": 459.2,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11L15.BC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - BOMBE CAMLI - LED - 144 CM",
+        "liste_fiyati_eur": 1457.0,
+        "satis_fiyati_eur": 509.95,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11L18.BC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - BOMBE CAMLI - LED - 176 CM",
+        "liste_fiyati_eur": 1627.0,
+        "satis_fiyati_eur": 569.45,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11L20.BC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - BOMBE CAMLI - LED - 208 CM",
+        "liste_fiyati_eur": 1811.0,
+        "satis_fiyati_eur": 633.85,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11H09.BC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - BOMBE CAMLI - HALOJEN - 79 CM",
+        "liste_fiyati_eur": 1260.0,
+        "satis_fiyati_eur": 441.0,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11H12.BC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - BOMBE CAMLI - HALOJEN - 111 CM",
+        "liste_fiyati_eur": 1369.0,
+        "satis_fiyati_eur": 479.15,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11H15.BC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - BOMBE CAMLI - HALOJEN - 144 CM",
+        "liste_fiyati_eur": 1531.0,
+        "satis_fiyati_eur": 535.85,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11H18.BC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - BOMBE CAMLI - HALOJEN - 176 CM",
+        "liste_fiyati_eur": 1692.0,
+        "satis_fiyati_eur": 592.2,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11H20.BC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - BOMBE CAMLI - HALOJEN - 208 CM",
+        "liste_fiyati_eur": 1906.0,
+        "satis_fiyati_eur": 667.1,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      }
+    ]
+  },
+  "NEFESLİKLER (YAY CAMLI)": {
+    "_urunler": [
+      {
+        "urun_kodu": "7ETX.11F09.YC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - YAY CAMLI - FLORESAN - 79 CM",
+        "liste_fiyati_eur": 442.0,
+        "satis_fiyati_eur": 154.7,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11F12.YC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - YAY CAMLI - FLORESAN - 111 CM",
+        "liste_fiyati_eur": 496.0,
+        "satis_fiyati_eur": 173.6,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11F15.YC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - YAY CAMLI - FLORESAN - 144 CM",
+        "liste_fiyati_eur": 672.0,
+        "satis_fiyati_eur": 235.2,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11F18.YC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - YAY CAMLI - FLORESAN - 176 CM",
+        "liste_fiyati_eur": 755.0,
+        "satis_fiyati_eur": 264.25,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11F20.YC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - YAY CAMLI - FLORESAN - 208 CM",
+        "liste_fiyati_eur": 761.0,
+        "satis_fiyati_eur": 266.35,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11L09.YC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - YAY CAMLI - LED - 79 CM",
+        "liste_fiyati_eur": 408.0,
+        "satis_fiyati_eur": 142.8,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11L12.YC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - YAY CAMLI - LED - 111 CM",
+        "liste_fiyati_eur": 446.0,
+        "satis_fiyati_eur": 156.1,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11L15.YC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - YAY CAMLI - LED - 144 CM",
+        "liste_fiyati_eur": 594.0,
+        "satis_fiyati_eur": 207.9,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11L18.YC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - YAY CAMLI - LED - 176 CM",
+        "liste_fiyati_eur": 666.0,
+        "satis_fiyati_eur": 233.1,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11L20.YC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - YAY CAMLI - LED - 208 CM",
+        "liste_fiyati_eur": 657.0,
+        "satis_fiyati_eur": 229.95,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11H09.YC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - YAY CAMLI - HALOJEN - 79 CM",
+        "liste_fiyati_eur": 447.0,
+        "satis_fiyati_eur": 156.45,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11H12.YC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - YAY CAMLI - HALOJEN - 111 CM",
+        "liste_fiyati_eur": 503.0,
+        "satis_fiyati_eur": 176.05,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11H15.YC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - YAY CAMLI - HALOJEN - 144 CM",
+        "liste_fiyati_eur": 668.0,
+        "satis_fiyati_eur": 233.8,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11H18.YC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - YAY CAMLI - HALOJEN - 176 CM",
+        "liste_fiyati_eur": 744.0,
+        "satis_fiyati_eur": 260.4,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11H20.YC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - YAY CAMLI - HALOJEN - 208 CM",
+        "liste_fiyati_eur": 751.0,
+        "satis_fiyati_eur": 262.85,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      }
+    ]
+  },
+  "NEFESLİKLER (DÜZ CAMLI)": {
+    "_urunler": [
+      {
+        "urun_kodu": "7ETX.11F09.DC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - DUZ CAMLI - FLORESAN - 79 CM",
+        "liste_fiyati_eur": 358.0,
+        "satis_fiyati_eur": 125.3,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11F12.DC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - DUZ CAMLI - FLORESAN - 111 CM",
+        "liste_fiyati_eur": 428.0,
+        "satis_fiyati_eur": 149.8,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11F15.DC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - DUZ CAMLI - FLORESAN - 144 CM",
+        "liste_fiyati_eur": 537.0,
+        "satis_fiyati_eur": 187.95,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11F18.DC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - DUZ CAMLI - FLORESAN - 176 CM",
+        "liste_fiyati_eur": 640.0,
+        "satis_fiyati_eur": 224.0,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11F20.DC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - DUZ CAMLI - FLORESAN - 208 CM",
+        "liste_fiyati_eur": 737.0,
+        "satis_fiyati_eur": 257.95,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11L09.DC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - DUZ CAMLI - LED - 79 CM",
+        "liste_fiyati_eur": 504.0,
+        "satis_fiyati_eur": 176.4,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11L12.DC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - DUZ CAMLI - LED - 111 CM",
+        "liste_fiyati_eur": 504.0,
+        "satis_fiyati_eur": 176.4,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11L15.DC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - DUZ CAMLI - LED - 144 CM",
+        "liste_fiyati_eur": 610.0,
+        "satis_fiyati_eur": 213.5,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11L18.DC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - DUZ CAMLI - LED - 176 CM",
+        "liste_fiyati_eur": 702.0,
+        "satis_fiyati_eur": 245.7,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11L20.DC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - DUZ CAMLI - LED - 208 CM",
+        "liste_fiyati_eur": 790.0,
+        "satis_fiyati_eur": 276.5,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11H09.DC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - DUZ CAMLI - HALOJEN - 79 CM",
+        "liste_fiyati_eur": 379.0,
+        "satis_fiyati_eur": 132.65,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11H12.DC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - DUZ CAMLI - HALOJEN - 111 CM",
+        "liste_fiyati_eur": 435.0,
+        "satis_fiyati_eur": 152.25,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11H15.DC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - DUZ CAMLI - HALOJEN - 144 CM",
+        "liste_fiyati_eur": 534.0,
+        "satis_fiyati_eur": 186.9,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11H18.DC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - DUZ CAMLI - HALOJEN - 176 CM",
+        "liste_fiyati_eur": 629.0,
+        "satis_fiyati_eur": 220.15,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7ETX.11H20.DC",
+        "urun_tanimi": "AKSESUAR - NEFESLIK - DUZ CAMLI - HALOJEN - 208 CM",
+        "liste_fiyati_eur": 727.0,
+        "satis_fiyati_eur": 254.45,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
         "pdf_eslesme": false,
         "pdf_sayfalar": null
       }
@@ -39076,6 +42959,72 @@
           "pdf_sayfalar": [
             343
           ]
+        },
+        {
+          "urun_kodu": "7EKO.10159.00",
+          "urun_tanimi": "KATLANIR ODA SERVIS ARABASI",
+          "liste_fiyati_eur": 560.0,
+          "satis_fiyati_eur": 196.0,
+          "bayi_iskonto": 0.65,
+          "iskonto_yuzde": 65.0,
+          "para_birimi": "EUR",
+          "pdf_eslesme": false,
+          "pdf_sayfalar": null
+        },
+        {
+          "urun_kodu": "7EKO.10119.00",
+          "urun_tanimi": "ODA SERVİS ARABASI",
+          "liste_fiyati_eur": 511.0,
+          "satis_fiyati_eur": 178.85,
+          "bayi_iskonto": 0.65,
+          "iskonto_yuzde": 65.0,
+          "para_birimi": "EUR",
+          "pdf_eslesme": false,
+          "pdf_sayfalar": null
+        },
+        {
+          "urun_kodu": "7EKO.10159.01",
+          "urun_tanimi": "ISITMA DOLABI - EKO159 İÇİN",
+          "liste_fiyati_eur": 839.0,
+          "satis_fiyati_eur": 293.65,
+          "bayi_iskonto": 0.65,
+          "iskonto_yuzde": 65.0,
+          "para_birimi": "EUR",
+          "pdf_eslesme": false,
+          "pdf_sayfalar": null
+        },
+        {
+          "urun_kodu": "7EKO.10119.01",
+          "urun_tanimi": "ISITMA DOLABI - EKO119 İÇİN",
+          "liste_fiyati_eur": 839.0,
+          "satis_fiyati_eur": 293.65,
+          "bayi_iskonto": 0.65,
+          "iskonto_yuzde": 65.0,
+          "para_birimi": "EUR",
+          "pdf_eslesme": false,
+          "pdf_sayfalar": null
+        },
+        {
+          "urun_kodu": "8EKO.50513.00",
+          "urun_tanimi": "TABAK BARDAK  ISTIF ARABASI",
+          "liste_fiyati_eur": 1419.0,
+          "satis_fiyati_eur": 638.55,
+          "bayi_iskonto": 0.55,
+          "iskonto_yuzde": 55.0,
+          "para_birimi": "EUR",
+          "pdf_eslesme": false,
+          "pdf_sayfalar": null
+        },
+        {
+          "urun_kodu": "7EKO.50531.00",
+          "urun_tanimi": "KATLI TABAK İSTİF ARABASI",
+          "liste_fiyati_eur": 1046.0,
+          "satis_fiyati_eur": 366.1,
+          "bayi_iskonto": 0.65,
+          "iskonto_yuzde": 65.0,
+          "para_birimi": "EUR",
+          "pdf_eslesme": false,
+          "pdf_sayfalar": null
         }
       ],
       "ÇOK AMAÇLI ARABALAR (PLATE MATE KATLI TABAK ARABALARI)": {
@@ -41948,6 +45897,28 @@
         "satis_fiyati_eur": 580.52,
         "bayi_iskonto": 0.6,
         "iskonto_yuzde": 60.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7EKO.PS910.00",
+        "urun_tanimi": "CHAFING DISH SERVIS ARABASI",
+        "liste_fiyati_eur": 3791.0,
+        "satis_fiyati_eur": 1326.85,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
+        "para_birimi": "EUR",
+        "pdf_eslesme": false,
+        "pdf_sayfalar": null
+      },
+      {
+        "urun_kodu": "7EKO.PS920.00",
+        "urun_tanimi": "CHAFING DISH SERVIS ARABASI   Ø60",
+        "liste_fiyati_eur": 3332.0,
+        "satis_fiyati_eur": 1166.2,
+        "bayi_iskonto": 0.65,
+        "iskonto_yuzde": 65.0,
         "para_birimi": "EUR",
         "pdf_eslesme": false,
         "pdf_sayfalar": null

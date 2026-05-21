@@ -5,7 +5,7 @@
   'use strict';
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260519ozti-yikama-mak';
+  var CATALOG_V = '20260520ozti-fiyat5250';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   var deptCoverImg = '';
 
