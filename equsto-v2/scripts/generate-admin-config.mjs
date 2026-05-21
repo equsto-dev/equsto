@@ -11,10 +11,28 @@ const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const PUBLIC = path.join(ROOT, "public");
 const OUT = path.join(PUBLIC, "admin-config.js");
 
-const site = (
-  process.env.NEXT_PUBLIC_SITE_URL ||
-  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000")
-).replace(/\/$/, "");
+/** Canlı domain — Vercel production build */
+const PRODUCTION_SITE = "https://equsto.com";
+
+function resolveSiteUrl() {
+  const explicit = (process.env.NEXT_PUBLIC_SITE_URL || "").replace(/\/$/, "");
+  const isProduction = process.env.VERCEL_ENV === "production";
+  if (isProduction) {
+    if (
+      !explicit ||
+      /\.vercel\.app$/i.test(explicit) ||
+      /localhost|127\.0\.0\.1/i.test(explicit)
+    ) {
+      return PRODUCTION_SITE;
+    }
+    return explicit;
+  }
+  if (explicit) return explicit;
+  if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
+  return "http://localhost:3000";
+}
+
+const site = resolveSiteUrl();
 
 const apiBase = `${site}/api`;
 const bearer = process.env.EQUSTO_ADMIN_BEARER || "";
