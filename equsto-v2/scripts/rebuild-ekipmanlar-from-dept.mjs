@@ -1,6 +1,6 @@
 /**
  * public/data/dept/*.json → tek public/data/ekipmanlar.json (mağaza + /api/urunler).
- * PFOS/BESOS HTML’e dokunmaz; pfos hâlâ /data/ekipmanlar.json okur (artık yalnız Atalay).
+ * PFOS/BESOS HTML’e dokunmaz; pfos hâlâ /data/ekipmanlar.json okur (tüm dept birleşimi).
  *
  *   node scripts/rebuild-ekipmanlar-from-dept.mjs
  */

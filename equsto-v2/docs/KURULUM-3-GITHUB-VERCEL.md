@@ -41,7 +41,7 @@ git push -u origin main
 | `NEXT_PUBLIC_SITE_URL` | İlk deploy: `https://PROJE.vercel.app` |
 | `LEGACY_DATA_BASE` | `https://equsto.com` (isteğe bağlı) |
 
-`MEILISEARCH_*` — Hetzner hazır olunca eklenir.
+`MEILISEARCH_*` — [Meilisearch Cloud](https://www.meilisearch.com/cloud) veya yerel; bkz. [`MEILISEARCH.md`](MEILISEARCH.md)
 
 5. **Deploy**
 
@@ -60,6 +60,8 @@ Supabase **Table Editor**’da tablolar görünüyorsa ek migrate gerekmez (loka
 
 ---
 
+**Env + domain adım adım:** [`VERCEL-ENV-VE-DOMAIN.md`](VERCEL-ENV-VE-DOMAIN.md)
+
 ## 4) Canlı equsto.com (PFOS/BESOS)
 
 Statik paket: `deploy-live-pfos-besos/` → cPanel `public_html`  
@@ -71,6 +73,6 @@ Yeni site Vercel’de; eski domain yönlendirmesi ayrı adım (DNS).
 
 ## 5) Sprint 0 kalan (sonra)
 
-- [ ] Meilisearch (Hetzner `search.equsto.com`)
+- [ ] Meilisearch Cloud + `npm run search:index` ([`MEILISEARCH.md`](MEILISEARCH.md))
 - [ ] 10 Atalay ürünü `PUBLISHED` (admin veya seed genişletme)
 - [ ] Domain `equsto.com` → Vercel

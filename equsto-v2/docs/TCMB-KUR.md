@@ -26,7 +26,9 @@ GET https://equsto.com/api/kur
 }
 ```
 
-Önbellek: yaklaşık **1 saat** (`Cache-Control: s-maxage=3600`).
+Önbellek: varsayılan **60 sn** (`TCMB_KUR_REVALIDATE_SEC`; `0` = her istekte taze).
+
+**Mağaza (equsto.com):** Her sayfa yüklemesinde TCMB çekilir; TRY = `fiyat_euro_site × kur` (DB’deki eski `priceListTl` yok sayılır, EUR specs varsa).
 
 ## Fiyat formülü (Atalay döner)
 

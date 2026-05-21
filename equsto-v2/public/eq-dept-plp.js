@@ -5,7 +5,7 @@
   'use strict';
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260522atalay-only';
+  var CATALOG_V = '20260523catalog';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
 
   var state = {
@@ -43,7 +43,11 @@
     return isNaN(n) ? 0 : n;
   }
 
-  function formatPrice(p) {
+  function formatPrice(p, raw) {
+    if (raw && window.EqustoKurLive && typeof window.EqustoKurLive.priceForRow === 'function') {
+      var live = window.EqustoKurLive.priceForRow(raw);
+      if (live) return live.replace(/\s*\+?\s*KDV.*$/i, '').trim() || live;
+    }
     var n = parsePrice(p);
     if (!n) return '';
     return n.toLocaleString('tr-TR', { maximumFractionDigits: 0 }) + ' TL';
@@ -150,14 +154,17 @@
     return true;
   }
 
+  function isOztiRow(raw) {
+    if (!raw) return false;
+    var k = String(raw.kaynak || raw.kaynak_fiyat_listesi || '');
+    if (/^ozti/i.test(k)) return true;
+    if (String(raw.dept || '') === 'set-ustu-mutfak') return true;
+    return false;
+  }
+
   function skipItem(item) {
-    if (
-      typeof window.eqIsAtalayCatalogRow === 'function' &&
-      item &&
-      item.raw &&
-      !window.eqIsAtalayCatalogRow(item.raw)
-    ) {
-      return true;
+    if (DEPT === 'set-ustu-mutfak') {
+      return !(item && item.raw && isOztiRow(item.raw));
     }
     if (DEPT !== 'market-reyon') {
       if (window.EqDeptTips && window.EqDeptTips.excludeFromDeptView) {
@@ -192,15 +199,19 @@
     if (window.EqDeptCmFacets && window.EqDeptCmFacets.resolveFacetBrand) {
       fb = window.EqDeptCmFacets.resolveFacetBrand(b, n);
     }
+    var row = x;
+    if (window.EqustoKurLive && typeof window.EqustoKurLive.applyRowPrices === 'function') {
+      row = window.EqustoKurLive.applyRowPrices(x) || x;
+    }
     return {
-      c: x.category || '',
+      c: row.category || '',
       b: b,
       fb: fb,
       n: n,
-      p: String(x.price || '').split('\n')[0],
-      img: x.images && x.images[0] ? imgSrc(x.images[0]) : '',
-      tip_kodu: x.tip_kodu || x.tipKodu || '',
-      raw: x,
+      p: String(row.price || '').split('\n')[0],
+      img: row.images && row.images[0] ? imgSrc(row.images[0]) : '',
+      tip_kodu: row.tip_kodu || row.tipKodu || '',
+      raw: row,
     };
   }
 
@@ -452,7 +463,11 @@
             '">' +
             esc(u.n) +
             '</a>' +
-            (u.p ? '<div class="eq-dept-plp-card__price">' + esc(formatPrice(u.p)) + '</div>' : '') +
+            (u.p
+              ? '<div class="eq-dept-plp-card__price">' +
+                esc(formatPrice(u.p, u.raw)) +
+                '</div>'
+              : '') +
             cartBtn +
             '</article>'
           );
@@ -721,6 +736,10 @@
     var asideHd = document.querySelector('.eq-dept-plp-aside__hd');
     if (asideHd && title) asideHd.textContent = title;
   }
+
+  document.addEventListener("equsto:kur-updated", function () {
+    if (state.ready) render();
+  });
 
   function boot() {
     applyPageMeta();

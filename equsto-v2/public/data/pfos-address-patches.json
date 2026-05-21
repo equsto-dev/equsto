@@ -1,0 +1,43 @@
+{
+  "CADDELER_BY_ILCE": {
+    "Avcılar": [
+      "Acıbadem Cad.",
+      "Firuzköy Bul.",
+      "Mustafa Kemal Paşa Bul.",
+      "Tahtakale Cad.",
+      "Denizköşkler Cad.",
+      "Ambarlı Liman Cad.",
+      "Üniversite Cad.",
+      "Gümüşpala Cad.",
+      "Yeşilkent Cad.",
+      "E-5 Karayolu"
+    ],
+    "Kadıköy": [
+      "Bağdat Cad.",
+      "Moda Cad.",
+      "Söğütlüçeşme Cad.",
+      "Dr. Esat Işık Cad.",
+      "Hasanpaşa Cad."
+    ],
+    "Beşiktaş": [
+      "Barbaros Bul.",
+      "Büyükdere Cad.",
+      "Levent Cad.",
+      "Nispetiye Cad.",
+      "Cevdet Paşa Cad."
+    ],
+    "Şişli": [
+      "Halaskargazi Cad.",
+      "Büyükdere Cad.",
+      "Abide-i Hürriyet Cad.",
+      "Ergenekon Cad."
+    ]
+  },
+  "CADDELER": {
+    "Ambarlı": ["Acıbadem Cad.", "Ambarlı Liman Cad.", "Üniversite Cad."],
+    "Yeşilkent": ["Yeşilkent Cad.", "Gümüşpala Cad.", "Acıbadem Cad."]
+  },
+  "SOKAKLAR": {
+    "Acıbadem Cad.": ["Pıtrak Sok.", "Acıbadem Yan Sok."]
+  }
+}

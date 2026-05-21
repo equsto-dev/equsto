@@ -41,6 +41,7 @@
     tasima: '🚚',
     araba: '🛒',
     istif: '📦',
+    'set-ustu-mutfak': '🍽️',
   };
 
   function storyEmoji(item) {
@@ -77,6 +78,7 @@
       { label: 'Taşıma Ekipmanları', dept: 'tasima', emoji: '🚚', bg: '#e0f7fa', image: '/data/images/mikser-10-lt-palet_1.jpg' },
       { label: 'Arabalar', dept: 'araba', emoji: '🛒', bg: '#e8f5e9', image: '/data/images/servis-arabasi-procart-220_1.jpg' },
       { label: 'İstif Rafları', dept: 'istif', emoji: '📦', bg: '#ede7f6', image: '/data/images/i-stif-rafi_1.jpg' },
+      { label: 'Set Üstü Mutfak', dept: 'set-ustu-mutfak', emoji: '🍽️', bg: '#fff8e6' },
     ];
   }
 

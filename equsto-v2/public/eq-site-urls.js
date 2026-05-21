@@ -32,6 +32,7 @@
     tasima: "/shop/tasima",
     araba: "/shop/araba",
     istif: "/shop/istif",
+    "set-ustu-mutfak": "/shop/set-ustu-mutfak",
   };
   /** file:// açılışında kullanılacak gerçek dosya adları */
   var FILE_FALLBACK = {
@@ -57,6 +58,7 @@
     tasima: "tasima.html",
     araba: "araba.html",
     istif: "istif.html",
+    "set-ustu-mutfak": "set-ustu-mutfak.html",
   };
   var LANG_NEUTRAL = { admin: true };
 
@@ -183,6 +185,7 @@
     "tasima",
     "araba",
     "istif",
+    "set-ustu-mutfak",
   ];
   window.eqIsDeptNavKey = function (key) {
     return EQ_DEPT_NAV_KEYS.indexOf(String(key || "")) >= 0;

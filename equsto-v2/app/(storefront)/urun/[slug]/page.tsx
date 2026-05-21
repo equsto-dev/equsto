@@ -2,11 +2,14 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { db } from "@/lib/db";
 import { ProductImage } from "@/components/catalog/product-image";
+import { loadStorefrontPricing } from "@/lib/storefront-pricing";
 import {
   formatSpecsRows,
   parseProductSpecs,
   resolveProductImageUrl,
 } from "@/lib/product-specs";
+
+export const dynamic = "force-dynamic";
 
 export default async function UrunPage({
   params,
@@ -14,13 +17,21 @@ export default async function UrunPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const product = await db.product.findUnique({
-    where: { slug },
-    include: { brand: true, category: true, images: { orderBy: { order: "asc" } } },
-  });
+  const [product, pricing] = await Promise.all([
+    db.product.findUnique({
+      where: { slug },
+      include: { brand: true, category: true, images: { orderBy: { order: "asc" } } },
+    }),
+    loadStorefrontPricing(),
+  ]);
   if (!product || product.status !== "PUBLISHED") notFound();
 
   const specs = parseProductSpecs(product.specs);
+  const { kur, listTl } = pricing;
+  const priceTl = listTl(
+    specs,
+    product.priceListTl != null ? Number(product.priceListTl) : null
+  );
   const primary = product.images.find((i) => i.isPrimary) ?? product.images[0];
   const imgUrl = resolveProductImageUrl(primary?.url, specs);
   const specRows = formatSpecsRows(specs, product.modelCode);
@@ -45,11 +56,12 @@ export default async function UrunPage({
       </p>
       <h1 className="text-2xl font-semibold text-neutral-900">{product.name}</h1>
 
-      {product.priceListTl != null ? (
+      {priceTl != null ? (
         <p className="mt-4 text-2xl font-semibold text-neutral-900">
-          {Number(product.priceListTl).toLocaleString("tr-TR")}{" "}
-          <span className="text-base font-normal text-neutral-600">
-            {product.priceCurrency}
+          {priceTl.toLocaleString("tr-TR")}{" "}
+          <span className="text-base font-normal text-neutral-600">TRY</span>
+          <span className="block text-xs font-normal text-neutral-500 mt-1">
+            Anlık: site EUR × TCMB efektif satış
           </span>
         </p>
       ) : null}
@@ -60,6 +72,17 @@ export default async function UrunPage({
           {specs.fiyat_euro_site != null
             ? ` · Site (≈%40 iskonto): ${specs.fiyat_euro_site.toLocaleString("tr-TR")} EUR`
             : null}
+          {kur.tcmbDate ? (
+            <>
+              {" "}
+              · Kur: TCMB efektif satış{" "}
+              {kur.rate.toLocaleString("tr-TR", {
+                minimumFractionDigits: 4,
+                maximumFractionDigits: 4,
+              })}{" "}
+              ({kur.tcmbDate})
+            </>
+          ) : null}
         </p>
       ) : null}
 

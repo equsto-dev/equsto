@@ -10,11 +10,14 @@ export function StoreShell({
   children,
   title,
   fullBleed,
+  kurNote,
 }: {
   children: React.ReactNode;
   title?: string;
   /** Ana sayfa (Vitrum tarzı) — tam genişlik */
   fullBleed?: boolean;
+  /** TCMB efektif satış — TRY fiyatları bu kurla anlık hesaplanır */
+  kurNote?: string;
 }) {
   return (
     <div className="min-h-screen flex flex-col border-neutral-200">
@@ -49,8 +52,13 @@ export function StoreShell({
         ) : null}
         {children}
       </main>
-      <footer className="border-t border-neutral-200 px-4 py-4 text-center text-xs text-neutral-500">
-        Sprint 0 — iskelet mağaza (renk/marka kimliği sonra)
+      <footer className="border-t border-neutral-200 px-4 py-4 text-center text-xs text-neutral-500 space-y-1">
+        {kurNote ? (
+          <p>
+            TRY liste fiyatları anlık hesaplanır — {kurNote}
+          </p>
+        ) : null}
+        <p>Sprint 0 — iskelet mağaza (renk/marka kimliği sonra)</p>
       </footer>
     </div>
   );

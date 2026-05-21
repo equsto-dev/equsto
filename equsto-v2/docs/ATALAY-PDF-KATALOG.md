@@ -20,7 +20,7 @@ Adımlar: `catalog:atalay:extract` → `catalog:doner:parse` → `catalog:atalay
 | `scripts/data/atalay-pdf-catalog-raw.json` | PDF tablo/robot parse |
 | `scripts/data/atalay-pdf-catalog.json` | Vitrin satırları (~575 SKU) |
 | `public/data/dept/*.json` | **Yalnızca** Atalay satırları (eski markalar silinir) |
-| `public/eq-atalay-catalog-only.js` | Mağaza JS filtresi (PFOS/BESOS etkilenmez) |
+| `public/eq-home-vitrin.js` | Ana sayfa vitrin hariç tutma (arka plan / Öztiryakiler şeridi) |
 | `public/images/catalog/atalay/p{sayfa}/*.jpg` | Tablo sayfaları |
 | `public/images/catalog/atalay/doner/*.jpg` | Döner ocak (s.129–144) |
 
@@ -28,10 +28,11 @@ Adımlar: `catalog:atalay:extract` → `catalog:doner:parse` → `catalog:atalay
 
 - Tablo ürünleri: **%50** liste indirimi + TCMB efektif satış
 - Döner ocak (47 model): **%40** — bkz. `docs/ATALAY-DONER-OCAK.md`
+- **Canlı kur:** Mağazada TL, `/api/kur` ile güncellenir (varsayılan 10 dk). Bkz. `docs/KUR-CANLI.md`
 
-## Mağazada yalnız Atalay (dosyadan silme)
+## İsteğe bağlı: dept’te yalnız Atalay (dosyadan silme)
 
-Eski markalar **gizlenmez** — `dept/*.json` ve `ekipmanlar.json` içinden çıkarılır.
+**Dikkat:** Mağaza ve arama tüm markaları kapsar. Aşağıdaki komutlar veriyi **kalıcı daraltır** — yalnızca Atalay PDF vitrini istediğinizde kullanın.
 
 ```cmd
 npm run catalog:atalay:purge

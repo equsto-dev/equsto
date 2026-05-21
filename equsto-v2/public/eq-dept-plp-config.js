@@ -59,5 +59,9 @@
       lead:
         'Çağlayan Soğutma süpermarket vitrin kataloğu — soğuk teşhir, dondurma, şarküteri ve self servis hatları',
     },
+    'set-ustu-mutfak': {
+      title: 'Set Üstü Mutfak Ekipmanları',
+      lead: 'Öztiryakiler — servis gereçleri, gastronorm, chafing dish, tencere ve mutfak aksesuarları',
+    },
   };
 })(typeof window !== 'undefined' ? window : global);

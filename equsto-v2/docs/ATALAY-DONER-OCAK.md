@@ -26,18 +26,11 @@ Robot, kalıp, lift ve aksesuar **dahil değil**.
 ```cmd
 cd /d "C:\D Disk\EQUSTO-CURSOR\equsto-v2"
 copy .env.local .env
-npm run catalog:doner:sync
-npm run catalog:atalay:merge
+npm run catalog:atalay:pdf
 npm run db:seed:doner
 ```
 
-**Vitrin (statik `/shop/pisirme`):** `ekipmanlar.json` içinde ~899 Atalay vardı; `dept/pisirme.json` yalnızca bir kısmını yüklüyordu. Eksikler:
-
-```cmd
-npm run catalog:atalay:merge
-```
-
-→ `pisirme.json` +384, `kahve.json` +6, `hazirlik.json` +9 (yardımcı). Döner PDF fiyatları 47 modelde `fiyat_tl` / `price` ile güncellenir.
+**Vitrin:** `npm run catalog:atalay:build` — PDF’ten gelen Atalay satırlarını `dept/*.json` içine yazar; `ekipmanlar.json` kullanılmaz. Bkz. `docs/ATALAY-PDF-KATALOG.md`.
 
 Canlı Supabase için aynı seed’i Vercel env ile lokalden çalıştırın veya CI’dan `db:seed:doner`.
 

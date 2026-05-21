@@ -66,18 +66,57 @@ function firstImage(row) {
   return String(imgs[0]).replace(/\\/g, "/");
 }
 
-/** Mağaza araması: yalnızca Atalay PDF kataloğu. */
-function isAtalayCatalogRow(row) {
-  const k = row.kaynak || row.kaynak_fiyat_listesi || "";
-  if (/^atalay-2025/i.test(k)) return true;
-  if (/atalay/i.test(String(row.brand || ""))) return true;
-  const img = firstImage(row);
-  if (/catalog\/atalay\//i.test(img)) return true;
-  return false;
+function rowToDoc(row, deptFallback) {
+  const name = String(row.name || "").trim();
+  if (!name) return null;
+  const dept = String(row.dept || deptFallback || "").trim();
+  if (!dept) return null;
+  const slug = productSlug(row);
+  const id = docId(row, dept);
+  return {
+    id,
+    slug,
+    name,
+    brand: String(row.brand || "").trim(),
+    kaynak: String(row.kaynak || row.kaynak_fiyat_listesi || "").trim(),
+    category: String(row.category || "").trim(),
+    dept,
+    model: String(row.model || row.sku || "").trim(),
+    sku: String(row.sku || "").trim(),
+    price: String(row.price || "").split("\n")[0].slice(0, 120),
+    liste_fiyati_eur: Number(row.liste_fiyati_eur) || null,
+    satis_eur_indirimli: Number(row.satis_eur_indirimli) || null,
+    iskonto_oran: Number(row.iskonto_oran) || null,
+    image: firstImage(row),
+    url: `/shop/${dept}/${slug}`,
+    specs: String(row.specs || "").slice(0, 2000),
+  };
 }
 
-function loadDeptRows() {
+/** Tam site kataloğu: arşiv varsa onu, yoksa dept birleşimi. */
+function loadCatalogRows() {
   const docs = [];
+  const seen = new Set();
+  const archivePath = path.join(ROOT, "public/data/ekipmanlar-full-archive.json");
+
+  function pushRow(row, deptFallback) {
+    const doc = rowToDoc(row, deptFallback);
+    if (!doc || seen.has(doc.id)) return;
+    seen.add(doc.id);
+    docs.push(doc);
+  }
+
+  if (fs.existsSync(archivePath)) {
+    const rows = JSON.parse(fs.readFileSync(archivePath, "utf8"));
+    if (Array.isArray(rows)) {
+      for (const row of rows) pushRow(row, "");
+      if (docs.length) {
+        console.log("[search:index] kaynak: ekipmanlar-full-archive.json");
+        return docs;
+      }
+    }
+  }
+
   if (!fs.existsSync(DEPT_DIR)) {
     console.warn("[search:index] dept klasörü yok:", DEPT_DIR);
     return docs;
@@ -87,29 +126,9 @@ function loadDeptRows() {
     const dept = file.replace(/\.json$/, "");
     const rows = JSON.parse(fs.readFileSync(path.join(DEPT_DIR, file), "utf8"));
     if (!Array.isArray(rows)) continue;
-    for (const row of rows) {
-      if (!isAtalayCatalogRow(row)) continue;
-      const name = String(row.name || "").trim();
-      if (!name) continue;
-      const slug = productSlug(row);
-      const id = docId(row, dept);
-      docs.push({
-        id,
-        slug,
-        name,
-        brand: String(row.brand || "").trim(),
-        kaynak: String(row.kaynak || row.kaynak_fiyat_listesi || "atalay-2025-yerli-pdf").trim(),
-        category: String(row.category || "").trim(),
-        dept: String(row.dept || dept).trim(),
-        model: String(row.model || row.sku || "").trim(),
-        sku: String(row.sku || "").trim(),
-        price: String(row.price || "").split("\n")[0].slice(0, 120),
-        image: firstImage(row),
-        url: `/shop/${dept}/${slug}`,
-        specs: String(row.specs || "").slice(0, 2000),
-      });
-    }
+    for (const row of rows) pushRow(row, dept);
   }
+  console.log("[search:index] kaynak: public/data/dept/*.json");
   return docs;
 }
 
@@ -122,7 +141,7 @@ async function main() {
     process.exit(1);
   }
 
-  const documents = loadDeptRows();
+  const documents = loadCatalogRows();
   if (!documents.length) {
     console.error("[search:index] 0 belge — dept JSON boş mu?");
     process.exit(1);
@@ -155,6 +174,9 @@ async function main() {
       "model",
       "sku",
       "price",
+      "liste_fiyati_eur",
+      "satis_eur_indirimli",
+      "iskonto_oran",
       "image",
       "url",
     ],
@@ -174,7 +196,7 @@ async function main() {
   }
 
   const task = await index.addDocuments(documents);
-  console.log("[search:index] task", task.taskUid, "→", documents.length, "belge (yalnız Atalay)");
+  console.log("[search:index] task", task.taskUid, "→", documents.length, "belge");
 
   const finished = await client.tasks.waitForTask(task.taskUid, {
     timeout: 600_000,

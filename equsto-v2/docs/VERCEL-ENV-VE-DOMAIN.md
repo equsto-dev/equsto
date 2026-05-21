@@ -23,6 +23,12 @@ Her satır için **Environments:** Production **ve** Preview işaretli.
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase → **Settings → API** → anon public key |
 | `CRON_SECRET` | Vercel Cron → otomatik üretilir veya elle; `/api/cron/tcmb-kur` için |
 | `EQUSTO_EUR_TRY_FALLBACK` | (Opsiyonel) TCMB kapalıyken yedek EUR/TRY, varsayılan `36` |
+| `TCMB_KUR_REVALIDATE_SEC` | (Opsiyonel) `/api/kur` önbellek saniyesi; varsayılan `60`, `0` = anlık |
+| `MEILISEARCH_HOST` | `.env.local` — `https://ms-….fra.meilisearch.io` (**tek** `https://`) |
+| `MEILISEARCH_MASTER_KEY` | `.env.local` — Admin API key (tırnak yok) |
+| `MEILISEARCH_INDEX` | `equsto_products` |
+
+**Adım adım (ekran görüntüsü gibi):** [`VERCEL-MEILISEARCH-ENV.md`](VERCEL-MEILISEARCH-ENV.md)
 
 **Value kutusuna** `DATABASE_URL="postgresql://..."` şeklinde **tırnaklı yapıştırmayın** — sadece `postgresql://...` metni.
 
@@ -41,6 +47,7 @@ Build script production’da `NEXT_PUBLIC_SITE_URL` yoksa `https://equsto.com` k
 - `GET /api/kur` → TCMB efektif satış EUR/TRY (**200**, auth yok)
 - `POST /api/musteriler` → WhatsApp / iletişim mesajı (auth yok)
 - `GET /api/whatsapp` → numara config; `POST /api/whatsapp` → mesaj kaydı
+- `GET /api/search?q=izgara` → Meilisearch sonuçları (`hits` dolu)
 
 ---
 

@@ -93,8 +93,7 @@
   <script src="/equsto-member.js?v=20260522wa" defer></script>
   <script src="/contact.js?v=20260522wa" defer></script>
   <script src="/ecom-data.js"></script>
-  <script src="/eq-atalay-catalog-only.js?v=20260522atalay-only"></script>
-  <script src="/eq-shop-catalog-bootstrap.js?v=20260522atalay-only"></script>
+  <script src="/eq-shop-catalog-bootstrap.js?v=20260523catalog"></script>
   <script src="/eq-vendor-sanitize.js?v=20260521competitor"></script>
   <script src="/eq-competitor-redirects.js?v=20260521competitor"></script>
   <script src="/eq-display-terminology.js?v=20260520tezgdav"></script>
@@ -390,7 +389,10 @@
       return s.replace("₺", "").replace("+ KDV", "").trim();
     }
 
-    function deptLink(cat) {
+    function deptLink(cat, rowDept) {
+      if (rowDept === "set-ustu-mutfak" && typeof window.equstoUrl === "function") {
+        return { href: window.equstoUrl("set-ustu-mutfak"), label: "Set Üstü Mutfak Ekipmanları" };
+      }
       var seg = typeof window.eqCategoryToUrunlerSeg === "function" ? window.eqCategoryToUrunlerSeg(cat) : null;
       var labels = {
         pisirme: "Pişirme Ekipmanları",
@@ -399,6 +401,7 @@
         yikama: "Yıkama Ekipmanları",
         hazirlik: "Hazırlık Ekipmanları",
         icecek: "İçecek Ekipmanları",
+        "set-ustu-mutfak": "Set Üstü Mutfak Ekipmanları",
       };
       if (seg && labels[seg] && typeof window.equstoUrl === "function") {
         return { href: window.equstoUrl(seg), label: labels[seg] };
@@ -435,11 +438,11 @@
       }
       var sl = productSlugEq(x);
       if (!sl) return null;
-      var cat = x.category || x.c || "";
       var seg =
-        typeof window.eqCategoryToUrunlerSeg === "function"
-          ? window.eqCategoryToUrunlerSeg(cat) || "pisirme"
-          : "pisirme";
+        x.dept ||
+        (typeof window.eqCategoryToUrunlerSeg === "function"
+          ? window.eqCategoryToUrunlerSeg(x.category || x.c || "") || "pisirme"
+          : "pisirme");
       return typeof window.eqProductPath === "function" ? window.eqProductPath(seg, sl) : "/shop/" + seg + "/" + sl;
     }
 
@@ -990,6 +993,10 @@
     }
 
     function renderProduct(x, all) {
+      if (window.EqustoKurLive && typeof window.EqustoKurLive.applyRowPrices === "function") {
+        x = window.EqustoKurLive.applyRowPrices(x) || x;
+      }
+      window.__eqPdpLast = { x: x, all: all };
       var prodTitle = ((x.brand ? x.brand + ' ' : '') + (x.name || 'Ürün')).slice(0, 80);
       document.title = prodTitle + " — Equsto";
       /* Canonical + OG meta güncellemeleri */
@@ -1094,7 +1101,7 @@
         skEl.setAttribute("data-eq-page-sig", productEqSk(slug));
         skEl.textContent = productEqSk(slug);
       } catch(_) {}
-      var ref = deptLink(x.category);
+      var ref = deptLink(x.category, x.dept);
       var bc = document.getElementById("eq-product-bc");
       if (bc) {
         bc.innerHTML =
@@ -1344,6 +1351,12 @@
         }
       })();
     }
+
+    document.addEventListener("equsto:kur-updated", function () {
+      if (window.__eqPdpLast && window.__eqPdpLast.x) {
+        renderProduct(window.__eqPdpLast.x, window.__eqPdpLast.all || []);
+      }
+    });
 
     document.addEventListener("DOMContentLoaded", function () {
       var bcHome = document.getElementById("eq-product-bc-home");

@@ -1,9 +1,18 @@
 import { StoreShell } from "@/components/store-shell";
+import { formatTcmbKurShort, getTcmbEurForPricing } from "@/lib/tcmb-kur";
 
-export default function StorefrontLayout({
+export const dynamic = "force-dynamic";
+
+export default async function StorefrontLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return <StoreShell>{children}</StoreShell>;
+  const kur = await getTcmbEurForPricing();
+  const kurNote = formatTcmbKurShort(kur);
+  return (
+    <StoreShell kurNote={kurNote}>
+      {children}
+    </StoreShell>
+  );
 }

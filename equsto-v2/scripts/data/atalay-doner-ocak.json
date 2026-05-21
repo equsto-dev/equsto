@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "ATALAY 2025 YERLİ.pdf — Döner Makineleri (sayfa 129–144)",
-  "parsedAt": "2026-05-21T09:54:45.599Z",
+  "parsedAt": "2026-05-21T10:05:10.774Z",
   "discountPercent": 40,
   "eurTryRate": 52.9424,
   "eurTrySource": "tcmb_efektif_satis",
@@ -29,7 +29,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adg-3s.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adg-3s.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -53,7 +53,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adg-4s.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adg-4s.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -77,7 +77,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adg-5s.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adg-5s.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -101,7 +101,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adg-6s.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adg-6s.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -125,7 +125,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-ade-3s.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-ade-3s.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -149,7 +149,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-ade-4s.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-ade-4s.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -173,7 +173,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-ade-5s.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-ade-5s.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -197,7 +197,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adg-3u.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adg-3u.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -221,7 +221,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adg-4u.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adg-4u.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -245,7 +245,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adg-5u.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adg-5u.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -269,7 +269,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-ade-3u.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-ade-3u.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -293,7 +293,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-ade-4u.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-ade-4u.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -317,7 +317,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-ade-5u.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-ade-5u.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -341,7 +341,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adg-3a.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adg-3a.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -365,7 +365,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adg-4a.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adg-4a.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -389,7 +389,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adg-5a.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adg-5a.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -413,7 +413,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adg-6a.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adg-6a.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -437,7 +437,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-ade-3a.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-ade-3a.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -461,7 +461,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-ade-4a.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-ade-4a.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -485,7 +485,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-ade-5a.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-ade-5a.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -509,7 +509,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adgc-3s.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adgc-3s.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -533,7 +533,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adgc-4s.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adgc-4s.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -557,7 +557,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adgc-5s.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adgc-5s.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -581,7 +581,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adgc-3u.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adgc-3u.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -605,7 +605,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adgc-4u.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adgc-4u.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -629,7 +629,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adgc-5u.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adgc-5u.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -653,7 +653,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adgc-3a.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adgc-3a.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -677,7 +677,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adgc-4a.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adgc-4a.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -701,7 +701,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adgc-5a.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adgc-5a.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -725,7 +725,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adg-4-plus-4a.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adg-4-plus-4a.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -749,7 +749,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adg-5-plus-5a.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adg-5-plus-5a.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -773,7 +773,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adg-8s.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adg-8s.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -797,7 +797,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adg-10s.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adg-10s.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -821,7 +821,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adg-12s.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adg-12s.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -845,7 +845,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adg-8a.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adg-8a.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -869,7 +869,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adg-10a.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adg-10a.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -893,7 +893,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adg-12a.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adg-12a.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -917,7 +917,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adg-5d.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adg-5d.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -941,7 +941,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adg-6d.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adg-6d.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -965,7 +965,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adg-8d.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adg-8d.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -989,7 +989,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adg-10d.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adg-10d.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -1013,7 +1013,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adg-12d.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adg-12d.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -1037,7 +1037,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adg-5ds.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adg-5ds.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -1061,7 +1061,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adg-6ds.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adg-6ds.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -1085,7 +1085,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adg-8ds.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adg-8ds.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -1109,7 +1109,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adg-10ds.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adg-10ds.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     },
     {
@@ -1133,7 +1133,7 @@
       "eurTrySource": "tcmb_efektif_satis",
       "tcmbDate": "20.05.2026",
       "discountRate": 0.4,
-      "imagePath": "/images/catalog/atalay/doner/atalay-adg-12ds.jpg",
+      "imagePath": "catalog/atalay/doner/atalay-adg-12ds.jpg",
       "imageNote": "Görsel: admin veya public/images/catalog/atalay/doner/ altına model adıyla yükleyin"
     }
   ]

@@ -14,6 +14,7 @@ const DEPT_HTML: Record<string, string> = {
   tasima: "/tasima.html",
   araba: "/araba.html",
   istif: "/istif.html",
+  "set-ustu-mutfak": "/set-ustu-mutfak.html",
 };
 
 function deptRewrites() {

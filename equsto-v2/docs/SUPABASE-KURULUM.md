@@ -126,4 +126,4 @@ npm run db:seed
 1. Admin → `GET /api/urunler` test  
 2. 10 Atalay ürünü `PUBLISHED`  
 3. GitHub push + Vercel (root: `equsto-v2`)  
-4. Meilisearch (Hetzner) — sonra
+4. Meilisearch Cloud veya yerel Docker — [`MEILISEARCH.md`](MEILISEARCH.md)

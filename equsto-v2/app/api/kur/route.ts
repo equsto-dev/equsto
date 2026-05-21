@@ -2,16 +2,21 @@ import { getTcmbEurEfektifSatis, kurToApiPayload } from "@/lib/tcmb-kur";
 
 export const dynamic = "force-dynamic";
 
+const REVALIDATE_SEC = Number(process.env.TCMB_KUR_REVALIDATE_SEC ?? "60") || 60;
+
 /**
- * GET /api/kur — TCMB EUR efektif satış (günlük, ~1 saat önbellek)
- * Örnek: { "success": true, "rate": 52.94, "type": "efektif_satis", "date": "20.05.2026" }
+ * GET /api/kur — TCMB EUR efektif satış (varsayılan ~60 sn önbellek, TCMB_KUR_REVALIDATE_SEC=0 → her istekte taze)
  */
 export async function GET() {
   const kur = await getTcmbEurEfektifSatis();
   const body = kurToApiPayload(kur);
+  const maxAge = REVALIDATE_SEC > 0 ? REVALIDATE_SEC : 0;
   return Response.json(body, {
     headers: {
-      "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=86400",
+      "Cache-Control":
+        maxAge > 0
+          ? `public, s-maxage=${maxAge}, stale-while-revalidate=${maxAge * 10}`
+          : "no-store",
     },
   });
 }

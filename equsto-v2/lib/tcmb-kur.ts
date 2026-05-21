@@ -1,3 +1,4 @@
+import { cache } from "react";
 import { unstable_cache } from "next/cache";
 
 /** TCMB günlük kur XML — EUR efektif satış = BanknoteSelling */
@@ -79,12 +80,41 @@ export async function fetchTcmbEurEfektifSatis(): Promise<TcmbKurSnapshot> {
   }
 }
 
-/** Next.js istekleri için saatlik önbellek */
-export const getTcmbEurEfektifSatis = unstable_cache(
+const TCMB_API_REVALIDATE_SEC = (() => {
+  const n = Number(process.env.TCMB_KUR_REVALIDATE_SEC ?? "60");
+  return Number.isFinite(n) && n >= 0 ? n : 60;
+})();
+
+/**
+ * Mağaza fiyatları: her sayfa isteğinde TCMB çekilir (aynı render’da tek fetch).
+ * DB’deki priceListTl yerine specs EUR × güncel kur kullanılır.
+ */
+export const getTcmbEurForPricing = cache(fetchTcmbEurEfektifSatis);
+
+const getTcmbEurEfektifSatisCached = unstable_cache(
   fetchTcmbEurEfektifSatis,
-  ["tcmb-eur-efektif-satis"],
-  { revalidate: 3600, tags: ["tcmb-kur"] }
+  ["tcmb-eur-efektif-satis-api"],
+  {
+    revalidate: TCMB_API_REVALIDATE_SEC > 0 ? TCMB_API_REVALIDATE_SEC : 1,
+    tags: ["tcmb-kur"],
+  }
 );
+
+/** /api/kur — kısa önbellek (varsayılan 60 sn; TCMB_KUR_REVALIDATE_SEC=0 → her istekte taze) */
+export async function getTcmbEurEfektifSatis(): Promise<TcmbKurSnapshot> {
+  if (TCMB_API_REVALIDATE_SEC === 0) return fetchTcmbEurEfektifSatis();
+  return getTcmbEurEfektifSatisCached();
+}
+
+export function formatTcmbKurShort(kur: TcmbKurSnapshot): string {
+  const rate = kur.rate.toLocaleString("tr-TR", {
+    minimumFractionDigits: 4,
+    maximumFractionDigits: 4,
+  });
+  return kur.tcmbDate
+    ? `TCMB efektif satış ${rate} TRY (${kur.tcmbDate})`
+    : `TCMB efektif satış ${rate} TRY`;
+}
 
 export function kurToApiPayload(kur: TcmbKurSnapshot) {
   return {

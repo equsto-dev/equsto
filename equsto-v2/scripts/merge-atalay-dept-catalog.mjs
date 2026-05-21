@@ -1,4 +1,11 @@
 /**
+ * @deprecated ekipmanlar.json kullanılmaz. Bunun yerine:
+ *   npm run catalog:atalay:pdf
+ */
+console.error("[atalay-merge] DEPRECATED — npm run catalog:atalay:pdf kullanın (PDF-only).");
+process.exit(1);
+
+/**
  * ekipmanlar.json içindeki Atalay satırlarını dept/*.json vitrin dosyalarına ekler.
  * Çalıştır: npm run catalog:atalay:merge
  */

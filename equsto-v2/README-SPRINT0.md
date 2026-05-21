@@ -48,8 +48,8 @@ npm run dev
 ## Sizin tarafınızda (briefing)
 
 1. **Supabase** — Frankfurt, pooling + direct URL
-2. **Hetzner** — `search.equsto.com` Meilisearch
-3. **Vercel** — repo bağla, env değişkenleri
+2. **Meilisearch** — [Cloud](https://www.meilisearch.com/cloud) veya yerel Docker (`docs/MEILISEARCH.md`) — Hetzner gerekmez
+3. **Vercel** — repo bağla, env değişkenleri (`MEILISEARCH_*`)
 
 ## Kilitler
 

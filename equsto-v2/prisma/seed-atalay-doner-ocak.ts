@@ -75,7 +75,7 @@ async function main() {
       update: {
         name: p.name,
         modelCode: p.modelCode,
-        description: `Atalay ${p.modelCode} — ${p.section}. Katalog ${p.priceEuroCatalog} EUR; site fiyatı %${raw.discountPercent} iskonto (≈${raw.eurTryRate} EUR/TRY).`,
+        description: `Atalay ${p.modelCode} — ${p.section}. Katalog ${p.priceEuroCatalog} EUR; site %${raw.discountPercent} iskonto. TRY: TCMB efektif satış ile anlık hesaplanır.`,
         priceListTl: p.priceTl,
         priceCurrency: "TRY",
         status: "PUBLISHED",

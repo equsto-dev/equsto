@@ -563,23 +563,31 @@
     setTimeout(drainUrlQ, 0);
   }
 
-  if (
-    b &&
-    b.classList.contains("eq-shop") &&
-    !b.classList.contains("admin-app") &&
-    !document.querySelector('script[src*="eq-atalay-catalog-only"]')
-  ) {
-    var atalayOnly = document.createElement("script");
-    atalayOnly.src = "/eq-atalay-catalog-only.js?v=20260522atalay-only";
-    atalayOnly.defer = true;
-    document.head.appendChild(atalayOnly);
-  }
-
   if (!document.querySelector('script[src*="eq-header-search"]')) {
     var meiliHdr = document.createElement("script");
     meiliHdr.src = "/eq-header-search.js?v=20260521thumb";
     meiliHdr.defer = true;
     document.head.appendChild(meiliHdr);
+  }
+
+  if (
+    b &&
+    b.classList.contains("eq-shop") &&
+    !b.classList.contains("admin-app") &&
+    !b.classList.contains("eq-pfos")
+  ) {
+    if (!document.querySelector('script[src*="equsto-pricing-core"]')) {
+      var prc = document.createElement("script");
+      prc.src = "/equsto-pricing-core.js?v=20260527kur";
+      prc.defer = true;
+      document.head.appendChild(prc);
+    }
+    if (!document.querySelector('script[src*="eq-kur-live"]')) {
+      var kurJs = document.createElement("script");
+      kurJs.src = "/eq-kur-live.js?v=20260527kur";
+      kurJs.defer = true;
+      document.head.appendChild(kurJs);
+    }
   }
 
   try {

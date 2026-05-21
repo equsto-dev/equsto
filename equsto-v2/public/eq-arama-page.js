@@ -5,6 +5,7 @@
   "use strict";
 
   var LIMIT = 48;
+  var lastRender = { hits: [], q: "", total: 0, err: null };
 
   function esc(s) {
     return String(s == null ? "" : s)
@@ -52,9 +53,16 @@
     return "/data/" + img.replace(/^data\//, "");
   }
 
-  function formatPrice(p) {
-    if (!p) return "";
-    return String(p).split("\n")[0];
+  function formatPrice(hit) {
+    if (!hit) return "";
+    if (window.EqustoKurLive && typeof window.EqustoKurLive.computeRowPrices === "function") {
+      var rate = window.EqustoKurLive.getRate();
+      if (rate) {
+        var px = window.EqustoKurLive.computeRowPrices(hit, rate);
+        if (px && px.priceShort) return px.priceShort;
+      }
+    }
+    return String(hit.price || "").split("\n")[0];
   }
 
   function getQuery() {
@@ -66,6 +74,7 @@
   }
 
   function render(hits, q, total, err) {
+    lastRender = { hits: hits || [], q: q || "", total: total, err: err };
     var title = document.getElementById("eq-arama-title");
     var count = document.getElementById("eq-arama-count");
     var grid = document.getElementById("eq-arama-grid");
@@ -140,8 +149,8 @@
           (h.brand
             ? '<div class="eq-dept-plp-card__brand">' + esc(h.brand) + "</div>"
             : "") +
-          (h.price
-            ? '<div class="eq-dept-plp-card__price">' + esc(formatPrice(h.price)) + "</div>"
+          (h.price || h.satis_eur_indirimli
+            ? '<div class="eq-dept-plp-card__price">' + esc(formatPrice(h)) + "</div>"
             : "") +
           cartBtn +
           "</article>"
@@ -182,6 +191,12 @@
         render([], q, 0, e && e.message ? e.message : "Bağlantı hatası");
       });
   }
+
+  document.addEventListener("equsto:kur-updated", function () {
+    if (lastRender.q) {
+      render(lastRender.hits, lastRender.q, lastRender.total, lastRender.err);
+    }
+  });
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", load);
