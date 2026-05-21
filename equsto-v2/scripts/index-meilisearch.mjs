@@ -93,11 +93,11 @@ function rowToDoc(row, deptFallback) {
   };
 }
 
-/** Tam site kataloğu: arşiv varsa onu, yoksa dept birleşimi. */
+/** Canlı katalog: vitrin ile aynı — ekipmanlar.json, yoksa dept. Arşiv kullanılmaz. */
 function loadCatalogRows() {
   const docs = [];
   const seen = new Set();
-  const archivePath = path.join(ROOT, "public/data/ekipmanlar-full-archive.json");
+  const ekipPath = path.join(ROOT, "public/data/ekipmanlar.json");
 
   function pushRow(row, deptFallback) {
     const doc = rowToDoc(row, deptFallback);
@@ -106,14 +106,12 @@ function loadCatalogRows() {
     docs.push(doc);
   }
 
-  if (fs.existsSync(archivePath)) {
-    const rows = JSON.parse(fs.readFileSync(archivePath, "utf8"));
-    if (Array.isArray(rows)) {
+  if (fs.existsSync(ekipPath)) {
+    const rows = JSON.parse(fs.readFileSync(ekipPath, "utf8"));
+    if (Array.isArray(rows) && rows.length) {
       for (const row of rows) pushRow(row, "");
-      if (docs.length) {
-        console.log("[search:index] kaynak: ekipmanlar-full-archive.json");
-        return docs;
-      }
+      console.log("[search:index] kaynak: public/data/ekipmanlar.json");
+      return docs;
     }
   }
 

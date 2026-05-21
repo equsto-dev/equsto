@@ -24,6 +24,3 @@ for (const f of fs.readdirSync(path.join(SRC, "dept"))) {
   if (f.endsWith(".json")) copyFile(path.join("dept", f));
 }
 copyFile("ekipmanlar.json");
-if (fs.existsSync(path.join(SRC, "ekipmanlar-full-archive.json"))) {
-  copyFile("ekipmanlar-full-archive.json");
-}

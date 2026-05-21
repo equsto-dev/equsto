@@ -52,7 +52,7 @@ equsto_products
 
 ## 3) İndeks doldurma
 
-Tam katalog `public/data/ekipmanlar-full-archive.json` (yoksa `public/data/dept/*.json`) → indeks **`equsto_products`** (Cloud’da `products` adı genelde kabul edilmez):
+Canlı vitrin `public/data/ekipmanlar.json` (yoksa `public/data/dept/*.json`) → indeks **`equsto_products`** (Cloud’da `products` adı genelde kabul edilmez). `ekipmanlar-full-archive.json` **indekse alınmaz** (eski ~12k yedek).
 
 ```cmd
 cd equsto-v2
