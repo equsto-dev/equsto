@@ -57,6 +57,33 @@ function geoRewrites() {
 }
 
 const nextConfig: NextConfig = {
+  serverExternalPackages: ["@prisma/client", "prisma"],
+  transpilePackages: [
+    "antd",
+    "@ant-design/icons",
+    "@ant-design/pro-components",
+    "@ant-design/pro-layout",
+  ],
+  async headers() {
+    const utf8Html = { key: "Content-Type", value: "text/html; charset=utf-8" };
+    const utf8Json = { key: "Content-Type", value: "application/json; charset=utf-8" };
+    return [
+      { source: "/:path*.html", headers: [utf8Html] },
+      { source: "/", headers: [utf8Html] },
+      { source: "/pfos", headers: [utf8Html] },
+      { source: "/pfos/:path*", headers: [utf8Html] },
+      { source: "/besos", headers: [utf8Html] },
+      { source: "/besos/:path*", headers: [utf8Html] },
+      { source: "/bar-design", headers: [utf8Html] },
+      { source: "/admin", headers: [utf8Html] },
+      { source: "/contact", headers: [utf8Html] },
+      { source: "/login", headers: [utf8Html] },
+      { source: "/marka", headers: [utf8Html] },
+      { source: "/arama", headers: [utf8Html] },
+      { source: "/shop/:dept", headers: [utf8Html] },
+      { source: "/i18n/:file.json", headers: [utf8Json] },
+    ];
+  },
   async redirects() {
     return [
       { source: "/index.html", destination: "/", permanent: true },
@@ -87,6 +114,7 @@ const nextConfig: NextConfig = {
       { source: "/bar-design/", destination: "/bar-design.html" },
       { source: "/admin", destination: "/admin.html" },
       { source: "/admin/", destination: "/admin.html" },
+      /* /yonetim → Next.js App Router (Ant Design Pro) */
       { source: "/contact", destination: "/contact.html" },
       { source: "/contact/", destination: "/contact.html" },
       { source: "/login", destination: "/login.html" },

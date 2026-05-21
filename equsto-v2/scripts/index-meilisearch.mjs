@@ -89,7 +89,14 @@ function rowToDoc(row, deptFallback) {
     iskonto_oran: Number(row.iskonto_oran) || null,
     image: firstImage(row),
     url: `/shop/${dept}/${slug}`,
-    specs: String(row.specs || "").slice(0, 2000),
+    specs: [
+      String(row.specs || ""),
+      Array.isArray(row.keywords) ? row.keywords.join(" ") : "",
+      String(row.aciklama || ""),
+    ]
+      .filter(Boolean)
+      .join("\n")
+      .slice(0, 4000),
   };
 }
 

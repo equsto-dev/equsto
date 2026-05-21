@@ -1,4 +1,5 @@
 import { NextRequest } from "next/server";
+import { fallbackCatalogSearch } from "@/lib/catalog-search-fallback";
 import {
   getMeiliAdmin,
   getMeiliConfigStatus,
@@ -12,8 +13,9 @@ export async function GET(req: NextRequest) {
   const limit = Math.min(Number(req.nextUrl.searchParams.get("limit") || 20), 50);
   const check = req.nextUrl.searchParams.get("check") === "1";
 
+  const cfg = getMeiliConfigStatus();
+
   if (check || !q) {
-    const cfg = getMeiliConfigStatus();
     if (!q) {
       return Response.json({
         configured: cfg.ok,
@@ -32,16 +34,16 @@ export async function GET(req: NextRequest) {
 
   const client = getMeiliAdmin();
   if (!client) {
-    const cfg = getMeiliConfigStatus();
-    return Response.json(
-      {
-        error: "Meilisearch yapılandırılmadı",
-        missing: cfg.missing,
-        hint:
-          "Vercel’de MEILISEARCH_HOST + MEILISEARCH_MASTER_KEY (Production) kaydedin, Root Directory = equsto-v2, ardından Redeploy. Tanı: /api/search?check=1",
-      },
-      { status: 503 }
-    );
+    const fb = fallbackCatalogSearch(q, limit);
+    return Response.json({
+      query: q,
+      hits: fb.hits,
+      estimatedTotalHits: fb.estimatedTotalHits,
+      source: "fallback",
+      warning:
+        "Meilisearch yapılandırılmadı — ekipmanlar.json üzerinde yerel arama. MEILISEARCH_HOST + MEILISEARCH_MASTER_KEY ekleyin.",
+      missing: cfg.missing,
+    });
   }
 
   try {
@@ -50,13 +52,32 @@ export async function GET(req: NextRequest) {
       query: q,
       hits: res.hits,
       estimatedTotalHits: res.estimatedTotalHits,
+      source: "meilisearch",
     });
   } catch (e) {
     const msg = e instanceof Error ? e.message : "Arama hatası";
-    console.error("[api/search]", msg);
+    console.error("[api/search] Meilisearch:", msg);
+
+    const fb = fallbackCatalogSearch(q, limit);
+    if (fb.hits.length) {
+      return Response.json({
+        query: q,
+        hits: fb.hits,
+        estimatedTotalHits: fb.estimatedTotalHits,
+        source: "fallback",
+        warning: `Meilisearch erişilemedi (${msg}). Geçici olarak katalog dosyasında arandı.`,
+        index: PRODUCTS_INDEX,
+      });
+    }
+
     return Response.json(
-      { error: msg, index: PRODUCTS_INDEX, hint: "MEILISEARCH_HOST anahtar/host doğru mu?" },
-      { status: 502 }
+      {
+        error: msg,
+        index: PRODUCTS_INDEX,
+        hint:
+          "Cloud instance çalışıyor mu? npm run search:health && npm run search:index",
+      },
+      { status: 502 },
     );
   }
 }

@@ -28,8 +28,12 @@
 
   function isOztiRow(row) {
     if (!row) return false;
-    var k = String(row.kaynak || row.kaynak_fiyat_listesi || "");
-    return /^ozti/i.test(k) || String(row.dept || "") === "set-ustu-mutfak";
+    var k = String(
+      row.fiyat_kaynagi || row.kaynak || row.kaynak_fiyat_listesi || ""
+    );
+    if (/^ozti|ozti-fiyat/i.test(k)) return true;
+    if (/öztiryaki|oztiryaki/i.test(String(row.brand || ""))) return true;
+    return String(row.dept || "") === "set-ustu-mutfak";
   }
 
   function isEurPricedRow(row) {

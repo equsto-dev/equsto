@@ -1,4 +1,4 @@
-import type { Musteri } from "@prisma/client";
+import type { Musteri } from "@/lib/prisma";
 
 export type MusteriAdminRow = {
   _id: string;

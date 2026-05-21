@@ -70,6 +70,7 @@ const LIVE_FILES = [
   "images/favicon.svg",
   "images/home/hero-yer-sofrasi-bufe.png",
   "images/home/hero-bar-cocktailstation.png",
+  "images/home/hero-pfos-cover.jpg",
   "images/equsto-logo.png",
 ];
 

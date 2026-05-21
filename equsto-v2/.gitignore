@@ -20,6 +20,12 @@
 # production
 /build
 
+# Prisma client (custom output — db:generate / build üretir)
+/prisma/generated/client
+
+# Eski varsayılan client yolu (EPERM / kilit)
+/node_modules/.prisma
+
 # misc
 .DS_Store
 *.pem

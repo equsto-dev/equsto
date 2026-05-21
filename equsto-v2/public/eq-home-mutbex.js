@@ -25,6 +25,63 @@
     return attrPath(p);
   }
 
+  var categoryCovers = {
+    byDept: {
+      pisirme: '/images/catalog/atalay/p7/atalay-e-aei---360.jpg',
+      sogutma: '/images/catalog/ozti/p200/ozti-9805-im240x-nhc.jpg',
+      kahve: '/images/catalog/ozti/p453/ozti-8593-su080-00.jpg',
+      yikama: '/images/catalog/ozti/p238/ozti-7711-07075-24.jpg',
+      hazirlik: '/images/catalog/ozti/p135/ozti-9810-hl200-21.jpg',
+      icecek: '/images/catalog/ozti/p411/ozti-8224-0st20-00.jpg',
+      tezgah: '/images/catalog/ozti/p49/ozti-7911-n1-40703-00.jpg',
+      dolap: '/images/catalog/ozti/p97/ozti-7868-98987-md.jpg',
+      davlumbaz: '/images/catalog/ozti/p285/ozti-7885-25155-00.jpg',
+      tasima: '/images/catalog/ozti/p445/ozti-8868-mwp30-10.jpg',
+      araba: '/images/catalog/atalay/p117/atalay-adk-102.jpg',
+      istif: '/images/catalog/ozti/p284/ozti-8897-11ip4-073.jpg',
+      'set-ustu-mutfak': '/images/catalog/ozti/p50/ozti-6260-00072-70.jpg',
+    },
+    byGo: {
+      pfos: '/images/home/hero-pfos-cover.jpg',
+      besos: '/images/home/hero-bar-cocktailstation.png',
+      marketReyon: '/images/catalog/ozti/p200/ozti-9805-im240x-nhc.jpg',
+    },
+  };
+
+  function mergeCategoryCovers(data) {
+    if (!data || typeof data !== 'object') return;
+    if (data.byDept) categoryCovers.byDept = Object.assign({}, categoryCovers.byDept, data.byDept);
+    if (data.byGo) categoryCovers.byGo = Object.assign({}, categoryCovers.byGo, data.byGo);
+  }
+
+  function loadCategoryCovers(cb) {
+    if (categoryCovers.__loaded) {
+      cb();
+      return;
+    }
+    fetch('/data/category-covers.json', { credentials: 'same-origin' })
+      .then(function (r) {
+        return r.ok ? r.json() : null;
+      })
+      .then(function (data) {
+        mergeCategoryCovers(data);
+        categoryCovers.__loaded = true;
+        cb();
+      })
+      .catch(function () {
+        categoryCovers.__loaded = true;
+        cb();
+      });
+  }
+
+  function resolvePopCatImage(item) {
+    if (!item) return '';
+    if (item.image && String(item.image).trim()) return String(item.image).trim();
+    if (item.dept && categoryCovers.byDept[item.dept]) return categoryCovers.byDept[item.dept];
+    if (item.go && categoryCovers.byGo[item.go]) return categoryCovers.byGo[item.go];
+    return '';
+  }
+
   var STORY_EMOJI = {
     pisirme: '🍳',
     sogutma: '❄️',
@@ -63,21 +120,21 @@
       if (list && list.length) return list;
     }
     return [
-      { label: 'Proje Fabrikası', go: 'pfos', emoji: '📋', bg: '#dce8f4', frame: '#9eb8d4', image: '/images/home/hero-bar-cocktailstation.png' },
+      { label: 'Proje Fabrikası', go: 'pfos', emoji: '📋', bg: '#dce8f4', frame: '#9eb8d4', image: '' },
       { label: 'Bar Design', go: 'besos', emoji: '🍸', bg: '#e0f2f1', image: '/images/home/hero-bar-cocktailstation.png?v=20260520barcover' },
-      { label: 'Pişirme Ekipmanları', dept: 'pisirme', emoji: '🍳', bg: '#e8f8ee', image: '/data/images/konveksiyonlu-kombi-firin-gazli-20xgn-2-1-tepsi-kit-arabali_1.jpg' },
-      { label: 'Soğutma Ekipmanları', dept: 'sogutma', emoji: '❄️', bg: '#e8f4fc', image: '/data/images/öztiryakiler-gn-600-nmv-tek-kapılı-dik-tip-buzdolabı-k-tip-79k406nmv00_1.jpg' },
-      { label: 'Kahve Ekipmanları', dept: 'kahve', emoji: '☕', bg: '#fff8e6', image: '/data/images/dalla-corte-zero-barista-espresso-kahve-makinesi-3-gruplu-siyah_1.png' },
-      { label: 'Yıkama Ekipmanları', dept: 'yikama', emoji: '💧', bg: '#e3f2fd', image: '/data/images/arisco-bulaşık-makinesi-set-altı-500-tabaksaat-dw500_1.jpg' },
-      { label: 'Hazırlık Ekipmanları', dept: 'hazirlik', emoji: '🔪', bg: '#e8f5e9', image: '/data/images/dito-sama-80-litre-planet-mikser-elektromekanik-hız-varyatörlü-600186-bmxe80_1.jpg' },
-      { label: 'İçecek Ekipmanları', dept: 'icecek', emoji: '🥤', bg: '#ede7f6', image: '/data/images/brema-küp-buz-makinesi-160-kg-cb1565_1.jpg' },
-      { label: 'Servis & Teşhir', go: 'marketReyon', emoji: '🍽️', bg: '#fce8f0', image: '/data/images/öztiryakiler-elektrikli-benmari-hareketli-servis-raflı-130x70-78541378510_1.jpg' },
-      { label: 'Çalışma Tezgahları', dept: 'tezgah', emoji: '▦', bg: '#f3e5f5', image: '/data/images/arisco-paslanmaz-çalışma-tezgahı-160x60x85-demonte-ta616d-work-table_1.jpg' },
-      { label: 'Dolaplar', dept: 'dolap', emoji: '🗄️', bg: '#e8f4fc', image: '/data/images/kalitegaz-paslanmaz-set-altı-kapaklı-dolap-40x60x61-cm-cs4060_1.jpg' },
-      { label: 'Davlumbazlar', dept: 'davlumbaz', emoji: '💨', bg: '#fff8e1', image: '/data/images/anka-bakır-davlumbaz-100x40x40-cm-bdo4_1.png' },
-      { label: 'Taşıma Ekipmanları', dept: 'tasima', emoji: '🚚', bg: '#e0f7fa', image: '/data/images/mikser-10-lt-palet_1.jpg' },
-      { label: 'Arabalar', dept: 'araba', emoji: '🛒', bg: '#e8f5e9', image: '/data/images/servis-arabasi-procart-220_1.jpg' },
-      { label: 'İstif Rafları', dept: 'istif', emoji: '📦', bg: '#ede7f6', image: '/data/images/i-stif-rafi_1.jpg' },
+      { label: 'Pişirme Ekipmanları', dept: 'pisirme', emoji: '🍳', bg: '#e8f8ee', image: '/images/catalog/atalay/p7/atalay-e-aei---360.jpg' },
+      { label: 'Soğutma Ekipmanları', dept: 'sogutma', emoji: '❄️', bg: '#e8f4fc', image: '/images/catalog/ozti/p200/ozti-9805-im240x-nhc.jpg' },
+      { label: 'Kahve Ekipmanları', dept: 'kahve', emoji: '☕', bg: '#fff8e6', image: '/images/catalog/ozti/p453/ozti-8593-su080-00.jpg' },
+      { label: 'Yıkama Ekipmanları', dept: 'yikama', emoji: '💧', bg: '#e3f2fd', image: '/images/catalog/ozti/p238/ozti-7711-07075-24.jpg' },
+      { label: 'Hazırlık Ekipmanları', dept: 'hazirlik', emoji: '🔪', bg: '#e8f5e9', image: '/images/catalog/ozti/p135/ozti-9810-hl200-21.jpg' },
+      { label: 'İçecek Ekipmanları', dept: 'icecek', emoji: '🥤', bg: '#ede7f6', image: '/images/catalog/ozti/p453/ozti-8593-su080-00.jpg' },
+      { label: 'Servis & Teşhir', go: 'marketReyon', emoji: '🍽️', bg: '#fce8f0', image: '/images/catalog/ozti/p200/ozti-9805-im240x-nhc.jpg' },
+      { label: 'Çalışma Tezgahları', dept: 'tezgah', emoji: '▦', bg: '#f3e5f5', image: '/images/catalog/ozti/p238/ozti-7711-07075-24.jpg' },
+      { label: 'Dolaplar', dept: 'dolap', emoji: '🗄️', bg: '#e8f4fc', image: '/images/catalog/ozti/p238/ozti-7711-07075-24.jpg' },
+      { label: 'Davlumbazlar', dept: 'davlumbaz', emoji: '💨', bg: '#fff8e1', image: '/images/catalog/atalay/p7/atalay-e-aei---360.jpg' },
+      { label: 'Taşıma Ekipmanları', dept: 'tasima', emoji: '🚚', bg: '#e0f7fa', image: '/images/catalog/atalay/p7/atalay-e-aei---360.jpg' },
+      { label: 'Arabalar', dept: 'araba', emoji: '🛒', bg: '#e8f5e9', image: '/images/catalog/atalay/p117/atalay-adk-102.jpg' },
+      { label: 'İstif Rafları', dept: 'istif', emoji: '📦', bg: '#ede7f6', image: '/images/catalog/atalay/p117/atalay-adk-102.jpg' },
       { label: 'Set Üstü Mutfak', dept: 'set-ustu-mutfak', emoji: '🍽️', bg: '#fff8e6' },
     ];
   }
@@ -134,10 +191,13 @@
   }
 
   function popCatImgRaw(item) {
-    if (!item || !item.image) return '';
-    var s = String(item.image).trim().replace(/\\/g, '/');
+    var s = resolvePopCatImage(item);
+    if (!s) return '';
+    s = String(s).trim().replace(/\\/g, '/');
     if (/^https?:\/\//i.test(s)) return '';
+    if (/^\/images\/(catalog|home)\//i.test(s)) return '';
     if (/^\/data\/images\//i.test(s)) return 'images/' + s.replace(/^\/data\/images\//i, '');
+    if (/^images\/catalog\//i.test(s) || /^images\/home\//i.test(s)) return '';
     if (/^images\//i.test(s)) return s;
     if (/\.(jpe?g|png|webp|gif)(\?|#|$)/i.test(s)) return 'images/' + s.replace(/^\/+/, '');
     return '';
@@ -145,23 +205,30 @@
 
   function renderPopCatCard(item, idx) {
     var bg = popCatBg(idx, item);
-    var style = 'background:' + esc(bg);
-    if (item && item.frame) style += ';border:2px solid ' + esc(item.frame);
+    var photo = resolvePopCatImage(item);
+    var hasPhoto = !!photo;
+    var style = hasPhoto ? '' : 'background:' + esc(bg);
+    if (!hasPhoto && item && item.frame) style += ';border:2px solid ' + esc(item.frame);
     var rawRel = popCatImgRaw(item);
-    var imgHtml = item.image
+    var imgHtml = hasPhoto
       ? '<img src="' +
-        esc(imgSrc(item.image)) +
+        esc(imgSrc(photo)) +
         '"' +
         (rawRel ? ' data-eq-img-raw="' + esc(rawRel) + '" data-eq-img-step="0"' : '') +
-        ' alt="" loading="lazy" decoding="async" onerror="typeof __eqImgFail===\'function\'&&__eqImgFail(this)">'
+        ' alt="" loading="lazy" decoding="async" onerror="typeof __eqImgFail===\'function\'&&__eqImgFail(this)">' +
+        '<span class="eq-mx-pop-cat__scrim" aria-hidden="true"></span>'
       : '<span class="eq-mx-pop-cat__ph" aria-hidden="true">' + esc(storyEmoji(item)) + '</span>';
     return (
-      '<a class="eq-mx-pop-cat" href="#" style="' +
+      '<a class="eq-mx-pop-cat' +
+      (hasPhoto ? ' eq-mx-pop-cat--photo' : '') +
+      '" href="#" style="' +
       style +
       '" data-pop-idx="' +
       idx +
+      '" data-pop-emoji="' +
+      esc(storyEmoji(item)) +
       '">' +
-      '<span class="eq-mx-pop-cat__img">' +
+      '<span class="eq-mx-pop-cat__visual">' +
       imgHtml +
       '</span>' +
       '<span class="eq-mx-pop-cat__lbl">' +
@@ -262,22 +329,24 @@
   function renderPopCats() {
     var track = document.getElementById('eq-mx-pop-cats-track');
     if (!track) return;
-    var items = getStories();
-    if (!items.length) return;
-    track.innerHTML = items
-      .map(function (item, idx) {
-        return renderPopCatCard(item, idx);
-      })
-      .join('');
-    track.querySelectorAll('.eq-mx-pop-cat').forEach(function (link, idx) {
-      link.addEventListener('click', function (e) {
-        e.preventDefault();
-        if (track.__eqPopCatDidDrag) return;
-        storyClick(items[idx]);
+    loadCategoryCovers(function () {
+      var items = getStories();
+      if (!items.length) return;
+      track.innerHTML = items
+        .map(function (item, idx) {
+          return renderPopCatCard(item, idx);
+        })
+        .join('');
+      track.querySelectorAll('.eq-mx-pop-cat').forEach(function (link, idx) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          if (track.__eqPopCatDidDrag) return;
+          storyClick(items[idx]);
+        });
       });
+      bindPopCatsNav();
+      if (typeof global.eqFixDataImagesInDom === 'function') global.eqFixDataImagesInDom(track);
     });
-    bindPopCatsNav();
-    if (typeof global.eqFixDataImagesInDom === 'function') global.eqFixDataImagesInDom(track);
   }
 
   function renderStories() {

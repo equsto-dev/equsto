@@ -74,6 +74,15 @@ Cloud arayüzü hata alınca modalı anında kapatır («unable to reach your in
    npm run search:index
    ```
 
+## Sorun: Arama çubuğu hiç sonuç vermiyor
+
+1. **Next.js çalışıyor mu?** Statik `index.html` tek başına `/api/search` sunmaz → `npm run dev` veya Vercel deploy.
+2. **Meilisearch erişimi:** `npm run search:health` — HATA ise Cloud instance kapalı/yanlış anahtar.
+3. **Geçici çözüm (kod):** Meili yoksa veya hata verirse API `ekipmanlar.json` üzerinde **fallback** arama döner (`source: "fallback"`). Öneri kutusunda uyarı görünür.
+4. **Kalıcı:** Cloud **Running** → `npm run search:index` → Vercel env + Redeploy.
+
+Tarayıcıda test: `/api/search?q=izgara&limit=5` ve `/api/search?check=1`
+
 ## Sorun: «Index creation failed — unable to reach your instance»
 
 Bu hata **sizin kodunuzdan değil**; Meilisearch Cloud, size açılan sunucuya (instance) henüz bağlanamıyor.

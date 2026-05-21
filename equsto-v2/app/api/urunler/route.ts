@@ -1,5 +1,5 @@
 import { NextRequest } from "next/server";
-import type { Prisma } from "@prisma/client";
+import type { Prisma } from "@/lib/prisma";
 import { assertAdminBearer } from "@/lib/auth";
 import { adminErr, adminOk } from "@/lib/admin-response";
 import { parseAdminUrunPayload } from "@/lib/admin-urun";

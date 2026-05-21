@@ -1,4 +1,4 @@
-import type { Product, Brand, Category, ProductImage } from "@prisma/client";
+import type { Product, Brand, Category, ProductImage } from "@/lib/prisma";
 
 export type ProductWithRelations = Product & {
   brand: Brand;

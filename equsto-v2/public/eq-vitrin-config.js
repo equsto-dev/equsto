@@ -222,6 +222,31 @@
     });
   }
 
+  /** Öne çıkanlar: Atalay + Öztiryakiler karışık (görselli ürünler). */
+  function pickFeaturedMixed(pool, limit) {
+    limit = Number(limit) || 12;
+    if (!Array.isArray(pool) || !pool.length) return [];
+    var ozti = [];
+    var atalay = [];
+    var rest = [];
+    for (var i = 0; i < pool.length; i++) {
+      var u = pool[i];
+      if (!u || !u.img) continue;
+      var b = String(u.b || '');
+      if (/öztiryakiler/i.test(b)) ozti.push(u);
+      else if (/atalay/i.test(b)) atalay.push(u);
+      else rest.push(u);
+    }
+    var half = Math.ceil(limit / 2);
+    var out = [];
+    for (var o = 0; o < half && o < ozti.length; o++) out.push(ozti[o]);
+    for (var a = 0; a < half && a < atalay.length; a++) out.push(atalay[a]);
+    for (var r = 0; out.length < limit && r < rest.length; r++) out.push(rest[r]);
+    return out.slice(0, limit);
+  }
+
+  global.eqPickFeaturedMixed = pickFeaturedMixed;
+
   function pickProducts(pool, spec) {
     if (!Array.isArray(pool) || !pool.length) return [];
     pool = filterPoolByDept(pool, spec);
@@ -435,6 +460,8 @@
           orig();
           return;
         }
+        var r0 = document.getElementById('eq-rail-featured');
+        if (r0) r0.innerHTML = pickFeaturedMixed(pool, 12).map(renderRailCard).join('');
         if (rK) rK.innerHTML = pickProducts(pool, rails.kampanyali).map(renderRailCard).join('');
         if (rC) rC.innerHTML = pickProducts(pool, rails.cokSatan).map(renderRailCard).join('');
         if (rY) rY.innerHTML = pickProducts(pool, rails.yeni).map(renderRailCard).join('');

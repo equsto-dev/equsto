@@ -5,8 +5,9 @@
   'use strict';
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260519ozti-tip';
+  var CATALOG_V = '20260530imgfix';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
+  var deptCoverImg = '';
 
   var state = {
     all: [],
@@ -55,25 +56,55 @@
 
   function imgSrc(p) {
     if (!p) return '';
+    if (typeof window.eqProductImgSrc === 'function') {
+      try {
+        var resolved = window.eqProductImgSrc(p);
+        if (resolved) return resolved;
+      } catch (_) {}
+    }
     var s = String(p).replace(/\\/g, '/').replace(/^\.\//, '');
     if (/^caglayan-market\//i.test(s)) {
       return '/data/' + s.replace(/^data\//, '');
     }
     if (/^https?:\/\//i.test(s)) return s;
+    if (s.charAt(0) === '/') return s;
+    if (/^images\/catalog\//i.test(s)) return '/' + s;
+    if (/^images\/home\//i.test(s)) return '/' + s;
     if (typeof window.equstoDataAssetHref === 'function') {
       try {
         return window.equstoDataAssetHref(s);
       } catch (_) {}
     }
-    if (s.charAt(0) === '/') return s;
-    if (/^images\//i.test(s)) {
-      var root =
-        typeof window.equstoCatalogImagesWebRoot === 'function'
-          ? window.equstoCatalogImagesWebRoot()
-          : '/data/images/';
-      return root + s.replace(/^images\//i, '');
-    }
     return '/data/' + s.replace(/^data\//, '');
+  }
+
+  /** __eqImgFail için yalnızca legacy /data/images yolları */
+  function plpImgRawAttr(rawPath) {
+    var s = String(rawPath || '')
+      .trim()
+      .replace(/\\/g, '/');
+    if (!s) return '';
+    if (/^https?:\/\//i.test(s)) return '';
+    if (/^\/images\/(catalog|home)\//i.test(s) || /^images\/(catalog|home)\//i.test(s)) return '';
+    if (/^\/data\/images\//i.test(s)) return 'images/' + s.replace(/^\/data\/images\//i, '');
+    if (/^images\/catalog\//i.test(s) || /^images\/home\//i.test(s)) return '';
+    if (/^images\//i.test(s)) return s;
+    if (/\.(jpe?g|png|webp|gif)(\?|#|$)/i.test(s)) return 'images/' + s.replace(/^\/+/, '');
+    return '';
+  }
+
+  function countOztiRows(arr) {
+    var n = 0;
+    for (var i = 0; i < arr.length; i++) {
+      var r = arr[i];
+      if (!r) continue;
+      if (/öztiryakiler/i.test(String(r.brand || ''))) {
+        n++;
+        continue;
+      }
+      if (/^ozti/i.test(String(r.kaynak || r.kaynak_fiyat_listesi || ''))) n++;
+    }
+    return n;
   }
 
   function productUrl(item) {
@@ -209,7 +240,12 @@
       fb: fb,
       n: n,
       p: String(row.price || '').split('\n')[0],
-      img: row.images && row.images[0] ? imgSrc(row.images[0]) : '',
+      img:
+        row.images && row.images[0]
+          ? imgSrc(row.images[0])
+          : deptCoverImg
+            ? imgSrc(deptCoverImg)
+            : '',
       tip_kodu: row.tip_kodu || row.tipKodu || '',
       raw: row,
     };
@@ -437,9 +473,7 @@
         .map(function (u) {
           var href = productUrl(u);
           var rawImg =
-            u.raw && u.raw.images && u.raw.images[0]
-              ? String(u.raw.images[0]).replace(/\\/g, '/')
-              : '';
+            u.raw && u.raw.images && u.raw.images[0] ? plpImgRawAttr(u.raw.images[0]) : '';
           var img = u.img
             ? '<img src="' +
               esc(u.img) +
@@ -473,6 +507,7 @@
           );
         })
         .join('');
+      if (typeof window.eqFixDataImagesInDom === 'function') window.eqFixDataImagesInDom(grid);
     }
 
     var pages = document.getElementById('eq-dept-plp-pages');
@@ -636,24 +671,65 @@
     var grid = document.getElementById('eq-dept-plp-grid');
     if (grid) grid.innerHTML = '<p class="eq-dept-plp-status">Ürün listesi indiriliyor…</p>';
 
-    fetch('/data/dept/' + DEPT + '.json?v=' + CATALOG_V, { cache: 'no-store' })
-      .then(function (r) {
-        if (!r.ok) throw new Error('HTTP ' + r.status);
-        return r.text();
-      })
-      .then(function (text) {
-        return new Promise(function (resolve, reject) {
-          setTimeout(function () {
-            try {
-              resolve(JSON.parse(text));
-            } catch (e) {
-              reject(e);
-            }
-          }, 0);
+    function parseDeptText(text) {
+      return new Promise(function (resolve, reject) {
+        setTimeout(function () {
+          try {
+            resolve(JSON.parse(text));
+          } catch (e) {
+            reject(e);
+          }
+        }, 0);
+      });
+    }
+
+    function fetchDeptArray() {
+      return fetch('/data/dept/' + DEPT + '.json?v=' + CATALOG_V, { cache: 'no-store' })
+        .then(function (r) {
+          if (!r.ok) throw new Error('HTTP ' + r.status);
+          return r.text();
+        })
+        .then(parseDeptText)
+        .then(function (data) {
+          return Array.isArray(data) ? data : data && data.items ? data.items : [];
+        });
+    }
+
+    function fetchEkipmanlarDeptFallback() {
+      return fetch('/data/ekipmanlar.json?v=' + CATALOG_V, { cache: 'no-store' })
+        .then(function (r) {
+          if (!r.ok) throw new Error('ekipmanlar HTTP ' + r.status);
+          return r.json();
+        })
+        .then(function (catalog) {
+          var list = Array.isArray(catalog) ? catalog : [];
+          var out = [];
+          for (var i = 0; i < list.length; i++) {
+            if (list[i] && String(list[i].dept || '') === DEPT) out.push(list[i]);
+          }
+          return out;
+        });
+    }
+
+    fetchDeptArray()
+      .then(function (arr) {
+        if (DEPT === 'market-reyon' || DEPT === 'set-ustu-mutfak') return arr;
+        if (countOztiRows(arr) >= 5) return arr;
+        return fetchEkipmanlarDeptFallback().then(function (fallback) {
+          if (fallback.length > arr.length) {
+            console.warn(
+              '[eq-dept-plp] dept/' + DEPT + '.json eski — ekipmanlar.json ile birleştirildi (' +
+                arr.length +
+                ' → ' +
+                fallback.length +
+                ')'
+            );
+            return fallback;
+          }
+          return arr;
         });
       })
-      .then(function (data) {
-        var arr = Array.isArray(data) ? data : data && data.items ? data.items : [];
+      .then(function (arr) {
         var out = [];
         var i = 0;
         var CHUNK = DEPT === 'sogutma' ? 250 : 500;
@@ -741,11 +817,27 @@
     if (state.ready) render();
   });
 
+  function loadDeptCover(cb) {
+    fetch('/data/category-covers.json?v=' + CATALOG_V, { cache: 'no-store' })
+      .then(function (r) {
+        return r.ok ? r.json() : null;
+      })
+      .then(function (data) {
+        if (data && data.byDept && data.byDept[DEPT]) {
+          deptCoverImg = String(data.byDept[DEPT]).replace(/^\//, '');
+        }
+      })
+      .catch(function () {})
+      .finally(function () {
+        if (typeof cb === 'function') cb();
+      });
+  }
+
   function boot() {
     applyPageMeta();
     bindSearch();
     bindMobileFilter();
-    loadCatalog();
+    loadDeptCover(loadCatalog);
   }
 
   if (document.readyState === 'loading') {

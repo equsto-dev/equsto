@@ -345,6 +345,10 @@
     if (!file) return [];
     var root = catalogImagesWebRoot();
     var list = [];
+    if (/^catalog\//i.test(file)) {
+      list.push("/images/" + file);
+      list.push("/images/" + encodeDataRelPath(file));
+    }
     if (isEqustoLiveHost()) {
       list.push(root + file);
     }
@@ -393,6 +397,12 @@
     if (p == null || p === "") return "";
     var s = String(p).replace(/\\/g, "/").replace(/^\.\//, "");
     if (/^https?:\/\//i.test(s)) return s;
+    if (
+      /^\/images\/(catalog|home)\//i.test(s) ||
+      /^images\/(catalog|home)\//i.test(s)
+    ) {
+      return typeof window.eqAttrPath === "function" ? window.eqAttrPath(s) : s.charAt(0) === "/" ? s : "/" + s;
+    }
     var dataRel = null;
     if (/^data\//i.test(s)) dataRel = s.replace(/^data\//i, "");
     else if (s.charAt(0) === "/" && /^\/data\//i.test(s)) dataRel = s.replace(/^\/data\//i, "");
@@ -415,12 +425,38 @@
     return "/" + s;
   };
 
+  /** `public/images/` altındaki statik dosyalar — `/data/images/` köküne çevrilmez. */
+  function isStaticPublicImage(s) {
+    var t = String(s || "").trim().replace(/\\/g, "/");
+    if (!t) return false;
+    if (/^\/images\/(catalog|home|icons|brand|assets)\//i.test(t)) return true;
+    if (/^images\/(catalog|home|icons|brand|assets)\//i.test(t)) return true;
+    if (/^\/images\/[^/]+\.(jpe?g|png|webp|gif|svg)(\?|#|$)/i.test(t)) return true;
+    return false;
+  }
+
   /** Ürün / vitrin görseli — katalog `images/…`, `data/images/…`, `./data/images/…`. */
+  function resolveVitrinImageMap(s) {
+    if (!s || !window.__eqVitrinImageMap) return "";
+    var key = String(s).trim();
+    if (window.__eqVitrinImageMap[key]) return window.__eqVitrinImageMap[key];
+    try {
+      var dec = decodeURIComponent(key);
+      if (window.__eqVitrinImageMap[dec]) return window.__eqVitrinImageMap[dec];
+    } catch (_) {}
+    return "";
+  }
+
   window.eqProductImgSrc = function (p) {
     if (p == null || p === "") return "";
     var s = String(p).trim().replace(/\\/g, "/");
     if (!s) return "";
     if (/^https?:\/\//i.test(s)) return s;
+    var mapped = resolveVitrinImageMap(s);
+    if (mapped) return mapped;
+    if (isStaticPublicImage(s) && typeof window.eqAttrPath === "function") {
+      return window.eqAttrPath(s);
+    }
     if (typeof window.equstoDataAssetHref === "function") {
       if (/^\/images\//i.test(s)) {
         return window.equstoDataAssetHref("images/" + s.replace(/^\/images\//i, ""));
@@ -478,8 +514,9 @@
         if (!raw || /^https?:\/\//i.test(raw) || /^data:/i.test(raw)) return;
         var needsFix =
           /%25[0-9A-F]{2}/i.test(raw) ||
-          /\/(?:data\/)?images\//i.test(raw) ||
+          /\/data\/images\//i.test(raw) ||
           (!/^\//.test(raw) && /\.(jpe?g|png|webp|gif|svg)(\?|#|$)/i.test(raw));
+        if (needsFix && isStaticPublicImage(raw)) needsFix = false;
         if (!needsFix) return;
         var fixed =
           typeof window.healCatalogImageSrc === "function"
@@ -585,11 +622,47 @@
       img.replaceWith(phSrch);
       return;
     }
+    var popVisual = img.closest(".eq-mx-pop-cat__visual, .eq-mx-pop-cat__img");
+    if (popVisual) {
+      img.style.display = "none";
+      var popCard = img.closest(".eq-mx-pop-cat");
+      if (!popVisual.querySelector(".eq-mx-pop-cat__ph")) {
+        var popPh = document.createElement("span");
+        popPh.className = "eq-mx-pop-cat__ph";
+        popPh.setAttribute("aria-hidden", "true");
+        popPh.textContent =
+          (popCard && popCard.getAttribute("data-pop-emoji")) || em || "•";
+        popVisual.appendChild(popPh);
+      }
+      if (popCard) popCard.classList.remove("eq-mx-pop-cat--photo");
+      return;
+    }
     img.style.display = "none";
   };
 
+  function afterVitrinMapReady(fn) {
+    if (window.__eqVitrinImageMap) {
+      fn();
+      return;
+    }
+    fetch("/data/vitrin-image-map.json", { credentials: "same-origin" })
+      .then(function (r) {
+        return r.ok ? r.json() : {};
+      })
+      .then(function (m) {
+        window.__eqVitrinImageMap = m && typeof m === "object" ? m : {};
+        fn();
+      })
+      .catch(function () {
+        window.__eqVitrinImageMap = window.__eqVitrinImageMap || {};
+        fn();
+      });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
-    if (typeof window.eqFixDataImagesInDom === "function") window.eqFixDataImagesInDom(document);
+    afterVitrinMapReady(function () {
+      if (typeof window.eqFixDataImagesInDom === "function") window.eqFixDataImagesInDom(document);
+    });
     document.querySelectorAll('a.logo[href="index.html"], a.logo[href="/index.html"]').forEach(function (a) {
       a.href = window.equstoUrl("home");
     });

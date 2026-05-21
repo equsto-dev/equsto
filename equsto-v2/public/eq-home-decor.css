@@ -31,8 +31,17 @@ body.eq-home-decor .eq-mx-hero__thumbs {
   margin-top: 8px;
 }
 
+.eq-mx-hero__thumb-ph {
+  display: block;
+  width: 100%;
+  height: 52px;
+}
+.eq-mx-hero__thumb-ph--pfos {
+  background: linear-gradient(135deg, #dce8f4 0%, #001e50 100%);
+}
+
 /* İkonsuz kategori şeridi */
-/* Kaldırıldı: ana sayfa yatay departman şeridi (üst topnav + sol çekmece yeterli) */
+/* Kaldırıldı: ana sayfa yatay departman şeridi */
 .eq-decor-catstrip {
   display: none !important;
   border-bottom: 1px solid #e5e7eb;
@@ -138,7 +147,10 @@ body.eq-home-decor .eq-decor-featured .eq-rail {
 }
 
 .eq-decor-promo--bar {
-  background-image: linear-gradient(135deg, #0a1628 0%, #1a3d6e 100%);
+  background-image: linear-gradient(135deg, rgba(10, 22, 40, 0.82) 0%, rgba(26, 61, 110, 0.88) 100%),
+    url("/images/home/hero-bar-cocktailstation.png?v=20260520barcover");
+  background-size: cover;
+  background-position: center 42%;
   color: #fff;
   grid-column: 2;
 }
@@ -230,6 +242,13 @@ body.eq-home-decor .eq-decor-bottom .eq-mx-pop-cats-wrap {
   border-bottom: 1px solid #e5e7eb;
 }
 
+body.eq-home-decor .eq-mx-pop-cat--photo .eq-mx-pop-cat__visual {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+}
+body.eq-home-decor .eq-mx-pop-cats__track {
+  gap: 14px;
+  padding-bottom: 12px;
+}
 body.eq-home-decor .eq-decor-bottom .eq-mx-pop-cats__title {
   font-size: clamp(17px, 1.9vw, 21px);
 }
@@ -272,5 +291,98 @@ body.eq-home-decor .eq-decor-bottom .eq-brand-grid {
   body.eq-home-decor .eq-mx-hero__slides {
     max-height: 220px;
     min-height: 160px;
+  }
+}
+
+/* ===== Sade ana sayfa (eq-home-simple) — tekrarlayan katmanlar kapalı ===== */
+
+body.eq-home-simple .eq-mx-vitrin.eq-decor-slider-only,
+body.eq-home-simple .eq-decor-promos,
+body.eq-home-simple .eq-mx-o-4b,
+body.eq-home-simple .eq-cta-band {
+  display: none !important;
+}
+
+body.eq-home-simple .eq-home-simple-promo {
+  display: none !important;
+}
+
+body.eq-home-simple .eq-home-pop-cats-top {
+  padding-top: 16px;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 0;
+}
+
+body.eq-home-simple .eq-home-platform-hero {
+  margin-top: 0;
+}
+
+body.eq-home-simple .eq-home-platform-hero .hero-banner.eq-world-first-banner {
+  padding: 14px 12px 6px;
+  margin: 0;
+  border: none;
+  background: transparent;
+  text-align: center;
+}
+
+body.eq-home-simple .hero-banner.eq-world-first-banner {
+  padding: 14px 12px 6px;
+  margin: 0;
+  border: none;
+  background: transparent;
+  text-align: center;
+}
+
+body.eq-home-simple .hero-platform-line {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  margin-bottom: 6px;
+}
+
+body.eq-home-simple .eq-wf-headline,
+body.eq-home-simple .hero-h1 {
+  font-size: clamp(22px, 3.5vw, 30px);
+  margin: 0;
+  line-height: 1.15;
+}
+
+body.eq-home-simple .eq-home-hero-ads.hero {
+  margin-bottom: 0;
+}
+
+body.eq-home-simple .eq-home-platform-hero .eq-home-hero-ads.hero {
+  border-top: none;
+}
+
+body.eq-home-mutbex.eq-home-simple .eq-home-platform-hero .hero.eq-home-hero-ads {
+  border-radius: 0 0 12px 12px;
+}
+
+body.eq-home-simple .eq-home-hero-ads .hero-card {
+  min-height: 0;
+}
+
+body.eq-home-simple .eq-home-hero-ads .hero-card-visual {
+  max-height: 200px;
+}
+
+body.eq-home-simple .hero-card-img--pfos-cover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+body.eq-home-simple .hero-card-visual--pfos .hero-pfos-promise {
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 1px 8px rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 768px) {
+  body.eq-home-simple .eq-home-hero-ads .hero-card-visual {
+    max-height: 160px;
   }
 }

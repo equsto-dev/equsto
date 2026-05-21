@@ -4693,6 +4693,14 @@ header .srch {
   font-size: 13px;
   color: var(--eq-text-muted, #666);
 }
+.eq-srch-panel__warn {
+  padding: 8px 12px;
+  font-size: 11px;
+  line-height: 1.35;
+  color: #8a6d00;
+  background: #fff8e6;
+  border-top: 1px solid var(--eq-border, #e8e8e8);
+}
 .eq-srch-panel__all {
   display: block;
   padding: 10px 12px;

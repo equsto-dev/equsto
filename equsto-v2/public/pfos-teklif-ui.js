@@ -1,4 +1,4 @@
-﻿;(function () {
+;(function () {
   'use strict';
 
   var PF_FORM_NO = 'F-220 (D:01.2018)';

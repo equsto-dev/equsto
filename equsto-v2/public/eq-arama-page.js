@@ -249,7 +249,8 @@
         }
         return loadCatalogImageMap().then(function () {
           var hits = sortHitsWithImagesFirst(enrichHits(res.data.hits || []));
-          render(hits, q, res.data.estimatedTotalHits, null);
+          var warn = res.data.warning ? " " + res.data.warning : "";
+          render(hits, q, res.data.estimatedTotalHits, warn || null);
         });
       })
       .catch(function (e) {

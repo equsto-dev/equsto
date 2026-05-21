@@ -1,36 +1,27 @@
 /**
- * Öztiryakiler SETÜSTÜ MUTFAK EKİPMANLARI → public/data/dept/set-ustu-mutfak.json
+ * Öztiryakiler SETÜSTÜ MUTFAK → public/data/dept/set-ustu-mutfak.json
  *   node scripts/build-ozti-set-ustu-dept.mjs
  */
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import {
+  OZTI_BRAND,
+  OZTI_BRAND_ID,
+  buildSpecs,
+  foldTr,
+  loadPdfByKod,
+  mapOztiDept,
+  normKod,
+  oztiPricingFields,
+  oztiPricingLines,
+  slugify,
+} from "./lib/ozti-enrich.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SRC = path.join(ROOT, "scripts/data/ozti-eslesme-2026.json");
 const MAP = path.join(ROOT, "scripts/data/ozti-set-ustu-kategoriler.json");
 const OUT = path.join(ROOT, "public/data/dept/set-ustu-mutfak.json");
-const BRAND = "Öztiryakiler Endüstriyel Mutfak";
-const BRAND_ID = "oztiryakiler-endustriyel-mutfak";
-
-function foldTr(s) {
-  return String(s || "")
-    .toLocaleLowerCase("tr")
-    .replace(/ğ/g, "g")
-    .replace(/ü/g, "u")
-    .replace(/ş/g, "s")
-    .replace(/ö/g, "o")
-    .replace(/ç/g, "c")
-    .replace(/ı/g, "i")
-    .replace(/İ/g, "i");
-}
-
-function slugify(s) {
-  return foldTr(s)
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "")
-    .substring(0, 80);
-}
 
 function trRegexTest(pattern, hayUpper) {
   const p = foldTr(pattern).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -38,7 +29,6 @@ function trRegexTest(pattern, hayUpper) {
   return new RegExp(p, "i").test(foldTr(hayUpper));
 }
 
-/** PDF yaprak + nav → Excel kategori adı → ?tip= slug */
 function buildKategoriTipIndex(nav, allow) {
   const idx = {};
   const navRows = nav.map((n) => ({
@@ -60,9 +50,7 @@ function buildKategoriTipIndex(nav, allow) {
     if (!idx[ku]) idx[ku] = tip;
   }
 
-  for (const n of navRows) {
-    assign(n.labelU, n.tip);
-  }
+  for (const n of navRows) assign(n.labelU, n.tip);
 
   const overrides = {
     AKSESUARLAR: "mutfak-aksesuar",
@@ -110,7 +98,6 @@ function buildKategoriTipIndex(nav, allow) {
     }
     if (tip) assign(lu, tip);
   }
-
   return idx;
 }
 
@@ -120,7 +107,6 @@ function mapTip(kategori, index, nav) {
     .trim();
   if (!ku) return "diger";
   if (index[ku]) return index[ku];
-
   let best = null;
   let bestLen = 0;
   for (const [key, tip] of Object.entries(index)) {
@@ -130,7 +116,6 @@ function mapTip(kategori, index, nav) {
     }
   }
   if (best) return best;
-
   for (const n of nav) {
     const labelU = String(n.label || "")
       .toLocaleUpperCase("tr")
@@ -144,102 +129,72 @@ function mapTip(kategori, index, nav) {
       if (trRegexTest(key, ku)) return n.tip;
     }
   }
-
   return slugify(kategori) || "diger";
 }
 
-/** Excel bayi_iskonto = indirim oranı (0,65 → %65); satış = liste × (1 − oran). */
-function oztiSatisEur(liste, bayiIsk) {
-  const L = Number(liste);
-  if (!(L > 0)) return null;
-  const isk = Number(bayiIsk);
-  if (!Number.isFinite(isk) || isk <= 0 || isk >= 1) return Math.round(L * 100) / 100;
-  return Math.round(L * (1 - isk) * 100) / 100;
-}
-
-function oztiIskontoYuzde(bayiIsk) {
-  const isk = Number(bayiIsk);
-  if (!Number.isFinite(isk) || isk <= 0 || isk >= 1) return 0;
-  return Math.round(isk * 10000) / 100;
-}
-
 function isSetUstu(row, allow) {
-  const pathHay = (row.kategori_yolu || []).join(" ").toLocaleUpperCase("tr");
-  const kat = String(row.kategori || "").toLocaleUpperCase("tr");
-  if (/SETÜSTÜ\s*MUTFAK|SETUSTU\s*MUTFAK/.test(pathHay)) return true;
-  if (allow.includes(kat)) return true;
-  for (const a of allow) {
-    if (a && kat.indexOf(a) >= 0) return true;
-  }
-  return false;
+  return mapOztiDept(row, allow) === "set-ustu-mutfak";
 }
 
-function rowToVitrin(row, index, nav) {
+function rowToVitrin(row, index, nav, pdfByKod, manifest) {
   const kod = row.urun_kodu;
   const tip = mapTip(row.kategori, index, nav);
-  const liste = row.liste_fiyati_eur ?? row.liste_fiyati;
-  const iskPct = oztiIskontoYuzde(row.bayi_iskonto);
-  const odeme =
-    row.odeme_carpani != null
-      ? Number(row.odeme_carpani)
-      : iskPct > 0
-        ? Math.round((1 - Number(row.bayi_iskonto)) * 10000) / 10000
-        : 1;
-  const satis = oztiSatisEur(liste, row.bayi_iskonto) ?? liste;
-  const specs = [
-    row.urun_tanimi,
-    `Ürün kodu: ${kod}`,
-    `Liste (EUR): ${liste}`,
-    `Bayi iskonto: %${iskPct || "—"} (ödeme çarpanı ${odeme})`,
-    `Satış (EUR): ${satis}`,
-    `Kategori: ${row.kategori || ""}`,
-    "Kaynak: Öztiryakiler Fiyat Listesi 2025",
-  ].join("\n");
+  const pdfEntry = pdfByKod.get(normKod(kod));
+  const enriched = buildSpecs(row, pdfEntry, tip, oztiPricingLines(row));
+  const imgPath = manifest?.get(normKod(kod));
+  const pricing = oztiPricingFields(row);
 
   return {
     category: tip,
-    brand: BRAND,
+    brand: OZTI_BRAND,
     name: row.urun_tanimi || kod,
     price: "",
-    specs,
-    images: [],
+    specs: enriched.specs,
+    aciklama: enriched.aciklama,
+    teknik_ozellikler: enriched.teknik_ozellikler,
+    olculer: enriched.olculer,
+    keywords: enriched.keywords,
+    images: imgPath ? [imgPath] : [],
     sku: kod,
     model: kod,
-    liste_fiyati_eur: liste,
-    satis_fiyati_eur: satis,
-    bayi_iskonto: row.bayi_iskonto,
-    odeme_carpani: odeme,
-    iskonto_yuzde: iskPct,
-    iskonto_oran: iskPct,
-    para_birimi: row.para_birimi || "EUR",
+    ...pricing,
     kaynak: "ozti-fiyat-listesi-2025",
-    kaynak_fiyat_listesi: "ozti-2025-set-ustu-mutfak",
+    kaynak_fiyat_listesi: "ozti-fiyat-listesi-2025",
     dept: "set-ustu-mutfak",
     vitrin_arka_plan: true,
-    id: slugId(kod),
+    id: `${OZTI_BRAND_ID}__${slugify(kod)}`,
     urun_kodu: kod,
+    barkod: row.barkod || null,
     pdf_eslesme: !!row.pdf_eslesme,
     pdf_sayfalar: row.pdf?.sayfalar,
   };
 }
 
-function slugId(kod) {
-  return `${BRAND_ID}__${slugify(kod)}`;
+function loadImageManifest() {
+  const p = path.join(ROOT, "public/images/catalog/ozti/_manifest.json");
+  if (!fs.existsSync(p)) return new Map();
+  const raw = JSON.parse(fs.readFileSync(p, "utf8"));
+  return new Map(Object.entries(raw).map(([k, v]) => [normKod(k), v]));
 }
 
 const cfg = JSON.parse(fs.readFileSync(MAP, "utf8"));
 const allow = cfg.kategori_leaf_allow.map((x) => String(x).toLocaleUpperCase("tr"));
 const kategoriTipIndex = buildKategoriTipIndex(cfg.nav, allow);
 const rows = JSON.parse(fs.readFileSync(SRC, "utf8").replace(/\bNaN\b/g, "null"));
-const out = rows.filter((r) => isSetUstu(r, allow)).map((r) => rowToVitrin(r, kategoriTipIndex, cfg.nav));
+const pdfByKod = loadPdfByKod();
+const manifest = loadImageManifest();
+const out = rows
+  .filter((r) => isSetUstu(r, allow))
+  .map((r) => rowToVitrin(r, kategoriTipIndex, cfg.nav, pdfByKod, manifest));
 
 fs.mkdirSync(path.dirname(OUT), { recursive: true });
 fs.writeFileSync(OUT, JSON.stringify(out), "utf8");
 
 const counts = {};
-for (const r of out) counts[r.category] = (counts[r.category] || 0) + 1;
-const navTips = new Set(cfg.nav.map((n) => n.tip));
-const orphan = Object.keys(counts).filter((c) => !navTips.has(c));
-console.log("[ozti-set-ustu] yazıldı:", out.length, "ürün →", path.relative(ROOT, OUT));
+let withImg = 0;
+for (const r of out) {
+  counts[r.category] = (counts[r.category] || 0) + 1;
+  if (r.images?.length) withImg++;
+}
+console.log("[ozti-set-ustu] yazıldı:", out.length, "ürün,", withImg, "görselli →", path.relative(ROOT, OUT));
 console.log("[ozti-set-ustu] servis-gerecleri:", counts["servis-gerecleri"] || 0);
-if (orphan.length) console.warn("[ozti-set-ustu] nav dışı category:", orphan.join(", "));

@@ -271,7 +271,7 @@
         { label: "Hazırlık", dept: "hazirlik", emoji: "🔪", image: "/images/imt300/imt300-1.jpg" },
         { label: "İçecek", dept: "icecek", emoji: "🥤", image: "/images/home/hero-bar-cocktailstation.png" },
         { label: "Bar Design", go: "besos", emoji: "🍸", image: "/images/imt300/imt300-1.jpg" },
-        { label: "Proje Fabrikası", go: "pfos", emoji: "📋", image: "/images/home/hero-bar-cocktailstation.png" },
+        { label: "Proje Fabrikası", go: "pfos", emoji: "📋", image: "" },
       ];
     }
     return list;

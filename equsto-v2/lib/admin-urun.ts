@@ -1,4 +1,4 @@
-import type { Product, Brand, Category } from "@prisma/client";
+import type { Product, Brand, Category } from "@/lib/prisma";
 
 /** admin.html `apiToProduct` ile uyumlu kayıt */
 export type AdminUrunRow = {

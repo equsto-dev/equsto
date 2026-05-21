@@ -2,7 +2,7 @@ import "../scripts/load-env.mjs";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from "../lib/prisma";
 
 const prisma = new PrismaClient();
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");

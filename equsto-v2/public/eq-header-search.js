@@ -131,15 +131,17 @@
     lastHits = [];
   }
 
-  function renderPanel(hits, q, total) {
+  function renderPanel(hits, q, total, meta) {
     var root = getSrchRoot();
     if (!root) return;
     var panel = ensurePanel();
+    meta = meta || {};
     if (!hits.length) {
+      var emptyMsg =
+        meta.error ||
+        ('«' + esc(q) + '» için öneri yok');
       panel.innerHTML =
-        '<div class="eq-srch-panel__empty">«' +
-        esc(q) +
-        '» için öneri yok</div>';
+        '<div class="eq-srch-panel__empty">' + emptyMsg + "</div>";
       panel.hidden = false;
       positionPanel();
       return;
@@ -170,6 +172,12 @@
       '">Tüm sonuçları gör (' +
       esc(String(n)) +
       "+)</a>";
+    if (meta.warning) {
+      html +=
+        '<div class="eq-srch-panel__warn" role="status">' +
+        esc(meta.warning) +
+        "</div>";
+    }
     panel.innerHTML = html;
     panel.hidden = false;
     positionPanel();
@@ -197,16 +205,24 @@
       })
       .then(function (res) {
         if (!res.ok || res.data.error) {
-          hidePanel();
+          renderPanel([], q, 0, {
+            error:
+              (res.data && res.data.error) ||
+              "Arama servisi yanıt vermedi. npm run dev ve Meilisearch kontrol edin.",
+          });
           return;
         }
         lastQ = q;
         lastHits = res.data.hits || [];
-        renderPanel(lastHits, q, res.data.estimatedTotalHits);
+        renderPanel(lastHits, q, res.data.estimatedTotalHits, {
+          warning: res.data.warning || "",
+        });
       })
       .catch(function (err) {
         if (err && err.name === "AbortError") return;
-        hidePanel();
+        renderPanel([], q, 0, {
+          error: "Bağlantı hatası — /api/search erişilemiyor (Next.js çalışıyor mu?)",
+        });
       });
   }
 

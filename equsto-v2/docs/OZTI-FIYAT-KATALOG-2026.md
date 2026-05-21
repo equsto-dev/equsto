@@ -61,8 +61,20 @@ JSON: `liste_fiyati_eur`, `bayi_iskonto`, `odeme_carpani`, `satis_fiyati_eur`, `
 
 ```cmd
 npm run catalog:ozti:merge
-npm run catalog:ozti:set-ustu
+npm run catalog:ozti:full
 ```
+
+`catalog:ozti:full` = PDF görselleri + tüm dept dosyaları + `ekipmanlar.json` + `search:index`.
+
+| Komut | Ne yapar |
+|-------|----------|
+| `catalog:ozti:merge` | xlsx + PDF → `scripts/data/ozti-eslesme-2026.json` |
+| `catalog:ozti:images` | PDF → `public/images/catalog/ozti/` |
+| `catalog:ozti:build` | 4754 ürün → `dept/*.json` (specs, keywords, ölçüler, aciklama) |
+| `catalog:ozti:set-ustu` | Yalnız set üstü departmanı (alt kategori slug’ları ile) |
+| `catalog:ozti:ekipmanlar` | dept → `ekipmanlar.json` |
+
+Yönetim paneli **Katalog & görseller** (`/yonetim/katalog`) — varsayılan filtre **Öztiryakiler**.
 
 ### Notlar
 

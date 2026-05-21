@@ -26,7 +26,21 @@
     "catalog:atalay:purge": "npm run catalog:atalay:strip && npm run catalog:atalay:ekipmanlar && node scripts/clear-index-urunler-embed.mjs && node scripts/sync-atalay-catalog-to-legacy-public.mjs",
     "catalog:atalay:only": "npm run catalog:atalay:purge && npm run search:index",
     "catalog:ozti:merge": "python scripts/merge-ozti-fiyat-katalog.py",
+    "catalog:ozti:images": "python scripts/extract-ozti-pdf-images.py",
+    "catalog:ozti:web-images": "node scripts/fetch-ozti-web-images.mjs",
+    "catalog:ozti:images:purge": "python scripts/extract-ozti-pdf-images.py --purge",
     "catalog:ozti:set-ustu": "node scripts/build-ozti-set-ustu-dept.mjs",
+    "catalog:ozti:build": "node scripts/build-ozti-all-depts.mjs",
+    "catalog:ozti:ekipmanlar": "node scripts/rebuild-ekipmanlar-from-dept.mjs",
+    "catalog:ozti:full": "npm run catalog:ozti:images:purge && npm run catalog:ozti:build && npm run catalog:ozti:ekipmanlar && npm run search:index",
+    "catalog:vitrin:map": "node scripts/build-vitrin-image-map.mjs && node -e \"const fs=require('fs');const m=JSON.parse(fs.readFileSync('public/data/vitrin-image-map.json'));fs.writeFileSync('public/eq-vitrin-image-map.js','window.__eqVitrinImageMap='+JSON.stringify(m)+';')\"",
+    "catalog:vitrin:apply": "node scripts/apply-vitrin-images.mjs",
+    "catalog:vitrin:heroes": "node scripts/fetch-home-heroes.mjs",
+    "catalog:category-covers": "node scripts/build-category-covers.mjs",
+    "catalog:patch:images": "node scripts/patch-dept-images-from-manifest.mjs",
+    "catalog:images:sync": "npm run catalog:atalay:images && npm run catalog:ozti:images && npm run catalog:ozti:web-images && npm run catalog:patch:images && npm run catalog:category-covers && npm run catalog:vitrin:heroes && npm run catalog:ozti:ekipmanlar",
+    "sync:utf8": "node scripts/sync-public-utf8-to-v2.mjs",
+    "fix:utf8": "node scripts/fix-utf8-public.mjs",
     "catalog:doner:images": "python scripts/extract-atalay-doner-images.py",
     "db:seed:doner": "node --import ./scripts/load-env.mjs ./node_modules/tsx/dist/cli.mjs prisma/seed-atalay-doner-ocak.ts",
     "db:migrate:deploy": "prisma migrate deploy",
@@ -36,13 +50,22 @@
     "search:up": "docker compose -f docker-compose.meilisearch.yml up -d",
     "search:health": "node --import ./scripts/load-env.mjs scripts/meili-health.mjs",
     "search:index": "node --import ./scripts/load-env.mjs scripts/index-meilisearch.mjs",
-    "postinstall": "prisma generate"
+    "postinstall": "node scripts/prisma-postinstall-skip.mjs"
+  },
+  "imports": {
+    "@prisma/client": "./prisma/generated/client/index.js",
+    "@prisma/client/*": "./prisma/generated/client/*"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.6.1",
+    "@ant-design/nextjs-registry": "^1.3.0",
+    "@ant-design/pro-components": "^2.8.10",
+    "@ant-design/pro-layout": "^7.22.7",
     "@prisma/client": "^6.19.2",
+    "antd": "^5.29.3",
     "meilisearch": "^0.58.0",
     "next": "16.2.6",
     "react": "19.2.4",
