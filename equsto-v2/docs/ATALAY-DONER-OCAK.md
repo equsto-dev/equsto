@@ -33,9 +33,15 @@ Canlı Supabase için aynı seed’i Vercel env ile lokalden çalıştırın vey
 
 ## Görseller
 
-- Hedef yol: `public/images/catalog/atalay/doner/atalay-adg-4s.jpg` (model slug)
-- Şimdilik placeholder: `/images/catalog/atalay/doner/_placeholder.svg`
-- **Eski ekipman görselleri kullanılmaz** — PDF veya stüdyo çekimlerini bu klasöre yükleyin
+PDF’ten çıkarım:
+
+```cmd
+pip install pymupdf pillow
+npm run catalog:doner:images
+```
+
+- Dosyalar: `public/images/catalog/atalay/doner/atalay-{model}.jpg` (47 adet)
+- Kaynak: `scripts/extract-atalay-doner-images.py` (sayfa 129–144)
 
 ## Eski katalog
 

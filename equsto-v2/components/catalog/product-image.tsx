@@ -10,8 +10,7 @@ export function ProductImage({
   alt: string;
   modelCode: string;
 }) {
-  const useInlinePlaceholder =
-    src.includes("_placeholder") || src.endsWith(".jpg");
+  const useInlinePlaceholder = src.includes("_placeholder");
 
   if (useInlinePlaceholder) {
     return <AtalayDonerPlaceholder modelCode={modelCode} />;

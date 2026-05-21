@@ -68,8 +68,6 @@ async function main() {
     },
   });
 
-  const PLACEHOLDER = "/images/catalog/atalay/doner/_placeholder.svg";
-
   let n = 0;
   for (const p of raw.products) {
     const product = await prisma.product.upsert({
@@ -91,8 +89,7 @@ async function main() {
           voltaj: p.voltaj,
           el_guc: p.el_guc,
           gaz_guc: p.gaz_guc,
-          gorsel_url: "/images/catalog/atalay/doner/_placeholder.svg",
-          gorsel_hedef: p.imagePath,
+          gorsel_url: p.imagePath,
           fiyat_euro_katalog: p.priceEuroCatalog,
           fiyat_euro_site: p.priceEuroSite,
           iskonto_oran: raw.discountPercent / 100,
@@ -116,15 +113,14 @@ async function main() {
           voltaj: p.voltaj,
           el_guc: p.el_guc,
           gaz_guc: p.gaz_guc,
-          gorsel_url: "/images/catalog/atalay/doner/_placeholder.svg",
-          gorsel_hedef: p.imagePath,
+          gorsel_url: p.imagePath,
           fiyat_euro_katalog: p.priceEuroCatalog,
           fiyat_euro_site: p.priceEuroSite,
           iskonto_oran: 0.4,
         },
         images: {
           create: {
-            url: PLACEHOLDER,
+            url: p.imagePath,
             alt: p.name,
             isPrimary: true,
             order: 0,
@@ -137,7 +133,7 @@ async function main() {
     await prisma.productImage.create({
       data: {
         productId: product.id,
-        url: PLACEHOLDER,
+        url: p.imagePath,
         alt: p.name,
         isPrimary: true,
         order: 0,

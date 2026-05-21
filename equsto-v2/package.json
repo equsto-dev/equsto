@@ -14,6 +14,7 @@
     "db:seed": "node --import ./scripts/load-env.mjs ./node_modules/tsx/dist/cli.mjs prisma/seed.ts",
     "catalog:doner:parse": "node scripts/parse-atalay-doner-ocak.mjs",
     "catalog:doner:sync": "node scripts/parse-atalay-doner-ocak.mjs && node scripts/sync-doner-fiyatlar.mjs",
+    "catalog:doner:images": "python scripts/extract-atalay-doner-images.py",
     "db:seed:doner": "node --import ./scripts/load-env.mjs ./node_modules/tsx/dist/cli.mjs prisma/seed-atalay-doner-ocak.ts",
     "db:migrate:deploy": "prisma migrate deploy",
     "db:verify": "node --import ./scripts/load-env.mjs scripts/verify-db.mjs",

@@ -26,9 +26,6 @@ export function resolveProductImageUrl(
 ): string {
   const candidate = primaryUrl || specs.gorsel_url;
   if (!candidate) return DONER_PLACEHOLDER;
-  if (candidate.includes("/catalog/atalay/doner/") && candidate.endsWith(".jpg")) {
-    return DONER_PLACEHOLDER;
-  }
   return candidate;
 }
 
