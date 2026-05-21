@@ -5,7 +5,10 @@
   "use strict";
 
   var LIMIT = 48;
+  var CATALOG_V = "20260523catalog";
   var lastRender = { hits: [], q: "", total: 0, err: null };
+  var catalogImgById = null;
+  var catalogImgInflight = null;
 
   function esc(s) {
     return String(s == null ? "" : s)
@@ -31,11 +34,70 @@
     return "#";
   }
 
+  function loadCatalogImageMap() {
+    if (catalogImgById) return Promise.resolve(catalogImgById);
+    if (catalogImgInflight) return catalogImgInflight;
+    catalogImgInflight = fetch("/data/ekipmanlar.json?v=" + CATALOG_V, {
+      cache: "default",
+      headers: { Accept: "application/json" },
+    })
+      .then(function (r) {
+        if (!r.ok) throw new Error("ekipmanlar HTTP " + r.status);
+        return r.json();
+      })
+      .then(function (rows) {
+        var map = Object.create(null);
+        if (Array.isArray(rows)) {
+          rows.forEach(function (row) {
+            if (!row || !row.id) return;
+            var imgs = row.images;
+            if (Array.isArray(imgs) && imgs[0]) map[String(row.id)] = String(imgs[0]);
+          });
+        }
+        catalogImgById = map;
+        return map;
+      })
+      .catch(function () {
+        catalogImgById = Object.create(null);
+        return catalogImgById;
+      })
+      .finally(function () {
+        catalogImgInflight = null;
+      });
+    return catalogImgInflight;
+  }
+
+  function enrichHits(hits) {
+    if (!catalogImgById || !Array.isArray(hits)) return hits || [];
+    return hits.map(function (h) {
+      if (!h) return h;
+      if (h.image) return h;
+      var img = catalogImgById[h.id];
+      if (!img) return h;
+      return Object.assign({}, h, { image: img });
+    });
+  }
+
+  function sortHitsWithImagesFirst(hits) {
+    if (!Array.isArray(hits) || hits.length < 2) return hits || [];
+    return hits.slice().sort(function (a, b) {
+      var ai = a && a.image ? 1 : 0;
+      var bi = b && b.image ? 1 : 0;
+      return bi - ai;
+    });
+  }
+
   function imgSrc(hit) {
     var img = hit && hit.image;
     if (!img) return "";
     img = String(img).replace(/\\/g, "/");
     if (/^https?:\/\//i.test(img)) return img;
+    if (typeof window.catalogImageCandidates === "function") {
+      try {
+        var tries = window.catalogImageCandidates(img);
+        if (tries && tries.length) return tries[0];
+      } catch (_) {}
+    }
     if (typeof window.equstoDataAssetHref === "function") {
       try {
         var href = window.equstoDataAssetHref(img);
@@ -185,7 +247,10 @@
           render([], q, 0, res.data.error || "Arama servisi kullanılamıyor.");
           return;
         }
-        render(res.data.hits || [], q, res.data.estimatedTotalHits, null);
+        return loadCatalogImageMap().then(function () {
+          var hits = sortHitsWithImagesFirst(enrichHits(res.data.hits || []));
+          render(hits, q, res.data.estimatedTotalHits, null);
+        });
       })
       .catch(function (e) {
         render([], q, 0, e && e.message ? e.message : "Bağlantı hatası");
