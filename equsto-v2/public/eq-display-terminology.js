@@ -125,6 +125,7 @@
 
   hookLoader(window.EqustoEcomData, 'loadEkipmanlar');
   hookLoader(window.EqustoShopCatalog, 'load');
+  hookLoader(window.EqustoShopCatalog, 'loadForProductPage');
 
   function hookIndexAllProducts() {
     if (typeof window.__eqAllProducts !== 'function' || window.__eqAllProductsHooked) return;
