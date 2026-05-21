@@ -575,30 +575,29 @@ nav.topnav::-webkit-scrollbar,
   background: var(--eq-topnav-dept-hover) !important;
 }
 
-/* Bar Design (Besos) · Proje Fabrikası (PFOS) — iki yüz kaydırma; şerit hover’u bu hücrelerde yok */
+/* Bar Design · Proje Fabrikası — animasyon kapalı, diğer departmanlar gibi düz etiket */
 .topnav-item.topnav-besos,
 .topnav-item.topnav-pfos {
   position: relative;
   border-radius: 0;
   box-shadow: none !important;
-  transition: color 0.4s ease;
+  transition: background 0.15s ease, color 0.15s ease;
 }
 .topnav-item.topnav-besos:hover,
 .topnav-item.topnav-pfos:hover {
-  background: transparent !important;
+  background: var(--eq-topnav-dept-hover) !important;
 }
 .topnav-besos__in,
 .topnav-pfos__in {
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  overflow: hidden;
-  min-width: 11ch;
-  min-height: 1.28em;
+  overflow: visible;
+  min-width: 0;
+  min-height: 0;
   padding: 0 2px;
 }
 .topnav-pfos__in {
-  min-width: 0;
   width: max-content;
   max-width: 100%;
 }
@@ -615,196 +614,36 @@ body.eq-shop:not(.admin-app):not(.bd-page) .topnav-item.topnav-pfos .topnav-pfos
 body.eq-shop:not(.admin-app):not(.bd-page) .topnav-item.topnav-besos .topnav-besos__face--plain {
   text-decoration: none !important;
 }
-.topnav-item.topnav-pfos:hover {
-  position: relative;
-  z-index: 6;
-}
-.topnav-item.topnav-pfos:hover .topnav-pfos__in {
-  overflow: visible;
-}
-.topnav-besos__face {
+.topnav-besos__face,
+.topnav-pfos__face {
   display: block;
   white-space: nowrap;
-  will-change: transform;
 }
 .topnav-pfos__face {
   display: inline-block;
   width: max-content;
   max-width: 100%;
-  white-space: nowrap;
-  will-change: transform;
 }
-/* Bar Design hover: Dark SIDE — göz kırpma (3–4 hızlı gidip gelme) */
-@keyframes besosDarkBlink {
-  0% { opacity: 0; }
-  5% { opacity: 1; }
-  10% { opacity: 0; }
-  15% { opacity: 1; }
-  20% { opacity: 0; }
-  25% { opacity: 1; }
-  30% { opacity: 0; }
-  35% { opacity: 1; }
-  42% { opacity: 0; }
-  50% { opacity: 1; }
-  100% { opacity: 1; }
-}
-.topnav-besos__face--plain {
-  position: relative;
-  z-index: 1;
-  transform: translate3d(0, 0, 0);
-  opacity: 1;
-  transition: opacity 0.1s ease;
-}
+.topnav-besos__face--plain,
 .topnav-pfos__face--plain {
   position: relative;
   z-index: 1;
-  transform: translate3d(0, 0, 0);
-  opacity: 1;
+  opacity: 1 !important;
+  transform: none !important;
 }
-.topnav-besos__face--dark {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 2;
-  width: 100%;
-  text-align: left;
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  font-style: inherit;
-  line-height: inherit;
-  letter-spacing: inherit;
-  text-transform: none;
-  color: inherit;
-  -webkit-text-fill-color: currentColor;
-  background: none;
-  pointer-events: none;
-  transform: translate3d(0, 0, 0);
-  opacity: 0;
-  filter: none;
-  text-shadow: none;
-  transition: none;
-}
-.topnav-item.topnav-besos:hover .topnav-besos__face--plain {
-  opacity: 0;
-  transition: opacity 0.08s ease;
-}
-.topnav-item.topnav-besos:hover .topnav-besos__face--dark {
-  animation: besosDarkBlink 0.92s cubic-bezier(0.4, 0, 0.6, 1) 1 forwards;
-}
-.topnav-item.topnav-besos:not(:hover) .topnav-besos__face--dark {
-  animation: none;
-}
-@media (prefers-reduced-motion: reduce) {
-  .topnav-item.topnav-besos:hover .topnav-besos__face--plain {
-    opacity: 0;
-  }
-  .topnav-item.topnav-besos:hover .topnav-besos__face--dark {
-    animation: none;
-    opacity: 1;
-  }
-}
-
-/* KİLİT: pfos-topnav-anim — yerinde 3 tur, 2.96s; değiştirmek için açık talimat */
-/* Proje Fabrikası — hover: harfler yerinde döner (plain ↔ dark) */
+.topnav-besos__face--dark,
 .topnav-pfos__face--dark {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 2;
-  width: 100%;
-  text-align: left;
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  font-style: inherit;
-  line-height: inherit;
-  letter-spacing: inherit;
-  text-transform: none;
-  color: inherit;
-  -webkit-text-fill-color: currentColor;
-  background: none;
-  pointer-events: none;
-  transform: none;
-  opacity: 1;
-  filter: none;
-  text-shadow: none;
+  display: none !important;
 }
-.topnav-pfos__chars {
-  display: inline-flex;
-  flex-wrap: nowrap;
-  white-space: nowrap;
-}
-@keyframes pfosChSpread {
-  0%, 100% { margin-inline: 0; }
-  42% { margin-inline: 0.07em; }
-}
+.topnav-item.topnav-besos:hover .topnav-besos__face--plain,
+.topnav-item.topnav-pfos:hover .topnav-pfos__face--plain,
+.topnav-pfos__ch,
 .topnav-item.topnav-pfos:hover .topnav-pfos__ch,
-.topnav-pfos__ch.topnav-pfos__ch--spread {
-  animation: pfosChSpread 2.96s cubic-bezier(0.22, 1.05, 0.36, 1) 1 both;
-}
-.topnav-pfos__ch {
-  display: inline-block;
-  opacity: 1;
-  transform: rotate(0deg);
-  transform-origin: 50% 50%;
-  margin-inline: 0;
-  transition:
-    transform 2.96s cubic-bezier(0.22, 1.05, 0.36, 1),
-    opacity 1.8s ease,
-    margin-inline 1.13s ease;
-  transition-delay: 0s;
-}
-.topnav-pfos__ch--sp {
-  width: 0.22em;
-}
-@keyframes pfosChSpSpread {
-  0%, 100% { width: 0.22em; margin-inline: 0; }
-  42% { width: 0.42em; margin-inline: 0.05em; }
-}
-.topnav-item.topnav-pfos:hover .topnav-pfos__ch--sp,
-.topnav-pfos__ch--sp.topnav-pfos__ch--spread {
-  animation: pfosChSpSpread 2.96s cubic-bezier(0.22, 1.05, 0.36, 1) 1 both;
-}
-.topnav-pfos__face--dark .topnav-pfos__ch {
-  opacity: 0;
-  transform: rotate(var(--r0, -1080deg));
-}
-.topnav-item.topnav-pfos:hover .topnav-pfos__face--dark .topnav-pfos__ch {
-  opacity: 1;
-  transform: rotate(0deg);
-}
-.topnav-item.topnav-pfos:hover .topnav-pfos__face--plain .topnav-pfos__ch {
-  opacity: 0;
-  transform: rotate(var(--r1, 1080deg));
-}
-
-/* Proje Fabrikası — reverans (dip + hafif eğilme, alt eksenden) */
-@keyframes pfosReverans {
-  0%, 100% {
-    transform: translate3d(0, 0, 0) rotate(0deg) scale(1, 1);
-  }
-  20% {
-    transform: translate3d(-1px, 2px, 0) rotate(-6deg) scale(0.99, 0.93);
-  }
-  45% {
-    transform: translate3d(1px, 6px, 0) rotate(5deg) scale(0.98, 0.84);
-  }
-  65% {
-    transform: translate3d(0, 4px, 0) rotate(-2deg) scale(0.99, 0.9);
-  }
-  82% {
-    transform: translate3d(0, 1px, 0) rotate(1deg) scale(1, 0.96);
-  }
-}
 .topnav-pfos__in.topnav-pfos__in--reverans {
-  animation: pfosReverans 0.82s cubic-bezier(0.36, 1.18, 0.42, 1) 1 both;
-  transform-origin: 50% 100%;
-}
-@media (prefers-reduced-motion: reduce) {
-  .topnav-pfos__in.topnav-pfos__in--reverans {
-    animation: none;
-  }
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
+  transition: none !important;
 }
 
 .topnav-item.topnav-all {
@@ -4367,10 +4206,6 @@ body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .topnav-item {
 body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .topnav-item:hover {
   background: var(--eq-topnav-dept-hover, rgba(0, 30, 80, 0.06)) !important;
   color: var(--eq-topnav-dept-text, #1a1a1a) !important;
-}
-body.eq-shop:not(.admin-app):not(.bd-page) .topnav-item.topnav-besos:hover,
-body.eq-shop:not(.admin-app):not(.bd-page) .topnav-item.topnav-pfos:hover {
-  background: transparent !important;
 }
 body.eq-shop:not(.admin-app):not(.bd-page) .topnav-item.active {
   box-shadow: inset 0 -2px 0 0 #febd69 !important;

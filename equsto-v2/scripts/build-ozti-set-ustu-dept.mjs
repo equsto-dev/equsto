@@ -13,29 +13,138 @@ const OUT = path.join(ROOT, "public/data/dept/set-ustu-mutfak.json");
 const BRAND = "Öztiryakiler Endüstriyel Mutfak";
 const BRAND_ID = "oztiryakiler-endustriyel-mutfak";
 
-function slugify(s) {
+function foldTr(s) {
   return String(s || "")
     .toLocaleLowerCase("tr")
+    .replace(/ğ/g, "g")
+    .replace(/ü/g, "u")
+    .replace(/ş/g, "s")
+    .replace(/ö/g, "o")
+    .replace(/ç/g, "c")
+    .replace(/ı/g, "i")
+    .replace(/İ/g, "i");
+}
+
+function slugify(s) {
+  return foldTr(s)
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "")
     .substring(0, 80);
 }
 
-function slugId(kod) {
-  return `${BRAND_ID}__${slugify(kod)}`;
+function trRegexTest(pattern, hayUpper) {
+  const p = foldTr(pattern).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  if (!p) return false;
+  return new RegExp(p, "i").test(foldTr(hayUpper));
 }
 
-function mapTip(kategori, nav) {
-  const k = String(kategori || "").toLocaleUpperCase("tr");
+/** PDF yaprak + nav → Excel kategori adı → ?tip= slug */
+function buildKategoriTipIndex(nav, allow) {
+  const idx = {};
+  const navRows = nav.map((n) => ({
+    tip: n.tip,
+    labelU: String(n.label || "")
+      .toLocaleUpperCase("tr")
+      .trim(),
+    keys: String(n.search || n.label)
+      .split("|")
+      .map((x) => x.trim())
+      .filter(Boolean),
+  }));
+
+  function assign(key, tip) {
+    const ku = String(key || "")
+      .toLocaleUpperCase("tr")
+      .trim();
+    if (!ku || !tip) return;
+    if (!idx[ku]) idx[ku] = tip;
+  }
+
+  for (const n of navRows) {
+    assign(n.labelU, n.tip);
+  }
+
+  const overrides = {
+    AKSESUARLAR: "mutfak-aksesuar",
+    "BAR AKSESUARLARI": "mutfak-aksesuar",
+    ARABALAR: "tasima-ekipman",
+    "BANKET ARABALAR": "tasima-ekipman",
+    "TAŞIMA EKİPMANLARI": "tasima-ekipman",
+    "ÇOK AMAÇLI ARABALAR": "tasima-ekipman",
+    "GN SERVİS TEPSİLERİ": "gastronorm-kuvet",
+    "DELİKLİ GASTRONOM KÜVETLER": "gastronorm-kuvet",
+    "GURMEAID PROFESYONEL BIÇAKLAR": "gurmeaid-bicak",
+    "KOMBİ KONVEKSİYONLU FIRIN AKSESUARLAR": "mutfak-aksesuar",
+  };
+  for (const [key, tip] of Object.entries(overrides)) assign(key, tip);
+
+  for (const leaf of allow) {
+    const lu = String(leaf).toLocaleUpperCase("tr").trim();
+    let tip = null;
+    for (const n of navRows) {
+      if (lu === n.labelU) {
+        tip = n.tip;
+        break;
+      }
+    }
+    if (!tip) {
+      let bestLen = 0;
+      for (const n of navRows) {
+        if (!n.labelU) continue;
+        if (lu.indexOf(n.labelU) >= 0 && n.labelU.length > bestLen) {
+          tip = n.tip;
+          bestLen = n.labelU.length;
+        }
+      }
+    }
+    if (!tip) {
+      for (const n of navRows) {
+        for (const key of n.keys) {
+          if (trRegexTest(key, lu)) {
+            tip = n.tip;
+            break;
+          }
+        }
+        if (tip) break;
+      }
+    }
+    if (tip) assign(lu, tip);
+  }
+
+  return idx;
+}
+
+function mapTip(kategori, index, nav) {
+  const ku = String(kategori || "")
+    .toLocaleUpperCase("tr")
+    .trim();
+  if (!ku) return "diger";
+  if (index[ku]) return index[ku];
+
+  let best = null;
+  let bestLen = 0;
+  for (const [key, tip] of Object.entries(index)) {
+    if (ku.indexOf(key) >= 0 && key.length > bestLen) {
+      best = tip;
+      bestLen = key.length;
+    }
+  }
+  if (best) return best;
+
   for (const n of nav) {
+    const labelU = String(n.label || "")
+      .toLocaleUpperCase("tr")
+      .trim();
+    if (labelU && (ku === labelU || ku.indexOf(labelU) >= 0)) return n.tip;
     const keys = String(n.search || n.label)
       .split("|")
       .map((x) => x.trim())
       .filter(Boolean);
     for (const key of keys) {
-      if (new RegExp(key, "i").test(k)) return n.tip;
+      if (trRegexTest(key, ku)) return n.tip;
     }
   }
+
   return slugify(kategori) || "diger";
 }
 
@@ -65,9 +174,9 @@ function isSetUstu(row, allow) {
   return false;
 }
 
-function rowToVitrin(row, nav) {
+function rowToVitrin(row, index, nav) {
   const kod = row.urun_kodu;
-  const tip = mapTip(row.kategori, nav);
+  const tip = mapTip(row.kategori, index, nav);
   const liste = row.liste_fiyati_eur ?? row.liste_fiyati;
   const iskPct = oztiIskontoYuzde(row.bayi_iskonto);
   const odeme =
@@ -114,11 +223,23 @@ function rowToVitrin(row, nav) {
   };
 }
 
+function slugId(kod) {
+  return `${BRAND_ID}__${slugify(kod)}`;
+}
+
 const cfg = JSON.parse(fs.readFileSync(MAP, "utf8"));
 const allow = cfg.kategori_leaf_allow.map((x) => String(x).toLocaleUpperCase("tr"));
+const kategoriTipIndex = buildKategoriTipIndex(cfg.nav, allow);
 const rows = JSON.parse(fs.readFileSync(SRC, "utf8").replace(/\bNaN\b/g, "null"));
-const out = rows.filter((r) => isSetUstu(r, allow)).map((r) => rowToVitrin(r, cfg.nav));
+const out = rows.filter((r) => isSetUstu(r, allow)).map((r) => rowToVitrin(r, kategoriTipIndex, cfg.nav));
 
 fs.mkdirSync(path.dirname(OUT), { recursive: true });
 fs.writeFileSync(OUT, JSON.stringify(out), "utf8");
+
+const counts = {};
+for (const r of out) counts[r.category] = (counts[r.category] || 0) + 1;
+const navTips = new Set(cfg.nav.map((n) => n.tip));
+const orphan = Object.keys(counts).filter((c) => !navTips.has(c));
 console.log("[ozti-set-ustu] yazıldı:", out.length, "ürün →", path.relative(ROOT, OUT));
+console.log("[ozti-set-ustu] servis-gerecleri:", counts["servis-gerecleri"] || 0);
+if (orphan.length) console.warn("[ozti-set-ustu] nav dışı category:", orphan.join(", "));

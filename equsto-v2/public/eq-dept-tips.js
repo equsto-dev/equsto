@@ -351,10 +351,53 @@
     "adr-seri-doner-robotu": true,
   };
 
+  /** Eski build: Türkçe slugify bozuk category → kanonik ?tip= */
+  var SET_USTU_CAT_ALIASES = {
+    "servis-gere-leri": "servis-gerecleri",
+    "servis-gere-leri-dondurma-makaslar": "servis-gerecleri",
+    "gn-servis-tepsileri": "gastronorm-kuvet",
+    "silindirik-tencereler": "silindirik-tencere",
+    "silindirik-tencere-kapaklar": "silindirik-tencere",
+    "buharl-pi-iriciler": "kaserola-buharli",
+    "gurmea-d-profesyonel-b-aklar": "gurmeaid-bicak",
+    "aksesuarlar": "mutfak-aksesuar",
+    "bar-aksesuarlar": "mutfak-aksesuar",
+    "bar-aksesuarlar-tepsiler": "mutfak-aksesuar",
+    "arabalar": "tasima-ekipman",
+    "banket-arabalar": "tasima-ekipman",
+    "ta-ma-ekipmanlar": "tasima-ekipman",
+    "ta-ma-ekipmanlar-yemek-ta-ma-kaplar": "tasima-ekipman",
+    "ok-ama-l-arabalar": "tasima-ekipman",
+    "ok-ama-l-arabalar-katl-tabak-arabalar": "tasima-ekipman",
+    "ok-ama-l-arabalar-plate-mate-katl-tabak-arabalar": "tasima-ekipman",
+    "ok-ama-l-arabalar-termo-k-l-f": "tasima-ekipman",
+    "delikli-gastronom-k-vetler": "gastronorm-kuvet",
+    "sinek-ld-r-c-cihazlar": "sinek-oldurucu",
+    "kombi-konveksiyonlu-f-r-n-aksesuarlar": "mutfak-aksesuar",
+    "kombi-konveksiyonlu-firin-aksesuarlar": "mutfak-aksesuar",
+    "gurmeaid-profesyonel-bicaklar": "gurmeaid-bicak",
+    "banket-arabalari": "tasima-ekipman",
+    "cok-amacli-arabalar": "tasima-ekipman",
+    "cok-amacli-arabalar-katli-tabak-arabalari": "tasima-ekipman",
+    "cok-amacli-arabalar-plate-mate-katli-tabak-arabalari": "tasima-ekipman",
+    "cok-amacli-arabalar-termo-kilif": "tasima-ekipman",
+    "delikli-gastronom-kuvetler": "gastronorm-kuvet",
+    "bar-aksesuarlari": "mutfak-aksesuar",
+    "bar-aksesuarlari-tepsiler": "mutfak-aksesuar",
+  };
+
+  function productCategorySlug(u) {
+    var c = (u && u.c) || (u && u.category) || (u && u.raw && u.raw.category) || "";
+    if (SET_USTU_CAT_ALIASES[c]) return SET_USTU_CAT_ALIASES[c];
+    return c;
+  }
+
   function tileMatchProduct(u, tile) {
     if (!tile) return false;
+    var cat = productCategorySlug(u);
+    if (tile.id && cat === tile.id) return true;
     if (tile.slug === "doner-ocaklari-" && DONER_CAT_SLUGS[u.c]) return true;
-    if (tile.slug && (u.c === tile.slug || u.category === tile.slug)) return true;
+    if (tile.slug && (cat === tile.slug || u.c === tile.slug || u.category === tile.slug)) return true;
     if (tile.keys && tile.keys.length) {
       var hay = productHaystack(u);
       for (var ki = 0; ki < tile.keys.length; ki++) {
@@ -501,6 +544,9 @@
 
   /** Eski GEO linkleri (?tip=tezgah_tipi_buzdolabi) → kanonik tip slug */
   var TIP_PARAM_ALIASES = {
+    "set-ustu-mutfak": {
+      "servis-gere-leri": "servis-gerecleri",
+    },
     sogutma: {
       tezgah_tipi_buzdolabi: "tezgah-tipi-buzdolabi",
       "tezgah-tipi-buzdolabi": "tezgah-tipi-buzdolabi",

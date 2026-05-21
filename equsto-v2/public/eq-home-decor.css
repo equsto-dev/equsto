@@ -32,7 +32,9 @@ body.eq-home-decor .eq-mx-hero__thumbs {
 }
 
 /* İkonsuz kategori şeridi */
+/* Kaldırıldı: ana sayfa yatay departman şeridi (üst topnav + sol çekmece yeterli) */
 .eq-decor-catstrip {
+  display: none !important;
   border-bottom: 1px solid #e5e7eb;
   background: #f8f9fb;
   padding: 12px 10px;

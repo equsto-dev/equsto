@@ -171,91 +171,12 @@
     applyPaint();
   });
 
-  /** KİLİT: pfos-topnav-anim-kilit.mdc — PFOS topnav yerinde 3 tur; açık talimat olmadan değiştirme */
-  var PFOS_LETTER_TURNS = 3;
-
-  function pfosLetterSpinDeg() {
-    var sign = Math.random() < 0.5 ? -1 : 1;
-    return sign * PFOS_LETTER_TURNS * 360;
-  }
-
-  function restartPfosCharsSpread(item) {
-    item.querySelectorAll(".topnav-pfos__ch").forEach(function (ch) {
-      ch.classList.remove("topnav-pfos__ch--spread");
-      void ch.offsetWidth;
-      ch.classList.add("topnav-pfos__ch--spread");
-    });
-  }
-
-  function playPfosReverans(item) {
-    if (!item || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    var inner = item.querySelector(".topnav-pfos__in");
-    if (!inner) return;
-    inner.classList.remove("topnav-pfos__in--reverans");
-    void inner.offsetWidth;
-    inner.classList.add("topnav-pfos__in--reverans");
-  }
-
-  function bindPfosReveransEnd(inner) {
-    if (!inner || inner.dataset.pfosReveransEnd === "1") return;
-    inner.dataset.pfosReveransEnd = "1";
-    inner.addEventListener("animationend", function (e) {
-      if (e.animationName === "pfosReverans") {
-        inner.classList.remove("topnav-pfos__in--reverans");
-      }
-    });
-  }
-
-  function shufflePfosDelays(item) {
-    if (!item) return;
-    var spin = pfosLetterSpinDeg() + "deg";
-    item.querySelectorAll(".topnav-pfos__ch").forEach(function (el) {
-      el.style.setProperty("--r0", spin);
-      el.style.setProperty("--r1", spin);
-    });
-    restartPfosCharsSpread(item);
-  }
-
-  function letterizePfosFace(face) {
-    if (!face) return;
-    var text = (face.textContent || "").trim();
-    var existing = face.querySelector(".topnav-pfos__chars");
-    if (existing && face.dataset.pfosSrc === text) return;
-    face.dataset.pfosSrc = text;
-    face.textContent = "";
-    var wrap = document.createElement("span");
-    wrap.className = "topnav-pfos__chars";
-    for (var i = 0; i < text.length; i++) {
-      var ch = text.charAt(i);
-      var span = document.createElement("span");
-      span.className = "topnav-pfos__ch" + (ch === " " ? " topnav-pfos__ch--sp" : "");
-      if (ch === " ") span.innerHTML = "\u00a0";
-      else span.textContent = ch;
-      wrap.appendChild(span);
-    }
-    face.appendChild(wrap);
-  }
-
-  function bindPfosShuffle(item) {
-    if (!item || item.dataset.pfosShuffleBound === "1") return;
-    item.dataset.pfosShuffleBound = "1";
-    var inner = item.querySelector(".topnav-pfos__in");
-    bindPfosReveransEnd(inner);
-    item.addEventListener("mouseenter", function () {
-      playPfosReverans(item);
-      shufflePfosDelays(item);
-    });
-  }
-
-  function installTopnavPfosLetters(root) {
-    root = root || document;
-    root.querySelectorAll(".topnav-pfos__face").forEach(letterizePfosFace);
-    root.querySelectorAll(".topnav-pfos").forEach(bindPfosShuffle);
-  }
+  /** PFOS / Bar Design topnav — animasyon kapalı; i18n yenileme hook’u korunur */
+  function installTopnavPfosLetters() {}
 
   window.__eqRerenderTopnavPfos = installTopnavPfosLetters;
 
-  /** Bar Design topnav: tek satır HTML → iki yüz (Bar Design / Dark SIDE blink). */
+  /** Bar Design topnav: düz etiket (Dark SIDE yüzü yok). */
   function installTopnavBesosFaces(root) {
     root = root || document;
     root.querySelectorAll(".topnav-item.topnav-besos").forEach(function (item) {
@@ -265,48 +186,16 @@
       item.removeAttribute("data-i18n");
       var wrapIn = document.createElement("span");
       wrapIn.className = "topnav-besos__in";
-      wrapIn.setAttribute("aria-hidden", "true");
       var facePlain = document.createElement("span");
       facePlain.className = "topnav-besos__face topnav-besos__face--plain";
       facePlain.setAttribute("data-i18n", "nav.bar_design");
       facePlain.textContent = plain;
-      var faceDark = document.createElement("span");
-      faceDark.className = "topnav-besos__face topnav-besos__face--dark";
-      faceDark.setAttribute("data-i18n", "nav.bar_design_hover");
-      faceDark.textContent = "Dark SIDE";
       wrapIn.appendChild(facePlain);
-      wrapIn.appendChild(faceDark);
       item.appendChild(wrapIn);
     });
   }
 
   window.__eqRerenderTopnavBesos = installTopnavBesosFaces;
-
-  function greetPfosReverans() {
-    if (!document.body.classList.contains("eq-pfos")) return;
-    var item = document.querySelector(".topnav-item.topnav-pfos");
-    if (!item) return;
-    setTimeout(function () {
-      playPfosReverans(item);
-    }, 720);
-  }
-
-  function bootTopnavPfosLetters() {
-    installTopnavPfosLetters(document);
-    greetPfosReverans();
-    if (window.eqI18nReady && typeof window.eqI18nReady.then === "function") {
-      window.eqI18nReady.then(function () {
-        installTopnavPfosLetters(document);
-        greetPfosReverans();
-      });
-    }
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", bootTopnavPfosLetters);
-  } else {
-    bootTopnavPfosLetters();
-  }
 
   /** Dış http(s) bağlantıları yeni sekmede; iç site linkleri aynı sekme. `data-eq-same-tab="1"` ile istisna. */
   function eqHostnameKey(h) {
