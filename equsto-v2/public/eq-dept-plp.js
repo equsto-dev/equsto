@@ -5,7 +5,7 @@
   'use strict';
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260523atalayimg';
+  var CATALOG_V = '20260521oztidept';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   var deptCoverImg = '';
 

@@ -15,14 +15,19 @@ import {
   isOztiBrand,
   loadPdfByKod,
   mapOztiDept,
+  mapOztiIcecekCategory,
+  mapOztiYikamaCategory,
   normKod,
+  oztiCatalogImageHref,
   oztiPricingFields,
   oztiPricingLines,
+  pdfYikamaProductName,
   slugify,
 } from "./lib/ozti-enrich.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SRC = path.join(ROOT, "scripts/data/ozti-eslesme-2026.json");
+const PDF_ONLY = path.join(ROOT, "scripts/data/ozti-eslesme-pdf-only.json");
 const MAP = path.join(ROOT, "scripts/data/ozti-set-ustu-kategoriler.json");
 const DEPT_DIR = path.join(ROOT, "public/data/dept");
 
@@ -36,9 +41,12 @@ function loadImageManifest() {
 function rowToVitrin(row, dept, category, pdfByKod, manifest) {
   const kod = row.urun_kodu;
   const pdfEntry = pdfByKod.get(normKod(kod));
-  const cat = category || slugify(row.kategori) || "diger";
+  let cat = category || slugify(row.kategori) || "diger";
+  if (dept === "yikama") {
+    cat = mapOztiYikamaCategory(row.urun_tanimi || row.name, kod, row.kategori);
+  }
   const enriched = buildSpecs(row, pdfEntry, cat, oztiPricingLines(row));
-  const imgPath = manifest.get(normKod(kod));
+  const imgHref = oztiCatalogImageHref(kod, manifest.get(normKod(kod)));
   const pricing = oztiPricingFields(row);
 
   return {
@@ -51,7 +59,7 @@ function rowToVitrin(row, dept, category, pdfByKod, manifest) {
     teknik_ozellikler: enriched.teknik_ozellikler,
     olculer: enriched.olculer,
     keywords: enriched.keywords,
-    images: imgPath ? [imgPath] : [],
+    images: imgHref ? [imgHref] : [],
     sku: kod,
     model: kod,
     ...pricing,
@@ -76,9 +84,39 @@ const manifest = loadImageManifest();
 const byDept = new Map();
 for (const row of rows) {
   const dept = mapOztiDept(row, allow);
-  const cat = slugify(row.kategori) || "diger";
+  const kod = row.urun_kodu;
+  const cat =
+    dept === "icecek"
+      ? mapOztiIcecekCategory(row.urun_tanimi, kod)
+      : slugify(row.kategori) || "diger";
   if (!byDept.has(dept)) byDept.set(dept, []);
   byDept.get(dept).push(rowToVitrin(row, dept, cat, pdfByKod, manifest));
+}
+
+/** Fiyatta yok, PDF katalogda olan 9710.* bulaşık makineleri */
+if (fs.existsSync(PDF_ONLY)) {
+  const pdfOnly = JSON.parse(fs.readFileSync(PDF_ONLY, "utf8"));
+  const existingKod = new Set(rows.map((r) => normKod(r.urun_kodu)));
+  if (!byDept.has("yikama")) byDept.set("yikama", []);
+  for (const p of pdfOnly) {
+    const kod = p.urun_kodu_norm || p.urun_kodu;
+    if (!kod || !/^9710\./i.test(kod) || existingKod.has(normKod(kod))) continue;
+    const pdfEntry = pdfByKod.get(normKod(kod));
+    const name = pdfYikamaProductName(kod, pdfEntry);
+    const synthetic = {
+      urun_kodu: kod,
+      urun_tanimi: name,
+      kategori: "BULAŞIK YIKAMA MAKİNELERİ",
+      kategori_yolu: ["YIKAMA EKİPMANLARI", "BULAŞIK YIKAMA MAKİNELERİ"],
+      liste_fiyati_eur: null,
+      bayi_iskonto: null,
+      pdf_eslesme: true,
+    };
+    const cat = mapOztiYikamaCategory(name, kod, synthetic.kategori);
+    byDept
+      .get("yikama")
+      .push(rowToVitrin(synthetic, "yikama", cat, pdfByKod, manifest));
+  }
 }
 
 const stats = {};

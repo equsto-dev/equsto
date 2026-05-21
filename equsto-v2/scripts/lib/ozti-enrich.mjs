@@ -188,11 +188,107 @@ export function buildSpecs(row, pdfEntry, category, pricingLines) {
   };
 }
 
+/** PDF-only / kod önekli bulaşık makinesi adı */
+export function pdfYikamaProductName(kod, pdfEntry) {
+  const k = normKod(kod);
+  const known = {
+    "9710.FX10A.00": "OKY FX10A Setaltı Bulaşık Yıkama Makinesi",
+    "9710.UX10N.00": "OKY UX10N Setaltı Bulaşık Yıkama Makinesi",
+    "9710.AMX10.00": "AMX-10 Bulaşık Yıkama Makinesi",
+    "9710.00CSA.00": "Konveyörlü Otomatik Bulaşık Yıkama Makinesi CSA-D",
+    "9710.0CSAE.00": "Konveyörlü Otomatik Bulaşık Yıkama Makinesi CS-E-A-D",
+    "9710.CNAE0.00": "Konveyörlü Otomatik Bulaşık Yıkama Makinesi CN-E-A-CDS",
+    "9710.0CNAL.00": "Konveyörlü Otomatik Bulaşık Yıkama Makinesi CN-L-A-CDS",
+    "9710.0CNAS.00": "Konveyörlü Otomatik Bulaşık Yıkama Makinesi CN-S-A-CDS",
+  };
+  if (known[k]) return known[k];
+  const text = (pdfEntry?.pdf_metin_parcalari || []).join(" ");
+  if (/KONVEYÖRLÜ|KONVEYORLU|OTOMATİK\s*YIKAMA/i.test(text))
+    return `Konveyörlü Otomatik Bulaşık Yıkama Makinesi ${k}`;
+  if (/AMX/i.test(k) || /AMX-?\d+/i.test(text)) return `AMX Bulaşık Yıkama Makinesi ${k}`;
+  if (/OKY|UX10|FX10/i.test(k)) return `OKY Bulaşık Yıkama Makinesi ${k.replace(/^9710\./, "")}`;
+  return `Bulaşık Yıkama Makinesi ${k}`;
+}
+
+/** Yıkama dept vitrin kategorisi (?tip= eşlemesi) */
+export function mapOztiYikamaCategory(name, kod, kategori) {
+  const hay = foldTr(`${name || ""} ${kod || ""} ${kategori || ""}`);
+  if (/deterjan|parlatici|power\s*(matic|rinse|hand)|elde\s*bulasik|kopuk\s*el|leke\s*cikar/i.test(hay)) {
+    return "yikama-kimyasallari";
+  }
+  if (/^9710\./.test(String(kod || ""))) {
+    if (/csa|cnal|cnas|cnae|konveyor|otomatik/.test(hay)) return "konveyorlu-bulasik";
+    if (/amx[-.\d]|oky|ux10|fx10/.test(hay)) return "setalti-bulasik";
+    return "bulasik-makineleri";
+  }
+  if (/giyotin|hood\s*type/i.test(hay)) return "giyotin-bulasik";
+  if (/konveyor|tunel|tunnel/i.test(hay)) return "konveyorlu-bulasik";
+  if (/tirnakli|tırnaklı|rack/i.test(hay)) return "tirnakli-bulasik";
+  if (/kazan\s*yikama|kettle\s*wash/i.test(hay)) return "kazan-yikama";
+  if (/set\s*alti|setalti|tezgah\s*alti|undercounter/i.test(hay)) return "setalti-bulasik";
+  if (/^b\.y\.m\b|b\.y\.m\s|giris.*tezgah|cikis.*tezgah/i.test(hay))
+    return "bulasik-makinesi-giris-ve-cikis-tezgahlari";
+  if (/el\s*yikama|yikama\s*evye/i.test(hay)) return "el-yikama-evyeleri";
+  if (/hunili|siyirma|alma\s*tezgah/i.test(hay))
+    return "calisma-tezgahlari-siyirma-hunili-bulasik-alma-tezgahi";
+  if (/bulasik\s*makinesi\s*ustu|makinesi\s*ustu\s*evyeli|calisma\s*tezgah/i.test(hay))
+    return "calisma-tezgahlari-bulasik-makinesi-tezgahlari";
+  if (/göz\s*evye|goz\s*evye|küresel\s*evye|yuvarlak\s*evye|vanety\s*evye/i.test(hay))
+    return "el-yikama-evyeleri";
+  if (/tezgah|evyeli/i.test(hay)) return "calisma-tezgahlari-bulasik-makinesi-tezgahlari";
+  return "bulasik-makineleri";
+}
+
+/**
+ * Aynı Excel/PDF satırı «Kahve Ekipmanları» altında olsa da mağazada İçecek PLP.
+ * (demlik, süt potu, bardak, sürahi, çay topu — makine değil)
+ */
+export function mapOztiDeptAccessory(row) {
+  const kod = normKod(row.urun_kodu || row.sku);
+  const name = String(row.urun_tanimi || row.name || "").toLocaleUpperCase("tr");
+
+  if (/^8534\./.test(kod)) return "icecek";
+  if (/^8573\.000/.test(kod)) return "icecek";
+  if (/^8577\.|^0466\.|^0469\.|^0585\.|^8497\./.test(kod)) return "icecek";
+  if (/^8593\./.test(kod)) return "icecek";
+  if (/^8317\.ZCP/i.test(kod)) return "icecek";
+
+  if (/CAY\s*KAZANI|DEMLIKLI|DEMLİKLİ/i.test(name)) return null;
+  if (/KAHVECI\s*DEML|DEMLİĞİ|DEMLIK\s*NO\b/i.test(name)) return "icecek";
+  if (/KAHVE\s*SÜT\s*POTU|KAHVE\s*SUT\s*POTU/i.test(name)) return "icecek";
+  if (/KONİK\s*BARDAK|KAPAKSIZ\s*SÜRAHİ|KAPAKLI\s*SÜRAHİ|\bSÜRAHİ\b/i.test(name)) return "icecek";
+  if (/ÇAY\s*TOPU|ÇAY\s*TABAĞ|MAKASLI\s*ÇAY/i.test(name)) return "icecek";
+  if (/SU\s*OTOMATI/i.test(name)) return "icecek";
+  if (/POŞET\s*ÇAY\s*STANDI|ÇAY\s*STANDI/i.test(name)) return "icecek";
+
+  return null;
+}
+
+/** İçecek dept alt kategori (facet) */
+export function mapOztiIcecekCategory(name, kod) {
+  const k = normKod(kod);
+  const hay = String(name || "").toLocaleUpperCase("tr");
+  if (/^8534\./.test(k) || /SÜT\s*POTU|SUT\s*POTU/i.test(hay)) return "kahve-sut-potlari";
+  if (/^8573\.000/.test(k) || /KAHVECI\s*DEML/i.test(hay)) return "kahveci-demlik";
+  if (/^8593\./.test(k) || /SU\s*OTOMATI/i.test(hay)) return "su-otomati";
+  if (/^8577\.|ÇAY\s*TOPU/i.test(hay)) return "cay-servis-aksesuarlari";
+  if (/^0466\.|BARDAK/i.test(hay)) return "icecek-bardaklari";
+  if (/^0469\.|SÜRAHİ/i.test(hay)) return "surehi-ve-servis";
+  if (/STAND|ZCP/i.test(hay)) return "cay-servis-aksesuarlari";
+  return "icecek-diger";
+}
+
 /** Excel kategori → mağaza dept */
 export function mapOztiDept(row, setUstuAllow) {
+  const kod = String(row.urun_kodu || row.sku || "").trim();
+  if (/^9710\./i.test(kod)) return "yikama";
+
+  const accessoryDept = mapOztiDeptAccessory(row);
+  if (accessoryDept) return accessoryDept;
+
   const pathHay = (row.kategori_yolu || []).join(" ").toLocaleUpperCase("tr");
   const kat = String(row.kategori || "").toLocaleUpperCase("tr");
-  const hay = `${pathHay} ${kat}`;
+  const hay = `${pathHay} ${kat} ${String(row.urun_tanimi || row.name || "")}`;
 
   if (/SETÜSTÜ\s*MUTFAK|SETUSTU\s*MUTFAK/.test(hay)) return "set-ustu-mutfak";
   if (setUstuAllow?.length) {
@@ -203,16 +299,27 @@ export function mapOztiDept(row, setUstuAllow) {
 
   const rules = [
     [/SOĞUK\s*ODA|DERİN\s*DONDURUCU\s*ODA|BUZ\s*MAKİN|BUZ\s*MAKIN|SOĞUTUCU|BUZDOLAB|DONDURMA\s*MAKİN/i, "sogutma"],
-    [/BULAŞIK|YIKAMA\s*MAKİN|OBM\s|AMX|OKY|UX10|FX10/i, "yikama"],
+    [/EL\s*YIKAMA/i, "yikama"],
+    [
+      /BULAŞIK\s*(MAKİNE|MAKINE|MAKİNASI)|YIKAMA\s*MAKİN|OBM\b|AMX[-.\d]|OKY|UX10|FX10/i,
+      "yikama",
+    ],
+    [
+      /BULAŞIK.*(DETERJAN|PARLATICI)|DETERJAN.*BULAŞIK|PARLATICI.*BULAŞIK|YARDIMCI\s*YIKAMA|ELDE\s*BULAŞIK/i,
+      "set-ustu-mutfak",
+    ],
     [/DAVLUMBAZ|YAĞ\s*TUTUCU/i, "davlumbaz"],
-    [/ÇAY\s*OCAĞ|KAHVE\s*MAKİN|KAHVE\s*MAKIN|KAHVE\s*EKİPMAN|WMF\s*KAHVE|NUOVA\s*SIMONELLI\s*KAHVE|ÖZTİRYAKİLER\s*KAHVE|ESPRESSO|BARISTA/i, "kahve"],
+    [
+      /ÇAY\s*MAKİN|ÇAY\s*MAKIN|KAHVE\s*MAKİN|KAHVE\s*MAKIN|FİLTRE\s*KAHVE|FILTRE\s*KAHVE|OTOMATİK\s*KAHVE|OTOMATIK\s*KAHVE|WMF\s|NUOVA\s*SIMONELLI|ESPRESSO|BARISTA|CAY\s*KAZANI/i,
+      "kahve",
+    ],
     [/İSTİF\s*RAF/i, "istif"],
     [/KUZİNE|OCAK|IZGARA|FRİTÖZ|FRITOZ|FIRIN|KAYNATMA|BENMARİ|BENMARI|WOK|İNDÜKSİYON|INDUKSIYON|900\s*SERİ|OPTIMUM|LAVATAŞ|DÖNER\s*OCAĞ|PİŞİRİCİ|PISIRICI/i, "pisirme"],
-    [/TEZGAH|EVYE|EVYELİ|ÇALIŞMA\s*TEZGAH|EL\s*YIKAMA/i, "tezgah"],
+    [/TEZGAH|EVYE|EVYELİ|ÇALIŞMA\s*TEZGAH/i, "tezgah"],
     [/ARABA|TAŞIMA|BANKET|SERVİS\s*ÜNİT/i, "tasima"],
     [/DOLAP|RAF(?!.*İSTİF)/i, "dolap"],
     [/HAZIRLIK|KESME\s*TAHTA|MİKSER|DOĞRAYICI|HAMUR/i, "hazirlik"],
-    [/İÇECEK|BAR\s*AKSESUAR/i, "icecek"],
+    [/İÇECEK|BAR\s*AKSESUAR|ÇAY\s*KAHVE\s*VE\s*BAR/i, "icecek"],
     [/SERVİS\s*GEREÇ|GASTRONORM|CHAFING|TENCERE|TAVA|GURMEAID|BAKIR\s*SUNUM|MASAÜSTÜ|MELAMİN|BAIN\s*MARIE|HELVA|SIĞ\s*TENCERE|SİLİNDİRİK|PRES\s*BASKI|KARIŞTIRMA|SÜZGEÇ|POLİETİLEN|POLİPROPİLEN|POLİKARBONAT|SİNEK/i, "set-ustu-mutfak"],
   ];
 
@@ -286,4 +393,35 @@ export function oztiPricingLines(row) {
 
 export function isOztiBrand(row) {
   return /öztiryaki|oztiryaki/i.test(String(row.brand || ""));
+}
+
+const OZTI_AX_BASE = "https://oztiryakiler.com.tr/ax-images/images";
+
+/** Üretici CDN — dosya adı: {ÜRÜN_KODU}.jpg */
+export function oztiAxImageUrl(kod) {
+  const k = normKod(kod);
+  if (!k) return "";
+  return `${OZTI_AX_BASE}/${encodeURIComponent(k)}.jpg`;
+}
+
+/** `ozti-8574-cm080-00` → `8574.CM080.00` (fetch-ozti-web-images slugFile tersi). */
+export function oztiKodFromWebSlug(slug) {
+  const parts = String(slug || "")
+    .replace(/^ozti-/i, "")
+    .split("-")
+    .filter(Boolean);
+  if (parts.length < 2) return "";
+  return parts.map((p) => p.toUpperCase()).join(".");
+}
+
+/**
+ * Vitrin `images[]` — web görselleri için CDN (canlıda /images/catalog/ozti yoksa çalışır).
+ * PDF kırpımı (`p123/…`) yerel yol olarak kalır.
+ */
+export function oztiCatalogImageHref(kod, localRel) {
+  const rel = String(localRel || "").replace(/\\/g, "/");
+  if (/^images\/catalog\/ozti\/p\d+\//i.test(rel)) return rel;
+  if (rel && /^images\/catalog\/ozti\/web\//i.test(rel)) return oztiAxImageUrl(kod);
+  if (rel) return rel;
+  return "";
 }
