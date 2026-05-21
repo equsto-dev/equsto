@@ -14,11 +14,18 @@ export async function GET(req: NextRequest) {
     data?: Record<string, number>;
   }>(FIYATLAR_FILE());
 
+  if (file && typeof file === "object" && "data" in file) {
+    const inner = (file as { data?: Record<string, number> }).data;
+    if (inner && typeof inner === "object") {
+      return adminOk({ data: inner });
+    }
+  }
+
   if (file?.success && file.data && typeof file.data === "object") {
     return adminOk({ data: file.data });
   }
 
-  if (file && typeof file === "object" && !("success" in file)) {
+  if (file && typeof file === "object" && !("success" in file) && !("version" in file)) {
     return adminOk({ data: file as Record<string, number> });
   }
 
