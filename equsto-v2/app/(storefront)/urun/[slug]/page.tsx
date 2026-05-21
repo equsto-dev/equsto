@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { db } from "@/lib/db";
+import { ProductImage } from "@/components/catalog/product-image";
 import {
   formatSpecsRows,
   parseProductSpecs,
@@ -63,13 +64,10 @@ export default async function UrunPage({
       ) : null}
 
       <div className="mt-6 flex flex-col sm:flex-row gap-8">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <ProductImage
           src={imgUrl}
           alt={primary?.alt || product.name}
-          width={400}
-          height={300}
-          className="w-full sm:w-80 h-auto object-contain border border-neutral-200 rounded-lg bg-neutral-50 p-4"
+          modelCode={product.modelCode}
         />
 
         <div className="flex-1 min-w-0">
@@ -88,11 +86,6 @@ export default async function UrunPage({
               ))}
             </tbody>
           </table>
-          {imgUrl.includes("_placeholder") ? (
-            <p className="mt-3 text-xs text-neutral-500">
-              Ürün fotoğrafı yakında eklenecek.
-            </p>
-          ) : null}
         </div>
       </div>
 
