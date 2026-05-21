@@ -6,8 +6,8 @@ from pathlib import Path
 import fitz  # PyMuPDF
 import pandas as pd
 
-XLSX = Path(r"c:\Users\User\Downloads\Öztiryakiler Fiyat Listesi 2025-3 (5) (2).xlsx")
-PDF = Path(r"c:\Users\User\Downloads\Öztiryakiler-Urun-katalogu-2026.pdf")
+XLSX = Path(r"c:\D Disk\FİYAT LİSTELERİ\Öztiryakiler Fiyat Listesi 2025-3 (5) (2).xlsx")
+PDF = Path(r"c:\D Disk\FİYAT LİSTELERİ\Öztiryakiler-Urun-katalogu-2026.pdf")
 
 print("=== XLSX sheets ===")
 xl = pd.ExcelFile(XLSX)

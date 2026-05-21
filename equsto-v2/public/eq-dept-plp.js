@@ -5,7 +5,7 @@
   'use strict';
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260530imgfix';
+  var CATALOG_V = '20260530kahve';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   var deptCoverImg = '';
 
@@ -675,7 +675,8 @@
       return new Promise(function (resolve, reject) {
         setTimeout(function () {
           try {
-            resolve(JSON.parse(text));
+            var safe = String(text || '').replace(/\bNaN\b/g, 'null');
+            resolve(JSON.parse(safe));
           } catch (e) {
             reject(e);
           }
@@ -714,17 +715,19 @@
     fetchDeptArray()
       .then(function (arr) {
         if (DEPT === 'market-reyon' || DEPT === 'set-ustu-mutfak') return arr;
-        if (countOztiRows(arr) >= 5) return arr;
+        if (arr.length >= 5 && countOztiRows(arr) >= 5) return arr;
         return fetchEkipmanlarDeptFallback().then(function (fallback) {
-          if (fallback.length > arr.length) {
-            console.warn(
-              '[eq-dept-plp] dept/' + DEPT + '.json eski — ekipmanlar.json ile birleştirildi (' +
-                arr.length +
-                ' → ' +
-                fallback.length +
-                ')'
-            );
-            return fallback;
+          if (!arr.length || fallback.length > arr.length) {
+            if (fallback.length) {
+              console.warn(
+                '[eq-dept-plp] dept/' + DEPT + '.json → ekipmanlar.json (' +
+                  arr.length +
+                  ' → ' +
+                  fallback.length +
+                  ')'
+              );
+            }
+            return fallback.length ? fallback : arr;
           }
           return arr;
         });

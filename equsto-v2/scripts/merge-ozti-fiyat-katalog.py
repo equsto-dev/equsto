@@ -23,8 +23,10 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parent
 DATA = ROOT / "data"
-XLSX = Path(r"c:\Users\User\Downloads\Öztiryakiler Fiyat Listesi 2025-3 (5) (2).xlsx")
-PDF = Path(r"c:\Users\User\Downloads\Öztiryakiler-Urun-katalogu-2026.pdf")
+DEFAULT_XLSX = Path(r"c:\D Disk\FİYAT LİSTELERİ\Öztiryakiler Fiyat Listesi 2025-3 (5) (2).xlsx")
+DEFAULT_PDF = Path(r"c:\D Disk\FİYAT LİSTELERİ\Öztiryakiler-Urun-katalogu-2026.pdf")
+XLSX = DEFAULT_XLSX
+PDF = DEFAULT_PDF
 
 # Ürün kodu: 7865.N1.80908.10, 79E4.27NMV.00, 79K4.06NMV.00 …
 KOD_RE = re.compile(
@@ -276,9 +278,24 @@ def by_kategori_tree(merged: list[dict]) -> dict:
 
 
 def main() -> None:
+    import argparse
+
+    global XLSX, PDF
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--xlsx", type=Path, default=DEFAULT_XLSX)
+    ap.add_argument("--pdf", type=Path, default=DEFAULT_PDF)
+    args = ap.parse_args()
+    XLSX = args.xlsx
+    PDF = args.pdf
+    if not XLSX.is_file():
+        raise SystemExit(f"XLSX bulunamadı: {XLSX}")
+    if not PDF.is_file():
+        raise SystemExit(f"PDF bulunamadı: {PDF}")
+
     DATA.mkdir(parents=True, exist_ok=True)
 
     print("[ozti] Fiyat listesi (xlsx Sayfa1)…")
+    print(f"  kaynak: {XLSX}")
     fiyat = parse_fiyat_listesi()
     (DATA / "ozti-fiyat-2025.json").write_text(
         json.dumps(fiyat, ensure_ascii=False, indent=2), encoding="utf-8"

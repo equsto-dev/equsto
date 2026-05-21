@@ -4,6 +4,7 @@ Kaynaklar (Downloads):
 
 - `Öztiryakiler Fiyat Listesi 2025-3 (5) (2).xlsx` → **Sayfa1** (ürün + fiyat + iskonto)
 - `Öztiryakiler-Urun-katalogu-2026.pdf` → teknik katalog (metin katmanı)
+- `Yeni Soğukoda Fiyat 25.11.2014 İSK.xls` → repo: `scripts/data/sources/ozti-sogukoda-fiyat-2014-isk.xls` (soğuk oda segmenti, arşiv)
 
 ## Komut
 

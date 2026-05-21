@@ -12,7 +12,7 @@ const DEPT_DIR = path.join(PUBLIC, "data", "dept");
 const OUT = path.join(PUBLIC, "data", "category-covers.json");
 
 const GO_DEFAULTS = {
-  pfos: "/images/home/hero-pfos-cover.jpg",
+  pfos: "/images/pfos/mutfak-plani-referans.jpg?v=20260522pfosplan",
   besos: "/images/home/hero-bar-cocktailstation.png",
   marketReyon: "/images/catalog/ozti/p200/ozti-9805-im240x-nhc.jpg",
 };

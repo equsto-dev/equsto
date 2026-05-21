@@ -111,47 +111,31 @@ function collectTargets(opts) {
   return need;
 }
 
-function curlHead(url) {
-  const r = spawnSync(
-    "curl.exe",
-    ["-sI", "-k", "--max-time", "25", url],
-    { encoding: "utf8", maxBuffer: 64 * 1024 }
-  );
-  if (r.status !== 0) return { ok: false, len: 0 };
-  const m = /Content-Length:\s*(\d+)/i.exec(r.stdout || "");
-  const len = m ? parseInt(m[1], 10) : 0;
-  const ok = /^HTTP\/\S+\s+200/i.test(r.stdout || "");
-  return { ok, len };
-}
-
-function resolveAxUrl(kod) {
+function downloadFromKod(kod, dest) {
   const variants = [
     `${AX_BASE}/${kod}.jpg`,
     `${AX_BASE}/${kod}.png`,
     `${AX_BASE}/${kod}.webp`,
   ];
-  for (const url of variants) {
-    const h = curlHead(url);
-    if (h.ok && h.len >= MIN_BYTES) return url;
-  }
-  return "";
-}
-
-function downloadImage(url, dest) {
   fs.mkdirSync(path.dirname(dest), { recursive: true });
-  const r = spawnSync(
-    "curl.exe",
-    ["-sL", "-k", "--max-time", "90", "-o", dest, url],
-    { encoding: "utf8", maxBuffer: 8 * 1024 }
-  );
-  if (r.status !== 0) throw new Error(`curl ${r.status}`);
-  if (!fs.existsSync(dest)) throw new Error("no file");
-  const n = fs.statSync(dest).size;
-  if (n < MIN_BYTES) {
-    fs.unlinkSync(dest);
-    throw new Error(`too small ${n}`);
+  for (const url of variants) {
+    const ext = path.extname(url).slice(1).toLowerCase().replace("jpeg", "jpg");
+    const tryDest = dest.replace(/\.[a-z]+$/, `.${ext}`);
+    const r = spawnSync(
+      "curl.exe",
+      ["-sL", "-k", "--max-time", "45", "-o", tryDest, url],
+      { encoding: "utf8", maxBuffer: 8 * 1024 }
+    );
+    if (r.status !== 0 || !fs.existsSync(tryDest)) continue;
+    const n = fs.statSync(tryDest).size;
+    if (n < MIN_BYTES) {
+      fs.unlinkSync(tryDest);
+      continue;
+    }
+    if (tryDest !== dest && fs.existsSync(dest)) fs.unlinkSync(dest);
+    return { n, ext: ext === "peg" ? "jpg" : ext, path: tryDest };
   }
-  return n;
+  throw new Error("ax-images yok");
 }
 
 async function worker(queue, manifest, stats, opts, deptUpdates) {
@@ -160,19 +144,15 @@ async function worker(queue, manifest, stats, opts, deptUpdates) {
     if (!item) break;
     const { kod, dept } = item;
     try {
-      const url = resolveAxUrl(kod);
-      if (!url) {
-        stats.miss++;
-        continue;
-      }
-      const ext = url.match(/\.(jpe?g|png|webp)$/i)?.[1]?.toLowerCase() || "jpg";
-      const fname = slugFile(kod) + "." + (ext === "jpeg" ? "jpg" : ext);
+      const fname = slugFile(kod) + ".jpg";
       const outDir = path.join(OUT_BASE, "web");
       const dest = path.join(outDir, fname);
-      const rel = `images/catalog/ozti/web/${fname}`;
 
       if (!opts.dry) {
-        const n = await downloadImage(url, dest);
+        const dl = downloadFromKod(kod, dest);
+        const base = path.basename(dl.path);
+        const rel = `images/catalog/ozti/web/${base}`;
+        const n = dl.n;
         manifest[kod] = rel;
         if (!deptUpdates.has(dept)) deptUpdates.set(dept, new Map());
         deptUpdates.get(dept).set(kod, rel);

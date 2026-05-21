@@ -205,7 +205,7 @@ export function mapOztiDept(row, setUstuAllow) {
     [/SOĞUK\s*ODA|DERİN\s*DONDURUCU\s*ODA|BUZ\s*MAKİN|BUZ\s*MAKIN|SOĞUTUCU|BUZDOLAB|DONDURMA\s*MAKİN/i, "sogutma"],
     [/BULAŞIK|YIKAMA\s*MAKİN|OBM\s|AMX|OKY|UX10|FX10/i, "yikama"],
     [/DAVLUMBAZ|YAĞ\s*TUTUCU/i, "davlumbaz"],
-    [/ÇAY\s*OCAĞ|KAHVE\s*MAKİN|KAHVE\s*MAKIN/i, "kahve"],
+    [/ÇAY\s*OCAĞ|KAHVE\s*MAKİN|KAHVE\s*MAKIN|KAHVE\s*EKİPMAN|WMF\s*KAHVE|NUOVA\s*SIMONELLI\s*KAHVE|ÖZTİRYAKİLER\s*KAHVE|ESPRESSO|BARISTA/i, "kahve"],
     [/İSTİF\s*RAF/i, "istif"],
     [/KUZİNE|OCAK|IZGARA|FRİTÖZ|FRITOZ|FIRIN|KAYNATMA|BENMARİ|BENMARI|WOK|İNDÜKSİYON|INDUKSIYON|900\s*SERİ|OPTIMUM|LAVATAŞ|DÖNER\s*OCAĞ|PİŞİRİCİ|PISIRICI/i, "pisirme"],
     [/TEZGAH|EVYE|EVYELİ|ÇALIŞMA\s*TEZGAH|EL\s*YIKAMA/i, "tezgah"],

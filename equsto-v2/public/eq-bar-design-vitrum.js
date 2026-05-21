@@ -187,7 +187,15 @@
 
   function dataAsset(rel) {
     if (!rel) return "";
-    var s = String(rel).replace(/\\/g, "/").replace(/^data\//, "");
+    var s = String(rel).replace(/\\/g, "/").trim();
+    if (/^https?:\/\//i.test(s)) return s;
+    if (typeof window.eqProductImgSrc === "function") {
+      try {
+        var via = window.eqProductImgSrc(s);
+        if (via) return via;
+      } catch (_) {}
+    }
+    s = s.replace(/^data\//, "");
     if (typeof window.equstoDataAssetHref === "function") {
       return window.equstoDataAssetHref(s);
     }

@@ -1778,6 +1778,19 @@ body.eq-home.eq-home-mutbex .eq-home-hero-ads.hero {
   overflow: hidden;
 }
 
+body.eq-home.eq-home-mutbex .eq-home-hero-ads .hero-card--pfos .hero-card-visual--pfos {
+  border-radius: 0;
+}
+
+body.eq-home.eq-home-mutbex .eq-home-hero-ads .hero-card--pfos:not(.hero-card--soon):hover .hero-card-img--pfos-cover {
+  filter: drop-shadow(0 14px 36px rgba(0, 30, 80, 0.22));
+  transition: filter 0.25s ease;
+}
+
+body.eq-home.eq-home-mutbex .eq-home-hero-ads .hero-card-img--pfos-cover {
+  transition: filter 0.25s ease;
+}
+
 body.eq-home.eq-home-mutbex .eq-home-platform-hero .eq-home-hero-ads.hero {
   border: none;
   border-radius: 0;

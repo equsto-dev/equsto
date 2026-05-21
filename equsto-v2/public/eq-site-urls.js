@@ -397,6 +397,7 @@
     if (p == null || p === "") return "";
     var s = String(p).replace(/\\/g, "/").replace(/^\.\//, "");
     if (/^https?:\/\//i.test(s)) return s;
+    if (/^\/\//.test(s)) return "https:" + s;
     if (
       /^\/images\/(catalog|home)\//i.test(s) ||
       /^images\/(catalog|home)\//i.test(s)

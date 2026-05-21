@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
@@ -661,6 +661,61 @@ header.hdr .hdr-alici{display:flex;flex-direction:column;gap:1px;padding:0 10px;
   .tablo-panel .ac-cards{grid-template-columns:1fr 1fr}
   .warn{margin:16px 12px 0}
   .foot{margin:16px 12px 80px}
+}
+
+/* ── PFOS popüler mutfak bölgeleri (plan referansı) ── */
+.pf-pop-zones{
+  background:var(--card);
+  border:.5px solid var(--border);
+  border-radius:var(--rl);
+  overflow:hidden;
+  margin-bottom:16px;
+  flex:0 0 auto;
+}
+.pf-pop-zones__hd{
+  padding:10px 14px;
+  border-bottom:.5px solid var(--border);
+  background:var(--gold-bg);
+}
+.pf-pop-zones__kicker{
+  font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--gold2);
+}
+.pf-pop-zones__title{
+  display:block;font-size:13px;font-weight:600;color:var(--black);margin-top:4px;
+}
+.pf-pop-zones__plan{
+  margin:0;padding:10px 12px;background:#f4f6f8;
+  border-bottom:.5px solid var(--border);
+}
+.pf-pop-zones__plan img{
+  display:block;width:100%;height:auto;border-radius:8px;
+  border:.5px solid var(--border);background:#fff;
+}
+.pf-pop-zones__grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:8px;
+  padding:12px;
+}
+.pf-pop-zone{
+  display:flex;align-items:center;gap:8px;
+  padding:10px 12px;
+  border:.5px solid var(--border);
+  border-radius:var(--rm);
+  background:var(--bg);
+  font:inherit;text-align:left;cursor:pointer;
+  transition:border-color .15s,background .15s,box-shadow .15s;
+}
+.pf-pop-zone:hover,.pf-pop-zone:focus-visible{
+  border-color:var(--gold2);
+  background:var(--gold-bg);
+  outline:none;
+}
+.pf-pop-zone__ico{font-size:18px;line-height:1;flex-shrink:0}
+.pf-pop-zone__lbl{font-size:12px;font-weight:500;color:var(--text);line-height:1.3}
+@media (max-width:900px){
+  .pf-pop-zones__grid{grid-template-columns:1fr}
 }
 
 /* ── PFL Döner Akış ── */
@@ -1601,6 +1656,17 @@ body.pfos-teklif-lightbox-open{overflow:hidden}
   <!-- SAĞ: üst konsept yazıları · alt PDF projeler -->
   <div class="pf-right">
 
+    <section class="pf-pop-zones" id="pf-pop-zones" aria-label="Popüler mutfak bölgeleri">
+      <div class="pf-pop-zones__hd">
+        <span class="pf-pop-zones__kicker">Plan referansı</span>
+        <span class="pf-pop-zones__title">Popüler kategoriler</span>
+      </div>
+      <figure class="pf-pop-zones__plan">
+        <img src="/images/pfos/mutfak-plani-referans.jpg?v=20260522pfosplan" width="1024" height="611" alt="Örnek restoran mutfak planı — bar, pişirme, hazırlık ve bulaşık bölgeleri" loading="lazy" decoding="async">
+      </figure>
+      <div class="pf-pop-zones__grid" id="pf-pop-zones-grid" role="list"></div>
+    </section>
+
     <!-- PFL Döner Akış -->
     <div class="pfl-feed" id="pfl-feed">
       <div class="pfl-feed-hd">
@@ -2334,7 +2400,26 @@ const PISIR_OPTS = {
 };
 
 /* Adım 05 — tüm konseptlerde mutfak bölümü ızgarasında gösterilir (pfosStationLabels ile birleştirilir) */
-const STATIONS_EXTRA = ['Bulaşık Yıkama', 'Bar', 'Açık Büfe'];
+const STATIONS_EXTRA = [
+  'Bulaşık Yıkama',
+  'Bar',
+  'Açık Büfe',
+  'Pizza ve Hamur Hazırlık',
+  'Sıcak Hazırlık',
+  'Soğuk Hazırlık',
+];
+
+/** Mutfak planından — sağ şerit «Popüler kategoriler» (İtalyan restoran örneği) */
+const PFOS_POP_ZONES = [
+  { label: 'Bar', station: 'Bar', icon: '🍸' },
+  { label: 'Bulaşık yıkama', station: 'Bulaşık Yıkama', icon: '🧼' },
+  { label: 'Pizza ve hamur hazırlık', station: 'Pizza ve Hamur Hazırlık', icon: '🍕' },
+  { label: 'Pişirme', station: 'Ana Mutfak', icon: '🍳' },
+  { label: 'Sıcak hazırlık', station: 'Sıcak Hazırlık', icon: '🔥' },
+  { label: 'Soğuk hazırlık', station: 'Soğuk Hazırlık', icon: '🥗' },
+  { label: 'Hazırlık', station: 'Hazırlık Mutfağı', icon: '🔪' },
+  { label: 'Salon / yemek', station: 'Teşhir Alanı', icon: '🍽️' },
+];
 
 const STATIONS_MAP = {
   Restaurant:['Ana Mutfak','Hazırlık Mutfağı','Bar','Soğuk Depolama','Depolama','Bulaşık Yıkama','Açık Büfe'],
@@ -3209,6 +3294,7 @@ function think(msg, cb){ /* TODO: spinner animasyonu */ if(typeof cb==='function
 function pfosBootWizard(){
   pfosFillOpts('o1',MESLEKLER,'setMeslek',D.meslek);
   renderKonseptButtons();
+  initPfosPopZones();
   initTrAdres().then(function(){ refreshWizardHint(); });
   refreshWizardHint();
   pfMobileInit();
@@ -4373,12 +4459,51 @@ function stationsUpdateTotal(totalM2){
 function renderStations(totalM2){
   const list=pfosStationLabels();
   document.getElementById('stations-grid').innerHTML=list.map(s=>`
-    <div class="station-row">
+    <div class="station-row" data-station="${s}">
       <div class="station-lbl">${s}</div>
       <input class="station-inp" type="number" placeholder="0" min="0"
         oninput="checkStationTotal(${totalM2})">
       <div class="station-unit">m²</div>
     </div>`).join('');
+}
+
+function pfosPopZoneClick(stationName){
+  const sec=document.getElementById('s5');
+  if(sec){
+    try{sec.scrollIntoView({behavior:'smooth',block:'start'});}catch(_){sec.scrollIntoView();}
+  }
+  var alan=D.alan>=20?D.alan:120;
+  pfosSetAlan(alan,{stations:true});
+  document.getElementById('stations-wrap').style.display='block';
+  renderStations(alan);
+  document.querySelectorAll('#stations-grid .station-row').forEach(function(row){
+    row.style.outline='';
+    row.style.background='';
+  });
+  var row=document.querySelector('#stations-grid .station-row[data-station="'+stationName+'"]');
+  if(!row){
+    document.querySelectorAll('#stations-grid .station-row').forEach(function(r){
+      var lbl=r.querySelector('.station-lbl');
+      if(lbl&&lbl.textContent.trim()===stationName) row=r;
+    });
+  }
+  if(row){
+    row.style.outline='2px solid var(--gold2)';
+    row.style.background='var(--gold-bg)';
+    var inp=row.querySelector('.station-inp');
+    if(inp) inp.focus();
+  }
+}
+
+function initPfosPopZones(){
+  var grid=document.getElementById('pf-pop-zones-grid');
+  if(!grid) return;
+  grid.innerHTML=PFOS_POP_ZONES.map(function(z){
+    return '<button type="button" class="pf-pop-zone" role="listitem" data-station="'+z.station.replace(/"/g,'&quot;')+'" onclick="pfosPopZoneClick(\''+z.station.replace(/'/g,"\\'")+'\')">'+
+      '<span class="pf-pop-zone__ico" aria-hidden="true">'+z.icon+'</span>'+
+      '<span class="pf-pop-zone__lbl">'+z.label+'</span>'+
+    '</button>';
+  }).join('');
 }
 function checkStationTotal(total){
   const inputs=[...document.querySelectorAll('.station-inp')];

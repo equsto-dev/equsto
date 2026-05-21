@@ -67,7 +67,8 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23000000'/%3E%3Ctext x='16' y='21' font-family='-apple-system,Segoe UI,sans-serif' font-size='9' font-weight='700' fill='%23c5a455' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
   <script  src="/theme.js?v=20260521search"></script>
   <script  src="/equsto-logo.js?v=20260519wordmark3"></script>
-  <script  src="/eq-site-urls.js?v=20260521search"></script>
+  <script  src="/eq-site-urls.js?v=20260521besos"></script>
+  <script  src="/eq-vitrum-catalogue-fallback.js?v=20260521besos"></script>
   <script  src="/eq-i18n.js?v=20260521search"></script>
   <script  src="/nav.js?v=20260521search"></script>
   <script  src="/equsto-member.js?v=20260522wa" defer></script>
@@ -3076,25 +3077,44 @@
 
     function normImgPath(p) {
       if (!p) return '';
-      if (typeof window.equstoDataAssetHref === 'function') {
+      var s = String(p).replace(/\\/g, '/').trim();
+      if (/^https?:\/\//i.test(s)) return s;
+      if (typeof window.eqProductImgSrc === 'function') {
         try {
-          return window.equstoDataAssetHref(p);
+          var via = window.eqProductImgSrc(s);
+          if (via) return via;
         } catch (_) {}
       }
-      return '/data/' + String(p).replace(/\\/g, '/').replace(/^\.\//, '').replace(/^data\//, '');
+      if (typeof window.equstoDataAssetHref === 'function') {
+        try {
+          return window.equstoDataAssetHref(s);
+        } catch (_) {}
+      }
+      return '/data/' + s.replace(/^\.\//, '').replace(/^data\//, '');
+    }
+
+    function applyVitrumCatalog(j) {
+      VITRUM_LIST = (j && Array.isArray(j.products)) ? j.products.slice() : [];
     }
 
     function loadVitrumCatalog() {
+      if (window.__VITRUM_CATALOGUE_FALLBACK) {
+        applyVitrumCatalog(window.__VITRUM_CATALOGUE_FALLBACK);
+      }
       return fetch(VITRUM_CATALOG_URL, { cache: 'no-store' })
         .then(function (r) {
           if (!r.ok) throw new Error('no file');
-          return r.json();
+          return r.text();
         })
-        .then(function (j) {
-          VITRUM_LIST = (j && Array.isArray(j.products)) ? j.products.slice() : [];
+        .then(function (text) {
+          var t = String(text || '').trim();
+          if (!t || t.charAt(0) !== '{') throw new Error('not json');
+          applyVitrumCatalog(JSON.parse(t));
         })
         .catch(function () {
-          VITRUM_LIST = [];
+          if (!VITRUM_LIST.length && window.__VITRUM_CATALOGUE_FALLBACK) {
+            applyVitrumCatalog(window.__VITRUM_CATALOGUE_FALLBACK);
+          }
         });
     }
 
