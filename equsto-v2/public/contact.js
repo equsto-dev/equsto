@@ -14,7 +14,7 @@
   var CHAT_KEY = "equsto_wa_chat_v1";
   var WA_FAB_IMG = "/equsto-bize-ulasin-isimlik.png";
   /** Modal şablonu değişince artırın (eski DOM’u zorla yeniler). */
-  var WA_MODAL_BUILD = 8;
+  var WA_MODAL_BUILD = 9;
 
   var waModalDigits = "";
   var waModalResizeHandler = null;
@@ -205,7 +205,79 @@
     });
   }
 
+  function renderWaHistoryList() {
+    var list = document.getElementById("equsto-wa-history");
+    var empty = document.getElementById("equsto-wa-history-empty");
+    if (!list) return;
+    var threads = loadThreads();
+    list.innerHTML = "";
+    if (!threads.length) {
+      if (empty) {
+        empty.hidden = false;
+        empty.textContent = "Henüz konuşma yok. İlk mesajınızı yazın.";
+      }
+      return;
+    }
+    if (empty) empty.hidden = true;
+    threads.forEach(function (row) {
+      if (!row || !row.id) return;
+      var li = document.createElement("li");
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "equsto-wa-history-item";
+      btn.setAttribute("data-id", String(row.id));
+      var preview = document.createElement("span");
+      preview.className = "equsto-wa-history-preview";
+      preview.textContent = row.preview || "(boş)";
+      var meta = document.createElement("span");
+      meta.className = "equsto-wa-history-meta";
+      meta.textContent = formatChatTime(row.ts);
+      btn.appendChild(preview);
+      btn.appendChild(meta);
+      btn.addEventListener("click", function () {
+        selectWaHistoryItem(String(row.id));
+      });
+      li.appendChild(btn);
+      list.appendChild(li);
+    });
+  }
+
+  function selectWaHistoryItem(id) {
+    var arr = loadThreads();
+    var row = null;
+    for (var i = 0; i < arr.length; i++) {
+      if (String(arr[i].id) === id) {
+        row = arr[i];
+        break;
+      }
+    }
+    if (!row) return;
+    var msgEl = document.getElementById("equsto-wa-msg");
+    if (msgEl && row.body) msgEl.value = String(row.body);
+    renderWaChat();
+  }
+
+  function applyWaModalView() {
+    var memberOn = equstoIsMember();
+    var guest = document.getElementById("equsto-wa-guest");
+    var member = document.getElementById("equsto-wa-member");
+    var loginGuest = document.getElementById("equsto-wa-login-cta-guest");
+    var loginSecondary = document.getElementById("equsto-wa-login-cta");
+
+    if (guest) guest.style.display = memberOn ? "none" : "flex";
+    if (member) member.style.display = memberOn ? "flex" : "none";
+    if (loginGuest) loginGuest.href = equstoLoginHref();
+    if (loginSecondary) loginSecondary.hidden = true;
+
+    if (memberOn) {
+      renderWaHistoryList();
+      renderWaChat();
+    }
+  }
+
   function refreshWaHistory() {
+    if (!equstoIsMember()) return;
+    renderWaHistoryList();
     renderWaChat();
   }
 
@@ -280,14 +352,20 @@
     window.setTimeout(function () {
       spin.style.display = "none";
       pane.style.display = "flex";
-      member.style.display = "flex";
+      applyWaModalView();
       syncWaModalNearFab();
       syncWaModalAuthBtn();
-      refreshWaHistory();
-      if (msgEl) {
+      if (equstoIsMember() && msgEl) {
         try {
           msgEl.focus();
         } catch (e) {}
+      } else {
+        var loginGuest = document.getElementById("equsto-wa-login-cta-guest");
+        if (loginGuest) {
+          try {
+            loginGuest.focus();
+          } catch (e) {}
+        }
       }
     }, 280);
   }
@@ -315,6 +393,10 @@
   }
 
   function equstoWaSubmitFromModal() {
+    if (!equstoIsMember()) {
+      equstoWaLoginClick(null);
+      return;
+    }
     var msgEl = document.getElementById("equsto-wa-msg");
     var st = document.getElementById("equsto-wa-status");
     var go = document.getElementById("equsto-wa-go");
@@ -386,6 +468,7 @@
           "team",
           "Mesajınız alındı. Equsto ekibi en kısa sürede size dönüş yapacak."
         );
+        renderWaHistoryList();
         if (st) {
           st.textContent = "";
           st.className = "equsto-wa-status equsto-wa-status--ok";
@@ -411,12 +494,7 @@
 
   function syncWaModalAuthBtn() {
     purgeWaModalLegacyLogout();
-    var memberOn = equstoIsMember();
-    var loginCta = document.getElementById("equsto-wa-login-cta");
-    if (loginCta) {
-      loginCta.hidden = !!memberOn;
-      if (!memberOn) loginCta.href = equstoLoginHref();
-    }
+    applyWaModalView();
   }
 
   function equstoWaLoginClick(ev) {
@@ -509,8 +587,17 @@
       '<div class="equsto-wa-modal-body">' +
       '<div class="equsto-wa-spinner-wrap" id="equsto-wa-spinner"><div class="equsto-wa-spinner" aria-hidden="true"></div></div>' +
       '<div class="equsto-wa-pane" id="equsto-wa-pane">' +
-      '<div class="equsto-wa-guest" id="equsto-wa-guest" hidden></div>' +
+      '<div class="equsto-wa-guest" id="equsto-wa-guest">' +
+      '<div class="equsto-wa-guest-login-wrap">' +
+      '<a class="equsto-wa-login-only" id="equsto-wa-login-cta-guest" href="/login.html">Üye Girişi</a>' +
+      "</div>" +
+      "</div>" +
       '<div class="equsto-wa-member" id="equsto-wa-member">' +
+      '<div class="equsto-wa-history-wrap">' +
+      '<div class="equsto-wa-history-head">Geçmiş konuşmalar</div>' +
+      '<ul class="equsto-wa-history" id="equsto-wa-history"></ul>' +
+      '<p class="equsto-wa-history-empty" id="equsto-wa-history-empty" hidden>Henüz konuşma yok.</p>' +
+      "</div>" +
       '<div class="equsto-wa-chat-wrap">' +
       '<div class="equsto-wa-chat-log" id="equsto-wa-chat-log" role="log" aria-live="polite"></div>' +
       "</div>" +
@@ -518,7 +605,7 @@
       '<textarea id="equsto-wa-msg" class="equsto-wa-msg equsto-wa-msg--chat" rows="3" maxlength="8000" placeholder="Mesajınızı yazın…"></textarea>' +
       '<p class="equsto-wa-status" id="equsto-wa-status" role="status" aria-live="polite"></p>' +
       '<button type="button" class="equsto-wa-go" id="equsto-wa-go">Gönder</button>' +
-      '<a class="equsto-wa-login-secondary" id="equsto-wa-login-cta" href="/login.html" hidden>Üye girişi yap</a>' +
+      '<a class="equsto-wa-login-secondary" id="equsto-wa-login-cta" href="/login.html" hidden>Üye Girişi</a>' +
       "</div>" +
       "</div>" +
       "</div>" +
@@ -534,6 +621,8 @@
     overlay.querySelector("#equsto-wa-go").addEventListener("click", equstoWaSubmitFromModal);
     var loginCtaEl = overlay.querySelector("#equsto-wa-login-cta");
     if (loginCtaEl) loginCtaEl.addEventListener("click", equstoWaLoginClick);
+    var loginGuestEl = overlay.querySelector("#equsto-wa-login-cta-guest");
+    if (loginGuestEl) loginGuestEl.addEventListener("click", equstoWaLoginClick);
     document.addEventListener("equsto-member-session", syncWaModalAuthBtn);
     document.addEventListener("equsto-member-changed", syncWaModalAuthBtn);
     var waMsgInput = overlay.querySelector("#equsto-wa-msg");

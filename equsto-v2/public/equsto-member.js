@@ -27,6 +27,10 @@
     return readMember();
   };
 
+  window.equstoGetMemberProfile = function () {
+    return readMember();
+  };
+
   window.equstoGetMemberToken = function () {
     var o = readMember();
     return o && o.token ? String(o.token) : "";
