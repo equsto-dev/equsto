@@ -48,6 +48,12 @@
     if (!img) return "";
     img = String(img).replace(/\\/g, "/");
     if (/^https?:\/\//i.test(img)) return img;
+    if (typeof window.catalogImageCandidates === "function") {
+      try {
+        var tries = window.catalogImageCandidates(img);
+        if (tries && tries.length) return tries[0];
+      } catch (_) {}
+    }
     if (typeof window.equstoDataAssetHref === "function") {
       try {
         var href = window.equstoDataAssetHref(img);
@@ -65,10 +71,14 @@
     return "/data/" + img.replace(/^data\//, "");
   }
 
+  function thumbPlaceholderHtml() {
+    return '<span class="eq-srch-panel__thumb eq-srch-panel__thumb--ph" aria-hidden="true"></span>';
+  }
+
   function imgTag(hit) {
     var raw = hit && hit.image ? String(hit.image).replace(/\\/g, "/") : "";
     var src = imgSrc(hit);
-    if (!src) return '<span class="eq-srch-panel__thumb eq-srch-panel__thumb--ph"></span>';
+    if (!src) return thumbPlaceholderHtml();
     return (
       '<img class="eq-srch-panel__thumb" src="' +
       esc(src) +

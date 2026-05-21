@@ -575,6 +575,13 @@
       img.style.display = "none";
       return;
     }
+    if (img.closest(".eq-srch-panel__item")) {
+      var phSrch = document.createElement("span");
+      phSrch.className = "eq-srch-panel__thumb eq-srch-panel__thumb--ph";
+      phSrch.setAttribute("aria-hidden", "true");
+      img.replaceWith(phSrch);
+      return;
+    }
     img.style.display = "none";
   };
 
