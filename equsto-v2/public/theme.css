@@ -4597,6 +4597,13 @@ body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-locale {
   align-items: center;
   gap: 6px;
 }
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-tagline {
+  margin: 0 0 8px;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.72);
+  letter-spacing: 0.02em;
+}
 body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-partners {
   margin: 0;
   text-align: center;

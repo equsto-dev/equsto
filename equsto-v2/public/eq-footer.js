@@ -5,7 +5,7 @@
 (function () {
   "use strict";
 
-  var FOOTER_JSON = "/data/footer-vitrin.json?v=20260523foot2";
+  var FOOTER_JSON = "/data/footer-vitrin.json?v=20260524foot3";
   var footerData = null;
   var footerLoadPromise = null;
 
@@ -94,6 +94,7 @@
 
   function defaultFooterData() {
     return {
+      tagline: "Equsto Teknolojisi · Gastronomi Tasarımı · Satış Mühendisliği",
       partners: "Hilton · Marriott · Migros · TAV · Sodexo · McDonald's",
       legal: { terms: "/contact", privacy: "/contact", company: "Equsto Teknoloji Limited" },
       columns: [
@@ -106,6 +107,7 @@
             { key: "footer.link_sitemap", label: "Site haritası", href: "/sitemap.xml" },
             { key: "footer.link_llms", label: "Asistan özet dosyası", href: "/llms.txt" },
             { key: "footer.link_steakhouse", label: "Steakhouse mutfak rehberi", href: "/steakhouse-kurulumu" },
+            { key: "footer.link_marka", label: "Markalarımız", href: "/marka.html" },
           ],
         },
         {
@@ -129,6 +131,7 @@
             { key: "footer.link_guide_m2", label: "Rehber: mutfak m²", href: "/rehber/mutfak-alani-kisi-basi-metrekare-2026" },
             { key: "footer.link_cafe", label: "Cafe kurulum rehberi", href: "/cafe-kurulumu" },
             { key: "footer.link_catering", label: "Catering mutfağı rehberi", href: "/catering-mutfagi" },
+            { key: "footer.link_bulut", label: "Bulut mutfak kurulumu", href: "/bulut-mutfak-kurulumu" },
           ],
         },
         {
@@ -144,6 +147,7 @@
             { key: "nav.pfos", label: "Proje Fabrikası", href: "/pfos" },
             { key: "footer.link_fastfood", label: "Fast food kurulumu", href: "/fast-food-kurulumu" },
             { key: "footer.link_finedining", label: "Fine dining kurulumu", href: "/fine-dining-kurulumu" },
+            { key: "footer.link_allday", label: "All day dining kurulumu", href: "/all-day-dining-kurulumu" },
           ],
         },
       ],
@@ -202,6 +206,7 @@
       })
       .join("");
 
+    var tagline = t("footer.tagline", (data && data.tagline) || defaultFooterData().tagline);
     var partners = t("footer.partners", (data && data.partners) || defaultFooterData().partners);
     var legal = (data && data.legal) || defaultFooterData().legal;
     var year = new Date().getFullYear();
@@ -228,6 +233,9 @@
       esc(t("footer.locale_label", "Türkiye")) +
       "</span>" +
       "</div>" +
+      '<p class="eq-mfoot-tagline">' +
+      esc(tagline) +
+      "</p>" +
       '<p class="eq-mfoot-partners">' +
       esc(partners) +
       "</p>" +
