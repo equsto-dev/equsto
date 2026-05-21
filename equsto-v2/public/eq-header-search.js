@@ -59,18 +59,29 @@
     return document.querySelector("header.hdr .srch-input, header .srch .srch-input");
   }
 
-  function ensurePanel(root) {
-    var panel = root.querySelector(".eq-srch-panel");
+  function ensurePanel() {
+    var panel = document.getElementById("eq-srch-panel");
     if (!panel) {
       panel = document.createElement("div");
       panel.className = "eq-srch-panel";
       panel.id = "eq-srch-panel";
       panel.setAttribute("role", "listbox");
       panel.hidden = true;
-      root.appendChild(panel);
-      if (!root.style.position) root.style.position = "relative";
+      document.body.appendChild(panel);
     }
     return panel;
+  }
+
+  function positionPanel() {
+    var srch = getSrchRoot();
+    var panel = document.getElementById("eq-srch-panel");
+    if (!srch || !panel || panel.hidden) return;
+    var r = srch.getBoundingClientRect();
+    panel.style.position = "fixed";
+    panel.style.left = r.left + "px";
+    panel.style.top = r.bottom + 4 + "px";
+    panel.style.width = Math.max(r.width, 280) + "px";
+    panel.style.zIndex = "10050";
   }
 
   function hidePanel() {
@@ -86,13 +97,14 @@
   function renderPanel(hits, q, total) {
     var root = getSrchRoot();
     if (!root) return;
-    var panel = ensurePanel(root);
+    var panel = ensurePanel();
     if (!hits.length) {
       panel.innerHTML =
         '<div class="eq-srch-panel__empty">«' +
         esc(q) +
         '» için öneri yok</div>';
       panel.hidden = false;
+      positionPanel();
       return;
     }
     var html = "";
@@ -126,6 +138,7 @@
       "+)</a>";
     panel.innerHTML = html;
     panel.hidden = false;
+    positionPanel();
     activeIdx = -1;
   }
 
@@ -248,6 +261,14 @@
   document.addEventListener("input", onInput, true);
   document.addEventListener("keydown", onKeydown, true);
   document.addEventListener("click", onDocClick, true);
+  window.addEventListener("resize", positionPanel);
+  window.addEventListener(
+    "scroll",
+    function () {
+      positionPanel();
+    },
+    true
+  );
 
   document.addEventListener(
     "click",

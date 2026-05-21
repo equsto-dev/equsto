@@ -69,7 +69,12 @@ const nextConfig: NextConfig = {
     ];
   },
   async rewrites() {
-    return [
+    return {
+      beforeFiles: [
+        { source: "/arama", destination: "/arama.html" },
+        { source: "/arama/", destination: "/arama.html" },
+      ],
+      afterFiles: [
       { source: "/", destination: "/index.html" },
       ...deptRewrites(),
       { source: "/shop/:dept/:slug", destination: "/product.html" },
@@ -87,10 +92,9 @@ const nextConfig: NextConfig = {
       { source: "/login/", destination: "/login.html" },
       { source: "/marka", destination: "/marka.html" },
       { source: "/marka/", destination: "/marka.html" },
-      { source: "/arama", destination: "/arama.html" },
-      { source: "/arama/", destination: "/arama.html" },
       ...geoRewrites(),
-    ];
+      ],
+    };
   },
 };
 
