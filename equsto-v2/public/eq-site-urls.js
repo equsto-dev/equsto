@@ -274,6 +274,12 @@
     if (file === "tasima.html") return window.equstoUrl("tasima") + query + hash;
     if (file === "araba.html") return window.equstoUrl("araba") + query + hash;
     if (file === "istif.html") return window.equstoUrl("istif") + query + hash;
+    if (file === "steakhouse-kurulumu.html") return "/steakhouse-kurulumu" + query + hash;
+    if (file === "cafe-kurulumu.html") return "/cafe-kurulumu" + query + hash;
+    if (file === "catering-mutfagi.html") return "/catering-mutfagi" + query + hash;
+    if (file === "fast-food-kurulumu.html") return "/fast-food-kurulumu" + query + hash;
+    if (file === "fine-dining-kurulumu.html") return "/fine-dining-kurulumu" + query + hash;
+    if (file === "imt300.html") return "/data/advanced-cuisine-clear-ice/product-imt300.html" + query + hash;
     return href;
   };
 

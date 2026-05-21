@@ -1,8 +1,13 @@
 /**
  * Equsto — Amazon tarzı vitrin alt bilgisi (body.eq-shop, Proje Fabrikası / admin / Besos hariç).
+ * Veri: /data/footer-vitrin.json (canlı eski site / llms.txt / sitemap ile uyumlu).
  */
 (function () {
   "use strict";
+
+  var FOOTER_JSON = "/data/footer-vitrin.json?v=20260523foot";
+  var footerData = null;
+  var footerLoadPromise = null;
 
   function t(key, fb) {
     try {
@@ -23,17 +28,18 @@
   }
 
   function href(path) {
+    var p = String(path || "");
     try {
-      if (typeof window.equstoResolveNavHref === "function") return window.equstoResolveNavHref(path);
+      if (typeof window.equstoResolveNavHref === "function") return window.equstoResolveNavHref(p);
     } catch (_) {}
     try {
-      if (typeof window.equstoUrl === "function") {
-        var p = String(path || "").replace(/^\//, "").replace(/\.html$/i, "");
-        if (p === "index" || p === "") return window.equstoUrl("home");
-        return window.equstoUrl(p);
+      if (typeof window.equstoUrl === "function" && /\.html$/i.test(p)) {
+        var base = p.replace(/^\//, "").replace(/\.html$/i, "");
+        if (base === "index") return window.equstoUrl("home");
+        if (window.equstoUrl(base)) return window.equstoUrl(base);
       }
     } catch (_2) {}
-    return path;
+    return p;
   }
 
   function shouldMount() {
@@ -81,54 +87,98 @@
     );
   }
 
-  function columns() {
-    return [
-      {
-        titleKey: "footer.col_about",
-        titleFb: "Hakkımızda",
-        links: [
-          { key: "footer.link_contact", label: "İletişim", href: href("contact.html") },
-          { key: "footer.link_projects", label: "Referans projeler", href: href("/projeler/") },
-          { key: "footer.link_sitemap", label: "Site haritası", href: "/sitemap.xml" },
-          { key: "footer.link_llms", label: "Asistan özet dosyası", href: "/llms.txt" },
-          { key: "footer.link_steakhouse", label: "Steakhouse mutfak rehberi", href: href("steakhouse-kurulumu.html") },
-        ],
-      },
-      {
-        titleKey: "footer.col_shop",
-        titleFb: "Kategoriler",
-        links: [
-          { key: "nav.pisirme", label: "Pişirme Ekipmanları", href: href("pisirme.html") },
-          { key: "nav.sogutma", label: "Soğutma Ekipmanları", href: href("sogutma.html") },
-          { key: "nav.kahve", label: "Kahve Ekipmanları", href: href("kahve.html") },
-          { key: "nav.yikama", label: "Yıkama Ekipmanları", href: href("yikama.html") },
-          { key: "nav.hazirlik", label: "Hazırlık Ekipmanları", href: href("hazirlik.html") },
-          { key: "nav.icecek", label: "İçecek Ekipmanları", href: href("icecek.html") },
-        ],
-      },
-      {
-        titleKey: "footer.col_help",
-        titleFb: "Size yardımcı olalım",
-        links: [
-          { key: "footer.link_quote", label: "Teklif ve proje talebi", href: href("contact.html") },
-          { key: "footer.link_account", label: "Hesabım ve siparişler", href: href("login.html") },
-          { key: "footer.link_guide_m2", label: "Rehber: mutfak m²", href: href("/rehber/mutfak-alani-kisi-basi-metrekare-2026") },
-          { key: "footer.link_cafe", label: "Cafe kurulum rehberi", href: href("cafe-kurulumu.html") },
-          { key: "footer.link_catering", label: "Catering mutfağı rehberi", href: href("catering-mutfagi.html") },
-        ],
-      },
-      {
-        titleKey: "footer.col_solutions",
-        titleFb: "Çözümler",
-        links: [
-          { key: "nav.bar_design", label: "Bar Design Studio", href: href("bar-design.html") },
-          { key: "footer.link_imt300", label: "IMT300 berrak buz", href: href("imt300.html") },
-          { key: "nav.pfos", label: "Proje Fabrikası", href: href("pfos.html") },
-          { key: "footer.link_fastfood", label: "Fast food kurulumu", href: href("fast-food-kurulumu.html") },
-          { key: "footer.link_finedining", label: "Fine dining kurulumu", href: href("fine-dining-kurulumu.html") },
-        ],
-      },
-    ];
+  function defaultFooterData() {
+    return {
+      partners: "Hilton · Marriott · Migros · TAV · Sodexo · McDonald's",
+      legal: { terms: "/contact", privacy: "/contact", company: "Equsto Teknoloji Limited" },
+      columns: [
+        {
+          titleKey: "footer.col_about",
+          title: "Hakkımızda",
+          links: [
+            { key: "footer.link_contact", label: "İletişim", path: "/contact" },
+            { key: "footer.link_projects", label: "Referans projeler", path: "/projeler/" },
+            { key: "footer.link_sitemap", label: "Site haritası", path: "/sitemap.xml" },
+            { key: "footer.link_llms", label: "Asistan özet dosyası", path: "/llms.txt" },
+            { key: "footer.link_steakhouse", label: "Steakhouse mutfak rehberi", path: "/steakhouse-kurulumu" },
+          ],
+        },
+        {
+          titleKey: "footer.col_shop",
+          title: "Kategoriler",
+          links: [
+            { key: "nav.pisirme", label: "Pişirme Ekipmanları", path: "/shop/pisirme" },
+            { key: "nav.sogutma", label: "Soğutma Ekipmanları", path: "/shop/sogutma" },
+            { key: "nav.kahve", label: "Kahve Ekipmanları", path: "/shop/kahve" },
+            { key: "nav.yikama", label: "Yıkama Ekipmanları", path: "/shop/yikama" },
+            { key: "nav.hazirlik", label: "Hazırlık Ekipmanları", path: "/shop/hazirlik" },
+            { key: "nav.icecek", label: "İçecek Ekipmanları", path: "/shop/icecek" },
+          ],
+        },
+        {
+          titleKey: "footer.col_help",
+          title: "Size yardımcı olalım",
+          links: [
+            { key: "footer.link_quote", label: "Teklif ve proje talebi", path: "/contact" },
+            { key: "footer.link_account", label: "Hesabım ve siparişler", path: "/login.html" },
+            { key: "footer.link_guide_m2", label: "Rehber: mutfak m²", path: "/rehber/mutfak-alani-kisi-basi-metrekare-2026" },
+            { key: "footer.link_cafe", label: "Cafe kurulum rehberi", path: "/cafe-kurulumu" },
+            { key: "footer.link_catering", label: "Catering mutfağı rehberi", path: "/catering-mutfagi" },
+          ],
+        },
+        {
+          titleKey: "footer.col_solutions",
+          title: "Çözümler",
+          links: [
+            { key: "nav.bar_design", label: "Bar Design", path: "/besos" },
+            {
+              key: "footer.link_imt300",
+              label: "IMT300 berrak buz",
+              path: "/data/advanced-cuisine-clear-ice/product-imt300.html",
+            },
+            { key: "nav.pfos", label: "Proje Fabrikası", path: "/pfos" },
+            { key: "footer.link_fastfood", label: "Fast food kurulumu", path: "/fast-food-kurulumu" },
+            { key: "footer.link_finedining", label: "Fine dining kurulumu", path: "/fine-dining-kurulumu" },
+          ],
+        },
+      ],
+    };
+  }
+
+  function normalizeColumns(data) {
+    var cols = (data && data.columns) || [];
+    return cols.map(function (col) {
+      return {
+        titleKey: col.titleKey || "",
+        titleFb: col.title || col.titleFb || "",
+        links: (col.links || []).map(function (ln) {
+          return {
+            key: ln.key || "",
+            label: ln.label || "",
+            href: href(ln.path || ln.href || "#"),
+          };
+        }),
+      };
+    });
+  }
+
+  function loadFooterData() {
+    if (footerData) return Promise.resolve(footerData);
+    if (footerLoadPromise) return footerLoadPromise;
+    footerLoadPromise = fetch(FOOTER_JSON, { credentials: "same-origin", cache: "default" })
+      .then(function (r) {
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.json();
+      })
+      .then(function (j) {
+        footerData = j && j.columns ? j : defaultFooterData();
+        return footerData;
+      })
+      .catch(function () {
+        footerData = defaultFooterData();
+        return footerData;
+      });
+    return footerLoadPromise;
   }
 
   function logoMarkup() {
@@ -138,17 +188,15 @@
     return '<span class="eq-mfoot-logo-text">EQUSTO</span>';
   }
 
-  function buildHtml() {
-    var cols = columns()
+  function buildHtml(data) {
+    var cols = normalizeColumns(data)
       .map(function (c) {
         return colHtml(c.titleKey, c.titleFb, c.links);
       })
       .join("");
 
-    var partners = t(
-      "footer.partners",
-      "Hilton · Marriott · Migros · TAV · Sodexo · McDonald's"
-    );
+    var partners = t("footer.partners", (data && data.partners) || defaultFooterData().partners);
+    var legal = (data && data.legal) || defaultFooterData().legal;
     var year = new Date().getFullYear();
 
     return (
@@ -162,7 +210,7 @@
       "</div>" +
       '<div class="eq-mfoot-brand">' +
       '<a class="eq-mfoot-logo" href="' +
-      esc(href("index.html")) +
+      esc(href("/")) +
       '" aria-label="Equsto">' +
       logoMarkup() +
       "</a>" +
@@ -184,12 +232,12 @@
       esc(t("footer.legal_aria", "Yasal")) +
       '">' +
       '<a href="' +
-      esc(href("contact.html")) +
+      esc(href(legal.terms || "/contact")) +
       '">' +
       esc(t("footer.terms", "Şartlar ve koşullar")) +
       "</a>" +
       '<a href="' +
-      esc(href("contact.html")) +
+      esc(href(legal.privacy || "/contact")) +
       '">' +
       esc(t("footer.privacy", "Gizlilik")) +
       "</a>" +
@@ -199,7 +247,9 @@
       "</nav>" +
       '<p class="eq-mfoot-copy">© ' +
       year +
-      " Equsto Teknoloji Limited. " +
+      " " +
+      esc(legal.company || "Equsto Teknoloji Limited") +
+      ". " +
       esc(t("footer.all_rights", "Tüm hakları saklıdır.")) +
       "</p>" +
       "</div>" +
@@ -221,20 +271,28 @@
     var cookie = host.querySelector("#eq-mfoot-cookie");
     if (cookie) {
       cookie.addEventListener("click", function () {
-        var legacy = document.querySelector(".footer .cookie, .footer [data-i18n='common.manage_cookies']");
+        var legacy = document.querySelector(
+          ".footer .cookie, .footer [data-i18n='common.manage_cookies'], #eq-cookie-manage"
+        );
         if (legacy && typeof legacy.click === "function") legacy.click();
       });
     }
+  }
+
+  function render(host, data) {
+    host.className = "footer eq-mfoot";
+    host.setAttribute("data-eq-mfoot", "1");
+    host.innerHTML = buildHtml(data);
+    wire(host);
   }
 
   function mount() {
     if (!shouldMount()) return;
     var host = findHost();
     if (!host) return;
-    host.className = "footer eq-mfoot";
-    host.setAttribute("data-eq-mfoot", "1");
-    host.innerHTML = buildHtml();
-    wire(host);
+    loadFooterData().then(function (data) {
+      render(host, data);
+    });
   }
 
   window.__eqMountMarketFooter = mount;
