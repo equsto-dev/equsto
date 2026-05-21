@@ -42,16 +42,33 @@
   }
 
   function netEurFromRow(row) {
-    var pre = Number(row.satis_fiyati_eur || row.satis_eur_indirimli);
+    var pre = Number(
+      row.satis_fiyati_eur ||
+        row.satis_eur_indirimli ||
+        row.alis_fiyati_eur ||
+        row.alis_fiyati ||
+        row.iskontolu_fiyat
+    );
     if (pre > 0) return pre;
     if (window.EqustoPricing && typeof window.EqustoPricing.hesaplaBirimFiyat === "function") {
-      return window.EqustoPricing.hesaplaBirimFiyat(row, {}, { kur_eur_try: 1 }).net_eur;
+      var calc = window.EqustoPricing.hesaplaBirimFiyat(row, {}, { kur_eur_try: 1 });
+      if (calc && calc.net_eur > 0) return calc.net_eur;
     }
     var liste = Number(row.liste_fiyati_eur || row.liste_fiyati || 0);
     if (liste <= 0) return 0;
-    var isk = Number(row.iskonto_oran != null ? row.iskonto_oran : 50);
+    var isk = Number(
+      row.iskonto_oran != null
+        ? row.iskonto_oran
+        : row.iskonto_yuzde != null
+          ? row.iskonto_yuzde
+          : NaN
+    );
+    if (!(isk > 0) && row.bayi_iskonto > 0 && row.bayi_iskonto < 1) {
+      isk = row.bayi_iskonto * 100;
+    }
     if (isk > 0 && isk < 1) isk = isk * 100;
-    return liste * (1 - isk / 100);
+    if (!(isk > 0)) return 0;
+    return Math.round(liste * (1 - isk / 100) * 100) / 100;
   }
 
   function fmtTryWhole(n) {

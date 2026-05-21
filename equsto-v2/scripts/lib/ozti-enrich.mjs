@@ -374,6 +374,17 @@ export function oztiPricingFields(row) {
   };
 }
 
+/** PLP / JSON yedek — kur yüklenene kadar EUR satış etiketi */
+export function oztiPriceLabelEur(pricing) {
+  const satis = Number(pricing?.satis_fiyati_eur);
+  if (!(satis > 0)) return "";
+  const eur = satis.toLocaleString("tr-TR", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  });
+  return `€${eur} + KDV`;
+}
+
 export function oztiPricingLines(row) {
   const px = oztiPricingFields(row);
   const liste = px.liste_fiyati_eur;

@@ -234,12 +234,22 @@
     if (window.EqustoKurLive && typeof window.EqustoKurLive.applyRowPrices === 'function') {
       row = window.EqustoKurLive.applyRowPrices(x) || x;
     }
+    var priceLine = String(row.price || '').split('\n')[0];
+    if (!priceLine && Number(row.satis_fiyati_eur) > 0) {
+      priceLine =
+        '€' +
+        Number(row.satis_fiyati_eur).toLocaleString('tr-TR', {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2,
+        }) +
+        ' + KDV';
+    }
     return {
       c: row.category || '',
       b: b,
       fb: fb,
       n: n,
-      p: String(row.price || '').split('\n')[0],
+      p: priceLine,
       img:
         row.images && row.images[0]
           ? imgSrc(row.images[0])
@@ -816,9 +826,21 @@
     if (asideHd && title) asideHd.textContent = title;
   }
 
-  document.addEventListener("equsto:kur-updated", function () {
-    if (state.ready) render();
-  });
+  function refreshAllPrices() {
+    if (!state.ready || !state.all.length) return;
+    for (var ki = 0; ki < state.all.length; ki++) {
+      var src = state.all[ki].raw || state.all[ki];
+      var nx = normalizeRow(src);
+      if (window.EqFiyatlarBridge && window.EqFiyatlarBridge.applyToRow) {
+        window.EqFiyatlarBridge.applyToRow(nx);
+      }
+      state.all[ki] = nx;
+    }
+    render();
+  }
+
+  document.addEventListener("equsto:kur-updated", refreshAllPrices);
+  window.__eqDeptPlpRefreshPrices = refreshAllPrices;
 
   function loadDeptCover(cb) {
     fetch('/data/category-covers.json?v=' + CATALOG_V, { cache: 'no-store' })

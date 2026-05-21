@@ -52,7 +52,7 @@ iskonto_yuzde     = bayi_iskonto × 100
 
 JSON: `liste_fiyati_eur`, `bayi_iskonto`, `odeme_carpani`, `satis_fiyati_eur`, `iskonto_yuzde`, `iskonto_tutar_eur`.
 
-`equsto-pricing-core.js` ve `eq-kur-live.js` satışı `iskonto_oran` / `satis_fiyati_eur` ile hesaplar; mağazada TL + canlı kur sıradaki adım.
+Mağaza: `equsto-pricing-core.js` + `eq-kur-live.js` + `eq-fiyatlar-bridge.js` — satış EUR (`liste × (1 − bayi_iskonto)`) × TCMB kuru → TL + KDV. Dept JSON: `liste_fiyati_eur`, `satis_fiyati_eur`, `iskonto_oran`, yedek `price` (€ etiket).
 
 ## Set üstü vitrin (sol liste)
 

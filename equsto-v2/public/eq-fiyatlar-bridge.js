@@ -1,6 +1,5 @@
 /**
- * Admin fiyat listesi → vitrin (tip_kodu → TL).
- * Önce /api/fiyatlar; yoksa /data/fiyatlar.json (statik canlı).
+ * Admin fiyat listesi (tip_kodu → TL) + Öztiryakiler EUR (liste × (1 − bayi iskonto) × kur).
  */
 ;(function (global) {
   'use strict';
@@ -53,6 +52,52 @@
     }
   }
 
+  function isOztiRaw(raw) {
+    if (!raw) return false;
+    var k = String(raw.fiyat_kaynagi || raw.kaynak || raw.kaynak_fiyat_listesi || '');
+    if (/^ozti|ozti-fiyat/i.test(k)) return true;
+    if (/öztiryaki|oztiryaki/i.test(String(raw.brand || ''))) return true;
+    return false;
+  }
+
+  function oztiHasEurPrice(raw) {
+    return (
+      Number(raw.satis_fiyati_eur || raw.satis_eur_indirimli || raw.alis_fiyati_eur) > 0 ||
+      (Number(raw.liste_fiyati_eur) > 0 &&
+        raw.bayi_iskonto > 0 &&
+        raw.bayi_iskonto < 1)
+    );
+  }
+
+  function lookupOztiTl(raw) {
+    if (!raw || !isOztiRaw(raw) || !oztiHasEurPrice(raw)) return null;
+    if (!global.EqustoKurLive || typeof global.EqustoKurLive.computeRowPrices !== 'function') {
+      return null;
+    }
+    var rate = global.EqustoKurLive.getRate && global.EqustoKurLive.getRate();
+    if (!(rate > 0)) return null;
+    var px = global.EqustoKurLive.computeRowPrices(raw, rate);
+    if (px && px.fiyat_tl > 0) return px.fiyat_tl;
+    return null;
+  }
+
+  function oztiPriceLine(raw) {
+    if (!raw || !isOztiRaw(raw)) return '';
+    if (global.EqustoKurLive && typeof global.EqustoKurLive.priceForRow === 'function') {
+      var live = global.EqustoKurLive.priceForRow(raw);
+      if (live) return live;
+    }
+    var satis = Number(raw.satis_fiyati_eur || raw.satis_eur_indirimli || raw.alis_fiyati_eur);
+    if (satis > 0) {
+      return (
+        '€' +
+        satis.toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) +
+        ' + KDV'
+      );
+    }
+    return String(raw.price || '').split('\n')[0];
+  }
+
   function getMap() {
     return global.EQ_FIYATLAR && typeof global.EQ_FIYATLAR === 'object' ? global.EQ_FIYATLAR : {};
   }
@@ -65,7 +110,7 @@
     if (tip) keys.push(String(tip).trim());
     var cat = row.c || raw.category || raw.kategori;
     if (cat) keys.push(String(cat).trim());
-    var sku = raw.sku;
+    var sku = raw.sku || raw.urun_kodu || raw.stok_no;
     if (sku) keys.push(String(sku).trim());
     return keys;
   }
@@ -84,22 +129,39 @@
 
   function applyToRow(row) {
     if (!row) return row;
+    var raw = row.raw || row;
     var v = lookupPrice(row);
-    if (v == null) return row;
-    row.p = formatTl(v);
-    if (row.raw) {
-      row.raw.price = row.p;
-      row.raw.fiyat_tl = v;
+    if (v == null) v = lookupOztiTl(raw);
+    if (v != null) {
+      row.p = formatTl(v);
+      if (row.raw) {
+        row.raw.price = row.p;
+        row.raw.fiyat_tl = v;
+      }
+      return row;
+    }
+    var ozLine = oztiPriceLine(raw);
+    if (ozLine) {
+      row.p = ozLine.replace(/\s*\+?\s*KDV.*$/i, '').trim() || ozLine;
+      if (row.raw) row.raw.price = ozLine;
     }
     return row;
   }
 
   function applyToRaw(item) {
     if (!item) return item;
+    if (global.EqustoKurLive && typeof global.EqustoKurLive.applyRowPrices === 'function') {
+      item = global.EqustoKurLive.applyRowPrices(item) || item;
+    }
     var v = lookupPrice({ raw: item });
-    if (v == null) return item;
-    item.price = formatTl(v) + ' TL';
-    item.fiyat_tl = v;
+    if (v == null) v = lookupOztiTl(item);
+    if (v != null) {
+      item.price = formatTl(v) + ' TL';
+      item.fiyat_tl = v;
+      return item;
+    }
+    var line = oztiPriceLine(item);
+    if (line) item.price = line;
     return item;
   }
 
@@ -131,8 +193,19 @@
     return getMap();
   }
 
+  function fetchKurIfNeeded() {
+    if (global.EqustoKurLive && typeof global.EqustoKurLive.fetchKur === 'function') {
+      return global.EqustoKurLive.fetchKur(true).catch(function () {});
+    }
+    return Promise.resolve();
+  }
+
   function load() {
-    if (cache) return Promise.resolve(cache);
+    if (cache) {
+      return fetchKurIfNeeded().then(function () {
+        return cache;
+      });
+    }
     if (inflight) return inflight;
     inflight = fetchJson(apiBase() + '/fiyatlar')
       .then(function (j) {
@@ -147,10 +220,25 @@
         return {};
       })
       .then(function (map) {
+        return fetchKurIfNeeded().then(function () {
+          return map;
+        });
+      })
+      .then(function (map) {
         inflight = null;
         return map;
       });
     return inflight;
+  }
+
+  if (typeof document !== 'undefined') {
+    document.addEventListener('equsto:kur-updated', function () {
+      try {
+        if (typeof global.__eqDeptPlpRefreshPrices === 'function') {
+          global.__eqDeptPlpRefreshPrices();
+        }
+      } catch (_) {}
+    });
   }
 
   global.EqFiyatlarBridge = {
@@ -159,6 +247,7 @@
     applyToRow: applyToRow,
     applyToRaw: applyToRaw,
     lookupPrice: lookupPrice,
+    lookupOztiTl: lookupOztiTl,
     getMap: getMap,
   };
   global.EqustoFiyatlar = global.EqFiyatlarBridge;
