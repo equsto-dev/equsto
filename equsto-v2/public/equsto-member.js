@@ -18,7 +18,8 @@
 
   function equstoIsMemberLoggedIn() {
     var o = readMember();
-    if (!o || o.active !== true || !o.token) return false;
+    /* Header / teslimat bandı ile aynı: active oturum yeterli (token API için ayrı) */
+    if (!o || o.active !== true) return false;
     if (o.expiresAt && Number(o.expiresAt) < Date.now()) return false;
     return true;
   }

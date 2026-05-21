@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
@@ -23,8 +23,8 @@
 <script src="eq-dept-tips.js?v=20260528b"></script>
 <script src="admin-config.js"></script>
 <script src="admin-gate.js"></script>
-<script src="equsto-member.js?v=20260518s" defer></script>
-<script src="contact.js?v=20260518s" defer></script>
+<script src="equsto-member.js?v=20260522wa" defer></script>
+<script src="contact.js?v=20260522wa" defer></script>
 <script src="ecom-data.js"></script>
 <script>
 (function () {
@@ -618,9 +618,9 @@ body.admin-locked .adm-footer{visibility:hidden;pointer-events:none;height:0;ove
 }
 </style>
   <link rel="stylesheet" href="theme.css?v=20260518s">
-<link rel="stylesheet" href="contact.css?v=20260518s">
+<link rel="stylesheet" href="contact.css?v=20260522wa">
 <link rel="stylesheet" href="/theme.css?v=20260521search">
-<link rel="stylesheet" href="/contact.css?v=20260521search">
+<link rel="stylesheet" href="/contact.css?v=20260522wa">
 </head>
 <body class="admin-app">
 
@@ -1130,7 +1130,7 @@ body.admin-locked .adm-footer{visibility:hidden;pointer-events:none;height:0;ove
       <div class="catalog-strip">
         <span style="color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.06em">Katalog</span>
         <span id="catalog-strip-count" class="catalog-strip-mono">—</span>
-        <span style="color:var(--muted);font-size:12px">ürün · <span style="font-family:var(--mono);font-size:11px">API / atalay-doner-ocak.json</span></span>
+        <span style="color:var(--muted);font-size:12px">ürün · <span style="font-family:var(--mono);font-size:11px">ekipmanlar.json</span></span>
         <button type="button" class="btn btn-ghost btn-sm" id="btn-catalog-refresh" onclick="refreshCatalogProducts()">↻ Yenile</button>
       </div>
       <div id="catalog-load-banner" class="catalog-banner-warn" style="display:none" role="status"></div>
@@ -2019,12 +2019,10 @@ let CLAUDE_API_BASE = defaultClaudeApiBase().toString().replace(/\/$/, '');
 
 async function detectProductsApiOnline() {
   // Backend cevap vermezse offline JSON fallback'i kullanılır.
-  _authToken = resolveAdminBearer();
   if (!PRODUCTS_API_BASE) return false;
-  if (!_authToken) return false;
   try {
     const ac = new AbortController();
-    const t = setTimeout(() => { try { ac.abort(); } catch(_e){} }, 5000);
+    const t = setTimeout(() => { try { ac.abort(); } catch(_e){} }, 900);
     const r = await fetch(PRODUCTS_API_BASE + '/urunler', {
       method: 'GET',
       headers: { Accept: 'application/json', 'Authorization': 'Bearer ' + _authToken },
@@ -2544,38 +2542,6 @@ async function loadCatalogProductsFromApi(){
   remapProductAdminCats();
 }
 
-/** Atalay döner ocakları — public/data/atalay-doner-ocak.json (API yokken) */
-async function loadCatalogProductsFromDonerJson(){
-  if (window.EqCatOverrides) await window.EqCatOverrides.load();
-  const r = await fetch('./data/atalay-doner-ocak.json', { cache: 'no-store', headers: { Accept: 'application/json' } });
-  if (!r.ok) throw new Error('atalay-doner-ocak.json HTTP ' + r.status);
-  const j = await r.json();
-  const rows = j && Array.isArray(j.products) ? j.products : [];
-  if (!rows.length) throw new Error('atalay-doner-ocak.json boş');
-  products = rows.map(function (p) {
-    return apiToProduct({
-      id: 'atalay_' + (p.slug || p.modelCode),
-      ad: p.name,
-      tip_kodu: p.modelCode,
-      kategori: 'doner-ocak',
-      marka_id: 'atalay',
-      marka_ad: 'Atalay',
-      model: p.modelCode,
-      sku: p.modelCode,
-      stok: 0,
-      fiyat_tl: p.priceTl,
-      el_guc: p.el_guc || null,
-      gaz_guc: p.gaz_guc || null,
-      aciklama: p.name,
-      gorsel_url: '/images/catalog/atalay/doner/_placeholder.svg',
-      durum: 'aktif',
-      proje_fab_aktif: true,
-    });
-  });
-  syncAdminProductsGlobal();
-  remapProductAdminCats();
-}
-
 async function loadCatalogProductsFromJson(){
   if (window.EqCatOverrides) await window.EqCatOverrides.load();
   function toRows(raw){
@@ -2594,21 +2560,9 @@ async function loadCatalogProductsFromJson(){
     } else if (window.EqustoEcomData && typeof window.EqustoEcomData.loadEkipmanlar === 'function') {
       raw = await window.EqustoEcomData.loadEkipmanlar();
     } else {
-      let r = await fetch('./data/atalay-doner-ocak.json', { cache: 'no-store', headers: { Accept: 'application/json' } });
-      if (!r.ok) throw new Error('atalay-doner-ocak.json HTTP ' + r.status);
-      const j = await r.json();
-      raw = j && Array.isArray(j.products) ? j.products : [];
-      return raw.map(function (p) {
-        return {
-          name: p.name,
-          brand: 'Atalay',
-          category: 'doner-ocak',
-          price: p.priceTl,
-          specs: (p.el_guc ? 'El: ' + p.el_guc + ' ' : '') + (p.gaz_guc || ''),
-          images: [],
-          _atalayModel: p.modelCode,
-        };
-      });
+      let r = await fetch('./data/ekipmanlar.json', { cache: 'no-store', headers: { Accept: 'application/json' } });
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      raw = await r.json();
     }
     return raw;
   }
@@ -2633,22 +2587,14 @@ async function refreshCatalogProducts(){
   const btn=document.getElementById('btn-catalog-refresh');
   if(btn)btn.disabled=true;
   setCatalogLoadBanner('');
-  _authToken = resolveAdminBearer();
   try{
-    const online = await detectProductsApiOnline();
-    __ADMIN_ONLINE = !!online;
-    if (online) {
-      await loadCatalogProductsFromApi();
-      setCatalogLoadBanner('API: ' + products.length + ' ürün (Supabase)');
-    } else {
-      await loadCatalogProductsFromDonerJson();
-      setCatalogLoadBanner('JSON: ' + products.length + ' ürün (atalay-doner-ocak.json)');
-    }
+    await loadCatalogProductsFromJson();
+    setCatalogLoadBanner(products.length?'':'Katalog dosyası boş döndü. public/data/ekipmanlar.json içeriğini kontrol edin.');
   }catch(e){
     console.warn('Katalog yenileme:',e);
     products=[];
     syncAdminProductsGlobal();
-    setCatalogLoadBanner('Katalog yüklenemedi: '+(e&&e.message?e.message:String(e)));
+    setCatalogLoadBanner('Katalog yüklenemedi: '+(e&&e.message?e.message:String(e))+' — Sayfayı http:// ile açın veya Katalogu-Ac.bat kullanın.');
   }
   try{updateStats();}catch(_){}
   try{renderProductsSummary();}catch(_){}
@@ -2667,7 +2613,6 @@ async function load(){
     eqSets=d.eqSets||[];markalar=d.markalar||[];fiyatlar=d.fiyatlar||{};
   }catch(e){}
 
-  _authToken = resolveAdminBearer();
   let online = false;
   try {
     online = await detectProductsApiOnline();
@@ -2678,31 +2623,37 @@ async function load(){
   if (online) showAPIStatus('online');
 
   try {
-    if (online) {
-      await loadCatalogProductsFromApi();
-      setCatalogLoadBanner('');
-    } else {
-      await loadCatalogProductsFromDonerJson();
-      setCatalogLoadBanner('API kapalı — katalog: atalay-doner-ocak.json (' + products.length + ' ürün)');
-    }
+    await loadCatalogProductsFromJson();
+    setCatalogLoadBanner(products.length ? '' : 'Katalog dosyası boş. ekipmanlar.json veya ağ yanıtını kontrol edin.');
   } catch (e) {
-    console.warn('Katalog yükleme:', e);
+    console.warn('Katalog (ekipmanlar.json) yüklenemedi:', e);
     products = [];
     syncAdminProductsGlobal();
-    if (online) {
-      try {
-        await loadCatalogProductsFromDonerJson();
-        setCatalogLoadBanner('API hatası — yedek JSON yüklendi (' + products.length + ' ürün)');
-      } catch (e2) {
+    try {
+      if (window.EqustoEcomData && typeof window.EqustoEcomData.clear === 'function') window.EqustoEcomData.clear();
+      await loadCatalogProductsFromJson();
+      setCatalogLoadBanner(products.length ? '' : 'Katalog dosyası boş.');
+    } catch (e2) {
+      console.warn('Katalog ikinci deneme:', e2);
+      if (online) {
+        try {
+          await loadCatalogProductsFromApi();
+          setCatalogLoadBanner('');
+        } catch (e3) {
+          console.warn('Katalog API denemesi:', e3);
+          setCatalogLoadBanner(
+            'Katalog yüklenemedi (dosya + API). ' +
+              (e3 && e3.message ? e3.message : String(e3)) +
+              ' — http://127.0.0.1:5173/admin.html ile açın veya npm run api çalıştırın.'
+          );
+        }
+      } else {
         setCatalogLoadBanner(
-          'Katalog yüklenemedi: ' + (e2 && e2.message ? e2.message : String(e2))
+          'Katalog yüklenemedi: ' +
+            (e2 && e2.message ? e2.message : String(e2)) +
+            ' — Yerel sunucu (http://) ile açın; API için npm run api.'
         );
       }
-    } else {
-      setCatalogLoadBanner(
-        'Katalog yüklenemedi: ' + (e && e.message ? e.message : String(e)) +
-          ' — admin-config.js ve EQUSTO_ADMIN_BEARER kontrol edin.'
-      );
     }
     if (!products.length) showAPIStatus('offline', { productsCount: products.length });
   }
