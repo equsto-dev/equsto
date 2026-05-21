@@ -1,0 +1,5967 @@
+/* Equsto theme: light + antrasit (anthracite) dark — use with html[data-theme="dark"] */
+
+:root {
+  color-scheme: light;
+  --eq-font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --eq-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --eq-bg-page: #ffffff;
+  --eq-surface: #ffffff;
+  --eq-surface-2: #f5f5f5;
+  --eq-surface-3: #f9f9f9;
+  --eq-hover: #eeeeee;
+  --eq-border: #e5e5e5;
+  --eq-border-soft: #f0f0f0;
+  --eq-text: #000000;
+  --eq-text-secondary: #444444;
+  --eq-text-muted: #888888;
+  --eq-text-subtle: #aaaaaa;
+  --eq-drawer-head-text: #1a1a16;
+  --eq-accent-gold: #9a6f2a;
+  --eq-hero-title: #1a1a16;
+  --eq-logo-rule: #000000;
+  --eq-overlay: rgba(0, 0, 0, 0.4);
+  --eq-card-hover-border: #bbbbbb;
+  --eq-shadow-drawer: 4px 0 16px rgba(0, 0, 0, 0.15);
+  --eq-topnav-active-bg: #f5f5f5;
+  --eq-load-btn-bg: #ffffff;
+  /* PLP kartları — Amazon benzeri hafif derinlik (gölge / hover) */
+  --eq-plp-card-shadow: 0 1px 3px rgba(15, 17, 17, 0.06);
+  --eq-plp-card-shadow-hover: 0 4px 12px rgba(15, 17, 17, 0.1);
+  /* Departman şeridi — açık antrasit (üst lacivert banttan ayrı) */
+  --eq-topnav-dept-bg: #131f3f;
+  --eq-topnav-dept-strip-bg: #727b84;
+  --eq-topnav-dept-hover: rgba(255, 255, 255, 0.12);
+  --eq-topnav-dept-text: #ffffff;
+  --eq-topnav-dept-sep: rgba(255, 255, 255, 0.42);
+  --eq-topnav-dept-border: rgba(255, 255, 255, 0.15);
+  --eq-topnav-dept-active-line: #febd69;
+  /* Üçlü vitrin (PFOS / Yer Sofrası / Besos): ana sayfa ≠ kategori — yalnızca bu değişkenleri düzenleyin */
+  --eq-home-hero-card-h: 380px;
+  --eq-home-hero-card-h-1024: 320px;
+  --eq-home-hero-card-h-768: 260px;
+  --eq-home-hero-card-h-520: 220px;
+  --eq-cat-hero-card-h: calc(var(--eq-home-hero-card-h) * 0.375);
+  --eq-cat-hero-card-h-1024: calc(var(--eq-home-hero-card-h-1024) * 0.375);
+  --eq-cat-hero-card-h-768: calc(var(--eq-home-hero-card-h-768) * 0.375);
+  --eq-cat-hero-card-h-520: calc(var(--eq-home-hero-card-h-520) * 0.375);
+  --eq-hdr-bar-bg: #001e50;
+  --eq-hdr-bar-border: rgba(255, 255, 255, 0.22);
+  --eq-hdr-bar-text: #ffffff;
+  --eq-hdr-bar-muted: rgba(255, 255, 255, 0.76);
+  --eq-hdr-bar-subtle: rgba(255, 255, 255, 0.58);
+  --eq-hdr-srch-bg: #ffffff;
+  --eq-hdr-srch-muted: #5c5c5c;
+  --eq-hdr-srch-text: #1a1a1a;
+  /* Üst arama barı + departman şeridi — çekmece ve filtre sütunu bu çizgiden başlar */
+  --eq-filter-col-sticky-top: 92px;
+  --eq-filter-col-sticky-max-h: calc(100vh - 96px);
+  --eq-drawer-chrome-top: var(--eq-filter-col-sticky-top);
+  /* Nötr koyu zemin (yeşilimsi #eaeded / #131921 yerine) */
+  --eq-bg-neutral: #1a1a1a;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+html, body {
+  font-family: var(--eq-font-sans) !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --eq-bg-page: #1a1a1a;
+  --eq-surface: #1a1a1a;
+  --eq-surface-2: #1f1f1f;
+  --eq-surface-3: #242424;
+  --eq-hover: #222222;
+  --eq-border: #2e2e2e;
+  --eq-border-soft: #252525;
+  --eq-text: #e8e8ea;
+  --eq-text-secondary: #b8bcc2;
+  --eq-text-muted: #9ca3af;
+  --eq-text-subtle: #8b9199;
+  --eq-drawer-head-text: #ececee;
+  --eq-accent-gold: #c4a060;
+  --eq-hero-title: #ececee;
+  --eq-logo-rule: #d0d2d5;
+  --eq-overlay: rgba(0, 0, 0, 0.62);
+  --eq-card-hover-border: #404040;
+  --eq-shadow-drawer: 4px 0 24px rgba(0, 0, 0, 0.5);
+  --eq-topnav-active-bg: #242424;
+  --eq-load-btn-bg: #242424;
+  --eq-plp-card-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+  --eq-plp-card-shadow-hover: 0 6px 18px rgba(0, 0, 0, 0.5);
+  --eq-topnav-dept-bg: #131f3f;
+  --eq-topnav-dept-strip-bg: #6a7379;
+  --eq-topnav-dept-hover: rgba(255, 255, 255, 0.12);
+  --eq-topnav-dept-text: #ffffff;
+  --eq-topnav-dept-sep: rgba(255, 255, 255, 0.42);
+  --eq-topnav-dept-border: rgba(255, 255, 255, 0.14);
+  --eq-topnav-dept-active-line: #febd69;
+  /* Üçlü vitrin: ana sayfa ≠ kategori (ayrı yükseklik; light ile aynı px) */
+  --eq-home-hero-card-h: 380px;
+  --eq-home-hero-card-h-1024: 320px;
+  --eq-home-hero-card-h-768: 260px;
+  --eq-home-hero-card-h-520: 220px;
+  --eq-cat-hero-card-h: calc(var(--eq-home-hero-card-h) * 0.375);
+  --eq-cat-hero-card-h-1024: calc(var(--eq-home-hero-card-h-1024) * 0.375);
+  --eq-cat-hero-card-h-768: calc(var(--eq-home-hero-card-h-768) * 0.375);
+  --eq-cat-hero-card-h-520: calc(var(--eq-home-hero-card-h-520) * 0.375);
+  --eq-hdr-bar-bg: #001e50;
+  --eq-hdr-bar-border: rgba(255, 255, 255, 0.22);
+  --eq-hdr-bar-text: #ffffff;
+  --eq-hdr-bar-muted: rgba(255, 255, 255, 0.76);
+  --eq-hdr-bar-subtle: rgba(255, 255, 255, 0.58);
+  --eq-hdr-srch-bg: #ffffff;
+  --eq-hdr-srch-muted: #5c5c5c;
+  --eq-hdr-srch-text: #1a1a1a;
+  --eq-filter-col-sticky-top: 88px;
+  --eq-filter-col-sticky-max-h: calc(100vh - 92px);
+  --eq-drawer-chrome-top: var(--eq-filter-col-sticky-top);
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 10px;
+  margin: -6px 0;
+  border: 1px solid var(--eq-border);
+  border-radius: 8px;
+  background: var(--eq-surface-2);
+  color: var(--eq-text);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.theme-toggle:hover {
+  background: var(--eq-surface-3);
+}
+
+.theme-legend {
+  font-size: 9px;
+  color: var(--eq-text-muted);
+  max-width: 56px;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.cat-drawer-head span {
+  color: var(--eq-drawer-head-text);
+}
+
+/*
+ * Sidebar + sağa açılan alt dallar (.sb-sublist), ürün grid’inin ÜSTÜNDE olmalı.
+ * (Önceden z-index:1 — kartlar / sağ sütun ile çakışınca flyout görünmez kalıyordu.)
+ * Üst şerit: hdr 500 / topnav 499 — sidebar 50..120 aralığında kalmalı.
+ */
+nav.sidebar,
+#eq-sidebar {
+  overflow: visible !important;
+  position: relative;
+  z-index: 55 !important;
+  isolation: isolate;
+  /* Üst şeritlerle çakışmayı ve “yapışık” görünümü azalt */
+  box-sizing: border-box;
+  padding: 10px 8px 12px 20px;
+}
+
+/* Sağ içerik bilinçli olarak altta kalsın (flex kardeş sıralaması + stacking) */
+.body > .right-col {
+  position: relative;
+  z-index: 0;
+}
+
+/* Yapışkan üst bant: Electrolux Pro mavisi (#001e50), arama beyaz ada */
+header.hdr {
+  z-index: 500 !important;
+  background: var(--eq-hdr-bar-bg) !important;
+  border-bottom: 1px solid var(--eq-hdr-bar-border) !important;
+  color: var(--eq-hdr-bar-text);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Logo: sol üst köşe (pg-inner dışında, ilk çocuk) */
+header.hdr > a.logo,
+header.hdr > a.logo.logo--text {
+  flex: 0 0 auto;
+  align-self: center;
+  padding: 10px 14px 10px 20px;
+  margin: 0;
+  color: var(--eq-hdr-bar-text) !important;
+  overflow: visible;
+  min-width: 0;
+}
+
+header.hdr > .pg-inner {
+  flex: 1 1 280px;
+  min-width: 0;
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+  width: auto !important;
+  max-width: none;
+  margin: 0 !important;
+  padding: 10px 20px 10px 0 !important;
+  box-sizing: border-box;
+}
+
+header.hdr a.logo.logo--text span {
+  border-bottom-color: rgba(255, 255, 255, 0.92) !important;
+}
+
+header.hdr .hdr-alici,
+header.hdr .hdr-loc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+  flex: 0 0 auto;
+  padding: 4px 14px 4px 2px;
+  margin: 0 6px 0 0;
+  border: none;
+  border-right: 1px solid var(--eq-hdr-bar-border) !important;
+  background: transparent;
+  font: inherit;
+  text-align: left;
+  color: var(--eq-hdr-bar-text);
+  cursor: pointer;
+  white-space: normal;
+  border-radius: 2px;
+  -webkit-tap-highlight-color: transparent;
+  line-height: 1.28;
+  min-width: 0;
+}
+
+header.hdr .hdr-loc:has(.hdr-loc-pin) {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+header.hdr .hdr-loc:hover,
+header.hdr .hdr-alici:hover {
+  outline: 1px solid rgba(255, 255, 255, 0.28);
+  outline-offset: 1px;
+}
+
+header.hdr .hdr-loc-pin {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+  color: var(--eq-hdr-bar-text);
+  opacity: 0.95;
+}
+
+header.hdr .hdr-loc-pin svg {
+  display: block;
+}
+
+header.hdr .hdr-loc-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  line-height: 1.28;
+  min-width: 0;
+}
+
+header.hdr .hdr-alici > div:first-of-type,
+header.hdr .st-label,
+header.hdr .hdr-loc .st-label {
+  color: var(--eq-hdr-bar-muted) !important;
+  font-size: 11px !important;
+  font-weight: 400 !important;
+  line-height: 1.3;
+}
+
+header.hdr .hdr-alici > div:nth-of-type(2),
+header.hdr .st-val,
+header.hdr .hdr-loc .st-val {
+  color: var(--eq-hdr-bar-text) !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  line-height: 1.25;
+}
+
+body.eq-shop header.hdr .hdr-alici > div[style],
+body.eq-shop header.hdr .hdr-loc > .hdr-loc-text > [style] {
+  font-size: inherit !important;
+  color: inherit !important;
+  font-weight: inherit !important;
+}
+
+header.hdr .srch {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: stretch !important;
+  flex: 1 1 auto;
+  min-width: 0;
+  width: 50%;
+  max-width: 50%;
+  gap: 0;
+  overflow: hidden;
+  background: var(--eq-hdr-srch-bg) !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+header.hdr .srch-cat {
+  display: flex !important;
+  align-items: center !important;
+  flex: 0 0 auto;
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+  user-select: none;
+  cursor: pointer;
+  background: #ececec !important;
+  color: var(--eq-hdr-srch-text) !important;
+  border-right: 1px solid #c8c8c8 !important;
+}
+
+header.hdr .srch-cat:hover {
+  background: #e2e2e2 !important;
+  color: var(--eq-hdr-srch-text) !important;
+}
+
+header.hdr .srch-input,
+header.hdr input.srch-input {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  width: auto !important;
+  font-size: 12px;
+  padding: 5px 10px;
+  border: none !important;
+  outline: none;
+  color: var(--eq-hdr-srch-text) !important;
+  background: transparent !important;
+  pointer-events: auto !important;
+  touch-action: manipulation;
+  -webkit-user-select: text;
+  user-select: text;
+  cursor: text;
+}
+
+header.hdr .srch,
+header.hdr .srch-btn,
+header.hdr button.srch-btn {
+  pointer-events: auto !important;
+}
+
+header.hdr input.srch-input::placeholder {
+  color: var(--eq-hdr-srch-muted) !important;
+  opacity: 1;
+}
+
+header.hdr div.srch-input {
+  color: var(--eq-hdr-srch-muted) !important;
+}
+
+header.hdr .srch-btn {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  min-width: 2.5rem;
+  box-sizing: border-box;
+  background: #f0f0f0 !important;
+  color: var(--eq-hdr-srch-text) !important;
+  border-left: 1px solid #c8c8c8 !important;
+}
+
+header.hdr button.srch-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex: 0 0 auto !important;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 500;
+  margin: 0;
+  padding: 5px 10px;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-left: 1px solid #c8c8c8 !important;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+header.hdr .srch-btn:hover {
+  background: #e6e6e6 !important;
+}
+
+header.hdr .eq-srch-ico {
+  display: block;
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+}
+
+header.hdr .hdr-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 0 0 auto;
+  margin-left: auto;
+  font-size: 12px;
+  white-space: nowrap;
+  color: var(--eq-hdr-bar-text);
+}
+
+header.hdr .hdr-right > div:not(.theme-wrap) span:first-of-type,
+header.hdr .hdr-right a.eq-hdr-account > span:first-of-type,
+header.hdr #equsto-hdr-cart > span:first-of-type,
+header.hdr #equsto-cart-count {
+  color: var(--eq-hdr-bar-muted) !important;
+}
+
+header.hdr .hdr-right > div:not(.theme-wrap) span:nth-of-type(2),
+header.hdr .hdr-right a.eq-hdr-account .eq-hdr-account-title,
+header.hdr #equsto-hdr-cart > span:nth-of-type(2) {
+  color: var(--eq-hdr-bar-text) !important;
+}
+
+header.hdr a.eq-hdr-account {
+  color: var(--eq-hdr-bar-text) !important;
+}
+
+header.hdr .theme-toggle {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+  color: var(--eq-hdr-bar-text) !important;
+}
+
+header.hdr .theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.22) !important;
+}
+
+header.hdr .theme-legend {
+  color: var(--eq-hdr-bar-subtle) !important;
+}
+
+header.hdr .eq-hdr-orders,
+header.hdr .equsto-hdr-cart {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+}
+
+header.hdr .eq-hdr-orders span:last-child {
+  cursor: pointer;
+}
+
+header.hdr .equsto-hdr-cart {
+  cursor: pointer;
+}
+
+header.hdr .eq-lang-switch {
+  border-right-color: var(--eq-hdr-bar-border) !important;
+}
+
+header.hdr .eq-lang-switch a.eq-lang-opt {
+  color: var(--eq-hdr-bar-muted) !important;
+}
+
+header.hdr .eq-lang-switch a.eq-lang-opt:hover {
+  color: var(--eq-hdr-bar-text) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+header.hdr .eq-lang-switch a.eq-lang-opt.is-active {
+  color: var(--eq-accent-gold, #c8a44a) !important;
+}
+
+header.hdr .eq-lang-switch .eq-lang-sep {
+  color: var(--eq-hdr-bar-subtle) !important;
+}
+
+/* Orta fare + sürükle: eq-middle-drag-scroll.js */
+body.eq-mid-drag {
+  cursor: grabbing !important;
+  user-select: none !important;
+}
+body.eq-mid-drag * {
+  cursor: grabbing !important;
+}
+.eq-mid-drag-target {
+  cursor: grabbing !important;
+}
+
+nav.topnav,
+.topnav {
+  z-index: 499 !important;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  background: var(--eq-topnav-dept-strip-bg, var(--eq-topnav-dept-bg));
+  border-bottom: 1px solid var(--eq-topnav-dept-border);
+  position: sticky;
+  top: var(--eq-topnav-sticky-top, var(--eq-hdr-sticky-h, 0px));
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+nav.topnav::-webkit-scrollbar,
+.topnav::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.topnav > .pg-inner.topnav-inner,
+.topnav > .pg-inner {
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start !important;
+  gap: 0;
+  row-gap: 0;
+  width: 100%;
+  min-height: 40px;
+  padding: 0 14px !important;
+  box-sizing: border-box;
+}
+
+.topnav-item {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 10px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--eq-topnav-dept-text) !important;
+  background: transparent !important;
+  border: none;
+  border-right: none !important;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.topnav-item:hover {
+  background: var(--eq-topnav-dept-hover) !important;
+  color: var(--eq-topnav-dept-text) !important;
+}
+
+.topnav-item.active {
+  font-weight: 700;
+  box-shadow: inset 0 -2px 0 0 var(--eq-topnav-dept-active-line);
+  background: transparent !important;
+}
+
+/* Bar Design (Besos) · Proje Fabrikası (PFOS) — iki yüz kaydırma; şerit hover’u bu hücrelerde yok */
+.topnav-item.topnav-besos,
+.topnav-item.topnav-pfos {
+  position: relative;
+  border-radius: 0;
+  box-shadow: none !important;
+  transition: color 0.4s ease;
+}
+.topnav-item.topnav-besos:hover,
+.topnav-item.topnav-pfos:hover {
+  background: transparent !important;
+}
+.topnav-besos__in,
+.topnav-pfos__in {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  min-width: 11ch;
+  min-height: 1.28em;
+  padding: 0 2px;
+}
+.topnav-pfos__in {
+  min-width: 0;
+  width: max-content;
+  max-width: 100%;
+}
+/* Hareketli PFOS/Besos: alt çizgi düz menü öğeleriyle aynı (overflow yüzünde .topnav-item'da kaybolur) */
+.topnav-item.topnav-pfos .topnav-pfos__face--plain,
+.topnav-item.topnav-besos .topnav-besos__face--plain {
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+  text-decoration-thickness: 1px;
+}
+.topnav-item.topnav-pfos:hover .topnav-pfos__face--plain {
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+  text-decoration-thickness: 1px;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .topnav-item.topnav-pfos .topnav-pfos__face--plain,
+body.eq-shop:not(.admin-app):not(.bd-page) .topnav-item.topnav-besos .topnav-besos__face--plain {
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+  text-decoration-thickness: 1px;
+  text-decoration-color: currentColor;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .topnav-item:not(.topnav-pfos):not(.topnav-besos):not(.topnav-all) {
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+  text-decoration-thickness: 1px;
+  text-decoration-color: currentColor;
+}
+.topnav-item.topnav-pfos:hover {
+  position: relative;
+  z-index: 6;
+}
+.topnav-item.topnav-pfos:hover .topnav-pfos__in {
+  overflow: visible;
+}
+.topnav-besos__face {
+  display: block;
+  white-space: nowrap;
+  will-change: transform;
+}
+.topnav-pfos__face {
+  display: inline-block;
+  width: max-content;
+  max-width: 100%;
+  white-space: nowrap;
+  will-change: transform;
+}
+/* Bar Design hover: Dark SIDE — göz kırpma (3–4 hızlı gidip gelme) */
+@keyframes besosDarkBlink {
+  0% { opacity: 0; }
+  5% { opacity: 1; }
+  10% { opacity: 0; }
+  15% { opacity: 1; }
+  20% { opacity: 0; }
+  25% { opacity: 1; }
+  30% { opacity: 0; }
+  35% { opacity: 1; }
+  42% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 1; }
+}
+.topnav-besos__face--plain {
+  position: relative;
+  z-index: 1;
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+  transition: opacity 0.1s ease;
+}
+.topnav-pfos__face--plain {
+  position: relative;
+  z-index: 1;
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+.topnav-besos__face--dark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  text-transform: none;
+  color: inherit;
+  -webkit-text-fill-color: currentColor;
+  background: none;
+  pointer-events: none;
+  transform: translate3d(0, 0, 0);
+  opacity: 0;
+  filter: none;
+  text-shadow: none;
+  transition: none;
+}
+.topnav-item.topnav-besos:hover .topnav-besos__face--plain {
+  opacity: 0;
+  transition: opacity 0.08s ease;
+}
+.topnav-item.topnav-besos:hover .topnav-besos__face--dark {
+  animation: besosDarkBlink 0.92s cubic-bezier(0.4, 0, 0.6, 1) 1 forwards;
+}
+.topnav-item.topnav-besos:not(:hover) .topnav-besos__face--dark {
+  animation: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .topnav-item.topnav-besos:hover .topnav-besos__face--plain {
+    opacity: 0;
+  }
+  .topnav-item.topnav-besos:hover .topnav-besos__face--dark {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* KİLİT: pfos-topnav-anim — yerinde 3 tur, 2.96s; değiştirmek için açık talimat */
+/* Proje Fabrikası — hover: harfler yerinde döner (plain ↔ dark) */
+.topnav-pfos__face--dark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  text-transform: none;
+  color: inherit;
+  -webkit-text-fill-color: currentColor;
+  background: none;
+  pointer-events: none;
+  transform: none;
+  opacity: 1;
+  filter: none;
+  text-shadow: none;
+}
+.topnav-pfos__chars {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+@keyframes pfosChSpread {
+  0%, 100% { margin-inline: 0; }
+  42% { margin-inline: 0.07em; }
+}
+.topnav-item.topnav-pfos:hover .topnav-pfos__ch,
+.topnav-pfos__ch.topnav-pfos__ch--spread {
+  animation: pfosChSpread 2.96s cubic-bezier(0.22, 1.05, 0.36, 1) 1 both;
+}
+.topnav-pfos__ch {
+  display: inline-block;
+  opacity: 1;
+  transform: rotate(0deg);
+  transform-origin: 50% 50%;
+  margin-inline: 0;
+  transition:
+    transform 2.96s cubic-bezier(0.22, 1.05, 0.36, 1),
+    opacity 1.8s ease,
+    margin-inline 1.13s ease;
+  transition-delay: 0s;
+}
+.topnav-pfos__ch--sp {
+  width: 0.22em;
+}
+@keyframes pfosChSpSpread {
+  0%, 100% { width: 0.22em; margin-inline: 0; }
+  42% { width: 0.42em; margin-inline: 0.05em; }
+}
+.topnav-item.topnav-pfos:hover .topnav-pfos__ch--sp,
+.topnav-pfos__ch--sp.topnav-pfos__ch--spread {
+  animation: pfosChSpSpread 2.96s cubic-bezier(0.22, 1.05, 0.36, 1) 1 both;
+}
+.topnav-pfos__face--dark .topnav-pfos__ch {
+  opacity: 0;
+  transform: rotate(var(--r0, -1080deg));
+}
+.topnav-item.topnav-pfos:hover .topnav-pfos__face--dark .topnav-pfos__ch {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+.topnav-item.topnav-pfos:hover .topnav-pfos__face--plain .topnav-pfos__ch {
+  opacity: 0;
+  transform: rotate(var(--r1, 1080deg));
+}
+
+/* Proje Fabrikası — reverans (dip + hafif eğilme, alt eksenden) */
+@keyframes pfosReverans {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1, 1);
+  }
+  20% {
+    transform: translate3d(-1px, 2px, 0) rotate(-6deg) scale(0.99, 0.93);
+  }
+  45% {
+    transform: translate3d(1px, 6px, 0) rotate(5deg) scale(0.98, 0.84);
+  }
+  65% {
+    transform: translate3d(0, 4px, 0) rotate(-2deg) scale(0.99, 0.9);
+  }
+  82% {
+    transform: translate3d(0, 1px, 0) rotate(1deg) scale(1, 0.96);
+  }
+}
+.topnav-pfos__in.topnav-pfos__in--reverans {
+  animation: pfosReverans 0.82s cubic-bezier(0.36, 1.18, 0.42, 1) 1 both;
+  transform-origin: 50% 100%;
+}
+@media (prefers-reduced-motion: reduce) {
+  .topnav-pfos__in.topnav-pfos__in--reverans {
+    animation: none;
+  }
+}
+
+.topnav-item.topnav-all {
+  gap: 8px;
+  padding-left: 6px;
+  padding-right: 12px;
+}
+
+.topnav-hamburger {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 14px;
+  height: 11px;
+  flex-shrink: 0;
+}
+
+.topnav-hamburger span {
+  display: block;
+  height: 2px;
+  background: currentColor;
+  border-radius: 1px;
+}
+
+.topnav-sep {
+  flex: 0 0 auto;
+  color: var(--eq-topnav-dept-sep);
+  font-size: 13px;
+  font-weight: 300;
+  padding: 0 2px;
+  user-select: none;
+  pointer-events: none;
+}
+
+/*
+ * Kategori / vitrin (body.eq-shop): departman şeridi ve üst bar — okunabilir minimum (WCAG yakın),
+ * ana sayfa (.topnav varsayılanı) daha geniş kalır.
+ */
+body.eq-shop nav.topnav > .pg-inner.topnav-inner,
+body.eq-shop nav.topnav > .pg-inner {
+  min-height: 38px;
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+  align-items: center;
+}
+
+body.eq-shop .topnav-item {
+  padding: 7px 11px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.28;
+}
+
+body.eq-shop .topnav-item.active {
+  box-shadow: inset 0 -2px 0 0 var(--eq-topnav-dept-active-line);
+}
+
+body.eq-shop .topnav-sep {
+  font-size: 12px;
+  font-weight: 300;
+  padding: 0 3px;
+}
+
+/* PFOS sihirbaz: departman şeridi yapışkan kalmasın — soru kolonunun üstüne binmesin */
+body.eq-pfos nav.topnav,
+body.eq-pfos .topnav {
+  position: relative !important;
+  top: auto !important;
+  z-index: 40 !important;
+}
+
+body.eq-shop .topnav-hamburger {
+  width: 13px;
+  height: 10px;
+}
+
+body.eq-shop .topnav-hamburger span {
+  height: 2px;
+}
+
+body.eq-shop .topnav-item.topnav-all {
+  gap: 7px;
+  padding-left: 6px;
+  padding-right: 11px;
+}
+
+body.eq-shop .topnav-item.topnav-pfos {
+  padding-right: 7px;
+}
+
+/* eq-shop üst şerit: sayfa içi 9–10px inline stilleri dengele */
+body.eq-shop header.hdr .hdr-alici > div:first-of-type {
+  font-size: 11px !important;
+  line-height: 1.3;
+}
+body.eq-shop header.hdr .hdr-alici > div:nth-of-type(2) {
+  font-size: 13px !important;
+}
+body.eq-shop header.hdr .srch-cat {
+  font-size: 12px !important;
+  padding: 8px 12px !important;
+}
+body.eq-shop header.hdr .srch-input,
+body.eq-shop header.hdr input.srch-input {
+  font-size: 13px !important;
+  padding: 8px 12px !important;
+}
+body.eq-shop header.hdr .srch-btn {
+  font-size: 12px !important;
+  padding: 8px 12px !important;
+}
+body.eq-shop header.hdr a.eq-hdr-account > span:first-of-type,
+body.eq-shop header.hdr #equsto-cart-count {
+  font-size: 11px !important;
+}
+body.eq-shop header.hdr a.eq-hdr-account .eq-hdr-account-title,
+body.eq-shop header.hdr #equsto-hdr-cart > span:nth-of-type(2) {
+  font-size: 13px !important;
+}
+body.eq-shop header.hdr .hdr-right > div[style*='flex-direction:column'] > span:first-of-type {
+  font-size: 11px !important;
+}
+body.eq-shop header.hdr .hdr-right > div[style*='flex-direction:column'] > span:nth-of-type(2) {
+  font-size: 13px !important;
+}
+body.eq-shop .breadcrumb {
+  font-size: 12px !important;
+}
+
+/*
+ * Admin: departman şeridi vitrindeki gibi doğrudan header altında (sticky top:45px + overflow:hidden gövde çakışmasını önler).
+ */
+body.admin-app nav.topnav,
+body.admin-app .topnav {
+  display: none !important;
+}
+
+body.admin-app .cat-drawer,
+body.admin-app .drawer-overlay {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+body.admin-app header.hdr > a.logo .eq-logo-svg,
+body.admin-app header.hdr > a.logo .eq-logo-img {
+  height: clamp(22px, 2.6vw, 34px);
+  width: auto;
+  max-width: min(200px, 42vw);
+  object-fit: contain;
+  object-position: left center;
+}
+
+/*
+ * Mobil (≤768px): vitrin + katalog üst barı, departman şeridi, çekmece kapatma, sol filtre sütunu.
+ * admin-app: üstte JSON / Admin etiketi korunur (admin.html).
+ */
+@media (max-width: 768px) {
+  header.hdr .hdr-pg-inner,
+  header.hdr .pg-inner.hdr-pg-inner {
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+
+  body:not(.admin-app):not(.eq-pfos) header.hdr .hdr-alici {
+    display: none !important;
+  }
+
+  body.eq-pfos header.hdr .hdr-alici.hdr-loc {
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 1 auto;
+    min-width: 0;
+    order: 0;
+    max-width: calc(100% - 52px);
+  }
+
+  body.eq-pfos header.hdr .hdr-alici .st-label {
+    font-size: 11px !important;
+    font-weight: 400 !important;
+    color: var(--eq-hdr-bar-muted) !important;
+    line-height: 1.25;
+    display: block;
+    width: 100%;
+  }
+
+  body.eq-pfos header.hdr .hdr-alici .st-val {
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    color: var(--eq-hdr-bar-text) !important;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    display: block;
+    width: 100%;
+  }
+
+  /* Vitrin (eq-shop): mobil üst barda logo görünür; diğer sayfalarda gizli kalabilir */
+  body:not(.admin-app):not(.eq-shop) header.hdr > a.logo,
+  body:not(.admin-app):not(.eq-shop) header.hdr > a.logo.logo--text,
+  body:not(.admin-app):not(.eq-shop) header.hdr a.logo,
+  body:not(.admin-app):not(.eq-shop) .hdr a.logo {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    min-width: 0 !important;
+    max-width: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+    border: 0 !important;
+  }
+
+  body:not(.admin-app) header.hdr .srch-cat,
+  body:not(.admin-app) header.hdr .cat-picker,
+  body:not(.admin-app) header.hdr .cat-picker-btn {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    min-width: 0 !important;
+    max-width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+    border: 0 !important;
+  }
+
+  body:not(.admin-app) header.hdr .srch .srch-input,
+  body:not(.admin-app) header.hdr .srch input.srch-input {
+    border-radius: 8px 0 0 8px !important;
+    border-left: 0 !important;
+  }
+
+  body:not(.admin-app) header.hdr > .pg-inner,
+  body:not(.admin-app) header.hdr > .pg-inner.hdr-pg-inner {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    padding-left: max(12px, env(safe-area-inset-left, 0px)) !important;
+  }
+
+  header.hdr .srch {
+    width: 100%;
+    max-width: 100%;
+    flex: 1 1 100%;
+    order: 10;
+    min-width: 0;
+    border-radius: 8px !important;
+  }
+
+  header.hdr .srch-input,
+  header.hdr input.srch-input {
+    min-width: 0;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right {
+    display: none !important;
+  }
+
+  body:not(.admin-app):not(.bd-page) header.hdr .hdr-right > div:not(.theme-wrap) {
+    display: none !important;
+  }
+
+  body:not(.admin-app):not(.bd-page) header.hdr .hdr-right a.eq-hdr-account,
+  body:not(.admin-app):not(.bd-page) header.hdr #equsto-hdr-cart {
+    display: none !important;
+  }
+
+  body:not(.admin-app):not(.bd-page) header.hdr .theme-legend {
+    display: none !important;
+  }
+
+  body.admin-app header.hdr .hdr-right > div:not(.theme-wrap) {
+    display: inline-flex !important;
+  }
+
+  body.admin-app header.hdr .hdr-right {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+
+  body.eq-shop nav.topnav {
+    padding-left: max(8px, env(safe-area-inset-left, 0px));
+    padding-right: max(8px, env(safe-area-inset-right, 0px));
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: none;
+  }
+
+  body.eq-shop .topnav-item {
+    min-height: 44px;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .drawer-overlay-close {
+    top: max(calc(var(--eq-drawer-chrome-top, var(--eq-filter-col-sticky-top)) + 6px), env(safe-area-inset-top, 0px));
+    right: max(10px, env(safe-area-inset-right, 0px));
+  }
+
+  .body:has(aside.eq-filter-col) {
+    flex-direction: column;
+  }
+
+  .eq-filter-col,
+  .eq-filter-col.eq-refine-amazon {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    position: relative !important;
+    top: auto !important;
+    max-height: none !important;
+    border-right: none;
+    align-self: stretch;
+  }
+
+  .eq-product-main {
+    padding-left: max(12px, env(safe-area-inset-left, 0px));
+    padding-right: max(12px, env(safe-area-inset-right, 0px));
+    padding-bottom: max(24px, env(safe-area-inset-bottom, 0px));
+  }
+}
+
+/*
+ * «DÜNYADA BİR İLK» şeridi:
+ * - Tam ana sayfa (eq-home, kategori seçili değil): geniş padding.
+ * - Ana sayfada departman seçili (eq-cat-landing): dikey padding ~%50; position tek kaynak (F5 tutarlılığı).
+ * - pisirme/sogutma/… vitrin: .hero-banner--slim (kategori HTML; eq-cat-landing ile aynı dikey ölçü).
+ */
+body.eq-shop.eq-home:not(.eq-cat-landing) .right-col > .hero-banner.eq-world-first-banner:not(.hero-banner--slim) {
+  background: var(--eq-surface);
+  color: var(--eq-text);
+}
+body.eq-shop.eq-home:not(.eq-cat-landing) .right-col > .hero-banner.eq-world-first-banner .hero-platform-line {
+  margin: 0 0 10px;
+  font-size: clamp(13px, 2.2vw, 16px);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--eq-text-secondary);
+  line-height: 1.35;
+}
+body.eq-shop.eq-home:not(.eq-cat-landing) .right-col > .hero-banner.eq-world-first-banner .eq-wf-headline {
+  margin: 0;
+  font-size: clamp(28px, 5.2vw, 46px) !important;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1.05;
+  color: var(--eq-hero-title) !important;
+  text-shadow: none;
+}
+body.eq-shop.eq-home.eq-cat-landing .right-col > .hero-banner.eq-world-first-banner .hero-platform-line,
+body.eq-shop.eq-dept .eq-dept-hero-strip .hero-banner.eq-world-first-banner.hero-banner--slim .hero-platform-line {
+  margin: 0 0 6px;
+  font-size: clamp(11px, 1.8vw, 14px);
+  color: var(--eq-text-secondary);
+}
+body.eq-shop.eq-home.eq-cat-landing .right-col > .hero-banner.eq-world-first-banner .eq-wf-headline,
+body.eq-shop.eq-dept .eq-dept-hero-strip .hero-banner.eq-world-first-banner.hero-banner--slim .eq-wf-headline {
+  font-size: clamp(20px, 3.6vw, 32px) !important;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+body.eq-shop.eq-home:not(.eq-cat-landing) .right-col > .hero-banner:not(.hero-banner--slim) {
+  background: var(--eq-surface);
+  text-align: center;
+  border-bottom: 1px solid var(--eq-border);
+  padding: 34px 39px !important;
+  position: relative !important;
+  top: auto !important;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body.eq-shop.eq-home.eq-cat-landing .right-col > .hero-banner:not(.hero-banner--slim) {
+  background: var(--eq-surface);
+  text-align: center;
+  border-bottom: 1px solid var(--eq-border);
+  padding: 58px 39px !important;
+  position: relative !important;
+  top: auto !important;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 0;
+}
+
+body.eq-shop.eq-home:not(.eq-cat-landing) .right-col > .hero-banner:not(.hero-banner--slim) .hero-kicker,
+body.eq-shop.eq-home.eq-cat-landing .right-col > .hero-banner:not(.hero-banner--slim) .hero-kicker {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--eq-accent-gold);
+  text-transform: none;
+}
+
+body.eq-shop.eq-home:not(.eq-cat-landing) .right-col > .hero-banner:not(.hero-banner--slim) .hero-kicker {
+  margin-bottom: 6px;
+}
+body.eq-shop.eq-home.eq-cat-landing .right-col > .hero-banner:not(.hero-banner--slim) .hero-kicker {
+  margin-bottom: 3px;
+}
+
+body.eq-shop.eq-home:not(.eq-cat-landing) .right-col > .hero-banner:not(.hero-banner--slim) .hero-h1,
+body.eq-shop.eq-home.eq-cat-landing .right-col > .hero-banner:not(.hero-banner--slim) .hero-h1 {
+  font-size: clamp(15px, 2.8vw, 26px) !important;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  color: var(--eq-hero-title);
+  line-height: 1.08;
+  margin-bottom: 4px;
+}
+
+body.eq-shop.eq-home:not(.eq-cat-landing) .right-col > .hero-banner:not(.hero-banner--slim) .hero-sub,
+body.eq-shop.eq-home.eq-cat-landing .right-col > .hero-banner:not(.hero-banner--slim) .hero-sub {
+  font-size: 11px;
+  color: var(--eq-text-muted);
+  letter-spacing: 0.03em;
+  line-height: 1.35;
+}
+
+@media (max-width: 768px) {
+  body.eq-shop.eq-home:not(.eq-cat-landing) .right-col > .hero-banner:not(.hero-banner--slim) {
+    padding: 28px 19px !important;
+  }
+  body.eq-shop.eq-home.eq-cat-landing .right-col > .hero-banner:not(.hero-banner--slim) {
+    padding: 48px 19px !important;
+  }
+}
+
+/* Slim: kategori vitrin HTML (pisirme/sogutma/…). */
+body.eq-shop:not(.eq-home) .right-col > .hero-banner.hero-banner--slim,
+body.eq-shop.eq-dept .eq-dept-hero-strip .hero-banner.hero-banner--slim {
+  background: var(--eq-surface);
+  text-align: center;
+  border-bottom: 1px solid var(--eq-border);
+  padding: 34px 39px !important;
+  position: relative !important;
+  top: auto !important;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 0;
+}
+body.eq-shop:not(.eq-home) .right-col > .hero-banner.hero-banner--slim--legacy {
+  background: var(--eq-surface);
+  text-align: center;
+  border-bottom: 1px solid var(--eq-border);
+  padding: 58px 39px !important;
+  position: relative !important;
+  top: auto !important;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 0;
+}
+body.eq-shop:not(.eq-home) .right-col > .hero-banner.hero-banner--slim .hero-kicker,
+body.eq-shop.eq-dept .eq-dept-hero-strip .hero-banner.hero-banner--slim .hero-kicker {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--eq-accent-gold);
+  text-transform: none;
+  margin-bottom: 3px;
+}
+body.eq-shop:not(.eq-home) .right-col > .hero-banner.hero-banner--slim .hero-h1,
+body.eq-shop.eq-dept .eq-dept-hero-strip .hero-banner.hero-banner--slim .hero-h1 {
+  font-size: clamp(15px, 2.8vw, 26px) !important;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  color: var(--eq-hero-title);
+  line-height: 1.08;
+  margin-bottom: 4px;
+}
+body.eq-shop:not(.eq-home) .right-col > .hero-banner.hero-banner--slim .hero-sub,
+body.eq-shop.eq-dept .eq-dept-hero-strip .hero-banner.hero-banner--slim .hero-sub {
+  font-size: 11px;
+  color: var(--eq-text-muted);
+  letter-spacing: 0.03em;
+  line-height: 1.35;
+}
+@media (max-width: 768px) {
+  body.eq-shop:not(.eq-home) .right-col > .hero-banner.hero-banner--slim,
+  body.eq-shop.eq-dept .eq-dept-hero-strip .hero-banner.hero-banner--slim {
+    padding: 24px 19px !important;
+  }
+}
+
+/* Departman vitrinleri: banner + lead (ana sayfanın ~%37,5 dikey ölçüsü; önceki %50 × 0,75) */
+body.eq-shop.eq-dept .eq-dept-hero-strip .hero-banner.hero-banner--slim {
+  padding: 13px 15px !important;
+}
+body.eq-shop.eq-dept .eq-dept-hero-strip .hero-lead {
+  font-size: 11px;
+  line-height: 1.4;
+  color: var(--eq-text);
+  max-width: 52rem;
+  margin: 6px 0 0;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+body.eq-shop.eq-dept .eq-dept-hero-strip .hero-h1 {
+  font-size: clamp(12px, 2vw, 18px) !important;
+  margin-bottom: 2px;
+}
+body.eq-shop.eq-dept .eq-dept-hero-strip .hero-sub {
+  font-size: 9px;
+}
+body.eq-shop.eq-dept .eq-dept-hero-strip > section.hero .hero-card {
+  padding: 14px 12px;
+}
+body.eq-shop.eq-dept .eq-dept-hero-strip > section.hero .hero-tag {
+  margin-bottom: 4px;
+}
+body.eq-shop.eq-dept .eq-dept-hero-strip > section.hero .hero-title {
+  margin-bottom: 3px;
+  font-size: 13px;
+}
+/* Departman: üçlü kart yüksekliği içerik kadar; mavi kategori bandına boşluk bırakma */
+body.eq-shop.eq-dept .eq-dept-hero-strip > section.hero .hero-card {
+  height: auto;
+  min-height: 0;
+  max-height: none;
+}
+body.eq-shop.eq-dept .eq-cat-shell-root {
+  padding-top: 4px;
+  gap: 10px;
+}
+@media (max-width: 768px) {
+  body.eq-shop.eq-dept .eq-dept-hero-strip .hero-banner.hero-banner--slim {
+    padding: 18px 15px !important;
+  }
+}
+
+/*
+ * Üçlü vitrin: yalnız ana sayfa (index.html, body.eq-shop.eq-home).
+ * Yükseklik :root --eq-home-hero-card-h* değişkenleri.
+ */
+body.eq-shop.eq-home .right-col > section.hero {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-bottom: 1px solid var(--eq-border);
+  background: var(--eq-surface);
+  flex: 0 0 auto;
+  align-items: start;
+}
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card {
+  position: relative;
+  height: var(--eq-home-hero-card-h);
+  min-height: var(--eq-home-hero-card-h);
+  max-height: var(--eq-home-hero-card-h);
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0;
+  border-right: 1px solid var(--eq-border);
+}
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card:last-child {
+  border-right: none;
+}
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--soon {
+  cursor: default;
+  pointer-events: none;
+  filter: saturate(0.88);
+}
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-visual {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-body {
+  position: relative;
+  z-index: 2;
+  padding: 14px 16px 16px;
+  background: var(--eq-surface);
+  border-top: 1px solid var(--eq-border-soft);
+}
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card .hero-tag,
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card .hero-title,
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card .hero-pitch,
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card .hero-cta {
+  position: relative;
+  z-index: 1;
+}
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card .hero-tag {
+  color: var(--eq-text-muted);
+  font-size: 10px;
+  margin-bottom: 4px;
+}
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card .hero-title {
+  color: var(--eq-hero-title);
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card .hero-pitch {
+  color: var(--eq-text-secondary);
+  font-size: 11px;
+  line-height: 1.4;
+  margin: 0 0 8px;
+}
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card .hero-cta {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  color: #001e50;
+  letter-spacing: 0.04em;
+}
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-soon-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 3;
+  padding: 5px 10px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #001e50;
+  background: var(--eq-accent-gold);
+  border-radius: 2px;
+}
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--pfos {
+  background: var(--eq-surface);
+}
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-visual--pfos {
+  background: linear-gradient(180deg, #eef3fb 0%, #f8fafd 100%);
+}
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-pfos-promise {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -58%);
+  width: min(92%, 220px);
+  margin: 0;
+  text-align: center;
+  font-size: clamp(13px, 2.1vw, 16px);
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+  color: #001e50;
+}
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--yer {
+  background: var(--eq-surface);
+}
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--besos {
+  background: var(--eq-surface);
+}
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-visual--besos {
+  display: block;
+  padding: 0;
+  overflow: hidden;
+  background: #2e2e2e;
+}
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img:not(.hero-card-img--bar-combo):not(.hero-card-img--yer-bufe) {
+  max-height: 56%;
+  width: auto;
+  max-width: 46%;
+  object-fit: contain;
+  object-position: bottom center;
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.14));
+}
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img--bar-combo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: cover;
+  object-position: center 42%;
+  filter: none;
+}
+/* Yer Sofrası: tam çerçeve kaplama (genel .hero-card-img %56 kuralının üstüne) */
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-visual--yer {
+  display: block;
+  overflow: hidden;
+  background: #e8e4de;
+}
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img--yer-bufe {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: cover !important;
+  object-position: center center;
+  filter: none;
+}
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card:not(.hero-card--soon):hover {
+  background: var(--eq-surface-2);
+}
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card:not(.hero-card--soon):hover .hero-cta {
+  text-decoration: underline;
+}
+@media (max-width: 1024px) {
+  body.eq-shop.eq-home .right-col > section.hero .hero-card {
+    height: var(--eq-home-hero-card-h-1024);
+    min-height: var(--eq-home-hero-card-h-1024);
+    max-height: var(--eq-home-hero-card-h-1024);
+  }
+}
+@media (max-width: 768px) {
+  body.eq-shop.eq-home .right-col > section.hero {
+    grid-template-columns: 1fr;
+  }
+  body.eq-shop.eq-home .right-col > section.hero .hero-card {
+    height: var(--eq-home-hero-card-h-768);
+    min-height: var(--eq-home-hero-card-h-768);
+    max-height: var(--eq-home-hero-card-h-768);
+    border-right: none;
+    border-bottom: 1px solid var(--eq-border);
+  }
+  body.eq-shop.eq-home .right-col > section.hero .hero-card:last-child {
+    border-bottom: none;
+  }
+}
+@media (max-width: 520px) {
+  body.eq-shop.eq-home .right-col > section.hero .hero-card {
+    height: var(--eq-home-hero-card-h-520);
+    min-height: var(--eq-home-hero-card-h-520);
+    max-height: var(--eq-home-hero-card-h-520);
+  }
+}
+
+/*
+ * Üçlü vitrin: kategori HTML (pisirme/sogutma/…, ana sayfa değil).
+ * Yükseklik :root --eq-cat-hero-card-h* değişkenleri (ana sayfadan bağımsız).
+ */
+body.eq-shop:not(.eq-home) .right-col > section.hero,
+body.eq-shop.eq-dept .eq-dept-hero-strip > section.hero {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: none;
+  border-bottom: none;
+  background: var(--eq-surface);
+  flex: 0 0 auto;
+  align-items: start;
+}
+
+body.eq-shop:not(.eq-home) .right-col > section.hero .hero-card,
+body.eq-shop.eq-dept .eq-dept-hero-strip > section.hero .hero-card {
+  padding: 18px 16px;
+  border-right: none;
+  cursor: pointer;
+  background: var(--eq-surface);
+  height: var(--eq-cat-hero-card-h);
+  min-height: var(--eq-cat-hero-card-h);
+  max-height: var(--eq-cat-hero-card-h);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  overflow: hidden;
+}
+
+body.eq-shop:not(.eq-home) .right-col > section.hero .hero-card:hover,
+body.eq-shop.eq-dept .eq-dept-hero-strip > section.hero .hero-card:hover {
+  background: var(--eq-surface-3);
+}
+
+body.eq-shop:not(.eq-home) .right-col > section.hero .hero-tag,
+body.eq-shop.eq-dept .eq-dept-hero-strip > section.hero .hero-tag {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--eq-text-muted);
+  margin-bottom: 6px;
+}
+
+body.eq-shop:not(.eq-home) .right-col > section.hero .hero-title,
+body.eq-shop.eq-dept .eq-dept-hero-strip > section.hero .hero-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--eq-text);
+  margin-bottom: 4px;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+body.eq-shop:not(.eq-home) .right-col > section.hero .hero-url,
+body.eq-shop.eq-dept .eq-dept-hero-strip > section.hero .hero-url {
+  font-size: 11px;
+  color: var(--eq-text-subtle);
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 1024px) {
+  body.eq-shop:not(.eq-home) .right-col > section.hero .hero-card,
+  body.eq-shop.eq-dept .eq-dept-hero-strip > section.hero .hero-card {
+    height: var(--eq-cat-hero-card-h-1024);
+    min-height: var(--eq-cat-hero-card-h-1024);
+    max-height: var(--eq-cat-hero-card-h-1024);
+  }
+}
+
+@media (max-width: 768px) {
+  body.eq-shop:not(.eq-home) .right-col > section.hero,
+  body.eq-shop.eq-dept .eq-dept-hero-strip > section.hero {
+    grid-template-columns: 1fr;
+  }
+
+  body.eq-shop:not(.eq-home) .right-col > section.hero .hero-card,
+  body.eq-shop.eq-dept .eq-dept-hero-strip > section.hero .hero-card {
+    height: var(--eq-cat-hero-card-h-768);
+    min-height: var(--eq-cat-hero-card-h-768);
+    max-height: var(--eq-cat-hero-card-h-768);
+    border-right: none;
+    border-bottom: 1px solid var(--eq-border);
+  }
+
+  body.eq-shop:not(.eq-home) .right-col > section.hero .hero-card:last-child,
+  body.eq-shop.eq-dept .eq-dept-hero-strip > section.hero .hero-card:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 520px) {
+  body.eq-shop:not(.eq-home) .right-col > section.hero .hero-card,
+  body.eq-shop.eq-dept .eq-dept-hero-strip > section.hero .hero-card {
+    height: var(--eq-cat-hero-card-h-520);
+    min-height: var(--eq-cat-hero-card-h-520);
+    max-height: var(--eq-cat-hero-card-h-520);
+  }
+}
+body.eq-shop.eq-dept .eq-dept-hero-strip > section.hero .hero-card {
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+}
+
+/* Katalog ızgarası: kart = ürün sayfası linki + ayrı «sepete ekle» (Amazon PLP: yuvarlak köşe + hover gölgesi) */
+.products > .prod-card-wrap {
+  position: relative;
+  direction: ltr;
+  border: 1px solid var(--eq-border);
+  overflow: hidden;
+  background: var(--eq-surface);
+  border-radius: 8px;
+  box-shadow: var(--eq-plp-card-shadow);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.products > .prod-card-wrap:hover {
+  border-color: #d5d9d9;
+  box-shadow: var(--eq-plp-card-shadow-hover);
+}
+html[data-theme="dark"] .products > .prod-card-wrap:hover {
+  border-color: var(--eq-card-hover-border, var(--eq-border));
+}
+.products .prod-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.products .prod-card-wrap .eq-cart-add {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 2;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid #d5d9d9;
+  background: linear-gradient(180deg, #fffefb 0%, #fff7e6 100%);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: var(--eq-text);
+  box-shadow: 0 1px 3px rgba(15, 17, 17, 0.12);
+  -webkit-tap-highlight-color: transparent;
+}
+.products .prod-card-wrap .eq-cart-add:hover {
+  background: linear-gradient(180deg, #ffffff 0%, #ffecc8 100%);
+  border-color: #c7cbcb;
+}
+html[data-theme="dark"] .products .prod-card-wrap .eq-cart-add {
+  background: linear-gradient(180deg, var(--eq-surface-3) 0%, var(--eq-surface-2) 100%);
+  border-color: var(--eq-border);
+}
+@media (max-width: 768px) {
+  .products .prod-card-wrap .eq-cart-add {
+    width: 40px;
+    height: 40px;
+    bottom: 8px;
+    right: 8px;
+  }
+}
+
+/* Ürün detay (product.html) — vitrin genişliğiyle hizalı Amazon PDP */
+.eq-product-main {
+  padding: 16px 16px 40px;
+  max-width: min(1500px, 100%);
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+/* Üst şerit: aynı hat / muadil modeller (Amazon ürün ailesi benzeri) */
+.eq-product-family {
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--eq-border);
+}
+.eq-product-family-row {
+  display: flex;
+  align-items: stretch;
+  gap: 14px 20px;
+  min-width: 0;
+}
+.eq-product-family-lineblock {
+  flex: 0 0 auto;
+  max-width: 200px;
+  padding-top: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.eq-product-family-line {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--eq-text);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+.eq-product-family-hint {
+  font-size: 10px;
+  color: var(--eq-text-muted);
+  line-height: 1.3;
+}
+.eq-product-family-scroll {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px 12px;
+  align-content: center;
+  max-height: none;
+  overflow: visible;
+  padding: 2px 4px 8px 2px;
+}
+.eq-product-family-item {
+  min-width: 0;
+  width: auto;
+  text-align: center;
+}
+.eq-product-family-item a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 8px;
+  padding: 6px 4px 4px;
+  border: 1px solid transparent;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+.eq-product-family-item a:hover {
+  background: transparent;
+  border-color: transparent;
+}
+.eq-product-family-item.eq-product-family-item--current a {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+.eq-product-family-thumb {
+  width: 100px;
+  height: 100px;
+  max-width: 100%;
+  margin: 0 auto 6px;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.eq-product-family-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.eq-product-family-lbl {
+  font-size: 11px;
+  line-height: 1.3;
+  color: var(--eq-text-secondary);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-word;
+  hyphens: auto;
+}
+.eq-product-family-item--current .eq-product-family-lbl {
+  font-weight: 600;
+  color: var(--eq-text);
+}
+@media (max-width: 700px) {
+  .eq-product-family-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .eq-product-family-lineblock {
+    max-width: none;
+  }
+  .eq-product-family-scroll {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 6px 8px;
+  }
+  .eq-product-family-thumb {
+    width: 82px;
+    height: 82px;
+  }
+  .eq-product-family-lbl {
+    font-size: 9px;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+}
+.eq-product-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr) minmax(0, 0.7fr);
+  gap: 24px;
+  align-items: start;
+}
+@media (max-width: 1100px) {
+  .eq-product-grid {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  }
+  .eq-product-buybox {
+    grid-column: 1 / -1;
+    max-width: 360px;
+    justify-self: end;
+  }
+}
+@media (max-width: 700px) {
+  .eq-product-grid {
+    grid-template-columns: 1fr;
+  }
+  .eq-product-buybox {
+    max-width: none;
+    justify-self: stretch;
+  }
+}
+.eq-product-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.eq-product-gallery-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  min-width: 0;
+}
+.eq-product-thumbs--vertical {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.eq-product-thumbs--vertical button {
+  width: 56px;
+  height: 56px;
+}
+.eq-product-thumbs--vertical img {
+  width: 56px;
+  height: 56px;
+}
+.eq-product-hero-wrap {
+  flex: 1;
+  min-width: 0;
+}
+@media (max-width: 700px) {
+  .eq-product-gallery-row {
+    flex-direction: column-reverse;
+  }
+  .eq-product-thumbs--vertical {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+.eq-product-info {
+  min-width: 0;
+}
+.eq-product-spec-tbl {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+  font-size: 12px;
+}
+.eq-product-spec-tbl th {
+  text-align: left;
+  font-weight: 500;
+  color: var(--eq-text-muted);
+  padding: 6px 12px 6px 0;
+  white-space: nowrap;
+  width: 110px;
+  vertical-align: top;
+}
+.eq-product-spec-tbl td {
+  color: var(--eq-text);
+  padding: 6px 0;
+  vertical-align: top;
+  word-break: break-word;
+}
+.eq-product-spec-tbl tr + tr th,
+.eq-product-spec-tbl tr + tr td {
+  border-top: 1px solid var(--eq-border-soft);
+}
+.eq-product-buybox {
+  border: 1px solid var(--eq-border);
+  border-radius: 10px;
+  padding: 14px 16px 16px;
+  background: var(--eq-surface);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 96px;
+}
+.eq-buybox-price {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--eq-text);
+  line-height: 1.1;
+}
+.eq-buybox-meta {
+  font-size: 11px;
+  color: var(--eq-text-muted);
+  white-space: pre-wrap;
+  line-height: 1.45;
+}
+.eq-buybox-stock {
+  font-size: 13px;
+  font-weight: 600;
+  color: #007600;
+}
+.eq-buybox-divider {
+  height: 1px;
+  background: var(--eq-border-soft);
+  margin: 4px 0;
+}
+.eq-buybox-info {
+  font-size: 11px;
+  color: var(--eq-text-secondary);
+  line-height: 1.45;
+}
+.eq-buybox-info b {
+  color: var(--eq-text);
+}
+.eq-product-buybox .eq-product-actions {
+  margin-bottom: 0;
+  flex-direction: column;
+  align-items: stretch;
+}
+.eq-product-buybox .eq-product-actions .eq-product-btn-cart,
+.eq-product-buybox .eq-product-actions .eq-cart-add,
+.eq-product-buybox .eq-product-actions .eq-product-btn-ghost {
+  width: 100%;
+  justify-content: center;
+}
+/* Ürün görselinden gelen accent (product.html — eq-product-card-tint.js) */
+.eq-product-main.eq-product-main--accent .eq-product-gallery {
+  padding: 12px;
+  border-radius: 12px;
+  background:
+    radial-gradient(ellipse 96% 82% at 48% 30%, rgba(var(--eq-prod-ar), var(--eq-prod-ag), var(--eq-prod-ab), 0.28) 0%, transparent 58%),
+    linear-gradient(
+      168deg,
+      rgba(var(--eq-prod-ar), var(--eq-prod-ag), var(--eq-prod-ab), 0.14) 0%,
+      var(--eq-surface-2) 46%,
+      var(--eq-surface) 100%
+    );
+  border: 1px solid rgba(var(--eq-prod-ar), var(--eq-prod-ag), var(--eq-prod-ab), 0.24);
+}
+.eq-product-main.eq-product-main--accent .eq-product-hero-img {
+  background:
+    radial-gradient(ellipse 90% 78% at 50% 40%, rgba(var(--eq-prod-ar), var(--eq-prod-ag), var(--eq-prod-ab), 0.22) 0%, var(--eq-surface-3) 70%);
+  border-color: rgba(var(--eq-prod-ar), var(--eq-prod-ag), var(--eq-prod-ab), 0.35);
+  box-shadow: 0 14px 42px rgba(var(--eq-prod-ar), var(--eq-prod-ag), var(--eq-prod-ab), 0.2);
+}
+.eq-product-main.eq-product-main--accent .eq-product-price-sub {
+  color: color-mix(in srgb, rgb(var(--eq-prod-ar), var(--eq-prod-ag), var(--eq-prod-ab)) 58%, var(--eq-text-secondary));
+  font-weight: 500;
+}
+.eq-product-main.eq-product-main--accent .eq-product-cat {
+  color: color-mix(in srgb, rgb(var(--eq-prod-ar), var(--eq-prod-ag), var(--eq-prod-ab)) 48%, var(--eq-text-subtle));
+}
+.eq-product-main.eq-product-main--accent .eq-product-brand {
+  color: color-mix(in srgb, rgb(var(--eq-prod-ar), var(--eq-prod-ag), var(--eq-prod-ab)) 36%, var(--eq-text-muted));
+}
+.eq-product-main.eq-product-main--accent .eq-product-thumbs button.eq-product-thumb--active {
+  border-color: rgb(var(--eq-prod-ar), var(--eq-prod-ag), var(--eq-prod-ab));
+  box-shadow: 0 0 0 1px rgba(var(--eq-prod-ar), var(--eq-prod-ag), var(--eq-prod-ab), 0.35);
+}
+.eq-product-hero-img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  background: var(--eq-surface-3);
+  border: 1px solid var(--eq-border);
+  border-radius: 8px;
+}
+.eq-product-thumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.eq-product-thumbs button {
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  background: var(--eq-surface-2);
+  overflow: hidden;
+  line-height: 0;
+}
+.eq-product-thumbs button.eq-product-thumb--active {
+  border-color: var(--eq-topnav-dept-bg, #001e50);
+}
+.eq-product-thumbs img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  display: block;
+}
+.eq-product-brand {
+  font-size: 12px;
+  color: var(--eq-text-muted);
+  margin-bottom: 6px;
+}
+.eq-product-cat {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--eq-text-subtle);
+  margin-bottom: 10px;
+}
+.eq-product-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 14px;
+  color: var(--eq-text);
+}
+.eq-product-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--eq-text);
+  margin-bottom: 8px;
+}
+.eq-product-price-sub {
+  font-size: 12px;
+  color: var(--eq-text-muted);
+  white-space: pre-wrap;
+  margin-bottom: 18px;
+}
+.eq-product-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+.eq-product-actions .eq-product-btn-cart,
+.eq-product-actions .eq-cart-add {
+  position: static;
+  width: auto;
+  height: auto;
+  box-shadow: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background: var(--eq-topnav-dept-bg, #001e50);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.eq-product-actions .eq-product-btn-cart:hover,
+.eq-product-actions .eq-cart-add:hover {
+  filter: brightness(1.08);
+  background: var(--eq-topnav-dept-bg, #001e50);
+}
+.eq-product-actions .eq-product-btn-ghost {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--eq-border);
+  background: var(--eq-surface);
+  color: var(--eq-text);
+  font-size: 13px;
+  cursor: pointer;
+  font-family: inherit;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+.eq-product-specs {
+  border-top: 1px solid var(--eq-border);
+  padding-top: 18px;
+}
+.eq-product-specs h2 {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--eq-text);
+}
+.eq-product-specs pre {
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: var(--eq-text-secondary);
+  margin: 0;
+}
+.eq-product-miss {
+  padding: 24px;
+  font-size: 14px;
+  color: var(--eq-text-muted);
+}
+
+/* eq-shop: sol çekmece (Öne çıkanlar + kategori listesi) — satır yüksekliği ~%65–70 daha alçak */
+body.eq-shop .eq-drawer-amazon-shell .eq-drawer-hero {
+  padding: 8px 14px 10px;
+}
+body.eq-shop .eq-drawer-amazon-shell .eq-drawer-hero-inner {
+  gap: 8px;
+}
+body.eq-shop .eq-drawer-amazon-shell .eq-drawer-hero-ico {
+  font-size: 17px;
+}
+body.eq-shop .eq-drawer-amazon-shell .eq-drawer-hero-line {
+  font-size: 13px;
+}
+body.eq-shop .eq-drawer-amazon-shell .eq-drawer-sec {
+  border-top-width: 4px;
+}
+body.eq-shop .eq-drawer-amazon-shell .eq-drawer-sec-h {
+  padding: 6px 14px 4px;
+  font-size: 10px;
+  letter-spacing: 0.07em;
+}
+body.eq-shop .eq-drawer-amazon-shell .eq-drawer-row {
+  padding: 5px 14px;
+  font-size: 12px;
+  line-height: 1.22;
+}
+body.eq-shop .eq-drawer-amazon-shell .eq-drawer-row-chev {
+  font-size: 12px;
+}
+body.eq-shop .cat-drawer.eq-drawer-amazon-shell .eq-drawer-column--mega .eq-drawer-column-body .eq-drawer-row {
+  padding: 5px 14px;
+  font-size: 13px;
+  margin: 0 10px 4px;
+  width: calc(100% - 20px);
+}
+body.eq-shop .eq-drawer-amazon-shell .eq-drawer-row--back {
+  font-size: 12px;
+  padding: 8px 14px;
+}
+body.eq-shop .eq-drawer-amazon-shell .eq-drawer-panel-title {
+  padding: 6px 14px 7px;
+  font-size: 12px;
+}
+body.eq-shop .eq-drawer-amazon-shell .eq-drawer-dept-all {
+  padding: 6px 14px;
+  font-size: 12px;
+}
+body.eq-shop .eq-drawer-amazon-shell .eq-drawer-scroll-inner,
+body.eq-shop .eq-drawer-amazon-shell .eq-drawer-slide-stage {
+  padding-bottom: 14px;
+}
+body.eq-shop .eq-amazon-shop-all .cat-drawer-head {
+  padding: 10px 14px;
+  min-height: 0;
+}
+body.eq-shop .eq-amazon-shop-all .cat-drawer-item,
+body.eq-shop .eq-amazon-shop-all a.cat-drawer-item {
+  padding: 6px 14px;
+  font-size: 12px;
+  line-height: 1.22;
+}
+
+@media (max-width: 768px) {
+  .topnav > .pg-inner.topnav-inner,
+  .topnav > .pg-inner {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  body.eq-shop nav.topnav > .pg-inner.topnav-inner,
+  body.eq-shop nav.topnav > .pg-inner {
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+  }
+}
+.pg,
+.eq-shell {
+  position: relative;
+  z-index: 0;
+  overflow-x: hidden;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Katalog: sol refine + ürün alanı — iki sütun taşmasın */
+.pg > .body {
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  width: 100%;
+}
+.pg > .body:has(aside#eq-filter-col) {
+  align-items: stretch;
+}
+
+/* Amazon sol sütun: departman geçişleri (renk paleti aynı, yalnızca düzen) */
+.eq-filter-dept-link {
+  display: block;
+  font-size: 11px;
+  line-height: 1.35;
+  padding: 8px 2px 8px 0;
+  border-bottom: 1px solid var(--eq-border-soft);
+  color: var(--eq-text);
+  text-decoration: none;
+}
+.eq-filter-dept-link:hover {
+  text-decoration: underline;
+}
+.eq-filter-dept-link--current {
+  font-weight: 700;
+  border-bottom-color: var(--eq-logo-rule);
+  text-decoration: none;
+}
+.eq-filter-col.eq-refine-amazon .eq-filter-dept-link {
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid var(--eq-border-soft);
+  padding: 8px 2px 8px 0;
+  background: transparent;
+}
+.eq-filter-col.eq-refine-amazon .eq-filter-dept-link:hover {
+  background: transparent;
+}
+.eq-filter-col.eq-refine-amazon .eq-filter-dept-link--current {
+  border-bottom-color: var(--eq-logo-rule);
+}
+
+/* Breadcrumb yalnızca ana içerikte: sol kategori + filtre sütunu üst menü şeridinin hemen altından başlar (Amazon benzeri) */
+.right-col > .breadcrumb:first-child {
+  flex-shrink: 0;
+}
+
+/* Ortak: soldan “Tüm kategoriler” paneli (sayfa içi <style> ile çakışmasın diye burada) */
+.drawer-overlay {
+  display: none !important;
+  pointer-events: none;
+  position: fixed;
+  top: var(--eq-drawer-chrome-top, var(--eq-filter-col-sticky-top));
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--eq-overlay);
+  /* Üst şerit (500) ve topnav (499) üstünde; WhatsApp / modallardan (9999+) düşük */
+  z-index: 600;
+}
+.drawer-overlay.open {
+  display: block !important;
+  pointer-events: auto;
+}
+.drawer-overlay-close {
+  position: fixed;
+  top: calc(var(--eq-drawer-chrome-top, var(--eq-filter-col-sticky-top)) + 8px);
+  right: 12px;
+  z-index: 602;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+.drawer-overlay-close:hover {
+  background: rgba(255, 255, 255, 0.24);
+}
+.cat-drawer {
+  position: fixed;
+  top: var(--eq-drawer-chrome-top, var(--eq-filter-col-sticky-top));
+  left: -300px;
+  width: 300px;
+  height: calc(100vh - var(--eq-drawer-chrome-top, var(--eq-filter-col-sticky-top)));
+  height: calc(100dvh - var(--eq-drawer-chrome-top, var(--eq-filter-col-sticky-top)));
+  background: var(--eq-surface);
+  z-index: 601;
+  transition: left 0.22s ease;
+  overflow: hidden;
+  box-shadow: var(--eq-shadow-drawer);
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.cat-drawer.open {
+  left: 0;
+}
+
+/*
+ * Mobil (≤768px): Amazon uygulaması — menü üst şeridin altından aşağı iner;
+ * alt kategoriler yatay flyout değil, tek panel + geri (nav.js).
+ */
+@media (max-width: 768px) {
+  body.eq-shop:not(.admin-app):not(.bd-page).eq-cat-drawer-open {
+    overflow: hidden;
+    touch-action: none;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) .drawer-overlay {
+    top: var(--eq-drawer-chrome-top, var(--eq-filter-col-sticky-top));
+    bottom: calc(62px + env(safe-area-inset-bottom, 0px));
+    left: 0;
+    right: 0;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) .cat-drawer,
+  body.eq-shop:not(.admin-app):not(.bd-page) .cat-drawer.eq-amazon-shop-all {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    top: var(--eq-drawer-chrome-top, var(--eq-filter-col-sticky-top));
+    bottom: calc(62px + env(safe-area-inset-bottom, 0px));
+    height: auto !important;
+    transform: translate3d(0, -108%, 0);
+    transition: transform 0.32s cubic-bezier(0.32, 0.72, 0, 1);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16);
+    border-radius: 0 0 14px 14px;
+    overflow: hidden;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) .cat-drawer.open,
+  body.eq-shop:not(.admin-app):not(.bd-page) .cat-drawer.eq-amazon-shop-all.open {
+    transform: translate3d(0, 0, 0) !important;
+    left: 0 !important;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) .drawer-overlay-close {
+    top: max(calc(var(--eq-drawer-chrome-top, var(--eq-filter-col-sticky-top)) + 4px), env(safe-area-inset-top, 0px));
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) .cat-drawer.eq-drawer-amazon-shell {
+    overflow: hidden;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) .cat-drawer.eq-drawer-amazon-shell #eq-drawer-mega-row {
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) .cat-drawer.eq-drawer-amazon-shell #eq-drawer-mega-row:not(.eq-drawer-mega-row--at-root) > .eq-drawer-column--root {
+    display: none !important;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) .cat-drawer.eq-drawer-amazon-shell #eq-drawer-mega-row > .eq-drawer-column--mega:not(.eq-drawer-column--root) {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    flex: 0 1 auto;
+    height: auto;
+    max-height: 100%;
+    min-height: 0;
+    align-self: flex-start;
+    border-left: none;
+    border-right: none;
+    box-shadow: none;
+    animation: eq-drawer-panel-down 0.28s cubic-bezier(0.32, 0.72, 0, 1);
+  }
+  body.eq-shop:not(.admin-app):not(.bd-page)
+    .cat-drawer.eq-drawer-amazon-shell
+    #eq-drawer-mega-row
+    > .eq-drawer-column--mega:not(.eq-drawer-column--root)
+    .eq-drawer-column-body {
+    max-height: min(65vh, 100%);
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) .cat-drawer.eq-drawer-amazon-shell .eq-drawer-row-chev {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes eq-drawer-panel-down {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -14px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Kategori çekmecesi üstü: tek satır başlık + arama (yalnız .cat-drawer.eq-mcat-drawer; alt tabbar ayrı) */
+.cat-drawer.eq-mcat-drawer .eq-mcat-hdr {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--eq-topnav-dept-bg, #001e50);
+  color: #fff;
+}
+.cat-drawer.eq-mcat-drawer .eq-mcat-hdr-bar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  min-height: 48px;
+  box-sizing: border-box;
+}
+.cat-drawer.eq-mcat-drawer .eq-mcat-hdr-back,
+.cat-drawer.eq-mcat-drawer .eq-mcat-hdr-theme {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+.cat-drawer.eq-mcat-drawer .eq-mcat-hdr-back:hover,
+.cat-drawer.eq-mcat-drawer .eq-mcat-hdr-theme:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.cat-drawer.eq-mcat-drawer .eq-mcat-hdr-title {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cat-drawer.eq-mcat-drawer .eq-mcat-search {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px 12px;
+  background: var(--eq-surface, #fff);
+  border-bottom: 1px solid var(--eq-border-soft, #e5e8ed);
+  box-sizing: border-box;
+}
+.cat-drawer.eq-mcat-drawer .eq-mcat-search-icon {
+  flex-shrink: 0;
+  color: var(--eq-text-muted);
+}
+.cat-drawer.eq-mcat-drawer .eq-mcat-search-input {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--eq-border-soft, #cfd6e0);
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: inherit;
+  background: var(--eq-surface, #fff);
+  color: var(--eq-text);
+  box-sizing: border-box;
+}
+.cat-drawer.eq-mcat-drawer .eq-mcat-search-cam {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--eq-border-soft, #cfd6e0);
+  border-radius: 10px;
+  background: var(--eq-surface-2, #f4f5f7);
+  color: var(--eq-text);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+html[data-theme="dark"] .cat-drawer.eq-mcat-drawer .eq-mcat-search {
+  background: var(--eq-bg-page);
+  border-bottom-color: var(--eq-border);
+}
+html[data-theme="dark"] .cat-drawer.eq-mcat-drawer .eq-mcat-search-input {
+  background: var(--eq-surface);
+  color: var(--eq-text);
+  border-color: var(--eq-border);
+}
+
+.cat-drawer.eq-mcat-drawer .eq-mcat-drawer-inner {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+  min-width: 0;
+  overflow: visible;
+}
+.cat-drawer.eq-mcat-drawer .eq-mcat-drawer-inner > .eq-drawer-scroll.eq-mcat-scroll {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+.cat-drawer.eq-mcat-drawer .eq-mcat-drawer-inner > .eq-filter-sec {
+  flex-shrink: 0;
+  border-top: 1px solid var(--eq-border-soft);
+  border-bottom: none;
+  padding: 10px 12px 12px;
+  margin: 0;
+  background: var(--eq-surface);
+}
+.cat-drawer.eq-mcat-drawer .eq-mcat-drawer-inner .eq-filter-ref-brands {
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+}
+.cat-drawer.eq-mcat-drawer .eq-mcat-drawer-inner .eq-filter-ref-row {
+  padding: 7px 2px 7px 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--eq-text);
+  line-height: 1.35;
+}
+.cat-drawer-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 14px 16px;
+  background: var(--eq-surface-2);
+  border-bottom: 1px solid var(--eq-border);
+}
+.cat-drawer-head span {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.cat-drawer-close {
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--eq-text-secondary);
+  padding: 4px 8px;
+  margin: -4px -6px -4px 0;
+  user-select: none;
+}
+.cat-drawer-close:hover {
+  color: var(--eq-text);
+}
+.cat-drawer-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 16px;
+  font-size: 13px;
+  color: var(--eq-text);
+  cursor: pointer;
+  border-bottom: 1px solid var(--eq-border-soft);
+}
+.cat-drawer-item:hover {
+  background: var(--eq-surface-3);
+}
+.cat-drawer-item span {
+  font-size: 10px;
+  color: var(--eq-text-subtle);
+}
+
+/* Amazon benzeri: daha geniş sol tam yükseklik menü; yüzey %85 opak (= %15 şeffaf), metin tam opak */
+.cat-drawer.eq-amazon-shop-all {
+  width: min(364px, 92vw) !important;
+  left: calc(-1 * min(364px, 92vw)) !important;
+  background: color-mix(in srgb, var(--eq-surface) 85%, transparent);
+}
+.cat-drawer.eq-amazon-shop-all.open {
+  left: 0 !important;
+}
+
+/* Çekmede shell sınıfı #catDrawer ile aynı elemanda; iç katmanlar şeffaf — dış yüzey %85 görünsün */
+.cat-drawer.eq-amazon-shop-all.eq-drawer-amazon-shell .eq-drawer-hero {
+  background: color-mix(in srgb, var(--eq-topnav-dept-bg, #001e50) 85%, transparent);
+}
+.cat-drawer.eq-amazon-shop-all .eq-drawer-scroll,
+.cat-drawer.eq-amazon-shop-all .eq-drawer-sec-h,
+.cat-drawer.eq-amazon-shop-all .eq-drawer-row,
+.cat-drawer.eq-amazon-shop-all .eq-drawer-marca-list,
+.cat-drawer.eq-amazon-shop-all .eq-drawer-marca-name,
+.cat-drawer.eq-amazon-shop-all .eq-drawer-panel-title,
+.cat-drawer.eq-amazon-shop-all .eq-drawer-dept-all {
+  background: transparent;
+}
+.cat-drawer.eq-amazon-shop-all .eq-drawer-row:hover {
+  background: color-mix(in srgb, var(--eq-surface-3, #f5f5f5) 85%, transparent);
+}
+.cat-drawer.eq-amazon-shop-all .eq-drawer-row--back {
+  background: color-mix(in srgb, var(--eq-surface-2, #f5f5f5) 85%, transparent);
+}
+.cat-drawer.eq-amazon-shop-all .eq-drawer-sec {
+  border-top-color: color-mix(in srgb, var(--eq-surface-2, #f0f0f0) 85%, transparent);
+}
+
+/* Amazon mobil menü — Tüm kategoriler (nav.js doldurur) */
+.eq-drawer-amazon-shell .eq-drawer-hero {
+  flex-shrink: 0;
+  background: var(--eq-topnav-dept-bg, #001e50);
+  color: #fff;
+  padding: 16px 18px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+.eq-drawer-amazon-shell .eq-drawer-hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.eq-drawer-amazon-shell .eq-drawer-hero-ico {
+  font-size: 22px;
+  line-height: 1;
+  opacity: 0.95;
+}
+.eq-drawer-amazon-shell .eq-drawer-hero-line {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.3;
+}
+.eq-drawer-amazon-shell .eq-drawer-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  -webkit-overflow-scrolling: touch;
+  background: var(--eq-surface);
+}
+.eq-drawer-amazon-shell .eq-drawer-scroll-inner,
+.eq-drawer-amazon-shell .eq-drawer-slide-stage {
+  padding-bottom: 28px;
+}
+/* Electrolux benzeri: kök sütun çekmecede sabit; drill sütunları sağa "uçar" (drawer dışına) */
+.cat-drawer.eq-drawer-amazon-shell {
+  overflow: visible;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-scroll {
+  overflow: visible;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-slide-stage {
+  flex: 1;
+  min-height: 0;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+}
+.cat-drawer.eq-drawer-amazon-shell #eq-drawer-mega-row {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  min-height: 0;
+  min-width: 0;
+  overflow: visible;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.cat-drawer.eq-drawer-amazon-shell #eq-drawer-mega-row::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-column--mega {
+  flex: 1 1 0;
+  min-width: 0;
+  width: auto;
+  max-width: none;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  border-right: 1px solid var(--eq-border-soft);
+  background: var(--eq-surface);
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-column--mega:last-child {
+  border-right: none;
+}
+/* Kök sütun çekmece genişliğini doldurur (daralmaz); drill sütunları drawer'ın sağına "uçar" */
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-column--mega.eq-drawer-column--root {
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+}
+.cat-drawer.eq-drawer-amazon-shell #eq-drawer-mega-row > .eq-drawer-column--mega.eq-drawer-column--root:only-child {
+  flex: 1 1 auto;
+  max-width: none;
+  min-width: 0;
+  width: auto;
+}
+/* Drill sütunları: kök sabit kalır; yükseklik son seçenekte biter (tabana uzanmaz) */
+.cat-drawer.eq-drawer-amazon-shell #eq-drawer-mega-row > .eq-drawer-column--mega:not(.eq-drawer-column--root) {
+  position: absolute;
+  top: 0;
+  bottom: auto;
+  height: auto;
+  max-height: calc(100% - var(--eq-drill-top, 0px));
+  width: 240px;
+  flex: 0 0 auto;
+  min-width: 240px;
+  max-width: 240px;
+  align-self: flex-start;
+  background: var(--eq-surface);
+  border: 1px solid var(--eq-border-soft);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 6px 8px 24px rgba(0, 0, 0, 0.12);
+  z-index: 5;
+}
+.cat-drawer.eq-drawer-amazon-shell #eq-drawer-mega-row > .eq-drawer-column--mega:not(.eq-drawer-column--root) .eq-drawer-column-body {
+  flex: 0 1 auto;
+  min-height: 0;
+  max-height: min(70vh, calc(100% - var(--eq-drill-top, 0px) - 12px));
+  overflow-y: auto;
+}
+html[data-theme="dark"] .cat-drawer.eq-drawer-amazon-shell #eq-drawer-mega-row > .eq-drawer-column--mega:not(.eq-drawer-column--root) {
+  box-shadow: 6px 10px 28px rgba(0, 0, 0, 0.45);
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-mcat-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* Kök kategoriler — Amazon TR: dikey satır listesi (ikon + başlık + ›) */
+.cat-drawer.eq-drawer-amazon-shell {
+  --eq-drawer-row-py: 6px;
+  --eq-drawer-row-px: 16px;
+  --eq-drawer-chev-slot: 48px; /* › sütunu — dallı/dallısız aynı metin hizası */
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-mcat-list--amazon {
+  display: block;
+  padding: 0;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-mcat-list--amazon > .eq-mcat-row-li--amazon {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-mcat-list--amazon .eq-drawer-row:not(.eq-drawer-row--split) {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: var(--eq-drawer-row-py) var(--eq-drawer-row-px);
+  font-size: 14px;
+  line-height: 1.25;
+}
+/* Flyout’lu satır: 2 sütun grid — etiket sol, › sağ; dallı/dallısız aynı sol hiza */
+.cat-drawer.eq-drawer-amazon-shell .eq-mcat-list--amazon .eq-drawer-row.eq-drawer-row--split,
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-row--split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) var(--eq-drawer-chev-slot);
+  align-items: stretch;
+  padding: 0;
+  gap: 0;
+  justify-content: stretch;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-row--split .eq-drawer-row-link {
+  grid-column: 1;
+  grid-row: 1;
+  min-width: 0;
+  width: auto;
+  max-width: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--eq-drawer-row-py) var(--eq-drawer-row-px);
+  margin: 0;
+  border: none;
+  background: transparent;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-row--split .eq-drawer-row-link--btn {
+  width: auto;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-row--split:not(.eq-drawer-row--has-flyout)::after {
+  content: "";
+  display: block;
+  grid-column: 2;
+  grid-row: 1;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-row--split .eq-drawer-row-chev-btn {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-width: 0;
+  padding: var(--eq-drawer-row-py) 10px;
+  margin: 0;
+  border: none;
+  border-left: 1px solid var(--eq-border-soft, #e8e8e8);
+  background: transparent;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-row--split:hover .eq-drawer-row-link,
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-row--split:hover .eq-drawer-row-chev-btn,
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-row--split.eq-drawer-row--active .eq-drawer-row-link,
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-row--split.eq-drawer-row--active .eq-drawer-row-chev-btn {
+  background: transparent;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-row--split:hover,
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-row--split.eq-drawer-row--active {
+  background: var(--eq-topnav-active-bg, #f0f4fa);
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-mcat-list--amazon .eq-drawer-row-ico {
+  display: none !important;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-mcat-list--amazon .eq-drawer-row--active {
+  background: var(--eq-topnav-active-bg, #f0f4fa);
+}
+/* Yaprak satır: › yalnızca .eq-drawer-row--has-flyout (nav.js); grid ::after hizasına dokunma */
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-row:not(.eq-drawer-row--has-flyout) .eq-drawer-row-chev {
+  display: none !important;
+}
+/* Eski story kare ızgarası (artık kullanılmıyor) */
+.cat-drawer.eq-drawer-amazon-shell .eq-mcat-list--squares {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  gap: 12px 10px;
+  padding: 10px 8px 14px;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-mcat-list--squares > .eq-mcat-row-li--square {
+  flex: 0 0 auto;
+  width: 144px;
+  margin: 0;
+  padding: 0;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-mcat-list--squares > .eq-mcat-row-li--markalar-hdr,
+.cat-drawer.eq-drawer-amazon-shell .eq-mcat-list--squares > .eq-mcat-row-li--markalar {
+  width: 100%;
+  flex: 0 0 100%;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-mcat-square {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: none;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-mcat-square.eq-drawer-row--link {
+  color: inherit;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-mcat-square:hover {
+  background: transparent;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-mcat-square__ring {
+  --mx-mcat-sq-r: 31px;
+  width: 119px;
+  height: 119px;
+  margin: 0 auto 10px;
+  border-radius: var(--mx-mcat-sq-r);
+  padding: 3px;
+  background: linear-gradient(135deg, #001e50, #c5a455);
+  box-sizing: border-box;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-mcat-square__ring-in {
+  width: 100%;
+  height: 100%;
+  border-radius: calc(var(--mx-mcat-sq-r) - 3px);
+  background: center / cover #eef2f8;
+  border: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+  line-height: 1;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-mcat-square__ring img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: calc(var(--mx-mcat-sq-r) - 3px);
+  border: 2px solid #fff;
+  box-sizing: border-box;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-mcat-square__lbl {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--eq-text);
+  white-space: normal;
+  padding: 0 2px;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-mcat-square--active .eq-mcat-square__ring {
+  box-shadow: 0 0 0 2px var(--eq-text);
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-mcat-square .eq-drawer-row-chev,
+.cat-drawer.eq-drawer-amazon-shell .eq-mcat-square .eq-drawer-row-label {
+  display: none;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-column--mega .eq-drawer-column-body .eq-mcat-square.eq-drawer-row {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-sizing: border-box;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-column--mega .eq-drawer-column-body .eq-mcat-square.eq-drawer-row:hover,
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-column--mega .eq-drawer-column-body .eq-mcat-square.eq-drawer-row.eq-drawer-row--active {
+  border-radius: 0;
+  background: transparent;
+  border-color: transparent;
+}
+/* Kök listede «Markalarımız» — görünür metin i18n; vurgulu üst şerit */
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-row-label--markalar {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--eq-text);
+}
+/* Markalarımız: yan drill yok; markalar kök satırının altında akordeon */
+.cat-drawer.eq-drawer-amazon-shell .eq-mcat-row-li--markalar {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-row--markalar-accordion {
+  width: 100%;
+  text-align: left;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-row-chev--markalar-accordion {
+  display: inline-block;
+  transition: transform 0.15s ease;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-mcat-markalar-open .eq-drawer-row-chev--markalar-accordion {
+  transform: rotate(90deg);
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-mcat-markalar-inline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 0;
+  padding: 0 0 4px;
+  border-bottom: 1px solid var(--eq-border-soft);
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-mcat-markalar-inline[hidden] {
+  display: none !important;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-markalar-hdr {
+  padding: 6px 12px 4px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--eq-text-muted);
+  cursor: default;
+  border-top: 1px solid var(--eq-border-soft);
+  margin-top: 4px;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-row--markalar-inline {
+  padding: 5px 12px 5px 28px;
+  font-weight: 500;
+  border-top: 1px solid var(--eq-border-soft);
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-row--markalar-inline:first-of-type {
+  border-top: none;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-row--markalar-inline .eq-drawer-row-label {
+  white-space: normal;
+}
+/* #eq-filter-brands içeren .eq-filter-sec: yalnızca JS/buildBrands için; kök sütunda gösterme */
+#eq-drawer-markalar-sec-host.eq-drawer-markalar-sec-host {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  pointer-events: none;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-mcat-list > .eq-mcat-row-li {
+  margin: 0;
+  padding: 0;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-mcat-column-body > .eq-mcat-section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--eq-text);
+  margin: 4px 12px 6px;
+  line-height: 1.25;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-mcat-column-body > .eq-mcat-section-sub {
+  font-size: 12px;
+  color: var(--eq-text-secondary);
+  margin: 0 12px 10px;
+  line-height: 1.35;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-mcat-column-body > .eq-filter-sec {
+  margin: 10px 12px 10px;
+  padding: 12px 0 0;
+  border-top: 1px solid var(--eq-border-soft);
+  border-bottom: none;
+  background: transparent;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-mcat-column-body > .eq-filter-sec .eq-filter-sec-lbl--markalarimiz {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--eq-text);
+  margin: 0 0 8px;
+  padding: 0;
+  border: none;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-mcat-column-body > .eq-filter-sec .eq-filter-brands {
+  max-height: min(200px, 30vh);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-mcat-column-body > .eq-filter-sec .eq-filter-brands::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+.eq-drawer-amazon-shell .eq-drawer-megahdr {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  padding: 12px 14px 10px;
+  border-bottom: 1px solid var(--eq-border-soft);
+  background: var(--eq-surface);
+}
+@media (max-width: 768px) {
+  body.eq-shop:not(.admin-app):not(.bd-page)
+    .cat-drawer.eq-drawer-amazon-shell
+    #eq-drawer-mega-row:not(.eq-drawer-mega-row--at-root)
+    .eq-drawer-megahdr {
+    display: flex;
+  }
+}
+.eq-drawer-amazon-shell .eq-drawer-megahdr-back {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  background: var(--eq-surface-2, #f0f0f0);
+  color: var(--eq-text);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+}
+.eq-drawer-amazon-shell .eq-drawer-megahdr-back:hover {
+  background: var(--eq-surface-3, #e8e8e8);
+}
+.eq-drawer-amazon-shell .eq-drawer-megahdr-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--eq-text);
+  line-height: 1.25;
+}
+/* Dar sütunlarda başlık taşmasın */
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-megahdr-title {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.eq-drawer-amazon-shell .eq-drawer-column-body {
+  flex: 1;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 6px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-column-body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+/* Mega sütun: varsayılan düz liste; seçim / hover gelince pill + hafif çerçeve */
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-column--mega .eq-drawer-column-body .eq-drawer-row {
+  width: calc(100% - 24px);
+  max-width: 100%;
+  margin: 0 12px 4px;
+  padding: var(--eq-drawer-row-py) var(--eq-drawer-row-px);
+  border: 1px solid transparent;
+  border-bottom: none;
+  border-radius: 0;
+  background: transparent;
+  box-sizing: border-box;
+  line-height: 1.25;
+  transition: background 0.08s ease, border-color 0.08s ease;
+}
+/* Mega drill: yaprak satır — split ile aynı 2 sütun (sağda boş › yuvası) */
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-column--mega .eq-drawer-column-body .eq-drawer-row--split {
+  padding: 0;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-column--mega .eq-drawer-column-body .eq-drawer-row--btn {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) var(--eq-drawer-chev-slot);
+  align-items: stretch;
+  padding: 0;
+  justify-content: stretch;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-column--mega .eq-drawer-column-body .eq-drawer-row--btn .eq-drawer-row-label {
+  grid-column: 1;
+  grid-row: 1;
+  display: block;
+  padding: var(--eq-drawer-row-py) var(--eq-drawer-row-px);
+  text-align: left;
+  min-width: 0;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-column--mega .eq-drawer-column-body .eq-drawer-row--btn::after {
+  content: "";
+  display: block;
+  grid-column: 2;
+  grid-row: 1;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-column--mega .eq-drawer-column-body .eq-drawer-row--split .eq-drawer-row-link,
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-column--mega .eq-drawer-column-body .eq-drawer-row--split .eq-drawer-row-chev-btn {
+  padding-top: var(--eq-drawer-row-py);
+  padding-bottom: var(--eq-drawer-row-py);
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-column--mega .eq-drawer-column-body .eq-drawer-row-label {
+  text-align: left;
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-column--mega .eq-drawer-column-body .eq-drawer-row:hover {
+  border-radius: 999px;
+  background: var(--eq-drawer-pill-bg-hover, #eceef2);
+  border-color: color-mix(in srgb, var(--eq-topnav-dept-bg, #001e50) 12%, transparent);
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-column--mega .eq-drawer-column-body .eq-drawer-row:focus-visible {
+  outline: 2px solid var(--eq-topnav-dept-bg, #001e50);
+  outline-offset: 2px;
+  border-radius: 999px;
+  background: var(--eq-drawer-pill-bg-hover, #eceef2);
+  border-color: color-mix(in srgb, var(--eq-topnav-dept-bg, #001e50) 14%, transparent);
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-column--mega .eq-drawer-column-body .eq-drawer-row.eq-drawer-row--active {
+  border-radius: 999px;
+  background: var(--eq-drawer-pill-bg, #f0f2f5);
+  border-color: color-mix(in srgb, var(--eq-topnav-dept-bg, #001e50) 14%, transparent);
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-column--mega .eq-drawer-column-body .eq-drawer-row.eq-drawer-row--active:hover {
+  background: var(--eq-drawer-pill-bg-active, #e2e6ee);
+  border-color: color-mix(in srgb, var(--eq-topnav-dept-bg, #001e50) 18%, transparent);
+}
+.cat-drawer.eq-drawer-amazon-shell .eq-drawer-column--mega .eq-drawer-column-body .eq-drawer-row-chev {
+  color: var(--eq-topnav-dept-bg, #001e50);
+  opacity: 0.82;
+  font-weight: 600;
+}
+.eq-drawer-amazon-shell .eq-drawer-row.eq-drawer-megadept {
+  font-weight: 600;
+}
+.eq-drawer-amazon-shell .eq-drawer-sec {
+  border-top: 8px solid var(--eq-surface-2, #f0f0f0);
+}
+.eq-drawer-amazon-shell .eq-drawer-sec:first-child {
+  border-top: none;
+}
+.eq-drawer-amazon-shell .eq-drawer-sec-h {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--eq-text-secondary);
+  padding: 14px 18px 8px;
+  background: var(--eq-surface);
+}
+.eq-drawer-amazon-shell .eq-drawer-marca-list {
+  background: var(--eq-surface);
+}
+.eq-drawer-amazon-shell .eq-drawer-marca-name {
+  padding: 10px 18px;
+  font-size: 13px;
+  line-height: 1.35;
+  color: var(--eq-text-secondary);
+  border-bottom: 1px solid var(--eq-border-soft);
+}
+.eq-drawer-amazon-shell .eq-drawer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px 18px;
+  font-size: 15px;
+  line-height: 1.35;
+  color: var(--eq-text);
+  border: none;
+  border-bottom: 1px solid var(--eq-border-soft);
+  background: var(--eq-surface);
+  text-align: left;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+.eq-drawer-amazon-shell a.eq-drawer-row--link {
+  color: inherit;
+}
+.eq-drawer-amazon-shell .eq-drawer-row:hover {
+  background: var(--eq-surface-3, #f5f5f5);
+}
+.eq-drawer-amazon-shell .eq-drawer-row-label {
+  flex: 1;
+  min-width: 0;
+}
+.eq-drawer-amazon-shell .eq-drawer-row-chev {
+  flex-shrink: 0;
+  font-size: 14px;
+  color: var(--eq-text-subtle);
+  opacity: 0.75;
+}
+.eq-drawer-amazon-shell .eq-drawer-row-chev--expand {
+  font-size: 18px;
+  line-height: 1;
+  color: var(--eq-text-muted);
+  opacity: 0.9;
+}
+.eq-drawer-amazon-shell .eq-drawer-row-ico {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  line-height: 1;
+  border-radius: 10px;
+  background: var(--eq-surface-2, #f0f2f5);
+  border: 1px solid var(--eq-border-soft, #e8e8e8);
+  box-sizing: border-box;
+}
+html[data-theme="dark"] .eq-drawer-amazon-shell .eq-drawer-row-ico {
+  background: var(--eq-surface-3);
+  border-color: var(--eq-border);
+}
+/* Amazon TR — «Kategoriye göre alışveriş»: başlık cümle stili */
+.eq-drawer-amazon-shell .eq-drawer-sec--shop > .eq-drawer-sec-h--plp {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-transform: none;
+  color: var(--eq-text);
+  padding: 18px 18px 10px;
+  line-height: 1.25;
+}
+@media (max-width: 768px) {
+  .cat-drawer.eq-drawer-amazon-shell .eq-drawer-sec--shop {
+    background: #f3f4f6;
+    border-top: 8px solid #f3f4f6;
+  }
+  .cat-drawer.eq-drawer-amazon-shell .eq-drawer-sec--shop > .eq-drawer-sec-h--plp {
+    background: #f3f4f6;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .cat-drawer.eq-drawer-amazon-shell .eq-drawer-sec--shop > a.eq-drawer-row,
+  .cat-drawer.eq-drawer-amazon-shell .eq-drawer-sec--shop > button.eq-drawer-row {
+    border: 1px solid #d5d9d9;
+    border-radius: 10px;
+    margin: 0 12px 10px;
+    padding: 12px 14px;
+    min-height: 52px;
+    box-shadow: 0 1px 2px rgba(15, 17, 17, 0.06);
+    border-bottom: 1px solid #d5d9d9;
+  }
+  .cat-drawer.eq-drawer-amazon-shell .eq-drawer-sec--shop > a.eq-drawer-row:last-child,
+  .cat-drawer.eq-drawer-amazon-shell .eq-drawer-sec--shop > button.eq-drawer-row:last-child {
+    margin-bottom: 16px;
+  }
+  .cat-drawer.eq-drawer-amazon-shell .eq-drawer-sec--shop .eq-drawer-row-ico {
+    width: 46px;
+    height: 46px;
+    font-size: 24px;
+  }
+}
+html[data-theme="dark"] .cat-drawer.eq-drawer-amazon-shell .eq-drawer-sec--shop {
+  background: var(--eq-bg-page);
+  border-top-color: var(--eq-bg-page);
+}
+html[data-theme="dark"] .cat-drawer.eq-drawer-amazon-shell .eq-drawer-sec--shop > .eq-drawer-sec-h--plp {
+  background: var(--eq-bg-page);
+}
+html[data-theme="dark"] .cat-drawer.eq-drawer-amazon-shell .eq-drawer-sec--shop > a.eq-drawer-row,
+html[data-theme="dark"] .cat-drawer.eq-drawer-amazon-shell .eq-drawer-sec--shop > button.eq-drawer-row {
+  border-color: var(--eq-border);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+.eq-drawer-amazon-shell .eq-drawer-row--back {
+  background: var(--eq-surface-2, #f5f5f5);
+  font-weight: 600;
+  font-size: 14px;
+  border-bottom: 1px solid var(--eq-border);
+}
+.eq-drawer-amazon-shell .eq-drawer-row-back {
+  color: var(--eq-text);
+}
+.eq-drawer-amazon-shell .eq-drawer-panel-title {
+  padding: 10px 18px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--eq-text-secondary);
+  border-bottom: 1px solid var(--eq-border-soft);
+  background: var(--eq-surface);
+}
+.eq-drawer-amazon-shell .eq-drawer-dept-all {
+  display: block;
+  padding: 12px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--eq-accent-gold, #9a6f2a);
+  border-bottom: 1px solid var(--eq-border-soft);
+  text-decoration: none;
+}
+.eq-drawer-amazon-shell .eq-drawer-dept-all:hover {
+  text-decoration: underline;
+}
+.eq-amazon-shop-all .cat-drawer-head {
+  padding: 16px 18px;
+  min-height: 52px;
+  box-sizing: border-box;
+}
+.eq-amazon-shop-all .cat-drawer-item,
+.eq-amazon-shop-all a.cat-drawer-item {
+  padding: 14px 18px;
+  font-size: 14px;
+  line-height: 1.35;
+  border-bottom: 1px solid var(--eq-border-soft);
+}
+.eq-amazon-shop-all .eq-drawer-subitem {
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.sb-cat {
+  position: relative;
+  overflow: visible;
+}
+.sb-cat-label {
+  display: inline-block;
+}
+/* Kategori adı gerçek link (orta tık / URL); satır hâlâ .sb-cat-hdr */
+a.sb-cat-catlink {
+  flex: 1;
+  min-width: 0;
+  color: inherit;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+/* Mobil çekmece: başlık linki + › ile alt dal açma */
+a.cat-drawer-link {
+  flex: 1;
+  min-width: 0;
+  color: inherit;
+  text-decoration: none;
+}
+a.cat-drawer-item {
+  text-decoration: none;
+  color: inherit;
+}
+.cat-drawer-chev-toggle {
+  cursor: pointer;
+  user-select: none;
+  flex-shrink: 0;
+  font-size: 10px;
+  color: var(--eq-text-subtle);
+  position: relative;
+  z-index: 2;
+  padding: 10px 14px;
+  margin: -10px -8px -10px 0;
+  line-height: 1;
+}
+
+/* Çekmece içi alt paneller: yalnızca .eq-drawer-sub--visible iken görünsün (inline style çakışması olmasın) */
+.cat-drawer .eq-drawer-sub:not(.eq-drawer-sub--visible) {
+  display: none !important;
+}
+.cat-drawer .eq-drawer-sub.eq-drawer-sub--visible {
+  display: block !important;
+}
+
+.eq-drawer-sub-label {
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+}
+button.eq-drawer-sub-label {
+  font: inherit;
+}
+.sb-cat-hdr.has-children::after {
+  content: "";
+}
+.sb-cat-toggle {
+  margin-left: auto;
+  color: var(--eq-text-subtle);
+  font-size: 11px;
+  padding-left: 6px;
+  flex-shrink: 0;
+  display: inline-flex !important;
+  opacity: 0.75;
+}
+.sb-subarrow {
+  display: inline-flex !important;
+  flex-shrink: 0;
+  font-size: 10px;
+  opacity: 0.8;
+}
+
+/* Birinci seviye: başlığın sağına panel */
+.sb-sublist {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  /* Üst satırdan sağ panele geçerken kısa süreli boşlukta mouseleave tetiklenmesin */
+  margin-left: -8px;
+  padding-left: 8px;
+  min-width: 218px;
+  max-width: min(280px, 55vw);
+  background: var(--eq-surface);
+  border: 1px solid var(--eq-border);
+  border-radius: 0 6px 6px 6px;
+  box-shadow: 4px 8px 24px rgba(0, 0, 0, 0.12);
+  /* Sidebar içinde diğer satırların üstüne; sayfa içeriğinden ayrı tutulur (sidebar z-index:55) */
+  z-index: 80;
+  overflow: visible;
+  box-sizing: border-box;
+  /* İlk/son satırın üst veya alt kenarda kırpılmasını önler */
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+html[data-theme="dark"] .sb-sublist {
+  box-shadow: 4px 10px 28px rgba(0, 0, 0, 0.45);
+}
+.sb-cat.open > .sb-sublist {
+  display: block;
+}
+
+/* Kategori satırı ile aynı hizada dursun; üst kenarda kırpma olmasın */
+.sb-cat > .sb-sublist.depth-1 {
+  top: 2px;
+}
+
+.sb-subwrap {
+  position: relative;
+}
+.sb-subitem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  font-size: 11px;
+  line-height: 1.35;
+  color: var(--eq-text-secondary);
+  border-bottom: 1px solid var(--eq-border-soft);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.sb-subitem:hover {
+  background: var(--eq-surface-2);
+  color: var(--eq-text);
+}
+.sb-subitem.has-children .sb-subarrow {
+  margin-left: auto;
+  color: var(--eq-text-subtle);
+  font-size: 11px;
+}
+.sb-subarrow {
+  margin-left: auto;
+}
+
+/* İç içe: her seviye bir üst satırın sağında */
+.sb-sublist.depth-2,
+.sb-sublist.depth-3 {
+  left: 100%;
+  top: 0;
+  margin-top: 0;
+}
+.sb-subwrap.open > .sb-sublist {
+  display: block;
+  /* Aynı listedeki diğer .sb-subwrap satırlarının üstünde */
+  z-index: 100;
+}
+
+/* Tema (açık / koyu): yalnızca mobil — geniş ekranda gizli */
+.theme-wrap {
+  display: none !important;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding-right: 0;
+  border-right: none;
+}
+
+@media (max-width: 768px) {
+  .theme-wrap {
+    display: flex !important;
+  }
+}
+
+/* Kategori sayfaları: ürünler sağdan sola, satırda 5 adet (desktop) */
+.main .products {
+  /* 5'li görünüm: kartlar ezilmesin diye minimum genişlik ver */
+  grid-template-columns: repeat(5, minmax(170px, 1fr)) !important;
+  direction: rtl;
+  justify-content: end;
+  width: 100%;
+}
+body.eq-shop .main .products {
+  gap: 12px !important;
+}
+.main .products .prod-card {
+  direction: ltr;
+  border-radius: 8px;
+  position: relative;
+}
+
+/* Hover’da çerçeve rengi oynamasın — renk silüeti öne çıksın */
+.main .products .prod-card:hover {
+  border-color: var(--eq-border) !important;
+}
+
+/*
+ * Renk silüeti: yalnızca arka plan.
+ * --eq-prod-tint-* hem .prod-card hem .prod-img / .prod-info üzerinde set edilir (JS).
+ * background-image: sayfa shorthand’inin üstüne daha yüksek özgüllükle gelir; <img> üstte kalır.
+ */
+.main .products .prod-card .prod-img {
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tam görsel: kırpma yok; kart içinde ortalanmış letterbox (inline width/height üstüne) */
+.main .products .prod-card .prod-img img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+  object-position: center;
+}
+
+.main .products .prod-card .prod-info {
+  position: relative;
+}
+
+.main .products .prod-card.eq-prod-tint-active .prod-img {
+  background-image: radial-gradient(
+    125% 88% at 50% 45%,
+    var(--eq-prod-tint-glow, transparent) 0%,
+    var(--eq-prod-tint-mid, transparent) 52%,
+    var(--eq-prod-tint-fade, transparent) 100%
+  );
+}
+
+/* TODO: yalnızca .prod-img arkası; .prod-info renkten çıkarılacak (kullanıcı notu). */
+.main .products .prod-card.eq-prod-tint-active .prod-info {
+  background-image: linear-gradient(
+    185deg,
+    var(--eq-prod-tint-bar, transparent) 0%,
+    var(--eq-prod-tint-mid, transparent) 58%,
+    transparent 100%
+  );
+}
+
+/* Kategori sayfaları: üstteki alt-kategori şeridini (chip bar) kapat */
+.subcat-chips {
+  display: none !important;
+}
+
+/* Mobil: kategori sayfalarındaki ürün grid’i (sayfa stillerinden sonra gelen !important) */
+@media (max-width: 900px) {
+  .main .products {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+@media (max-width: 560px) {
+  .main .products {
+    grid-template-columns: 1fr !important;
+  }
+  .breadcrumb {
+    font-size: 10px;
+    padding: 8px 12px;
+  }
+}
+
+/* Vitrin araç çubuğu — Amazon benzeri yumuşak «secondary» düğmeler */
+body.eq-shop .main .main-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+body.eq-shop .main .filter-btn {
+  border-radius: 8px;
+  min-height: 36px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid #d5d9d9;
+  background: linear-gradient(180deg, #f7f8f8 0%, #eceded 100%);
+  box-shadow: 0 1px 1px rgba(15, 17, 17, 0.06);
+  cursor: pointer;
+  color: var(--eq-text);
+  -webkit-tap-highlight-color: transparent;
+}
+body.eq-shop .main .filter-btn:hover {
+  background: linear-gradient(180deg, #ffffff 0%, #f2f3f3 100%);
+  border-color: #c7cbcb;
+}
+html[data-theme="dark"] body.eq-shop .main .filter-btn {
+  background: var(--eq-surface-2);
+  border-color: var(--eq-border);
+  box-shadow: none;
+}
+
+/* Header: üye girişi (tüm sayfalarda theme.css yüklü) */
+a.eq-hdr-account {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+a.eq-hdr-account:hover .eq-hdr-account-title {
+  text-decoration: underline;
+}
+
+/* Wordmark: equsto-logo.js → /images/equsto-logo.png; .logo--text = metin yedek */
+a.logo,
+button.auth-logo {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  text-decoration: none;
+  color: var(--eq-text);
+  -webkit-tap-highlight-color: transparent;
+}
+
+a.logo.logo--text {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+a.logo.logo--text span {
+  display: inline-block;
+  border-bottom: 2px solid var(--eq-logo-rule);
+  line-height: 1;
+}
+
+button.auth-logo {
+  justify-content: center;
+}
+
+.eq-logo-svg,
+.eq-logo-wordmark {
+  display: block;
+  height: 18px;
+  width: auto;
+  max-width: 100%;
+  shape-rendering: geometricPrecision;
+}
+
+header.hdr > a.logo .eq-logo-svg,
+header.hdr > a.logo .eq-logo-wordmark {
+  height: clamp(22px, 2.6vw, 34px);
+  max-width: min(200px, 42vw);
+}
+
+.eq-logo-img {
+  display: block;
+  height: clamp(22px, 2.6vw, 34px);
+  width: auto;
+  max-width: min(200px, 42vw);
+  object-fit: contain;
+  object-position: left center;
+}
+
+/* Besos .bd-hdr-wordmark ile aynı ölçek — tüm header.wordmark */
+header.hdr > a.logo .eq-logo-img,
+a.bd-hdr-wordmark .eq-logo-img,
+a.bd-hdr-wordmark .eq-logo-svg {
+  height: clamp(22px, 2.6vw, 34px);
+  max-width: min(200px, 42vw);
+}
+
+/* Koyu bant: equsto-logo.js → equsto-logo-white.png (eski invert şeffaf PNG’de beyaz kutu yapıyordu) */
+header.hdr > a.logo .eq-logo-img,
+body.bd-page.besos .bd-hdr-wordmark .eq-logo-img {
+  filter: none !important;
+}
+
+/* Şeffaf zemin; çizgi ve yazı = a.logo / button.auth-logo → color: var(--eq-text) */
+.eq-logo-svg .eq-logo-e-bar {
+  fill: currentColor;
+}
+
+.eq-logo-svg .eq-logo-q,
+.eq-logo-svg .eq-logo-letter {
+  stroke: currentColor;
+  fill: none;
+}
+
+.eq-logo-svg .eq-logo-word {
+  fill: currentColor;
+  font-family: Rajdhani, system-ui, -apple-system, sans-serif;
+  font-weight: 500;
+}
+
+/* Üst bant (#001e50 vb.) üzerinde wordmark hep beyaz */
+header.hdr > a.logo .eq-logo-svg .eq-logo-e-bar {
+  fill: #ffffff;
+}
+header.hdr > a.logo .eq-logo-svg .eq-logo-q circle,
+header.hdr > a.logo .eq-logo-svg .eq-logo-q line,
+header.hdr > a.logo .eq-logo-svg .eq-logo-letter,
+header.hdr > a.logo .eq-logo-svg path,
+header.hdr > a.logo .eq-logo-svg > circle {
+  stroke: #ffffff;
+}
+
+header:not(.hdr) a.logo .eq-logo-svg .eq-logo-e-bar {
+  fill: #ffffff;
+}
+header:not(.hdr) a.logo .eq-logo-svg .eq-logo-q circle,
+header:not(.hdr) a.logo .eq-logo-svg .eq-logo-q line,
+header:not(.hdr) a.logo .eq-logo-svg .eq-logo-letter,
+header:not(.hdr) a.logo .eq-logo-svg path,
+header:not(.hdr) a.logo .eq-logo-svg > circle {
+  stroke: #ffffff;
+}
+
+/* Katalog: sol filtre/kategori sütunu — kaydırırken yapışkan (sticky) kalsın */
+.body:has(aside.eq-filter-col) {
+  align-items: stretch;
+}
+.eq-filter-col {
+  width: 200px;
+  min-width: 176px;
+  max-width: 228px;
+  flex-shrink: 0;
+  border-right: 1px solid var(--eq-border);
+  background: var(--eq-surface-2);
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  position: -webkit-sticky;
+  position: sticky;
+  top: var(--eq-filter-col-sticky-top, 92px);
+  max-height: var(--eq-filter-col-sticky-max-h, calc(100vh - 96px));
+  z-index: 48;
+  /* overflow-y:auto sağa açılan panelleri kırpar; flyout’lar sağ kolon üstüne taşsın */
+  overflow: visible;
+}
+.eq-filter-col-hd {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--eq-text-subtle);
+  padding: 12px 12px 8px;
+  border-bottom: 1px solid var(--eq-border-soft);
+}
+
+.eq-filter-drawer-trigger-wrap {
+  padding: 10px 10px 8px;
+  border-bottom: 1px solid var(--eq-border-soft);
+}
+button.eq-filter-cat-drawer-trigger {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: 1px solid var(--eq-border);
+  border-radius: 10px;
+  background: var(--eq-surface);
+  color: var(--eq-text);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+}
+button.eq-filter-cat-drawer-trigger:hover {
+  background: var(--eq-hover, #f3f5fa);
+  border-color: var(--eq-border);
+}
+.eq-filter-cat-drawer-trigger-ico {
+  font-size: 16px;
+  line-height: 1;
+  opacity: 0.85;
+}
+.eq-filter-cat-drawer-trigger-txt {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Sol sütun: nav.js ile doldurulan tam kategori ağacı (çekmece ile aynı veri) */
+.eq-filter-col > nav.sidebar#eq-sidebar {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 4px 6px 10px 8px;
+  margin: 0;
+  border-bottom: 1px solid var(--eq-border-soft);
+  border-right: none;
+  /* Sayfa içi .sidebar{min-width:220px} sütunu şişirmesin; flyout sağa taşsın */
+  overflow: visible !important;
+}
+
+.eq-filter-col .sb-cat-hdr {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.35;
+  cursor: pointer;
+  background: var(--eq-surface);
+  user-select: none;
+  border-bottom: 1px solid var(--eq-border-soft);
+}
+.eq-filter-col .sb-cat-hdr:hover,
+.eq-filter-col .sb-cat-hdr.active {
+  background: var(--eq-topnav-active-bg, var(--eq-hover));
+}
+
+/* Kategori satırı: alt paneller yalnızca sağa (mutlak konum), aşağı iterek genişlemez */
+.eq-filter-col .sb-cat {
+  position: relative;
+  overflow: visible;
+}
+.eq-filter-col .sb-subwrap {
+  position: relative;
+  overflow: visible;
+}
+
+.eq-filter-col .sb-sublist {
+  left: 100%;
+  margin-left: -8px;
+  padding-left: 8px;
+  right: auto;
+}
+
+/* Vitrin (eq-refine-amazon): #eq-sidebar DOM’da kalır ama display:none; .pg için overflow-x:visible
+   yanlışlıkla tüm yatay taşmayı serbest bırakıp sayfayı sağa kaydırırdı — yalnızca gerçekten
+   açık kategori ağacı olan düzenlerde (ileride) ayrıca sınıf ile açılabilir. */
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-filter-col > nav.sidebar#eq-sidebar {
+  display: none !important;
+  border-bottom: none !important;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-filter-col #eq-sidebar .sb-cat {
+  max-width: 100%;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-filter-col #eq-sidebar .sb-sublist {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  margin-left: -8px;
+  padding-left: 8px;
+}
+/* «Markalarımız» çekmecede olduğunda aside yalnızca gizli #eq-sidebar kalır — boş beyaz sol sütunu kaldır */
+body.eq-shop:not(.admin-app):not(.bd-page) aside#eq-filter-col:not(:has(> .eq-filter-sec)),
+body.eq-shop:not(.admin-app):not(.bd-page).eq-filter-aside-empty aside#eq-filter-col {
+  display: none !important;
+}
+.eq-filter-sec {
+  padding: 10px 12px 12px;
+  border-bottom: 1px solid var(--eq-border-soft);
+}
+.eq-filter-top-sec--hidden {
+  display: none !important;
+}
+.eq-filter-sec-lbl {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--eq-text-secondary);
+  margin-bottom: 8px;
+}
+/* «Markalarımız»: referans iş ortakları (filtre dışı; eq-filter-column.js doldurur) */
+.eq-filter-ref-brands {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 0 0 10px;
+  padding: 0 0 10px;
+  border-bottom: 1px solid var(--eq-border-soft);
+}
+a.eq-filter-ref-row,
+a.eq-filter-brand-btn {
+  text-decoration: none;
+  color: inherit;
+}
+a.eq-filter-ref-row:hover,
+a.eq-filter-brand-btn:hover {
+  text-decoration: underline;
+}
+.eq-filter-ref-row {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--eq-text-muted);
+  line-height: 1.35;
+  padding: 4px 0;
+}
+.eq-filter-col.eq-refine-amazon .eq-filter-ref-brands {
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom-color: var(--eq-border-soft);
+}
+.eq-filter-col.eq-refine-amazon .eq-filter-ref-row {
+  padding: 7px 2px 7px 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--eq-text);
+  line-height: 1.35;
+}
+
+.eq-filter-brands {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: min(320px, 42vh);
+  overflow-y: auto;
+  padding-right: 2px;
+}
+.eq-filter-brand-btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-size: 11px;
+  line-height: 1.25;
+  padding: 6px 8px;
+  border: 1px solid var(--eq-border);
+  border-radius: 6px;
+  background: var(--eq-surface);
+  color: var(--eq-text);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.eq-filter-brand-btn:hover {
+  background: var(--eq-surface-3);
+}
+.eq-filter-brand-btn.active {
+  border-color: var(--eq-logo-rule);
+  font-weight: 600;
+  background: var(--eq-surface);
+}
+.eq-filter-clear {
+  margin-top: auto;
+  font-size: 11px;
+  padding: 10px 12px;
+  border: none;
+  border-top: 1px solid var(--eq-border-soft);
+  background: transparent;
+  color: var(--eq-accent-gold);
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+}
+.eq-filter-clear:hover {
+  text-decoration: underline;
+}
+.eq-filter-cat-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.eq-filter-cat-chip {
+  font-size: 11px;
+  padding: 6px 10px;
+  border: 1px solid var(--eq-border);
+  border-radius: 8px;
+  background: var(--eq-surface);
+  color: var(--eq-text);
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+}
+.eq-filter-cat-chip:hover {
+  background: var(--eq-surface-3);
+}
+.eq-filter-cat-chip.active {
+  font-weight: 600;
+  border-color: var(--eq-logo-rule);
+  background: var(--eq-surface);
+}
+.eq-filter-chip-wrap.eq-pisirme-chips {
+  margin-bottom: 0;
+}
+
+/* Sol refine sütunu — Amazon PLP düzeni (boşluk/kenarlık ritmi) */
+.eq-filter-col.eq-refine-amazon {
+  width: 232px;
+  min-width: 208px;
+  max-width: 260px;
+  top: var(--eq-filter-col-sticky-top, 92px);
+  max-height: var(--eq-filter-col-sticky-max-h, calc(100vh - 96px));
+  border-radius: 0;
+  padding-bottom: 4px;
+}
+body.eq-shop .eq-filter-col.eq-refine-amazon {
+  background: var(--eq-surface);
+  border-right: none;
+  box-shadow: inset -1px 0 0 var(--eq-border-soft);
+}
+.eq-filter-col.eq-refine-amazon .eq-filter-col-hd {
+  padding: 16px 14px 12px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--eq-text);
+  border-bottom: 1px solid var(--eq-border);
+}
+.eq-filter-col.eq-refine-amazon .eq-filter-sec {
+  padding: 12px 14px 14px;
+}
+.eq-filter-col.eq-refine-amazon .eq-filter-sec-lbl {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.eq-filter-col.eq-refine-amazon .eq-filter-sec-lbl.eq-filter-sec-lbl--markalarimiz {
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-size: 11px;
+}
+.eq-filter-col.eq-refine-amazon .eq-filter-brand-btn {
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid var(--eq-border-soft);
+  padding: 8px 2px 8px 0;
+  background: transparent;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--eq-text);
+}
+.eq-filter-col.eq-refine-amazon .eq-filter-brand-btn:hover {
+  background: transparent;
+  text-decoration: underline;
+  color: var(--eq-text);
+}
+.eq-filter-col.eq-refine-amazon .eq-filter-brand-btn.active {
+  font-weight: 800;
+  border-bottom-color: var(--eq-logo-rule);
+  text-decoration: none;
+  color: var(--eq-text);
+}
+.eq-filter-col.eq-refine-amazon .eq-filter-cat-chip {
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid var(--eq-border-soft);
+  padding: 8px 2px 8px 0;
+  background: transparent;
+}
+.eq-filter-col.eq-refine-amazon .eq-filter-cat-chip:hover {
+  background: transparent;
+  text-decoration: underline;
+}
+.eq-filter-col.eq-refine-amazon .eq-filter-cat-chip.active {
+  font-weight: 700;
+  border-bottom-color: var(--eq-logo-rule);
+  text-decoration: none;
+}
+.eq-filter-col.eq-refine-amazon .eq-filter-clear {
+  padding: 12px 14px;
+  margin-top: 0;
+  border-top: 1px solid var(--eq-border);
+  font-size: 12px;
+}
+
+@media (max-width: 960px) {
+  :root {
+    --eq-filter-col-sticky-top: 80px;
+    --eq-filter-col-sticky-max-h: calc(100vh - 84px);
+  }
+  .eq-filter-col {
+    width: 168px;
+    min-width: 160px;
+  }
+  .eq-filter-col.eq-refine-amazon {
+    width: 172px;
+    min-width: 160px;
+    max-width: 186px;
+  }
+}
+
+/*
+ * Amazon.com marketplace kromu (vitrin/katalog: body.eq-shop, admin hariç).
+ * Telif: Amazon logosu / smile kopyalanmaz; üst şerit vitrinde Electrolux mavisi + nötr arama; departman şeridi açık antrasit (--eq-topnav-dept-strip-bg).
+ *
+ * KİLİT: vitrin-beyaz-zemin-KILIT.txt — bar-design (bd-page) hariç zemin her zaman beyaz;
+ * koyu tema / --eq-bg-neutral vitrine uygulanmaz. Açık yazılı talimat olmadan değiştirme.
+ */
+body.eq-shop:not(.admin-app):not(.bd-page) {
+  background: #ffffff !important;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .pg {
+  flex: 0 1 auto;
+  align-self: center;
+  width: 100%;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-inline: auto;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) > nav.breadcrumb {
+  max-width: 1500px;
+  width: 100%;
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) > footer.footer {
+  max-width: 1500px;
+  width: 100%;
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .body {
+  background: #ffffff;
+  flex: 0 0 auto;
+  width: 100%;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .right-col,
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-filter-col {
+  background: #fff;
+}
+/* max-height ile kısa kalan sol sütunun altında koyu zemin şeridi görünmesin (zemin uzatması) */
+@media (min-width: 769px) {
+  body.eq-shop:not(.admin-app):not(.bd-page) aside#eq-filter-col.eq-filter-col {
+    isolation: isolate;
+  }
+  body.eq-shop:not(.admin-app):not(.bd-page) aside#eq-filter-col.eq-filter-col::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: 200vh;
+    background: inherit;
+    pointer-events: none;
+    z-index: 0;
+  }
+  body.eq-shop:not(.admin-app):not(.bd-page) aside#eq-filter-col.eq-filter-col > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+body.eq-shop:not(.admin-app):not(.bd-page) header.hdr {
+  background: var(--eq-topnav-dept-bg, #001e50) !important;
+  border-bottom: none !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+}
+body.eq-shop:not(.admin-app):not(.bd-page) header.hdr > a.logo.logo--text span {
+  border-bottom-color: rgba(255, 255, 255, 0.55) !important;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .srch {
+  border-radius: 4px !important;
+  overflow: hidden;
+  box-shadow: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  background: #fff !important;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .srch:focus-within {
+  border-color: rgba(255, 255, 255, 0.65) !important;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2) !important;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .srch-cat {
+  background: #eceef2 !important;
+  border-right: 1px solid #cfd6e4 !important;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .srch-btn,
+body.eq-shop:not(.admin-app):not(.bd-page) header.hdr button.srch-btn {
+  background: #eceef2 !important;
+  border-left: 1px solid #cfd6e4 !important;
+  color: var(--eq-topnav-dept-bg, #001e50) !important;
+  min-width: 46px;
+  padding: 8px 12px !important;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .srch-btn:hover,
+body.eq-shop:not(.admin-app):not(.bd-page) header.hdr button.srch-btn:hover {
+  background: #e0e4eb !important;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .eq-srch-ico {
+  color: var(--eq-topnav-dept-bg, #001e50);
+}
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) {
+  --eq-topnav-dept-strip-bg: #ffffff;
+  --eq-topnav-dept-text: #1a1a1a;
+  --eq-topnav-dept-border: #e5e5e5;
+  --eq-topnav-dept-hover: rgba(0, 30, 80, 0.06);
+  --eq-topnav-dept-sep: rgba(0, 0, 0, 0.2);
+}
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) header.hdr {
+  position: sticky;
+  top: 0;
+  z-index: 501 !important;
+}
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) nav.topnav,
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .topnav {
+  background: #ffffff !important;
+  border-bottom: 1px solid var(--eq-topnav-dept-border) !important;
+  top: var(--eq-hdr-sticky-h, 56px);
+  z-index: 500 !important;
+}
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .topnav-item {
+  color: var(--eq-topnav-dept-text, #1a1a1a) !important;
+}
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .topnav-item:hover {
+  background: var(--eq-topnav-dept-hover, rgba(0, 30, 80, 0.06)) !important;
+  color: var(--eq-topnav-dept-text, #1a1a1a) !important;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .topnav-item.topnav-besos:hover,
+body.eq-shop:not(.admin-app):not(.bd-page) .topnav-item.topnav-pfos:hover {
+  background: transparent !important;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .topnav-item.active {
+  box-shadow: inset 0 -2px 0 0 #febd69 !important;
+}
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .topnav-sep {
+  color: var(--eq-topnav-dept-sep, rgba(0, 0, 0, 0.2)) !important;
+}
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .topnav-hamburger span {
+  background: #1a1a1a;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .right-col > .breadcrumb:first-child {
+  display: none !important;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .cat-header {
+  background: #fff;
+  border-bottom: 1px solid #d5d9d9;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .main {
+  background: #ffffff;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .footer {
+  background: #ffffff;
+  color: #6b6b6b;
+  border-top: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  width: 100%;
+  flex: 0 0 auto;
+  position: relative;
+  z-index: 60;
+  padding: 6px 16px;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .footer .refs span,
+body.eq-shop:not(.admin-app):not(.bd-page) .footer > div:last-child {
+  color: #999;
+}
+/* KİLİT: koyu tema vitrinde de beyaz (bd-page hariç) */
+html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) {
+  background: #ffffff !important;
+  color: #1a1a1a;
+}
+html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) .pg,
+html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) .body {
+  background: #ffffff;
+}
+html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) .right-col,
+html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) .eq-filter-col {
+  background: #ffffff;
+}
+html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) .main {
+  background: #ffffff;
+}
+html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) .cat-header {
+  background: #ffffff;
+  border-bottom-color: #d5d9d9;
+}
+html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) .footer {
+  background: #ffffff !important;
+  color: #6b6b6b !important;
+  border-top-color: #e5e5e5 !important;
+}
+
+/* Proje Fabrikası — vitrin koyu kromundan ayrı; zemin her zaman açık/beyaz */
+body.eq-shop.eq-pfos,
+html[data-theme="dark"] body.eq-shop.eq-pfos {
+  background: #f5f7fb !important;
+  color: #2c2c2a;
+}
+body.eq-shop.eq-pfos .pg,
+html[data-theme="dark"] body.eq-shop.eq-pfos .pg,
+body.eq-shop.eq-pfos .body,
+html[data-theme="dark"] body.eq-shop.eq-pfos .body {
+  background: #ffffff !important;
+}
+body.eq-shop.eq-pfos .right-col,
+body.eq-shop.eq-pfos .pf-main,
+body.eq-shop.eq-pfos nav.breadcrumb,
+html[data-theme="dark"] body.eq-shop.eq-pfos .right-col,
+html[data-theme="dark"] body.eq-shop.eq-pfos .pf-main {
+  background: #ffffff !important;
+  color: #2c2c2a;
+}
+body.eq-shop.eq-pfos .pf-left,
+html[data-theme="dark"] body.eq-shop.eq-pfos .pf-left {
+  background: #ffffff !important;
+}
+body.eq-shop.eq-pfos .pf-right,
+html[data-theme="dark"] body.eq-shop.eq-pfos .pf-right {
+  background: #f5f7fb !important;
+}
+body.eq-shop.eq-pfos .footer,
+html[data-theme="dark"] body.eq-shop.eq-pfos .footer {
+  background: #ffffff !important;
+  color: #6b6b6b !important;
+  border-top: 1px solid #e2e6ef !important;
+}
+body.eq-shop.eq-pfos .footer .refs span,
+body.eq-shop.eq-pfos .footer > div:last-child {
+  color: #6b6b6b !important;
+}
+
+/* Vitrin alt bilgisi — Electrolux mavisi #011E41 (Proje Fabrikası / Bar Design hariç) */
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) footer.footer.eq-mfoot {
+  display: block !important;
+  padding: 0 !important;
+  margin: 0;
+  max-width: none;
+  width: 100%;
+  border-top: none;
+  color: rgba(255, 255, 255, 0.88);
+  background: #011e41;
+}
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-back {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 14px 16px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  background: #001e50;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  transition: background 0.15s ease;
+}
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-back:hover {
+  background: #002868;
+}
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-main {
+  background: #011e41;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 36px 20px 28px;
+}
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-inner {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-cols {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px 24px;
+  margin-bottom: 28px;
+}
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-col h3 {
+  margin: 0 0 12px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.01em;
+}
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-col li {
+  margin: 0 0 8px;
+}
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-col a {
+  font-size: 13px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+}
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-col a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-brand {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px 24px;
+  margin-bottom: 18px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-logo {
+  display: inline-flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+}
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-logo .eq-logo-svg,
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-logo .eq-logo-wordmark {
+  height: 18px;
+  width: auto;
+  max-width: min(160px, 72vw);
+}
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-logo .eq-logo-e-bar {
+  fill: #fff;
+}
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-logo .eq-logo-q circle,
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-logo .eq-logo-q line,
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-logo .eq-logo-letter,
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-logo path,
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-logo > .eq-logo-svg > circle {
+  stroke: #fff;
+}
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-logo-text {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: #fff;
+}
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-locale {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.72);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-partners {
+  margin: 0;
+  text-align: center;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.04em;
+}
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-legal {
+  background: #011e41;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 18px 20px 22px;
+}
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-legal-inner {
+  max-width: 1500px;
+  margin: 0 auto;
+  text-align: center;
+}
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-legal-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 20px;
+  margin-bottom: 10px;
+}
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-legal-nav a,
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-cookie {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  cursor: pointer;
+}
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-legal-nav a:hover,
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-cookie:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-copy {
+  margin: 0;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.5;
+}
+@media (max-width: 900px) {
+  body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-cols {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 520px) {
+  body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-cols {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-main {
+    padding: 28px 16px 22px;
+  }
+}
+
+/* Mobil alt şerit — Amazon mobil uygulama (yalnız çizgi ikonlar, beyaz zemin); masaüstünde gizli */
+#eq-bottom-tabbar.eq-bottom-tabbar {
+  display: none !important;
+}
+@media (max-width: 768px) {
+  body.eq-shop:not(.admin-app).eq-has-bottom-tabbar {
+    padding-bottom: calc(62px + env(safe-area-inset-bottom, 0px));
+  }
+  body.eq-shop:not(.admin-app) #eq-bottom-tabbar.eq-bottom-tabbar {
+    --eq-bnav-hit: 48px;
+    --eq-bnav-ico: 28px;
+    display: flex !important;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 380;
+    box-sizing: border-box;
+    min-height: calc(var(--eq-bnav-hit) + env(safe-area-inset-bottom, 0px));
+    padding: 4px 0 env(safe-area-inset-bottom, 0px);
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+    margin: 0;
+    background: #ffffff !important;
+    border-top: 1px solid #e7e7e7 !important;
+    font-family: var(--eq-font-sans, system-ui, sans-serif);
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04);
+  }
+  /* 5 ikon: eşit sütun, eşit aralık */
+  body.eq-shop:not(.admin-app) #eq-bottom-tabbar.eq-bottom-tabbar--5 {
+    display: grid !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    justify-items: center;
+    align-items: center;
+    column-gap: 0;
+    padding-left: max(6px, env(safe-area-inset-left, 0px));
+    padding-right: max(6px, env(safe-area-inset-right, 0px));
+  }
+  body.eq-shop:not(.admin-app) #eq-bottom-tabbar.eq-bottom-tabbar--5 .eq-bottom-tabbar__wa-slot {
+    display: contents;
+  }
+  body.eq-shop:not(.admin-app) #eq-bottom-tabbar .eq-bottom-tabbar__btn {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: none;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 0;
+    margin: 0;
+    border: 0;
+    background: transparent;
+    color: #0f1111 !important;
+    font: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+  body.eq-shop:not(.admin-app) #eq-bottom-tabbar a.eq-bottom-tabbar__btn {
+    color: #0f1111 !important;
+  }
+  body.eq-shop:not(.admin-app) #eq-bottom-tabbar .eq-bottom-tabbar__btn:active {
+    opacity: 0.55;
+  }
+  body.eq-shop:not(.admin-app) #eq-bottom-tabbar .eq-bottom-tabbar__ico,
+  body.eq-shop:not(.admin-app) #eq-bottom-tabbar .eq-bottom-tabbar__ico--cart,
+  body.eq-shop:not(.admin-app) #eq-bottom-tabbar .eq-bottom-tabbar__ico--wa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--eq-bnav-ico, 28px);
+    height: var(--eq-bnav-ico, 28px);
+    flex-shrink: 0;
+    color: #0f1111 !important;
+  }
+  body.eq-shop:not(.admin-app) #eq-bottom-tabbar .eq-bottom-tabbar__ico > svg,
+  body.eq-shop:not(.admin-app) #eq-bottom-tabbar .eq-bottom-tabbar__ico--cart > svg,
+  body.eq-shop:not(.admin-app) #eq-bottom-tabbar .eq-bottom-tabbar__ico--wa > svg,
+  body.eq-shop:not(.admin-app) #eq-bottom-tabbar .eq-bottom-tabbar__ico--wa svg {
+    display: block;
+    width: var(--eq-bnav-ico, 28px);
+    height: var(--eq-bnav-ico, 28px);
+  }
+  body.eq-shop:not(.admin-app) #eq-bottom-tabbar .eq-bottom-tabbar__ico--cart {
+    position: relative;
+  }
+  /* Rakam sepet gövdesinde (Amazon mobil gibi), turuncu rozet yok */
+  body.eq-shop:not(.admin-app) #eq-bottom-tabbar .eq-bottom-tabbar__cart-qty {
+    position: absolute;
+    left: 50%;
+    top: 52%;
+    transform: translate(-50%, -50%);
+    font-size: 9px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: #0f1111 !important;
+    pointer-events: none;
+    user-select: none;
+  }
+  html[data-theme="dark"] body.eq-shop:not(.admin-app) #eq-bottom-tabbar.eq-bottom-tabbar {
+    background: #ffffff !important;
+    border-top-color: #e7e7e7 !important;
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.06);
+  }
+  html[data-theme="dark"] body.eq-shop:not(.admin-app) #eq-bottom-tabbar .eq-bottom-tabbar__btn,
+  html[data-theme="dark"] body.eq-shop:not(.admin-app) #eq-bottom-tabbar a.eq-bottom-tabbar__btn,
+  html[data-theme="dark"] body.eq-shop:not(.admin-app) #eq-bottom-tabbar .eq-bottom-tabbar__ico,
+  html[data-theme="dark"] body.eq-shop:not(.admin-app) #eq-bottom-tabbar .eq-bottom-tabbar__cart-qty {
+    color: #0f1111 !important;
+  }
+
+  /* 5’li alt şerit: Ana sayfa · Hesap · WhatsApp · Sepet · Menü */
+  body.eq-shop:not(.admin-app) #eq-bottom-tabbar.eq-bottom-tabbar--5 .equsto-contact-wa-fab--tabbar {
+    width: 100%;
+    max-width: none;
+    padding: 8px 0;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent !important;
+    box-shadow: none !important;
+    color: #0f1111 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  body.eq-shop:not(.admin-app) #eq-bottom-tabbar.eq-bottom-tabbar--5 .equsto-contact-wa-fab--tabbar:active {
+    opacity: 0.55;
+    transform: none;
+  }
+}
+
+/* Fotoğrafla ara — üst arama çubuğu (eq-photo-search.js) */
+body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .eq-srch-photo-slot {
+  display: flex;
+  flex-shrink: 0;
+  align-items: stretch;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .eq-srch-photo-input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .eq-srch-photo-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  margin: 0;
+  border: none;
+  border-left: 1px solid var(--eq-border, #e5e5e5);
+  background: transparent;
+  color: var(--eq-hdr-srch-muted, #5c5c5c);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .eq-srch-photo-btn:hover {
+  background: var(--eq-surface-2, #f5f5f5);
+  color: var(--eq-hdr-srch-text, #1a1a1a);
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-srch-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 415;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  box-sizing: border-box;
+  background: var(--eq-overlay, rgba(0, 0, 0, 0.45));
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-srch-dialog {
+  width: 100%;
+  max-width: 380px;
+  padding: 18px;
+  border-radius: 10px;
+  background: var(--eq-surface, #fff);
+  color: var(--eq-text, #0f1111);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.22);
+  font-family: var(--eq-font-sans, system-ui, sans-serif);
+  font-size: 13px;
+  box-sizing: border-box;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-srch-preview {
+  display: block;
+  width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: var(--eq-surface-3, #f3f3f3);
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-srch-hint {
+  margin: 12px 0 8px;
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--eq-text-secondary, #555);
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-srch-field {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  margin-bottom: 14px;
+  border: 1px solid var(--eq-border, #ccc);
+  border-radius: 6px;
+  font-size: 14px;
+  background: var(--eq-surface, #fff);
+  color: var(--eq-text, #111);
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-srch-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-srch-btn {
+  padding: 8px 16px;
+  font-size: 13px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid var(--eq-border, #ccc);
+  font-family: inherit;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-srch-btn--ghost {
+  background: var(--eq-surface, #fff);
+  color: var(--eq-text, #111);
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-srch-btn--primary {
+  background: linear-gradient(180deg, #f7dfa5, #f0c14b);
+  border-color: #a88734 #9c7b31 #846a27;
+  color: #111;
+  font-weight: 600;
+}
+html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-srch-dialog {
+  background: #ffffff;
+  color: #1a1a1a;
+}
+html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-srch-hint {
+  color: #6b6b6b;
+}
+html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) .eq-photo-srch-field {
+  background: #ffffff;
+  border-color: #d5d9d9;
+  color: #1a1a1a;
+}
+html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .eq-srch-photo-btn {
+  border-left-color: #d5d9d9;
+  color: #5c5c5c;
+}
+html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .eq-srch-photo-btn:hover {
+  background: #f5f5f5;
+  color: #111;
+}
+
+/*
+ * Amazon mobil uygulamasına yakın uyumluluk sonucu (≤768px, vitrin eq-shop):
+ * yatay taşma yok, safe-area, iOS arama zoom yok, dokunma yüksekliği, şerit kaydırma.
+ */
+@media (max-width: 768px) {
+  html:has(body.eq-shop:not(.admin-app):not(.bd-page)),
+  html:has(body.eq-shop.eq-pfos) {
+    overflow-x: clip;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page),
+  body.eq-shop.eq-pfos {
+    overflow-x: clip;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr {
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-left: max(0px, env(safe-area-inset-left, 0px));
+    padding-right: max(0px, env(safe-area-inset-right, 0px));
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr > .pg-inner {
+    padding-right: max(12px, env(safe-area-inset-right, 0px)) !important;
+  }
+
+  /* iOS: odakta otomatik yakınlaştırmayı önlemek için ≥16px (Amazon benzeri) */
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr input.srch-input {
+    font-size: 16px !important;
+    line-height: 1.25 !important;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .srch {
+    border-radius: 8px !important;
+    min-height: 44px;
+    align-items: stretch;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .eq-srch-photo-btn {
+    min-height: 44px;
+    min-width: 44px;
+    align-self: stretch;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .srch-btn,
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr button.srch-btn {
+    min-height: 44px;
+    min-width: 48px;
+    align-self: stretch;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .theme-toggle {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+
+  /* Departman şeridi: uygulama benzeri yatay kaydırma, ince kaydırma çubuğu gizli */
+  body.eq-shop:not(.admin-app):not(.bd-page) nav.topnav,
+  body.eq-shop:not(.admin-app):not(.bd-page) .topnav {
+    scrollbar-width: none;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) nav.topnav::-webkit-scrollbar,
+  body.eq-shop:not(.admin-app):not(.bd-page) .topnav::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) .pg > .footer {
+    padding-left: max(12px, env(safe-area-inset-left, 0px));
+    padding-right: max(12px, env(safe-area-inset-right, 0px));
+    padding-bottom: max(12px, env(safe-area-inset-bottom, 0px));
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) main.main {
+    padding-left: max(12px, env(safe-area-inset-left, 0px));
+    padding-right: max(12px, env(safe-area-inset-right, 0px));
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) .load-more-btn {
+    min-height: 44px;
+    padding-left: 20px;
+    padding-right: 20px;
+    touch-action: manipulation;
+  }
+
+  /* Üstte hesap/sepet/tema — alt şeritte; taşma ve üst üste binme önlenir */
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right {
+    display: none !important;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr > a.logo {
+    order: 1;
+    flex: 0 0 auto;
+    max-width: 42vw;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr > .pg-inner,
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr > .pg-inner.hdr-pg-inner {
+    order: 2;
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .srch {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 1 1 auto !important;
+  }
+
+  /* Departman şeridi: arama çubuğundaki «Tüm Kategoriler» yeterli */
+  body.eq-shop:not(.admin-app):not(.bd-page) nav.topnav .topnav-inner > .topnav-item:first-child,
+  body.eq-shop:not(.admin-app):not(.bd-page) nav.topnav .topnav-inner > .topnav-sep:nth-child(2) {
+    display: none !important;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) nav.topnav,
+  body.eq-shop:not(.admin-app):not(.bd-page) .topnav {
+    max-width: 100%;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) .pg,
+  body.eq-shop:not(.admin-app):not(.bd-page) .body,
+  body.eq-shop:not(.admin-app):not(.bd-page) .right-col,
+  body.eq-shop:not(.admin-app):not(.bd-page) .eq-shell {
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  /* Ana sayfa hero: uzun paragraf mobilde kesilir / taşar */
+  body.eq-shop.eq-home:not(.eq-cat-landing) .right-col > .hero-banner:not(.hero-banner--slim) .hero-lead {
+    display: none !important;
+  }
+
+  body.eq-shop.eq-home:not(.eq-cat-landing) .right-col > .hero-banner:not(.hero-banner--slim) {
+    padding: 20px 16px !important;
+  }
+
+  body.eq-shop.eq-home .right-col > .hero-banner:not(.hero-banner--slim) .hero-h1,
+  body.eq-shop.eq-home .right-col > .hero-banner:not(.hero-banner--slim) .hero-sub,
+  body.eq-shop.eq-home .right-col > .hero-banner:not(.hero-banner--slim) .hero-kicker {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  body.eq-shop.eq-home .right-col > section.hero .hero-card {
+    height: var(--eq-home-hero-card-h-768) !important;
+    min-height: var(--eq-home-hero-card-h-768) !important;
+    max-height: none !important;
+    padding: 14px 16px !important;
+  }
+}
+
+/*
+ * Mobil — Bar Design / Besos (bd-page) ve modül sayfaları.
+ * Vitrin beyaz zemin kilidi (:not(.bd-page)) ayrı kalır; düzen/taşma/alt şerit burada.
+ */
+@media (max-width: 768px) {
+  html:has(body.bd-page.besos) {
+    overflow-x: clip;
+  }
+
+  body.bd-page.besos {
+    overflow-x: clip;
+    max-width: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  body.bd-page.besos header.hdr {
+    flex-wrap: wrap;
+    align-items: stretch;
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+
+  body.bd-page.besos header.hdr .hdr-right,
+  body.bd-page.besos header.hdr a.eq-hdr-account,
+  body.bd-page.besos header.hdr #equsto-hdr-cart,
+  body.bd-page.besos header.hdr .theme-legend,
+  body.bd-page.besos header.hdr .hdr-alici {
+    display: none !important;
+  }
+
+  body.bd-page.besos .bd-hdr-brand {
+    flex: 1 1 100%;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    flex-wrap: wrap;
+    padding: 8px 12px !important;
+    box-sizing: border-box;
+  }
+
+  body.bd-page.besos .bd-hdr-nav {
+    flex: 1 1 100%;
+    width: 100%;
+    margin-left: 0 !important;
+    border-left: none !important;
+    padding-left: 0 !important;
+    padding-top: 6px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    flex-wrap: nowrap;
+    max-width: 100%;
+  }
+
+  body.bd-page.besos .bd-hdr-nav::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  body.bd-page.besos .bd-hdr-nav a {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    touch-action: manipulation;
+  }
+
+  body.bd-page.besos header.hdr > .pg-inner,
+  body.bd-page.besos header.hdr > .pg-inner.hdr-pg-inner {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    order: 10;
+    padding: 0 12px 10px !important;
+    box-sizing: border-box;
+  }
+
+  body.bd-page.besos header.hdr .srch {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 44px;
+  }
+
+  body.bd-page.besos header.hdr input.srch-input {
+    font-size: 16px !important;
+    min-width: 0;
+  }
+
+  body.bd-page.besos header.hdr .srch-btn,
+  body.bd-page.besos header.hdr button.srch-btn {
+    min-height: 44px;
+    min-width: 48px;
+  }
+
+  /* Besos: Equsto departman şeridi — üst bd-hdr-nav + alt menü yeterli */
+  body.bd-page.besos nav.topnav {
+    display: none !important;
+  }
+
+  body.bd-page.besos .bd-vitrum-jump {
+    top: auto;
+    position: relative;
+  }
+
+  body.bd-page.besos .bd-vitrum-cat {
+    scroll-margin-top: 88px;
+  }
+
+  body.bd-page.besos .bes-wrap,
+  body.bd-page.besos .bes-wrap-wide,
+  body.bd-page.besos .bes-wrap-narrow,
+  body.bd-page.besos .bd-vitrum-landing {
+    max-width: 100%;
+    min-width: 0;
+    padding-left: max(12px, env(safe-area-inset-left, 0px));
+    padding-right: max(12px, env(safe-area-inset-right, 0px));
+    box-sizing: border-box;
+  }
+
+  body.bd-page.besos .bd-ice-strip {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  body.bd-page.besos .bd-hero-fullbleed {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  body.bd-page.besos .bd-hero-fullbleed .bd-hero-media {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    max-height: calc(100dvh - var(--bes-chrome-h, 148px) - env(safe-area-inset-bottom, 0px));
+    margin-inline: auto;
+  }
+
+  body.bd-page.besos .bd-hero-fullbleed .bd-hero-video .eq-yt__thumb,
+  body.bd-page.besos .bd-hero-fullbleed .bd-hero-video .eq-yt iframe {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+    max-width: 100%;
+    max-height: 100%;
+    transform: none;
+    object-fit: contain;
+  }
+
+  /* Modül detay (bar-module.html) */
+  body.bm-page {
+    overflow-x: clip;
+    max-width: 100%;
+  }
+
+  body.bm-page .bm-wrap {
+    padding: 16px max(12px, env(safe-area-inset-left, 0px)) calc(72px + env(safe-area-inset-bottom, 0px));
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  body.bm-page header.hdr .logo {
+    padding: 10px 12px;
+  }
+}
+
+/* =========================================================================
+   Kategori vitrin shell'i  (eq-category-shell.js) — body.eq-dept; ana sayfa eq-home ayrı
+   Amazon node sayfasi tarzi: hero + alt-kategori karolari + marka seridi +
+   one cikan rail + yeni gelenler rail + alt-tip listesi.
+   ========================================================================= */
+.eq-cat-shell-root {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 16px;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.eq-cat-hero {
+  background: var(--eq-topnav-dept-bg, #001e50);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+}
+.eq-cat-hero h1 {
+  font-size: clamp(17px, 2.4vw, 20px);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 3px;
+  line-height: 1.15;
+  color: #fff;
+}
+.eq-cat-hero p {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  line-height: 1.35;
+}
+.eq-cat-section {
+  background: var(--eq-surface);
+}
+.eq-cat-section-hdr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 0 12px;
+}
+.eq-cat-section-hdr h2 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--eq-text);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+.eq-cat-sublist-clear {
+  font-size: 12px;
+  padding: 4px 10px;
+  border: 1px solid var(--eq-border);
+  background: var(--eq-surface);
+  color: var(--eq-text);
+  cursor: pointer;
+  border-radius: 6px;
+  font-family: inherit;
+}
+.eq-cat-sublist-clear:hover {
+  background: var(--eq-surface-2);
+}
+
+/* Alt-kategori karolari */
+.eq-cat-tiles {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 14px;
+}
+@media (max-width: 1100px) {
+  .eq-cat-tiles {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media (max-width: 700px) {
+  .eq-cat-tiles {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+  }
+}
+.eq-cat-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 0;
+  padding: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  color: var(--eq-text);
+  border-radius: 8px;
+}
+.eq-cat-tile:hover {
+  background: var(--eq-surface-2);
+}
+.eq-cat-tile--active {
+  background: var(--eq-surface-2);
+  outline: 2px solid var(--eq-topnav-dept-bg, #001e50);
+}
+.eq-cat-tile-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  max-width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.eq-cat-tile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.eq-cat-tile-noimg {
+  font-size: 20px;
+  color: var(--eq-text-subtle);
+}
+.eq-cat-tile-lbl {
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.3;
+  color: var(--eq-text);
+}
+
+/* Marka seridi */
+.eq-cat-brand-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.eq-cat-brand-chip {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border: 1px solid var(--eq-border);
+  background: var(--eq-surface);
+  color: var(--eq-text);
+  cursor: pointer;
+  border-radius: 999px;
+  font-family: inherit;
+}
+.eq-cat-brand-chip:hover {
+  background: var(--eq-surface-2);
+}
+.eq-cat-brand-chip--active {
+  background: var(--eq-topnav-dept-bg, #001e50);
+  color: #fff;
+  border-color: var(--eq-topnav-dept-bg, #001e50);
+}
+a.eq-cat-brand-chip--ref {
+  text-decoration: none;
+  color: var(--eq-text);
+  border-style: dashed;
+}
+a.eq-cat-brand-chip--ref:hover {
+  background: var(--eq-surface-2);
+  text-decoration: underline;
+}
+
+/* Kategori vitrin ürün ızgarası: yatay kaydırma yok; sarma + «Daha fazla ürün yükle» */
+.eq-cat-rail {
+  overflow-x: visible;
+  overflow-y: visible;
+}
+.eq-cat-rail-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+  padding-bottom: 4px;
+}
+@media (max-width: 700px) {
+  .eq-cat-rail-row {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+}
+.eq-cat-load-more {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  margin: 16px auto 0;
+  padding: 11px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  border: 1px solid var(--eq-border);
+  border-radius: 8px;
+  background: var(--eq-surface);
+  color: var(--eq-text);
+}
+.eq-cat-load-more:hover {
+  background: var(--eq-surface-2);
+  border-color: var(--eq-topnav-dept-bg, #001e50);
+}
+.eq-cat-rail-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-decoration: none;
+  color: var(--eq-text);
+  padding: 8px;
+  border-radius: 8px;
+  min-width: 0;
+}
+.eq-cat-rail-card:hover {
+  background: var(--eq-surface-2);
+}
+.eq-cat-rail-card-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: var(--eq-surface-3);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+.eq-cat-rail-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.eq-cat-rail-card-cat {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--eq-text-subtle);
+}
+.eq-cat-rail-card-name {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--eq-text);
+}
+.eq-cat-rail-card-brand {
+  font-size: 11px;
+  color: var(--eq-text-muted);
+}
+.eq-cat-rail-card-price {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--eq-text);
+  margin-top: auto;
+  padding-top: 4px;
+}
+.eq-cat-empty {
+  font-size: 12px;
+  color: var(--eq-text-muted);
+  padding: 12px 0;
+}
+
+/* AI/Google-visible, kullanici-gorunmez utility (GEO icin AI-citable tanim paragraflari)
+ * Standart sr-only pattern; ekran okuyucu + Google/AI crawler okur, kullanici gormez.
+ * Bu spam degildir; Schema.org ve W3C accessibility ile uyumlu yaygin teknik. */
+.eq-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/*
+ * KİLİT: vitrin-beyaz-zemin-KILIT.txt — html/body + CSS değişkenleri (Bar Design: body.bd-page hariç)
+ */
+html.eq-vitrin-white-lock {
+  color-scheme: light;
+  background: #ffffff !important;
+  --eq-bg-page: #ffffff;
+  --eq-surface: #ffffff;
+  --eq-surface-2: #f5f5f5;
+  --eq-surface-3: #f9f9f9;
+  --eq-hover: #eeeeee;
+  --eq-text: #000000;
+  --eq-text-secondary: #444444;
+  --eq-text-muted: #888888;
+}
+html.eq-vitrin-white-lock body.eq-shop:not(.admin-app):not(.bd-page),
+html.eq-vitrin-white-lock[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) {
+  background: #ffffff !important;
+  color: #1a1a1a !important;
+}
+html.eq-vitrin-white-lock body.eq-shop:not(.admin-app):not(.bd-page) .pg,
+html.eq-vitrin-white-lock body.eq-shop:not(.admin-app):not(.bd-page) .body,
+html.eq-vitrin-white-lock body.eq-shop:not(.admin-app):not(.bd-page) .main,
+html.eq-vitrin-white-lock body.eq-shop:not(.admin-app):not(.bd-page) .right-col,
+html.eq-vitrin-white-lock body.eq-shop:not(.admin-app):not(.bd-page) .eq-filter-col,
+html.eq-vitrin-white-lock body.eq-shop:not(.admin-app):not(.bd-page) .eq-cat-shell-root,
+html.eq-vitrin-white-lock body.eq-shop:not(.admin-app):not(.bd-page) .products,
+html.eq-vitrin-white-lock body.eq-shop:not(.admin-app):not(.bd-page) .sidebar {
+  background: #ffffff !important;
+}
+html.eq-vitrin-white-lock body.eq-shop.eq-home:not(.admin-app):not(.bd-page) .eq-home-cm,
+html.eq-vitrin-white-lock body.eq-shop.eq-home:not(.admin-app):not(.bd-page) .eq-home-cm.eq-home-cm-shop,
+html.eq-vitrin-white-lock[data-theme="dark"] body.eq-shop.eq-home:not(.admin-app):not(.bd-page) .eq-home-cm {
+  --cm-page: #ffffff;
+  --shop-page: #ffffff;
+  --cm-card: #ffffff;
+  --shop-card: #ffffff;
+  background: #ffffff !important;
+}
+html.eq-vitrin-white-lock body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) footer.footer.eq-mfoot,
+html.eq-vitrin-white-lock body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-main,
+html.eq-vitrin-white-lock body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-legal {
+  background: #011e41 !important;
+  color: rgba(255, 255, 255, 0.88) !important;
+}
+html.eq-vitrin-white-lock body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-col h3,
+html.eq-vitrin-white-lock body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-logo-text {
+  color: #fff !important;
+}
+html.eq-vitrin-white-lock body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-col a,
+html.eq-vitrin-white-lock body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-legal-nav a,
+html.eq-vitrin-white-lock body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-cookie {
+  color: rgba(255, 255, 255, 0.78) !important;
+}
+/* Bar Design / Besos: koyu zemin kilidi dışında — vitrin beyaz kilidi uygulanmaz */
+html.eq-vitrin-white-lock body.bd-page {
+  background: unset;
+}
+
+/*
+ * Mobil site birleşik (≤768px) — tüm eq-shop + bd-page + PFOS
+ * Sıra: ortak alt şerit (nav.js) → vitrin/katalog → PFOS → Bar Design
+ */
+@media (max-width: 768px) {
+  /* Mobil: üst departman şeridi (Proje Fabrikası, Pişirme, Bar Design…) — Menü çekmecesinden */
+  body.eq-shop:not(.admin-app):not(.eq-pfos):not(.bd-page) nav.topnav,
+  body.eq-shop:not(.admin-app):not(.eq-pfos):not(.bd-page) .topnav {
+    display: none !important;
+  }
+  body.eq-shop:not(.admin-app):not(.eq-pfos):not(.bd-page) {
+    --eq-filter-col-sticky-top: 52px;
+    --eq-filter-col-sticky-max-h: calc(100dvh - 58px);
+    --eq-drawer-chrome-top: 52px;
+  }
+
+  body.eq-shop:not(.admin-app) #eq-bottom-tabbar.eq-bottom-tabbar {
+    z-index: 400;
+  }
+  /* PFOS: kendi alt menüsü (pfos.html); global tabbar gizli */
+  body.eq-pfos #eq-bottom-tabbar.eq-bottom-tabbar {
+    display: none !important;
+  }
+  body.eq-pfos.eq-has-bottom-tabbar {
+    padding-bottom: calc(58px + env(safe-area-inset-bottom, 0px));
+  }
+  body.eq-pfos header.hdr input.srch-input,
+  body.eq-pfos header.hdr .srch-input {
+    font-size: 16px !important;
+    line-height: 1.25 !important;
+  }
+  body.eq-pfos header.hdr .srch {
+    min-height: 44px;
+    border-radius: 8px !important;
+  }
+  body.eq-pfos header.hdr .srch-cat,
+  body.eq-pfos header.hdr .srch-btn,
+  body.eq-pfos header.hdr button.srch-btn {
+    min-height: 44px;
+    touch-action: manipulation;
+  }
+
+  /* Bar Design: Amazon benzeri üst arama + alt şerit boşluğu */
+  body.bd-page {
+    overflow-x: clip;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  body.bd-page.eq-has-bottom-tabbar {
+    padding-bottom: calc(54px + env(safe-area-inset-bottom, 0px));
+  }
+  body.bd-page header.hdr {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+  body.bd-page header.hdr .hdr-pg-inner,
+  body.bd-page header.hdr > .pg-inner {
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+  body.bd-page header.hdr .hdr-alici {
+    display: none !important;
+  }
+  body.bd-page header.hdr .srch {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 1 1 100% !important;
+    order: 10;
+    min-height: 44px;
+    border-radius: 8px !important;
+  }
+  body.bd-page header.hdr input.srch-input,
+  body.bd-page header.hdr .srch-input {
+    font-size: 16px !important;
+    min-width: 0;
+  }
+  body.bd-page header.hdr .hdr-right {
+    display: none !important;
+  }
+  body.bd-page .pg-inner {
+    padding-left: max(12px, env(safe-area-inset-left, 0px));
+    padding-right: max(12px, env(safe-area-inset-right, 0px));
+  }
+  body.bd-page nav.topnav,
+  body.bd-page .topnav {
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  body.bd-page .topnav-item {
+    min-height: 44px;
+    touch-action: manipulation;
+  }
+
+  /* Ana sayfa: yatay kategori ikon şeridi (Menü çekmecesinden) */
+  body.eq-home #eq-home-catband {
+    display: none !important;
+  }
+
+  /* Kategori sayfaları: sol sidebar/ filtre sütunu — hepsi Menü çekmecesinde */
+  body.eq-shop.eq-dept:not(.admin-app):not(.bd-page) aside.eq-filter-col,
+  body.eq-shop.eq-dept:not(.admin-app):not(.bd-page) #eq-filter-col {
+    display: none !important;
+  }
+
+  /* Kategori sayfaları (pişirme, soğutma, kahve, …) — mobil vitrin */
+  body.eq-shop.eq-dept:not(.admin-app):not(.bd-page) {
+    overflow-x: clip;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  body.eq-shop.eq-dept:not(.admin-app):not(.bd-page).eq-has-bottom-tabbar {
+    padding-bottom: calc(62px + env(safe-area-inset-bottom, 0px));
+  }
+  body.eq-shop.eq-dept:not(.admin-app):not(.bd-page) .pg,
+  body.eq-shop.eq-dept:not(.admin-app):not(.bd-page) .pg-inner {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  body.eq-shop.eq-dept:not(.admin-app):not(.bd-page) .body {
+    flex-direction: column;
+  }
+  body.eq-shop.eq-dept:not(.admin-app):not(.bd-page) .right-col {
+    width: 100%;
+    min-width: 0;
+  }
+  body.eq-shop.eq-dept:not(.admin-app):not(.bd-page) .eq-cat-shell-root {
+    padding: 10px max(12px, env(safe-area-inset-left, 0px)) 18px max(12px, env(safe-area-inset-right, 0px));
+    gap: 14px;
+  }
+  body.eq-shop.eq-dept:not(.admin-app):not(.bd-page) .eq-cat-section-hdr h2 {
+    font-size: 15px;
+  }
+  body.eq-shop.eq-dept:not(.admin-app):not(.bd-page) .eq-cat-tiles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+  body.eq-shop.eq-dept:not(.admin-app):not(.bd-page) .eq-cat-tile-img {
+    max-width: none;
+  }
+  body.eq-shop.eq-dept:not(.admin-app):not(.bd-page) .eq-cat-tile-lbl {
+    font-size: 11px;
+  }
+  body.eq-shop.eq-dept:not(.admin-app):not(.bd-page) .eq-cat-rail-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  body.eq-shop.eq-dept:not(.admin-app):not(.bd-page) .eq-cat-load-more {
+    max-width: none;
+    margin-top: 12px;
+  }
+  body.eq-shop.eq-dept:not(.admin-app):not(.bd-page) .eq-dept-hero-strip > section.hero {
+    grid-template-columns: 1fr !important;
+    gap: 0;
+  }
+  body.eq-shop.eq-dept:not(.admin-app):not(.bd-page) .eq-dept-hero-strip > section.hero .hero-card {
+    border-right: none !important;
+    border-bottom: 1px solid var(--eq-border);
+  }
+  body.eq-shop.eq-dept:not(.admin-app):not(.bd-page) .eq-dept-hero-strip > section.hero .hero-card:last-child {
+    border-bottom: none;
+  }
+  body.eq-shop.eq-dept:not(.admin-app):not(.bd-page) .footer {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px max(12px, env(safe-area-inset-left, 0px)) max(12px, env(safe-area-inset-right, 0px));
+  }
+
+  /* Ana sayfa vitrin bantları */
+  body.eq-home .eq-home-band,
+  body.eq-home .eq-trust-band {
+    padding-left: max(12px, env(safe-area-inset-left, 0px));
+    padding-right: max(12px, env(safe-area-inset-right, 0px));
+  }
+  body.eq-home .eq-home-band {
+    padding-top: clamp(40px, 10vw, 72px);
+    padding-bottom: clamp(32px, 8vw, 56px);
+  }
+  body.eq-home .eq-rail-card {
+    flex: 0 0 min(72vw, 220px);
+  }
+
+  /* Kategori / departman: filtre üstte, ürün grid 2→1 sütun (detay theme 3053+) */
+  body.eq-dept .eq-filter-col .eq-sidebar {
+    max-height: 42vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  body.eq-dept .breadcrumb {
+    font-size: 11px;
+    padding: 8px 12px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /* Ürün detay: buybox alta, galeri tam genişlik */
+  body.eq-shop .eq-product-grid {
+    gap: 16px !important;
+  }
+  body.eq-shop .eq-product-hero-img {
+    max-height: min(52vh, 420px);
+  }
+  body.eq-shop .eq-buybox {
+    position: relative !important;
+    top: auto !important;
+    max-height: none !important;
+  }
+
+  /* Kurulum / landing (cafe-kurulumu vb.) */
+  body.eq-shop:not(.eq-home):not(.eq-dept):not(.eq-pfos):not(.bd-page) main.main {
+    padding-left: max(12px, env(safe-area-inset-left, 0px));
+    padding-right: max(12px, env(safe-area-inset-right, 0px));
+  }
+
+  body.eq-shop:not(.admin-app).eq-has-bottom-tabbar footer.footer.eq-mfoot,
+  body.eq-shop:not(.admin-app).eq-has-bottom-tabbar > footer.footer {
+    padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  }
+  body.eq-shop.eq-home .eq-home-cm.eq-home-cm-shop > .eq-soru-seti,
+  body.eq-shop.eq-home .eq-home-cm.eq-home-cm-shop > main {
+    padding-bottom: calc(8px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+/*
+ * Masaüstü (≥769px): mobil chrome / eski nav.js inline gizlemelerini geçersiz kıl.
+ * Inline !important JS kalıntısı theme.js + head script ile temizlenir; bu blok yedek.
+ */
+@media (min-width: 769px) {
+  body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) nav.topnav,
+  body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .topnav {
+    display: flex !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    max-height: none !important;
+  }
+  /* #eq-home-catband — kaldırıldı; kategoriler üstteki kare pop-cats şeridinde */
+  body:not(.admin-app) header.hdr a.logo {
+    display: inline-flex !important;
+    visibility: visible !important;
+    width: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+    pointer-events: auto !important;
+  }
+  body:not(.admin-app) header.hdr .srch-cat,
+  body:not(.admin-app) header.hdr .cat-picker,
+  body:not(.admin-app) header.hdr .cat-picker-btn {
+    display: flex !important;
+    visibility: visible !important;
+    width: auto !important;
+    overflow: visible !important;
+    pointer-events: auto !important;
+  }
+  body.eq-shop.eq-dept-plp .eq-dept-plp-aside {
+    display: block !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
+  body.eq-shop.eq-dept-plp .eq-dept-plp-main {
+    display: block !important;
+    visibility: visible !important;
+    min-width: 0 !important;
+  }
+  body.eq-shop.eq-dept-plp .eq-dept-plp-layout {
+    display: flex !important;
+    width: 100% !important;
+    max-width: 1500px !important;
+    margin: 0 auto !important;
+  }
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right {
+    display: flex !important;
+    visibility: visible !important;
+  }
+}
+
+/* Alışveriş sepeti — tam sayfa (/sepet) */
+body.eq-cart-page .eq-cart-page__inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+body.eq-cart-page .eq-cart-page__title {
+  margin: 0 0 8px;
+  font-size: clamp(22px, 4vw, 28px);
+  font-weight: 700;
+  color: var(--eq-text);
+}
+body.eq-cart-page .eq-cart-page__summary {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--eq-topnav-dept-bg, #001e50);
+}
+body.eq-cart-page .eq-cart-page__lead {
+  margin: 0 0 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--eq-text-secondary);
+}
+body.eq-cart-page .eq-cart-page__list {
+  min-height: 120px;
+  margin-bottom: 20px;
+  padding: 4px 0;
+  border-top: 1px solid var(--eq-border);
+  border-bottom: 1px solid var(--eq-border);
+}
+body.eq-cart-page .eq-cart-page__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+body.eq-cart-page .eq-cart-page__btn {
+  font-size: 12px;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+}
+body.eq-cart-page .eq-cart-page__btn--muted {
+  border: 1px solid var(--eq-border);
+  background: var(--eq-surface-2, #f5f5f5);
+  color: inherit;
+  margin-right: auto;
+}
+body.eq-cart-page .eq-cart-page__btn--outline {
+  border: 1px solid var(--eq-border);
+  background: var(--eq-surface, #fff);
+  color: inherit;
+}
+body.eq-cart-page .eq-cart-page__btn--primary {
+  border: 1px solid var(--eq-topnav-dept-bg, #001e50);
+  background: var(--eq-topnav-dept-bg, #001e50);
+  color: #fff;
+  font-weight: 600;
+}
+body.eq-cart-page .eq-cart-page__note {
+  margin: 16px 0 0;
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--eq-text-muted);
+}
+/* Mini sepet: eq-cart.css — tam sayfa sepette overlay kullanılmaz */
+body.eq-cart-page #equsto-cart-overlay {
+  display: none !important;
+}
+
+/* WhatsApp widget — contact.css yüklenmezse dev ikon / açık overlay önlemi */
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) #equsto-contact-fab,
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .equsto-contact-fab:not(#eq-bottom-tabbar *) {
+  position: fixed;
+  right: max(16px, env(safe-area-inset-right, 0px));
+  bottom: max(16px, env(safe-area-inset-bottom, 0px));
+  z-index: 9999;
+  width: auto;
+  height: auto;
+  max-width: 80px;
+  max-height: 80px;
+  pointer-events: none;
+}
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos)
+  #equsto-contact-fab
+  .equsto-contact-wa-fab:not(.equsto-contact-wa-fab--tabbar)
+  img {
+  width: 62px !important;
+  height: 62px !important;
+  max-width: 62px !important;
+  max-height: 62px !important;
+  object-fit: cover;
+  display: block;
+}
+.equsto-wa-overlay:not(.equsto-wa-overlay--open) {
+  display: none !important;
+  pointer-events: none !important;
+}
+@media (max-width: 768px) {
+  body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) #equsto-contact-fab,
+  body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .equsto-contact-fab:not(#eq-bottom-tabbar *) {
+    display: none !important;
+    pointer-events: none !important;
+  }
+}

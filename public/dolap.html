@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+(function () {
+  if (typeof location === "undefined" || location.protocol !== "file:") return;
+  document.open();
+  document.write(
+    '<!DOCTYPE html><html lang="tr"><head><title>Equsto</title>  <link rel="stylesheet" crossorigin href="/assets/eq-home-mutbex-DBzvypug.css">
+  </head><body>' +
+    '<p>Bu sayfa <code>npm run dev</code> ile acilmalidir.</p></body></html>'
+  );
+  document.close();
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+
+<title>Dolaplar — Endüstriyel Mutfak · Equsto</title>
+<meta name="description" content="Endüstriyel mutfak dolapları — paslanmaz depolama ve malzeme dolapları · Equsto">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#001e50">
+<link rel="canonical" href="https://equsto.com/shop/dolap">
+<link rel="stylesheet" href="/theme.css?v=20260521globalsearch">
+<link rel="stylesheet" href="/eq-home-mutbex.css?v=20260521globalsearch">
+<link rel="stylesheet" href="/eq-dept-plp.css?v=20260522">
+<link rel="stylesheet" href="/contact.css?v=20260521globalsearch">
+<link rel="manifest" href="/assets/manifest-CtzHFPu3.json">
+<link rel="icon" href="/images/favicon.svg?v=20260519mark" type="image/svg+xml">
+
+
+<style id="eq-dept-plp-inline">
+body.eq-shop.eq-dept.eq-dept-plp .eq-dept-plp-layout{display:flex!important;align-items:flex-start;width:100%;max-width:1500px;margin:0 auto}body.eq-shop.eq-dept.eq-dept-plp .eq-dept-plp-aside{flex:0 0 240px;width:240px}body.eq-shop.eq-dept.eq-dept-plp .eq-dept-plp-main{flex:1;min-width:0}body.eq-shop.eq-dept.eq-dept-plp .eq-dept-plp-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:16px}@media(min-width:1024px){body.eq-shop.eq-dept.eq-dept-plp .eq-dept-plp-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important}}
+/* Pişirme PLP v2 — bağımsız, Cafemarkt tarzı */
+body.eq-dept-plp {
+  background: #fff;
+}
+.eq-dept-plp-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  max-width: 1500px;
+  margin: 0 auto;
+  width: 100%;
+}
+.eq-dept-plp-aside {
+  flex: 0 0 240px;
+  width: 240px;
+  max-width: 280px;
+  border-right: 1px solid #e8e8e8;
+  background: #fff;
+  padding: 0 0 20px;
+  position: sticky;
+  top: var(--eq-filter-col-sticky-top, 92px);
+  max-height: calc(100vh - 96px);
+  overflow-y: auto;
+}
+.eq-dept-plp-aside__hd {
+  padding: 14px 14px 10px;
+  font-size: 15px;
+  font-weight: 700;
+  border-bottom: 1px solid #e8e8e8;
+}
+/* Cafemarkt tarzı facet (eq-pisirme-cm-facets.js) */
+.eq-cm-facet {
+  border-bottom: 1px solid #e8e8e8;
+}
+.eq-cm-facet__hd {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #111;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+.eq-cm-facet__hd::-webkit-details-marker {
+  display: none;
+}
+.eq-cm-facet__hd::after {
+  content: '−';
+  font-size: 16px;
+  font-weight: 400;
+  color: #666;
+}
+.eq-cm-facet:not([open]) .eq-cm-facet__hd::after {
+  content: '+';
+}
+.eq-cm-facet__body {
+  padding: 0 14px 12px;
+}
+.eq-cm-facet__search {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 7px 10px;
+  margin-bottom: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 12px;
+}
+.eq-cm-facet__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 220px;
+  overflow-y: auto;
+}
+.eq-cm-facet__label {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 5px 0;
+  font-size: 12px;
+  line-height: 1.35;
+  color: #333;
+  cursor: pointer;
+}
+.eq-cm-facet__label input {
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+.eq-cm-facet__count {
+  color: #888;
+  font-size: 11px;
+  margin-left: auto;
+  white-space: nowrap;
+}
+.eq-cm-facet__price-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.eq-cm-facet__price-row input {
+  flex: 1;
+  min-width: 0;
+  padding: 6px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 12px;
+}
+.eq-cm-facet__apply {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #111;
+  background: #111;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.eq-cm-facet__range-hint {
+  font-size: 10px;
+  color: #888;
+  margin: 8px 0 0;
+}
+.eq-cm-selected {
+  padding: 10px 14px;
+  border-bottom: 1px solid #e8e8e8;
+  background: #fafafa;
+}
+.eq-cm-selected__hd {
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #333;
+}
+.eq-cm-selected__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+.eq-cm-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  background: #fff;
+  font-size: 11px;
+  cursor: pointer;
+}
+.eq-cm-selected__clear {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border: none;
+  background: none;
+  color: #111;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+.eq-dept-plp-selected {
+  margin: 8px 0 0;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+.eq-dept-plp-selected .eq-cm-selected__chips {
+  margin-bottom: 0;
+}
+.eq-dept-plp-filter-mob {
+  display: none;
+  padding: 6px 14px;
+  border: 1px solid #111;
+  background: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.eq-dept-filter-backdrop {
+  display: none;
+}
+.eq-dept-plp-main {
+  flex: 1;
+  min-width: 0;
+  padding: 0 16px 32px;
+}
+.eq-dept-plp-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 12px 0 0;
+}
+.eq-dept-plp-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 16px;
+}
+.eq-dept-plp-count {
+  font-size: 13px;
+  color: #444;
+}
+.eq-dept-plp-count strong {
+  color: #111;
+}
+.eq-dept-plp-sort select {
+  padding: 6px 10px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.eq-dept-plp-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 14px;
+  min-height: 120px;
+}
+@media (min-width: 640px) {
+  .eq-dept-plp-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1024px) {
+  .eq-dept-plp-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px 16px;
+  }
+}
+.eq-dept-plp-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+.eq-dept-plp-card__img {
+  display: block;
+  aspect-ratio: 1;
+  background: #fafafa;
+  border: 1px solid #eee;
+  overflow: hidden;
+}
+.eq-dept-plp-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.eq-dept-plp-card__name {
+  margin: 10px 0 6px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #111;
+  text-decoration: none;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 3.9em;
+}
+.eq-dept-plp-card__price {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-top: auto;
+}
+.eq-dept-plp-card__btn {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #111;
+  background: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+.eq-dept-plp-card__btn:hover {
+  background: #111;
+  color: #fff;
+}
+.eq-dept-plp-empty {
+  grid-column: 1 / -1;
+  padding: 48px 16px;
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+}
+.eq-dept-plp-empty-hint {
+  grid-column: 1 / -1;
+  margin: -32px 0 8px;
+  text-align: center;
+  font-size: 14px;
+}
+.eq-dept-plp-empty-link {
+  display: inline-block;
+  margin: 6px 8px;
+  padding: 10px 16px;
+  border-radius: 6px;
+  background: #001e50;
+  color: #fff !important;
+  font-weight: 600;
+  text-decoration: none;
+}
+.eq-dept-plp-empty-link:hover {
+  background: #003080;
+}
+.eq-dept-plp-empty-link--all {
+  background: #fff;
+  color: #001e50 !important;
+  border: 1px solid #001e50;
+}
+.eq-dept-plp-empty-link--all:hover {
+  background: #f0f4fa;
+}
+.eq-dept-plp-search-hint {
+  margin: 0 0 12px;
+  padding: 0;
+}
+.eq-dept-plp-search-hint__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  padding: 14px 16px;
+  border-radius: 8px;
+  background: #fff8e6;
+  border: 1px solid #e6c200;
+}
+.eq-dept-plp-search-hint__msg {
+  margin: 0;
+  flex: 1 1 200px;
+  font-size: 14px;
+  color: #333;
+}
+.eq-dept-plp-empty--search .eq-dept-plp-search-hint__inner {
+  margin: 0 auto;
+  max-width: 520px;
+  justify-content: center;
+}
+.eq-dept-plp-pages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin: 28px 0;
+}
+.eq-dept-plp-pages button {
+  min-width: 36px;
+  height: 36px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  font-size: 13px;
+}
+.eq-dept-plp-pages button.is-active {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+.eq-dept-plp-pages button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+.eq-dept-plp-status {
+  padding: 24px;
+  text-align: center;
+  color: #555;
+  font-size: 14px;
+}
+.eq-dept-plp-status--err {
+  color: #8b1a1a;
+  background: #fff5f5;
+  border: 1px solid #e8a5a5;
+  border-radius: 8px;
+  margin: 16px 0;
+}
+@media (max-width: 900px) {
+  .eq-dept-plp-layout {
+    flex-direction: column;
+  }
+  .eq-dept-plp-filter-mob {
+    display: inline-block;
+  }
+  .eq-dept-plp-aside {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1200;
+    width: min(300px, 88vw);
+    max-width: none;
+    transform: translateX(-105%);
+    transition: transform 0.2s ease;
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.12);
+  }
+  body.eq-dept-filter-open .eq-dept-plp-aside {
+    transform: translateX(0);
+  }
+  body.eq-dept-filter-open .eq-dept-filter-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 1190;
+    background: rgba(0, 0, 0, 0.35);
+  }
+}
+
+</style>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+html{height:100%;}body{min-height:100%;overflow-y:auto;}
+body{background:var(--eq-bg-page);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--eq-text);}
+.pg{width:100%;max-width:1500px;margin:0 auto;background:var(--eq-surface);}
+.hdr{display:flex;align-items:center;width:100%;background:var(--eq-surface);border-bottom:1px solid var(--eq-border);position:sticky;top:0;z-index:100;}
+.srch{width:50%;max-width:50%;flex:none;display:flex;align-items:center;border:1px solid var(--eq-border);}
+.srch-cat{padding:5px 10px;font-size:11px;font-weight:500;border-right:1px solid var(--eq-border);cursor:pointer;background:var(--eq-surface-2);}
+.srch-input{flex:1;font-size:12px;padding:5px 10px;border:none;outline:none;background:transparent;}
+.srch-btn{padding:5px 10px;border-left:1px solid var(--eq-border);background:var(--eq-surface);cursor:pointer;}
+.hdr-right{display:flex;align-items:center;gap:12px;font-size:12px;}
+.hdr-alici{padding:0 10px;border-right:1px solid var(--eq-border);}
+.pg-inner.hdr-pg-inner{display:flex;align-items:center;gap:10px;flex:1;min-width:0;padding:10px 20px 10px 0;}
+.footer{border-top:1px solid var(--eq-border);padding:12px 16px;font-size:11px;color:var(--eq-text-muted);display:flex;justify-content:space-between;background:var(--eq-surface);}
+</style>
+<style id="eq-contact-guard-20260521globalsearch">#equsto-contact-fab,.equsto-contact-fab:not(#eq-bottom-tabbar *){position:fixed;right:16px;bottom:16px;z-index:9999;width:auto;height:auto;max-width:80px;max-height:80px;align-items:flex-end;flex-direction:column;gap:10px;pointer-events:none;box-sizing:border-box}#equsto-contact-fab .equsto-contact-wa-fab:not(.equsto-contact-wa-fab--tabbar),.equsto-contact-fab:not(#eq-bottom-tabbar *) .equsto-contact-wa-fab:not(.equsto-contact-wa-fab--tabbar){pointer-events:auto;flex:0 0 auto;max-width:64px;max-height:64px;overflow:hidden}#equsto-contact-fab img,.equsto-contact-fab:not(#eq-bottom-tabbar *) .equsto-contact-wa-fab:not(.equsto-contact-wa-fab--tabbar) img{width:62px!important;height:62px!important;max-width:62px!important;max-height:62px!important;display:block;object-fit:cover}.equsto-wa-overlay:not(.equsto-wa-overlay--open){display:none!important;pointer-events:none!important}.equsto-wa-ico svg,.equsto-wa-ico-svg{width:22px;height:22px;max-width:22px;max-height:22px;display:block}</style>
+<style id="eq-mobile-chrome-20260521globalsearch">@media (max-width:768px){body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) nav.topnav,body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .topnav{display:none!important}#equsto-contact-fab,.equsto-contact-fab:not(#eq-bottom-tabbar *){display:none!important;pointer-events:none!important}body.eq-home #eq-home-catband{display:none!important}body.eq-shop.eq-dept aside.eq-filter-col,body.eq-shop.eq-dept #eq-filter-col{display:none!important}body:not(.admin-app):not(.eq-shop) header.hdr a.logo,body:not(.admin-app):not(.eq-shop) header.hdr>a.logo{display:none!important;visibility:hidden!important;width:0!important;height:0!important;overflow:hidden!important}body.eq-shop:not(.admin-app):not(.bd-page) header.hdr>a.logo{display:inline-flex!important;visibility:visible!important;width:auto!important;height:auto!important;max-width:42vw!important;overflow:visible!important;pointer-events:auto!important}body:not(.admin-app) header.hdr .srch-cat,body:not(.admin-app) header.hdr .cat-picker,body:not(.admin-app) header.hdr .cat-picker-btn{display:none!important;width:0!important;overflow:hidden!important}body:not(.admin-app) header.hdr .srch .srch-input{border-radius:8px 0 0 8px!important}}</style>
+<style id="eq-desktop-chrome-20260521globalsearch">@media (min-width:769px){body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) nav.topnav,body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .topnav{display:flex!important;visibility:visible!important;pointer-events:auto!important}body:not(.admin-app) header.hdr a.logo{display:inline-flex!important;visibility:visible!important;width:auto!important;height:auto!important;overflow:visible!important}body:not(.admin-app) header.hdr .srch-cat,body:not(.admin-app) header.hdr .cat-picker,body:not(.admin-app) header.hdr .cat-picker-btn{display:flex!important;visibility:visible!important;width:auto!important;overflow:visible!important}body.eq-shop.eq-dept-plp .eq-dept-plp-aside{display:block!important;visibility:visible!important;transform:none!important}body.eq-shop.eq-dept-plp .eq-dept-plp-main{display:block!important;visibility:visible!important}body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right{display:flex!important;visibility:visible!important}body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) #equsto-contact-fab{display:flex!important;position:fixed!important;right:16px!important;bottom:16px!important;z-index:9999!important;width:auto!important;height:auto!important;max-width:80px!important;max-height:80px!important;align-items:flex-end!important;visibility:visible!important;pointer-events:none!important}body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) #equsto-contact-fab .equsto-contact-wa-fab{pointer-events:auto!important;flex:0 0 auto!important;max-width:64px!important;max-height:64px!important;overflow:hidden!important}body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) #equsto-contact-fab img{width:62px!important;height:62px!important;max-width:62px!important;max-height:62px!important;object-fit:cover!important}}</style><script id="eq-desktop-chrome-restore-20260521globalsearch">(function(){var S='header.hdr a.logo,header.hdr .srch-cat,header.hdr .cat-picker,header.hdr .cat-picker-btn,nav.topnav,header+nav.topnav';function c(){if(matchMedia('(max-width:768px)').matches)return;document.querySelectorAll(S).forEach(function(el){['display','visibility','pointer-events','width','height','overflow'].forEach(function(p){el.style.removeProperty(p);});});}document.addEventListener('DOMContentLoaded',c);addEventListener('pageshow',c);addEventListener('resize',c);if(document.body)c();})();</script>
+</head>
+<body class="eq-shop eq-dept eq-dept-plp" data-eq-dept="dolap">
+
+<header class="hdr">
+  <a class="logo" href="/index.html" aria-label="Equsto"></a>
+  <div class="pg-inner hdr-pg-inner">
+    <div class="hdr-alici">
+      <div style="font-size:9px;color:var(--eq-text-subtle);" data-i18n="common.delivery_to">Teslimat Adresi</div>
+      <div style="font-size:11px;font-weight:600;" data-i18n="common.delivery_city">İstanbul, Türkiye</div>
+    </div>
+    <div class="srch">
+      <div class="srch-cat" onclick="toggleDrawer()" data-i18n="common.all_categories_caps">☰ Tüm Kategoriler</div>
+      <input class="srch-input" type="search" placeholder="Ürün, marka veya kategori ara..." autocomplete="off" data-i18n-attr="placeholder:common.search_placeholder">
+      <button type="button" class="srch-btn" aria-label="Ara"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.25" stroke="currentColor" stroke-width="1.35"/><line x1="12.35" y1="12.35" x2="17.85" y2="12.35" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/></svg></button>
+    </div>
+    <div class="hdr-right">
+      <button type="button" class="theme-toggle" id="theme-toggle" onclick="equstoCycleTheme()" title="Tema">◐</button>
+      <a href="/login.html" class="eq-hdr-account" data-i18n="common.my_account">Hesabım</a>
+    </div>
+  </div>
+</header>
+
+<nav class="topnav" aria-label="Departmanlar">
+  <div class="pg-inner topnav-inner">
+    <div class="topnav-item topnav-all" onclick="toggleDrawer()" data-i18n="common.all_categories_lower">☰ Tüm kategoriler</div>
+    <span class="topnav-sep" aria-hidden="true">|</span>
+    <div class="topnav-item topnav-pfos" onclick="eqGo('pfos')" data-i18n="nav.pfos">Proje Fabrikası</div>
+    <span class="topnav-sep">|</span>
+    <div class="topnav-item" onclick="eqGo('pisirme')" data-i18n="nav.pisirme">Pişirme Ekipmanları</div>
+    <span class="topnav-sep">|</span>
+    <div class="topnav-item" onclick="eqGo('sogutma')" data-i18n="nav.sogutma">Soğutma Ekipmanları</div>
+    <span class="topnav-sep">|</span>
+    <div class="topnav-item" onclick="eqGo('kahve')" data-i18n="nav.kahve">Kahve Ekipmanları</div>
+    <span class="topnav-sep">|</span>
+    <div class="topnav-item" onclick="eqGo('yikama')" data-i18n="nav.yikama">Yıkama Ekipmanları</div>
+    <span class="topnav-sep">|</span>
+    <div class="topnav-item" onclick="eqGo('hazirlik')" data-i18n="nav.hazirlik">Hazırlık Ekipmanları</div>
+    <span class="topnav-sep">|</span>
+    <div class="topnav-item" onclick="eqGo('icecek')" data-i18n="nav.icecek">İçecek Ekipmanları</div>
+    <span class="topnav-sep">|</span>
+    <div class="topnav-item" data-i18n="nav.tezgah">Çalışma Tezgahları</div>
+    <span class="topnav-sep">|</span>
+    <div class="topnav-item topnav-besos" onclick="eqGo('besos')" data-i18n="nav.bar_design">Bar Design</div>
+  </div>
+</nav>
+
+<div class="pg">
+  <div class="eq-dept-plp-layout">
+    <aside class="eq-dept-plp-aside" id="eq-dept-plp-aside" aria-label="Filtreler">
+      <div class="eq-dept-plp-aside__hd">Dolaplar</div>
+      <div id="eq-dept-plp-facets"></div>
+    </aside>
+    <div class="eq-dept-filter-backdrop" id="eq-dept-filter-backdrop" aria-hidden="true"></div>
+    <main class="eq-dept-plp-main" id="eq-dept-plp-main">
+      <h1 class="eq-dept-plp-title">Dolaplar</h1>
+      <p class="eq-dept-plp-lead">Paslanmaz depolama dolapları, malzeme dolapları ve sürgülü kapalı üniteler</p>
+      <div class="eq-dept-plp-selected" id="eq-dept-plp-selected" hidden><div class="eq-cm-selected__chips" id="eq-dept-cm-chips-main"></div></div>
+      <div class="eq-dept-plp-toolbar">
+        <button type="button" class="eq-dept-plp-filter-mob" id="eq-dept-plp-filter-mob">Filtrele</button>
+        <div class="eq-dept-plp-count" id="eq-dept-plp-count"></div>
+        <label class="eq-dept-plp-sort">Sıralama
+          <select id="eq-dept-plp-sort" aria-label="Sıralama">
+            <option value="">Karışık Sıra</option>
+            <option value="name">Alfabetik A-Z</option>
+            <option value="name-desc">Alfabetik Z-A</option>
+            <option value="price-asc">Fiyat Artan</option>
+            <option value="price-desc">Fiyat Azalan</option>
+          </select>
+        </label>
+      </div>
+      <div class="eq-dept-plp-grid" id="eq-dept-plp-grid" role="list">
+        <p class="eq-dept-plp-status">Katalog yükleniyor…</p>
+      </div>
+      <nav class="eq-dept-plp-pages" id="eq-dept-plp-pages" aria-label="Sayfalama"></nav>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <span style="font-size:10px;color:var(--eq-text-muted);" data-i18n="footer.b2b_partners">B2B · proje · kanal ortaklıkları</span>
+    <span data-i18n="common.manage_cookies">Çerez tercihlerini yönet</span>
+  </footer>
+</div>
+
+<div class="drawer-overlay" id="drawerOverlay" onclick="__eqDrawerBackdropClick(event)">
+  <button type="button" class="drawer-overlay-close" onclick="__eqDrawerCloseX(event)" aria-label="Kapat">×</button>
+</div>
+<div class="cat-drawer eq-amazon-shop-all" id="catDrawer" aria-hidden="true"></div>
+
+<script  src="/theme.js?v=20260521globalsearch"></script>
+<script  src="/equsto-logo.js?v=20260519wordmark3"></script>
+<script  src="/eq-i18n.js?v=20260521globalsearch"></script>
+<script  src="/eq-site-urls.js?v=20260521globalsearch"></script>
+<script  src="/nav.js?v=20260521globalsearch"></script>
+<script  src="/eq-auth-api.js"></script>
+<script  src="/equsto-member.js?v=20260521globalsearch" defer></script>
+<script  src="/equsto-auth-client.js?v=20260521globalsearch" defer></script>
+<script defer  src="/ecom-cart.js?v=20260520cart"></script>
+<script  src="/eq-dept-tips.js?v=20260521globalsearch"></script>
+<script  src="/eq-dept-plp-config.js"></script>
+<script  src="/eq-dept-cm-facets.js?v=20260521globalsearch"></script>
+<script  src="/eq-fiyatlar-bridge.js?v=20260521globalsearch"></script>
+<script  src="/eq-vendor-sanitize.js?v=20260520vendor"></script>
+<script  src="/eq-dept-plp.js?v=20260521globalsearch"></script>
+<script>
+(function () {
+  var sel = document.getElementById('eq-dept-plp-sort');
+  if (sel) {
+    sel.addEventListener('change', function () {
+      if (window.__eqDeptPlpSetSort) window.__eqDeptPlpSetSort(sel.value);
+    });
+  }
+})();
+</script>
+<script  src="/contact.js?v=20260521globalsearch" defer></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"2800f8a675244419a90a426a1a3e6854","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

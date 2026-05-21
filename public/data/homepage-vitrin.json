@@ -1,0 +1,268 @@
+{
+  "version": "1.0",
+  "updated": "2026-05-18",
+  "layout": {
+    "showWorldFirstBanner": true,
+    "showPlatformHero": true,
+    "showMutbexTicker": true,
+    "showMutbexCarousel": true,
+    "showMutbexStories": false,
+    "showMutbexPopCats": true,
+    "showHomeCatband": false,
+    "showMutbexSpotlight": false,
+    "showMutbexPromoCards": true,
+    "showMutbexPayBanner": true,
+    "showMutbexCatTiles": true,
+    "showMutbexCatMosaic": true,
+    "showMutbexDeptShowcases": true,
+    "showHomeCatalogGrid": true,
+    "showHomeNewRail": false,
+    "showHomeTwinCta": false
+  },
+  "pageTitle": "Equsto Endüstriyel Mutfak Ekipmanları",
+  "spotlightTitle": "Haftanın öne çıkanları",
+  "ticker": [
+    { "strong": "9 Taksit", "text": "vade farksız", "aktif": true },
+    { "strong": "Ücretsiz kargo", "text": "5.000 ₺ üzeri", "aktif": true },
+    { "strong": "Proje Fabrikası", "text": "anlık teklif", "aktif": true },
+    { "strong": "Öztiryakiler", "text": "soğutma & pişirme", "aktif": true }
+  ],
+  "promoChips": [
+    { "strong": "9 Taksit", "text": "anlaşmalı kartlarda vade farksız", "aktif": true },
+    { "strong": "Ücretsiz kargo", "text": "5.000 ₺ ve üzeri siparişlerde", "aktif": true },
+    { "strong": "Proje Fabrikası", "text": "beş dakikada liste, anlık teklif", "aktif": true },
+    { "strong": "Öztiryakiler", "text": "soğutma ve pişirme vitrininde", "aktif": true }
+  ],
+  "heroSlides": [
+    {
+      "title": "Öztiryakiler",
+      "subtitle": "Soğutma ve pişirme · 9 taksit · ücretsiz kargo",
+      "href": "/marka.html?b=%C3%96ztiryakiler+End%C3%BCstriyel+Mutfak",
+      "image": "/data/images/öztiryakiler-gn-600-nmv-tek-kapılı-dik-tip-buzdolabı-k-tip-79k406nmv00_1.jpg",
+      "gradient": "",
+      "thumb": "/data/images/öztiryakiler-gn-600-nmv-tek-kapılı-dik-tip-buzdolabı-k-tip-79k406nmv00_1.jpg",
+      "aktif": true,
+      "sort": 1
+    },
+    {
+      "title": "Proje Fabrikası",
+      "subtitle": "Beş dakikada ekipman listesi ve anlık teklif",
+      "href": "pfos.html",
+      "image": "",
+      "gradient": "linear-gradient(120deg,#001e50,#0a3d7a)",
+      "thumb": "/images/home/hero-bar-cocktailstation.png",
+      "aktif": true,
+      "sort": 2
+    },
+    {
+      "title": "Bar Design Studio",
+      "subtitle": "IMT300 berrak buz · modüler kokteyl istasyonu",
+      "href": "bar-design.html",
+      "image": "/images/home/hero-bar-cocktailstation.png?v=20260520barcover",
+      "thumb": "/images/home/hero-bar-cocktailstation.png?v=20260520barcover",
+      "aktif": true,
+      "sort": 3
+    },
+    {
+      "title": "Endüstriyel mutfak vitrini",
+      "subtitle": "6.000+ ürün · profesyonel fiyatlandırma",
+      "href": "/shop/pisirme",
+      "image": "",
+      "gradient": "linear-gradient(135deg,#0a1628,#1a4a8c)",
+      "thumb": "/images/home/hero-bar-cocktailstation.png",
+      "aktif": true,
+      "sort": 4
+    }
+  ],
+  "stories": [
+    { "label": "Proje Fabrikası", "go": "pfos", "emoji": "📋", "bg": "#dce8f4", "frame": "#9eb8d4", "image": "/images/home/hero-bar-cocktailstation.png", "aktif": true, "sort": 1 },
+    { "label": "Bar Design", "go": "besos", "emoji": "🍸", "bg": "#e0f2f1", "image": "/images/home/hero-bar-cocktailstation.png?v=20260520barcover", "aktif": true, "sort": 2 },
+    { "label": "Pişirme Ekipmanları", "dept": "pisirme", "emoji": "🍳", "bg": "#e8f8ee", "image": "/data/images/konveksiyonlu-kombi-firin-gazli-20xgn-2-1-tepsi-kit-arabali_1.jpg", "aktif": true, "sort": 3 },
+    { "label": "Soğutma Ekipmanları", "dept": "sogutma", "emoji": "❄️", "bg": "#e8f4fc", "image": "/data/images/öztiryakiler-gn-600-nmv-tek-kapılı-dik-tip-buzdolabı-k-tip-79k406nmv00_1.jpg", "aktif": true, "sort": 4 },
+    { "label": "Kahve Ekipmanları", "dept": "kahve", "emoji": "☕", "bg": "#fff8e6", "image": "/data/images/dalla-corte-zero-barista-espresso-kahve-makinesi-3-gruplu-siyah_1.png", "aktif": true, "sort": 5 },
+    { "label": "Yıkama Ekipmanları", "dept": "yikama", "emoji": "💧", "bg": "#e3f2fd", "image": "/data/images/arisco-bulaşık-makinesi-set-altı-500-tabaksaat-dw500_1.jpg", "aktif": true, "sort": 6 },
+    { "label": "Hazırlık Ekipmanları", "dept": "hazirlik", "emoji": "🔪", "bg": "#e8f5e9", "image": "/data/images/dito-sama-80-litre-planet-mikser-elektromekanik-hız-varyatörlü-600186-bmxe80_1.jpg", "aktif": true, "sort": 7 },
+    { "label": "İçecek Ekipmanları", "dept": "icecek", "emoji": "🥤", "bg": "#ede7f6", "image": "/data/images/brema-küp-buz-makinesi-160-kg-cb1565_1.jpg", "aktif": true, "sort": 8 },
+    { "label": "Servis & Teşhir", "go": "marketReyon", "emoji": "🍽️", "bg": "#fce8f0", "image": "/data/images/öztiryakiler-elektrikli-benmari-hareketli-servis-raflı-130x70-78541378510_1.jpg", "aktif": true, "sort": 9 },
+    { "label": "Çalışma Tezgahları", "dept": "tezgah", "emoji": "▦", "bg": "#f3e5f5", "image": "/data/images/arisco-paslanmaz-çalışma-tezgahı-160x60x85-demonte-ta616d-work-table_1.jpg", "aktif": true, "sort": 10 },
+    { "label": "Dolaplar", "dept": "dolap", "emoji": "🗄️", "bg": "#e8f4fc", "image": "/data/images/set-alti-dolapli-tezgah_1.jpg", "aktif": true, "sort": 11 },
+    { "label": "Davlumbazlar", "dept": "davlumbaz", "emoji": "💨", "bg": "#fff8e1", "image": "/data/images/halton-kch-i-davlumbaz_1.jpg", "aktif": true, "sort": 12 },
+    { "label": "Taşıma Ekipmanları", "dept": "tasima", "emoji": "🚚", "bg": "#e0f7fa", "image": "/data/images/atalay-ata-4060-15_1.jpg", "aktif": true, "sort": 13 },
+    { "label": "Arabalar", "dept": "araba", "emoji": "🛒", "bg": "#e8f5e9", "image": "/data/images/servis-arabasi-procart-220_1.jpg", "aktif": true, "sort": 14 },
+    { "label": "İstif Rafları", "dept": "istif", "emoji": "📦", "bg": "#ede7f6", "image": "/data/images/i-stif-rafi_1.jpg", "aktif": true, "sort": 15 }
+  ],
+  "spotlight": {
+    "mode": "skus",
+    "skus": [
+      "Öztiryakiler GN 600 NMV Tek Kapılı Dik Tip Buzdolabı K Tip 79K4.06NMV.00",
+      "Öztiryakiler TAG 270 NMV Çift Kapılı Tezgah Tip Buzdolabı 79E4.27NMV.00",
+      "Öztiryakiler TAG 370 NMV Üç Kapılı Tezgah Tip Buzdolabı 79E4.37NMV.00"
+    ],
+    "limit": 8
+  },
+  "rails": {
+    "kampanyali": {
+      "mode": "skus",
+      "skus": [
+        "Öztiryakiler GN 600 NMV Tek Kapılı Dik Tip Buzdolabı K Tip 79K4.06NMV.00",
+        "Öztiryakiler TAG 270 NMV Çift Kapılı Tezgah Tip Buzdolabı 79E4.27NMV.00"
+      ],
+      "limit": 12
+    },
+    "cokSatan": {
+      "mode": "skus",
+      "skus": [
+        "Öztiryakiler TAG 370 NMV Üç Kapılı Tezgah Tip Buzdolabı 79E4.37NMV.00",
+        "Iceinox Tezgah Tipi Buzdolabı 2 Kapılı 150x70x85 CTS 330 CR"
+      ],
+      "limit": 12
+    },
+    "yeni": {
+      "mode": "skus",
+      "skus": [
+        "Öztiryakiler GN 600 NMV Tek Kapılı Dik Tip Buzdolabı K Tip 79K4.06NMV.00",
+        "Öztiryakiler TAG 270 NMV Çift Kapılı Tezgah Tip Buzdolabı 79E4.27NMV.00",
+        "Öztiryakiler TAG 370 NMV Üç Kapılı Tezgah Tip Buzdolabı 79E4.37NMV.00"
+      ],
+      "limit": 12
+    }
+  },
+  "productBadges": {
+    "showFreeShipping": true,
+    "showInstallments": true,
+    "freeShippingLabel": "Ücretsiz kargo",
+    "installmentsLabel": "9 taksit"
+  },
+  "payBanner": {
+    "left": {
+      "strong": "9 Taksit",
+      "text": "Öztiryakiler ürünlerinde · 50.000 ₺ üzeri siparişlerde vade farksız",
+      "bg": "#5c3d8f"
+    },
+    "right": {
+      "strong": "Ücretsiz Kargo",
+      "text": "5.000 ₺ ve üzeri tüm Equsto siparişlerinde",
+      "bg": "#1565c0"
+    },
+    "aktif": true
+  },
+  "promoCards": [
+    {
+      "brand": "Öztiryakiler",
+      "title": "GN 600 NMV Tek Kapılı Buzdolabı",
+      "tag": "Efsane Fırsat!",
+      "bg": "#f3e8d8",
+      "sku": "Öztiryakiler GN 600 NMV Tek Kapılı Dik Tip Buzdolabı K Tip 79K4.06NMV.00",
+      "dept": "sogutma",
+      "aktif": true,
+      "sort": 1
+    },
+    {
+      "brand": "Öztiryakiler",
+      "title": "TAG 270 NMV Tezgah Tip Buzdolabı",
+      "tag": "Kaçmaz Fiyat!",
+      "bg": "#fff4d6",
+      "sku": "Öztiryakiler TAG 270 NMV Çift Kapılı Tezgah Tip Buzdolabı 79E4.27NMV.00",
+      "dept": "sogutma",
+      "aktif": true,
+      "sort": 2
+    },
+    {
+      "brand": "Öztiryakiler",
+      "title": "TAG 370 NMV Üç Kapılı Buzdolabı",
+      "tag": "Profesyonel Seçim",
+      "bg": "#eceff4",
+      "sku": "Öztiryakiler TAG 370 NMV Üç Kapılı Tezgah Tip Buzdolabı 79E4.37NMV.00",
+      "dept": "sogutma",
+      "aktif": true,
+      "sort": 3
+    },
+    {
+      "brand": "Iceinox",
+      "title": "Tezgah Tipi Buzdolabı 2 Kapılı",
+      "tag": "Stokta",
+      "bg": "#fde8ef",
+      "sku": "Iceinox Tezgah Tipi Buzdolabı 2 Kapılı 150x70x85 CTS 330 CR",
+      "dept": "sogutma",
+      "aktif": true,
+      "sort": 4
+    }
+  ],
+  "categoryTilesSmall": [
+    {
+      "label": "Buz Makineleri",
+      "dept": "sogutma",
+      "bg": "#e8f4fc",
+      "image": "/data/images/öztiryakiler-gn-600-nmv-tek-kapılı-dik-tip-buzdolabı-k-tip-79k406nmv00_1.jpg",
+      "aktif": true,
+      "sort": 1
+    },
+    {
+      "label": "Tezgah Tip Dolaplar",
+      "dept": "sogutma",
+      "bg": "#fce8f0",
+      "image": "/data/images/öztiryakiler-tag-270-nmv-çift-kapılı-tezgah-tip-buzdolabı-79e427nmv00_1.jpg",
+      "aktif": true,
+      "sort": 2
+    },
+    {
+      "label": "Pişirme Hatları",
+      "dept": "pisirme",
+      "bg": "#e8f8ee",
+      "image": "",
+      "aktif": true,
+      "sort": 3
+    },
+    {
+      "label": "Bulaşıkhane",
+      "dept": "yikama",
+      "bg": "#fff8e6",
+      "image": "",
+      "aktif": true,
+      "sort": 4
+    }
+  ],
+  "categoryMosaic": [
+    { "label": "Buz Makineleri", "dept": "sogutma", "size": "sm", "bg": "#d4edda", "image": "/data/images/öztiryakiler-gn-600-nmv-tek-kapılı-dik-tip-buzdolabı-k-tip-79k406nmv00_1.jpg", "aktif": true, "sort": 1 },
+    { "label": "Mikserler", "dept": "hazirlik", "size": "sm", "bg": "#d4edda", "image": "", "aktif": true, "sort": 2 },
+    { "label": "Kıyma Makineleri", "dept": "hazirlik", "size": "sm", "bg": "#c8e6c9", "image": "", "aktif": true, "sort": 3 },
+    { "label": "Kahve Ekipmanları", "dept": "kahve", "size": "sm", "bg": "#b2dfdb", "image": "/images/home/hero-bar-cocktailstation.png", "aktif": true, "sort": 4 },
+    { "label": "Endüstriyel Mutfak Ekipmanları", "dept": "pisirme", "size": "lg", "bg": "#1b5e20", "textLight": true, "image": "/data/images/öztiryakiler-tag-370-nmv-üç-kapılı-tezgah-tip-buzdolabı-79e437nmv00_1.png", "aktif": true, "sort": 5 },
+    { "label": "Derin Dondurucular ve Buzdolapları", "dept": "sogutma", "size": "lg", "bg": "#0d47a1", "textLight": true, "image": "/data/images/öztiryakiler-tag-270-nmv-çift-kapılı-tezgah-tip-buzdolabı-79e427nmv00_1.jpg", "aktif": true, "sort": 6 },
+    { "label": "Fırınlar", "dept": "pisirme", "size": "sm", "bg": "#e3f2fd", "image": "", "aktif": true, "sort": 7 },
+    { "label": "Ocaklar", "dept": "pisirme", "size": "sm", "bg": "#e3f2fd", "image": "", "aktif": true, "sort": 8 },
+    { "label": "Yıkama Hatları", "dept": "yikama", "size": "sm", "bg": "#e1f5fe", "image": "", "aktif": true, "sort": 9 },
+    { "label": "İçecek & Bar", "dept": "icecek", "size": "sm", "bg": "#e1f5fe", "image": "/images/imt300/imt300-1.jpg", "aktif": true, "sort": 10 }
+  ],
+  "deptShowcases": [
+    {
+      "id": "yikama",
+      "dept": "yikama",
+      "title": "Bulaşıkhane Ekipmanları",
+      "headerBg": "linear-gradient(105deg,#0288d1,#01579b)",
+      "headerImage": "/data/images/arisco-bulaşık-makinesi-set-altı-500-tabaksaat-dw500_1.jpg",
+      "cta": "Hemen Keşfedin →",
+      "href": "/shop/yikama",
+      "products": {
+        "mode": "skus",
+        "dept": "yikama",
+        "limit": 10,
+        "skus": [
+          "Arisco Bulaşık Makinesi Set Altı 500 Tabak/Saat DW500",
+          "Maksan Sebze Yıkama Makinesi 150-300 Kg/Saat Kapasiteli SBY-300",
+          "Empero Konveyörlü Bulaşık Makinesi Kurutmalı 3300 Tabak Kapasiteli EMP.3000",
+          "Empero 1000 Tabak Giyotin Tipi Bulaşık Makinesi 1000 Tabak / Saat EMP.1000",
+          "Öztiryakiler Giyotin Tip Bulaşık Yıkama Makinesi, Touch Ekran OBM 1080 T",
+          "Flight Tip Bulaşık Yıkama Makinesi Sol Girişli Kurutmalı",
+          "Cancan Ön Yıkama Duşu Mini Boy, Tezgaha Monte MT05",
+          "El Yıkama Evyesi Yüksek Sırtlı Mekanizmalı",
+          "Bulaşık Makinesi Giriş Tezgahı",
+          "Cancan Mt03 Ön Yıkama Duşu Duvara Monte Deluxe MT03"
+        ]
+      },
+      "theme": "blue",
+      "aktif": true,
+      "sort": 1
+    }
+  ]
+}

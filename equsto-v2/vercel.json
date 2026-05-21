@@ -1,0 +1,6 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nextjs",
+  "buildCommand": "node scripts/generate-admin-config.mjs && prisma generate && npm run build",
+  "installCommand": "npm install"
+}

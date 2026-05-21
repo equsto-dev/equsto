@@ -1,0 +1,474 @@
+{
+  "version": 2,
+  "source": "PFOS mutfak bölümleri — sebze/et hazırlık, kuru/soğuk/derin depo",
+  "categories": {
+    "ana_mutfak": {
+      "name": "Ana Mutfak",
+      "share": 0.28,
+      "icon": "🔥",
+      "color": "#E2792B"
+    },
+    "sebze_hazirlik": {
+      "name": "Sebze Hazırlık",
+      "share": 0.06,
+      "icon": "🥬",
+      "color": "#5FA85A"
+    },
+    "et_hazirlik": {
+      "name": "Et Hazırlık",
+      "share": 0.06,
+      "icon": "🥩",
+      "color": "#C45C4A"
+    },
+    "kuru_depo": {
+      "name": "Kuru Depo",
+      "share": 0.04,
+      "icon": "📦",
+      "color": "#B8860B"
+    },
+    "soguk_oda": {
+      "name": "Soğuk Oda",
+      "share": 0.05,
+      "icon": "❄️",
+      "color": "#5FA8E2"
+    },
+    "derin_dondurucu": {
+      "name": "Derin Dondurucu Oda",
+      "share": 0.04,
+      "icon": "🧊",
+      "color": "#3D7AB8"
+    },
+    "bulasikhane": {
+      "name": "Bulaşıkhane",
+      "share": 0.1,
+      "icon": "🧼",
+      "color": "#2BB5C9"
+    },
+    "pastane": {
+      "name": "Pastane",
+      "share": 0.06,
+      "icon": "🥐",
+      "color": "#D26FA8"
+    },
+    "bar": {
+      "name": "Bar",
+      "share": 0.05,
+      "icon": "🍸",
+      "color": "#7B5BD3"
+    },
+    "acik_bufe": {
+      "name": "Açık Büfe",
+      "share": 0.04,
+      "icon": "🍽️",
+      "color": "#E29A2B"
+    },
+    "show_mutfagi": {
+      "name": "Show Mutfağı",
+      "share": 0.04,
+      "icon": "👨‍🍳",
+      "color": "#9AA0A6"
+    },
+    "izgara_meze": {
+      "name": "Izgara / Meze",
+      "share": 0.04,
+      "icon": "🔥",
+      "color": "#D14545"
+    }
+  },
+  "catalog": {
+    "ana_mutfak": {
+      "products": [
+        {
+          "id": "am-kombi",
+          "name": "Kombi fırın (Rational)",
+          "marka": "Rational",
+          "dimensions": "10 GN 1/1",
+          "classification": "ZRN",
+          "m2_per_unit": null,
+          "min_qty": 1,
+          "tip_kodu": "kombi_firin_6t",
+          "elk_kw": 11.4,
+          "gaz_kw": 0,
+          "unit_price_try": 56381,
+          "price_source": "ekipmanlar_medyan"
+        },
+        {
+          "id": "am-dav",
+          "name": "Davlumbaz (duvar tipi)",
+          "dimensions": "300×100×50",
+          "classification": "ZRN",
+          "m2_per_unit": 32,
+          "min_qty": 1,
+          "tip_kodu": "davlumbaz_duvar",
+          "unit_price_try": 33427,
+          "price_source": "ekipmanlar_medyan"
+        },
+        {
+          "id": "am-ocak4",
+          "name": "Dört alevli ocak",
+          "dimensions": "80×75×30",
+          "classification": "ZRN",
+          "m2_per_unit": 48,
+          "min_qty": 2,
+          "tip_kodu": "ocak_4gz",
+          "unit_price_try": 39536,
+          "price_source": "ekipmanlar_medyan"
+        },
+        {
+          "id": "am-cop",
+          "name": "Çöp kovası",
+          "dimensions": "40×50",
+          "classification": "ZRN",
+          "m2_per_unit": null,
+          "min_qty": 1,
+          "tip_kodu": "cop_arabasi",
+          "unit_price_try": 20354,
+          "price_source": "ekipmanlar_medyan"
+        },
+        {
+          "id": "am-izgara",
+          "name": "Yer ızgarası",
+          "dimensions": "94×30",
+          "classification": "ZRN",
+          "m2_per_unit": 20,
+          "min_qty": 1,
+          "tip_kodu": "yer_izgara",
+          "price_source": "ekipmanlar_medyan",
+          "unit_price_try": 38001
+        },
+        {
+          "id": "am-mikro",
+          "name": "Mikrodalga fırın",
+          "dimensions": "",
+          "classification": "OPS",
+          "m2_per_unit": null,
+          "min_qty": 1,
+          "tip_kodu": "mikrodalga_firin",
+          "price_source": "referans_try",
+          "unit_price_try": 8500
+        },
+        {
+          "id": "am-servis",
+          "name": "Servis arabası",
+          "dimensions": "90×55×90",
+          "classification": "OPS",
+          "m2_per_unit": null,
+          "min_qty": 1,
+          "tip_kodu": "servis_rafi",
+          "price_source": "referans_try",
+          "unit_price_try": 6500
+        },
+        {
+          "id": "am-fritoz",
+          "name": "Fritöz",
+          "dimensions": "80×75×30",
+          "classification": "OPS",
+          "m2_per_unit": null,
+          "min_qty": 1,
+          "tip_kodu": "fritoz_tek",
+          "unit_price_try": 42411,
+          "price_source": "ekipmanlar_medyan"
+        },
+        {
+          "id": "am-plate",
+          "name": "Plate ızgara",
+          "dimensions": "80×73×25",
+          "classification": "OPS",
+          "m2_per_unit": null,
+          "min_qty": 1,
+          "tip_kodu": "char_broil",
+          "price_source": "ekipmanlar_medyan",
+          "unit_price_try": 48307
+        },
+        {
+          "id": "am-salamander",
+          "name": "Salamander",
+          "dimensions": "60×60×60",
+          "classification": "OPS",
+          "m2_per_unit": null,
+          "min_qty": 1,
+          "tip_kodu": "salamander",
+          "unit_price_try": 30633,
+          "price_source": "ekipmanlar_medyan"
+        },
+        {
+          "id": "am-notr",
+          "name": "Nötr ara tezgah",
+          "dimensions": "40×75×30",
+          "classification": "OPS",
+          "m2_per_unit": 24,
+          "min_qty": 1,
+          "tip_kodu": "tezgah_duz",
+          "unit_price_try": 10680,
+          "price_source": "ekipmanlar_medyan"
+        }
+      ]
+    },
+    "sebze_hazirlik": {
+      "products": [
+        {
+          "id": "am-tezgah",
+          "name": "Çalışma tezgahı",
+          "dimensions": "150×70×85",
+          "classification": "ZRN",
+          "m2_per_unit": 20,
+          "min_qty": 1,
+          "tip_kodu": "calisma_tezgahi",
+          "price_source": "ekipmanlar_medyan",
+          "unit_price_try": 58467
+        },
+        {
+          "id": "am-evye1",
+          "name": "Tek evyeli tezgah",
+          "dimensions": "120×70×85",
+          "classification": "ZRN",
+          "m2_per_unit": 32,
+          "min_qty": 1,
+          "tip_kodu": "tezgah_evyeli",
+          "unit_price_try": 101407,
+          "price_source": "ekipmanlar_medyan"
+        },
+        {
+          "id": "am-dus",
+          "name": "Duş sprey ünitesi",
+          "dimensions": "",
+          "classification": "ZRN",
+          "m2_per_unit": 32,
+          "min_qty": 1,
+          "tip_kodu": "dus_sprey",
+          "unit_price_try": 7605,
+          "price_source": "ekipmanlar_medyan"
+        },
+        {
+          "id": "am-evye2",
+          "name": "Çift evyeli tezgah",
+          "dimensions": "120×70×85",
+          "classification": "OPS",
+          "m2_per_unit": null,
+          "min_qty": 1,
+          "tip_kodu": "tezgah_evyeli",
+          "unit_price_try": 101407,
+          "price_source": "ekipmanlar_medyan"
+        }
+      ]
+    },
+    "et_hazirlik": {
+      "products": [
+        {
+          "id": "am-dilim",
+          "name": "Gıda dilimleme makinesi",
+          "dimensions": "Ø30 cm",
+          "classification": "OPS",
+          "m2_per_unit": null,
+          "min_qty": 1,
+          "tip_kodu": "dilimleme_makinesi",
+          "unit_price_try": 23246,
+          "price_source": "ekipmanlar_medyan"
+        }
+      ]
+    },
+    "kuru_depo": {
+      "products": [
+        {
+          "id": "am-raf",
+          "name": "Duvar rafı",
+          "dimensions": "150×30×4",
+          "classification": "ZRN",
+          "m2_per_unit": 24,
+          "min_qty": 1,
+          "tip_kodu": "duvar_rafi",
+          "price_source": "referans_try",
+          "unit_price_try": 8500
+        },
+        {
+          "id": "am-istif",
+          "name": "İstif rafı (demonte)",
+          "dimensions": "137×53×160",
+          "classification": "ZRN",
+          "m2_per_unit": 24,
+          "min_qty": 1,
+          "tip_kodu": "istif_rafi",
+          "price_source": "referans_try",
+          "unit_price_try": 9500
+        }
+      ]
+    },
+    "soguk_oda": {
+      "products": [
+        {
+          "id": "am-cihazalti",
+          "name": "Cihazaltı buzdolabı",
+          "dimensions": "160×70×55",
+          "classification": "ZRN",
+          "m2_per_unit": 24,
+          "min_qty": 1,
+          "tip_kodu": "tezgah_alti_buz_cek",
+          "unit_price_try": 38450,
+          "price_source": "ekipmanlar_medyan"
+        },
+        {
+          "id": "am-tezgah-buz",
+          "name": "Tezgah tipi buzdolabı",
+          "dimensions": "186×70×85",
+          "classification": "ZRN",
+          "m2_per_unit": 32,
+          "min_qty": 1,
+          "tip_kodu": "tezgah_tip_buzdolabi",
+          "unit_price_try": 77403,
+          "price_source": "ekipmanlar_medyan"
+        },
+        {
+          "id": "am-dik-buz",
+          "name": "Dik tip buzdolabı",
+          "dimensions": "140×83×218",
+          "classification": "OPS",
+          "m2_per_unit": null,
+          "min_qty": 1,
+          "tip_kodu": "dik_tip_buzdolabi",
+          "unit_price_try": 81437,
+          "price_source": "ekipmanlar_medyan"
+        }
+      ]
+    },
+    "derin_dondurucu": {
+      "products": []
+    },
+    "bulasikhane": {
+      "products": [
+        {
+          "id": "by-siyirma",
+          "name": "Bulaşık sıyırma tezgahı",
+          "dimensions": "175×70×85",
+          "classification": "ZRN",
+          "m2_per_unit": null,
+          "min_qty": 1,
+          "tip_kodu": "cop_siyirma_tez",
+          "price_source": "referans_try",
+          "unit_price_try": 22000
+        },
+        {
+          "id": "by-giris",
+          "name": "Makine giriş tezgahı",
+          "dimensions": "100×75×85",
+          "classification": "ZRN",
+          "m2_per_unit": null,
+          "min_qty": 1,
+          "tip_kodu": "bym_giris_tez",
+          "price_source": "referans_try",
+          "unit_price_try": 28000
+        },
+        {
+          "id": "by-cikis",
+          "name": "Makine çıkış tezgahı",
+          "dimensions": "70×75×85",
+          "classification": "ZRN",
+          "m2_per_unit": null,
+          "min_qty": 1,
+          "tip_kodu": "bym_cikis_tez",
+          "price_source": "referans_try",
+          "unit_price_try": 18000
+        },
+        {
+          "id": "by-dus",
+          "name": "Duş sprey ünitesi",
+          "dimensions": "",
+          "classification": "ZRN",
+          "m2_per_unit": null,
+          "min_qty": 1,
+          "tip_kodu": "dus_sprey",
+          "unit_price_try": 7605,
+          "price_source": "ekipmanlar_medyan"
+        },
+        {
+          "id": "by-dav",
+          "name": "Davlumbaz (filtresiz)",
+          "dimensions": "100×100×50",
+          "classification": "ZRN",
+          "m2_per_unit": null,
+          "min_qty": 1,
+          "tip_kodu": "davlumbaz",
+          "unit_price_try": 18644,
+          "price_source": "ekipmanlar_medyan"
+        },
+        {
+          "id": "by-kazan",
+          "name": "Kazan yıkama evyesi",
+          "dimensions": "100×80×85",
+          "classification": "ZRN",
+          "m2_per_unit": null,
+          "min_qty": 1,
+          "tip_kodu": "evye",
+          "unit_price_try": 380275,
+          "price_source": "ekipmanlar_medyan"
+        },
+        {
+          "id": "by-cop",
+          "name": "Çöp kovası",
+          "dimensions": "40×50",
+          "classification": "ZRN",
+          "m2_per_unit": null,
+          "min_qty": 1,
+          "tip_kodu": "cop_arabasi",
+          "unit_price_try": 20354,
+          "price_source": "ekipmanlar_medyan"
+        },
+        {
+          "id": "by-istif",
+          "name": "İstif rafı (demonte)",
+          "dimensions": "137×53×160",
+          "classification": "ZRN",
+          "m2_per_unit": 7,
+          "min_qty": 1,
+          "tip_kodu": "istif_rafi",
+          "price_source": "referans_try",
+          "unit_price_try": 9500
+        },
+        {
+          "id": "by-izgara",
+          "name": "Yer ızgarası",
+          "dimensions": "94×30",
+          "classification": "ZRN",
+          "m2_per_unit": 7,
+          "min_qty": 1,
+          "tip_kodu": "yer_izgara",
+          "price_source": "ekipmanlar_medyan",
+          "unit_price_try": 38001
+        },
+        {
+          "id": "by-giyotin",
+          "name": "Giyotin bulaşık makinesi",
+          "dimensions": "1000 tb/s",
+          "classification": "OPS",
+          "m2_per_unit": null,
+          "min_qty": 1,
+          "tip_kodu": "bulasik_giyotin_1000",
+          "unit_price_try": 80978,
+          "price_source": "ekipmanlar_medyan"
+        }
+      ]
+    },
+    "pastane": {
+      "products": []
+    },
+    "bar": {
+      "products": []
+    },
+    "acik_bufe": {
+      "products": []
+    },
+    "show_mutfagi": {
+      "products": []
+    },
+    "izgara_meze": {
+      "products": []
+    }
+  },
+  "price_sync": {
+    "at": "2026-05-16T20:20:26.549Z",
+    "currency": "TRY",
+    "kdv": "haric",
+    "from_fiyat_listesi": 0,
+    "from_ekipmanlar": 23,
+    "eksik": 0
+  }
+}
