@@ -50,10 +50,13 @@ def main():
             continue
         page = doc[page_no - 1]
         rect = page.rect
-        top = fitz.Rect(rect.x0, rect.y0, rect.x1, rect.y0 + rect.height * 0.48)
+        # Üst kırmızı şerit (Seri 730, kategori başlığı) atlanır; ürün fotoğrafı bandı
+        zone_top = rect.y0 + rect.height * 0.14
+        zone_bot = rect.y0 + rect.height * 0.94
+        zone = fitz.Rect(rect.x0, zone_top, rect.x1, zone_bot)
         mat = fitz.Matrix(2, 2)
         n = max(len(items), 1)
-        slice_w = top.width / n
+        slice_w = zone.width / n
         out_dir = OUT_BASE / f"p{page_no}"
         out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -61,9 +64,9 @@ def main():
             model = p.get("model") or p.get("modelCode")
             fname = slug_file(model) + ".jpg"
             out = out_dir / fname
-            x0 = top.x0 + i * slice_w
-            x1 = top.x0 + (i + 1) * slice_w if i < n - 1 else top.x1
-            sub_clip = fitz.Rect(x0, top.y0, x1, top.y1)
+            x0 = zone.x0 + i * slice_w
+            x1 = zone.x0 + (i + 1) * slice_w if i < n - 1 else zone.x1
+            sub_clip = fitz.Rect(x0, zone.y0, x1, zone.y1)
             pix = page.get_pixmap(matrix=mat, clip=sub_clip, alpha=False)
             pix.save(str(out))
             rel = f"/images/catalog/atalay/p{page_no}/{fname}"

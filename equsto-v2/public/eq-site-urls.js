@@ -348,13 +348,18 @@
     if (/^catalog\//i.test(file)) {
       list.push("/images/" + file);
       list.push("/images/" + encodeDataRelPath(file));
-    }
-    if (isEqustoLiveHost()) {
-      list.push(root + file);
-    }
-    list.push(root + encodeDataRelPath(file));
-    if (isEqustoLiveHost()) {
-      list.push("/images/" + encodeDataRelPath(file));
+      if (!isEqustoLiveHost()) {
+        list.push(root + file);
+        list.push(root + encodeDataRelPath(file));
+      }
+    } else {
+      if (isEqustoLiveHost()) {
+        list.push(root + file);
+      }
+      list.push(root + encodeDataRelPath(file));
+      if (isEqustoLiveHost()) {
+        list.push("/images/" + encodeDataRelPath(file));
+      }
     }
     var seen = {};
     return list.filter(function (u) {

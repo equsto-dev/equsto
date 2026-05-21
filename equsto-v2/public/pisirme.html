@@ -28,7 +28,7 @@
 <link rel="stylesheet" href="/theme.css?v=20260521globalsearch">
 <link rel="stylesheet" href="/contact.css?v=20260523wamin">
 <link rel="stylesheet" href="/eq-home-mutbex.css?v=20260521globalsearch">
-<link rel="stylesheet" href="/eq-dept-plp.css?v=20260522">
+<link rel="stylesheet" href="/eq-dept-plp.css?v=20260523atalayimg">
 
 <style id="eq-dept-plp-inline">
 body.eq-shop.eq-dept.eq-dept-plp .eq-dept-plp-layout{display:flex!important;align-items:flex-start;width:100%;max-width:1500px;margin:0 auto}body.eq-shop.eq-dept.eq-dept-plp .eq-dept-plp-aside{flex:0 0 240px;width:240px}body.eq-shop.eq-dept.eq-dept-plp .eq-dept-plp-main{flex:1;min-width:0}body.eq-shop.eq-dept.eq-dept-plp .eq-dept-plp-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:16px}@media(min-width:1024px){body.eq-shop.eq-dept.eq-dept-plp .eq-dept-plp-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important}}
@@ -275,17 +275,24 @@ body.eq-dept-plp {
   background: #fff;
 }
 .eq-dept-plp-card__img {
-  display: block;
-  aspect-ratio: 1;
-  background: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 4 / 5;
+  min-height: 140px;
+  background: #f5f6f8;
   border: 1px solid #eee;
   overflow: hidden;
 }
 .eq-dept-plp-card__img img {
+  display: block;
   width: 100%;
   height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
-  padding: 8px;
+  object-position: center center;
+  padding: 6px;
   box-sizing: border-box;
 }
 .eq-dept-plp-card__name {
