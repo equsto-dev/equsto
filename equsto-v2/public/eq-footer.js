@@ -1,11 +1,11 @@
 /**
  * Equsto — Amazon tarzı vitrin alt bilgisi (body.eq-shop, Proje Fabrikası / admin / Besos hariç).
- * Veri: /data/footer-vitrin.json (canlı eski site / llms.txt / sitemap ile uyumlu).
+ * Veri: /data/footer-vitrin.json — href her zaman dolu (eski site / sitemap).
  */
 (function () {
   "use strict";
 
-  var FOOTER_JSON = "/data/footer-vitrin.json?v=20260523foot";
+  var FOOTER_JSON = "/data/footer-vitrin.json?v=20260523foot2";
   var footerData = null;
   var footerLoadPromise = null;
 
@@ -27,18 +27,20 @@
       .replace(/"/g, "&quot;");
   }
 
-  function href(path) {
-    var p = String(path || "");
-    try {
-      if (typeof window.equstoResolveNavHref === "function") return window.equstoResolveNavHref(p);
-    } catch (_) {}
-    try {
-      if (typeof window.equstoUrl === "function" && /\.html$/i.test(p)) {
-        var base = p.replace(/^\//, "").replace(/\.html$/i, "");
-        if (base === "index") return window.equstoUrl("home");
-        if (window.equstoUrl(base)) return window.equstoUrl(base);
-      }
-    } catch (_2) {}
+  /** Kanonik yol; boş href üretmez. */
+  function resolveLinkHref(raw) {
+    var p = String(raw || "").trim();
+    if (!p || p === "#") return "#";
+    if (/^https?:\/\//i.test(p) || /^mailto:/i.test(p) || /^tel:/i.test(p)) return p;
+    if (p.charAt(0) !== "/") p = "/" + p;
+    if (/\.html(\?|#|$)/i.test(p)) {
+      try {
+        if (typeof window.equstoResolveNavHref === "function") {
+          var r = window.equstoResolveNavHref(p);
+          if (r) return r;
+        }
+      } catch (_) {}
+    }
     return p;
   }
 
@@ -66,9 +68,12 @@
   function colHtml(titleKey, titleFb, links) {
     var lis = links
       .map(function (ln) {
+        var target = resolveLinkHref(ln.rawHref || ln.href || ln.path || "#");
         return (
           '<li><a href="' +
-          esc(ln.href) +
+          esc(target) +
+          '" data-eq-nav="' +
+          esc(ln.rawHref || ln.href || ln.path || "#") +
           '">' +
           esc(t(ln.key, ln.label)) +
           "</a></li>"
@@ -96,49 +101,49 @@
           titleKey: "footer.col_about",
           title: "Hakkımızda",
           links: [
-            { key: "footer.link_contact", label: "İletişim", path: "/contact" },
-            { key: "footer.link_projects", label: "Referans projeler", path: "/projeler/" },
-            { key: "footer.link_sitemap", label: "Site haritası", path: "/sitemap.xml" },
-            { key: "footer.link_llms", label: "Asistan özet dosyası", path: "/llms.txt" },
-            { key: "footer.link_steakhouse", label: "Steakhouse mutfak rehberi", path: "/steakhouse-kurulumu" },
+            { key: "footer.link_contact", label: "İletişim", href: "/contact" },
+            { key: "footer.link_projects", label: "Referans projeler", href: "/projeler" },
+            { key: "footer.link_sitemap", label: "Site haritası", href: "/sitemap.xml" },
+            { key: "footer.link_llms", label: "Asistan özet dosyası", href: "/llms.txt" },
+            { key: "footer.link_steakhouse", label: "Steakhouse mutfak rehberi", href: "/steakhouse-kurulumu" },
           ],
         },
         {
           titleKey: "footer.col_shop",
           title: "Kategoriler",
           links: [
-            { key: "nav.pisirme", label: "Pişirme Ekipmanları", path: "/shop/pisirme" },
-            { key: "nav.sogutma", label: "Soğutma Ekipmanları", path: "/shop/sogutma" },
-            { key: "nav.kahve", label: "Kahve Ekipmanları", path: "/shop/kahve" },
-            { key: "nav.yikama", label: "Yıkama Ekipmanları", path: "/shop/yikama" },
-            { key: "nav.hazirlik", label: "Hazırlık Ekipmanları", path: "/shop/hazirlik" },
-            { key: "nav.icecek", label: "İçecek Ekipmanları", path: "/shop/icecek" },
+            { key: "nav.pisirme", label: "Pişirme Ekipmanları", href: "/shop/pisirme" },
+            { key: "nav.sogutma", label: "Soğutma Ekipmanları", href: "/shop/sogutma" },
+            { key: "nav.kahve", label: "Kahve Ekipmanları", href: "/shop/kahve" },
+            { key: "nav.yikama", label: "Yıkama Ekipmanları", href: "/shop/yikama" },
+            { key: "nav.hazirlik", label: "Hazırlık Ekipmanları", href: "/shop/hazirlik" },
+            { key: "nav.icecek", label: "İçecek Ekipmanları", href: "/shop/icecek" },
           ],
         },
         {
           titleKey: "footer.col_help",
           title: "Size yardımcı olalım",
           links: [
-            { key: "footer.link_quote", label: "Teklif ve proje talebi", path: "/contact" },
-            { key: "footer.link_account", label: "Hesabım ve siparişler", path: "/login.html" },
-            { key: "footer.link_guide_m2", label: "Rehber: mutfak m²", path: "/rehber/mutfak-alani-kisi-basi-metrekare-2026" },
-            { key: "footer.link_cafe", label: "Cafe kurulum rehberi", path: "/cafe-kurulumu" },
-            { key: "footer.link_catering", label: "Catering mutfağı rehberi", path: "/catering-mutfagi" },
+            { key: "footer.link_quote", label: "Teklif ve proje talebi", href: "/contact" },
+            { key: "footer.link_account", label: "Hesabım ve siparişler", href: "/login.html" },
+            { key: "footer.link_guide_m2", label: "Rehber: mutfak m²", href: "/rehber/mutfak-alani-kisi-basi-metrekare-2026" },
+            { key: "footer.link_cafe", label: "Cafe kurulum rehberi", href: "/cafe-kurulumu" },
+            { key: "footer.link_catering", label: "Catering mutfağı rehberi", href: "/catering-mutfagi" },
           ],
         },
         {
           titleKey: "footer.col_solutions",
           title: "Çözümler",
           links: [
-            { key: "nav.bar_design", label: "Bar Design", path: "/besos" },
+            { key: "nav.bar_design", label: "Bar Design", href: "/besos" },
             {
               key: "footer.link_imt300",
               label: "IMT300 berrak buz",
-              path: "/data/advanced-cuisine-clear-ice/product-imt300.html",
+              href: "/data/advanced-cuisine-clear-ice/product-imt300.html",
             },
-            { key: "nav.pfos", label: "Proje Fabrikası", path: "/pfos" },
-            { key: "footer.link_fastfood", label: "Fast food kurulumu", path: "/fast-food-kurulumu" },
-            { key: "footer.link_finedining", label: "Fine dining kurulumu", path: "/fine-dining-kurulumu" },
+            { key: "nav.pfos", label: "Proje Fabrikası", href: "/pfos" },
+            { key: "footer.link_fastfood", label: "Fast food kurulumu", href: "/fast-food-kurulumu" },
+            { key: "footer.link_finedining", label: "Fine dining kurulumu", href: "/fine-dining-kurulumu" },
           ],
         },
       ],
@@ -152,10 +157,12 @@
         titleKey: col.titleKey || "",
         titleFb: col.title || col.titleFb || "",
         links: (col.links || []).map(function (ln) {
+          var raw = ln.href || ln.path || "#";
           return {
             key: ln.key || "",
             label: ln.label || "",
-            href: href(ln.path || ln.href || "#"),
+            rawHref: raw,
+            href: resolveLinkHref(raw),
           };
         }),
       };
@@ -210,7 +217,7 @@
       "</div>" +
       '<div class="eq-mfoot-brand">' +
       '<a class="eq-mfoot-logo" href="' +
-      esc(href("/")) +
+      esc(resolveLinkHref("/")) +
       '" aria-label="Equsto">' +
       logoMarkup() +
       "</a>" +
@@ -232,12 +239,12 @@
       esc(t("footer.legal_aria", "Yasal")) +
       '">' +
       '<a href="' +
-      esc(href(legal.terms || "/contact")) +
+      esc(resolveLinkHref(legal.terms || "/contact")) +
       '">' +
       esc(t("footer.terms", "Şartlar ve koşullar")) +
       "</a>" +
       '<a href="' +
-      esc(href(legal.privacy || "/contact")) +
+      esc(resolveLinkHref(legal.privacy || "/contact")) +
       '">' +
       esc(t("footer.privacy", "Gizlilik")) +
       "</a>" +
@@ -257,7 +264,16 @@
     );
   }
 
+  function wireLinkHrefs(host) {
+    host.querySelectorAll("a[data-eq-nav]").forEach(function (a) {
+      var raw = a.getAttribute("data-eq-nav");
+      var h = resolveLinkHref(raw);
+      if (h && h !== "#") a.setAttribute("href", h);
+    });
+  }
+
   function wire(host) {
+    wireLinkHrefs(host);
     var back = host.querySelector("#eq-mfoot-back");
     if (back) {
       back.addEventListener("click", function () {

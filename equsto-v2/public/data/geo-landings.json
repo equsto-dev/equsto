@@ -1,0 +1,77 @@
+{
+  "steakhouse-kurulumu": {
+    "title": "Steakhouse mutfak projelendirme rehberi | Equsto",
+    "h1": "Steakhouse mutfak kurulumu",
+    "lead": "Yüksek ısı pişirme, soğutma ve yıkama hatları için örnek ekipman listesi ve bütçe bandı. Detaylı teklif için Proje Fabrikası veya iletişim.",
+    "ctaPfos": "/pfos",
+    "ctaContact": "/contact"
+  },
+  "cafe-kurulumu": {
+    "title": "Cafe kurulum rehberi | Equsto",
+    "h1": "Cafe kurulumu",
+    "lead": "Espresso bar, hazırlık ve soğutma modülleri; kahve ve hazırlık departman vitrinleriyle uyumlu katalog.",
+    "ctaPfos": "/pfos",
+    "ctaContact": "/contact"
+  },
+  "catering-mutfagi": {
+    "title": "Catering mutfağı rehberi | Equsto",
+    "h1": "Catering mutfağı kurulumu",
+    "lead": "Yüksek hacim pişirme, taşıma ve yıkama için endüstriyel mutfak çözümleri.",
+    "ctaPfos": "/pfos",
+    "ctaContact": "/contact"
+  },
+  "fast-food-kurulumu": {
+    "title": "Fast food kurulum rehberi | Equsto",
+    "h1": "Fast food kurulumu",
+    "lead": "Hızlı servis hatları: pişirme, soğutma, hazırlık ve yıkama ekipmanları.",
+    "ctaPfos": "/pfos",
+    "ctaContact": "/contact"
+  },
+  "fine-dining-kurulumu": {
+    "title": "Fine dining kurulum rehberi | Equsto",
+    "h1": "Fine dining kurulumu",
+    "lead": "Restoran mutfağı yerleşimi, davlumbaz ve tezgah hatları için proje odaklı teklif.",
+    "ctaPfos": "/pfos",
+    "ctaContact": "/contact"
+  },
+  "bulut-mutfak-kurulumu": {
+    "title": "Bulut mutfak kurulum rehberi | Equsto",
+    "h1": "Bulut mutfak kurulumu",
+    "lead": "Çok markalı, yüksek çıkışlı bulut mutfak projeleri için modüler ekipman listesi.",
+    "ctaPfos": "/pfos",
+    "ctaContact": "/contact"
+  },
+  "projeler": {
+    "title": "Referans projeler | Equsto",
+    "h1": "Referans projeler",
+    "lead": "Demonte vaka örnekleri ve vitrin SKU bağlantıları. Proje Fabrikası ile kendi konseptinizi modelleyin.",
+    "ctaPfos": "/pfos",
+    "ctaContact": "/contact",
+    "links": [
+      { "label": "İstanbul yüksek hacim catering", "href": "/projeler/istanbul-yuksek-hacim-catering-demode" },
+      { "label": "İzmir modüler bar & içecek", "href": "/projeler/izmir-moduler-bar-icecek-demode" }
+    ]
+  },
+  "projeler/istanbul-yuksek-hacim-catering-demode": {
+    "title": "İstanbul yüksek hacim catering | Equsto",
+    "h1": "İstanbul yüksek hacim catering",
+    "lead": "Örnek demonte catering dizilimi — vitrin ürünlerine bağlantılı referans metni.",
+    "ctaPfos": "/pfos",
+    "ctaContact": "/contact"
+  },
+  "projeler/izmir-moduler-bar-icecek-demode": {
+    "title": "İzmir modüler bar ve içecek hattı | Equsto",
+    "h1": "İzmir modüler bar ve içecek",
+    "lead": "Bar Design ve içecek modülleri için örnek saha projesi.",
+    "ctaPfos": "/pfos",
+    "ctaContact": "/contact",
+    "ctaBesos": "/besos"
+  },
+  "rehber/mutfak-alani-kisi-basi-metrekare-2026": {
+    "title": "Rehber: mutfak m² ve kapasite | Equsto",
+    "h1": "Mutfak alanı — kişi başı metrekare",
+    "lead": "Kapasite planlaması ve m² başına düşen yoğunluk için editoryal rehber (2026).",
+    "ctaPfos": "/pfos",
+    "ctaContact": "/contact"
+  }
+}

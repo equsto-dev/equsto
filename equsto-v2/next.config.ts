@@ -31,6 +31,30 @@ function deptRedirects() {
   }));
 }
 
+/** SEO rehber / proje sayfaları — geo-landing.html + eq-geo-landing.js */
+const GEO_SLUGS = [
+  "steakhouse-kurulumu",
+  "bulut-mutfak-kurulumu",
+  "cafe-kurulumu",
+  "catering-mutfagi",
+  "fine-dining-kurulumu",
+  "all-day-dining-kurulumu",
+  "fast-food-kurulumu",
+];
+
+function geoRewrites() {
+  const base = GEO_SLUGS.map((slug) => ({
+    source: `/${slug}`,
+    destination: "/geo-landing.html",
+  }));
+  return [
+    ...base,
+    { source: "/projeler", destination: "/geo-landing.html" },
+    { source: "/projeler/:slug", destination: "/geo-landing.html" },
+    { source: "/rehber/:slug", destination: "/geo-landing.html" },
+  ];
+}
+
 const nextConfig: NextConfig = {
   async redirects() {
     return [
@@ -59,6 +83,9 @@ const nextConfig: NextConfig = {
       { source: "/admin/", destination: "/admin.html" },
       { source: "/contact", destination: "/contact.html" },
       { source: "/contact/", destination: "/contact.html" },
+      { source: "/login", destination: "/login.html" },
+      { source: "/login/", destination: "/login.html" },
+      ...geoRewrites(),
     ];
   },
 };
