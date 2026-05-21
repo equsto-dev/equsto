@@ -5,7 +5,7 @@
   'use strict';
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260519atalay-pdf';
+  var CATALOG_V = '20260522atalay-only';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
 
   var state = {
@@ -151,6 +151,14 @@
   }
 
   function skipItem(item) {
+    if (
+      typeof window.eqIsAtalayCatalogRow === 'function' &&
+      item &&
+      item.raw &&
+      !window.eqIsAtalayCatalogRow(item.raw)
+    ) {
+      return true;
+    }
     if (DEPT !== 'market-reyon') {
       if (window.EqDeptTips && window.EqDeptTips.excludeFromDeptView) {
         if (window.EqDeptTips.excludeFromDeptView(DEPT, item)) return true;

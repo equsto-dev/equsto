@@ -6,7 +6,19 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260519atalay-pdf";
+  var CATALOG_V = "20260522atalay-only";
+
+  function filterAtalayOnly(rows) {
+    if (typeof window.eqFilterAtalayCatalogOnly === "function") {
+      return window.eqFilterAtalayCatalogOnly(rows);
+    }
+    if (!Array.isArray(rows)) return [];
+    return rows.filter(function (r) {
+      var k = String((r && r.kaynak) || (r && r.kaynak_fiyat_listesi) || "");
+      if (/^atalay-2025/i.test(k)) return true;
+      return /atalay/i.test(String((r && r.brand) || ""));
+    });
+  }
   var __fullMem = null;
   var __fullInflight = null;
   var __deptMem = Object.create(null);
@@ -54,11 +66,12 @@
         return r.json();
       })
       .then(function (data) {
-        if (!Array.isArray(data) || !data.length) {
-          throw new Error("dept " + dept + " boş veya geçersiz");
+        if (!Array.isArray(data)) {
+          throw new Error("dept " + dept + " geçersiz");
         }
-        __deptMem[dept] = data;
-        return data;
+        var filtered = filterAtalayOnly(data);
+        __deptMem[dept] = filtered;
+        return filtered;
       })
       .finally(function () {
         delete __deptInflight[dept];
@@ -93,11 +106,12 @@
         return r.json();
       })
       .then(function (data) {
-        if (!Array.isArray(data) || !data.length) {
+        if (!Array.isArray(data)) {
           throw new Error("ekipmanlar boş");
         }
-        __fullMem = data;
-        return data;
+        var filtered = filterAtalayOnly(data);
+        __fullMem = filtered;
+        return filtered;
       })
       .finally(function () {
         __fullInflight = null;

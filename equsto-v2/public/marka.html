@@ -262,6 +262,9 @@
       }
 
       window.EqustoShopCatalog.load().then(function (all) {
+        if (typeof window.eqFilterAtalayCatalogOnly === "function") {
+          all = window.eqFilterAtalayCatalogOnly(all || []);
+        }
         var nameMatch = function (x) { return (x.brand || '').trim() === brand; };
         var list = (all || []).filter(function (x) { return x && nameMatch(x); });
 
