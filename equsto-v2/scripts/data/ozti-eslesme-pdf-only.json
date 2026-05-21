@@ -5011,61 +5011,6 @@
     "kaynak": "ozti-katalog-pdf-2026"
   },
   {
-    "urun_kodu": "8740.OBY09.00",
-    "urun_kodu_norm": "8740.OBY09.00",
-    "pdf_sayfalar": [
-      240
-    ],
-    "pdf_satirlar": [
-      "8740.OBY09.00"
-    ],
-    "kaynak": "ozti-katalog-pdf-2026"
-  },
-  {
-    "urun_kodu": "8740.OBY16.00",
-    "urun_kodu_norm": "8740.OBY16.00",
-    "pdf_sayfalar": [
-      240
-    ],
-    "pdf_satirlar": [
-      "8740.OBY16.00"
-    ],
-    "kaynak": "ozti-katalog-pdf-2026"
-  },
-  {
-    "urun_kodu": "8740.OBY25.00",
-    "urun_kodu_norm": "8740.OBY25.00",
-    "pdf_sayfalar": [
-      240
-    ],
-    "pdf_satirlar": [
-      "8740.OBY25.00"
-    ],
-    "kaynak": "ozti-katalog-pdf-2026"
-  },
-  {
-    "urun_kodu": "8740.OBY36.00",
-    "urun_kodu_norm": "8740.OBY36.00",
-    "pdf_sayfalar": [
-      240
-    ],
-    "pdf_satirlar": [
-      "8740.OBY36.00"
-    ],
-    "kaynak": "ozti-katalog-pdf-2026"
-  },
-  {
-    "urun_kodu": "8740.OBY49.00",
-    "urun_kodu_norm": "8740.OBY49.00",
-    "pdf_sayfalar": [
-      240
-    ],
-    "pdf_satirlar": [
-      "8740.OBY49.00"
-    ],
-    "kaynak": "ozti-katalog-pdf-2026"
-  },
-  {
     "urun_kodu": "8774.OK001.00",
     "urun_kodu_norm": "8774.OK001.00",
     "pdf_sayfalar": [
@@ -6339,28 +6284,6 @@
     ],
     "pdf_satirlar": [
       "9150.GB245.00"
-    ],
-    "kaynak": "ozti-katalog-pdf-2026"
-  },
-  {
-    "urun_kodu": "9339.OCOLE.32",
-    "urun_kodu_norm": "9339.OCOLE.32",
-    "pdf_sayfalar": [
-      414
-    ],
-    "pdf_satirlar": [
-      "9339.OCOLE.32"
-    ],
-    "kaynak": "ozti-katalog-pdf-2026"
-  },
-  {
-    "urun_kodu": "9339.OCOLE.40",
-    "urun_kodu_norm": "9339.OCOLE.40",
-    "pdf_sayfalar": [
-      414
-    ],
-    "pdf_satirlar": [
-      "9339.OCOLE.40"
     ],
     "kaynak": "ozti-katalog-pdf-2026"
   },

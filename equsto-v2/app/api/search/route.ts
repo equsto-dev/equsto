@@ -1,10 +1,15 @@
 import { NextRequest } from "next/server";
-import { fallbackCatalogSearch } from "@/lib/catalog-search-fallback";
+import {
+  fallbackCatalogSearch,
+  type CatalogSearchHit,
+} from "@/lib/catalog-search-fallback";
+import { mergeSearchHits } from "@/lib/merge-search-hits";
 import {
   getMeiliAdmin,
   getMeiliConfigStatus,
   PRODUCTS_INDEX,
 } from "@/lib/meilisearch";
+import { expandSearchQueries } from "@/lib/search-synonyms";
 
 export const runtime = "nodejs";
 
@@ -46,13 +51,41 @@ export async function GET(req: NextRequest) {
     });
   }
 
+  const meiliQueries = expandSearchQueries(q);
+
   try {
-    const res = await client.index(PRODUCTS_INDEX).search(q, { limit });
+    let meiliHits: CatalogSearchHit[] = [];
+    let estimatedTotalHits = 0;
+
+    for (const mq of meiliQueries) {
+      const res = await client.index(PRODUCTS_INDEX).search(mq, { limit });
+      estimatedTotalHits = Math.max(
+        estimatedTotalHits,
+        res.estimatedTotalHits ?? 0,
+      );
+      if (res.hits?.length) {
+        meiliHits = res.hits as CatalogSearchHit[];
+        break;
+      }
+    }
+
+    const fb = fallbackCatalogSearch(q, limit);
+    const merged = mergeSearchHits(meiliHits, fb.hits, limit);
+
+    const usedFallback = merged.length > meiliHits.length || meiliHits.length === 0;
+    const total = Math.max(estimatedTotalHits, fb.estimatedTotalHits, merged.length);
+
     return Response.json({
       query: q,
-      hits: res.hits,
-      estimatedTotalHits: res.estimatedTotalHits,
-      source: "meilisearch",
+      hits: merged,
+      estimatedTotalHits: total,
+      source: usedFallback && meiliHits.length === 0 ? "fallback" : "hybrid",
+      warning:
+        usedFallback && meiliHits.length === 0
+          ? "İndeks eksik veya eşleşmedi — tam katalogdan (5252+ ürün) tamamlandı. npm run search:index ile indeksi güncelleyin."
+          : usedFallback
+            ? "Bazı sonuçlar katalog dosyasından eklendi."
+            : undefined,
     });
   } catch (e) {
     const msg = e instanceof Error ? e.message : "Arama hatası";

@@ -1,14 +1,15 @@
 {
-  "fiyat_listesi_urun": 4754,
+  "fiyat_listesi_urun": 4901,
   "pdf_kod_sayisi": 4906,
-  "eslesen": 4245,
-  "sadece_fiyat_listesinde": 426,
-  "sadece_pdf_katalogda": 661,
+  "eslesen": 4335,
+  "eslesen_soft_kod": 8,
+  "sadece_fiyat_listesinde": 565,
+  "sadece_pdf_katalogda": 654,
   "iskonto_gruplari": {
-    "0.65": 2301,
+    "0.65": 2425,
     "0.55": 1250,
-    "0.6": 1023,
-    "nan": 140,
+    "0.6": 1044,
+    "nan": 142,
     "0.5": 40
   },
   "kategori_leaf_sayilari": {
@@ -22,6 +23,7 @@
     "EVYE TABLALARI": 76,
     "PASTANE EKİPMANLARI": 76,
     "EVYELİ TEZGAHLAR (ÇİFT EVYELİ, TEK DAMLALIKLI, PERDELİ TEZGAHLAR)": 74,
+    "TEZGAH TİPİ SOĞUTUCULAR": 73,
     "İSTİF RAFLARI": 73,
     "POLİETİLEN KESME TAHTALARI": 62,
     "GN SERVİS TEPSİLERİ": 60,
@@ -34,10 +36,12 @@
     "SOĞUK ODALAR": 44,
     "DERİN DONDURUCU ODALAR": 44,
     "TEMİZLİK VE HİJYEN ÜRÜNLERİ": 41,
+    "CHAFING DISHLER": 41,
     "GASTRONORM KAPAKLAR": 41,
     "BUZ MAKİNELERİ": 40,
     "EVYELİ TEZGAHLAR": 40,
     "DELİKLİ GASTRONOM KÜVETLER": 39,
+    "BUZDOLAPLARI VE DERİN DONDURUCULAR": 38,
     "BULAŞIK MAKİNESİ GİRİŞ VE ÇIKIŞ TEZGAHLARI": 36,
     "ÇALIŞMA TEZGAHLARI (BULAŞIK MAKİNESİ TEZGAHLARI)": 36,
     "DELİKLİ KÖŞE DESENLİ GASTRONORM KÜVETLER": 36,
@@ -58,20 +62,17 @@
     "SAPLI GASTRONORM KÜVETLER": 28,
     "TAVALAR": 28,
     "MİKSER AKSESUAR": 27,
-    "TAŞIMA EKİPMANLARI": 27,
-    "POLİPROPİLEN GASTRONORM KÜVETLER": 27,
-    "DAVLUMBAZLAR (ORTA TİP ALEV SAVAR FİLTRELİ DAVLUMBAZ)": 26,
-    "DAVLUMBAZLAR (ORTA TİP TEMİZ HAVA ÜFLEMELİ FİLTRELİ DAVLUMBAZ)": 26
+    "TAŞIMA EKİPMANLARI": 27
   },
-  "fiyatlandirma": "satis_fiyati_eur = liste_fiyati_eur × bayi_iskonto (Excel çarpanı; örn. 0,65 → %35 indirim)",
+  "fiyatlandirma": "satis_fiyati_eur = liste_fiyati_eur × (1 − bayi_iskonto); ör. bayi_iskonto 0,65 → %65 indirim, ödeme ×0,35",
   "ornek_eslesen": [
     {
       "urun_kodu": "7865.N1.80908.10",
       "kategori": "900 SERİ KUZİNELER",
       "liste_fiyati_eur": 5877.18,
       "bayi_iskonto": 0.65,
-      "iskonto_yuzde": 35.0,
-      "satis_fiyati_eur": 3820.17,
+      "iskonto_yuzde": 65.0,
+      "satis_fiyati_eur": 2057.01,
       "pdf_sayfa": [
         9,
         34
@@ -82,8 +83,8 @@
       "kategori": "900 SERİ KUZİNELER",
       "liste_fiyati_eur": 5954.43,
       "bayi_iskonto": 0.65,
-      "iskonto_yuzde": 35.0,
-      "satis_fiyati_eur": 3870.38,
+      "iskonto_yuzde": 65.0,
+      "satis_fiyati_eur": 2084.05,
       "pdf_sayfa": [
         9,
         34
@@ -94,8 +95,8 @@
       "kategori": "900 SERİ KUZİNELER",
       "liste_fiyati_eur": 8008.25,
       "bayi_iskonto": 0.65,
-      "iskonto_yuzde": 35.0,
-      "satis_fiyati_eur": 5205.36,
+      "iskonto_yuzde": 65.0,
+      "satis_fiyati_eur": 2802.89,
       "pdf_sayfa": [
         9,
         34
@@ -106,8 +107,8 @@
       "kategori": "900 SERİ KUZİNELER",
       "liste_fiyati_eur": 6476.64,
       "bayi_iskonto": 0.65,
-      "iskonto_yuzde": 35.0,
-      "satis_fiyati_eur": 4209.82,
+      "iskonto_yuzde": 65.0,
+      "satis_fiyati_eur": 2266.82,
       "pdf_sayfa": [
         9,
         34
@@ -118,8 +119,8 @@
       "kategori": "900 SERİ KUZİNELER",
       "liste_fiyati_eur": 8462.48,
       "bayi_iskonto": 0.65,
-      "iskonto_yuzde": 35.0,
-      "satis_fiyati_eur": 5500.61,
+      "iskonto_yuzde": 65.0,
+      "satis_fiyati_eur": 2961.87,
       "pdf_sayfa": [
         9,
         34
@@ -130,8 +131,8 @@
       "kategori": "900 SERİ KUZİNELER",
       "liste_fiyati_eur": 5778.3,
       "bayi_iskonto": 0.65,
-      "iskonto_yuzde": 35.0,
-      "satis_fiyati_eur": 3755.9,
+      "iskonto_yuzde": 65.0,
+      "satis_fiyati_eur": 2022.4,
       "pdf_sayfa": [
         9,
         34
@@ -142,8 +143,8 @@
       "kategori": "900 SERİ KUZİNELER",
       "liste_fiyati_eur": 5849.37,
       "bayi_iskonto": 0.65,
-      "iskonto_yuzde": 35.0,
-      "satis_fiyati_eur": 3802.09,
+      "iskonto_yuzde": 65.0,
+      "satis_fiyati_eur": 2047.28,
       "pdf_sayfa": [
         9,
         34
@@ -154,8 +155,8 @@
       "kategori": "900 SERİ KUZİNELER",
       "liste_fiyati_eur": 7851.69,
       "bayi_iskonto": 0.65,
-      "iskonto_yuzde": 35.0,
-      "satis_fiyati_eur": 5103.6,
+      "iskonto_yuzde": 65.0,
+      "satis_fiyati_eur": 2748.09,
       "pdf_sayfa": [
         9
       ]
@@ -165,8 +166,8 @@
       "kategori": "900 SERİ KUZİNELER",
       "liste_fiyati_eur": 8601.53,
       "bayi_iskonto": 0.65,
-      "iskonto_yuzde": 35.0,
-      "satis_fiyati_eur": 5590.99,
+      "iskonto_yuzde": 65.0,
+      "satis_fiyati_eur": 3010.54,
       "pdf_sayfa": [
         9,
         34
@@ -177,8 +178,8 @@
       "kategori": "GAZLI SET ÜSTÜ OCAK",
       "liste_fiyati_eur": 1837.52,
       "bayi_iskonto": 0.65,
-      "iskonto_yuzde": 35.0,
-      "satis_fiyati_eur": 1194.39,
+      "iskonto_yuzde": 65.0,
+      "satis_fiyati_eur": 643.13,
       "pdf_sayfa": [
         9,
         34
@@ -189,8 +190,8 @@
       "kategori": "GAZLI SET ÜSTÜ OCAK",
       "liste_fiyati_eur": 3240.38,
       "bayi_iskonto": 0.65,
-      "iskonto_yuzde": 35.0,
-      "satis_fiyati_eur": 2106.25,
+      "iskonto_yuzde": 65.0,
+      "satis_fiyati_eur": 1134.13,
       "pdf_sayfa": [
         9,
         34
@@ -201,8 +202,8 @@
       "kategori": "GAZLI SET ÜSTÜ OCAK",
       "liste_fiyati_eur": 3318.66,
       "bayi_iskonto": 0.65,
-      "iskonto_yuzde": 35.0,
-      "satis_fiyati_eur": 2157.13,
+      "iskonto_yuzde": 65.0,
+      "satis_fiyati_eur": 1161.53,
       "pdf_sayfa": [
         9,
         34
@@ -213,8 +214,8 @@
       "kategori": "GAZLI SET ÜSTÜ OCAK",
       "liste_fiyati_eur": 2213.47,
       "bayi_iskonto": 0.65,
-      "iskonto_yuzde": 35.0,
-      "satis_fiyati_eur": 1438.76,
+      "iskonto_yuzde": 65.0,
+      "satis_fiyati_eur": 774.71,
       "pdf_sayfa": [
         9,
         34
@@ -225,8 +226,8 @@
       "kategori": "GAZLI SET ÜSTÜ OCAK",
       "liste_fiyati_eur": 4485.65,
       "bayi_iskonto": 0.65,
-      "iskonto_yuzde": 35.0,
-      "satis_fiyati_eur": 2915.67,
+      "iskonto_yuzde": 65.0,
+      "satis_fiyati_eur": 1569.98,
       "pdf_sayfa": [
         9,
         34
@@ -237,8 +238,8 @@
       "kategori": "ELEKTRİKLİ KUZİNELER",
       "liste_fiyati_eur": 7590.07,
       "bayi_iskonto": 0.65,
-      "iskonto_yuzde": 35.0,
-      "satis_fiyati_eur": 4933.55,
+      "iskonto_yuzde": 65.0,
+      "satis_fiyati_eur": 2656.52,
       "pdf_sayfa": [
         10
       ]

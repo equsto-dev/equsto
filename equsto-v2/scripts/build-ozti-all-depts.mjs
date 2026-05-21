@@ -13,6 +13,7 @@ import {
   OZTI_BRAND_ID,
   buildSpecs,
   isOztiBrand,
+  isOztiKimyasalExcluded,
   loadPdfByKod,
   mapOztiDept,
   mapOztiIcecekCategory,
@@ -83,7 +84,12 @@ const pdfByKod = loadPdfByKod();
 const manifest = loadImageManifest();
 
 const byDept = new Map();
+let skippedKimyasal = 0;
 for (const row of rows) {
+  if (isOztiKimyasalExcluded(row)) {
+    skippedKimyasal += 1;
+    continue;
+  }
   const dept = mapOztiDept(row, allow);
   const kod = row.urun_kodu;
   const cat =
@@ -135,7 +141,7 @@ for (const [dept, oztiRows] of byDept) {
   stats[dept] = { ozti: oztiRows.length, kept: kept.length, img: imgN };
 }
 
-console.log("[ozti-all-depts] toplam kaynak:", rows.length);
+console.log("[ozti-all-depts] toplam kaynak:", rows.length, "| kimyasal haric:", skippedKimyasal);
 for (const [d, s] of Object.entries(stats).sort((a, b) => b[1].ozti - a[1].ozti)) {
   console.log(`  ${d}: +${s.ozti} ozti (${s.img} gorsel), ${s.kept} diger marka korundu`);
 }

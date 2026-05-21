@@ -56,10 +56,18 @@
     { tip: "kahve-degirmeni", dept: "kahve", label: "Kahve Değirmenleri", search: "değirmen|degirmen|grinder|öğüt|ogut" },
     { tip: "filtre-kahve", dept: "kahve", label: "Filtre Kahve Makineleri", search: "filtre|batch brew|demleme" },
     { tip: "turk-kahve", dept: "kahve", label: "Türk Kahve Makineleri", search: "türk|turk|cezve" },
-    { tip: "bulasik-makineleri", dept: "yikama", label: "Bulaşık Yıkama Makineleri", slug: "bulasik-makineleri" },
-    { tip: "setalti-bulasik", dept: "yikama", label: "Setaltı Bulaşık Makineleri", search: "setaltı|set altı|tezgah altı|undercounter" },
-    { tip: "giyotin-bulasik", dept: "yikama", label: "Giyotin Tip Bulaşık Makineleri", search: "giyotin|hood type" },
-    { tip: "konveyorlu-bulasik", dept: "yikama", label: "Konveyörlü Bulaşık Makineleri", search: "konveyör|konveyor|tunnel|konveyörlü" },
+    { tip: "bardak-yikama", dept: "yikama", label: "Bardak Yıkama Makineleri", search: "bardak yıkama|bardak yikama|oby 35|oby 40|073m|074m" },
+    {
+      tip: "bulasik-makineleri",
+      dept: "yikama",
+      label: "Bulaşık Yıkama Makineleri",
+      search:
+        "oky|ux10|fx10|amx|9710|bulaşık yıkama mak|bulasik yikama mak|bulaşık makinesi|bulasik makinesi|otomatik yikama|konveyorlu|hobart",
+    },
+    { tip: "setalti-bulasik", dept: "yikama", label: "Setaltı Bulaşık Makineleri", search: "setaltı|set altı|tezgah altı|undercounter|075t|oby 50" },
+    { tip: "giyotin-bulasik", dept: "yikama", label: "Giyotin Tip Bulaşık Makineleri", search: "giyotin|hood type|071t|obm" },
+    { tip: "konveyorlu-bulasik", dept: "yikama", label: "Konveyörlü Bulaşık Makineleri", search: "konveyör|konveyor|tunnel|konveyörlü|076r|076l|072r|072l|077r|077l" },
+    { tip: "flight-bulasik", dept: "yikama", label: "Flight Tip Bulaşık Makineleri", search: "flight tip|07al|07ar|07bl|07br|07cl|07cr|07el|07er|07fl|07fr" },
     { tip: "tirnakli-bulasik", dept: "yikama", label: "Tırnaklı Bulaşık Makineleri", search: "tırnaklı|tirnakli|rack" },
     { tip: "kazan-yikama", dept: "yikama", label: "Kazan Yıkama Makineleri", search: "kazan yıkama|kettle|pot wash" },
     { tip: "et-hazirlik", dept: "hazirlik", label: "Et Hazırlık Ekipmanları", search: "et hazırlık|et hazirlik|kasap" },
@@ -179,7 +187,15 @@
   }
 
   function productHaystack(u) {
-    return lc((u && u.n) || (u && u.name) || "") + " " + lc((u && u.b) || (u && u.brand) || "");
+    return (
+      lc((u && u.n) || (u && u.name) || "") +
+      " " +
+      lc((u && u.b) || (u && u.brand) || "") +
+      " " +
+      lc((u && u.c) || (u && u.category) || (u && u.raw && u.raw.category) || "") +
+      " " +
+      lc((u && u.raw && u.raw.specs) || "")
+    );
   }
 
   /**
@@ -352,6 +368,16 @@
   };
 
   /** Eski build: Türkçe slugify bozuk category → kanonik ?tip= */
+  /** Öztiryakiler yıkama — Excel kategori slug → ?tip= (makine satırları) */
+  var YIKAMA_CAT_ALIASES = {
+    "setalti-bulasik": "setalti-bulasik",
+    "konveyorlu-bulasik": "konveyorlu-bulasik",
+    "giyotin-bulasik": "giyotin-bulasik",
+    "tirnakli-bulasik": "tirnakli-bulasik",
+    "kazan-yikama": "kazan-yikama",
+    "bulasik-makineleri": "bulasik-makineleri",
+  };
+
   var SET_USTU_CAT_ALIASES = {
     "servis-gere-leri": "servis-gerecleri",
     "servis-gere-leri-dondurma-makaslar": "servis-gerecleri",
@@ -388,6 +414,7 @@
 
   function productCategorySlug(u) {
     var c = (u && u.c) || (u && u.category) || (u && u.raw && u.raw.category) || "";
+    if (YIKAMA_CAT_ALIASES[c]) return YIKAMA_CAT_ALIASES[c];
     if (SET_USTU_CAT_ALIASES[c]) return SET_USTU_CAT_ALIASES[c];
     return c;
   }

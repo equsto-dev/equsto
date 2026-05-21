@@ -66,6 +66,26 @@ function firstImage(row) {
   return String(imgs[0]).replace(/\\/g, "/");
 }
 
+const DEPT_SEARCH_HINTS = {
+  kahve: "espresso wmf cay makinasi kahve makinesi barista",
+  sogutma: "buzdolabi sogutma dolabi derin dondurucu",
+  dolap: "buzdolabi dolap sogutma",
+  pisirme: "ocak izgara firin fritoz konveksiyon",
+  yikama: "bulasik makinesi bulaşık",
+  hazirlik: "mikser blender dograma",
+  icecek: "sogutucu meyve sikacagi",
+  "set-ustu-mutfak": "gastronorm tencere servis",
+};
+
+function searchHints(dept, category) {
+  const hints = [dept, category];
+  const d = String(dept || "").toLowerCase();
+  if (DEPT_SEARCH_HINTS[d]) hints.push(DEPT_SEARCH_HINTS[d]);
+  if (/buzdolab/i.test(category)) hints.push("buzdolabi sogutma");
+  if (/kahve|cay/i.test(category)) hints.push("kahve wmf espresso cay");
+  return hints.filter(Boolean).join(" ");
+}
+
 function rowToDoc(row, deptFallback) {
   const name = String(row.name || "").trim();
   if (!name) return null;
@@ -73,13 +93,14 @@ function rowToDoc(row, deptFallback) {
   if (!dept) return null;
   const slug = productSlug(row);
   const id = docId(row, dept);
+  const category = String(row.category || "").trim();
   return {
     id,
     slug,
     name,
     brand: String(row.brand || "").trim(),
     kaynak: String(row.kaynak || row.kaynak_fiyat_listesi || "").trim(),
-    category: String(row.category || "").trim(),
+    category,
     dept,
     model: String(row.model || row.sku || "").trim(),
     sku: String(row.sku || "").trim(),
@@ -89,6 +110,7 @@ function rowToDoc(row, deptFallback) {
     iskonto_oran: Number(row.iskonto_oran) || null,
     image: firstImage(row),
     url: `/shop/${dept}/${slug}`,
+    search_hints: searchHints(dept, category),
     specs: [
       String(row.specs || ""),
       Array.isArray(row.keywords) ? row.keywords.join(" ") : "",
@@ -165,10 +187,18 @@ async function main() {
       "brand",
       "category",
       "dept",
+      "search_hints",
       "model",
       "sku",
       "specs",
     ],
+    synonyms: {
+      esp: ["wmf", "kahve", "espresso", "cay"],
+      espresso: ["wmf", "kahve", "kahve makinesi"],
+      buzdolab: ["buzdolabi"],
+      buzdolap: ["buzdolabi"],
+      ozti: ["oztiryakiler"],
+    },
     displayedAttributes: [
       "id",
       "slug",
@@ -184,6 +214,7 @@ async function main() {
       "iskonto_oran",
       "image",
       "url",
+      "search_hints",
     ],
     filterableAttributes: ["dept", "brand", "category", "kaynak"],
     sortableAttributes: ["name", "brand"],

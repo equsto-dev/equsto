@@ -25,12 +25,13 @@ ROOT = Path(__file__).resolve().parent
 DATA = ROOT / "data"
 DEFAULT_XLSX = Path(r"c:\D Disk\FİYAT LİSTELERİ\Öztiryakiler Fiyat Listesi 2025-3 (5) (2).xlsx")
 DEFAULT_PDF = Path(r"c:\D Disk\FİYAT LİSTELERİ\Öztiryakiler-Urun-katalogu-2026.pdf")
+# Kanonik kaynak (kullanıcı 2026 güncellemesi): aynı klasördeki xlsx + pdf
 XLSX = DEFAULT_XLSX
 PDF = DEFAULT_PDF
 
-# Ürün kodu: 7865.N1.80908.10, 79E4.27NMV.00, 79K4.06NMV.00 …
+# Ürün kodu: 7865.N1.80908.10, 074M.00000.AD (bardak/setaltı makine), 79E4.27NMV.00 …
 KOD_RE = re.compile(
-    r"^[0-9]{2,4}\.[A-Z0-9][A-Z0-9.\-]{3,48}$",
+    r"^[0-9]{2,4}(?:[A-Z][A-Z0-9]*)?\.[A-Z0-9][A-Z0-9.\-]{2,48}$",
     re.I,
 )
 
@@ -43,6 +44,40 @@ KOD_FIND_RE = re.compile(
 
 def norm_kod(k: str) -> str:
     return re.sub(r"\s+", "", str(k or "").strip()).upper()
+
+
+def kod_soft_key(k: str) -> str:
+    """Liste ↔ katalog kod farkları (O/0, segment başındaki 0, tire)."""
+    parts = norm_kod(k).split(".")
+    out: list[str] = []
+    for seg in parts:
+        p = seg.replace("O", "0")
+        if re.fullmatch(r"[0-9]+", p):
+            out.append(str(int(p)))
+        else:
+            out.append(re.sub(r"^0+([A-Z])", r"\1", p))
+    return ".".join(out)
+
+
+def build_pdf_lookup(pdf_by_kod: dict[str, dict]) -> tuple[dict[str, dict], dict[str, str]]:
+    exact = pdf_by_kod
+    soft_to_kod: dict[str, str] = {}
+    for k in pdf_by_kod:
+        sk = kod_soft_key(k)
+        if sk and sk not in soft_to_kod:
+            soft_to_kod[sk] = k
+    return exact, soft_to_kod
+
+
+def resolve_pdf(k: str, pdf_by_kod: dict[str, dict], soft_to_kod: dict[str, str]) -> tuple[dict | None, str]:
+    kn = norm_kod(k)
+    if kn in pdf_by_kod:
+        return pdf_by_kod[kn], "exact"
+    sk = kod_soft_key(kn)
+    alt = soft_to_kod.get(sk)
+    if alt and alt in pdf_by_kod:
+        return pdf_by_kod[alt], "soft_kod"
+    return None, ""
 
 
 def satis_eur_from_liste(liste: float | None, bayi_iskonto: float | None) -> dict:
@@ -199,21 +234,32 @@ def merge(fiyat_rows: list[dict], pdf_by_kod: dict[str, dict]) -> tuple[list[dic
     merged = []
     fiyat_kodlari = {r["urun_kodu_norm"] for r in fiyat_rows}
     pdf_kodlari = set(pdf_by_kod.keys())
+    _, soft_to_kod = build_pdf_lookup(pdf_by_kod)
 
-    eslesen = fiyat_kodlari & pdf_kodlari
-    sadece_fiyat = fiyat_kodlari - pdf_kodlari
-    sadece_pdf = pdf_kodlari - fiyat_kodlari
+    eslesen_exact = fiyat_kodlari & pdf_kodlari
+    eslesen_soft = 0
+    sadece_fiyat = set()
+    sadece_pdf = set(pdf_kodlari)
 
     for row in fiyat_rows:
         k = row["urun_kodu_norm"]
-        pdf = pdf_by_kod.get(k)
+        pdf, match_tipi = resolve_pdf(k, pdf_by_kod, soft_to_kod)
         item = {**row, "pdf_eslesme": bool(pdf)}
         if pdf:
+            if match_tipi == "soft_kod":
+                eslesen_soft += 1
+                item["pdf_kod_katalog"] = pdf.get("urun_kodu") or pdf.get("urun_kodu_norm")
+            item["pdf_eslesme_tipi"] = match_tipi or "exact"
             item["pdf"] = {
                 "sayfalar": sorted(pdf["pdf_sayfalar"]),
                 "satirlar": pdf["pdf_satirlar"][:8],
             }
+            sadece_pdf.discard(norm_kod(pdf.get("urun_kodu") or k))
+        else:
+            sadece_fiyat.add(k)
         merged.append(item)
+
+    eslesen = sum(1 for r in merged if r.get("pdf_eslesme"))
 
     # PDF'te olup fiyatta olmayan (örnek kayıt limit 500 dosya boyutu için ayrı liste)
     pdf_only = []
@@ -232,7 +278,8 @@ def merge(fiyat_rows: list[dict], pdf_by_kod: dict[str, dict]) -> tuple[list[dic
     ozet = {
         "fiyat_listesi_urun": len(fiyat_rows),
         "pdf_kod_sayisi": len(pdf_kodlari),
-        "eslesen": len(eslesen),
+        "eslesen": eslesen,
+        "eslesen_soft_kod": eslesen_soft,
         "sadece_fiyat_listesinde": len(sadece_fiyat),
         "sadece_pdf_katalogda": len(sadece_pdf),
         "iskonto_gruplari": {},
@@ -353,7 +400,10 @@ def main() -> None:
     for k, v in ozet.items():
         if k.startswith("ornek_"):
             continue
-        print(f"  {k}: {v}")
+        try:
+            print(f"  {k}: {v}")
+        except UnicodeEncodeError:
+            print(f"  {k}: {ascii(str(v))}")
     print(f"\nÇıktılar: {DATA}")
 
 

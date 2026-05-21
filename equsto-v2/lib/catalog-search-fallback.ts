@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { deptSearchHints, expandSearchQueries } from "@/lib/search-synonyms";
 
 export type CatalogSearchHit = {
   id: string;
@@ -121,12 +122,15 @@ function loadCatalogRows(): CatalogRow[] {
 }
 
 function rowHaystack(row: CatalogRow) {
+  const dept = String(row.dept || "");
+  const category = String(row.category || "");
   return foldTr(
     [
       row.name,
       row.brand,
-      row.category,
-      row.dept,
+      category,
+      dept,
+      deptSearchHints(dept, category),
       row.sku,
       row.model,
       row.specs,
@@ -149,30 +153,44 @@ function scoreRow(hay: string, tokens: string[]) {
   return score;
 }
 
-/** Meilisearch yokken veya hata verince — ekipmanlar.json üzerinde arama */
+function collectTokens(q: string) {
+  const seen = new Set<string>();
+  const tokens: string[] = [];
+  for (const variant of expandSearchQueries(q)) {
+    for (const t of foldTr(variant).split(/\s+/)) {
+      if (t.length < 2) continue;
+      if (seen.has(t)) continue;
+      seen.add(t);
+      tokens.push(t);
+    }
+  }
+  return tokens;
+}
+
+/** Meilisearch yokken veya eksik sonuçta — ekipmanlar.json üzerinde arama */
 export function fallbackCatalogSearch(q: string, limit: number) {
   const query = String(q || "").trim();
   if (!query) return { hits: [] as CatalogSearchHit[], estimatedTotalHits: 0 };
 
-  const tokens = foldTr(query)
-    .split(/\s+/)
-    .filter((t) => t.length >= 2);
+  const tokens = collectTokens(query);
   if (!tokens.length) {
     return { hits: [] as CatalogSearchHit[], estimatedTotalHits: 0 };
   }
 
   const rows = loadCatalogRows();
-  const scored: { hit: CatalogSearchHit; score: number }[] = [];
+  const byId = new Map<string, { hit: CatalogSearchHit; score: number }>();
 
   for (const row of rows) {
     const hay = rowHaystack(row);
     const score = scoreRow(hay, tokens);
     if (score <= 0) continue;
     const hit = rowToHit(row);
-    if (hit) scored.push({ hit, score });
+    if (!hit) continue;
+    const prev = byId.get(hit.id);
+    if (!prev || score > prev.score) byId.set(hit.id, { hit, score });
   }
 
-  scored.sort((a, b) => b.score - a.score);
+  const scored = [...byId.values()].sort((a, b) => b.score - a.score);
   const hits = scored.slice(0, limit).map((x) => x.hit);
   return {
     hits,

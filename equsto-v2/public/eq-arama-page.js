@@ -5,7 +5,7 @@
   "use strict";
 
   var LIMIT = 48;
-  var CATALOG_V = "20260523catalog";
+  var CATALOG_V = "20260519ozti-yikama-mak";
   var lastRender = { hits: [], q: "", total: 0, err: null };
   var catalogImgById = null;
   var catalogImgInflight = null;

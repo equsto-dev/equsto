@@ -36,6 +36,29 @@ export function normKod(k) {
     .toUpperCase();
 }
 
+/** Liste ↔ katalog kod farkları (O/0, baştaki sıfır, tire). */
+export function kodSoftKey(k) {
+  return normKod(k)
+    .split(".")
+    .map((seg) => {
+      let p = seg.replace(/O/g, "0");
+      if (/^\d+$/.test(p)) return String(parseInt(p, 10));
+      return p.replace(/^0+([A-Z])/, "$1");
+    })
+    .join(".");
+}
+
+/** TEMİZLİK / 8899 — fiyatsız kimyasallar sitede yok. */
+export function isOztiKimyasalExcluded(row) {
+  const kod = normKod(row.urun_kodu || row.sku);
+  if (/^8899\./i.test(kod)) return true;
+  const hay = foldTr(
+    [...(row.kategori_yolu || []), row.kategori, row.urun_tanimi, row.name].join(" "),
+  );
+  if (/temizlik\s*ve\s*hijyen|yardimci\s*yikama\s*kimyasal/i.test(hay)) return true;
+  return false;
+}
+
 export function loadPdfByKod() {
   const p = path.join(ROOT, "scripts/data/ozti-katalog-pdf-2026.json");
   if (!fs.existsSync(p)) return new Map();
@@ -43,7 +66,10 @@ export function loadPdfByKod() {
   const map = new Map();
   for (const e of list) {
     const k = normKod(e.urun_kodu_norm || e.urun_kodu);
-    if (k) map.set(k, e);
+    if (!k) continue;
+    map.set(k, e);
+    const soft = kodSoftKey(k);
+    if (soft && soft !== k && !map.has(soft)) map.set(soft, e);
   }
   return map;
 }
@@ -213,9 +239,8 @@ export function pdfYikamaProductName(kod, pdfEntry) {
 /** Yıkama dept vitrin kategorisi (?tip= eşlemesi) */
 export function mapOztiYikamaCategory(name, kod, kategori) {
   const hay = foldTr(`${name || ""} ${kod || ""} ${kategori || ""}`);
-  if (/deterjan|parlatici|power\s*(matic|rinse|hand)|elde\s*bulasik|kopuk\s*el|leke\s*cikar/i.test(hay)) {
-    return "yikama-kimyasallari";
-  }
+  if (/bardak\s*yikama|^073m\.|^074m\./i.test(hay)) return "bardak-yikama";
+  if (/flight\s*tip|07[aelr][lr]\./i.test(hay)) return "flight-bulasik";
   if (/^9710\./.test(String(kod || ""))) {
     if (/csa|cnal|cnas|cnae|konveyor|otomatik/.test(hay)) return "konveyorlu-bulasik";
     if (/amx[-.\d]|oky|ux10|fx10/.test(hay)) return "setalti-bulasik";
@@ -236,6 +261,7 @@ export function mapOztiYikamaCategory(name, kod, kategori) {
   if (/göz\s*evye|goz\s*evye|küresel\s*evye|yuvarlak\s*evye|vanety\s*evye/i.test(hay))
     return "el-yikama-evyeleri";
   if (/tezgah|evyeli/i.test(hay)) return "calisma-tezgahlari-bulasik-makinesi-tezgahlari";
+  if (/sebze\s*yikama|kazan\s*yikama\s*evye|fircali\s*kazan/i.test(hay)) return "kazan-yikama";
   return "bulasik-makineleri";
 }
 
@@ -282,6 +308,7 @@ export function mapOztiIcecekCategory(name, kod) {
 export function mapOztiDept(row, setUstuAllow) {
   const kod = String(row.urun_kodu || row.sku || "").trim();
   if (/^9710\./i.test(kod)) return "yikama";
+  if (/^07[0-9][A-Z]\./i.test(kod)) return "yikama";
 
   const accessoryDept = mapOztiDeptAccessory(row);
   if (accessoryDept) return accessoryDept;
@@ -301,12 +328,12 @@ export function mapOztiDept(row, setUstuAllow) {
     [/SOĞUK\s*ODA|DERİN\s*DONDURUCU\s*ODA|BUZ\s*MAKİN|BUZ\s*MAKIN|SOĞUTUCU|BUZDOLAB|DONDURMA\s*MAKİN/i, "sogutma"],
     [/EL\s*YIKAMA/i, "yikama"],
     [
-      /BULAŞIK\s*(MAKİNE|MAKINE|MAKİNASI)|YIKAMA\s*MAKİN|OBM\b|AMX[-.\d]|OKY|UX10|FX10/i,
+      /BARDAK\s*YIKAMA|FLIGHT\s*TİP\s*BULAŞIK|HOBART\s*BULAŞIK|SEBZE\s*YIKAMA|KAZAN\s*YIKAMA\s*MAK/i,
       "yikama",
     ],
     [
-      /BULAŞIK.*(DETERJAN|PARLATICI)|DETERJAN.*BULAŞIK|PARLATICI.*BULAŞIK|YARDIMCI\s*YIKAMA|ELDE\s*BULAŞIK/i,
-      "set-ustu-mutfak",
+      /BULAŞIK\s*(MAKİNE|MAKINE|MAKİNASI)|YIKAMA\s*MAKİN|OB[YM]\b|OBY|AMX[-.\d]|OKY|UX10|FX10/i,
+      "yikama",
     ],
     [/DAVLUMBAZ|YAĞ\s*TUTUCU/i, "davlumbaz"],
     [

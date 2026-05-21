@@ -6,7 +6,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260523catalog";
+  var CATALOG_V = "20260519ozti-yikama-mak";
   var __fullMem = null;
   var __fullInflight = null;
   var __deptMem = Object.create(null);
