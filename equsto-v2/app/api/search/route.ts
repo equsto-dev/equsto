@@ -1,4 +1,5 @@
 import { NextRequest } from "next/server";
+import { isAtalayCatalogRow } from "@/lib/atalay-catalog";
 import {
   getMeiliAdmin,
   getMeiliConfigStatus,
@@ -45,11 +46,25 @@ export async function GET(req: NextRequest) {
   }
 
   try {
-    const res = await client.index(PRODUCTS_INDEX).search(q, { limit });
+    const res = await client.index(PRODUCTS_INDEX).search(q, {
+      limit: Math.min(limit * 3, 50),
+      filter: 'kaynak = "atalay-2025-yerli-pdf"',
+    });
+    const hits = (res.hits || []).filter((h) =>
+      isAtalayCatalogRow(
+        h as {
+          kaynak?: string;
+          kaynak_fiyat_listesi?: string;
+          brand?: string;
+          image?: string;
+          images?: string[];
+        }
+      )
+    );
     return Response.json({
       query: q,
-      hits: res.hits,
-      estimatedTotalHits: res.estimatedTotalHits,
+      hits: hits.slice(0, limit),
+      estimatedTotalHits: hits.length,
     });
   } catch (e) {
     const msg = e instanceof Error ? e.message : "Arama hatası";
