@@ -162,16 +162,37 @@
   }
 
   function loadEurTryRate(cb) {
-    fetch('/data/equsto-eur-try-rate.json', { cache: 'no-store' })
+    fetch('/api/kur', { cache: 'no-store' })
       .then(function (res) {
         return res.ok ? res.json() : null;
       })
       .then(function (data) {
         var rate = data && data.rate != null ? Number(data.rate) : null;
-        cb(rate && rate > 0 ? rate : null);
+        if (rate && rate > 0) {
+          cb(rate);
+          return;
+        }
+        return fetch('/data/equsto-eur-try-rate.json', { cache: 'no-store' })
+          .then(function (res2) {
+            return res2.ok ? res2.json() : null;
+          })
+          .then(function (fallback) {
+            var r2 = fallback && fallback.rate != null ? Number(fallback.rate) : null;
+            cb(r2 && r2 > 0 ? r2 : null);
+          });
       })
       .catch(function () {
-        cb(null);
+        fetch('/data/equsto-eur-try-rate.json', { cache: 'no-store' })
+          .then(function (res) {
+            return res.ok ? res.json() : null;
+          })
+          .then(function (data) {
+            var rate = data && data.rate != null ? Number(data.rate) : null;
+            cb(rate && rate > 0 ? rate : null);
+          })
+          .catch(function () {
+            cb(null);
+          });
       });
   }
 

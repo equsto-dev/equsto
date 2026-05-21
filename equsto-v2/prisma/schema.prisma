@@ -86,3 +86,24 @@ enum ProductStatus {
   PUBLISHED
   ARCHIVED
 }
+
+/** WhatsApp / iletişim formu lead — admin «Müşteriler» */
+model Musteri {
+  id      String @id @default(cuid())
+  firma   String @default("")
+  yetkili String @default("")
+  tel     String @default("")
+  mail    String @default("")
+  sehir   String @default("")
+  tip     String @default("lead")
+  not     String? @db.Text
+  kaynak  String?
+  sayfa   String?
+  mesaj   String? @db.Text
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([tip])
+  @@index([createdAt])
+}

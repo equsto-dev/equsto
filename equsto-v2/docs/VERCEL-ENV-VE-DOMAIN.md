@@ -21,6 +21,8 @@ Her satır için **Environments:** Production **ve** Preview işaretli.
 | `NEXT_PUBLIC_SITE_URL` | `https://equsto.com` |
 | `NEXT_PUBLIC_SUPABASE_URL` | `https://gmnbhmwcmxukebulqwbn.supabase.co` (Auth hazırlığı) |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase → **Settings → API** → anon public key |
+| `CRON_SECRET` | Vercel Cron → otomatik üretilir veya elle; `/api/cron/tcmb-kur` için |
+| `EQUSTO_EUR_TRY_FALLBACK` | (Opsiyonel) TCMB kapalıyken yedek EUR/TRY, varsayılan `36` |
 
 **Value kutusuna** `DATABASE_URL="postgresql://..."` şeklinde **tırnaklı yapıştırmayın** — sadece `postgresql://...` metni.
 
@@ -36,6 +38,9 @@ Build script production’da `NEXT_PUBLIC_SITE_URL` yoksa `https://equsto.com` k
 - https://equsto.com/admin-config.js → `EQUSTO_API_BASE` = `https://equsto.com/api`
 - Admin giriş şifresi: **equsto2025** (`public/data/admin-auth.json`)
 - Tarayıcı → Network → `GET /api/urunler` → **200** (Bearer admin-config’ten)
+- `GET /api/kur` → TCMB efektif satış EUR/TRY (**200**, auth yok)
+- `POST /api/musteriler` → WhatsApp / iletişim mesajı (auth yok)
+- `GET /api/whatsapp` → numara config; `POST /api/whatsapp` → mesaj kaydı
 
 ---
 

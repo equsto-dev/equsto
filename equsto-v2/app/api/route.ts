@@ -4,7 +4,15 @@ import { adminOk } from "@/lib/admin-response";
 export async function GET() {
   return adminOk({
     message: "Equsto Admin API",
-    endpoints: ["/api/urunler", "/api/fiyatlar", "/api/vitrin-homepage", "/api/search"],
+    endpoints: [
+      "/api/urunler",
+      "/api/fiyatlar",
+      "/api/musteriler",
+      "/api/whatsapp",
+      "/api/kur",
+      "/api/vitrin-homepage",
+      "/api/search",
+    ],
     auth: "Authorization: Bearer <EQUSTO_ADMIN_BEARER>",
   });
 }

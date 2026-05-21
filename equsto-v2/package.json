@@ -12,6 +12,7 @@
     "db:migrate": "prisma migrate dev",
     "db:push": "prisma db push",
     "db:seed": "node --import ./scripts/load-env.mjs ./node_modules/tsx/dist/cli.mjs prisma/seed.ts",
+    "kur:fetch": "node scripts/fetch-tcmb-kur.mjs",
     "catalog:doner:parse": "node scripts/parse-atalay-doner-ocak.mjs",
     "catalog:doner:sync": "node scripts/parse-atalay-doner-ocak.mjs && node scripts/sync-doner-fiyatlar.mjs",
     "catalog:doner:images": "python scripts/extract-atalay-doner-images.py",

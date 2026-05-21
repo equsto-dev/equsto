@@ -697,7 +697,13 @@
   function eqMsgApiBase() {
     if (typeof window.EQUSTO_API_BASE === "string") return window.EQUSTO_API_BASE.replace(/\/$/, "");
     var h = (location.hostname || "").toLowerCase();
-    if (h === "127.0.0.1" || h === "localhost") return "http://127.0.0.1:3001/api";
+    var port = String(location.port || "");
+    /* Next.js (3000) / Vercel: aynı kök /api; eski Node API yalnızca :3001 */
+    if (h === "127.0.0.1" || h === "localhost") {
+      if (port === "3000" || port === "3002") return "/api";
+      if (port === "3001") return "http://127.0.0.1:3001/api";
+      return "/api";
+    }
     return "/api";
   }
 
