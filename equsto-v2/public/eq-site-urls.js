@@ -453,11 +453,24 @@
     return "";
   }
 
+  /** Besos / PFOS plan PNG — public/data/vitrum-drawings → /data/vitrum-drawings/… */
+  function vitrumDrawingsHref(s) {
+    var t = String(s || "").trim().replace(/\\/g, "/");
+    if (!/^vitrum-drawings\//i.test(t) && !/^data\/vitrum-drawings\//i.test(t)) return "";
+    var rel = t.replace(/^\/?data\//i, "");
+    if (typeof window.eqAttrPath === "function") {
+      return window.eqAttrPath("/data/" + rel);
+    }
+    return "/data/" + rel;
+  }
+
   window.eqProductImgSrc = function (p) {
     if (p == null || p === "") return "";
     var s = String(p).trim().replace(/\\/g, "/");
     if (!s) return "";
     if (/^https?:\/\//i.test(s)) return s;
+    var vd = vitrumDrawingsHref(s);
+    if (vd) return vd;
     var mapped = resolveVitrinImageMap(s);
     if (mapped) return mapped;
     if (isStaticPublicImage(s) && typeof window.eqAttrPath === "function") {

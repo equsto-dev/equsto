@@ -9,8 +9,9 @@
       "category": "Signature Bar",
       "description": "En çok satan iki kişilik istasyonumuz; entegre dondurucu çekmeceleri, genişletilmiş damlama tepsisi, evye ve bardak saklama alanı ile.",
       "page": 23,
-      "image": "vitrum-drawings/hero_p23.png",
-      "drawing": "vitrum-drawings/tech_p23.png"
+      "image": "images/catalog/besos/web/besos-bes-p23.avif",
+      "drawing": "vitrum-drawings/tech_p23.png",
+      "imageSource": "local-fallback"
     },
     {
       "slug": "the-boulverdier",
@@ -19,8 +20,9 @@
       "category": "Signature Bar",
       "description": "Artizan kokteyller için tasarlanmış iki kişilik istasyon; genişletilmiş damlama tepsisi bölümü ve çift evye.",
       "page": 24,
-      "image": "vitrum-drawings/hero_p24.png",
-      "drawing": "vitrum-drawings/tech_p24.png"
+      "image": "images/catalog/besos/web/besos-bes-p24.avif",
+      "drawing": "vitrum-drawings/tech_p24.png",
+      "imageSource": "local-fallback"
     },
     {
       "slug": "the-clover",
@@ -29,8 +31,9 @@
       "category": "Signature Bar",
       "description": "Genişletilmiş şişe speed rack’i, kolay erişimli garnitür tepsileri ve büyük yalıtımlı buz kuyusu ile imza bar modülümüz.",
       "page": 25,
-      "image": "vitrum-drawings/hero_p25.png",
-      "drawing": "vitrum-drawings/tech_p25.png"
+      "image": "images/catalog/besos/web/besos-bes-p25.avif",
+      "drawing": "vitrum-drawings/tech_p25.png",
+      "imageSource": "local-fallback"
     },
     {
       "name": "Bar Module",
@@ -383,5 +386,7 @@
       "image": "vitrum-drawings/hero_p64.png",
       "drawing": "vitrum-drawings/tech_p64.png"
     }
-  ]
+  ],
+  "imageRoot": "images/catalog/besos/web",
+  "imagesFetchedAt": "2026-05-21T20:39:32.343Z"
 }

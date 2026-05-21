@@ -189,6 +189,13 @@
     if (!rel) return "";
     var s = String(rel).replace(/\\/g, "/").trim();
     if (/^https?:\/\//i.test(s)) return s;
+    if (/^vitrum-drawings\//i.test(s) || /^data\/vitrum-drawings\//i.test(s)) {
+      var vd = s.replace(/^\/?data\//i, "");
+      if (typeof window.eqAttrPath === "function") {
+        return window.eqAttrPath("/data/" + vd);
+      }
+      return "/data/" + vd;
+    }
     if (typeof window.eqProductImgSrc === "function") {
       try {
         var via = window.eqProductImgSrc(s);
