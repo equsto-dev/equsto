@@ -335,6 +335,25 @@
 
   window.equstoCatalogImagesWebRoot = catalogImagesWebRoot;
 
+  /** `images/catalog/ozti/web/ozti-8574-cm080-00.jpg` → Öztiryakiler ax-images CDN. */
+  function oztiAxImageFromWebPath(s) {
+    var t = String(s || "")
+      .trim()
+      .replace(/\\/g, "/");
+    var m = /^images\/catalog\/ozti\/web\/ozti-([a-z0-9-]+)\.(jpe?g|png|webp)$/i.exec(t);
+    if (!m) return "";
+    var parts = m[1].split("-").filter(Boolean);
+    if (parts.length < 2) return "";
+    var kod = parts
+      .map(function (p) {
+        return p.toUpperCase();
+      })
+      .join(".");
+    return (
+      "https://oztiryakiler.com.tr/ax-images/images/" + encodeURIComponent(kod) + ".jpg"
+    );
+  }
+
   /** Katalog görseli için denenecek URL sırası (canlı: önce ham UTF-8 dosya adı). */
   function catalogImageCandidates(dataRel) {
     var file = String(dataRel || "")
@@ -345,6 +364,10 @@
     if (!file) return [];
     var root = catalogImagesWebRoot();
     var list = [];
+    if (/^catalog\/ozti\/web\//i.test(file)) {
+      var ax = oztiAxImageFromWebPath("images/" + file);
+      if (ax) list.push(ax);
+    }
     if (/^catalog\//i.test(file)) {
       list.push("/images/" + file);
       list.push("/images/" + encodeDataRelPath(file));
@@ -469,6 +492,8 @@
     var s = String(p).trim().replace(/\\/g, "/");
     if (!s) return "";
     if (/^https?:\/\//i.test(s)) return s;
+    var ozAx = oztiAxImageFromWebPath(s);
+    if (ozAx) return ozAx;
     var vd = vitrumDrawingsHref(s);
     if (vd) return vd;
     var mapped = resolveVitrinImageMap(s);
