@@ -87,6 +87,8 @@ const nextConfig: NextConfig = {
       { source: "/login/", destination: "/login.html" },
       { source: "/marka", destination: "/marka.html" },
       { source: "/marka/", destination: "/marka.html" },
+      { source: "/arama", destination: "/arama.html" },
+      { source: "/arama/", destination: "/arama.html" },
       ...geoRewrites(),
     ];
   },

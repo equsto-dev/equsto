@@ -443,12 +443,11 @@
   function globalSearchUrl(q) {
     q = String(q == null ? "" : q).trim();
     if (!q) return "";
-    var base = "/shop";
-    try {
-      if (typeof window.equstoUrl === "function") base = window.equstoUrl("shop") || "/";
-    } catch (_) {}
-    var sep = base.indexOf("?") >= 0 ? "&" : "?";
-    return base + sep + "q=" + encodeURIComponent(q);
+    if (typeof window.eqAramaUrl === "function") {
+      var u = window.eqAramaUrl(q);
+      if (u) return u;
+    }
+    return "/arama?q=" + encodeURIComponent(q);
   }
 
   function commitGlobalSearch(q) {
@@ -505,10 +504,6 @@
 
   window.eqSearchScrollToResults = scrollToResults;
   window.__eqSearchDispatch = dispatchSearch;
-  window.eqCommitHeaderSearch = function () {
-    var inp = document.querySelector("header.hdr .srch-input, header .srch .srch-input");
-    dispatchSearch(inp ? inp.value : "", { immediate: true });
-  };
 
   document.addEventListener(
     "input",
@@ -516,31 +511,6 @@
       var t = ev.target;
       if (!t || !t.classList || !t.classList.contains("srch-input")) return;
       dispatchSearch(t.value, { noRedirect: true, scroll: false });
-    },
-    true
-  );
-
-  document.addEventListener(
-    "keydown",
-    function (ev) {
-      if (ev.key !== "Enter") return;
-      var t = ev.target;
-      if (!t || !t.classList || !t.classList.contains("srch-input")) return;
-      ev.preventDefault();
-      dispatchSearch(t.value, { immediate: true });
-    },
-    true
-  );
-
-  document.addEventListener(
-    "click",
-    function (ev) {
-      var btn = ev.target && ev.target.closest && ev.target.closest(".srch-btn");
-      if (!btn || !btn.closest("header .srch, header.hdr .srch")) return;
-      ev.preventDefault();
-      var root = btn.closest(".srch");
-      var inp = root && root.querySelector(".srch-input");
-      dispatchSearch(inp ? inp.value : "", { immediate: true });
     },
     true
   );
@@ -560,6 +530,11 @@
     if (!q.trim()) return;
     var inp = document.querySelector("header.hdr .srch-input, header .srch .srch-input");
     if (inp) inp.value = q;
+    var path = "";
+    try {
+      path = location.pathname || "";
+    } catch (_) {}
+    if (path.indexOf("/arama") === 0) return;
     if (!isHomeVitrinPage()) {
       commitGlobalSearch(q);
       return;
@@ -586,6 +561,13 @@
     document.addEventListener("DOMContentLoaded", drainUrlQ);
   } else {
     setTimeout(drainUrlQ, 0);
+  }
+
+  if (!document.querySelector('script[src*="eq-header-search"]')) {
+    var meiliHdr = document.createElement("script");
+    meiliHdr.src = "/eq-header-search.js?v=20260519meili";
+    meiliHdr.defer = true;
+    document.head.appendChild(meiliHdr);
   }
 
   try {
