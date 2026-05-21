@@ -28,7 +28,7 @@
     modal.style.right = Math.max(8, Math.round(window.innerWidth - r.right)) + "px";
     modal.style.bottom = Math.max(8, Math.round(window.innerHeight - r.top + gap)) + "px";
     var spaceAbove = r.top - gap - 12;
-    var mh = Math.min(Math.round(window.innerHeight * 0.72), Math.max(180, spaceAbove));
+    var mh = Math.min(Math.round(window.innerHeight * 0.9), Math.max(306, spaceAbove));
     modal.style.maxHeight = mh + "px";
   }
 
