@@ -15,6 +15,8 @@
     "kur:fetch": "node scripts/fetch-tcmb-kur.mjs",
     "catalog:doner:parse": "node scripts/parse-atalay-doner-ocak.mjs",
     "catalog:doner:sync": "node scripts/parse-atalay-doner-ocak.mjs && node scripts/sync-doner-fiyatlar.mjs",
+    "catalog:atalay:merge": "node scripts/merge-atalay-dept-catalog.mjs",
+    "catalog:atalay:full": "npm run catalog:doner:sync && npm run catalog:atalay:merge",
     "catalog:doner:images": "python scripts/extract-atalay-doner-images.py",
     "db:seed:doner": "node --import ./scripts/load-env.mjs ./node_modules/tsx/dist/cli.mjs prisma/seed-atalay-doner-ocak.ts",
     "db:migrate:deploy": "prisma migrate deploy",

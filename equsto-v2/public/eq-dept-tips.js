@@ -318,8 +318,18 @@
   }
 
   /** Mutbex/Cafemarkt: önce vitrin tipi, sonra slug — alfabetik değil. */
+  var DONER_CAT_SLUGS = {
+    "doner-ocaklari-": true,
+    "doner-ocaklari": true,
+    "doner-makineleri": true,
+    "doner-makineleri-duvara-monte": true,
+    "compact-seri-doner-robotu": true,
+    "adr-seri-doner-robotu": true,
+  };
+
   function tileMatchProduct(u, tile) {
     if (!tile) return false;
+    if (tile.slug === "doner-ocaklari-" && DONER_CAT_SLUGS[u.c]) return true;
     if (tile.slug && (u.c === tile.slug || u.category === tile.slug)) return true;
     if (tile.keys && tile.keys.length) {
       var hay = productHaystack(u);

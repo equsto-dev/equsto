@@ -5,7 +5,7 @@
   'use strict';
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260520origimg';
+  var CATALOG_V = '20260524atalay';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
 
   var state = {

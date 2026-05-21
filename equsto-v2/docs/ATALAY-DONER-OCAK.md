@@ -7,7 +7,8 @@ Robot, kalıp, lift ve aksesuar **dahil değil**.
 
 - Katalog fiyatı: **EURO** (PDF liste)
 - Site: **%40 iskonto** → `site_euro = katalog × 0.6`
-- TL: `site_tl = site_euro × EQUSTO_EUR_TRY` (varsayılan **36**, `EQUSTO_EUR_TRY` ile değişir)
+- TL: `site_tl = site_euro × TCMB efektif satış` — canlı: `GET /api/kur` (bkz. `docs/TCMB-KUR.md`)
+- Yedek: `EQUSTO_EUR_TRY_FALLBACK` (TCMB erişilemezse)
 
 Örnek ADG-4S: 690 EUR → 414 EUR → **14.904 TL** (36 kur)
 
@@ -26,8 +27,17 @@ Robot, kalıp, lift ve aksesuar **dahil değil**.
 cd /d "C:\D Disk\EQUSTO-CURSOR\equsto-v2"
 copy .env.local .env
 npm run catalog:doner:sync
+npm run catalog:atalay:merge
 npm run db:seed:doner
 ```
+
+**Vitrin (statik `/shop/pisirme`):** `ekipmanlar.json` içinde ~899 Atalay vardı; `dept/pisirme.json` yalnızca bir kısmını yüklüyordu. Eksikler:
+
+```cmd
+npm run catalog:atalay:merge
+```
+
+→ `pisirme.json` +384, `kahve.json` +6, `hazirlik.json` +9 (yardımcı). Döner PDF fiyatları 47 modelde `fiyat_tl` / `price` ile güncellenir.
 
 Canlı Supabase için aynı seed’i Vercel env ile lokalden çalıştırın veya CI’dan `db:seed:doner`.
 
