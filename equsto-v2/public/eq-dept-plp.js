@@ -5,7 +5,7 @@
   'use strict';
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260524atalay';
+  var CATALOG_V = '20260519atalay-pdf';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
 
   var state = {
@@ -527,13 +527,14 @@
       if (tip && findTile(tip)) state.activeTiles = [tip];
       var q = sp.get('q');
       if (q != null && String(q).trim()) {
-        var base = '/shop';
-        try {
-          if (typeof window.equstoUrl === 'function') base = window.equstoUrl('shop') || '/';
-        } catch (_) {}
-        var sep = base.indexOf('?') >= 0 ? '&' : '?';
-        location.replace(base + sep + 'q=' + encodeURIComponent(String(q).trim()));
-        return;
+        var arama =
+          typeof window.eqAramaUrl === 'function'
+            ? window.eqAramaUrl(String(q).trim())
+            : '/arama?q=' + encodeURIComponent(String(q).trim());
+        if (arama) {
+          location.replace(arama);
+          return;
+        }
       }
     } catch (_) {}
   }
@@ -677,7 +678,7 @@
   }
 
   function bindSearch() {
-    /* Üst arama: theme.js → tüm site /shop?q= (departman içi filtre yok). */
+    /* Üst arama: Meilisearch → /arama?q= (theme.js + eq-header-search.js). */
   }
 
   window.__eqDeptPlpSetSort = function (v) {
