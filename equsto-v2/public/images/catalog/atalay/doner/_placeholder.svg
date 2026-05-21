@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#f4f4f5"/>
+  <text x="400" y="280" text-anchor="middle" font-family="system-ui,sans-serif" font-size="22" fill="#52525b">Atalay Döner Oca1</text>
+  <text x="400" y="320" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#71717a">Görsel yüklenecek</text>
+</svg>

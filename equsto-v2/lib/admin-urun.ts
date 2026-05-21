@@ -76,8 +76,18 @@ export function ecomRowToAdminUrun(u: EcomRow, index: number): AdminUrunRow {
 
 type PrismaProduct = Product & { brand: Brand; category: Category };
 
-export function prismaToAdminUrun(p: PrismaProduct): AdminUrunRow {
-  const img = p.specs as { gorsel_url?: string } | null;
+type PrismaProductWithImages = PrismaProduct & {
+  images?: { url: string; isPrimary: boolean; order: number }[];
+};
+
+export function prismaToAdminUrun(p: PrismaProductWithImages): AdminUrunRow {
+  const specs = (p.specs || {}) as {
+    gorsel_url?: string;
+    el_guc?: string | null;
+    gaz_guc?: string | null;
+  };
+  const primary =
+    p.images?.find((i) => i.isPrimary)?.url ?? p.images?.[0]?.url ?? specs.gorsel_url;
   return {
     id: p.id,
     ad: p.name,
@@ -89,10 +99,10 @@ export function prismaToAdminUrun(p: PrismaProduct): AdminUrunRow {
     sku: p.modelCode || null,
     stok: 0,
     fiyat_tl: p.priceListTl != null ? Number(p.priceListTl) : 0,
-    el_guc: null,
-    gaz_guc: null,
+    el_guc: specs.el_guc ?? null,
+    gaz_guc: specs.gaz_guc ?? null,
     aciklama: p.description,
-    gorsel_url: typeof img?.gorsel_url === "string" ? img.gorsel_url : null,
+    gorsel_url: typeof primary === "string" ? primary : null,
     durum: p.status === "PUBLISHED" ? "aktif" : "pasif",
     proje_fab_aktif: true,
   };

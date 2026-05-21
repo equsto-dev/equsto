@@ -12,6 +12,21 @@ export async function GET(req: NextRequest) {
   if (denied) return denied;
 
   try {
+    const products = await db.product.findMany({
+      include: { brand: true, category: true, images: true },
+      orderBy: { updatedAt: "desc" },
+      take: 5000,
+    });
+    if (products.length > 0) {
+      const { prismaToAdminUrun } = await import("@/lib/admin-urun");
+      const data = products.map(prismaToAdminUrun);
+      return adminOk({ data, count: data.length, source: "db" });
+    }
+  } catch (e) {
+    console.warn("[GET /urunler] db:", e);
+  }
+
+  try {
     if (await legacyCatalogExists()) {
       const data = await loadLegacyCatalogRows();
       return adminOk({ data, count: data.length, source: "legacy" });
@@ -20,18 +35,7 @@ export async function GET(req: NextRequest) {
     console.warn("[GET /urunler] legacy:", e);
   }
 
-  try {
-    const products = await db.product.findMany({
-      include: { brand: true, category: true },
-      orderBy: { updatedAt: "desc" },
-      take: 5000,
-    });
-    const { prismaToAdminUrun } = await import("@/lib/admin-urun");
-    const data = products.map(prismaToAdminUrun);
-    return adminOk({ data, count: data.length, source: "db" });
-  } catch {
-    return adminOk({ data: [], count: 0, source: "empty" });
-  }
+  return adminOk({ data: [], count: 0, source: "empty" });
 }
 
 export async function POST(req: NextRequest) {
