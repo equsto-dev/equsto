@@ -69,8 +69,8 @@
 
   function besosHref() {
     return typeof window.equstoResolveNavHref === "function"
-      ? window.equstoResolveNavHref("bar-design.html")
-      : "bar-design.html";
+      ? window.equstoResolveNavHref("/besos")
+      : "/besos";
   }
 
   function render(p) {

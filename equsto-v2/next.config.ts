@@ -94,6 +94,9 @@ const nextConfig: NextConfig = {
       { source: "/urunler/:path*", destination: "/shop/:path*", permanent: true },
       { source: "/proje-fabrikasi", destination: "/pfos", permanent: true },
       { source: "/proje-fabrikasi/:path*", destination: "/pfos", permanent: true },
+      { source: "/bar-design", destination: "/besos", permanent: true },
+      { source: "/bar-design/", destination: "/besos", permanent: true },
+      { source: "/bar-design.html", destination: "/besos", permanent: true },
     ];
   },
   async rewrites() {
@@ -108,10 +111,10 @@ const nextConfig: NextConfig = {
       { source: "/shop/:dept/:slug", destination: "/product.html" },
       { source: "/pfos", destination: "/pfos.html" },
       { source: "/pfos/", destination: "/pfos.html" },
-      { source: "/besos", destination: "/besos/index.html" },
-      { source: "/besos/", destination: "/besos/index.html" },
-      { source: "/bar-design", destination: "/bar-design.html" },
-      { source: "/bar-design/", destination: "/bar-design.html" },
+      { source: "/besos", destination: "/bar-design.html" },
+      { source: "/besos/", destination: "/bar-design.html" },
+      { source: "/besos/modul/:slug", destination: "/bar-module.html" },
+      { source: "/besos/modul/:slug/", destination: "/bar-module.html" },
       { source: "/admin", destination: "/admin.html" },
       { source: "/admin/", destination: "/admin.html" },
       /* /yonetim → Next.js App Router (Ant Design Pro) */

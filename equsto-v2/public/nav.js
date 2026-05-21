@@ -60,7 +60,7 @@
 
   var NAV = [
     { id: "pfos", labelKey: "nav.pfos", label: "Proje Fabrikası", href: "pfos.html" },
-    { id: "bar-design", labelKey: "nav.bar_design", label: "Bar Design", href: "bar-design.html" },
+    { id: "bar-design", labelKey: "nav.bar_design", label: "Bar Design", href: "/besos" },
     {
       id: "pisirme",
       labelKey: "nav.pisirme",
