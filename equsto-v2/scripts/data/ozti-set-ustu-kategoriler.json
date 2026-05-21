@@ -13,18 +13,18 @@
     { "label": "Gastronorm Küvetler", "tip": "gastronorm-kuvet", "search": "gastronorm|gn küvet|gn kuvet" },
     { "label": "Pres Baskı Tepsiler", "tip": "pres-baski-tepsi", "search": "pres baskı|pres baski" },
     { "label": "Taşıma Ekipmanları", "tip": "tasima-ekipman", "search": "taşıma ekipman|tasima ekipman|servis arab" },
-    { "label": "Bain Marie Saklama Kapları", "tip": "bain-marie-kap", "search": "bain marie" },
+    { "label": "Bain Marie Çelik Saklama Kapları", "tip": "bain-marie-kap", "search": "bain marie" },
     { "label": "Melamin Sunum Kapları", "tip": "melamin-sunum", "search": "melamin sunum" },
     { "label": "Karıştırma Kapları ve Süzgeçler", "tip": "karistirma-suzgec", "search": "karıştırma kap|karistirma kap|süzgeç|suzgec" },
-    { "label": "Polipropilen / Polikarbonat GN", "tip": "pp-pc-gn", "search": "polipropilen|polikarbonat|pp gn" },
+    { "label": "Polipropilen-Polikarbonat Gastronom Küvetler", "tip": "pp-pc-gn", "search": "polipropilen|polikarbonat|pp gn" },
     { "label": "Polietilen Kesme Tahtaları", "tip": "kesme-tahtasi", "search": "kesme tahta|polietilen" },
     { "label": "Gurmeaid Profesyonel Bıçaklar", "tip": "gurmeaid-bicak", "search": "gurmeaid.*bıçak|gurmeaid.*bicak" },
     { "label": "Gurmeaid Mutfak Aksesuarları", "tip": "gurmeaid-aksesuar", "search": "gurmeaid.*aksesuar" },
     { "label": "Mutfak Aksesuarları", "tip": "mutfak-aksesuar", "search": "mutfak aksesuar" },
     { "label": "Sinek Öldürücü Cihazlar", "tip": "sinek-oldurucu", "search": "sinek öldürücü|sinek oldurucu" },
-    { "label": "Sıcak / Soğuk Servis Üniteleri", "tip": "sicak-soguk-servis", "search": "sıcak.*soğuk servis|sicak.*soguk servis" },
+    { "label": "Sıcak - Soğuk Servis Üniteleri", "tip": "sicak-soguk-servis", "search": "sıcak.*soğuk servis|sicak.*soguk servis" },
     { "label": "Isıtıcı Lambalar", "tip": "isitici-lamba", "search": "ısıtıcı lamba|isitici lamba" },
-    { "label": "Mısır Patlatma / Pamuk Şeker", "tip": "patlamis-pamuk", "search": "mısır patlatma|misir patlatma|pamuk şeker|pamuk seker" }
+    { "label": "Mısır Patlatma ve Pamuk Şeker Makineleri", "tip": "patlamis-pamuk", "search": "mısır patlatma|misir patlatma|pamuk şeker|pamuk seker" }
   ],
   "kategori_leaf_allow": [
     "SERVİS GEREÇLERİ",

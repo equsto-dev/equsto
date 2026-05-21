@@ -174,6 +174,37 @@
       href: "istif.html",
       subs: [{ label: "CAMBRO" }, { label: "Portashelf" }],
     },
+    {
+      id: "set-ustu-mutfak",
+      label: "Set Üstü Mutfak Ekipmanları",
+      href: "set-ustu-mutfak.html",
+      subs: [
+        { label: "Servis Gereçleri", tip: "servis-gerecleri", search: "servis gereç" },
+        { label: "Chafing Dishler", tip: "chafing-dish", search: "chafing" },
+        { label: "Helvane ve Sığ Tencereler", tip: "helvane-sig-tencere", search: "helvane|sığ tencere|sig tencere" },
+        { label: "Silindirik Tencereler", tip: "silindirik-tencere", search: "silindirik tencere" },
+        { label: "Kaçarola ve Buharlı Pişiriciler", tip: "kaserola-buharli", search: "kaçarola|kaserola|buharlı pişirici|buharli pisirici" },
+        { label: "Tavalar", tip: "tavalar", search: "tava" },
+        { label: "Bakır Sunum Ekipmanları", tip: "bakir-sunum", search: "bakır sunum|bakir sunum" },
+        { label: "Döküm Tencere ve Tavalar", tip: "dokum-tencere-tava", search: "döküm tencere|dokum tencere|lava döküm" },
+        { label: "Masaüstü Ekipmanları", tip: "masaustu-ekipman", search: "masaüstü|masaustu" },
+        { label: "Gastronorm Küvetler", tip: "gastronorm-kuvet", search: "gastronorm|gn küvet|gn kuvet" },
+        { label: "Pres Baskı Tepsiler", tip: "pres-baski-tepsi", search: "pres baskı|pres baski" },
+        { label: "Taşıma Ekipmanları", tip: "tasima-ekipman", search: "taşıma ekipman|tasima ekipman|servis arab" },
+        { label: "Bain Marie Çelik Saklama Kapları", tip: "bain-marie-kap", search: "bain marie" },
+        { label: "Melamin Sunum Kapları", tip: "melamin-sunum", search: "melamin sunum" },
+        { label: "Karıştırma Kapları ve Süzgeçler", tip: "karistirma-suzgec", search: "karıştırma kap|karistirma kap|süzgeç|suzgec" },
+        { label: "Polipropilen-Polikarbonat Gastronom Küvetler", tip: "pp-pc-gn", search: "polipropilen|polikarbonat|pp gn" },
+        { label: "Polietilen Kesme Tahtaları", tip: "kesme-tahtasi", search: "kesme tahta|polietilen" },
+        { label: "Gurmeaid Profesyonel Bıçaklar", tip: "gurmeaid-bicak", search: "gurmeaid.*bıçak|gurmeaid.*bicak" },
+        { label: "Gurmeaid Mutfak Aksesuarları", tip: "gurmeaid-aksesuar", search: "gurmeaid.*aksesuar" },
+        { label: "Mutfak Aksesuarları", tip: "mutfak-aksesuar", search: "mutfak aksesuar" },
+        { label: "Sinek Öldürücü Cihazlar", tip: "sinek-oldurucu", search: "sinek öldürücü|sinek oldurucu" },
+        { label: "Sıcak - Soğuk Servis Üniteleri", tip: "sicak-soguk-servis", search: "sıcak.*soğuk servis|sicak.*soguk servis" },
+        { label: "Isıtıcı Lambalar", tip: "isitici-lamba", search: "ısıtıcı lamba|isitici lamba" },
+        { label: "Mısır Patlatma ve Pamuk Şeker Makineleri", tip: "patlamis-pamuk", search: "mısır patlatma|misir patlatma|pamuk şeker|pamuk seker" },
+      ],
+    },
   ];
 
   function equstoDeptHref(href) {
@@ -213,6 +244,7 @@
       tasima: "\uD83E\uDDF0",
       araba: "\uD83D\uDED2",
       istif: "\uD83D\uDCDA",
+      "set-ustu-mutfak": "\uD83C\uDF7D\uFE0F",
     };
     return m[catId] || "\uD83D\uDCE6";
   }

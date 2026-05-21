@@ -571,8 +571,8 @@ nav.topnav::-webkit-scrollbar,
 
 .topnav-item.active {
   font-weight: 700;
-  box-shadow: inset 0 -2px 0 0 var(--eq-topnav-dept-active-line);
-  background: transparent !important;
+  box-shadow: none;
+  background: var(--eq-topnav-dept-hover) !important;
 }
 
 /* Bar Design (Besos) · Proje Fabrikası (PFOS) — iki yüz kaydırma; şerit hover’u bu hücrelerde yok */
@@ -602,30 +602,18 @@ nav.topnav::-webkit-scrollbar,
   width: max-content;
   max-width: 100%;
 }
-/* Hareketli PFOS/Besos: alt çizgi düz menü öğeleriyle aynı (overflow yüzünde .topnav-item'da kaybolur) */
+/* Üst bant departmanları — alt çizgi yok */
+.topnav-item,
+.topnav-item:hover,
+.topnav-item.active,
 .topnav-item.topnav-pfos .topnav-pfos__face--plain,
-.topnav-item.topnav-besos .topnav-besos__face--plain {
-  text-decoration: underline;
-  text-underline-offset: 0.14em;
-  text-decoration-thickness: 1px;
-}
-.topnav-item.topnav-pfos:hover .topnav-pfos__face--plain {
-  text-decoration: underline;
-  text-underline-offset: 0.14em;
-  text-decoration-thickness: 1px;
-}
+.topnav-item.topnav-besos .topnav-besos__face--plain,
+.topnav-item.topnav-pfos:hover .topnav-pfos__face--plain,
+.topnav-item.topnav-besos:hover .topnav-besos__face--plain,
+body.eq-shop:not(.admin-app):not(.bd-page) .topnav-item,
 body.eq-shop:not(.admin-app):not(.bd-page) .topnav-item.topnav-pfos .topnav-pfos__face--plain,
 body.eq-shop:not(.admin-app):not(.bd-page) .topnav-item.topnav-besos .topnav-besos__face--plain {
-  text-decoration: underline;
-  text-underline-offset: 0.14em;
-  text-decoration-thickness: 1px;
-  text-decoration-color: currentColor;
-}
-body.eq-shop:not(.admin-app):not(.bd-page) .topnav-item:not(.topnav-pfos):not(.topnav-besos):not(.topnav-all) {
-  text-decoration: underline;
-  text-underline-offset: 0.14em;
-  text-decoration-thickness: 1px;
-  text-decoration-color: currentColor;
+  text-decoration: none !important;
 }
 .topnav-item.topnav-pfos:hover {
   position: relative;
