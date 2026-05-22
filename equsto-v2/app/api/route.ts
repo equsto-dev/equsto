@@ -6,6 +6,10 @@ export async function GET() {
     message: "Equsto Admin API",
     endpoints: [
       "/api/urunler",
+      "/api/urunler/meta",
+      "/api/pfos",
+      "/api/pfos/konseptler",
+      "/api/pfos/calculate",
       "/api/fiyatlar",
       "/api/musteriler",
       "/api/whatsapp",
