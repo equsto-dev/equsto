@@ -61,7 +61,10 @@ export default function YonetimGirisPage() {
           />
         </LoginForm>
         <Typography.Paragraph type="secondary" style={{ fontSize: 12, marginBottom: 0 }}>
-          Yerelde varsayılan: <code>equsto2025</code> — canlıda Vercel env ile aynı olmalı.
+          Sadece değeri yapıştırın — <strong>tırnak işareti olmadan</strong> (ör.{" "}
+          <code>eq_adm_5431432608_eq_adm_5431432608</code>,{" "}
+          <code>&quot;…&quot;</code> değil). Vercel <code>EQUSTO_ADMIN_BEARER</code> ile
+          aynı olmalı.
         </Typography.Paragraph>
       </Card>
     </div>

@@ -33,7 +33,11 @@ Tarayıcı: http://localhost:3000/yonetim/giris
 | Yerel (`npm run dev`) | `.env.local` → `EQUSTO_ADMIN_BEARER` veya boş token / `equsto2025` |
 | Canlı (equsto.com) | Vercel → Project → Settings → Environment Variables → **`EQUSTO_ADMIN_BEARER`** (Production) |
 
-`Eq_33100…` gibi kodlar **müşteri/oturum kodu değildir** — API Bearer değil. Kontrol listesinde `GET /api/urunler` **Yetkisiz** ise girişte yanlış token kayıtlıdır; `/yonetim/giris` → doğru Bearer → **Yeniden kontrol et**.
+`Eq_33100…` gibi kodlar **müşteri/oturum kodu değildir** — API Bearer değil.
+
+**.env kopyalarken tırnak kullanmayın:** `EQUSTO_ADMIN_BEARER="eq_adm_…"` satırından yalnızca `eq_adm_…` kısmını yapıştırın (`"` dahil etmeyin). Vercel env değer alanına da tırnaksız yazın.
+
+Kontrol listesinde `GET /api/urunler` **Yetkisiz** ise `/yonetim/giris` → doğru Bearer → **Yeniden kontrol et**.
 
 ## Paketler
 

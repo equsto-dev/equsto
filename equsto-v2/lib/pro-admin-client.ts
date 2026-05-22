@@ -29,13 +29,25 @@ export type SearchCheckResponse = {
   error?: string;
 };
 
+/** .env / Vercel satırından kopyalanan tırnakları kaldırır */
+export function normalizeProToken(raw: string): string {
+  let s = String(raw ?? "").trim();
+  if (
+    (s.startsWith('"') && s.endsWith('"')) ||
+    (s.startsWith("'") && s.endsWith("'"))
+  ) {
+    s = s.slice(1, -1).trim();
+  }
+  return s;
+}
+
 export function getProToken(): string {
   if (typeof window === "undefined") return "";
-  return localStorage.getItem(PRO_TOKEN_KEY) || "";
+  return normalizeProToken(localStorage.getItem(PRO_TOKEN_KEY) || "");
 }
 
 export function setProToken(token: string) {
-  localStorage.setItem(PRO_TOKEN_KEY, token.trim());
+  localStorage.setItem(PRO_TOKEN_KEY, normalizeProToken(token));
 }
 
 export function clearProToken() {
