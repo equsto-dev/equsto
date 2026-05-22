@@ -40,7 +40,7 @@ export async function POST(req: NextRequest) {
     gotLen,
     hint:
       gotLen !== expectedLen
-        ? `Uzunluk uyuşmuyor (${gotLen} ≠ ${expectedLen}). Vercel panelinden değeri tekrar kopyalayın; tırnak kullanmayın.`
-        : "Uzunluk aynı ama karakterler farklı. Vercel Production env ile birebir aynı token girin; yeni token ürettiyseniz eski eq_adm_… değil, Vercel’deki yeni değeri kullanın.",
+        ? `Vercel’deki token ${expectedLen} karakter, siz ${gotLen} karakter girdiniz. Vercel → EQUSTO_ADMIN_BEARER → göz ikonu → tüm değeri kopyalayın (ör. tam değer 35 karakter: eq_adm_5431432608_eq_adm_5431432608). Kısaltılmış 16–17 karakterlik parça yanlış.`
+        : "Uzunluk aynı ama karakterler farklı. Vercel Production env ile birebir aynı token girin.",
   });
 }
