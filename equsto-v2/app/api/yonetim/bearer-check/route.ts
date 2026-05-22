@@ -31,13 +31,15 @@ export async function POST(req: NextRequest) {
     return adminOk({ ok: true });
   }
 
+  const expectedLen = expected.length;
+  const gotLen = got.length;
   return adminOk({
     ok: false,
     reason: "mismatch",
-    expectedLen: expected.length,
-    gotLen: got.length,
+    expectedLen,
+    gotLen,
     hint:
-      gotLen !== expected.length
+      gotLen !== expectedLen
         ? `Uzunluk uyuşmuyor (${gotLen} ≠ ${expectedLen}). Vercel panelinden değeri tekrar kopyalayın; tırnak kullanmayın.`
         : "Uzunluk aynı ama karakterler farklı. Vercel Production env ile birebir aynı token girin; yeni token ürettiyseniz eski eq_adm_… değil, Vercel’deki yeni değeri kullanın.",
   });

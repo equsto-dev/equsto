@@ -55,7 +55,7 @@ function isLegacyHtmlPath(pathname: string): boolean {
   return false;
 }
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const res = NextResponse.next();
   const p = request.nextUrl.pathname;
 
