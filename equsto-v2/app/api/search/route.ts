@@ -14,9 +14,43 @@ import { expandSearchQueries } from "@/lib/search-synonyms";
 export const runtime = "nodejs";
 
 export async function GET(req: NextRequest) {
-  const q = req.nextUrl.searchParams.get("q")?.trim() || "";
-  const limit = Math.min(Number(req.nextUrl.searchParams.get("limit") || 20), 50);
-  const check = req.nextUrl.searchParams.get("check") === "1";
+  const sp = req.nextUrl.searchParams;
+  if (sp.get("health") === "1") {
+    const { getMeiliAdmin, getMeiliConfigStatus } = await import("@/lib/meilisearch");
+    const cfg = getMeiliConfigStatus();
+    if (!cfg.ok) {
+      return Response.json(
+        {
+          ok: false,
+          missing: cfg.missing,
+          index: cfg.index,
+          hint: "Vercel env ekleyip Production Redeploy yapın (Root Directory: equsto-v2).",
+        },
+        { status: 503 },
+      );
+    }
+    const client = getMeiliAdmin();
+    if (!client) {
+      return Response.json({ ok: false, error: "client" }, { status: 503 });
+    }
+    try {
+      const index = client.index(cfg.index);
+      const stats = await index.getStats();
+      return Response.json({
+        ok: true,
+        index: cfg.index,
+        documents: stats.numberOfDocuments,
+        hostPreview: cfg.hostPreview,
+      });
+    } catch (e) {
+      const msg = e instanceof Error ? e.message : "Meilisearch bağlantı hatası";
+      return Response.json({ ok: false, index: cfg.index, error: msg }, { status: 502 });
+    }
+  }
+
+  const q = sp.get("q")?.trim() || "";
+  const limit = Math.min(Number(sp.get("limit") || 20), 50);
+  const check = sp.get("check") === "1";
 
   const cfg = getMeiliConfigStatus();
 

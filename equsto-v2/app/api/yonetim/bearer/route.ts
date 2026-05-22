@@ -2,11 +2,35 @@ import { NextRequest } from "next/server";
 import { normalizeAdminBearer } from "@/lib/auth";
 import { adminErr, adminOk } from "@/lib/admin-response";
 
-/**
- * Giriş formu — token Vercel EQUSTO_ADMIN_BEARER ile eşleşiyor mu?
- * Gizli değer döndürülmez; yalnızca uzunluk ipucu.
- */
+export const runtime = "nodejs";
+
+/** GET hint | POST check — ?action=hint|check (varsayılan POST=check) */
+export async function GET(req: NextRequest) {
+  const action = req.nextUrl.searchParams.get("action")?.trim() || "hint";
+  if (action !== "hint") {
+    return adminErr("GET için action=hint kullanın", 400);
+  }
+
+  const expected = normalizeAdminBearer(process.env.EQUSTO_ADMIN_BEARER || "");
+  if (!expected) {
+    return adminErr(
+      "EQUSTO_ADMIN_BEARER Vercel'de tanımlı değil. Production env ekleyip Redeploy yapın.",
+      503,
+    );
+  }
+  const prefix = expected.length > 12 ? `${expected.slice(0, 12)}…` : "…";
+  return adminOk({
+    configured: true,
+    length: expected.length,
+    prefix,
+    hint: `Vercel'deki değer ${expected.length} karakter; «${prefix}» ile başlamalı.`,
+  });
+}
+
 export async function POST(req: NextRequest) {
+  const action = req.nextUrl.searchParams.get("action")?.trim() || "check";
+  if (action === "hint") return GET(req);
+
   const body = (await req.json().catch(() => ({}))) as { token?: string };
   const expected = normalizeAdminBearer(process.env.EQUSTO_ADMIN_BEARER || "");
   const got = normalizeAdminBearer(String(body.token ?? ""));
@@ -44,7 +68,7 @@ export async function POST(req: NextRequest) {
     gotPrefix: gotPre,
     hint:
       gotLen !== expectedLen
-        ? `Vercel’deki token ${expectedLen} karakter, forma ${gotLen} karakter gitti. Alanı temizleyin, Vercel’den göz ikonu ile kopyalayın.`
-        : `Uzunluk aynı (${expectedLen}) ama metin farklı. Vercel’de «${expPre}» — sizde «${gotPre}». Sohbetteki örnek key ile Vercel’deki aynı değil; Vercel → EQUSTO_ADMIN_BEARER → göz → tam kopyala.`,
+        ? `Vercel'deki token ${expectedLen} karakter, forma ${gotLen} karakter gitti.`
+        : `Uzunluk aynı (${expectedLen}) ama metin farklı.`,
   });
 }

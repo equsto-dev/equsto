@@ -111,6 +111,23 @@ const nextConfig: NextConfig = {
       beforeFiles: [
         { source: "/arama", destination: "/arama.html" },
         { source: "/arama/", destination: "/arama.html" },
+        /* API birleştirme — Hobby 12 function limiti (geriye dönük URL) */
+        { source: "/api/pfos/concepts", destination: "/api/pfos?action=concepts" },
+        { source: "/api/pfos/konseptler", destination: "/api/pfos?action=konseptler" },
+        { source: "/api/pfos/quote", destination: "/api/pfos?action=quote" },
+        { source: "/api/pfos/calculate", destination: "/api/pfos?action=calculate" },
+        { source: "/api/search/health", destination: "/api/search?health=1" },
+        { source: "/api/yonetim/bearer-hint", destination: "/api/yonetim/bearer?action=hint" },
+        { source: "/api/yonetim/bearer-check", destination: "/api/yonetim/bearer?action=check" },
+        { source: "/api/urunler/meta", destination: "/api/urunler?meta=1" },
+        { source: "/api/kur", destination: "/api/market?kind=kur" },
+        { source: "/api/fiyatlar", destination: "/api/market?kind=fiyatlar" },
+        { source: "/api/vitrin-homepage", destination: "/api/cms?kind=vitrin" },
+        { source: "/api/proje-akis", destination: "/api/cms?kind=proje-akis" },
+        {
+          source: "/api/urunler/katalog/:index",
+          destination: "/api/urunler?katalogIndex=:index",
+        },
       ],
       afterFiles: [
       { source: "/", destination: "/index.html" },

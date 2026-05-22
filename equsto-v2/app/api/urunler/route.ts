@@ -3,7 +3,11 @@ import type { Prisma } from "@/lib/prisma";
 import { assertAdminBearer } from "@/lib/auth";
 import { adminErr, adminOk } from "@/lib/admin-response";
 import { parseAdminUrunPayload } from "@/lib/admin-urun";
-import { loadLegacyCatalogRows, legacyCatalogExists } from "@/lib/legacy-catalog";
+import {
+  deleteLegacyCatalogIndex,
+  loadLegacyCatalogRows,
+  legacyCatalogExists,
+} from "@/lib/legacy-catalog";
 import { db } from "@/lib/db";
 import { slugifyTr } from "@/lib/slug";
 
@@ -12,6 +16,25 @@ export async function GET(req: NextRequest) {
   if (denied) return denied;
 
   const sp = req.nextUrl.searchParams;
+
+  if (sp.get("meta") === "1") {
+    try {
+      const [brands, categories] = await Promise.all([
+        db.brand.findMany({
+          orderBy: { name: "asc" },
+          select: { id: true, slug: true, name: true },
+        }),
+        db.category.findMany({
+          orderBy: { name: "asc" },
+          select: { id: true, slug: true, name: true },
+        }),
+      ]);
+      return adminOk({ brands, categories });
+    } catch (e) {
+      const msg = e instanceof Error ? e.message : "Meta okunamadı";
+      return adminErr(msg, 503);
+    }
+  }
   const marka = sp.get("marka")?.trim() || "";
   const kategori = sp.get("kategori")?.trim() || "";
   const q = sp.get("q")?.trim() || "";
@@ -112,5 +135,28 @@ export async function POST(req: NextRequest) {
       `Supabase bağlantısı yok veya şema eksik: ${msg}. Önce db:migrate:deploy çalıştırın.`,
       503
     );
+  }
+}
+
+/** DELETE /api/urunler?katalogIndex=N — eski /api/urunler/katalog/:index */
+export async function DELETE(req: NextRequest) {
+  const denied = assertAdminBearer(req);
+  if (denied) return denied;
+
+  const raw = req.nextUrl.searchParams.get("katalogIndex");
+  if (raw == null || raw === "") {
+    return adminErr("katalogIndex parametresi gerekli", 400);
+  }
+
+  const i = parseInt(raw, 10);
+  if (Number.isNaN(i) || i < 0) return adminErr("Geçersiz indeks", 400);
+
+  try {
+    const ok = await deleteLegacyCatalogIndex(i);
+    if (!ok) return adminErr("Katalog indeksi bulunamadı", 404);
+    return adminOk({ index: i });
+  } catch (e) {
+    const msg = e instanceof Error ? e.message : "Katalog silinemedi";
+    return adminErr(msg, 500);
   }
 }
