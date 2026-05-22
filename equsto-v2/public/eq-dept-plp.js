@@ -5,7 +5,7 @@
   'use strict';
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260522ozti-tl-fiyat';
+  var CATALOG_V = '20260523ozti-tl-v2';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   var deptCoverImg = '';
 
@@ -45,6 +45,9 @@
   }
 
   function formatPrice(p, raw) {
+    if (raw && isOztiListeTlRow(raw) && /KDV\s*dahil/i.test(String(raw.price || p || ''))) {
+      return String(raw.price || p || '').split('\n')[0];
+    }
     if (raw && Number(raw.fiyat_tl) > 0) {
       return (
         '₺' +
@@ -202,6 +205,13 @@
     return false;
   }
 
+  /** Excel TL liste — canlı kur ile EUR gibi çarpılmasın. */
+  function isOztiListeTlRow(raw) {
+    if (!raw) return false;
+    var p = String(raw.para_birimi || '').trim().toUpperCase();
+    return p === 'TL' || p === 'TRY';
+  }
+
   function skipItem(item) {
     if (DEPT === 'set-ustu-mutfak') {
       return !(item && item.raw && isOztiRow(item.raw));
@@ -240,7 +250,11 @@
       fb = window.EqDeptCmFacets.resolveFacetBrand(b, n);
     }
     var row = x;
-    if (window.EqustoKurLive && typeof window.EqustoKurLive.applyRowPrices === 'function') {
+    if (
+      window.EqustoKurLive &&
+      typeof window.EqustoKurLive.applyRowPrices === 'function' &&
+      !isOztiListeTlRow(x)
+    ) {
       row = window.EqustoKurLive.applyRowPrices(x) || x;
     }
     var priceLine =

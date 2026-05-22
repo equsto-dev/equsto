@@ -467,13 +467,13 @@
   ) {
     if (!document.querySelector('script[src*="equsto-pricing-core"]')) {
       var prc = document.createElement("script");
-      prc.src = "/equsto-pricing-core.js?v=20260527kur";
+      prc.src = "/equsto-pricing-core.js?v=20260523ozti-tl-kur";
       prc.defer = true;
       document.head.appendChild(prc);
     }
     if (!document.querySelector('script[src*="eq-kur-live"]')) {
       var kurJs = document.createElement("script");
-      kurJs.src = "/eq-kur-live.js?v=20260527kur";
+      kurJs.src = "/eq-kur-live.js?v=20260523ozti-tl-kur";
       kurJs.defer = true;
       document.head.appendChild(kurJs);
     }

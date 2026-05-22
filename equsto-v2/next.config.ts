@@ -82,6 +82,13 @@ const nextConfig: NextConfig = {
       { source: "/arama", headers: [utf8Html] },
       { source: "/shop/:dept", headers: [utf8Html] },
       { source: "/i18n/:file.json", headers: [utf8Json] },
+      {
+        source: "/data/:path*",
+        headers: [
+          utf8Json,
+          { key: "Cache-Control", value: "public, max-age=0, must-revalidate" },
+        ],
+      },
     ];
   },
   async redirects() {

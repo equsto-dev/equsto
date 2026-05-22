@@ -6,7 +6,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260522ozti-tl-fiyat";
+  var CATALOG_V = "20260523ozti-tl-v2";
   var __fullMem = null;
   var __fullInflight = null;
   var __deptMem = Object.create(null);

@@ -48,18 +48,13 @@
   }
 
   function netTlFromOztiRow(row) {
-    if (!row) return 0;
+    if (!row || !isOztiListeTl(row)) return 0;
     var pre = Number(
-      row.satis_fiyati_tl ||
-        row.alis_fiyati_tl ||
-        row.fiyat_tl_net ||
-        row.satis_fiyati_eur ||
-        row.satis_eur_indirimli ||
-        row.alis_fiyati_eur ||
-        row.alis_fiyati ||
-        row.iskontolu_fiyat
+      row.satis_fiyati_tl || row.alis_fiyati_tl || row.fiyat_tl_net
     );
-    if (pre > 0 && isOztiListeTl(row)) return pre;
+    if (pre > 0) return pre;
+    var liste = Number(row.liste_fiyati_tl || row.liste_fiyati || 0);
+    if (liste > 0) return netEurFromRow({ liste_fiyati_eur: liste, bayi_iskonto: row.bayi_iskonto, iskonto_oran: row.iskonto_oran, iskonto_yuzde: row.iskonto_yuzde });
     return 0;
   }
 

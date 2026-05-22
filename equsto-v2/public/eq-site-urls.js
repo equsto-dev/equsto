@@ -394,6 +394,14 @@
       var ax = oztiAxImageFromWebPath("images/" + file);
       if (ax) list.push(ax);
     }
+    if (/^catalog\/ozti\/p\d+\/ozti-/i.test(file) && typeof window.eqOztiAxImageFromSku === "function") {
+      var slugM = file.match(/ozti-([0-9]{4})-([0-9][0-9a-z-]+(?:-[0-9]{2})?)\./i);
+      if (slugM) {
+        var kodGuess = slugM[1] + "." + slugM[2].replace(/-/g, ".");
+        var axK = window.eqOztiAxImageFromSku(kodGuess);
+        if (axK) list.push(axK);
+      }
+    }
     if (/^catalog\//i.test(file)) {
       list.push("/images/" + file);
       list.push("/images/" + encodeDataRelPath(file));

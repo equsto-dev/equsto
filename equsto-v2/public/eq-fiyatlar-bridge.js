@@ -143,9 +143,18 @@
     return row;
   }
 
+  function isOztiListeTl(item) {
+    var p = String((item && item.para_birimi) || '').trim().toUpperCase();
+    return p === 'TL' || p === 'TRY';
+  }
+
   function applyToRaw(item) {
     if (!item) return item;
-    if (global.EqustoKurLive && typeof global.EqustoKurLive.applyRowPrices === 'function') {
+    if (
+      global.EqustoKurLive &&
+      typeof global.EqustoKurLive.applyRowPrices === 'function' &&
+      !isOztiListeTl(item)
+    ) {
       item = global.EqustoKurLive.applyRowPrices(item) || item;
     }
     var v = lookupPrice({ raw: item });
