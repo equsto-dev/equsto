@@ -15,7 +15,7 @@ import type {
   EslesmisUrun,
   FiyatStratejisi,
 } from "../schemas/pfos.schema";
-import { KONSEPT_LABELS } from "../schemas/pfos.schema";
+import { KONSEPT_LABELS, type Konsept } from "../schemas/pfos.schema";
 
 function buildPozMap(items: RuleItem[]): Map<RuleItem, string> {
   const counters: Record<string, number> = {};
@@ -208,7 +208,8 @@ export async function calculateQuote(
 
   return {
     konsept,
-    konseptLabel: KONSEPT_LABELS[konsept] ?? template.label,
+    konseptLabel:
+      KONSEPT_LABELS[konsept as Konsept] ?? template.label,
     m2,
     sehir,
     guvenSkoru,

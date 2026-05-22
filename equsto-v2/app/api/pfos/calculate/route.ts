@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import { calculateQuote, PFOS_CONCEPT_BY_SLUG } from "@/lib/pfos/core";
-import type { FiyatStratejisi, PFOSRequest } from "@/lib/pfos/schemas/pfos.schema";
+import {
+  PFOSRequestSchema,
+  type FiyatStratejisi,
+} from "@/lib/pfos/schemas/pfos.schema";
 
 export const runtime = "nodejs";
 
@@ -14,16 +17,20 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Geçersiz JSON" }, { status: 400 });
   }
 
-  const konsept = String(body.konsept || "").trim();
-  const m2 = Number(body.m2);
-  if (!konsept) {
-    return NextResponse.json({ error: "konsept zorunlu" }, { status: 400 });
-  }
-  if (!Number.isFinite(m2) || m2 <= 0) {
-    return NextResponse.json({ error: "m2 pozitif sayı olmalı" }, { status: 400 });
+  let pfosReq;
+  try {
+    pfosReq = PFOSRequestSchema.parse({
+      ...body,
+      konsept: String(body.konsept || "").trim(),
+      m2: Number(body.m2),
+      sehir: body.sehir != null ? String(body.sehir) : undefined,
+      fiyatStratejisi: body.fiyatStratejisi ?? "orta",
+    });
+  } catch {
+    return NextResponse.json({ error: "Geçersiz istek gövdesi" }, { status: 400 });
   }
 
-  const template = PFOS_CONCEPT_BY_SLUG[konsept];
+  const template = PFOS_CONCEPT_BY_SLUG[pfosReq.konsept];
   if (!template) {
     return NextResponse.json(
       {
@@ -33,16 +40,6 @@ export async function POST(req: NextRequest) {
       { status: 404 },
     );
   }
-
-  const fsRaw = String(body.fiyatStratejisi || "orta").trim() as FiyatStratejisi;
-  const fiyatStratejisi = FIYAT_STR.includes(fsRaw) ? fsRaw : "orta";
-
-  const pfosReq: PFOSRequest = {
-    konsept,
-    m2,
-    fiyatStratejisi,
-    sehir: body.sehir != null ? String(body.sehir) : undefined,
-  };
 
   try {
     const data = await calculateQuote(pfosReq, template);
