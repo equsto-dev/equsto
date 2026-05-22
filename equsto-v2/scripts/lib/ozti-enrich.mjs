@@ -356,6 +356,14 @@ export function mapOztiDept(row, setUstuAllow) {
   return "set-ustu-mutfak";
 }
 
+/** Excel Sayfa1 — para sütunu TL ise liste zaten TRY; EUR kur ile çarpılmaz. */
+export function isOztiListeTl(row) {
+  const p = String(row?.para_birimi || row?.para || "")
+    .trim()
+    .toUpperCase();
+  return p === "TL" || p === "TRY" || p === "₺";
+}
+
 export function oztiSatisEur(liste, bayiIsk) {
   const L = Number(liste);
   if (!(L > 0)) return null;
@@ -385,10 +393,11 @@ export function oztiPriceLabelTl(pricing) {
   return "";
 }
 
-/** Fiyat listesi 2025: satış EUR = liste × (1 − bayi_iskonto); TL = EUR × kur × 1,20. */
+/** Fiyat listesi 2025: satış = liste × (1 − bayi_iskonto); EUR satırlar × kur; TL satırlar doğrudan TRY. */
 export function oztiPricingFields(row, kurTry) {
   const liste = Number(row.liste_fiyati_eur ?? row.liste_fiyati) || 0;
   const bayi = Number(row.bayi_iskonto);
+  const tlListe = isOztiListeTl(row);
   const iskPct = oztiIskontoYuzde(bayi);
   const odeme =
     iskPct > 0 && bayi > 0 && bayi < 1
@@ -396,34 +405,44 @@ export function oztiPricingFields(row, kurTry) {
       : 1;
   const satis =
     oztiSatisEur(liste, bayi) ??
-    (Number(row.satis_fiyati_eur) > 0 ? Number(row.satis_fiyati_eur) : null);
+    (Number(row.satis_fiyati_eur) > 0 ? Number(row.satis_fiyati_eur) : null) ??
+    (Number(row.satis_fiyati_tl) > 0 ? Number(row.satis_fiyati_tl) : null);
 
   const kur = Number(kurTry);
   let fiyat_tl_net = null;
   let fiyat_tl = null;
   let price = "";
-  if (satis > 0 && kur > 0) {
-    fiyat_tl_net = Math.round(satis * kur);
-    fiyat_tl = Math.round(fiyat_tl_net * (1 + OZTI_KDV_ORAN / 100));
-    price = oztiPriceLabelTl({ fiyat_tl });
+  if (satis > 0) {
+    if (tlListe) {
+      fiyat_tl_net = Math.round(satis);
+      fiyat_tl = Math.round(fiyat_tl_net * (1 + OZTI_KDV_ORAN / 100));
+      price = oztiPriceLabelTl({ fiyat_tl });
+    } else if (kur > 0) {
+      fiyat_tl_net = Math.round(satis * kur);
+      fiyat_tl = Math.round(fiyat_tl_net * (1 + OZTI_KDV_ORAN / 100));
+      price = oztiPriceLabelTl({ fiyat_tl });
+    }
   }
 
   return {
     liste_fiyati: liste || null,
-    liste_fiyati_eur: liste || null,
+    liste_fiyati_eur: tlListe ? null : liste || null,
+    liste_fiyati_tl: tlListe ? liste || null : null,
     alis_fiyati: satis,
-    alis_fiyati_eur: satis,
-    satis_fiyati_eur: satis,
-    satis_eur_indirimli: satis,
+    alis_fiyati_eur: tlListe ? null : satis,
+    alis_fiyati_tl: tlListe ? satis : null,
+    satis_fiyati_eur: tlListe ? null : satis,
+    satis_fiyati_tl: tlListe ? satis : null,
+    satis_eur_indirimli: tlListe ? null : satis,
     iskontolu_fiyat: satis,
     bayi_iskonto: Number.isFinite(bayi) ? bayi : null,
     odeme_carpani: odeme,
     iskonto_yuzde: iskPct,
     iskonto_oran: iskPct,
-    para_birimi: row.para_birimi || "EUR",
+    para_birimi: row.para_birimi || (tlListe ? "TL" : "EUR"),
     fiyat_kaynagi: "ozti-fiyat-listesi-2025",
     stok_no: row.urun_kodu,
-    kur_eur_try: kur > 0 ? kur : null,
+    kur_eur_try: tlListe ? null : kur > 0 ? kur : null,
     fiyat_tl_net,
     fiyat_tl,
     kdv_oran: OZTI_KDV_ORAN,
@@ -438,21 +457,27 @@ export function oztiPriceLabelEur(pricing) {
 
 export function oztiPricingLines(row, kurTry) {
   const px = oztiPricingFields(row, kurTry);
-  const liste = px.liste_fiyati_eur;
-  const satis = px.satis_fiyati_eur;
+  const tlListe = isOztiListeTl(row);
+  const liste = tlListe ? px.liste_fiyati_tl : px.liste_fiyati_eur;
+  const satis = tlListe ? px.satis_fiyati_tl : px.satis_fiyati_eur;
   const iskPct = px.iskonto_yuzde;
   const odeme = px.odeme_carpani;
+  const birim = tlListe ? "TL" : "EUR";
   const lines = [
     `Ürün kodu: ${row.urun_kodu}`,
-    `Liste fiyatı (EUR): ${liste ?? "—"}`,
+    `Liste fiyatı (${birim}): ${liste ?? "—"}`,
     `Bayi iskonto: %${iskPct || "—"} (ödeme çarpanı ${odeme})`,
-    `Equsto satış (EUR): ${satis ?? "—"}`,
+    `Equsto satış (${birim}): ${satis ?? "—"}`,
     `Hesap: liste × (1 − bayi iskonto)`,
   ];
   if (px.fiyat_tl > 0) {
     lines.push(
       `Equsto satış (TL, KDV dahil): ${oztiFmtTry(px.fiyat_tl)}`,
-      px.kur_eur_try ? `Kur: 1 EUR = ${px.kur_eur_try} TRY (KDV %${px.kdv_oran})` : "",
+      px.kur_eur_try
+        ? `Kur: 1 EUR = ${px.kur_eur_try} TRY (KDV %${px.kdv_oran})`
+        : tlListe
+          ? `Para birimi: TL (kur çevrimi yok, KDV %${px.kdv_oran})`
+          : "",
     );
   }
   lines.push(`Kategori: ${row.kategori || ""}`, "Kaynak: Öztiryakiler Fiyat Listesi 2025");

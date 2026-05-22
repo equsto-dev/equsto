@@ -634,6 +634,18 @@
         }
       }
     }
+    var oztiKod = img.getAttribute("data-eq-ozti-kod") || "";
+    if (oztiKod && typeof window.eqOztiAxImageFromSku === "function") {
+      var axTry = window.eqOztiAxImageFromSku(oztiKod);
+      if (axTry && axTry !== src && !img.dataset.eqImgAxTried) {
+        img.dataset.eqImgAxTried = "1";
+        img.onerror = function () {
+          window.__eqImgFail(img);
+        };
+        img.src = axTry;
+        return;
+      }
+    }
     if (!img.dataset.eqImgAltPath) {
       img.dataset.eqImgAltPath = "1";
       var healed =

@@ -36,9 +36,31 @@
     return String(row.dept || "") === "set-ustu-mutfak";
   }
 
-  function isEurPricedRow(row) {
+  function isOztiListeTl(row) {
     if (!row) return false;
+    var p = String(row.para_birimi || "").trim().toUpperCase();
+    return p === "TL" || p === "TRY";
+  }
+
+  function isEurPricedRow(row) {
+    if (!row || isOztiListeTl(row)) return false;
     return Number(row.liste_fiyati_eur) > 0 || Number(row.satis_eur_indirimli) > 0;
+  }
+
+  function netTlFromOztiRow(row) {
+    if (!row) return 0;
+    var pre = Number(
+      row.satis_fiyati_tl ||
+        row.alis_fiyati_tl ||
+        row.fiyat_tl_net ||
+        row.satis_fiyati_eur ||
+        row.satis_eur_indirimli ||
+        row.alis_fiyati_eur ||
+        row.alis_fiyati ||
+        row.iskontolu_fiyat
+    );
+    if (pre > 0 && isOztiListeTl(row)) return pre;
+    return 0;
   }
 
   function netEurFromRow(row) {
@@ -91,7 +113,15 @@
   }
 
   function computeRowPrices(row, rate) {
-    if (!row || !rate || rate <= 0) return null;
+    if (!row) return null;
+    if (isOztiListeTl(row)) {
+      var netTlDirect = netTlFromOztiRow(row);
+      if (!(netTlDirect > 0)) return null;
+      var tlOut = priceStringsFromNetTl(netTlDirect);
+      tlOut.para_birimi = "TL";
+      return tlOut;
+    }
+    if (!rate || rate <= 0) return null;
     if (!isEurPricedRow(row) && !isOztiRow(row)) return null;
     var netEur = netEurFromRow(row);
     if (!(netEur > 0)) return null;

@@ -5,7 +5,7 @@
   'use strict';
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260522yikama-fix';
+  var CATALOG_V = '20260522ozti-tl-fiyat';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   var deptCoverImg = '';
 
@@ -489,15 +489,26 @@
       grid.innerHTML = slice
         .map(function (u) {
           var href = productUrl(u);
-          var rawImg =
-            u.raw && u.raw.images && u.raw.images[0] ? plpImgRawAttr(u.raw.images[0]) : '';
+          var catalogRel =
+            u.raw && u.raw.images && u.raw.images[0]
+              ? String(u.raw.images[0]).replace(/\\/g, "/").replace(/^\//, "")
+              : "";
+          var rawImg = catalogRel || "";
+          if (!rawImg && u.raw && u.raw.images && u.raw.images[0]) {
+            rawImg = plpImgRawAttr(u.raw.images[0]) || "";
+          }
+          var oztiKod =
+            u.raw && isOztiRow(u.raw)
+              ? String(u.raw.sku || u.raw.model || u.raw.urun_kodu || "")
+              : "";
           var img = u.img
             ? '<img src="' +
               esc(u.img) +
               '"' +
               (rawImg ? ' data-eq-img-raw="' + esc(rawImg) + '" data-eq-img-step="0"' : '') +
+              (oztiKod ? ' data-eq-ozti-kod="' + esc(oztiKod) + '"' : "") +
               ' alt="" loading="lazy" decoding="async" onerror="typeof __eqImgFail===\'function\'&&__eqImgFail(this)">'
-            : '';
+            : "";
           var cartBtn =
             window.EqustoCart && typeof window.EqustoCart.cartAddButtonAttrs === 'function'
               ? '<button class="eq-dept-plp-card__btn" ' + window.EqustoCart.cartAddButtonAttrs(u) + '>SEPETE EKLE</button>'
