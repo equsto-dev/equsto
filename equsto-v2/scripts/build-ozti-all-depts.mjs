@@ -18,6 +18,7 @@ import {
   loadPdfByKod,
   mapOztiDept,
   mapOztiIcecekCategory,
+  mapOztiKahveCategory,
   mapOztiPisirmeCategory,
   mapOztiSetUstuCategory,
   mapOztiTasimaCategory,
@@ -114,7 +115,9 @@ async function main() {
     const dept = mapOztiDept(row, allow);
     const kod = row.urun_kodu;
     const cat =
-      dept === "icecek"
+      dept === "kahve"
+        ? mapOztiKahveCategory(row.urun_tanimi, kod)
+        : dept === "icecek"
         ? mapOztiIcecekCategory(row.urun_tanimi, kod)
         : dept === "yikama"
           ? mapOztiYikamaCategory(row.urun_tanimi || row.name, kod, row.kategori)

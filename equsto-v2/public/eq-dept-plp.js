@@ -5,7 +5,7 @@
   'use strict';
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260521cay-v2';
+  var CATALOG_V = '20260522kahve-acc-v1';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   var deptCoverImg = '';
 
@@ -219,7 +219,7 @@
       .replace(/\s+/g, '')
       .toUpperCase();
     var n = lc(item.n || '');
-    if (/^8574\./.test(kod)) return true;
+    if (/^8574\.CM/i.test(kod)) return true;
     if (/^8573\./.test(kod) && !/^8573\.000/.test(kod)) return true;
     if (n.indexOf('çay mak') >= 0 || n.indexOf('cay mak') >= 0) return true;
     if (n.indexOf('çay kazan') >= 0 || n.indexOf('cay kazan') >= 0) return true;

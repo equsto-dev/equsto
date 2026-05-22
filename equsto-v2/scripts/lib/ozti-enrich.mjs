@@ -265,33 +265,40 @@ export function mapOztiYikamaCategory(name, kod, kategori) {
   return "bulasik-makineleri";
 }
 
-/** Çay makinası (8574.CM*) ve çay kazanı (8573.*, Cappadocia/Efes) — kahve PLP değil. */
+/** Çay makinası (8574.CM*) ve çay kazanı (8573.CDE* vb.) — kahve PLP değil. 8574.FM = filtre kahve. */
 export function isOztiCayEquipment(row) {
   const kod = normKod(row.urun_kodu || row.sku);
   const name = String(row.urun_tanimi || row.name || "").toLocaleUpperCase("tr");
-  if (/^8574\./.test(kod)) return true;
+  if (/^8574\.CM/i.test(kod) || (/^8574\./.test(kod) && /ÇAY\s*MAKİN|ÇAY\s*MAKIN|CAY\s*MAKIN/i.test(name)))
+    return true;
   if (/^8573\./.test(kod) && !/^8573\.000/.test(kod)) return true;
   if (/ÇAY\s*MAKİN|ÇAY\s*MAKIN|CAY\s*MAKIN/i.test(name)) return true;
   if (/ÇAY\s*KAZANI|CAY\s*KAZANI/i.test(name)) return true;
   return false;
 }
 
+/** Filtre kahve makinesi, kahve süt potu, kahveci demlik → kahve PLP. */
+export function isOztiKahveAccessory(row) {
+  const kod = normKod(row.urun_kodu || row.sku);
+  const name = String(row.urun_tanimi || row.name || "").toLocaleUpperCase("tr");
+  if (/^8574\.FM/i.test(kod) || /FILTRE\s*KAHVE|FTL\d/i.test(name)) return true;
+  if (/^8534\./.test(kod) || /KAHVE\s*SÜT\s*POTU|KAHVE\s*SUT\s*POTU/i.test(name)) return true;
+  if (/^8573\.000/.test(kod) || /KAHVECI\s*DEML|DEMLİĞİ|DEMLIK\s*NO\b/i.test(name)) return true;
+  return false;
+}
+
 /**
- * Aynı Excel/PDF satırı «Kahve Ekipmanları» altında olsa da mağazada İçecek PLP.
- * (çay makinası/kazanı, demlik, süt potu, bardak, sürahi, çay topu)
+ * Aynı Excel/PDF satırı «Çay ocakları ve kahve» altında; çay → icecek, kahve aksesuar → kahve.
  */
 export function mapOztiDeptAccessory(row) {
   const kod = normKod(row.urun_kodu || row.sku);
   const name = String(row.urun_tanimi || row.name || "").toLocaleUpperCase("tr");
 
+  if (isOztiKahveAccessory(row)) return "kahve";
   if (isOztiCayEquipment(row)) return "icecek";
-  if (/^8534\./.test(kod)) return "icecek";
-  if (/^8573\.000/.test(kod)) return "icecek";
   if (/^8577\.|^0466\.|^0469\.|^0585\.|^8497\./.test(kod)) return "icecek";
   if (/^8593\./.test(kod)) return "icecek";
   if (/^8317\.ZCP/i.test(kod)) return "icecek";
-  if (/KAHVECI\s*DEML|DEMLİĞİ|DEMLIK\s*NO\b/i.test(name)) return "icecek";
-  if (/KAHVE\s*SÜT\s*POTU|KAHVE\s*SUT\s*POTU/i.test(name)) return "icecek";
   if (/KONİK\s*BARDAK|KAPAKSIZ\s*SÜRAHİ|KAPAKLI\s*SÜRAHİ|\bSÜRAHİ\b/i.test(name)) return "icecek";
   if (/ÇAY\s*TOPU|ÇAY\s*TABAĞ|MAKASLI\s*ÇAY/i.test(name)) return "icecek";
   if (/SU\s*OTOMATI/i.test(name)) return "icecek";
@@ -381,7 +388,8 @@ export function mapOztiSetUstuCategory(row) {
 export function mapOztiIcecekCategory(name, kod) {
   const k = normKod(kod);
   const hay = String(name || "").toLocaleUpperCase("tr");
-  if (/^8574\./.test(k) || /ÇAY\s*MAKİN|ÇAY\s*MAKIN|CAY\s*MAKIN/i.test(hay)) return "cay-makinasi";
+  if (/^8574\.CM/i.test(k) || (/^8574\./.test(k) && /ÇAY\s*MAKİN|ÇAY\s*MAKIN|CAY\s*MAKIN/i.test(hay)))
+    return "cay-makinasi";
   if (
     /^8573\./.test(k) &&
     !/^8573\.000/.test(k) &&
@@ -389,14 +397,27 @@ export function mapOztiIcecekCategory(name, kod) {
   ) {
     return "cay-kazanlari";
   }
-  if (/^8534\./.test(k) || /SÜT\s*POTU|SUT\s*POTU/i.test(hay)) return "kahve-sut-potlari";
-  if (/^8573\.000/.test(k) || /KAHVECI\s*DEML/i.test(hay)) return "kahveci-demlik";
   if (/^8593\./.test(k) || /SU\s*OTOMATI/i.test(hay)) return "su-otomati";
   if (/^8577\.|ÇAY\s*TOPU/i.test(hay)) return "cay-servis-aksesuarlari";
   if (/^0466\.|BARDAK/i.test(hay)) return "icecek-bardaklari";
   if (/^0469\.|SÜRAHİ/i.test(hay)) return "surehi-ve-servis";
   if (/STAND|ZCP/i.test(hay)) return "cay-servis-aksesuarlari";
   return "icecek-diger";
+}
+
+/** Kahve dept vitrin kategorisi (facet / PLP tip) */
+export function mapOztiKahveCategory(name, kod) {
+  const k = normKod(kod);
+  const hay = String(name || "").toLocaleUpperCase("tr");
+  if (/^8574\.FM/i.test(k) || /FILTRE\s*KAHVE|FTL\d/i.test(hay) || /BRAVILOR/i.test(hay))
+    return "filtre-kahve-makineleri";
+  if (/^8534\./.test(k) || /KAHVE\s*SÜT\s*POTU|KAHVE\s*SUT\s*POTU/i.test(hay)) return "kahve-sut-potlari";
+  if (/^8573\.000/.test(k) || /KAHVECI\s*DEML/i.test(hay)) return "kahveci-demlik";
+  if (/WMF/i.test(hay) || /^9580\./i.test(k)) return "wmf-kahve-makinalari";
+  if (/NUOVA|NUOSI|APPIA|ESPRESSO|OSCAR/i.test(hay)) return "espresso-makinesi";
+  if (/DEĞİRMEN|DEGIRMEN|GRINDER|MDX/i.test(hay)) return "kahve-degirmeni";
+  if (/OTOMATİK\s*KAHVE|OTOMATIK\s*KAHVE/i.test(hay)) return "espresso-makinesi";
+  return "kahve-diger";
 }
 
 /** Excel kategori → mağaza dept */

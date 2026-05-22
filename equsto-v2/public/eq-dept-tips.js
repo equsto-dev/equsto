@@ -56,7 +56,24 @@
         "espresso|gruplu kahve|gruplu tam otomatik|tam otomatik kahve mak|barista kahve mak|çekirdekten fincan|bean to cup|appia|linea|aurelia|faema kahve mak|sanremo kahve",
     },
     { tip: "kahve-degirmeni", dept: "kahve", label: "Kahve Değirmenleri", search: "değirmen|degirmen|grinder|öğüt|ogut" },
-    { tip: "filtre-kahve", dept: "kahve", label: "Filtre Kahve Makineleri", search: "filtre|batch brew|demleme" },
+    {
+      tip: "filtre-kahve",
+      dept: "kahve",
+      label: "Filtre Kahve Makineleri",
+      search: "filtre kahve|filtre kahve mak|fm250|ftl120|ftl|bravilor|batch brew|demleme",
+    },
+    {
+      tip: "kahve-sut-potlari",
+      dept: "kahve",
+      label: "Kahve Süt Potları",
+      search: "kahve süt pot|kahve sut pot|8534|süt potu|sut potu",
+    },
+    {
+      tip: "kahveci-demlik",
+      dept: "kahve",
+      label: "Kahveci Demlikleri",
+      search: "kahveci demlik|8573.000|demlik no",
+    },
     { tip: "turk-kahve", dept: "kahve", label: "Türk Kahve Makineleri", search: "türk|turk|cezve" },
     { tip: "bardak-yikama", dept: "yikama", label: "Bardak Yıkama Makineleri", search: "bardak yıkama|bardak yikama|oby 35|oby 40|073m|074m" },
     {
@@ -413,7 +430,7 @@
       .replace(/\s+/g, "")
       .toUpperCase();
     var hay = productHaystack(u);
-    if (/^8574\./.test(kod)) return true;
+    if (/^8574\.CM/i.test(kod)) return true;
     if (/^8573\./.test(kod) && !/^8573\.000/.test(kod)) return true;
     if (/çay\s*mak|cay\s*mak/.test(hay)) return true;
     if (/çay\s*kazan|cay\s*kazan/.test(hay)) return true;
@@ -666,6 +683,11 @@
     if (lk.indexOf("buzdolab") >= 0 && lk.indexOf("tezgah") >= 0) return "tezgah-tipi-buzdolabi";
     if (lk.indexOf("bulaşık") >= 0 || lk.indexOf("bulasik") >= 0) return "bulasik-makineleri";
     if (lk.indexOf("espresso") >= 0) return "espresso-makinesi";
+    if (lk.indexOf("filtre kahve") >= 0 || lk.indexOf("fm250") >= 0 || lk.indexOf("ftl") >= 0 || lk.indexOf("bravilor") >= 0)
+      return "filtre-kahve";
+    if (lk.indexOf("kahve süt pot") >= 0 || lk.indexOf("kahve sut pot") >= 0 || lk.indexOf("8534") >= 0)
+      return "kahve-sut-potlari";
+    if (lk.indexOf("kahveci deml") >= 0) return "kahveci-demlik";
     if (lk.indexOf("değirmen") >= 0 || lk.indexOf("degirmen") >= 0) return "kahve-degirmeni";
     if (lk.indexOf("blender") >= 0) return "bar-blender";
     if (lk.indexOf("portakal") >= 0 || lk.indexOf("narenciye") >= 0 || lk.indexOf("sıkma") >= 0)
