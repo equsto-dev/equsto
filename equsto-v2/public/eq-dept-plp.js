@@ -5,7 +5,7 @@
   'use strict';
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260521cay-v1';
+  var CATALOG_V = '20260521cay-v2';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   var deptCoverImg = '';
 
@@ -212,10 +212,25 @@
     return p === 'TL' || p === 'TRY';
   }
 
+  function isCayExcludedFromKahve(item) {
+    if (!item) return false;
+    var raw = item.raw || {};
+    var kod = String(raw.urun_kodu || raw.sku || raw.model || '')
+      .replace(/\s+/g, '')
+      .toUpperCase();
+    var n = lc(item.n || '');
+    if (/^8574\./.test(kod)) return true;
+    if (/^8573\./.test(kod) && !/^8573\.000/.test(kod)) return true;
+    if (n.indexOf('çay mak') >= 0 || n.indexOf('cay mak') >= 0) return true;
+    if (n.indexOf('çay kazan') >= 0 || n.indexOf('cay kazan') >= 0) return true;
+    return false;
+  }
+
   function skipItem(item) {
     if (DEPT === 'set-ustu-mutfak') {
       return !(item && item.raw && isOztiRow(item.raw));
     }
+    if (DEPT === 'kahve' && isCayExcludedFromKahve(item)) return true;
     if (DEPT !== 'market-reyon') {
       if (window.EqDeptTips && window.EqDeptTips.excludeFromDeptView) {
         if (window.EqDeptTips.excludeFromDeptView(DEPT, item)) return true;

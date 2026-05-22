@@ -406,7 +406,22 @@
     return false;
   }
 
+  /** Kahve PLP'de gösterilmemeli — İçecek dept (çay makinası / çay kazanı). */
+  function isOztiCayNotKahveProduct(u) {
+    var raw = (u && u.raw) || u || {};
+    var kod = String(raw.urun_kodu || raw.sku || raw.model || "")
+      .replace(/\s+/g, "")
+      .toUpperCase();
+    var hay = productHaystack(u);
+    if (/^8574\./.test(kod)) return true;
+    if (/^8573\./.test(kod) && !/^8573\.000/.test(kod)) return true;
+    if (/çay\s*mak|cay\s*mak/.test(hay)) return true;
+    if (/çay\s*kazan|cay\s*kazan/.test(hay)) return true;
+    return false;
+  }
+
   function excludeFromDeptView(dept, u) {
+    if (dept === "kahve" && isOztiCayNotKahveProduct(u)) return true;
     if (dept === "sogutma" && isEtKiymaProduct(u)) return true;
     if (dept === "pisirme" && (isYardimciEkipmanProduct(u) || isYerIzgaraProduct(u))) return true;
     if (dept === "icecek" && isBuzMakinesiProduct(u)) return true;
