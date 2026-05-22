@@ -20,7 +20,7 @@
     sort: '',
     priceMin: '',
     priceMax: '',
-    page: 1,
+    loadedCount: 24,
   };
 
   function esc(s) {
@@ -410,7 +410,7 @@
     state.energy = [];
     state.priceMin = '';
     state.priceMax = '';
-    state.page = 1;
+    state.loadedCount = PAGE_SIZE;
     try {
       var inp = document.querySelector('.srch-input');
       if (inp) inp.value = '';
@@ -432,7 +432,7 @@
       else if (type === 'energy') state.energy = state.energy.filter(function (e) { return e !== value; });
       else if (type === 'priceMin') state.priceMin = '';
       else if (type === 'priceMax') state.priceMax = '';
-      state.page = 1;
+      state.loadedCount = PAGE_SIZE;
       render();
     }
     var main = document.getElementById('eq-dept-cm-chips-main');
@@ -452,12 +452,87 @@
       getPoolForCounts: poolForFacetCounts,
       onChange: function (kind) {
         if (kind === 'clear') clearAllFilters();
-        state.page = 1;
+        state.loadedCount = PAGE_SIZE;
         document.body.classList.remove('eq-dept-filter-open');
         render();
       },
     });
     renderSelectedChips();
+  }
+
+  function renderProductCard(u) {
+    var href = productUrl(u);
+    var catalogRel =
+      u.raw && u.raw.images && u.raw.images[0]
+        ? String(u.raw.images[0]).replace(/\\/g, '/').replace(/^\//, '')
+        : '';
+    var rawImg = catalogRel || '';
+    if (!rawImg && u.raw && u.raw.images && u.raw.images[0]) {
+      rawImg = plpImgRawAttr(u.raw.images[0]) || '';
+    }
+    var oztiKod =
+      u.raw && isOztiRow(u.raw) ? String(u.raw.sku || u.raw.model || u.raw.urun_kodu || '') : '';
+    var img = u.img
+      ? '<img src="' +
+        esc(u.img) +
+        '"' +
+        (rawImg ? ' data-eq-img-raw="' + esc(rawImg) + '" data-eq-img-step="0"' : '') +
+        (oztiKod ? ' data-eq-ozti-kod="' + esc(oztiKod) + '"' : '') +
+        ' alt="" loading="lazy" decoding="async" onerror="typeof __eqImgFail===\'function\'&&__eqImgFail(this)">'
+      : '';
+    var cartBtn =
+      window.EqustoCart && typeof window.EqustoCart.cartAddButtonAttrs === 'function'
+        ? '<button class="eq-dept-plp-card__btn" ' +
+          window.EqustoCart.cartAddButtonAttrs(u) +
+          '>SEPETE EKLE</button>'
+        : '<button type="button" class="eq-dept-plp-card__btn">SEPETE EKLE</button>';
+    return (
+      '<article class="eq-dept-plp-card">' +
+      '<a class="eq-dept-plp-card__img" href="' +
+      esc(href) +
+      '">' +
+      img +
+      '</a>' +
+      '<a class="eq-dept-plp-card__name" href="' +
+      esc(href) +
+      '">' +
+      esc(u.n) +
+      '</a>' +
+      (u.p
+        ? '<div class="eq-dept-plp-card__price">' + esc(formatPrice(u.p, u.raw)) + '</div>'
+        : '') +
+      cartBtn +
+      '</article>'
+    );
+  }
+
+  function renderLoadMore(list) {
+    var host = document.getElementById('eq-dept-plp-pages');
+    if (!host) return;
+    var shown = Math.min(state.loadedCount, list.length);
+    var remaining = list.length - shown;
+    if (!list.length || remaining <= 0) {
+      host.innerHTML = '';
+      host.hidden = true;
+      return;
+    }
+    host.hidden = false;
+    host.className = 'eq-dept-plp-loadmore';
+    host.setAttribute('aria-label', 'Daha fazla ürün yükle');
+    host.innerHTML =
+      '<button type="button" class="eq-dept-plp-loadmore__btn" id="eq-dept-plp-loadmore-btn">' +
+      'Daha fazla ürün yükle' +
+      '<span class="eq-dept-plp-loadmore__meta">(' +
+      remaining +
+      ' kaldı)</span>' +
+      '</button>';
+    var btn = document.getElementById('eq-dept-plp-loadmore-btn');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        state.loadedCount = Math.min(state.loadedCount + PAGE_SIZE, list.length);
+        renderGrid();
+      });
+    }
   }
 
   function renderGrid() {
@@ -475,14 +550,24 @@
     try {
       window.__eqDeptPlpResultCount = list.length;
     } catch (_) {}
-    var totalPages = Math.max(1, Math.ceil(list.length / PAGE_SIZE));
-    if (state.page > totalPages) state.page = totalPages;
-    if (state.page < 1) state.page = 1;
-    var start = (state.page - 1) * PAGE_SIZE;
-    var slice = list.slice(start, start + PAGE_SIZE);
+    if (state.loadedCount < PAGE_SIZE) state.loadedCount = PAGE_SIZE;
+    if (state.loadedCount > list.length) state.loadedCount = list.length;
+    var slice = list.slice(0, state.loadedCount);
+    var shown = slice.length;
 
     if (countEl) {
-      countEl.innerHTML = '<strong>' + list.length + '</strong> ürün görüntüleniyor.';
+      if (!list.length) {
+        countEl.innerHTML = '';
+      } else if (shown < list.length) {
+        countEl.innerHTML =
+          '<strong>' +
+          shown +
+          '</strong> / <strong>' +
+          list.length +
+          '</strong> ürün gösteriliyor.';
+      } else {
+        countEl.innerHTML = '<strong>' + list.length + '</strong> ürün görüntüleniyor.';
+      }
     }
     var selWrap = document.getElementById('eq-dept-plp-selected');
     if (selWrap) {
@@ -500,99 +585,11 @@
       grid.innerHTML =
         '<p class="eq-dept-plp-empty">Bu filtrelere uygun ürün bulunamadı.</p>';
     } else {
-      grid.innerHTML = slice
-        .map(function (u) {
-          var href = productUrl(u);
-          var catalogRel =
-            u.raw && u.raw.images && u.raw.images[0]
-              ? String(u.raw.images[0]).replace(/\\/g, "/").replace(/^\//, "")
-              : "";
-          var rawImg = catalogRel || "";
-          if (!rawImg && u.raw && u.raw.images && u.raw.images[0]) {
-            rawImg = plpImgRawAttr(u.raw.images[0]) || "";
-          }
-          var oztiKod =
-            u.raw && isOztiRow(u.raw)
-              ? String(u.raw.sku || u.raw.model || u.raw.urun_kodu || "")
-              : "";
-          var img = u.img
-            ? '<img src="' +
-              esc(u.img) +
-              '"' +
-              (rawImg ? ' data-eq-img-raw="' + esc(rawImg) + '" data-eq-img-step="0"' : '') +
-              (oztiKod ? ' data-eq-ozti-kod="' + esc(oztiKod) + '"' : "") +
-              ' alt="" loading="lazy" decoding="async" onerror="typeof __eqImgFail===\'function\'&&__eqImgFail(this)">'
-            : "";
-          var cartBtn =
-            window.EqustoCart && typeof window.EqustoCart.cartAddButtonAttrs === 'function'
-              ? '<button class="eq-dept-plp-card__btn" ' + window.EqustoCart.cartAddButtonAttrs(u) + '>SEPETE EKLE</button>'
-              : '<button type="button" class="eq-dept-plp-card__btn">SEPETE EKLE</button>';
-          return (
-            '<article class="eq-dept-plp-card">' +
-            '<a class="eq-dept-plp-card__img" href="' +
-            esc(href) +
-            '">' +
-            img +
-            '</a>' +
-            '<a class="eq-dept-plp-card__name" href="' +
-            esc(href) +
-            '">' +
-            esc(u.n) +
-            '</a>' +
-            (u.p
-              ? '<div class="eq-dept-plp-card__price">' +
-                esc(formatPrice(u.p, u.raw)) +
-                '</div>'
-              : '') +
-            cartBtn +
-            '</article>'
-          );
-        })
-        .join('');
+      grid.innerHTML = slice.map(renderProductCard).join('');
       if (typeof window.eqFixDataImagesInDom === 'function') window.eqFixDataImagesInDom(grid);
     }
 
-    var pages = document.getElementById('eq-dept-plp-pages');
-    if (pages) {
-      if (totalPages <= 1) {
-        pages.innerHTML = '';
-      } else {
-        var p = state.page;
-        var html = '';
-        html +=
-          '<button type="button" data-p="' +
-          (p - 1) +
-          '"' +
-          (p <= 1 ? ' disabled' : '') +
-          '>‹</button>';
-        for (var i = 1; i <= totalPages && i <= 7; i++) {
-          html +=
-            '<button type="button" data-p="' +
-            i +
-            '" class="' +
-            (i === p ? 'is-active' : '') +
-            '">' +
-            i +
-            '</button>';
-        }
-        if (totalPages > 7) html += '<span>…</span>';
-        html +=
-          '<button type="button" data-p="' +
-          (p + 1) +
-          '"' +
-          (p >= totalPages ? ' disabled' : '') +
-          '>›</button>';
-        pages.innerHTML = html;
-        pages.querySelectorAll('[data-p]').forEach(function (btn) {
-          btn.addEventListener('click', function () {
-            if (btn.disabled) return;
-            state.page = Number(btn.getAttribute('data-p')) || 1;
-            renderGrid();
-            document.getElementById('eq-dept-plp-main').scrollIntoView({ behavior: 'smooth' });
-          });
-        });
-      }
-    }
+    renderLoadMore(list);
   }
 
   function normalizeUrlTip(tip) {
@@ -604,6 +601,7 @@
   }
 
   function render() {
+    state.loadedCount = PAGE_SIZE;
     renderGrid();
     var facets = renderFacets;
     if (typeof requestAnimationFrame === 'function') {
@@ -827,7 +825,7 @@
 
   window.__eqDeptPlpSetSort = function (v) {
     state.sort = v || '';
-    state.page = 1;
+    state.loadedCount = PAGE_SIZE;
     if (state.ready) render();
   };
 

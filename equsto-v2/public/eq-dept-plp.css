@@ -353,29 +353,35 @@ body.eq-dept-plp {
   max-width: 520px;
   justify-content: center;
 }
-.eq-dept-plp-pages {
+.eq-dept-plp-loadmore,
+#eq-dept-plp-pages.eq-dept-plp-loadmore {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 6px;
-  margin: 28px 0;
+  margin: 28px 0 36px;
 }
-.eq-dept-plp-pages button {
-  min-width: 36px;
-  height: 36px;
-  border: 1px solid #ddd;
+.eq-dept-plp-loadmore__btn {
+  min-height: 44px;
+  padding: 10px 28px;
+  border: 1px solid #111;
   background: #fff;
+  color: #111;
+  font-size: 14px;
+  font-weight: 600;
   cursor: pointer;
-  font-size: 13px;
+  border-radius: 2px;
 }
-.eq-dept-plp-pages button.is-active {
+.eq-dept-plp-loadmore__btn:hover {
   background: #111;
   color: #fff;
-  border-color: #111;
 }
-.eq-dept-plp-pages button:disabled {
-  opacity: 0.35;
-  cursor: default;
+.eq-dept-plp-loadmore__meta {
+  margin-left: 6px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #666;
+}
+.eq-dept-plp-loadmore__btn:hover .eq-dept-plp-loadmore__meta {
+  color: #e0e0e0;
 }
 .eq-dept-plp-status {
   padding: 24px;
