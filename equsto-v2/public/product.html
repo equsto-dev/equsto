@@ -98,8 +98,8 @@
   <script src="/eq-competitor-redirects.js?v=20260521competitor"></script>
   <script src="/eq-display-terminology.js?v=20260520tezgdav"></script>
   <script src="/equsto-pricing-core.js?v=20260521oztiprice"></script>
-  <script src="/eq-kur-live.js?v=20260521oztiprice"></script>
-  <script src="/eq-fiyatlar-bridge.js?v=20260521oztiprice"></script>
+  <script src="/eq-kur-live.js?v=20260521kdvdahil"></script>
+  <script src="/eq-fiyatlar-bridge.js?v=20260521kdvdahil"></script>
   <script src="/eq-filter-column.js"></script>
   <style>
     *{box-sizing:border-box;margin:0;padding:0;}
@@ -385,10 +385,70 @@
       return out;
     }
 
-    function extractCartPrice(raw) {
+    function formatTlBuybox(n) {
+      var v = Math.round(Number(n));
+      if (!(v > 0)) return "";
+      try {
+        return v.toLocaleString("tr-TR", { maximumFractionDigits: 0 });
+      } catch (_) {
+        return String(v);
+      }
+    }
+
+    function extractCartPrice(raw, item) {
+      if (item && Number(item.fiyat_tl) > 0) return formatTlBuybox(item.fiyat_tl);
       if (!raw) return "";
       var s = String(raw).split("\n")[0] || String(raw);
-      return s.replace("₺", "").replace("+ KDV", "").trim();
+      return s
+        .replace(/€/g, "")
+        .replace(/₺/g, "")
+        .replace(/\+?\s*KDV.*/gi, "")
+        .replace(/KDV\s*dahil/gi, "")
+        .trim();
+    }
+
+    function oztiWebRelFromSku(sku) {
+      var k = String(sku || "")
+        .replace(/\s+/g, "")
+        .toUpperCase();
+      if (!/^[0-9]{2,4}[A-Z0-9]*\.[A-Z0-9.\-]{2,}$/i.test(k)) return "";
+      var slug =
+        "ozti-" +
+        k
+          .toLowerCase()
+          .replace(/\./g, "-")
+          .replace(/[^a-z0-9-]/g, "");
+      return "images/catalog/ozti/web/" + slug + ".jpg";
+    }
+
+    function resolveProductImgSrc(rel) {
+      if (!rel) return "";
+      if (typeof window.eqProductImgSrc === "function") {
+        try {
+          var via = window.eqProductImgSrc(rel);
+          if (via) return via;
+        } catch (_) {}
+      }
+      if (typeof window.equstoDataAssetHref === "function") {
+        try {
+          return window.equstoDataAssetHref(rel);
+        } catch (_) {}
+      }
+      return eqHtmlUrl(normImgPath(rel));
+    }
+
+    function collectProductImgs(x) {
+      var rels = uniqueImgs(x.images);
+      if (!rels.length) {
+        var syn = oztiWebRelFromSku(x.sku || x.urun_kodu || x.model);
+        if (syn) rels.push(syn);
+      }
+      var out = [];
+      rels.forEach(function (rel) {
+        var src = resolveProductImgSrc(rel);
+        if (src) out.push(src);
+      });
+      return out;
     }
 
     function deptLink(cat) {
@@ -1110,20 +1170,20 @@
           (x.name && x.name.length > 80 ? "…" : "") +
           "</span>";
       }
-      var imgs = uniqueImgs(x.images);
+      var imgs = collectProductImgs(x);
       var cartU = {
         c: x.category || "",
         b: x.brand || "",
         n: x.name || "",
-        p: extractCartPrice(x.price),
+        p: extractCartPrice(x.price, x),
       };
       var priceBlock = esc(x.price || "—");
       var heroImg = imgs.length
         ? '<img class="eq-product-hero-img" id="eq-ph-main" src="' +
-          esc(eqHtmlUrl(imgs[0])) +
+          esc(imgs[0]) +
           '" alt="' +
           esc(x.name) +
-          '" fetchpriority="high" decoding="async">'
+          '" fetchpriority="high" decoding="async" data-eq-img-fail="1">'
         : '<div class="eq-product-hero-img" style="display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--eq-text-subtle);min-height:240px;">Görsel yok</div>';
       var thumbs = "";
       if (imgs.length > 1) {
@@ -1133,14 +1193,14 @@
             .map(function (src, i) {
               return (
                 '<button type="button" data-src="' +
-                esc(eqHtmlUrl(src)) +
+                esc(src) +
                 '" class="' +
                 (i === 0 ? "eq-product-thumb--active" : "") +
                 '" aria-label="Görsel ' +
                 (i + 1) +
                 '"><img src="' +
-                esc(eqHtmlUrl(src)) +
-                '" alt="" loading="lazy" decoding="async"></button>'
+                esc(src) +
+                '" alt="" loading="lazy" decoding="async" data-eq-img-fail="1"></button>'
               );
             })
             .join("") +
@@ -1173,8 +1233,14 @@
         '<tr><th>Model</th><td>' + esc(modelLbl) + "</td></tr>" +
         '<tr><th>Kategori</th><td>' + esc(ref.label || "") + "</td></tr>";
 
-      var priceTxt = extractCartPrice(x.price);
-      // Fiyat split: "12.345,67" → int=12.345, frac=67
+      var priceTxt = extractCartPrice(x.price, x);
+      if (!priceTxt && window.EqustoKurLive && typeof window.EqustoKurLive.computeRowPrices === "function") {
+        var rate = window.EqustoKurLive.getRate && window.EqustoKurLive.getRate();
+        if (rate) {
+          var px = window.EqustoKurLive.computeRowPrices(x, rate);
+          if (px && px.fiyat_tl > 0) priceTxt = formatTlBuybox(px.fiyat_tl);
+        }
+      }
       var priceInt = priceTxt;
       var priceFrac = "";
       var fracMatch = String(priceTxt || "").match(/^(.*?)(?:,(\d+))?$/);
@@ -1231,7 +1297,7 @@
         "</div>" +
         '<aside class="eq-product-buybox" aria-label="Satın al">' +
         '<div class="eq-buybox-price">' + priceHTML + '</div>' +
-        '<div class="eq-buybox-kdv">+ KDV · KDV hariç fiyat</div>' +
+        '<div class="eq-buybox-kdv">KDV dahil fiyat</div>' +
         '<div class="eq-buybox-deliver"><b>ÜCRETSİZ teslimat</b> anlaşmalı bayi ağı ile.<br><span style="color:#007185;">Hızlı teslimat için tarih seçin.</span></div>' +
         '<div class="eq-buybox-stock">Stokta var</div>' +
         '<div class="eq-buybox-qty"><label for="eq-qty">Adet:</label><select id="eq-qty">' + qtyOpts + '</select></div>' +

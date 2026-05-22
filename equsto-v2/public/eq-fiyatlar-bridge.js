@@ -87,14 +87,6 @@
       var live = global.EqustoKurLive.priceForRow(raw);
       if (live) return live;
     }
-    var satis = Number(raw.satis_fiyati_eur || raw.satis_eur_indirimli || raw.alis_fiyati_eur);
-    if (satis > 0) {
-      return (
-        '€' +
-        satis.toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) +
-        ' + KDV'
-      );
-    }
     return String(raw.price || '').split('\n')[0];
   }
 
@@ -135,14 +127,17 @@
     if (v != null) {
       row.p = formatTl(v);
       if (row.raw) {
-        row.raw.price = row.p;
+        row.raw.price =
+          global.EqustoKurLive && typeof global.EqustoKurLive.priceForRow === 'function'
+            ? global.EqustoKurLive.priceForRow(raw) || row.p + ' KDV dahil'
+            : row.p + ' KDV dahil';
         row.raw.fiyat_tl = v;
       }
       return row;
     }
     var ozLine = oztiPriceLine(raw);
     if (ozLine) {
-      row.p = ozLine.replace(/\s*\+?\s*KDV.*$/i, '').trim() || ozLine;
+      row.p = ozLine.replace(/€/g, '').replace(/\s*KDV.*/i, '').trim() || ozLine;
       if (row.raw) row.raw.price = ozLine;
     }
     return row;
@@ -156,8 +151,11 @@
     var v = lookupPrice({ raw: item });
     if (v == null) v = lookupOztiTl(item);
     if (v != null) {
-      item.price = formatTl(v) + ' TL';
       item.fiyat_tl = v;
+      item.price =
+        (global.EqustoKurLive && typeof global.EqustoKurLive.priceForRow === 'function'
+          ? global.EqustoKurLive.priceForRow(item)
+          : '') || formatTl(v) + ' TL KDV dahil';
       return item;
     }
     var line = oztiPriceLine(item);

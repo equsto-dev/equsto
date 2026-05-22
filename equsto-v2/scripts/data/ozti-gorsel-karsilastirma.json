@@ -1,0 +1,19 @@
+{
+  "tarih": "2026-05-21T23:08:57.447Z",
+  "cdn": "https://oztiryakiler.com.tr/ax-images/images/{KOD}.jpg",
+  "urun": 5114,
+  "vitrin_gorsel_var": 4603,
+  "vitrin_bos": 511,
+  "manifest": 4603,
+  "yerel_web": 1155,
+  "yerel_pdf": 3441,
+  "cdn_200": 4768,
+  "cdn_404": 333,
+  "cdn_diger": 13,
+  "cdn_ornek_1200_kare": 119,
+  "cdn_ornek_urun_foto": 1,
+  "vitrin_web_yolu": 1153,
+  "vitrin_pdf_yolu": 3450,
+  "vitrin_cdn_runtime": 0,
+  "cdn_ornek_notu": "120 indirilen örnekte %99 katalog karesi (1200×1200)"
+}

@@ -562,7 +562,12 @@
   function extractPrice(raw) {
     if (raw == null || raw === '') return '';
     var s = String(raw).split('\n')[0] || String(raw);
-    return s.replace(/₺/g, '').replace(/\+ KDV/gi, '').trim();
+    return s
+      .replace(/€/g, '')
+      .replace(/₺/g, '')
+      .replace(/\+?\s*KDV/gi, '')
+      .replace(/KDV\s*dahil/gi, '')
+      .trim();
   }
 
   function itemFromEkipmanlar(x) {

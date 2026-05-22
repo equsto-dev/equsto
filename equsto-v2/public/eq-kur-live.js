@@ -82,10 +82,11 @@
   function priceStringsFromNetTl(netTl) {
     var kdvDahil = Math.round(netTl * (1 + KDV_ORAN / 100));
     return {
-      fiyat_tl: netTl,
-      price:
-        fmtTryWhole(netTl) + " + KDV\nKDV Dahil " + fmtTryWhole(kdvDahil),
-      priceShort: fmtTryWhole(netTl) + " + KDV",
+      fiyat_tl: kdvDahil,
+      fiyat_tl_net: netTl,
+      kdv_oran: KDV_ORAN,
+      price: fmtTryWhole(kdvDahil) + " KDV dahil",
+      priceShort: fmtTryWhole(kdvDahil),
     };
   }
 

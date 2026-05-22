@@ -5,7 +5,7 @@
   'use strict';
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260520ozti-fiyat5250';
+  var CATALOG_V = '20260522sogutma-v2';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   var deptCoverImg = '';
 
@@ -47,11 +47,18 @@
   function formatPrice(p, raw) {
     if (raw && window.EqustoKurLive && typeof window.EqustoKurLive.priceForRow === 'function') {
       var live = window.EqustoKurLive.priceForRow(raw);
-      if (live) return live.replace(/\s*\+?\s*KDV.*$/i, '').trim() || live;
+      if (live) return live;
+    }
+    if (raw && Number(raw.fiyat_tl) > 0) {
+      return (
+        '₺' +
+        Math.round(Number(raw.fiyat_tl)).toLocaleString('tr-TR', { maximumFractionDigits: 0 }) +
+        ',00'
+      );
     }
     var n = parsePrice(p);
     if (!n) return '';
-    return n.toLocaleString('tr-TR', { maximumFractionDigits: 0 }) + ' TL';
+    return '₺' + n.toLocaleString('tr-TR', { maximumFractionDigits: 0 }) + ',00';
   }
 
   function imgSrc(p) {
@@ -234,28 +241,17 @@
     if (window.EqustoKurLive && typeof window.EqustoKurLive.applyRowPrices === 'function') {
       row = window.EqustoKurLive.applyRowPrices(x) || x;
     }
-    var priceLine = String(row.price || '').split('\n')[0];
-    if (!priceLine && Number(row.satis_fiyati_eur) > 0) {
-      priceLine =
-        '€' +
-        Number(row.satis_fiyati_eur).toLocaleString('tr-TR', {
-          minimumFractionDigits: 2,
-          maximumFractionDigits: 2,
-        }) +
-        ' + KDV';
-    }
+    var priceLine =
+      window.EqustoKurLive && typeof window.EqustoKurLive.priceForRow === 'function'
+        ? window.EqustoKurLive.priceForRow(row)
+        : String(row.price || '').split('\n')[0];
     return {
       c: row.category || '',
       b: b,
       fb: fb,
       n: n,
       p: priceLine,
-      img:
-        row.images && row.images[0]
-          ? imgSrc(row.images[0])
-          : deptCoverImg
-            ? imgSrc(deptCoverImg)
-            : '',
+      img: row.images && row.images[0] ? imgSrc(row.images[0]) : '',
       tip_kodu: row.tip_kodu || row.tipKodu || '',
       raw: row,
     };
