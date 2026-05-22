@@ -34,10 +34,14 @@ PDF = Path(
 MIN_PHOTO_W = 80
 MIN_PHOTO_H = 80
 MAX_PHOTO_Y = 600
+MAX_PHOTO_ASPECT = 3.2
+MIN_TABLE_Y = 240
 MIN_JPG_BYTES = 5000
 MIN_SAVE_ASPECT = 0.35
 MIN_SAVE_WIDTH = 80
 PAD = 8
+CAPTION_GAP = 14
+MIN_H_OVERLAP = 24
 
 
 def slug_file(model: str) -> str:
@@ -85,14 +89,13 @@ def search_rects(page: fitz.Page, model: str) -> list[fitz.Rect]:
 
 
 def pick_table_rect(rects: list[fitz.Rect]) -> fitz.Rect | None:
-    """Fiyat tablosundaki model satırı (küçük ikonlar ve üst başlık hariç)."""
+    """Fiyat tablosundaki model satırı — sayfa ortasındaki caption değil, en alttaki eşleşme."""
     if not rects:
         return None
-    table = [r for r in rects if r.y0 > 240 and r.height < 80]
+    table = [r for r in rects if r.y0 > MIN_TABLE_Y and r.height < 80]
     if not table:
         table = list(rects)
-    table.sort(key=lambda r: (-r.width * r.height, r.y0))
-    return table[0]
+    return max(table, key=lambda r: (r.y0, r.width))
 
 
 def photo_blocks(page: fitz.Page) -> list[tuple[float, float, float, float, float]]:
@@ -105,6 +108,8 @@ def photo_blocks(page: fitz.Page) -> list[tuple[float, float, float, float, floa
         if w < MIN_PHOTO_W or h < MIN_PHOTO_H:
             continue
         if y0 > MAX_PHOTO_Y:
+            continue
+        if w / max(h, 1) > MAX_PHOTO_ASPECT or h / max(w, 1) > MAX_PHOTO_ASPECT:
             continue
         blocks.append((y0, x0, x1, y1, w * h))
     blocks.sort(key=lambda t: (t[0], t[1]))
@@ -123,17 +128,34 @@ def match_photo(
     above = [p for p in photos if p[0] < my0 + 40]
     pool = above if above else photos
 
-    best = None
-    best_score = 10**12
+    scored: list[tuple[float, float, tuple[float, float, float, float]]] = []
     for y0, x0, x1, y1, area in pool:
+        overlap = min(x1, model_rect.x1) - max(x0, model_rect.x0)
         pcx = (x0 + x1) / 2
         dx = abs(pcx - mcx)
         dy = max(0, my0 - y1)
-        score = dx * 3 + dy * 0.5 - min(area, 200000) * 0.0001
-        if score < best_score:
-            best_score = score
-            best = (x0, y0, x1, y1)
-    return best
+        score = dx * 4 + dy * 0.8 - min(area, 200000) * 0.00015
+        if overlap < MIN_H_OVERLAP:
+            score += 120
+        scored.append((score, overlap, (x0, y0, x1, y1)))
+    if not scored:
+        return None
+    scored.sort(key=lambda t: t[0])
+    return scored[0][2]
+
+
+def tighten_bbox_to_table(
+    bbox: tuple[float, float, float, float],
+    model_rect: fitz.Rect,
+) -> tuple[float, float, float, float] | None:
+    """Foto altındaki model yazısı (caption) kırpımda kalmasın."""
+    x0, y0, x1, y1 = bbox
+    cap_y = model_rect.y0 - CAPTION_GAP
+    if y1 > cap_y:
+        y1 = cap_y
+    if y1 - y0 < MIN_PHOTO_H:
+        return None
+    return (x0, y0, x1, y1)
 
 
 def clip_photo(page: fitz.Page, bbox: tuple[float, float, float, float]) -> fitz.Rect:
@@ -161,9 +183,30 @@ def save_jpg(pix: fitz.Pixmap, out: Path) -> bool:
         if pixmap_is_strip(pix):
             return False
         pix.save(str(out), jpg_quality=88)
-        return out.exists() and out.stat().st_size >= MIN_JPG_BYTES
+        if not out.exists() or out.stat().st_size < MIN_JPG_BYTES:
+            return False
+        trim_label_band_jpg(out)
+        return out.stat().st_size >= MIN_JPG_BYTES
     except Exception:
         return False
+
+
+def trim_label_band_jpg(out: Path) -> None:
+    """PDF foto bloğunun altındaki model kodu yazısını JPEG'ten kırp."""
+    try:
+        from PIL import Image
+    except ImportError:
+        return
+    try:
+        im = Image.open(out)
+        w, h = im.size
+        crop = min(48, max(14, int(h * 0.13)))
+        if h - crop < 72:
+            return
+        im = im.crop((0, 0, w, h - crop))
+        im.save(out, quality=88, optimize=True)
+    except Exception:
+        pass
 
 
 def fallback_strip_clip(page: fitz.Page, index: int, total: int) -> fitz.Rect:
@@ -206,6 +249,8 @@ def process_page(
         if mrect and photos:
             bbox = match_photo(mrect, photos)
             if bbox:
+                bbox = tighten_bbox_to_table(bbox, mrect)
+            if bbox:
                 clip = clip_photo(page, bbox)
         if clip is None:
             clip = fallback_strip_clip(page, i, len(ordered))
@@ -218,6 +263,11 @@ def process_page(
         pix = page.get_pixmap(matrix=mat, clip=clip, alpha=False)
         if pixmap_is_strip(pix):
             stats["strip_skip"] += 1
+            prev_fp = ROOT / "public" / str(manifest.get(model, "")).lstrip("/")
+            if manifest.get(model) and prev_fp.exists():
+                stats["kept_prev"] += 1
+            elif model in manifest:
+                del manifest[model]
             continue
         if save_jpg(pix, out):
             rel = f"images/catalog/atalay/p{page_no}/{fname}"
@@ -300,7 +350,12 @@ def main() -> None:
 
     doc = fitz.open(PDF)
     manifest: dict[str, str] = {}
-    stats = {"ok": 0, "matched": 0, "fallback": 0, "skip_small": 0, "strip_skip": 0}
+    if MANIFEST_PATH.exists():
+        try:
+            manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
+        except Exception:
+            manifest = {}
+    stats = {"ok": 0, "matched": 0, "fallback": 0, "skip_small": 0, "strip_skip": 0, "kept_prev": 0}
 
     for page_no, items in sorted(by_page.items()):
         if page_no < 1 or page_no > doc.page_count:
@@ -337,7 +392,7 @@ def main() -> None:
         f"[atalay-images] {stats['ok']} gorsel, {len(by_page)} sayfa, "
         f"matched={stats['matched']} fallback={stats['fallback']} "
         f"skip_small={stats['skip_small']} strip_skip={stats['strip_skip']} "
-        f"dept_patch={patched} legacy_removed={legacy}"
+        f"kept_prev={stats['kept_prev']} dept_patch={patched} legacy_removed={legacy}"
     )
 
 
