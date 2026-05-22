@@ -4,13 +4,33 @@ import { KeyOutlined } from "@ant-design/icons";
 import { LoginForm, ProFormText } from "@ant-design/pro-components";
 import { App, Card, Typography } from "antd";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
-import { normalizeProToken, probeAdminToken, setProToken } from "@/lib/pro-admin-client";
+import { useEffect, useState } from "react";
+import {
+  fetchBearerHint,
+  normalizeProToken,
+  probeAdminToken,
+  setProToken,
+} from "@/lib/pro-admin-client";
 
 export default function YonetimGirisPage() {
   const router = useRouter();
   const { message } = App.useApp();
   const [tokenLen, setTokenLen] = useState(0);
+  const [serverHint, setServerHint] = useState<string | null>(null);
+
+  useEffect(() => {
+    fetchBearerHint().then((h) => {
+      if (h.error) {
+        setServerHint(h.error);
+        return;
+      }
+      if (h.length) {
+        setServerHint(
+          `Canlı sunucu: ${h.length} karakter, «${h.prefix || "…"}» ile başlamalı. Vercel göz ikonundan kopyalayın.`,
+        );
+      }
+    });
+  }, []);
 
   return (
     <div
@@ -30,6 +50,14 @@ export default function YonetimGirisPage() {
         <Typography.Paragraph type="secondary" style={{ textAlign: "center" }}>
           Ant Design Pro — API Bearer token
         </Typography.Paragraph>
+        {serverHint && (
+          <Typography.Paragraph
+            type="secondary"
+            style={{ fontSize: 12, textAlign: "center", marginBottom: 12 }}
+          >
+            {serverHint}
+          </Typography.Paragraph>
+        )}
         <LoginForm
           onFinish={async (values) => {
             const token = normalizeProToken(String(values.token || ""));

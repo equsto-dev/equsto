@@ -33,14 +33,18 @@ export async function POST(req: NextRequest) {
 
   const expectedLen = expected.length;
   const gotLen = got.length;
+  const expPre = expected.length > 10 ? `${expected.slice(0, 10)}…` : "…";
+  const gotPre = got.length > 10 ? `${got.slice(0, 10)}…` : "…";
   return adminOk({
     ok: false,
     reason: "mismatch",
     expectedLen,
     gotLen,
+    expectedPrefix: expPre,
+    gotPrefix: gotPre,
     hint:
       gotLen !== expectedLen
-        ? `Vercel’deki token ${expectedLen} karakter, forma ${gotLen} karakter gitti. Alanı temizleyin (Ctrl+A → Delete), Vercel’den tekrar yapıştırın; giriş sayfasında “Yapıştırılan token: N karakter” satırı Vercel ile aynı olmalı.`
-        : "Uzunluk aynı ama karakterler farklı. Vercel Production env ile birebir aynı token girin.",
+        ? `Vercel’deki token ${expectedLen} karakter, forma ${gotLen} karakter gitti. Alanı temizleyin, Vercel’den göz ikonu ile kopyalayın.`
+        : `Uzunluk aynı (${expectedLen}) ama metin farklı. Vercel’de «${expPre}» — sizde «${gotPre}». Sohbetteki örnek key ile Vercel’deki aynı değil; Vercel → EQUSTO_ADMIN_BEARER → göz → tam kopyala.`,
   });
 }

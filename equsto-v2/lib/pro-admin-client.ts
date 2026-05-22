@@ -84,13 +84,30 @@ export async function fetchUrunler(tokenOverride?: string): Promise<{
   };
 }
 
+export type BearerHint = {
+  configured?: boolean;
+  length?: number;
+  prefix?: string;
+  hint?: string;
+  error?: string;
+};
+
 export type BearerCheckResult = {
   ok: boolean;
   error?: string;
   expectedLen?: number;
   gotLen?: number;
+  expectedPrefix?: string;
+  gotPrefix?: string;
   hint?: string;
 };
+
+export async function fetchBearerHint(): Promise<BearerHint> {
+  const res = await fetch("/api/yonetim/bearer-hint", { cache: "no-store" });
+  const body = await parseJson<BearerHint & { success?: boolean; error?: string }>(res);
+  if (!res.ok) return { error: body.error || `HTTP ${res.status}` };
+  return body;
+}
 
 /** Giriş öncesi — token Vercel env ile eşleşiyor mu? */
 export async function probeAdminToken(token: string): Promise<BearerCheckResult> {
@@ -121,7 +138,7 @@ export async function probeAdminToken(token: string): Promise<BearerCheckResult>
   const msg =
     body.hint ||
     (body.expectedLen != null && body.gotLen != null
-      ? `Token eşleşmedi (${body.gotLen} karakter, sunucu ${body.expectedLen} bekliyor). Vercel → EQUSTO_ADMIN_BEARER → Production değerini göz ikonu ile kopyalayın.`
+      ? `Token eşleşmedi (${body.gotLen} karakter, sunucu ${body.expectedLen}${body.expectedPrefix ? `, ön ek ${body.expectedPrefix}` : ""}). Vercel göz ikonundan kopyalayın — sohbetteki örnek key farklı olabilir.`
       : "Token Vercel EQUSTO_ADMIN_BEARER ile aynı değil.");
 
   return {
