@@ -7,6 +7,7 @@ import { Alert, Space, Tag, Typography } from "antd";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import {
   type EkipmanRow,
+  ekipmanPreviewSrc,
   fetchEkipmanlarCatalog,
   rowHasImage,
 } from "@/lib/pro-admin-client";
@@ -16,7 +17,7 @@ type TableRow = EkipmanRow & { key: string; hasImage: boolean };
 export default function YonetimKatalogPage() {
   const [rows, setRows] = useState<TableRow[]>([]);
   const [loading, setLoading] = useState(true);
-  const [filter, setFilter] = useState<"all" | "noImage" | "hasImage">("noImage");
+  const [filter, setFilter] = useState<"all" | "noImage" | "hasImage">("all");
   const [brandFilter, setBrandFilter] = useState<"all" | "ozti">("ozti");
 
   const load = useCallback(async () => {
@@ -74,17 +75,37 @@ export default function YonetimKatalogPage() {
     {
       title: "Görsel",
       dataIndex: "hasImage",
-      width: 90,
-      render: (_, r) =>
-        r.hasImage ? (
-          <Tag color="success" icon={<PictureOutlined />}>
-            Var
-          </Tag>
-        ) : (
-          <Tag color="warning" icon={<WarningOutlined />}>
-            Yok
-          </Tag>
-        ),
+      width: 72,
+      render: (_, r) => {
+        if (!r.hasImage) {
+          return (
+            <Tag color="warning" icon={<WarningOutlined />}>
+              Yok
+            </Tag>
+          );
+        }
+        const src = ekipmanPreviewSrc(r);
+        if (!src) {
+          return (
+            <Tag color="success" icon={<PictureOutlined />}>
+              Var
+            </Tag>
+          );
+        }
+        return (
+          <img
+            src={src}
+            alt=""
+            width={48}
+            height={48}
+            style={{ objectFit: "contain", background: "#f5f5f5", borderRadius: 4 }}
+            loading="lazy"
+            onError={(e) => {
+              (e.target as HTMLImageElement).style.display = "none";
+            }}
+          />
+        );
+      },
     },
     {
       title: "Ürün",
@@ -144,9 +165,11 @@ export default function YonetimKatalogPage() {
         message={`Öztiryakiler: ${oztiStats.total} ürün · ${oztiStats.withImage} görselli · ${oztiStats.withAcik} açıklamalı · ${oztiStats.withKw} anahtar kelime`}
         description={
           <Typography.Paragraph type="secondary" style={{ marginBottom: 0 }}>
-            Tam katalog:{" "}
-            <Typography.Text code>npm run catalog:ozti:full</Typography.Text>{" "}
-            (PDF görseller + dept + ekipmanlar + arama indeksi)
+            CDN yedek (hızlı):{" "}
+            <Typography.Text code>npm run catalog:ozti:patch-web</Typography.Text>{" "}
+            → <Typography.Text code>catalog:ozti:ekipmanlar</Typography.Text>. Kaliteli
+            PDF görseller:{" "}
+            <Typography.Text code>npm run catalog:ozti:full</Typography.Text>
           </Typography.Paragraph>
         }
       />

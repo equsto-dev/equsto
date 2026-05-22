@@ -24,7 +24,7 @@ const menuRoutes = [
   { path: "/yonetim/pfos", name: "PFOS", icon: <ProjectOutlined /> },
   { path: "/yonetim/yayin", name: "Yayınlama", icon: <CloudUploadOutlined /> },
   { path: "/yonetim/ozet", name: "Özet", icon: <DashboardOutlined /> },
-  { path: "/yonetim/urunler", name: "API ürünler", icon: <ShopOutlined /> },
+  { path: "/yonetim/urunler", name: "Ürünler", icon: <ShopOutlined /> },
   { path: "/yonetim/arama", name: "Arama", icon: <SearchOutlined /> },
 ];
 

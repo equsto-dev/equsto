@@ -236,8 +236,13 @@
       if (dim !== '\u2014') lines.push('\u00d6l\u00e7\u00fc: ' + dim);
       if (r.tip_kodu) lines.push('Stok / tip: ' + r.tip_kodu);
       if (r.pfB || r.marka) lines.push('Marka: ' + (r.pfB || r.marka));
+      if (!r.pfShopMatch) {
+        lines.push(
+          'Equsto katalogunda bu kalem için otomatik ürün eşleşmesi yok; PFOS referans fiyatı kullanıldı.',
+        );
+      }
     }
-    return lines.slice(0, 16);
+    return lines.slice(0, 18);
   }
 
   function buildTeklifDetailHtml(r, idx) {
@@ -421,11 +426,12 @@
   }
 
   function stokNo(r) {
+    if (r && r.pfSku) return escHtml(String(r.pfSku));
     return escHtml(r.tip_kodu || r.stokNo || r.kod || '');
   }
 
   function kaynak(r) {
-    var m = String(r.marka || r.kaynak || '').trim();
+    var m = String(r.pfB || r.marka || r.kaynak || '').trim();
     if (!m) return '\u2014';
     var cut = m.indexOf(' / ');
     if (cut > 0) m = m.slice(0, cut);
@@ -510,11 +516,12 @@
   }
 
   function stokNoPlain(r) {
+    if (r && r.pfSku) return String(r.pfSku);
     return String((r && (r.tip_kodu || r.stokNo || r.kod)) || '');
   }
 
   function kaynakPlain(r) {
-    var m = String((r && (r.marka || r.kaynak)) || '').trim();
+    var m = String((r && (r.pfB || r.marka || r.kaynak)) || '').trim();
     if (!m) return '\u2014';
     var cut = m.indexOf(' / ');
     if (cut > 0) m = m.slice(0, cut);

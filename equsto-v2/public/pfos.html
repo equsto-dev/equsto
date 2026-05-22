@@ -131,9 +131,9 @@
 <script  src="/pfos-rule-engine.js"></script>
 <script  src="/equsto-pricing-core.js"></script>
 <script  src="/pfos-pricing.js"></script>
-<script  src="/pfos-calc-engine.js"></script>
+<script  src="/pfos-calc-engine.js?v=20260524pfos-proforma"></script>
 <script  src="/pfos-location.js"></script>
-<script  src="/pfos-teklif-ui.js"></script>
+<script  src="/pfos-teklif-ui.js?v=20260524pfos-proforma"></script>
 <script  src="/pfos-teklif-excel.js"></script>
 <script>
 (function () {
@@ -4047,18 +4047,44 @@ const PFOS_STATION_TO_ZONE = {
   'Teşhir / Servis': 'show_mutfagi',
 };
 
+function pfosZonesFromStationLabels(labels) {
+  const keys = [];
+  const seen = new Set();
+  (labels || []).forEach(function (label) {
+    const zk = PFOS_STATION_TO_ZONE[label];
+    if (zk && !seen.has(zk)) {
+      seen.add(zk);
+      keys.push(zk);
+    }
+  });
+  return keys;
+}
+
 function pfosSuggestZones() {
   const d = D.dukkan || '';
+  const k = D.konsept || '';
   const base = window.EqustoPfosCalc && EqustoPfosCalc.defaultZoneKeys
     ? EqustoPfosCalc.defaultZoneKeys()
     : ['ana_mutfak', 'sebze_hazirlik', 'et_hazirlik', 'kuru_depo', 'soguk_oda', 'derin_dondurucu', 'bulasikhane'];
   if (d === 'Pizzacı') return ['ana_mutfak', 'pastane', 'sebze_hazirlik', 'bulasikhane', 'soguk_oda', 'derin_dondurucu'];
   if (d === 'Dönerci') return ['ana_mutfak', 'izgara_meze', 'et_hazirlik', 'bulasikhane', 'soguk_oda'];
-  if (d === 'Steakhouse' || D.konsept === 'Steakhouse') {
+  if (d === 'Steakhouse' || k === 'Steakhouse') {
     return ['ana_mutfak', 'et_hazirlik', 'izgara_meze', 'sebze_hazirlik', 'kuru_depo', 'soguk_oda', 'derin_dondurucu', 'bulasikhane'];
   }
-  if (D.konsept === 'Bar') return ['bar', 'sebze_hazirlik', 'soguk_oda', 'kuru_depo', 'bulasikhane'];
-  if (D.konsept === 'Pastane & Patisserie') return ['pastane', 'ana_mutfak', 'sebze_hazirlik', 'soguk_oda', 'derin_dondurucu'];
+  if (k === 'Bar') return ['bar', 'sebze_hazirlik', 'soguk_oda', 'kuru_depo', 'bulasikhane'];
+  if (k === 'Pastane & Patisserie') return ['pastane', 'ana_mutfak', 'sebze_hazirlik', 'soguk_oda', 'derin_dondurucu'];
+  const fromStations = pfosZonesFromStationLabels(pfosStationLabels());
+  if (fromStations.length) {
+    const set = new Set(fromStations);
+    const fullService =
+      k === 'Restaurant' || d === 'Fine Dining' || d === 'Restaurant' || d === 'Steakhouse';
+    if (fullService) {
+      ['sebze_hazirlik', 'et_hazirlik', 'derin_dondurucu'].forEach(function (z) {
+        set.add(z);
+      });
+    }
+    return Array.from(set);
+  }
   return base;
 }
 

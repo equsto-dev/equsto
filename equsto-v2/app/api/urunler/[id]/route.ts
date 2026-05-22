@@ -37,8 +37,13 @@ export async function PUT(req: NextRequest, { params }: Params) {
       data: {
         name: parsed.name,
         modelCode: parsed.modelCode,
+        sku: parsed.sku,
         description: parsed.description,
         priceListTl: parsed.priceListTl,
+        stok: parsed.stok,
+        elektrikGucuKw: parsed.elektrikGucuKw,
+        gazGucuKw: parsed.gazGucuKw,
+        pfosAktif: parsed.pfosAktif,
         status: parsed.status,
         brandId: brand.id,
         categoryId: category.id,

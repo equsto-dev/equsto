@@ -591,11 +591,28 @@ export function oztiKodFromWebSlug(slug) {
 
 /**
  * Vitrin `images[]` — yalnızca repodaki yerel dosya yolları.
- * ax-images CDN 1200×1200 katalog sayfası döndürdüğü için vitrinde kullanılmaz.
  */
 export function oztiCatalogImageHref(_kod, localRel) {
   const rel = String(localRel || "").replace(/\\/g, "/");
   if (/^images\/catalog\/ozti\//i.test(rel)) return rel;
   if (rel && !/^https?:\/\//i.test(rel)) return rel;
   return "";
+}
+
+/** `images/catalog/ozti/web/ozti-8574-cm080-00.jpg` — canlıda eq-site-urls → ax-images CDN. */
+export function oztiWebImageRel(kod) {
+  const k = normKod(kod);
+  if (!/^[0-9]{2,4}[A-Z0-9]*\.[A-Z0-9.\-]{2,}$/i.test(k)) return "";
+  const slug =
+    "ozti-" +
+    k
+      .toLowerCase()
+      .replace(/\./g, "-")
+      .replace(/[^a-z0-9-]/g, "");
+  return `images/catalog/ozti/web/${slug}.jpg`;
+}
+
+/** Yerel manifest → yoksa web sentetik yol (CDN yedek). */
+export function oztiVitrinImageHref(kod, manifestRel) {
+  return oztiCatalogImageHref(kod, manifestRel) || oztiWebImageRel(kod);
 }

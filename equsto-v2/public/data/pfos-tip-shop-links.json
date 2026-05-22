@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "note": "PFOS tip_kodu → Equsto katalog SKU (manuel / doğrulanmış eşleşmeler)",
+  "links": {
+    "kombi_firin_6t": {
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "sku": "7890.60400.3T"
+    },
+    "davlumbaz_duvar": {
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "sku": "9885.EECHC.00",
+      "name": "UNOX DAVLUMBAZ EECH-HC23 CHEFTOP"
+    },
+    "cop_arabasi": {
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "sku": "8893.00120.00"
+    },
+    "mikrodalga_firin": {
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "sku": "9891.RMS51.0TS"
+    },
+    "servis_rafi": {
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "sku": "0913.00507.01"
+    },
+    "char_broil": {
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "sku": "7864.N1.40903.04"
+    },
+    "salamander": {
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "sku": "7850.58575.70"
+    },
+    "tezgah_duz": {
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "sku": "7911.N1.60603.00"
+    },
+    "fritoz_tek": {
+      "brand": "Atalay Endüstriyel Mutfak Ekipmanları",
+      "model": "E AEF - 660"
+    },
+    "yer_izgara": {
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "sku": "7960.09429.5Y1",
+      "name": "YER IZGARASI TAVALI KENARDAN SİFONLU ALTTAN CIKISLI Q50 PVC 940*290"
+    }
+  }
+}

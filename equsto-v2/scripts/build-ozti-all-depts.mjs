@@ -23,7 +23,7 @@ import {
   mapOztiTasimaCategory,
   mapOztiYikamaCategory,
   normKod,
-  oztiCatalogImageHref,
+  oztiVitrinImageHref,
   oztiPriceLabelTl,
   oztiPricingFields,
   oztiPricingLines,
@@ -54,7 +54,7 @@ function rowToVitrin(row, dept, category, pdfByKod, manifest, kurTry) {
   }
   const pricing = oztiPricingFields(row, kurTry);
   const enriched = buildSpecs(row, pdfEntry, cat, oztiPricingLines(row, kurTry));
-  const imgHref = oztiCatalogImageHref(kod, manifest.get(normKod(kod)));
+  const imgHref = oztiVitrinImageHref(kod, manifest.get(normKod(kod)));
 
   return {
     category: cat,

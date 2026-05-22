@@ -5,6 +5,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { oztiVitrinImageHref } from "./lib/ozti-enrich.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DEPT_DIR = path.join(ROOT, "public/data/dept");
@@ -63,8 +64,7 @@ function main() {
       let rel = "";
       if (isOzti(row)) {
         const kod = normKod(row.urun_kodu || row.sku || row.model);
-        rel = ozti.get(kod) || "";
-        /* ax-images: scripts/fetch-ozti-web-images.mjs — kapak yedek kullanılmaz */
+        rel = oztiVitrinImageHref(kod, ozti.get(kod) || "");
       } else if (isAtalay(row)) {
         const model = String(row.model || row.sku || "").trim();
         const hit = atalay.get(model);

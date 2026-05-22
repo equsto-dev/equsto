@@ -398,7 +398,8 @@
     bulasik_giyotin_1000: ['giyotin', '1000 tabak', '1000 tb'],
   };
 
-  var PFOS_TIP_BRAND = { kombi_firin_6t: 'RATIONAL' };
+  /** Marka kilidi yalnızca katalogda doğrulanmış ürünler için */
+  var PFOS_TIP_BRAND = {};
   var PFOS_TIP_POWER = {
     kombi_firin_6t: { elk: 11.4, gaz: 0 },
     davlumbaz_duvar: { elk: 2.2, gaz: 0 },
@@ -509,9 +510,29 @@
     duvar_rafi: function (name) {
       return name.includes('duvar') && name.includes('raf');
     },
+    davlumbaz_duvar: function (name) {
+      return name.includes('davlumbaz') && !name.includes('izgar');
+    },
+    davlumbaz: function (name) {
+      return name.includes('davlumbaz');
+    },
+    cop_arabasi: function (name) {
+      return (
+        (name.includes('cop') ||
+          name.includes('çöp') ||
+          name.includes('kova') ||
+          name.includes('dezenfektan')) &&
+        !name.includes('siyirma')
+      );
+    },
     yer_izgara: function (name) {
       return (
-        (name.includes('izgar') || name.includes('pleyt')) &&
+        (name.includes('yer izgar') ||
+          name.includes('yer ızgar') ||
+          (name.includes('izgar') && name.includes('yer'))) &&
+        !name.includes('istif') &&
+        !name.includes('tabl') &&
+        !name.includes('raf') &&
         !name.includes('davlumbaz') &&
         !name.includes('bulasik')
       );
@@ -606,8 +627,13 @@
     char_broil: ['sanayi-tipi-izgaralar', 'ocakbasi-izgara'],
     salamander: ['sanayi-ocaklari', 'kuzineler'],
     ocak_4gz: ['sanayi-ocaklari', 'kuzineler'],
-    davlumbaz_duvar: ['sanayi-ocaklari'],
-    davlumbaz: ['sanayi-ocaklari'],
+    davlumbaz_duvar: ['davlumbaz'],
+    davlumbaz: ['davlumbaz'],
+    cop_arabasi: ['yardimci-ekipmanlar', 'araba'],
+    tezgah_evyeli: ['tezgah'],
+    tezgah_duz: ['tezgah', 'set-ustu-mutfak'],
+    calisma_tezgahi: ['tezgah', 'hazirlik'],
+    duvar_rafi: ['istif', 'tasima'],
     tezgah_tip_buzdolabi: ['sogutma-ekipmanlari'],
     dik_tip_buzdolabi: ['sogutma-ekipmanlari'],
     bulasik_giyotin_1000: ['bulasik-makineleri'],
@@ -773,12 +799,15 @@
     if (!_pfosShopIndex || _pfosShopIndex.pool !== items) buildShopIndex(items);
 
     var tip = String(row.tip_kodu || '').trim();
+    var lockedTipBrand = PFOS_TIP_BRAND[tip] || '';
     var prefBrand =
       opts && opts.forcedBrand
         ? String(opts.forcedBrand).trim()
-        : row._pfosPrefBrand
-          ? String(row._pfosPrefBrand).trim()
-          : '';
+        : lockedTipBrand
+          ? String(lockedTipBrand).trim()
+          : row._pfosPrefBrand
+            ? String(row._pfosPrefBrand).trim()
+            : '';
     var idx = _pfosShopIndex;
     var candidates = [];
 
@@ -812,6 +841,7 @@
         return ib === prefN || ib.indexOf(prefN) >= 0 || prefN.indexOf(ib) >= 0;
       });
       if (byBrand.length) candidates = byBrand;
+      else if (lockedTipBrand) return null;
     }
 
     if (candidates.length) {
@@ -902,10 +932,15 @@
       out.pfB = out.marka;
     }
 
-    var match = findShopMatch(out, pool, opts);
+    var matchOpts = opts;
+    if (lockedBrand) {
+      matchOpts = Object.assign({}, opts, { forcedBrand: lockedBrand });
+    }
+    var match = findShopMatch(out, pool, matchOpts);
     if (match) {
       var shopBrand = shopItemBrand(match);
       var shopName = shopItemName(match);
+      var raw = (match.raw || match) || {};
       if (!lockedBrand) {
         out.pfB = shopBrand;
         if (!out.marka) out.marka = shopBrand;
@@ -914,8 +949,22 @@
         out.pfShopModel = shopName;
         if (!out.pfN) out.pfN = shopName;
       }
+      if (raw.sku || raw.model) out.pfSku = String(raw.sku || raw.model).trim();
       if (match.equstoPage) out.pfEqustoPage = match.equstoPage;
       out.pfDept = deptSegForItem(match, out.pfZone);
+      var shopPrice = parseShopPriceTry(match.price || match.p);
+      if (
+        shopPrice > 0 &&
+        (!Number(out.birim) ||
+          out.fiyat_kaynak === 'eksik' ||
+          out.fiyat_kaynak === 'dagitim' ||
+          out.fiyat_kaynak === 'referans')
+      ) {
+        out.birim = shopPrice;
+        out.fiyat_net = true;
+        out.fiyat_kaynak = 'katalog';
+        out.lineTotal = shopPrice * (Number(out.adet) || 1);
+      }
       var specText = String(
         (match.raw && match.raw.specs) || match.specs || ''
       ).trim();
