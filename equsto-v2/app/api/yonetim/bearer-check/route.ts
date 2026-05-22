@@ -40,7 +40,7 @@ export async function POST(req: NextRequest) {
     gotLen,
     hint:
       gotLen !== expectedLen
-        ? `Vercel’deki token ${expectedLen} karakter, siz ${gotLen} karakter girdiniz. Vercel → EQUSTO_ADMIN_BEARER → göz ikonu → tüm değeri kopyalayın (ör. tam değer 35 karakter: eq_adm_5431432608_eq_adm_5431432608). Kısaltılmış 16–17 karakterlik parça yanlış.`
+        ? `Vercel’deki token ${expectedLen} karakter, forma ${gotLen} karakter gitti. Alanı temizleyin (Ctrl+A → Delete), Vercel’den tekrar yapıştırın; giriş sayfasında “Yapıştırılan token: N karakter” satırı Vercel ile aynı olmalı.`
         : "Uzunluk aynı ama karakterler farklı. Vercel Production env ile birebir aynı token girin.",
   });
 }

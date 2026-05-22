@@ -1,14 +1,16 @@
 "use client";
 
-import { LockOutlined } from "@ant-design/icons";
+import { KeyOutlined } from "@ant-design/icons";
 import { LoginForm, ProFormText } from "@ant-design/pro-components";
 import { App, Card, Typography } from "antd";
 import { useRouter } from "next/navigation";
-import { probeAdminToken, setProToken } from "@/lib/pro-admin-client";
+import { useState } from "react";
+import { normalizeProToken, probeAdminToken, setProToken } from "@/lib/pro-admin-client";
 
 export default function YonetimGirisPage() {
   const router = useRouter();
   const { message } = App.useApp();
+  const [tokenLen, setTokenLen] = useState(0);
 
   return (
     <div
@@ -30,7 +32,7 @@ export default function YonetimGirisPage() {
         </Typography.Paragraph>
         <LoginForm
           onFinish={async (values) => {
-            const token = String(values.token || "").trim();
+            const token = normalizeProToken(String(values.token || ""));
             if (!token) {
               message.error("Token girin");
               return;
@@ -46,22 +48,35 @@ export default function YonetimGirisPage() {
           }}
           submitter={{ searchConfig: { submitText: "Panele gir" } }}
         >
-          <ProFormText.Password
+          <ProFormText
             name="token"
             fieldProps={{
               size: "large",
-              prefix: <LockOutlined />,
-              autoComplete: "current-password",
+              prefix: <KeyOutlined />,
+              autoComplete: "off",
+              autoCorrect: "off",
+              autoCapitalize: "off",
+              spellCheck: false,
+              onChange: (e) => {
+                setTokenLen(normalizeProToken(e.target.value).length);
+              },
             }}
-            placeholder="EQUSTO_ADMIN_BEARER (ör. equsto2025)"
+            placeholder="Vercel EQUSTO_ADMIN_BEARER değerini yapıştırın"
             rules={[{ required: true, message: "Token zorunlu" }]}
           />
         </LoginForm>
+        <Typography.Paragraph
+          type={tokenLen > 0 ? "secondary" : "warning"}
+          style={{ fontSize: 12, marginBottom: 8 }}
+        >
+          Yapıştırılan token: <strong>{tokenLen}</strong> karakter
+          {tokenLen > 0 && tokenLen < 20
+            ? " — çok kısa; tarayıcı eski şifre doldurmuş olabilir, alanı temizleyip Vercel’den tekrar yapıştırın."
+            : ""}
+        </Typography.Paragraph>
         <Typography.Paragraph type="secondary" style={{ fontSize: 12, marginBottom: 0 }}>
-          Sadece değeri yapıştırın — <strong>tırnak işareti olmadan</strong> (ör.{" "}
-          <code>eq_adm_5431432608_eq_adm_5431432608</code>,{" "}
-          <code>&quot;…&quot;</code> değil). Vercel <code>EQUSTO_ADMIN_BEARER</code> ile
-          aynı olmalı.
+          Vercel → <code>EQUSTO_ADMIN_BEARER</code> → göz ikonu → kopyala → buraya yapıştır.
+          Tırnak yok. Giriş ve Vercel <strong>aynı uzunlukta</strong> olmalı.
         </Typography.Paragraph>
       </Card>
     </div>
