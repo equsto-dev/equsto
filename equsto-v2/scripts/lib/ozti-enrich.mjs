@@ -290,6 +290,83 @@ export function mapOztiDeptAccessory(row) {
   return null;
 }
 
+/** Döner ocakları / döner makineleri → pişirme (set üstü değil) */
+export function isOztiDonerOcak(row) {
+  const kod = String(row.urun_kodu || row.sku || "").trim();
+  if (/^8859\./i.test(kod)) return true;
+  const name = foldTr(row.urun_tanimi || row.name || "");
+  const kat = foldTr(row.kategori || "");
+  const path = foldTr((row.kategori_yolu || []).join(" "));
+  if (/doner\s*ocag|doner\s*ocagi|doner\s*makin|doner\s*kebap/i.test(name)) return true;
+  if (/doner\s*makin|doner\s*ocak/i.test(kat) || /doner\s*makin/i.test(path)) return true;
+  return false;
+}
+
+/** Servis / et askı arabaları — set üstü değil, taşıma PLP */
+export function isOztiTasimaAraba(row) {
+  if (isOztiDonerOcak(row)) return false;
+  const kod = String(row.urun_kodu || row.sku || "").trim();
+  if (/^7270\./i.test(kod)) return true;
+  const kat = foldTr(row.kategori || "");
+  const path = foldTr((row.kategori_yolu || []).join(" "));
+  if (kat === "arabalar" || /\barabalar\b/.test(path)) return true;
+  if (/banket\s*arab/i.test(kat) || /banket\s*arab/i.test(path)) return true;
+  const name = foldTr(row.urun_tanimi || row.name || "");
+  if (/et\s*aski\s*arab|tabak\s*tasima\s*arab|yuk\s*tasima\s*arab|servis\s*arab/i.test(name)) return true;
+  return false;
+}
+
+/** Taşıma dept vitrin kategorisi */
+export function mapOztiTasimaCategory(row) {
+  const name = foldTr(row.urun_tanimi || row.name || "");
+  const kat = foldTr(row.kategori || "");
+  if (/et\s*aski\s*arab/i.test(name) || /^7270\./i.test(String(row.urun_kodu || ""))) {
+    return "et-aski-arabasi";
+  }
+  if (/banket\s*arab/i.test(name) || /banket\s*arab/i.test(kat)) return "banket-arabalari";
+  if (kat === "arabalar" || /\barabalar\b/.test(kat)) return "servis-arabalar";
+  return slugify(row.kategori) || "diger";
+}
+
+/** Bain marie çelik kap/küvet (set üstü) — makine değil */
+export function isOztiBainMarieKap(row) {
+  const name = foldTr(`${row.urun_tanimi || row.name || ""} ${row.kategori || ""}`);
+  if (/bain\s*marie\s*(kapak|kuvet|küvet)/i.test(name)) return true;
+  if (/celik\s*saklama/i.test(name) && /bain\s*marie/i.test(name)) return true;
+  return false;
+}
+
+/** Set üstü / hareketli bain marie üniteleri (GN kaplar hariç) → pişirme PLP */
+export function isOztiBainMarieMachine(row) {
+  if (isOztiBainMarieKap(row)) return false;
+  const name = foldTr(row.urun_tanimi || row.name || "");
+  const kat = foldTr(row.kategori || "");
+  const path = foldTr((row.kategori_yolu || []).join(" "));
+  const hay = `${name} ${kat} ${path}`;
+  if (/kaplar\s*haric/i.test(name) && /bain\s*marie/i.test(name)) return true;
+  if (/set\s*ustu\s*bain\s*marie/i.test(name)) return true;
+  if (/hareketli\s*bain\s*marie/i.test(name)) return true;
+  if (/elektrikli\s*bain|gazli.*bain\s*marie|hareketli\s*bain/i.test(kat)) return true;
+  return false;
+}
+
+/** Pişirme dept vitrin kategorisi */
+export function mapOztiPisirmeCategory(row) {
+  if (isOztiBainMarieMachine(row)) {
+    const name = foldTr(row.urun_tanimi || row.name || "");
+    if (/hareketli/i.test(name)) return "hareketli-bain-marie";
+    return "setustu-bain-marie";
+  }
+  if (isOztiDonerOcak(row)) return "doner-ocaklari-";
+  return slugify(row.kategori) || "diger";
+}
+
+/** Set üstü dept vitrin kategorisi */
+export function mapOztiSetUstuCategory(row) {
+  if (isOztiBainMarieKap(row)) return "bain-marie-celik-saklama-kaplari";
+  return slugify(row.kategori) || "diger";
+}
+
 /** İçecek dept alt kategori (facet) */
 export function mapOztiIcecekCategory(name, kod) {
   const k = normKod(kod);
@@ -312,6 +389,10 @@ export function mapOztiDept(row, setUstuAllow) {
 
   const accessoryDept = mapOztiDeptAccessory(row);
   if (accessoryDept) return accessoryDept;
+
+  if (isOztiBainMarieMachine(row)) return "pisirme";
+  if (isOztiDonerOcak(row)) return "pisirme";
+  if (isOztiTasimaAraba(row)) return "tasima";
 
   const pathHay = (row.kategori_yolu || []).join(" ").toLocaleUpperCase("tr");
   const kat = String(row.kategori || "").toLocaleUpperCase("tr");
@@ -341,13 +422,14 @@ export function mapOztiDept(row, setUstuAllow) {
       "kahve",
     ],
     [/İSTİF\s*RAF/i, "istif"],
-    [/KUZİNE|OCAK|IZGARA|FRİTÖZ|FRITOZ|FIRIN|KAYNATMA|BENMARİ|BENMARI|WOK|İNDÜKSİYON|INDUKSIYON|900\s*SERİ|OPTIMUM|LAVATAŞ|DÖNER\s*OCAĞ|PİŞİRİCİ|PISIRICI/i, "pisirme"],
+    [/KUZİNE|OCAK|IZGARA|FRİTÖZ|FRITOZ|FIRIN|KAYNATMA|BENMARİ|BENMARI|WOK|İNDÜKSİYON|INDUKSIYON|900\s*SERİ|OPTIMUM|LAVATAŞ|D[OÖ]NER\s*OCA[GĞ]|DONER\s*OCAG|PİŞİRİCİ|PISIRICI/i, "pisirme"],
     [/TEZGAH|EVYE|EVYELİ|ÇALIŞMA\s*TEZGAH/i, "tezgah"],
-    [/ARABA|TAŞIMA|BANKET|SERVİS\s*ÜNİT/i, "tasima"],
+    [/ARABA(?!LI)|TAŞIMA|BANKET|SERVİS\s*ÜNİT/i, "tasima"],
     [/DOLAP|RAF(?!.*İSTİF)/i, "dolap"],
     [/HAZIRLIK|KESME\s*TAHTA|MİKSER|DOĞRAYICI|HAMUR/i, "hazirlik"],
     [/İÇECEK|BAR\s*AKSESUAR|ÇAY\s*KAHVE\s*VE\s*BAR/i, "icecek"],
-    [/SERVİS\s*GEREÇ|GASTRONORM|CHAFING|TENCERE|TAVA|GURMEAID|BAKIR\s*SUNUM|MASAÜSTÜ|MELAMİN|BAIN\s*MARIE|HELVA|SIĞ\s*TENCERE|SİLİNDİRİK|PRES\s*BASKI|KARIŞTIRMA|SÜZGEÇ|POLİETİLEN|POLİPROPİLEN|POLİKARBONAT|SİNEK/i, "set-ustu-mutfak"],
+    [/SERVİS\s*GEREÇ|GASTRONORM|CHAFING|TENCERE|TAVA|GURMEAID|BAKIR\s*SUNUM|MASAÜSTÜ|MELAMİN|HELVA|SIĞ\s*TENCERE|SİLİNDİRİK|PRES\s*BASKI|KARIŞTIRMA|SÜZGEÇ|POLİETİLEN|POLİPROPİLEN|POLİKARBONAT|SİNEK/i, "set-ustu-mutfak"],
+    [/BAIN\s*MARIE\s*(KAPAK|KÜVET|KUVET|ÇELİK|CELIK)/i, "set-ustu-mutfak"],
   ];
 
   for (const [re, dept] of rules) {

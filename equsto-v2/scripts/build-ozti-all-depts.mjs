@@ -18,6 +18,9 @@ import {
   loadPdfByKod,
   mapOztiDept,
   mapOztiIcecekCategory,
+  mapOztiPisirmeCategory,
+  mapOztiSetUstuCategory,
+  mapOztiTasimaCategory,
   mapOztiYikamaCategory,
   normKod,
   oztiCatalogImageHref,
@@ -113,7 +116,15 @@ async function main() {
     const cat =
       dept === "icecek"
         ? mapOztiIcecekCategory(row.urun_tanimi, kod)
-        : slugify(row.kategori) || "diger";
+        : dept === "yikama"
+          ? mapOztiYikamaCategory(row.urun_tanimi || row.name, kod, row.kategori)
+          : dept === "pisirme"
+            ? mapOztiPisirmeCategory(row)
+            : dept === "set-ustu-mutfak"
+              ? mapOztiSetUstuCategory(row)
+              : dept === "tasima"
+                ? mapOztiTasimaCategory(row)
+                : slugify(row.kategori) || "diger";
     if (!byDept.has(dept)) byDept.set(dept, []);
     const vitrin = rowToVitrin(row, dept, cat, pdfByKod, manifest, kurTry);
     if (vitrin.fiyat_tl > 0) pricedTl += 1;

@@ -93,7 +93,7 @@
   <script src="/equsto-member.js?v=20260522wa" defer></script>
   <script src="/contact.js?v=20260522wa" defer></script>
   <script src="/ecom-data.js"></script>
-  <script src="/eq-shop-catalog-bootstrap.js?v=20260521pdp"></script>
+  <script src="/eq-shop-catalog-bootstrap.js?v=20260524tasima-v1"></script>
   <script src="/eq-vendor-sanitize.js?v=20260521competitor"></script>
   <script src="/eq-competitor-redirects.js?v=20260521competitor"></script>
   <script src="/eq-display-terminology.js?v=20260520tezgdav"></script>
@@ -451,13 +451,54 @@
       var out = [];
       rels.forEach(function (rel) {
         var src = resolveProductImgSrc(rel);
-        if (src) out.push(src);
+        if (src) out.push({ src: src, rel: rel });
       });
       return out;
     }
 
-    function deptLink(cat) {
-      var seg = typeof window.eqCategoryToUrunlerSeg === "function" ? window.eqCategoryToUrunlerSeg(cat) : null;
+    function pdpImgFailAttr() {
+      return ' onerror="typeof __eqImgFail===\'function\'&&__eqImgFail(this)"';
+    }
+
+    function pdpImgDataAttrs(x, rel) {
+      var raw = normImgPath(rel) || "";
+      var sku = (x && (x.sku || x.urun_kodu || x.model)) || "";
+      var s = raw ? ' data-eq-img-raw="' + esc(raw) + '"' : "";
+      if (sku) s += ' data-eq-ozti-kod="' + esc(String(sku).trim()) + '"';
+      return s;
+    }
+
+    function renderPdpThumbImg(p) {
+      var rel = (p && p.images && p.images[0]) || "";
+      if (!rel && p) rel = oztiWebRelFromSku(p.sku || p.urun_kodu || p.model) || "";
+      var src = rel ? resolveProductImgSrc(rel) : thumbSrc(p);
+      if (!src) {
+        return '<span style="font-size:9px;color:var(--eq-text-subtle);">—</span>';
+      }
+      return (
+        '<img src="' +
+        esc(eqHtmlUrl(src)) +
+        '"' +
+        pdpImgFailAttr() +
+        pdpImgDataAttrs(p, rel) +
+        ' alt="" loading="lazy" decoding="async">'
+      );
+    }
+
+    function deptFromPagePath() {
+      try {
+        var m = location.pathname.match(/\/shop\/([^/]+)/);
+        return m ? decodeURIComponent(m[1]) : "";
+      } catch (_) {
+        return "";
+      }
+    }
+
+    function deptLink(cat, deptOverride) {
+      var seg =
+        deptOverride ||
+        deptFromPagePath() ||
+        (typeof window.eqCategoryToUrunlerSeg === "function" ? window.eqCategoryToUrunlerSeg(cat) : null);
       var labels = {
         pisirme: "Pişirme Ekipmanları",
         sogutma: "Soğutma Ekipmanları",
@@ -465,6 +506,8 @@
         yikama: "Yıkama Ekipmanları",
         hazirlik: "Hazırlık Ekipmanları",
         icecek: "İçecek Ekipmanları",
+        tasima: "Taşıma Ekipmanları",
+        "set-ustu-mutfak": "Set Üstü Mutfak Ekipmanları",
       };
       if (seg && labels[seg] && typeof window.equstoUrl === "function") {
         return { href: window.equstoUrl(seg), label: labels[seg] };
@@ -503,9 +546,10 @@
       if (!sl) return null;
       var cat = x.category || x.c || "";
       var seg =
-        typeof window.eqCategoryToUrunlerSeg === "function"
+        (x.dept && String(x.dept).trim()) ||
+        (typeof window.eqCategoryToUrunlerSeg === "function"
           ? window.eqCategoryToUrunlerSeg(cat) || "pisirme"
-          : "pisirme";
+          : "pisirme");
       return typeof window.eqProductPath === "function" ? window.eqProductPath(seg, sl) : "/shop/" + seg + "/" + sl;
     }
 
@@ -854,8 +898,7 @@
         var cards = items.map(function(p) {
           var sl = productSlugEq(p);
           var href = sl ? eqPathForProductObj(p) || "/urun/" + sl : "#";
-          var src = thumbSrc(p);
-          var img = src ? '<img src="' + esc(eqHtmlUrl(src)) + '" alt="" loading="lazy" decoding="async">' : '<span style="font-size:9px;color:var(--eq-text-subtle);">—</span>';
+          var img = renderPdpThumbImg(p);
           return '<a class="eq-mbg-card" href="' + esc(eqHtmlUrl(href)) + '">'+
             '<div class="eq-mbg-thumb">'+img+'</div>'+
             '<div class="eq-mbg-brand">'+esc(p.brand||'')+'</div>'+
@@ -875,10 +918,7 @@
       var cells = items
         .map(function (p) {
           var k = keyFn({ c: p.category || "", b: p.brand || "", n: p.name || "" });
-          var src = thumbSrc(p);
-          var img = src
-            ? '<img src="' + esc(eqHtmlUrl(src)) + '" alt="" loading="lazy" decoding="async">'
-            : '<span style="font-size:10px;color:var(--eq-text-subtle);">—</span>';
+          var img = renderPdpThumbImg(p);
           var lbl = esc(shortModelLabel(p));
           var brand = esc(p.brand || "");
           var price = esc(extractCartPrice(p.price));
@@ -958,10 +998,7 @@
       var cells = items
         .map(function (p) {
           var k = keyFn({ c: p.category || "", b: p.brand || "", n: p.name || "" });
-          var src = thumbSrc(p);
-          var img = src
-            ? '<img src="' + esc(eqHtmlUrl(src)) + '" alt="" loading="lazy" decoding="async">'
-            : '<span style="font-size:9px;color:var(--eq-text-subtle);">—</span>';
+          var img = renderPdpThumbImg(p);
           var lbl = esc(shortModelLabel(p));
           var fHref = productSlugEq(p)
             ? eqPathForProductObj(p) || "/urun/" + productSlugEq(p)
@@ -1160,7 +1197,7 @@
         skEl.setAttribute("data-eq-page-sig", productEqSk(slug));
         skEl.textContent = productEqSk(slug);
       } catch(_) {}
-      var ref = deptLink(x.category);
+      var ref = deptLink(x.category, x.dept);
       var bc = document.getElementById("eq-product-bc");
       if (bc) {
         bc.innerHTML =
@@ -1183,29 +1220,37 @@
         p: extractCartPrice(x.price, x),
       };
       var priceBlock = esc(x.price || "—");
+      var heroRel =
+        (x.images && x.images[0]) || oztiWebRelFromSku(x.sku || x.urun_kodu || x.model) || "";
       var heroImg = imgs.length
         ? '<img class="eq-product-hero-img" id="eq-ph-main" src="' +
-          esc(imgs[0]) +
-          '" alt="' +
+          esc(imgs[0].src) +
+          '"' +
+          pdpImgFailAttr() +
+          pdpImgDataAttrs(x, heroRel) +
+          ' alt="' +
           esc(x.name) +
-          '" fetchpriority="high" decoding="async" data-eq-img-fail="1">'
+          '" fetchpriority="high" decoding="async">'
         : '<div class="eq-product-hero-img" style="display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--eq-text-subtle);min-height:240px;">Görsel yok</div>';
       var thumbs = "";
       if (imgs.length > 1) {
         thumbs =
           '<div class="eq-product-thumbs eq-product-thumbs--vertical">' +
           imgs
-            .map(function (src, i) {
+            .map(function (item, i) {
               return (
                 '<button type="button" data-src="' +
-                esc(src) +
+                esc(item.src) +
                 '" class="' +
                 (i === 0 ? "eq-product-thumb--active" : "") +
                 '" aria-label="Görsel ' +
                 (i + 1) +
                 '"><img src="' +
-                esc(src) +
-                '" alt="" loading="lazy" decoding="async" data-eq-img-fail="1"></button>'
+                esc(item.src) +
+                '"' +
+                pdpImgFailAttr() +
+                pdpImgDataAttrs(x, item.rel) +
+                ' alt="" loading="lazy" decoding="async"></button>'
               );
             })
             .join("") +
@@ -1450,6 +1495,28 @@
       catalogLoad
         .then(function (all) {
           var x = findRaw(all, qs);
+          if (!x && typeof window.EqustoShopCatalog.load === "function") {
+            return window.EqustoShopCatalog.load().then(function (full) {
+              var y = findRaw(full, qs);
+              if (y && y.dept) {
+                var canon = eqPathForProductObj(y);
+                if (canon) {
+                  var want = eqHtmlUrl(canon);
+                  if (want && location.pathname.replace(/\/+$/, "") !== canon.replace(/\/+$/, "")) {
+                    location.replace(want + (location.search || ""));
+                    return null;
+                  }
+                }
+              }
+              return { x: y, all: full };
+            });
+          }
+          return Promise.resolve({ x: x, all: all });
+        })
+        .then(function (pack) {
+          if (!pack) return;
+          var x = pack.x;
+          var all = pack.all;
           if (!x) {
             clearProductPageAccent();
             document.getElementById("eq-product-root").innerHTML =

@@ -21,6 +21,8 @@
     { tip: "char_izgara", dept: "pisirme", label: "Char Izgara", search: "char|kömür|komur|ocakbaşı|ocakbasi" },
     { tip: "salamander", dept: "pisirme", label: "Salamander", search: "salamander|gratin|üst ızgara|ust izgara" },
     { tip: "patates_dinlendirme", dept: "pisirme", label: "Patates Dinlendirme", search: "patates|dinlendirme|holding" },
+    { tip: "setustu-bain-marie", dept: "pisirme", label: "Set Üstü Bain Marie", slug: "setustu-bain-marie" },
+    { tip: "hareketli-bain-marie", dept: "pisirme", label: "Hareketli Bain Marie", slug: "hareketli-bain-marie" },
     { tip: "sanayi-ocaklari", dept: "pisirme", label: "Endüstriyel Ocaklar", slug: "sanayi-ocaklari" },
     { tip: "sanayi-tipi-izgaralar", dept: "pisirme", label: "Endüstriyel Izgaralar", slug: "sanayi-tipi-izgaralar" },
     { tip: "kuzineler", dept: "pisirme", label: "Kuzineler", slug: "kuzineler" },
@@ -146,7 +148,7 @@
     { tip: "gastronorm-kuvet", dept: "set-ustu-mutfak", label: "Gastronorm Küvetler", search: "gastronorm|gn küvet" },
     { tip: "pres-baski-tepsi", dept: "set-ustu-mutfak", label: "Pres Baskı Tepsiler", search: "pres baskı" },
     { tip: "tasima-ekipman", dept: "set-ustu-mutfak", label: "Taşıma Ekipmanları", search: "taşıma ekipman|servis arab" },
-    { tip: "bain-marie-kap", dept: "set-ustu-mutfak", label: "Bain Marie Kapları", search: "bain marie" },
+    { tip: "bain-marie-kap", dept: "set-ustu-mutfak", label: "Bain Marie Kapları", slug: "bain-marie-celik-saklama-kaplari" },
     { tip: "melamin-sunum", dept: "set-ustu-mutfak", label: "Melamin Sunum", search: "melamin sunum" },
     { tip: "karistirma-suzgec", dept: "set-ustu-mutfak", label: "Karıştırma Kapları", search: "karıştırma kap|süzgeç" },
     { tip: "pp-pc-gn", dept: "set-ustu-mutfak", label: "Polipropilen / Polikarbonat GN", search: "polipropilen|polikarbonat" },
@@ -367,10 +369,50 @@
   ];
 
   /** Departman vitrininde gösterme (JSON category farklı olsa bile). */
+  function isOztiBainMarieKapRow(u) {
+    var cat = productCategorySlug(u);
+    if (cat === "bain-marie-celik-saklama-kaplari") return true;
+    var hay = productHaystack(u);
+    if (/bain\s*marie\s*(kapak|kuvet|küvet)/.test(hay)) return true;
+    return false;
+  }
+
+  function isOztiBainMarieMachineRow(u) {
+    if (isOztiBainMarieKapRow(u)) return false;
+    var hay = productHaystack(u);
+    if (/kaplar\s*haric/.test(hay) && /bain\s*marie/.test(hay)) return true;
+    if (/set\s*ustu\s*bain\s*marie/.test(hay)) return true;
+    if (/hareketli\s*bain\s*marie/.test(hay)) return true;
+    var cat = productCategorySlug(u);
+    if (/elektrikli-bain|gazli-elektrikli-bain|hareketli-bain|setustu-bain/.test(cat)) return true;
+    return false;
+  }
+
+  /** Döner ocakları — pişirme dept (set üstü vitrininde gösterme) */
+  function isOztiSetUstuDonerRow(u) {
+    var hay = productHaystack(u);
+    if (/doner\s*ocag|doner\s*ocagi|doner\s*makin|doner\s*kebap/i.test(hay)) return true;
+    var cat = productCategorySlug(u);
+    if (/doner-makin|doner-ocak/.test(cat)) return true;
+    return false;
+  }
+
+  /** ARABALAR / et askı arabası — taşıma dept (set üstü vitrininde gösterme) */
+  function isOztiSetUstuArabaRow(u) {
+    var hay = productHaystack(u);
+    if (/et\s*aski\s*arab|tabak\s*tasima\s*arab|yuk\s*tasima\s*arab/.test(hay)) return true;
+    var cat = productCategorySlug(u);
+    if (cat === "arabalar" || /et-aski-arab|servis-arab|banket-arab/.test(cat)) return true;
+    return false;
+  }
+
   function excludeFromDeptView(dept, u) {
     if (dept === "sogutma" && isEtKiymaProduct(u)) return true;
     if (dept === "pisirme" && (isYardimciEkipmanProduct(u) || isYerIzgaraProduct(u))) return true;
     if (dept === "icecek" && isBuzMakinesiProduct(u)) return true;
+    if (dept === "set-ustu-mutfak" && isOztiBainMarieMachineRow(u)) return true;
+    if (dept === "set-ustu-mutfak" && isOztiSetUstuArabaRow(u)) return true;
+    if (dept === "set-ustu-mutfak" && isOztiSetUstuDonerRow(u)) return true;
     if (isServisTeshirProduct(u) && DEPT_PLP_IDS.indexOf(String(dept || "")) >= 0) return true;
     return false;
   }
@@ -475,6 +517,10 @@
   function tileMatchProduct(u, tile) {
     if (!tile) return false;
     var cat = productCategorySlug(u);
+
+    if (tile.id === "bain-marie-kap") {
+      return isOztiBainMarieKapRow(u);
+    }
 
     if (isYikamaProduct(u) && cat && YIKAMA_STRICT_CAT[cat]) {
       if (tile.id === "bulasik-makineleri") return !!BULASIK_MAKINE_GROUP[cat];
