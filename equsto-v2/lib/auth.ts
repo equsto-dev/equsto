@@ -6,7 +6,10 @@ export const DEV_ADMIN_BEARER = "equsto2025";
 
 /** .env satırından kopyalanan "token" veya 'token' tırnaklarını kaldırır */
 export function normalizeAdminBearer(raw: string): string {
-  let s = String(raw ?? "").trim();
+  let s = String(raw ?? "")
+    .replace(/^\uFEFF/, "")
+    .replace(/\r?\n/g, "")
+    .trim();
   if (
     (s.startsWith('"') && s.endsWith('"')) ||
     (s.startsWith("'") && s.endsWith("'"))

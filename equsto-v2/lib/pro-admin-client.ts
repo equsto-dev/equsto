@@ -84,16 +84,53 @@ export async function fetchUrunler(tokenOverride?: string): Promise<{
   };
 }
 
-/** Giriş öncesi — token geçerli mi? */
-export async function probeAdminToken(token: string): Promise<{
+export type BearerCheckResult = {
   ok: boolean;
   error?: string;
-}> {
-  const t = String(token || "").trim();
+  expectedLen?: number;
+  gotLen?: number;
+  hint?: string;
+};
+
+/** Giriş öncesi — token Vercel env ile eşleşiyor mu? */
+export async function probeAdminToken(token: string): Promise<BearerCheckResult> {
+  const t = normalizeProToken(token);
   if (!t) return { ok: false, error: "Token boş" };
-  const urun = await fetchUrunler(t);
-  if (!urun.error) return { ok: true };
-  return { ok: false, error: urun.error };
+
+  const res = await fetch("/api/yonetim/bearer-check", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ token: t }),
+  });
+  const body = await parseJson<{
+    success?: boolean;
+    ok?: boolean;
+    error?: string;
+    expectedLen?: number;
+    gotLen?: number;
+    hint?: string;
+    reason?: string;
+  }>(res);
+
+  if (!res.ok && body.error) {
+    return { ok: false, error: body.error };
+  }
+
+  if (body.ok === true) return { ok: true };
+
+  const msg =
+    body.hint ||
+    (body.expectedLen != null && body.gotLen != null
+      ? `Token eşleşmedi (${body.gotLen} karakter, sunucu ${body.expectedLen} bekliyor). Vercel → EQUSTO_ADMIN_BEARER → Production değerini göz ikonu ile kopyalayın.`
+      : "Token Vercel EQUSTO_ADMIN_BEARER ile aynı değil.");
+
+  return {
+    ok: false,
+    error: msg,
+    expectedLen: body.expectedLen,
+    gotLen: body.gotLen,
+    hint: body.hint,
+  };
 }
 
 export async function fetchSearchCheck(): Promise<SearchCheckResponse> {

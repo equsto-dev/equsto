@@ -37,10 +37,7 @@ export default function YonetimGirisPage() {
             }
             const probe = await probeAdminToken(token);
             if (!probe.ok) {
-              message.error(
-                probe.error ||
-                  "Token reddedildi. Vercel → EQUSTO_ADMIN_BEARER değerini kopyalayın (Eq_… müşteri kodu değil).",
-              );
+              message.error(probe.error || "Token reddedildi", 8);
               return;
             }
             setProToken(token);
