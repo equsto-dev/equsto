@@ -1,6 +1,11 @@
-# main → Vercel Production (equsto-v2 kökü)
-# Gerekli GitHub Secrets: VERCEL_TOKEN, VERCEL_ORG_ID, VERCEL_PROJECT_ID
-# Vercel → Settings → General → Root Directory = equsto-v2 (panelde de aynı olmalı)
+# İsteğe bağlı: GitHub Actions üzerinden Vercel Production deploy
+#
+# main push'ta otomatik deploy genelde Vercel → Project → Git entegrasyonu ile yapılır.
+# Bu workflow yalnızca aşağıdaki secret'lar tanımlıysa çalışır (yoksa skip → kırmızı X olmaz):
+#   VERCEL_TOKEN, VERCEL_ORG_ID, VERCEL_PROJECT_ID
+#
+# Token: https://vercel.com/account/tokens
+# ORG/PROJECT ID: `cd equsto-v2 && npx vercel link` sonrası .vercel/project.json
 
 name: Vercel Production
 
@@ -19,6 +24,10 @@ defaults:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    if: >-
+      ${{ secrets.VERCEL_TOKEN != '' &&
+          secrets.VERCEL_ORG_ID != '' &&
+          secrets.VERCEL_PROJECT_ID != '' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -41,3 +50,16 @@ jobs:
         env:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+  secrets-hint:
+    runs-on: ubuntu-latest
+    if: >-
+      ${{ secrets.VERCEL_TOKEN == '' ||
+          secrets.VERCEL_ORG_ID == '' ||
+          secrets.VERCEL_PROJECT_ID == '' }}
+    steps:
+      - name: Vercel GHA deploy atlandı
+        run: |
+          echo "VERCEL_TOKEN / VERCEL_ORG_ID / VERCEL_PROJECT_ID tanımlı değil."
+          echo "Canlı deploy: Vercel panel → Git → main branch (Root Directory: equsto-v2)."
+          echo "GHA ile deploy için: GitHub repo → Settings → Secrets and variables → Actions"
