@@ -19,8 +19,20 @@ async function resolveId(ctx: Ctx): Promise<string | null> {
   return id.join("/");
 }
 
+const DEFAULT_WHATSAPP =
+  process.env.EQUSTO_WHATSAPP_E164?.trim() || "905326842608";
+
 export async function GET(req: NextRequest, ctx: Ctx) {
   const segment = await resolveId(ctx);
+  if (req.nextUrl.searchParams.get("whatsapp") === "1") {
+    return adminOk({
+      phone: DEFAULT_WHATSAPP,
+      e164: DEFAULT_WHATSAPP,
+      prefill: "Merhaba, equsto.com üzerinden yazıyorum.",
+      label: "EQUSTO WhatsApp",
+    });
+  }
+
   if (segment) {
     return adminErr("Tek müşteri GET desteklenmiyor", 405);
   }

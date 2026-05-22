@@ -28,12 +28,7 @@ export async function GET(req: NextRequest) {
       quote: "POST /api/pfos?action=quote",
       calculate: "POST /api/pfos?action=calculate",
     },
-    legacyPaths: [
-      "/api/pfos/concepts",
-      "/api/pfos/konseptler",
-      "/api/pfos/quote",
-      "/api/pfos/calculate",
-    ],
+    admin: ["/api/urunler", "/api/market?kind=kur", "/api/musteriler?whatsapp=1"],
     example: { konsept: "coffee-shop", m2: 80 },
   });
 }
