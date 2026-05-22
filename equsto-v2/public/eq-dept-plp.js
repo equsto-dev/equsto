@@ -5,7 +5,7 @@
   'use strict';
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260522sogutma-v2';
+  var CATALOG_V = '20260522ozti-tl-kdv';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   var deptCoverImg = '';
 
@@ -45,10 +45,6 @@
   }
 
   function formatPrice(p, raw) {
-    if (raw && window.EqustoKurLive && typeof window.EqustoKurLive.priceForRow === 'function') {
-      var live = window.EqustoKurLive.priceForRow(raw);
-      if (live) return live;
-    }
     if (raw && Number(raw.fiyat_tl) > 0) {
       return (
         '₺' +
@@ -56,6 +52,12 @@
         ',00'
       );
     }
+    if (raw && window.EqustoKurLive && typeof window.EqustoKurLive.priceForRow === 'function') {
+      var live = window.EqustoKurLive.priceForRow(raw);
+      if (live && !/€/.test(live)) return live;
+    }
+    var s = String(p || '').split('\n')[0];
+    if (/€/.test(s)) return '';
     var n = parsePrice(p);
     if (!n) return '';
     return '₺' + n.toLocaleString('tr-TR', { maximumFractionDigits: 0 }) + ',00';

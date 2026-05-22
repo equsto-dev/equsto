@@ -40,8 +40,8 @@ function parseTcmbEurBanknoteSelling(xml: string): {
 }
 
 function fallbackRate(): number {
-  const n = Number(process.env.EQUSTO_EUR_TRY_FALLBACK ?? process.env.EQUSTO_EUR_TRY ?? "36");
-  return Number.isFinite(n) && n > 0 ? n : 36;
+  const n = Number(process.env.EQUSTO_EUR_TRY_FALLBACK ?? process.env.EQUSTO_EUR_TRY ?? "53.05");
+  return Number.isFinite(n) && n > 0 ? n : 53.05;
 }
 
 /** TCMB’den canlı çeker; hata durumunda EQUSTO_EUR_TRY_FALLBACK */

@@ -5,7 +5,7 @@
   "use strict";
 
   var LIMIT = 48;
-  var CATALOG_V = "20260520ozti-fiyat5250";
+  var CATALOG_V = "20260522ozti-tl-kdv";
   var lastRender = { hits: [], q: "", total: 0, err: null };
   var catalogImgById = null;
   var catalogImgInflight = null;

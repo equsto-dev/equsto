@@ -8,6 +8,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { fetchTcmbEurRate } from "./fetch-tcmb-kur.mjs";
 import {
   OZTI_BRAND,
   OZTI_BRAND_ID,
@@ -20,7 +21,7 @@ import {
   mapOztiYikamaCategory,
   normKod,
   oztiCatalogImageHref,
-  oztiPriceLabelEur,
+  oztiPriceLabelTl,
   oztiPricingFields,
   oztiPricingLines,
   pdfYikamaProductName,
@@ -32,6 +33,7 @@ const SRC = path.join(ROOT, "scripts/data/ozti-eslesme-2026.json");
 const PDF_ONLY = path.join(ROOT, "scripts/data/ozti-eslesme-pdf-only.json");
 const MAP = path.join(ROOT, "scripts/data/ozti-set-ustu-kategoriler.json");
 const DEPT_DIR = path.join(ROOT, "public/data/dept");
+const KUR_SNAPSHOT = path.join(ROOT, "scripts/data/tcmb-kur-snapshot.json");
 
 function loadImageManifest() {
   const p = path.join(ROOT, "public/images/catalog/ozti/_manifest.json");
@@ -40,22 +42,22 @@ function loadImageManifest() {
   return new Map(Object.entries(raw).map(([k, v]) => [normKod(k), v]));
 }
 
-function rowToVitrin(row, dept, category, pdfByKod, manifest) {
+function rowToVitrin(row, dept, category, pdfByKod, manifest, kurTry) {
   const kod = row.urun_kodu;
   const pdfEntry = pdfByKod.get(normKod(kod));
   let cat = category || slugify(row.kategori) || "diger";
   if (dept === "yikama") {
     cat = mapOztiYikamaCategory(row.urun_tanimi || row.name, kod, row.kategori);
   }
-  const enriched = buildSpecs(row, pdfEntry, cat, oztiPricingLines(row));
+  const pricing = oztiPricingFields(row, kurTry);
+  const enriched = buildSpecs(row, pdfEntry, cat, oztiPricingLines(row, kurTry));
   const imgHref = oztiCatalogImageHref(kod, manifest.get(normKod(kod)));
-  const pricing = oztiPricingFields(row);
 
   return {
     category: cat,
     brand: OZTI_BRAND,
     name: row.urun_tanimi || kod,
-    price: oztiPriceLabelEur(pricing),
+    price: pricing.price || oztiPriceLabelTl(pricing),
     specs: enriched.specs,
     aciklama: enriched.aciklama,
     teknik_ozellikler: enriched.teknik_ozellikler,
@@ -77,71 +79,95 @@ function rowToVitrin(row, dept, category, pdfByKod, manifest) {
   };
 }
 
-const cfg = JSON.parse(fs.readFileSync(MAP, "utf8"));
-const allow = cfg.kategori_leaf_allow.map((x) => String(x).toLocaleUpperCase("tr"));
-const rows = JSON.parse(fs.readFileSync(SRC, "utf8").replace(/\bNaN\b/g, "null"));
-const pdfByKod = loadPdfByKod();
-const manifest = loadImageManifest();
+async function main() {
+  const kurInfo = await fetchTcmbEurRate();
+  const kurTry = kurInfo.rate;
+  fs.mkdirSync(path.dirname(KUR_SNAPSHOT), { recursive: true });
+  fs.writeFileSync(
+    KUR_SNAPSHOT,
+    JSON.stringify(
+      { ...kurInfo, savedAt: new Date().toISOString() },
+      null,
+      2,
+    ),
+    "utf8",
+  );
+  console.log("[ozti-all-depts] TCMB EUR/TRY:", kurTry, kurInfo.fallback ? "(fallback)" : "");
 
-const byDept = new Map();
-let skippedKimyasal = 0;
-for (const row of rows) {
-  if (isOztiKimyasalExcluded(row)) {
-    skippedKimyasal += 1;
-    continue;
+  const cfg = JSON.parse(fs.readFileSync(MAP, "utf8"));
+  const allow = cfg.kategori_leaf_allow.map((x) => String(x).toLocaleUpperCase("tr"));
+  const rows = JSON.parse(fs.readFileSync(SRC, "utf8").replace(/\bNaN\b/g, "null"));
+  const pdfByKod = loadPdfByKod();
+  const manifest = loadImageManifest();
+
+  const byDept = new Map();
+  let skippedKimyasal = 0;
+  let pricedTl = 0;
+  for (const row of rows) {
+    if (isOztiKimyasalExcluded(row)) {
+      skippedKimyasal += 1;
+      continue;
+    }
+    const dept = mapOztiDept(row, allow);
+    const kod = row.urun_kodu;
+    const cat =
+      dept === "icecek"
+        ? mapOztiIcecekCategory(row.urun_tanimi, kod)
+        : slugify(row.kategori) || "diger";
+    if (!byDept.has(dept)) byDept.set(dept, []);
+    const vitrin = rowToVitrin(row, dept, cat, pdfByKod, manifest, kurTry);
+    if (vitrin.fiyat_tl > 0) pricedTl += 1;
+    byDept.get(dept).push(vitrin);
   }
-  const dept = mapOztiDept(row, allow);
-  const kod = row.urun_kodu;
-  const cat =
-    dept === "icecek"
-      ? mapOztiIcecekCategory(row.urun_tanimi, kod)
-      : slugify(row.kategori) || "diger";
-  if (!byDept.has(dept)) byDept.set(dept, []);
-  byDept.get(dept).push(rowToVitrin(row, dept, cat, pdfByKod, manifest));
-}
 
-/** Fiyatta yok, PDF katalogda olan 9710.* bulaşık makineleri */
-if (fs.existsSync(PDF_ONLY)) {
-  const pdfOnly = JSON.parse(fs.readFileSync(PDF_ONLY, "utf8"));
-  const existingKod = new Set(rows.map((r) => normKod(r.urun_kodu)));
-  if (!byDept.has("yikama")) byDept.set("yikama", []);
-  for (const p of pdfOnly) {
-    const kod = p.urun_kodu_norm || p.urun_kodu;
-    if (!kod || !/^9710\./i.test(kod) || existingKod.has(normKod(kod))) continue;
-    const pdfEntry = pdfByKod.get(normKod(kod));
-    const name = pdfYikamaProductName(kod, pdfEntry);
-    const synthetic = {
-      urun_kodu: kod,
-      urun_tanimi: name,
-      kategori: "BULAŞIK YIKAMA MAKİNELERİ",
-      kategori_yolu: ["YIKAMA EKİPMANLARI", "BULAŞIK YIKAMA MAKİNELERİ"],
-      liste_fiyati_eur: null,
-      bayi_iskonto: null,
-      pdf_eslesme: true,
-    };
-    const cat = mapOztiYikamaCategory(name, kod, synthetic.kategori);
-    byDept
-      .get("yikama")
-      .push(rowToVitrin(synthetic, "yikama", cat, pdfByKod, manifest));
+  if (fs.existsSync(PDF_ONLY)) {
+    const pdfOnly = JSON.parse(fs.readFileSync(PDF_ONLY, "utf8"));
+    const existingKod = new Set(rows.map((r) => normKod(r.urun_kodu)));
+    if (!byDept.has("yikama")) byDept.set("yikama", []);
+    for (const p of pdfOnly) {
+      const kod = p.urun_kodu_norm || p.urun_kodu;
+      if (!kod || !/^9710\./i.test(kod) || existingKod.has(normKod(kod))) continue;
+      const pdfEntry = pdfByKod.get(normKod(kod));
+      const name = pdfYikamaProductName(kod, pdfEntry);
+      const synthetic = {
+        urun_kodu: kod,
+        urun_tanimi: name,
+        kategori: "BULAŞIK YIKAMA MAKİNELERİ",
+        kategori_yolu: ["YIKAMA EKİPMANLARI", "BULAŞIK YIKAMA MAKİNELERİ"],
+        liste_fiyati_eur: null,
+        bayi_iskonto: null,
+        pdf_eslesme: true,
+      };
+      const cat = mapOztiYikamaCategory(name, kod, synthetic.kategori);
+      byDept
+        .get("yikama")
+        .push(rowToVitrin(synthetic, "yikama", cat, pdfByKod, manifest, kurTry));
+    }
+  }
+
+  const stats = {};
+  for (const [dept, oztiRows] of byDept) {
+    const file = path.join(DEPT_DIR, `${dept}.json`);
+    let kept = [];
+    if (fs.existsSync(file)) {
+      const existing = JSON.parse(fs.readFileSync(file, "utf8"));
+      kept = existing.filter((r) => !isOztiBrand(r));
+    }
+    const merged = [...kept, ...oztiRows];
+    fs.mkdirSync(DEPT_DIR, { recursive: true });
+    fs.writeFileSync(file, JSON.stringify(merged), "utf8");
+    const imgN = oztiRows.filter((r) => r.images?.length).length;
+    stats[dept] = { ozti: oztiRows.length, kept: kept.length, img: imgN };
+  }
+
+  console.log("[ozti-all-depts] toplam kaynak:", rows.length, "| kimyasal haric:", skippedKimyasal);
+  console.log("[ozti-all-depts] TL KDV dahil fiyatli:", pricedTl);
+  for (const [d, s] of Object.entries(stats).sort((a, b) => b[1].ozti - a[1].ozti)) {
+    console.log(`  ${d}: +${s.ozti} ozti (${s.img} gorsel), ${s.kept} diger marka korundu`);
   }
 }
 
-const stats = {};
-for (const [dept, oztiRows] of byDept) {
-  const file = path.join(DEPT_DIR, `${dept}.json`);
-  let kept = [];
-  if (fs.existsSync(file)) {
-    const existing = JSON.parse(fs.readFileSync(file, "utf8"));
-    kept = existing.filter((r) => !isOztiBrand(r));
-  }
-  const merged = [...kept, ...oztiRows];
-  fs.mkdirSync(DEPT_DIR, { recursive: true });
-  fs.writeFileSync(file, JSON.stringify(merged), "utf8");
-  const imgN = oztiRows.filter((r) => r.images?.length).length;
-  stats[dept] = { ozti: oztiRows.length, kept: kept.length, img: imgN };
-}
-
-console.log("[ozti-all-depts] toplam kaynak:", rows.length, "| kimyasal haric:", skippedKimyasal);
-for (const [d, s] of Object.entries(stats).sort((a, b) => b[1].ozti - a[1].ozti)) {
-  console.log(`  ${d}: +${s.ozti} ozti (${s.img} gorsel), ${s.kept} diger marka korundu`);
-}
+main().catch((e) => {
+  console.error(e);
+  process.exit(1);
+});

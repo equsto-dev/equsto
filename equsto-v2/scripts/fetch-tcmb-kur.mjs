@@ -6,8 +6,8 @@
 const TCMB_URL = "https://www.tcmb.gov.tr/kurlar/today.xml";
 
 function fallbackRate() {
-  const n = Number(process.env.EQUSTO_EUR_TRY_FALLBACK ?? process.env.EQUSTO_EUR_TRY ?? "36");
-  return Number.isFinite(n) && n > 0 ? n : 36;
+  const n = Number(process.env.EQUSTO_EUR_TRY_FALLBACK ?? process.env.EQUSTO_EUR_TRY ?? "53.05");
+  return Number.isFinite(n) && n > 0 ? n : 53.05;
 }
 
 function parseXml(xml) {

@@ -370,8 +370,23 @@ export function oztiIskontoYuzde(bayiIsk) {
   return Math.round(isk * 10000) / 100;
 }
 
-/** Fiyat listesi 2025: satış EUR = liste × (1 − bayi_iskonto). */
-export function oztiPricingFields(row) {
+export const OZTI_KDV_ORAN = 20;
+
+export function oztiFmtTry(n) {
+  const v = Math.round(Number(n));
+  if (!(v > 0)) return "";
+  return `₺${v.toLocaleString("tr-TR")},00`;
+}
+
+/** Mağaza etiketi — yalnızca KDV dahil TL (build + canlı kur güncellemesi). */
+export function oztiPriceLabelTl(pricing) {
+  const kdvDahil = Number(pricing?.fiyat_tl);
+  if (kdvDahil > 0) return `${oztiFmtTry(kdvDahil)} KDV dahil`;
+  return "";
+}
+
+/** Fiyat listesi 2025: satış EUR = liste × (1 − bayi_iskonto); TL = EUR × kur × 1,20. */
+export function oztiPricingFields(row, kurTry) {
   const liste = Number(row.liste_fiyati_eur ?? row.liste_fiyati) || 0;
   const bayi = Number(row.bayi_iskonto);
   const iskPct = oztiIskontoYuzde(bayi);
@@ -382,6 +397,16 @@ export function oztiPricingFields(row) {
   const satis =
     oztiSatisEur(liste, bayi) ??
     (Number(row.satis_fiyati_eur) > 0 ? Number(row.satis_fiyati_eur) : null);
+
+  const kur = Number(kurTry);
+  let fiyat_tl_net = null;
+  let fiyat_tl = null;
+  let price = "";
+  if (satis > 0 && kur > 0) {
+    fiyat_tl_net = Math.round(satis * kur);
+    fiyat_tl = Math.round(fiyat_tl_net * (1 + OZTI_KDV_ORAN / 100));
+    price = oztiPriceLabelTl({ fiyat_tl });
+  }
 
   return {
     liste_fiyati: liste || null,
@@ -398,35 +423,40 @@ export function oztiPricingFields(row) {
     para_birimi: row.para_birimi || "EUR",
     fiyat_kaynagi: "ozti-fiyat-listesi-2025",
     stok_no: row.urun_kodu,
+    kur_eur_try: kur > 0 ? kur : null,
+    fiyat_tl_net,
+    fiyat_tl,
+    kdv_oran: OZTI_KDV_ORAN,
+    price,
   };
 }
 
-/** PLP / JSON yedek — kur yüklenene kadar EUR satış etiketi */
+/** @deprecated Mağazada kullanılmaz — yalnızca specs satırı */
 export function oztiPriceLabelEur(pricing) {
-  const satis = Number(pricing?.satis_fiyati_eur);
-  if (!(satis > 0)) return "";
-  const eur = satis.toLocaleString("tr-TR", {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  });
-  return `€${eur} + KDV`;
+  return oztiPriceLabelTl(pricing);
 }
 
-export function oztiPricingLines(row) {
-  const px = oztiPricingFields(row);
+export function oztiPricingLines(row, kurTry) {
+  const px = oztiPricingFields(row, kurTry);
   const liste = px.liste_fiyati_eur;
   const satis = px.satis_fiyati_eur;
   const iskPct = px.iskonto_yuzde;
   const odeme = px.odeme_carpani;
-  return [
+  const lines = [
     `Ürün kodu: ${row.urun_kodu}`,
     `Liste fiyatı (EUR): ${liste ?? "—"}`,
     `Bayi iskonto: %${iskPct || "—"} (ödeme çarpanı ${odeme})`,
     `Equsto satış (EUR): ${satis ?? "—"}`,
     `Hesap: liste × (1 − bayi iskonto)`,
-    `Kategori: ${row.kategori || ""}`,
-    "Kaynak: Öztiryakiler Fiyat Listesi 2025",
   ];
+  if (px.fiyat_tl > 0) {
+    lines.push(
+      `Equsto satış (TL, KDV dahil): ${oztiFmtTry(px.fiyat_tl)}`,
+      px.kur_eur_try ? `Kur: 1 EUR = ${px.kur_eur_try} TRY (KDV %${px.kdv_oran})` : "",
+    );
+  }
+  lines.push(`Kategori: ${row.kategori || ""}`, "Kaynak: Öztiryakiler Fiyat Listesi 2025");
+  return lines;
 }
 
 export function isOztiBrand(row) {
@@ -453,13 +483,12 @@ export function oztiKodFromWebSlug(slug) {
 }
 
 /**
- * Vitrin `images[]` — web görselleri için CDN (canlıda /images/catalog/ozti yoksa çalışır).
- * PDF kırpımı (`p123/…`) yerel yol olarak kalır.
+ * Vitrin `images[]` — yalnızca repodaki yerel dosya yolları.
+ * ax-images CDN 1200×1200 katalog sayfası döndürdüğü için vitrinde kullanılmaz.
  */
-export function oztiCatalogImageHref(kod, localRel) {
+export function oztiCatalogImageHref(_kod, localRel) {
   const rel = String(localRel || "").replace(/\\/g, "/");
-  if (/^images\/catalog\/ozti\/p\d+\//i.test(rel)) return rel;
-  if (rel && /^images\/catalog\/ozti\/web\//i.test(rel)) return oztiAxImageUrl(kod);
-  if (rel) return rel;
+  if (/^images\/catalog\/ozti\//i.test(rel)) return rel;
+  if (rel && !/^https?:\/\//i.test(rel)) return rel;
   return "";
 }
