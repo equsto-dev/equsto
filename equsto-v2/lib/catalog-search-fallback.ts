@@ -1,5 +1,4 @@
-import fs from "node:fs";
-import path from "node:path";
+import { loadEkipmanlarJson } from "@/lib/catalog-json";
 import { deptSearchHints, expandSearchQueries } from "@/lib/search-synonyms";
 
 export type CatalogSearchHit = {
@@ -23,7 +22,7 @@ export type CatalogSearchHit = {
 
 type CatalogRow = Record<string, unknown>;
 
-let cache: { rows: CatalogRow[]; mtime: number } | null = null;
+let cache: { rows: CatalogRow[] } | null = null;
 
 function foldTr(s: string) {
   return String(s || "")
@@ -109,16 +108,16 @@ function rowToHit(row: CatalogRow): CatalogSearchHit | null {
   };
 }
 
-function loadCatalogRows(): CatalogRow[] {
-  const root = process.cwd();
-  const ekipPath = path.join(root, "public/data/ekipmanlar.json");
-  if (!fs.existsSync(ekipPath)) return [];
-  const stat = fs.statSync(ekipPath);
-  if (cache && cache.mtime === stat.mtimeMs) return cache.rows;
-  const rows = JSON.parse(fs.readFileSync(ekipPath, "utf8"));
-  const list = Array.isArray(rows) ? rows : [];
-  cache = { rows: list, mtime: stat.mtimeMs };
-  return list;
+async function loadCatalogRows(): Promise<CatalogRow[]> {
+  if (cache) return cache.rows;
+  try {
+    const rows = await loadEkipmanlarJson();
+    const list = Array.isArray(rows) ? rows : [];
+    cache = { rows: list };
+    return list;
+  } catch {
+    return [];
+  }
 }
 
 function rowHaystack(row: CatalogRow) {
@@ -168,7 +167,7 @@ function collectTokens(q: string) {
 }
 
 /** Meilisearch yokken veya eksik sonuçta — ekipmanlar.json üzerinde arama */
-export function fallbackCatalogSearch(q: string, limit: number) {
+export async function fallbackCatalogSearch(q: string, limit: number) {
   const query = String(q || "").trim();
   if (!query) return { hits: [] as CatalogSearchHit[], estimatedTotalHits: 0 };
 
@@ -177,7 +176,7 @@ export function fallbackCatalogSearch(q: string, limit: number) {
     return { hits: [] as CatalogSearchHit[], estimatedTotalHits: 0 };
   }
 
-  const rows = loadCatalogRows();
+  const rows = await loadCatalogRows();
   const byId = new Map<string, { hit: CatalogSearchHit; score: number }>();
 
   for (const row of rows) {

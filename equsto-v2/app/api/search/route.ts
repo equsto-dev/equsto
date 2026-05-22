@@ -73,7 +73,7 @@ export async function GET(req: NextRequest) {
 
   const client = getMeiliAdmin();
   if (!client) {
-    const fb = fallbackCatalogSearch(q, limit);
+    const fb = await fallbackCatalogSearch(q, limit);
     return Response.json({
       query: q,
       hits: fb.hits,
@@ -103,7 +103,7 @@ export async function GET(req: NextRequest) {
       }
     }
 
-    const fb = fallbackCatalogSearch(q, limit);
+    const fb = await fallbackCatalogSearch(q, limit);
     const merged = mergeSearchHits(meiliHits, fb.hits, limit);
 
     const usedFallback = merged.length > meiliHits.length || meiliHits.length === 0;
@@ -125,7 +125,7 @@ export async function GET(req: NextRequest) {
     const msg = e instanceof Error ? e.message : "Arama hatası";
     console.error("[api/search] Meilisearch:", msg);
 
-    const fb = fallbackCatalogSearch(q, limit);
+    const fb = await fallbackCatalogSearch(q, limit);
     if (fb.hits.length) {
       return Response.json({
         query: q,

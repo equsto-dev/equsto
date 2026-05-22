@@ -56,8 +56,33 @@ function geoRewrites() {
   ];
 }
 
+/** Vercel lambda 250MB — public görseller/katalog trace dışı (runtime CDN/fs fetch) */
+const traceExcludes = [
+  "./public/images/**",
+  "./public/assets/**",
+  "./public/**/*.html",
+  "./public/data/dept/**",
+  "./public/data/vitrum-drawings/**",
+  "./public/data/advanced-cuisine-clear-ice/**",
+  "./public/data/ekipmanlar.json",
+  "./public/data/ekipmanlar-full-archive.json",
+  "./public/data/*.json",
+  "./scripts/**",
+  "./**/*.md",
+  "./**/*.pdf",
+  "./**/*.py",
+];
+
 const nextConfig: NextConfig = {
-  serverExternalPackages: ["@prisma/client", "prisma"],
+  serverExternalPackages: [
+    "@prisma/client",
+    "prisma",
+    "meilisearch",
+  ],
+  outputFileTracingExcludes: {
+    "*": traceExcludes,
+    "/api/*": traceExcludes,
+  },
   transpilePackages: [
     "antd",
     "@ant-design/icons",

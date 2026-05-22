@@ -1,10 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import {
-  pfosGetConcepts,
-  pfosGetKonseptler,
-  pfosPostCalculate,
-  pfosPostQuote,
-} from "@/lib/pfos/api-handlers";
 
 export const runtime = "nodejs";
 
@@ -13,9 +7,11 @@ export async function GET(req: NextRequest) {
   const action = req.nextUrl.searchParams.get("action")?.trim() || "";
 
   if (action === "concepts") {
+    const { pfosGetConcepts } = await import("@/lib/pfos/api-handlers");
     return NextResponse.json(pfosGetConcepts(), { status: 200 });
   }
   if (action === "konseptler") {
+    const { pfosGetKonseptler } = await import("@/lib/pfos/api-handlers");
     return NextResponse.json({ success: true, konseptler: pfosGetKonseptler() });
   }
 
@@ -36,6 +32,7 @@ export async function GET(req: NextRequest) {
 /** POST /api/pfos?action=quote|calculate */
 export async function POST(req: NextRequest) {
   const action = req.nextUrl.searchParams.get("action")?.trim() || "quote";
+  const { pfosPostCalculate, pfosPostQuote } = await import("@/lib/pfos/api-handlers");
   if (action === "calculate") return pfosPostCalculate(req);
   return pfosPostQuote(req);
 }

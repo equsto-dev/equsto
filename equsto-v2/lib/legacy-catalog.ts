@@ -1,5 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import { loadEkipmanlarJson } from "@/lib/catalog-json";
 import { ecomRowToAdminUrun, type AdminUrunRow } from "@/lib/admin-urun";
 
 let cache: { mtimeMs: number; rows: AdminUrunRow[] } | null = null;
@@ -13,16 +14,29 @@ export async function legacyCatalogExists() {
     await fs.access(catalogPath());
     return true;
   } catch {
-    return false;
+    try {
+      await loadEkipmanlarJson();
+      return true;
+    } catch {
+      return false;
+    }
   }
 }
 
 export async function loadLegacyCatalogRows(): Promise<AdminUrunRow[]> {
   const file = catalogPath();
-  const stat = await fs.stat(file);
-  if (cache && cache.mtimeMs === stat.mtimeMs) return cache.rows;
+  let mtimeMs = Date.now();
+  let raw: unknown;
 
-  const raw = JSON.parse(await fs.readFile(file, "utf8")) as unknown;
+  try {
+    const stat = await fs.stat(file);
+    mtimeMs = stat.mtimeMs;
+    if (cache && cache.mtimeMs === mtimeMs) return cache.rows;
+    raw = JSON.parse(await fs.readFile(file, "utf8")) as unknown;
+  } catch {
+    if (cache) return cache.rows;
+    raw = await loadEkipmanlarJson();
+  }
   const items = Array.isArray(raw)
     ? raw
     : raw && typeof raw === "object" && Array.isArray((raw as { items?: unknown[] }).items)
@@ -30,7 +44,7 @@ export async function loadLegacyCatalogRows(): Promise<AdminUrunRow[]> {
       : [];
 
   const rows = items.map((row, i) => ecomRowToAdminUrun(row as Parameters<typeof ecomRowToAdminUrun>[0], i));
-  cache = { mtimeMs: stat.mtimeMs, rows };
+  cache = { mtimeMs, rows };
   return rows;
 }
 
