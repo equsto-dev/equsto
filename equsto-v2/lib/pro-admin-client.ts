@@ -326,7 +326,7 @@ export function ekipmanPreviewSrc(row: EkipmanRow): string {
 }
 
 export async function fetchEkipmanlarCatalog(): Promise<EkipmanRow[]> {
-  const res = await fetch("/data/ekipmanlar.json?v=20260521catalog", {
+  const res = await fetch("/data/ekipmanlar.json?v=20260521cay-v1", {
     cache: "no-store",
   });
   if (!res.ok) throw new Error("ekipmanlar.json yüklenemedi");

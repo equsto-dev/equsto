@@ -5,7 +5,7 @@
   "use strict";
 
   var LIMIT = 48;
-  var CATALOG_V = "20260524doner-v1";
+  var CATALOG_V = "20260521cay-v1";
   var lastRender = { hits: [], q: "", total: 0, err: null };
   var catalogImgById = null;
   var catalogImgInflight = null;
