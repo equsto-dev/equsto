@@ -62,7 +62,7 @@
       dept: "yikama",
       label: "Bulaşık Yıkama Makineleri",
       search:
-        "oky|ux10|fx10|amx|9710|bulaşık yıkama mak|bulasik yikama mak|bulaşık makinesi|bulasik makinesi|otomatik yikama|konveyorlu|hobart",
+        "oky|ux10|fx10|amx|9710|071t|075t|076r|076l|072r|077r|07al|07ar|obm|oby 50|oby 500|otomatik yikama|hobart",
     },
     { tip: "setalti-bulasik", dept: "yikama", label: "Setaltı Bulaşık Makineleri", search: "setaltı|set altı|tezgah altı|undercounter|075t|oby 50" },
     { tip: "giyotin-bulasik", dept: "yikama", label: "Giyotin Tip Bulaşık Makineleri", search: "giyotin|hood type|071t|obm" },
@@ -70,6 +70,24 @@
     { tip: "flight-bulasik", dept: "yikama", label: "Flight Tip Bulaşık Makineleri", search: "flight tip|07al|07ar|07bl|07br|07cl|07cr|07el|07er|07fl|07fr" },
     { tip: "tirnakli-bulasik", dept: "yikama", label: "Tırnaklı Bulaşık Makineleri", search: "tırnaklı|tirnakli|rack" },
     { tip: "kazan-yikama", dept: "yikama", label: "Kazan Yıkama Makineleri", search: "kazan yıkama|kettle|pot wash" },
+    {
+      tip: "bulasik-makinesi-giris-ve-cikis-tezgahlari",
+      dept: "yikama",
+      label: "Giriş / Çıkış Tezgahları (B.Y.M.)",
+      slug: "bulasik-makinesi-giris-ve-cikis-tezgahlari",
+    },
+    {
+      tip: "calisma-tezgahlari-bulasik-makinesi-tezgahlari",
+      dept: "yikama",
+      label: "Bulaşık Makinesi Üstü Tezgahlar",
+      slug: "calisma-tezgahlari-bulasik-makinesi-tezgahlari",
+    },
+    {
+      tip: "el-yikama-evyeleri",
+      dept: "yikama",
+      label: "El Yıkama Evyeleri",
+      slug: "el-yikama-evyeleri",
+    },
     { tip: "et-hazirlik", dept: "hazirlik", label: "Et Hazırlık Ekipmanları", search: "et hazırlık|et hazirlik|kasap" },
     { tip: "et_kutugu", dept: "hazirlik", label: "Et Kütüğü", search: "kütük|kutuk|butcher block" },
     { tip: "kiyma_makinesi", dept: "hazirlik", label: "Et Kıyma Makinesi", search: "kıyma|kiyma|mincer" },
@@ -376,7 +394,42 @@
     "tirnakli-bulasik": "tirnakli-bulasik",
     "kazan-yikama": "kazan-yikama",
     "bulasik-makineleri": "bulasik-makineleri",
+    "bardak-yikama": "bardak-yikama",
+    "bulasik-makinesi-giris-ve-cikis-tezgahlari": "bulasik-makinesi-giris-ve-cikis-tezgahlari",
+    "calisma-tezgahlari-bulasik-makinesi-tezgahlari": "calisma-tezgahlari-bulasik-makinesi-tezgahlari",
+    "calisma-tezgahlari-siyirma-hunili-bulasik-alma-tezgahi":
+      "calisma-tezgahlari-siyirma-hunili-bulasik-alma-tezgahi",
+    "el-yikama-evyeleri": "el-yikama-evyeleri",
   };
+
+  /** «Bulaşık Yıkama Makineleri» üst filtresi — tezgah/evye hariç makine tipleri */
+  var BULASIK_MAKINE_GROUP = {
+    "setalti-bulasik": true,
+    "giyotin-bulasik": true,
+    "konveyorlu-bulasik": true,
+    "flight-bulasik": true,
+    "tirnakli-bulasik": true,
+    "bulasik-makineleri": true,
+  };
+
+  var YIKAMA_STRICT_CAT = {
+    "bardak-yikama": true,
+    "setalti-bulasik": true,
+    "giyotin-bulasik": true,
+    "konveyorlu-bulasik": true,
+    "flight-bulasik": true,
+    "tirnakli-bulasik": true,
+    "kazan-yikama": true,
+    "bulasik-makineleri": true,
+    "bulasik-makinesi-giris-ve-cikis-tezgahlari": true,
+    "calisma-tezgahlari-bulasik-makinesi-tezgahlari": true,
+    "calisma-tezgahlari-siyirma-hunili-bulasik-alma-tezgahi": true,
+    "el-yikama-evyeleri": true,
+  };
+
+  function isYikamaProduct(u) {
+    return !!(u && u.raw && u.raw.dept === "yikama");
+  }
 
   var SET_USTU_CAT_ALIASES = {
     "servis-gere-leri": "servis-gerecleri",
@@ -422,6 +475,12 @@
   function tileMatchProduct(u, tile) {
     if (!tile) return false;
     var cat = productCategorySlug(u);
+
+    if (isYikamaProduct(u) && cat && YIKAMA_STRICT_CAT[cat]) {
+      if (tile.id === "bulasik-makineleri") return !!BULASIK_MAKINE_GROUP[cat];
+      return tile.id === cat;
+    }
+
     if (tile.id && cat === tile.id) return true;
     if (tile.slug === "doner-ocaklari-" && DONER_CAT_SLUGS[u.c]) return true;
     if (tile.slug && (cat === tile.slug || u.c === tile.slug || u.category === tile.slug)) return true;

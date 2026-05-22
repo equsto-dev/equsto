@@ -335,6 +335,32 @@
 
   window.equstoCatalogImagesWebRoot = catalogImagesWebRoot;
 
+  /** Öztiryakiler ürün kodu → ax-images CDN (PLP/PDP yedek). */
+  window.eqOztiAxImageFromSku = function (sku) {
+    var k = String(sku || "")
+      .replace(/\s+/g, "")
+      .toUpperCase();
+    if (!/^[0-9]{2,4}[A-Z0-9]*\.[A-Z0-9.\-]{2,}$/i.test(k)) return "";
+    return (
+      "https://oztiryakiler.com.tr/ax-images/images/" + encodeURIComponent(k) + ".jpg"
+    );
+  };
+
+  /** `images/catalog/ozti/web/ozti-8574-cm080-00.jpg` sentetik yol (eqProductImgSrc → CDN). */
+  window.eqOztiWebRelFromSku = function (sku) {
+    var k = String(sku || "")
+      .replace(/\s+/g, "")
+      .toUpperCase();
+    if (!/^[0-9]{2,4}[A-Z0-9]*\.[A-Z0-9.\-]{2,}$/i.test(k)) return "";
+    var slug =
+      "ozti-" +
+      k
+        .toLowerCase()
+        .replace(/\./g, "-")
+        .replace(/[^a-z0-9-]/g, "");
+    return "images/catalog/ozti/web/" + slug + ".jpg";
+  };
+
   /** `images/catalog/ozti/web/ozti-8574-cm080-00.jpg` → Öztiryakiler ax-images CDN. */
   function oztiAxImageFromWebPath(s) {
     var t = String(s || "")

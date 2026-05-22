@@ -5,7 +5,7 @@
   'use strict';
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260522ozti-tl-kdv';
+  var CATALOG_V = '20260522yikama-fix';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   var deptCoverImg = '';
 
@@ -247,13 +247,22 @@
       window.EqustoKurLive && typeof window.EqustoKurLive.priceForRow === 'function'
         ? window.EqustoKurLive.priceForRow(row)
         : String(row.price || '').split('\n')[0];
+    var imgRel = row.images && row.images[0] ? row.images[0] : '';
+    if (!imgRel && isOztiRow(row)) {
+      if (typeof window.eqOztiWebRelFromSku === 'function') {
+        imgRel = window.eqOztiWebRelFromSku(row.sku || row.model || row.urun_kodu) || imgRel;
+      }
+      if (!imgRel && typeof window.eqOztiAxImageFromSku === 'function') {
+        imgRel = window.eqOztiAxImageFromSku(row.sku || row.model || row.urun_kodu) || imgRel;
+      }
+    }
     return {
       c: row.category || '',
       b: b,
       fb: fb,
       n: n,
       p: priceLine,
-      img: row.images && row.images[0] ? imgSrc(row.images[0]) : '',
+      img: imgRel ? imgSrc(imgRel) : '',
       tip_kodu: row.tip_kodu || row.tipKodu || '',
       raw: row,
     };
