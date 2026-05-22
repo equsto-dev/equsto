@@ -46,23 +46,42 @@ async function parseJson<T>(res: Response): Promise<T> {
   return res.json() as Promise<T>;
 }
 
-export async function fetchUrunler(): Promise<{
+export async function fetchUrunler(tokenOverride?: string): Promise<{
   rows: AdminUrunApiRow[];
   source: string;
   error?: string;
+  status?: number;
 }> {
-  const token = getProToken();
+  const token = (tokenOverride ?? getProToken()).trim();
   const res = await fetch("/api/urunler", {
     headers: token ? { Authorization: `Bearer ${token}` } : {},
   });
   const body = await parseJson<UrunlerResponse>(res);
   if (!res.ok || body.error || body.success === false) {
-    return { rows: [], source: "", error: body.error || `HTTP ${res.status}` };
+    const err = body.error || `HTTP ${res.status}`;
+    return {
+      rows: [],
+      source: "",
+      error: res.status === 401 ? "Yetkisiz — token Vercel EQUSTO_ADMIN_BEARER ile aynı olmalı" : err,
+      status: res.status,
+    };
   }
   return {
     rows: body.data || [],
     source: body.source || "unknown",
   };
+}
+
+/** Giriş öncesi — token geçerli mi? */
+export async function probeAdminToken(token: string): Promise<{
+  ok: boolean;
+  error?: string;
+}> {
+  const t = String(token || "").trim();
+  if (!t) return { ok: false, error: "Token boş" };
+  const urun = await fetchUrunler(t);
+  if (!urun.error) return { ok: true };
+  return { ok: false, error: urun.error };
 }
 
 export async function fetchSearchCheck(): Promise<SearchCheckResponse> {

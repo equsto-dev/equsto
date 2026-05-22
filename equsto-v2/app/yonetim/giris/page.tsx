@@ -4,7 +4,7 @@ import { LockOutlined } from "@ant-design/icons";
 import { LoginForm, ProFormText } from "@ant-design/pro-components";
 import { App, Card, Typography } from "antd";
 import { useRouter } from "next/navigation";
-import { setProToken } from "@/lib/pro-admin-client";
+import { probeAdminToken, setProToken } from "@/lib/pro-admin-client";
 
 export default function YonetimGirisPage() {
   const router = useRouter();
@@ -33,6 +33,14 @@ export default function YonetimGirisPage() {
             const token = String(values.token || "").trim();
             if (!token) {
               message.error("Token girin");
+              return;
+            }
+            const probe = await probeAdminToken(token);
+            if (!probe.ok) {
+              message.error(
+                probe.error ||
+                  "Token reddedildi. Vercel → EQUSTO_ADMIN_BEARER değerini kopyalayın (Eq_… müşteri kodu değil).",
+              );
               return;
             }
             setProToken(token);

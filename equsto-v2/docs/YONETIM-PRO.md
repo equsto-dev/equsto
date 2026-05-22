@@ -25,7 +25,15 @@ npm run dev
 ```
 
 Tarayıcı: http://localhost:3000/yonetim/giris  
-Token (yerel): `equsto2025` — `.env.local` içindeki `EQUSTO_ADMIN_BEARER` ile aynı.
+
+**Token**
+
+| Ortam | Değer |
+|-------|--------|
+| Yerel (`npm run dev`) | `.env.local` → `EQUSTO_ADMIN_BEARER` veya boş token / `equsto2025` |
+| Canlı (equsto.com) | Vercel → Project → Settings → Environment Variables → **`EQUSTO_ADMIN_BEARER`** (Production) |
+
+`Eq_33100…` gibi kodlar **müşteri/oturum kodu değildir** — API Bearer değil. Kontrol listesinde `GET /api/urunler` **Yetkisiz** ise girişte yanlış token kayıtlıdır; `/yonetim/giris` → doğru Bearer → **Yeniden kontrol et**.
 
 ## Paketler
 

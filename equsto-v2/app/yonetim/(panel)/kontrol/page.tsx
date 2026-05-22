@@ -15,6 +15,7 @@ import {
   fetchSearchPreview,
   fetchUrunler,
   getProToken,
+  clearProToken,
 } from "@/lib/pro-admin-client";
 
 type CheckRow = {
@@ -47,7 +48,7 @@ export default function YonetimKontrolPage() {
       label: "GET /api/urunler",
       ok: !urun.error,
       detail: urun.error
-        ? urun.error
+        ? `${urun.error}${urun.status === 401 ? " — /yonetim/giris ile Vercel EQUSTO_ADMIN_BEARER girin" : ""}`
         : `${urun.rows.length} kayıt · kaynak: ${urun.source || "—"}`,
     });
 
@@ -155,6 +156,17 @@ export default function YonetimKontrolPage() {
           route planlanacak.
         </Typography.Paragraph>
         <Space wrap>
+          {checks.some((c) => c.key === "api-urunler" && !c.ok) && (
+            <Button
+              danger
+              onClick={() => {
+                clearProToken();
+                window.location.href = "/yonetim/giris";
+              }}
+            >
+              Yanlış token — yeniden giriş
+            </Button>
+          )}
           <Button type="primary" href="/yonetim/urunler">
             Ürünlere git
           </Button>
