@@ -8,15 +8,71 @@
   var API_KONSEPT = "/api/pfos/konseptler";
   var FALLBACK_KONSEPT = "/data/pfos-konseptler.json?v=20260522";
 
+  var KAT_DEPT = {
+    A: "kahve",
+    B: "pisirme",
+    C: "hazirlik",
+    D: "pastane",
+    E: "hazirlik",
+    F: "pisirme",
+    G: "sogutma",
+    H: "yikama",
+    X: "nakliye",
+  };
+
+  /**
+   * Soru formu (D.konsept / D.dukkan) → lib/pfos şablon slug
+   * Eşleşmeyen konseptlerde "" → /pfos eski zone + kural motoru
+   */
   function normKonseptSlug(konsept, dukkan) {
     var k = String(konsept || "").trim();
     var d = String(dukkan || "").trim();
     if (/pizzac/i.test(d) || /pizzac/i.test(k)) return "pizzaci";
-    if (/coffee|cafe|kafe/i.test(k) && !/restaurant/i.test(k)) return "coffee-shop";
-    if (/meyhane|meze/i.test(d) || /meyhane/i.test(k)) return "meyhane";
-    if (/kebap|ortadoğu|czn|burak/i.test(k) || /kebap|dönerci/i.test(d)) return "kebap-ortadogu";
-    if (/türk|turk|sütiş|sutis/i.test(k)) return "turk-restoran";
+    if (/dönerci|donerci/i.test(d)) return "kebap-ortadogu";
+    if (/coffee|^cafe$|kafe-kafeterya|kafe$/i.test(k) || (/^cafe$/i.test(d) && !/restaurant/i.test(k)))
+      return "coffee-shop";
+    if (/meyhane|meze|gurme şarküteri/i.test(d) || /meyhane/i.test(k)) return "meyhane";
+    if (/kebap|ortadoğu|ocakbaşı|ocakbasi/i.test(k) || /kebap/i.test(d)) return "kebap-ortadogu";
+    if (/türk|turk|sütiş|sutis|restaurant/i.test(k) && !/steakhouse/i.test(k) && !/pizzac/i.test(d))
+      return "turk-restoran";
+    if (d === "Pizzacı") return "pizzaci";
+    if (d === "Dönerci") return "kebap-ortadogu";
     return "";
+  }
+
+  /** POST /api/pfos/calculate yanıtı → pfos.html satır formatı */
+  function responseToRows(pfosData) {
+    if (!pfosData || !pfosData.kalemler) return [];
+    var kalemler = pfosData.kalemler;
+    var out = [];
+    for (var i = 0; i < kalemler.length; i++) {
+      var k = kalemler[i];
+      var u = k.urun;
+      var dept = KAT_DEPT[k.kategoriKodu] || "pisirme";
+      var marka = u ? u.marka + (u.model ? " — " + u.model : "") : "—";
+      var row = {
+        kod: u && u.sku ? String(u.sku) : "PFOS-" + (k.poz || k.urunTipi),
+        ad: u ? u.ad : k.isim,
+        marka: marka,
+        adet: Math.max(1, Number(k.adet) || 1),
+        elk: u && u.elektrikGucuKw != null ? Number(u.elektrikGucuKw) : Number(k.elektrikGucuKwHint) || 0,
+        gaz: u && u.gazGucuKw != null ? Number(u.gazGucuKw) : Number(k.gazGucuKwHint) || 0,
+        pct: 0,
+        pfDept: dept,
+        pfosPoz: k.poz,
+        pfosUrunTipi: k.urunTipi,
+        pfosTip: k.tip,
+        pfosKonsept: pfosData.konsept,
+        equstoPage: u && u.slug ? "/shop/" + dept + "?q=" + encodeURIComponent(u.slug) : "",
+      };
+      if (u && Number(u.fiyat) > 0) {
+        row.birim = Math.round(Number(u.fiyat));
+        row.fiyat_net = true;
+        row.fiyat_kaynak = "db";
+      }
+      out.push(row);
+    }
+    return out;
   }
 
   async function listKonseptler() {
@@ -57,5 +113,6 @@
     calculate: calculate,
     listKonseptler: listKonseptler,
     normKonseptSlug: normKonseptSlug,
+    responseToRows: responseToRows,
   };
 })();

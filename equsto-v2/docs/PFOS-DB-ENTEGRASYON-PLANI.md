@@ -19,6 +19,17 @@ Zip `files (1).zip` → `lib/pfos/core/rules/`:
 
 Tipler: `lib/pfos/core/engine-types.ts` — dışa aktarım: `lib/pfos/core/index.ts`.
 
+### `/pfos` sayfası (equsto.com/pfos)
+
+Şablonlar **soru formunun kendisini değil**, teklif motorunu tarif eder:
+
+1. Kullanıcı `/pfos` sihirbazında konsept + m² seçer.
+2. `EqustoPfosTemplateApi.normKonseptSlug(D.konsept, D.dukkan)` → `pizzaci`, `coffee-shop`, …
+3. Eşleşme varsa `POST /api/pfos/calculate` → kalemler + DB fiyat (`priceListTl`).
+4. Eşleşme yoksa (Steakhouse, Hotel, Pastane…) eski yol: `pfos-zone-catalog.json` + `pfos-rules.json`.
+
+Dosyalar: `public/pfos-template-api.js`, `buildEkipmanList()` önceliği `public/pfos.html`.
+
 ---
 
 ## 0. Bugünkü durum (baseline)

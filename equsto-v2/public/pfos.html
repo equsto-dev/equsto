@@ -132,7 +132,7 @@
 <script  src="/equsto-pricing-core.js"></script>
 <script  src="/pfos-pricing.js"></script>
 <script  src="/pfos-calc-engine.js?v=20260524pfos-proforma"></script>
-<script  src="/pfos-template-api.js?v=20260522fallback"></script>
+<script  src="/pfos-template-api.js?v=20260523pfos-flow"></script>
 <script  src="/pfos-location.js"></script>
 <script  src="/pfos-teklif-ui.js?v=20260524pfos-proforma"></script>
 <script  src="/pfos-teklif-excel.js"></script>
@@ -2805,8 +2805,43 @@ function pfosReplaceTezKey(list, key) {
   return list.concat([tez]);
 }
 
-// ── Ekipman listesi: pfos-rule-engine.js + EQ_ITEMS (admin kurallarıyla senkron) ─
+/** Konsept şablonu + DB (POST /api/pfos/calculate) — cache D._pfosTemplateRows */
+function pfosEnsureTemplateQuote() {
+  if (!window.EqustoPfosTemplateApi) return Promise.resolve(null);
+  const slug = EqustoPfosTemplateApi.normKonseptSlug(D.konsept, D.dukkan);
+  const m2 = Number(D.alan) || 0;
+  if (!slug || m2 < 20) {
+    D._pfosTemplateRows = null;
+    D._pfosTemplateMeta = null;
+    return Promise.resolve(null);
+  }
+  return EqustoPfosTemplateApi.calculate({
+    konsept: slug,
+    m2: m2,
+    fiyatStratejisi: 'orta',
+    sehir: D.sehir || D.il || undefined,
+  })
+    .then(function (data) {
+      D._pfosTemplateMeta = data;
+      const rows = EqustoPfosTemplateApi.responseToRows(data);
+      D._pfosTemplateRows = rows.length ? rows : null;
+      return D._pfosTemplateRows;
+    })
+    .catch(function (err) {
+      console.warn('[PFOS template]', err && err.message ? err.message : err);
+      D._pfosTemplateRows = null;
+      D._pfosTemplateMeta = null;
+      return null;
+    });
+}
+
+// ── Ekipman listesi: önce konsept şablonu, sonra zone katalog, sonra kural motoru ─
 function buildEkipmanList() {
+  if (D._pfosTemplateRows && D._pfosTemplateRows.length) {
+    let list = D._pfosTemplateRows.map((r) => Object.assign({}, r));
+    list = pfosEnrichRows(list);
+    return pfosPostProcessCatalogItems(list);
+  }
   const zones = typeof pfosGetZones === 'function' ? pfosGetZones() : [];
   const alan = Number(D.alan) || 0;
   if (
@@ -4649,13 +4684,21 @@ function setKarar(val,el){
   document.querySelectorAll('.dc').forEach(b=>b.classList.remove('sel'));
   el.classList.add('sel');
   done('s6'); hideFrom('s6a');
-  if(val==='teklif'){ reveal('s6a'); renderTeklifTablo(); }
-  else { renderEkipman(); reveal('s6b'); activate('s6b'); }
+  if(val==='teklif'){
+    reveal('s6a');
+    renderTeklifTablo();
+  } else {
+    Promise.all([pfosEnsureCatalogPool(), pfosEnsureTemplateQuote()]).then(function(){
+      renderEkipman();
+      reveal('s6b');
+      activate('s6b');
+    });
+  }
 }
 
 // ── Teklif Tablosu (dinamik — konsept + dükkan + pişirme bazlı) ──────────────
 function renderTeklifTablo(){
-  pfosEnsureCatalogPool().then(function(){
+  Promise.all([pfosEnsureCatalogPool(), pfosEnsureTemplateQuote()]).then(function () {
     renderTeklifTabloInner();
   });
 }
