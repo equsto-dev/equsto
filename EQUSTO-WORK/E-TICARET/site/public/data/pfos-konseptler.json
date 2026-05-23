@@ -1,0 +1,11 @@
+{
+  "success": true,
+  "source": "static-fallback",
+  "konseptler": [
+    { "slug": "coffee-shop", "label": "Coffee Shop", "kalemSayisi": 17 },
+    { "slug": "pizzaci", "label": "Pizzacı", "kalemSayisi": 32 },
+    { "slug": "turk-restoran", "label": "Türk Restoranı", "kalemSayisi": 35 },
+    { "slug": "meyhane", "label": "Meyhane / Mezeli Restoran", "kalemSayisi": 32 },
+    { "slug": "kebap-ortadogu", "label": "Kebap & Ortadoğu Mutfağı", "kalemSayisi": 46 }
+  ]
+}

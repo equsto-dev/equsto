@@ -1,0 +1,1338 @@
+{
+  "source": "Vitrum+Bars+Catalogue+2025+-+ENG.pdf",
+  "scrapedAt": "2026-05-14T12:37:22Z",
+  "count": 42,
+  "products": [
+    {
+      "page": 23,
+      "category": "Signature Bar",
+      "code": null,
+      "name": "The Manhattan",
+      "description": "En çok satan iki kişilik istasyonumuz; entegre dondurucu çekmeceleri, genişletilmiş damlama tepsisi, evye ve bardak saklama alanı ile.",
+      "totalDimensionsMm": "2200x650x900",
+      "dimensionsMm": [
+        {
+          "label": "Buz kuyusu",
+          "value": "770x407",
+          "labelEn": "Ice Well"
+        },
+        {
+          "label": "Evye",
+          "value": "290x370",
+          "labelEn": "Sink"
+        }
+      ],
+      "features": [
+        "Çıkarılabilir bölmeli yalıtımlı buz kuyusu",
+        "Şişeler için speed rack",
+        "Bulaşık makinesi sepeti saklama çekmeceleri",
+        "Nötr saklama çekmeceleri",
+        "Entegre bardak yıkayıcılı evye",
+        "4 çekmeceli entegre dondurucu",
+        "Pre-miks saklama bölmeleri",
+        "Ön çöp hazneli organik atık bölmesi"
+      ],
+      "image": "vitrum-drawings/hero_p23.png",
+      "drawing": "vitrum-drawings/tech_p23.png",
+      "descriptionEn": "Our bestselling two-person station, with integrated freezer draws, an extended drip tray, sink and glass storage.",
+      "featuresEn": [
+        "Insulated ice well with removable dividers",
+        "Speed rack for bottles",
+        "Dishwasher basket storage drawers",
+        "Neutral storage drawers",
+        "Sink with integrated glass rinser",
+        "Integrated freezer with 4 drawers",
+        "Pre-mix storage compartments",
+        "Organic waste compartment with front garbage hatch"
+      ],
+      "slug": "the-manhattan"
+    },
+    {
+      "page": 24,
+      "category": "Signature Bar",
+      "code": null,
+      "name": "The Boulverdier",
+      "description": "Artizan kokteyller için tasarlanmış iki kişilik istasyon; genişletilmiş damlama tepsisi bölümü ve çift evye.",
+      "totalDimensionsMm": "2740X650X900",
+      "dimensionsMm": [
+        {
+          "label": "Buz kuyusu",
+          "value": "770x407",
+          "labelEn": "Ice Well"
+        },
+        {
+          "label": "Evye",
+          "value": "330x500",
+          "labelEn": "Sink"
+        },
+        {
+          "label": "Evye",
+          "value": "290x370",
+          "labelEn": "Sink"
+        }
+      ],
+      "features": [
+        "Çıkarılabilir bölmeli yalıtımlı buz kuyusu",
+        "Şişeler için speed rack",
+        "Bulaşık makinesi sepeti saklama",
+        "Entegre bardak yıkayıcılı çift evye",
+        "4 çekmeceli gömme dondurucu",
+        "Ön çöp hazneli çift organik atık bölmesi",
+        "Pre-miks saklama bölmeleri"
+      ],
+      "image": "vitrum-drawings/hero_p24.png",
+      "drawing": "vitrum-drawings/tech_p24.png",
+      "descriptionEn": "A two-person station designed specifically for crafting artisanal cocktails, with an extended drip tray section and two sinks.",
+      "featuresEn": [
+        "Insulated ice well with removable dividers",
+        "Speed rack for bottles",
+        "Storage for dishwashing baskets",
+        "Dual sinks with integrated glass rinsers",
+        "Built-in freezer with 4 drawers",
+        "Dual organic waste compartments with front garbage hatch",
+        "Pre-mix storage compartments"
+      ],
+      "slug": "the-boulverdier"
+    },
+    {
+      "page": 25,
+      "category": "Signature Bar",
+      "code": null,
+      "name": "The Clover",
+      "description": "Genişletilmiş şişe speed rack’i, kolay erişimli garnitür tepsileri ve büyük yalıtımlı buz kuyusu ile imza bar modülümüz.",
+      "totalDimensionsMm": "1500x650x900",
+      "dimensionsMm": [
+        {
+          "label": "Buz kuyusu",
+          "value": "670x420",
+          "labelEn": "Ice Well"
+        },
+        {
+          "label": "Evye",
+          "value": "290x370",
+          "labelEn": "Sink"
+        }
+      ],
+      "features": [
+        "4 adet GN 1/9 tepsili bar garnitür bölmesi",
+        "Entegre bardak yıkayıcılı evye",
+        "Şişe saklama için dört nötr çekmece",
+        "Ön çöp hazneli organik atık bölmesi"
+      ],
+      "image": "vitrum-drawings/hero_p25.png",
+      "drawing": "vitrum-drawings/tech_p25.png",
+      "descriptionEn": "Our signature bar module with an extended bottle speed rack, easy access condiment trays, and a large insulated ice well.",
+      "featuresEn": [
+        "Bar condiment compartment with 4 GN 1/9 trays",
+        "Sink with integrated glass rinser",
+        "Four neutral drawers for bottle storage",
+        "Organic waste compartment with front garbage hatch"
+      ],
+      "slug": "the-clover"
+    },
+    {
+      "page": 26,
+      "category": "Bar Module",
+      "code": "PL/BM.F.3.1-18",
+      "name": "Bar Module",
+      "description": "Entegre dondurucu çekmeceleri, evye ve pratik bardak saklama alanına sahip bar modülü.",
+      "totalDimensionsMm": "1800x650x900",
+      "dimensionsMm": [
+        {
+          "label": "Buz kuyusu",
+          "value": "670x407",
+          "labelEn": "Ice Well"
+        },
+        {
+          "label": "Evye",
+          "value": "290x370",
+          "labelEn": "Sink"
+        }
+      ],
+      "features": [
+        "Çıkarılabilir bölmeli yalıtımlı buz kuyusu",
+        "Şişeler için speed rack",
+        "Ön çöp hazneli organik atık bölmesi",
+        "2 çekmecede bulaşık makinesi sepeti saklama",
+        "İki nötr saklama çekmecesi",
+        "Entegre bardak yıkayıcılı evye",
+        "2 çekmeceli entegre dondurucu"
+      ],
+      "image": "vitrum-drawings/hero_p26.png",
+      "drawing": "vitrum-drawings/tech_p26.png",
+      "descriptionEn": "A bar module featuring integrated freezer drawers, a sink, and convenient glass storage.",
+      "featuresEn": [
+        "Insulated ice well with removable dividers",
+        "Speed rack for bottles",
+        "Organic waste compartment with front garbage hatch",
+        "Dishwasher basket storage in 2 drawers",
+        "Two neutral storage drawers",
+        "Sink with integrated glass rinser",
+        "Integrated freezer with 2 drawers"
+      ],
+      "slug": "pl-bm-f-3-1-18"
+    },
+    {
+      "page": 27,
+      "category": "Bar Module",
+      "code": "PL/BM.F.4.2-22",
+      "name": "Bar Module",
+      "description": "Entegre bardak saklama ve tezgah altı bulaşık makinesi ile bulaşık yıkama modülü; hızlı ve verimli temizlik.",
+      "totalDimensionsMm": "2200x650x900",
+      "dimensionsMm": [
+        {
+          "label": "Buz kuyusu",
+          "value": "770x545",
+          "labelEn": "Ice Well"
+        },
+        {
+          "label": "Evye",
+          "value": "290x370",
+          "labelEn": "Sink"
+        }
+      ],
+      "features": [
+        "4 çekmeceli gömme dondurucu",
+        "Pre-miks saklama bölmeleri",
+        "Ön çöp hazneli organik atık bölmesi",
+        "Bulaşık makinesi sepeti saklama çekmeceleri",
+        "Ek nötr saklama çekmeceleri",
+        "Çıkarılabilir bölmeli yalıtımlı buz kuyusu",
+        "Entegre bardak yıkayıcılı evye"
+      ],
+      "image": "vitrum-drawings/hero_p27.png",
+      "drawing": "vitrum-drawings/tech_p27.png",
+      "descriptionEn": "A dishwasher module with integrated glass storage and an under-counter dishwashing machine for streamlined and efficient cleaning.",
+      "featuresEn": [
+        "Built-in freezer with 4 drawers",
+        "Pre-mix storage compartments",
+        "Organic waste compartment with front garbage hatch",
+        "Storage drawers for dishwashing baskets",
+        "Additional neutral storage drawers",
+        "Insulated ice well with removable dividers",
+        "Sink with integrated glass rinser"
+      ],
+      "slug": "pl-bm-f-4-2-22"
+    },
+    {
+      "page": 28,
+      "category": "Bar Module",
+      "code": "PL/BM.F.4.3-22",
+      "name": "Bar Module",
+      "description": "Entegre dondurucu çekmeceleri, evye, bardak saklama ve genişletilmiş şişe speed rack’ine sahip bar modülü.",
+      "totalDimensionsMm": "2200x650x900",
+      "dimensionsMm": [
+        {
+          "label": "Buz kuyusu",
+          "value": "770x407",
+          "labelEn": "Ice Well"
+        },
+        {
+          "label": "Evye",
+          "value": "290x370",
+          "labelEn": "Sink"
+        }
+      ],
+      "features": [
+        "4 çekmeceli entegre dondurucu",
+        "Genişletilmiş şişe speed rack'i",
+        "Storage for dishwasher baskets",
+        "Ek saklama çekmeceleri",
+        "Pre-miks saklama bölmeleri",
+        "Ön çöp hazneli organik atık bölmesi",
+        "Çıkarılabilir bölmeli yalıtımlı buz kuyusu",
+        "Entegre bardak yıkayıcılı evye"
+      ],
+      "image": "vitrum-drawings/hero_p28.png",
+      "drawing": "vitrum-drawings/tech_p28.png",
+      "descriptionEn": "A bar module with integrated freezer drawers, a sink, and glass storage, featuring an extended speed rack for efficient bottle storage.",
+      "featuresEn": [
+        "Integrated freezer with 4 drawers",
+        "Extended speed rack for bottles",
+        "Storage for dishwasher baskets",
+        "Additional storage drawers",
+        "Pre-mix storage compartments",
+        "Organic waste compartment with front garbage hatch",
+        "Insulated ice well with removable dividers",
+        "Sink with integrated glass rinser"
+      ],
+      "slug": "pl-bm-f-4-3-22"
+    },
+    {
+      "page": 29,
+      "category": "Bar Module",
+      "code": "PL/BM.F.1-08",
+      "name": "Bar Module",
+      "description": "Entegre dondurucu çekmecesi ve hızlı erişimli şişe speed rack’i ile bar modülü.",
+      "totalDimensionsMm": "860x650x900",
+      "dimensionsMm": [
+        {
+          "label": "Buz kuyusu",
+          "value": "760x435",
+          "labelEn": "Ice Well"
+        }
+      ],
+      "features": [
+        "Çıkarılabilir bölmeli yalıtımlı buz kuyusu",
+        "Şişeler için speed rack",
+        "Tek çekmeceli entegre dondurucu",
+        "Dayanıklı paslanmaz çelik gövde"
+      ],
+      "image": "vitrum-drawings/hero_p29.png",
+      "drawing": "vitrum-drawings/tech_p29.png",
+      "descriptionEn": "A bar module equipped with an integrated freezer drawer and a quick-access speed rack for efficient bottle storage.",
+      "featuresEn": [
+        "Insulated ice well with removable dividers",
+        "Speed rack for bottles",
+        "Integrated freezer with single drawer",
+        "Durable stainless steel construction"
+      ],
+      "slug": "pl-bm-f-1-08"
+    },
+    {
+      "page": 30,
+      "category": "Bar Module",
+      "code": "PL/BM.F.2-12",
+      "name": "Bar Module",
+      "description": "Entegre dondurucu çekmeceleri ve hızlı erişimli şişe speed rack’i ile donatılmış bar modülü.",
+      "totalDimensionsMm": "1260x650x900",
+      "dimensionsMm": [
+        {
+          "label": "Buz kuyusu",
+          "value": "1160x435",
+          "labelEn": "Ice Well"
+        }
+      ],
+      "features": [
+        "Çıkarılabilir bölmeli yalıtımlı buz kuyusu",
+        "Şişeler için speed rack",
+        "4 çekmeceli entegre dondurucu",
+        "Dayanıklı paslanmaz çelik gövde"
+      ],
+      "image": "vitrum-drawings/hero_p30.png",
+      "drawing": "vitrum-drawings/tech_p30.png",
+      "descriptionEn": "A bar module equipped with integrated freezer drawers and a fast-access bottle speed rack.",
+      "featuresEn": [
+        "Insulated ice well with removable dividers",
+        "Speed rack for bottles",
+        "Integrated freezer with 4 drawers",
+        "Durable stainless steel construction"
+      ],
+      "slug": "pl-bm-f-2-12"
+    },
+    {
+      "page": 31,
+      "category": "Bar Module",
+      "code": "PL/BM.F.3-1-12",
+      "name": "Bar Module",
+      "description": "Entegre soğutma çekmeceleri ve hızlı erişimli şişe speed rack’ine sahip bar istasyonu.",
+      "totalDimensionsMm": "1260x650x900",
+      "dimensionsMm": [
+        {
+          "label": "Buz kuyusu",
+          "value": "770x545",
+          "labelEn": "Ice Well"
+        }
+      ],
+      "features": [
+        "Çıkarılabilir bölmeli yalıtımlı buz kuyusu",
+        "Şişeler için speed rack",
+        "2 çekmeceli entegre dondurucu",
+        "Dayanıklı paslanmaz çelik gövde"
+      ],
+      "image": "vitrum-drawings/hero_p31.png",
+      "drawing": "vitrum-drawings/tech_p31.png",
+      "descriptionEn": "A bar station with integrated cooling drawers and a speed rack for convenient and quick-access bottle storage.",
+      "featuresEn": [
+        "Insulated ice well with removable dividers",
+        "Speed rack for bottles",
+        "Integrated freezer with 2 drawers",
+        "Durable stainless steel construction"
+      ],
+      "slug": "pl-bm-f-3-1-12"
+    },
+    {
+      "page": 32,
+      "category": "Bar Module",
+      "code": "PL/BM.F.3-2-12",
+      "name": "Bar Module",
+      "description": "Entegre bardak saklama ve tezgah altı bulaşık makinesi ile bulaşık yıkama modülü.",
+      "totalDimensionsMm": "1260x650x900",
+      "dimensionsMm": [
+        {
+          "label": "Buz kuyusu",
+          "value": "770x407",
+          "labelEn": "Ice Well"
+        }
+      ],
+      "features": [
+        "Çıkarılabilir bölmeli yalıtımlı buz kuyusu",
+        "Genişletilmiş şişe speed rack'i",
+        "2 çekmeceli entegre dondurucu",
+        "Dayanıklı paslanmaz çelik gövde"
+      ],
+      "image": "vitrum-drawings/hero_p32.png",
+      "drawing": "vitrum-drawings/tech_p32.png",
+      "descriptionEn": "A dishwasher module with integrated glass storage and an under-counter dishwashing machine for streamlined and efficient cleaning.",
+      "featuresEn": [
+        "Insulated ice well with removable dividers",
+        "Extended speed rack for bottles",
+        "Integrated freezer with 2 drawers",
+        "Durable stainless steel construction"
+      ],
+      "slug": "pl-bm-f-3-2-12"
+    },
+    {
+      "page": 33,
+      "category": "Bar Module",
+      "code": "PL/BM.F.3-3-12",
+      "name": "Bar Module",
+      "description": "Entegre soğutma çekmeceleri ve genişletilmiş speed rack ile bar istasyonu.",
+      "totalDimensionsMm": "1260x650x900",
+      "dimensionsMm": [
+        {
+          "label": "Çift buz kuyusu",
+          "value": "400x407",
+          "labelEn": "Two Ice Well"
+        }
+      ],
+      "features": [
+        "Çıkarılabilir bölmeli çift yalıtımlı buz kuyusu",
+        "Genişletilmiş şişe speed rack'i",
+        "2 çekmeceli entegre dondurucu",
+        "Dayanıklı paslanmaz çelik gövde"
+      ],
+      "image": "vitrum-drawings/hero_p33.png",
+      "drawing": "vitrum-drawings/tech_p33.png",
+      "descriptionEn": "A bar station with integrated cooling drawers and expanded speed rack for convenient and quick-access bottle storage.",
+      "featuresEn": [
+        "Dual insulated ice wells with removable dividers",
+        "Extended speed rack for bottles",
+        "Integrated freezer with 2 drawers",
+        "Durable stainless steel construction"
+      ],
+      "slug": "pl-bm-f-3-3-12"
+    },
+    {
+      "page": 34,
+      "category": "Bar Module",
+      "code": "PL/BM.F.4-16",
+      "name": "Bar Module",
+      "description": "Entegre dondurucu çekmeceleri ve genişletilmiş speed rack ile bar istasyonu.",
+      "totalDimensionsMm": "1660x650x900",
+      "dimensionsMm": [
+        {
+          "label": "Çift buz kuyusu",
+          "value": "530x545",
+          "labelEn": "Two Ice Well"
+        }
+      ],
+      "features": [
+        "Çıkarılabilir bölmeli çift yalıtımlı buz kuyusu",
+        "Genişletilmiş şişe speed rack'i",
+        "6 çekmeceli entegre dondurucu",
+        "Dayanıklı paslanmaz çelik gövde"
+      ],
+      "image": "vitrum-drawings/hero_p34.png",
+      "drawing": "vitrum-drawings/tech_p34.png",
+      "descriptionEn": "A bar station equipped with integrated freezer drawers and an extended speed rack for quick-access bottle storage.",
+      "featuresEn": [
+        "Dual insulated ice wells with removable dividers",
+        "Expanded speed rack for bottles",
+        "Integrated freezer with 6 drawers",
+        "Durable stainless steel construction"
+      ],
+      "slug": "pl-bm-f-4-16"
+    },
+    {
+      "page": 35,
+      "category": "Bar Module",
+      "code": "SL/BM-10",
+      "name": "Bar Module",
+      "description": "Yalıtımlı buz kuyusu ve iki nötr saklama çekmeceli bar modülü.",
+      "totalDimensionsMm": "1000x650x900",
+      "dimensionsMm": [
+        {
+          "label": "Buz kuyusu",
+          "value": "880x230",
+          "labelEn": "Ice well"
+        }
+      ],
+      "features": [
+        "Çıkarılabilir bölmeli yalıtımlı buz kuyusu",
+        "Nötr sıcaklıkta şişe saklama için iki çekmece",
+        "8 adet GN 1/9 tepsili garnitür bölmesi",
+        "Ön montaj şişe speed rack'i"
+      ],
+      "image": "vitrum-drawings/hero_p35.png",
+      "drawing": "vitrum-drawings/tech_p35.png",
+      "descriptionEn": "A bar module equipped with an insulated ice well and two neutral drawers for convenient storage.",
+      "featuresEn": [
+        "Insulated ice well with removable dividers",
+        "Two drawers for neutral temperature bottle storage",
+        "Garnish compartment with 8 GN 1/9 trays",
+        "Front-mounted speed rack for bottles"
+      ],
+      "slug": "sl-bm-10"
+    },
+    {
+      "page": 36,
+      "category": "Bar Module",
+      "code": "SL/BM-10.S",
+      "name": "Bar Module",
+      "description": "Yalıtımlı buz kuyusu, birden fazla nötr çekmece ve fonksiyonel evye ile bar modülü.",
+      "totalDimensionsMm": "1000x650x900",
+      "dimensionsMm": [
+        {
+          "label": "Buz kuyusu",
+          "value": "555x230",
+          "labelEn": "Ice well"
+        },
+        {
+          "label": "Evye",
+          "value": "260x340",
+          "labelEn": "Sink"
+        }
+      ],
+      "features": [
+        "Çıkarılabilir bölmeli yalıtımlı buz kuyusu",
+        "Şişe saklama için nötr sıcaklık çekmecesi",
+        "5 adet GN 1/9 tepsili garnitür bölmesi",
+        "Entegre organik atık bölmeli evye ünitesi",
+        "Ön montaj şişe speed rack'i"
+      ],
+      "image": "vitrum-drawings/hero_p36.png",
+      "drawing": "vitrum-drawings/tech_p36.png",
+      "descriptionEn": "A bar module equipped with an insulated ice well, multiple neutral drawers and a functional sink.",
+      "featuresEn": [
+        "Insulated ice well with removable dividers",
+        "Neutral temperature drawer for bottle storage",
+        "Garnish compartment with 5 GN 1/9 trays",
+        "Sink unit with integrated organic waste compartment",
+        "Front-mounted speedrack for bottles"
+      ],
+      "slug": "sl-bm-10-s"
+    },
+    {
+      "page": 37,
+      "category": "Sink Module",
+      "code": "SL/SM-04",
+      "name": "Sink Module",
+      "description": "Organik atık bertarafı için özel bölümlü evye modülü.",
+      "totalDimensionsMm": "400x650x900",
+      "dimensionsMm": [
+        {
+          "label": "Evye",
+          "value": "260x340",
+          "labelEn": "Sink"
+        }
+      ],
+      "features": [
+        "Entegre bardak yıkayıcılı evye",
+        "Ön çöp hazneli organik atık bölmesi",
+        "Kayar plastik kesme tahtası"
+      ],
+      "image": "vitrum-drawings/hero_p37.png",
+      "drawing": "vitrum-drawings/tech_p37.png",
+      "descriptionEn": "A sink module featuring a dedicated compartment for organic waste disposal.",
+      "featuresEn": [
+        "Sink with integrated glass rinser",
+        "Organic waste compartment with front garbage hatch",
+        "Sliding plastic cutting board"
+      ],
+      "slug": "sl-sm-04"
+    },
+    {
+      "page": 38,
+      "category": "Bar Module",
+      "code": "BL/BM-14",
+      "name": "Bar Module",
+      "description": "Yalıtımlı buz kuyusu, şişe speed rack’i ve akıcı servis için evye içeren bar modülü.",
+      "totalDimensionsMm": "1400x740x900",
+      "dimensionsMm": [
+        {
+          "label": "Buz kuyusu",
+          "value": "915x350",
+          "labelEn": "Ice Well"
+        },
+        {
+          "label": "Evye",
+          "value": "260x340",
+          "labelEn": "Sink"
+        }
+      ],
+      "features": [
+        "Çıkarılabilir bölmeli yalıtımlı buz kuyusu",
+        "Ön montaj çift şişe speed rack'i",
+        "Ek depolama için düz alt raf",
+        "Blender için ön montaj platformu"
+      ],
+      "image": "vitrum-drawings/hero_p38.png",
+      "drawing": "vitrum-drawings/tech_p38.png",
+      "descriptionEn": "A bar module featuring an insulated ice well, speed rack for bottles, and a sink for streamlined service.",
+      "featuresEn": [
+        "Insulated ice well with removable dividers",
+        "Front-mounted double speed rack for bottles",
+        "Smooth under shelf for additional storage",
+        "Front-mounted platform for blender convenience"
+      ],
+      "slug": "bl-bm-14"
+    },
+    {
+      "page": 39,
+      "category": "Bar Module",
+      "code": "BL/BM-16",
+      "name": "Bar Module",
+      "description": "İki yalıtımlı buz kuyusu, şişe speed rack’i ve evye ile genişletilmiş bar modülü.",
+      "totalDimensionsMm": "1600x740x900",
+      "dimensionsMm": [
+        {
+          "label": "Evye",
+          "value": "260x340",
+          "labelEn": "Sink"
+        }
+      ],
+      "features": [
+        "Çıkarılabilir bölmeli çift yalıtımlı buz kuyusu",
+        "Ön montaj çift şişe speed rack'i",
+        "Alt raf depolama",
+        "Ön montaj blender platformu"
+      ],
+      "image": "vitrum-drawings/hero_p39.png",
+      "drawing": "vitrum-drawings/tech_p39.png",
+      "descriptionEn": "An extended bar module featuring two insulated ice wells, a bottle speed rack, and a sink for efficient service.",
+      "featuresEn": [
+        "Dual insulated ice wells with removable dividers",
+        "Front-mounted double speed rack for bottles",
+        "Smooth under-shelf storage",
+        "Front-mounted blender platform"
+      ],
+      "slug": "bl-bm-16"
+    },
+    {
+      "page": 40,
+      "category": "Mobile Bar Module",
+      "code": "ML/BM.3-19",
+      "name": "Mobile Bar Module",
+      "description": "Kurulum ve sökümü hızlı olan, kolay montajlı etkinlik bar istasyonu.",
+      "totalDimensionsMm": "1900x777x1105",
+      "dimensionsMm": [],
+      "features": [
+        "Çıkarılabilir bölmeli yalıtımlı buz kuyusu",
+        "Ön montaj şişe speed rack'i",
+        "Düz alt raf",
+        "Evye ünitesi"
+      ],
+      "image": "vitrum-drawings/hero_p40.png",
+      "drawing": "vitrum-drawings/tech_p40.png",
+      "descriptionEn": "An event bar station that features easy-assemble construction for efficient setup and breakdown.",
+      "featuresEn": [
+        "Insulated ice well with removable dividers",
+        "Front-mounted speed rack for bottles",
+        "Smooth under shelf",
+        "Sink unit"
+      ],
+      "slug": "ml-bm-3-19"
+    },
+    {
+      "page": 41,
+      "category": "Mobile Bar Module",
+      "code": "ML/BM.7-31",
+      "name": "Mobile Bar Module",
+      "description": "Entegre dondurucu çekmeceleri ve genişletilmiş speed rack ile bar istasyonu.",
+      "totalDimensionsMm": "3170x773x1106",
+      "dimensionsMm": [],
+      "features": [
+        "Çıkarılabilir bölmeli çift yalıtımlı buz kuyusu",
+        "Ön montaj şişe speed rack'i",
+        "Ek depolama için alt raf",
+        "Entegre evye ünitesi"
+      ],
+      "image": "vitrum-drawings/hero_p41.png",
+      "drawing": "vitrum-drawings/tech_p41.png",
+      "descriptionEn": "A bar station equipped with integrated freezer drawers and an extended speed rack for quick-access bottle storage.",
+      "featuresEn": [
+        "Dual insulated ice wells with removable dividers",
+        "Front-mounted bottle speed rack",
+        "Smooth undershelf for additional storage",
+        "Integrated sink unit"
+      ],
+      "slug": "ml-bm-7-31"
+    },
+    {
+      "page": 42,
+      "category": "Coffee Module",
+      "code": "PL/CM.C.1-12",
+      "name": "Coffee Module",
+      "description": "Tezgah altı soğutucu alanı ve ek saklama çekmeceleri olan kahve modülü.",
+      "totalDimensionsMm": "1200x650x900",
+      "dimensionsMm": [],
+      "features": [
+        "Kahve atığı knock box",
+        "Dayanıklı paslanmaz çelik gövde",
+        "İki nötr saklama çekmecesi",
+        "Tezgah altı soğutucu için alan"
+      ],
+      "image": "vitrum-drawings/hero_p42.png",
+      "drawing": "vitrum-drawings/tech_p42.png",
+      "descriptionEn": "A coffee module equipped with room for an under-counter cooler and additional storage drawers.",
+      "featuresEn": [
+        "Coffee waste knock box",
+        "Durable stainless steel construction",
+        "Two neutral storage drawers",
+        "Space for custom under-counter cooler"
+      ],
+      "slug": "pl-cm-c-1-12"
+    },
+    {
+      "page": 43,
+      "category": "Coffee Module",
+      "code": "PL/CM.N-12",
+      "name": "Coffee Module",
+      "description": "Entegre nötr saklama dolabı ile kahve modülü.",
+      "totalDimensionsMm": "1200x650x900",
+      "dimensionsMm": [],
+      "features": [
+        "Kahve atığı knock box",
+        "Dayanıklı paslanmaz çelik gövde",
+        "Çift nötr saklama çekmecesi",
+        "Entegre bardak yıkayıcılı damlama tepsisi"
+      ],
+      "image": "vitrum-drawings/hero_p43.png",
+      "drawing": "vitrum-drawings/tech_p43.png",
+      "descriptionEn": "A coffee module equipped with an integrated neutral storage cabinet for streamlined service.",
+      "featuresEn": [
+        "Coffee waste knock box",
+        "Durable stainless steel construction",
+        "Dual neutral storage drawers",
+        "Drip tray with integrated glass rinser"
+      ],
+      "slug": "pl-cm-n-12"
+    },
+    {
+      "page": 44,
+      "category": "Sink Module",
+      "code": "PL/SM.N.3-15",
+      "name": "Sink Module",
+      "description": "Genişletilmiş bardak saklama, çift damlama tepsisi ve pre-miks bölmeleri olan evye modülü.",
+      "totalDimensionsMm": "1500x650x900",
+      "dimensionsMm": [
+        {
+          "label": "Evye",
+          "value": "290x370",
+          "labelEn": "Sink"
+        }
+      ],
+      "features": [
+        "Entegre bardak yıkayıcılı evye",
+        "Kayar plastik kesme tahtası",
+        "4 çekmecede bulaşık makinesi sepeti saklama",
+        "Ön çöp hazneli organik atık bölmesi",
+        "Dört nötr saklama çekmecesi",
+        "Pre-miks saklamalı damlama tepsisi",
+        "Dayanıklı paslanmaz çelik gövde"
+      ],
+      "image": "vitrum-drawings/hero_p44.png",
+      "drawing": "vitrum-drawings/tech_p44.png",
+      "descriptionEn": "A sink module featuring extended glass storage, twin drip trays, and dedicated pre-mix compartments.",
+      "featuresEn": [
+        "Integrated sink with glass rinser",
+        "Sliding plastic cutting board",
+        "Storage for dishwasher baskets in 4 drawers",
+        "Organic waste compartment with front garbage hatch",
+        "Four neutral storage drawers",
+        "Drip-tray featuring pre-mix storage",
+        "Durable stainless steel construction"
+      ],
+      "slug": "pl-sm-n-3-15"
+    },
+    {
+      "page": 45,
+      "category": "Sink Module",
+      "code": "PL/SM.S.N.3-09",
+      "name": "Sink Module",
+      "description": "Entegre bardak saklama alanlı evye modülü.",
+      "totalDimensionsMm": "900x650x900",
+      "dimensionsMm": [
+        {
+          "label": "Evye",
+          "value": "290x370",
+          "labelEn": "Sink"
+        }
+      ],
+      "features": [
+        "Solda entegre bardak yıkayıcılı evye",
+        "Pre-miks saklamalı damlama tepsisi",
+        "Kayar plastik kesme tahtası",
+        "Ön çöp hazneli organik atık bölmesi",
+        "Dört nötr saklama çekmecesi",
+        "Dayanıklı paslanmaz çelik gövde",
+        "4 çekmecede bulaşık makinesi sepeti saklama"
+      ],
+      "image": "vitrum-drawings/hero_p45.png",
+      "drawing": "vitrum-drawings/tech_p45.png",
+      "descriptionEn": "A sink module equipped with integrated glass storage for streamlined operations.",
+      "featuresEn": [
+        "Integrated sink with glass rinser on the left side",
+        "Drip-tray featuring pre-mix storage",
+        "Sliding plastic cutting board",
+        "Organic waste compartment with front garbage hatch",
+        "Four neutral storage drawers",
+        "Durable stainless steel construction",
+        "Storage for dishwasher baskets in 4 drawers"
+      ],
+      "slug": "pl-sm-s-n-3-09"
+    },
+    {
+      "page": 46,
+      "category": "Sink Module",
+      "code": "PL/SM.N.2-09",
+      "name": "Sink Module",
+      "description": "Bardak saklama, entegre damlama tepsisi ve pre-miks bölmesi olan evye modülü.",
+      "totalDimensionsMm": "900x650x900",
+      "dimensionsMm": [
+        {
+          "label": "Evye",
+          "value": "290x370",
+          "labelEn": "Sink"
+        }
+      ],
+      "features": [
+        "Sağda entegre bardak yıkayıcılı evye",
+        "Pre-miks saklamalı damlama tepsisi",
+        "Kayar plastik kesme tahtası",
+        "Bulaşık makinesi sepeti için iki çekmece",
+        "İki nötr saklama çekmecesi",
+        "Ön çöp hazneli organik atık bölmesi",
+        "Dayanıklı paslanmaz çelik gövde"
+      ],
+      "image": "vitrum-drawings/hero_p46.png",
+      "drawing": "vitrum-drawings/tech_p46.png",
+      "descriptionEn": "A sink module featuring glass storage, an integrated drip tray, and a pre-mix compartment.",
+      "featuresEn": [
+        "Sink with integrated glass rinser right side",
+        "Drip tray with pre-mix storage",
+        "Plastic cutting board with slide feature",
+        "Two drawers for dishwashing basket storage",
+        "Two neutral storage drawers",
+        "Organic waste compartment with front garbage hatch",
+        "Durable stainless steel construction"
+      ],
+      "slug": "pl-sm-n-2-09"
+    },
+    {
+      "page": 47,
+      "category": "Sink Module",
+      "code": "PL/SM.N.1-08",
+      "name": "Sink Module",
+      "description": "Pratik düzen ve kullanım için nötr saklama bölümlü evye modülü.",
+      "totalDimensionsMm": "890x650x900",
+      "dimensionsMm": [
+        {
+          "label": "Evye",
+          "value": "340x340",
+          "labelEn": "Sink"
+        }
+      ],
+      "features": [
+        "Entegre organik atık bölmeli evye",
+        "Orta raflı ve menteşeli kapılı dolap",
+        "Dayanıklı paslanmaz çelik gövde"
+      ],
+      "image": "vitrum-drawings/hero_p47.png",
+      "drawing": "vitrum-drawings/tech_p47.png",
+      "descriptionEn": "A sink module featuring a neutral storage section for practical organization and convenience.",
+      "featuresEn": [
+        "Sink with integrated organic waste compartment",
+        "Storage cupboard with middle shelf and hinged door",
+        "Durable stainless steel construction"
+      ],
+      "slug": "pl-sm-n-1-08"
+    },
+    {
+      "page": 48,
+      "category": "Sink Module",
+      "code": "PL/SM-04",
+      "name": "Sink Module",
+      "description": "Organik atık için özel bölüm içeren evye modülü.",
+      "totalDimensionsMm": "400x650x900",
+      "dimensionsMm": [
+        {
+          "label": "Evye",
+          "value": "260x340",
+          "labelEn": "Sink"
+        }
+      ],
+      "features": [
+        "Entegre bardak yıkayıcılı evye",
+        "Ön çöp hazneli organik atık bölmesi",
+        "Kayar plastik kesme tahtası"
+      ],
+      "image": "vitrum-drawings/hero_p48.png",
+      "drawing": "vitrum-drawings/tech_p48.png",
+      "descriptionEn": "A sink module that includes a dedicated compartment for organic waste disposal.",
+      "featuresEn": [
+        "Integrated sink with glass rinser",
+        "Organic waste compartment with front garbage hatch",
+        "Sliding plastic cutting board"
+      ],
+      "slug": "pl-sm-04"
+    },
+    {
+      "page": 49,
+      "category": "Dishwasher Module",
+      "code": "PL/WM.1-12",
+      "name": "Dishwasher Module",
+      "description": "Entegre bardak saklama ve tezgah altı bulaşık makinesi ile bulaşık yıkama modülü.",
+      "totalDimensionsMm": "1200x650x900",
+      "dimensionsMm": [],
+      "features": [
+        "Üç bulaşık makinesi sepeti saklama",
+        "Dayanıklı paslanmaz çelik gövde",
+        "Farklı bardak yükseklikleri için ayarlanabilir raylar",
+        "Özelleştirilebilir tezgah altı bulaşık makinesi alanı"
+      ],
+      "image": "vitrum-drawings/hero_p49.png",
+      "drawing": "vitrum-drawings/tech_p49.png",
+      "descriptionEn": "A dishwasher module with integrated glass storage and an under-counter dishwashing machine for streamlined and efficient cleaning.",
+      "featuresEn": [
+        "Storage for three dishwasher baskets",
+        "Durable stainless steel construction",
+        "Slides with adjustable height for various glasses",
+        "Space allocated for customizable under-counter dishwasher"
+      ],
+      "slug": "pl-wm-1-12"
+    },
+    {
+      "page": 50,
+      "category": "Ice Machine Module",
+      "code": "PL/IM.N-08",
+      "name": "Ice Machine Module",
+      "description": "Entegre buz makinesi ve ek saklama bölmesi olan modüler bar ünitesi.",
+      "totalDimensionsMm": "800x650x900",
+      "dimensionsMm": [],
+      "features": [
+        "Dört açık raf saklama bölmesi",
+        "Tezgah altı buz makinesi alanı",
+        "Dayanıklı paslanmaz çelik gövde"
+      ],
+      "image": "vitrum-drawings/hero_p50.png",
+      "drawing": "vitrum-drawings/tech_p50.png",
+      "descriptionEn": "A modular bar unit featuring an integrated ice machine and additional storage compartment.",
+      "featuresEn": [
+        "Four open-shelf storage compartment",
+        "Space for under-counter ice machine",
+        "Durable stainless steel construction"
+      ],
+      "slug": "pl-im-n-08"
+    },
+    {
+      "page": 51,
+      "category": "Neutral Module",
+      "code": "PL/NM-3D.S",
+      "name": "Neutral Module",
+      "description": "Çok amaçlı saklama için nötr çekmeceli modüler bar ünitesi.",
+      "totalDimensionsMm": "600x650x900",
+      "dimensionsMm": [],
+      "features": [
+        "Üç nötr saklama çekmecesi",
+        "Dayanıklı paslanmaz çelik gövde"
+      ],
+      "image": "vitrum-drawings/hero_p51.png",
+      "drawing": "vitrum-drawings/tech_p51.png",
+      "descriptionEn": "A modular bar unit featuring neutral drawers for versatile storage solutions.",
+      "featuresEn": [
+        "Three neutral storage drawers",
+        "Durable stainless steel construction"
+      ],
+      "slug": "pl-nm-3d-s"
+    },
+    {
+      "page": 52,
+      "category": "Neutral Module",
+      "code": "PL/NM-3D.T",
+      "name": "Neutral Module",
+      "description": "Geniş saklama alanına sahip kasa modülü.",
+      "totalDimensionsMm": "480x650x900",
+      "dimensionsMm": [],
+      "features": [
+        "POS terminali ve kasa için ayrılmış alan",
+        "Üç nötr saklama çekmecesi",
+        "Dayanıklı paslanmaz çelik gövde"
+      ],
+      "image": "vitrum-drawings/hero_p52.png",
+      "drawing": "vitrum-drawings/tech_p52.png",
+      "descriptionEn": "A cashier module featuring ample storage space.",
+      "featuresEn": [
+        "Designated space for payment terminal and cash box",
+        "Three neutral storage drawers",
+        "Durable stainless steel construction"
+      ],
+      "slug": "pl-nm-3d-t"
+    },
+    {
+      "page": 53,
+      "category": "Neutral Module",
+      "code": "PL/NM-N-1",
+      "name": "Neutral Module",
+      "description": "Ayarlanabilir çekmece yüksekliği ile entegre bardak saklamalı bar ünitesi.",
+      "totalDimensionsMm": "600x650x900",
+      "dimensionsMm": [],
+      "features": [
+        "Bulaşık makinesi sepeti için üç çekmece",
+        "Değişken bardak yükseklikleri için ayarlanabilir raylar",
+        "Dayanıklı paslanmaz çelik gövde"
+      ],
+      "image": "vitrum-drawings/hero_p53.png",
+      "drawing": "vitrum-drawings/tech_p53.png",
+      "descriptionEn": "A bar unit featuring integrated glass storage with adjustable drawer height.",
+      "featuresEn": [
+        "Three drawers for dishwashing basket storage",
+        "Adjustable slides for variable glass heights",
+        "Durable stainless steel construction"
+      ],
+      "slug": "pl-nm-n-1"
+    },
+    {
+      "page": 54,
+      "category": "Neutral Module",
+      "code": "PL/NM.ND-2",
+      "name": "Neutral Module",
+      "description": "Entegre bardak saklama ve dökülmelere karşı damlama tepsili bar ünitesi.",
+      "totalDimensionsMm": "600x650x900",
+      "dimensionsMm": [],
+      "features": [
+        "Damlama tepsisi",
+        "Bulaşık makinesi sepeti için üç çekmece",
+        "Değişken bardak yükseklikleri için ayarlanabilir raylar",
+        "Dayanıklı paslanmaz çelik gövde"
+      ],
+      "image": "vitrum-drawings/hero_p54.png",
+      "drawing": "vitrum-drawings/tech_p54.png",
+      "descriptionEn": "A bar unit featuring integrated glass storage and a drip tray for spill management.",
+      "featuresEn": [
+        "Drip tray",
+        "Three drawers for dishwashing basket storage",
+        "Adjustable slides for variable glass heights",
+        "Durable stainless steel construction"
+      ],
+      "slug": "pl-nm-nd-2"
+    },
+    {
+      "page": 55,
+      "category": "Corner Module",
+      "code": "PL/AM-1",
+      "name": "Corner Module",
+      "description": "Özel bar konfigürasyonları için, fonksiyonel damlama tepsili köşe modülü.",
+      "totalDimensionsMm": "650x650x900",
+      "dimensionsMm": [],
+      "features": [
+        "Tek damlama tepsisi",
+        "Sağlam paslanmaz çelik gövde"
+      ],
+      "image": "vitrum-drawings/hero_p55.png",
+      "drawing": "vitrum-drawings/tech_p55.png",
+      "descriptionEn": "A corner module designed for custom bar configurations, equipped with a functional drip tray.",
+      "featuresEn": [
+        "Single drip tray",
+        "Robust stainless steel build"
+      ],
+      "slug": "pl-am-1"
+    },
+    {
+      "page": 56,
+      "category": "Corner Module",
+      "code": "PL/AM-2",
+      "name": "Corner Module",
+      "description": "Gömme damlama tepsili, özel bar konfigürasyonları için köşe modülü.",
+      "totalDimensionsMm": "650x650x900",
+      "dimensionsMm": [],
+      "features": [
+        "Tek damlama tepsisi",
+        "Dayanıklı paslanmaz çelik gövde"
+      ],
+      "image": "vitrum-drawings/hero_p56.png",
+      "drawing": "vitrum-drawings/tech_p56.png",
+      "descriptionEn": "A corner module designed for bespoke bar configurations, featuring a built-in drip tray.",
+      "featuresEn": [
+        "Single drip tray",
+        "Durable stainless steel constructionstainless steel construction"
+      ],
+      "slug": "pl-am-2"
+    },
+    {
+      "page": 57,
+      "category": "Corner Module",
+      "code": "PL/AM-3",
+      "name": "Corner Module",
+      "description": "Damlama tepsisi ve entegre bira musluk mekanizması ile köşe modülü.",
+      "totalDimensionsMm": "650x650x900",
+      "dimensionsMm": [],
+      "features": [
+        "Tek damlama tepsisi",
+        "Entegre bira muslukları",
+        "Dayanıklı paslanmaz çelik gövde"
+      ],
+      "image": "vitrum-drawings/hero_p57.png",
+      "drawing": "vitrum-drawings/tech_p57.png",
+      "descriptionEn": "A corner module designed for tailored bar layouts, equipped with a drip tray and an incorporated beer tap mechanism.",
+      "featuresEn": [
+        "Single drip tray",
+        "Integrated beer taps",
+        "Durable stainless steel construction"
+      ],
+      "slug": "pl-am-3"
+    },
+    {
+      "page": 58,
+      "category": "Accessory:Tap",
+      "code": "AG-232",
+      "name": "Accessory:Tap",
+      "description": "Seramik kartuşlu, parlak krom kollu profesyonel karışım musluğu.",
+      "totalDimensionsMm": "215x260",
+      "dimensionsMm": [
+        {
+          "label": "Çap",
+          "value": "40",
+          "labelEn": "Diameter"
+        }
+      ],
+      "features": [
+        "Seramik kartuşlu musluk gövdesi",
+        "Parlak krom kol",
+        "Tezgah delik çapı Ø40 mm",
+        "1 m hortumlu çıkarılabilir duş başlığı",
+        "Debi 23–28 l/dk",
+        "3–5 bar basınçta çalışır"
+      ],
+      "image": "vitrum-drawings/hero_p58.png",
+      "drawing": "vitrum-drawings/tech_p58.png",
+      "descriptionEn": "A professional mixing faucet with a ceramic headwork valve, featuring a polished chrome lever.",
+      "featuresEn": [
+        "Ceramic headwork valve",
+        "Polished chrome lever",
+        "Counter hole diameter Ø40 mm",
+        "Removable spray head with 1m hose",
+        "Flow rate of 23 to 28 l/min",
+        "Operates at pressure 3 to 5 bar"
+      ],
+      "slug": "ag-232"
+    },
+    {
+      "page": 59,
+      "category": "Accessory:Tap",
+      "code": "AG-305BF",
+      "name": "Accessory:Tap",
+      "description": "Seramik kartuşlu, krom kollu, döner çıkışlı karışım musluğu; krom kaplama pirinç gövde.",
+      "totalDimensionsMm": "220x220",
+      "dimensionsMm": [
+        {
+          "label": "Çap",
+          "value": "35",
+          "labelEn": "Diameter"
+        }
+      ],
+      "features": [
+        "Seramik kartuşlu musluk gövdesi",
+        "Parlak krom kaplama kol",
+        "Döner çıkış borusu",
+        "Gövde delik çapı Ø35 mm",
+        "Debi 26–32 l/dk",
+        "3–5 bar basınçta çalışır",
+        "Krom kaplama pirinç musluk gövdesi"
+      ],
+      "image": "vitrum-drawings/hero_p59.png",
+      "drawing": "vitrum-drawings/tech_p59.png",
+      "descriptionEn": "A swiveling spout mixing faucet with a ceramic headwork valve, chrome lever, and a body made of chromed brass.",
+      "featuresEn": [
+        "Ceramic headwork valve",
+        "Lever with polished chrome finish",
+        "Features a swiveling spout",
+        "Headwork hole diameter Ø35 mm",
+        "Flow rate ranges from 26 l/min to 32 l/min",
+        "Works under pressure 3 to 5 bar",
+        "Chromed brass faucet body"
+      ],
+      "slug": "ag-305bf"
+    },
+    {
+      "page": 60,
+      "category": "Accessory:Tap",
+      "code": "AG-305KBF",
+      "name": "Accessory:Tap",
+      "description": "Sağlam seramik kartuş, parlak krom kol ve döner çıkışlı karışım musluğu.",
+      "totalDimensionsMm": "220x135",
+      "dimensionsMm": [
+        {
+          "label": "Çap",
+          "value": "35",
+          "labelEn": "Diameter"
+        }
+      ],
+      "features": [
+        "Seramik kartuşlu musluk gövdesi",
+        "Parlak krom kol",
+        "Döner çıkış borusu",
+        "Tezgah delik çapı Ø35 mm",
+        "Debi 26–32 l/dk",
+        "3–5 bar basınçta optimum performans",
+        "Krom kaplama pirinç gövde"
+      ],
+      "image": "vitrum-drawings/hero_p60.png",
+      "drawing": "vitrum-drawings/tech_p60.png",
+      "descriptionEn": "A mixer faucet featuring a robust ceramic headwork valve, a polished chrome lever, and a swivel spout.",
+      "featuresEn": [
+        "Ceramic headwork valve",
+        "Polished chrome lever",
+        "Swiveling spout feature",
+        "Countertop hole diameter Ø35 mm",
+        "Flow rate ranges from 26–32 l/min",
+        "Optimal performance at 3–5 bar pressure",
+        "Chromed brass body construction"
+      ],
+      "slug": "ag-305kbf"
+    },
+    {
+      "page": 61,
+      "category": "Accessory:Tap",
+      "code": "AG-MF2",
+      "name": "Accessory:Tap",
+      "description": "Seramik kartuşlu karışım musluğu; AISI-304 paslanmaz çelik gövde.",
+      "totalDimensionsMm": "205x190",
+      "dimensionsMm": [
+        {
+          "label": "Çap",
+          "value": "35",
+          "labelEn": "Diameter"
+        }
+      ],
+      "features": [
+        "Seramik kartuşlu musluk gövdesi",
+        "Debi 26–32 l/dk",
+        "AISI-304 paslanmaz çelik gövde",
+        "3–5 bar basınçta çalışır",
+        "Tezgah delik çapı Ø35 mm",
+        "Döner çıkış borusu"
+      ],
+      "image": "vitrum-drawings/hero_p61.png",
+      "drawing": "vitrum-drawings/tech_p61.png",
+      "descriptionEn": "A mixer faucet featuring a robust ceramic headwork valve, a polished chrome lever, and a swivel spout.",
+      "featuresEn": [
+        "Ceramic headwork valve",
+        "Flow rate between 26-32 l/min",
+        "Constructed with AISI-304 stainless steel",
+        "Operates at pressure between 3-5 bar",
+        "Counter hole diameter Ø35 mm",
+        "Swiveling spout feature"
+      ],
+      "slug": "ag-mf2"
+    },
+    {
+      "page": 62,
+      "category": "Accessory:Tap",
+      "code": "AG-03",
+      "name": "Accessory:Tap",
+      "description": "Seramik kartuşlu, parlak krom kollu, krom çelik yaylı döner karışım musluğu.",
+      "totalDimensionsMm": "235x480",
+      "dimensionsMm": [
+        {
+          "label": "Çap",
+          "value": "35",
+          "labelEn": "Diameter"
+        }
+      ],
+      "features": [
+        "Seramik kartuşlu musluk",
+        "Parlak krom kol",
+        "3–5 bar basınçta çalışır",
+        "Debi 26–32 l/dk",
+        "Tezgah delik çapı Ø35 mm",
+        "Döner çıkış borusu",
+        "Krom kaplama çelik yay"
+      ],
+      "image": "vitrum-drawings/hero_p62.png",
+      "drawing": "vitrum-drawings/tech_p62.png",
+      "descriptionEn": "A swivelling mixing faucet featuring a ceramic headwork valve, polished chrome lever, and a chromed steel spring.",
+      "featuresEn": [
+        "Ceramic headwork valve in faucet",
+        "Polished chrome lever",
+        "Operates at pressure 3-5 bar",
+        "Flow rate between 26-32 l/min",
+        "Counter hole diameter Ø35 mm",
+        "Spout with swiveling feature",
+        "Chromed steel spring"
+      ],
+      "slug": "ag-03"
+    },
+    {
+      "page": 63,
+      "category": "Accessory:Tap",
+      "code": "AG-D30M",
+      "name": "Accessory:Tap",
+      "description": "Paslanmaz örgülü hortumlu, döner çıkışlı, krom kol ve yaylı musluk seti.",
+      "totalDimensionsMm": "550",
+      "dimensionsMm": [
+        {
+          "label": "Çap",
+          "value": "35",
+          "labelEn": "Diameter"
+        }
+      ],
+      "features": [
+        "Seramik kartuşlu musluklar",
+        "3/8” bağlantılar",
+        "Paslanmaz örgülü güçlendirilmiş esnek hortum",
+        "2–4 bar’da 9–15 l/dk debi",
+        "Döner çıkış borusu",
+        "Parlak krom düğmeler ve yay"
+      ],
+      "image": "vitrum-drawings/hero_p63.png",
+      "drawing": "vitrum-drawings/tech_p63.png",
+      "descriptionEn": "A stainless steel braided hose, featuring a swiveling spout, polished chrome steel lever and spring.",
+      "featuresEn": [
+        "Ceramic headwork valves",
+        "3/8” connections",
+        "SS-braided reinforced flexible hose",
+        "Flow rate between 9-15 l/min at 2-4 bar pressure",
+        "Swiveling spout feature",
+        "Polished chrome steel knobs and spring"
+      ],
+      "slug": "ag-d30m"
+    },
+    {
+      "page": 64,
+      "category": "Accessory:Tap",
+      "code": "AG-8025E",
+      "name": "Accessory:Tap",
+      "description": "Fotoselli, krom kaplama pirinç gövde; 10 cm’ye kadar algılama mesafesi.",
+      "totalDimensionsMm": "190x190",
+      "dimensionsMm": [
+        {
+          "label": "Çap",
+          "value": "32",
+          "labelEn": "Diameter"
+        }
+      ],
+      "features": [
+        "Krom kaplama pirinç gövde",
+        "4×1,5 V pil veya 230 V besleme",
+        "10 cm’ye kadar algılama mesafesi",
+        "Yan kontrol kolu",
+        "3 bar’da 6 l/dk debi",
+        "Başlat/Durdur fonksiyonu"
+      ],
+      "image": "vitrum-drawings/hero_p64.png",
+      "drawing": "vitrum-drawings/tech_p64.png",
+      "descriptionEn": "An electrically-operated tap with a built-in photocell, crafted from chromed brass, functions up to a distance of 10 cm.",
+      "featuresEn": [
+        "Chromed brass body",
+        "Powered by 4x1.5V batteries or 230V supply voltage",
+        "Operating distance up to 10 cm",
+        "Side control lever",
+        "6 l/min flow rate at 3 bar pressure",
+        "Star/Stop function"
+      ],
+      "slug": "ag-8025e"
+    }
+  ]
+}

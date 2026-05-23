@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "note": "PFOS tip_kodu → Equsto katalog SKU (manuel / doğrulanmış eşleşmeler)",
+  "links": {
+    "kombi_firin_6t": {
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "sku": "7890.60400.3T",
+      "marka": "Rational"
+    },
+    "davlumbaz_duvar": {
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "sku": "9885.EECHC.00",
+      "name": "UNOX DAVLUMBAZ EECH-HC23 CHEFTOP"
+    },
+    "cop_arabasi": {
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "sku": "8893.00120.00"
+    },
+    "mikrodalga_firin": {
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "sku": "9891.RMS51.0TS"
+    },
+    "servis_rafi": {
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "sku": "0913.00507.01"
+    },
+    "char_broil": {
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "sku": "7864.N1.40903.04"
+    },
+    "salamander": {
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "sku": "7850.58575.70"
+    },
+    "tezgah_duz": {
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "sku": "7911.N1.60603.00"
+    },
+    "fritoz_tek": {
+      "brand": "Atalay Endüstriyel Mutfak Ekipmanları",
+      "sku": "AEF-870",
+      "model": "AEF - 870",
+      "name": "Atalay Fritözler AEF - 870 2 x Min. 6 lt. Max 12 lt 800 x 700 x 300"
+    },
+    "espresso_makinasi": {
+      "brand": "Nuova Simonelli",
+      "sku": "9580.APPIA.CVG",
+      "marka": "Nuova Simonelli",
+      "name": "NUOVA SIMONELLI APPIA LIFE II COMPACT YÜKSEK KAŞIKLI KAHVE MAKİNASI"
+    },
+    "filter_coffee": {
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "sku": "9574.B10HW.00",
+      "marka": "Bravilor"
+    },
+    "kahve_degirmeni": {
+      "brand": "Nuova Simonelli",
+      "sku": "9584.00MDX.00",
+      "marka": "Nuova Simonelli",
+      "name": "NUOVA SIMONELLI MDX ( ON DEMAND ) KAHVE DEĞİRMENİ OTOMATİK 230 V SİYAH AMXS 602230"
+    },
+    "buz_makinesi": {
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "sku": "9805.ODB14.0A",
+      "name": "OZTI BUZ MAKINESI ODB140A 140KG/GUN FLAT ICE CUBE"
+    },
+    "derin_dondurucu_dik": {
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "sku": "7919.06LMV.00",
+      "name": "GN 600 LMV TEK INOX KAPI DIK TIP DERIN DONDURUCU"
+    },
+    "bardak_yikama": {
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "sku": "073M.11010.AD"
+    },
+    "yer_izgara": {
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "sku": "7960.09429.5Y1",
+      "name": "YER IZGARASI TAVALI KENARDAN SİFONLU ALTTAN CIKISLI Q50 PVC 940*290"
+    },
+    "bar_buzdolabi": {
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "sku": "8919.BBC35.00",
+      "marka": "Öztiryakiler",
+      "name": "ŞİŞE SOĞUTUCU BBC35 3 KAPILI",
+      "fiyat_try": 65000
+    }
+  }
+}

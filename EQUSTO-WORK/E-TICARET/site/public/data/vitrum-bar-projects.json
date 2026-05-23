@@ -1,0 +1,230 @@
+{
+  "source": "https://www.vitrumgroup.org/projects-category/bar",
+  "fetchedAt": "2026-05-16T15:48:18.989Z",
+  "category": "Bars",
+  "count": 6,
+  "projects": [
+    {
+      "slug": "cato-covent-garden-bar",
+      "name": "Cato Covent Garden Bar",
+      "location": "London, UK",
+      "locationTr": "Londra, İngiltere",
+      "year": "2026",
+      "categories": ["Bars"],
+      "subtitle": "Engineered for speed and soul",
+      "subtitleTr": "Hız ve karakter için mühendislik",
+      "teaser": "Hospitality Group Bart & Taylor brings New York City soul and a boundary-pushing cocktail list to Seven Dials. Vitrum partnered with beverage lead Angelos Bafas to engineer a custom workspace that handles peak demand of over 100 drinks per hour.",
+      "teaserTr": "Bart & Taylor Hospitality Group, Seven Dials'ta New York ruhunu ve cesur bir kokteyl listesini bir araya getiriyor. Vitrum, içecek lideri Angelos Bafas ile saatte 100'den fazla içecek talebini karşılayan özel bir çalışma alanı mühendisliği yaptı.",
+      "url": "https://www.vitrumgroup.org/projects/cato-covent-garden-bar",
+      "image": "https://cdn.prod.website-files.com/678aa8b9d4557bd2b4c0adb3/69c6b8c4c45b43c170dfd1d4_Cato_Covent_Garden.jpg",
+      "client": "Cato Covent Garden Bar",
+      "quote": "",
+      "quoteTr": "",
+      "projectType": "Cocktail bar",
+      "featuredModules": [
+        {
+          "slug": "the-boulverdier",
+          "captionTr": "Çift evyeli kokteyl istasyonu — yoğun servis",
+          "captionEn": "Dual-sink cocktail station for peak service"
+        },
+        {
+          "slug": "pl-bm-f-4-2-22",
+          "captionTr": "2200 mm bar modülü — şişe ve hız rayı",
+          "captionEn": "2200 mm bar module — bottles & speed rail"
+        }
+      ]
+    },
+    {
+      "slug": "suelo-bar",
+      "name": "Suelo Bar",
+      "location": "Paris",
+      "locationTr": "Paris, Fransa",
+      "year": "2024",
+      "categories": ["Bars"],
+      "subtitle": "Halcyon glamour powered by modern innovation",
+      "subtitleTr": "Modern inovasyonla speakeasy zarafeti",
+      "teaser": "Smart Spanish restaurant with an intimate speakeasy. Upstairs, a two-person bar station; downstairs, a customized U-shaped speakeasy bar.",
+      "teaserTr": "Akıllı İspanyol restoranı ve samimi bir speakeasy. Üst katta iki kişilik bar istasyonu; altta U formunda özelleştirilmiş speakeasy bar hattı.",
+      "quote": "We are very pleased with the outstanding work carried out by VITRUM and their dedicated team… — Iryna Ulanska, Bulldozer Group",
+      "quoteTr": "VITRUM ve ekibinin Suelo için yürüttüğü olağanüstü çalışmadan çok memnunuz. Barlar, Paris'teki mekânımızın hem estetiğinin hem işlevselliğinin tam merkezinde.",
+      "url": "https://www.vitrumgroup.org/projects/suelo-bar",
+      "image": "https://cdn.prod.website-files.com/678aa8b9d4557bd2b4c0adb3/6812aac0a3b7888915bc9710_Untitled%20design%20(1).avif",
+      "client": "Suelo Bar",
+      "projectType": "",
+      "featuredModules": [
+        {
+          "slug": "the-clover",
+          "captionTr": "Garnitür ve buz kuyusu — kompakt imza hat",
+          "captionEn": "Garnish & ice well — compact signature line"
+        },
+        {
+          "slug": "sl-bm-10",
+          "captionTr": "1000 mm servis modülü — speakeasy hattı",
+          "captionEn": "1000 mm service module — speakeasy line"
+        }
+      ]
+    },
+    {
+      "slug": "two-more-beers",
+      "name": "Two More Beers",
+      "location": "UK, London",
+      "locationTr": "Londra, İngiltere",
+      "year": "2024",
+      "categories": ["Bars", "Restaurants"],
+      "subtitle": "Turnkey kitchen & bar for debut UK venue",
+      "subtitleTr": "İlk İngiltere mekânı için anahtar teslim mutfak ve bar",
+      "teaser": "Vibrant beer spot crafted for a warm atmosphere, excellent food and meaningful conversations. Vitrum designed the kitchen and bar, supplied equipment, and commissioned the Manhattan Bar module before opening.",
+      "teaserTr": "Sıcak atmosfer, güçlü mutfak ve samimi sohbetler için tasarlanmış canlı bir mekan. Vitrum mutfak ve barı tasarladı, ekipmanı tedarik etti; açılış öncesi Manhattan imza modülünü devreye aldı.",
+      "quote": "Vitrum delivered exactly what they promised: a kitchen and bar that work as hard as our team—and they did it faster than we thought possible. — Founder, Two More Beers",
+      "quoteTr": "Vitrum vaat ettiklerini aynen teslim etti: ekibimiz kadar çok çalışan bir mutfak ve bar — ve bunu düşündüğümüzden daha hızlı tamamladılar.",
+      "url": "https://www.vitrumgroup.org/projects/two-more-beers",
+      "image": "https://cdn.prod.website-files.com/678aa8b9d4557bd2b4c0adb3/68113e96174d0952b0daa8e9_94dfcb5d-858f-4860-89ab-d36dab31db25.avif",
+      "client": "Two More Beers",
+      "projectType": "Cocktail bar",
+      "featuredModules": [
+        {
+          "slug": "the-manhattan",
+          "captionTr": "Açılış öncesi sipariş — imza Manhattan istasyonu",
+          "captionEn": "Pre-opening commission — signature Manhattan station"
+        },
+        {
+          "slug": "pl-sm-n-3-15",
+          "captionTr": "1500 mm lavabo modülü — bardak yıkama hattı",
+          "captionEn": "1500 mm sink module — glass wash line"
+        }
+      ]
+    },
+    {
+      "slug": "piazza-italiana",
+      "name": "Piazza Italiana",
+      "location": "London",
+      "locationTr": "Londra, İngiltere",
+      "year": "2024",
+      "categories": ["Bars"],
+      "subtitle": "A hard-working spot for London's professionals",
+      "subtitleTr": "City profesyonelleri için yüksek tempolu mekân",
+      "teaser": "Former bank in the City. Full-service kitchen and two bars; high-volume covers from an extensive menu; sympathetic restoration of listed building.",
+      "teaserTr": "City'de eski bir banka binası. Tam servis mutfak ve iki bar; geniş menüyle yüksek cover; tescilli yapıda saygılı restorasyon.",
+      "url": "https://www.vitrumgroup.org/projects/piazza-italiana",
+      "image": "https://cdn.prod.website-files.com/678aa8b9d4557bd2b4c0adb3/678fb84925046c88eb1626e2_piazza-italiana-photo-by-tom-bird-15-web.avif",
+      "client": "Piazza Italiana",
+      "quote": "",
+      "quoteTr": "",
+      "projectType": "",
+      "featuredModules": [
+        {
+          "slug": "the-manhattan",
+          "captionTr": "Ana servis barı — çift bartender istasyonu",
+          "captionEn": "Main service bar — two-bartender station"
+        },
+        {
+          "slug": "pl-bm-f-3-1-18",
+          "captionTr": "1800 mm bar modülü — ikinci servis hattı",
+          "captionEn": "1800 mm bar module — second service line"
+        }
+      ]
+    },
+    {
+      "slug": "the-catch",
+      "name": "The Catch",
+      "location": "Berlin",
+      "locationTr": "Berlin, Almanya",
+      "year": "2024",
+      "categories": ["Bars"],
+      "subtitle": "High-end service requires a high-end bar solution",
+      "subtitleTr": "Üst segment servis, üst segment bar çözümü",
+      "teaser": "Bar integrating with wooden countertop seating, neon lighting and stainless steel details for Alexander Slobin's Berlin restaurant.",
+      "teaserTr": "Alexander Slobin'in Berlin restoranında ahşap tezgâh oturması, neon aydınlatma ve paslanmaz detaylarla bütünleşen bar.",
+      "url": "https://www.vitrumgroup.org/projects/the-catch",
+      "image": "https://cdn.prod.website-files.com/678aa8b9d4557bd2b4c0adb3/678fb87ed201e8061247529e_Berlin_TheCatch.avif",
+      "client": "The Catch",
+      "quote": "",
+      "quoteTr": "",
+      "projectType": "",
+      "featuredModules": [
+        {
+          "slug": "pl-sm-n-2-09",
+          "captionTr": "900 mm lavabo — servis önü cam yıkama",
+          "captionEn": "900 mm sink — front-of-house glass wash"
+        },
+        {
+          "slug": "pl-bm-f-2-12",
+          "captionTr": "1200 mm bar modülü — şişe saklama",
+          "captionEn": "1200 mm bar module — bottle storage"
+        }
+      ]
+    },
+    {
+      "slug": "november",
+      "name": "November",
+      "location": "Berlin",
+      "locationTr": "Berlin, Almanya",
+      "year": "2020",
+      "categories": ["Restaurants", "Bars"],
+      "subtitle": "A bar at the heart of the neighbourhood",
+      "subtitleTr": "Mahallenin kalbinde bir bar",
+      "teaser": "November is a neighbourhood gem in West Berlin housed within a listed monument, meaning our work had to adhere to numerous architectural requirements. The Catch restaurant family group are long-standing clients, and for this project we were tasked with creating a bar that would provide the centrepiece for the main dining room.",
+      "teaserTr": "November, Batı Berlin'de tescilli bir anıt yapıda konumlanan mahalle restoranı. Mimari kısıtlara uyum şarttı. The Catch grubunun uzun süreli müşterisi olarak ana yemek salonunun odak noktası olacak bar hattını tasarladık.",
+      "url": "https://www.vitrumgroup.org/projects/november",
+      "image": "https://cdn.prod.website-files.com/678aa8b9d4557bd2b4c0adb3/678e13e601de99c66904b275_Berlin-restaurant-November_interieur20.avif",
+      "client": "November",
+      "quote": "",
+      "quoteTr": "",
+      "projectType": "",
+      "featuredModules": [
+        {
+          "slug": "the-clover",
+          "captionTr": "Salon merkezinde imza Clover istasyonu",
+          "captionEn": "Signature Clover station at dining room centre"
+        },
+        {
+          "slug": "pl-nm-3d-s",
+          "captionTr": "Nötr modül — saklama ve tamamlayıcı hat",
+          "captionEn": "Neutral module — storage & finishing line"
+        }
+      ]
+    }
+  ],
+  "interludeGroups": [
+    {
+      "categoryKey": "Bar Module",
+      "labelTr": "Bar modülleri",
+      "labelEn": "Bar modules"
+    },
+    {
+      "categoryKey": "Mobile Bar Module",
+      "labelTr": "Mobil bar modülleri",
+      "labelEn": "Mobile bar modules"
+    },
+    {
+      "categoryKey": "Coffee Module",
+      "labelTr": "Kahve modülleri",
+      "labelEn": "Coffee modules"
+    },
+    {
+      "categoryKey": "Sink Module",
+      "labelTr": "Lavabo & cam yıkama",
+      "labelEn": "Sink & glass wash"
+    },
+    {
+      "categoryKey": "Dishwasher & Ice",
+      "labelTr": "Bulaşık & buz",
+      "labelEn": "Dishwasher & ice"
+    },
+    {
+      "categoryKey": "Corner Module",
+      "labelTr": "Köşe modülleri",
+      "labelEn": "Corner modules"
+    },
+    {
+      "categoryKey": "Neutral Module",
+      "labelTr": "Nötr modüller",
+      "labelEn": "Neutral modules"
+    },
+    {
+      "categoryKey": "Accessory:Tap",
+      "labelTr": "Musluk & aksesuar",
+      "labelEn": "Taps & accessories"
+    }
+  ]
+}

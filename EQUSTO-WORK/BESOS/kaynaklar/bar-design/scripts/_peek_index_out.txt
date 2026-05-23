@@ -1,0 +1,103 @@
+class="hero eq-home-hero-ads" aria-label="Equsto vitrin reklamları" data-i18n-attr="aria-label:home.hero_ads_aria">
+        <div class="hero-card hero-card--pfos" onclick="eqGo('pfos')" role="link" tabindex="0" onkeydown="if(event.key==='Enter')eqGo('pfos')">
+          <div class="hero-card-visual hero-card-visual--pfos" aria-hidden="true">
+            <p class="hero-pfos-promise" data-i18n-html="home.hero_card1_promise">Beş dakikada yapılır,<br>hemen teslim edilir</p>
+          </div>
+          <div class="hero-card-body">
+            <div class="hero-tag" data-i18n="home.hero_card1_tag">Proje Çözümleri</div>
+            <div class="hero-title" data-i18n="home.hero_card1_title">Proje Fabrikası</div>
+            <p class="hero-pitch" data-i18n="home.hero_card1_pitch">Adım adım soru-cevap ile ekipman listeniz ve anlık teklif.</p>
+            <span class="hero-cta" data-i18n="home.hero_card1_cta">Projeyi başlat →</span>
+          </div>
+        </div>
+        <div class="hero-card hero-card--yer hero-card--soon" aria-disabled="true">
+          <span class="hero-soon-badge" data-i18n="home.hero_card2_soon">PEK YAKINDA</span>
+          <div class="hero-card-visual hero-card-visual--yer" aria-hidden="true"></div>
+          <div class="hero-card-body">
+            <div class="hero-tag" data-i18n="home.hero_card2_tag">Restoran &amp; Catering</div>
+            <div class="hero-title" data-i18n="home.hero_card2_title">Yer Sofrası</div>
+            <p class="hero-pitch" data-i18n="home.hero_card2_pitch">Konsept vitrin, masa düzeni ve servis hatları — çok yakında.</p>
+          </div>
+        </div>
+        <div class="hero-card hero-card--besos" onclick="eqGo('besos')" role="link" tabindex="0" onkeydown="if(event.key==='Enter')eqGo('besos')">
+          <div class="hero-card-visual hero-card-visual--besos" aria-hidden="true">
+            <img class="hero-card-img hero-card-img--ice" src="/images/imt300/imt300-1.jpg" alt="IMT300 berrak buz makinesi" width="400" height="300" loading="eager" decoding="async">
+            <img class="hero-card-img hero-card-img--cs" src="/images/home/hero-bar-cocktailstation.png" alt="Besos modüler kokteyl istasyonu" width="400" height="300" loading="eager" decoding="async">
+          </div>
+          <div class="hero-card-body">
+            <div class="hero-tag" data-i18n="home.hero_card3_tag">Bar &amp; Beverages</div>
+            <div class="hero-title" data-i18n="home.hero_card3_title">Bar Design</div>
+            <p class="hero-pitch" data-i18n="home.hero_card3_pitch">IMT300 berrak buz · modüler kokteyl istasyonu.</p>
+            <span class="hero-cta" data-i18n="home.hero_card3_cta">Bar Design →</span>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="eq-mx-vitrin" aria-label="Mağaza vitrini">
+        <div class="eq-mx-ticker" aria-hidden="true">
+          <div class="eq-mx-ticker__track">
+            <span class="eq-mx-ticker__item"><strong>9 Taksit</strong> vade farksız</span>
+            <span class="eq-mx-ticker__item"><strong>Ücretsiz kargo</strong> 5.000 ₺ üzeri</span>
+            <span class="eq-mx-ticker__item"><strong>Proje Fabrikası</strong> anlık teklif</span>
+            <span class="eq-mx-ticker__item"><strong>Öztiryakiler</strong> soğutma &amp; pişirme</span>
+            <span class="eq-mx-ticker__item"><strong>9 Taksit</strong> vade farksız</span>
+            <span class="eq-mx-ticker__item"><strong>Ücretsiz kargo</strong> 5.000 ₺ üzeri</span>
+            <span class="eq-mx-ticker__item"><strong>Proje Fabrikası</strong> anlık teklif</span>
+            <span class="eq-mx-ticker__item"><strong>Öztiryakiler</strong> soğutma &amp; pişirme</span>
+          </div>
+        </div>
+        <div class="eq-mx-hero">
+          <div class="eq-mx-hero__stage">
+            <div class="eq-mx-hero__slides">
+              <a class="eq-mx-hero__slide is-active" href="/marka.html?b=%C3%96ztiryakiler+End%C3%BCstriyel+Mutfak" style="background-image:url(/data/images/öztiryakiler-gn-600-nmv-tek-kapılı-dik-tip-buzdolabı-k-tip-79k406nmv00_1.jpg)">
+                <div class="eq-mx-hero__slide-cap"><h2>Öztiryakiler</h2><p>Soğutma ve pişirme · 9 taksit · ücretsiz kargo</p></div>
+              </a>
+              <a class="eq-mx-hero__slide" href="pfos.html" style="background-image:linear-gradient(120deg,#001e50,#0a3d7a)">
+                <div class="eq-mx-hero__slide-cap"><h2>Proje Fabrikası</h2><p>Beş dakikada ekipman listesi ve anlık teklif</p></div>
+              </a>
+              <a class="eq-mx-hero__slide" href="bar-design.html" style="background-image:url(/images/imt300/imt300-1.jpg)">
+                <div class="eq-mx-hero__slide-cap"><h2>Bar Design Studio</h2><p>IMT300 berrak buz · modüler kokteyl istasyonu</p></div>
+              </a>
+              <a class="eq-mx-hero__slide" href="/shop/pisirme" style="background-image:linear-gradient(135deg,#0a1628,#1a4a8c)">
+                <div class="eq-mx-hero__slide-cap"><h2>Endüstriyel mutfak vitrini</h2><p>6.000+ ürün · profesyonel fiyatlandırma</p></div>
+              </a>
+            </div>
+            <button type="button" class="eq-mx-hero__nav eq-mx-hero__nav--prev" aria-label="Önceki">‹</button>
+            <button type="button" class="eq-mx-hero__nav eq-mx-hero__nav--next" aria-label="Sonraki">›</button>
+          </div>
+          <div class="eq-mx-hero__thumbs">
+            <button type="button" class="eq-mx-hero__thumb is-active" aria-label="Öztiryakiler"><img src="/data/images/öztiryakiler-gn-600-nmv-tek-kapılı-dik-tip-buzdolabı-k-tip-79k406nmv00_1.jpg" alt=""></button>
+            <button type="button" class="eq-mx-hero__thumb" aria-label="Proje"><img src="/images/home/hero-bar-cocktailstation.png" alt=""></button>
+            <button type="button" class="eq-mx-hero__thumb" aria-label="Bar Design"><img src="/images/imt300/imt300-1.jpg" alt=""></button>
+            <button type="button" class="eq-mx-hero__thumb" aria-label="Katalog"><img src="/data/images/öztiryakiler-tag-270-nmv-çift-kapılı-tezgah-tip-buzdolabı-79e427nmv00_1.jpg" alt=""></button>
+          </div>
+        </div>
+        <div class="eq-mx-story-wrap">
+          <div class="eq-mx-story__track" id="eq-mx-story-track"></div>
+        </div>
+        <h1 class="eq-mx-page-title">Equsto Endüstriyel Mutfak Ekipmanları</h1>
+        <section class="eq-mx-spotlight-wrap" aria-label="Öne çıkan ürünler">
+          <div class="eq-mx-spotlight__head">Haftanın öne çıkanları</div>
+          <div class="eq-mx-spotlight__track" id="eq-mx-spotlight"></div>
+        </section>
+      </section>
+
+      <div class="eq-home-cm eq-home-cm-shop eq-home-cm-mutbex">
+      <section class="eq-trust-band eq-cm-trust eq-mx-o-7" aria-label="Equsto güvenceleri" data-i18n-attr="aria-label:home.trust_aria">
+        <div class="eq-trust-inner">
+          <div class="eq-trust-card">
+            <div class="eq-trust-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5l-8-3z"/><path d="m9 12 2 2 4-4"/></svg></div>
+            <div>
+              <p class="eq-trust-h" data-i18n="home.trust_1_h">Güvenli Alışveriş</p>
+              <p class="eq-trust-p" data-i18n="home.trust_1_p">Tüm ödemeler 3D Secure ile korunur.</p>
+            </div>
+          </div>
+          <div class="eq-trust-card">
+            <div class="eq-trust-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h11v8H3z"/><path d="M14 9h4l3 3v3h-7"/><circle cx="6.5" cy="17" r="1.6"/><circle cx="17.5" cy="17" r="1.6"/></svg></div>
+            <div>
+              <p class="eq-trust-h" data-i18n="home.trust_2_h">Ücretsiz Kargo</p>
+              <p class="eq-trust-p" data-i18n="home.trust_2_p">5.000 ₺ ve üzeri tüm siparişlerde geçerli.</p>
+            </div>
+          </div>
+          <d

@@ -15,6 +15,16 @@ equsto-v2/out/
 equsto-v2/.vercel/
 equsto-v2/*.tsbuildinfo
 
+# EQUSTO-WORK (junction → C:\D Disk\EQUSTO-WORK)
+EQUSTO-WORK/E-TICARET/site/node_modules/
+EQUSTO-WORK/E-TICARET/site/.next/
+EQUSTO-WORK/E-TICARET/site/out/
+EQUSTO-WORK/E-TICARET/site/.vercel/
+EQUSTO-WORK/E-TICARET/legacy-public/
+EQUSTO-WORK/**/.env
+EQUSTO-WORK/**/.env.local
+EQUSTO-WORK/**/.env.*.local
+
 # Logs
 *.log
 npm-debug.log*

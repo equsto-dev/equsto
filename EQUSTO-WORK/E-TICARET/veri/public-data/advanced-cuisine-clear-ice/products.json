@@ -1,0 +1,261 @@
+{
+  "products": [
+    {
+      "id": 10103992549693,
+      "title": "IMT200 Clear Ice Machine",
+      "handle": "imt200-clear-ice-machine",
+      "body_html": "<p align=\"left\"><span lang=\"EN-US\">The IMT200 is the first machine of its kind to produce perfectly shaped clear ice in batches—without any cutting required. With the IMT200, bars and restaurants can easily make clear ice in-house.</span></p>",
+      "published_at": "2025-10-14T06:59:23-04:00",
+      "created_at": "2025-10-14T06:59:20-04:00",
+      "updated_at": "2026-05-16T08:23:48-04:00",
+      "vendor": "The Space & Vesta",
+      "product_type": "",
+      "tags": [
+        "The Space"
+      ],
+      "variants": [
+        {
+          "id": 50861876117821,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": false,
+          "price": "0.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10103992549693,
+          "created_at": "2025-10-14T06:59:20-04:00",
+          "updated_at": "2026-05-16T08:23:48-04:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 59883059642685,
+          "created_at": "2025-10-15T22:32:25-04:00",
+          "position": 1,
+          "updated_at": "2025-10-15T22:32:37-04:00",
+          "product_id": 10103992549693,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0960/7328/5949/files/Clear_ice_machine_IMT200.jpg?v=1760581957",
+          "width": 2942,
+          "height": 2942
+        },
+        {
+          "id": 59851958747453,
+          "created_at": "2025-10-14T07:18:45-04:00",
+          "position": 2,
+          "updated_at": "2025-10-15T22:32:37-04:00",
+          "product_id": 10103992549693,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0960/7328/5949/files/IMT200-2.jpg?v=1760581957",
+          "width": 3000,
+          "height": 3000
+        },
+        {
+          "id": 59851958780221,
+          "created_at": "2025-10-14T07:18:45-04:00",
+          "position": 3,
+          "updated_at": "2025-10-15T22:32:37-04:00",
+          "product_id": 10103992549693,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0960/7328/5949/files/IMT200-3.jpg?v=1760581957",
+          "width": 3000,
+          "height": 3000
+        },
+        {
+          "id": 59851958812989,
+          "created_at": "2025-10-14T07:18:45-04:00",
+          "position": 4,
+          "updated_at": "2025-10-15T22:32:37-04:00",
+          "product_id": 10103992549693,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0960/7328/5949/files/IMT200-4.jpg?v=1760581957",
+          "width": 3000,
+          "height": 3000
+        },
+        {
+          "id": 59851958845757,
+          "created_at": "2025-10-14T07:18:45-04:00",
+          "position": 5,
+          "updated_at": "2025-10-15T22:32:37-04:00",
+          "product_id": 10103992549693,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0960/7328/5949/files/IMT200-5.jpg?v=1760581957",
+          "width": 3000,
+          "height": 3000
+        },
+        {
+          "id": 59851958878525,
+          "created_at": "2025-10-14T07:18:45-04:00",
+          "position": 6,
+          "updated_at": "2025-10-15T22:32:37-04:00",
+          "product_id": 10103992549693,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0960/7328/5949/files/IMT200-6_2.jpg?v=1760581957",
+          "width": 4672,
+          "height": 4672
+        },
+        {
+          "id": 59851958911293,
+          "created_at": "2025-10-14T07:18:45-04:00",
+          "position": 7,
+          "updated_at": "2025-10-15T22:32:37-04:00",
+          "product_id": 10103992549693,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0960/7328/5949/files/IMT200-8.jpg?v=1760581957",
+          "width": 1080,
+          "height": 1080
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10102327411005,
+      "title": "IMT300 Clear Ice Machine",
+      "handle": "imt300-clear-ice-machine",
+      "body_html": "<p>The IMT300 is the first machine of its kind to produce perfectly shaped clear ice in batches—without any cutting required. With the IMT300, bars and restaurants can easily make clear ice in-house.</p>",
+      "published_at": "2025-10-13T13:57:53-04:00",
+      "created_at": "2025-10-13T13:57:50-04:00",
+      "updated_at": "2026-05-16T08:23:48-04:00",
+      "vendor": "The Space & Vesta",
+      "product_type": "",
+      "tags": [
+        "The Space"
+      ],
+      "variants": [
+        {
+          "id": 50848315867453,
+          "title": "Default Title",
+          "option1": "Default Title",
+          "option2": null,
+          "option3": null,
+          "sku": null,
+          "requires_shipping": true,
+          "taxable": true,
+          "featured_image": null,
+          "available": true,
+          "price": "339.00",
+          "grams": 0,
+          "compare_at_price": null,
+          "position": 1,
+          "product_id": 10102327411005,
+          "created_at": "2025-10-13T13:57:51-04:00",
+          "updated_at": "2026-05-16T08:23:48-04:00"
+        }
+      ],
+      "images": [
+        {
+          "id": 59848109130045,
+          "created_at": "2025-10-14T05:15:56-04:00",
+          "position": 1,
+          "updated_at": "2025-10-14T05:15:57-04:00",
+          "product_id": 10102327411005,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0960/7328/5949/files/IMT300-1.jpg?v=1760433357",
+          "width": 2942,
+          "height": 2942
+        },
+        {
+          "id": 59848109162813,
+          "created_at": "2025-10-14T05:15:56-04:00",
+          "position": 2,
+          "updated_at": "2025-10-14T05:18:35-04:00",
+          "product_id": 10102327411005,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0960/7328/5949/files/IMT300-2.png?v=1760433515",
+          "width": 3381,
+          "height": 3007
+        },
+        {
+          "id": 59848109195581,
+          "created_at": "2025-10-14T05:15:56-04:00",
+          "position": 3,
+          "updated_at": "2025-10-14T05:18:35-04:00",
+          "product_id": 10102327411005,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0960/7328/5949/files/IMT300-3.jpg?v=1760433515",
+          "width": 3310,
+          "height": 2934
+        },
+        {
+          "id": 59848109261117,
+          "created_at": "2025-10-14T05:15:56-04:00",
+          "position": 4,
+          "updated_at": "2025-10-14T05:18:35-04:00",
+          "product_id": 10102327411005,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0960/7328/5949/files/IMT300-5.jpg?v=1760433515",
+          "width": 3114,
+          "height": 3114
+        },
+        {
+          "id": 59848109228349,
+          "created_at": "2025-10-14T05:15:56-04:00",
+          "position": 5,
+          "updated_at": "2025-10-14T05:18:35-04:00",
+          "product_id": 10102327411005,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0960/7328/5949/files/IMT300-4.png?v=1760433515",
+          "width": 3106,
+          "height": 2486
+        },
+        {
+          "id": 59848273625405,
+          "created_at": "2025-10-14T05:18:07-04:00",
+          "position": 6,
+          "updated_at": "2025-10-14T05:18:35-04:00",
+          "product_id": 10102327411005,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0960/7328/5949/files/IMT300-6.png?v=1760433515",
+          "width": 1080,
+          "height": 1080
+        },
+        {
+          "id": 59848273559869,
+          "created_at": "2025-10-14T05:18:06-04:00",
+          "position": 7,
+          "updated_at": "2025-10-14T05:18:35-04:00",
+          "product_id": 10102327411005,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0960/7328/5949/files/IMT300-7.png?v=1760433515",
+          "width": 925,
+          "height": 925
+        },
+        {
+          "id": 59849309651261,
+          "created_at": "2025-10-14T05:34:10-04:00",
+          "position": 8,
+          "updated_at": "2025-10-14T05:34:11-04:00",
+          "product_id": 10102327411005,
+          "variant_ids": [],
+          "src": "https://cdn.shopify.com/s/files/1/0960/7328/5949/files/IMT300-8.jpg?v=1760434451",
+          "width": 1080,
+          "height": 1080
+        }
+      ],
+      "options": [
+        {
+          "name": "Title",
+          "position": 1,
+          "values": [
+            "Default Title"
+          ]
+        }
+      ]
+    }
+  ]
+}

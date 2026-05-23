@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+/** file:// ile acilinca CSS/JS (/theme.css) yuklenmez - kullaniciya net mesaj. */
+(function () {
+  if (typeof location === "undefined" || location.protocol !== "file:") return;
+  var u = "http://127.0.0.1:5173/";
+  document.open();
+  document.write(
+    '<!DOCTYPE html><html lang="tr"><head><title>Equsto - yerel sunucu gerekli</title>' +
+    '<style>body{font-family:system-ui,sans-serif;max-width:36rem;margin:2.5rem auto;padding:0 1.25rem;line-height:1.55;color:#1a1d2b}' +
+    'code{background:#eef1f8;padding:.12em .35em;border-radius:4px}ol{padding-left:1.2rem}a{color:#001e50;font-weight:600}</style></head><body>' +
+    "<h1>Bu sayfa dosyadan acilamaz</h1>" +
+    "<p><code>file://</code> ile acinca logo, CSS ve urun verisi yuklenmez (yollar <code>/theme.css</code> gibi kokten aranir).</p>" +
+    "<ol><li>Proje klasorunde <code>Site-Ac.bat</code> dosyasina cift tiklayin<br>veya terminal: <code>npm run dev</code></li>" +
+    '<li>Tarayicida: <a href="' +
+    u +
+    '">' +
+    u +
+    "</a> (port farkliysa terminalde yazani kullanin)</li></ol>" +
+    "<p>Canli site icin <code>dist</code> icerigini cPanel <code>public_html</code> + <code>.htaccess</code> yukleyin.</p></body></html>"
+  );
+  document.close();
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>Ürün Detayı · Equsto</title>
+<meta name="description" content="Endüstriyel mutfak ekipmanı ürün detayı. Teknik özellikler, fiyat, stok ve teklif. Equsto güvencesiyle.">
+<meta name="author" content="Equsto Teknoloji Limited">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#001e50">
+
+<link rel="canonical" href="https://equsto.com/product.html" id="eq-product-canonical">
+<link rel="alternate" hreflang="tr" href="https://equsto.com/product.html" id="eq-product-hreflang-tr">
+<link rel="alternate" hreflang="en" href="https://equsto.com/en/product.html" id="eq-product-hreflang-en">
+<link rel="alternate" hreflang="x-default" href="https://equsto.com/product.html" id="eq-product-hreflang-xd">
+<script>
+(function () {
+  try {
+    var path = (location.pathname || "").replace(/\/$/, "");
+    var m = path.match(/\/(?:en\/)?shop\/(pisirme|sogutma|kahve|yikama|hazirlik|icecek|tezgah)\/([a-z0-9_-]+)/i);
+    if (!m) return;
+    var dept = m[1].toLowerCase();
+    var slug = m[2].toLowerCase();
+    var trUrl = "https://equsto.com/shop/" + dept + "/" + slug;
+    var enUrl = "https://equsto.com/en/shop/" + dept + "/" + slug;
+    var c = document.getElementById("eq-product-canonical");
+    if (c) c.setAttribute("href", trUrl);
+    var ht = document.getElementById("eq-product-hreflang-tr");
+    if (ht) ht.setAttribute("href", trUrl);
+    var he = document.getElementById("eq-product-hreflang-en");
+    if (he) he.setAttribute("href", enUrl);
+    var hx = document.getElementById("eq-product-hreflang-xd");
+    if (hx) hx.setAttribute("href", trUrl);
+    var og = document.querySelector('meta[property="og:url"]');
+    if (!og) {
+      og = document.createElement("meta");
+      og.setAttribute("property", "og:url");
+      document.head.appendChild(og);
+    }
+    og.setAttribute("content", trUrl);
+  } catch (_) {}
+})();
+</script>
+
+<meta property="og:type" content="product">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:site_name" content="Equsto">
+<meta property="og:title" content="Ürün Detayı · Equsto">
+<meta property="og:description" content="Endüstriyel mutfak ekipmanı — teknik özellik, fiyat, teklif.">
+<meta property="og:image" content="https://equsto.com/og-cover.jpg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ürün Detayı · Equsto">
+<meta name="twitter:image" content="https://equsto.com/og-cover.jpg">
+
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/images/favicon.svg?v=20260522natural" type="image/svg+xml">
+  <link rel="stylesheet" href="/theme.css?v=20260521globalsearch">
+  <link rel="stylesheet" href="/eq-home-mutbex.css?v=20260521globalsearch">
+<link rel="stylesheet" href="/contact.css?v=20260523wamin">
+  <script src="/theme.js?v=20260521globalsearch"></script>
+  <script src="/equsto-logo.js?v=20260519wordmark3"></script>
+  <script src="/eq-i18n.js?v=20260521globalsearch"></script>
+  <script src="/eq-site-urls.js?v=20260521oztiax"></script>
+  <script src="/eq-product-reviews.js?v=20260520d"></script>
+  <script src="/eq-merchant-schema.js?v=20260520gsc"></script>
+  <script src="/nav.js?v=20260521globalsearch"></script>
+  <script src="/equsto-member.js?v=20260522wa" defer></script>
+  <script src="/contact.js?v=20260522wa" defer></script>
+  <script src="/ecom-data.js"></script>
+  <script src="/eq-shop-catalog-bootstrap.js?v=20260524tasima-v1"></script>
+  <script src="/eq-vendor-sanitize.js?v=20260521competitor"></script>
+  <script src="/eq-competitor-redirects.js?v=20260521competitor"></script>
+  <script src="/eq-display-terminology.js?v=20260520tezgdav"></script>
+  <script src="/equsto-pricing-core.js?v=20260521oztiprice"></script>
+  <script src="/eq-kur-live.js?v=20260522ozti-tl-kdv"></script>
+  <script src="/eq-fiyatlar-bridge.js?v=20260522ozti-tl-kdv"></script>
+  <script src="/eq-filter-column.js"></script>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    html{height:100%;}body{min-height:100%;overflow-y:auto;}
+    body{background:var(--eq-bg-page);font-family:-apple-system,sans-serif;color:var(--eq-text);}
+    .pg{width:1500px;max-width:100%;margin:0 auto;font-size:13px;background:var(--eq-surface);}
+    .pg-inner{width:1500px;max-width:100%;margin:0 auto;padding:0 20px;}
+    .hdr{display:flex;align-items:center;width:100%;background:var(--eq-surface);border-bottom:1px solid var(--eq-border);position:sticky;top:0;z-index:100;}
+    .srch{width:50%;max-width:50%;flex:none;display:flex;align-items:center;gap:0;border:1px solid var(--eq-border);}
+    .srch-cat{padding:5px 10px;font-size:11px;font-weight:500;color:var(--eq-text-secondary);border-right:1px solid var(--eq-border);cursor:pointer;white-space:nowrap;user-select:none;background:var(--eq-surface-2);}
+    .srch-cat:hover{background:var(--eq-hover);}
+    .srch-input{flex:1;font-size:12px;color:var(--eq-text-muted);padding:5px 10px;border:none;outline:none;background:transparent;}
+    .srch-btn{font-size:11px;font-weight:500;padding:5px 10px;border-left:1px solid var(--eq-border);background:var(--eq-surface);color:var(--eq-text);cursor:pointer;white-space:nowrap;}
+    .hdr-right{display:flex;align-items:center;gap:12px;font-size:12px;white-space:nowrap;}
+    .hdr-alici{display:flex;flex-direction:column;gap:1px;padding:0 10px;border-right:1px solid var(--eq-border);white-space:nowrap;}
+    .breadcrumb{padding:10px 20px;font-size:11px;color:var(--eq-text-muted);border-bottom:1px solid var(--eq-border);background:var(--eq-surface);}
+    .breadcrumb a{color:var(--eq-text-muted);cursor:pointer;text-decoration:none;}
+    .breadcrumb a:hover{text-decoration:underline;}
+    .breadcrumb span{color:var(--eq-text);font-weight:500;}
+    .body{display:flex;background:var(--eq-surface);position:relative;}
+    .right-col{flex:1;min-width:0;display:flex;flex-direction:column;background:var(--eq-surface);}
+    .footer{border-top:1px solid var(--eq-border);padding:12px 16px;font-size:11px;color:var(--eq-text-muted);display:flex;justify-content:space-between;align-items:center;background:var(--eq-surface);}
+    .refs{display:flex;gap:12px;flex-wrap:wrap;}
+
+    /* Teknik özellikler ve açıklama: Genel | Teknik iki sütun */
+    .eq-product-specs .eq-specs-cols{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;}
+    .eq-product-specs .eq-specs-cols pre{margin:0;}
+    @media (max-width:768px){.eq-product-specs .eq-specs-cols{grid-template-columns:1fr;gap:14px;}}
+
+    /* === Amazon-stili ürün sayfası kabuğu (product.html özel override) === */
+    body.eq-shop .eq-product-main{padding:18px 20px 24px;background:var(--eq-surface);}
+    body.eq-shop .eq-product-grid{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr) minmax(0,0.78fr);gap:28px;align-items:start;}
+    @media (max-width:1100px){body.eq-shop .eq-product-grid{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);}}
+    @media (max-width:700px){body.eq-shop .eq-product-grid{grid-template-columns:1fr;}}
+
+    /* Galeride büyük hero + hover-zoom imleci */
+    body.eq-shop .eq-product-hero-wrap{position:relative;}
+    body.eq-shop .eq-product-hero-img{max-height:520px;border-radius:4px;cursor:zoom-in;transition:transform .25s ease;}
+    body.eq-shop .eq-product-hero-img:hover{transform:scale(1.02);}
+    body.eq-shop .eq-product-thumbs--vertical button{width:48px;height:48px;border-radius:6px;border:1px solid var(--eq-border);background:var(--eq-surface);transition:border-color .15s ease,box-shadow .15s ease;}
+    body.eq-shop .eq-product-thumbs--vertical button:hover{border-color:#007185;box-shadow:0 0 0 2px rgba(0,113,133,.15);}
+    body.eq-shop .eq-product-thumbs--vertical button.eq-product-thumb--active{border-color:#e77600;box-shadow:0 0 0 2px rgba(231,118,0,.30);}
+    body.eq-shop .eq-product-thumbs--vertical img{width:46px;height:46px;}
+
+    /* Orta kolon: marka linki, başlık, rating, bullet liste */
+    body.eq-shop .eq-product-info{padding:0 6px 0 4px;}
+    body.eq-shop .eq-product-cat{display:none;}
+    body.eq-shop .eq-product-brand{font-size:13px;color:#007185;margin-bottom:4px;font-weight:500;}
+    body.eq-shop .eq-product-brand-link{color:#007185;text-decoration:none;}
+    body.eq-shop .eq-product-brand-link:hover{color:#c7511f;text-decoration:underline;}
+    body.eq-shop .eq-product-title{font-size:24px;font-weight:600;line-height:1.28;color:var(--eq-text);margin:0 0 6px;}
+    body.eq-shop .eq-amz-rating{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--eq-text-muted);margin-bottom:6px;padding-bottom:8px;border-bottom:1px solid var(--eq-border-soft);}
+    body.eq-shop .eq-amz-stars{color:#e77600;letter-spacing:.5px;font-size:14px;}
+    body.eq-shop .eq-amz-rating-link{color:#007185;text-decoration:none;}
+    body.eq-shop .eq-amz-rating-link:hover{color:#c7511f;text-decoration:underline;}
+
+    /* "Bu ürün hakkında" bullet bloğu */
+    body.eq-shop .eq-amz-about{margin:12px 0 14px;}
+    body.eq-shop .eq-amz-about h2{font-size:15px;font-weight:700;color:var(--eq-text);margin:0 0 6px;letter-spacing:-.01em;}
+    body.eq-shop .eq-amz-about ul{list-style:disc;padding-left:18px;margin:0;}
+    body.eq-shop .eq-amz-about li{font-size:13px;line-height:1.55;color:var(--eq-text);margin:3px 0;}
+    body.eq-shop .eq-amz-about-empty{font-size:12px;color:var(--eq-text-muted);font-style:italic;}
+
+    /* Mini spec satırı (Marka / Model / Kategori) — Amazon "Brand · Model · Category" tarzı kompakt */
+    body.eq-shop .eq-product-spec-tbl{margin-top:12px;font-size:12.5px;border-top:1px solid var(--eq-border-soft);padding-top:10px;}
+    body.eq-shop .eq-product-spec-tbl th{width:96px;font-size:12px;}
+
+    /* Buybox: belirgin sağ kutu, sticky */
+    body.eq-shop .eq-product-buybox{border:1px solid #d5d9d9;border-radius:8px;padding:18px 18px 16px;background:var(--eq-surface);box-shadow:0 1px 2px rgba(0,0,0,.04);position:sticky;top:96px;display:flex;flex-direction:column;gap:8px;}
+    body.eq-shop .eq-buybox-price{font-size:28px;font-weight:500;line-height:1.05;letter-spacing:-.02em;color:var(--eq-text);display:flex;align-items:flex-start;gap:2px;}
+    body.eq-shop .eq-buybox-price .eq-buybox-currency{font-size:14px;font-weight:600;margin-top:4px;}
+    body.eq-shop .eq-buybox-price .eq-buybox-int{font-size:28px;font-weight:600;}
+    body.eq-shop .eq-buybox-price .eq-buybox-frac{font-size:14px;font-weight:600;margin-top:4px;margin-left:1px;}
+    body.eq-shop .eq-buybox-kdv{font-size:11px;color:var(--eq-text-muted);margin:-4px 0 4px;}
+    body.eq-shop .eq-buybox-stock{font-size:15px;font-weight:500;color:#007600;margin:2px 0 0;}
+    body.eq-shop .eq-buybox-deliver{font-size:12.5px;color:var(--eq-text);margin:2px 0 6px;line-height:1.4;}
+    body.eq-shop .eq-buybox-deliver b{color:var(--eq-text);font-weight:700;}
+    body.eq-shop .eq-buybox-qty{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--eq-text);margin:2px 0 4px;}
+    body.eq-shop .eq-buybox-qty select{padding:4px 8px;font-size:12px;border:1px solid #d5d9d9;border-radius:8px;background:#f0f2f2;color:var(--eq-text);cursor:pointer;font-family:inherit;}
+    body.eq-shop .eq-buybox-qty select:hover{background:#e3e6e6;}
+    body.eq-shop .eq-product-buybox .eq-product-actions{margin:6px 0 0;display:flex;flex-direction:column;gap:8px;}
+    body.eq-shop .eq-product-buybox .eq-product-actions .eq-product-btn-cart,
+    body.eq-shop .eq-product-buybox .eq-product-actions .eq-cart-add{width:100%;background:linear-gradient(180deg,#f7dfa5 0%,#f0c14b 100%);color:#111;border:1px solid #a88734;border-radius:999px;padding:8px 10px;font-size:13px;font-weight:500;box-shadow:inset 0 1px 0 #fcf4dd,0 1px 0 rgba(0,0,0,.04);}
+    body.eq-shop .eq-product-buybox .eq-product-actions .eq-product-btn-cart:hover,
+    body.eq-shop .eq-product-buybox .eq-product-actions .eq-cart-add:hover{background:linear-gradient(180deg,#f5d78e 0%,#eeb933 100%);filter:none;}
+    body.eq-shop .eq-amz-btn-buynow{width:100%;background:linear-gradient(180deg,#f7c46c 0%,#f0a23c 100%);color:#111;border:1px solid #a47829;border-radius:999px;padding:8px 10px;font-size:13px;font-weight:500;cursor:pointer;font-family:inherit;box-shadow:inset 0 1px 0 #fde0b6,0 1px 0 rgba(0,0,0,.04);text-decoration:none;display:inline-flex;align-items:center;justify-content:center;}
+    body.eq-shop .eq-amz-btn-buynow:hover{background:linear-gradient(180deg,#f5b455 0%,#e08e2c 100%);}
+    body.eq-shop .eq-amz-btn-list{width:100%;background:#f7f8f8;color:var(--eq-text);border:1px solid #d5d9d9;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:400;cursor:pointer;font-family:inherit;margin-top:4px;}
+    body.eq-shop .eq-amz-btn-list:hover{background:#1a1a1a;}
+    body.eq-shop .eq-product-buybox .eq-product-actions .eq-product-btn-ghost{display:none;}
+    body.eq-shop .eq-buybox-divider{height:1px;background:var(--eq-border-soft);margin:8px 0 4px;}
+    body.eq-shop .eq-buybox-info{font-size:12px;line-height:1.55;color:var(--eq-text);}
+    body.eq-shop .eq-buybox-info b{color:var(--eq-text-muted);font-weight:500;display:inline-block;min-width:80px;}
+    body.eq-shop .eq-buybox-info-link{color:#007185;text-decoration:none;}
+    body.eq-shop .eq-buybox-info-link:hover{color:#c7511f;text-decoration:underline;}
+    body.eq-shop .eq-buybox-secure{font-size:12px;color:#007185;margin-top:6px;display:flex;align-items:center;gap:4px;}
+    body.eq-shop .eq-buybox-dl{display:grid;grid-template-columns:1fr 1fr;gap:0;font-size:12px;border:1px solid #d5d9d9;border-radius:6px;overflow:hidden;margin-top:8px;}
+    body.eq-shop .eq-buybox-dl > div{padding:10px 12px;border-right:1px solid #e3e6e6;background:#f7fafa;}
+    body.eq-shop .eq-buybox-dl > div:last-child{border-right:0;}
+    body.eq-shop .eq-buybox-dl b{display:block;font-size:11px;color:#565959;margin-bottom:4px;font-weight:600;}
+    body.eq-shop .eq-pdp-lightbox{position:fixed;inset:0;z-index:9000;background:rgba(15,17,17,.88);display:flex;align-items:center;justify-content:center;padding:24px;cursor:zoom-out;}
+    body.eq-shop .eq-pdp-lightbox[hidden]{display:none !important;}
+    body.eq-shop .eq-pdp-lightbox img{max-width:min(96vw,1100px);max-height:88vh;object-fit:contain;cursor:default;box-shadow:0 8px 40px rgba(0,0,0,.45);}
+    body.eq-shop .eq-pdp-lightbox-x{position:fixed;top:16px;right:20px;z-index:9001;width:44px;height:44px;border-radius:50%;border:1px solid #d5d9d9;background:#fff;font-size:22px;line-height:1;cursor:pointer;color:#111;}
+    body.eq-shop .eq-pdp-lightbox-x:hover{background:#f3f3f3;}
+
+    /* Specs bölümü başlığı Amazon stili */
+    body.eq-shop .eq-product-specs{margin-top:32px;padding-top:18px;border-top:1px solid var(--eq-border);}
+    body.eq-shop .eq-product-specs h2{font-size:18px;font-weight:700;color:var(--eq-text);margin:0 0 14px;letter-spacing:-.01em;}
+    body.eq-shop .eq-product-specs .eq-specs-cols pre{font-family:ui-sans-serif,-apple-system,sans-serif;font-size:13px;line-height:1.6;color:var(--eq-text);white-space:pre-wrap;background:var(--eq-surface-2);border:1px solid var(--eq-border-soft);border-radius:6px;padding:14px 16px;}
+
+    /* Sayfa altı: «Müşteriler bu ürünleri de görüntüledi» yatay şeridi (Amazon stili) */
+    .eq-mbg-related{margin:28px 0 8px;padding:18px 8px 18px;background:var(--eq-surface);border-top:1px solid var(--eq-border);border-bottom:1px solid var(--eq-border);position:relative;}
+    .eq-mbg-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:0 8px 10px;}
+    .eq-mbg-title{font-size:18px;font-weight:700;color:var(--eq-text);margin:0;line-height:1.2;}
+    .eq-mbg-page{font-size:12px;color:var(--eq-text-muted);white-space:nowrap;}
+    .eq-mbg-wrap{position:relative;padding:0 6px;}
+    .eq-mbg-track{display:flex;gap:14px;overflow-x:auto;scroll-behavior:smooth;scrollbar-width:none;padding:4px 2px 14px;scroll-snap-type:x proximity;}
+    .eq-mbg-track::-webkit-scrollbar{display:none;}
+    .eq-mbg-card{flex:0 0 175px;display:flex;flex-direction:column;background:var(--eq-surface);text-decoration:none;color:inherit;scroll-snap-align:start;padding:6px;border-radius:6px;transition:background .15s ease;}
+    .eq-mbg-card:hover{background:var(--eq-surface-2);}
+    .eq-mbg-thumb{width:100%;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;background:var(--eq-surface);overflow:hidden;margin-bottom:8px;}
+    .eq-mbg-thumb img{max-width:100%;max-height:100%;object-fit:contain;}
+    .eq-mbg-brand{font-size:10px;font-weight:600;letter-spacing:.04em;color:var(--eq-text-secondary);text-transform:uppercase;margin-bottom:3px;line-height:1.2;}
+    .eq-mbg-name{font-size:12px;font-weight:500;color:var(--eq-text);line-height:1.35;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:48px;}
+    .eq-mbg-price{margin-top:6px;font-size:14px;font-weight:700;color:var(--eq-text);}
+    .eq-mbg-price::after{content:" ₺";font-size:11px;font-weight:500;color:var(--eq-text-muted);}
+    .eq-mbg-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:38px;height:38px;border-radius:50%;background:var(--eq-surface);border:1px solid var(--eq-border);display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.10);color:var(--eq-text);transition:background .15s ease,box-shadow .15s ease,opacity .15s ease;padding:0;}
+    .eq-mbg-arrow:hover{background:var(--eq-surface-2);box-shadow:0 3px 12px rgba(0,0,0,.14);}
+    .eq-mbg-arrow.eq-mbg-prev{left:-6px;}
+    .eq-mbg-arrow.eq-mbg-next{right:-6px;}
+    .eq-mbg-arrow:disabled{opacity:.35;cursor:default;box-shadow:none;}
+    .eq-mbg-arrow svg{width:18px;height:18px;display:block;}
+  </style>
+<style id="eq-contact-guard-20260521globalsearch">#equsto-contact-fab,.equsto-contact-fab:not(#eq-bottom-tabbar *){position:fixed;right:16px;bottom:16px;z-index:9999;width:auto;height:auto;max-width:80px;max-height:80px;align-items:flex-end;flex-direction:column;gap:10px;pointer-events:none;box-sizing:border-box}#equsto-contact-fab .equsto-contact-wa-fab:not(.equsto-contact-wa-fab--tabbar),.equsto-contact-fab:not(#eq-bottom-tabbar *) .equsto-contact-wa-fab:not(.equsto-contact-wa-fab--tabbar){pointer-events:auto;flex:0 0 auto;max-width:64px;max-height:64px;overflow:hidden}#equsto-contact-fab img,.equsto-contact-fab:not(#eq-bottom-tabbar *) .equsto-contact-wa-fab:not(.equsto-contact-wa-fab--tabbar) img{width:62px!important;height:62px!important;max-width:62px!important;max-height:62px!important;display:block;object-fit:cover}.equsto-wa-overlay:not(.equsto-wa-overlay--open){display:none!important;pointer-events:none!important}.equsto-wa-ico svg,.equsto-wa-ico-svg{width:22px;height:22px;max-width:22px;max-height:22px;display:block}</style>
+<style id="eq-mobile-chrome-20260521globalsearch">@media (max-width:768px){body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) nav.topnav,body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .topnav{display:none!important}#equsto-contact-fab,.equsto-contact-fab:not(#eq-bottom-tabbar *){display:none!important;pointer-events:none!important}body.eq-home #eq-home-catband{display:none!important}body.eq-shop.eq-dept aside.eq-filter-col,body.eq-shop.eq-dept #eq-filter-col{display:none!important}body:not(.admin-app):not(.eq-shop) header.hdr a.logo,body:not(.admin-app):not(.eq-shop) header.hdr>a.logo{display:none!important;visibility:hidden!important;width:0!important;height:0!important;overflow:hidden!important}body.eq-shop:not(.admin-app):not(.bd-page) header.hdr>a.logo{display:inline-flex!important;visibility:visible!important;width:auto!important;height:auto!important;max-width:42vw!important;overflow:visible!important;pointer-events:auto!important}body:not(.admin-app) header.hdr .srch-cat,body:not(.admin-app) header.hdr .cat-picker,body:not(.admin-app) header.hdr .cat-picker-btn{display:none!important;width:0!important;overflow:hidden!important}body:not(.admin-app) header.hdr .srch .srch-input{border-radius:8px 0 0 8px!important}}</style>
+<style id="eq-desktop-chrome-20260521globalsearch">@media (min-width:769px){body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) nav.topnav,body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .topnav{display:flex!important;visibility:visible!important;pointer-events:auto!important}body:not(.admin-app) header.hdr a.logo{display:inline-flex!important;visibility:visible!important;width:auto!important;height:auto!important;overflow:visible!important}body:not(.admin-app) header.hdr .srch-cat,body:not(.admin-app) header.hdr .cat-picker,body:not(.admin-app) header.hdr .cat-picker-btn{display:flex!important;visibility:visible!important;width:auto!important;overflow:visible!important}body.eq-shop.eq-dept-plp .eq-dept-plp-aside{display:block!important;visibility:visible!important;transform:none!important}body.eq-shop.eq-dept-plp .eq-dept-plp-main{display:block!important;visibility:visible!important}body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right{display:flex!important;visibility:visible!important}body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) #equsto-contact-fab{display:flex!important;position:fixed!important;right:16px!important;bottom:16px!important;z-index:9999!important;width:auto!important;height:auto!important;max-width:80px!important;max-height:80px!important;align-items:flex-end!important;visibility:visible!important;pointer-events:none!important}body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) #equsto-contact-fab .equsto-contact-wa-fab{pointer-events:auto!important;flex:0 0 auto!important;max-width:64px!important;max-height:64px!important;overflow:hidden!important}body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) #equsto-contact-fab img{width:62px!important;height:62px!important;max-width:62px!important;max-height:62px!important;object-fit:cover!important}}</style><script id="eq-desktop-chrome-restore-20260521globalsearch">(function(){var S='header.hdr a.logo,header.hdr .srch-cat,header.hdr .cat-picker,header.hdr .cat-picker-btn,nav.topnav,header+nav.topnav';function c(){if(matchMedia('(max-width:768px)').matches)return;document.querySelectorAll(S).forEach(function(el){['display','visibility','pointer-events','width','height','overflow'].forEach(function(p){el.style.removeProperty(p);});});}document.addEventListener('DOMContentLoaded',c);addEventListener('pageshow',c);addEventListener('resize',c);if(document.body)c();})();</script>
+</head>
+<body class="eq-shop">
+  <header class="hdr">
+    <a class="logo" href="/" aria-label="Equsto"></a>
+    <div class="pg-inner hdr-pg-inner" style="display:flex;align-items:center;gap:10px;flex:1;min-width:0;padding:10px 20px 10px 0;">
+      <div class="hdr-alici">
+        <div style="font-size:9px;color:var(--eq-text-subtle);">Teslimat Adresi</div>
+        <div style="font-size:11px;font-weight:600;color:var(--eq-drawer-head-text);">İstanbul, Türkiye</div>
+      </div>
+      <div class="srch">
+        <div class="srch-cat" onclick="toggleDrawer()">☰ Tüm Kategoriler</div>
+        <input class="srch-input" type="text" placeholder="Ürün, marka veya kategori ara..." oninput="window.searchFilter ? searchFilter(this.value) : void 0">
+        <button type="button" class="srch-btn" aria-label="Ara" title="Ara"><svg xmlns="http://www.w3.org/2000/svg" class="eq-srch-ico" width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.25" stroke="currentColor" stroke-width="1.35"/><line x1="12.35" y1="12.35" x2="17.85" y2="12.35" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/></svg></button>
+      </div>
+      <div class="hdr-right">
+        <div class="theme-wrap">
+          <button type="button" class="theme-toggle" id="theme-toggle" onclick="equstoCycleTheme()" title="Tema">◐</button>
+          <span class="theme-legend">Sistem · Açık · Koyu</span>
+        </div>
+        <a href="/login.html" class="eq-hdr-account" title="Üye girişi">
+          <span style="font-size:10px;color:var(--eq-text-muted);">Hesabım</span>
+          <span class="eq-hdr-account-title" style="font-size:12px;font-weight:600;">Projeler ve Listeler ▾</span>
+        </a>
+        <div style="display:flex;flex-direction:column;line-height:1.4;">
+          <span style="font-size:10px;color:var(--eq-text-muted);">İadeler</span>
+          <span style="font-size:12px;font-weight:600;cursor:pointer;">ve Siparişler</span>
+        </div>
+        <div id="equsto-hdr-cart" class="equsto-hdr-cart" style="display:flex;flex-direction:column;line-height:1.4;cursor:pointer;" title="Sepeti aç" role="button" tabindex="0">
+          <span id="equsto-cart-count" style="font-size:10px;color:var(--eq-text-muted);">🛒 0</span>
+          <span style="font-size:12px;font-weight:600;">Alışveriş Sepeti</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="topnav" aria-label="Departmanlar">
+    <div class="pg-inner topnav-inner">
+      <div class="topnav-item topnav-all" onclick="toggleDrawer()">☰ Tüm kategoriler</div>
+      <span class="topnav-sep" aria-hidden="true">|</span>
+      <div class="topnav-item topnav-pfos" onclick="eqGo('pfos')" data-i18n-attr="aria-label:nav.pfos"><span class="topnav-pfos__in" aria-hidden="true"><span class="topnav-pfos__face topnav-pfos__face--plain" data-i18n="nav.pfos">Proje Fabrikası</span><span class="topnav-pfos__face topnav-pfos__face--dark" data-i18n="nav.pfos_hover">Proje Fabrikası</span></span></div>
+      <span class="topnav-sep" aria-hidden="true">|</span>
+      <div class="topnav-item" onclick="typeof eqGo==='function'?eqGo('pisirme'):location.href='/pisirme.html'">Pişirme Ekipmanları</div>
+      <span class="topnav-sep" aria-hidden="true">|</span>
+      <div class="topnav-item" onclick="typeof eqGo==='function'?eqGo('sogutma'):location.href='/sogutma.html'">Soğutma Ekipmanları</div>
+      <span class="topnav-sep" aria-hidden="true">|</span>
+      <div class="topnav-item" onclick="typeof eqGo==='function'?eqGo('kahve'):location.href='/kahve.html'">Kahve Ekipmanları</div>
+      <span class="topnav-sep" aria-hidden="true">|</span>
+      <div class="topnav-item" onclick="typeof eqGo==='function'?eqGo('yikama'):location.href='/yikama.html'">Yıkama Ekipmanları</div>
+      <span class="topnav-sep" aria-hidden="true">|</span>
+      <div class="topnav-item" onclick="typeof eqGo==='function'?eqGo('hazirlik'):location.href='/hazirlik.html'">Hazırlık Ekipmanları</div>
+      <span class="topnav-sep" aria-hidden="true">|</span>
+      <div class="topnav-item" onclick="typeof eqGo==='function'?eqGo('icecek'):location.href='/icecek.html'">İçecek Ekipmanları</div>
+      <span class="topnav-sep" aria-hidden="true">|</span>
+      <div class="topnav-item topnav-besos" onclick="eqGo('besos')" data-i18n-attr="aria-label:nav.bar_design"><span class="topnav-besos__in" aria-hidden="true"><span class="topnav-besos__face topnav-besos__face--plain" data-i18n="nav.bar_design">Bar Design</span><span class="topnav-besos__face topnav-besos__face--dark" data-i18n="nav.bar_design_hover">Dark Side</span></span></div>
+    </div>
+  </nav>
+
+  <div class="pg">
+    <div class="body">
+      <aside class="eq-filter-col eq-refine-amazon" id="eq-filter-col" aria-label="Filtreler">
+        <nav class="sidebar" id="eq-sidebar" aria-label="Kategoriler"></nav>
+        <div class="eq-filter-sec">
+          <div class="eq-filter-sec-lbl eq-filter-sec-lbl--markalarimiz">Markalarımız</div>
+          <div id="eq-filter-brands" class="eq-filter-brands"></div>
+        </div>
+      </aside>
+      <div class="right-col">
+        <div class="breadcrumb" id="eq-product-bc">
+          <a href="/" id="eq-product-bc-home">Ana Sayfa</a> › <span>Yükleniyor…</span>
+        </div>
+        <main class="eq-product-main" id="eq-product-root">
+          <div class="eq-product-miss">Ürün bilgisi yükleniyor…</div>
+        </main>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="refs">
+        <span style="font-size:10px;color:var(--eq-text-muted);">B2B · proje · kanal ortaklıkları</span>
+      </div>
+      <div>Çerez tercihlerini yönet</div>
+    </footer>
+  </div>
+
+  <script src="/eq-auth-api.js"></script>
+<script src="/equsto-auth-client.js?v=20260521globalsearch" defer></script>
+<script defer src="/ecom-cart.js?v=20260520cart"></script>
+  <script src="/eq-product-card-tint.js"></script>
+  <script>
+    window.searchFilter = window.searchFilter || function () {};
+
+    function eqShopHref() {
+      return typeof window.equstoUrl === "function" ? window.equstoUrl("shop") : "index.html";
+    }
+
+    function normImgPath(p) {
+      if (typeof window.equstoDataAssetHref === "function") {
+        try {
+          return window.equstoDataAssetHref(p);
+        } catch (_) {}
+      }
+      var s = String(p).replace(/\\/g, "/").replace(/^\.\//, "").replace(/^data\//, "");
+      return s ? "/data/" + s : "";
+    }
+
+    /**
+     * href / src: Zaten `/shop/…`, `/data/…`, `https://…` veya `#` ise başına `/` ekleme
+     * (`//data/…` protokol-relative URL hatasını önler).
+     */
+    function eqHtmlUrl(u) {
+      if (u == null || u === "") return "";
+      var s = String(u).trim();
+      if (!s) return "";
+      if (s === "#" || s.charAt(0) === "#") return s;
+      if (/^https?:\/\//i.test(s)) return s;
+      if (s.charAt(0) === "/") return s;
+      if (s.indexOf("./") === 0 || s.indexOf("../") === 0) return s;
+      return "/" + s;
+    }
+
+    /** OG / JSON-LD: katalog göreli yol → tam http(s) URL */
+    function eqAbsoluteAssetUrl(raw) {
+      if (!raw) return "";
+      var p = normImgPath(raw);
+      if (!p) return "";
+      if (/^https?:\/\//i.test(p)) return p;
+      var origin = "https://equsto.com";
+      try {
+        if (typeof location !== "undefined" && location.origin) origin = location.origin;
+      } catch (_) {}
+      var path = p.charAt(0) === "/" ? p : "/" + p.replace(/^\.\//, "");
+      return origin + path;
+    }
+
+    /** Aynı görselin tekrarını ele: önce normalize, sonra Set ile benzersiz. */
+    function uniqueImgs(arr) {
+      var seen = Object.create(null);
+      var out = [];
+      (arr || []).forEach(function (raw) {
+        var s = normImgPath(raw);
+        if (!s) return;
+        var key = s.toLowerCase();
+        if (seen[key]) return;
+        seen[key] = 1;
+        out.push(s);
+      });
+      return out;
+    }
+
+    function formatTlBuybox(n) {
+      var v = Math.round(Number(n));
+      if (!(v > 0)) return "";
+      try {
+        return v.toLocaleString("tr-TR", { maximumFractionDigits: 0 });
+      } catch (_) {
+        return String(v);
+      }
+    }
+
+    function extractCartPrice(raw, item) {
+      if (item && Number(item.fiyat_tl) > 0) {
+        return Math.round(Number(item.fiyat_tl)).toLocaleString("tr-TR", {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2,
+        });
+      }
+      if (!raw) return "";
+      var s = String(raw).split("\n")[0] || String(raw);
+      if (/€/.test(s)) return "";
+      return s
+        .replace(/₺/g, "")
+        .replace(/\+?\s*KDV.*/gi, "")
+        .replace(/KDV\s*dahil/gi, "")
+        .trim();
+    }
+
+    function oztiWebRelFromSku(sku) {
+      var k = String(sku || "")
+        .replace(/\s+/g, "")
+        .toUpperCase();
+      if (!/^[0-9]{2,4}[A-Z0-9]*\.[A-Z0-9.\-]{2,}$/i.test(k)) return "";
+      var slug =
+        "ozti-" +
+        k
+          .toLowerCase()
+          .replace(/\./g, "-")
+          .replace(/[^a-z0-9-]/g, "");
+      return "images/catalog/ozti/web/" + slug + ".jpg";
+    }
+
+    function resolveProductImgSrc(rel) {
+      if (!rel) return "";
+      if (typeof window.eqProductImgSrc === "function") {
+        try {
+          var via = window.eqProductImgSrc(rel);
+          if (via) return via;
+        } catch (_) {}
+      }
+      if (typeof window.equstoDataAssetHref === "function") {
+        try {
+          return window.equstoDataAssetHref(rel);
+        } catch (_) {}
+      }
+      return eqHtmlUrl(normImgPath(rel));
+    }
+
+    function collectProductImgs(x) {
+      var rels = uniqueImgs(x.images);
+      if (!rels.length) {
+        var syn = oztiWebRelFromSku(x.sku || x.urun_kodu || x.model);
+        if (syn) rels.push(syn);
+      }
+      var out = [];
+      rels.forEach(function (rel) {
+        var src = resolveProductImgSrc(rel);
+        if (src) out.push({ src: src, rel: rel });
+      });
+      return out;
+    }
+
+    function pdpImgFailAttr() {
+      return ' onerror="typeof __eqImgFail===\'function\'&&__eqImgFail(this)"';
+    }
+
+    function pdpImgDataAttrs(x, rel) {
+      var raw = normImgPath(rel) || "";
+      var sku = (x && (x.sku || x.urun_kodu || x.model)) || "";
+      var s = raw ? ' data-eq-img-raw="' + esc(raw) + '"' : "";
+      if (sku) s += ' data-eq-ozti-kod="' + esc(String(sku).trim()) + '"';
+      return s;
+    }
+
+    function renderPdpThumbImg(p) {
+      var rel = (p && p.images && p.images[0]) || "";
+      if (!rel && p) rel = oztiWebRelFromSku(p.sku || p.urun_kodu || p.model) || "";
+      var src = rel ? resolveProductImgSrc(rel) : thumbSrc(p);
+      if (!src) {
+        return '<span style="font-size:9px;color:var(--eq-text-subtle);">—</span>';
+      }
+      return (
+        '<img src="' +
+        esc(eqHtmlUrl(src)) +
+        '"' +
+        pdpImgFailAttr() +
+        pdpImgDataAttrs(p, rel) +
+        ' alt="" loading="lazy" decoding="async">'
+      );
+    }
+
+    function deptFromPagePath() {
+      try {
+        var m = location.pathname.match(/\/shop\/([^/]+)/);
+        return m ? decodeURIComponent(m[1]) : "";
+      } catch (_) {
+        return "";
+      }
+    }
+
+    function deptLink(cat, deptOverride) {
+      var seg =
+        deptOverride ||
+        deptFromPagePath() ||
+        (typeof window.eqCategoryToUrunlerSeg === "function" ? window.eqCategoryToUrunlerSeg(cat) : null);
+      var labels = {
+        pisirme: "Pişirme Ekipmanları",
+        sogutma: "Soğutma Ekipmanları",
+        kahve: "Kahve Ekipmanları",
+        yikama: "Yıkama Ekipmanları",
+        hazirlik: "Hazırlık Ekipmanları",
+        icecek: "İçecek Ekipmanları",
+        tasima: "Taşıma Ekipmanları",
+        "set-ustu-mutfak": "Set Üstü Mutfak Ekipmanları",
+      };
+      if (seg && labels[seg] && typeof window.equstoUrl === "function") {
+        return { href: window.equstoUrl(seg), label: labels[seg] };
+      }
+      return { href: eqShopHref(), label: "Katalog" };
+    }
+
+    function slugifyEq(s) {
+      var tr = {
+        'ğ':'g','ü':'u','ş':'s','ı':'i','ö':'o','ç':'c','â':'a','î':'i','û':'u',
+        'Ğ':'g','Ü':'u','Ş':'s','İ':'i','Ö':'o','Ç':'c','Â':'a','Î':'i','Û':'u'
+      };
+      return String(s || '').toLowerCase()
+        .replace(/[ğüşıöçâîûĞÜŞİÖÇÂÎÛ]/g, function(c){ return tr[c] || c; })
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '')
+        .substring(0, 100);
+    }
+    function productSlugEq(u) {
+      if (typeof window.eqProductSlug === 'function') return window.eqProductSlug(u);
+      if (!u) return '';
+      var b = slugifyEq(u.brand || u.b || '');
+      var n = slugifyEq(u.name || u.n || '');
+      return (b ? b + '-' : '') + n;
+    }
+    window.__eqProductSlug = productSlugEq;
+
+    function eqPathForProductObj(x) {
+      if (!x) return null;
+      if (x.equstoPage) {
+        return typeof window.eqAttrPath === "function"
+          ? window.eqAttrPath(x.equstoPage)
+          : x.equstoPage;
+      }
+      var sl = productSlugEq(x);
+      if (!sl) return null;
+      var cat = x.category || x.c || "";
+      var seg =
+        (x.dept && String(x.dept).trim()) ||
+        (typeof window.eqCategoryToUrunlerSeg === "function"
+          ? window.eqCategoryToUrunlerSeg(cat) || "pisirme"
+          : "pisirme");
+      return typeof window.eqProductPath === "function" ? window.eqProductPath(seg, sl) : "/shop/" + seg + "/" + sl;
+    }
+
+    function findRaw(all, qs) {
+      var p = qs.get("p");
+      var b = qs.get("b");
+      var n = qs.get("n");
+      var keyFn = window.EqustoCart && EqustoCart.itemKey;
+      if (!all || !all.length) return null;
+
+      /* 1) URL: /shop/[dept]/[slug], /urunler/... (eski) veya /urun/[slug] */
+      try {
+        var mU = location.pathname.match(/\/(?:shop|urunler)\/[^/]+\/([^/?#]+)/);
+        var mO = !mU ? location.pathname.match(/\/urun\/([^/?#]+)/) : null;
+        var slugPart = (mU && mU[1]) || (mO && mO[1]);
+        if (slugPart) {
+          var pathSlug = decodeURIComponent(slugPart).toLowerCase();
+          var altSlugFn =
+            typeof window.eqProductSlugTransliterated === "function"
+              ? window.eqProductSlugTransliterated
+              : null;
+          for (var s = 0; s < all.length; s++) {
+            if (productSlugEq(all[s]) === pathSlug) return all[s];
+            if (altSlugFn && altSlugFn(all[s]) === pathSlug) return all[s];
+          }
+        }
+      } catch (_) {}
+
+      /* 2) ?p= (itemKey) */
+      if (keyFn && p) {
+        for (var i = 0; i < all.length; i++) {
+          var x = all[i];
+          if (!x) continue;
+          var k = keyFn({ c: x.category || "", b: x.brand || "", n: x.name || "" });
+          if (k === p) return x;
+        }
+      }
+
+      /* 3) ?b=brand&n=name */
+      if (b != null && n != null && String(b) !== "" && String(n) !== "") {
+        for (var j = 0; j < all.length; j++) {
+          var y = all[j];
+          if (y && (y.brand || "") === b && (y.name || "") === n) return y;
+        }
+      }
+      return null;
+    }
+
+    function esc(s) {
+      return String(s == null ? "" : s)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/\"/g, "&quot;");
+    }
+
+    function clearProductPageAccent() {
+      var el = document.getElementById("eq-product-root");
+      if (!el) return;
+      el.classList.remove("eq-product-main--accent");
+      el.style.removeProperty("--eq-prod-ar");
+      el.style.removeProperty("--eq-prod-ag");
+      el.style.removeProperty("--eq-prod-ab");
+    }
+
+    function applyProductPageAccentFromImg(img) {
+      var el = document.getElementById("eq-product-root");
+      if (!el) return;
+      var Tint = window.EqustoProductTint;
+      if (!Tint || typeof Tint.sampleFromImage !== "function") {
+        clearProductPageAccent();
+        return;
+      }
+      if (!img || img.tagName !== "IMG" || !img.getAttribute("src")) {
+        clearProductPageAccent();
+        return;
+      }
+      function commit(rgb) {
+        if (!rgb || rgb.r == null) {
+          clearProductPageAccent();
+          return;
+        }
+        el.style.setProperty("--eq-prod-ar", String(rgb.r));
+        el.style.setProperty("--eq-prod-ag", String(rgb.g));
+        el.style.setProperty("--eq-prod-ab", String(rgb.b));
+        el.classList.add("eq-product-main--accent");
+      }
+      var sync = typeof Tint.sampleFromImageSync === "function" ? Tint.sampleFromImageSync(img) : null;
+      if (sync) commit(sync);
+      Tint.sampleFromImage(img, function (rgb) {
+        commit(rgb || sync);
+      });
+    }
+
+    function shortModelLabel(p) {
+      var n = (p && p.name) || "";
+      var b = (p && p.brand) || "";
+      if (b && n.indexOf(b) === 0) {
+        n = n.slice(b.length).replace(/^[\s.,;:\-–—]+/, "");
+      }
+      n = n.replace(/\s+/g, " ").trim();
+      if (n.length > 46) n = n.slice(0, 44) + "…";
+      return n || ((p && p.name) || "Ürün").slice(0, 46);
+    }
+
+    function thumbSrc(p) {
+      var imgs = uniqueImgs(p && p.images);
+      return imgs.length ? imgs[0] : "";
+    }
+
+    /** Kategori slug → şeritte gösterilecek etiket. */
+    var CAT_RAIL_LABEL = {
+      "sanayi-ocaklari": "Ocak",
+      "sanayi-tipi-izgaralar": "Izgara",
+      "kuzineler": "Kuzine",
+      "fritozler": "Fritöz",
+      "doner-ocaklari-": "Döner Ocağı",
+      "tost-makineleri": "Tost Makinesi",
+      "pilic-cevirme-makineleri": "Piliç Çevirme",
+      "ocakbasi-izgara": "Ocakbaşı Izgarası",
+      "sogutma-ekipmanlari": "Soğutma Ekipmanı",
+      "kahve-makineleri": "Kahve Makinesi",
+      "bulasik-makineleri": "Bulaşık Yıkama Makinası",
+      "hamur-hazirlik-makineleri": "Hamur Hazırlık",
+      "et-hazirlik-makineleri": "Et Hazırlık",
+      "cay-kazanlari-cay-makineleri-cay-otomatlari": "Çay Makinesi",
+      "yiyecek-ve-icecek-otomatlari-": "İçecek Otomatı",
+      "cikolata-temperleme-makinesi-": "Çikolata Temperleme",
+    };
+
+    function railLabelFor(cat) {
+      var s = String(cat || "");
+      if (CAT_RAIL_LABEL[s]) return CAT_RAIL_LABEL[s];
+      return s.replace(/-+$/, "").replace(/-/g, " ");
+    }
+
+    /** Ürün adı içindeki anahtar kelimelerle alt-tip etiketi (bağlam koru: espresso↔espresso, türk↔türk, vb.). */
+    var SUB_TYPE_KEYWORDS = {
+      "kahve-makineleri": [
+        { tag: "espresso", any: ["espresso"] },
+        { tag: "filtre", any: ["filtre kahve", "filtre"] },
+        { tag: "turk", any: ["türk", "kumda"] },
+        { tag: "degirmen", any: ["değirmen", "grinder"] },
+        { tag: "mikser", any: ["mikser", "blender", "shaker"] },
+        { tag: "perkolator", any: ["perkolatör", "percolator"] },
+        { tag: "moka", any: ["moka"] },
+      ],
+      "sogutma-ekipmanlari": [
+        { tag: "buz-makinesi", any: ["buz makinesi", "buz makinası", "ice maker"] },
+        { tag: "derin-dondurucu", any: ["derin dondurucu", "dondurucu"] },
+        { tag: "soguk-oda", any: ["soğuk oda"] },
+        { tag: "sarap", any: ["şarap"] },
+        { tag: "pastane", any: ["pastane", "pasta"] },
+        { tag: "make-up", any: ["make up", "make-up", "makeup"] },
+        { tag: "cihaz-alti", any: ["cihaz altı", "cihazaltı"] },
+        { tag: "tezgah-tipi", any: ["tezgah tipi", "tezgah altı"] },
+        { tag: "dik-buzdolabi", any: ["dik tip", "dik buzdolabı", "dik buzdolap"] },
+        { tag: "buzdolabi", any: ["buzdolabı", "buzdolap"] },
+      ],
+      "bulasik-makineleri": [
+        { tag: "setalti", any: ["setaltı", "set altı", "tezgah altı"] },
+        { tag: "giyotin", any: ["giyotin"] },
+        { tag: "konveyor", any: ["konveyör", "konveyor"] },
+        { tag: "tirnakli", any: ["tırnaklı"] },
+        { tag: "kazan", any: ["kazan yıkama", "kazan"] },
+      ],
+      "hamur-hazirlik-makineleri": [
+        { tag: "mikser", any: ["mikser", "planeter", "spiral"] },
+        { tag: "blender", any: ["blender"] },
+        { tag: "hamur-acma", any: ["hamur açma", "hamur acma", "açıcı", "açma"] },
+        { tag: "yogurma", any: ["yoğurma"] },
+      ],
+      "et-hazirlik-makineleri": [
+        { tag: "dilimleme", any: ["dilimleme", "dilim"] },
+        { tag: "kiyma", any: ["kıyma"] },
+        { tag: "vakum", any: ["vakum"] },
+        { tag: "kemik", any: ["kemik testere", "testere"] },
+      ],
+    };
+
+    function detectSubType(p, cat) {
+      var defs = SUB_TYPE_KEYWORDS[cat];
+      if (!defs) return "";
+      var hay = String((p && p.name) || "").toLocaleLowerCase("tr");
+      for (var i = 0; i < defs.length; i++) {
+        var d = defs[i];
+        for (var j = 0; j < d.any.length; j++) {
+          var kw = String(d.any[j] || "").toLocaleLowerCase("tr");
+          if (kw && hay.indexOf(kw) !== -1) return d.tag;
+        }
+      }
+      return "";
+    }
+
+    /** Aynı kategori + (varsa) aynı alt-tip; mevcut ürün hariç; marka çeşitliliği round-robin; en fazla 5. */
+    function pickRelatedProducts(x, all, keyFn) {
+      if (!x || !all || !all.length || !keyFn) return { items: [], mode: "" };
+      var cat = x.category || "";
+      if (!cat) return { items: [], mode: "" };
+      var curKey = keyFn({ c: x.category || "", b: x.brand || "", n: x.name || "" });
+      var curSubType = detectSubType(x, cat);
+      var byBrand = {};
+      var brands = [];
+      var seen = {};
+      for (var i = 0; i < all.length; i++) {
+        var p = all[i];
+        if (!p || (p.category || "") !== cat) continue;
+        var k = keyFn({ c: p.category || "", b: p.brand || "", n: p.name || "" });
+        if (!k || k === curKey || seen[k]) continue;
+        if (curSubType && detectSubType(p, cat) !== curSubType) continue;
+        seen[k] = 1;
+        var b = String(p.brand || "—");
+        if (!byBrand[b]) {
+          byBrand[b] = [];
+          brands.push(b);
+        }
+        byBrand[b].push(p);
+      }
+      if (!brands.length) return { items: [], mode: "" };
+      var curBrand = String(x.brand || "—");
+      brands.sort(function (a, b) {
+        if (a === curBrand && b !== curBrand) return 1;
+        if (b === curBrand && a !== curBrand) return -1;
+        return a.localeCompare(b, "tr", { sensitivity: "base" });
+      });
+      brands.forEach(function (b) {
+        byBrand[b].sort(function (a1, a2) {
+          return String(a1.name || "").localeCompare(String(a2.name || ""), "tr", { sensitivity: "base" });
+        });
+      });
+      var out = [];
+      var maxN = 5;
+      var round = 0;
+      while (out.length < maxN) {
+        var added = false;
+        for (var bi = 0; bi < brands.length && out.length < maxN; bi++) {
+          var arr = byBrand[brands[bi]];
+          if (arr && arr.length > round) {
+            out.push(arr[round]);
+            added = true;
+          }
+        }
+        if (!added) break;
+        round++;
+      }
+      return { items: out, mode: "subcat" };
+    }
+
+    /** Üst rail’de gösterilenleri dışlayan, aynı kategoride genişletilmiş «yardımcı / ilgili» liste. */
+    function pickRelatedExtras(x, all, keyFn, excludeKeys, max) {
+      if (!x || !all || !all.length || !keyFn) return [];
+      var cat = x.category || "";
+      if (!cat) return [];
+      var curKey = keyFn({ c: x.category || "", b: x.brand || "", n: x.name || "" });
+      var byBrand = {};
+      var brands = [];
+      var seen = Object.create(null);
+      for (var i = 0; i < all.length; i++) {
+        var p = all[i];
+        if (!p || (p.category || "") !== cat) continue;
+        var k = keyFn({ c: p.category || "", b: p.brand || "", n: p.name || "" });
+        if (!k || k === curKey) continue;
+        if (excludeKeys && excludeKeys[k]) continue;
+        if (seen[k]) continue;
+        seen[k] = 1;
+        var b = String(p.brand || "—");
+        if (!byBrand[b]) { byBrand[b] = []; brands.push(b); }
+        byBrand[b].push(p);
+      }
+      var curBrand = String(x.brand || "—");
+      brands.sort(function (a, b) {
+        if (a === curBrand && b !== curBrand) return -1;
+        if (b === curBrand && a !== curBrand) return 1;
+        return a.localeCompare(b, "tr", { sensitivity: "base" });
+      });
+      brands.forEach(function (b) {
+        byBrand[b].sort(function (a1, a2) {
+          return String(a1.name || "").localeCompare(String(a2.name || ""), "tr", { sensitivity: "base" });
+        });
+      });
+      var out = [];
+      var maxN = max || 12;
+      var round = 0;
+      while (out.length < maxN) {
+        var added = false;
+        for (var bi = 0; bi < brands.length && out.length < maxN; bi++) {
+          var arr = byBrand[brands[bi]];
+          if (arr && arr.length > round) {
+            out.push(arr[round]);
+            added = true;
+          }
+        }
+        if (!added) break;
+        round++;
+      }
+      return out;
+    }
+
+    /** Specs metninden "Bu ürün hakkında" bullet üretici: ilk N anlamlı satır. */
+    function buildAboutBullets(specs, max) {
+      var s = String(specs || "");
+      if (!s.trim()) return [];
+      var lines = s.split(/\r?\n/);
+      var out = [];
+      var skipHeader = /^(genel\s*özellikler|teknik\s*özellikler|özellikler|açıklama)\s*:?\s*$/i;
+      for (var i = 0; i < lines.length; i++) {
+        var ln = String(lines[i] || "").trim();
+        if (!ln) continue;
+        if (skipHeader.test(ln)) continue;
+        // "Anahtar: Değer" satırlarını kabul et; süslü madde işaretlerini de soy
+        ln = ln.replace(/^[•\-–—*·]+\s*/, "");
+        if (ln.length < 4) continue;
+        out.push(ln);
+        if (out.length >= (max || 6)) break;
+      }
+      return out;
+    }
+
+    function splitSpecsCols(specs) {
+      var s = String(specs || "");
+      if (!s.trim()) return { left: "", right: "" };
+      var lines = s.split(/\r?\n/);
+      var idx = -1;
+      for (var i = 0; i < lines.length; i++) {
+        var ln = lines[i].trim().toLocaleLowerCase("tr-TR");
+        if (/^teknik\s*[öo]zellikler[\s:]*$/.test(ln)) { idx = i; break; }
+      }
+      if (idx < 0) return { left: s, right: "" };
+      var left = lines.slice(0, idx).join("\n").replace(/\s+$/, "");
+      var right = lines.slice(idx).join("\n");
+      return { left: left, right: right };
+    }
+
+    function renderRecentlyViewed(current, all) {
+      try {
+        var slugs = JSON.parse(localStorage.getItem('eq_recently_viewed') || '[]');
+        var curSlug = productSlugEq(current);
+        slugs = slugs.filter(function(s){ return s && s !== curSlug; }).slice(0, 8);
+        if (!slugs.length) return '';
+        var items = [];
+        slugs.forEach(function(s) {
+          for (var i = 0; i < all.length; i++) {
+            if (productSlugEq(all[i]) === s) { items.push(all[i]); break; }
+          }
+        });
+        if (!items.length) return '';
+        var cards = items.map(function(p) {
+          var sl = productSlugEq(p);
+          var href = sl ? eqPathForProductObj(p) || "/urun/" + sl : "#";
+          var img = renderPdpThumbImg(p);
+          return '<a class="eq-mbg-card" href="' + esc(eqHtmlUrl(href)) + '">'+
+            '<div class="eq-mbg-thumb">'+img+'</div>'+
+            '<div class="eq-mbg-brand">'+esc(p.brand||'')+'</div>'+
+            '<div class="eq-mbg-name">'+esc((p.name||'').slice(0,55))+'</div>'+
+          '</a>';
+        }).join('');
+        return '<section class="eq-mbg-related" aria-label="Son görüntüledikleriniz">'+
+          '<div class="eq-mbg-head"><h2 class="eq-mbg-title">Son görüntüledikleriniz</h2></div>'+
+          '<div class="eq-mbg-wrap"><div class="eq-mbg-track">'+cards+'</div></div>'+
+        '</section>';
+      } catch(_) { return ''; }
+    }
+
+    function renderRelatedStrip(x, all, keyFn, excludeKeys) {
+      var items = pickRelatedExtras(x, all, keyFn, excludeKeys, 24);
+      if (!items.length) return "";
+      var cells = items
+        .map(function (p) {
+          var k = keyFn({ c: p.category || "", b: p.brand || "", n: p.name || "" });
+          var img = renderPdpThumbImg(p);
+          var lbl = esc(shortModelLabel(p));
+          var brand = esc(p.brand || "");
+          var price = esc(extractCartPrice(p.price));
+          var pHref = productSlugEq(p)
+            ? eqPathForProductObj(p) || "/urun/" + productSlugEq(p)
+            : "product.html?p=" + esc(encodeURIComponent(k));
+          return (
+            '<a class="eq-mbg-card" href="' + esc(eqHtmlUrl(pHref)) + '">' +
+            '<div class="eq-mbg-thumb">' + img + "</div>" +
+            (brand ? '<div class="eq-mbg-brand">' + brand + "</div>" : "") +
+            '<div class="eq-mbg-name">' + lbl + "</div>" +
+            (price ? '<div class="eq-mbg-price">' + price + "</div>" : "") +
+            "</a>"
+          );
+        })
+        .join("");
+      return (
+        '<section class="eq-mbg-related" aria-label="Bu ürünleri de görüntüleyenler">' +
+        '<div class="eq-mbg-head">' +
+          '<h2 class="eq-mbg-title">Müşteriler bu ürünleri de görüntüledi</h2>' +
+          '<span class="eq-mbg-page" id="eq-mbg-page">Sayfa 1 / 1</span>' +
+        '</div>' +
+        '<div class="eq-mbg-wrap">' +
+          '<button type="button" class="eq-mbg-arrow eq-mbg-prev" aria-label="Önceki" onclick="eqMbgScroll(-1)">' +
+            '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+          '</button>' +
+          '<button type="button" class="eq-mbg-arrow eq-mbg-next" aria-label="Sonraki" onclick="eqMbgScroll(1)">' +
+            '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+          '</button>' +
+          '<div class="eq-mbg-track" id="eq-mbg-track">' + cells + '</div>' +
+        '</div>' +
+        "</section>"
+      );
+    }
+
+    function eqMbgScroll(dir) {
+      var tr = document.getElementById("eq-mbg-track");
+      if (!tr) return;
+      var step = Math.max(200, Math.floor(tr.clientWidth * 0.9));
+      tr.scrollBy({ left: dir * step, behavior: "smooth" });
+    }
+    function eqMbgUpdatePage() {
+      var tr = document.getElementById("eq-mbg-track");
+      var ind = document.getElementById("eq-mbg-page");
+      if (!tr) return;
+      var w = Math.max(1, tr.clientWidth);
+      var totalPages = Math.max(1, Math.ceil(tr.scrollWidth / w));
+      var page = Math.min(totalPages, Math.floor(tr.scrollLeft / w) + 1);
+      if (ind) ind.textContent = "Sayfa " + page + " / " + totalPages;
+      var prev = document.querySelector(".eq-mbg-prev");
+      var next = document.querySelector(".eq-mbg-next");
+      if (prev) prev.disabled = tr.scrollLeft <= 2;
+      if (next) next.disabled = tr.scrollLeft + w >= tr.scrollWidth - 2;
+    }
+    function eqMbgBindRelated() {
+      var tr = document.getElementById("eq-mbg-track");
+      if (!tr) return;
+      tr.addEventListener("scroll", function () {
+        if (tr.__eqMbgTick) return;
+        tr.__eqMbgTick = true;
+        window.requestAnimationFrame(function () {
+          tr.__eqMbgTick = false;
+          eqMbgUpdatePage();
+        });
+      });
+      window.addEventListener("resize", eqMbgUpdatePage);
+      eqMbgUpdatePage();
+    }
+
+    function renderFamilyRail(x, all, keyFn) {
+      var cat = (x && x.category) || "";
+      if (!cat) return "";
+      var pack = pickRelatedProducts(x, all, keyFn);
+      var items = pack.items;
+      if (!items.length) return "";
+      var lineTitle = esc(railLabelFor(cat));
+      var cells = items
+        .map(function (p) {
+          var k = keyFn({ c: p.category || "", b: p.brand || "", n: p.name || "" });
+          var img = renderPdpThumbImg(p);
+          var lbl = esc(shortModelLabel(p));
+          var fHref = productSlugEq(p)
+            ? eqPathForProductObj(p) || "/urun/" + productSlugEq(p)
+            : "product.html?p=" + esc(encodeURIComponent(k));
+          return (
+            '<div class="eq-product-family-item">' +
+            '<a href="' + esc(eqHtmlUrl(fHref)) + '">' +
+            '<div class="eq-product-family-thumb">' +
+            img +
+            "</div>" +
+            '<div class="eq-product-family-lbl">' +
+            lbl +
+            "</div></a></div>"
+          );
+        })
+        .join("");
+      return (
+        '<div class="eq-product-family" aria-label="' +
+        lineTitle +
+        '">' +
+        '<div class="eq-product-family-row">' +
+        '<div class="eq-product-family-lineblock">' +
+        '<div class="eq-product-family-line">' +
+        lineTitle +
+        "</div>" +
+        "</div>" +
+        '<div class="eq-product-family-scroll" role="list">' +
+        cells +
+        "</div></div></div>"
+      );
+    }
+
+    function productFaqFor(x) {
+      var name = x.name || "bu ürün";
+      var brand = x.brand || "Equsto kataloğu";
+      var cat = x.category || "endüstriyel mutfak";
+      var out = [];
+      var seo = window.__eqCategorySeo;
+      if (seo && seo.catalogCategories && x.category && seo.catalogCategories[x.category]) {
+        var ce = seo.catalogCategories[x.category];
+        if (ce.faq && ce.faq.length) out = ce.faq.slice(0, 2);
+      }
+      out = out.concat([
+        {
+          q: name + " için teklif nasıl alınır?",
+          a:
+            "Ürün sayfasındaki «Sepete ekle» veya «Şimdi al» ile Proje Fabrikası akışına geçebilir; kapasite ve proje bilgisiyle Satış Mühendisliği ekibinden net teklif isteyebilirsiniz.",
+        },
+        {
+          q: brand + " " + name + " hangi projelerde kullanılır?",
+          a:
+            cat +
+            " kategorisindeki bu model; restoran, otel, catering, kafe ve bulut mutfak hatlarında planlanan kapasiteye göre seçilir.",
+        },
+        {
+          q: "Görünen fiyat kesin midir?",
+          a:
+            "Sayfadaki tutar katalog referansıdır. Montaj, nakliye ve proje şartnamesine göre nihai teklif Equsto tarafından onaylanır.",
+        },
+      ]);
+      return out.slice(0, 5);
+    }
+
+    function renderProductFaqHtml(x) {
+      var faqs = productFaqFor(x);
+      var items = faqs
+        .map(function (f) {
+          return (
+            '<details class="eq-product-faq-item"><summary>' +
+            esc(f.q) +
+            '</summary><p class="eq-product-faq-a">' +
+            esc(f.a) +
+            "</p></details>"
+          );
+        })
+        .join("");
+      return (
+        '<section class="eq-product-faq" aria-label="Sık sorulan sorular">' +
+        "<h2>Sık sorulan sorular</h2>" +
+        items +
+        "</section>"
+      );
+    }
+
+    function productEqSk(slug) {
+      var tail = String(slug || "urun")
+        .toUpperCase()
+        .replace(/[^A-Z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "")
+        .slice(0, 48);
+      return "EQ-SK-2026-URUN-" + (tail || "GEN");
+    }
+
+    function renderProduct(x, all) {
+      var prodTitle = ((x.brand ? x.brand + ' ' : '') + (x.name || 'Ürün')).slice(0, 80);
+      document.title = prodTitle + " — Equsto";
+      /* Canonical + OG meta güncellemeleri */
+      try {
+        var slug = productSlugEq(x);
+        var path = eqPathForProductObj(x) || "/urun/" + slug;
+        var canonUrl = "https://equsto.com" + path;
+        var canonEl = document.querySelector('link[rel="canonical"]');
+        if (canonEl) canonEl.href = canonUrl;
+        var ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.content = prodTitle + ' · Equsto';
+        var ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.content = (x.description || x.name || '') + ' — Equsto endüstriyel mutfak kataloğu.';
+        var ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.content = canonUrl;
+        var ogImg = document.querySelector('meta[property="og:image"]');
+        if (ogImg && x.images && x.images[0]) ogImg.content = eqAbsoluteAssetUrl(x.images[0]);
+
+        /* JSON-LD Product Schema (Merchant Listing — geçerli fiyat / SKU / kargo / iade) */
+        var imgUrl = (x.images && x.images[0]) ? eqAbsoluteAssetUrl(x.images[0]) : "";
+        var schema =
+          window.EqustoMerchantSchema && typeof window.EqustoMerchantSchema.buildProductSchema === "function"
+            ? window.EqustoMerchantSchema.buildProductSchema(x, { canonUrl: canonUrl, slug: slug, imgUrl: imgUrl })
+            : {
+                "@context": "https://schema.org",
+                "@type": "Product",
+                name: x.name || "",
+                description: x.description || (x.name + " — Equsto endüstriyel mutfak ekipmanı."),
+                brand: { "@type": "Brand", name: x.brand || "Equsto" },
+                sku: String(x.sku || x.code || slug).slice(0, 50),
+                url: canonUrl,
+              };
+        if (imgUrl && !schema.image) schema.image = imgUrl;
+        var ldEl = document.getElementById('eq-product-ld');
+        if (!ldEl) {
+          ldEl = document.createElement('script');
+          ldEl.id = 'eq-product-ld';
+          ldEl.type = 'application/ld+json';
+          document.head.appendChild(ldEl);
+        }
+        ldEl.textContent = JSON.stringify(schema);
+        if (window.EqustoProductReviews && typeof window.EqustoProductReviews.applyToElement === "function") {
+          window.EqustoProductReviews.applyToElement(ldEl, schema, x, slug);
+        }
+
+        /* BreadcrumbList JSON-LD */
+        var bcSchema = {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://equsto.com/" },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": x.category || "Ekipman",
+              "item":
+                typeof window.equstoUrl === "function"
+                  ? window.equstoUrl("shop")
+                  : "https://equsto.com/shop",
+            },
+            { "@type": "ListItem", "position": 3, "name": x.name || 'Ürün', "item": canonUrl }
+          ]
+        };
+        var bcLdEl = document.getElementById('eq-product-bc-ld');
+        if (!bcLdEl) {
+          bcLdEl = document.createElement('script');
+          bcLdEl.id = 'eq-product-bc-ld';
+          bcLdEl.type = 'application/ld+json';
+          document.head.appendChild(bcLdEl);
+        }
+        bcLdEl.textContent = JSON.stringify(bcSchema);
+
+        var faqs = productFaqFor(x);
+        var faqSchema = {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map(function (f) {
+            return {
+              "@type": "Question",
+              name: f.q,
+              acceptedAnswer: { "@type": "Answer", text: f.a },
+            };
+          }),
+        };
+        var faqLdEl = document.getElementById("eq-product-faq-ld");
+        if (!faqLdEl) {
+          faqLdEl = document.createElement("script");
+          faqLdEl.id = "eq-product-faq-ld";
+          faqLdEl.type = "application/ld+json";
+          document.head.appendChild(faqLdEl);
+        }
+        faqLdEl.textContent = JSON.stringify(faqSchema);
+
+        var skEl = document.getElementById("eq-product-sk");
+        if (!skEl) {
+          skEl = document.createElement("span");
+          skEl.id = "eq-product-sk";
+          skEl.style.display = "none";
+          skEl.setAttribute("aria-hidden", "true");
+          document.body.appendChild(skEl);
+        }
+        skEl.setAttribute("data-eq-page-sig", productEqSk(slug));
+        skEl.textContent = productEqSk(slug);
+      } catch(_) {}
+      var ref = deptLink(x.category, x.dept);
+      var bc = document.getElementById("eq-product-bc");
+      if (bc) {
+        bc.innerHTML =
+          '<a href="' +
+          esc(eqHtmlUrl(eqShopHref())) +
+          '">Ana Sayfa</a> › <a href="' +
+          esc(eqHtmlUrl(ref.href)) +
+          '">' +
+          esc(ref.label) +
+          "</a> › <span>" +
+          esc((x.name || "").slice(0, 80)) +
+          (x.name && x.name.length > 80 ? "…" : "") +
+          "</span>";
+      }
+      var imgs = collectProductImgs(x);
+      var cartU = {
+        c: x.category || "",
+        b: x.brand || "",
+        n: x.name || "",
+        p: extractCartPrice(x.price, x),
+      };
+      var priceBlock = esc(x.price || "—");
+      var heroRel =
+        (x.images && x.images[0]) || oztiWebRelFromSku(x.sku || x.urun_kodu || x.model) || "";
+      var heroImg = imgs.length
+        ? '<img class="eq-product-hero-img" id="eq-ph-main" src="' +
+          esc(imgs[0].src) +
+          '"' +
+          pdpImgFailAttr() +
+          pdpImgDataAttrs(x, heroRel) +
+          ' alt="' +
+          esc(x.name) +
+          '" fetchpriority="high" decoding="async">'
+        : '<div class="eq-product-hero-img" style="display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--eq-text-subtle);min-height:240px;">Görsel yok</div>';
+      var thumbs = "";
+      if (imgs.length > 1) {
+        thumbs =
+          '<div class="eq-product-thumbs eq-product-thumbs--vertical">' +
+          imgs
+            .map(function (item, i) {
+              return (
+                '<button type="button" data-src="' +
+                esc(item.src) +
+                '" class="' +
+                (i === 0 ? "eq-product-thumb--active" : "") +
+                '" aria-label="Görsel ' +
+                (i + 1) +
+                '"><img src="' +
+                esc(item.src) +
+                '"' +
+                pdpImgFailAttr() +
+                pdpImgDataAttrs(x, item.rel) +
+                ' alt="" loading="lazy" decoding="async"></button>'
+              );
+            })
+            .join("") +
+          "</div>";
+      }
+      var cartBtn =
+        window.EqustoCart && EqustoCart.cartAddButtonAttrs
+          ? "<button " + EqustoCart.cartAddButtonAttrs(cartU) + ">Sepete ekle</button>"
+          : "";
+      var keyFn = window.EqustoCart && EqustoCart.itemKey;
+      var familyRail =
+        keyFn && all && all.length ? renderFamilyRail(x, all, keyFn) : "";
+
+      // Üstte family rail’de geçenleri alt şerit tekrar etmesin
+      var exclude = Object.create(null);
+      if (keyFn && all && all.length) {
+        var topItems = pickRelatedProducts(x, all, keyFn).items || [];
+        topItems.forEach(function (p) {
+          var k = keyFn({ c: p.category || "", b: p.brand || "", n: p.name || "" });
+          if (k) exclude[k] = 1;
+        });
+      }
+      var relatedStrip =
+        keyFn && all && all.length ? renderRelatedStrip(x, all, keyFn, exclude) : "";
+
+      var modelLbl = shortModelLabel(x);
+      if (!modelLbl) modelLbl = "—";
+      var specRows =
+        '<tr><th>Marka</th><td>' + esc(x.brand || "—") + "</td></tr>" +
+        '<tr><th>Model</th><td>' + esc(modelLbl) + "</td></tr>" +
+        '<tr><th>Kategori</th><td>' + esc(ref.label || "") + "</td></tr>";
+
+      var priceTxt = extractCartPrice(x.price, x);
+      if (!priceTxt && window.EqustoKurLive && typeof window.EqustoKurLive.computeRowPrices === "function") {
+        var rate = window.EqustoKurLive.getRate && window.EqustoKurLive.getRate();
+        if (rate) {
+          var px = window.EqustoKurLive.computeRowPrices(x, rate);
+          if (px && px.fiyat_tl > 0) priceTxt = formatTlBuybox(px.fiyat_tl);
+        }
+      }
+      var priceInt = priceTxt;
+      var priceFrac = "";
+      var fracMatch = String(priceTxt || "").match(/^(.*?)(?:,(\d+))?$/);
+      if (fracMatch) {
+        priceInt = fracMatch[1] || priceTxt;
+        priceFrac = fracMatch[2] || "";
+      }
+      var priceHTML = priceTxt
+        ? '<span class="eq-buybox-currency">₺</span>' +
+          '<span class="eq-buybox-int">' + esc(priceInt) + '</span>' +
+          (priceFrac ? '<span class="eq-buybox-frac">' + esc(priceFrac) + '</span>' : '')
+        : '<span class="eq-buybox-currency">₺</span><span class="eq-buybox-int">—</span>';
+
+      // "Bu ürün hakkında" bullet listesi (specs'in left'inden)
+      var aboutLines = buildAboutBullets(splitSpecsCols(x.specs).left || x.specs, 6);
+      var aboutHTML = aboutLines.length
+        ? '<ul>' + aboutLines.map(function(l){return '<li>'+esc(l)+'</li>';}).join('') + '</ul>'
+        : '<div class="eq-amz-about-empty">Detaylı ürün bilgisi için teklif sürecinden talep edebilirsiniz.</div>';
+
+      // Yıldız rating placeholder (B2B, gerçek puan yok)
+      var ratingHTML =
+        '<span class="eq-amz-stars" aria-hidden="true">★★★★★</span>' +
+        '<a class="eq-amz-rating-link" href="#" onclick="return false;">(yorum yok)</a>' +
+        '<span style="opacity:.55;">·</span>' +
+        '<a class="eq-amz-rating-link" href="#" onclick="return false;">Soru sor</a>';
+
+      // Marka linki (departmana yönlendir)
+      var brandHTML = x.brand
+        ? '<a class="eq-product-brand-link" href="' + esc(eqHtmlUrl(ref.href)) + '">' + esc(x.brand) + ' mağazasını ziyaret edin</a>'
+        : '';
+
+      // Adet seçici (1–10)
+      var qtyOpts = '';
+      for (var qi = 1; qi <= 10; qi++) qtyOpts += '<option value="'+qi+'">'+qi+'</option>';
+
+      document.getElementById("eq-product-root").innerHTML =
+        familyRail +
+        '<div class="eq-product-grid">' +
+        '<div class="eq-product-gallery">' +
+        '<div class="eq-product-gallery-row">' +
+        thumbs +
+        '<div class="eq-product-hero-wrap">' + heroImg + "</div>" +
+        "</div>" +
+        "</div>" +
+        '<div class="eq-product-info">' +
+        (brandHTML ? '<div class="eq-product-brand">' + brandHTML + '</div>' : '') +
+        '<h1 class="eq-product-title">' + esc(x.name || "") + '</h1>' +
+        '<div class="eq-amz-rating">' + ratingHTML + '</div>' +
+        '<div class="eq-amz-about">' +
+          '<h2>Bu ürün hakkında</h2>' +
+          aboutHTML +
+        '</div>' +
+        '<table class="eq-product-spec-tbl">' + specRows + "</table>" +
+        "</div>" +
+        '<aside class="eq-product-buybox" aria-label="Satın al">' +
+        '<div class="eq-buybox-price">' + priceHTML + '</div>' +
+        '<div class="eq-buybox-kdv">KDV dahil fiyat</div>' +
+        '<div class="eq-buybox-deliver"><b>ÜCRETSİZ teslimat</b> anlaşmalı bayi ağı ile.<br><span style="color:#007185;">Hızlı teslimat için tarih seçin.</span></div>' +
+        '<div class="eq-buybox-stock">Stokta var</div>' +
+        '<div class="eq-buybox-qty"><label for="eq-qty">Adet:</label><select id="eq-qty">' + qtyOpts + '</select></div>' +
+        '<div class="eq-product-actions">' +
+          cartBtn +
+          '<a class="eq-amz-btn-buynow" href="' + esc(eqHtmlUrl(typeof window.equstoUrl === 'function' ? window.equstoUrl('pfos') : 'pfos.html')) + '">Şimdi al</a>' +
+          '<button type="button" class="eq-amz-btn-list" onclick="return false;">Listeye ekle ▾</button>' +
+        '</div>' +
+        '<div class="eq-buybox-divider"></div>' +
+        '<div class="eq-buybox-dl">' +
+          '<div><b>Teslimat</b> Anlaşmalı rota ile; bölgeye göre süre satış ekibinde netleşir.</div>' +
+          '<div><b>İade</b> Teklif ve proje koşullarına göre; kurumsal süreç.</div>' +
+        '</div>' +
+        '<div class="eq-buybox-info">' +
+          '<div><b>Satıcı</b> <a class="eq-buybox-info-link" href="#" onclick="return false;">Equsto B2B</a></div>' +
+          '<div><b>Gönderi</b> Anlaşmalı bayi & kanal ortakları</div>' +
+          '<div><b>Ödeme</b> Havale · Kurumsal kart · Vade</div>' +
+        '</div>' +
+        '<div class="eq-buybox-secure">🔒 Güvenli işlem</div>' +
+        "</aside>" +
+        "</div>" +
+        (function(){
+          var sp = splitSpecsCols(x.specs);
+          if (sp.right) {
+            return '<div class="eq-product-specs"><h2>Teknik özellikler ve açıklama</h2>' +
+              '<div class="eq-specs-cols">' +
+                '<pre>' + esc(sp.left || "—") + '</pre>' +
+                '<pre>' + esc(sp.right) + '</pre>' +
+              '</div></div>';
+          }
+          return '<div class="eq-product-specs"><h2>Teknik özellikler ve açıklama</h2><pre>' +
+            esc(x.specs || "—") +
+            '</pre></div>';
+        })() +
+        renderProductFaqHtml(x) +
+        relatedStrip +
+        renderRecentlyViewed(x, all);
+
+      eqMbgBindRelated();
+
+      var mainEl = document.getElementById("eq-ph-main");
+      document.querySelectorAll(".eq-product-thumbs button").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var s = btn.getAttribute("data-src");
+          if (mainEl && s) {
+            mainEl.addEventListener(
+              "load",
+              function once() {
+                mainEl.removeEventListener("load", once);
+                applyProductPageAccentFromImg(mainEl);
+              },
+              { once: true }
+            );
+            mainEl.src = s;
+          }
+          document.querySelectorAll(".eq-product-thumbs button").forEach(function (b) {
+            b.classList.toggle("eq-product-thumb--active", b === btn);
+          });
+        });
+      });
+      if (mainEl && mainEl.tagName === "IMG") {
+        if (mainEl.complete && mainEl.naturalWidth) applyProductPageAccentFromImg(mainEl);
+        else
+          mainEl.addEventListener(
+            "load",
+            function () {
+              applyProductPageAccentFromImg(mainEl);
+            },
+            { once: true }
+          );
+      }
+      (function bindPdpLightbox() {
+        var lb = document.getElementById("eq-pdp-lightbox");
+        var wrap = document.querySelector(".eq-product-hero-wrap");
+        var hero = document.getElementById("eq-ph-main");
+        if (!lb || !wrap || !hero || hero.tagName !== "IMG") return;
+        var lbImg = lb.querySelector("img");
+        var xb = lb.querySelector(".eq-pdp-lightbox-x");
+        function openLb() {
+          if (!lbImg) return;
+          lbImg.src = hero.src;
+          lbImg.alt = hero.alt || "";
+          lb.hidden = false;
+        }
+        function closeLb() {
+          lb.hidden = true;
+        }
+        wrap.style.cursor = "zoom-in";
+        wrap.addEventListener("click", openLb);
+        hero.addEventListener("keydown", function (e) {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            openLb();
+          }
+        });
+        hero.setAttribute("tabindex", "0");
+        hero.setAttribute("role", "button");
+        hero.setAttribute("aria-label", "Görseli büyüt");
+        lb.addEventListener("click", closeLb);
+        if (xb) {
+          xb.addEventListener("click", function (e) {
+            e.stopPropagation();
+            closeLb();
+          });
+        }
+        if (!window.__eqPdpLbEscBound) {
+          window.__eqPdpLbEscBound = true;
+          document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape" && lb && !lb.hidden) closeLb();
+          });
+        }
+      })();
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var bcHome = document.getElementById("eq-product-bc-home");
+      if (bcHome && typeof window.equstoUrl === "function") bcHome.href = window.equstoUrl("shop");
+      if (window.EqFilterColumn) {
+        EqFilterColumn.buildBrands([], "", function () {});
+      }
+      var qs = new URLSearchParams(location.search || "");
+      if (!window.EqustoShopCatalog || typeof window.EqustoShopCatalog.load !== "function") {
+        document.getElementById("eq-product-root").innerHTML =
+          '<div class="eq-product-miss">Katalog yükleyici yok. Sayfayı yenileyin; <code>ecom-data.js</code> ve <code>eq-shop-catalog-bootstrap.js</code> yüklü olmalı.</div>';
+        return;
+      }
+      var seoReady = fetch("/data/eq-category-seo.json", { credentials: "same-origin", cache: "default" })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (j) { window.__eqCategorySeo = j; })
+        .catch(function () {});
+      seoReady.finally(function () {
+      var priceReady = Promise.all([
+        window.EqustoKurLive && typeof window.EqustoKurLive.fetchKur === "function"
+          ? window.EqustoKurLive.fetchKur(true)
+          : Promise.resolve(),
+        window.EqFiyatlarBridge && window.EqFiyatlarBridge.load
+          ? window.EqFiyatlarBridge.load()
+          : Promise.resolve(),
+      ]);
+      priceReady.finally(function () {
+      var catalogLoad =
+        typeof window.EqustoShopCatalog.loadForProductPage === "function"
+          ? window.EqustoShopCatalog.loadForProductPage()
+          : window.EqustoShopCatalog.load();
+      catalogLoad
+        .then(function (all) {
+          var x = findRaw(all, qs);
+          if (!x && typeof window.EqustoShopCatalog.load === "function") {
+            return window.EqustoShopCatalog.load().then(function (full) {
+              var y = findRaw(full, qs);
+              if (y && y.dept) {
+                var canon = eqPathForProductObj(y);
+                if (canon) {
+                  var want = eqHtmlUrl(canon);
+                  if (want && location.pathname.replace(/\/+$/, "") !== canon.replace(/\/+$/, "")) {
+                    location.replace(want + (location.search || ""));
+                    return null;
+                  }
+                }
+              }
+              return { x: y, all: full };
+            });
+          }
+          return Promise.resolve({ x: x, all: all });
+        })
+        .then(function (pack) {
+          if (!pack) return;
+          var x = pack.x;
+          var all = pack.all;
+          if (!x) {
+            clearProductPageAccent();
+            document.getElementById("eq-product-root").innerHTML =
+              '<div class="eq-product-miss">Bu ürün bulunamadı. Katalogdan tekrar seçin veya ana sayfaya dönün.</div>';
+            var b = document.getElementById("eq-product-bc");
+            if (b) b.innerHTML = '<a href="' + esc(eqHtmlUrl(eqShopHref())) + '">Ana Sayfa</a> › <span>Ürün</span>';
+            return;
+          }
+          if (window.EqFiyatlarBridge && window.EqFiyatlarBridge.applyToRaw) {
+            window.EqFiyatlarBridge.applyToRaw(x);
+          }
+          try {
+            renderProduct(x, all);
+            /* Son görüntülenen ürünleri localStorage'a kaydet (max 12) */
+            try {
+              var _slug = productSlugEq(x);
+              var _key = 'eq_recently_viewed';
+              var _rv = JSON.parse(localStorage.getItem(_key) || '[]');
+              _rv = _rv.filter(function(s){ return s !== _slug; });
+              _rv.unshift(_slug);
+              if (_rv.length > 12) _rv.length = 12;
+              localStorage.setItem(_key, JSON.stringify(_rv));
+            } catch(_) {}
+          } catch (renderErr) {
+            var msg = renderErr && renderErr.message ? String(renderErr.message) : String(renderErr);
+            document.getElementById("eq-product-root").innerHTML =
+              '<div class="eq-product-miss">Sayfa oluşturulurken hata: ' +
+              esc(msg) +
+              "</div>";
+            var bc2 = document.getElementById("eq-product-bc");
+            if (bc2) bc2.innerHTML = '<a href="' + esc(eqHtmlUrl(eqShopHref())) + '">Ana Sayfa</a> › <span>Hata</span>';
+          }
+        })
+        .catch(function (err) {
+          clearProductPageAccent();
+          var msg =
+            err && err.message
+              ? String(err.message)
+              : "Ağ veya dosya hatası (file:// ise Katalogu-Ac.bat / npm run dev kullanın).";
+          document.getElementById("eq-product-root").innerHTML =
+            '<div class="eq-product-miss">Ürün verisi yüklenemedi. ' + esc(msg) + "</div>";
+          var bc3 = document.getElementById("eq-product-bc");
+          if (bc3) bc3.innerHTML = '<a href="' + esc(eqHtmlUrl(eqShopHref())) + '">Ana Sayfa</a> › <span>Yüklenemedi</span>';
+        });
+      });
+    });
+    });
+  </script>
+
+  <div class="drawer-overlay" id="drawerOverlay" onclick="__eqDrawerBackdropClick(event)">
+    <button type="button" class="drawer-overlay-close" onclick="__eqDrawerCloseX(event)" aria-label="Kapat">×</button>
+  </div>
+  <div class="cat-drawer eq-amazon-shop-all" id="catDrawer" aria-hidden="true"></div>
+
+  <div id="eq-pdp-lightbox" class="eq-pdp-lightbox" hidden role="dialog" aria-modal="true" aria-label="Ürün görseli">
+    <button type="button" class="eq-pdp-lightbox-x" aria-label="Kapat">×</button>
+    <img src="" alt="" onclick="event.stopPropagation()">
+  </div>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"2800f8a675244419a90a426a1a3e6854","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
