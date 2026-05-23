@@ -1,6 +1,11 @@
 "use client";
 
+import { goEqCart, goEqDept, submitBesosSearch, toggleEqDrawer } from "@/lib/besos/site-nav";
+import { useRef } from "react";
+
 export default function BesosEqustoChrome() {
+  const searchRef = useRef<HTMLInputElement>(null);
+
   return (
     <>
       <header className="hdr" data-besos-shell="locked">
@@ -23,13 +28,11 @@ export default function BesosEqustoChrome() {
             </div>
           </div>
           <div className="srch">
-            <div
-              className="srch-cat"
-              onClick={() => (window as Window & { toggleDrawer?: () => void }).toggleDrawer?.()}
-            >
+            <div className="srch-cat" role="button" tabIndex={0} onClick={toggleEqDrawer}>
               ☰ Tüm Kategoriler
             </div>
             <input
+              ref={searchRef}
               className="srch-input"
               type="text"
               placeholder="Bar modülü, ürün veya kategori ara..."
@@ -37,8 +40,19 @@ export default function BesosEqustoChrome() {
                 const fn = (window as Window & { filterStations?: (q: string) => void }).filterStations;
                 fn?.(e.currentTarget.value);
               }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  submitBesosSearch(e.currentTarget.value);
+                }
+              }}
             />
-            <button type="button" className="srch-btn" aria-label="Ara" title="Ara">
+            <button
+              type="button"
+              className="srch-btn"
+              aria-label="Ara"
+              title="Ara"
+              onClick={() => submitBesosSearch(searchRef.current?.value ?? "")}
+            >
               <svg xmlns="http://www.w3.org/2000/svg" className="eq-srch-ico" width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                 <circle cx="8.5" cy="8.5" r="5.25" stroke="currentColor" strokeWidth="1.35" />
                 <line x1="12.35" y1="12.35" x2="17.85" y2="12.35" stroke="currentColor" strokeWidth="1.35" strokeLinecap="round" />
@@ -75,6 +89,13 @@ export default function BesosEqustoChrome() {
               title="Sepeti aç"
               role="button"
               tabIndex={0}
+              onClick={goEqCart}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  goEqCart();
+                }
+              }}
             >
               <span id="equsto-cart-count" style={{ fontSize: 10, color: "var(--eq-text-muted)" }}>
                 🛒 0
@@ -87,52 +108,49 @@ export default function BesosEqustoChrome() {
 
       <nav className="topnav" aria-label="Departmanlar">
         <div className="pg-inner topnav-inner">
-          <div
-            className="topnav-item topnav-all"
-            onClick={() => (window as Window & { toggleDrawer?: () => void }).toggleDrawer?.()}
-          >
+          <div className="topnav-item topnav-all" role="button" tabIndex={0} onClick={toggleEqDrawer}>
             ☰ Tüm kategoriler
           </div>
           <span className="topnav-sep" aria-hidden="true">
             |
           </span>
-          <div className="topnav-item" onClick={() => (window as Window & { eqGo?: (d: string) => void }).eqGo?.("pfos")}>
+          <div className="topnav-item" role="button" tabIndex={0} onClick={() => goEqDept("pfos")}>
             Proje Fabrikası
           </div>
           <span className="topnav-sep" aria-hidden="true">
             |
           </span>
-          <div className="topnav-item" onClick={() => (window as Window & { eqGo?: (d: string) => void }).eqGo?.("pisirme")}>
+          <div className="topnav-item" role="button" tabIndex={0} onClick={() => goEqDept("pisirme")}>
             Pişirme Ekipmanları
           </div>
           <span className="topnav-sep" aria-hidden="true">
             |
           </span>
-          <div className="topnav-item" onClick={() => (window as Window & { eqGo?: (d: string) => void }).eqGo?.("sogutma")}>
+          <div className="topnav-item" role="button" tabIndex={0} onClick={() => goEqDept("sogutma")}>
             Soğutma Ekipmanları
           </div>
           <span className="topnav-sep" aria-hidden="true">
             |
           </span>
-          <div className="topnav-item" onClick={() => (window as Window & { eqGo?: (d: string) => void }).eqGo?.("kahve")}>
+          <div className="topnav-item" role="button" tabIndex={0} onClick={() => goEqDept("kahve")}>
             Kahve Ekipmanları
           </div>
           <span className="topnav-sep" aria-hidden="true">
             |
           </span>
-          <div className="topnav-item" onClick={() => (window as Window & { eqGo?: (d: string) => void }).eqGo?.("yikama")}>
+          <div className="topnav-item" role="button" tabIndex={0} onClick={() => goEqDept("yikama")}>
             Yıkama Ekipmanları
           </div>
           <span className="topnav-sep" aria-hidden="true">
             |
           </span>
-          <div className="topnav-item" onClick={() => (window as Window & { eqGo?: (d: string) => void }).eqGo?.("hazirlik")}>
+          <div className="topnav-item" role="button" tabIndex={0} onClick={() => goEqDept("hazirlik")}>
             Hazırlık Ekipmanları
           </div>
           <span className="topnav-sep" aria-hidden="true">
             |
           </span>
-          <div className="topnav-item" onClick={() => (window as Window & { eqGo?: (d: string) => void }).eqGo?.("icecek")}>
+          <div className="topnav-item" role="button" tabIndex={0} onClick={() => goEqDept("icecek")}>
             İçecek Ekipmanları
           </div>
           <span className="topnav-sep" aria-hidden="true">
@@ -140,11 +158,9 @@ export default function BesosEqustoChrome() {
           </span>
           <div
             className="topnav-item topnav-besos active"
-            onClick={() => {
-              const eqGo = (window as Window & { eqGo?: (d: string) => void }).eqGo;
-              if (eqGo) eqGo("besos");
-              else location.href = "/besos";
-            }}
+            role="button"
+            tabIndex={0}
+            onClick={() => goEqDept("besos")}
             aria-current="page"
           >
             <span className="topnav-besos__in" aria-hidden="true">

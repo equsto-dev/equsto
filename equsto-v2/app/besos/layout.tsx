@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import BesosScripts from "@/components/besos/BesosScripts";
+import BesosDrawerShell from "@/components/besos/BesosDrawerShell";
 import "./besos.css";
 
 export const metadata: Metadata = {
@@ -16,6 +17,7 @@ export default function BesosLayout({ children }: { children: React.ReactNode })
       {/* eslint-disable-next-line @next/next/no-css-tags */}
       <link rel="stylesheet" href="/eq-youtube-embed.css" />
       {children}
+      <BesosDrawerShell />
       <BesosScripts />
     </>
   );

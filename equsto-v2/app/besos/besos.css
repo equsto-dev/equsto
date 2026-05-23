@@ -24,6 +24,16 @@ body.bd-page.besos header.hdr {
   background: #000 !important;
   border-bottom-color: rgba(255, 255, 255, 0.12) !important;
   color: #fff;
+  position: relative;
+  z-index: 200;
+}
+
+body.bd-page.besos nav.topnav,
+body.bd-page.besos .topnav {
+  background: #000 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+  position: relative;
+  z-index: 200;
 }
 
 body.bd-page.besos header.hdr .pg-inner,
@@ -37,14 +47,13 @@ body.bd-page.besos header.hdr .srch {
   flex: 1 1 200px;
 }
 
-body.bd-page.besos nav.topnav,
-body.bd-page.besos .topnav {
-  background: #000 !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
-}
-
 body.bd-page.besos .topnav-item {
   color: #fff !important;
+  cursor: pointer;
+}
+
+body.bd-page.besos .srch-cat {
+  cursor: pointer;
 }
 
 body.bd-page.besos .topnav-item.active {
