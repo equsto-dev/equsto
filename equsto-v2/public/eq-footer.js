@@ -47,8 +47,10 @@
   function shouldMount() {
     var b = document.body;
     if (!b || !b.classList.contains("eq-shop")) return false;
-    if (b.classList.contains("admin-app") || b.classList.contains("bd-page")) return false;
+    if (b.classList.contains("admin-app")) return false;
     if (b.classList.contains("eq-pfos") || b.classList.contains("pf-page")) return false;
+    /* Bar Design (Besos) — vitrin alt bandı göster */
+    if (b.classList.contains("bd-page") && !b.classList.contains("besos")) return false;
     return true;
   }
 

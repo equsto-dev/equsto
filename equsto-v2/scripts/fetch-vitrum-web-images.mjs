@@ -1,15 +1,17 @@
 /**
- * Besos / Vitrum — resmi vitrumgroup.org CDN görsellerini indir,
- * ürün koduna göre public/images/catalog/besos/web/ altına kaydet,
- * vitrum-bars-catalogue.json image alanlarını güncelle.
+ * Besos / Vitrum — ürün koduna göre doğru görseli indir (PDF Oct 2025 sırası).
  *
  *   node scripts/fetch-vitrum-web-images.mjs
- *   node scripts/fetch-vitrum-web-images.mjs --code BES-P23
+ *   node scripts/fetch-vitrum-web-images.mjs --code PL/BM.F.1-08
  */
 import fs from "node:fs";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
+import {
+  VITRUM_BAR_MODULE_CDN_INDEX,
+  VITRUM_SIGNATURE_CDN,
+} from "./vitrum-besos-image-map.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const CATALOGUE = path.join(ROOT, "public/data/vitrum-bars-catalogue.json");
@@ -17,13 +19,7 @@ const DRAWINGS = path.join(ROOT, "public/data/vitrum-drawings");
 const OUT_DIR = path.join(ROOT, "public/images/catalog/besos/web");
 const MANIFEST = path.join(ROOT, "public/images/catalog/besos/_manifest.json");
 const CDN = "https://cdn.prod.website-files.com/678a5dce92e76b8ef57ebc9d";
-const MIN_BYTES = 4000;
-
-const SIGNATURE_URL = {
-  "BES-P23": `${CDN}/6797f675c6587180a2de3da2_The_Manhattan_Bar.avif`,
-  "BES-P24": `${CDN}/679213166e78e143c7905338_The%20Boulevardier_bar.avif`,
-  "BES-P25": `${CDN}/6792131632c0b70a8c552b74_The%20Clover_bar.avif`,
-};
+const MIN_BYTES = 2000;
 
 function barModuleUrl(n) {
   const suffix = n === 0 ? "bar%20module-0%20" : `bar%20module-${n}`;
@@ -69,7 +65,7 @@ function curlGet(url, dest) {
   const r = spawnSync(
     "curl.exe",
     ["-k", "-sSL", "-f", "-o", dest, "-H", "User-Agent: Mozilla/5.0", url],
-    { encoding: "utf8", maxBuffer: 10 * 1024 * 1024 }
+    { encoding: "utf8", maxBuffer: 10 * 1024 * 1024 },
   );
   return r.status === 0 && fs.existsSync(dest) && fs.statSync(dest).size >= MIN_BYTES;
 }
@@ -83,27 +79,27 @@ function parseArgs() {
   return { code };
 }
 
-function resolveUrl(product, index) {
+function resolveUrl(product) {
   const code = product.code;
-  if (SIGNATURE_URL[code]) return SIGNATURE_URL[code];
-  // Katalog sırası 4–23: vitrum.com bar module-0 … 19
-  if (index >= 3 && index <= 22) {
-    return barModuleUrl(index - 3);
+  if (VITRUM_SIGNATURE_CDN[code]) {
+    return `${CDN}/${VITRUM_SIGNATURE_CDN[code]}`;
   }
-  // Diğer modüller: Vitrum katalog PDF sayfa görselleri (canlı equsto veya yerel yedek)
+  if (VITRUM_BAR_MODULE_CDN_INDEX[code] != null) {
+    return barModuleUrl(VITRUM_BAR_MODULE_CDN_INDEX[code]);
+  }
   const page = product.page;
   if (!page) return "";
-  const hero = `https://equsto.com/data/vitrum-drawings/hero_p${page}.png`;
-  const tech = `https://equsto.com/data/vitrum-drawings/tech_p${page}.png`;
-  return { hero, tech };
+  return {
+    hero: `https://equsto.com/data/vitrum-drawings/hero_p${page}.png`,
+    tech: `https://equsto.com/data/vitrum-drawings/tech_p${page}.png`,
+  };
 }
 
 function copyOrDownload(src, dest) {
   fs.mkdirSync(path.dirname(dest), { recursive: true });
   const ext = src.includes(".avif") ? ".avif" : src.includes(".png") ? ".png" : ".jpg";
   const out = dest.replace(/\.[^.]+$/, ext);
-  if (curlGet(src, out)) return true;
-  // equsto erişilemezse yerel vitrum-drawings yedek
+  if (curlGet(src, out)) return out;
   for (const kind of ["hero", "tech"]) {
     const m = src.match(new RegExp(`${kind}_p(\\d+)\\.png`, "i"));
     if (!m) continue;
@@ -111,10 +107,10 @@ function copyOrDownload(src, dest) {
     if (fs.existsSync(local)) {
       const pngOut = out.replace(/\.[^.]+$/, ".png");
       fs.copyFileSync(local, pngOut);
-      return fs.statSync(pngOut).size >= MIN_BYTES;
+      if (fs.statSync(pngOut).size >= MIN_BYTES) return pngOut;
     }
   }
-  return false;
+  return "";
 }
 
 function main() {
@@ -128,51 +124,43 @@ function main() {
   let ok = 0;
   let fail = 0;
 
-  catalogue.products.forEach((p, index) => {
-    if (opts.code && p.code !== opts.code) return;
-    const url = resolveUrl(p, index);
+  for (const p of catalogue.products) {
+    if (opts.code && p.code !== opts.code) continue;
+    const url = resolveUrl(p);
     if (!url) {
       console.warn("SKIP no source", p.code);
       fail++;
-      return;
+      continue;
     }
     const base = slugFile(p.code);
-    const destAvif = path.join(OUT_DIR, `${base}.avif`);
-    const destPng = path.join(OUT_DIR, `${base}.png`);
-    let saved = "";
+    const tryList = typeof url === "string" ? [url] : [url.hero, url.tech];
+    let savedPath = "";
     let used = "";
-    const tryList =
-      typeof url === "string"
-        ? [url]
-        : [url.hero, url.tech];
     for (const u of tryList) {
       if (!u) continue;
-      if (u.includes(".avif") && copyOrDownload(u, destAvif)) {
-        saved = `images/catalog/besos/web/${base}.avif`;
-        used = u;
-        break;
-      }
-      if (copyOrDownload(u, destPng)) {
-        saved = `images/catalog/besos/web/${base}.png`;
+      const dest = path.join(OUT_DIR, `${base}${u.includes(".avif") ? ".avif" : ".png"}`);
+      const out = copyOrDownload(u, dest);
+      if (out) {
+        savedPath = `images/catalog/besos/web/${path.basename(out)}`;
         used = u;
         break;
       }
     }
-    if (!saved) {
+    if (!savedPath) {
       console.warn("FAIL", p.code, tryList.join(" | ").slice(0, 120));
       fail++;
-      return;
+      continue;
     }
-    manifest[p.code] = saved;
-    p.image = saved;
-    p.imageSource = used.includes("vitrumgroup.org")
+    manifest[p.code] = savedPath;
+    p.image = savedPath;
+    p.imageSource = used.includes("website-files.com")
       ? "vitrumgroup.org-cdn"
       : used.includes("equsto.com")
         ? "equsto.com/vitrum-drawings"
         : "local-fallback";
-    console.log("OK", p.code, "->", saved);
+    console.log("OK", p.code, "cdnIdx=" + (VITRUM_BAR_MODULE_CDN_INDEX[p.code] ?? "-"), "->", savedPath);
     ok++;
-  });
+  }
 
   catalogue.imageRoot = "images/catalog/besos/web";
   catalogue.imagesFetchedAt = new Date().toISOString();

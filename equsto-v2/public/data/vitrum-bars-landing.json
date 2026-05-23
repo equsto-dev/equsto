@@ -2,15 +2,15 @@
   "source": "https://www.vitrumgroup.org/bars",
   "fetchedAt": "2026-05-16T00:00:00.000Z",
   "hero": {
-    "kicker": "Vitrum Group · Bar Design Studio",
+    "kicker": "Equsto Bar Studio",
     "title": "Bar servisinin sanatını yükseltiyoruz.",
     "titleEn": "Elevating the art of bar service.",
     "lead": "Profesyonel mutfak, bar ve perakende sistemleri tasarlıyor, üretiyor ve kuruyoruz. Tek modülden anahtar teslim bar hatlarına — konseptten özelleştirmeye tam hizmet ortağı.",
     "leadEn": "We design, build and install professional kitchen, bar and retail systems — from individual bar modules to customized turn-key hospitality systems.",
-    "ctaCatalog": "Ürün kataloğunu indir",
-    "ctaCatalogHref": "./data/vitrum-bars-catalogue.json",
+    "ctaCatalog": "Ürün kataloğunu incele",
+    "ctaCatalogHref": "#bd-stations",
     "ctaProject": "Proje teklifi al",
-    "ctaProjectHref": "pfos.html"
+    "ctaProjectHref": "/pfos"
   },
   "signatureTrio": [
     {
@@ -42,44 +42,57 @@
     "kicker": "Modüler sistem",
     "title": "Tek sistem, sonsuz olasılık",
     "titleEn": "One system, infinite possibilities",
-    "body": "İmza istasyonlarımız kuruluma hazırdır; modüler Vitrum tasarımı ölçeğinize, stilinize ve operasyon ihtiyacınıza göre özelleştirilebilir.",
+    "body": "İmza istasyonlarımız kuruluma hazırdır; modüler Equsto Bar Studio tasarımı ölçeğinize, stilinize ve operasyon ihtiyacınıza göre özelleştirilebilir.",
     "bodyEn": "Our signature systems are ready to install, but endlessly customizable modular design means we can craft a solution for your precise vision."
+  },
+  "serveYou": {
+    "kicker": "Equsto Bar Studio lounge",
+    "kickerEn": "Equsto Bar Studio lounge",
+    "title": "Size hizmet etmek için tasarlanmış bir sistem",
+    "titleEn": "A system designed to serve you",
+    "body": "İmza sistemlerimiz kuruluma hazırdır; sonsuz özelleştirilebilir modüler tasarım sayesinde ölçek, stil ve operasyon ihtiyaçlarınıza uygun çözüm üretiriz. 30 yılı aşkın deneyimle mühendislik edilmiş sistemimiz sayısız olasılık sunar.",
+    "bodyEn": "Our signature systems are ready to install, but the endlessly customizable design of our modular systems mean we can craft a solution to bring your precise vision to life, whatever the scale, style and operational needs.",
+    "ctaCatalog": "Bar ürün kataloğunu incele",
+    "ctaCatalogHref": "#bd-stations",
+    "ctaInfo": "Daha fazla bilgi istiyorum",
+    "ctaInfoHref": "/contact",
+    "image": "images/catalog/besos/web/besos-bes-p23.avif"
   },
   "method": [
     {
       "n": "01",
       "title": "Danışmanlık",
       "titleEn": "Consultation",
-      "text": "Konseptiniz hazır olsun veya ilham arayın — erken aşamadan itibaren birlikte çalışıyoruz.",
-      "textEn": "Whether you have a fully developed concept or need a partner to inspire and advise, we take a hands-on approach from the early stages."
+      "text": "Hayata geçirmek istediğiniz tam gelişmiş bir konseptiniz olsun veya ilham verecek ve tavsiyede bulunacak bir ortak arıyor olun; ilk aşamalardan itibaren uygulamalı bir yaklaşım benimsiyoruz.",
+      "textEn": "Whether you have a fully developed concept to bring to life or you're seeking a partner to inspire and advise, we take a hands-on approach from the early stages."
     },
     {
       "n": "02",
       "title": "Tasarım",
       "titleEn": "Design",
-      "text": "Görsel render ve teknik planlar; tesisattan kaplamaya her detay.",
-      "textEn": "Visual renders and technical plans covering every detail from plumbing to finishes."
+      "text": "Tasarım yaklaşımımızda metodik ve işbirlikçiyiz; tesisattan kaplamalara kadar her ayrıntıyı kapsayan görsel renderlar ve teknik planlar üretiyoruz.",
+      "textEn": "We are methodical and collaborative in our design approach, producing visual renders and technical plans that cover every detail from plumbing to finishes."
     },
     {
       "n": "03",
       "title": "Üretim",
       "titleEn": "Production",
-      "text": "Özel ölçüde, yüksek kaliteli ekipman — sorunsuz ve güvenilir çalışma.",
-      "textEn": "Bespoke, high-quality equipment manufactured efficiently and reliably."
+      "text": "Teknik kurulumumuz, sorunsuz ve güvenilir biçimde çalışan ısmarlama, yüksek kaliteli ekipmanları verimli bir şekilde üretmemize olanak tanır.",
+      "textEn": "Our technical set-up allows us to efficiently manufacture bespoke, high-quality equipment that works seamlessly and reliably."
     },
     {
       "n": "04",
       "title": "Kurulum",
       "titleEn": "Installation",
-      "text": "Fabrika çıkışı kontrolleri; sahada montaj ve ilk servis öncesi test.",
-      "textEn": "Rigorous factory checks; on-site installation and testing before first service."
+      "text": "Ürünler fabrikamızdan çıkmadan önce hassasiyet, uyum ve işlevsellik titizlikle kontrol edilir. Sahada ekiplerimiz, ilk servisten önce sistemi kurar ve test eder.",
+      "textEn": "Precision, fit and functionality are rigorously checked before products leave our factory. On-site, our teams install and test the system before the first service."
     },
     {
       "n": "05",
       "title": "Satış sonrası",
       "titleEn": "After-sales",
-      "text": "Eğitim, servis ve uzun vadeli bakım — kurulumdan sonra da yanınızdayız.",
-      "textEn": "Training, servicing and long-term maintenance beyond installation."
+      "text": "Eğitim, servis ve uzun vadeli bakım; ilişkimizin tasarım ve kurulumdan çok sonra da devam etmesi demektir — müşterilerimiz işlerini güvenle yürütür.",
+      "textEn": "Training, servicing and long-term maintenance mean our relationship continues long after design and installation, so our clients can run their businesses with confidence."
     }
   ],
   "testimonials": [

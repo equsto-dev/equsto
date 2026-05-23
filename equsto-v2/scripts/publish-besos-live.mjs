@@ -31,14 +31,13 @@ function liveDrawingUrl(page) {
 
 const catalogue = JSON.parse(fs.readFileSync(CATALOGUE, "utf8"));
 catalogue.livePublishedAt = new Date().toISOString();
-catalogue.products = catalogue.products.map((p, i) => {
-  const image = liveImageUrl(p);
-  const drawing = liveDrawingUrl(p.page);
-  const localImage = p.image;
+catalogue.products = catalogue.products.map((p) => {
+  const image = p.image || liveImageUrl(p);
+  const drawing = liveDrawingUrl(p.page) || p.drawing || "";
   return {
     ...p,
     image,
-    imageLocal: localImage,
+    ...(p.image ? { imageLocal: p.image } : {}),
     ...(drawing ? { drawing } : {}),
   };
 });
