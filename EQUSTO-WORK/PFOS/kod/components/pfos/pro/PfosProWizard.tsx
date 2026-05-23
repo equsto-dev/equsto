@@ -373,7 +373,6 @@ export default function PfosProWizard() {
       <Alert
         type={kur?.fallback ? "warning" : kur ? "info" : "warning"}
         showIcon
-        loading={kurYukleniyor && !kur}
         style={{ marginBottom: 16 }}
         message={
           kur

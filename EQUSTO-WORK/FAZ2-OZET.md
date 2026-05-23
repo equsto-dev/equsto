@@ -32,7 +32,8 @@ npm run dev
 
 - Junction: `EQUSTO-CURSOR\EQUSTO-WORK` → `C:\D Disk\EQUSTO-WORK`
 - Git: `EQUSTO-WORK` repoya eklendi; CI `equsto-site-ci.yml`
-- **Sizin panel:** Vercel → Root Directory = **`EQUSTO-WORK/E-TICARET/site`** → Redeploy (cache kapalı)
+- **Git:** `8b4d373` push `main` tamam
+- **Sizin panel (şimdi):** Vercel → Root Directory = **`EQUSTO-WORK/E-TICARET/site`** → Redeploy (cache kapalı)
 - Doğrula: `https://equsto.com/yonetim/pfos`, `/besos`
 
 ## Doğrulama listesi (canlı)
