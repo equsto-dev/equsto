@@ -102,8 +102,8 @@ const nextConfig: NextConfig = {
       { source: "/bar-design", headers: [utf8Html] },
       { source: "/admin", headers: [utf8Html] },
       { source: "/contact", headers: [utf8Html] },
-      { source: "/imt300", headers: [utf8Html] },
-      { source: "/imt300/:path*", headers: [utf8Html] },
+      { source: "/besos/imt300", headers: [utf8Html] },
+      { source: "/besos/imt300/:path*", headers: [utf8Html] },
       { source: "/login", headers: [utf8Html] },
       { source: "/marka", headers: [utf8Html] },
       { source: "/arama", headers: [utf8Html] },
@@ -131,6 +131,8 @@ const nextConfig: NextConfig = {
       { source: "/bar-design", destination: "/besos", permanent: true },
       { source: "/bar-design/", destination: "/besos", permanent: true },
       { source: "/bar-design.html", destination: "/besos", permanent: true },
+      { source: "/imt300", destination: "/besos/imt300", permanent: true },
+      { source: "/imt300/", destination: "/besos/imt300", permanent: true },
     ];
   },
   async rewrites() {
@@ -156,6 +158,8 @@ const nextConfig: NextConfig = {
           destination: "/api/urunler?katalogIndex=:index",
         },
         { source: "/api/whatsapp", destination: "/api/musteriler?whatsapp=1" },
+        { source: "/besos/imt300", destination: "/imt300.html" },
+        { source: "/besos/imt300/", destination: "/imt300.html" },
       ],
       afterFiles: [
       { source: "/", destination: "/index.html" },
@@ -170,8 +174,6 @@ const nextConfig: NextConfig = {
       /* /yonetim → Next.js App Router (Ant Design Pro) */
       { source: "/contact", destination: "/contact.html" },
       { source: "/contact/", destination: "/contact.html" },
-      { source: "/imt300", destination: "/imt300.html" },
-      { source: "/imt300/", destination: "/imt300.html" },
       { source: "/login", destination: "/login.html" },
       { source: "/login/", destination: "/login.html" },
       { source: "/marka", destination: "/marka.html" },

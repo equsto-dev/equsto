@@ -50,7 +50,7 @@
       "title": "Çözümler",
       "links": [
         { "key": "nav.bar_design", "label": "Bar Design", "href": "/besos" },
-        { "key": "footer.link_imt300", "label": "IMT300 berrak buz", "href": "/data/advanced-cuisine-clear-ice/product-imt300.html" },
+        { "key": "footer.link_imt300", "label": "IMT300 berrak buz", "href": "/besos/imt300" },
         { "key": "nav.pfos", "label": "Proje Fabrikası", "href": "/pfos" },
         { "key": "footer.link_fastfood", "label": "Fast food kurulumu", "href": "/fast-food-kurulumu" },
         { "key": "footer.link_finedining", "label": "Fine dining kurulumu", "href": "/fine-dining-kurulumu" },

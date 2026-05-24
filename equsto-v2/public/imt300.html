@@ -35,15 +35,15 @@
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="theme-color" content="#001e50">
 
-<link rel="canonical" href="https://equsto.com/imt300">
-<link rel="alternate" hreflang="tr" href="https://equsto.com/imt300">
+<link rel="canonical" href="https://equsto.com/besos/imt300">
+<link rel="alternate" hreflang="tr" href="https://equsto.com/besos/imt300">
 <link rel="alternate" hreflang="en" href="https://equsto.com/en/imt300">
-<link rel="alternate" hreflang="x-default" href="https://equsto.com/imt300">
+<link rel="alternate" hreflang="x-default" href="https://equsto.com/besos/imt300">
 
 <meta property="og:type" content="product">
 <meta property="og:locale" content="tr_TR">
 <meta property="og:site_name" content="Equsto">
-<meta property="og:url" content="https://equsto.com/imt300">
+<meta property="og:url" content="https://equsto.com/besos/imt300">
 <meta property="og:title" content="IMT300 Berrak Buz Makinesi · Equsto">
 <meta property="og:description" content="Yerinde berrak buz üretimi — kesim yok, tek dokunuşla parti üretim. Küp, küre, çubuk ve elmas formlar.">
 <meta property="og:image" content="https://equsto.com/images/imt300/imt300-1.jpg">
@@ -76,16 +76,16 @@
   "@graph": [
     {
       "@type": "BreadcrumbList",
-      "@id": "https://equsto.com/imt300#breadcrumbs",
+      "@id": "https://equsto.com/besos/imt300#breadcrumbs",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Anasayfa", "item": "https://equsto.com/" },
         { "@type": "ListItem", "position": 2, "name": "İçecek Ekipmanları", "item": "https://equsto.com/shop/icecek" },
-        { "@type": "ListItem", "position": 3, "name": "IMT300 Berrak Buz Makinesi", "item": "https://equsto.com/imt300" }
+        { "@type": "ListItem", "position": 3, "name": "IMT300 Berrak Buz Makinesi", "item": "https://equsto.com/besos/imt300" }
       ]
     },
     {
       "@type": "Product",
-      "@id": "https://equsto.com/imt300#product",
+      "@id": "https://equsto.com/besos/imt300#product",
       "name": "Skyra IMT300 Berrak Buz Makinesi",
       "alternateName": ["IMT300 Clear Ice Machine", "IMT300 berrak buz üretici"],
       "description": "Ticari berrak buz makinesi: standart formlarda parti halinde berrak buz üretir, kesim gerektirmez. İki tepsi, gıda sınıfı silikon kalıp, paslanmaz çelik gövde.",
@@ -105,7 +105,7 @@
       ],
       "offers": {
         "@type": "Offer",
-        "url": "https://equsto.com/imt300",
+        "url": "https://equsto.com/besos/imt300",
         "priceCurrency": "EUR",
         "price": "11500.00",
         "priceValidUntil": "2027-12-31",
@@ -120,7 +120,7 @@
     },
     {
       "@type": "FAQPage",
-      "@id": "https://equsto.com/imt300#faq",
+      "@id": "https://equsto.com/besos/imt300#faq",
       "mainEntity": [
         {
           "@type": "Question",
@@ -337,6 +337,7 @@ body{background:var(--eq-bg-page);font-family:-apple-system,BlinkMacSystemFont,"
           class="imt-cta-p"
           id="imt-add-cart"
           data-equsto-cart="1"
+          data-eq-open-cart="1"
           data-eq-n="Skyra IMT300 Berrak Buz Makinesi (Çift Tepsi)"
           data-eq-b="Skyra"
           data-eq-c="icecek-berrak-buz-makineleri"
@@ -497,24 +498,6 @@ body{background:var(--eq-bg-page);font-family:-apple-system,BlinkMacSystemFont,"
       document.querySelectorAll('.imt-hero-thumbs button').forEach(function(x){x.classList.toggle('on',x===b);});
     });
   });
-  function bindImtCart(){
-    var cart=window.EqustoCart;
-    var btn=document.getElementById('imt-add-cart');
-    if(!cart||!btn){setTimeout(bindImtCart,40);return;}
-    if(btn.__imtCartBound)return;
-    btn.__imtCartBound=true;
-    btn.addEventListener('click',function(e){
-      e.preventDefault();
-      e.stopImmediatePropagation();
-      var it=cart.parseItemFromEl?cart.parseItemFromEl(btn):null;
-      if(!it||(!it.n&&!it.b))return;
-      cart.addFromItem(it);
-      if(typeof cart.openPanel==='function')cart.openPanel();
-      else if(typeof cart.goToCartPage==='function')cart.goToCartPage();
-    });
-  }
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',bindImtCart);
-  else bindImtCart();
 })();
 </script>
 </body>

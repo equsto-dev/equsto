@@ -282,7 +282,7 @@
     if (file === "catering-mutfagi.html") return "/catering-mutfagi" + query + hash;
     if (file === "fast-food-kurulumu.html") return "/fast-food-kurulumu" + query + hash;
     if (file === "fine-dining-kurulumu.html") return "/fine-dining-kurulumu" + query + hash;
-    if (file === "imt300.html") return "/data/advanced-cuisine-clear-ice/product-imt300.html" + query + hash;
+    if (file === "imt300.html") return "/besos/imt300" + query + hash;
     return href;
   };
 

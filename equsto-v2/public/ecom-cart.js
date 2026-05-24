@@ -1235,6 +1235,7 @@
       e.preventDefault();
       e.stopPropagation();
       addFromItem(parseItemFromEl(trig));
+      if (trig.getAttribute('data-eq-open-cart') === '1') openPanel();
       return;
     }
     var legacy = e.target.closest('[data-eq-cart]');
@@ -1403,6 +1404,7 @@
     addAllSiteCatalog: addAllSiteCatalog,
     addPfosRows: addPfosRows,
     loadSiteCatalog: loadSiteCatalog,
+    parseItemFromEl: parseItemFromEl,
     parseItemFromCard: parseItemFromCard,
     addFromCard: addFromCard,
     clear: clearAll,

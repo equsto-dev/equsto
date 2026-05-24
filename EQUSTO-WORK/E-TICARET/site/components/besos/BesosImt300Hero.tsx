@@ -45,7 +45,7 @@ export default function BesosImt300Hero() {
         <aside className="bd-hero-action" aria-label="Videodaki ürün IMT300">
           <div className="bd-hero-action-inner">
             <p className="bd-hero-action-label">Skyra IMT300 · Berrak buz makinesi</p>
-            <Link className="bd-hero-cta-btn" href="/imt300">
+            <Link className="bd-hero-cta-btn" href="/besos/imt300">
               Sayfaya Git
             </Link>
             <p className="bd-hero-cta-price">
