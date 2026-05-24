@@ -294,6 +294,10 @@ body{background:var(--eq-bg-page);font-family:-apple-system,BlinkMacSystemFont,"
     <div class="hdr-right">
       <button type="button" class="theme-toggle" id="theme-toggle" onclick="equstoCycleTheme()" title="Tema">◐</button>
       <a href="login.html" class="eq-hdr-account"><span style="font-size:10px;color:var(--eq-text-muted);">Hesabım</span><span style="font-size:12px;font-weight:600;">Projeler ▾</span></a>
+      <div id="equsto-hdr-cart" class="equsto-hdr-cart" style="display:flex;flex-direction:column;line-height:1.4;cursor:pointer;" title="Sepeti aç" role="button" tabindex="0">
+        <span id="equsto-cart-count" style="font-size:10px;color:var(--eq-text-muted);">🛒 0</span>
+        <span style="font-size:12px;font-weight:600;">Alışveriş Sepeti</span>
+      </div>
     </div>
   </div>
 </header>
@@ -331,11 +335,13 @@ body{background:var(--eq-bg-page);font-family:-apple-system,BlinkMacSystemFont,"
         <button
           type="button"
           class="imt-cta-p"
+          id="imt-add-cart"
           data-equsto-cart="1"
           data-eq-n="Skyra IMT300 Berrak Buz Makinesi (Çift Tepsi)"
           data-eq-b="Skyra"
           data-eq-c="icecek-berrak-buz-makineleri"
           data-eq-p="11.500 € + KDV"
+          data-eq-img="/images/imt300/imt300-1.jpg"
           aria-label="Sepete ekle"
         >Sepete ekle</button>
         <a class="imt-cta-s" href="/docs/imt300/IMT300PEU-User-Manual.pdf" target="_blank" rel="noopener">Kullanım kılavuzu (PDF)</a>
@@ -491,6 +497,24 @@ body{background:var(--eq-bg-page);font-family:-apple-system,BlinkMacSystemFont,"
       document.querySelectorAll('.imt-hero-thumbs button').forEach(function(x){x.classList.toggle('on',x===b);});
     });
   });
+  function bindImtCart(){
+    var cart=window.EqustoCart;
+    var btn=document.getElementById('imt-add-cart');
+    if(!cart||!btn){setTimeout(bindImtCart,40);return;}
+    if(btn.__imtCartBound)return;
+    btn.__imtCartBound=true;
+    btn.addEventListener('click',function(e){
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      var it=cart.parseItemFromEl?cart.parseItemFromEl(btn):null;
+      if(!it||(!it.n&&!it.b))return;
+      cart.addFromItem(it);
+      if(typeof cart.openPanel==='function')cart.openPanel();
+      else if(typeof cart.goToCartPage==='function')cart.goToCartPage();
+    });
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',bindImtCart);
+  else bindImtCart();
 })();
 </script>
 </body>

@@ -1411,11 +1411,11 @@
   };
 
   function scheduleCartInit() {
-    if (document.readyState === 'complete') {
-      init();
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
       return;
     }
-    document.addEventListener('DOMContentLoaded', init);
+    init();
   }
   scheduleCartInit();
 })();
