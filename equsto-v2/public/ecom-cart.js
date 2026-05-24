@@ -30,7 +30,7 @@
     var l = document.createElement('link');
     l.id = 'eq-cart-css';
     l.rel = 'stylesheet';
-    l.href = '/eq-cart.css?v=20260524cart3';
+    l.href = '/eq-cart.css?v=20260524cart4';
     document.head.appendChild(l);
   }
 
@@ -1063,10 +1063,13 @@
       '<div class="eq-cart-line__actions">' +
       actionsHtml +
       '</div></div>' +
-      '<div class="eq-cart-line__aside">' +
-      '<div class="eq-cart-line__total">' +
-      escHtml(totalLbl || (isQuote ? 'Teklif' : '—')) +
-      '</div></div></article>'
+      (isQuote
+        ? ''
+        : '<div class="eq-cart-line__aside">' +
+          '<div class="eq-cart-line__total">' +
+          escHtml(totalLbl || '—') +
+          '</div></div>') +
+      '</article>'
     );
   }
 

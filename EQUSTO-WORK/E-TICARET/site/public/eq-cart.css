@@ -559,6 +559,17 @@ body.eq-cart-page .eq-cart-layout__aside.is-empty {
   }
 }
 
+.eq-cart-line--quote {
+  grid-template-columns: 88px 1fr;
+}
+
+@media (min-width: 640px) {
+  .eq-cart-line--quote {
+    grid-template-columns: 100px 1fr;
+    align-items: start;
+  }
+}
+
 .eq-cart-line--quote .eq-cart-line__unit {
   font-weight: 600;
   color: var(--eq-topnav-dept-bg, #001e50);
