@@ -493,76 +493,71 @@ body.eq-cart-page .eq-cart-layout__aside.is-empty {
   color: #fff;
 }
 
-/* Besos / EUR teklif akışı */
-.eq-quote-toast {
+/* Sepete eklendi — sağ üst mini bildirim */
+.eq-cart-added-toast {
   position: fixed;
-  left: 50%;
-  bottom: 24px;
-  transform: translateX(-50%);
+  top: calc(var(--eq-hdr-h, 56px) + 10px);
+  right: 12px;
   z-index: 460;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 10px 14px;
-  max-width: min(520px, 94vw);
-  padding: 12px 14px;
-  border-radius: 12px;
-  background: var(--eq-text, #1a1a1a);
-  color: var(--eq-surface, #fff);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.28);
+  align-items: flex-start;
+  gap: 10px;
+  max-width: min(300px, calc(100vw - 24px));
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--eq-surface, #fff);
+  color: var(--eq-text, #1a1a1a);
+  border: 1px solid var(--eq-border, #e5e5e5);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.14);
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  pointer-events: none;
 }
 
-.eq-quote-toast__text {
+.eq-cart-added-toast.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.eq-cart-added-toast__icon {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 22px;
+  text-align: center;
+}
+
+.eq-cart-added-toast__body {
   display: flex;
   flex-direction: column;
   gap: 2px;
+  min-width: 0;
   font-size: 13px;
   line-height: 1.35;
-  min-width: 0;
-  flex: 1 1 160px;
 }
 
-.eq-quote-toast__text span {
-  opacity: 0.85;
+.eq-cart-added-toast__body span {
+  font-size: 11px;
   font-weight: 500;
+  color: var(--eq-text-secondary, #5a6278);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 220px;
 }
 
-.eq-quote-toast__actions {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-shrink: 0;
-}
-
-.eq-quote-toast__btn {
-  border: none;
-  border-radius: 999px;
-  padding: 8px 14px;
-  font-size: 12px;
-  font-weight: 600;
-  cursor: pointer;
-  font-family: inherit;
-}
-
-.eq-quote-toast__btn--wa {
-  background: #25d366;
-  color: #fff;
-}
-
-.eq-quote-toast__btn--list {
-  background: rgba(255, 255, 255, 0.14);
-  color: inherit;
-}
-
-.eq-quote-toast__close {
-  border: none;
-  background: transparent;
-  color: inherit;
-  font-size: 20px;
-  line-height: 1;
-  cursor: pointer;
-  padding: 2px 6px;
-  opacity: 0.75;
+@media (max-width: 768px) {
+  .eq-cart-added-toast {
+    top: calc(var(--eq-hdr-h, 52px) + 8px);
+    right: 10px;
+    max-width: calc(100vw - 20px);
+  }
 }
 
 .eq-cart-line--quote .eq-cart-line__unit {

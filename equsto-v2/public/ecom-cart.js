@@ -30,7 +30,7 @@
     var l = document.createElement('link');
     l.id = 'eq-cart-css';
     l.rel = 'stylesheet';
-    l.href = '/eq-cart.css?v=20260524cart';
+    l.href = '/eq-cart.css?v=20260524cart2';
     document.head.appendChild(l);
   }
 
@@ -535,38 +535,35 @@
     return true;
   }
 
-  function dismissQuoteToast() {
-    var t = document.getElementById('equsto-quote-toast');
-    if (t && t.parentNode) t.parentNode.removeChild(t);
+  function dismissCartAddedToast() {
+    var t = document.getElementById('equsto-cart-added-toast');
+    if (!t) return;
+    t.classList.remove('is-visible');
+    clearTimeout(t._remove);
+    t._remove = setTimeout(function () {
+      if (t.parentNode) t.parentNode.removeChild(t);
+    }, 220);
   }
 
-  function toastQuoteAdded(name) {
-    dismissQuoteToast();
+  function toastCartAdded(name) {
+    dismissCartAddedToast();
+    injectCartCss();
     var bar = document.createElement('div');
-    bar.id = 'equsto-quote-toast';
-    bar.className = 'eq-quote-toast';
+    bar.id = 'equsto-cart-added-toast';
+    bar.className = 'eq-cart-added-toast';
     bar.setAttribute('role', 'status');
     bar.innerHTML =
-      '<div class="eq-quote-toast__text"><strong>Sepete eklendi</strong>' +
+      '<span class="eq-cart-added-toast__icon" aria-hidden="true">✓</span>' +
+      '<span class="eq-cart-added-toast__body">' +
+      '<strong>Sepete eklendi</strong>' +
       (name ? '<span>' + escHtml(name) + '</span>' : '') +
-      '</div>' +
-      '<div class="eq-quote-toast__actions">' +
-      '<button type="button" class="eq-quote-toast__btn eq-quote-toast__btn--wa" data-eq-quote-wa="1">WhatsApp</button>' +
-      '<button type="button" class="eq-quote-toast__btn eq-quote-toast__btn--list" data-eq-quote-open="1">Listeyi gör</button>' +
-      '<button type="button" class="eq-quote-toast__close" aria-label="Kapat">×</button>' +
-      '</div>';
+      '</span>';
     document.body.appendChild(bar);
-    bar.querySelector('[data-eq-quote-wa]').addEventListener('click', function () {
-      dismissQuoteToast();
-      openWhatsApp();
+    requestAnimationFrame(function () {
+      bar.classList.add('is-visible');
     });
-    bar.querySelector('[data-eq-quote-open]').addEventListener('click', function () {
-      dismissQuoteToast();
-      openPanel();
-    });
-    bar.querySelector('.eq-quote-toast__close').addEventListener('click', dismissQuoteToast);
     clearTimeout(bar._hide);
-    bar._hide = setTimeout(dismissQuoteToast, 9000);
+    bar._hide = setTimeout(dismissCartAddedToast, 2600);
   }
 
   function toast(msg) {
@@ -695,7 +692,7 @@
     }
     save(arr);
     syncBadge();
-    if (!opts.silent) toast('Sepete eklendi');
+    if (!opts.silent) toastCartAdded(it && it.n ? it.n : '');
   }
 
   function loadSiteCatalog() {
@@ -1355,7 +1352,7 @@
       var useToast = trig.getAttribute('data-eq-cart-toast') === '1';
       addFromItem(it, { silent: useToast });
       if (useToast) {
-        toastQuoteAdded(it && it.n ? it.n : '');
+        toastCartAdded(it && it.n ? it.n : '');
       } else if (trig.getAttribute('data-eq-open-cart') === '1') {
         openPanel();
       }
