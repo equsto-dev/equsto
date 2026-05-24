@@ -388,6 +388,9 @@
       .replace(/^data\//i, "")
       .replace(/^images\//i, "");
     if (!file) return [];
+    if (isSogukOdaCatalogPath("images/" + file)) {
+      return [sogukOdaVitrinHref(), EQ_SOGUK_ODA_VITRIN_CDN];
+    }
     var root = catalogImagesWebRoot();
     var list = [];
     if (/^catalog\/ozti\/web\//i.test(file)) {
@@ -488,6 +491,30 @@
     return "/" + s;
   };
 
+  /** Soğuk oda panel ürünleri — tablo ekran görüntüsü / ax-images yerine vitrin fotoğrafı. */
+  var EQ_SOGUK_ODA_VITRIN_REL = "images/catalog/soguk-oda/soguk-oda-vitrin.png";
+  var EQ_SOGUK_ODA_VITRIN_CDN =
+    "https://oztiryakiler.com.tr/ax-images/images/7919.DF1515.00.jpg";
+
+  function isSogukOdaCatalogPath(s) {
+    var t = String(s || "")
+      .trim()
+      .replace(/\\/g, "/");
+    if (!t) return false;
+    if (/^images\/catalog\/soguk-oda\/soguk-oda-vitrin\.png$/i.test(t)) return true;
+    if (/^images\/catalog\/ozti\/(?:p\d+|web)\/ozti-7919-cr/i.test(t)) return true;
+    return false;
+  }
+
+  function sogukOdaVitrinHref() {
+    if (typeof window.eqAttrPath === "function") {
+      return window.eqAttrPath(EQ_SOGUK_ODA_VITRIN_REL);
+    }
+    return "/" + EQ_SOGUK_ODA_VITRIN_REL;
+  }
+
+  window.eqSogukOdaVitrinHref = sogukOdaVitrinHref;
+
   /** `public/images/` altındaki statik dosyalar — `/data/images/` köküne çevrilmez. */
   function isStaticPublicImage(s) {
     var t = String(s || "").trim().replace(/\\/g, "/");
@@ -526,6 +553,7 @@
     var s = String(p).trim().replace(/\\/g, "/");
     if (!s) return "";
     if (/^https?:\/\//i.test(s)) return s;
+    if (isSogukOdaCatalogPath(s)) return sogukOdaVitrinHref();
     var ozAx = oztiAxImageFromWebPath(s);
     if (ozAx) return ozAx;
     var vd = vitrumDrawingsHref(s);
@@ -628,6 +656,29 @@
     var src = img.getAttribute("src") || "";
     var raw = img.getAttribute("data-eq-img-raw") || "";
     var step = parseInt(img.getAttribute("data-eq-img-step") || "0", 10);
+    if (
+      (isSogukOdaCatalogPath(raw) || /7919\.CR/i.test(img.getAttribute("data-eq-ozti-kod") || "")) &&
+      !img.dataset.eqSogukOdaVitrin
+    ) {
+      img.dataset.eqSogukOdaVitrin = "1";
+      img.onerror = function () {
+        window.__eqImgFail(img);
+      };
+      img.src = sogukOdaVitrinHref();
+      return;
+    }
+    if (
+      isSogukOdaCatalogPath(raw) &&
+      img.dataset.eqSogukOdaVitrin === "1" &&
+      !img.dataset.eqSogukOdaCdn
+    ) {
+      img.dataset.eqSogukOdaCdn = "1";
+      img.onerror = function () {
+        window.__eqImgFail(img);
+      };
+      img.src = EQ_SOGUK_ODA_VITRIN_CDN;
+      return;
+    }
     if (raw && typeof catalogImageCandidates === "function") {
       var tries = catalogImageCandidates(raw);
       if (step < tries.length) {
@@ -643,7 +694,11 @@
       }
     }
     var oztiKod = img.getAttribute("data-eq-ozti-kod") || "";
-    if (oztiKod && typeof window.eqOztiAxImageFromSku === "function") {
+    if (
+      oztiKod &&
+      !/7919\.CR/i.test(oztiKod) &&
+      typeof window.eqOztiAxImageFromSku === "function"
+    ) {
       var axTry = window.eqOztiAxImageFromSku(oztiKod);
       if (axTry && axTry !== src && !img.dataset.eqImgAxTried) {
         img.dataset.eqImgAxTried = "1";

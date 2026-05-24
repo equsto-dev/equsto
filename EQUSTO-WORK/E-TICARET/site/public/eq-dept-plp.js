@@ -277,6 +277,13 @@
         ? window.EqustoKurLive.priceForRow(row)
         : String(row.price || '').split('\n')[0];
     var imgRel = row.images && row.images[0] ? row.images[0] : '';
+    if (
+      row.category === 'soguk-odalar' ||
+      /7919\.CR/i.test(String(row.sku || row.urun_kodu || row.model || '')) ||
+      /soğuk oda|soguk oda|cold room/i.test(String(row.name || ''))
+    ) {
+      imgRel = 'images/catalog/soguk-oda/soguk-oda-vitrin.png';
+    }
     if (!imgRel && isOztiRow(row)) {
       if (typeof window.eqOztiWebRelFromSku === 'function') {
         imgRel = window.eqOztiWebRelFromSku(row.sku || row.model || row.urun_kodu) || imgRel;
