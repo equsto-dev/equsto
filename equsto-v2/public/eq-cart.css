@@ -496,9 +496,9 @@ body.eq-cart-page .eq-cart-layout__aside.is-empty {
 /* Sepete eklendi — sağ üst mini bildirim */
 .eq-cart-added-toast {
   position: fixed;
-  top: calc(var(--eq-hdr-h, 56px) + 10px);
+  top: 72px;
   right: 12px;
-  z-index: 460;
+  z-index: 510;
   display: flex;
   align-items: flex-start;
   gap: 10px;
@@ -554,7 +554,6 @@ body.eq-cart-page .eq-cart-layout__aside.is-empty {
 
 @media (max-width: 768px) {
   .eq-cart-added-toast {
-    top: calc(var(--eq-hdr-h, 52px) + 8px);
     right: 10px;
     max-width: calc(100vw - 20px);
   }

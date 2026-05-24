@@ -30,7 +30,7 @@
     var l = document.createElement('link');
     l.id = 'eq-cart-css';
     l.rel = 'stylesheet';
-    l.href = '/eq-cart.css?v=20260524cart2';
+    l.href = '/eq-cart.css?v=20260524cart3';
     document.head.appendChild(l);
   }
 
@@ -545,6 +545,24 @@
     }, 220);
   }
 
+  function positionCartAddedToast(bar) {
+    var top = 8;
+    var hdr = document.querySelector('header.hdr');
+    if (hdr) {
+      var hr = hdr.getBoundingClientRect();
+      top = Math.max(top, hr.bottom + 8);
+    }
+    var nav = document.querySelector('nav.topnav, .topnav');
+    if (nav) {
+      var cs = window.getComputedStyle(nav);
+      if (cs.display !== 'none' && cs.visibility !== 'hidden') {
+        var nr = nav.getBoundingClientRect();
+        if (nr.height > 0) top = Math.max(top, nr.bottom + 8);
+      }
+    }
+    bar.style.top = top + 'px';
+  }
+
   function toastCartAdded(name) {
     dismissCartAddedToast();
     injectCartCss();
@@ -559,11 +577,12 @@
       (name ? '<span>' + escHtml(name) + '</span>' : '') +
       '</span>';
     document.body.appendChild(bar);
+    positionCartAddedToast(bar);
     requestAnimationFrame(function () {
       bar.classList.add('is-visible');
     });
     clearTimeout(bar._hide);
-    bar._hide = setTimeout(dismissCartAddedToast, 2600);
+    bar._hide = setTimeout(dismissCartAddedToast, 5000);
   }
 
   function toast(msg) {
