@@ -310,10 +310,10 @@ header.hdr .srch {
   flex-direction: row !important;
   flex-wrap: nowrap !important;
   align-items: stretch !important;
-  flex: 1 1 auto;
+  flex: 1 1 0;
   min-width: 0;
-  width: 50%;
-  max-width: 50%;
+  width: auto;
+  max-width: min(520px, 100%);
   gap: 0;
   overflow: hidden;
   background: var(--eq-hdr-srch-bg) !important;
@@ -5892,6 +5892,33 @@ body.eq-cart-page .eq-cart-page__note {
 /* Mini sepet: eq-cart.css — tam sayfa sepette overlay kullanılmaz */
 body.eq-cart-page #equsto-cart-overlay {
   display: none !important;
+}
+
+/* Sepet sayfası — üst bantta hesap/sepet her zaman görünsün */
+body.eq-cart-page header.hdr > .pg-inner.hdr-pg-inner {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+}
+body.eq-cart-page header.hdr .hdr-alici {
+  flex: 0 0 auto;
+}
+body.eq-cart-page header.hdr .srch {
+  flex: 1 1 0 !important;
+  min-width: 0 !important;
+  width: auto !important;
+  max-width: min(440px, 46vw) !important;
+}
+@media (min-width: 769px) {
+  body.eq-cart-page header.hdr .hdr-right {
+    display: flex !important;
+    flex: 0 0 auto !important;
+    margin-left: auto !important;
+    visibility: visible !important;
+  }
 }
 
 /* WhatsApp widget — contact.css yüklenmezse dev ikon / açık overlay önlemi */
