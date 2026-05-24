@@ -492,3 +492,94 @@ body.eq-cart-page .eq-cart-layout__aside.is-empty {
   background: var(--eq-accent, #e85d04);
   color: #fff;
 }
+
+/* Besos / EUR teklif akışı */
+.eq-quote-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  z-index: 460;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  max-width: min(520px, 94vw);
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--eq-text, #1a1a1a);
+  color: var(--eq-surface, #fff);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.28);
+}
+
+.eq-quote-toast__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 13px;
+  line-height: 1.35;
+  min-width: 0;
+  flex: 1 1 160px;
+}
+
+.eq-quote-toast__text span {
+  opacity: 0.85;
+  font-weight: 500;
+}
+
+.eq-quote-toast__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.eq-quote-toast__btn {
+  border: none;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.eq-quote-toast__btn--wa {
+  background: #25d366;
+  color: #fff;
+}
+
+.eq-quote-toast__btn--list {
+  background: rgba(255, 255, 255, 0.14);
+  color: inherit;
+}
+
+.eq-quote-toast__close {
+  border: none;
+  background: transparent;
+  color: inherit;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 2px 6px;
+  opacity: 0.75;
+}
+
+.eq-cart-line--quote .eq-cart-line__unit {
+  font-weight: 600;
+  color: var(--eq-topnav-dept-bg, #001e50);
+}
+
+.eq-cart-line--quote .eq-cart-line__total {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--eq-text-secondary, #5a6278);
+}
+
+#equsto-cart-overlay.eq-cart-overlay--quote .eq-cart-drawer__foot--quote {
+  gap: 10px;
+}
+
+#equsto-cart-overlay.eq-cart-overlay--quote .eq-cart-btn--wa {
+  order: -1;
+}

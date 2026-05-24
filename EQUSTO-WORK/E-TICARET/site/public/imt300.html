@@ -67,7 +67,7 @@
 <script src="/contact.js?v=20260521globalsearch" defer></script>
 <script src="/eq-auth-api.js"></script>
 <script src="/equsto-auth-client.js?v=20260521globalsearch" defer></script>
-<script src="/ecom-cart.js?v=20260520cart" defer></script>
+<script src="/ecom-cart.js?v=20260524cart" defer></script>
 <script src="/eq-youtube-embed.js" defer></script>
 
 <script type="application/ld+json">
@@ -159,7 +159,7 @@
           "name": "Equsto üzerinden IMT300 nasıl sipariş edilir?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Equsto Satış Mühendisliği ekibi bar ve içecek hattı projeleriniz için IMT300 teklif, nakliye ve montaj planını hazırlar. Sepete ekleyerek veya iletişim formu üzerinden talep iletebilirsiniz."
+            "text": "Equsto Satış Mühendisliği ekibi bar ve içecek hattı projeleriniz için IMT300 teklif, nakliye ve montaj planını hazırlar. WhatsApp ile teklif, teklif listesine ekleme veya iletişim formu üzerinden talep iletebilirsiniz."
           }
         }
       ]
@@ -197,7 +197,8 @@ body{background:var(--eq-bg-page);font-family:-apple-system,BlinkMacSystemFont,"
 .imt-ctas{display:flex;flex-wrap:wrap;gap:12px;}
 .imt-cta-p{display:inline-flex;align-items:center;padding:13px 26px;background:#c5a455;color:#001e50;text-decoration:none;font-weight:600;font-size:14px;border-radius:999px;}
 .imt-cta-p:hover{background:#d4b35d;}
-.imt-cta-p{border:none;cursor:pointer;font-family:inherit;}
+.imt-cta-wa{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;background:#25d366;color:#fff;text-decoration:none;font-weight:600;font-size:14px;border-radius:999px;border:none;cursor:pointer;font-family:inherit;}
+.imt-cta-wa:hover{background:#1fb855;}
 .imt-cta-s{display:inline-flex;align-items:center;padding:12px 22px;border:1px solid #001e50;color:#001e50;text-decoration:none;font-weight:600;font-size:14px;border-radius:999px;background:transparent;}
 .imt-cta-s:hover{background:rgba(0,30,80,.06);}
 .imt-manual-wrap{max-width:1100px;margin:0 auto;border:1px solid var(--eq-border);border-radius:8px;overflow:hidden;background:var(--eq-surface);}
@@ -334,17 +335,24 @@ body{background:var(--eq-bg-page);font-family:-apple-system,BlinkMacSystemFont,"
       <div class="imt-ctas">
         <button
           type="button"
-          class="imt-cta-p"
-          id="imt-add-cart"
+          class="imt-cta-wa"
+          id="imt-wa-quote"
+          aria-label="WhatsApp ile teklif iste"
+        >WhatsApp ile teklif</button>
+        <button
+          type="button"
+          class="imt-cta-s"
+          id="imt-add-quote"
           data-equsto-cart="1"
-          data-eq-open-cart="1"
+          data-eq-cart-toast="1"
+          data-eq-quote="1"
           data-eq-n="Skyra IMT300 Berrak Buz Makinesi (Çift Tepsi)"
           data-eq-b="Skyra"
           data-eq-c="icecek-berrak-buz-makineleri"
           data-eq-p="11.500 € + KDV"
           data-eq-img="/images/imt300/imt300-1.jpg"
-          aria-label="Sepete ekle"
-        >Sepete ekle</button>
+          aria-label="Teklif listesine ekle"
+        >Teklif listesine ekle</button>
         <a class="imt-cta-s" href="/docs/imt300/IMT300PEU-User-Manual.pdf" target="_blank" rel="noopener">Kullanım kılavuzu (PDF)</a>
       </div>
     </div>
@@ -481,7 +489,7 @@ body{background:var(--eq-bg-page);font-family:-apple-system,BlinkMacSystemFont,"
     <details><summary>Berrak buz ile normal buz arasındaki fark nedir?</summary><p>Berrak buz donma sırasında hava kabarcıklarının minimize edilmesiyle daha yoğun ve yavaş eriyen bir yapıya sahiptir. Kokteyl ve premium içecek sunumunda sulandırma azalır.</p></details>
     <details><summary>Su bağlantısı ve basınç gereksinimleri nelerdir?</summary><p>Giriş basıncı 0,2–8 bar; BSP 1/2″. Döngü başına yaklaşık 30 litre. Giriş suyu 35 °C altında; mineral veya filtreli su önerilir.</p></details>
     <details><summary>Kurulum için ne kadar alan gerekir?</summary><p>Dış ölçüler yaklaşık 870×755×856 mm. Çevrede en az 100 mm boşluk; üstten açılan kapak için üst yüzey boş. Ortam 5–32 °C, nem %85 altında.</p></details>
-    <details><summary>Equsto üzerinden IMT300 nasıl sipariş edilir?</summary><p>Equsto Satış Mühendisliği bar ve içecek hattı projeleriniz için teklif, nakliye ve montaj planını hazırlar. «Sepete ekle» ile sepetinize alıp WhatsApp üzerinden talep iletebilir veya iletişim formunu kullanabilirsiniz.</p></details>
+    <details><summary>Equsto üzerinden IMT300 nasıl sipariş edilir?</summary><p>Equsto Satış Mühendisliği bar ve içecek hattı projeleriniz için teklif, nakliye ve montaj planını hazırlar. «WhatsApp ile teklif» veya «Teklif listesine ekle» ile talep iletebilir; iletişim formunu da kullanabilirsiniz.</p></details>
   </div>
 </div></section>
 
@@ -498,6 +506,23 @@ body{background:var(--eq-bg-page);font-family:-apple-system,BlinkMacSystemFont,"
       document.querySelectorAll('.imt-hero-thumbs button').forEach(function(x){x.classList.toggle('on',x===b);});
     });
   });
+  var waBtn=document.getElementById('imt-wa-quote');
+  if(waBtn){
+    waBtn.addEventListener('click',function(){
+      var msg='Merhaba, equsto.com üzerinden IMT300 Berrak Buz Makinesi için teklif almak istiyorum.\n\nÜrün: Skyra IMT300 Berrak Buz Makinesi (Çift Tepsi)\nFiyat: 11.500 € + KDV\n\nDetaylı teklif, nakliye ve montaj planı rica ederim.';
+      var phone=String(window.EQUSTO_WHATSAPP_E164||'').replace(/\D/g,'');
+      if(window.equstoOpenWhatsAppWebWindow&&phone){
+        window.equstoOpenWhatsAppWebWindow(phone,msg);
+        return;
+      }
+      if(typeof window.equstoOpenWhatsApp==='function'){
+        window.EQUSTO_WHATSAPP_TEXT=msg;
+        window.equstoOpenWhatsApp();
+        return;
+      }
+      window.alert('WhatsApp bağlantısı şu an kullanılamıyor.');
+    });
+  }
 })();
 </script>
 </body>

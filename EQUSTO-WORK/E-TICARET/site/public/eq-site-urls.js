@@ -492,8 +492,8 @@
   function isStaticPublicImage(s) {
     var t = String(s || "").trim().replace(/\\/g, "/");
     if (!t) return false;
-    if (/^\/images\/(catalog|home|icons|brand|assets)\//i.test(t)) return true;
-    if (/^images\/(catalog|home|icons|brand|assets)\//i.test(t)) return true;
+    if (/^\/images\/(catalog|home|icons|brand|assets|imt300)\//i.test(t)) return true;
+    if (/^images\/(catalog|home|icons|brand|assets|imt300)\//i.test(t)) return true;
     if (/^\/images\/[^/]+\.(jpe?g|png|webp|gif|svg)(\?|#|$)/i.test(t)) return true;
     return false;
   }

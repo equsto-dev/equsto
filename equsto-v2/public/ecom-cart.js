@@ -30,7 +30,7 @@
     var l = document.createElement('link');
     l.id = 'eq-cart-css';
     l.rel = 'stylesheet';
-    l.href = '/eq-cart.css?v=20260520cart';
+    l.href = '/eq-cart.css?v=20260524cart';
     document.head.appendChild(l);
   }
 
@@ -60,21 +60,31 @@
     return 'eq' + (h >>> 0).toString(36);
   }
 
+  function isQuotePriceLabel(p) {
+    var s = String(p == null ? '' : p).trim();
+    if (!s) return false;
+    if (/€|eur|teklif/i.test(s)) return true;
+    return parsePriceNum(s) === 0 && /\d/.test(s);
+  }
+
   function normalizeCartItem(x) {
     if (!x) return null;
     var n = String(x.n || '').trim();
     var b = String(x.b || '').trim();
     var c = String(x.c || '').trim();
     if (!n && !b) return null;
+    var p = String(x.p || '').trim();
+    var quote = !!(x.quote || isQuotePriceLabel(p));
     var id = lineId({ n: n, b: b, c: c });
     return {
       id: id,
       n: n,
       b: b,
       c: c,
-      p: String(x.p || '').trim(),
+      p: p,
       img: String(x.img || '').trim(),
-      q: Math.max(1, Math.round(Number(x.q) || 1)),
+      q: quote ? 1 : Math.max(1, Math.round(Number(x.q) || 1)),
+      quote: quote,
     };
   }
 
@@ -85,9 +95,10 @@
       var it = normalizeCartItem(x);
       if (!it) return;
       if (map[it.id]) {
-        map[it.id].q = Math.max(map[it.id].q, it.q);
+        map[it.id].q = it.quote ? 1 : Math.max(map[it.id].q, it.q);
         if (it.p) map[it.id].p = it.p;
         if (it.img && !map[it.id].img) map[it.id].img = it.img;
+        if (it.quote) map[it.id].quote = true;
       } else {
         map[it.id] = it;
       }
@@ -483,6 +494,7 @@
       c: el.getAttribute('data-eq-c') || '',
       p: el.getAttribute('data-eq-p') || '',
       img: el.getAttribute('data-eq-img') || '',
+      quote: el.getAttribute('data-eq-quote') === '1',
     };
   }
 
@@ -521,6 +533,40 @@
     }
     addFromItem(it);
     return true;
+  }
+
+  function dismissQuoteToast() {
+    var t = document.getElementById('equsto-quote-toast');
+    if (t && t.parentNode) t.parentNode.removeChild(t);
+  }
+
+  function toastQuoteAdded(name) {
+    dismissQuoteToast();
+    var bar = document.createElement('div');
+    bar.id = 'equsto-quote-toast';
+    bar.className = 'eq-quote-toast';
+    bar.setAttribute('role', 'status');
+    bar.innerHTML =
+      '<div class="eq-quote-toast__text"><strong>Teklif listesine eklendi</strong>' +
+      (name ? '<span>' + escHtml(name) + '</span>' : '') +
+      '</div>' +
+      '<div class="eq-quote-toast__actions">' +
+      '<button type="button" class="eq-quote-toast__btn eq-quote-toast__btn--wa" data-eq-quote-wa="1">WhatsApp</button>' +
+      '<button type="button" class="eq-quote-toast__btn eq-quote-toast__btn--list" data-eq-quote-open="1">Listeyi gör</button>' +
+      '<button type="button" class="eq-quote-toast__close" aria-label="Kapat">×</button>' +
+      '</div>';
+    document.body.appendChild(bar);
+    bar.querySelector('[data-eq-quote-wa]').addEventListener('click', function () {
+      dismissQuoteToast();
+      openWhatsApp();
+    });
+    bar.querySelector('[data-eq-quote-open]').addEventListener('click', function () {
+      dismissQuoteToast();
+      openPanel();
+    });
+    bar.querySelector('.eq-quote-toast__close').addEventListener('click', dismissQuoteToast);
+    clearTimeout(bar._hide);
+    bar._hide = setTimeout(dismissQuoteToast, 9000);
   }
 
   function toast(msg) {
@@ -628,6 +674,7 @@
     var qty = norm.q;
     for (var i = 0; i < arr.length; i++) {
       if (arr[i].id === id) {
+        if (norm.quote) return 'merged';
         arr[i].q = (arr[i].q || 1) + qty;
         return 'merged';
       }
@@ -637,7 +684,8 @@
     return 'added';
   }
 
-  function addFromItem(it) {
+  function addFromItem(it, opts) {
+    opts = opts || {};
     if (!it || (!it.n && !it.b)) return;
     var arr = normalizeCart(load());
     var st = mergeIntoCart(arr, it, { maxLines: MAX_LINES });
@@ -647,7 +695,7 @@
     }
     save(arr);
     syncBadge();
-    toast('Sepete eklendi');
+    if (!opts.silent) toast('Sepete eklendi');
   }
 
   function loadSiteCatalog() {
@@ -791,12 +839,15 @@
     if (!arr.length) return '';
     var lines = ['Merhaba, equsto.com sepetimden yazıyorum:', '', 'Ürünler:'];
     arr.forEach(function (x, i) {
-      var qty = x.q > 1 ? ' (x' + x.q + ')' : '';
-      lines.push(
-        i + 1 + '. ' + x.n + ' — ' + x.b + ' — ' + x.c + ' — ₺' + x.p + qty
-      );
+      var qty = x.q > 1 && !x.quote ? ' (x' + x.q + ')' : '';
+      var price = String(x.p || '').trim();
+      if (x.quote || isQuotePriceLabel(price)) {
+        lines.push(i + 1 + '. ' + x.n + ' — ' + x.b + ' — ' + price + qty);
+      } else {
+        lines.push(i + 1 + '. ' + x.n + ' — ' + x.b + ' — ' + x.c + ' — ₺' + price + qty);
+      }
     });
-    lines.push('', 'Kalem çeşidi: ' + arr.length + ' · Toplam adet: ' + totalQty(arr));
+    lines.push('', 'Kalem çeşidi: ' + arr.length + (cartIsQuoteOnly(arr) ? '' : ' · Toplam adet: ' + totalQty(arr)));
     return lines.join('\n');
   }
 
@@ -861,6 +912,7 @@
   }
 
   function lineUnitNum(x) {
+    if (x && (x.quote || isQuotePriceLabel(x.p))) return 0;
     return parsePriceNum(x && x.p);
   }
 
@@ -868,6 +920,14 @@
     var u = lineUnitNum(x);
     var q = x && x.q > 0 ? x.q : 1;
     return u > 0 ? u * q : 0;
+  }
+
+  function cartIsQuoteOnly(arr) {
+    if (!arr || !arr.length) return false;
+    for (var i = 0; i < arr.length; i++) {
+      if (!arr[i].quote && !isQuotePriceLabel(arr[i].p)) return false;
+    }
+    return true;
   }
 
   function cartSubtotal(arr) {
@@ -906,6 +966,7 @@
     var arr = load();
     for (var i = 0; i < arr.length; i++) {
       if (arr[i].id === id) {
+        if (arr[i].quote || isQuotePriceLabel(arr[i].p)) return;
         setLineQty(id, (arr[i].q || 1) + delta);
         return;
       }
@@ -914,6 +975,7 @@
 
   function renderCartLineHtml(x) {
     var q = x.q > 0 ? x.q : 1;
+    var isQuote = !!(x.quote || isQuotePriceLabel(x.p));
     var unit = lineUnitNum(x);
     var total = lineTotalNum(x);
     var src = cartImgSrc(x.img);
@@ -928,10 +990,38 @@
         (rawRel ? ' data-eq-img-raw="' + escAttr(rawRel) + '" data-eq-img-step="0"' : '') +
         ' alt="" loading="lazy" decoding="async" onerror="typeof __eqImgFail===\'function\'&&__eqImgFail(this)">'
       : '<span class="eq-cart-line__ph" aria-hidden="true">📦</span>';
-    var unitLbl = unit > 0 ? '₺' + formatMoneyTL(unit) + ' / adet' : 'Fiyat için teklif';
-    var totalLbl = total > 0 ? '₺' + formatMoneyTL(total) : '';
+    var unitLbl = isQuote
+      ? String(x.p || 'Teklif için iletişim')
+      : unit > 0
+        ? '₺' + formatMoneyTL(unit) + ' / adet'
+        : 'Fiyat için teklif';
+    var totalLbl = isQuote ? '' : total > 0 ? '₺' + formatMoneyTL(total) : '';
+    var actionsHtml = isQuote
+      ? '<button type="button" class="eq-cart-line__remove equsto-cart-remove" data-id="' +
+        escAttr(x.id) +
+        '">Kaldır</button>'
+      : '<div class="eq-cart-qty" role="group" aria-label="Adet">' +
+        '<button type="button" class="eq-cart-qty__btn equsto-cart-qty-minus" data-id="' +
+        escAttr(x.id) +
+        '" aria-label="Azalt"' +
+        (q <= 1 ? ' disabled' : '') +
+        '>−</button>' +
+        '<span class="eq-cart-qty__val">' +
+        escHtml(String(q)) +
+        '</span>' +
+        '<button type="button" class="eq-cart-qty__btn equsto-cart-qty-plus" data-id="' +
+        escAttr(x.id) +
+        '" aria-label="Artır"' +
+        (q >= 99 ? ' disabled' : '') +
+        '>+</button>' +
+        '</div>' +
+        '<button type="button" class="eq-cart-line__remove equsto-cart-remove" data-id="' +
+        escAttr(x.id) +
+        '">Kaldır</button>';
     return (
-      '<article class="eq-cart-line" data-cart-id="' +
+      '<article class="eq-cart-line' +
+      (isQuote ? ' eq-cart-line--quote' : '') +
+      '" data-cart-id="' +
       escAttr(x.id) +
       '">' +
       '<div class="eq-cart-line__media">' +
@@ -943,33 +1033,17 @@
       '</div>' +
       '<div class="eq-cart-line__meta">' +
       escHtml(x.b) +
+      (isQuote ? ' · Teklif kalemi' : '') +
       '</div>' +
       '<div class="eq-cart-line__unit">' +
       escHtml(unitLbl) +
       '</div>' +
       '<div class="eq-cart-line__actions">' +
-      '<div class="eq-cart-qty" role="group" aria-label="Adet">' +
-      '<button type="button" class="eq-cart-qty__btn equsto-cart-qty-minus" data-id="' +
-      escAttr(x.id) +
-      '" aria-label="Azalt"' +
-      (q <= 1 ? ' disabled' : '') +
-      '>−</button>' +
-      '<span class="eq-cart-qty__val">' +
-      escHtml(String(q)) +
-      '</span>' +
-      '<button type="button" class="eq-cart-qty__btn equsto-cart-qty-plus" data-id="' +
-      escAttr(x.id) +
-      '" aria-label="Artır"' +
-      (q >= 99 ? ' disabled' : '') +
-      '>+</button>' +
-      '</div>' +
-      '<button type="button" class="eq-cart-line__remove equsto-cart-remove" data-id="' +
-      escAttr(x.id) +
-      '">Kaldır</button>' +
+      actionsHtml +
       '</div></div>' +
       '<div class="eq-cart-line__aside">' +
       '<div class="eq-cart-line__total">' +
-      escHtml(totalLbl || '—') +
+      escHtml(totalLbl || (isQuote ? 'Teklif' : '—')) +
       '</div></div></article>'
     );
   }
@@ -983,6 +1057,13 @@
       return;
     }
     var sub = cartSubtotal(arr);
+    if (cartIsQuoteOnly(arr)) {
+      rowsEl.innerHTML =
+        '<li><span>Teklif kalemi</span><span>' +
+        escHtml(String(arr.length)) +
+        '</span></li>';
+      return;
+    }
     var html =
       '<li><span>Ara toplam (' +
       escHtml(String(arr.length)) +
@@ -1052,12 +1133,14 @@
         '<a href="/" class="eq-cart-btn eq-cart-btn--primary">Alışverişe başla</a>' +
         '</div>';
       updateCartSummary();
+      updatePanelMode();
       return;
     }
     sc.className = sc.classList.contains('eq-cart-lines') ? 'eq-cart-lines' : sc.className;
     sc.innerHTML = arr.map(renderCartLineHtml).join('');
     bindCartLineEvents(sc);
     updateCartSummary();
+    updatePanelMode();
   }
 
   function bindCartPageActions() {
@@ -1081,6 +1164,37 @@
     }
   }
 
+  function patchCartPanelChrome() {
+    var head = document.querySelector('#equsto-cart-panel .eq-cart-drawer__head');
+    if (!head || document.getElementById('equsto-cart-panel-title')) return;
+    var close = document.getElementById('equsto-cart-close');
+    var title = document.createElement('span');
+    title.id = 'equsto-cart-panel-title';
+    var txt = '';
+    for (var i = 0; i < head.childNodes.length; i++) {
+      if (head.childNodes[i].nodeType === 3) txt += head.childNodes[i].textContent;
+    }
+    title.textContent = String(txt || 'Alışveriş sepeti').trim() || 'Alışveriş sepeti';
+    while (head.firstChild && head.firstChild !== close) head.removeChild(head.firstChild);
+    head.insertBefore(title, close || null);
+  }
+
+  function updatePanelMode() {
+    patchCartPanelChrome();
+    var arr = load();
+    var quoteOnly = cartIsQuoteOnly(arr);
+    var titleEl = document.getElementById('equsto-cart-panel-title');
+    if (titleEl) titleEl.textContent = quoteOnly ? 'Teklif listesi' : 'Alışveriş sepeti';
+    var ov = document.getElementById('equsto-cart-overlay');
+    if (ov) ov.classList.toggle('eq-cart-overlay--quote', quoteOnly);
+    var gotoBtn = document.getElementById('equsto-cart-goto-page');
+    if (gotoBtn) gotoBtn.hidden = quoteOnly;
+    var clearBtn = document.getElementById('equsto-cart-clear');
+    if (clearBtn) clearBtn.hidden = quoteOnly;
+    var foot = document.querySelector('#equsto-cart-panel .eq-cart-drawer__foot');
+    if (foot) foot.classList.toggle('eq-cart-drawer__foot--quote', quoteOnly);
+  }
+
   function ensureOverlay() {
     var ov = document.getElementById('equsto-cart-overlay');
     if (ov) return ov;
@@ -1090,7 +1204,7 @@
     ov.className = 'eq-cart-overlay';
     ov.innerHTML =
       '<div id="equsto-cart-panel" class="eq-cart-drawer" role="dialog" aria-label="Alışveriş sepeti">' +
-      '<div class="eq-cart-drawer__head">Alışveriş sepeti' +
+      '<div class="eq-cart-drawer__head"><span id="equsto-cart-panel-title">Alışveriş sepeti</span>' +
       '<button type="button" id="equsto-cart-close" class="eq-cart-drawer__close" aria-label="Kapat">×</button></div>' +
       '<div id="equsto-cart-scroll" class="eq-cart-drawer__body eq-cart-lines"></div>' +
       '<div class="eq-cart-drawer__foot">' +
@@ -1124,7 +1238,9 @@
 
   function parsePriceNum(s) {
     if (s == null) return 0;
-    var t = String(s).replace(/[^\d,.\-]/g, '').replace(/\.(?=\d{3}(\D|$))/g, '').replace(',', '.');
+    var raw = String(s);
+    if (/€|eur/i.test(raw)) return 0;
+    var t = raw.replace(/[^\d,.\-]/g, '').replace(/\.(?=\d{3}(\D|$))/g, '').replace(',', '.');
     var n = parseFloat(t);
     return Number.isFinite(n) ? n : 0;
   }
@@ -1219,6 +1335,7 @@
     }
     ensureOverlay();
     renderPanelList();
+    updatePanelMode();
     var ov = document.getElementById('equsto-cart-overlay');
     if (ov) ov.classList.add('is-open');
   }
@@ -1234,8 +1351,14 @@
     if (trig) {
       e.preventDefault();
       e.stopPropagation();
-      addFromItem(parseItemFromEl(trig));
-      if (trig.getAttribute('data-eq-open-cart') === '1') openPanel();
+      var it = parseItemFromEl(trig);
+      var useToast = trig.getAttribute('data-eq-cart-toast') === '1';
+      addFromItem(it, { silent: useToast });
+      if (useToast) {
+        toastQuoteAdded(it && it.n ? it.n : '');
+      } else if (trig.getAttribute('data-eq-open-cart') === '1') {
+        openPanel();
+      }
       return;
     }
     var legacy = e.target.closest('[data-eq-cart]');
