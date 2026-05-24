@@ -101,11 +101,6 @@
       }
       if (window.EqustoCart && typeof window.EqustoCart.addFromItem === "function") {
         window.EqustoCart.addFromItem(it);
-        if (typeof window.EqustoCart.goToCartPage === "function") {
-          window.EqustoCart.goToCartPage();
-        } else {
-          location.href = "/sepet.html";
-        }
         return;
       }
       location.href = "/sepet.html";

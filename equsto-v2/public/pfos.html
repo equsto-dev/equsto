@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
@@ -131,14 +131,14 @@
 <script  src="/pfos-rule-engine.js"></script>
 <script  src="/equsto-pricing-core.js"></script>
 <script  src="/pfos-pricing.js"></script>
-<script  src="/pfos-calc-engine.js?v=20260522pfos-live"></script>
-<script  src="/pfos-template-api.js?v=20260522pfos-live"></script>
+<script  src="/pfos-calc-engine.js?v=20260519zone-v3"></script>
+<script  src="/pfos-template-api.js?v=20260523motor-v1"></script>
 <script  src="/pfos-location.js"></script>
 <script  src="/pfos-teklif-ui.js?v=20260522pfos-live"></script>
 <script  src="/pfos-teklif-excel.js"></script>
 <script>
 (function () {
-  fetch('/data/pfos-zone-catalog.json', { cache: 'default' })
+  fetch('/data/pfos-zone-catalog.json?v=20260519zone-v3', { cache: 'default' })
     .then(function (r) {
       return r.ok ? r.json() : null;
     })
@@ -1347,7 +1347,7 @@ body.pfos-teklif-lightbox-open{overflow:hidden}
         </div>
       </div>
       <div class="sec-bd">
-        <div class="hb" style="margin-top:0">Önce <b>il (şehir)</b> yazın; listeden tıklayın. Sonra ilçe, mahalle ve cadde — mümkünse listeden seçin.</div>
+        <div class="hb" style="margin-top:0">Önce <b>il (şehir)</b> yazın; listeden tıklayın. Sonra ilçe ve mahalle — mümkünse listeden seçin.</div>
         <div class="acw">
           <label class="fl" for="sehir-inp" style="margin-top:12px">İl (şehir) *</label>
           <input class="aci" id="sehir-inp" type="text" autocomplete="address-level1"
@@ -1378,15 +1378,6 @@ body.pfos-teklif-lightbox-open{overflow:hidden}
                 onblur="setTimeout(mahalleC,200)"
                 onkeydown="mahalleK(event)">
               <div class="acl-inline" id="mahalle-acl"></div>
-            </div>
-            <div style="grid-column:1/-1">
-              <div style="font-size:11px;color:var(--muted);margin-bottom:3px;font-weight:500">Cadde / bulvar <span style="color:var(--red)">*</span></div>
-              <input class="ti" id="adres-cadde" type="text" placeholder="Cadde adı (yoksa en yakın cadde)" autocomplete="off" autocorrect="off" spellcheck="false" data-lpignore="true"
-                oninput="caddeF(this.value);updateAdres();clearFieldWarn('adres-cadde')"
-                onfocus="caddeFocus()"
-                onblur="setTimeout(function(){caddeC();tryAdresOtomatikTamam();},240)"
-                onkeydown="caddeK(event)">
-              <div class="acl-inline" id="cadde-acl"></div>
             </div>
           </div>
           <div class="fw" id="adres-warn">Lütfen yıldızlı alanların hepsini doldurun.</div>
@@ -1428,18 +1419,18 @@ body.pfos-teklif-lightbox-open{overflow:hidden}
       </div>
     </div>
 
-    <!-- 04 Konsept -->
+    <!-- 04 Konsept / Menü -->
     <div class="sec" id="s3">
       <div class="sec-hd">
         <div class="sec-num">04</div>
         <div class="sec-info">
-          <div class="sec-title">Ne tür bir işletme?</div>
-          <div class="sec-sub">Açacağınız yeri en yakın seçeneğe dokunun. Birkaç ek soru çıkabilir; hepsi listeden seçim.</div>
+          <div class="sec-title">Konsept / Menü Seçimi</div>
+          <div class="sec-sub">İşletme türünü ve varsa menü tipini seçin. Birkaç ek soru çıkabilir; hepsi listeden seçim.</div>
           <div class="sec-ans" id="a3"></div>
         </div>
       </div>
       <div class="sec-bd">
-        <div class="pfos-konsept-grid" id="o3" role="group" aria-label="İşletme türü"></div>
+        <div class="pfos-konsept-grid" id="o3" role="group" aria-label="Konsept / Menü Seçimi"></div>
       </div>
     </div>
 
@@ -1527,27 +1518,10 @@ body.pfos-teklif-lightbox-open{overflow:hidden}
       </div>
     </div>
 
-    <!-- 06 Kategoriler -->
-    <div class="sec" id="s5c">
-      <div class="sec-hd">
-        <div class="sec-num">06</div>
-        <div class="sec-info">
-          <div class="sec-title">Mutfak kategorileri</div>
-          <div class="sec-sub">Ekipman listesinde yer alacak bölümleri seçin (en az bir kategori).</div>
-          <div class="sec-ans" id="a5c"></div>
-        </div>
-      </div>
-      <div class="sec-bd">
-        <div class="pfos-zone-grid" id="pfos-zone-grid" role="group" aria-label="Mutfak kategorileri"></div>
-        <div class="ar" style="margin-top:16px"><button type="button" class="btn gold" onclick="kategoriIleri()">Devam</button></div>
-      </div>
-    </div>
-
-
-    <!-- 07 Teklif Özeti -->
+    <!-- 06 Teklif Özeti -->
     <div class="sec" id="s6">
       <div class="sec-hd">
-        <div class="sec-num">07</div>
+        <div class="sec-num">06</div>
         <div class="sec-info">
           <div class="sec-title">Tahmini tutar</div>
           <div class="sec-sub">Teklifi oluşturun veya detaylandırın; gerekirse özette m² değerini güncelleyebilirsiniz.</div>
@@ -1567,8 +1541,8 @@ body.pfos-teklif-lightbox-open{overflow:hidden}
       </div>
       <div class="sec-bd">
         <div class="ac-cards">
-          <div class="ac-c" onclick="excelIndir()"><span class="icon">📊</span><div class="lbl">Excel indir</div><div class="sub">Teklif v12 · şartlar dahil</div></div>
-          <div class="ac-c" onclick="pdfIndir()"><span class="icon">📄</span><div class="lbl">PDF / yazdır</div><div class="sub">Teklif v12 · yazdır veya PDF kaydet</div></div>
+          <div class="ac-c" onclick="excelIndir()"><span class="icon">📊</span><div class="lbl">Excel indir</div><div class="sub">Teklif v14 · şartlar dahil</div></div>
+          <div class="ac-c" onclick="pdfIndir()"><span class="icon">📄</span><div class="lbl">PDF / yazdır</div><div class="sub">Teklif v14 · yazdır veya PDF kaydet</div></div>
           <div class="ac-c" onclick="wpGonder()"><span class="icon">✉️</span><div class="lbl">Özeti e-postayla gönder</div><div class="sub">Bilgisayarınızda posta kutusu açılır; metin hazırdır</div></div>
           <div class="ac-c" onclick="mailGonder()"><span class="icon">✍️</span><div class="lbl">E-posta ile yaz</div><div class="sub">Kendi cümlenizi eklemek için boş şablon</div></div>
         </div>
@@ -1619,7 +1593,7 @@ body.pfos-teklif-lightbox-open{overflow:hidden}
       </div>
       <div class="sec-bd">
         <div class="ac-cards">
-          <div class="ac-c" onclick="pdfIndir()"><span class="icon">📄</span><div class="lbl">PDF / yazdır</div><div class="sub">Teklif v12 · yazdır veya PDF kaydet</div></div>
+          <div class="ac-c" onclick="pdfIndir()"><span class="icon">📄</span><div class="lbl">PDF / yazdır</div><div class="sub">Teklif v14 · yazdır veya PDF kaydet</div></div>
           <div class="ac-c" onclick="wpGonder()"><span class="icon">✉️</span><div class="lbl">Özeti e-postayla gönder</div><div class="sub">Bilgisayarınızda posta kutusu açılır; metin hazırdır</div></div>
           <div class="ac-c" onclick="mailGonder()"><span class="icon">✍️</span><div class="lbl">E-posta ile yaz</div><div class="sub">Kendi cümlenizi eklemek için boş şablon</div></div>
           <div class="ac-c" onclick="teklifGonder()" id="pf-teklif-ac"><span class="icon">📨</span><div class="lbl">Teklifi Equsto'ya gönder</div><div class="sub">Bilgileriniz alınır, ekibimiz dönüş yapar</div></div>
@@ -2151,11 +2125,10 @@ function pfosCanLivePreview() {
   if (!D.konsept) return false;
   const tp = document.getElementById('tablo-panel');
   const s5 = document.getElementById('s5');
-  const s5c = document.getElementById('s5c');
   const s6 = document.getElementById('s6');
   if (tp && tp.classList.contains('vis')) return true;
   if (s5 && (s5.classList.contains('vis') || s5.classList.contains('done'))) return true;
-  if (s5c && (s5c.classList.contains('vis') || s5c.classList.contains('done'))) return true;
+  if (D.konsept && D.pfosZones && D.pfosZones.length) return true;
   if (s6 && (s6.classList.contains('vis') || s6.classList.contains('done'))) return true;
   return false;
 }
@@ -2280,7 +2253,7 @@ function buildTabloPreviewHtml(rows,amt){
   }
   const zones=calc&&calc.groupByZones?calc.groupByZones(rows,teklifCtx.pfosZones,teklifCtx.alan):[];
   if(ui&&typeof ui.buildPfosCategoryBlocksHtml==='function'){
-    html+=ui.buildPfosCategoryBlocksHtml(zones,teklifCtx.currency||'TRY');
+    html+=ui.buildPfosCategoryBlocksHtml(zones,teklifCtx);
   }
   html+='</div>';
   html+=`<div class="ac-cards">
@@ -2363,7 +2336,7 @@ const MESLEKLER = ['Yatırımcı','Şef / Aşçı','Satınalmacı','Mimar','Fran
 const KONSEPTLER = ['Restaurant','Pastane & Patisserie','Cafe','Bulut Mutfak','Hotel','Bar','Catering'];
 
 const DUKKAN = {
-  Restaurant:['Fine Dining','Dünya Mutfağı','All Dining Cafe (TheHouse Cafe, Happymoons vb)','Balık Restaurant','Steakhouse','Gurme Şarküteri','Meyhane','Kebapçı','Pizzacı','Dönerci','Kafe-Kafeterya','Esnaf Lokantası','Fastfood'],
+  Restaurant:['Fine Dining','Dünya Mutfağı','All Dining Cafe (TheHouse Cafe, Happymoons vb)','Türk Restoran','Balık Restaurant','Steakhouse','Gurme Şarküteri','Meyhane','Kebapçı','Pizzacı','Dönerci','Kafe-Kafeterya','Esnaf Lokantası','Fastfood'],
   'Pastane & Patisserie':['Artisan Bakery','Industrial Bakery'],
   Cafe:['Coffee Shop'],
   'Bulut Mutfak':['Döner','Pizza','Pide & Lahmacun','Burger','Ev Yemekleri','Kebap & Türk Mutfağı'],
@@ -2426,7 +2399,7 @@ const STATIONS_MAP = {
   Restaurant:['Ana Mutfak','Hazırlık Mutfağı','Bar','Soğuk Depolama','Depolama','Bulaşık Yıkama','Açık Büfe'],
   Franchise:['Ana Mutfak','Hazırlık Mutfağı','Bar','Soğuk Depolama','Depolama','Bulaşık Yıkama','Açık Büfe'],
   'Fine Dining':['Ana Mutfak','Hazırlık Mutfağı','Bar','Soğuk Depolama','Depolama','Bulaşık Yıkama','Teşhir Alanı','Açık Büfe'],
-  Steakhouse:['Ana Mutfak','Hazırlık Mutfağı','Bar','Soğuk Depolama','Depolama','Bulaşık Yıkama','Açık Büfe'],
+  Steakhouse:['Ön Mutfak','Soğuk Oda','Derin Dondurucu Oda','Et & Sebze Hazırlık','Pişirme','İçecek & Servis','Soğuk Hazırlık','Hamur Hazırlık','Kuru Depo','Bulaşık Yıkama','Yer Izgara'],
   'Gurme Şarküteri':['Teşhir Alanı','Hazırlık Mutfağı','Soğuk Depolama','Depolama'],
   Şarküteri:['Teşhir Alanı','Hazırlık Mutfağı','Soğuk Depolama','Depolama'],
   Cafe:['Hazırlık Mutfağı','Bar','Soğuk Depolama','Depolama'],
@@ -2520,7 +2493,7 @@ const EQ_ITEMS = {
   SARAP_DL:   {kod:'EQ-SOG-004', ad:'Şarap Dolabı',                         marka:'Liebherr',                  adet:1, elk:0.3,  gaz:0,  pct:.05, pfDept:'sogutma', pfB:'ELECTROLUX', pfN:'Electrolux Şarap Dolabı 1 Cam Kapılı 170 Şişe Kapasiteli 720011'},
   BAR_BZDL:   {kod:'EQ-SOG-005', ad:'Bar Altı Buzdolabı',                   marka:'True TBB-24-48',            adet:2, elk:0.4,  gaz:0,  pct:.05, pfDept:'sogutma', pfB:'ICEINOX', pfN:'Iceinox Tezgah Tipi Buzdolabı 2 Kapılı 150x70x85 CTS 330 CR'},
   SOG_TEZ:    {kod:'EQ-SOG-010', ad:'Soğutmalı Hazırlık Tezgahı',           marka:'True TPP-27',               adet:1, elk:0.5,  gaz:0,  pct:.05, pfDept:'sogutma', pfB:'ICEINOX', pfN:'Iceinox 2 Kapılı Hazırlık Buzdolabı 150x70x130 cm FTS 330 CR'},
-  VAKUM:      {kod:'EQ-YRD-001', ad:'Vakum Makinası',                       marka:'Henkelman',                 adet:1, elk:0.9,  gaz:0,  pct:.03, pfDept:'hazirlik', pfZone:'sebze_hazirlik', pfB:'EMPERO', pfN:'Empero Vakum Makinesi Profesyonel Vakum Paketleme Makinesi EMP.VCM.01'},
+  VAKUM:      {kod:'EQ-YRD-001', ad:'Vakum Makinası',                       marka:'Henkelman',                 adet:1, elk:0.9,  gaz:0,  pct:.03, pfDept:'hazirlik', pfZone:'et_hazirlik', pfB:'EMPERO', pfN:'Empero Vakum Makinesi Profesyonel Vakum Paketleme Makinesi EMP.VCM.01'},
   // Yıkama
   BULASIK_T:  {kod:'EQ-YIK-001', ad:'Bulaşık Makinası (Tünel Tipi)',        marka:'Winterhalter PT Series',    adet:1, elk:8.7,  gaz:0,  pct:.09, pfDept:'yikama', pfB:'Öztiryakiler Endüstriyel Mutfak', pfN:'Öztiryakiler Bulaşık Makinesi Dijital Programlı OBY500DETR Profesyonel oby500detr'},
   BULASIK_K:  {kod:'EQ-YIK-002', ad:'Bulaşık Makinası (Sepet Tipi)',        marka:'Winterhalter UC Series',    adet:1, elk:4.5,  gaz:0,  pct:.06, pfDept:'yikama', pfB:'Öztiryakiler Endüstriyel Mutfak', pfN:'Öztiryakiler Bulaşık Makinesi Dijital Programlı OBY500DETR Profesyonel oby500detr'},
@@ -2643,37 +2616,25 @@ function pfosParsePriceTL(raw) {
 }
 
 function pfosPriceRows(rows) {
-  if (
-    window.EqustoPfosPricing &&
-    EqustoPfosPricing.allRowsNetPriced &&
-    EqustoPfosPricing.allRowsNetPriced(rows)
-  ) {
-    return EqustoPfosPricing.priceRowsNet(rows);
+  if (window.EqustoPfosPricing && typeof EqustoPfosPricing.priceRowsEcom === 'function') {
+    return EqustoPfosPricing.priceRowsEcom(rows);
   }
-  const target = tahmini();
   if (window.EqustoPfosPricing && typeof EqustoPfosPricing.priceRows === 'function') {
-    return EqustoPfosPricing.priceRows(rows, target);
+    return EqustoPfosPricing.priceRows(rows);
   }
   return rows || [];
 }
 
 function pfosQuoteTotal(rows) {
-  const sum = (rows || []).reduce(
-    (a, r) => a + (Number(r.birim) || 0) * (Number(r.adet) || 1),
-    0
-  );
-  if (
-    sum > 0 &&
-    window.EqustoPfosPricing &&
-    EqustoPfosPricing.allRowsNetPriced &&
-    EqustoPfosPricing.allRowsNetPriced(rows)
-  ) {
-    return sum;
-  }
   if (window.EqustoPfosPricing && typeof EqustoPfosPricing.quoteTotal === 'function') {
-    return EqustoPfosPricing.quoteTotal(rows, tahmini());
+    return EqustoPfosPricing.quoteTotal(rows, 0);
   }
-  return sum > 0 ? sum : tahmini();
+  return (rows || []).reduce((a, r) => {
+    if (r.fiyat_haric || r.fiyat_kaynak === 'haric') return a;
+    const line =
+      r.lineTotal != null ? r.lineTotal : (Number(r.birim) || 0) * (Number(r.adet) || 1);
+    return a + line;
+  }, 0);
 }
 
 function pfosCapacityBand(alan) {
@@ -2694,6 +2655,100 @@ function pfosIsPizzaciCtx() {
 
 function pfosIsDonerciCtx() {
   return D.dukkan === 'Dönerci';
+}
+
+function pfosIsFineDiningCtx() {
+  return D.dukkan === 'Fine Dining';
+}
+
+/** Gurme şarküteri / şarküteri / kasap — dilimleme et hazırlıkta zorunlu */
+function pfosIsSarkuteriCtx() {
+  const k = D.konsept || '';
+  const d = D.dukkan || '';
+  return (
+    d === 'Gurme Şarküteri' ||
+    k === 'Şarküteri' ||
+    k === 'Kasap'
+  );
+}
+
+function pfosBuildQuoteOpts() {
+  return {
+    sarkuteri: pfosIsSarkuteriCtx(),
+    dukkan: D.dukkan || '',
+    konsept: D.konsept || '',
+  };
+}
+
+function pfosNeedsEtHazirlikPack() {
+  const k = D.konsept || '';
+  const d = D.dukkan || '';
+  return (
+    pfosIsSteakhouseCtx() ||
+    pfosIsFineDiningCtx() ||
+    d === 'Gurme Şarküteri' ||
+    k === 'Şarküteri' ||
+    k === 'Kasap' ||
+    (k === 'Restaurant' &&
+      (d === 'Fine Dining' ||
+        d === 'Steakhouse' ||
+        d === 'Gurme Şarküteri' ||
+        d === 'Dünya Mutfağı' ||
+        d === 'Balık Restaurant'))
+  );
+}
+
+function pfosZonesIncludeEtHazirlik() {
+  const zones =
+    (typeof pfosGetZones === 'function' ? pfosGetZones() : null) ||
+    D.pfosZones ||
+    [];
+  return (zones || []).indexOf('et_hazirlik') >= 0;
+}
+
+/** Şablon/katalog teklifinde et hazırlık tek kalem kalmasın — zone katalogundan tamamlar */
+function pfosMergeEtHazirlikFromCatalog(list) {
+  if (!pfosNeedsEtHazirlikPack() || !pfosZonesIncludeEtHazirlik()) return list;
+  if (!window.EqustoPfosCalc || !EqustoPfosCalc.isCatalogReady()) return list;
+  const alan = Number(D.alan) || 0;
+  if (alan < 20) return list;
+
+  const rowZoneKey =
+    typeof EqustoPfosCalc.rowZone === 'function'
+      ? function (r) {
+          return EqustoPfosCalc.rowZone(r);
+        }
+      : function (r) {
+          return r.pfZone || 'ana_mutfak';
+        };
+
+  const existing = (list || []).filter(function (r) {
+    return rowZoneKey(r) === 'et_hazirlik';
+  });
+  const minWant = pfosCapacityBand(alan) === 'XL' ? 5 : pfosCapacityBand(alan) === 'L' ? 4 : 3;
+  if (existing.length >= minWant) return list;
+
+  const quote = EqustoPfosCalc.generateQuote(
+    alan,
+    ['et_hazirlik'],
+    typeof pfosBuildBolumM2ForApi === 'function' ? pfosBuildBolumM2ForApi() : null,
+    pfosBuildQuoteOpts()
+  );
+  let extras = EqustoPfosCalc.quoteToRows(quote);
+  extras = pfosEnrichRows(extras);
+  const seen = new Set(
+    existing.map(function (r) {
+      return String(r.tip_kodu || r.ad || '').trim();
+    })
+  );
+  let out = (list || []).slice();
+  extras.forEach(function (r) {
+    const key = String(r.tip_kodu || r.ad || '').trim();
+    if (!key || seen.has(key)) return;
+    seen.add(key);
+    out.push(Object.assign({}, r, { pfZone: 'et_hazirlik', pfDept: 'hazirlik' }));
+  });
+  return out;
 }
 
 function pfosStripKods(list, kods) {
@@ -2805,7 +2860,23 @@ function pfosReplaceTezKey(list, key) {
   return list.concat([tez]);
 }
 
-/** Konsept şablonu + DB (POST /api/pfos/calculate) — cache D._pfosTemplateRows */
+/** Seçili mutfak zone → bölüm m² (tek motor API) */
+function pfosBuildBolumM2ForApi() {
+  const zones = typeof pfosGetZones === 'function' ? pfosGetZones() : [];
+  const alan = Number(D.alan) || 0;
+  if (!zones.length || alan < 20) return undefined;
+  const n = zones.length;
+  let base = Math.floor(alan / n);
+  let rem = alan - base * n;
+  const out = {};
+  zones.forEach(function (z) {
+    out[z] = base + (rem > 0 ? 1 : 0);
+    if (rem > 0) rem--;
+  });
+  return out;
+}
+
+/** Konsept + zone katalog + şablon (POST /api/pfos/quote) — cache D._pfosTemplateRows */
 function pfosEnsureTemplateQuote() {
   if (!window.EqustoPfosTemplateApi) return Promise.resolve(null);
   const slug = EqustoPfosTemplateApi.normKonseptSlug(D.konsept, D.dukkan);
@@ -2818,8 +2889,11 @@ function pfosEnsureTemplateQuote() {
   return EqustoPfosTemplateApi.calculate({
     konsept: slug,
     m2: m2,
-    fiyatStratejisi: 'orta',
+    fiyatStratejisi: 'ekonomik',
     sehir: D.sehir || D.il || undefined,
+    lokasyon: D.lokasyon || undefined,
+    bolumM2: pfosBuildBolumM2ForApi(),
+    teslimatAdresi: D.adres || undefined,
   })
     .then(function (data) {
       D._pfosTemplateMeta = data;
@@ -2835,24 +2909,99 @@ function pfosEnsureTemplateQuote() {
     });
 }
 
-// ── Ekipman listesi: önce konsept şablonu, sonra zone katalog, sonra kural motoru ─
-function buildEkipmanList() {
-  if (D._pfosTemplateRows && D._pfosTemplateRows.length) {
-    let list = D._pfosTemplateRows.map((r) => Object.assign({}, r));
-    list = pfosEnrichRows(list);
-    return pfosPostProcessCatalogItems(list);
+function pfosRowIsDilimleme(r) {
+  if (window.EqustoPfosCalc && typeof EqustoPfosCalc.isDilimlemeRow === 'function') {
+    return EqustoPfosCalc.isDilimlemeRow(r);
   }
+  const tip = String((r && (r.tip_kodu || r.pfosUrunTipi)) || '').toLowerCase();
+  return tip === 'dilimleme_makinesi' || String((r && r.ad) || '').toLowerCase().includes('dilimleme');
+}
+
+function pfosMergeTemplateZorunlu(baseList, templateRows) {
+  if (!templateRows || !templateRows.length) return baseList || [];
+  const seen = new Set();
+  (baseList || []).forEach((r) => {
+    const k = (r.pfZone || '') + '|' + (r.tip_kodu || r.pfosUrunTipi || r.kod || r.ad);
+    seen.add(k);
+  });
+  const out = (baseList || []).slice();
+  templateRows.forEach((r) => {
+    if (pfosRowIsDilimleme(r)) {
+      const zk =
+        r.pfZone ||
+        (window.EqustoPfosCalc && EqustoPfosCalc.rowZone
+          ? EqustoPfosCalc.rowZone(r)
+          : '');
+      if (zk === 'sebze_hazirlik') return;
+      if (!pfosIsSarkuteriCtx()) return;
+      if (zk && zk !== 'et_hazirlik') return;
+      r = Object.assign({}, r, { pfZone: 'et_hazirlik', pfDept: 'hazirlik' });
+    }
+    const tip = r.pfosTip || r.pfClass;
+    if (tip !== 'zorunlu' && tip !== 'ZRN' && tip !== 'tavsiye') return;
+    const key = (r.pfZone || '') + '|' + (r.tip_kodu || r.pfosUrunTipi || r.kod || r.ad);
+    if (seen.has(key)) return;
+    seen.add(key);
+    out.push(Object.assign({}, r));
+  });
+  return out;
+}
+
+/** Şarküteri: et hazırlıkta dilimleme makinesi zorunlu */
+function pfosEnsureSarkuteriDilimleme(list) {
+  if (!pfosIsSarkuteriCtx()) return list || [];
+  const calc = window.EqustoPfosCalc;
+  if (!calc || !calc.isCatalogReady || !calc.isCatalogReady()) return list || [];
+  const alan = Number(D.alan) || 0;
+  if (alan < 20) return list || [];
+  const rowZk =
+    calc.rowZone ||
+    function (r) {
+      return r.pfZone || 'ana_mutfak';
+    };
+  const has = (list || []).some(function (r) {
+    return pfosRowIsDilimleme(r) && rowZk(r) === 'et_hazirlik';
+  });
+  if (has) return list;
+  const bolumM2 =
+    typeof pfosBuildBolumM2ForApi === 'function' ? pfosBuildBolumM2ForApi() : null;
+  const quote = calc.generateQuote(alan, ['et_hazirlik'], bolumM2, pfosBuildQuoteOpts());
+  let extras = calc.quoteToRows(quote).filter(function (r) {
+    return pfosRowIsDilimleme(r);
+  });
+  if (!extras.length) return list;
+  extras = pfosEnrichRows(
+    extras.map(function (r) {
+      return Object.assign({}, r, { pfZone: 'et_hazirlik', pfDept: 'hazirlik', pfClass: 'ZRN' });
+    })
+  );
+  return (list || []).concat(extras);
+}
+
+// ── Ekipman listesi: zone katalog (ZRN) + şablondan eksik zorunlu; API tam liste değil ─
+function buildEkipmanList() {
   const zones = typeof pfosGetZones === 'function' ? pfosGetZones() : [];
   const alan = Number(D.alan) || 0;
+  let list = [];
   if (
     window.EqustoPfosCalc &&
     EqustoPfosCalc.isCatalogReady &&
     EqustoPfosCalc.isCatalogReady() &&
-    typeof EqustoPfosCalc.generateQuote === 'function'
+    typeof EqustoPfosCalc.generateQuote === 'function' &&
+    zones.length &&
+    alan >= 20
   ) {
-    const quote = EqustoPfosCalc.generateQuote(alan, zones);
-    let list = EqustoPfosCalc.quoteToRows(quote);
+    const bolumM2 =
+      typeof pfosBuildBolumM2ForApi === 'function' ? pfosBuildBolumM2ForApi() : null;
+    const quoteOpts = pfosBuildQuoteOpts();
+    const quote = EqustoPfosCalc.generateQuote(alan, zones, bolumM2, quoteOpts);
+    list = EqustoPfosCalc.quoteToRows(quote);
+    list = pfosMergeTemplateZorunlu(list, D._pfosTemplateRows);
+    if (typeof EqustoPfosCalc.applyDilimlemeZoneRules === 'function') {
+      list = EqustoPfosCalc.applyDilimlemeZoneRules(list, quoteOpts);
+    }
     list = pfosEnrichRows(list);
+    list = pfosEnsureSarkuteriDilimleme(list);
     return pfosPostProcessCatalogItems(list);
   }
   const ctx = {
@@ -2876,6 +3025,9 @@ function buildEkipmanList() {
 /** Katalog modunda konsept/dükkan filtreleri (Pizzacı vb.) */
 function pfosPostProcessCatalogItems(list) {
   let out = (list || []).slice();
+  if (window.EqustoPfosCalc && typeof EqustoPfosCalc.applyDilimlemeZoneRules === 'function') {
+    out = EqustoPfosCalc.applyDilimlemeZoneRules(out, pfosBuildQuoteOpts());
+  }
   if (pfosIsPizzaciCtx()) {
     const drop = new Set([
       'Kombi fırın (Rational)',
@@ -2886,6 +3038,15 @@ function pfosPostProcessCatalogItems(list) {
   }
   if (pfosIsDonerciCtx()) {
     out = out.filter((r) => r.ad !== 'Kombi fırın (Rational)');
+  }
+  if (pfosNeedsEtHazirlikPack()) {
+    const band = pfosCapacityBand(D.alan);
+    if (band !== 'S') out = pfosEnsureEqKey(out, 'VAKUM');
+    if (band === 'L' || band === 'XL') {
+      out = pfosEnsureEqKey(out, 'KEM_TES');
+      out = pfosEnsureEqKey(out, 'ET_KIYMA');
+    }
+    out = pfosMergeEtHazirlikFromCatalog(out);
   }
   return out;
 }
@@ -2983,7 +3144,7 @@ const FRANCHISE_DB = {
   "Simit Sarayı":true,"Köfteci Yusuf":true,"Lahmacun Evi":true,
 };
 
-const SEC_ORDER=['s1','s2','s5','s3','sfr','s4','s4b','s4c','s4d','s4e','s5c','s6','s6a','s6b','s6c','s6d'];
+const SEC_ORDER=['s1','s2','s5','s3','sfr','s4','s4b','s4c','s4d','s4e','s6','s6a','s6b','s6c','s6d'];
 const PFOS_ALAN_PRESETS=[60,80,100,120,150,200,300,450];
 
 // ── State ─────────────────────────────────────────────────────────────────────
@@ -3060,15 +3221,34 @@ function esc(s){
     .replace(/"/g,'&quot;');
 }
 
+function pfosAttrEsc(s){
+  return String(s == null ? '' : s)
+    .replace(/&/g,'&amp;')
+    .replace(/"/g,'&quot;')
+    .replace(/</g,'&lt;');
+}
+
+function pfosBindOptHost(host, fnName){
+  if(!host||host.dataset.pfosOptBound) return;
+  host.dataset.pfosOptBound='1';
+  host.dataset.pfosOptFn=fnName||'';
+  host.addEventListener('click',function(e){
+    var btn=e.target.closest('.opt');
+    if(!btn||!host.contains(btn)) return;
+    var val=btn.getAttribute('data-v');
+    if(val==null||val==='') val=btn.textContent.trim();
+    var fn=host.dataset.pfosOptFn;
+    if(fn&&typeof window[fn]==='function') window[fn](val);
+  });
+}
+
 function pfMobileMq(){return window.matchMedia('(max-width:767px)');}
 function pfMobileSyncLoc(){
   const seh=(D.sehir||'').trim()||(document.getElementById('sehir-inp')||{}).value.trim();
   const ilce=(document.getElementById('adres-ilce')||{}).value.trim();
   const mah=(document.getElementById('adres-mahalle')||{}).value.trim();
-  const cad=(document.getElementById('adres-cadde')||{}).value.trim();
   var loc='İstanbul, Türkiye';
-  if(seh&&ilce&&mah&&cad) loc=ilce+' · '+seh;
-  else if(seh&&ilce&&mah) loc=ilce+' · '+seh;
+  if(seh&&ilce&&mah) loc=ilce+' · '+seh;
   else if(seh&&ilce) loc=ilce+', '+seh;
   else if(seh) loc=seh+', Türkiye';
   else loc='Teslimat adresi seçin';
@@ -3099,7 +3279,6 @@ function pfMobileSyncCta(){
   const s6=document.getElementById('s6');
   if(s6&&s6.classList.contains('vis')&&!s6.classList.contains('done')){ cta.textContent='Özet'; return; }
   const act=document.querySelector('.sec.active');
-  if(act&&act.id==='s5c'){ cta.textContent='Özete geç'; return; }
   cta.textContent='Devam';
 }
 function pfMobileOpenLoc(){
@@ -3160,15 +3339,23 @@ function selOpts(cid,val){
 }
 
 function mkOpts(list,fn,selVal,extra=''){
-  return `<div class="og${extra}">${(list||[]).map(v=>
-    `<button type="button" class="opt${v===selVal?' sel':''}" data-v="${esc(v)}" onclick="${fn}('${esc(v)}')">${v}</button>`
-  ).join('')}</div>`;
+  var extraCls=extra?String(extra).trim():'';
+  return `<div class="og${extraCls?(' '+extraCls):''}">${(list||[]).map(v=>{
+    var sel=v===selVal?' sel':'';
+    return `<button type="button" class="opt${sel}" data-v="${pfosAttrEsc(v)}" onclick="${fn}('${esc(v)}')">${escHtml(v)}</button>`;
+  }).join('')}</div>`;
 }
 
 function pfosFillOpts(hostId,list,fn,selVal,extra){
   var host=document.getElementById(hostId);
   if(!host) return;
-  host.innerHTML=mkOpts(list,fn,selVal,extra);
+  var extraCls=extra?String(extra).trim():'';
+  if(!host.classList.contains('og')) host.classList.add('og');
+  host.innerHTML=(list||[]).map(v=>{
+    var sel=v===selVal?' sel':'';
+    return `<button type="button" class="opt${extraCls?(' '+extraCls):''}${sel}" data-v="${pfosAttrEsc(v)}">${escHtml(v)}</button>`;
+  }).join('');
+  pfosBindOptHost(host,fn);
 }
 
 // ── Türkiye adres (yerel tr-adres.json — TurkiyeAPI yok) ─────────────────────
@@ -3250,22 +3437,18 @@ function refreshWizardHint(){
     pct=82;
     title='<b>Tahmini tutar</b>';
     sub='<b>Teklifi Oluştur</b> veya <b>Detaylandır</b> ile listeyi görün; isterseniz özette m² değerini tekrar düzenleyebilirsiniz.';
-  }else if(g('s5c')&&g('s5c').classList.contains('vis')&&!g('s5c').classList.contains('done')){
-    pct=74;
-    title='<b>Mutfak kategorileri</b>';
-    sub='İşletme türü tamam. Listede yer alacak bölümleri işaretleyin; <b>Devam</b> ile özete geçilir.';
   }else if(g('s4')&&g('s4').classList.contains('vis')&&!g('s4').classList.contains('done')){
     pct=58;
-    title='<b>Dükkan türü</b>';
-    sub='Konseptinize uygun işletme alt tipini seçin; ardından mutfak kategorileri gelir.';
+    title='<b>Konsept / Menü Seçimi</b>';
+    sub='İşletme ve menü seçimini tamamlayın; ardından tahmini özet gelir.';
   }else if(g('s3')&&g('s3').classList.contains('done')){
     pct=62;
-    title='<b>İşletme detayı</b>';
-    sub='Dükkan türü ve varsa ek soruları tamamlayın; ardından mutfak kategorileri ve özet gelir.';
+    title='<b>Konsept / Menü Seçimi</b>';
+    sub='Dükkan türü ve varsa ek soruları tamamlayın; ardından özet gelir.';
   }else if(g('s3')&&g('s3').classList.contains('vis')&&!g('s3').classList.contains('done')){
     pct=42;
-    title='<b>İşletme türü</b>';
-    sub='Ne açacağınızı seçin; birkaç ek soru çıkabilir — hepsi listeden. Emin olmadığınız yerde en yakın seçenek yeterli.';
+    title='<b>Konsept / Menü Seçimi</b>';
+    sub='Ne açacağınızı seçin; birkaç ek soru çıkabilir — hepsi listeden.';
   }else if(g('s5')&&g('s5').classList.contains('vis')&&!g('s5').classList.contains('done')){
     pct=34;
     title='<b>Toplam alan</b>';
@@ -3277,7 +3460,7 @@ function refreshWizardHint(){
   }else if(g('s1')&&g('s1').classList.contains('done')){
     pct=18;
     title='<b>Şehir ve adres</b>';
-    sub='İl yazıp listeden seçin. İlçe, mahalle ve cadde tamamlanınca <b>otomatik olarak sonraki soruya geçilir</b>.';
+    sub='İl yazıp listeden seçin. İlçe ve mahalle tamamlanınca <b>otomatik olarak sonraki soruya geçilir</b>.';
   }
   box.innerHTML=title+'<small>'+sub+'</small>';
   if(bar) bar.style.width=pct+'%';
@@ -3329,6 +3512,9 @@ function think(msg, cb){ /* TODO: spinner animasyonu */ if(typeof cb==='function
 // ── Init ──────────────────────────────────────────────────────────────────────
 function pfosBootWizard(){
   pfosFillOpts('o1',MESLEKLER,'setMeslek',D.meslek);
+  if(!document.querySelector('#o1 .opt')){
+    setTimeout(function(){ pfosFillOpts('o1',MESLEKLER,'setMeslek',D.meslek); },0);
+  }
   renderKonseptButtons();
   initPfosPopZones();
   initTrAdres().then(function(){ refreshWizardHint(); });
@@ -3364,7 +3550,6 @@ function setSehir(val){
   applyProvinceFromSehir().then(()=>{
     document.getElementById('adres-ilce').value='';
     document.getElementById('adres-mahalle').value='';
-    document.getElementById('adres-cadde').value='';
     D.districtId=null;
     updateAdres();
     ilceFocus();
@@ -3514,14 +3699,8 @@ function mahalleK(e){
 }
 function mahallePick(val){
   document.getElementById('adres-mahalle').value=val;
-  document.getElementById('adres-cadde').value='';
-  pfosClearCaddeCache();
   mahalleC();updateAdres();clearFieldWarn('adres-mahalle');
-  setTimeout(function(){
-    const el=document.getElementById('adres-cadde');
-    if(el) el.focus();
-    caddeFocus();
-  },80);
+  setTimeout(function(){ void tryAdresOtomatikTamam(); },120);
 }
 
 // Cadde autocomplete (odakta tam liste: tarayıcı otofill / 1 harf ile filtre yüzünden Acıbadem vb. kaybolmasın)
@@ -3624,8 +3803,7 @@ function tryAdresOtomatikTamam(){
   if(!D.sehir)return;
   const ilce=document.getElementById('adres-ilce').value.trim();
   const mah=document.getElementById('adres-mahalle').value.trim();
-  const cad=document.getElementById('adres-cadde').value.trim();
-  if(!ilce||!mah||cad.length<2)return;
+  if(!ilce||!mah)return;
   void sehirOnayla();
 }
 
@@ -3732,8 +3910,6 @@ function ilceK(e){
 function ilcePick(val){
   document.getElementById('adres-ilce').value=val;
   document.getElementById('adres-mahalle').value='';
-  document.getElementById('adres-cadde').value='';
-  pfosClearCaddeCache();
   ilceC(); updateAdres(); clearFieldWarn('adres-ilce');
   D.districtId=null;
   const E=eqAdres();
@@ -3770,7 +3946,7 @@ function syncSehirFromInput(){
 async function sehirOnayla(){
   syncSehirFromInput();
   if(!D.sehir){
-    document.getElementById('adres-warn').textContent='Önce il (şehir) kutusuna bir şehir yazın. Ardından ilçe, mahalle ve cadde alanlarını doldurun.';
+    document.getElementById('adres-warn').textContent='Önce il (şehir) kutusuna bir şehir yazın. Ardından ilçe ve mahalle alanlarını doldurun.';
     document.getElementById('adres-warn').style.display='block';
     document.getElementById('sehir-inp').focus();
     return;
@@ -3779,13 +3955,11 @@ async function sehirOnayla(){
   updateAdres();
   const ilce=document.getElementById('adres-ilce').value.trim();
   const mah=document.getElementById('adres-mahalle').value.trim();
-  const cad=document.getElementById('adres-cadde').value.trim();
   const missing=[];
   if(!ilce){missing.push('adres-ilce');}
   if(!mah){missing.push('adres-mahalle');}
-  if(!cad||cad.length<2){missing.push('adres-cadde');}
   if(missing.length){
-    document.getElementById('adres-warn').textContent='Lütfen yıldızlı tüm alanları doldurun (cadde en az 2 harf).';
+    document.getElementById('adres-warn').textContent='Lütfen yıldızlı tüm alanları doldurun.';
     document.getElementById('adres-warn').style.display='block';
     missing.forEach(id=>markFieldWarn(id));
     return;
@@ -3803,8 +3977,7 @@ function updateAdres(){
   const s=document.getElementById('adres-sehir').value.trim();
   const i=document.getElementById('adres-ilce').value.trim();
   const m=document.getElementById('adres-mahalle').value.trim();
-  const c=document.getElementById('adres-cadde').value.trim();
-  D.adres=[s,i,m,c].filter(Boolean).join(', ');
+  D.adres=[s,i,m].filter(Boolean).join(', ');
   D.lokasyon=pfosGetLokasyon();
   if(D.lokasyon&&D.lokasyon.sehir&&D.lokasyon.ilce){
     D.nakliye=pfosEstimateNakliye(buildEkipmanList());
@@ -3879,6 +4052,7 @@ function setKonsept(val){
     setTimeout(()=>document.getElementById('fr-inp').focus(),200);
     return;
   }
+  if (val === 'Steakhouse') pfosApplySteakhousePilotFromPdf();
   renderS4(); reveal('s4'); activate('s4');
 }
 
@@ -3943,6 +4117,7 @@ function pfosDefaultPisirForDukkan(dukkan) {
 
 function setDukkan(val){
   D.dukkan=val; D.alt=null; D.pisir=pfosDefaultPisirForDukkan(val);
+  if (val === 'Steakhouse' || (D.konsept === 'Steakhouse' && !D.alan)) pfosApplySteakhousePilotFromPdf();
   document.querySelectorAll('#s4-bd .opt').forEach(b=>b.classList.toggle('sel',b.dataset.v===val));
   document.getElementById('a4').textContent=val;
   done('s4'); hideFrom('s4b');
@@ -3967,7 +4142,7 @@ function setSark(val){
     reveal('s4e');
     done('s4e');
   }
-    goKategoriler();
+    pfosAutoZonesAndOzet();
   if(D.konsept) renderPfPdfs();
 }
 
@@ -3991,7 +4166,7 @@ function afterDukkan(){
   else hideFrom('s4e');
   if(k==='Hotel'){renderS4c_hotel();reveal('s4c');activate('s4c');}
   else if(k==='Catering'){renderS4c_catering();reveal('s4c');activate('s4c');}
-  else goKategoriler();
+  else pfosAutoZonesAndOzet();
 }
 
 // ── Hotel ─────────────────────────────────────────────────────────────────────
@@ -4035,7 +4210,7 @@ function menuBitti(){
     return;
   }
   document.getElementById('a4d').textContent=D.menu.join(' · ');
-  done('s4d'); goKategoriler();
+  done('s4d'); pfosAutoZonesAndOzet();
 }
 
 // ── Catering ──────────────────────────────────────────────────────────────────
@@ -4061,7 +4236,7 @@ function setCateringTek(val){
   document.getElementById('a4c').textContent=D.dukkan==='Taşıma Yemek (Servis & Yıkama)'?('Taşıma: '+val):val;
   document.getElementById('a4d').textContent='';
   done('s4c'); hideFrom('s4d');
-  goKategoriler();
+  pfosAutoZonesAndOzet();
 }
 
 const PFOS_STATION_TO_ZONE = {
@@ -4069,6 +4244,7 @@ const PFOS_STATION_TO_ZONE = {
   'Hazırlık Mutfağı': 'sebze_hazirlik',
   'Sebze Hazırlık': 'sebze_hazirlik',
   'Et Hazırlık': 'et_hazirlik',
+  'Et dilimleme / şarküteri teşhir': 'et_hazirlik',
   'Bar': 'bar',
   'Kuru Depo': 'kuru_depo',
   'Soğuk Depolama': 'soguk_oda',
@@ -4083,6 +4259,65 @@ const PFOS_STATION_TO_ZONE = {
   'Teşhir / Servis': 'show_mutfagi',
 };
 
+(function pfosLoadSteakhousePilot() {
+  fetch('/data/referans-pilot/S13-117-steakhouse-pilot.json?v=20260523steak-m2', { cache: 'default' })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (j) { window.__PFOS_STEAKHOUSE_PILOT__ = j || null; })
+    .catch(function () {});
+})();
+
+function pfosSteakhousePilot() {
+  return window.__PFOS_STEAKHOUSE_PILOT__ || null;
+}
+
+/** S13-117 pilot: plan m² + bölüm listesi (steak.pdf). */
+function pfosApplySteakhousePilotFromPdf() {
+  const p = pfosSteakhousePilot();
+  if (!p || !pfosIsSteakhouseCtx()) return false;
+  const am = p.alan_m2 || {};
+  const total = am.pfos_alan || am.brut_toplam || am.toplam;
+  const labels = am.station_m2_labels;
+  const zm = am.zones;
+  if (total >= 20) pfosSetAlan(Math.round(total), { stations: false });
+  if (labels && typeof labels === 'object') {
+    D.stationsM2 = {};
+    Object.keys(labels).forEach(function (lbl) {
+      D.stationsM2[lbl] = Math.round(labels[lbl]);
+    });
+  } else if (zm && typeof zm === 'object') {
+    const defs =
+      window.EqustoPfosCalc && EqustoPfosCalc.PFOS_ZONE_DEFS ? EqustoPfosCalc.PFOS_ZONE_DEFS : [];
+    const nameByKey = {};
+    defs.forEach(function (z) { nameByKey[z.key] = z.name; });
+    const sm = {};
+    Object.keys(zm).forEach(function (k) {
+      const lbl = nameByKey[k] || (p.zones && p.zones[k] && p.zones[k].title) || k;
+      sm[lbl] = Math.round(zm[k]);
+    });
+    D.stationsM2 = sm;
+  }
+  D.pfosMasaOturumM2 = am.masa_oturum != null ? Math.round(am.masa_oturum) : null;
+  const grid = document.getElementById('stations-grid');
+  if (grid && D.alan >= 20) renderStations(D.alan);
+  if (p.pfos_zones && p.pfos_zones.length) D.pfosZones = p.pfos_zones.slice();
+  return true;
+}
+
+(function pfosLoadZoneProjeKurallari() {
+  fetch('/data/pfos-zone-proje-kurallari.json?v=20260522arsiv-extract', { cache: 'default' })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (j) {
+      window.__PFOS_ZONE_PROJE_KURALLARI__ = j || null;
+      if (j && j.station_label_map) {
+        Object.keys(j.station_label_map).forEach(function (label) {
+          PFOS_STATION_TO_ZONE[label] = j.station_label_map[label];
+        });
+      }
+      if (typeof renderPfosZonePills === 'function') renderPfosZonePills();
+    })
+    .catch(function () {});
+})();
+
 function pfosZonesFromStationLabels(labels) {
   const keys = [];
   const seen = new Set();
@@ -4096,16 +4331,59 @@ function pfosZonesFromStationLabels(labels) {
   return keys;
 }
 
+function pfosZonesFromReferansProfile() {
+  const kur = window.__PFOS_ZONE_PROJE_KURALLARI__;
+  if (!kur || !kur.profiles || !kur.profiles.length) return null;
+  const k = D.konsept || '';
+  const d = D.dukkan || '';
+  const byDukkan = kur.profiles.find(function (p) {
+    return p.konsept === k && p.dukkan && p.dukkan === d;
+  });
+  if (byDukkan && byDukkan.pfos_zones && byDukkan.pfos_zones.length) {
+    return byDukkan.pfos_zones.slice();
+  }
+  const byKonsept = kur.profiles.find(function (p) {
+    return p.konsept === k && !p.dukkan;
+  });
+  if (byKonsept && byKonsept.pfos_zones && byKonsept.pfos_zones.length) {
+    return byKonsept.pfos_zones.slice();
+  }
+  return null;
+}
+
 function pfosSuggestZones() {
   const d = D.dukkan || '';
   const k = D.konsept || '';
+  const fromReferans = pfosZonesFromReferansProfile();
+  if (fromReferans && fromReferans.length) {
+    const set = new Set(fromReferans);
+    pfosZonesFromStationLabels(pfosStationLabels()).forEach(function (z) {
+      set.add(z);
+    });
+    return Array.from(set);
+  }
   const base = window.EqustoPfosCalc && EqustoPfosCalc.defaultZoneKeys
     ? EqustoPfosCalc.defaultZoneKeys()
     : ['ana_mutfak', 'sebze_hazirlik', 'et_hazirlik', 'kuru_depo', 'soguk_oda', 'derin_dondurucu', 'bulasikhane'];
+  if (d === 'Gurme Şarküteri') {
+    return [
+      'show_mutfagi',
+      'et_hazirlik',
+      'sebze_hazirlik',
+      'soguk_oda',
+      'kuru_depo',
+      'bulasikhane',
+    ];
+  }
   if (d === 'Pizzacı') return ['ana_mutfak', 'pastane', 'sebze_hazirlik', 'bulasikhane', 'soguk_oda', 'derin_dondurucu'];
   if (d === 'Dönerci') return ['ana_mutfak', 'izgara_meze', 'et_hazirlik', 'bulasikhane', 'soguk_oda'];
   if (d === 'Steakhouse' || k === 'Steakhouse') {
-    return ['ana_mutfak', 'et_hazirlik', 'izgara_meze', 'sebze_hazirlik', 'kuru_depo', 'soguk_oda', 'derin_dondurucu', 'bulasikhane'];
+    const pilot = pfosSteakhousePilot();
+    if (pilot && pilot.pfos_zones && pilot.pfos_zones.length) return pilot.pfos_zones.slice();
+    return [
+      'show_mutfagi', 'soguk_oda', 'derin_dondurucu', 'et_hazirlik', 'ana_mutfak', 'bar',
+      'sebze_hazirlik', 'pastane', 'kuru_depo', 'bulasikhane',
+    ];
   }
   if (k === 'Bar') return ['bar', 'sebze_hazirlik', 'soguk_oda', 'kuru_depo', 'bulasikhane'];
   if (k === 'Pastane & Patisserie') return ['pastane', 'ana_mutfak', 'sebze_hazirlik', 'soguk_oda', 'derin_dondurucu'];
@@ -4392,7 +4670,6 @@ function togglePfosZone(key, el) {
     el.classList.toggle('on', set.has(key));
     el.setAttribute('aria-pressed', set.has(key) ? 'true' : 'false');
   } else renderPfosZonePills();
-  pfosUpdateA5cLabel();
   schedulePfosLiveRecalc();
 }
 
@@ -4414,32 +4691,12 @@ function goAlan(){
   schedulePfosLiveRecalc();
 }
 
-function goKategoriler(){
-  hideFrom('s5c'); reveal('s5c'); activate('s5c');
-  D.pfosZones = pfosSuggestZones();
-  renderPfosZonePills();
-  pfosUpdateA5cLabel();
+/** Konsept/menü tamamlanınca mutfak bölgeleri otomatik (manuel kategori adımı yok). */
+function pfosAutoZonesAndOzet(){
+  pfosApplySteakhousePilotFromPdf();
+  D.pfosZones=pfosSuggestZones();
   refreshWizardHint();
   schedulePfosLiveRecalc();
-}
-
-function pfosUpdateA5cLabel(){
-  const el=document.getElementById('a5c');
-  const defs=window.EqustoPfosCalc&&EqustoPfosCalc.PFOS_ZONE_DEFS?EqustoPfosCalc.PFOS_ZONE_DEFS:[];
-  const keys=pfosGetZones();
-  if(!el||!defs.length) return;
-  const names=keys.map(k=>{const z=defs.find(d=>d.key===k);return z?z.name:k;}).filter(Boolean);
-  el.textContent=names.length?names.join(' · '):'';
-}
-
-function kategoriIleri(){
-  D.pfosZones=pfosGetZones();
-  if(!D.pfosZones||!D.pfosZones.length){
-    pfModalAc('Kategoriler','En az bir mutfak kategorisi seçin.',false);
-    return;
-  }
-  pfosUpdateA5cLabel();
-  done('s5c');
   goOzet();
 }
 
@@ -4596,7 +4853,9 @@ function renderOzet(){
       <h3>Proje özeti</h3>
       <div class="rs-meta">
         <b>İşletme:</b> ${lbl}<br>
-        <b>Şehir:</b> ${D.sehir||'—'}&nbsp;&nbsp;<b>Alan:</b> <span id="ozet-meta-alan">${D.alan}</span> m²
+        <b>Şehir:</b> ${D.sehir||'—'}&nbsp;&nbsp;<b>Brüt alan:</b> <span id="ozet-meta-alan">${D.alan}</span> m²
+        ${D.pfosMasaOturumM2?`<br><b>Masa oturum:</b> ${D.pfosMasaOturumM2} m²`:''}
+        ${pfosIsSteakhouseCtx()&&D.stationsM2?`<br><b>Mutfak bölümleri:</b> ${Object.values(D.stationsM2).reduce((a,n)=>a+(Number(n)||0),0)} m² (dağılım plana göre)`:''}
         ${D.pisir&&D.pisir.length?`<br><b>Mutfakta öne çıkanlar:</b> ${D.pisir.join(', ')}`:''}
         ${D.adres?`<br><b>Adres:</b> ${D.adres}`:''}
       </div>
@@ -4737,8 +4996,8 @@ function renderTeklifTabloInner(){
       <td class="r">${r.adet}</td>
       <td class="r">${r.elk>0?r.elk.toFixed(1):'—'}</td>
       <td class="r">${r.gaz>0?r.gaz.toFixed(0):'—'}</td>
-      <td class="r">${fmt(r.birim)}</td>
-      <td class="r">${fmt(r.birim*r.adet)}</td>
+      <td class="r">${r.fiyat_haric?'hariç':fmt(r.birim)}</td>
+      <td class="r">${r.fiyat_haric?'hariç':fmt(r.birim*r.adet)}</td>
     </tr>`;
     if(r.davlumbaz){
       html+=`<tr class="note-row"><td colspan="9">⚠ Yangın söndürme sistemi zorunludur. Lütfen yetkili firma ile görüşün.</td></tr>`;
@@ -4787,9 +5046,7 @@ function pfosSepeteKatalog(){
       pfModalAc('Liste boş','Önce teklif listesine ürün ekleyin.',true);
       return;
     }
-    EqustoCart.addPfosRows(rows,{replace:false}).then(function(){
-      EqustoCart.openPanel();
-    });
+    EqustoCart.addPfosRows(rows,{replace:false});
   });
 }
 
@@ -4953,7 +5210,7 @@ function teklifGonder(){
     });
 }
 </script>
-<script  src="/ecom-cart.js"></script>
+<script  src="/ecom-cart.js?v=20260524cart3"></script>
 <div class="drawer-overlay" id="drawerOverlay" onclick="__eqDrawerBackdropClick(event)">
   <button type="button" class="drawer-overlay-close" onclick="__eqDrawerCloseX(event)" aria-label="Kapat">×</button>
 </div>

@@ -760,13 +760,15 @@
       save(arr);
       syncBadge();
       var total = (all || []).length;
-      var msg =
-        added +
-        ' ürün sepete eklendi' +
-        (merged ? ' (' + merged + ' mevcut satır güncellendi)' : '') +
-        (total ? ' · katalog: ' + total : '');
-      if (capped) msg += ' · ' + capped + ' kalem sepet sınırı nedeniyle atlandı (max ' + cap + ')';
-      toast(msg);
+      if (added > 0) {
+        toastCartAdded(added > 1 ? added + ' ürün' : '');
+      } else {
+        var msg =
+          (merged ? merged + ' satır güncellendi' : 'Sepete eklenemedi') +
+          (total ? ' · katalog: ' + total : '');
+        if (capped) msg += ' · ' + capped + ' kalem sepet sınırı nedeniyle atlandı (max ' + cap + ')';
+        toast(msg);
+      }
       return { added: added, merged: merged, skipped: skipped, capped: capped, total: total, lines: arr.length };
     });
   }
@@ -824,7 +826,11 @@
       });
       save(arr);
       syncBadge();
-      toast(added ? added + ' teklif kalemi sepete eklendi' : 'Sepet dolu — bazı kalemler eklenemedi');
+      if (added > 0) {
+        toastCartAdded(added > 1 ? added + ' kalem' : '');
+      } else {
+        toast('Sepet dolu — bazı kalemler eklenemedi');
+      }
       return { added: added, lines: arr.length };
     }
     if (opts.skipCatalog) return Promise.resolve(applyRows(null));
@@ -1546,6 +1552,7 @@
     parseItemFromEl: parseItemFromEl,
     parseItemFromCard: parseItemFromCard,
     addFromCard: addFromCard,
+    toastCartAdded: toastCartAdded,
     clear: clearAll,
     syncFromServer: syncFromServer,
     _load: load,
