@@ -547,7 +547,7 @@
     bar.className = 'eq-quote-toast';
     bar.setAttribute('role', 'status');
     bar.innerHTML =
-      '<div class="eq-quote-toast__text"><strong>Teklif listesine eklendi</strong>' +
+      '<div class="eq-quote-toast__text"><strong>Sepete eklendi</strong>' +
       (name ? '<span>' + escHtml(name) + '</span>' : '') +
       '</div>' +
       '<div class="eq-quote-toast__actions">' +
