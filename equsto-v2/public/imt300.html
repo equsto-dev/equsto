@@ -198,6 +198,12 @@ body{background:var(--eq-bg-page);font-family:-apple-system,BlinkMacSystemFont,"
 .imt-cta-p{display:inline-flex;align-items:center;padding:13px 26px;background:#c5a455;color:#001e50;text-decoration:none;font-weight:600;font-size:14px;border-radius:999px;}
 .imt-cta-p:hover{background:#d4b35d;}
 .imt-cta-p{border:none;cursor:pointer;font-family:inherit;}
+.imt-cta-s{display:inline-flex;align-items:center;padding:12px 22px;border:1px solid #001e50;color:#001e50;text-decoration:none;font-weight:600;font-size:14px;border-radius:999px;background:transparent;}
+.imt-cta-s:hover{background:rgba(0,30,80,.06);}
+.imt-manual-wrap{max-width:1100px;margin:0 auto;border:1px solid var(--eq-border);border-radius:8px;overflow:hidden;background:var(--eq-surface);}
+.imt-manual-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;border-bottom:1px solid var(--eq-border);background:var(--eq-surface-2);}
+.imt-manual-bar p{margin:0;font-size:13px;color:var(--eq-text-secondary);}
+.imt-manual-frame{width:100%;height:min(78vh,920px);border:0;display:block;background:#525659;}
 .imt-hero-visual{position:relative;border-radius:8px;overflow:hidden;background:#f7f7f7;border:1px solid var(--eq-border,#e5e5e5);}
 .imt-hero-visual img{width:100%;height:auto;display:block;object-fit:contain;max-height:420px;}
 .imt-hero-thumbs{display:flex;gap:6px;padding:10px;overflow-x:auto;background:#fff;}
@@ -332,6 +338,7 @@ body{background:var(--eq-bg-page);font-family:-apple-system,BlinkMacSystemFont,"
           data-eq-p="11.500 € + KDV"
           aria-label="Sepete ekle"
         >Sepete ekle</button>
+        <a class="imt-cta-s" href="/docs/imt300/IMT300PEU-User-Manual.pdf" target="_blank" rel="noopener">Kullanım kılavuzu (PDF)</a>
       </div>
     </div>
     <div class="imt-hero-visual">
@@ -404,10 +411,23 @@ body{background:var(--eq-bg-page);font-family:-apple-system,BlinkMacSystemFont,"
     <tr><th>Program</th><td>23 saat (prog.1) · 28,5 saat sıcak iklim (prog.2)</td></tr>
     <tr><th>Ortam</th><td>5–32 °C · nem ≤85% · &lt;70 dB(A)</td></tr>
   </tbody></table></div>
+  <p class="imt-spec-note" style="margin-top:18px;">Detaylı kurulum, işletim ve bakım: <a href="/docs/imt300/IMT300PEU-User-Manual.pdf" target="_blank" rel="noopener">Skyra IMT300PEU kullanım kılavuzu (PDF)</a>.</p>
 </div></section>
 
+<section class="imt-sec" id="kilavuz" aria-label="Kullanım kılavuzu"><div class="imt-inner">
+  <div class="imt-sec-k">Dokümantasyon</div>
+  <h2>Kullanım kılavuzu</h2>
+  <p class="imt-sec-lead">The Space &amp; Vesta · Skyra IMT300PEU resmi kullanıcı el kitabı — kurulum, panel, üretim döngüsü, bakım ve güvenlik.</p>
+  <div class="imt-manual-wrap">
+    <div class="imt-manual-bar">
+      <p><strong>IMT300PEU User Manual</strong> · PDF</p>
+      <a class="imt-cta-s" href="/docs/imt300/IMT300PEU-User-Manual.pdf" download="Skyra-IMT300PEU-User-Manual.pdf">PDF indir</a>
+    </div>
+    <iframe class="imt-manual-frame" src="/docs/imt300/IMT300PEU-User-Manual.pdf#view=FitH" title="Skyra IMT300PEU kullanım kılavuzu"></iframe>
+  </div>
+</div></section>
 
-<section class="imt-sec" id="kurulum"><div class="imt-inner imt-cols">
+<section class="imt-sec alt" id="kurulum"><div class="imt-inner imt-cols">
   <div>
     <div class="imt-sec-k">Kurulum</div>
     <h2>Su, yerleşim ve havalandırma</h2>
