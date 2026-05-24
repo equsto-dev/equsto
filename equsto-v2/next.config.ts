@@ -102,6 +102,8 @@ const nextConfig: NextConfig = {
       { source: "/bar-design", headers: [utf8Html] },
       { source: "/admin", headers: [utf8Html] },
       { source: "/contact", headers: [utf8Html] },
+      { source: "/imt300", headers: [utf8Html] },
+      { source: "/imt300/:path*", headers: [utf8Html] },
       { source: "/login", headers: [utf8Html] },
       { source: "/marka", headers: [utf8Html] },
       { source: "/arama", headers: [utf8Html] },
@@ -168,6 +170,8 @@ const nextConfig: NextConfig = {
       /* /yonetim → Next.js App Router (Ant Design Pro) */
       { source: "/contact", destination: "/contact.html" },
       { source: "/contact/", destination: "/contact.html" },
+      { source: "/imt300", destination: "/imt300.html" },
+      { source: "/imt300/", destination: "/imt300.html" },
       { source: "/login", destination: "/login.html" },
       { source: "/login/", destination: "/login.html" },
       { source: "/marka", destination: "/marka.html" },
