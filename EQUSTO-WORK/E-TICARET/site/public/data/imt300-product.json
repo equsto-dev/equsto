@@ -1,0 +1,103 @@
+{
+  "syncedAt": "2026-05-16T13:18:36.375Z",
+  "source": "advanced-cuisine.com",
+  "handle": "imt300-clear-ice-machine",
+  "title": "Skyra IMT300 Berrak Buz Makinesi",
+  "titleEn": "IMT300 Clear Ice Machine",
+  "vendor": "The Space & Vesta",
+  "brand": "Skyra",
+  "descriptionTr": "Kesim gerektirmeden, standart formlarda parti halinde berrak buz üreten ticari ünite. Bar, otel ve restoranlar için yerinde üretim.",
+  "descriptionEn": "The IMT300 is the first machine of its kind to produce perfectly shaped clear ice in batches—without any cutting required. With the IMT300, bars and restaurants can easily make clear ice in-house.",
+  "equstoPriceHint": "11.500 € · teklif için iletişim",
+  "shopifyPriceUsd": "339.00",
+  "productPage": "/imt300",
+  "images": [
+    {
+      "position": 1,
+      "file": "/images/imt300/imt300-1.jpg",
+      "src": "https://cdn.shopify.com/s/files/1/0960/7328/5949/files/IMT300-1.jpg?v=1760433357",
+      "bytes": 629925
+    },
+    {
+      "position": 2,
+      "file": "/images/imt300/imt300-2.png",
+      "src": "https://cdn.shopify.com/s/files/1/0960/7328/5949/files/IMT300-2.png?v=1760433515",
+      "bytes": 10025370
+    },
+    {
+      "position": 3,
+      "file": "/images/imt300/imt300-3.jpg",
+      "src": "https://cdn.shopify.com/s/files/1/0960/7328/5949/files/IMT300-3.jpg?v=1760433515",
+      "bytes": 292701
+    },
+    {
+      "position": 4,
+      "file": "/images/imt300/imt300-4.jpg",
+      "src": "https://cdn.shopify.com/s/files/1/0960/7328/5949/files/IMT300-5.jpg?v=1760433515",
+      "bytes": 480431
+    },
+    {
+      "position": 5,
+      "file": "/images/imt300/imt300-5.png",
+      "src": "https://cdn.shopify.com/s/files/1/0960/7328/5949/files/IMT300-4.png?v=1760433515",
+      "bytes": 8428434
+    },
+    {
+      "position": 6,
+      "file": "/images/imt300/imt300-6.png",
+      "src": "https://cdn.shopify.com/s/files/1/0960/7328/5949/files/IMT300-6.png?v=1760433515",
+      "bytes": 1241559
+    },
+    {
+      "position": 7,
+      "file": "/images/imt300/imt300-7.png",
+      "src": "https://cdn.shopify.com/s/files/1/0960/7328/5949/files/IMT300-7.png?v=1760433515",
+      "bytes": 673634
+    },
+    {
+      "position": 8,
+      "file": "/images/imt300/imt300-8.jpg",
+      "src": "https://cdn.shopify.com/s/files/1/0960/7328/5949/files/IMT300-8.jpg?v=1760434451",
+      "bytes": 128249
+    }
+  ],
+  "formats": [
+    {
+      "id": "cube",
+      "label": "Küp",
+      "count": 60,
+      "size": "55 mm"
+    },
+    {
+      "id": "sphere-lg",
+      "label": "Büyük küre",
+      "count": 32,
+      "size": "Ø75 mm"
+    },
+    {
+      "id": "sphere-sm",
+      "label": "Küçük küre",
+      "count": 50,
+      "size": "Ø60 mm"
+    },
+    {
+      "id": "stick",
+      "label": "Çubuk",
+      "count": 48,
+      "size": "38×38×102 mm"
+    },
+    {
+      "id": "diamond",
+      "label": "Elmas",
+      "count": 60,
+      "size": "Ø60×55 mm"
+    }
+  ],
+  "specs": {
+    "model": "Skyra IMT300 (çift tepsi)",
+    "power": "220–240 V 50 Hz · üretim 650 W · ayırma 1400 W",
+    "dimensionsOuter": "870 × 755 × 856 mm",
+    "dimensionsInner": "750 × 382 × 452 mm",
+    "weight": "110–117 kg"
+  }
+}
