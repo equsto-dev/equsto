@@ -305,15 +305,21 @@ body.eq-shop header.hdr .hdr-loc > .hdr-loc-text > [style] {
   font-weight: inherit !important;
 }
 
+header.hdr > .pg-inner,
+header.hdr > .pg-inner.hdr-pg-inner {
+  min-width: 0;
+  overflow: hidden;
+}
+
 header.hdr .srch {
   display: flex !important;
   flex-direction: row !important;
   flex-wrap: nowrap !important;
   align-items: stretch !important;
-  flex: 1 1 auto;
+  flex: 1 1 0;
   min-width: 0;
-  width: 50%;
-  max-width: 50%;
+  width: auto;
+  max-width: 100%;
   gap: 0;
   overflow: hidden;
   background: var(--eq-hdr-srch-bg) !important;
