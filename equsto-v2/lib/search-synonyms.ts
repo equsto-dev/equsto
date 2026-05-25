@@ -17,7 +17,7 @@ const QUERY_ALIASES: Record<string, string[]> = {
   blender: ["blender", "robot coupe"],
   bulasik: ["yikama", "bulaşık"],
   bulaşık: ["yikama", "bulasik"],
-  kahve: ["wmf", "cay makinasi", "kahve makinesi", "kahveci"],
+  kahve: ["wmf", "cay makinasi", "kahve makinesi"],
   cay: ["cay makinasi", "cay ocagi"],
   çay: ["cay makinasi", "cay ocagi"],
 };

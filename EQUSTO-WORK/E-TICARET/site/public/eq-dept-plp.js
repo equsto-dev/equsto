@@ -121,6 +121,12 @@
 
   function productUrl(item) {
     var raw = item.raw;
+    if (raw && raw.id && typeof window.eqProductPath === 'function') {
+      var idSlug = String(raw.id).trim();
+      if (idSlug) {
+        return window.eqProductPath(DEPT, idSlug);
+      }
+    }
     if (raw && raw.equstoPage && typeof window.eqAttrPath === 'function') {
       return window.eqAttrPath(raw.equstoPage);
     }
@@ -221,6 +227,8 @@
     var n = lc(item.n || '');
     if (/^8574\.CM/i.test(kod)) return true;
     if (/^8573\./.test(kod) && !/^8573\.000/.test(kod)) return true;
+    if (/^8573\.000/.test(kod)) return true;
+    if (n.indexOf('kahveci deml') >= 0) return true;
     if (n.indexOf('çay mak') >= 0 || n.indexOf('cay mak') >= 0) return true;
     if (n.indexOf('çay kazan') >= 0 || n.indexOf('cay kazan') >= 0) return true;
     return false;
@@ -248,6 +256,9 @@
     if (window.EqDeptCmFacets && window.EqDeptCmFacets.productBrand) {
       return window.EqDeptCmFacets.productBrand(u);
     }
+    if (window.EqDeptCmFacets && window.EqDeptCmFacets.facetBrandKey) {
+      return window.EqDeptCmFacets.facetBrandKey((u && u.fb) || (u && u.b) || '');
+    }
     return (u && u.fb) || (u && u.b) || '';
   }
 
@@ -261,7 +272,9 @@
       n = window.eqSimplifyTezgahDavlumbazName(n, { dept: DEPT });
     }
     var fb = b;
-    if (window.EqDeptCmFacets && window.EqDeptCmFacets.resolveFacetBrand) {
+    if (x.oem_brand) {
+      fb = String(x.oem_brand).trim();
+    } else if (window.EqDeptCmFacets && window.EqDeptCmFacets.resolveFacetBrand) {
       fb = window.EqDeptCmFacets.resolveFacetBrand(b, n);
     }
     var row = x;

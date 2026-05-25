@@ -68,12 +68,6 @@
       label: "Kahve Süt Potları",
       search: "kahve süt pot|kahve sut pot|8534|süt potu|sut potu",
     },
-    {
-      tip: "kahveci-demlik",
-      dept: "kahve",
-      label: "Kahveci Demlikleri",
-      search: "kahveci demlik|8573.000|demlik no",
-    },
     { tip: "turk-kahve", dept: "kahve", label: "Türk Kahve Makineleri", search: "türk|turk|cezve" },
     { tip: "bardak-yikama", dept: "yikama", label: "Bardak Yıkama Makineleri", search: "bardak yıkama|bardak yikama|oby 35|oby 40|073m|074m" },
     {
@@ -131,6 +125,12 @@
     { tip: "sicak-icecek-disp", dept: "icecek", label: "Sıcak İçecek Dispenseri", search: "sıcak içecek|sicak icecek|sıcak disp|sicak disp" },
     { tip: "cay-makinesi", dept: "icecek", label: "Çay Makineleri", search: "çay mak|cay mak|çay makinesi|cay makinesi|demlik|hibrit çay|hibrit cay|smart çay|compact çay|turbo çay" },
     { tip: "cay-kazani", dept: "icecek", label: "Çay Kazanları", search: "çay kazan|cay kazan|çay kulesi|cay kulesi|çay kule" },
+    {
+      tip: "kahveci-demlik",
+      dept: "icecek",
+      label: "Kahveci Demlikleri",
+      search: "kahveci demlik|8573.000|demlik no",
+    },
     { tip: "cay-otomat", dept: "icecek", label: "Çay Otomatları", search: "çay otomat|cay otomat" },
     { tip: "cay-ocagi", dept: "icecek", label: "Çay Ocakları & Semaverler", search: "çay ocağ|cay ocag|semaver|çay sema|cay sema" },
     { tip: "cay-sunum", dept: "icecek", label: "Çay Sunum & Jelli", search: "jelli çay|jelli cay|çay sunum|cay sunum|mini çay" },
@@ -432,8 +432,10 @@
     var hay = productHaystack(u);
     if (/^8574\.CM/i.test(kod)) return true;
     if (/^8573\./.test(kod) && !/^8573\.000/.test(kod)) return true;
+    if (/^8573\.000/.test(kod)) return true;
     if (/çay\s*mak|cay\s*mak/.test(hay)) return true;
     if (/çay\s*kazan|cay\s*kazan/.test(hay)) return true;
+    if (/kahveci\s*deml/.test(hay)) return true;
     return false;
   }
 

@@ -1,5 +1,5 @@
 /**
- * icecek.json → kahve: filtre kahve (8574.FM), kahve süt potu (8534), kahveci demlik (8573.000)
+ * icecek.json → kahve: filtre kahve (8574.FM), kahve süt potu (8534) — demlik (8573.000) icecek’te kalır.
  *   node scripts/move-ozti-kahve-accessories-to-kahve.mjs
  */
 import fs from "node:fs";
