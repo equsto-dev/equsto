@@ -90,16 +90,16 @@
     return '/data/' + s.replace(/^data\//, '');
   }
 
-  /** __eqImgFail için yalnızca legacy /data/images yolları */
+  /** __eqImgFail için katalog yolu (yerel /images + CDN yedek). */
   function plpImgRawAttr(rawPath) {
     var s = String(rawPath || '')
       .trim()
       .replace(/\\/g, '/');
     if (!s) return '';
     if (/^https?:\/\//i.test(s)) return '';
-    if (/^\/images\/(catalog|home)\//i.test(s) || /^images\/(catalog|home)\//i.test(s)) return '';
+    if (/^\/images\/(catalog|home)\//i.test(s)) return s.replace(/^\//, '');
+    if (/^images\/(catalog|home)\//i.test(s)) return s;
     if (/^\/data\/images\//i.test(s)) return 'images/' + s.replace(/^\/data\/images\//i, '');
-    if (/^images\/catalog\//i.test(s) || /^images\/home\//i.test(s)) return '';
     if (/^images\//i.test(s)) return s;
     if (/\.(jpe?g|png|webp|gif)(\?|#|$)/i.test(s)) return 'images/' + s.replace(/^\/+/, '');
     return '';
