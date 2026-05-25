@@ -27,6 +27,32 @@ function norm(s) {
     .replace(/[^A-Z0-9]/g, "");
 }
 
+/** PDF modeli "ATM 2745/2" → Cafemarkt "ATM-2745-2" vb. */
+function modelNeedles(model) {
+  const m = String(model || "").trim();
+  if (!m) return [];
+  const out = new Set();
+  const add = (s) => {
+    const n = norm(s);
+    if (n.length >= 3) out.add(n);
+  };
+  add(m);
+  add(m.replace(/\s+/g, ""));
+  add(m.replace(/\s*-\s*/g, "-"));
+  add(m.replace(/\//g, "-"));
+  add(m.replace(/\s+/g, "-"));
+  if (/^E\s+/i.test(m)) add(m.replace(/^E\s+/i, ""));
+  return [...out].sort((a, b) => b.length - a.length);
+}
+
+function cmHaystack(p) {
+  return norm(
+    (p["ürün_adı"] || "") +
+      (p.açıklamalar || "") +
+      (p.açıklamalar_site || ""),
+  );
+}
+
 function slugFromModel(model) {
   const s =
     "atalay-" +
@@ -38,12 +64,60 @@ function slugFromModel(model) {
 }
 
 function findCafemarkt(model, cmRows) {
-  const needle = norm(model);
-  if (!needle || needle.length < 2) return null;
-  const hits = cmRows.filter((c) => c.hay.includes(needle));
-  if (!hits.length) return null;
-  hits.sort((a, b) => a.hay.length - b.hay.length);
-  return hits[0].p;
+  for (const cand of aliasModels(model)) {
+    const needles = modelNeedles(cand);
+    if (!needles.length) continue;
+    for (const needle of needles) {
+      const hits = cmRows.filter((c) => c.hay.includes(needle));
+      if (!hits.length) continue;
+      hits.sort((a, b) => a.hay.length - b.hay.length);
+      return hits[0].p;
+    }
+  }
+  return null;
+}
+
+/** Cafemarkt'te birebir yoksa aynı seriden en yakın modeli dene. */
+function aliasModels(model) {
+  const m = String(model || "").trim();
+  const out = [m];
+  const add = (s) => {
+    const t = String(s || "").trim();
+    if (t && !out.includes(t)) out.push(t);
+  };
+
+  const adrE = m.match(/^ADR-C1-(\d+)E(-GK)?$/i);
+  if (adrE && !["4", "5"].includes(adrE[1])) {
+    add(`ADR-C1-5E${adrE[2] || ""}`);
+    add(`ADR-C1-4E${adrE[2] || ""}`);
+  }
+  const adrG = m.match(/^ADR-C1-(\d+)G(-GK)?$/i);
+  if (adrG && !["4", "5"].includes(adrG[1])) {
+    add(`ADR-C1-5G${adrG[2] || ""}`);
+    add(`ADR-C1-4G${adrG[2] || ""}`);
+    add(`ADR-C1-5E${adrG[2] || ""}`);
+    add(`ADR-C1-4E${adrG[2] || ""}`);
+  }
+
+  const east = m.match(/^E\s*AST\s*-\s*(\d+)/i);
+  if (east) {
+    const w = Number(east[1]);
+    if (w <= 46) add("E-AST-46");
+    else if (w <= 86) add("E-AST-86");
+    else {
+      add("E-AST-86");
+      add("E-AST-46");
+    }
+  }
+
+  const apfm = m.match(/^APFM\s*-?\s*(\d+)/i);
+  if (apfm) {
+    const n = apfm[1];
+    add(`APF-${n}-1`);
+    add(`APF-${n}-2`);
+  }
+
+  return out;
 }
 
 function firstImageFile(product) {
@@ -64,10 +138,7 @@ function deptFiles(publicRoot) {
 
 function applyToTargets() {
   const cm = JSON.parse(fs.readFileSync(CM_JSON, "utf8"));
-  const cmRows = cm.map((p) => ({
-    p,
-    hay: norm(p["ürün_adı"] || p.urun_adi || ""),
-  }));
+  const cmRows = cm.map((p) => ({ p, hay: cmHaystack(p) }));
 
   const stats = {
     matched: 0,
@@ -109,8 +180,10 @@ function applyToTargets() {
           stats.noCm++;
           continue;
         }
-        const needle = norm(model);
-        const hits = cmRows.filter((c) => c.hay.includes(needle));
+        const needles = aliasModels(model).flatMap((c) => modelNeedles(c));
+        const hits = cmRows.filter((c) =>
+          needles.some((n) => c.hay.includes(n)),
+        );
         if (hits.length > 1) stats.ambiguous++;
 
         stats.matched++;

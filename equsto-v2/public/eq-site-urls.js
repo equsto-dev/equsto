@@ -380,7 +380,7 @@
     );
   }
 
-  var EQ_CATALOG_IMG_V = "20260525cafemarktfix";
+  var EQ_CATALOG_IMG_V = "20260525cafemarktalias";
 
   function withCatalogImgV(url) {
     if (!url || !/\/images\/catalog\/(?:ozti\/(?:web|cafemarkt)|atalay\/)/i.test(url)) return url;
