@@ -105,13 +105,68 @@
    * @param {string[]} selectedCategories
    * @returns {{ categories: Array, kpis: Object }}
    */
-  function generateQuote(totalM2, selectedCategories) {
+  function isDilimlemeProduct(p) {
+    var tip = String((p && p.tip_kodu) || '').toLowerCase();
+    if (tip === 'dilimleme_makinesi' || tip === 'dilimleme-makinesi') return true;
+    var name = String((p && p.name) || '').toLowerCase();
+    return name.indexOf('dilimleme') >= 0;
+  }
+
+  function isSarkuteriQuoteOpts(opts) {
+    if (!opts || typeof opts !== 'object') return false;
+    if (opts.sarkuteri === true) return true;
+    var d = String(opts.dukkan || '').toLowerCase();
+    var k = String(opts.konsept || '').toLowerCase();
+    return (
+      d.indexOf('şarküteri') >= 0 ||
+      d.indexOf('sarkuteri') >= 0 ||
+      k === 'şarküteri' ||
+      k === 'sarkuteri' ||
+      k === 'kasap'
+    );
+  }
+
+  /** Sebze: asla; et: yalnız şarküteri/kasap zorunlu; diğer zone: yok */
+  function productAllowedInZone(catKey, p, opts) {
+    if (isDilimlemeProduct(p)) {
+      if (catKey === 'sebze_hazirlik') return false;
+      if (catKey === 'et_hazirlik') return isSarkuteriQuoteOpts(opts);
+      return false;
+    }
+    var tag = p.classification || p.tag || 'ZRN';
+    if (tag === 'OPS') return false;
+    return true;
+  }
+
+  function isDilimlemeRow(r) {
+    var tip = String((r && (r.tip_kodu || r.pfosUrunTipi)) || '').toLowerCase();
+    if (tip === 'dilimleme_makinesi' || tip === 'dilimleme-makinesi') return true;
+    return String((r && r.ad) || '').toLowerCase().indexOf('dilimleme') >= 0;
+  }
+
+  function applyDilimlemeZoneRules(rows, opts) {
+    return (rows || []).filter(function (r) {
+      if (!isDilimlemeRow(r)) return true;
+      var zk =
+        r.pfZone ||
+        (typeof rowZone === 'function' ? rowZone(r) : '') ||
+        'ana_mutfak';
+      if (zk === 'sebze_hazirlik') return false;
+      if (zk === 'et_hazirlik') return isSarkuteriQuoteOpts(opts);
+      return false;
+    });
+  }
+
+  function generateQuote(totalM2, selectedCategories, bolumM2Map, quoteOpts) {
     var m2 = Number(totalM2) || 0;
     if (m2 > 0 && m2 < 20) m2 = 20;
     var keys = (selectedCategories && selectedCategories.length
       ? selectedCategories.slice()
       : defaultZoneKeys()
     ).filter(Boolean);
+    var bolumM2 =
+      bolumM2Map && typeof bolumM2Map === 'object' ? bolumM2Map : null;
+    var opts = quoteOpts && typeof quoteOpts === 'object' ? quoteOpts : null;
 
     var out = { categories: [], kpis: {} };
     var catalog = (_catalogBundle && _catalogBundle.catalog) || {};
@@ -119,14 +174,17 @@
     keys.forEach(function (catKey) {
       var meta = getCategoryMeta(catKey) || { name: catKey, share: 0.1 };
       var catM2 = categoryM2(m2, catKey);
+      if (bolumM2 && Number(bolumM2[catKey]) > 0) {
+        catM2 = Math.round(Number(bolumM2[catKey]));
+      }
       var catProducts = (catalog[catKey] && catalog[catKey].products) || [];
       var rows = [];
 
       catProducts.forEach(function (p) {
+        if (!productAllowedInZone(catKey, p, opts)) return;
         var tag = p.classification || p.tag || 'ZRN';
+        if (isDilimlemeProduct(p) && catKey === 'et_hazirlik') tag = 'ZRN';
         var qty = qtyForProduct(catM2, p);
-        var pr = resolveProductUnitTry(p);
-        var unit = pr.birim;
         rows.push({
           id: p.id || '',
           tip_kodu: p.tip_kodu || '',
@@ -135,10 +193,10 @@
           marka: p.marka || parseMarkaFromName(p.name),
           dim: p.dimensions || p.dim || '',
           qty: qty,
-          unit: unit,
-          unit_try: unit,
-          price_source: pr.kaynak,
-          total: qty * unit,
+          unit: 0,
+          unit_try: 0,
+          price_source: 'eticaret',
+          total: 0,
           m2_per_unit: p.m2_per_unit,
           elk: Number(p.elk_kw) || 0,
           gaz: Number(p.gaz_kw) || 0,
@@ -203,21 +261,21 @@
     (quote.categories || []).forEach(function (cat) {
       (cat.rows || []).forEach(function (r, i) {
         var kod = r.id ? 'PFOS-' + r.id : 'PFOS-' + cat.key + '-' + i;
-        var birim = Number(r.unit_try != null ? r.unit_try : r.unit) || 0;
         rows.push({
           kod: kod,
           tip_kodu: r.tip_kodu || '',
           ad: r.name,
           olcu: r.dim || '',
           adet: r.qty,
-          birim: birim,
-          fiyat_net: birim > 0,
-          fiyat_kaynak: r.price_source || (birim > 0 ? 'katalog_try' : 'eksik'),
+          birim: 0,
+          fiyat_net: false,
+          fiyat_kaynak: 'eticaret',
+          fiyat_haric: false,
           pfClass: r.tag,
           pfZone: cat.key,
           pfCatM2: cat.m2,
           pfOptional: r.tag === 'OPS',
-          lineTotal: birim * (Number(r.qty) || 1),
+          lineTotal: 0,
           elk: Number(r.elk) || 0,
           gaz: Number(r.gaz) || 0,
           marka: r.marka || parseMarkaFromName(r.name) || '',
@@ -323,7 +381,8 @@
     var tip = String((row && row.tip_kodu) || '').toLowerCase();
     var name = String((row && (row.ad || row.pfN || '')) || '').toLowerCase();
     var blob = tip + ' ' + name;
-    if (/kiyma|kemik|dilimleme|et[\s_-]|meat|steak|testere/.test(blob)) {
+    if (/dilimleme/.test(blob)) return 'et_hazirlik';
+    if (/kiyma|kemik|et[\s_-]|meat|steak|testere/.test(blob)) {
       return 'et_hazirlik';
     }
     return 'sebze_hazirlik';
@@ -334,7 +393,7 @@
       (row && (row.ad || row.pfN || row.olcu || row.olcuMm || '')) || ''
     ).toLowerCase();
     var tip = String((row && row.tip_kodu) || '').toLowerCase();
-    if (/derin|dondurucu|-18|deep\s*fre|deepfrez/.test(name + ' ' + tip)) {
+    if (/derin|dondurucu|derin_dondurucu|-18|deep\s*fre|deepfrez|sandik\s*tip|sandık\s*tip/.test(name + ' ' + tip)) {
       return 'derin_dondurucu';
     }
     if (/kuru\s*depo|istif\s*raf|ambalaj\s*depo|kuru depo/.test(name)) {
@@ -388,7 +447,10 @@
     char_broil: ['plate ızgar', 'plate izgar', 'charbroil', 'kontakt ızgar'],
     salamander: ['salamander'],
     tezgah_duz: ['nötr', 'notr', 'ara tezgah'],
-    dilimleme_makinesi: ['dilimleme'],
+    dilimleme_makinesi: ['dilimleme', 'gıda dilimleme', 'gida dilimleme'],
+    kiyma_makinesi: ['kıyma', 'kiyma', 'et kıyma'],
+    kemik_testere: ['kemik testere', 'kemik tester'],
+    vakum_makinesi: ['vakum', 'vakuum'],
     dik_tip_buzdolabi: ['dik tip buzdolab'],
     cop_siyirma_tez: ['sıyırma', 'siyirma', 'bulaşık sıyır'],
     bym_giris_tez: ['makine giriş', 'giris tezgah', 'giriş tezgah'],
@@ -396,6 +458,27 @@
     davlumbaz: ['davlumbaz'],
     evye: ['kazan yıkama', 'kazan evye'],
     bulasik_giyotin_1000: ['giyotin', '1000 tabak', '1000 tb'],
+    bulasik_sepet: ['sepet tip', 'kapaklı bulaşık', 'kapakli bulasik'],
+    bulasik_tunel: ['tünel', 'tunel tip', 'konveyörlü bulaşık'],
+    patates_soyma: ['patates soy', 'soyma makin'],
+    depo_dolabi: ['kuru depo', 'depo dolab', 'storeroom'],
+    sogutma_tezgah: ['soğutmalı tezgah', 'sogutmali tezgah', 'hazırlık buzdolab'],
+    et_teshir_dolabi: ['teşhir dolab', 'teshir dolab', 'vitrin dolab'],
+    dry_age_dolabi: ['dry age', 'dry-age', 'dry aged'],
+    derin_dondurucu_dik: ['derin dondurucu', 'deep freeze'],
+    derin_dondurucu_sandik: ['sandık tip', 'sandik tip', 'chest freezer'],
+    spiral_hamur: ['spiral', 'hamur yoğur'],
+    hamur_acma: ['hamur aç', 'hamur ac'],
+    raf_firin: ['raflı fırın', 'rafli firin', 'pastane fırın'],
+    espresso_makinasi: ['espresso', '2 gruplu', '2 grupl'],
+    kahve_degirmeni: ['değirmen', 'degirmen', 'kahve öğüt'],
+    bar_blender: ['bar blender', 'mikser bar'],
+    bar_buzdolabi: ['bar altı', 'bar alti', 'bar buzdolab'],
+    buz_makinesi: ['buz makin', 'küp buz', 'kup buz'],
+    sarap_dolabi: ['şarap dolab', 'sarap dolab'],
+    bardak_yikama: ['bardak yık', 'bardak yik', 'undercounter'],
+    benmari_set: ['benmari', 'bain marie', 'sos set'],
+    teshir_vitrin: ['teşhir vitrin', 'teshir vitrin', 'soğuk vitrin'],
   };
 
   /** Marka kilidi yalnızca katalogda doğrulanmış ürünler için */
@@ -585,12 +668,30 @@
       .replace(/\s+/g, ' ');
   }
 
-  function parseShopPriceTry(raw) {
-    var s = String(raw || '');
+  function parseShopPriceTry(priceStrOrItem) {
+    if (priceStrOrItem && typeof priceStrOrItem === 'object') {
+      var raw = priceStrOrItem.raw || priceStrOrItem;
+      var ft = Number(raw.fiyat_tl);
+      if (Number.isFinite(ft) && ft > 0) return Math.round(ft);
+      return parseShopPriceTry(raw.price || priceStrOrItem.price || priceStrOrItem.p);
+    }
+    var s = String(priceStrOrItem || '');
     var m = s.match(/₺\s*([\d.,]+)/);
     if (!m) return 0;
     var n = parseFloat(m[1].replace(/\./g, '').replace(',', '.'));
     return Number.isFinite(n) && n > 0 ? Math.round(n) : 0;
+  }
+
+  function isRowHaric(row) {
+    return !!(row && (row.fiyat_haric === true || row.fiyat_kaynak === 'haric'));
+  }
+
+  function rowLineTotal(row) {
+    if (!row || isRowHaric(row)) return 0;
+    if (row.lineTotal != null) return Math.round(Number(row.lineTotal)) || 0;
+    var adet = Math.max(1, Number(row.adet) || 1);
+    var birim = Math.round(Number(row.birim) || 0);
+    return birim > 0 ? birim * adet : 0;
   }
 
   function shopItemBrand(it) {
@@ -638,7 +739,31 @@
     dik_tip_buzdolabi: ['sogutma-ekipmanlari'],
     bulasik_giyotin_1000: ['bulasik-makineleri'],
     dilimleme_makinesi: ['et-hazirlik-makineleri', 'hamur-hazirlik-makineleri'],
+    kiyma_makinesi: ['et-hazirlik-makineleri'],
+    kemik_testere: ['et-hazirlik-makineleri'],
+    vakum_makinesi: ['yardimci-ekipmanlar', 'et-hazirlik-makineleri'],
     mikrodalga_firin: ['sanayi-ocaklari'],
+    patates_soyma: ['hamur-hazirlik-makineleri', 'et-hazirlik-makineleri'],
+    depo_dolabi: ['istif', 'tasima', 'sogutma-ekipmanlari'],
+    sogutma_tezgah: ['sogutma-ekipmanlari', 'tezgah'],
+    et_teshir_dolabi: ['sogutma-ekipmanlari', 'vitrin'],
+    dry_age_dolabi: ['sogutma-ekipmanlari'],
+    derin_dondurucu_dik: ['sogutma-ekipmanlari', 'derin-dondurucu'],
+    derin_dondurucu_sandik: ['sogutma-ekipmanlari', 'derin-dondurucu'],
+    spiral_hamur: ['hamur-hazirlik-makineleri'],
+    hamur_acma: ['hamur-hazirlik-makineleri'],
+    raf_firin: ['firinlar', 'kuzineler'],
+    espresso_makinasi: ['espresso-makineleri', 'kahve-makineleri'],
+    kahve_degirmeni: ['kahve-makineleri'],
+    bar_blender: ['yardimci-ekipmanlar'],
+    bar_buzdolabi: ['sogutma-ekipmanlari'],
+    buz_makinesi: ['buz-makineleri', 'icecek'],
+    sarap_dolabi: ['sogutma-ekipmanlari'],
+    bardak_yikama: ['bulasik-makineleri'],
+    benmari_set: ['benmariler', 'sanayi-ocaklari'],
+    teshir_vitrin: ['sogutma-ekipmanlari', 'vitrin'],
+    bulasik_sepet: ['bulasik-makineleri'],
+    bulasik_tunel: ['bulasik-makineleri'],
   };
 
   function tipDeptHint(tip, row) {
@@ -917,6 +1042,13 @@
     if (!row) return row;
     opts = opts || {};
     var out = Object.assign({}, row);
+    if (!opts.preservePrice) {
+      out.birim = 0;
+      out.lineTotal = null;
+      out.fiyat_net = false;
+      out.fiyat_kaynak = 'eticaret';
+      out.fiyat_haric = false;
+    }
     if (!out.pfDept && out.pfZone) out.pfDept = ZONE_TO_DEPT[out.pfZone] || 'pisirme';
     var tip = String(out.tip_kodu || '').trim();
     var lockedBrand = PFOS_TIP_BRAND[tip];
@@ -952,18 +1084,14 @@
       if (raw.sku || raw.model) out.pfSku = String(raw.sku || raw.model).trim();
       if (match.equstoPage) out.pfEqustoPage = match.equstoPage;
       out.pfDept = deptSegForItem(match, out.pfZone);
-      var shopPrice = parseShopPriceTry(match.price || match.p);
-      if (
-        shopPrice > 0 &&
-        (!Number(out.birim) ||
-          out.fiyat_kaynak === 'eksik' ||
-          out.fiyat_kaynak === 'dagitim' ||
-          out.fiyat_kaynak === 'referans')
-      ) {
+      var shopPrice = parseShopPriceTry(match);
+      var adetShop = Math.max(1, Number(out.adet) || 1);
+      if (shopPrice > 0) {
         out.birim = shopPrice;
         out.fiyat_net = true;
-        out.fiyat_kaynak = 'katalog';
-        out.lineTotal = shopPrice * (Number(out.adet) || 1);
+        out.fiyat_haric = false;
+        out.fiyat_kaynak = 'eticaret';
+        out.lineTotal = shopPrice * adetShop;
       }
       var specText = String(
         (match.raw && match.raw.specs) || match.specs || ''
@@ -984,6 +1112,17 @@
         if (img) out.pfImage = img;
       }
       out.pfShopMatch = true;
+    }
+
+    if (
+      !opts.preservePrice &&
+      !(Number(out.birim) > 0 && out.fiyat_kaynak === 'eticaret')
+    ) {
+      out.fiyat_haric = true;
+      out.birim = 0;
+      out.lineTotal = 0;
+      out.fiyat_net = false;
+      out.fiyat_kaynak = 'haric';
     }
 
     if (!out.pfImage && out.imageUrl) out.pfImage = normalizeImagePath(out.imageUrl);
@@ -1031,6 +1170,51 @@
   }
 
   function groupByZones(rows, selectedKeys, alan) {
+    /* Tek motor / API satırları — pfZone ile grupla (yeniden generateQuote yok) */
+    if (rows && rows.length && rows.some(function (r) {
+      return r && r.pfZone;
+    })) {
+      var zoneMap = {};
+      (rows || []).forEach(function (r) {
+        var zk = rowZone(r);
+        if (!zoneMap[zk]) {
+          var d = zoneDef(zk);
+          zoneMap[zk] = {
+            key: zk,
+            label: (r.pfZoneLabel || d.name),
+            icon: d.icon,
+            color: d.color,
+            m2: r.pfCatM2 != null ? r.pfCatM2 : categoryM2(Number(alan) || 0, zk),
+            rows: [],
+            zorunlu: 0,
+            ops: 0,
+            total: 0,
+          };
+        }
+        var tag = classifyRow(r);
+        var line = rowLineTotal(r);
+        zoneMap[zk].rows.push(
+          Object.assign({}, r, { pfClass: tag, lineTotal: line })
+        );
+        if (tag === 'OPS') zoneMap[zk].ops += 1;
+        else zoneMap[zk].zorunlu += 1;
+        zoneMap[zk].total += line;
+      });
+      var apiZones = Object.keys(zoneMap).map(function (k) {
+        return zoneMap[k];
+      });
+      apiZones.forEach(function (z) {
+        z.rows.sort(function (a, b) {
+          var ca = a.pfClass === 'OPS' ? 1 : 0;
+          var cb = b.pfClass === 'OPS' ? 1 : 0;
+          return ca - cb;
+        });
+      });
+      return sortZones(apiZones.filter(function (z) {
+        return z.rows.length > 0;
+      }));
+    }
+
     if (isCatalogReady()) {
       var quote = generateQuote(alan, selectedKeys);
       var zoned = quote.categories
@@ -1144,8 +1328,7 @@
     var ops = 0;
     var adet = 0;
     (rows || []).forEach(function (r) {
-      var line =
-        r.lineTotal != null ? r.lineTotal : (Number(r.birim) || 0) * (Number(r.adet) || 1);
+      var line = rowLineTotal(r);
       adet += Number(r.adet) || 1;
       if (classifyRow(r) === 'OPS') ops += line;
       else zrn += line;
@@ -1184,6 +1367,9 @@
       return _catalogBundle;
     },
     generateQuote: generateQuote,
+    isDilimlemeRow: isDilimlemeRow,
+    applyDilimlemeZoneRules: applyDilimlemeZoneRules,
+    isSarkuteriQuoteOpts: isSarkuteriQuoteOpts,
     quoteToRows: quoteToRows,
     zonesFromQuote: zonesFromQuote,
     categoryM2: categoryM2,
@@ -1203,6 +1389,9 @@
     enrichRowShopFields: enrichRowShopFields,
     enrichRowsShopLinks: enrichRowsShopLinks,
     findShopMatch: findShopMatch,
+    parseShopPriceTry: parseShopPriceTry,
+    isRowHaric: isRowHaric,
+    rowLineTotal: rowLineTotal,
     isTipBrandLocked: isTipBrandLocked,
     listShopBrands: listShopBrands,
     applyZoneBrand: applyZoneBrand,

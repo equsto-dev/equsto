@@ -1,0 +1,596 @@
+{
+  "id": "S13-117",
+  "approved": true,
+  "approved_at": "2026-05-23",
+  "baslik": "Steakhouse (S13-117-8)",
+  "konsept": "Steakhouse",
+  "dukkan": "Steakhouse",
+  "source_files": [
+    "steak.pdf",
+    "S13-117-8-steakhouse.pdf"
+  ],
+  "alan_m2": {
+    "brut_toplam": 270,
+    "masa_oturum": 128,
+    "pfos_alan": 270,
+    "mutfak_toplam": 118,
+    "zones": {
+      "show_mutfagi": 36,
+      "soguk_oda": 6,
+      "derin_dondurucu": 5,
+      "et_hazirlik": 10,
+      "ana_mutfak": 10,
+      "bar": 10,
+      "sebze_hazirlik": 8,
+      "pastane": 9,
+      "kuru_depo": 8,
+      "bulasikhane": 16
+    },
+    "station_m2_labels": {
+      "Ön Mutfak": 36,
+      "Soğuk Oda": 6,
+      "Derin Dondurucu Oda": 5,
+      "Et & Sebze Hazırlık": 10,
+      "Pişirme": 10,
+      "İçecek & Servis": 10,
+      "Soğuk Hazırlık": 8,
+      "Hamur Hazırlık": 9,
+      "Kuru Depo": 8,
+      "Bulaşık Yıkama": 16
+    },
+    "note": "Onaylı (2026-05-23): brüt 270 m²; masa oturum 128 m²; mutfak bölümleri 118 m². Yer ızgaraları (Y) mutfaktadır — salon değil.",
+    "yer_izgara_mutfak": true
+  },
+  "pfos_zones": [
+    "show_mutfagi",
+    "soguk_oda",
+    "derin_dondurucu",
+    "et_hazirlik",
+    "ana_mutfak",
+    "bar",
+    "sebze_hazirlik",
+    "pastane",
+    "kuru_depo",
+    "bulasikhane",
+    "izgara_meze"
+  ],
+  "zones": {
+    "kuru_depo": {
+      "zone_key": "kuru_depo",
+      "section_code": "A",
+      "title": "A- Kuru Depo",
+      "items": [
+        {
+          "poz": "A1",
+          "name": "İSTİF RAFI",
+          "olcu": "152*46*160",
+          "adet": null
+        }
+      ]
+    },
+    "soguk_oda": {
+      "zone_key": "soguk_oda",
+      "section_code": "B",
+      "title": "B- Soğuk Oda",
+      "items": [
+        {
+          "poz": "B1",
+          "name": "PANEL TİP SOĞUK ODA",
+          "olcu": "232*275*240",
+          "adet": null
+        },
+        {
+          "poz": "B2",
+          "name": "İSTİF RAFI",
+          "olcu": "122*46*160",
+          "adet": null
+        },
+        {
+          "poz": "B3",
+          "name": "İSTİF RAFI",
+          "olcu": "107*46*160",
+          "adet": null
+        }
+      ]
+    },
+    "derin_dondurucu": {
+      "zone_key": "derin_dondurucu",
+      "section_code": "C",
+      "title": "C- Deepfreeze Depo",
+      "items": [
+        {
+          "poz": "C1",
+          "name": "PANEL TİP SOĞUK ODA",
+          "olcu": "160*275*240",
+          "adet": null
+        },
+        {
+          "poz": "C2",
+          "name": "İSTİF RAFI",
+          "olcu": "137*46*160",
+          "adet": null
+        }
+      ]
+    },
+    "et_hazirlik": {
+      "zone_key": "et_hazirlik",
+      "section_code": "D",
+      "title": "D- Hazırlık Bölümü",
+      "items": [
+        {
+          "poz": "D1",
+          "name": "ÇİFT EVYELİ ÇALIŞMA TEZGAHI",
+          "olcu": "120*70*85",
+          "adet": null
+        },
+        {
+          "poz": "D2",
+          "name": "DUVAR RAFI",
+          "olcu": "120*30*3",
+          "adet": null
+        },
+        {
+          "poz": "D3",
+          "name": "ÇÖP ARABASI",
+          "olcu": "Ø40*50",
+          "adet": null
+        },
+        {
+          "poz": "D4",
+          "name": "ÇALIŞMA TEZGAHI, TABAN RAFLI",
+          "olcu": "90*70*85",
+          "adet": 2
+        },
+        {
+          "poz": "D6",
+          "name": "POLİETİLEN TABLALI ÇALIŞMA TEZGAHI, TABAN RAFLI",
+          "olcu": "140*70*85",
+          "adet": 1
+        },
+        {
+          "poz": "D8",
+          "name": "ET KÜTÜĞÜ",
+          "olcu": "70*70*85",
+          "adet": null
+        },
+        {
+          "poz": "D9",
+          "name": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+          "olcu": "70*70*85",
+          "adet": null
+        },
+        {
+          "poz": "D10",
+          "name": "DUVAR RAFI",
+          "olcu": "70*30*3",
+          "adet": null
+        },
+        {
+          "poz": "D11",
+          "name": "DİZDEN KUMANDALI EL YIKAMA LAVABOSU",
+          "olcu": "-",
+          "adet": null
+        }
+      ]
+    },
+    "pastane": {
+      "zone_key": "pastane",
+      "section_code": "E",
+      "title": "E- Hamur Hazırlık",
+      "items": [
+        {
+          "poz": "E1",
+          "name": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+          "olcu": "72*70*205",
+          "adet": null
+        },
+        {
+          "poz": "E2",
+          "name": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, TEK ÇEKMECELİ",
+          "olcu": "90*70*85",
+          "adet": null
+        },
+        {
+          "poz": "E3",
+          "name": "DUVAR RAFI",
+          "olcu": "90*30*3",
+          "adet": null
+        },
+        {
+          "poz": "E4",
+          "name": "SETÜSTÜ MİKSER, DOMINO",
+          "olcu": "4,5 lt.",
+          "adet": 1
+        },
+        {
+          "poz": "E6",
+          "name": "MERMER TABLALI ÇALIŞMA TEZGAHI",
+          "olcu": "110*70*85",
+          "adet": null
+        },
+        {
+          "poz": "E7",
+          "name": "DUVAR  RAFI",
+          "olcu": "150*30*3",
+          "adet": 2
+        },
+        {
+          "poz": "E9",
+          "name": "MERMER TABLALI ÇALIŞMA TEZGAHI",
+          "olcu": "120*70*85",
+          "adet": null
+        },
+        {
+          "poz": "E10",
+          "name": "DUVAR RAFI",
+          "olcu": "120*30*3",
+          "adet": null
+        },
+        {
+          "poz": "E11",
+          "name": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+          "olcu": "70*70*85",
+          "adet": null
+        },
+        {
+          "poz": "E12",
+          "name": "DUVAR RAFI",
+          "olcu": "70*30*3",
+          "adet": 1
+        }
+      ]
+    },
+    "ana_mutfak": {
+      "zone_key": "ana_mutfak",
+      "section_code": "F",
+      "title": "F- Pişirme",
+      "items": [
+        {
+          "poz": "F2",
+          "name": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+          "olcu": "145*80*85",
+          "adet": null
+        },
+        {
+          "poz": "F3",
+          "name": "4 AÇIK ALEVLİ OCAK, GAZLI, SETÜSTÜ, MARENO C67GP",
+          "olcu": "70*65*29",
+          "adet": null
+        },
+        {
+          "poz": "F4",
+          "name": "SOS BAINMARIE, ELK. SETÜSTÜ",
+          "olcu": "40*65*29",
+          "adet": null
+        },
+        {
+          "poz": "F5",
+          "name": "SETALTI ÇALIŞMA TEZGAHI, TABAN RAFLI",
+          "olcu": "110*70*56",
+          "adet": null
+        },
+        {
+          "poz": "F6",
+          "name": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+          "olcu": "170*70*85",
+          "adet": null
+        },
+        {
+          "poz": "F7",
+          "name": "SALAMANDER, BERTO'S",
+          "olcu": "-",
+          "adet": null
+        },
+        {
+          "poz": "F8",
+          "name": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+          "olcu": "350*97*50",
+          "adet": null
+        },
+        {
+          "poz": "F9",
+          "name": "TEZGAH TİPİ BUZDOLABI, 3  KAPILI",
+          "olcu": "188*70*85",
+          "adet": null
+        },
+        {
+          "poz": "F10",
+          "name": "SERVİS RAFI",
+          "olcu": "188*40*45",
+          "adet": null
+        },
+        {
+          "poz": "F11",
+          "name": "SİNEK ÖLDÜRÜCÜ",
+          "olcu": "-",
+          "adet": null
+        }
+      ]
+    },
+    "show_mutfagi": {
+      "zone_key": "show_mutfagi",
+      "section_code": "G",
+      "title": "G- Ön Mutfak / Et Teşhir",
+      "items": [
+        {
+          "poz": "G1",
+          "name": "DRY-AGED DOLABI",
+          "olcu": "210*210*230",
+          "adet": null
+        },
+        {
+          "poz": "G2",
+          "name": "ET TEŞHİR REYONU",
+          "olcu": "275*110*125",
+          "adet": null
+        },
+        {
+          "poz": "G3",
+          "name": "ÇALIŞMA TEZGAHI, TABAN  VE ARA RAFLI",
+          "olcu": "180*70*85",
+          "adet": null
+        },
+        {
+          "poz": "G4",
+          "name": "SERVİS BANKOSU",
+          "olcu": "200*50*85",
+          "adet": null
+        },
+        {
+          "poz": "G5",
+          "name": "LAVTAŞLI IZGARA, GAZLI, SETÜSTÜ, MARENO GPL68G",
+          "olcu": "80*70*29",
+          "adet": null
+        },
+        {
+          "poz": "G6",
+          "name": "SP64E",
+          "olcu": "40*65*29",
+          "adet": null
+        },
+        {
+          "poz": "G7",
+          "name": "FRİTÖZ, ÇİFT SEPETLİ, ELK., SETÜSTÜ, MARENO FQE 61L",
+          "olcu": "60*65*29",
+          "adet": null
+        },
+        {
+          "poz": "G8",
+          "name": "SETALTI BUZDOLABI",
+          "olcu": "260*70*56",
+          "adet": null
+        },
+        {
+          "poz": "G9",
+          "name": "DAVLUMBAZ, ORTA TİP, FİLTRELİ",
+          "olcu": "320*130*50",
+          "adet": null
+        },
+        {
+          "poz": "G10",
+          "name": "ET KEMİK TESTERESİ",
+          "olcu": "-",
+          "adet": null
+        },
+        {
+          "poz": "G11",
+          "name": "VAKUM MAKİNASI",
+          "olcu": "-",
+          "adet": null
+        },
+        {
+          "poz": "G12",
+          "name": "TARTI",
+          "olcu": "-",
+          "adet": null
+        },
+        {
+          "poz": "G13",
+          "name": "STREÇ MAKİNASI",
+          "olcu": "-",
+          "adet": null
+        },
+        {
+          "poz": "G14",
+          "name": "TARTI",
+          "olcu": "-",
+          "adet": null
+        },
+        {
+          "poz": "G15",
+          "name": "DİZDEN KUMANDALI EL YIKAMA LAVABOSU",
+          "olcu": "-",
+          "adet": null
+        }
+      ]
+    },
+    "sebze_hazirlik": {
+      "zone_key": "sebze_hazirlik",
+      "section_code": "H",
+      "title": "H- Soğuk Hazırlık",
+      "items": [
+        {
+          "poz": "H1",
+          "name": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+          "olcu": "72*70*205",
+          "adet": null
+        },
+        {
+          "poz": "H2",
+          "name": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+          "olcu": "160*60*85",
+          "adet": null
+        },
+        {
+          "poz": "H3",
+          "name": "DUVAR RAFI",
+          "olcu": "200*30*3",
+          "adet": null
+        },
+        {
+          "poz": "H4",
+          "name": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+          "olcu": "150*70*85",
+          "adet": null
+        },
+        {
+          "poz": "H5",
+          "name": "DUVAR RAFI",
+          "olcu": "150*30*3",
+          "adet": null
+        },
+        {
+          "poz": "H6",
+          "name": "MAKE-UP UNİTESİ, 3 KAPILI",
+          "olcu": "233*70*85",
+          "adet": null
+        }
+      ]
+    },
+    "bulasikhane": {
+      "zone_key": "bulasikhane",
+      "section_code": "J",
+      "title": "J- Bulaşık Yıkama",
+      "items": [
+        {
+          "poz": "J1",
+          "name": "BULAŞIK SIYIRMA TEZGAHI",
+          "olcu": "165*80*85",
+          "adet": null
+        },
+        {
+          "poz": "J2",
+          "name": "BASKET RAFI",
+          "olcu": "165*40*45",
+          "adet": null
+        },
+        {
+          "poz": "J3",
+          "name": "ÇÖP ARABASI",
+          "olcu": "Ø40*50",
+          "adet": null
+        },
+        {
+          "poz": "J4",
+          "name": "TEK EVYELİ BYM GİRİŞ TEZGAHI",
+          "olcu": "120*75*85",
+          "adet": null
+        },
+        {
+          "poz": "J5",
+          "name": "ÖN YIKAMA DUŞU",
+          "olcu": "-",
+          "adet": null
+        },
+        {
+          "poz": "J6",
+          "name": "YAĞ TUTUCU",
+          "olcu": "1,6 lt./sn.",
+          "adet": 1
+        },
+        {
+          "poz": "J8",
+          "name": "DAVLUMBAZ, DUVAR TİPİ",
+          "olcu": "100*97*40",
+          "adet": null
+        },
+        {
+          "poz": "J9",
+          "name": "BYM ÇIKIŞİ",
+          "olcu": "70*75*85",
+          "adet": null
+        },
+        {
+          "poz": "J10",
+          "name": "BARDAK YIKAMA MAKİNASI, NEO DW53E",
+          "olcu": "60*60*85",
+          "adet": null
+        },
+        {
+          "poz": "J11",
+          "name": "İSTİF RAFI",
+          "olcu": "183*61*160",
+          "adet": null
+        },
+        {
+          "poz": "J12",
+          "name": "KAZAN YIKAMA EVYESİ",
+          "olcu": "100*80*57/91",
+          "adet": null
+        }
+      ]
+    },
+    "bar": {
+      "zone_key": "bar",
+      "section_code": "I",
+      "title": "I- İçecek",
+      "items": [
+        {
+          "poz": "I1",
+          "name": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+          "olcu": "110*60*85",
+          "adet": 1
+        },
+        {
+          "poz": "I3",
+          "name": "BAR BLENDER, SANTOS",
+          "olcu": "-",
+          "adet": null
+        },
+        {
+          "poz": "I4",
+          "name": "BAR MİKSER, SANTOS",
+          "olcu": "-",
+          "adet": null
+        },
+        {
+          "poz": "I5",
+          "name": "CAM KAPILI TEZGAH TİPİ BUZDOLABI, 2 KAPILI",
+          "olcu": "143*60*85",
+          "adet": 1
+        },
+        {
+          "poz": "I7",
+          "name": "KAHVE DEĞİRMENİ, MAZZER",
+          "olcu": "-",
+          "adet": 1
+        }
+      ]
+    },
+    "izgara_meze": {
+      "zone_key": "izgara_meze",
+      "section_code": "Y",
+      "title": "Y- Yer Izgara",
+      "items": [
+        {
+          "poz": "Y1",
+          "name": "YER IZGARASI",
+          "olcu": "30*30*14",
+          "adet": null
+        },
+        {
+          "poz": "Y2",
+          "name": "YER IZGARASI",
+          "olcu": "95*30*14",
+          "adet": null
+        }
+      ]
+    }
+  },
+  "plan_labels": [
+    "ön mutfak",
+    "ET TEŞHİR REYONU",
+    "ET TEŞHİR REYONU",
+    "bulaşık yıkama",
+    "soğuk hazırlık",
+    "pişirme",
+    "servis",
+    "kuru depo",
+    "içecek",
+    "hamur hazırlık",
+    "sebze hazırlık",
+    "et hazırlık",
+    "hazırlık"
+  ],
+  "item_count": 74
+}

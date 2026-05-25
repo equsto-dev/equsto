@@ -1,4 +1,4 @@
-ï»¿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
@@ -28,8 +28,8 @@
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-<title>ÃœrÃ¼n DetayÄ± Â· Equsto</title>
-<meta name="description" content="EndÃ¼striyel mutfak ekipmanÄ± Ã¼rÃ¼n detayÄ±. Teknik Ã¶zellikler, fiyat, stok ve teklif. Equsto gÃ¼vencesiyle.">
+<title>Ürün Detayı · Equsto</title>
+<meta name="description" content="Endüstriyel mutfak ekipmanı ürün detayı. Teknik özellikler, fiyat, stok ve teklif. Equsto güvencesiyle.">
 <meta name="author" content="Equsto Teknoloji Limited">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="theme-color" content="#001e50">
@@ -70,12 +70,12 @@
 <meta property="og:type" content="product">
 <meta property="og:locale" content="tr_TR">
 <meta property="og:site_name" content="Equsto">
-<meta property="og:title" content="ÃœrÃ¼n DetayÄ± Â· Equsto">
-<meta property="og:description" content="EndÃ¼striyel mutfak ekipmanÄ± â€” teknik Ã¶zellik, fiyat, teklif.">
+<meta property="og:title" content="Ürün Detayı · Equsto">
+<meta property="og:description" content="Endüstriyel mutfak ekipmanı — teknik özellik, fiyat, teklif.">
 <meta property="og:image" content="https://equsto.com/og-cover.jpg">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="ÃœrÃ¼n DetayÄ± Â· Equsto">
+<meta name="twitter:title" content="Ürün Detayı · Equsto">
 <meta name="twitter:image" content="https://equsto.com/og-cover.jpg">
 
 <link rel="manifest" href="/manifest.json">
@@ -124,18 +124,18 @@
     .footer{border-top:1px solid var(--eq-border);padding:12px 16px;font-size:11px;color:var(--eq-text-muted);display:flex;justify-content:space-between;align-items:center;background:var(--eq-surface);}
     .refs{display:flex;gap:12px;flex-wrap:wrap;}
 
-    /* Teknik Ã¶zellikler ve aÃ§Ä±klama: Genel | Teknik iki sÃ¼tun */
+    /* Teknik özellikler ve açıklama: Genel | Teknik iki sütun */
     .eq-product-specs .eq-specs-cols{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;}
     .eq-product-specs .eq-specs-cols pre{margin:0;}
     @media (max-width:768px){.eq-product-specs .eq-specs-cols{grid-template-columns:1fr;gap:14px;}}
 
-    /* === Amazon-stili Ã¼rÃ¼n sayfasÄ± kabuÄŸu (product.html Ã¶zel override) === */
+    /* === Amazon-stili ürün sayfası kabuğu (product.html özel override) === */
     body.eq-shop .eq-product-main{padding:18px 20px 24px;background:var(--eq-surface);}
     body.eq-shop .eq-product-grid{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr) minmax(0,0.78fr);gap:28px;align-items:start;}
     @media (max-width:1100px){body.eq-shop .eq-product-grid{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);}}
     @media (max-width:700px){body.eq-shop .eq-product-grid{grid-template-columns:1fr;}}
 
-    /* Galeride bÃ¼yÃ¼k hero + hover-zoom imleci */
+    /* Galeride büyük hero + hover-zoom imleci */
     body.eq-shop .eq-product-hero-wrap{position:relative;}
     body.eq-shop .eq-product-hero-img{max-height:520px;border-radius:4px;cursor:zoom-in;transition:transform .25s ease;}
     body.eq-shop .eq-product-hero-img:hover{transform:scale(1.02);}
@@ -144,7 +144,7 @@
     body.eq-shop .eq-product-thumbs--vertical button.eq-product-thumb--active{border-color:#e77600;box-shadow:0 0 0 2px rgba(231,118,0,.30);}
     body.eq-shop .eq-product-thumbs--vertical img{width:46px;height:46px;}
 
-    /* Orta kolon: marka linki, baÅŸlÄ±k, rating, bullet liste */
+    /* Orta kolon: marka linki, başlık, rating, bullet liste */
     body.eq-shop .eq-product-info{padding:0 6px 0 4px;}
     body.eq-shop .eq-product-cat{display:none;}
     body.eq-shop .eq-product-brand{font-size:13px;color:#007185;margin-bottom:4px;font-weight:500;}
@@ -156,18 +156,18 @@
     body.eq-shop .eq-amz-rating-link{color:#007185;text-decoration:none;}
     body.eq-shop .eq-amz-rating-link:hover{color:#c7511f;text-decoration:underline;}
 
-    /* "Bu Ã¼rÃ¼n hakkÄ±nda" bullet bloÄŸu */
+    /* "Bu ürün hakkında" bullet bloğu */
     body.eq-shop .eq-amz-about{margin:12px 0 14px;}
     body.eq-shop .eq-amz-about h2{font-size:15px;font-weight:700;color:var(--eq-text);margin:0 0 6px;letter-spacing:-.01em;}
     body.eq-shop .eq-amz-about ul{list-style:disc;padding-left:18px;margin:0;}
     body.eq-shop .eq-amz-about li{font-size:13px;line-height:1.55;color:var(--eq-text);margin:3px 0;}
     body.eq-shop .eq-amz-about-empty{font-size:12px;color:var(--eq-text-muted);font-style:italic;}
 
-    /* Mini spec satÄ±rÄ± (Marka / Model / Kategori) â€” Amazon "Brand Â· Model Â· Category" tarzÄ± kompakt */
+    /* Mini spec satırı (Marka / Model / Kategori) — Amazon "Brand · Model · Category" tarzı kompakt */
     body.eq-shop .eq-product-spec-tbl{margin-top:12px;font-size:12.5px;border-top:1px solid var(--eq-border-soft);padding-top:10px;}
     body.eq-shop .eq-product-spec-tbl th{width:96px;font-size:12px;}
 
-    /* Buybox: belirgin saÄŸ kutu, sticky */
+    /* Buybox: belirgin sağ kutu, sticky */
     body.eq-shop .eq-product-buybox{border:1px solid #d5d9d9;border-radius:8px;padding:18px 18px 16px;background:var(--eq-surface);box-shadow:0 1px 2px rgba(0,0,0,.04);position:sticky;top:96px;display:flex;flex-direction:column;gap:8px;}
     body.eq-shop .eq-buybox-price{font-size:28px;font-weight:500;line-height:1.05;letter-spacing:-.02em;color:var(--eq-text);display:flex;align-items:flex-start;gap:2px;}
     body.eq-shop .eq-buybox-price .eq-buybox-currency{font-size:14px;font-weight:600;margin-top:4px;}
@@ -206,12 +206,12 @@
     body.eq-shop .eq-pdp-lightbox-x{position:fixed;top:16px;right:20px;z-index:9001;width:44px;height:44px;border-radius:50%;border:1px solid #d5d9d9;background:#fff;font-size:22px;line-height:1;cursor:pointer;color:#111;}
     body.eq-shop .eq-pdp-lightbox-x:hover{background:#f3f3f3;}
 
-    /* Specs bÃ¶lÃ¼mÃ¼ baÅŸlÄ±ÄŸÄ± Amazon stili */
+    /* Specs bölümü başlığı Amazon stili */
     body.eq-shop .eq-product-specs{margin-top:32px;padding-top:18px;border-top:1px solid var(--eq-border);}
     body.eq-shop .eq-product-specs h2{font-size:18px;font-weight:700;color:var(--eq-text);margin:0 0 14px;letter-spacing:-.01em;}
     body.eq-shop .eq-product-specs .eq-specs-cols pre{font-family:ui-sans-serif,-apple-system,sans-serif;font-size:13px;line-height:1.6;color:var(--eq-text);white-space:pre-wrap;background:var(--eq-surface-2);border:1px solid var(--eq-border-soft);border-radius:6px;padding:14px 16px;}
 
-    /* Sayfa altÄ±: Â«MÃ¼ÅŸteriler bu Ã¼rÃ¼nleri de gÃ¶rÃ¼ntÃ¼lediÂ» yatay ÅŸeridi (Amazon stili) */
+    /* Sayfa altı: «Müşteriler bu ürünleri de görüntüledi» yatay şeridi (Amazon stili) */
     .eq-mbg-related{margin:28px 0 8px;padding:18px 8px 18px;background:var(--eq-surface);border-top:1px solid var(--eq-border);border-bottom:1px solid var(--eq-border);position:relative;}
     .eq-mbg-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:0 8px 10px;}
     .eq-mbg-title{font-size:18px;font-weight:700;color:var(--eq-text);margin:0;line-height:1.2;}
@@ -226,7 +226,7 @@
     .eq-mbg-brand{font-size:10px;font-weight:600;letter-spacing:.04em;color:var(--eq-text-secondary);text-transform:uppercase;margin-bottom:3px;line-height:1.2;}
     .eq-mbg-name{font-size:12px;font-weight:500;color:var(--eq-text);line-height:1.35;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:48px;}
     .eq-mbg-price{margin-top:6px;font-size:14px;font-weight:700;color:var(--eq-text);}
-    .eq-mbg-price::after{content:" â‚º";font-size:11px;font-weight:500;color:var(--eq-text-muted);}
+    .eq-mbg-price::after{content:" ?";font-size:11px;font-weight:500;color:var(--eq-text-muted);}
     .eq-mbg-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:38px;height:38px;border-radius:50%;background:var(--eq-surface);border:1px solid var(--eq-border);display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.10);color:var(--eq-text);transition:background .15s ease,box-shadow .15s ease,opacity .15s ease;padding:0;}
     .eq-mbg-arrow:hover{background:var(--eq-surface-2);box-shadow:0 3px 12px rgba(0,0,0,.14);}
     .eq-mbg-arrow.eq-mbg-prev{left:-6px;}
@@ -244,29 +244,29 @@
     <div class="pg-inner hdr-pg-inner" style="display:flex;align-items:center;gap:10px;flex:1;min-width:0;padding:10px 20px 10px 0;">
       <div class="hdr-alici">
         <div style="font-size:9px;color:var(--eq-text-subtle);">Teslimat Adresi</div>
-        <div style="font-size:11px;font-weight:600;color:var(--eq-drawer-head-text);">Ä°stanbul, TÃ¼rkiye</div>
+        <div style="font-size:11px;font-weight:600;color:var(--eq-drawer-head-text);">İstanbul, Türkiye</div>
       </div>
       <div class="srch">
-        <div class="srch-cat" onclick="toggleDrawer()">â˜° TÃ¼m Kategoriler</div>
-        <input class="srch-input" type="text" placeholder="ÃœrÃ¼n, marka veya kategori ara..." oninput="window.searchFilter ? searchFilter(this.value) : void 0">
+        <div class="srch-cat" onclick="toggleDrawer()">? Tüm Kategoriler</div>
+        <input class="srch-input" type="text" placeholder="Ürün, marka veya kategori ara..." oninput="window.searchFilter ? searchFilter(this.value) : void 0">
         <button type="button" class="srch-btn" aria-label="Ara" title="Ara"><svg xmlns="http://www.w3.org/2000/svg" class="eq-srch-ico" width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.25" stroke="currentColor" stroke-width="1.35"/><line x1="12.35" y1="12.35" x2="17.85" y2="12.35" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/></svg></button>
       </div>
       <div class="hdr-right">
         <div class="theme-wrap">
-          <button type="button" class="theme-toggle" id="theme-toggle" onclick="equstoCycleTheme()" title="Tema">â—</button>
-          <span class="theme-legend">Sistem Â· AÃ§Ä±k Â· Koyu</span>
+          <button type="button" class="theme-toggle" id="theme-toggle" onclick="equstoCycleTheme()" title="Tema">?</button>
+          <span class="theme-legend">Sistem · Açık · Koyu</span>
         </div>
-        <a href="/login.html" class="eq-hdr-account" title="Ãœye giriÅŸi">
-          <span style="font-size:10px;color:var(--eq-text-muted);">HesabÄ±m</span>
-          <span class="eq-hdr-account-title" style="font-size:12px;font-weight:600;">Projeler ve Listeler â–¾</span>
+        <a href="/login.html" class="eq-hdr-account" title="Üye girişi">
+          <span style="font-size:10px;color:var(--eq-text-muted);">Hesabım</span>
+          <span class="eq-hdr-account-title" style="font-size:12px;font-weight:600;">Projeler ve Listeler ?</span>
         </a>
         <div style="display:flex;flex-direction:column;line-height:1.4;">
-          <span style="font-size:10px;color:var(--eq-text-muted);">Ä°adeler</span>
-          <span style="font-size:12px;font-weight:600;cursor:pointer;">ve SipariÅŸler</span>
+          <span style="font-size:10px;color:var(--eq-text-muted);">İadeler</span>
+          <span style="font-size:12px;font-weight:600;cursor:pointer;">ve Siparişler</span>
         </div>
-        <div id="equsto-hdr-cart" class="equsto-hdr-cart" style="display:flex;flex-direction:column;line-height:1.4;cursor:pointer;" title="Sepeti aÃ§" role="button" tabindex="0">
-          <span id="equsto-cart-count" style="font-size:10px;color:var(--eq-text-muted);">ğŸ›’ 0</span>
-          <span style="font-size:12px;font-weight:600;">AlÄ±ÅŸveriÅŸ Sepeti</span>
+        <div id="equsto-hdr-cart" class="equsto-hdr-cart" style="display:flex;flex-direction:column;line-height:1.4;cursor:pointer;" title="Sepeti aç" role="button" tabindex="0">
+          <span id="equsto-cart-count" style="font-size:10px;color:var(--eq-text-muted);">?? 0</span>
+          <span style="font-size:12px;font-weight:600;">Alışveriş Sepeti</span>
         </div>
       </div>
     </div>
@@ -274,21 +274,21 @@
 
   <nav class="topnav" aria-label="Departmanlar">
     <div class="pg-inner topnav-inner">
-      <div class="topnav-item topnav-all" onclick="toggleDrawer()">â˜° TÃ¼m kategoriler</div>
+      <div class="topnav-item topnav-all" onclick="toggleDrawer()">? Tüm kategoriler</div>
       <span class="topnav-sep" aria-hidden="true">|</span>
-      <div class="topnav-item topnav-pfos" onclick="eqGo('pfos')" data-i18n-attr="aria-label:nav.pfos"><span class="topnav-pfos__in" aria-hidden="true"><span class="topnav-pfos__face topnav-pfos__face--plain" data-i18n="nav.pfos">Proje FabrikasÄ±</span><span class="topnav-pfos__face topnav-pfos__face--dark" data-i18n="nav.pfos_hover">Proje FabrikasÄ±</span></span></div>
+      <div class="topnav-item topnav-pfos" onclick="eqGo('pfos')" data-i18n-attr="aria-label:nav.pfos"><span class="topnav-pfos__in" aria-hidden="true"><span class="topnav-pfos__face topnav-pfos__face--plain" data-i18n="nav.pfos">Proje Fabrikası</span><span class="topnav-pfos__face topnav-pfos__face--dark" data-i18n="nav.pfos_hover">Proje Fabrikası</span></span></div>
       <span class="topnav-sep" aria-hidden="true">|</span>
-      <div class="topnav-item" onclick="typeof eqGo==='function'?eqGo('pisirme'):location.href='/pisirme.html'">PiÅŸirme EkipmanlarÄ±</div>
+      <div class="topnav-item" onclick="typeof eqGo==='function'?eqGo('pisirme'):location.href='/pisirme.html'">Pişirme Ekipmanları</div>
       <span class="topnav-sep" aria-hidden="true">|</span>
-      <div class="topnav-item" onclick="typeof eqGo==='function'?eqGo('sogutma'):location.href='/sogutma.html'">SoÄŸutma EkipmanlarÄ±</div>
+      <div class="topnav-item" onclick="typeof eqGo==='function'?eqGo('sogutma'):location.href='/sogutma.html'">Soğutma Ekipmanları</div>
       <span class="topnav-sep" aria-hidden="true">|</span>
-      <div class="topnav-item" onclick="typeof eqGo==='function'?eqGo('kahve'):location.href='/kahve.html'">Kahve EkipmanlarÄ±</div>
+      <div class="topnav-item" onclick="typeof eqGo==='function'?eqGo('kahve'):location.href='/kahve.html'">Kahve Ekipmanları</div>
       <span class="topnav-sep" aria-hidden="true">|</span>
-      <div class="topnav-item" onclick="typeof eqGo==='function'?eqGo('yikama'):location.href='/yikama.html'">YÄ±kama EkipmanlarÄ±</div>
+      <div class="topnav-item" onclick="typeof eqGo==='function'?eqGo('yikama'):location.href='/yikama.html'">Yıkama Ekipmanları</div>
       <span class="topnav-sep" aria-hidden="true">|</span>
-      <div class="topnav-item" onclick="typeof eqGo==='function'?eqGo('hazirlik'):location.href='/hazirlik.html'">HazÄ±rlÄ±k EkipmanlarÄ±</div>
+      <div class="topnav-item" onclick="typeof eqGo==='function'?eqGo('hazirlik'):location.href='/hazirlik.html'">Hazırlık Ekipmanları</div>
       <span class="topnav-sep" aria-hidden="true">|</span>
-      <div class="topnav-item" onclick="typeof eqGo==='function'?eqGo('icecek'):location.href='/icecek.html'">Ä°Ã§ecek EkipmanlarÄ±</div>
+      <div class="topnav-item" onclick="typeof eqGo==='function'?eqGo('icecek'):location.href='/icecek.html'">İçecek Ekipmanları</div>
       <span class="topnav-sep" aria-hidden="true">|</span>
       <div class="topnav-item topnav-besos" onclick="eqGo('besos')" data-i18n-attr="aria-label:nav.bar_design"><span class="topnav-besos__in" aria-hidden="true"><span class="topnav-besos__face topnav-besos__face--plain" data-i18n="nav.bar_design">Bar Design</span><span class="topnav-besos__face topnav-besos__face--dark" data-i18n="nav.bar_design_hover">Dark Side</span></span></div>
     </div>
@@ -299,24 +299,24 @@
       <aside class="eq-filter-col eq-refine-amazon" id="eq-filter-col" aria-label="Filtreler">
         <nav class="sidebar" id="eq-sidebar" aria-label="Kategoriler"></nav>
         <div class="eq-filter-sec">
-          <div class="eq-filter-sec-lbl eq-filter-sec-lbl--markalarimiz">MarkalarÄ±mÄ±z</div>
+          <div class="eq-filter-sec-lbl eq-filter-sec-lbl--markalarimiz">Markalarımız</div>
           <div id="eq-filter-brands" class="eq-filter-brands"></div>
         </div>
       </aside>
       <div class="right-col">
         <div class="breadcrumb" id="eq-product-bc">
-          <a href="/" id="eq-product-bc-home">Ana Sayfa</a> â€º <span>YÃ¼kleniyorâ€¦</span>
+          <a href="/" id="eq-product-bc-home">Ana Sayfa</a> › <span>Yükleniyor…</span>
         </div>
         <main class="eq-product-main" id="eq-product-root">
-          <div class="eq-product-miss">ÃœrÃ¼n bilgisi yÃ¼kleniyorâ€¦</div>
+          <div class="eq-product-miss">Ürün bilgisi yükleniyor…</div>
         </main>
       </div>
     </div>
     <footer class="footer">
       <div class="refs">
-        <span style="font-size:10px;color:var(--eq-text-muted);">B2B Â· proje Â· kanal ortaklÄ±klarÄ±</span>
+        <span style="font-size:10px;color:var(--eq-text-muted);">B2B · proje · kanal ortaklıkları</span>
       </div>
-      <div>Ã‡erez tercihlerini yÃ¶net</div>
+      <div>Çerez tercihlerini yönet</div>
     </footer>
   </div>
 
@@ -342,8 +342,8 @@
     }
 
     /**
-     * href / src: Zaten `/shop/â€¦`, `/data/â€¦`, `https://â€¦` veya `#` ise baÅŸÄ±na `/` ekleme
-     * (`//data/â€¦` protokol-relative URL hatasÄ±nÄ± Ã¶nler).
+     * href / src: Zaten `/shop/…`, `/data/…`, `https://…` veya `#` ise başına `/` ekleme
+     * (`//data/…` protokol-relative URL hatasını önler).
      */
     function eqHtmlUrl(u) {
       if (u == null || u === "") return "";
@@ -356,7 +356,7 @@
       return "/" + s;
     }
 
-    /** OG / JSON-LD: katalog gÃ¶reli yol â†’ tam http(s) URL */
+    /** OG / JSON-LD: katalog göreli yol › tam http(s) URL */
     function eqAbsoluteAssetUrl(raw) {
       if (!raw) return "";
       var p = normImgPath(raw);
@@ -370,7 +370,7 @@
       return origin + path;
     }
 
-    /** AynÄ± gÃ¶rselin tekrarÄ±nÄ± ele: Ã¶nce normalize, sonra Set ile benzersiz. */
+    /** Aynı görselin tekrarını ele: önce normalize, sonra Set ile benzersiz. */
     function uniqueImgs(arr) {
       var seen = Object.create(null);
       var out = [];
@@ -404,9 +404,9 @@
       }
       if (!raw) return "";
       var s = String(raw).split("\n")[0] || String(raw);
-      if (/â‚¬/.test(s)) return "";
+      if (/€/.test(s)) return "";
       return s
-        .replace(/â‚º/g, "")
+        .replace(/?/g, "")
         .replace(/\+?\s*KDV.*/gi, "")
         .replace(/KDV\s*dahil/gi, "")
         .trim();
@@ -473,7 +473,7 @@
       if (!rel && p) rel = oztiWebRelFromSku(p.sku || p.urun_kodu || p.model) || "";
       var src = rel ? resolveProductImgSrc(rel) : thumbSrc(p);
       if (!src) {
-        return '<span style="font-size:9px;color:var(--eq-text-subtle);">â€”</span>';
+        return '<span style="font-size:9px;color:var(--eq-text-subtle);">—</span>';
       }
       return (
         '<img src="' +
@@ -500,14 +500,14 @@
         deptFromPagePath() ||
         (typeof window.eqCategoryToUrunlerSeg === "function" ? window.eqCategoryToUrunlerSeg(cat) : null);
       var labels = {
-        pisirme: "PiÅŸirme EkipmanlarÄ±",
-        sogutma: "SoÄŸutma EkipmanlarÄ±",
-        kahve: "Kahve EkipmanlarÄ±",
-        yikama: "YÄ±kama EkipmanlarÄ±",
-        hazirlik: "HazÄ±rlÄ±k EkipmanlarÄ±",
-        icecek: "Ä°Ã§ecek EkipmanlarÄ±",
-        tasima: "TaÅŸÄ±ma EkipmanlarÄ±",
-        "set-ustu-mutfak": "Set ÃœstÃ¼ Mutfak EkipmanlarÄ±",
+        pisirme: "Pişirme Ekipmanları",
+        sogutma: "Soğutma Ekipmanları",
+        kahve: "Kahve Ekipmanları",
+        yikama: "Yıkama Ekipmanları",
+        hazirlik: "Hazırlık Ekipmanları",
+        icecek: "İçecek Ekipmanları",
+        tasima: "Taşıma Ekipmanları",
+        "set-ustu-mutfak": "Set Üstü Mutfak Ekipmanları",
       };
       if (seg && labels[seg] && typeof window.equstoUrl === "function") {
         return { href: window.equstoUrl(seg), label: labels[seg] };
@@ -517,11 +517,11 @@
 
     function slugifyEq(s) {
       var tr = {
-        'ÄŸ':'g','Ã¼':'u','ÅŸ':'s','Ä±':'i','Ã¶':'o','Ã§':'c','Ã¢':'a','Ã®':'i','Ã»':'u',
-        'Ä':'g','Ãœ':'u','Å':'s','Ä°':'i','Ã–':'o','Ã‡':'c','Ã‚':'a','Ã':'i','Ã›':'u'
+        'ğ':'g','ü':'u','ş':'s','ı':'i','ö':'o','ç':'c','â':'a','î':'i','û':'u',
+        'Ğ':'g','Ü':'u','Ş':'s','İ':'i','Ö':'o','Ç':'c','Â':'a','Î':'i','Û':'u'
       };
       return String(s || '').toLowerCase()
-        .replace(/[ÄŸÃ¼ÅŸÄ±Ã¶Ã§Ã¢Ã®Ã»ÄÃœÅÄ°Ã–Ã‡Ã‚ÃÃ›]/g, function(c){ return tr[c] || c; })
+        .replace(/[ğüşıöçâîûĞÜŞİÖÇÂÎÛ]/g, function(c){ return tr[c] || c; })
         .replace(/[^a-z0-9]+/g, '-')
         .replace(/^-+|-+$/g, '')
         .substring(0, 100);
@@ -647,11 +647,11 @@
       var n = (p && p.name) || "";
       var b = (p && p.brand) || "";
       if (b && n.indexOf(b) === 0) {
-        n = n.slice(b.length).replace(/^[\s.,;:\-â€“â€”]+/, "");
+        n = n.slice(b.length).replace(/^[\s.,;:\-–—]+/, "");
       }
       n = n.replace(/\s+/g, " ").trim();
-      if (n.length > 46) n = n.slice(0, 44) + "â€¦";
-      return n || ((p && p.name) || "ÃœrÃ¼n").slice(0, 46);
+      if (n.length > 46) n = n.slice(0, 44) + "…";
+      return n || ((p && p.name) || "Ürün").slice(0, 46);
     }
 
     function thumbSrc(p) {
@@ -659,24 +659,24 @@
       return imgs.length ? imgs[0] : "";
     }
 
-    /** Kategori slug â†’ ÅŸeritte gÃ¶sterilecek etiket. */
+    /** Kategori slug › şeritte gösterilecek etiket. */
     var CAT_RAIL_LABEL = {
       "sanayi-ocaklari": "Ocak",
       "sanayi-tipi-izgaralar": "Izgara",
       "kuzineler": "Kuzine",
-      "fritozler": "FritÃ¶z",
-      "doner-ocaklari-": "DÃ¶ner OcaÄŸÄ±",
+      "fritozler": "Fritöz",
+      "doner-ocaklari-": "Döner Ocağı",
       "tost-makineleri": "Tost Makinesi",
-      "pilic-cevirme-makineleri": "PiliÃ§ Ã‡evirme",
-      "ocakbasi-izgara": "OcakbaÅŸÄ± IzgarasÄ±",
-      "sogutma-ekipmanlari": "SoÄŸutma EkipmanÄ±",
+      "pilic-cevirme-makineleri": "Piliç Çevirme",
+      "ocakbasi-izgara": "Ocakbaşı Izgarası",
+      "sogutma-ekipmanlari": "Soğutma Ekipmanı",
       "kahve-makineleri": "Kahve Makinesi",
-      "bulasik-makineleri": "BulaÅŸÄ±k YÄ±kama MakinasÄ±",
-      "hamur-hazirlik-makineleri": "Hamur HazÄ±rlÄ±k",
-      "et-hazirlik-makineleri": "Et HazÄ±rlÄ±k",
-      "cay-kazanlari-cay-makineleri-cay-otomatlari": "Ã‡ay Makinesi",
-      "yiyecek-ve-icecek-otomatlari-": "Ä°Ã§ecek OtomatÄ±",
-      "cikolata-temperleme-makinesi-": "Ã‡ikolata Temperleme",
+      "bulasik-makineleri": "Bulaşık Yıkama Makinası",
+      "hamur-hazirlik-makineleri": "Hamur Hazırlık",
+      "et-hazirlik-makineleri": "Et Hazırlık",
+      "cay-kazanlari-cay-makineleri-cay-otomatlari": "Çay Makinesi",
+      "yiyecek-ve-icecek-otomatlari-": "İçecek Otomatı",
+      "cikolata-temperleme-makinesi-": "Çikolata Temperleme",
     };
 
     function railLabelFor(cat) {
@@ -685,45 +685,45 @@
       return s.replace(/-+$/, "").replace(/-/g, " ");
     }
 
-    /** ÃœrÃ¼n adÄ± iÃ§indeki anahtar kelimelerle alt-tip etiketi (baÄŸlam koru: espressoâ†”espresso, tÃ¼rkâ†”tÃ¼rk, vb.). */
+    /** Ürün adı içindeki anahtar kelimelerle alt-tip etiketi (bağlam koru: espresso-espresso, türk-türk, vb.). */
     var SUB_TYPE_KEYWORDS = {
       "kahve-makineleri": [
         { tag: "espresso", any: ["espresso"] },
         { tag: "filtre", any: ["filtre kahve", "filtre"] },
-        { tag: "turk", any: ["tÃ¼rk", "kumda"] },
-        { tag: "degirmen", any: ["deÄŸirmen", "grinder"] },
+        { tag: "turk", any: ["türk", "kumda"] },
+        { tag: "degirmen", any: ["değirmen", "grinder"] },
         { tag: "mikser", any: ["mikser", "blender", "shaker"] },
-        { tag: "perkolator", any: ["perkolatÃ¶r", "percolator"] },
+        { tag: "perkolator", any: ["perkolatör", "percolator"] },
         { tag: "moka", any: ["moka"] },
       ],
       "sogutma-ekipmanlari": [
-        { tag: "buz-makinesi", any: ["buz makinesi", "buz makinasÄ±", "ice maker"] },
+        { tag: "buz-makinesi", any: ["buz makinesi", "buz makinası", "ice maker"] },
         { tag: "derin-dondurucu", any: ["derin dondurucu", "dondurucu"] },
-        { tag: "soguk-oda", any: ["soÄŸuk oda"] },
-        { tag: "sarap", any: ["ÅŸarap"] },
+        { tag: "soguk-oda", any: ["soğuk oda"] },
+        { tag: "sarap", any: ["şarap"] },
         { tag: "pastane", any: ["pastane", "pasta"] },
         { tag: "make-up", any: ["make up", "make-up", "makeup"] },
-        { tag: "cihaz-alti", any: ["cihaz altÄ±", "cihazaltÄ±"] },
-        { tag: "tezgah-tipi", any: ["tezgah tipi", "tezgah altÄ±"] },
-        { tag: "dik-buzdolabi", any: ["dik tip", "dik buzdolabÄ±", "dik buzdolap"] },
-        { tag: "buzdolabi", any: ["buzdolabÄ±", "buzdolap"] },
+        { tag: "cihaz-alti", any: ["cihaz altı", "cihazaltı"] },
+        { tag: "tezgah-tipi", any: ["tezgah tipi", "tezgah altı"] },
+        { tag: "dik-buzdolabi", any: ["dik tip", "dik buzdolabı", "dik buzdolap"] },
+        { tag: "buzdolabi", any: ["buzdolabı", "buzdolap"] },
       ],
       "bulasik-makineleri": [
-        { tag: "setalti", any: ["setaltÄ±", "set altÄ±", "tezgah altÄ±"] },
+        { tag: "setalti", any: ["setaltı", "set altı", "tezgah altı"] },
         { tag: "giyotin", any: ["giyotin"] },
-        { tag: "konveyor", any: ["konveyÃ¶r", "konveyor"] },
-        { tag: "tirnakli", any: ["tÄ±rnaklÄ±"] },
-        { tag: "kazan", any: ["kazan yÄ±kama", "kazan"] },
+        { tag: "konveyor", any: ["konveyör", "konveyor"] },
+        { tag: "tirnakli", any: ["tırnaklı"] },
+        { tag: "kazan", any: ["kazan yıkama", "kazan"] },
       ],
       "hamur-hazirlik-makineleri": [
         { tag: "mikser", any: ["mikser", "planeter", "spiral"] },
         { tag: "blender", any: ["blender"] },
-        { tag: "hamur-acma", any: ["hamur aÃ§ma", "hamur acma", "aÃ§Ä±cÄ±", "aÃ§ma"] },
-        { tag: "yogurma", any: ["yoÄŸurma"] },
+        { tag: "hamur-acma", any: ["hamur açma", "hamur acma", "açıcı", "açma"] },
+        { tag: "yogurma", any: ["yoğurma"] },
       ],
       "et-hazirlik-makineleri": [
         { tag: "dilimleme", any: ["dilimleme", "dilim"] },
-        { tag: "kiyma", any: ["kÄ±yma"] },
+        { tag: "kiyma", any: ["kıyma"] },
         { tag: "vakum", any: ["vakum"] },
         { tag: "kemik", any: ["kemik testere", "testere"] },
       ],
@@ -743,7 +743,7 @@
       return "";
     }
 
-    /** AynÄ± kategori + (varsa) aynÄ± alt-tip; mevcut Ã¼rÃ¼n hariÃ§; marka Ã§eÅŸitliliÄŸi round-robin; en fazla 5. */
+    /** Aynı kategori + (varsa) aynı alt-tip; mevcut ürün hariç; marka çeşitliliği round-robin; en fazla 5. */
     function pickRelatedProducts(x, all, keyFn) {
       if (!x || !all || !all.length || !keyFn) return { items: [], mode: "" };
       var cat = x.category || "";
@@ -760,7 +760,7 @@
         if (!k || k === curKey || seen[k]) continue;
         if (curSubType && detectSubType(p, cat) !== curSubType) continue;
         seen[k] = 1;
-        var b = String(p.brand || "â€”");
+        var b = String(p.brand || "—");
         if (!byBrand[b]) {
           byBrand[b] = [];
           brands.push(b);
@@ -768,7 +768,7 @@
         byBrand[b].push(p);
       }
       if (!brands.length) return { items: [], mode: "" };
-      var curBrand = String(x.brand || "â€”");
+      var curBrand = String(x.brand || "—");
       brands.sort(function (a, b) {
         if (a === curBrand && b !== curBrand) return 1;
         if (b === curBrand && a !== curBrand) return -1;
@@ -797,7 +797,7 @@
       return { items: out, mode: "subcat" };
     }
 
-    /** Ãœst railâ€™de gÃ¶sterilenleri dÄ±ÅŸlayan, aynÄ± kategoride geniÅŸletilmiÅŸ Â«yardÄ±mcÄ± / ilgiliÂ» liste. */
+    /** Üst rail’de gösterilenleri dışlayan, aynı kategoride genişletilmiş «yardımcı / ilgili» liste. */
     function pickRelatedExtras(x, all, keyFn, excludeKeys, max) {
       if (!x || !all || !all.length || !keyFn) return [];
       var cat = x.category || "";
@@ -814,11 +814,11 @@
         if (excludeKeys && excludeKeys[k]) continue;
         if (seen[k]) continue;
         seen[k] = 1;
-        var b = String(p.brand || "â€”");
+        var b = String(p.brand || "—");
         if (!byBrand[b]) { byBrand[b] = []; brands.push(b); }
         byBrand[b].push(p);
       }
-      var curBrand = String(x.brand || "â€”");
+      var curBrand = String(x.brand || "—");
       brands.sort(function (a, b) {
         if (a === curBrand && b !== curBrand) return -1;
         if (b === curBrand && a !== curBrand) return 1;
@@ -847,19 +847,19 @@
       return out;
     }
 
-    /** Specs metninden "Bu Ã¼rÃ¼n hakkÄ±nda" bullet Ã¼retici: ilk N anlamlÄ± satÄ±r. */
+    /** Specs metninden "Bu ürün hakkında" bullet üretici: ilk N anlamlı satır. */
     function buildAboutBullets(specs, max) {
       var s = String(specs || "");
       if (!s.trim()) return [];
       var lines = s.split(/\r?\n/);
       var out = [];
-      var skipHeader = /^(genel\s*Ã¶zellikler|teknik\s*Ã¶zellikler|Ã¶zellikler|aÃ§Ä±klama)\s*:?\s*$/i;
+      var skipHeader = /^(genel\s*özellikler|teknik\s*özellikler|özellikler|açıklama)\s*:?\s*$/i;
       for (var i = 0; i < lines.length; i++) {
         var ln = String(lines[i] || "").trim();
         if (!ln) continue;
         if (skipHeader.test(ln)) continue;
-        // "Anahtar: DeÄŸer" satÄ±rlarÄ±nÄ± kabul et; sÃ¼slÃ¼ madde iÅŸaretlerini de soy
-        ln = ln.replace(/^[â€¢\-â€“â€”*Â·]+\s*/, "");
+        // "Anahtar: Değer" satırlarını kabul et; süslü madde işaretlerini de soy
+        ln = ln.replace(/^[•\-–—*·]+\s*/, "");
         if (ln.length < 4) continue;
         out.push(ln);
         if (out.length >= (max || 6)) break;
@@ -874,7 +874,7 @@
       var idx = -1;
       for (var i = 0; i < lines.length; i++) {
         var ln = lines[i].trim().toLocaleLowerCase("tr-TR");
-        if (/^teknik\s*[Ã¶o]zellikler[\s:]*$/.test(ln)) { idx = i; break; }
+        if (/^teknik\s*[öo]zellikler[\s:]*$/.test(ln)) { idx = i; break; }
       }
       if (idx < 0) return { left: s, right: "" };
       var left = lines.slice(0, idx).join("\n").replace(/\s+$/, "");
@@ -905,8 +905,8 @@
             '<div class="eq-mbg-name">'+esc((p.name||'').slice(0,55))+'</div>'+
           '</a>';
         }).join('');
-        return '<section class="eq-mbg-related" aria-label="Son gÃ¶rÃ¼ntÃ¼ledikleriniz">'+
-          '<div class="eq-mbg-head"><h2 class="eq-mbg-title">Son gÃ¶rÃ¼ntÃ¼ledikleriniz</h2></div>'+
+        return '<section class="eq-mbg-related" aria-label="Son görüntüledikleriniz">'+
+          '<div class="eq-mbg-head"><h2 class="eq-mbg-title">Son görüntüledikleriniz</h2></div>'+
           '<div class="eq-mbg-wrap"><div class="eq-mbg-track">'+cards+'</div></div>'+
         '</section>';
       } catch(_) { return ''; }
@@ -936,13 +936,13 @@
         })
         .join("");
       return (
-        '<section class="eq-mbg-related" aria-label="Bu Ã¼rÃ¼nleri de gÃ¶rÃ¼ntÃ¼leyenler">' +
+        '<section class="eq-mbg-related" aria-label="Bu ürünleri de görüntüleyenler">' +
         '<div class="eq-mbg-head">' +
-          '<h2 class="eq-mbg-title">MÃ¼ÅŸteriler bu Ã¼rÃ¼nleri de gÃ¶rÃ¼ntÃ¼ledi</h2>' +
+          '<h2 class="eq-mbg-title">Müşteriler bu ürünleri de görüntüledi</h2>' +
           '<span class="eq-mbg-page" id="eq-mbg-page">Sayfa 1 / 1</span>' +
         '</div>' +
         '<div class="eq-mbg-wrap">' +
-          '<button type="button" class="eq-mbg-arrow eq-mbg-prev" aria-label="Ã–nceki" onclick="eqMbgScroll(-1)">' +
+          '<button type="button" class="eq-mbg-arrow eq-mbg-prev" aria-label="Önceki" onclick="eqMbgScroll(-1)">' +
             '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
           '</button>' +
           '<button type="button" class="eq-mbg-arrow eq-mbg-next" aria-label="Sonraki" onclick="eqMbgScroll(1)">' +
@@ -1032,9 +1032,9 @@
     }
 
     function productFaqFor(x) {
-      var name = x.name || "bu Ã¼rÃ¼n";
-      var brand = x.brand || "Equsto kataloÄŸu";
-      var cat = x.category || "endÃ¼striyel mutfak";
+      var name = x.name || "bu ürün";
+      var brand = x.brand || "Equsto kataloğu";
+      var cat = x.category || "endüstriyel mutfak";
       var out = [];
       var seo = window.__eqCategorySeo;
       if (seo && seo.catalogCategories && x.category && seo.catalogCategories[x.category]) {
@@ -1043,20 +1043,20 @@
       }
       out = out.concat([
         {
-          q: name + " iÃ§in teklif nasÄ±l alÄ±nÄ±r?",
+          q: name + " için teklif nasıl alınır?",
           a:
-            "ÃœrÃ¼n sayfasÄ±ndaki Â«Sepete ekleÂ» veya Â«Åimdi alÂ» ile Proje FabrikasÄ± akÄ±ÅŸÄ±na geÃ§ebilir; kapasite ve proje bilgisiyle SatÄ±ÅŸ MÃ¼hendisliÄŸi ekibinden net teklif isteyebilirsiniz.",
+            "Ürün sayfasındaki «Sepete ekle» veya «Şimdi al» ile Proje Fabrikası akışına geçebilir; kapasite ve proje bilgisiyle Satış Mühendisliği ekibinden net teklif isteyebilirsiniz.",
         },
         {
-          q: brand + " " + name + " hangi projelerde kullanÄ±lÄ±r?",
+          q: brand + " " + name + " hangi projelerde kullanılır?",
           a:
             cat +
-            " kategorisindeki bu model; restoran, otel, catering, kafe ve bulut mutfak hatlarÄ±nda planlanan kapasiteye gÃ¶re seÃ§ilir.",
+            " kategorisindeki bu model; restoran, otel, catering, kafe ve bulut mutfak hatlarında planlanan kapasiteye göre seçilir.",
         },
         {
-          q: "GÃ¶rÃ¼nen fiyat kesin midir?",
+          q: "Görünen fiyat kesin midir?",
           a:
-            "Sayfadaki tutar katalog referansÄ±dÄ±r. Montaj, nakliye ve proje ÅŸartnamesine gÃ¶re nihai teklif Equsto tarafÄ±ndan onaylanÄ±r.",
+            "Sayfadaki tutar katalog referansıdır. Montaj, nakliye ve proje şartnamesine göre nihai teklif Equsto tarafından onaylanır.",
         },
       ]);
       return out.slice(0, 5);
@@ -1076,8 +1076,8 @@
         })
         .join("");
       return (
-        '<section class="eq-product-faq" aria-label="SÄ±k sorulan sorular">' +
-        "<h2>SÄ±k sorulan sorular</h2>" +
+        '<section class="eq-product-faq" aria-label="Sık sorulan sorular">' +
+        "<h2>Sık sorulan sorular</h2>" +
         items +
         "</section>"
       );
@@ -1093,9 +1093,9 @@
     }
 
     function renderProduct(x, all) {
-      var prodTitle = ((x.brand ? x.brand + ' ' : '') + (x.name || 'ÃœrÃ¼n')).slice(0, 80);
-      document.title = prodTitle + " â€” Equsto";
-      /* Canonical + OG meta gÃ¼ncellemeleri */
+      var prodTitle = ((x.brand ? x.brand + ' ' : '') + (x.name || 'Ürün')).slice(0, 80);
+      document.title = prodTitle + " — Equsto";
+      /* Canonical + OG meta güncellemeleri */
       try {
         var slug = productSlugEq(x);
         var path = eqPathForProductObj(x) || "/urun/" + slug;
@@ -1103,15 +1103,15 @@
         var canonEl = document.querySelector('link[rel="canonical"]');
         if (canonEl) canonEl.href = canonUrl;
         var ogTitle = document.querySelector('meta[property="og:title"]');
-        if (ogTitle) ogTitle.content = prodTitle + ' Â· Equsto';
+        if (ogTitle) ogTitle.content = prodTitle + ' · Equsto';
         var ogDesc = document.querySelector('meta[property="og:description"]');
-        if (ogDesc) ogDesc.content = (x.description || x.name || '') + ' â€” Equsto endÃ¼striyel mutfak kataloÄŸu.';
+        if (ogDesc) ogDesc.content = (x.description || x.name || '') + ' — Equsto endüstriyel mutfak kataloğu.';
         var ogUrl = document.querySelector('meta[property="og:url"]');
         if (ogUrl) ogUrl.content = canonUrl;
         var ogImg = document.querySelector('meta[property="og:image"]');
         if (ogImg && x.images && x.images[0]) ogImg.content = eqAbsoluteAssetUrl(x.images[0]);
 
-        /* JSON-LD Product Schema (Merchant Listing â€” geÃ§erli fiyat / SKU / kargo / iade) */
+        /* JSON-LD Product Schema (Merchant Listing — geçerli fiyat / SKU / kargo / iade) */
         var imgUrl = (x.images && x.images[0]) ? eqAbsoluteAssetUrl(x.images[0]) : "";
         var schema =
           window.EqustoMerchantSchema && typeof window.EqustoMerchantSchema.buildProductSchema === "function"
@@ -1120,7 +1120,7 @@
                 "@context": "https://schema.org",
                 "@type": "Product",
                 name: x.name || "",
-                description: x.description || (x.name + " â€” Equsto endÃ¼striyel mutfak ekipmanÄ±."),
+                description: x.description || (x.name + " — Equsto endüstriyel mutfak ekipmanı."),
                 brand: { "@type": "Brand", name: x.brand || "Equsto" },
                 sku: String(x.sku || x.code || slug).slice(0, 50),
                 url: canonUrl,
@@ -1153,7 +1153,7 @@
                   ? window.equstoUrl("shop")
                   : "https://equsto.com/shop",
             },
-            { "@type": "ListItem", "position": 3, "name": x.name || 'ÃœrÃ¼n', "item": canonUrl }
+            { "@type": "ListItem", "position": 3, "name": x.name || 'Ürün', "item": canonUrl }
           ]
         };
         var bcLdEl = document.getElementById('eq-product-bc-ld');
@@ -1203,13 +1203,13 @@
         bc.innerHTML =
           '<a href="' +
           esc(eqHtmlUrl(eqShopHref())) +
-          '">Ana Sayfa</a> â€º <a href="' +
+          '">Ana Sayfa</a> › <a href="' +
           esc(eqHtmlUrl(ref.href)) +
           '">' +
           esc(ref.label) +
-          "</a> â€º <span>" +
+          "</a> › <span>" +
           esc((x.name || "").slice(0, 80)) +
-          (x.name && x.name.length > 80 ? "â€¦" : "") +
+          (x.name && x.name.length > 80 ? "…" : "") +
           "</span>";
       }
       var imgs = collectProductImgs(x);
@@ -1219,7 +1219,7 @@
         n: x.name || "",
         p: extractCartPrice(x.price, x),
       };
-      var priceBlock = esc(x.price || "â€”");
+      var priceBlock = esc(x.price || "—");
       var heroRel =
         (x.images && x.images[0]) || oztiWebRelFromSku(x.sku || x.urun_kodu || x.model) || "";
       var heroImg = imgs.length
@@ -1231,7 +1231,7 @@
           ' alt="' +
           esc(x.name) +
           '" fetchpriority="high" decoding="async">'
-        : '<div class="eq-product-hero-img" style="display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--eq-text-subtle);min-height:240px;">GÃ¶rsel yok</div>';
+        : '<div class="eq-product-hero-img" style="display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--eq-text-subtle);min-height:240px;">Görsel yok</div>';
       var thumbs = "";
       if (imgs.length > 1) {
         thumbs =
@@ -1243,7 +1243,7 @@
                 esc(item.src) +
                 '" class="' +
                 (i === 0 ? "eq-product-thumb--active" : "") +
-                '" aria-label="GÃ¶rsel ' +
+                '" aria-label="Görsel ' +
                 (i + 1) +
                 '"><img src="' +
                 esc(item.src) +
@@ -1264,7 +1264,7 @@
       var familyRail =
         keyFn && all && all.length ? renderFamilyRail(x, all, keyFn) : "";
 
-      // Ãœstte family railâ€™de geÃ§enleri alt ÅŸerit tekrar etmesin
+      // Üstte family rail’de geçenleri alt şerit tekrar etmesin
       var exclude = Object.create(null);
       if (keyFn && all && all.length) {
         var topItems = pickRelatedProducts(x, all, keyFn).items || [];
@@ -1277,9 +1277,9 @@
         keyFn && all && all.length ? renderRelatedStrip(x, all, keyFn, exclude) : "";
 
       var modelLbl = shortModelLabel(x);
-      if (!modelLbl) modelLbl = "â€”";
+      if (!modelLbl) modelLbl = "—";
       var specRows =
-        '<tr><th>Marka</th><td>' + esc(x.brand || "â€”") + "</td></tr>" +
+        '<tr><th>Marka</th><td>' + esc(x.brand || "—") + "</td></tr>" +
         '<tr><th>Model</th><td>' + esc(modelLbl) + "</td></tr>" +
         '<tr><th>Kategori</th><td>' + esc(ref.label || "") + "</td></tr>";
 
@@ -1299,30 +1299,30 @@
         priceFrac = fracMatch[2] || "";
       }
       var priceHTML = priceTxt
-        ? '<span class="eq-buybox-currency">â‚º</span>' +
+        ? '<span class="eq-buybox-currency">?</span>' +
           '<span class="eq-buybox-int">' + esc(priceInt) + '</span>' +
           (priceFrac ? '<span class="eq-buybox-frac">' + esc(priceFrac) + '</span>' : '')
-        : '<span class="eq-buybox-currency">â‚º</span><span class="eq-buybox-int">â€”</span>';
+        : '<span class="eq-buybox-currency">?</span><span class="eq-buybox-int">—</span>';
 
-      // "Bu Ã¼rÃ¼n hakkÄ±nda" bullet listesi (specs'in left'inden)
+      // "Bu ürün hakkında" bullet listesi (specs'in left'inden)
       var aboutLines = buildAboutBullets(splitSpecsCols(x.specs).left || x.specs, 6);
       var aboutHTML = aboutLines.length
         ? '<ul>' + aboutLines.map(function(l){return '<li>'+esc(l)+'</li>';}).join('') + '</ul>'
-        : '<div class="eq-amz-about-empty">DetaylÄ± Ã¼rÃ¼n bilgisi iÃ§in teklif sÃ¼recinden talep edebilirsiniz.</div>';
+        : '<div class="eq-amz-about-empty">Detaylı ürün bilgisi için teklif sürecinden talep edebilirsiniz.</div>';
 
-      // YÄ±ldÄ±z rating placeholder (B2B, gerÃ§ek puan yok)
+      // Yıldız rating placeholder (B2B, gerçek puan yok)
       var ratingHTML =
-        '<span class="eq-amz-stars" aria-hidden="true">â˜…â˜…â˜…â˜…â˜…</span>' +
+        '<span class="eq-amz-stars" aria-hidden="true">?????</span>' +
         '<a class="eq-amz-rating-link" href="#" onclick="return false;">(yorum yok)</a>' +
-        '<span style="opacity:.55;">Â·</span>' +
+        '<span style="opacity:.55;">·</span>' +
         '<a class="eq-amz-rating-link" href="#" onclick="return false;">Soru sor</a>';
 
-      // Marka linki (departmana yÃ¶nlendir)
+      // Marka linki (departmana yönlendir)
       var brandHTML = x.brand
-        ? '<a class="eq-product-brand-link" href="' + esc(eqHtmlUrl(ref.href)) + '">' + esc(x.brand) + ' maÄŸazasÄ±nÄ± ziyaret edin</a>'
+        ? '<a class="eq-product-brand-link" href="' + esc(eqHtmlUrl(ref.href)) + '">' + esc(x.brand) + ' mağazasını ziyaret edin</a>'
         : '';
 
-      // Adet seÃ§ici (1â€“10)
+      // Adet seçici (1–10)
       var qtyOpts = '';
       for (var qi = 1; qi <= 10; qi++) qtyOpts += '<option value="'+qi+'">'+qi+'</option>';
 
@@ -1340,46 +1340,46 @@
         '<h1 class="eq-product-title">' + esc(x.name || "") + '</h1>' +
         '<div class="eq-amz-rating">' + ratingHTML + '</div>' +
         '<div class="eq-amz-about">' +
-          '<h2>Bu Ã¼rÃ¼n hakkÄ±nda</h2>' +
+          '<h2>Bu ürün hakkında</h2>' +
           aboutHTML +
         '</div>' +
         '<table class="eq-product-spec-tbl">' + specRows + "</table>" +
         "</div>" +
-        '<aside class="eq-product-buybox" aria-label="SatÄ±n al">' +
+        '<aside class="eq-product-buybox" aria-label="Satın al">' +
         '<div class="eq-buybox-price">' + priceHTML + '</div>' +
         '<div class="eq-buybox-kdv">KDV dahil fiyat</div>' +
-        '<div class="eq-buybox-deliver"><b>ÃœCRETSÄ°Z teslimat</b> anlaÅŸmalÄ± bayi aÄŸÄ± ile.<br><span style="color:#007185;">HÄ±zlÄ± teslimat iÃ§in tarih seÃ§in.</span></div>' +
+        '<div class="eq-buybox-deliver"><b>ÜCRETSİZ teslimat</b> anlaşmalı bayi ağı ile.<br><span style="color:#007185;">Hızlı teslimat için tarih seçin.</span></div>' +
         '<div class="eq-buybox-stock">Stokta var</div>' +
         '<div class="eq-buybox-qty"><label for="eq-qty">Adet:</label><select id="eq-qty">' + qtyOpts + '</select></div>' +
         '<div class="eq-product-actions">' +
           cartBtn +
-          '<a class="eq-amz-btn-buynow" href="' + esc(eqHtmlUrl(typeof window.equstoUrl === 'function' ? window.equstoUrl('pfos') : 'pfos.html')) + '">Åimdi al</a>' +
-          '<button type="button" class="eq-amz-btn-list" onclick="return false;">Listeye ekle â–¾</button>' +
+          '<a class="eq-amz-btn-buynow" href="' + esc(eqHtmlUrl(typeof window.equstoUrl === 'function' ? window.equstoUrl('pfos') : 'pfos.html')) + '">Şimdi al</a>' +
+          '<button type="button" class="eq-amz-btn-list" onclick="return false;">Listeye ekle ?</button>' +
         '</div>' +
         '<div class="eq-buybox-divider"></div>' +
         '<div class="eq-buybox-dl">' +
-          '<div><b>Teslimat</b> AnlaÅŸmalÄ± rota ile; bÃ¶lgeye gÃ¶re sÃ¼re satÄ±ÅŸ ekibinde netleÅŸir.</div>' +
-          '<div><b>Ä°ade</b> Teklif ve proje koÅŸullarÄ±na gÃ¶re; kurumsal sÃ¼reÃ§.</div>' +
+          '<div><b>Teslimat</b> Anlaşmalı rota ile; bölgeye göre süre satış ekibinde netleşir.</div>' +
+          '<div><b>İade</b> Teklif ve proje koşullarına göre; kurumsal süreç.</div>' +
         '</div>' +
         '<div class="eq-buybox-info">' +
-          '<div><b>SatÄ±cÄ±</b> <a class="eq-buybox-info-link" href="#" onclick="return false;">Equsto B2B</a></div>' +
-          '<div><b>GÃ¶nderi</b> AnlaÅŸmalÄ± bayi & kanal ortaklarÄ±</div>' +
-          '<div><b>Ã–deme</b> Havale Â· Kurumsal kart Â· Vade</div>' +
+          '<div><b>Satıcı</b> <a class="eq-buybox-info-link" href="#" onclick="return false;">Equsto B2B</a></div>' +
+          '<div><b>Gönderi</b> Anlaşmalı bayi & kanal ortakları</div>' +
+          '<div><b>Ödeme</b> Havale · Kurumsal kart · Vade</div>' +
         '</div>' +
-        '<div class="eq-buybox-secure">ğŸ”’ GÃ¼venli iÅŸlem</div>' +
+        '<div class="eq-buybox-secure">?? Güvenli işlem</div>' +
         "</aside>" +
         "</div>" +
         (function(){
           var sp = splitSpecsCols(x.specs);
           if (sp.right) {
-            return '<div class="eq-product-specs"><h2>Teknik Ã¶zellikler ve aÃ§Ä±klama</h2>' +
+            return '<div class="eq-product-specs"><h2>Teknik özellikler ve açıklama</h2>' +
               '<div class="eq-specs-cols">' +
-                '<pre>' + esc(sp.left || "â€”") + '</pre>' +
+                '<pre>' + esc(sp.left || "—") + '</pre>' +
                 '<pre>' + esc(sp.right) + '</pre>' +
               '</div></div>';
           }
-          return '<div class="eq-product-specs"><h2>Teknik Ã¶zellikler ve aÃ§Ä±klama</h2><pre>' +
-            esc(x.specs || "â€”") +
+          return '<div class="eq-product-specs"><h2>Teknik özellikler ve açıklama</h2><pre>' +
+            esc(x.specs || "—") +
             '</pre></div>';
         })() +
         renderProductFaqHtml(x) +
@@ -1445,7 +1445,7 @@
         });
         hero.setAttribute("tabindex", "0");
         hero.setAttribute("role", "button");
-        hero.setAttribute("aria-label", "GÃ¶rseli bÃ¼yÃ¼t");
+        hero.setAttribute("aria-label", "Görseli büyüt");
         lb.addEventListener("click", closeLb);
         if (xb) {
           xb.addEventListener("click", function (e) {
@@ -1471,7 +1471,7 @@
       var qs = new URLSearchParams(location.search || "");
       if (!window.EqustoShopCatalog || typeof window.EqustoShopCatalog.load !== "function") {
         document.getElementById("eq-product-root").innerHTML =
-          '<div class="eq-product-miss">Katalog yÃ¼kleyici yok. SayfayÄ± yenileyin; <code>ecom-data.js</code> ve <code>eq-shop-catalog-bootstrap.js</code> yÃ¼klÃ¼ olmalÄ±.</div>';
+          '<div class="eq-product-miss">Katalog yükleyici yok. Sayfayı yenileyin; <code>ecom-data.js</code> ve <code>eq-shop-catalog-bootstrap.js</code> yüklü olmalı.</div>';
         return;
       }
       var seoReady = fetch("/data/eq-category-seo.json", { credentials: "same-origin", cache: "default" })
@@ -1520,9 +1520,9 @@
           if (!x) {
             clearProductPageAccent();
             document.getElementById("eq-product-root").innerHTML =
-              '<div class="eq-product-miss">Bu Ã¼rÃ¼n bulunamadÄ±. Katalogdan tekrar seÃ§in veya ana sayfaya dÃ¶nÃ¼n.</div>';
+              '<div class="eq-product-miss">Bu ürün bulunamadı. Katalogdan tekrar seçin veya ana sayfaya dönün.</div>';
             var b = document.getElementById("eq-product-bc");
-            if (b) b.innerHTML = '<a href="' + esc(eqHtmlUrl(eqShopHref())) + '">Ana Sayfa</a> â€º <span>ÃœrÃ¼n</span>';
+            if (b) b.innerHTML = '<a href="' + esc(eqHtmlUrl(eqShopHref())) + '">Ana Sayfa</a> › <span>Ürün</span>';
             return;
           }
           if (window.EqFiyatlarBridge && window.EqFiyatlarBridge.applyToRaw) {
@@ -1530,7 +1530,7 @@
           }
           try {
             renderProduct(x, all);
-            /* Son gÃ¶rÃ¼ntÃ¼lenen Ã¼rÃ¼nleri localStorage'a kaydet (max 12) */
+            /* Son görüntülenen ürünleri localStorage'a kaydet (max 12) */
             try {
               var _slug = productSlugEq(x);
               var _key = 'eq_recently_viewed';
@@ -1543,11 +1543,11 @@
           } catch (renderErr) {
             var msg = renderErr && renderErr.message ? String(renderErr.message) : String(renderErr);
             document.getElementById("eq-product-root").innerHTML =
-              '<div class="eq-product-miss">Sayfa oluÅŸturulurken hata: ' +
+              '<div class="eq-product-miss">Sayfa oluşturulurken hata: ' +
               esc(msg) +
               "</div>";
             var bc2 = document.getElementById("eq-product-bc");
-            if (bc2) bc2.innerHTML = '<a href="' + esc(eqHtmlUrl(eqShopHref())) + '">Ana Sayfa</a> â€º <span>Hata</span>';
+            if (bc2) bc2.innerHTML = '<a href="' + esc(eqHtmlUrl(eqShopHref())) + '">Ana Sayfa</a> › <span>Hata</span>';
           }
         })
         .catch(function (err) {
@@ -1555,11 +1555,11 @@
           var msg =
             err && err.message
               ? String(err.message)
-              : "AÄŸ veya dosya hatasÄ± (file:// ise Katalogu-Ac.bat / npm run dev kullanÄ±n).";
+              : "Ağ veya dosya hatası (file:// ise Katalogu-Ac.bat / npm run dev kullanın).";
           document.getElementById("eq-product-root").innerHTML =
-            '<div class="eq-product-miss">ÃœrÃ¼n verisi yÃ¼klenemedi. ' + esc(msg) + "</div>";
+            '<div class="eq-product-miss">Ürün verisi yüklenemedi. ' + esc(msg) + "</div>";
           var bc3 = document.getElementById("eq-product-bc");
-          if (bc3) bc3.innerHTML = '<a href="' + esc(eqHtmlUrl(eqShopHref())) + '">Ana Sayfa</a> â€º <span>YÃ¼klenemedi</span>';
+          if (bc3) bc3.innerHTML = '<a href="' + esc(eqHtmlUrl(eqShopHref())) + '">Ana Sayfa</a> › <span>Yüklenemedi</span>';
         });
       });
     });
@@ -1567,12 +1567,12 @@
   </script>
 
   <div class="drawer-overlay" id="drawerOverlay" onclick="__eqDrawerBackdropClick(event)">
-    <button type="button" class="drawer-overlay-close" onclick="__eqDrawerCloseX(event)" aria-label="Kapat">Ã—</button>
+    <button type="button" class="drawer-overlay-close" onclick="__eqDrawerCloseX(event)" aria-label="Kapat">×</button>
   </div>
   <div class="cat-drawer eq-amazon-shop-all" id="catDrawer" aria-hidden="true"></div>
 
-  <div id="eq-pdp-lightbox" class="eq-pdp-lightbox" hidden role="dialog" aria-modal="true" aria-label="ÃœrÃ¼n gÃ¶rseli">
-    <button type="button" class="eq-pdp-lightbox-x" aria-label="Kapat">Ã—</button>
+  <div id="eq-pdp-lightbox" class="eq-pdp-lightbox" hidden role="dialog" aria-modal="true" aria-label="Ürün görseli">
+    <button type="button" class="eq-pdp-lightbox-x" aria-label="Kapat">×</button>
     <img src="" alt="" onclick="event.stopPropagation()">
   </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"2800f8a675244419a90a426a1a3e6854","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>

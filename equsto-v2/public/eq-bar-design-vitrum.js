@@ -160,24 +160,22 @@
     el.innerHTML =
       '<section class="bd-vl-method" aria-label="Yöntemimiz">' +
       '<div class="bd-vl-method-head">' +
-      '<p class="bd-vl-kicker">' +
-      esc(lang() === "en" ? "Our method" : "Yöntemimiz") +
-      "</p>" +
       "<h2>" +
-      esc(lang() === "en" ? "Concept to commissioning" : "Konseptten devreye almaya") +
+      esc(lang() === "en" ? "Our method" : "Yöntemimiz") +
       "</h2>" +
       "</div>" +
       '<ol class="bd-vl-method-list">' +
       (data.method || [])
         .map(function (step) {
+          var title = pick(step, "title", "titleEn");
           return (
-            "<li><span class=\"bd-vl-method-n\">" +
+            "<li><h3>" +
+            esc(title) +
+            "<sup>" +
             esc(step.n) +
-            '</span><div><h3>' +
-            esc(pick(step, "title", "titleEn")) +
-            "</h3><p>" +
+            "</sup></h3><p>" +
             esc(pick(step, "text", "textEn")) +
-            "</p></div></li>"
+            "</p></li>"
           );
         })
         .join("") +

@@ -29,6 +29,8 @@
     "contact": "İletişim",
     "request_quote": "Teklif iste",
     "request_quote_arrow": "Teklif iste →",
+    "add_to_cart": "Sepete Ekle",
+    "contact_us": "İletişime Geç",
     "view_all": "Tümünü gör",
     "loading": "Yükleniyor…",
     "back_to_home": "Ana sayfaya dön",
@@ -280,7 +282,7 @@
     "hero_photo_alt": "Besos modüler paslanmaz kokteyl istasyonu",
     "hero_product_label": "Skyra IMT300 · Berrak buz makinesi",
     "hero_go_page": "Sayfaya Git",
-    "hero_price_hint": "Liste fiyatı: <strong>11.500 €</strong> · teklif için iletişim",
+    "hero_price_hint": "Liste fiyatı: 11.500 € · teklif için iletişim",
 
     "cover_aria": "Besos editöryel kapak",
     "cover_meta": "Besos · Bar Design Studio",

@@ -29,9 +29,13 @@
 
   function normAsset(p) {
     if (!p) return "";
-    var s = String(p).replace(/\\/g, "/");
-    if (s.indexOf("vitrum-drawings/") === 0 || s.indexOf("images/") === 0) {
-      s = "data/" + s;
+    var s = String(p).replace(/\\/g, "/").trim();
+    if (/^https?:\/\//i.test(s)) return s;
+    if (typeof window.eqProductImgSrc === "function") {
+      try {
+        var via = window.eqProductImgSrc(s);
+        if (via) return via;
+      } catch (_) {}
     }
     if (typeof window.equstoDataAssetHref === "function") {
       return window.equstoDataAssetHref(s.replace(/^data\//, ""));
@@ -84,10 +88,11 @@
     var feats = field(p, "features");
     var total = nz(p.totalDimensionsMm);
     var heroImg = nz(p.image) ? normAsset(p.image) : "";
-    var drawImg = nz(p.drawing) ? normAsset(p.drawing) : "";
     var slug = typeof window.vitrumModuleSlug === "function" ? window.vitrumModuleSlug(p) : "";
+    var pageRef = p.page ? " · P." + String(p.page) : "";
+    var techSection = "";
 
-    document.title = name + " · Besos · Bar Design Studio";
+    document.title = name + " · Equsto Bar Studio";
     var meta = document.querySelector('meta[name="description"]');
     if (meta && desc) meta.setAttribute("content", desc.slice(0, 160));
     var canon = document.querySelector('link[rel="canonical"]');
@@ -124,58 +129,72 @@
         "</div>";
     }
 
+    var priceHtml =
+      window.EqBesosPricing && window.EqBesosPricing.priceLabel(p, { style: "html" })
+        ? '<div class="bm-price">' + window.EqBesosPricing.priceLabel(p, { style: "html" }) + "</div>"
+        : "";
+
     root.innerHTML =
+      '<article class="bm-article">' +
       '<nav class="bm-crumb" aria-label="Breadcrumb">' +
       '<a href="/">Equsto</a> · <a href="' +
       esc(besosHref()) +
-      '">Bar Design</a> · <span>' +
+      '">Besos</a> · <span>' +
       esc(name) +
       "</span></nav>" +
-      '<div class="bm-grid">' +
-      '<div class="bm-hero">' +
-      (heroImg
-        ? '<img src="' + esc(heroImg) + '" alt="' + esc(name) + '">'
-        : '<span class="bm-hero-empty">Görsel hazırlanıyor</span>') +
-      "</div>" +
-      "<div>" +
+      '<header class="bm-intro">' +
       '<p class="bm-kicker">' +
       esc(cat) +
-      (p.page ? " · P." + esc(String(p.page)) : "") +
+      pageRef +
       "</p>" +
-      "<h1 class=\"bm-title\">" +
+      '<h1 class="bm-title">' +
       esc(name) +
       "</h1>" +
       (code ? '<p class="bm-code">' + esc(code) + "</p>" : "") +
+      "</header>" +
+      '<div class="bm-layout">' +
+      '<div class="bm-media-col">' +
+      '<div class="bm-hero-frame">' +
+      (heroImg
+        ? '<img src="' + esc(heroImg) + '" alt="' + esc(name) + '">'
+        : '<span class="bm-hero-empty">Görsel hazırlanıyor</span>') +
+      "</div></div>" +
+      '<div class="bm-info-col">' +
+      '<div class="bm-buybox">' +
+      priceHtml +
       (desc ? '<p class="bm-desc">' + esc(desc) + "</p>" : "") +
-      (total ? '<div class="bm-dim">Toplam ' + esc(total) + " mm</div>" : "") +
+      (total
+        ? '<div class="bm-dim-badge"><span>Toplam ölçü</span> ' + esc(total) + " mm</div>"
+        : "") +
       dimsHtml +
       featsHtml +
       '<div class="bm-actions">' +
-      '<a class="bm-btn bm-btn-primary" href="pfos.html">Teklif iste →</a>' +
-      '<a class="bm-btn" href="' +
-      esc(besosHref()) +
-      '#bd-stations">Tüm modüller</a>' +
-      (drawImg
-        ? '<a class="bm-btn" href="' +
-          esc(drawImg) +
-          '" target="_blank" rel="noopener">Teknik çizim</a>'
-        : "") +
+      '<div class="bm-actions-primary">' +
+      '<button type="button" class="bm-btn bm-btn-primary" id="bm-add-cart">Sepete Ekle</button>' +
+      '<button type="button" class="bm-btn bm-btn-outline" id="bm-contact">İletişime Geç</button>' +
       "</div>" +
-      (drawImg
-        ? '<section class="bm-tech" aria-label="Teknik çizim">' +
-          '<h2 class="bm-tech-h">Teknik çizim</h2>' +
-          '<img src="' +
-          esc(drawImg) +
-          '" alt="Teknik çizim — ' +
-          esc(name) +
-          '" loading="lazy">' +
-          "</section>"
-        : "") +
-      "</div></div>";
+      '<a class="bm-btn bm-btn-ghost" href="' +
+      esc(besosHref()) +
+      '#bd-stations">← Tüm modüller</a>' +
+      "</div></div></div></div>" +
+      techSection +
+      '<footer class="bm-foot"><a href="' +
+      esc(besosHref()) +
+      '">Besos Bar Design Studio vitrinine dön</a></footer>' +
+      "</article>";
 
-    root.innerHTML = root.innerHTML
-      .replace(/<motion/g, "<div")
-      .replace(/<\/motion>/g, "</div>");
+    var cartBtn = document.getElementById("bm-add-cart");
+    var contactBtn = document.getElementById("bm-contact");
+    if (cartBtn && window.EqBesosActions) {
+      cartBtn.addEventListener("click", function () {
+        window.EqBesosActions.addToCart(p);
+      });
+    }
+    if (contactBtn && window.EqBesosActions) {
+      contactBtn.addEventListener("click", function () {
+        window.EqBesosActions.openContact(p);
+      });
+    }
   }
 
   function renderError() {

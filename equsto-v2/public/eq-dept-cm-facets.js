@@ -88,25 +88,42 @@
     return list;
   }
 
-  function resolveFacetBrand(brand, name) {
+  /** Filtre etiketi: «Atalay Endüstriyel…» → «Atalay», «Öztiryakiler Endüstriyel…» → «Öztiryakiler». */
+  function canonicalFacetBrand(brand) {
     var b = String(brand || '').trim();
     if (!b) return '';
-    if (!OEM_RESELLER.test(lc(b))) return b;
+    var bl = lc(b);
+    if (bl.indexOf('atalay') === 0) return 'Atalay';
+    if (bl.indexOf('oztiryakiler') === 0 || bl.indexOf('öztiryakiler') === 0) return 'Öztiryakiler';
+    return b;
+  }
+
+  function facetBrandKey(brand) {
+    return canonicalFacetBrand(brand) || String(brand || '').trim();
+  }
+
+  function resolveFacetBrand(brand, name) {
+    var raw = String(brand || '').trim();
+    if (!raw) return '';
+    var canon = canonicalFacetBrand(raw);
+    if (canon !== raw) return canon;
+    if (!OEM_RESELLER.test(lc(raw))) return raw;
     var n = String(name || '').trim();
-    if (!n) return b;
+    if (!n) return raw;
     var nl = lc(n);
     var prefixes = oemNamePrefixes();
     for (var pi = 0; pi < prefixes.length; pi++) {
       var p = prefixes[pi];
       if (nl.indexOf(lc(p)) === 0) return p;
     }
-    return b;
+    return raw;
   }
 
   function productBrand(u) {
     if (!u) return '';
-    if (u.fb) return String(u.fb).trim();
-    return resolveFacetBrand(u.b, u.n);
+    var raw = String((u.fb || u.b || '')).trim();
+    if (!raw) return resolveFacetBrand(u.b, u.n);
+    return facetBrandKey(raw);
   }
 
   function matchEnergy(u, energyId) {
@@ -150,7 +167,7 @@
       var priceMinAll = Infinity;
       var priceMaxAll = 0;
       pool.forEach(function (u) {
-        var b = (u.b || '').trim();
+        var b = productBrand(u);
         if (b) brandCounts[b] = (brandCounts[b] || 0) + 1;
         var model = extractModel(u.n, u.b);
         if (model) modelCounts[model] = (modelCounts[model] || 0) + 1;
@@ -179,7 +196,8 @@
 
     var brands = Object.keys(brandCounts);
     (state.brands || []).forEach(function (b) {
-      if (b && brands.indexOf(b) < 0) brands.push(b);
+      var k = facetBrandKey(b);
+      if (k && brands.indexOf(k) < 0) brands.push(k);
     });
     brands.sort(function (a, b) {
       return (brandCounts[b] || 0) - (brandCounts[a] || 0);
@@ -274,17 +292,23 @@
       '<input type="search" class="eq-cm-facet__search" id="eq-dept-cm-brand-q" placeholder="Marka ara" autocomplete="off">' +
       '<ul class="eq-cm-facet__list" id="eq-dept-cm-brand-list">';
     brands.slice(0, 80).forEach(function (b) {
-      var checked = (state.brands || []).indexOf(b) >= 0 ? ' checked' : '';
+      var label = facetBrandKey(b);
+      var checked =
+        (state.brands || []).some(function (sb) {
+          return facetBrandKey(sb) === label;
+        })
+          ? ' checked'
+          : '';
       html +=
         '<li class="eq-cm-facet__item" data-brand-label="' +
-        esc(lc(b)) +
+        esc(lc(label)) +
         '"><label class="eq-cm-facet__label">' +
         '<input type="checkbox" name="eq-dept-cm-brand" value="' +
-        esc(b) +
+        esc(label) +
         '"' +
         checked +
         '><span>' +
-        esc(b) +
+        esc(label) +
         '</span><span class="eq-cm-facet__count">(' +
         brandCounts[b] +
         ')</span></label></li>';
@@ -431,7 +455,8 @@
       chips.push({ type: 'tile', value: tid, text: label });
     });
     (state.brands || []).forEach(function (b) {
-      chips.push({ type: 'brand', value: b, text: b });
+      var label = facetBrandKey(b);
+      chips.push({ type: 'brand', value: label, text: label });
     });
     (state.models || []).forEach(function (m) {
       chips.push({ type: 'model', value: m, text: m });
@@ -485,6 +510,8 @@
     matchEnergy: matchEnergy,
     parsePriceNum: parsePriceNum,
     resolveFacetBrand: resolveFacetBrand,
+    facetBrandKey: facetBrandKey,
+    canonicalFacetBrand: canonicalFacetBrand,
     productBrand: productBrand,
   };
 })(typeof window !== 'undefined' ? window : global);

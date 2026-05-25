@@ -1,10 +1,10 @@
-ï»¿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Arama â€” Equsto</title>
-<meta name="description" content="Equsto Ã¼rÃ¼n aramasÄ± â€” Meilisearch">
+<title>Arama — Equsto</title>
+<meta name="description" content="Equsto ürün araması — Meilisearch">
 <meta name="robots" content="noindex, follow">
 <link rel="icon" href="/images/favicon.svg?v=20260522natural" type="image/svg+xml">
 <link rel="stylesheet" href="/theme.css?v=20260519topnavstatic">
@@ -47,29 +47,29 @@ body.eq-arama-page .eq-arama-grid {
   <div class="pg-inner hdr-pg-inner">
     <div class="hdr-alici">
       <div style="font-size:9px;color:var(--eq-text-subtle);">Teslimat Adresi</div>
-      <div style="font-size:11px;font-weight:600;">Ä°stanbul, TÃ¼rkiye</div>
+      <div style="font-size:11px;font-weight:600;">İstanbul, Türkiye</div>
     </div>
     <div class="srch">
-      <div class="srch-cat" onclick="toggleDrawer()">â˜° TÃ¼m Kategoriler</div>
-      <input class="srch-input" type="search" placeholder="ÃœrÃ¼n, marka veya kategori ara..." autocomplete="off">
+      <div class="srch-cat" onclick="toggleDrawer()">? Tüm Kategoriler</div>
+      <input class="srch-input" type="search" placeholder="Ürün, marka veya kategori ara..." autocomplete="off">
       <button type="button" class="srch-btn" aria-label="Ara"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.25" stroke="currentColor" stroke-width="1.35"/><line x1="12.35" y1="12.35" x2="17.85" y2="12.35" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/></svg></button>
     </div>
     <div class="hdr-right">
-      <button type="button" class="theme-toggle" id="theme-toggle" onclick="equstoCycleTheme()" title="Tema">â—</button>
-      <a href="/login.html" class="eq-hdr-account">HesabÄ±m</a>
+      <button type="button" class="theme-toggle" id="theme-toggle" onclick="equstoCycleTheme()" title="Tema">?</button>
+      <a href="/login.html" class="eq-hdr-account">Hesabım</a>
     </div>
   </div>
 </header>
 
 <nav class="topnav" aria-label="Departmanlar">
   <div class="pg-inner topnav-inner">
-    <div class="topnav-item topnav-all" onclick="toggleDrawer()">â˜° TÃ¼m kategoriler</div>
+    <div class="topnav-item topnav-all" onclick="toggleDrawer()">? Tüm kategoriler</div>
     <span class="topnav-sep">|</span>
-    <div class="topnav-item topnav-pfos" onclick="eqGo('pfos')">Proje FabrikasÄ±</div>
+    <div class="topnav-item topnav-pfos" onclick="eqGo('pfos')">Proje Fabrikası</div>
     <span class="topnav-sep">|</span>
-    <div class="topnav-item" onclick="eqGo('pisirme')">PiÅŸirme</div>
+    <div class="topnav-item" onclick="eqGo('pisirme')">Pişirme</div>
     <span class="topnav-sep">|</span>
-    <div class="topnav-item" onclick="eqGo('sogutma')">SoÄŸutma</div>
+    <div class="topnav-item" onclick="eqGo('sogutma')">Soğutma</div>
     <span class="topnav-sep">|</span>
     <div class="topnav-item" onclick="eqGo('kahve')">Kahve</div>
     <span class="topnav-sep">|</span>
@@ -81,12 +81,12 @@ body.eq-arama-page .eq-arama-grid {
   <h1 class="eq-arama-title" id="eq-arama-title">Arama</h1>
   <p class="eq-arama-count" id="eq-arama-count"></p>
   <div class="eq-arama-grid" id="eq-arama-grid" role="list">
-    <p class="eq-dept-plp-status">YÃ¼kleniyorâ€¦</p>
+    <p class="eq-dept-plp-status">Yükleniyor…</p>
   </div>
 </main>
 
 <div class="drawer-overlay" id="drawerOverlay" onclick="__eqDrawerBackdropClick(event)">
-  <button type="button" class="drawer-overlay-close" onclick="__eqDrawerCloseX(event)" aria-label="Kapat">Ã—</button>
+  <button type="button" class="drawer-overlay-close" onclick="__eqDrawerCloseX(event)" aria-label="Kapat">×</button>
 </div>
 <div class="cat-drawer eq-amazon-shop-all" id="catDrawer" aria-hidden="true"></div>
 

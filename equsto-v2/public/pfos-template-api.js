@@ -4,6 +4,7 @@
    * PFOS konsept şablonu → POST /api/pfos/calculate
    * EqustoPfosTemplateApi.calculate({ konsept, m2, fiyatStratejisi, sehir })
    */
+  var API_QUOTE = "/api/pfos/quote";
   var API_CALC = "/api/pfos/calculate";
   var API_KONSEPT = "/api/pfos/konseptler";
   var FALLBACK_KONSEPT = "/data/pfos-konseptler.json?v=20260522";
@@ -50,11 +51,16 @@
       var u = k.urun;
       var dept = KAT_DEPT[k.kategoriKodu] || "pisirme";
       var marka = u ? u.marka + (u.model ? " — " + u.model : "") : "—";
+      var adet = Math.max(1, Number(k.adet) || 1);
       var row = {
         kod: u && u.sku ? String(u.sku) : "PFOS-" + (k.poz || k.urunTipi),
+        tip_kodu: k.urunTipi || "",
         ad: u ? u.ad : k.isim,
         marka: marka,
-        adet: Math.max(1, Number(k.adet) || 1),
+        olcu: u && u.model ? String(u.model) : "",
+        dimensions: u && u.model ? String(u.model) : "",
+        adet: adet,
+        birim: 0,
         elk: u && u.elektrikGucuKw != null ? Number(u.elektrikGucuKw) : Number(k.elektrikGucuKwHint) || 0,
         gaz: u && u.gazGucuKw != null ? Number(u.gazGucuKw) : Number(k.gazGucuKwHint) || 0,
         pct: 0,
@@ -63,13 +69,18 @@
         pfosUrunTipi: k.urunTipi,
         pfosTip: k.tip,
         pfosKonsept: pfosData.konsept,
+        pfZone: k.zoneKey || "",
+        pfZoneLabel: k.zoneLabel || "",
+        pfCatM2:
+          pfosData.bolumM2 && k.zoneKey && pfosData.bolumM2[k.zoneKey] != null
+            ? Number(pfosData.bolumM2[k.zoneKey])
+            : undefined,
         equstoPage: u && u.slug ? "/shop/" + dept + "?q=" + encodeURIComponent(u.slug) : "",
+        lineTotal: 0,
+        fiyat_net: false,
+        fiyat_haric: false,
+        fiyat_kaynak: "eticaret",
       };
-      if (u && Number(u.fiyat) > 0) {
-        row.birim = Math.round(Number(u.fiyat));
-        row.fiyat_net = true;
-        row.fiyat_kaynak = "db";
-      }
       out.push(row);
     }
     return out;
@@ -95,18 +106,21 @@
     var body = {
       konsept: opts.konsept,
       m2: Number(opts.m2),
-      fiyatStratejisi: opts.fiyatStratejisi || "orta",
+      fiyatStratejisi: opts.fiyatStratejisi || "ekonomik",
       sehir: opts.sehir || undefined,
+      lokasyon: opts.lokasyon || undefined,
+      bolumM2: opts.bolumM2 || undefined,
+      teslimatAdresi: opts.teslimatAdresi || undefined,
     };
     if (!body.konsept) throw new Error("konsept zorunlu");
-    var r = await fetch(API_CALC, {
+    var r = await fetch(API_QUOTE, {
       method: "POST",
       headers: { "Content-Type": "application/json", Accept: "application/json" },
       body: JSON.stringify(body),
     });
     var j = await r.json();
     if (!r.ok) throw new Error(j.error || "HTTP " + r.status);
-    return j.data;
+    return j;
   }
 
   window.EqustoPfosTemplateApi = {

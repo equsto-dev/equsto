@@ -1,7 +1,7 @@
 ;(function () {
   'use strict';
 
-  var TEMPLATE_URL = '/data/templates/equsto_teklif_v13.xlsx';
+  var TEMPLATE_URL = '/data/templates/equsto_teklif_v14.xlsx';
   var PRODUCT_BLOCK_START = 5;
   var PRODUCT_BLOCK_ROWS = 16;
   var DATA_TEMPLATE_ROW = 6;

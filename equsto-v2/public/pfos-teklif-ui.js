@@ -89,6 +89,29 @@
     return s + ' \u20ba';
   }
 
+  function pfosFmtRowPrice(row, cur, which) {
+    var r = row || {};
+    if (
+      r.fiyat_haric === true ||
+      r.fiyat_kaynak === 'haric' ||
+      (window.EqustoPfosPricing &&
+        typeof EqustoPfosPricing.isRowHaric === 'function' &&
+        EqustoPfosPricing.isRowHaric(r))
+    ) {
+      return 'hari\u00e7';
+    }
+    var amount = Number(r.birim) || 0;
+    if (which === 'line') {
+      amount =
+        window.EqustoPfosCalc && typeof EqustoPfosCalc.rowLineTotal === 'function'
+          ? EqustoPfosCalc.rowLineTotal(r)
+          : r.lineTotal != null
+            ? r.lineTotal
+            : amount * (Number(r.adet) || 1);
+    }
+    return pfosFmtMoney(amount, cur);
+  }
+
   function pfosFmtProformaMoney(n, cur) {
     var v = Number(n) || 0;
     if (cur === 'EUR') {
@@ -529,6 +552,10 @@
   }
 
   function lineTotalRow(r) {
+    if (window.EqustoPfosCalc && typeof EqustoPfosCalc.rowLineTotal === 'function') {
+      return EqustoPfosCalc.rowLineTotal(r);
+    }
+    if (r.fiyat_haric || r.fiyat_kaynak === 'haric') return 0;
     return r.lineTotal != null
       ? r.lineTotal
       : (Number(r.birim) || 0) * (Number(r.adet) || 1);
@@ -627,8 +654,13 @@
       }
       var r = ln.r;
       var dims = parseDimParts(r);
-      var birimEur = eurFromTl(ln.birim, c);
-      var lineEur = eurFromTl(ln.line, c);
+      var haric = pfosFmtRowPrice(r, 'TRY', 'unit') === 'hari\u00e7';
+      var birimCell = haric
+        ? 'hari\u00e7'
+        : pfosFmtProformaMoney(eurFromTl(ln.birim, c), 'EUR');
+      var lineCell = haric
+        ? 'hari\u00e7'
+        : pfosFmtProformaMoney(eurFromTl(ln.line, c), 'EUR');
       aoa.push([
         ln.bol, ln.grup, ln.poz, ln.ek || '',
         stokNoPlain(r), tanimBaslikPlain(r), kaynakPlain(r),
@@ -636,8 +668,8 @@
         dims ? String(dims.en) + ' X' : '',
         dims ? String(dims.yuk) : '',
         ln.adet,
-        pfosFmtProformaMoney(birimEur, 'EUR'),
-        pfosFmtProformaMoney(lineEur, 'EUR'),
+        birimCell,
+        lineCell,
         'EUR',
       ]);
 
@@ -793,17 +825,20 @@
     var grand = 0;
 
     function lineTotal(r) {
-      return r.lineTotal != null
-        ? r.lineTotal
-        : (Number(r.birim) || 0) * (Number(r.adet) || 1);
+      return lineTotalRow(r);
     }
 
     function productRows(r, bol, grup, poz, ek) {
       var adet = Number(r.adet) || 1;
-      var birimEur = eurFromTl(Number(r.birim) || 0, c);
-      var lineEur = eurFromTl(lineTotal(r), c);
+      var haric = pfosFmtRowPrice(r, currency, 'unit') === 'hari\u00e7';
+      var birimCell = haric
+        ? 'hari\u00e7'
+        : pfosFmtProformaMoney(eurFromTl(Number(r.birim) || 0, c), currency);
+      var lineCell = haric
+        ? 'hari\u00e7'
+        : pfosFmtProformaMoney(eurFromTl(lineTotal(r), c), currency);
       var dim = pfosInoksanDim(r);
-      grand += lineEur;
+      if (!haric) grand += eurFromTl(lineTotal(r), c);
       tbody +=
         '<tr class="pfos-pf-row">' +
         '<td class="c-bol">' +
@@ -840,10 +875,10 @@
         escHtml(String(adet)) +
         '</td>' +
         '<td class="c-num c-birim">' +
-        pfosFmtProformaMoney(birimEur, currency) +
+        birimCell +
         '</td>' +
         '<td class="c-num c-toplam">' +
-        pfosFmtProformaMoney(lineEur, currency) +
+        lineCell +
         '</td>' +
         '<td class="c-doviz">EUR</td></tr>';
       tbody +=
@@ -986,17 +1021,20 @@
     var pozGlobal = 0;
 
     function lineTotal(r) {
-      return r.lineTotal != null
-        ? r.lineTotal
-        : (Number(r.birim) || 0) * (Number(r.adet) || 1);
+      return lineTotalRow(r);
     }
 
     function productRows(r, bol, grup, poz, ek) {
       var adet = Number(r.adet) || 1;
-      var birimEur = eurFromTl(Number(r.birim) || 0, c);
-      var lineEur = eurFromTl(lineTotal(r), c);
+      var haric = pfosFmtRowPrice(r, currency, 'unit') === 'hari\u00e7';
+      var birimCell = haric
+        ? 'hari\u00e7'
+        : pfosFmtProformaMoney(eurFromTl(Number(r.birim) || 0, c), currency);
+      var lineCell = haric
+        ? 'hari\u00e7'
+        : pfosFmtProformaMoney(eurFromTl(lineTotal(r), c), currency);
       var dim = pfosInoksanDim(r);
-      grand += lineEur;
+      if (!haric) grand += eurFromTl(lineTotal(r), c);
       tbody +=
         '<tr class="pfos-v10-item">' +
         '<td class="c-bol">' +
@@ -1033,10 +1071,10 @@
         escHtml(String(adet)) +
         '</td>' +
         '<td class="c-num c-birim">' +
-        pfosFmtProformaMoney(birimEur, currency) +
+        birimCell +
         '</td>' +
         '<td class="c-num c-toplam">' +
-        pfosFmtProformaMoney(lineEur, currency) +
+        lineCell +
         '</td>' +
         '<td class="c-doviz">EUR</td></tr>';
       tbody +=
@@ -1275,8 +1313,7 @@
         var curBrand = brandByZone[z.key] || zoneDominantBrand(z.rows) || '';
         var tbody = '';
         (z.rows || []).forEach(function (r) {
-          var line =
-            r.lineTotal != null ? r.lineTotal : (Number(r.birim) || 0) * (Number(r.adet) || 1);
+          var line = lineTotalRow(r);
           var olcu = r.olcu || r.olcuText || '\u2014';
           var marka = String((r.pfB || r.marka) || '').trim() || '\u2014';
           tbody +=
@@ -1294,10 +1331,10 @@
             escHtml(String(r.adet)) +
             '</td>' +
             '<td class="num">' +
-            pfosFmtMoney(r.birim, cur) +
+            pfosFmtRowPrice(r, cur, 'unit') +
             '</td>' +
             '<td class="num">' +
-            pfosFmtMoney(line, cur) +
+            pfosFmtRowPrice(r, cur, 'line') +
             '</td></tr>';
           if (r.davlumbaz) {
             tbody +=
@@ -1327,7 +1364,7 @@
           '</span>' +
           '<span class="pfos-cat__chevron" aria-hidden="true"></span></div></summary>' +
           '<div class="pfos-cat__body"><table class="pfos-cat__table"><thead><tr>' +
-          '<th>\u00dcr\u00fcn ad\u0131</th><th>\u00d6l\u00e7\u00fc</th><th class="num">Ad.</th><th class="num">Birim</th><th class="num">Toplam</th>' +
+          '<th>\u00dcr\u00fcn ad\u0131</th><th>Marka</th><th>\u00d6l\u00e7\u00fc</th><th class="num">Ad.</th><th class="num">Birim</th><th class="num">Toplam</th>' +
           '</tr></thead><tbody>' +
           tbody +
           '</tbody></table>' +
@@ -1352,6 +1389,7 @@
     downloadProformaExcel: downloadProformaExcel,
     pfosProformaSartlarItems: pfosProformaSartlarItems,
     pfosFmtMoney: pfosFmtMoney,
+    pfosFmtRowPrice: pfosFmtRowPrice,
     pfosDimMm: pfosDimMm,
   };
 })();

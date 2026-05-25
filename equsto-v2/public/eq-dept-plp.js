@@ -251,6 +251,9 @@
   }
 
   function brandKey(u) {
+    if (window.EqDeptCmFacets && window.EqDeptCmFacets.facetBrandKey) {
+      return window.EqDeptCmFacets.facetBrandKey((u && u.fb) || (u && u.b) || '');
+    }
     if (window.EqDeptCmFacets && window.EqDeptCmFacets.productBrand) {
       return window.EqDeptCmFacets.productBrand(u);
     }
