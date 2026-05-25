@@ -46,6 +46,16 @@ function pdfGrillAliases(model) {
       if (slash[4]) out.push(`${p}-${sz}-CR`);
     }
   }
+  const hyphenGrill = m.match(/^(AEI|AGI)[-\s]*(\d+)\s*\/\s*(N|ND|D)(?:\s*(CR))?$/i);
+  if (hyphenGrill) {
+    const p = hyphenGrill[1].toUpperCase();
+    const sz = hyphenGrill[2];
+    const plate = hyphenGrill[3].toUpperCase();
+    out.push(`${p}-${sz}`);
+    if (plate === "N") out.push(`${p}-${sz}-N`);
+    if (plate === "ND") out.push(`${p}-${sz}-ND`);
+    if (hyphenGrill[4]) out.push(`${p}-${sz}-CR`, `${p}-${sz}-N-CR`);
+  }
   return out;
 }
 
@@ -165,6 +175,75 @@ function aliasModels(model) {
     add(`APF-${n}-1`);
     add(`APF-${n}-2`);
   }
+
+  const aio = m.match(/^AIO\s*-\s*(\d+)/i);
+  if (aio) {
+    add(`AEO-${aio[1]}`);
+    add(`AGO-${aio[1]}`);
+  }
+  const agoT = m.match(/^AGO\s*-\s*(\d+)\s*T/i);
+  if (agoT) add(`AGO-${agoT[1]}`);
+  if (/^AEO\s*-\s*1270/i.test(m)) add("AEO-1273");
+
+  const ampg = m.match(/^AMPG\s*-\s*(\d+)/i);
+  if (ampg) {
+    add(`AMP-${ampg[1]}`);
+    add(`ASB-${ampg[1]}`);
+    add(`EASB-${ampg[1]}`);
+  }
+
+  const aatC = m.match(/^AAT\s*-\s*(\d+)\s*C/i);
+  if (aatC) {
+    add(`ASB-${aatC[1]}`);
+    add(`AAT-${aatC[1]}`);
+  }
+  const aatS = m.match(/^AAT\s*-\s*(\d+)\s*S/i);
+  if (aatS) {
+    add(`AAT-${aatS[1]}`);
+    add(`AAT-${aatS[1]}S`);
+  }
+  const aatPlain = m.match(/^AAT\s*-\s*(\d+)$/i);
+  if (aatPlain) {
+    add(`AAT-${aatPlain[1]}`);
+    if (aatPlain[1] === "670") add("AAT-470", "AAT-870");
+  }
+
+  if (/^ABB-01/i.test(m)) add("ASB-473", "AEI-360");
+
+  if (/^E\s*AAT\s*-\s*360/i.test(m)) {
+    add("E-AAT-460");
+    add("E-AAT-660");
+  }
+
+  if (/^AGKO\s*-\s*473/i.test(m)) {
+    add("AWO-473");
+    add("AGO-473");
+  }
+
+  if (/^AEI[-\s]*670/i.test(m)) add("AEI-670");
+  if (/^AEI[-\s]*470/i.test(m)) add("AEI-470");
+  if (/^AEI[-\s]*870/i.test(m)) add("AEI-870-N", "AEI-870-CR");
+
+  if (/^ADR-C1-(\d+)E-GK$/i.test(m)) {
+    add("ADR-C1-5E-Compact GK");
+    add("ADR-C14GGK");
+  }
+
+  if (/^AYEK\s*-\s*02/i.test(m)) {
+    add("AYEK-01");
+    add("AKEK-02");
+  }
+  if (/^AKEK-02/i.test(m)) add("AKEK-02");
+
+  if (/^AKF\s*-\s*40\s*E/i.test(m)) add("AKF-30E");
+  if (/^AKF\s*-\s*40\s*G/i.test(m)) add("AKF-30G");
+  if (/^AKA\s*-\s*01/i.test(m)) add("AKF-20E");
+
+  if (/^ABA\s*-\s*15/i.test(m)) add("ABA-10-2-1", "ABA-12-2-1");
+
+  if (/^ADRM/i.test(m)) add("ADR-C15GGK");
+
+  if (/^ADTA/i.test(m)) add("ATAT-30", "ATA-3753-30");
 
   return out;
 }
