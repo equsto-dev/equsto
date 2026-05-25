@@ -380,6 +380,13 @@
     );
   }
 
+  var EQ_CATALOG_IMG_V = "20260525dokum2";
+
+  function withCatalogImgV(url) {
+    if (!url || !/\/images\/catalog\/(?:ozti\/web|atalay)\//i.test(url)) return url;
+    return url + (url.indexOf("?") >= 0 ? "&" : "?") + "v=" + EQ_CATALOG_IMG_V;
+  }
+
   /** Katalog görseli için denenecek URL sırası (canlı: önce ham UTF-8 dosya adı). */
   function catalogImageCandidates(dataRel) {
     var file = String(dataRel || "")
@@ -425,11 +432,13 @@
       }
     }
     var seen = {};
-    return list.filter(function (u) {
-      if (!u || seen[u]) return false;
-      seen[u] = 1;
-      return true;
-    });
+    return list
+      .filter(function (u) {
+        if (!u || seen[u]) return false;
+        seen[u] = 1;
+        return true;
+      })
+      .map(withCatalogImgV);
   }
 
   window.catalogImageCandidates = catalogImageCandidates;
@@ -574,7 +583,7 @@
       isStaticPublicImage(s) &&
       typeof window.eqAttrPath === "function"
     ) {
-      return window.eqAttrPath(s);
+      return withCatalogImgV(window.eqAttrPath(s));
     }
     var ozAx = oztiAxImageFromWebPath(s);
     if (ozAx) return ozAx;
