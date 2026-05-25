@@ -39,9 +39,10 @@ MIN_TABLE_Y = 240
 MIN_JPG_BYTES = 5000
 MIN_SAVE_ASPECT = 0.35
 MIN_SAVE_WIDTH = 80
-PAD = 8
+PAD = 6
 CAPTION_GAP = 14
 MIN_H_OVERLAP = 24
+MAX_TOP_PAD = 2
 
 
 def slug_file(model: str) -> str:
@@ -96,6 +97,50 @@ def pick_table_rect(rects: list[fitz.Rect]) -> fitz.Rect | None:
     if not table:
         table = list(rects)
     return max(table, key=lambda r: (r.y0, r.width))
+
+
+def embedded_photos(page: fitz.Page) -> list[tuple[float, float, float, float, float]]:
+    """PDF gömülü ürün fotoğrafları (get_image_info) — tablo sayfalarında güvenilir."""
+    blocks: list[tuple[float, float, float, float, float]] = []
+    pr = page.rect
+    for info in page.get_image_info():
+        x0, y0, x1, y1 = info["bbox"]
+        w, h = x1 - x0, y1 - y0
+        if w < 100 or h < 70:
+            continue
+        if h / max(w, 1) > 2.8 or w / max(h, 1) > 3.5:
+            continue
+        if y0 > pr.y0 + pr.height * 0.72:
+            continue
+        blocks.append((y0, x0, x1, y1, w * h))
+    blocks.sort(key=lambda t: (t[0], t[1]))
+    return blocks
+
+
+def match_embedded_photo(
+    model_rect: fitz.Rect,
+    photos: list[tuple[float, float, float, float, float]],
+) -> tuple[float, float, float, float] | None:
+    if not photos:
+        return None
+    kcx = (model_rect.x0 + model_rect.x1) / 2
+    scored: list[tuple[float, tuple[float, float, float, float]]] = []
+    for y0, x0, x1, y1, area in photos:
+        if y1 > model_rect.y0 + 12:
+            continue
+        overlap = min(x1, model_rect.x1) - max(x0, model_rect.x0)
+        pcx = (x0 + x1) / 2
+        gap = max(0, model_rect.y0 - y1)
+        score = abs(pcx - kcx) * 3 - gap * 0.3 - min(area, 150000) * 0.0002
+        if gap < 80:
+            score += 100
+        if overlap < 20:
+            score += 90
+        scored.append((score, (x0, y0, x1, y1)))
+    if not scored:
+        return None
+    scored.sort(key=lambda t: t[0])
+    return scored[0][1]
 
 
 def photo_blocks(page: fitz.Page) -> list[tuple[float, float, float, float, float]]:
@@ -163,7 +208,7 @@ def clip_photo(page: fitz.Page, bbox: tuple[float, float, float, float]) -> fitz
     x0, y0, x1, y1 = bbox
     clip = fitz.Rect(
         max(pr.x0, x0 - PAD),
-        max(pr.y0, y0 - PAD),
+        max(pr.y0, y0 + MAX_TOP_PAD),
         min(pr.x1, x1 + PAD),
         min(pr.y1, y1 + PAD),
     )
@@ -200,10 +245,11 @@ def trim_label_band_jpg(out: Path) -> None:
     try:
         im = Image.open(out)
         w, h = im.size
-        crop = min(48, max(14, int(h * 0.13)))
-        if h - crop < 72:
+        crop_b = min(48, max(14, int(h * 0.13)))
+        crop_t = min(56, max(10, int(h * 0.12)))
+        if h - crop_b - crop_t < 72:
             return
-        im = im.crop((0, 0, w, h - crop))
+        im = im.crop((0, crop_t, w, h - crop_b))
         im.save(out, quality=88, optimize=True)
     except Exception:
         pass
@@ -229,7 +275,8 @@ def process_page(
     stats: dict,
 ) -> None:
     photos = photo_blocks(page)
-    mat = fitz.Matrix(2, 2)
+    embedded = embedded_photos(page)
+    mat = fitz.Matrix(2.5, 2.5)
     out_dir = OUT_BASE / f"p{page_no}"
     out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -246,27 +293,31 @@ def process_page(
             continue
         mrect = pick_table_rect(search_rects(page, model))
         clip = None
-        if mrect and photos:
+        bbox = None
+        if mrect and embedded:
+            bbox = match_embedded_photo(mrect, embedded)
+        if mrect and not bbox and photos:
             bbox = match_photo(mrect, photos)
-            if bbox:
-                bbox = tighten_bbox_to_table(bbox, mrect)
+        if bbox and mrect:
+            bbox = tighten_bbox_to_table(bbox, mrect)
+        if bbox:
+            clip = clip_photo(page, bbox)
+            stats["matched"] += 1
+        if clip is None and mrect and embedded:
+            bbox = match_embedded_photo(mrect, embedded)
             if bbox:
                 clip = clip_photo(page, bbox)
+                stats["matched"] += 1
         if clip is None:
-            clip = fallback_strip_clip(page, i, len(ordered))
             stats["fallback"] += 1
-        else:
-            stats["matched"] += 1
+            continue
 
         fname = slug_file(model) + ".jpg"
         out = out_dir / fname
         pix = page.get_pixmap(matrix=mat, clip=clip, alpha=False)
         if pixmap_is_strip(pix):
             stats["strip_skip"] += 1
-            prev_fp = ROOT / "public" / str(manifest.get(model, "")).lstrip("/")
-            if manifest.get(model) and prev_fp.exists():
-                stats["kept_prev"] += 1
-            elif model in manifest:
+            if model in manifest:
                 del manifest[model]
             continue
         if save_jpg(pix, out):

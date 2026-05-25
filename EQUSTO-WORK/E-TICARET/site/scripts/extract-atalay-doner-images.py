@@ -78,7 +78,7 @@ def main():
                 slug = slugify(model)
                 out = OUT / f"{slug}.jpg"
                 pix.save(str(out))
-                manifest[model] = str(out.relative_to(OUT.parent.parent.parent)).replace("\\", "/")
+                manifest[model] = f"images/catalog/atalay/doner/{out.name}"
                 log.append(f"embed {page_no} {model} -> {out.name} ({w}x{h})")
         else:
             # Sayfa üst şeridini yatay dilimlere böl
