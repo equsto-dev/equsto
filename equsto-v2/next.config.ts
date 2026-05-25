@@ -123,6 +123,7 @@ const nextConfig: NextConfig = {
       { source: "/index.html", destination: "/", permanent: true },
       { source: "/shop/index.html", destination: "/", permanent: true },
       { source: "/shop", destination: "/", permanent: true },
+      { source: "/shop/:dept.html", destination: "/shop/:dept", permanent: true },
       ...deptRedirects(),
       { source: "/urunler", destination: "/shop", permanent: true },
       { source: "/urunler/:path*", destination: "/shop/:path*", permanent: true },
