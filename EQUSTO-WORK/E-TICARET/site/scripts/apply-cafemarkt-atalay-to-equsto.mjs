@@ -27,6 +27,28 @@ function norm(s) {
     .replace(/[^A-Z0-9]/g, "");
 }
 
+/** PDF "AEI - 673 / ND CR" → Cafemarkt "AEI-673-ND" */
+function pdfGrillAliases(model) {
+  const m = String(model || "").trim();
+  const out = [];
+  const slash = m.match(/^(AEI|AGI)\s*-\s*(\d+)\s*\/\s*(ND|N|D)(?:\s*(CR))?$/i);
+  if (slash) {
+    const p = slash[1].toUpperCase();
+    const sz = slash[2];
+    const plate = slash[3].toUpperCase();
+    if (plate === "ND") out.push(`${p}-${sz}-ND`, `${p}${sz}ND`);
+    else if (plate === "N") {
+      out.push(`${p}-${sz}-N`);
+      if (slash[4]) out.push(`${p}-${sz}-N-CR`, `${p}${sz}NCR`);
+      else out.push(`${p}${sz}N`);
+    } else {
+      out.push(`${p}-${sz}`);
+      if (slash[4]) out.push(`${p}-${sz}-CR`);
+    }
+  }
+  return out;
+}
+
 /** PDF modeli "ATM 2745/2" → Cafemarkt "ATM-2745-2" vb. */
 function modelNeedles(model) {
   const m = String(model || "").trim();
@@ -42,6 +64,7 @@ function modelNeedles(model) {
   add(m.replace(/\//g, "-"));
   add(m.replace(/\s+/g, "-"));
   if (/^E\s+/i.test(m)) add(m.replace(/^E\s+/i, ""));
+  for (const a of pdfGrillAliases(m)) add(a);
   return [...out].sort((a, b) => b.length - a.length);
 }
 
@@ -64,12 +87,22 @@ function slugFromModel(model) {
 }
 
 function findCafemarkt(model, cmRows) {
+  const preferPrefix = String(model || "")
+    .trim()
+    .match(/^(AEI|AGI)/i)?.[1]
+    ?.toUpperCase();
   for (const cand of aliasModels(model)) {
     const needles = modelNeedles(cand);
     if (!needles.length) continue;
     for (const needle of needles) {
-      const hits = cmRows.filter((c) => c.hay.includes(needle));
+      let hits = cmRows.filter((c) => c.hay.includes(needle));
       if (!hits.length) continue;
+      if (preferPrefix) {
+        const pref = hits.filter((c) =>
+          norm(c.p["ürün_adı"]).includes(preferPrefix),
+        );
+        if (pref.length) hits = pref;
+      }
       hits.sort((a, b) => a.hay.length - b.hay.length);
       return hits[0].p;
     }
@@ -90,6 +123,7 @@ function aliasModels(model) {
   if (adrE && !["4", "5"].includes(adrE[1])) {
     add(`ADR-C1-5E${adrE[2] || ""}`);
     add(`ADR-C1-4E${adrE[2] || ""}`);
+    if (adrE[2]) add("ADR-C1-5E-Compact GK");
   }
   const adrG = m.match(/^ADR-C1-(\d+)G(-GK)?$/i);
   if (adrG && !["4", "5"].includes(adrG[1])) {
@@ -97,7 +131,22 @@ function aliasModels(model) {
     add(`ADR-C1-4G${adrG[2] || ""}`);
     add(`ADR-C1-5E${adrG[2] || ""}`);
     add(`ADR-C1-4E${adrG[2] || ""}`);
+    if (adrG[2]) {
+      add("ADR-C15GGK");
+      add("ADR-C14GGK");
+    } else {
+      add("ADR-C15G");
+      add("ADR-C14G");
+    }
   }
+
+  if (/^GN\s/i.test(m)) {
+    add("EAPD-360");
+    add("E APD - 360");
+    add("E-APD-360");
+  }
+
+  if (/^ADSA-\d+$/i.test(m)) add("ADSA-01");
 
   const east = m.match(/^E\s*AST\s*-\s*(\d+)/i);
   if (east) {
