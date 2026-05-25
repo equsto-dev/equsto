@@ -340,7 +340,7 @@
     var k = String(sku || "")
       .replace(/\s+/g, "")
       .toUpperCase();
-    if (!/^[0-9]{2,4}[A-Z0-9]*\.[A-Z0-9.\-]{2,}$/i.test(k)) return "";
+    if (!/^[0-9A-Z]{2,8}\.[A-Z0-9.\-]{2,}$/i.test(k)) return "";
     return (
       "https://oztiryakiler.com.tr/ax-images/images/" + encodeURIComponent(k) + ".jpg"
     );
@@ -351,7 +351,7 @@
     var k = String(sku || "")
       .replace(/\s+/g, "")
       .toUpperCase();
-    if (!/^[0-9]{2,4}[A-Z0-9]*\.[A-Z0-9.\-]{2,}$/i.test(k)) return "";
+    if (!/^[0-9A-Z]{2,8}\.[A-Z0-9.\-]{2,}$/i.test(k)) return "";
     var slug =
       "ozti-" +
       k
