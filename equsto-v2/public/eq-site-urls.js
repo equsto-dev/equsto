@@ -396,10 +396,11 @@
     var root = catalogImagesWebRoot();
     var list = [];
     if (/^catalog\/ozti\/web\//i.test(file)) {
+      list.push("/images/" + file);
+      list.push("/images/" + encodeDataRelPath(file));
       var ax = oztiAxImageFromWebPath("images/" + file);
       if (ax) list.push(ax);
-    }
-    if (/^catalog\/ozti\/p\d+\/ozti-/i.test(file) && typeof window.eqOztiAxImageFromSku === "function") {
+    } else if (/^catalog\/ozti\/p\d+\/ozti-/i.test(file) && typeof window.eqOztiAxImageFromSku === "function") {
       var slugM = file.match(/ozti-([0-9]{4})-([0-9][0-9a-z-]+(?:-[0-9]{2})?)\./i);
       if (slugM) {
         var kodGuess = slugM[1] + "." + slugM[2].replace(/-/g, ".");
@@ -568,6 +569,13 @@
     if (isSogukOdaCatalogPath(s)) return sogukOdaVitrinHref();
     var pdfWeb = oztiPdfPageToWebRel(s);
     if (pdfWeb) s = pdfWeb;
+    if (
+      /^images\/catalog\/ozti\/web\//i.test(s) &&
+      isStaticPublicImage(s) &&
+      typeof window.eqAttrPath === "function"
+    ) {
+      return window.eqAttrPath(s);
+    }
     var ozAx = oztiAxImageFromWebPath(s);
     if (ozAx) return ozAx;
     var vd = vitrumDrawingsHref(s);
@@ -695,9 +703,10 @@
     }
     if (raw && typeof catalogImageCandidates === "function") {
       var tries = catalogImageCandidates(raw);
-      if (step < tries.length) {
+      while (step < tries.length) {
         var next = tries[step];
-        img.setAttribute("data-eq-img-step", String(step + 1));
+        step += 1;
+        img.setAttribute("data-eq-img-step", String(step));
         if (next && next !== src) {
           img.onerror = function () {
             window.__eqImgFail(img);
