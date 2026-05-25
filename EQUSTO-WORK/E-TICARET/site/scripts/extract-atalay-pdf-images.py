@@ -10,6 +10,7 @@ model satırları altta. Her SKU için search_for(model) + üstteki en yakın fo
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 import re
@@ -117,9 +118,26 @@ def embedded_photos(page: fitz.Page) -> list[tuple[float, float, float, float, f
     return blocks
 
 
+def bbox_iou(
+    a: tuple[float, float, float, float],
+    b: tuple[float, float, float, float],
+) -> float:
+    ax0, ay0, ax1, ay1 = a
+    bx0, by0, bx1, by1 = b
+    ix0, iy0 = max(ax0, bx0), max(ay0, by0)
+    ix1, iy1 = min(ax1, bx1), min(ay1, by1)
+    if ix1 <= ix0 or iy1 <= iy0:
+        return 0.0
+    inter = (ix1 - ix0) * (iy1 - iy0)
+    area_a = max(1.0, (ax1 - ax0) * (ay1 - ay0))
+    area_b = max(1.0, (bx1 - bx0) * (by1 - by0))
+    return inter / (area_a + area_b - inter)
+
+
 def match_embedded_photo(
     model_rect: fitz.Rect,
     photos: list[tuple[float, float, float, float, float]],
+    used: list[tuple[float, float, float, float]] | None = None,
 ) -> tuple[float, float, float, float] | None:
     if not photos:
         return None
@@ -127,6 +145,9 @@ def match_embedded_photo(
     scored: list[tuple[float, tuple[float, float, float, float]]] = []
     for y0, x0, x1, y1, area in photos:
         if y1 > model_rect.y0 + 12:
+            continue
+        bbox = (x0, y0, x1, y1)
+        if used and any(bbox_iou(bbox, u) > 0.45 for u in used):
             continue
         overlap = min(x1, model_rect.x1) - max(x0, model_rect.x0)
         pcx = (x0 + x1) / 2
@@ -136,7 +157,7 @@ def match_embedded_photo(
             score += 100
         if overlap < 20:
             score += 90
-        scored.append((score, (x0, y0, x1, y1)))
+        scored.append((score, bbox))
     if not scored:
         return None
     scored.sort(key=lambda t: t[0])
@@ -164,6 +185,7 @@ def photo_blocks(page: fitz.Page) -> list[tuple[float, float, float, float, floa
 def match_photo(
     model_rect: fitz.Rect,
     photos: list[tuple[float, float, float, float, float]],
+    used: list[tuple[float, float, float, float]] | None = None,
 ) -> tuple[float, float, float, float] | None:
     if not photos:
         return None
@@ -175,6 +197,9 @@ def match_photo(
 
     scored: list[tuple[float, float, tuple[float, float, float, float]]] = []
     for y0, x0, x1, y1, area in pool:
+        bbox = (x0, y0, x1, y1)
+        if used and any(bbox_iou(bbox, u) > 0.45 for u in used):
+            continue
         overlap = min(x1, model_rect.x1) - max(x0, model_rect.x0)
         pcx = (x0 + x1) / 2
         dx = abs(pcx - mcx)
@@ -182,7 +207,7 @@ def match_photo(
         score = dx * 4 + dy * 0.8 - min(area, 200000) * 0.00015
         if overlap < MIN_H_OVERLAP:
             score += 120
-        scored.append((score, overlap, (x0, y0, x1, y1)))
+        scored.append((score, overlap, bbox))
     if not scored:
         return None
     scored.sort(key=lambda t: t[0])
@@ -287,6 +312,24 @@ def process_page(
         ).y0,
     )
 
+    used_bboxes: list[tuple[float, float, float, float]] = []
+    page_hashes: set[str] = set()
+    photos_pool: list[tuple[float, float, float, float, float]] = sorted(
+        embedded, key=lambda t: (t[1], t[0])
+    )
+
+    def take_photo_for_rect(mrect: fitz.Rect) -> tuple[float, float, float, float] | None:
+        nonlocal photos_pool
+        if not photos_pool:
+            return None
+        kcx = (mrect.x0 + mrect.x1) / 2
+        best_i = min(
+            range(len(photos_pool)),
+            key=lambda j: abs((photos_pool[j][1] + photos_pool[j][2]) / 2 - kcx),
+        )
+        y0, x0, x1, y1, _area = photos_pool.pop(best_i)
+        return (x0, y0, x1, y1)
+
     for i, p in enumerate(ordered):
         model = p.get("model") or p.get("modelCode")
         if not model:
@@ -294,52 +337,106 @@ def process_page(
         mrect = pick_table_rect(search_rects(page, model))
         clip = None
         bbox = None
-        if mrect and embedded:
-            bbox = match_embedded_photo(mrect, embedded)
+        if mrect and photos_pool:
+            bbox = take_photo_for_rect(mrect)
+        elif mrect and embedded:
+            bbox = match_embedded_photo(mrect, embedded, used_bboxes)
         if mrect and not bbox and photos:
-            bbox = match_photo(mrect, photos)
+            bbox = match_photo(mrect, photos, used_bboxes)
         if bbox and mrect:
             bbox = tighten_bbox_to_table(bbox, mrect)
         if bbox:
             clip = clip_photo(page, bbox)
+            used_bboxes.append(bbox)
             stats["matched"] += 1
         if clip is None and mrect and embedded:
-            bbox = match_embedded_photo(mrect, embedded)
+            bbox = match_embedded_photo(mrect, embedded, used_bboxes)
             if bbox:
                 clip = clip_photo(page, bbox)
+                used_bboxes.append(bbox)
                 stats["matched"] += 1
+        if clip is None and len(ordered) > 1:
+            clip = fallback_strip_clip(page, i, len(ordered))
+            stats["fallback"] += 1
         if clip is None:
             stats["fallback"] += 1
             continue
 
         fname = slug_file(model) + ".jpg"
         out = out_dir / fname
-        pix = page.get_pixmap(matrix=mat, clip=clip, alpha=False)
-        if pixmap_is_strip(pix):
-            stats["strip_skip"] += 1
-            if model in manifest:
-                del manifest[model]
-            continue
-        if save_jpg(pix, out):
+
+        def render_and_save(clip_rect: fitz.Rect) -> bool:
+            pix = page.get_pixmap(matrix=mat, clip=clip_rect, alpha=False)
+            if pixmap_is_strip(pix):
+                return False
+            return save_jpg(pix, out)
+
+        clips_try: list[fitz.Rect] = [clip]
+        if len(ordered) > 1:
+            fb = fallback_strip_clip(page, i, len(ordered))
+            if fb not in clips_try:
+                clips_try.append(fb)
+
+        saved = False
+        digest = ""
+        any_render = False
+        for clip_rect in clips_try:
+            if not render_and_save(clip_rect):
+                continue
+            any_render = True
+            digest = hashlib.md5(out.read_bytes()).hexdigest()
+            if digest not in page_hashes:
+                saved = True
+                break
+
+        if saved:
+            page_hashes.add(digest)
             rel = f"images/catalog/atalay/p{page_no}/{fname}"
             manifest[model] = f"/{rel}"
             p["images"] = [rel]
             stats["ok"] += 1
+        elif any_render:
+            if out.exists():
+                out.unlink(missing_ok=True)
+            stats["dup_skip"] += 1
         else:
-            stats["skip_small"] += 1
+            stats["strip_skip"] += 1
+            if model in manifest:
+                del manifest[model]
+
+
+def patch_dept_targets() -> list[Path]:
+    roots = [
+        ROOT / "public",
+        Path("C:/D Disk/EQUSTO-CURSOR/equsto-v2/public"),
+    ]
+    out: list[Path] = []
+    for r in roots:
+        d = r / "data" / "dept"
+        if d.is_dir():
+            out.append(d)
+    return out
 
 
 def patch_dept_files(manifest: dict) -> int:
     total = 0
-    dept_dir = ROOT / "public" / "data" / "dept"
-    for dept_file in dept_dir.glob("*.json"):
-        rows = json.loads(dept_file.read_text(encoding="utf-8"))
-        changed = 0
-        for row in rows:
-            if "atalay" not in str(row.get("brand", "")).lower():
-                continue
+    seen: set[str] = set()
+    for dept_dir in patch_dept_targets():
+        key = str(dept_dir)
+        if key in seen:
+            continue
+        seen.add(key)
+        for dept_file in dept_dir.glob("*.json"):
+            rows = json.loads(dept_file.read_text(encoding="utf-8"))
+            changed = 0
+            for row in rows:
+                if "atalay" not in str(row.get("brand", "")).lower():
+                    continue
             model = str(row.get("model") or "").strip()
             if not model:
+                continue
+            cur = str((row.get("images") or [""])[0]).replace("\\", "/")
+            if "/catalog/atalay/cafemarkt/" in cur:
                 continue
             hit = manifest.get(model)
             if not hit:
@@ -348,10 +445,14 @@ def patch_dept_files(manifest: dict) -> int:
             if row.get("images") != [rel]:
                 row["images"] = [rel]
                 changed += 1
-        if changed:
-            dept_file.write_text(json.dumps(rows, ensure_ascii=False), encoding="utf-8")
-            print(f"  dept {dept_file.name}: {changed} gorsel")
-            total += changed
+            if changed:
+                dept_file.write_text(
+                    json.dumps(rows, ensure_ascii=False), encoding="utf-8"
+                )
+                print(
+                    f"  dept {dept_file.parent.parent.name}/{dept_file.name}: {changed} gorsel"
+                )
+                total += changed
     return total
 
 
@@ -406,7 +507,15 @@ def main() -> None:
             manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
         except Exception:
             manifest = {}
-    stats = {"ok": 0, "matched": 0, "fallback": 0, "skip_small": 0, "strip_skip": 0, "kept_prev": 0}
+    stats = {
+        "ok": 0,
+        "matched": 0,
+        "fallback": 0,
+        "skip_small": 0,
+        "strip_skip": 0,
+        "dup_skip": 0,
+        "kept_prev": 0,
+    }
 
     for page_no, items in sorted(by_page.items()):
         if page_no < 1 or page_no > doc.page_count:
@@ -443,6 +552,7 @@ def main() -> None:
         f"[atalay-images] {stats['ok']} gorsel, {len(by_page)} sayfa, "
         f"matched={stats['matched']} fallback={stats['fallback']} "
         f"skip_small={stats['skip_small']} strip_skip={stats['strip_skip']} "
+        f"dup_skip={stats['dup_skip']} "
         f"kept_prev={stats['kept_prev']} dept_patch={patched} legacy_removed={legacy}"
     )
 
