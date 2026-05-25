@@ -45,7 +45,9 @@
   function eqPolishOztiAsciiName(s) {
     if (s == null || s === '') return s;
     var t = String(s);
-    t = t.replace(/\bELEKTRIKL[Iİ]\b/g, 'ELEKTRİKLİ');
+    t = t.replace(/ELEKTRI\u0049KL\u0130/g, 'ELEKTRİKLİ');
+    t = t.replace(/ELEKTRIKLI/g, 'ELEKTRİKLİ');
+    t = t.replace(/ELEKTRIKLİ/g, 'ELEKTRİKLİ');
     t = t.replace(/\bELEKTRIK\b/g, 'ELEKTRİK');
     t = t.replace(/\bGAZ\/ELEKTRIK\b/g, 'GAZ/ELEKTRİK');
     t = t.replace(/\bDOKUM\b/g, 'DÖKÜM');
