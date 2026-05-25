@@ -380,7 +380,7 @@
     );
   }
 
-  var EQ_CATALOG_IMG_V = "20260525dokum2";
+  var EQ_CATALOG_IMG_V = "20260525atalay4";
 
   function withCatalogImgV(url) {
     if (!url || !/\/images\/catalog\/(?:ozti\/web|atalay)\//i.test(url)) return url;

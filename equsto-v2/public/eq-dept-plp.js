@@ -121,6 +121,12 @@
 
   function productUrl(item) {
     var raw = item.raw;
+    if (raw && raw.id && typeof window.eqProductPath === 'function') {
+      var idSlug = String(raw.id).trim();
+      if (idSlug) {
+        return window.eqProductPath(DEPT, idSlug);
+      }
+    }
     if (raw && raw.equstoPage && typeof window.eqAttrPath === 'function') {
       return window.eqAttrPath(raw.equstoPage);
     }
