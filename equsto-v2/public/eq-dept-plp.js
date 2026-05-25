@@ -105,6 +105,22 @@
     return '';
   }
 
+  /** PLP kart alt satırı — olculer (mm veya cm). */
+  function formatOlculerLine(raw) {
+    if (!raw || !raw.olculer) return '';
+    var o = raw.olculer;
+    var g = Number(o.genislik_mm);
+    var d = Number(o.derinlik_mm);
+    var y = Number(o.yukseklik_mm);
+    if (!g || !d || !y) return '';
+    var name = String(raw.name || '');
+    if (/×\d/.test(name)) return '';
+    if (g >= 1000 && d >= 1000) {
+      return Math.round(g / 10) + '×' + Math.round(d / 10) + '×' + Math.round(y / 10) + ' cm';
+    }
+    return g + '×' + d + '×' + y + ' mm';
+  }
+
   function countOztiRows(arr) {
     var n = 0;
     for (var i = 0; i < arr.length; i++) {
@@ -536,6 +552,10 @@
       '">' +
       esc(u.n) +
       '</a>' +
+      (function () {
+        var dim = formatOlculerLine(u.raw);
+        return dim ? '<div class="eq-dept-plp-card__dims">' + esc(dim) + '</div>' : '';
+      })() +
       (u.p
         ? '<div class="eq-dept-plp-card__price">' + esc(formatPrice(u.p, u.raw)) + '</div>'
         : '') +
