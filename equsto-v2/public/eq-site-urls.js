@@ -380,7 +380,7 @@
     );
   }
 
-  var EQ_CATALOG_IMG_V = "20260525cafemarktalias3";
+  var EQ_CATALOG_IMG_V = "20260525p99fallback";
 
   function withCatalogImgV(url) {
     if (!url || !/\/images\/catalog\/(?:ozti\/(?:web|cafemarkt)|atalay\/)/i.test(url)) return url;
@@ -389,56 +389,72 @@
 
   /** Katalog görseli için denenecek URL sırası (canlı: önce ham UTF-8 dosya adı). */
   function catalogImageCandidates(dataRel) {
-    var file = String(dataRel || "")
+    var raw = String(dataRel || "")
       .replace(/\\/g, "/")
       .replace(/^\.\//, "")
-      .replace(/^data\//i, "")
-      .replace(/^images\//i, "");
-    if (!file) return [];
-    if (isSogukOdaCatalogPath("images/" + file)) {
-      return [sogukOdaVitrinHref(), EQ_SOGUK_ODA_VITRIN_CDN];
-    }
-    var webFromPdf = oztiPdfPageToWebRel("images/" + file);
-    if (webFromPdf) file = webFromPdf.replace(/^images\//i, "");
-    var root = catalogImagesWebRoot();
+      .trim();
+    if (!/^images\//i.test(raw)) raw = "images/" + raw.replace(/^\/+/, "");
+    var rels = [];
+    var pdfRel = /^images\/catalog\/ozti\/p\d+\//i.test(raw) ? raw : "";
+    var webFromPdf = oztiPdfPageToWebRel(raw);
+    if (webFromPdf) rels.push(webFromPdf);
+    if (pdfRel) rels.push(pdfRel);
+    if (!rels.length) rels.push(raw);
+
     var list = [];
-    if (/^catalog\/ozti\/web\//i.test(file)) {
-      list.push("/images/" + file);
-      list.push("/images/" + encodeDataRelPath(file));
-      var ax = oztiAxImageFromWebPath("images/" + file);
-      if (ax) list.push(ax);
-    } else if (/^catalog\/ozti\/p\d+\/ozti-/i.test(file) && typeof window.eqOztiAxImageFromSku === "function") {
-      var slugM = file.match(/ozti-([0-9]{4})-([0-9][0-9a-z-]+(?:-[0-9]{2})?)\./i);
-      if (slugM) {
-        var kodGuess = slugM[1] + "." + slugM[2].replace(/-/g, ".");
-        var axK = window.eqOztiAxImageFromSku(kodGuess);
-        if (axK) list.push(axK);
-      }
-    }
-    if (/^catalog\//i.test(file)) {
-      list.push("/images/" + file);
-      list.push("/images/" + encodeDataRelPath(file));
-      if (!isEqustoLiveHost()) {
-        list.push(root + file);
-        list.push(root + encodeDataRelPath(file));
-      }
-    } else {
-      if (isEqustoLiveHost()) {
-        list.push(root + file);
-      }
-      list.push(root + encodeDataRelPath(file));
-      if (isEqustoLiveHost()) {
-        list.push("/images/" + encodeDataRelPath(file));
-      }
-    }
     var seen = {};
-    return list
-      .filter(function (u) {
-        if (!u || seen[u]) return false;
-        seen[u] = 1;
-        return true;
-      })
-      .map(withCatalogImgV);
+    for (var ri = 0; ri < rels.length; ri++) {
+      var file = String(rels[ri] || "")
+        .replace(/\\/g, "/")
+        .replace(/^\.\//, "")
+        .replace(/^data\//i, "")
+        .replace(/^images\//i, "");
+      if (!file) continue;
+      if (isSogukOdaCatalogPath("images/" + file)) {
+        [sogukOdaVitrinHref(), EQ_SOGUK_ODA_VITRIN_CDN].forEach(function (u) {
+          if (u && !seen[u]) {
+            seen[u] = 1;
+            list.push(u);
+          }
+        });
+        continue;
+      }
+      var chunk = [];
+      if (/^catalog\/ozti\/web\//i.test(file)) {
+        chunk.push("/images/" + file);
+        chunk.push("/images/" + encodeDataRelPath(file));
+        var ax = oztiAxImageFromWebPath("images/" + file);
+        if (ax) chunk.push(ax);
+      } else if (/^catalog\/ozti\/p\d+\/ozti-/i.test(file) && typeof window.eqOztiAxImageFromSku === "function") {
+        var slugM = file.match(/ozti-([0-9]{4})-([0-9][0-9a-z-]+(?:-[0-9]{2})?)\./i);
+        if (slugM) {
+          var kodGuess = slugM[1] + "." + slugM[2].replace(/-/g, ".");
+          var axK = window.eqOztiAxImageFromSku(kodGuess);
+          if (axK) chunk.push(axK);
+        }
+      }
+      var root = catalogImagesWebRoot();
+      if (/^catalog\//i.test(file)) {
+        chunk.push("/images/" + file);
+        chunk.push("/images/" + encodeDataRelPath(file));
+        if (!isEqustoLiveHost()) {
+          chunk.push(root + file);
+          chunk.push(root + encodeDataRelPath(file));
+        }
+      } else {
+        if (isEqustoLiveHost()) chunk.push(root + file);
+        chunk.push(root + encodeDataRelPath(file));
+        if (isEqustoLiveHost()) chunk.push("/images/" + encodeDataRelPath(file));
+      }
+      chunk.forEach(function (u) {
+        u = withCatalogImgV(u);
+        if (u && !seen[u]) {
+          seen[u] = 1;
+          list.push(u);
+        }
+      });
+    }
+    return list;
   }
 
   window.catalogImageCandidates = catalogImageCandidates;
@@ -577,7 +593,7 @@
     if (/^https?:\/\//i.test(s)) return s;
     if (isSogukOdaCatalogPath(s)) return sogukOdaVitrinHref();
     var pdfWeb = oztiPdfPageToWebRel(s);
-    if (pdfWeb) s = pdfWeb;
+    if (pdfWeb && !/^images\/catalog\/ozti\/p\d+\//i.test(s)) s = pdfWeb;
     if (
       /^images\/catalog\/ozti\/web\//i.test(s) &&
       isStaticPublicImage(s) &&

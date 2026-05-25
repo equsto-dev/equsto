@@ -271,6 +271,9 @@
     if (typeof window.eqSimplifyTezgahDavlumbazName === 'function') {
       n = window.eqSimplifyTezgahDavlumbazName(n, { dept: DEPT });
     }
+    if (typeof window.eqPolishDisplayText === 'function') {
+      n = window.eqPolishDisplayText(n);
+    }
     var fb = b;
     if (x.oem_brand) {
       fb = String(x.oem_brand).trim();

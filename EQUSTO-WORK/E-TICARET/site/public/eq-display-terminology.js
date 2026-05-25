@@ -42,9 +42,30 @@
     return n;
   }
 
+  function eqPolishOztiAsciiName(s) {
+    if (s == null || s === '') return s;
+    var t = String(s);
+    t = t.replace(/\bELEKTRIKL[Iİ]\b/g, 'ELEKTRİKLİ');
+    t = t.replace(/\bELEKTRIK\b/g, 'ELEKTRİK');
+    t = t.replace(/\bGAZ\/ELEKTRIK\b/g, 'GAZ/ELEKTRİK');
+    t = t.replace(/\bDOKUM\b/g, 'DÖKÜM');
+    t = t.replace(/\bALUMINYUM\b/g, 'ALÜMİNYUM');
+    t = t.replace(/\bDEVRILIR\b/g, 'DEVRİLİR');
+    t = t.replace(/\bDONER\b/g, 'DÖNER');
+    t = t.replace(/\bOCAGI\b/g, 'OCAĞI');
+    t = t.replace(/\bOCAK\b/g, 'OCAK');
+    t = t.replace(/\bFRITOZ\b/g, 'FRİTÖZ');
+    t = t.replace(/\bFRITÖZ SEPETI\b/g, 'FRİTÖZ SEPETİ');
+    t = t.replace(/\bYENI SERI\b/g, 'YENİ SERİ');
+    t = t.replace(/\bYENI\b/g, 'YENİ');
+    t = t.replace(/\bICIN\b/g, 'İÇİN');
+    return t;
+  }
+
   function eqPolishDisplayText(s) {
     if (s == null || s === '') return s;
     var t = String(s);
+    t = eqPolishOztiAsciiName(t);
     t = t.replace(/\bSanayi\s+Ocaklar[ıi]\b/gi, 'Endüstriyel Ocaklar');
     t = t.replace(/\bSanayi\s+Tipi\b/gi, 'Endüstriyel Tipi');
     t = t.replace(/\bSanayi\s+Tip\b/gi, 'Endüstriyel Tip');
