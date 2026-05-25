@@ -34,6 +34,8 @@
   function extractModel(name, brand) {
     var n = String(name || '').trim();
     var b = String(brand || '').trim();
+    var crm = n.match(/(?:SOĞUK\s+ODA|COLD\s+ROOM)\s+(\d{3})[×x*]/i);
+    if (crm) return 'ROOM ' + crm[1];
     if (b && n.indexOf(b) === 0) n = n.slice(b.length).trim();
     if (n.indexOf(' - ') > 0) n = n.split(' - ')[0].trim();
     var m = n.match(/\b([A-Z]{1,4}[\s-]?\d{2,5}[\w./-]*)\b/);

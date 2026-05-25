@@ -207,6 +207,8 @@
   /** PLP + product.html — canlı linklerle uyumlu (tr-TR küçük harf, Türkçe harfler düşer). */
   window.eqProductSlug = function (row) {
     if (!row) return "";
+    var id = String(row.id || "").trim();
+    if (id) return id.toLowerCase();
     function slugify(s) {
       return String(s || "")
         .toLocaleLowerCase("tr")

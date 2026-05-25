@@ -86,7 +86,7 @@
   <script src="/theme.js?v=20260521globalsearch"></script>
   <script src="/equsto-logo.js?v=20260519wordmark3"></script>
   <script src="/eq-i18n.js?v=20260521globalsearch"></script>
-  <script src="/eq-site-urls.js?v=20260525sogukoda"></script>
+  <script src="/eq-site-urls.js?v=20260521oztiax"></script>
   <script src="/eq-product-reviews.js?v=20260520d"></script>
   <script src="/eq-merchant-schema.js?v=20260520gsc"></script>
   <script src="/nav.js?v=20260521globalsearch"></script>
@@ -527,8 +527,10 @@
         .substring(0, 100);
     }
     function productSlugEq(u) {
-      if (typeof window.eqProductSlug === 'function') return window.eqProductSlug(u);
       if (!u) return '';
+      var id = String(u.id || (u.raw && u.raw.id) || '').trim();
+      if (id) return id.toLowerCase();
+      if (typeof window.eqProductSlug === 'function') return window.eqProductSlug(u);
       var b = slugifyEq(u.brand || u.b || '');
       var n = slugifyEq(u.name || u.n || '');
       return (b ? b + '-' : '') + n;
@@ -542,7 +544,8 @@
           ? window.eqAttrPath(x.equstoPage)
           : x.equstoPage;
       }
-      var sl = productSlugEq(x);
+      var idSlug = String(x.id || "").trim();
+      var sl = idSlug || productSlugEq(x);
       if (!sl) return null;
       var cat = x.category || x.c || "";
       var seg =
@@ -572,6 +575,8 @@
               ? window.eqProductSlugTransliterated
               : null;
           for (var s = 0; s < all.length; s++) {
+            var rid = String(all[s].id || "").trim().toLowerCase();
+            if (rid && rid === pathSlug) return all[s];
             if (productSlugEq(all[s]) === pathSlug) return all[s];
             if (altSlugFn && altSlugFn(all[s]) === pathSlug) return all[s];
           }

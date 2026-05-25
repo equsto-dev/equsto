@@ -34,6 +34,8 @@
   function extractModel(name, brand) {
     var n = String(name || '').trim();
     var b = String(brand || '').trim();
+    var crm = n.match(/(?:SOĞUK\s+ODA|COLD\s+ROOM)\s+(\d{3})[×x*]/i);
+    if (crm) return 'ROOM ' + crm[1];
     if (b && n.indexOf(b) === 0) n = n.slice(b.length).trim();
     if (n.indexOf(' - ') > 0) n = n.split(' - ')[0].trim();
     var m = n.match(/\b([A-Z]{1,4}[\s-]?\d{2,5}[\w./-]*)\b/);
@@ -55,6 +57,13 @@
     'Hoshizaki',
     'Unox',
     'WMF',
+    'Nuova Simonelli',
+    'NUOVA SIMONELLI',
+    'NUOSI',
+    'Bravilor Bonamat',
+    'BRAVILOR',
+    'Ateşe',
+    'ATS',
     'FAC',
     'SANTOS',
     'Electrolux',
@@ -63,7 +72,24 @@
     'Inoksan',
     'Zanussi',
   ];
+  /** Katalog / fiyat listesi yazımı → filtre etiketi */
+  var OEM_LABEL_CANON = {
+    wmf: 'WMF',
+    'nuova simonelli': 'Nuova Simonelli',
+    nuosi: 'Nuova Simonelli',
+    bravilor: 'Bravilor Bonamat',
+    'bravilor bonamat': 'Bravilor Bonamat',
+    ateşe: 'Ateşe',
+    atese: 'Ateşe',
+    ats: 'Ateşe',
+  };
   var oemPrefixCache = null;
+
+  function normalizeOemLabel(prefix) {
+    var key = lc(String(prefix || '').trim());
+    if (OEM_LABEL_CANON[key]) return OEM_LABEL_CANON[key];
+    return String(prefix || '').trim();
+  }
 
   function oemNamePrefixes() {
     if (oemPrefixCache) return oemPrefixCache;
@@ -88,25 +114,53 @@
     return list;
   }
 
-  function resolveFacetBrand(brand, name) {
+  /** Filtre etiketi: «Atalay Endüstriyel…» → «Atalay», «Öztiryakiler Endüstriyel…» → «Öztiryakiler». */
+  function canonicalFacetBrand(brand) {
     var b = String(brand || '').trim();
     if (!b) return '';
-    if (!OEM_RESELLER.test(lc(b))) return b;
-    var n = String(name || '').trim();
-    if (!n) return b;
-    var nl = lc(n);
-    var prefixes = oemNamePrefixes();
-    for (var pi = 0; pi < prefixes.length; pi++) {
-      var p = prefixes[pi];
-      if (nl.indexOf(lc(p)) === 0) return p;
-    }
+    var bl = lc(b);
+    if (bl.indexOf('atalay') === 0) return 'Atalay';
+    if (bl.indexOf('oztiryakiler') === 0 || bl.indexOf('öztiryakiler') === 0) return 'Öztiryakiler';
     return b;
+  }
+
+  function facetBrandKey(brand) {
+    return canonicalFacetBrand(brand) || String(brand || '').trim();
+  }
+
+  function stripOztiLeadName(name) {
+    var n = String(name || '').trim();
+    var m = n.match(
+      /^(?:ÖZTİRYAKİLER|OZTIRYAKILER|Öztiryakiler|Oztiryakiler)(?:\s+(?:Endüstriyel\s+Mutfak|ENDÜSTRIYEL\s+MUTFAK|Endustriyel\s+Mutfak|ENDUSTRIYEL\s+MUTFAK))?\s+/i
+    );
+    if (m) return n.slice(m[0].length).trim();
+    return n;
+  }
+
+  function resolveFacetBrand(brand, name) {
+    var raw = String(brand || '').trim();
+    if (!raw) return '';
+    var n = String(name || '').trim();
+    if (OEM_RESELLER.test(lc(raw)) && n) {
+      var scan = stripOztiLeadName(n);
+      var namesToTry = scan === n ? [n] : [scan, n];
+      var prefixes = oemNamePrefixes();
+      for (var ni = 0; ni < namesToTry.length; ni++) {
+        var nl = lc(namesToTry[ni]);
+        for (var pi = 0; pi < prefixes.length; pi++) {
+          var p = prefixes[pi];
+          if (nl.indexOf(lc(p)) === 0) return normalizeOemLabel(p);
+        }
+      }
+    }
+    return facetBrandKey(raw);
   }
 
   function productBrand(u) {
     if (!u) return '';
-    if (u.fb) return String(u.fb).trim();
-    return resolveFacetBrand(u.b, u.n);
+    var fb = String((u.fb || '')).trim();
+    if (fb) return facetBrandKey(fb);
+    return facetBrandKey(resolveFacetBrand(u.b, u.n));
   }
 
   function matchEnergy(u, energyId) {
@@ -150,7 +204,7 @@
       var priceMinAll = Infinity;
       var priceMaxAll = 0;
       pool.forEach(function (u) {
-        var b = (u.b || '').trim();
+        var b = productBrand(u);
         if (b) brandCounts[b] = (brandCounts[b] || 0) + 1;
         var model = extractModel(u.n, u.b);
         if (model) modelCounts[model] = (modelCounts[model] || 0) + 1;
@@ -179,7 +233,8 @@
 
     var brands = Object.keys(brandCounts);
     (state.brands || []).forEach(function (b) {
-      if (b && brands.indexOf(b) < 0) brands.push(b);
+      var k = facetBrandKey(b);
+      if (k && brands.indexOf(k) < 0) brands.push(k);
     });
     brands.sort(function (a, b) {
       return (brandCounts[b] || 0) - (brandCounts[a] || 0);
@@ -274,17 +329,23 @@
       '<input type="search" class="eq-cm-facet__search" id="eq-dept-cm-brand-q" placeholder="Marka ara" autocomplete="off">' +
       '<ul class="eq-cm-facet__list" id="eq-dept-cm-brand-list">';
     brands.slice(0, 80).forEach(function (b) {
-      var checked = (state.brands || []).indexOf(b) >= 0 ? ' checked' : '';
+      var label = facetBrandKey(b);
+      var checked =
+        (state.brands || []).some(function (sb) {
+          return facetBrandKey(sb) === label;
+        })
+          ? ' checked'
+          : '';
       html +=
         '<li class="eq-cm-facet__item" data-brand-label="' +
-        esc(lc(b)) +
+        esc(lc(label)) +
         '"><label class="eq-cm-facet__label">' +
         '<input type="checkbox" name="eq-dept-cm-brand" value="' +
-        esc(b) +
+        esc(label) +
         '"' +
         checked +
         '><span>' +
-        esc(b) +
+        esc(label) +
         '</span><span class="eq-cm-facet__count">(' +
         brandCounts[b] +
         ')</span></label></li>';
@@ -431,7 +492,8 @@
       chips.push({ type: 'tile', value: tid, text: label });
     });
     (state.brands || []).forEach(function (b) {
-      chips.push({ type: 'brand', value: b, text: b });
+      var label = facetBrandKey(b);
+      chips.push({ type: 'brand', value: label, text: label });
     });
     (state.models || []).forEach(function (m) {
       chips.push({ type: 'model', value: m, text: m });
@@ -485,6 +547,8 @@
     matchEnergy: matchEnergy,
     parsePriceNum: parsePriceNum,
     resolveFacetBrand: resolveFacetBrand,
+    facetBrandKey: facetBrandKey,
+    canonicalFacetBrand: canonicalFacetBrand,
     productBrand: productBrand,
   };
 })(typeof window !== 'undefined' ? window : global);
