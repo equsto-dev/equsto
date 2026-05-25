@@ -86,19 +86,37 @@ export function parseOlculer(text, kod) {
       /(\d{2,4})\s*(?:mm)?\s*[x×*]\s*(\d{2,4})\s*(?:mm)?\s*[x×*]\s*(\d{2,4})\s*(?:mm)?/i,
     );
     if (trip) {
-      out.genislik_mm = Number(trip[1]);
-      out.derinlik_mm = Number(trip[2]);
-      out.yukseklik_mm = Number(trip[3]);
+      let g = Number(trip[1]);
+      let d = Number(trip[2]);
+      let y = Number(trip[3]);
+      const hasMm = /mm/i.test(trip[0]);
+      if (!hasMm && Math.max(g, d, y) <= 500) {
+        g *= 10;
+        d *= 10;
+        y *= 10;
+      }
+      out.genislik_mm = g;
+      out.derinlik_mm = d;
+      out.yukseklik_mm = y;
     }
   }
 
   const dim = hay.match(
-    /(\d{2,4})\s*[x×*]\s*(\d{2,4})\s*[x×*]\s*(\d{2,4})\s*(?:mm|cm)?/i,
+    /(\d{2,4})\s*[x×*]\s*(\d{2,4})\s*[x×*]\s*(\d{2,4})\s*(mm|cm)?/i,
   );
   if (dim && !out.genislik_mm) {
-    out.genislik_mm = Number(dim[1]);
-    out.derinlik_mm = Number(dim[2]);
-    out.yukseklik_mm = Number(dim[3]);
+    let g = Number(dim[1]);
+    let d = Number(dim[2]);
+    let y = Number(dim[3]);
+    const unit = String(dim[4] || "").toLowerCase();
+    if (unit === "cm" || (!unit && Math.max(g, d, y) <= 500 && /\*/.test(hay))) {
+      g *= 10;
+      d *= 10;
+      y *= 10;
+    }
+    out.genislik_mm = g;
+    out.derinlik_mm = d;
+    out.yukseklik_mm = y;
   }
 
   const cap = hay.match(/(\d+(?:[.,]\d+)?)\s*(?:lt|l\.?t\.?|litre)/i);

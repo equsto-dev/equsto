@@ -595,7 +595,7 @@
     if (/^https?:\/\//i.test(s)) return s;
     if (isSogukOdaCatalogPath(s)) return sogukOdaVitrinHref();
     var pdfWeb = oztiPdfPageToWebRel(s);
-    if (pdfWeb && !/^images\/catalog\/ozti\/p\d+\//i.test(s)) s = pdfWeb;
+    if (pdfWeb) s = pdfWeb;
     if (
       /^images\/catalog\/ozti\/web\//i.test(s) &&
       isStaticPublicImage(s) &&
