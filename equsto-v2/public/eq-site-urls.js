@@ -391,6 +391,8 @@
     if (isSogukOdaCatalogPath("images/" + file)) {
       return [sogukOdaVitrinHref(), EQ_SOGUK_ODA_VITRIN_CDN];
     }
+    var webFromPdf = oztiPdfPageToWebRel("images/" + file);
+    if (webFromPdf) file = webFromPdf.replace(/^images\//i, "");
     var root = catalogImagesWebRoot();
     var list = [];
     if (/^catalog\/ozti\/web\//i.test(file)) {
@@ -515,6 +517,16 @@
 
   window.eqSogukOdaVitrinHref = sogukOdaVitrinHref;
 
+  /** PDF sayfa kırpımı (p199, p210…) → web slug; ax-images CDN ürün fotoğrafı döner. */
+  function oztiPdfPageToWebRel(s) {
+    var t = String(s || "")
+      .trim()
+      .replace(/\\/g, "/");
+    var m = /^images\/catalog\/ozti\/p\d+\/(ozti-[a-z0-9-]+\.(?:jpe?g|png|webp))$/i.exec(t);
+    if (!m) return "";
+    return "images/catalog/ozti/web/" + m[1];
+  }
+
   /** `public/images/` altındaki statik dosyalar — `/data/images/` köküne çevrilmez. */
   function isStaticPublicImage(s) {
     var t = String(s || "").trim().replace(/\\/g, "/");
@@ -554,6 +566,8 @@
     if (!s) return "";
     if (/^https?:\/\//i.test(s)) return s;
     if (isSogukOdaCatalogPath(s)) return sogukOdaVitrinHref();
+    var pdfWeb = oztiPdfPageToWebRel(s);
+    if (pdfWeb) s = pdfWeb;
     var ozAx = oztiAxImageFromWebPath(s);
     if (ozAx) return ozAx;
     var vd = vitrumDrawingsHref(s);
