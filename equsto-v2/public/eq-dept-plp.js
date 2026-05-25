@@ -251,11 +251,11 @@
   }
 
   function brandKey(u) {
-    if (window.EqDeptCmFacets && window.EqDeptCmFacets.facetBrandKey) {
-      return window.EqDeptCmFacets.facetBrandKey((u && u.fb) || (u && u.b) || '');
-    }
     if (window.EqDeptCmFacets && window.EqDeptCmFacets.productBrand) {
       return window.EqDeptCmFacets.productBrand(u);
+    }
+    if (window.EqDeptCmFacets && window.EqDeptCmFacets.facetBrandKey) {
+      return window.EqDeptCmFacets.facetBrandKey((u && u.fb) || (u && u.b) || '');
     }
     return (u && u.fb) || (u && u.b) || '';
   }
@@ -270,7 +270,9 @@
       n = window.eqSimplifyTezgahDavlumbazName(n, { dept: DEPT });
     }
     var fb = b;
-    if (window.EqDeptCmFacets && window.EqDeptCmFacets.resolveFacetBrand) {
+    if (x.oem_brand) {
+      fb = String(x.oem_brand).trim();
+    } else if (window.EqDeptCmFacets && window.EqDeptCmFacets.resolveFacetBrand) {
       fb = window.EqDeptCmFacets.resolveFacetBrand(b, n);
     }
     var row = x;

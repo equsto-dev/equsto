@@ -420,6 +420,59 @@ export function mapOztiKahveCategory(name, kod) {
   return "kahve-diger";
 }
 
+/** Öztiryakiler bayi satırında ürün adının başındaki distribütör etiketini kaldırır. */
+export function stripOztiNameLead(name) {
+  const n = String(name || "").trim();
+  const m = n.match(
+    /^(?:ÖZTİRYAKİLER|OZTIRYAKILER|Öztiryakiler|Oztiryakiler)(?:\s+(?:Endüstriyel\s+Mutfak|ENDÜSTRIYEL\s+MUTFAK|Endustriyel\s+Mutfak|ENDUSTRIYEL\s+MUTFAK))?\s+/i
+  );
+  if (m) return n.slice(m[0].length).trim();
+  return n;
+}
+
+/** Öztiryakiler bayi kataloğunda ürün adından OEM marka (filtre / vitrin). */
+export function detectOztiOemBrand(name, category, kod) {
+  const full = String(name || "").trim();
+  const hay = stripOztiNameLead(full);
+  const cat = String(category || "").toLocaleLowerCase("tr");
+  const k = normKod(kod);
+  const up = hay.toLocaleUpperCase("tr");
+  const fullUp = full.toLocaleUpperCase("tr");
+
+  if (
+    /^ATS\b/.test(up) ||
+    /\bATS\s+(?:CAPPADOCIA|EFES)\b/.test(fullUp) ||
+    /^8573\.(?:CD|ED|ES)[A-Z0-9.]+$/i.test(k)
+  ) {
+    return "Ateşe";
+  }
+  if (/^WMF\b/.test(up) || (/^9580\./.test(k) && /WMF/.test(fullUp))) return "WMF";
+  if (/^NUOVA\s+SIMONELLI/.test(up) || /^NUOSI\b/.test(up)) return "Nuova Simonelli";
+  if (/^BRAVILOR/.test(up) || /^9574\.B/.test(k)) return "Bravilor Bonamat";
+  if (/^RATIONAL\b/.test(up)) return "Rational";
+  if (/^ROBOT\s+COUPE/.test(up)) return "Robot Coupe";
+  if (/^UNOX\b/.test(up)) return "Unox";
+  if (/^HOSHIZAKI\b/.test(up)) return "Hoshizaki";
+  if (/^WINTERHALTER\b/.test(up)) return "Winterhalter";
+  if (/^HOBART\b/.test(up)) return "Hobart";
+  if (/^FAC\b/.test(up)) return "FAC";
+  if (/^SANTOS\b/.test(up)) return "Santos";
+  if (/^ELECTROLUX(?:\s+PROFESSIONAL)?\b/.test(up)) return up.startsWith("ELECTROLUX PROFESSIONAL") ? "Electrolux Professional" : "Electrolux";
+  if (/^İNOKSAN\b|^INOKSAN\b/.test(up)) return "İnoksan";
+  if (/^ZANUSSI\b/.test(up)) return "Zanussi";
+
+  if (cat.includes("wmf")) return "WMF";
+  if (cat.includes("nuova-simonelli") || cat.includes("espresso")) {
+    if (/BRAVILOR/.test(fullUp)) return "Bravilor Bonamat";
+    if (/NUOVA|NUOSI|APPIA|OSCAR|MDX/.test(fullUp)) return "Nuova Simonelli";
+  }
+  if (cat.includes("degirmen") && /NUOVA|MDX/.test(fullUp)) return "Nuova Simonelli";
+  if (/^9584\./.test(k) && /MDX|NUOVA/.test(fullUp)) return "Nuova Simonelli";
+  if (cat.includes("cay-kazan") && /\bATS\b/.test(fullUp)) return "Ateşe";
+
+  return "Öztiryakiler";
+}
+
 /** Excel kategori → mağaza dept */
 export function mapOztiDept(row, setUstuAllow) {
   const kod = String(row.urun_kodu || row.sku || "").trim();

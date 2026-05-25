@@ -55,6 +55,13 @@
     'Hoshizaki',
     'Unox',
     'WMF',
+    'Nuova Simonelli',
+    'NUOVA SIMONELLI',
+    'NUOSI',
+    'Bravilor Bonamat',
+    'BRAVILOR',
+    'Ateşe',
+    'ATS',
     'FAC',
     'SANTOS',
     'Electrolux',
@@ -63,7 +70,24 @@
     'Inoksan',
     'Zanussi',
   ];
+  /** Katalog / fiyat listesi yazımı → filtre etiketi */
+  var OEM_LABEL_CANON = {
+    wmf: 'WMF',
+    'nuova simonelli': 'Nuova Simonelli',
+    nuosi: 'Nuova Simonelli',
+    bravilor: 'Bravilor Bonamat',
+    'bravilor bonamat': 'Bravilor Bonamat',
+    ateşe: 'Ateşe',
+    atese: 'Ateşe',
+    ats: 'Ateşe',
+  };
   var oemPrefixCache = null;
+
+  function normalizeOemLabel(prefix) {
+    var key = lc(String(prefix || '').trim());
+    if (OEM_LABEL_CANON[key]) return OEM_LABEL_CANON[key];
+    return String(prefix || '').trim();
+  }
 
   function oemNamePrefixes() {
     if (oemPrefixCache) return oemPrefixCache;
@@ -102,28 +126,39 @@
     return canonicalFacetBrand(brand) || String(brand || '').trim();
   }
 
+  function stripOztiLeadName(name) {
+    var n = String(name || '').trim();
+    var m = n.match(
+      /^(?:ÖZTİRYAKİLER|OZTIRYAKILER|Öztiryakiler|Oztiryakiler)(?:\s+(?:Endüstriyel\s+Mutfak|ENDÜSTRIYEL\s+MUTFAK|Endustriyel\s+Mutfak|ENDUSTRIYEL\s+MUTFAK))?\s+/i
+    );
+    if (m) return n.slice(m[0].length).trim();
+    return n;
+  }
+
   function resolveFacetBrand(brand, name) {
     var raw = String(brand || '').trim();
     if (!raw) return '';
-    var canon = canonicalFacetBrand(raw);
-    if (canon !== raw) return canon;
-    if (!OEM_RESELLER.test(lc(raw))) return raw;
     var n = String(name || '').trim();
-    if (!n) return raw;
-    var nl = lc(n);
-    var prefixes = oemNamePrefixes();
-    for (var pi = 0; pi < prefixes.length; pi++) {
-      var p = prefixes[pi];
-      if (nl.indexOf(lc(p)) === 0) return p;
+    if (OEM_RESELLER.test(lc(raw)) && n) {
+      var scan = stripOztiLeadName(n);
+      var namesToTry = scan === n ? [n] : [scan, n];
+      var prefixes = oemNamePrefixes();
+      for (var ni = 0; ni < namesToTry.length; ni++) {
+        var nl = lc(namesToTry[ni]);
+        for (var pi = 0; pi < prefixes.length; pi++) {
+          var p = prefixes[pi];
+          if (nl.indexOf(lc(p)) === 0) return normalizeOemLabel(p);
+        }
+      }
     }
-    return raw;
+    return facetBrandKey(raw);
   }
 
   function productBrand(u) {
     if (!u) return '';
-    var raw = String((u.fb || u.b || '')).trim();
-    if (!raw) return resolveFacetBrand(u.b, u.n);
-    return facetBrandKey(raw);
+    var fb = String((u.fb || '')).trim();
+    if (fb) return facetBrandKey(fb);
+    return facetBrandKey(resolveFacetBrand(u.b, u.n));
   }
 
   function matchEnergy(u, energyId) {
