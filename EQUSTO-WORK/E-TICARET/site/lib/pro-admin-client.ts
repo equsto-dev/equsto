@@ -295,6 +295,14 @@ export type ProjeAkisData = {
   updated_at?: string;
 };
 
+export const EMPTY_PROJE_AKIS: ProjeAkisData = {
+  questions: [],
+  shopTypes: [],
+  rules: [],
+  eqSets: [],
+  products: [],
+};
+
 export function rowHasImage(row: EkipmanRow): boolean {
   return Array.isArray(row.images) && !!String(row.images[0] || "").trim();
 }
@@ -345,13 +353,113 @@ export async function fetchCatalogStats(): Promise<CatalogStats> {
   return { ekipmanlar: rows.length, withImage, brands: brands.size };
 }
 
-export async function fetchProjeAkis(): Promise<{
-  data: ProjeAkisData | null;
+export type PfosKategoriBantMeta = {
+  listeDosya: string;
+  kalemSayisi: number;
+  toplamAdet: number;
+  kaynakDosya?: string;
+  yukleme?: string;
+};
+
+export type PfosKategorilerManifest = {
+  version: string;
+  updated_at?: string;
+  kategoriler: Array<{
+    id: string;
+    label: string;
+    ustKategori: string;
+    bantlar: Array<{
+      id: string;
+      label: string;
+      referansM2: number;
+      meta?: PfosKategoriBantMeta;
+    }>;
+  }>;
+};
+
+export async function fetchPfosKategoriler(): Promise<{
+  manifest: PfosKategorilerManifest | null;
   error?: string;
 }> {
   const token = getProToken();
-  const res = await fetch("/api/proje-akis", {
+  const res = await fetch("/api/pfos/kategoriler", {
     headers: token ? { Authorization: `Bearer ${token}` } : {},
+    cache: "no-store",
+  });
+  const body = await parseJson<{
+    success?: boolean;
+    manifest?: PfosKategorilerManifest;
+    error?: string;
+  }>(res);
+  if (!res.ok || body.error || body.success === false) {
+    return { manifest: null, error: body.error || `HTTP ${res.status}` };
+  }
+  return { manifest: body.manifest ?? null };
+}
+
+export async function uploadPfosKategoriListe(
+  kategoriId: string,
+  bantId: string,
+  file: File,
+): Promise<{
+  kalemSayisi?: number;
+  manifest?: PfosKategorilerManifest;
+  error?: string;
+}> {
+  const token = getProToken();
+  const fd = new FormData();
+  fd.append("kategoriId", kategoriId);
+  fd.append("bantId", bantId);
+  fd.append("file", file);
+  const res = await fetch("/api/pfos/kategoriler", {
+    method: "POST",
+    headers: token ? { Authorization: `Bearer ${token}` } : {},
+    body: fd,
+  });
+  const body = await parseJson<{
+    success?: boolean;
+    kalemSayisi?: number;
+    manifest?: PfosKategorilerManifest;
+    error?: string;
+  }>(res);
+  if (!res.ok || body.error || body.success === false) {
+    return { error: body.error || `HTTP ${res.status}` };
+  }
+  return { kalemSayisi: body.kalemSayisi, manifest: body.manifest };
+}
+
+export async function deletePfosKategoriListe(
+  kategoriId: string,
+  bantId: string,
+): Promise<{ manifest?: PfosKategorilerManifest; error?: string }> {
+  const token = getProToken();
+  const q = new URLSearchParams({ kategori: kategoriId, bant: bantId });
+  const res = await fetch(`/api/pfos/kategoriler?${q}`, {
+    method: "DELETE",
+    headers: token ? { Authorization: `Bearer ${token}` } : {},
+  });
+  const body = await parseJson<{
+    success?: boolean;
+    manifest?: PfosKategorilerManifest;
+    error?: string;
+  }>(res);
+  if (!res.ok || body.error || body.success === false) {
+    return { error: body.error || `HTTP ${res.status}` };
+  }
+  return { manifest: body.manifest };
+}
+
+export async function saveProjeAkis(
+  payload: ProjeAkisData,
+): Promise<{ data?: ProjeAkisData; error?: string }> {
+  const token = getProToken();
+  const res = await fetch("/api/proje-akis", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+    },
+    body: JSON.stringify(payload),
   });
   const body = await parseJson<{
     success?: boolean;
@@ -359,7 +467,71 @@ export async function fetchProjeAkis(): Promise<{
     error?: string;
   }>(res);
   if (!res.ok || body.error || body.success === false) {
-    return { data: null, error: body.error || `HTTP ${res.status}` };
+    return { error: body.error || `HTTP ${res.status}` };
   }
-  return { data: body.data || null };
+  return { data: body.data ?? payload };
+}
+
+async function fetchProjeAkisStatic(): Promise<{
+  data: ProjeAkisData | null;
+  error?: string;
+}> {
+  const { unwrapProjeAkisPayload, isProjeAkisEmpty } = await import(
+    "@/lib/pfos/proje-akis/unwrap"
+  );
+  try {
+    const res = await fetch("/data/proje-akis.json", { cache: "no-store" });
+    if (!res.ok) {
+      return {
+        data: { ...EMPTY_PROJE_AKIS },
+        error: `Statik proje-akis.json: HTTP ${res.status}`,
+      };
+    }
+    const raw = await res.json();
+    const data = unwrapProjeAkisPayload(raw);
+    if (!data || isProjeAkisEmpty(data)) {
+      return {
+        data: { ...EMPTY_PROJE_AKIS },
+        error: "proje-akis.json boş veya tanınmayan biçim",
+      };
+    }
+    return { data };
+  } catch (e) {
+    const msg = e instanceof Error ? e.message : "Statik dosya okunamadı";
+    return { data: { ...EMPTY_PROJE_AKIS }, error: msg };
+  }
+}
+
+/** API (Vercel’de yavaş/boş olabilir) → CDN /data/proje-akis.json yedek */
+export async function fetchProjeAkis(): Promise<{
+  data: ProjeAkisData | null;
+  error?: string;
+}> {
+  const { unwrapProjeAkisPayload, isProjeAkisEmpty } = await import(
+    "@/lib/pfos/proje-akis/unwrap"
+  );
+  const token = getProToken();
+  try {
+    const res = await fetch("/api/proje-akis", {
+      headers: token ? { Authorization: `Bearer ${token}` } : {},
+      cache: "no-store",
+      signal: AbortSignal.timeout(12_000),
+    });
+    const body = await parseJson<{
+      success?: boolean;
+      data?: ProjeAkisData;
+      error?: string;
+    }>(res);
+    if (res.ok && !body.error && body.success !== false) {
+      const fromApi = body.data
+        ? { ...EMPTY_PROJE_AKIS, ...body.data }
+        : unwrapProjeAkisPayload(body);
+      if (fromApi && !isProjeAkisEmpty(fromApi)) {
+        return { data: fromApi };
+      }
+    }
+  } catch {
+    /* API zaman aşımı / ağ — statik yedek */
+  }
+  return fetchProjeAkisStatic();
 }

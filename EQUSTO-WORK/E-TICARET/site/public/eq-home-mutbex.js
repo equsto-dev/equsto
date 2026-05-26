@@ -598,14 +598,34 @@
     return base.slice(0, (spec && Number(spec.limit)) || 8);
   }
 
+  function productCodeFromLabel(s) {
+    if (typeof global.eqExtractProductCodeTail === 'function') {
+      return global.eqExtractProductCodeTail(s);
+    }
+    var m = String(s || '').match(/([0-9]{2,}[A-Za-z][0-9][\w.-]*\.[\w.]+)/i);
+    return m ? m[1].toLowerCase().replace(/\./g, '-') : '';
+  }
+
   function findProduct(pool, sku) {
     if (!sku || !Array.isArray(pool)) return null;
     var key = String(sku).toLowerCase();
+    var code = productCodeFromLabel(sku);
     for (var i = 0; i < pool.length; i++) {
       var u = pool[i];
       if (!u) continue;
       if (String(u.n || '').toLowerCase() === key) return u;
       if (String(u.sku || '').toLowerCase() === key) return u;
+      var uid = String(u.id || (u.raw && u.raw.id) || '').toLowerCase();
+      if (uid && code && uid.endsWith('__' + code)) return u;
+      if (
+        typeof global.eqMatchCatalogRowByPathSlug === 'function' &&
+        global.eqMatchCatalogRowByPathSlug(
+          { id: uid, brand: u.b, name: u.n, specs: u.specs },
+          key.replace(/[^a-z0-9-]+/g, '-'),
+        )
+      ) {
+        return u;
+      }
     }
     return null;
   }

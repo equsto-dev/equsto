@@ -1,3 +1,4 @@
+import { catalogUrlSlug, foldTr } from "@/lib/catalog-product-slug";
 import { loadEkipmanlarJson } from "@/lib/catalog-json";
 import { deptSearchHints, expandSearchQueries } from "@/lib/search-synonyms";
 
@@ -24,27 +25,6 @@ type CatalogRow = Record<string, unknown>;
 
 let cache: { rows: CatalogRow[] } | null = null;
 
-function foldTr(s: string) {
-  return String(s || "")
-    .toLocaleLowerCase("tr")
-    .replace(/ğ/g, "g")
-    .replace(/ü/g, "u")
-    .replace(/ş/g, "s")
-    .replace(/ö/g, "o")
-    .replace(/ç/g, "c")
-    .replace(/ı/g, "i")
-    .replace(/İ/g, "i");
-}
-
-function slugify(s: string) {
-  return foldTr(s)
-    .replace(/[/\\]+/g, "-")
-    .replace(/[^a-z0-9+\-]+/g, "-")
-    .replace(/-+/g, "-")
-    .replace(/^-+|-+$/g, "")
-    .substring(0, 100);
-}
-
 function meiliId(raw: string) {
   return String(raw || "")
     .replace(/[/\\]+/g, "-")
@@ -54,17 +34,11 @@ function meiliId(raw: string) {
     .slice(0, 500);
 }
 
-function productSlug(row: CatalogRow) {
-  const b = slugify(String(row.brand || ""));
-  const n = slugify(String(row.name || ""));
-  return (b ? `${b}-` : "") + n;
-}
-
 function docId(row: CatalogRow, dept: string) {
   if (row.id) return meiliId(String(row.id));
   const sku = String(row.sku || row.model || "");
   if (sku) return meiliId(`${dept}__${sku}`);
-  return meiliId(`${dept}__${productSlug(row)}`);
+  return meiliId(`${dept}__${catalogUrlSlug(row)}`);
 }
 
 function firstImage(row: CatalogRow) {
@@ -78,7 +52,7 @@ function rowToHit(row: CatalogRow): CatalogSearchHit | null {
   if (!name) return null;
   const dept = String(row.dept || "").trim();
   if (!dept) return null;
-  const slug = productSlug(row);
+  const slug = catalogUrlSlug(row);
   const id = docId(row, dept);
   return {
     id,

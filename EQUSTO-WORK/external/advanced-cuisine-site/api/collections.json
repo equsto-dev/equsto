@@ -1,0 +1,169 @@
+{
+  "collections": [
+    {
+      "id": 529886740797,
+      "title": "Blast Chillers",
+      "handle": "blast-chillers",
+      "description": "",
+      "published_at": "2025-10-13T23:17:27-04:00",
+      "updated_at": "2025-11-04T04:36:32-05:00",
+      "image": null,
+      "products_count": 3
+    },
+    {
+      "id": 530105696573,
+      "title": "Chamber Vacuum Sealers",
+      "handle": "chamber-vacuum-sealers",
+      "description": "",
+      "published_at": "2025-10-16T06:44:15-04:00",
+      "updated_at": "2025-10-16T11:25:16-04:00",
+      "image": {
+        "id": 1747107119421,
+        "created_at": "2025-10-16T06:44:13-04:00",
+        "src": "https://cdn.shopify.com/s/files/1/0960/7328/5949/collections/ChamberVaccuumSealerC17af-2.jpg?v=1760611454",
+        "alt": null
+      },
+      "products_count": 3
+    },
+    {
+      "id": 529697702205,
+      "title": "Clear Ice Machines",
+      "handle": "clear-ice-machines",
+      "description": "",
+      "published_at": "2025-10-12T01:09:35-04:00",
+      "updated_at": "2025-11-04T04:39:21-05:00",
+      "image": {
+        "id": 1747266928957,
+        "created_at": "2025-11-04T04:37:36-05:00",
+        "src": "https://cdn.shopify.com/s/files/1/0960/7328/5949/collections/Clear_ice_machine_IMT200.jpg?v=1762249161",
+        "alt": null
+      },
+      "products_count": 0
+    },
+    {
+      "id": 530021515581,
+      "title": "Clear Ice Machines for Businesses",
+      "handle": "clear-ice-machines-for-businesses",
+      "description": "",
+      "published_at": "2025-10-15T03:02:08-04:00",
+      "updated_at": "2025-11-04T04:38:42-05:00",
+      "image": {
+        "id": 1747266961725,
+        "created_at": "2025-11-04T04:38:42-05:00",
+        "src": "https://cdn.shopify.com/s/files/1/0960/7328/5949/collections/IMT300-1.jpg?v=1762249122",
+        "alt": null
+      },
+      "products_count": 2
+    },
+    {
+      "id": 529886675261,
+      "title": "Compostable Vacuum Bags",
+      "handle": "compostable-vacuum-bags",
+      "description": "",
+      "published_at": "2025-10-13T23:16:15-04:00",
+      "updated_at": "2025-10-16T07:19:21-04:00",
+      "image": null,
+      "products_count": 3
+    },
+    {
+      "id": 530650988861,
+      "title": "iceduowarranty",
+      "handle": "iceduowarranty",
+      "description": "",
+      "published_at": "2025-10-22T23:34:23-04:00",
+      "updated_at": "2025-10-22T23:34:23-04:00",
+      "image": null,
+      "products_count": 0
+    },
+    {
+      "id": 529886708029,
+      "title": "Neovide",
+      "handle": "neovide",
+      "description": "",
+      "published_at": "2025-10-13T23:16:24-04:00",
+      "updated_at": "2025-11-04T23:13:57-05:00",
+      "image": null,
+      "products_count": 2
+    },
+    {
+      "id": 530106646845,
+      "title": "Sous Vide Cookers",
+      "handle": "sous-vide-cookers",
+      "description": "",
+      "published_at": "2025-10-16T06:54:57-04:00",
+      "updated_at": "2025-12-05T22:37:29-05:00",
+      "image": {
+        "id": 1747107381565,
+        "created_at": "2025-10-16T06:54:56-04:00",
+        "src": "https://cdn.shopify.com/s/files/1/0960/7328/5949/collections/SV330.jpg?v=1760612097",
+        "alt": null
+      },
+      "products_count": 5
+    },
+    {
+      "id": 530105958717,
+      "title": "Suction Vacuum Sealers",
+      "handle": "suction-vacuum-sealers",
+      "description": "",
+      "published_at": "2025-10-16T06:45:41-04:00",
+      "updated_at": "2025-11-04T23:15:26-05:00",
+      "image": {
+        "id": 1747107152189,
+        "created_at": "2025-10-16T06:45:40-04:00",
+        "src": "https://cdn.shopify.com/s/files/1/0960/7328/5949/collections/V11_-_vacuum_food_4a4e5ee8-357c-40a6-b29f-2418dca164d8.jpg?v=1760611540",
+        "alt": null
+      },
+      "products_count": 5
+    },
+    {
+      "id": 530107040061,
+      "title": "Vacuum Bags",
+      "handle": "vacuum-bags",
+      "description": "",
+      "published_at": "2025-10-16T06:59:26-04:00",
+      "updated_at": "2025-11-06T22:12:23-05:00",
+      "image": null,
+      "products_count": 2
+    },
+    {
+      "id": 530106351933,
+      "title": "Vacuum Bags & Rolls",
+      "handle": "vacuum-bags-rolls",
+      "description": "",
+      "published_at": "2025-10-16T06:48:20-04:00",
+      "updated_at": "2025-10-16T07:48:23-04:00",
+      "image": {
+        "id": 1747107217725,
+        "created_at": "2025-10-16T06:48:19-04:00",
+        "src": "https://cdn.shopify.com/s/files/1/0960/7328/5949/collections/Compostable_vacuum_bags_on_table-1.jpg?v=1760611700",
+        "alt": null
+      },
+      "products_count": 0
+    },
+    {
+      "id": 530107007293,
+      "title": "Vacuum Rolls",
+      "handle": "vacuum-rolls",
+      "description": "",
+      "published_at": "2025-10-16T06:59:10-04:00",
+      "updated_at": "2025-11-06T22:44:51-05:00",
+      "image": null,
+      "products_count": 2
+    },
+    {
+      "id": 530106679613,
+      "title": "Wireless Meat Thermometers",
+      "handle": "wireless-meat-thermometers",
+      "description": "",
+      "published_at": "2025-10-16T06:55:51-04:00",
+      "updated_at": "2025-10-16T21:09:23-04:00",
+      "image": {
+        "id": 1747107414333,
+        "created_at": "2025-10-16T06:55:50-04:00",
+        "src": "https://cdn.shopify.com/s/files/1/0960/7328/5949/collections/BP20WirelessMeatThermometer-1.jpg?v=1760612150",
+        "alt": null
+      },
+      "products_count": 1
+    }
+  ]
+}

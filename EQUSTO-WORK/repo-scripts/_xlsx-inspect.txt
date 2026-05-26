@@ -1,0 +1,23 @@
+﻿python : Traceback (most recent call last):
+At C:\Users\User\AppData\Local\Temp\ps-script-597e0ce3-361f-4c75-bc97-704c4c21ffef.ps1:86 char:1
++ python -c "
++ ~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<string>", line 15, in <module>
+    if row: print('R'+str(r), '|'.join(row[:12]))
+            ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\encodings\cp1254.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4f7' in position 4: character maps to <undefined>
+dims A1:N43
+merged 32
+R1 A1='PROFORMA FATURA'|J1='Say²:'|K1='EQS-2026-001'|M1='EQUSTO'
+R2 A2='Proje:'|C2='Coca-Cola ¦ecek ù FBE20T Isparta'|G2='M³■teri:'|H2='Alper Bey'|J2='Tarih:'|K2='22.04.2026'
+R3 A3='TCMB Efektif Sat²■ Kuru û 22.04.2026'|J3=52.8238|K3='EUR/TRY  (kur h³cresi: J3 ù g³ncellendi­inde TL s
+R4 A4='B÷l.'|B4='Grup'|C4='Poz'|D4='EK'|E4='Stok no'|F4='Tan²m²'|G4='Kaynak'|H4='Boy'|I4='En'|J4='Y³k.'|K4='Adet'|L4='Sat²■'
+R5 A5='01. MUTFAK'
+R6 A6='01'|B6='A'|C6='01'|E6='INO-FBE20T'|F6='A. SICAK MUTFAK INO-FBE20T'|G6='¦noksan'|H6='1180 X'|I6='1070 X'|J6='1250'|K6=1|L6=8303.82|M6='=K6*L6'
+R7 

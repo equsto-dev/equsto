@@ -1,6 +1,7 @@
 "use client";
 
-import { goEqCart, goEqDept, submitBesosSearch, toggleEqDrawer } from "@/lib/besos/site-nav";
+import BesosHdrBrand from "@/components/besos/BesosHdrBrand";
+import { goEqCart, goEqDept, submitBesosSearch } from "@/lib/besos/site-nav";
 import { useRef } from "react";
 
 export default function BesosEqustoChrome() {
@@ -9,6 +10,7 @@ export default function BesosEqustoChrome() {
   return (
     <>
       <header className="hdr" data-besos-shell="locked">
+        <BesosHdrBrand active="vitrin" />
         <a className="logo" href="/" aria-label="Equsto" />
         <div
           className="pg-inner hdr-pg-inner"
@@ -28,13 +30,10 @@ export default function BesosEqustoChrome() {
             </div>
           </div>
           <div className="srch">
-            <div className="srch-cat" role="button" tabIndex={0} onClick={toggleEqDrawer}>
-              ☰ Tüm Kategoriler
-            </div>
             <input
               ref={searchRef}
               className="srch-input"
-              type="text"
+              type="search"
               placeholder="Bar modülü, ürün veya kategori ara..."
               onInput={(e) => {
                 const fn = (window as Window & { filterStations?: (q: string) => void }).filterStations;
@@ -53,42 +52,34 @@ export default function BesosEqustoChrome() {
               title="Ara"
               onClick={() => submitBesosSearch(searchRef.current?.value ?? "")}
             >
-              <svg xmlns="http://www.w3.org/2000/svg" className="eq-srch-ico" width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="eq-srch-ico"
+                width="18"
+                height="18"
+                viewBox="0 0 20 20"
+                fill="none"
+                aria-hidden="true"
+              >
                 <circle cx="8.5" cy="8.5" r="5.25" stroke="currentColor" strokeWidth="1.35" />
-                <line x1="12.35" y1="12.35" x2="17.85" y2="12.35" stroke="currentColor" strokeWidth="1.35" strokeLinecap="round" />
+                <line
+                  x1="12.35"
+                  y1="12.35"
+                  x2="17.85"
+                  y2="12.35"
+                  stroke="currentColor"
+                  strokeWidth="1.35"
+                  strokeLinecap="round"
+                />
               </svg>
             </button>
           </div>
           <div className="hdr-right">
-            <div className="theme-wrap">
-              <button
-                type="button"
-                className="theme-toggle"
-                id="theme-toggle"
-                suppressHydrationWarning
-                onClick={() => (window as Window & { equstoCycleTheme?: () => void }).equstoCycleTheme?.()}
-                title="Sistem teması"
-                aria-label="Sistem teması — tıklayı değiştir"
-              >
-                ◐
-              </button>
-              <span className="theme-legend">Sistem · Açık · Koyu</span>
-            </div>
-            <a href="/login.html" className="eq-hdr-account" title="Üye girişi">
-              <span style={{ fontSize: 10, color: "var(--eq-text-muted)" }}>Hesabım</span>
-              <span className="eq-hdr-account-title" style={{ fontSize: 12, fontWeight: 600 }}>
-                Projeler ve Listeler ▾
-              </span>
-            </a>
-            <div style={{ display: "flex", flexDirection: "column", lineHeight: 1.4 }}>
-              <span style={{ fontSize: 10, color: "var(--eq-text-muted)" }}>İadeler</span>
-              <span style={{ fontSize: 12, fontWeight: 600, cursor: "pointer" }}>ve Siparişler</span>
-            </div>
             <div
               id="equsto-hdr-cart"
               className="equsto-hdr-cart"
               style={{ display: "flex", flexDirection: "column", lineHeight: 1.4, cursor: "pointer" }}
-              title="Sepeti aç"
+              title="Sepet sayfası"
               role="button"
               tabIndex={0}
               onClick={goEqCart}
@@ -110,50 +101,20 @@ export default function BesosEqustoChrome() {
 
       <nav className="topnav" aria-label="Departmanlar">
         <div className="pg-inner topnav-inner">
-          <div className="topnav-item topnav-all" role="button" tabIndex={0} onClick={toggleEqDrawer}>
-            ☰ Tüm kategoriler
-          </div>
-          <span className="topnav-sep" aria-hidden="true">
-            |
-          </span>
-          <div className="topnav-item" role="button" tabIndex={0} onClick={() => goEqDept("pfos")}>
+          <div className="topnav-item topnav-pfos" role="button" tabIndex={0} onClick={() => goEqDept("pfos")}>
             Proje Fabrikası
           </div>
           <span className="topnav-sep" aria-hidden="true">
             |
           </span>
           <div className="topnav-item" role="button" tabIndex={0} onClick={() => goEqDept("pisirme")}>
-            Pişirme Ekipmanları
-          </div>
-          <span className="topnav-sep" aria-hidden="true">
-            |
-          </span>
-          <div className="topnav-item" role="button" tabIndex={0} onClick={() => goEqDept("sogutma")}>
-            Soğutma Ekipmanları
-          </div>
-          <span className="topnav-sep" aria-hidden="true">
-            |
-          </span>
-          <div className="topnav-item" role="button" tabIndex={0} onClick={() => goEqDept("kahve")}>
-            Kahve Ekipmanları
-          </div>
-          <span className="topnav-sep" aria-hidden="true">
-            |
-          </span>
-          <div className="topnav-item" role="button" tabIndex={0} onClick={() => goEqDept("yikama")}>
-            Yıkama Ekipmanları
-          </div>
-          <span className="topnav-sep" aria-hidden="true">
-            |
-          </span>
-          <div className="topnav-item" role="button" tabIndex={0} onClick={() => goEqDept("hazirlik")}>
-            Hazırlık Ekipmanları
+            Pişirme
           </div>
           <span className="topnav-sep" aria-hidden="true">
             |
           </span>
           <div className="topnav-item" role="button" tabIndex={0} onClick={() => goEqDept("icecek")}>
-            İçecek Ekipmanları
+            İçecek
           </div>
           <span className="topnav-sep" aria-hidden="true">
             |

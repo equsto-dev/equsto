@@ -1,9 +1,19 @@
 "use client";
 
-import { ExportOutlined, FileAddOutlined, ProjectOutlined, ToolOutlined } from "@ant-design/icons";
+import {
+  AppstoreOutlined,
+  ExportOutlined,
+  FileAddOutlined,
+  ProjectOutlined,
+  ToolOutlined,
+} from "@ant-design/icons";
 import { PageContainer, ProCard, StatisticCard } from "@ant-design/pro-components";
 import { Alert, Button, Col, Row, Space, Tabs, Typography } from "antd";
+import Link from "next/link";
 import { useEffect, useState } from "react";
+import { getProToken } from "@/lib/pro-admin-client";
+import PfosKategoriPanel from "@/components/pfos/pro/PfosKategoriPanel";
+import PfosProjeAkisPanel from "@/components/pfos/pro/PfosProjeAkisPanel";
 import PfosProjeList from "@/components/pfos/pro/PfosProjeList";
 import PfosProWizard from "@/components/pfos/pro/PfosProWizard";
 import { fetchProjeAkis } from "@/lib/pro-admin-client";
@@ -22,10 +32,6 @@ function PfosOzetPanel() {
   useEffect(() => {
     fetchProjeAkis()
       .then(({ data, error: err }) => {
-        if (err) {
-          setError(err);
-          return;
-        }
         setCounts({
           questions: data?.questions?.length ?? 0,
           rules: data?.rules?.length ?? 0,
@@ -33,6 +39,14 @@ function PfosOzetPanel() {
           sets: data?.eqSets?.length ?? 0,
           types: data?.shopTypes?.length ?? 0,
         });
+        const empty =
+          !data?.questions?.length &&
+          !data?.shopTypes?.length &&
+          !data?.products?.length;
+        if (err && empty) setError(err);
+      })
+      .catch(() => {
+        setError("Proje akışı verisi yüklenemedi");
       })
       .finally(() => setLoading(false));
   }, []);
@@ -40,7 +54,29 @@ function PfosOzetPanel() {
   return (
     <>
       {error && (
-        <Alert type="error" message={error} showIcon style={{ marginBottom: 16 }} />
+        <Alert
+          type="error"
+          showIcon
+          style={{ marginBottom: 16 }}
+          message={error}
+          description={
+            error.toLowerCase().includes("yetkisiz") ? (
+              <Space direction="vertical" size={4}>
+                <span>
+                  Kayıt için Bearer gerekir; okuma genelde{" "}
+                  <code>/data/proje-akis.json</code> üzerinden yapılır.
+                </span>
+                <Link href="/yonetim/giris">Yönetim girişi → Bearer token</Link>
+                {!getProToken() && (
+                  <Typography.Text type="secondary" style={{ fontSize: 12 }}>
+                    Yerel: <code>.env</code> içindeki{" "}
+                    <code>EQUSTO_ADMIN_BEARER</code> değerini yapıştırın.
+                  </Typography.Text>
+                )}
+              </Space>
+            ) : undefined
+          }
+        />
       )}
 
       <Row gutter={[16, 16]}>
@@ -84,8 +120,7 @@ function PfosOzetPanel() {
         <Typography.Paragraph>
           PDF/Excel import, soru editörü ve kural setleri hâlâ{" "}
           <strong>admin.html</strong> içinde. Teklif motoru ve sihirbaz bu panelde
-          (Ant Design Pro); canlı müşteri sayfası geçiş sürecinde{" "}
-          <strong>pfos.html</strong>.
+          (Ant Design Pro);           canlı müşteri sayfası: <strong>/pfos</strong> (soru seti v3).
         </Typography.Paragraph>
         <Space wrap>
           <Button
@@ -96,7 +131,7 @@ function PfosOzetPanel() {
           >
             PFOS Admin (HTML)
           </Button>
-          <Button href="/pfos.html" target="_blank">
+          <Button href="/pfos" target="_blank">
             Canlı PFOS (müşteri)
           </Button>
           <Button href="/yonetim/yayin">Yayınlama</Button>
@@ -137,6 +172,20 @@ export default function YonetimPfosPage() {
               </span>
             ),
             children: <PfosProWizard />,
+          },
+          {
+            key: "kategoriler",
+            label: (
+              <span>
+                <AppstoreOutlined /> Kategoriler
+              </span>
+            ),
+            children: <PfosKategoriPanel />,
+          },
+          {
+            key: "proje-akis",
+            label: "Proje akışı (A)",
+            children: <PfosProjeAkisPanel />,
           },
           {
             key: "projeler",

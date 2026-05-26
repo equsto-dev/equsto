@@ -46,8 +46,17 @@ export default function TeklifV14Proforma({ model }: Props) {
     }
   }
 
+  const eqSk =
+    "EQ-SK-2026-PFOS-" +
+    String(ust.sayi || "000")
+      .replace(/[^A-Za-z0-9-]/g, "")
+      .slice(0, 24);
+
   return (
     <div style={{ fontFamily: "Arial, system-ui, sans-serif" }}>
+      <span style={{ display: "none" }} aria-hidden="true">
+        {eqSk}
+      </span>
       <div
         style={{
           borderBottom: "2px solid #000",

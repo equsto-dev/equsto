@@ -14,7 +14,7 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const PUBLIC = path.join(ROOT, "public");
-const V2_PUBLIC = path.join(ROOT, "equsto-v2", "public");
+const V2_PUBLIC = path.join(ROOT, "EQUSTO-WORK", "E-TICARET", "site", "public");
 const BASE = "https://equsto.com";
 const DRY = process.argv.includes("--dry-run");
 

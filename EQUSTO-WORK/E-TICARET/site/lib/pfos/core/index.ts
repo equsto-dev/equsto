@@ -7,7 +7,7 @@ export type {
 } from "./engine-types";
 
 export { allDayDiningCafe } from "./rules/all-day-dining-cafe/template";
-export { coffeeShop } from "./rules/coffee-shop/template";
+export { buildCoffeeShopTemplate } from "../referans/coffee-shop";
 export { pizzaci } from "./rules/pizzaci/template";
 export { turkRestoran } from "./rules/turk-restoran/template";
 export { meyhane } from "./rules/meyhane/template";

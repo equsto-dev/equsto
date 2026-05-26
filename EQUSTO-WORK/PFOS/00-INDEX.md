@@ -12,3 +12,9 @@
 **Canlı kod:** `..\E-TICARET\site\lib\pfos\` (tek kaynak çalışma kopyası)
 
 **Komutlar** (`site` içinde): `npm run pfos:referans:all-day-dining`, `pfos:referans:s13-388`, `pfos:motor:test`
+
+## Cursor
+
+- **Workspace:** bu klasör (`PFOS`) veya `PFOS.code-workspace` (PFOS + site)
+- Agent: `AGENTS.md`, `.cursor/rules/`
+- Kod düzenleme: `..\E-TICARET\site\` ( `kod\` = ayna)

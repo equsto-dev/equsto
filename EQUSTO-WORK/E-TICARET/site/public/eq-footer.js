@@ -1,5 +1,5 @@
 /**
- * Equsto — Amazon tarzı vitrin alt bilgisi (body.eq-shop, Proje Fabrikası / admin / Besos hariç).
+ * Equsto — Amazon tarzı vitrin alt bilgisi (body.eq-shop; admin ve Bar Design hariç, PFOS dahil).
  * Veri: /data/footer-vitrin.json — href her zaman dolu (eski site / sitemap).
  */
 (function () {
@@ -48,7 +48,7 @@
     var b = document.body;
     if (!b || !b.classList.contains("eq-shop")) return false;
     if (b.classList.contains("admin-app")) return false;
-    if (b.classList.contains("eq-pfos") || b.classList.contains("pf-page")) return false;
+    if (b.classList.contains("pf-page")) return false;
     /* Bar Design (Besos) — vitrin alt bandı göster */
     if (b.classList.contains("bd-page") && !b.classList.contains("besos")) return false;
     return true;

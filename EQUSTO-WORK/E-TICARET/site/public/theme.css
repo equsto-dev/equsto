@@ -27,13 +27,13 @@
   /* PLP kartları — Amazon benzeri hafif derinlik (gölge / hover) */
   --eq-plp-card-shadow: 0 1px 3px rgba(15, 17, 17, 0.06);
   --eq-plp-card-shadow-hover: 0 4px 12px rgba(15, 17, 17, 0.1);
-  /* Departman şeridi — açık antrasit (üst lacivert banttan ayrı) */
+  /* Departman şeridi — beyaz zemin, koyu metin (üst lacivert banttan ayrı) */
   --eq-topnav-dept-bg: #131f3f;
-  --eq-topnav-dept-strip-bg: #727b84;
-  --eq-topnav-dept-hover: rgba(255, 255, 255, 0.12);
-  --eq-topnav-dept-text: #ffffff;
-  --eq-topnav-dept-sep: rgba(255, 255, 255, 0.42);
-  --eq-topnav-dept-border: rgba(255, 255, 255, 0.15);
+  --eq-topnav-dept-strip-bg: #ffffff;
+  --eq-topnav-dept-hover: rgba(0, 30, 80, 0.06);
+  --eq-topnav-dept-text: #1a1a1a;
+  --eq-topnav-dept-sep: rgba(0, 0, 0, 0.2);
+  --eq-topnav-dept-border: #e5e5e5;
   --eq-topnav-dept-active-line: #febd69;
   /* Üçlü vitrin (PFOS / Yer Sofrası / Besos): ana sayfa ≠ kategori — yalnızca bu değişkenleri düzenleyin */
   --eq-home-hero-card-h: 380px;
@@ -57,6 +57,9 @@
   --eq-hdr-logo-max-w: min(144px, 31vw);
   --eq-hdr-logo-wordmark-h: 13px;
   --eq-hdr-logo-link-max-w: 31vw;
+  /* Wordmark kalınlık: önceki 500 → %10 inceltme (450); PNG için scaleX aynı oran */
+  --eq-hdr-logo-font-weight: 450;
+  --eq-hdr-logo-scale-x: 0.9;
   /* Üst arama barı + departman şeridi — çekmece ve filtre sütunu bu çizgiden başlar */
   --eq-filter-col-sticky-top: 92px;
   --eq-filter-col-sticky-max-h: calc(100vh - 96px);
@@ -101,11 +104,11 @@ html[data-theme="dark"] {
   --eq-plp-card-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
   --eq-plp-card-shadow-hover: 0 6px 18px rgba(0, 0, 0, 0.5);
   --eq-topnav-dept-bg: #131f3f;
-  --eq-topnav-dept-strip-bg: #6a7379;
-  --eq-topnav-dept-hover: rgba(255, 255, 255, 0.12);
-  --eq-topnav-dept-text: #ffffff;
-  --eq-topnav-dept-sep: rgba(255, 255, 255, 0.42);
-  --eq-topnav-dept-border: rgba(255, 255, 255, 0.14);
+  --eq-topnav-dept-strip-bg: #ffffff;
+  --eq-topnav-dept-hover: rgba(0, 30, 80, 0.06);
+  --eq-topnav-dept-text: #1a1a1a;
+  --eq-topnav-dept-sep: rgba(0, 0, 0, 0.2);
+  --eq-topnav-dept-border: #e5e5e5;
   --eq-topnav-dept-active-line: #febd69;
   /* Üçlü vitrin: ana sayfa ≠ kategori (ayrı yükseklik; light ile aynı px) */
   --eq-home-hero-card-h: 380px;
@@ -3668,7 +3671,7 @@ button.auth-logo {
 
 a.logo.logo--text {
   font-size: 15px;
-  font-weight: 500;
+  font-weight: var(--eq-hdr-logo-font-weight, 450);
   letter-spacing: 0.02em;
 }
 
@@ -3716,8 +3719,11 @@ a.bd-hdr-wordmark .eq-logo-svg {
 
 /* Koyu bant: equsto-logo.js → equsto-logo-white.png (eski invert şeffaf PNG’de beyaz kutu yapıyordu) */
 header.hdr > a.logo .eq-logo-img,
-body.bd-page.besos .bd-hdr-wordmark .eq-logo-img {
+body.bd-page.besos .bd-hdr-wordmark .eq-logo-img,
+a.bd-hdr-wordmark .eq-logo-img {
   filter: none !important;
+  transform: scaleX(var(--eq-hdr-logo-scale-x, 0.9));
+  transform-origin: left center;
 }
 
 /* Şeffaf zemin; çizgi ve yazı = a.logo / button.auth-logo → color: var(--eq-text) */
@@ -3734,7 +3740,7 @@ body.bd-page.besos .bd-hdr-wordmark .eq-logo-img {
 .eq-logo-svg .eq-logo-word {
   fill: currentColor;
   font-family: Rajdhani, system-ui, -apple-system, sans-serif;
-  font-weight: 500;
+  font-weight: var(--eq-hdr-logo-font-weight, 450);
 }
 
 /* Üst bant (#001e50 vb.) üzerinde wordmark hep beyaz */
@@ -4131,7 +4137,7 @@ body.eq-shop .eq-filter-col.eq-refine-amazon {
 
 /*
  * Amazon.com marketplace kromu (vitrin/katalog: body.eq-shop, admin hariç).
- * Telif: Amazon logosu / smile kopyalanmaz; üst şerit vitrinde Electrolux mavisi + nötr arama; departman şeridi açık antrasit (--eq-topnav-dept-strip-bg).
+ * Telif: Amazon logosu / smile kopyalanmaz; üst şerit vitrinde Electrolux mavisi + nötr arama; departman şeridi beyaz (--eq-topnav-dept-strip-bg).
  *
  * KİLİT: vitrin-beyaz-zemin-KILIT.txt — bar-design (bd-page) hariç zemin her zaman beyaz;
  * koyu tema / --eq-bg-neutral vitrine uygulanmaz. Açık yazılı talimat olmadan değiştirme.
@@ -4237,39 +4243,39 @@ body.eq-shop:not(.admin-app):not(.bd-page) header.hdr button.srch-btn:hover {
 body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .eq-srch-ico {
   color: var(--eq-topnav-dept-bg, #001e50);
 }
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) {
+body.eq-shop:not(.admin-app):not(.bd-page) {
   --eq-topnav-dept-strip-bg: #ffffff;
   --eq-topnav-dept-text: #1a1a1a;
   --eq-topnav-dept-border: #e5e5e5;
   --eq-topnav-dept-hover: rgba(0, 30, 80, 0.06);
   --eq-topnav-dept-sep: rgba(0, 0, 0, 0.2);
 }
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) header.hdr {
+body.eq-shop:not(.admin-app):not(.bd-page) header.hdr {
   position: sticky;
   top: 0;
   z-index: 501 !important;
 }
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) nav.topnav,
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .topnav {
+body.eq-shop:not(.admin-app):not(.bd-page) nav.topnav,
+body.eq-shop:not(.admin-app):not(.bd-page) .topnav {
   background: #ffffff !important;
   border-bottom: 1px solid var(--eq-topnav-dept-border) !important;
   top: var(--eq-hdr-sticky-h, 56px);
   z-index: 500 !important;
 }
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .topnav-item {
+body.eq-shop:not(.admin-app):not(.bd-page) .topnav-item {
   color: var(--eq-topnav-dept-text, #1a1a1a) !important;
 }
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .topnav-item:hover {
+body.eq-shop:not(.admin-app):not(.bd-page) .topnav-item:hover {
   background: var(--eq-topnav-dept-hover, rgba(0, 30, 80, 0.06)) !important;
   color: var(--eq-topnav-dept-text, #1a1a1a) !important;
 }
 body.eq-shop:not(.admin-app):not(.bd-page) .topnav-item.active {
   box-shadow: inset 0 -2px 0 0 #febd69 !important;
 }
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .topnav-sep {
+body.eq-shop:not(.admin-app):not(.bd-page) .topnav-sep {
   color: var(--eq-topnav-dept-sep, rgba(0, 0, 0, 0.2)) !important;
 }
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .topnav-hamburger span {
+body.eq-shop:not(.admin-app):not(.bd-page) .topnav-hamburger span {
   background: #1a1a1a;
 }
 body.eq-shop:not(.admin-app):not(.bd-page) .right-col > .breadcrumb:first-child {
@@ -4322,6 +4328,21 @@ html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) .footer {
   color: #6b6b6b !important;
   border-top-color: #e5e5e5 !important;
 }
+html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) nav.topnav,
+html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) .topnav {
+  background: #ffffff !important;
+  border-bottom-color: #e5e5e5 !important;
+}
+html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) .topnav-item,
+html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) .topnav-item:hover {
+  color: #1a1a1a !important;
+}
+html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) .topnav-sep {
+  color: rgba(0, 0, 0, 0.2) !important;
+}
+html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) .topnav-hamburger span {
+  background: #1a1a1a !important;
+}
 
 /* Proje Fabrikası — vitrin koyu kromundan ayrı; zemin her zaman açık/beyaz */
 body.eq-shop.eq-pfos,
@@ -4351,19 +4372,29 @@ body.eq-shop.eq-pfos .pf-right,
 html[data-theme="dark"] body.eq-shop.eq-pfos .pf-right {
   background: #f5f7fb !important;
 }
-body.eq-shop.eq-pfos .footer,
-html[data-theme="dark"] body.eq-shop.eq-pfos .footer {
+body.eq-shop.eq-pfos .footer:not(.eq-mfoot),
+html[data-theme="dark"] body.eq-shop.eq-pfos .footer:not(.eq-mfoot) {
   background: #ffffff !important;
   color: #6b6b6b !important;
   border-top: 1px solid #e2e6ef !important;
 }
-body.eq-shop.eq-pfos .footer .refs span,
-body.eq-shop.eq-pfos .footer > div:last-child {
+body.eq-shop.eq-pfos .footer:not(.eq-mfoot) .refs span,
+body.eq-shop.eq-pfos .footer:not(.eq-mfoot) > div:last-child {
   color: #6b6b6b !important;
 }
+body.eq-shop.eq-pfos footer.footer.eq-mfoot {
+  display: block !important;
+  max-width: none !important;
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  flex: 0 0 auto;
+  align-self: stretch;
+}
 
-/* Vitrin alt bilgisi — Electrolux mavisi #011E41 (Proje Fabrikası / Bar Design hariç) */
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) footer.footer.eq-mfoot {
+/* Vitrin alt bilgisi — Electrolux mavisi #011E41 (Bar Design hariç; PFOS dahil) */
+body.eq-shop:not(.admin-app):not(.bd-page) footer.footer.eq-mfoot,
+body.eq-shop.eq-pfos footer.footer.eq-mfoot {
   display: block !important;
   padding: 0 !important;
   margin: 0;
@@ -4373,7 +4404,7 @@ body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) footer.footer.eq-mfoot 
   color: rgba(255, 255, 255, 0.88);
   background: #011e41;
 }
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-back {
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-back {
   display: block;
   width: 100%;
   border: none;
@@ -4388,50 +4419,50 @@ body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-back {
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   transition: background 0.15s ease;
 }
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-back:hover {
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-back:hover {
   background: #002868;
 }
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-main {
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-main {
   background: #011e41;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   padding: 36px 20px 28px;
 }
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-inner {
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-inner {
   max-width: 1500px;
   margin: 0 auto;
 }
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-cols {
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-cols {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 28px 24px;
   margin-bottom: 28px;
 }
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-col h3 {
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col h3 {
   margin: 0 0 12px;
   font-size: 16px;
   font-weight: 700;
   color: #fff;
   letter-spacing: 0.01em;
 }
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-col ul {
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-col li {
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col li {
   margin: 0 0 8px;
 }
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-col a {
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col a {
   font-size: 13px;
   line-height: 1.45;
   color: rgba(255, 255, 255, 0.78);
   text-decoration: none;
 }
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-col a:hover {
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col a:hover {
   color: #fff;
   text-decoration: underline;
 }
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-brand {
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-brand {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -4441,74 +4472,74 @@ body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-brand {
   padding-top: 8px;
   border-top: 1px solid rgba(255, 255, 255, 0.14);
 }
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-logo {
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-logo {
   display: inline-flex;
   align-items: center;
   color: #fff;
   text-decoration: none;
 }
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-logo .eq-logo-svg,
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-logo .eq-logo-wordmark {
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-logo .eq-logo-svg,
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-logo .eq-logo-wordmark {
   height: 18px;
   width: auto;
   max-width: min(160px, 72vw);
 }
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-logo .eq-logo-e-bar {
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-logo .eq-logo-e-bar {
   fill: #fff;
 }
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-logo .eq-logo-q circle,
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-logo .eq-logo-q line,
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-logo .eq-logo-letter,
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-logo path,
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-logo > .eq-logo-svg > circle {
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-logo .eq-logo-q circle,
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-logo .eq-logo-q line,
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-logo .eq-logo-letter,
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-logo path,
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-logo > .eq-logo-svg > circle {
   stroke: #fff;
 }
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-logo-text {
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-logo-text {
   font-size: 22px;
   font-weight: 800;
   letter-spacing: 0.14em;
   color: #fff;
 }
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-locale {
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-locale {
   font-size: 13px;
   color: rgba(255, 255, 255, 0.72);
   display: inline-flex;
   align-items: center;
   gap: 6px;
 }
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-tagline {
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-tagline {
   margin: 0 0 8px;
   text-align: center;
   font-size: 12px;
   color: rgba(255, 255, 255, 0.72);
   letter-spacing: 0.02em;
 }
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-partners {
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-partners {
   margin: 0;
   text-align: center;
   font-size: 11px;
   color: rgba(255, 255, 255, 0.55);
   letter-spacing: 0.04em;
 }
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-legal {
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-legal {
   background: #011e41;
   border-top: 1px solid rgba(255, 255, 255, 0.14);
   padding: 18px 20px 22px;
 }
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-legal-inner {
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-legal-inner {
   max-width: 1500px;
   margin: 0 auto;
   text-align: center;
 }
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-legal-nav {
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-legal-nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 8px 20px;
   margin-bottom: 10px;
 }
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-legal-nav a,
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-cookie {
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-legal-nav a,
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-cookie {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.78);
   text-decoration: none;
@@ -4518,28 +4549,28 @@ body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-cookie {
   font-family: inherit;
   cursor: pointer;
 }
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-legal-nav a:hover,
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-cookie:hover {
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-legal-nav a:hover,
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-cookie:hover {
   color: #fff;
   text-decoration: underline;
 }
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-copy {
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-copy {
   margin: 0;
   font-size: 11px;
   color: rgba(255, 255, 255, 0.55);
   line-height: 1.5;
 }
 @media (max-width: 900px) {
-  body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-cols {
+  body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-cols {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 @media (max-width: 520px) {
-  body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-cols {
+  body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-cols {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-main {
+  body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-main {
     padding: 28px 16px 22px;
   }
 }
@@ -5540,19 +5571,19 @@ html.eq-vitrin-white-lock[data-theme="dark"] body.eq-shop.eq-home:not(.admin-app
   --shop-card: #ffffff;
   background: #ffffff !important;
 }
-html.eq-vitrin-white-lock body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) footer.footer.eq-mfoot,
-html.eq-vitrin-white-lock body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-main,
-html.eq-vitrin-white-lock body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-legal {
+html.eq-vitrin-white-lock body.eq-shop:not(.admin-app):not(.bd-page) footer.footer.eq-mfoot,
+html.eq-vitrin-white-lock body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-main,
+html.eq-vitrin-white-lock body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-legal {
   background: #011e41 !important;
   color: rgba(255, 255, 255, 0.88) !important;
 }
-html.eq-vitrin-white-lock body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-col h3,
-html.eq-vitrin-white-lock body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-logo-text {
+html.eq-vitrin-white-lock body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col h3,
+html.eq-vitrin-white-lock body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-logo-text {
   color: #fff !important;
 }
-html.eq-vitrin-white-lock body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-col a,
-html.eq-vitrin-white-lock body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-legal-nav a,
-html.eq-vitrin-white-lock body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-mfoot-cookie {
+html.eq-vitrin-white-lock body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col a,
+html.eq-vitrin-white-lock body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-legal-nav a,
+html.eq-vitrin-white-lock body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-cookie {
   color: rgba(255, 255, 255, 0.78) !important;
 }
 /* Bar Design / Besos: koyu zemin kilidi dışında — vitrin beyaz kilidi uygulanmaz */
@@ -5566,11 +5597,11 @@ html.eq-vitrin-white-lock body.bd-page {
  */
 @media (max-width: 768px) {
   /* Mobil: üst departman şeridi (Proje Fabrikası, Pişirme, Bar Design…) — Menü çekmecesinden */
-  body.eq-shop:not(.admin-app):not(.eq-pfos):not(.bd-page) nav.topnav,
-  body.eq-shop:not(.admin-app):not(.eq-pfos):not(.bd-page) .topnav {
+  body.eq-shop:not(.admin-app):not(.bd-page) nav.topnav,
+  body.eq-shop:not(.admin-app):not(.bd-page) .topnav {
     display: none !important;
   }
-  body.eq-shop:not(.admin-app):not(.eq-pfos):not(.bd-page) {
+  body.eq-shop:not(.admin-app):not(.bd-page) {
     --eq-filter-col-sticky-top: 52px;
     --eq-filter-col-sticky-max-h: calc(100dvh - 58px);
     --eq-drawer-chrome-top: 52px;
@@ -5787,8 +5818,8 @@ html.eq-vitrin-white-lock body.bd-page {
  * Inline !important JS kalıntısı theme.js + head script ile temizlenir; bu blok yedek.
  */
 @media (min-width: 769px) {
-  body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) nav.topnav,
-  body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .topnav {
+  body.eq-shop:not(.admin-app):not(.bd-page) nav.topnav,
+  body.eq-shop:not(.admin-app):not(.bd-page) .topnav {
     display: flex !important;
     visibility: visible !important;
     pointer-events: auto !important;
@@ -5907,8 +5938,8 @@ body.eq-cart-page #equsto-cart-overlay {
 }
 
 /* WhatsApp widget — contact.css yüklenmezse dev ikon / açık overlay önlemi */
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) #equsto-contact-fab,
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .equsto-contact-fab:not(#eq-bottom-tabbar *) {
+body.eq-shop:not(.admin-app):not(.bd-page) #equsto-contact-fab,
+body.eq-shop:not(.admin-app):not(.bd-page) .equsto-contact-fab:not(#eq-bottom-tabbar *) {
   position: fixed;
   right: max(16px, env(safe-area-inset-right, 0px));
   bottom: max(16px, env(safe-area-inset-bottom, 0px));
@@ -5919,7 +5950,7 @@ body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .equsto-contact-fab:not
   max-height: 80px;
   pointer-events: none;
 }
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos)
+body.eq-shop:not(.admin-app):not(.bd-page)
   #equsto-contact-fab
   .equsto-contact-wa-fab:not(.equsto-contact-wa-fab--tabbar)
   img {
@@ -5935,9 +5966,40 @@ body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos)
   pointer-events: none !important;
 }
 @media (max-width: 768px) {
-  body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) #equsto-contact-fab,
-  body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .equsto-contact-fab:not(#eq-bottom-tabbar *) {
+  body.eq-shop:not(.admin-app):not(.bd-page) #equsto-contact-fab,
+  body.eq-shop:not(.admin-app):not(.bd-page) .equsto-contact-fab:not(#eq-bottom-tabbar *) {
     display: none !important;
     pointer-events: none !important;
   }
+}
+
+/* KİLİT — departman şeridi (topnav) vitrinde her zaman beyaz zemin + koyu metin */
+body.eq-shop:not(.admin-app):not(.bd-page) nav.topnav,
+body.eq-shop:not(.admin-app):not(.bd-page) .topnav,
+html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) nav.topnav,
+html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) .topnav,
+body.eq-shop.eq-pfos:not(.admin-app) nav.topnav,
+body.eq-shop.eq-pfos:not(.admin-app) .topnav {
+  background: #ffffff !important;
+  border-bottom: 1px solid #e5e5e5 !important;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .topnav-item,
+body.eq-shop:not(.admin-app):not(.bd-page) .topnav-item:hover,
+body.eq-shop.eq-pfos:not(.admin-app) .topnav-item,
+body.eq-shop.eq-pfos:not(.admin-app) .topnav-item:hover,
+html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) .topnav-item,
+html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) .topnav-item:hover {
+  color: #1a1a1a !important;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .topnav-item:hover,
+body.eq-shop.eq-pfos:not(.admin-app) .topnav-item:hover {
+  background: rgba(0, 30, 80, 0.06) !important;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .topnav-sep,
+body.eq-shop.eq-pfos:not(.admin-app) .topnav-sep {
+  color: rgba(0, 0, 0, 0.2) !important;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .topnav-hamburger span,
+body.eq-shop.eq-pfos:not(.admin-app) .topnav-hamburger span {
+  background: #1a1a1a !important;
 }

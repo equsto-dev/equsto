@@ -1850,6 +1850,7 @@ async function eqHomeLoadRemote() {
             p = String(x.price).split("\n")[0];
           }
           return {
+            id: x.id || "",
             c: x.category || x.kategori || "",
             dept: x.dept || "",
             b: x.brand || x.marka_ad || "",
@@ -1999,15 +2000,24 @@ function productHrefHome(u) {
   if (u && u.equstoPage) {
     return typeof window.eqAttrPath === "function" ? window.eqAttrPath(u.equstoPage) : u.equstoPage;
   }
-  var b = slugifyEq(u.b || '');
-  var n = slugifyEq(u.n || '');
-  var slug = (b ? b + '-' : '') + n;
-  if (!slug) return 'product.html?b=' + encodeURIComponent(u.b || '') + '&n=' + encodeURIComponent(u.n || '');
   var seg =
-    typeof window.eqCategoryToUrunlerSeg === "function"
+    (u && u.dept) ||
+    (typeof window.eqCategoryToUrunlerSeg === "function"
       ? window.eqCategoryToUrunlerSeg(u.c || "") || "pisirme"
-      : "pisirme";
-  return typeof window.eqProductPath === 'function' ? window.eqProductPath(seg, slug) : '/shop/' + seg + '/' + slug;
+      : "pisirme");
+  var slug =
+    typeof window.eqProductSlug === "function"
+      ? window.eqProductSlug(u)
+      : "";
+  if (!slug) {
+    var b = slugifyEq(u.b || "");
+    var n = slugifyEq(u.n || "");
+    slug = (b ? b + "-" : "") + n;
+  }
+  if (!slug) return "product.html?b=" + encodeURIComponent(u.b || "") + "&n=" + encodeURIComponent(u.n || "");
+  return typeof window.eqProductPath === "function"
+    ? window.eqProductPath(seg, slug)
+    : "/shop/" + seg + "/" + slug;
 }
 
 function eqHomeImgRaw(u) {

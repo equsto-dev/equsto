@@ -26,6 +26,8 @@ export const KonseptEnum = z.enum([
   "meyhane",
   "turk-restoran",
   "coffee-shop",
+  "steakhouse",
+  "balikci",
 ]);
 export type Konsept = z.infer<typeof KonseptEnum>;
 
@@ -36,6 +38,8 @@ export const KONSEPT_LABELS: Record<Konsept, string> = {
   meyhane: "Meyhane / Mezeli Restoran",
   "turk-restoran": "Türk Restoranı",
   "coffee-shop": "Coffee Shop",
+  steakhouse: "Steakhouse",
+  balikci: "Balıkçı",
 };
 
 export type FiyatStratejisi = "ekonomik" | "orta" | "premium";
@@ -51,6 +55,8 @@ export const PFOSRequestSchema = z.object({
   teslimatAdresi: z.string().optional(),
   projeAdi: z.string().optional(),
   musteri: z.string().optional(),
+  /** Balıkçı mahalle / alt tip — referans liste seçimi */
+  altTip: z.string().optional(),
 });
 
 export type PFOSRequest = z.infer<typeof PFOSRequestSchema>;

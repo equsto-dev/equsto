@@ -1,38 +1,38 @@
 # EQUSTO-WORK
 
-Equsto çalışma alanı — **tek kök**, üç iş kolu.
+Equsto çalışma alanı — **tüm site ve modüller burada.**
 
 ```
 EQUSTO-WORK\
-├── PFOS\           Proforma / mutfak
-├── E-TICARET\       E-ticaret + Next.js uygulaması (`site\`)
-└── BESOS\          Bar design / Vitrum
+├── E-TICARET\
+│   ├── site\              ← Canlı uygulama (Next.js + public vitrin) — Vercel kökü
+│   └── legacy-public\     ← Eski kök public/ arşivi
+├── BESOS\                 Bar Design / Vitrum kaynak
+├── PFOS\                  Proje Fabrikası dokümantasyon
+├── repo-scripts\          Eski EQUSTO-CURSOR/scripts (pack, deploy, katalog)
+├── docs\                  Repo dokümantasyonu
+└── external\              Harici referans scrape’leri
 ```
 
-## Uygulama (canlı: Vercel)
+## Hızlı başlangıç
 
-| | Yol |
-|---|-----|
-| **Çalışan Next.js projesi** | `E-TICARET\site\` |
-| **Legacy static shop** | `E-TICARET\legacy-public\` (eski `EQUSTO-CURSOR\public` tam kopya) |
-| **İlk kurulum** | `cd E-TICARET\site` → `npm install` → `npm run dev` |
+```powershell
+cd E-TICARET\site
+copy .env.example .env.local
+npm install
+npx prisma migrate deploy
+npm run dev
+```
 
-Kaynak (henüz silinmedi): `C:\D Disk\EQUSTO-CURSOR\equsto-v2\`
+## Vercel (equsto.com)
 
-## Vercel (Faz 2)
+- **Root Directory:** `EQUSTO-WORK/E-TICARET/site`
+- Deploy rehberi: `E-TICARET/site/docs/CANLI-DEPLOY.md`
 
-- Proje: **equsto** → `equsto.com`
-- Root Directory (geçiş sonrası): **`E-TICARET/site`**
-- Git kökü WORK’e taşınınca Vercel ayarı güncellenir.
+## Eski yollar (kaldırıldı)
 
-## Faz durumu
-
-- **Faz 1 (kopyala):** tamamlandı — `FAZ1-OZET.md`
-- **Faz 2 (lokal):** tamamlandı — `FAZ2-OZET.md` (`npm install`, `build`, `pfos:motor:test` OK)
-- **Faz 2 (canlı):** Vercel Root güncelle + deploy (panel)
-- **Faz 3:** eski yolları sil (onay sonrası)
-
-## Cursor
-
-- Agent kuralları: `E-TICARET\site\.cursor\`
-- WORK manifest: her kol `00-INDEX.md`
+| Eski | Yeni |
+|------|------|
+| `EQUSTO-CURSOR/equsto-v2/` | `EQUSTO-WORK/E-TICARET/site/` |
+| `EQUSTO-CURSOR/public/` | `EQUSTO-WORK/E-TICARET/legacy-public/` |
+| `EQUSTO-CURSOR/scripts/` | `EQUSTO-WORK/repo-scripts/` |

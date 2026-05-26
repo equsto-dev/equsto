@@ -1,0 +1,229 @@
+=== SHARED STRINGS (85) ===
+0	PROFORMA FATURA
+1	Sayı:
+2	EQS-2026-001
+3	Proje:
+4	Coca-Cola İçecek — FBE20T Isparta
+5	Müşteri:
+6	Alper Bey
+7	Tarih:
+8	22.04.2026
+9	TCMB Efektif Satış Kuru – 22.04.2026
+10	EUR/TRY  (kur hücresi: J3 — güncellendiğinde tüm tutarlar yenilenir)
+11	Fotoğraf
+12	Grup / | Poz
+13	Stok No
+14	Ürün Adı
+15	Marka
+16	Model
+17	Ürün Açıklaması
+18	Adet
+19	Ölçü | (En×Boy×Yük mm)
+20	Elk. | kW
+21	Gaz | kW
+22	Birim Fiyat | (TL)
+23	Tutar | (TL)
+24	01. MUTFAK
+25	A. MUTFAK EKİPMANLARI
+26	Soğuk Oda 0/+5°C
+27	A/001
+28	TIC-OZEL
+29	İnoksan
+30	Özel ölçü, poliüretan panel, 0/+5°C, dijital kontrol
+31	2100×2880×2400
+32	📷 | Fotoğraf
+33	•  Çalışma sıcaklığı: 0/+5°C | •  100 mm poliüretan panel yalıtım | •  Tamamı paslanmaz çelik iç/dış yüzey | •  Dijital sıcaklık kontrol paneli | •  Otomatik defrost sistemi | •  LED iç aydınlatma | •  Sızdırmaz menteşeli kapı, ısıtmalı conta | •  Standart aksesuarlar: dış ünite, evaporatör, kontrol panosu | •  Dış ünite mesafesi 10-12 metre olarak fiyatlandırılmıştır
+34	Deepfrez Oda -18°C
+35	A/002
+36	Özel ölçü, poliüretan panel, -18°C derin dondurucu
+37	1800×2880×2400
+38	•  Çalışma sıcaklığı: -18°C / -20°C | •  120 mm poliüretan panel yalıtım | •  Tamamı paslanmaz çelik iç/dış yüzey | •  Dijital kontrol paneli, sıcaklık alarm sistemi | •  Elektrikli otomatik defrost | •  Düşük sıcaklık LED aydınlatma | •  Sızdırmaz menteşeli kapı, ısıtmalı conta | •  Zemin ısıtma rezistansı (zemin donmasını önler) | •  Standart aksesuarlar: dış ünite, evaporatör, kontrol panosu
+39	Demonte Tel Raf 4 Katlı
+40	A/003
+41	304 inox, 4 katlı, 250 kg/raf kapasiteli
+42	530×1830×1800
+43	•  304 paslanmaz çelik mamul | •  4 katlı yapı, ayarlanabilir raf yüksekliği | •  250 kg/raf taşıma kapasitesi | •  Demonte yapı, anahtarsız hızlı montaj | •  Anti-bakteriyel yüzey, hijyenik temizlik | •  Sabit ayaklı (tekerlek opsiyonel)
+44	Fritöz Elektrikli Dolaplı
+45	A/014
+46	INO-9FE20
+47	Perfect 900 serisi, 26+26 Lt yağ, 2 havuzlu, dolaplı, 36 kW
+48	900×800×850
+49	•  26 + 26 Lt yağ kapasiteli, 2 ayrı havuz | •  Elektrikli ısıtmalı, 36 kW toplam güç | •  Termostatlı sıcaklık kontrolü (50-190°C) | •  Soğuk bölge teknolojisi — yağ ömrünü uzatır | •  Emniyet termostatı (aşırı ısınmaya karşı koruma) | •  Yağ tahliye vanası, kolay temizlenebilir havuz | •  Dolaplı alt yapı, kapaklı saklama alanı | •  Tamamı 304 paslanmaz çelik gövde | •  Sepetler, havuz kapakları ve filtreler dahildir
+50	Kombi Fırın Dokunmatik
+51	A/019
+52	INO-FBE10T
+53	Dokunmatik panel, 10×GN1/1 tepsi kap., elektrik, 18,5 kW 400V
+54	897×927×1213
+55	•  10 × GN1/1 tepsi kapasitesi, akıllı buhar jeneratörlü | •  Dokunmatik kontrol paneli, 4 dil seçeneği (TR, EN, DE, FR) | •  5 farklı pişirme modu: turbo, buharlı, kombi, ayarlanabilir buharlı, banket | •  3 programlı otomatik yıkama sistemi (az / orta / yoğun) | •  5 noktadan ölçümlü et probu — zamandan bağımsız pişirme | •  60 adet kayıtlı hazır pişirim reçetesi + favori reçete kaydı | •  Katlı pişirme özelliği (her raf için ayrı süre) | •  Pişirim esnasında 6 fazlı adım girebilme | •  Otomatik ön ısıtma, PID/PWM hassas ısı kontrolü | •  Buhar/kuru sıcaklık oran ayarlama, otomatik nemlendirme | •  Hızlı soğutma sistemi, manuel kabin yıkama spreyi | •  Çift kademeli kapı kilit, Low-E kaplamalı çift cam | •  Açık drenaj, hata uyarı sistemi, melodik sesli uyarı | •  Faydalı iç hacim: 0,11 m³, raflar arası 65 mm
+56	Bulaşık Yıkama Makinesi
+57	A/028
+58	INO-BYM102STPD
+59	1000 Tabak/saat, tahliye + deterjan + parlatıcı pompalı, 8,7 kW
+60	820×760×1470
+61	•  1000 Tabak/saat yıkama kapasitesi | •  Tahliye pompası + deterjan pompası + parlatıcı pompası dahil | •  Elektronik kontrol paneli, 3 dijitli sıcaklık göstergesi | •  3 farklı yıkama programı (90 / 120 / 180 sn) | •  Termo-stop durulama — 85°C ile sterilizasyon garantili | •  Çift cidarlı izolasyonlu kapak (sessiz çalışma) | •  2 ayrı NTC prob ile yıkama ve durulama sıcaklık takibi | •  Bulaşık çeşidine göre özelleştirilebilir program ayarları | •  Su seviyesi otomatik kontrol (presostat sistemi) | •  Hata ve arıza kodları panelden görüntülenir | •  304 paslanmaz çelik gövde, çekvalf sistemi dahil | •  Su tüketimi: 2,7 Lt/çevrim
+62	A. TOPLAM
+63	GENEL TOPLAM  (KDV HARİÇ)
+64	ŞARTLARIMIZ
+65	  01.   Teklifimiz 7 (YEDİ) gün geçerlidir.
+66	  02.   Fiyatlarımıza KDV dahil değildir, faturada ayrıca eklenecektir.
+67	  03.   Faturamız TL olarak kesilecektir. Tutarlar TCMB Efektif Satış Kuru üzerinden hesaplanmıştır.
+68	  04.   Ödeme; siparişte %50 peşin banka havalesi, kalanı mal tesliminden önce banka havalesi şeklindedir.
+69	  05.   Ödeme şartlarının yerine getirilmesi ile birlikte teklif sipariş statüsüne geçer. Aksi takdirde teslim süresi revize edilir.
+70	  06.   Montaj satıcıya aittir. Her türlü tesisat ve sarf malzemesi alıcıya aittir.
+71	  07.   Nakliye ve nakliye sigortası satıcıya aittir. Forklift, transpalet vb. ekipman alıcıya aittir.
+72	  08.   Her türlü yatay ve dikey taşımacılık alıcıya aittir. Kamyon üstü teslimdir; mutfak katına çıkartılmalıdır.
+73	  09.   Teslim yeri müşteri adresidir.
+74	  10.   Teslim süresi: kesin siparişinizi takiben 6-8 hafta olarak planlanmıştır; güncel üretim programına göre teyit edilecektir.
+75	  11.   Soğuk odalarda dış ünite mesafesi 10-12 metre olarak fiyatlandırılmıştır. Mesafenin artması durumunda fiyat farkı yansıtılacaktır.
+76	  12.   İş kapsamında değişiklik, miktar artışı veya azalışı olması durumunda karşılıklı mutabakatla teklif revize edilir.
+77	  13.   Ölçü bekler çözümünün siparişten sonraki 1 ay içinde tamamlanması gerekmektedir. Detayları verilmeyen siparişler için teslim süresi yeniden belirlenir.
+78	  14.   Zamanında ödenmeyen vadesi geçmiş bedel için aylık %5 vade farkı uygulanır.
+79	  15.   Siparişe ait depoda 1 aydan fazla bekleyen mallar için aylık sipariş bedelinin %5'i kadar depo kirası uygulanır.
+80	  16.   Taraflar, cari hesap mutabakatlarını yazılı veya elektronik ortamda (e-posta vb.) gerçekleştirebilirler. Dijital mutabakatlar, yazılı mutabakat gibi sonuç doğurur ve tarafları bağlar.
+81	Banka: Garanti BBVA  |  Şube: Kağıthane  |  IBAN: TR00 0006 2000 0000 0000 0000 00
+82	Adres: —  |  Tel: —  |  E-posta: info@equsto.com  |  VKN: —
+83	E Q U S T O   T E K N O L O J İ   L İ M İ T E D
+84	"
+
+=== DIMENSION ===
+A1:M42
+
+=== MERGES (40) ===
+A41:M41
+A42:M42
+A35:M35
+A36:M36
+A37:M37
+A38:M38
+A40:M40
+A30:M30
+A31:M31
+A32:M32
+A33:M33
+A34:M34
+A25:M25
+A26:M26
+A27:M27
+A28:M28
+A29:M29
+A19:G19
+A20:G20
+A22:M22
+A23:M23
+A24:M24
+B10:M10
+B12:M12
+B14:M14
+B16:M16
+B18:M18
+A3:I3
+K3:M3
+A5:M5
+... +10 more
+
+=== ROWS WITH CELLS (first 45) ===
+R1: A1=PROFORMA FATURA | J1=Sayı: | K1=EQS-2026-001 | M1="
+R2: A2=Proje: | C2=Coca-Cola İçecek — FBE20T Isparta | F2=Müşteri: | H2=Alper Bey | J2=Tarih: | K2=22.04.2026
+R3: A3=TCMB Efektif Satış Kuru – 22.04.2026 | J3=52.823799999999999 | K3=EUR/TRY  (kur hücresi: J3 — güncellendiğ
+R4: A4=Fotoğraf | B4=Grup /
+Poz | C4=Stok No | D4=Ürün Adı | E4=Marka | F4=Model | G4=Ürün Açıklaması | H4=Adet | I4=Ölçü
+(En×Boy×Yük mm) | J4=Elk.
+kW | K4=Gaz
+kW | L4=Birim Fiyat
+(TL)
+R5: A5=01. MUTFAK
+R6: A6=A. MUTFAK EKİPMANLARI
+R7: A7=Soğuk Oda 0/+5°C | B7=A/001 | C7=TIC-OZEL | D7=Soğuk Oda 0/+5°C | E7=İnoksan | F7=TIC-OZEL | G7=Özel ölçü, poliüretan panel, 0/+5°C, dij | H7=1 | I7=2100×2880×2400
+R8: A8=📷
+Fotoğraf | B8=•  Çalışma sıcaklığı: 0/+5°C
+•  100 mm p
+R9: A9=Deepfrez Oda -18°C | B9=A/002 | C9=TIC-OZEL | D9=Deepfrez Oda -18°C | E9=İnoksan | F9=TIC-OZEL | G9=Özel ölçü, poliüretan panel, -18°C derin | H9=1 | I9=1800×2880×2400
+R10: A10=📷
+Fotoğraf | B10=•  Çalışma sıcaklığı: -18°C / -20°C
+•  1
+R11: A11=Demonte Tel Raf 4 Katlı | B11=A/003 | D11=Demonte Tel Raf 4 Katlı | G11=304 inox, 4 katlı, 250 kg/raf kapasiteli | H11=2 | I11=530×1830×1800
+R12: A12=📷
+Fotoğraf | B12=•  304 paslanmaz çelik mamul
+•  4 katlı 
+R13: A13=Fritöz Elektrikli Dolaplı | B13=A/014 | C13=INO-9FE20 | D13=Fritöz Elektrikli Dolaplı | E13=İnoksan | F13=INO-9FE20 | G13=Perfect 900 serisi, 26+26 Lt yağ, 2 havu | H13=1 | I13=900×800×850 | J13=36
+R14: A14=📷
+Fotoğraf | B14=•  26 + 26 Lt yağ kapasiteli, 2 ayrı hav
+R15: A15=Kombi Fırın Dokunmatik | B15=A/019 | C15=INO-FBE10T | D15=Kombi Fırın Dokunmatik | E15=İnoksan | F15=INO-FBE10T | G15=Dokunmatik panel, 10×GN1/1 tepsi kap., e | H15=1 | I15=897×927×1213 | J15=18.5
+R16: A16=📷
+Fotoğraf | B16=•  10 × GN1/1 tepsi kapasitesi, akıllı b
+R17: A17=Bulaşık Yıkama Makinesi | B17=A/028 | C17=INO-BYM102STPD | D17=Bulaşık Yıkama Makinesi | E17=İnoksan | F17=INO-BYM102STPD | G17=1000 Tabak/saat, tahliye + deterjan + pa | H17=1 | I17=820×760×1470 | J17=8.6999999999999993
+R18: A18=📷
+Fotoğraf | B18=•  1000 Tabak/saat yıkama kapasitesi
+•  
+R19: A19=A. TOPLAM
+R20: A20=GENEL TOPLAM  (KDV HARİÇ)
+R21: A22=ŞARTLARIMIZ
+R23: A23=  01.   Teklifimiz 7 (YEDİ) gün geçerlid
+R24: A24=  02.   Fiyatlarımıza KDV dahil değildir
+R25: A25=  03.   Faturamız TL olarak kesilecektir
+R26: A26=  04.   Ödeme; siparişte %50 peşin banka
+R27: A27=  05.   Ödeme şartlarının yerine getiril
+R28: A28=  06.   Montaj satıcıya aittir. Her türl
+R29: A29=  07.   Nakliye ve nakliye sigortası sat
+R30: A30=  08.   Her türlü yatay ve dikey taşımac
+R31: A31=  09.   Teslim yeri müşteri adresidir.
+R32: A32=  10.   Teslim süresi: kesin siparişiniz
+R33: A33=  11.   Soğuk odalarda dış ünite mesafes
+R34: A34=  12.   İş kapsamında değişiklik, miktar
+R35: A35=  13.   Ölçü bekler çözümünün siparişten
+R36: A36=  14.   Zamanında ödenmeyen vadesi geçmi
+R37: A37=  15.   Siparişe ait depoda 1 aydan fazl
+R38: A38=  16.   Taraflar, cari hesap mutabakatla
+R39: A40=Banka: Garanti BBVA  |  Şube: Kağıthane 
+R41: A41=Adres: —  |  Tel: —  |  E-posta: info@eq
+R42: A42=E Q U S T O   T E K N O L O J İ   L İ M 
+
+=== L/M COLUMNS (formulas & values) ===
+L1 V=84
+L2 V=9
+L3 V=11
+L4 S=Birim Fiyat
+(TL)
+M4 S=Tutar
+(TL)
+L5 V=25
+L6 V=26
+L7 F=5648.93*$J$3
+M7 F=H7*L7
+L8 V=34
+L9 F=6468.08*$J$3
+M9 F=H9*L9
+L10 V=39
+L11 F=689.37*$J$3
+M11 F=H11*L11
+L12 V=44
+L13 F=2627.43*$J$3
+M13 F=H13*L13
+L14 V=50
+L15 F=8922.02*$J$3
+M15 F=H15*L15
+L16 V=56
+L17 F=1811.62*$J$3
+M17 F=H17*L17
+L18 V=62
+L19 F=M7+M9+M11+M13+M15+M17
+L20 F=M19
+L22 V=65
+L23 V=66
+L24 V=67
+L25 V=68
+L26 V=69
+L27 V=70
+L28 V=71
+L29 V=72
+L30 V=73
+L31 V=74
+L32 V=75
+L33 V=76
+L34 V=77
+L35 V=78
+L36 V=79
+L37 V=80
+L38 V=81
+L40 V=82
+L41 V=83

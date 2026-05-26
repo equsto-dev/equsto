@@ -73,6 +73,45 @@ def is_table_catalog_page(text: str, code_count: int) -> bool:
     return False
 
 
+def clip_photo_above_kod(page: fitz.Page, kod: str) -> fitz.Rect | None:
+    """Tablo sayfasında kod altta — üstteki gömülü ürün fotoğrafını seç (tablo/kırpım yok)."""
+    rects = search_rects(page, kod)
+    if not rects:
+        return None
+    kr = max(rects, key=lambda r: r.y0)
+    kcx = (kr.x0 + kr.x1) / 2
+    best_bbox: tuple[float, float, float, float] | None = None
+    best_score = 1e9
+    for info in page.get_image_info():
+        x0, y0, x1, y1 = info["bbox"]
+        w, h = x1 - x0, y1 - y0
+        if w < 120 or h < 70:
+            continue
+        if y1 > kr.y0 + 10:
+            continue
+        overlap = min(x1, kr.x1) - max(x0, kr.x0)
+        pcx = (x0 + x1) / 2
+        gap = max(0, kr.y0 - y1)
+        score = abs(pcx - kcx) * 3 - gap * 0.35 - min(w * h, 120000) * 0.0002
+        if gap < 100:
+            score += 120
+        if y0 > page.rect.height * 0.5:
+            score += 80
+        if overlap < 24:
+            score += 100
+        if score < best_score:
+            best_score = score
+            best_bbox = (x0, y0, x1, y1)
+    if not best_bbox:
+        return None
+    x0, y0, x1, y1 = best_bbox
+    pad = 6
+    clip = fitz.Rect(x0 + pad, y0 + pad, x1 - pad, y1 - pad) & page.rect
+    if clip.width >= 140 and clip.height >= 90:
+        return clip
+    return None
+
+
 def clip_near_kod(page: fitz.Page, kod: str) -> fitz.Rect | None:
     pr = page.rect
     rects = search_rects(page, kod)
@@ -149,12 +188,14 @@ def pick_best_page(doc: fitz.Document, kod: str, page_candidates: list[int]) -> 
 
 def extract_kod(doc: fitz.Document, kod: str, page_no: int) -> Path | None:
     page = doc[page_no - 1]
-    text = page.get_text("text") or ""
-    codes = codes_on_page(text)
-    table_page = is_table_catalog_page(text, len(codes))
-    if table_page and not kod_in_top_half(page, kod):
-        return None
-    clip = clip_near_kod(page, kod)
+    clip = clip_photo_above_kod(page, kod)
+    if not clip:
+        text = page.get_text("text") or ""
+        codes = codes_on_page(text)
+        table_page = is_table_catalog_page(text, len(codes))
+        if table_page and not kod_in_top_half(page, kod):
+            return None
+        clip = clip_near_kod(page, kod)
     if not clip:
         return None
     pix = page.get_pixmap(matrix=fitz.Matrix(2, 2), clip=clip, alpha=False)

@@ -13,8 +13,7 @@ on:
   push:
     branches: [main]
     paths:
-      - "EQUSTO-WORK/E-TICARET/site/**"
-      - "equsto-v2/**"
+      - "EQUSTO-WORK/**"
       - ".github/workflows/vercel-production.yml"
   workflow_dispatch:
 

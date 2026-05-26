@@ -48,6 +48,8 @@ function meiliId(raw) {
 }
 
 function productSlug(row) {
+  const id = String(row.id || "").trim();
+  if (id) return id.toLowerCase();
   const b = slugify(row.brand);
   const n = slugify(row.name);
   return (b ? `${b}-` : "") + n;

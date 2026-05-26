@@ -2,6 +2,7 @@ import { NextRequest } from "next/server";
 import { assertAdminBearer } from "@/lib/auth";
 import { adminErr, adminOk } from "@/lib/admin-response";
 import { dataPath, readJsonFile, writeJsonFile } from "@/lib/legacy-data";
+import { unwrapProjeAkisPayload } from "@/lib/pfos/proje-akis/unwrap";
 
 export const runtime = "nodejs";
 
@@ -16,21 +17,40 @@ const EMPTY_PROJE = {
   products: [] as unknown[],
 };
 
+async function loadProjeAkis(req: NextRequest) {
+  const fromDisk = await readJsonFile<unknown>(PROJE_FILE());
+  const unwrapped = unwrapProjeAkisPayload(fromDisk);
+  if (unwrapped) return unwrapped;
+
+  try {
+    const staticUrl = new URL("/data/proje-akis.json", req.url);
+    const res = await fetch(staticUrl, {
+      cache: "no-store",
+      signal: AbortSignal.timeout(15_000),
+    });
+    if (res.ok) {
+      const remote = await res.json();
+      return unwrapProjeAkisPayload(remote);
+    }
+  } catch {
+    /* static fallback failed */
+  }
+
+  return null;
+}
+
 /** GET/POST /api/cms?kind=vitrin|proje-akis */
 export async function GET(req: NextRequest) {
-  const denied = assertAdminBearer(req);
-  if (denied) return denied;
-
   const kind = req.nextUrl.searchParams.get("kind")?.trim() || "vitrin";
 
   if (kind === "proje-akis") {
-    const stored = await readJsonFile<
-      typeof EMPTY_PROJE & { success?: boolean; data?: typeof EMPTY_PROJE }
-    >(PROJE_FILE());
-    if (stored?.success && stored.data) return adminOk({ data: stored.data });
-    if (stored && "questions" in stored) return adminOk({ data: stored });
+    const stored = await loadProjeAkis(req);
+    if (stored) return adminOk({ data: stored });
     return adminOk({ data: EMPTY_PROJE });
   }
+
+  const denied = assertAdminBearer(req);
+  if (denied) return denied;
 
   const file = await readJsonFile<Record<string, unknown>>(VITRIN_FILE());
   if (!file) return adminOk({ data: { version: "1.0", layout: {} } });

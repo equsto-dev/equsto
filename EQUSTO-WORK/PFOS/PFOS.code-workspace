@@ -1,0 +1,15 @@
+{
+  "folders": [
+    {
+      "name": "PFOS",
+      "path": "."
+    },
+    {
+      "name": "site (Next.js)",
+      "path": "../E-TICARET/site"
+    }
+  ],
+  "settings": {
+    "terminal.integrated.cwd": "${workspaceFolder:site (Next.js)}"
+  }
+}

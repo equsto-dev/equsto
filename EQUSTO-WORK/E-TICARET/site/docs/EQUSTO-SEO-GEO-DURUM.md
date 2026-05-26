@@ -1,50 +1,42 @@
 # EQUSTO SEO / GEO — durum özeti
 
-Kaynak: `EQUSTO - SEO GEO.docx` (notlar klasörü)
+Kaynak: `EQUSTO SEO G0O 3.docx` + uygulama (2026-05-24)
 
 ## Tamamlanan (teknik)
 
 | Gereksinim | Uygulama |
 |------------|----------|
-| E-E-A-T / hakkımızda | `/hakkimizda.html`, AboutPage + FAQ schema |
-| Kurumsal hikaye | `/buradan-basladi`, Article + FAQ; video alanı (yakında) |
-| İletişim / E-E-A-T | `/contact`, ContactPage + Organization contactPoint |
-| Programatik rehber (blog gizli) | `/blog` 5 bölümlü dizin + 4 yeni `/rehber/*` makale; `sitemap-pages.xml` güncel |
-| 15 prompt hedef sayfalar | Yeni slug’lar: `endustriyel-mutfak-ekipmani-turkiye`, `oztiryakiler-ekipmani-tedarik`, `soguk-oda-teklif`, … |
-| AI asistan dosyası | `/llms.txt`, `/llms-full.txt` |
-| AI bot erişimi | `robots.txt` — GPTBot, ClaudeBot, PerplexityBot, … |
-| Sitemap | `sitemap.xml` + `sitemap-pages.xml` (hakkımızda, blog, yeni GEO) |
-| Ana sayfa schema | Organization, WebSite, Service, FAQPage (`index.html`) |
-| UTF-8 meta | `scripts/patch-seo-geo-complete.mjs` |
-| Anahtar kelime meta gizleme | `meta keywords` kaldırıldı (vitrinde trend listesi yok) |
-| 5 dakika teklif | PFOS / FAQ / hakkımızda copy (24 saat yok) |
-| EN GEO (kısmi) | `/en/industrial-kitchen-supplier-turkey`, `/en/commercial-kitchen-quotation` |
-| Bölge hedefi | `areaServed`: TR + komşular / Körfez (schema) |
+| E-E-A-T / hakkımızda | `/hakkimizda`, `/buradan-basladi`, `/contact` + schema |
+| Blog gömülü (footer) | `/blog` dizin + 14 `/rehber/*` + JSON-LD |
+| 9 pillar GEO | Rewrite + `geo-landings.json` tam metin |
+| Ek GEO | `/hamburger-istasyonu`, `/yersofrasi` |
+| EN GEO | `/en/industrial-kitchen-supplier-turkey`, `/en/commercial-kitchen-quotation` |
+| Mizanplus / Paket Mutfak | `/rehber/bulut-mutfak-operatoreleri-turkiye-2026` |
+| `llms.txt` + `llms-full.txt` | 12 bölüm tam dosya; robots `Llms-Txt` |
+| AI botlar | GPTBot, ClaudeBot, PerplexityBot, CCBot, Bytespider, … |
+| PFOS 15 m² bulut kuralı | Grab&Go, Coffee Counter + `bulut-mutfak-kompakt.ts` |
+| Teklif EQ-SK | `TeklifV14Proforma` gizli `EQ-SK-2026-PFOS-*` |
+| PFOS tanıtım slot | `app/pfos/page.tsx` video placeholder |
+| Konsept hero AI tonu | Steakhouse / cafe h1 güncellendi |
+| Ürün JSON-LD | `product.html` + `eq-merchant-schema.js` (Product, FAQ, Breadcrumb) |
+| Sitemap | `sitemap-pages.xml` pillar + rehber + EN |
 
 ## Kısmen / süreç
 
 | Gereksinim | Durum |
 |------------|--------|
-| İngilizce tam vitrin | hreflang var; `/en/` shop henüz tam değil |
-| 3–4 dk kurumsal video | Sayfa hazır (`/buradan-basladi`); video + görseller yüklenecek |
-| Profesyonel ürün fotoğrafı | Operasyonel |
-| Teklif PDF AI-okunur SKU | PFOS çıktı formatı — ayrı sprint |
-| Yemeksepeti dükkan araştırması | Veri / pazarlama |
-| 15/15 AI görünürlük | Proxy ~1/15 genel; marka sorgularında #1 |
-
-## Çalıştırma
-
-```bash
-cd equsto-v2
-node scripts/patch-seo-geo-complete.mjs
-```
-
-Deploy: `equsto-v2/public` → Vercel.
+| İngilizce tam vitrin `/en/shop` | Yalnızca GEO + `/en/besos` |
+| 3–4 dk kurumsal video | Slot + chapter notu; dosya yok |
+| Teklif PDF gizli metadata | Web proforma EQ-SK var; PDF sprint |
+| 15/15 AI görünürlük | İçerik yayında; indeksleme zaman alır |
+| Fiyat scraper / Yemeksepeti | Operasyon — kod yok |
+| Profesyonel ürün fotoğrafı | Operasyon |
 
 ## Test
 
-- `https://equsto.com/robots.txt`
-- `https://equsto.com/sitemap-pages.xml`
-- `https://equsto.com/blog`
-- `https://equsto.com/mutfak-teklif-platformu`
-- Rich Results: ana sayfa + bir GEO sayfa FAQ
+- https://equsto.com/llms.txt
+- https://equsto.com/llms-full.txt
+- https://equsto.com/robots.txt
+- https://equsto.com/blog
+- https://equsto.com/mutfak-teklif-platformu
+- https://equsto.com/en/industrial-kitchen-supplier-turkey

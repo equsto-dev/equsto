@@ -54,7 +54,7 @@
         "required": "true",
         "mapsTo": "m2",
         "motorEtkisi": "bant: ≤150 → 80-150; >150 → 150-250 (steakhouse/balikci)",
-        "note": "Steakhouse/Balık: ≤150 → 80-150 listesi; >150 → 150-250. Coffee Shop: referans ölçek."
+        "note": "Bulut Mutfak ≤15 m²: yalnızca Grab&Go / Coffee Counter. Steakhouse/Balık: ≤150 → 80-150; >150 → 150-250."
       },
       {
         "id": "q_ust_segment",
@@ -153,6 +153,8 @@
             "Bilmiyorum"
           ],
           "Bulut Mutfak": [
+            "Grab&Go",
+            "Coffee Counter",
             "Döner",
             "Pizza",
             "Pide & Lahmacun",
@@ -887,6 +889,40 @@
           "dukkanSecim": "Taşıma Yemek (Servis & Yıkama)",
           "m2Min": 100,
           "m2Max": 1500,
+          "bantKurali": "Liste hazırlanıyor — genel şablon",
+          "teklifKaynagi": "planlanan",
+          "durum": "planlanan",
+          "bantlar": []
+        },
+        "questions": []
+      },
+      {
+        "id": "bulut_grab_go",
+        "name": "Grab&Go",
+        "parent": "Bulut Mutfak",
+        "desc": "Kompakt bulut parsel — paket ağırlıklı minimum hat",
+        "pfos": {
+          "motorSlug": "",
+          "dukkanSecim": "Grab&Go",
+          "m2Min": 8,
+          "m2Max": 15,
+          "bantKurali": "Liste hazırlanıyor — genel şablon",
+          "teklifKaynagi": "planlanan",
+          "durum": "planlanan",
+          "bantlar": []
+        },
+        "questions": []
+      },
+      {
+        "id": "bulut_coffee_counter",
+        "name": "Coffee Counter",
+        "parent": "Bulut Mutfak",
+        "desc": "Kompakt bulut parsel — espresso + sınırlı sıcak prep",
+        "pfos": {
+          "motorSlug": "",
+          "dukkanSecim": "Coffee Counter",
+          "m2Min": 8,
+          "m2Max": 15,
           "bantKurali": "Liste hazırlanıyor — genel şablon",
           "teklifKaynagi": "planlanan",
           "durum": "planlanan",
@@ -37816,6 +37852,6 @@
         "tip_kodu": ""
       }
     ],
-    "updated_at": "2026-05-26T19:13:49.170Z"
+    "updated_at": "2026-05-26T21:03:44.245Z"
   }
 }

@@ -527,3 +527,15 @@
     }
   } catch (_) {}
 })();
+
+/** Eksik üst chrome (logo + arama + topnav) — GEO / rehber sayfaları */
+(function () {
+  try {
+    if (!document.querySelector('script[src*="eq-vitrin-chrome"]')) {
+      var ch = document.createElement("script");
+      ch.src = "/eq-vitrin-chrome.js?v=20260526dhdr";
+      ch.defer = true;
+      document.head.appendChild(ch);
+    }
+  } catch (_) {}
+})();

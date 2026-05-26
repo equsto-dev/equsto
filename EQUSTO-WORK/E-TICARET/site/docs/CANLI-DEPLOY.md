@@ -5,25 +5,20 @@ Kod `main` branch’te; site **Vercel Production** deploy edilince güncellenir.
 ## Hızlı (panel — 1 dakika)
 
 1. [vercel.com](https://vercel.com) → proje **equsto**
-2. **Settings → General → Root Directory** = `equsto-v2`
-3. **Deployments** → en üstteki `main` commit (ör. `fix(kahve): bust script cache`)
+2. **Settings → General → Root Directory** = `EQUSTO-WORK/E-TICARET/site`
+3. **Deployments** → en üstteki `main` commit
 4. **⋯ → Redeploy** → **Use existing Build Cache: KAPALI** → Redeploy
-5. **Ready** olunca: `https://equsto.com/data/dept/kahve.json` → ~19 ürün, çay yok
-6. `https://equsto.com/shop/kahve` → Ctrl+F5
+5. **Ready** olunca: `https://equsto.com/data/dept/kahve.json` kontrol
+6. Vitrin sayfalarında Ctrl+F5
 
 ## Otomatik (GitHub Actions)
 
-Repo → **Settings → Secrets → Actions** → ekle:
+Repo → **Settings → Secrets → Actions** → `VERCEL_TOKEN`, `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID`
 
-| Secret | Nereden |
-|--------|---------|
-| `VERCEL_TOKEN` | Vercel → Account Settings → Tokens |
-| `VERCEL_ORG_ID` | Vercel → Project → Settings → General (veya `.vercel/project.json`) |
-| `VERCEL_PROJECT_ID` | Aynı |
-
-Sonra **Actions → Vercel Production → Run workflow** veya `main`’e push.
+Sonra **Actions → Vercel Production** veya `main`’e push.
 
 ## Doğrulama
 
-- `kahve.json` canlıda **19** ürün, **0** çay
-- `kahve.html` içinde `eq-dept-plp.js?v=20260521cay-v2`
+- `https://equsto.com/shop/kahve` — departman PLP
+- `https://equsto.com/pfos` — Proje Fabrikası
+- `https://equsto.com/blog` — rehber dizini

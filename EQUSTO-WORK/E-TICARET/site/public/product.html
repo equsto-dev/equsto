@@ -570,6 +570,10 @@
         var slugPart = (mU && mU[1]) || (mO && mO[1]);
         if (slugPart) {
           var pathSlug = decodeURIComponent(slugPart).toLowerCase();
+          if (typeof window.eqFindCatalogRowByPathSlug === "function") {
+            var hit = window.eqFindCatalogRowByPathSlug(all, pathSlug);
+            if (hit) return hit;
+          }
           var altSlugFn =
             typeof window.eqProductSlugTransliterated === "function"
               ? window.eqProductSlugTransliterated

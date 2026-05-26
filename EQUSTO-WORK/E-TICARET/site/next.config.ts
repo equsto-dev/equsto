@@ -41,6 +41,16 @@ const GEO_SLUGS = [
   "fine-dining-kurulumu",
   "all-day-dining-kurulumu",
   "fast-food-kurulumu",
+  "endustriyel-mutfak-ekipmani-turkiye",
+  "restoran-mutfak-teklif",
+  "otel-mutfak-ekipman-tedarik",
+  "oztiryakiler-ekipmani-tedarik",
+  "soguk-oda-teklif",
+  "havuzlu-dolap-tedarik",
+  "endustriyel-pisirme-ekipmanlari",
+  "mutfak-teklif-platformu",
+  "bar-tasarimi-turkiye",
+  "blog",
 ];
 
 function geoRewrites() {
@@ -53,6 +63,8 @@ function geoRewrites() {
     { source: "/projeler", destination: "/geo-landing.html" },
     { source: "/projeler/:slug", destination: "/geo-landing.html" },
     { source: "/rehber/:slug", destination: "/geo-landing.html" },
+    { source: "/en/industrial-kitchen-supplier-turkey", destination: "/geo-landing.html" },
+    { source: "/en/commercial-kitchen-quotation", destination: "/geo-landing.html" },
   ];
 }
 
@@ -123,6 +135,7 @@ const nextConfig: NextConfig = {
       { source: "/index.html", destination: "/", permanent: true },
       { source: "/shop/index.html", destination: "/", permanent: true },
       { source: "/shop", destination: "/", permanent: true },
+      { source: "/shop/:dept.html", destination: "/shop/:dept", permanent: true },
       ...deptRedirects(),
       { source: "/urunler", destination: "/shop", permanent: true },
       { source: "/urunler/:path*", destination: "/shop/:path*", permanent: true },
@@ -174,6 +187,10 @@ const nextConfig: NextConfig = {
       /* /yonetim → Next.js App Router (Ant Design Pro) */
       { source: "/contact", destination: "/contact.html" },
       { source: "/contact/", destination: "/contact.html" },
+      { source: "/buradan-basladi", destination: "/buradan-basladi.html" },
+      { source: "/buradan-basladi/", destination: "/buradan-basladi.html" },
+      { source: "/hakkimizda", destination: "/hakkimizda.html" },
+      { source: "/hakkimizda/", destination: "/hakkimizda.html" },
       { source: "/login", destination: "/login.html" },
       { source: "/login/", destination: "/login.html" },
       { source: "/marka", destination: "/marka.html" },

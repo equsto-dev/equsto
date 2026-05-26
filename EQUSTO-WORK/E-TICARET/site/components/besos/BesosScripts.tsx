@@ -47,7 +47,7 @@ export default function BesosScripts() {
       <Script src="/eq-bar-module-url.js" strategy="afterInteractive" />
       <Script src="/eq-besos-pricing.js" strategy="afterInteractive" />
       <Script src="/eq-kur-live.js" strategy="afterInteractive" />
-      <Script src="/ecom-cart.js" strategy="afterInteractive" onReady={() => window.EqustoCart?.syncBadge?.()} />
+      <Script src="/ecom-cart.js?v=20260524cart3" strategy="afterInteractive" onReady={() => window.EqustoCart?.syncBadge?.()} />
       <Script src="/eq-besos-actions.js" strategy="afterInteractive" />
       <Script src="/eq-footer.js" strategy="afterInteractive" />
       <Script src="/contact.js" strategy="lazyOnload" />

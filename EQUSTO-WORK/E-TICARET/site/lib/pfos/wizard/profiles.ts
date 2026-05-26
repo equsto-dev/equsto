@@ -72,6 +72,36 @@ export const PROFIL_BY_SLUG: Record<Konsept, PfosProfilMeta> = {
     /** Şablon Espressolab/Gloria Jeans bar setini tek başına tanımlar — zone katalog davlumbaz/giyotin/ana mutfak eklemez */
     pfosZones: [],
   },
+  steakhouse: {
+    konsept: "steakhouse",
+    konseptUst: "Restaurant",
+    dukkan: "Steakhouse",
+    pfosZones: [
+      "show_mutfagi",
+      "soguk_oda",
+      "derin_dondurucu",
+      "et_hazirlik",
+      "ana_mutfak",
+      "bar",
+      "sebze_hazirlik",
+      "kuru_depo",
+      "bulasikhane",
+    ],
+  },
+  balikci: {
+    konsept: "balikci",
+    konseptUst: "Restaurant",
+    dukkan: "Balık Restaurant",
+    pfosZones: [
+      "ana_mutfak",
+      "sebze_hazirlik",
+      "soguk_oda",
+      "derin_dondurucu",
+      "bulasikhane",
+      "bar",
+      "kuru_depo",
+    ],
+  },
 };
 
 export function zonesForKonsept(slug: Konsept | null): string[] {

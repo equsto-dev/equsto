@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { ZodError } from "zod";
 import { calculateQuote, PFOS_CONCEPT_BY_SLUG } from "@/lib/pfos/core";
-import { getAllTemplates, getTemplate } from "@/lib/pfos/core/templates";
+import { getAllTemplates, getTemplate, resolveTemplateForQuote } from "@/lib/pfos/core/templates";
 import {
   PFOSRequestSchema,
   KONSEPT_LABELS,
@@ -16,11 +16,13 @@ const M2_RANGES: Record<string, { min: number; max: number }> = {
   meyhane: { min: 100, max: 500 },
   "turk-restoran": { min: 100, max: 500 },
   "coffee-shop": { min: 60, max: 300 },
+  steakhouse: { min: 80, max: 250 },
+  balikci: { min: 80, max: 250 },
 };
 
 export function pfosGetConcepts() {
   const templates = getAllTemplates();
-  return templates.map((t) => ({
+  const base = templates.map((t) => ({
     konsept: t.konsept,
     label: KONSEPT_LABELS[t.konsept as Konsept] ?? t.label,
     ornekler: t.ornekler,
@@ -29,24 +31,82 @@ export function pfosGetConcepts() {
     itemSayisi: t.items.length,
     zorunluSayisi: t.items.filter((i) => i.tip === "zorunlu").length,
   }));
+  const referansJson = [
+    {
+      konsept: "steakhouse",
+      label: KONSEPT_LABELS.steakhouse,
+      ornekler: ["Nusr-Et tarzı", "Mangal / steak"],
+      m2Min: M2_RANGES.steakhouse.min,
+      m2Max: M2_RANGES.steakhouse.max,
+      itemSayisi: 58,
+      zorunluSayisi: 58,
+    },
+    {
+      konsept: "balikci",
+      label: KONSEPT_LABELS.balikci,
+      ornekler: ["Balık restoran", "Deniz ürünleri"],
+      m2Min: M2_RANGES.balikci.min,
+      m2Max: M2_RANGES.balikci.max,
+      itemSayisi: 47,
+      zorunluSayisi: 47,
+    },
+    {
+      konsept: "coffee-shop",
+      label: KONSEPT_LABELS["coffee-shop"],
+      ornekler: ["Espressolab", "Gloria Jean's"],
+      m2Min: M2_RANGES["coffee-shop"].min,
+      m2Max: M2_RANGES["coffee-shop"].max,
+      itemSayisi: 24,
+      zorunluSayisi: 24,
+    },
+  ];
+  return [...base.filter((t) => t.konsept !== "coffee-shop"), ...referansJson];
 }
 
 export function pfosGetKonseptler() {
   const templates = getAllTemplates();
-  return templates.map((t) => ({
+  const base = templates.map((t) => ({
     slug: t.konsept,
     label: KONSEPT_LABELS[t.konsept as Konsept] ?? t.label,
     ornekler: t.ornekler,
     seatDensity: t.seatDensity,
     kalemSayisi: t.items.length,
   }));
+  return [
+    ...base.filter((t) => t.slug !== "coffee-shop"),
+    {
+      slug: "steakhouse",
+      label: KONSEPT_LABELS.steakhouse,
+      ornekler: ["Nusr-Et tarzı"],
+      seatDensity: 1.8,
+      kalemSayisi: 58,
+    },
+    {
+      slug: "balikci",
+      label: KONSEPT_LABELS.balikci,
+      ornekler: ["Balık restoran"],
+      seatDensity: 1.5,
+      kalemSayisi: 47,
+    },
+    {
+      slug: "coffee-shop",
+      label: KONSEPT_LABELS["coffee-shop"],
+      ornekler: ["Espressolab", "Gloria Jean's"],
+      seatDensity: 1.5,
+      kalemSayisi: 24,
+    },
+  ];
 }
 
 export async function pfosPostQuote(req: NextRequest) {
   try {
     const body = await req.json();
     const input = PFOSRequestSchema.parse(body);
-    const template = getTemplate(input.konsept);
+    const template = await resolveTemplateForQuote(
+      input.konsept,
+      input.m2,
+      input.altTip,
+    );
     const response = await calculateQuote(input, template);
     return NextResponse.json(response, { status: 200 });
   } catch (err) {
@@ -85,18 +145,26 @@ export async function pfosPostCalculate(req: NextRequest) {
     return NextResponse.json({ error: "Geçersiz istek gövdesi" }, { status: 400 });
   }
 
-  const template = PFOS_CONCEPT_BY_SLUG[pfosReq.konsept];
-  if (!template) {
+  const staticTpl = PFOS_CONCEPT_BY_SLUG[pfosReq.konsept];
+  if (!staticTpl && !["steakhouse", "balikci"].includes(pfosReq.konsept)) {
     return NextResponse.json(
       {
         error: "Bilinmeyen konsept",
-        konseptler: Object.keys(PFOS_CONCEPT_BY_SLUG),
+        konseptler: [
+          ...Object.keys(PFOS_CONCEPT_BY_SLUG),
+          "steakhouse",
+          "balikci",
+        ],
       },
       { status: 404 },
     );
   }
 
   try {
+    const template = await resolveTemplateForQuote(
+      pfosReq.konsept as Konsept,
+      pfosReq.m2,
+    );
     const data = await calculateQuote(pfosReq, template);
     return NextResponse.json({ success: true, data });
   } catch (e) {
