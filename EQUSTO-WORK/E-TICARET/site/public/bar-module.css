@@ -424,3 +424,28 @@ body.bm-page .bm-wrap {
     top: 72px;
   }
 }
+
+body.bd-page.besos.bm-page {
+  --bm-gold: var(--bes-gold, #c8a44a);
+  --bm-gold-soft: var(--bes-gold-soft, #e8c978);
+  --bm-ink: var(--bes-ink, #f2f2f7);
+  --bm-paper: #0a0a0a;
+  --bm-paper-2: #121212;
+  --bm-void: #000;
+  --bm-text-2: var(--bes-text-2, #b4b4bc);
+  --bm-text-3: var(--bes-text-3, #8b8b94);
+  --bm-rule: var(--bes-rule, rgba(255, 255, 255, 0.12));
+  background: var(--bes-void, #000);
+  color: var(--bes-ink);
+}
+
+body.bd-page.besos.bm-page header.hdr {
+  background: transparent;
+  border-bottom: none;
+}
+
+body.bd-page.besos.bm-page .bm-wrap {
+  background: var(--bm-paper);
+  border-radius: 8px 8px 0 0;
+  margin-top: 8px;
+}

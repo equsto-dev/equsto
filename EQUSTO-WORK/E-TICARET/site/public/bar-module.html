@@ -9,6 +9,7 @@
 <meta name="description" content="Vitrum Group bar modülü — teknik özellikler, ölçüler ve Equsto teklif hattı.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://equsto.com/besos/modul/">
+<link rel="stylesheet" href="/besos-shell.css?v=20260524besos">
 <link rel="stylesheet" href="/theme.css?v=20260530logo">
 <link rel="stylesheet" href="/contact.css?v=20260523wamin">
 <link rel="stylesheet" href="/bar-module.css?v=20260523bmlayout">
@@ -19,7 +20,7 @@
 <script vite-ignore src="/nav.js?v=20260521search"></script>
 <script vite-ignore src="/eq-bar-module-url.js"></script>
 </head>
-<body class="eq-shop bm-page">
+<body class="bd-page eq-shop besos besos-locked besos-sub bm-page">
 <header class="hdr" style="position:sticky;top:0;z-index:50;">
   <a class="logo" href="/" aria-label="Equsto"></a>
 </header>
@@ -35,5 +36,9 @@
 <script defer vite-ignore src="/eq-besos-actions.js?v=20260523besosact"></script>
 <script vite-ignore src="/eq-bar-module.js?v=20260523bmlayout"></script>
 <script src="/contact.js?v=20260522wa" defer></script>
+<div class="drawer-overlay" id="drawerOverlay" onclick="__eqDrawerBackdropClick(event)"></div>
+<div class="cat-drawer eq-amazon-shop-all" id="catDrawer" aria-hidden="true"></div>
+<script src="/eq-footer.js?v=20260524besos"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){window.__eqMountMarketFooter&&window.__eqMountMarketFooter();});</script>
 </body>
 </html>

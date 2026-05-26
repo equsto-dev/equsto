@@ -1,26 +1,23 @@
-/* IMT300 landing — içerik bölümleri (kabuk: theme.css + shop header) */
-body.eq-imt-page {
+/* IMT300 — Besos koyu kabuk altında içerik */
+body.bd-page.besos.eq-imt-page {
   font-size: 13px;
   line-height: 1.6;
 }
 
-body.eq-imt-page .pg.imt-page {
+body.bd-page.besos.eq-imt-page .pg.imt-page,
+body.bd-page.besos.eq-imt-page .imt-page-main {
   width: 100%;
   max-width: none;
   margin: 0;
-  background: var(--eq-bg-page);
-}
-
-body.eq-imt-page .imt-page-main {
-  width: 100%;
+  background: var(--bes-void, #000);
 }
 
 .imt-hero {
-  background: var(--eq-surface);
-  color: var(--eq-text);
+  background: linear-gradient(180deg, #0a0a0a 0%, #000 100%);
+  color: var(--bes-ink, #f2f2f7);
   padding: 48px 20px 56px;
   overflow: hidden;
-  border-bottom: 1px solid var(--eq-border);
+  border-bottom: 1px solid var(--bes-rule, rgba(255, 255, 255, 0.12));
 }
 
 .imt-hero-grid {
@@ -36,7 +33,7 @@ body.eq-imt-page .imt-page-main {
   font-size: 11px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--eq-accent-gold, #9a6f2a);
+  color: var(--bes-gold, #c8a44a);
   font-weight: 600;
   margin-bottom: 12px;
 }
@@ -192,11 +189,11 @@ body.eq-imt-page .imt-page-main {
 
 .imt-sec {
   padding: 56px 20px;
-  background: var(--eq-surface);
+  background: #0a0a0a;
 }
 
 .imt-sec.alt {
-  background: var(--eq-surface-2);
+  background: #111;
 }
 
 .imt-inner {
