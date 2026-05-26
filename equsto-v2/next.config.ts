@@ -41,6 +41,16 @@ const GEO_SLUGS = [
   "fine-dining-kurulumu",
   "all-day-dining-kurulumu",
   "fast-food-kurulumu",
+  "endustriyel-mutfak-ekipmani-turkiye",
+  "restoran-mutfak-teklif",
+  "otel-mutfak-ekipman-tedarik",
+  "oztiryakiler-ekipmani-tedarik",
+  "soguk-oda-teklif",
+  "havuzlu-dolap-tedarik",
+  "endustriyel-pisirme-ekipmanlari",
+  "mutfak-teklif-platformu",
+  "bar-tasarimi-turkiye",
+  "blog",
 ];
 
 function geoRewrites() {
@@ -53,6 +63,8 @@ function geoRewrites() {
     { source: "/projeler", destination: "/geo-landing.html" },
     { source: "/projeler/:slug", destination: "/geo-landing.html" },
     { source: "/rehber/:slug", destination: "/geo-landing.html" },
+    { source: "/en/industrial-kitchen-supplier-turkey", destination: "/geo-landing.html" },
+    { source: "/en/commercial-kitchen-quotation", destination: "/geo-landing.html" },
   ];
 }
 

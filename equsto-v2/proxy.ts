@@ -48,7 +48,19 @@ function isLegacyHtmlPath(pathname: string): boolean {
     p.startsWith("/all-day-dining") ||
     p.startsWith("/fast-food") ||
     p.startsWith("/projeler") ||
-    p.startsWith("/rehber/")
+    p.startsWith("/rehber/") ||
+    p.startsWith("/endustriyel-mutfak") ||
+    p.startsWith("/restoran-mutfak") ||
+    p.startsWith("/otel-mutfak") ||
+    p.startsWith("/oztiryakiler-ekipmani") ||
+    p.startsWith("/soguk-oda") ||
+    p.startsWith("/havuzlu-dolap") ||
+    p.startsWith("/endustriyel-pisirme") ||
+    p.startsWith("/mutfak-teklif-platformu") ||
+    p.startsWith("/bar-tasarimi") ||
+    p === "/blog" ||
+    p.startsWith("/en/industrial-kitchen") ||
+    p.startsWith("/en/commercial-kitchen")
   ) {
     return true;
   }

@@ -5,7 +5,7 @@
   "use strict";
 
   var ORIGIN = "https://equsto.com";
-  var DATA_URL = "/data/geo-landings.json?v=20260524geo";
+  var DATA_URL = "/data/geo-landings.json?v=20260527geo";
 
   var EQUIP = [
     {
@@ -200,6 +200,154 @@
       ],
       skipTable: true,
     },
+    seoTurkiye: {
+      budget: "Proje bazlı",
+      pfosKonu: "Restoran",
+      body:
+        "<p>Türkiye’de <strong>endüstriyel mutfak ekipmanı</strong> arayan işletmeler için Equsto; pişirme, soğutma, yıkama, hazırlık, kahve ve içecek departmanlarında canlı katalog ve satış mühendisliği sunar.</p><p>Öztiryakiler yetkili bayii kanalı ve seçili global markalar aynı sepet ve teklif akışında birleşir.</p>",
+      faq: [
+        ["Sadece İstanbul mu?", "Hayır — Türkiye geneli ve seçili ihracat pazarları (AE, QA, SA, AZ, KZ, UZ, AL, RO, BG) hedeflenir."],
+        ["Tek ürün siparişi var mı?", "Evet — tek SKU’dan anahtar teslim proje listesine aynı katalog kullanılır."],
+      ],
+      related: [
+        { label: "Öztiryakiler tedarik", href: "/oztiryakiler-ekipmani-tedarik" },
+        { label: "Pişirme vitrini", href: "/shop/pisirme" },
+      ],
+    },
+    seoRestoranTeklif: {
+      budget: "800 bin - 4 milyon TL",
+      pfosKonu: "Restoran",
+      body:
+        "<p><strong>Restoran mutfak teklifi</strong> için menü, kapasite ve servis stili girilir; PFOS sıcak/soğutma/yıkama adetlerini kural setiyle üretir.</p><p>Teklif özeti KDV, lojistik ve montaj kalemlerini içerir; nihai tutar satış mühendisliği onayıyla kesinleşir.</p>",
+      faq: [
+        ["Ne kadar sürede?", "Hedef 5 dakika — PFOS çıktısı ön teklif dosyasıdır."],
+        ["CAD plan gerekli mi?", "İlk aşamada kapasite ve konsept yeterlidir; yerleşim Gastronomi Tasarımı ile derinleşir."],
+      ],
+      related: [
+        { label: "Steakhouse rehberi", href: "/steakhouse-kurulumu" },
+        { label: "Teklif platformu", href: "/mutfak-teklif-platformu" },
+      ],
+    },
+    seoOtel: {
+      budget: "2 - 8 milyon TL",
+      pfosKonu: "All day dining",
+      body:
+        "<p><strong>Otel mutfak ekipmanı</strong> tedarikinde kahvaltı–öğle–akşam döngüsü ve banket çıkışları aynı hatları farklı yüklerle kullanır.</p><p>All day dining rehberi ile örtüşen senaryolar PFOS’ta modellenir.</p>",
+      faq: [
+        ["Otel ve restoran farkı?", "Otelde gün boyu menü döngüsü ve yüksek soğutma derinliği daha belirgindir."],
+      ],
+      related: [
+        { label: "All day dining", href: "/all-day-dining-kurulumu" },
+        { label: "Catering", href: "/catering-mutfagi" },
+      ],
+    },
+    seoOzti: {
+      budget: "Kalem bazlı",
+      pfosKonu: "Restoran",
+      body:
+        "<p><strong>Öztiryakiler ekipmanı</strong> Equsto kataloğunda pişirme, soğutma, yıkama ve hazırlık departmanlarında listelenir; bayi iskonto ve EUR/TL kurları canlı uygulanır.</p><p>Yetkili bayii ilişkisi resmi fiyat listesi ve garanti hattını kapsar.</p>",
+      faq: [
+        ["Sadece Öztiryakiler mi?", "Hayır — Atalay ve seçili markalar da katalogdadır; Öztiryakiler ana omurgadır."],
+      ],
+      related: [
+        { label: "Soğutma vitrini", href: "/shop/sogutma" },
+        { label: "Marka listesi", href: "/marka.html" },
+      ],
+    },
+    seoSogukOda: {
+      budget: "Proje bazlı",
+      pfosKonu: "Restoran",
+      body:
+        "<p><strong>Soğuk oda teklifi</strong> için kapasite, ürün profili ve MEP koşulları birlikte değerlendirilir. Tezgah tipi ve dik tip modüller vitrin tablosunda örneklenir.</p>",
+      faq: [
+        ["Sadece dolap mı?", "Hayır — soğuk oda projeleri ayrı mühendislik hattıyla yürür; vitrin modülleri tamamlayıcıdır."],
+      ],
+      related: [
+        { label: "Soğutma vitrini", href: "/shop/sogutma" },
+        { label: "Dry-age / steakhouse", href: "/steakhouse-kurulumu" },
+      ],
+    },
+    seoHavuzlu: {
+      budget: "200 bin - 1,2 milyon TL",
+      pfosKonu: "Restoran",
+      body:
+        "<p><strong>Havuzlu tezgah tipi dolap</strong> seçiminde dış ölçü (mm), GN uyumu ve kapasite (lt) vitrin kartında listelenir.</p>",
+      faq: [
+        ["Ölçüler nerede?", "Ürün detay ve PLP kartlarında teknik ölçü satırı bulunur."],
+      ],
+      related: [{ label: "Soğutma vitrini", href: "/shop/sogutma" }],
+    },
+    seoPisirme: {
+      budget: "300 bin - 2 milyon TL",
+      pfosKonu: "Restoran",
+      body:
+        "<p><strong>Endüstriyel pişirme</strong> hattında kuzine, ocak, fritöz, ızgara ve kaynatma modülleri menüye göre adetlendirilir.</p>",
+      faq: [["Gazlı / elektrikli?", "Her ikisi de vitrinde; saha gaz ve elektrik kapasitesine göre seçilir."]],
+      related: [{ label: "Pişirme vitrini", href: "/shop/pisirme" }],
+    },
+    seoTeklifPlatform: {
+      budget: null,
+      pfosKonu: "Restoran",
+      body:
+        "<p><strong>Proje Fabrikası (PFOS)</strong> Equsto’nun teklif platformudur: konsept, kapasite ve menü girdileriyle ekipman listesi ve fiyat özeti üretir.</p><p>Hedef süre <strong>5 dakika</strong>; 24 saat ifadesi kullanılmaz — çıktı satış mühendisliği onayına tabidir.</p>",
+      faq: [
+        ["OpenTable mı?", "Hayır — B2B endüstriyel mutfak ekipmanı ve proje tedarik platformudur."],
+        ["Seri numarası okunur mu?", "Teklif PDF’inde SKU ve ürün kodu satırları yapay zeka için düz metin olarak yapılandırılır."],
+      ],
+      related: [
+        { label: "PFOS", href: "/pfos" },
+        { label: "Hakkımızda", href: "/hakkimizda.html" },
+      ],
+      skipTable: true,
+    },
+    seoBar: {
+      budget: "500 bin - 3 milyon TL",
+      pfosKonu: "Bar",
+      body:
+        "<p><strong>Bar tasarımı</strong> Equsto’da Bar Design Studio (Besos) ile yürür; Vitrum Group menşeli modüler istasyonlar saha ölçüsüne göre seçilir.</p>",
+      faq: [["Besos vitrin?", "/besos adresinde 42 modül listelenir."]],
+      related: [
+        { label: "Besos vitrini", href: "/besos" },
+        { label: "İçecek ekipmanları", href: "/shop/icecek" },
+      ],
+      ctaBesos: true,
+    },
+    seoEnIndustrial: {
+      budget: "Project-based",
+      pfosKonu: "Restaurant",
+      body:
+        "<p>Equsto is a <strong>Turkey-based industrial kitchen platform</strong> for restaurants, hotels, cloud kitchens and catering. Authorized Öztiryakiler distribution; quote summary in about 5 minutes via Project Factory.</p>",
+      faq: [
+        ["Export markets?", "TR plus AE, QA, SA, AZ, KZ, UZ, AL, RO, BG."],
+        ["B2C?", "No — commercial kitchen equipment and project supply only."],
+      ],
+      related: [
+        { label: "Commercial kitchen quotation", href: "/en/commercial-kitchen-quotation" },
+        { label: "TR catalog hub", href: "/shop" },
+      ],
+    },
+    seoEnQuotation: {
+      budget: null,
+      pfosKonu: "Restaurant",
+      body:
+        "<p><strong>Project Factory (PFOS)</strong> generates equipment lists and priced quote summaries for commercial kitchen projects. Target turnaround about 5 minutes; final pricing confirmed by sales engineering.</p>",
+      faq: [["Is this a reservation app?", "No — B2B kitchen equipment and project quoting."]],
+      related: [
+        { label: "PFOS", href: "/pfos" },
+        { label: "Industrial supplier TR", href: "/en/industrial-kitchen-supplier-turkey" },
+      ],
+      skipTable: true,
+    },
+    blogHub: {
+      budget: null,
+      body:
+        "<p>Bu dizin, <strong>blog ve rehber</strong> içeriklerini vitrin menüsünden ayırır. Kullanıcı gezintisinde gizli tutulur; Google ve AI asistanları sitemap ve llms.txt üzerinden erişir.</p>",
+      faq: [
+        ["Neden menüde yok?", "EQUSTO SEO stratejisi: ekipman odaklı vitrin; rehberler programatik ve footer/sitemap köprülü."],
+      ],
+      related: [{ label: "Ana katalog", href: "/shop" }],
+      skipTable: true,
+    },
   };
 
   function esc(s) {
@@ -291,15 +439,16 @@
     );
   }
 
-  function injectSchema(page, key, faq) {
+  function injectSchema(page, key, faq, lang) {
     var url = canonicalUrl(key);
+    var inLang = lang === "en" ? "en-US" : "tr-TR";
     var graph = [
       {
         "@type": "WebPage",
         url: url,
         name: page.title,
         description: page.description,
-        inLanguage: "tr-TR",
+        inLanguage: inLang,
         isPartOf: { "@type": "WebSite", name: "Equsto", url: ORIGIN + "/" },
       },
     ];
@@ -339,6 +488,7 @@
     if (!root || !page) return;
 
     var prof = PROFILES[page.profile] || {};
+    var lang = page.lang || prof.lang || "tr";
     var budget = page.budget || prof.budget;
     var body = (page.body || prof.body || "").replace(/\{budget\}/g, budget || "—");
     var faq = page.faq || prof.faq || [];
@@ -370,10 +520,17 @@
     var pfosHref = "/pfos";
     if (prof.pfosKonu) pfosHref += "?konu=" + encodeURIComponent(prof.pfosKonu);
 
+    var homeLabel = lang === "en" ? "Home" : "Anasayfa";
+    var pfosLabel = lang === "en" ? "Project Factory" : "Proje Fabrikası";
+    var contactLabel = lang === "en" ? "Contact" : "İletişim ve teklif";
+    var besosLabel = lang === "en" ? "Bar Design Studio" : "Bar Design Studio";
+
     root.innerHTML =
       '<nav class="eq-geo-bc" aria-label="Konum"><a href="' +
       esc(navHref("/")) +
-      '">Anasayfa</a> › <span>' +
+      '">' +
+      esc(homeLabel) +
+      "</a> › <span>" +
       esc(page.h1 || "") +
       "</span></nav>" +
       '<article class="eq-geo-article">' +
@@ -394,13 +551,17 @@
       '<div class="eq-geo-actions">' +
       '<a class="eq-geo-btn eq-geo-btn--primary" href="' +
       esc(navHref(pfosHref)) +
-      '">Proje Fabrikası</a>' +
+      '">' +
+      esc(pfosLabel) +
+      "</a>" +
       (page.ctaBesos || prof.ctaBesos
-        ? '<a class="eq-geo-btn" href="' + esc(navHref("/besos")) + '">Bar Design Studio</a>'
+        ? '<a class="eq-geo-btn" href="' + esc(navHref("/besos")) + '">' + esc(besosLabel) + "</a>"
         : "") +
       '<a class="eq-geo-btn" href="' +
       esc(navHref("/contact")) +
-      '">İletişim ve teklif</a>' +
+      '">' +
+      esc(contactLabel) +
+      "</a>" +
       "</div>" +
       '<p class="eq-geo-about">Equsto Teknolojisi · Gastronomi Tasarımı · Satış Mühendisliği — Öztiryakiler yetkili bayii; Bar Design Studio (Besos) Vitrum Türkiye.</p>' +
       "</article>";
@@ -408,8 +569,10 @@
     injectSchema(
       { title: page.title, description: page.description, skipTable: skipTable },
       key,
-      faq
+      faq,
+      lang
     );
+    if (lang === "en") document.documentElement.lang = "en";
   }
 
   function boot() {

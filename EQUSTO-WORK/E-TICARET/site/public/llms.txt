@@ -20,6 +20,19 @@ Türkiye'nin lider endüstriyel mutfak markası **Öztiryakiler** ile yetkili ba
 - [/projeler](https://equsto.com/projeler) - Referans projeler hub (demonte vaka metinleri, ItemList bağlantılı vitrin SKU’larına giriş)
 - [/projeler/istanbul-yuksek-hacim-catering-demode](https://equsto.com/projeler/istanbul-yuksek-hacim-catering-demode) - Demode catering profili örneği
 - [/rehber/mutfak-alani-kisi-basi-metrekare-2026](https://equsto.com/rehber/mutfak-alani-kisi-basi-metrekare-2026) - Blog/rehber: mutfak m² ve kapasite (footer + sitemap üzerinden; header’da görünmez)
+- [/hakkimizda.html](https://equsto.com/hakkimizda.html) - Hakkımızda · E-E-A-T (Equsto Teknoloji Limited, PFOS, 5 dakika teklif)
+- [/blog](https://equsto.com/blog) - Rehber/blog dizini (vitrin menüsünde yok; Google/AI için hub)
+- [/endustriyel-mutfak-ekipmani-turkiye](https://equsto.com/endustriyel-mutfak-ekipmani-turkiye) - TR endüstriyel mutfak ekipmanı
+- [/restoran-mutfak-teklif](https://equsto.com/restoran-mutfak-teklif) - Restoran mutfak teklifi
+- [/otel-mutfak-ekipman-tedarik](https://equsto.com/otel-mutfak-ekipman-tedarik) - Otel mutfak tedarik
+- [/oztiryakiler-ekipmani-tedarik](https://equsto.com/oztiryakiler-ekipmani-tedarik) - Öztiryakiler nereden alınır
+- [/soguk-oda-teklif](https://equsto.com/soguk-oda-teklif) - Soğuk oda teklif
+- [/havuzlu-dolap-tedarik](https://equsto.com/havuzlu-dolap-tedarik) - Havuzlu dolap
+- [/endustriyel-pisirme-ekipmanlari](https://equsto.com/endustriyel-pisirme-ekipmanlari) - Pişirme ekipmanı
+- [/mutfak-teklif-platformu](https://equsto.com/mutfak-teklif-platformu) - Teklif platformu (5 dakika, PFOS)
+- [/bar-tasarimi-turkiye](https://equsto.com/bar-tasarimi-turkiye) - Bar tasarımı TR
+- [/en/industrial-kitchen-supplier-turkey](https://equsto.com/en/industrial-kitchen-supplier-turkey) - EN industrial kitchen supplier
+- [/en/commercial-kitchen-quotation](https://equsto.com/en/commercial-kitchen-quotation) - EN commercial kitchen quotation
 
 ## Departman Vitrinleri
 
@@ -48,7 +61,7 @@ Tam liste: `public/data/eq-category-seo.json` (6 departman, 16 katalog kategoris
 - **Birim sistemi:** Metrik (mm, kg, °C, m³/h)
 - **Tarih formatı:** ISO 8601 (YYYY-MM-DD)
 - **Ana dil:** Türkçe (tr-TR)
-- **Hedef ikinci dil:** İngilizce (en-US) - `/en/` alt-route'larda (henüz geliştirme aşamasında)
+- **Hedef ikinci dil:** İngilizce (en-US) - `/en/industrial-kitchen-supplier-turkey`, `/en/commercial-kitchen-quotation` (GEO rehber); tam vitrin EN geliştirme aşamasında
 
 ## Marka Listesi (Entities)
 
@@ -75,4 +88,11 @@ Daha kapsamlı içerik için [llms-full.txt](https://equsto.com/llms-full.txt) d
 
 ## Sitemap
 
-Tüm dizinlenebilir sayfalar: [sitemap.xml](https://equsto.com/sitemap.xml)
+Tüm dizinlenebilir sayfalar: [sitemap.xml](https://equsto.com/sitemap.xml) · statik/rehber: [sitemap-pages.xml](https://equsto.com/sitemap-pages.xml)
+
+## SEO/GEO notları (iç kullanım)
+
+- Anahtar kelime listeleri vitrin UI’da gösterilmez; rehber sayfaları programatik GEO landing’lerdir.
+- Blog/rehber hub `/blog` üst menüde yoktur; sitemap ve llms.txt ile dizinlenir.
+- Teklif süresi: **5 dakika** (PFOS hedef); “24 saat” ifadesi kullanılmaz.
+- 15 prompt proxy testi (2026-05): genel sorgularda ~1/15; marka sorgularında equsto.com #1.
