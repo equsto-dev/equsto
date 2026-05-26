@@ -2374,7 +2374,9 @@ body.eq-shop .eq-amazon-shop-all a.cat-drawer-item {
   min-height: 48px;
   box-sizing: border-box;
 }
-.cat-drawer.eq-mcat-drawer .eq-mcat-hdr-back,
+.cat-drawer.eq-mcat-drawer .eq-mcat-hdr-back {
+  display: none !important;
+}
 .cat-drawer.eq-mcat-drawer .eq-mcat-hdr-theme {
   flex-shrink: 0;
   width: 40px;
@@ -2391,7 +2393,6 @@ body.eq-shop .eq-amazon-shop-all a.cat-drawer-item {
   font-family: inherit;
   -webkit-tap-highlight-color: transparent;
 }
-.cat-drawer.eq-mcat-drawer .eq-mcat-hdr-back:hover,
 .cat-drawer.eq-mcat-drawer .eq-mcat-hdr-theme:hover {
   background: rgba(255, 255, 255, 0.2);
 }

@@ -585,16 +585,13 @@
     var drawer = document.getElementById("catDrawer");
     if (!drawer) return;
     var titleEl = drawer.querySelector(".eq-mcat-hdr-title");
-    var backBtn = drawer.querySelector(".eq-mcat-hdr-back");
-    if (!titleEl || !backBtn) return;
+    if (!titleEl) return;
     var depth = __eqDrawerStack.length;
     if (__eqIsMobileNav() && depth > 0) {
       var fr = __eqDrawerStack[depth - 1];
       titleEl.textContent = (fr && fr.title) || __navT("nav.drawer_title_categories", "Kategoriler");
-      backBtn.setAttribute("aria-label", __navT("common.back", "Geri"));
     } else {
       titleEl.textContent = __navT("nav.drawer_title_categories", "Kategoriler");
-      backBtn.setAttribute("aria-label", __navT("common.close", "Kapat"));
     }
   }
 
@@ -682,12 +679,6 @@
     var inner = el("div", { class: "eq-mcat-drawer-inner" });
     var hdr = el("header", { class: "eq-mcat-hdr" });
     var bar = el("div", { class: "eq-mcat-hdr-bar" });
-    var btnBack = el("button", { type: "button", class: "eq-mcat-hdr-back", "aria-label": __navT("common.close", "Kapat") });
-    btnBack.innerHTML =
-      '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-    btnBack.addEventListener("click", function () {
-      __eqDrawerHdrBack();
-    });
     var title = el("div", { class: "eq-mcat-hdr-title", text: __navT("nav.drawer_title_categories", "Kategoriler") });
     var btnTheme = el("button", {
       type: "button",
@@ -699,7 +690,6 @@
     btnTheme.addEventListener("click", function () {
       if (typeof window.equstoCycleTheme === "function") window.equstoCycleTheme();
     });
-    bar.appendChild(btnBack);
     bar.appendChild(title);
     bar.appendChild(btnTheme);
 
