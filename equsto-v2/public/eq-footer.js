@@ -5,7 +5,7 @@
 (function () {
   "use strict";
 
-  var FOOTER_JSON = "/data/footer-vitrin.json?v=20260524foot3";
+  var FOOTER_JSON = "/data/footer-vitrin.json?v=20260526foot4";
   var footerData = null;
   var footerLoadPromise = null;
 
@@ -104,6 +104,7 @@
           titleKey: "footer.col_about",
           title: "Hakkımızda",
           links: [
+            { key: "footer.link_about", label: "Equsto hakkında", href: "/hakkimizda.html" },
             { key: "footer.link_contact", label: "İletişim", href: "/contact" },
             { key: "footer.link_projects", label: "Referans projeler", href: "/projeler" },
             { key: "footer.link_sitemap", label: "Site haritası", href: "/sitemap.xml" },
