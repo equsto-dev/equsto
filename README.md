@@ -11,7 +11,7 @@ Türkiye merkezli endüstriyel mutfak platformu — **tek kaynak klasör:** [`EQ
 | Eski statik vitrin (arşiv) | [`EQUSTO-WORK/E-TICARET/legacy-public/`](EQUSTO-WORK/E-TICARET/legacy-public/) |
 | GitHub → Supabase → Vercel | [`EQUSTO-WORK/docs/GITHUB-SUPABASE.md`](EQUSTO-WORK/docs/GITHUB-SUPABASE.md) |
 
-> **Not:** Kökteki `equsto-v2/` kaldırıldı. Tüm geliştirme `EQUSTO-WORK/E-TICARET/site` altındadır.
+> **Not:** `equsto-v2/` artık `EQUSTO-WORK/E-TICARET/site` sembolik bağlantısıdır (Vercel Root Directory geriye dönük uyumluluk). Yeni projelerde Root Directory doğrudan `EQUSTO-WORK/E-TICARET/site` olmalıdır.
 
 ## Hızlı başlangıç
 
