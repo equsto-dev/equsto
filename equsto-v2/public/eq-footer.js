@@ -105,6 +105,8 @@
           title: "Hakkımızda",
           links: [
             { key: "footer.link_about", label: "Equsto hakkında", href: "/hakkimizda.html" },
+            { key: "footer.link_blog", label: "Rehber ve blog", href: "/blog" },
+            { key: "footer.link_story", label: "Buradan başladık", href: "/buradan-basladi" },
             { key: "footer.link_contact", label: "İletişim", href: "/contact" },
             { key: "footer.link_projects", label: "Referans projeler", href: "/projeler" },
             { key: "footer.link_sitemap", label: "Site haritası", href: "/sitemap.xml" },
