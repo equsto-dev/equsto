@@ -57,6 +57,9 @@
   --eq-hdr-logo-max-w: min(144px, 31vw);
   --eq-hdr-logo-wordmark-h: 13px;
   --eq-hdr-logo-link-max-w: 31vw;
+  /* Wordmark kalınlık: önceki 500 → %10 inceltme (450); PNG için scaleX aynı oran */
+  --eq-hdr-logo-font-weight: 450;
+  --eq-hdr-logo-scale-x: 0.9;
   /* Üst arama barı + departman şeridi — çekmece ve filtre sütunu bu çizgiden başlar */
   --eq-filter-col-sticky-top: 92px;
   --eq-filter-col-sticky-max-h: calc(100vh - 96px);
@@ -3668,7 +3671,7 @@ button.auth-logo {
 
 a.logo.logo--text {
   font-size: 15px;
-  font-weight: 500;
+  font-weight: var(--eq-hdr-logo-font-weight, 450);
   letter-spacing: 0.02em;
 }
 
@@ -3716,8 +3719,11 @@ a.bd-hdr-wordmark .eq-logo-svg {
 
 /* Koyu bant: equsto-logo.js → equsto-logo-white.png (eski invert şeffaf PNG’de beyaz kutu yapıyordu) */
 header.hdr > a.logo .eq-logo-img,
-body.bd-page.besos .bd-hdr-wordmark .eq-logo-img {
+body.bd-page.besos .bd-hdr-wordmark .eq-logo-img,
+a.bd-hdr-wordmark .eq-logo-img {
   filter: none !important;
+  transform: scaleX(var(--eq-hdr-logo-scale-x, 0.9));
+  transform-origin: left center;
 }
 
 /* Şeffaf zemin; çizgi ve yazı = a.logo / button.auth-logo → color: var(--eq-text) */
@@ -3734,7 +3740,7 @@ body.bd-page.besos .bd-hdr-wordmark .eq-logo-img {
 .eq-logo-svg .eq-logo-word {
   fill: currentColor;
   font-family: Rajdhani, system-ui, -apple-system, sans-serif;
-  font-weight: 500;
+  font-weight: var(--eq-hdr-logo-font-weight, 450);
 }
 
 /* Üst bant (#001e50 vb.) üzerinde wordmark hep beyaz */
