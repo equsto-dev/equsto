@@ -1,6 +1,6 @@
 {
-  "version": 4,
-  "source": "EQUSTO SEO-GEO.docx + llms.txt + PFOS programmatic SEO",
+  "version": 5,
+  "source": "EQUSTO SEO-GEO.docx + blog/GEO rehber genişletme 2026-05-28",
   "steakhouse-kurulumu": {
     "profile": "steakhouse",
     "title": "Steakhouse mutfak projelendirme rehberi | Equsto",
@@ -81,6 +81,35 @@
     "description": "Mutfak alanı planlama 2026: kişi başı metrekare, kapasite ve PFOS ile senaryo modelleme.",
     "h1": "Mutfak alanı — kişi başı metrekare",
     "lead": "Kapasite planlamasında işler mutfak m²’sini servis stiline bölmekle başlar; PFOS çıktıları finans onayına bağlanır."
+  },
+  "rehber/500-kisilik-catering-ekipman-planlama-2026": {
+    "profile": "rehberCatering500",
+    "title": "500 kişilik catering ekipman planlama | Equsto",
+    "description": "500 kişilik catering ve banket mutfağı: kapasite, sıcak banket, yıkama hızı ve bütçe bandı; PFOS ile liste.",
+    "h1": "500 kişilik catering ekipman planlama",
+    "lead": "Toplu yemek ve banket çıkışlarında pik kişi sayısı ocak, soğutma ve yıkama adetlerini belirler."
+  },
+  "rehber/dark-kitchen-bulut-mutfak-2026": {
+    "profile": "rehberDarkKitchen",
+    "title": "Dark kitchen / bulut mutfak kurulum rehberi | Equsto",
+    "description": "Dark kitchen setup: çok markalı yüksek çıkış, modüler hatlar, MEP ve yıkama merkezi planlama.",
+    "h1": "Dark kitchen — bulut mutfak kurulumu",
+    "lead": "Çok markalı bulut mutfaklarda parsel bazlı sıcak-soğuk hatlar ve ortak yıkama kapasitesi kritiktir."
+  },
+  "rehber/restoran-mutfak-kurulumu-checklist-2026": {
+    "profile": "rehberRestoranChecklist",
+    "title": "Restoran mutfak kurulumu checklist | Equsto",
+    "description": "Restoran mutfak kurulumu adım adım: menü, kapasite, tesisat, teklif; PFOS ile 5 dakikada özet.",
+    "h1": "Restoran mutfak kurulumu checklist",
+    "lead": "Yeni restoran veya tadilat projelerinde ekipman listesi menü ve servis stiline göre modellenir.",
+    "skipTable": true
+  },
+  "rehber/kafe-acilis-ekipman-listesi-2026": {
+    "profile": "rehberKafeAcilis",
+    "title": "Kafe açılış ekipman listesi | Equsto",
+    "description": "Kafe ve espresso bar açılışı: kahve istasyonu, soğutma, hazırlık, yıkama; örnek liste ve bütçe bandı.",
+    "h1": "Kafe açılış ekipman listesi",
+    "lead": "Espresso merkezi ve soğuk stok cafe konseptinde paralel planlanır; paket oranı soğutma derinliğini artırır."
   },
   "endustriyel-mutfak-ekipmani-turkiye": {
     "profile": "seoTurkiye",
@@ -164,21 +193,65 @@
   },
   "blog": {
     "profile": "blogHub",
-    "title": "Equsto rehber ve blog | SEO",
-    "description": "Endüstriyel mutfak rehberleri: steakhouse, bulut mutfak, catering, otel, soğuk oda ve teklif platformu. Üst menüde görünmez; arama motorları ve asistanlar için dizin.",
+    "title": "Equsto rehber ve blog | GEO dizin",
+    "description": "Endüstriyel mutfak GEO rehberleri: konsept kurulumları, arama hedefli sayfalar, editoryal rehberler ve referans projeler. Vitrin menüsünde yok.",
     "h1": "Rehber ve blog dizini",
-    "lead": "Bu sayfa vitrin gezintisinde ayrı sekme olarak sunulmaz; Google ve yapay zeka asistanları için programatik rehber hub’ıdır.",
+    "lead": "Ekipman vitrininden ayrı tutulan programatik rehberler. Her sayfa FAQ ve vitrin SKU bağlantıları içerir; teklif için Proje Fabrikası (hedef 5 dakika).",
     "skipTable": true,
-    "links": [
-      { "label": "Steakhouse kurulumu", "href": "/steakhouse-kurulumu" },
-      { "label": "Bulut mutfak", "href": "/bulut-mutfak-kurulumu" },
-      { "label": "Catering mutfağı", "href": "/catering-mutfagi" },
-      { "label": "Öztiryakiler tedarik", "href": "/oztiryakiler-ekipmani-tedarik" },
-      { "label": "Soğuk oda teklif", "href": "/soguk-oda-teklif" },
-      { "label": "Mutfak teklif platformu", "href": "/mutfak-teklif-platformu" },
-      { "label": "Bar tasarımı", "href": "/bar-tasarimi-turkiye" },
-      { "label": "Hakkımızda", "href": "/hakkimizda.html" },
-      { "label": "Buradan başladık", "href": "/buradan-basladi" }
+    "sections": [
+      {
+        "title": "Konsept kurulum rehberleri",
+        "links": [
+          { "label": "Steakhouse mutfak kurulumu", "href": "/steakhouse-kurulumu" },
+          { "label": "Bulut mutfak kurulumu", "href": "/bulut-mutfak-kurulumu" },
+          { "label": "Cafe kurulumu", "href": "/cafe-kurulumu" },
+          { "label": "Catering mutfağı", "href": "/catering-mutfagi" },
+          { "label": "Fast food kurulumu", "href": "/fast-food-kurulumu" },
+          { "label": "Fine dining kurulumu", "href": "/fine-dining-kurulumu" },
+          { "label": "All day dining / otel mutfağı", "href": "/all-day-dining-kurulumu" }
+        ]
+      },
+      {
+        "title": "Arama ve GEO hedef sayfaları",
+        "links": [
+          { "label": "Endüstriyel mutfak ekipmanı — Türkiye", "href": "/endustriyel-mutfak-ekipmani-turkiye" },
+          { "label": "Restoran mutfak ekipman teklifi", "href": "/restoran-mutfak-teklif" },
+          { "label": "Otel mutfak ekipman tedariki", "href": "/otel-mutfak-ekipman-tedarik" },
+          { "label": "Öztiryakiler ekipmanı tedarik", "href": "/oztiryakiler-ekipmani-tedarik" },
+          { "label": "Soğuk oda fiyat teklifi", "href": "/soguk-oda-teklif" },
+          { "label": "Tezgah tipi havuzlu dolap", "href": "/havuzlu-dolap-tedarik" },
+          { "label": "Endüstriyel pişirme ekipmanları", "href": "/endustriyel-pisirme-ekipmanlari" },
+          { "label": "Mutfak teklif platformu (5 dk)", "href": "/mutfak-teklif-platformu" },
+          { "label": "Bar tasarımı Türkiye", "href": "/bar-tasarimi-turkiye" }
+        ]
+      },
+      {
+        "title": "Editoryal rehberler (/rehber/)",
+        "links": [
+          { "label": "Mutfak m² — kişi başı metrekare", "href": "/rehber/mutfak-alani-kisi-basi-metrekare-2026" },
+          { "label": "500 kişilik catering planlama", "href": "/rehber/500-kisilik-catering-ekipman-planlama-2026" },
+          { "label": "Dark kitchen / bulut mutfak", "href": "/rehber/dark-kitchen-bulut-mutfak-2026" },
+          { "label": "Restoran mutfak kurulumu checklist", "href": "/rehber/restoran-mutfak-kurulumu-checklist-2026" },
+          { "label": "Kafe açılış ekipman listesi", "href": "/rehber/kafe-acilis-ekipman-listesi-2026" }
+        ]
+      },
+      {
+        "title": "Referans projeler",
+        "links": [
+          { "label": "Projeler hub", "href": "/projeler" },
+          { "label": "İstanbul yüksek hacim catering", "href": "/projeler/istanbul-yuksek-hacim-catering-demode" },
+          { "label": "İzmir modüler bar ve içecek", "href": "/projeler/izmir-moduler-bar-icecek-demode" }
+        ]
+      },
+      {
+        "title": "Kurumsal ve İngilizce",
+        "links": [
+          { "label": "Hakkımızda", "href": "/hakkimizda.html" },
+          { "label": "Buradan başladık (hikaye)", "href": "/buradan-basladi" },
+          { "label": "EN — Industrial kitchen supplier Turkey", "href": "/en/industrial-kitchen-supplier-turkey" },
+          { "label": "EN — Commercial kitchen quotation", "href": "/en/commercial-kitchen-quotation" }
+        ]
+      }
     ]
   }
 }

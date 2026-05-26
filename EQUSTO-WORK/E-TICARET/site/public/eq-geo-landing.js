@@ -5,7 +5,7 @@
   "use strict";
 
   var ORIGIN = "https://equsto.com";
-  var DATA_URL = "/data/geo-landings.json?v=20260527geo";
+  var DATA_URL = "/data/geo-landings.json?v=20260528blog";
 
   var EQUIP = [
     {
@@ -341,14 +341,94 @@
     blogHub: {
       budget: null,
       body:
-        "<p>Bu dizin, <strong>blog ve rehber</strong> içeriklerini vitrin menüsünden ayırır. Kullanıcı gezintisinde gizli tutulur; Google ve AI asistanları sitemap ve llms.txt üzerinden erişir.</p>",
+        "<p>Bu dizin, <strong>blog ve GEO rehber</strong> içeriklerini vitrin menüsünden ayırır. Ekipman arayan kullanıcı doğrudan katalogda kalır; konsept ve teklif soruları bu sayfalarda yanıtlanır. Her rehberde FAQ ve (uygunsa) vitrin SKU tablosu vardır.</p>",
       faq: [
-        ["Neden menüde yok?", "EQUSTO SEO stratejisi: ekipman odaklı vitrin; rehberler programatik ve footer/sitemap köprülü."],
+        ["Neden üst menüde yok?", "Vitrin ekipman odaklıdır; rehberler footer, sitemap ve llms.txt ile dizinlenir."],
+        ["Steakhouse veya bulut mutfak için hangi sayfa?", "Konsept rehberleri bölümündeki ilgili bağlantıya gidin; PFOS ile 5 dakikada teklif özeti alın."],
       ],
-      related: [{ label: "Ana katalog", href: "/shop" }],
+      related: [
+        { label: "Proje Fabrikası", href: "/pfos" },
+        { label: "Ana katalog", href: "/shop" },
+      ],
       skipTable: true,
     },
+    rehberCatering500: {
+      budget: "1,5 - 5 milyon TL",
+      pfosKonu: "Catering",
+      body:
+        "<p><strong>500 kişilik catering</strong> ve banket çıkışlarında sıcak banket kapasitesi, soğuk zincir derinliği ve yıkama hızı belirleyicidir. Kişi sayısı ve öğün aralığı PFOS’ta modellenir.</p><p>Band: <strong>{budget}</strong> (gösterge, KDV hariç).</p>",
+      faq: [
+        ["500 kişi tek seferde mi?", "Pik öğün ve sürekli banket senaryoları ayrı modellenir; PFOS’ta kişi + öğün profili girilir."],
+        ["Taşıma ekipmanları dahil mi?", "Liste genişletilebilir; teklif satış mühendisliği ile netleşir."],
+      ],
+      related: [
+        { label: "Catering mutfağı rehberi", href: "/catering-mutfagi" },
+        { label: "İstanbul catering demode", href: "/projeler/istanbul-yuksek-hacim-catering-demode" },
+      ],
+    },
+    rehberDarkKitchen: {
+      budget: "800 bin - 2,5 milyon TL",
+      pfosKonu: "Bulut mutfak",
+      body:
+        "<p><strong>Dark kitchen / bulut mutfak</strong> kurulumunda marka başına parsellenmiş sıcak-soğuk hatlar ve ortak yıkama merkezi planlanır. Elektrik ve havalandırma yükü çok markalı senaryoda artar.</p>",
+      faq: [
+        ["Tek ruhsat çok marka?", "MEP ve yağ sıyırıcı kapasitesi toplam menüye göre hesaplanır."],
+        ["Paket ağırlığı?", "Yüksek paket oranı soğutma ve hazırlık modüllerini artırır."],
+      ],
+      related: [{ label: "Bulut mutfak kurulumu", href: "/bulut-mutfak-kurulumu" }],
+    },
+    rehberRestoranChecklist: {
+      budget: "800 bin - 4 milyon TL",
+      pfosKonu: "Restoran",
+      body:
+        "<p><strong>Restoran mutfak kurulumu</strong> checklist: menü → kapasite → m² → sıcak/soğutma/yıkama adetleri → teklif. PFOS bu akışı otomatikler; checklist manuel kontrol için kullanılır.</p><ol><li>İşletme tipi ve oturma/paket oranı</li><li>Günlük öğün ve pik kişi</li><li>Mevcut tesisat (gaz, elektrik, su)</li><li>Davlumbaz ve baca</li><li>Marka tercihi ve bütçe bandı</li></ol>",
+      faq: [
+        ["CAD plan şart mı?", "İlk aşamada kapasite yeterli; yerleşim Gastronomi Tasarımı ile derinleşir."],
+      ],
+      related: [
+        { label: "Restoran teklif rehberi", href: "/restoran-mutfak-teklif" },
+        { label: "m² rehberi", href: "/rehber/mutfak-alani-kisi-basi-metrekare-2026" },
+      ],
+      skipTable: true,
+    },
+    rehberKafeAcilis: {
+      budget: "600 bin - 1,8 milyon TL",
+      pfosKonu: "Cafe",
+      body:
+        "<p><strong>Kafe açılış ekipman listesi</strong>: espresso merkezi, soğuk süt stoku, hazırlık tezgahı, vitrin soğutucu ve yıkama hattı. Su filtrasyonu makine seçiminden önce sabitlenmelidir.</p>",
+      faq: [
+        ["Sadece kahve mi?", "Pastane ağırlıklı kafelerde fırın ve hazırlık modülleri eklenir."],
+      ],
+      related: [
+        { label: "Cafe kurulum rehberi", href: "/cafe-kurulumu" },
+        { label: "Kahve vitrini", href: "/shop/kahve" },
+      ],
+    },
   };
+
+  function blogSectionsHtml(sections) {
+    if (!sections || !sections.length) return "";
+    return (
+      '<nav class="eq-geo-blog-index" aria-label="Rehber dizini">' +
+      sections
+        .map(function (sec) {
+          var items = (sec.links || [])
+            .map(function (ln) {
+              return "<li><a href=\"" + esc(navHref(ln.href)) + "\">" + esc(ln.label) + "</a></li>";
+            })
+            .join("");
+          return (
+            '<section class="eq-geo-blog-sec"><h2>' +
+            esc(sec.title) +
+            "</h2><ul class=\"eq-geo-links\">" +
+            items +
+            "</ul></section>"
+          );
+        })
+        .join("") +
+      "</nav>"
+    );
+  }
 
   function esc(s) {
     return String(s == null ? "" : s)
@@ -439,7 +519,7 @@
     );
   }
 
-  function injectSchema(page, key, faq, lang) {
+  function injectSchema(page, key, faq, lang, sections) {
     var url = canonicalUrl(key);
     var inLang = lang === "en" ? "en-US" : "tr-TR";
     var graph = [
@@ -477,6 +557,26 @@
         }),
       });
     }
+    if (sections && sections.length) {
+      var pos = 0;
+      var listItems = [];
+      sections.forEach(function (sec) {
+        (sec.links || []).forEach(function (ln) {
+          pos += 1;
+          var href = String(ln.href || "");
+          if (href.indexOf("http") !== 0) href = ORIGIN + (href.charAt(0) === "/" ? href : "/" + href);
+          listItems.push({
+            "@type": "ListItem",
+            position: pos,
+            url: href,
+            name: ln.label,
+          });
+        });
+      });
+      if (listItems.length) {
+        graph.push({ "@type": "ItemList", name: "Equsto rehber dizini", itemListElement: listItems });
+      }
+    }
     var s = document.createElement("script");
     s.type = "application/ld+json";
     s.textContent = JSON.stringify({ "@context": "https://schema.org", "@graph": graph });
@@ -506,7 +606,9 @@
     canon.href = canonicalUrl(key);
 
     var linksHtml = "";
-    if (page.links && page.links.length) {
+    if (page.sections && page.sections.length) {
+      linksHtml = blogSectionsHtml(page.sections);
+    } else if (page.links && page.links.length) {
       linksHtml =
         '<ul class="eq-geo-links eq-geo-links--hub">' +
         page.links
@@ -570,7 +672,8 @@
       { title: page.title, description: page.description, skipTable: skipTable },
       key,
       faq,
-      lang
+      lang,
+      page.sections
     );
     if (lang === "en") document.documentElement.lang = "en";
   }
