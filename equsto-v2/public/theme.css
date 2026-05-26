@@ -52,6 +52,11 @@
   --eq-hdr-srch-bg: #ffffff;
   --eq-hdr-srch-muted: #5c5c5c;
   --eq-hdr-srch-text: #1a1a1a;
+  /* Header wordmark — önceki ölçeğin %80’i */
+  --eq-hdr-logo-h: clamp(18px, 2.08vw, 27px);
+  --eq-hdr-logo-max-w: min(160px, 34vw);
+  --eq-hdr-logo-wordmark-h: 14px;
+  --eq-hdr-logo-link-max-w: 34vw;
   /* Üst arama barı + departman şeridi — çekmece ve filtre sütunu bu çizgiden başlar */
   --eq-filter-col-sticky-top: 92px;
   --eq-filter-col-sticky-max-h: calc(100vh - 96px);
@@ -198,7 +203,7 @@ header.hdr > a.logo,
 header.hdr > a.logo.logo--text {
   flex: 0 0 auto;
   align-self: center;
-  padding: 10px 14px 10px 20px;
+  padding: 8px 11px 8px 16px;
   margin: 0;
   color: var(--eq-hdr-bar-text) !important;
   overflow: visible;
@@ -796,9 +801,9 @@ body.admin-app .drawer-overlay {
 
 body.admin-app header.hdr > a.logo .eq-logo-svg,
 body.admin-app header.hdr > a.logo .eq-logo-img {
-  height: clamp(22px, 2.6vw, 34px);
+  height: var(--eq-hdr-logo-h);
   width: auto;
-  max-width: min(200px, 42vw);
+  max-width: var(--eq-hdr-logo-max-w);
   object-fit: contain;
   object-position: left center;
 }
@@ -3679,7 +3684,7 @@ button.auth-logo {
 .eq-logo-svg,
 .eq-logo-wordmark {
   display: block;
-  height: 18px;
+  height: var(--eq-hdr-logo-wordmark-h);
   width: auto;
   max-width: 100%;
   shape-rendering: geometricPrecision;
@@ -3687,15 +3692,15 @@ button.auth-logo {
 
 header.hdr > a.logo .eq-logo-svg,
 header.hdr > a.logo .eq-logo-wordmark {
-  height: clamp(22px, 2.6vw, 34px);
-  max-width: min(200px, 42vw);
+  height: var(--eq-hdr-logo-h);
+  max-width: var(--eq-hdr-logo-max-w);
 }
 
 .eq-logo-img {
   display: block;
-  height: clamp(22px, 2.6vw, 34px);
+  height: var(--eq-hdr-logo-h);
   width: auto;
-  max-width: min(200px, 42vw);
+  max-width: var(--eq-hdr-logo-max-w);
   object-fit: contain;
   object-position: left center;
 }
@@ -3704,8 +3709,8 @@ header.hdr > a.logo .eq-logo-wordmark {
 header.hdr > a.logo .eq-logo-img,
 a.bd-hdr-wordmark .eq-logo-img,
 a.bd-hdr-wordmark .eq-logo-svg {
-  height: clamp(22px, 2.6vw, 34px);
-  max-width: min(200px, 42vw);
+  height: var(--eq-hdr-logo-h);
+  max-width: var(--eq-hdr-logo-max-w);
 }
 
 /* Koyu bant: equsto-logo.js → equsto-logo-white.png (eski invert şeffaf PNG’de beyaz kutu yapıyordu) */
@@ -4985,7 +4990,7 @@ html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .e
   body.eq-shop:not(.admin-app):not(.bd-page) header.hdr > a.logo {
     order: 1;
     flex: 0 0 auto;
-    max-width: 42vw;
+    max-width: var(--eq-hdr-logo-link-max-w);
   }
 
   body.eq-shop:not(.admin-app):not(.bd-page) header.hdr > .pg-inner,

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
@@ -115,7 +115,7 @@
 }
 </script>
 
-<link rel="stylesheet" href="/theme.css?v=20260524pfoswhite">
+<link rel="stylesheet" href="/theme.css?v=20260520logohdr">
 <link rel="stylesheet" href="/contact.css?v=20260523wamin">
 <link rel="manifest" href="/assets/manifest-BfAPr90J.json">
 <link rel="icon" href="/images/favicon.svg?v=20260522natural" type="image/svg+xml">
@@ -231,13 +231,12 @@ header.hdr .hdr-alici{display:flex;flex-direction:column;gap:1px;padding:0 10px;
 /* ── Layout: sol sabit soru kolonu | sağ üst yazılar + sağ alt PDF ── */
 .pf-layout{
   display:grid;
-  /* Geçici: sağ panel kapalı — tek kolon */
-  grid-template-columns:1fr;
+  /* Sol bölüm : sağ bölüm = 3 : 2 (önce ~%40 / 1fr idi) */
+  grid-template-columns:minmax(280px,3fr) minmax(0,2fr);
   gap:0;
   align-items:start;
   min-height:calc(100vh - 104px);
 }
-.pf-right{display:none!important}
 /* Sol: yapışkan soru seti (kategori şeridi PFOS’ta yapışkan değil — theme.css) */
 .pf-left{
   position:sticky;
@@ -640,6 +639,24 @@ header.hdr .hdr-alici{display:flex;flex-direction:column;gap:1px;padding:0 10px;
     margin:0 12px 16px !important;
     border-radius:14px !important;
   }
+  .pfos-alan-hero{display:flex;align-items:baseline;gap:6px;margin:8px 0 4px}
+  .pfos-alan-val{font-size:40px;font-weight:700;color:var(--gold2);font-variant-numeric:tabular-nums;line-height:1}
+  .pfos-alan-val-inp{
+    width:5.5ch;max-width:100%;min-width:3ch;
+    font-size:40px;font-weight:700;color:var(--gold2);font-variant-numeric:tabular-nums;line-height:1;
+    border:none;background:transparent;padding:0;margin:0;font-family:inherit;
+    -moz-appearance:textfield;
+  }
+  .pfos-alan-val-inp::-webkit-outer-spin-button,.pfos-alan-val-inp::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+  .pfos-alan-val-inp:focus{outline:2px solid var(--gold-line);outline-offset:2px;border-radius:4px}
+  .pfos-alan-unit{font-size:15px;color:var(--muted);font-weight:500}
+  .pfos-alan-range{width:100%;height:10px;margin:16px 0 8px;-webkit-appearance:none;appearance:none;background:var(--border);border-radius:5px;cursor:pointer}
+  .pfos-alan-range::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border-radius:50%;background:var(--gold2);border:2px solid #fff;box-shadow:0 2px 6px rgba(0,30,80,.25);cursor:grab}
+  .pfos-alan-range::-moz-range-thumb{width:24px;height:24px;border-radius:50%;background:var(--gold2);border:2px solid #fff;cursor:grab}
+  .pfos-alan-presets{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 4px}
+  .pfos-m2-pill{padding:8px 14px;border-radius:20px;border:.5px solid var(--border);background:var(--card);font-size:12px;font-weight:500;cursor:pointer;transition:border-color .15s,background .15s}
+  .pfos-m2-pill.sel,.pfos-m2-pill:hover{border-color:var(--gold2);background:var(--gold-bg);color:var(--gold2)}
+  .pfos-alan-hint{font-size:11px;color:var(--muted);margin-top:4px}
   .ac-cards{gap:8px}
   .ac-c{padding:14px;min-height:72px}
   .tablo-panel .ac-cards{grid-template-columns:1fr 1fr}
@@ -1024,63 +1041,6 @@ header.hdr .hdr-alici{display:flex;flex-direction:column;gap:1px;padding:0 10px;
 .pfos-m2-pill{font-size:12px;padding:7px 12px;border-radius:999px;border:.5px solid var(--border);background:var(--bg);color:var(--text);cursor:pointer;font-weight:500}
 .pfos-m2-pill:hover{border-color:var(--gold-line);background:var(--gold-bg)}
 .pfos-m2-pill.sel{border-color:var(--gold2);background:var(--gold-bg);color:var(--gold2);font-weight:600}
-/* Alan (m²) adımı — tek kart, sade kaydırıcı */
-.pfos-alan-card{
-  margin-top:4px;padding:18px 20px;border:.5px solid var(--border);border-radius:var(--rl);
-  background:linear-gradient(180deg,var(--card) 0%,var(--bg) 100%);
-}
-.pfos-alan-hero{display:flex;align-items:baseline;justify-content:center;gap:8px;margin:0 0 14px}
-.pfos-alan-val-inp{
-  width:auto;min-width:2.5ch;max-width:100%;
-  font-size:clamp(36px,8vw,48px);font-weight:700;color:var(--gold2);font-variant-numeric:tabular-nums;line-height:1;
-  border:none;background:transparent;padding:0;margin:0;font-family:inherit;text-align:center;
-  -moz-appearance:textfield;appearance:textfield;
-}
-.pfos-alan-val-inp::-webkit-outer-spin-button,.pfos-alan-val-inp::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
-.pfos-alan-val-inp:focus{outline:none}
-.pfos-alan-val-inp:focus-visible{outline:2px solid var(--gold-line);outline-offset:4px;border-radius:6px}
-.pfos-alan-unit{font-size:18px;color:var(--muted);font-weight:500;align-self:flex-end;margin-bottom:.15em}
-.pfos-alan-slider-wrap{padding:4px 2px 2px;margin-bottom:14px}
-.pfos-alan-range{
-  display:block;width:100%;height:6px;margin:0;padding:0;
-  -webkit-appearance:none;appearance:none;
-  background:transparent;border:none;outline:none;cursor:pointer;
-  --pfos-fill:8%;
-}
-.pfos-alan-range:focus{outline:none}
-.pfos-alan-range:focus-visible{outline:2px solid var(--gold-line);outline-offset:6px;border-radius:999px}
-.pfos-alan-range::-webkit-slider-runnable-track{
-  height:6px;border-radius:999px;
-  background:linear-gradient(90deg,var(--gold-line) var(--pfos-fill),var(--border) var(--pfos-fill));
-}
-.pfos-alan-range::-webkit-slider-thumb{
-  -webkit-appearance:none;width:20px;height:20px;margin-top:-7px;border-radius:50%;
-  background:var(--gold2);border:2px solid #fff;box-shadow:0 1px 4px rgba(0,30,80,.18);cursor:grab;
-}
-.pfos-alan-range::-moz-range-track{height:6px;border:none;border-radius:999px;background:var(--border)}
-.pfos-alan-range::-moz-range-progress{height:6px;border-radius:999px;background:var(--gold-line)}
-.pfos-alan-range::-moz-range-thumb{
-  width:20px;height:20px;border-radius:50%;background:var(--gold2);border:2px solid #fff;
-  box-shadow:0 1px 4px rgba(0,30,80,.18);cursor:grab;
-}
-.pfos-alan-presets{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
-.pfos-alan-hint{font-size:11px;color:var(--hint);margin:12px 0 0;text-align:center;line-height:1.45}
-#s5.active .sec-ans,#s5.vis:not(.done) .sec-ans{display:none}
-.pfos-stations-fold{
-  margin-top:14px;border:.5px solid var(--border);border-radius:var(--rm);background:var(--bg);overflow:hidden;
-}
-.pfos-stations-fold>summary{
-  list-style:none;cursor:pointer;padding:12px 14px;font-size:12px;font-weight:500;color:var(--muted);
-  user-select:none;display:flex;align-items:center;justify-content:space-between;gap:8px;
-}
-.pfos-stations-fold>summary::-webkit-details-marker{display:none}
-.pfos-stations-fold>summary span{font-weight:400;color:var(--hint)}
-.pfos-stations-fold>summary::after{
-  content:'';width:7px;height:7px;border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);
-  transform:rotate(45deg);transition:transform .18s ease;flex-shrink:0;margin-right:2px;
-}
-.pfos-stations-fold[open]>summary::after{transform:rotate(-135deg);margin-top:4px}
-.pfos-stations-fold__bd{padding:0 14px 14px;border-top:.5px solid var(--border)}
 .pfos-zone-grid{display:flex;flex-wrap:wrap;gap:8px}
 .pfos-zone-pill{display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border-radius:999px;border:1.5px solid var(--border);background:var(--bg);font-size:12px;color:var(--muted);cursor:pointer;user-select:none;transition:border-color .15s,opacity .15s,background .15s}
 .pfos-zone-pill .ico{font-size:14px;line-height:1}
@@ -1117,10 +1077,6 @@ header.hdr .hdr-alici{display:flex;flex-direction:column;gap:1px;padding:0 10px;
 .pfos-result--compact .pfos-kpi-cell--primary .pfos-kpi-value{font-size:22px}
 .pfos-result--compact .pfos-kpi-cell{padding:14px 10px}
 .pfos-result--compact .pfos-cat__name{font-size:13px}
-.pfos-live-total{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:16px 18px;border:.5px solid var(--border);border-radius:var(--rm);background:var(--card);margin-bottom:8px}
-.pfos-live-total__label{font-size:12px;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
-.pfos-live-total__amt{font-family:'SF Mono',Menlo,monospace;font-variant-numeric:tabular-nums;font-size:22px;font-weight:700;color:var(--gold2);white-space:nowrap}
-.pfos-live-total__hint{margin:0 0 4px;font-size:11.5px;color:var(--hint);line-height:1.45}
 @media(max-width:960px){.pfos-kpi-strip{grid-template-columns:repeat(3,1fr)}.pfos-kpi-cell:nth-child(3)::after{display:none}.pfos-kpi-cell:nth-child(n+4){border-top:.5px solid var(--border)}}
 @media(max-width:720px){.pfos-cat__head{flex-wrap:wrap}.pfos-cat__table{font-size:12px}.pfos-cat__table .col-marka{display:none}}
 @media(max-width:560px){.pfos-kpi-strip{grid-template-columns:repeat(2,1fr)}.pfos-kpi-cell::after{display:none}.pfos-kpi-cell:nth-child(odd){border-right:.5px solid var(--border)}.pfos-kpi-cell:nth-child(n+3){border-top:.5px solid var(--border)}.pfos-kpi-cell--primary .pfos-kpi-value{font-size:24px}}
@@ -1258,7 +1214,7 @@ body.pfos-teklif-lightbox-open{overflow:hidden}
 }
 </style>
 <style id="eq-contact-guard-20260520logohdr">#equsto-contact-fab,.equsto-contact-fab:not(#eq-bottom-tabbar *){position:fixed;right:16px;bottom:16px;z-index:9999;width:auto;height:auto;max-width:80px;max-height:80px;align-items:flex-end;flex-direction:column;gap:10px;pointer-events:none;box-sizing:border-box}#equsto-contact-fab .equsto-contact-wa-fab:not(.equsto-contact-wa-fab--tabbar),.equsto-contact-fab:not(#eq-bottom-tabbar *) .equsto-contact-wa-fab:not(.equsto-contact-wa-fab--tabbar){pointer-events:auto;flex:0 0 auto;max-width:64px;max-height:64px;overflow:hidden}#equsto-contact-fab img,.equsto-contact-fab:not(#eq-bottom-tabbar *) .equsto-contact-wa-fab:not(.equsto-contact-wa-fab--tabbar) img{width:62px!important;height:62px!important;max-width:62px!important;max-height:62px!important;display:block;object-fit:cover}.equsto-wa-overlay:not(.equsto-wa-overlay--open){display:none!important;pointer-events:none!important}.equsto-wa-ico svg,.equsto-wa-ico-svg{width:22px;height:22px;max-width:22px;max-height:22px;display:block}</style>
-<style id="eq-mobile-chrome-20260520logohdr">@media (max-width:768px){body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) nav.topnav,body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .topnav{display:none!important}#equsto-contact-fab,.equsto-contact-fab:not(#eq-bottom-tabbar *){display:none!important;pointer-events:none!important}body.eq-home #eq-home-catband{display:none!important}body.eq-shop.eq-dept aside.eq-filter-col,body.eq-shop.eq-dept #eq-filter-col{display:none!important}body:not(.admin-app):not(.eq-shop) header.hdr a.logo,body:not(.admin-app):not(.eq-shop) header.hdr>a.logo{display:none!important;visibility:hidden!important;width:0!important;height:0!important;overflow:hidden!important}body.eq-shop:not(.admin-app):not(.bd-page) header.hdr>a.logo{display:inline-flex!important;visibility:visible!important;width:auto!important;height:auto!important;max-width:42vw!important;overflow:visible!important;pointer-events:auto!important}body:not(.admin-app) header.hdr .srch-cat,body:not(.admin-app) header.hdr .cat-picker,body:not(.admin-app) header.hdr .cat-picker-btn{display:none!important;width:0!important;overflow:hidden!important}body:not(.admin-app) header.hdr .srch .srch-input{border-radius:8px 0 0 8px!important}}</style>
+<style id="eq-mobile-chrome-20260520logohdr">@media (max-width:768px){body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) nav.topnav,body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .topnav{display:none!important}#equsto-contact-fab,.equsto-contact-fab:not(#eq-bottom-tabbar *){display:none!important;pointer-events:none!important}body.eq-home #eq-home-catband{display:none!important}body.eq-shop.eq-dept aside.eq-filter-col,body.eq-shop.eq-dept #eq-filter-col{display:none!important}body:not(.admin-app):not(.eq-shop) header.hdr a.logo,body:not(.admin-app):not(.eq-shop) header.hdr>a.logo{display:none!important;visibility:hidden!important;width:0!important;height:0!important;overflow:hidden!important}body.eq-shop:not(.admin-app):not(.bd-page) header.hdr>a.logo{display:inline-flex!important;visibility:visible!important;width:auto!important;height:auto!important;max-width:34vw!important;overflow:visible!important;pointer-events:auto!important}body:not(.admin-app) header.hdr .srch-cat,body:not(.admin-app) header.hdr .cat-picker,body:not(.admin-app) header.hdr .cat-picker-btn{display:none!important;width:0!important;overflow:hidden!important}body:not(.admin-app) header.hdr .srch .srch-input{border-radius:8px 0 0 8px!important}}</style>
 <style id="eq-desktop-chrome-20260520logohdr">@media (min-width:769px){body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) nav.topnav,body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .topnav{display:flex!important;visibility:visible!important;pointer-events:auto!important}body:not(.admin-app) header.hdr a.logo{display:inline-flex!important;visibility:visible!important;width:auto!important;height:auto!important;overflow:visible!important}body:not(.admin-app) header.hdr .srch-cat,body:not(.admin-app) header.hdr .cat-picker,body:not(.admin-app) header.hdr .cat-picker-btn{display:flex!important;visibility:visible!important;width:auto!important;overflow:visible!important}body.eq-shop.eq-dept-plp .eq-dept-plp-aside{display:block!important;visibility:visible!important;transform:none!important}body.eq-shop.eq-dept-plp .eq-dept-plp-main{display:block!important;visibility:visible!important}body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right{display:flex!important;visibility:visible!important}body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) #equsto-contact-fab{display:flex!important;position:fixed!important;right:16px!important;bottom:16px!important;z-index:9999!important;width:auto!important;height:auto!important;max-width:80px!important;max-height:80px!important;align-items:flex-end!important;visibility:visible!important;pointer-events:none!important}body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) #equsto-contact-fab .equsto-contact-wa-fab{pointer-events:auto!important;flex:0 0 auto!important;max-width:64px!important;max-height:64px!important;overflow:hidden!important}body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) #equsto-contact-fab img{width:62px!important;height:62px!important;max-width:62px!important;max-height:62px!important;object-fit:cover!important}}</style><script id="eq-desktop-chrome-restore-20260520logohdr">(function(){var S='header.hdr a.logo,header.hdr .srch-cat,header.hdr .cat-picker,header.hdr .cat-picker-btn,nav.topnav,header+nav.topnav';function c(){if(matchMedia('(max-width:768px)').matches)return;document.querySelectorAll(S).forEach(function(el){['display','visibility','pointer-events','width','height','overflow'].forEach(function(p){el.style.removeProperty(p);});});}document.addEventListener('DOMContentLoaded',c);addEventListener('pageshow',c);addEventListener('resize',c);if(document.body)c();})();</script>
 </head>
 <body class="eq-shop eq-pfos">
@@ -1377,148 +1333,13 @@ body.pfos-teklif-lightbox-open{overflow:hidden}
           <div class="sec-ans" id="a1"></div>
         </div>
       </div>
-      <div class="sec-bd"><div class="og" id="o1">
-        <button type="button" class="opt" data-v="Yatırımcı" onclick="setMeslek('Yatırımcı')">Yatırımcı</button>
-        <button type="button" class="opt" data-v="Şef / Aşçı" onclick="setMeslek('Şef / Aşçı')">Şef / Aşçı</button>
-        <button type="button" class="opt" data-v="Satınalma" onclick="setMeslek('Satınalma')">Satınalma</button>
-        <button type="button" class="opt" data-v="Mimar" onclick="setMeslek('Mimar')">Mimar</button>
-        <button type="button" class="opt" data-v="İşletme Müdürü" onclick="setMeslek('İşletme Müdürü')">İşletme Müdürü</button>
-        <button type="button" class="opt" data-v="Boş Ver" onclick="setMeslek('Boş Ver')">Boş Ver</button>
-      </div></div>
-    </div>
-    <!-- 02 Konsept / işletme tipi -->
-    <div class="sec" id="s3">
-      <div class="sec-hd">
-        <div class="sec-num">02</div>
-        <div class="sec-info">
-          <div class="sec-title">Ne tür bir işletme?</div>
-          <div class="sec-sub">Açacağınız yeri en yakın seçeneğe dokunun. Birkaç ek soru çıkabilir; hepsi listeden seçim.</div>
-          <div class="sec-ans" id="a3"></div>
-        </div>
-      </div>
-      <div class="sec-bd">
-        <div class="pfos-konsept-grid" id="o3" role="group" aria-label="Ne tür bir işletme?"></div>
-      </div>
-    </div>
-    <!-- Franchise -->
-    <div class="sec" id="sfr">
-      <div class="sec-hd">
-        <div class="sec-num">↳</div>
-        <div class="sec-info">
-          <div class="sec-title">Franchise marka adı</div>
-          <div class="sec-sub">Zincir marka adını girin, hazır projeyi yükleyelim</div>
-          <div class="sec-ans" id="afr"></div>
-        </div>
-      </div>
-      <div class="sec-bd">
-        <div class="acw">
-          <input class="aci" id="fr-inp" type="text" placeholder="Marka adı (McDonald's, Starbucks, Burger King…)"
-            oninput="frSearch(this.value)"
-            onkeydown="if(event.key==='Enter')frConfirm()">
-          <div class="acl" id="fr-acl"></div>
-        </div>
-        <div id="fr-result" style="margin-top:12px"></div>
-      </div>
-    </div>
-    <!-- 03 Dükkan Türü -->
-    <div class="sec" id="s4">
-      <div class="sec-hd">
-        <div class="sec-num">03</div>
-        <div class="sec-info">
-          <div class="sec-title" id="s4-title">Dükkan Türü</div>
-          <div class="sec-sub" id="s4-sub"></div>
-          <div class="sec-ans" id="a4"></div>
-        </div>
-      </div>
-      <div class="sec-bd" id="s4-bd"></div>
-    </div>
-    <!-- 04b Alt Tip -->
-    <div class="sec" id="s4b">
-      <div class="sec-hd">
-        <div class="sec-num">↳</div>
-        <div class="sec-info">
-          <div class="sec-title" id="s4b-title">Alt Tip</div>
-          <div class="sec-ans" id="a4b"></div>
-        </div>
-      </div>
-      <div class="sec-bd" id="s4b-bd"></div>
-    </div>
-    <!-- 04c Ekstra 1 (Hotel: oda / Catering: kapasite) -->
-    <div class="sec" id="s4c">
-      <div class="sec-hd">
-        <div class="sec-num">↳</div>
-        <div class="sec-info">
-          <div class="sec-title" id="s4c-title">—</div>
-          <div class="sec-ans" id="a4c"></div>
-        </div>
-      </div>
-      <div class="sec-bd" id="s4c-bd"></div>
-    </div>
-    <!-- 04d Ekstra 2 (Hotel: menü / Catering: servis) -->
-    <div class="sec" id="s4d">
-      <div class="sec-hd">
-        <div class="sec-num">↳</div>
-        <div class="sec-info">
-          <div class="sec-title" id="s4d-title">—</div>
-          <div class="sec-ans" id="a4d"></div>
-        </div>
-      </div>
-      <div class="sec-bd" id="s4d-bd"></div>
-    </div>
-    <!-- 04e Şarküteri -->
-    <div class="sec" id="s4e">
-      <div class="sec-hd">
-        <div class="sec-num">↳</div>
-        <div class="sec-info">
-          <div class="sec-title">Şarküteri ekipmanları</div>
-          <div class="sec-sub">Otomatik eklendi</div>
-        </div>
-      </div>
-      <div class="sec-bd">
-        <div class="hb"><b>Şarküteri ekipmanları listeye eklendi:</b> 2× teşhir dolabı, 2× hazırlık tezgahı, gıda dilimleme makinası.</div>
-      </div>
+      <div class="sec-bd"><div class="og" id="o1"></div></div>
     </div>
 
-    <!-- 04 Toplam Alan (m²) -->
-    <div class="sec" id="s5">
-      <div class="sec-hd">
-        <div class="sec-num">04</div>
-        <div class="sec-info">
-          <div class="sec-title">Toplam alan (m²)</div>
-          <div class="sec-sub">Dükkan veya mutfağın toplam metrekare tahmini. Emin değilseniz kabaca yazın; sonra düzeltebilirsiniz.</div>
-          <div class="sec-ans" id="a5"></div>
-        </div>
-      </div>
-      <div class="sec-bd">
-        <div class="pfos-alan-card">
-          <div class="pfos-alan-hero" aria-live="polite">
-            <input type="number" class="pfos-alan-val-inp" id="alan-inp" min="1" max="10000" step="1" value="80"
-              inputmode="numeric" aria-label="Toplam alan metrekare"
-              oninput="onAlan()" onblur="onAlanBlur()">
-            <span class="pfos-alan-unit">m²</span>
-          </div>
-          <div class="pfos-alan-slider-wrap">
-            <input type="range" class="pfos-alan-range" id="alan-slider" min="20" max="1000" step="1" value="80"
-              aria-label="Toplam alan kaydırıcı" oninput="onAlanSlider()" onchange="onAlanSlider()">
-          </div>
-          <div class="pfos-alan-presets" id="alan-presets" role="group" aria-label="Hızlı alan seçimi"></div>
-          <p class="pfos-alan-hint">Hazır değerlerden seçin veya sayı yazın · 20–1000 m²</p>
-          <div class="fw" id="alan-warn" style="display:none">En az 20 m² girin (ör. 20, 45, 120).</div>
-        </div>
-        <details class="pfos-stations-fold" id="stations-wrap">
-          <summary>Bölüm bazlı m² dağılımı <span>(opsiyonel)</span></summary>
-          <div class="pfos-stations-fold__bd">
-            <div class="stations" id="stations-grid"></div>
-            <div class="station-warn" id="station-warn">Girilen m² toplamı, toplam alandan fazla.</div>
-          </div>
-        </details>
-        <div class="ar" style="margin-top:16px"><button type="button" class="btn gold" onclick="alanIleri()">Devam</button></div>
-      </div>
-    </div>
-    <!-- 05 Şehir + Adres (il/ilçe/mahalle) -->
+    <!-- 02 Şehir + Açık Adres -->
     <div class="sec" id="s2">
       <div class="sec-hd">
-        <div class="sec-num">05</div>
+        <div class="sec-num">02</div>
         <div class="sec-info">
           <div class="sec-title">Şehir ve teslimat adresi</div>
           <div class="sec-sub">Nakliye ve montaj tahmini ile Equsto veri bankası (şehir/ilçe bazında hangi konsept ve ekipman seçimleri) için kullanılır. Listeden seçebilir veya yazmaya devam edebilirsiniz.</div>
@@ -1564,6 +1385,139 @@ body.pfos-teklif-lightbox-open{overflow:hidden}
         </div>
       </div>
     </div>
+
+    <!-- 03 Toplam Alan (m²) -->
+    <div class="sec" id="s5">
+      <div class="sec-hd">
+        <div class="sec-num">03</div>
+        <div class="sec-info">
+          <div class="sec-title">Toplam alan (m²)</div>
+          <div class="sec-sub">Dükkan veya mutfağın toplam metrekare tahmini. Emin değilseniz kabaca yazın; sonra düzeltebilirsiniz.</div>
+          <div class="sec-ans" id="a5"></div>
+        </div>
+      </div>
+      <div class="sec-bd">
+        <div class="field pfos-alan-field">
+          <div class="pfos-alan-hero" aria-live="polite">
+            <input type="number" class="pfos-alan-val-inp" id="alan-inp" min="1" max="10000" step="1" value="80"
+              inputmode="numeric" aria-label="Toplam alan metrekare"
+              oninput="onAlan()" onblur="onAlanBlur()">
+            <span class="pfos-alan-unit">m²</span>
+          </div>
+          <input type="range" class="pfos-alan-range" id="alan-slider" min="20" max="1000" step="1" value="80"
+            aria-label="Toplam alan metrekare" oninput="onAlanSlider()" onchange="onAlanSlider()">
+          <div class="pfos-alan-presets" id="alan-presets" role="group" aria-label="Hızlı alan seçimi"></div>
+          <p class="pfos-alan-hint">Sayıyı yazın, kaydırıcıyı sürükleyin veya hazır değerlerden seçin (20–1000 m²).</p>
+          <div class="fw" id="alan-warn" style="display:none">En az 20 m² girin (ör. 20, 45, 120).</div>
+        </div>
+        <div id="stations-wrap" style="margin-top:16px">
+          <div class="fl" style="margin-bottom:10px">Bölüm bazlı m² <span style="font-weight:400;color:var(--muted)">(opsiyonel)</span></div>
+          <div class="stations" id="stations-grid"></div>
+          <div class="station-warn" id="station-warn">Girilen m² toplamı, toplam alandan fazla.</div>
+        </div>
+        <div class="ar" style="margin-top:16px"><button type="button" class="btn gold" onclick="alanIleri()">Devam</button></div>
+      </div>
+    </div>
+
+    <!-- 04 Konsept / Menü -->
+    <div class="sec" id="s3">
+      <div class="sec-hd">
+        <div class="sec-num">04</div>
+        <div class="sec-info">
+          <div class="sec-title">Konsept / Menü Seçimi</div>
+          <div class="sec-sub">İşletme türünü ve varsa menü tipini seçin. Birkaç ek soru çıkabilir; hepsi listeden seçim.</div>
+          <div class="sec-ans" id="a3"></div>
+        </div>
+      </div>
+      <div class="sec-bd">
+        <div class="pfos-konsept-grid" id="o3" role="group" aria-label="Konsept / Menü Seçimi"></div>
+      </div>
+    </div>
+
+    <!-- Franchise -->
+    <div class="sec" id="sfr">
+      <div class="sec-hd">
+        <div class="sec-num">↳</div>
+        <div class="sec-info">
+          <div class="sec-title">Franchise marka adı</div>
+          <div class="sec-sub">Zincir marka adını girin, hazır projeyi yükleyelim</div>
+          <div class="sec-ans" id="afr"></div>
+        </div>
+      </div>
+      <div class="sec-bd">
+        <div class="acw">
+          <input class="aci" id="fr-inp" type="text" placeholder="Marka adı (McDonald's, Starbucks, Burger King…)"
+            oninput="frSearch(this.value)"
+            onkeydown="if(event.key==='Enter')frConfirm()">
+          <div class="acl" id="fr-acl"></div>
+        </div>
+        <div id="fr-result" style="margin-top:12px"></div>
+      </div>
+    </div>
+
+    <!-- 05 Dükkan Türü -->
+    <div class="sec" id="s4">
+      <div class="sec-hd">
+        <div class="sec-num">05</div>
+        <div class="sec-info">
+          <div class="sec-title" id="s4-title">Dükkan Türü</div>
+          <div class="sec-sub" id="s4-sub"></div>
+          <div class="sec-ans" id="a4"></div>
+        </div>
+      </div>
+      <div class="sec-bd" id="s4-bd"></div>
+    </div>
+
+    <!-- 04b Alt Tip -->
+    <div class="sec" id="s4b">
+      <div class="sec-hd">
+        <div class="sec-num">↳</div>
+        <div class="sec-info">
+          <div class="sec-title" id="s4b-title">Alt Tip</div>
+          <div class="sec-ans" id="a4b"></div>
+        </div>
+      </div>
+      <div class="sec-bd" id="s4b-bd"></div>
+    </div>
+
+    <!-- 04c Ekstra 1 (Hotel: oda / Catering: kapasite) -->
+    <div class="sec" id="s4c">
+      <div class="sec-hd">
+        <div class="sec-num">↳</div>
+        <div class="sec-info">
+          <div class="sec-title" id="s4c-title">—</div>
+          <div class="sec-ans" id="a4c"></div>
+        </div>
+      </div>
+      <div class="sec-bd" id="s4c-bd"></div>
+    </div>
+
+    <!-- 04d Ekstra 2 (Hotel: menü / Catering: servis) -->
+    <div class="sec" id="s4d">
+      <div class="sec-hd">
+        <div class="sec-num">↳</div>
+        <div class="sec-info">
+          <div class="sec-title" id="s4d-title">—</div>
+          <div class="sec-ans" id="a4d"></div>
+        </div>
+      </div>
+      <div class="sec-bd" id="s4d-bd"></div>
+    </div>
+
+    <!-- 04e Şarküteri -->
+    <div class="sec" id="s4e">
+      <div class="sec-hd">
+        <div class="sec-num">↳</div>
+        <div class="sec-info">
+          <div class="sec-title">Şarküteri ekipmanları</div>
+          <div class="sec-sub">Otomatik eklendi</div>
+        </div>
+      </div>
+      <div class="sec-bd">
+        <div class="hb"><b>Şarküteri ekipmanları listeye eklendi:</b> 2× teşhir dolabı, 2× hazırlık tezgahı, gıda dilimleme makinası.</div>
+      </div>
+    </div>
+
     <!-- 06 Teklif Özeti -->
     <div class="sec" id="s6">
       <div class="sec-hd">
@@ -1674,8 +1628,8 @@ body.pfos-teklif-lightbox-open{overflow:hidden}
 
   </div><!-- /pf-left -->
 
-  <!-- SAĞ: geçici kapalı -->
-  <div class="pf-right" hidden aria-hidden="true">
+  <!-- SAĞ: üst konsept yazıları · alt PDF projeler -->
+  <div class="pf-right">
 
     <section class="pf-pop-zones" id="pf-pop-zones" aria-label="Popüler mutfak bölgeleri">
       <div class="pf-pop-zones__hd">
@@ -2169,11 +2123,13 @@ let __pfosLiveGen = 0;
 
 function pfosCanLivePreview() {
   if (!D.konsept) return false;
-  const alan = Number(D.alan) || 0;
+  const tp = document.getElementById('tablo-panel');
   const s5 = document.getElementById('s5');
   const s6 = document.getElementById('s6');
+  if (tp && tp.classList.contains('vis')) return true;
+  if (s5 && (s5.classList.contains('vis') || s5.classList.contains('done'))) return true;
+  if (D.konsept && D.pfosZones && D.pfosZones.length) return true;
   if (s6 && (s6.classList.contains('vis') || s6.classList.contains('done'))) return true;
-  if (s5 && (s5.classList.contains('vis') || s5.classList.contains('done')) && alan >= 20) return true;
   return false;
 }
 
@@ -2270,7 +2226,7 @@ function showTabloGhost(){
   if(badge){ badge.textContent='Hazırlanıyor…'; badge.classList.add('tablo-badge--busy'); }
   const snap = pfosAgentSnapshot();
   document.getElementById('tablo-status').textContent= snap.konsept || 'İşletme türü bekleniyor…';
-  pfosAgentChatRender([{ role: 'agent', text: 'Merhaba — **alan (m²)** girdikten sonra tahmini **dip toplam** burada görünür. Bölüm bölüm detay listesi **Teklifi Oluştur** adımındaki proformada yer alır.' }], false);
+  pfosAgentChatRender([{ role: 'agent', text: 'Merhaba — **alan (m²)** ve kategorileri seçtiğinizde burada canlı liste oluşturacağım. Bölüm m² paylarını adım 5\'te düzenleyebilirsiniz.' }], false);
 }
 
 function showTabloBusy(){
@@ -2288,11 +2244,17 @@ function renderTabloSag(){
 }
 
 function buildTabloPreviewHtml(rows,amt){
-  const fmt=new Intl.NumberFormat('tr-TR');
-  const kalem=(rows||[]).length;
+  const teklifCtx=Object.assign({},D,{pfosZones:pfosGetZones(),currency:'TRY'});
+  const ui=window.EqustoPfosTeklifUi;
+  const calc=window.EqustoPfosCalc;
   let html='<div class="pfos-result pfos-result--compact">';
-  html+=`<p class="pfos-live-total__hint">${kalem} kalem · Bölüm detayları proforma listesinde</p>`;
-  html+=`<div class="pfos-live-total"><span class="pfos-live-total__label">Tahmini toplam (KDV hariç)</span><span class="pfos-live-total__amt">${fmt.format(Math.round(amt||0))} ₺</span></div>`;
+  if(ui&&typeof ui.buildPfosKpiStripHtml==='function'){
+    html+=ui.buildPfosKpiStripHtml(rows,teklifCtx);
+  }
+  const zones=calc&&calc.groupByZones?calc.groupByZones(rows,teklifCtx.pfosZones,teklifCtx.alan):[];
+  if(ui&&typeof ui.buildPfosCategoryBlocksHtml==='function'){
+    html+=ui.buildPfosCategoryBlocksHtml(zones,teklifCtx);
+  }
   html+='</div>';
   html+=`<div class="ac-cards">
     <div class="ac-c" onclick="pdfIndir()"><span class="icon">📄</span><div class="lbl">PDF / yazdır</div><div class="sub">Adımları göster</div></div>
@@ -2370,7 +2332,7 @@ async function pfosRunLiveRecalc(){
 }
 
 // ── Sabitler ──────────────────────────────────────────────────────────────────
-const MESLEKLER = ['Yatırımcı','Şef / Aşçı','Satınalma','Mimar','İşletme Müdürü','Boş Ver'];
+const MESLEKLER = ['Yatırımcı','Şef / Aşçı','Satınalmacı','Mimar','Franchise Sahibi','Söylemek İstemiyorum'];
 const KONSEPTLER = ['Restaurant','Pastane & Patisserie','Cafe','Bulut Mutfak','Hotel','Bar','Catering'];
 
 const DUKKAN = {
@@ -3053,7 +3015,7 @@ function buildEkipmanList() {
   if (window.EqustoPfosRuleEngine && typeof EqustoPfosRuleEngine.buildList === 'function') {
     rows = EqustoPfosRuleEngine.buildList(ctx, EQ_ITEMS);
   }
-  list = pfosPostProcessItems(rows);
+  let list = pfosPostProcessItems(rows);
   if (window.EqustoPfosCalc && typeof EqustoPfosCalc.applyM2ToRows === 'function') {
     list = EqustoPfosCalc.applyM2ToRows(list, D.alan);
   }
@@ -3182,7 +3144,7 @@ const FRANCHISE_DB = {
   "Simit Sarayı":true,"Köfteci Yusuf":true,"Lahmacun Evi":true,
 };
 
-const SEC_ORDER=['s1','s3','sfr','s4','s4b','s4c','s4d','s4e','s5','s2','s6','s6a','s6b','s6c','s6d'];
+const SEC_ORDER=['s1','s2','s5','s3','sfr','s4','s4b','s4c','s4d','s4e','s6','s6a','s6b','s6c','s6d'];
 const PFOS_ALAN_PRESETS=[60,80,100,120,150,200,300,450];
 
 // ── State ─────────────────────────────────────────────────────────────────────
@@ -3475,38 +3437,30 @@ function refreshWizardHint(){
     pct=82;
     title='<b>Tahmini tutar</b>';
     sub='<b>Teklifi Oluştur</b> veya <b>Detaylandır</b> ile listeyi görün; isterseniz özette m² değerini tekrar düzenleyebilirsiniz.';
-  }else if(g('s2')&&g('s2').classList.contains('vis')&&!g('s2').classList.contains('done')){
+  }else if(g('s4')&&g('s4').classList.contains('vis')&&!g('s4').classList.contains('done')){
     pct=58;
-    title='<b>Şehir ve adres</b>';
-    sub='İl, ilçe ve mahalle tamamlanınca <b>otomatik olarak özete geçilir</b>.';
-  }else if(g('s5')&&g('s5').classList.contains('done')){
-    pct=52;
-    title='<b>Şehir ve adres</b>';
-    sub='Alan kaydedildi. Nakliye tahmini için il, ilçe ve mahalle girin.';
-  }else if(g('s5')&&g('s5').classList.contains('vis')&&!g('s5').classList.contains('done')){
-    pct=44;
-    title='<b>Toplam alan</b>';
-    sub='Metrekare yazın; <b>Devam</b> ile teslimat adresine geçilir. İsterseniz bölüm m² paylarını da dağıtabilirsiniz.';
-  }else if(['s4','s4b','s4c','s4d','s4e'].some(function(id){const el=g(id);return el&&el.classList.contains('vis')&&!el.classList.contains('done');})){
-    pct=34;
-    title='<b>Dükkan türü</b>';
-    sub='Listeden size en yakın seçeneği işaretleyin; ardından alan adımına geçilir.';
-  }else if(g('s4')&&g('s4').classList.contains('done')){
-    pct=40;
-    title='<b>Toplam alan</b>';
-    sub='Dükkan türü kaydedildi. Şimdi toplam m² tahminini girin.';
+    title='<b>Konsept / Menü Seçimi</b>';
+    sub='İşletme ve menü seçimini tamamlayın; ardından tahmini özet gelir.';
   }else if(g('s3')&&g('s3').classList.contains('done')){
-    pct=28;
-    title='<b>Dükkan türü</b>';
-    sub='İşletme tipi seçildi. Listeden size en yakın dükkan türünü seçin.';
+    pct=62;
+    title='<b>Konsept / Menü Seçimi</b>';
+    sub='Dükkan türü ve varsa ek soruları tamamlayın; ardından özet gelir.';
   }else if(g('s3')&&g('s3').classList.contains('vis')&&!g('s3').classList.contains('done')){
-    pct=22;
-    title='<b>Ne tür bir işletme?</b>';
-    sub='Açacağınız yeri en yakın seçeneğe dokunun; birkaç ek soru çıkabilir.';
+    pct=42;
+    title='<b>Konsept / Menü Seçimi</b>';
+    sub='Ne açacağınızı seçin; birkaç ek soru çıkabilir — hepsi listeden.';
+  }else if(g('s5')&&g('s5').classList.contains('vis')&&!g('s5').classList.contains('done')){
+    pct=34;
+    title='<b>Toplam alan</b>';
+    sub='Metrekare yazın; <b>Devam</b> veya Enter ile işletme türüne geçilir. İsterseniz bölüm m² paylarını da dağıtabilirsiniz.';
+  }else if(g('s2')&&g('s2').classList.contains('done')){
+    pct=26;
+    title='<b>Toplam alan</b>';
+    sub='Adres tamam. Şimdi mutfak veya işletmenin <b>toplam m²</b> tahminini yazın.';
   }else if(g('s1')&&g('s1').classList.contains('done')){
-    pct=14;
-    title='<b>Ne tür bir işletme?</b>';
-    sub='Meslek kaydedildi. Şimdi işletme tipinizi seçin.';
+    pct=18;
+    title='<b>Şehir ve adres</b>';
+    sub='İl yazıp listeden seçin. İlçe ve mahalle tamamlanınca <b>otomatik olarak sonraki soruya geçilir</b>.';
   }
   box.innerHTML=title+'<small>'+sub+'</small>';
   if(bar) bar.style.width=pct+'%';
@@ -3579,8 +3533,8 @@ function setMeslek(val){
   D.meslek=val; selOpts('o1',val);
   document.getElementById('a1').textContent=val;
   done('s1');
-  reveal('s3'); activate('s3');
-  setTimeout(()=>{ const el=document.querySelector('#o3 .opt'); if(el) el.focus(); }, 350);
+  reveal('s2'); activate('s2');
+  setTimeout(()=>{ document.getElementById('sehir-inp').focus(); acFocus(''); }, 350);
 }
 
 // ── 02 Şehir + Adres ──────────────────────────────────────────────────────────
@@ -4016,8 +3970,7 @@ async function sehirOnayla(){
   D.nakliye=pfosEstimateNakliye([]);
   pfosSendInsight('adres_tamam');
   done('s2');
-  if (!D.pfosZones || !D.pfosZones.length) D.pfosZones = pfosSuggestZones();
-  goOzet();
+  goAlan();
 }
 
 function updateAdres(){
@@ -4100,7 +4053,7 @@ function setKonsept(val){
     return;
   }
   if (val === 'Steakhouse') pfosApplySteakhousePilotFromPdf();
-  goDukkan();
+  renderS4(); reveal('s4'); activate('s4');
 }
 
 // ── Franchise ─────────────────────────────────────────────────────────────────
@@ -4130,10 +4083,10 @@ function frConfirm(){
   const res=document.getElementById('fr-result');
   if(found){
     res.innerHTML=`<div class="hb"><b>${val}</b> veri bankamızda. Şablonu güçlendirmek için aşağıdaki işletme sorularını tamamlayın; ardından özete geçilir.</div>`;
-    setTimeout(()=>{ done('sfr'); goDukkan(); },1500);
+    setTimeout(()=>{ done('sfr'); renderS4(); reveal('s4'); activate('s4'); },1500);
   } else {
     res.innerHTML=`<div class="hb">Bu marka henüz veri bankamızda yok. Standart akışla devam edelim.</div>`;
-    setTimeout(()=>{ done('sfr'); goDukkan(); },1500);
+    setTimeout(()=>{ done('sfr'); renderS4(); reveal('s4'); activate('s4'); },1500);
   }
 }
 
@@ -4475,22 +4428,6 @@ function pfosRenderAlanPresets(containerId){
   }).join('');
   pfosHighlightAlanPreset(D.alan);
 }
-function pfosSyncAlanSliderFill(sl){
-  function fill(el){
-    if(!el) return;
-    const min=parseFloat(el.min)||20;
-    const max=parseFloat(el.max)||1000;
-    const val=parseFloat(el.value)||min;
-    const pct=max>min?Math.max(0,Math.min(100,((val-min)/(max-min))*100)):0;
-    el.style.setProperty('--pfos-fill',pct+'%');
-  }
-  fill(sl||document.getElementById('alan-slider'));
-  fill(document.getElementById('ozet-alan-slider'));
-}
-function pfosOpenStationsWrap(){
-  const w=document.getElementById('stations-wrap');
-  if(w) w.open=true;
-}
 function pfosHighlightAlanPreset(m2){
   const n=parseInt(m2,10);
   document.querySelectorAll('.pfos-m2-pill[data-m2]').forEach(function(btn){
@@ -4519,7 +4456,6 @@ function pfosSetAlan(m2,opts){
   if(ozetVal) ozetVal.textContent=String(n);
   if(a5) a5.textContent=n+' m²';
   pfosHighlightAlanPreset(n);
-  pfosSyncAlanSliderFill(slider);
   pfosUpdateOzetMetaAlan();
   if(opts.stations!==false&&n>=20){
     const grid=document.getElementById('stations-grid');
@@ -4737,15 +4673,7 @@ function togglePfosZone(key, el) {
   schedulePfosLiveRecalc();
 }
 
-// ── 03 Toplam Alan (m²) ─────────────────────────────────────────────────────
-function goDukkan(){
-  hideFrom('s4');
-  renderS4();
-  reveal('s4');
-  activate('s4');
-  refreshWizardHint();
-}
-
+// ── 03 Toplam Alan (m²) — lokasyondan hemen sonra ─────────────────────────────
 function goAlan(){
   hideFrom('s5'); reveal('s5'); activate('s5');
   const start = (D.alan && D.alan >= 20) ? D.alan : 80;
@@ -4761,14 +4689,15 @@ function goAlan(){
   }, 200);
   refreshWizardHint();
   schedulePfosLiveRecalc();
-  pfosSyncAlanSliderFill();
 }
+
+/** Konsept/menü tamamlanınca mutfak bölgeleri otomatik (manuel kategori adımı yok). */
 function pfosAutoZonesAndOzet(){
   pfosApplySteakhousePilotFromPdf();
   D.pfosZones=pfosSuggestZones();
   refreshWizardHint();
   schedulePfosLiveRecalc();
-  goAlan();
+  goOzet();
 }
 
 function goKonsept(){
@@ -4835,19 +4764,9 @@ function alanIleri(){
   const grid=document.getElementById('stations-grid');
   if(!grid||!grid.querySelector('.station-inp')) renderStations(v);
   else stationsUpdateTotal(v);
+  document.getElementById('stations-wrap').style.display='block';
   done('s5');
-  goAdres();
-}
-
-function goAdres(){
-  hideFrom('s2');
-  reveal('s2');
-  activate('s2');
-  setTimeout(function(){
-    const inp=document.getElementById('sehir-inp');
-    if(inp) inp.focus();
-  }, 200);
-  refreshWizardHint();
+  goKonsept();
 }
 
 function stationsUpdateTotal(totalM2){
@@ -4874,7 +4793,7 @@ function pfosPopZoneClick(stationName){
   }
   var alan=D.alan>=20?D.alan:120;
   pfosSetAlan(alan,{stations:true});
-  pfosOpenStationsWrap();
+  document.getElementById('stations-wrap').style.display='block';
   renderStations(alan);
   document.querySelectorAll('#stations-grid .station-row').forEach(function(row){
     row.style.outline='';
@@ -5127,9 +5046,7 @@ function pfosSepeteKatalog(){
       pfModalAc('Liste boş','Önce teklif listesine ürün ekleyin.',true);
       return;
     }
-    EqustoCart.addPfosRows(rows,{replace:false}).then(function(){
-      EqustoCart.openPanel();
-    });
+    EqustoCart.addPfosRows(rows,{replace:false});
   });
 }
 
