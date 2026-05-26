@@ -5,7 +5,44 @@
   "use strict";
 
   var ORIGIN = "https://equsto.com";
-  var DATA_URL = "/data/geo-landings.json?v=20260528blog";
+  var DATA_URL = "/data/geo-landings.json?v=20260530geo";
+  var HEADER_PARTIAL = "/partials/eq-d-header.html?v=20260530geo";
+
+  function ensureVitrinChrome() {
+    if (document.querySelector("header.hdr")) return Promise.resolve();
+    return fetch(HEADER_PARTIAL, { credentials: "same-origin" })
+      .then(function (res) {
+        if (!res.ok) throw new Error("hdr");
+        return res.text();
+      })
+      .then(function (html) {
+        var wrap = document.createElement("div");
+        wrap.id = "eq-d-header";
+        wrap.className = "eq-d-header";
+        wrap.innerHTML = html;
+        var pg = document.querySelector(".pg");
+        if (pg && pg.parentNode) pg.parentNode.insertBefore(wrap, pg);
+        else document.body.insertBefore(wrap, document.body.firstChild);
+        try {
+          if (typeof window.EQUSTO_LOGO_REFRESH === "function") window.EQUSTO_LOGO_REFRESH();
+        } catch (_) {}
+      })
+      .catch(function () {});
+  }
+
+  function loadScriptOnce(src, defer) {
+    var base = src.split("?")[0];
+    if (document.querySelector('script[src^="' + base + '"]')) return;
+    var s = document.createElement("script");
+    s.src = src;
+    if (defer) s.defer = true;
+    document.body.appendChild(s);
+  }
+
+  function ensureGeoScripts() {
+    loadScriptOnce("/eq-footer.js?v=20260526foot4");
+    loadScriptOnce("/contact.js?v=20260522wa", true);
+  }
 
   var EQUIP = [
     {
@@ -680,7 +717,11 @@
 
   function boot() {
     var key = pathKey();
-    fetch(DATA_URL, { credentials: "same-origin" })
+    ensureVitrinChrome()
+      .then(function () {
+        ensureGeoScripts();
+        return fetch(DATA_URL, { credentials: "same-origin" });
+      })
       .then(function (r) {
         if (!r.ok) throw new Error("geo");
         return r.json();
