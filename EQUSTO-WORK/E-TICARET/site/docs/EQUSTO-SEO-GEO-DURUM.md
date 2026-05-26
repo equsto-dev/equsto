@@ -8,6 +8,7 @@ Kaynak: `EQUSTO - SEO GEO.docx` (notlar klasörü)
 |------------|----------|
 | E-E-A-T / hakkımızda | `/hakkimizda.html`, AboutPage + FAQ schema |
 | Kurumsal hikaye | `/buradan-basladi`, Article + FAQ; video alanı (yakında) |
+| İletişim / E-E-A-T | `/contact`, ContactPage + Organization contactPoint |
 | Programatik rehber (blog gizli) | `/blog` 5 bölümlü dizin + 4 yeni `/rehber/*` makale; `sitemap-pages.xml` güncel |
 | 15 prompt hedef sayfalar | Yeni slug’lar: `endustriyel-mutfak-ekipmani-turkiye`, `oztiryakiler-ekipmani-tedarik`, `soguk-oda-teklif`, … |
 | AI asistan dosyası | `/llms.txt`, `/llms-full.txt` |
