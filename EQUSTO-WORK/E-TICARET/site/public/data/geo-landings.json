@@ -177,7 +177,8 @@
       { "label": "Soğuk oda teklif", "href": "/soguk-oda-teklif" },
       { "label": "Mutfak teklif platformu", "href": "/mutfak-teklif-platformu" },
       { "label": "Bar tasarımı", "href": "/bar-tasarimi-turkiye" },
-      { "label": "Hakkımızda", "href": "/hakkimizda.html" }
+      { "label": "Hakkımızda", "href": "/hakkimizda.html" },
+      { "label": "Buradan başladık", "href": "/buradan-basladi" }
     ]
   }
 }

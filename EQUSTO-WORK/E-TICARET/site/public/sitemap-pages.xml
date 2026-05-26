@@ -8,6 +8,12 @@
     <priority>0.75</priority>
   </url>
   <url>
+    <loc>https://equsto.com/buradan-basladi</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.74</priority>
+  </url>
+  <url>
     <loc>https://equsto.com/blog</loc>
     <lastmod>2026-05-27</lastmod>
     <changefreq>weekly</changefreq>

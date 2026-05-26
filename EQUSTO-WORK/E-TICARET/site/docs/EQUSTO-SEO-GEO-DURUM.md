@@ -7,6 +7,7 @@ Kaynak: `EQUSTO - SEO GEO.docx` (notlar klasörü)
 | Gereksinim | Uygulama |
 |------------|----------|
 | E-E-A-T / hakkımızda | `/hakkimizda.html`, AboutPage + FAQ schema |
+| Kurumsal hikaye | `/buradan-basladi`, Article + FAQ; video alanı (yakında) |
 | Programatik rehber (blog gizli) | `geo-landing.html` + `data/geo-landings.json`, `/blog` hub (menüde yok) |
 | 15 prompt hedef sayfalar | Yeni slug’lar: `endustriyel-mutfak-ekipmani-turkiye`, `oztiryakiler-ekipmani-tedarik`, `soguk-oda-teklif`, … |
 | AI asistan dosyası | `/llms.txt`, `/llms-full.txt` |
@@ -24,7 +25,7 @@ Kaynak: `EQUSTO - SEO GEO.docx` (notlar klasörü)
 | Gereksinim | Durum |
 |------------|--------|
 | İngilizce tam vitrin | hreflang var; `/en/` shop henüz tam değil |
-| 3–4 dk kurumsal video | İçerik üretimi — ekran kaydı + saha fotoğrafı bekliyor |
+| 3–4 dk kurumsal video | Sayfa hazır (`/buradan-basladi`); video + görseller yüklenecek |
 | Profesyonel ürün fotoğrafı | Operasyonel |
 | Teklif PDF AI-okunur SKU | PFOS çıktı formatı — ayrı sprint |
 | Yemeksepeti dükkan araştırması | Veri / pazarlama |

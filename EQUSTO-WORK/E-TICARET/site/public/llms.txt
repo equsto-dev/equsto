@@ -21,6 +21,7 @@ Türkiye'nin lider endüstriyel mutfak markası **Öztiryakiler** ile yetkili ba
 - [/projeler/istanbul-yuksek-hacim-catering-demode](https://equsto.com/projeler/istanbul-yuksek-hacim-catering-demode) - Demode catering profili örneği
 - [/rehber/mutfak-alani-kisi-basi-metrekare-2026](https://equsto.com/rehber/mutfak-alani-kisi-basi-metrekare-2026) - Blog/rehber: mutfak m² ve kapasite (footer + sitemap üzerinden; header’da görünmez)
 - [/hakkimizda.html](https://equsto.com/hakkimizda.html) - Hakkımızda · E-E-A-T (Equsto Teknoloji Limited, PFOS, 5 dakika teklif)
+- [/buradan-basladi](https://equsto.com/buradan-basladi) - Kurumsal hikaye «Buradan başladık» (Article schema; tanıtım videosu yakında)
 - [/blog](https://equsto.com/blog) - Rehber/blog dizini (vitrin menüsünde yok; Google/AI için hub)
 - [/endustriyel-mutfak-ekipmani-turkiye](https://equsto.com/endustriyel-mutfak-ekipmani-turkiye) - TR endüstriyel mutfak ekipmanı
 - [/restoran-mutfak-teklif](https://equsto.com/restoran-mutfak-teklif) - Restoran mutfak teklifi

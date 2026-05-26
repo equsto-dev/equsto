@@ -187,6 +187,10 @@ const nextConfig: NextConfig = {
       /* /yonetim → Next.js App Router (Ant Design Pro) */
       { source: "/contact", destination: "/contact.html" },
       { source: "/contact/", destination: "/contact.html" },
+      { source: "/buradan-basladi", destination: "/buradan-basladi.html" },
+      { source: "/buradan-basladi/", destination: "/buradan-basladi.html" },
+      { source: "/hakkimizda", destination: "/hakkimizda.html" },
+      { source: "/hakkimizda/", destination: "/hakkimizda.html" },
       { source: "/login", destination: "/login.html" },
       { source: "/login/", destination: "/login.html" },
       { source: "/marka", destination: "/marka.html" },

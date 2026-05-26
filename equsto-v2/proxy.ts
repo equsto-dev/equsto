@@ -59,6 +59,8 @@ function isLegacyHtmlPath(pathname: string): boolean {
     p.startsWith("/mutfak-teklif-platformu") ||
     p.startsWith("/bar-tasarimi") ||
     p === "/blog" ||
+    p === "/buradan-basladi" ||
+    p.startsWith("/hakkimizda") ||
     p.startsWith("/en/industrial-kitchen") ||
     p.startsWith("/en/commercial-kitchen")
   ) {
