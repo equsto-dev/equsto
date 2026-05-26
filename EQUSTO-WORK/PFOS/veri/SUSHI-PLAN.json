@@ -1,0 +1,663 @@
+{
+  "version": "1.0",
+  "konsept": "06-sushi",
+  "label": "SUSHI",
+  "kaynak": {
+    "plan": "SUSHI.-PLANpdf.pdf",
+    "ekipman": "06-SUSHI-ekipman-listesi.xlsx"
+  },
+  "meta": {
+    "totalM2": 20.1,
+    "totalM2Kaynak": "plan-pdf",
+    "planPozSayisi": 24,
+    "ekipmanKalem": 27,
+    "eslesen": 24
+  },
+  "mahaller": [
+    {
+      "id": "kuru-depo",
+      "label": "Kuru depo",
+      "bolum": "A",
+      "pozPrefix": "A",
+      "planM2": null,
+      "plandaGorunur": false,
+      "pozSayisi": 1,
+      "pozlar": [
+        "A1"
+      ]
+    },
+    {
+      "id": "soguk-oda",
+      "label": "Soğuk oda",
+      "bolum": "B",
+      "pozPrefix": "B",
+      "planM2": null,
+      "plandaGorunur": false,
+      "pozSayisi": 2,
+      "pozlar": [
+        "B1",
+        "B2"
+      ]
+    },
+    {
+      "id": "pisirme-teshir",
+      "label": "Pişirme - Teşhir",
+      "bolum": "C",
+      "pozPrefix": "C",
+      "planM2": 20.1,
+      "plandaGorunur": true,
+      "pozSayisi": 24,
+      "pozlar": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15",
+        "C16",
+        "C17",
+        "C18",
+        "C19",
+        "C20",
+        "C21",
+        "C22",
+        "C23",
+        "C24"
+      ]
+    }
+  ],
+  "mahallerDetay": [
+    {
+      "id": "kuru-depo",
+      "label": "Kuru depo",
+      "bolum": "A",
+      "pozPrefix": "A",
+      "pozlar": [
+        "A1"
+      ],
+      "pozDetay": [
+        {
+          "poz": "A1",
+          "planda": false,
+          "ekipman": {
+            "ad": "İSTİF RAFI",
+            "olcu": "137*46*160",
+            "adet": 2,
+            "bolumAd": "A- KURU DEPO"
+          }
+        }
+      ]
+    },
+    {
+      "id": "soguk-oda",
+      "label": "Soğuk oda",
+      "bolum": "B",
+      "pozPrefix": "B",
+      "pozlar": [
+        "B1",
+        "B2"
+      ],
+      "pozDetay": [
+        {
+          "poz": "B1",
+          "planda": false,
+          "ekipman": {
+            "ad": "PANEL TİP SOĞUK ODA",
+            "olcu": "285*250*240",
+            "adet": 1,
+            "bolumAd": "B- SOĞUK ODA"
+          }
+        },
+        {
+          "poz": "B2",
+          "planda": false,
+          "ekipman": {
+            "ad": "İSTİF RAFI",
+            "olcu": "137*46*160",
+            "adet": 2,
+            "bolumAd": "B- SOĞUK ODA"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pisirme-teshir",
+      "label": "Pişirme - Teşhir",
+      "bolum": "C",
+      "pozPrefix": "C",
+      "pozlar": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15",
+        "C16",
+        "C17",
+        "C18",
+        "C19",
+        "C20",
+        "C21",
+        "C22",
+        "C23",
+        "C24"
+      ],
+      "pozDetay": [
+        {
+          "poz": "C1",
+          "planda": true,
+          "ekipman": {
+            "ad": "KASA BANKOSU",
+            "olcu": "90*60*85",
+            "adet": 1,
+            "bolumAd": "C- PİŞİRME - TEŞHİR"
+          }
+        },
+        {
+          "poz": "C2",
+          "planda": true,
+          "ekipman": {
+            "ad": "ÇALIŞMA TEZGAHI",
+            "olcu": "130*60*85",
+            "adet": 1,
+            "bolumAd": "C- PİŞİRME - TEŞHİR"
+          }
+        },
+        {
+          "poz": "C3",
+          "planda": true,
+          "ekipman": {
+            "ad": "SETALTI DEEPFREEZE",
+            "olcu": "60*60*85",
+            "adet": 2,
+            "bolumAd": "C- PİŞİRME - TEŞHİR"
+          }
+        },
+        {
+          "poz": "C4",
+          "planda": true,
+          "ekipman": {
+            "ad": "MAKE-UP ÜNİTESİ, 2 KAPILI",
+            "olcu": "143*60*85",
+            "adet": 1,
+            "bolumAd": "C- PİŞİRME - TEŞHİR"
+          }
+        },
+        {
+          "poz": "C5",
+          "planda": true,
+          "ekipman": {
+            "ad": "SUSHI HAZIRLIK EVYESİ",
+            "olcu": "180*60*85",
+            "adet": 1,
+            "bolumAd": "C- PİŞİRME - TEŞHİR"
+          }
+        },
+        {
+          "poz": "C6",
+          "planda": true,
+          "ekipman": {
+            "ad": "ÇÖP ARABASI",
+            "olcu": "Ø40*50",
+            "adet": 1,
+            "bolumAd": "C- PİŞİRME - TEŞHİR"
+          }
+        },
+        {
+          "poz": "C7",
+          "planda": true,
+          "ekipman": {
+            "ad": "SUSHI TEŞHİR ÜNİTESİ",
+            "olcu": "140*40*30",
+            "adet": 1,
+            "bolumAd": "C- PİŞİRME - TEŞHİR"
+          }
+        },
+        {
+          "poz": "C8",
+          "planda": true,
+          "ekipman": {
+            "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+            "olcu": "170*60*85",
+            "adet": 1,
+            "bolumAd": "C- PİŞİRME - TEŞHİR"
+          }
+        },
+        {
+          "poz": "C9",
+          "planda": true,
+          "ekipman": {
+            "ad": "BUZ MAKİNASI",
+            "olcu": "42 kg/gün",
+            "adet": 1,
+            "bolumAd": "C- PİŞİRME - TEŞHİR"
+          }
+        },
+        {
+          "poz": "C10",
+          "planda": true,
+          "ekipman": {
+            "ad": "BULAŞIK YIKAMA MAKİNASI, SETALTI",
+            "olcu": "500 tb/saat",
+            "adet": 1,
+            "bolumAd": "C- PİŞİRME - TEŞHİR"
+          }
+        },
+        {
+          "poz": "C11",
+          "planda": true,
+          "ekipman": {
+            "ad": "CAM KAPILI TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+            "olcu": "188*60*85",
+            "adet": 1,
+            "bolumAd": "C- PİŞİRME - TEŞHİR"
+          }
+        },
+        {
+          "poz": "C12",
+          "planda": true,
+          "ekipman": {
+            "ad": "BAR BLENDER",
+            "olcu": "-",
+            "adet": 1,
+            "bolumAd": "C- PİŞİRME - TEŞHİR"
+          }
+        },
+        {
+          "poz": "C13",
+          "planda": true,
+          "ekipman": {
+            "ad": "PORTAKAL SIKMA MAKİNASI",
+            "olcu": "-",
+            "adet": 1,
+            "bolumAd": "C- PİŞİRME - TEŞHİR"
+          }
+        },
+        {
+          "poz": "C14",
+          "planda": true,
+          "ekipman": {
+            "ad": "ESPRESSO KAHVE MAKİNASI, ÇİFT GRUPLU",
+            "olcu": "-",
+            "adet": 1,
+            "bolumAd": "C- PİŞİRME - TEŞHİR"
+          }
+        },
+        {
+          "poz": "C15",
+          "planda": true,
+          "ekipman": {
+            "ad": "KAHVE DEĞİRMENİ",
+            "olcu": "-",
+            "adet": 1,
+            "bolumAd": "C- PİŞİRME - TEŞHİR"
+          }
+        },
+        {
+          "poz": "C16",
+          "planda": true,
+          "ekipman": {
+            "ad": "ÇALIŞMA TEZGAHI",
+            "olcu": "40*60*85",
+            "adet": 1,
+            "bolumAd": "C- PİŞİRME - TEŞHİR"
+          }
+        },
+        {
+          "poz": "C17",
+          "planda": true,
+          "ekipman": {
+            "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+            "olcu": "60*70*85",
+            "adet": 1,
+            "bolumAd": "C- PİŞİRME - TEŞHİR"
+          }
+        },
+        {
+          "poz": "C18",
+          "planda": true,
+          "ekipman": {
+            "ad": "WOK OCAĞI, GAZLI",
+            "olcu": "60*60*30",
+            "adet": 2,
+            "bolumAd": "C- PİŞİRME - TEŞHİR"
+          }
+        },
+        {
+          "poz": "C19",
+          "planda": true,
+          "ekipman": {
+            "ad": "SETALTI ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLIİ, DOLAPLI",
+            "olcu": "120*70*30",
+            "adet": 1,
+            "bolumAd": "C- PİŞİRME - TEŞHİR"
+          }
+        },
+        {
+          "poz": "C20",
+          "planda": true,
+          "ekipman": {
+            "ad": "PİRİNÇ HAŞLAMA",
+            "olcu": "-",
+            "adet": 2,
+            "bolumAd": "C- PİŞİRME - TEŞHİR"
+          }
+        },
+        {
+          "poz": "C21",
+          "planda": true,
+          "ekipman": {
+            "ad": "4 AÇIK ALEVLİ OCAK, SETÜSTÜ",
+            "olcu": "80*70*30",
+            "adet": 1,
+            "bolumAd": "C- PİŞİRME - TEŞHİR"
+          }
+        },
+        {
+          "poz": "C22",
+          "planda": true,
+          "ekipman": {
+            "ad": "FRİTÖZ, ÇİFT SEPETLİ, ELK., SETÜSTÜ",
+            "olcu": "80*70*30",
+            "adet": 1,
+            "bolumAd": "C- PİŞİRME - TEŞHİR"
+          }
+        },
+        {
+          "poz": "C23",
+          "planda": true,
+          "ekipman": {
+            "ad": "DAVLUMBAZ, ORTA TİP, FİLTRELİ",
+            "olcu": "350*130*50",
+            "adet": 1,
+            "bolumAd": "C- PİŞİRME - TEŞHİR"
+          }
+        },
+        {
+          "poz": "C24",
+          "planda": true,
+          "ekipman": {
+            "ad": "YER IZGARASI",
+            "olcu": "30*30*14",
+            "adet": 2,
+            "bolumAd": "C- PİŞİRME - TEŞHİR"
+          }
+        }
+      ]
+    }
+  ],
+  "planPozlari": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6",
+    "C7",
+    "C8",
+    "C9",
+    "C10",
+    "C11",
+    "C12",
+    "C13",
+    "C14",
+    "C15",
+    "C16",
+    "C17",
+    "C18",
+    "C19",
+    "C20",
+    "C21",
+    "C22",
+    "C23",
+    "C24"
+  ],
+  "ekipman": [
+    {
+      "bolum": "A",
+      "bolumAd": "A- KURU DEPO",
+      "poz": "A1",
+      "ad": "İSTİF RAFI",
+      "olcu": "137*46*160",
+      "adet": 2
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- SOĞUK ODA",
+      "poz": "B1",
+      "ad": "PANEL TİP SOĞUK ODA",
+      "olcu": "285*250*240",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- SOĞUK ODA",
+      "poz": "B2",
+      "ad": "İSTİF RAFI",
+      "olcu": "137*46*160",
+      "adet": 2
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C1",
+      "ad": "KASA BANKOSU",
+      "olcu": "90*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C2",
+      "ad": "ÇALIŞMA TEZGAHI",
+      "olcu": "130*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C3",
+      "ad": "SETALTI DEEPFREEZE",
+      "olcu": "60*60*85",
+      "adet": 2
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C4",
+      "ad": "MAKE-UP ÜNİTESİ, 2 KAPILI",
+      "olcu": "143*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C5",
+      "ad": "SUSHI HAZIRLIK EVYESİ",
+      "olcu": "180*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C6",
+      "ad": "ÇÖP ARABASI",
+      "olcu": "Ø40*50",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C7",
+      "ad": "SUSHI TEŞHİR ÜNİTESİ",
+      "olcu": "140*40*30",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C8",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "170*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C9",
+      "ad": "BUZ MAKİNASI",
+      "olcu": "42 kg/gün",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C10",
+      "ad": "BULAŞIK YIKAMA MAKİNASI, SETALTI",
+      "olcu": "500 tb/saat",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C11",
+      "ad": "CAM KAPILI TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+      "olcu": "188*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C12",
+      "ad": "BAR BLENDER",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C13",
+      "ad": "PORTAKAL SIKMA MAKİNASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C14",
+      "ad": "ESPRESSO KAHVE MAKİNASI, ÇİFT GRUPLU",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C15",
+      "ad": "KAHVE DEĞİRMENİ",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C16",
+      "ad": "ÇALIŞMA TEZGAHI",
+      "olcu": "40*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C17",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+      "olcu": "60*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C18",
+      "ad": "WOK OCAĞI, GAZLI",
+      "olcu": "60*60*30",
+      "adet": 2
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C19",
+      "ad": "SETALTI ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLIİ, DOLAPLI",
+      "olcu": "120*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C20",
+      "ad": "PİRİNÇ HAŞLAMA",
+      "olcu": "-",
+      "adet": 2
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C21",
+      "ad": "4 AÇIK ALEVLİ OCAK, SETÜSTÜ",
+      "olcu": "80*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C22",
+      "ad": "FRİTÖZ, ÇİFT SEPETLİ, ELK., SETÜSTÜ",
+      "olcu": "80*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C23",
+      "ad": "DAVLUMBAZ, ORTA TİP, FİLTRELİ",
+      "olcu": "350*130*50",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C24",
+      "ad": "YER IZGARASI",
+      "olcu": "30*30*14",
+      "adet": 2
+    }
+  ],
+  "uyumsuzluk": {
+    "plandaEkipmandaYok": [],
+    "ekipmandaPlandaYok": [
+      "A1",
+      "B1",
+      "B2"
+    ]
+  },
+  "notlar": [
+    "Plan PDF yalnızca C (pişirme-teşhir) pozlarını gösteriyor; A/B ekipman listede var.",
+    "Planda görülen C poz: 24 · Listede A+B+C toplam: 27 kalem."
+  ]
+}

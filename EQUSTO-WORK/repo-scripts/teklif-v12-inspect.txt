@@ -1,0 +1,15 @@
+DIM A1:N43
+R1: A1=PROFORMA FATURA | J1=Sayı: | K1=EQS-2026-001 | M1=EQUSTO
+R2: A2=Proje: | C2=Coca-Cola İçecek — FBE20T Isparta | G2=Müşteri: | H2=Alper Bey | J2=Tarih: | K2=22.04.2026
+R3: A3=TCMB Efektif Satış Kuru – 22.04.2026 | J3=52.8238 | K3=EUR/TRY  (kur hücresi: J3 — güncellendiğinde TL satırları yenilenir)
+R4: A4=Böl. | B4=Grup | C4=Poz | D4=EK | E4=Stok no | F4=Tanımı | G4=Kaynak | H4=Boy | I4=En | J4=Yük. | K4=Adet | L4=Satış | M4=Toplam Satış | N4=Döviz
+R5: A5=01. MUTFAK
+R6: A6=01 | B6=A | C6=01 | E6=INO-FBE20T | F6=A. SICAK MUTFAK INO-FBE20T | G6=İnoksan | H6=1180 X | I6=1070 X | J6=1250 | K6=1 | L6=8303.82 | M6==K6*L6 | N6=EUR
+R7: A7=📷
+Fotoğraf | H7=Kombi fırın, dokunmatik kontrol panelli, elektrik, 10xGN2/1 tepsi kap., 26kW 400V 50-60Hz
+•  10 × GN2/1 tepsi kapasitesi, akıllı buhar jeneratörlü
+•  Dokunmatik kontrol paneli, çoklu dil
+•  Otomatik yıkama programları
+•  PID/PWM hassas ısı kontrolü
+•  Çift kademeli kapı kilit, Low-E çift cam
+•  Faydalı iç hacim ve raflar arası mesafe proje ölçüsüne göre teyit edilir

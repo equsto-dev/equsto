@@ -1,0 +1,26 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "test@equsto.local",
+      "name": "Test",
+      "picture": "",
+      "passwordHash": "scrypt:4a963e54bf92aa4f43abeded9264ea51:5cd92edabe09a4f3379ccb0a1f79319a7b787d6bc51a7f0c6da637e88953b54eed8e39f18cd71085c5ac1977297265fdaa8ec70b33fba6d9cfa320e4e77e786c",
+      "providers": [
+        "email"
+      ],
+      "googleSub": null,
+      "appleSub": null,
+      "createdAt": "2026-05-18T04:39:05.252Z",
+      "lastProvider": "email"
+    }
+  ],
+  "sessions": [
+    {
+      "token": "90bf1a675904b9574e7a114e7edab636c657cdd84830bc7b2011fdc910bb67bc",
+      "userId": 1,
+      "createdAt": 1779079145261,
+      "expiresAt": 1781671145261
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+User
+DESKTOP-8U7SL9C 
+28 Nisan 2026 Salý  02:15:36

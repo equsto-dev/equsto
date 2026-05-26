@@ -1,0 +1,1366 @@
+{
+  "version": "1.0",
+  "konsept": "03-italyan",
+  "label": "İTALYAN",
+  "kaynak": {
+    "plan": "ITALYAN-PLAN.pdf",
+    "ekipman": "03-italyan.pdf"
+  },
+  "meta": {
+    "totalM2": 180.0,
+    "totalM2Kaynak": "kullanici-notu",
+    "planPdfHeaderM2": 57.7,
+    "planAnnotatedSumM2": 83,
+    "scaleFactor": 2.1687
+  },
+  "mahaller": [
+    {
+      "id": "kuru-depo",
+      "label": "Kuru depo",
+      "bolum": "A",
+      "planM2": 6,
+      "pozlar": [
+        "A1",
+        "A2"
+      ],
+      "scaledM2": 13.0,
+      "pozSayisi": 2
+    },
+    {
+      "id": "soguk-oda",
+      "label": "Soğuk oda",
+      "bolum": "B",
+      "planM2": 6,
+      "pozlar": [
+        "B1",
+        "B2",
+        "B3"
+      ],
+      "scaledM2": 13.0,
+      "pozSayisi": 3
+    },
+    {
+      "id": "derin-dondurucu",
+      "label": "Derin dondurucu",
+      "bolum": "C",
+      "planM2": 7,
+      "pozlar": [
+        "C1",
+        "C2"
+      ],
+      "scaledM2": 15.2,
+      "pozSayisi": 2
+    },
+    {
+      "id": "sebze-hazirlik",
+      "label": "Sebze hazırlık",
+      "bolum": "D",
+      "planM2": 7,
+      "pozlar": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5",
+        "D6"
+      ],
+      "scaledM2": 15.2,
+      "pozSayisi": 6
+    },
+    {
+      "id": "et-hazirlik",
+      "label": "Et hazırlık",
+      "bolum": "E",
+      "planM2": 14,
+      "pozlar": [
+        "E1",
+        "E2",
+        "E2A",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7"
+      ],
+      "scaledM2": 30.4,
+      "pozSayisi": 8
+    },
+    {
+      "id": "hamur-hazirlik",
+      "label": "Hamur hazırlık",
+      "bolum": "F",
+      "planM2": 10,
+      "pozlar": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8",
+        "F9"
+      ],
+      "scaledM2": 21.7,
+      "pozSayisi": 9
+    },
+    {
+      "id": "pisirme",
+      "label": "Pişirme",
+      "bolum": "G",
+      "planM2": 12,
+      "pozlar": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8",
+        "G9",
+        "G10",
+        "G11",
+        "G12",
+        "G12A",
+        "G13",
+        "G14",
+        "G15",
+        "G16",
+        "Y1",
+        "Y2"
+      ],
+      "scaledM2": 26.0,
+      "pozSayisi": 19
+    },
+    {
+      "id": "soguk-hazirlik",
+      "label": "Soğuk hazırlık",
+      "bolum": "H",
+      "planM2": 6,
+      "pozlar": [
+        "H1",
+        "H2",
+        "H3",
+        "H3A",
+        "H4",
+        "H5",
+        "H6",
+        "H7",
+        "H8",
+        "H9"
+      ],
+      "scaledM2": 13.0,
+      "pozSayisi": 10
+    },
+    {
+      "id": "on-mutfak-bar",
+      "label": "Ön mutfak / Bar",
+      "bolum": "J",
+      "planM2": 15,
+      "pozlar": [
+        "J1",
+        "J2",
+        "J3",
+        "J4",
+        "J5",
+        "J6",
+        "J7",
+        "J8",
+        "J9",
+        "J10",
+        "J11",
+        "J12",
+        "J13",
+        "J14",
+        "J15",
+        "J16",
+        "J17"
+      ],
+      "scaledM2": 32.5,
+      "pozSayisi": 17
+    },
+    {
+      "id": "bulasik-yikama",
+      "label": "Bulaşık yıkama",
+      "bolum": "K",
+      "planM2": null,
+      "planM2Not": "Plan üzerinde ayrı m² etiketi yok; mahal etiketi mevcut",
+      "pozlar": [
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K11"
+      ],
+      "scaledM2": null,
+      "pozSayisi": 11
+    }
+  ],
+  "mahallerDetay": [
+    {
+      "id": "kuru-depo",
+      "label": "Kuru depo",
+      "bolum": "A",
+      "planM2": 6,
+      "pozlar": [
+        "A1",
+        "A2"
+      ],
+      "scaledM2": 13.0,
+      "pozDetay": [
+        {
+          "poz": "A1",
+          "planda": true,
+          "ekipman": {
+            "bolum": "A",
+            "ad": "DİZDEN KUMANDALI EL YIKAMA LAVABOSU",
+            "olcu": "-",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "A2",
+          "planda": true,
+          "ekipman": {
+            "bolum": "A",
+            "ad": "İSTİF RAFI",
+            "olcu": "152*46*160",
+            "adet": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "soguk-oda",
+      "label": "Soğuk oda",
+      "bolum": "B",
+      "planM2": 6,
+      "pozlar": [
+        "B1",
+        "B2",
+        "B3"
+      ],
+      "scaledM2": 13.0,
+      "pozDetay": [
+        {
+          "poz": "B1",
+          "planda": true,
+          "ekipman": {
+            "bolum": "B",
+            "ad": "PANEL TİP SOĞUK ODA",
+            "olcu": "200*300*240",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "B2",
+          "planda": true,
+          "ekipman": {
+            "bolum": "B",
+            "ad": "İSTİF RAFI",
+            "olcu": "137*46*160",
+            "adet": 4
+          }
+        },
+        {
+          "poz": "B3",
+          "planda": true,
+          "ekipman": null
+        }
+      ]
+    },
+    {
+      "id": "derin-dondurucu",
+      "label": "Derin dondurucu",
+      "bolum": "C",
+      "planM2": 7,
+      "pozlar": [
+        "C1",
+        "C2"
+      ],
+      "scaledM2": 15.2,
+      "pozDetay": [
+        {
+          "poz": "C1",
+          "planda": true,
+          "ekipman": {
+            "bolum": "C",
+            "ad": "PANEL TİP SOĞUK ODA",
+            "olcu": "200*345*240",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "C2",
+          "planda": true,
+          "ekipman": {
+            "bolum": "C",
+            "ad": "İSTİF RAFI",
+            "olcu": "152*46*160",
+            "adet": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "sebze-hazirlik",
+      "label": "Sebze hazırlık",
+      "bolum": "D",
+      "planM2": 7,
+      "pozlar": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5",
+        "D6"
+      ],
+      "scaledM2": 15.2,
+      "pozDetay": [
+        {
+          "poz": "D1",
+          "planda": true,
+          "ekipman": {
+            "bolum": "D",
+            "ad": "ÇİFT EVYELİ ÇALIŞMA TEZGAHI",
+            "olcu": "150*70*85",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "D2",
+          "planda": true,
+          "ekipman": {
+            "bolum": "D",
+            "ad": "DUVAR RAFI",
+            "olcu": "150*30*3",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "D3",
+          "planda": true,
+          "ekipman": {
+            "bolum": "D",
+            "ad": "ÇÖP ARABASI",
+            "olcu": "Ø40*50",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "D4",
+          "planda": true,
+          "ekipman": {
+            "bolum": "D",
+            "ad": "POLİETİLEN TABLALI TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+            "olcu": "188*70*85",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "D5",
+          "planda": true,
+          "ekipman": {
+            "bolum": "D",
+            "ad": "DUVAR RAFI",
+            "olcu": "188*30*3",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "D6",
+          "planda": true,
+          "ekipman": {
+            "bolum": "D",
+            "ad": "BIÇAK STERİL DOLABI",
+            "olcu": "10 BIÇAKLIK",
+            "adet": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "et-hazirlik",
+      "label": "Et hazırlık",
+      "bolum": "E",
+      "planM2": 14,
+      "pozlar": [
+        "E1",
+        "E2",
+        "E2A",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7"
+      ],
+      "scaledM2": 30.4,
+      "pozDetay": [
+        {
+          "poz": "E1",
+          "planda": true,
+          "ekipman": {
+            "bolum": "E",
+            "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+            "olcu": "70*70*85",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "E2",
+          "planda": true,
+          "ekipman": {
+            "bolum": "E",
+            "ad": "DUVAR RAFI",
+            "olcu": "70*30*3",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "E2A",
+          "planda": true,
+          "ekipman": {
+            "bolum": "E",
+            "ad": "ÇÖP ARABASI",
+            "olcu": "Ø40*50",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "E3",
+          "planda": true,
+          "ekipman": {
+            "bolum": "E",
+            "ad": "POLİETİLEN TABLALI ÇALIŞMA TEZGAHI, TABAN RAFLI, TEK ÇEKMECELİ",
+            "olcu": "140*70*85",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "E4",
+          "planda": true,
+          "ekipman": {
+            "bolum": "E",
+            "ad": "BIÇAK STERİL DOLABI",
+            "olcu": "10 BIÇAKLIK",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "E5",
+          "planda": true,
+          "ekipman": {
+            "bolum": "E",
+            "ad": "POLİETİLEN TABLALI ÇALIŞMA TEZGAHI, TABAN RAFLI",
+            "olcu": "130*70*85",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "E6",
+          "planda": true,
+          "ekipman": {
+            "bolum": "E",
+            "ad": "ET KIYMA MAKİNASI, SOĞUTMALI",
+            "olcu": "NO: 32",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "E7",
+          "planda": true,
+          "ekipman": {
+            "bolum": "E",
+            "ad": "SİNEK ÖLÜDÜRÜCÜ",
+            "olcu": "-",
+            "adet": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "hamur-hazirlik",
+      "label": "Hamur hazırlık",
+      "bolum": "F",
+      "planM2": 10,
+      "pozlar": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8",
+        "F9"
+      ],
+      "scaledM2": 21.7,
+      "pozDetay": [
+        {
+          "poz": "F1",
+          "planda": true,
+          "ekipman": {
+            "bolum": "F",
+            "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+            "olcu": "70*70*85",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "F2",
+          "planda": true,
+          "ekipman": {
+            "bolum": "F",
+            "ad": "DUVAR RAFI",
+            "olcu": "70*303",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "F3",
+          "planda": true,
+          "ekipman": {
+            "bolum": "F",
+            "ad": "MERMER TABLALI ÇALIŞMA TEZGAHI",
+            "olcu": "200*70*85",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "F4",
+          "planda": true,
+          "ekipman": {
+            "bolum": "F",
+            "ad": "DUVAR RAFI",
+            "olcu": "200*30*3",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "F5",
+          "planda": true,
+          "ekipman": {
+            "bolum": "F",
+            "ad": "UN ŞEKER ARABASI",
+            "olcu": "103 lt.",
+            "adet": 3
+          }
+        },
+        {
+          "poz": "F6",
+          "planda": true,
+          "ekipman": {
+            "bolum": "F",
+            "ad": "MERMER TABLALI ÇALIŞMA TEZGAHI, TABAN RAFLI, TEK ÇEKMECELİ",
+            "olcu": "200*80*85",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "F7",
+          "planda": true,
+          "ekipman": {
+            "bolum": "F",
+            "ad": "DUVAR RAFI",
+            "olcu": "200*30*3",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "F8",
+          "planda": true,
+          "ekipman": {
+            "bolum": "F",
+            "ad": "BIÇAK STERİL DOLABI",
+            "olcu": "10 BIÇAKLIK",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "F9",
+          "planda": true,
+          "ekipman": {
+            "bolum": "F",
+            "ad": "HAMUR YOĞURMA MAKİNASI, DOMINO",
+            "olcu": "35 KG",
+            "adet": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "pisirme",
+      "label": "Pişirme",
+      "bolum": "G",
+      "planM2": 12,
+      "pozlar": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7",
+        "G8",
+        "G9",
+        "G10",
+        "G11",
+        "G12",
+        "G12A",
+        "G13",
+        "G14",
+        "G15",
+        "G16",
+        "Y1",
+        "Y2"
+      ],
+      "scaledM2": 26.0,
+      "pozDetay": [
+        {
+          "poz": "G1",
+          "planda": true,
+          "ekipman": {
+            "bolum": "G",
+            "ad": "PİZZA HAZIRLIK MAKE-UP ÜNİTESİ",
+            "olcu": "143* 70*85/135",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "G2",
+          "planda": true,
+          "ekipman": {
+            "bolum": "G",
+            "ad": "PİZZA FIRINI, ÇİFT KATLI",
+            "olcu": "9262DE",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "G3",
+          "planda": true,
+          "ekipman": {
+            "bolum": "G",
+            "ad": "FIRIN TEZGAHI, TABAN RAFLI",
+            "olcu": "122*92*85",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "G4",
+          "planda": true,
+          "ekipman": {
+            "bolum": "G",
+            "ad": "KONVEKSİYONLU FIRIN, ELEKTRİKLİ, RATIONAL SCC 61E 6 GN 1",
+            "olcu": "1",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "G5",
+          "planda": true,
+          "ekipman": {
+            "bolum": "G",
+            "ad": "FRİTÖZ, ÇİFT SEPETLİ, ELK., SETÜSTÜ, MARENO FQE 61L",
+            "olcu": "60*65*29",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "G6",
+          "planda": true,
+          "ekipman": {
+            "bolum": "G",
+            "ad": "LAVTAŞLI IZGARA, GAZLI, SETÜSTÜ, MARENO GPL68G",
+            "olcu": "80*90*29",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "G7",
+          "planda": true,
+          "ekipman": {
+            "bolum": "G",
+            "ad": "4 AÇIK ALEVLİ OCAK, GAZLI, SETÜSTÜ, MARENO N98G40",
+            "olcu": "80*90*29",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "G8",
+          "planda": true,
+          "ekipman": {
+            "bolum": "G",
+            "ad": "SOS BAINMARIE, ELK. SETÜSTÜ, MARENO NB94E",
+            "olcu": "40*90*29",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "G9",
+          "planda": true,
+          "ekipman": {
+            "bolum": "G",
+            "ad": "MAKARNA PİŞİRİCİ, ELK. DOLAPLI, MARENO NPC94E",
+            "olcu": "40*90*85",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "G10",
+          "planda": true,
+          "ekipman": {
+            "bolum": "G",
+            "ad": "NÖTR ARA TEZGAH, DOLAPLI",
+            "olcu": "30*90*85",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "G11",
+          "planda": true,
+          "ekipman": {
+            "bolum": "G",
+            "ad": "SETALTI BUZDOLABI, 3 KAPILI",
+            "olcu": "180*90*56",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "G12",
+          "planda": true,
+          "ekipman": {
+            "bolum": "G",
+            "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+            "olcu": "550*117*50",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "G12A",
+          "planda": true,
+          "ekipman": {
+            "bolum": "G",
+            "ad": "TAVA RAFI",
+            "olcu": "330*35*25",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "G13",
+          "planda": true,
+          "ekipman": {
+            "bolum": "G",
+            "ad": "HAREKETLİ ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+            "olcu": "140*50*85",
+            "adet": 2
+          }
+        },
+        {
+          "poz": "G14",
+          "planda": true,
+          "ekipman": {
+            "bolum": "G",
+            "ad": "SERVİS TEZGAHI, TABAN VE ARA RAFLI, SICAK DOLAPLI",
+            "olcu": "170*70*85",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "G15",
+          "planda": true,
+          "ekipman": {
+            "bolum": "G",
+            "ad": "SERVİS RAFI",
+            "olcu": "170*40*45",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "G16",
+          "planda": true,
+          "ekipman": {
+            "bolum": "G",
+            "ad": "SİNEK ÖLDÜRÜCÜ",
+            "olcu": "-",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "Y1",
+          "planda": true,
+          "ekipman": {
+            "bolum": "Y",
+            "ad": "YER IZGARASI",
+            "olcu": "30*30*14",
+            "adet": 4
+          }
+        },
+        {
+          "poz": "Y2",
+          "planda": true,
+          "ekipman": {
+            "bolum": "Y",
+            "ad": "YER IZGARASI",
+            "olcu": "95*30*14",
+            "adet": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "soguk-hazirlik",
+      "label": "Soğuk hazırlık",
+      "bolum": "H",
+      "planM2": 6,
+      "pozlar": [
+        "H1",
+        "H2",
+        "H3",
+        "H3A",
+        "H4",
+        "H5",
+        "H6",
+        "H7",
+        "H8",
+        "H9"
+      ],
+      "scaledM2": 13.0,
+      "pozDetay": [
+        {
+          "poz": "H1",
+          "planda": true,
+          "ekipman": {
+            "bolum": "H",
+            "ad": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+            "olcu": "72*70*205",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "H2",
+          "planda": true,
+          "ekipman": {
+            "bolum": "H",
+            "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+            "olcu": "120*60*85",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "H3",
+          "planda": true,
+          "ekipman": {
+            "bolum": "H",
+            "ad": "DUVAR RAFI",
+            "olcu": "120*30*3",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "H3A",
+          "planda": true,
+          "ekipman": {
+            "bolum": "H",
+            "ad": "ÇÖP ARABASI",
+            "olcu": "Ø40*50",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "H4",
+          "planda": true,
+          "ekipman": {
+            "bolum": "H",
+            "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+            "olcu": "90*70*85",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "H5",
+          "planda": true,
+          "ekipman": {
+            "bolum": "H",
+            "ad": "DUVAR RAFI",
+            "olcu": "90*30*3",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "H6",
+          "planda": true,
+          "ekipman": {
+            "bolum": "H",
+            "ad": "MAKE-UP UNİTESİ, 3 KAPILI, NEO",
+            "olcu": "180*70*85",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "H7",
+          "planda": true,
+          "ekipman": {
+            "bolum": "H",
+            "ad": "SERVİS TEZGAHI, TABAN VE ARA RAFLI",
+            "olcu": "170*70*85",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "H8",
+          "planda": true,
+          "ekipman": {
+            "bolum": "H",
+            "ad": "SALAMANDER, BERTO'S",
+            "olcu": "-",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "H9",
+          "planda": true,
+          "ekipman": {
+            "bolum": "H",
+            "ad": "TOST MAKİNASI",
+            "olcu": "-",
+            "adet": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "on-mutfak-bar",
+      "label": "Ön mutfak / Bar",
+      "bolum": "J",
+      "planM2": 15,
+      "pozlar": [
+        "J1",
+        "J2",
+        "J3",
+        "J4",
+        "J5",
+        "J6",
+        "J7",
+        "J8",
+        "J9",
+        "J10",
+        "J11",
+        "J12",
+        "J13",
+        "J14",
+        "J15",
+        "J16",
+        "J17"
+      ],
+      "scaledM2": 32.5,
+      "pozDetay": [
+        {
+          "poz": "J1",
+          "planda": true,
+          "ekipman": {
+            "bolum": "J",
+            "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+            "olcu": "165*60*85",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "J2",
+          "planda": true,
+          "ekipman": {
+            "bolum": "J",
+            "ad": "FİLTRE KAHVE MAKİNASI",
+            "olcu": "-",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "J3",
+          "planda": true,
+          "ekipman": {
+            "bolum": "J",
+            "ad": "ESPRESSO KAHVE MAKİNASI, CIMBALI",
+            "olcu": "-",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "J4",
+          "planda": true,
+          "ekipman": {
+            "bolum": "J",
+            "ad": "KAHVE DEĞİRMENİ, MAZZER",
+            "olcu": "-",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "J5",
+          "planda": true,
+          "ekipman": {
+            "bolum": "J",
+            "ad": "ÇAY OTOMATI",
+            "olcu": "23 lt.",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "J6",
+          "planda": true,
+          "ekipman": {
+            "bolum": "J",
+            "ad": "CAM KAPILI TEZGAH TİPİ BUZDOLABI, 4 KAPILI",
+            "olcu": "233*60*85",
+            "adet": 2
+          }
+        },
+        {
+          "poz": "J7",
+          "planda": true,
+          "ekipman": {
+            "bolum": "J",
+            "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+            "olcu": "170*60*85",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "J8",
+          "planda": true,
+          "ekipman": {
+            "bolum": "J",
+            "ad": "BARDAK YIKAMA MAKİNASI, DW53E",
+            "olcu": "60*60*85",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "J9",
+          "planda": true,
+          "ekipman": {
+            "bolum": "J",
+            "ad": "BUZ MAKİNASI, CB416",
+            "olcu": "42 kg/gün",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "J10",
+          "planda": true,
+          "ekipman": {
+            "bolum": "J",
+            "ad": "BAR BLENDER, SANTOS",
+            "olcu": "-",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "J11",
+          "planda": true,
+          "ekipman": {
+            "bolum": "J",
+            "ad": "BAR MİKSER, SANTOS",
+            "olcu": "-",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "J12",
+          "planda": true,
+          "ekipman": {
+            "bolum": "J",
+            "ad": "PORTAKAL SIKMA MAKİNASI, SANTOS",
+            "olcu": "-",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "J13",
+          "planda": true,
+          "ekipman": {
+            "bolum": "J",
+            "ad": "KATI MEYVE PRESİ, SANTOS",
+            "olcu": "-",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "J14",
+          "planda": true,
+          "ekipman": {
+            "bolum": "J",
+            "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+            "olcu": "190*60*85",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "J15",
+          "planda": true,
+          "ekipman": {
+            "bolum": "J",
+            "ad": "CAM KAPILI TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+            "olcu": "188*60*85",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "J16",
+          "planda": true,
+          "ekipman": {
+            "bolum": "J",
+            "ad": "ÇALIŞMA TEZGAHI, DOLAPLI",
+            "olcu": "150*60*85",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "J17",
+          "planda": true,
+          "ekipman": {
+            "bolum": "J",
+            "ad": "KASA BANKOSU",
+            "olcu": "110*110*85",
+            "adet": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "bulasik-yikama",
+      "label": "Bulaşık yıkama",
+      "bolum": "K",
+      "planM2": null,
+      "planM2Not": "Plan üzerinde ayrı m² etiketi yok; mahal etiketi mevcut",
+      "pozlar": [
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K11"
+      ],
+      "scaledM2": null,
+      "pozDetay": [
+        {
+          "poz": "K1",
+          "planda": true,
+          "ekipman": {
+            "bolum": "K",
+            "ad": "BULAŞIK SIYIRMA TEZGAHI",
+            "olcu": "165*80*85",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "K2",
+          "planda": true,
+          "ekipman": {
+            "bolum": "K",
+            "ad": "BASKET RAFI",
+            "olcu": "165*40*45",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "K3",
+          "planda": true,
+          "ekipman": {
+            "bolum": "K",
+            "ad": "ÇÖP ARABASI",
+            "olcu": "Ø40*50",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "K4",
+          "planda": true,
+          "ekipman": {
+            "bolum": "K",
+            "ad": "TEK EVYELİ BYM GİRİŞ TEZGAHI",
+            "olcu": "120*75*85",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "K5",
+          "planda": true,
+          "ekipman": {
+            "bolum": "K",
+            "ad": "ÖN YIKAMA DUŞU",
+            "olcu": "-",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "K6",
+          "planda": true,
+          "ekipman": {
+            "bolum": "K",
+            "ad": "YAĞ TUTUCU, İTHAL",
+            "olcu": "1,6 lt./sn.",
+            "adet": 2
+          }
+        },
+        {
+          "poz": "K7",
+          "planda": true,
+          "ekipman": {
+            "bolum": "K",
+            "ad": "BULAŞIK YIKAMA MAKİNASI, GİYOTİN TİP, NEO NSP80",
+            "olcu": "1000 Tb/saat",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "K8",
+          "planda": true,
+          "ekipman": {
+            "bolum": "K",
+            "ad": "DAVLUMBAZ, DUVAR TİPİ",
+            "olcu": "100*97*40",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "K9",
+          "planda": true,
+          "ekipman": {
+            "bolum": "K",
+            "ad": "BYM ÇIKIŞ TEZGAHI",
+            "olcu": "70*75*85",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "K10",
+          "planda": true,
+          "ekipman": {
+            "bolum": "K",
+            "ad": "İSTİF RAFI",
+            "olcu": "183*61*160",
+            "adet": 1
+          }
+        },
+        {
+          "poz": "K11",
+          "planda": true,
+          "ekipman": {
+            "bolum": "K",
+            "ad": "KAZAN YIKAMA EVYESİ",
+            "olcu": "100*80*57/91",
+            "adet": 1
+          }
+        }
+      ]
+    }
+  ],
+  "planPozlari": [
+    "A1",
+    "A2",
+    "B1",
+    "B2",
+    "B3",
+    "C1",
+    "C2",
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5",
+    "D6",
+    "E1",
+    "E2",
+    "E2A",
+    "E3",
+    "E4",
+    "E5",
+    "E6",
+    "E7",
+    "F1",
+    "F2",
+    "F3",
+    "F4",
+    "F5",
+    "F6",
+    "F7",
+    "F8",
+    "F9",
+    "G1",
+    "G2",
+    "G3",
+    "G4",
+    "G5",
+    "G6",
+    "G7",
+    "G8",
+    "G9",
+    "G10",
+    "G11",
+    "G12",
+    "G12A",
+    "G13",
+    "G14",
+    "G15",
+    "G16",
+    "H1",
+    "H2",
+    "H3",
+    "H3A",
+    "H4",
+    "H5",
+    "H6",
+    "H7",
+    "H8",
+    "H9",
+    "J1",
+    "J2",
+    "J3",
+    "J4",
+    "J5",
+    "J6",
+    "J7",
+    "J8",
+    "J9",
+    "J10",
+    "J11",
+    "J12",
+    "J13",
+    "J14",
+    "J15",
+    "J16",
+    "J17",
+    "K1",
+    "K2",
+    "K3",
+    "K4",
+    "K5",
+    "K6",
+    "K7",
+    "K8",
+    "K9",
+    "K10",
+    "K11",
+    "Y1",
+    "Y2"
+  ],
+  "uyumsuzluk": {
+    "plandaEkipmandaYok": [
+      "B3"
+    ],
+    "ekipmandaPlandaYok": []
+  }
+}

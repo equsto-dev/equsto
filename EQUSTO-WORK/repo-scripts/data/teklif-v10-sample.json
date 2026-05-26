@@ -1,0 +1,46 @@
+{
+  "ctx": {
+    "proformaNo": "EQS-2026-DEMO",
+    "proje": "Demo — PFOS Teklif v10",
+    "musteri": "Equsto Test",
+    "tarih": "17.05.2026",
+    "kur": 52.82,
+    "kurLabel": "EUR/TRY (TCMB efektif — demo)"
+  },
+  "zones": [
+    {
+      "label": "MUTFAK",
+      "rows": [
+        {
+          "stok_no": "INO-FBE10T",
+          "ad": "Kombi Fırın Dokunmatik",
+          "marka": "İnoksan",
+          "model": "FBE10T",
+          "aciklama": "10×GN1/1, dokunmatik, 18,5 kW",
+          "adet": 1,
+          "olcu": "897×927×1213",
+          "elk": 18.5,
+          "birim": 1250000,
+          "specs": [
+            "10 × GN1/1 tepsi",
+            "Dokunmatik panel",
+            "Buhar jeneratörlü"
+          ]
+        },
+        {
+          "stok_no": "INO-9FE20",
+          "photo_path": null,
+          "ad": "Fritöz Elektrikli Dolaplı",
+          "marka": "İnoksan",
+          "model": "Perfect 900",
+          "aciklama": "26+26 Lt, 36 kW",
+          "adet": 1,
+          "olcu": "900×800×850",
+          "elk": 36,
+          "birim": 890000,
+          "specs": ["2 havuzlu", "Dolaplı alt gövde"]
+        }
+      ]
+    }
+  ]
+}

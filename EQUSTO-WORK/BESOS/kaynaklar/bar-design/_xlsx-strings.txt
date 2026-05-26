@@ -1,0 +1,10 @@
+﻿python :   File "<string>", line 8
+At C:\Users\User\AppData\Local\Temp\ps-script-25ac610b-4fce-4ea9-804d-9e940fa036c5.ps1:92 char:1
++ python -c "
++ ~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (  File "<string>", line 8:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+    print(f'{i}: {t.replace(chr(10)," \)[:100]}')
+                                    ^
+SyntaxError: unterminated string literal (detected at line 8)

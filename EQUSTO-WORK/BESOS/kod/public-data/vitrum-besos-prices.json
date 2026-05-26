@@ -1,0 +1,355 @@
+{
+  "version": 1,
+  "source": "Vitrum+Bar+Price+List+October+2025.pdf",
+  "importedAt": "2026-05-23T13:54:12.479320+00:00",
+  "formula": "listeEur * 0.75 * 1.20 = fiyatEurKdvDahil",
+  "iskontoOran": 0.25,
+  "kdvOran": 0.2,
+  "currency": "EUR",
+  "prices": {
+    "PL/BM.F.2-12": {
+      "listeEur": 4818,
+      "iskontoOran": 0.25,
+      "netEur": 3613.5,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 4336.2,
+      "pdfCode": "PL/BM.F.2-12"
+    },
+    "PL/BM.F.1-08": {
+      "listeEur": 3946,
+      "iskontoOran": 0.25,
+      "netEur": 2959.5,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 3551.4,
+      "pdfCode": "PL/BM.F.1-08"
+    },
+    "PL/BM.F.4.3-22": {
+      "listeEur": 9240,
+      "iskontoOran": 0.25,
+      "netEur": 6930.0,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 8316.0,
+      "pdfCode": "PL/BM.F.4.3-22"
+    },
+    "PL/BM.F.4.2-22": {
+      "listeEur": 8982,
+      "iskontoOran": 0.25,
+      "netEur": 6736.5,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 8083.8,
+      "pdfCode": "PL/BM.F.4.2-22"
+    },
+    "PL/BM.F.3.1-18": {
+      "listeEur": 7766,
+      "iskontoOran": 0.25,
+      "netEur": 5824.5,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 6989.4,
+      "pdfCode": "PL/BM.F.3.1-18"
+    },
+    "BL/BM-14": {
+      "listeEur": 1418,
+      "iskontoOran": 0.25,
+      "netEur": 1063.5,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 1276.2,
+      "pdfCode": "BL/BM-14"
+    },
+    "BL/BM-09": {
+      "listeEur": 1015,
+      "iskontoOran": 0.25,
+      "netEur": 761.25,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 913.5,
+      "pdfCode": "BL/BM-09"
+    },
+    "SL/BM-10.S": {
+      "listeEur": 1440,
+      "iskontoOran": 0.25,
+      "netEur": 1080.0,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 1296.0,
+      "pdfCode": "SL/BM-10.S"
+    },
+    "SL/BM-10": {
+      "listeEur": 1328,
+      "iskontoOran": 0.25,
+      "netEur": 996.0,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 1195.2,
+      "pdfCode": "SL/BM-10"
+    },
+    "PL/BM.F.4-16": {
+      "listeEur": 5869,
+      "iskontoOran": 0.25,
+      "netEur": 4401.75,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 5282.1,
+      "pdfCode": "PL/BM.F.4-16"
+    },
+    "PL/BM.F.3-3-12": {
+      "listeEur": 5027,
+      "iskontoOran": 0.25,
+      "netEur": 3770.25,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 4524.3,
+      "pdfCode": "PL/BM.F.3-3-12"
+    },
+    "PL/BM.F.3-2-12": {
+      "listeEur": 4749,
+      "iskontoOran": 0.25,
+      "netEur": 3561.75,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 4274.1,
+      "pdfCode": "PL/BM.F.3-2-12"
+    },
+    "PL/BM.F.3-1-12": {
+      "listeEur": 4708,
+      "iskontoOran": 0.25,
+      "netEur": 3531.0,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 4237.2,
+      "pdfCode": "PL/BM.F.3-1-12"
+    },
+    "PL/SM.N.2-09": {
+      "listeEur": 3236,
+      "iskontoOran": 0.25,
+      "netEur": 2427.0,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 2912.4,
+      "pdfCode": "PL/SM.N.2-09"
+    },
+    "PL/SM.S.N.3-09": {
+      "listeEur": 3236,
+      "iskontoOran": 0.25,
+      "netEur": 2427.0,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 2912.4,
+      "pdfCode": "PL/BM.S.N.3-09"
+    },
+    "PL/SM.N.3-15": {
+      "listeEur": 4730,
+      "iskontoOran": 0.25,
+      "netEur": 3547.5,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 4257.0,
+      "pdfCode": "PL/SM.N.3-15"
+    },
+    "ML/MBB": {
+      "listeEur": 1975,
+      "iskontoOran": 0.25,
+      "netEur": 1481.25,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 1777.5,
+      "pdfCode": "ML/MBB"
+    },
+    "ML/BM.7-31": {
+      "listeEur": 8179,
+      "iskontoOran": 0.25,
+      "netEur": 6134.25,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 7361.1,
+      "pdfCode": "ML/BM.7-31"
+    },
+    "ML/BM.3-19": {
+      "listeEur": 4758,
+      "iskontoOran": 0.25,
+      "netEur": 3568.5,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 4282.2,
+      "pdfCode": "ML/BM.3-19"
+    },
+    "BL/BM-16": {
+      "listeEur": 1715,
+      "iskontoOran": 0.25,
+      "netEur": 1286.25,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 1543.5,
+      "pdfCode": "BL/BM-16"
+    },
+    "PL/SM.N.1-08": {
+      "listeEur": 1727,
+      "iskontoOran": 0.25,
+      "netEur": 1295.25,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 1554.3,
+      "pdfCode": "PL/SM.N.1-08"
+    },
+    "PL/NM-3D.T": {
+      "listeEur": 1254,
+      "iskontoOran": 0.25,
+      "netEur": 940.5,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 1128.6,
+      "pdfCode": "PL/NM-3D.T"
+    },
+    "PL/NM-3D.S": {
+      "listeEur": 1452,
+      "iskontoOran": 0.25,
+      "netEur": 1089.0,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 1306.8,
+      "pdfCode": "PL/NM-3D.S"
+    },
+    "PL/IM.N-08": {
+      "listeEur": 723,
+      "iskontoOran": 0.25,
+      "netEur": 542.25,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 650.7,
+      "pdfCode": "PL/IM.N-07"
+    },
+    "PL/WM.1-12": {
+      "listeEur": 1282,
+      "iskontoOran": 0.25,
+      "netEur": 961.5,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 1153.8,
+      "pdfCode": "PL/WM.1-12"
+    },
+    "PL/SM-04": {
+      "listeEur": 966,
+      "iskontoOran": 0.25,
+      "netEur": 724.5,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 869.4,
+      "pdfCode": "SL/SM-04"
+    },
+    "PL/CM.C.1-12": {
+      "listeEur": 1342,
+      "iskontoOran": 0.25,
+      "netEur": 1006.5,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 1207.8,
+      "pdfCode": "PL/CM.C.1-12"
+    },
+    "PL/CM.N-12": {
+      "listeEur": 1823,
+      "iskontoOran": 0.25,
+      "netEur": 1367.25,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 1640.7,
+      "pdfCode": "PL/CM.N-12"
+    },
+    "PL/NM-N-1": {
+      "listeEur": 1202,
+      "iskontoOran": 0.25,
+      "netEur": 901.5,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 1081.8,
+      "pdfCode": "PL/NM-N-1"
+    },
+    "PL/AM-3": {
+      "listeEur": 616,
+      "iskontoOran": 0.25,
+      "netEur": 462.0,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 554.4,
+      "pdfCode": "PL/AM-3"
+    },
+    "PL/AM-2": {
+      "listeEur": 561,
+      "iskontoOran": 0.25,
+      "netEur": 420.75,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 504.9,
+      "pdfCode": "PL/AM-2"
+    },
+    "PL/AM-1": {
+      "listeEur": 479,
+      "iskontoOran": 0.25,
+      "netEur": 359.25,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 431.1,
+      "pdfCode": "PL/AM-1"
+    },
+    "PL/NM.ND-2": {
+      "listeEur": 1449,
+      "iskontoOran": 0.25,
+      "netEur": 1086.75,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 1304.1,
+      "pdfCode": "PL/NM.ND.2"
+    },
+    "AG-305KBF": {
+      "listeEur": 50,
+      "iskontoOran": 0.25,
+      "netEur": 37.5,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 45.0,
+      "pdfCode": "AG-305KBF"
+    },
+    "AG-305BF": {
+      "listeEur": 53,
+      "iskontoOran": 0.25,
+      "netEur": 39.75,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 47.7,
+      "pdfCode": "AG-305BF"
+    },
+    "AG-232": {
+      "listeEur": 102,
+      "iskontoOran": 0.25,
+      "netEur": 76.5,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 91.8,
+      "pdfCode": "AG-232"
+    },
+    "AG-MF2": {
+      "listeEur": 399,
+      "iskontoOran": 0.25,
+      "netEur": 299.25,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 359.1,
+      "pdfCode": "AG-MF2"
+    },
+    "AG-8025E": {
+      "listeEur": 239,
+      "iskontoOran": 0.25,
+      "netEur": 179.25,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 215.1,
+      "pdfCode": "AG-8025E"
+    },
+    "AG-D30M": {
+      "listeEur": 403,
+      "iskontoOran": 0.25,
+      "netEur": 302.25,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 362.7,
+      "pdfCode": "AG-D30M"
+    },
+    "AG-03": {
+      "listeEur": 647,
+      "iskontoOran": 0.25,
+      "netEur": 485.25,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 582.3,
+      "pdfCode": "AG-03"
+    },
+    "BES-P25": {
+      "listeEur": 3795,
+      "iskontoOran": 0.25,
+      "netEur": 2846.25,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 3415.5,
+      "pdfLabel": "The Clover"
+    },
+    "BES-P24": {
+      "listeEur": 10602,
+      "iskontoOran": 0.25,
+      "netEur": 7951.5,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 9541.8,
+      "pdfLabel": "The Boulverdier"
+    },
+    "BES-P23": {
+      "listeEur": 9135,
+      "iskontoOran": 0.25,
+      "netEur": 6851.25,
+      "kdvOran": 0.2,
+      "fiyatEurKdvDahil": 8221.5,
+      "pdfLabel": "The Manhattan"
+    }
+  }
+}

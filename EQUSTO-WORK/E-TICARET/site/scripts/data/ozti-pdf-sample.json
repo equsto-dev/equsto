@@ -1,0 +1,224 @@
+{
+  "pages": 476,
+  "pages_with_text": 453,
+  "unique_codes_in_text": 5001,
+  "samples": [
+    {
+      "page": 5,
+      "chars": 4580,
+      "codes": [],
+      "text_head": "SOĞUK ÜNİTELER\nGN 2/1 Buzdolapları ve Derin Dondurucular\n159-171\nTezgah Tipi Soğutucular\n172-183\nSlim Tip Buzdolapları\n184\nTezgah Tipi Soğutucular  İçin Tabla Seçenekleri\n185\nTezgah Tipi Havuzlu Buzdolabı\n185\nTezgah Tipi Evyeli Buzdolabı\n186\nTezgah Tipi Pizza Salata Hazırlık Üniteli Buzdolabı\n186\nPizza Hazırlık Dolabı\n187\nTezgah Tipi 4 GN 1/1 Havzalı Buzdolabı\n187\nSalatalar İçin Tezgah Tipi Buzdolabı Vitrini\n187\nTezgah Altı Soğutucular\n188-189\nSoğuk Hazırlık Üniteleri\n191\nBuz Makineleri\n192-203\nDondurma Makineleri\n204-206\nSoğutucu Dolaplar\n207-208\nSplit Tipi Soğutma Üniteleri\n209-211\n900 SERİ PİȘİRİCİLER\nGazlı Kuzineler & Gazlı Set Üstü Ocaklar\n3\nElektrikli Kuzineler & Elektrikli Set Üstü Ocaklar\n4\nWok Ocaklar & Kapalı Döküm Ocak\n5\nİndüksiyonlu & İnfrared Seramik Ocaklar\n6\nGazlı Izgaralar\n"
+    },
+    {
+      "page": 6,
+      "chars": 1790,
+      "codes": [],
+      "text_head": "ÇALIȘMA TEZGAHLARI VE EVYELER\nEl Yıkama Evyeleri\n251-253\nEvye Tablaları\n254-256\nEvyeli Tezgahlar\n257-267\nÇalışma Tezgahları\n268-275\nDolaplar ve Raﬂar\n276\nİstif Raﬂarı\n277-278\nDavlumbazlar\n279-280\nYağ Tutucu\n282\nYer Izgaraları\n282-290\nTEȘHİR ÜNİTELERİ\nServis Üniteleri\n293-300 \nBanket Arabaları\n301-309\nTabak Dispenserleri\n312-313\nSalad Barlar\n314\nTeşhir Üniteleri\n315-319\nDuvar Tipi Teşhir Üniteleri\n320-321\nAnkastre Self Servis Teşhir Üniteleri\n322-325\nNefeslikler \n326-328\nHareketli Bain Marieler\n330-331\nArabalar\n332-336\nÇok Amaçlı Arabalar\n337-340\nÇöp Kovaları\n341\nÇöp Konteynerleri\n342\nSETÜSTÜ MUTFAK EKİPMANLARI\nServis Gereçleri\n345-352\nChaﬁng Dishler\n353-357\nHelvane ve Sığ Tencereler\n358\nSilindirik Tencereler\n359-360\nKaçarola ve Buharlı Pişiriciler\n361-362\nTavalar\n363-366\nBakır Sunum Ekipma"
+    },
+    {
+      "page": 8,
+      "chars": 1029,
+      "codes": [],
+      "text_head": "900 SERİ\nPİȘİRİCİLER\nGazlı Kuzineler & Gazlı Set Üstü Ocaklar\n3\nElektrikli Kuzineler & Elektrikli Set Üstü Ocaklar\n4\nWok Ocaklar & Kapalı Döküm Ocak\n5\nİndüksiyonlu & İnfrared Seramik Ocaklar\n6\nGazlı Izgaralar\n7\nElektrikli Izgaralar\n8\nLavataşlı & Döküm Izgaralar\n9\nGazlı & Elektrikli Fritözler\n10\nGazlı & Elektrikli Makarna Fritözleri\n11\nElektrikli Patates Dinlendirme & Gazlı - Elektrikli Benmariler\n12\nGazlı & Elektrikli Kaynatma Tenceresi\n13-14\nGazlı & Elektrikli Devrilir Tavalar\n15\nDevrilir Kaynatma Tencereleri\n16\nBuharlı Kaynatma Tenceresi\n17\nDolaplar ve Taban Raﬂarı\n18\nAksesuarlar\n19\nOptimum 900 Seri\nOptimum Seri Gazlı Fırın ve Gazlı Set Üstü Ocaklar\n20\nOptimum Seri Elektrikli Fırın ve Set Üstü Ocaklar\n21\nOptimum Seri Wok Ocak ve İndüksiyonlu Ocak\n22\nOptimum Seri Gazlı ve Elektrikli Izgar"
+    },
+    {
+      "page": 9,
+      "chars": 3592,
+      "codes": [
+        "7865.N1.80908.10",
+        "7865.N1.80908.10P",
+        "7865.N1.12908.10",
+        "7865.N1.80908.12",
+        "7865.N1.12908.50",
+        "7865.N1.80908.10E",
+        "7865.N1.80908.10PE",
+        "7865.N1.12908.10E"
+      ],
+      "text_head": "900 SERİ\nPİŞİRİCİLER\n3\nKOD\nTİP\nG\nD\nY\nMODEL\nGERİLİM\nFIRIN GÜCÜ\nBRÜLÖR GÜCÜ\nTOPLAM GÜÇ\nFİYAT\n7865.N1.80908.10\nOSOGF 8090\n800\n900\n850\nGAZ\n-\n8 kW\n2 x 6 + 2 x 10 kW\n40 kW\n7865.N1.80908.10P\nOSOGF 8090 P\n800\n900\n850\nGAZ\n-\n8 kW\n4 x 10 kW\n48 kW\n7865.N1.12908.10\nOSOGF 12090\n1200\n900\n850\nGAZ\n-\n8 kW\n3 x 6 + 3 x 10 kW\n56 kW\n7865.N1.80908.12\nOSOGF 8090C\n800\n900\n850\nGAZ\n-\n8 kW\n10 kW\n18 kW\n7865.N1.12908.50\nOSOGF 12090 S\n1200\n900\n850\nGAZ\n-\n13 kW\n3 x 6 + 3 x 10 kW\n61 kW\n7865.N1.80908.10E\n \nOSOGEF 8090\n800\n900\n850\nELEKT\n400 V 3 NPE 50/60 Hz\n6 kW\n2 x 6 + 2 x 10 kW\n38 kW\n7865.N1.80908.10PE\n \nOSOGEF 8090 P \n800\n900\n850\nELEKT\n400 V 3 NPE 50/60 Hz\n6 kW\n4 x 10 kW\n46 kW\n7865.N1.12908.10E\n \nOSOGEF 12090 \n1200\n900\n850\nELEKT\n400 V 3 NPE 50/60 Hz\n6 kW\n3 x 6 + 3 x 10 kW\n54 kW\n7865.N1.12908.50E\n \nOSOGEF 12090 S\n1200\n900\n"
+    },
+    {
+      "page": 10,
+      "chars": 2569,
+      "codes": [
+        "7865.N1.80908.11",
+        "7865.N1.12908.11",
+        "7865.N1.12908.51",
+        "7865.N1.40903.21",
+        "7865.N1.80903.21",
+        "7865.N1.12903.21"
+      ],
+      "text_head": "900 SERİ\nPİŞİRİCİLER 4\nKOD\nTİP\nG\nD\nY\nMODEL\nGERİLİM\nFIRIN GÜCÜ\nFIRIN SICAKLIĞI\nTOPLAM GÜÇ\nFİYAT\n7865.N1.80908.11\nOSOEF 8090\n800\n900\n850\nELEKT\n400V/3 NPE 50/60Hz\n6 kW\n50 - 300°C\n22 kW\n7865.N1.12908.11\nOSOEF 12090\n1200\n900\n850\nELEKT\n400V/3 NPE 50/60Hz\n6 kW\n50 - 300°C\n30 kW\n7865.N1.12908.51\nOSOEF 12090 S\n1200\n900\n850\nELEKT\n400V/3 NPE 50/60Hz\n9 kW\n50 - 300°C\n33 kW\nKOD\nTİP\nG\nD\nY\nMODEL\nGERİLİM\nBRÜLÖR GÜCÜ\nTOPLAM GÜÇ\nFİYAT\n7865.N1.40903.21\nOSOE 4090\n400\n900\n280\nELEKT\n400V/3 NPE 50/60Hz\n2 x 4 kw\n8 kw\n7865.N1.80903.21\nOSOE 8090\n800\n900\n280\nELEKT\n400V/3 NPE 50/60Hz\n4 x 4 kw\n16 kw\n7865.N1.12903.21\nOSOE 12090\n1200\n900\n280\nELEKT\n400V/3 NPE 50/60Hz\n6 x 4 kw\n24 kw\n• Tüm elektrikli kuzine ve set üstü ocaklarda özel kalıplar ile pres baskı yöntemi \n \nkullanılarak üretilmiş 2 mm kalınlığında 304 kalite pasla"
+    },
+    {
+      "page": 11,
+      "chars": 1961,
+      "codes": [
+        "7865.N1.40903.WK",
+        "7865.N1.80903.WK",
+        "7865.N1.80903.22"
+      ],
+      "text_head": "900 SERİ\nPİŞİRİCİLER\n5\nKOD\nTİP\nG\nD\nY\nMODEL\nTOPLAM GÜÇ\nFİYAT\n7865.N1.40903.WK\nOWG 4090\n400\n900\n280\nGAZ\n14 kW\n7865.N1.80903.WK\nOWG 8090\n800\n900\n280\nGAZ\n28 kW\nKOD\nTİP\nG\nD\nY\nMODEL\nTOPLAM \nGÜÇ\nFİYAT\n7865.N1.80903.22\nOSOG 8090 C\n800\n900\n280\nGAZ\n14 kW\n• Yüksek güçlü pik döküm brülörler ulaşılması hedeﬂenen yüksek sıcaklığı sağlamaktadır.\n• Döküm malzemeden üretilmiş yuvarlak ocak dökümü yoğun kullanıma göre tasarlanmıştır.\n• Sökülebilir yuvarlak ocak dökümü kolay temizlik imkanı sağlamaktadır.\n• Cihazın kullanıcıya bakan tarafında zahmetsizce çıkartılabilen ve içine su koyulabilmesi \n \nmümkün olan paslanmaz çelik kırıntı tepsisi sayesinde pişirme sonrası yapılması \n \ngereken temizlik zamanı minimum seviyeye indirilmiştir böylece işletmenin işçilik \n \nmaliyetinden tasarruf etmesine imkan verilmişt"
+    },
+    {
+      "page": 12,
+      "chars": 2505,
+      "codes": [
+        "7865.N1.40903.CS",
+        "7865.N1.80903.CS",
+        "7865.N1.40903.IS",
+        "7865.N1.80903.IS"
+      ],
+      "text_head": "900 SERİ\nPİŞİRİCİLER 6\nİndüksiyonlu & İnfrared Seramik Ocaklar\nKOD\nTİP\nG\nD\nY\nMODEL\nGERİLİM\nTOPLAM \nGÜÇ\nFİYAT\n7865.N1.40903.CS\nOSC 4090\n400\n900\n280\nELEKT\n400V / 3 NPE 50 / 60Hz\n6 kW\n7865.N1.80903.CS\nOSC 8090\n800\n900\n280\nELEKT\n400V / 3 NPE 50 / 60Hz\n12 kW\nKOD\nTİP\nG\nD\nY\nMODEL\nGERİLİM\nTOPLAM \nGÜÇ\nFİYAT\n7865.N1.40903.IS\nOSI 4090\n400\n900\n280\nELEKT\n230 V - NPE  50/60 Hz\n7 kW\n7865.N1.80903.IS\nOSI 8090\n800\n900\n280\nELEKT\n400 V - 3NPE  50/60 Hz\n14 kW\n• Seramik camlı ısıtma yüzeyine sahip her indüksiyonlu ocak bölümünün gücü 3,5 Kw’tır. \n \nAyrıca 2 veya 4 ocaklı ürünlerin her bölümü ayrı anahtar ile kontrol edilebilmektedir. \n• Seramik cam yüzeyin nerdeyse tamamı hiç ölü bölge olmadan kullanılabilmektedir.\n• Güvenliği arttırmak için her ocakta aşırı ısı koruma sistemi vardır.\n• Seramik cam yüzey temiz"
+    },
+    {
+      "page": 13,
+      "chars": 2803,
+      "codes": [
+        "7864.N1.40903.06",
+        "7864.N1.40903.06C",
+        "7864.N1.40903.03",
+        "7864.N1.40903.03C",
+        "7864.N1.80903.16",
+        "7864.N1.80903.16C",
+        "7864.N1.80903.19",
+        "7864.N1.80903.19C"
+      ],
+      "text_head": "900 SERİ\nPİŞİRİCİLER\n7\nGazlı Izgaralar\nKOD\nTİP\nG\nD\nY\nMODEL\nSICAKLIK\nGÜÇ\nPİŞİRME YÜZEYİ\nFİYAT\n7864.N1.40903.06\n OGG 4090\n400\n900\n280\nGAZ\n100 - 300 °C\n9 kW\nKarbon Çelik\n7864.N1.40903.06C\n OGG 4090\n400\n900\n280\nGAZ\n100 - 300 °C\n9 kW\nKrom\n7864.N1.40903.03\n OGG 4090 N\n400\n900\n280\nGAZ\n100 - 300 °C\n9 kW\nKarbon Çelik\n7864.N1.40903.03C\n OGG 4090 N\n400\n900\n280\nGAZ\n100 - 300 °C\n9 kW\nKrom\n7864.N1.80903.16\n OGG 8090\n800\n900\n280\nGAZ\n100 - 300 °C\n18 kW\nKarbon Çelik\n7864.N1.80903.16C\n OGG 8090\n800\n900\n280\nGAZ\n100 - 300 °C\n18 kW\nKrom\n7864.N1.80903.19\n OGG 8090 1/2 N\n800\n900\n280\nGAZ\n100 - 300 °C\n18 kW\nKarbon Çelik\n7864.N1.80903.19C\n OGG 8090 1/2 N\n800\n900\n280\nGAZ\n100 - 300 °C\n18 kW\nKrom\n7864.N1.80903.13\n OGG 8090 N\n800\n900\n280\nGAZ\n100 - 300 °C\n18 kW\nKarbon Çelik\n7864.N1.80903.13C\n OGG 8090 N\n800\n900\n280\nGAZ\n"
+    },
+    {
+      "page": 14,
+      "chars": 2849,
+      "codes": [
+        "7864.N1.40903.04",
+        "7864.N1.40903.04C",
+        "7864.N1.40903.01",
+        "7864.N1.40903.01C",
+        "7864.N1.80903.17",
+        "7864.N1.80903.17C",
+        "7864.N1.80903.14",
+        "7864.N1.80903.14C"
+      ],
+      "text_head": "900 SERİ\nPİŞİRİCİLER 8\nKOD\nTİP\nMODEL\nG\nD\nY\nGERİLİM\nGÜÇ\nSICAKLIK\nPİŞİRME YÜZEYİ\nFİYAT\n7864.N1.40903.04\n OGE 4090\nELEKT\n400\n900\n280\n400V / 3 NPE 50 / 60 Hz\n6 kW\n50 - 300 °C\nKarbon Çelik\n7864.N1.40903.04C\n OGE 4090 C\nELEKT\n400\n900\n280\n400V / 3 NPE 50 / 60 Hz\n6 kW\n50 - 300 °C\nKrom\n7864.N1.40903.01\n OGE 4090 N\nELEKT\n400\n900\n280\n400V / 3 NPE 50 / 60 Hz\n6 kW\n50 - 300 °C\nKarbon Çelik\n7864.N1.40903.01C\n OGE 4090 N C\nELEKT\n400\n900\n280\n400V / 3 NPE 50 / 60 Hz\n6 kW\n50 - 300 °C\nKrom\n7864.N1.80903.17\n OGE 8090\nELEKT\n800\n900\n280\n400V / 3 NPE 50 / 60 Hz\n12 kW\n50 - 300 °C\nKarbon Çelik\n7864.N1.80903.17C\n OGE 8090 C\nELEKT\n800\n900\n280\n400V / 3 NPE 50 / 60 Hz\n12 kW\n50 - 300 °C\nKrom\n7864.N1.80903.14\n OGE 8090 1/2 N\nELEKT\n800\n900\n280\n400V / 3 NPE 50 / 60 Hz\n12 kW\n50 - 300 °C\nKarbon Çelik\n7864.N1.80903.14C\n OGE 8"
+    },
+    {
+      "page": 15,
+      "chars": 2650,
+      "codes": [
+        "7864.N1.40903.12",
+        "7864.N1.80903.20",
+        "7864.N1.40903.72",
+        "7864.N1.80903.72",
+        "7864.N1.80903.70",
+        "7864.N1.12903.72",
+        "7864.N1.12903.70"
+      ],
+      "text_head": "900 SERİ\nPİŞİRİCİLER\n9\nLavataşlı & Döküm Izgaralar\n• Gaz ile çalışan lavataşlı ızgaralarımızda ürünün kapasitesine ve ölçüsüne göre \n \nkullanılan 1 veya 2 adet paslanmaz çelik mikro delikli brülörler uygun ısı dağılımını \n \nsağlamakta ve pişirme deneyimini en üst seviyeye taşımaktadır.\n• Özel tasarım ‘V’ şeklindeki ızgara sayesinde oluşan atık yağlar ön taraftaki tahliyeye \n \ngitmektedir.\n• Yüksekliği ayarlanabilen pişirme yüzeyi sayesinde ürün istenildiği şekilde pişirilmektedir. \n \nÇıkarılabilir pişirme yüzeyi bulaşık makinesinde yıkamaya uygundur.\n• İkili modellerde pişirme yüzey sıcaklığı 2 ayrı gaz valﬁ ile kontrol edilmektedir. \n \nBöylece iki farklı sıcaklıkta pişirme yüzey sıcaklığı sağlanmıştır.\n• Güvenliği arttırmak için emniyet tertibatlı gaz muslukları ve alev denetleme için \n \n"
+    },
+    {
+      "page": 16,
+      "chars": 1936,
+      "codes": [
+        "7856.N1.40908.02",
+        "7856.N1.80908.02",
+        "7856.N1.40908.04",
+        "7856.N1.80908.14"
+      ],
+      "text_head": "900 SERİ\nPİŞİRİCİLER 10\n• Fritözün haznesi monoblok pres baskı ve köşeleri yuvarlatılmıştır. Yuvarlatılmış \n \nköşeler kolay temizleme imkanı ve hijyen imkanı sağlamıştır.\n• Hazne kapasitesi 22 litredir.\n• Fritöz haznesinin kullanıcı tarafında bulunan özel indirim formu taşmayı engellemektedir. \n \nFritöz haznesi üst tablaya dikiş kaynak makinesi ile kaynak izleri belirgin olmayacak \n \nşekilde kaynatılmıştır.\n• Tamamı paslanmaz çelik gövdesi sayesinde uzun ömürlü ve dayanıklı yapıdadır.\n• Havuz içi yağ sıcaklığı termostat vasıtasıyla 190 °C’ye kadar ayarlanabilmektedir. \n \nYağın aşırı ısınmasını önlemek için güvenlik (limit) termostatı mevcuttur.\n• Gazlı modellerde yüksek verimli özel tasarım paslanmaz çelik brülörler mevcuttur. \n \nPiezo çakmaklı ateşleme sistemi ile güvenlik arttırılmıştır."
+    },
+    {
+      "page": 17,
+      "chars": 1667,
+      "codes": [
+        "7858.N1.40908.23",
+        "7858.N1.80908.23",
+        "7858.N1.40908.11",
+        "7858.N1.80908.11"
+      ],
+      "text_head": "900 SERİ\nPİŞİRİCİLER\n11\nKOD\nTİP\nG\nD\nY\nMODEL\nGERİLİM\nKAPASİTE\nTOPLAM GÜÇ\nFİYAT\n7858.N1.40908.23\n \nOMG 4090\n400\n900\n850\nGAZ\n-\n40 lt.\n18 kW\n7858.N1.80908.23\n \nOMG 8090\n800\n900\n850\nGAZ\n-\n40 + 40 lt.\n36 kW\n• Derin çekme ile yapılmış monoblok havuz AISI 316 paslanmaz çelikten yapılmıştır. \n \nHavuz uzun ömürlü ve temizliği kolaydır.\n• Havuz üst tablaya dikiş kaynağı ile kaynatılmıştır.\n• Her havuz için üst tablaya tutturulabilen delikli tahliye saç parçası mevcuttur. Havuz \n \niçinden alınan basketler bu sac parça üzerine fazla suyun süzülmesi için bırakılır.\n• 40 litrelik havuz hacmi  ile yüksek miktarda ürün alma imkanı sağlanmıştır.\n• Selenoid valf ile kontrol edilen su girişi ile havuza su doldurulabilmektedir. \n• Manuel su doldurma musluğu. \n• Büyük tahliye vanası ile havuz hızlı şekilde boşa"
+    },
+    {
+      "page": 18,
+      "chars": 1974,
+      "codes": [
+        "7831.N1.40903.01",
+        "7854.N1.40903.13",
+        "7854.N1.80903.13",
+        "7854.N1.40903.11",
+        "7854.N1.80903.11"
+      ],
+      "text_head": "900 SERİ\nPİŞİRİCİLER 12\nKOD\nTİP\nG\nD\nY\nMODEL\nGERİLİM\nTOPLAM GÜÇ\nFİYAT\n7831.N1.40903.01\nOPE 4090 400 900 280 ELEKT\n230V / NPE 50 / 60 Hz\n1 kW\n• Patates dinlendirme ünitesi genellikle fritözlerle birlikte kullanılmakta ,kızarmış \n \npatateslerin porselen infrared ısıtıcı vasıtasıyla sıcak kalması sağlanmaktadır. Ayrıca \n \nkızarmış patatesler üzerinde kalan fazla yağın hazne içine süzülmesini sağlanmaktadır. \n• Cihazın arka bölümüne yerleştirilmiş porselen infrared ısıtıcı bekletme süresini \n \narttırmaktadır.\n• Cihaz içindeki delikli  oval saç sayesinde patatesler  merkeze toplanmakta ve kolay \n \nşekilde alınabilmektedir.\n• Bain Marieler sıcak su buharı ile pişmiş ürünlerin servis sıcaklığında bekletmek için \n \nkullanılır.\n• Su havuza manuel olarak ilave edilir.\n• Tahliye vanası sayesinde suyu "
+    },
+    {
+      "page": 19,
+      "chars": 3205,
+      "codes": [
+        "7855.N1.80908.01",
+        "7855.N1.80908.02",
+        "7855.N1.10908.03",
+        "7855.N1.80908.11",
+        "7855.N1.80908.12",
+        "7855.N1.10908.13",
+        "7855.N1.80908.04",
+        "7855.N1.80908.05"
+      ],
+      "text_head": "900 SERİ\nPİŞİRİCİLER\n13\nKOD\nTİP\nG\nD\nY\nMODEL\nISITICI TÜRÜ\nGERİLİM\nKAPASİTE\nTOPLAM GÜÇ\nFİYAT\n7855.N1.80908.01\n \nOTGI 100\n800\n900\n850\nGAZ\nİndirekt \n230 V / NPE 50 / 60 Hz\n100 lt\n22 kW\n7855.N1.80908.02\n \nOTGI 150\n800\n900\n850\nGAZ\nİndirekt\n230 V / NPE 50 / 60 Hz\n150 lt\n22 kW\n7855.N1.10908.03\n \nOTGI 250\n1000\n900\n900\nGAZ\nİndirekt\n230 V / NPE 50 / 60 Hz\n250 lt\n33 kW\n7855.N1.80908.11\n \nOTGD 100\n800\n900\n850\nGAZ\nDirekt\n230 V / NPE 50 / 60 Hz\n100 lt\n22 kW\n7855.N1.80908.12\n \nOTGD 150\n800\n900\n850\nGAZ\nDirekt\n230 V / NPE 50 / 60 Hz\n150 lt\n22 kW\n7855.N1.10908.13\n \nOTGD 250\n1000\n900\n850\nGAZ\nDirekt\n230 V / NPE 50 / 60 Hz\n250 lt\n33 kW\n7855.N1.80908.04\nOTEI 100\n800\n900\n850\nELEKT\nİndirekt\n400 V / 3 NPE 50 / 60 Hz\n100 lt\n18 kW\n7855.N1.80908.05\nOTEI 150\n800\n900\n850\nELEKT\nİndirekt\n400 V / 3 NPE 50 / 60 Hz\n150 lt\n18"
+    },
+    {
+      "page": 20,
+      "chars": 4170,
+      "codes": [
+        "7855.N1.10118.13",
+        "7855.N1.10118.03",
+        "7855.N1.10118.07",
+        "7855.00300.01",
+        "7855.00400.01",
+        "7855.00500.01",
+        "7855.00300.02",
+        "7855.00400.02"
+      ],
+      "text_head": "900 SERİ\nPİŞİRİCİLER 14\nGazlı & Elektrikli Kaynatma Tenceresi\n• 2 mm kalınlıkta AISI 304 kalite üst tabla\n• Indirekt veya direkt ısıtma sistemi\n• Yuvarlak veya dikdörtgen monoblok kazanda hızlı pi•irme ve soteleme imkanı.\n• 250 Lt.’ye kadar farklı kapasitelerde gazlı ve elektrikli ürün yelpazesi. \n• Çift cidar kapaktaki yaylı kaldırma sistemi ile kolay kaldırma imkanı.\n• Yüksek kaliteli kazan izolasyonu ile enerji tasarrufu.\n• Elle kontrol edilebilen gaz valﬂeri veya enerji regülatörleri ile ayarlanabilir pişirme.\n• 2” krom kaplı tahliye vanası kilitlenebilir özelliklidir. Isı yalıtımlı kulp ile kullanıcıya \n \ngüvenli açma/kapama imkanı sağlanmıştır.\n• Sıcak ve soğuk su anahtarı ve selenoid ventil ile kazan kolay şekilde doldurulabilir.\n• Cidar suyu kontrolü için ayrı musluk mevcuttur.\n• I"
+    }
+  ],
+  "code_examples": [
+    "0110.03015.02",
+    "0110.03615.02",
+    "0110.03620.02",
+    "0110.04017.02",
+    "0110.04520.02",
+    "0110.05020.02",
+    "0110.05520.02",
+    "0110.06020.02",
+    "0110.06525.02",
+    "0110.07030.02",
+    "0110.08030.02",
+    "0110.09030.04",
+    "0110.10035.04",
+    "0110.11035.04",
+    "0110.11035.14",
+    "0112.00030.01",
+    "0112.00036.01",
+    "0112.00040.01",
+    "0112.00045.01",
+    "0112.00050.01",
+    "0112.00055.01",
+    "0112.00060.01",
+    "0112.00065.01",
+    "0112.00070.01",
+    "0112.00080.01",
+    "0112.00080.02",
+    "0112.00090.02",
+    "0112.00100.02",
+    "0112.00110.02",
+    "0114.07020.02",
+    "0114.08020.02",
+    "0114.09020.04",
+    "0114.11025.04",
+    "0120.01611.21",
+    "0120.01615.21",
+    "0120.01675.21",
+    "0120.01808.21",
+    "0120.01812.21",
+    "0120.02009.21",
+    "0120.02013.21"
+  ]
+}

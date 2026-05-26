@@ -1,0 +1,88 @@
+{
+  "source": "https://cocktailstations.com",
+  "scrapedAt": "2026-05-16T21:30:00Z",
+  "brand": "Cocktail Stations",
+  "seriesKey": "cocktail-stations-yeni-seri",
+  "seriesLabel": "Yeni Seri",
+  "seriesLabelEn": "New Series",
+  "seriesTwoKey": "cocktail-stations-seri-iki",
+  "seriesTwoLabel": "Seri İki",
+  "seriesTwoLabelEn": "Series Two",
+  "seriesTwoHero": {
+    "title": "Kokteyl Çalışma İstasyonları",
+    "titleEn": "Cocktail Workstations",
+    "lead": "Cocktail Stations portföyü — Basic, Plus ve Pro hatları, mobil ve özel ölçü çözümler — Besos'ta Seri İki: tam ekran editoryal vitrin.",
+    "leadEn": "Cocktail Stations portfolio — Basic, Plus and Pro lines, mobile and custom builds — on Besos as Series Two: full-width editorial showcase.",
+    "ctaCatalog": "Kataloğu incele",
+    "ctaCatalogEn": "Browse catalog",
+    "ctaProjectHref": "pfos.html",
+    "ctaProject": "Proje teklifi al",
+    "ctaProjectEn": "Request project quote"
+  },
+  "hero": {
+    "kicker": "Besos × Cocktail Stations",
+    "kickerEn": "Besos × Cocktail Stations",
+    "title": "Kokteyl Çalışma İstasyonları",
+    "titleEn": "Cocktail Workstations",
+    "lead": "Barselona merkezli Cocktail Stations portföyü — Basic, Plus ve Pro çalışma istasyonları, portable bar, mobil bar ve özel ölçü çözümler — Besos'ta yeni seri olarak.",
+    "leadEn": "Barcelona-based Cocktail Stations — Basic, Plus and Pro workstations, portable and mobile bars, custom stations — presented on Besos as our new series.",
+    "ctaCatalog": "Kataloğu incele",
+    "ctaCatalogEn": "Browse catalog",
+    "ctaProjectHref": "pfos.html",
+    "ctaProject": "Proje teklifi al",
+    "ctaProjectEn": "Request project quote"
+  },
+  "stats": [
+    { "value": "40+", "label": "Yıl deneyim", "labelEn": "Years experience" },
+    { "value": "6", "label": "Workstation hattı", "labelEn": "Workstation lines" },
+    { "value": "3", "label": "Pro boyutu", "labelEn": "Pro sizes" }
+  ],
+  "lines": [
+    {
+      "key": "basic",
+      "title": "Basic",
+      "titleTr": "Basic Serisi",
+      "blurb": "1.0 ve 2.0 — speed rail ve yapılandırılabilir cuba.",
+      "blurbEn": "1.0 and 2.0 with speed rail and configurable cuba."
+    },
+    {
+      "key": "plus",
+      "title": "Basic Plus",
+      "titleTr": "Basic Plus",
+      "blurb": "Kesim tahtası ve atık ile mise en place odaklı.",
+      "blurbEn": "Cutting board and waste for mise en place."
+    },
+    {
+      "key": "pro",
+      "title": "Pro",
+      "titleTr": "Pro Serisi",
+      "blurb": "Evye, shaker yıkama — Mini / Individual / Double.",
+      "blurbEn": "Sink, rinser — Mini / Individual / Double."
+    }
+  ],
+  "method": [
+    {
+      "n": "01",
+      "title": "Keşif",
+      "titleEn": "Discovery",
+      "text": "Bar konsepti, servis hacmi ve ergonomi gereksinimlerini birlikte tanımlarız.",
+      "textEn": "We define bar concept, service volume and ergonomic requirements together."
+    },
+    {
+      "n": "02",
+      "title": "İstasyon seçimi",
+      "titleEn": "Station selection",
+      "text": "Basic, Plus veya Pro hattından doğru modül ve boy kombinasyonu.",
+      "textEn": "Right module and size from Basic, Plus or Pro lines."
+    },
+    {
+      "n": "03",
+      "title": "Üretim ve teslim",
+      "titleEn": "Build and delivery",
+      "text": "Cocktail Stations üretimi; Besos proje koordinasyonu ve sahaya kurulum.",
+      "textEn": "Cocktail Stations manufacturing with Besos project coordination and site install."
+    }
+  ],
+  "pdfCatalogUrl": "https://drive.google.com/file/d/1GL1UqqkzODqPWX9UA-sP1RwxQ_pENRAL/view?usp=sharing",
+  "sourceUrl": "https://cocktailstations.com/"
+}

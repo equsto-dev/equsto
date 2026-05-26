@@ -1,0 +1,358 @@
+{
+  "version": "3",
+  "kaynak": "PFOS-SORU-KATALOG.md",
+  "guncelleme": "2026-05-24",
+  "kodDosyasi": "E-TICARET/site/lib/pfos/proje-akis/wizard-questions.ts",
+  "konseptDosyasi": "E-TICARET/site/lib/pfos/proje-akis/konsept-tanimlari.ts",
+  "sorular": [
+    {
+      "id": "q_meslek",
+      "adim": "01",
+      "panel": "A",
+      "metin": "Mesleğiniz",
+      "type": "select",
+      "zorunlu": true,
+      "secenekler": [
+        "Yatırımcı",
+        "Şef / Aşçı",
+        "Satınalma",
+        "Mimar",
+        "İşletme Müdürü",
+        "Franchise",
+        "Söylemek istemiyorum",
+        "Bilmiyorum"
+      ],
+      "motorEtkisi": "analitik",
+      "durum": "kod"
+    },
+    {
+      "id": "q_ust_segment",
+      "adim": "03",
+      "panel": "C1",
+      "metin": "Ne tür işletme açmak istiyorsunuz?",
+      "type": "select",
+      "zorunlu": true,
+      "secenekler": [
+        "Restoran",
+        "Kafe / Coffee Shop",
+        "Fast Food / QSR",
+        "Pastane & Fırın",
+        "Bar & Lounge",
+        "Otel F&B",
+        "Catering",
+        "Bulut Mutfak",
+        "Üretim / Fabrika",
+        "Bilmiyorum"
+      ],
+      "mapsTo": "agac.ust-segment",
+      "motorEtkisi": "q_dukkan_turu secenekleri",
+      "durum": "kod"
+    },
+    {
+      "id": "q_franchise_marka",
+      "adim": "3f",
+      "panel": "C1",
+      "metin": "Franchise marka adı (opsiyonel)",
+      "type": "text",
+      "zorunlu": false,
+      "durum": "kod"
+    },
+    {
+      "id": "q_dukkan_turu",
+      "adim": "04",
+      "panel": "C2",
+      "metin": "Dükkan türü — işletme modeli",
+      "type": "select_conditional",
+      "zorunlu": true,
+      "gosterIf": "q_ust_segment",
+      "mapsTo": "konsept.id",
+      "motorEtkisi": "motorSlug",
+      "durum": "kod",
+      "dallanma": {
+        "Restoran": [
+          "Steakhouse",
+          "Balık Restaurant",
+          "Kebapçı",
+          "Pizzacı",
+          "Türk / Esnaf lokanta",
+          "Meyhane",
+          "All Dining Cafe",
+          "Fine Dining",
+          "Dünya Mutfağı",
+          "Gurme Şarküteri",
+          "Bilmiyorum"
+        ],
+        "Kafe / Coffee Shop": ["Coffee Shop", "Kafeterya", "Pastane / Fırın", "Bilmiyorum"],
+        "Fast Food / QSR": [
+          "Burger",
+          "Pizza (paket)",
+          "Fried Chicken",
+          "Döner / Dürüm",
+          "Pide / Lahmacun",
+          "Bilmiyorum"
+        ],
+        "Pastane & Fırın": ["Artisan / butik", "Endüstriyel fırın", "Bilmiyorum"],
+        "Bar & Lounge": [
+          "Kokteyl Bar",
+          "Wine Bar",
+          "Beer Pub",
+          "Irish Pub",
+          "Mixology Bar",
+          "Lounger Bar",
+          "Bilmiyorum"
+        ],
+        "Otel F&B": [
+          "Şehir Oteli (Business)",
+          "Resort Otel",
+          "Dağ-Kayak Oteli",
+          "Tatil Oteli",
+          "Bilmiyorum"
+        ],
+        "Catering": [
+          "Üretim Fabrikası",
+          "Yerinde Üretim",
+          "Taşıma Yemek (Servis & Yıkama)",
+          "Bilmiyorum"
+        ],
+        "Bulut Mutfak": [
+          "Döner",
+          "Pizza",
+          "Pide & Lahmacun",
+          "Burger",
+          "Ev Yemekleri",
+          "Kebap & Türk Mutfağı",
+          "Bilmiyorum"
+        ],
+        "Üretim / Fabrika": ["500–2000 m²", "2000–5000 m²", "5000–10000 m²", "Bilmiyorum"],
+        "Bilmiyorum": ["Bilmiyorum"]
+      }
+    },
+    {
+      "id": "q_balik_alt",
+      "adim": "04a",
+      "panel": "C3",
+      "metin": "Balık işletme modeli",
+      "type": "select",
+      "zorunlu": true,
+      "gosterIf": "q_dukkan_turu=Balık Restaurant",
+      "mapsTo": "restaurant_balik.altTip",
+      "motorEtkisi": "mahalle | 80-150 | 150-250",
+      "durum": "kod",
+      "secenekler": [
+        "Mahalle balıkçısı",
+        "Balık Restaurant",
+        "Balık lokantası",
+        "Seafood bistro",
+        "Bilmiyorum"
+      ]
+    },
+    {
+      "id": "q_fast_alt",
+      "adim": "04b",
+      "panel": "C3",
+      "metin": "Fast food alt tip",
+      "type": "select",
+      "zorunlu": true,
+      "gosterIf": "q_ust_segment=Fast Food / QSR",
+      "mapsTo": "fast_food.altTip",
+      "motorEtkisi": "planlanan",
+      "durum": "kod",
+      "secenekler": [
+        "Burger",
+        "Fried Chicken",
+        "Döner / Dürüm",
+        "Pide / Lahmacun",
+        "Pizza (paket)",
+        "Hot Dog / Snack",
+        "Bilmiyorum"
+      ]
+    },
+    {
+      "id": "q_ne_pisireceksin",
+      "adim": "03E",
+      "panel": "D",
+      "metin": "Ne pişireceksiniz?",
+      "type": "multi_select",
+      "zorunlu": true,
+      "gosterIf": "q_dukkan_turu",
+      "mapsTo": "menu.hattlari",
+      "motorEtkisi": "zone ipucu",
+      "durum": "kod",
+      "secenekler": [
+        "Kahvaltı",
+        "Izgara",
+        "Kebap",
+        "Döner",
+        "Pizza",
+        "Pide / Lahmacun",
+        "Burger",
+        "Fried Chicken",
+        "Balık / Deniz Ürünleri",
+        "Ev Yemekleri / Sulu Yemek",
+        "Makarna",
+        "Tatlı / Pastane",
+        "Kahve / İçecek",
+        "Meze",
+        "Açık Büfe",
+        "Diğer",
+        "Bilmiyorum"
+      ]
+    },
+    {
+      "id": "q_m2",
+      "adim": "05",
+      "panel": "E",
+      "metin": "Toplam kullanım alanı (m²)",
+      "type": "number",
+      "zorunlu": true,
+      "mapsTo": "m2",
+      "motorEtkisi": "bant / olcek",
+      "durum": "kod"
+    },
+    {
+      "id": "q_lokasyon",
+      "adim": "5A",
+      "panel": "B",
+      "metin": "Şehir / bölge (lokasyon)",
+      "type": "text",
+      "zorunlu": false,
+      "mapsTo": "lokasyon",
+      "motorEtkisi": "nakliye",
+      "durum": "kod"
+    },
+    {
+      "id": "q_acik_adres",
+      "adim": "5B",
+      "panel": "B",
+      "metin": "Açık adres — ek not",
+      "type": "text",
+      "zorunlu": false,
+      "mapsTo": "lokasyon.not",
+      "motorEtkisi": "montaj",
+      "durum": "kod"
+    },
+    {
+      "id": "q_karar",
+      "adim": "06",
+      "panel": "F",
+      "metin": "Sonraki adım — tercihiniz?",
+      "type": "select",
+      "zorunlu": true,
+      "gosterIf": "q_m2",
+      "motorEtkisi": "teklif | detaylandir",
+      "durum": "kod",
+      "secenekler": [
+        "Teklifi al (PDF çıktı)",
+        "Projeyi detaylandır (altyapı ve yardımcı ekipman)",
+        "Bilmiyorum"
+      ]
+    }
+  ],
+  "konseptler": [
+    {
+      "id": "restaurant_steakhouse",
+      "ustSegment": "Restoran",
+      "dukkanSecim": "Steakhouse",
+      "motorSlug": "steakhouse",
+      "durum": "aktif",
+      "m2Min": 80,
+      "m2Max": 250,
+      "bantlar": ["80-150", "150-250"]
+    },
+    {
+      "id": "restaurant_balik",
+      "ustSegment": "Restoran",
+      "dukkanSecim": "Balık Restaurant",
+      "motorSlug": "balikci",
+      "durum": "aktif",
+      "m2Min": 80,
+      "m2Max": 250,
+      "bantlar": ["mahalle", "80-150", "150-250"],
+      "altSoru": "q_balik_alt"
+    },
+    {
+      "id": "restaurant_kebap",
+      "ustSegment": "Restoran",
+      "dukkanSecim": "Kebapçı",
+      "motorSlug": "kebap-ortadogu",
+      "durum": "aktif",
+      "m2Min": 200,
+      "m2Max": 300
+    },
+    {
+      "id": "pizzaci",
+      "ustSegment": "Restoran",
+      "dukkanSecim": "Pizzacı",
+      "motorSlug": "pizzaci",
+      "durum": "motor",
+      "m2Min": 80,
+      "m2Max": 300
+    },
+    {
+      "id": "turk_restoran",
+      "ustSegment": "Restoran",
+      "dukkanSecim": "Türk / Esnaf lokanta",
+      "motorSlug": "turk-restoran",
+      "durum": "motor",
+      "m2Min": 100,
+      "m2Max": 500
+    },
+    {
+      "id": "meyhane",
+      "ustSegment": "Restoran",
+      "dukkanSecim": "Meyhane",
+      "motorSlug": "meyhane",
+      "durum": "motor",
+      "m2Min": 100,
+      "m2Max": 500
+    },
+    {
+      "id": "all_day_dining",
+      "ustSegment": "Restoran",
+      "dukkanSecim": "All Dining Cafe",
+      "motorSlug": "all-day-dining-cafe",
+      "durum": "motor",
+      "m2Min": 150,
+      "m2Max": 400
+    },
+    {
+      "id": "coffee_shop",
+      "ustSegment": "Kafe / Coffee Shop",
+      "dukkanSecim": "Coffee Shop",
+      "motorSlug": "coffee-shop",
+      "durum": "aktif",
+      "m2Min": 60,
+      "m2Max": 300
+    },
+    {
+      "id": "pastane",
+      "ustSegment": "Pastane & Fırın",
+      "dukkanSecim": "Pastane / Fırın",
+      "motorSlug": null,
+      "durum": "planlanan",
+      "m2Min": 40,
+      "m2Max": 150
+    },
+    {
+      "id": "fast_food",
+      "ustSegment": "Fast Food / QSR",
+      "dukkanSecim": "Fast food",
+      "motorSlug": null,
+      "durum": "planlanan",
+      "m2Min": 40,
+      "m2Max": 200,
+      "altSoru": "q_fast_alt"
+    }
+  ],
+  "dukkanMotorEsleme": {
+    "Steakhouse": "restaurant_steakhouse",
+    "Balık Restaurant": "restaurant_balik",
+    "Kebapçı": "restaurant_kebap",
+    "Pizzacı": "pizzaci",
+    "Türk / Esnaf lokanta": "turk_restoran",
+    "Meyhane": "meyhane",
+    "All Dining Cafe": "all_day_dining",
+    "Coffee Shop": "coffee_shop",
+    "Pastane / Fırın": "pastane"
+  }
+}

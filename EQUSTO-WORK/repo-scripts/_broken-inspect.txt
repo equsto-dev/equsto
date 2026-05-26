@@ -1,0 +1,31 @@
+max_col 18
+merges: 4
+M1:P2
+A5:P5
+A7:G7
+H7:P7
+R1: A='PROFORMA FATURA' | J='Sayı:'
+R2: A='Proje:' | C='Coca-Cola İçecek — FBE20T Isparta' | G='Müşteri:' | H='Alper Bey' | J='Tarih:'
+R3: A='TCMB Efektif Satış Kuru – 22.04.2026' | J=52.8238 | O='EUR/TRY  (kur hücresi: J3 — güncellendi
+R4: A='Böl.' | B='Grup' | C='Poz' | D='EK' | E='Stok no' | F='Tanımı' | G='Kaynak' | H='Boy' | I='En' | J='Yük.' | K='Elk.\nkW' | L='Gaz\nkW' | M='Adet' | N='Satış' | O='Toplam Satış' | P='Döviz' | Q='Toplam Satış' | R='Döviz'
+R18: H='Sütun toplamları →' | K='=K6*M6' | L='=L6*M6' | M='=K6*M6' | N='=L6*M6'
+R19: F='A. TOPLAM' | O='=O6' | P='EUR' | Q='=O6' | R='EUR'
+R20: F='GENEL TOPLAM  (KDV HARİÇ)' | O='=O19' | P='EUR' | Q='=O19' | R='EUR'
+w1=4.5
+w2=5.0
+w3=4.5
+w4=3.5
+w5=12.0
+w6=28.0
+w7=10.0
+w8=7.0
+w9=7.0
+w10=7.0
+w11=7.0
+w12=7.0
+w13=5.5
+w14=11.0
+w15=12.0
+w16=5.5
+w17=13.0
+w18=13.0

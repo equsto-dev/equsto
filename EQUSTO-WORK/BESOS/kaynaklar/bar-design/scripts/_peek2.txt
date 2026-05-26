@@ -1,0 +1,19 @@
+﻿<motion class="body" -1
+<div class="body" 66287
+hero-banner 14614
+right-col 12411
+eq-home-cm-mutbex 73541
+</body> 1326
+<div class="body" id="body">
+
+    <div class="right-col">
+      <div class="hero-banner eq-world-first-banner">
+        <p class="hero-platform-line" data-i18n="home.banner_platform">Equsto End³striyel Mutfak &amp; Gastronomi Platformu</p>
+        <h1 class="hero-h1 eq-wf-headline" data-i18n="home.banner_world_first">D▄NYADA B¦R ¦LK!</h1>
+        <p class="eq-sr-only">
+          Equsto, T³rkiye merkezli end³striyel mutfak ve gastronomi platformudur: pi■irme, so­utma, y²kama, haz²rl²k, kahve ve i
+main at 85091 <main class="main eq-mx-o-2">
+        <div class="main-top">
+          <div class="eq-cm-main-hgroup">
+            <div class="main-title" data-i18n="home.main_title">T³m ▄r³nler</div>
+            <p 
