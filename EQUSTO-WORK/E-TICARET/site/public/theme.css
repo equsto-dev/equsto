@@ -52,11 +52,11 @@
   --eq-hdr-srch-bg: #ffffff;
   --eq-hdr-srch-muted: #5c5c5c;
   --eq-hdr-srch-text: #1a1a1a;
-  /* Header wordmark — önceki ölçeğin %80’i */
-  --eq-hdr-logo-h: clamp(18px, 2.08vw, 27px);
-  --eq-hdr-logo-max-w: min(160px, 34vw);
-  --eq-hdr-logo-wordmark-h: 14px;
-  --eq-hdr-logo-link-max-w: 34vw;
+  /* Header wordmark — önceki ölçeğin %72’si (iki kez %10 küçültme) */
+  --eq-hdr-logo-h: clamp(16px, 1.87vw, 24px);
+  --eq-hdr-logo-max-w: min(144px, 31vw);
+  --eq-hdr-logo-wordmark-h: 13px;
+  --eq-hdr-logo-link-max-w: 31vw;
   /* Üst arama barı + departman şeridi — çekmece ve filtre sütunu bu çizgiden başlar */
   --eq-filter-col-sticky-top: 92px;
   --eq-filter-col-sticky-max-h: calc(100vh - 96px);
@@ -203,7 +203,7 @@ header.hdr > a.logo,
 header.hdr > a.logo.logo--text {
   flex: 0 0 auto;
   align-self: center;
-  padding: 8px 11px 8px 16px;
+  padding: 7px 10px 7px 14px;
   margin: 0;
   color: var(--eq-hdr-bar-text) !important;
   overflow: visible;

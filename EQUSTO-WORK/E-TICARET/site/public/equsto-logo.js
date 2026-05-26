@@ -38,7 +38,7 @@
     return (
       '<img src="' +
       src +
-      '" alt="EQUSTO" class="eq-logo-img eq-logo-wordmark" width="454" height="82" decoding="async" fetchpriority="high">'
+      '" alt="EQUSTO" class="eq-logo-img eq-logo-wordmark" width="409" height="74" decoding="async" fetchpriority="high">'
     );
   }
 
