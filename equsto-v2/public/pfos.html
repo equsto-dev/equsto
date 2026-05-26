@@ -408,8 +408,11 @@ header.hdr .hdr-alici{display:flex;flex-direction:column;gap:1px;padding:0 10px;
   body.eq-pfos{
     padding-bottom:calc(58px + env(safe-area-inset-bottom,0px));
   }
-  body.eq-pfos .breadcrumb,
-  body.eq-pfos .footer{display:none}
+  body.eq-pfos .breadcrumb{display:none}
+  body.eq-pfos footer.footer.eq-mfoot{
+    display:block!important;
+    margin-bottom:calc(58px + env(safe-area-inset-bottom,0px));
+  }
   body.eq-pfos .pf-main{padding:0}
   body.eq-pfos .pg-inner{padding-left:12px;padding-right:12px}
 
@@ -1715,12 +1718,7 @@ body.pfos-teklif-lightbox-open{overflow:hidden}
     </div><!-- /right-col -->
   </div><!-- /body -->
 
-    <footer class="footer">
-      <div class="refs">
-        <span style="font-size:10px;color:var(--eq-text-muted);">B2B · proje · kanal ortaklıkları</span>
-      </div>
-      <div>Çerez tercihlerini yönet</div>
-    </footer>
+    <footer class="footer" id="eq-shop-footer"></footer>
 </div><!-- /.pg -->
 
 <div class="pf-modal-backdrop" id="pf-modal" role="dialog" aria-modal="true" aria-labelledby="pf-modal-title" onclick="if(event.target===this)pfModalKapat()">
@@ -5210,6 +5208,7 @@ function teklifGonder(){
     });
 }
 </script>
+<script src="/eq-footer.js?v=20260530pfosfoot"></script>
 <script  src="/ecom-cart.js?v=20260524cart3"></script>
 <div class="drawer-overlay" id="drawerOverlay" onclick="__eqDrawerBackdropClick(event)">
   <button type="button" class="drawer-overlay-close" onclick="__eqDrawerCloseX(event)" aria-label="Kapat">×</button>
