@@ -16,6 +16,7 @@ const DEPT_HTML: Record<string, string> = {
   araba: "/araba.html",
   istif: "/istif.html",
   "set-ustu-mutfak": "/set-ustu-mutfak.html",
+  kuvetler: "/kuvetler.html",
 };
 
 function deptRewrites() {
@@ -88,7 +89,7 @@ const traceExcludes = [
 ];
 
 const nextConfig: NextConfig = {
-  outputFileTracingRoot: path.join(__dirname, "../../.."),
+  outputFileTracingRoot: path.join(__dirname),
   serverExternalPackages: [
     "@prisma/client",
     "prisma",
