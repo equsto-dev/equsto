@@ -71,6 +71,12 @@ if (!fs.existsSync(path.join(siteDir, "node_modules", ".bin", "next"))) {
 const adminCfg = path.join(siteDir, "scripts/generate-admin-config.mjs");
 if (fs.existsSync(adminCfg)) run(process.execPath, [adminCfg], siteDir);
 
+const nextDir = path.join(siteDir, ".next");
+if (fs.existsSync(nextDir)) {
+  fs.rmSync(nextDir, { recursive: true, force: true });
+  console.log("[vercel-build] .next temizlendi");
+}
+
 run(npx, ["--no-install", "prisma", "generate"], siteDir);
 run(npx, ["--no-install", "next", "build"], siteDir);
 

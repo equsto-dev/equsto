@@ -2,23 +2,26 @@
 
 Kod `main` branch’te; site **Vercel Production** deploy edilince güncellenir.
 
-## Hızlı (panel — 1 dakika)
+## Vercel panel (önemli)
 
 1. [vercel.com](https://vercel.com) → proje **equsto**
-2. **Settings → General → Root Directory** = `EQUSTO-WORK/E-TICARET/site`
-3. **Deployments** → en üstteki `main` commit
-4. **⋯ → Redeploy** → **Use existing Build Cache: KAPALI** → Redeploy
-5. **Ready** olunca: `https://equsto.com/data/dept/kahve.json` kontrol
-6. Vitrin sayfalarında Ctrl+F5
+2. **Root Directory** — ikisinden biri:
+   - **`./`** (repo kökü, önerilen) — `vercel.json` burada
+   - **`E-TICARET/site`** — bu durumda **Include files outside the root directory → Açık** (tam `app/` `EQUSTO-WORK/E-TICARET/site` içinde)
+   - **Kullanmayın:** `EQUSTO-WORK/E-TICARET/site` tek başına (eski `public/`), **equsto-v2**
+3. Build script `vercel-site-sync.mjs`: `public/` = `E-TICARET/site`, `app/` = tam kopya (EQUSTO-WORK)
+4. **Deployments** → son commit **Ready** (2026-05-27: Root Directory panelde `E-TICARET/site` onaylandi)
+5. Hata varsa: **Redeploy** → **Use existing Build Cache: KAPALI**
 
-## Otomatik (GitHub Actions)
+## Yerel geliştirme klasörü
 
-Repo → **Settings → Secrets → Actions** → `VERCEL_TOKEN`, `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID`
+Tek kaynak (Cursor workspace):
 
-Sonra **Actions → Vercel Production** veya `main`’e push.
+`C:\D Disk\EQUSTO-WORK\E-TICARET\site`
 
-## Doğrulama
+## Deploy sonrası kontrol
 
-- `https://equsto.com/shop/kahve` — departman PLP
-- `https://equsto.com/pfos` — Proje Fabrikası
-- `https://equsto.com/blog` — rehber dizini
+- https://equsto.com/shop/kuvetler
+- https://equsto.com/shop/market-reyonlari
+- https://equsto.com/shop/kahve
+- Sayfada **Ctrl+F5**
