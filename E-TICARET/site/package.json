@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "node scripts/generate-admin-config.mjs && npx next dev",
     "predev": "node scripts/generate-admin-config.mjs",
-    "build": "prisma generate && next build",
+    "build": "node scripts/vercel-prebuild.mjs && prisma generate && next build",
     "build:vercel-wrapper": "node build-from-workspace.mjs",
     "start": "next start",
     "lint": "eslint",
