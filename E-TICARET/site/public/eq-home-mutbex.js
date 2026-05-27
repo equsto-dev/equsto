@@ -43,7 +43,7 @@
       kuvetler: '/images/catalog/ozti/p50/ozti-6260-00072-70.jpg',
     },
     byGo: {
-      pfos: '/images/pfos/dis-mutfak-gece-render.jpg?v=20260527e',
+      pfos: '/images/pfos/dis-mutfak-gece-render.jpg?v=20260528a',
       besos: '/images/home/hero-bar-cocktailstation.png',
       marketReyon: '/images/catalog/ozti/p200/ozti-9805-im240x-nhc.jpg',
     },
@@ -122,7 +122,7 @@
       if (list && list.length) return list;
     }
     return [
-      { label: 'Proje Fabrikası', go: 'pfos', emoji: '📋', bg: '#dce8f4', frame: '#9eb8d4', image: '/images/pfos/dis-mutfak-gece-render.jpg?v=20260527e' },
+      { label: 'Proje Fabrikası', go: 'pfos', emoji: '📋', bg: '#dce8f4', frame: '#9eb8d4', image: '/images/pfos/dis-mutfak-gece-render.jpg?v=20260528a' },
       { label: 'Bar Design', go: 'besos', emoji: '🍸', bg: '#e0f2f1', image: '/images/home/hero-bar-cocktailstation.png?v=20260520barcover' },
       { label: 'Pişirme Ekipmanları', dept: 'pisirme', emoji: '🍳', bg: '#e8f8ee', image: '/images/catalog/atalay/p7/atalay-e-aei---360.jpg' },
       { label: 'Soğutma Ekipmanları', dept: 'sogutma', emoji: '❄️', bg: '#e8f4fc', image: '/images/catalog/ozti/p200/ozti-9805-im240x-nhc.jpg' },
