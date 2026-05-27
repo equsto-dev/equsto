@@ -16,163 +16,46 @@
     return __navT(it.labelKey, it.label || "");
   }
 
-  /** Proso market reyon — PLP facet (?tip=proso-…). */
-  function prosoNavItem(label, tip) {
-    var href =
-      window.EqDeptTips && typeof window.EqDeptTips.marketReyonHref === "function"
-        ? window.EqDeptTips.marketReyonHref(tip || "")
-        : "market-reyonlari.html" + (tip ? "?tip=" + encodeURIComponent(tip) : "");
-    return { label: label, tip: tip || "", href: href };
-  }
-
-  /** Çağlayan vitrin serileri — kategori URL (?tip=caglayan-…), arama sayfası değil. */
-  function caglayanSeriesNavItem(label) {
-    var tip =
-      window.EqDeptTips && typeof window.EqDeptTips.caglayanSeriesTipId === "function"
-        ? window.EqDeptTips.caglayanSeriesTipId(label)
-        : "caglayan-" +
-          String(label || "")
-            .toLocaleLowerCase("tr")
-            .replace(/ğ/g, "g")
-            .replace(/ü/g, "u")
-            .replace(/ş/g, "s")
-            .replace(/ö/g, "o")
-            .replace(/ç/g, "c")
-            .replace(/ı/g, "i")
-            .replace(/İ/g, "i")
-            .trim();
-    var href =
-      window.EqDeptTips && typeof window.EqDeptTips.marketReyonHref === "function"
-        ? window.EqDeptTips.marketReyonHref(tip)
-        : "market-reyonlari.html?tip=" + encodeURIComponent(tip);
-    return { label: label, tip: tip, href: href };
-  }
-
+  /** Çağlayan kataloğu serileri — build ile güncellenir (caglayan-market-reyon-catalogue.json → navSubs). */
   var MARKET_REYON_SUBS = [
-    {
-      label: "Proso",
-      subs: [
-        prosoNavItem("Tüm Proso kataloğu", "proso-tumu"),
-        prosoNavItem("Sütlükler", "proso-sutluk"),
-        prosoNavItem("Şarküteri Reyonları", "proso-sarkuteri"),
-        prosoNavItem("Dikey Dondurucular", "proso-dikey-dondurucu"),
-        prosoNavItem("Ada Tipi", "proso-ada-tipi"),
-      ],
-    },
-    {
-      label: "Çağlayan",
-      subs: [
-        caglayanSeriesNavItem("NİLÜFER"),
-        caglayanSeriesNavItem("LOTUS"),
-        caglayanSeriesNavItem("NERGIS"),
-        prosoNavItem("Tüm Çağlayan kataloğu", "caglayan-tumu"),
-      ],
-    },
-    {
-      label: "Tüm market reyonları",
-      href:
-        typeof window.equstoUrl === "function"
-          ? window.equstoUrl("marketReyon")
-          : "market-reyonlari.html",
-    },
+    { label: "NİLÜFER", href: "market-reyonlari.html?q=N%C4%B0L%C3%9CFER", search: "NİLÜFER" },
+    { label: "LOTUS", href: "market-reyonlari.html?q=LOTUS", search: "LOTUS" },
+    { label: "NERGIS", href: "market-reyonlari.html?q=NERGIS", search: "NERGIS" },
+    { label: "LALE", href: "market-reyonlari.html?q=LALE", search: "LALE" },
+    { label: "İNCİ", href: "market-reyonlari.html?q=%C4%B0NC%C4%B0", search: "İNCİ" },
+    { label: "HERCAI", href: "market-reyonlari.html?q=HERCAI", search: "HERCAI" },
+    { label: "REYHAN", href: "market-reyonlari.html?q=REYHAN", search: "REYHAN" },
+    { label: "SARDUNYA", href: "market-reyonlari.html?q=SARDUNYA", search: "SARDUNYA" },
+    { label: "GARDENYA", href: "market-reyonlari.html?q=GARDENYA", search: "GARDENYA" },
+    { label: "ANEMON", href: "market-reyonlari.html?q=ANEMON", search: "ANEMON" },
+    { label: "AKASYA", href: "market-reyonlari.html?q=AKASYA", search: "AKASYA" },
+    { label: "BEGONVİL", href: "market-reyonlari.html?q=BEGONV%C4%B0L", search: "BEGONVİL" },
+    { label: "DEFNE", href: "market-reyonlari.html?q=DEFNE", search: "DEFNE" },
+    { label: "ERGUVAN", href: "market-reyonlari.html?q=ERGUVAN", search: "ERGUVAN" },
+    { label: "LEYLAK", href: "market-reyonlari.html?q=LEYLAK", search: "LEYLAK" },
+    { label: "MANOLYA", href: "market-reyonlari.html?q=MANOLYA", search: "MANOLYA" },
+    { label: "Tüm Çağlayan kataloğu", href: "market-reyonlari.html" },
   ];
 
-  function catalogueUrl(name) {
-    var url = "/data/" + name;
+  function hydrateCaglayanNavSubs() {
+    var url = "/data/caglayan-market-reyon-catalogue.json";
     try {
       if (typeof location !== "undefined" && location.protocol !== "http:" && location.protocol !== "https:") {
-        url = "./data/" + name;
+        url = "./data/caglayan-market-reyon-catalogue.json";
       }
     } catch (_) {}
-    return url;
-  }
-
-  function fetchCatalogue(name) {
-    return fetch(catalogueUrl(name), { cache: "no-store", headers: { Accept: "application/json" } })
+    return fetch(url, { cache: "no-store", headers: { Accept: "application/json" } })
       .then(function (r) {
         return r.ok ? r.json() : null;
       })
-      .catch(function () {
-        return null;
-      });
-  }
-
-  function buildProsoNavSubs(j) {
-    var out = [];
-    if (!j || !j.subs || !j.subs.length) return out;
-    j.subs.forEach(function (x) {
-      if (!x || !x.tip) return;
-      out.push(prosoNavItem(x.label || x.tip, x.tip));
-    });
-    return out;
-  }
-
-  function buildCaglayanNavSubs(j) {
-    var out = [];
-    if (!j || !j.subs || !j.subs.length) {
-      return out;
-    }
-    if (j.navSubs && j.navSubs.length) {
-      j.navSubs.forEach(function (x) {
-        if (!x) return;
-        if (x.href && x.href.indexOf("?q=") < 0 && x.href.indexOf("arama") < 0) {
-          out.push(x);
-          return;
-        }
-        var label = x.label || x.search || x.q || "";
-        if (!label || /tüm|tum/i.test(label)) return;
-        out.push(caglayanSeriesNavItem(label));
-      });
-      return out;
-    }
-    j.subs.forEach(function (x) {
-      if (!x) return;
-      var label = x.label || "";
-      if (!label || /tüm|tum/i.test(label)) return;
-      if (x.tip) {
-        var href =
-          window.EqDeptTips && typeof window.EqDeptTips.marketReyonHref === "function"
-            ? window.EqDeptTips.marketReyonHref(x.tip)
-            : "market-reyonlari.html?tip=" + encodeURIComponent(x.tip);
-        out.push({ label: label, tip: x.tip, href: href });
-        return;
-      }
-      out.push(caglayanSeriesNavItem(label));
-    });
-    if (out.length) {
-      out.push(prosoNavItem("Tüm Çağlayan kataloğu", "caglayan-tumu"));
-    }
-    return out;
-  }
-
-  function hydrateMarketReyonNavSubs() {
-    return Promise.all([
-      fetchCatalogue("prosogutma-market-reyon-catalogue.json"),
-      fetchCatalogue("caglayan-market-reyon-catalogue.json"),
-    ]).then(function (parts) {
-      var prosoSubs = buildProsoNavSubs(parts[0]);
-      var caglayanSubs = buildCaglayanNavSubs(parts[1]);
-      var next = [];
-      if (prosoSubs.length) {
-        next.push({ label: "Proso", subs: prosoSubs });
-      }
-      if (caglayanSubs.length) {
-        next.push({ label: "Çağlayan", subs: caglayanSubs });
-      }
-      next.push({
-        label: "Tüm market reyonları",
-        href:
-          typeof window.equstoUrl === "function"
-            ? window.equstoUrl("marketReyon")
-            : "market-reyonlari.html",
-      });
-      if (next.length > 1) {
+      .then(function (j) {
+        if (!j || !j.navSubs || !j.navSubs.length) return;
         MARKET_REYON_SUBS.length = 0;
-        next.forEach(function (x) {
+        j.navSubs.forEach(function (x) {
           MARKET_REYON_SUBS.push(x);
         });
-      }
-    });
+      })
+      .catch(function () {});
   }
 
   var NAV = [
@@ -292,34 +175,26 @@
       subs: [{ label: "CAMBRO" }, { label: "Portashelf" }],
     },
     {
-      id: "set-ustu-mutfak",
-      label: "Set Üstü Mutfak Ekipmanları",
-      href: "set-ustu-mutfak.html",
+      id: "kuvetler",
+      label: "Küvetler",
+      href: "kuvetler.html",
       subs: [
-        { label: "Servis Gereçleri", tip: "servis-gerecleri", search: "servis gereç" },
-        { label: "Chafing Dishler", tip: "chafing-dish", search: "chafing" },
-        { label: "Helvane ve Sığ Tencereler", tip: "helvane-sig-tencere", search: "helvane|sığ tencere|sig tencere" },
-        { label: "Silindirik Tencereler", tip: "silindirik-tencere", search: "silindirik tencere" },
-        { label: "Kaçarola ve Buharlı Pişiriciler", tip: "kaserola-buharli", search: "kaçarola|kaserola|buharlı pişirici|buharli pisirici" },
-        { label: "Tavalar", tip: "tavalar", search: "tava" },
-        { label: "Bakır Sunum Ekipmanları", tip: "bakir-sunum", search: "bakır sunum|bakir sunum" },
-        { label: "Döküm Tencere ve Tavalar", tip: "dokum-tencere-tava", search: "döküm tencere|dokum tencere|lava döküm" },
-        { label: "Masaüstü Ekipmanları", tip: "masaustu-ekipman", search: "masaüstü|masaustu" },
         { label: "Gastronorm Küvetler", tip: "gastronorm-kuvet", search: "gastronorm|gn küvet|gn kuvet" },
-        { label: "Pres Baskı Tepsiler", tip: "pres-baski-tepsi", search: "pres baskı|pres baski" },
-        { label: "Taşıma Ekipmanları", tip: "tasima-ekipman", search: "taşıma ekipman|tasima ekipman|servis arab" },
-        { label: "Bain Marie Çelik Saklama Kapları", tip: "bain-marie-kap", slug: "bain-marie-celik-saklama-kaplari" },
-        { label: "Melamin Sunum Kapları", tip: "melamin-sunum", search: "melamin sunum" },
-        { label: "Karıştırma Kapları ve Süzgeçler", tip: "karistirma-suzgec", search: "karıştırma kap|karistirma kap|süzgeç|suzgec" },
-        { label: "Polipropilen-Polikarbonat Gastronom Küvetler", tip: "pp-pc-gn", search: "polipropilen|polikarbonat|pp gn" },
-        { label: "Polietilen Kesme Tahtaları", tip: "kesme-tahtasi", search: "kesme tahta|polietilen" },
-        { label: "Gurmeaid Profesyonel Bıçaklar", tip: "gurmeaid-bicak", search: "gurmeaid.*bıçak|gurmeaid.*bicak" },
-        { label: "Gurmeaid Mutfak Aksesuarları", tip: "gurmeaid-aksesuar", search: "gurmeaid.*aksesuar" },
-        { label: "Mutfak Aksesuarları", tip: "mutfak-aksesuar", search: "mutfak aksesuar" },
-        { label: "Sinek Öldürücü Cihazlar", tip: "sinek-oldurucu", search: "sinek öldürücü|sinek oldurucu" },
-        { label: "Sıcak - Soğuk Servis Üniteleri", tip: "sicak-soguk-servis", search: "sıcak.*soğuk servis|sicak.*soguk servis" },
-        { label: "Isıtıcı Lambalar", tip: "isitici-lamba", search: "ısıtıcı lamba|isitici lamba" },
-        { label: "Mısır Patlatma ve Pamuk Şeker Makineleri", tip: "patlamis-pamuk", search: "mısır patlatma|misir patlatma|pamuk şeker|pamuk seker" },
+        {
+          label: "Polipropilen / Polikarbonat GN",
+          tip: "pp-pc-gn",
+          search: "polipropilen|polikarbonat|pp gn",
+        },
+        {
+          label: "Bain Marie Çelik Saklama Kapları",
+          tip: "bain-marie-kap",
+          slug: "bain-marie-celik-saklama-kaplari",
+        },
+        {
+          label: "Karıştırma Kapları ve Süzgeçler",
+          tip: "karistirma-suzgec",
+          search: "karıştırma kap|karistirma kap|süzgeç|suzgec",
+        },
       ],
     },
   ];
@@ -361,7 +236,7 @@
       tasima: "\uD83E\uDDF0",
       araba: "\uD83D\uDED2",
       istif: "\uD83D\uDCDA",
-      "set-ustu-mutfak": "\uD83C\uDF7D\uFE0F",
+      kuvetler: "\uD83E\uDD63",
     };
     return m[catId] || "\uD83D\uDCE6";
   }
@@ -1461,7 +1336,7 @@
 
   function bootNav() {
     eqSyncMobileChrome();
-    hydrateMarketReyonNavSubs().finally(function () {
+    hydrateCaglayanNavSubs().finally(function () {
       render();
       eqSyncMobileChrome();
       try {

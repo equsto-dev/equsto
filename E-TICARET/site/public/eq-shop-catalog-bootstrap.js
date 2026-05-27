@@ -32,6 +32,7 @@
   function urlDeptToCatalogDept(seg) {
     var d = String(seg || "").trim();
     if (d === "market-reyonlari") return "market-reyon";
+    if (d === "kuvetler") return "set-ustu-mutfak";
     return d;
   }
 

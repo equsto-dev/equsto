@@ -33,6 +33,7 @@
     araba: "/shop/araba",
     istif: "/shop/istif",
     "set-ustu-mutfak": "/shop/set-ustu-mutfak",
+    kuvetler: "/shop/kuvetler",
   };
   /** file:// açılışında kullanılacak gerçek dosya adları */
   var FILE_FALLBACK = {
@@ -59,6 +60,7 @@
     araba: "araba.html",
     istif: "istif.html",
     "set-ustu-mutfak": "set-ustu-mutfak.html",
+    kuvetler: "kuvetler.html",
   };
   var LANG_NEUTRAL = { admin: true };
 
@@ -96,6 +98,9 @@
   window.eqProductMatchesDept = function (u, dept) {
     if (!u || !dept) return false;
     var d = String(dept).toLowerCase();
+    if (d === "kuvetler") {
+      return !!(window.EqDeptTips && typeof window.EqDeptTips.isKuvetProduct === "function" && window.EqDeptTips.isKuvetProduct(u));
+    }
     if (u.dept && String(u.dept).toLowerCase() === d) return true;
     var cat = String(u.c || u.category || "").toLowerCase();
     if (cat === d) return true;
@@ -186,6 +191,7 @@
     "araba",
     "istif",
     "set-ustu-mutfak",
+    "kuvetler",
   ];
   window.eqIsDeptNavKey = function (key) {
     return EQ_DEPT_NAV_KEYS.indexOf(String(key || "")) >= 0;
@@ -280,6 +286,8 @@
     if (file === "tasima.html") return window.equstoUrl("tasima") + query + hash;
     if (file === "araba.html") return window.equstoUrl("araba") + query + hash;
     if (file === "istif.html") return window.equstoUrl("istif") + query + hash;
+    if (file === "set-ustu-mutfak.html") return window.equstoUrl("set-ustu-mutfak") + query + hash;
+    if (file === "kuvetler.html") return window.equstoUrl("kuvetler") + query + hash;
     if (file === "steakhouse-kurulumu.html") return "/steakhouse-kurulumu" + query + hash;
     if (file === "cafe-kurulumu.html") return "/cafe-kurulumu" + query + hash;
     if (file === "catering-mutfagi.html") return "/catering-mutfagi" + query + hash;

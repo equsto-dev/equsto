@@ -251,6 +251,13 @@
   }
 
   function skipItem(item) {
+    if (DEPT === 'kuvetler') {
+      if (!(item && item.raw && isOztiRow(item.raw))) return true;
+      if (window.EqDeptTips && typeof window.EqDeptTips.isKuvetProduct === 'function') {
+        return !window.EqDeptTips.isKuvetProduct(item);
+      }
+      return false;
+    }
     if (DEPT === 'set-ustu-mutfak') {
       return !(item && item.raw && isOztiRow(item.raw));
     }
@@ -819,7 +826,8 @@
     }
 
     function fetchDeptArray() {
-      return fetch('/data/dept/' + DEPT + '.json?v=' + CATALOG_V, { cache: 'no-store' })
+      var catalogDept = DEPT === 'kuvetler' ? 'set-ustu-mutfak' : DEPT;
+      return fetch('/data/dept/' + catalogDept + '.json?v=' + CATALOG_V, { cache: 'no-store' })
         .then(function (r) {
           if (!r.ok) throw new Error('HTTP ' + r.status);
           return r.text();
@@ -848,7 +856,7 @@
 
     fetchDeptArray()
       .then(function (arr) {
-        if (DEPT === 'market-reyon' || DEPT === 'set-ustu-mutfak') return arr;
+        if (DEPT === 'market-reyon' || DEPT === 'set-ustu-mutfak' || DEPT === 'kuvetler') return arr;
         if (arr.length >= 5 && countOztiRows(arr) >= 5) return arr;
         return fetchEkipmanlarDeptFallback().then(function (fallback) {
           if (!arr.length || fallback.length > arr.length) {

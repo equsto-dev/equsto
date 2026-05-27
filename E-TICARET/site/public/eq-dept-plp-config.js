@@ -63,5 +63,9 @@
       title: 'Set Üstü Mutfak Ekipmanları',
       lead: 'Öztiryakiler — servis gereçleri, gastronorm, chafing dish, tencere ve mutfak aksesuarları',
     },
+    kuvetler: {
+      title: 'Küvetler',
+      lead: 'Gastronorm küvetler, GN kapaklar, polipropilen ve polikarbonat küvetler · Öztiryakiler',
+    },
   };
 })(typeof window !== 'undefined' ? window : global);
