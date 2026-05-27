@@ -7,6 +7,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { buildCaglayanGalleryLocal } from "./lib/caglayan-gallery.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SRC = path.resolve(
@@ -90,25 +91,7 @@ function formatSpecs(urun) {
 }
 
 function collectImages(urun) {
-  const out = [];
-  const seen = new Set();
-  function add(rel) {
-    if (!rel || seen.has(rel)) return;
-    if (!IMG_EXT.test(rel)) return;
-    seen.add(rel);
-    out.push(`caglayan-market/${urun.slug}/${path.basename(rel)}`);
-  }
-  if (urun.kapakYol) add(urun.kapakYol.replace(/^gorseller\//, ""));
-  const g = urun.gorseller || {};
-  for (const bucket of ["urun", "teknikCizim", "tum"]) {
-    for (const item of g[bucket] || []) {
-      const rel = item.dosya || item.url;
-      if (typeof rel === "string" && rel.includes("/")) {
-        add(rel.replace(/^gorseller\//, ""));
-      }
-    }
-  }
-  return out;
+  return buildCaglayanGalleryLocal(urun);
 }
 
 function copyImages(slug) {
@@ -178,6 +161,13 @@ function main() {
 
   rows.sort((a, b) => a.name.localeCompare(b.name, "tr"));
 
+  let existing = [];
+  if (fs.existsSync(OUT_DEPT)) {
+    existing = JSON.parse(fs.readFileSync(OUT_DEPT, "utf8"));
+    existing = existing.filter((r) => r.kaynak !== "caglayan-refrigeration");
+  }
+  const merged = [...existing, ...rows];
+
   const navSubs = NAV_SERIES.map(([, tip, label]) => ({
     label: label.toUpperCase(),
     tip,
@@ -187,7 +177,7 @@ function main() {
   if (!dryRun) {
     fs.mkdirSync(path.dirname(OUT_DEPT), { recursive: true });
     fs.mkdirSync(OUT_IMG, { recursive: true });
-    fs.writeFileSync(OUT_DEPT, JSON.stringify(rows, null, 0), "utf8");
+    fs.writeFileSync(OUT_DEPT, JSON.stringify(merged, null, 0), "utf8");
     fs.writeFileSync(
       OUT_NAV,
       JSON.stringify(
@@ -208,6 +198,8 @@ function main() {
     dryRun ? "[dry-run]" : "[ok]",
     "ürün:",
     rows.length,
+    "| birlesik:",
+    merged.length,
     "| atlanan seri:",
     skippedSeri,
     "| görsel dosyası:",
