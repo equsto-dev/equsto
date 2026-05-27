@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import path from "path";
 
 /** Departman PLP — /shop/{slug} → {slug}.html (public/) */
 const DEPT_HTML: Record<string, string> = {
@@ -86,6 +87,7 @@ const traceExcludes = [
 ];
 
 const nextConfig: NextConfig = {
+  outputFileTracingRoot: path.join(__dirname, "../../.."),
   serverExternalPackages: [
     "@prisma/client",
     "prisma",

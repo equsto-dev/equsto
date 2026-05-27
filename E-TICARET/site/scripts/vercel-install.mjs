@@ -17,6 +17,7 @@ function findRepoRoot(start) {
   let dir = path.resolve(start);
   for (let i = 0; i < 12; i++) {
     if (
+      fs.existsSync(path.join(dir, "equsto-v2", "package.json")) ||
       fs.existsSync(path.join(dir, "E-TICARET", "site", "package.json")) ||
       fs.existsSync(path.join(dir, "EQUSTO-WORK", "E-TICARET", "site", "package.json"))
     ) {
@@ -31,13 +32,18 @@ function findRepoRoot(start) {
 
 function resolveSiteDir(root) {
   const repo = findRepoRoot(root);
-  const canonical = path.join(repo, "E-TICARET", "site");
-  if (isNextSite(canonical)) return canonical;
-  if (isNextSite(root)) return root;
-  const alt = path.join(repo, "EQUSTO-WORK", "E-TICARET", "site");
-  if (isNextSite(alt)) return alt;
-  console.error("[vercel-install] Site bulunamadi");
-  process.exit(1);
+  const candidates = [
+    path.join(repo, "equsto-v2"),
+    path.join(repo, "EQUSTO-WORK", "E-TICARET", "site"),
+    path.join(repo, "E-TICARET", "site"),
+    root,
+  ].filter(isNextSite);
+
+  if (candidates.length === 0) {
+    console.error("[vercel-install] Site bulunamadi");
+    process.exit(1);
+  }
+  return candidates[0];
 }
 
 const siteDir = resolveSiteDir(vercelRoot);
