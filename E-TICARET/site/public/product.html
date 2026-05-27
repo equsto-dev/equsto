@@ -450,11 +450,20 @@
       return eqHtmlUrl(normImgPath(rel));
     }
 
+    var MARKET_REYON_GALLERY_MAX = 11;
+
     function collectProductImgs(x) {
       var rels = uniqueImgs(x.images);
       if (!rels.length) {
         var syn = oztiWebRelFromSku(x.sku || x.urun_kodu || x.model);
         if (syn) rels.push(syn);
+      }
+      if (
+        isMarketReyonProduct(x) &&
+        String(x.kaynak || "") === "caglayan-refrigeration" &&
+        rels.length > MARKET_REYON_GALLERY_MAX
+      ) {
+        rels = rels.slice(0, MARKET_REYON_GALLERY_MAX);
       }
       var out = [];
       rels.forEach(function (rel) {
