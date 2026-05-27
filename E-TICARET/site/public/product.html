@@ -211,6 +211,14 @@
     body.eq-shop .eq-product-specs h2{font-size:18px;font-weight:700;color:var(--eq-text);margin:0 0 14px;letter-spacing:-.01em;}
     body.eq-shop .eq-product-specs .eq-specs-cols pre{font-family:ui-sans-serif,-apple-system,sans-serif;font-size:13px;line-height:1.6;color:var(--eq-text);white-space:pre-wrap;background:var(--eq-surface-2);border:1px solid var(--eq-border-soft);border-radius:6px;padding:14px 16px;}
 
+    /* Üst muadil şeridi — çok ürün: yatay kaydırma (Amazon / Öztiryakiler tarzı) */
+    body.eq-shop .eq-product-family-scroll.eq-product-family-scroll--carousel{
+      display:flex;flex-wrap:nowrap;overflow-x:auto;grid-template-columns:unset;gap:8px 10px;
+      scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;scrollbar-width:thin;padding-bottom:6px;
+    }
+    body.eq-shop .eq-product-family-scroll--carousel .eq-product-family-item{flex:0 0 118px;scroll-snap-align:start;}
+    body.eq-shop .eq-product-family-scroll--carousel .eq-product-family-thumb{width:96px;height:96px;}
+
     /* Sayfa altı: «Müşteriler bu ürünleri de görüntüledi» yatay şeridi (Amazon stili) */
     .eq-mbg-related{margin:28px 0 8px;padding:18px 8px 18px;background:var(--eq-surface);border-top:1px solid var(--eq-border);border-bottom:1px solid var(--eq-border);position:relative;}
     .eq-mbg-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:0 8px 10px;}
@@ -562,6 +570,7 @@
         (typeof window.eqCategoryToUrunlerSeg === "function"
           ? window.eqCategoryToUrunlerSeg(cat) || "pisirme"
           : "pisirme");
+      if (seg === "market-reyon") seg = "market-reyonlari";
       return typeof window.eqProductPath === "function" ? window.eqProductPath(seg, sl) : "/shop/" + seg + "/" + sl;
     }
 
@@ -697,10 +706,105 @@
       "cikolata-temperleme-makinesi-": "Çikolata Temperleme",
     };
 
+    var MARKET_REYON_TILE_LABEL = {
+      "proso-sutluk": "Proso sütlükler",
+      "proso-kisa-sutluk": "Proso kısa sütlükler",
+      "proso-sarkuteri": "Proso şarküteri reyonları",
+      "proso-dikey-dondurucu": "Proso dikey dondurucular",
+      "proso-ada-tipi": "Proso ada tipi reyonlar",
+      "proso-plugin": "Proso plug-in kabinler",
+      "proso-butik": "Proso butik reyonlar",
+      "proso-soguk-hava": "Proso soğuk hava depoları",
+      "proso-sogutma-sistemleri": "Proso soğutma sistemleri",
+      "proso-sise-sogutucu": "Proso şişe soğutucular",
+      "caglayan-nilufer": "Çağlayan Nilüfer serisi",
+      "caglayan-lotus": "Çağlayan Lotus serisi",
+      "caglayan-nergis": "Çağlayan Nergis serisi",
+      "caglayan-lale": "Çağlayan Lale serisi",
+      "caglayan-inci": "Çağlayan İnci serisi",
+      "caglayan-hercai": "Çağlayan Hercai serisi",
+      "caglayan-reyhan": "Çağlayan Reyhan serisi",
+      "caglayan-sardunya": "Çağlayan Sardunya serisi",
+      "caglayan-gardenya": "Çağlayan Gardenya serisi",
+      "caglayan-anemon": "Çağlayan Anemon serisi",
+      "caglayan-akasya": "Çağlayan Akasya serisi",
+    };
+
+    function isMarketReyonProduct(p) {
+      if (!p) return false;
+      if (String(p.dept || "") === "market-reyon") return true;
+      var c = String(p.category || "");
+      return /^proso-/.test(c) || /^caglayan-/.test(c);
+    }
+
     function railLabelFor(cat) {
       var s = String(cat || "");
       if (CAT_RAIL_LABEL[s]) return CAT_RAIL_LABEL[s];
       return s.replace(/-+$/, "").replace(/-/g, " ");
+    }
+
+    function railLabelForProduct(x) {
+      if (!x || !isMarketReyonProduct(x)) return railLabelFor((x && x.category) || "");
+      var series = String(x.series || "").trim();
+      if (series) return series + " ve muadil modeller";
+      var tid = String(x.tileId || "");
+      if (MARKET_REYON_TILE_LABEL[tid]) return MARKET_REYON_TILE_LABEL[tid] + " — muadil";
+      if (x.brand) {
+        var b = String(x.brand).replace(/\s+refrigeration\s*$/i, "").trim();
+        return b + " — benzer reyon modelleri";
+      }
+      return "Benzer market reyonları";
+    }
+
+    function scoreMarketReyonPeer(x, p) {
+      var score = 0;
+      var brand = String(x.brand || "");
+      if (brand && String(p.brand || "") === brand) score += 40;
+      var tileId = String(x.tileId || "");
+      if (tileId && String(p.tileId || "") === tileId) score += 55;
+      var series = String(x.series || "").toLocaleLowerCase("tr").trim();
+      var pSeries = String(p.series || "").toLocaleLowerCase("tr").trim();
+      if (series && pSeries && series === pSeries) score += 100;
+      var cat = String(x.category || "");
+      var pCat = String(p.category || "");
+      if (cat && pCat) {
+        if (cat === pCat) score += 30;
+        var catRoot = cat.replace(/-[a-z0-9]+$/i, "");
+        if (catRoot.length > 6 && pCat.indexOf(catRoot) === 0) score += 20;
+      }
+      return score;
+    }
+
+    /** Market reyon: aynı marka / seri / hat — üst muadil şeridi (max 12). */
+    function pickMarketReyonMuadil(x, all, keyFn) {
+      if (!x || !all || !all.length) return { items: [], mode: "market-reyon" };
+      var curSlug = String(x.slug || x.id || "").toLowerCase();
+      var curKey = keyFn
+        ? keyFn({ c: x.category || "", b: x.brand || "", n: x.name || "" })
+        : "";
+      var scored = [];
+      for (var i = 0; i < all.length; i++) {
+        var p = all[i];
+        if (!p || !isMarketReyonProduct(p)) continue;
+        var pSlug = String(p.slug || p.id || "").toLowerCase();
+        if (pSlug && pSlug === curSlug) continue;
+        if (curKey && keyFn) {
+          var pk = keyFn({ c: p.category || "", b: p.brand || "", n: p.name || "" });
+          if (pk && pk === curKey) continue;
+        }
+        var score = scoreMarketReyonPeer(x, p);
+        if (score < 40) continue;
+        scored.push({ p: p, score: score });
+      }
+      scored.sort(function (a, b) {
+        if (b.score !== a.score) return b.score - a.score;
+        return String(a.p.name || "").localeCompare(String(b.p.name || ""), "tr", {
+          sensitivity: "base",
+        });
+      });
+      var out = [];
+      for (var j = 0; j < scored.length && out.length < 12; j++) out.push(scored[j].p);
+      return { items: out, mode: "market-reyon" };
     }
 
     /** Ürün adı içindeki anahtar kelimelerle alt-tip etiketi (bağlam koru: espresso↔espresso, türk↔türk, vb.). */
@@ -763,7 +867,9 @@
 
     /** Aynı kategori + (varsa) aynı alt-tip; mevcut ürün hariç; marka çeşitliliği round-robin; en fazla 5. */
     function pickRelatedProducts(x, all, keyFn) {
-      if (!x || !all || !all.length || !keyFn) return { items: [], mode: "" };
+      if (!x || !all || !all.length) return { items: [], mode: "" };
+      if (isMarketReyonProduct(x)) return pickMarketReyonMuadil(x, all, keyFn);
+      if (!keyFn) return { items: [], mode: "" };
       var cat = x.category || "";
       if (!cat) return { items: [], mode: "" };
       var curKey = keyFn({ c: x.category || "", b: x.brand || "", n: x.name || "" });
@@ -817,7 +923,35 @@
 
     /** Üst rail’de gösterilenleri dışlayan, aynı kategoride genişletilmiş «yardımcı / ilgili» liste. */
     function pickRelatedExtras(x, all, keyFn, excludeKeys, max) {
-      if (!x || !all || !all.length || !keyFn) return [];
+      if (!x || !all || !all.length) return [];
+      if (isMarketReyonProduct(x)) {
+        var curSlug = String(x.slug || x.id || "").toLowerCase();
+        var brand = String(x.brand || "");
+        var out = [];
+        var seen = Object.create(null);
+        for (var mi = 0; mi < all.length; mi++) {
+          var p = all[mi];
+          if (!p || !isMarketReyonProduct(p)) continue;
+          var pSlug = String(p.slug || p.id || "").toLowerCase();
+          if (pSlug === curSlug) continue;
+          var pk = keyFn
+            ? keyFn({ c: p.category || "", b: p.brand || "", n: p.name || "" })
+            : pSlug;
+          if (excludeKeys && excludeKeys[pk]) continue;
+          if (seen[pk]) continue;
+          if (brand && String(p.brand || "") !== brand) continue;
+          seen[pk] = 1;
+          out.push(p);
+          if (out.length >= (max || 24)) break;
+        }
+        out.sort(function (a, b) {
+          return String(a.name || "").localeCompare(String(b.name || ""), "tr", {
+            sensitivity: "base",
+          });
+        });
+        return out;
+      }
+      if (!keyFn) return [];
       var cat = x.category || "";
       if (!cat) return [];
       var curKey = keyFn({ c: x.category || "", b: x.brand || "", n: x.name || "" });
@@ -1007,23 +1141,33 @@
     }
 
     function renderFamilyRail(x, all, keyFn) {
-      var cat = (x && x.category) || "";
-      if (!cat) return "";
+      if (!x || !all || !all.length) return "";
       var pack = pickRelatedProducts(x, all, keyFn);
       var items = pack.items;
       if (!items.length) return "";
-      var lineTitle = esc(railLabelFor(cat));
+      var lineTitle = esc(railLabelForProduct(x));
+      var curSlug = String(x.slug || x.id || "").toLowerCase();
+      var scrollCls =
+        items.length > 5 ? " eq-product-family-scroll eq-product-family-scroll--carousel" : " eq-product-family-scroll";
       var cells = items
         .map(function (p) {
-          var k = keyFn({ c: p.category || "", b: p.brand || "", n: p.name || "" });
+          var k = keyFn
+            ? keyFn({ c: p.category || "", b: p.brand || "", n: p.name || "" })
+            : "";
           var img = renderPdpThumbImg(p);
           var lbl = esc(shortModelLabel(p));
           var fHref = productSlugEq(p)
             ? eqPathForProductObj(p) || "/urun/" + productSlugEq(p)
             : "product.html?p=" + esc(encodeURIComponent(k));
+          var pSlug = String(p.slug || p.id || "").toLowerCase();
+          var curCls = pSlug && pSlug === curSlug ? " eq-product-family-item--current" : "";
           return (
-            '<div class="eq-product-family-item">' +
-            '<a href="' + esc(eqHtmlUrl(fHref)) + '">' +
+            '<div class="eq-product-family-item' +
+            curCls +
+            '">' +
+            '<a href="' +
+            esc(eqHtmlUrl(fHref)) +
+            '">' +
             '<div class="eq-product-family-thumb">' +
             img +
             "</div>" +
@@ -1042,8 +1186,11 @@
         '<div class="eq-product-family-line">' +
         lineTitle +
         "</div>" +
+        '<div class="eq-product-family-hint">Muadil ve benzer modeller</div>' +
         "</div>" +
-        '<div class="eq-product-family-scroll" role="list">' +
+        '<div class="' +
+        scrollCls.trim() +
+        '" role="list">' +
         cells +
         "</div></div></div>"
       );

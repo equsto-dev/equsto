@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
@@ -511,7 +511,7 @@ body{background:var(--eq-bg-page);font-family:-apple-system,BlinkMacSystemFont,"
     <span class="topnav-sep">|</span>
     <div class="topnav-item" onclick="eqGo('pisirme')" data-i18n="nav.pisirme">Pişirme Ekipmanları</div>
     <span class="topnav-sep">|</span>
-    <div class="topnav-item active" data-i18n="nav.sogutma">Soğutma Ekipmanları</div>
+    <div class="topnav-item active" onclick="eqGo('sogutma')" data-i18n="nav.sogutma">Soğutma Ekipmanları</div>
     <span class="topnav-sep">|</span>
     <div class="topnav-item" onclick="eqGo('kahve')" data-i18n="nav.kahve">Kahve Ekipmanları</div>
     <span class="topnav-sep">|</span>
@@ -528,13 +528,13 @@ body{background:var(--eq-bg-page);font-family:-apple-system,BlinkMacSystemFont,"
 <div class="pg">
   <div class="eq-dept-plp-layout">
     <aside class="eq-dept-plp-aside" id="eq-dept-plp-aside" aria-label="Filtreler">
-      <div class="eq-dept-plp-aside__hd">Soğutma Ekipmanları</div>
+      <div class="eq-dept-plp-aside__hd">Market Reyonları</div>
       <div id="eq-dept-plp-facets"></div>
     </aside>
     <div class="eq-dept-filter-backdrop" id="eq-dept-filter-backdrop" aria-hidden="true"></div>
     <main class="eq-dept-plp-main" id="eq-dept-plp-main">
-      <h1 class="eq-dept-plp-title">Soğutma Ekipmanları</h1>
-      <p class="eq-dept-plp-lead">Buzdolabı, derin dondurucu, şok soğutma, teşhir ve soğuk oda çözümleri</p>
+      <h1 class="eq-dept-plp-title">Market Reyonları</h1>
+      <p class="eq-dept-plp-lead">Proso ve Çağlayan market reyonları — sütlük, şarküteri, dikey dondurucu, ada tipi teşhir ve soğuk hava depoları</p>
       <div class="eq-dept-plp-selected" id="eq-dept-plp-selected" hidden><div class="eq-cm-selected__chips" id="eq-dept-cm-chips-main"></div></div>
       <div class="eq-dept-plp-toolbar">
         <button type="button" class="eq-dept-plp-filter-mob" id="eq-dept-plp-filter-mob">Filtrele</button>
@@ -583,7 +583,7 @@ body{background:var(--eq-bg-page);font-family:-apple-system,BlinkMacSystemFont,"
 <script vite-ignore src="/eq-kur-live.js?v=20260522ozti-tl-kdv"></script><script vite-ignore src="/eq-fiyatlar-bridge.js?v=20260522ozti-tl-kdv"></script>
 <script vite-ignore src="/eq-vendor-sanitize.js?v=20260520vendor"></script>
 <script vite-ignore src="/eq-market-reyon.js?v=20260527caglayan1"></script>
-<script vite-ignore src="/eq-dept-plp.js?v=20260524loadmore"></script>
+<script vite-ignore src="/eq-dept-plp.js?v=20260527marketreyon1"></script>
 <script>
 (function () {
   var sel = document.getElementById('eq-dept-plp-sort');
