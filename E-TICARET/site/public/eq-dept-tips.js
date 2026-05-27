@@ -175,7 +175,6 @@
     { tip: "caglayan-manolya", dept: "market-reyon", label: "Manolya", search: "manolya" },
     { tip: "caglayan-krizantem", dept: "market-reyon", label: "Krizantem", search: "krizantem" },
     { tip: "soguk-teshir", dept: "market-reyon", label: "Soğuk Teşhir", search: "soguk-teshir|saladbar|salad bar|soğuk büfe|soguk bufe|büfe" },
-    { tip: "sicak-teshir", dept: "market-reyon", label: "Sıcak Teşhir", search: "sicak-teshir|sıcak|sicak|benmari|bain" },
     { tip: "dondurma-reyon", dept: "market-reyon", label: "Dondurma Reyonu", search: "dondurma-reyon|dondurma|freezer|frozen" },
     { tip: "balik-sarkuteri", dept: "market-reyon", label: "Balık & Şarküteri", search: "balik-sarkuteri|balık|balik|şarküteri|sarkuteri|sardunya|et|fish" },
     { tip: "camli-dolap", dept: "market-reyon", label: "Camlı Teşhir", search: "camli-dolap|camlı|camli|vitrin|teşhir buzdolab" },
@@ -206,6 +205,20 @@
     { tip: "sicak-soguk-servis", dept: "set-ustu-mutfak", label: "Sıcak / Soğuk Servis", search: "sıcak.*soğuk servis" },
     { tip: "isitici-lamba", dept: "set-ustu-mutfak", label: "Isıtıcı Lambalar", search: "ısıtıcı lamba" },
     { tip: "patlamis-pamuk", dept: "set-ustu-mutfak", label: "Patlamış Mısır / Pamuk Şeker", search: "mısır patlatma|pamuk şeker" },
+    { tip: "gastronorm-kuvet", dept: "kuvetler", label: "Gastronorm Küvetler", search: "gastronorm|gn küvet|gn kuvet" },
+    { tip: "pp-pc-gn", dept: "kuvetler", label: "Polipropilen / Polikarbonat GN", search: "polipropilen|polikarbonat|pp gn" },
+    {
+      tip: "bain-marie-kap",
+      dept: "kuvetler",
+      label: "Bain Marie Çelik Saklama Kapları",
+      slug: "bain-marie-celik-saklama-kaplari",
+    },
+    {
+      tip: "karistirma-suzgec",
+      dept: "kuvetler",
+      label: "Karıştırma Kapları ve Süzgeçler",
+      search: "karıştırma kap|karistirma kap|süzgeç|suzgec",
+    },
   ];
 
   var byDept = {};
@@ -577,6 +590,27 @@
     return c;
   }
 
+  /** Gastronorm küvet, GN kapak ve ilgili saklama ürünleri (buzdolabı/bain marie makinesi hariç). */
+  function isKuvetProduct(u) {
+    if (!u) return false;
+    var c = productCategorySlug(u);
+    if (c === "gastronom-kuvetler" || c === "kuvet") return true;
+    var t = productHaystack(u);
+    if (/buzdolab|buz dolab|donduruc|soğuk oda/.test(t) && !/küvet(?!li)|kuvet(?!li)/.test(t)) return false;
+    if (/bain\s*marie|bainmarie|küvetli|kuvetli|küvetsiz|kuvetsiz|küvet\s*kapasiteli|kuvet\s*kapasiteli/i.test(t)) return false;
+    if (/küvet\s*ta[sş]|kuvet\s*ta[sş]|banket\s*arab.*kapasiteli/i.test(t)) return false;
+    if (/benmari/i.test(t) && !/gastronom\s*küvet|gastronom\s*kuvet/i.test(t)) return false;
+    if (/küvet\s*kapak|kuvet\s*kapak/i.test(t)) return true;
+    if (/küvet(?!li)|kuvet(?!li)/.test(t)) return true;
+    if (/gastronom(?!\s*seri)/.test(t)) return true;
+    if (/\bgn\s*\d{1,2}\s*\/\s*\d{1,2}/.test(t)) return true;
+    if (isOztiBainMarieKapRow(u)) return true;
+    if (c === "bain-marie-celik-saklama-kaplari") return true;
+    if (/polipropilen|polikarbonat|pp\s*gn/.test(t)) return true;
+    if (/karıştırma kap|karistirma kap|süzgeç|suzgec/.test(t)) return true;
+    return false;
+  }
+
   function tileMatchProduct(u, tile) {
     if (!tile) return false;
     var cat = productCategorySlug(u);
@@ -844,6 +878,7 @@
     isBuzMakinesiProduct: isBuzMakinesiProduct,
     isServisTeshirProduct: isServisTeshirProduct,
     excludeFromDeptView: excludeFromDeptView,
+    isKuvetProduct: isKuvetProduct,
     all: RAW,
   };
 })();

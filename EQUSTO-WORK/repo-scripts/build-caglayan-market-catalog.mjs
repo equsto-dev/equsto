@@ -93,7 +93,7 @@ function assignTileId(text) {
   if (/balık|balik|\bfish\b|blk/.test(h)) return "balik-sarkuteri";
   if (/şarküteri|sarkuteri|delicatessen|paket\s*et|pocket\s*meat/.test(h)) return "balik-sarkuteri";
   if (/self\s*servis|self-servis/.test(h)) return "self-servis";
-  if (/sıcak|sicak|\bhot\b|benmari|bain\s*marie/.test(h)) return "sicak-teshir";
+  if (/\bbenmari\b|bain\s*marie|\bchafing\b/.test(h)) return "soguk-teshir";
   if (/içecek|icecek|\bdrink\b|süt|sut|\bmilk\b/.test(h)) return "icecek-vitrin";
   if (/set\s*üstü|set\s*ustu/.test(h)) return "set-ustu";
   if (/camlı|camli|teşhir\s*buzdolab|teshir\s*buzdolab/.test(h)) return "camli-dolap";
