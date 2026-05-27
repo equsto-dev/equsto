@@ -1,7 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
-  "installCommand": "cd E-TICARET/site && node scripts/vercel-install.mjs",
+  "installCommand": "cd E-TICARET/site && npm ci",
   "buildCommand": "cd E-TICARET/site && node scripts/vercel-build.mjs",
   "rewrites": [
     { "source": "/sepet", "destination": "/sepet.html" },

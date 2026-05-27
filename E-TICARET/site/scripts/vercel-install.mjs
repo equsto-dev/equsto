@@ -1,13 +1,14 @@
 /**
- * npm ci — E-TICARET/site icinde tam Next.js (materialize + ci).
+ * npm ci — E-TICARET/site (tek kaynak).
  */
 import { spawnSync } from "node:child_process";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { materializeVercelRoot } from "./vercel-site-sync.mjs";
 
-const vercelRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const siteDir = materializeVercelRoot(vercelRoot);
+const siteDir = materializeVercelRoot(
+  path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..")
+);
 const npm = process.platform === "win32" ? "npm.cmd" : "npm";
 
 console.log("[vercel-install] npm ci →", siteDir);

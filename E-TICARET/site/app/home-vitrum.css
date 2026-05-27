@@ -201,12 +201,6 @@
   object-position: center;
 }
 
-/* PFOS plan render — 90° (714×1024) */
-.eq-v-pillar-visual--pfos .eq-v-pillar-img {
-  object-fit: cover;
-  object-position: center center;
-}
-
 .eq-v-pillar-body {
   position: relative;
   z-index: 1;
