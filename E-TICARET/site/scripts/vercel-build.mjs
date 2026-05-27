@@ -33,8 +33,10 @@ function patchPrismaSchemaForVercel(dir) {
 }
 
 function patchPrismaLibForVercel(dir) {
+  const libPath = path.join(dir, "lib/prisma.ts");
+  if (!fs.existsSync(path.join(dir, "lib"))) return;
   fs.writeFileSync(
-    path.join(dir, "lib/prisma.ts"),
+    libPath,
     'export { PrismaClient, Prisma } from "@prisma/client";\nexport type * from "@prisma/client";\n'
   );
 }
@@ -66,11 +68,6 @@ function run(cmd, args, cwd) {
     console.error("[vercel-build]", r.error.message);
     process.exit(1);
   }
-}
-
-if (!fs.existsSync(path.join(siteDir, "node_modules", ".bin", "next"))) {
-  console.log("[vercel-build] npm ci →", siteDir);
-  run(npm, ["ci"], siteDir);
 }
 
 const adminCfg = path.join(siteDir, "scripts/generate-admin-config.mjs");
