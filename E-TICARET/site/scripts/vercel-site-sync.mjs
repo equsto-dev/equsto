@@ -122,6 +122,8 @@ export function materializeVercelRoot(vercelRoot) {
 
     restoreCanonicalVercelScripts(canonical, target);
 
+    syncPublic(donor, target);
+
     syncPublic(canonical, target);
 
     if (!hasFullNextApp(target)) {
@@ -164,6 +166,8 @@ export function materializeVercelRoot(vercelRoot) {
 
     copyFullSite(appSrc, root);
 
+    if (donor && path.resolve(donor) !== path.resolve(appSrc)) syncPublic(donor, root);
+
     syncPublic(canonical, root);
 
     return root;
@@ -175,11 +179,9 @@ export function materializeVercelRoot(vercelRoot) {
   hydrateFromDonor(root);
 
   if (root !== canon) {
-
+    if (donor) syncPublic(donor, root);
     console.log("[vercel-sync] public/ <- E-TICARET/site");
-
     syncPublic(canonical, root);
-
   }
 
 
