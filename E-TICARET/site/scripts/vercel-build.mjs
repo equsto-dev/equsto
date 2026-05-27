@@ -82,7 +82,12 @@ if (!fs.existsSync(binPath(siteDir, "next"))) {
   run(npm, ["ci"], siteDir);
 }
 
-run(process.execPath, [path.join(siteDir, "scripts/generate-admin-config.mjs")], siteDir);
+const adminCfg = path.join(siteDir, "scripts/generate-admin-config.mjs");
+if (fs.existsSync(adminCfg)) {
+  run(process.execPath, [adminCfg], siteDir);
+} else {
+  console.warn("[vercel-build] generate-admin-config.mjs yok, atlandi");
+}
 run(binPath(siteDir, "prisma"), ["generate"], siteDir);
 run(binPath(siteDir, "next"), ["build"], siteDir);
 

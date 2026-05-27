@@ -1,6 +1,5 @@
 ﻿/**
- * Vercel Root'ta app/ yoksa tam siteyi E-TICARET/site'tan materialize eder.
- * equsto-v2 yedek kopya ÔÇö asla birincil kaynak degil.
+ * Vercel Root'ta app/ yoksa tam siteyi EQUSTO-WORK kaynagindan materialize eder.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -10,9 +9,9 @@ export { isNextSite, findRepoRoot };
 
 export function resolveCanonicalSource(repo) {
   const candidates = [
-    path.join(repo, "E-TICARET", "site"),
     path.join(repo, "EQUSTO-WORK", "E-TICARET", "site"),
     path.join(repo, "equsto-v2"),
+    path.join(repo, "E-TICARET", "site"),
   ];
   return candidates.find(isNextSite) ?? null;
 }
@@ -36,10 +35,23 @@ function copyTree(src, dest) {
   fs.cpSync(src, dest, { recursive: true });
 }
 
-/** Vercel cwd'de app/ yoksa canonical kaynaktan kodu kopyala */
-export function materializeVercelRoot(vercelRoot) {
-  if (isNextSite(vercelRoot)) return vercelRoot;
+function syncBuildScripts(src, vercelRoot) {
+  const scriptsSrc = path.join(src, "scripts");
+  const scriptsDest = path.join(vercelRoot, "scripts");
+  fs.mkdirSync(scriptsDest, { recursive: true });
+  for (const name of [
+    "generate-admin-config.mjs",
+    "prisma-postinstall-skip.mjs",
+    "load-env.mjs",
+    "vercel-resolve-site.mjs",
+    "vercel-site-sync.mjs",
+  ]) {
+    const from = path.join(scriptsSrc, name);
+    if (fs.existsSync(from)) fs.copyFileSync(from, path.join(scriptsDest, name));
+  }
+}
 
+export function materializeVercelRoot(vercelRoot) {
   const repo = findRepoRoot(vercelRoot);
   const src = resolveCanonicalSource(repo);
   if (!src) {
@@ -47,7 +59,12 @@ export function materializeVercelRoot(vercelRoot) {
     process.exit(1);
   }
 
-  console.log("[vercel-sync] Materialize:", src, "ÔåÆ", vercelRoot);
+  if (isNextSite(vercelRoot)) {
+    syncBuildScripts(src, vercelRoot);
+    return vercelRoot;
+  }
+
+  console.log("[vercel-sync] Materialize:", src, "->", vercelRoot);
 
   for (const name of SYNC_DIRS) {
     const from = path.join(src, name);
@@ -72,20 +89,7 @@ export function materializeVercelRoot(vercelRoot) {
     fs.cpSync(publicSrc, publicDest, { recursive: true, force: true });
   }
 
-  const scriptsSrc = path.join(src, "scripts");
-  const scriptsDest = path.join(vercelRoot, "scripts");
-  fs.mkdirSync(scriptsDest, { recursive: true });
-  for (const name of [
-    "generate-admin-config.mjs",
-    "prisma-postinstall-skip.mjs",
-    "load-env.mjs",
-    "vercel-resolve-site.mjs",
-    "vercel-site-sync.mjs",
-    /* vercel-build/install: Vercel root'taki surum kalir (materialize uzerine yazmasin) */
-  ]) {
-    const from = path.join(scriptsSrc, name);
-    if (fs.existsSync(from)) fs.copyFileSync(from, path.join(scriptsDest, name));
-  }
+  syncBuildScripts(src, vercelRoot);
 
   if (!isNextSite(vercelRoot)) {
     console.error("[vercel-sync] Materialize sonrasi app/ hala yok:", vercelRoot);
