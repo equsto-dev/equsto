@@ -88,7 +88,8 @@ const traceExcludes = [
 ];
 
 const nextConfig: NextConfig = {
-  outputFileTracingRoot: path.join(__dirname, "../../.."),
+  /** Repo kökü (E-TICARET/site → ../..). ../../.. repodan çıkar, Vercel NFT hatası verir. */
+  outputFileTracingRoot: path.join(__dirname, "../.."),
   serverExternalPackages: [
     "@prisma/client",
     "prisma",
