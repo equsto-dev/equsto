@@ -20,7 +20,7 @@ function patchPrismaSchemaForVercel(dir) {
   const next = text.replace(/\s*output\s*=\s*"\.\/generated\/client"\s*\n/, "\n");
   if (next !== text) {
     fs.writeFileSync(schemaPath, next);
-    console.log("[vercel-build] Prisma schema → @prisma/client");
+    console.log("[vercel-build] Prisma schema → node_modules @prisma/client");
   }
 }
 
@@ -31,21 +31,37 @@ function patchPrismaLibForVercel(dir) {
   );
 }
 
+/** tsconfig @prisma/client → generated/client Vercel'de yok; node_modules kullan */
+function patchTsconfigForVercel(dir) {
+  const tsPath = path.join(dir, "tsconfig.json");
+  let text = fs.readFileSync(tsPath, "utf8");
+  const next = text.replace(
+    /,?\s*"@prisma\/client":\s*\["\.\/prisma\/generated\/client"\]/,
+    ""
+  );
+  if (next !== text) {
+    fs.writeFileSync(tsPath, next);
+    console.log("[vercel-build] tsconfig paths → node_modules @prisma/client");
+  }
+}
+
 patchPrismaSchemaForVercel(siteDir);
 patchPrismaLibForVercel(siteDir);
+patchTsconfigForVercel(siteDir);
 
 const npm = process.platform === "win32" ? "npm.cmd" : "npm";
-const npx = process.platform === "win32" ? "npx.cmd" : "npx";
-const useShell = process.platform !== "win32";
 
 function run(cmd, args, cwd) {
   const r = spawnSync(cmd, args, {
     cwd,
     stdio: "inherit",
     env: process.env,
-    shell: useShell && (cmd === npx || cmd.endsWith("npx.cmd")),
+    shell: false,
   });
-  if (r.status !== 0) process.exit(r.status ?? 1);
+  if (r.status !== 0) {
+    console.error(`[vercel-build] failed: ${cmd} ${args.join(" ")}`);
+    process.exit(r.status ?? 1);
+  }
 }
 
 if (!fs.existsSync(path.join(siteDir, "node_modules", ".bin", "next"))) {
@@ -53,8 +69,8 @@ if (!fs.existsSync(path.join(siteDir, "node_modules", ".bin", "next"))) {
   run(npm, ["ci"], siteDir);
 }
 
-run(process.execPath, ["scripts/generate-admin-config.mjs"], siteDir);
-run(npx, ["--no-install", "prisma", "generate"], siteDir);
-run(npx, ["--no-install", "next", "build"], siteDir);
+run(process.execPath, [path.join(siteDir, "scripts/generate-admin-config.mjs")], siteDir);
+console.log("[vercel-build] npm run build");
+run(npm, ["run", "build"], siteDir);
 
 console.log("[vercel-build] OK");
