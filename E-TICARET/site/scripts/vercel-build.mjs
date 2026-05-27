@@ -76,16 +76,4 @@ if (fs.existsSync(adminCfg)) run(process.execPath, [adminCfg], siteDir);
 console.log("[vercel-build] npm run build →", siteDir);
 run(npm, ["run", "build"], siteDir);
 
-// Vercel .next çıktısını repo root'ta arar — symlink ile yönlendir
-const repoRoot = path.resolve(siteDir, "../..");
-const siteNext = path.join(siteDir, ".next");
-const rootNext = path.join(repoRoot, ".next");
-if (fs.existsSync(siteNext) && !fs.existsSync(rootNext)) {
-  fs.symlinkSync(siteNext, rootNext, "junction");
-  console.log("[vercel-build] .next symlink →", rootNext);
-} else if (!fs.existsSync(siteNext)) {
-  console.error("[vercel-build] HATA: .next dizini bulunamadi:", siteNext);
-  process.exit(1);
-}
-
 console.log("[vercel-build] OK —", siteDir);
