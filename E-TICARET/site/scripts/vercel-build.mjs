@@ -23,41 +23,33 @@ function patchPrismaSchemaForVercel(dir) {
   }
 }
 
-patchPrismaSchemaForVercel(siteDir);
-
-fs.writeFileSync(
-  path.join(siteDir, "lib/prisma.vercel.ts"),
-  'export { PrismaClient, Prisma } from "@prisma/client";\nexport type * from "@prisma/client";\n'
-);
-
-function ensureNextConfigForVercel(dir) {
-  const cfgPath = path.join(dir, "next.config.ts");
-  let text = fs.readFileSync(cfgPath, "utf8");
-  if (!text.includes("market-reyonlari")) {
-    text = text.replace(
-      '"set-ustu-mutfak": "/set-ustu-mutfak.html",',
-      '"set-ustu-mutfak": "/set-ustu-mutfak.html",\n  "market-reyonlari": "/market-reyonlari.html",'
-    );
-  }
-  if (!text.includes("prisma.vercel.ts")) {
-    const webpackBlock = `  webpack: (config, { isServer }) => {
-    if (process.env.VERCEL && isServer) {
-      config.resolve.alias = {
-        ...config.resolve.alias,
-        [path.resolve(__dirname, "lib/prisma.ts")]: path.resolve(
-          __dirname,
-          "lib/prisma.vercel.ts"
-        ),
-      };
-    }
-    return config;
-  },`;
-    text = text.replace(/\n};\n\nexport default nextConfig;/, `\n${webpackBlock}\n};\n\nexport default nextConfig;`);
-  }
-  fs.writeFileSync(cfgPath, text);
+/** Turbopack (Next 16) webpack alias kabul etmez — dogrudan lib/prisma.ts yazar. */
+function patchPrismaLibForVercel(dir) {
+  const prismaPath = path.join(dir, "lib/prisma.ts");
+  fs.writeFileSync(
+    prismaPath,
+    '/** Vercel build — @prisma/client (custom output NFT kirar) */\n' +
+      'export { PrismaClient, Prisma } from "@prisma/client";\n' +
+      'export type * from "@prisma/client";\n'
+  );
+  console.log("[vercel-build] lib/prisma.ts → @prisma/client");
 }
 
-ensureNextConfigForVercel(siteDir);
+function ensureMarketReyonlariRewrite(dir) {
+  const cfgPath = path.join(dir, "next.config.ts");
+  let text = fs.readFileSync(cfgPath, "utf8");
+  if (text.includes("market-reyonlari")) return;
+  text = text.replace(
+    '"set-ustu-mutfak": "/set-ustu-mutfak.html",',
+    '"set-ustu-mutfak": "/set-ustu-mutfak.html",\n  "market-reyonlari": "/market-reyonlari.html",'
+  );
+  fs.writeFileSync(cfgPath, text);
+  console.log("[vercel-build] next.config → market-reyonlari rewrite");
+}
+
+patchPrismaSchemaForVercel(siteDir);
+patchPrismaLibForVercel(siteDir);
+ensureMarketReyonlariRewrite(siteDir);
 
 process.env.DATABASE_URL =
   process.env.DATABASE_URL || "postgresql://build:build@127.0.0.1:5432/build?schema=public";

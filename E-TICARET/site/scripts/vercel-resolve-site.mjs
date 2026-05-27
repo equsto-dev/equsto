@@ -1,5 +1,5 @@
-/**
- * Vercel install/build — tek kaynak: E-TICARET/site (equsto-v2 yedek kopya, build etme).
+﻿/**
+ * Vercel install/build ÔÇö tek kaynak: E-TICARET/site (equsto-v2 yedek kopya, build etme).
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -27,7 +27,7 @@ export function findRepoRoot(start) {
   return path.resolve(start, "../..");
 }
 
-/** Canlı site — her zaman E-TICARET/site. */
+/** Canl─▒ site ÔÇö her zaman E-TICARET/site. */
 export function resolveSiteDir(root) {
   const repo = findRepoRoot(root);
   const canonical = path.join(repo, "E-TICARET", "site");
