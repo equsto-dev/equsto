@@ -16,7 +16,6 @@ const DEPT_HTML: Record<string, string> = {
   araba: "/araba.html",
   istif: "/istif.html",
   "set-ustu-mutfak": "/set-ustu-mutfak.html",
-  "market-reyonlari": "/market-reyonlari.html",
 };
 
 function deptRewrites() {
@@ -88,8 +87,7 @@ const traceExcludes = [
 ];
 
 const nextConfig: NextConfig = {
-  /** Repo kökü (E-TICARET/site → ../..). ../../.. repodan çıkar, Vercel NFT hatası verir. */
-  outputFileTracingRoot: path.join(__dirname, "../.."),
+  outputFileTracingRoot: path.join(__dirname, "../../.."),
   serverExternalPackages: [
     "@prisma/client",
     "prisma",
@@ -202,18 +200,6 @@ const nextConfig: NextConfig = {
       ...geoRewrites(),
       ],
     };
-  },
-  webpack: (config, { isServer }) => {
-    if (process.env.VERCEL && isServer) {
-      config.resolve.alias = {
-        ...config.resolve.alias,
-        [path.resolve(__dirname, "lib/prisma.ts")]: path.resolve(
-          __dirname,
-          "lib/prisma.vercel.ts"
-        ),
-      };
-    }
-    return config;
   },
 };
 

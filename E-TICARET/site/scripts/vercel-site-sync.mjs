@@ -1,6 +1,6 @@
-/**
+﻿/**
  * Vercel Root'ta app/ yoksa tam siteyi E-TICARET/site'tan materialize eder.
- * equsto-v2 yedek kopya — asla birincil kaynak degil.
+ * equsto-v2 yedek kopya ÔÇö asla birincil kaynak degil.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -47,7 +47,7 @@ export function materializeVercelRoot(vercelRoot) {
     process.exit(1);
   }
 
-  console.log("[vercel-sync] Materialize:", src, "→", vercelRoot);
+  console.log("[vercel-sync] Materialize:", src, "ÔåÆ", vercelRoot);
 
   for (const name of SYNC_DIRS) {
     const from = path.join(src, name);
