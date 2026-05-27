@@ -747,7 +747,7 @@
       });
   }
 
-  var MARKET_REYON_JSON_V = '20260527proso1';
+  var MARKET_REYON_JSON_V = '20260527caglayan-gallery11';
 
   function fetchMarketReyonDeptJson() {
     return fetch('/data/dept/market-reyon.json?v=' + MARKET_REYON_JSON_V, {
