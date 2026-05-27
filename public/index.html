@@ -159,9 +159,9 @@
   ]
 }
 </script>
-<link rel="stylesheet" href="/theme.css?v=20260521globalsearch">
+<link rel="stylesheet" href="/theme.css?v=20260527pfosrender">
 <link rel="stylesheet" href="/eq-home-mutbex.css?v=20260521globalsearch">
-<link rel="stylesheet" href="/eq-home-decor.css?v=20260528decor">
+<link rel="stylesheet" href="/eq-home-decor.css?v=20260527pfosrender">
 <link rel="stylesheet" href="/contact.css?v=20260523wamin">
 <script src="/eq-site-urls.js?v=20260521globalsearch"></script>
 <script src="/eq-home-vitrin.js?v=20260523catalog"></script>
@@ -245,6 +245,11 @@ body.eq-home .hero-card.hero-card--yer,
 body.eq-home .hero-card.hero-card--besos{background-color:transparent;}
 /* Yer Sofrası büfe görseli — theme.css önbelleği gecikse bile tam kaplama */
 body.eq-shop.eq-home .eq-home-hero-ads .hero-card-img--yer-bufe{position:absolute;inset:0;width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;object-position:center center;}
+/* Proje Fabrikası gece render — theme.css önbelleği gecikse bile tam kaplama */
+body.eq-shop.eq-home .eq-home-hero-ads .hero-card-visual--pfos{overflow:hidden;background:#1a1a22;}
+body.eq-shop.eq-home .eq-home-hero-ads .hero-card-img--pfos-cover{position:absolute;inset:0;width:100%;height:100%;max-width:none!important;max-height:none!important;object-fit:cover;object-position:center 42%;}
+body.eq-shop.eq-home .eq-home-hero-ads .hero-card-visual__shade--pfos{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.08) 0%,rgba(0,0,0,.18) 42%,rgba(255,255,255,.55) 78%,rgba(255,255,255,.92) 100%);}
+body.eq-shop.eq-home .eq-home-hero-ads .hero-pfos-promise{z-index:2;padding:10px 14px 12px;background:rgba(255,255,255,.9);border-radius:10px;box-shadow:0 8px 24px rgba(0,30,80,.14);}
 .hero-tag{font-size:10px;font-weight:500;letter-spacing:0.06em;color:var(--eq-text-muted);margin-bottom:6px;}
 .hero-title{font-size:14px;font-weight:500;color:var(--eq-text);margin-bottom:4px;}
 .hero-url{font-size:11px;color:var(--eq-text-subtle);}
@@ -1371,6 +1376,8 @@ html[data-theme="dark"] .eq-home-cm.eq-home-cm-shop {
       <section class="hero eq-home-hero-ads" aria-label="Equsto vitrin reklamları" data-i18n-attr="aria-label:home.hero_ads_aria">
         <div class="hero-card hero-card--pfos" onclick="eqGo('pfos')" role="link" tabindex="0" onkeydown="if(event.key==='Enter')eqGo('pfos')">
           <div class="hero-card-visual hero-card-visual--pfos" aria-hidden="true">
+            <img class="hero-card-img hero-card-img--pfos-cover" src="/images/pfos/dis-mutfak-gece-render.jpg?v=20260527c" alt="Dış mekan açık mutfak yerleşimi — gece render, pişirme adası ve servis hatları" width="714" height="1024" loading="eager" decoding="async" fetchpriority="high">
+            <div class="hero-card-visual__shade hero-card-visual__shade--pfos" aria-hidden="true"></div>
             <p class="hero-pfos-promise" data-i18n-html="home.hero_card1_promise">Beş dakikada yapılır,<br>hemen teslim edilir</p>
           </div>
           <div class="hero-card-body">

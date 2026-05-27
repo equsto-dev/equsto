@@ -1,0 +1,39 @@
+Proje Fabrikası vitrin görseli — canlı yükleme paketi
+====================================================
+Tarih: 2026-05-27
+Görsel: images/pfos/dis-mutfak-gece-render.jpg
+
+YÖNTEM A — cPanel (equsto.com klasik hosting)
+---------------------------------------------
+1. cPanel → Dosya Yöneticisi → public_html
+2. Bu klasörün İÇERİĞİNİ (deploy-live-pfos-hero) sürükleyin — üzerine yazın
+3. Tarayıcıda https://equsto.com → Ctrl+F5
+
+Yüklenecek dosyalar:
+  index.html
+  theme.css
+  eq-home-decor.css
+  eq-home-mutbex.css
+  eq-home-mutbex.js
+  images/pfos/dis-mutfak-gece-render.jpg
+  images/pfos/mutfak-plani-referans.jpg
+
+YÖNTEM B — Vercel (Git ile otomatik deploy)
+---------------------------------------------
+Site kökü: EQUSTO-WORK/E-TICARET/site
+
+1. Değişiklikleri GitHub main branch'e push edin
+2. vercel.com → proje equsto → Deployments
+3. En son deploy "Ready" olunca https://equsto.com → Ctrl+F5
+
+Vercel panelden manuel redeploy (push yoksa):
+  Deployments → ⋯ → Redeploy → Build Cache KAPALI
+
+Kontrol
+-------
+Ana sayfa → Proje Fabrikası kartı → gece dış mutfak render görünmeli
+(plan çizimi değil).
+
+Sorun devam ederse F12 → Network → dis-mutfak-gece-render.jpg
+  - 404 ise görsel yolu yanlış klasöre yüklendi
+  - 200 ama eski plan ise CDN önbellek: Ctrl+Shift+R veya gizli pencere

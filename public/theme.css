@@ -1461,21 +1461,64 @@ body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--pfos
   background: var(--eq-surface);
 }
 body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-visual--pfos {
-  background: linear-gradient(180deg, #eef3fb 0%, #f8fafd 100%);
+  background: #1a1a22;
+  overflow: hidden;
+}
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img--pfos-cover {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: cover;
+  object-position: center 42%;
+  filter: drop-shadow(0 10px 28px rgba(0, 30, 80, 0.18));
+}
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-visual__shade--pfos {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.08) 0%,
+    rgba(0, 0, 0, 0.18) 42%,
+    rgba(255, 255, 255, 0.55) 78%,
+    rgba(255, 255, 255, 0.92) 100%
+  );
+}
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--pfos .hero-card-body {
+  box-shadow: 0 -10px 28px rgba(0, 30, 80, 0.1);
 }
 body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-pfos-promise {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -58%);
+  z-index: 2;
   width: min(92%, 220px);
   margin: 0;
+  padding: 10px 14px 12px;
   text-align: center;
   font-size: clamp(13px, 2.1vw, 16px);
   font-weight: 700;
   line-height: 1.35;
   letter-spacing: 0.02em;
   color: #001e50;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow:
+    0 2px 8px rgba(0, 30, 80, 0.06),
+    0 8px 24px rgba(0, 30, 80, 0.14);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--pfos:hover .hero-pfos-promise {
+  box-shadow:
+    0 4px 12px rgba(0, 30, 80, 0.1),
+    0 12px 32px rgba(0, 30, 80, 0.18);
 }
 body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--yer {
   background: var(--eq-surface);
@@ -1489,7 +1532,7 @@ body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-visua
   overflow: hidden;
   background: #2e2e2e;
 }
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img:not(.hero-card-img--bar-combo):not(.hero-card-img--yer-bufe) {
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img:not(.hero-card-img--bar-combo):not(.hero-card-img--yer-bufe):not(.hero-card-img--pfos-cover) {
   max-height: 56%;
   width: auto;
   max-width: 46%;
