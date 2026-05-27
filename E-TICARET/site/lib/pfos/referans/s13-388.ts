@@ -3,7 +3,7 @@
  * python scripts/build-s13-388-referanslar.py
  */
 
-import s13Data from "@/public/data/pfos-s13-388-referanslar.json";
+import s13Data from "@/lib/pfos/data/pfos-s13-388-referanslar.json";
 import type { ReferansProfil } from "./referans-types";
 import type { Konsept } from "@/lib/pfos/schemas/pfos.schema";
 

@@ -46,8 +46,24 @@ function patchPackageJsonForVercel(dir) {
   console.log("[vercel-prebuild] package.json imports kaldırıldı → @prisma/client");
 }
 
+/** PFOS build-time JSON → public/data (runtime fs okuma + statik yedek) */
+function syncPfosDataToPublic(dir) {
+  const srcDir = path.join(dir, "lib/pfos/data");
+  const destDir = path.join(dir, "public/data");
+  if (!fs.existsSync(srcDir)) return;
+  fs.mkdirSync(destDir, { recursive: true });
+  for (const name of fs.readdirSync(srcDir)) {
+    if (!name.endsWith(".json")) continue;
+    const src = path.join(srcDir, name);
+    const dest = path.join(destDir, name);
+    fs.copyFileSync(src, dest);
+  }
+  console.log("[vercel-prebuild] lib/pfos/data → public/data");
+}
+
 patchPrismaSchemaForVercel(siteDir);
 patchPrismaLibForVercel(siteDir);
 patchTsconfigForVercel(siteDir);
 patchPackageJsonForVercel(siteDir);
+syncPfosDataToPublic(siteDir);
 console.log("[vercel-prebuild] OK");
