@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Arama — Equsto</title>
+<meta name="description" content="Equsto ürün araması — Meilisearch">
+<meta name="robots" content="noindex, follow">
+<link rel="icon" href="/images/favicon.svg?v=20260522natural" type="image/svg+xml">
+<link rel="stylesheet" href="/theme.css?v=20260530logo">
+<link rel="stylesheet" href="/eq-home-mutbex.css?v=20260521globalsearch">
+<link rel="stylesheet" href="/eq-dept-plp.css?v=20260524loadmore">
+<style>
+body.eq-arama-page { background: #fff; }
+body.eq-arama-page .eq-arama-wrap {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 16px 20px 32px;
+  width: 100%;
+}
+body.eq-arama-page .eq-arama-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+body.eq-arama-page .eq-arama-count {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 16px;
+}
+body.eq-arama-page .eq-arama-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+@media (min-width: 1024px) {
+  body.eq-arama-page .eq-arama-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+</style>
+</head>
+<body class="eq-shop eq-arama-page">
+
+<header class="hdr">
+  <a class="logo" href="/" aria-label="Equsto"></a>
+  <div class="pg-inner hdr-pg-inner">
+    <div class="hdr-alici">
+      <div style="font-size:9px;color:var(--eq-text-subtle);">Teslimat Adresi</div>
+      <div style="font-size:11px;font-weight:600;">İstanbul, Türkiye</div>
+    </div>
+    <div class="srch">
+      <div class="srch-cat" onclick="toggleDrawer()">☰ Tüm Kategoriler</div>
+      <input class="srch-input" type="search" placeholder="Ürün, marka veya kategori ara..." autocomplete="off">
+      <button type="button" class="srch-btn" aria-label="Ara"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.25" stroke="currentColor" stroke-width="1.35"/><line x1="12.35" y1="12.35" x2="17.85" y2="12.35" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/></svg></button>
+    </div>
+    <div class="hdr-right">
+      <button type="button" class="theme-toggle" id="theme-toggle" onclick="equstoCycleTheme()" title="Tema">◐</button>
+      <a href="/login.html" class="eq-hdr-account">Hesabım</a>
+    </div>
+  </div>
+</header>
+
+<nav class="topnav" aria-label="Departmanlar">
+  <div class="pg-inner topnav-inner">
+    <div class="topnav-item topnav-all" onclick="toggleDrawer()">☰ Tüm kategoriler</div>
+    <span class="topnav-sep">|</span>
+    <div class="topnav-item topnav-pfos" onclick="eqGo('pfos')">Proje Fabrikası</div>
+    <span class="topnav-sep">|</span>
+    <div class="topnav-item" onclick="eqGo('pisirme')">Pişirme</div>
+    <span class="topnav-sep">|</span>
+    <div class="topnav-item" onclick="eqGo('sogutma')">Soğutma</div>
+    <span class="topnav-sep">|</span>
+    <div class="topnav-item" onclick="eqGo('kahve')">Kahve</div>
+    <span class="topnav-sep">|</span>
+    <div class="topnav-item topnav-besos" onclick="eqGo('besos')">Bar Design</div>
+  </div>
+</nav>
+
+<main class="eq-arama-wrap" id="eq-arama-main">
+  <h1 class="eq-arama-title" id="eq-arama-title">Arama</h1>
+  <p class="eq-arama-count" id="eq-arama-count"></p>
+  <div class="eq-arama-grid" id="eq-arama-grid" role="list">
+    <p class="eq-dept-plp-status">Yükleniyor…</p>
+  </div>
+</main>
+
+<div class="drawer-overlay" id="drawerOverlay" onclick="__eqDrawerBackdropClick(event)">
+  <button type="button" class="drawer-overlay-close" onclick="__eqDrawerCloseX(event)" aria-label="Kapat">×</button>
+</div>
+<div class="cat-drawer eq-amazon-shop-all" id="catDrawer" aria-hidden="true"></div>
+
+<script vite-ignore src="/eq-site-urls.js?v=20260521oztiax"></script>
+<script vite-ignore src="/eq-dept-tips.js?v=20260527caglayan-tip"></script>
+<script vite-ignore src="/theme.js?v=20260519topnavstatic"></script>
+<script defer src="/eq-header-search.js?v=20260527caglayan-tip"></script>
+<script vite-ignore src="/equsto-logo.js?v=20260519wordmark3"></script>
+<script vite-ignore src="/nav.js?v=20260528setustu"></script>
+<script defer src="/ecom-cart.js?v=20260524cart3"></script>
+<script vite-ignore src="/eq-arama-page.js?v=20260527caglayan-tip"></script>
+</body>
+</html>

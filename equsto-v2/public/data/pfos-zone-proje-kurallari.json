@@ -1,0 +1,320 @@
+{
+  "version": 1,
+  "source": "pfos-referans-projeler.json",
+  "generated_at": "2026-05-22T21:50:57.240Z",
+  "profiles": [
+    {
+      "konsept": "Restaurant",
+      "dukkan": "All Dining Cafe (TheHouse Cafe, Happymoons vb)",
+      "source_projects": [
+        "2017-044"
+      ],
+      "pfos_zones": [
+        "ana_mutfak",
+        "sebze_hazirlik",
+        "izgara_meze",
+        "kuru_depo",
+        "soguk_oda",
+        "derin_dondurucu",
+        "bulasikhane",
+        "bar",
+        "acik_bufe"
+      ]
+    },
+    {
+      "konsept": "Hotel",
+      "dukkan": "5 Yıldız Otel",
+      "source_projects": [
+        "2017-050"
+      ],
+      "pfos_zones": [
+        "ana_mutfak",
+        "sebze_hazirlik",
+        "et_hazirlik",
+        "izgara_meze",
+        "soguk_oda",
+        "derin_dondurucu",
+        "bulasikhane",
+        "pastane",
+        "bar",
+        "acik_bufe",
+        "show_mutfagi"
+      ]
+    },
+    {
+      "konsept": "Restaurant",
+      "dukkan": "Türk Restoran",
+      "source_projects": [
+        "2017-120"
+      ],
+      "pfos_zones": [
+        "ana_mutfak",
+        "sebze_hazirlik",
+        "et_hazirlik",
+        "izgara_meze",
+        "kuru_depo",
+        "soguk_oda",
+        "derin_dondurucu",
+        "bulasikhane",
+        "pastane",
+        "bar"
+      ]
+    },
+    {
+      "konsept": "Restaurant",
+      "dukkan": "Food Court / Çoklu outlet",
+      "source_projects": [
+        "2017-204"
+      ],
+      "pfos_zones": [
+        "ana_mutfak",
+        "sebze_hazirlik",
+        "et_hazirlik",
+        "izgara_meze",
+        "kuru_depo",
+        "soguk_oda",
+        "derin_dondurucu",
+        "bulasikhane",
+        "bar",
+        "acik_bufe",
+        "show_mutfagi"
+      ]
+    },
+    {
+      "konsept": "Steakhouse",
+      "dukkan": "Steakhouse",
+      "source_projects": [
+        "S13-117"
+      ],
+      "pfos_zones": [
+        "kuru_depo",
+        "soguk_oda",
+        "derin_dondurucu",
+        "et_hazirlik",
+        "pastane",
+        "ana_mutfak",
+        "show_mutfagi",
+        "sebze_hazirlik",
+        "bulasikhane",
+        "bar",
+        "izgara_meze"
+      ],
+      "note": "Pilot S13-117 onaylı: brüt 270 m², salon 128 m², mutfak 118 m²; yer ızgara mutfak (izgara_meze)"
+    },
+    {
+      "konsept": "Restaurant",
+      "dukkan": "Steakhouse",
+      "source_projects": [
+        "S13-117"
+      ],
+      "pfos_zones": [
+        "kuru_depo",
+        "soguk_oda",
+        "derin_dondurucu",
+        "et_hazirlik",
+        "pastane",
+        "ana_mutfak",
+        "show_mutfagi",
+        "sebze_hazirlik",
+        "bulasikhane",
+        "bar",
+        "izgara_meze"
+      ],
+      "note": "Pilot S13-117 onaylı: yer ızgara mutfak bölgesi"
+    }
+  ],
+  "rules": [
+    {
+      "id": "referans-zones-restaurant-all-dining-cafe-thehouse-cafe-happymoons-vb",
+      "priority": 780,
+      "when": {
+        "konseptEq": "Restaurant",
+        "dukkanEq": "All Dining Cafe (TheHouse Cafe, Happymoons vb)"
+      },
+      "pfosZones": [
+        "ana_mutfak",
+        "sebze_hazirlik",
+        "izgara_meze",
+        "kuru_depo",
+        "soguk_oda",
+        "derin_dondurucu",
+        "bulasikhane",
+        "bar",
+        "acik_bufe"
+      ],
+      "note": "Referans proformalar: 2017-044"
+    },
+    {
+      "id": "referans-zones-hotel-5-y-ld-z-otel",
+      "priority": 780,
+      "when": {
+        "konseptEq": "Hotel",
+        "dukkanEq": "5 Yıldız Otel"
+      },
+      "pfosZones": [
+        "ana_mutfak",
+        "sebze_hazirlik",
+        "et_hazirlik",
+        "izgara_meze",
+        "soguk_oda",
+        "derin_dondurucu",
+        "bulasikhane",
+        "pastane",
+        "bar",
+        "acik_bufe",
+        "show_mutfagi"
+      ],
+      "note": "Referans proformalar: 2017-050"
+    },
+    {
+      "id": "referans-zones-restaurant-t-rk-restoran",
+      "priority": 780,
+      "when": {
+        "konseptEq": "Restaurant",
+        "dukkanEq": "Türk Restoran"
+      },
+      "pfosZones": [
+        "ana_mutfak",
+        "sebze_hazirlik",
+        "et_hazirlik",
+        "izgara_meze",
+        "kuru_depo",
+        "soguk_oda",
+        "derin_dondurucu",
+        "bulasikhane",
+        "pastane",
+        "bar"
+      ],
+      "note": "Referans proformalar: 2017-120"
+    },
+    {
+      "id": "referans-zones-restaurant-food-court-oklu-outlet",
+      "priority": 780,
+      "when": {
+        "konseptEq": "Restaurant",
+        "dukkanEq": "Food Court / Çoklu outlet"
+      },
+      "pfosZones": [
+        "ana_mutfak",
+        "sebze_hazirlik",
+        "et_hazirlik",
+        "izgara_meze",
+        "kuru_depo",
+        "soguk_oda",
+        "derin_dondurucu",
+        "bulasikhane",
+        "bar",
+        "acik_bufe",
+        "show_mutfagi"
+      ],
+      "note": "Referans proformalar: 2017-204"
+    },
+    {
+      "id": "referans-proje-2017-044",
+      "priority": 820,
+      "when": {
+        "referansProjeId": "2017-044",
+        "konseptEq": "Restaurant",
+        "dukkanEq": "All Dining Cafe (TheHouse Cafe, Happymoons vb)"
+      },
+      "pfosZones": [
+        "bar",
+        "bulasikhane",
+        "soguk_oda",
+        "ana_mutfak",
+        "izgara_meze"
+      ],
+      "note": "THC Bakü"
+    },
+    {
+      "id": "referans-proje-2017-050",
+      "priority": 820,
+      "when": {
+        "referansProjeId": "2017-050",
+        "konseptEq": "Hotel",
+        "dukkanEq": "5 Yıldız Otel"
+      },
+      "pfosZones": [
+        "bar",
+        "izgara_meze",
+        "ana_mutfak",
+        "bulasikhane",
+        "acik_bufe"
+      ],
+      "note": "DoubleTree Hilton Topkapı"
+    },
+    {
+      "id": "referans-proje-2017-120",
+      "priority": 820,
+      "when": {
+        "referansProjeId": "2017-120",
+        "konseptEq": "Restaurant",
+        "dukkanEq": "Türk Restoran"
+      },
+      "pfosZones": [
+        "izgara_meze",
+        "bar",
+        "bulasikhane",
+        "sebze_hazirlik",
+        "kuru_depo",
+        "soguk_oda",
+        "derin_dondurucu"
+      ],
+      "note": "Sütiş Mersin"
+    },
+    {
+      "id": "referans-proje-2017-204",
+      "priority": 820,
+      "when": {
+        "referansProjeId": "2017-204",
+        "konseptEq": "Restaurant",
+        "dukkanEq": "Food Court / Çoklu outlet"
+      },
+      "pfosZones": [
+        "kuru_depo",
+        "soguk_oda",
+        "derin_dondurucu",
+        "show_mutfagi",
+        "ana_mutfak",
+        "bulasikhane",
+        "bar",
+        "izgara_meze"
+      ],
+      "note": "Vadistanbul"
+    }
+  ],
+  "station_label_map": {
+    "Ana Mutfak": "ana_mutfak",
+    "Sıcak Mutfak": "ana_mutfak",
+    "Soğuk Mutfak": "soguk_oda",
+    "Hazırlık Mutfağı": "sebze_hazirlik",
+    "Et Hazırlık": "et_hazirlik",
+    "Bulaşıkhane": "bulasikhane",
+    "Pastane": "pastane",
+    "Bar": "bar",
+    "Açık Büfe": "acik_bufe",
+    "Banket": "acik_bufe",
+    "Show Mutfak": "show_mutfagi",
+    "Üretim": "pastane",
+    "Paketleme": "kuru_depo",
+    "Kuru Depo": "kuru_depo",
+    "Soğuk Oda": "soguk_oda",
+    "Derin Dondurucu": "derin_dondurucu",
+    "Et Hazırlık": "et_hazirlik",
+    "Hamur Hazırlık": "pastane",
+    "Pişirme": "ana_mutfak",
+    "Ön Mutfak / Et Teşhir": "show_mutfagi",
+    "Soğuk Hazırlık": "sebze_hazirlik",
+    "Bulaşık Yıkama": "bulasikhane",
+    "İçecek": "bar",
+    "Yer Izgara": "izgara_meze",
+    "Et Teşhir Reyonu": "show_mutfagi",
+    "Ön Mutfak": "show_mutfagi",
+    "Derin Dondurucu Oda": "derin_dondurucu",
+    "Et & Sebze Hazırlık": "et_hazirlik",
+    "İçecek & Servis": "bar",
+    "Soğuk Hazırlık": "sebze_hazirlik",
+    "Hamur Hazırlık": "pastane",
+    "Bulaşık Yıkama": "bulasikhane"
+  }
+}

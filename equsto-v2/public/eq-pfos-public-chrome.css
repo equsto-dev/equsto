@@ -1,0 +1,153 @@
+/**
+ * Next.js /pfos — vitrin üst bank (eq-d-header) + departman şeridi.
+ * Legacy pfos.html (.eq-pfos) kurallarından ayrı; theme.css :not(.eq-pfos) ile uyumlu.
+ */
+
+/* Hydrate öncesi: topnav header altında (top:0, z-index 499) kaybolmasın */
+html.eq-pfos-boot nav.topnav,
+html.eq-pfos-boot .topnav,
+.eq-pfos-public-root nav.topnav,
+.eq-pfos-public-root .topnav {
+  display: flex !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  position: sticky !important;
+  top: var(--eq-hdr-sticky-h, 56px) !important;
+  z-index: 500 !important;
+  background: #ffffff !important;
+  border-bottom: 1px solid #e5e5e5 !important;
+}
+
+html.eq-pfos-boot header.hdr,
+.eq-pfos-public-root header.hdr {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 501 !important;
+}
+
+@media (min-width: 769px) {
+  html.eq-pfos-boot header.hdr > a.logo,
+  .eq-pfos-public-root header.hdr > a.logo {
+    display: inline-flex !important;
+    visibility: visible !important;
+    width: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  html.eq-pfos-boot header.hdr .srch-cat,
+  .eq-pfos-public-root header.hdr .srch-cat {
+    display: flex !important;
+    visibility: visible !important;
+    width: auto !important;
+    overflow: visible !important;
+  }
+
+  html.eq-pfos-boot header.hdr .hdr-right,
+  .eq-pfos-public-root header.hdr .hdr-right {
+    display: flex !important;
+    visibility: visible !important;
+  }
+}
+
+@media (max-width: 768px) {
+  html.eq-pfos-boot nav.topnav,
+  html.eq-pfos-boot .topnav,
+  .eq-pfos-public-root nav.topnav,
+  .eq-pfos-public-root .topnav {
+    display: none !important;
+  }
+}
+
+body.eq-shop.eq-pfos-public {
+  --eq-topnav-dept-strip-bg: #ffffff;
+  --eq-topnav-dept-text: #1a1a1a;
+  --eq-topnav-dept-border: #e5e5e5;
+  --eq-topnav-dept-hover: rgba(0, 30, 80, 0.06);
+  --eq-topnav-dept-sep: rgba(0, 0, 0, 0.2);
+  background: #f5f7fb !important;
+  color: #2c2c2a;
+}
+
+body.eq-shop.eq-pfos-public header.hdr {
+  position: sticky;
+  top: 0;
+  z-index: 501 !important;
+}
+
+body.eq-shop.eq-pfos-public nav.topnav,
+body.eq-shop.eq-pfos-public .topnav {
+  background: #ffffff !important;
+  border-bottom: 1px solid var(--eq-topnav-dept-border) !important;
+  top: var(--eq-hdr-sticky-h, 56px);
+  z-index: 500 !important;
+  position: sticky !important;
+}
+
+body.eq-shop.eq-pfos-public .topnav-item {
+  color: var(--eq-topnav-dept-text, #1a1a1a) !important;
+}
+
+body.eq-shop.eq-pfos-public .topnav-item:hover {
+  background: var(--eq-topnav-dept-hover, rgba(0, 30, 80, 0.06)) !important;
+}
+
+body.eq-shop.eq-pfos-public .topnav-sep {
+  color: var(--eq-topnav-dept-sep, rgba(0, 0, 0, 0.2)) !important;
+}
+
+body.eq-shop.eq-pfos-public .topnav-hamburger span {
+  background: #1a1a1a;
+}
+
+body.eq-shop.eq-pfos-public .topnav-item.active {
+  box-shadow: inset 0 -2px 0 0 #febd69 !important;
+}
+
+@media (min-width: 769px) {
+  body.eq-shop.eq-pfos-public nav.topnav,
+  body.eq-shop.eq-pfos-public .topnav {
+    display: flex !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+
+  body.eq-shop.eq-pfos-public header.hdr > a.logo {
+    display: inline-flex !important;
+    visibility: visible !important;
+    width: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  body.eq-shop.eq-pfos-public header.hdr .srch-cat,
+  body.eq-shop.eq-pfos-public header.hdr .cat-picker,
+  body.eq-shop.eq-pfos-public header.hdr .cat-picker-btn {
+    display: flex !important;
+    visibility: visible !important;
+    width: auto !important;
+    overflow: visible !important;
+  }
+
+  body.eq-shop.eq-pfos-public header.hdr .hdr-right {
+    display: flex !important;
+    visibility: visible !important;
+  }
+}
+
+@media (max-width: 768px) {
+  body.eq-shop.eq-pfos-public nav.topnav,
+  body.eq-shop.eq-pfos-public .topnav {
+    display: none !important;
+  }
+
+  body.eq-shop.eq-pfos-public header.hdr > a.logo {
+    display: inline-flex !important;
+    visibility: visible !important;
+    max-width: 31vw !important;
+  }
+}
+
+body.eq-shop.eq-pfos-public footer.footer.eq-mfoot {
+  margin-top: auto;
+}

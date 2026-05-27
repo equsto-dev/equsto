@@ -1,0 +1,125 @@
+import type { Konsept } from "@/lib/pfos/schemas/pfos.schema";
+
+export type PfosProfilMeta = {
+  konsept: Konsept;
+  konseptUst: string;
+  dukkan: string;
+  pfosZones: string[];
+};
+
+/** Şablon slug → referans profil (pfos-zone-proje-kurallari.json ile uyumlu) */
+export const PROFIL_BY_SLUG: Record<Konsept, PfosProfilMeta> = {
+  "all-day-dining-cafe": {
+    konsept: "all-day-dining-cafe",
+    konseptUst: "Restaurant",
+    dukkan: "All Dining Cafe (TheHouse Cafe, Happymoons vb)",
+    /** Referans şablon (THC Bakü @ 280 m²) — zone katalog eklemez */
+    pfosZones: [],
+  },
+  "kebap-ortadogu": {
+    konsept: "kebap-ortadogu",
+    konseptUst: "Restaurant",
+    dukkan: "Kebap & Ortadoğu",
+    pfosZones: [
+      "et_hazirlik",
+      "ana_mutfak",
+      "izgara_meze",
+      "sebze_hazirlik",
+      "soguk_oda",
+      "derin_dondurucu",
+      "bulasikhane",
+      "bar",
+    ],
+  },
+  pizzaci: {
+    konsept: "pizzaci",
+    konseptUst: "Restaurant",
+    dukkan: "Pizzacı",
+    pfosZones: [
+      "ana_mutfak",
+      "sebze_hazirlik",
+      "kuru_depo",
+      "soguk_oda",
+      "bulasikhane",
+      "bar",
+    ],
+  },
+  meyhane: {
+    konsept: "meyhane",
+    konseptUst: "Restaurant",
+    dukkan: "Meyhane / Mezeli",
+    pfosZones: [
+      "ana_mutfak",
+      "izgara_meze",
+      "sebze_hazirlik",
+      "soguk_oda",
+      "bulasikhane",
+      "bar",
+      "acik_bufe",
+    ],
+  },
+  "turk-restoran": {
+    konsept: "turk-restoran",
+    konseptUst: "Restaurant",
+    dukkan: "Türk Restoran",
+    /** S13-388 referans şablonu — zone katalog eklemez */
+    pfosZones: [],
+  },
+  "coffee-shop": {
+    konsept: "coffee-shop",
+    konseptUst: "Restaurant",
+    dukkan: "Coffee Shop",
+    /** Şablon Espressolab/Gloria Jeans bar setini tek başına tanımlar — zone katalog davlumbaz/giyotin/ana mutfak eklemez */
+    pfosZones: [],
+  },
+  steakhouse: {
+    konsept: "steakhouse",
+    konseptUst: "Restaurant",
+    dukkan: "Steakhouse",
+    pfosZones: [
+      "show_mutfagi",
+      "soguk_oda",
+      "derin_dondurucu",
+      "et_hazirlik",
+      "ana_mutfak",
+      "bar",
+      "sebze_hazirlik",
+      "kuru_depo",
+      "bulasikhane",
+    ],
+  },
+  balikci: {
+    konsept: "balikci",
+    konseptUst: "Restaurant",
+    dukkan: "Balık Restaurant",
+    pfosZones: [
+      "ana_mutfak",
+      "sebze_hazirlik",
+      "soguk_oda",
+      "derin_dondurucu",
+      "bulasikhane",
+      "bar",
+      "kuru_depo",
+    ],
+  },
+};
+
+export function zonesForKonsept(slug: Konsept | null): string[] {
+  if (!slug) return [];
+  return PROFIL_BY_SLUG[slug]?.pfosZones ?? [];
+}
+
+/** Toplam m²’yi zone listesine orantılı dağıt (ilk kurulum) */
+export function dagitM2Toplam(
+  zones: string[],
+  toplam: number,
+): Record<string, number> {
+  if (!zones.length || toplam <= 0) return {};
+  const pay = Math.floor(toplam / zones.length);
+  let kalan = toplam - pay * zones.length;
+  const out: Record<string, number> = {};
+  zones.forEach((z, i) => {
+    out[z] = pay + (i < kalan ? 1 : 0);
+  });
+  return out;
+}

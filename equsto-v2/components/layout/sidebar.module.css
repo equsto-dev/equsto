@@ -1,0 +1,110 @@
+/* ===== EQUSTO İSKELET — sidebar.module.css ===== */
+
+.sidebar {
+  background: #ffffff;
+  border-right: 1px solid #dddddd;
+  padding: 16px 0;
+}
+
+.header {
+  padding: 8px 16px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #666666;
+  border-bottom: 1px solid #eeeeee;
+  margin-bottom: 8px;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  position: relative;
+}
+
+.itemBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 16px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #f0f0f0;
+  text-align: left;
+  font-size: 14px;
+  color: #333333;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.itemBtn:hover {
+  background: #f5f5f5;
+  color: #000000;
+}
+
+.arrow {
+  font-size: 16px;
+  color: #999999;
+}
+
+/* ----- FLYOUT (sağa açılan sub-kategori paneli) ----- */
+
+.flyout {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  min-width: 240px;
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  padding: 12px 0;
+  z-index: 100;
+  box-shadow: 0 0 0 1px #ffffff; /* Hairline gap to make border crisp */
+}
+
+.flyoutTitle {
+  padding: 4px 16px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #666666;
+  border-bottom: 1px solid #eeeeee;
+  margin-bottom: 4px;
+}
+
+.flyoutList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.flyoutItem {
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #333333;
+  cursor: pointer;
+}
+
+.flyoutItem:hover {
+  background: #f5f5f5;
+  color: #000000;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid #dddddd;
+  }
+  .flyout {
+    position: static;
+    border: none;
+    border-top: 1px solid #eeeeee;
+    padding: 4px 0 4px 16px;
+  }
+}

@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script vite-ignore src="/eq-file-protocol-guard.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Bar modülü · Besos · Bar Design Studio</title>
+<meta name="description" content="Vitrum Group bar modülü — teknik özellikler, ölçüler ve Equsto teklif hattı.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://equsto.com/besos/modul/">
+<link rel="stylesheet" href="/besos-shell.css?v=20260527homehdr">
+<link rel="stylesheet" href="/theme.css?v=20260530logo">
+<link rel="stylesheet" href="/contact.css?v=20260523wamin">
+<link rel="stylesheet" href="/bar-module.css?v=20260523bmlayout">
+<script vite-ignore src="/theme.js?v=20260521search"></script>
+<script vite-ignore src="/equsto-logo.js?v=20260519wordmark3"></script>
+<script vite-ignore src="/eq-site-urls.js?v=20260523besosimg"></script>
+<script vite-ignore src="/eq-i18n.js?v=20260521search"></script>
+<script vite-ignore src="/nav.js?v=20260521search"></script>
+<script vite-ignore src="/eq-bar-module-url.js"></script>
+</head>
+<body class="bd-page eq-shop besos besos-sub bm-page">
+
+<header class="hdr">
+  <a class="logo" href="/" aria-label="Equsto"></a>
+  <div class="pg-inner hdr-pg-inner" style="display:flex;align-items:center;gap:10px;flex:1;min-width:0;padding:10px 20px 10px 0;">
+    <div class="hdr-alici">
+      <div class="st-label">Teslimat Adresi</div>
+      <div class="st-val">İstanbul, Türkiye</div>
+    </div>
+    <div class="srch">
+      <div class="srch-cat" onclick="toggleCatPicker()">☰ Tüm Kategoriler</div>
+      <input class="srch-input" type="search" placeholder="Ürün, marka veya kategori ara..." autocomplete="off" spellcheck="false">
+      <button type="button" class="srch-btn" aria-label="Ara" title="Ara"><svg xmlns="http://www.w3.org/2000/svg" class="eq-srch-ico" width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.25" stroke="currentColor" stroke-width="1.35"/><line x1="12.35" y1="12.35" x2="17.85" y2="12.35" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/></svg></button>
+    </div>
+    <div class="hdr-right">
+      <div class="theme-wrap">
+        <button type="button" class="theme-toggle" id="theme-toggle" onclick="equstoCycleTheme()" title="Tema" aria-label="Tema">◝</button>
+        <span class="theme-legend">Sistem · Açık · Koyu</span>
+      </div>
+      <a href="/login.html" class="eq-hdr-account" title="Üye girişi">
+        <span style="font-size:10px;color:var(--eq-text-muted);">Hesabım</span>
+        <span class="eq-hdr-account-title" style="font-size:12px;font-weight:600;color:var(--eq-text);">Projeler ve Listeler ▾</span>
+      </a>
+      <div style="display:flex;flex-direction:column;line-height:1.4;">
+        <span style="font-size:10px;color:var(--eq-text-muted);">İadeler</span>
+        <span style="font-size:12px;font-weight:600;cursor:pointer;color:var(--eq-text);">ve Siparişler</span>
+      </div>
+      <div id="equsto-hdr-cart" class="equsto-hdr-cart" style="display:flex;flex-direction:column;line-height:1.4;cursor:pointer;" title="Sepeti aç" role="button" tabindex="0">
+        <span id="equsto-cart-count" style="font-size:10px;color:var(--eq-text-muted);">🛒 0</span>
+        <span style="font-size:12px;font-weight:600;color:var(--eq-text);">Alışveriş Sepeti</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="topnav" aria-label="Departmanlar">
+  <div class="pg-inner topnav-inner">
+    <div class="topnav-item topnav-all" onclick="toggleCatPicker()">☰ Tüm kategoriler</div>
+    <span class="topnav-sep" aria-hidden="true">|</span>
+    <div class="topnav-item topnav-pfos" onclick="eqGo('pfos')"><span class="topnav-pfos__in" aria-hidden="true"><span class="topnav-pfos__face topnav-pfos__face--plain">Proje Fabrikası</span><span class="topnav-pfos__face topnav-pfos__face--dark">Proje Fabrikası</span></span></div>
+    <span class="topnav-sep" aria-hidden="true">|</span>
+    <div class="topnav-item" onclick="eqDeptGo('pisirme')">Pişirme Ekipmanları</div>
+    <span class="topnav-sep" aria-hidden="true">|</span>
+    <div class="topnav-item" onclick="eqDeptGo('sogutma')">Soğutma Ekipmanları</div>
+    <span class="topnav-sep" aria-hidden="true">|</span>
+    <div class="topnav-item" onclick="eqDeptGo('kahve')">Kahve Ekipmanları</div>
+    <span class="topnav-sep" aria-hidden="true">|</span>
+    <div class="topnav-item" onclick="eqDeptGo('yikama')">Yıkama Ekipmanları</div>
+    <span class="topnav-sep" aria-hidden="true">|</span>
+    <div class="topnav-item" onclick="eqDeptGo('hazirlik')">Hazırlık Ekipmanları</div>
+    <span class="topnav-sep" aria-hidden="true">|</span>
+    <div class="topnav-item" onclick="eqDeptGo('icecek')">İçecek Ekipmanları</div>
+    <span class="topnav-sep" aria-hidden="true">|</span>
+    <div class="topnav-item topnav-besos active" onclick="eqGo('besos')" aria-current="page"><span class="topnav-besos__in" aria-hidden="true"><span class="topnav-besos__face topnav-besos__face--plain">Bar Design</span><span class="topnav-besos__face topnav-besos__face--dark">Dark Side</span></span></div>
+  </div>
+</nav>
+
+<main class="bm-wrap" id="bm-root">
+  <p class="bm-loading">Modül yükleniyor…</p>
+</main>
+<script src="/eq-auth-api.js"></script>
+<script src="/equsto-member.js?v=20260522wa" defer></script>
+<script src="/equsto-auth-client.js?v=20260521search" defer></script>
+<script defer vite-ignore src="/ecom-cart.js?v=20260524cart3"></script>
+<script defer vite-ignore src="/eq-kur-live.js?v=20260523besosact"></script>
+<script vite-ignore src="/eq-besos-pricing.js?v=20260523besosprice"></script>
+<script defer vite-ignore src="/eq-besos-actions.js?v=20260523besosact"></script>
+<script vite-ignore src="/eq-bar-module.js?v=20260523bmlayout"></script>
+<script src="/contact.js?v=20260522wa" defer></script>
+<div class="drawer-overlay" id="drawerOverlay" onclick="__eqDrawerBackdropClick(event)"></div>
+<div class="cat-drawer eq-amazon-shop-all" id="catDrawer" aria-hidden="true"></div>
+<script src="/eq-footer.js?v=20260524besos"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){window.__eqMountMarketFooter&&window.__eqMountMarketFooter();});</script>
+</body>
+</html>

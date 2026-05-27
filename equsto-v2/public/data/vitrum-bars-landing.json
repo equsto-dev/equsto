@@ -1,0 +1,120 @@
+{
+  "source": "https://www.vitrumgroup.org/bars",
+  "fetchedAt": "2026-05-16T00:00:00.000Z",
+  "hero": {
+    "kicker": "Equsto Bar Studio",
+    "title": "Bar servisinin sanatını yükseltiyoruz.",
+    "titleEn": "Elevating the art of bar service.",
+    "lead": "Profesyonel mutfak, bar ve perakende sistemleri tasarlıyor, üretiyor ve kuruyoruz. Tek modülden anahtar teslim bar hatlarına — konseptten özelleştirmeye tam hizmet ortağı.",
+    "leadEn": "We design, build and install professional kitchen, bar and retail systems — from individual bar modules to customized turn-key hospitality systems.",
+    "ctaCatalog": "Ürün kataloğunu incele",
+    "ctaCatalogHref": "#bd-stations",
+    "ctaProject": "Proje teklifi al",
+    "ctaProjectHref": "/pfos"
+  },
+  "signatureTrio": [
+    {
+      "slug": "the-manhattan",
+      "name": "The Manhattan",
+      "tagline": "Her şeyi yapan bar",
+      "taglineEn": "The bar that does it all",
+      "blurb": "Profesyonel barmenlerin katkısıyla tasarlanan iki kişilik istasyonumuz; yoğun servis için anında sistem.",
+      "page": 23
+    },
+    {
+      "slug": "the-boulverdier",
+      "name": "The Boulverdier",
+      "tagline": "Kokteyl laboratuvarı",
+      "taglineEn": "A self-contained mixology laboratory",
+      "blurb": "Artizan kokteyller için özel iki kişilik istasyon; sınırlı alanda yüksek hacim üretimi.",
+      "page": 24
+    },
+    {
+      "slug": "the-clover",
+      "name": "The Clover",
+      "tagline": "Usta işi güç",
+      "taglineEn": "An artisanal powerhouse",
+      "blurb": "Karmaşık reçeteler ve garnitürler için geniş saklama ve ergonomik çalışma alanı.",
+      "page": 25
+    }
+  ],
+  "modular": {
+    "kicker": "Modüler sistem",
+    "title": "Tek sistem, sonsuz olasılık",
+    "titleEn": "One system, infinite possibilities",
+    "body": "İmza istasyonlarımız kuruluma hazırdır; modüler Equsto Bar Studio tasarımı ölçeğinize, stilinize ve operasyon ihtiyacınıza göre özelleştirilebilir.",
+    "bodyEn": "Our signature systems are ready to install, but endlessly customizable modular design means we can craft a solution for your precise vision."
+  },
+  "serveYou": {
+    "kicker": "Equsto Bar Studio lounge",
+    "kickerEn": "Equsto Bar Studio lounge",
+    "title": "Size hizmet etmek için tasarlanmış bir sistem",
+    "titleEn": "A system designed to serve you",
+    "body": "İmza sistemlerimiz kuruluma hazırdır; sonsuz özelleştirilebilir modüler tasarım sayesinde ölçek, stil ve operasyon ihtiyaçlarınıza uygun çözüm üretiriz. 30 yılı aşkın deneyimle mühendislik edilmiş sistemimiz sayısız olasılık sunar.",
+    "bodyEn": "Our signature systems are ready to install, but the endlessly customizable design of our modular systems mean we can craft a solution to bring your precise vision to life, whatever the scale, style and operational needs.",
+    "ctaCatalog": "Bar ürün kataloğunu incele",
+    "ctaCatalogHref": "#bd-stations",
+    "ctaInfo": "Daha fazla bilgi istiyorum",
+    "ctaInfoHref": "/contact",
+    "image": "images/catalog/besos/web/besos-bes-p23.avif"
+  },
+  "method": [
+    {
+      "n": "01",
+      "title": "Danışmanlık",
+      "titleEn": "Consultation",
+      "text": "Hayata geçirmek istediğiniz tam gelişmiş bir konseptiniz olsun veya ilham verecek ve tavsiyede bulunacak bir ortak arıyor olun; ilk aşamalardan itibaren uygulamalı bir yaklaşım benimsiyoruz.",
+      "textEn": "Whether you have a fully developed concept to bring to life or you're seeking a partner to inspire and advise, we take a hands-on approach from the early stages."
+    },
+    {
+      "n": "02",
+      "title": "Tasarım",
+      "titleEn": "Design",
+      "text": "Tasarım yaklaşımımızda metodik ve işbirlikçiyiz; tesisattan kaplamalara kadar her ayrıntıyı kapsayan görsel renderlar ve teknik planlar üretiyoruz.",
+      "textEn": "We are methodical and collaborative in our design approach, producing visual renders and technical plans that cover every detail from plumbing to finishes."
+    },
+    {
+      "n": "03",
+      "title": "Üretim",
+      "titleEn": "Production",
+      "text": "Teknik kurulumumuz, sorunsuz ve güvenilir biçimde çalışan ısmarlama, yüksek kaliteli ekipmanları verimli bir şekilde üretmemize olanak tanır.",
+      "textEn": "Our technical set-up allows us to efficiently manufacture bespoke, high-quality equipment that works seamlessly and reliably."
+    },
+    {
+      "n": "04",
+      "title": "Kurulum",
+      "titleEn": "Installation",
+      "text": "Ürünler fabrikamızdan çıkmadan önce hassasiyet, uyum ve işlevsellik titizlikle kontrol edilir. Sahada ekiplerimiz, ilk servisten önce sistemi kurar ve test eder.",
+      "textEn": "Precision, fit and functionality are rigorously checked before products leave our factory. On-site, our teams install and test the system before the first service."
+    },
+    {
+      "n": "05",
+      "title": "Satış sonrası",
+      "titleEn": "After-sales",
+      "text": "Eğitim, servis ve uzun vadeli bakım; ilişkimizin tasarım ve kurulumdan çok sonra da devam etmesi demektir — müşterilerimiz işlerini güvenle yürütür.",
+      "textEn": "Training, servicing and long-term maintenance mean our relationship continues long after design and installation, so our clients can run their businesses with confidence."
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "Vitrum, başından beri vizyonumuzu anladı ve Suelo için iki olağanüstü bar tasarladı. Barlar, Paris'teki mekânımızın hem estetiğinin hem işlevselliğinin merkezinde.",
+      "quoteEn": "From the very beginning, Vitrum understood our vision and expertly crafted two exceptional bars that perfectly align with the ambiance and quality we strive to offer at Suelo.",
+      "author": "Iryna Ulanska",
+      "roleTr": "Satın alma müdürü, Bulldozer Group",
+      "roleEn": "Purchase manager, Bulldozer Group"
+    },
+    {
+      "quote": "Vitrum'u diğerlerinden ayıran kişiselleştirilmiş yaklaşım. Her projede titiz detay, hızlı çözüm ve güvenilir ortaklık.",
+      "quoteEn": "What has always set Vitrum apart is their personalized approach — meticulous attention, ready assistance, and prompt responses.",
+      "author": "Sergejs Šiporovs",
+      "roleTr": "Baş şef, The Catch restoran grubu",
+      "roleEn": "Head Chef, The Catch restaurants family"
+    }
+  ],
+  "stats": [
+    { "value": "30+", "label": "yıl deneyim", "labelEn": "years experience" },
+    { "value": "3000+", "label": "proje · 20+ ülke", "labelEn": "projects across 20+ countries" },
+    { "value": "15.000", "label": "m² üretim", "labelEn": "m² manufacturing" },
+    { "value": "360°", "label": "tam hizmet", "labelEn": "full-service support" }
+  ]
+}

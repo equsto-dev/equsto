@@ -1,0 +1,408 @@
+/**
+ * Ana sayfa — Decor sade vitrin (üst/alt bant ve çekmece dokunulmaz).
+ * KALACAKLAR.txt — eq-home-decor
+ */
+body.eq-home-decor .right-col {
+  background: #fff;
+}
+
+/* Ticker kaldırıldı; güven bandı yok */
+body.eq-home-decor .eq-mx-ticker,
+body.eq-home-decor .eq-trust-band {
+  display: none !important;
+}
+
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only {
+  border-bottom: 1px solid #e5e7eb;
+  background: #fff;
+}
+
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 12px 10px 8px;
+}
+
+body.eq-home-decor .eq-mx-hero__slides {
+  max-height: min(42vh, 420px);
+}
+
+body.eq-home-decor .eq-mx-hero__thumbs {
+  margin-top: 8px;
+}
+
+.eq-mx-hero__thumb-ph {
+  display: block;
+  width: 100%;
+  height: 52px;
+}
+.eq-mx-hero__thumb-ph--pfos {
+  background: linear-gradient(135deg, #dce8f4 0%, #001e50 100%);
+}
+
+/* İkonsuz kategori şeridi */
+/* Kaldırıldı: ana sayfa yatay departman şeridi */
+.eq-decor-catstrip {
+  display: none !important;
+  border-bottom: 1px solid #e5e7eb;
+  background: #f8f9fb;
+  padding: 12px 10px;
+}
+
+.eq-decor-catstrip__inner {
+  max-width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 4px;
+}
+
+.eq-decor-catstrip__link {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #111;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 3px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: inherit;
+  line-height: 1.3;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+
+.eq-decor-catstrip__link:hover {
+  border-color: #001e50;
+  color: #001e50;
+}
+
+.eq-decor-catstrip__link--all {
+  color: #001e50;
+  border-color: #001e50;
+  background: #fff;
+}
+
+/* Orta: öne çıkanlar */
+body.eq-home-decor .eq-decor-featured {
+  padding: 20px 10px 16px;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+body.eq-home-decor .eq-decor-featured .eq-home-band-inner {
+  max-width: 1500px;
+  margin: 0 auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 3px;
+  padding: 14px 14px 12px;
+  box-shadow: none;
+}
+
+body.eq-home-decor .eq-decor-featured .eq-home-band-head {
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #001e50;
+}
+
+body.eq-home-decor .eq-decor-featured .eq-rail {
+  gap: 12px;
+}
+
+/* Alt promo: PFOS · Bar · Yer */
+.eq-decor-promos {
+  padding: 0 10px 16px;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.eq-decor-promos__inner {
+  max-width: 1500px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.eq-decor-promo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 120px;
+  padding: 16px 18px;
+  border: 1px solid #e5e7eb;
+  border-radius: 3px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  background: #f8f9fb center / cover no-repeat;
+}
+
+.eq-decor-promo--pfos {
+  background-image: linear-gradient(135deg, #dce8f4 0%, #eef4fa 100%);
+  grid-column: 1;
+}
+
+.eq-decor-promo--bar {
+  background-image: linear-gradient(135deg, rgba(10, 22, 40, 0.82) 0%, rgba(26, 61, 110, 0.88) 100%),
+    url("/images/home/hero-bar-cocktailstation.png?v=20260520barcover");
+  background-size: cover;
+  background-position: center 42%;
+  color: #fff;
+  grid-column: 2;
+}
+
+.eq-decor-promo--bar .eq-decor-promo__kicker,
+.eq-decor-promo--bar .eq-decor-promo__h,
+.eq-decor-promo--bar .eq-decor-promo__cta {
+  color: #fff;
+}
+
+.eq-decor-promo--yer {
+  grid-column: 1 / -1;
+  min-height: 88px;
+  opacity: 0.72;
+  cursor: default;
+  pointer-events: none;
+  background: linear-gradient(135deg, #f5f0e8, #ebe4d8);
+}
+
+.eq-decor-promo__kicker {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #b88a00;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.eq-decor-promo__h {
+  margin: 0 0 4px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #001e50;
+}
+
+.eq-decor-promo__p {
+  margin: 0;
+  font-size: 12px;
+  color: #555;
+  line-height: 1.4;
+}
+
+.eq-decor-promo--bar .eq-decor-promo__p {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.eq-decor-promo__cta {
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #001e50;
+}
+
+.eq-decor-promo__soon {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #b88a00;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 4px 8px;
+  border-radius: 2px;
+}
+
+.eq-decor-promo--yer {
+  position: relative;
+}
+
+body.eq-home-decor .eq-mx-hero__slide-cta {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #fff;
+  opacity: 0.95;
+}
+
+/* Alt vitrin bloğu */
+body.eq-home-decor .eq-decor-bottom {
+  border-top: 1px solid #e5e7eb;
+  margin-top: 0;
+}
+
+body.eq-home-decor .eq-decor-bottom .eq-mx-pop-cats-wrap {
+  display: block !important;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+body.eq-home-decor .eq-mx-pop-cat--photo .eq-mx-pop-cat__visual {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+}
+body.eq-home-decor .eq-mx-pop-cats__track {
+  gap: 14px;
+  padding-bottom: 12px;
+}
+body.eq-home-decor .eq-decor-bottom .eq-mx-pop-cats__title {
+  font-size: clamp(17px, 1.9vw, 21px);
+}
+
+/* Büyük marka bandı + çok markalı ızgara */
+body.eq-home-decor .eq-decor-bottom .eq-home-band.eq-mx-o-4 {
+  display: block !important;
+}
+
+body.eq-home-decor .eq-decor-bottom .eq-brand-banner {
+  min-height: 360px;
+  padding: 48px 32px;
+}
+
+body.eq-home-decor .eq-decor-bottom .eq-brand-grid {
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+}
+
+@media (max-width: 768px) {
+  .eq-decor-promos__inner {
+    grid-template-columns: 1fr;
+  }
+  .eq-decor-promo--pfos,
+  .eq-decor-promo--bar {
+    grid-column: 1;
+  }
+  .eq-decor-catstrip__inner {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    padding-bottom: 4px;
+  }
+  .eq-decor-catstrip__link {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 12px;
+    padding: 7px 12px;
+  }
+  body.eq-home-decor .eq-mx-hero__slides {
+    max-height: 220px;
+    min-height: 160px;
+  }
+}
+
+/* ===== Sade ana sayfa (eq-home-simple) — tekrarlayan katmanlar kapalı ===== */
+
+body.eq-home-simple .eq-mx-vitrin.eq-decor-slider-only,
+body.eq-home-simple .eq-decor-promos,
+body.eq-home-simple .eq-mx-o-4b,
+body.eq-home-simple .eq-cta-band {
+  display: none !important;
+}
+
+body.eq-home-simple .eq-home-simple-promo {
+  display: none !important;
+}
+
+body.eq-home-simple .eq-home-pop-cats-top {
+  padding-top: 16px;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 0;
+}
+
+body.eq-home-simple .eq-home-platform-hero {
+  margin-top: 0;
+}
+
+body.eq-home-simple .eq-home-platform-hero .hero-banner.eq-world-first-banner {
+  padding: 14px 12px 6px;
+  margin: 0;
+  border: none;
+  background: transparent;
+  text-align: center;
+}
+
+body.eq-home-simple .hero-banner.eq-world-first-banner {
+  padding: 14px 12px 6px;
+  margin: 0;
+  border: none;
+  background: transparent;
+  text-align: center;
+}
+
+body.eq-home-simple .hero-platform-line {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  margin-bottom: 6px;
+}
+
+body.eq-home-simple .eq-wf-headline,
+body.eq-home-simple .hero-h1 {
+  font-size: clamp(22px, 3.5vw, 30px);
+  margin: 0;
+  line-height: 1.15;
+}
+
+body.eq-home-simple .eq-home-hero-ads.hero {
+  margin-bottom: 0;
+}
+
+body.eq-home-simple .eq-home-platform-hero .eq-home-hero-ads.hero {
+  border-top: none;
+}
+
+body.eq-home-mutbex.eq-home-simple .eq-home-platform-hero .hero.eq-home-hero-ads {
+  border-radius: 0 0 12px 12px;
+}
+
+body.eq-home-simple .eq-home-hero-ads .hero-card {
+  min-height: 0;
+}
+
+body.eq-home-simple .eq-home-hero-ads .hero-card-visual {
+  max-height: 200px;
+}
+
+body.eq-home-simple .hero-card-img--pfos-cover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 38%;
+  filter: drop-shadow(0 10px 28px rgba(0, 30, 80, 0.18));
+}
+
+body.eq-home-simple .hero-card-visual__shade--pfos {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(238, 243, 251, 0.45) 50%,
+    rgba(255, 255, 255, 0.92) 100%
+  );
+}
+
+body.eq-home-simple .hero-card-visual--pfos .hero-pfos-promise {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -58%);
+  z-index: 2;
+  padding: 10px 14px 12px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 30, 80, 0.14);
+}
+
+@media (max-width: 768px) {
+  body.eq-home-simple .eq-home-hero-ads .hero-card-visual {
+    max-height: 160px;
+  }
+}
