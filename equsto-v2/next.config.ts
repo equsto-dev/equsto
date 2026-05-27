@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import path from "path";
 
 /** Departman PLP — /shop/{slug} → {slug}.html (public/) */
 const DEPT_HTML: Record<string, string> = {
@@ -87,6 +88,8 @@ const traceExcludes = [
 ];
 
 const nextConfig: NextConfig = {
+  /* Monorepo: Vercel cwd E-TICARET/site iken build equsto-v2 altinda yapilabilir */
+  outputFileTracingRoot: path.join(__dirname, ".."),
   serverExternalPackages: [
     "@prisma/client",
     "prisma",
