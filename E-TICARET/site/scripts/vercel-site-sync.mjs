@@ -10,9 +10,9 @@ export { isNextSite, findRepoRoot };
 
 export function resolveCanonicalSource(repo) {
   const candidates = [
-    path.join(repo, "E-TICARET", "site"),
     path.join(repo, "EQUSTO-WORK", "E-TICARET", "site"),
     path.join(repo, "equsto-v2"),
+    path.join(repo, "E-TICARET", "site"),
   ];
   return candidates.find(isNextSite) ?? null;
 }
