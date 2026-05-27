@@ -1,0 +1,447 @@
+/* Vitrum tarzı ana sayfa — video yok, statik bölümler */
+
+.eq-v-home {
+  --eq-v-max: 90rem;
+  --eq-v-muted: #525252;
+  --eq-v-border: #e5e5e5;
+  --eq-v-surface: #fafafa;
+  --eq-v-dark: #0a0a0a;
+}
+
+.eq-v-section {
+  padding: clamp(3rem, 6vw, 5rem) clamp(1.25rem, 4vw, 2.5rem);
+}
+
+.eq-v-section--dark {
+  background: var(--eq-v-dark);
+  color: #f5f5f5;
+}
+
+.eq-v-section--soft {
+  background: var(--eq-v-surface);
+}
+
+.eq-v-inner {
+  max-width: var(--eq-v-max);
+  margin: 0 auto;
+}
+
+.eq-v-eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--eq-v-muted);
+  margin-bottom: 0.75rem;
+}
+
+.eq-v-section--dark .eq-v-eyebrow {
+  color: #a3a3a3;
+}
+
+.eq-v-h2 {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0 0 1rem;
+}
+
+.eq-v-lead {
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  line-height: 1.6;
+  color: var(--eq-v-muted);
+  max-width: 42rem;
+}
+
+.eq-v-section--dark .eq-v-lead {
+  color: #d4d4d4;
+}
+
+/* Üst hero metin — video yok */
+.eq-v-hero-top {
+  padding: clamp(3.5rem, 10vw, 7rem) clamp(1.25rem, 4vw, 2.5rem) clamp(2rem, 5vw, 3rem);
+  background: linear-gradient(180deg, #f5f5f5 0%, #fff 100%);
+  border-bottom: 1px solid var(--eq-v-border);
+}
+
+.eq-v-hero-top h1 {
+  font-size: clamp(2rem, 5.5vw, 3.75rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+  margin: 0 0 1.25rem;
+  white-space: pre-line;
+}
+
+.eq-v-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+.eq-v-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+
+.eq-v-btn--primary {
+  background: var(--eq-v-dark);
+  color: #fff;
+}
+
+.eq-v-btn--primary:hover {
+  background: #262626;
+}
+
+.eq-v-btn--ghost {
+  border: 1px solid var(--eq-v-border);
+  color: var(--eq-v-dark);
+  background: #fff;
+}
+
+.eq-v-btn--ghost:hover {
+  background: var(--eq-v-surface);
+}
+
+/* Üçlü kart — PFOS · Yer · Bar */
+.eq-v-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-bottom: 1px solid var(--eq-v-border);
+}
+
+@media (max-width: 900px) {
+  .eq-v-pillars {
+    grid-template-columns: 1fr;
+  }
+}
+
+.eq-v-pillar {
+  position: relative;
+  min-height: 22rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-right: 1px solid var(--eq-v-border);
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+}
+
+.eq-v-pillars .eq-v-pillar:last-child {
+  border-right: none;
+}
+
+@media (max-width: 900px) {
+  .eq-v-pillar {
+    border-right: none;
+    border-bottom: 1px solid var(--eq-v-border);
+    min-height: 18rem;
+  }
+  .eq-v-pillars .eq-v-pillar:last-child {
+    border-bottom: none;
+  }
+}
+
+.eq-v-pillar--static {
+  cursor: default;
+}
+
+.eq-v-pillar:not(.eq-v-pillar--static):hover .eq-v-pillar-visual {
+  transform: scale(1.02);
+}
+
+.eq-v-pillar-visual {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.35s ease;
+}
+
+.eq-v-pillar-visual--pfos {
+  background: linear-gradient(145deg, #1e3a5f 0%, #0f172a 55%, #1e293b 100%);
+}
+
+.eq-v-pillar-visual--pfos::after {
+  content: "Beş dakikada yapılır,\nhemen teslim edilir";
+  white-space: pre-line;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.35;
+}
+
+.eq-v-pillar-visual--yer {
+  background: #e7e5e4;
+}
+
+.eq-v-pillar-visual--besos {
+  background: linear-gradient(160deg, #292524 0%, #0c0a09 100%);
+}
+
+.eq-v-pillar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* PFOS plan render — 90° (714×1024) */
+.eq-v-pillar-visual--pfos .eq-v-pillar-img {
+  object-fit: cover;
+  object-position: center center;
+}
+
+.eq-v-pillar-body {
+  position: relative;
+  z-index: 1;
+  padding: 1.25rem 1.5rem 1.5rem;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.72) 0%, transparent 100%);
+  color: #fff;
+}
+
+.eq-v-pillar--soon .eq-v-pillar-body {
+  opacity: 0.95;
+}
+
+.eq-v-pillar-tag {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin-bottom: 0.35rem;
+}
+
+.eq-v-pillar-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0 0 0.35rem;
+}
+
+.eq-v-pillar-pitch {
+  font-size: 0.8rem;
+  opacity: 0.9;
+  margin: 0 0 0.5rem;
+  line-height: 1.4;
+}
+
+.eq-v-pillar-cta {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.eq-v-soon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: #fff;
+  color: var(--eq-v-dark);
+  padding: 0.35rem 0.65rem;
+  border-radius: 2px;
+}
+
+/* Çözüm kartları — Vitrum büyük kart grid */
+.eq-v-solutions-grid {
+  display: grid;
+  gap: 1px;
+  background: var(--eq-v-border);
+  border: 1px solid var(--eq-v-border);
+}
+
+@media (min-width: 768px) {
+  .eq-v-solutions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.eq-v-solution-card {
+  display: block;
+  background: #fff;
+  padding: 2rem 1.75rem;
+  text-decoration: none;
+  color: inherit;
+  min-height: 12rem;
+  transition: background 0.15s;
+}
+
+.eq-v-solution-card:hover {
+  background: var(--eq-v-surface);
+}
+
+.eq-v-solution-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+
+.eq-v-solution-card p {
+  font-size: 0.875rem;
+  color: var(--eq-v-muted);
+  margin: 0 0 1rem;
+  line-height: 1.5;
+}
+
+.eq-v-link-arrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+/* İstatistik şeridi */
+.eq-v-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .eq-v-stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.eq-v-stat-value {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 0.35rem;
+}
+
+.eq-v-stat-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.eq-v-stat-sub {
+  font-size: 0.8rem;
+  color: var(--eq-v-muted);
+  margin-top: 0.2rem;
+}
+
+.eq-v-section--dark .eq-v-stat-sub {
+  color: #a3a3a3;
+}
+
+/* Projeler */
+.eq-v-projects {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .eq-v-projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.eq-v-project-card {
+  border: 1px solid var(--eq-v-border);
+  border-radius: 2px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.eq-v-project-visual {
+  aspect-ratio: 4/3;
+  background: linear-gradient(135deg, #d4d4d4, #a3a3a3);
+}
+
+.eq-v-project-body {
+  padding: 1rem 1.25rem;
+}
+
+.eq-v-project-tag {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--eq-v-muted);
+}
+
+.eq-v-project-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.25rem 0 0;
+}
+
+/* Markalar */
+.eq-v-partners {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.eq-v-partner-pill {
+  padding: 0.65rem 1.25rem;
+  border: 1px solid var(--eq-v-border);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--eq-v-muted);
+  background: #fff;
+}
+
+/* Alt CTA */
+.eq-v-cta-band {
+  text-align: center;
+  padding: clamp(4rem, 8vw, 6rem) 1.5rem;
+  background: var(--eq-v-dark);
+  color: #fff;
+}
+
+.eq-v-cta-band h2 {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0 0 1rem;
+}
+
+.eq-v-cta-band p {
+  max-width: 36rem;
+  margin: 0 auto 2rem;
+  color: #d4d4d4;
+  line-height: 1.6;
+}
+
+.eq-v-also {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.eq-v-also a {
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--eq-v-border);
+  text-decoration: none;
+  color: inherit;
+  border-radius: 2px;
+}
+
+.eq-v-also a:hover {
+  background: var(--eq-v-surface);
+}
