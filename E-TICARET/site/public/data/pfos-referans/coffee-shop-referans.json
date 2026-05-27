@@ -1,0 +1,204 @@
+{
+  "kategoriId": "coffee-shop",
+  "bantId": "referans",
+  "label": "Coffee Shop referans",
+  "referansM2": 120,
+  "kaynakDosya": "coffee-shop-ekipman-listesi.xlsx",
+  "yukleme": "2026-05-24T17:13:16.565Z",
+  "kalemSayisi": 24,
+  "toplamAdet": 28,
+  "kalemler": [
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A1",
+      "ad": "SOĞUK TEŞHİR DOLABI (İÇECEK+ PASTA)",
+      "olcu": "250*100*140",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A2",
+      "ad": "ÇALIŞMA TEZGAHI, KASA VE KAHVE ÇEKMECELİ,, TABAN RAFLI",
+      "olcu": "120*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A3",
+      "ad": "ESPRESSO KAHVE MAKİNASI, ÇİFT GRUPLU",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A4",
+      "ad": "KAHVE DEĞİRMENİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A5",
+      "ad": "ŞİŞE SOĞUTUCU, ÜÇ KAPILI",
+      "olcu": "135*50*90",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A6",
+      "ad": "ŞİŞE SOĞUTUCU, İKİ KAPILI",
+      "olcu": "90*50*90",
+      "adet": 2
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A7",
+      "ad": "ÇÖP TEZGAHI",
+      "olcu": "50*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A8",
+      "ad": "ÇÖP ARABASI",
+      "olcu": "40*40*50",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A9",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI, TABAN RAFLI, DOLAPLI",
+      "olcu": "100*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A10",
+      "ad": "RINCER EVYESİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A11",
+      "ad": "BUZ MAKİNASI",
+      "olcu": "90 kg/gün",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A12",
+      "ad": "DERİN DONDURUCU, TEK KAPILI",
+      "olcu": "60*60*84",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A13",
+      "ad": "BARDAK YIKAMA MAKİNASI",
+      "olcu": "60*60*82",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A14",
+      "ad": "JET FIRIN",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A15",
+      "ad": "FIRIN UNOX",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A16",
+      "ad": "ÇALIŞMA TEZGAHI, DOLAPLI",
+      "olcu": "140*60*85",
+      "adet": 2
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A17",
+      "ad": "BAR BLENDER",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A18",
+      "ad": "KATI MEYVE SIKACAĞI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A19",
+      "ad": "BAR MİKSER",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A20",
+      "ad": "FİLTRE KAHVE MAKİNASI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A21",
+      "ad": "YER IZGARASI",
+      "olcu": "30*30*14",
+      "adet": 2
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "B1",
+      "ad": "DEPO TİPİ DERİNDONDURUCU",
+      "olcu": "70*85*205",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "B2",
+      "ad": "DEPO TİPİ BUZDOLABI",
+      "olcu": "70*85*205",
+      "adet": 2
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "B3",
+      "ad": "NAKLİYE MONTAJ",
+      "olcu": "—",
+      "adet": 1
+    }
+  ]
+}
