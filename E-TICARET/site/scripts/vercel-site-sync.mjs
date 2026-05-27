@@ -247,13 +247,12 @@ function restoreCanonicalVercelScripts(canonSite, dest) {
 }
 
 function syncPublic(src, dest) {
-
   const publicSrc = path.join(src, "public");
-
+  const publicDest = path.join(dest, "public");
   if (!fs.existsSync(publicSrc)) return;
-
-  fs.cpSync(publicSrc, path.join(dest, "public"), { recursive: true, force: true });
-
+  if (path.resolve(publicSrc) === path.resolve(publicDest)) return;
+  fs.mkdirSync(publicDest, { recursive: true });
+  fs.cpSync(publicSrc, publicDest, { recursive: true, force: true });
 }
 
 
