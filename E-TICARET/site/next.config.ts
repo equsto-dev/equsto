@@ -88,8 +88,7 @@ const traceExcludes = [
 ];
 
 const nextConfig: NextConfig = {
-  /* Monorepo kökü (EQUSTO-WORK) — ../../.. disk üstüne çıkar, build kırılır */
-  outputFileTracingRoot: path.join(__dirname, "../.."),
+  outputFileTracingRoot: path.join(__dirname, "../../.."),
   serverExternalPackages: [
     "@prisma/client",
     "prisma",
@@ -150,7 +149,6 @@ const nextConfig: NextConfig = {
       { source: "/bar-design.html", destination: "/besos", permanent: true },
       { source: "/imt300", destination: "/besos/imt300", permanent: true },
       { source: "/imt300/", destination: "/besos/imt300", permanent: true },
-      { source: "/market-reyonlari.html", destination: "/shop/market-reyonlari", permanent: true },
     ];
   },
   async rewrites() {
@@ -203,6 +201,18 @@ const nextConfig: NextConfig = {
       ...geoRewrites(),
       ],
     };
+  },
+  webpack: (config, { isServer }) => {
+    if (process.env.VERCEL && isServer) {
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        [path.resolve(__dirname, "lib/prisma.ts")]: path.resolve(
+          __dirname,
+          "lib/prisma.vercel.ts"
+        ),
+      };
+    }
+    return config;
   },
 };
 
