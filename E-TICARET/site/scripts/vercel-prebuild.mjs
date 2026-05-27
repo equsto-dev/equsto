@@ -35,7 +35,19 @@ function patchTsconfigForVercel(dir) {
   if (next !== text) fs.writeFileSync(tsPath, next);
 }
 
+/** Yerel: imports → prisma/generated; Vercel: node_modules/.prisma/client */
+function patchPackageJsonForVercel(dir) {
+  const pkgPath = path.join(dir, "package.json");
+  if (!fs.existsSync(pkgPath)) return;
+  const pkg = JSON.parse(fs.readFileSync(pkgPath, "utf8"));
+  if (!pkg.imports?.["@prisma/client"]?.includes("prisma/generated")) return;
+  delete pkg.imports;
+  fs.writeFileSync(pkgPath, `${JSON.stringify(pkg, null, 2)}\n`);
+  console.log("[vercel-prebuild] package.json imports kaldırıldı → @prisma/client");
+}
+
 patchPrismaSchemaForVercel(siteDir);
 patchPrismaLibForVercel(siteDir);
 patchTsconfigForVercel(siteDir);
+patchPackageJsonForVercel(siteDir);
 console.log("[vercel-prebuild] OK");
