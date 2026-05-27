@@ -1,6 +1,12 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
-  "installCommand": "npm install",
-  "buildCommand": "npm run build"
+  "buildCommand": "node scripts/generate-admin-config.mjs && prisma generate && npm run build",
+  "installCommand": "npm ci",
+  "rewrites": [
+    { "source": "/sepet", "destination": "/sepet.html" },
+    { "source": "/sepet/", "destination": "/sepet.html" },
+    { "source": "/shop/market-reyonlari", "destination": "/market-reyonlari.html" },
+    { "source": "/shop/market-reyonlari/", "destination": "/market-reyonlari.html" }
+  ],
 }
