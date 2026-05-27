@@ -39,6 +39,9 @@ yarn-error.log*
 # Eski tam katalog yedeği (~12k) — canlıda / aramada kullanılmaz
 /public/data/ekipmanlar-full-archive.json
 
+# Çağlayan görselleri yerelde; canlıda kaynak CDN URL (deploy boyutu)
+/public/data/caglayan-market/
+
 # env — .env.example commit edilir
 .env
 .env.local
