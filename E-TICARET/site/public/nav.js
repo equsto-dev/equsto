@@ -98,7 +98,7 @@
         { label: "Derin Dondurucular" },
         { label: "Soğuk Odalar" },
         { label: "Şarap Dolapları" },
-        { label: "Market Reyonları", subs: MARKET_REYON_SUBS },
+        { label: "Market Reyonları", href: "market-reyonlari.html" },
       ],
     },
     {
@@ -161,7 +161,7 @@
       subs: [
         { label: "Self-Servis Hattı", search: "self servis", href: "market-reyonlari.html?tip=self-servis" },
         { label: "Teşhir Dolapları", search: "teşhir|teshir", href: "market-reyonlari.html?tip=camli-dolap" },
-        { label: "Market Reyonları", subs: MARKET_REYON_SUBS },
+        { label: "Market Reyonları", href: "market-reyonlari.html" },
       ],
     },
     { id: "dolap", label: "Dolaplar", href: "dolap.html" },
@@ -1336,13 +1336,11 @@
 
   function bootNav() {
     eqSyncMobileChrome();
-    hydrateCaglayanNavSubs().finally(function () {
-      render();
-      eqSyncMobileChrome();
-      try {
-        if (typeof window.__eqRerenderNav === "function") window.__eqRerenderNav();
-      } catch (_) {}
-    });
+    render();
+    eqSyncMobileChrome();
+    try {
+      if (typeof window.__eqRerenderNav === "function") window.__eqRerenderNav();
+    } catch (_) {}
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", bootNav);
   else bootNav();
