@@ -16,6 +16,10 @@ export function resolveCanonicalSource(repo) {
   return candidates.find(isNextSite) ?? null;
 }
 
+function hasPrismaSchema(dir) {
+  return fs.existsSync(path.join(dir, "prisma", "schema.prisma"));
+}
+
 const SYNC_DIRS = ["app", "components", "lib", "prisma"];
 const SYNC_LIB_EXTRA = ["prisma.vercel.ts"];
 const SYNC_FILES = [
@@ -61,6 +65,14 @@ export function materializeVercelRoot(vercelRoot) {
 
   if (isNextSite(vercelRoot)) {
     syncBuildScripts(src, vercelRoot);
+    if (!hasPrismaSchema(vercelRoot) && hasPrismaSchema(src)) {
+      console.log("[vercel-sync] prisma/ eksik — kaynaktan kopyalaniyor");
+      copyTree(path.join(src, "prisma"), path.join(vercelRoot, "prisma"));
+    }
+    if (!fs.existsSync(path.join(vercelRoot, "lib", "db.ts"))) {
+      const libSrc = path.join(src, "lib");
+      if (fs.existsSync(libSrc)) copyTree(libSrc, path.join(vercelRoot, "lib"));
+    }
     return vercelRoot;
   }
 
