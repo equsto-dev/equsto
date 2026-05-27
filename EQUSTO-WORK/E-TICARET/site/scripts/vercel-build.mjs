@@ -8,7 +8,6 @@ process.env.DATABASE_URL =
 process.env.DIRECT_URL = process.env.DIRECT_URL || process.env.DATABASE_URL;
 
 const npm = process.platform === "win32" ? "npm.cmd" : "npm";
-const npx = process.platform === "win32" ? "npx.cmd" : "npx";
 
 function run(cmd, args) {
   const r = spawnSync(cmd, args, { stdio: "inherit", env: process.env, shell: false });
@@ -16,5 +15,5 @@ function run(cmd, args) {
 }
 
 run("node", ["scripts/generate-admin-config.mjs"]);
-run(npx, ["prisma", "generate", "--schema=prisma/schema.prisma"]);
+/** package.json: prisma generate && next build — yerel prisma, npx global 7 değil */
 run(npm, ["run", "build"]);
