@@ -1,59 +1,61 @@
 /**
- * Vercel build — panelde Root Directory aranmaz.
- * equsto-v2, E-TICARET/site, EQUSTO-WORK/E-TICARET/site veya repo kökü olabilir.
+ * Vercel Production build — cwd: E-TICARET/site (NFT yollari duzgun).
  */
 import { spawnSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { materializeVercelRoot } from "./vercel-site-sync.mjs";
 
-const scriptDir = path.dirname(fileURLToPath(import.meta.url));
-const vercelRoot = path.resolve(scriptDir, "..");
+const vercelRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const siteDir = materializeVercelRoot(vercelRoot);
 
-function isNextSite(dir) {
-  return (
-    fs.existsSync(path.join(dir, "package.json")) &&
-    fs.existsSync(path.join(dir, "app"))
-  );
-}
-
-function findRepoRoot(start) {
-  let dir = path.resolve(start);
-  for (let i = 0; i < 12; i++) {
-    if (
-      fs.existsSync(path.join(dir, "E-TICARET", "site", "package.json")) ||
-      fs.existsSync(path.join(dir, "EQUSTO-WORK", "E-TICARET", "site", "package.json"))
-    ) {
-      return dir;
-    }
-    const parent = path.dirname(dir);
-    if (parent === dir) break;
-    dir = parent;
-  }
-  return path.resolve(start, "../..");
-}
-
-function resolveSiteDir(root) {
-  const repo = findRepoRoot(root);
-  const canonical = path.join(repo, "E-TICARET", "site");
-  if (isNextSite(canonical)) return canonical;
-  if (isNextSite(root)) return root;
-  const alt = path.join(repo, "EQUSTO-WORK", "E-TICARET", "site");
-  if (isNextSite(alt)) return alt;
-  console.error("[vercel-build] Next.js site bulunamadi. root=", root, "repo=", repo);
-  process.exit(1);
-}
-
-const siteDir = resolveSiteDir(vercelRoot);
-
-if (siteDir !== vercelRoot) {
-  console.log("[vercel-build] Vercel cwd:", vercelRoot);
-  console.log("[vercel-build] Build site:", siteDir);
-}
-
+process.env.VERCEL = "1";
 process.env.DATABASE_URL =
   process.env.DATABASE_URL || "postgresql://build:build@127.0.0.1:5432/build?schema=public";
 process.env.DIRECT_URL = process.env.DIRECT_URL || process.env.DATABASE_URL;
+
+function patchPrismaSchemaForVercel(dir) {
+  const schemaPath = path.join(dir, "prisma/schema.prisma");
+  if (!fs.existsSync(schemaPath)) return;
+  const text = fs.readFileSync(schemaPath, "utf8");
+  const next = text.replace(/^\s*output\s*=\s*["'][^"']+["']\s*\r?\n/gm, "");
+  fs.writeFileSync(schemaPath, next);
+  if (next !== text) {
+    console.log("[vercel-build] Prisma schema → default @prisma/client");
+  }
+  const genDir = path.join(dir, "prisma", "generated");
+  if (fs.existsSync(genDir)) {
+    fs.rmSync(genDir, { recursive: true, force: true });
+    console.log("[vercel-build] prisma/generated silindi");
+  }
+}
+
+function patchPrismaLibForVercel(dir) {
+  fs.writeFileSync(
+    path.join(dir, "lib/prisma.ts"),
+    '/** Vercel build — @prisma/client (custom output NFT kirar) */\n' +
+      'export { PrismaClient, Prisma } from "@prisma/client";\n' +
+      'export type * from "@prisma/client";\n'
+  );
+  console.log("[vercel-build] lib/prisma.ts → @prisma/client");
+}
+
+function ensureMarketReyonlariRewrite(dir) {
+  const cfgPath = path.join(dir, "next.config.ts");
+  let text = fs.readFileSync(cfgPath, "utf8");
+  if (text.includes("market-reyonlari")) return;
+  text = text.replace(
+    '"set-ustu-mutfak": "/set-ustu-mutfak.html",',
+    '"set-ustu-mutfak": "/set-ustu-mutfak.html",\n  "market-reyonlari": "/market-reyonlari.html",'
+  );
+  fs.writeFileSync(cfgPath, text);
+  console.log("[vercel-build] next.config → market-reyonlari rewrite");
+}
+
+patchPrismaSchemaForVercel(siteDir);
+patchPrismaLibForVercel(siteDir);
+ensureMarketReyonlariRewrite(siteDir);
 
 const npm = process.platform === "win32" ? "npm.cmd" : "npm";
 
@@ -67,14 +69,6 @@ function run(cmd, args, cwd) {
   if (r.status !== 0) process.exit(r.status ?? 1);
 }
 
-function hasLocalBin(root, name) {
-  const dir = path.join(root, "node_modules", ".bin");
-  return (
-    fs.existsSync(path.join(dir, name)) ||
-    fs.existsSync(path.join(dir, `${name}.cmd`))
-  );
-}
-
 function binPath(root, name) {
   const plain = path.join(root, "node_modules", ".bin", name);
   const cmd = `${plain}.cmd`;
@@ -83,36 +77,13 @@ function binPath(root, name) {
   return plain;
 }
 
-let toolRoot = hasLocalBin(siteDir, "prisma")
-  ? siteDir
-  : hasLocalBin(vercelRoot, "prisma")
-    ? vercelRoot
-    : null;
-
-if (!toolRoot) {
+if (!fs.existsSync(binPath(siteDir, "next"))) {
   console.log("[vercel-build] npm ci →", siteDir);
   run(npm, ["ci"], siteDir);
-  toolRoot = siteDir;
-} else if (toolRoot !== siteDir) {
-  console.log("[vercel-build] node_modules:", toolRoot, "(build cwd:", siteDir, ")");
 }
 
 run(process.execPath, [path.join(siteDir, "scripts/generate-admin-config.mjs")], siteDir);
-run(binPath(toolRoot, "prisma"), ["generate"], siteDir);
-run(binPath(toolRoot, "next"), ["build"], siteDir);
+run(binPath(siteDir, "prisma"), ["generate"], siteDir);
+run(binPath(siteDir, "next"), ["build"], siteDir);
 
-if (path.resolve(siteDir) !== path.resolve(vercelRoot)) {
-  for (const name of [".next", "public"]) {
-    const src = path.join(siteDir, name);
-    const dest = path.join(vercelRoot, name);
-    if (!fs.existsSync(src)) {
-      console.error("[vercel-build] Eksik:", src);
-      process.exit(1);
-    }
-    if (fs.existsSync(dest)) fs.rmSync(dest, { recursive: true, force: true });
-    fs.cpSync(src, dest, { recursive: true });
-  }
-  console.log("[vercel-build] Cikti Vercel root'a kopyalandi:", vercelRoot);
-}
-
-console.log("[vercel-build] OK");
+console.log("[vercel-build] OK —", siteDir);

@@ -16,7 +16,6 @@ const DEPT_HTML: Record<string, string> = {
   araba: "/araba.html",
   istif: "/istif.html",
   "set-ustu-mutfak": "/set-ustu-mutfak.html",
-  "market-reyonlari": "/market-reyonlari.html",
 };
 
 function deptRewrites() {
@@ -85,11 +84,11 @@ const traceExcludes = [
   "./**/*.md",
   "./**/*.pdf",
   "./**/*.py",
+  "./prisma/generated/**",
 ];
 
 const nextConfig: NextConfig = {
-  /* Vercel Root Directory = E-TICARET/site iken tracing root = site (disari ../.. NFT kirar). */
-  outputFileTracingRoot: path.join(__dirname),
+  outputFileTracingRoot: path.join(__dirname, "../../.."),
   serverExternalPackages: [
     "@prisma/client",
     "prisma",
