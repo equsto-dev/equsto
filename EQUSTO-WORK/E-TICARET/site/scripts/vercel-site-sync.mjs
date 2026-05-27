@@ -55,6 +55,29 @@ function syncBuildScripts(src, vercelRoot) {
   }
 }
 
+function syncSitePayload(src, vercelRoot) {
+  for (const name of SYNC_DIRS) {
+    const from = path.join(src, name);
+    if (fs.existsSync(from)) copyTree(from, path.join(vercelRoot, name));
+  }
+  for (const name of SYNC_LIB_EXTRA) {
+    const from = path.join(src, "lib", name);
+    const to = path.join(vercelRoot, "lib", name);
+    if (fs.existsSync(from)) fs.copyFileSync(from, to);
+  }
+  for (const name of SYNC_FILES) {
+    const from = path.join(src, name);
+    if (fs.existsSync(from)) fs.copyFileSync(from, path.join(vercelRoot, name));
+  }
+  const publicSrc = path.join(src, "public");
+  if (fs.existsSync(publicSrc)) {
+    const publicDest = path.join(vercelRoot, "public");
+    fs.mkdirSync(publicDest, { recursive: true });
+    fs.cpSync(publicSrc, publicDest, { recursive: true, force: true });
+  }
+  syncBuildScripts(src, vercelRoot);
+}
+
 export function materializeVercelRoot(vercelRoot) {
   const repo = findRepoRoot(vercelRoot);
   const src = resolveCanonicalSource(repo);
@@ -65,43 +88,17 @@ export function materializeVercelRoot(vercelRoot) {
 
   if (isNextSite(vercelRoot)) {
     syncBuildScripts(src, vercelRoot);
-    if (!hasPrismaSchema(vercelRoot) && hasPrismaSchema(src)) {
-      console.log("[vercel-sync] prisma/ eksik — kaynaktan kopyalaniyor");
+    if (path.resolve(src) !== path.resolve(vercelRoot)) {
+      console.log("[vercel-sync] Kod guncelleniyor (E-TICARET/site eksik app):", src);
+      syncSitePayload(src, vercelRoot);
+    } else if (!hasPrismaSchema(vercelRoot) && hasPrismaSchema(src)) {
       copyTree(path.join(src, "prisma"), path.join(vercelRoot, "prisma"));
-    }
-    if (!fs.existsSync(path.join(vercelRoot, "lib", "db.ts"))) {
-      const libSrc = path.join(src, "lib");
-      if (fs.existsSync(libSrc)) copyTree(libSrc, path.join(vercelRoot, "lib"));
     }
     return vercelRoot;
   }
 
   console.log("[vercel-sync] Materialize:", src, "->", vercelRoot);
-
-  for (const name of SYNC_DIRS) {
-    const from = path.join(src, name);
-    if (fs.existsSync(from)) copyTree(from, path.join(vercelRoot, name));
-  }
-
-  for (const name of SYNC_LIB_EXTRA) {
-    const from = path.join(src, "lib", name);
-    const to = path.join(vercelRoot, "lib", name);
-    if (fs.existsSync(from)) fs.copyFileSync(from, to);
-  }
-
-  for (const name of SYNC_FILES) {
-    const from = path.join(src, name);
-    if (fs.existsSync(from)) fs.copyFileSync(from, path.join(vercelRoot, name));
-  }
-
-  const publicSrc = path.join(src, "public");
-  if (fs.existsSync(publicSrc)) {
-    const publicDest = path.join(vercelRoot, "public");
-    fs.mkdirSync(publicDest, { recursive: true });
-    fs.cpSync(publicSrc, publicDest, { recursive: true, force: true });
-  }
-
-  syncBuildScripts(src, vercelRoot);
+  syncSitePayload(src, vercelRoot);
 
   if (!isNextSite(vercelRoot)) {
     console.error("[vercel-sync] Materialize sonrasi app/ hala yok:", vercelRoot);
