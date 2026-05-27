@@ -1,24 +1,29 @@
 # Canlıya alma (equsto.com)
 
-Kod `main` branch’te; site **Vercel Production** deploy edilince güncellenir.
+Kod `main` branch'te; **Vercel Production** deploy edilince güncellenir.
 
-## Hızlı (panel — 1 dakika)
+## Vercel panel (önemli)
 
 1. [vercel.com](https://vercel.com) → proje **equsto**
-2. **Settings → General → Root Directory** = `EQUSTO-WORK/E-TICARET/site`
-3. **Deployments** → en üstteki `main` commit
-4. **⋯ → Redeploy** → **Use existing Build Cache: KAPALI** → Redeploy
-5. **Ready** olunca: `https://equsto.com/data/dept/kahve.json` kontrol
-6. Vitrin sayfalarında Ctrl+F5
+2. **Settings → General → Root Directory**
+   - **Boş bırakın** (repo kökü — `vercel.json` burada), **veya**
+   - `E-TICARET/site` (tam Next.js projesi burada)
+   - **Kullanmayın:** `EQUSTO-WORK/E-TICARET/site` (eski kopya), **equsto-v2** (yedek)
+3. Build, install: repo kökündeki `vercel.json` → `E-TICARET/site/scripts/vercel-*.mjs`
+4. Build her zaman **`E-TICARET/site`** kaynağını kullanır (market-reyon, Proso görselleri dahil).
 
-## Otomatik (GitHub Actions)
+## Deploy sonrası
 
-Repo → **Settings → Secrets → Actions** → `VERCEL_TOKEN`, `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID`
-
-Sonra **Actions → Vercel Production** veya `main`’e push.
+1. **Deployments** → son commit **Ready**
+2. Sorun varsa: **Redeploy** → **Use existing Build Cache: KAPALI**
+3. Kontrol:
+   - https://equsto.com/data/dept/market-reyon.json → **200**
+   - https://equsto.com/eq-market-reyon.js → **200**
+   - https://equsto.com/shop/market-reyonlari
+4. Sayfada **Ctrl+F5**
 
 ## Doğrulama
 
-- `https://equsto.com/shop/kahve` — departman PLP
-- `https://equsto.com/pfos` — Proje Fabrikası
-- `https://equsto.com/blog` — rehber dizini
+- `https://equsto.com/shop/market-reyonlari`
+- `https://equsto.com/shop/kahve`
+- `https://equsto.com/pfos`
