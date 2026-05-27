@@ -84,6 +84,7 @@ const traceExcludes = [
   "./**/*.md",
   "./**/*.pdf",
   "./**/*.py",
+  "./prisma/generated/**",
 ];
 
 const nextConfig: NextConfig = {
