@@ -175,7 +175,6 @@
     { tip: "caglayan-manolya", dept: "market-reyon", label: "Manolya", search: "manolya" },
     { tip: "caglayan-krizantem", dept: "market-reyon", label: "Krizantem", search: "krizantem" },
     { tip: "soguk-teshir", dept: "market-reyon", label: "Soğuk Teşhir", search: "soguk-teshir|saladbar|salad bar|soğuk büfe|soguk bufe|büfe" },
-    { tip: "sicak-teshir", dept: "market-reyon", label: "Sıcak Teşhir", search: "sicak-teshir|sıcak|sicak|benmari|bain" },
     { tip: "dondurma-reyon", dept: "market-reyon", label: "Dondurma Reyonu", search: "dondurma-reyon|dondurma|freezer|frozen" },
     { tip: "balik-sarkuteri", dept: "market-reyon", label: "Balık & Şarküteri", search: "balik-sarkuteri|balık|balik|şarküteri|sarkuteri|sardunya|et|fish" },
     { tip: "camli-dolap", dept: "market-reyon", label: "Camlı Teşhir", search: "camli-dolap|camlı|camli|vitrin|teşhir buzdolab" },
