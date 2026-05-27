@@ -9,6 +9,13 @@ import { materializeVercelRoot } from "./vercel-site-sync.mjs";
 const siteDir = materializeVercelRoot(
   path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..")
 );
+
+const pre = spawnSync(process.execPath, ["scripts/vercel-prebuild.mjs"], {
+  cwd: siteDir,
+  stdio: "inherit",
+});
+if (pre.status !== 0) process.exit(pre.status ?? 1);
+
 const npm = process.platform === "win32" ? "npm.cmd" : "npm";
 
 console.log("[vercel-install] npm ci →", siteDir);
