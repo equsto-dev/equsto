@@ -225,6 +225,15 @@
   var byTip = {};
   var labelIndex = {};
 
+  /** Market reyon PLP — soğutmalı reyonlarda «Sıcak Teşhir» filtresi yok (eski geniş eşleşme SICAKLIK vb.). */
+  var MARKET_REYON_HIDDEN_TIPS = { "sicak-teshir": true };
+
+  function filterMarketReyonTiles(tiles) {
+    return (tiles || []).filter(function (t) {
+      return t && t.id && !MARKET_REYON_HIDDEN_TIPS[t.id];
+    });
+  }
+
   function parseKeys(row) {
     if (row.slug) return null;
     var s = row.search || row.label || row.tip;
@@ -713,6 +722,7 @@
       }
     });
     if (dept === "kahve" || dept === "yikama") return out;
+    if (dept === "market-reyon") return filterMarketReyonTiles(shuffleDeptList(dept, out, "tiles-merge"));
     return shuffleDeptList(dept, out, "tiles-merge");
   }
 
@@ -723,6 +733,7 @@
   function tilesFor(dept) {
     var tiles = byDept[dept] || [];
     if (dept === "kahve" || dept === "yikama") return tiles.slice();
+    if (dept === "market-reyon") return filterMarketReyonTiles(shuffleDeptList(dept, tiles, "tiles"));
     return shuffleDeptList(dept, tiles, "tiles");
   }
 
@@ -847,6 +858,7 @@
   function normalizeTipParam(dept, tip) {
     if (!tip) return "";
     var t = String(tip).trim();
+    if (dept === "market-reyon" && MARKET_REYON_HIDDEN_TIPS[t]) return "";
     var map = TIP_PARAM_ALIASES[dept];
     if (map && map[t]) return map[t];
     if (byTip[dept + ":" + t]) return t;

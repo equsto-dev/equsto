@@ -144,6 +144,28 @@
     body.eq-shop .eq-product-thumbs--vertical button.eq-product-thumb--active{border-color:#e77600;box-shadow:0 0 0 2px rgba(231,118,0,.30);}
     body.eq-shop .eq-product-thumbs--vertical img{width:46px;height:46px;}
 
+    /* Teknik kesit / ölçü çizimi: beyaz çizgiler açık zeminde kaybolmasın */
+    body.eq-shop .eq-product-hero-wrap--lineart{
+      background:#1a2332;
+      border-radius:8px;
+      padding:8px;
+    }
+    body.eq-shop .eq-product-hero-img.eq-product-hero-img--lineart{
+      background:#1a2332;
+      border-color:#334155;
+      box-shadow:inset 0 0 0 1px rgba(255,255,255,.06);
+    }
+    body.eq-shop .eq-product-thumbs--vertical button[data-lineart="1"]{
+      background:#1a2332;
+      border-color:#475569;
+    }
+    body.eq-shop .eq-pdp-lightbox.eq-pdp-lightbox--lineart img{
+      background:#1a2332;
+      padding:16px;
+      border-radius:8px;
+      box-shadow:0 8px 40px rgba(0,0,0,.55);
+    }
+
     /* Orta kolon: marka linki, başlık, rating, bullet liste */
     body.eq-shop .eq-product-info{padding:0 6px 0 4px;}
     body.eq-shop .eq-product-cat{display:none;}
@@ -452,6 +474,29 @@
 
     var MARKET_REYON_GALLERY_MAX = 11;
 
+    function imgFileName(relOrUrl) {
+      return String(relOrUrl || "")
+        .split("?")[0]
+        .split("/")
+        .pop()
+        .toLowerCase();
+    }
+
+    /** Çağlayan vb. teknik kesit / model ölçü çizimleri (beyaz çizgi, şeffaf zemin). */
+    function isLineArtProductImg(relOrUrl) {
+      var fn = imgFileName(relOrUrl);
+      if (!fn) return false;
+      if (/kesit/i.test(fn)) return true;
+      if (/model-\d+/i.test(fn)) return true;
+      if (/teknik|[-_]cizim|drawing|schema|blueprint|olcu-?cizim/i.test(fn)) return true;
+      return false;
+    }
+
+    function applyLineArtHeroState(mainImg, wrap, lineart) {
+      if (mainImg) mainImg.classList.toggle("eq-product-hero-img--lineart", !!lineart);
+      if (wrap) wrap.classList.toggle("eq-product-hero-wrap--lineart", !!lineart);
+    }
+
     function collectProductImgs(x) {
       var rels = uniqueImgs(x.images);
       if (!rels.length) {
@@ -468,7 +513,12 @@
       var out = [];
       rels.forEach(function (rel) {
         var src = resolveProductImgSrc(rel);
-        if (src) out.push({ src: src, rel: rel });
+        if (src)
+          out.push({
+            src: src,
+            rel: rel,
+            lineart: isLineArtProductImg(rel) || isLineArtProductImg(src),
+          });
       });
       return out;
     }
@@ -1397,8 +1447,11 @@
       var priceBlock = esc(x.price || "—");
       var heroRel =
         (x.images && x.images[0]) || oztiWebRelFromSku(x.sku || x.urun_kodu || x.model) || "";
+      var heroLineArt = imgs.length && imgs[0].lineart;
       var heroImg = imgs.length
-        ? '<img class="eq-product-hero-img" id="eq-ph-main" src="' +
+        ? '<img class="eq-product-hero-img' +
+          (heroLineArt ? " eq-product-hero-img--lineart" : "") +
+          '" id="eq-ph-main" src="' +
           esc(imgs[0].src) +
           '"' +
           pdpImgFailAttr() +
@@ -1416,7 +1469,9 @@
               return (
                 '<button type="button" data-src="' +
                 esc(item.src) +
-                '" class="' +
+                '"' +
+                (item.lineart ? ' data-lineart="1"' : "") +
+                ' class="' +
                 (i === 0 ? "eq-product-thumb--active" : "") +
                 '" aria-label="Görsel ' +
                 (i + 1) +
@@ -1511,7 +1566,11 @@
         '<div class="eq-product-gallery">' +
         '<div class="eq-product-gallery-row">' +
         thumbs +
-        '<div class="eq-product-hero-wrap">' + heroImg + "</div>" +
+        '<div class="eq-product-hero-wrap' +
+        (heroLineArt ? " eq-product-hero-wrap--lineart" : "") +
+        '">' +
+        heroImg +
+        "</div>" +
         "</div>" +
         "</div>" +
         '<div class="eq-product-info">' +
@@ -1570,10 +1629,12 @@
       eqMbgBindRelated();
 
       var mainEl = document.getElementById("eq-ph-main");
+      var heroWrap = document.querySelector(".eq-product-hero-wrap");
       document.querySelectorAll(".eq-product-thumbs button").forEach(function (btn) {
         btn.addEventListener("click", function () {
           var s = btn.getAttribute("data-src");
           if (mainEl && s) {
+            applyLineArtHeroState(mainEl, heroWrap, btn.getAttribute("data-lineart") === "1");
             mainEl.addEventListener(
               "load",
               function once() {
@@ -1611,10 +1672,15 @@
           if (!lbImg) return;
           lbImg.src = hero.src;
           lbImg.alt = hero.alt || "";
+          var lineart = hero.classList.contains("eq-product-hero-img--lineart");
+          lb.classList.toggle("eq-pdp-lightbox--lineart", lineart);
+          lbImg.classList.toggle("eq-product-hero-img--lineart", lineart);
           lb.hidden = false;
         }
         function closeLb() {
           lb.hidden = true;
+          lb.classList.remove("eq-pdp-lightbox--lineart");
+          if (lbImg) lbImg.classList.remove("eq-product-hero-img--lineart");
         }
         wrap.style.cursor = "zoom-in";
         wrap.addEventListener("click", openLb);

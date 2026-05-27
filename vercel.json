@@ -1,12 +1,14 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
-  "installCommand": "node E-TICARET/site/scripts/vercel-install.mjs",
-  "buildCommand": "node E-TICARET/site/scripts/vercel-build.mjs",
+  "installCommand": "cd E-TICARET/site && node scripts/vercel-install.mjs",
+  "buildCommand": "cd E-TICARET/site && node scripts/vercel-build.mjs",
   "rewrites": [
     { "source": "/sepet", "destination": "/sepet.html" },
     { "source": "/sepet/", "destination": "/sepet.html" },
     { "source": "/shop/market-reyonlari", "destination": "/market-reyonlari.html" },
-    { "source": "/shop/market-reyonlari/", "destination": "/market-reyonlari.html" }
+    { "source": "/shop/market-reyonlari/", "destination": "/market-reyonlari.html" },
+    { "source": "/shop/kuvetler", "destination": "/kuvetler.html" },
+    { "source": "/shop/kuvetler/", "destination": "/kuvetler.html" }
   ]
 }

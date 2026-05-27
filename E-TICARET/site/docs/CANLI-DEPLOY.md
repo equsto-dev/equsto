@@ -1,27 +1,40 @@
 # Canlıya alma (equsto.com)
 
-Kod `main` branch’te; site **Vercel Production** deploy edilince güncellenir.
+## Tek kod klasörü (önemli)
 
-## Vercel panel (önemli)
+| Ne | Yol |
+|----|-----|
+| **Düzenle / commit** | `E-TICARET/site/` |
+| Vercel Root Directory | **`E-TICARET/site`** |
+| Kullanmayın (eski kopya) | `EQUSTO-WORK/E-TICARET/site`, `equsto-v2` |
 
-1. [vercel.com](https://vercel.com) → proje **equsto**
-2. **Root Directory** — ikisinden biri:
-   - **`./`** (repo kökü, önerilen) — `vercel.json` burada
-   - **`E-TICARET/site`** — bu durumda **Include files outside the root directory → Açık** (tam `app/` `EQUSTO-WORK/E-TICARET/site` içinde)
-   - **Kullanmayın:** `EQUSTO-WORK/E-TICARET/site` tek başına (eski `public/`), **equsto-v2**
-3. Build script `vercel-site-sync.mjs`: `public/` = `E-TICARET/site`, `app/` = tam kopya (EQUSTO-WORK)
-4. **Deployments** → son commit **Ready** (2026-05-27: Root Directory panelde `E-TICARET/site` onaylandi)
-5. Hata varsa: **Redeploy** → **Use existing Build Cache: KAPALI**
+`EQUSTO-WORK/E-TICARET/site` repoda duruyorsa **dokunmayın**; build artık oradan kopyalamıyor.
 
-## Yerel geliştirme klasörü
+## Vercel panel
 
-Tek kaynak (Cursor workspace):
+1. [vercel.com](https://vercel.com) → proje **equsto** → **Settings** → **Build and Deployment**
+2. **Root Directory:** `E-TICARET/site` (başında/sonunda `/` yok)
+3. **Framework:** Next.js (otomatik)
+4. Build / Install: `vercel.json` içindeki `node scripts/vercel-*.mjs` (elle değiştirmeyin)
+5. **Deployments** → bekleyen **Queued** işleri **Cancel**
+6. Son `main` commit → **Redeploy** → **Build Cache: KAPALI** (ilk düzeltmeden sonra açılabilir)
 
-`C:\D Disk\EQUSTO-WORK\E-TICARET\site`
+## Yerel build
 
-## Deploy sonrası kontrol
+```cmd
+cd C:\D Disk\EQUSTO-WORK\E-TICARET\site
+build.cmd
+```
 
-- https://equsto.com/shop/kuvetler
+PowerShell `npm` engelliyorsa `build.cmd` veya `npm.cmd run build` kullanın.
+
+## Deploy sonrası
+
+- https://equsto.com/
 - https://equsto.com/shop/market-reyonlari
-- https://equsto.com/shop/kahve
-- Sayfada **Ctrl+F5**
+- https://equsto.com/shop/kuvetler
+- **Ctrl+F5**
+
+## Build hâlâ Error ise
+
+Deployments → failed satır → **Building** logunun **son 30 satırını** kopyalayın (yalnızca "exited with 1" yetmez).
