@@ -7,6 +7,8 @@
     { "source": "/sepet", "destination": "/sepet.html" },
     { "source": "/sepet/", "destination": "/sepet.html" },
     { "source": "/shop/market-reyonlari", "destination": "/market-reyonlari.html" },
-    { "source": "/shop/market-reyonlari/", "destination": "/market-reyonlari.html" }
+    { "source": "/shop/market-reyonlari/", "destination": "/market-reyonlari.html" },
+    { "source": "/shop/kuvetler", "destination": "/kuvetler.html" },
+    { "source": "/shop/kuvetler/", "destination": "/kuvetler.html" }
   ]
 }
