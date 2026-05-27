@@ -42,7 +42,7 @@
 (function () {
   try {
     var path = (location.pathname || "").replace(/\/$/, "");
-    var m = path.match(/\/(?:en\/)?shop\/(pisirme|sogutma|kahve|yikama|hazirlik|icecek|tezgah)\/([a-z0-9_-]+)/i);
+    var m = path.match(/\/(?:en\/)?shop\/(pisirme|sogutma|kahve|yikama|hazirlik|icecek|tezgah|market-reyonlari)\/([a-z0-9_-]+)/i);
     if (!m) return;
     var dept = m[1].toLowerCase();
     var slug = m[2].toLowerCase();
@@ -509,6 +509,15 @@
         tasima: "Taşıma Ekipmanları",
         "set-ustu-mutfak": "Set Üstü Mutfak Ekipmanları",
       };
+      if (seg === "market-reyonlari" && typeof window.equstoUrl === "function") {
+        return { href: window.equstoUrl("marketReyon"), label: "Market Reyonları" };
+      }
+      if (
+        (seg === "market-reyon" || (deptOverride && deptOverride === "market-reyon")) &&
+        typeof window.equstoUrl === "function"
+      ) {
+        return { href: window.equstoUrl("marketReyon"), label: "Market Reyonları" };
+      }
       if (seg && labels[seg] && typeof window.equstoUrl === "function") {
         return { href: window.equstoUrl(seg), label: labels[seg] };
       }
@@ -1307,11 +1316,15 @@
         priceInt = fracMatch[1] || priceTxt;
         priceFrac = fracMatch[2] || "";
       }
-      var priceHTML = priceTxt
-        ? '<span class="eq-buybox-currency">₺</span>' +
-          '<span class="eq-buybox-int">' + esc(priceInt) + '</span>' +
-          (priceFrac ? '<span class="eq-buybox-frac">' + esc(priceFrac) + '</span>' : '')
-        : '<span class="eq-buybox-currency">₺</span><span class="eq-buybox-int">—</span>';
+      var quoteOnly =
+        !!(x.fiyat_bekleniyor) || /teklif\s+için/i.test(String(x.price || ""));
+      var priceHTML = quoteOnly
+        ? '<span class="eq-buybox-int" style="font-size:1.05rem;">Teklif için iletişim</span>'
+        : priceTxt
+          ? '<span class="eq-buybox-currency">₺</span>' +
+            '<span class="eq-buybox-int">' + esc(priceInt) + '</span>' +
+            (priceFrac ? '<span class="eq-buybox-frac">' + esc(priceFrac) + '</span>' : '')
+          : '<span class="eq-buybox-currency">₺</span><span class="eq-buybox-int">—</span>';
 
       // "Bu ürün hakkında" bullet listesi (specs'in left'inden)
       var aboutLines = buildAboutBullets(splitSpecsCols(x.specs).left || x.specs, 6);
@@ -1356,7 +1369,9 @@
         "</div>" +
         '<aside class="eq-product-buybox" aria-label="Satın al">' +
         '<div class="eq-buybox-price">' + priceHTML + '</div>' +
-        '<div class="eq-buybox-kdv">KDV dahil fiyat</div>' +
+        (quoteOnly
+          ? '<div class="eq-buybox-kdv">Fiyat listesi hazırlanıyor — sepete ekleyip teklif isteyebilirsiniz.</div>'
+          : '<div class="eq-buybox-kdv">KDV dahil fiyat</div>') +
         '<div class="eq-buybox-deliver"><b>ÜCRETSİZ teslimat</b> anlaşmalı bayi ağı ile.<br><span style="color:#007185;">Hızlı teslimat için tarih seçin.</span></div>' +
         '<div class="eq-buybox-stock">Stokta var</div>' +
         '<div class="eq-buybox-qty"><label for="eq-qty">Adet:</label><select id="eq-qty">' + qtyOpts + '</select></div>' +

@@ -26,14 +26,25 @@
     "araba",
     "istif",
     "set-ustu-mutfak",
+    "market-reyon",
   ];
+
+  function urlDeptToCatalogDept(seg) {
+    var d = String(seg || "").trim();
+    if (d === "market-reyonlari") return "market-reyon";
+    return d;
+  }
 
   function parseProductPath() {
     try {
       var path = location.pathname || "";
       var m = path.match(/\/shop\/([^/]+)\/([^/?#]+)/i);
       if (!m) return null;
-      return { dept: decodeURIComponent(m[1]), slug: decodeURIComponent(m[2]) };
+      return {
+        dept: urlDeptToCatalogDept(decodeURIComponent(m[1])),
+        urlDept: decodeURIComponent(m[1]),
+        slug: decodeURIComponent(m[2]),
+      };
     } catch (_) {
       return null;
     }
