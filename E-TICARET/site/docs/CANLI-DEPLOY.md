@@ -8,7 +8,7 @@
 | Vercel Root Directory | **`E-TICARET/site`** |
 | Kullanmayın (eski kopya) | `EQUSTO-WORK/E-TICARET/site`, `equsto-v2` |
 
-`EQUSTO-WORK/E-TICARET/site` repoda duruyorsa **dokunmayın**; build artık oradan kopyalamıyor.
+`EQUSTO-WORK/E-TICARET/site`: repoda **Next app** (app/, lib/) — Vercel build eksik `app/` için buradan hydrate eder; **public/** her zaman `E-TICARET/site` üzerinden gelir.
 
 ## Vercel panel
 
