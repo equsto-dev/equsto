@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "description": "Vercel Root Directory yanlislikla E-TICARET/site ise gercek siteyi buradan build eder.",
+  "scripts": {
+    "build": "node build-from-workspace.mjs"
+  }
+}
