@@ -1,0 +1,62 @@
+{
+  "generated": "2026-05-27T17:13:35.989Z",
+  "brand": "Proso Profesyonel Soğutma",
+  "subs": [
+    {
+      "label": "Tüm Proso kataloğu",
+      "tip": "proso-tumu",
+      "href": "/shop/market-reyonlari?tip=proso-tumu"
+    },
+    {
+      "label": "Sütlükler",
+      "tip": "proso-sutluk",
+      "href": "/shop/market-reyonlari?tip=proso-sutluk"
+    },
+    {
+      "label": "Kısa Sütlükler",
+      "tip": "proso-kisa-sutluk",
+      "href": "/shop/market-reyonlari?tip=proso-kisa-sutluk"
+    },
+    {
+      "label": "Şarküteri Reyonları",
+      "tip": "proso-sarkuteri",
+      "href": "/shop/market-reyonlari?tip=proso-sarkuteri"
+    },
+    {
+      "label": "Dikey Dondurucular",
+      "tip": "proso-dikey-dondurucu",
+      "href": "/shop/market-reyonlari?tip=proso-dikey-dondurucu"
+    },
+    {
+      "label": "Ada Tipi",
+      "tip": "proso-ada-tipi",
+      "href": "/shop/market-reyonlari?tip=proso-ada-tipi"
+    },
+    {
+      "label": "Plug-in Kabinler",
+      "tip": "proso-plugin",
+      "href": "/shop/market-reyonlari?tip=proso-plugin"
+    },
+    {
+      "label": "Butik",
+      "tip": "proso-butik",
+      "href": "/shop/market-reyonlari?tip=proso-butik"
+    },
+    {
+      "label": "Soğuk Hava Depoları",
+      "tip": "proso-soguk-hava",
+      "href": "/shop/market-reyonlari?tip=proso-soguk-hava"
+    },
+    {
+      "label": "Soğutma Sistemleri",
+      "tip": "proso-sogutma-sistemleri",
+      "href": "/shop/market-reyonlari?tip=proso-sogutma-sistemleri"
+    },
+    {
+      "label": "Şişe Soğutucular",
+      "tip": "proso-sise-sogutucu",
+      "href": "/shop/market-reyonlari?tip=proso-sise-sogutucu"
+    }
+  ],
+  "productCount": 73
+}

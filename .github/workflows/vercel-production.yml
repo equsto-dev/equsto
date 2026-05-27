@@ -13,13 +13,16 @@ on:
   push:
     branches: [main]
     paths:
+      - "E-TICARET/**"
       - "EQUSTO-WORK/**"
+      - "equsto-v2/**"
+      - "vercel.json"
       - ".github/workflows/vercel-production.yml"
   workflow_dispatch:
 
 defaults:
   run:
-    working-directory: EQUSTO-WORK/E-TICARET/site
+    working-directory: E-TICARET/site
 
 jobs:
   deploy:
@@ -34,7 +37,7 @@ jobs:
         with:
           node-version: "20"
           cache: npm
-          cache-dependency-path: EQUSTO-WORK/E-TICARET/site/package-lock.json
+          cache-dependency-path: E-TICARET/site/package-lock.json
       - name: Pull Vercel env
         run: npx vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
         env:
@@ -61,5 +64,5 @@ jobs:
       - name: Vercel GHA deploy atlandı
         run: |
           echo "VERCEL_TOKEN / VERCEL_ORG_ID / VERCEL_PROJECT_ID tanımlı değil."
-          echo "Canlı deploy: Vercel panel → Git → main (Root Directory: EQUSTO-WORK/E-TICARET/site)."
+          echo "Canlı deploy: Vercel Git → main (Root Directory bos veya equsto-v2 / E-TICARET/site — vercel-build otomatik bulur)."
           echo "GHA ile deploy için: GitHub repo → Settings → Secrets and variables → Actions"
