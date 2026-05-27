@@ -1,23 +1,24 @@
 # Canlıya alma (equsto.com)
 
-Kod `main` branch’te; Vercel Git entegrasyonu push sonrası deploy eder.
+Kod `main` branch’te; site **Vercel Production** deploy edilince güncellenir.
 
-**Panelde Root Directory aramanız gerekmez.** Repo kökündeki `vercel.json` ve `E-TICARET/site/scripts/vercel-build.mjs` site klasörünü otomatik bulur (`equsto-v2`, `E-TICARET/site`, `EQUSTO-WORK/E-TICARET/site` veya monorepo kökü).
+## Hızlı (panel — 1 dakika)
 
-## Otomatik (tercih)
+1. [vercel.com](https://vercel.com) → proje **equsto**
+2. **Settings → General → Root Directory** = `EQUSTO-WORK/E-TICARET/site`
+3. **Deployments** → en üstteki `main` commit
+4. **⋯ → Redeploy** → **Use existing Build Cache: KAPALI** → Redeploy
+5. **Ready** olunca: `https://equsto.com/data/dept/kahve.json` kontrol
+6. Vitrin sayfalarında Ctrl+F5
 
-1. Değişiklikleri `main`’e push edin.
-2. [vercel.com](https://vercel.com) → **equsto** → **Deployments** → son commit **Ready** olana kadar bekleyin.
-3. **Ready** olunca: `https://equsto.com/data/dept/market-reyon.json` (veya `kahve.json`) kontrol.
-4. Vitrin sayfalarında Ctrl+F5.
+## Otomatik (GitHub Actions)
 
-## GitHub Actions (isteğe bağlı)
+Repo → **Settings → Secrets → Actions** → `VERCEL_TOKEN`, `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID`
 
-Secret’lar tanımlıysa: `VERCEL_TOKEN`, `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID`  
-→ **Actions → Vercel Production** veya `main` push.
+Sonra **Actions → Vercel Production** veya `main`’e push.
 
 ## Doğrulama
 
-- `https://equsto.com/shop/market-reyonlari`
-- `https://equsto.com/shop/kahve`
-- `https://equsto.com/pfos`
+- `https://equsto.com/shop/kahve` — departman PLP
+- `https://equsto.com/pfos` — Proje Fabrikası
+- `https://equsto.com/blog` — rehber dizini

@@ -35,22 +35,13 @@ function findRepoRoot(start) {
 
 function resolveSiteDir(root) {
   const repo = findRepoRoot(root);
-  /** Canlı kaynak: E-TICARET/site (Vercel cwd eski EQUSTO-WORK/E-TICARET/site kopyası olabilir). */
-  const candidates = [
-    path.join(repo, "E-TICARET", "site"),
-    path.join(repo, "EQUSTO-WORK", "E-TICARET", "site"),
-    root,
-  ].filter(isNextSite);
-
-  if (candidates.length === 0) {
-    console.error("[vercel-build] Next.js site bulunamadi. root=", root, "repo=", repo);
-    process.exit(1);
-  }
-  const site = candidates[0];
-  if (path.resolve(site) !== path.resolve(root)) {
-    console.log("[vercel-build] Kaynak site (guncel):", site);
-  }
-  return site;
+  const canonical = path.join(repo, "E-TICARET", "site");
+  if (isNextSite(canonical)) return canonical;
+  if (isNextSite(root)) return root;
+  const alt = path.join(repo, "EQUSTO-WORK", "E-TICARET", "site");
+  if (isNextSite(alt)) return alt;
+  console.error("[vercel-build] Next.js site bulunamadi. root=", root, "repo=", repo);
+  process.exit(1);
 }
 
 const siteDir = resolveSiteDir(vercelRoot);
