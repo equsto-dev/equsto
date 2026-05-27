@@ -16,6 +16,7 @@ const DEPT_HTML: Record<string, string> = {
   araba: "/araba.html",
   istif: "/istif.html",
   "set-ustu-mutfak": "/set-ustu-mutfak.html",
+  "market-reyonlari": "/market-reyonlari.html",
 };
 
 function deptRewrites() {
@@ -200,6 +201,18 @@ const nextConfig: NextConfig = {
       ...geoRewrites(),
       ],
     };
+  },
+  webpack: (config, { isServer }) => {
+    if (process.env.VERCEL && isServer) {
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        [path.resolve(__dirname, "lib/prisma.ts")]: path.resolve(
+          __dirname,
+          "lib/prisma.vercel.ts"
+        ),
+      };
+    }
+    return config;
   },
 };
 

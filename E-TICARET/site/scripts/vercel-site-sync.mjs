@@ -18,6 +18,7 @@ export function resolveCanonicalSource(repo) {
 }
 
 const SYNC_DIRS = ["app", "components", "lib", "prisma"];
+const SYNC_LIB_EXTRA = ["prisma.vercel.ts"];
 const SYNC_FILES = [
   "next.config.ts",
   "package.json",
@@ -51,6 +52,12 @@ export function materializeVercelRoot(vercelRoot) {
   for (const name of SYNC_DIRS) {
     const from = path.join(src, name);
     if (fs.existsSync(from)) copyTree(from, path.join(vercelRoot, name));
+  }
+
+  for (const name of SYNC_LIB_EXTRA) {
+    const from = path.join(src, "lib", name);
+    const to = path.join(vercelRoot, "lib", name);
+    if (fs.existsSync(from)) fs.copyFileSync(from, to);
   }
 
   for (const name of SYNC_FILES) {
