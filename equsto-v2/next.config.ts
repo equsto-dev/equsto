@@ -1,5 +1,11 @@
 import type { NextConfig } from "next";
+import fs from "fs";
 import path from "path";
+
+const parentDir = path.join(__dirname, "..");
+const repoRoot = fs.existsSync(path.join(parentDir, "equsto-v2"))
+  ? parentDir
+  : path.join(__dirname, "../..");
 
 /** Departman PLP — /shop/{slug} → {slug}.html (public/) */
 const DEPT_HTML: Record<string, string> = {
@@ -88,8 +94,7 @@ const traceExcludes = [
 ];
 
 const nextConfig: NextConfig = {
-  /* Monorepo: Vercel cwd E-TICARET/site iken build equsto-v2 altinda yapilabilir */
-  outputFileTracingRoot: path.join(__dirname, ".."),
+  outputFileTracingRoot: repoRoot,
   serverExternalPackages: [
     "@prisma/client",
     "prisma",
