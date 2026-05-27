@@ -40,6 +40,7 @@
       araba: '/images/catalog/atalay/p117/atalay-adk-102.jpg',
       istif: '/images/catalog/ozti/p284/ozti-8897-11ip4-073.jpg',
       'set-ustu-mutfak': '/images/catalog/ozti/p50/ozti-6260-00072-70.jpg',
+      kuvetler: '/images/catalog/ozti/p50/ozti-6260-00072-70.jpg',
     },
     byGo: {
       pfos: '/images/pfos/dis-mutfak-gece-render.jpg?v=20260527d',
@@ -99,6 +100,7 @@
     araba: '🛒',
     istif: '📦',
     'set-ustu-mutfak': '🍽️',
+    kuvetler: '🥣',
   };
 
   function storyEmoji(item) {
@@ -135,7 +137,7 @@
       { label: 'Taşıma Ekipmanları', dept: 'tasima', emoji: '🚚', bg: '#e0f7fa', image: '/images/catalog/atalay/p7/atalay-e-aei---360.jpg' },
       { label: 'Arabalar', dept: 'araba', emoji: '🛒', bg: '#e8f5e9', image: '/images/catalog/atalay/p117/atalay-adk-102.jpg' },
       { label: 'İstif Rafları', dept: 'istif', emoji: '📦', bg: '#ede7f6', image: '/images/catalog/atalay/p117/atalay-adk-102.jpg' },
-      { label: 'Set Üstü Mutfak', dept: 'set-ustu-mutfak', emoji: '🍽️', bg: '#fff8e6' },
+      { label: 'Küvetler', dept: 'kuvetler', emoji: '🥣', bg: '#fff8e6' },
     ];
   }
 
