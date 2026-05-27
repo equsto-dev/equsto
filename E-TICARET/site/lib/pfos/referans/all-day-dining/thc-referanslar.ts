@@ -1,10 +1,10 @@
 /**
  * All Day Dining Cafe — THC referans proformaları (200–400 m² bandı).
- * Veri: public/data/pfos-all-day-dining-referanslar.json
+ * Veri: lib/pfos/data/pfos-all-day-dining-referanslar.json
  * Yenileme: python scripts/build-all-day-dining-referanslar.py
  */
 
-import referansData from "@/public/data/pfos-all-day-dining-referanslar.json";
+import referansData from "@/lib/pfos/data/pfos-all-day-dining-referanslar.json";
 import type { ReferansKalem, ReferansProfil } from "../referans-types";
 
 type ReferansJson = {
