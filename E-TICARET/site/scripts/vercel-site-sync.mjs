@@ -1,37 +1,18 @@
 /**
- * Vercel Root = E-TICARET/site iken tam Next.js kaynagini (equsto-v2) materialize eder.
+ * Vercel Root'ta app/ yoksa tam siteyi E-TICARET/site'tan materialize eder.
+ * equsto-v2 yedek kopya — asla birincil kaynak degil.
  */
 import fs from "node:fs";
 import path from "node:path";
+import { findRepoRoot, isNextSite } from "./vercel-resolve-site.mjs";
 
-export function isNextSite(dir) {
-  return (
-    fs.existsSync(path.join(dir, "package.json")) &&
-    fs.existsSync(path.join(dir, "app"))
-  );
-}
-
-export function findRepoRoot(start) {
-  let dir = path.resolve(start);
-  for (let i = 0; i < 12; i++) {
-    if (
-      fs.existsSync(path.join(dir, "equsto-v2", "package.json")) ||
-      fs.existsSync(path.join(dir, "E-TICARET", "site", "package.json")) ||
-      fs.existsSync(path.join(dir, "EQUSTO-WORK", "E-TICARET", "site", "package.json"))
-    ) {
-      return dir;
-    }
-    const parent = path.dirname(dir);
-    if (parent === dir) break;
-    dir = parent;
-  }
-  return path.resolve(start, "../..");
-}
+export { isNextSite, findRepoRoot };
 
 export function resolveCanonicalSource(repo) {
   const candidates = [
-    path.join(repo, "equsto-v2"),
+    path.join(repo, "E-TICARET", "site"),
     path.join(repo, "EQUSTO-WORK", "E-TICARET", "site"),
+    path.join(repo, "equsto-v2"),
   ];
   return candidates.find(isNextSite) ?? null;
 }
@@ -91,6 +72,10 @@ export function materializeVercelRoot(vercelRoot) {
     "generate-admin-config.mjs",
     "prisma-postinstall-skip.mjs",
     "load-env.mjs",
+    "vercel-resolve-site.mjs",
+    "vercel-site-sync.mjs",
+    "vercel-build.mjs",
+    "vercel-install.mjs",
   ]) {
     const from = path.join(scriptsSrc, name);
     if (fs.existsSync(from)) fs.copyFileSync(from, path.join(scriptsDest, name));
