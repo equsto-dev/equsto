@@ -489,20 +489,14 @@
       );
     }
 
-    /** Çağlayan PDP sol şerit — yalnızca ürün vitrin fotoğrafları (kesit / PLG / ölçü çizimi değil). */
-    function isCaglayanProductOnlyImg(relOrUrl) {
+    /** Çağlayan PDP sol şerit — ürün + PLG/aksesuar; kesit ve ölçü çizimi hariç. */
+    var CAGLAYAN_PDP_THUMB_MAX = 9;
+
+    function isCaglayanPdpThumbImg(relOrUrl) {
       var fn = imgFileName(relOrUrl);
       if (!fn) return false;
       if (/kesit/i.test(fn)) return false;
       if (/kapak/i.test(fn)) return false;
-      if (/plg/i.test(fn)) return false;
-      if (
-        /bicaklik|terazilik|sepetlik|posetlik|modul-bolucu|urun-bolucu|plexi|kademeli|et-aydinlatma|aydinlatma|bankolu|kose|ic-kose|dis-kose|zyt/i.test(
-          fn
-        )
-      ) {
-        return false;
-      }
       if (/[-_]model-\d+\.(jpe?g|webp|png|gif)$/i.test(fn)) return false;
       if (/\d{3,4}.*[-_]model-\d/i.test(fn)) return false;
       return true;
@@ -549,9 +543,9 @@
       });
       if (isCaglayanRefrigeration(x)) {
         out = out.filter(function (item) {
-          return isCaglayanProductOnlyImg(item.rel) || isCaglayanProductOnlyImg(item.src);
+          return isCaglayanPdpThumbImg(item.rel) || isCaglayanPdpThumbImg(item.src);
         });
-        if (out.length > 6) out = out.slice(0, 6);
+        if (out.length > CAGLAYAN_PDP_THUMB_MAX) out = out.slice(0, CAGLAYAN_PDP_THUMB_MAX);
       }
       return out;
     }
@@ -573,7 +567,7 @@
       if (p && p.images && p.images.length) {
         if (isCaglayanRefrigeration(p)) {
           for (var ti = 0; ti < p.images.length; ti++) {
-            if (isCaglayanProductOnlyImg(p.images[ti])) {
+            if (isCaglayanPdpThumbImg(p.images[ti])) {
               rel = p.images[ti];
               break;
             }
