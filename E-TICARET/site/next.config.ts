@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 import path from "path";
 
-/** Departman PLP — /shop/{slug} → {slug}.html (public/) */
+/** Departman PLP — eski *.html → /shop/{slug} */
 const DEPT_HTML: Record<string, string> = {
   pisirme: "/pisirme.html",
   sogutma: "/sogutma.html",
@@ -28,119 +28,36 @@ function deptRedirects() {
   }));
 }
 
-/** SEO rehber / proje sayfaları — geo-landing.html + eq-geo-landing.js */
-const GEO_SLUGS = [
-  "steakhouse-kurulumu",
-  "bulut-mutfak-kurulumu",
-  "cafe-kurulumu",
-  "catering-mutfagi",
-  "fine-dining-kurulumu",
-  "all-day-dining-kurulumu",
-  "fast-food-kurulumu",
-  "market-kasap-sarkuteri-kurulumu",
-  "endustriyel-mutfak-ekipmani-turkiye",
-  "restoran-mutfak-teklif",
-  "otel-mutfak-ekipman-tedarik",
-  "oztiryakiler-ekipmani-tedarik",
-  "soguk-oda-teklif",
-  "havuzlu-dolap-tedarik",
-  "endustriyel-pisirme-ekipmanlari",
-  "mutfak-teklif-platformu",
-  "bar-tasarimi-turkiye",
-  "blog",
-];
-
-/** EN GEO slugs — must not collide with /en/pfos, /en/shop, etc. */
-const GEO_EN_SLUGS = [
-  "steakhouse-kitchen-setup",
-  "cloud-kitchen-setup",
-  "cafe-setup",
-  "catering-kitchen",
-  "fast-food-kitchen-setup",
-  "fine-dining-kitchen-setup",
-  "all-day-dining-kitchen-setup",
-  "market-butcher-deli-setup",
-  "industrial-kitchen-equipment-turkey",
-  "industrial-kitchen-supplier-turkey",
-  "commercial-kitchen-quotation",
-  "restaurant-kitchen-quote",
-  "hotel-kitchen-equipment",
-  "oztiryakiler-equipment-supply",
-  "cold-room-quote",
-  "deli-counter-refrigeration",
-  "industrial-cooking-equipment",
-  "kitchen-quote-platform",
-  "bar-design-turkey",
-];
-
-function geoRewrites() {
-  const trBase = GEO_SLUGS.map((slug) => ({
-    source: `/${slug}`,
-    destination: "/geo-landing.html",
-  }));
-  const enPages = GEO_EN_SLUGS.map((slug) => ({
-    source: `/en/${slug}`,
-    destination: "/geo-landing.html",
-  }));
-  return [
-    ...trBase,
-    { source: "/projeler", destination: "/geo-landing.html" },
-    { source: "/projeler/:slug", destination: "/geo-landing.html" },
-    { source: "/rehber/:slug", destination: "/geo-landing.html" },
-    { source: "/en/blog", destination: "/geo-landing.html" },
-    { source: "/en/projects", destination: "/geo-landing.html" },
-    { source: "/en/projects/:slug", destination: "/geo-landing.html" },
-    { source: "/en/guides/:slug", destination: "/geo-landing.html" },
-    ...enPages,
+/** Eski vitrin HTML dosyaları → temiz URL (App Router) */
+function legacyHtmlRedirects() {
+  const pairs: [string, string][] = [
+    ["pfos.html", "/pfos"],
+    ["sss.html", "/sss"],
+    ["contact.html", "/contact"],
+    ["hakkimizda.html", "/hakkimizda"],
+    ["buradan-basladi.html", "/buradan-basladi"],
+    ["marka.html", "/shop/marka"],
+    ["login.html", "/login"],
+    ["admin.html", "/admin"],
+    ["bar-design.html", "/besos"],
+    ["imt300.html", "/besos/imt300"],
+    ["bar-module.html", "/besos"],
+    ["geo-landing.html", "/"],
+    ["arama.html", "/arama"],
+    ["sepet.html", "/sepet"],
+    ["product.html", "/shop"],
   ];
-}
-
-/** Mirror storefront HTML routes under /en — App Router (shop) öncelikli */
-function enRewrites() {
-  return [
-    { source: "/en", destination: "/index.html" },
-    { source: "/en/", destination: "/index.html" },
-    { source: "/en/shop", destination: "/index.html" },
-    { source: "/en/shop/", destination: "/index.html" },
-    { source: "/en/about", destination: "/hakkimizda.html" },
-    { source: "/en/about/", destination: "/hakkimizda.html" },
-    { source: "/en/project-factory", destination: "/pfos.html" },
-    { source: "/en/project-factory/", destination: "/pfos.html" },
-    { source: "/en/story", destination: "/buradan-basladi.html" },
-    { source: "/en/story/", destination: "/buradan-basladi.html" },
-    { source: "/en/pfos", destination: "/pfos.html" },
-    { source: "/en/pfos/", destination: "/pfos.html" },
-    { source: "/en/besos", destination: "/bar-design.html" },
-    { source: "/en/besos/", destination: "/bar-design.html" },
-    { source: "/en/besos/imt300", destination: "/imt300.html" },
-    { source: "/en/besos/imt300/", destination: "/imt300.html" },
-    { source: "/en/besos/modul/:slug", destination: "/bar-module.html" },
-    { source: "/en/besos/modul/:slug/", destination: "/bar-module.html" },
-    { source: "/en/contact", destination: "/contact.html" },
-    { source: "/en/contact/", destination: "/contact.html" },
-    { source: "/en/sss", destination: "/sss.html" },
-    { source: "/en/sss/", destination: "/sss.html" },
-    { source: "/en/login", destination: "/login.html" },
-    { source: "/en/login/", destination: "/login.html" },
-    { source: "/en/admin", destination: "/admin.html" },
-    { source: "/en/admin/", destination: "/admin.html" },
-    { source: "/en/hakkimizda", destination: "/hakkimizda.html" },
-    { source: "/en/hakkimizda/", destination: "/hakkimizda.html" },
-    { source: "/en/buradan-basladi", destination: "/buradan-basladi.html" },
-    { source: "/en/buradan-basladi/", destination: "/buradan-basladi.html" },
-    { source: "/en/marka", destination: "/marka.html" },
-    { source: "/en/marka/", destination: "/marka.html" },
-    { source: "/en/shop/marka", destination: "/marka.html" },
-    { source: "/en/shop/marka/", destination: "/marka.html" },
-    { source: "/en/shop/marka/:slug", destination: "/marka.html" },
-  ];
+  return pairs.map(([file, dest]) => ({
+    source: `/${file}`,
+    destination: dest,
+    permanent: true,
+  }));
 }
 
 /** Vercel lambda 250MB — public görseller/katalog trace dışı (runtime CDN/fs fetch) */
 const traceExcludes = [
   "./public/images/**",
   "./public/assets/**",
-  "./public/**/*.html",
   "./public/data/dept/**",
   "./public/data/vitrum-drawings/**",
   "./public/data/advanced-cuisine-clear-ice/**",
@@ -157,11 +74,7 @@ const traceExcludes = [
 const nextConfig: NextConfig = {
   /** Monorepo (git kok = path0); Vercel paketleme icin */
   outputFileTracingRoot: path.join(__dirname, "..", ".."),
-  serverExternalPackages: [
-    "@prisma/client",
-    "prisma",
-    "meilisearch",
-  ],
+  serverExternalPackages: ["@prisma/client", "prisma", "meilisearch"],
   outputFileTracingExcludes: {
     "*": traceExcludes,
     "/api/*": traceExcludes,
@@ -176,17 +89,13 @@ const nextConfig: NextConfig = {
     const utf8Html = { key: "Content-Type", value: "text/html; charset=utf-8" };
     const utf8Json = { key: "Content-Type", value: "application/json; charset=utf-8" };
     return [
-      { source: "/:path*.html", headers: [utf8Html] },
       { source: "/", headers: [utf8Html] },
       { source: "/pfos", headers: [utf8Html] },
       { source: "/pfos/:path*", headers: [utf8Html] },
       { source: "/besos", headers: [utf8Html] },
       { source: "/besos/:path*", headers: [utf8Html] },
-      { source: "/bar-design", headers: [utf8Html] },
       { source: "/admin", headers: [utf8Html] },
       { source: "/contact", headers: [utf8Html] },
-      { source: "/besos/imt300", headers: [utf8Html] },
-      { source: "/besos/imt300/:path*", headers: [utf8Html] },
       { source: "/login", headers: [utf8Html] },
       { source: "/marka", headers: [utf8Html] },
       { source: "/marka/:path*", headers: [utf8Html] },
@@ -230,6 +139,12 @@ const nextConfig: NextConfig = {
       { source: "/shop", destination: "/", permanent: true },
       { source: "/shop/:dept.html", destination: "/shop/:dept", permanent: true },
       ...deptRedirects(),
+      ...legacyHtmlRedirects(),
+      { source: "/marka", destination: "/shop/marka", permanent: true },
+      { source: "/marka/", destination: "/shop/marka", permanent: true },
+      { source: "/en/marka", destination: "/en/shop/marka", permanent: true },
+      { source: "/en/marka/", destination: "/en/shop/marka", permanent: true },
+      { source: "/en/product.html", destination: "/en/shop", permanent: true },
       { source: "/urunler", destination: "/shop", permanent: true },
       { source: "/urunler/:path*", destination: "/shop/:path*", permanent: true },
       { source: "/proje-fabrikasi", destination: "/pfos", permanent: true },
@@ -239,17 +154,17 @@ const nextConfig: NextConfig = {
       { source: "/bar-design.html", destination: "/besos", permanent: true },
       { source: "/imt300", destination: "/besos/imt300", permanent: true },
       { source: "/imt300/", destination: "/besos/imt300", permanent: true },
+      { source: "/en/project-factory", destination: "/en/pfos", permanent: true },
+      { source: "/en/project-factory/", destination: "/en/pfos", permanent: true },
     ];
   },
   async rewrites() {
     return {
       beforeFiles: [
-        /* Katalog görselleri: /data/images/catalog/… → /images/catalog/… (legacy HTML + eq-site-urls) */
+        /* Katalog görselleri: /data/images/catalog/… → /images/catalog/… */
         { source: "/data/images/:path*", destination: "/images/:path*" },
         /* /i18n/ bazı tarayıcı eklentilerinde engellenir — /locales/ alias */
         { source: "/locales/:file.json", destination: "/i18n/:file.json" },
-        { source: "/arama", destination: "/arama.html" },
-        { source: "/arama/", destination: "/arama.html" },
         /* API birleştirme — Hobby 12 function limiti (geriye dönük URL) */
         { source: "/api/pfos/concepts", destination: "/api/pfos?action=concepts" },
         { source: "/api/pfos/konseptler", destination: "/api/pfos?action=konseptler" },
@@ -268,36 +183,6 @@ const nextConfig: NextConfig = {
           destination: "/api/urunler?katalogIndex=:index",
         },
         { source: "/api/whatsapp", destination: "/api/musteriler?whatsapp=1" },
-        { source: "/besos/imt300", destination: "/imt300.html" },
-        { source: "/besos/imt300/", destination: "/imt300.html" },
-        /* App Router app/pfos yerine tam vitrin + sihirbaz (pfos.html) */
-        { source: "/pfos", destination: "/pfos.html" },
-        { source: "/pfos/", destination: "/pfos.html" },
-      ],
-      afterFiles: [
-      { source: "/", destination: "/index.html" },
-      { source: "/shop/marka", destination: "/marka.html" },
-      { source: "/shop/marka/", destination: "/marka.html" },
-      { source: "/shop/marka/:slug", destination: "/marka.html" },
-      { source: "/besos/modul/:slug", destination: "/bar-module.html" },
-      { source: "/besos/modul/:slug/", destination: "/bar-module.html" },
-      { source: "/admin", destination: "/admin.html" },
-      { source: "/admin/", destination: "/admin.html" },
-      /* /yonetim → Next.js App Router (Ant Design Pro) */
-      { source: "/contact", destination: "/contact.html" },
-      { source: "/contact/", destination: "/contact.html" },
-      { source: "/buradan-basladi", destination: "/buradan-basladi.html" },
-      { source: "/buradan-basladi/", destination: "/buradan-basladi.html" },
-      { source: "/hakkimizda", destination: "/hakkimizda.html" },
-      { source: "/hakkimizda/", destination: "/hakkimizda.html" },
-      { source: "/sss", destination: "/sss.html" },
-      { source: "/sss/", destination: "/sss.html" },
-      { source: "/login", destination: "/login.html" },
-      { source: "/login/", destination: "/login.html" },
-      { source: "/marka", destination: "/marka.html" },
-      { source: "/marka/", destination: "/marka.html" },
-      ...enRewrites(),
-      ...geoRewrites(),
       ],
     };
   },
