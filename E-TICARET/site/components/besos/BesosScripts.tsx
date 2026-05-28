@@ -43,7 +43,13 @@ export default function BesosScripts() {
       <Script src="/eq-site-urls.js" strategy="beforeInteractive" />
       <Script src="/equsto-logo.js" strategy="afterInteractive" />
       <Script src="/nav.js" strategy="afterInteractive" onReady={refreshNavDrawer} />
-      <Script src="/eq-youtube-embed.js" strategy="afterInteractive" />
+      <Script
+        src="/eq-youtube-embed.js?v=20260528yt-instant"
+        strategy="afterInteractive"
+        onReady={() => {
+          window.__eqYoutubeEmbedInit?.();
+        }}
+      />
       <Script src="/eq-bar-module-url.js" strategy="afterInteractive" />
       <Script src="/eq-besos-pricing.js" strategy="afterInteractive" />
       <Script src="/eq-kur-live.js" strategy="afterInteractive" />

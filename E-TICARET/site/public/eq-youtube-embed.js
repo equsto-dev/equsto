@@ -135,8 +135,16 @@
     var minimal =
       el.getAttribute("data-eq-yt-watch") === "0" ||
       el.getAttribute("data-eq-yt-poster") === "minimal";
+    var instant =
+      el.getAttribute("data-eq-yt-poster") === "none" ||
+      el.getAttribute("data-eq-yt-instant") === "1";
     if (minimal) el.classList.add("eq-yt--poster-minimal");
-    buildPoster(el, { minimal: minimal });
+    /* Besos hero vb.: poster → iframe geçişi flicker yapar; doğrudan muted autoplay iframe */
+    if (minimal || instant) {
+      activate(el);
+      return;
+    }
+    buildPoster(el, { minimal: false });
     queueAutoplayUnlock();
   }
 
