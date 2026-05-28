@@ -2,7 +2,7 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
   "installCommand": "npm ci",
-  "buildCommand": "node scripts/vercel-prebuild.mjs && node scripts/generate-admin-config.mjs && npm run build && node scripts/vercel-postbuild.mjs",
+  "buildCommand": "node scripts/vercel-ci.mjs",
   "rewrites": [
     { "source": "/sepet", "destination": "/sepet.html" },
     { "source": "/sepet/", "destination": "/sepet.html" },
