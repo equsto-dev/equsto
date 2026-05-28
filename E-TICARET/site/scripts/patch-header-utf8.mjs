@@ -62,6 +62,10 @@ function patchWithPairs(file) {
 
 function patchGeoLanding() {
   const file = path.join(PUBLIC, "geo-landing.html");
+  if (!fs.existsSync(file)) {
+    console.log("[skip] geo-landing.html (Next.js route)");
+    return;
+  }
   let html = fs.readFileSync(file, "utf8").replace(/^\uFEFF/, "");
   const header = fs.readFileSync(PARTIAL, "utf8").trim();
   const re = /<header class="hdr">[\s\S]*?<\/nav>/;
