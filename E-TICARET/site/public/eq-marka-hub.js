@@ -1,12 +1,12 @@
 /**
  * Markalarımız hub — iş ortağı kartları (/shop/marka)
  * Logo → Equsto marka ürünleri; alt band → resmi web sitesi
- * @version 20260531marka4
+ * @version 20260531marka6
  */
 (function () {
   "use strict";
 
-  var BRANDS_JSON = "/data/markalarimiz-brands.json?v=20260531marka4";
+  var BRANDS_JSON = "/data/markalarimiz-brands.json?v=20260531marka6";
   var EXT_ICON =
     '<svg class="eq-partner-card__ext" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">' +
     '<path d="M14 3h7v7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>' +
@@ -79,7 +79,8 @@
       ".eq-partner-card__web:hover{background:var(--eq-hover);color:var(--eq-text)}" +
       ".eq-partner-card__ext{flex:0 0 auto;opacity:.75}" +
       "body.eq-marka-hub #eq-filter-col{display:none!important}" +
-      "body.eq-marka-hub .body .right-col{width:100%}" +
+      "body.eq-shop.eq-marka-hub:not(.admin-app):not(.bd-page) .pg{background:transparent!important;max-width:none!important;margin:0!important}" +
+      "body.eq-shop.eq-marka-hub:not(.admin-app):not(.bd-page) .pg .right-col{width:100%;background:transparent!important}" +
       "@media(max-width:900px){.eq-partner-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}" +
       "@media(max-width:560px){.eq-partner-grid{grid-template-columns:1fr}}";
     var st = document.createElement("style");
