@@ -1905,7 +1905,7 @@ window.searchFilter = window.searchFilter || function () {};
       renderEpdpProduct(x, all);
     }
 
-    document.addEventListener("DOMContentLoaded", function () {
+    function bootProductPage() {
       var bcHome = document.getElementById("eq-product-bc-home");
       if (bcHome && typeof window.equstoUrl === "function") bcHome.href = window.equstoUrl("shop");
       if (window.EqFilterColumn) {
@@ -2006,4 +2006,10 @@ window.searchFilter = window.searchFilter || function () {};
         });
       });
     });
-    });
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", bootProductPage);
+    } else {
+      bootProductPage();
+    }
