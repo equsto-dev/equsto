@@ -6,7 +6,7 @@
 
   var ORIGIN = "https://equsto.com";
   var DATA_URL = "/api/geo";
-  var DATA_FALLBACK = "/data/geo-landings.json?v=20260602indent";
+  var DATA_FALLBACK = "/data/geo-landings.json?v=20260603market600";
   var HEADER_PARTIAL = "/partials/eq-d-header.html?v=20260602indent";
 
   function ensureVitrinChrome() {
@@ -194,11 +194,13 @@
       related: [{ label: "Catering rehberi", href: "/catering-mutfagi" }],
     },
     marketKasap: {
-      budget: "400 bin - 2,5 milyon TL",
+      budget: null,
+      skipBudget: true,
       pfosKonu: "Market reyonu",
       body:
-        "<p>Market kurulumunda müşteri yolculuğu reyondan başlar: dondurulmuş ada, soğutmalı gondol ve kasap bankosu aynı koridorda akıcı dizilir. Paketli ürün ile taze et aynı hat üzerinde görünür; arkada hazırlık ve depo birbirinden ayrılır. Reyon genişliği ve günlük çıkış, soğutucu adedini belirler.</p>" +
-        "<p>Kasap ve şarküteri kurulumunda kıyma, dilimleme ve vitrin sergisi farklı zonlarda tutulur. +2/+4&nbsp;°C teşhir ile −18&nbsp;°C depo karışmaz; et tahtası, hijyen seti ve hızlı yıkama günlük iş yükünü belirler. Equsto’da ölçü ve kapasiteye göre ekipman listesini netleyip montajı satış mühendisliği ile planlarız — teklif için Proje Fabrikası’na geçebilirsiniz.</p>",
+        "<p>Market kurulumunda müşteri yolculuğu reyondan başlar. Dondurulmuş ürün adası, soğutmalı gondollar ve kasap bankosu aynı koridorda akıcı biçimde dizilir; paketli gıda ile taze et aynı hat üzerinde görünürken, arkada hazırlık alanı ile depo birbirinden net biçimde ayrılır. Reyon genişliği, koridor mesafesi ve günlük çıkış kapasitesi soğutucu adedini ve vitrin uzunluğunu belirler.</p>" +
+        "<p>Kasap ve şarküteri kurulumunda kıyma, dilimleme ile vitrin sergisi farklı çalışma zonlarında tutulur. +2/+4&nbsp;°C teşhir vitrini ile −18&nbsp;°C depo asla karıştırılmamalı; et tahtası, bıçak seti, hijyen ünitesi ve hızlı yıkama günlük iş yükünün omurgasını oluşturur. Müşteri vitrinden hazırlık alanına geçerken çapraz bulaşma riski plan aşamasında kapatılır.</p>" +
+        "<p>Proje öncesi saha ölçüsü ve ürün portföyüne göre ekipman listesi netleştirilir; montaj ve devreye alma satış mühendisliği planıyla yürütülür. Market reyon vitrinindeki gerçek ürün kayıtlarına bağlanan bu rehber, kasap ve şarküteri hattını aynı müşteri akışında birlikte okumanız içindir; detaylı liste ve teklif özeti için Proje Fabrikası’nı kullanabilirsiniz.</p>",
       faq: [
         [
           "Market reyonu ile kasap hattı aynı projede mi?",
@@ -649,7 +651,8 @@
 
     var prof = PROFILES[page.profile] || {};
     var lang = page.lang || prof.lang || "tr";
-    var budget = page.budget || prof.budget;
+    var budget =
+      page.skipBudget || prof.skipBudget ? null : page.budget !== undefined ? page.budget : prof.budget;
     var body = (page.body || prof.body || "").replace(/\{budget\}/g, budget || "—");
     var faq = page.faq || prof.faq || [];
     var related = page.related || prof.related || [];
