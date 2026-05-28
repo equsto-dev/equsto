@@ -5,8 +5,8 @@
   "use strict";
 
   var ORIGIN = "https://equsto.com";
-  var DATA_URL = "/data/geo-landings.json?v=20260530geo";
-  var HEADER_PARTIAL = "/partials/eq-d-header.html?v=20260530geo";
+  var DATA_URL = "/data/geo-landings.json?v=20260531market";
+  var HEADER_PARTIAL = "/partials/eq-d-header.html?v=20260531market";
 
   function ensureVitrinChrome() {
     if (document.querySelector("header.hdr")) return Promise.resolve();
@@ -191,6 +191,28 @@
         "<p>All day dining ve otel mutfağında kahvaltı–öğle–akşam döngüsü aynı ekipmanı farklı yüklerle kullanır; kahve ve sıcak hat paralel yürür.</p><p>Band: <strong>{budget}</strong>.</p>",
       faq: [["Otel mutfağı ile ortak mı?", "Evet — PFOS’ta otel / all day dining konseptleri benzer hatları paylaşır."]],
       related: [{ label: "Catering rehberi", href: "/catering-mutfagi" }],
+    },
+    marketKasap: {
+      budget: "400 bin - 2,5 milyon TL",
+      pfosKonu: "Market reyonu",
+      body:
+        "<p><strong>Market kurulumu</strong>nda müşteri hattı kasap bankosu, şarküteri vitrini, yatay soğutucu ve derin dondurucu adalarıyla tamamlanır. Reyon ölçüsü, plug-in veya remote soğutma gücü ve günlük çıkış PFOS’ta adetleri netler.</p>" +
+        "<p><strong>Kasap ve şarküteri</strong> hattında et hazırlık (kıyma, dilimleme), +2/+4&nbsp;°C sergi vitrini ve −18&nbsp;°C depo ayrı zonlanır. Hijyen seti, et tahtası ve yıkama hızı tazelik güvenliğini belirler; montaj satış mühendisliği planıyla yürür.</p>",
+      faq: [
+        [
+          "Market reyonu ile kasap hattı aynı projede mi?",
+          "Evet — akış sırası ve soğutma zonları tek planda modellenir; vitrin SKU’ları market reyon kataloğundadır.",
+        ],
+        [
+          "Teklif nasıl alınır?",
+          "Proje Fabrikası’nda kapasite ve m² girin veya market reyon vitrininden ürün seçip iletişime geçin.",
+        ],
+      ],
+      related: [
+        { label: "Market reyonları vitrini", href: "/shop/market-reyonlari" },
+        { label: "Soğutma departmanı", href: "/shop/sogutma" },
+        { label: "Rehber dizini", href: "/blog" },
+      ],
     },
     projelerHub: {
       budget: null,
