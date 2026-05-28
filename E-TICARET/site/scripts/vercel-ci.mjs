@@ -36,9 +36,9 @@ function publishNextAtRepoRoot() {
   if (fs.existsSync(rootNext)) fs.rmSync(rootNext, { recursive: true, force: true });
   fs.cpSync(siteNext, rootNext, { recursive: true });
 
-  const manifest = path.join(rootNext, "routes-manifest-deterministic.json");
-  if (!fs.existsSync(manifest)) {
-    console.error("[vercel-ci] HATA:", manifest);
+  const buildId = path.join(rootNext, "BUILD_ID");
+  if (!fs.existsSync(buildId)) {
+    console.error("[vercel-ci] HATA: gecerli .next yok (BUILD_ID):", buildId);
     process.exit(1);
   }
   console.log("[vercel-ci] .next yayinlandi:", rootNext);
