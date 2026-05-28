@@ -256,7 +256,7 @@
 
       companyDisplay: COMPANY_DISPLAY_LINE,
 
-      tagline: "Equsto Teknolojisi · Gastronomi Tasarımı · Satış Mühendisliği",
+      tagline: "Equsto Teknolojisi · Gastronomi Tasarımı",
 
       legal: { terms: "/contact", privacy: "/contact", company: "Equsto Teknoloji Limited" },
 
