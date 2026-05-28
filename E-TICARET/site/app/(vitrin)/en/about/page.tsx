@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-import VitrinShell from "@/components/vitrin/VitrinShell";
-import HakkimizdaContent from "@/components/vitrin/HakkimizdaContent";
-import { HAKKIMIZDA_PAGE_CSS } from "@/lib/vitrin/page-css";
+import HakkimizdaPage from "../../hakkimizda/page";
 
 export const metadata: Metadata = {
-  title: "About Equsto",
+  title: "About Equsto · Equsto",
   description:
     "Equsto: Turkey-based industrial kitchen and gastronomy platform. Project Factory, catalogue and Bar Design Studio.",
   alternates: {
@@ -13,10 +11,4 @@ export const metadata: Metadata = {
   },
 };
 
-export default function EnAboutPage() {
-  return (
-    <VitrinShell bodyClass="eq-shop eq-hakkimizda" extraCss={HAKKIMIZDA_PAGE_CSS}>
-      <HakkimizdaContent lang="en" />
-    </VitrinShell>
-  );
-}
+export default HakkimizdaPage;

@@ -180,6 +180,22 @@
     for (var i = 0; i < list.length; i++) applyOne(list[i]);
     // root'un kendisi de hedef olabilir
     if (root.matches && root.matches(sel)) applyOne(root);
+    rewriteInternalLinks(root);
+  }
+
+  /** EN sayfalarında iç linkleri /en/… canonical yollarına çevir */
+  function rewriteInternalLinks(root) {
+    if ((window.eqLang || DEFAULT) !== "en") return;
+    root = root || document;
+    var links = root.querySelectorAll('a[href^="/"]');
+    for (var i = 0; i < links.length; i++) {
+      var a = links[i];
+      if (a.hasAttribute("data-i18n-skip")) continue;
+      var h = a.getAttribute("href");
+      if (!h || h.indexOf("/en/") === 0 || h === "/en") continue;
+      if (/^\/(api|data|images|_next)\//.test(h)) continue;
+      a.setAttribute("href", urlFor(h, "en"));
+    }
   }
 
   /* ---------- hreflang ---------- */

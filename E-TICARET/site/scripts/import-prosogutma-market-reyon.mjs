@@ -1,8 +1,8 @@
 /**
- * veri/prosogutma → market-reyon kataloğu (Proso Profesyonel Soğutma)
+ * veri/prosogutma → market-reyon (EQ varyantları, Çağlayan ile aynı mantık)
  *
+ *   node scripts/prosogutma-cek.mjs
  *   node scripts/import-prosogutma-market-reyon.mjs
- *   node scripts/import-prosogutma-market-reyon.mjs --dry-run
  */
 import fs from "node:fs";
 import fsp from "node:fs/promises";
@@ -10,10 +10,20 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
+import {
+  eqBrandName,
+  eqSku,
+  extractProsoVariants,
+  sortVariantsByOlculer,
+  variantDisplayName,
+  variantModelNo,
+  variantSlugId,
+} from "./lib/proso-variants.mjs";
 
 const execFileAsync = promisify(execFile);
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SRC = path.resolve(ROOT, "../veri/prosogutma/products-tr.json");
+const SRC_PAGES = path.resolve(ROOT, "../veri/prosogutma/urun-sayfalari");
 const SRC_MEDIA = path.resolve(ROOT, "../veri/prosogutma/media/products");
 const OUT_DEPT = path.join(ROOT, "public/data/dept/market-reyon.json");
 const OUT_NAV = path.join(ROOT, "public/data/prosogutma-market-reyon-catalogue.json");
@@ -75,56 +85,84 @@ function detectTip(product) {
       }
     }
   }
-  const cat = product.categories?.[0];
-  if (cat?.url) {
-    const slug = cat.url.split("/").filter(Boolean).pop() || "";
-    const map = {
-      sutlukler: "proso-sutluk",
-      "kisa-sutlukler": "proso-kisa-sutluk",
-      "sarkuteri-reyonlari": "proso-sarkuteri",
-      "dikey-dondurucular": "proso-dikey-dondurucu",
-      "ada-tipi-dondurucular": "proso-ada-tipi",
-      "plug-in-kabinler": "proso-plugin",
-      butik: "proso-butik",
-      "soguk-hava-depolari": "proso-soguk-hava",
-      "sogutma-sistemleri": "proso-sogutma-sistemleri",
-      "sise-sogutucular": "proso-sise-sogutucu",
-    };
-    if (map[slug]) return map[slug];
+  const slug = product.slug || "";
+  const map = {
+    lion: "proso-sutluk",
+    rhino: "proso-sutluk",
+    falcon: "proso-kisa-sutluk",
+    tiger: "proso-sarkuteri",
+    cobra: "proso-sarkuteri",
+    scorpion: "proso-dikey-dondurucu",
+    phoenix: "proso-ada-tipi",
+    butterfly: "proso-butik",
+    "soguk-hava": "proso-soguk-hava",
+    split: "proso-sogutma-sistemleri",
+  };
+  for (const [k, tip] of Object.entries(map)) {
+    if (slug.includes(k)) return tip;
   }
   return "proso-diger";
 }
 
-function formatSpecs(product) {
+function formatSpecs(product, variants = []) {
   const lines = [];
   for (const attr of product.attributes || []) {
     lines.push(`${attr.label}: ${attr.value}`);
   }
-  if (lines.length) lines.push("");
+  if (variants.length) {
+    lines.push("", "Ölçü varyantları:");
+    for (const v of variants.slice(0, 24)) {
+      const dim =
+        v.derinlik_mm > 0 && v.yukseklik_mm > 0
+          ? `${v.genislik_mm}×${v.derinlik_mm}×${v.yukseklik_mm} mm`
+          : v.yukseklik_mm > 0
+            ? `${v.genislik_mm}×${v.yukseklik_mm} mm`
+            : `${v.genislik_mm} mm`;
+      lines.push(`• ${v.modelKod || ""} — ${dim}`.trim());
+    }
+    if (variants.length > 24) lines.push(`… +${variants.length - 24} varyant`);
+  }
   for (const tab of product.tabs || []) {
     if (!tab.name) continue;
-    lines.push(`--- ${tab.name} ---`);
-    if (tab.links?.length) {
-      for (const l of tab.links) {
-        if (l.href && l.text) lines.push(`${l.text}: ${l.href}`);
-        else if (l.href) lines.push(l.href);
-      }
-    } else if (tab.html) {
-      const text = tab.html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
-      if (text && text.length < 500) lines.push(text);
+    lines.push("", `--- ${tab.name} ---`);
+    for (const l of tab.links || []) {
+      if (l.href) lines.push(l.text ? `${l.text}: ${l.href}` : l.href);
     }
-    lines.push("");
   }
-  lines.push("Kaynak: prosogutma.com");
+  lines.push("", "Kaynak: prosogutma.com");
   return lines.join("\n").trim();
 }
 
 function teknikOzellikler(product) {
-  const out = [];
-  for (const attr of product.attributes || []) {
-    out.push(`${attr.label}: ${attr.value}`);
+  return (product.attributes || []).map((a) => `${a.label}: ${a.value}`);
+}
+
+function loadProducts() {
+  if (fs.existsSync(SRC)) {
+    return JSON.parse(fs.readFileSync(SRC, "utf8"));
   }
-  return out;
+  if (!fs.existsSync(SRC_PAGES)) return [];
+  return fs
+    .readdirSync(SRC_PAGES)
+    .filter((f) => f.endsWith(".json"))
+    .map((f) => JSON.parse(fs.readFileSync(path.join(SRC_PAGES, f), "utf8")));
+}
+
+function toUrunRecord(product) {
+  return {
+    slug: product.slug,
+    baslik: product.baslik || product.title || product.slug,
+    ozellikler: (product.attributes || []).map((a) => ({
+      baslik: a.label,
+      aciklama: a.value,
+    })),
+    teknik: {
+      tablolar: product.teknik?.tablolar || [],
+      pdfText: product.pdfText || product.teknik?.pdfText || "",
+    },
+    pdfText: product.pdfText || product.teknik?.pdfText || "",
+    linkKaynak: product.url || "",
+  };
 }
 
 async function downloadUrl(url, dest) {
@@ -134,7 +172,7 @@ async function downloadUrl(url, dest) {
     await fsp.access(dest);
     return true;
   } catch {
-    /* indir */
+    /* */
   }
   try {
     const { stdout } = await execFileAsync(
@@ -156,12 +194,13 @@ function copyLocalMediaDir(slug) {
   if (!fs.existsSync(srcDir)) return 0;
   if (!dryRun) fs.mkdirSync(destDir, { recursive: true });
   let n = 0;
-  for (const sub of ["images", "svgs", "pdfs", "videos"]) {
-    const sd = path.join(srcDir, sub);
+  for (const sub of ["images", "svgs", "pdfs", "videos", ""]) {
+    const sd = sub ? path.join(srcDir, sub) : srcDir;
     if (!fs.existsSync(sd)) continue;
     for (const f of fs.readdirSync(sd)) {
       if (!IMG_EXT.test(f)) continue;
       const from = path.join(sd, f);
+      if (!fs.statSync(from).isFile()) continue;
       const to = path.join(destDir, f);
       if (!dryRun) fs.copyFileSync(from, to);
       n++;
@@ -174,90 +213,142 @@ async function collectImages(product) {
   const slug = product.slug;
   const relPaths = [];
   const seen = new Set();
-
-  function addRel(filename) {
+  const addRel = (filename) => {
     const rel = `prosogutma-market/${slug}/${filename}`;
     if (seen.has(rel)) return;
     seen.add(rel);
     relPaths.push(rel);
-  }
+  };
 
   copyLocalMediaDir(slug);
-
   const destDir = path.join(OUT_IMG, slug);
+
   const gallery = product.gallery?.[0];
   if (gallery?.src) {
     const base = path.basename(new URL(gallery.src).pathname);
     const dest = path.join(destDir, base);
-    const ok = await downloadUrl(gallery.src, dest);
-    if (ok) addRel(base);
-    else if (/^https?:\/\//i.test(gallery.src)) {
-      try {
-        await fsp.access(dest);
-        addRel(base);
-      } catch {
-        relPaths.push(gallery.src);
-      }
-    }
+    if ((await downloadUrl(gallery.src, dest)) || fs.existsSync(dest)) addRel(base);
   }
 
   for (const tab of product.tabs || []) {
     for (const img of tab.images || []) {
-      if (!img.src || !img.src.includes("/wp-content/uploads/")) continue;
+      if (!img.src?.includes("/wp-content/uploads/")) continue;
       const base = path.basename(new URL(img.src).pathname);
       if (!IMG_EXT.test(base)) continue;
       const dest = path.join(destDir, base);
-      const ok = await downloadUrl(img.src, dest);
-      if (ok) addRel(base);
+      if (await downloadUrl(img.src, dest)) addRel(base);
     }
     for (const link of tab.links || []) {
       if (!link.href?.includes("/wp-content/uploads/")) continue;
       const base = path.basename(new URL(link.href).pathname);
       if (!IMG_EXT.test(base)) continue;
       const dest = path.join(destDir, base);
-      await downloadUrl(link.href, dest);
-      if (!seen.has(`prosogutma-market/${slug}/${base}`)) addRel(base);
+      if (await downloadUrl(link.href, dest)) addRel(base);
     }
+  }
+
+  const pdfUrl = product.teknik?.pdfUrl;
+  if (pdfUrl) {
+    const base = path.basename(new URL(pdfUrl).pathname);
+    const dest = path.join(destDir, base);
+    if (await downloadUrl(pdfUrl, dest)) addRel(base);
   }
 
   return relPaths;
 }
 
-function buildRow(product) {
+function buildRows(product, gallery) {
   const tip = detectTip(product);
-  const name = product.title || product.slug;
-  return {
-    id: `proso__${product.slug}`,
-    slug: product.slug,
+  const name = product.title || product.baslik || product.slug;
+  const series = name.split(/\s+/)[0]?.toUpperCase() || name;
+  const urun = toUrunRecord(product);
+  const variants = extractProsoVariants(urun);
+
+  const common = {
     dept: "market-reyon",
     brand: BRAND,
-    name,
     category: tip,
-    series: name.split(/\s+/)[0]?.toUpperCase() || name,
+    series,
     tileId: tip,
     price: "Teklif için iletişim",
     fiyat_bekleniyor: true,
-    specs: formatSpecs(product),
-    teknik_ozellikler: teknikOzellikler(product),
-    sku: `PROSO-${product.slug}`.toUpperCase().slice(0, 48),
-    model: name,
     kaynak: "prosogutma",
     linkKaynak: product.url || "",
-    equstoPage: `/shop/market-reyonlari/${product.slug}`,
+    prosoModelSlug: product.slug,
     prosoTabs: (product.tabs || []).map((t) => ({
       name: t.name,
       links: t.links || [],
     })),
+    prosoKatalogPdf: gallery.find((r) => /\.pdf$/i.test(r)) || undefined,
+    prosoKatalogUrl: product.teknik?.pdfUrl || undefined,
   };
+
+  const makeRow = (id, displayName, model, olculer, extra = {}) => ({
+    ...common,
+    id,
+    slug: id,
+    name: displayName,
+    model,
+    images: gallery.length ? gallery : undefined,
+    specs: formatSpecs(product, variants),
+    teknik_ozellikler: teknikOzellikler(product),
+    olculer,
+    sku: extra.sku || `EQ-PROSO-${id}`.toUpperCase().slice(0, 56),
+    equstoPage: `/shop/market-reyonlari/${id}`,
+    ...extra,
+  });
+
+  if (!variants.length) {
+    const brand = eqBrandName(name);
+    return [
+      makeRow(`proso__${product.slug}`, brand, `${brand} EQ1`, undefined, {
+        prosoEqModel: brand,
+        prosoEqNo: 1,
+        sku: eqSku(name, 1),
+        prosoModelSlug: undefined,
+      }),
+    ];
+  }
+
+  const brand = eqBrandName(name);
+  const sorted = sortVariantsByOlculer(variants);
+
+  return sorted.map((v, index) => {
+    const eqNo = index + 1;
+    const id = `proso__${variantSlugId(product.slug, v)}`;
+    const olculer = {
+      genislik_mm: v.genislik_mm || undefined,
+      derinlik_mm: v.derinlik_mm || undefined,
+      yukseklik_mm: v.yukseklik_mm || undefined,
+    };
+    if (!olculer.derinlik_mm) delete olculer.derinlik_mm;
+    if (!olculer.genislik_mm) delete olculer.genislik_mm;
+    if (!olculer.yukseklik_mm) delete olculer.yukseklik_mm;
+
+    return makeRow(
+      id,
+      variantDisplayName(name, v, eqNo),
+      variantModelNo(name, v, eqNo),
+      Object.keys(olculer).length ? olculer : undefined,
+      {
+        prosoModelKod: v.modelKod || undefined,
+        prosoEqModel: brand,
+        prosoEqNo: eqNo,
+        prosoModelSlug: product.slug,
+        sku: eqSku(name, eqNo),
+      }
+    );
+  });
 }
 
 async function main() {
-  if (!fs.existsSync(SRC)) {
-    console.error("Kaynak yok:", SRC);
+  const products = loadProducts().filter((p) => p.slug && !p.error);
+  if (!products.length) {
+    console.error("Kaynak yok. Önce: node scripts/prosogutma-cek.mjs");
+    console.error("  ", SRC);
     process.exit(1);
   }
 
-  const products = JSON.parse(fs.readFileSync(SRC, "utf8"));
   let existing = [];
   if (fs.existsSync(OUT_DEPT)) {
     existing = JSON.parse(fs.readFileSync(OUT_DEPT, "utf8"));
@@ -266,16 +357,16 @@ async function main() {
 
   const rows = [];
   for (const p of products) {
-    if (!p.slug || p.error) continue;
-    const row = buildRow(p);
-    row.images = await collectImages(p);
-    if (!row.images?.length) delete row.images;
-    rows.push(row);
+    const gallery = await collectImages(p);
+    rows.push(...buildRows(p, gallery));
   }
 
-  rows.sort((a, b) => a.name.localeCompare(b.name, "tr"));
-  const merged = [...existing, ...rows];
+  rows.sort((a, b) =>
+    String(a.prosoModelSlug || a.id).localeCompare(String(b.prosoModelSlug || b.id), "tr") ||
+    (Number(a.prosoEqNo) || 0) - (Number(b.prosoEqNo) || 0)
+  );
 
+  const merged = [...existing, ...rows];
   const navSubs = [
     { label: "Tüm Proso kataloğu", tip: "proso-tumu", href: "/shop/market-reyonlari?tip=proso-tumu" },
     ...NAV_PROSO.map(([tip, label]) => ({
@@ -297,6 +388,7 @@ async function main() {
           brand: BRAND,
           subs: navSubs,
           productCount: rows.length,
+          parentProducts: products.length,
         },
         null,
         2
@@ -305,11 +397,16 @@ async function main() {
     );
   }
 
+  const withOlcu = rows.filter((r) => r.olculer).length;
   console.log(
     dryRun ? "[dry-run]" : "[ok]",
-    "Proso:",
+    "Proso satır:",
     rows.length,
-    "| mevcut (diğer marka):",
+    "| ölçülü:",
+    withOlcu,
+    "| ürün:",
+    products.length,
+    "| diğer marka:",
     existing.length,
     "| toplam:",
     merged.length

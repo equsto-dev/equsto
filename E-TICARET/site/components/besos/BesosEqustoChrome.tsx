@@ -8,13 +8,13 @@ function cycleTheme() {
   fn?.();
 }
 
-const DEPT_NAV: { key: string; label: string }[] = [
-  { key: "pisirme", label: "Pişirme Ekipmanları" },
-  { key: "sogutma", label: "Soğutma Ekipmanları" },
-  { key: "kahve", label: "Kahve Ekipmanları" },
-  { key: "yikama", label: "Yıkama Ekipmanları" },
-  { key: "hazirlik", label: "Hazırlık Ekipmanları" },
-  { key: "icecek", label: "İçecek Ekipmanları" },
+const DEPT_NAV: { key: string; labelKey: string; fallback: string }[] = [
+  { key: "pisirme", labelKey: "nav.pisirme", fallback: "Pişirme Ekipmanları" },
+  { key: "sogutma", labelKey: "nav.sogutma", fallback: "Soğutma Ekipmanları" },
+  { key: "kahve", labelKey: "nav.kahve", fallback: "Kahve Ekipmanları" },
+  { key: "yikama", labelKey: "nav.yikama", fallback: "Yıkama Ekipmanları" },
+  { key: "hazirlik", labelKey: "nav.hazirlik", fallback: "Hazırlık Ekipmanları" },
+  { key: "icecek", labelKey: "nav.icecek", fallback: "İçecek Ekipmanları" },
 ];
 
 export default function BesosEqustoChrome() {
@@ -26,8 +26,12 @@ export default function BesosEqustoChrome() {
         <a className="logo" href="/" aria-label="Equsto" />
         <div className="pg-inner hdr-pg-inner">
           <div className="hdr-alici">
-            <div className="st-label">Teslimat Adresi</div>
-            <div className="st-val">İstanbul, Türkiye</div>
+            <div className="st-label" data-i18n="common.delivery_to">
+              Teslimat Adresi
+            </div>
+            <div className="st-val" data-i18n="common.delivery_city">
+              İstanbul, Türkiye
+            </div>
           </div>
           <div className="srch">
             <div
@@ -41,6 +45,7 @@ export default function BesosEqustoChrome() {
                   toggleEqDrawer();
                 }
               }}
+              data-i18n="common.all_categories_caps"
             >
               ☰ Tüm Kategoriler
             </div>
@@ -48,12 +53,12 @@ export default function BesosEqustoChrome() {
               ref={searchRef}
               className="srch-input"
               type="search"
-              placeholder="Ürün, marka veya kategori ara..."
+              placeholder="Bar modülü, ürün veya kategori ara..."
               autoComplete="off"
               spellCheck={false}
+              data-i18n-attr="placeholder:besos.search_placeholder"
               onInput={(e) => {
-                const fn = (window as Window & { filterStations?: (q: string) => void })
-                  .filterStations;
+                const fn = (window as Window & { filterStations?: (q: string) => void }).filterStations;
                 fn?.(e.currentTarget.value);
               }}
               onKeyDown={(e) => {
@@ -67,6 +72,7 @@ export default function BesosEqustoChrome() {
               className="srch-btn"
               aria-label="Ara"
               title="Ara"
+              data-i18n-attr="aria-label:common.search_aria, title:common.search_aria"
               onClick={() => submitBesosSearch(searchRef.current?.value ?? "")}
             >
               <svg
@@ -98,47 +104,41 @@ export default function BesosEqustoChrome() {
                 className="theme-toggle"
                 id="theme-toggle"
                 title="Tema"
+                data-i18n-attr="title:common.theme_title"
                 onClick={cycleTheme}
               >
                 ◝
               </button>
-              <span className="theme-legend">Sistem · Açık · Koyu</span>
+              <span className="theme-legend" data-i18n="common.theme_label">
+                Sistem · Açık · Koyu
+              </span>
             </div>
-            <a href="/login.html" className="eq-hdr-account" title="Üye girişi">
-              <span style={{ fontSize: 10, color: "var(--eq-text-muted)" }}>Hesabım</span>
-              <span
-                className="eq-hdr-account-title"
-                style={{ fontSize: 12, fontWeight: 600, color: "var(--eq-text)" }}
-              >
+            <a href="/login" className="eq-hdr-account" title="Üye girişi" data-i18n-attr="title:common.login_title">
+              <span data-i18n="common.my_account">Hesabım</span>
+              <span className="eq-hdr-account-title" data-i18n="common.account_projects">
                 Projeler ve Listeler ▾
               </span>
             </a>
-            <div data-eq-hdr-returns="1" style={{ display: "flex", flexDirection: "column", lineHeight: 1.4 }}>
-              <span style={{ fontSize: 10, color: "var(--eq-text-muted)" }}>İadeler</span>
-              <span style={{ fontSize: 12, fontWeight: 600, cursor: "pointer", color: "var(--eq-text)" }}>
-                ve Siparişler
-              </span>
+            <div data-eq-hdr-returns="1" className="eq-hdr-orders">
+              <span data-i18n="common.returns">İadeler</span>
+              <span data-i18n="common.and_orders">ve Siparişler</span>
             </div>
             <div
               id="equsto-hdr-cart"
               className="equsto-hdr-cart"
-              style={{ display: "flex", flexDirection: "column", lineHeight: 1.4, cursor: "pointer" }}
               title="Sepeti aç"
               role="button"
               tabIndex={0}
+              data-i18n-attr="title:common.cart_aria_title"
             >
-              <span id="equsto-cart-count" style={{ fontSize: 10, color: "var(--eq-text-muted)" }}>
-                🛒 0
-              </span>
-              <span style={{ fontSize: 12, fontWeight: 600, color: "var(--eq-text)" }}>
-                Alışveriş Sepeti
-              </span>
+              <span id="equsto-cart-count">🛒 0</span>
+              <span data-i18n="common.cart">Alışveriş Sepeti</span>
             </div>
           </div>
         </div>
       </header>
 
-      <nav className="topnav" aria-label="Departmanlar">
+      <nav className="topnav" aria-label="Departmanlar" data-i18n-attr="aria-label:nav.departments_aria">
         <div className="pg-inner topnav-inner">
           <div
             className="topnav-item"
@@ -151,6 +151,7 @@ export default function BesosEqustoChrome() {
                 toggleEqDrawer();
               }
             }}
+            data-i18n="common.all_categories_lower"
           >
             ☰ Tüm kategoriler
           </div>
@@ -163,6 +164,8 @@ export default function BesosEqustoChrome() {
             tabIndex={0}
             onClick={() => goEqDept("pfos")}
             aria-label="Proje Fabrikası"
+            data-i18n-attr="aria-label:nav.pfos"
+            data-i18n="nav.pfos"
           >
             <span className="topnav-pfos__in" aria-hidden="true">
               <span className="topnav-pfos__face topnav-pfos__face--plain">Proje Fabrikası</span>
@@ -172,7 +175,7 @@ export default function BesosEqustoChrome() {
           <span className="topnav-sep" aria-hidden="true">
             |
           </span>
-          {DEPT_NAV.map(({ key, label }) => (
+          {DEPT_NAV.map(({ key, labelKey, fallback }) => (
             <Fragment key={key}>
               <span className="topnav-sep" aria-hidden="true">
                 |
@@ -182,8 +185,9 @@ export default function BesosEqustoChrome() {
                 role="button"
                 tabIndex={0}
                 onClick={() => goEqDept(key)}
+                data-i18n={labelKey}
               >
-                {label}
+                {fallback}
               </div>
             </Fragment>
           ))}
@@ -197,10 +201,15 @@ export default function BesosEqustoChrome() {
             onClick={() => goEqDept("besos")}
             aria-label="Bar Design"
             aria-current="page"
+            data-i18n-attr="aria-label:nav.bar_design"
           >
             <span className="topnav-besos__in" aria-hidden="true">
-              <span className="topnav-besos__face topnav-besos__face--plain">Bar Design</span>
-              <span className="topnav-besos__face topnav-besos__face--dark">Dark Side</span>
+              <span className="topnav-besos__face topnav-besos__face--plain" data-i18n="nav.bar_design">
+                Bar Design
+              </span>
+              <span className="topnav-besos__face topnav-besos__face--dark" data-i18n="nav.bar_design_hover">
+                Dark Side
+              </span>
             </span>
           </div>
         </div>

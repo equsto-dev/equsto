@@ -128,9 +128,10 @@ window.searchFilter = window.searchFilter || function () {};
     function isCaglayanRefrigeration(x) {
       if (!x) return false;
       if (/^caglayan-/.test(String(x.category || ""))) return true;
+      if (/^proso-/.test(String(x.category || ""))) return true;
       return (
         isMarketReyonProduct(x) &&
-        String((x && x.kaynak) || "") === "caglayan-refrigeration"
+        /^(caglayan-refrigeration|prosogutma)$/.test(String((x && x.kaynak) || ""))
       );
     }
 
@@ -627,7 +628,13 @@ window.searchFilter = window.searchFilter || function () {};
     }
 
     function caglayanParentKey(p) {
-      return String((p && p.caglayanModelSlug) || (p && p.slug) || (p && p.id) || "")
+      return String(
+        (p && p.caglayanModelSlug) ||
+          (p && p.prosoModelSlug) ||
+          (p && p.slug) ||
+          (p && p.id) ||
+          ""
+      )
         .toLowerCase()
         .trim();
     }
@@ -645,8 +652,8 @@ window.searchFilter = window.searchFilter || function () {};
       var bPhoto = hasCaglayanProductPhoto(b);
       if (aPhoto && !bPhoto) return a;
       if (bPhoto && !aPhoto) return b;
-      var ae = Number(a.caglayanEqNo) || 999;
-      var be = Number(b.caglayanEqNo) || 999;
+      var ae = Number(a.caglayanEqNo || a.prosoEqNo) || 999;
+      var be = Number(b.caglayanEqNo || b.prosoEqNo) || 999;
       return ae <= be ? a : b;
     }
 
@@ -940,6 +947,7 @@ window.searchFilter = window.searchFilter || function () {};
 
     function caglayanOzelliklerList(x) {
       if (x.caglayanOzellikler && x.caglayanOzellikler.length) return x.caglayanOzellikler;
+      if (x.teknik_ozellikler && x.teknik_ozellikler.length) return x.teknik_ozellikler;
       var lines = String(x.specs || "").split(/\r?\n/);
       var out = [];
       for (var i = 0; i < lines.length; i++) {
@@ -1259,7 +1267,9 @@ window.searchFilter = window.searchFilter || function () {};
 
     function caglayanPdfHref(x) {
       if (x.caglayanKatalogPdf) return resolveProductImgSrc(x.caglayanKatalogPdf);
+      if (x.prosoKatalogPdf) return resolveProductImgSrc(x.prosoKatalogPdf);
       if (x.caglayanKatalogUrl) return x.caglayanKatalogUrl;
+      if (x.prosoKatalogUrl) return x.prosoKatalogUrl;
       return "";
     }
 

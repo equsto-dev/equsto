@@ -887,12 +887,12 @@
     ],
     "faq": [
       [
-        "Why is it not in the top menu?",
-        "The shop menu is equipment-focused; guides are listed via the footer, sitemap and llms.txt."
+        "Why not in the top menu?",
+        "The shop menu is equipment-first; guides are indexed via footer, sitemap and llms.txt."
       ],
       [
-        "Which page for steakhouse or cloud kitchen?",
-        "Open the matching concept guide below; get a quote summary in PFOS in about five minutes."
+        "Steakhouse or cloud kitchen?",
+        "Use the concept setup section and open the matching English link."
       ]
     ],
     "related": [

@@ -648,60 +648,10 @@
     return p;
   }
 
-  var TR_GEO_TO_EN_KEY = {
-    blog: "en/blog",
-    projeler: "en/projects",
-    "steakhouse-kurulumu": "en/steakhouse-kitchen-setup",
-    "bulut-mutfak-kurulumu": "en/cloud-kitchen-setup",
-    "cafe-kurulumu": "en/cafe-setup",
-    "catering-mutfagi": "en/catering-kitchen",
-    "fine-dining-kurulumu": "en/fine-dining-kitchen-setup",
-    "all-day-dining-kurulumu": "en/all-day-dining-kitchen-setup",
-    "fast-food-kurulumu": "en/fast-food-kitchen-setup",
-    "market-kasap-sarkuteri-kurulumu": "en/market-butcher-deli-setup",
-    "endustriyel-mutfak-ekipmani-turkiye": "en/industrial-kitchen-equipment-turkey",
-    "restoran-mutfak-teklif": "en/restaurant-kitchen-quote",
-    "otel-mutfak-ekipman-tedarik": "en/hotel-kitchen-equipment",
-    "oztiryakiler-ekipmani-tedarik": "en/oztiryakiler-equipment-supply",
-    "soguk-oda-teklif": "en/cold-room-quote",
-    "havuzlu-dolap-tedarik": "en/deli-counter-refrigeration",
-    "endustriyel-pisirme-ekipmanlari": "en/industrial-cooking-equipment",
-    "mutfak-teklif-platformu": "en/kitchen-quote-platform",
-    "bar-tasarimi-turkiye": "en/bar-design-turkey",
-  };
-
   function pathKey() {
     var p = String(location.pathname || "/").replace(/\/+$/, "") || "/";
     if (p.charAt(0) === "/") p = p.slice(1);
     return p;
-  }
-
-  function resolveGeoDataKey(rawKey) {
-    if (!rawKey) return rawKey;
-    if (rawKey.indexOf("en/") === 0) return rawKey;
-    if (TR_GEO_TO_EN_KEY[rawKey]) return TR_GEO_TO_EN_KEY[rawKey];
-    if (rawKey.indexOf("rehber/") === 0) return "en/guides/" + rawKey.slice(7);
-    if (rawKey.indexOf("projeler/") === 0) return "en/projects/" + rawKey.slice(9);
-    try {
-      if (window.eqLang === "en" && TR_GEO_TO_EN_KEY[rawKey]) return TR_GEO_TO_EN_KEY[rawKey];
-    } catch (_) {}
-    return rawKey;
-  }
-
-  function redirectGeoToEnIfNeeded(rawKey) {
-    if (rawKey.indexOf("en/") === 0) return false;
-    var destKey = resolveGeoDataKey(rawKey);
-    if (destKey === rawKey) return false;
-    try {
-      if (localStorage.getItem("eq-lang") !== "en") return false;
-    } catch (_) {
-      return false;
-    }
-    var destPath = "/" + destKey;
-    var cur = (location.pathname || "/").replace(/\/+$/, "") || "/";
-    if (cur === destPath) return false;
-    location.replace(destPath + location.search + location.hash);
-    return true;
   }
 
   function canonicalUrl(key) {
@@ -950,9 +900,7 @@
   }
 
   function boot() {
-    var rawKey = pathKey();
-    if (redirectGeoToEnIfNeeded(rawKey)) return;
-    var key = resolveGeoDataKey(rawKey);
+    var key = pathKey();
     var isEn = key.indexOf("en/") === 0;
     var miss = uiStrings(isEn ? "en" : "tr");
     ensureVitrinChrome()
@@ -961,7 +909,7 @@
         return loadGeoLandings();
       })
       .then(function (data) {
-        var page = data[key] || data[rawKey];
+        var page = data[key];
         if (!page) {
           page = {
             lang: isEn ? "en" : "tr",

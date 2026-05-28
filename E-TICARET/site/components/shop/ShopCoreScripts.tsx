@@ -23,7 +23,16 @@ export default function ShopCoreScripts() {
         onReady={() => (window as Window & { EqustoCart?: { syncBadge?: () => void } }).EqustoCart?.syncBadge?.()}
       />
       <Script src={`/eq-footer.js?v=${v}`} strategy="afterInteractive" />
-      <Script src={`/contact.js?v=${v}`} strategy="lazyOnload" />
+      <Script
+        src={`/contact.js?v=${v}`}
+        strategy="afterInteractive"
+        onReady={() => {
+          try {
+            window.equstoSyncContactFab?.();
+            window.eqSyncMobileChrome?.();
+          } catch (_) {}
+        }}
+      />
     </>
   );
 }

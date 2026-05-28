@@ -25,6 +25,11 @@ export default function ShopBodyClass({
     mountFooter();
     const t = window.setTimeout(mountFooter, 400);
 
+    try {
+      window.equstoSyncContactFab?.();
+      window.eqSyncMobileChrome?.();
+    } catch (_) {}
+
     return () => {
       window.clearTimeout(t);
       document.body.className = prevClass;
@@ -39,5 +44,7 @@ export default function ShopBodyClass({
 declare global {
   interface Window {
     __eqMountMarketFooter?: () => void;
+    equstoSyncContactFab?: () => void;
+    eqSyncMobileChrome?: () => void;
   }
 }

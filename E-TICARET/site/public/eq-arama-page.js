@@ -5,7 +5,7 @@
   "use strict";
 
   var LIMIT = 48;
-  var CATALOG_V = "20260522kahve-acc-v1";
+  var CATALOG_V = "20260527robot-coupe-haz";
   var lastRender = { hits: [], q: "", total: 0, err: null };
   var catalogImgById = null;
   var catalogImgInflight = null;
