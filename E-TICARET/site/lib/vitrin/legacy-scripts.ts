@@ -43,7 +43,23 @@ export const BAR_MODULE_SCRIPTS = [`/eq-bar-module.js?v=${v}`];
 
 export const BAR_DESIGN_SCRIPTS = [`/eq-bar-design.js?v=${v}`, `/eq-analytics.js`];
 
-export const ADMIN_SCRIPTS = [`/admin-app.js?v=${v}`];
+/** Eski admin.html script sırası — admin-gate.js login overlay'i açar */
+export const ADMIN_SCRIPTS = [
+  `/equsto-logo.js?v=${v}`,
+  `/admin-eticaret-kategori.js?v=${v}`,
+  `/admin-eticaret-kategori-overrides.js?v=${v}`,
+  `/eq-dept-tips.js?v=${v}`,
+  `/admin-config.js`,
+  `/admin-gate.js`,
+  `/equsto-member.js?v=${v}`,
+  `/contact.js?v=${v}`,
+  `/ecom-data.js`,
+  `/equsto-adres-national.js`,
+  `/admin-vitrin.js`,
+  `/admin-eticaret-kategori-ui.js?v=${v}`,
+  `/admin-eticaret.js?v=${v}`,
+  `/admin-eticaret-api.js?v=${v}`,
+];
 
 export const PRODUCT_SCRIPTS = [
   `/eq-display-terminology.js?v=${v}`,
