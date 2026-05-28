@@ -10,9 +10,12 @@ import { fileURLToPath } from "node:url";
 import { buildCaglayanGalleryLocal } from "./lib/caglayan-gallery.mjs";
 import {
   buildVariantImages,
+  eqBrandName,
+  eqSku,
   extractCaglayanVariants,
   extractDepthList,
   resolveVariantTeknik,
+  sortVariantsByOlculer,
   variantDisplayName,
   variantModelNo,
   variantSlugId,
@@ -160,29 +163,39 @@ function buildRows(urun) {
   const depths = extractDepthList(urun);
   delete common._gallery;
 
-  const makeRow = (id, name, model, images, olculer, extra = {}) => ({
-    ...common,
-    id,
-    slug: id,
-    name,
-    model,
-    images: images?.length ? images : undefined,
-    olculer,
-    sku: `CAG-${id}`.toUpperCase().slice(0, 56),
-    equstoPage: `/shop/market-reyonlari/${id}`,
-    ...extra,
-  });
+  const makeRow = (id, name, model, images, olculer, extra = {}) => {
+    const { sku: skuOverride, ...rest } = extra;
+    return {
+      ...common,
+      id,
+      slug: id,
+      name,
+      model,
+      images: images?.length ? images : undefined,
+      olculer,
+      sku: skuOverride || `CAG-${id}`.toUpperCase().slice(0, 56),
+      equstoPage: `/shop/market-reyonlari/${id}`,
+      ...rest,
+    };
+  };
 
   if (!variants.length) {
-    const name = urun.baslik || urun.slug;
+    const brand = eqBrandName(urun.baslik || urun.slug);
     return [
-      makeRow(urun.slug, name, name, gallery, undefined, {
+      makeRow(urun.slug, brand, `${brand} EQ1`, gallery, undefined, {
         caglayanModelSlug: undefined,
+        caglayanEqModel: brand,
+        caglayanEqNo: 1,
+        sku: eqSku(urun.baslik || urun.slug, 1),
       }),
     ];
   }
 
-  return variants.map((v) => {
+  const brand = eqBrandName(urun.baslik);
+  const sorted = sortVariantsByOlculer(variants);
+
+  return sorted.map((v, index) => {
+    const eqNo = index + 1;
     const id = variantSlugId(urun.slug, v);
     const images = buildVariantImages(urun, gallery, v, depths);
     const teknik = resolveVariantTeknik(gallery, v, depths);
@@ -192,12 +205,17 @@ function buildRows(urun) {
       yukseklik_mm: v.yukseklik_mm,
     };
     if (!olculer.derinlik_mm) delete olculer.derinlik_mm;
-    const extra = { caglayanModelKod: v.modelKod || undefined };
+    const extra = {
+      caglayanModelKod: v.modelKod || undefined,
+      caglayanEqModel: brand,
+      caglayanEqNo: eqNo,
+      sku: eqSku(urun.baslik, eqNo),
+    };
     if (teknik.kesit || teknik.modelCizim) extra.caglayanTeknik = teknik;
     return makeRow(
       id,
-      variantDisplayName(urun.baslik, v),
-      variantModelNo(urun.baslik, v),
+      variantDisplayName(urun.baslik, v, eqNo),
+      variantModelNo(urun.baslik, v, eqNo),
       images,
       olculer,
       extra
