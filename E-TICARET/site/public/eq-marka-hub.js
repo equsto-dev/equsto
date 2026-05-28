@@ -1,12 +1,12 @@
 /**
  * Markalarımız hub — iş ortağı kartları (/shop/marka)
  * Logo → Equsto marka ürünleri; alt band → resmi web sitesi
- * @version 20260531marka6
+ * @version 20260531marka7
  */
 (function () {
   "use strict";
 
-  var BRANDS_JSON = "/data/markalarimiz-brands.json?v=20260531marka6";
+  var BRANDS_JSON = "/data/markalarimiz-brands.json?v=20260531marka7";
   var EXT_ICON =
     '<svg class="eq-partner-card__ext" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">' +
     '<path d="M14 3h7v7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>' +
