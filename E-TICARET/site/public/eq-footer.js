@@ -1,11 +1,12 @@
 /**
  * Equsto — Amazon tarzı vitrin alt bilgisi (body.eq-shop; admin ve Bar Design hariç, PFOS dahil).
  * Veri: /data/footer-vitrin.json — href her zaman dolu (eski site / sitemap).
+ * @version help-col-sss 20260529
  */
 (function () {
   "use strict";
 
-  var FOOTER_JSON = "/data/footer-vitrin.json?v=20260528foot-brand8";
+  var FOOTER_JSON = "/data/footer-vitrin.json?v=20260529helpcolsss";
   var footerData = null;
   var footerLoadPromise = null;
 
@@ -83,7 +84,7 @@
 
   function faqItemsHtml(faq) {
     if (!faq || !faq.items || !faq.items.length) return "";
-    var faqTitle = t(faq.titleKey || "footer.faq_sss_title", faq.title || "SSS");
+    var faqTitle = t("footer.faq_sss_title", "SSS");
     var items = faq.items
       .map(function (it) {
         var q = t(it.qKey || "", it.q || "");
@@ -358,6 +359,7 @@
   function render(host, data) {
     host.className = "footer eq-mfoot";
     host.setAttribute("data-eq-mfoot", "1");
+    host.setAttribute("data-eq-mfoot-layout", "help-col-sss");
     host.innerHTML = buildHtml(data);
     wire(host);
   }
