@@ -5,7 +5,7 @@
   'use strict';
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260528davlumbaz-img4';
+  var CATALOG_V = '20260530marka-facet1';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   var deptCoverImg = '';
 
@@ -674,9 +674,44 @@
     }
   }
 
+  function resolveMarkaFacetLabel(raw) {
+    var label = String(raw || '').trim();
+    if (!label) return '';
+    try {
+      if (typeof window.eqBrandFacetLabel === 'function') {
+        var fromSlug = window.eqBrandFacetLabel(label);
+        if (fromSlug) label = fromSlug;
+      }
+    } catch (_) {}
+    if (!state.all || !state.all.length) return label;
+    var want = label.toLocaleLowerCase('tr');
+    var keys = {};
+    state.all.forEach(function (u) {
+      var k = brandKey(u);
+      if (k) keys[k] = true;
+    });
+    if (keys[label]) return label;
+    var hit = Object.keys(keys).filter(function (k) {
+      return k.toLocaleLowerCase('tr') === want || k.toLocaleLowerCase('tr').indexOf(want) === 0;
+    });
+    if (hit.length === 1) return hit[0];
+    if (hit.length > 1) {
+      hit.sort(function (a, b) {
+        return a.length - b.length;
+      });
+      return hit[0];
+    }
+    return label;
+  }
+
   function applyUrlState() {
     try {
       var sp = new URLSearchParams(location.search);
+      var markaRaw = sp.get('marka') || sp.get('brand');
+      if (markaRaw) {
+        var facet = resolveMarkaFacetLabel(decodeURIComponent(markaRaw));
+        if (facet) state.brands = [facet];
+      }
       var tip = normalizeUrlTip(sp.get('tip'));
       if (tip && findTile(tip)) state.activeTiles = [tip];
       var q = sp.get('q');
