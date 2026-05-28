@@ -52,7 +52,7 @@ export default function ShopCartMain() {
       </main>
       <footer className="footer">
         <div className="refs">
-          <span data-i18n="footer.tagline">Equsto Teknolojisi · Gastronomi Tasarımı · Satış Mühendisliği</span>
+          <span data-i18n="footer.tagline">Equsto Teknolojisi · Gastronomi Tasarımı</span>
         </div>
         <div>© Equsto</div>
       </footer>

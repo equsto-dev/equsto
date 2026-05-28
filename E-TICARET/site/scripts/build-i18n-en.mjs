@@ -439,7 +439,7 @@ const EN = {
 
   footer: {
     company_display: "E Q U S T O   T E C H N O L O G Y   L I M I T E D",
-    tagline: "Equsto Technology · Gastronomy Design · Sales Engineering",
+    tagline: "Equsto Technology · Gastronomy Design",
     all_rights: "All rights reserved.",
     cookie_policy: "Cookie policy",
     privacy: "Privacy",

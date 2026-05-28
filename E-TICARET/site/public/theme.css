@@ -4485,19 +4485,19 @@ body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col a:hover {
   text-decoration: underline;
 }
 body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-brand {
-  margin-bottom: 18px;
-  padding-top: 12px;
+  margin-bottom: 11px;
+  padding-top: 7px;
   border-top: 1px solid rgba(255, 255, 255, 0.14);
   text-align: center;
 }
 body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-company {
-  margin: 0 auto 10px;
+  margin: 0 auto 6px;
   max-width: 100%;
   text-align: center;
   font-size: clamp(9px, 1.65vw, 12px);
   font-weight: 400 !important;
   font-style: normal;
-  line-height: 1.5;
+  line-height: 1.25;
   color: rgba(255, 255, 255, 0.88);
   letter-spacing: 0;
   white-space: nowrap;
@@ -4507,7 +4507,8 @@ body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-company {
 body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-tagline {
   margin: 0;
   text-align: center;
-  font-size: 12px;
+  font-size: 11px;
+  line-height: 1.25;
   color: rgba(255, 255, 255, 0.72);
   letter-spacing: 0.02em;
 }
