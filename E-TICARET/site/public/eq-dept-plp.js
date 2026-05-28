@@ -5,7 +5,7 @@
   'use strict';
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260528dept-only-v1';
+  var CATALOG_V = '20260528cafemarkt-kuvet1';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   var deptCoverImg = '';
 
@@ -719,7 +719,7 @@
     render();
   }
 
-  var MARKET_REYON_JSON_V = '20260527caglayan-gallery11';
+  var MARKET_REYON_JSON_V = '20260528caglayan-variants1';
 
   function fetchMarketReyonDeptJson() {
     return fetch('/data/dept/market-reyon.json?v=' + MARKET_REYON_JSON_V, {

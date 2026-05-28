@@ -8,6 +8,13 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { buildCaglayanGalleryLocal } from "./lib/caglayan-gallery.mjs";
+import {
+  buildVariantImages,
+  extractCaglayanVariants,
+  variantDisplayName,
+  variantModelNo,
+  variantSlugId,
+} from "./lib/caglayan-variants.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SRC = path.resolve(
@@ -91,7 +98,19 @@ function formatSpecs(urun) {
 }
 
 function collectImages(urun) {
-  return buildCaglayanGalleryLocal(urun);
+  const built = buildCaglayanGalleryLocal(urun);
+  if (built.length) return built;
+  const destDir = path.join(OUT_IMG, urun.slug);
+  if (!fs.existsSync(destDir)) return [];
+  return fs
+    .readdirSync(destDir)
+    .filter((f) => IMG_EXT.test(f))
+    .sort((a, b) => {
+      const score = (fn) =>
+        (/kesit/i.test(fn) ? 2 : 0) + (/kapak/i.test(fn) ? 1 : 0) + (/model-\d/i.test(fn) ? 2 : 0);
+      return score(a) - score(b);
+    })
+    .map((f) => `caglayan-market/${urun.slug}/${f}`);
 }
 
 function copyImages(slug) {
@@ -110,32 +129,74 @@ function copyImages(slug) {
   return n;
 }
 
-function buildRow(urun) {
-  const { series, tileId, category } = detectSeries(urun.slug, urun.baslik);
-  const images = collectImages(urun);
+function baseFields(urun, { series, tileId, category }) {
   const imgCount = copyImages(urun.slug);
-  const name = urun.baslik || urun.slug;
+  const gallery = collectImages(urun);
   return {
-    id: urun.slug,
-    slug: urun.slug,
     dept: "market-reyon",
     brand: BRAND,
-    name,
     category,
     series,
     tileId: tileId || undefined,
     price: "Teklif için iletişim",
     fiyat_bekleniyor: true,
     specs: formatSpecs(urun),
-    images: images.length ? images : undefined,
-    sku: `CAG-${urun.slug}`.toUpperCase().slice(0, 48),
-    model: name,
     kaynak: "caglayan-refrigeration",
     linkKaynak: urun.linkKaynak || "",
     caglayanTip: urun.tip,
-    equstoPage: `/shop/market-reyonlari/${urun.slug}`,
+    caglayanModelSlug: urun.slug,
     _importImgCount: imgCount,
+    _gallery: gallery,
   };
+}
+
+function buildRows(urun) {
+  const { series, tileId, category } = detectSeries(urun.slug, urun.baslik);
+  const common = baseFields(urun, { series, tileId, category });
+  const gallery = common._gallery;
+  const variants = extractCaglayanVariants(urun);
+  delete common._gallery;
+
+  const makeRow = (id, name, model, images, olculer, extra = {}) => ({
+    ...common,
+    id,
+    slug: id,
+    name,
+    model,
+    images: images?.length ? images : undefined,
+    olculer,
+    sku: `CAG-${id}`.toUpperCase().slice(0, 56),
+    equstoPage: `/shop/market-reyonlari/${id}`,
+    ...extra,
+  });
+
+  if (!variants.length) {
+    const name = urun.baslik || urun.slug;
+    return [
+      makeRow(urun.slug, name, name, gallery, undefined, {
+        caglayanModelSlug: undefined,
+      }),
+    ];
+  }
+
+  return variants.map((v) => {
+    const id = variantSlugId(urun.slug, v);
+    const images = buildVariantImages(urun, gallery, v);
+    const olculer = {
+      genislik_mm: v.genislik_mm,
+      derinlik_mm: v.derinlik_mm || undefined,
+      yukseklik_mm: v.yukseklik_mm,
+    };
+    if (!olculer.derinlik_mm) delete olculer.derinlik_mm;
+    return makeRow(
+      id,
+      variantDisplayName(urun.baslik, v),
+      variantModelNo(urun.baslik, v),
+      images,
+      olculer,
+      { caglayanModelKod: v.modelKod || undefined }
+    );
+  });
 }
 
 function main() {
@@ -156,10 +217,13 @@ function main() {
       continue;
     }
     if (urun.tip !== "model" && urun.tip !== "urun") continue;
-    rows.push(buildRow(urun));
+    rows.push(...buildRows(urun));
   }
 
-  rows.sort((a, b) => a.name.localeCompare(b.name, "tr"));
+  rows.sort((a, b) =>
+    (a.caglayanModelSlug || a.id).localeCompare(b.caglayanModelSlug || b.id, "tr") ||
+    a.name.localeCompare(b.name, "tr")
+  );
 
   let existing = [];
   if (fs.existsSync(OUT_DEPT)) {
@@ -196,7 +260,7 @@ function main() {
   const imgs = rows.reduce((s, r) => s + (r._importImgCount || 0), 0);
   console.log(
     dryRun ? "[dry-run]" : "[ok]",
-    "ürün:",
+    "satır:",
     rows.length,
     "| birlesik:",
     merged.length,
