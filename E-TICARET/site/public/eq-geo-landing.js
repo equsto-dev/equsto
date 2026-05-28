@@ -6,7 +6,7 @@
 
   var ORIGIN = "https://equsto.com";
   var DATA_URL = "/api/geo";
-  var DATA_FALLBACK = "/data/geo-landings.json?v=20260603market600";
+  var DATA_FALLBACK = "/data/geo-landings.json?v=20260604geo600";
   var HEADER_PARTIAL = "/partials/eq-d-header.html?v=20260602indent";
 
   function ensureVitrinChrome() {
@@ -103,7 +103,9 @@
 
   var PROFILES = {
     steakhouse: {
-      budget: "2,5 - 4,5 milyon TL",
+      skipBudget: true,
+
+      budget: null,
       pfosKonu: "Steakhouse",
       body:
         "<p>Steakhouse mutfağında <strong>dry-age dolabı</strong>, yüksek ısı ızgara/kuzine hattı ve et hazırlık modülleri aynı akışta toplanır. Equsto <strong>Gastronomi Tasarımı</strong> davlumbaz statik basıncını ve soğutma hat uzunluğunu erken doğrular; <strong>Satış Mühendisliği</strong> sahada montaj ve devreye almayı planlar.</p>" +
@@ -130,7 +132,9 @@
       ],
     },
     cafe: {
-      budget: "600 bin - 1,8 milyon TL",
+      skipBudget: true,
+
+      budget: null,
       pfosKonu: "Cafe",
       body:
         "<p>Cafe kurulumunda <strong>espresso istasyonu</strong>, soğuk süt/stok dolapları ve hazırlık tezgahı aynı gün içinde yoğun kullanılır. Su filtrasyonu ve basınç doğrulaması makine seçiminden önce sabitlenmelidir.</p>" +
@@ -145,10 +149,12 @@
       ],
     },
     catering: {
-      budget: "1,5 - 4 milyon TL",
+      skipBudget: true,
+
+      budget: null,
       pfosKonu: "Catering",
       body:
-        "<p>Catering mutfağında <strong>yüksek hacim pişirme</strong>, taşıma ekipmanları ve konveyörlü yıkama aynı senaryoda modellenir. Banket çıkışlarında sıcak holding süresi menü mühendisliğini belirler.</p><p>Bütçe bandı: <strong>{budget}</strong>.</p>",
+        "<p>Catering mutfağında yüksek hacim pişirme, taşıma ekipmanları ve konveyörlü yıkama aynı senaryoda modellenir. Banket çıkışlarında sıcak holding süresi menü mühendisliğini belirler; soğuk zincir derinliği ürün portföyüne göre ayrılır.</p><p>Pik kişi sayısı ve öğün aralığı ocak, soğutma ve yıkama adetlerini doğrudan etkiler. Taşıma ve termobox kapasitesi sevkiyat planıyla birlikte okunmalıdır.</p><p>Aşağıdaki tablo vitrin örneklerini gösterir. Tam liste Proje Fabrikası’nda kişi ve öğün profiliyle üretilir; saha keşfi montaj takviminin ilk adımıdır. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür.</p>",
       faq: [
         ["500 kişilik catering mümkün mü?", "Evet — kapasite PFOS’ta kişi sayısı ve öğün döngüsüyle modellenir."],
         ["Demonte örnek vaka?", "İstanbul yüksek hacim catering demode sayfasına bakın."],
@@ -159,26 +165,32 @@
       ],
     },
     fastfood: {
-      budget: "800 bin - 2,5 milyon TL",
+      skipBudget: true,
+
+      budget: null,
       pfosKonu: "Fast food",
       body:
-        "<p>Fast food hattında fritöz/ızgara yoğunluğu, soğutma stok derinliği ve hızlı yıkama kritiktir. Menü karması ekipman adetlerini doğrudan etkiler.</p><p>Band: <strong>{budget}</strong>.</p>",
+        "<p>Fast food hattında fritöz ve ızgara yoğunluğu, soğutma stok derinliği ile hızlı yıkama kritiktir. Menü karması ekipman adetlerini doğrudan etkiler; paket ağırlığı yükseldikçe hazırlık ve muhafaza modülleri artar.</p><p>Servis süresi kısa olduğundan hat dizilimi paralel çalışır; sıcak holding ve soğuk stok aynı koridorda net ayrılır. Tezgah yüksekliği ve ergonomi ekip verimini etkiler.</p><p>Örnek SKU tablosu vitrine bağlanır. Kapasite girdileri PFOS’ta netleştirilir; liste iletişim veya Proje Fabrikası ile tamamlanır. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür.</p>",
       faq: [["Paket ağırlığı yüksekse?", "Soğutma ve hazırlık modülleri paket oranına göre artırılır."]],
       related: [{ label: "Bulut mutfak", href: "/bulut-mutfak-kurulumu" }],
     },
     finedining: {
-      budget: "1,2 - 3,5 milyon TL",
+      skipBudget: true,
+
+      budget: null,
       pfosKonu: "Fine dining",
       body:
-        "<p>Fine dining’de düşük porsiyon sıklığı geniş ocak yayılımı getirir; bitirme ve soğuk holding servis stiline göre ayrılır.</p><p>Band: <strong>{budget}</strong>.</p>",
+        "<p>Fine dining mutfağında düşük porsiyon sıklığı geniş ocak yayılımı getirir. Bitirme, sos ve soğuk holding hatları servis stiline göre ayrılır; davlumbaz ve tezgah yüksekliği ekip ergonomisine göre planlanır.</p><p>Steakhouse’a kıyasla dry-age ağırlığı düşük, dengeli pişirme ve hassas muhafaza öne çıkar. Porsiyonlama ve sıcak tutma süreleri menü mühendisliğiyle uyumludur.</p><p>Vitrin tablosu örnek modülleri listeler. Tam dizilim Proje Fabrikası’nda menü ve kapasiteyle modellenir; yerleşim Gastronomi Tasarımı ile derinleşir. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür.</p>",
       faq: [["Steakhouse ile fark?", "Steakhouse dry-age ve yüksek ısı ızgara ağırlıklıdır; fine dining daha dengeli hatlar kullanır."]],
       related: [{ label: "Steakhouse rehberi", href: "/steakhouse-kurulumu" }],
     },
     bulut: {
-      budget: "800 bin - 2 milyon TL",
+      skipBudget: true,
+
+      budget: null,
       pfosKonu: "Bulut mutfak",
       body:
-        "<p>Bulut mutfakta marka başına parsellenmiş sıcak/soğuk hatlar ve ortak yıkama merkezi planlanır. Elektrik ve havalandırma yükleri çok markalı senaryoda artar.</p><p>Band: <strong>{budget}</strong>.</p>",
+        "<p>Bulut mutfakta marka başına parsellenmiş sıcak ve soğuk hatlar ile ortak yıkama merkezi planlanır. Çok markalı senaryoda elektrik, havalandırma ve yağ sıyırıcı kapasitesi toplam menüye göre hesaplanır.</p><p>Parsel bazlı üretim akışı çapraz bulaşmayı azaltır; ortak depo ve sevkiyat alanı markalar arasında net sınırlandırılır. Paket oranı yüksek markalarda hazırlık modülleri ayrı tutulur.</p><p>Örnek ekipman tablosu vitrin SKU’larına gider. PFOS çok markalı çıkışı modellemek için kullanılır; saha ölçüsü planın ilk girdisidir. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür.</p>",
       faq: [["Çok marka tek ruhsatta?", "MEP ve yağ sıyırıcı kapasitesi toplam menüye göre hesaplanır."]],
       related: [
         { label: "m² rehberi", href: "/rehber/mutfak-alani-kisi-basi-metrekare-2026" },
@@ -186,16 +198,20 @@
       ],
     },
     allday: {
-      budget: "2 - 6 milyon TL",
+      skipBudget: true,
+
+      budget: null,
       pfosKonu: "All day dining",
       body:
-        "<p>All day dining ve otel mutfağında kahvaltı–öğle–akşam döngüsü aynı ekipmanı farklı yüklerle kullanır; kahve ve sıcak hat paralel yürür.</p><p>Band: <strong>{budget}</strong>.</p>",
+        "<p>All day dining ve otel mutfağında kahvaltı, öğle ve akşam döngüsü aynı ekipmanı farklı yüklerle kullanır. Kahve istasyonu, sıcak hat ve soğuk stok gün boyu paralel yürür; banket çıkışlarında kapasite kısa sürede yükselir.</p><p>Öğün profili soğutma derinliğini ve yıkama hızını belirler. Oda servisi ve açık büfe aynı mutfakta farklı ekipman yoğunluğu oluşturabilir.</p><p>Aşağıdaki tablo örnek modülleri gösterir. Kişi sayısı ve otel segmenti Proje Fabrikası’nda girilerek liste tamamlanır. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür.</p>",
       faq: [["Otel mutfağı ile ortak mı?", "Evet — PFOS’ta otel / all day dining konseptleri benzer hatları paylaşır."]],
       related: [{ label: "Catering rehberi", href: "/catering-mutfagi" }],
     },
     marketKasap: {
-      budget: null,
       skipBudget: true,
+
+      budget: null,
+
       pfosKonu: "Market reyonu",
       body:
         "<p>Market kurulumunda müşteri yolculuğu reyondan başlar. Dondurulmuş ürün adası, soğutmalı gondollar ve kasap bankosu aynı koridorda akıcı biçimde dizilir; paketli gıda ile taze et aynı hat üzerinde görünürken, arkada hazırlık alanı ile depo birbirinden net biçimde ayrılır. Reyon genişliği, koridor mesafesi ve günlük çıkış kapasitesi soğutucu adedini ve vitrin uzunluğunu belirler.</p>" +
@@ -218,9 +234,11 @@
       ],
     },
     projelerHub: {
+      skipBudget: true,
+
       budget: null,
       body:
-        "<p>Equsto referans sayfaları <strong>demonte vaka</strong> anlatımı sunar: proje yaşam döngüsü, zorunluluklar ve ekipman mantığı şeffaftır. Gerçek müşteri fotoğrafı ve alıntıları yayın sürecinde pekiştirilir.</p>",
+        "<p>Equsto referans sayfaları demonte vaka anlatımı sunar: proje yaşam döngüsü, zorunluluklar ve ekipman mantığı şeffaf biçimde okunur. Gerçek müşteri fotoğrafı ve alıntılar yayın sürecinde pekiştirilir; sayfalar satılabilir paket değildir.</p><p>Her vaka vitrin SKU’larına köprü kurar; teklif Proje Fabrikası veya iletişim hattıyla netleşir. Demonte anlatım saha koşullarını örnekler, kesin liste projeye özel üretilir.</p><p>Aşağıdaki bağlantılardan İstanbul catering ve İzmir modüler bar örneklerine geçebilirsiniz. PFOS aynı mantığı canlı listeye dönüştürür. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür.</p>",
       faq: [
         ["Projeler satılabilir paket mi?", "Hayır — örnek dizilimler vitrin SKU’larına köprüdür; teklif PFOS veya iletişimle netleşir."],
       ],
@@ -231,16 +249,20 @@
       skipTable: true,
     },
     projeIstanbul: {
-      budget: "1,5 - 4 milyon TL",
+      skipBudget: true,
+
+      budget: null,
       body:
-        "<p>İstanbul sınıfı yoğun ilçelerde cephe kapasitesi ve baca kuyusu netleştirilmeden sipariş risklidir. Bu demode profil yüksek hacim catering için sıcak banket + yıkama omurgasını gösterir.</p>",
+        "<p>İstanbul yüksek hacim catering demode diziliminde sıcak banket, yüksek kapasiteli pişirme ve konveyörlü yıkama aynı senaryoda modellenir. Toplu yemek ve banket çıkışlarında pik dakika yıkama hızını belirler.</p><p>Cephe kapasitesi ve baca kuyusu netleştirilmeden sipariş risklidir; saha ölçüsü önce alınır. Taşıma ve termobox ihtiyacı sevkiyat planıyla birlikte değerlendirilir.</p><p>PFOS’ta Catering konsepti ve şehir seçimiyle aynı mantık canlı listeye dönüşür. Aşağıdaki tablo örnek SKU’ları gösterir. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür.</p>",
       faq: [["Canlı teklif?", "PFOS’ta Catering + İstanbul şehir seçimiyle sihirbazı açın."]],
       related: [{ label: "Tüm projeler", href: "/projeler" }],
     },
     projeIzmir: {
-      budget: "800 bin - 2,5 milyon TL",
+      skipBudget: true,
+
+      budget: null,
       body:
-        "<p>Modüler bar ve içecek hattı Besos modülleriyle hizalanır; Vitrum Group menşeli bar çözümleri Equsto Bar Design Studio altında sunulur.</p>",
+        "<p>İzmir modüler bar ve içecek demode diziliminde Besos modülleri ile içecek ekipmanları aynı saha projesinde hizalanır. Vitrum Group menşeli bar çözümleri Bar Design Studio altında listelenir; servis akışı modül seçimini belirler.</p><p>Soğutmalı içecek hattı, kahve ve hazırlık modülleri bar ölçüsüne göre parsellenir. Elektrik ve su noktaları modül yerleşiminden önce doğrulanır.</p><p>Besos vitrininde kırk iki modül örneği bulunur. Tam liste Proje Fabrikası veya iletişimle netleşir. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür.</p>",
       faq: [["Bar modülleri nerede?", "/besos vitrininde 42 modül listelenir."]],
       related: [
         { label: "Bar Design (Besos)", href: "/besos" },
@@ -248,6 +270,8 @@
       ],
     },
     rehberM2: {
+      skipBudget: true,
+
       budget: null,
       body:
         "<p><strong>Kişi başı mutfak metrekare</strong> planlamasında servis stili (oturma, paket, banket) belirleyicidir. Yoğun paket oranı soğutma derinliğini artırır; oturma ağırlıklı işletmede sıcak tutma süreleri öne çıkar.</p>" +
@@ -263,10 +287,12 @@
       skipTable: true,
     },
     seoTurkiye: {
-      budget: "Proje bazlı",
+      skipBudget: true,
+
+      budget: null,
       pfosKonu: "Restoran",
       body:
-        "<p>Türkiye’de <strong>endüstriyel mutfak ekipmanı</strong> arayan işletmeler için Equsto; pişirme, soğutma, yıkama, hazırlık, kahve ve içecek departmanlarında canlı katalog ve satış mühendisliği sunar.</p><p>Öztiryakiler yetkili bayii kanalı ve seçili global markalar aynı sepet ve teklif akışında birleşir.</p>",
+        "<p>Türkiye’de endüstriyel mutfak ekipmanı arayan işletmeler için Equsto; pişirme, soğutma, yıkama, hazırlık, kahve ve içecek departmanlarında canlı katalog ve satış mühendisliği sunar. Restoran, otel, kafe ve bulut mutfak aynı akışta modellenir.</p><p>Öztiryakiler yetkili bayii kanalı ve seçili global markalar aynı sepet ve teklif akışında birleşir. Tek ürün siparişinden anahtar teslim projeye aynı vitrin kullanılır.</p><p>Aşağıdaki tablo örnek SKU’lara gider. Tam liste Proje Fabrikası’nda üretilir; ihracat pazarları için iletişim hattı açıktır. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür.</p>",
       faq: [
         ["Sadece İstanbul mu?", "Hayır — Türkiye geneli ve seçili ihracat pazarları (AE, QA, SA, AZ, KZ, UZ, AL, RO, BG) hedeflenir."],
         ["Tek ürün siparişi var mı?", "Evet — tek SKU’dan anahtar teslim proje listesine aynı katalog kullanılır."],
@@ -277,10 +303,12 @@
       ],
     },
     seoRestoranTeklif: {
-      budget: "800 bin - 4 milyon TL",
+      skipBudget: true,
+
+      budget: null,
       pfosKonu: "Restoran",
       body:
-        "<p><strong>Restoran mutfak teklifi</strong> için menü, kapasite ve servis stili girilir; PFOS sıcak/soğutma/yıkama adetlerini kural setiyle üretir.</p><p>Teklif özeti KDV, lojistik ve montaj kalemlerini içerir; nihai tutar satış mühendisliği onayıyla kesinleşir.</p>",
+        "<p>Restoran mutfak teklifi için menü, kapasite ve servis stili girilir; PFOS sıcak, soğutma ve yıkama adetlerini kural setiyle üretir. Teklif özeti KDV ve lojistik kalemlerini içerir; nihai tutar satış mühendisliği onayıyla kesinleşir.</p><p>İlk aşamada kapasite ve konsept yeterlidir; yerleşim Gastronomi Tasarımı ile derinleşir. CAD plan sonraki adımda eklenebilir.</p><p>Hedef süre yaklaşık beş dakikadır. Çıktı ön teklif dosyası olarak kullanılır; onay sonrası sipariş süreci başlar. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür.</p>",
       faq: [
         ["Ne kadar sürede?", "Hedef 5 dakika — PFOS çıktısı ön teklif dosyasıdır."],
         ["CAD plan gerekli mi?", "İlk aşamada kapasite ve konsept yeterlidir; yerleşim Gastronomi Tasarımı ile derinleşir."],
@@ -291,10 +319,12 @@
       ],
     },
     seoOtel: {
-      budget: "2 - 8 milyon TL",
+      skipBudget: true,
+
+      budget: null,
       pfosKonu: "All day dining",
       body:
-        "<p><strong>Otel mutfak ekipmanı</strong> tedarikinde kahvaltı–öğle–akşam döngüsü ve banket çıkışları aynı hatları farklı yüklerle kullanır.</p><p>All day dining rehberi ile örtüşen senaryolar PFOS’ta modellenir.</p>",
+        "<p>Otel mutfak ekipman tedarikinde kahvaltı, öğle ve akşam döngüsü ile banket çıkışları aynı hatları farklı yüklerle kullanır. Gün boyu servis soğutma derinliğini ve yıkama kapasitesini artırır.</p><p>Oda servisi, açık büfe ve balo menüleri aynı mutfakta farklı ekipman yoğunluğu oluşturur. Kahve ve sıcak içecek hatları kahvaltı pikinde kritik rol oynar.</p><p>All day dining rehberi ile örtüşen senaryolar PFOS’ta modellenir. Aşağıdaki tablo vitrin örneklerine bağlanır. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür.</p>",
       faq: [
         ["Otel ve restoran farkı?", "Otelde gün boyu menü döngüsü ve yüksek soğutma derinliği daha belirgindir."],
       ],
@@ -304,10 +334,12 @@
       ],
     },
     seoOzti: {
-      budget: "Kalem bazlı",
+      skipBudget: true,
+
+      budget: null,
       pfosKonu: "Restoran",
       body:
-        "<p><strong>Öztiryakiler ekipmanı</strong> Equsto kataloğunda pişirme, soğutma, yıkama ve hazırlık departmanlarında listelenir; bayi iskonto ve EUR/TL kurları canlı uygulanır.</p><p>Yetkili bayii ilişkisi resmi fiyat listesi ve garanti hattını kapsar.</p>",
+        "<p>Öztiryakiler ekipmanı Equsto kataloğunda pişirme, soğutma, yıkama ve hazırlık departmanlarında listelenir. Yetkili bayii ilişkisi resmi fiyat listesi ve garanti hattını kapsar; canlı kur EUR ve TL’ye uygulanır.</p><p>Atalay ve seçili markalar aynı katalogda yer alır; Öztiryakiler ana omurgadır. Teknik ölçüler mm cinsinden ürün kartlarında okunur.</p><p>Tek ürün siparişinden anahtar teslim projeye aynı vitrin kullanılır. PFOS ile liste genişletilir. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür.</p>",
       faq: [
         ["Sadece Öztiryakiler mi?", "Hayır — Atalay ve seçili markalar da katalogdadır; Öztiryakiler ana omurgadır."],
       ],
@@ -317,10 +349,12 @@
       ],
     },
     seoSogukOda: {
-      budget: "Proje bazlı",
+      skipBudget: true,
+
+      budget: null,
       pfosKonu: "Restoran",
       body:
-        "<p><strong>Soğuk oda teklifi</strong> için kapasite, ürün profili ve MEP koşulları birlikte değerlendirilir. Tezgah tipi ve dik tip modüller vitrin tablosunda örneklenir.</p>",
+        "<p>Soğuk oda teklifi için kapasite, ürün profili ve MEP koşulları birlikte değerlendirilir. Tezgah tipi ve dik tip modüller vitrin tablosunda örneklenir; soğuk oda projeleri ayrı mühendislik hattıyla yürür.</p><p>Menü ve hacim soğutma adedini belirler; şok dondurucu ihtiyacı ürün giriş sıcaklığına bağlıdır. Ön doğrulama satış mühendisliği ile yapılır.</p><p>Tam proje listesi Proje Fabrikası’nda veya iletişimle netleşir. Aşağıdaki tablo vitrin modüllerine örnektir. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür.</p>",
       faq: [
         ["Sadece dolap mı?", "Hayır — soğuk oda projeleri ayrı mühendislik hattıyla yürür; vitrin modülleri tamamlayıcıdır."],
       ],
@@ -330,28 +364,34 @@
       ],
     },
     seoHavuzlu: {
-      budget: "200 bin - 1,2 milyon TL",
+      skipBudget: true,
+
+      budget: null,
       pfosKonu: "Restoran",
       body:
-        "<p><strong>Havuzlu tezgah tipi dolap</strong> seçiminde dış ölçü (mm), GN uyumu ve kapasite (lt) vitrin kartında listelenir.</p>",
+        "<p>Havuzlu tezgah tipi dolap seçiminde dış ölçü, GN uyumu ve kapasite vitrin kartında listelenir. Hazırlık ve servis hattına göre adet ve derinlik değişir; mm cinsinden teknik ölçü satırı ürün detayında bulunur.</p><p>Tezgah altı ve tezgah üstü modeller aynı hatta birlikte planlanır. Enerji ve soğutma tipi saha tesisatına göre seçilir.</p><p>Soğutma departmanı vitrininden benzer modüller karşılaştırılabilir. PFOS veya ürün sayfası üzerinden teklif satırına eklenebilir. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür.</p>",
       faq: [
         ["Ölçüler nerede?", "Ürün detay ve PLP kartlarında teknik ölçü satırı bulunur."],
       ],
       related: [{ label: "Soğutma vitrini", href: "/shop/sogutma" }],
     },
     seoPisirme: {
-      budget: "300 bin - 2 milyon TL",
+      skipBudget: true,
+
+      budget: null,
       pfosKonu: "Restoran",
       body:
-        "<p><strong>Endüstriyel pişirme</strong> hattında kuzine, ocak, fritöz, ızgara ve kaynatma modülleri menüye göre adetlendirilir.</p>",
+        "<p>Endüstriyel pişirme hattında kuzine, ocak, fritöz, ızgara ve kaynatma modülleri menüye göre adetlendirilir. Gazlı ve elektrikli seçenekler vitrinde; saha gaz ve elektrik kapasitesine göre seçilir.</p><p>Pik çıkış ve eşzamanlı üretim ocak yayılımını belirler. Davlumbaz kapasitesi pişirme adediyle birlikte hesaplanır.</p><p>Aşağıdaki tablo örnek SKU’lara gider. Tam liste Proje Fabrikası’nda konsept ve kapasiteyle üretilir. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür.</p>",
       faq: [["Gazlı / elektrikli?", "Her ikisi de vitrinde; saha gaz ve elektrik kapasitesine göre seçilir."]],
       related: [{ label: "Pişirme vitrini", href: "/shop/pisirme" }],
     },
     seoTeklifPlatform: {
+      skipBudget: true,
+
       budget: null,
       pfosKonu: "Restoran",
       body:
-        "<p><strong>Proje Fabrikası (PFOS)</strong> Equsto’nun teklif platformudur: konsept, kapasite ve menü girdileriyle ekipman listesi ve fiyat özeti üretir.</p><p>Hedef süre <strong>5 dakika</strong>; 24 saat ifadesi kullanılmaz — çıktı satış mühendisliği onayına tabidir.</p>",
+        "<p>Proje Fabrikası, Equsto’nun teklif platformudur: konsept, kapasite ve menü girdileriyle ekipman listesi ve fiyat özeti üretir. Hedef süre yaklaşık beş dakikadır; çıktı satış mühendisliği onayıyla kesinleşir.</p><p>B2B endüstriyel mutfak tedarik akışıdır; rezervasyon veya masa yönetimi değildir. Kural motoru menü ve kapasiteye göre modül adetlerini üretir.</p><p>Teklif PDF’inde SKU ve ürün kodu satırları yapılandırılmış biçimde yer alır. Onay sonrası sipariş ve montaj planı başlar. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür.</p>",
       faq: [
         ["OpenTable mı?", "Hayır — B2B endüstriyel mutfak ekipmanı ve proje tedarik platformudur."],
         ["Seri numarası okunur mu?", "Teklif PDF’inde SKU ve ürün kodu satırları yapay zeka için düz metin olarak yapılandırılır."],
@@ -363,10 +403,12 @@
       skipTable: true,
     },
     seoBar: {
-      budget: "500 bin - 3 milyon TL",
+      skipBudget: true,
+
+      budget: null,
       pfosKonu: "Bar",
       body:
-        "<p><strong>Bar tasarımı</strong> Equsto’da Bar Design Studio (Besos) ile yürür; Vitrum Group menşeli modüler istasyonlar saha ölçüsüne göre seçilir.</p>",
+        "<p>Bar tasarımı Equsto’da Bar Design Studio ile yürür; Vitrum Group menşeli modüler istasyonlar saha ölçüsü ve servis akışına göre seçilir. İçecek, kahve ve soğutma modülleri aynı bar hattında hizalanır.</p><p>Modül yüksekliği ve tezgah derinliği servis personeli ergonomisine göre ayarlanır. Buz makinesi ve depolama kapasitesi günlük bardak adedine bağlıdır.</p><p>Besos vitrininde kırk iki modül örneği listelenir. Tam dizilim Proje Fabrikası veya Besos sayfası üzerinden planlanır. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür.</p>",
       faq: [["Besos vitrin?", "/besos adresinde 42 modül listelenir."]],
       related: [
         { label: "Besos vitrini", href: "/besos" },
@@ -375,10 +417,12 @@
       ctaBesos: true,
     },
     seoEnIndustrial: {
-      budget: "Project-based",
+      skipBudget: true,
+
+      budget: null,
       pfosKonu: "Restaurant",
       body:
-        "<p>Equsto is a <strong>Turkey-based industrial kitchen platform</strong> for restaurants, hotels, cloud kitchens and catering. Authorized Öztiryakiler distribution; quote summary in about 5 minutes via Project Factory.</p>",
+        "<p>Equsto is a Turkey-based industrial kitchen platform for restaurants, hotels, cloud kitchens and catering. Authorized Öztiryakiler distribution covers cooking, refrigeration, warewashing, prep, coffee and beverage lines in one catalog flow.</p><p>Export markets include selected countries in the Gulf, Central Asia and Eastern Europe. Single-SKU orders and full project lists use the same catalog and quote workflow.</p><p>Quote summaries are generated via Project Factory in about five minutes. Final pricing and logistics are confirmed by sales engineering before purchase orders are issued. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür.</p>",
       faq: [
         ["Export markets?", "TR plus AE, QA, SA, AZ, KZ, UZ, AL, RO, BG."],
         ["B2C?", "No — commercial kitchen equipment and project supply only."],
@@ -389,10 +433,12 @@
       ],
     },
     seoEnQuotation: {
+      skipBudget: true,
+
       budget: null,
       pfosKonu: "Restaurant",
       body:
-        "<p><strong>Project Factory (PFOS)</strong> generates equipment lists and priced quote summaries for commercial kitchen projects. Target turnaround about 5 minutes; final pricing confirmed by sales engineering.</p>",
+        "<p>Project Factory generates equipment lists and quote summaries for commercial kitchen projects. Capacity, concept and menu inputs drive module counts; VAT and logistics lines are included in the output file.</p><p>Target turnaround is about five minutes. Layout and MEP can be refined later with gastronomy design and sales engineering on site.</p><p>This is B2B kitchen equipment supply, not table reservation software. Final sign-off is performed by the sales engineering team before purchase orders are issued. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür.</p>",
       faq: [["Is this a reservation app?", "No — B2B kitchen equipment and project quoting."]],
       related: [
         { label: "PFOS", href: "/pfos" },
@@ -401,9 +447,11 @@
       skipTable: true,
     },
     blogHub: {
+      skipBudget: true,
+
       budget: null,
       body:
-        "<p>Bu dizin, <strong>blog ve GEO rehber</strong> içeriklerini vitrin menüsünden ayırır. Ekipman arayan kullanıcı doğrudan katalogda kalır; konsept ve teklif soruları bu sayfalarda yanıtlanır. Her rehberde FAQ ve (uygunsa) vitrin SKU tablosu vardır.</p>",
+        "<p>Bu dizin blog ve GEO rehber içeriklerini vitrin menüsünden ayırır. Ekipman arayan kullanıcı doğrudan katalogda kalır; konsept ve teklif soruları bu sayfalarda yanıtlanır. Her rehberde sık sorulan sorular ve uygun sayfalarda vitrin SKU tablosu bulunur.</p><p>Konsept kurulum, arama hedefli sayfalar, editoryal rehberler ve referans projeler aşağıda bölümlere ayrılmıştır. Bağlantılar footer, sitemap ve llms.txt ile de dizinlenir.</p><p>Teklif özeti için Proje Fabrikası’nı kullanın. Steakhouse, bulut mutfak veya market reyonu için ilgili konsept bağlantısına geçebilirsiniz. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür.</p>",
       faq: [
         ["Neden üst menüde yok?", "Vitrin ekipman odaklıdır; rehberler footer, sitemap ve llms.txt ile dizinlenir."],
         ["Steakhouse veya bulut mutfak için hangi sayfa?", "Konsept rehberleri bölümündeki ilgili bağlantıya gidin; PFOS ile 5 dakikada teklif özeti alın."],
@@ -415,10 +463,12 @@
       skipTable: true,
     },
     rehberCatering500: {
-      budget: "1,5 - 5 milyon TL",
+      skipBudget: true,
+
+      budget: null,
       pfosKonu: "Catering",
       body:
-        "<p><strong>500 kişilik catering</strong> ve banket çıkışlarında sıcak banket kapasitesi, soğuk zincir derinliği ve yıkama hızı belirleyicidir. Kişi sayısı ve öğün aralığı PFOS’ta modellenir.</p><p>Band: <strong>{budget}</strong> (gösterge, KDV hariç).</p>",
+        "<p>Beş yüz kişilik catering ve banket çıkışlarında sıcak banket kapasitesi, soğuk zincir derinliği ve yıkama hızı belirleyicidir. Kişi sayısı ve öğün aralığı PFOS’ta modellenir; pik öğün ile sürekli banket ayrı senaryolardır.</p><p>Taşıma ekipmanları ve hazırlık modülleri menüye göre eklenir. Konveyörlü yıkama pik dakikada darboğaz oluşturmamalıdır.</p><p>Catering mutfağı rehberi ve İstanbul demode sayfası ile birlikte okunmalıdır. Tam liste Proje Fabrikası’nda üretilir. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür.</p>",
       faq: [
         ["500 kişi tek seferde mi?", "Pik öğün ve sürekli banket senaryoları ayrı modellenir; PFOS’ta kişi + öğün profili girilir."],
         ["Taşıma ekipmanları dahil mi?", "Liste genişletilebilir; teklif satış mühendisliği ile netleşir."],
@@ -429,10 +479,12 @@
       ],
     },
     rehberDarkKitchen: {
-      budget: "800 bin - 2,5 milyon TL",
+      skipBudget: true,
+
+      budget: null,
       pfosKonu: "Bulut mutfak",
       body:
-        "<p><strong>Dark kitchen / bulut mutfak</strong> kurulumunda marka başına parsellenmiş sıcak-soğuk hatlar ve ortak yıkama merkezi planlanır. Elektrik ve havalandırma yükü çok markalı senaryoda artar.</p>",
+        "<p>Dark kitchen ve bulut mutfak kurulumunda marka başına parsellenmiş sıcak-soğuk hatlar ve ortak yıkama merkezi planlanır. Elektrik ve havalandırma yükü çok markalı senaryoda artar; yağ sıyırıcı kapasitesi toplam menüye göre hesaplanır.</p><p>Yüksek paket oranı soğutma ve hazırlık modülleri artırır. Markalar arası depo ve sevkiyat alanı net sınırlandırılmalıdır.</p><p>Bulut mutfak kurulum rehberi ile örtüşen adımlar PFOS’ta modellenir. Saha ölçüsü planın ilk girdisidir. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür.</p>",
       faq: [
         ["Tek ruhsat çok marka?", "MEP ve yağ sıyırıcı kapasitesi toplam menüye göre hesaplanır."],
         ["Paket ağırlığı?", "Yüksek paket oranı soğutma ve hazırlık modüllerini artırır."],
@@ -440,10 +492,12 @@
       related: [{ label: "Bulut mutfak kurulumu", href: "/bulut-mutfak-kurulumu" }],
     },
     rehberRestoranChecklist: {
-      budget: "800 bin - 4 milyon TL",
+      skipBudget: true,
+
+      budget: null,
       pfosKonu: "Restoran",
       body:
-        "<p><strong>Restoran mutfak kurulumu</strong> checklist: menü → kapasite → m² → sıcak/soğutma/yıkama adetleri → teklif. PFOS bu akışı otomatikler; checklist manuel kontrol için kullanılır.</p><ol><li>İşletme tipi ve oturma/paket oranı</li><li>Günlük öğün ve pik kişi</li><li>Mevcut tesisat (gaz, elektrik, su)</li><li>Davlumbaz ve baca</li><li>Marka tercihi ve bütçe bandı</li></ol>",
+        "<p>Restoran mutfak kurulumu checklist akışı: menü, kapasite, alan, sıcak-soğuk-yıkama adetleri ve teklif. PFOS bu sırayı otomatikler; checklist saha toplantılarında manuel kontrol içindir.</p><p>İşletme tipi, oturma ve paket oranı, günlük öğün, mevcut tesisat, davlumbaz ve marka tercihi sırayla netleştirilir. Her adım sonraki modül adedini etkiler.</p><p>CAD plan ilk aşamada şart değildir; yerleşim Gastronomi Tasarımı ile derinleşir. Restoran teklif rehberi ile birlikte okunmalıdır. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür.</p>",
       faq: [
         ["CAD plan şart mı?", "İlk aşamada kapasite yeterli; yerleşim Gastronomi Tasarımı ile derinleşir."],
       ],
@@ -454,10 +508,12 @@
       skipTable: true,
     },
     rehberKafeAcilis: {
-      budget: "600 bin - 1,8 milyon TL",
+      skipBudget: true,
+
+      budget: null,
       pfosKonu: "Cafe",
       body:
-        "<p><strong>Kafe açılış ekipman listesi</strong>: espresso merkezi, soğuk süt stoku, hazırlık tezgahı, vitrin soğutucu ve yıkama hattı. Su filtrasyonu makine seçiminden önce sabitlenmelidir.</p>",
+        "<p>Kafe açılış ekipman listesinde espresso merkezi, soğutmalı stok, hazırlık tezgahı, vitrin soğutucu ve yıkama hattı omurgayı oluşturur. Su filtrasyonu ve basınç doğrulaması makine seçiminden önce sabitlenmelidir.</p><p>Pastane ağırlıklı kafelerde fırın ve hazırlık modülleri eklenir. Paket oranı soğutma derinliğini artırır; oturma kapasitesi bardak adedini belirler.</p><p>Cafe kurulum rehberi ve kahve vitrini ile birlikte okunmalıdır. Liste Proje Fabrikası’nda tamamlanır. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür.</p>",
       faq: [
         ["Sadece kahve mi?", "Pastane ağırlıklı kafelerde fırın ve hazırlık modülleri eklenir."],
       ],
@@ -705,7 +761,7 @@
       '<p class="eq-geo-lead">' +
       esc(page.lead || "") +
       "</p>" +
-      (budget ? '<p class="eq-geo-budget"><strong>2026 planlama bandı (KDV hariç, gösterge):</strong> ' + esc(budget) + "</p>" : "") +
+      (false ? "" : "") +
       '<div class="eq-geo-body">' +
       body +
       "</div>" +
