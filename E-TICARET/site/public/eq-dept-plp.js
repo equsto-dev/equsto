@@ -719,7 +719,7 @@
     render();
   }
 
-  var MARKET_REYON_JSON_V = '20260528caglayan-teknik1';
+  var MARKET_REYON_JSON_V = '20260528caglayan-eq1';
 
   function fetchMarketReyonDeptJson() {
     return fetch('/data/dept/market-reyon.json?v=' + MARKET_REYON_JSON_V, {

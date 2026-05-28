@@ -4,7 +4,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260528caglayan-teknik1";
+  var CATALOG_V = "20260528caglayan-eq1";
 
   window.EqMarketReyon = {
     loadCatalog: function () {

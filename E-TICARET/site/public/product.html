@@ -939,9 +939,10 @@
     function railLabelForProduct(x) {
       if (!x || !isMarketReyonProduct(x)) return railLabelFor((x && x.category) || "");
       if (isCaglayanRefrigeration(x) && x.caglayanModelSlug) {
-        var base = String(x.name || "").split("—")[0].trim();
-        if (!base) base = String(x.caglayanModelSlug || "").replace(/-/g, " ");
-        return base + " — ölçü varyantları";
+        var base = String(x.caglayanEqModel || "").trim();
+        if (!base) base = String(x.name || "").split("—")[0].trim();
+        if (!base) base = "EQ-" + String(x.caglayanModelSlug || "").replace(/-/g, " ");
+        return base + " — EQ1, EQ2… ölçü varyantları";
       }
       var series = String(x.series || "").trim();
       if (series) return series + " ve muadil modeller";
