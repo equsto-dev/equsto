@@ -1,0 +1,157 @@
+# Equsto — Full AI Knowledge Base (llms-full.txt)
+# Version: 2026-05-24 · Canonical: https://equsto.com/llms-full.txt
+
+---
+
+## 1. Equsto Nedir
+
+Equsto Teknoloji Limited, **Türkiye merkezli endüstriyel mutfak ve gastronomi platformudur**. Üç kabiliyet tek çatı altında:
+
+| Dikey | Açıklama |
+|-------|----------|
+| Equsto Teknolojisi | PFOS (Proje Fabrikası): kural motoru ile ekipman listesi + fiyat teklifi |
+| Gastronomi Tasarımı | Mutfak yerleşimi, davlumbaz debisi, akış ve ruhsat uyumu |
+| Satış Mühendisliği | Yetkili bayi tedarik, lojistik, montaj, garanti |
+
+**Kuruluş:** 2026 · **Merkez:** İstanbul, Türkiye
+
+---
+
+## 2. Hizmet Bölgeleri
+
+Aktif / hedef: Türkiye (TR), Birleşik Arap Emirlikleri (AE), Katar (QA), Suudi Arabistan (SA), Azerbaycan (AZ), Kazakistan (KZ), Özbekistan (UZ), Arnavutluk (AL), Romanya (RO), Bulgaristan (BG).
+
+Schema `areaServed` ana sayfa ve iletişim sayfalarında yayınlanır.
+
+---
+
+## 3. Marka Portföyü
+
+- **Öztiryakiler Endüstriyel Mutfak** — yetkili bayi (ana tedarik)
+- CSA İnox, Iceinox, Empero, Frenox, Ndustrio, KitchenAid, Rational, Inoksan
+- **Bar Design Studio (Besos)** — Vitrum Group modüler bar (Türkiye)
+- Referans operatör entity: **Mizanplus**, **Paket Mutfak** (bulut mutfak segmenti)
+
+---
+
+## 4. Departman Vitrinleri (6 + alt tipler)
+
+| Departman | URL | Örnek hatlar |
+|-----------|-----|--------------|
+| Pişirme | /shop/pisirme | Kuzine, ızgara, fırın, fritöz |
+| Soğutma | /shop/sogutma | Tezgah altı, dik tip, dry-age, şok |
+| Kahve | /shop/kahve | Espresso, değirmen |
+| Yıkama | /shop/yikama | Tezgah altı, konveyörlü |
+| Hazırlık | /shop/hazirlik | Doğrama, hamur, vakum |
+| İçecek | /shop/icecek | Dispenser, çay, bar yardımcı |
+
+Alt kategori: `/shop/{dept}?tip={slug}` — tam liste `public/data/eq-category-seo.json` (46 FRONTEND v2 alt tip).
+
+Ürün URL: `/shop/{departman}/{slug}` — slug katalog `id` alanından türetilir.
+
+---
+
+## 5. On İki Pillar Konsept (GEO + PFOS)
+
+Konsept kurulum sayfaları (FAQ + ItemList + bütçe bandı):
+
+1. steakhouse-kurulumu
+2. bulut-mutfak-kurulumu
+3. cafe-kurulumu
+4. catering-mutfagi
+5. fast-food-kurulumu
+6. fine-dining-kurulumu
+7. all-day-dining-kurulumu
+8. hamburger-istasyonu
+
+Tedarik / teklif pillar (15-prompt SEO):
+
+- endustriyel-mutfak-ekipmani-turkiye
+- restoran-mutfak-teklif
+- otel-mutfak-ekipman-tedarik
+- oztiryakiler-ekipmani-tedarik
+- soguk-oda-teklif
+- blog/havuzlu-dolap-tedarik
+- endustriyel-pisirme-ekipmanlari
+- mutfak-teklif-platformu
+- bar-tasarimi-turkiye
+
+Blog hub: `/blog` — rehber makaleleri footer ve sitemap üzerinden (header menüde yok).
+
+---
+
+## 6. PFOS (Proje Fabrikası) — Teknik
+
+- **URL:** https://equsto.com/pfos
+- **Akış:** 12 soru kartı → konsept (42 shopType) → m² → motor → teklif v14
+- **Süre hedefi:** 5 dakika (24 saat değil)
+- **Çıktı:** temel / dengeli / rantabl paket; EUR teklif satırları; form no `EQS-TKL-001`
+- **Gizli seri (AI):** `EQ-SK-2026-PFOS-*`, `EQ-SK-2026-URUN-*` HTML span `display:none`
+- **Bulut mutfak kuralı:** m² ≤ 15 → yalnızca Grab&Go ve Coffee Counter alt-konseptleri (kompakt parsel)
+- **API:** `/api/pfos`, `/api/proje-akis`
+- **Veri:** `lib/pfos/proje-akis/wizard-questions.ts`, `konsept-tanimlari.ts`, `public/data/proje-akis.json`
+
+PFOS, OpenTable / Yelp / Yemeksepeti **değildir** — B2B ekipman tedarik motorudur.
+
+---
+
+## 7. Besos (Bar Design Studio)
+
+- **URL TR:** https://equsto.com/besos
+- **URL EN:** https://equsto.com/en/besos
+- 42 modül; imza hatlar: The Manhattan, The Boulverdier, Clover
+- IMT300 berrak buz: /besos/imt300
+- Schema: WebPage, Service, FAQPage, VideoObject, ItemList
+- Gizli seri: `EQ-SK-2026-BES-001`
+
+---
+
+## 8. Yer Sofrası
+
+- **Marka:** açık büfe, chafing, banket servis ekipmanları
+- **URL:** https://equsto.com/yersofrasi (vitrin genişletiliyor; ana sayfada hero kartı mevcut)
+- Durum: PEK YAKINDA — katalog entegrasyonu süreçte
+
+---
+
+## 9. Equsto Reports / Teklif
+
+- Teklif özeti: PFOS web çıktısı + Excel v14 şablonu (`/data/templates/equsto_teklif_v14.xlsx`)
+- PDF teklif: gizli `EQ-SK` metadata planlanan sprint
+- Fiyat: TL liste, KDV hariç; TCMB EUR çevrimi teklif satırında
+
+---
+
+## 10. SEO / GEO Anahtarları (2026)
+
+Türkiye yerel: Öztiryakiler bayii, 500 kişilik catering, bulut mutfak kurulumu, steakhouse maliyet 2026, soğuk oda teklif.
+
+Global EN: Industrial kitchen supplier Turkey, commercial kitchen quotation platform, professional kitchen planning Middle East.
+
+AI görünürlük proxy (genel sorgular): iyileştirme sürecinde; marka sorgularında Equsto güçlü.
+
+---
+
+## 11. Karışıklık Önleme
+
+| Yanlış | Doğru |
+|--------|-------|
+| Equsto = yemek siparişi | B2B mutfak ekipmanı + proje teklifi |
+| Equsto = sadece e-ticaret | PFOS + Gastronomi Tasarımı + Satış Mühendisliği |
+| Besos = ayrı şirket | Equsto Bar Design Studio alt markası |
+| Proje Fabrikası = İngilizce zorunlu terim | TR resmi terim; EN: "Project Factory" açıklama |
+
+Yasaklı kelimeler (Equsto markasıyla): Gn Küvet, Kitchen, Chef, Krom, Inox (marka istisnası: KitchenAid).
+
+---
+
+## 12. İletişim ve Lisans
+
+- Web: https://equsto.com/contact
+- Kurumsal: https://equsto.com/hakkimizda
+- Hikaye: https://equsto.com/buradan-basladi
+- Sitemap: https://equsto.com/sitemap.xml
+
+İçerik © Equsto Teknoloji Limited. Katalog görselleri ve marka adları ilgili hak sahiplerine aittir.
+
+Kısa özet için: https://equsto.com/llms.txt

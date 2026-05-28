@@ -1,0 +1,2006 @@
+/* Equsto ana sayfa — Mutbex e-ticaret iskeleti, Equsto mimari dili */
+.eq-mx-vitrin {
+  --mx-navy: var(--eq-topnav-dept-bg, #001e50);
+  --mx-gold: var(--eq-accent-gold, #b88a00);
+  --mx-line: #e5e7eb;
+  --mx-bg: #fff;
+  background: var(--mx-bg);
+  border-bottom: 1px solid var(--mx-line);
+}
+/* Ana sayfa: vitrin başlık + haftanın öne çıkanları kaldırıldı */
+body.eq-home .eq-mx-vitrin .eq-mx-page-title,
+body.eq-home .eq-mx-vitrin .eq-mx-spotlight-wrap {
+  display: none !important;
+}
+.eq-mx-ticker {
+  overflow: hidden;
+  border-bottom: 1px solid var(--mx-line);
+  background: #f8f9fb;
+}
+.eq-mx-ticker__track {
+  display: flex;
+  width: max-content;
+  animation: eq-mx-ticker 28s linear infinite;
+}
+.eq-mx-ticker__item {
+  flex: 0 0 auto;
+  padding: 8px 20px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--mx-navy);
+  white-space: nowrap;
+  border-right: 1px solid var(--mx-line);
+}
+.eq-mx-ticker__item strong {
+  color: var(--mx-gold);
+  margin-right: 6px;
+}
+@keyframes eq-mx-ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.eq-mx-hero {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 10px 8px;
+}
+.eq-mx-hero__stage {
+  position: relative;
+  border-radius: 2px;
+  overflow: hidden;
+  border: 1px solid var(--mx-line);
+  background: #0a1628;
+}
+.eq-mx-hero__slides {
+  position: relative;
+  aspect-ratio: 1920 / 490;
+  max-height: min(42vh, 420px);
+  min-height: 180px;
+}
+.eq-mx-hero__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.45s ease;
+  background: center / cover no-repeat #0a1628;
+  display: block;
+  text-decoration: none;
+}
+.eq-mx-hero__slide.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.eq-mx-hero__slide-cap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px 24px;
+  background: linear-gradient(transparent, rgba(0, 20, 50, 0.82));
+  color: #fff;
+}
+.eq-mx-hero__slide-cap h2 {
+  margin: 0 0 4px;
+  font-size: clamp(18px, 2.4vw, 28px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.eq-mx-hero__slide-cap p {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.92;
+  max-width: 42ch;
+}
+.eq-mx-hero__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(0, 30, 80, 0.55);
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+}
+.eq-mx-hero__nav--prev {
+  left: 8px;
+}
+.eq-mx-hero__nav--next {
+  right: 8px;
+}
+.eq-mx-hero__thumbs {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px 4px 4px;
+}
+.eq-mx-hero__thumb {
+  flex: 0 0 auto;
+  width: 88px;
+  padding: 0;
+  border: 2px solid var(--mx-line);
+  background: #fff;
+  cursor: pointer;
+  opacity: 0.75;
+  transition: border-color 0.2s, opacity 0.2s;
+}
+.eq-mx-hero__thumb.is-active,
+.eq-mx-hero__thumb:hover {
+  border-color: var(--mx-navy);
+  opacity: 1;
+}
+.eq-mx-hero__thumb img {
+  display: block;
+  width: 100%;
+  height: 52px;
+  object-fit: cover;
+}
+body.eq-home .eq-mx-story-wrap {
+  display: none !important;
+}
+.eq-mx-story-wrap {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 12px 10px 4px;
+}
+/* Popüler Kategoriler — Mutbex kare şeridi */
+.eq-mx-pop-cats-wrap {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 18px 10px 6px;
+}
+.eq-mx-pop-cats-inner {
+  position: relative;
+}
+.eq-mx-pop-cats__title {
+  margin: 0 0 14px;
+  font-size: clamp(18px, 2.2vw, 22px);
+  font-weight: 700;
+  color: var(--mx-navy, #001e50);
+  letter-spacing: -0.02em;
+}
+.eq-mx-pop-cats {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+}
+.eq-mx-pop-cats__track {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  flex: 1;
+  padding: 4px 2px 10px;
+  scrollbar-width: none;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.eq-mx-pop-cats__track::-webkit-scrollbar {
+  display: none;
+}
+.eq-mx-pop-cats__track.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+}
+.eq-mx-pop-cats__track.is-dragging .eq-mx-pop-cat {
+  pointer-events: none;
+}
+.eq-mx-pop-cat {
+  flex: 0 0 min(168px, 28vw);
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 14px;
+  padding: 10px 10px 12px;
+  border: 1px solid rgba(0, 30, 80, 0.08);
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 30, 80, 0.06);
+  transition: box-shadow 0.22s ease, transform 0.22s ease, border-color 0.22s ease;
+}
+.eq-mx-pop-cat:hover {
+  box-shadow: 0 12px 28px rgba(0, 30, 80, 0.14);
+  transform: translateY(-3px);
+  border-color: rgba(0, 30, 80, 0.12);
+}
+.eq-mx-pop-cat--photo {
+  padding: 0;
+  overflow: hidden;
+}
+.eq-mx-pop-cat--photo .eq-mx-pop-cat__lbl {
+  margin: 0;
+  padding: 10px 12px 12px;
+  background: #fff;
+}
+.eq-mx-pop-cat__visual,
+.eq-mx-pop-cat__img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  max-height: 152px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #e8eef5 0%, #f4f7fb 55%, #dce4ef 100%);
+}
+.eq-mx-pop-cat--photo .eq-mx-pop-cat__visual {
+  max-height: none;
+  aspect-ratio: 4 / 5;
+  border-radius: 14px 14px 0 0;
+}
+.eq-mx-pop-cat__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  transform: scale(1.02);
+  transition: transform 0.35s ease;
+}
+.eq-mx-pop-cat--photo:hover .eq-mx-pop-cat__visual img {
+  transform: scale(1.06);
+}
+.eq-mx-pop-cat__scrim {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 20, 50, 0) 42%,
+    rgba(0, 20, 50, 0.22) 72%,
+    rgba(0, 20, 50, 0.38) 100%
+  );
+}
+.eq-mx-pop-cat__ph {
+  font-size: 40px;
+  line-height: 1;
+  filter: drop-shadow(0 2px 6px rgba(0, 30, 80, 0.12));
+}
+.eq-mx-pop-cat__lbl {
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.3;
+  color: var(--mx-navy, #001e50);
+  letter-spacing: -0.01em;
+}
+.eq-mx-pop-cats__nav {
+  flex: 0 0 auto;
+  align-self: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--mx-line, #e5e7eb);
+  background: #fff;
+  color: var(--mx-navy);
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  border-radius: 50%;
+  z-index: 2;
+}
+.eq-mx-pop-cats__nav--prev {
+  margin-right: 6px;
+}
+.eq-mx-pop-cats__nav--next {
+  margin-left: 6px;
+}
+.eq-mx-pop-cats__dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+.eq-mx-pop-cats__dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #c5cdd8;
+  cursor: pointer;
+}
+.eq-mx-pop-cats__dot.is-active {
+  background: var(--mx-navy, #001e50);
+}
+.eq-mx-vitrin-mosaic-wrap,
+.eq-home-cm-mutbex .eq-mx-o-mosaic,
+#eq-mx-vitrin-mosaic-section {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+.eq-home-cm-mutbex .eq-mx-o-mosaic .eq-home-band-inner,
+#eq-mx-vitrin-mosaic-section .eq-home-band-inner {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 8px 12px 24px;
+}
+.eq-mx-vitrin-mosaic-wrap .eq-mx-cat-mosaic,
+.eq-home-cm-mutbex .eq-mx-o-mosaic .eq-mx-cat-mosaic {
+  margin: 0;
+}
+.eq-mx-story__track {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding-bottom: 6px;
+}
+.eq-mx-story__track::-webkit-scrollbar {
+  display: none;
+}
+.eq-mx-story {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: 115px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+.eq-mx-story__ring {
+  --mx-story-r: 25px;
+  width: 95px;
+  height: 95px;
+  margin: 0 auto 8px;
+  border-radius: var(--mx-story-r);
+  padding: 3px;
+  background: linear-gradient(135deg, var(--mx-navy), var(--mx-gold));
+  box-sizing: border-box;
+}
+.eq-mx-story__ring-in {
+  width: 100%;
+  height: 100%;
+  border-radius: calc(var(--mx-story-r) - 3px);
+  background: center / cover #eef2f8;
+  border: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+.eq-mx-story__lbl {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--eq-text, #1a1d2b);
+}
+.eq-mx-page-title {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 16px 14px 8px;
+  font-size: clamp(20px, 2.5vw, 26px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--mx-navy);
+}
+.eq-mx-spotlight-wrap {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 10px 14px;
+}
+.eq-mx-spotlight__head {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mx-gold);
+  margin-bottom: 10px;
+}
+.eq-mx-spotlight__track {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 8px;
+}
+.eq-mx-spot-card {
+  flex: 0 0 min(220px, 42vw);
+  scroll-snap-align: start;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--mx-line);
+  background: #fff;
+  transition: box-shadow 0.2s;
+}
+.eq-mx-spot-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 30, 80, 0.12);
+}
+.eq-mx-spot-card__img {
+  aspect-ratio: 540 / 620;
+  max-height: 280px;
+  background: #f4f6f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.eq-mx-spot-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.eq-mx-spot-card__body {
+  padding: 10px 12px 12px;
+  border-top: 1px solid var(--mx-line);
+}
+.eq-mx-spot-card__brand {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--eq-text-muted);
+}
+.eq-mx-spot-card__name {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.35;
+  margin-top: 4px;
+  min-height: 2.6em;
+}
+.eq-mx-spot-card__price {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--mx-navy);
+  margin-top: 8px;
+}
+/* Mağaza gövdesi — Mutbex sırası */
+.eq-home-cm.eq-home-cm-mutbex {
+  display: flex;
+  flex-direction: column;
+  border-top: none;
+}
+/* Mutbex sırası: promo kart → taksit → marka → kategori → dept vitrin → mozaik → sekmeler → markalar → katalog → yeni → twin → güven → CTA */
+.eq-home-cm-mutbex > .eq-mx-o-promo-cards {
+  order: 1;
+}
+.eq-home-cm-mutbex > .eq-mx-o-pay {
+  order: 2;
+}
+.eq-home-cm-mutbex > .eq-mx-o-4 {
+  order: 3;
+}
+.eq-home-cm-mutbex > .eq-mx-o-catsm {
+  order: 4;
+}
+.eq-home-cm-mutbex > .eq-mx-o-dept1,
+.eq-home-cm-mutbex > .eq-mx-showcase.eq-mx-o-dept1 {
+  order: 5;
+}
+.eq-home-cm-mutbex > .eq-mx-o-1 {
+  order: 6;
+}
+.eq-home-cm-mutbex > .eq-mx-o-mosaic,
+.eq-home-cm-mutbex > #eq-mx-vitrin-mosaic-section {
+  order: 8;
+}
+.eq-home-cm-mutbex > .eq-mx-o-4b {
+  order: 9;
+}
+.eq-home-cm-mutbex > main.eq-mx-o-2 {
+  display: block !important;
+  order: 7;
+  width: 100%;
+  align-self: stretch;
+  visibility: visible !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+body.eq-home .eq-home-cm-mutbex > main.main {
+  display: block !important;
+  visibility: visible !important;
+}
+body.eq-home .eq-home-cm-mutbex > main.main .products,
+body.eq-home .eq-home-cm-mutbex > main.main #prod-grid {
+  display: grid !important;
+  visibility: visible !important;
+  min-height: 1px;
+}
+.eq-home-cm-mutbex > .eq-mx-o-6[hidden],
+.eq-home-cm-mutbex > .eq-cm-twin-wrap.eq-mx-o-8[hidden] {
+  display: none !important;
+}
+.eq-home-cm-mutbex > .eq-mx-o-6 {
+  order: 10;
+}
+.eq-home-cm-mutbex > .eq-cm-twin-wrap.eq-mx-o-8,
+.eq-home-cm-mutbex > .eq-home-band.eq-mx-o-8 {
+  order: 11;
+}
+/* eq-mx-o-5: yedek bloklar + ikon şeridi (#eq-home-catband) kapalı — kare pop-cats yeterli */
+.eq-home-cm-mutbex > .eq-mx-o-5,
+body.eq-home #eq-home-catband,
+.eq-home-cm-mutbex > #eq-home-catband.eq-mx-o-5 {
+  display: none !important;
+}
+.eq-home-cm-mutbex > .eq-mx-o-7 {
+  order: 2;
+}
+.eq-home-cm-mutbex > .eq-mx-o-9 {
+  order: 13;
+}
+.eq-home-cm-mutbex > .eq-mx-o-promo,
+.eq-home-cm-mutbex > .eq-promo-strip.eq-mx-o-promo,
+.eq-home-cm-mutbex .eq-mx-o-hidden-promo {
+  display: none !important;
+}
+
+/* Öztiryakiler marka bandı — Mutbex düz (eğik kart yok) */
+.eq-home-cm-mutbex .eq-brand-banner.eq-brand-banner--vitrin {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: 20px;
+  min-height: 200px;
+  padding: 28px 32px;
+  background: #f4f6f9;
+  border: 1px solid var(--mx-line, #e5e7eb);
+  border-radius: 4px;
+  box-shadow: none;
+  transform: none !important;
+  overflow: hidden;
+}
+.eq-home-cm-mutbex .eq-brand-banner.eq-brand-banner--vitrin::before {
+  display: none;
+}
+.eq-home-cm-mutbex .eq-brand-banner.eq-brand-banner--vitrin:hover {
+  transform: none !important;
+  box-shadow: none;
+}
+.eq-home-cm-mutbex .eq-brand-banner.eq-brand-banner--vitrin .eq-bb-left {
+  gap: 6px;
+}
+.eq-home-cm-mutbex .eq-brand-banner.eq-brand-banner--vitrin .eq-bb-kicker {
+  color: var(--mx-gold, #b88a00);
+}
+.eq-home-cm-mutbex .eq-brand-banner.eq-brand-banner--vitrin .eq-bb-h,
+.eq-home-cm-mutbex .eq-brand-banner.eq-brand-banner--vitrin .eq-bb-h span {
+  color: var(--mx-navy, #001e50);
+}
+.eq-home-cm-mutbex .eq-brand-banner.eq-brand-banner--vitrin .eq-bb-p {
+  color: var(--eq-text-muted, #5c6478);
+  margin-bottom: 14px;
+}
+.eq-home-cm-mutbex .eq-brand-banner.eq-brand-banner--vitrin .eq-bb-cta {
+  background: var(--mx-navy, #001e50);
+  color: #fff;
+  border-radius: 999px;
+  padding: 10px 20px;
+  font-size: 12px;
+}
+.eq-home-cm-mutbex .eq-brand-banner.eq-brand-banner--vitrin:hover .eq-bb-cta {
+  background: #0a3270;
+}
+.eq-home-cm-mutbex .eq-brand-banner.eq-brand-banner--vitrin .eq-bb-right {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+.eq-home-cm-mutbex .eq-brand-banner.eq-brand-banner--vitrin .eq-bb-prod,
+.eq-home-cm-mutbex .eq-brand-banner.eq-brand-banner--vitrin .eq-bb-prod-1,
+.eq-home-cm-mutbex .eq-brand-banner.eq-brand-banner--vitrin .eq-bb-prod-2,
+.eq-home-cm-mutbex .eq-brand-banner.eq-brand-banner--vitrin .eq-bb-prod-3,
+.eq-home-cm-mutbex .eq-brand-banner.eq-brand-banner--vitrin:hover .eq-bb-prod,
+.eq-home-cm-mutbex .eq-brand-banner.eq-brand-banner--vitrin:hover .eq-bb-prod-1,
+.eq-home-cm-mutbex .eq-brand-banner.eq-brand-banner--vitrin:hover .eq-bb-prod-2,
+.eq-home-cm-mutbex .eq-brand-banner.eq-brand-banner--vitrin:hover .eq-bb-prod-3 {
+  flex: 1 1 0;
+  width: auto;
+  max-width: 190px;
+  height: 150px;
+  margin: 0;
+  padding: 10px;
+  object-fit: contain;
+  object-position: center bottom;
+  background: #fff;
+  border: 1px solid var(--mx-line, #e5e7eb);
+  border-radius: 4px;
+  box-shadow: none;
+  transform: none !important;
+  transition: border-color 0.2s;
+}
+.eq-home-cm-mutbex .eq-brand-banner.eq-brand-banner--vitrin:hover .eq-bb-prod {
+  border-color: #c5cdd8;
+}
+@media (max-width: 900px) {
+  .eq-home-cm-mutbex .eq-brand-banner.eq-brand-banner--vitrin {
+    grid-template-columns: 1fr;
+    padding: 24px 20px;
+    min-height: 0;
+  }
+  .eq-home-cm-mutbex .eq-brand-banner.eq-brand-banner--vitrin .eq-bb-right {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .eq-home-cm-mutbex .eq-brand-banner.eq-brand-banner--vitrin .eq-bb-prod,
+  .eq-home-cm-mutbex .eq-brand-banner.eq-brand-banner--vitrin .eq-bb-prod-1,
+  .eq-home-cm-mutbex .eq-brand-banner.eq-brand-banner--vitrin .eq-bb-prod-2,
+  .eq-home-cm-mutbex .eq-brand-banner.eq-brand-banner--vitrin .eq-bb-prod-3 {
+    flex: 1 1 calc(33.333% - 8px);
+    max-width: none;
+    height: 120px;
+  }
+}
+@media (max-width: 560px) {
+  .eq-home-cm-mutbex .eq-brand-banner.eq-brand-banner--vitrin .eq-bb-prod-1,
+  .eq-home-cm-mutbex .eq-brand-banner.eq-brand-banner--vitrin .eq-bb-prod-3 {
+    display: block;
+  }
+  .eq-home-cm-mutbex .eq-brand-banner.eq-brand-banner--vitrin .eq-bb-prod {
+    height: 100px;
+  }
+}
+.eq-home-cm-mutbex .eq-home-band.eq-mx-band-tight {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+/* 4'lü promo kart */
+.eq-mx-promo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+@media (max-width: 1100px) {
+  .eq-mx-promo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 560px) {
+  .eq-mx-promo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.eq-mx-promo-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 168px;
+  padding: 14px 14px 12px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  border: 1px solid rgba(0, 30, 80, 0.08);
+  transition: box-shadow 0.2s;
+}
+.eq-mx-promo-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 30, 80, 0.12);
+}
+.eq-mx-promo-card__brand {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mx-navy, #001e50);
+}
+.eq-mx-promo-card__tag {
+  font-size: 11px;
+  font-weight: 700;
+  color: #e65100;
+  margin-top: 4px;
+}
+.eq-mx-promo-card__title {
+  margin: 6px 0 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.3;
+  max-width: 58%;
+  color: #1a1d2b;
+}
+.eq-mx-promo-card__cta {
+  margin-top: auto;
+  align-self: flex-start;
+  padding: 7px 16px;
+  border-radius: 999px;
+  background: #e64a19;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+}
+.eq-mx-promo-card__img {
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  width: 46%;
+  max-width: 130px;
+  pointer-events: none;
+}
+.eq-mx-promo-card__img img {
+  width: 100%;
+  height: auto;
+  max-height: 120px;
+  object-fit: contain;
+  display: block;
+}
+/* Taksit / kargo bandı */
+.eq-mx-pay-banner {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 10px 4px;
+}
+.eq-mx-pay-banner__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+@media (max-width: 640px) {
+  .eq-mx-pay-banner__inner {
+    grid-template-columns: 1fr;
+  }
+}
+.eq-mx-pay-col {
+  padding: 12px 16px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.4;
+}
+.eq-mx-pay-col strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 800;
+  margin-bottom: 2px;
+}
+/* Kategori kutuları */
+.eq-mx-cat-grid--sm {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+@media (max-width: 900px) {
+  .eq-mx-cat-grid--sm {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.eq-mx-cat-mosaic {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+.eq-mx-cat-tile--lg {
+  grid-column: span 2;
+}
+@media (max-width: 900px) {
+  .eq-mx-cat-mosaic {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .eq-mx-cat-tile--lg {
+    grid-column: span 2;
+  }
+}
+.eq-mx-cat-tile {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  min-height: 88px;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #1a1d2b;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+.eq-mx-cat-tile--lg {
+  min-height: 120px;
+}
+.eq-mx-cat-tile--light {
+  color: #fff;
+}
+.eq-mx-cat-tile--light .eq-mx-cat-tile__cta {
+  background: #fff;
+  color: #1a1d2b;
+}
+.eq-mx-cat-tile__txt {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 12px 14px;
+  z-index: 1;
+}
+.eq-mx-cat-tile__label {
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+.eq-mx-cat-tile--lg .eq-mx-cat-tile__label {
+  font-size: 16px;
+}
+.eq-mx-cat-tile__cta {
+  margin-top: 8px;
+  align-self: flex-start;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: var(--mx-navy, #001e50);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+}
+.eq-mx-cat-tile__img {
+  flex: 0 0 42%;
+  max-width: 46%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.eq-mx-cat-tile__img img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: bottom right;
+}
+/* Departman vitrin slider */
+.eq-mx-showcase {
+  max-width: 1500px;
+  margin: 0 auto 8px;
+  padding: 0 10px;
+}
+.eq-mx-showcase__hdr {
+  border-radius: 8px 8px 0 0;
+  color: #fff;
+  overflow: hidden;
+}
+.eq-mx-showcase__hdr-inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  min-height: 100px;
+}
+.eq-mx-showcase__hdr-img {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.eq-mx-showcase__hdr-text h2 {
+  margin: 0 0 10px;
+  font-size: clamp(18px, 2.4vw, 26px);
+  font-weight: 800;
+  line-height: 1.2;
+}
+.eq-mx-showcase__hdr-cta {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--mx-navy, #001e50);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.eq-mx-showcase--orange .eq-mx-showcase__hdr-cta {
+  color: #e65100;
+}
+.eq-mx-showcase__hearts {
+  font-size: 28px;
+  color: #ff8a80;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.eq-mx-showcase__body {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  background: #f4f6f9;
+  border: 2px solid #ff6f00;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  padding: 10px 36px;
+}
+.eq-mx-showcase:not(.eq-mx-showcase--orange) .eq-mx-showcase__body {
+  border-color: #0288d1;
+}
+.eq-mx-showcase__track {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  flex: 1;
+  padding: 4px 0 8px;
+  scrollbar-width: thin;
+}
+.eq-mx-showcase__track--cards .prod-card-wrap {
+  flex: 0 0 min(220px, 42vw);
+  scroll-snap-align: start;
+  background: #fff;
+  border: 1px solid var(--mx-line, #e5e7eb);
+  overflow: hidden;
+  border-radius: 6px;
+}
+/* Bulaşıkhane / departman vitrin: dar kartta görsel kırpılmasın (contain) */
+.eq-mx-showcase__track--cards .prod-card-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+.eq-mx-showcase__track--cards .prod-img {
+  height: 188px;
+  min-height: 188px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fb;
+  border-bottom: 1px solid var(--mx-line, #e5e7eb);
+}
+.eq-mx-showcase__track--cards .prod-img img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+  object-position: center;
+}
+.eq-mx-showcase__track--cards .prod-info {
+  padding: 8px 10px 10px;
+  flex: 1 1 auto;
+}
+.eq-mx-showcase__track--cards .prod-name {
+  font-size: 11px;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.eq-mx-showcase__track--cards .eq-mx-badges {
+  left: 8px;
+  bottom: 8px;
+}
+.eq-mx-showcase__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--mx-line);
+  background: #fff;
+  color: var(--mx-navy);
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  border-radius: 4px;
+}
+.eq-mx-showcase__nav--prev {
+  left: 4px;
+}
+.eq-mx-showcase__nav--next {
+  right: 4px;
+}
+/* 4'lü platform hero + DÜNYADA BİR İLK banner korunur (kilit) */
+/* Mutbex tarzı ürün kartı */
+.eq-home-cm-mutbex .prod-card-wrap {
+  position: relative;
+}
+.eq-home-cm-mutbex .prod-card-link .prod-img {
+  position: relative;
+}
+.eq-mx-badge {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 3px 6px;
+  margin: 0 4px 4px 0;
+  border-radius: 2px;
+}
+.eq-mx-badge--ship {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+.eq-mx-badge--disc {
+  background: #fff3e0;
+  color: #e65100;
+}
+.eq-home-cm-mutbex .prod-img {
+  position: relative;
+}
+.eq-home-cm-mutbex .eq-mx-badges {
+  position: absolute;
+  left: 6px;
+  bottom: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  max-width: calc(100% - 12px);
+  z-index: 2;
+}
+.eq-home-cm-mutbex .eq-mx-prod-actions {
+  border-top: 1px solid var(--mx-line, #e5e7eb);
+}
+.eq-home-cm-mutbex .eq-mx-prod-actions {
+  display: flex;
+  gap: 0;
+}
+.eq-home-cm-mutbex .eq-mx-prod-actions .eq-mx-act {
+  flex: 1;
+}
+.eq-home-cm-mutbex .eq-mx-prod-actions .eq-cart-add {
+  flex: 1;
+  width: auto;
+  padding: 10px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: #fafafa;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  color: var(--eq-text, #1a1d2b);
+}
+.eq-home-cm-mutbex .eq-mx-prod-actions .eq-cart-add:hover {
+  background: var(--eq-surface-2, #f0f0f0);
+  color: var(--mx-navy, #001e50);
+}
+.eq-mx-prod-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--mx-line);
+}
+.eq-mx-prod-actions .eq-mx-act,
+.eq-mx-prod-actions span {
+  flex: 1;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 7px 4px;
+  border: 1px solid var(--mx-line);
+  color: var(--mx-navy);
+  background: #fafafa;
+}
+.eq-mx-prod-actions .eq-mx-act.eq-mx-add,
+.eq-mx-prod-actions span.eq-mx-add {
+  background: var(--mx-navy);
+  color: #fff;
+  border-color: var(--mx-navy);
+}
+.eq-mx-story__ring img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: calc(var(--mx-story-r, 20px) - 3px);
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  display: block;
+}
+.eq-img-ph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 120px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--eq-text-muted, #8a92a8);
+  background: var(--eq-surface-2, #eef2f8);
+}
+/* Kategori sayfaları (eq-dept) — Mutbex şeması */
+body.eq-shop-mutbex.eq-dept,
+body.eq-shop-mutbex.eq-mutbex-catalog .eq-cat-shell-root.eq-mx-vitrin--dept {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 0 24px;
+  background: #fff;
+}
+body.eq-shop-mutbex.eq-dept,
+body.eq-shop-mutbex.eq-mutbex-catalog .eq-mx-page-desc {
+  max-width: 1500px;
+  margin: -6px auto 0;
+  padding: 0 14px 14px;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--eq-text-muted, #5c6578);
+}
+body.eq-shop-mutbex.eq-dept,
+body.eq-shop-mutbex.eq-mutbex-catalog .eq-mx-spot-wrap {
+  flex: 0 0 min(220px, 42vw);
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+}
+body.eq-shop-mutbex.eq-dept,
+body.eq-shop-mutbex.eq-mutbex-catalog .eq-mx-brand-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 4px 2px 12px;
+  scrollbar-width: thin;
+}
+body.eq-shop-mutbex.eq-dept,
+body.eq-shop-mutbex.eq-mutbex-catalog .eq-cat-brand-chip {
+  flex: 0 0 auto;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border: 1px solid var(--mx-line, #e5e7eb);
+  border-radius: 999px;
+  background: #fafafa;
+  color: var(--mx-navy, #001e50);
+  cursor: pointer;
+  white-space: nowrap;
+}
+body.eq-shop-mutbex.eq-dept,
+body.eq-shop-mutbex.eq-mutbex-catalog .eq-cat-brand-chip--active,
+body.eq-shop-mutbex.eq-dept,
+body.eq-shop-mutbex.eq-mutbex-catalog .eq-cat-brand-chip:hover {
+  border-color: var(--mx-navy, #001e50);
+  background: var(--mx-navy, #001e50);
+  color: #fff;
+}
+body.eq-shop-mutbex.eq-dept,
+body.eq-shop-mutbex.eq-mutbex-catalog .eq-mx-story--active .eq-mx-story__ring {
+  box-shadow: 0 0 0 2px var(--mx-navy, #001e50);
+}
+body.eq-shop-mutbex.eq-dept,
+body.eq-shop-mutbex.eq-mutbex-catalog .eq-mx-load-more {
+  display: block;
+  width: calc(100% - 20px);
+  max-width: 320px;
+  margin: 10px auto 4px;
+  padding: 10px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid var(--mx-line, #e5e7eb);
+  background: #fafafa;
+  cursor: pointer;
+}
+body.eq-shop-mutbex.eq-dept,
+body.eq-shop-mutbex.eq-mutbex-catalog .eq-cat-sublist-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+body.eq-shop-mutbex.eq-dept,
+body.eq-shop-mutbex.eq-mutbex-catalog .eq-cat-sublist-clear {
+  font-size: 11px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: var(--mx-navy, #001e50);
+  text-decoration: underline;
+}
+
+/* Katalog araç çubuğu — Amazon main-filters + aktif chip'ler */
+body.eq-shop-mutbex.eq-dept,
+body.eq-shop-mutbex.eq-mutbex-catalog .eq-mx-catalog-bar {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 8px 14px 12px;
+  border-bottom: 1px solid var(--mx-line, #e5e7eb);
+}
+body.eq-shop-mutbex.eq-dept,
+body.eq-shop-mutbex.eq-mutbex-catalog .eq-mx-catalog-bar__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 14px;
+}
+body.eq-shop-mutbex.eq-dept,
+body.eq-shop-mutbex.eq-mutbex-catalog .eq-mx-catalog-count {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--mx-navy, #001e50);
+}
+body.eq-shop-mutbex.eq-dept,
+body.eq-shop-mutbex.eq-mutbex-catalog .eq-mx-main-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+body.eq-shop-mutbex.eq-dept,
+body.eq-shop-mutbex.eq-mutbex-catalog .eq-mx-main-filters .filter-btn {
+  border-radius: 8px;
+  min-height: 36px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid #d5d9d9;
+  background: linear-gradient(180deg, #f7f8f8 0%, #eceded 100%);
+  box-shadow: 0 1px 1px rgba(15, 17, 17, 0.06);
+  cursor: pointer;
+  color: var(--eq-text, #0f1111);
+}
+body.eq-shop-mutbex.eq-dept,
+body.eq-shop-mutbex.eq-mutbex-catalog .eq-mx-main-filters .filter-btn:hover {
+  background: linear-gradient(180deg, #ffffff 0%, #f2f3f3 100%);
+  border-color: #c7cbcb;
+}
+body.eq-shop-mutbex.eq-dept,
+body.eq-shop-mutbex.eq-mutbex-catalog .eq-mx-active-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+  align-items: center;
+}
+body.eq-shop-mutbex.eq-dept,
+body.eq-shop-mutbex.eq-mutbex-catalog .eq-mx-active-chips[hidden] {
+  display: none !important;
+}
+body.eq-shop-mutbex.eq-dept,
+body.eq-shop-mutbex.eq-mutbex-catalog .eq-mx-filter-chip {
+  font-size: 11px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--mx-line, #e5e7eb);
+  background: #f3f4f6;
+  color: var(--mx-navy, #001e50);
+  cursor: pointer;
+}
+body.eq-shop-mutbex.eq-dept,
+body.eq-shop-mutbex.eq-mutbex-catalog .eq-mx-filter-chip--all {
+  background: transparent;
+  border-style: dashed;
+  text-decoration: underline;
+}
+
+/* Sol refine — Mutbex vitrin ile uyumlu */
+body.eq-shop-mutbex.eq-dept,
+body.eq-shop-mutbex.eq-mutbex-catalog .eq-filter-col.eq-refine-amazon {
+  background: #fff;
+  border-right: 1px solid var(--mx-line, #e5e7eb);
+  box-shadow: none;
+}
+body.eq-shop-mutbex.eq-dept,
+body.eq-shop-mutbex.eq-mutbex-catalog .eq-filter-col.eq-refine-amazon .eq-filter-col-hd {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+body.eq-shop-mutbex.eq-dept,
+body.eq-shop-mutbex.eq-mutbex-catalog .eq-filter-col.eq-refine-amazon .eq-filter-clear--hdr {
+  width: auto;
+  margin: 0;
+  padding: 4px 0;
+  border: 0;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--mx-navy, #001e50);
+}
+body.eq-shop-mutbex.eq-dept,
+body.eq-shop-mutbex.eq-mutbex-catalog .eq-filter-col.eq-refine-amazon .eq-filter-sec--tiles {
+  border-bottom: 1px solid var(--eq-border-soft, #e5e7eb);
+  max-height: 42vh;
+  overflow-y: auto;
+}
+
+/* Mobil: Filtrele → sol panel drawer */
+.eq-dept-filter-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 190;
+  background: rgba(0, 30, 80, 0.35);
+}
+body.eq-dept-filter-open .eq-dept-filter-backdrop {
+  display: block;
+}
+@media (max-width: 900px) {
+  body.eq-dept-filter-open .eq-filter-col.eq-refine-amazon {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 200;
+    width: min(280px, 88vw);
+    max-width: 88vw;
+    max-height: none;
+    overflow-y: auto;
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.12);
+  }
+}
+
+/* Mobil: alt kategori seçiliyken üst departmana dön */
+.eq-cat-mobile-parent {
+  display: none;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 10px 12px 0;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.eq-cat-mobile-parent:not([hidden]) {
+  display: flex;
+}
+.eq-cat-mobile-parent__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border: 1px solid var(--mx-line, #e3e3e3);
+  border-radius: 8px;
+  background: var(--eq-surface, #fff);
+  color: var(--mx-navy, #001e50);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+.eq-cat-mobile-parent__chev {
+  font-size: 20px;
+  line-height: 1;
+  opacity: 0.85;
+}
+.eq-cat-mobile-parent__cur {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--eq-text-muted, #6b7280);
+}
+
+@media (max-width: 720px) {
+  .eq-mx-hero__thumbs {
+    display: none;
+  }
+  .eq-mx-story {
+    width: 100px;
+  }
+  .eq-mx-story__ring {
+    --mx-story-r: 20px;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* === Site geneli Mutbex (PFOS / Bar Design hariç) — renkler :root --eq-* === */
+body.eq-shop-mutbex:not(.eq-pfos):not(.bd-page) {
+  --mx-navy: var(--eq-topnav-dept-bg, #001e50);
+  --mx-gold: var(--eq-accent-gold, #b88a00);
+  --mx-line: #e5e7eb;
+}
+
+body.eq-shop-mutbex .eq-mx-chrome-bar .eq-mx-ticker {
+  border-bottom: 1px solid var(--mx-line);
+}
+
+/* Ürün kartları — ana sayfa dışı katalog / PDP grid */
+body.eq-shop-mutbex:not(.eq-home) .prod-card-wrap {
+  position: relative;
+  border: 1px solid var(--mx-line);
+  border-radius: 2px;
+  background: #fff;
+  overflow: hidden;
+}
+body.eq-shop-mutbex:not(.eq-home) .prod-card-link .prod-img {
+  position: relative;
+}
+body.eq-shop-mutbex:not(.eq-home) .prod-img {
+  position: relative;
+}
+body.eq-shop-mutbex:not(.eq-home) .eq-mx-badges {
+  position: absolute;
+  left: 6px;
+  bottom: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  max-width: calc(100% - 12px);
+  z-index: 2;
+}
+body.eq-shop-mutbex:not(.eq-home) .eq-mx-prod-actions {
+  display: flex;
+  gap: 0;
+  border-top: 1px solid var(--mx-line);
+  margin-top: 0;
+  padding-top: 0;
+}
+body.eq-shop-mutbex:not(.eq-home) .eq-mx-prod-actions .eq-mx-act {
+  flex: 1;
+}
+body.eq-shop-mutbex:not(.eq-home) .eq-mx-prod-actions .eq-cart-add,
+body.eq-shop-mutbex:not(.eq-home) .eq-mx-prod-actions .eq-mx-add {
+  flex: 1;
+  background: var(--mx-navy);
+  color: #fff;
+  border-color: var(--mx-navy);
+}
+
+/* PDP — Amazon turkuazı yerine marka lacivert / altın */
+body.eq-shop-mutbex .eq-product-brand,
+body.eq-shop-mutbex .eq-product-brand-link,
+body.eq-shop-mutbex .eq-amz-rating-link {
+  color: var(--mx-navy) !important;
+}
+body.eq-shop-mutbex .eq-product-brand-link:hover {
+  color: var(--mx-gold) !important;
+}
+body.eq-shop-mutbex .eq-amz-stars {
+  color: var(--mx-gold) !important;
+}
+body.eq-shop-mutbex .eq-product-thumbs--vertical button:hover {
+  border-color: var(--mx-navy) !important;
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--mx-navy) 18%, transparent) !important;
+}
+body.eq-shop-mutbex .eq-product-thumbs--vertical button.eq-product-thumb--active {
+  border-color: var(--mx-gold) !important;
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--mx-gold) 28%, transparent) !important;
+}
+body.eq-shop-mutbex .eq-product-buybox .eq-amz-buy,
+body.eq-shop-mutbex .eq-amz-buy--primary {
+  background: var(--mx-navy) !important;
+  border-color: var(--mx-navy) !important;
+}
+body.eq-shop-mutbex .eq-product-buybox .eq-amz-buy:hover {
+  filter: brightness(1.06);
+}
+
+/* Rehber / iletişim / kurulum sayfaları */
+body.eq-shop-mutbex.eq-mutbex-chrome .pg {
+  background: #fff;
+}
+body.eq-shop-mutbex .eq-home-band {
+  border-top: 1px solid var(--mx-line);
+  border-bottom: 1px solid var(--mx-line);
+}
+body.eq-shop-mutbex .eq-home-band-title small {
+  color: var(--mx-gold);
+}
+body.eq-shop-mutbex .eq-rail-card {
+  border: 1px solid var(--mx-line);
+  border-radius: 2px;
+}
+body.eq-shop-mutbex .main-top .main-title {
+  color: var(--mx-navy);
+  font-weight: 700;
+}
+body.eq-shop-mutbex .ct-lead a {
+  color: var(--mx-navy);
+}
+
+/* === Kategori vitrin: Mutbex paketi (tek CSS, tüm eq-dept) === */
+body.eq-shop-mutbex.eq-mutbex-catalog .eq-mx-hero,
+body.eq-shop-mutbex.eq-mutbex-catalog .eq-mx-story-wrap,
+body.eq-shop-mutbex.eq-mutbex-catalog .eq-mx-brands-wrap {
+  display: none !important;
+}
+body.eq-shop-mutbex.eq-mutbex-catalog .eq-mx-spotlight__track {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  overflow: visible;
+  scroll-snap-type: none;
+  padding-bottom: 16px;
+}
+@media (min-width: 576px) {
+  body.eq-shop-mutbex.eq-mutbex-catalog .eq-mx-spotlight__track {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (min-width: 900px) {
+  body.eq-shop-mutbex.eq-mutbex-catalog .eq-mx-spotlight__track {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1200px) {
+  body.eq-shop-mutbex.eq-mutbex-catalog .eq-mx-spotlight__track {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 14px;
+  }
+}
+body.eq-shop-mutbex.eq-mutbex-catalog .eq-mx-spot-wrap {
+  flex: none !important;
+  width: 100% !important;
+  max-width: none !important;
+  scroll-snap-align: unset !important;
+}
+body.eq-shop-mutbex.eq-mutbex-catalog .eq-mx-spot-card {
+  flex: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+body.eq-shop-mutbex.eq-mutbex-catalog .eq-mx-spot-card__img {
+  aspect-ratio: 1 / 1;
+  max-height: 200px;
+}
+/* legacy mutbex-grid block removed */
+.eq-mx-vitrin--mutbex-grid .eq-mx-hero,
+.eq-mx-vitrin--mutbex-grid .eq-mx-story-wrap,
+.eq-mx-vitrin--mutbex-grid .eq-mx-brands-wrap,
+.eq-mx-vitrin--mutbex-grid .eq-mx-spotlight-wrap,
+.eq-mx-vitrin--mutbex-grid .eq-mx-main-filters,
+.eq-mx-vitrin--mutbex-grid .eq-mx-spotlight-wrap .eq-mx-load-more {
+  display: none !important;
+}
+.eq-mx-vitrin--mutbex-grid .eq-mx-breadcrumb {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 10px 14px 0;
+  font-size: 12px;
+  color: var(--eq-text-muted, #6b7280);
+}
+.eq-mx-vitrin--mutbex-grid .eq-mx-breadcrumb a {
+  color: var(--mx-navy, #001e50);
+  text-decoration: none;
+  font-weight: 500;
+}
+.eq-mx-vitrin--mutbex-grid .eq-mx-breadcrumb__sep {
+  margin: 0 6px;
+  opacity: 0.6;
+}
+.eq-mx-vitrin--mutbex-grid .eq-mx-cat-title {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 8px 14px 4px;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--eq-text, #111);
+}
+.eq-mx-vitrin--mutbex-grid .eq-mx-page-desc {
+  margin-top: 0;
+  padding-top: 0;
+}
+.eq-mx-vitrin--mutbex-grid .eq-mx-catalog-bar {
+  background: #fff;
+  border: 1px solid var(--mx-line);
+  border-radius: 8px;
+  margin: 8px 14px 12px;
+  max-width: calc(1500px - 28px);
+}
+.eq-mx-vitrin--mutbex-grid .eq-mx-catalog-bar__top--mutbex {
+  flex-wrap: wrap;
+}
+.eq-mx-vitrin--mutbex-grid .eq-mx-catalog-count strong {
+  font-weight: 700;
+  color: var(--eq-text, #111);
+}
+.eq-mx-vitrin--mutbex-grid .eq-mx-filter-drawer-btn {
+  display: none;
+}
+.eq-mx-vitrin--mutbex-grid .eq-mx-catalog-bar__tools {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+.eq-mx-vitrin--mutbex-grid .eq-mx-sort-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--mx-navy, #001e50);
+}
+.eq-mx-vitrin--mutbex-grid .eq-mx-sort-select {
+  border: 1px solid var(--mx-navy, #001e50);
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 12px;
+  background: #fff;
+  color: var(--mx-navy, #001e50);
+  min-height: 36px;
+}
+.eq-mx-vitrin--mutbex-grid .eq-mx-compare-btn {
+  border-color: var(--mx-navy, #001e50);
+  color: var(--mx-navy, #001e50);
+}
+.eq-mx-vitrin--mutbex-grid .eq-mx-grid-section {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 14px 24px;
+}
+.eq-mx-vitrin--mutbex-grid .eq-mx-product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  align-items: stretch;
+}
+@media (min-width: 576px) {
+  .eq-mx-vitrin--mutbex-grid .eq-mx-product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (min-width: 900px) {
+  .eq-mx-vitrin--mutbex-grid .eq-mx-product-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1200px) {
+  .eq-mx-vitrin--mutbex-grid .eq-mx-product-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 14px;
+  }
+}
+.eq-mx-vitrin--mutbex-grid .eq-mx-product-item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid var(--mx-line, #e5e7eb);
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;
+}
+.eq-mx-vitrin--mutbex-grid .eq-mx-product-item__media {
+  display: block;
+  text-decoration: none;
+}
+.eq-mx-vitrin--mutbex-grid .eq-mx-product-item__img {
+  aspect-ratio: 1 / 1;
+  max-height: 220px;
+  background: #f4f6f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 8px;
+}
+.eq-mx-vitrin--mutbex-grid .eq-mx-product-item__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.eq-mx-vitrin--mutbex-grid .eq-mx-product-item__body {
+  padding: 10px 10px 8px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-top: 1px solid var(--mx-line, #e5e7eb);
+}
+.eq-mx-vitrin--mutbex-grid .eq-mx-product-item__title {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--eq-text, #111);
+  text-decoration: none;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 3.9em;
+}
+.eq-mx-vitrin--mutbex-grid .eq-mx-product-item__title:hover {
+  color: var(--mx-navy, #001e50);
+}
+.eq-mx-vitrin--mutbex-grid .eq-mx-product-item__code {
+  font-size: 10px;
+  color: var(--eq-text-muted, #6b7280);
+}
+.eq-mx-vitrin--mutbex-grid .eq-mx-product-item__price {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--mx-navy, #001e50);
+  margin-top: auto;
+  padding-top: 6px;
+}
+.eq-mx-vitrin--mutbex-grid .eq-mx-product-item .eq-mx-prod-actions {
+  margin-top: 0;
+  border-top: 1px solid var(--mx-line, #e5e7eb);
+}
+.eq-mx-vitrin--mutbex-grid .eq-mx-grid-empty {
+  grid-column: 1 / -1;
+  padding: 32px 16px;
+  text-align: center;
+  color: var(--eq-text-muted);
+}
+@media (max-width: 900px) {
+  .eq-mx-vitrin--mutbex-grid .eq-mx-filter-drawer-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    border: 1px solid var(--mx-navy, #001e50);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--mx-navy, #001e50);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .eq-mx-vitrin--mutbex-grid .eq-mx-main-filters .filter-btn[data-eq-filter-action="refine"] {
+    display: none;
+  }
+}
+
+/* ===== Ana sayfa — bütünleşik mağaza teması (Equsto / Mutbex) ===== */
+body.eq-home.eq-home-mutbex {
+  --home-navy: var(--eq-topnav-dept-bg, #001e50);
+  --home-gold: var(--eq-accent-gold, #b88a00);
+  --home-line: #e5e7eb;
+  --home-canvas: #f3f4f6;
+  --home-card: #ffffff;
+  --home-radius: 6px;
+  --home-shadow: 0 1px 2px rgba(15, 17, 17, 0.06), 0 4px 14px rgba(0, 30, 80, 0.05);
+  --home-pad-x: 12px;
+  --home-max: 1500px;
+}
+
+body.eq-home.eq-home-mutbex .right-col {
+  background: var(--home-canvas);
+}
+
+body.eq-home.eq-home-mutbex .right-col > .hero-banner.eq-world-first-banner,
+body.eq-home.eq-home-mutbex .eq-home-hero-ads.hero,
+body.eq-home.eq-home-mutbex .eq-home-platform-hero,
+body.eq-home.eq-home-mutbex .eq-mx-pop-cats-wrap.eq-home-pop-cats-top,
+body.eq-home.eq-home-mutbex .eq-mx-vitrin {
+  max-width: var(--home-max);
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body.eq-home.eq-home-mutbex .eq-home-platform-hero {
+  background: var(--home-card);
+  border: 1px solid var(--home-line);
+  border-radius: var(--home-radius);
+  box-shadow: var(--home-shadow);
+  overflow: hidden;
+  margin-bottom: var(--home-pad-x);
+}
+
+body.eq-home.eq-home-mutbex .eq-home-platform-hero > .hero-banner.eq-world-first-banner {
+  border-bottom: 1px solid var(--home-line);
+}
+
+body.eq-home.eq-home-mutbex .eq-home-hero-ads.hero {
+  background: var(--home-card);
+  border: 1px solid var(--home-line);
+  border-top: none;
+  border-radius: 0 0 var(--home-radius) var(--home-radius);
+  box-shadow: var(--home-shadow);
+  overflow: hidden;
+}
+
+body.eq-home.eq-home-mutbex .eq-home-hero-ads .hero-card--pfos .hero-card-visual--pfos {
+  border-radius: 0;
+}
+
+body.eq-home.eq-home-mutbex .eq-home-hero-ads .hero-card--pfos:not(.hero-card--soon):hover .hero-card-img--pfos-cover {
+  filter: drop-shadow(0 14px 36px rgba(0, 30, 80, 0.22));
+  transition: filter 0.25s ease;
+}
+
+body.eq-home.eq-home-mutbex .eq-home-hero-ads .hero-card-img--pfos-cover {
+  transition: filter 0.25s ease;
+}
+
+body.eq-home.eq-home-mutbex .eq-home-platform-hero .eq-home-hero-ads.hero {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+body.eq-home.eq-home-mutbex .eq-mx-pop-cats-wrap.eq-home-pop-cats-top {
+  background: var(--home-card);
+  border: 1px solid var(--home-line);
+  border-radius: var(--home-radius);
+  box-shadow: var(--home-shadow);
+  margin-bottom: var(--home-pad-x);
+  padding: 14px 12px 12px;
+}
+
+body.eq-home.eq-home-mutbex .eq-mx-vitrin {
+  background: var(--home-card);
+  border: 1px solid var(--home-line);
+  border-top: none;
+  border-radius: 0 0 var(--home-radius) var(--home-radius);
+  box-shadow: var(--home-shadow);
+  margin-bottom: var(--home-pad-x);
+}
+
+body.eq-home.eq-home-mutbex .eq-mx-ticker {
+  background: linear-gradient(90deg, #f8f9fb 0%, #fff 50%, #f8f9fb 100%);
+  border-bottom-color: var(--home-line);
+}
+
+body.eq-home.eq-home-mutbex .eq-mx-hero__stage {
+  border-radius: var(--home-radius);
+  border-color: var(--home-line);
+}
+
+body.eq-home.eq-home-mutbex .eq-mx-pop-cats-wrap {
+  padding-top: 14px;
+  padding-bottom: 12px;
+}
+
+body.eq-home.eq-home-mutbex .eq-mx-pop-cats__title,
+body.eq-home.eq-home-mutbex .eq-home-cm .main-title,
+body.eq-home.eq-home-mutbex .eq-home-cm .eq-home-band-title span,
+body.eq-home.eq-home-mutbex .eq-home-cm .eq-home-band-title {
+  color: var(--home-navy);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+body.eq-home.eq-home-mutbex .eq-mx-pop-cats__title {
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--home-line);
+}
+
+body.eq-home.eq-home-mutbex .eq-mx-pop-cat {
+  border-radius: var(--home-radius);
+  border-color: var(--home-line);
+  background: var(--home-card);
+  box-shadow: none;
+}
+
+body.eq-home.eq-home-mutbex .eq-mx-pop-cat:hover {
+  border-color: #c5cdd8;
+  box-shadow: var(--home-shadow);
+  transform: translateY(-1px);
+}
+
+body.eq-home.eq-home-mutbex .eq-mx-pop-cat__img {
+  border-radius: calc(var(--home-radius) - 2px);
+}
+
+body.eq-home.eq-home-mutbex .eq-home-cm.eq-home-cm-mutbex {
+  background: var(--home-canvas);
+  padding: 0 var(--home-pad-x) 20px;
+  gap: var(--home-pad-x);
+}
+
+body.eq-home.eq-home-mutbex .eq-home-cm .eq-home-band-inner,
+body.eq-home.eq-home-mutbex .eq-home-cm main.main > .main-top,
+body.eq-home.eq-home-mutbex .eq-home-cm main.main .products,
+body.eq-home.eq-home-mutbex .eq-home-cm .eq-trust-band.eq-cm-trust .eq-trust-inner {
+  border-radius: var(--home-radius);
+  border-color: var(--home-line);
+  box-shadow: var(--home-shadow);
+}
+
+body.eq-home.eq-home-mutbex .eq-home-cm .eq-trust-band.eq-cm-trust {
+  padding: 0;
+}
+
+body.eq-home.eq-home-mutbex .eq-home-cm .eq-trust-band .eq-trust-card {
+  border-radius: calc(var(--home-radius) - 2px);
+  padding: 12px 14px;
+  background: #fafbfc;
+  border-color: var(--home-line);
+}
+
+body.eq-home.eq-home-mutbex .eq-home-cm .eq-trust-ico {
+  background: var(--home-card);
+  color: var(--home-navy);
+}
+
+body.eq-home.eq-home-mutbex .eq-home-cm .eq-trust-h {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--home-navy);
+}
+
+body.eq-home.eq-home-mutbex .eq-home-cm .eq-trust-p {
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+body.eq-home.eq-home-mutbex .eq-home-cm .eq-brand-banner.eq-brand-banner--vitrin {
+  border-radius: var(--home-radius);
+  box-shadow: var(--home-shadow);
+}
+
+body.eq-home.eq-home-mutbex .eq-home-cm .eq-home-band-head {
+  border-bottom-color: var(--home-line);
+}
+
+body.eq-home.eq-home-mutbex .eq-home-cm .eq-home-band-title small {
+  color: var(--home-gold);
+}
+
+body.eq-home.eq-home-mutbex .eq-home-cm .eq-rail-tab.is-active {
+  border-bottom-color: var(--home-navy);
+  color: var(--home-navy);
+}
+
+body.eq-home.eq-home-mutbex .eq-home-cm .eq-rail-card,
+body.eq-home.eq-home-mutbex .eq-home-cm .prod-card-wrap {
+  border-radius: var(--home-radius);
+  border-color: var(--home-line);
+}
+
+body.eq-home.eq-home-mutbex .eq-home-cm .prod-card-wrap:hover,
+body.eq-home.eq-home-mutbex .eq-home-cm .eq-rail-card:hover {
+  box-shadow: var(--home-shadow);
+  border-color: #c5cdd8;
+}
+
+body.eq-home.eq-home-mutbex .eq-home-cm .prod-img,
+body.eq-home.eq-home-mutbex .eq-home-cm .eq-rail-card-img {
+  background: #f8f9fb;
+}
+
+body.eq-home.eq-home-mutbex .eq-home-cm .eq-mx-prod-actions .eq-cart-add,
+body.eq-home.eq-home-mutbex .eq-home-cm .prod-card-wrap > button,
+body.eq-home.eq-home-mutbex .eq-home-cm .eq-rail-card .eq-cm-rail-cta {
+  border-radius: 0 0 calc(var(--home-radius) - 1px) calc(var(--home-radius) - 1px);
+  background: var(--home-navy);
+  color: #fff;
+  border: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+body.eq-home.eq-home-mutbex .eq-home-cm .eq-mx-prod-actions .eq-cart-add:hover,
+body.eq-home.eq-home-mutbex .eq-home-cm .prod-card-wrap > button:hover {
+  background: #002a6b;
+  color: #fff;
+}
+
+body.eq-home.eq-home-mutbex .eq-home-cm .eq-brand-cell {
+  border-radius: var(--home-radius);
+  border-color: var(--home-line);
+  background: var(--home-card);
+}
+
+body.eq-home.eq-home-mutbex .eq-home-cm .eq-brand-cell:hover {
+  border-color: var(--home-navy);
+  color: var(--home-navy);
+  box-shadow: var(--home-shadow);
+}
+
+body.eq-home.eq-home-mutbex .eq-home-cm .filter-btn {
+  border-radius: var(--home-radius);
+  border-color: var(--home-line);
+  font-weight: 600;
+}
+
+body.eq-home.eq-home-mutbex .eq-home-cm .filter-btn:hover {
+  border-color: var(--home-navy);
+  color: var(--home-navy);
+}
+
+body.eq-home.eq-home-mutbex .eq-home-cm .products {
+  grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
+  direction: ltr;
+}
+
+@media (min-width: 1200px) {
+  body.eq-home.eq-home-mutbex .eq-home-cm .products {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  body.eq-home.eq-home-mutbex {
+    --home-pad-x: 10px;
+  }
+  body.eq-home.eq-home-mutbex .eq-home-hero-ads.hero {
+    border-radius: 0;
+  }
+  body.eq-home.eq-home-mutbex .eq-mx-vitrin {
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+}

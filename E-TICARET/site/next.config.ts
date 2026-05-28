@@ -156,6 +156,8 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return {
       beforeFiles: [
+        /* Katalog görselleri: /data/images/catalog/… → /images/catalog/… (legacy HTML + eq-site-urls) */
+        { source: "/data/images/:path*", destination: "/images/:path*" },
         { source: "/arama", destination: "/arama.html" },
         { source: "/arama/", destination: "/arama.html" },
         /* API birleştirme — Hobby 12 function limiti (geriye dönük URL) */

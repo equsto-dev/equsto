@@ -78,7 +78,12 @@
     if (/^caglayan-market\//i.test(s) || /^prosogutma-market\//i.test(s)) {
       return '/data/' + s.replace(/^data\//, '');
     }
-    if (/^https?:\/\//i.test(s)) return s;
+    if (/^https?:\/\//i.test(s)) {
+      try {
+        if (typeof window.eqAllowRemoteImages === 'function' && window.eqAllowRemoteImages()) return s;
+      } catch (_) {}
+      return '';
+    }
     if (s.charAt(0) === '/') return s;
     if (/^images\/catalog\//i.test(s)) return '/' + s;
     if (/^images\/home\//i.test(s)) return '/' + s;
@@ -525,7 +530,7 @@
         '"' +
         (rawImg ? ' data-eq-img-raw="' + esc(rawImg) + '" data-eq-img-step="0"' : '') +
         (oztiKod ? ' data-eq-ozti-kod="' + esc(oztiKod) + '"' : '') +
-        ' alt="" loading="lazy" decoding="async" onerror="typeof __eqImgFail===\'function\'&&__eqImgFail(this)">'
+        ' alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="typeof __eqImgFail===\'function\'&&__eqImgFail(this)">'
       : '';
     var cartBtn =
       window.EqustoCart && typeof window.EqustoCart.cartAddButtonAttrs === 'function'
