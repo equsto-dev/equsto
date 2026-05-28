@@ -112,7 +112,7 @@
             { key: "footer.link_sitemap", label: "Site haritası", href: "/sitemap.xml" },
             { key: "footer.link_llms", label: "Asistan özet dosyası", href: "/llms.txt" },
             { key: "footer.link_steakhouse", label: "Steakhouse mutfak rehberi", href: "/steakhouse-kurulumu" },
-            { key: "footer.link_marka", label: "Markalarımız", href: "/marka.html" },
+            { key: "footer.link_marka", label: "Markalarımız", href: "/shop/marka" },
           ],
         },
         {

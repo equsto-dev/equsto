@@ -4,6 +4,15 @@
    * «Markalarımız» altında gösterilen örnek üretici markalar (ürün filtresi değil).
    * Endüstriyel mutfak / foodservice üreticileri — sıra kabaca bilinirlik; sayfa `window.__EQUSTO_REF_MARKALAR_SIRASI = [...]` ile ezilebilir.
    */
+  function brandShopHref(brandName) {
+    if (typeof window.eqBrandHref === "function") return window.eqBrandHref(brandName);
+    var slug = String(brandName || "")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+    return "/shop/marka/" + encodeURIComponent(slug);
+  }
+
   function defaultRefMarkalarSirasi() {
     var w = typeof window !== "undefined" ? window : {};
     if (w.__EQUSTO_REF_MARKALAR_SIRASI && Array.isArray(w.__EQUSTO_REF_MARKALAR_SIRASI) && w.__EQUSTO_REF_MARKALAR_SIRASI.length) {
@@ -39,7 +48,7 @@
       var row = document.createElement("a");
       row.className = "eq-filter-ref-row";
       row.textContent = s;
-      row.href = "marka.html?b=" + encodeURIComponent(s);
+      row.href = brandShopHref(s);
       wrap.appendChild(row);
     });
     sec.insertBefore(wrap, brandsEl);
@@ -150,7 +159,7 @@
           });
         } else {
           btn = document.createElement("a");
-          btn.href = "marka.html?b=" + encodeURIComponent(b);
+          btn.href = brandShopHref(b);
         }
         btn.className = "eq-filter-brand-btn" + (isActive ? " active" : "");
         btn.textContent = b;
