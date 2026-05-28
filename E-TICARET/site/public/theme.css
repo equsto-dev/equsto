@@ -4485,110 +4485,63 @@ body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col a:hover {
   text-decoration: underline;
 }
 body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-brand {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 16px 24px;
   margin-bottom: 18px;
-  padding-top: 8px;
+  padding-top: 12px;
   border-top: 1px solid rgba(255, 255, 255, 0.14);
+  text-align: center;
 }
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-logo {
-  display: inline-flex;
-  align-items: center;
-  color: #fff;
-  text-decoration: none;
-}
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-logo .eq-logo-svg,
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-logo .eq-logo-wordmark {
-  height: 18px;
-  width: auto;
-  max-width: min(160px, 72vw);
-}
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-logo .eq-logo-e-bar {
-  fill: #fff;
-}
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-logo .eq-logo-q circle,
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-logo .eq-logo-q line,
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-logo .eq-logo-letter,
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-logo path,
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-logo > .eq-logo-svg > circle {
-  stroke: #fff;
-}
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-logo-text {
-  font-size: 22px;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  color: #fff;
-}
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-locale {
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.72);
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-company {
+  margin: 0 auto 10px;
+  max-width: 100%;
+  text-align: center;
+  font-size: clamp(9px, 1.65vw, 12px);
+  font-weight: 400 !important;
+  font-style: normal;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.88);
+  letter-spacing: 0;
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-tagline {
-  margin: 0 0 8px;
+  margin: 0;
   text-align: center;
   font-size: 12px;
   color: rgba(255, 255, 255, 0.72);
   letter-spacing: 0.02em;
 }
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-partners {
-  margin: 0;
-  text-align: center;
-  font-size: 11px;
-  color: rgba(255, 255, 255, 0.55);
-  letter-spacing: 0.04em;
+/* Footer — SSS (Size yardımcı olalım sütunu) */
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col-faq {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
 }
-/* Footer — geniş SSS */
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-faq {
-  background: #0a284f;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 40px 20px 36px;
-}
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-faq-inner {
-  max-width: 1500px;
-  margin: 0 auto;
-}
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-faq h2 {
-  margin: 0 0 10px;
-  font-size: clamp(20px, 2.4vw, 26px);
-  font-weight: 700;
-  color: #fff;
-  letter-spacing: -0.02em;
-}
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-faq-intro {
-  margin: 0 0 24px;
-  max-width: 52rem;
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col-faq-title {
+  margin: 0 0 8px;
   font-size: 14px;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.72);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.92);
+  letter-spacing: 0.01em;
 }
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-faq-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px 20px;
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col-faq-intro {
+  margin: 0 0 12px;
+  font-size: 12px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.65);
 }
-@media (min-width: 1024px) {
-  body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-faq-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
-@media (max-width: 640px) {
-  body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-faq-grid {
-    grid-template-columns: 1fr;
-  }
-}
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-faq-item {
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col-faq .eq-mfoot-faq-item {
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.04);
   padding: 0;
 }
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-faq-item summary {
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col-faq .eq-mfoot-faq-item summary {
   cursor: pointer;
   list-style: none;
   padding: 14px 40px 14px 16px;
@@ -4598,10 +4551,10 @@ body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-faq-item summary {
   color: #fff;
   position: relative;
 }
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-faq-item summary::-webkit-details-marker {
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col-faq .eq-mfoot-faq-item summary::-webkit-details-marker {
   display: none;
 }
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-faq-item summary::after {
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col-faq .eq-mfoot-faq-item summary::after {
   content: "";
   position: absolute;
   right: 16px;
@@ -4613,13 +4566,13 @@ body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-faq-item summary::after {
   transform: translateY(-70%) rotate(45deg);
   transition: transform 0.2s ease;
 }
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-faq-item[open] summary::after {
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col-faq .eq-mfoot-faq-item[open] summary::after {
   transform: translateY(-30%) rotate(-135deg);
 }
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-faq-a {
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col-faq .eq-mfoot-faq-a {
   padding: 0 16px 14px;
 }
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-faq-a p {
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col-faq .eq-mfoot-faq-a p {
   margin: 0;
   font-size: 13px;
   line-height: 1.6;

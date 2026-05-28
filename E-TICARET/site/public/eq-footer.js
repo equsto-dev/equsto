@@ -5,7 +5,7 @@
 (function () {
   "use strict";
 
-  var FOOTER_JSON = "/data/footer-vitrin.json?v=20260528foot-faq1";
+  var FOOTER_JSON = "/data/footer-vitrin.json?v=20260528foot-brand8";
   var footerData = null;
   var footerLoadPromise = null;
 
@@ -25,6 +25,20 @@
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;");
+  }
+
+  /** Tek satır — harf arası 1 nbsp, sözcük arası 3 nbsp (tarayıcı tek boşluğa indirgemesin). */
+  var COMPANY_PARTS = [
+    "E Q U S T O",
+    "T E K N O L O J İ",
+    "L İ M İ T E D",
+  ];
+  var COMPANY_DISPLAY_LINE = COMPANY_PARTS.join("   ");
+
+  function companyMarkup() {
+    return COMPANY_PARTS.map(function (part) {
+      return esc(part.replace(/ /g, "\u00a0"));
+    }).join("\u00a0\u00a0\u00a0");
   }
 
   /** Kanonik yol; boş href üretmez. */
@@ -67,7 +81,37 @@
     return f;
   }
 
-  function colHtml(titleKey, titleFb, links) {
+  function faqItemsHtml(faq) {
+    if (!faq || !faq.items || !faq.items.length) return "";
+    var faqTitle = t(faq.titleKey || "footer.faq_sss_title", faq.title || "SSS");
+    var items = faq.items
+      .map(function (it) {
+        var q = t(it.qKey || "", it.q || "");
+        var a = t(it.aKey || "", it.a || "");
+        return (
+          '<details class="eq-mfoot-faq-item"><summary>' +
+          esc(q) +
+          '</summary><div class="eq-mfoot-faq-a"><p>' +
+          esc(a) +
+          "</p></div></details>"
+        );
+      })
+      .join("");
+    return (
+      '<div class="eq-mfoot-col-faq" aria-label="' +
+      esc(faqTitle) +
+      '">' +
+      '<h4 class="eq-mfoot-col-faq-title">' +
+      esc(faqTitle) +
+      "</h4>" +
+      '<div class="eq-mfoot-col-faq-list">' +
+      items +
+      "</div>" +
+      "</div>"
+    );
+  }
+
+  function colHtml(titleKey, titleFb, links, faq) {
     var lis = links
       .map(function (ln) {
         var target = resolveLinkHref(ln.rawHref || ln.href || ln.path || "#");
@@ -82,22 +126,27 @@
         );
       })
       .join("");
+    var faqBlock = faq ? faqItemsHtml(faq) : "";
+    var colClass = "eq-mfoot-col";
     return (
-      '<div class="eq-mfoot-col">' +
+      "<div class=\"" +
+      colClass +
+      '">' +
       "<h3>" +
       esc(t(titleKey, titleFb)) +
       "</h3>" +
       "<ul>" +
       lis +
       "</ul>" +
+      faqBlock +
       "</div>"
     );
   }
 
   function defaultFooterData() {
     return {
+      companyDisplay: COMPANY_DISPLAY_LINE,
       tagline: "Equsto Teknolojisi · Gastronomi Tasarımı · Satış Mühendisliği",
-      partners: "Hilton · Marriott · Migros · TAV · Sodexo · McDonald's",
       legal: { terms: "/contact", privacy: "/contact", company: "Equsto Teknoloji Limited" },
       columns: [
         {
@@ -197,53 +246,6 @@
     return footerLoadPromise;
   }
 
-  function logoMarkup() {
-    if (typeof window.EQUSTO_LOGO_SVG === "string" && window.EQUSTO_LOGO_SVG) {
-      return window.EQUSTO_LOGO_SVG;
-    }
-    return '<span class="eq-mfoot-logo-text">EQUSTO</span>';
-  }
-
-  function faqSectionHtml(data) {
-    var faq = data && data.faq;
-    if (!faq || !faq.items || !faq.items.length) return "";
-    var title = t(faq.titleKey || "footer.faq_title", faq.title || "Sık sorulan sorular");
-    var intro = faq.intro
-      ? '<p class="eq-mfoot-faq-intro">' + esc(t(faq.introKey || "footer.faq_intro", faq.intro)) + "</p>"
-      : "";
-    var items = faq.items
-      .map(function (it, idx) {
-        var q = t(it.qKey || "", it.q || "");
-        var a = t(it.aKey || "", it.a || "");
-        var open = idx === 0 ? " open" : "";
-        return (
-          '<details class="eq-mfoot-faq-item"' +
-          open +
-          "><summary>" +
-          esc(q) +
-          '</summary><div class="eq-mfoot-faq-a"><p>' +
-          esc(a) +
-          "</p></div></details>"
-        );
-      })
-      .join("");
-    return (
-      '<section class="eq-mfoot-faq" aria-label="' +
-      esc(title) +
-      '">' +
-      '<div class="eq-mfoot-faq-inner">' +
-      "<h2>" +
-      esc(title) +
-      "</h2>" +
-      intro +
-      '<div class="eq-mfoot-faq-grid">' +
-      items +
-      "</div>" +
-      "</div>" +
-      "</section>"
-    );
-  }
-
   function injectFaqSchema(data) {
     var faq = data && data.faq;
     if (!faq || !faq.items || !faq.items.length) return;
@@ -271,14 +273,16 @@
   }
 
   function buildHtml(data) {
+    var faq = data && data.faq;
     var cols = normalizeColumns(data)
       .map(function (c) {
-        return colHtml(c.titleKey, c.titleFb, c.links);
+        var colFaq =
+          faq && c.titleKey === "footer.col_help" ? faq : null;
+        return colHtml(c.titleKey, c.titleFb, c.links, colFaq);
       })
       .join("");
 
     var tagline = t("footer.tagline", (data && data.tagline) || defaultFooterData().tagline);
-    var partners = t("footer.partners", (data && data.partners) || defaultFooterData().partners);
     var legal = (data && data.legal) || defaultFooterData().legal;
     var year = new Date().getFullYear();
 
@@ -289,27 +293,15 @@
       cols +
       "</div>" +
       '<div class="eq-mfoot-brand">' +
-      '<a class="eq-mfoot-logo" href="' +
-      esc(resolveLinkHref("/")) +
-      '" aria-label="Equsto">' +
-      logoMarkup() +
-      "</a>" +
-      '<span class="eq-mfoot-locale" aria-label="' +
-      esc(t("footer.locale_aria", "Türkiye")) +
-      '">' +
-      '<span class="eq-mfoot-flag" aria-hidden="true">🇹🇷</span> ' +
-      esc(t("footer.locale_label", "Türkiye")) +
-      "</span>" +
-      "</div>" +
+      '<p class="eq-mfoot-company" aria-label="Equsto Teknoloji Limited">' +
+      companyMarkup() +
+      "</p>" +
       '<p class="eq-mfoot-tagline">' +
       esc(tagline) +
       "</p>" +
-      '<p class="eq-mfoot-partners">' +
-      esc(partners) +
-      "</p>" +
       "</div>" +
       "</div>" +
-      faqSectionHtml(data) +
+      "</div>" +
       '<div class="eq-mfoot-legal">' +
       '<div class="eq-mfoot-legal-inner">' +
       '<nav class="eq-mfoot-legal-nav" aria-label="' +
