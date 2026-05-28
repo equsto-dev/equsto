@@ -1548,12 +1548,21 @@
     eqSyncMobileChrome();
   }
 
+  var EQ_FOOTER_ASSET_V = "20260529helpcolsss";
+
   function loadScriptSameDir(filename, flagName) {
     try {
       if (window[flagName]) return;
+      if (filename === "eq-footer.js" && typeof window.__eqMountMarketFooter === "function") {
+        window[flagName] = true;
+        return;
+      }
       var cur = document.currentScript;
       var base = cur && cur.src ? cur.src.replace(/[^/]+$/, "") : "";
       var url = base ? base + filename : "";
+      if (filename === "eq-footer.js" && url) {
+        url += (url.indexOf("?") >= 0 ? "&" : "?") + "v=" + EQ_FOOTER_ASSET_V;
+      }
       if (!url) {
         try {
           url = new URL(filename, document.baseURI || window.location.href).href;

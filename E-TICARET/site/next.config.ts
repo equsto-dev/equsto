@@ -205,6 +205,20 @@ const nextConfig: NextConfig = {
       { source: "/en/:path*", headers: [utf8Html] },
       { source: "/i18n/:file.json", headers: [utf8Json] },
       {
+        source: "/eq-footer.js",
+        headers: [
+          utf8Json,
+          { key: "Cache-Control", value: "public, max-age=0, must-revalidate" },
+        ],
+      },
+      {
+        source: "/data/footer-vitrin.json",
+        headers: [
+          utf8Json,
+          { key: "Cache-Control", value: "public, max-age=0, must-revalidate" },
+        ],
+      },
+      {
         source: "/data/:path*",
         headers: [
           utf8Json,
