@@ -6,7 +6,7 @@
 
   var ORIGIN = "https://equsto.com";
   var DATA_URL = "/api/geo";
-  var DATA_FALLBACK = "/data/geo-landings.json?v=20260601geo";
+  var DATA_FALLBACK = "/data/geo-landings.json?v=20260602blog";
   var HEADER_PARTIAL = "/partials/eq-d-header.html?v=20260601geo";
 
   function ensureVitrinChrome() {
@@ -197,8 +197,8 @@
       budget: "400 bin - 2,5 milyon TL",
       pfosKonu: "Market reyonu",
       body:
-        "<p><strong>Market kurulumu</strong>nda müşteri hattı kasap bankosu, şarküteri vitrini, yatay soğutucu ve derin dondurucu adalarıyla tamamlanır. Reyon ölçüsü, plug-in veya remote soğutma gücü ve günlük çıkış PFOS’ta adetleri netler.</p>" +
-        "<p><strong>Kasap ve şarküteri</strong> hattında et hazırlık (kıyma, dilimleme), +2/+4&nbsp;°C sergi vitrini ve −18&nbsp;°C depo ayrı zonlanır. Hijyen seti, et tahtası ve yıkama hızı tazelik güvenliğini belirler; montaj satış mühendisliği planıyla yürür.</p>",
+        "<p>Market kurulumunda müşteri yolculuğu reyondan başlar: dondurulmuş ada, soğutmalı gondol ve kasap bankosu aynı koridorda akıcı dizilir. Paketli ürün ile taze et aynı hat üzerinde görünür; arkada hazırlık ve depo birbirinden ayrılır. Reyon genişliği ve günlük çıkış, soğutucu adedini belirler.</p>" +
+        "<p>Kasap ve şarküteri kurulumunda kıyma, dilimleme ve vitrin sergisi farklı zonlarda tutulur. +2/+4&nbsp;°C teşhir ile −18&nbsp;°C depo karışmaz; et tahtası, hijyen seti ve hızlı yıkama günlük iş yükünü belirler. Equsto’da ölçü ve kapasiteye göre ekipman listesini netleyip montajı satış mühendisliği ile planlarız — teklif için Proje Fabrikası’na geçebilirsiniz.</p>",
       faq: [
         [
           "Market reyonu ile kasap hattı aynı projede mi?",
