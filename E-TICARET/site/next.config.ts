@@ -185,6 +185,8 @@ const nextConfig: NextConfig = {
       { source: "/", destination: "/index.html" },
       { source: "/sepet", destination: "/sepet.html" },
       { source: "/sepet/", destination: "/sepet.html" },
+      { source: "/shop/marka", destination: "/marka.html" },
+      { source: "/shop/marka/", destination: "/marka.html" },
       { source: "/shop/market-reyonlari", destination: "/market-reyonlari.html" },
       { source: "/shop/market-reyonlari/", destination: "/market-reyonlari.html" },
       ...deptRewrites(),
