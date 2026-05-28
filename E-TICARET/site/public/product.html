@@ -482,12 +482,39 @@
         .toLowerCase();
     }
 
+    function isCaglayanRefrigeration(x) {
+      return (
+        isMarketReyonProduct(x) &&
+        String((x && x.kaynak) || "") === "caglayan-refrigeration"
+      );
+    }
+
+    /** Çağlayan PDP sol şerit — yalnızca ürün vitrin fotoğrafları (kesit / PLG / ölçü çizimi değil). */
+    function isCaglayanProductOnlyImg(relOrUrl) {
+      var fn = imgFileName(relOrUrl);
+      if (!fn) return false;
+      if (/kesit/i.test(fn)) return false;
+      if (/kapak/i.test(fn)) return false;
+      if (/plg/i.test(fn)) return false;
+      if (
+        /bicaklik|terazilik|sepetlik|posetlik|modul-bolucu|urun-bolucu|plexi|kademeli|et-aydinlatma|aydinlatma|bankolu|kose|ic-kose|dis-kose|zyt/i.test(
+          fn
+        )
+      ) {
+        return false;
+      }
+      if (/[-_]model-\d+\.(jpe?g|webp|png|gif)$/i.test(fn)) return false;
+      if (/\d{3,4}.*[-_]model-\d/i.test(fn)) return false;
+      return true;
+    }
+
     /** Çağlayan vb. teknik kesit / model ölçü çizimleri (beyaz çizgi, şeffaf zemin). */
     function isLineArtProductImg(relOrUrl) {
       var fn = imgFileName(relOrUrl);
       if (!fn) return false;
       if (/kesit/i.test(fn)) return true;
-      if (/model-\d+/i.test(fn)) return true;
+      if (/[-_]model-\d+\.(jpe?g|webp|png|gif)$/i.test(fn)) return true;
+      if (/\d{3,4}.*[-_]model-\d/i.test(fn)) return true;
       if (/teknik|[-_]cizim|drawing|schema|blueprint|olcu-?cizim/i.test(fn)) return true;
       return false;
     }
@@ -520,6 +547,12 @@
             lineart: isLineArtProductImg(rel) || isLineArtProductImg(src),
           });
       });
+      if (isCaglayanRefrigeration(x)) {
+        out = out.filter(function (item) {
+          return isCaglayanProductOnlyImg(item.rel) || isCaglayanProductOnlyImg(item.src);
+        });
+        if (out.length > 6) out = out.slice(0, 6);
+      }
       return out;
     }
 
@@ -536,7 +569,19 @@
     }
 
     function renderPdpThumbImg(p) {
-      var rel = (p && p.images && p.images[0]) || "";
+      var rel = "";
+      if (p && p.images && p.images.length) {
+        if (isCaglayanRefrigeration(p)) {
+          for (var ti = 0; ti < p.images.length; ti++) {
+            if (isCaglayanProductOnlyImg(p.images[ti])) {
+              rel = p.images[ti];
+              break;
+            }
+          }
+        } else {
+          rel = p.images[0];
+        }
+      }
       if (!rel && p) rel = oztiWebRelFromSku(p.sku || p.urun_kodu || p.model) || "";
       var src = rel ? resolveProductImgSrc(rel) : thumbSrc(p);
       if (!src) {
@@ -730,6 +775,21 @@
       });
     }
 
+    function formatOlculerLinePdp(raw) {
+      if (!raw || !raw.olculer) return "";
+      var o = raw.olculer;
+      var g = Number(o.genislik_mm);
+      var d = Number(o.derinlik_mm);
+      var y = Number(o.yukseklik_mm);
+      if (!g || !d || !y) return "";
+      var name = String(raw.name || "");
+      if (/×\d/.test(name)) return "";
+      if (g >= 1000 && d >= 1000) {
+        return Math.round(g / 10) + "×" + Math.round(d / 10) + "×" + Math.round(y / 10) + " cm";
+      }
+      return g + "×" + d + "×" + y + " mm";
+    }
+
     function shortModelLabel(p) {
       var n = (p && p.name) || "";
       var b = (p && p.brand) || "";
@@ -737,8 +797,15 @@
         n = n.slice(b.length).replace(/^[\s.,;:\-–—]+/, "");
       }
       n = n.replace(/\s+/g, " ").trim();
-      if (n.length > 46) n = n.slice(0, 44) + "…";
-      return n || ((p && p.name) || "Ürün").slice(0, 46);
+      var dim = isMarketReyonProduct(p) ? formatOlculerLinePdp(p) : "";
+      if (dim) {
+        var suffix = " · " + dim;
+        if (n.length + suffix.length > 52) n = n.slice(0, Math.max(8, 50 - suffix.length)) + "…";
+        n = (n || "Model") + suffix;
+      } else if (n.length > 46) {
+        n = n.slice(0, 44) + "…";
+      }
+      return n || ((p && p.name) || "Ürün").slice(0, 52);
     }
 
     function thumbSrc(p) {
@@ -835,7 +902,7 @@
       return score;
     }
 
-    /** Market reyon: aynı marka / seri / hat — üst muadil şeridi (max 12). */
+    /** Market reyon: aynı marka / seri / hat — üst muadil şeridi (max 10). */
     function pickMarketReyonMuadil(x, all, keyFn) {
       if (!x || !all || !all.length) return { items: [], mode: "market-reyon" };
       var curSlug = String(x.slug || x.id || "").toLowerCase();
@@ -863,7 +930,7 @@
         });
       });
       var out = [];
-      for (var j = 0; j < scored.length && out.length < 12; j++) out.push(scored[j].p);
+      for (var j = 0; j < scored.length && out.length < 10; j++) out.push(scored[j].p);
       return { items: out, mode: "market-reyon" };
     }
 
