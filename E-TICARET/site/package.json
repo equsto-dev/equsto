@@ -29,6 +29,7 @@
     "catalog:ozti:images": "python scripts/extract-ozti-pdf-images.py",
     "catalog:ozti:web-images": "node scripts/fetch-ozti-web-images.mjs",
     "catalog:ozti:patch-web": "node scripts/patch-ozti-missing-web-images.mjs",
+    "catalog:ozti:repair-plp-images": "node scripts/repair-ozti-plp-images.mjs && node scripts/rebuild-ekipmanlar-from-dept.mjs",
     "catalog:ozti:move-cay": "node scripts/move-ozti-cay-from-kahve.mjs && npm run catalog:ozti:ekipmanlar",
     "catalog:ozti:move-kahve-acc": "node scripts/move-ozti-kahve-accessories-to-kahve.mjs && npm run catalog:ozti:ekipmanlar",
     "catalog:ozti:images:purge": "python scripts/extract-ozti-pdf-images.py --purge",

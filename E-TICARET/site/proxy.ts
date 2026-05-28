@@ -138,7 +138,7 @@ export function proxy(request: NextRequest) {
   if (isLegacyHtmlPath(p)) {
     res.headers.set("Content-Type", "text/html; charset=utf-8");
   }
-  if (p.startsWith("/i18n/") && p.endsWith(".json")) {
+  if ((p.startsWith("/i18n/") || p.startsWith("/locales/")) && p.endsWith(".json")) {
     res.headers.set("Content-Type", "application/json; charset=utf-8");
   }
 

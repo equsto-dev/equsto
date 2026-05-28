@@ -107,7 +107,12 @@
     var img = hit && hit.image;
     if (!img) return "";
     img = String(img).replace(/\\/g, "/");
-    if (/^https?:\/\//i.test(img)) return img;
+    if (typeof window.eqProductImgSrc === "function") {
+      try {
+        var eq = window.eqProductImgSrc(img);
+        if (eq) return eq;
+      } catch (_) {}
+    }
     if (typeof window.catalogImageCandidates === "function") {
       try {
         var tries = window.catalogImageCandidates(img);
