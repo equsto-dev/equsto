@@ -43,6 +43,7 @@ const GEO_SLUGS = [
   "fine-dining-kurulumu",
   "all-day-dining-kurulumu",
   "fast-food-kurulumu",
+  "market-kasap-sarkuteri-kurulumu",
   "endustriyel-mutfak-ekipmani-turkiye",
   "restoran-mutfak-teklif",
   "otel-mutfak-ekipman-tedarik",

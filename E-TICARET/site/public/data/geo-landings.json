@@ -50,6 +50,14 @@
     "h1": "All day dining kurulumu",
     "lead": "Gün boyu servis döngüsünde kahve, sıcak hat ve soğuk stok aynı mutfakta üst üste bindirilir."
   },
+  "market-kasap-sarkuteri-kurulumu": {
+    "profile": "marketKasap",
+    "title": "Market, kasap ve şarküteri kurulum rehberi | Equsto",
+    "description": "Market reyonu ile kasap ve şarküteri hattı kurulumu: vitrin, derin dondurucu, et hazırlık ve hijyen zonu. PFOS ile teklif.",
+    "h1": "Market, kasap ve şarküteri kurulumu",
+    "lead": "Reyon soğutması ve et hazırlık hattı aynı müşteri akışında modellenir; vitrin SKU’ları market reyon kataloğuna bağlanır.",
+    "skipTable": true
+  },
   "projeler": {
     "profile": "projelerHub",
     "title": "Referans projeler | Equsto",
@@ -208,7 +216,8 @@
           { "label": "Catering mutfağı", "href": "/catering-mutfagi" },
           { "label": "Fast food kurulumu", "href": "/fast-food-kurulumu" },
           { "label": "Fine dining kurulumu", "href": "/fine-dining-kurulumu" },
-          { "label": "All day dining / otel mutfağı", "href": "/all-day-dining-kurulumu" }
+          { "label": "All day dining / otel mutfağı", "href": "/all-day-dining-kurulumu" },
+          { "label": "Market, kasap ve şarküteri kurulumu", "href": "/market-kasap-sarkuteri-kurulumu" }
         ]
       },
       {
