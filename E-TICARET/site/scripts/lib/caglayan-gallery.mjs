@@ -47,14 +47,21 @@ function isKapak(fn) {
 }
 
 function matchesSlug(fn, slug) {
-  const s = String(slug || "")
-    .toLowerCase()
-    .replace(/[^a-z0-9]/g, "");
-  const f = fn.replace(/[^a-z0-9]/g, "");
-  if (!s || s.length < 3) return true;
-  if (f.includes(s)) return true;
-  const root = s.replace(/(lm|ad|mc|fg|sl|ml|hd|seri).*/i, "");
-  return root.length >= 4 && f.includes(root);
+  const rawSlug = String(slug || "").toLowerCase();
+  const f = String(fn || "").toLowerCase();
+  const fCompact = f.replace(/[^a-z0-9]/g, "");
+  const sCompact = rawSlug.replace(/[^a-z0-9]/g, "");
+  if (!sCompact || sCompact.length < 3) return true;
+  if (fCompact.includes(sCompact)) return true;
+  const tokens = rawSlug.split(/[^a-z0-9]+/).filter((t) => t.length >= 2);
+  const main = tokens[0];
+  if (main && main.length >= 4 && f.includes(main)) return true;
+  const sig = tokens.filter((t) => t.length >= 2 && !/^(hf|nv|en|tr|sky)$/i.test(t));
+  if (sig.length >= 2) {
+    const hit = sig.filter((t) => fCompact.includes(t)).length;
+    if (hit >= 2) return true;
+  }
+  return tokens.some((t) => t.length >= 3 && f.includes(t));
 }
 
 /** Ürün vitrin fotoğrafı — başka serinin aksesuar/kapak görsellerini ele */
