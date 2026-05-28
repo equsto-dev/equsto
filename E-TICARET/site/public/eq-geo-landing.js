@@ -107,10 +107,7 @@
 
       budget: null,
       pfosKonu: "Steakhouse",
-      body:
-        "<p>Steakhouse mutfağında <strong>dry-age dolabı</strong>, yüksek ısı ızgara/kuzine hattı ve et hazırlık modülleri aynı akışta toplanır. Equsto <strong>Gastronomi Tasarımı</strong> davlumbaz statik basıncını ve soğutma hat uzunluğunu erken doğrular; <strong>Satış Mühendisliği</strong> sahada montaj ve devreye almayı planlar.</p>" +
-        "<h2>Bütçe ve kapasite</h2>" +
-        "<p>2026 katalog bandı tipik olarak <strong>{budget}</strong> aralığındadır (KDV hariç liste, standart montaj). Kişi başı metrekare ve servis süresi ocak adedini belirler; PFOS bu adetleri kural setiyle üretir.</p>",
+      body: "<p>Steakhouse mutfağında dry-age dolabı, yüksek ısı ızgara ve kuzine hattı ile et hazırlık modülleri aynı akışta toplanır. Davlumbaz statik basıncı ve soğutma hat uzunluğu proje başında doğrulanır; servis hızı ocak yayılımını belirler.</p><p>Pişirme ve muhafaza zonları birbirinden ayrılır; yıkama hızı pik öğün yükünü taşır. Kıyma ve dilimleme modülleri kısa mesafe kuralına uygun yerleştirilir.</p><p>Aşağıdaki tablo vitrin SKU örneklerine gider. Liste Proje Fabrikası’nda kapasite ve menüye göre genişletilir; montaj ve devreye alma satış mühendisliği planıyla sahada tamamlanır. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür.</p>",
       faq: [
         [
           "Steakhouse mutfağında hangi ekipmanlar zorunlu sayılır?",
@@ -136,9 +133,7 @@
 
       budget: null,
       pfosKonu: "Cafe",
-      body:
-        "<p>Cafe kurulumunda <strong>espresso istasyonu</strong>, soğuk süt/stok dolapları ve hazırlık tezgahı aynı gün içinde yoğun kullanılır. Su filtrasyonu ve basınç doğrulaması makine seçiminden önce sabitlenmelidir.</p>" +
-        "<h2>Bütçe bandı</h2><p>Tipik katalog bandı: <strong>{budget}</strong>. Paket servis oranı yükseldikçe soğutma derinliği artar.</p>",
+      body: "<p>Cafe kurulumunda espresso istasyonu, soğuk süt ve stok dolapları ile hazırlık tezgahı aynı gün içinde yoğun kullanılır. Su filtrasyonu ve basınç doğrulaması makine seçiminden önce sabitlenmelidir; paket servis oranı soğutma derinliğini artırır.</p><p>Vitrin soğutucu, yıkama hattı ve pastane modülleri menü profiline göre eklenir. Günlük bardak adedi ve eşzamanlı grup sayısı makine seçimini belirler.</p><p>Saha ölçüsü PFOS’ta netleşir; aşağıdaki tablo örnek SKU’lara bağlanır. Teklif özeti Proje Fabrikası’ndan alınır; montaj planı satış mühendisliği ile yürütülür. Detaylı ekipman listesi Proje Fabrikası veya iletişim hattı üzerinden tamamlanır; montaj planı satış mühendisliği ile yürütülür.</p>",
       faq: [
         ["Cafe için minimum mutfak m²?", "30–80 m² arası yaygındır; oturma + paket oranına göre PFOS ile netleştirin."],
         ["Kahve makinesi seçimi?", "Günlük bardak adedi ve eşzamanlı grup sayısı belirleyicidir."],
