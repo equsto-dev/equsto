@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import LegacyVitrinPage from "@/components/vitrin/LegacyVitrinPage";
 import { PfosBodyHtml } from "@/lib/vitrin/bodies/pfos";
-import { PFOS_SCRIPTS } from "@/lib/vitrin/legacy-scripts";
+import { PFOS_EXTRA_STYLES, PFOS_SCRIPTS } from "@/lib/vitrin/legacy-scripts";
 
 export const metadata: Metadata = {
   title: "Proje Fabrikası — Online Endüstriyel Mutfak Teklifi · Equsto",
@@ -22,6 +22,8 @@ export default function PfosPage() {
       bodyClass="eq-shop eq-pfos"
       bodyHtml={PfosBodyHtml}
       scripts={PFOS_SCRIPTS}
+      headStyles={PFOS_EXTRA_STYLES}
+      styleVariant="pfos"
       extraCss={PFOS_CSS}
     />
   );

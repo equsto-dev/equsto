@@ -21,6 +21,8 @@ export const HOME_SCRIPTS = [
   `/eq-analytics.js`,
 ];
 
+export const PFOS_EXTRA_STYLES = [`/eq-pfos-wizard.css?v=${v}`];
+
 export const PFOS_SCRIPTS = [
   `/eq-display-terminology.js?v=${v}`,
   `/eq-pfos-i18n.js?v=${v}`,

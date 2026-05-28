@@ -6,7 +6,7 @@ import type { ShopDeptSlug } from "@/lib/shop/depts";
 type VitrinShellProps = {
   bodyClass: string;
   activeDept?: ShopDeptSlug | null;
-  styleVariant?: "plp" | "product" | "cart" | "search";
+  styleVariant?: "plp" | "product" | "cart" | "search" | "pfos";
   children: React.ReactNode;
   extraCss?: string;
 };
