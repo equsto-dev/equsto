@@ -5,8 +5,9 @@
   "use strict";
 
   var ORIGIN = "https://equsto.com";
-  var DATA_URL = "/data/geo-landings.json?v=20260531market";
-  var HEADER_PARTIAL = "/partials/eq-d-header.html?v=20260531market";
+  var DATA_URL = "/api/geo";
+  var DATA_FALLBACK = "/data/geo-landings.json?v=20260601geo";
+  var HEADER_PARTIAL = "/partials/eq-d-header.html?v=20260601geo";
 
   function ensureVitrinChrome() {
     if (document.querySelector("header.hdr")) return Promise.resolve();
@@ -742,11 +743,13 @@
     ensureVitrinChrome()
       .then(function () {
         ensureGeoScripts();
-        return fetch(DATA_URL, { credentials: "same-origin" });
-      })
-      .then(function (r) {
-        if (!r.ok) throw new Error("geo");
-        return r.json();
+        return fetch(DATA_URL, { credentials: "same-origin" }).then(function (r) {
+          if (r.ok) return r.json();
+          return fetch(DATA_FALLBACK, { credentials: "same-origin" }).then(function (r2) {
+            if (!r2.ok) throw new Error("geo");
+            return r2.json();
+          });
+        });
       })
       .then(function (data) {
         var page = data[key];

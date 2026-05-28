@@ -47,6 +47,7 @@ function isLegacyHtmlPath(pathname: string): boolean {
     p.startsWith("/fine-dining") ||
     p.startsWith("/all-day-dining") ||
     p.startsWith("/fast-food") ||
+    p.startsWith("/market-kasap") ||
     p.startsWith("/projeler") ||
     p.startsWith("/rehber/") ||
     p.startsWith("/endustriyel-mutfak") ||
