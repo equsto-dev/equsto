@@ -912,11 +912,8 @@
 
     function railLabelForProduct(x) {
       if (!x || !isMarketReyonProduct(x)) return railLabelFor((x && x.category) || "");
-      if (isCaglayanRefrigeration(x) && x.caglayanModelSlug) {
-        var base = String(x.caglayanEqModel || "").trim();
-        if (!base) base = String(x.name || "").split("—")[0].trim();
-        if (!base) base = "EQ-" + String(x.caglayanModelSlug || "").replace(/-/g, " ");
-        return base + " — EQ1, EQ2… ölçü varyantları";
+      if (isCaglayanRefrigeration(x)) {
+        return "Çağlayan Refrigeration — diğer modeller";
       }
       var series = String(x.series || "").trim();
       if (series) return series + " ve muadil modeller";
@@ -948,7 +945,9 @@
       return score;
     }
 
-    /** Market reyon: aynı marka / seri / hat — üst muadil şeridi (max 10). */
+    var CAGLAYAN_FAMILY_RAIL_MAX = 9;
+
+    /** Market reyon: aynı marka / seri / hat — üst muadil şeridi (max 9). */
     function pickMarketReyonMuadil(x, all, keyFn) {
       if (!x || !all || !all.length) return { items: [], mode: "market-reyon" };
       var curSlug = String(x.slug || x.id || "").toLowerCase();
@@ -976,39 +975,78 @@
         });
       });
       var out = [];
-      for (var j = 0; j < scored.length && out.length < 10; j++) out.push(scored[j].p);
+      for (var j = 0; j < scored.length && out.length < CAGLAYAN_FAMILY_RAIL_MAX; j++) {
+        out.push(scored[j].p);
+      }
       return { items: out, mode: "market-reyon" };
     }
 
-    /** Çağlayan: aynı model (caglayanModelSlug) altında tüm ölçü varyantları. */
-    function pickCaglayanVariants(x, all) {
-      if (!x || !all || !all.length) return { items: [], mode: "caglayan-variant" };
-      var parent = String(x.caglayanModelSlug || "").toLowerCase();
-      if (!parent) return { items: [], mode: "caglayan-variant" };
+    function caglayanParentKey(p) {
+      return String((p && p.caglayanModelSlug) || (p && p.slug) || (p && p.id) || "")
+        .toLowerCase()
+        .trim();
+    }
+
+    function hasCaglayanProductPhoto(p) {
+      var imgs = (p && p.images) || [];
+      for (var i = 0; i < imgs.length; i++) {
+        if (isCaglayanPdpThumbImg(imgs[i])) return true;
+      }
+      return false;
+    }
+
+    function pickBetterCaglayanRep(a, b) {
+      var aPhoto = hasCaglayanProductPhoto(a);
+      var bPhoto = hasCaglayanProductPhoto(b);
+      if (aPhoto && !bPhoto) return a;
+      if (bPhoto && !aPhoto) return b;
+      var ae = Number(a.caglayanEqNo) || 999;
+      var be = Number(b.caglayanEqNo) || 999;
+      return ae <= be ? a : b;
+    }
+
+    /** Çağlayan: farklı model hatları (her caglayanModelSlug’tan bir), ölçü varyantı şeridi değil. */
+    function pickCaglayanCatalogPeers(x, all) {
+      if (!x || !all || !all.length) return { items: [], mode: "caglayan-catalog" };
       var curSlug = String(x.slug || x.id || "").toLowerCase();
-      var siblings = [];
+      var curParent = caglayanParentKey(x);
+      var curSeries = String(x.series || "")
+        .toLocaleLowerCase("tr")
+        .trim();
+      var byParent = Object.create(null);
+
       for (var i = 0; i < all.length; i++) {
         var p = all[i];
         if (!p || !isCaglayanRefrigeration(p)) continue;
-        if (String(p.caglayanModelSlug || "").toLowerCase() !== parent) continue;
         var pSlug = String(p.slug || p.id || "").toLowerCase();
         if (pSlug && pSlug === curSlug) continue;
-        siblings.push(p);
+        var parent = caglayanParentKey(p);
+        if (!parent) continue;
+        if (curParent && parent === curParent) continue;
+
+        if (!byParent[parent]) byParent[parent] = p;
+        else byParent[parent] = pickBetterCaglayanRep(byParent[parent], p);
       }
-      siblings.sort(function (a, b) {
-        var oa = a.olculer || {};
-        var ob = b.olculer || {};
-        var ga = Number(oa.genislik_mm) || 0;
-        var gb = Number(ob.genislik_mm) || 0;
-        if (ga !== gb) return ga - gb;
-        var da = Number(oa.derinlik_mm) || 0;
-        var db = Number(ob.derinlik_mm) || 0;
-        if (da !== db) return da - db;
-        return (Number(oa.yukseklik_mm) || 0) - (Number(ob.yukseklik_mm) || 0);
+
+      var candidates = Object.keys(byParent).map(function (k) {
+        return byParent[k];
       });
-      var out = [];
-      for (var j = 0; j < siblings.length && out.length < 12; j++) out.push(siblings[j]);
-      return { items: out, mode: "caglayan-variant" };
+      candidates.sort(function (a, b) {
+        var sa = String(a.series || "").toLocaleLowerCase("tr");
+        var sb = String(b.series || "").toLocaleLowerCase("tr");
+        var aSame = curSeries && sa === curSeries ? 1 : 0;
+        var bSame = curSeries && sb === curSeries ? 1 : 0;
+        if (aSame !== bSame) return aSame - bSame;
+        var ta = String(a.tileId || a.category || "");
+        var tb = String(b.tileId || b.category || "");
+        if (ta !== tb) return ta.localeCompare(tb, "tr");
+        return String(a.name || "").localeCompare(String(b.name || ""), "tr", {
+          sensitivity: "base",
+        });
+      });
+
+      var out = candidates.slice(0, CAGLAYAN_FAMILY_RAIL_MAX);
+      return { items: out, mode: "caglayan-catalog" };
     }
 
     /** Ürün adı içindeki anahtar kelimelerle alt-tip etiketi (bağlam koru: espresso↔espresso, türk↔türk, vb.). */
@@ -1072,9 +1110,9 @@
     /** Aynı kategori + (varsa) aynı alt-tip; mevcut ürün hariç; marka çeşitliliği round-robin; en fazla 5. */
     function pickRelatedProducts(x, all, keyFn) {
       if (!x || !all || !all.length) return { items: [], mode: "" };
-      if (isCaglayanRefrigeration(x) && x.caglayanModelSlug) {
-        var cv = pickCaglayanVariants(x, all);
-        if (cv.items.length) return cv;
+      if (isCaglayanRefrigeration(x)) {
+        var cp = pickCaglayanCatalogPeers(x, all);
+        if (cp.items.length) return cp;
       }
       if (isMarketReyonProduct(x)) return pickMarketReyonMuadil(x, all, keyFn);
       if (!keyFn) return { items: [], mode: "" };
@@ -1355,8 +1393,8 @@
       if (!items.length) return "";
       var lineTitle = esc(railLabelForProduct(x));
       var familyHint =
-        pack.mode === "caglayan-variant"
-          ? "Aynı model — farklı ölçüler"
+        pack.mode === "caglayan-catalog"
+          ? "Çağlayan katalogundan diğer modeller"
           : "Muadil ve benzer modeller";
       var curSlug = String(x.slug || x.id || "").toLowerCase();
       var scrollCls =
