@@ -64,6 +64,7 @@
     "pfos:referans:build": "node scripts/build-pfos-zone-kurallari.mjs",
     "pfos:referans": "npm run pfos:referans:extract && npm run pfos:referans:build",
     "pfos:motor:test": "node --import ./scripts/load-env.mjs ./node_modules/tsx/dist/cli.mjs scripts/test-pfos-motor.mjs",
+    "pfos:kategoriler:seed": "node scripts/seed-pfos-kategoriler.mjs",
     "sync:legacy": "node scripts/sync-legacy-assets.mjs",
     "public:audit": "node scripts/audit-public-assets.mjs",
     "catalog:deploy:check": "node scripts/check-catalog-images-deploy.mjs",
