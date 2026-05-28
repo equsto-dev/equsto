@@ -24,6 +24,11 @@
       .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   }
 
+  function lbl(s) {
+    if (typeof global.eqPfosLabel === 'function') return global.eqPfosLabel(s);
+    return s;
+  }
+
   function isTruthy(v) {
     if (v === true) return true;
     if (typeof v === 'string') return v.toLowerCase() === 'true' || v === '1';
@@ -58,36 +63,36 @@
 
     if (q.type === 'multi_select') {
       var chips = (q.options || []).map(function (o) {
-        return '<span class="eq-chip" data-eq-multi="' + esc(q.id) + '" data-val="' + esc(o) + '" tabindex="0" role="button">' + esc(o) + '</span>';
+        return '<span class="eq-chip" data-eq-multi="' + esc(q.id) + '" data-val="' + esc(o) + '" tabindex="0" role="button">' + esc(lbl(o)) + '</span>';
       }).join('');
-      return '<label class="full" data-qid="' + esc(q.id) + '">' + esc(q.text) + reqStar +
+      return '<label class="full" data-qid="' + esc(q.id) + '">' + esc(lbl(q.text)) + reqStar +
         '<div class="eq-chip-grid" data-qid="' + esc(q.id) + '">' + chips + '</div>' + noteHtml + '</label>';
     }
     if (q.type === 'select') {
       var optsHtml = '<option value="">— Seçiniz —</option>' + (q.options || []).map(function (o) {
-        return '<option value="' + esc(o) + '">' + esc(o) + '</option>';
+        return '<option value="' + esc(o) + '">' + esc(lbl(o)) + '</option>';
       }).join('');
-      return '<label' + cls + ' data-qid="' + esc(q.id) + '">' + esc(q.text) + reqStar +
+      return '<label' + cls + ' data-qid="' + esc(q.id) + '">' + esc(lbl(q.text)) + reqStar +
         '<select id="' + id + '" data-qid="' + esc(q.id) + '"' + reqAttr + '>' + optsHtml + '</select>' + noteHtml + '</label>';
     }
     if (q.type === 'select_conditional') {
       var depend = q.dependsOn || 'q_konsept';
-      return '<label' + cls + ' data-qid="' + esc(q.id) + '" data-conditional="1" data-depends="' + esc(depend) + '">' + esc(q.text) + reqStar +
+      return '<label' + cls + ' data-qid="' + esc(q.id) + '" data-conditional="1" data-depends="' + esc(depend) + '">' + esc(lbl(q.text)) + reqStar +
         '<select id="' + id + '" data-qid="' + esc(q.id) + '"' + reqAttr + '><option value="">— Önce üst soruyu seçin —</option></select>' + noteHtml + '</label>';
     }
     if (q.type === 'optional_select') {
       var optsHtml2 = '<option value="">— (opsiyonel) —</option>' + (q.options || []).map(function (o) {
-        return '<option value="' + esc(o) + '">' + esc(o) + '</option>';
+        return '<option value="' + esc(o) + '">' + esc(lbl(o)) + '</option>';
       }).join('');
-      return '<label' + cls + ' data-qid="' + esc(q.id) + '">' + esc(q.text) +
+      return '<label' + cls + ' data-qid="' + esc(q.id) + '">' + esc(lbl(q.text)) +
         '<select id="' + id + '" data-qid="' + esc(q.id) + '">' + optsHtml2 + '</select>' + noteHtml + '</label>';
     }
     if (q.type === 'number') {
-      return '<label' + cls + ' data-qid="' + esc(q.id) + '">' + esc(q.text) + reqStar +
+      return '<label' + cls + ' data-qid="' + esc(q.id) + '">' + esc(lbl(q.text)) + reqStar +
         '<input id="' + id + '" data-qid="' + esc(q.id) + '" type="number" min="0" inputmode="numeric"' + reqAttr + '>' + noteHtml + '</label>';
     }
     if (q.type === 'text') {
-      return '<label' + cls + ' data-qid="' + esc(q.id) + '">' + esc(q.text) + reqStar +
+      return '<label' + cls + ' data-qid="' + esc(q.id) + '">' + esc(lbl(q.text)) + reqStar +
         '<input id="' + id + '" data-qid="' + esc(q.id) + '" type="text"' + reqAttr + '>' + noteHtml + '</label>';
     }
     return '';
@@ -105,7 +110,7 @@
       var v = parent.value;
       var list = (q.branches && q.branches[v]) || [];
       sel.innerHTML = '<option value="">' + (list.length ? '— Seçiniz —' : '— Önce üst soruyu seçin —') + '</option>' +
-        list.map(function (o) { return '<option value="' + esc(o) + '">' + esc(o) + '</option>'; }).join('');
+        list.map(function (o) { return '<option value="' + esc(o) + '">' + esc(lbl(o)) + '</option>'; }).join('');
     };
     parent.addEventListener('change', fill);
     fill();

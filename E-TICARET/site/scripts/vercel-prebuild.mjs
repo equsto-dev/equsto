@@ -98,6 +98,12 @@ if (fs.existsSync(buildI18nEn)) {
   if (r.status !== 0) process.exit(r.status ?? 1);
 }
 
+const buildPfosLabels = path.join(siteDir, "scripts/build-pfos-labels-en.mjs");
+if (fs.existsSync(buildPfosLabels)) {
+  const r = spawnSync(process.execPath, [buildPfosLabels], { cwd: siteDir, stdio: "inherit" });
+  if (r.status !== 0) process.exit(r.status ?? 1);
+}
+
 const buildEn = path.join(siteDir, "scripts/build-geo-landings-en.mjs");
 if (fs.existsSync(buildEn)) {
   const r = spawnSync(process.execPath, [buildEn], { cwd: siteDir, stdio: "inherit" });

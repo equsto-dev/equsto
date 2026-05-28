@@ -30,7 +30,7 @@
     "catalog:ozti:web-images": "node scripts/fetch-ozti-web-images.mjs",
     "catalog:ozti:patch-web": "node scripts/patch-ozti-missing-web-images.mjs",
     "catalog:ozti:repair-plp-images": "node scripts/repair-ozti-plp-images.mjs && node scripts/rebuild-ekipmanlar-from-dept.mjs",
-    "i18n:build": "node scripts/build-i18n-en.mjs",
+    "i18n:build": "node scripts/build-i18n-en.mjs && node scripts/build-pfos-labels-en.mjs",
     "i18n:check": "node scripts/check-i18n-parity.mjs",
     "i18n:geo-blog": "node scripts/fix-bloghub-i18n.mjs",
     "catalog:ozti:move-cay": "node scripts/move-ozti-cay-from-kahve.mjs && npm run catalog:ozti:ekipmanlar",
