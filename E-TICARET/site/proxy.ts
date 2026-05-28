@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import { resolveBrandRedirectPath } from "./lib/brand-shop-redirect";
 
 /** next.config headers yalnızca *.html URL’lerine uygulanır; /pfos gibi rewrite’lar için */
 const DEPT_SLUGS = [
@@ -62,15 +63,55 @@ function isLegacyHtmlPath(pathname: string): boolean {
     p === "/blog" ||
     p === "/buradan-basladi" ||
     p.startsWith("/hakkimizda") ||
-    p.startsWith("/en/industrial-kitchen") ||
-    p.startsWith("/en/commercial-kitchen")
+    p === "/en/blog" ||
+    p.startsWith("/en/projects") ||
+    p.startsWith("/en/guides/") ||
+    /^\/en\/(steakhouse|cloud|cafe|catering|fast-food|fine-dining|all-day|market|industrial|commercial|restaurant|hotel|oztiryakiler|cold|deli|kitchen|bar)-/.test(
+      p
+    )
   ) {
     return true;
   }
   return false;
 }
 
+function legacyMarkaRedirect(request: NextRequest): NextResponse | null {
+  const { pathname } = request.nextUrl;
+  const isLegacyMarka =
+    pathname === "/marka.html" ||
+    pathname === "/marka" ||
+    pathname === "/en/marka.html" ||
+    pathname === "/en/marka";
+  if (!isLegacyMarka) return null;
+
+  const legacyB = (
+    request.nextUrl.searchParams.get("b") ||
+    request.nextUrl.searchParams.get("slug") ||
+    ""
+  ).trim();
+  if (!legacyB) return null;
+
+  const langPrefix = pathname.startsWith("/en/") ? "/en" : "";
+  const destPath = resolveBrandRedirectPath(legacyB, langPrefix);
+  if (!destPath) return null;
+
+  const dest = request.nextUrl.clone();
+  const parsed = new URL(destPath, request.url);
+  dest.pathname = parsed.pathname;
+  dest.search = parsed.search;
+
+  request.nextUrl.searchParams.forEach((value, key) => {
+    if (key === "b" || key === "slug") return;
+    if (!dest.searchParams.has(key)) dest.searchParams.set(key, value);
+  });
+
+  return NextResponse.redirect(dest, 308);
+}
+
 export function proxy(request: NextRequest) {
+  const markaRedir = legacyMarkaRedirect(request);
+  if (markaRedir) return markaRedir;
+
   const res = NextResponse.next();
   const p = request.nextUrl.pathname;
 

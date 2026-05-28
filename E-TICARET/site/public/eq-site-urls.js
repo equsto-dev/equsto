@@ -284,8 +284,13 @@
   };
 
   function brandSlugify(name) {
+    var tr = { ğ: "g", ü: "u", ş: "s", ı: "i", ö: "o", ç: "c", Ğ: "g", Ü: "u", Ş: "s", İ: "i", Ö: "o", Ç: "c" };
     return String(name || "")
+      .replace(/[ğüşıöçĞÜŞİÖÇ]/g, function (c) {
+        return tr[c] || c;
+      })
       .toLocaleLowerCase("tr")
+      .replace(/ı/g, "i")
       .replace(/[^a-z0-9]+/g, "-")
       .replace(/^-+|-+$/g, "");
   }

@@ -96,7 +96,24 @@
     <script  src="/theme.js?v=20260520logohdr"></script>
     <script  src="/equsto-logo.js?v=20260519wordmark3"></script>
     <script  src="/eq-i18n.js?v=20260520logohdr"></script>
-    <script  src="/eq-site-urls.js?v=20260530brandshop"></script>
+    <script  src="/eq-site-urls.js?v=20260528brand-redirect"></script>
+    <script>
+    /** ?b= / ?slug= — anında vitrin URL (middleware 308 ile birlikte). */
+    (function () {
+      try {
+        var path = String(location.pathname || "");
+        if (/^\/shop\/marka\//i.test(path)) return;
+        var sp = new URLSearchParams(location.search || "");
+        var legacyB = (sp.get("b") || sp.get("slug") || "").trim();
+        if (!legacyB || typeof window.eqBrandPath !== "function") return;
+        var dest = window.eqBrandPath(legacyB);
+        if (!dest) return;
+        var cur = path + (location.search || "");
+        if (dest === cur) return;
+        location.replace(dest);
+      } catch (_) {}
+    })();
+    </script>
     <script  src="/nav.js?v=20260520logohdr"></script>
     <script  src="/equsto-member.js?v=20260522wa" defer></script>
     <script  src="/contact.js?v=20260522wa" defer></script>

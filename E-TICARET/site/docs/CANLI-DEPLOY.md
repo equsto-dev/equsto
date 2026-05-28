@@ -19,6 +19,15 @@
 5. **Deployments** → bekleyen **Queued** işleri **Cancel**
 6. Son `main` commit → **Redeploy** → **Build Cache: KAPALI** (ilk düzeltmeden sonra açılabilir)
 
+## Yerel — Next app’i git’ten E-TICARET/site’a almak
+
+Eski `EQUSTO-WORK` kopyasından **dosya kopyalamayın** (junction bozulması). Gerekirse:
+
+```cmd
+cd C:\D Disk\EQUSTO-WORK\E-TICARET\site
+node scripts/sync-canonical-app-from-git.mjs
+```
+
 ## Yerel build
 
 ```cmd

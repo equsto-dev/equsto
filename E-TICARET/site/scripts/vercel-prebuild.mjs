@@ -3,6 +3,7 @@
  */
 import fs from "node:fs";
 import path from "node:path";
+import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import { findRepoRoot } from "./vercel-resolve-site.mjs";
 
@@ -90,4 +91,21 @@ function syncGeoLandingsToLib(dir) {
 }
 
 syncGeoLandingsToLib(siteDir);
+
+const buildEn = path.join(siteDir, "scripts/build-geo-landings-en.mjs");
+if (fs.existsSync(buildEn)) {
+  const r = spawnSync(process.execPath, [buildEn], { cwd: siteDir, stdio: "inherit" });
+  if (r.status !== 0) process.exit(r.status ?? 1);
+}
+
+function syncGeoLandingsEnToLib(dir) {
+  const src = path.join(dir, "public/data/geo-landings-en.json");
+  const dest = path.join(dir, "lib/geo/landings-en.json");
+  if (!fs.existsSync(src)) return;
+  fs.mkdirSync(path.dirname(dest), { recursive: true });
+  fs.copyFileSync(src, dest);
+  console.log("[vercel-prebuild] geo-landings-en → lib/geo/landings-en.json");
+}
+
+syncGeoLandingsEnToLib(siteDir);
 console.log("[vercel-prebuild] OK");

@@ -66,8 +66,11 @@ function geoRewrites() {
     { source: "/projeler", destination: "/geo-landing.html" },
     { source: "/projeler/:slug", destination: "/geo-landing.html" },
     { source: "/rehber/:slug", destination: "/geo-landing.html" },
-    { source: "/en/industrial-kitchen-supplier-turkey", destination: "/geo-landing.html" },
-    { source: "/en/commercial-kitchen-quotation", destination: "/geo-landing.html" },
+    { source: "/en/blog", destination: "/geo-landing.html" },
+    { source: "/en/projects", destination: "/geo-landing.html" },
+    { source: "/en/projects/:slug", destination: "/geo-landing.html" },
+    { source: "/en/guides/:slug", destination: "/geo-landing.html" },
+    { source: "/en/:slug", destination: "/geo-landing.html" },
   ];
 }
 

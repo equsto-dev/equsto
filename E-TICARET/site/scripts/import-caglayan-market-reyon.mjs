@@ -9,6 +9,11 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { buildCaglayanGalleryLocal } from "./lib/caglayan-gallery.mjs";
 import {
+  buildCaglayanTeknikAkordeon,
+  extractCaglayanCatalogPdf,
+  extractCaglayanOzellikler,
+} from "./lib/caglayan-catalog-pdf.mjs";
+import {
   buildVariantImages,
   eqBrandName,
   eqSku,
@@ -137,6 +142,9 @@ function copyImages(slug) {
 function baseFields(urun, { series, tileId, category }) {
   const imgCount = copyImages(urun.slug);
   const gallery = collectImages(urun);
+  const pdf = extractCaglayanCatalogPdf(urun, SRC);
+  const ozellikler = extractCaglayanOzellikler(urun);
+  const teknikAkordeon = buildCaglayanTeknikAkordeon(urun);
   return {
     dept: "market-reyon",
     brand: BRAND,
@@ -150,6 +158,11 @@ function baseFields(urun, { series, tileId, category }) {
     linkKaynak: urun.linkKaynak || "",
     caglayanTip: urun.tip,
     caglayanModelSlug: urun.slug,
+    caglayanOzellikler: ozellikler.length ? ozellikler : undefined,
+    caglayanTeknikAkordeon: teknikAkordeon.length ? teknikAkordeon : undefined,
+    caglayanKatalogPdf: pdf?.rel || undefined,
+    caglayanKatalogUrl: pdf?.url || undefined,
+    caglayanKatalogAdi: pdf?.fileName || undefined,
     _importImgCount: imgCount,
     _gallery: gallery,
   };
