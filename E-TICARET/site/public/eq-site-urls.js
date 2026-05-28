@@ -459,6 +459,7 @@
         }
       } catch (_) {}
     }
+    if (file === "marka.html") return withLang("/shop/marka", "shop") + query + hash;
     if (/\/shop\/marka\//i.test(filePart)) return filePart + query + hash;
     return href;
   };
