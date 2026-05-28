@@ -33,18 +33,46 @@
   var STORAGE_KEY = "eq-lang";
   var PREFIX_RE = /^\/en(\/|$)/i;
 
+  /** TR slug → EN pathname (without /en prefix) */
+  var EN_PATH_ALIASES = {
+    "/hakkimizda": "/about",
+    "/buradan-basladi": "/story",
+    "/contact": "/contact",
+    "/pfos": "/pfos",
+    "/sss": "/sss",
+    "/login": "/login",
+    "/blog": "/blog",
+    "/projeler": "/projects",
+  };
+
+  var TR_GEO_TO_EN_SLUG = {
+    "steakhouse-kurulumu": "steakhouse-kitchen-setup",
+    "bulut-mutfak-kurulumu": "cloud-kitchen-setup",
+    "cafe-kurulumu": "cafe-setup",
+    "catering-mutfagi": "catering-kitchen",
+    "fine-dining-kurulumu": "fine-dining-kitchen-setup",
+    "all-day-dining-kurulumu": "all-day-dining-kitchen-setup",
+    "fast-food-kurulumu": "fast-food-kitchen-setup",
+    "market-kasap-sarkuteri-kurulumu": "market-butcher-deli-setup",
+    "endustriyel-mutfak-ekipmani-turkiye": "industrial-kitchen-equipment-turkey",
+    "restoran-mutfak-teklif": "restaurant-kitchen-quote",
+    "otel-mutfak-ekipman-tedarik": "hotel-kitchen-equipment",
+    "oztiryakiler-ekipmani-tedarik": "oztiryakiler-equipment-supply",
+    "soguk-oda-teklif": "cold-room-quote",
+    "havuzlu-dolap-tedarik": "deli-counter-refrigeration",
+    "endustriyel-pisirme-ekipmanlari": "industrial-cooking-equipment",
+    "mutfak-teklif-platformu": "kitchen-quote-platform",
+    "bar-tasarimi-turkiye": "bar-design-turkey",
+    blog: "blog",
+    projeler: "projects",
+  };
+
   /* ---------- dil tespiti ---------- */
 
   function detectLang() {
     try {
       var path = String(location.pathname || "").toLowerCase();
       if (PREFIX_RE.test(path)) return "en";
-      // file:// yerelde ise URL prefix yoktur; localStorage'a düş.
-      var saved = null;
-      try { saved = localStorage.getItem(STORAGE_KEY); } catch (_) {}
-      if (saved && SUPPORTED.indexOf(saved) !== -1) return saved;
-      var nav = (navigator.language || "").slice(0, 2).toLowerCase();
-      if (location.protocol === "file:" && nav === "en") return "en";
       return DEFAULT;
     } catch (_) {
       return DEFAULT;
@@ -209,9 +237,19 @@
       }
       var p = u.pathname || "/";
       var stripped = p.replace(PREFIX_RE, "/");
-      var nextPath = lang === "en"
-        ? "/en" + (stripped === "/" ? "" : stripped)
-        : stripped;
+      var base = stripped === "/" ? "" : stripped;
+      if (lang === "en") {
+        if (EN_PATH_ALIASES[stripped]) base = EN_PATH_ALIASES[stripped];
+        else if (stripped.indexOf("/rehber/") === 0) {
+          base = "/guides/" + stripped.slice("/rehber/".length);
+        } else if (stripped.indexOf("/projeler/") === 0) {
+          base = "/projects/" + stripped.slice("/projeler/".length);
+        } else {
+          var slug = stripped.replace(/^\//, "");
+          if (TR_GEO_TO_EN_SLUG[slug]) base = "/" + TR_GEO_TO_EN_SLUG[slug];
+        }
+      }
+      var nextPath = lang === "en" ? "/en" + base : stripped;
       u.pathname = nextPath;
       if (isAbsolute) return u.toString();
       return u.pathname + u.search + u.hash;
@@ -306,11 +344,34 @@
     } catch (_) {}
   }
 
+  function dispatchI18nReady() {
+    try {
+      window.dispatchEvent(
+        new CustomEvent("equsto:i18n-ready", { detail: { lang: lang } })
+      );
+    } catch (_) {}
+  }
+
+  function redirectToEnCanonical() {
+    if (PREFIX_RE.test(location.pathname || "")) return;
+    try {
+      if (localStorage.getItem(STORAGE_KEY) !== "en") return;
+    } catch (_) {
+      return;
+    }
+    var dest = urlFor(location.pathname + location.search + location.hash, "en");
+    var cur = (location.pathname || "/").replace(/\/+$/, "") || "/";
+    var next = dest.split("?")[0].split("#")[0].replace(/\/+$/, "") || "/";
+    if (next !== cur) location.replace(dest);
+  }
+
   function afterDictReady() {
     applyTree(document);
     ensureHreflang(lang);
     mountSwitcher(lang);
     rerunDynamicRenderers();
+    redirectToEnCanonical();
+    dispatchI18nReady();
   }
 
   window.eqI18nReady = loadDict(lang).then(function () {
