@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import Script from "next/script";
 import { SHOP_ASSET_V } from "@/lib/shop/assets";
 
@@ -13,6 +14,16 @@ type Props = {
 /** Chrome olmayan legacy sayfalar (login, admin) */
 export default function RawLegacyPage({ bodyHtml, bodyClass, scripts = [], extraStyles = [] }: Props) {
   const v = SHOP_ASSET_V;
+
+  useEffect(() => {
+    if (!bodyClass) return;
+    const prev = document.body.className;
+    document.body.className = bodyClass;
+    return () => {
+      document.body.className = prev;
+    };
+  }, [bodyClass]);
+
   return (
     <>
       {extraStyles.map((href) => (
@@ -21,7 +32,7 @@ export default function RawLegacyPage({ bodyHtml, bodyClass, scripts = [], extra
       ))}
       <Script src={`/theme.js?v=${v}`} strategy="beforeInteractive" />
       <Script src={`/eq-site-urls.js?v=${v}`} strategy="beforeInteractive" />
-      <div className={bodyClass} dangerouslySetInnerHTML={{ __html: bodyHtml }} />
+      <div dangerouslySetInnerHTML={{ __html: bodyHtml }} />
       <Script src={`/eq-i18n.js?v=${v}`} strategy="afterInteractive" />
       {scripts.map((src) => (
         <Script key={src} src={src} strategy="afterInteractive" />
