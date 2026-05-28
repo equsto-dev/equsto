@@ -217,9 +217,6 @@
     var year = new Date().getFullYear();
 
     return (
-      '<button type="button" class="eq-mfoot-back" id="eq-mfoot-back">' +
-      esc(t("footer.back_to_top", "Başa dön")) +
-      "</button>" +
       '<div class="eq-mfoot-main">' +
       '<div class="eq-mfoot-inner">' +
       '<div class="eq-mfoot-cols">' +
@@ -287,16 +284,6 @@
 
   function wire(host) {
     wireLinkHrefs(host);
-    var back = host.querySelector("#eq-mfoot-back");
-    if (back) {
-      back.addEventListener("click", function () {
-        try {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        } catch (_) {
-          window.scrollTo(0, 0);
-        }
-      });
-    }
     var cookie = host.querySelector("#eq-mfoot-cookie");
     if (cookie) {
       cookie.addEventListener("click", function () {
