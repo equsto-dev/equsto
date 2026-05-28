@@ -1,0 +1,27 @@
+{
+  "tarih": "2026-05-22T18:01:53.475Z",
+  "cdn_base": "https://oztiryakiler.com.tr/ax-images/images",
+  "urun": 4770,
+  "orneklenen": 200,
+  "vitrin_images_dolu": 4770,
+  "vitrin_bos": 0,
+  "manifest_var": 86,
+  "yerel_web_dosya": 0,
+  "yerel_pdf": 86,
+  "yerel_web_urun_foto": 0,
+  "yerel_web_katalog_kare": 0,
+  "cdn_404": 0,
+  "cdn_katalog_kare": 0,
+  "cdn_urun_gorseli": 0,
+  "cdn_var_head": 0,
+  "cdn_kucuk": 0,
+  "cdn_hata": 200,
+  "eslesme_ikisi_urun": 0,
+  "sadece_yerel": 86,
+  "sadece_cdn": 0,
+  "ikisi_yok": 114,
+  "notlar": [
+    "CDN çoğu kodda 1200×1200 katalog sayfası döndürür (ürün fotoğrafı değil).",
+    "Equsto vitrin: yerel web (gerçek foto) veya PDF kırpımı; boşsa CDN denenir (eq-site-urls.js)."
+  ]
+}

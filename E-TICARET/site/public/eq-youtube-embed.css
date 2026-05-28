@@ -1,0 +1,115 @@
+/* Click-to-play YouTube facade — avoids embed bot-verification on immediate load */
+.eq-yt {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  background: #000;
+  overflow: hidden;
+}
+.eq-yt--active {
+  background: #000;
+}
+.eq-yt__btn {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  background: #1a1a1a;
+  display: block;
+}
+.eq-yt__btn:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: -2px;
+}
+.eq-yt__thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+}
+.eq-yt__shade {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.28);
+  pointer-events: none;
+}
+.eq-yt__label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+.eq-yt__icon {
+  display: block;
+  width: 68px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(255, 0, 0, 0.92);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
+  position: relative;
+}
+.eq-yt__icon::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-38%, -50%);
+  border-style: solid;
+  border-width: 10px 0 10px 18px;
+  border-color: transparent transparent transparent #fff;
+}
+.eq-yt__txt {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.eq-yt__watch {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 2;
+  font-size: 11px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.72);
+  line-height: 1.2;
+}
+.eq-yt__watch:hover {
+  background: rgba(0, 0, 0, 0.88);
+  text-decoration: underline;
+}
+.eq-yt--poster-minimal .eq-yt__shade {
+  background: rgba(0, 0, 0, 0.12);
+}
+.eq-yt--poster-minimal .eq-yt__label {
+  display: none;
+}
+.eq-yt--autoplay.eq-yt--active .eq-yt__btn,
+.eq-yt--active .eq-yt__btn,
+.eq-yt--active .eq-yt__watch {
+  display: none;
+}
+.eq-yt iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}

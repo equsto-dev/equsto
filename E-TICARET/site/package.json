@@ -65,14 +65,12 @@
     "pfos:referans": "npm run pfos:referans:extract && npm run pfos:referans:build",
     "pfos:motor:test": "node --import ./scripts/load-env.mjs ./node_modules/tsx/dist/cli.mjs scripts/test-pfos-motor.mjs",
     "sync:legacy": "node scripts/sync-legacy-assets.mjs",
+    "public:audit": "node scripts/audit-public-assets.mjs",
+    "catalog:deploy:check": "node scripts/check-catalog-images-deploy.mjs",
     "search:up": "docker compose -f docker-compose.meilisearch.yml up -d",
     "search:health": "node --import ./scripts/load-env.mjs scripts/meili-health.mjs",
     "search:index": "node --import ./scripts/load-env.mjs scripts/index-meilisearch.mjs",
     "postinstall": "node scripts/prisma-postinstall-skip.mjs"
-  },
-  "imports": {
-    "@prisma/client": "./prisma/generated/client/index.js",
-    "@prisma/client/*": "./prisma/generated/client/*"
   },
   "dependencies": {
     "@ant-design/icons": "^5.6.1",

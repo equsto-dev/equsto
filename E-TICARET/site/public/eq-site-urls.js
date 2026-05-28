@@ -334,6 +334,22 @@
     }
   }
 
+  /**
+   * Harici görsel istekleri: varsayılan kapalı.
+   * - Canlı (equsto.com): kapalı (yalnızca sunucudaki/repodaki dosyalar).
+   * - Yerel dev (localhost/127.0.0.1): açık.
+   * İstenirse konsoldan: window.EQUSTO_ALLOW_REMOTE_IMAGES = true;
+   */
+  function allowRemoteImages() {
+    try {
+      if (typeof window !== "undefined" && window.EQUSTO_ALLOW_REMOTE_IMAGES === true) return true;
+      var h = (location.hostname || "").toLowerCase();
+      if (h === "localhost" || h === "127.0.0.1") return true;
+    } catch (_) {}
+    return false;
+  }
+  window.eqAllowRemoteImages = allowRemoteImages;
+
   /** `images/foo.jpg` katalog yolu → tarayıcı kökü (sonunda `/`). Canlıda önce deploy hedefi `/data/images/`; __eqImgFail `/images/` dener. */
   function catalogImagesWebRoot() {
     try {
@@ -371,6 +387,29 @@
         .replace(/[^a-z0-9-]/g, "");
     return "images/catalog/ozti/web/" + slug + ".jpg";
   };
+
+  /** `…/ozti-7865-n1-80908-10.jpg` → `7865.N1.80908.10` (cafemarkt / web / pdf sayfa). */
+  function oztiKodFromCatalogRel(s) {
+    var t = String(s || "")
+      .trim()
+      .replace(/\\/g, "/");
+    var m = t.match(/ozti-([0-9]{4})-([0-9a-z][0-9a-z0-9-]*)\./i);
+    if (!m) return "";
+    return m[1] + "." + m[2].replace(/-/g, ".");
+  }
+
+  /** Katalog yolu → oztiryakiler.com.tr ax-images (canlıda yerel dosya yokken). */
+  function oztiAxFromCatalogRel(s) {
+    var kod = oztiKodFromCatalogRel(s);
+    if (!kod) return "";
+    if (typeof window.eqOztiAxImageFromSku === "function") {
+      var ax = window.eqOztiAxImageFromSku(kod);
+      if (ax) return ax;
+    }
+    return (
+      "https://oztiryakiler.com.tr/ax-images/images/" + encodeURIComponent(kod) + ".jpg"
+    );
+  }
 
   /** `images/catalog/ozti/web/ozti-8574-cm080-00.jpg` → Öztiryakiler ax-images CDN. */
   function oztiAxImageFromWebPath(s) {
@@ -431,18 +470,20 @@
         continue;
       }
       var chunk = [];
+      if (allowRemoteImages() && isEqustoLiveHost() && /^catalog\/ozti\//i.test(file)) {
+        var axLive = oztiAxFromCatalogRel("images/" + file);
+        if (axLive) chunk.push(axLive);
+      }
       if (/^catalog\/ozti\/web\//i.test(file)) {
         chunk.push("/images/" + file);
         chunk.push("/images/" + encodeDataRelPath(file));
-        var ax = oztiAxImageFromWebPath("images/" + file);
+        var ax = allowRemoteImages() ? oztiAxImageFromWebPath("images/" + file) : "";
         if (ax) chunk.push(ax);
-      } else if (/^catalog\/ozti\/p\d+\/ozti-/i.test(file) && typeof window.eqOztiAxImageFromSku === "function") {
-        var slugM = file.match(/ozti-([0-9]{4})-([0-9][0-9a-z-]+(?:-[0-9]{2})?)\./i);
-        if (slugM) {
-          var kodGuess = slugM[1] + "." + slugM[2].replace(/-/g, ".");
-          var axK = window.eqOztiAxImageFromSku(kodGuess);
-          if (axK) chunk.push(axK);
-        }
+      } else if (/^catalog\/ozti\/(?:cafemarkt|p\d+)\/ozti-/i.test(file)) {
+        chunk.push("/images/" + file);
+        chunk.push("/images/" + encodeDataRelPath(file));
+        var axCm = allowRemoteImages() ? oztiAxFromCatalogRel("images/" + file) : "";
+        if (axCm) chunk.push(axCm);
       }
       var root = catalogImagesWebRoot();
       if (/^catalog\//i.test(file)) {
@@ -601,7 +642,13 @@
     if (p == null || p === "") return "";
     var s = String(p).trim().replace(/\\/g, "/");
     if (!s) return "";
-    if (/^https?:\/\//i.test(s)) return s;
+    if (/^https?:\/\//i.test(s)) return allowRemoteImages() ? s : "";
+    if (isEqustoLiveHost() && /catalog\/ozti\//i.test(s)) {
+      if (allowRemoteImages()) {
+        var axProd = oztiAxFromCatalogRel(s);
+        if (axProd) return axProd;
+      }
+    }
     if (isSogukOdaCatalogPath(s)) return sogukOdaVitrinHref();
     var pdfWeb = oztiPdfPageToWebRel(s);
     if (pdfWeb) s = pdfWeb;
@@ -761,6 +808,7 @@
     if (
       oztiKod &&
       !/7919\.CR/i.test(oztiKod) &&
+      allowRemoteImages() &&
       typeof window.eqOztiAxImageFromSku === "function"
     ) {
       var axTry = window.eqOztiAxImageFromSku(oztiKod);
