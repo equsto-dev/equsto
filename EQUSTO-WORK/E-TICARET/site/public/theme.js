@@ -489,7 +489,7 @@
       !b.classList.contains("bd-page");
     if (shopHdr && !document.querySelector('script[src*="eq-shop-header"]')) {
       var hdrJs = document.createElement("script");
-      hdrJs.src = "/eq-shop-header.js?v=20260526hdr";
+      hdrJs.src = "/eq-shop-header.js?v=20260528hdr";
       hdrJs.defer = true;
       document.head.appendChild(hdrJs);
     }
@@ -528,6 +528,22 @@
   } catch (_) {}
 })();
 
+/** Alt bant (footer) — eq-shop sayfaları */
+(function () {
+  try {
+    var b = document.body;
+    if (!b || !b.classList || !b.classList.contains("eq-shop")) return;
+    if (b.classList.contains("admin-app")) return;
+    if (b.classList.contains("pf-page")) return;
+    if (!document.querySelector('script[src*="eq-footer"]')) {
+      var f = document.createElement("script");
+      f.src = "/eq-footer.js?v=20260529helpcolsss";
+      f.defer = true;
+      document.head.appendChild(f);
+    }
+  } catch (_) {}
+})();
+
 /** Eksik üst chrome (logo + arama + topnav) — GEO / rehber sayfaları */
 (function () {
   try {
@@ -536,6 +552,21 @@
       ch.src = "/eq-vitrin-chrome.js?v=20260526dhdr";
       ch.defer = true;
       document.head.appendChild(ch);
+    }
+  } catch (_) {}
+})();
+
+/** Link üstünde orta tuş / tekerlek ile dikey kaydırma */
+(function () {
+  try {
+    var b = document.body;
+    if (!b || !b.classList) return;
+    if (b.classList.contains("admin-app")) return;
+    if (!document.querySelector('script[src*="eq-link-scroll"]')) {
+      var ls = document.createElement("script");
+      ls.src = "/eq-link-scroll.js?v=20260528midscroll3";
+      ls.defer = true;
+      document.head.appendChild(ls);
     }
   } catch (_) {}
 })();

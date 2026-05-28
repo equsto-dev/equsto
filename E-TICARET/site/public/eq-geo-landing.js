@@ -95,7 +95,7 @@
   }
 
   function ensureGeoScripts() {
-    loadScriptOnce("/eq-footer.js?v=20260528foot-faq1");
+    loadScriptOnce("/eq-footer.js?v=20260528foot-brand5");
     loadScriptOnce("/contact.js?v=20260522wa", true);
   }
 
