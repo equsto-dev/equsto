@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect } from "react";
 import Link from "next/link";
 
 const ICE_STRIP_IMAGES = [
@@ -14,15 +13,6 @@ const ICE_STRIP_IMAGES = [
 ] as const;
 
 export default function BesosImt300Hero() {
-  useEffect(() => {
-    const init = () => {
-      const w = window as unknown as { __eqYoutubeEmbedInit?: () => void };
-      w.__eqYoutubeEmbedInit?.();
-    };
-    const t = window.setTimeout(init, 500);
-    return () => window.clearTimeout(t);
-  }, []);
-
   return (
     <>
       <section className="bd-hero bd-hero-fullbleed" id="bd-hero" aria-label="Besos tanıtım videosu">
