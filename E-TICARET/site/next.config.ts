@@ -189,11 +189,17 @@ const nextConfig: NextConfig = {
       { source: "/besos/imt300/:path*", headers: [utf8Html] },
       { source: "/login", headers: [utf8Html] },
       { source: "/marka", headers: [utf8Html] },
+      { source: "/marka/:path*", headers: [utf8Html] },
+      { source: "/shop/marka", headers: [utf8Html] },
+      { source: "/shop/marka/:path*", headers: [utf8Html] },
+      { source: "/sss", headers: [utf8Html] },
+      { source: "/sss/:path*", headers: [utf8Html] },
       { source: "/arama", headers: [utf8Html] },
       { source: "/shop/:dept", headers: [utf8Html] },
       { source: "/en", headers: [utf8Html] },
       { source: "/en/:path*", headers: [utf8Html] },
       { source: "/i18n/:file.json", headers: [utf8Json] },
+      { source: "/locales/:file.json", headers: [utf8Json] },
       {
         source: "/eq-footer.js",
         headers: [
@@ -240,6 +246,8 @@ const nextConfig: NextConfig = {
       beforeFiles: [
         /* Katalog görselleri: /data/images/catalog/… → /images/catalog/… (legacy HTML + eq-site-urls) */
         { source: "/data/images/:path*", destination: "/images/:path*" },
+        /* /i18n/ bazı tarayıcı eklentilerinde engellenir — /locales/ alias */
+        { source: "/locales/:file.json", destination: "/i18n/:file.json" },
         { source: "/arama", destination: "/arama.html" },
         { source: "/arama/", destination: "/arama.html" },
         /* API birleştirme — Hobby 12 function limiti (geriye dönük URL) */
