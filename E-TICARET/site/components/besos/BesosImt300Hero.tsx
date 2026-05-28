@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { besosHeroYoutubeEmbedUrl, BESOS_HERO_YT_ID } from "@/lib/besos/youtube-embed";
 
 const ICE_STRIP_IMAGES = [
   { src: "/assets/besos-ice-mint-DUtHKFgd.png", alt: "Berrak buz küpü" },
@@ -12,22 +13,22 @@ const ICE_STRIP_IMAGES = [
   { src: "/assets/besos-ice-sphere-NLq_ILu6.png", alt: "Buz küresi" },
 ] as const;
 
+const HERO_EMBED_SRC = besosHeroYoutubeEmbedUrl(BESOS_HERO_YT_ID);
+
 export default function BesosImt300Hero() {
   return (
     <>
       <section className="bd-hero bd-hero-fullbleed" id="bd-hero" aria-label="Besos tanıtım videosu">
         <div className="bd-hero-media">
           <div className="bd-hero-video">
-            <div
-              className="eq-yt"
-              id="bd-hero-yt"
-              data-eq-yt-id="cOVgfu2o4h4"
-              data-eq-yt-title="Besos · Equsto Bar Studio"
-              data-eq-yt-autoplay="1"
-              data-eq-yt-mute="1"
-              data-eq-yt-loop="1"
-              data-eq-yt-controls="0"
-              data-eq-yt-watch="0"
+            <iframe
+              className="bd-hero-yt-iframe"
+              src={HERO_EMBED_SRC}
+              title="Besos · Equsto Bar Studio"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              referrerPolicy="strict-origin-when-cross-origin"
+              loading="eager"
             />
           </div>
           <div className="bd-hero-overlay" aria-hidden="true" />
