@@ -4511,110 +4511,54 @@ body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-tagline {
   color: rgba(255, 255, 255, 0.72);
   letter-spacing: 0.02em;
 }
-/* Footer — SSS (Size yardımcı olalım listesi içinde) */
+/* Footer — SSS (Size yardımcı olalım listesi içinde, kapalı varsayılan) */
 body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-li-sss {
   margin-bottom: 8px;
 }
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-li-sss .eq-mfoot-col-faq {
-  margin-top: 0;
-  padding-top: 0;
-  border-top: none;
-}
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col-faq-title {
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-sss-toggle {
+  display: block;
+  width: 100%;
   margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
   font-size: 13px;
-  font-weight: 400;
   line-height: 1.45;
   color: rgba(255, 255, 255, 0.78);
-  letter-spacing: 0;
-}
-body.eq-shop:not(.admin-app):not(.bd-page) details.eq-mfoot-col-faq > summary.eq-mfoot-col-faq-title {
+  text-align: left;
   cursor: pointer;
-  list-style: none;
-  position: relative;
-  padding-right: 18px;
-  margin-bottom: 0;
 }
-body.eq-shop:not(.admin-app):not(.bd-page) details.eq-mfoot-col-faq > summary.eq-mfoot-col-faq-title:hover {
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-sss-toggle:hover {
   color: #fff;
   text-decoration: underline;
 }
-body.eq-shop:not(.admin-app):not(.bd-page) details.eq-mfoot-col-faq > summary.eq-mfoot-col-faq-title::-webkit-details-marker {
-  display: none;
-}
-body.eq-shop:not(.admin-app):not(.bd-page) details.eq-mfoot-col-faq > summary.eq-mfoot-col-faq-title::after {
-  content: "";
-  position: absolute;
-  right: 2px;
-  top: 50%;
-  width: 7px;
-  height: 7px;
-  border-right: 2px solid rgba(255, 255, 255, 0.55);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.55);
-  transform: translateY(-70%) rotate(45deg);
-  transition: transform 0.2s ease;
-}
-body.eq-shop:not(.admin-app):not(.bd-page) details.eq-mfoot-col-faq[open] > summary.eq-mfoot-col-faq-title::after {
-  transform: translateY(-30%) rotate(-135deg);
-}
-body.eq-shop:not(.admin-app):not(.bd-page) details.eq-mfoot-col-faq[open] > summary.eq-mfoot-col-faq-title {
-  margin-bottom: 10px;
-  color: #fff;
-  text-decoration: none;
-}
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col-faq-intro {
-  margin: 0 0 12px;
-  font-size: 12px;
-  line-height: 1.55;
-  color: rgba(255, 255, 255, 0.65);
-}
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col-faq-list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col-faq .eq-mfoot-faq-item {
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.04);
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-sss-panel {
+  list-style: none;
+  margin: 8px 0 0;
   padding: 0;
 }
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col-faq .eq-mfoot-faq-item summary {
-  cursor: pointer;
-  list-style: none;
-  padding: 14px 40px 14px 16px;
-  font-size: 14px;
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-sss-panel[hidden] {
+  display: none !important;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-sss-item {
+  margin: 0 0 10px;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-sss-q {
+  margin: 0 0 4px;
+  font-size: 12px;
   font-weight: 600;
-  line-height: 1.4;
-  color: #fff;
-  position: relative;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.92);
 }
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col-faq .eq-mfoot-faq-item summary::-webkit-details-marker {
-  display: none;
-}
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col-faq .eq-mfoot-faq-item summary::after {
-  content: "";
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  width: 8px;
-  height: 8px;
-  border-right: 2px solid rgba(255, 255, 255, 0.65);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.65);
-  transform: translateY(-70%) rotate(45deg);
-  transition: transform 0.2s ease;
-}
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col-faq .eq-mfoot-faq-item[open] summary::after {
-  transform: translateY(-30%) rotate(-135deg);
-}
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col-faq .eq-mfoot-faq-a {
-  padding: 0 16px 14px;
-}
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col-faq .eq-mfoot-faq-a p {
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-sss-a {
   margin: 0;
-  font-size: 13px;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.78);
+  font-size: 12px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.72);
 }
 body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-legal {
   background: #011e41;
