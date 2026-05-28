@@ -5,6 +5,22 @@
 ;(function () {
   'use strict';
 
+  function __cartT(k, fb, vars) {
+    var s = fb || k;
+    try {
+      if (typeof window.eqT === 'function') {
+        var v = window.eqT(k, null);
+        if (v != null && v !== k) s = v;
+      }
+    } catch (_) {}
+    if (vars) {
+      Object.keys(vars).forEach(function (kk) {
+        s = String(s).replace(new RegExp('\\{' + kk + '\\}', 'g'), vars[kk]);
+      });
+    }
+    return s;
+  }
+
   var STORAGE_KEY = 'equsto-ecom-cart-v1';
   var MAX_LINES = 250;
   var BULK_MAX_LINES = 500;
@@ -170,7 +186,10 @@
     if (syncApiWarned) return;
     syncApiWarned = true;
     toast(
-      'Cihazlar arası sepet için sunucu güncellemesi gerekli (equsto-api-canli.zip). Bu cihazda sepet kaydedildi.'
+      __cartT(
+        'cart.sync_server_needed',
+        'Cihazlar arası sepet için sunucu güncellemesi gerekli (equsto-api-canli.zip). Bu cihazda sepet kaydedildi.'
+      )
     );
   }
 
@@ -182,7 +201,7 @@
     }
     if (sessionInvalidWarned) return;
     sessionInvalidWarned = true;
-    toast('Oturum geçersiz — çıkış yapıp tekrar giriş yapın (Google ile).');
+    toast(__cartT('cart.session_invalid', 'Oturum geçersiz — çıkış yapıp tekrar giriş yapın (Google ile).'));
   }
 
   function whenAuthApiReady(fn) {
@@ -528,7 +547,7 @@
   function addFromCard(card) {
     var it = parseItemFromCard(card);
     if (!it) {
-      toast('Ürün bilgisi okunamadı.');
+      toast(__cartT('cart.product_read_fail', 'Ürün bilgisi okunamadı.'));
       return false;
     }
     addFromItem(it);
@@ -573,7 +592,7 @@
     bar.innerHTML =
       '<span class="eq-cart-added-toast__icon" aria-hidden="true">✓</span>' +
       '<span class="eq-cart-added-toast__body">' +
-      '<strong>Sepete eklendi</strong>' +
+      '<strong>' + escHtml(__cartT('cart.added_strong', 'Sepete eklendi')) + '</strong>' +
       (name ? '<span>' + escHtml(name) + '</span>' : '') +
       '</span>';
     document.body.appendChild(bar);
@@ -615,7 +634,8 @@
       el.innerHTML =
         '<span class="eq-hdr-cart-badge" aria-hidden="true">' +
         escHtml(q > 99 ? '99+' : String(q)) +
-        '</span> Sepet';
+        '</span> ' +
+        escHtml(__cartT('cart.hdr_cart_label', 'Sepet'));
     }
     var bn = document.getElementById('eq-bnav-cart-badge');
     if (bn) bn.textContent = q > 99 ? '99+' : String(q);
@@ -706,7 +726,7 @@
     var arr = normalizeCart(load());
     var st = mergeIntoCart(arr, it, { maxLines: MAX_LINES });
     if (st === 'full') {
-      toast('Sepet çok fazla satır içeriyor.');
+      toast(__cartT('cart.too_many_lines', 'Sepet çok fazla satır içeriyor.'));
       return;
     }
     save(arr);
@@ -764,7 +784,9 @@
         toastCartAdded(added > 1 ? added + ' ürün' : '');
       } else {
         var msg =
-          (merged ? merged + ' satır güncellendi' : 'Sepete eklenemedi') +
+          (merged
+            ? __cartT('cart.bulk_updated', '{n} satır güncellendi', { n: merged })
+            : __cartT('cart.bulk_failed', 'Sepete eklenemedi')) +
           (total ? ' · katalog: ' + total : '');
         if (capped) msg += ' · ' + capped + ' kalem sepet sınırı nedeniyle atlandı (max ' + cap + ')';
         toast(msg);
@@ -778,7 +800,7 @@
     opts = opts || {};
     var list = Array.isArray(rows) ? rows : [];
     if (!list.length) {
-      toast('Teklif listesi boş.');
+      toast(__cartT('cart.quote_empty', 'Teklif listesi boş.'));
       return Promise.resolve({ added: 0 });
     }
     function applyRows(catalog) {
@@ -829,7 +851,7 @@
       if (added > 0) {
         toastCartAdded(added > 1 ? added + ' kalem' : '');
       } else {
-        toast('Sepet dolu — bazı kalemler eklenemedi');
+        toast(__cartT('cart.full_partial', 'Sepet dolu — bazı kalemler eklenemedi'));
       }
       return { added: added, lines: arr.length };
     }
@@ -859,7 +881,7 @@
   function buildWaText() {
     var arr = load();
     if (!arr.length) return '';
-    var lines = ['Merhaba, equsto.com sepetimden yazıyorum:', '', 'Ürünler:'];
+    var lines = [__cartT('cart.wa_intro', 'Merhaba, equsto.com sepetimden yazıyorum:'), '', __cartT('cart.wa_products', 'Ürünler:')];
     arr.forEach(function (x, i) {
       var qty = x.q > 1 && !x.quote ? ' (x' + x.q + ')' : '';
       var price = String(x.p || '').trim();
@@ -869,14 +891,18 @@
         lines.push(i + 1 + '. ' + x.n + ' — ' + x.b + ' — ' + x.c + ' — ₺' + price + qty);
       }
     });
-    lines.push('', 'Kalem çeşidi: ' + arr.length + (cartIsQuoteOnly(arr) ? '' : ' · Toplam adet: ' + totalQty(arr)));
+    lines.push(
+      '',
+      __cartT('cart.wa_line_types', 'Kalem çeşidi: {n}', { n: arr.length }) +
+        (cartIsQuoteOnly(arr) ? '' : __cartT('cart.wa_total_qty', ' · Toplam adet: {q}', { q: totalQty(arr) }))
+    );
     return lines.join('\n');
   }
 
   function openWhatsApp() {
     var text = buildWaText();
     if (!text) {
-      toast('Sepet boş.');
+      toast(__cartT('cart.empty', 'Sepet boş.'));
       return;
     }
     var phone = resolveWaDigits();
@@ -1084,21 +1110,27 @@
     var sub = cartSubtotal(arr);
     if (cartIsQuoteOnly(arr)) {
       rowsEl.innerHTML =
-        '<li><span>Teklif kalemi</span><span>' +
+        '<li><span>' +
+        escHtml(__cartT('cart.quote_line_label', 'Teklif kalemi')) +
+        '</span><span>' +
         escHtml(String(arr.length)) +
         '</span></li>';
       return;
     }
     var html =
-      '<li><span>Ara toplam (' +
-      escHtml(String(arr.length)) +
-      ' kalem)</span><span>₺' +
+      '<li><span>' +
+      escHtml(__cartT('cart.subtotal_n', 'Ara toplam ({n} kalem)', { n: arr.length })) +
+      '</span><span>₺' +
       escHtml(formatMoneyTL(sub)) +
       '</span></li>' +
-      '<li><span>Toplam adet</span><span>' +
+      '<li><span>' +
+      escHtml(__cartT('cart.total_qty_label', 'Toplam adet')) +
+      '</span><span>' +
       escHtml(String(totalQty(arr))) +
       '</span></li>' +
-      '<li class="eq-cart-summary-rows__total"><span>Genel toplam</span><span>₺' +
+      '<li class="eq-cart-summary-rows__total"><span>' +
+      escHtml(__cartT('cart.grand_total', 'Genel toplam')) +
+      '</span><span>₺' +
       escHtml(formatMoneyTL(sub)) +
       '</span></li>';
     rowsEl.innerHTML = html;
@@ -1113,7 +1145,10 @@
         head.hidden = true;
       } else {
         head.hidden = false;
-        head.textContent = arr.length + ' kalem · ' + totalQty(arr) + ' adet';
+        head.textContent = __cartT('cart.lines_summary', '{n} kalem · {q} adet', {
+          n: arr.length,
+          q: totalQty(arr),
+        });
       }
     }
     var aside = document.getElementById('equsto-cart-aside');
@@ -1153,9 +1188,15 @@
       sc.innerHTML =
         '<div class="eq-cart-empty">' +
         '<div class="eq-cart-empty__icon" aria-hidden="true">🛒</div>' +
-        '<h2 class="eq-cart-empty__title">Sepetiniz boş</h2>' +
-        '<p class="eq-cart-empty__text">Katalogdan ürün ekleyerek teklif veya sipariş talebi oluşturabilirsiniz.</p>' +
-        '<a href="/" class="eq-cart-btn eq-cart-btn--primary">Alışverişe başla</a>' +
+        '<h2 class="eq-cart-empty__title">' +
+        escHtml(__cartT('cart.empty_title', 'Sepetiniz boş')) +
+        '</h2>' +
+        '<p class="eq-cart-empty__text">' +
+        escHtml(__cartT('cart.empty_text', 'Katalogdan ürün ekleyerek teklif veya sipariş talebi oluşturabilirsiniz.')) +
+        '</p>' +
+        '<a href="/" class="eq-cart-btn eq-cart-btn--primary">' +
+        escHtml(__cartT('cart.start_shopping', 'Alışverişe başla')) +
+        '</a>' +
         '</div>';
       updateCartSummary();
       updatePanelMode();
@@ -1174,7 +1215,7 @@
     if (clearBtn && clearBtn.dataset.eqCartBound !== '1') {
       clearBtn.dataset.eqCartBound = '1';
       clearBtn.addEventListener('click', function () {
-        if (window.confirm('Sepetteki tüm ürünleri kaldırmak istiyor musunuz?')) clearAll();
+        if (window.confirm(__cartT('cart.confirm_clear', 'Sepetteki tüm ürünleri kaldırmak istiyor musunuz?'))) clearAll();
       });
     }
     var waBtn = document.getElementById('equsto-cart-wa');
@@ -1199,7 +1240,9 @@
     for (var i = 0; i < head.childNodes.length; i++) {
       if (head.childNodes[i].nodeType === 3) txt += head.childNodes[i].textContent;
     }
-    title.textContent = String(txt || 'Alışveriş sepeti').trim() || 'Alışveriş sepeti';
+    title.textContent =
+      String(txt || __cartT('common.cart', 'Alışveriş sepeti')).trim() ||
+      __cartT('common.cart', 'Alışveriş sepeti');
     while (head.firstChild && head.firstChild !== close) head.removeChild(head.firstChild);
     head.insertBefore(title, close || null);
   }
@@ -1209,7 +1252,10 @@
     var arr = load();
     var quoteOnly = cartIsQuoteOnly(arr);
     var titleEl = document.getElementById('equsto-cart-panel-title');
-    if (titleEl) titleEl.textContent = quoteOnly ? 'Teklif listesi' : 'Alışveriş sepeti';
+    if (titleEl)
+      titleEl.textContent = quoteOnly
+        ? __cartT('cart.quote_list_title', 'Teklif listesi')
+        : __cartT('common.cart', 'Alışveriş sepeti');
     var ov = document.getElementById('equsto-cart-overlay');
     if (ov) ov.classList.toggle('eq-cart-overlay--quote', quoteOnly);
     var gotoBtn = document.getElementById('equsto-cart-goto-page');
@@ -1300,13 +1346,13 @@
     if (!arr.length) { toast('Sepet boş.'); return; }
     var f = readCheckoutForm();
     var ad = f ? f.ad : (window.prompt('Ad Soyad:') || '').trim();
-    if (!ad) { toast('Ad soyad gerekli.'); return; }
-    var tel = f ? f.tel : (window.prompt('Telefon (ör. 0532…):') || '').trim();
-    if (!tel) { toast('Telefon gerekli.'); return; }
+    if (!ad) { toast(__cartT('cart.name_required', 'Ad soyad gerekli.')); return; }
+    var tel = f ? f.tel : (window.prompt(__cartT('cart.phone_prompt', 'Telefon (ör. 0532…):')) || '').trim();
+    if (!tel) { toast(__cartT('cart.phone_required', 'Telefon gerekli.')); return; }
     var eposta = f ? f.eposta : (window.prompt('E-posta (opsiyonel):') || '').trim();
     var not = f ? f.not : (window.prompt('Not (opsiyonel):') || '').trim();
     var btn = document.getElementById('equsto-cart-order');
-    if (btn) { btn.disabled = true; btn.textContent = 'Gönderiliyor…'; }
+    if (btn) { btn.disabled = true; btn.textContent = __cartT('cart.order_sending', 'Gönderiliyor…'); }
     var kalemler = arr.map(function (x) {
       var birim = parsePriceNum(x.p);
       var adet = x.q > 0 ? x.q : 1;
@@ -1336,20 +1382,20 @@
     }).then(function (r) {
       return r.json().then(function (j) { return { ok: r.ok, j: j }; });
     }).then(function (res) {
-      if (btn) { btn.disabled = false; btn.textContent = 'Siparişi oluştur'; }
+      if (btn) { btn.disabled = false; btn.textContent = __cartT('cart.order', 'Siparişi oluştur'); }
       if (!res.ok || !(res.j && res.j.success)) {
         var msg = (res.j && (res.j.error || res.j.message)) || ('HTTP hata');
-        toast('Sipariş gönderilemedi: ' + msg);
+        toast(__cartT('cart.order_failed', 'Sipariş gönderilemedi: ') + msg);
         return;
       }
       var no = (res.j.data && (res.j.data.siparis_no || res.j.data.id)) || '';
-      toast('Sipariş alındı' + (no ? ' (' + no + ')' : ''));
+      toast(__cartT('cart.order_received', 'Sipariş alındı') + (no ? ' (' + no + ')' : ''));
       clearAll();
       dismissCartUi();
     }).catch(function (e) {
-      if (btn) { btn.disabled = false; btn.textContent = 'Siparişi oluştur'; }
+      if (btn) { btn.disabled = false; btn.textContent = __cartT('cart.order', 'Siparişi oluştur'); }
       var em = e && e.message ? e.message : String(e);
-      toast('Sipariş gönderilemedi: ' + em);
+      toast(__cartT('cart.order_failed', 'Sipariş gönderilemedi: ') + em);
     });
   }
 

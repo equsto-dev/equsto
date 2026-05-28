@@ -5883,8 +5883,8 @@ body.eq-cart-page #equsto-cart-overlay {
 }
 
 /* WhatsApp widget — contact.css yüklenmezse dev ikon / açık overlay önlemi */
-body.eq-shop:not(.admin-app):not(.bd-page) #equsto-contact-fab,
-body.eq-shop:not(.admin-app):not(.bd-page) .equsto-contact-fab:not(#eq-bottom-tabbar *) {
+body.eq-shop:not(.admin-app) #equsto-contact-fab,
+body.eq-shop:not(.admin-app) .equsto-contact-fab:not(#eq-bottom-tabbar *) {
   position: fixed;
   right: max(16px, env(safe-area-inset-right, 0px));
   bottom: max(16px, env(safe-area-inset-bottom, 0px));
@@ -5895,7 +5895,7 @@ body.eq-shop:not(.admin-app):not(.bd-page) .equsto-contact-fab:not(#eq-bottom-ta
   max-height: 80px;
   pointer-events: none;
 }
-body.eq-shop:not(.admin-app):not(.bd-page)
+body.eq-shop:not(.admin-app)
   #equsto-contact-fab
   .equsto-contact-wa-fab:not(.equsto-contact-wa-fab--tabbar)
   img {
@@ -5911,9 +5911,15 @@ body.eq-shop:not(.admin-app):not(.bd-page)
   pointer-events: none !important;
 }
 @media (max-width: 768px) {
-  body.eq-shop:not(.admin-app):not(.bd-page) #equsto-contact-fab,
-  body.eq-shop:not(.admin-app):not(.bd-page) .equsto-contact-fab:not(#eq-bottom-tabbar *) {
+  body.eq-shop:not(.admin-app):not(.eq-pfos) #equsto-contact-fab,
+  body.eq-shop:not(.admin-app):not(.eq-pfos) .equsto-contact-fab:not(#eq-bottom-tabbar *) {
     display: none !important;
+    pointer-events: none !important;
+  }
+  /* PFOS: alt şerit yok — yüzen WhatsApp kalsın */
+  body.eq-shop.eq-pfos:not(.admin-app) #equsto-contact-fab,
+  body.eq-shop.eq-pfos:not(.admin-app) .equsto-contact-fab:not(#eq-bottom-tabbar *) {
+    display: flex !important;
     pointer-events: none !important;
   }
 }

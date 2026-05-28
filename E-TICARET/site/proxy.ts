@@ -36,9 +36,78 @@ function legacyMarkaRedirect(request: NextRequest): NextResponse | null {
   return NextResponse.redirect(dest, 308);
 }
 
+/** Eski /shop/sogutma/… içecek SKU yolları → /shop/icecek/… (aynı ürün slug) */
+function legacySogutmaIcecekProductRedirect(request: NextRequest): NextResponse | null {
+  const { pathname } = request.nextUrl;
+  const m = pathname.match(/^(\/en)?\/shop\/sogutma\/([^/]+)\/?$/i);
+  if (!m) return null;
+  const low = decodeURIComponent(m[2]).toLowerCase();
+  const beverageSlug =
+    /meyve-suyu-sogutma|kopuklu-ayran|k[oö]p[uü]kl[uü]-ayran|ayran-makin|slush|serbet|sherbet|granita|limonata|8477-|9868-|vitrifrigo|sut-sogutucu|süt-soğutucu|bardak-isit|bardak-ısıt|ice-slush|buzlu-serbet|meyve-suyu-so[gğ]utma/i.test(
+      low,
+    );
+  if (!beverageSlug) return null;
+  const dest = request.nextUrl.clone();
+  dest.pathname = (m[1] || "") + "/shop/icecek/" + m[2];
+  return NextResponse.redirect(dest, 308);
+}
+
+/** Yanlış soğutma/set-ustu yolu — sebze doğrama → hazirlik */
+function legacyWrongDeptSebzeDogramaRedirect(request: NextRequest): NextResponse | null {
+  const { pathname } = request.nextUrl;
+  const m = pathname.match(/^(\/en)?\/shop\/(sogutma|set-ustu-mutfak)\/([^/]+)\/?$/i);
+  if (!m) return null;
+  const slug = decodeURIComponent(m[3]).toLowerCase();
+  if (!/robot-coupe|sebze-dograma|9840-cl|cl60d|cl50d|cl52d|cl55d/i.test(slug)) {
+    return null;
+  }
+  const dest = request.nextUrl.clone();
+  dest.pathname = (m[1] || "") + "/shop/hazirlik/" + m[3];
+  return NextResponse.redirect(dest, 308);
+}
+
+/** Eski set-ustu Robot Coupe / sebze doğrama → /shop/hazirlik/… */
+function legacySetUstuSebzeDogramaRedirect(request: NextRequest): NextResponse | null {
+  const { pathname } = request.nextUrl;
+  const m = pathname.match(/^(\/en)?\/shop\/set-ustu-mutfak\/([^/]+)\/?$/i);
+  if (!m) return null;
+  const slug = decodeURIComponent(m[2]).toLowerCase();
+  if (
+    !/robot-coupe|sebze-dograma|9840-cl|cl60|cl50|cl52|cl55|cl60d/i.test(slug)
+  ) {
+    return null;
+  }
+  const dest = request.nextUrl.clone();
+  dest.pathname = (m[1] || "") + "/shop/hazirlik/" + m[2];
+  return NextResponse.redirect(dest, 308);
+}
+
+/** Eski hazirlik/tezgah pizza soğutma üniteleri → /shop/sogutma/… */
+function legacyHazirlikPzcSogutmaRedirect(request: NextRequest): NextResponse | null {
+  const { pathname } = request.nextUrl;
+  const m = pathname.match(/^(\/en)?\/shop\/(hazirlik|tezgah)\/([^/]+)\/?$/i);
+  if (!m) return null;
+  const slug = decodeURIComponent(m[3]).toLowerCase();
+  if (!/pzc\d{2}|79e3-pzc|pizza-hazirlik|soguk-hazirlik/i.test(slug)) return null;
+  const dest = request.nextUrl.clone();
+  dest.pathname = (m[1] || "") + "/shop/sogutma/" + m[3];
+  return NextResponse.redirect(dest, 308);
+}
+
 export function proxy(request: NextRequest) {
   const markaRedir = legacyMarkaRedirect(request);
   if (markaRedir) return markaRedir;
+
+  const icecekRedir = legacySogutmaIcecekProductRedirect(request);
+  if (icecekRedir) return icecekRedir;
+
+  const pzcRedir = legacyHazirlikPzcSogutmaRedirect(request);
+  if (pzcRedir) return pzcRedir;
+
+  const sebzeRedir =
+    legacyWrongDeptSebzeDogramaRedirect(request) ||
+    legacySetUstuSebzeDogramaRedirect(request);
+  if (sebzeRedir) return sebzeRedir;
 
   const res = NextResponse.next();
   const p = request.nextUrl.pathname;

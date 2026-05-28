@@ -208,6 +208,29 @@ async function searchCafemarktWitCdn(queries) {
   return [];
 }
 
+function pickBestWitUrl(urls, row) {
+  const list = [...new Set(urls || [])];
+  if (!list.length) return "";
+  const hay = normHay(
+    [row?.name, row?.sku, row?.model].filter(Boolean).join(" ") +
+      " oztiryakiler gurmeaid",
+  );
+  const scored = list.map((u) => {
+    const uh = normHay(u);
+    let score = 0;
+    if (/oztiryakiler|gurmeaid/i.test(u)) score += 40;
+    if (/anna-manuel|unox-|unlu-mamul-firin/i.test(u)) score -= 80;
+    if (hay.includes("MAKARNA") && /makarna/i.test(uh)) score += 30;
+    if (hay.includes("KIYMA") && /kiyma/i.test(uh)) score += 30;
+    if (hay.includes("SALATA") && /salata|rende/i.test(uh)) score += 30;
+    if (hay.includes("5MM") && /5-mm|5mm/i.test(uh)) score += 20;
+    if (hay.includes("15MM") && /15-mm|1-5|15mm/i.test(uh)) score += 20;
+    return { u, score };
+  });
+  scored.sort((a, b) => b.score - a.score);
+  return scored[0]?.score > 0 ? scored[0].u : list.find((u) => /oztiryakiler/i.test(u)) || "";
+}
+
 async function downloadCafemarkt(url, kod) {
   const ext = (url.match(/\.(jpe?g|webp|png)(\?|$)/i) || [, "jpg"])[1].toLowerCase();
   const file = `${slugFile(kod)}.${ext.replace("jpeg", "jpg")}`;
@@ -215,7 +238,7 @@ async function downloadCafemarkt(url, kod) {
   const dest = path.join(CAFEMARKT_DIR, file);
   const abs = publicAbs(rel);
 
-  if (fs.existsSync(abs) && fs.statSync(abs).size >= MIN_PHOTO) {
+  if (fs.existsSync(abs) && fs.statSync(abs).size >= MIN_PHOTO && !isBadCafemarktStub(abs)) {
     const k = classifyAbs(abs, new Set());
     if (k !== "catalog") return rel;
   }
@@ -225,9 +248,13 @@ async function downloadCafemarkt(url, kod) {
   const res = await fetch(url, { headers: { "User-Agent": UA } });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const buf = Buffer.from(await res.arrayBuffer());
-  if (buf.length < MIN_PHOTO) throw new Error("too small");
+  if (buf.length < 3000) throw new Error("too small");
   fs.mkdirSync(CAFEMARKT_DIR, { recursive: true });
   fs.writeFileSync(dest, buf);
+  if (isBadCafemarktStub(dest)) {
+    fs.unlinkSync(dest);
+    throw new Error("cafemarkt stub");
+  }
   return rel;
 }
 
@@ -278,7 +305,9 @@ async function resolveImage(row, p287Hashes, cmRows, stats) {
 
     try {
       const witUrls = await searchCafemarktWitCdn(queries);
-      for (const witUrl of witUrls) {
+      const best = pickBestWitUrl(witUrls, row);
+      const tryUrls = best ? [best, ...witUrls.filter((u) => u !== best)] : witUrls;
+      for (const witUrl of tryUrls) {
         try {
           const rel = await downloadCafemarkt(witUrl, kod || "ozti");
           if (rel && fs.existsSync(publicAbs(rel))) {

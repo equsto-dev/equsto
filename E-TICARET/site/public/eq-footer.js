@@ -128,6 +128,12 @@
 
     }
 
+    try {
+      if (typeof window.eqI18nUrl === "function" && window.eqLang === "en") {
+        return window.eqI18nUrl(p);
+      }
+    } catch (_) {}
+
     return p;
 
   }
@@ -682,7 +688,7 @@
 
 
 
-  function mount() {
+  function mountFooter() {
 
     if (!shouldMount()) return;
 
@@ -695,6 +701,30 @@
       render(host, data);
 
     });
+
+  }
+
+
+
+  function scheduleMount() {
+
+    if (window.eqI18nReady && typeof window.eqI18nReady.then === "function") {
+
+      window.eqI18nReady.then(mountFooter);
+
+      return;
+
+    }
+
+    window.addEventListener("equsto:i18n-ready", mountFooter, { once: true });
+
+  }
+
+
+
+  function mount() {
+
+    scheduleMount();
 
   }
 
@@ -720,7 +750,7 @@
 
     try {
 
-      mount();
+      mountFooter();
 
     } catch (_) {}
 

@@ -16,7 +16,7 @@ export default function AdminPage() {
     <RawLegacyPage
       bodyClass="admin-app"
       bodyHtml={AdminBodyHtml}
-      extraStyles={[`/theme.css?v=${v}`, `/contact.css?v=${v}`]}
+      extraStyles={[`/theme.css?v=${v}`, `/admin.css?v=${v}`]}
       scripts={ADMIN_SCRIPTS}
     />
   );

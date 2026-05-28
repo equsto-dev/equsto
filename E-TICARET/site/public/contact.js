@@ -9,7 +9,19 @@
 (function () {
   window.EQUSTO_WHATSAPP_E164 = window.EQUSTO_WHATSAPP_E164 || "905326842608";
 
-  var DEFAULT_PREFILL = "Merhaba, equsto.com üzerinden yazıyorum.";
+  function __waT(k, fb) {
+    try {
+      if (typeof window.eqT === "function") {
+        var v = window.eqT(k, null);
+        if (v != null && v !== k) return v;
+      }
+    } catch (_) {}
+    return fb != null ? fb : k;
+  }
+
+  function defaultPrefill() {
+    return __waT("wa.prefill", "Merhaba, equsto.com üzerinden yazıyorum.");
+  }
   var THREADS_KEY = "equsto_wa_threads_v1";
   var CHAT_KEY = "equsto_wa_chat_v1";
   var WA_FAB_IMG = "/equsto-bize-ulasin-isimlik.png";
@@ -99,7 +111,7 @@
   function equstoWhatsAppUrl() {
     var phone = equstoResolveWhatsAppDigits();
     if (!phone) return "";
-    var msg = window.EQUSTO_WHATSAPP_TEXT != null ? String(window.EQUSTO_WHATSAPP_TEXT) : DEFAULT_PREFILL;
+    var msg = window.EQUSTO_WHATSAPP_TEXT != null ? String(window.EQUSTO_WHATSAPP_TEXT) : defaultPrefill();
     if (equstoPreferDirectWhatsAppApp()) return equstoWhatsAppAppSendUrl(phone, msg);
     return equstoWhatsAppWebSendUrl(phone, msg);
   }
@@ -160,7 +172,10 @@
     if (!migrated.length) {
       migrated.push({
         role: "team",
-        body: "Merhaba! Equsto ekibine yazın — mesajınız buradan iletilir, en kısa sürede yanıtlanır.",
+        body: __waT(
+          "wa.team_greeting",
+          "Merhaba! Equsto ekibine yazın — mesajınız buradan iletilir, en kısa sürede yanıtlanır."
+        ),
         ts: Date.now(),
       });
     }
@@ -214,7 +229,7 @@
     if (!threads.length) {
       if (empty) {
         empty.hidden = false;
-        empty.textContent = "Henüz konuşma yok. İlk mesajınızı yazın.";
+        empty.textContent = __waT("wa.history_empty_first", "Henüz konuşma yok. İlk mesajınızı yazın.");
       }
       return;
     }
@@ -347,7 +362,7 @@
     waModalResizeHandler = syncWaModalNearFab;
     window.addEventListener("resize", waModalResizeHandler);
 
-    if (titleEl) titleEl.textContent = "Mr. Equsto";
+    if (titleEl) titleEl.textContent = __waT("wa.modal_title", "Mr. Equsto");
 
     window.setTimeout(function () {
       spin.style.display = "none";
@@ -404,14 +419,14 @@
     var text = String(msgEl.value || "").trim();
     if (!text) {
       if (st) {
-        st.textContent = "Lütfen bir mesaj yazın.";
+        st.textContent = __waT("wa.write_msg", "Lütfen bir mesaj yazın.");
         st.className = "equsto-wa-status equsto-wa-status--err";
       }
       return;
     }
     if (go) {
       go.disabled = true;
-      go.textContent = "Gönderiliyor…";
+      go.textContent = __waT("wa.sending", "Gönderiliyor…");
     }
     if (st) {
       st.textContent = "";
@@ -453,7 +468,7 @@
       .then(function (res) {
         if (go) {
           go.disabled = false;
-          go.textContent = "Gönder";
+          go.textContent = __waT("wa.send", "Gönder");
         }
         if (!res.ok || !(res.j && res.j.success)) {
           var msg = (res.j && (res.j.error || res.j.message)) || "Gönderilemedi";
@@ -466,7 +481,10 @@
         msgEl.value = "";
         appendChatMessage(
           "team",
-          "Mesajınız alındı. Equsto ekibi en kısa sürede size dönüş yapacak."
+          __waT(
+            "wa.received",
+            "Mesajınız alındı. Equsto ekibi en kısa sürede size dönüş yapacak."
+          )
         );
         renderWaHistoryList();
         if (st) {
@@ -477,7 +495,7 @@
       .catch(function (err) {
         if (go) {
           go.disabled = false;
-          go.textContent = "Gönder";
+          go.textContent = __waT("wa.send", "Gönder");
         }
         var em = err && err.message ? err.message : String(err);
         if (st) {
@@ -536,7 +554,7 @@
       );
       return false;
     }
-    var msg = window.EQUSTO_WHATSAPP_TEXT != null ? String(window.EQUSTO_WHATSAPP_TEXT) : DEFAULT_PREFILL;
+    var msg = window.EQUSTO_WHATSAPP_TEXT != null ? String(window.EQUSTO_WHATSAPP_TEXT) : defaultPrefill();
 
     /* PC yüzen kedi: sayfa-içi sohbet kartı */
     if (equstoWaClickFromPcCat(ev)) {
@@ -656,8 +674,8 @@
     btn.type = "button";
     btn.className = "eq-bottom-tabbar__btn equsto-contact-wa-fab equsto-contact-wa-fab--tabbar";
     btn.setAttribute("data-eq-bnav", "whatsapp");
-    btn.title = "WhatsApp";
-    btn.setAttribute("aria-label", "WhatsApp ile yazın");
+    btn.title = __waT("wa.fab_title", "WhatsApp");
+    btn.setAttribute("aria-label", __waT("wa.fab_aria", "WhatsApp ile yazın"));
     btn.innerHTML = WA_TABBAR_SVG;
     btn.addEventListener("click", window.equstoOpenWhatsApp);
     return btn;
@@ -694,8 +712,8 @@
     var btn = document.createElement("button");
     btn.type = "button";
     btn.className = "equsto-contact-wa-fab";
-    btn.title = "WhatsApp";
-    btn.setAttribute("aria-label", "WhatsApp ile yazın");
+    btn.title = __waT("wa.fab_title", "WhatsApp");
+    btn.setAttribute("aria-label", __waT("wa.fab_aria", "WhatsApp ile yazın"));
     btn.addEventListener("click", window.equstoOpenWhatsApp);
 
     var img = document.createElement("img");
@@ -706,6 +724,10 @@
     img.decoding = "async";
     img.style.cssText =
       "display:block;width:62px;height:62px;max-width:62px;max-height:62px;object-fit:cover;border-radius:15px;";
+    img.addEventListener("error", function () {
+      btn.innerHTML = WA_TABBAR_SVG;
+      btn.classList.add("equsto-contact-wa-fab--svg-fallback");
+    });
 
     btn.appendChild(img);
     wrap.appendChild(btn);
@@ -857,9 +879,20 @@
     window.addEventListener("load", syncFabPlacement, { once: true });
   }
 
+  window.equstoSyncContactFab = syncFabPlacement;
+
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", init);
   } else {
     init();
   }
+
+  document.addEventListener("equsto:i18n-ready", function () {
+    try {
+      syncFabPlacement();
+      if (typeof window.eqI18nApply === "function") {
+        window.eqI18nApply(document.getElementById("equsto-wa-overlay"));
+      }
+    } catch (_) {}
+  });
 })();

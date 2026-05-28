@@ -64,7 +64,8 @@
     "h1": "Market, kasap ve şarküteri kurulumu",
     "lead": "Market ve kasap–şarküteri reyonu aynı müşteri akışında planlanır: soğutma, vitrin ve et hazırlık hatları birlikte modellenir.",
     "skipTable": true,
-    "skipBudget": true
+    "skipBudget": true,
+    "body": "<p>Market kurulumunda müşteri yolculuğu reyondan başlar.  Dondurulmuş ada, soğutmalı gondol ve kasap bankosu aynı koridorda akıcı dizilir; paketli gıda ile taze et aynı hatta görünür, hazırlık ve depo arkada ayrılır.  Kasap ve şarküteri hattında kıyma, dilimleme ve vitrin sergisi farklı zonlardadır.  +2/+4 °C teşhir ile −18 °C depo karışmaz; et tahtası, hijyen seti ve hızlı yıkama tazelik güvenliğini taşır.</p><p>Reyon genişliği ve günlük çıkış soğutucu adedini belirler.  Liste Proje Fabrikası'nda netleşir; montaj satış mühendisliği planıyla tamamlanır.  Market reyon vitrinindeki SKU örnekleri katalogla bağlantılıdır.</p>"
   },
   "projeler": {
     "profile": "projelerHub",

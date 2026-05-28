@@ -1,7 +1,10 @@
 "use client";
 
-import { useEffect } from "react";
 import Script from "next/script";
+import { useEffect } from "react";
+import { SHOP_ASSET_V } from "@/lib/shop/assets";
+
+const v = SHOP_ASSET_V;
 
 declare global {
   interface Window {
@@ -33,17 +36,31 @@ export default function BesosScripts() {
 
   return (
     <>
-      <Script src="/theme.js" strategy="beforeInteractive" />
-      <Script src="/eq-site-urls.js" strategy="beforeInteractive" />
-      <Script src="/equsto-logo.js" strategy="afterInteractive" />
-      <Script src="/nav.js" strategy="afterInteractive" />
-      <Script src="/eq-bar-module-url.js" strategy="afterInteractive" />
-      <Script src="/eq-besos-pricing.js" strategy="afterInteractive" />
-      <Script src="/eq-kur-live.js" strategy="afterInteractive" />
-      <Script src="/ecom-cart.js?v=20260524cart3" strategy="afterInteractive" onReady={() => window.EqustoCart?.syncBadge?.()} />
-      <Script src="/eq-besos-actions.js" strategy="afterInteractive" />
-      <Script src="/eq-footer.js" strategy="afterInteractive" />
-      <Script src="/contact.js" strategy="lazyOnload" />
+      <Script src={`/theme.js?v=${v}`} strategy="beforeInteractive" />
+      <Script src={`/eq-site-urls.js?v=${v}`} strategy="beforeInteractive" />
+      <Script src={`/eq-i18n.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/equsto-logo.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/nav.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/eq-bar-module-url.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/eq-besos-pricing.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/eq-kur-live.js?v=${v}`} strategy="afterInteractive" />
+      <Script
+        src={`/ecom-cart.js?v=${v}`}
+        strategy="afterInteractive"
+        onReady={() => window.EqustoCart?.syncBadge?.()}
+      />
+      <Script src={`/eq-besos-actions.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/eq-footer.js?v=${v}`} strategy="afterInteractive" />
+      <Script
+        src={`/contact.js?v=${v}`}
+        strategy="afterInteractive"
+        onReady={() => {
+          try {
+            window.equstoSyncContactFab?.();
+            window.eqSyncMobileChrome?.();
+          } catch (_) {}
+        }}
+      />
     </>
   );
 }

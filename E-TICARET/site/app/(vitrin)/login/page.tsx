@@ -18,7 +18,9 @@ const v = SHOP_ASSET_V;
 export default function LoginPage() {
   return (
     <RawLegacyPage
+      bodyClass="eq-shop eq-auth"
       bodyHtml={LoginBodyHtml}
+      withContactWidget
       extraStyles={[`/theme.css?v=${v}`, `/auth.css?v=${v}`]}
       scripts={[
         `/equsto-member.js?v=${v}`,

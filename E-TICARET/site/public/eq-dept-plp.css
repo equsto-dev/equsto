@@ -250,19 +250,19 @@ body.eq-dept-plp {
 }
 .eq-dept-plp-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px 14px;
   min-height: 120px;
+  align-items: start;
 }
-@media (min-width: 640px) {
+@media (max-width: 520px) {
   .eq-dept-plp-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 900px) {
   .eq-dept-plp-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 20px 16px;
+    gap: 18px 16px;
   }
 }
 .eq-dept-plp-card {

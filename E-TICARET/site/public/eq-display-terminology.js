@@ -190,10 +190,17 @@
     if (raw && raw.name_en) return String(raw.name_en).trim();
     var lc = t.toLowerCase();
     var reps = [
+      [/vitrifrigo\s*süt\s*soğutucu|vitrifrigo\s*sut\s*sogutucu/gi, 'Vitrifrigo milk cooler'],
+      [/bardak\s*ısıtıcı|bardak\s*isitici/gi, 'cup warmer'],
       [/kopuklu\s*ayran|köpüklü\s*ayran/gi, 'Frothy ayran machine'],
       [/ayran\s*makin/gi, 'Ayran machine'],
       [/meyve\s*suyu\s*sogutma|meyve\s*suyu\s*soğutma/gi, 'Juice dispenser'],
+      [/karli\s*buzlu\s*serbet|slush/gi, 'Slush machine'],
+      [/serbet\s*\+\s*ayran/gi, 'Sherbet + ayran dispenser'],
+      [/serbet/gi, 'Sherbet'],
+      [/hoshizaki\s*buz\s*makin/gi, 'Hoshizaki ice machine'],
       [/buz\s*mak[iİ]nes[iİ]/gi, 'Ice machine'],
+      [/buz\s*haznesi/gi, 'Ice bin'],
       [/ba[gğ]lanti\s+kit[iİ]/gi, 'Connection kit'],
       [/c[iİ]hazalt[iİ]/gi, 'Under-counter'],
       [/(\d+)\s*kapil[iİ]/gi, '$1-door'],

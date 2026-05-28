@@ -130,6 +130,18 @@
     return canonicalFacetBrand(brand) || String(brand || '').trim();
   }
 
+  /** Tek marka seçiliyken kategori etiketinden marka önekini düşür (ör. «Proso Sütlükler» → «Sütlükler»). */
+  function facetTileDisplayLabel(label, state) {
+    var text = String(label || '').trim();
+    var brands = state && state.brands ? state.brands : [];
+    if (brands.length !== 1 || !text) return text;
+    var b = facetBrandKey(brands[0]);
+    if (!b) return text;
+    var re = new RegExp('^' + b.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\s+', 'i');
+    var out = text.replace(re, '').trim();
+    return out || text;
+  }
+
   function stripOztiLeadName(name) {
     var n = String(name || '').trim();
     var m = n.match(
@@ -294,7 +306,7 @@
           '"' +
           checked +
           '><span>' +
-          esc(row.tile.label) +
+          esc(facetTileDisplayLabel(row.tile.label, state)) +
           '</span><span class="eq-cm-facet__count">(' +
           row.count +
           ')</span></label></li>';
@@ -487,7 +499,7 @@
       var label = tid;
       for (var i = 0; i < tiles.length; i++) {
         if (tiles[i].id === tid) {
-          label = tiles[i].label;
+          label = facetTileDisplayLabel(tiles[i].label, state);
           break;
         }
       }
@@ -550,6 +562,7 @@
     parsePriceNum: parsePriceNum,
     resolveFacetBrand: resolveFacetBrand,
     facetBrandKey: facetBrandKey,
+    facetTileDisplayLabel: facetTileDisplayLabel,
     canonicalFacetBrand: canonicalFacetBrand,
     productBrand: productBrand,
   };

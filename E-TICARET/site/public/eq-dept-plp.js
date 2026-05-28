@@ -32,7 +32,7 @@
   }
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260527scan-fix1';
+  var CATALOG_V = '20260527robot-coupe-haz';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   /* Next.js URL slug → katalog dept id (data/dept/*.json) */
   if (DEPT === 'market-reyonlari') DEPT = 'market-reyon';
@@ -875,7 +875,7 @@
     render();
   }
 
-  var MARKET_REYON_JSON_V = '20260528caglayan-eq1';
+  var MARKET_REYON_JSON_V = '20260528proso-eq-variants';
 
   function fetchMarketReyonDeptJson() {
     return fetch('/data/dept/market-reyon.json?v=' + MARKET_REYON_JSON_V, {

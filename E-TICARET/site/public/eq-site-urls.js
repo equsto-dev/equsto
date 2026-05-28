@@ -529,11 +529,45 @@
 
   window.equstoCatalogImagesWebRoot = catalogImagesWebRoot;
 
+  /** ax-images yok — aynı ürün ailesi fotoğrafı (parça / adaptör). */
+  var OZTI_AX_PROXY = {
+    "2919.0B390.AD01.00": "7506.0B390.00",
+    "7919.47NTV.C2": "7919.47NTV.24",
+    "7919.46NTV.C2": "7919.47NTV.24",
+    "7919.37NTV.C2": "7919.37NTV.24",
+    "7919.36NTV.C2": "7919.36NTV.24",
+    "7919.27NTV.C2": "7919.26NTV.24",
+    "7919.26NTV.C2": "7919.26NTV.24",
+    "7919.47NTV.C1": "7919.47NTV.24",
+    "7919.46NTV.C1": "7919.47NTV.24",
+    "7919.37NTV.C1": "7919.37NTV.24",
+    "7919.36NTV.C1": "7919.36NTV.24",
+    "7919.27NTV.C1": "7919.26NTV.24",
+    "7919.26NTV.C1": "7919.26NTV.24",
+    "7919.47NTV.T1": "7919.47NTV.24",
+    "7919.37NTV.T1": "7919.37NTV.24",
+    "9805.IM240D.NHC": "9805.IM240X.NHC",
+    "9805.00IMD.00": "9805.IM45N.EHC"
+  };
+
+  function oztiResolveAxKod(k) {
+    if (OZTI_AX_PROXY[k]) return OZTI_AX_PROXY[k];
+    var m = k.match(/^7919\.(\d{2})NTV\.(C1|C2|T1)$/);
+    if (!m) return k;
+    if (m[2] === "T1" && m[1] === "27") return k;
+    if (m[2] === "T1" && m[1] === "37") return "7919.37NTV.24";
+    if (m[2] === "T1" && (m[1] === "47" || m[1] === "46")) return "7919.47NTV.24";
+    if (parseInt(m[1], 10) >= 46) return "7919.47NTV.24";
+    return "7919." + m[1] + "NTV.24";
+  }
+
   /** Öztiryakiler ürün kodu → ax-images CDN (PLP/PDP yedek). */
   window.eqOztiAxImageFromSku = function (sku) {
-    var k = String(sku || "")
-      .replace(/\s+/g, "")
-      .toUpperCase();
+    var k = oztiResolveAxKod(
+      String(sku || "")
+        .replace(/\s+/g, "")
+        .toUpperCase()
+    );
     if (!/^[0-9A-Z]{2,8}\.[A-Z0-9.\-]{2,}$/i.test(k)) return "";
     return (
       "https://oztiryakiler.com.tr/ax-images/images/" + encodeURIComponent(k) + ".jpg"
@@ -631,26 +665,21 @@
     );
   }
 
-  /** `images/catalog/ozti/web/ozti-8574-cm080-00.jpg` → Öztiryakiler ax-images CDN. */
+  /** `images/catalog/ozti/web/ozti-8574-cm080-00.jpg` → ax-images (NTV proxy dahil). */
   function oztiAxImageFromWebPath(s) {
-    var t = String(s || "")
-      .trim()
-      .replace(/\\/g, "/");
-    var m = /^images\/catalog\/ozti\/web\/ozti-([a-z0-9-]+)\.(jpe?g|png|webp)$/i.exec(t);
-    if (!m) return "";
-    var parts = m[1].split("-").filter(Boolean);
-    if (parts.length < 2) return "";
-    var kod = parts
-      .map(function (p) {
-        return p.toUpperCase();
-      })
-      .join(".");
+    var kod = oztiKodFromCatalogRel(s);
+    if (!kod) return "";
+    if (typeof window.eqOztiAxImageFromSku === "function") {
+      return window.eqOztiAxImageFromSku(kod) || "";
+    }
     return (
-      "https://oztiryakiler.com.tr/ax-images/images/" + encodeURIComponent(kod) + ".jpg"
+      "https://oztiryakiler.com.tr/ax-images/images/" +
+      encodeURIComponent(oztiResolveAxKod(kod)) +
+      ".jpg"
     );
   }
 
-  var EQ_CATALOG_IMG_V = "20260529plpimgfix2";
+  var EQ_CATALOG_IMG_V = "20260527robot-coupe-haz";
   var EQ_OZTI_BAD_CAFE_STUB_MD5 = "6696b6d14fecffc05fb1dc0156c9f6b4";
   var EQ_OZTI_BAD_CAFE_STUB_BYTES = 10995;
 
