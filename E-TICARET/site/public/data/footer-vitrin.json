@@ -1,11 +1,9 @@
 {
-  "version": 4,
+  "version": 5,
   "source": "equsto.com sitemap + llms.txt + index eq-footer-seo + llms Hakkımızda",
   "faq": {
-    "title": "Sık sorulan sorular",
-    "titleKey": "footer.faq_title",
-    "intro": "Equsto endüstriyel mutfak ekipmanı, proje teklifi ve satış süreçleri hakkında en çok sorulan konular.",
-    "introKey": "footer.faq_intro",
+    "title": "SSS",
+    "titleKey": "footer.faq_sss_title",
     "items": [
       {
         "q": "Equsto nedir, üretici mi bayi mi?",
@@ -69,8 +67,10 @@
       }
     ]
   },
+  "companyDisplay": "E Q U S T O   T E K N O L O J İ   L İ M İ T E D",
+  "companyDisplayNote": "tek satır; harf arası 1, sözcük arası 3 boşluk",
+  "companyDisplayKey": "footer.company_display",
   "tagline": "Equsto Teknolojisi · Gastronomi Tasarımı · Satış Mühendisliği",
-  "partners": "Hilton · Marriott · Migros · TAV · Sodexo · McDonald's",
   "legal": {
     "terms": "/contact",
     "privacy": "/contact",
