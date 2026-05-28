@@ -249,6 +249,110 @@
     return (b ? b + "-" : "") + n;
   };
   window.__eqProductSlug = window.eqProductSlug;
+
+  /** Popüler marka slug → katalogdaki tam marka adı */
+  var EQ_BRAND_SLUG_ALIAS = {
+    atalay: "Atalay Endüstriyel Mutfak Ekipmanları",
+    oztiryakiler: "Öztiryakiler Endüstriyel Mutfak",
+    electrolux: "Electrolux Professional",
+    inoksan: "İnoksan",
+    "la-cimbali": "La Cimbali",
+    faema: "Faema",
+    rational: "Rational",
+    empero: "Empero",
+    samixir: "Samixir",
+    gtech: "Gtech",
+    "robot-coupe": "Robot Coupe",
+  };
+
+  function brandSlugify(name) {
+    return String(name || "")
+      .toLocaleLowerCase("tr")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+  }
+
+  window.eqBrandSlug = function (brandName) {
+    var n = String(brandName || "").trim();
+    if (!n) return "";
+    var keys = Object.keys(EQ_BRAND_SLUG_ALIAS);
+    for (var i = 0; i < keys.length; i++) {
+      var slug = keys[i];
+      if (EQ_BRAND_SLUG_ALIAS[slug] === n) return slug;
+    }
+    var low = n.toLocaleLowerCase("tr");
+    for (var j = 0; j < keys.length; j++) {
+      var s = keys[j];
+      var lab = s.replace(/-/g, " ");
+      if (low === lab || low.indexOf(lab) === 0) return s;
+    }
+    return brandSlugify(n);
+  };
+
+  window.eqBrandFromSlug = function (slug) {
+    var s = String(slug || "")
+      .trim()
+      .toLowerCase()
+      .replace(/^\/+|\/+$/g, "");
+    if (!s) return "";
+    if (EQ_BRAND_SLUG_ALIAS[s]) return EQ_BRAND_SLUG_ALIAS[s];
+    return "";
+  };
+
+  window.eqParseBrandSlugFromPath = function () {
+    try {
+      var path = String(location.pathname || "");
+      path = path.replace(/^\/en(?=\/|$)/i, "");
+      var m = path.match(/\/shop\/marka\/([^/?#]+)/i);
+      return m ? decodeURIComponent(m[1]).toLowerCase().replace(/^\/+|\/+$/g, "") : "";
+    } catch (_) {
+      return "";
+    }
+  };
+
+  window.eqBrandPath = function (slugOrBrand) {
+    var slug = String(slugOrBrand || "").trim();
+    if (!slug) return withLang("/shop/marka", "shop");
+    if (slug.indexOf("/") >= 0 || slug.indexOf("?") >= 0) return slug;
+    if (/\s/.test(slug) || /[ğüşıöçĞÜŞİÖÇ]/.test(slug)) slug = window.eqBrandSlug(slug);
+    slug = String(slug || "")
+      .toLowerCase()
+      .replace(/[^a-z0-9-]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+    return withLang("/shop/marka/" + encodeURIComponent(slug), "shop");
+  };
+
+  window.eqBrandHref = function (slugOrBrand) {
+    var path = window.eqBrandPath(slugOrBrand);
+    if (isProd()) return ORIGIN + path;
+    try {
+      if (typeof location !== "undefined" && location.protocol === "file:") {
+        var m = path.match(/\/shop\/marka\/([^/?#]+)/i);
+        return m ? "marka.html?slug=" + encodeURIComponent(m[1]) : "marka.html";
+      }
+    } catch (_) {}
+    return path;
+  };
+
+  window.eqBrandMatchesRow = function (row, brandCanonical, slug) {
+    var b = String((row && (row.brand || row.b)) || "").trim();
+    if (!b) return false;
+    if (brandCanonical && b === brandCanonical) return true;
+    var low = b.toLocaleLowerCase("tr");
+    slug = String(slug || "").toLowerCase();
+    if (slug === "oztiryakiler" && low.indexOf("öztiryakiler") >= 0) return true;
+    if (slug === "atalay" && low.indexOf("atalay") >= 0) return true;
+    if (slug && !brandCanonical) {
+      var needle = slug.replace(/-/g, " ");
+      return low.indexOf(needle) >= 0;
+    }
+    if (brandCanonical) {
+      var canonLow = brandCanonical.toLocaleLowerCase("tr");
+      return low.indexOf(canonLow) === 0 || canonLow.indexOf(low) === 0;
+    }
+    return false;
+  };
+
   window.equstoPublicUrl = function (key) {
     var p = withLang(PATH[key] || "/", key);
     if (p === "/") return "equsto.com";
@@ -294,6 +398,16 @@
     if (file === "fast-food-kurulumu.html") return "/fast-food-kurulumu" + query + hash;
     if (file === "fine-dining-kurulumu.html") return "/fine-dining-kurulumu" + query + hash;
     if (file === "imt300.html") return "/besos/imt300" + query + hash;
+    if (file === "marka.html" && query) {
+      try {
+        var sp = new URLSearchParams(query.replace(/^\?/, ""));
+        var legacyB = sp.get("b");
+        if (legacyB && typeof window.eqBrandPath === "function") {
+          return window.eqBrandPath(legacyB) + hash;
+        }
+      } catch (_) {}
+    }
+    if (/\/shop\/marka\//i.test(filePart)) return filePart + query + hash;
     return href;
   };
 

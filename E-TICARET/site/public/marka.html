@@ -96,7 +96,7 @@
     <script  src="/theme.js?v=20260520logohdr"></script>
     <script  src="/equsto-logo.js?v=20260519wordmark3"></script>
     <script  src="/eq-i18n.js?v=20260520logohdr"></script>
-    <script  src="/eq-site-urls.js?v=20260528axlive"></script>
+    <script  src="/eq-site-urls.js?v=20260530brandshop"></script>
     <script  src="/nav.js?v=20260520logohdr"></script>
     <script  src="/equsto-member.js?v=20260522wa" defer></script>
     <script  src="/contact.js?v=20260522wa" defer></script>
@@ -243,26 +243,52 @@
     }
 
     window.addEventListener('DOMContentLoaded', function () {
-      var brand = '';
-      try { brand = (new URLSearchParams(location.search)).get('b') || ''; } catch (e) {}
+      var slug = typeof window.eqParseBrandSlugFromPath === 'function' ? window.eqParseBrandSlugFromPath() : '';
+      var legacyB = '';
+      try {
+        var sp = new URLSearchParams(location.search || '');
+        legacyB = sp.get('b') || sp.get('slug') || '';
+      } catch (e) {}
+      legacyB = String(legacyB || '').trim();
+
+      if (!slug && legacyB && typeof window.eqBrandPath === 'function') {
+        try {
+          location.replace(window.eqBrandPath(legacyB));
+          return;
+        } catch (eRed) {}
+      }
+
+      var brand = (typeof window.eqBrandFromSlug === 'function' ? window.eqBrandFromSlug(slug) : '') || legacyB;
       brand = String(brand || '').trim();
+      var displayName = brand || slug.replace(/-/g, ' ');
 
       var crumb = document.getElementById('eq-brand-crumb');
-      if (crumb) crumb.textContent = brand || 'Marka';
-      document.title = (brand || 'Marka') + ' — Equsto';
+      if (crumb) crumb.textContent = displayName || 'Marka';
+      document.title = (displayName || 'Marka') + ' — Equsto';
 
-      if (!brand) {
-        var root = document.getElementById('eq-cat-shell');
-        if (root) {
-          root.innerHTML =
-            '<section class="eq-cat-hero"><h1>Marka bulunamadı</h1>' +
-            '<p>Adres satırında <code>?b=Marka+Adı</code> bekleniyor.</p></section>';
+      if (!slug && !brand) {
+        var root0 = document.getElementById('eq-cat-shell');
+        if (root0) {
+          root0.innerHTML =
+            '<section class="eq-cat-hero"><h1>Marka seçin</h1>' +
+            '<p>Örnek: <a href="/shop/marka/oztiryakiler">/shop/marka/oztiryakiler</a></p></section>';
         }
         return;
       }
 
-      window.EqustoShopCatalog.load().then(function (all) {
-        var nameMatch = function (x) { return (x.brand || '').trim() === brand; };
+      var loadAll =
+        window.EqustoShopCatalog && typeof window.EqustoShopCatalog.loadMergedCatalog === 'function'
+          ? window.EqustoShopCatalog.loadMergedCatalog()
+          : window.EqustoShopCatalog.load();
+
+      loadAll.then(function (all) {
+        var nameMatch = function (x) {
+          if (!x) return false;
+          if (typeof window.eqBrandMatchesRow === 'function') {
+            return window.eqBrandMatchesRow(x, brand, slug);
+          }
+          return (x.brand || '').trim() === brand;
+        };
         var list = (all || []).filter(function (x) { return x && nameMatch(x); });
 
         var catCounts = {};
@@ -281,8 +307,8 @@
 
         EqCategoryShell.mount({
           root: document.getElementById('eq-cat-shell'),
-          catLabel: brand,
-          catDesc: brand + ' markalı tüm ürünler — kategoriye göre incele.',
+          catLabel: displayName,
+          catDesc: displayName + ' markalı tüm ürünler — kategoriye göre incele.',
           catSlugs: cats,
           subLabels: subLabels,
           tiles: tiles,

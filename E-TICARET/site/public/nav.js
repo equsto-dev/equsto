@@ -843,7 +843,7 @@
               var t = (a.textContent || "").trim();
               if (!t) return;
               var href = (a.getAttribute("href") || "").trim();
-              if (!href) href = "marka.html?b=" + encodeURIComponent(t);
+              if (!href) href = typeof window.eqBrandHref === "function" ? window.eqBrandHref(t) : "/shop/marka/" + encodeURIComponent(t);
               out.push({ label: t, markaHref: href });
             });
             if (out.length) return out;
@@ -853,7 +853,10 @@
           .map(function (name) {
             var s = String(name || "").trim();
             if (!s) return null;
-            return { label: s, markaHref: "marka.html?b=" + encodeURIComponent(s) };
+            return {
+              label: s,
+              markaHref: typeof window.eqBrandHref === "function" ? window.eqBrandHref(s) : "/shop/marka/" + encodeURIComponent(s),
+            };
           })
           .filter(Boolean);
       }
