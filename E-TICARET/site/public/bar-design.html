@@ -2284,14 +2284,7 @@
       overflow:hidden;
       pointer-events:auto;
     }
-    body.bd-page.besos .bd-hero-fullbleed .bd-hero-video .eq-yt{
-      position:absolute;
-      inset:0;
-      width:100%;
-      height:100%;
-      pointer-events:auto;
-    }
-    body.bd-page.besos .bd-hero-fullbleed .bd-hero-video .eq-yt__thumb,
+    body.bd-page.besos .bd-hero-fullbleed .bd-hero-video .bd-hero-yt-iframe,
     body.bd-page.besos .bd-hero-fullbleed .bd-hero-video .eq-yt iframe{
       position:absolute;
       inset:0;
@@ -2321,7 +2314,7 @@
         max-height:calc(100dvh - var(--bes-chrome-h) - env(safe-area-inset-bottom,0px));
         margin-inline:auto;
       }
-      body.bd-page.besos .bd-hero-fullbleed .bd-hero-video .eq-yt__thumb,
+      body.bd-page.besos .bd-hero-fullbleed .bd-hero-video .bd-hero-yt-iframe,
       body.bd-page.besos .bd-hero-fullbleed .bd-hero-video .eq-yt iframe{
         top:0;
         left:0;
@@ -2942,18 +2935,16 @@
   <section class="bd-hero bd-hero-fullbleed" id="bd-hero" aria-label="Besos tanıtım videosu">
     <div class="bd-hero-media">
       <div class="bd-hero-video">
-        <div
-          class="eq-yt"
+        <iframe
+          class="bd-hero-yt-iframe"
           id="bd-hero-yt"
-          data-eq-yt-id="cOVgfu2o4h4"
-          data-eq-yt-title="Besos · Bar Design Studio"
-          data-eq-yt-autoplay="1"
-          data-eq-yt-mute="1"
-          data-eq-yt-loop="1"
-          data-eq-yt-controls="0"
-          data-eq-yt-watch="0"
-          data-i18n-attr="data-eq-yt-title:besos.hero_iframe_title"
-        ></div>
+          src="https://www.youtube-nocookie.com/embed/cOVgfu2o4h4?rel=0&amp;modestbranding=1&amp;playsinline=1&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fequsto.com&amp;autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=cOVgfu2o4h4&amp;controls=0&amp;disablekb=1&amp;iv_load_policy=3"
+          title="Besos · Bar Design Studio"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          referrerpolicy="strict-origin-when-cross-origin"
+          loading="eager"
+        ></iframe>
       </div>
       <div class="bd-hero-overlay" aria-hidden="true"></div>
     </div>

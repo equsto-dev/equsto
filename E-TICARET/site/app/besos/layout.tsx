@@ -10,14 +10,16 @@ export const metadata: Metadata = {
 };
 
 export default function BesosLayout({ children }: { children: React.ReactNode }) {
+  const heroEmbed = "https://www.youtube-nocookie.com";
   return (
     <>
+      <link rel="preconnect" href={heroEmbed} />
+      <link rel="preconnect" href="https://www.youtube.com" />
+      <link rel="preconnect" href="https://i.ytimg.com" />
       {/* eslint-disable-next-line @next/next/no-css-tags */}
       <link rel="stylesheet" href="/theme.css?v=20260524besos" />
       {/* eslint-disable-next-line @next/next/no-css-tags */}
       <link rel="stylesheet" href="/besos-shell.css?v=20260524besos" />
-      {/* eslint-disable-next-line @next/next/no-css-tags */}
-      <link rel="stylesheet" href="/eq-youtube-embed.css" />
       {children}
       <BesosDrawerShell />
       <BesosScripts />
