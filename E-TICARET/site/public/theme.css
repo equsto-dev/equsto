@@ -4511,18 +4511,56 @@ body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-tagline {
   color: rgba(255, 255, 255, 0.72);
   letter-spacing: 0.02em;
 }
-/* Footer — SSS (Size yardımcı olalım sütunu) */
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col-faq {
-  margin-top: 18px;
-  padding-top: 16px;
-  border-top: 1px solid rgba(255, 255, 255, 0.14);
+/* Footer — SSS (Size yardımcı olalım listesi içinde) */
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-li-sss {
+  margin-bottom: 8px;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-li-sss .eq-mfoot-col-faq {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
 }
 body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col-faq-title {
-  margin: 0 0 8px;
-  font-size: 14px;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.92);
-  letter-spacing: 0.01em;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.78);
+  letter-spacing: 0;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) details.eq-mfoot-col-faq > summary.eq-mfoot-col-faq-title {
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  padding-right: 18px;
+  margin-bottom: 0;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) details.eq-mfoot-col-faq > summary.eq-mfoot-col-faq-title:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) details.eq-mfoot-col-faq > summary.eq-mfoot-col-faq-title::-webkit-details-marker {
+  display: none;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) details.eq-mfoot-col-faq > summary.eq-mfoot-col-faq-title::after {
+  content: "";
+  position: absolute;
+  right: 2px;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid rgba(255, 255, 255, 0.55);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.55);
+  transform: translateY(-70%) rotate(45deg);
+  transition: transform 0.2s ease;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) details.eq-mfoot-col-faq[open] > summary.eq-mfoot-col-faq-title::after {
+  transform: translateY(-30%) rotate(-135deg);
+}
+body.eq-shop:not(.admin-app):not(.bd-page) details.eq-mfoot-col-faq[open] > summary.eq-mfoot-col-faq-title {
+  margin-bottom: 10px;
+  color: #fff;
+  text-decoration: none;
 }
 body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col-faq-intro {
   margin: 0 0 12px;

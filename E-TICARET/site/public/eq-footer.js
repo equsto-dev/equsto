@@ -1,12 +1,13 @@
 /**
  * Equsto — Amazon tarzı vitrin alt bilgisi (body.eq-shop; admin ve Bar Design hariç, PFOS dahil).
  * Veri: /data/footer-vitrin.json — href her zaman dolu (eski site / sitemap).
- * @version help-col-sss 20260529
+ * @version help-col-sss 20260531c
  */
 (function () {
   "use strict";
 
-  var FOOTER_JSON = "/data/footer-vitrin.json?v=20260529helpcolsss";
+  var FOOTER_JSON = "/data/footer-vitrin.json?v=20260531sss5";
+  var SSS_LINK = { key: "footer.link_sss", label: "SSS", href: "#eq-mfoot-sss" };
   var footerData = null;
   var footerLoadPromise = null;
 
@@ -46,6 +47,7 @@
   function resolveLinkHref(raw) {
     var p = String(raw || "").trim();
     if (!p || p === "#") return "#";
+    if (p.charAt(0) === "#") return p;
     if (/^https?:\/\//i.test(p) || /^mailto:/i.test(p) || /^tel:/i.test(p)) return p;
     if (p.charAt(0) !== "/") p = "/" + p;
     if (/\.html(\?|#|$)/i.test(p)) {
@@ -82,10 +84,13 @@
     return f;
   }
 
-  function faqItemsHtml(faq) {
-    if (!faq || !faq.items || !faq.items.length) return "";
-    var faqTitle = t("footer.faq_sss_title", "SSS");
-    var items = faq.items
+  function isSssLink(ln) {
+    var h = String(ln.rawHref || ln.href || ln.path || "").trim();
+    return h === "#eq-mfoot-sss" || ln.key === "footer.link_sss";
+  }
+
+  function faqItemsInnerHtml(faq) {
+    return faq.items
       .map(function (it) {
         var q = t(it.qKey || "", it.q || "");
         var a = t(it.aKey || "", it.a || "");
@@ -98,23 +103,35 @@
         );
       })
       .join("");
+  }
+
+  function faqListItemHtml(faq) {
+    if (!faq || !faq.items || !faq.items.length) return "";
+    var faqTitle = t("footer.link_sss", t("footer.faq_sss_title", "SSS"));
     return (
-      '<div class="eq-mfoot-col-faq" aria-label="' +
+      '<li class="eq-mfoot-li-sss">' +
+      '<details class="eq-mfoot-col-faq" id="eq-mfoot-sss" aria-label="' +
       esc(faqTitle) +
       '">' +
-      '<h4 class="eq-mfoot-col-faq-title">' +
+      '<summary class="eq-mfoot-col-faq-title">' +
       esc(faqTitle) +
-      "</h4>" +
+      "</summary>" +
       '<div class="eq-mfoot-col-faq-list">' +
-      items +
+      faqItemsInnerHtml(faq) +
       "</div>" +
-      "</div>"
+      "</details></li>"
     );
   }
 
   function colHtml(titleKey, titleFb, links, faq) {
+    var hasInlineFaq = !!(faq && faq.items && faq.items.length);
+    var sssRendered = false;
     var lis = links
       .map(function (ln) {
+        if (hasInlineFaq && isSssLink(ln)) {
+          sssRendered = true;
+          return faqListItemHtml(faq);
+        }
         var target = resolveLinkHref(ln.rawHref || ln.href || ln.path || "#");
         return (
           '<li><a href="' +
@@ -127,7 +144,9 @@
         );
       })
       .join("");
-    var faqBlock = faq ? faqItemsHtml(faq) : "";
+    if (hasInlineFaq && !sssRendered) {
+      lis += faqListItemHtml(faq);
+    }
     var colClass = "eq-mfoot-col";
     return (
       "<div class=\"" +
@@ -139,7 +158,6 @@
       "<ul>" +
       lis +
       "</ul>" +
-      faqBlock +
       "</div>"
     );
   }
@@ -187,6 +205,7 @@
             { key: "footer.link_cafe", label: "Cafe kurulum rehberi", href: "/cafe-kurulumu" },
             { key: "footer.link_catering", label: "Catering mutfağı rehberi", href: "/catering-mutfagi" },
             { key: "footer.link_bulut", label: "Bulut mutfak kurulumu", href: "/bulut-mutfak-kurulumu" },
+            { key: "footer.link_sss", label: "SSS", href: "#eq-mfoot-sss" },
           ],
         },
         {
@@ -207,6 +226,34 @@
         },
       ],
     };
+  }
+
+  /** SSS linki yardım listesinin sonunda (accordion). */
+  function ensureHelpColSss(data) {
+    if (!data || !Array.isArray(data.columns)) return data;
+    data.columns = data.columns.map(function (col) {
+      var isHelp =
+        col.titleKey === "footer.col_help" ||
+        String(col.title || "").toLowerCase().indexOf("yardımcı") >= 0;
+      if (!isHelp) return col;
+      var links = Array.isArray(col.links) ? col.links.slice() : [];
+      var sssIdx = -1;
+      var sssItem = null;
+      for (var i = 0; i < links.length; i++) {
+        var ln = links[i];
+        var h = String(ln.href || ln.path || "").trim();
+        if (h === "#eq-mfoot-sss" || ln.key === "footer.link_sss") {
+          sssIdx = i;
+          sssItem = ln;
+          break;
+        }
+      }
+      if (!sssItem) sssItem = SSS_LINK;
+      else if (sssIdx >= 0) links.splice(sssIdx, 1);
+      links.push(sssItem);
+      return Object.assign({}, col, { links: links });
+    });
+    return data;
   }
 
   function normalizeColumns(data) {
@@ -237,11 +284,11 @@
         return r.json();
       })
       .then(function (j) {
-        footerData = j && j.columns ? j : defaultFooterData();
+        footerData = ensureHelpColSss(j && j.columns ? j : defaultFooterData());
         return footerData;
       })
       .catch(function () {
-        footerData = defaultFooterData();
+        footerData = ensureHelpColSss(defaultFooterData());
         return footerData;
       });
     return footerLoadPromise;
@@ -334,12 +381,22 @@
     );
   }
 
+  function openSssAccordion(host) {
+    var block = host.querySelector("#eq-mfoot-sss");
+    if (!block) return;
+    if (block.tagName === "DETAILS") block.open = true;
+    block.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }
+
   function wireLinkHrefs(host) {
     host.querySelectorAll("a[data-eq-nav]").forEach(function (a) {
       var raw = a.getAttribute("data-eq-nav");
       var h = resolveLinkHref(raw);
-      if (h && h !== "#") a.setAttribute("href", h);
+      if (h) a.setAttribute("href", h);
     });
+    if (String(location.hash || "") === "#eq-mfoot-sss") {
+      openSssAccordion(host);
+    }
   }
 
   function wire(host) {
