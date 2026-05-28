@@ -12,7 +12,17 @@ export function isNextSite(dir) {
 }
 
 export function findRepoRoot(start) {
-  let dir = path.resolve(start);
+  const resolved = path.resolve(start);
+  if (isNextSite(resolved)) {
+    const parent = path.dirname(resolved);
+    if (path.basename(parent) === "E-TICARET") {
+      const repo = path.dirname(parent);
+      if (fs.existsSync(path.join(repo, "E-TICARET", "site", "package.json"))) {
+        return repo;
+      }
+    }
+  }
+  let dir = resolved;
   for (let i = 0; i < 12; i++) {
     if (fs.existsSync(path.join(dir, "E-TICARET", "site", "package.json"))) {
       return dir;
@@ -21,7 +31,7 @@ export function findRepoRoot(start) {
     if (parent === dir) break;
     dir = parent;
   }
-  return path.resolve(start, "../..");
+  return resolved;
 }
 
 export function resolveSiteDir(root) {
