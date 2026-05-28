@@ -17,14 +17,8 @@ const DEPT_HTML: Record<string, string> = {
   istif: "/istif.html",
   "set-ustu-mutfak": "/set-ustu-mutfak.html",
   kuvetler: "/kuvetler.html",
+  "market-reyonlari": "/market-reyonlari.html",
 };
-
-function deptRewrites() {
-  return Object.entries(DEPT_HTML).map(([slug, file]) => ({
-    source: `/shop/${slug}`,
-    destination: file,
-  }));
-}
 
 function deptRedirects() {
   return Object.entries(DEPT_HTML).map(([slug, file]) => ({
@@ -101,19 +95,19 @@ function geoRewrites() {
   ];
 }
 
-/** Mirror storefront HTML routes under /en — before GEO slug rules */
+/** Mirror storefront HTML routes under /en — App Router (shop) öncelikli */
 function enRewrites() {
-  const dept = Object.entries(DEPT_HTML).flatMap(([slug, file]) => [
-    { source: `/en/shop/${slug}`, destination: file },
-    { source: `/en/shop/${slug}/`, destination: file },
-  ]);
   return [
     { source: "/en", destination: "/index.html" },
     { source: "/en/", destination: "/index.html" },
     { source: "/en/shop", destination: "/index.html" },
     { source: "/en/shop/", destination: "/index.html" },
-    { source: "/en/sepet", destination: "/sepet.html" },
-    { source: "/en/sepet/", destination: "/sepet.html" },
+    { source: "/en/about", destination: "/hakkimizda.html" },
+    { source: "/en/about/", destination: "/hakkimizda.html" },
+    { source: "/en/project-factory", destination: "/pfos.html" },
+    { source: "/en/project-factory/", destination: "/pfos.html" },
+    { source: "/en/story", destination: "/buradan-basladi.html" },
+    { source: "/en/story/", destination: "/buradan-basladi.html" },
     { source: "/en/pfos", destination: "/pfos.html" },
     { source: "/en/pfos/", destination: "/pfos.html" },
     { source: "/en/besos", destination: "/bar-design.html" },
@@ -124,12 +118,12 @@ function enRewrites() {
     { source: "/en/besos/modul/:slug/", destination: "/bar-module.html" },
     { source: "/en/contact", destination: "/contact.html" },
     { source: "/en/contact/", destination: "/contact.html" },
+    { source: "/en/sss", destination: "/sss.html" },
+    { source: "/en/sss/", destination: "/sss.html" },
     { source: "/en/login", destination: "/login.html" },
     { source: "/en/login/", destination: "/login.html" },
     { source: "/en/admin", destination: "/admin.html" },
     { source: "/en/admin/", destination: "/admin.html" },
-    { source: "/en/arama", destination: "/arama.html" },
-    { source: "/en/arama/", destination: "/arama.html" },
     { source: "/en/hakkimizda", destination: "/hakkimizda.html" },
     { source: "/en/hakkimizda/", destination: "/hakkimizda.html" },
     { source: "/en/buradan-basladi", destination: "/buradan-basladi.html" },
@@ -139,10 +133,6 @@ function enRewrites() {
     { source: "/en/shop/marka", destination: "/marka.html" },
     { source: "/en/shop/marka/", destination: "/marka.html" },
     { source: "/en/shop/marka/:slug", destination: "/marka.html" },
-    { source: "/en/shop/market-reyonlari", destination: "/market-reyonlari.html" },
-    { source: "/en/shop/market-reyonlari/", destination: "/market-reyonlari.html" },
-    ...dept,
-    { source: "/en/shop/:dept/:slug", destination: "/product.html" },
   ];
 }
 
@@ -278,15 +268,9 @@ const nextConfig: NextConfig = {
       ],
       afterFiles: [
       { source: "/", destination: "/index.html" },
-      { source: "/sepet", destination: "/sepet.html" },
-      { source: "/sepet/", destination: "/sepet.html" },
       { source: "/shop/marka", destination: "/marka.html" },
       { source: "/shop/marka/", destination: "/marka.html" },
       { source: "/shop/marka/:slug", destination: "/marka.html" },
-      { source: "/shop/market-reyonlari", destination: "/market-reyonlari.html" },
-      { source: "/shop/market-reyonlari/", destination: "/market-reyonlari.html" },
-      ...deptRewrites(),
-      { source: "/shop/:dept/:slug", destination: "/product.html" },
       { source: "/besos/modul/:slug", destination: "/bar-module.html" },
       { source: "/besos/modul/:slug/", destination: "/bar-module.html" },
       { source: "/admin", destination: "/admin.html" },
@@ -298,6 +282,8 @@ const nextConfig: NextConfig = {
       { source: "/buradan-basladi/", destination: "/buradan-basladi.html" },
       { source: "/hakkimizda", destination: "/hakkimizda.html" },
       { source: "/hakkimizda/", destination: "/hakkimizda.html" },
+      { source: "/sss", destination: "/sss.html" },
+      { source: "/sss/", destination: "/sss.html" },
       { source: "/login", destination: "/login.html" },
       { source: "/login/", destination: "/login.html" },
       { source: "/marka", destination: "/marka.html" },

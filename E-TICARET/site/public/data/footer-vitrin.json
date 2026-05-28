@@ -114,7 +114,7 @@
         { "key": "footer.link_cafe", "label": "Cafe kurulum rehberi", "href": "/cafe-kurulumu" },
         { "key": "footer.link_catering", "label": "Catering mutfağı rehberi", "href": "/catering-mutfagi" },
         { "key": "footer.link_bulut", "label": "Bulut mutfak kurulumu", "href": "/bulut-mutfak-kurulumu" },
-        { "key": "footer.link_sss", "label": "SSS", "href": "#eq-mfoot-sss" }
+        { "key": "footer.link_sss", "label": "SSS", "href": "/sss" }
       ]
     },
     {
