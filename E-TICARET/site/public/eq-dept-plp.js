@@ -21,7 +21,7 @@
   }
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260607buzkonteyner';
+  var CATALOG_V = '20260608pli18n';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   var deptCoverImg = '';
 
@@ -1030,11 +1030,14 @@
     var title = page.title || '';
     var lead = page.lead || '';
     var h1 = document.querySelector('.eq-dept-plp-title');
-    if (h1 && title) h1.textContent = title;
+    if (h1 && title && !h1.getAttribute('data-i18n')) h1.textContent = title;
     var leadEl = document.querySelector('.eq-dept-plp-lead');
-    if (leadEl && lead) leadEl.textContent = lead;
+    if (leadEl && lead && !leadEl.getAttribute('data-i18n')) leadEl.textContent = lead;
     var asideHd = document.querySelector('.eq-dept-plp-aside__hd');
-    if (asideHd && title) asideHd.textContent = title;
+    if (asideHd && title && !asideHd.getAttribute('data-i18n')) asideHd.textContent = title;
+    try {
+      if (typeof window.eqI18nApply === 'function') window.eqI18nApply(document.querySelector('.eq-dept-plp-layout') || document);
+    } catch (_) {}
   }
 
   function refreshAllPrices() {
@@ -1069,16 +1072,42 @@
       });
   }
 
+  function whenI18nReady(fn) {
+    if (window.eqI18nReady && typeof window.eqI18nReady.then === 'function') {
+      return window.eqI18nReady.then(fn);
+    }
+    return new Promise(function (resolve) {
+      window.addEventListener(
+        'equsto:i18n-ready',
+        function () {
+          resolve(fn());
+        },
+        { once: true }
+      );
+    });
+  }
+
   function boot() {
-    applyPageMeta();
     bindSearch();
     bindMobileFilter();
     loadDeptCover(loadCatalog);
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', boot);
-  } else {
+  function start() {
+    applyPageMeta();
     boot();
   }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () {
+      whenI18nReady(start);
+    });
+  } else {
+    whenI18nReady(start);
+  }
+
+  document.addEventListener('equsto:i18n-ready', function () {
+    applyPageMeta();
+    if (state.ready) render();
+  });
 })();
