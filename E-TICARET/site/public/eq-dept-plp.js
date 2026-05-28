@@ -14,15 +14,28 @@
     } catch (_) {}
     if (vars) {
       Object.keys(vars).forEach(function (kk) {
-        s = String(s).replace(new RegExp('\\{' + kk + '\\}', 'g'), vars[kk]);
+        var val = vars[kk];
+        s = String(s).replace(new RegExp('\\{' + kk + '\\}', 'g'), val);
+        s = String(s).replace(new RegExp('%\\{' + kk + '\\}', 'g'), val);
       });
     }
     return s;
   }
 
+  function displayProductName(item) {
+    var n = item && item.n != null ? String(item.n) : '';
+    if (!n) return '';
+    if (window.eqLang === 'en' && typeof window.eqProductNameEn === 'function') {
+      return window.eqProductNameEn(n, item.raw);
+    }
+    return n;
+  }
+
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260608pli18n';
+  var CATALOG_V = '20260527scan-fix1';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
+  /* Next.js URL slug → katalog dept id (data/dept/*.json) */
+  if (DEPT === 'market-reyonlari') DEPT = 'market-reyon';
   var deptCoverImg = '';
 
   var state = {
@@ -207,10 +220,10 @@
       var pct = Number(raw.iskonto_oran != null ? raw.iskonto_oran : raw.iskonto_yuzde);
       if (!pct && raw.bayi_iskonto != null) pct = Math.round(Number(raw.bayi_iskonto) * 100);
       if (!pct) pct = 65;
-      return __plpT('plp.price_hint', 'KDV dahil · Öztiryakiler liste EUR, %{pct} iskonto', { pct: pct });
+      return __plpT('plp.price_hint', 'KDV dahil · Öztiryakiler liste EUR, {pct}% iskonto', { pct: pct });
     }
-    if (/KDV\s*dahil/i.test(price)) return 'KDV dahil';
-    if (/\+ *KDV/i.test(price)) return 'Fiyat + KDV';
+    if (/KDV\s*dahil/i.test(price)) return __plpT('plp.vat_included', 'KDV dahil');
+    if (/\+ *KDV/i.test(price)) return __plpT('plp.price_plus_vat', 'Fiyat + KDV');
     return '';
   }
 
@@ -619,7 +632,7 @@
       u.raw && u.raw.images && u.raw.images[0]
         ? String(u.raw.images[0]).replace(/\\/g, '/').replace(/^\//, '')
         : '';
-    var rawImg = catalogRel || '';
+    var rawImg = /^https?:\/\//i.test(catalogRel) ? '' : catalogRel || '';
     if (!rawImg && u.raw && u.raw.images && u.raw.images[0]) {
       rawImg = plpImgRawAttr(u.raw.images[0]) || '';
     }
@@ -1076,6 +1089,12 @@
     if (window.eqI18nReady && typeof window.eqI18nReady.then === 'function') {
       return window.eqI18nReady.then(fn);
     }
+    try {
+      if (typeof window.eqT === 'function') {
+        var probe = window.eqT('plp.add_to_cart', null);
+        if (probe && probe !== 'plp.add_to_cart') return Promise.resolve(fn());
+      }
+    } catch (_) {}
     return new Promise(function (resolve) {
       window.addEventListener(
         'equsto:i18n-ready',
