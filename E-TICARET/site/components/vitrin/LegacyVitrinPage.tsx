@@ -11,6 +11,7 @@ type LegacyVitrinPageProps = {
   extraCss?: string;
   headStyles?: string[];
   headScripts?: ReactNode;
+  styleVariant?: "plp" | "product" | "cart" | "search" | "pfos";
 };
 
 /** Büyük legacy sayfalar — HTML gövde TS modülünde, chrome React */
@@ -21,6 +22,7 @@ export default function LegacyVitrinPage({
   extraCss,
   headStyles = [],
   headScripts,
+  styleVariant = "plp",
 }: LegacyVitrinPageProps) {
   return (
     <>
@@ -29,7 +31,7 @@ export default function LegacyVitrinPage({
         <link key={href} rel="stylesheet" href={href} />
       ))}
       {headScripts}
-      <VitrinShell bodyClass={bodyClass} extraCss={extraCss}>
+      <VitrinShell bodyClass={bodyClass} extraCss={extraCss} styleVariant={styleVariant}>
         <div id="eq-legacy-vitrin-root" dangerouslySetInnerHTML={{ __html: bodyHtml }} />
       </VitrinShell>
       {scripts.map((src) => (
