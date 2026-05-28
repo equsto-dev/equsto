@@ -14,7 +14,7 @@
 
 
 
-  var FOOTER_JSON = "/data/footer-vitrin.json?v=20260531col12";
+  var FOOTER_JSON = "/data/footer-vitrin.json?v=20260601col12";
 
   var SSS_LINK = { key: "footer.link_sss", label: "SSS", href: "/sss" };
 
