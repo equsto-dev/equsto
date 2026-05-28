@@ -438,6 +438,7 @@ const EN = {
   },
 
   footer: {
+    company_display: "E Q U S T O   T E C H N O L O G Y   L I M I T E D",
     tagline: "Equsto Technology · Gastronomy Design · Sales Engineering",
     all_rights: "All rights reserved.",
     cookie_policy: "Cookie policy",
@@ -450,6 +451,9 @@ const EN = {
     col_help: "We're here to help",
     col_solutions: "Solutions",
     link_contact: "Contact",
+    link_about: "About Equsto",
+    link_blog: "Guides & blog",
+    link_story: "Our story",
     link_projects: "Reference projects",
     link_sitemap: "Sitemap",
     link_llms: "Assistant summary file",
@@ -523,6 +527,34 @@ const EN = {
     showing_of: "Showing {shown} of {total} products.",
     showing_all: "Showing {total} products.",
     kuvet_subnav_aria: "Pan subcategories",
+    filter_mob: "Filter",
+    sort_label: "Sort",
+    sort_aria: "Sort",
+    sort_mixed: "Mixed order",
+    sort_name_asc: "Alphabetical A-Z",
+    sort_name_desc: "Alphabetical Z-A",
+    sort_price_asc: "Price ascending",
+    sort_price_desc: "Price descending",
+    filters_aria: "Filters",
+    pagination_aria: "Pagination",
+  },
+
+  dept: {
+    pisirme_lead: "Ranges, griddles, ovens, fryers, doner and toast equipment",
+    sogutma_lead: "Refrigerators, freezers, blast chillers, display and cold-room solutions",
+    kahve_lead: "Espresso, grinders, filter coffee and barista equipment",
+    yikama_lead: "Dishwashers, undercounter and conveyor warewashing systems",
+    hazirlik_lead: "Meat and veg prep, dough mixers, vacuum and food processors",
+    icecek_lead: "Tea, juice, bar blenders and hot beverage equipment",
+    tezgah_lead: "Stainless work tables, sinks and wall shelf units",
+    dolap_lead: "Stainless storage cabinets and sliding-door units",
+    davlumbaz_lead: "Wall, island and filtered commercial hood systems",
+    tasima_lead: "Pallet trucks and in-kitchen transport solutions",
+    araba_lead: "Service trolleys, tray clearing, GN transport and mobile bar units",
+    istif_lead: "Shelving racks, wall racks and storage systems",
+    set_ustu_mutfak_lead: "Öztiryakiler — service ware, gastronorm, chafing, cookware and accessories",
+    kuvetler_lead: "Gastronorm pans, GN lids, polypropylene and polycarbonate containers",
+    market_reyonlari_lead: "Proso and Çağlayan retail departments — dairy, deli, vertical freezers and display cases",
   },
 
   search: {
@@ -569,6 +601,17 @@ const EN = {
   breadcrumb: {
     home: "Home",
     back: "Back",
+  },
+
+  page: {
+    marka_h1: "Our partners",
+    marka_subtitle: "Quality service with trusted partners",
+    marka_intro:
+      "Equsto lists Öztiryakiler, Electrolux Professional, Rational, UNOX and 230+ commercial kitchen brands through one project list and quote channel.",
+    marka_website: "Website",
+    marka_products_aria: "Equsto products",
+    marka_cta_quote: "Quote & project request",
+    marka_cta_pfos: "Project Factory",
   },
 };
 
