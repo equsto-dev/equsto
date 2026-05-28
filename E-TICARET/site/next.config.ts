@@ -89,7 +89,8 @@ const traceExcludes = [
 ];
 
 const nextConfig: NextConfig = {
-  outputFileTracingRoot: path.join(__dirname),
+  /** Monorepo (git kok = path0); Vercel paketleme icin */
+  outputFileTracingRoot: path.join(__dirname, "..", ".."),
   serverExternalPackages: [
     "@prisma/client",
     "prisma",
