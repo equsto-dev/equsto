@@ -119,4 +119,11 @@ function syncGeoLandingsEnToLib(dir) {
 }
 
 syncGeoLandingsEnToLib(siteDir);
+
+const checkUtf8 = path.join(siteDir, "scripts/check-public-utf8.mjs");
+if (fs.existsSync(checkUtf8)) {
+  const r = spawnSync(process.execPath, [checkUtf8], { cwd: siteDir, stdio: "inherit" });
+  if (r.status !== 0) process.exit(r.status ?? 1);
+}
+
 console.log("[vercel-prebuild] OK");

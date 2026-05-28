@@ -5,7 +5,7 @@
 (function () {
   "use strict";
 
-  var FAQ_JSON = "/data/footer-vitrin.json?v=20260531sss7";
+  var FAQ_JSON = "/data/footer-vitrin.json?v=20260601col12";
 
   function t(key, fb) {
     try {
