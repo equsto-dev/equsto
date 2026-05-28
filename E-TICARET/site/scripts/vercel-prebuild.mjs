@@ -78,4 +78,16 @@ patchPrismaLibForVercel(siteDir);
 patchTsconfigForVercel(siteDir);
 patchPackageJsonForVercel(siteDir);
 syncPfosDataToPublic(siteDir);
+
+function syncGeoLandingsToLib(dir) {
+  const src = path.join(dir, "public/data/geo-landings.json");
+  const destDir = path.join(dir, "lib/geo");
+  const dest = path.join(destDir, "landings.json");
+  if (!fs.existsSync(src)) return;
+  fs.mkdirSync(destDir, { recursive: true });
+  fs.copyFileSync(src, dest);
+  console.log("[vercel-prebuild] geo-landings → lib/geo/landings.json");
+}
+
+syncGeoLandingsToLib(siteDir);
 console.log("[vercel-prebuild] OK");

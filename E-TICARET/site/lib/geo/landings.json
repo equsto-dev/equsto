@@ -1,0 +1,266 @@
+{
+  "version": 5,
+  "source": "EQUSTO SEO-GEO.docx + blog/GEO rehber genişletme 2026-05-28",
+  "steakhouse-kurulumu": {
+    "profile": "steakhouse",
+    "title": "Steakhouse mutfak projelendirme rehberi | Equsto",
+    "description": "Steakhouse mutfak kurulumu: dry-age, ızgara hattı, soğutma ve yıkama için 8 örnek ekipman, SSS ve 2026 bütçe bandı. Proje Fabrikası ile anında teklif.",
+    "h1": "Steakhouse mutfak kurulumu",
+    "lead": "Yüksek ısı pişirme, dry-age soğutma ve hijyen hattı aynı planda modellenir. Aşağıdaki tablo vitrin SKU’larına bağlanır; bütçe bandı katalog ve standart montaj varsayımlarına göredir."
+  },
+  "cafe-kurulumu": {
+    "profile": "cafe",
+    "title": "Cafe kurulum rehberi | Equsto",
+    "description": "Cafe ve espresso bar kurulumu: kahve istasyonu, hazırlık ve soğutma modülleri, SSS ve bütçe bandı.",
+    "h1": "Cafe kurulumu",
+    "lead": "Espresso merkezi, soğuk stok ve hazırlık hattı cafe konseptinde paralel yürür. PFOS ile kapasiteye göre adetleri netleştirin."
+  },
+  "catering-mutfagi": {
+    "profile": "catering",
+    "title": "Catering mutfağı rehberi | Equsto",
+    "description": "Catering ve toplu yemek mutfağı: yüksek hacim pişirme, taşıma ve yıkama hatları; örnek ekipman tablosu ve SSS.",
+    "h1": "Catering mutfağı kurulumu",
+    "lead": "Banket ve toplu çıkışlarda sıcak banket ile soğuk zincir aynı sahnede planlanır; yıkama hızı pik dakikayı belirler."
+  },
+  "fast-food-kurulumu": {
+    "profile": "fastfood",
+    "title": "Fast food kurulum rehberi | Equsto",
+    "description": "Fast food mutfak kurulumu: hızlı servis pişirme, soğutma, hazırlık ve yıkama; bütçe bandı ve vitrin bağlantılı tablo.",
+    "h1": "Fast food kurulumu",
+    "lead": "Kısa servis süreleri için pişirme modülleri ve soğuk holding yoğunluğu menüye göre ayarlanır."
+  },
+  "fine-dining-kurulumu": {
+    "profile": "finedining",
+    "title": "Fine dining kurulum rehberi | Equsto",
+    "description": "Fine dining mutfak projesi: düşük porsiyon sıklığı, davlumbaz ve tezgah hatları; örnek ekipman ve SSS.",
+    "h1": "Fine dining kurulumu",
+    "lead": "Düşük porsiyon sıklığı ocak yayılımını geniş tutar; soğutma ve bitirme hattı servis stiline göre modellenir."
+  },
+  "bulut-mutfak-kurulumu": {
+    "profile": "bulut",
+    "title": "Bulut mutfak kurulum rehberi | Equsto",
+    "description": "Bulut mutfak (cloud kitchen) kurulumu: çok markalı yüksek çıkış, modüler ekipman listesi ve bütçe bandı.",
+    "h1": "Bulut mutfak kurulumu",
+    "lead": "Çok markalı, yüksek çıkışlı bulut mutfaklarda parsel bazlı sıcak/soğuk hatlar ve yıkama kapasitesi kritiktir."
+  },
+  "all-day-dining-kurulumu": {
+    "profile": "allday",
+    "title": "All day dining kurulum rehberi | Equsto",
+    "description": "All day dining ve otel mutfağı: kahvaltı–öğle–akşam menü döngüsü için ekipman omurgası ve SSS.",
+    "h1": "All day dining kurulumu",
+    "lead": "Gün boyu servis döngüsünde kahve, sıcak hat ve soğuk stok aynı mutfakta üst üste bindirilir."
+  },
+  "market-kasap-sarkuteri-kurulumu": {
+    "profile": "marketKasap",
+    "title": "Market, kasap ve şarküteri kurulum rehberi | Equsto",
+    "description": "Market reyonu ile kasap ve şarküteri hattı kurulumu: vitrin, derin dondurucu, et hazırlık ve hijyen zonu. PFOS ile teklif.",
+    "h1": "Market, kasap ve şarküteri kurulumu",
+    "lead": "Reyon soğutması ve et hazırlık hattı aynı müşteri akışında modellenir; vitrin SKU’ları market reyon kataloğuna bağlanır.",
+    "skipTable": true
+  },
+  "projeler": {
+    "profile": "projelerHub",
+    "title": "Referans projeler | Equsto",
+    "description": "Demonte referans projeler: catering ve modüler bar vaka örnekleri, vitrin SKU bağlantıları.",
+    "h1": "Referans projeler",
+    "lead": "Paylaşılan vakalar demonte anlatımdır; ekipman seçim mantığı ve proje yaşam döngüsü şeffaf biçimde okunabilir.",
+    "links": [
+      { "label": "İstanbul yüksek hacim catering demode", "href": "/projeler/istanbul-yuksek-hacim-catering-demode" },
+      { "label": "İzmir modüler bar ve içecek hattı demode", "href": "/projeler/izmir-moduler-bar-icecek-demode" }
+    ]
+  },
+  "projeler/istanbul-yuksek-hacim-catering-demode": {
+    "profile": "projeIstanbul",
+    "title": "İstanbul yüksek hacim catering | Equsto",
+    "description": "İstanbul pilot catering demode dizilimi: yüksek hacim pişirme, soğutma ve yıkama hatları.",
+    "h1": "İstanbul yüksek hacim catering",
+    "lead": "Toplu yemek ve banket çıkışında sıcak banket ile konveyörlü yıkama hattı aynı senaryoda modellenir."
+  },
+  "projeler/izmir-moduler-bar-icecek-demode": {
+    "profile": "projeIzmir",
+    "title": "İzmir modüler bar ve içecek hattı | Equsto",
+    "description": "İzmir modüler bar demode: Bar Design modülleri ve içecek vitrin bağlantıları.",
+    "h1": "İzmir modüler bar ve içecek",
+    "lead": "Modüler bar hattı ile içecek ekipmanları aynı saha projesinde Besos modülleriyle hizalanır."
+  },
+  "rehber/mutfak-alani-kisi-basi-metrekare-2026": {
+    "profile": "rehberM2",
+    "title": "Rehber: mutfak m² ve kapasite | Equsto",
+    "description": "Mutfak alanı planlama 2026: kişi başı metrekare, kapasite ve PFOS ile senaryo modelleme.",
+    "h1": "Mutfak alanı — kişi başı metrekare",
+    "lead": "Kapasite planlamasında işler mutfak m²’sini servis stiline bölmekle başlar; PFOS çıktıları finans onayına bağlanır."
+  },
+  "rehber/500-kisilik-catering-ekipman-planlama-2026": {
+    "profile": "rehberCatering500",
+    "title": "500 kişilik catering ekipman planlama | Equsto",
+    "description": "500 kişilik catering ve banket mutfağı: kapasite, sıcak banket, yıkama hızı ve bütçe bandı; PFOS ile liste.",
+    "h1": "500 kişilik catering ekipman planlama",
+    "lead": "Toplu yemek ve banket çıkışlarında pik kişi sayısı ocak, soğutma ve yıkama adetlerini belirler."
+  },
+  "rehber/dark-kitchen-bulut-mutfak-2026": {
+    "profile": "rehberDarkKitchen",
+    "title": "Dark kitchen / bulut mutfak kurulum rehberi | Equsto",
+    "description": "Dark kitchen setup: çok markalı yüksek çıkış, modüler hatlar, MEP ve yıkama merkezi planlama.",
+    "h1": "Dark kitchen — bulut mutfak kurulumu",
+    "lead": "Çok markalı bulut mutfaklarda parsel bazlı sıcak-soğuk hatlar ve ortak yıkama kapasitesi kritiktir."
+  },
+  "rehber/restoran-mutfak-kurulumu-checklist-2026": {
+    "profile": "rehberRestoranChecklist",
+    "title": "Restoran mutfak kurulumu checklist | Equsto",
+    "description": "Restoran mutfak kurulumu adım adım: menü, kapasite, tesisat, teklif; PFOS ile 5 dakikada özet.",
+    "h1": "Restoran mutfak kurulumu checklist",
+    "lead": "Yeni restoran veya tadilat projelerinde ekipman listesi menü ve servis stiline göre modellenir.",
+    "skipTable": true
+  },
+  "rehber/kafe-acilis-ekipman-listesi-2026": {
+    "profile": "rehberKafeAcilis",
+    "title": "Kafe açılış ekipman listesi | Equsto",
+    "description": "Kafe ve espresso bar açılışı: kahve istasyonu, soğutma, hazırlık, yıkama; örnek liste ve bütçe bandı.",
+    "h1": "Kafe açılış ekipman listesi",
+    "lead": "Espresso merkezi ve soğuk stok cafe konseptinde paralel planlanır; paket oranı soğutma derinliğini artırır."
+  },
+  "endustriyel-mutfak-ekipmani-turkiye": {
+    "profile": "seoTurkiye",
+    "title": "Türkiye endüstriyel mutfak ekipmanı | Equsto",
+    "description": "Türkiye’de endüstriyel mutfak ekipmanı: pişirme, soğutma, yıkama ve hazırlık vitrinleri; Öztiryakiler yetkili bayii; 5 dakikada teklif özeti.",
+    "h1": "Endüstriyel mutfak ekipmanı — Türkiye",
+    "lead": "Equsto, restoran, otel, kafe ve bulut mutfak işletmelerine katalog ve satış mühendisliği ile ekipman tedariki sunar. Aşağıdaki tablo canlı vitrin SKU’larına bağlanır."
+  },
+  "restoran-mutfak-teklif": {
+    "profile": "seoRestoranTeklif",
+    "title": "Restoran mutfak ekipman teklifi | Equsto",
+    "description": "Restoran mutfak projesi için ekipman listesi ve teklif özeti: Proje Fabrikası ile 5 dakikada KDV ve lojistik kalemleriyle net fiyat dosyası.",
+    "h1": "Restoran mutfak ekipman teklifi",
+    "lead": "Menü, kapasite ve servis stiline göre pişirme, soğutma ve yıkama hatları modellenir; teklif özeti PFOS ile hedef 5 dakikada oluşturulur."
+  },
+  "otel-mutfak-ekipman-tedarik": {
+    "profile": "seoOtel",
+    "title": "Otel mutfak ekipman tedarikçisi | Equsto",
+    "description": "Otel ve all day dining mutfakları için ekipman tedariki: kahvaltı–öğle–akşam döngüsü, yüksek hacim soğutma ve yıkama hatları.",
+    "h1": "Otel mutfak ekipman tedariki",
+    "lead": "Otel mutfaklarında gün boyu servis döngüsü ekipman yoğunluğunu artırır; PFOS ile kişi sayısı ve öğün profiline göre liste üretilir."
+  },
+  "oztiryakiler-ekipmani-tedarik": {
+    "profile": "seoOzti",
+    "title": "Öztiryakiler ekipmanı tedarik | Equsto",
+    "description": "Öztiryakiler endüstriyel mutfak ekipmanı: yetkili bayii kanalı, canlı katalog ve Proje Fabrikası ile teklif; pişirme, soğutma, yıkama departmanları.",
+    "h1": "Öztiryakiler ekipmanı nereden alınır?",
+    "lead": "Equsto, Öztiryakiler Endüstriyel Mutfak ile yetkili bayii ilişkisiyle Türkiye ve seçili ihracat pazarlarında tedarik ve proje danışmanlığı sunar."
+  },
+  "soguk-oda-teklif": {
+    "profile": "seoSogukOda",
+    "title": "Soğuk oda ve soğutma teklifi | Equsto",
+    "description": "Soğuk oda, şok dondurucu ve tezgah tipi soğutma için vitrin bağlantılı rehber; kapasite ve menüye göre PFOS teklifi.",
+    "h1": "Soğuk oda fiyat teklifi",
+    "lead": "Soğutma hattı menü ve hacme göre modellenir; soğuk oda projelerinde MEP ve kapasite ön doğrulaması satış mühendisliği ile yapılır."
+  },
+  "havuzlu-dolap-tedarik": {
+    "profile": "seoHavuzlu",
+    "title": "Tezgah tipi havuzlu dolap | Equsto",
+    "description": "Havuzlu tezgah tipi dolap ve GN hatları: soğutma vitrininden örnek SKU’lar ve teknik ölçüler; PFOS ile adet ve teklif.",
+    "h1": "Tezgah tipi havuzlu dolap tedariki",
+    "lead": "Havuzlu dolap seçiminde ölçü, GN uyumu ve kapasite belirleyicidir; katalogda teknik ölçüler mm cinsinden listelenir."
+  },
+  "endustriyel-pisirme-ekipmanlari": {
+    "profile": "seoPisirme",
+    "title": "Endüstriyel pişirme ekipmanları | Equsto",
+    "description": "Sanayi ocakları, kuzineler, fritöz, ızgara ve kaynatma hatları; pişirme departmanı vitrini ve örnek SKU tablosu.",
+    "h1": "Endüstriyel pişirme ve kaynatma ekipmanı",
+    "lead": "Pişirme hattı menü ve pik çıkışa göre modellenir; gazlı ve elektrikli modüller CE uyumlu seçeneklerle vitrinde listelenir."
+  },
+  "mutfak-teklif-platformu": {
+    "profile": "seoTeklifPlatform",
+    "title": "Mutfak teklif platformu — 5 dakika | Equsto",
+    "description": "Proje Fabrikası (PFOS): restoran ve bulut mutfak ekipman listesi, KDV ve lojistik ile teklif özeti hedef 5 dakikada; satış mühendisliği onayıyla kesinleşir.",
+    "h1": "Hızlı mutfak teklif platformu",
+    "lead": "Equsto Proje Fabrikası, konsept ve kapasite girdileriyle kural motoru tabanlı ekipman listesi ve fiyat özetini aynı akışta üretir."
+  },
+  "bar-tasarimi-turkiye": {
+    "profile": "seoBar",
+    "title": "Bar tasarımı Türkiye | Equsto Besos",
+    "description": "Bar Design Studio (Besos): modüler bar hatları, Vitrum Group menşeli modüller; 42 modül vitrin ve PFOS entegrasyonu.",
+    "h1": "Bar tasarımı — Türkiye",
+    "lead": "Besos, Equsto’nun bar tasarım dikeyidir; modüler istasyonlar saha ölçüsü ve servis akışına göre seçilir.",
+    "ctaBesos": true
+  },
+  "en/industrial-kitchen-supplier-turkey": {
+    "profile": "seoEnIndustrial",
+    "lang": "en",
+    "title": "Industrial kitchen supplier Turkey | Equsto",
+    "description": "Equsto: B2B commercial kitchen equipment for restaurants, hotels, cloud kitchens and catering in Turkey and export markets. Quote summary in about 5 minutes via Project Factory.",
+    "h1": "Industrial kitchen supplier — Turkey",
+    "lead": "Cooking, refrigeration, warewashing, prep, coffee and beverage lines with authorized Öztiryakiler distribution and sales engineering."
+  },
+  "en/commercial-kitchen-quotation": {
+    "profile": "seoEnQuotation",
+    "lang": "en",
+    "title": "Commercial kitchen quotation platform | Equsto",
+    "description": "Project Factory (PFOS): equipment list and priced quote summary for commercial kitchen projects — target 5 minutes, sales engineering sign-off.",
+    "h1": "Commercial kitchen quotation",
+    "lead": "Capacity, concept and menu inputs drive equipment selection; VAT and logistics lines included in the quote file."
+  },
+  "blog": {
+    "profile": "blogHub",
+    "title": "Equsto rehber ve blog | GEO dizin",
+    "description": "Endüstriyel mutfak GEO rehberleri: konsept kurulumları, arama hedefli sayfalar, editoryal rehberler ve referans projeler. Vitrin menüsünde yok.",
+    "h1": "Rehber ve blog dizini",
+    "lead": "Ekipman vitrininden ayrı tutulan programatik rehberler. Her sayfa FAQ ve vitrin SKU bağlantıları içerir; teklif için Proje Fabrikası (hedef 5 dakika).",
+    "skipTable": true,
+    "sections": [
+      {
+        "title": "Konsept kurulum rehberleri",
+        "links": [
+          { "label": "Steakhouse mutfak kurulumu", "href": "/steakhouse-kurulumu" },
+          { "label": "Bulut mutfak kurulumu", "href": "/bulut-mutfak-kurulumu" },
+          { "label": "Cafe kurulumu", "href": "/cafe-kurulumu" },
+          { "label": "Catering mutfağı", "href": "/catering-mutfagi" },
+          { "label": "Fast food kurulumu", "href": "/fast-food-kurulumu" },
+          { "label": "Fine dining kurulumu", "href": "/fine-dining-kurulumu" },
+          { "label": "All day dining / otel mutfağı", "href": "/all-day-dining-kurulumu" },
+          { "label": "Market, kasap ve şarküteri kurulumu", "href": "/market-kasap-sarkuteri-kurulumu" }
+        ]
+      },
+      {
+        "title": "Arama ve GEO hedef sayfaları",
+        "links": [
+          { "label": "Endüstriyel mutfak ekipmanı — Türkiye", "href": "/endustriyel-mutfak-ekipmani-turkiye" },
+          { "label": "Restoran mutfak ekipman teklifi", "href": "/restoran-mutfak-teklif" },
+          { "label": "Otel mutfak ekipman tedariki", "href": "/otel-mutfak-ekipman-tedarik" },
+          { "label": "Öztiryakiler ekipmanı tedarik", "href": "/oztiryakiler-ekipmani-tedarik" },
+          { "label": "Soğuk oda fiyat teklifi", "href": "/soguk-oda-teklif" },
+          { "label": "Tezgah tipi havuzlu dolap", "href": "/havuzlu-dolap-tedarik" },
+          { "label": "Endüstriyel pişirme ekipmanları", "href": "/endustriyel-pisirme-ekipmanlari" },
+          { "label": "Mutfak teklif platformu (5 dk)", "href": "/mutfak-teklif-platformu" },
+          { "label": "Bar tasarımı Türkiye", "href": "/bar-tasarimi-turkiye" }
+        ]
+      },
+      {
+        "title": "Editoryal rehberler (/rehber/)",
+        "links": [
+          { "label": "Mutfak m² — kişi başı metrekare", "href": "/rehber/mutfak-alani-kisi-basi-metrekare-2026" },
+          { "label": "500 kişilik catering planlama", "href": "/rehber/500-kisilik-catering-ekipman-planlama-2026" },
+          { "label": "Dark kitchen / bulut mutfak", "href": "/rehber/dark-kitchen-bulut-mutfak-2026" },
+          { "label": "Restoran mutfak kurulumu checklist", "href": "/rehber/restoran-mutfak-kurulumu-checklist-2026" },
+          { "label": "Kafe açılış ekipman listesi", "href": "/rehber/kafe-acilis-ekipman-listesi-2026" }
+        ]
+      },
+      {
+        "title": "Referans projeler",
+        "links": [
+          { "label": "Projeler hub", "href": "/projeler" },
+          { "label": "İstanbul yüksek hacim catering", "href": "/projeler/istanbul-yuksek-hacim-catering-demode" },
+          { "label": "İzmir modüler bar ve içecek", "href": "/projeler/izmir-moduler-bar-icecek-demode" }
+        ]
+      },
+      {
+        "title": "Kurumsal ve İngilizce",
+        "links": [
+          { "label": "Hakkımızda", "href": "/hakkimizda.html" },
+          { "label": "Buradan başladık (hikaye)", "href": "/buradan-basladi" },
+          { "label": "EN — Industrial kitchen supplier Turkey", "href": "/en/industrial-kitchen-supplier-turkey" },
+          { "label": "EN — Commercial kitchen quotation", "href": "/en/commercial-kitchen-quotation" }
+        ]
+      }
+    ]
+  }
+}
