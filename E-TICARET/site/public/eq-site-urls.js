@@ -561,6 +561,59 @@
     return m[1] + "." + m[2].replace(/-/g, ".");
   }
 
+  /** 8897.36/46/56*.P0 polipropilen istif — yanlış fırın görseli yerine doğru raf fotoğrafı. */
+  function ozti8897WidthToIp4(width) {
+    var w = Number(width);
+    if (!isFinite(w) || w <= 0) return "21";
+    var table = [
+      [70, "11"],
+      [80, "12"],
+      [90, "13"],
+      [100, "14"],
+      [110, "15"],
+      [120, "21"],
+      [130, "22"],
+      [141, "22"],
+      [151, "24"],
+      [161, "24"],
+      [171, "24"],
+    ];
+    var best = table[0][1];
+    var bestDiff = 1e9;
+    for (var i = 0; i < table.length; i++) {
+      var diff = Math.abs(table[i][0] - w);
+      if (diff < bestDiff) {
+        bestDiff = diff;
+        best = table[i][1];
+      }
+    }
+    return best;
+  }
+
+  function parse8897PolipropilenSku(kod) {
+    var k = String(kod || "")
+      .replace(/\s+/g, "")
+      .toUpperCase();
+    var m = k.match(/^8897\.(36|46|56)([0-9.]+)/);
+    if (!m) return null;
+    var rest = m[2].replace(/\.P0$/i, "").replace(/P$/i, "");
+    var width = parseFloat(rest);
+    if (!isFinite(width) || width <= 0) return null;
+    return { depth: m[1], width: width };
+  }
+
+  function ozti8897PolipropilenFallbackRel(s) {
+    var t = String(s || "")
+      .trim()
+      .replace(/\\/g, "/");
+    if (!/8897-(36|46|56)/i.test(t)) return "";
+    var kod = oztiKodFromCatalogRel(t);
+    var parsed = parse8897PolipropilenSku(kod);
+    if (!parsed) return "";
+    var ip = ozti8897WidthToIp4(parsed.width);
+    return "images/catalog/ozti/cafemarkt/ozti-8897-" + ip + "ip4-07.jpg";
+  }
+
   /** Katalog yolu → oztiryakiler.com.tr ax-images (canlıda yerel dosya yokken). */
   function oztiAxFromCatalogRel(s) {
     var kod = oztiKodFromCatalogRel(s);
@@ -593,7 +646,7 @@
     );
   }
 
-  var EQ_CATALOG_IMG_V = "20260525p99fallback";
+  var EQ_CATALOG_IMG_V = "20260531kahveimg1";
 
   function withCatalogImgV(url) {
     if (!url || !/\/images\/catalog\/(?:ozti\/(?:web|cafemarkt)|atalay\/)/i.test(url)) return url;
@@ -633,6 +686,10 @@
         continue;
       }
       var chunk = [];
+      var istifRel = ozti8897PolipropilenFallbackRel("images/" + file);
+      if (istifRel) {
+        file = istifRel.replace(/^images\//i, "");
+      }
       if (allowRemoteImages() && isEqustoLiveHost() && /^catalog\/ozti\//i.test(file)) {
         var axLive = oztiAxFromCatalogRel("images/" + file);
         if (axLive) chunk.push(axLive);
@@ -805,7 +862,15 @@
     if (p == null || p === "") return "";
     var s = String(p).trim().replace(/\\/g, "/");
     if (!s) return "";
+    var istifFb = ozti8897PolipropilenFallbackRel(s);
+    if (istifFb) s = istifFb;
     if (/^https?:\/\//i.test(s)) return allowRemoteImages() ? s : "";
+    if (
+      isStaticPublicImage(s) &&
+      typeof window.eqAttrPath === "function"
+    ) {
+      return withCatalogImgV(window.eqAttrPath(s));
+    }
     if (isEqustoLiveHost() && /catalog\/ozti\//i.test(s)) {
       if (allowRemoteImages()) {
         var axProd = oztiAxFromCatalogRel(s);
@@ -822,7 +887,7 @@
     ) {
       return withCatalogImgV(window.eqAttrPath(s));
     }
-    var ozAx = oztiAxImageFromWebPath(s);
+    var ozAx = allowRemoteImages() ? oztiAxImageFromWebPath(s) : "";
     if (ozAx) return ozAx;
     var vd = vitrumDrawingsHref(s);
     if (vd) return vd;

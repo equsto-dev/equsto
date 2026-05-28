@@ -26,6 +26,33 @@ const AX = "https://oztiryakiler.com.tr/ax-images/images";
 const UA = "Mozilla/5.0 (Equsto; +https://equsto.com)";
 const MIN_PHOTO = 8000;
 const MIN_RENDER = 215000;
+/** Yanlışlıkla tüm cafemarkt klasörüne kopyalanan UNOX stub (wireframe). */
+const BAD_CAFE_STUB_BYTES = 10995;
+let badCafeStubMd5 = "";
+
+function loadBadCafeStubMd5() {
+  if (badCafeStubMd5) return badCafeStubMd5;
+  try {
+    const sample = path.join(CAFEMARKT_DIR, "ozti-9580-appia-3v.jpg");
+    if (fs.existsSync(sample) && fs.statSync(sample).size === BAD_CAFE_STUB_BYTES) {
+      badCafeStubMd5 = md5File(sample);
+    }
+  } catch (_) {}
+  return badCafeStubMd5;
+}
+
+function isBadCafemarktStub(abs) {
+  if (!abs || !fs.existsSync(abs)) return false;
+  const bytes = fs.statSync(abs).size;
+  if (bytes !== BAD_CAFE_STUB_BYTES) return false;
+  const stub = loadBadCafeStubMd5();
+  if (!stub) return true;
+  try {
+    return md5File(abs) === stub;
+  } catch (_) {
+    return true;
+  }
+}
 
 const dryRun = process.argv.includes("--dry-run");
 const skipAx = process.argv.includes("--skip-ax");
@@ -113,6 +140,30 @@ function downloadAx01(kod) {
   return rel;
 }
 
+/** ax-images foto (render değil) → cafemarkt stub yerine. */
+function downloadAxPhoto(kod) {
+  const key = normKod(kod);
+  if (!key) return "";
+  const fname = `${slugFile(key)}.jpg`;
+  const rel = `${CAFEMARKT_SUB}/${fname}`;
+  const dest = path.join(CAFEMARKT_DIR, fname);
+  if (fs.existsSync(dest) && fs.statSync(dest).size >= MIN_PHOTO && !isBadCafemarktStub(dest)) {
+    return rel;
+  }
+  if (dryRun) return rel;
+
+  fs.mkdirSync(CAFEMARKT_DIR, { recursive: true });
+  const url = `${AX}/${encodeURIComponent(key)}.jpg`;
+  const r = spawnSync("curl.exe", ["-sL", "-k", "--max-time", "45", "-o", dest, url], {
+    stdio: "pipe",
+  });
+  if (r.status !== 0 || !fs.existsSync(dest) || fs.statSync(dest).size < MIN_PHOTO) {
+    if (fs.existsSync(dest)) fs.unlinkSync(dest);
+    return "";
+  }
+  return rel;
+}
+
 function loadCmIndex() {
   if (!fs.existsSync(CM_JSON)) return [];
   const cm = JSON.parse(fs.readFileSync(CM_JSON, "utf8"));
@@ -192,10 +243,14 @@ async function resolveImage(row, p287Hashes, cmRows, stats) {
   }
 
   if (cur.includes("/cafemarkt/") && curAbs && fs.statSync(curAbs).size >= MIN_PHOTO) {
-    const k = classifyAbs(curAbs, p287Hashes);
-    if (k === "wire" || k === "render") {
-      stats.skipGoodCm++;
-      return cur;
+    if (isBadCafemarktStub(curAbs)) {
+      /* UNOX stub — yeniden indir */
+    } else {
+      const k = classifyAbs(curAbs, p287Hashes);
+      if (k === "wire" || k === "render") {
+        stats.skipGoodCm++;
+        return cur;
+      }
     }
   }
 
@@ -204,6 +259,11 @@ async function resolveImage(row, p287Hashes, cmRows, stats) {
     if (axRel) {
       stats.ax++;
       return axRel;
+    }
+    const axPhoto = downloadAxPhoto(kod);
+    if (axPhoto) {
+      stats.axPhoto = (stats.axPhoto || 0) + 1;
+      return axPhoto;
     }
   }
 
@@ -282,6 +342,7 @@ async function main() {
     skipRender: 0,
     skipGoodCm: 0,
     ax: 0,
+    axPhoto: 0,
     online: 0,
     onlineFail: 0,
     miss: 0,
