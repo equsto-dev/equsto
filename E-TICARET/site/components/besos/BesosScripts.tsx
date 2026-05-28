@@ -14,6 +14,8 @@ declare global {
     eqGo?: (key: string) => void;
     toggleDrawer?: () => void;
     EqustoCart?: { goToCartPage?: () => void; syncBadge?: () => void };
+    __eqYoutubeEmbedInit?: () => void;
+    __eqYoutubeActivate?: (root?: ParentNode) => void;
   }
 }
 
