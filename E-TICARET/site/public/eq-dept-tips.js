@@ -592,6 +592,32 @@
     "bar-aksesuarlari-tepsiler": "mutfak-aksesuar",
   };
 
+  /** Öztiryakiler küvet PLP — JSON category → vitrin ?tip= */
+  var KUVET_CAT_TIP = {
+    "gastronom-kuvetler": "gastronorm-kuvet",
+    kuvet: "gastronorm-kuvet",
+    "standart-gastronorm-kuvetler": "gastronorm-kuvet",
+    "kose-desenli-gastronorm-kuvetler": "gastronorm-kuvet",
+    "gastronorm-kapaklar": "gastronorm-kuvet",
+    "delikli-gastronom-kuvetler": "gastronorm-kuvet",
+    "delikli-kose-desenli-gastronorm-kuvetler": "gastronorm-kuvet",
+    "gn-kuvetler-yapismaz-kaplamali": "gastronorm-kuvet",
+    "sapli-gastronorm-kuvetler": "gastronorm-kuvet",
+    "sapli-kose-desenli-gastronorm-kuvetler": "gastronorm-kuvet",
+    "polipropilen-gastronorm-kuvetler": "pp-pc-gn",
+    "polikarbonat-gastronorm-kuvetler": "pp-pc-gn",
+    "bain-marie-celik-saklama-kaplari": "bain-marie-kap",
+    "karistirma-kaplari-ve-suzgecler": "karistirma-suzgec",
+    "helvane-ve-sig-tenceler-celik-suzgecler": "karistirma-suzgec",
+  };
+
+  function kuvetTipForCategory(cat) {
+    if (KUVET_CAT_TIP[cat]) return KUVET_CAT_TIP[cat];
+    var alias = SET_USTU_CAT_ALIASES[cat];
+    if (alias && byTip["kuvetler:" + alias]) return alias;
+    return "";
+  }
+
   function productCategorySlug(u) {
     var c = (u && u.c) || (u && u.category) || (u && u.raw && u.raw.category) || "";
     if (YIKAMA_CAT_ALIASES[c]) return YIKAMA_CAT_ALIASES[c];
@@ -604,6 +630,13 @@
     if (!u) return false;
     var c = productCategorySlug(u);
     if (c === "gastronom-kuvetler" || c === "kuvet") return true;
+    if (
+      c === "kombi-konveksiyonlu-firin-aksesuarlar" ||
+      c === "kombi-konveksiyonlu-f-rin-aksesuarlar"
+    ) {
+      var tEarly = productHaystack(u);
+      if (!/küvet|kuvet|gastronom|gn\s*\d|bain\s*marie\s*kapak/i.test(tEarly)) return false;
+    }
     var t = productHaystack(u);
     if (/buzdolab|buz dolab|donduruc|soğuk oda/.test(t) && !/küvet(?!li)|kuvet(?!li)/.test(t)) return false;
     if (/bain\s*marie|bainmarie|küvetli|kuvetli|küvetsiz|kuvetsiz|küvet\s*kapasiteli|kuvet\s*kapasiteli/i.test(t)) return false;
@@ -627,6 +660,9 @@
     if (tile.id === "bain-marie-kap") {
       return isOztiBainMarieKapRow(u);
     }
+
+    var kuvetTip = kuvetTipForCategory(cat);
+    if (kuvetTip) return tile.id === kuvetTip;
 
     if (isYikamaProduct(u) && cat && YIKAMA_STRICT_CAT[cat]) {
       if (tile.id === "bulasik-makineleri") return !!BULASIK_MAKINE_GROUP[cat];
@@ -780,6 +816,11 @@
     if (lk.indexOf("çay kazan") >= 0 || lk.indexOf("cay kazan") >= 0) return "cay-kazani";
     if (lk.indexOf("çay mak") >= 0 || lk.indexOf("cay mak") >= 0) return "cay-makinesi";
     if (lk.indexOf("çay") >= 0 || lk.indexOf("cay") >= 0) return "cay-makinesi";
+    if (lk.indexOf("polipropilen") >= 0 || lk.indexOf("polikarbonat") >= 0) return "pp-pc-gn";
+    if (lk.indexOf("bain marie") >= 0 && lk.indexOf("kap") >= 0) return "bain-marie-kap";
+    if (lk.indexOf("karıştırma") >= 0 || lk.indexOf("karistirma") >= 0 || lk.indexOf("süzgeç") >= 0 || lk.indexOf("suzgec") >= 0)
+      return "karistirma-suzgec";
+    if (lk.indexOf("gastronorm") >= 0 && (lk.indexOf("küvet") >= 0 || lk.indexOf("kuvet") >= 0)) return "gastronorm-kuvet";
     return "";
   }
 

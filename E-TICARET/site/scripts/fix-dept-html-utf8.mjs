@@ -12,11 +12,18 @@ const REF = fs.readFileSync(path.join(ROOT, "sogutma.html"), "utf8");
 
 const hdrChrome = REF.match(/<header class="hdr">[\s\S]*?<\/nav>\r?\n/)[0];
 const footerChrome = REF.match(/<footer class="footer">[\s\S]*?<\/footer>/)[0];
+const drawerChrome = REF.match(
+  /<div class="drawer-overlay"[\s\S]*?<div class="cat-drawer[\s\S]*?aria-hidden="true"><\/div>\r?\n/
+)[0];
+const plpStyleComment = REF.match(/\/\* Pişirme PLP v2[^*]+\*\//)[0];
+const plpFacetComment = REF.match(/\/\* Cafemarkt tarzı facet[^*]+\*\//)[0];
 const sortBlock = REF.match(
   /<label class="eq-dept-plp-sort">[\s\S]*?<\/label>/
 )[0];
 const statusLine =
   '<p class="eq-dept-plp-status">Katalog yükleniyor…</p>';
+const aramaStatusLine =
+  '<p class="eq-dept-plp-status">Yükleniyor…</p>';
 
 const TOPNAV_DEPTS = [
   "pisirme",
@@ -145,6 +152,11 @@ const DEPT = {
   },
 };
 
+const MARKA_BY_DEPT = {
+  icecek: "['Ateşe', 'Öztiryakiler']",
+  kahve: "['WMF', 'Nuova Simonelli', 'Bravilor Bonamat', 'Öztiryakiler']",
+};
+
 const FILE_DEPT = {
   "pisirme.html": "pisirme",
   "sogutma.html": "sogutma",
@@ -184,6 +196,43 @@ function chromeForDept(activeDept) {
     re,
     `<div class="topnav-item active" data-i18n="${i18n}">$1</div>`
   );
+}
+
+function repairPlpStyleComments(html) {
+  html = html.replace(/\/\* Pişirme PLP v2[^*]+\*\//, plpStyleComment);
+  html = html.replace(/\/\* Set st PLP v2[^*]+\*\//, plpStyleComment);
+  html = html.replace(/\/\* Cafemarkt tarz[^*]+\*\//, plpFacetComment);
+  return html;
+}
+
+function repairDrawerChrome(html) {
+  if (!/<div class="drawer-overlay"/.test(html)) return html;
+  return html.replace(
+    /<div class="drawer-overlay"[\s\S]*?<div class="cat-drawer[\s\S]*?aria-hidden="true"><\/div>\r?\n/,
+    drawerChrome
+  );
+}
+
+function patchArama() {
+  const fp = path.join(ROOT, "arama.html");
+  let html = fs.readFileSync(fp, "utf8");
+  const chrome = chromeForDept(null);
+  html = html.replace(/<header class="hdr">[\s\S]*?<\/nav>\r?\n/, chrome);
+  html = html.replace(
+    /<title>[\s\S]*?<\/title>/,
+    "<title>Arama — Equsto</title>"
+  );
+  html = html.replace(
+    /<meta name="description" content="[^"]*">/,
+    '<meta name="description" content="Equsto ürün araması — Meilisearch">'
+  );
+  html = html.replace(
+    /<p class="eq-dept-plp-status">[\s\S]*?<\/p>/,
+    aramaStatusLine
+  );
+  html = repairDrawerChrome(html);
+  fs.writeFileSync(fp, html, "utf8");
+  return true;
 }
 
 function patchFile(filename, deptKey) {
@@ -238,6 +287,14 @@ function patchFile(filename, deptKey) {
     /<p class="eq-dept-plp-status">[\s\S]*?<\/p>/,
     statusLine
   );
+  html = repairPlpStyleComments(html);
+  html = repairDrawerChrome(html);
+  if (MARKA_BY_DEPT[deptKey]) {
+    html = html.replace(
+      /window\.__EQUSTO_MARKA_BOYUT_SIRASI = \[[^\]]+\];/,
+      `window.__EQUSTO_MARKA_BOYUT_SIRASI = ${MARKA_BY_DEPT[deptKey]};`
+    );
+  }
 
   fs.writeFileSync(fp, html, "utf8");
   return true;
@@ -249,5 +306,9 @@ for (const [file, dept] of Object.entries(FILE_DEPT)) {
     n++;
     console.log("patched", file);
   }
+}
+if (patchArama()) {
+  n++;
+  console.log("patched", "arama.html");
 }
 console.log("done:", n, "files");

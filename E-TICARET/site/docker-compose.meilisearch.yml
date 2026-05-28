@@ -1,0 +1,20 @@
+# Yerel Meilisearch — Hetzner gerekmez
+#   docker compose -f docker-compose.meilisearch.yml up -d
+#   MEILISEARCH_HOST=http://127.0.0.1:7700
+#   MEILISEARCH_MASTER_KEY=equsto-dev-meili-key
+
+services:
+  meilisearch:
+    image: getmeili/meilisearch:v1.12
+    restart: unless-stopped
+    ports:
+      - "7700:7700"
+    environment:
+      MEILI_ENV: development
+      MEILI_MASTER_KEY: equsto-dev-meili-key
+      MEILI_NO_ANALYTICS: "true"
+    volumes:
+      - meili_data:/meili_data
+
+volumes:
+  meili_data:

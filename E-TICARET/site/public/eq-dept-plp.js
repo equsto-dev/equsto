@@ -4,6 +4,22 @@
 (function () {
   'use strict';
 
+  function __plpT(k, fb, vars) {
+    var s = fb || k;
+    try {
+      if (typeof window.eqT === 'function') {
+        var v = window.eqT(k, null);
+        if (v != null && v !== k) s = v;
+      }
+    } catch (_) {}
+    if (vars) {
+      Object.keys(vars).forEach(function (kk) {
+        s = String(s).replace(new RegExp('\\{' + kk + '\\}', 'g'), vars[kk]);
+      });
+    }
+    return s;
+  }
+
   var PAGE_SIZE = 24;
   var CATALOG_V = '20260530cafemarkt-plp1';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
@@ -145,6 +161,10 @@
 
   function parseDimsFromName(name) {
     var s = String(name || '');
+    var mStar = s.match(/(\d{2,4})\*(\d{2,3})\*(\d{2,4})/);
+    if (mStar) {
+      return dimLabelFromMm(+mStar[1] * 10, +mStar[2] * 10, +mStar[3] * 10);
+    }
     var mCm = s.match(/(\d{2,4})\s*[xX×]\s*(\d{2,4})\s*[xX×]\s*(\d{2,4})\s*cm\b/i);
     if (mCm) {
       return dimLabelFromMm(+mCm[1] * 10, +mCm[2] * 10, +mCm[3] * 10);
@@ -180,14 +200,14 @@
   function formatPriceNote(raw) {
     if (!raw) return '';
     if (Number(raw.fiyat_bekleniyor) === 1 || /teklif/i.test(String(raw.price || ''))) {
-      return 'Teklif için iletişim';
+      return __plpT('plp.quote_contact', 'Teklif için iletişim');
     }
     var price = String(raw.price || '');
     if (isOztiRow(raw) && Number(raw.liste_fiyati_eur) > 0 && Number(raw.fiyat_tl) > 0) {
       var pct = Number(raw.iskonto_oran != null ? raw.iskonto_oran : raw.iskonto_yuzde);
       if (!pct && raw.bayi_iskonto != null) pct = Math.round(Number(raw.bayi_iskonto) * 100);
       if (!pct) pct = 65;
-      return 'KDV dahil · Öztiryakiler liste EUR, %' + pct + ' iskonto';
+      return __plpT('plp.price_hint', 'KDV dahil · Öztiryakiler liste EUR, %{pct} iskonto', { pct: pct });
     }
     if (/KDV\s*dahil/i.test(price)) return 'KDV dahil';
     if (/\+ *KDV/i.test(price)) return 'Fiyat + KDV';
@@ -561,6 +581,16 @@
     if (asideChips) window.EqDeptCmFacets.renderSelectedChips(asideChips, state, tiles, tileMatch, onRemove);
   }
 
+  function syncTipInUrl() {
+    if (DEPT !== 'kuvetler') return;
+    try {
+      var u = new URL(location.href);
+      if (state.activeTiles.length === 1) u.searchParams.set('tip', state.activeTiles[0]);
+      else u.searchParams.delete('tip');
+      history.replaceState(null, '', u.pathname + u.search + u.hash);
+    } catch (_) {}
+  }
+
   function renderFacets() {
     var host = document.getElementById('eq-dept-plp-facets');
     if (!host || !state.ready || !window.EqDeptCmFacets) return;
@@ -574,6 +604,7 @@
         if (kind === 'clear') clearAllFilters();
         state.loadedCount = PAGE_SIZE;
         document.body.classList.remove('eq-dept-filter-open');
+        syncTipInUrl();
         render();
       },
     });
@@ -604,8 +635,8 @@
       window.EqustoCart && typeof window.EqustoCart.cartAddButtonAttrs === 'function'
         ? '<button class="eq-dept-plp-card__btn" ' +
           window.EqustoCart.cartAddButtonAttrs(u) +
-          '>SEPETE EKLE</button>'
-        : '<button type="button" class="eq-dept-plp-card__btn">SEPETE EKLE</button>';
+          '>' + __plpT('plp.add_to_cart', 'SEPETE EKLE') + '</button>'
+        : '<button type="button" class="eq-dept-plp-card__btn">' + __plpT('plp.add_to_cart', 'SEPETE EKLE') + '</button>';
     return (
       '<article class="eq-dept-plp-card">' +
       '<a class="eq-dept-plp-card__img" href="' +
@@ -646,13 +677,14 @@
     }
     host.hidden = false;
     host.className = 'eq-dept-plp-loadmore';
-    host.setAttribute('aria-label', 'Daha fazla ürün yükle');
+    host.setAttribute('aria-label', __plpT('plp.load_more_aria', 'Daha fazla ürün yükle'));
     host.innerHTML =
       '<button type="button" class="eq-dept-plp-loadmore__btn" id="eq-dept-plp-loadmore-btn">' +
-      'Daha fazla ürün yükle' +
+      __plpT('plp.load_more', 'Daha fazla ürün yükle') +
       '<span class="eq-dept-plp-loadmore__meta">(' +
       remaining +
-      ' kaldı)</span>' +
+      ' ' + __plpT('plp.remaining', 'kaldı)') +
+      '</span>' +
       '</button>';
     var btn = document.getElementById('eq-dept-plp-loadmore-btn');
     if (btn) {
@@ -669,7 +701,7 @@
     if (!grid) return;
 
     if (!state.ready) {
-      grid.innerHTML = '<p class="eq-dept-plp-status">Katalog yükleniyor…</p>';
+      grid.innerHTML = '<p class="eq-dept-plp-status">' + esc(__plpT('plp.loading_catalog', 'Katalog yükleniyor…')) + '</p>';
       if (countEl) countEl.textContent = '';
       return;
     }
@@ -687,14 +719,16 @@
       if (!list.length) {
         countEl.innerHTML = '';
       } else if (shown < list.length) {
-        countEl.innerHTML =
-          '<strong>' +
-          shown +
-          '</strong> / <strong>' +
-          list.length +
-          '</strong> ürün gösteriliyor.';
+        var ofLbl = __plpT('plp.showing_of', '{shown} / {total} ürün gösteriliyor.', {
+          shown: shown,
+          total: list.length,
+        });
+        countEl.innerHTML = ofLbl
+          .replace(String(shown), '<strong>' + shown + '</strong>')
+          .replace(String(list.length), '<strong>' + list.length + '</strong>');
       } else {
-        countEl.innerHTML = '<strong>' + list.length + '</strong> ürün görüntüleniyor.';
+        var allLbl = __plpT('plp.showing_all', '{total} ürün görüntüleniyor.', { total: list.length });
+        countEl.innerHTML = allLbl.replace(String(list.length), '<strong>' + list.length + '</strong>');
       }
     }
     var selWrap = document.getElementById('eq-dept-plp-selected');
@@ -711,7 +745,7 @@
 
     if (!slice.length) {
       grid.innerHTML =
-        '<p class="eq-dept-plp-empty">Bu filtrelere uygun ürün bulunamadı.</p>';
+        '<p class="eq-dept-plp-empty">' + esc(__plpT('plp.empty_filter', 'Bu filtrelere uygun ürün bulunamadı.')) + '</p>';
     } else {
       grid.innerHTML = slice.map(renderProductCard).join('');
       if (typeof window.eqFixDataImagesInDom === 'function') window.eqFixDataImagesInDom(grid);
@@ -845,7 +879,7 @@
 
   function loadMarketReyonCatalog() {
     var grid = document.getElementById('eq-dept-plp-grid');
-    if (grid) grid.innerHTML = '<p class="eq-dept-plp-status">Katalog yükleniyor…</p>';
+    if (grid) grid.innerHTML = '<p class="eq-dept-plp-status">' + esc(__plpT('plp.loading_catalog', 'Katalog yükleniyor…')) + '</p>';
 
     var loadDept =
       window.EqMarketReyon && typeof window.EqMarketReyon.loadCatalog === 'function'
@@ -864,7 +898,7 @@
       })
       .catch(function (e) {
         showError(
-          'Servis & teşhir kataloğu yüklenemedi. npm run dev ile açın; /shop/market-reyonlari — ' +
+          __plpT('plp.market_error_dev', 'Servis & teşhir kataloğu yüklenemedi. npm run dev ile açın; /shop/market-reyonlari — ') +
             (e && e.message ? e.message : String(e))
         );
       });
@@ -877,7 +911,7 @@
     }
 
     var grid = document.getElementById('eq-dept-plp-grid');
-    if (grid) grid.innerHTML = '<p class="eq-dept-plp-status">Ürün listesi indiriliyor…</p>';
+    if (grid) grid.innerHTML = '<p class="eq-dept-plp-status">' + esc(__plpT('plp.loading_products', 'Ürün listesi indiriliyor…')) + '</p>';
 
     function parseDeptText(text) {
       return new Promise(function (resolve, reject) {
@@ -930,7 +964,7 @@
           }
           if (grid && i < arr.length) {
             grid.innerHTML =
-              '<p class="eq-dept-plp-status">Ürünler hazırlanıyor… ' +
+              '<p class="eq-dept-plp-status">' + esc(__plpT('plp.preparing_products', 'Ürünler hazırlanıyor…')) + ' ' +
               Math.round((100 * i) / arr.length) +
               '%</p>';
             setTimeout(step, 0);
@@ -958,7 +992,7 @@
       })
       .catch(function (e) {
         showError(
-          'Katalog yüklenemedi. npm run dev:fresh ile açın; adres: /shop/' + DEPT + ' — ' +
+          __plpT('plp.catalog_error_dev', 'Katalog yüklenemedi. npm run dev:fresh ile açın; adres: /shop/{dept} — ', { dept: DEPT }) +
             (e && e.message ? e.message : String(e))
         );
       });
