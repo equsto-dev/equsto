@@ -4543,6 +4543,88 @@ body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-partners {
   color: rgba(255, 255, 255, 0.55);
   letter-spacing: 0.04em;
 }
+/* Footer — geniş SSS */
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-faq {
+  background: #0a284f;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px 20px 36px;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-faq-inner {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-faq h2 {
+  margin: 0 0 10px;
+  font-size: clamp(20px, 2.4vw, 26px);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-faq-intro {
+  margin: 0 0 24px;
+  max-width: 52rem;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.72);
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 20px;
+}
+@media (min-width: 1024px) {
+  body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-faq-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-faq-item {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 14px 40px 14px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #fff;
+  position: relative;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-faq-item summary::after {
+  content: "";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid rgba(255, 255, 255, 0.65);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.65);
+  transform: translateY(-70%) rotate(45deg);
+  transition: transform 0.2s ease;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-faq-item[open] summary::after {
+  transform: translateY(-30%) rotate(-135deg);
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-faq-a {
+  padding: 0 16px 14px;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-faq-a p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.78);
+}
 body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-legal {
   background: #011e41;
   border-top: 1px solid rgba(255, 255, 255, 0.14);

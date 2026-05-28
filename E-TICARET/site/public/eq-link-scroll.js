@@ -1,13 +1,21 @@
 /**
- * Link üzerindeyken dikey kaydırma:
- * - Orta tuş (roller): yeni sekme yerine sürükleyerek sayfa kaydırma
- * - Tekerlek: yatay taşırıcı şerit / link üstünde dikey niyet → sayfa scroll
+ * Orta tuş (roller) — link üzerinde:
+ * - Basılı tutup hareket: sayfa kaydırır (yeni sekme açılmaz)
+ * - Hızlı bas-bırak: linki yeni sekmede açar
+ * Tekerlek: yatay şeritlerde dikey kaydırma sayfaya iletilir.
  */
 (function () {
   "use strict";
 
   var SKIP =
     "input,textarea,select,option,[contenteditable='true'],iframe,.eq-yt,.eq-yt iframe";
+
+  var HORIZ_ZONE =
+    ".eq-rail,.eq-mbg-track,.eq-product-family-scroll--carousel," +
+    "nav.topnav,.topnav-inner,.topnav,.eq-drawer-scroll,.eq-mcat-scroll," +
+    "#bd-vitrum-jump,.bd-hdr-nav";
+
+  var DRAG_PX = 5;
 
   function skipped(el) {
     return !!(el && el.closest && el.closest(SKIP));
@@ -20,27 +28,41 @@
     return dy;
   }
 
-  function findHorizScrollHost(el) {
-    for (var n = el; n && n !== document.documentElement; n = n.parentElement) {
-      try {
-        var st = window.getComputedStyle(n);
-        var ox = st.overflowX;
-        if (ox !== "auto" && ox !== "scroll" && ox !== "overlay") continue;
-        if (n.scrollWidth > n.clientWidth + 2) return n;
-      } catch (_) {}
-    }
-    return null;
+  function horizZone(el) {
+    return !!(el && el.closest && el.closest(HORIZ_ZONE));
   }
 
-  /* ── Tekerlek: yatay bant üstünde dikey scroll sayfaya ── */
+  function linkFrom(el) {
+    if (!el || !el.closest) return null;
+    var a = el.closest("a[href]");
+    if (!a) return null;
+    var href = (a.getAttribute("href") || "").trim();
+    if (!href || href === "#") return null;
+    return a;
+  }
+
+  function openLinkNewTab(a) {
+    if (!a) return;
+    var raw = (a.getAttribute("href") || "").trim();
+    if (!raw || raw === "#") return;
+    var url = raw;
+    if (typeof window.equstoResolveNavHref === "function") {
+      url = window.equstoResolveNavHref(raw);
+    }
+    if (!url || url === "#") return;
+    try {
+      window.open(url, "_blank", "noopener,noreferrer");
+    } catch (_) {}
+  }
+
+  /* ── Tekerlek: yatay şerit → dikey tekerlek sayfayı kaydırır ── */
   document.addEventListener(
     "wheel",
     function (e) {
       if (e.defaultPrevented || e.ctrlKey || e.metaKey) return;
       if (skipped(e.target)) return;
+      if (!horizZone(e.target)) return;
       if (Math.abs(e.deltaY) < Math.abs(e.deltaX)) return;
-      var host = findHorizScrollHost(e.target);
-      if (!host) return;
       var dy = wheelPixelsY(e);
       if (!dy) return;
       window.scrollBy(0, dy);
@@ -49,21 +71,28 @@
     { passive: false, capture: true }
   );
 
-  /* ── Orta tuş linkte: yeni sekme açma, sürükleyerek kaydır ── */
-  var midDrag = null;
+  /* ── Orta tuş: tut + sürükle = kaydır; tık = yeni sekme ── */
+  var mid = null;
+
+  function endMid() {
+    mid = null;
+  }
 
   document.addEventListener(
     "mousedown",
     function (e) {
       if (e.button !== 1) return;
       if (skipped(e.target)) return;
-      var a = e.target.closest && e.target.closest("a[href]");
+      var a = linkFrom(e.target);
       if (!a) return;
       e.preventDefault();
       e.stopPropagation();
-      midDrag = {
+      mid = {
+        a: a,
+        x0: e.clientX,
         y0: e.clientY,
         scroll0: window.scrollY || document.documentElement.scrollTop || 0,
+        didDrag: false,
       };
     },
     true
@@ -72,32 +101,35 @@
   document.addEventListener(
     "mousemove",
     function (e) {
-      if (!midDrag || (e.buttons & 4) === 0) return;
-      var dy = e.clientY - midDrag.y0;
-      window.scrollTo(0, midDrag.scroll0 - dy);
+      if (!mid || (e.buttons & 4) === 0) return;
+      var dy = e.clientY - mid.y0;
+      if (!mid.didDrag && Math.abs(dy) < DRAG_PX && Math.abs(e.clientX - mid.x0) < DRAG_PX) return;
+      mid.didDrag = true;
+      window.scrollTo(0, mid.scroll0 - dy);
     },
     true
   );
 
-  function endMidDrag() {
-    midDrag = null;
-  }
+  document.addEventListener(
+    "mouseup",
+    function (e) {
+      if (e.button !== 1 || !mid) return;
+      if (!mid.didDrag) openLinkNewTab(mid.a);
+      endMid();
+    },
+    true
+  );
 
-  document.addEventListener("mouseup", function (e) {
-    if (e.button === 1) endMidDrag();
-  }, true);
-  document.addEventListener("mouseleave", endMidDrag, true);
-  window.addEventListener("blur", endMidDrag);
+  window.addEventListener("blur", endMid);
 
   document.addEventListener(
     "auxclick",
     function (e) {
       if (e.button !== 1) return;
       if (skipped(e.target)) return;
-      if (e.target.closest && e.target.closest("a[href]")) {
-        e.preventDefault();
-        e.stopPropagation();
-      }
+      if (!linkFrom(e.target)) return;
+      e.preventDefault();
+      e.stopPropagation();
     },
     true
   );

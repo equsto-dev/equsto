@@ -537,7 +537,7 @@
     if (b.classList.contains("pf-page")) return;
     if (!document.querySelector('script[src*="eq-footer"]')) {
       var f = document.createElement("script");
-      f.src = "/eq-footer.js?v=20260528foot";
+      f.src = "/eq-footer.js?v=20260528foot-faq1";
       f.defer = true;
       document.head.appendChild(f);
     }
@@ -564,7 +564,7 @@
     if (b.classList.contains("admin-app")) return;
     if (!document.querySelector('script[src*="eq-link-scroll"]')) {
       var ls = document.createElement("script");
-      ls.src = "/eq-link-scroll.js?v=20260530midscroll";
+      ls.src = "/eq-link-scroll.js?v=20260528midscroll3";
       ls.defer = true;
       document.head.appendChild(ls);
     }

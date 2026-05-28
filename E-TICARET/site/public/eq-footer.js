@@ -5,7 +5,7 @@
 (function () {
   "use strict";
 
-  var FOOTER_JSON = "/data/footer-vitrin.json?v=20260526foot4";
+  var FOOTER_JSON = "/data/footer-vitrin.json?v=20260528foot-faq1";
   var footerData = null;
   var footerLoadPromise = null;
 
@@ -204,6 +204,72 @@
     return '<span class="eq-mfoot-logo-text">EQUSTO</span>';
   }
 
+  function faqSectionHtml(data) {
+    var faq = data && data.faq;
+    if (!faq || !faq.items || !faq.items.length) return "";
+    var title = t(faq.titleKey || "footer.faq_title", faq.title || "Sık sorulan sorular");
+    var intro = faq.intro
+      ? '<p class="eq-mfoot-faq-intro">' + esc(t(faq.introKey || "footer.faq_intro", faq.intro)) + "</p>"
+      : "";
+    var items = faq.items
+      .map(function (it, idx) {
+        var q = t(it.qKey || "", it.q || "");
+        var a = t(it.aKey || "", it.a || "");
+        var open = idx === 0 ? " open" : "";
+        return (
+          '<details class="eq-mfoot-faq-item"' +
+          open +
+          "><summary>" +
+          esc(q) +
+          '</summary><div class="eq-mfoot-faq-a"><p>' +
+          esc(a) +
+          "</p></div></details>"
+        );
+      })
+      .join("");
+    return (
+      '<section class="eq-mfoot-faq" aria-label="' +
+      esc(title) +
+      '">' +
+      '<div class="eq-mfoot-faq-inner">' +
+      "<h2>" +
+      esc(title) +
+      "</h2>" +
+      intro +
+      '<div class="eq-mfoot-faq-grid">' +
+      items +
+      "</div>" +
+      "</div>" +
+      "</section>"
+    );
+  }
+
+  function injectFaqSchema(data) {
+    var faq = data && data.faq;
+    if (!faq || !faq.items || !faq.items.length) return;
+    var el = document.getElementById("eq-mfoot-faq-ld");
+    if (!el) {
+      el = document.createElement("script");
+      el.id = "eq-mfoot-faq-ld";
+      el.type = "application/ld+json";
+      document.head.appendChild(el);
+    }
+    el.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faq.items.map(function (it) {
+        return {
+          "@type": "Question",
+          name: t(it.qKey || "", it.q || ""),
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: t(it.aKey || "", it.a || ""),
+          },
+        };
+      }),
+    });
+  }
+
   function buildHtml(data) {
     var cols = normalizeColumns(data)
       .map(function (c) {
@@ -243,6 +309,7 @@
       "</p>" +
       "</div>" +
       "</div>" +
+      faqSectionHtml(data) +
       '<div class="eq-mfoot-legal">' +
       '<div class="eq-mfoot-legal-inner">' +
       '<nav class="eq-mfoot-legal-nav" aria-label="' +
@@ -284,6 +351,7 @@
 
   function wire(host) {
     wireLinkHrefs(host);
+    if (footerData) injectFaqSchema(footerData);
     var cookie = host.querySelector("#eq-mfoot-cookie");
     if (cookie) {
       cookie.addEventListener("click", function () {
