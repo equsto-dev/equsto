@@ -36,10 +36,22 @@
 .eq-geo-table a{color:var(--eq-link,#001e50);font-weight:600;}
 .eq-geo-links{margin:0 0 20px;padding-left:1.2em;font-size:14px;line-height:1.7;}
 .eq-geo-links a{color:var(--eq-link,#001e50);}
-.eq-geo-blog-index{margin:8px 0 28px;}
-.eq-geo-blog-sec{margin:0 0 22px;}
-.eq-geo-blog-sec h2{font-size:16px;font-weight:700;margin:0 0 8px;color:var(--eq-text);}
-.eq-geo-blog-sec .eq-geo-links{margin-bottom:0;}
+.eq-geo-blog-index{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:22px 32px;
+  margin:12px 0 28px;
+  align-items:start;
+}
+.eq-geo-blog-sec{margin:0;min-width:0;}
+.eq-geo-blog-sec h2{font-size:15px;font-weight:700;margin:0 0 8px;color:var(--eq-text);line-height:1.35;}
+.eq-geo-blog-sec .eq-geo-links{margin:0;padding-left:1.1em;font-size:13px;line-height:1.65;}
+@media (max-width:960px){
+  .eq-geo-blog-index{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 24px;}
+}
+@media (max-width:560px){
+  .eq-geo-blog-index{grid-template-columns:1fr;}
+}
 .eq-geo-faq{margin:24px 0;}
 .eq-geo-faq-item{border:1px solid var(--eq-border);border-radius:6px;margin:0 0 8px;padding:10px 12px;background:var(--eq-surface);}
 .eq-geo-faq-item summary{cursor:pointer;font-weight:600;font-size:14px;}
