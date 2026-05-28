@@ -92,6 +92,12 @@ function syncGeoLandingsToLib(dir) {
 
 syncGeoLandingsToLib(siteDir);
 
+const buildI18nEn = path.join(siteDir, "scripts/build-i18n-en.mjs");
+if (fs.existsSync(buildI18nEn)) {
+  const r = spawnSync(process.execPath, [buildI18nEn], { cwd: siteDir, stdio: "inherit" });
+  if (r.status !== 0) process.exit(r.status ?? 1);
+}
+
 const buildEn = path.join(siteDir, "scripts/build-geo-landings-en.mjs");
 if (fs.existsSync(buildEn)) {
   const r = spawnSync(process.execPath, [buildEn], { cwd: siteDir, stdio: "inherit" });

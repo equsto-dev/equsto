@@ -56,13 +56,40 @@ const GEO_SLUGS = [
   "blog",
 ];
 
+/** EN GEO slugs — must not collide with /en/pfos, /en/shop, etc. */
+const GEO_EN_SLUGS = [
+  "steakhouse-kitchen-setup",
+  "cloud-kitchen-setup",
+  "cafe-setup",
+  "catering-kitchen",
+  "fast-food-kitchen-setup",
+  "fine-dining-kitchen-setup",
+  "all-day-dining-kitchen-setup",
+  "market-butcher-deli-setup",
+  "industrial-kitchen-equipment-turkey",
+  "industrial-kitchen-supplier-turkey",
+  "commercial-kitchen-quotation",
+  "restaurant-kitchen-quote",
+  "hotel-kitchen-equipment",
+  "oztiryakiler-equipment-supply",
+  "cold-room-quote",
+  "deli-counter-refrigeration",
+  "industrial-cooking-equipment",
+  "kitchen-quote-platform",
+  "bar-design-turkey",
+];
+
 function geoRewrites() {
-  const base = GEO_SLUGS.map((slug) => ({
+  const trBase = GEO_SLUGS.map((slug) => ({
     source: `/${slug}`,
     destination: "/geo-landing.html",
   }));
+  const enPages = GEO_EN_SLUGS.map((slug) => ({
+    source: `/en/${slug}`,
+    destination: "/geo-landing.html",
+  }));
   return [
-    ...base,
+    ...trBase,
     { source: "/projeler", destination: "/geo-landing.html" },
     { source: "/projeler/:slug", destination: "/geo-landing.html" },
     { source: "/rehber/:slug", destination: "/geo-landing.html" },
@@ -70,7 +97,52 @@ function geoRewrites() {
     { source: "/en/projects", destination: "/geo-landing.html" },
     { source: "/en/projects/:slug", destination: "/geo-landing.html" },
     { source: "/en/guides/:slug", destination: "/geo-landing.html" },
-    { source: "/en/:slug", destination: "/geo-landing.html" },
+    ...enPages,
+  ];
+}
+
+/** Mirror storefront HTML routes under /en — before GEO slug rules */
+function enRewrites() {
+  const dept = Object.entries(DEPT_HTML).flatMap(([slug, file]) => [
+    { source: `/en/shop/${slug}`, destination: file },
+    { source: `/en/shop/${slug}/`, destination: file },
+  ]);
+  return [
+    { source: "/en", destination: "/index.html" },
+    { source: "/en/", destination: "/index.html" },
+    { source: "/en/shop", destination: "/index.html" },
+    { source: "/en/shop/", destination: "/index.html" },
+    { source: "/en/sepet", destination: "/sepet.html" },
+    { source: "/en/sepet/", destination: "/sepet.html" },
+    { source: "/en/pfos", destination: "/pfos.html" },
+    { source: "/en/pfos/", destination: "/pfos.html" },
+    { source: "/en/besos", destination: "/bar-design.html" },
+    { source: "/en/besos/", destination: "/bar-design.html" },
+    { source: "/en/besos/imt300", destination: "/imt300.html" },
+    { source: "/en/besos/imt300/", destination: "/imt300.html" },
+    { source: "/en/besos/modul/:slug", destination: "/bar-module.html" },
+    { source: "/en/besos/modul/:slug/", destination: "/bar-module.html" },
+    { source: "/en/contact", destination: "/contact.html" },
+    { source: "/en/contact/", destination: "/contact.html" },
+    { source: "/en/login", destination: "/login.html" },
+    { source: "/en/login/", destination: "/login.html" },
+    { source: "/en/admin", destination: "/admin.html" },
+    { source: "/en/admin/", destination: "/admin.html" },
+    { source: "/en/arama", destination: "/arama.html" },
+    { source: "/en/arama/", destination: "/arama.html" },
+    { source: "/en/hakkimizda", destination: "/hakkimizda.html" },
+    { source: "/en/hakkimizda/", destination: "/hakkimizda.html" },
+    { source: "/en/buradan-basladi", destination: "/buradan-basladi.html" },
+    { source: "/en/buradan-basladi/", destination: "/buradan-basladi.html" },
+    { source: "/en/marka", destination: "/marka.html" },
+    { source: "/en/marka/", destination: "/marka.html" },
+    { source: "/en/shop/marka", destination: "/marka.html" },
+    { source: "/en/shop/marka/", destination: "/marka.html" },
+    { source: "/en/shop/marka/:slug", destination: "/marka.html" },
+    { source: "/en/shop/market-reyonlari", destination: "/market-reyonlari.html" },
+    { source: "/en/shop/market-reyonlari/", destination: "/market-reyonlari.html" },
+    ...dept,
+    { source: "/en/shop/:dept/:slug", destination: "/product.html" },
   ];
 }
 
@@ -129,6 +201,8 @@ const nextConfig: NextConfig = {
       { source: "/marka", headers: [utf8Html] },
       { source: "/arama", headers: [utf8Html] },
       { source: "/shop/:dept", headers: [utf8Html] },
+      { source: "/en", headers: [utf8Html] },
+      { source: "/en/:path*", headers: [utf8Html] },
       { source: "/i18n/:file.json", headers: [utf8Json] },
       {
         source: "/data/:path*",
@@ -214,6 +288,7 @@ const nextConfig: NextConfig = {
       { source: "/login/", destination: "/login.html" },
       { source: "/marka", destination: "/marka.html" },
       { source: "/marka/", destination: "/marka.html" },
+      ...enRewrites(),
       ...geoRewrites(),
       ],
     };

@@ -30,6 +30,17 @@ const EXACT_HTML = new Set([
   "/marka",
   "/arama",
   "/geo-landing.html",
+  "/en",
+  "/en/pfos",
+  "/en/besos",
+  "/en/contact",
+  "/en/login",
+  "/en/admin",
+  "/en/marka",
+  "/en/arama",
+  "/en/hakkimizda",
+  "/en/buradan-basladi",
+  "/en/sepet",
 ]);
 
 function isLegacyHtmlPath(pathname: string): boolean {
@@ -39,7 +50,9 @@ function isLegacyHtmlPath(pathname: string): boolean {
   }
   if (p.endsWith(".html")) return true;
   if (EXACT_HTML.has(p)) return true;
-  if (DEPT_SLUGS.some((s) => p === `/shop/${s}`)) return true;
+  if (DEPT_SLUGS.some((s) => p === `/shop/${s}` || p === `/en/shop/${s}`)) return true;
+  if (p.startsWith("/en/shop/") && p.split("/").length >= 5) return true;
+  if (p.startsWith("/en/besos/modul/")) return true;
   if (
     p.startsWith("/steakhouse") ||
     p.startsWith("/bulut-mutfak") ||
