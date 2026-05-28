@@ -297,8 +297,15 @@ body.eq-dept-plp {
 .eq-dept-plp-card__price {
   font-size: 16px;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 4px;
   margin-top: auto;
+}
+.eq-dept-plp-card__price-note {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: #6b7280;
+  margin: 0 0 10px;
 }
 .eq-dept-plp-card__btn {
   width: 100%;
