@@ -11,6 +11,8 @@ import { buildCaglayanGalleryLocal } from "./lib/caglayan-gallery.mjs";
 import {
   buildVariantImages,
   extractCaglayanVariants,
+  extractDepthList,
+  resolveVariantTeknik,
   variantDisplayName,
   variantModelNo,
   variantSlugId,
@@ -155,6 +157,7 @@ function buildRows(urun) {
   const common = baseFields(urun, { series, tileId, category });
   const gallery = common._gallery;
   const variants = extractCaglayanVariants(urun);
+  const depths = extractDepthList(urun);
   delete common._gallery;
 
   const makeRow = (id, name, model, images, olculer, extra = {}) => ({
@@ -181,20 +184,23 @@ function buildRows(urun) {
 
   return variants.map((v) => {
     const id = variantSlugId(urun.slug, v);
-    const images = buildVariantImages(urun, gallery, v);
+    const images = buildVariantImages(urun, gallery, v, depths);
+    const teknik = resolveVariantTeknik(gallery, v, depths);
     const olculer = {
       genislik_mm: v.genislik_mm,
       derinlik_mm: v.derinlik_mm || undefined,
       yukseklik_mm: v.yukseklik_mm,
     };
     if (!olculer.derinlik_mm) delete olculer.derinlik_mm;
+    const extra = { caglayanModelKod: v.modelKod || undefined };
+    if (teknik.kesit || teknik.modelCizim) extra.caglayanTeknik = teknik;
     return makeRow(
       id,
       variantDisplayName(urun.baslik, v),
       variantModelNo(urun.baslik, v),
       images,
       olculer,
-      { caglayanModelKod: v.modelKod || undefined }
+      extra
     );
   });
 }
