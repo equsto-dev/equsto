@@ -1,42 +1,59 @@
 "use client";
 
-import BesosHdrBrand from "@/components/besos/BesosHdrBrand";
-import { goEqCart, goEqDept, submitBesosSearch } from "@/lib/besos/site-nav";
-import { useRef } from "react";
+import { goEqDept, submitBesosSearch, toggleEqDrawer } from "@/lib/besos/site-nav";
+import { Fragment, useRef } from "react";
+
+function cycleTheme() {
+  const fn = (window as Window & { equstoCycleTheme?: () => void }).equstoCycleTheme;
+  fn?.();
+}
+
+const DEPT_NAV: { key: string; label: string }[] = [
+  { key: "pisirme", label: "Pişirme Ekipmanları" },
+  { key: "sogutma", label: "Soğutma Ekipmanları" },
+  { key: "kahve", label: "Kahve Ekipmanları" },
+  { key: "yikama", label: "Yıkama Ekipmanları" },
+  { key: "hazirlik", label: "Hazırlık Ekipmanları" },
+  { key: "icecek", label: "İçecek Ekipmanları" },
+];
 
 export default function BesosEqustoChrome() {
   const searchRef = useRef<HTMLInputElement>(null);
 
   return (
     <>
-      <header className="hdr" data-besos-shell="locked">
-        <BesosHdrBrand active="vitrin" />
+      <header className="hdr">
         <a className="logo" href="/" aria-label="Equsto" />
-        <div
-          className="pg-inner hdr-pg-inner"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: 10,
-            flex: 1,
-            minWidth: 0,
-            padding: "10px 20px 10px 0",
-          }}
-        >
+        <div className="pg-inner hdr-pg-inner">
           <div className="hdr-alici">
-            <div style={{ fontSize: 9, color: "var(--eq-text-subtle)" }}>Teslimat Adresi</div>
-            <div style={{ fontSize: 11, fontWeight: 600, color: "var(--eq-drawer-head-text)" }}>
-              İstanbul, Türkiye
-            </div>
+            <div className="st-label">Teslimat Adresi</div>
+            <div className="st-val">İstanbul, Türkiye</div>
           </div>
           <div className="srch">
+            <div
+              className="srch-cat"
+              role="button"
+              tabIndex={0}
+              onClick={toggleEqDrawer}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  toggleEqDrawer();
+                }
+              }}
+            >
+              ☰ Tüm Kategoriler
+            </div>
             <input
               ref={searchRef}
               className="srch-input"
               type="search"
-              placeholder="Bar modülü, ürün veya kategori ara..."
+              placeholder="Ürün, marka veya kategori ara..."
+              autoComplete="off"
+              spellCheck={false}
               onInput={(e) => {
-                const fn = (window as Window & { filterStations?: (q: string) => void }).filterStations;
+                const fn = (window as Window & { filterStations?: (q: string) => void })
+                  .filterStations;
                 fn?.(e.currentTarget.value);
               }}
               onKeyDown={(e) => {
@@ -75,25 +92,47 @@ export default function BesosEqustoChrome() {
             </button>
           </div>
           <div className="hdr-right">
+            <div className="theme-wrap">
+              <button
+                type="button"
+                className="theme-toggle"
+                id="theme-toggle"
+                title="Tema"
+                onClick={cycleTheme}
+              >
+                ◝
+              </button>
+              <span className="theme-legend">Sistem · Açık · Koyu</span>
+            </div>
+            <a href="/login.html" className="eq-hdr-account" title="Üye girişi">
+              <span style={{ fontSize: 10, color: "var(--eq-text-muted)" }}>Hesabım</span>
+              <span
+                className="eq-hdr-account-title"
+                style={{ fontSize: 12, fontWeight: 600, color: "var(--eq-text)" }}
+              >
+                Projeler ve Listeler ▾
+              </span>
+            </a>
+            <div data-eq-hdr-returns="1" style={{ display: "flex", flexDirection: "column", lineHeight: 1.4 }}>
+              <span style={{ fontSize: 10, color: "var(--eq-text-muted)" }}>İadeler</span>
+              <span style={{ fontSize: 12, fontWeight: 600, cursor: "pointer", color: "var(--eq-text)" }}>
+                ve Siparişler
+              </span>
+            </div>
             <div
               id="equsto-hdr-cart"
               className="equsto-hdr-cart"
               style={{ display: "flex", flexDirection: "column", lineHeight: 1.4, cursor: "pointer" }}
-              title="Sepet sayfası"
+              title="Sepeti aç"
               role="button"
               tabIndex={0}
-              onClick={goEqCart}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") {
-                  e.preventDefault();
-                  goEqCart();
-                }
-              }}
             >
               <span id="equsto-cart-count" style={{ fontSize: 10, color: "var(--eq-text-muted)" }}>
                 🛒 0
               </span>
-              <span style={{ fontSize: 12, fontWeight: 600 }}>Alışveriş Sepeti</span>
+              <span style={{ fontSize: 12, fontWeight: 600, color: "var(--eq-text)" }}>
+                Alışveriş Sepeti
+              </span>
             </div>
           </div>
         </div>
@@ -101,21 +140,53 @@ export default function BesosEqustoChrome() {
 
       <nav className="topnav" aria-label="Departmanlar">
         <div className="pg-inner topnav-inner">
-          <div className="topnav-item topnav-pfos" role="button" tabIndex={0} onClick={() => goEqDept("pfos")}>
-            Proje Fabrikası
+          <div
+            className="topnav-item"
+            role="button"
+            tabIndex={0}
+            onClick={toggleEqDrawer}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                toggleEqDrawer();
+              }
+            }}
+          >
+            ☰ Tüm kategoriler
           </div>
           <span className="topnav-sep" aria-hidden="true">
             |
           </span>
-          <div className="topnav-item" role="button" tabIndex={0} onClick={() => goEqDept("pisirme")}>
-            Pişirme
+          <div
+            className="topnav-item topnav-pfos"
+            role="button"
+            tabIndex={0}
+            onClick={() => goEqDept("pfos")}
+            aria-label="Proje Fabrikası"
+          >
+            <span className="topnav-pfos__in" aria-hidden="true">
+              <span className="topnav-pfos__face topnav-pfos__face--plain">Proje Fabrikası</span>
+              <span className="topnav-pfos__face topnav-pfos__face--dark">Proje Fabrikası</span>
+            </span>
           </div>
           <span className="topnav-sep" aria-hidden="true">
             |
           </span>
-          <div className="topnav-item" role="button" tabIndex={0} onClick={() => goEqDept("icecek")}>
-            İçecek
-          </div>
+          {DEPT_NAV.map(({ key, label }) => (
+            <Fragment key={key}>
+              <span className="topnav-sep" aria-hidden="true">
+                |
+              </span>
+              <div
+                className="topnav-item"
+                role="button"
+                tabIndex={0}
+                onClick={() => goEqDept(key)}
+              >
+                {label}
+              </div>
+            </Fragment>
+          ))}
           <span className="topnav-sep" aria-hidden="true">
             |
           </span>
@@ -124,6 +195,7 @@ export default function BesosEqustoChrome() {
             role="button"
             tabIndex={0}
             onClick={() => goEqDept("besos")}
+            aria-label="Bar Design"
             aria-current="page"
           >
             <span className="topnav-besos__in" aria-hidden="true">
