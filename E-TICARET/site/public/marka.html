@@ -88,123 +88,120 @@
 }
 </script>
 
-<link rel="stylesheet" href="/theme.css?v=20260530logo">
-<link rel="stylesheet" href="/eq-home-mutbex.css?v=20260520logohdr">
-<link rel="stylesheet" href="/contact.css?v=20260523wamin">
-<link rel="manifest" href="/assets/manifest-CtzHFPu3.json">
+<link rel="stylesheet" href="/theme.css?v=20260531marka6">
+<link rel="stylesheet" href="/eq-home-mutbex.css?v=20260531marka6">
 <link rel="icon" href="/images/favicon.svg?v=20260522natural" type="image/svg+xml">
-    <script  src="/theme.js?v=20260520logohdr"></script>
-    <script  src="/equsto-logo.js?v=20260519wordmark3"></script>
-    <script  src="/eq-i18n.js?v=20260520logohdr"></script>
-    <script  src="/eq-site-urls.js?v=20260528brand-redirect"></script>
-    <script>
-    /** ?b= / ?slug= ? an?nda vitrin URL (middleware 308 ile birlikte). */
-    (function () {
-      try {
-        var path = String(location.pathname || "");
-        if (/^\/shop\/marka\//i.test(path)) return;
-        var sp = new URLSearchParams(location.search || "");
-        var legacyB = (sp.get("b") || sp.get("slug") || "").trim();
-        if (!legacyB || typeof window.eqBrandPath !== "function") return;
-        var dest = window.eqBrandPath(legacyB);
-        if (!dest) return;
-        var cur = path + (location.search || "");
-        if (dest === cur) return;
-        location.replace(dest);
-      } catch (_) {}
-    })();
-    </script>
-    <script  src="/nav.js?v=20260531kuvetflat"></script>
-    <script  src="/equsto-member.js?v=20260522wa" defer></script>
-    <script  src="/contact.js?v=20260522wa" defer></script>
-    <script  src="/ecom-data.js"></script>
-    <script  src="/eq-display-terminology.js"></script>
-    <script  src="/eq-shop-catalog-bootstrap.js"></script>
-    <script  src="/eq-filter-column.js"></script>
-    <script  src="/eq-category-shell.js?v=20260520logohdr"></script>
-    <script  src="/eq-marka-hub.js?v=20260531marka4"></script>
-
-  <style>
-    *{box-sizing:border-box;margin:0;padding:0;}
-    html{height:100%;}body{min-height:100%;overflow-y:auto;}
-    body{background:var(--eq-bg-page);font-family:-apple-system,sans-serif;color:var(--eq-text);}
-    .pg{width:1500px;max-width:100%;margin:0 auto;font-size:13px;background:var(--eq-surface);}
-    .pg-inner{width:1500px;max-width:100%;margin:0 auto;padding:0 20px;}
-    .hdr{display:flex;align-items:center;width:100%;background:var(--eq-surface);border-bottom:1px solid var(--eq-border);position:sticky;top:0;z-index:100;}
-    .srch{width:50%;max-width:50%;flex:none;display:flex;align-items:center;gap:0;border:1px solid var(--eq-border);}
-    .srch-cat{padding:5px 10px;font-size:11px;font-weight:500;color:var(--eq-text-secondary);border-right:1px solid var(--eq-border);cursor:pointer;white-space:nowrap;user-select:none;background:var(--eq-surface-2);}
-    .srch-cat:hover{background:var(--eq-hover);}
-    .srch-input{flex:1;font-size:12px;color:var(--eq-text-muted);padding:5px 10px;border:none;outline:none;background:transparent;}
-    .srch-btn{font-size:11px;font-weight:500;padding:5px 10px;border-left:1px solid var(--eq-border);background:var(--eq-surface);color:var(--eq-text);cursor:pointer;white-space:nowrap;}
-    .hdr-right{display:flex;align-items:center;gap:12px;font-size:12px;white-space:nowrap;}
-    .hdr-alici{display:flex;flex-direction:column;gap:1px;padding:0 10px;border-right:1px solid var(--eq-border);white-space:nowrap;}
-    .breadcrumb{padding:10px 20px;font-size:11px;color:var(--eq-text-muted);border-bottom:1px solid var(--eq-border);background:var(--eq-surface);}
-    .breadcrumb a{color:var(--eq-text-muted);cursor:pointer;text-decoration:none;}
-    .breadcrumb a:hover{text-decoration:underline;}
-    .breadcrumb span{color:var(--eq-text);font-weight:500;}
-    .body{display:flex;background:var(--eq-surface);position:relative;}
-    .right-col{flex:1;min-width:0;display:flex;flex-direction:column;background:var(--eq-surface);}
-    .footer{border-top:1px solid var(--eq-border);padding:12px 16px;font-size:11px;color:var(--eq-text-muted);display:flex;justify-content:space-between;align-items:center;background:var(--eq-surface);}
-    .refs{display:flex;gap:12px;flex-wrap:wrap;}
-  </style>
-<style id="eq-contact-guard-20260520logohdr">#equsto-contact-fab,.equsto-contact-fab:not(#eq-bottom-tabbar *){position:fixed;right:16px;bottom:16px;z-index:9999;width:auto;height:auto;max-width:80px;max-height:80px;align-items:flex-end;flex-direction:column;gap:10px;pointer-events:none;box-sizing:border-box}#equsto-contact-fab .equsto-contact-wa-fab:not(.equsto-contact-wa-fab--tabbar),.equsto-contact-fab:not(#eq-bottom-tabbar *) .equsto-contact-wa-fab:not(.equsto-contact-wa-fab--tabbar){pointer-events:auto;flex:0 0 auto;max-width:64px;max-height:64px;overflow:hidden}#equsto-contact-fab img,.equsto-contact-fab:not(#eq-bottom-tabbar *) .equsto-contact-wa-fab:not(.equsto-contact-wa-fab--tabbar) img{width:62px!important;height:62px!important;max-width:62px!important;max-height:62px!important;display:block;object-fit:cover}.equsto-wa-overlay:not(.equsto-wa-overlay--open){display:none!important;pointer-events:none!important}.equsto-wa-ico svg,.equsto-wa-ico-svg{width:22px;height:22px;max-width:22px;max-height:22px;display:block}</style>
-<style id="eq-mobile-chrome-20260520logohdr">@media (max-width:768px){body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) nav.topnav,body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .topnav{display:none!important}#equsto-contact-fab,.equsto-contact-fab:not(#eq-bottom-tabbar *){display:none!important;pointer-events:none!important}body.eq-home #eq-home-catband{display:none!important}body.eq-shop.eq-dept aside.eq-filter-col,body.eq-shop.eq-dept #eq-filter-col{display:none!important}body:not(.admin-app):not(.eq-shop) header.hdr a.logo,body:not(.admin-app):not(.eq-shop) header.hdr>a.logo{display:none!important;visibility:hidden!important;width:0!important;height:0!important;overflow:hidden!important}body.eq-shop:not(.admin-app):not(.bd-page) header.hdr>a.logo{display:inline-flex!important;visibility:visible!important;width:auto!important;height:auto!important;max-width:31vw!important;overflow:visible!important;pointer-events:auto!important}body:not(.admin-app) header.hdr .srch-cat,body:not(.admin-app) header.hdr .cat-picker,body:not(.admin-app) header.hdr .cat-picker-btn{display:none!important;width:0!important;overflow:hidden!important}body:not(.admin-app) header.hdr .srch .srch-input{border-radius:8px 0 0 8px!important}}</style>
-<style id="eq-desktop-chrome-20260520logohdr">@media (min-width:769px){body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) nav.topnav,body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .topnav{display:flex!important;visibility:visible!important;pointer-events:auto!important}body:not(.admin-app) header.hdr a.logo{display:inline-flex!important;visibility:visible!important;width:auto!important;height:auto!important;overflow:visible!important}body:not(.admin-app) header.hdr .srch-cat,body:not(.admin-app) header.hdr .cat-picker,body:not(.admin-app) header.hdr .cat-picker-btn{display:flex!important;visibility:visible!important;width:auto!important;overflow:visible!important}body.eq-shop.eq-dept-plp .eq-dept-plp-aside{display:block!important;visibility:visible!important;transform:none!important}body.eq-shop.eq-dept-plp .eq-dept-plp-main{display:block!important;visibility:visible!important}body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right{display:flex!important;visibility:visible!important}body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) #equsto-contact-fab{display:flex!important;position:fixed!important;right:16px!important;bottom:16px!important;z-index:9999!important;width:auto!important;height:auto!important;max-width:80px!important;max-height:80px!important;align-items:flex-end!important;visibility:visible!important;pointer-events:none!important}body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) #equsto-contact-fab .equsto-contact-wa-fab{pointer-events:auto!important;flex:0 0 auto!important;max-width:64px!important;max-height:64px!important;overflow:hidden!important}body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) #equsto-contact-fab img{width:62px!important;height:62px!important;max-width:62px!important;max-height:62px!important;object-fit:cover!important}}</style><script id="eq-desktop-chrome-restore-20260520logohdr">(function(){var S='header.hdr a.logo,header.hdr .srch-cat,header.hdr .cat-picker,header.hdr .cat-picker-btn,nav.topnav,header+nav.topnav';function c(){if(matchMedia('(max-width:768px)').matches)return;document.querySelectorAll(S).forEach(function(el){['display','visibility','pointer-events','width','height','overflow'].forEach(function(p){el.style.removeProperty(p);});});}document.addEventListener('DOMContentLoaded',c);addEventListener('pageshow',c);addEventListener('resize',c);if(document.body)c();})();</script>
+<script src="/theme.js?v=20260531marka6"></script>
+<script src="/equsto-logo.js?v=20260519wordmark3"></script>
+<script src="/eq-i18n.js?v=20260521globalsearch"></script>
+<script src="/eq-site-urls.js?v=20260531marka6"></script>
+<script>
+(function () {
+  try {
+    var path = String(location.pathname || "");
+    if (/^\/shop\/marka\//i.test(path)) return;
+    var sp = new URLSearchParams(location.search || "");
+    var legacyB = (sp.get("b") || sp.get("slug") || "").trim();
+    if (!legacyB || typeof window.eqBrandPath !== "function") return;
+    var dest = window.eqBrandPath(legacyB);
+    if (!dest) return;
+    var cur = path + (location.search || "");
+    if (dest === cur) return;
+    location.replace(dest);
+  } catch (_) {}
+})();
+</script>
+<script src="/nav.js?v=20260531kuvetflat"></script>
+<script src="/ecom-data.js?v=20260531marka6"></script>
+<script src="/equsto-member.js?v=20260522wa" defer></script>
+<script src="/contact.js?v=20260522wa" defer></script>
+<script src="/eq-display-terminology.js"></script>
+<script src="/eq-shop-catalog-bootstrap.js"></script>
+<script src="/eq-filter-column.js"></script>
+<script src="/eq-category-shell.js?v=20260531marka6"></script>
+<script src="/eq-marka-hub.js?v=20260531marka6"></script>
+<style>
+/* Marka PLP (slug var) ? katalog kutusu */
+body.eq-shop.eq-marka-plp:not(.admin-app):not(.bd-page) .pg{
+  flex:0 1 auto;align-self:center;width:100%;max-width:1500px;margin-inline:auto;
+  font-size:13px;background:#fff!important;
+}
+body.eq-marka-plp .breadcrumb{padding:10px 20px;font-size:11px;color:var(--eq-text-muted);border-bottom:1px solid var(--eq-border);background:var(--eq-surface);}
+body.eq-marka-plp .breadcrumb a{color:var(--eq-text-muted);cursor:pointer;text-decoration:none;}
+body.eq-marka-plp .breadcrumb a:hover{text-decoration:underline;}
+body.eq-marka-plp .breadcrumb span{color:var(--eq-text);font-weight:500;}
+body.eq-marka-plp .body{display:flex;background:var(--eq-surface);position:relative;}
+body.eq-marka-plp .right-col{flex:1;min-width:0;display:flex;flex-direction:column;background:var(--eq-surface);}
+/* ?? ortaklar? hub ? SSS/ileti?im ile ayn? ak??, ayr? kutu yok */
+body.eq-shop.eq-marka-hub:not(.admin-app):not(.bd-page) .pg{
+  flex:1 1 auto!important;align-self:stretch!important;width:100%!important;max-width:none!important;
+  margin:0!important;background:transparent!important;box-shadow:none!important;
+}
+body.eq-shop.eq-marka-hub:not(.admin-app):not(.bd-page) .pg>.body,
+body.eq-shop.eq-marka-hub:not(.admin-app):not(.bd-page) .pg .right-col{
+  width:100%!important;background:transparent!important;
+}
+body.eq-marka-hub .breadcrumb{display:none!important;}
+body.eq-marka-hub #eq-filter-col{display:none!important;}
+</style>
+<style id="eq-mobile-chrome-marka">@media (max-width:768px){body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) nav.topnav,body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .topnav{display:none!important}body.eq-shop:not(.admin-app):not(.bd-page) header.hdr>a.logo{display:inline-flex!important;visibility:visible!important;width:auto!important;height:auto!important;max-width:31vw!important;overflow:visible!important;pointer-events:auto!important}body:not(.admin-app) header.hdr .srch-cat,body:not(.admin-app) header.hdr .cat-picker,body:not(.admin-app) header.hdr .cat-picker-btn{display:none!important;width:0!important;overflow:hidden!important}body:not(.admin-app) header.hdr .srch .srch-input{border-radius:8px 0 0 8px!important}}</style>
+<style id="eq-desktop-chrome-marka">@media (min-width:769px){body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) nav.topnav,body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .topnav{display:flex!important;visibility:visible!important;pointer-events:auto!important}body:not(.admin-app) header.hdr a.logo{display:inline-flex!important;visibility:visible!important;width:auto!important;height:auto!important;overflow:visible!important}body:not(.admin-app) header.hdr .srch-cat,body:not(.admin-app) header.hdr .cat-picker,body:not(.admin-app) header.hdr .cat-picker-btn{display:flex!important;visibility:visible!important;width:auto!important;overflow:visible!important}body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right{display:flex!important;visibility:visible!important}}</style>
 </head>
-<body class="eq-shop">
+<body class="eq-shop eq-marka">
+<script>(function(){try{var p=String(location.pathname||"");if(/^\/shop\/marka\/[^/?#]+/i.test(p))document.body.classList.add("eq-marka-plp");else document.body.classList.add("eq-marka-hub");}catch(_){}})();</script>
   <header class="hdr">
     <a class="logo" href="/" aria-label="Equsto"></a>
     <div class="pg-inner hdr-pg-inner" style="display:flex;align-items:center;gap:10px;flex:1;min-width:0;padding:10px 20px 10px 0;">
       <div class="hdr-alici">
-        <div style="font-size:9px;color:var(--eq-text-subtle);">Teslimat Adresi</div>
-        <div style="font-size:11px;font-weight:600;color:var(--eq-drawer-head-text);">İstanbul, Türkiye</div>
+        <div style="font-size:9px;color:var(--eq-text-subtle);" data-i18n="common.delivery_to">Teslimat Adresi</div>
+        <div style="font-size:11px;font-weight:600;color:var(--eq-drawer-head-text);" data-i18n="common.delivery_city">?stanbul, T?rkiye</div>
       </div>
       <div class="srch">
-        <div class="srch-cat" onclick="toggleDrawer()">☰ Tüm Kategoriler</div>
-        <input class="srch-input" type="text" placeholder="Ürün, marka veya kategori ara..." oninput="searchFilter(this.value)">
-        <button type="button" class="srch-btn" aria-label="Ara" title="Ara"><svg xmlns="http://www.w3.org/2000/svg" class="eq-srch-ico" width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.25" stroke="currentColor" stroke-width="1.35"/><line x1="12.35" y1="12.35" x2="17.85" y2="12.35" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/></svg></button>
+        <div class="srch-cat" onclick="toggleDrawer()" data-i18n="common.all_categories_caps">? T?m Kategoriler</div>
+        <input class="srch-input" type="search" placeholder="?r?n, marka veya kategori ara?" autocomplete="off" data-i18n-attr="placeholder:common.search_placeholder">
+        <button type="button" class="srch-btn" aria-label="Ara" title="Ara" data-i18n-attr="aria-label:common.search_aria, title:common.search_aria"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.25" stroke="currentColor" stroke-width="1.35"/><line x1="12.35" y1="12.35" x2="17.85" y2="12.35" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/></svg></button>
       </div>
       <div class="hdr-right">
       <div class="theme-wrap">
-        <button type="button" class="theme-toggle" id="theme-toggle" onclick="equstoCycleTheme()" title="Tema">◐</button>
-        <span class="theme-legend">Sistem · Açık · Koyu</span>
+        <button type="button" class="theme-toggle" id="theme-toggle" onclick="equstoCycleTheme()" title="Tema" data-i18n-attr="title:common.theme_title">?</button>
+        <span class="theme-legend" data-i18n="common.theme_label">Sistem ? A??k ? Koyu</span>
       </div>
 
-        <a href="/login.html" class="eq-hdr-account" title="Üye girişi">
-          <span style="font-size:10px;color:var(--eq-text-muted);">Hesabım</span>
-          <span class="eq-hdr-account-title" style="font-size:12px;font-weight:600;">Projeler ve Listeler ▾</span>
+        <a href="/login.html" class="eq-hdr-account" title="?ye giri?i" data-i18n-attr="title:common.login_title">
+          <span style="font-size:10px;color:var(--eq-text-muted);" data-i18n="common.my_account">Hesab?m</span>
+          <span class="eq-hdr-account-title" style="font-size:12px;font-weight:600;" data-i18n="common.account_projects">Projeler ve Listeler ?</span>
         </a>
         <div style="display:flex;flex-direction:column;line-height:1.4;">
-          <span style="font-size:10px;color:var(--eq-text-muted);">İadeler</span>
-          <span style="font-size:12px;font-weight:600;cursor:pointer;">ve Siparişler</span>
+          <span style="font-size:10px;color:var(--eq-text-muted);" data-i18n="common.returns">?adeler</span>
+          <span style="font-size:12px;font-weight:600;cursor:pointer;" data-i18n="common.and_orders">ve Sipari?ler</span>
         </div>
-        <div style="display:flex;flex-direction:column;line-height:1.4;cursor:pointer;">
-          <span style="font-size:10px;color:var(--eq-text-muted);">🛒 0</span>
-          <span style="font-size:12px;font-weight:600;">Alışveriş Sepeti</span>
+        <div id="equsto-hdr-cart" class="equsto-hdr-cart" style="display:flex;flex-direction:column;line-height:1.4;cursor:pointer;" title="Sepeti a?" role="button" tabindex="0">
+          <span id="equsto-cart-count" style="font-size:10px;color:var(--eq-text-muted);">?? 0</span>
+          <span style="font-size:12px;font-weight:600;" data-i18n="common.cart">Al??veri? Sepeti</span>
         </div>
       </div>
     </div>
   </header>
 
-  <nav class="topnav" aria-label="Departmanlar">
+  <nav class="topnav" aria-label="Departmanlar" data-i18n-attr="aria-label:nav.departments_aria">
     <div class="pg-inner topnav-inner">
-      <div class="topnav-item topnav-all" onclick="toggleDrawer()">☰ Tüm kategoriler</div>
+      <div class="topnav-item topnav-all" onclick="toggleDrawer()" data-i18n="common.all_categories_lower">? T?m kategoriler</div>
       <span class="topnav-sep" aria-hidden="true">|</span>
-      <div class="topnav-item topnav-pfos" onclick="eqGo('pfos')" data-i18n-attr="aria-label:nav.pfos"><span class="topnav-pfos__in" aria-hidden="true"><span class="topnav-pfos__face topnav-pfos__face--plain" data-i18n="nav.pfos">Proje Fabrikası</span><span class="topnav-pfos__face topnav-pfos__face--dark" data-i18n="nav.pfos_hover">Proje Fabrikası</span></span></div>
+      <div class="topnav-item topnav-pfos" onclick="eqGo('pfos')" data-i18n="nav.pfos">Proje Fabrikas?</div>
       <span class="topnav-sep" aria-hidden="true">|</span>
-      <div class="topnav-item" onclick="typeof eqGo==='function'?eqGo('pisirme'):location.href='/pisirme.html'">Pişirme Ekipmanları</div>
+      <div class="topnav-item" onclick="eqGo('pisirme')" data-i18n="nav.pisirme">Pi?irme Ekipmanlar?</div>
       <span class="topnav-sep" aria-hidden="true">|</span>
-      <div class="topnav-item" onclick="typeof eqGo==='function'?eqGo('sogutma'):location.href='/sogutma.html'">Soğutma Ekipmanları</div>
+      <div class="topnav-item" onclick="eqGo('sogutma')" data-i18n="nav.sogutma">So?utma Ekipmanlar?</div>
       <span class="topnav-sep" aria-hidden="true">|</span>
-      <div class="topnav-item" onclick="typeof eqGo==='function'?eqGo('kahve'):location.href='/kahve.html'">Kahve Ekipmanları</div>
+      <div class="topnav-item" onclick="eqGo('kahve')" data-i18n="nav.kahve">Kahve Ekipmanlar?</div>
       <span class="topnav-sep" aria-hidden="true">|</span>
-      <div class="topnav-item" onclick="typeof eqGo==='function'?eqGo('yikama'):location.href='/yikama.html'">Yıkama Ekipmanları</div>
+      <div class="topnav-item" onclick="eqGo('yikama')" data-i18n="nav.yikama">Y?kama Ekipmanlar?</div>
       <span class="topnav-sep" aria-hidden="true">|</span>
-      <div class="topnav-item" onclick="typeof eqGo==='function'?eqGo('hazirlik'):location.href='/hazirlik.html'">Hazırlık Ekipmanları</div>
+      <div class="topnav-item" onclick="eqGo('hazirlik')" data-i18n="nav.hazirlik">Haz?rl?k Ekipmanlar?</div>
       <span class="topnav-sep" aria-hidden="true">|</span>
-      <div class="topnav-item" onclick="typeof eqGo==='function'?eqGo('icecek'):location.href='/icecek.html'">İçecek Ekipmanları</div>
+      <div class="topnav-item" onclick="eqGo('icecek')" data-i18n="nav.icecek">??ecek Ekipmanlar?</div>
       <span class="topnav-sep" aria-hidden="true">|</span>
-      <div class="topnav-item topnav-besos" onclick="eqGo('besos')" data-i18n-attr="aria-label:nav.bar_design"><span class="topnav-besos__in" aria-hidden="true"><span class="topnav-besos__face topnav-besos__face--plain" data-i18n="nav.bar_design">Bar Design</span><span class="topnav-besos__face topnav-besos__face--dark" data-i18n="nav.bar_design_hover">Dark Side</span></span></div>
+      <div class="topnav-item topnav-besos" onclick="eqGo('besos')" data-i18n="nav.bar_design">Bar Design</div>
     </div>
   </nav>
 
@@ -225,11 +222,10 @@
         <div id="eq-cat-shell" data-cat="marka"></div>
       </div>
     </div>
-
-    <footer class="footer" id="eq-shop-footer"></footer>
   </div>
 
-  <script src="/eq-footer.js?v=20260531marka2"></script>
+<footer class="footer" id="eq-shop-footer"></footer>
+<script src="/eq-footer.js?v=20260531marka6"></script>
   <script  src="/eq-auth-api.js"></script>
 <script  src="/equsto-auth-client.js?v=20260520logohdr" defer></script>
 <script  defer src="/ecom-cart.js?v=20260524cart3"></script>
@@ -243,7 +239,7 @@
       'tost-makineleri': 'Tost Makineleri',
       'pilic-cevirme-makineleri': 'Pili? ?evirme',
       'ocakbasi-izgara': 'Ocakba?? Izgaralar',
-      'sogutma-ekipmanlari': 'Soğutma Ekipmanları',
+      'sogutma-ekipmanlari': 'So?utma Ekipmanlar?',
       'kahve-makineleri': 'Kahve Makineleri',
       'bulasik-makineleri': 'Bula??k Makineleri',
       'hamur-hazirlik-makineleri': 'Hamur Haz?rl?k',
@@ -282,13 +278,14 @@
 
       if (!slug && !brand) {
         document.body.classList.add("eq-marka-hub");
-        if (crumb) crumb.textContent = "Markalar\u0131m\u0131z";
-        document.title = "Markalar\u0131m\u0131z \u00b7 Equsto";
+        document.title = (typeof window.eqT === "function" ? window.eqT("page.marka_h1", "?? ortaklar?m?z") : "?? ortaklar?m?z") + " ? Equsto";
         if (window.EqMarkaHub && typeof window.EqMarkaHub.mount === "function") {
           window.EqMarkaHub.mount(document.getElementById("eq-cat-shell"));
         }
         return;
       }
+
+      document.body.classList.add("eq-marka-plp");
 
       var loadAll =
         window.EqustoShopCatalog && typeof window.EqustoShopCatalog.loadMergedCatalog === 'function'
@@ -335,7 +332,7 @@
   </script>
 
 <div class="drawer-overlay" id="drawerOverlay" onclick="__eqDrawerBackdropClick(event)">
-  <button type="button" class="drawer-overlay-close" onclick="__eqDrawerCloseX(event)" aria-label="Kapat">×</button>
+  <button type="button" class="drawer-overlay-close" onclick="__eqDrawerCloseX(event)" aria-label="Kapat" data-i18n-attr="aria-label:common.close">?</button>
 </div>
 <div class="cat-drawer eq-amazon-shop-all" id="catDrawer" aria-hidden="true"></div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"2800f8a675244419a90a426a1a3e6854","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
