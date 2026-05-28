@@ -265,6 +265,24 @@
     "robot-coupe": "Robot Coupe",
   };
 
+  /**
+   * Popüler marka → departman vitrini (?marka=facet) veya tüm katalog (/shop/marka/slug).
+   * facet: sol sütun Marka filtresindeki etiket (EqDeptCmFacets ile aynı).
+   */
+  var EQ_BRAND_SHOP_TARGET = {
+    atalay: { dept: "pisirme", facet: "Atalay" },
+    oztiryakiler: { markaHub: true },
+    electrolux: { dept: "pisirme", facet: "Electrolux" },
+    inoksan: { dept: "sogutma", facet: "İnoksan" },
+    "la-cimbali": { dept: "kahve", facet: "La Cimbali" },
+    faema: { dept: "kahve", facet: "Faema" },
+    rational: { dept: "pisirme", facet: "Rational" },
+    empero: { dept: "yikama", facet: "Empero" },
+    samixir: { dept: "hazirlik", facet: "Samixir" },
+    gtech: { dept: "hazirlik", facet: "Gtech" },
+    "robot-coupe": { dept: "hazirlik", facet: "Robot Coupe" },
+  };
+
   function brandSlugify(name) {
     return String(name || "")
       .toLocaleLowerCase("tr")
@@ -310,6 +328,24 @@
     }
   };
 
+  window.eqBrandFacetLabel = function (slugOrBrand) {
+    var raw = String(slugOrBrand || "").trim();
+    if (!raw) return "";
+    var slug = raw;
+    if (/\s/.test(raw) || /[ğüşıöçĞÜŞİÖÇ]/.test(raw)) slug = window.eqBrandSlug(raw);
+    slug = String(slug || "")
+      .toLowerCase()
+      .replace(/[^a-z0-9-]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+    var t = EQ_BRAND_SHOP_TARGET[slug];
+    if (t && t.facet) return t.facet;
+    if (slug === "oztiryakiler" || slug === "atalay") {
+      if (slug === "oztiryakiler") return "Öztiryakiler";
+      if (slug === "atalay") return "Atalay";
+    }
+    return raw;
+  };
+
   window.eqBrandPath = function (slugOrBrand) {
     var slug = String(slugOrBrand || "").trim();
     if (!slug) return withLang("/shop/marka", "shop");
@@ -319,6 +355,14 @@
       .toLowerCase()
       .replace(/[^a-z0-9-]+/g, "-")
       .replace(/^-+|-+$/g, "");
+    var t = EQ_BRAND_SHOP_TARGET[slug];
+    if (t && t.markaHub) return withLang("/shop/marka/" + encodeURIComponent(slug), "shop");
+    if (t && t.dept && t.facet) {
+      return withLang(
+        "/shop/" + encodeURIComponent(t.dept) + "?marka=" + encodeURIComponent(t.facet),
+        "shop"
+      );
+    }
     return withLang("/shop/marka/" + encodeURIComponent(slug), "shop");
   };
 
