@@ -25,7 +25,7 @@ export const blogHubTr =
   "<p>PFOS taslak listesi satış mühendisliği onayı ve saha keşfi sonrası kesinleşir; montaj, devreye alma ve garanti kaydı aynı proje numarası altında yürütülür. Equsto B2B endüstriyel mutfak tedarik platformu 2026 güncel fiyatlarıyla teklif üretir.</p>";
 
 export const blogHubEn = normalizeGeoEnBody(
-  "This index separates blog and GEO guides from the equipment shop menu. Equipment buyers stay in the catalogue; concept and quote questions are answered on these pages. Each guide includes FAQs and sample SKU tables where relevant. Concept setups, SEO landings, editorials and reference projects are grouped in sections below; footer, sitemap and llms.txt link every guide. Use Project Factory for quote summaries in about five minutes; sales engineering confirms pricing and installation."
+  "This index separates guides and GEO content from the equipment shop menu. Shoppers stay in the catalogue; concept and quote questions are answered here. Pages include FAQs and sample SKU tables where relevant. Concept setups, SEO landings, editorials and reference projects are grouped below; footer, sitemap and llms.txt link every guide. Use Project Factory for quote summaries in about five minutes."
 );
 
 const faqTr = [
@@ -101,8 +101,8 @@ function patchGeoLandingJs() {
     src = src.replace(reEnBody, `$1${escJsString(blogHubEn)}$2`);
   }
 
-  src = src.replace(/var DATA_FALLBACK = "\/data\/geo-landings\.json\?v=[^"]+";/, 'var DATA_FALLBACK = "/data/geo-landings.json?v=20260529en600";');
-  src = src.replace(/var DATA_EN_FALLBACK = "\/data\/geo-landings-en\.json\?v=[^"]+";/, 'var DATA_EN_FALLBACK = "/data/geo-landings-en.json?v=20260529en600";');
+  src = src.replace(/var DATA_FALLBACK = "\/data\/geo-landings\.json\?v=[^"]+";/, 'var DATA_FALLBACK = "/data/geo-landings.json?v=20260602en650";');
+  src = src.replace(/var DATA_EN_FALLBACK = "\/data\/geo-landings-en\.json\?v=[^"]+";/, 'var DATA_EN_FALLBACK = "/data/geo-landings-en.json?v=20260602en650";');
 
   fs.writeFileSync(p, src, "utf8");
   console.log("patched public/eq-geo-landing.js");
@@ -131,7 +131,7 @@ patchGeoLandingJs();
 const geoHtml = path.join(root, "public/geo-landing.html");
 if (fs.existsSync(geoHtml)) {
   let html = fs.readFileSync(geoHtml, "utf8");
-  html = html.replace(/eq-geo-landing\.js\?v=[^"]+/, "eq-geo-landing.js?v=20260529bloghub2");
+  html = html.replace(/eq-geo-landing\.js\?v=[^"]+/, "eq-geo-landing.js?v=20260602en650");
   fs.writeFileSync(geoHtml, html);
   console.log("patched public/geo-landing.html cache bust");
 }
