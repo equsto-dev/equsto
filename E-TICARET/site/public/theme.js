@@ -489,7 +489,7 @@
       !b.classList.contains("bd-page");
     if (shopHdr && !document.querySelector('script[src*="eq-shop-header"]')) {
       var hdrJs = document.createElement("script");
-      hdrJs.src = "/eq-shop-header.js?v=20260526hdr";
+      hdrJs.src = "/eq-shop-header.js?v=20260528hdr";
       hdrJs.defer = true;
       document.head.appendChild(hdrJs);
     }
