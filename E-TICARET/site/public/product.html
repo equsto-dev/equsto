@@ -166,16 +166,6 @@
       box-shadow:0 8px 40px rgba(0,0,0,.55);
     }
 
-    /* Çağlayan: varyanta özel kesit / ölçü çizimi */
-    body.eq-shop .eq-caglayan-teknik{margin-top:20px;padding:18px 0 4px;border-top:1px solid var(--eq-border-soft);}
-    body.eq-shop .eq-caglayan-teknik h2{font-size:17px;font-weight:700;margin:0 0 6px;color:var(--eq-text);}
-    body.eq-shop .eq-caglayan-teknik-cap{font-size:12.5px;color:var(--eq-text-muted);margin:0 0 12px;}
-    body.eq-shop .eq-caglayan-teknik-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;}
-    body.eq-shop .eq-caglayan-teknik-card{margin:0;}
-    body.eq-shop .eq-caglayan-teknik-frame{background:#1a2332;border-radius:8px;padding:10px;min-height:200px;display:flex;align-items:center;justify-content:center;}
-    body.eq-shop .eq-caglayan-teknik-frame img{max-width:100%;max-height:280px;object-fit:contain;}
-    body.eq-shop .eq-caglayan-teknik-card figcaption{font-size:11px;color:var(--eq-text-muted);margin-top:6px;text-align:center;}
-
     /* Orta kolon: marka linki, başlık, rating, bullet liste */
     body.eq-shop .eq-product-info{padding:0 6px 0 4px;}
     body.eq-shop .eq-product-cat{display:none;}
@@ -499,7 +489,7 @@
       );
     }
 
-    /** Çağlayan PDP sol şerit — ürün + PLG/aksesuar; kesit ve ölçü çizimi hariç. */
+    /** Çağlayan PDP sol şerit — ürün fotoğrafları (kesit/ölçü ayrı eklenir). */
     var CAGLAYAN_PDP_THUMB_MAX = 9;
 
     function isCaglayanPdpThumbImg(relOrUrl) {
@@ -541,50 +531,6 @@
       return out.slice(0, 2);
     }
 
-    function renderCaglayanTeknikBlock(x) {
-      var items = getCaglayanTeknikImgs(x);
-      if (!items.length) return "";
-      var o = x.olculer || {};
-      var cap = "";
-      if (o.genislik_mm && o.yukseklik_mm) {
-        cap =
-          o.derinlik_mm > 0
-            ? o.genislik_mm + "×" + o.derinlik_mm + "×" + o.yukseklik_mm + " mm"
-            : o.genislik_mm + "×" + o.yukseklik_mm + " mm";
-        cap = "Seçili ölçü: " + cap;
-      }
-      var cards = items
-        .map(function (item) {
-          var src = resolveProductImgSrc(item.rel);
-          if (!src) return "";
-          var title = item.role === "kesit" ? "Detay kesit" : "Ölçü çizimi";
-          return (
-            '<figure class="eq-caglayan-teknik-card">' +
-            '<div class="eq-caglayan-teknik-frame">' +
-            '<img class="eq-product-hero-img eq-product-hero-img--lineart" src="' +
-            esc(eqHtmlUrl(src)) +
-            '"' +
-            pdpImgFailAttr() +
-            pdpImgDataAttrs(x, item.rel) +
-            ' alt="' +
-            esc(title) +
-            '" loading="lazy" decoding="async">' +
-            "</div><figcaption>" +
-            esc(title) +
-            "</figcaption></figure>"
-          );
-        })
-        .join("");
-      return (
-        '<section class="eq-caglayan-teknik" aria-label="Teknik çizim">' +
-        "<h2>Teknik kesit ve ölçü</h2>" +
-        (cap ? '<p class="eq-caglayan-teknik-cap">' + esc(cap) + "</p>" : "") +
-        '<div class="eq-caglayan-teknik-grid">' +
-        cards +
-        "</div></section>"
-      );
-    }
-
     function applyLineArtHeroState(mainImg, wrap, lineart) {
       if (mainImg) mainImg.classList.toggle("eq-product-hero-img--lineart", !!lineart);
       if (wrap) wrap.classList.toggle("eq-product-hero-wrap--lineart", !!lineart);
@@ -604,6 +550,40 @@
         rels = rels.slice(0, MARKET_REYON_GALLERY_MAX);
       }
       var out = [];
+      if (isCaglayanRefrigeration(x)) {
+        var productRels = [];
+        var teknikRels = [];
+        var teknikSeen = Object.create(null);
+        rels.forEach(function (rel) {
+          if (isCaglayanPdpThumbImg(rel)) productRels.push(rel);
+          else if (isLineArtProductImg(rel)) {
+            var k = String(rel).toLowerCase();
+            if (!teknikSeen[k]) {
+              teknikSeen[k] = 1;
+              teknikRels.push(rel);
+            }
+          }
+        });
+        getCaglayanTeknikImgs(x).forEach(function (item) {
+          if (!item.rel) return;
+          var k = String(item.rel).toLowerCase();
+          if (teknikSeen[k]) return;
+          teknikSeen[k] = 1;
+          teknikRels.push(item.rel);
+        });
+        var productMax = Math.max(1, CAGLAYAN_PDP_THUMB_MAX - teknikRels.length);
+        if (productRels.length > productMax) productRels = productRels.slice(0, productMax);
+        productRels.concat(teknikRels).forEach(function (rel) {
+          var src = resolveProductImgSrc(rel);
+          if (!src) return;
+          out.push({
+            src: src,
+            rel: rel,
+            lineart: isLineArtProductImg(rel) || isLineArtProductImg(src),
+          });
+        });
+        return out;
+      }
       rels.forEach(function (rel) {
         var src = resolveProductImgSrc(rel);
         if (src)
@@ -613,12 +593,6 @@
             lineart: isLineArtProductImg(rel) || isLineArtProductImg(src),
           });
       });
-      if (isCaglayanRefrigeration(x)) {
-        out = out.filter(function (item) {
-          return isCaglayanPdpThumbImg(item.rel) || isCaglayanPdpThumbImg(item.src);
-        });
-        if (out.length > CAGLAYAN_PDP_THUMB_MAX) out = out.slice(0, CAGLAYAN_PDP_THUMB_MAX);
-      }
       return out;
     }
 
@@ -1789,7 +1763,6 @@
         '<div class="eq-buybox-secure">🔒 Güvenli işlem</div>' +
         "</aside>" +
         "</div>" +
-        renderCaglayanTeknikBlock(x) +
         (function(){
           var sp = splitSpecsCols(x.specs);
           if (sp.right) {
