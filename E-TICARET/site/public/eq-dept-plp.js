@@ -5,7 +5,7 @@
   'use strict';
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260530marka-facet1';
+  var CATALOG_V = '20260530cafemarkt-plp1';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   var deptCoverImg = '';
 
@@ -110,20 +110,88 @@
     return '';
   }
 
-  /** PLP kart alt satırı — olculer (mm veya cm). */
-  function formatOlculerLine(raw) {
-    if (!raw || !raw.olculer) return '';
-    var o = raw.olculer;
-    var g = Number(o.genislik_mm);
-    var d = Number(o.derinlik_mm);
-    var y = Number(o.yukseklik_mm);
+  function dimLabelFromMm(g, d, y) {
     if (!g || !d || !y) return '';
-    var name = String(raw.name || '');
-    if (/×\d/.test(name)) return '';
     if (g >= 1000 && d >= 1000) {
       return Math.round(g / 10) + '×' + Math.round(d / 10) + '×' + Math.round(y / 10) + ' cm';
     }
     return g + '×' + d + '×' + y + ' mm';
+  }
+
+  /** Öztiryakiler soğuk/derin dondurucu oda (7919.CR / 7919.DF) — PDF ölçü istisnaları. */
+  var OZTI_PANEL_DIMS_MM = {
+    '7919.CR1517.00': [1500, 1750, 2400],
+    '7919.CR2022.00': [2000, 2250, 2400],
+    '7919.CR2517.00': [2500, 1750, 2400],
+    '7919.CR3017.00': [3000, 1750, 2400],
+    '7919.DF1517.00': [1500, 1750, 2400],
+    '7919.DF2015.00': [2500, 1500, 2400],
+    '7919.DF2020.00': [2000, 2250, 2400],
+    '7919.DF2022.00': [2000, 2000, 2400],
+    '7919.DF2517.00': [2500, 1750, 2400],
+    '7919.DF3017.00': [3000, 1750, 2400],
+  };
+
+  function oztiPanelDimsFromSku(sku) {
+    var k = String(sku || '')
+      .trim()
+      .toUpperCase();
+    if (!k) return null;
+    if (OZTI_PANEL_DIMS_MM[k]) return OZTI_PANEL_DIMS_MM[k];
+    var m = k.match(/^7919\.(DF|CR)(\d{2})(\d{2})\.00$/);
+    if (!m) return null;
+    return [Number(m[2]) * 100, Number(m[3]) * 100, 2400];
+  }
+
+  function parseDimsFromName(name) {
+    var s = String(name || '');
+    var mCm = s.match(/(\d{2,4})\s*[xX×]\s*(\d{2,4})\s*[xX×]\s*(\d{2,4})\s*cm\b/i);
+    if (mCm) {
+      return dimLabelFromMm(+mCm[1] * 10, +mCm[2] * 10, +mCm[3] * 10);
+    }
+    var mMm = s.match(/(\d{2,4})\s*[xX×]\s*(\d{2,4})\s*[xX×]\s*(\d{2,4})\s*mm\.?/i);
+    if (mMm) {
+      return dimLabelFromMm(+mMm[1], +mMm[2], +mMm[3]);
+    }
+    return '';
+  }
+
+  /** PLP kart alt satırı — olculer, ürün adı veya Öztiryakiler oda kodu. */
+  function formatOlculerLine(raw) {
+    if (!raw) return '';
+    var o = raw.olculer;
+    if (o) {
+      var g = Number(o.genislik_mm);
+      var d = Number(o.derinlik_mm);
+      var y = Number(o.yukseklik_mm);
+      if (g && d && y) {
+        var nameHasDim = /[xX×]\s*\d/.test(String(raw.name || ''));
+        if (!nameHasDim) return dimLabelFromMm(g, d, y);
+      }
+    }
+    var fromName = parseDimsFromName(raw.name);
+    if (fromName) return fromName;
+    var panel = oztiPanelDimsFromSku(raw.sku || raw.model || raw.urun_kodu);
+    if (panel) return dimLabelFromMm(panel[0], panel[1], panel[2]);
+    return '';
+  }
+
+  /** Fiyat altı kısa açıklama (liste / KDV). */
+  function formatPriceNote(raw) {
+    if (!raw) return '';
+    if (Number(raw.fiyat_bekleniyor) === 1 || /teklif/i.test(String(raw.price || ''))) {
+      return 'Teklif için iletişim';
+    }
+    var price = String(raw.price || '');
+    if (isOztiRow(raw) && Number(raw.liste_fiyati_eur) > 0 && Number(raw.fiyat_tl) > 0) {
+      var pct = Number(raw.iskonto_oran != null ? raw.iskonto_oran : raw.iskonto_yuzde);
+      if (!pct && raw.bayi_iskonto != null) pct = Math.round(Number(raw.bayi_iskonto) * 100);
+      if (!pct) pct = 65;
+      return 'KDV dahil · Öztiryakiler liste EUR, %' + pct + ' iskonto';
+    }
+    if (/KDV\s*dahil/i.test(price)) return 'KDV dahil';
+    if (/\+ *KDV/i.test(price)) return 'Fiyat + KDV';
+    return '';
   }
 
   function productUrl(item) {
@@ -557,6 +625,10 @@
       (u.p
         ? '<div class="eq-dept-plp-card__price">' + esc(formatPrice(u.p, u.raw)) + '</div>'
         : '') +
+      (function () {
+        var note = formatPriceNote(u.raw);
+        return note ? '<div class="eq-dept-plp-card__price-note">' + esc(note) + '</div>' : '';
+      })() +
       cartBtn +
       '</article>'
     );
