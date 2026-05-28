@@ -1,12 +1,12 @@
 /**
  * Equsto — Amazon tarzı vitrin alt bilgisi (body.eq-shop; admin ve Bar Design hariç, PFOS dahil).
  * Veri: /data/footer-vitrin.json — href her zaman dolu (eski site / sitemap).
- * @version help-col-sss 20260531c
+ * @version help-col-sss 20260531d
  */
 (function () {
   "use strict";
 
-  var FOOTER_JSON = "/data/footer-vitrin.json?v=20260531sss5";
+  var FOOTER_JSON = "/data/footer-vitrin.json?v=20260531sss6";
   var SSS_LINK = { key: "footer.link_sss", label: "SSS", href: "#eq-mfoot-sss" };
   var footerData = null;
   var footerLoadPromise = null;
@@ -89,37 +89,30 @@
     return h === "#eq-mfoot-sss" || ln.key === "footer.link_sss";
   }
 
-  function faqItemsInnerHtml(faq) {
-    return faq.items
+  function faqListItemHtml(faq) {
+    if (!faq || !faq.items || !faq.items.length) return "";
+    var faqTitle = t("footer.link_sss", t("footer.faq_sss_title", "SSS"));
+    var items = faq.items
       .map(function (it) {
         var q = t(it.qKey || "", it.q || "");
         var a = t(it.aKey || "", it.a || "");
         return (
-          '<details class="eq-mfoot-faq-item"><summary>' +
+          '<li class="eq-mfoot-sss-item"><p class="eq-mfoot-sss-q">' +
           esc(q) +
-          '</summary><div class="eq-mfoot-faq-a"><p>' +
+          '</p><p class="eq-mfoot-sss-a">' +
           esc(a) +
-          "</p></div></details>"
+          "</p></li>"
         );
       })
       .join("");
-  }
-
-  function faqListItemHtml(faq) {
-    if (!faq || !faq.items || !faq.items.length) return "";
-    var faqTitle = t("footer.link_sss", t("footer.faq_sss_title", "SSS"));
     return (
       '<li class="eq-mfoot-li-sss">' +
-      '<details class="eq-mfoot-col-faq" id="eq-mfoot-sss" aria-label="' +
+      '<button type="button" class="eq-mfoot-sss-toggle" aria-expanded="false" aria-controls="eq-mfoot-sss-panel">' +
       esc(faqTitle) +
-      '">' +
-      '<summary class="eq-mfoot-col-faq-title">' +
-      esc(faqTitle) +
-      "</summary>" +
-      '<div class="eq-mfoot-col-faq-list">' +
-      faqItemsInnerHtml(faq) +
-      "</div>" +
-      "</details></li>"
+      "</button>" +
+      '<ul class="eq-mfoot-sss-panel" id="eq-mfoot-sss-panel" hidden>' +
+      items +
+      "</ul></li>"
     );
   }
 
@@ -381,11 +374,24 @@
     );
   }
 
-  function openSssAccordion(host) {
-    var block = host.querySelector("#eq-mfoot-sss");
-    if (!block) return;
-    if (block.tagName === "DETAILS") block.open = true;
-    block.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  function openSssPanel(host) {
+    var btn = host.querySelector(".eq-mfoot-sss-toggle");
+    var panel = host.querySelector("#eq-mfoot-sss-panel");
+    if (!btn || !panel) return;
+    panel.hidden = false;
+    btn.setAttribute("aria-expanded", "true");
+    btn.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }
+
+  function wireSssToggle(host) {
+    var btn = host.querySelector(".eq-mfoot-sss-toggle");
+    var panel = host.querySelector("#eq-mfoot-sss-panel");
+    if (!btn || !panel) return;
+    btn.addEventListener("click", function () {
+      var open = panel.hidden;
+      panel.hidden = !open;
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
   }
 
   function wireLinkHrefs(host) {
@@ -395,12 +401,13 @@
       if (h) a.setAttribute("href", h);
     });
     if (String(location.hash || "") === "#eq-mfoot-sss") {
-      openSssAccordion(host);
+      openSssPanel(host);
     }
   }
 
   function wire(host) {
     wireLinkHrefs(host);
+    wireSssToggle(host);
     if (footerData) injectFaqSchema(footerData);
     var cookie = host.querySelector("#eq-mfoot-cookie");
     if (cookie) {
