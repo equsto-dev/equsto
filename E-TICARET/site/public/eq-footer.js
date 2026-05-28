@@ -106,6 +106,9 @@
       if (typeof window.equstoUrl === "function") {
         var base = p.split("?")[0].split("#")[0].replace(/\/+$/, "");
         if (base === "/sss" || base === "/sss.html") return window.equstoUrl("sss");
+        if ((base === "/shop/marka" || base === "/marka.html") && typeof window.eqBrandPath === "function") {
+          return window.eqBrandPath("");
+        }
       }
     } catch (_) {}
 

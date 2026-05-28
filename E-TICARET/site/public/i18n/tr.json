@@ -565,5 +565,15 @@
   "breadcrumb": {
     "home": "Ana Sayfa",
     "back": "Geri"
+  },
+
+  "page": {
+    "marka_h1": "İş ortaklarımız",
+    "marka_subtitle": "Güvenilir iş ortaklarımızla kaliteli hizmet",
+    "marka_intro": "Equsto; Öztiryakiler, Electrolux Professional, Rational, UNOX ve 230+ endüstriyel mutfak markasını proje listesi ve teklif sürecinde tek kanaldan sunar.",
+    "marka_website": "Web sitesi",
+    "marka_products_aria": "Equsto ürünleri",
+    "marka_cta_quote": "Teklif ve proje talebi",
+    "marka_cta_pfos": "Proje Fabrikası"
   }
 }
