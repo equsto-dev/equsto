@@ -6,8 +6,8 @@
 
   var ORIGIN = "https://equsto.com";
   var DATA_URL = "/api/geo";
-  var DATA_FALLBACK = "/data/geo-landings.json?v=20260602blog";
-  var HEADER_PARTIAL = "/partials/eq-d-header.html?v=20260601geo";
+  var DATA_FALLBACK = "/data/geo-landings.json?v=20260602indent";
+  var HEADER_PARTIAL = "/partials/eq-d-header.html?v=20260602indent";
 
   function ensureVitrinChrome() {
     if (document.querySelector("header.hdr")) return Promise.resolve();
