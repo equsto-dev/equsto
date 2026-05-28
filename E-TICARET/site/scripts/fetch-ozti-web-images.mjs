@@ -54,8 +54,14 @@ function parseArgs() {
   return out;
 }
 
+/** PDF/katalog sayfası kırpıntıları — PLP'de tablo+çizim karışık görünür */
+function isLowQualityOztiImage(rel) {
+  return /catalog\/ozti\/(p287|pdf|katalog)\//i.test(String(rel || ""));
+}
+
 function hasGoodImage(rel) {
   if (!rel || !/catalog\/ozti\//i.test(rel)) return false;
+  if (isLowQualityOztiImage(rel)) return false;
   const p = path.join(ROOT, "public", String(rel).replace(/^\//, ""));
   return fs.existsSync(p) && fs.statSync(p).size >= MIN_BYTES;
 }
@@ -216,6 +222,15 @@ async function main() {
       }
     }
     console.log("[ozti-ax-images] dept güncelleme:", totalRows, "satır");
+  }
+
+  if (!opts.dry) {
+    const sync = spawnSync(
+      process.execPath,
+      ["scripts/sync-ozti-manifest-dept.mjs", ...(opts.dept ? ["--dept", opts.dept] : [])],
+      { cwd: ROOT, stdio: "inherit" }
+    );
+    if (sync.status !== 0) process.exit(sync.status ?? 1);
   }
 }
 
