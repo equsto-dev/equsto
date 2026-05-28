@@ -723,7 +723,9 @@ body.eq-shop .topnav-sep {
 
 /* PFOS sihirbaz: departman şeridi yapışkan kalmasın — soru kolonunun üstüne binmesin */
 body.eq-pfos nav.topnav,
-body.eq-pfos .topnav {
+body.eq-pfos .topnav,
+body.eq-pfos-public nav.topnav,
+body.eq-pfos-public .topnav {
   position: relative !important;
   top: auto !important;
   z-index: 40 !important;
@@ -1906,25 +1908,24 @@ html[data-theme="dark"] .products .prod-card-wrap .eq-cart-add {
   width: 100%;
   justify-content: center;
 }
-/* Ürün görselinden gelen accent (product.html — eq-product-card-tint.js) */
+/* Ürün görselinden gelen accent (product.html) — yalnızca çerçeve, görsel içi nötr */
 .eq-product-main.eq-product-main--accent .eq-product-gallery {
-  padding: 12px;
-  border-radius: 12px;
-  background:
-    radial-gradient(ellipse 96% 82% at 48% 30%, rgba(var(--eq-prod-ar), var(--eq-prod-ag), var(--eq-prod-ab), 0.28) 0%, transparent 58%),
-    linear-gradient(
-      168deg,
-      rgba(var(--eq-prod-ar), var(--eq-prod-ag), var(--eq-prod-ab), 0.14) 0%,
-      var(--eq-surface-2) 46%,
-      var(--eq-surface) 100%
-    );
-  border: 1px solid rgba(var(--eq-prod-ar), var(--eq-prod-ag), var(--eq-prod-ab), 0.24);
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
 }
-.eq-product-main.eq-product-main--accent .eq-product-hero-img {
-  background:
-    radial-gradient(ellipse 90% 78% at 50% 40%, rgba(var(--eq-prod-ar), var(--eq-prod-ag), var(--eq-prod-ab), 0.22) 0%, var(--eq-surface-3) 70%);
-  border-color: rgba(var(--eq-prod-ar), var(--eq-prod-ag), var(--eq-prod-ab), 0.35);
-  box-shadow: 0 14px 42px rgba(var(--eq-prod-ar), var(--eq-prod-ag), var(--eq-prod-ab), 0.2);
+.eq-product-main.eq-product-main--accent .eq-product-hero-wrap:not(.eq-product-hero-wrap--lineart) {
+  padding: 10px;
+  border-radius: 12px;
+  border: 2px solid rgba(var(--eq-prod-ar), var(--eq-prod-ag), var(--eq-prod-ab), 0.52);
+  background: var(--eq-surface);
+  box-sizing: border-box;
+}
+.eq-product-main.eq-product-main--accent .eq-product-hero-img:not(.eq-product-hero-img--lineart) {
+  background: var(--eq-surface-3);
+  border: none;
+  box-shadow: none;
 }
 .eq-product-main.eq-product-main--accent .eq-product-price-sub {
   color: color-mix(in srgb, rgb(var(--eq-prod-ar), var(--eq-prod-ag), var(--eq-prod-ab)) 58%, var(--eq-text-secondary));
@@ -1938,7 +1939,8 @@ html[data-theme="dark"] .products .prod-card-wrap .eq-cart-add {
 }
 .eq-product-main.eq-product-main--accent .eq-product-thumbs button.eq-product-thumb--active {
   border-color: rgb(var(--eq-prod-ar), var(--eq-prod-ag), var(--eq-prod-ab));
-  box-shadow: 0 0 0 1px rgba(var(--eq-prod-ar), var(--eq-prod-ag), var(--eq-prod-ab), 0.35);
+  box-shadow: none;
+  background: var(--eq-surface);
 }
 .eq-product-hero-img {
   width: 100%;
@@ -4483,63 +4485,98 @@ body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col a:hover {
   text-decoration: underline;
 }
 body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-brand {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 16px 24px;
   margin-bottom: 18px;
-  padding-top: 8px;
+  padding-top: 12px;
   border-top: 1px solid rgba(255, 255, 255, 0.14);
+  text-align: center;
 }
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-logo {
-  display: inline-flex;
-  align-items: center;
-  color: #fff;
-  text-decoration: none;
-}
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-logo .eq-logo-svg,
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-logo .eq-logo-wordmark {
-  height: 18px;
-  width: auto;
-  max-width: min(160px, 72vw);
-}
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-logo .eq-logo-e-bar {
-  fill: #fff;
-}
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-logo .eq-logo-q circle,
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-logo .eq-logo-q line,
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-logo .eq-logo-letter,
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-logo path,
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-logo > .eq-logo-svg > circle {
-  stroke: #fff;
-}
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-logo-text {
-  font-size: 22px;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  color: #fff;
-}
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-locale {
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.72);
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-company {
+  margin: 0 auto 10px;
+  max-width: 100%;
+  text-align: center;
+  font-size: clamp(9px, 1.65vw, 12px);
+  font-weight: 400 !important;
+  font-style: normal;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.88);
+  letter-spacing: 0;
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-tagline {
-  margin: 0 0 8px;
+  margin: 0;
   text-align: center;
   font-size: 12px;
   color: rgba(255, 255, 255, 0.72);
   letter-spacing: 0.02em;
 }
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-partners {
+/* Footer — SSS (Size yardımcı olalım sütunu) */
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col-faq {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col-faq-title {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.92);
+  letter-spacing: 0.01em;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col-faq-intro {
+  margin: 0 0 12px;
+  font-size: 12px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.65);
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col-faq .eq-mfoot-faq-item {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col-faq .eq-mfoot-faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 14px 40px 14px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #fff;
+  position: relative;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col-faq .eq-mfoot-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col-faq .eq-mfoot-faq-item summary::after {
+  content: "";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid rgba(255, 255, 255, 0.65);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.65);
+  transform: translateY(-70%) rotate(45deg);
+  transition: transform 0.2s ease;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col-faq .eq-mfoot-faq-item[open] summary::after {
+  transform: translateY(-30%) rotate(-135deg);
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col-faq .eq-mfoot-faq-a {
+  padding: 0 16px 14px;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col-faq .eq-mfoot-faq-a p {
   margin: 0;
-  text-align: center;
-  font-size: 11px;
-  color: rgba(255, 255, 255, 0.55);
-  letter-spacing: 0.04em;
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.78);
 }
 body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-legal {
   background: #011e41;
@@ -5127,52 +5164,8 @@ html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .e
     padding-top: env(safe-area-inset-top, 0px);
   }
 
-  body.bd-page.besos header.hdr .hdr-right,
-  body.bd-page.besos header.hdr a.eq-hdr-account,
-  body.bd-page.besos header.hdr #equsto-hdr-cart,
-  body.bd-page.besos header.hdr .theme-legend,
-  body.bd-page.besos header.hdr .hdr-alici {
+  body.bd-page.besos header.hdr .theme-legend {
     display: none !important;
-  }
-
-  body.bd-page.besos .bd-hdr-brand {
-    flex: 1 1 100%;
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-    flex-wrap: wrap;
-    padding: 8px 12px !important;
-    box-sizing: border-box;
-  }
-
-  body.bd-page.besos .bd-hdr-nav {
-    flex: 1 1 100%;
-    width: 100%;
-    margin-left: 0 !important;
-    border-left: none !important;
-    padding-left: 0 !important;
-    padding-top: 6px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    flex-wrap: nowrap;
-    max-width: 100%;
-  }
-
-  body.bd-page.besos .bd-hdr-nav::-webkit-scrollbar {
-    display: none;
-    width: 0;
-    height: 0;
-  }
-
-  body.bd-page.besos .bd-hdr-nav a {
-    flex: 0 0 auto;
-    white-space: nowrap;
-    min-height: 40px;
-    display: inline-flex;
-    align-items: center;
-    padding: 6px 10px;
-    touch-action: manipulation;
   }
 
   body.bd-page.besos header.hdr > .pg-inner,
@@ -5203,7 +5196,6 @@ html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .e
     min-width: 48px;
   }
 
-  /* Besos: Equsto departman şeridi — üst bd-hdr-nav + alt menü yeterli */
   body.bd-page.besos nav.topnav {
     display: none !important;
   }

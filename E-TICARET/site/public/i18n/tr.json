@@ -433,6 +433,7 @@
   },
 
   "footer": {
+    "company_display": "E Q U S T O   T E K N O L O J İ   L İ M İ T E D",
     "tagline": "Equsto Teknolojisi · Gastronomi Tasarımı · Satış Mühendisliği",
     "all_rights": "Tüm hakları saklıdır.",
     "cookie_policy": "Çerez politikası",
@@ -463,7 +464,8 @@
     "locale_label": "Türkiye",
     "locale_aria": "Ülke",
     "legal_aria": "Yasal bilgiler",
-    "partners": "Hilton · Marriott · Migros · TAV · Sodexo · McDonald's"
+    "partners": "Hilton · Marriott · Migros · TAV · Sodexo · McDonald's",
+    "faq_sss_title": "SSS"
   },
 
   "filter": {

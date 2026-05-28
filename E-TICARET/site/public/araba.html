@@ -8,7 +8,7 @@
   if (typeof location === "undefined" || location.protocol !== "file:") return;
   document.open();
   document.write(
-    '<!DOCTYPE html><html lang="tr"><head><title>Equsto</title>  <link rel="stylesheet" crossorigin href="/assets/eq-home-mutbex-DBzvypug.css">
+    '<!DOCTYPE html><html lang="tr"><head><title>Arabalar — Servis ve GN Taşıma · Equsto</title>  <link rel="stylesheet" crossorigin href="/assets/eq-home-mutbex-DBzvypug.css">
   </head><body>' +
     '<p>Bu sayfa <code>npm run dev</code> ile acilmalidir.</p></body></html>'
   );
@@ -18,8 +18,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 
-<title>Arabalar — Endüstriyel Mutfak · Equsto</title>
-<meta name="description" content="Endüstriyel servis ve taşıma arabaları · Equsto">
+<title>Arabalar — Servis ve GN Taşıma · Equsto</title>
+<meta name="description" content="Servis arabaları, tepsi toplama, GN taşıma ve mobil bar üniteleri. Equsto.">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#001e50">
 <link rel="canonical" href="https://equsto.com/shop/araba">
@@ -33,7 +33,7 @@
 
 <style id="eq-dept-plp-inline">
 body.eq-shop.eq-dept.eq-dept-plp .eq-dept-plp-layout{display:flex!important;align-items:flex-start;width:100%;max-width:1500px;margin:0 auto}body.eq-shop.eq-dept.eq-dept-plp .eq-dept-plp-aside{flex:0 0 240px;width:240px}body.eq-shop.eq-dept.eq-dept-plp .eq-dept-plp-main{flex:1;min-width:0}body.eq-shop.eq-dept.eq-dept-plp .eq-dept-plp-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:16px}@media(min-width:1024px){body.eq-shop.eq-dept.eq-dept-plp .eq-dept-plp-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important}}
-/* Pi�irme PLP v2 � ba��ms�z, Cafemarkt tarz� */
+/* Pişirme PLP v2 � ba��ms�z, Cafemarkt tarz� */
 body.eq-dept-plp {
   background: #fff;
 }
@@ -63,7 +63,7 @@ body.eq-dept-plp {
   font-weight: 700;
   border-bottom: 1px solid #e8e8e8;
 }
-/* Cafemarkt tarz� facet (eq-pisirme-cm-facets.js) */
+/* Cafemarkt tarz� facet (eq-pisirme-cm-facets.js) */
 .eq-cm-facet {
   border-bottom: 1px solid #e8e8e8;
 }
@@ -484,8 +484,22 @@ body{background:var(--eq-bg-page);font-family:-apple-system,BlinkMacSystemFont,"
       <button type="button" class="srch-btn" aria-label="Ara"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.25" stroke="currentColor" stroke-width="1.35"/><line x1="12.35" y1="12.35" x2="17.85" y2="12.35" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/></svg></button>
     </div>
     <div class="hdr-right">
-      <button type="button" class="theme-toggle" id="theme-toggle" onclick="equstoCycleTheme()" title="Tema">◐</button>
-      <a href="/login.html" class="eq-hdr-account" data-i18n="common.my_account">Hesabım</a>
+      <div class="theme-wrap">
+        <button type="button" class="theme-toggle" id="theme-toggle" onclick="equstoCycleTheme()" title="Tema" data-i18n-attr="title:common.theme_title">◐</button>
+        <span class="theme-legend" data-i18n="common.theme_label">Sistem · Açık · Koyu</span>
+      </div>
+      <a href="/login.html" class="eq-hdr-account" title="Üye girişi" data-i18n-attr="title:common.login_title">
+        <span data-i18n="common.my_account">Hesabım</span>
+        <span class="eq-hdr-account-title" data-i18n="common.account_projects">Projeler ve Listeler ▾</span>
+      </a>
+      <div class="eq-hdr-orders">
+        <span data-i18n="common.returns">İadeler</span>
+        <span data-i18n="common.and_orders">ve Siparişler</span>
+      </div>
+      <div id="equsto-hdr-cart" class="equsto-hdr-cart" title="Sepeti aç" role="button" tabindex="0" data-i18n-attr="title:common.cart_aria_title">
+        <span id="equsto-cart-count">🛒 0</span>
+        <span data-i18n="common.cart">Alışveriş Sepeti</span>
+      </div>
     </div>
   </div>
 </header>
@@ -498,7 +512,7 @@ body{background:var(--eq-bg-page);font-family:-apple-system,BlinkMacSystemFont,"
     <span class="topnav-sep">|</span>
     <div class="topnav-item" onclick="eqGo('pisirme')" data-i18n="nav.pisirme">Pişirme Ekipmanları</div>
     <span class="topnav-sep">|</span>
-    <div class="topnav-item" onclick="eqGo('sogutma')" data-i18n="nav.sogutma">Soğutma Ekipmanları</div>
+    <div class="topnav-item" data-i18n="nav.sogutma">Soğutma Ekipmanları</div>
     <span class="topnav-sep">|</span>
     <div class="topnav-item" onclick="eqGo('kahve')" data-i18n="nav.kahve">Kahve Ekipmanları</div>
     <span class="topnav-sep">|</span>
@@ -507,8 +521,6 @@ body{background:var(--eq-bg-page);font-family:-apple-system,BlinkMacSystemFont,"
     <div class="topnav-item" onclick="eqGo('hazirlik')" data-i18n="nav.hazirlik">Hazırlık Ekipmanları</div>
     <span class="topnav-sep">|</span>
     <div class="topnav-item" onclick="eqGo('icecek')" data-i18n="nav.icecek">İçecek Ekipmanları</div>
-    <span class="topnav-sep">|</span>
-    <div class="topnav-item" data-i18n="nav.tezgah">Çalışma Tezgahları</div>
     <span class="topnav-sep">|</span>
     <div class="topnav-item topnav-besos" onclick="eqGo('besos')" data-i18n="nav.bar_design">Bar Design</div>
   </div>
@@ -523,14 +535,14 @@ body{background:var(--eq-bg-page);font-family:-apple-system,BlinkMacSystemFont,"
     <div class="eq-dept-filter-backdrop" id="eq-dept-filter-backdrop" aria-hidden="true"></div>
     <main class="eq-dept-plp-main" id="eq-dept-plp-main">
       <h1 class="eq-dept-plp-title">Arabalar</h1>
-      <p class="eq-dept-plp-lead">Servis arabalar�, tepsi toplama, GN ta��ma ve mobil bar �niteleri</p>
+      <p class="eq-dept-plp-lead">Servis arabaları, tepsi toplama, GN taşıma ve mobil bar üniteleri</p>
       <div class="eq-dept-plp-selected" id="eq-dept-plp-selected" hidden><div class="eq-cm-selected__chips" id="eq-dept-cm-chips-main"></div></div>
       <div class="eq-dept-plp-toolbar">
         <button type="button" class="eq-dept-plp-filter-mob" id="eq-dept-plp-filter-mob">Filtrele</button>
         <div class="eq-dept-plp-count" id="eq-dept-plp-count"></div>
-        <label class="eq-dept-plp-sort">S�ralama
-          <select id="eq-dept-plp-sort" aria-label="S�ralama">
-            <option value="">Kar���k S�ra</option>
+        <label class="eq-dept-plp-sort">Sıralama
+          <select id="eq-dept-plp-sort" aria-label="Sıralama">
+            <option value="">Karışık Sıra</option>
             <option value="name">Alfabetik A-Z</option>
             <option value="name-desc">Alfabetik Z-A</option>
             <option value="price-asc">Fiyat Artan</option>
@@ -539,15 +551,15 @@ body{background:var(--eq-bg-page);font-family:-apple-system,BlinkMacSystemFont,"
         </label>
       </div>
       <div class="eq-dept-plp-grid" id="eq-dept-plp-grid" role="list">
-        <p class="eq-dept-plp-status">Katalog y�kleniyor�</p>
+        <p class="eq-dept-plp-status">Katalog yükleniyor…</p>
       </div>
       <nav class="eq-dept-plp-pages" id="eq-dept-plp-pages" aria-label="Sayfalama"></nav>
     </main>
   </div>
 
   <footer class="footer">
-    <span style="font-size:10px;color:var(--eq-text-muted);" data-i18n="footer.b2b_partners">B2B � proje � kanal ortakl�klar�</span>
-    <span data-i18n="common.manage_cookies">�erez tercihlerini y�net</span>
+    <span style="font-size:10px;color:var(--eq-text-muted);" data-i18n="footer.b2b_partners">B2B · proje · kanal ortaklıkları</span>
+    <span data-i18n="common.manage_cookies">Çerez tercihlerini yönet</span>
   </footer>
 </div>
 
