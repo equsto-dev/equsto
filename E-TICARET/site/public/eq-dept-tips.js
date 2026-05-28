@@ -391,6 +391,18 @@
     return false;
   }
 
+  /** İzolasyonlu buz konteyneri — soğutma; araba / taşıma vitrininde gösterme */
+  function isBuzKonteynerProduct(u) {
+    var hay = productHaystack(u);
+    if (!hay) return false;
+    if (/\bbuz\s*konteyner|insulated\s*ice\s*container\b/i.test(hay)) return true;
+    var kod = String((u && u.raw && u.raw.urun_kodu) || (u && u.sku) || (u && u.model) || "")
+      .replace(/\s+/g, "")
+      .toUpperCase();
+    if (/^8959\.BK|^7506\.0B390/i.test(kod)) return true;
+    return false;
+  }
+
   function isServisTeshirProduct(u) {
     var hay = productHaystack(u);
     if (!hay) return false;
@@ -495,6 +507,7 @@
     if (dept === "sogutma" && isEtKiymaProduct(u)) return true;
     if (dept === "pisirme" && (isYardimciEkipmanProduct(u) || isYerIzgaraProduct(u))) return true;
     if (dept === "icecek" && isBuzMakinesiProduct(u)) return true;
+    if ((dept === "araba" || dept === "tasima") && isBuzKonteynerProduct(u)) return true;
     if (dept === "set-ustu-mutfak" && isOztiBainMarieMachineRow(u)) return true;
     if (dept === "set-ustu-mutfak" && isOztiSetUstuArabaRow(u)) return true;
     if (dept === "set-ustu-mutfak" && isOztiSetUstuDonerRow(u)) return true;
