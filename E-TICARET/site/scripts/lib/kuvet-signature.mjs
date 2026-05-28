@@ -6,7 +6,9 @@ export function parseKuvetSignature(name) {
   const s = raw.replace(/\s+/g, " ").trim();
 
   let variant = "std";
-  if (/KAPAK/.test(s)) variant = "kapak";
+  if (/KAPAK/.test(s) && /POLIKARBON|POLICARBON/.test(s)) variant = "kapak-policarbon";
+  else if (/KAPAK/.test(s) && /POLIPROPILEN/.test(s)) variant = "kapak-polipropilen";
+  else if (/KAPAK/.test(s)) variant = "kapak";
   else if (/POLIKARBON|POLICARBON/.test(s)) variant = "polikarbon";
   else if (/POLIPROPILEN/.test(s)) variant = "polipropilen";
   else if (/YAPISMAZ/.test(s)) variant = "yapismaz";
@@ -41,8 +43,10 @@ export function parseKuvetSignature(name) {
 export function parseCafemarktKuvetSignature(title) {
   const t = String(title || "");
   let variant = "std";
-  if (/kapak/i.test(t)) variant = "kapak";
-  else if (/polikarbon/i.test(t)) variant = "polikarbon";
+  if (/kapak/i.test(t) && /polikarbon|policarbon/i.test(t)) variant = "kapak-policarbon";
+  else if (/kapak/i.test(t) && /polipropilen/i.test(t)) variant = "kapak-polipropilen";
+  else if (/kapak/i.test(t)) variant = "kapak";
+  else if (/polikarbon|policarbon/i.test(t)) variant = "polikarbon";
   else if (/polipropilen/i.test(t)) variant = "polipropilen";
   else if (/yapışmaz|yapismaz/i.test(t)) variant = "yapismaz";
   else if (/delikli/i.test(t)) {
@@ -61,4 +65,55 @@ export function parseCafemarktKuvetSignature(title) {
   }
 
   return { variant, gn, depth, key: [variant, gn, depth].filter(Boolean).join("|") };
+}
+
+/** `public/images/catalog/cafemarkt-images/*.jpg` dosya adı → imza */
+export function parseCafemarktImagesFile(filename) {
+  const base = String(filename || "")
+    .replace(/_\d+\.(jpe?g|png|webp|gif)$/i, "")
+    .toLowerCase();
+
+  if (base === "gastronom-dondurma-kuveti-polipropilen") {
+    return { variant: "dondurma-pp", gn: "", depth: "", key: "dondurma-pp" };
+  }
+
+  const kapak = base.match(
+    /^gastronom-kuvet-kapak-(policarbon|polipropilen)-(\d+)-(\d+)$/
+  );
+  if (kapak) {
+    const variant = `kapak-${kapak[1] === "policarbon" ? "policarbon" : "polipropilen"}`;
+    const gn = `${kapak[2]}/${kapak[3]}`;
+    return { variant, gn, depth: "", key: [variant, gn].join("|") };
+  }
+
+  const body = base.match(
+    /^gastronom-kuvet-(policarbon|polipropilen)-(\d+)-(\d+)-(\d+)$/
+  );
+  if (body) {
+    const variant = body[1] === "policarbon" ? "polikarbon" : "polipropilen";
+    const gn = `${body[2]}/${body[3]}`;
+    const depth = String(Number(body[4]));
+    return { variant, gn, depth, key: [variant, gn, depth].join("|") };
+  }
+
+  return { variant: "", gn: "", depth: "", key: "" };
+}
+
+/** Yerel cafemarkt-images klasörü indeksi (filename → imza) */
+export function buildCafemarktImagesIndex(imageDir, readdirSync) {
+  const byKey = new Map();
+  if (!readdirSync) return byKey;
+  let files = [];
+  try {
+    files = readdirSync(imageDir);
+  } catch {
+    return byKey;
+  }
+  for (const file of files) {
+    if (!/\.(jpe?g|png|webp)$/i.test(file)) continue;
+    const sig = parseCafemarktImagesFile(file);
+    if (!sig.key) continue;
+    if (!byKey.has(sig.key)) byKey.set(sig.key, file);
+  }
+  return byKey;
 }
