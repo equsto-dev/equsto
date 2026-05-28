@@ -6,7 +6,7 @@ ROOT = Path(__file__).resolve().parents[1] / "public"
 
 BESOS_LINKS = """
     <div class="bd-hdr-brand">
-      <a class="bd-hdr-wordmark" href="/besos" aria-label="Besos vitrin"></a>
+      <a class="bd-hdr-wordmark" href="/" aria-label="Equsto"></a>
       <div class="bd-hdr-studio">Bar Design Studio</div>
       <nav class="bd-hdr-nav" aria-label="Besos">
         <a href="/besos">Vitrin</a>
