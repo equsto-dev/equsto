@@ -61,17 +61,22 @@
   var loadPromise = null;
 
   function fetchDict(lang) {
-    var base = (window.eqI18nBaseUrl || "/i18n/");
-    var url = base + lang + ".json";
-    return fetch(url, { cache: "force-cache" })
-      .then(function (r) {
-        if (!r.ok) throw new Error("i18n fetch " + r.status);
-        return r.json();
-      })
-      .catch(function () {
-        // file:// veya yerelde fetch düşerse: en kötü ihtimalle TR fallback'e geçer.
-        return null;
-      });
+    var custom = window.eqI18nBaseUrl;
+    var urls = custom
+      ? [custom + lang + ".json"]
+      : ["/locales/" + lang + ".json", "/i18n/" + lang + ".json"];
+    function tryAt(i) {
+      if (i >= urls.length) return Promise.resolve(null);
+      return fetch(urls[i], { cache: "no-store" })
+        .then(function (r) {
+          if (!r.ok) throw new Error("i18n fetch " + r.status);
+          return r.json();
+        })
+        .catch(function () {
+          return tryAt(i + 1);
+        });
+    }
+    return tryAt(0);
   }
 
   function loadDict(lang) {
@@ -301,19 +306,22 @@
     } catch (_) {}
   }
 
-  window.eqI18nReady = loadDict(lang).then(function () {
+  function afterDictReady() {
     applyTree(document);
     ensureHreflang(lang);
+    mountSwitcher(lang);
+    rerunDynamicRenderers();
+  }
+
+  window.eqI18nReady = loadDict(lang).then(function () {
     if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", function () {
-        mountSwitcher(lang);
-        applyTree(document);
-        rerunDynamicRenderers();
-      }, { once: true });
+      document.addEventListener("DOMContentLoaded", afterDictReady, { once: true });
     } else {
-      mountSwitcher(lang);
+      afterDictReady();
+    }
+    window.addEventListener("load", function () {
       applyTree(document);
       rerunDynamicRenderers();
-    }
+    }, { once: true });
   });
 })();

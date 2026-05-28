@@ -21,7 +21,7 @@
   }
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260530cafemarkt-plp1';
+  var CATALOG_V = '20260529plpimgfix2';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   var deptCoverImg = '';
 
@@ -395,11 +395,8 @@
         ? window.EqustoKurLive.priceForRow(row)
         : String(row.price || '').split('\n')[0];
     var imgRel = row.images && row.images[0] ? row.images[0] : '';
-    if (
-      row.category === 'soguk-odalar' ||
-      /7919\.CR/i.test(String(row.sku || row.urun_kodu || row.model || '')) ||
-      /soğuk oda|soguk oda|cold room/i.test(String(row.name || ''))
-    ) {
+    var ozSku = String(row.sku || row.urun_kodu || row.model || '');
+    if (row.category === 'soguk-odalar' || /7919\.CR/i.test(ozSku)) {
       imgRel = 'images/catalog/soguk-oda/soguk-oda-vitrin.png';
     }
     if (!imgRel && isOztiRow(row)) {
@@ -410,13 +407,23 @@
         imgRel = window.eqOztiAxImageFromSku(row.sku || row.model || row.urun_kodu) || imgRel;
       }
     }
+    var imgOut = '';
+    if (
+      isOztiRow(row) &&
+      imgRel &&
+      /\/cafemarkt\//i.test(imgRel) &&
+      typeof window.eqOztiAxImageFromSku === 'function'
+    ) {
+      imgOut = window.eqOztiAxImageFromSku(ozSku) || '';
+    }
+    if (!imgOut) imgOut = imgRel ? imgSrc(imgRel) : '';
     return {
       c: row.category || '',
       b: b,
       fb: fb,
       n: n,
       p: priceLine,
-      img: imgRel ? imgSrc(imgRel) : '',
+      img: imgOut,
       tip_kodu: row.tip_kodu || row.tipKodu || '',
       raw: row,
     };

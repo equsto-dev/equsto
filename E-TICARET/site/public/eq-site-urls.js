@@ -555,14 +555,14 @@
     return "images/catalog/ozti/web/" + slug + ".jpg";
   };
 
-  /** `…/ozti-7865-n1-80908-10.jpg` → `7865.N1.80908.10` (cafemarkt / web / pdf sayfa). */
+  /** `…/ozti-073m-00000-ad.jpg` → `073M.00000.AD` (cafemarkt / web / pdf sayfa). */
   function oztiKodFromCatalogRel(s) {
     var t = String(s || "")
       .trim()
       .replace(/\\/g, "/");
-    var m = t.match(/ozti-([0-9]{4})-([0-9a-z][0-9a-z0-9-]*)\./i);
+    var m = t.match(/\/ozti-([a-z0-9-]+)\.(?:jpe?g|png|webp)$/i);
     if (!m) return "";
-    return m[1] + "." + m[2].replace(/-/g, ".");
+    return m[1].replace(/-/g, ".").toUpperCase();
   }
 
   /** 8897.36/46/56*.P0 polipropilen istif — yanlış fırın görseli yerine doğru raf fotoğrafı. */
@@ -650,7 +650,9 @@
     );
   }
 
-  var EQ_CATALOG_IMG_V = "20260531kahveimg1";
+  var EQ_CATALOG_IMG_V = "20260529plpimgfix2";
+  var EQ_OZTI_BAD_CAFE_STUB_MD5 = "6696b6d14fecffc05fb1dc0156c9f6b4";
+  var EQ_OZTI_BAD_CAFE_STUB_BYTES = 10995;
 
   function withCatalogImgV(url) {
     if (!url || !/\/images\/catalog\/(?:ozti\/(?:web|cafemarkt)|atalay\/)/i.test(url)) return url;
@@ -862,13 +864,30 @@
     return "/data/" + rel;
   }
 
+  /** cafemarkt yolu bilinen UNOX stub ise ax-images CDN kullan (canlı dahil). */
+  function oztiAxFallbackFromRel(s) {
+    var kod = oztiKodFromCatalogRel(s);
+    if (!kod) return "";
+    if (typeof window.eqOztiAxImageFromSku === "function") {
+      var ax = window.eqOztiAxImageFromSku(kod);
+      if (ax) return ax;
+    }
+    return (
+      "https://oztiryakiler.com.tr/ax-images/images/" + encodeURIComponent(kod) + ".jpg"
+    );
+  }
+
   window.eqProductImgSrc = function (p) {
     if (p == null || p === "") return "";
     var s = String(p).trim().replace(/\\/g, "/");
     if (!s) return "";
     var istifFb = ozti8897PolipropilenFallbackRel(s);
     if (istifFb) s = istifFb;
-    if (/^https?:\/\//i.test(s)) return allowRemoteImages() ? s : "";
+    if (/^https?:\/\//i.test(s)) return s;
+    if (/^images\/catalog\/ozti\/cafemarkt\//i.test(s)) {
+      var axCafe = oztiAxFallbackFromRel(s);
+      if (axCafe) return axCafe;
+    }
     if (
       isStaticPublicImage(s) &&
       typeof window.eqAttrPath === "function"
@@ -1037,12 +1056,7 @@
       }
     }
     var oztiKod = img.getAttribute("data-eq-ozti-kod") || "";
-    if (
-      oztiKod &&
-      !/7919\.CR/i.test(oztiKod) &&
-      allowRemoteImages() &&
-      typeof window.eqOztiAxImageFromSku === "function"
-    ) {
+    if (oztiKod && !/7919\.CR/i.test(oztiKod) && typeof window.eqOztiAxImageFromSku === "function") {
       var axTry = window.eqOztiAxImageFromSku(oztiKod);
       if (axTry && axTry !== src && !img.dataset.eqImgAxTried) {
         img.dataset.eqImgAxTried = "1";

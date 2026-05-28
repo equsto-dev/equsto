@@ -14,7 +14,7 @@
 
 
 
-  var FOOTER_JSON = "/data/footer-vitrin.json?v=20260531sss7";
+  var FOOTER_JSON = "/data/footer-vitrin.json?v=20260531col12";
 
   var SSS_LINK = { key: "footer.link_sss", label: "SSS", href: "/sss" };
 
@@ -258,29 +258,31 @@
 
         {
 
-          titleKey: "footer.col_about",
+          titleKey: "footer.col_solutions",
 
-          title: "Hakkımızda",
+          title: "Çözümler",
 
           links: [
 
-            { key: "footer.link_about", label: "Equsto hakkında", href: "/hakkimizda.html" },
+            { key: "nav.bar_design", label: "Bar Design", href: "/besos" },
 
-            { key: "footer.link_blog", label: "Rehber ve blog", href: "/blog" },
+            {
 
-            { key: "footer.link_story", label: "Buradan başladık", href: "/buradan-basladi" },
+              key: "footer.link_imt300",
 
-            { key: "footer.link_contact", label: "İletişim", href: "/contact" },
+              label: "IMT300 berrak buz",
 
-            { key: "footer.link_projects", label: "Referans projeler", href: "/projeler" },
+              href: "/data/advanced-cuisine-clear-ice/product-imt300.html",
 
-            { key: "footer.link_sitemap", label: "Site haritası", href: "/sitemap.xml" },
+            },
 
-            { key: "footer.link_llms", label: "Asistan özet dosyası", href: "/llms.txt" },
+            { key: "nav.pfos", label: "Proje Fabrikası", href: "/pfos" },
 
-            { key: "footer.link_steakhouse", label: "Steakhouse mutfak rehberi", href: "/steakhouse-kurulumu" },
+            { key: "footer.link_fastfood", label: "Fast food kurulumu", href: "/fast-food-kurulumu" },
 
-            { key: "footer.link_marka", label: "Markalarımız", href: "/shop/marka" },
+            { key: "footer.link_finedining", label: "Fine dining kurulumu", href: "/fine-dining-kurulumu" },
+
+            { key: "footer.link_allday", label: "All day dining kurulumu", href: "/all-day-dining-kurulumu" },
 
           ],
 
@@ -338,31 +340,29 @@
 
         {
 
-          titleKey: "footer.col_solutions",
+          titleKey: "footer.col_about",
 
-          title: "Çözümler",
+          title: "Hakkımızda",
 
           links: [
 
-            { key: "nav.bar_design", label: "Bar Design", href: "/besos" },
+            { key: "footer.link_about", label: "Equsto hakkında", href: "/hakkimizda.html" },
 
-            {
+            { key: "footer.link_blog", label: "Rehber ve blog", href: "/blog" },
 
-              key: "footer.link_imt300",
+            { key: "footer.link_story", label: "Buradan başladık", href: "/buradan-basladi" },
 
-              label: "IMT300 berrak buz",
+            { key: "footer.link_contact", label: "İletişim", href: "/contact" },
 
-              href: "/data/advanced-cuisine-clear-ice/product-imt300.html",
+            { key: "footer.link_projects", label: "Referans projeler", href: "/projeler" },
 
-            },
+            { key: "footer.link_sitemap", label: "Site haritası", href: "/sitemap.xml" },
 
-            { key: "nav.pfos", label: "Proje Fabrikası", href: "/pfos" },
+            { key: "footer.link_llms", label: "Asistan özet dosyası", href: "/llms.txt" },
 
-            { key: "footer.link_fastfood", label: "Fast food kurulumu", href: "/fast-food-kurulumu" },
+            { key: "footer.link_steakhouse", label: "Steakhouse mutfak rehberi", href: "/steakhouse-kurulumu" },
 
-            { key: "footer.link_finedining", label: "Fine dining kurulumu", href: "/fine-dining-kurulumu" },
-
-            { key: "footer.link_allday", label: "All day dining kurulumu", href: "/all-day-dining-kurulumu" },
+            { key: "footer.link_marka", label: "Markalarımız", href: "/shop/marka" },
 
           ],
 

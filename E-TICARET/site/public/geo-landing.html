@@ -12,8 +12,8 @@
 <link rel="icon" href="/images/favicon.svg?v=20260522natural" type="image/svg+xml">
 <script src="/theme.js?v=20260530geo"></script>
 <script src="/equsto-logo.js?v=20260519wordmark3"></script>
-<script src="/eq-i18n.js?v=20260521globalsearch"></script>
-<script src="/eq-site-urls.js?v=20260528axlive"></script>
+<script src="/eq-i18n.js?v=20260531locales"></script>
+<script src="/eq-site-urls.js?v=20260529plpimgfix2"></script>
 <script src="/nav.js?v=20260531kuvetflat"></script>
 <script src="/ecom-data.js?v=20260530geo"></script>
 <script src="/equsto-member.js?v=20260522wa" defer></script>
@@ -28,7 +28,7 @@
 .eq-geo-budget{font-size:14px;margin:0 0 18px;padding:12px 14px;border-radius:6px;background:var(--eq-surface-2);border:1px solid var(--eq-border);}
 .eq-geo-body{font-size:14px;line-height:1.75;color:var(--eq-text);}
 .eq-geo-body h2{font-size:1.05rem;margin:22px 0 10px;color:var(--eq-text);}
-/* T?rk?e paragraf girintisi (sat?r ba?? ? tab) */
+/* T�rk�e paragraf girintisi (sat?r ba?? � tab) */
 .eq-geo-body p{margin:0 0 14px;text-indent:2.5em;}
 .eq-geo-body h2 + p{margin-top:0;}
 .eq-geo-table{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0 20px;}
@@ -68,19 +68,19 @@
   <div class="pg-inner hdr-pg-inner" style="display:flex;align-items:center;gap:10px;flex:1;min-width:0;padding:10px 20px 10px 0;">
     <div class="hdr-alici">
       <div style="font-size:9px;color:var(--eq-text-subtle);" data-i18n="common.delivery_to">Teslimat Adresi</div>
-      <div style="font-size:11px;font-weight:600;color:var(--eq-drawer-head-text);" data-i18n="common.delivery_city">?stanbul, T?rkiye</div>
+      <div style="font-size:11px;font-weight:600;color:var(--eq-drawer-head-text);" data-i18n="common.delivery_city">?stanbul, T�rkiye</div>
     </div>
     <div class="srch">
-      <div class="srch-cat" onclick="toggleDrawer()" data-i18n="common.all_categories_caps">? T?m Kategoriler</div>
-      <input class="srch-input" type="search" placeholder="?r?n, marka veya kategori ara?" autocomplete="off" data-i18n-attr="placeholder:common.search_placeholder">
-      <button type="button" class="srch-btn" aria-label="Ara" title="Ara" data-i18n-attr="aria-label:common.search_aria, title:common.search_aria"><svg xmlns="http://www.w3.org/2000/svg" class="eq-srch-ico" width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.25" stroke="currentColor" stroke-width="1.35"/><line x1="12.35" y1="12.35" x2="17.85" y2="12.35" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/></svg></button>
+      <div class="srch-cat" onclick="toggleDrawer()" data-i18n="common.all_categories_caps">? T�m Kategoriler</div>
+      <input class="srch-input" type="search" placeholder="�r�n, marka veya kategori ara?" autocomplete="off" data-i18n-attr="placeholder:common.search_placeholder">
+      <button type="button" class="srch-btn" aria-label="Ara" title="Ara" data-i18n-attr="aria-label:common.search_aria, title:common.search_aria"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.25" stroke="currentColor" stroke-width="1.35"/><line x1="12.35" y1="12.35" x2="17.85" y2="12.35" stroke="currentColor" stroke-width="1.35" stroke-linecap="round"/></svg></button>
     </div>
     <div class="hdr-right">
       <div class="theme-wrap">
         <button type="button" class="theme-toggle" id="theme-toggle" onclick="equstoCycleTheme()" title="Tema" data-i18n-attr="title:common.theme_title">?</button>
-        <span class="theme-legend" data-i18n="common.theme_label">Sistem ? A??k ? Koyu</span>
+        <span class="theme-legend" data-i18n="common.theme_label">Sistem � A�?k � Koyu</span>
       </div>
-      <a href="/login.html" class="eq-hdr-account" title="?ye giri?i" data-i18n-attr="title:common.login_title">
+      <a href="/login.html" class="eq-hdr-account" title="�ye giri?i" data-i18n-attr="title:common.login_title">
         <span style="font-size:10px;color:var(--eq-text-muted);" data-i18n="common.my_account">Hesab?m</span>
         <span class="eq-hdr-account-title" style="font-size:12px;font-weight:600;" data-i18n="common.account_projects">Projeler ve Listeler ?</span>
       </a>
@@ -88,7 +88,7 @@
         <span style="font-size:10px;color:var(--eq-text-muted);" data-i18n="common.returns">?adeler</span>
         <span style="font-size:12px;font-weight:600;cursor:pointer;" data-i18n="common.and_orders">ve Sipari?ler</span>
       </div>
-      <div id="equsto-hdr-cart" class="equsto-hdr-cart" style="display:flex;flex-direction:column;line-height:1.4;cursor:pointer;" title="Sepeti a?" role="button" tabindex="0">
+      <div id="equsto-hdr-cart" class="equsto-hdr-cart" style="display:flex;flex-direction:column;line-height:1.4;cursor:pointer;" title="Sepeti a�" role="button" tabindex="0">
         <span id="equsto-cart-count" style="font-size:10px;color:var(--eq-text-muted);">?? 0</span>
         <span style="font-size:12px;font-weight:600;" data-i18n="common.cart">Al??veri? Sepeti</span>
       </div>
@@ -97,7 +97,7 @@
 </header>
 <nav class="topnav" aria-label="Departmanlar" data-i18n-attr="aria-label:nav.departments_aria">
   <div class="pg-inner topnav-inner">
-    <div class="topnav-item topnav-all" onclick="toggleDrawer()" data-i18n="common.all_categories_lower">? T?m kategoriler</div>
+    <div class="topnav-item topnav-all" onclick="toggleDrawer()" data-i18n="common.all_categories_lower">? T�m kategoriler</div>
     <span class="topnav-sep" aria-hidden="true">|</span>
     <div class="topnav-item topnav-pfos" onclick="typeof eqGo==='function'?eqGo('pfos'):location.href='/pfos'" data-i18n="nav.pfos">Proje Fabrikas?</div>
     <span class="topnav-sep" aria-hidden="true">|</span>
@@ -111,7 +111,7 @@
     <span class="topnav-sep" aria-hidden="true">|</span>
     <div class="topnav-item" onclick="typeof eqGo==='function'?eqGo('hazirlik'):location.href='/shop/hazirlik'" data-i18n="nav.hazirlik">Haz?rl?k Ekipmanlar?</div>
     <span class="topnav-sep" aria-hidden="true">|</span>
-    <div class="topnav-item" onclick="typeof eqGo==='function'?eqGo('icecek'):location.href='/shop/icecek'" data-i18n="nav.icecek">??ecek Ekipmanlar?</div>
+    <div class="topnav-item" onclick="typeof eqGo==='function'?eqGo('icecek'):location.href='/shop/icecek'" data-i18n="nav.icecek">?�ecek Ekipmanlar?</div>
     <span class="topnav-sep" aria-hidden="true">|</span>
     <div class="topnav-item topnav-besos" onclick="typeof eqGo==='function'?eqGo('besos'):location.href='/besos'" data-i18n="nav.bar_design">Bar Design</div>
   </div>
