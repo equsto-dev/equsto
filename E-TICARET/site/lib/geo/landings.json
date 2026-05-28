@@ -386,6 +386,18 @@
         ]
       }
     ],
-    "skipBudget": true
+    "skipBudget": true,
+    "body": "<p>Bu dizin blog ve GEO rehber içeriklerini vitrin menüsünden ayırır. Ekipman arayan kullanıcı doğrudan katalogda kalır; konsept ve teklif soruları bu sayfalarda yanıtlanır. Her rehberde sık sorulan sorular ve uygun sayfalarda vitrin SKU tablosu bulunur.</p><p>Konsept kurulum, arama hedefli sayfalar, editoryal rehberler ve referans projeler bölümlere ayrılmıştır. Bağlantılar footer, sitemap ve llms.txt ile dizinlenir. PFOS teklif özeti için ana giriş noktasıdır.</p><p>Steakhouse, bulut mutfak, market reyonu ve kafe açılış rehberleri ilgili profillere bağlanır. Beş yüz kişilik catering ve metrekare planlama yazıları kapasite sorularını derinleştirir. Restoran checklist akışı PFOS sırasını yansıtır.</p><p>SEO sayfaları Türkiye endüstriyel mutfak, otel, pişirme, soğuk oda ve teklif platformu aramalarını karşılar. İngilizce endüstriyel ve teklif sayfaları ihracat okuyucusuna yöneliktir. Öztiryakiler bayii sayfası resmi kanalı açıklar.</p><p>Referans projeler demonte vaka formatındadır; İstanbul catering ve İzmir modüler bar örnekleri dizinden erişilir. Fotoğraf ve alıntılar yayın sürecinde güncellenir. Kesin ekipman listesi PFOS ile üretilir.</p><p>Vitrin SKU tabloları örnek modülleri gösterir; tam liste projeye özeldir. 2026 fiyatları KDV hariç özetlenir. Proje iskontoları teklif sırasında uygulanır.</p><p>Satış mühendisliği onayı nihai fiyatı belirler. Montaj ve devreye alma proje planında yürür. B2B platform rezervasyon yazılımı değildir.</p><p>Gastronomi Tasarımı yerleşim sorularını derinleştirir. CAD planı sonraki aşamada eklenebilir. Saha ölçüsü PFOS girdilerinin temelidir.</p><p>Hizmet bölgeleri Türkiye ve seçili ihracat pazarlarını kapsar. İletişim hattı özel içerik ve proje taleplerini karşılar. Canlı katalog fiyat ve stok doğrular.</p><p>Rehber dizini ekipman arayan ile konsept araştıran kullanıcıyı ayırır. PFOS’a geçiş teklif üretimi için teşvik edilir. Footer menüsü tüm rehberlere bağlanır.</p><p>Dark kitchen ve bulut mutfak rehberleri çok markalı senaryoyu açıklar. Otel ve tüm gün yemek servisi içerikleri öğün döngüsünü vurgular. Fast food ve fine dining karşılaştırmalı okunabilir.</p><p>Teklif PDF yapılandırılmış SKU satırları içerir. Hedef ön teklif süresi yaklaşık beş dakikadır. Onay sonrası sipariş süreci başlar.</p><p>GEO rehber dizini Equsto içerik mimarisinin merkezi indeksidir.</p><p>PFOS taslak listesi satış mühendisliği onayı ve saha keşfi sonrası kesinleşir; montaj, devreye alma ve garanti kaydı aynı proje numarası altında yürütülür. Equsto B2B endüstriyel mutfak tedarik platformu 2026 güncel fiyatlarıyla teklif üretir.</p>",
+    "lang": "tr",
+    "faq": [
+      [
+        "Neden üst menüde yok?",
+        "Vitrin ekipman odaklıdır; rehberler footer, sitemap ve llms.txt ile dizinlenir."
+      ],
+      [
+        "Steakhouse veya bulut mutfak için hangi sayfa?",
+        "Konsept rehberleri bölümündeki ilgili bağlantıya gidin; PFOS ile 5 dakikada teklif özeti alın."
+      ]
+    ]
   }
 }

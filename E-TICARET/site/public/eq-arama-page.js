@@ -10,6 +10,22 @@
   var catalogImgById = null;
   var catalogImgInflight = null;
 
+  function __searchT(k, fb, vars) {
+    var s = fb || k;
+    try {
+      if (typeof window.eqT === "function") {
+        var v = window.eqT(k, null);
+        if (v != null && v !== k) s = v;
+      }
+    } catch (_) {}
+    if (vars) {
+      Object.keys(vars).forEach(function (kk) {
+        s = String(s).replace(new RegExp("\\{" + kk + "\\}", "g"), vars[kk]);
+      });
+    }
+    return s;
+  }
+
   function esc(s) {
     return String(s == null ? "" : s)
       .replace(/&/g, "&amp;")
@@ -135,6 +151,14 @@
     }
   }
 
+  function syncPageTitle(q) {
+    try {
+      document.title = q
+        ? __searchT("search.title_q", "Arama: «{q}»", { q: q }) + " · Equsto"
+        : __searchT("search.page_title", "Arama — Equsto");
+    } catch (_) {}
+  }
+
   function render(hits, q, total, err) {
     lastRender = { hits: hits || [], q: q || "", total: total, err: err };
     var title = document.getElementById("eq-arama-title");
@@ -142,17 +166,22 @@
     var grid = document.getElementById("eq-arama-grid");
     if (!grid) return;
 
+    syncPageTitle(q);
+
     if (title) {
-      title.textContent = q ? "Arama: «" + q + "»" : "Arama";
+      title.textContent = q
+        ? __searchT("search.title_q", "Arama: «{q}»", { q: q })
+        : __searchT("search.title", "Arama");
     }
     if (count) {
       if (err) count.textContent = err;
-      else if (!q) count.textContent = "Anahtar kelime girin.";
+      else if (!q) count.textContent = __searchT("search.enter_keyword", "Anahtar kelime girin.");
+      else if (hits.length === 0)
+        count.textContent = __searchT("search.no_results", "Sonuç bulunamadı.");
       else
-        count.textContent =
-          hits.length === 0
-            ? "Sonuç bulunamadı."
-            : (total != null ? total : hits.length) + " sonuç";
+        count.textContent = __searchT("search.results_count", "{n} sonuç", {
+          n: total != null ? total : hits.length,
+        });
     }
 
     if (err) {
@@ -161,13 +190,22 @@
       return;
     }
     if (!q) {
-      grid.innerHTML = '<p class="eq-dept-plp-status">Üst çubuktan arama yapın.</p>';
+      grid.innerHTML =
+        '<p class="eq-dept-plp-status">' +
+        esc(__searchT("search.use_top_bar", "Üst çubuktan arama yapın.")) +
+        "</p>";
       return;
     }
     if (!hits.length) {
-      grid.innerHTML = '<p class="eq-dept-plp-empty">Bu aramaya uygun ürün yok.</p>';
+      grid.innerHTML =
+        '<p class="eq-dept-plp-empty">' +
+        esc(__searchT("search.no_products", "Bu aramaya uygun ürün yok.")) +
+        "</p>";
       return;
     }
+
+    var addLbl = __searchT("plp.add_to_cart", "SEPETE EKLE");
+    var imgPh = __searchT("search.image_ph", "Görsel");
 
     grid.innerHTML = hits
       .map(function (h) {
@@ -184,7 +222,9 @@
                 c: h.dept || "",
                 img: src,
               }) +
-              ">SEPETE EKLE</button>"
+              ">" +
+              esc(addLbl) +
+              "</button>"
             : "";
         return (
           '<article class="eq-dept-plp-card">' +
@@ -201,7 +241,7 @@
                   '" data-eq-img-step="0"'
                 : "") +
               ' alt="" loading="lazy" decoding="async" onerror="typeof __eqImgFail===\'function\'&&__eqImgFail(this)">'
-            : '<span class="eq-dept-plp-card__ph">Görsel</span>') +
+            : '<span class="eq-dept-plp-card__ph">' + esc(imgPh) + "</span>") +
           "</a>" +
           '<a class="eq-dept-plp-card__name" href="' +
           esc(href) +
@@ -232,7 +272,11 @@
     }
 
     var grid = document.getElementById("eq-arama-grid");
-    if (grid) grid.innerHTML = '<p class="eq-dept-plp-status">Aranıyor…</p>';
+    if (grid)
+      grid.innerHTML =
+        '<p class="eq-dept-plp-status">' +
+        esc(__searchT("search.searching", "Aranıyor…")) +
+        "</p>";
 
     fetch("/api/search?q=" + encodeURIComponent(q) + "&limit=" + LIMIT, {
       headers: { Accept: "application/json" },
@@ -244,7 +288,12 @@
       })
       .then(function (res) {
         if (!res.ok || res.data.error) {
-          render([], q, 0, res.data.error || "Arama servisi kullanılamıyor.");
+          render(
+            [],
+            q,
+            0,
+            res.data.error || __searchT("search.service_unavailable", "Arama servisi kullanılamıyor.")
+          );
           return;
         }
         return loadCatalogImageMap().then(function () {
@@ -254,13 +303,24 @@
         });
       })
       .catch(function (e) {
-        render([], q, 0, e && e.message ? e.message : "Bağlantı hatası");
+        render(
+          [],
+          q,
+          0,
+          e && e.message ? e.message : __searchT("search.connection_error", "Bağlantı hatası")
+        );
       });
   }
 
   document.addEventListener("equsto:kur-updated", function () {
     if (lastRender.q) {
       render(lastRender.hits, lastRender.q, lastRender.total, lastRender.err);
+    }
+  });
+
+  window.addEventListener("equsto:i18n-ready", function () {
+    if (lastRender.q || lastRender.hits.length || !getQuery()) {
+      render(lastRender.hits, lastRender.q || getQuery(), lastRender.total, lastRender.err);
     }
   });
 

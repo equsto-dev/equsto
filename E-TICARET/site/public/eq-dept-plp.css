@@ -28,6 +28,36 @@ body.eq-dept-plp {
   font-weight: 700;
   border-bottom: 1px solid #e8e8e8;
 }
+.eq-dept-kuvet-subnav {
+  border-bottom: 1px solid #e8e8e8;
+  padding: 8px 0 10px;
+}
+.eq-dept-kuvet-subnav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.eq-dept-kuvet-subnav__btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 8px 14px;
+  border: 0;
+  background: transparent;
+  font-size: 12px;
+  font-weight: 500;
+  color: #222;
+  cursor: pointer;
+  line-height: 1.35;
+}
+.eq-dept-kuvet-subnav__btn:hover {
+  background: #f3f6fb;
+}
+.eq-dept-kuvet-subnav__btn.is-active {
+  background: #e8eef8;
+  color: #001e50;
+  font-weight: 600;
+}
 /* Cafemarkt tarzı facet (eq-pisirme-cm-facets.js) */
 .eq-cm-facet {
   border-bottom: 1px solid #e8e8e8;

@@ -4,13 +4,18 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import {
+  assertGeoEnBody,
+  normalizeGeoEnBody,
+  plainText,
+} from "./lib/normalize-geo-en-body.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const out = path.join(root, "public/data/geo-landings-en.json");
 
 /** @param {string} html */
 function len(html) {
-  return html.replace(/<[^>]+>/g, "").length;
+  return plainText(html).length;
 }
 
 const pages = {
@@ -536,13 +541,15 @@ const pages = {
   },
   "en/blog": {
     lang: "en",
-    profile: "blogHub",
+    profile: "blogHubEn",
     title: "Equsto guides & blog | GEO index",
     description: "Commercial kitchen guides: concept setups, SEO pages, editorials and reference projects. Not in the shop menu.",
     h1: "Guides & blog index",
     lead: "Programmatic guides sit outside the equipment menu; each page includes FAQ and catalogue links where relevant.",
     skipTable: true,
     skipBudget: true,
+    body:
+      "<p>This index separates guides and GEO content from the equipment shop menu. Shoppers stay in the catalogue; concept and quote questions are answered here. Pages include FAQs and sample SKU tables where relevant. Concept setups, SEO landings, editorials and reference projects are grouped below; footer, sitemap and llms.txt link every guide. Use Project Factory for quote summaries in about five minutes.</p>",
     sections: [
       {
         title: "Concept setup guides",
@@ -597,8 +604,6 @@ const pages = {
         ],
       },
     ],
-    body:
-      "<p>This index separates guides and GEO content from the equipment shop menu. Shoppers stay in the catalogue; concept and quote questions are answered here. Pages include FAQs and sample SKU tables where relevant.</p><p>Concept setups, SEO landings, editorials and reference projects are grouped below. Links are also listed in the footer, sitemap and llms.txt.</p><p>Use Project Factory for quote summaries. Open the concept link that matches steakhouse, cloud kitchen, market aisle or another format.</p>",
     faq: [
       [
         "Why not in the top menu?",
@@ -617,19 +622,19 @@ const pages = {
   },
 };
 
-// Pad bodies to 600+ chars
-const TAIL =
-  " Complete the equipment list in Project Factory or via our contact channel; installation is planned with sales engineering.";
+let failed = 0;
 for (const [key, page] of Object.entries(pages)) {
   if (!page.body) continue;
-  while (len(page.body) < 600) {
-    page.body = page.body.replace(/<\/p>\s*$/, TAIL + "</p>");
-  }
-  if (len(page.body) > 750) {
-    console.warn(key, len(page.body), "over 750");
+  try {
+    page.body = assertGeoEnBody(key, normalizeGeoEnBody(page.body));
+  } catch (e) {
+    console.error(String(e.message || e));
+    failed++;
   }
 }
+if (failed) process.exit(1);
 
 const outJson = { version: 1, source: "English GEO guides 2026-06", ...pages };
 fs.writeFileSync(out, JSON.stringify(outJson, null, 2) + "\n");
-console.log("Wrote", out, Object.keys(pages).length, "pages");
+fs.copyFileSync(out, path.join(root, "lib/geo/landings-en.json"));
+console.log("Wrote", out, Object.keys(pages).length, "pages (bodies 600-700 chars)");

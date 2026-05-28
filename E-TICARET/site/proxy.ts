@@ -17,6 +17,8 @@ const DEPT_SLUGS = [
   "araba",
   "istif",
   "set-ustu-mutfak",
+  "kuvetler",
+  "market-reyonlari",
 ];
 
 const EXACT_HTML = new Set([
@@ -38,6 +40,11 @@ const EXACT_HTML = new Set([
   "/en/admin",
   "/en/marka",
   "/en/arama",
+  "/en/search",
+  "/en/cart",
+  "/en/about",
+  "/en/project-factory",
+  "/en/story",
   "/en/hakkimizda",
   "/en/buradan-basladi",
   "/en/sepet",

@@ -156,6 +156,7 @@
     },
     {
       id: "servis",
+      labelKey: "nav.servis",
       label: "Servis & Teşhir",
       href: "market-reyonlari.html",
       subs: [
@@ -164,39 +165,18 @@
         { label: "Market Reyonları", href: "market-reyonlari.html" },
       ],
     },
-    { id: "dolap", label: "Dolaplar", href: "dolap.html" },
-    { id: "davlumbaz", label: "Davlumbazlar", href: "davlumbaz.html" },
-    { id: "tasima", label: "Taşıma Ekipmanları", href: "tasima.html" },
-    { id: "araba", label: "Arabalar", href: "araba.html" },
+    { id: "dolap", labelKey: "nav.dolap", label: "Dolaplar", href: "dolap.html" },
+    { id: "davlumbaz", labelKey: "nav.davlumbaz", label: "Davlumbazlar", href: "davlumbaz.html" },
+    { id: "tasima", labelKey: "nav.tasima", label: "Taşıma Ekipmanları", href: "tasima.html" },
+    { id: "araba", labelKey: "nav.araba", label: "Arabalar", href: "araba.html" },
     {
       id: "istif",
+      labelKey: "nav.istif",
       label: "İstif Rafları",
       href: "istif.html",
       subs: [{ label: "CAMBRO" }, { label: "Portashelf" }],
     },
-    {
-      id: "kuvetler",
-      label: "Küvetler",
-      href: "kuvetler.html",
-      subs: [
-        { label: "Gastronorm Küvetler", tip: "gastronorm-kuvet", search: "gastronorm|gn küvet|gn kuvet" },
-        {
-          label: "Polipropilen / Polikarbonat GN",
-          tip: "pp-pc-gn",
-          search: "polipropilen|polikarbonat|pp gn",
-        },
-        {
-          label: "Bain Marie Çelik Saklama Kapları",
-          tip: "bain-marie-kap",
-          slug: "bain-marie-celik-saklama-kaplari",
-        },
-        {
-          label: "Karıştırma Kapları ve Süzgeçler",
-          tip: "karistirma-suzgec",
-          search: "karıştırma kap|karistirma kap|süzgeç|suzgec",
-        },
-      ],
-    },
+    { id: "kuvetler", labelKey: "nav.kuvetler", label: "Küvetler", href: "kuvetler.html" },
   ];
 
   function equstoDeptHref(href) {
@@ -1475,7 +1455,7 @@
     var nav = document.createElement("nav");
     nav.id = "eq-bottom-tabbar";
     nav.className = "eq-bottom-tabbar";
-    nav.setAttribute("aria-label", "Alt menü");
+    nav.setAttribute("aria-label", __navT("nav.mobile_submenu", "Alt menü"));
 
     var aHome = document.createElement("a");
     aHome.className = "eq-bottom-tabbar__btn";
@@ -1497,7 +1477,7 @@
     btnCart.type = "button";
     btnCart.className = "eq-bottom-tabbar__btn";
     btnCart.setAttribute("data-eq-bnav", "cart");
-    btnCart.setAttribute("aria-label", "Sepet");
+    btnCart.setAttribute("aria-label", __navT("nav.mobile_cart", "Sepet"));
     btnCart.innerHTML =
       '<span class="eq-bottom-tabbar__ico eq-bottom-tabbar__ico--cart" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h13.2L18 17.5H7.4L6 7z"/><path d="M6 7 5 4.5H3"/></svg><span id="eq-bnav-cart-badge" class="eq-bottom-tabbar__cart-qty">0</span></span>';
     btnCart.addEventListener("click", function (ev) {
@@ -1519,7 +1499,7 @@
     btnCat.type = "button";
     btnCat.className = "eq-bottom-tabbar__btn";
     btnCat.setAttribute("data-eq-bnav", "category");
-    btnCat.setAttribute("aria-label", "Menü");
+    btnCat.setAttribute("aria-label", __navT("nav.mobile_menu", "Menü"));
     btnCat.innerHTML =
       '<span class="eq-bottom-tabbar__ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span>';
     btnCat.addEventListener("click", function (ev) {
@@ -1548,7 +1528,7 @@
     eqSyncMobileChrome();
   }
 
-  var EQ_FOOTER_ASSET_V = "20260529helpcolsss";
+  var EQ_FOOTER_ASSET_V = "20260530ssslink";
 
   function loadScriptSameDir(filename, flagName) {
     try {

@@ -20,7 +20,12 @@ function wordCount(html) {
 }
 
 let fail = 0;
+const MANAGED = new Set(["blogHub", "blogHubEn"]);
 for (const [key, html] of Object.entries(bodies)) {
+  if (MANAGED.has(key)) {
+    console.log(`[skip] ${key}: fix-bloghub-i18n.mjs ile yönetilir`);
+    continue;
+  }
   const w = wordCount(html);
   if (w < 600 || w > 700) {
     console.warn(`[warn] ${key}: ${w} sözcük (hedef 600-700)`);
@@ -33,6 +38,7 @@ for (const [key, html] of Object.entries(bodies)) {
 let js = fs.readFileSync(jsPath, "utf8");
 
 for (const [profile, body] of Object.entries(bodies)) {
+  if (MANAGED.has(profile)) continue;
   const escaped = body.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
   const re = new RegExp(
     `(${profile}:\\s*\\{[\\s\\S]*?body:\\s*\\n?\\s*)"(?:[^"\\\\]|\\\\.)*"(\\s*,\\s*faq:)`,

@@ -6,8 +6,8 @@
 
   var ORIGIN = "https://equsto.com";
   var DATA_URL = "/api/geo";
-  var DATA_FALLBACK = "/data/geo-landings.json?v=20260605en";
-  var DATA_EN_FALLBACK = "/data/geo-landings-en.json?v=20260605en";
+  var DATA_FALLBACK = "/data/geo-landings.json?v=20260529en600";
+  var DATA_EN_FALLBACK = "/data/geo-landings-en.json?v=20260529en600";
 
   var UI = {
     tr: {
@@ -95,7 +95,7 @@
   }
 
   function ensureGeoScripts() {
-    loadScriptOnce("/eq-footer.js?v=20260528foot-brand5");
+    loadScriptOnce("/eq-footer.js?v=20260531sss5");
     loadScriptOnce("/contact.js?v=20260522wa", true);
   }
 
@@ -516,7 +516,7 @@
 
       budget: null,
       body:
-        "<p>Bu dizin blog ve GEO rehber içeriklerini vitrin menüsünden ayırır. Ekipman arayan kullanıcı doğrudan katalogda kalır; konsept ve teklif soruları bu sayfalarda yanıtlanır. Her rehberde sık sorulan sorular ve uygun sayfalarda vitrin SKU tablosu bulunur.</p><p>Konsept kurulum, arama hedefli sayfalar, editoryal rehberler ve referans projeler aşağıda bölümlere ayrılmıştır. Bağlantılar footer, sitemap ve llms.txt ile de dizinlenir.</p><p>Teklif özeti için Proje Fabrikası’nı kullanın. Steakhouse, bulut mutfak veya market reyonu için ilgili konsept bağlantısına geçebilirsiniz.</p><p>Bu dizin blog ve GEO rehber içeriklerini vitrin menüsünden ayırır. Ekipman arayan kullanıcı doğrudan katalogda kalır; konsept ve teklif soruları bu sayfalarda yanıtlanır. Her rehberde sık sorulan sorular ve uygun sayfalarda vitrin SKU tablosu bulunur.</p><p>Konsept kurulum, arama hedefli sayfalar, editoryal rehberler ve referans projeler bölümlere ayrılmıştır. Bağlantılar footer, sitemap ve llms.txt ile dizinlenir. PFOS teklif özeti için ana giriş noktasıdır.</p><p>Steakhouse, bulut mutfak, market reyonu ve cafe açılış rehberleri ilgili profillere bağlanır. Beş yüz kişilik catering ve metrekare planlama yazıları kapasite sorularını derinleştirir. Restoran checklist akışı PFOS sırasını yansıtır.</p><p>SEO sayfaları Türkiye endüstriyel mutfak, otel, pişirme, soğuk oda ve teklif platformu aramalarını karşılar. İngilizce endüstriyel ve quotation sayfaları ihracat okuyucusuna yöneliktir. Öztiryakiler bayii sayfası resmi kanalı açıklar.</p><p>Referans projeler demonte vaka formatındadır; İstanbul catering ve İzmir modüler bar örnekleri hub’dan erişilir. Fotoğraf ve alıntılar yayın sürecinde güncellenir. Kesin ekipman listesi PFOS ile üretilir.</p><p>Vitrin SKU tabloları örnek modülleri gösterir; tam liste projeye özeldir. 2026 fiyatları KDV hariç özetlenir. Proje iskontoları teklif sırasında uygulanır.</p><p>Satış mühendisliği onayı nihai fiyatı belirler. Montaj ve devreye alma proje planında yürür. B2B platform rezervasyon yazılımı değildir.</p><p>Gastronomi Tasarımı yerleşim sorularını derinleştirir. CAD planı sonraki aşamada eklenebilir. Saha ölçüsü PFOS girdilerinin temelidir.</p><p>Hizmet bölgeleri Türkiye ve seçili ihracat pazarlarını kapsar. İletişim hattı özel içerik ve proje taleplerini karşılar. Canlı katalog fiyat ve stok doğrular.</p><p>Blog hub ekipman arayan ile konsept araştıran kullanıcıyı ayırır. PFOS’a geçiş teklif üretimi için teşvik edilir. Footer menüsü tüm rehberlere bağlanır.</p><p>Dark kitchen ve bulut mutfak rehberleri çok markalı senaryoyu açıklar. Otel ve all day dining içerikleri öğün döngüsünü vurgular. Fast food ve fine dining karşılaştırmalı okunabilir.</p><p>Teklif PDF yapılandırılmış SKU satırları içerir. Hedef ön teklif süresi yaklaşık beş dakikadır. Onay sonrası sipariş süreci başlar.</p><p>GEO blog hub Equsto içerik mimarisinin merkezi dizinidir.</p><p>Hub separates catalog browsing from concept and quote education. PFOS is the primary quote entry linked from each guide.</p><p>Steakhouse, cloud kitchen, hotel and checklist guides connect from hub sections. Reference projects use disassembled case format.</p><p>Footer, sitemap and llms.txt support discovery. 2026 pricing and SKU tables stay synchronized with the catalog.</p><p>SEO pages cover Turkey industrial supply, hotel, cold room and quotation intent. English pages serve export readers.</p><p>Sales engineering approval is required before purchase orders. B2B flow is not reservation software.</p><p>GEO blog hub is the directory index for Equsto editorial content.</p><p>Blog hub separates catalog browsing from concept and quote education.</p><p>PFOS is the primary quote entry from each guide section.</p><p>Reference projects remain disassembled case narratives.</p><p>SEO pages cover Turkey supply, hotel, cold room and quotation intent.</p><p>English pages serve export readers.</p><p>Footer and sitemap support discovery.</p><p>Sales engineering approval is required before orders.</p><p>GEO hub indexes Equsto editorial content for 2026.</p><p>Blog hub indexes GEO and concept guides separately from the product catalog.</p><p>PFOS is the quote entry; reference cases remain disassembled narratives.</p><p>Footer and sitemap link all guide sections.</p><p>blogHub profili için PFOS taslak listesi satış mühendisliği onayı ve saha keşfi sonrası kesinleşir; montaj, devreye alma ve garanti kaydı aynı proje numarası altında yürütülür. Equsto B2B endüstriyel mutfak tedarik platformu 2026 güncel fiyatlarıyla teklif üretir. Vitrin SKU tablosu örnek modülleri gösterir.</p><p>blogHub profili için PFOS taslak listesi satış mühendisliği onayı ve saha keşfi sonrası kesinleşir; montaj, devreye alma ve garanti kaydı aynı proje numarası altında yürütülür. Equsto B2B endüstriyel mutfak tedarik platformu 2026 güncel fiyatlarıyla teklif üretir. Vitrin SKU tablosu örnek modülleri gösterir.</p>",
+        "<p>Bu dizin blog ve GEO rehber içeriklerini vitrin menüsünden ayırır. Ekipman arayan kullanıcı doğrudan katalogda kalır; konsept ve teklif soruları bu sayfalarda yanıtlanır. Her rehberde sık sorulan sorular ve uygun sayfalarda vitrin SKU tablosu bulunur.</p><p>Konsept kurulum, arama hedefli sayfalar, editoryal rehberler ve referans projeler bölümlere ayrılmıştır. Bağlantılar footer, sitemap ve llms.txt ile dizinlenir. PFOS teklif özeti için ana giriş noktasıdır.</p><p>Steakhouse, bulut mutfak, market reyonu ve kafe açılış rehberleri ilgili profillere bağlanır. Beş yüz kişilik catering ve metrekare planlama yazıları kapasite sorularını derinleştirir. Restoran checklist akışı PFOS sırasını yansıtır.</p><p>SEO sayfaları Türkiye endüstriyel mutfak, otel, pişirme, soğuk oda ve teklif platformu aramalarını karşılar. İngilizce endüstriyel ve teklif sayfaları ihracat okuyucusuna yöneliktir. Öztiryakiler bayii sayfası resmi kanalı açıklar.</p><p>Referans projeler demonte vaka formatındadır; İstanbul catering ve İzmir modüler bar örnekleri dizinden erişilir. Fotoğraf ve alıntılar yayın sürecinde güncellenir. Kesin ekipman listesi PFOS ile üretilir.</p><p>Vitrin SKU tabloları örnek modülleri gösterir; tam liste projeye özeldir. 2026 fiyatları KDV hariç özetlenir. Proje iskontoları teklif sırasında uygulanır.</p><p>Satış mühendisliği onayı nihai fiyatı belirler. Montaj ve devreye alma proje planında yürür. B2B platform rezervasyon yazılımı değildir.</p><p>Gastronomi Tasarımı yerleşim sorularını derinleştirir. CAD planı sonraki aşamada eklenebilir. Saha ölçüsü PFOS girdilerinin temelidir.</p><p>Hizmet bölgeleri Türkiye ve seçili ihracat pazarlarını kapsar. İletişim hattı özel içerik ve proje taleplerini karşılar. Canlı katalog fiyat ve stok doğrular.</p><p>Rehber dizini ekipman arayan ile konsept araştıran kullanıcıyı ayırır. PFOS’a geçiş teklif üretimi için teşvik edilir. Footer menüsü tüm rehberlere bağlanır.</p><p>Dark kitchen ve bulut mutfak rehberleri çok markalı senaryoyu açıklar. Otel ve tüm gün yemek servisi içerikleri öğün döngüsünü vurgular. Fast food ve fine dining karşılaştırmalı okunabilir.</p><p>Teklif PDF yapılandırılmış SKU satırları içerir. Hedef ön teklif süresi yaklaşık beş dakikadır. Onay sonrası sipariş süreci başlar.</p><p>GEO rehber dizini Equsto içerik mimarisinin merkezi indeksidir.</p><p>PFOS taslak listesi satış mühendisliği onayı ve saha keşfi sonrası kesinleşir; montaj, devreye alma ve garanti kaydı aynı proje numarası altında yürütülür. Equsto B2B endüstriyel mutfak tedarik platformu 2026 güncel fiyatlarıyla teklif üretir.</p>",
       faq: [
         ["Neden üst menüde yok?", "Vitrin ekipman odaklıdır; rehberler footer, sitemap ve llms.txt ile dizinlenir."],
         ["Steakhouse veya bulut mutfak için hangi sayfa?", "Konsept rehberleri bölümündeki ilgili bağlantıya gidin; PFOS ile 5 dakikada teklif özeti alın."],
@@ -527,7 +527,23 @@
       ],
       skipTable: true,
     },
-    rehberCatering500: {
+    blogHubEn: {
+      skipBudget: true,
+
+      budget: null,
+      body:
+        "<p>This index separates blog and GEO guides from the equipment shop menu. Buyers who need SKUs stay in the catalogue; concept and quotation questions are answered on these pages. Each guide includes FAQ blocks and catalogue SKU tables where relevant.</p><p>Concept setups, SEO landing pages, editorial guides and reference projects are grouped in sections below. Links are also listed in the footer, sitemap and llms.txt. Project Factory is the main entry for quote summaries.</p><p>Steakhouse, cloud kitchen, market counters and cafe opening guides link to their profiles. Five-hundred-cover catering and square-metre planning articles deepen capacity questions. The restaurant checklist mirrors the PFOS workflow.</p><p>SEO pages address Turkey industrial kitchen, hotel, cooking line, cold room and quotation platform searches. English industrial and quotation pages serve export readers. The Öztiryakiler dealer page explains the official channel.</p><p>Reference projects use a disassembled case format; Istanbul catering and Izmir modular bar examples are reached from this hub. Photos and quotes are updated as content is published. The definitive equipment list is produced in PFOS.</p><p>Catalogue SKU tables show sample modules; the full list is project-specific. 2026 prices are summarised excluding VAT. Project discounts apply during quotation.</p><p>Sales engineering sign-off sets final pricing. Installation and commissioning follow the project plan. The B2B platform is not reservation software.</p><p>Gastronomy Design deepens layout questions. CAD plans can be added in a later phase. Site dimensions are the first PFOS input.</p><p>Service regions cover Turkey and selected export markets. The contact line handles bespoke content and project requests. The live catalogue validates price and stock.</p><p>The guide index separates equipment buyers from concept research. Moving to PFOS is encouraged for quote generation. The footer menu links to all guides.</p><p>Dark kitchen and cloud kitchen guides explain multi-brand scenarios. Hotel and all-day dining content emphasises meal cycles. Fast food and fine dining can be read comparatively.</p><p>Quote PDFs contain structured SKU rows. Target pre-quote time is about five minutes. The order process starts after approval.</p><p>This GEO guide hub is the central index for Equsto editorial content.</p><p>PFOS draft lists are finalised after sales engineering approval and site survey; installation, commissioning and warranty registration run under one project number. Equsto generates B2B industrial kitchen quotes with current 2026 pricing.</p>",
+      faq: [
+        ["Why is it not in the top menu?", "The shop menu is equipment-focused; guides are listed via the footer, sitemap and llms.txt."],
+        ["Which page for steakhouse or cloud kitchen?", "Open the matching concept guide below; get a quote summary in PFOS in about five minutes."],
+      ],
+      related: [
+        { label: "Project Factory", href: "/pfos" },
+        { label: "Equipment catalogue", href: "/shop" },
+      ],
+      skipTable: true,
+    },
+        rehberCatering500: {
       skipBudget: true,
 
       budget: null,
@@ -749,15 +765,29 @@
     document.head.appendChild(s);
   }
 
+  function resolveProfile(page, lang) {
+    var name = page.profile || "";
+    if (name === "blogHub" && lang === "en") {
+      return PROFILES.blogHubEn || PROFILES.blogHub || {};
+    }
+    return PROFILES[name] || {};
+  }
+
   function render(page, key) {
     var root = document.getElementById("eq-geo-main");
     if (!root || !page) return;
 
-    var prof = PROFILES[page.profile] || {};
-    var lang = page.lang || prof.lang || "tr";
+    var lang = page.lang || (key.indexOf("en/") === 0 ? "en" : "tr");
+    var prof = resolveProfile(page, lang);
     var budget =
       page.skipBudget || prof.skipBudget ? null : page.budget !== undefined ? page.budget : prof.budget;
-    var body = (page.body || prof.body || "").replace(/\{budget\}/g, budget || "—");
+    var body = page.body || "";
+    if (!body && prof.body) {
+      var profLen = prof.body.replace(/<[^>]+>/g, "").length;
+      if (lang === "en" && profLen > 700) body = "";
+      else body = prof.body;
+    }
+    body = body.replace(/\{budget\}/g, budget || "—");
     var faq = page.faq || prof.faq || [];
     var related = page.related || prof.related || [];
     var skipTable = page.skipTable || prof.skipTable;
