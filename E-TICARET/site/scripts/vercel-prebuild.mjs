@@ -4,8 +4,19 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { findRepoRoot } from "./vercel-resolve-site.mjs";
 
 const siteDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+
+/** Eski symlink/cache: .next repo kokunde araniyorsa ENOENT onlenir */
+function cleanStaleNextDirs(dir) {
+  const repo = findRepoRoot(dir);
+  for (const target of [path.join(dir, ".next"), path.join(repo, ".next")]) {
+    if (!fs.existsSync(target)) continue;
+    fs.rmSync(target, { recursive: true, force: true });
+    console.log("[vercel-prebuild] eski .next silindi:", target);
+  }
+}
 
 function patchPrismaSchemaForVercel(dir) {
   const schemaPath = path.join(dir, "prisma/schema.prisma");
@@ -61,6 +72,7 @@ function syncPfosDataToPublic(dir) {
   console.log("[vercel-prebuild] lib/pfos/data → public/data");
 }
 
+cleanStaleNextDirs(siteDir);
 patchPrismaSchemaForVercel(siteDir);
 patchPrismaLibForVercel(siteDir);
 patchTsconfigForVercel(siteDir);
