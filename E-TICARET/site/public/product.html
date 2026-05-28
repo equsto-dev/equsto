@@ -166,6 +166,16 @@
       box-shadow:0 8px 40px rgba(0,0,0,.55);
     }
 
+    /* Çağlayan: varyanta özel kesit / ölçü çizimi */
+    body.eq-shop .eq-caglayan-teknik{margin-top:20px;padding:18px 0 4px;border-top:1px solid var(--eq-border-soft);}
+    body.eq-shop .eq-caglayan-teknik h2{font-size:17px;font-weight:700;margin:0 0 6px;color:var(--eq-text);}
+    body.eq-shop .eq-caglayan-teknik-cap{font-size:12.5px;color:var(--eq-text-muted);margin:0 0 12px;}
+    body.eq-shop .eq-caglayan-teknik-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;}
+    body.eq-shop .eq-caglayan-teknik-card{margin:0;}
+    body.eq-shop .eq-caglayan-teknik-frame{background:#1a2332;border-radius:8px;padding:10px;min-height:200px;display:flex;align-items:center;justify-content:center;}
+    body.eq-shop .eq-caglayan-teknik-frame img{max-width:100%;max-height:280px;object-fit:contain;}
+    body.eq-shop .eq-caglayan-teknik-card figcaption{font-size:11px;color:var(--eq-text-muted);margin-top:6px;text-align:center;}
+
     /* Orta kolon: marka linki, başlık, rating, bullet liste */
     body.eq-shop .eq-product-info{padding:0 6px 0 4px;}
     body.eq-shop .eq-product-cat{display:none;}
@@ -511,6 +521,68 @@
       if (/\d{3,4}.*[-_]model-\d/i.test(fn)) return true;
       if (/teknik|[-_]cizim|drawing|schema|blueprint|olcu-?cizim/i.test(fn)) return true;
       return false;
+    }
+
+    /** Çağlayan PDP — import’taki caglayanTeknik veya galeriden kesit/model çizimi. */
+    function getCaglayanTeknikImgs(x) {
+      if (!isCaglayanRefrigeration(x)) return [];
+      var out = [];
+      var t = x.caglayanTeknik;
+      if (t && t.kesit) out.push({ rel: t.kesit, role: "kesit" });
+      if (t && t.modelCizim) out.push({ rel: t.modelCizim, role: "model" });
+      if (!out.length && x.images && x.images.length) {
+        x.images.forEach(function (rel) {
+          if (!isLineArtProductImg(rel)) return;
+          var fn = imgFileName(rel);
+          if (/kesit/i.test(fn)) out.push({ rel: rel, role: "kesit" });
+          else if (/model-\d/i.test(fn)) out.push({ rel: rel, role: "model" });
+        });
+      }
+      return out.slice(0, 2);
+    }
+
+    function renderCaglayanTeknikBlock(x) {
+      var items = getCaglayanTeknikImgs(x);
+      if (!items.length) return "";
+      var o = x.olculer || {};
+      var cap = "";
+      if (o.genislik_mm && o.yukseklik_mm) {
+        cap =
+          o.derinlik_mm > 0
+            ? o.genislik_mm + "×" + o.derinlik_mm + "×" + o.yukseklik_mm + " mm"
+            : o.genislik_mm + "×" + o.yukseklik_mm + " mm";
+        cap = "Seçili ölçü: " + cap;
+      }
+      var cards = items
+        .map(function (item) {
+          var src = resolveProductImgSrc(item.rel);
+          if (!src) return "";
+          var title = item.role === "kesit" ? "Detay kesit" : "Ölçü çizimi";
+          return (
+            '<figure class="eq-caglayan-teknik-card">' +
+            '<div class="eq-caglayan-teknik-frame">' +
+            '<img class="eq-product-hero-img eq-product-hero-img--lineart" src="' +
+            esc(eqHtmlUrl(src)) +
+            '"' +
+            pdpImgFailAttr() +
+            pdpImgDataAttrs(x, item.rel) +
+            ' alt="' +
+            esc(title) +
+            '" loading="lazy" decoding="async">' +
+            "</div><figcaption>" +
+            esc(title) +
+            "</figcaption></figure>"
+          );
+        })
+        .join("");
+      return (
+        '<section class="eq-caglayan-teknik" aria-label="Teknik çizim">' +
+        "<h2>Teknik kesit ve ölçü</h2>" +
+        (cap ? '<p class="eq-caglayan-teknik-cap">' + esc(cap) + "</p>" : "") +
+        '<div class="eq-caglayan-teknik-grid">' +
+        cards +
+        "</div></section>"
+      );
     }
 
     function applyLineArtHeroState(mainImg, wrap, lineart) {
@@ -866,6 +938,11 @@
 
     function railLabelForProduct(x) {
       if (!x || !isMarketReyonProduct(x)) return railLabelFor((x && x.category) || "");
+      if (isCaglayanRefrigeration(x) && x.caglayanModelSlug) {
+        var base = String(x.name || "").split("—")[0].trim();
+        if (!base) base = String(x.caglayanModelSlug || "").replace(/-/g, " ");
+        return base + " — ölçü varyantları";
+      }
       var series = String(x.series || "").trim();
       if (series) return series + " ve muadil modeller";
       var tid = String(x.tileId || "");
@@ -926,6 +1003,37 @@
       var out = [];
       for (var j = 0; j < scored.length && out.length < 10; j++) out.push(scored[j].p);
       return { items: out, mode: "market-reyon" };
+    }
+
+    /** Çağlayan: aynı model (caglayanModelSlug) altında tüm ölçü varyantları. */
+    function pickCaglayanVariants(x, all) {
+      if (!x || !all || !all.length) return { items: [], mode: "caglayan-variant" };
+      var parent = String(x.caglayanModelSlug || "").toLowerCase();
+      if (!parent) return { items: [], mode: "caglayan-variant" };
+      var curSlug = String(x.slug || x.id || "").toLowerCase();
+      var siblings = [];
+      for (var i = 0; i < all.length; i++) {
+        var p = all[i];
+        if (!p || !isCaglayanRefrigeration(p)) continue;
+        if (String(p.caglayanModelSlug || "").toLowerCase() !== parent) continue;
+        var pSlug = String(p.slug || p.id || "").toLowerCase();
+        if (pSlug && pSlug === curSlug) continue;
+        siblings.push(p);
+      }
+      siblings.sort(function (a, b) {
+        var oa = a.olculer || {};
+        var ob = b.olculer || {};
+        var ga = Number(oa.genislik_mm) || 0;
+        var gb = Number(ob.genislik_mm) || 0;
+        if (ga !== gb) return ga - gb;
+        var da = Number(oa.derinlik_mm) || 0;
+        var db = Number(ob.derinlik_mm) || 0;
+        if (da !== db) return da - db;
+        return (Number(oa.yukseklik_mm) || 0) - (Number(ob.yukseklik_mm) || 0);
+      });
+      var out = [];
+      for (var j = 0; j < siblings.length && out.length < 12; j++) out.push(siblings[j]);
+      return { items: out, mode: "caglayan-variant" };
     }
 
     /** Ürün adı içindeki anahtar kelimelerle alt-tip etiketi (bağlam koru: espresso↔espresso, türk↔türk, vb.). */
@@ -989,6 +1097,10 @@
     /** Aynı kategori + (varsa) aynı alt-tip; mevcut ürün hariç; marka çeşitliliği round-robin; en fazla 5. */
     function pickRelatedProducts(x, all, keyFn) {
       if (!x || !all || !all.length) return { items: [], mode: "" };
+      if (isCaglayanRefrigeration(x) && x.caglayanModelSlug) {
+        var cv = pickCaglayanVariants(x, all);
+        if (cv.items.length) return cv;
+      }
       if (isMarketReyonProduct(x)) return pickMarketReyonMuadil(x, all, keyFn);
       if (!keyFn) return { items: [], mode: "" };
       var cat = x.category || "";
@@ -1267,6 +1379,10 @@
       var items = pack.items;
       if (!items.length) return "";
       var lineTitle = esc(railLabelForProduct(x));
+      var familyHint =
+        pack.mode === "caglayan-variant"
+          ? "Aynı model — farklı ölçüler"
+          : "Muadil ve benzer modeller";
       var curSlug = String(x.slug || x.id || "").toLowerCase();
       var scrollCls =
         items.length > 5 ? " eq-product-family-scroll eq-product-family-scroll--carousel" : " eq-product-family-scroll";
@@ -1307,7 +1423,9 @@
         '<div class="eq-product-family-line">' +
         lineTitle +
         "</div>" +
-        '<div class="eq-product-family-hint">Muadil ve benzer modeller</div>' +
+        '<div class="eq-product-family-hint">' +
+        esc(familyHint) +
+        "</div>" +
         "</div>" +
         '<div class="' +
         scrollCls.trim() +
@@ -1670,6 +1788,7 @@
         '<div class="eq-buybox-secure">🔒 Güvenli işlem</div>' +
         "</aside>" +
         "</div>" +
+        renderCaglayanTeknikBlock(x) +
         (function(){
           var sp = splitSpecsCols(x.specs);
           if (sp.right) {
