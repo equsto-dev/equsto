@@ -19,7 +19,7 @@ export default function BesosLayout({ children }: { children: React.ReactNode })
       {/* eslint-disable-next-line @next/next/no-css-tags */}
       <link rel="stylesheet" href="/theme.css?v=20260524besos" />
       {/* eslint-disable-next-line @next/next/no-css-tags */}
-      <link rel="stylesheet" href="/besos-shell.css?v=20260524besos" />
+      <link rel="stylesheet" href="/besos-shell.css?v=20260528besos-hdr1" />
       {children}
       <BesosDrawerShell />
       <BesosScripts />

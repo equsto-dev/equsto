@@ -19,13 +19,13 @@ declare global {
 
 export default function BesosScripts() {
   useEffect(() => {
-    document.body.classList.add("bd-page", "besos", "besos-locked", "eq-shop");
+    document.body.classList.add("bd-page", "besos", "eq-shop");
     const mountFooter = () => window.__eqMountMarketFooter?.();
     mountFooter();
     const t1 = window.setTimeout(mountFooter, 400);
     return () => {
       window.clearTimeout(t1);
-      document.body.classList.remove("bd-page", "besos", "besos-locked", "eq-shop");
+      document.body.classList.remove("bd-page", "besos", "eq-shop");
     };
   }, []);
 

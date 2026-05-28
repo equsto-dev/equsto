@@ -1,6 +1,5 @@
 /**
- * Besos koyu kabuk — tüm /besos/* (Next + statik imt300, bar-module)
- * bar-design.html inline kilitleme kurallarının tek kaynağı
+ * Besos — Equsto üst bant (ana site düzeni), yalnızca siyah zemin.
  */
 :root {
   --bes-paper: #f7f6f3;
@@ -26,128 +25,47 @@ body.bd-page.besos {
   background: #000 !important;
   color: var(--bes-ink);
   color-scheme: dark;
+  /* Üst bant: site düzeni, siyah arka plan */
+  --eq-hdr-bar-bg: #000000;
+  --eq-hdr-bar-border: rgba(255, 255, 255, 0.12);
+  --eq-hdr-bar-text: #ffffff;
+  --eq-hdr-bar-muted: rgba(255, 255, 255, 0.72);
+  --eq-hdr-bar-subtle: rgba(255, 255, 255, 0.55);
+  --eq-topnav-dept-strip-bg: #000000;
+  --eq-topnav-dept-bg: #000000;
+  --eq-topnav-dept-text: #ffffff;
+  --eq-topnav-dept-border: rgba(255, 255, 255, 0.12);
+  --eq-topnav-dept-sep: rgba(255, 255, 255, 0.35);
+  --eq-topnav-dept-hover: rgba(255, 255, 255, 0.08);
+  --eq-topnav-dept-active-line: var(--bes-gold, #c8a44a);
+  --eq-drawer-head-text: #ffffff;
+  --eq-text: #f2f2f7;
+  --eq-text-muted: rgba(255, 255, 255, 0.62);
 }
 
-body.bd-page.besos header.hdr {
+body.bd-page.besos header.hdr,
+body.bd-page.besos nav.topnav,
+body.bd-page.besos .topnav {
   background: #000 !important;
-  border-bottom: 1px solid var(--bes-rule) !important;
+  border-bottom-color: var(--bes-rule) !important;
   box-shadow: none !important;
-  color: #f1f1f3;
-  position: sticky;
-  top: 0;
-  z-index: 200;
 }
 
-body.bd-page.besos.besos-locked header.hdr > a.logo {
-  display: none !important;
+body.bd-page.besos header.hdr > a.logo {
+  display: inline-flex !important;
+  visibility: visible !important;
+  width: auto !important;
+  height: auto !important;
+  overflow: visible !important;
+  pointer-events: auto !important;
 }
 
-body.bd-page.besos.besos-locked header.hdr .hdr-alici {
-  display: none !important;
-}
-
-body.bd-page.besos.besos-locked .breadcrumb {
-  display: none !important;
-}
-
-body.bd-page.besos.besos-locked header.hdr .bd-hdr-brand {
+body.bd-page.besos header.hdr .srch-cat,
+body.bd-page.besos header.hdr .eq-hdr-account,
+body.bd-page.besos header.hdr .hdr-alici,
+body.bd-page.besos header.hdr .hdr-right {
   display: flex !important;
-}
-
-body.bd-page.besos header.hdr .srch-cat {
-  display: none !important;
-}
-
-body.bd-page.besos header.hdr .eq-hdr-account {
-  display: none !important;
-}
-
-body.bd-page.besos header.hdr .eq-hdr-orders {
-  display: none !important;
-}
-
-body.bd-page.besos .bd-hdr-brand {
-  flex: 0 1 auto;
-  display: flex;
-  align-items: center;
-  gap: clamp(8px, 1.6vw, 18px);
-  min-width: 0;
-  padding: 8px 4px 8px 16px;
-}
-
-body.bd-page.besos .bd-hdr-wordmark {
-  flex: 0 0 auto;
-  display: inline-flex;
-  align-items: center;
-  color: var(--bes-gold);
-  text-decoration: none;
-  line-height: 1;
-}
-
-body.bd-page.besos .bd-hdr-wordmark .eq-logo-img,
-body.bd-page.besos .bd-hdr-wordmark .eq-logo-svg {
-  display: block;
-  width: auto;
-  height: clamp(22px, 2.6vw, 34px);
-  max-width: min(200px, 42vw);
-  object-fit: contain;
-  object-position: left center;
-}
-
-body.bd-page.besos .bd-hdr-wordmark:hover {
-  color: var(--bes-gold-soft);
-}
-
-body.bd-page.besos .bd-hdr-studio {
-  flex: 0 0 auto;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.72);
-  white-space: nowrap;
-  border-left: 1px solid rgba(255, 255, 255, 0.18);
-  padding-left: clamp(8px, 1.4vw, 16px);
-}
-
-body.bd-page.besos .bd-hdr-nav {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-  flex-wrap: nowrap;
-  margin-left: clamp(4px, 1vw, 12px);
-  border-left: 1px solid rgba(255, 255, 255, 0.18);
-  padding-left: clamp(8px, 1.2vw, 14px);
-  min-width: 0;
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-
-body.bd-page.besos .bd-hdr-nav::-webkit-scrollbar {
-  display: none;
-}
-
-body.bd-page.besos .bd-hdr-nav a {
-  flex: 0 0 auto;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.78);
-  text-decoration: none;
-  padding: 8px;
-  border-radius: 4px;
-  white-space: nowrap;
-}
-
-body.bd-page.besos .bd-hdr-nav a:hover,
-body.bd-page.besos .bd-hdr-nav a.is-active {
-  background: rgba(255, 255, 255, 0.08);
-  color: #fff;
-}
-
-body.bd-page.besos .bd-hdr-nav a.bd-hdr-equsto {
-  color: var(--bes-gold-soft);
+  visibility: visible !important;
 }
 
 body.bd-page.besos header.hdr .pg-inner,
@@ -155,38 +73,20 @@ body.bd-page.besos header.hdr .hdr-pg-inner {
   background: transparent !important;
 }
 
-body.bd-page.besos header.hdr .srch {
-  max-width: min(380px, 38vw);
-  flex: 1 1 200px;
-  border-radius: 4px !important;
-}
-
-body.bd-page.besos header.hdr .theme-wrap .theme-legend {
-  display: none;
-}
-
-body.bd-page.besos nav.topnav,
-body.bd-page.besos .topnav {
-  background: #000 !important;
-  border-bottom: 1px solid var(--bes-rule) !important;
-  position: relative;
-  z-index: 199;
-}
-
-body.bd-page.besos .topnav-item {
-  color: #fff !important;
-}
-
 body.bd-page.besos .topnav-item.active,
 body.bd-page.besos .topnav-besos.active {
   box-shadow: inset 0 -2px 0 0 var(--bes-gold) !important;
 }
 
-body.bd-page.besos .topnav-sep {
-  color: rgba(255, 255, 255, 0.35) !important;
+body.bd-page.besos.besos-locked .breadcrumb {
+  display: none !important;
 }
 
-/* Alt sayfa içerik alanı — koyu zemin üzerinde */
+/* Eski Besos özel şerit — kullanılmıyor */
+body.bd-page.besos .bd-hdr-brand {
+  display: none !important;
+}
+
 body.bd-page.besos.besos-sub .besos-sub-main,
 body.bd-page.besos.eq-imt-page .imt-page-main {
   background: var(--bes-void);
@@ -200,31 +100,27 @@ body.bd-page.besos .footer.footer {
 }
 
 @media (max-width: 768px) {
-  body.bd-page.besos .bd-hdr-studio {
-    display: none;
+  body.bd-page.besos header.hdr > a.logo {
+    display: inline-flex !important;
+    max-width: 31vw !important;
   }
 
-  body.bd-page.besos header.hdr .srch {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  body.bd-page.besos header.hdr .hdr-right {
+  body.bd-page.besos header.hdr .srch-cat {
     display: none !important;
   }
 
-  body.bd-page.besos .bd-hdr-brand {
-    width: 100%;
-    max-width: 100%;
-    flex-wrap: wrap;
-  }
-
-  body.bd-page.besos .bd-hdr-nav {
-    width: 100%;
-    overflow-x: auto;
-  }
-
+  /* Ana site gibi: mobilde departman şeridi gizli */
   body.bd-page.besos nav.topnav {
     display: none !important;
+  }
+
+  body.bd-page.besos {
+    --bes-chrome-h: 56px;
+  }
+}
+
+@media (min-width: 769px) {
+  body.bd-page.besos nav.topnav {
+    display: flex !important;
   }
 }

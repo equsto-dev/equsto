@@ -5127,52 +5127,8 @@ html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .e
     padding-top: env(safe-area-inset-top, 0px);
   }
 
-  body.bd-page.besos header.hdr .hdr-right,
-  body.bd-page.besos header.hdr a.eq-hdr-account,
-  body.bd-page.besos header.hdr #equsto-hdr-cart,
-  body.bd-page.besos header.hdr .theme-legend,
-  body.bd-page.besos header.hdr .hdr-alici {
+  body.bd-page.besos header.hdr .theme-legend {
     display: none !important;
-  }
-
-  body.bd-page.besos .bd-hdr-brand {
-    flex: 1 1 100%;
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-    flex-wrap: wrap;
-    padding: 8px 12px !important;
-    box-sizing: border-box;
-  }
-
-  body.bd-page.besos .bd-hdr-nav {
-    flex: 1 1 100%;
-    width: 100%;
-    margin-left: 0 !important;
-    border-left: none !important;
-    padding-left: 0 !important;
-    padding-top: 6px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    flex-wrap: nowrap;
-    max-width: 100%;
-  }
-
-  body.bd-page.besos .bd-hdr-nav::-webkit-scrollbar {
-    display: none;
-    width: 0;
-    height: 0;
-  }
-
-  body.bd-page.besos .bd-hdr-nav a {
-    flex: 0 0 auto;
-    white-space: nowrap;
-    min-height: 40px;
-    display: inline-flex;
-    align-items: center;
-    padding: 6px 10px;
-    touch-action: manipulation;
   }
 
   body.bd-page.besos header.hdr > .pg-inner,
@@ -5203,7 +5159,6 @@ html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .e
     min-width: 48px;
   }
 
-  /* Besos: Equsto departman şeridi — üst bd-hdr-nav + alt menü yeterli */
   body.bd-page.besos nav.topnav {
     display: none !important;
   }
