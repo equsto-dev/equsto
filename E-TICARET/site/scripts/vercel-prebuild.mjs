@@ -120,6 +120,17 @@ function syncGeoLandingsEnToLib(dir) {
 
 syncGeoLandingsEnToLib(siteDir);
 
+const restoreUtf8 = path.join(siteDir, "scripts/restore-public-utf8.mjs");
+if (fs.existsSync(restoreUtf8)) {
+  const r = spawnSync(process.execPath, [restoreUtf8], { cwd: siteDir, stdio: "inherit" });
+  if (r.status !== 0) process.exit(r.status ?? 1);
+  const patchHdr = path.join(siteDir, "scripts/patch-header-utf8.mjs");
+  if (fs.existsSync(patchHdr)) {
+    const r2 = spawnSync(process.execPath, [patchHdr], { cwd: siteDir, stdio: "inherit" });
+    if (r2.status !== 0) process.exit(r2.status ?? 1);
+  }
+}
+
 const checkUtf8 = path.join(siteDir, "scripts/check-public-utf8.mjs");
 if (fs.existsSync(checkUtf8)) {
   const r = spawnSync(process.execPath, [checkUtf8], { cwd: siteDir, stdio: "inherit" });
