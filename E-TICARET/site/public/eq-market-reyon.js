@@ -4,7 +4,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260528caglayan-variants1";
+  var CATALOG_V = "20260528caglayan-market-img1";
 
   window.EqMarketReyon = {
     loadCatalog: function () {
