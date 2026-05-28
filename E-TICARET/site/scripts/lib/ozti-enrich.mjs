@@ -346,8 +346,20 @@ export function isOztiDonerOcak(row) {
   return false;
 }
 
+/** Buz konteyneri (BK-125 vb.) — soğutma / buz makineleri; araba veya taşıma değil */
+export function isOztiBuzKonteyner(row) {
+  const kod = String(row.urun_kodu || row.sku || "").trim();
+  if (/^8959\.BK|^7506\.0B390/i.test(kod)) return true;
+  const name = foldTr(row.urun_tanimi || row.name || "");
+  const kat = foldTr(row.kategori || "");
+  if (/buz\s*konteyner|izolasyonlu\s*125\s*litre/i.test(name)) return true;
+  if (/buz\s*makin/i.test(kat) && /konteyner/i.test(name)) return true;
+  return false;
+}
+
 /** Servis / et askı arabaları — set üstü değil, taşıma PLP */
 export function isOztiTasimaAraba(row) {
+  if (isOztiBuzKonteyner(row)) return false;
   if (isOztiDonerOcak(row)) return false;
   const kod = String(row.urun_kodu || row.sku || "").trim();
   if (/^7270\./i.test(kod)) return true;
@@ -505,6 +517,7 @@ export function mapOztiDept(row, setUstuAllow) {
   const kod = String(row.urun_kodu || row.sku || "").trim();
   if (/^9710\./i.test(kod)) return "yikama";
   if (/^07[0-9][A-Z]\./i.test(kod)) return "yikama";
+  if (isOztiBuzKonteyner(row)) return "sogutma";
 
   const accessoryDept = mapOztiDeptAccessory(row);
   if (accessoryDept) return accessoryDept;

@@ -21,7 +21,7 @@
   }
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260529plpimgfix2';
+  var CATALOG_V = '20260607buzkonteyner';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   var deptCoverImg = '';
 
@@ -408,12 +408,7 @@
       }
     }
     var imgOut = '';
-    if (
-      isOztiRow(row) &&
-      imgRel &&
-      /\/cafemarkt\//i.test(imgRel) &&
-      typeof window.eqOztiAxImageFromSku === 'function'
-    ) {
+    if (isOztiRow(row) && ozSku && typeof window.eqOztiAxImageFromSku === 'function') {
       imgOut = window.eqOztiAxImageFromSku(ozSku) || '';
     }
     if (!imgOut) imgOut = imgRel ? imgSrc(imgRel) : '';
