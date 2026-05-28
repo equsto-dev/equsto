@@ -555,3 +555,18 @@
     }
   } catch (_) {}
 })();
+
+/** Link üstünde orta tuş / tekerlek ile dikey kaydırma */
+(function () {
+  try {
+    var b = document.body;
+    if (!b || !b.classList) return;
+    if (b.classList.contains("admin-app")) return;
+    if (!document.querySelector('script[src*="eq-link-scroll"]')) {
+      var ls = document.createElement("script");
+      ls.src = "/eq-link-scroll.js?v=20260530midscroll";
+      ls.defer = true;
+      document.head.appendChild(ls);
+    }
+  } catch (_) {}
+})();

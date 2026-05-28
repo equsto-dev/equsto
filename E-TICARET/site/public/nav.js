@@ -818,16 +818,7 @@
           labelLink.addEventListener("click", function () {
             closeAfterNav();
           });
-          labelLink.addEventListener("auxclick", function (ev) {
-            if (!ev || ev.button !== 1) return;
-            var raw = c.href;
-            if (!raw) return;
-            var h = equstoDeptHref(raw);
-            if (!h || h === "#") return;
-            try {
-              window.open(h, "_blank", "noopener,noreferrer");
-            } catch (eAc) {}
-          });
+          /* Orta tuş: sayfa kaydırma (eq-link-scroll.js) — yeni sekme açma */
         }
         li.appendChild(rowWrap);
         ul.appendChild(li);
