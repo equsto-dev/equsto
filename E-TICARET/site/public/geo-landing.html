@@ -24,11 +24,13 @@
 .eq-geo-bc{font-size:12px;color:var(--eq-text-muted);margin:0 0 16px;}
 .eq-geo-bc a{color:var(--eq-link,#001e50);text-decoration:none;}
 .eq-geo-article h1{font-size:clamp(22px,4vw,30px);font-weight:700;margin:0 0 12px;color:var(--eq-text);}
-.eq-geo-lead{font-size:15px;line-height:1.7;color:var(--eq-text-secondary);margin:0 0 16px;}
+.eq-geo-lead{font-size:15px;line-height:1.7;color:var(--eq-text-secondary);margin:0 0 16px;text-indent:2.5em;}
 .eq-geo-budget{font-size:14px;margin:0 0 18px;padding:12px 14px;border-radius:6px;background:var(--eq-surface-2);border:1px solid var(--eq-border);}
 .eq-geo-body{font-size:14px;line-height:1.75;color:var(--eq-text);}
 .eq-geo-body h2{font-size:1.05rem;margin:22px 0 10px;color:var(--eq-text);}
-.eq-geo-body p{margin:0 0 14px;}
+/* Türkçe paragraf girintisi (satır başı — tab) */
+.eq-geo-body p{margin:0 0 14px;text-indent:2.5em;}
+.eq-geo-body h2 + p{margin-top:0;}
 .eq-geo-table{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0 20px;}
 .eq-geo-table th,.eq-geo-table td{border:1px solid var(--eq-border);padding:8px 10px;text-align:left;}
 .eq-geo-table a{color:var(--eq-link,#001e50);font-weight:600;}
@@ -41,7 +43,7 @@
 .eq-geo-faq{margin:24px 0;}
 .eq-geo-faq-item{border:1px solid var(--eq-border);border-radius:6px;margin:0 0 8px;padding:10px 12px;background:var(--eq-surface);}
 .eq-geo-faq-item summary{cursor:pointer;font-weight:600;font-size:14px;}
-.eq-geo-faq-item p{margin:10px 0 0;font-size:13px;line-height:1.65;color:var(--eq-text-secondary);}
+.eq-geo-faq-item p{margin:10px 0 0;font-size:13px;line-height:1.65;color:var(--eq-text-secondary);text-indent:2.5em;}
 .eq-geo-actions{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 16px;}
 .eq-geo-btn{display:inline-flex;padding:10px 16px;border-radius:4px;font-size:13px;font-weight:600;text-decoration:none;border:1px solid var(--eq-border);color:var(--eq-text);background:var(--eq-surface);}
 .eq-geo-btn--primary{background:#001e50;color:#fff;border-color:#001e50;}
@@ -112,7 +114,7 @@
 <div class="cat-drawer eq-amazon-shop-all" id="catDrawer" aria-hidden="true"></div>
 <script src="/eq-footer.js?v=20260526foot4"></script>
 <script src="/contact.js?v=20260522wa" defer></script>
-<script src="/eq-geo-landing.js?v=20260602blog" defer></script>
+<script src="/eq-geo-landing.js?v=20260602indent" defer></script>
 <script src="/eq-analytics.js" defer></script>
 </body>
 </html>
