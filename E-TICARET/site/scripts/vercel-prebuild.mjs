@@ -101,7 +101,12 @@ if (fs.existsSync(buildEn)) {
 function syncGeoLandingsEnToLib(dir) {
   const src = path.join(dir, "public/data/geo-landings-en.json");
   const dest = path.join(dir, "lib/geo/landings-en.json");
-  if (!fs.existsSync(src)) return;
+  if (!fs.existsSync(src)) {
+    console.error(
+      "[vercel-prebuild] HATA: public/data/geo-landings-en.json yok — commit edin veya build-geo-landings-en.mjs çalıştırın"
+    );
+    process.exit(1);
+  }
   fs.mkdirSync(path.dirname(dest), { recursive: true });
   fs.copyFileSync(src, dest);
   console.log("[vercel-prebuild] geo-landings-en → lib/geo/landings-en.json");
