@@ -1906,25 +1906,24 @@ html[data-theme="dark"] .products .prod-card-wrap .eq-cart-add {
   width: 100%;
   justify-content: center;
 }
-/* Ürün görselinden gelen accent (product.html — eq-product-card-tint.js) */
+/* Ürün görselinden gelen accent (product.html) — yalnızca çerçeve, görsel içi nötr */
 .eq-product-main.eq-product-main--accent .eq-product-gallery {
-  padding: 12px;
-  border-radius: 12px;
-  background:
-    radial-gradient(ellipse 96% 82% at 48% 30%, rgba(var(--eq-prod-ar), var(--eq-prod-ag), var(--eq-prod-ab), 0.28) 0%, transparent 58%),
-    linear-gradient(
-      168deg,
-      rgba(var(--eq-prod-ar), var(--eq-prod-ag), var(--eq-prod-ab), 0.14) 0%,
-      var(--eq-surface-2) 46%,
-      var(--eq-surface) 100%
-    );
-  border: 1px solid rgba(var(--eq-prod-ar), var(--eq-prod-ag), var(--eq-prod-ab), 0.24);
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
 }
-.eq-product-main.eq-product-main--accent .eq-product-hero-img {
-  background:
-    radial-gradient(ellipse 90% 78% at 50% 40%, rgba(var(--eq-prod-ar), var(--eq-prod-ag), var(--eq-prod-ab), 0.22) 0%, var(--eq-surface-3) 70%);
-  border-color: rgba(var(--eq-prod-ar), var(--eq-prod-ag), var(--eq-prod-ab), 0.35);
-  box-shadow: 0 14px 42px rgba(var(--eq-prod-ar), var(--eq-prod-ag), var(--eq-prod-ab), 0.2);
+.eq-product-main.eq-product-main--accent .eq-product-hero-wrap:not(.eq-product-hero-wrap--lineart) {
+  padding: 10px;
+  border-radius: 12px;
+  border: 2px solid rgba(var(--eq-prod-ar), var(--eq-prod-ag), var(--eq-prod-ab), 0.52);
+  background: var(--eq-surface);
+  box-sizing: border-box;
+}
+.eq-product-main.eq-product-main--accent .eq-product-hero-img:not(.eq-product-hero-img--lineart) {
+  background: var(--eq-surface-3);
+  border: none;
+  box-shadow: none;
 }
 .eq-product-main.eq-product-main--accent .eq-product-price-sub {
   color: color-mix(in srgb, rgb(var(--eq-prod-ar), var(--eq-prod-ag), var(--eq-prod-ab)) 58%, var(--eq-text-secondary));
@@ -1938,7 +1937,8 @@ html[data-theme="dark"] .products .prod-card-wrap .eq-cart-add {
 }
 .eq-product-main.eq-product-main--accent .eq-product-thumbs button.eq-product-thumb--active {
   border-color: rgb(var(--eq-prod-ar), var(--eq-prod-ag), var(--eq-prod-ab));
-  box-shadow: 0 0 0 1px rgba(var(--eq-prod-ar), var(--eq-prod-ag), var(--eq-prod-ab), 0.35);
+  box-shadow: none;
+  background: var(--eq-surface);
 }
 .eq-product-hero-img {
   width: 100%;
