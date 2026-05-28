@@ -5,7 +5,7 @@
   'use strict';
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260522kahve-acc-v1';
+  var CATALOG_V = '20260528dept-only-v1';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   var deptCoverImg = '';
 
@@ -119,20 +119,6 @@
       return Math.round(g / 10) + '×' + Math.round(d / 10) + '×' + Math.round(y / 10) + ' cm';
     }
     return g + '×' + d + '×' + y + ' mm';
-  }
-
-  function countOztiRows(arr) {
-    var n = 0;
-    for (var i = 0; i < arr.length; i++) {
-      var r = arr[i];
-      if (!r) continue;
-      if (/öztiryakiler/i.test(String(r.brand || ''))) {
-        n++;
-        continue;
-      }
-      if (/^ozti/i.test(String(r.kaynak || r.kaynak_fiyat_listesi || ''))) n++;
-    }
-    return n;
   }
 
   function productUrl(item) {
@@ -251,6 +237,13 @@
   }
 
   function skipItem(item) {
+    if (DEPT === 'kuvetler') {
+      if (!(item && item.raw && isOztiRow(item.raw))) return true;
+      if (window.EqDeptTips && typeof window.EqDeptTips.isKuvetProduct === 'function') {
+        return !window.EqDeptTips.isKuvetProduct(item);
+      }
+      return false;
+    }
     if (DEPT === 'set-ustu-mutfak') {
       return !(item && item.raw && isOztiRow(item.raw));
     }
@@ -721,26 +714,7 @@
     render();
   }
 
-  function loadEqustoServisTeshir() {
-    return fetch('/data/ekipmanlar.json?v=' + CATALOG_V, { cache: 'no-store', headers: { Accept: 'application/json' } })
-      .then(function (r) {
-        if (!r.ok) throw new Error('ekipmanlar HTTP ' + r.status);
-        return r.json();
-      })
-      .then(function (catalog) {
-        var list = Array.isArray(catalog) ? catalog : [];
-        var out = [];
-        for (var i = 0; i < list.length; i++) {
-          var raw = list[i];
-          if (!raw || String(raw.dept || '') !== 'market-reyon') continue;
-          var u = normalizeRow(raw);
-          if (!skipItem(u)) out.push(u);
-        }
-        return out;
-      });
-  }
-
-  var MARKET_REYON_JSON_V = '20260527proso1';
+  var MARKET_REYON_JSON_V = '20260527caglayan-gallery11';
 
   function fetchMarketReyonDeptJson() {
     return fetch('/data/dept/market-reyon.json?v=' + MARKET_REYON_JSON_V, {
@@ -766,25 +740,13 @@
         ? window.EqMarketReyon.loadCatalog()
         : fetchMarketReyonDeptJson();
 
-    Promise.all([loadDept, loadEqustoServisTeshir()])
-      .then(function (parts) {
+    loadDept
+      .then(function (arr) {
         var out = [];
-        var seen = {};
-        function pushUnique(u) {
-          var key =
-            (u.raw && u.raw.id) ||
-            (u.raw && u.raw.slug) ||
-            lc(u.b) + '|' + lc(u.n);
-          if (seen[key]) return;
-          seen[key] = true;
-          out.push(u);
-        }
-        for (var pi = 0; pi < parts.length; pi++) {
-          var arr = parts[pi] || [];
-          for (var i = 0; i < arr.length; i++) {
-            var u = normalizeRow(arr[i]);
-            if (!skipItem(u)) pushUnique(u);
-          }
+        var list = Array.isArray(arr) ? arr : [];
+        for (var i = 0; i < list.length; i++) {
+          var u = normalizeRow(list[i]);
+          if (!skipItem(u)) out.push(u);
         }
         finishLoad(out);
       })
@@ -819,7 +781,11 @@
     }
 
     function fetchDeptArray() {
-      return fetch('/data/dept/' + DEPT + '.json?v=' + CATALOG_V, { cache: 'no-store' })
+      var catalogDept = DEPT === 'kuvetler' ? 'set-ustu-mutfak' : DEPT;
+      return fetch('/data/dept/' + catalogDept + '.json?v=' + CATALOG_V, {
+        cache: 'default',
+        headers: { Accept: 'application/json' },
+      })
         .then(function (r) {
           if (!r.ok) throw new Error('HTTP ' + r.status);
           return r.text();
@@ -830,41 +796,14 @@
         });
     }
 
-    function fetchEkipmanlarDeptFallback() {
-      return fetch('/data/ekipmanlar.json?v=' + CATALOG_V, { cache: 'no-store' })
-        .then(function (r) {
-          if (!r.ok) throw new Error('ekipmanlar HTTP ' + r.status);
-          return r.json();
-        })
-        .then(function (catalog) {
-          var list = Array.isArray(catalog) ? catalog : [];
-          var out = [];
-          for (var i = 0; i < list.length; i++) {
-            if (list[i] && String(list[i].dept || '') === DEPT) out.push(list[i]);
-          }
-          return out;
-        });
-    }
-
     fetchDeptArray()
       .then(function (arr) {
-        if (DEPT === 'market-reyon' || DEPT === 'set-ustu-mutfak') return arr;
-        if (arr.length >= 5 && countOztiRows(arr) >= 5) return arr;
-        return fetchEkipmanlarDeptFallback().then(function (fallback) {
-          if (!arr.length || fallback.length > arr.length) {
-            if (fallback.length) {
-              console.warn(
-                '[eq-dept-plp] dept/' + DEPT + '.json → ekipmanlar.json (' +
-                  arr.length +
-                  ' → ' +
-                  fallback.length +
-                  ')'
-              );
-            }
-            return fallback.length ? fallback : arr;
-          }
-          return arr;
-        });
+        if (!arr.length) {
+          throw new Error(
+            'dept/' + (DEPT === 'kuvetler' ? 'set-ustu-mutfak' : DEPT) + '.json bos veya bulunamadi'
+          );
+        }
+        return arr;
       })
       .then(function (arr) {
         var out = [];
