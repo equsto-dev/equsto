@@ -180,6 +180,10 @@ const nextConfig: NextConfig = {
       ],
       afterFiles: [
       { source: "/", destination: "/index.html" },
+      { source: "/sepet", destination: "/sepet.html" },
+      { source: "/sepet/", destination: "/sepet.html" },
+      { source: "/shop/market-reyonlari", destination: "/market-reyonlari.html" },
+      { source: "/shop/market-reyonlari/", destination: "/market-reyonlari.html" },
       ...deptRewrites(),
       { source: "/shop/:dept/:slug", destination: "/product.html" },
       { source: "/pfos", destination: "/pfos.html" },
