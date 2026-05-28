@@ -1,5 +1,5 @@
 /**
- * Temiz 600–700 karakter blog/rehber gövdeleri → geo-bodies-600.json + eq-geo-landing.js
+ * Eski: 600–700 karakter. Güncel gövdeler: scripts/geo-bodies-words.json (600–700 sözcük) + apply-geo-bodies-words.mjs
  */
 import fs from "node:fs";
 import path from "node:path";
