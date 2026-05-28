@@ -98,7 +98,7 @@ function collectTargets(opts) {
   }
 
   const eslesme = path.join(ROOT, "scripts/data/ozti-eslesme-2026.json");
-  if (fs.existsSync(eslesme)) {
+  if (!opts.dept && fs.existsSync(eslesme)) {
     const rows = readJsonArray(eslesme);
     for (const row of rows) {
       const kod = normKod(row.urun_kodu || row.urun_kodu_norm);
