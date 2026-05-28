@@ -56,7 +56,8 @@
     "description": "Market reyonu ile kasap ve şarküteri hattı kurulumu: vitrin, derin dondurucu, et hazırlık ve hijyen zonu. PFOS ile teklif.",
     "h1": "Market, kasap ve şarküteri kurulumu",
     "lead": "Market ve kasap–şarküteri reyonu aynı müşteri akışında planlanır: soğutma, vitrin ve et hazırlık hatları birlikte modellenir.",
-    "skipTable": true
+    "skipTable": true,
+    "skipBudget": true
   },
   "projeler": {
     "profile": "projelerHub",
