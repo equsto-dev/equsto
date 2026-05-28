@@ -723,7 +723,9 @@ body.eq-shop .topnav-sep {
 
 /* PFOS sihirbaz: departman şeridi yapışkan kalmasın — soru kolonunun üstüne binmesin */
 body.eq-pfos nav.topnav,
-body.eq-pfos .topnav {
+body.eq-pfos .topnav,
+body.eq-pfos-public nav.topnav,
+body.eq-pfos-public .topnav {
   position: relative !important;
   top: auto !important;
   z-index: 40 !important;

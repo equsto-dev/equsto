@@ -181,6 +181,9 @@ const nextConfig: NextConfig = {
         { source: "/api/whatsapp", destination: "/api/musteriler?whatsapp=1" },
         { source: "/besos/imt300", destination: "/imt300.html" },
         { source: "/besos/imt300/", destination: "/imt300.html" },
+        /* App Router app/pfos yerine tam vitrin + sihirbaz (pfos.html) */
+        { source: "/pfos", destination: "/pfos.html" },
+        { source: "/pfos/", destination: "/pfos.html" },
       ],
       afterFiles: [
       { source: "/", destination: "/index.html" },
@@ -193,8 +196,6 @@ const nextConfig: NextConfig = {
       { source: "/shop/market-reyonlari/", destination: "/market-reyonlari.html" },
       ...deptRewrites(),
       { source: "/shop/:dept/:slug", destination: "/product.html" },
-      { source: "/pfos", destination: "/pfos.html" },
-      { source: "/pfos/", destination: "/pfos.html" },
       { source: "/besos/modul/:slug", destination: "/bar-module.html" },
       { source: "/besos/modul/:slug/", destination: "/bar-module.html" },
       { source: "/admin", destination: "/admin.html" },
