@@ -10,12 +10,6 @@ const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const PUBLIC = path.join(ROOT, "public");
 
 const MUST_BE_CLEAN = [
-  "index.html",
-  "hakkimizda.html",
-  "pfos.html",
-  "geo-landing.html",
-  "marka.html",
-  "contact.html",
   "data/footer-vitrin.json",
   "i18n/tr.json",
   "i18n/en.json",
