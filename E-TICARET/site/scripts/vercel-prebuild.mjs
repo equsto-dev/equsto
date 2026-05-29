@@ -149,4 +149,10 @@ if (fs.existsSync(verifyPdp)) {
   if (r.status !== 0) process.exit(r.status ?? 1);
 }
 
+const verifyProdCardAmbient = path.join(siteDir, "scripts/verify-prod-card-ambient-kilit.mjs");
+if (fs.existsSync(verifyProdCardAmbient)) {
+  const r = spawnSync(process.execPath, [verifyProdCardAmbient], { cwd: siteDir, stdio: "inherit" });
+  if (r.status !== 0) process.exit(r.status ?? 1);
+}
+
 console.log("[vercel-prebuild] OK");

@@ -3591,6 +3591,7 @@ body.eq-shop .main .products {
   position: relative;
 }
 
+/* KİLİT: prod-card ambient hover — public/prod-card-ambient-KILIT.txt */
 /* Hover: görselden örneklenen renk — çerçeve + ambient gölge (eq-product-card-tint.js) */
 .prod-card-wrap.eq-prod-tint-active,
 .main .products .prod-card.eq-prod-tint-active {
