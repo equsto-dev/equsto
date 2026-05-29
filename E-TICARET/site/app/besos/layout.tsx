@@ -18,9 +18,9 @@ export default function BesosLayout({ children }: { children: React.ReactNode })
       <link rel="preconnect" href="https://www.youtube.com" />
       <link rel="preconnect" href="https://i.ytimg.com" />
       {/* eslint-disable-next-line @next/next/no-css-tags */}
-      <link rel="stylesheet" href="/theme.css?v=20260524besos" />
+      <link rel="stylesheet" href={`/theme.css?v=${SHOP_ASSET_V}`} />
       {/* eslint-disable-next-line @next/next/no-css-tags */}
-      <link rel="stylesheet" href="/besos-shell.css?v=20260528besos-hdr1" />
+      <link rel="stylesheet" href={`/besos-shell.css?v=${SHOP_ASSET_V}`} />
       {/* eslint-disable-next-line @next/next/no-css-tags */}
       <link rel="stylesheet" href={`/contact.css?v=${SHOP_ASSET_V}`} />
       {children}

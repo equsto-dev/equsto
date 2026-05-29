@@ -21,7 +21,7 @@ body.bd-page.besos {
 }
 
 body.bd-page.besos .bd-vitrum-jump {
-  top: 90px;
+  top: var(--bes-chrome-h, 108px);
 }
 
 .besos-page {
