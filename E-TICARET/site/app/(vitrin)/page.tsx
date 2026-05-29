@@ -4,7 +4,7 @@ import { IndexBodyHtml } from "@/lib/vitrin/bodies/index";
 import { HOME_EXTRA_STYLES, HOME_SCRIPTS } from "@/lib/vitrin/legacy-scripts";
 
 export const metadata: Metadata = {
-  title: "Equsto — Endüstriyel Mutfak ve Gastronomi Çözümleri",
+  title: "Equsto | Endüstriyel Mutfak & Gastronomi Platformu",
   description:
     "Restoran, hotel, cafe ve bulut mutfak projeleri için endüstriyel mutfak ekipmanları. Proje Fabrikası ile anında teklif.",
   alternates: {
