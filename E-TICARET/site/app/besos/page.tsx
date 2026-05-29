@@ -8,10 +8,12 @@ import BesosServeYou from "@/components/besos/BesosServeYou";
 import BesosSignatureBars from "@/components/besos/BesosSignatureBars";
 import BesosVitrumVideo from "@/components/besos/BesosVitrumVideo";
 import { BESOS_STUDIO } from "@/lib/besos/branding";
+import type { BesosLocale } from "@/lib/besos/locale";
+import { localizeProducts } from "@/lib/besos/locale";
 import { loadBesosPageData } from "@/lib/besos/load-data";
 import type { BesosServeYou as ServeYouData } from "@/lib/besos/types";
 
-const DEFAULT_SERVE: ServeYouData = {
+const DEFAULT_SERVE_TR: ServeYouData = {
   kicker: `${BESOS_STUDIO} lounge`,
   title: "Size hizmet etmek için tasarlanmış bir sistem",
   body: "İmza sistemlerimiz kuruluma hazırdır; sonsuz özelleştirilebilir modüler tasarım sayesinde ölçek, stil ve operasyon ihtiyaçlarınıza uygun çözüm üretiriz.",
@@ -22,10 +24,25 @@ const DEFAULT_SERVE: ServeYouData = {
   image: "images/catalog/besos/web/besos-bes-p23.avif",
 };
 
-export default async function BesosPage() {
+const DEFAULT_SERVE_EN: ServeYouData = {
+  kicker: `${BESOS_STUDIO} lounge`,
+  title: "A system designed to serve you",
+  body: "Our signature systems are ready to install; endlessly customisable modular design lets us craft a solution for your scale, style and operational needs.",
+  ctaCatalog: "Browse bar product catalogue",
+  ctaCatalogHref: "#bd-stations",
+  ctaInfo: "I'd like more information",
+  ctaInfoHref: "/en/contact",
+  image: "images/catalog/besos/web/besos-bes-p23.avif",
+};
+
+type Props = {
+  locale?: BesosLocale;
+};
+
+export async function BesosPageContent({ locale = "tr" }: Props) {
   const { landing, catalogue, projects, heroVideo } = await loadBesosPageData();
-  const products = catalogue.products ?? [];
-  const serve = landing.serveYou ?? DEFAULT_SERVE;
+  const products = localizeProducts(catalogue.products ?? [], locale);
+  const serve = landing.serveYou ?? (locale === "en" ? DEFAULT_SERVE_EN : DEFAULT_SERVE_TR);
 
   return (
     <>
@@ -33,16 +50,20 @@ export default async function BesosPage() {
       <main className="besos-page">
         <BesosImt300Hero />
         <div className="bd-vitrum-landing">
-          <BesosMethod steps={landing.method} />
+          <BesosMethod steps={landing.method} locale={locale} />
         </div>
-        <BesosVitrumVideo video={heroVideo} hero={landing.hero} stats={landing.stats} />
-        <BesosSignatureBars items={landing.signatureTrio} products={products} />
-        <BesosModular modular={landing.modular} products={products} />
-        <BesosServeYou serve={serve} />
-        <BesosCatalog products={products} />
-        <BesosProjects projectsData={projects} products={products} />
+        <BesosVitrumVideo video={heroVideo} hero={landing.hero} stats={landing.stats} locale={locale} />
+        <BesosSignatureBars items={landing.signatureTrio} products={products} locale={locale} />
+        <BesosModular modular={landing.modular} products={products} locale={locale} />
+        <BesosServeYou serve={serve} locale={locale} />
+        <BesosCatalog products={products} locale={locale} />
+        <BesosProjects projectsData={projects} products={products} locale={locale} />
       </main>
       <footer className="footer" id="eq-shop-footer" />
     </>
   );
+}
+
+export default async function BesosPage() {
+  return <BesosPageContent locale="tr" />;
 }

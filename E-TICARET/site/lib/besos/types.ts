@@ -29,6 +29,7 @@ export type BesosSignatureItem = {
   tagline: string;
   taglineEn?: string;
   blurb: string;
+  blurbEn?: string;
   page?: number;
 };
 
@@ -56,8 +57,10 @@ export type BesosServeYou = {
   body: string;
   bodyEn?: string;
   ctaCatalog: string;
+  ctaCatalogEn?: string;
   ctaCatalogHref: string;
   ctaInfo: string;
+  ctaInfoEn?: string;
   ctaInfoHref: string;
   image?: string;
 };
