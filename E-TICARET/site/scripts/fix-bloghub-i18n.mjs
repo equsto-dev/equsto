@@ -4,7 +4,10 @@
  */
 import fs from "node:fs";
 import path from "node:path";
-import { normalizeGeoEnBody } from "./lib/normalize-geo-en-body.mjs";
+import {
+  assertGeoEnBodyStructured,
+  normalizeGeoEnBodyStructured,
+} from "./lib/normalize-geo-en-body.mjs";
 
 const root = path.join(import.meta.dirname, "..");
 
@@ -24,8 +27,25 @@ export const blogHubTr =
   "<p>GEO rehber dizini Equsto içerik mimarisinin merkezi indeksidir.</p>" +
   "<p>PFOS taslak listesi satış mühendisliği onayı ve saha keşfi sonrası kesinleşir; montaj, devreye alma ve garanti kaydı aynı proje numarası altında yürütülür. Equsto B2B endüstriyel mutfak tedarik platformu 2026 güncel fiyatlarıyla teklif üretir.</p>";
 
-export const blogHubEn = normalizeGeoEnBody(
-  "This index separates guides and GEO content from the equipment shop menu. Shoppers stay in the catalogue; concept and quote questions are answered here. Pages include FAQs and sample SKU tables where relevant. Concept setups, SEO landings, editorials and reference projects are grouped below; footer, sitemap and llms.txt link every guide. Use Project Factory for quote summaries in about five minutes."
+export const blogHubEn = assertGeoEnBodyStructured(
+  "en/blog",
+  normalizeGeoEnBodyStructured(
+    "<p>This index separates blog and GEO guide content from the shop menu. Users looking for equipment stay in the catalogue; concept and quote questions are answered on these pages. Each guide includes FAQs and, where relevant, a catalogue SKU table.</p>" +
+      "<p>Concept setup, search-targeted pages, editorial guides and reference projects are grouped in sections below. Links are indexed via footer, sitemap and llms.txt. This is the main entry point for Project Factory quote summaries.</p>" +
+      "<p>Steakhouse, cloud kitchen, market aisle and cafe opening guides link to their concept profiles. Five-hundred-guest catering and square-metre planning articles deepen capacity questions. The restaurant checklist flow mirrors the PFOS sequence.</p>" +
+      "<p>SEO pages address searches for industrial kitchen equipment in Turkey, hotels, cooking lines, cold rooms and the quote platform. English industrial and quotation pages target export readers. The Öztiryakiler dealer page explains the official channel.</p>" +
+      "<p>Reference projects use a demount case-study format; Istanbul catering and Izmir modular bar examples are reachable from this index. Photography and quotes will be updated as publishing continues. The definitive equipment list is generated in PFOS.</p>" +
+      "<p>Catalogue SKU tables show sample modules only; the full list is project-specific. 2026 prices are summarised excluding VAT. Project discounts are applied during quoting.</p>" +
+      "<p>Sales engineering approval sets the final price. Installation and commissioning follow the project plan. This is a B2B platform, not reservation software.</p>" +
+      "<p>Gastronomy Design deepens layout questions. A CAD plan can be added in a later phase. Site survey dimensions are the foundation for PFOS inputs.</p>" +
+      "<p>Service areas cover Turkey and selected export markets. The contact channel handles bespoke content and project requests. The live catalogue validates price and stock.</p>" +
+      "<p>The guide index separates equipment shoppers from concept researchers. Transition to PFOS is encouraged for quote production. The footer menu links to every guide.</p>" +
+      "<p>Dark kitchen and cloud kitchen guides explain multi-brand scenarios. Hotel and all-day dining content emphasises meal cycles. Fast food and fine dining can be read comparatively.</p>" +
+      "<p>Quote PDFs contain structured SKU rows. Target draft quote time is about five minutes. The ordering process starts after approval.</p>" +
+      "<p>The GEO guide index is the central content architecture hub for Equsto.</p>" +
+      "<p>PFOS draft lists are finalised after sales engineering approval and site survey; installation, commissioning and warranty registration run under the same project number. Equsto generates quotes as a B2B industrial kitchen supply platform with 2026 pricing.</p>"
+  ),
+  { minParas: 10, minChars: 1500 }
 );
 
 const faqTr = [
@@ -101,8 +121,8 @@ function patchGeoLandingJs() {
     src = src.replace(reEnBody, `$1${escJsString(blogHubEn)}$2`);
   }
 
-  src = src.replace(/var DATA_FALLBACK = "\/data\/geo-landings\.json\?v=[^"]+";/, 'var DATA_FALLBACK = "/data/geo-landings.json?v=20260602en650";');
-  src = src.replace(/var DATA_EN_FALLBACK = "\/data\/geo-landings-en\.json\?v=[^"]+";/, 'var DATA_EN_FALLBACK = "/data/geo-landings-en.json?v=20260602en650";');
+  src = src.replace(/var DATA_FALLBACK = "\/data\/geo-landings\.json\?v=[^"]+";/, 'var DATA_FALLBACK = "/data/geo-landings.json?v=20260528geo-en-full";');
+  src = src.replace(/var DATA_EN_FALLBACK = "\/data\/geo-landings-en\.json\?v=[^"]+";/, 'var DATA_EN_FALLBACK = "/data/geo-landings-en.json?v=20260528geo-en-full";');
 
   fs.writeFileSync(p, src, "utf8");
   console.log("patched public/eq-geo-landing.js");
@@ -131,7 +151,7 @@ patchGeoLandingJs();
 const geoHtml = path.join(root, "public/geo-landing.html");
 if (fs.existsSync(geoHtml)) {
   let html = fs.readFileSync(geoHtml, "utf8");
-  html = html.replace(/eq-geo-landing\.js\?v=[^"]+/, "eq-geo-landing.js?v=20260602en650");
+  html = html.replace(/eq-geo-landing\.js\?v=[^"]+/, "eq-geo-landing.js?v=20260528geo-en-full");
   fs.writeFileSync(geoHtml, html);
   console.log("patched public/geo-landing.html cache bust");
 }

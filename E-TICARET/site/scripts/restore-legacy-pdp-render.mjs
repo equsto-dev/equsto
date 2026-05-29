@@ -2,6 +2,11 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
+/**
+ * ⚠ KİLİT DIŞI — public/pdp-epdp-KILIT.txt ihlal eder.
+ * Amazon eq-product-grid geri yükler; yalnızca kullanıcı açık onayı ile çalıştırın.
+ */
+
 const siteDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const htmlPath = path.resolve(siteDir, "..", "..", "public", "product.html");
 const inlinePath = path.join(siteDir, "public", "eq-product-page-inline.js");

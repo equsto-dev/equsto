@@ -1,5 +1,6 @@
 /**
  * geo-bodies-600.json → eq-geo-landing.js PROFILES body + skipBudget
+ * TR gövde hedefi: 850–900 karakter (expand-geo-bodies-850.mjs)
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -13,8 +14,8 @@ const bodies = JSON.parse(fs.readFileSync(bodiesPath, "utf8"));
 for (const [key, html] of Object.entries(bodies)) {
   const plain = html.replace(/<[^>]+>/g, "");
   const len = plain.length;
-  if (len < 600 || len > 700) {
-    console.warn(`[warn] ${key}: ${len} karakter (hedef 600-700)`);
+  if (len < 850 || len > 900) {
+    console.warn(`[warn] ${key}: ${len} karakter (hedef 850-900)`);
   } else {
     console.log(`[ok] ${key}: ${len}`);
   }
@@ -29,15 +30,22 @@ js = js.replace(
 
 for (const [profile, body] of Object.entries(bodies)) {
   const escaped = body.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
-  const re = new RegExp(
+  const concatRe = new RegExp(
+    `(${profile}:\\s*\\{[\\s\\S]*?body:\\s*\\n?\\s*)(?:"(?:[^"\\\\]|\\\\.)*"\\s*\\+\\s*)+(?:"(?:[^"\\\\]|\\\\.)*")(\\s*,\\s*faq:)`,
+    "m"
+  );
+  const singleRe = new RegExp(
     `(${profile}:\\s*\\{[\\s\\S]*?body:\\s*\\n?\\s*)"(?:[^"\\\\]|\\\\.)*"(\\s*,\\s*faq:)`,
     "m"
   );
-  if (!re.test(js)) {
+  if (concatRe.test(js)) {
+    js = js.replace(concatRe, `$1"${escaped}"$2`);
+  } else if (singleRe.test(js)) {
+    js = js.replace(singleRe, `$1"${escaped}"$2`);
+  } else {
     console.error(`[fail] profile not patched: ${profile}`);
     process.exit(1);
   }
-  js = js.replace(re, `$1"${escaped}"$2`);
   const profRe = new RegExp(`(${profile}:\\s*\\{)`, "m");
   if (!js.includes(`${profile}: {`)) continue;
   if (!js.includes(`skipBudget: true`) || !js.match(new RegExp(`${profile}:[\\s\\S]{0,120}skipBudget`))) {

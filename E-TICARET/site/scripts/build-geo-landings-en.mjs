@@ -1,22 +1,19 @@
 /**
- * Generates public/data/geo-landings-en.json — full English GEO/blog pages (600–700 char bodies).
+ * Generates public/data/geo-landings-en.json — full English GEO/blog pages (multi-paragraph bodies).
  */
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import {
-  assertGeoEnBody,
-  normalizeGeoEnBody,
-  plainText,
+  assertGeoEnBodyStructured,
+  normalizeGeoEnBodyStructured,
 } from "./lib/normalize-geo-en-body.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const out = path.join(root, "public/data/geo-landings-en.json");
-
-/** @param {string} html */
-function len(html) {
-  return plainText(html).length;
-}
+const enBodies = JSON.parse(
+  fs.readFileSync(path.join(root, "scripts/geo-bodies-en.json"), "utf8")
+);
 
 const pages = {
   "en/steakhouse-kitchen-setup": {
@@ -549,7 +546,20 @@ const pages = {
     skipTable: true,
     skipBudget: true,
     body:
-      "<p>This index separates guides and GEO content from the equipment shop menu. Shoppers stay in the catalogue; concept and quote questions are answered here. Pages include FAQs and sample SKU tables where relevant. Concept setups, SEO landings, editorials and reference projects are grouped below; footer, sitemap and llms.txt link every guide. Use Project Factory for quote summaries in about five minutes.</p>",
+      "<p>This index separates blog and GEO guide content from the shop menu. Users looking for equipment stay in the catalogue; concept and quote questions are answered on these pages. Each guide includes FAQs and, where relevant, a catalogue SKU table.</p>" +
+      "<p>Concept setup, search-targeted pages, editorial guides and reference projects are grouped in sections below. Links are indexed via footer, sitemap and llms.txt. This is the main entry point for Project Factory quote summaries.</p>" +
+      "<p>Steakhouse, cloud kitchen, market aisle and cafe opening guides link to their concept profiles. Five-hundred-guest catering and square-metre planning articles deepen capacity questions. The restaurant checklist flow mirrors the PFOS sequence.</p>" +
+      "<p>SEO pages address searches for industrial kitchen equipment in Turkey, hotels, cooking lines, cold rooms and the quote platform. English industrial and quotation pages target export readers. The Öztiryakiler dealer page explains the official channel.</p>" +
+      "<p>Reference projects use a demount case-study format; Istanbul catering and Izmir modular bar examples are reachable from this index. Photography and quotes will be updated as publishing continues. The definitive equipment list is generated in PFOS.</p>" +
+      "<p>Catalogue SKU tables show sample modules only; the full list is project-specific. 2026 prices are summarised excluding VAT. Project discounts are applied during quoting.</p>" +
+      "<p>Sales engineering approval sets the final price. Installation and commissioning follow the project plan. This is a B2B platform, not reservation software.</p>" +
+      "<p>Gastronomy Design deepens layout questions. A CAD plan can be added in a later phase. Site survey dimensions are the foundation for PFOS inputs.</p>" +
+      "<p>Service areas cover Turkey and selected export markets. The contact channel handles bespoke content and project requests. The live catalogue validates price and stock.</p>" +
+      "<p>The guide index separates equipment shoppers from concept researchers. Transition to PFOS is encouraged for quote production. The footer menu links to every guide.</p>" +
+      "<p>Dark kitchen and cloud kitchen guides explain multi-brand scenarios. Hotel and all-day dining content emphasises meal cycles. Fast food and fine dining can be read comparatively.</p>" +
+      "<p>Quote PDFs contain structured SKU rows. Target draft quote time is about five minutes. The ordering process starts after approval.</p>" +
+      "<p>The GEO guide index is the central content architecture hub for Equsto.</p>" +
+      "<p>PFOS draft lists are finalised after sales engineering approval and site survey; installation, commissioning and warranty registration run under the same project number. Equsto generates quotes as a B2B industrial kitchen supply platform with 2026 pricing.</p>",
     sections: [
       {
         title: "Concept setup guides",
@@ -599,7 +609,7 @@ const pages = {
       {
         title: "Turkish guides",
         links: [
-          { label: "Türkçe rehber dizini", href: "/blog" },
+          { label: "Turkish guides index", href: "/blog" },
           { label: "About Equsto", href: "/hakkimizda.html" },
         ],
       },
@@ -622,11 +632,22 @@ const pages = {
   },
 };
 
+for (const [key, page] of Object.entries(pages)) {
+  const prof = page.profile;
+  if (key === "en/blog") continue;
+  if (prof && enBodies[prof]) page.body = enBodies[prof];
+}
+
 let failed = 0;
 for (const [key, page] of Object.entries(pages)) {
   if (!page.body) continue;
   try {
-    page.body = assertGeoEnBody(key, normalizeGeoEnBody(page.body));
+    const minParas = key === "en/blog" ? 10 : 2;
+    page.body = assertGeoEnBodyStructured(
+      key,
+      normalizeGeoEnBodyStructured(page.body),
+      { minParas, minChars: 150 }
+    );
   } catch (e) {
     console.error(String(e.message || e));
     failed++;
@@ -637,4 +658,4 @@ if (failed) process.exit(1);
 const outJson = { version: 1, source: "English GEO guides 2026-06", ...pages };
 fs.writeFileSync(out, JSON.stringify(outJson, null, 2) + "\n");
 fs.copyFileSync(out, path.join(root, "lib/geo/landings-en.json"));
-console.log("Wrote", out, Object.keys(pages).length, "pages (bodies 600-700 chars)");
+console.log("Wrote", out, Object.keys(pages).length, "pages (structured multi-paragraph bodies)");

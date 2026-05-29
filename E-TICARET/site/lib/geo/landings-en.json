@@ -9,7 +9,7 @@
     "h1": "Steakhouse kitchen setup",
     "lead": "High-heat cooking, dry-age refrigeration and the hygiene line are modelled on one plan. The table below links to live catalogue SKUs.",
     "skipBudget": true,
-    "body": "<p>In a steakhouse kitchen, dry-age cabinets, high-heat grills and range lines, and meat prep modules are arranged in one flow. Hood static pressure and refrigeration run length are validated early; service pace drives how many cooking stations you need. Cooking and holding zones stay separate; warewashing speed must carry peak covers. Grinding and slicing modules follow short-travel rules between prep and service. The sample table links to catalogue SKUs. Expand the list in Project Factory by capacity and menu; installation and commissioning are planned with sales engineering. Use Project Factory for the full list; sales engineering confirms pricing and installation.</p>",
+    "body": "<p>In a steakhouse kitchen, dry-age cabinets, high-heat grills and range lines, and meat prep modules are arranged in one flow. Hood static pressure and refrigeration run length are validated early; service pace drives how many cooking stations you need.</p><p>Cooking and holding zones stay separate; warewashing speed must carry peak covers. Grinding and slicing modules follow short-travel rules between prep and service.</p><p>The sample table links to catalogue SKUs. Expand the list in Project Factory by capacity and menu; installation and commissioning are planned with sales engineering. Complete the equipment list in Project Factory or via our contact channel.</p>",
     "faq": [
       [
         "Which equipment is considered core for a steakhouse kitchen?",
@@ -47,7 +47,7 @@
     "h1": "Cloud kitchen setup",
     "lead": "Multi-brand, high-output cloud kitchens need parcelled hot/cold lines and shared wash capacity.",
     "skipBudget": true,
-    "body": "<p>In a cloud kitchen, hot and cold lines are parcelled per brand with a shared warewashing centre. In multi-brand scenarios, electrical load, ventilation and grease interceptor capacity follow the combined menu. Parcel-based production reduces cross-traffic; shared storage and dispatch areas are clearly bounded between brands. High delivery share increases prep and refrigeration modules. The equipment table shows sample SKUs. Use Project Factory to model multi-brand output; site dimensions are the first planning input. Use Project Factory for the full list; sales engineering confirms pricing and installation.</p>",
+    "body": "<p>In a cloud kitchen, hot and cold lines are parcelled per brand with a shared warewashing centre. In multi-brand scenarios, electrical load, ventilation and grease interceptor capacity follow the combined menu.</p><p>Parcel-based production reduces cross-traffic; shared storage and dispatch areas are clearly bounded between brands. High delivery share increases prep and refrigeration modules.</p><p>The equipment table shows sample SKUs. Use Project Factory to model multi-brand output; site dimensions are the first planning input. Complete the equipment list via Project Factory or contact.</p>",
     "faq": [
       [
         "Can several brands share one licence?",
@@ -73,7 +73,7 @@
     "h1": "Cafe setup",
     "lead": "Espresso centre, cold milk stock and the prep bench run in parallel throughout the day.",
     "skipBudget": true,
-    "body": "<p>Cafe setup centres on the espresso station, cold milk and stock cabinets, and a prep bench used heavily all day. Water filtration and pressure should be fixed before machine selection; higher delivery share deepens refrigeration needs. Display refrigeration, warewashing and pastry modules are added to match the menu. Daily cup count and simultaneous groups drive machine choice. Floor area and throughput are clarified in Project Factory; the table links to sample SKUs. Request a quote summary from Project Factory or contact. Use Project Factory for the full list; sales engineering confirms pricing and installation.</p>",
+    "body": "<p>Cafe setup centres on the espresso station, cold milk and stock cabinets, and a prep bench used heavily all day. Water filtration and pressure should be fixed before machine selection; higher delivery share deepens refrigeration needs.</p><p>Display refrigeration, warewashing and pastry modules are added to match the menu. Daily cup count and simultaneous brewing groups drive machine choice.</p><p>Floor area and throughput are clarified in Project Factory; the table links to sample SKUs. Request a quote summary from Project Factory or contact; installation is planned with sales engineering.</p>",
     "faq": [
       [
         "Minimum kitchen area for a cafe?",
@@ -103,7 +103,7 @@
     "h1": "Catering kitchen setup",
     "lead": "Banqueting and bulk meal service plan hot holding, cold chain depth and wash speed together.",
     "skipBudget": true,
-    "body": "<p>Catering kitchens combine high-volume cooking, transport equipment and conveyor warewashing in one scenario. Banquet service makes hot holding time a menu engineering decision; cold chain depth follows the product mix. Peak covers and meal intervals directly set oven, refrigeration and wash counts. Transport and hot-box capacity should be read with the dispatch plan. The table shows sample catalogue rows. Build the full list in Project Factory with guest count and meal profile; site survey is the first scheduling step. Use Project Factory for the full list; sales engineering confirms pricing and installation.</p>",
+    "body": "<p>Catering kitchens combine high-volume cooking, transport equipment and conveyor warewashing in one scenario. Banquet service makes hot holding time a menu engineering decision; cold chain depth follows the product mix.</p><p>Peak covers and meal intervals directly set oven, refrigeration and wash counts. Transport and hot-box capacity should be read with the dispatch plan.</p><p>The table shows sample catalogue rows. Build the full list in Project Factory with guest count and meal profile; site survey is the first scheduling step. Complete the equipment list via Project Factory or contact.</p>",
     "faq": [
       [
         "Can PFOS model 500 guests?",
@@ -133,7 +133,7 @@
     "h1": "Fast food kitchen setup",
     "lead": "Short service times demand parallel hot and cold lines with fast wash turnaround.",
     "skipBudget": true,
-    "body": "<p>Fast food lines depend on fryer and grill density, cold storage depth and rapid warewashing. Menu mix sets equipment counts; higher delivery share adds prep and holding modules. Layouts run in parallel because service time is short; hot holding and cold stock stay visibly separated in the corridor. Bench height and ergonomics affect crew throughput. Sample SKUs are in the table below. Enter capacity in Project Factory to finalise the list, or contact sales engineering. Use Project Factory for the full list; sales engineering confirms pricing and installation. Request a quote summary in Project Factory in about five minutes.</p>",
+    "body": "<p>Fast food lines depend on fryer and grill density, cold storage depth and rapid warewashing. Menu mix sets equipment counts; higher delivery share adds prep and holding modules.</p><p>Layouts run in parallel because service time is short; hot holding and cold stock stay visibly separated in the corridor. Bench height and ergonomics affect crew throughput.</p><p>Sample SKUs are in the table below. Enter capacity in Project Factory to finalise the list, or contact sales engineering. Complete the equipment list via Project Factory or contact.</p>",
     "faq": [
       [
         "High delivery share?",
@@ -155,7 +155,7 @@
     "h1": "Fine dining kitchen setup",
     "lead": "Lower plate frequency spreads the cookline; finishing and holding follow service style.",
     "skipBudget": true,
-    "body": "<p>Fine dining spreads the cookline because covers are fewer but refinement is higher. Finishing, sauce and cold holding lines follow service style; hood and bench height follow crew ergonomics. Compared with steakhouse, dry-age is lighter and balanced cooking with precise holding matters more. Plating rhythm and hold times align with menu design. The table lists sample modules. Model the full layout in Project Factory by menu and capacity; gastronomy design deepens placement later. Use Project Factory for the full list; sales engineering confirms pricing and installation. Request a quote summary in Project Factory in about five minutes.</p>",
+    "body": "<p>Fine dining spreads the cookline because covers are fewer but refinement is higher. Finishing, sauce and cold holding lines follow service style; hood and bench height follow crew ergonomics.</p><p>Compared with steakhouse, dry-age is lighter and balanced cooking with precise holding matters more. Plating rhythm and hold times align with menu design.</p><p>The table lists sample modules. Model the full layout in Project Factory by menu and capacity; gastronomy design deepens placement later. Complete the equipment list via Project Factory or contact.</p>",
     "faq": [
       [
         "Difference from steakhouse?",
@@ -177,7 +177,7 @@
     "h1": "All day dining kitchen setup",
     "lead": "Breakfast, lunch and dinner reuse the same equipment at different loads; coffee runs all day.",
     "skipBudget": true,
-    "body": "<p>All day dining and hotel kitchens run breakfast, lunch and dinner on the same equipment at shifting loads. Coffee, hot lines and cold storage operate in parallel all day; banqueting spikes capacity briefly. Meal profile sets refrigeration depth and wash speed. Room service and buffet service can add peaks in the same footprint. The table shows sample modules. Enter guest count and hotel segment in Project Factory to complete the list. Use Project Factory for the full list; sales engineering confirms pricing and installation. Request a quote summary in Project Factory in about five minutes. Sample SKU tables and FAQs appear on each linked guide page.</p>",
+    "body": "<p>All day dining and hotel kitchens run breakfast, lunch and dinner on the same equipment at shifting loads. Coffee, hot lines and cold storage operate in parallel all day; banqueting spikes capacity briefly.</p><p>Meal profile sets refrigeration depth and wash speed. Room service and buffet service can add peaks in the same footprint.</p><p>The table shows sample modules. Enter guest count and hotel segment in Project Factory to complete the list. Complete the equipment list via Project Factory or contact.</p>",
     "faq": [
       [
         "Same as hotel kitchen?",
@@ -200,7 +200,7 @@
     "lead": "Aisle refrigeration and the meat prep line are planned in one customer journey.",
     "skipTable": true,
     "skipBudget": true,
-    "body": "<p>Retail layout starts at the aisle: frozen islands, refrigerated gondolas and the butcher counter sit in one flow. Packaged goods and fresh meat share the front path while prep and storage stay behind the scenes. Butcher and deli lines separate grinding, slicing and display. +2/+4 °C display and −18 °C storage never mix; boards, hygiene kits and fast wash protect freshness. Aisle width and daily throughput set refrigeration counts. Finalise the list in Project Factory; installation follows the sales engineering plan. Use Project Factory for the full list; sales engineering confirms pricing and installation.</p>",
+    "body": "<p>Retail layout starts at the aisle: frozen islands, refrigerated gondolas and the butcher counter sit in one flow. Packaged goods and fresh meat share the front path while prep and storage stay behind the scenes.</p><p>Butcher and deli lines separate grinding, slicing and display. +2/+4 °C display and −18 °C storage never mix; boards, hygiene kits and fast wash protect freshness.</p><p>Aisle width and daily throughput set refrigeration counts. Finalise the list in Project Factory; installation follows the sales engineering plan. Market aisle catalogue SKUs link to the live shop.</p>",
     "faq": [
       [
         "Market aisle and butcher line in one project?",
@@ -234,7 +234,7 @@
     "h1": "Industrial kitchen equipment — Turkey",
     "lead": "Cooking, refrigeration, warewashing, prep, coffee and beverage lines with authorised Öztiryakiler distribution.",
     "skipBudget": true,
-    "body": "<p>Equsto is a Turkey-based industrial kitchen platform for restaurants, hotels, cloud kitchens and catering. Authorised Öztiryakiler distribution covers cooking, refrigeration, warewashing, prep, coffee and beverage in one catalogue flow. Export markets include selected countries in the Gulf, Central Asia and Eastern Europe. Single-SKU orders and full project lists use the same workflow. Quote summaries are generated in Project Factory in about five minutes. Final pricing and logistics are confirmed by sales engineering before purchase orders are issued. Use Project Factory for the full list; sales engineering confirms pricing and installation.</p>",
+    "body": "<p>Equsto is a Turkey-based industrial kitchen platform for restaurants, hotels, cloud kitchens and catering. Authorised Öztiryakiler distribution covers cooking, refrigeration, warewashing, prep, coffee and beverage lines in one catalogue flow.</p><p>Export markets include selected countries in the Gulf, Central Asia and Eastern Europe. Single-SKU orders and full project lists use the same workflow.</p><p>Quote summaries are generated in Project Factory in about five minutes. Final pricing and logistics are confirmed by sales engineering before purchase orders are issued. Complete the equipment list via Project Factory or contact.</p>",
     "faq": [
       [
         "Export only from Istanbul?",
@@ -268,7 +268,7 @@
     "h1": "Industrial kitchen supplier — Turkey",
     "lead": "Cooking, refrigeration, warewashing, prep, coffee and beverage lines with authorised Öztiryakiler distribution.",
     "skipBudget": true,
-    "body": "<p>Equsto is a Turkey-based industrial kitchen platform for restaurants, hotels, cloud kitchens and catering. Authorised Öztiryakiler distribution covers cooking, refrigeration, warewashing, prep, coffee and beverage in one catalogue flow. Export markets include selected countries in the Gulf, Central Asia and Eastern Europe. Single-SKU orders and full project lists use the same workflow. Quote summaries are generated in Project Factory in about five minutes. Final pricing and logistics are confirmed by sales engineering before purchase orders are issued. Use Project Factory for the full list; sales engineering confirms pricing and installation.</p>",
+    "body": "<p>Equsto is a Turkey-based industrial kitchen platform for restaurants, hotels, cloud kitchens and catering. Authorised Öztiryakiler distribution covers cooking, refrigeration, warewashing, prep, coffee and beverage lines in one catalogue flow.</p><p>Export markets include selected countries in the Gulf, Central Asia and Eastern Europe. Single-SKU orders and full project lists use the same workflow.</p><p>Quote summaries are generated in Project Factory in about five minutes. Final pricing and logistics are confirmed by sales engineering before purchase orders are issued. Complete the equipment list via Project Factory or contact.</p>",
     "faq": [
       [
         "Export only from Istanbul?",
@@ -299,7 +299,7 @@
     "lead": "Capacity, concept and menu inputs drive equipment selection; VAT and logistics sit in the quote file.",
     "skipTable": true,
     "skipBudget": true,
-    "body": "<p>Project Factory generates equipment lists and quote summaries for commercial kitchen projects. Capacity, concept and menu inputs drive module counts; VAT and logistics lines are included in the output file. Target turnaround is about five minutes. Layout and MEP can be refined later with gastronomy design and on-site sales engineering. This is B2B kitchen equipment supply, not table reservation software. Final sign-off is performed by the sales engineering team before purchase orders are issued. Use Project Factory for the full list; sales engineering confirms pricing and installation. Request a quote summary in Project Factory in about five minutes.</p>",
+    "body": "<p>Project Factory generates equipment lists and quote summaries for commercial kitchen projects. Capacity, concept and menu inputs drive module counts; VAT and logistics lines are included in the output file.</p><p>Target turnaround is about five minutes. Layout and MEP can be refined later with gastronomy design and on-site sales engineering.</p><p>This is B2B kitchen equipment supply, not table reservation software. Final sign-off is performed by the sales engineering team before purchase orders are issued. Complete the equipment list via Project Factory or contact.</p>",
     "faq": [
       [
         "Is this a reservation app?",
@@ -325,7 +325,7 @@
     "h1": "Restaurant kitchen equipment quote",
     "lead": "Menu, capacity and service style model hot, cold and wash lines; quote summary via Project Factory.",
     "skipBudget": true,
-    "body": "<p>For a restaurant kitchen quote, enter menu, capacity and service style; PFOS applies rules to size hot, cold and wash equipment. The quote summary includes VAT and logistics; final figures are confirmed by sales engineering. Capacity and concept are enough for the first pass; layout is refined with gastronomy design. CAD can follow in a later step. Target time is about five minutes for a draft file. Use it internally until sales engineering approves the order. Use Project Factory for the full list; sales engineering confirms pricing and installation. Request a quote summary in Project Factory in about five minutes.</p>",
+    "body": "<p>For a restaurant kitchen quote, enter menu, capacity and service style; PFOS applies rules to size hot, cold and wash equipment. The quote summary includes VAT and logistics; final figures are confirmed by sales engineering.</p><p>Capacity and concept are enough for the first pass; layout is refined with gastronomy design. CAD can follow in a later step.</p><p>Target time is about five minutes for a draft file. Use it internally until sales engineering approves the order. Complete the equipment list via Project Factory or contact; installation is planned with sales engineering.</p>",
     "faq": [
       [
         "How fast is the draft?",
@@ -355,7 +355,7 @@
     "h1": "Hotel kitchen equipment supply",
     "lead": "All-day meal cycles and banquets load the same lines differently; PFOS models guest and meal profile.",
     "skipBudget": true,
-    "body": "<p>Hotel kitchen supply spans breakfast, lunch, dinner and banquets on shared lines at different loads. All-day service increases refrigeration depth and warewashing capacity throughout the day. Room service, buffet and ballroom menus can peak at different times in the same kitchen. Coffee and hot beverage lines are critical at breakfast peak. Scenarios overlap with the all day dining guide and are modelled in PFOS. The table links to sample catalogue SKUs. Use Project Factory for the full list; sales engineering confirms pricing and installation. Request a quote summary in Project Factory in about five minutes.</p>",
+    "body": "<p>Hotel kitchen supply spans breakfast, lunch, dinner and banquets on shared lines at different loads. All-day service increases refrigeration depth and warewashing capacity throughout the day.</p><p>Room service, buffet and ballroom menus can peak at different times in the same kitchen. Coffee and hot beverage lines are critical at breakfast peak.</p><p>Scenarios overlap with the all day dining guide and are modelled in PFOS. The table links to sample catalogue SKUs. Complete the equipment list via Project Factory or contact; installation is planned with sales engineering.</p>",
     "faq": [
       [
         "Difference from restaurant?",
@@ -381,7 +381,7 @@
     "h1": "Öztiryakiler equipment supply",
     "lead": "Authorised dealer channel for Öztiryakiler with live catalogue and Project Factory quotes.",
     "skipBudget": true,
-    "body": "<p>Öztiryakiler equipment is listed under cooking, refrigeration, warewashing and prep in the Equsto catalogue. The dealer relationship covers official price lists and warranty routing; live FX rates apply where relevant. Atalay and selected brands share the same cart and quote flow; Öztiryakiler remains the core line. Technical dimensions are on product cards in millimetres. Order a single SKU or build a full project list in the same catalogue. Expand the list in Project Factory when needed. Use Project Factory for the full list; sales engineering confirms pricing and installation. Request a quote summary in Project Factory in about five minutes.</p>",
+    "body": "<p>Öztiryakiler equipment is listed under cooking, refrigeration, warewashing and prep in the Equsto catalogue. The dealer relationship covers official price lists and warranty routing; live FX rates apply where relevant.</p><p>Atalay and selected brands share the same cart and quote flow; Öztiryakiler remains the core line. Technical dimensions are on product cards in millimetres.</p><p>Order a single SKU or build a full project list in the same catalogue. Expand the list in Project Factory when needed. Complete the equipment list via Project Factory or contact.</p>",
     "faq": [
       [
         "Only Öztiryakiler?",
@@ -407,7 +407,7 @@
     "h1": "Cold room quote",
     "lead": "Refrigeration lines follow menu and volume; cold room projects use a dedicated engineering track.",
     "skipBudget": true,
-    "body": "<p>Cold room quotes combine capacity, product profile and MEP conditions. Counter and upright modules appear in the sample table; dedicated cold room projects follow a separate engineering workflow. Menu and volume set refrigeration counts; blast freezing needs depend on incoming product temperature. Sales engineering performs early validation. Complete the project list in Project Factory or via contact. The table illustrates typical catalogue modules only. Use Project Factory for the full list; sales engineering confirms pricing and installation. Request a quote summary in Project Factory in about five minutes.</p>",
+    "body": "<p>Cold room quotes combine capacity, product profile and MEP conditions. Counter and upright modules appear in the sample table; dedicated cold room projects follow a separate engineering workflow.</p><p>Menu and volume set refrigeration counts; blast freezing needs depend on incoming product temperature. Sales engineering performs early validation.</p><p>Complete the project list in Project Factory or via contact. The table illustrates typical catalogue modules only. Complete the equipment list via Project Factory or contact; installation is planned with sales engineering.</p>",
     "faq": [
       [
         "Only counters?",
@@ -433,7 +433,7 @@
     "h1": "Deli counter refrigeration supply",
     "lead": "External dimensions, GN pan fit and litre capacity are listed on each product card.",
     "skipBudget": true,
-    "body": "<p>Deli counter selection starts with external dimensions, GN compatibility and rated capacity on the product card. Prep and service style change how many units and wells you need; technical dimensions are in millimetres on the detail page. Under-counter and over-counter models are planned together on one line. Energy and cooling type follow site utilities. Compare similar modules in the refrigeration catalogue. Add lines to a quote via Project Factory or the product page. Use Project Factory for the full list; sales engineering confirms pricing and installation. Request a quote summary in Project Factory in about five minutes.</p>",
+    "body": "<p>Deli counter selection starts with external dimensions, GN compatibility and rated capacity on the product card. Prep and service style change how many units and wells you need; technical dimensions are in millimetres on the detail page.</p><p>Under-counter and over-counter models are planned together on one line. Energy and cooling type follow site utilities.</p><p>Compare similar modules in the refrigeration catalogue. Add lines to a quote via Project Factory or the product page. Complete the equipment list via Project Factory or contact; installation is planned with sales engineering.</p>",
     "faq": [
       [
         "Where are dimensions?",
@@ -455,7 +455,7 @@
     "h1": "Industrial cooking equipment",
     "lead": "Cooking lines are counted from menu mix and peak simultaneous production.",
     "skipBudget": true,
-    "body": "<p>Industrial cooking lines include ranges, ovens, fryers, grills and boiling modules sized to the menu. Gas and electric options are in the catalogue; site utilities determine what can be installed. Peak output and simultaneous production spread the cookline. Hood capacity is calculated together with cooking counts. The table links to sample SKUs. Build the full list in Project Factory by concept and capacity. Use Project Factory for the full list; sales engineering confirms pricing and installation. Request a quote summary in Project Factory in about five minutes. Sample SKU tables and FAQs appear on each linked guide page.</p>",
+    "body": "<p>Industrial cooking lines include ranges, ovens, fryers, grills and boiling modules sized to the menu. Gas and electric options are in the catalogue; site utilities determine what can be installed.</p><p>Peak output and simultaneous production spread the cookline. Hood capacity is calculated together with cooking counts.</p><p>The table links to sample SKUs. Build the full list in Project Factory by concept and capacity. Complete the equipment list via Project Factory or contact; installation is planned with sales engineering.</p>",
     "faq": [
       [
         "Gas or electric?",
@@ -478,7 +478,7 @@
     "lead": "PFOS turns concept and capacity inputs into an equipment list and quote summary in one flow.",
     "skipTable": true,
     "skipBudget": true,
-    "body": "<p>Project Factory is Equsto’s quote platform: concept, capacity and menu inputs produce an equipment list and price summary. Target time is about five minutes; output is subject to sales engineering approval. This is B2B industrial kitchen supply, not guest reservations. The rules engine sizes modules from menu and throughput assumptions. Quote PDFs include SKU and product code rows in a structured layout. After approval, ordering and installation planning proceed. Use Project Factory for the full list; sales engineering confirms pricing and installation. Request a quote summary in Project Factory in about five minutes.</p>",
+    "body": "<p>Project Factory is Equsto's quote platform: concept, capacity and menu inputs produce an equipment list and price summary. Target time is about five minutes; output is subject to sales engineering approval.</p><p>This is B2B industrial kitchen supply, not guest reservations. The rules engine sizes modules from menu and throughput assumptions.</p><p>Quote PDFs include SKU and product code rows in a structured layout. After approval, ordering and installation planning proceed. Complete the equipment list via Project Factory or contact.</p>",
     "faq": [
       [
         "OpenTable integration?",
@@ -505,7 +505,7 @@
     "lead": "Besos modular stations are selected to floor dimensions and beverage service flow.",
     "skipBudget": true,
     "ctaBesos": true,
-    "body": "<p>Bar design at Equsto runs through Bar Design Studio with Vitrum Group modular stations sized to the floor plan and service flow. Beverage, coffee and refrigeration modules align on one bar line. Module height and counter depth follow staff ergonomics. Ice machine and storage capacity follow daily cover counts. Forty-two sample modules are listed in the Besos catalogue. Plan the full layout in Project Factory or on the Besos pages. Use Project Factory for the full list; sales engineering confirms pricing and installation. Request a quote summary in Project Factory in about five minutes. Sample SKU tables and FAQs appear on each linked guide page.</p>",
+    "body": "<p>Bar design at Equsto runs through Bar Design Studio with Vitrum Group modular stations sized to the floor plan and service flow. Beverage, coffee and refrigeration modules align on one bar line.</p><p>Module height and counter depth follow staff ergonomics. Ice machine and storage capacity follow daily cover counts.</p><p>Forty-two sample modules are listed in the Besos catalogue. Plan the full layout in Project Factory or on the Besos pages. Complete the equipment list via Project Factory or contact; installation is planned with sales engineering.</p>",
     "faq": [
       [
         "Besos catalogue?",
@@ -542,7 +542,7 @@
         "href": "/en/projects/izmir-modular-bar-beverage"
       }
     ],
-    "body": "<p>Equsto reference pages present demount case studies: project lifecycle, constraints and equipment logic are transparent. Customer photography and quotes may be added as publishing continues; pages are not off-the-shelf packages. Each case bridges to live catalogue SKUs; quotes are finalised in Project Factory or through contact. Cases illustrate thinking, not a fixed BOM. Use the links below for Istanbul catering and Izmir modular bar examples. PFOS can regenerate the same logic as a live list. Use Project Factory for the full list; sales engineering confirms pricing and installation. Request a quote summary in Project Factory in about five minutes.</p>",
+    "body": "<p>Equsto reference pages present demount case studies: project lifecycle, constraints and equipment logic are transparent. Customer photography and quotes may be added as publishing continues; pages are not off-the-shelf packages.</p><p>Each case bridges to live catalogue SKUs; quotes are finalised in Project Factory or through contact. Cases illustrate thinking, not a fixed BOM.</p><p>Use the links below for Istanbul catering and Izmir modular bar examples. PFOS can regenerate the same logic as a live list. Complete the equipment list via Project Factory or contact.</p>",
     "faq": [
       [
         "Are projects fixed packages?",
@@ -568,7 +568,7 @@
     "h1": "Istanbul high-volume catering",
     "lead": "Hot banquet, volume cooking and conveyor warewashing modelled for dense urban service.",
     "skipBudget": true,
-    "body": "<p>This demount layout combines hot banquet holding, high-capacity cooking and conveyor warewashing for dense urban catering. Peak minutes set wash speed as much as oven counts. Facade capacity and flue routes should be confirmed before ordering; survey dimensions come first. Transport and hot-box needs align with the dispatch plan. Recreate the logic in PFOS with the Catering concept and city selection. The table shows sample SKUs only. Use Project Factory for the full list; sales engineering confirms pricing and installation. Request a quote summary in Project Factory in about five minutes. Sample SKU tables and FAQs appear on each linked guide page.</p>",
+    "body": "<p>This demount layout combines hot banquet holding, high-capacity cooking and conveyor warewashing for dense urban catering. Peak minutes set wash speed as much as oven counts.</p><p>Facade capacity and flue routes should be confirmed before ordering; survey dimensions come first. Transport and hot-box needs align with the dispatch plan.</p><p>Recreate the logic in PFOS with the Catering concept and city selection. The table shows sample SKUs only. Complete the equipment list via Project Factory or contact.</p>",
     "faq": [
       [
         "Live quote?",
@@ -590,7 +590,7 @@
     "h1": "Izmir modular bar & beverage",
     "lead": "Besos modules and beverage equipment share one floor plan and service sequence.",
     "skipBudget": true,
-    "body": "<p>This Izmir demount aligns Besos modules with beverage equipment on one site plan. Vitrum Group bar solutions are listed under Bar Design Studio; service flow drives module choice. Cold beverage, coffee and prep modules are parcelled to bar dimensions. Power and water points are checked before final module positions. Forty-two sample modules appear in the Besos catalogue. Finalise the list in Project Factory or via contact. Use Project Factory for the full list; sales engineering confirms pricing and installation. Request a quote summary in Project Factory in about five minutes. Sample SKU tables and FAQs appear on each linked guide page.</p>",
+    "body": "<p>This Izmir demount aligns Besos modules with beverage equipment on one site plan. Vitrum Group bar solutions are listed under Bar Design Studio; service flow drives module choice.</p><p>Cold beverage, coffee and prep modules are parcelled to bar dimensions. Power and water points are checked before final module positions.</p><p>Forty-two sample modules appear in the Besos catalogue. Finalise the list in Project Factory or via contact. Complete the equipment list via Project Factory or contact.</p>",
     "faq": [
       [
         "Bar modules?",
@@ -617,7 +617,7 @@
     "lead": "Service style drives how many square metres you need per seat or per cover.",
     "skipTable": true,
     "skipBudget": true,
-    "body": "<p>Per-cover kitchen area depends on service style: dine-in, delivery and banqueting use the same square metres differently. Higher delivery share deepens refrigeration; dine-in heavy sites emphasise hold times. Service speed, menu complexity and simultaneous production all affect the result. In tight footprints, vertical storage and modular benches help. PFOS area and cover questions automate the same logic. This editorial guide is updated for 2026; find it via footer and sitemap, not the top shop menu. Use Project Factory for the full list; sales engineering confirms pricing and installation. Request a quote summary in Project Factory in about five minutes.</p>",
+    "body": "<p>Per-cover kitchen area depends on service style: dine-in, delivery and banqueting use the same square metres differently. Higher delivery share deepens refrigeration; dine-in heavy sites emphasise hold times.</p><p>Service speed, menu complexity and simultaneous production all affect the result. In tight footprints, vertical storage and modular benches help.</p><p>PFOS area and cover questions automate the same logic. This editorial guide is updated for 2026; find it via footer and sitemap, not the top shop menu. Complete the equipment list via Project Factory or contact; installation is planned with sales engineering.</p>",
     "faq": [
       [
         "Updated for 2026?",
@@ -647,7 +647,7 @@
     "h1": "500-cover catering planning",
     "lead": "At ~500 guests, hot holding, cold depth and wash speed set the equipment spine.",
     "skipBudget": true,
-    "body": "<p>At roughly five hundred guests, hot banquet capacity, cold chain depth and wash speed define the equipment spine. Guest count and meal interval are modelled in PFOS; peak meal and continuous banquet are different scenarios. Transport and prep modules follow the menu. Conveyor warewashing must not bottleneck the peak window. Read together with the catering kitchen guide and the Istanbul demount page. Build the full list in Project Factory. Use Project Factory for the full list; sales engineering confirms pricing and installation. Request a quote summary in Project Factory in about five minutes.</p>",
+    "body": "<p>At roughly five hundred guests, hot banquet capacity, cold chain depth and wash speed define the equipment spine. Guest count and meal interval are modelled in PFOS; peak meal and continuous banquet are different scenarios.</p><p>Transport and prep modules follow the menu. Conveyor warewashing must not bottleneck the peak window.</p><p>Read together with the catering kitchen guide and the Istanbul demount page. Build the full list in Project Factory. Complete the equipment list via Project Factory or contact; installation is planned with sales engineering.</p>",
     "faq": [
       [
         "Single service for 500?",
@@ -673,7 +673,7 @@
     "h1": "Dark kitchen — cloud kitchen setup",
     "lead": "Parcelled hot/cold lines and a shared wash hub are planned per brand in one licence.",
     "skipBudget": true,
-    "body": "<p>Dark kitchen and cloud kitchen setup parcel hot and cold lines per brand with a shared warewashing hub. Electrical and ventilation load rises in multi-brand sites; interceptor sizing follows the combined menu. High delivery share increases refrigeration and prep. Storage and dispatch between brands must stay clearly separated. Steps overlap the cloud kitchen setup guide and are modelled in PFOS for multi-brand output. Site dimensions are the first input. Use Project Factory for the full list; sales engineering confirms pricing and installation. Request a quote summary in Project Factory in about five minutes.</p>",
+    "body": "<p>Dark kitchen and cloud kitchen setup parcel hot and cold lines per brand with a shared warewashing hub. Electrical and ventilation load rises in multi-brand sites; interceptor sizing follows the combined menu.</p><p>High delivery share increases refrigeration and prep. Storage and dispatch between brands must stay clearly separated.</p><p>Steps overlap the cloud kitchen setup guide and are modelled in PFOS for multi-brand output. Site dimensions are the first input. Complete the equipment list via Project Factory or contact; installation is planned with sales engineering.</p>",
     "faq": [
       [
         "Several brands, one licence?",
@@ -696,7 +696,7 @@
     "lead": "Menu → capacity → area → hot/cold/wash counts → quote; PFOS automates the sequence.",
     "skipTable": true,
     "skipBudget": true,
-    "body": "<p>This checklist follows menu, capacity, floor area, hot/cold/wash counts and quote. PFOS automates the sequence; use the checklist in meetings as a manual control. Clarify business type, dine-in vs delivery, daily meals, existing utilities, hood route and brand preferences — each step changes module counts. CAD is not required at first; layout deepens with gastronomy design. Read with the restaurant quote guide for the same flow. Use Project Factory for the full list; sales engineering confirms pricing and installation. Request a quote summary in Project Factory in about five minutes. Sample SKU tables and FAQs appear on each linked guide page.</p>",
+    "body": "<p>This checklist follows menu, capacity, floor area, hot/cold/wash counts and quote. PFOS automates the sequence; use the checklist in meetings as a manual control.</p><p>Clarify business type, dine-in vs delivery, daily meals, existing utilities, hood route and brand preferences — each step changes module counts.</p><p>CAD is not required at first; layout deepens with gastronomy design. Read with the restaurant quote guide for the same flow. Complete the equipment list via Project Factory or contact; installation is planned with sales engineering.</p>",
     "faq": [
       [
         "CAD on day one?",
@@ -722,7 +722,7 @@
     "h1": "Cafe opening equipment list",
     "lead": "Espresso centre, cold stock, prep bench, display fridge and wash line form the core list.",
     "skipBudget": true,
-    "body": "<p>A cafe opening list centres on espresso, refrigerated stock, a prep bench, display refrigeration and warewashing. Fix water filtration and pressure before choosing the espresso machine. Pastry-heavy cafes add oven and prep modules. Delivery share deepens refrigeration; seat count drives daily cup assumptions. Read with the cafe setup guide and the coffee catalogue. Complete the list in Project Factory. Use Project Factory for the full list; sales engineering confirms pricing and installation. Request a quote summary in Project Factory in about five minutes. Sample SKU tables and FAQs appear on each linked guide page.</p>",
+    "body": "<p>A cafe opening list centres on espresso, refrigerated stock, a prep bench, display refrigeration and warewashing. Fix water filtration and pressure before choosing the espresso machine.</p><p>Pastry-heavy cafes add oven and prep modules. Delivery share deepens refrigeration; seat count drives daily cup assumptions.</p><p>Read with the cafe setup guide and the coffee catalogue. Complete the list in Project Factory. Complete the equipment list via Project Factory or contact; installation is planned with sales engineering.</p>",
     "faq": [
       [
         "Coffee only?",
@@ -749,7 +749,7 @@
     "lead": "Programmatic guides sit outside the equipment menu; each page includes FAQ and catalogue links where relevant.",
     "skipTable": true,
     "skipBudget": true,
-    "body": "<p>This index separates guides and GEO content from the equipment shop menu. Shoppers stay in the catalogue; concept and quote questions are answered here. Pages include FAQs and sample SKU tables where relevant. Concept setups, SEO landings, editorials and reference projects are grouped below; footer, sitemap and llms.txt link every guide. Use Project Factory for quote summaries in about five minutes. Use Project Factory for the full list; sales engineering confirms pricing and installation. Request a quote summary in Project Factory in about five minutes. Sample SKU tables and FAQs appear on each linked guide page.</p>",
+    "body": "<p>This index separates blog and GEO guide content from the shop menu. Users looking for equipment stay in the catalogue; concept and quote questions are answered on these pages. Each guide includes FAQs and, where relevant, a catalogue SKU table.</p><p>Concept setup, search-targeted pages, editorial guides and reference projects are grouped in sections below. Links are indexed via footer, sitemap and llms.txt. This is the main entry point for Project Factory quote summaries.</p><p>Steakhouse, cloud kitchen, market aisle and cafe opening guides link to their concept profiles. Five-hundred-guest catering and square-metre planning articles deepen capacity questions. The restaurant checklist flow mirrors the PFOS sequence.</p><p>SEO pages address searches for industrial kitchen equipment in Turkey, hotels, cooking lines, cold rooms and the quote platform. English industrial and quotation pages target export readers. The Öztiryakiler dealer page explains the official channel.</p><p>Reference projects use a demount case-study format; Istanbul catering and Izmir modular bar examples are reachable from this index. Photography and quotes will be updated as publishing continues. The definitive equipment list is generated in PFOS.</p><p>Catalogue SKU tables show sample modules only; the full list is project-specific. 2026 prices are summarised excluding VAT. Project discounts are applied during quoting.</p><p>Sales engineering approval sets the final price. Installation and commissioning follow the project plan. This is a B2B platform, not reservation software.</p><p>Gastronomy Design deepens layout questions. A CAD plan can be added in a later phase. Site survey dimensions are the foundation for PFOS inputs.</p><p>Service areas cover Turkey and selected export markets. The contact channel handles bespoke content and project requests. The live catalogue validates price and stock.</p><p>The guide index separates equipment shoppers from concept researchers. Transition to PFOS is encouraged for quote production. The footer menu links to every guide.</p><p>Dark kitchen and cloud kitchen guides explain multi-brand scenarios. Hotel and all-day dining content emphasises meal cycles. Fast food and fine dining can be read comparatively.</p><p>Quote PDFs contain structured SKU rows. Target draft quote time is about five minutes. The ordering process starts after approval.</p><p>The GEO guide index is the central content architecture hub for Equsto.</p><p>PFOS draft lists are finalised after sales engineering approval and site survey; installation, commissioning and warranty registration run under the same project number. Equsto generates quotes as a B2B industrial kitchen supply platform with 2026 pricing.</p>",
     "sections": [
       {
         "title": "Concept setup guides",
@@ -875,7 +875,7 @@
         "title": "Turkish guides",
         "links": [
           {
-            "label": "Türkçe rehber dizini",
+            "label": "Turkish guides index",
             "href": "/blog"
           },
           {

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { besosHeroYoutubeEmbedUrl, BESOS_HERO_YT_ID } from "@/lib/besos/youtube-embed";
 
 const ICE_STRIP_IMAGES = [
@@ -16,6 +17,9 @@ const ICE_STRIP_IMAGES = [
 const HERO_EMBED_SRC = besosHeroYoutubeEmbedUrl(BESOS_HERO_YT_ID);
 
 export default function BesosImt300Hero() {
+  const pathname = usePathname();
+  const imt300Href = pathname?.startsWith("/en") ? "/en/besos/imt300" : "/besos/imt300";
+
   return (
     <>
       <section className="bd-hero bd-hero-fullbleed" id="bd-hero" aria-label="Besos tanıtım videosu" data-i18n-attr="aria-label:besos.hero_iframe_title">
@@ -38,7 +42,7 @@ export default function BesosImt300Hero() {
             <p className="bd-hero-action-label" data-i18n="besos.hero_product_label">
               Skyra IMT300 · Berrak buz makinesi
             </p>
-            <Link className="bd-hero-cta-btn" href="/besos/imt300" data-i18n="besos.hero_go_page">
+            <Link className="bd-hero-cta-btn" href={imt300Href} data-i18n="besos.hero_go_page">
               Sayfaya Git
             </Link>
             <p className="bd-hero-cta-price" data-i18n="besos.hero_price_hint">

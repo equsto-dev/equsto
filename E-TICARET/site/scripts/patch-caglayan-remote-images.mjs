@@ -26,7 +26,8 @@ const rows = JSON.parse(fs.readFileSync(DEPT, "utf8"));
 let n = 0;
 for (const row of rows) {
   if (row.kaynak !== "caglayan-refrigeration" || !row.slug) continue;
-  const p = path.join(SRC, `${row.slug}.json`);
+  const modelSlug = row.caglayanModelSlug || row.slug;
+  const p = path.join(SRC, `${modelSlug}.json`);
   if (!fs.existsSync(p)) continue;
   const urun = JSON.parse(fs.readFileSync(p, "utf8"));
   const imgs = buildCaglayanGalleryRemote(urun);

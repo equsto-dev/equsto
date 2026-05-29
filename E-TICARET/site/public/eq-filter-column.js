@@ -127,7 +127,15 @@
       else if (activeBrands) active = [activeBrands];
       var counts = {};
       (products || []).forEach(function (u) {
-        var b = (u.b || "").trim();
+        var b = "";
+        if (window.EqDeptCmFacets && typeof window.EqDeptCmFacets.productBrand === "function") {
+          b = String(window.EqDeptCmFacets.productBrand(u) || "").trim();
+        } else if (window.EqDeptCmFacets && typeof window.EqDeptCmFacets.resolveFacetBrand === "function") {
+          var sku = u.raw && (u.raw.sku || u.raw.urun_kodu || u.raw.model);
+          b = String(window.EqDeptCmFacets.resolveFacetBrand(u.b || u.fb, u.n, sku) || u.fb || u.b || "").trim();
+        } else {
+          b = String(u.fb || u.b || "").trim();
+        }
         if (!b) return;
         counts[b] = (counts[b] || 0) + 1;
       });

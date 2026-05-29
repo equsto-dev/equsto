@@ -1,6 +1,7 @@
 "use client";
 
 import Script from "next/script";
+import { usePathname } from "next/navigation";
 import { SHOP_ASSET_V } from "@/lib/shop/assets";
 
 const v = SHOP_ASSET_V;
@@ -22,8 +23,17 @@ declare global {
 }
 
 export default function BesosScripts() {
+  const pathname = usePathname();
+  const isEnBesos = pathname?.startsWith("/en/besos") ?? false;
+
   return (
     <>
+      {isEnBesos ? (
+        <>
+          <Script src={`/eq-besos-head-seo-config.js?v=${v}`} strategy="beforeInteractive" />
+          <Script src={`/eq-besos-head-seo.js?v=${v}`} strategy="afterInteractive" />
+        </>
+      ) : null}
       <Script src={`/theme.js?v=${v}`} strategy="beforeInteractive" />
       <Script src={`/eq-site-urls.js?v=${v}`} strategy="beforeInteractive" />
       <Script src={`/eq-i18n.js?v=${v}`} strategy="afterInteractive" />

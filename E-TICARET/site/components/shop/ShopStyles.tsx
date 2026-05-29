@@ -7,7 +7,7 @@ export default function ShopStyles({ variant = "plp" }: { variant?: "plp" | "pro
     <>
       {/* eslint-disable-next-line @next/next/no-css-tags */}
       <link rel="stylesheet" href={`/theme.css?v=${v}`} />
-      {variant !== "pfos" ? (
+      {variant !== "pfos" && variant !== "search" ? (
         /* eslint-disable-next-line @next/next/no-css-tags */
         <link rel="stylesheet" href={`/eq-home-mutbex.css?v=${v}`} />
       ) : null}

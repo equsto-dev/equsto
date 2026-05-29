@@ -7,6 +7,7 @@
  */
 
 import path from "node:path";
+import { sortCatalogImages } from "./catalog-hero-image.mjs";
 
 
 
@@ -451,9 +452,11 @@ export function variantDisplayName(baslik, v, eqNo) {
   const eq = eqNo != null ? " " + eqVariantCode(eqNo) : "";
   const kod = v.modelKod ? ` · ${v.modelKod}` : "";
   const dim =
-    v.derinlik_mm > 0
+    v.derinlik_mm > 0 && v.yukseklik_mm > 0
       ? `${v.genislik_mm}×${v.derinlik_mm}×${v.yukseklik_mm} mm`
-      : `${v.genislik_mm}×${v.yukseklik_mm} mm`;
+      : v.derinlik_mm > 0
+        ? `${v.genislik_mm}×${v.derinlik_mm} mm`
+        : `${v.genislik_mm}×${v.yukseklik_mm} mm`;
   return `${brand}${eq}${kod} — ${dim}`;
 }
 
@@ -628,13 +631,25 @@ export function buildVariantImages(urun, gallery, v, depths = []) {
 
   const all = gallery || [];
 
+  const isModelDraw = (fn) =>
+    /[-_]model-\d+\./i.test(fn) || /\d{3,4}.*[-_]model-\d/i.test(fn);
   const product = all.filter((r) => {
-
     const fn = path.basename(r).toLowerCase();
-
-    return IMG_EXT.test(fn) && !/kesit/i.test(fn) && !/model-\d/i.test(fn);
-
+    return IMG_EXT.test(fn) && !/kesit/i.test(fn) && !isModelDraw(fn);
   });
+
+  if (!product.length) {
+    const kapak = all.find((r) => /kapak/i.test(path.basename(r)));
+    if (kapak) product.push(kapak);
+    for (const r of all) {
+      const fn = path.basename(r).toLowerCase();
+      if (/kesit|model-\d/i.test(fn)) continue;
+      if (/-\d{2}-|-\d{2}\./i.test(fn) || /\d{2}-caglayan/i.test(fn)) {
+        if (!product.includes(r)) product.push(r);
+      }
+      if (product.length >= 4) break;
+    }
+  }
 
   const { kesit, modelCizim } = resolveVariantTeknik(all, v, depths);
 
@@ -664,8 +679,7 @@ export function buildVariantImages(urun, gallery, v, depths = []) {
 
   for (const r of product.slice(4)) add(r);
 
-  return out.slice(0, 11);
-
+  return sortCatalogImages(out).slice(0, 11);
 }
 
 

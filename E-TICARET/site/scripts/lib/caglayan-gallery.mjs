@@ -28,7 +28,13 @@ function isKesit(fn) {
 }
 
 function isOlcu(fn) {
-  return /model-\d|fg-|lm-|hd-|sl_ml|sl-ml/i.test(fn) && !isKesit(fn);
+  if (isKesit(fn)) return false;
+  // Ürün vitrin: Nergis-LB-FG-01-Caglayan-Refrigeration.webp (FG seri adı, ölçü çizimi değil)
+  if (/-\d{2}-caglayan-refrigeration\./i.test(fn)) return false;
+  if (/kapak/i.test(fn)) return false;
+  if (/model-\d/i.test(fn)) return true;
+  if (/\d{3,4}x\d{3,4}/i.test(fn)) return true;
+  return false;
 }
 
 function isDetay(fn, slug) {

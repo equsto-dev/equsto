@@ -266,12 +266,15 @@
     if (!nav) return;
     nav.querySelectorAll(".topnav-item").forEach(function (item) {
       if (item.tagName === "A" && item.getAttribute("href")) return;
+      if (item.classList.contains("topnav-all")) return;
+      var key = item.getAttribute("data-eq-nav-key");
       var oc = item.getAttribute("onclick");
-      if (!oc || typeof oc !== "string") return;
-      if (/toggle(Drawer|CatPicker)\s*\(/i.test(oc)) return;
-      var m = oc.match(/eq(?:Dept)?Go\s*\(\s*['"]([a-zA-Z0-9_-]+)['"]\s*\)/);
-      if (!m) return;
-      var key = m[1];
+      if (!key && oc && typeof oc === "string") {
+        if (/toggle(Drawer|CatPicker)\s*\(/i.test(oc)) return;
+        var m = oc.match(/eq(?:Dept)?Go\s*\(\s*['"]([a-zA-Z0-9_-]+)['"]\s*\)/);
+        if (m) key = m[1];
+      }
+      if (!key) return;
       var href;
       try {
         href = window.equstoUrl(key);
@@ -298,8 +301,31 @@
     }
   }
 
+  window.__eqUpgradeTopnavDeptLinks = upgradeTopnavDeptLinks;
+
+  function watchTopnavLinkUpgrade() {
+    var chromeRoot = document.getElementById("eq-shop-chrome-root");
+    if (!chromeRoot || typeof MutationObserver !== "function") return;
+    var pending = null;
+    var obs = new MutationObserver(function () {
+      if (pending) return;
+      pending = window.setTimeout(function () {
+        pending = null;
+        upgradeTopnavDeptLinks();
+        normalizeTopnavBarDesignLast(document);
+        installTopnavBesosFaces(document);
+      }, 0);
+    });
+    obs.observe(chromeRoot, { childList: true, subtree: true });
+  }
+
   window.__eqMarkExternalLinks = markExternalLinks;
   window.addEventListener("load", bootExternalLinks);
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", watchTopnavLinkUpgrade);
+  } else {
+    watchTopnavLinkUpgrade();
+  }
 })();
 
 /** Üst arama — theme.js ile erken yüklenir (inline oninput kırılmasın diye). */
@@ -355,6 +381,26 @@
 
   function isHomeVitrinPage() {
     return typeof window.eqIsHomeVitrin === "function" && window.eqIsHomeVitrin();
+  }
+
+  function isSearchResultsPage() {
+    try {
+      var p = String(location.pathname || "")
+        .replace(/\/$/, "")
+        .replace(/^\/en(?=\/|$)/, "");
+      return p === "/arama" || p === "/search";
+    } catch (_) {
+      return false;
+    }
+  }
+
+  function clearHeaderSearchState() {
+    window.__eqHdrLastQ = "";
+    try {
+      sessionStorage.removeItem("eq_hdr_search_q");
+    } catch (_) {}
+    var inp = document.querySelector("header.hdr .srch-input, header .srch .srch-input");
+    if (inp) inp.value = "";
   }
 
   function globalSearchUrl(q) {
@@ -451,7 +497,8 @@
     try {
       path = location.pathname || "";
     } catch (_) {}
-    if (path.indexOf("/arama") === 0) return;
+    if (path.indexOf("/arama") === 0 || path.indexOf("/search") === 0) return;
+    if (isSearchResultsPage()) return;
     if (!isHomeVitrinPage()) {
       commitGlobalSearch(q);
       return;
@@ -479,6 +526,19 @@
   } else {
     setTimeout(drainUrlQ, 0);
   }
+
+  document.addEventListener(
+    "click",
+    function (ev) {
+      var a = ev.target && ev.target.closest && ev.target.closest("a.logo");
+      if (!a) return;
+      var href = String(a.getAttribute("href") || "").trim();
+      if (href === "/" || href === "/en" || href === "/en/") {
+        clearHeaderSearchState();
+      }
+    },
+    true
+  );
 
   if (!document.querySelector('script[src*="eq-header-search"]')) {
     var meiliHdr = document.createElement("script");
@@ -592,7 +652,7 @@
     if (b.classList.contains("admin-app")) return;
     if (!document.querySelector('script[src*="eq-link-scroll"]')) {
       var ls = document.createElement("script");
-      ls.src = "/eq-link-scroll.js?v=20260528midscroll3";
+      ls.src = "/eq-link-scroll.js?v=20260530topnav-a";
       ls.defer = true;
       document.head.appendChild(ls);
     }

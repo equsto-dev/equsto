@@ -14,6 +14,7 @@ import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 
 const execFileAsync = promisify(execFile);
+const PREFER_FETCH = true;
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
 const OUT_DIR = path.resolve(ROOT, "../veri/prosogutma");
@@ -30,6 +31,7 @@ const CURL = process.env.CURL_PATH || "curl.exe";
 const args = process.argv.slice(2);
 const slugFilter = args.includes("--slug") ? args[args.indexOf("--slug") + 1] : null;
 const skipPdf = args.includes("--no-pdf");
+const pdfOnly = args.includes("--pdf-only");
 
 function sleep(ms) {
   return new Promise((r) => setTimeout(r, ms));
@@ -179,13 +181,24 @@ async function downloadFile(url, dest) {
     /* */
   }
   try {
-    const { stdout } = await execFileAsync(
-      CURL,
-      ["-sL", "--max-time", "120", "-A", UA, url],
-      { maxBuffer: 80 * 1024 * 1024, encoding: "buffer" }
-    );
-    if (!stdout?.length) return false;
-    await fsp.writeFile(dest, stdout);
+    if (!PREFER_FETCH) {
+      const { stdout } = await execFileAsync(
+        CURL,
+        ["-sL", "--max-time", "120", "-A", UA, url],
+        { maxBuffer: 80 * 1024 * 1024, encoding: "buffer" }
+      );
+      if (!stdout?.length) return false;
+      await fsp.writeFile(dest, stdout);
+      return true;
+    }
+    const res = await fetch(url, {
+      headers: { "User-Agent": UA },
+      signal: AbortSignal.timeout(120000),
+    });
+    if (!res.ok) return false;
+    const buf = Buffer.from(await res.arrayBuffer());
+    if (!buf.length) return false;
+    await fsp.writeFile(dest, buf);
     return true;
   } catch {
     return false;
@@ -193,15 +206,12 @@ async function downloadFile(url, dest) {
 }
 
 async function extractPdfText(pdfPath) {
-  const script = `
-import fitz, sys
-doc=fitz.open(sys.argv[1])
-print(''.join(doc[i].get_text() for i in range(len(doc))), end='')
-`;
+  const py = path.join(__dirname, "lib", "extract-pdf-text.py");
   try {
-    const { stdout } = await execFileAsync("python", ["-c", script, pdfPath], {
+    const { stdout } = await execFileAsync("python", [py, pdfPath], {
       maxBuffer: 8 * 1024 * 1024,
       encoding: "utf8",
+      env: { ...process.env, PYTHONIOENCODING: "utf-8" },
     });
     return stdout || "";
   } catch {
@@ -253,7 +263,60 @@ async function scrapeProduct(meta) {
   };
 }
 
+async function patchPdfOnly(product) {
+  const pdfUrl = findPdfUrl(product.tabs || [], product.slug);
+  let pdfText = "";
+  let pdfLocal = "";
+  if (!skipPdf && pdfUrl) {
+    const pdfName = path.basename(new URL(pdfUrl).pathname);
+    const pdfDest = path.join(OUT_MEDIA, product.slug, "pdfs", pdfName);
+    const ok = await downloadFile(pdfUrl, pdfDest);
+    if (ok) {
+      pdfLocal = path.relative(OUT_DIR, pdfDest).replace(/\\/g, "/");
+      pdfText = await extractPdfText(pdfDest);
+    }
+  }
+  return {
+    ...product,
+    pdfText,
+    teknik: { ...(product.teknik || {}), pdfText, pdfUrl, pdfLocal },
+  };
+}
+
 async function main() {
+  await fsp.mkdir(OUT_DIR, { recursive: true });
+  await fsp.mkdir(OUT_PAGES, { recursive: true });
+  await fsp.mkdir(OUT_MEDIA, { recursive: true });
+
+  if (pdfOnly && fs.existsSync(OUT_JSON)) {
+    let products = JSON.parse(fs.readFileSync(OUT_JSON, "utf8"));
+    if (slugFilter) products = products.filter((p) => p.slug === slugFilter);
+    console.log("PDF metin yaması:", products.length, "ürün");
+    let n = 0;
+    for (let i = 0; i < products.length; i++) {
+      const p = products[i];
+      if (p.error) continue;
+      n++;
+      process.stdout.write(`[${n}/${products.length}] ${p.slug} … `);
+      products[i] = await patchPdfOnly(p);
+      const mark = (products[i].pdfText || "").includes("Length") ? "+" : "·";
+      console.log(mark, (products[i].pdfText || "").length);
+      await sleep(200);
+    }
+    await fsp.writeFile(OUT_JSON, JSON.stringify(products, null, 2), "utf8");
+    for (const p of products) {
+      if (p.slug && !p.error) {
+        await fsp.writeFile(
+          path.join(OUT_PAGES, `${p.slug}.json`),
+          JSON.stringify(p, null, 2),
+          "utf8"
+        );
+      }
+    }
+    console.log("→", OUT_JSON);
+    return;
+  }
+
   console.log("Proso ürün listesi (TR)…");
   let list = await fetchAllProducts();
   if (slugFilter) {
@@ -264,10 +327,6 @@ async function main() {
     }
   }
   console.log("Ürün:", list.length);
-
-  await fsp.mkdir(OUT_DIR, { recursive: true });
-  await fsp.mkdir(OUT_PAGES, { recursive: true });
-  await fsp.mkdir(OUT_MEDIA, { recursive: true });
 
   const products = [];
   let n = 0;

@@ -5,7 +5,10 @@
   "use strict";
 
   var LIMIT = 48;
-  var CATALOG_V = "20260527robot-coupe-haz";
+  var CATALOG_V = (function () {
+    var el = document.querySelector("[data-eq-shop-chrome-v]");
+    return (el && el.getAttribute("data-eq-shop-chrome-v")) || "20260529-9890-imgs";
+  })();
   var lastRender = { hits: [], q: "", total: 0, err: null };
   var catalogImgById = null;
   var catalogImgInflight = null;
@@ -66,8 +69,10 @@
         if (Array.isArray(rows)) {
           rows.forEach(function (row) {
             if (!row || !row.id) return;
-            var imgs = row.images;
-            if (Array.isArray(imgs) && imgs[0]) map[String(row.id)] = String(imgs[0]);
+            map[String(row.id)] = {
+              images: row.images || [],
+              sku: row.sku || row.model || row.urun_kodu || "",
+            };
           });
         }
         catalogImgById = map;
@@ -83,12 +88,51 @@
     return catalogImgInflight;
   }
 
+  function isCatalogRenderRel(rel) {
+    return /\/catalog\/ozti\/(?:web|p287|pdf|katalog)\//i.test(String(rel || ""));
+  }
+
+  function slugOzti(kod) {
+    return (
+      "ozti-" +
+      String(kod || "")
+        .toLowerCase()
+        .replace(/\./g, "-")
+        .replace(/[^a-z0-9-]/g, "")
+    );
+  }
+
+  /** PLP ile uyumlu: cafemarkt foto önce; ax web render (katalog tablosu) kullanma. */
+  function pickCatalogImage(row, mapped) {
+    var imgs = (row && row.images) || [];
+    var i;
+    for (i = 0; i < imgs.length; i++) {
+      if (/cafemarkt/i.test(imgs[i])) return String(imgs[i]).replace(/\\/g, "/");
+    }
+    for (i = 0; i < imgs.length; i++) {
+      if (!isCatalogRenderRel(imgs[i])) return String(imgs[i]).replace(/\\/g, "/");
+    }
+    var rel = String(mapped || imgs[0] || "").replace(/\\/g, "/");
+    if (rel && isCatalogRenderRel(rel)) {
+      var kod = row && (row.sku || row.model || row.urun_kodu);
+      if (kod) {
+        return "images/catalog/ozti/cafemarkt/" + slugOzti(kod) + ".jpg";
+      }
+      return rel.replace("/ozti/web/", "/ozti/cafemarkt/");
+    }
+    return rel;
+  }
+
   function enrichHits(hits) {
     if (!catalogImgById || !Array.isArray(hits)) return hits || [];
     return hits.map(function (h) {
       if (!h) return h;
-      if (h.image) return h;
-      var img = catalogImgById[h.id];
+      var cat = catalogImgById[h.id];
+      var row = cat
+        ? { images: cat.images || [], sku: cat.sku || h.sku || h.model }
+        : { images: h.image ? [h.image] : [], sku: h.sku || h.model };
+      var img = pickCatalogImage(row, cat && cat.images && cat.images[0]);
+      if (!img && h.image) return h;
       if (!img) return h;
       return Object.assign({}, h, { image: img });
     });
@@ -175,16 +219,17 @@
 
     if (title) {
       title.textContent = q
-        ? __searchT("search.title_q", "Arama: «{q}»", { q: q })
+        ? __searchT("search.results_for", "Arama sonuçları")
         : __searchT("search.title", "Arama");
     }
     if (count) {
       if (err) count.textContent = err;
       else if (!q) count.textContent = __searchT("search.enter_keyword", "Anahtar kelime girin.");
       else if (hits.length === 0)
-        count.textContent = __searchT("search.no_results", "Sonuç bulunamadı.");
+        count.textContent = __searchT("search.no_results_for", "«{q}» için sonuç bulunamadı.", { q: q });
       else
-        count.textContent = __searchT("search.results_count", "{n} sonuç", {
+        count.textContent = __searchT("search.results_count_q", "«{q}» — {n} sonuç", {
+          q: q,
           n: total != null ? total : hits.length,
         });
     }
