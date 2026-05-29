@@ -1,7 +1,7 @@
 "use client";
 
 import { createPortal } from "react-dom";
-import { useLayoutEffect, useState, type ReactNode } from "react";
+import type { ReactNode } from "react";
 
 function chromeRoot(): HTMLElement | null {
   if (typeof document === "undefined") return null;
@@ -10,12 +10,7 @@ function chromeRoot(): HTMLElement | null {
 
 /** Üst krom — body kökünde; viewport üstüne yapışık sticky */
 export default function ShopChromePortal({ children }: { children: ReactNode }) {
-  const [root, setRoot] = useState<HTMLElement | null>(chromeRoot);
-
-  useLayoutEffect(() => {
-    if (!root) setRoot(chromeRoot());
-  }, [root]);
-
+  const root = chromeRoot();
   if (!root) return null;
   return createPortal(children, root);
 }
