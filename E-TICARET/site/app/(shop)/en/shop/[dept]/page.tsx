@@ -10,8 +10,8 @@ export { generateStaticParams };
 
 function navTitle(navKey: string): string {
   const key = navKey.replace(/^nav\./, "");
-  const nav = en.nav as Record<string, string>;
-  return nav[key] || key;
+  const v = (en.nav as Record<string, unknown>)[key];
+  return typeof v === "string" ? v : key;
 }
 
 export async function generateMetadata({

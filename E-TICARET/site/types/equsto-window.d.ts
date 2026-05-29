@@ -3,6 +3,7 @@ export {};
 
 declare global {
   interface Window {
+    __eqRerenderNav?: () => void;
     __eqYoutubeEmbedInit?: () => void;
     __eqYoutubeActivate?: (root?: ParentNode) => void;
     EqMarkaHub?: { mount: (root: HTMLElement | null) => void };
