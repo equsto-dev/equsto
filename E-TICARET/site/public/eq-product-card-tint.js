@@ -1,5 +1,9 @@
 /**
- * Katalog kartları: görselden baskın renk → hover’da YouTube ambient benzeri çerçeve + .prod-img yıkaması.
+ * ═══════════════════════════════════════════════════════════════════════════
+ * KİLİT: Ürün kartı ambient hover (YouTube benzeri çerçeve rengi).
+ * Değiştirmeden önce kullanıcıdan açık onay alın. Ayrıntı: public/prod-card-ambient-KILIT.txt
+ * ═══════════════════════════════════════════════════════════════════════════
+ * Katalog kartları: görselden baskın renk → hover’da çerçeve + .prod-img yıkaması.
  */
 (function () {
   "use strict";
