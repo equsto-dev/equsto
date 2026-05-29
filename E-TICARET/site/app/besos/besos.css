@@ -1603,8 +1603,9 @@ body.bd-page.besos.eq-shop .eq-mfoot-col a:hover {
   text-decoration: underline;
 }
 body.bd-page.besos.eq-shop .eq-mfoot-brand {
-  display: flex;
-  flex-direction: column;
+  display: flex !important;
+  flex-direction: column !important;
+  flex-wrap: nowrap !important;
   align-items: center;
   gap: 6px;
   margin-bottom: 18px;

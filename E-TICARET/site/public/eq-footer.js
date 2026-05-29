@@ -532,7 +532,7 @@
 
     var tagline = t("footer.tagline", (data && data.tagline) || defaultFooterData().tagline);
 
-    var poweredBy = t("footer.powered_by", "Powered By Vitrum Group");
+    var poweredBy = t("footer.powered_by", "Powered By Vitrum");
 
     var legal = (data && data.legal) || defaultFooterData().legal;
 
