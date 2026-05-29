@@ -46,6 +46,7 @@ function legacyHtmlRedirects() {
     ["arama.html", "/arama"],
     ["sepet.html", "/sepet"],
     ["product.html", "/shop"],
+    ["iade-politikasi.html", "/iade-politikasi"],
   ];
   return pairs.map(([file, dest]) => ({
     source: `/${file}`,
@@ -128,6 +129,13 @@ const nextConfig: NextConfig = {
         headers: [
           utf8Json,
           { key: "Cache-Control", value: "public, max-age=0, must-revalidate" },
+        ],
+      },
+      {
+        source: "/feeds/google-products.xml",
+        headers: [
+          { key: "Content-Type", value: "application/xml; charset=utf-8" },
+          { key: "Cache-Control", value: "public, s-maxage=3600, stale-while-revalidate=86400" },
         ],
       },
     ];
