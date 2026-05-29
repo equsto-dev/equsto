@@ -1,3 +1,4 @@
+import type { BesosLocale } from "./locale";
 import { vitrumModuleSlug } from "./module-url";
 import type { BesosCategoryGroup, BesosProduct } from "./types";
 
@@ -45,6 +46,29 @@ const CATEGORY_LABELS: Record<BesosCatalogGroupKey, { label: string; blurb: stri
     blurb: "Profesyonel bar muslukları ve aksesuarlar.",
   },
 };
+
+const CATEGORY_LABELS_EN: Record<BesosCatalogGroupKey, { label: string; blurb: string }> = {
+  "Signature Bar": {
+    label: "Signature bars",
+    blurb: "Manhattan, Boulverdier and Clover — ready-to-run stations for peak service.",
+  },
+  "Bar Module": {
+    label: "Bar modules",
+    blurb: "Modular bar lines with sinks, speed rails and storage.",
+  },
+  Modüller: {
+    label: "Modules",
+    blurb: "Mobile bar, sink, coffee, dishwasher, ice, neutral and corner modules.",
+  },
+  "Accessory:Tap": {
+    label: "Taps",
+    blurb: "Professional bar taps and accessories.",
+  },
+};
+
+function categoryLabels(locale: BesosLocale) {
+  return locale === "en" ? CATEGORY_LABELS_EN : CATEGORY_LABELS;
+}
 
 export function besosCatalogGroupKey(category: string): BesosCatalogGroupKey | "—" {
   const cat = category?.trim() || "";
@@ -96,7 +120,10 @@ export function findBesosProduct(
   );
 }
 
-export function groupBesosCatalogue(products: BesosProduct[]): BesosCategoryGroup[] {
+export function groupBesosCatalogue(
+  products: BesosProduct[],
+  locale: BesosLocale = "tr",
+): BesosCategoryGroup[] {
   const by: Record<string, BesosProduct[]> = {};
   for (const p of products) {
     const k = besosCatalogGroupKey(p.category);
@@ -108,7 +135,8 @@ export function groupBesosCatalogue(products: BesosProduct[]): BesosCategoryGrou
   return Object.keys(by)
     .map((key) => {
       const items = sortGroupItems(by[key], key);
-      const meta = CATEGORY_LABELS[key as BesosCatalogGroupKey] ?? { label: key, blurb: "" };
+      const labels = categoryLabels(locale);
+      const meta = labels[key as BesosCatalogGroupKey] ?? { label: key, blurb: "" };
       return {
         key,
         slug: slugCategory(key),
@@ -130,6 +158,7 @@ export function groupBesosCatalogue(products: BesosProduct[]): BesosCategoryGrou
 export function filterBesosProducts(
   products: BesosProduct[],
   query: string,
+  locale: BesosLocale = "tr",
 ): BesosProduct[] {
   const q = query.trim().toLowerCase();
   if (!q) return products;
@@ -140,6 +169,7 @@ export function filterBesosProducts(
       p.slug,
       p.category,
       p.description,
+      locale === "en" ? p.descriptionEn : "",
       p.totalDimensionsMm,
     ]
       .filter(Boolean)

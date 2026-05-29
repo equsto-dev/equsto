@@ -26,7 +26,8 @@
       },
       "fiyatEurKdvDahil": 8221.5,
       "priceCurrency": "EUR",
-      "imageLocal": "images/catalog/besos/web/besos-bes-p23.avif"
+      "imageLocal": "images/catalog/besos/web/besos-bes-p23.avif",
+      "descriptionEn": "Our bestselling two-person station with integrated freezer drawers, extended drip tray, sink and glass storage."
     },
     {
       "slug": "the-boulverdier",
@@ -50,7 +51,8 @@
       },
       "fiyatEurKdvDahil": 9541.8,
       "priceCurrency": "EUR",
-      "imageLocal": "images/catalog/besos/web/besos-bes-p24.avif"
+      "imageLocal": "images/catalog/besos/web/besos-bes-p24.avif",
+      "descriptionEn": "Two-person station designed for artisan cocktails, with an extended drip tray section and twin sinks."
     },
     {
       "slug": "the-clover",
@@ -74,7 +76,8 @@
       },
       "fiyatEurKdvDahil": 3415.5,
       "priceCurrency": "EUR",
-      "imageLocal": "images/catalog/besos/web/besos-bes-p25.avif"
+      "imageLocal": "images/catalog/besos/web/besos-bes-p25.avif",
+      "descriptionEn": "Signature bar module with extended bottle speed rail, easy-access garnish trays and a large insulated ice well."
     },
     {
       "name": "Bar Module",
@@ -97,7 +100,8 @@
       "fiyatEurKdvDahil": 6989.4,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-pl-bm-f-3-1-18.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-pl-bm-f-3-1-18.png",
+      "descriptionEn": "Bar module with integrated freezer drawers, sink and practical glass storage."
     },
     {
       "name": "Bar Module",
@@ -120,7 +124,8 @@
       "fiyatEurKdvDahil": 8083.8,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-pl-bm-f-4-2-22.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-pl-bm-f-4-2-22.png",
+      "descriptionEn": "Dishwashing module with integrated glass storage and under-counter dishwasher for fast, efficient cleaning."
     },
     {
       "name": "Bar Module",
@@ -143,7 +148,8 @@
       "fiyatEurKdvDahil": 8316,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-pl-bm-f-4-3-22.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-pl-bm-f-4-3-22.png",
+      "descriptionEn": "Bar module with integrated freezer drawers, sink, glass storage and extended bottle speed rail."
     },
     {
       "name": "Bar Module",
@@ -166,7 +172,8 @@
       "fiyatEurKdvDahil": 3551.4,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-pl-bm-f-1-08.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-pl-bm-f-1-08.png",
+      "descriptionEn": "Bar module with integrated freezer drawer and quick-access bottle speed rail."
     },
     {
       "name": "Bar Module",
@@ -189,7 +196,8 @@
       "fiyatEurKdvDahil": 4336.2,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-pl-bm-f-2-12.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-pl-bm-f-2-12.png",
+      "descriptionEn": "Bar module fitted with integrated freezer drawers and quick-access bottle speed rail."
     },
     {
       "name": "Bar Module",
@@ -212,7 +220,8 @@
       "fiyatEurKdvDahil": 4237.2,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-pl-bm-f-3-1-12.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-pl-bm-f-3-1-12.png",
+      "descriptionEn": "Bar station with integrated chilled drawers and quick-access bottle speed rail."
     },
     {
       "name": "Bar Module",
@@ -235,7 +244,8 @@
       "fiyatEurKdvDahil": 4274.1,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-pl-bm-f-3-2-12.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-pl-bm-f-3-2-12.png",
+      "descriptionEn": "Dishwashing module with integrated glass storage and under-counter dishwasher."
     },
     {
       "name": "Bar Module",
@@ -258,7 +268,8 @@
       "fiyatEurKdvDahil": 4524.3,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-pl-bm-f-3-3-12.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-pl-bm-f-3-3-12.png",
+      "descriptionEn": "Bar station with integrated chilled drawers and extended speed rail."
     },
     {
       "name": "Bar Module",
@@ -281,7 +292,8 @@
       "fiyatEurKdvDahil": 5282.1,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-pl-bm-f-4-16.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-pl-bm-f-4-16.png",
+      "descriptionEn": "Bar station with integrated freezer drawers and extended speed rail."
     },
     {
       "name": "Bar Module",
@@ -304,7 +316,8 @@
       "fiyatEurKdvDahil": 1195.2,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-sl-bm-10.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-sl-bm-10.png",
+      "descriptionEn": "Bar module with insulated ice well and two neutral storage drawers."
     },
     {
       "name": "Bar Module",
@@ -327,7 +340,8 @@
       "fiyatEurKdvDahil": 1296,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-sl-bm-10-s.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-sl-bm-10-s.png",
+      "descriptionEn": "Bar module with insulated ice well, multiple neutral drawers and a functional sink."
     },
     {
       "name": "Sink Module",
@@ -350,7 +364,8 @@
       "fiyatEurKdvDahil": 869.4,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-sl-sm-04.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-sl-sm-04.png",
+      "descriptionEn": "Sink module with dedicated section for organic waste disposal."
     },
     {
       "name": "Bar Module",
@@ -373,7 +388,8 @@
       "fiyatEurKdvDahil": 1276.2,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-bl-bm-14.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-bl-bm-14.png",
+      "descriptionEn": "Bar module with insulated ice well, bottle speed rail and sink for smooth service."
     },
     {
       "name": "Bar Module",
@@ -396,7 +412,8 @@
       "fiyatEurKdvDahil": 1543.5,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-bl-bm-16.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-bl-bm-16.png",
+      "descriptionEn": "Extended bar module with two insulated ice wells, bottle speed rail and sink."
     },
     {
       "name": "Mobile Bar Module",
@@ -419,7 +436,8 @@
       "fiyatEurKdvDahil": 4282.2,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-ml-bm-3-19.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-ml-bm-3-19.png",
+      "descriptionEn": "Event bar station with quick assembly and fast setup and breakdown."
     },
     {
       "name": "Mobile Bar Module",
@@ -442,7 +460,8 @@
       "fiyatEurKdvDahil": 7361.1,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-ml-bm-7-31.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-ml-bm-7-31.png",
+      "descriptionEn": "Bar station with integrated freezer drawers and extended speed rail."
     },
     {
       "name": "Coffee Module",
@@ -465,7 +484,8 @@
       "fiyatEurKdvDahil": 1207.8,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-pl-cm-c-1-12.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-pl-cm-c-1-12.png",
+      "descriptionEn": "Coffee module with under-counter chilled bay and additional storage drawers."
     },
     {
       "name": "Coffee Module",
@@ -488,7 +508,8 @@
       "fiyatEurKdvDahil": 1640.7,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-pl-cm-n-12.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-pl-cm-n-12.png",
+      "descriptionEn": "Coffee module with integrated neutral storage cabinet."
     },
     {
       "name": "Sink Module",
@@ -511,7 +532,8 @@
       "fiyatEurKdvDahil": 4257,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-pl-sm-n-3-15.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-pl-sm-n-3-15.png",
+      "descriptionEn": "Sink module with extended glass storage, twin drip trays and pre-mix compartments."
     },
     {
       "name": "Sink Module",
@@ -534,7 +556,8 @@
       "fiyatEurKdvDahil": 2912.4,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-pl-sm-s-n-3-09.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-pl-sm-s-n-3-09.png",
+      "descriptionEn": "Sink module with integrated glass storage."
     },
     {
       "name": "Sink Module",
@@ -557,7 +580,8 @@
       "fiyatEurKdvDahil": 2912.4,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-pl-sm-n-2-09.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-pl-sm-n-2-09.png",
+      "descriptionEn": "Sink module with glass storage, integrated drip tray and pre-mix compartment."
     },
     {
       "name": "Sink Module",
@@ -580,7 +604,8 @@
       "fiyatEurKdvDahil": 1554.3,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-pl-sm-n-1-08.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-pl-sm-n-1-08.png",
+      "descriptionEn": "Sink module with neutral storage sections for practical layout and use."
     },
     {
       "name": "Sink Module",
@@ -603,7 +628,8 @@
       "fiyatEurKdvDahil": 869.4,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-pl-sm-04.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-pl-sm-04.png",
+      "descriptionEn": "Sink module with dedicated section for organic waste."
     },
     {
       "name": "Dishwasher Module",
@@ -626,7 +652,8 @@
       "fiyatEurKdvDahil": 1153.8,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-pl-wm-1-12.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-pl-wm-1-12.png",
+      "descriptionEn": "Dishwashing module with integrated glass storage and under-counter dishwasher."
     },
     {
       "name": "Ice Machine Module",
@@ -649,7 +676,8 @@
       "fiyatEurKdvDahil": 650.7,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-pl-im-n-08.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-pl-im-n-08.png",
+      "descriptionEn": "Modular bar unit with integrated ice machine and additional storage bay."
     },
     {
       "name": "Neutral Module",
@@ -672,7 +700,8 @@
       "fiyatEurKdvDahil": 1306.8,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-pl-nm-3d-s.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-pl-nm-3d-s.png",
+      "descriptionEn": "Modular bar unit with neutral drawers for multi-purpose storage."
     },
     {
       "name": "Neutral Module",
@@ -695,7 +724,8 @@
       "fiyatEurKdvDahil": 1128.6,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-pl-nm-3d-t.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-pl-nm-3d-t.png",
+      "descriptionEn": "Cash desk module with generous storage space."
     },
     {
       "name": "Neutral Module",
@@ -718,7 +748,8 @@
       "fiyatEurKdvDahil": 1081.8,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-pl-nm-n-1.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-pl-nm-n-1.png",
+      "descriptionEn": "Bar unit with integrated glass storage and adjustable drawer height."
     },
     {
       "name": "Neutral Module",
@@ -741,7 +772,8 @@
       "fiyatEurKdvDahil": 1304.1,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-pl-nm-nd-2.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-pl-nm-nd-2.png",
+      "descriptionEn": "Bar unit with integrated glass storage and drip tray to contain spills."
     },
     {
       "name": "Corner Module",
@@ -764,7 +796,8 @@
       "fiyatEurKdvDahil": 431.1,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-pl-am-1.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-pl-am-1.png",
+      "descriptionEn": "Corner module with functional drip tray for bespoke bar configurations."
     },
     {
       "name": "Corner Module",
@@ -787,7 +820,8 @@
       "fiyatEurKdvDahil": 504.9,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-pl-am-2.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-pl-am-2.png",
+      "descriptionEn": "Corner module with flush drip tray for bespoke bar configurations."
     },
     {
       "name": "Corner Module",
@@ -810,7 +844,8 @@
       "fiyatEurKdvDahil": 554.4,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-pl-am-3.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-pl-am-3.png",
+      "descriptionEn": "Corner module with drip tray and integrated beer tap mechanism."
     },
     {
       "name": "Accessory:Tap",
@@ -833,7 +868,8 @@
       "fiyatEurKdvDahil": 91.8,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-ag-232.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-ag-232.png",
+      "descriptionEn": "Professional mixer tap with ceramic cartridge and polished chrome lever."
     },
     {
       "name": "Accessory:Tap",
@@ -856,7 +892,8 @@
       "fiyatEurKdvDahil": 47.7,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-ag-305bf.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-ag-305bf.png",
+      "descriptionEn": "Mixer tap with ceramic cartridge, chrome lever and swivel spout; chrome-plated brass body."
     },
     {
       "name": "Accessory:Tap",
@@ -879,7 +916,8 @@
       "fiyatEurKdvDahil": 45,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-ag-305kbf.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-ag-305kbf.png",
+      "descriptionEn": "Mixer tap with robust ceramic cartridge, polished chrome lever and swivel spout."
     },
     {
       "name": "Accessory:Tap",
@@ -902,7 +940,8 @@
       "fiyatEurKdvDahil": 359.1,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-ag-mf2.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-ag-mf2.png",
+      "descriptionEn": "Mixer tap with ceramic cartridge; AISI-304 stainless steel body."
     },
     {
       "name": "Accessory:Tap",
@@ -925,7 +964,8 @@
       "fiyatEurKdvDahil": 582.3,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-ag-03.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-ag-03.png",
+      "descriptionEn": "Mixer tap with ceramic cartridge, polished chrome lever and spring-return swivel spout."
     },
     {
       "name": "Accessory:Tap",
@@ -948,7 +988,8 @@
       "fiyatEurKdvDahil": 362.7,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-ag-d30m.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-ag-d30m.png",
+      "descriptionEn": "Tap set with stainless braided hose, swivel spout, chrome lever and spring return."
     },
     {
       "name": "Accessory:Tap",
@@ -971,7 +1012,8 @@
       "fiyatEurKdvDahil": 215.1,
       "priceCurrency": "EUR",
       "imageSource": "vitrum-pdf-oct-2025",
-      "imageLocal": "images/catalog/besos/pdf/besos-ag-8025e.png"
+      "imageLocal": "images/catalog/besos/pdf/besos-ag-8025e.png",
+      "descriptionEn": "Sensor tap with chrome-plated brass body; detection range up to 10 cm."
     }
   ],
   "imageRoot": "images/catalog/besos/web",

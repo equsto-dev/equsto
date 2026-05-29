@@ -1,3 +1,4 @@
+import type { BesosLocale } from "./locale";
 import type { BesosProduct } from "./types";
 
 function stripDiacritics(s: string): string {
@@ -17,7 +18,11 @@ export function vitrumModuleSlug(p: BesosProduct | null | undefined): string {
   return slug;
 }
 
-export function besosModuleHrefFromProduct(p: BesosProduct): string {
+export function besosModuleHrefFromProduct(
+  p: BesosProduct,
+  locale: BesosLocale = "tr",
+): string {
   const slug = vitrumModuleSlug(p);
-  return slug ? `/besos/modul/${encodeURIComponent(slug)}` : "/besos";
+  const base = locale === "en" ? "/en/besos" : "/besos";
+  return slug ? `${base}/modul/${encodeURIComponent(slug)}` : base;
 }

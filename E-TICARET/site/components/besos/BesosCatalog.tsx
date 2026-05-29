@@ -6,11 +6,14 @@ import { useEffect, useMemo, useState } from "react";
 import { besosAssetPath } from "@/lib/besos/asset-path";
 import { BESOS_TILE_GRID_KEYS, filterBesosProducts, groupBesosCatalogue } from "@/lib/besos/catalog";
 import { besosPriceLabel } from "@/lib/besos/format-price";
+import type { BesosLocale } from "@/lib/besos/locale";
 import { besosModuleHrefFromProduct } from "@/lib/besos/module-url";
+import { besosUi } from "@/lib/besos/ui-strings";
 import type { BesosProduct } from "@/lib/besos/types";
 
 type Props = {
   products: BesosProduct[];
+  locale?: BesosLocale;
 };
 
 function productKey(p: BesosProduct): string {
@@ -34,9 +37,11 @@ function truncate(text: string, max: number): string {
 function ProductActions({
   product,
   classPrefix = "bes-prod",
+  locale,
 }: {
   product: BesosProduct;
   classPrefix?: string;
+  locale: BesosLocale;
 }) {
   const handleAction = (action: "cart" | "contact") => {
     const actions = window.EqBesosActions;
@@ -51,29 +56,29 @@ function ProductActions({
         type="button"
         className={`${classPrefix}-btn ${classPrefix}-btn-primary`}
         onClick={() => handleAction("cart")}
-        data-i18n="besos.catalog_add_to_cart"
       >
-        Sepete Ekle
+        {besosUi("addToCart", locale)}
       </button>
       <button
         type="button"
         className={`${classPrefix}-btn ${classPrefix}-btn-outline`}
         onClick={() => handleAction("contact")}
-        data-i18n="besos.catalog_contact"
       >
-        İletişim
+        {besosUi("contact", locale)}
       </button>
     </div>
   );
 }
 
-function TapTile({ product }: { product: BesosProduct }) {
+function TapTile({ product, locale }: { product: BesosProduct; locale: BesosLocale }) {
   const img = product.image ? besosAssetPath(product.image) : "";
-  const code = product.code?.trim() || product.name || "Modül";
-  const price = besosPriceLabel(product);
+  const code = product.code?.trim() || product.name || besosUi("catalogModuleDefault", locale);
+  const price = besosPriceLabel(product, locale);
   const desc = product.description ? truncate(product.description, 140) : "";
-  const dim = product.totalDimensionsMm ? `Total ${product.totalDimensionsMm} mm` : "";
-  const href = besosModuleHrefFromProduct(product);
+  const dim = product.totalDimensionsMm
+    ? `${besosUi("totalDimensions", locale)} ${product.totalDimensionsMm} mm`
+    : "";
+  const href = besosModuleHrefFromProduct(product, locale);
 
   return (
     <article className="vit-tap-tile" data-page={product.page ?? ""} title={code}>
@@ -81,9 +86,7 @@ function TapTile({ product }: { product: BesosProduct }) {
         {img ? (
           <Image src={img} alt={code} width={320} height={400} loading="lazy" unoptimized />
         ) : (
-          <span className="vit-card-hero-empty" data-i18n="besos.catalog_image_ph">
-            Görsel
-          </span>
+          <span className="vit-card-hero-empty">{besosUi("catalogImagePh", locale)}</span>
         )}
       </Link>
       <div className="vit-tap-tile-body">
@@ -92,19 +95,27 @@ function TapTile({ product }: { product: BesosProduct }) {
         {dim ? <div className="vit-tap-tile-dim">{dim}</div> : null}
         <div className="vit-tap-tile-buy">
           {price ? <div className="vit-tap-tile-price">{price}</div> : null}
-          <ProductActions product={product} classPrefix="bes-prod" />
+          <ProductActions product={product} classPrefix="bes-prod" locale={locale} />
         </div>
       </div>
     </article>
   );
 }
 
-function CardRow({ product, categoryLabel }: { product: BesosProduct; categoryLabel: string }) {
+function CardRow({
+  product,
+  categoryLabel,
+  locale,
+}: {
+  product: BesosProduct;
+  categoryLabel: string;
+  locale: BesosLocale;
+}) {
   const img = product.image ? besosAssetPath(product.image) : "";
   const title = cardTitle(product);
-  const price = besosPriceLabel(product);
+  const price = besosPriceLabel(product, locale);
   const desc = product.description ?? "";
-  const href = besosModuleHrefFromProduct(product);
+  const href = besosModuleHrefFromProduct(product, locale);
   const pageRef = product.page ? ` · P.${product.page}` : "";
 
   return (
@@ -114,9 +125,7 @@ function CardRow({ product, categoryLabel }: { product: BesosProduct; categoryLa
           {img ? (
             <Image src={img} alt={title} width={640} height={384} loading="lazy" unoptimized />
           ) : (
-            <div className="vit-card-hero-empty" data-i18n="besos.catalog_image_ph">
-              Görsel
-            </div>
+            <div className="vit-card-hero-empty">{besosUi("catalogImagePh", locale)}</div>
           )}
         </Link>
         <div className="vit-card-info">
@@ -128,7 +137,7 @@ function CardRow({ product, categoryLabel }: { product: BesosProduct; categoryLa
           {desc ? <p className="vit-card-info-desc">{desc}</p> : null}
           <div className="vit-card-buy">
             {price ? <div className="vit-card-buy-price">{price}</div> : null}
-            <ProductActions product={product} classPrefix="bes-prod" />
+            <ProductActions product={product} classPrefix="bes-prod" locale={locale} />
           </div>
         </div>
       </div>
@@ -136,7 +145,7 @@ function CardRow({ product, categoryLabel }: { product: BesosProduct; categoryLa
   );
 }
 
-export default function BesosCatalog({ products }: Props) {
+export default function BesosCatalog({ products, locale = "tr" }: Props) {
   const [query, setQuery] = useState("");
 
   useEffect(() => {
@@ -148,20 +157,22 @@ export default function BesosCatalog({ products }: Props) {
   }, []);
 
   const filtered = useMemo(
-    () => filterBesosProducts(products, query),
-    [products, query],
+    () => filterBesosProducts(products, query, locale),
+    [products, query, locale],
   );
-  const groups = useMemo(() => groupBesosCatalogue(filtered), [filtered]);
+  const groups = useMemo(() => groupBesosCatalogue(filtered, locale), [filtered, locale]);
 
   return (
-    <section className="bes-catalog" id="bd-stations" aria-label="Bar modülleri kataloğu" data-i18n-attr="aria-label:besos.catalog_aria">
+    <section className="bes-catalog" id="bd-stations" aria-label={besosUi("catalogAria", locale)}>
       {query ? (
         <div className="bd-vitrum-flat-head">
           <h3>
-            &ldquo;{query}&rdquo; için {filtered.length} eşleşen ürün
+            {locale === "en"
+              ? `\u201c${query}\u201d — ${filtered.length} ${besosUi("catalogSearchMatch", locale)}`
+              : `\u201c${query}\u201d için ${filtered.length} ${besosUi("catalogSearchMatch", locale)}`}
           </h3>
-          <button type="button" className="bes-catalog-search-clear" onClick={() => setQuery("")} data-i18n="besos.catalog_search_clear">
-            Aramayı temizle
+          <button type="button" className="bes-catalog-search-clear" onClick={() => setQuery("")}>
+            {besosUi("catalogSearchClear", locale)}
           </button>
         </div>
       ) : null}
@@ -170,7 +181,7 @@ export default function BesosCatalog({ products }: Props) {
         <div className="bd-vitrum-board bd-vitrum-flat">
           <div className="bd-vitrum-cat-grid">
             {filtered.map((p) => (
-              <CardRow key={productKey(p)} product={p} categoryLabel={p.category} />
+              <CardRow key={productKey(p)} product={p} categoryLabel={p.category} locale={locale} />
             ))}
           </div>
         </div>
@@ -185,10 +196,12 @@ export default function BesosCatalog({ products }: Props) {
                 <div className="bd-vitrum-cat-head">
                   <div className="bd-vitrum-cat-num">{n}</div>
                   <div className="bd-vitrum-cat-meta">
-                    <div className="bd-vitrum-cat-kicker">Kategori {n}</div>
+                    <div className="bd-vitrum-cat-kicker">
+                      {besosUi("catalogCategory", locale)} {n}
+                    </div>
                     <h3 className="bd-vitrum-cat-title">{g.label}</h3>
                     <div className="bd-vitrum-cat-count">
-                      {g.items.length} ürün · Sayfa {minPage}+
+                      {g.items.length} {besosUi("catalogProducts", locale)} · {besosUi("catalogPage", locale)} {minPage}+
                     </div>
                     {g.blurb ? <p className="bd-vitrum-cat-desc">{g.blurb}</p> : null}
                   </div>
@@ -196,9 +209,9 @@ export default function BesosCatalog({ products }: Props) {
                 <div className={`bd-vitrum-cat-grid${isTileGrid ? " bd-vitrum-cat-grid--tap" : ""}`}>
                   {g.items.map((p) =>
                     isTileGrid ? (
-                      <TapTile key={productKey(p)} product={p} />
+                      <TapTile key={productKey(p)} product={p} locale={locale} />
                     ) : (
-                      <CardRow key={productKey(p)} product={p} categoryLabel={g.label} />
+                      <CardRow key={productKey(p)} product={p} categoryLabel={g.label} locale={locale} />
                     ),
                   )}
                 </div>
