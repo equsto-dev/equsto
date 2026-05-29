@@ -74,6 +74,9 @@
   }
 
   function formatPrice(p, raw) {
+    if (raw && (Number(raw.fiyat_bekleniyor) === 1 || /teklif\s+için/i.test(String(raw.price || p || '')))) {
+      return __plpT('plp.quote_contact', 'Teklif için iletişim');
+    }
     if (raw && isOztiListeTlRow(raw) && /KDV\s*dahil/i.test(String(raw.price || p || ''))) {
       return String(raw.price || p || '').split('\n')[0];
     }
@@ -240,7 +243,7 @@
   function formatPriceNote(raw) {
     if (!raw) return '';
     if (Number(raw.fiyat_bekleniyor) === 1 || /teklif/i.test(String(raw.price || ''))) {
-      return __plpT('plp.quote_contact', 'Teklif için iletişim');
+      return '';
     }
     var price = String(raw.price || '');
     if (isOztiRow(raw) && Number(raw.liste_fiyati_eur) > 0 && Number(raw.fiyat_tl) > 0) {

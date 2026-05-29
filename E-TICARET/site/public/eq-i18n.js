@@ -119,7 +119,7 @@
 
   function fetchDict(lang) {
     var custom = window.eqI18nBaseUrl;
-    var v = window.__EQ_I18N_JSON_V || "20260530besos-pdp-i18n";
+    var v = window.__EQ_I18N_JSON_V || "20260530pdp-dims-quote";
     var urls = custom
       ? [custom + lang + ".json?v=" + encodeURIComponent(v)]
       : ["/i18n/" + lang + ".json?v=" + encodeURIComponent(v), "/locales/" + lang + ".json?v=" + encodeURIComponent(v)];
