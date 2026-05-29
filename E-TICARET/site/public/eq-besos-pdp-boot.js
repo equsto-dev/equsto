@@ -10,6 +10,14 @@
     return v == null ? "" : String(v).trim();
   }
 
+  function isEn() {
+    try {
+      return window.eqLang === "en" || /^\/en(\/|$)/i.test(location.pathname || "");
+    } catch (_) {
+      return false;
+    }
+  }
+
   function besosSlugFromPath() {
     var m = /\/besos\/modul\/([^/?#]+)/i.exec(location.pathname || "");
     return m ? decodeURIComponent(m[1]).toLowerCase() : "";
@@ -43,7 +51,7 @@
 
     var teknik = [];
     var feats = p.features;
-    if (window.eqLang === "en" && Array.isArray(p.featuresEn) && p.featuresEn.length) {
+    if (isEn() && Array.isArray(p.featuresEn) && p.featuresEn.length) {
       feats = p.featuresEn;
     }
     if (Array.isArray(feats)) {
@@ -57,31 +65,41 @@
     if (Array.isArray(p.dimensionsMm)) {
       p.dimensionsMm.forEach(function (d) {
         if (!d || !nz(d.value)) return;
-        var lbl = window.eqLang === "en" && d.labelEn ? d.labelEn : d.label || d.labelEn || "";
+        var lbl = isEn() && d.labelEn ? d.labelEn : d.label || d.labelEn || "";
         teknik.push((lbl ? lbl + ": " : "") + d.value + " mm");
       });
     }
     if (nz(p.totalDimensionsMm)) {
-      teknik.push("Toplam ölçü: " + p.totalDimensionsMm + " mm");
+      var totalLbl = isEn() ? "Total dimensions:" : "Toplam ölçü:";
+      teknik.push(totalLbl + " " + p.totalDimensionsMm + " mm");
     }
+
+    var descTr = nz(p.description);
+    var descEn = nz(p.descriptionEn);
+    var description = isEn() && descEn ? descEn : descTr;
+
+    var modPath =
+      typeof window.vitrumModulePath === "function"
+        ? window.vitrumModulePath(slug)
+        : "/besos/modul/" + slug;
 
     return {
       id: slug,
       slug: slug,
-      name: nz(p.name) || nz(p.code) || "Bar modülü",
+      name: nz(p.name) || nz(p.code) || (isEn() ? "Bar module" : "Bar modülü"),
       brand: "Besos",
       category: nz(p.category) || "Bar Design",
       sku: nz(p.code),
       model: nz(p.code),
-      description: nz(p.description),
-      descriptionEn: nz(p.descriptionEn),
+      description: description,
+      descriptionEn: descEn,
       images: images,
       drawing: drawing,
       price: eurToTryPriceString(eur, eurTryRate),
       fiyatEurKdvDahil: eur,
       dept: "besos",
       kaynak: "besos-vitrum",
-      equstoPage: "/besos/modul/" + slug,
+      equstoPage: modPath,
       vitrumProduct: p,
       teknik_ozellikler: teknik.length ? teknik : undefined,
       page: p.page,
@@ -114,7 +132,10 @@
 
     var slug = besosSlugFromPath();
     if (!slug) {
-      root.innerHTML = '<div class="eq-product-miss">Modül bulunamadı.</div>';
+      root.innerHTML =
+        '<div class="eq-product-miss">' +
+        escMiss(isEn() ? "Module not found." : "Modül bulunamadı.") +
+        "</div>";
       return;
     }
 
@@ -161,16 +182,31 @@
       .catch(function (err) {
         var msg =
           err && err.message === "notfound"
-            ? "Bu modül bulunamadı."
-            : "Modül verisi yüklenemedi.";
+            ? isEn()
+              ? "This module was not found."
+              : "Bu modül bulunamadı."
+            : isEn()
+              ? "Could not load module data."
+              : "Modül verisi yüklenemedi.";
         var besosHref =
           typeof window.equstoUrl === "function" ? window.equstoUrl("besos") : "/besos";
+        var backLbl = isEn() ? "Back to Bar Design showcase" : "Bar Design vitrinine dön";
         root.innerHTML =
           '<div class="eq-product-miss">' +
-          msg +
+          escMiss(msg) +
           ' <a href="' +
-          besosHref +
-          '">Bar Design vitrinine dön</a></div>';
+          escMiss(besosHref) +
+          '">' +
+          escMiss(backLbl) +
+          "</a></div>";
       });
   };
+
+  function escMiss(s) {
+    return String(s || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
 })();

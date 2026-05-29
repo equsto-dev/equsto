@@ -410,7 +410,9 @@ window.searchFilter = window.searchFilter || function () {};
         var fb =
           seg === "set-ustu-mutfak"
             ? "Set Üstü Mutfak Ekipmanları"
-            : seg.charAt(0).toUpperCase() + seg.slice(1);
+            : seg === "besos"
+              ? "Besos"
+              : seg.charAt(0).toUpperCase() + seg.slice(1);
         return { href: window.equstoUrl(seg), label: __navDeptLabel(seg, fb) };
       }
       return { href: eqShopHref(), label: __pdpT("pdp.breadcrumb_catalog", "Katalog") };
@@ -651,7 +653,7 @@ window.searchFilter = window.searchFilter || function () {};
 
     function railLabelForProduct(x) {
       if (x && String(x.kaynak || "") === "besos-vitrum") {
-        return "Besos — diğer modüller";
+        return __pdpT("pdp.besos_other_modules", "Besos — diğer modüller");
       }
       if (!x || !isMarketReyonProduct(x)) return railLabelFor((x && x.category) || "");
       if (isCaglayanRefrigeration(x)) {
@@ -1425,11 +1427,15 @@ window.searchFilter = window.searchFilter || function () {};
 
     function pdpLeadParagraph(x) {
       if (isCaglayanRefrigeration(x)) return caglayanLeadParagraph(x);
-      if (x.description && String(x.description).trim()) {
-        return String(x.description).trim().split(/\n/)[0].slice(0, 320);
-      }
+      var desc =
+        window.eqLang === "en" && x.descriptionEn && String(x.descriptionEn).trim()
+          ? String(x.descriptionEn).trim()
+          : x.description && String(x.description).trim()
+            ? String(x.description).trim()
+            : "";
+      if (desc) return desc.split(/\n/)[0].slice(0, 320);
       var dim = formatOlculerLinePdp(x);
-      if (dim) return "İç ölçüler: " + dim + ".";
+      if (dim) return __pdpT("pdp.inner_dims_prefix", "İç ölçüler: {dim}.", { dim: dim });
       var bullets = buildAboutBullets(splitSpecsCols(x.specs).left || x.specs, 3);
       if (bullets.length) return bullets.join(" · ");
       return (x.brand ? x.brand + " — " : "") + "Equsto kataloğundan endüstriyel mutfak ekipmanı.";
@@ -1470,7 +1476,7 @@ window.searchFilter = window.searchFilter || function () {};
     function renderEpdpBuybox(x, cartU) {
       var parts = buyboxPriceParts(x);
       var priceHTML = parts.quoteOnly
-        ? '<span class="eq-buybox-int" style="font-size:1.05rem;">Teklif için iletişim</span>'
+        ? '<span class="eq-buybox-int" style="font-size:1.05rem;">' + esc(__pdpT("pdp.quote_for_contact", "Teklif için iletişim")) + "</span>"
         : parts.empty
           ? '<span class="eq-buybox-int">—</span>'
           : '<span class="eq-buybox-currency">₺</span><span class="eq-buybox-int">' +
@@ -1494,29 +1500,38 @@ window.searchFilter = window.searchFilter || function () {};
         cartBtn +
         '<a class="eq-amz-btn-buynow" href="' +
         esc(pfosHref) +
-        '">Proje Fabrikası</a>' +
+        '">' + esc(__pdpT("nav.pfos", "Proje Fabrikası")) + "</a>" +
         "</div></div>"
       );
     }
 
     function renderEpdpFeaturesCol(x) {
       if (isCaglayanRefrigeration(x)) return renderCaglayanFeaturesCol(x);
-      var html = '<div class="eq-epdp-panel eq-caglayan-panel"><h2>Özellikler</h2><div class="eq-caglayan-acc">';
+      var html =
+        '<div class="eq-epdp-panel eq-caglayan-panel"><h2>' +
+        esc(__pdpT("pdp.features_heading", "Özellikler")) +
+        '</h2><div class="eq-caglayan-acc">';
       var ref = deptLink(x.category, x.dept);
       var temel = [];
       if (x.brand) temel.push(__pdpT("pdp.brand_prefix", "Marka:") + " " + x.brand);
       if (x.sku || x.model) temel.push(__pdpT("pdp.product_code_prefix", "Ürün kodu:") + " " + (x.sku || x.model));
-      if (ref.label) temel.push("Kategori: " + ref.label);
+      if (ref.label) temel.push(__pdpT("pdp.category_prefix", "Kategori:") + " " + ref.label);
       var dim = formatOlculerLinePdp(x);
       if (dim) temel.push(__pdpT("pdp.dims_prefix", "Ölçüler:") + " " + dim);
       if (temel.length) {
         html +=
-          '<details open><summary>Temel bilgiler</summary><div class="eq-caglayan-acc__body"><ul>' +
+          '<details open><summary>' +
+          esc(__pdpT("pdp.basic_info", "Temel bilgiler")) +
+          '</summary><div class="eq-caglayan-acc__body"><ul>' +
           temel.map(function (l) { return "<li>" + esc(l) + "</li>"; }).join("") +
           "</ul></div></details>";
       }
       var groups = groupPdpSpecLines(pdpTeknikLines(x));
-      [["elektrik", "Elektrik"], ["sogutma", "Soğutma"], ["diger", "Diğer"]].forEach(function (pair) {
+      [
+        ["elektrik", __pdpT("pdp.spec_group_electric", "Elektrik")],
+        ["sogutma", __pdpT("pdp.spec_group_cooling", "Soğutma")],
+        ["diger", __pdpT("pdp.spec_group_other", "Diğer")],
+      ].forEach(function (pair) {
         var key = pair[0];
         var title = pair[1];
         if (!groups[key].length) return;
@@ -1528,7 +1543,10 @@ window.searchFilter = window.searchFilter || function () {};
           "</ul></div></details>";
       });
       if (!temel.length && !groups.elektrik.length && !groups.sogutma.length && !groups.diger.length) {
-        html += '<p class="eq-caglayan-acc__body">Detaylı teknik özellikler için teklif sürecinden talep edebilirsiniz.</p>';
+        html +=
+          '<p class="eq-caglayan-acc__body">' +
+          esc(__pdpT("pdp.specs_request_quote", "Detaylı teknik özellikler için teklif sürecinden talep edebilirsiniz.")) +
+          "</p>";
       }
       html += "</div></div>";
       return html;
@@ -1541,26 +1559,43 @@ window.searchFilter = window.searchFilter || function () {};
       var pdf = pdpPdfHref(x);
       var contactHref = eqHtmlUrl(typeof window.equstoUrl === "function" ? window.equstoUrl("contact") : "contact.html");
       var pfosHref = eqHtmlUrl(typeof window.equstoUrl === "function" ? window.equstoUrl("pfos") : "pfos.html");
-      var html = '<div class="eq-epdp-panel eq-caglayan-panel"><h2>Dökümanlar</h2><div class="eq-caglayan-acc">';
+      var html =
+        '<div class="eq-epdp-panel eq-caglayan-panel"><h2>' +
+        esc(__pdpT("pdp.documents_heading", "Dökümanlar")) +
+        '</h2><div class="eq-caglayan-acc">';
       if (pdf && pdf.indexOf(".pdf") >= 0) {
         html +=
-          '<details open><summary>Veri sayfası</summary><div class="eq-caglayan-acc__body"><a href="' +
+          '<details open><summary>' +
+          esc(__pdpT("pdp.datasheet", "Veri sayfası")) +
+          '</summary><div class="eq-caglayan-acc__body"><a href="' +
           esc(pdf) +
-          '" target="_blank" rel="noopener">Ürün kataloğu (PDF)</a></div></details>';
+          '" target="_blank" rel="noopener">' +
+          esc(__pdpT("pdp.product_catalog_pdf", "Ürün kataloğu (PDF)")) +
+          "</a></div></details>";
       }
       html +=
         "<details" +
         (pdf && pdf.indexOf(".pdf") >= 0 ? "" : " open") +
-        '><summary>Teklif ve satış</summary><div class="eq-caglayan-acc__body"><a href="' +
+        '><summary>' +
+        esc(__pdpT("pdp.quote_and_sales", "Teklif ve satış")) +
+        '</summary><div class="eq-caglayan-acc__body"><a href="' +
         esc(contactHref) +
-        '">Teklif ve iletişim</a> · <a href="' +
+        '">' +
+        esc(__pdpT("pdp.quote_contact", "Teklif ve iletişim")) +
+        '</a> · <a href="' +
         esc(pfosHref) +
-        '">Proje Fabrikası</a></div></details>';
+        '">' +
+        esc(__pdpT("nav.pfos", "Proje Fabrikası")) +
+        "</a></div></details>";
       if (x.linkKaynak) {
         html +=
-          '<details><summary>Üretici kaynağı</summary><div class="eq-caglayan-acc__body"><a href="' +
+          '<details><summary>' +
+          esc(__pdpT("pdp.mfg_source", "Üretici kaynağı")) +
+          '</summary><div class="eq-caglayan-acc__body"><a href="' +
           esc(x.linkKaynak) +
-          '" target="_blank" rel="noopener">Üretici / kaynak sayfası</a></div></details>';
+          '" target="_blank" rel="noopener">' +
+          esc(__pdpT("pdp.mfg_source_link", "Üretici / kaynak sayfası")) +
+          "</a></div></details>";
       }
       html +=
         '<details><summary>' + esc(__pdpT("pdp.technical_drawings", "Teknik çizimler")) + '</summary><div class="eq-caglayan-acc__body"><a href="#eq-epdp-drawings">' + esc(__pdpT("pdp.go_to_drawings", "Sayfadaki teknik görsellere git")) + '</a></div></details>';
@@ -1862,17 +1897,33 @@ window.searchFilter = window.searchFilter || function () {};
       var ref = deptLink(x.category, x.dept);
       var bc = document.getElementById("eq-product-bc");
       if (bc) {
-        bc.innerHTML =
-          '<a href="' +
-          esc(eqHtmlUrl(eqShopHref())) +
-          '">' + esc(__pdpT("breadcrumb.home", "Ana Sayfa")) + '</a> › <a href="' +
-          esc(eqHtmlUrl(ref.href)) +
-          '">' +
-          esc(ref.label) +
-          "</a> › <span>" +
-          esc((x.name || "").slice(0, 80)) +
-          (x.name && x.name.length > 80 ? "…" : "") +
-          "</span>";
+        if (x && String(x.kaynak || "") === "besos-vitrum") {
+          var besosHref =
+            typeof window.equstoUrl === "function" ? window.equstoUrl("besos") : "/besos";
+          bc.innerHTML =
+            '<a href="' +
+            esc(eqHtmlUrl(eqShopHref())) +
+            '">' +
+            esc(__pdpT("breadcrumb.home", "Ana Sayfa")) +
+            '</a> › <a href="' +
+            esc(eqHtmlUrl(besosHref)) +
+            '">Besos</a> › <span>' +
+            esc((x.name || "").slice(0, 80)) +
+            (x.name && x.name.length > 80 ? "…" : "") +
+            "</span>";
+        } else {
+          bc.innerHTML =
+            '<a href="' +
+            esc(eqHtmlUrl(eqShopHref())) +
+            '">' + esc(__pdpT("breadcrumb.home", "Ana Sayfa")) + '</a> › <a href="' +
+            esc(eqHtmlUrl(ref.href)) +
+            '">' +
+            esc(ref.label) +
+            "</a> › <span>" +
+            esc((x.name || "").slice(0, 80)) +
+            (x.name && x.name.length > 80 ? "…" : "") +
+            "</span>";
+        }
       }
       var imgs = collectProductImgs(x);
       var cartU = {
@@ -1973,7 +2024,9 @@ window.searchFilter = window.searchFilter || function () {};
         '<h1 class="eq-epdp-title eq-caglayan-title">' +
         esc(x.name || "") +
         "</h1>" +
-        '<p class="eq-epdp-cod eq-caglayan-cod">Ürün kodu: <strong>' +
+        '<p class="eq-epdp-cod eq-caglayan-cod">' +
+        esc(__pdpT("pdp.product_code_prefix", "Ürün kodu:")) +
+        " <strong>" +
         esc(x.sku || x.model || x.urun_kodu || "—") +
         "</strong></p>" +
         '<p class="eq-epdp-lead eq-caglayan-lead">' +
@@ -1984,14 +2037,20 @@ window.searchFilter = window.searchFilter || function () {};
         (pdf && /\.pdf/i.test(pdf)
           ? '<a class="eq-caglayan-btn" href="' +
             esc(pdf) +
-            '" target="_blank" rel="noopener">Katalog (PDF)</a>'
+            '" target="_blank" rel="noopener">' +
+            esc(__pdpT("pdp.pdf_catalog", "PDF katalog")) +
+            "</a>"
           : "") +
         '<a class="eq-caglayan-btn" href="' +
         esc(contactHref) +
-        '">Teklif ve iletişim</a>' +
+        '">' +
+        esc(__pdpT("pdp.quote_contact", "Teklif ve iletişim")) +
+        '</a>' +
         '<a class="eq-caglayan-btn eq-caglayan-btn--primary" href="' +
         esc(pfosHref) +
-        '">Proje Fabrikası</a>' +
+        '">' +
+        esc(__pdpT("nav.pfos", "Proje Fabrikası")) +
+        "</a>" +
         "</div></div></div>" +
         '<div class="eq-epdp-panels eq-caglayan-panels">' +
         renderEpdpFeaturesCol(x) +
@@ -2066,7 +2125,9 @@ window.searchFilter = window.searchFilter || function () {};
         var besosRoot = document.getElementById("eq-product-root");
         if (besosRoot) {
           besosRoot.innerHTML =
-            '<div class="eq-product-miss">Besos modül yükleyici bekleniyor… Sayfayı yenileyin.</div>';
+            '<div class="eq-product-miss">' +
+            esc(__pdpT("pdp.besos_loader_waiting", "Besos modül yükleyici bekleniyor… Sayfayı yenileyin.")) +
+            "</div>";
         }
         return;
       }
@@ -2173,7 +2234,20 @@ window.searchFilter = window.searchFilter || function () {};
     }
 
     if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", bootProductPage);
+      document.addEventListener("DOMContentLoaded", startProductPageBoot);
     } else {
-      bootProductPage();
+      startProductPageBoot();
+    }
+
+    function startProductPageBoot() {
+      function go() {
+        bootProductPage();
+      }
+      try {
+        if (window.eqI18nReady && typeof window.eqI18nReady.then === "function") {
+          window.eqI18nReady.then(go).catch(go);
+          return;
+        }
+      } catch (_) {}
+      go();
     }
