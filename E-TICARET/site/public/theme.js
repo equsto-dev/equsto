@@ -197,6 +197,32 @@
 
   window.__eqRerenderTopnavBesos = installTopnavBesosFaces;
 
+  /** Bar Design her zaman departman listesinin sonunda (eski önbellek / partial uyumu). */
+  function normalizeTopnavBarDesignLast(root) {
+    root = root || document;
+    var inner = root.querySelector("nav.topnav .topnav-inner");
+    if (!inner) return;
+    var besos = inner.querySelector(".topnav-item.topnav-besos");
+    if (!besos) return;
+    var items = inner.querySelectorAll(".topnav-item");
+    if (!items.length || items[items.length - 1] === besos) return;
+
+    var next = besos.nextElementSibling;
+    if (next && next.classList.contains("topnav-sep")) next.remove();
+    var prev = besos.previousElementSibling;
+    if (prev && prev.classList.contains("topnav-sep")) prev.remove();
+    besos.remove();
+
+    var sep = document.createElement("span");
+    sep.className = "topnav-sep";
+    sep.setAttribute("aria-hidden", "true");
+    sep.textContent = "|";
+    inner.appendChild(sep);
+    inner.appendChild(besos);
+  }
+
+  window.__eqNormalizeTopnavBarDesignLast = normalizeTopnavBarDesignLast;
+
   /** Dış http(s) bağlantıları yeni sekmede; iç site linkleri aynı sekme. `data-eq-same-tab="1"` ile istisna. */
   function eqHostnameKey(h) {
     return String(h || "")

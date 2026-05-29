@@ -5,7 +5,7 @@
 (function () {
   "use strict";
 
-  var PARTIAL = "/partials/eq-d-header.html?v=20260529topnav-bar-design";
+  var PARTIAL = "/partials/eq-d-header.html?v=20260529topnav-bar-design-end2";
 
   function shouldInject() {
     var b = document.body;
