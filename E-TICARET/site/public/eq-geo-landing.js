@@ -6,8 +6,8 @@
 
   var ORIGIN = "https://equsto.com";
   var DATA_URL = "/api/geo";
-  var DATA_FALLBACK = "/data/geo-landings.json?v=20260529geo-body-850";
-  var DATA_EN_FALLBACK = "/data/geo-landings-en.json?v=20260529geo-body-850";
+  var DATA_FALLBACK = "/data/geo-landings.json?v=20260529geo-no-table";
+  var DATA_EN_FALLBACK = "/data/geo-landings-en.json?v=20260529geo-no-table";
 
   var UI = {
     tr: {
@@ -790,7 +790,7 @@
     body = body.replace(/\{budget\}/g, budget || "—");
     var faq = page.faq || prof.faq || [];
     var related = page.related || prof.related || [];
-    var skipTable = page.skipTable || prof.skipTable;
+    var skipTable = true;
 
     document.title = page.title || document.title;
     if (page.description) setMeta("description", page.description);
