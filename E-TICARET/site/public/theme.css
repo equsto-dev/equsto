@@ -1628,11 +1628,11 @@ body.eq-shop.eq-dept .eq-dept-hero-strip > section.hero .hero-card {
   box-shadow: var(--eq-plp-card-shadow);
   transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
-.products > .prod-card-wrap:hover {
+.products > .prod-card-wrap:hover:not(.eq-prod-tint-active) {
   border-color: #d5d9d9;
   box-shadow: var(--eq-plp-card-shadow-hover);
 }
-html[data-theme="dark"] .products > .prod-card-wrap:hover {
+html[data-theme="dark"] .products > .prod-card-wrap:hover:not(.eq-prod-tint-active) {
   border-color: var(--eq-card-hover-border, var(--eq-border));
 }
 .products .prod-card-link {
@@ -3591,15 +3591,19 @@ body.eq-shop .main .products {
   position: relative;
 }
 
-/* Hover’da çerçeve rengi oynamasın — renk silüeti öne çıksın */
-.main .products .prod-card:hover {
-  border-color: var(--eq-border) !important;
+/* Hover: görselden örneklenen renk — çerçeve + ambient gölge (eq-product-card-tint.js) */
+.prod-card-wrap.eq-prod-tint-active,
+.main .products .prod-card.eq-prod-tint-active {
+  border-color: var(--eq-prod-tint-border) !important;
+  box-shadow: var(--eq-prod-tint-shadow) !important;
+  transition:
+    box-shadow 0.28s ease,
+    border-color 0.28s ease;
 }
 
 /*
- * Renk silüeti: yalnızca arka plan.
- * --eq-prod-tint-* hem .prod-card hem .prod-img / .prod-info üzerinde set edilir (JS).
- * background-image: sayfa shorthand’inin üstüne daha yüksek özgüllükle gelir; <img> üstte kalır.
+ * Renk silüeti: yalnızca .prod-img arka planı.
+ * --eq-prod-tint-* hem kart hem .prod-img üzerinde set edilir (JS).
  */
 .main .products .prod-card .prod-img {
   position: relative;
@@ -3634,13 +3638,17 @@ body.eq-shop .main .products {
   );
 }
 
-/* TODO: yalnızca .prod-img arkası; .prod-info renkten çıkarılacak (kullanıcı notu). */
-.main .products .prod-card.eq-prod-tint-active .prod-info {
-  background-image: linear-gradient(
-    185deg,
-    var(--eq-prod-tint-bar, transparent) 0%,
-    var(--eq-prod-tint-mid, transparent) 58%,
-    transparent 100%
+.eq-mx-showcase__track--cards .prod-card-wrap.eq-prod-tint-active {
+  border-color: var(--eq-prod-tint-border) !important;
+  box-shadow: var(--eq-prod-tint-shadow) !important;
+}
+
+.eq-mx-showcase__track--cards .prod-card-wrap.eq-prod-tint-active .prod-img {
+  background-image: radial-gradient(
+    125% 88% at 50% 45%,
+    var(--eq-prod-tint-glow, transparent) 0%,
+    var(--eq-prod-tint-mid, transparent) 52%,
+    var(--eq-prod-tint-fade, transparent) 100%
   );
 }
 
