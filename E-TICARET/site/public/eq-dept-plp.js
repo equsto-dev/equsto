@@ -95,6 +95,33 @@
     return '₺' + n.toLocaleString('tr-TR', { maximumFractionDigits: 0 }) + ',00';
   }
 
+  function isPlpTechnicalImg(rel) {
+    var fn = String(rel || '')
+      .split('?')[0]
+      .split('/')
+      .pop()
+      .toLowerCase();
+    if (/kesit/i.test(fn)) return true;
+    if (/[-_]model-\d+\.(jpe?g|webp|png|gif)$/i.test(fn)) return true;
+    return false;
+  }
+
+  function pickPlpHeroImage(images) {
+    if (!images || !images.length) return '';
+    var i;
+    for (i = 0; i < images.length; i++) {
+      var fn = String(images[i] || '')
+        .split('/')
+        .pop()
+        .toLowerCase();
+      if (/kapak/i.test(fn)) return images[i];
+    }
+    for (i = 0; i < images.length; i++) {
+      if (!isPlpTechnicalImg(images[i])) return images[i];
+    }
+    return images[0];
+  }
+
   function imgSrc(p) {
     if (!p) return '';
     if (typeof window.eqProductImgSrc === 'function') {
@@ -407,7 +434,10 @@
       window.EqustoKurLive && typeof window.EqustoKurLive.priceForRow === 'function'
         ? window.EqustoKurLive.priceForRow(row)
         : String(row.price || '').split('\n')[0];
-    var imgRel = row.images && row.images[0] ? row.images[0] : '';
+    var imgRel = '';
+    if (row.images && row.images.length) {
+      imgRel = pickPlpHeroImage(row.images);
+    }
     var ozSku = String(row.sku || row.urun_kodu || row.model || '');
     if (row.category === 'soguk-odalar' || /7919\.CR/i.test(ozSku)) {
       imgRel = 'images/catalog/soguk-oda/soguk-oda-vitrin.png';
@@ -421,10 +451,10 @@
       }
     }
     var imgOut = '';
-    if (isOztiRow(row) && ozSku && typeof window.eqOztiAxImageFromSku === 'function') {
+    if (imgRel) imgOut = imgSrc(imgRel) || '';
+    if (!imgOut && isOztiRow(row) && ozSku && typeof window.eqOztiAxImageFromSku === 'function') {
       imgOut = window.eqOztiAxImageFromSku(ozSku) || '';
     }
-    if (!imgOut) imgOut = imgRel ? imgSrc(imgRel) : '';
     return {
       c: row.category || '',
       b: b,
@@ -882,7 +912,7 @@
     render();
   }
 
-  var MARKET_REYON_JSON_V = '20260528proso-eq-variants';
+  var MARKET_REYON_JSON_V = '20260528caglayan-pdp-fix';
 
   function fetchMarketReyonDeptJson() {
     return fetch('/data/dept/market-reyon.json?v=' + MARKET_REYON_JSON_V, {

@@ -12,7 +12,7 @@
   window.__eqProductCardTintInited = true;
 
   var CACHE = Object.create(null);
-  var CACHE_VER = "v10";
+  var CACHE_VER = "v11";
   var SAMPLE = 56;
   var tintToken = new WeakMap();
   var plpTintSrc = new WeakMap();
@@ -132,12 +132,40 @@
     }
   }
 
-  function ensureImgCrossOrigin(img) {
-    if (!img || img.crossOrigin || img.dataset.eqTintCors) return;
-    var src = String(img.currentSrc || img.src || "");
-    if (!src || isSameOriginSrc(src)) return;
-    img.crossOrigin = "anonymous";
-    img.dataset.eqTintCors = "1";
+  /** Görünen <img> üzerinde crossOrigin ASLA set edilmez — CDN görselleri kırılır. */
+  function sampleFromDisplayImg(img, size) {
+    if (!img || !img.naturalWidth || !img.naturalHeight) return null;
+    var sz = size || SAMPLE;
+    var c = document.createElement("canvas");
+    c.width = sz;
+    c.height = sz;
+    var ctx = c.getContext("2d", { willReadFrequently: true });
+    if (!ctx) return null;
+    try {
+      ctx.drawImage(img, 0, 0, sz, sz);
+      return accentFromImageData(ctx.getImageData(0, 0, sz, sz).data);
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function sampleFromDisplayImgDeep(img) {
+    var out = sampleFromDisplayImg(img, SAMPLE);
+    if (!out || satRgb(out.r, out.g, out.b) >= 40 || img.naturalHeight <= 32) return out;
+    var c = document.createElement("canvas");
+    c.width = SAMPLE;
+    c.height = SAMPLE;
+    var ctx = c.getContext("2d", { willReadFrequently: true });
+    if (!ctx) return out;
+    try {
+      var nw = img.naturalWidth;
+      var nh = img.naturalHeight;
+      var sy = Math.floor(nh * 0.32);
+      ctx.drawImage(img, 0, sy, nw, nh - sy, 0, 0, SAMPLE, SAMPLE);
+      var out2 = accentFromImageData(ctx.getImageData(0, 0, SAMPLE, SAMPLE).data);
+      if (out2 && satRgb(out2.r, out2.g, out2.b) > satRgb(out.r, out.g, out.b)) return out2;
+    } catch (e2) {}
+    return out;
   }
 
   function sampleFromBitmap(bitmap, done) {
@@ -210,65 +238,26 @@
       done(null);
       return;
     }
-    ensureImgCrossOrigin(img);
-    var c = document.createElement("canvas");
-    c.width = SAMPLE;
-    c.height = SAMPLE;
-    var ctx = c.getContext("2d", { willReadFrequently: true });
-    if (!ctx) {
-      done(null);
-      return;
+    if (isSameOriginSrc(src)) {
+      var local = sampleFromDisplayImgDeep(img);
+      if (local) {
+        CACHE[ck] = local;
+        done(local);
+        return;
+      }
     }
-    try {
-      ctx.drawImage(img, 0, 0, SAMPLE, SAMPLE);
-      var data = ctx.getImageData(0, 0, SAMPLE, SAMPLE).data;
-    } catch (e) {
-      sampleFromImageUrl(src, function (rgb) {
-        if (rgb) CACHE[ck] = rgb;
-        done(rgb);
-      });
-      return;
-    }
-    var out = accentFromImageData(data);
-    /* Ürün gövdesi altta (sarı kap vb.) — üst beyaz alan ortalamayı bozduysa alt bant tekrar örneklenir */
-    if (out && satRgb(out.r, out.g, out.b) < 40 && img.naturalHeight > 32) {
-      var nw = img.naturalWidth;
-      var nh = img.naturalHeight;
-      var sy = Math.floor(nh * 0.32);
-      try {
-        ctx.drawImage(img, 0, sy, nw, nh - sy, 0, 0, SAMPLE, SAMPLE);
-        var data2 = ctx.getImageData(0, 0, SAMPLE, SAMPLE).data;
-        var out2 = accentFromImageData(data2);
-        if (out2 && satRgb(out2.r, out2.g, out2.b) > satRgb(out.r, out.g, out.b)) {
-          out = out2;
-        }
-      } catch (e2) {}
-    }
-    if (!out) {
-      done(null);
-      return;
-    }
-    CACHE[ck] = out;
-    done(out);
+    sampleFromImageUrl(src, function (rgb) {
+      if (rgb) CACHE[ck] = rgb;
+      done(rgb);
+    });
   }
 
-  /** Hızlı senkron örnek (32px) — hover anında renk; sonra SAMPLE ile iyileştirilir. */
+  /** Hızlı senkron örnek — yalnızca same-origin; CDN fetch async kalır. */
   function sampleFromImageSync(img) {
     if (!img || !img.naturalWidth || !img.naturalHeight) return null;
-    ensureImgCrossOrigin(img);
-    var c = document.createElement("canvas");
-    var sz = 32;
-    c.width = sz;
-    c.height = sz;
-    var ctx = c.getContext("2d", { willReadFrequently: true });
-    if (!ctx) return null;
-    try {
-      ctx.drawImage(img, 0, 0, sz, sz);
-      var data = ctx.getImageData(0, 0, sz, sz).data;
-      return accentFromImageData(data);
-    } catch (e) {
-      return null;
-    }
+    var src = String(img.currentSrc || img.src || "");
+    if (!isSameOriginSrc(src)) return null;
+    return sampleFromDisplayImg(img, 32);
   }
 
   function tintCssProps(r, g, b) {
