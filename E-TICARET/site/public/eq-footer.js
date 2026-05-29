@@ -528,7 +528,11 @@
 
 
 
+    var companyLine = t("footer.company_display", companyMarkup());
+
     var tagline = t("footer.tagline", (data && data.tagline) || defaultFooterData().tagline);
+
+    var poweredBy = t("footer.powered_by", "Powered By Vitrum Group");
 
     var legal = (data && data.legal) || defaultFooterData().legal;
 
@@ -550,15 +554,21 @@
 
       '<div class="eq-mfoot-brand">' +
 
-      '<p class="eq-mfoot-company" aria-label="Equsto Teknoloji Limited">' +
+      '<p class="eq-mfoot-company" data-i18n="footer.company_display" aria-label="Equsto Teknoloji Limited">' +
 
-      companyMarkup() +
+      esc(companyLine) +
 
       "</p>" +
 
-      '<p class="eq-mfoot-tagline">' +
+      '<p class="eq-mfoot-tagline" data-i18n="footer.tagline">' +
 
       esc(tagline) +
+
+      "</p>" +
+
+      '<p class="eq-mfoot-powered" data-i18n="footer.powered_by">' +
+
+      esc(poweredBy) +
 
       "</p>" +
 
@@ -649,6 +659,12 @@
   function wire(host) {
 
     wireLinkHrefs(host);
+
+    try {
+
+      if (typeof window.eqI18nApply === "function") window.eqI18nApply(host);
+
+    } catch (_) {}
 
     var cookie = host.querySelector("#eq-mfoot-cookie");
 
