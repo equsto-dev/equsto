@@ -15,6 +15,45 @@
       .replace(/"/g, '&quot;');
   }
 
+  function __homeT(k, fb) {
+    try {
+      if (typeof global.eqT === 'function') {
+        var v = global.eqT(k, null);
+        if (v != null && v !== k) return v;
+      }
+    } catch (_) {}
+    return fb != null ? fb : k;
+  }
+
+  var DEPT_NAV_KEYS = {
+    pisirme: 'nav.pisirme',
+    sogutma: 'nav.sogutma',
+    kahve: 'nav.kahve',
+    yikama: 'nav.yikama',
+    hazirlik: 'nav.hazirlik',
+    icecek: 'nav.icecek',
+    tezgah: 'nav.tezgah',
+    dolap: 'nav.dolap',
+    davlumbaz: 'nav.davlumbaz',
+    tasima: 'nav.tasima',
+    araba: 'nav.araba',
+    istif: 'nav.istif',
+    kuvetler: 'nav.kuvetler',
+    'set-ustu-mutfak': 'nav.set_ustu',
+  };
+
+  function storyLabel(item) {
+    if (!item) return '';
+    if (item.labelKey) return __homeT(item.labelKey, item.label);
+    if (item.go === 'pfos') return __homeT('nav.pfos', item.label || 'Proje Fabrikası');
+    if (item.go === 'besos') return __homeT('nav.bar_design', item.label || 'Bar Design');
+    if (item.go === 'marketReyon') return __homeT('nav.market_reyon', item.label || 'Market Reyonları');
+    if (item.dept && DEPT_NAV_KEYS[item.dept]) {
+      return __homeT(DEPT_NAV_KEYS[item.dept], item.label);
+    }
+    return item.label || '';
+  }
+
   function attrPath(p) {
     if (typeof global.eqAttrPath === 'function') return global.eqAttrPath(p);
     return p ? String(p) : '';
@@ -234,7 +273,7 @@
       imgHtml +
       '</span>' +
       '<span class="eq-mx-pop-cat__lbl">' +
-      esc(item.label || '') +
+      esc(storyLabel(item)) +
       '</span></a>'
     );
   }
@@ -372,7 +411,7 @@
         inner +
         '</div>' +
         '<span class="eq-mx-story__lbl">' +
-        esc(item.label) +
+        esc(storyLabel(item)) +
         '</span></a>';
     }
     track.innerHTML = html;
@@ -894,11 +933,26 @@
       fillSpotlight();
       renderMxSections();
     };
-    if (global.EqVitrinConfig && global.EqVitrinConfig.load) {
-      global.EqVitrinConfig.load().then(boot);
+    var runBoot = function () {
+      if (global.EqVitrinConfig && global.EqVitrinConfig.load) {
+        global.EqVitrinConfig.load().then(boot);
+      } else {
+        boot();
+      }
+    };
+    if (global.eqI18nReady && typeof global.eqI18nReady.then === 'function') {
+      global.eqI18nReady.then(runBoot);
     } else {
-      boot();
+      runBoot();
     }
+    global.addEventListener('equsto:i18n-ready', function () {
+      if (document.getElementById('eq-mx-pop-cats-track')) renderPopCats();
+      else if (document.getElementById('eq-mx-story-track')) renderStories();
+      if (typeof global.eqI18nApply === 'function') {
+        var root = document.getElementById('eq-legacy-vitrin-root');
+        if (root) global.eqI18nApply(root);
+      }
+    });
   }
 
   global.eqMxFillSpotlight = fillSpotlight;
