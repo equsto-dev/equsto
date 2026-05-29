@@ -524,6 +524,11 @@
     return esc(prefix) + ' <span class="eq-mfoot-vitrum-name">Vitrum</span>';
   }
 
+  function isBesosPage() {
+    var b = document.body;
+    return !!(b && b.classList.contains("bd-page") && b.classList.contains("besos"));
+  }
+
 
 
   function buildHtml(data) {
@@ -544,7 +549,9 @@
 
     var tagline = t("footer.tagline", (data && data.tagline) || defaultFooterData().tagline);
 
-    var poweredBy = poweredByHtml();
+    var poweredBlock = isBesosPage()
+      ? '<p class="eq-mfoot-powered">' + poweredByHtml() + "</p>"
+      : "";
 
     var legal = (data && data.legal) || defaultFooterData().legal;
 
@@ -578,11 +585,7 @@
 
       "</p>" +
 
-      '<p class="eq-mfoot-powered">' +
-
-      poweredBy +
-
-      "</p>" +
+      poweredBlock +
 
       "</div>" +
 
@@ -681,6 +684,14 @@
   function wire(host) {
 
     wireLinkHrefs(host);
+
+    host
+      .querySelectorAll(
+        ".eq-mfoot-back, #eq-mfoot-back, .eq-mfoot-top, #eq-mfoot-top, [data-eq-mfoot-top]"
+      )
+      .forEach(function (el) {
+        el.remove();
+      });
 
     try {
 
