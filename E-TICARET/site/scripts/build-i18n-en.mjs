@@ -103,7 +103,7 @@ const EN = {
   },
 
   home: {
-    page_title: "Equsto — Commercial Kitchen & Gastronomy Solutions",
+    page_title: "Equsto | Commercial Kitchen & Gastronomy Platform",
     banner_platform: "Equsto Commercial Kitchen & Gastronomy Platform",
     banner_world_first: "A WORLD FIRST!",
     hero_ads_aria: "Equsto showcase promotions",
@@ -574,7 +574,7 @@ const EN = {
   },
 
   pages: {
-    home_title: "Equsto — Commercial Kitchen & Gastronomy Solutions",
+    home_title: "Equsto | Commercial Kitchen & Gastronomy Platform",
     about_title: "About — Equsto",
     contact_title: "Contact — Equsto",
     cart_title: "Cart — Equsto",
