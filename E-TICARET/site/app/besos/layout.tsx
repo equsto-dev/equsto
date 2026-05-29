@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Script from "next/script";
+import BesosBodyClass from "@/components/besos/BesosBodyClass";
 import BesosScripts from "@/components/besos/BesosScripts";
 import BesosDrawerShell from "@/components/besos/BesosDrawerShell";
 import { SHOP_ASSET_V } from "@/lib/shop/assets";
@@ -23,6 +25,10 @@ export default function BesosLayout({ children }: { children: React.ReactNode })
       <link rel="stylesheet" href={`/besos-shell.css?v=${SHOP_ASSET_V}`} />
       {/* eslint-disable-next-line @next/next/no-css-tags */}
       <link rel="stylesheet" href={`/contact.css?v=${SHOP_ASSET_V}`} />
+      <Script id="besos-body-class-boot" strategy="beforeInteractive">
+        {`(function(){try{document.body.classList.add("bd-page","besos","eq-shop");}catch(e){}})();`}
+      </Script>
+      <BesosBodyClass />
       {children}
       <BesosDrawerShell />
       <BesosScripts />

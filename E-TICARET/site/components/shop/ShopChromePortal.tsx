@@ -1,16 +1,16 @@
 "use client";
 
 import { createPortal } from "react-dom";
-import type { ReactNode } from "react";
-
-function chromeRoot(): HTMLElement | null {
-  if (typeof document === "undefined") return null;
-  return document.getElementById("eq-shop-chrome-root");
-}
+import { useLayoutEffect, useState, type ReactNode } from "react";
 
 /** Üst krom — body kökünde; viewport üstüne yapışık sticky */
 export default function ShopChromePortal({ children }: { children: ReactNode }) {
-  const root = chromeRoot();
+  const [root, setRoot] = useState<HTMLElement | null>(null);
+
+  useLayoutEffect(() => {
+    setRoot(document.getElementById("eq-shop-chrome-root"));
+  }, []);
+
   if (!root) return null;
   return createPortal(children, root);
 }
