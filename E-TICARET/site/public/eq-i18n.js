@@ -139,6 +139,31 @@
     return key;
   }
 
+  function tipKey(tip) {
+    return String(tip || "")
+      .replace(/-/g, "_")
+      .replace(/_+$/, "");
+  }
+
+  /** Departman alt dalı (?tip=) veya tile.id — nav.sub.* sözlüğü. */
+  function eqTipLabel(tipOrTile, fallback) {
+    var tip =
+      typeof tipOrTile === "string"
+        ? tipOrTile
+        : tipOrTile && (tipOrTile.id || tipOrTile.tip || "");
+    var fb =
+      fallback != null
+        ? fallback
+        : tipOrTile && typeof tipOrTile === "object"
+          ? tipOrTile.label
+          : "";
+    if (!tip) return fb != null ? String(fb) : "";
+    var lk = tipOrTile && tipOrTile.labelKey ? tipOrTile.labelKey : "nav.sub." + tipKey(tip);
+    return t(lk, fb != null ? fb : "");
+  }
+
+  window.eqTipLabel = eqTipLabel;
+
   /* ---------- DOM uygulama ---------- */
 
   function applyAttrs(el) {

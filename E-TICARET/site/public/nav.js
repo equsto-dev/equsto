@@ -10,10 +10,19 @@
     } catch (_) {}
     return fb;
   }
-  /** Bir NAV item'ının görünür label'ı: labelKey varsa eqT, yoksa label. */
+  function __navSubLabelKey(it) {
+    if (!it) return "";
+    if (it.labelKey) return it.labelKey;
+    if (it.tip) return "nav.sub." + String(it.tip).replace(/-/g, "_").replace(/_+$/, "");
+    return "";
+  }
+
+  /** Bir NAV item'ının görünür label'ı: labelKey / tip → nav.sub.*, yoksa label. */
   function __navLabel(it) {
     if (!it) return "";
-    return __navT(it.labelKey, it.label || "");
+    var k = __navSubLabelKey(it);
+    if (k) return __navT(k, it.label || "");
+    return it.label || "";
   }
 
   /** Çağlayan kataloğu serileri — build ile güncellenir (caglayan-market-reyon-catalogue.json → navSubs). */
@@ -73,7 +82,7 @@
         { label: "Izgaralar", tip: "sanayi-tipi-izgaralar" },
         { label: "Kuzineler", tip: "kuzineler" },
         { label: "Fritözler", tip: "fritozler" },
-        { label: "Döner Ocakları", tip: "doner-ocaklari-" },
+        { label: "Döner Ocakları", tip: "doner-ocaklari" },
         { label: "Tost Makineleri", tip: "tost-makineleri" },
         { label: "Piliç Çevirme", tip: "pilic-cevirme-makineleri" },
       ],
@@ -86,19 +95,20 @@
       subs: [
         {
           label: "Buzdolapları",
+          labelKey: "nav.sub.buzdolaplari",
           subs: [
             { label: "Tezgah Tipi", tip: "tezgah-tipi-buzdolabi" },
             { label: "Make Up Dolapları", tip: "make-up-dolabi" },
-            { label: "Cihazaltı", tip: "tezgah-tipi-buzdolabi", search: "cihazaltı|cihaz altı|tezgahalt" },
+            { label: "Cihazaltı", labelKey: "nav.sub.cihazalti", tip: "tezgah-tipi-buzdolabi", search: "cihazaltı|cihaz altı|tezgahalt" },
             { label: "Dik Tip", tip: "dik-tip-buzdolap" },
-            { label: "Pastane Buzdolapları", search: "pastane buzdolab|pastane dolap" },
+            { label: "Pastane Buzdolapları", labelKey: "nav.sub.pastane_buzdolaplari", search: "pastane buzdolab|pastane dolap" },
           ],
         },
-        { label: "Buz Makineleri" },
-        { label: "Derin Dondurucular" },
-        { label: "Soğuk Odalar" },
-        { label: "Şarap Dolapları" },
-        { label: "Market Reyonları", href: "market-reyonlari.html" },
+        { label: "Buz Makineleri", labelKey: "nav.sub.buz_makineleri" },
+        { label: "Derin Dondurucular", labelKey: "nav.sub.derin_dondurucular" },
+        { label: "Soğuk Odalar", labelKey: "nav.sub.soguk_odalar" },
+        { label: "Şarap Dolapları", labelKey: "nav.sub.sarap_dolaplari" },
+        { label: "Market Reyonları", labelKey: "nav.sub.market_reyonlari", href: "market-reyonlari.html" },
       ],
     },
     {
@@ -111,7 +121,7 @@
         { label: "Değirmenler", tip: "kahve-degirmeni" },
         { label: "Filtre Kahve", tip: "filtre-kahve" },
         { label: "Türk Kahve", tip: "turk-kahve" },
-        { label: "Barista Aksesuarları", search: "barista|tamper|pitcher|süt köpürt" },
+        { label: "Barista Aksesuarları", labelKey: "nav.sub.barista_aksesuarlari", search: "barista|tamper|pitcher|süt köpürt" },
       ],
     },
     {
@@ -134,8 +144,8 @@
       label: "Hazırlık Ekipmanları",
       href: "hazirlik.html",
       subs: [
-        { label: "Mikserler", tip: "hamur-hazirlik", search: "mikser|spiral|planet" },
-        { label: "Blenderlar", search: "blender|robot coupe" },
+        { label: "Mikserler", labelKey: "nav.sub.mikserler", tip: "hamur-hazirlik", search: "mikser|spiral|planet" },
+        { label: "Blenderlar", labelKey: "nav.sub.blenderlar", search: "blender|robot coupe" },
         { label: "Dilimleme Makineleri", tip: "sebze-dograma", search: "dilimleme|doğrama" },
         { label: "Kıyma Makineleri", tip: "kiyma_makinesi" },
         { label: "Vakum Makineleri", tip: "vakum-makinesi" },
@@ -150,7 +160,7 @@
         { label: "Meyve Sıkacakları", tip: "portakal-sikma", search: "meyve suyu|sıkma|juice" },
         { label: "Soğuk İçecek Dispenserleri", tip: "soguk-dispenser" },
         { label: "Soda Makineleri", tip: "limonata-serbet", search: "soda|şerbet|serbet" },
-        { label: "Bira Sistemleri", search: "bira|draft|fıçı|fici" },
+        { label: "Bira Sistemleri", labelKey: "nav.sub.bira_sistemleri", search: "bira|draft|fıçı|fici" },
         { label: "Smoothie Blenderlar", tip: "bar-blender" },
       ],
     },
@@ -160,9 +170,9 @@
       label: "Servis & Teşhir",
       href: "market-reyonlari.html",
       subs: [
-        { label: "Self-Servis Hattı", search: "self servis", href: "market-reyonlari.html?tip=self-servis" },
-        { label: "Teşhir Dolapları", search: "teşhir|teshir", href: "market-reyonlari.html?tip=camli-dolap" },
-        { label: "Market Reyonları", href: "market-reyonlari.html" },
+        { label: "Self-Servis Hattı", labelKey: "nav.sub.self_servis_hatti", search: "self servis", href: "market-reyonlari.html?tip=self-servis" },
+        { label: "Teşhir Dolapları", labelKey: "nav.sub.teshir_dolaplari", search: "teşhir|teshir", href: "market-reyonlari.html?tip=camli-dolap" },
+        { label: "Market Reyonları", labelKey: "nav.sub.market_reyonlari", href: "market-reyonlari.html" },
       ],
     },
     { id: "dolap", labelKey: "nav.dolap", label: "Dolaplar", href: "dolap.html" },
@@ -331,7 +341,7 @@
   /** Mega drill sütunu satırı (kök ile aynı › kuralı). */
   function buildDrawerDrillRow(it, opts) {
     opts = opts || {};
-    var label = it && it.label ? String(it.label) : "";
+    var label = __navLabel(it);
     if (it && it.markaHref) {
       return buildDrawerSplitRow(label, {
         hasFlyout: false,
@@ -410,7 +420,7 @@
     if (!c.subs || !c.subs.length) return __navT("nav.drawer_cat_subtitle", "Kategoriye göz at");
     var parts = [];
     for (var i = 0; i < c.subs.length && parts.length < 3; i++) {
-      parts.push(c.subs[i].label);
+      parts.push(__navLabel(c.subs[i]));
     }
     return parts.join(" · ");
   }
@@ -894,17 +904,17 @@
 
       (frame.items || []).forEach(function (it) {
         var rowIt = buildDrawerDrillRow(it, {
-          active: highlightChildLabel && it.label === highlightChildLabel,
+          active: highlightChildLabel && __navLabel(it) === highlightChildLabel,
         });
         if (navItemHasFlyout(it)) {
           var drillLabel = rowIt.querySelector(".eq-drawer-row-link");
           var drillChev = rowIt.querySelector(".eq-drawer-row-chev-btn");
           function openDrillIt() {
             var next = fi + 1;
-            if (__eqDrawerStack.length === next + 1 && __eqDrawerStack[next] && __eqDrawerStack[next].title === it.label) return;
+            if (__eqDrawerStack.length === next + 1 && __eqDrawerStack[next] && __eqDrawerStack[next].title === __navLabel(it)) return;
             __eqDrawerStack.length = next;
             __eqDrawerStack.push({
-              title: it.label,
+              title: __navLabel(it),
               items: it.subs || it.children || it.items,
               deptHref: frame.deptHref || null,
               catId: frame.catId || null,
@@ -939,7 +949,7 @@
             var next = fi + 1;
             if (
               __eqDrawerStack.length > next &&
-              (!__eqDrawerStack[next] || __eqDrawerStack[next].title !== it.label)
+              (!__eqDrawerStack[next] || __eqDrawerStack[next].title !== __navLabel(it))
             ) {
               __eqDrawerCollapseStack(next);
             }
@@ -1064,7 +1074,7 @@
     var ul = el("div", { class: "sb-sublist depth-" + depth });
     items.forEach(function (it) {
       var wrap = el("div", { class: "sb-subwrap" });
-      var row = el("div", { class: "sb-subitem" + (it.subs ? " has-children" : ""), role: "button", tabindex: "0", text: it.label });
+      var row = el("div", { class: "sb-subitem" + (it.subs ? " has-children" : ""), role: "button", tabindex: "0", text: __navLabel(it) });
       var arrow = it.subs ? el("span", { class: "sb-subarrow", text: "\u203A", "aria-hidden": "true" }) : null;
       if (arrow) row.appendChild(arrow);
 

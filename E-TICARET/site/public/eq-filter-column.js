@@ -181,7 +181,11 @@
         var btn = document.createElement("button");
         btn.type = "button";
         btn.className = "eq-filter-cat-chip" + (activeTile === tile.id ? " active" : "");
-        btn.textContent = tile.label + " (" + n + ")";
+        var tileLbl =
+          typeof window.eqTipLabel === "function"
+            ? window.eqTipLabel(tile, tile.label)
+            : tile.label;
+        btn.textContent = tileLbl + " (" + n + ")";
         btn.setAttribute("data-tile", tile.id);
         btn.addEventListener("click", function () {
           if (typeof onToggleTile === "function") {

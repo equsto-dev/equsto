@@ -4,7 +4,6 @@
     "label": "Türkçe",
     "dir": "ltr"
   },
-
   "common": {
     "search_placeholder": "Ürün, marka veya kategori ara...",
     "search_placeholder_alt": "Equsto'da ara — ürün, marka, kategori…",
@@ -43,14 +42,12 @@
     "products_suffix": " ürün",
     "page_short": "Sayfa "
   },
-
   "lang_switcher": {
     "tr_label": "TR",
     "en_label": "EN",
     "switch_to_tr": "Türkçe sürüm",
     "switch_to_en": "English version"
   },
-
   "nav": {
     "pfos": "Proje Fabrikası",
     "pfos_hover": "Proje Fabrikası",
@@ -89,9 +86,169 @@
     "set_ustu": "Set Üstü Mutfak",
     "mobile_menu": "Menü",
     "mobile_cart": "Sepet",
-    "mobile_submenu": "Alt menü"
+    "mobile_submenu": "Alt menü",
+    "sub": {
+      "asansorlu_izgara": "Asansörlü Izgaralar",
+      "ayran_makinesi": "Ayran Makineleri",
+      "bain_marie_kap": "Bain Marie Çelik Saklama Kapları",
+      "bakir_sunum": "Bakır Sunum",
+      "balik_sarkuteri": "Balık & Şarküteri",
+      "balik_teshir": "Balık Teşhir Reyonları",
+      "bar_blender": "Smoothie Blenderlar",
+      "bardak_yikama": "Bardak Yıkama Makineleri",
+      "barista_aksesuarlari": "Barista Aksesuarları",
+      "bira_sistemleri": "Bira Sistemleri",
+      "blast_chiller": "Blast Chiller",
+      "blenderlar": "Blenderlar",
+      "bulasik_makineleri": "Bulaşık Yıkama Makineleri",
+      "bulasik_makinesi_giris_ve_cikis_tezgahlari": "Giriş / Çıkış Tezgahları (B.Y.M.)",
+      "buz_makineleri": "Buz Makineleri",
+      "buz_makinesi": "Buz Makineleri",
+      "buzdolaplari": "Buzdolapları",
+      "cafe_aksesuar": "Cafe Tezgah & Aksesuar",
+      "cafe_ankastre": "Sıcak / Soğuk Ankastre",
+      "caglayan_akasya": "Akasya",
+      "caglayan_anemon": "Anemon",
+      "caglayan_begonvil": "Begonvil",
+      "caglayan_defne": "Defne",
+      "caglayan_erguvan": "Erguvan",
+      "caglayan_gardenya": "Gardenya",
+      "caglayan_hercai": "Hercai",
+      "caglayan_inci": "İnci",
+      "caglayan_krizantem": "Krizantem",
+      "caglayan_lale": "Lale",
+      "caglayan_leylak": "Leylak",
+      "caglayan_lotus": "Lotus",
+      "caglayan_manolya": "Manolya",
+      "caglayan_nergis": "Nergis",
+      "caglayan_nilufer": "Nilüfer",
+      "caglayan_reyhan": "Reyhan",
+      "caglayan_sardunya": "Sardunya",
+      "caglayan_tumu": "Çağlayan",
+      "calisma_tezgahi": "Çalışma Tezgahları",
+      "calisma_tezgahlari_bulasik_makinesi_tezgahlari": "Bulaşık Makinesi Üstü Tezgahlar",
+      "camli_dolap": "Camlı Teşhir",
+      "cay_kazani": "Çay Kazanları",
+      "cay_makinesi": "Çay Makineleri",
+      "cay_ocagi": "Çay Ocakları & Semaverler",
+      "cay_otomat": "Çay Otomatları",
+      "cay_sunum": "Çay Sunum & Jelli",
+      "chafing_dish": "Chafing Dishler",
+      "char_izgara": "Char Izgara",
+      "cihazalti": "Cihazaltı",
+      "derin_dondurucu": "Derin Dondurucular",
+      "derin_dondurucular": "Derin Dondurucular",
+      "dik_tip_buzdolap": "Dik Tip",
+      "dokum_tencere_tava": "Döküm Tencere ve Tavalar",
+      "dondurma_reyon": "Dondurma Reyonu",
+      "doner_ocaklari": "Döner Ocakları",
+      "dry_age_dolabi": "Dry-Age Dolabı",
+      "duvar_raf_tezgah": "Duvar Raf Tezgahları",
+      "el_yikama_evyeleri": "El Yıkama Evyeleri",
+      "espresso_makinesi": "Espresso Makineleri",
+      "et_hazirlik": "Et Hazırlık Ekipmanları",
+      "et_kemik_testeresi": "Et Kemik Testeresi",
+      "et_kutugu": "Et Kütüğü",
+      "evyeli_tezgah": "Evyeli Tezgahlar",
+      "filtre_kahve": "Filtre Kahve",
+      "firinlar": "Fırınlar",
+      "flight_bulasik": "Flight Tip Bulaşık Makineleri",
+      "fritozler": "Fritözler",
+      "gastronorm_kuvet": "Gastronorm Küvetler",
+      "giyotin_bulasik": "Giyotin Tip Bulaşık Yıkama Makineleri",
+      "granita_slush": "Granita & Slush",
+      "gurmeaid_aksesuar": "Gurmeaid Aksesuarlar",
+      "gurmeaid_bicak": "Gurmeaid Bıçaklar",
+      "hamur_hazirlik": "Hamur Hazırlık",
+      "hareketli_bain_marie": "Hareketli Bain Marie",
+      "helvane_sig_tencere": "Helvane ve Sığ Tencereler",
+      "icecek_otomat": "İçecek Otomatları",
+      "icecek_vitrin": "İçecek & Süt",
+      "induksiyonlu_ocak": "İndüksiyonlu Ocaklar",
+      "isitici_lamba": "Isıtıcı Lambalar",
+      "jet_mikrodalga_firin": "Jet ve Mikrodalga Fırınlar",
+      "kahve_degirmeni": "Değirmenler",
+      "kahve_sunum": "Kahve Sunum & Bardak Isıtıcı",
+      "kahve_sut_potlari": "Kahve Süt Potları",
+      "kahveci_demlik": "Kahveci Demlikleri",
+      "karistirma_suzgec": "Karıştırma Kapları ve Süzgeçler",
+      "kaserola_buharli": "Kaçarola ve Buharlı Pişiriciler",
+      "kati_meyve_sikacagi": "Katı Meyve Sıkacakları",
+      "kazan_yikama": "Kazan Yıkama Makineleri",
+      "kesme_tahtasi": "Kesme Tahtaları",
+      "kiyma_makinesi": "Kıyma Makineleri",
+      "kombi_firin": "Kombi Fırınlar",
+      "komurlu_firin": "Kömürlü Fırınlar",
+      "konveksiyonlu_firin": "Konveksiyonlu Fırınlar",
+      "konveyorlu_bulasik": "Konveyörlü Bulaşık Yıkama Makineleri",
+      "kuzineler": "Kuzineler",
+      "lavtasli_izgara": "Lavtaşlı Izgara",
+      "limonata_serbet": "Soda Makineleri",
+      "make_up_dolabi": "Make Up Dolapları",
+      "market_reyonlari": "Market Reyonları",
+      "masaustu_ekipman": "Masaüstü Ekipmanları",
+      "mayalama_dolabi": "Mayalama Dolapları",
+      "melamin_sunum": "Melamin Sunum",
+      "mikserler": "Mikserler",
+      "mutfak_aksesuar": "Mutfak Aksesuarları",
+      "ocakbasi_izgara": "Ocakbaşı Izgaralar",
+      "pastane_buzdolaplari": "Pastane Buzdolapları",
+      "patates_dinlendirme": "Patates Dinlendirme",
+      "patlamis_pamuk": "Patlamış Mısır / Pamuk Şeker",
+      "pilic_cevirme": "Piliç Çevirme Makineleri",
+      "pilic_cevirme_makineleri": "Piliç Çevirme",
+      "pizza_firinlari": "Pizza Fırınları",
+      "portakal_sikma": "Meyve Sıkacakları",
+      "pp_pc_gn": "Polipropilen / Polikarbonat GN",
+      "pres_baski_tepsi": "Pres Baskı Tepsiler",
+      "proso_ada_tipi": "Proso Ada Tipi",
+      "proso_butik": "Proso Butik",
+      "proso_dikey_dondurucu": "Proso Dikey Dondurucu",
+      "proso_kisa_sutluk": "Proso Kısa Sütlük",
+      "proso_plugin": "Proso Plug-in",
+      "proso_sarkuteri": "Proso Şarküteri",
+      "proso_sise_sogutucu": "Proso Şişe Soğutucu",
+      "proso_soguk_hava": "Proso Soğuk Hava Deposu",
+      "proso_sogutma_sistemleri": "Proso Soğutma Sistemleri",
+      "proso_sutluk": "Proso Sütlükler",
+      "proso_tumu": "Proso",
+      "salamander": "Salamander",
+      "sanayi_ocaklari": "Endüstriyel Ocaklar",
+      "sanayi_tipi_izgaralar": "Izgaralar",
+      "sarap_dolabi": "Şarap Dolapları",
+      "sarap_dolaplari": "Şarap Dolapları",
+      "sebze_dograma": "Dilimleme Makineleri",
+      "self_servis": "Self Servis",
+      "self_servis_hatti": "Self-Servis Hattı",
+      "servis_gerecleri": "Servis Gereçleri",
+      "set_ustu": "Set Üstü",
+      "setalti_bulasik": "Setaltı Bulaşık Yıkama Makineleri",
+      "setustu_bain_marie": "Set Üstü Bain Marie",
+      "sicak_cikolata": "Sıcak Çikolata & Sahlep",
+      "sicak_icecek_disp": "Sıcak İçecek Dispenseri",
+      "sicak_soguk_servis": "Sıcak / Soğuk Servis",
+      "silindirik_tencere": "Silindirik Tencereler",
+      "sinek_oldurucu": "Sinek Öldürücü",
+      "slug_cay": "Çay Ekipmanları (diğer)",
+      "slug_otom": "Yiyecek & İçecek Hattı",
+      "soguk_dispenser": "Soğuk İçecek Dispenserleri",
+      "soguk_oda": "Soğuk Odalar",
+      "soguk_odalar": "Soğuk Odalar",
+      "soguk_teshir": "Soğuk Teşhir",
+      "sogutma_ekipmanlari": "Tüm Soğutma Ekipmanları",
+      "sous_vide": "Sous Vide",
+      "su_aritma": "Su Arıtma & Filtre",
+      "su_otomat": "Su Otomatları",
+      "tasima_ekipman": "Taşıma Ekipmanları",
+      "tavalar": "Tavalar",
+      "teshir_dolaplari": "Teşhir Dolapları",
+      "tezgah_tipi_buzdolabi": "Tezgah Tipi",
+      "tirnakli_bulasik": "Tırnaklı Bulaşık Yıkama Makineleri",
+      "tost_makineleri": "Tost Makineleri",
+      "turk_kahve": "Türk Kahve",
+      "vakum_makinesi": "Vakum Makineleri"
+    }
   },
-
   "plp": {
     "add_to_cart": "SEPETE EKLE",
     "quote_contact": "Teklif için iletişim",
@@ -121,7 +278,6 @@
     "filters_aria": "Filtreler",
     "pagination_aria": "Sayfalama"
   },
-
   "search": {
     "title": "Arama",
     "title_q": "Arama: «{q}»",
@@ -137,7 +293,6 @@
     "connection_error": "Bağlantı hatası",
     "image_ph": "Görsel"
   },
-
   "pages": {
     "home_title": "Equsto | Endüstriyel Mutfak & Gastronomi Platformu",
     "about_title": "Hakkımızda — Equsto",
@@ -146,13 +301,10 @@
     "pfos_title": "Proje Fabrikası — Equsto",
     "search_title": "Arama — Equsto"
   },
-
   "home": {
     "page_title": "Equsto | Endüstriyel Mutfak & Gastronomi Platformu",
-
     "banner_platform": "Equsto Endüstriyel Mutfak & Gastronomi Platformu",
     "banner_world_first": "DÜNYADA BİR İLK!",
-
     "hero_ads_aria": "Equsto vitrin reklamları",
     "hero_card1_tag": "Proje Çözümleri",
     "hero_card1_title": "Proje Fabrikası",
@@ -167,7 +319,6 @@
     "hero_card3_title": "Bar Design",
     "hero_card3_pitch": "IMT300 berrak buz · modüler kokteyl istasyonu.",
     "hero_card3_cta": "Bar Design →",
-
     "soru_aria": "Mr. Equsto soruyor",
     "soru_kicker": "Mr. Equsto Soruyor",
     "soru_h2": "Birkaç soruyla mutfak listenizi oluşturalım",
@@ -225,7 +376,6 @@
     "soru_feedback_send": "Gönder",
     "soru_detail": "Detaylandır (yardımcı ekipman)",
     "soru_send": "Teklifi Equsto'ya gönder",
-
     "cat_strip_aria": "Kategoriler",
     "cat_strip_kicker": "Endüstriyel Mutfak",
     "cat_strip_h": "Popüler Kategoriler",
@@ -237,7 +387,6 @@
     "cat_pill_hazirlik": "Hazırlık",
     "cat_pill_icecek": "İçecek",
     "cat_pill_bar": "Bar Design",
-
     "brand_aria": "Öztiryakiler marka kampanyası",
     "brand_aria_link": "Tüm Öztiryakiler ürünleri",
     "brand_kicker": "Profesyonel Mutfağın Markası",
@@ -246,13 +395,10 @@
     "brand_h_sub": "Endüstriyel Mutfak Çözümleri",
     "brand_p": "Türkiye'nin köklü endüstriyel mutfak markası. Soğutma, pişirme ve hazırlık ekipmanları vade farksız 9 taksitle.",
     "brand_cta": "Tüm Öztiryakiler ürünleri →",
-
     "featured_aria": "Öne çıkan ürünler",
-
     "rail_tab_campaign": "Kampanyalı Ürünler",
     "rail_tab_bestseller": "En Çok Satanlar",
     "rail_view_all": "Tümünü gör →",
-
     "twin_aria": "Hızlı erişim",
     "twin1_kicker": "Proje Fabrikası",
     "twin1_h": "Beş dakikada yapılır, hemen teslim edilir.",
@@ -262,17 +408,14 @@
     "twin2_h": "Uzmanımız sizi arasın",
     "twin2_p": "İhtiyacınızı birlikte netleştirelim; doğru marka, doğru kapasite, doğru bütçeyle.",
     "twin2_cta": "İletişime geç →",
-
     "main_title": "Tüm Ürünler",
     "filter_filtrele": "Filtrele",
     "filter_sirala": "Sırala",
     "filter_karsilastir": "Karşılaştır",
     "load_more": "Daha Fazla Göster",
-
     "new_aria": "Yeni eklenenler",
     "new_kicker": "Kataloğa Yeni Eklendi",
     "new_h": "Yeni eklenen ekipmanlar",
-
     "trust_aria": "Equsto güvenceleri",
     "trust_1_h": "Güvenli Alışveriş",
     "trust_1_p": "Tüm ödemeler 3D Secure ile korunur.",
@@ -282,11 +425,9 @@
     "trust_3_p": "Anlaşmalı kredi kartlarında vade farksız.",
     "trust_4_h": "Kurulum & Destek",
     "trust_4_p": "Satış mühendislerimiz teslimden sonra da yanınızda.",
-
     "brands_aria": "Markalar",
     "brands_kicker": "Birlikte Çalıştığımız",
     "brands_h": "Popüler Markalarımız",
-
     "hero_kicker": "PROFESYONEL MUTFAĞIN MARKASI",
     "hero_title": "Öztiryakiler",
     "hero_sub": "Endüstriyel Mutfak Çözümleri",
@@ -295,7 +436,6 @@
     "featured_title": "Öne çıkan ürünler",
     "popular_categories": "Popüler Kategoriler"
   },
-
   "besos": {
     "search_placeholder": "Bar modülü, ürün veya kategori ara...",
     "title": "Besos · Bar Design Studio",
@@ -309,10 +449,8 @@
     "hdr_nav_refs": "Referanslar",
     "hdr_nav_quote": "Teklif iste",
     "hdr_nav_equsto": "↗ Equsto",
-
     "hero_iframe_title": "Besos Bar tanıtım videosu",
     "ice_strip_aria": "Buz ve servis görselleri",
-
     "flow_ice_hero_aria": "Berrak buz vitrin",
     "flow_hero_title": "Collins Spear",
     "flow_hero_specs": "37 × 37 × 120 mm, 36 adet · 38 × 38 × 102 mm, 48 adet",
@@ -349,7 +487,6 @@
     "hero_product_label": "Skyra IMT300 · Berrak buz makinesi",
     "hero_go_page": "Sayfaya Git",
     "hero_price_hint": "Liste fiyatı: 11.500 € · teklif için iletişim",
-
     "cover_aria": "Besos editöryel kapak",
     "cover_meta": "Besos · Bar Design Studio",
     "cover_h1_html": "Bar hattında <em>tasarım ortağı.</em>",
@@ -357,7 +494,6 @@
     "cover_foot_a_html": "<strong>01</strong> · Kapak",
     "cover_foot_b": "Katalog · Teklif",
     "cover_foot_c": "2026",
-
     "imt_aria": "IMT300 berrak buz çeşitleri",
     "imt_kicker": "IMT300 · Berrak Buz Modülü",
     "imt_h2_html": "Servis hızında <em>kristal berraklığında</em> buz.",
@@ -382,19 +518,16 @@
     "imt_card_molds_spec": "Gıda sınıfı silikon",
     "imt_card_molds_cap": "Bulaşık makinesinde yıkanabilir · SUS304 tepsi",
     "imt_card_molds_alt": "IMT300 silikon kalıplar",
-
     "sig_aria": "İmza istasyonları",
     "sig_kicker": "İmza",
     "sig_h2": "Manhattan · Boulverdier · Clover",
     "sig_p": "Üç hazır kurulum istasyonu.",
     "sig_label": "İmza",
     "sig_dim_total": "Total",
-
     "manifesto_aria": "Sistem manifestosu",
     "manifesto_kicker": "Manifesto",
     "manifesto_h2_html": "Tek sistem, <em>sonsuz olasılık.</em>",
     "manifesto_p": "İmza istasyonlarımız hazır kurulumdur; ancak modüler sistemin sonsuz özelleştirilebilir tasarımı sayesinde — ölçek, stil ve operasyonel ihtiyaç ne olursa olsun — vizyonunuza birebir uyan bir çözüm üretiriz.",
-
     "venues_aria": "Ortam tipolojisi",
     "venues_kicker": "Kendi tarzında servis",
     "venues_h2": "Sistemimiz sınırsız konfigüre edilir.",
@@ -405,10 +538,9 @@
     "venue_bar_tag": "Tezgâh önünde yoğun ritim — ergonomik hız rayı, hızlı çıkış.",
     "venue_club_name": "Gece Kulübü",
     "venue_club_tag": "Yüksek hacim, yüksek teknoloji, yüksek etki için tasarlanmış hat.",
-
-    "method_aria": "Yöntem",
+    "method_aria": "Yöntemimiz",
     "method_kicker": "Yöntemimiz",
-    "method_h2": "Konseptten ilk servise — beş adım.",
+    "method_h2": "Yöntemimiz",
     "method_p": "Tam geliştirilmiş bir konseptiniz olsa da, ilham veren bir ortak arıyor olsanız da, erken aşamadan itibaren sahaya inen tek elden bir çalışma yürütürüz.",
     "step_1_num": "01 — Danışma",
     "step_1_h": "Vizyonu birlikte okuruz.",
@@ -425,7 +557,6 @@
     "step_5_num": "05 — Satış Sonrası",
     "step_5_h": "İlişki kurulumla bitmez.",
     "step_5_p": "Eğitim, periyodik bakım ve uzun vadeli servis — müşterilerimiz her servise sistemlerine tam güvenle çıkar.",
-
     "catalog_aria": "Bar modülleri kataloğu",
     "catalog_jump_aria": "Bar kategorileri",
     "catalog_kicker": "Katalog · 2026",
@@ -437,7 +568,6 @@
     "catalog_no_match": "Eşleşen ürün bulunamadı.",
     "catalog_category_prefix": "Kategori ",
     "catalog_page_plus": "+ Sayfasından itibaren",
-
     "card_dims_h": "Key Dimensions",
     "card_dims_unit": "(mm)",
     "card_drawing_missing": "Teknik çizim mevcut değil",
@@ -447,28 +577,24 @@
     "card_tech_drawing_link": "Teknik çizim",
     "card_foot_brand": "Besos · Bar Catalog",
     "card_total_dash": "—",
-
     "tech_modal_title": "Teknik çizim",
     "tech_modal_alt": "Teknik çizim",
     "tech_modal_close_aria": "Kapat",
-
     "foot_aria": "Kapanış teklif çağrısı",
     "foot_refs_aria": "Besos referans markaları",
-    "foot_kicker": "REFERANSLAR",
+    "foot_kicker": "Teklif",
     "foot_h2_html": "Sahaya inen Besos <em>hatları</em>",
-    "foot_sub": "Keşif, ölçüm ve bar hattı teklifi için ekibimizle iletişime geçin.",
+    "foot_sub": "Hazırsanız veya ek bilgi istiyorsanız — yardımcı olmak için buradayız.",
     "foot_cta_quote": "Bar hattı teklifi al →",
-    "foot_cta_contact": "İletişim",
+    "foot_cta_contact": "İletişime geç",
     "foot_tag_concept": "Konsept",
     "foot_tag_design": "Tasarım",
     "foot_tag_production": "Üretim",
     "foot_tag_install": "Kurulum",
     "foot_tag_service": "Servis",
-
     "search_results_pre": "\"",
     "search_results_suf": "\" için ",
     "search_results_match": " eşleşen ürün",
-
     "category_signature_label": "İmza Bar",
     "category_signature_blurb": "İki bartenderlı üç hazır istasyon.",
     "category_bar_module_label": "Bar Modülü",
@@ -492,11 +618,9 @@
     "category_corner_blurb": "Köşe geçiş ve damla tepsili modüller.",
     "category_tap_label": "Aksesuar · Musluk",
     "category_tap_blurb": "Musluk ve cam yıkayıcı aksesuarları.",
-
     "sig_tagline_manhattan": "Hepsi bir arada.",
     "sig_tagline_boulverdier": "Kokteyl odaklı.",
     "sig_tagline_clover": "Mixology istasyonu.",
-
     "catalog_search_clear": "Aramayı temizle",
     "catalog_search_for": "“{q}” için {n} eşleşen ürün",
     "catalog_category_n": "Kategori {n}",
@@ -509,20 +633,14 @@
     "hdr_modules": "Modüller",
     "hdr_projects": "Projeler",
     "hdr_quote": "Teklif iste",
-    "foot_kicker": "Teklif",
     "foot_title_html": "Vizyonunuzu hayata geçirmeye hazır mısınız?<br><em>Bize ulaşın.</em>",
-    "foot_sub": "Hazırsanız veya ek bilgi istiyorsanız — yardımcı olmak için buradayız.",
-    "foot_cta_contact": "İletişime geç",
     "foot_cta_pfos": "Bar hattı teklifi al →",
     "modular_more": "+ daha fazlası",
     "modular_cta": "42 modülü keşfet →",
     "sig_cta": "Modül sayfası →",
     "sig_media_ph": "Görsel",
-    "video_cta_modules": "Modülleri incele",
-    "method_aria": "Yöntemimiz",
-    "method_h2": "Yöntemimiz"
+    "video_cta_modules": "Modülleri incele"
   },
-
   "footer": {
     "company_display": "E Q U S T O   T E K N O L O J İ   L İ M İ T E D",
     "tagline": "Equsto Teknolojisi · Gastronomi Tasarımı",
@@ -585,7 +703,6 @@
     "faq_q10": "Kişisel verilerim nasıl kullanılır?",
     "faq_a10": "Teklif ve iletişim formlarında paylaştığınız bilgiler yalnızca Equsto tarafından işlenir; üçüncü taraflara satılmaz. Ayrıntılar için gizlilik sayfasına bakın."
   },
-
   "filter": {
     "brands": "Markalarımız",
     "title": "Filtreler",
@@ -594,19 +711,16 @@
     "stock": "Stok",
     "category": "Kategori"
   },
-
   "cat": {
     "load_more": "Daha fazla ürün yükle",
     "featured_models": "Öne çıkan modeller",
     "new_in": "Yeni eklenenler",
     "selected_type": "Seçili tip"
   },
-
   "breadcrumb": {
     "home": "Ana Sayfa",
     "back": "Geri"
   },
-
   "page": {
     "marka_h1": "İş ortaklarımız",
     "marka_subtitle": "Güvenilir iş ortaklarımızla kaliteli hizmet",
@@ -616,7 +730,6 @@
     "marka_cta_quote": "Teklif ve proje talebi",
     "marka_cta_pfos": "Proje Fabrikası"
   },
-
   "about": {
     "title": "Hakkımızda",
     "meta_description": "Equsto: Türkiye merkezli endüstriyel mutfak ve gastronomi platformu. Proje Fabrikası, katalog ve Bar Design Studio.",
@@ -635,7 +748,6 @@
     "cta_contact": "İletişim",
     "cta_brands": "Markalar"
   },
-
   "contact": {
     "title": "İletişim ve teklif",
     "meta_description": "Equsto satış mühendisliği: restoran, otel, kafe ve catering projeleri için teklif, PFOS ve WhatsApp hattı.",
@@ -649,7 +761,6 @@
     "where_imt300": "IMT300 için teknik detay: IMT300 sayfası; teklif aynı hattan.",
     "konu_prefix": "Talep konusu: "
   },
-
   "story": {
     "title": "Buradan başladık",
     "meta_description": "Equsto kurumsal hikaye: Proje Fabrikası, e-ticaret vitrini ve Bar Design Studio.",
@@ -666,7 +777,6 @@
     "cta_about": "Hakkımızda",
     "cta_contact": "İletişim"
   },
-
   "cart": {
     "breadcrumb_home": "Anasayfa",
     "lead": "Sepetinizdeki ürünleri inceleyin; WhatsApp ile talep iletebilir veya sipariş oluşturabilirsiniz.",
@@ -709,7 +819,6 @@
     "hdr_cart_label": "Sepet",
     "phone_prompt": "Telefon (ör. 0532…):"
   },
-
   "login": {
     "title": "Üye girişi",
     "sub": "E-posta ve şifrenizle giriş yapın veya Google ile devam edin.",
@@ -729,7 +838,6 @@
     "google_continue": "Google ile devam et",
     "back_home": "← Ana sayfaya dön"
   },
-
   "wa": {
     "prefill": "Merhaba, equsto.com üzerinden yazıyorum.",
     "modal_title": "Mr. Equsto",
@@ -755,14 +863,12 @@
     "server_unreachable": "Sunucuya ulaşılamadı: ",
     "history_empty_preview": "(boş)"
   },
-
   "member": {
     "guest": "Üye",
     "buyer_prefix": "Alıcı ",
     "my_account": "Hesabım",
     "login_title": "Üye girişi"
   },
-
   "pdp": {
     "filters_aria": "Filtreler",
     "categories_aria": "Kategoriler",
@@ -822,7 +928,6 @@
     "pdf_catalog": "PDF katalog",
     "mfg_page": "Üretici sayfası"
   },
-
   "dept": {
     "pisirme_lead": "Ocaklar, ızgaralar, kuzineler, fritözler, döner ve tost ekipmanları",
     "sogutma_lead": "Buzdolabı, derin dondurucu, şok soğutma, teşhir ve soğuk oda çözümleri",

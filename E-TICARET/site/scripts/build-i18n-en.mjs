@@ -10,6 +10,10 @@ const trPath = path.join(siteDir, "public/i18n/tr.json");
 const outPath = path.join(siteDir, "public/i18n/en.json");
 
 const tr = JSON.parse(fs.readFileSync(trPath, "utf8"));
+const navSubEnPath = path.join(siteDir, "scripts/nav-sub-en.generated.json");
+const navSubEn = fs.existsSync(navSubEnPath)
+  ? JSON.parse(fs.readFileSync(navSubEnPath, "utf8"))
+  : {};
 
 /** @type {Record<string, unknown>} */
 const EN = {
@@ -874,6 +878,11 @@ function deepMerge(base, over) {
     }
   }
   return out;
+}
+
+if (Object.keys(navSubEn).length) {
+  EN.nav = EN.nav || {};
+  EN.nav.sub = navSubEn;
 }
 
 const en = deepMerge(tr, EN);
