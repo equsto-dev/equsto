@@ -73,6 +73,37 @@ body.bd-page.besos header.hdr .hdr-pg-inner {
   background: transparent !important;
 }
 
+/* Fotoğrafla ara — Bar Design siyah header (eq-photo-search.js) */
+body.bd-page.besos.eq-shop header.hdr .eq-srch-photo-slot {
+  display: flex;
+  flex-shrink: 0;
+  align-items: stretch;
+}
+body.bd-page.besos.eq-shop header.hdr .eq-srch-photo-input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+body.bd-page.besos.eq-shop header.hdr .eq-srch-photo-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  margin: 0;
+  border: none;
+  border-left: 1px solid var(--bes-rule);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.65);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+body.bd-page.besos.eq-shop header.hdr .eq-srch-photo-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
 body.bd-page.besos .topnav-item.active,
 body.bd-page.besos .topnav-besos.active {
   box-shadow: inset 0 -2px 0 0 var(--bes-gold) !important;

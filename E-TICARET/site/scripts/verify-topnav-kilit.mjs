@@ -36,7 +36,11 @@ function barDesignAfterDepts(src, label) {
 mustExist("public/topnav-bar-design-KILIT.txt");
 
 barDesignAfterDepts(read("components/shop/ShopEqustoChrome.tsx"), "ShopEqustoChrome.tsx");
-barDesignAfterDepts(read("components/besos/BesosEqustoChrome.tsx"), "BesosEqustoChrome.tsx");
+
+const besosChrome = read("components/besos/BesosEqustoChrome.tsx");
+if (!/variant\s*=\s*["']besos["']/.test(besosChrome)) {
+  fail("BesosEqustoChrome.tsx: ShopEqustoChrome variant=besos kullanmalı");
+}
 
 const pfos = read("components/pfos/public/PfosEqustoChrome.tsx");
 const pfosIcecek = pfos.lastIndexOf('goEqDept("icecek")');
