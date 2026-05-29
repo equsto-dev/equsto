@@ -64,6 +64,7 @@
     "catalog:besos:prices": "python scripts/import-vitrum-besos-prices.py && node scripts/apply-vitrum-besos-prices.mjs",
     "catalog:caglayan:pdfs": "node scripts/sync-caglayan-pdfs.mjs",
     "catalog:caglayan:patch": "node scripts/patch-caglayan-pdf-fields.mjs",
+    "catalog:caglayan:veri": "node scripts/sync-caglayan-pdfs.mjs && node scripts/patch-caglayan-pdf-fields.mjs && node scripts/rebuild-ekipmanlar-from-dept.mjs",
     "catalog:caglayan:import": "node scripts/import-caglayan-market-reyon.mjs",
     "catalog:proso:cek": "node scripts/prosogutma-cek.mjs",
     "catalog:proso:import": "node scripts/import-prosogutma-market-reyon.mjs",
