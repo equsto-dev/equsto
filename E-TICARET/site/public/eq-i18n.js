@@ -45,6 +45,34 @@
     "/projeler": "/projects",
   };
 
+  /** EN pathname (no /en) → TR kanonik yol */
+  var TR_PATH_ALIASES = {
+    "/about": "/hakkimizda",
+    "/story": "/buradan-basladi",
+    "/search": "/arama",
+    "/cart": "/sepet",
+  };
+  Object.keys(EN_PATH_ALIASES).forEach(function (trPath) {
+    TR_PATH_ALIASES[EN_PATH_ALIASES[trPath]] = trPath;
+  });
+
+  function trPathFromEnPath(stripped) {
+    if (!stripped || stripped === "/") return stripped;
+    if (TR_PATH_ALIASES[stripped]) return TR_PATH_ALIASES[stripped];
+    if (stripped.indexOf("/guides/") === 0) {
+      return "/rehber/" + stripped.slice("/guides/".length);
+    }
+    if (stripped.indexOf("/projects/") === 0) {
+      return "/projeler/" + stripped.slice("/projects/".length);
+    }
+    var slug = stripped.replace(/^\//, "");
+    var keys = Object.keys(TR_GEO_TO_EN_SLUG);
+    for (var i = 0; i < keys.length; i++) {
+      if (TR_GEO_TO_EN_SLUG[keys[i]] === slug) return "/" + keys[i];
+    }
+    return stripped;
+  }
+
   var TR_GEO_TO_EN_SLUG = {
     "steakhouse-kurulumu": "steakhouse-kitchen-setup",
     "bulut-mutfak-kurulumu": "cloud-kitchen-setup",
@@ -218,6 +246,8 @@
     for (var i = 0; i < links.length; i++) {
       var a = links[i];
       if (a.hasAttribute("data-i18n-skip")) continue;
+      if (a.hasAttribute("data-lang")) continue;
+      if (a.closest && a.closest(".eq-lang-switch")) continue;
       var h = a.getAttribute("href");
       if (!h || h.indexOf("/en/") === 0 || h === "/en") continue;
       if (/^\/(api|data|images|_next)\//.test(h)) continue;
@@ -281,7 +311,10 @@
       var p = u.pathname || "/";
       var stripped = p.replace(PREFIX_RE, "/");
       var base = stripped === "/" ? "" : stripped;
-      if (lang === "en") {
+      if (lang !== "en") {
+        base = trPathFromEnPath(stripped === "/" ? "/" : stripped);
+        if (base === "/") base = "";
+      } else if (lang === "en") {
         if (EN_PATH_ALIASES[stripped]) base = EN_PATH_ALIASES[stripped];
         else if (stripped.indexOf("/rehber/") === 0) {
           base = "/guides/" + stripped.slice("/rehber/".length);
@@ -292,7 +325,17 @@
           if (TR_GEO_TO_EN_SLUG[slug]) base = "/" + TR_GEO_TO_EN_SLUG[slug];
         }
       }
-      var nextPath = lang === "en" ? "/en" + base : stripped;
+      var nextPath;
+      if (lang === "en") {
+        nextPath = "/en" + base;
+      } else {
+        nextPath =
+          base === "" || base === "/"
+            ? "/"
+            : base.charAt(0) === "/"
+              ? base
+              : "/" + base;
+      }
       u.pathname = nextPath;
       if (isAbsolute) return u.toString();
       return u.pathname + u.search + u.hash;
@@ -321,11 +364,13 @@
     wrap.querySelectorAll("a.eq-lang-opt").forEach(function (a) {
       a.addEventListener("click", function (e) {
         var targetLang = a.getAttribute("data-lang") || DEFAULT;
-        var href = a.getAttribute("href");
+        var href = urlFor(
+          location.pathname + location.search + location.hash,
+          targetLang
+        );
         saveLang(targetLang);
-        if (!href) return;
         e.preventDefault();
-        window.location.assign(href);
+        window.location.assign(href || "/");
       });
     });
     return wrap;
@@ -404,20 +449,14 @@
     } catch (_) {}
   }
 
+  /** Yalnızca URL /en/… iken EN tut; TR yollarına localStorage ile zorla EN ekleme. */
   function redirectToEnCanonical() {
-    var pathLang = detectLang();
-    saveLang(pathLang);
-    if (pathLang !== "en") return;
-    if (PREFIX_RE.test(location.pathname || "")) return;
-    try {
-      if (localStorage.getItem(STORAGE_KEY) !== "en") return;
-    } catch (_) {
+    var path = location.pathname || "/";
+    if (!PREFIX_RE.test(path)) {
+      saveLang("tr");
       return;
     }
-    var dest = urlFor(location.pathname + location.search + location.hash, "en");
-    var cur = (location.pathname || "/").replace(/\/+$/, "") || "/";
-    var next = dest.split("?")[0].split("#")[0].replace(/\/+$/, "") || "/";
-    if (next !== cur) location.replace(dest);
+    saveLang("en");
   }
 
   function afterDictReady() {
