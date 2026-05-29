@@ -1558,7 +1558,7 @@
     eqSyncMobileChrome();
   }
 
-  var EQ_FOOTER_ASSET_V = "20260529footer-dot";
+  var EQ_FOOTER_ASSET_V = "20260529footer-nodot";
 
   function loadScriptSameDir(filename, flagName) {
     try {
