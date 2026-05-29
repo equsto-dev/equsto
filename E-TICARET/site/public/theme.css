@@ -4566,10 +4566,12 @@ body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-brand > p {
 footer.eq-mfoot .eq-mfoot-company,
 footer.eq-mfoot .eq-mfoot-company .eq-mfoot-co-part,
 footer.eq-mfoot .eq-mfoot-company .eq-mfoot-co-ch,
+footer.eq-mfoot .eq-mfoot-company .eq-mfoot-co-sep,
 .eq-mfoot-company,
 .eq-mfoot-company .eq-mfoot-co-part,
-.eq-mfoot-company .eq-mfoot-co-ch {
-  font-weight: 400 !important;
+.eq-mfoot-company .eq-mfoot-co-ch,
+.eq-mfoot-company .eq-mfoot-co-sep {
+  font-weight: 300 !important;
   font-style: normal;
   font-synthesis: none;
 }
@@ -4586,9 +4588,11 @@ footer.eq-mfoot .eq-mfoot-company .eq-mfoot-co-part,
   display: inline-block;
   white-space: nowrap;
 }
-footer.eq-mfoot .eq-mfoot-company .eq-mfoot-co-part + .eq-mfoot-co-part,
-.eq-mfoot-company .eq-mfoot-co-part + .eq-mfoot-co-part {
-  margin-left: 3ch;
+footer.eq-mfoot .eq-mfoot-company .eq-mfoot-co-sep,
+.eq-mfoot-company .eq-mfoot-co-sep {
+  display: inline-block;
+  white-space: pre;
+  opacity: 0.92;
 }
 body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-company,
 body.bd-page.besos.eq-shop .eq-mfoot-company {
@@ -4596,7 +4600,7 @@ body.bd-page.besos.eq-shop .eq-mfoot-company {
   max-width: 100%;
   text-align: center;
   font-size: clamp(9px, 1.55vw, 11px);
-  font-weight: 400 !important;
+  font-weight: 300 !important;
   font-style: normal;
   line-height: 1.2;
   color: rgba(255, 255, 255, 0.88);

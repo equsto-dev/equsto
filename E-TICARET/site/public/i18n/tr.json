@@ -642,7 +642,7 @@
     "video_cta_modules": "Modülleri incele"
   },
   "footer": {
-    "company_display": "E Q U S T O   T E K N O L O J İ   L İ M İ T E D",
+    "company_display": "E Q U S T O . T E K N O L O J İ . L İ M İ T E D",
     "tagline": "Equsto Teknolojisi · Gastronomi Tasarımı",
     "powered_by_prefix": "Powered By",
     "powered_by": "Powered By Vitrum",
@@ -987,7 +987,25 @@
     "product_code_prefix": "Ürün kodu:",
     "dims_prefix": "Ölçüler:",
     "pdf_catalog": "PDF katalog",
-    "mfg_page": "Üretici sayfası"
+    "mfg_page": "Üretici sayfası",
+    "besos_other_modules": "Besos — diğer modüller",
+    "features_heading": "Özellikler",
+    "basic_info": "Temel bilgiler",
+    "category_prefix": "Kategori:",
+    "documents_heading": "Dökümanlar",
+    "datasheet": "Veri sayfası",
+    "product_catalog_pdf": "Ürün kataloğu (PDF)",
+    "quote_and_sales": "Teklif ve satış",
+    "quote_contact": "Teklif ve iletişim",
+    "quote_for_contact": "Teklif için iletişim",
+    "mfg_source": "Üretici kaynağı",
+    "mfg_source_link": "Üretici / kaynak sayfası",
+    "specs_request_quote": "Detaylı teknik özellikler için teklif sürecinden talep edebilirsiniz.",
+    "spec_group_electric": "Elektrik",
+    "spec_group_cooling": "Soğutma",
+    "spec_group_other": "Diğer",
+    "inner_dims_prefix": "İç ölçüler: {dim}.",
+    "besos_loader_waiting": "Besos modül yükleyici bekleniyor… Sayfayı yenileyin."
   },
   "dept": {
     "pisirme_lead": "Ocaklar, ızgaralar, kuzineler, fritözler, döner ve tost ekipmanları",
