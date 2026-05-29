@@ -93,17 +93,7 @@
       label: "Soğutma Ekipmanları",
       href: "sogutma.html",
       subs: [
-        {
-          label: "Buzdolapları",
-          labelKey: "nav.sub.buzdolaplari",
-          subs: [
-            { label: "Tezgah Tipi", tip: "tezgah-tipi-buzdolabi" },
-            { label: "Make Up Dolapları", tip: "make-up-dolabi" },
-            { label: "Cihazaltı", labelKey: "nav.sub.cihazalti", tip: "tezgah-tipi-buzdolabi", search: "cihazaltı|cihaz altı|tezgahalt" },
-            { label: "Dik Tip", tip: "dik-tip-buzdolap" },
-            { label: "Pastane Buzdolapları", labelKey: "nav.sub.pastane_buzdolaplari", search: "pastane buzdolab|pastane dolap" },
-          ],
-        },
+        { label: "Buzdolapları", labelKey: "nav.sub.buzdolaplari", search: "buzdolab|buzdolap" },
         { label: "Buz Makineleri", labelKey: "nav.sub.buz_makineleri" },
         { label: "Derin Dondurucular", labelKey: "nav.sub.derin_dondurucular" },
         { label: "Soğuk Odalar", labelKey: "nav.sub.soguk_odalar" },
