@@ -11,7 +11,15 @@ export default function ShopCoreScripts() {
     <>
       <Script src={`/theme.js?v=${v}`} strategy="beforeInteractive" />
       <Script src={`/eq-site-urls.js?v=${v}`} strategy="beforeInteractive" />
-      <Script src={`/eq-i18n.js?v=${v}`} strategy="afterInteractive" />
+      <Script
+        src={`/eq-i18n.js?v=${v}`}
+        strategy="afterInteractive"
+        onReady={() => {
+          try {
+            if (typeof window.__eqRerenderNav === "function") window.__eqRerenderNav();
+          } catch (_) {}
+        }}
+      />
       <Script src={`/equsto-logo.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/nav.js?v=${v}`} strategy="afterInteractive" />
       <Script src="/eq-auth-api.js" strategy="afterInteractive" />

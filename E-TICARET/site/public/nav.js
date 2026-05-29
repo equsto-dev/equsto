@@ -1318,14 +1318,47 @@
     } catch (_) {}
   });
 
+  /** i18n — flyout metinleri textContent ile yazıldığı için sözlük hazır olunca yeniden çiz. */
+  window.__eqRerenderNav = function () {
+    try {
+      render();
+    } catch (_) {}
+    try {
+      var drawer = document.getElementById("catDrawer");
+      if (drawer) {
+        try {
+          if (drawer.querySelector(".eq-mcat-drawer-inner")) drawer.innerHTML = "";
+        } catch (_) {}
+        renderDrawer();
+      }
+    } catch (_) {}
+  };
+
   function bootNav() {
     eqSyncMobileChrome();
-    render();
-    eqSyncMobileChrome();
-    try {
-      if (typeof window.__eqRerenderNav === "function") window.__eqRerenderNav();
-    } catch (_) {}
+    function paintNav() {
+      try {
+        window.__eqRerenderNav();
+      } catch (_) {
+        try {
+          render();
+        } catch (_2) {}
+      }
+      eqSyncMobileChrome();
+    }
+    if (window.eqI18nReady && typeof window.eqI18nReady.then === "function") {
+      window.eqI18nReady.then(paintNav);
+    } else {
+      paintNav();
+    }
   }
+
+  document.addEventListener("equsto:i18n-ready", function () {
+    try {
+      window.__eqRerenderNav();
+    } catch (_) {}
+  });
+
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", bootNav);
   else bootNav();
 
@@ -1338,19 +1371,6 @@
     },
     { passive: true }
   );
-
-  /** i18n geç gelirse: sözlük yüklenir yüklenmez kenar çubuğu + çekmece yeniden çizilir. */
-  window.__eqRerenderNav = function () {
-    try { render(); } catch (_) {}
-    try {
-      var drawer = document.getElementById("catDrawer");
-      if (drawer) {
-        // Kök çekmeceyi sıfırla, yeniden çiz.
-        try { drawer.querySelector(".eq-mcat-drawer-inner") && (drawer.innerHTML = ""); } catch (_) {}
-        renderDrawer();
-      }
-    } catch (_) {}
-  };
 
   function renderDrawer() {
     var drawer = document.getElementById("catDrawer");
