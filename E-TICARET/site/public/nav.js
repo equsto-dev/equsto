@@ -1115,6 +1115,14 @@
     return ul;
   }
 
+  function isBesosModulPdp() {
+    try {
+      return /\/besos\/modul\/[^/?#]+/i.test(location.pathname || "");
+    } catch (_) {
+      return false;
+    }
+  }
+
   function render() {
     var root = document.getElementById("eq-sidebar");
     if (!root) return;
@@ -1125,7 +1133,10 @@
       !document.body.classList.contains("bd-page") &&
       root.parentNode &&
       root.parentNode.id === "eq-filter-col";
-    if (inVitrinFilterCol) {
+    if (
+      inVitrinFilterCol ||
+      (isBesosModulPdp() && root.parentNode && root.parentNode.id === "eq-filter-col")
+    ) {
       root.innerHTML = "";
       root.setAttribute("aria-hidden", "true");
       return;
