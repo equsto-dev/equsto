@@ -18,7 +18,7 @@ const HERO_EMBED_SRC = besosHeroYoutubeEmbedUrl(BESOS_HERO_YT_ID);
 export default function BesosImt300Hero() {
   return (
     <>
-      <section className="bd-hero bd-hero-fullbleed" id="bd-hero" aria-label="Besos tanıtım videosu">
+      <section className="bd-hero bd-hero-fullbleed" id="bd-hero" aria-label="Besos tanıtım videosu" data-i18n-attr="aria-label:besos.hero_iframe_title">
         <div className="bd-hero-media">
           <div className="bd-hero-video">
             <iframe
@@ -33,20 +33,22 @@ export default function BesosImt300Hero() {
           </div>
           <div className="bd-hero-overlay" aria-hidden="true" />
         </div>
-        <aside className="bd-hero-action" aria-label="Videodaki ürün IMT300">
+        <aside className="bd-hero-action" aria-label="Videodaki ürün IMT300" data-i18n-attr="aria-label:besos.hero_product_label">
           <div className="bd-hero-action-inner">
-            <p className="bd-hero-action-label">Skyra IMT300 · Berrak buz makinesi</p>
-            <Link className="bd-hero-cta-btn" href="/besos/imt300">
+            <p className="bd-hero-action-label" data-i18n="besos.hero_product_label">
+              Skyra IMT300 · Berrak buz makinesi
+            </p>
+            <Link className="bd-hero-cta-btn" href="/besos/imt300" data-i18n="besos.hero_go_page">
               Sayfaya Git
             </Link>
-            <p className="bd-hero-cta-price">
+            <p className="bd-hero-cta-price" data-i18n="besos.hero_price_hint">
               Liste fiyatı: <strong>11.500 €</strong> · teklif için iletişim
             </p>
           </div>
         </aside>
       </section>
 
-      <section className="bd-ice-strip" aria-label="Buz ve servis görselleri">
+      <section className="bd-ice-strip" aria-label="Buz ve servis görselleri" data-i18n-attr="aria-label:besos.ice_strip_aria">
         <div className="bd-ice-strip-inner">
           {ICE_STRIP_IMAGES.map((img) => (
             <Image

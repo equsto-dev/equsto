@@ -51,6 +51,7 @@ function ProductActions({
         type="button"
         className={`${classPrefix}-btn ${classPrefix}-btn-primary`}
         onClick={() => handleAction("cart")}
+        data-i18n="besos.catalog_add_to_cart"
       >
         Sepete Ekle
       </button>
@@ -58,6 +59,7 @@ function ProductActions({
         type="button"
         className={`${classPrefix}-btn ${classPrefix}-btn-outline`}
         onClick={() => handleAction("contact")}
+        data-i18n="besos.catalog_contact"
       >
         İletişim
       </button>
@@ -79,7 +81,9 @@ function TapTile({ product }: { product: BesosProduct }) {
         {img ? (
           <Image src={img} alt={code} width={320} height={400} loading="lazy" unoptimized />
         ) : (
-          <span className="vit-card-hero-empty">Görsel</span>
+          <span className="vit-card-hero-empty" data-i18n="besos.catalog_image_ph">
+            Görsel
+          </span>
         )}
       </Link>
       <div className="vit-tap-tile-body">
@@ -110,7 +114,9 @@ function CardRow({ product, categoryLabel }: { product: BesosProduct; categoryLa
           {img ? (
             <Image src={img} alt={title} width={640} height={384} loading="lazy" unoptimized />
           ) : (
-            <div className="vit-card-hero-empty">Görsel</div>
+            <div className="vit-card-hero-empty" data-i18n="besos.catalog_image_ph">
+              Görsel
+            </div>
           )}
         </Link>
         <div className="vit-card-info">
@@ -148,13 +154,13 @@ export default function BesosCatalog({ products }: Props) {
   const groups = useMemo(() => groupBesosCatalogue(filtered), [filtered]);
 
   return (
-    <section className="bes-catalog" id="bd-stations" aria-label="Bar modülleri kataloğu">
+    <section className="bes-catalog" id="bd-stations" aria-label="Bar modülleri kataloğu" data-i18n-attr="aria-label:besos.catalog_aria">
       {query ? (
         <div className="bd-vitrum-flat-head">
           <h3>
             &ldquo;{query}&rdquo; için {filtered.length} eşleşen ürün
           </h3>
-          <button type="button" className="bes-catalog-search-clear" onClick={() => setQuery("")}>
+          <button type="button" className="bes-catalog-search-clear" onClick={() => setQuery("")} data-i18n="besos.catalog_search_clear">
             Aramayı temizle
           </button>
         </div>
