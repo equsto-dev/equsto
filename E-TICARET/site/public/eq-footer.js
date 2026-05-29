@@ -60,36 +60,30 @@
 
 
 
-  /** E Q U S T O   T E K N O L O J İ   L İ M İ T E D — harf arası 1 boşluk, kelime arası 3 nbsp */
-
-  var COMPANY_WORDS = ["EQUSTO", "TEKNOLOJİ", "LİMİTED"];
-
-  var COMPANY_WORD_GAP = "\u00a0\u00a0\u00a0";
-
-  var LETTER_GAP = " ";
-
-  var WORD_GAP = COMPANY_WORD_GAP;
-
-  function spacedLetters(word) {
-    return String(word || "").split("").join(LETTER_GAP);
-  }
-
-  var COMPANY_DISPLAY_LINE = COMPANY_WORDS.map(spacedLetters).join(WORD_GAP);
+  /** KİLİT — tam metin: harf arası 1 boşluk, kelime arası 3 boşluk (footer-brand-KILIT.txt) */
+  var COMPANY_DISPLAY_LINE = "E Q U S T O   T E K N O L O J İ   L İ M İ T E D";
 
   function companyMarkup() {
-    return COMPANY_WORDS.map(function (w, i) {
-      var html = '<span class="eq-mfoot-co-part">' + esc(spacedLetters(w)) + "</span>";
-      if (i < COMPANY_WORDS.length - 1) {
-        html += '<span class="eq-mfoot-co-gap" aria-hidden="true">' + WORD_GAP + "</span>";
-      }
-      return html;
-    }).join("");
+    return esc(COMPANY_DISPLAY_LINE);
+  }
+
+  function applyCompanyLine(el) {
+    if (!el) return;
+    if (el.textContent !== COMPANY_DISPLAY_LINE) {
+      el.textContent = COMPANY_DISPLAY_LINE;
+    }
+    el.setAttribute("data-eq-co-layout", "letter1-word3");
   }
 
   function fixCompanyLine(host) {
-    var el = host && host.querySelector ? host.querySelector(".eq-mfoot-company") : null;
-    if (el) el.innerHTML = companyMarkup();
+    if (host && host.querySelector) {
+      applyCompanyLine(host.querySelector(".eq-mfoot-company"));
+      return;
+    }
+    document.querySelectorAll(".eq-mfoot-company").forEach(applyCompanyLine);
   }
+
+  window.__eqFixFooterCompanyAll = fixCompanyLine;
 
 
 
@@ -819,6 +813,8 @@
     try {
 
       mountFooter();
+
+      fixCompanyLine();
 
     } catch (_) {}
 

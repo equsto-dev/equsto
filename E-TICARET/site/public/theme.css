@@ -4564,27 +4564,10 @@ body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-brand > p {
   box-sizing: border-box;
 }
 footer.eq-mfoot .eq-mfoot-company,
-footer.eq-mfoot .eq-mfoot-company .eq-mfoot-co-part,
-.eq-mfoot-company,
-.eq-mfoot-company .eq-mfoot-co-part {
+.eq-mfoot-company {
   font-weight: 300 !important;
   font-style: normal;
   font-synthesis: none;
-}
-footer.eq-mfoot .eq-mfoot-company .eq-mfoot-co-part,
-.eq-mfoot-company .eq-mfoot-co-part {
-  display: inline-block;
-  white-space: nowrap;
-}
-footer.eq-mfoot .eq-mfoot-company .eq-mfoot-co-part + .eq-mfoot-co-part,
-.eq-mfoot-company .eq-mfoot-co-part + .eq-mfoot-co-part {
-  margin-left: 0;
-}
-footer.eq-mfoot .eq-mfoot-company .eq-mfoot-co-gap,
-.eq-mfoot-company .eq-mfoot-co-gap {
-  display: inline;
-  white-space: pre;
-  font-weight: 300 !important;
 }
 body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-company,
 body.bd-page.besos.eq-shop .eq-mfoot-company {
@@ -4596,8 +4579,8 @@ body.bd-page.besos.eq-shop .eq-mfoot-company {
   font-style: normal;
   line-height: 1.2;
   color: rgba(255, 255, 255, 0.88);
-  letter-spacing: 0;
-  white-space: nowrap;
+  letter-spacing: 0 !important;
+  white-space: pre;
   overflow-x: hidden;
   overflow-y: hidden;
   scrollbar-width: none;
