@@ -3591,7 +3591,6 @@ body.eq-shop .main .products {
   position: relative;
 }
 
-/* KİLİT: prod-card ambient hover — public/prod-card-ambient-KILIT.txt */
 /* Hover: görselden örneklenen renk — çerçeve + ambient gölge (eq-product-card-tint.js) */
 .prod-card-wrap.eq-prod-tint-active,
 .main .products .prod-card.eq-prod-tint-active {
@@ -4498,27 +4497,12 @@ body.eq-shop.eq-pfos footer.footer.eq-mfoot {
   background: #011e41;
 }
 body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-back {
-  display: block;
-  width: 100%;
-  border: none;
-  padding: 14px 16px;
-  font: inherit;
-  font-size: 13px;
-  font-weight: 500;
-  color: #fff;
-  text-align: center;
-  cursor: pointer;
-  background: #001e50;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-  transition: background 0.15s ease;
-}
-body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-back:hover {
-  background: #002868;
+  display: none !important;
 }
 body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-main {
   background: #011e41;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
-  padding: 36px 20px 28px;
+  padding: 12px 16px 8px;
 }
 body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-inner {
   max-width: 1500px;
@@ -4527,8 +4511,8 @@ body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-inner {
 body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-cols {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 28px 24px;
-  margin-bottom: 15px;
+  gap: 20px 20px;
+  margin-bottom: 8px;
 }
 body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col h3 {
   margin: 0 0 12px;
@@ -4561,9 +4545,9 @@ body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-brand {
   flex-wrap: nowrap !important;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  margin-bottom: 10px;
-  padding-top: 8px;
+  gap: 2px;
+  margin-bottom: 4px;
+  padding-top: 4px;
   border-top: 1px solid rgba(255, 255, 255, 0.14);
   text-align: center;
 }
@@ -4596,6 +4580,10 @@ body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-tagline {
   letter-spacing: 0.02em;
 }
 body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-powered {
+  display: none !important;
+}
+body.bd-page.besos.eq-shop .eq-mfoot-powered {
+  display: block !important;
   margin: 0;
   text-align: center;
   font-size: calc(9px * 1.4);
@@ -4610,7 +4598,7 @@ body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-vitrum-name {
 body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-legal {
   background: #011e41;
   border-top: 1px solid rgba(255, 255, 255, 0.14);
-  padding: 18px 20px 22px;
+  padding: 10px 16px 12px;
 }
 body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-legal-inner {
   max-width: 1500px;
@@ -4657,8 +4645,23 @@ body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-copy {
     gap: 20px;
   }
   body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-main {
-    padding: 28px 16px 22px;
+    padding: 10px 12px 8px;
   }
+}
+
+/* Alt bant — ok / scroll kontrolleri yok; kompakt marka şeridi (tüm eq-shop) */
+body.eq-shop:not(.admin-app) footer.footer.eq-mfoot > button,
+body.eq-shop:not(.admin-app) footer.footer.eq-mfoot .eq-mfoot-main > button,
+body.eq-shop:not(.admin-app) footer.footer.eq-mfoot .eq-mfoot-top,
+body.eq-shop:not(.admin-app) footer.footer.eq-mfoot #eq-mfoot-top {
+  display: none !important;
+}
+body.eq-shop:not(.admin-app) footer.footer.eq-mfoot .eq-mfoot-back,
+body.eq-shop:not(.admin-app) footer.footer.eq-mfoot #eq-mfoot-back {
+  display: none !important;
+}
+body.eq-shop:not(.admin-app):not(.bd-page.besos) footer.footer.eq-mfoot .eq-mfoot-powered {
+  display: none !important;
 }
 
 /* Mobil alt şerit — Amazon mobil uygulama (yalnız çizgi ikonlar, beyaz zemin); masaüstünde gizli */
