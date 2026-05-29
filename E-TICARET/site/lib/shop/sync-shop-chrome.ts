@@ -18,7 +18,8 @@ export function mountEqShopChromeLayout(): () => void {
     const besosTab = document.querySelector<HTMLElement>(".topnav-item.topnav-besos");
     const topnav = besosTab?.closest<HTMLElement>("nav.topnav");
     if (besosTab && topnav && topnav.scrollWidth > topnav.clientWidth + 2) {
-      const left = Math.max(0, besosTab.offsetLeft - 12);
+      const maxLeft = topnav.scrollWidth - topnav.clientWidth;
+      const left = Math.min(maxLeft, Math.max(0, besosTab.offsetLeft - 12));
       if (Math.abs(topnav.scrollLeft - left) > 4) topnav.scrollLeft = left;
     }
   };
