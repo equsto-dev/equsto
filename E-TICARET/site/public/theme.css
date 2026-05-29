@@ -588,6 +588,7 @@ nav.topnav::-webkit-scrollbar,
 
 .topnav > .pg-inner.topnav-inner,
 .topnav > .pg-inner {
+  /* KİLİT: topnav-bar-design-KILIT.txt — taşan şerit kaydırılabilir, Bar Design kesilmesin */
   display: flex !important;
   flex-direction: row;
   flex-wrap: nowrap;

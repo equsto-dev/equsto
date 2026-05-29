@@ -197,7 +197,7 @@
 
   window.__eqRerenderTopnavBesos = installTopnavBesosFaces;
 
-  /** Bar Design her zaman departman listesinin sonunda (eski önbellek / partial uyumu). */
+  /** KİLİT: topnav-bar-design-KILIT.txt — Bar Design her zaman departman listesinin sonunda (eski önbellek / partial uyumu). */
   function normalizeTopnavBarDesignLast(root) {
     root = root || document;
     var inner = root.querySelector("nav.topnav .topnav-inner");
@@ -253,8 +253,10 @@
 
   function bootExternalLinks() {
     markExternalLinks(document);
+    normalizeTopnavBarDesignLast(document);
     installTopnavBesosFaces(document);
     upgradeTopnavDeptLinks();
+    normalizeTopnavBarDesignLast(document);
   }
 
   /** Üst departman şeridi: div+onclick yerine <a href> — sol tık aynı sekme, tekerlek (orta) tık tarayıcıda yeni sekme. */
