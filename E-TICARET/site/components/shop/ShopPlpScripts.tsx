@@ -29,6 +29,7 @@ export default function ShopPlpScripts() {
       <Script src={`/eq-kur-live.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-fiyatlar-bridge.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-vendor-sanitize.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/eq-product-card-tint.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-dept-plp.js?v=${v}`} strategy="afterInteractive" />
     </>
   );

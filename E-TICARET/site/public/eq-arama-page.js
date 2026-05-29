@@ -264,6 +264,13 @@
         );
       })
       .join("");
+    try {
+      if (window.EqustoProductTint && typeof window.EqustoProductTint.refreshPlp === "function") {
+        window.EqustoProductTint.refreshPlp(grid);
+      } else {
+        document.dispatchEvent(new CustomEvent("equsto:plp-grid-updated", { detail: { root: grid } }));
+      }
+    } catch (_) {}
   }
 
   function load() {
