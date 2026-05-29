@@ -625,11 +625,28 @@
     if (b.classList.contains("pf-page")) return;
     if (!document.querySelector('script[src*="eq-footer"]')) {
       var f = document.createElement("script");
-      f.src = "/eq-footer.js?v=20260529footer-wordgap3";
+      f.src = "/eq-footer.js?v=20260530footer-brand-kilit";
       f.defer = true;
       document.head.appendChild(f);
     }
   } catch (_) {}
+})();
+
+/** Footer marka şeridi — KİLİT: public/footer-brand-KILIT.txt */
+(function () {
+  function enforceFooterBrandLock() {
+    try {
+      if (typeof window.__eqFixFooterCompanyAll === "function") window.__eqFixFooterCompanyAll();
+    } catch (_) {}
+  }
+  window.addEventListener("equsto:i18n-ready", enforceFooterBrandLock);
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(enforceFooterBrandLock, 400);
+    });
+  } else {
+    setTimeout(enforceFooterBrandLock, 400);
+  }
 })();
 
 /** Eksik üst chrome (logo + arama + topnav) — GEO / rehber sayfaları */

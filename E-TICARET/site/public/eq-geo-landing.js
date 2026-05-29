@@ -89,7 +89,7 @@
   }
 
   function ensureGeoScripts() {
-    loadScriptOnce("/eq-footer.js?v=20260529footer-wordgap3");
+    loadScriptOnce("/eq-footer.js?v=20260530footer-brand-kilit");
     loadScriptOnce("/contact.js?v=20260522wa", true);
   }
 
