@@ -153,6 +153,18 @@ export default function PfosEqustoChrome() {
           <span className="topnav-sep" aria-hidden="true">
             |
           </span>
+          <div
+            className="topnav-item topnav-besos"
+            role="button"
+            tabIndex={0}
+            onClick={() => goEqDept("besos")}
+            data-i18n="nav.bar_design"
+          >
+            Bar Design
+          </div>
+          <span className="topnav-sep" aria-hidden="true">
+            |
+          </span>
           <div className="topnav-item" role="button" tabIndex={0} onClick={() => goEqDept("pisirme")}>
             Pişirme Ekipmanları
           </div>
@@ -185,20 +197,6 @@ export default function PfosEqustoChrome() {
           </span>
           <div className="topnav-item" role="button" tabIndex={0} onClick={() => goEqDept("icecek")}>
             İçecek Ekipmanları
-          </div>
-          <span className="topnav-sep" aria-hidden="true">
-            |
-          </span>
-          <div
-            className="topnav-item topnav-besos"
-            role="button"
-            tabIndex={0}
-            onClick={() => goEqDept("besos")}
-          >
-            <span className="topnav-besos__in" aria-hidden="true">
-              <span className="topnav-besos__face topnav-besos__face--plain">Bar Design</span>
-              <span className="topnav-besos__face topnav-besos__face--dark">Dark Side</span>
-            </span>
           </div>
         </div>
       </nav>
