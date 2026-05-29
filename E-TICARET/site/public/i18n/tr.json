@@ -644,10 +644,12 @@
   "footer": {
     "company_display": "E Q U S T O   T E K N O L O J İ   L İ M İ T E D",
     "tagline": "Equsto Teknolojisi · Gastronomi Tasarımı",
+    "powered_by_prefix": "Powered By",
     "powered_by": "Powered By Vitrum",
     "all_rights": "Tüm hakları saklıdır.",
     "cookie_policy": "Çerez politikası",
     "privacy": "Gizlilik",
+    "returns": "İade politikası",
     "terms": "Şartlar ve koşullar",
     "b2b_partners": "B2B · proje · kanal ortaklıkları",
     "back_to_top": "Başa dön",
@@ -781,7 +783,7 @@
     "step4": "Kontrol ve iade: Teknik kontrol sonrası uygun bulunan tutar, onaylı ödeme yöntemine iade edilir",
     "b2b_h2": "8. Kurumsal (B2B) siparişler",
     "b2b_p": "Restoran, otel, catering ve proje siparişlerinde iade ve iptal koşulları yazılı teklif / sipariş onayında belirtilir. Proje Fabrikası (PFOS) çıktıları bilgilendirme amaçlıdır; bağlayıcı sipariş yalnızca onaylı teklif ile oluşur.",
-    "updated": "Son güncelleme: Mayıs 2026. Sorularınız için iletişim sayfasını kullanın.",
+    "updated_html": "Son güncelleme: Mayıs 2026. Sorularınız için <a href=\"/contact\">iletişim</a> sayfasını kullanın.",
     "cta_contact": "İade talebi — iletişim",
     "cta_shop": "Kataloğa dön"
   },

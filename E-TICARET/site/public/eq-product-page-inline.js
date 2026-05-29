@@ -1,3 +1,10 @@
+/**
+ * ═══════════════════════════════════════════════════════════════════════════
+ * KİLİT: E-PDP ürün detay (PDP). renderProduct → renderEpdpProduct.
+ * Değiştirmeden önce kullanıcıdan açık onay alın. Ayrıntı: public/pdp-epdp-KILIT.txt
+ * Cursor: .cursor/rules/pdp-epdp-kilit.mdc
+ * ═══════════════════════════════════════════════════════════════════════════
+ */
 window.searchFilter = window.searchFilter || function () {};
 
     function __pdpT(k, fb, vars) {
@@ -643,6 +650,9 @@ window.searchFilter = window.searchFilter || function () {};
     }
 
     function railLabelForProduct(x) {
+      if (x && String(x.kaynak || "") === "besos-vitrum") {
+        return "Besos — diğer modüller";
+      }
       if (!x || !isMarketReyonProduct(x)) return railLabelFor((x && x.category) || "");
       if (isCaglayanRefrigeration(x)) {
         return __pdpT("pdp.caglayan_other_models", "Çağlayan Refrigeration — diğer modeller");
@@ -1257,6 +1267,46 @@ window.searchFilter = window.searchFilter || function () {};
       eqMbgUpdatePage();
     }
 
+    function familyRailSlotWidth() {
+      return window.matchMedia("(max-width: 700px)").matches ? 90 : 108;
+    }
+
+    function familyRailGapPx() {
+      return window.matchMedia("(max-width: 700px)").matches ? 8 : 12;
+    }
+
+    function familyRailMaxVisible(scrollEl) {
+      if (!scrollEl) return 5;
+      var w = scrollEl.clientWidth;
+      if (!(w > 0)) return 5;
+      var slot = familyRailSlotWidth();
+      var gap = familyRailGapPx();
+      return Math.max(1, Math.floor((w + gap) / (slot + gap)));
+    }
+
+    function trimFamilyRailToViewport() {
+      var scroll = document.querySelector(".eq-product-family-scroll");
+      if (!scroll) return;
+      var items = scroll.querySelectorAll(".eq-product-family-item");
+      if (!items.length) return;
+      var max = familyRailMaxVisible(scroll);
+      for (var i = 0; i < items.length; i++) {
+        items[i].style.display = i < max ? "" : "none";
+      }
+    }
+
+    function bindFamilyRailFit() {
+      function run() {
+        trimFamilyRailToViewport();
+        var scroll = document.querySelector(".eq-product-family-scroll");
+        if (scroll && scroll.clientWidth === 0) requestAnimationFrame(run);
+      }
+      run();
+      if (window.__eqFamilyRailFitBound) return;
+      window.__eqFamilyRailFitBound = true;
+      window.addEventListener("resize", trimFamilyRailToViewport);
+    }
+
     function renderFamilyRail(x, all, keyFn) {
       if (!x || !all || !all.length) return "";
       var pack = pickRelatedProducts(x, all, keyFn);
@@ -1268,8 +1318,7 @@ window.searchFilter = window.searchFilter || function () {};
           ? __pdpT("pdp.family_hint_caglayan", "Çağlayan katalogundan diğer modeller")
           : __pdpT("pdp.family_hint_similar", "Muadil ve benzer modeller");
       var curSlug = String(x.slug || x.id || "").toLowerCase();
-      var scrollCls =
-        items.length > 5 ? " eq-product-family-scroll eq-product-family-scroll--carousel" : " eq-product-family-scroll";
+      var scrollCls = "eq-product-family-scroll";
       var cells = items
         .map(function (p) {
           var k = keyFn
@@ -1361,6 +1410,12 @@ window.searchFilter = window.searchFilter || function () {};
 
     function pdpSeriesEyebrow(x) {
       if (isCaglayanRefrigeration(x)) return caglayanSeriesEyebrow(x);
+      if (x && String(x.kaynak || "") === "besos-vitrum") {
+        var bp = [];
+        if (x.category) bp.push(String(x.category));
+        if (x.page != null) bp.push("P." + String(x.page));
+        return bp.join(" · ") || "Besos Bar Design";
+      }
       var parts = [];
       if (x.brand) parts.push(String(x.brand));
       var ref = deptLink(x.category, x.dept);
@@ -1516,6 +1571,13 @@ window.searchFilter = window.searchFilter || function () {};
     function getEpdpDrawingImgs(x) {
       var out = [];
       var seen = Object.create(null);
+      if (x && x.drawing) {
+        var dSrc = resolveProductImgSrc(x.drawing);
+        if (dSrc && !seen[dSrc]) {
+          seen[dSrc] = 1;
+          out.push({ src: dSrc, label: __pdpT("pdp.technical_drawing", "Teknik çizim") });
+        }
+      }
       if (isCaglayanRefrigeration(x)) {
         getCaglayanTeknikImgs(x).forEach(function (item) {
           if (!item.rel) return;
@@ -1940,6 +2002,7 @@ window.searchFilter = window.searchFilter || function () {};
         renderRecentlyViewed(x, all);
 
       bindEpdpGallery();
+      bindFamilyRailFit();
       eqMbgBindRelated();
       (function bindPdpLightbox() {
         var lb = document.getElementById("eq-pdp-lightbox");
@@ -1992,8 +2055,21 @@ window.searchFilter = window.searchFilter || function () {};
     function renderProduct(x, all) {
       renderEpdpProduct(x, all);
     }
+    window.__eqRenderProduct = renderProduct;
 
     function bootProductPage() {
+      if (/\/besos\/modul\/[^/?#]+/i.test(location.pathname || "")) {
+        if (typeof window.__eqBootBesosModulPdp === "function") {
+          window.__eqBootBesosModulPdp();
+          return;
+        }
+        var besosRoot = document.getElementById("eq-product-root");
+        if (besosRoot) {
+          besosRoot.innerHTML =
+            '<div class="eq-product-miss">Besos modül yükleyici bekleniyor… Sayfayı yenileyin.</div>';
+        }
+        return;
+      }
       var bcHome = document.getElementById("eq-product-bc-home");
       if (bcHome && typeof window.equstoUrl === "function") bcHome.href = window.equstoUrl("shop");
       if (window.EqFilterColumn) {

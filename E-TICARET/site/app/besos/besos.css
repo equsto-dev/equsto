@@ -1615,8 +1615,12 @@ body.bd-page.besos.eq-shop .eq-mfoot-brand {
 body.bd-page.besos.eq-shop .eq-mfoot-powered {
   margin: 0;
   text-align: center;
-  font-size: 10px;
+  font-size: calc(10px * 1.4);
   color: rgba(255, 255, 255, 0.45);
+}
+body.bd-page.besos.eq-shop .eq-mfoot-vitrum-name {
+  color: #c5a046;
+  font-weight: 600;
 }
 body.bd-page.besos.eq-shop .eq-mfoot-logo {
   display: inline-flex;

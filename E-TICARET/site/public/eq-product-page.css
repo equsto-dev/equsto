@@ -1,6 +1,7 @@
 /**
- * Ürün detay (PDP) — legacy product.html <style> bloğu.
- * Next App Router sayfalarında ShopStyles variant="product" ile yüklenir.
+ * Ürün detay (PDP) — E-PDP düzeni.
+ * KİLİT: public/pdp-epdp-KILIT.txt — onay olmadan değiştirmeyin.
+ * Next App Router: ShopStyles variant="product" + page.tsx sunucu link.
  */
 
 /* Teknik özellikler: Genel | Teknik iki sütun */

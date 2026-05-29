@@ -4586,10 +4586,14 @@ body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-tagline {
 body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-powered {
   margin: 0;
   text-align: center;
-  font-size: 9px;
+  font-size: calc(9px * 1.4);
   line-height: 1.2;
   color: rgba(255, 255, 255, 0.5);
   letter-spacing: 0.04em;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-vitrum-name {
+  color: #c5a046;
+  font-weight: 600;
 }
 body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-legal {
   background: #011e41;
