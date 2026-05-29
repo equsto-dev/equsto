@@ -873,6 +873,13 @@ const EN = {
     quote_and_sales: "Quote and sales",
     quote_contact: "Quote and contact",
     quote_for_contact: "Contact for quote",
+    general_features: "General features",
+    variant_dims_summary: "Dimensions for this variant",
+    specs_all_sizes_note:
+      "All length and depth options are listed in the manufacturer catalogue.",
+    caglayan_lead_fallback:
+      "Professional market and serve-over refrigeration — Çağlayan catalogue series.",
+    open_pdf_new_tab: "Open in new tab",
     mfg_source: "Manufacturer source",
     mfg_source_link: "Manufacturer / source page",
     specs_request_quote:

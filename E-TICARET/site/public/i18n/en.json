@@ -1005,7 +1005,12 @@
     "spec_group_cooling": "Refrigeration",
     "spec_group_other": "Other",
     "inner_dims_prefix": "Internal dimensions: {dim}.",
-    "besos_loader_waiting": "Waiting for Besos module loader… Refresh the page."
+    "besos_loader_waiting": "Waiting for Besos module loader… Refresh the page.",
+    "general_features": "General features",
+    "variant_dims_summary": "Dimensions for this variant",
+    "specs_all_sizes_note": "All length and depth options are listed in the manufacturer catalogue.",
+    "caglayan_lead_fallback": "Professional market and serve-over refrigeration — Çağlayan catalogue series.",
+    "open_pdf_new_tab": "Open in new tab"
   },
   "dept": {
     "pisirme_lead": "Ranges, griddles, ovens, fryers, doner and toast equipment",

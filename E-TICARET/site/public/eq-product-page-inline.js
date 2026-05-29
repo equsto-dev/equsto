@@ -127,6 +127,14 @@ window.searchFilter = window.searchFilter || function () {};
         .trim();
     }
 
+    function formatPdpPriceDisplay(raw, item) {
+      var row = item || { price: raw };
+      if (buyboxPriceParts(row).quoteOnly) {
+        return __pdpT("pdp.quote_for_contact", "Teklif için iletişim");
+      }
+      return extractCartPrice(raw, item);
+    }
+
     function parsePriceTlNumber(raw, item) {
       if (item && Number(item.fiyat_tl) > 0) return Math.round(Number(item.fiyat_tl) * 100) / 100;
       var s = String(raw || "").split("\n")[0] || "";
@@ -1153,7 +1161,8 @@ window.searchFilter = window.searchFilter || function () {};
         html += '<h3 class="eq-specs-sub">' + esc(__pdpT("pdp.specs_catalog_values", "Katalog değerleri (bu ölçü)")) + '</h3>' + tables;
       }
       html +=
-        '<p class="eq-specs-note">Tüm uzunluk ve derinlik seçenekleri üretici kataloğunda listelenir.' +
+        '<p class="eq-specs-note">' +
+        esc(__pdpT("pdp.specs_all_sizes_note", "Tüm uzunluk ve derinlik seçenekleri üretici kataloğunda listelenir.")) +
         (pdf
           ? ' <a href="' + esc(pdf) + '" target="_blank" rel="noopener">' + esc(__pdpT("pdp.pdf_catalog", "PDF katalog")) + '</a>'
           : src
@@ -1202,7 +1211,7 @@ window.searchFilter = window.searchFilter || function () {};
           var img = renderPdpThumbImg(p);
           var lbl = esc(shortModelLabel(p));
           var brand = esc(p.brand || "");
-          var price = esc(extractCartPrice(p.price));
+          var price = esc(formatPdpPriceDisplay(p.price, p));
           var pHref = productSlugEq(p)
             ? eqPathForProductObj(p) || "/urun/" + productSlugEq(p)
             : "product.html?p=" + esc(encodeURIComponent(k));
@@ -1390,16 +1399,19 @@ window.searchFilter = window.searchFilter || function () {};
       var parts = [];
       if (x.olculer) {
         var o = x.olculer;
-        if (o.genislik_mm) parts.push("Genişlik " + o.genislik_mm + " mm");
-        if (o.derinlik_mm) parts.push("derinlik " + o.derinlik_mm + " mm");
-        if (o.yukseklik_mm) parts.push("yükseklik " + o.yukseklik_mm + " mm");
+        if (o.genislik_mm) parts.push(__pdpT("pdp.dim_length", "Uzunluk") + " " + o.genislik_mm + " mm");
+        if (o.derinlik_mm) parts.push(__pdpT("pdp.dim_depth", "Derinlik") + " " + o.derinlik_mm + " mm");
+        if (o.yukseklik_mm) parts.push(__pdpT("pdp.dim_height", "Yükseklik") + " " + o.yukseklik_mm + " mm");
       }
       if (x.caglayanModelKod) parts.push(String(x.caglayanModelKod));
       if (parts.length) return parts.join(" · ");
       if (x.caglayanOzellikler && x.caglayanOzellikler.length) {
         return x.caglayanOzellikler.slice(0, 5).join(" · ");
       }
-      return "Profesyonel market ve serve-over soğutma — Çağlayan katalog serisi.";
+      return __pdpT(
+        "pdp.caglayan_lead_fallback",
+        "Profesyonel market ve serve-over soğutma — Çağlayan katalog serisi."
+      );
     }
 
     function caglayanPdfHref(x) {
@@ -1758,11 +1770,16 @@ window.searchFilter = window.searchFilter || function () {};
     }
 
     function renderCaglayanFeaturesCol(x) {
-      var html = '<div class="eq-caglayan-panel"><h2>Özellikler</h2><div class="eq-caglayan-acc">';
+      var html =
+        '<div class="eq-caglayan-panel"><h2>' +
+        esc(__pdpT("pdp.features_heading", "Özellikler")) +
+        '</h2><div class="eq-caglayan-acc">';
       var oz = x.caglayanOzellikler || [];
       if (oz.length) {
         html +=
-          "<details open><summary>Genel özellikler</summary><div class=\"eq-caglayan-acc__body\"><ul>" +
+          "<details open><summary>" +
+          esc(__pdpT("pdp.general_features", "Genel özellikler")) +
+          '</summary><div class="eq-caglayan-acc__body"><ul>' +
           oz.map(function (l) { return "<li>" + esc(l) + "</li>"; }).join("") +
           "</ul></div></details>";
       }
@@ -1787,10 +1804,24 @@ window.searchFilter = window.searchFilter || function () {};
       if (x.olculer && (x.olculer.genislik_mm || x.olculer.yukseklik_mm)) {
         var o = x.olculer;
         html +=
-          "<details><summary>Bu varyant ölçüleri</summary><div class=\"eq-caglayan-acc__body\"><ul>" +
-          (o.genislik_mm ? "<li>Genişlik: " + esc(o.genislik_mm) + " mm</li>" : "") +
-          (o.derinlik_mm ? "<li>Derinlik: " + esc(o.derinlik_mm) + " mm</li>" : "") +
-          (o.yukseklik_mm ? "<li>Yükseklik: " + esc(o.yukseklik_mm) + " mm</li>" : "") +
+          "<details><summary>" +
+          esc(__pdpT("pdp.variant_dims_summary", "Bu varyant ölçüleri")) +
+          '</summary><div class="eq-caglayan-acc__body"><ul>' +
+          (o.genislik_mm
+            ? "<li>" +
+              esc(__pdpT("pdp.dim_length", "Uzunluk") + ": " + o.genislik_mm + " mm") +
+              "</li>"
+            : "") +
+          (o.derinlik_mm
+            ? "<li>" +
+              esc(__pdpT("pdp.dim_depth", "Derinlik") + ": " + o.derinlik_mm + " mm") +
+              "</li>"
+            : "") +
+          (o.yukseklik_mm
+            ? "<li>" +
+              esc(__pdpT("pdp.dim_height", "Yükseklik") + ": " + o.yukseklik_mm + " mm") +
+              "</li>"
+            : "") +
           "</ul></div></details>";
       }
       if (!oz.length && !blocks.length) {
@@ -1804,7 +1835,10 @@ window.searchFilter = window.searchFilter || function () {};
       var pdf = caglayanPdfHref(x);
       var pdfLabel = marketReyonPdfLabel(x);
       var src = x.linkKaynak || "";
-      var html = '<div class="eq-caglayan-panel"><h2>Dökümanlar</h2><div class="eq-caglayan-acc">';
+      var html =
+        '<div class="eq-caglayan-panel"><h2>' +
+        esc(__pdpT("pdp.documents_heading", "Dökümanlar")) +
+        '</h2><div class="eq-caglayan-acc">';
       if (pdf) {
         html +=
           "<details open><summary>" +
@@ -1816,16 +1850,24 @@ window.searchFilter = window.searchFilter || function () {};
       html +=
         "<details" +
         (pdf ? "" : " open") +
-        '><summary>Teklif ve satış</summary><div class="eq-caglayan-acc__body">' +
+        "><summary>" +
+        esc(__pdpT("pdp.quote_and_sales", "Teklif ve satış")) +
+        '</summary><div class="eq-caglayan-acc__body">' +
         '<a href="' +
         esc(eqHtmlUrl(typeof window.equstoUrl === "function" ? window.equstoUrl("contact") : "contact.html")) +
-        '">Teklif ve iletişim</a> · ' +
+        '">' +
+        esc(__pdpT("pdp.quote_contact", "Teklif ve iletişim")) +
+        "</a> · " +
         '<a href="' +
         esc(eqHtmlUrl(typeof window.equstoUrl === "function" ? window.equstoUrl("pfos") : "pfos.html")) +
-        '">Proje Fabrikası</a></div></details>';
+        '">' +
+        esc(__pdpT("nav.pfos", "Proje Fabrikası")) +
+        "</a></div></details>";
       if (src) {
         html +=
-          "<details><summary>Üretici sayfası</summary><div class=\"eq-caglayan-acc__body\">" +
+          "<details><summary>" +
+          esc(__pdpT("pdp.mfg_page", "Üretici sayfası")) +
+          '</summary><div class="eq-caglayan-acc__body">' +
           '<a href="' +
           esc(src) +
           '" target="_blank" rel="noopener">' +
