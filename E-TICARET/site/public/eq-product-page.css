@@ -934,3 +934,25 @@ body.bd-page.besos:has(.eq-epdp) .eq-mbg-card-title {
 body.bd-page.besos:has(.eq-epdp) .eq-mbg-card {
   color: #111111;
 }
+
+/* PDP — katalog PDF (Çağlayan / Proso, yalnızca ürün sayfası) */
+.eq-pdp-pdf-embed-wrap {
+  margin: 0;
+  max-width: 100%;
+}
+.eq-pdp-pdf-embed {
+  display: block;
+  width: 100%;
+  min-height: min(72vh, 640px);
+  max-height: 80vh;
+  border: 1px solid var(--eq-border, #e5e7eb);
+  border-radius: 8px;
+  background: #f8fafc;
+}
+.eq-pdp-pdf-dl {
+  margin: 8px 0 0;
+  font-size: 12px;
+}
+.eq-pdp-pdf-dl a {
+  color: var(--eq-accent, #2563eb);
+}

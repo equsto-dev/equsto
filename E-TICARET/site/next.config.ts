@@ -125,11 +125,22 @@ const nextConfig: NextConfig = {
         ],
       },
       {
-        source: "/data/:path*",
+        source: "/data/:path*.json",
         headers: [
           utf8Json,
           { key: "Cache-Control", value: "public, max-age=0, must-revalidate" },
         ],
+      },
+      {
+        source: "/data/:path*.pdf",
+        headers: [
+          { key: "Content-Type", value: "application/pdf" },
+          { key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" },
+        ],
+      },
+      {
+        source: "/data/:path*",
+        headers: [{ key: "Cache-Control", value: "public, max-age=0, must-revalidate" }],
       },
       {
         source: "/feeds/google-products.xml",
