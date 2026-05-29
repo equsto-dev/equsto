@@ -1,9 +1,7 @@
 "use client";
 
 import Script from "next/script";
-import { useEffect } from "react";
 import { SHOP_ASSET_V } from "@/lib/shop/assets";
-import { mountEqShopChromeLayout } from "@/lib/shop/sync-shop-chrome";
 
 const v = SHOP_ASSET_V;
 
@@ -24,20 +22,6 @@ declare global {
 }
 
 export default function BesosScripts() {
-  useEffect(() => {
-    document.body.classList.add("bd-page", "besos", "eq-shop");
-
-    const mountFooter = () => window.__eqMountMarketFooter?.();
-    mountFooter();
-    const t1 = window.setTimeout(mountFooter, 400);
-    const unmountChrome = mountEqShopChromeLayout();
-    return () => {
-      window.clearTimeout(t1);
-      unmountChrome();
-      document.body.classList.remove("bd-page", "besos", "eq-shop");
-    };
-  }, []);
-
   return (
     <>
       <Script src={`/theme.js?v=${v}`} strategy="beforeInteractive" />
