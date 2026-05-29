@@ -21,7 +21,7 @@ export default function BesosEqustoChrome() {
   const searchRef = useRef<HTMLInputElement>(null);
 
   return (
-    <>
+    <div className="eq-shop-chrome">
       <header className="hdr">
         <a className="logo" href="/" aria-label="Equsto" />
         <div className="pg-inner hdr-pg-inner">
@@ -214,6 +214,6 @@ export default function BesosEqustoChrome() {
           </div>
         </div>
       </nav>
-    </>
+    </div>
   );
 }

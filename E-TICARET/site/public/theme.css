@@ -520,6 +520,29 @@ body.eq-mid-drag * {
   cursor: grabbing !important;
 }
 
+/* Üst krom: arama şeridi + departmanlar tek yapışkan blok */
+.eq-shop-chrome {
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  width: 100%;
+  align-self: stretch;
+  box-sizing: border-box;
+}
+
+.eq-shop-chrome > header.hdr,
+.eq-shop-chrome > nav.topnav,
+.eq-shop-chrome > .topnav {
+  position: relative !important;
+  top: auto !important;
+}
+
+body.eq-pfos .eq-shop-chrome,
+body.eq-pfos-public .eq-shop-chrome {
+  position: relative !important;
+  top: auto !important;
+}
+
 nav.topnav,
 .topnav {
   z-index: 499 !important;
@@ -530,7 +553,7 @@ nav.topnav,
   background: var(--eq-topnav-dept-strip-bg, var(--eq-topnav-dept-bg));
   border-bottom: 1px solid var(--eq-topnav-dept-border);
   position: sticky;
-  top: var(--eq-topnav-sticky-top, var(--eq-hdr-sticky-h, 0px));
+  top: var(--eq-topnav-sticky-top, var(--eq-hdr-sticky-h, 56px));
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
@@ -4280,17 +4303,28 @@ body.eq-shop:not(.admin-app):not(.bd-page) {
   --eq-topnav-dept-hover: rgba(0, 30, 80, 0.06);
   --eq-topnav-dept-sep: rgba(0, 0, 0, 0.2);
 }
-body.eq-shop:not(.admin-app):not(.bd-page) header.hdr {
-  position: sticky;
-  top: 0;
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-shop-chrome {
+  top: env(safe-area-inset-top, 0px);
   z-index: 501 !important;
 }
+
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-shop-chrome > header.hdr {
+  position: relative !important;
+  top: auto !important;
+  z-index: 1 !important;
+}
+
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-shop-chrome > nav.topnav,
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-shop-chrome > .topnav {
+  position: relative !important;
+  top: auto !important;
+  z-index: 0 !important;
+}
+
 body.eq-shop:not(.admin-app):not(.bd-page) nav.topnav,
 body.eq-shop:not(.admin-app):not(.bd-page) .topnav {
   background: #ffffff !important;
   border-bottom: 1px solid var(--eq-topnav-dept-border) !important;
-  top: var(--eq-hdr-sticky-h, 56px);
-  z-index: 500 !important;
 }
 body.eq-shop:not(.admin-app):not(.bd-page) .topnav-item {
   color: var(--eq-topnav-dept-text, #1a1a1a) !important;

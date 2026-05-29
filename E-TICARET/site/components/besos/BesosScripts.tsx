@@ -26,34 +26,11 @@ export default function BesosScripts() {
   useEffect(() => {
     document.body.classList.add("bd-page", "besos", "eq-shop");
 
-    const syncHdrSticky = () => {
-      const hdr = document.querySelector<HTMLElement>("header.hdr");
-      if (!hdr) return;
-      const h = Math.round(hdr.getBoundingClientRect().height);
-      if (h > 0) {
-        document.documentElement.style.setProperty("--eq-hdr-sticky-h", `${h}px`);
-      }
-    };
-
-    syncHdrSticky();
-    const hdr = document.querySelector<HTMLElement>("header.hdr");
-    let ro: ResizeObserver | null = null;
-    if (hdr && typeof ResizeObserver !== "undefined") {
-      ro = new ResizeObserver(syncHdrSticky);
-      ro.observe(hdr);
-    }
-    window.addEventListener("resize", syncHdrSticky);
-
     const mountFooter = () => window.__eqMountMarketFooter?.();
     mountFooter();
     const t1 = window.setTimeout(mountFooter, 400);
-    const t2 = window.setTimeout(syncHdrSticky, 0);
     return () => {
       window.clearTimeout(t1);
-      window.clearTimeout(t2);
-      ro?.disconnect();
-      window.removeEventListener("resize", syncHdrSticky);
-      document.documentElement.style.removeProperty("--eq-hdr-sticky-h");
       document.body.classList.remove("bd-page", "besos", "eq-shop");
     };
   }, []);
