@@ -13,7 +13,7 @@ export default function PfosEqustoChrome() {
   const searchRef = useRef<HTMLInputElement>(null);
 
   return (
-    <>
+    <div className="eq-shop-chrome">
       <header className="hdr">
         <a className="logo" href="/" aria-label="Equsto" />
         <div
@@ -202,6 +202,6 @@ export default function PfosEqustoChrome() {
           </div>
         </div>
       </nav>
-    </>
+    </div>
   );
 }

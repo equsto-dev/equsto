@@ -26,7 +26,7 @@ function toggleDrawer() {
 
 export default function ShopEqustoChrome({ activeDept }: { activeDept?: ShopDeptSlug | null }) {
   return (
-    <>
+    <div className="eq-shop-chrome">
       <header className="hdr">
         <a className="logo" href="/" aria-label="Equsto" />
         <div className="pg-inner hdr-pg-inner">
@@ -148,6 +148,6 @@ export default function ShopEqustoChrome({ activeDept }: { activeDept?: ShopDept
         </div>
       </nav>
       <span data-eq-shop-chrome-v={SHOP_ASSET_V} hidden aria-hidden="true" />
-    </>
+    </div>
   );
 }

@@ -51,20 +51,8 @@ body.bd-page.besos .topnav {
   box-shadow: none !important;
 }
 
-/* Arama şeridi + departmanlar birlikte — yalnız topnav asılı kalmasın */
-body.bd-page.besos header.hdr {
-  position: sticky;
-  top: 0;
-  z-index: 501 !important;
-}
-
-@media (min-width: 769px) {
-  body.bd-page.besos nav.topnav,
-  body.bd-page.besos .topnav {
-    position: sticky;
-    top: var(--eq-hdr-sticky-h, 56px);
-    z-index: 500 !important;
-  }
+body.bd-page.besos .eq-shop-chrome {
+  top: env(safe-area-inset-top, 0px);
 }
 
 body.bd-page.besos header.hdr > a.logo {
