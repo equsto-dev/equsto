@@ -6,9 +6,9 @@ type Props = {
 
 export default function BesosMethod({ steps }: Props) {
   return (
-    <section className="bd-vl-method" aria-label="Yöntemimiz">
+    <section className="bd-vl-method" aria-label="Yöntemimiz" data-i18n-attr="aria-label:besos.method_aria">
       <div className="bd-vl-method-head">
-        <h2>Yöntemimiz</h2>
+        <h2 data-i18n="besos.method_kicker">Yöntemimiz</h2>
       </div>
       <ol className="bd-vl-method-list">
         {steps.map((step) => (
