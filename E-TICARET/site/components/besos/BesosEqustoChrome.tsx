@@ -2,6 +2,7 @@
 
 import { goEqDept, submitBesosSearch, toggleEqDrawer } from "@/lib/besos/site-nav";
 import { Fragment, useRef } from "react";
+import ShopChromePortal from "@/components/shop/ShopChromePortal";
 
 function cycleTheme() {
   const fn = (window as Window & { equstoCycleTheme?: () => void }).equstoCycleTheme;
@@ -21,7 +22,7 @@ export default function BesosEqustoChrome() {
   const searchRef = useRef<HTMLInputElement>(null);
 
   return (
-    <>
+    <ShopChromePortal>
     <div className="eq-shop-chrome">
       <header className="hdr">
         <a className="logo" href="/" aria-label="Equsto" />
@@ -216,7 +217,6 @@ export default function BesosEqustoChrome() {
         </div>
       </nav>
     </div>
-    <div className="eq-shop-chrome-spacer" aria-hidden="true" />
-    </>
+    </ShopChromePortal>
   );
 }
