@@ -542,7 +542,7 @@
 
   if (!document.querySelector('script[src*="eq-header-search"]')) {
     var meiliHdr = document.createElement("script");
-    meiliHdr.src = "/eq-header-search.js?v=20260530meili";
+    meiliHdr.src = "/eq-header-search.js?v=20260530search-slug-fix";
     meiliHdr.defer = true;
     document.head.appendChild(meiliHdr);
   }
@@ -625,7 +625,7 @@
     if (b.classList.contains("pf-page")) return;
     if (!document.querySelector('script[src*="eq-footer"]')) {
       var f = document.createElement("script");
-      f.src = "/eq-footer.js?v=20260529mfoot-noarrow";
+      f.src = "/eq-footer.js?v=20260529footer-word3";
       f.defer = true;
       document.head.appendChild(f);
     }

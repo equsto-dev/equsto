@@ -1558,7 +1558,7 @@
     eqSyncMobileChrome();
   }
 
-  var EQ_FOOTER_ASSET_V = "20260530ssslink";
+  var EQ_FOOTER_ASSET_V = "20260529footer-word3";
 
   function loadScriptSameDir(filename, flagName) {
     try {
