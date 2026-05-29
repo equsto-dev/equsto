@@ -14,7 +14,7 @@
 
 
 
-  var FOOTER_JSON = "/data/footer-vitrin.json?v=20260601col12";
+  var FOOTER_JSON = "/data/footer-vitrin.json?v=20260528steakhouse-col";
 
   var SSS_LINK = { key: "footer.link_sss", label: "SSS", href: "/sss" };
 
@@ -290,6 +290,8 @@
 
             { key: "footer.link_allday", label: "All day dining kurulumu", href: "/all-day-dining-kurulumu" },
 
+            { key: "footer.link_steakhouse", label: "Steakhouse mutfak rehberi", href: "/steakhouse-kurulumu" },
+
           ],
 
         },
@@ -365,8 +367,6 @@
             { key: "footer.link_sitemap", label: "Site haritası", href: "/sitemap.xml" },
 
             { key: "footer.link_llms", label: "Asistan özet dosyası", href: "/llms.txt" },
-
-            { key: "footer.link_steakhouse", label: "Steakhouse mutfak rehberi", href: "/steakhouse-kurulumu" },
 
             { key: "footer.link_marka", label: "Markalarımız", href: "/shop/marka" },
 
