@@ -1,8 +1,18 @@
 "use client";
 
-import type { ReactNode } from "react";
+import { useEffect, type ReactNode } from "react";
 import Script from "next/script";
 import VitrinShell from "@/components/vitrin/VitrinShell";
+
+function applyLegacyVitrinI18n() {
+  const root = document.getElementById("eq-legacy-vitrin-root");
+  if (!root) return;
+  const w = window as Window & {
+    eqI18nApply?: (node?: ParentNode | Document) => void;
+    eqI18nReady?: Promise<void>;
+  };
+  if (typeof w.eqI18nApply === "function") w.eqI18nApply(root);
+}
 
 type LegacyVitrinPageProps = {
   bodyClass: string;
@@ -24,6 +34,16 @@ export default function LegacyVitrinPage({
   headScripts,
   styleVariant = "plp",
 }: LegacyVitrinPageProps) {
+  useEffect(() => {
+    applyLegacyVitrinI18n();
+    const w = window as Window & { eqI18nReady?: Promise<void> };
+    if (w.eqI18nReady && typeof w.eqI18nReady.then === "function") {
+      w.eqI18nReady.then(applyLegacyVitrinI18n);
+    }
+    window.addEventListener("equsto:i18n-ready", applyLegacyVitrinI18n);
+    return () => window.removeEventListener("equsto:i18n-ready", applyLegacyVitrinI18n);
+  }, [bodyHtml]);
+
   return (
     <>
       {headStyles.map((href) => (
