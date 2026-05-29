@@ -175,16 +175,28 @@ async function downloadUrl(url, dest) {
     /* */
   }
   try {
-    const { stdout } = await execFileAsync(
-      CURL,
-      ["-sL", "--max-time", "90", "-A", "EqustoImport/1.0", url],
-      { maxBuffer: 64 * 1024 * 1024, encoding: "buffer" }
-    );
-    if (!stdout?.length) return false;
-    await fsp.writeFile(dest, stdout);
+    const res = await fetch(url, {
+      headers: { "User-Agent": "EqustoImport/1.0" },
+      signal: AbortSignal.timeout(90000),
+    });
+    if (!res.ok) return false;
+    const buf = Buffer.from(await res.arrayBuffer());
+    if (!buf.length) return false;
+    await fsp.writeFile(dest, buf);
     return true;
   } catch {
-    return false;
+    try {
+      const { stdout } = await execFileAsync(
+        CURL,
+        ["-sL", "--max-time", "90", "-A", "EqustoImport/1.0", url],
+        { maxBuffer: 64 * 1024 * 1024, encoding: "buffer" }
+      );
+      if (!stdout?.length) return false;
+      await fsp.writeFile(dest, stdout);
+      return true;
+    } catch {
+      return false;
+    }
   }
 }
 

@@ -621,6 +621,12 @@ nav.topnav::-webkit-scrollbar,
   white-space: nowrap;
   -webkit-tap-highlight-color: transparent;
   user-select: none;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+a.topnav-item:visited {
+  color: var(--eq-topnav-dept-text) !important;
 }
 
 .topnav-item:hover {

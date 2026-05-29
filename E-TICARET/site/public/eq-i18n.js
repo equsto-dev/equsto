@@ -87,6 +87,7 @@
 
   var DICT = {};
   var loadPromise = null;
+  var loadedLang = null;
 
   function fetchDict(lang) {
     var custom = window.eqI18nBaseUrl;
@@ -108,7 +109,8 @@
   }
 
   function loadDict(lang) {
-    if (loadPromise) return loadPromise;
+    if (loadPromise && loadedLang === lang) return loadPromise;
+    loadedLang = lang;
     loadPromise = fetchDict(lang).then(function (j) {
       if (j) DICT = j;
       return DICT;
@@ -316,10 +318,14 @@
         ' href="' + urlFor(location.pathname + location.search + location.hash, "en") + '"' +
         ' data-lang="en" aria-current="' + (lang === "en" ? "true" : "false") + '"' +
         ' title="' + (DICT["lang_switcher"] && DICT["lang_switcher"]["switch_to_en"] || "English") + '">EN</a>';
-    // Tıklamada localStorage'a kaydet
     wrap.querySelectorAll("a.eq-lang-opt").forEach(function (a) {
-      a.addEventListener("click", function () {
-        saveLang(a.getAttribute("data-lang") || DEFAULT);
+      a.addEventListener("click", function (e) {
+        var targetLang = a.getAttribute("data-lang") || DEFAULT;
+        var href = a.getAttribute("href");
+        saveLang(targetLang);
+        if (!href) return;
+        e.preventDefault();
+        window.location.assign(href);
       });
     });
     return wrap;
@@ -344,7 +350,8 @@
   }
 
   function mountSwitcher(lang) {
-    if (document.querySelector(".eq-lang-switch")) return;
+    var existing = document.querySelector(".eq-lang-switch");
+    if (existing && existing.parentNode) existing.parentNode.removeChild(existing);
     ensureSwitcherStyles();
     var sw = buildSwitcher(lang);
     // 1) Tercih: sayfada [data-eq-lang-slot] varsa oraya
@@ -360,6 +367,10 @@
     sw.style.cssText = "position:fixed;top:8px;right:12px;z-index:9999;background:rgba(255,255,255,0.92);padding:2px 6px;border:1px solid #e3e3e3;border-radius:3px;";
     document.body.appendChild(sw);
   }
+
+  window.__eqRemountLangSwitcher = function () {
+    mountSwitcher(detectLang());
+  };
 
   /* ---------- boot ---------- */
 
@@ -394,6 +405,9 @@
   }
 
   function redirectToEnCanonical() {
+    var pathLang = detectLang();
+    saveLang(pathLang);
+    if (pathLang !== "en") return;
     if (PREFIX_RE.test(location.pathname || "")) return;
     try {
       if (localStorage.getItem(STORAGE_KEY) !== "en") return;

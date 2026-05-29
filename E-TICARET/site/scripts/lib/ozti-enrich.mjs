@@ -576,7 +576,9 @@ export function detectOztiOemBrand(name, category, kod) {
   if (/^WMF\b/.test(up) || (/^9580\./.test(k) && /WMF/.test(fullUp))) return "WMF";
   if (/^NUOVA\s+SIMONELLI/.test(up) || /^NUOSI\b/.test(up)) return "Nuova Simonelli";
   if (/^BRAVILOR/.test(up) || /^9574\.B/.test(k)) return "Bravilor Bonamat";
-  if (/^RATIONAL\b/.test(up)) return "Rational";
+  /** Rational — Öztiryakiler bayi: 9890.* kombi fırın, 5RRX.* davlumbaz / mobil stand / aksesuar */
+  if (/^9890\./i.test(k) || /^5RRX\./i.test(k)) return "Rational";
+  if (/^RATIONAL\b/i.test(up) || /\bRATIONAL\b/i.test(fullUp)) return "Rational";
   if (/^ROBOT\s+COUPE/.test(up)) return "Robot Coupe";
   if (/^UNOX\b/.test(up)) return "Unox";
   if (/^HOSHIZAKI\b/.test(up)) return "Hoshizaki";

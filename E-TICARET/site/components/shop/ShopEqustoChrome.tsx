@@ -1,7 +1,9 @@
 "use client";
 
-import { goEqDept, submitBesosSearch, toggleEqDrawer } from "@/lib/besos/site-nav";
+import { EQ_DEPT_PATH, submitBesosSearch, toggleEqDrawer } from "@/lib/besos/site-nav";
+import { usePathname } from "next/navigation";
 import { Fragment, useRef } from "react";
+import LangSwitcherSlot from "@/components/shop/LangSwitcherSlot";
 import ShopChromePortal from "@/components/shop/ShopChromePortal";
 import { SHOP_ASSET_V } from "@/lib/shop/assets";
 import type { ShopDeptSlug } from "@/lib/shop/depts";
@@ -26,6 +28,18 @@ function toggleDrawer() {
   if (typeof fn === "function") fn();
 }
 
+function topnavHref(key: string, pathname: string | null): string {
+  const base = EQ_DEPT_PATH[key] || `/shop/${encodeURIComponent(key)}`;
+  if (pathname?.startsWith("/en")) return base.startsWith("/en") ? base : `/en${base}`;
+  return base;
+}
+
+function preventActiveNavClick(e: React.MouseEvent, active: boolean) {
+  if (!active) return;
+  if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+  e.preventDefault();
+}
+
 type ShopEqustoChromeProps = {
   activeDept?: ShopDeptSlug | null;
   variant?: "shop" | "besos";
@@ -37,9 +51,10 @@ export default function ShopEqustoChrome({
   variant = "shop",
 }: ShopEqustoChromeProps) {
   const isBesos = variant === "besos";
+  const pathname = usePathname();
   const searchRef = useRef<HTMLInputElement>(null);
   const onToggleDrawer = isBesos ? toggleEqDrawer : toggleDrawer;
-  const onGoDept = isBesos ? goEqDept : goDept;
+  const hrefFor = (key: string) => topnavHref(key, pathname);
 
   return (
     <ShopChromePortal>
@@ -131,6 +146,7 @@ export default function ShopEqustoChrome({
               </button>
             </div>
             <div className="hdr-right">
+              <LangSwitcherSlot />
               <div className="theme-wrap">
                 <button
                   type="button"
@@ -173,15 +189,20 @@ export default function ShopEqustoChrome({
 
         <nav className="topnav" aria-label="Departmanlar" data-i18n-attr="aria-label:nav.departments_aria">
           <div className="pg-inner topnav-inner">
-            <div className="topnav-item topnav-all" onClick={onToggleDrawer} data-i18n="common.all_categories_lower">
+            <button
+              type="button"
+              className="topnav-item topnav-all"
+              onClick={onToggleDrawer}
+              data-i18n="common.all_categories_lower"
+            >
               ☰ Tüm kategoriler
-            </div>
+            </button>
             <span className="topnav-sep" aria-hidden="true">
               |
             </span>
-            <div className="topnav-item topnav-pfos" onClick={() => onGoDept("pfos")} data-i18n="nav.pfos">
+            <a className="topnav-item topnav-pfos" href={hrefFor("pfos")} data-i18n="nav.pfos">
               Proje Fabrikası
-            </div>
+            </a>
             <span className="topnav-sep" aria-hidden="true">
               |
             </span>
@@ -192,26 +213,29 @@ export default function ShopEqustoChrome({
                     |
                   </span>
                 ) : null}
-                <div
+                <a
                   className={`topnav-item${activeDept === d.key ? " active" : ""}`}
-                  onClick={activeDept === d.key ? undefined : () => onGoDept(d.key)}
+                  href={hrefFor(d.key)}
+                  aria-current={activeDept === d.key ? "page" : undefined}
+                  onClick={(e) => preventActiveNavClick(e, activeDept === d.key)}
                   data-i18n={d.labelKey}
                 >
                   {d.fallback}
-                </div>
+                </a>
               </Fragment>
             ))}
             <span className="topnav-sep" aria-hidden="true">
               |
             </span>
-            <div
+            <a
               className={`topnav-item topnav-besos${isBesos ? " active" : ""}`}
-              onClick={() => onGoDept("besos")}
+              href={hrefFor("besos")}
               aria-current={isBesos ? "page" : undefined}
+              onClick={(e) => preventActiveNavClick(e, isBesos)}
               data-i18n="nav.bar_design"
             >
               Bar Design
-            </div>
+            </a>
           </div>
         </nav>
 

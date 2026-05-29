@@ -420,7 +420,7 @@
     if (x.oem_brand) {
       fb = String(x.oem_brand).trim();
     } else if (window.EqDeptCmFacets && window.EqDeptCmFacets.resolveFacetBrand) {
-      fb = window.EqDeptCmFacets.resolveFacetBrand(b, n);
+      fb = window.EqDeptCmFacets.resolveFacetBrand(b, n, x.sku || x.urun_kodu || x.model);
     }
     var row = x;
     if (

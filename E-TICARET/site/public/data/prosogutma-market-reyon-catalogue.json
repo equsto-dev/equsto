@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-27T17:13:35.989Z",
+  "generated": "2026-05-29T00:02:53.578Z",
   "brand": "Proso Profesyonel Soğutma",
   "subs": [
     {
@@ -58,5 +58,6 @@
       "href": "/shop/market-reyonlari?tip=proso-sise-sogutucu"
     }
   ],
-  "productCount": 73
+  "productCount": 599,
+  "parentProducts": 73
 }

@@ -22,6 +22,7 @@ export default function AramaPage() {
       <ShopBodyClass className="eq-shop eq-arama-page" />
       <ShopEqustoChrome activeDept={null} />
       <ShopSearchMain />
+      <footer className="footer" id="eq-shop-footer" />
       <ShopSearchScripts />
     </>
   );

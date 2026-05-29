@@ -11,7 +11,7 @@
     "input,textarea,select,option,[contenteditable='true'],iframe,.eq-yt,.eq-yt iframe";
 
   var HORIZ_ZONE =
-    ".eq-rail,.eq-mbg-track,.eq-product-family-scroll--carousel," +
+    ".eq-rail,.eq-mbg-track,.eq-product-family-scroll,.eq-product-family-scroll--carousel," +
     "nav.topnav,.topnav-inner,.topnav,.eq-drawer-scroll,.eq-mcat-scroll," +
     "#bd-vitrum-jump,.bd-hdr-nav";
 
@@ -39,6 +39,12 @@
     var href = (a.getAttribute("href") || "").trim();
     if (!href || href === "#") return null;
     return a;
+  }
+
+  /** Üst departman şeridi — tarayıcı orta tık = yeni sekme (özel sürükle-kaydır yok). */
+  function isTopnavLink(el) {
+    var a = linkFrom(el);
+    return !!(a && a.closest && a.closest("nav.topnav,.topnav"));
   }
 
   function openLinkNewTab(a) {
@@ -83,6 +89,7 @@
     function (e) {
       if (e.button !== 1) return;
       if (skipped(e.target)) return;
+      if (isTopnavLink(e.target)) return;
       var a = linkFrom(e.target);
       if (!a) return;
       e.preventDefault();
@@ -127,6 +134,7 @@
     function (e) {
       if (e.button !== 1) return;
       if (skipped(e.target)) return;
+      if (isTopnavLink(e.target)) return;
       if (!linkFrom(e.target)) return;
       e.preventDefault();
       e.stopPropagation();

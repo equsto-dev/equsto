@@ -83,3 +83,29 @@ export function assertGeoEnBody(key, html) {
   }
   return html;
 }
+
+/** Multi-paragraph EN bodies — preserve <p> structure (blog hub, concept guides). */
+export function normalizeGeoEnBodyStructured(html) {
+  const raw = String(html || "").trim();
+  const paras = [...raw.matchAll(/<p>([\s\S]*?)<\/p>/gi)].map((m) =>
+    dedupeClosing(plainText(m[1])).replace(/\s+/g, " ").trim()
+  );
+  if (!paras.length) {
+    return normalizeGeoEnBody(html);
+  }
+  return paras.map((t) => `<p>${t}</p>`).join("");
+}
+
+export function assertGeoEnBodyStructured(key, html, opts = {}) {
+  const minParas = opts.minParas ?? 1;
+  const minChars = opts.minChars ?? 150;
+  const paras = [...String(html || "").matchAll(/<p>([\s\S]*?)<\/p>/gi)];
+  if (paras.length < minParas) {
+    throw new Error(`${key}: ${paras.length} paragraphs (required ≥${minParas})`);
+  }
+  const n = plainText(html).length;
+  if (n < minChars) {
+    throw new Error(`${key}: ${n} chars (required ≥${minChars})`);
+  }
+  return html;
+}

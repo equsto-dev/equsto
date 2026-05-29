@@ -151,16 +151,20 @@
     return n;
   }
 
-  function resolveFacetBrand(brand, name) {
+  function resolveFacetBrand(brand, name, sku) {
     var raw = String(brand || '').trim();
     if (!raw) return '';
     var n = String(name || '').trim();
-    if (OEM_RESELLER.test(lc(raw)) && n) {
+    var kod = String(sku || '').trim();
+    if (OEM_RESELLER.test(lc(raw)) && (n || kod)) {
+      if (/^9890\.|^5RRX\./i.test(kod)) return 'Rational';
       var scan = stripOztiLeadName(n);
       var namesToTry = scan === n ? [n] : [scan, n];
       var prefixes = oemNamePrefixes();
       for (var ni = 0; ni < namesToTry.length; ni++) {
         var nl = lc(namesToTry[ni]);
+        var nu = namesToTry[ni].toLocaleUpperCase('tr');
+        if (/\bRATIONAL\b/.test(nu)) return 'Rational';
         for (var pi = 0; pi < prefixes.length; pi++) {
           var p = prefixes[pi];
           if (nl.indexOf(lc(p)) === 0) return normalizeOemLabel(p);
@@ -174,7 +178,8 @@
     if (!u) return '';
     var fb = String((u.fb || '')).trim();
     if (fb) return facetBrandKey(fb);
-    return facetBrandKey(resolveFacetBrand(u.b, u.n));
+    var sku = u.raw && (u.raw.sku || u.raw.urun_kodu || u.raw.model);
+    return facetBrandKey(resolveFacetBrand(u.b, u.n, sku));
   }
 
   function matchEnergy(u, energyId) {

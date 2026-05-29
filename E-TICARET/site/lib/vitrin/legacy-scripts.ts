@@ -2,6 +2,21 @@ import { SHOP_ASSET_V } from "@/lib/shop/assets";
 
 const v = SHOP_ASSET_V;
 
+/** İlk boya öncesi hero ızgarası — body sınıfları / theme.css gelmeden PFOS görseli tam genişlikte görünmesin */
+export const HOME_CRITICAL_CSS = `
+:root{--eq-home-hero-card-h:380px;--eq-home-hero-card-h-1024:320px;--eq-home-hero-card-h-768:260px}
+body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads{display:grid;grid-template-columns:repeat(3,1fr);overflow:hidden}
+body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card{position:relative;height:var(--eq-home-hero-card-h);min-height:var(--eq-home-hero-card-h);max-height:var(--eq-home-hero-card-h);overflow:hidden;box-sizing:border-box}
+body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card-visual{position:absolute;inset:0}
+body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card-img--pfos-cover,
+body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card-img--bar-combo,
+body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card-img--yer-bufe{position:absolute;inset:0;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:cover}
+@media(max-width:1024px){body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card{height:var(--eq-home-hero-card-h-1024);min-height:var(--eq-home-hero-card-h-1024);max-height:var(--eq-home-hero-card-h-1024)}}
+@media(max-width:768px){body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads{grid-template-columns:1fr}body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card{height:var(--eq-home-hero-card-h-768);min-height:var(--eq-home-hero-card-h-768);max-height:var(--eq-home-hero-card-h-768)}}
+`.trim();
+
+export const HOME_BODY_CLASS = "eq-shop eq-home eq-home-mutbex eq-home-decor";
+
 export const HOME_EXTRA_STYLES = [
   `/eq-home-mutbex.css?v=${v}`,
   `/eq-home-decor.css?v=${v}`,
