@@ -89,7 +89,7 @@
   }
 
   function ensureGeoScripts() {
-    loadScriptOnce("/eq-footer.js?v=20260529footer-word3");
+    loadScriptOnce("/eq-footer.js?v=20260529footer-dot");
     loadScriptOnce("/contact.js?v=20260522wa", true);
   }
 
