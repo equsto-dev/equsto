@@ -216,6 +216,23 @@ export default function BesosEqustoChrome() {
           ))}
         </div>
       </nav>
+      <nav className="bd-besos-subnav" aria-label="Bar Design Studio" data-i18n-attr="aria-label:besos.hdr_studio">
+        <a href="/besos" className="is-active" data-i18n="besos.hdr_nav_vitrin">
+          Vitrin
+        </a>
+        <a href="/besos#bd-stations" data-i18n="besos.hdr_nav_modules">
+          Modüller
+        </a>
+        <a href="/besos#bd-vitrum-projects" data-i18n="besos.hdr_nav_refs">
+          Projeler
+        </a>
+        <a href="/besos/imt300">
+          IMT300
+        </a>
+        <a href="/besos#bd-foot" data-i18n="besos.hdr_nav_quote">
+          Teklif iste
+        </a>
+      </nav>
     </div>
     </ShopChromePortal>
   );

@@ -527,6 +527,7 @@ body.eq-mid-drag * {
   z-index: 501;
   width: 100%;
   flex-shrink: 0;
+  overflow: visible;
 }
 
 body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) #eq-shop-chrome-root,
@@ -639,6 +640,7 @@ nav.topnav::-webkit-scrollbar,
   border-radius: 0;
   box-shadow: none !important;
   transition: background 0.15s ease, color 0.15s ease;
+  flex-shrink: 0;
 }
 .topnav-item.topnav-besos:hover,
 .topnav-item.topnav-pfos:hover {
@@ -5214,7 +5216,20 @@ html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .e
   }
 
   body.bd-page.besos nav.topnav {
-    display: none !important;
+    display: flex !important;
+    max-height: 44px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  body.bd-page.besos {
+    --bes-chrome-h: calc(56px + 44px);
+  }
+
+  body.bd-page.besos .bd-besos-subnav {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   body.bd-page.besos .bd-vitrum-jump {
@@ -5625,15 +5640,19 @@ html.eq-vitrin-white-lock body.bd-page {
  * Sıra: ortak alt şerit (nav.js) → vitrin/katalog → PFOS → Bar Design
  */
 @media (max-width: 768px) {
-  /* Mobil: üst departman şeridi (Proje Fabrikası, Pişirme, Bar Design…) — Menü çekmecesinden */
+  /* Mobil: departman şeridi kaydırılabilir — Bar Design / PFOS görünür kalsın */
   body.eq-shop:not(.admin-app):not(.bd-page) nav.topnav,
   body.eq-shop:not(.admin-app):not(.bd-page) .topnav {
-    display: none !important;
+    display: flex !important;
+    max-height: 44px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
   }
   body.eq-shop:not(.admin-app):not(.bd-page) {
-    --eq-filter-col-sticky-top: 52px;
+    --eq-filter-col-sticky-top: calc(52px + 44px);
     --eq-filter-col-sticky-max-h: calc(100dvh - 58px);
-    --eq-drawer-chrome-top: 52px;
+    --eq-drawer-chrome-top: calc(52px + 44px);
   }
 
   body.eq-shop:not(.admin-app) #eq-bottom-tabbar.eq-bottom-tabbar {

@@ -14,6 +14,13 @@ export function mountEqShopChromeLayout(): () => void {
     document.documentElement.style.setProperty("--eq-shop-chrome-h", `${h}px`);
     document.documentElement.style.setProperty("--eq-filter-col-sticky-top", `${h}px`);
     document.documentElement.style.setProperty("--eq-drawer-chrome-top", `${h}px`);
+
+    const besosTab = document.querySelector<HTMLElement>(".topnav-item.topnav-besos");
+    const topnav = besosTab?.closest<HTMLElement>("nav.topnav");
+    if (besosTab && topnav && topnav.scrollWidth > topnav.clientWidth + 2) {
+      const left = Math.max(0, besosTab.offsetLeft - 12);
+      if (Math.abs(topnav.scrollLeft - left) > 4) topnav.scrollLeft = left;
+    }
   };
 
   sync();
