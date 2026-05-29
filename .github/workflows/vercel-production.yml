@@ -1,11 +1,11 @@
 # İsteğe bağlı: GitHub Actions üzerinden Vercel Production deploy
 #
 # main push'ta otomatik deploy genelde Vercel → Project → Git entegrasyonu ile yapılır.
-# Bu workflow yalnızca aşağıdaki secret'lar tanımlıysa çalışır (yoksa skip → kırmızı X olmaz):
+# Bu workflow yalnızca aşağıdaki secret'lar tanımlıysa deploy eder; yoksa bilgi mesajı verir:
 #   VERCEL_TOKEN, VERCEL_ORG_ID, VERCEL_PROJECT_ID
 #
 # Token: https://vercel.com/account/tokens
-# ORG/PROJECT ID: `cd EQUSTO-WORK/E-TICARET/site && npx vercel link` sonrası .vercel/project.json
+# ORG/PROJECT ID: `cd E-TICARET/site && npx vercel link` sonrası .vercel/project.json
 
 name: Vercel Production
 
@@ -27,42 +27,50 @@ defaults:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    if: >-
-      ${{ secrets.VERCEL_TOKEN != '' &&
-          secrets.VERCEL_ORG_ID != '' &&
-          secrets.VERCEL_PROJECT_ID != '' }}
     steps:
+      - name: Vercel secret kontrolu
+        id: vercel
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        run: |
+          if [ -z "$VERCEL_TOKEN" ] || [ -z "$VERCEL_ORG_ID" ] || [ -z "$VERCEL_PROJECT_ID" ]; then
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "VERCEL_TOKEN / VERCEL_ORG_ID / VERCEL_PROJECT_ID tanımlı değil."
+            echo "Canlı deploy: Vercel Git → main (Root Directory: E-TICARET/site)."
+            echo "GHA ile deploy için: GitHub repo → Settings → Secrets and variables → Actions"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - uses: actions/checkout@v4
+        if: steps.vercel.outputs.ready == 'true'
+
       - uses: actions/setup-node@v4
+        if: steps.vercel.outputs.ready == 'true'
         with:
           node-version: "20"
           cache: npm
           cache-dependency-path: E-TICARET/site/package-lock.json
+
       - name: Pull Vercel env
+        if: steps.vercel.outputs.ready == 'true'
         run: npx vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
         env:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
       - name: Build
+        if: steps.vercel.outputs.ready == 'true'
         run: npx vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
         env:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
       - name: Deploy prebuilt
+        if: steps.vercel.outputs.ready == 'true'
         run: npx vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
         env:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-
-  secrets-hint:
-    runs-on: ubuntu-latest
-    if: >-
-      ${{ secrets.VERCEL_TOKEN == '' ||
-          secrets.VERCEL_ORG_ID == '' ||
-          secrets.VERCEL_PROJECT_ID == '' }}
-    steps:
-      - name: Vercel GHA deploy atlandı
-        run: |
-          echo "VERCEL_TOKEN / VERCEL_ORG_ID / VERCEL_PROJECT_ID tanımlı değil."
-          echo "Canlı deploy: Vercel Git → main (Root Directory bos veya equsto-v2 / E-TICARET/site — vercel-build otomatik bulur)."
-          echo "GHA ile deploy için: GitHub repo → Settings → Secrets and variables → Actions"
