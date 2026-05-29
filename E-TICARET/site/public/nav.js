@@ -1560,6 +1560,7 @@
   }
 
   var EQ_FOOTER_ASSET_V = "20260530footer-kilit";
+  var EQ_TINT_ASSET_V = "20260530prod-card-tint-v12";
 
   function loadScriptSameDir(filename, flagName) {
     try {
@@ -1573,6 +1574,9 @@
       var url = base ? base + filename : "";
       if (filename === "eq-footer.js" && url) {
         url += (url.indexOf("?") >= 0 ? "&" : "?") + "v=" + EQ_FOOTER_ASSET_V;
+      }
+      if (filename === "eq-product-card-tint.js" && url) {
+        url += (url.indexOf("?") >= 0 ? "&" : "?") + "v=" + EQ_TINT_ASSET_V;
       }
       if (!url) {
         try {
