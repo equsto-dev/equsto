@@ -1,12 +1,12 @@
 /**
- * geo-bodies-words.json → eq-geo-landing.js PROFILES body (hedef: 600–700 sözcük)
+ * geo-bodies-350w.json → eq-geo-landing.js PROFILES body (hedef: 300–350 sözcük)
  */
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const bodiesPath = path.join(root, "scripts/geo-bodies-words.json");
+const bodiesPath = path.join(root, "scripts/geo-bodies-350w.json");
 const jsPath = path.join(root, "public/eq-geo-landing.js");
 const bodies = JSON.parse(fs.readFileSync(bodiesPath, "utf8"));
 
@@ -20,15 +20,10 @@ function wordCount(html) {
 }
 
 let fail = 0;
-const MANAGED = new Set(["blogHub", "blogHubEn"]);
 for (const [key, html] of Object.entries(bodies)) {
-  if (MANAGED.has(key)) {
-    console.log(`[skip] ${key}: fix-bloghub-i18n.mjs ile yönetilir`);
-    continue;
-  }
   const w = wordCount(html);
-  if (w < 600 || w > 700) {
-    console.warn(`[warn] ${key}: ${w} sözcük (hedef 600-700)`);
+  if (w < 300 || w > 350) {
+    console.warn(`[warn] ${key}: ${w} sözcük (hedef 300-350)`);
     fail++;
   } else {
     console.log(`[ok] ${key}: ${w} sözcük`);
@@ -38,13 +33,14 @@ for (const [key, html] of Object.entries(bodies)) {
 let js = fs.readFileSync(jsPath, "utf8");
 
 for (const [profile, body] of Object.entries(bodies)) {
-  if (MANAGED.has(profile)) continue;
   const escaped = body.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
-  const re = new RegExp(
+  const patterns = [
     `(${profile}:\\s*\\{[\\s\\S]*?body:\\s*\\n?\\s*)"(?:[^"\\\\]|\\\\.)*"(\\s*,\\s*faq:)`,
-    "m"
-  );
-  if (!re.test(js)) {
+    `(${profile}:\\s*\\{[\\s\\S]*?body:\\s*\\n?\\s*)"(?:[^"\\\\]|\\\\.)*"(\\s*,\\s*lang:)`,
+    `(${profile}:\\s*\\{[\\s\\S]*?body:\\s*\\n?\\s*)"(?:[^"\\\\]|\\\\.)*"(\\s*\\})`,
+  ];
+  const re = patterns.map((p) => new RegExp(p, "m")).find((r) => r.test(js));
+  if (!re) {
     console.error(`[fail] profile not patched: ${profile}`);
     process.exit(1);
   }

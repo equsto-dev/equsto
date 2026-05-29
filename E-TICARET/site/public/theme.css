@@ -4565,21 +4565,11 @@ body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-brand > p {
 }
 footer.eq-mfoot .eq-mfoot-company,
 footer.eq-mfoot .eq-mfoot-company .eq-mfoot-co-part,
-footer.eq-mfoot .eq-mfoot-company .eq-mfoot-co-ch,
 .eq-mfoot-company,
-.eq-mfoot-company .eq-mfoot-co-part,
-.eq-mfoot-company .eq-mfoot-co-ch {
+.eq-mfoot-company .eq-mfoot-co-part {
   font-weight: 300 !important;
   font-style: normal;
   font-synthesis: none;
-}
-footer.eq-mfoot .eq-mfoot-company .eq-mfoot-co-ch,
-.eq-mfoot-company .eq-mfoot-co-ch {
-  display: inline-block;
-}
-footer.eq-mfoot .eq-mfoot-company .eq-mfoot-co-ch + .eq-mfoot-co-ch,
-.eq-mfoot-company .eq-mfoot-co-ch + .eq-mfoot-co-ch {
-  margin-left: 1ch;
 }
 footer.eq-mfoot .eq-mfoot-company .eq-mfoot-co-part,
 .eq-mfoot-company .eq-mfoot-co-part {
