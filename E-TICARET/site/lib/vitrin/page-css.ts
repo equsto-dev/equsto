@@ -42,6 +42,8 @@ export const HAKKIMIZDA_PAGE_CSS = `
 .hk-main h1{font-size:clamp(24px,4vw,32px);font-weight:700;margin:0 0 12px;}
 .hk-lead{font-size:15px;color:var(--eq-text-secondary);margin:0 0 20px;}
 .hk-box{margin:16px 0;padding:14px 16px;border:1px solid var(--eq-border);border-radius:8px;background:var(--eq-surface-2);}
+.hk-summary{margin:0;padding-left:1.2em;}
+.hk-summary li{margin-bottom:6px;font-size:14px;line-height:1.55;}
 .hk-main h2{font-size:18px;font-weight:700;margin:24px 0 10px;}
 .hk-main h3{font-size:15px;font-weight:700;margin:16px 0 8px;}
 .hk-main p,.hk-main li{font-size:14px;line-height:1.7;color:var(--eq-text-secondary);}
