@@ -120,6 +120,39 @@ window.searchFilter = window.searchFilter || function () {};
         .trim();
     }
 
+    function parsePriceTlNumber(raw, item) {
+      if (item && Number(item.fiyat_tl) > 0) return Math.round(Number(item.fiyat_tl) * 100) / 100;
+      var s = String(raw || "").split("\n")[0] || "";
+      if (!s || /€/.test(s)) return 0;
+      var cleaned = s
+        .replace(/₺/g, "")
+        .replace(/\+?\s*KDV.*/gi, "")
+        .replace(/KDV\s*dahil/gi, "")
+        .trim()
+        .replace(/\./g, "")
+        .replace(",", ".");
+      var n3 = parseFloat(cleaned);
+      return Number.isFinite(n3) && n3 > 0 ? Math.round(n3 * 100) / 100 : 0;
+    }
+
+    function buyboxPriceParts(x) {
+      var quoteOnly = !!(x && x.fiyat_bekleniyor) || /teklif\s+için/i.test(String((x && x.price) || ""));
+      if (quoteOnly) return { quoteOnly: true };
+      var n = parsePriceTlNumber(x && x.price, x);
+      if (!(n > 0) && window.EqustoKurLive && typeof window.EqustoKurLive.computeRowPrices === "function") {
+        var rate = window.EqustoKurLive.getRate && window.EqustoKurLive.getRate();
+        if (rate) {
+          var px = window.EqustoKurLive.computeRowPrices(x, rate);
+          if (px && px.fiyat_tl > 0) n = Math.round(Number(px.fiyat_tl) * 100) / 100;
+        }
+      }
+      if (!(n > 0)) return { empty: true };
+      var formatted = n.toLocaleString("tr-TR", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      var ix = formatted.lastIndexOf(",");
+      if (ix < 0) return { int: formatted, frac: "" };
+      return { int: formatted.slice(0, ix), frac: formatted.slice(ix + 1) };
+    }
+
     function oztiWebRelFromSku(sku) {
       var k = String(sku || "")
         .replace(/\s+/g, "")
@@ -1380,30 +1413,15 @@ window.searchFilter = window.searchFilter || function () {};
     }
 
     function renderEpdpBuybox(x, cartU) {
-      var priceTxt = extractCartPrice(x.price, x);
-      if (!priceTxt && window.EqustoKurLive && typeof window.EqustoKurLive.computeRowPrices === "function") {
-        var rate = window.EqustoKurLive.getRate && window.EqustoKurLive.getRate();
-        if (rate) {
-          var px = window.EqustoKurLive.computeRowPrices(x, rate);
-          if (px && px.fiyat_tl > 0) priceTxt = formatTlBuybox(px.fiyat_tl);
-        }
-      }
-      var quoteOnly = !!(x.fiyat_bekleniyor) || /teklif\s+için/i.test(String(x.price || ""));
-      var priceInt = priceTxt;
-      var priceFrac = "";
-      var fracMatch = String(priceTxt || "").match(/^(.*?)(?:,(\d+))?$/);
-      if (fracMatch) {
-        priceInt = fracMatch[1] || priceTxt;
-        priceFrac = fracMatch[2] || "";
-      }
-      var priceHTML = quoteOnly
+      var parts = buyboxPriceParts(x);
+      var priceHTML = parts.quoteOnly
         ? '<span class="eq-buybox-int" style="font-size:1.05rem;">Teklif için iletişim</span>'
-        : priceTxt
-          ? '<span class="eq-buybox-currency">₺</span><span class="eq-buybox-int">' +
-            esc(priceInt) +
+        : parts.empty
+          ? '<span class="eq-buybox-int">—</span>'
+          : '<span class="eq-buybox-currency">₺</span><span class="eq-buybox-int">' +
+            esc(parts.int) +
             "</span>" +
-            (priceFrac ? '<span class="eq-buybox-frac">' + esc(priceFrac) + "</span>" : "")
-          : '<span class="eq-buybox-int">—</span>';
+            (parts.frac ? '<span class="eq-buybox-frac">,' + esc(parts.frac) + "</span>" : "");
       var cartBtn =
         window.EqustoCart && EqustoCart.cartAddButtonAttrs
           ? "<button " + EqustoCart.cartAddButtonAttrs(cartU) + ">" + esc(__pdpT("pdp.add_to_cart", "Sepete ekle")) + "</button>"
@@ -1414,7 +1432,7 @@ window.searchFilter = window.searchFilter || function () {};
         '<div class="eq-buybox-price">' +
         priceHTML +
         "</div>" +
-        (quoteOnly
+        (parts.quoteOnly
           ? '<div class="eq-buybox-kdv">' + esc(__pdpT("pdp.price_preparing", "Fiyat listesi hazırlanıyor — sepete ekleyip teklif isteyebilirsiniz.")) + '</div>'
           : '<div class="eq-buybox-kdv">' + esc(__pdpT("pdp.vat_included", "KDV dahil fiyat")) + '</div>') +
         '<div class="eq-product-actions">' +

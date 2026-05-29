@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { SHOP_ASSET_V } from "@/lib/shop/assets";
 import ShopBodyClass from "@/components/shop/ShopBodyClass";
 import ShopEqustoChrome from "@/components/shop/ShopEqustoChrome";
 import ShopProductMain from "@/components/shop/ShopProductMain";
@@ -39,6 +40,8 @@ export default async function ShopProductPage({
 
   return (
     <>
+      {/* eslint-disable-next-line @next/next/no-css-tags */}
+      <link rel="stylesheet" href={`/eq-product-page.css?v=${SHOP_ASSET_V}`} precedence="high" />
       <ShopStyles variant="product" />
       <ShopBodyClass className="eq-shop" />
       <ShopEqustoChrome activeDept={null} />
