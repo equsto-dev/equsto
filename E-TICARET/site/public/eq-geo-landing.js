@@ -6,14 +6,11 @@
 
   var ORIGIN = "https://equsto.com";
   var DATA_URL = "/api/geo";
-  var DATA_FALLBACK = "/data/geo-landings.json?v=20260529geo-no-table";
-  var DATA_EN_FALLBACK = "/data/geo-landings-en.json?v=20260529geo-no-table";
+  var DATA_FALLBACK = "/data/geo-landings.json?v=20260530geo-no-table2";
+  var DATA_EN_FALLBACK = "/data/geo-landings-en.json?v=20260530geo-no-table2";
 
   var UI = {
     tr: {
-      tableH2: "Vitrinden örnek ekipman tablosu (8 kalem)",
-      tableThLine: "Hat",
-      tableThSku: "Örnek SKU",
       faqH2: "Sık sorulan sorular",
       faqAria: "Sık sorulan sorular",
       relatedH2: "İlgili rehberler",
@@ -27,9 +24,6 @@
       loadErr: "İçerik yüklenemedi.",
     },
     en: {
-      tableH2: "Sample equipment from the catalogue (8 items)",
-      tableThLine: "Line",
-      tableThSku: "Sample SKU",
       faqH2: "Frequently asked questions",
       faqAria: "Frequently asked questions",
       relatedH2: "Related guides",
@@ -98,78 +92,6 @@
     loadScriptOnce("/eq-footer.js?v=20260531sss5");
     loadScriptOnce("/contact.js?v=20260522wa", true);
   }
-
-  var EQUIP = [
-    {
-      dept: "pisirme",
-      slug: "csa-csa-4-lu-gazli-kuzine-ce-belgeli-80x80x85-cm-krcs-kzg-880-ce",
-      cat: "Pişirme",
-      catEn: "Cooking",
-      label: "Gazlı dört gözlü kuzine · sıcak hat omurgası",
-      labelEn: "Four-burner gas range · hot-line backbone",
-    },
-    {
-      dept: "sogutma",
-      slug:
-        "oztiryakiler-endustriyel-mutfak-oztiryakiler-tag-270-nmv-cift-kapili-tezgah-tip-buzdolabi-79e4-27nmv-00",
-      cat: "Soğutma",
-      catEn: "Refrigeration",
-      label: "Çift kapılı tezgah tipi soğuk hat",
-      labelEn: "Double-door counter refrigerator · cold line",
-    },
-    {
-      dept: "sogutma",
-      slug:
-        "oztiryakiler-endustriyel-mutfak-oztiryakiler-gn-1200-lmv-cift-kapili-dik-tip-derin-dondurucu-k-tip-79k4-12lmv-00",
-      cat: "Depolama",
-      catEn: "Storage",
-      label: "Yüksek hacimli dik tip derin dondurucu",
-      labelEn: "High-capacity upright deep freezer",
-    },
-    {
-      dept: "yikama",
-      slug:
-        "oztiryakiler-endustriyel-mutfak-oztiryakiler-bulasik-makinesi-dokunmatik-ekranli-tahliye-pompali-set-alti-oby500touch",
-      cat: "Yıkama",
-      catEn: "Warewashing",
-      label: "Tezgah altı yüksek kapasiteli bulaşık hattı",
-      labelEn: "Under-counter high-capacity warewashing line",
-    },
-    {
-      dept: "kahve",
-      slug:
-        "nuova-simonelli-nuova-simonelli-appia-life-2-gruplu-tam-otomatik-espresso-kahve-makinesi-yuksek-bardak",
-      cat: "Kahve",
-      catEn: "Coffee",
-      label: "Çift gruplu espresso merkezi",
-      labelEn: "Two-group espresso centre",
-    },
-    {
-      dept: "hazirlik",
-      slug: "bosfor-bosfor-10-kg-hamur-yogurma-makinesi-uhm-10m",
-      cat: "Hazırlık",
-      catEn: "Prep",
-      label: "Hamur / karışım hazırlığı",
-      labelEn: "Dough and mixer prep",
-    },
-    {
-      dept: "icecek",
-      slug: "atese-atese-2-demlikli-cay-kazani-titanium-compact-dijital-gazli-elektrikli-tcsge02",
-      cat: "İçecek",
-      catEn: "Beverage",
-      label: "Sıcak içecek ve demlik hattı",
-      labelEn: "Hot beverage and tea brewer line",
-    },
-    {
-      dept: "pisirme",
-      slug:
-        "ari-sco-arisco-butun-pleyt-gazli-ocak-alti-acik-dolapli-ce-belgeli-gr921p-range-gas",
-      cat: "Servis",
-      catEn: "Service",
-      label: "Açık pleyt + alt dolap kombinasyonu",
-      labelEn: "Open burner range with under storage",
-    },
-  ];
 
   var PROFILES = {
     steakhouse: {
@@ -666,35 +588,6 @@
     el.setAttribute("content", content);
   }
 
-  function equipmentTableHtml(lang) {
-    var u = uiStrings(lang);
-    var en = lang === "en";
-    var rows = EQUIP.map(function (row) {
-      var href = navHref("/shop/" + row.dept + "/" + encodeURIComponent(row.slug));
-      return (
-        "<tr><td>" +
-        esc(en ? row.catEn || row.cat : row.cat) +
-        '</td><td><a href="' +
-        esc(href) +
-        '">' +
-        esc(en ? row.labelEn || row.label : row.label) +
-        "</a></td></tr>"
-      );
-    }).join("");
-    return (
-      "<h2>" +
-      esc(u.tableH2) +
-      "</h2>" +
-      '<table class="eq-geo-table"><thead><tr><th>' +
-      esc(u.tableThLine) +
-      "</th><th>" +
-      esc(u.tableThSku) +
-      '</th></tr></thead><tbody>' +
-      rows +
-      "</tbody></table>"
-    );
-  }
-
   function faqHtml() {
     return "";
   }
@@ -726,19 +619,6 @@
         isPartOf: { "@type": "WebSite", name: "Equsto", url: ORIGIN + "/" },
       },
     ];
-    if (!page.skipTable) {
-      graph.push({
-        "@type": "ItemList",
-        itemListElement: EQUIP.map(function (row, i) {
-          return {
-            "@type": "ListItem",
-            position: i + 1,
-            url: ORIGIN + "/shop/" + row.dept + "/" + row.slug,
-            name: row.cat + ": " + row.label,
-          };
-        }),
-      });
-    }
     if (sections && sections.length) {
       var pos = 0;
       var listItems = [];
@@ -790,7 +670,6 @@
     body = body.replace(/\{budget\}/g, budget || "—");
     var faq = page.faq || prof.faq || [];
     var related = page.related || prof.related || [];
-    var skipTable = true;
 
     document.title = page.title || document.title;
     if (page.description) setMeta("description", page.description);
@@ -848,7 +727,6 @@
       body +
       "</div>" +
       linksHtml +
-      (skipTable ? "" : equipmentTableHtml(lang)) +
       relatedHtml(related, lang) +
       faqHtml() +
       '<div class="eq-geo-actions">' +
@@ -870,7 +748,7 @@
       "</article>";
 
     injectSchema(
-      { title: page.title, description: page.description, skipTable: skipTable },
+      { title: page.title, description: page.description },
       key,
       faq,
       lang,
