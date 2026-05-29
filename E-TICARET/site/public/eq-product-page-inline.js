@@ -1410,6 +1410,40 @@ window.searchFilter = window.searchFilter || function () {};
       return "";
     }
 
+    function marketReyonPdfLabel(x) {
+      if (x.caglayanKatalogAdi) return String(x.caglayanKatalogAdi);
+      if (x.prosoKatalogAdi) return String(x.prosoKatalogAdi);
+      var rel = x.caglayanKatalogPdf || x.prosoKatalogPdf || "";
+      return imgFileName(rel) || __pdpT("pdp.datasheet", "Veri sayfası (PDF)");
+    }
+
+    function pdpPdfEmbedBlock(pdfUrl, label) {
+      if (!pdfUrl || !/\.pdf/i.test(pdfUrl)) return "";
+      return (
+        '<div class="eq-pdp-pdf-embed-wrap">' +
+        '<iframe class="eq-pdp-pdf-embed" src="' +
+        esc(pdfUrl) +
+        '#view=FitH" title="' +
+        esc(label) +
+        '" loading="lazy"></iframe>' +
+        '<p class="eq-pdp-pdf-dl"><a href="' +
+        esc(pdfUrl) +
+        '" target="_blank" rel="noopener">' +
+        esc(label) +
+        " — " +
+        esc(__pdpT("pdp.open_pdf_new_tab", "Yeni sekmede aç")) +
+        "</a></p></div>"
+      );
+    }
+
+    function mfgHostLabel(url) {
+      try {
+        return new URL(String(url)).hostname.replace(/^www\./i, "");
+      } catch (_) {
+        return __pdpT("pdp.mfg_source", "Üretici");
+      }
+    }
+
     function pdpSeriesEyebrow(x) {
       if (isCaglayanRefrigeration(x)) return caglayanSeriesEyebrow(x);
       if (x && String(x.kaynak || "") === "besos-vitrum") {
@@ -1567,11 +1601,9 @@ window.searchFilter = window.searchFilter || function () {};
         html +=
           '<details open><summary>' +
           esc(__pdpT("pdp.datasheet", "Veri sayfası")) +
-          '</summary><div class="eq-caglayan-acc__body"><a href="' +
-          esc(pdf) +
-          '" target="_blank" rel="noopener">' +
-          esc(__pdpT("pdp.product_catalog_pdf", "Ürün kataloğu (PDF)")) +
-          "</a></div></details>";
+          '</summary><div class="eq-caglayan-acc__body">' +
+          pdpPdfEmbedBlock(pdf, marketReyonPdfLabel(x)) +
+          "</div></details>";
       }
       html +=
         "<details" +
@@ -1770,17 +1802,16 @@ window.searchFilter = window.searchFilter || function () {};
 
     function renderCaglayanDocsCol(x) {
       var pdf = caglayanPdfHref(x);
-      var pdfLabel = x.caglayanKatalogAdi || "Veri sayfası (PDF)";
+      var pdfLabel = marketReyonPdfLabel(x);
       var src = x.linkKaynak || "";
       var html = '<div class="eq-caglayan-panel"><h2>Dökümanlar</h2><div class="eq-caglayan-acc">';
       if (pdf) {
         html +=
-          "<details open><summary>Veri sayfası</summary><div class=\"eq-caglayan-acc__body\">" +
-          '<a href="' +
-          esc(pdf) +
-          '" target="_blank" rel="noopener">' +
-          esc(pdfLabel) +
-          "</a> — ürün kataloğu (PDF).</div></details>";
+          "<details open><summary>" +
+          esc(__pdpT("pdp.datasheet", "Veri sayfası")) +
+          '</summary><div class="eq-caglayan-acc__body">' +
+          pdpPdfEmbedBlock(pdf, pdfLabel) +
+          "</div></details>";
       }
       html +=
         "<details" +
@@ -1797,7 +1828,9 @@ window.searchFilter = window.searchFilter || function () {};
           "<details><summary>Üretici sayfası</summary><div class=\"eq-caglayan-acc__body\">" +
           '<a href="' +
           esc(src) +
-          '" target="_blank" rel="noopener">caglayanrefrigeration.com</a></div></details>';
+          '" target="_blank" rel="noopener">' +
+          esc(mfgHostLabel(src)) +
+          "</a></div></details>";
       }
       html +=
         '<details><summary>' + esc(__pdpT("pdp.technical_drawings", "Teknik çizimler")) + '</summary><div class="eq-caglayan-acc__body"><a href="#eq-epdp-drawings">' + esc(__pdpT("pdp.go_to_drawings", "Sayfadaki teknik görsellere git")) + '</a></div></details>';
