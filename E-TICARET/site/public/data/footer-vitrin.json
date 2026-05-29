@@ -68,7 +68,7 @@
     ]
   },
   "companyDisplay": "E Q U S T O   T E K N O L O J İ   L İ M İ T E D",
-  "companyDisplayNote": "Harf arasi 1 bosluk, kelime arasi 3 nbsp; ozel isim cevrilmez",
+  "companyDisplayNote": "Kilit metin: harf arasi 1 bosluk, kelime arasi 3 bosluk; white-space pre",
   "companyDisplayKey": "footer.company_display",
   "tagline": "Equsto Teknolojisi · Gastronomi Tasarımı · Satış Mühendisliği",
   "legal": {

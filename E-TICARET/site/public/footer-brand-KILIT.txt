@@ -12,7 +12,7 @@ Değiştirmeden önce kullanıcıdan AÇIK ONAY alın.
   3. Şirket satırı: E Q U S T O   T E K N O L O J İ   L İ M İ T E D
      • Harf arası 1 boşluk, kelime arası 3 nbsp (letter1-word3)
      • font-weight: 300, letter-spacing: 0, ortalı
-     • DOM: üç <span class="eq-mfoot-co-part"> + iki <span class="eq-mfoot-co-gap"> — i18n ile değiştirilmez
+     • DOM: tek satır textContent — i18n ile değiştirilmez (data-i18n-skip)
   4. Tagline: Equsto Teknolojisi · Gastronomi Tasarımı (i18n footer.tagline)
 
 YASAK (onay olmadan):
