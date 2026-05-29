@@ -4,7 +4,8 @@
 
  * Veri: /data/footer-vitrin.json — href her zaman dolu (eski site / sitemap).
 
- * @version vitrum-powered 20260527f
+ * @version vitrum-powered 20260530footer-brand-kilit
+ * KİLİT: public/footer-brand-KILIT.txt — EQUSTO TEKNOLOJİ LİMİTED kelime3
 
  */
 
@@ -76,7 +77,22 @@
 
   function fixCompanyLine(host) {
     var el = host && host.querySelector ? host.querySelector(".eq-mfoot-company") : null;
-    if (el) el.innerHTML = companyMarkup();
+    if (!el) return;
+    if (el.querySelectorAll(".eq-mfoot-co-part").length === 3) return;
+    el.innerHTML = companyMarkup();
+  }
+
+  function watchCompanyLine(host) {
+    var el = host && host.querySelector ? host.querySelector(".eq-mfoot-company") : null;
+    if (!el || typeof MutationObserver === "undefined") return;
+    var obs = new MutationObserver(function () {
+      if (el.querySelectorAll(".eq-mfoot-co-part").length !== 3) fixCompanyLine(host);
+    });
+    obs.observe(el, { childList: true, characterData: true, subtree: true });
+  }
+
+  function fixAllCompanyLines() {
+    document.querySelectorAll("footer.eq-mfoot").forEach(fixCompanyLine);
   }
 
 
@@ -703,6 +719,7 @@
     } catch (_) {}
 
     fixCompanyLine(host);
+    watchCompanyLine(host);
 
     var cookie = host.querySelector("#eq-mfoot-cookie");
 
@@ -787,6 +804,7 @@
 
 
   window.__eqMountMarketFooter = mount;
+  window.__eqFixFooterCompanyAll = fixAllCompanyLines;
 
 
 

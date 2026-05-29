@@ -1,0 +1,37 @@
+═══════════════════════════════════════════════════════════════════════════
+KİLİT — Vitrin alt bant marka şeridi (SSS + şirket satırı + tagline)
+Onay: 2026-05-30 · Ekran görüntüsü onayı
+═══════════════════════════════════════════════════════════════════════════
+
+Bu dosya, onaylı footer alt marka bölümünün bozulmaması içindir.
+Değiştirmeden önce kullanıcıdan AÇIK ONAY alın.
+
+── Beklenen görünüm (yukarıdan aşağı) ────────────────────────────────────
+  1. Yardım sütununda son link: SSS → /sss
+  2. İnce ayırıcı çizgi (eq-mfoot-brand border-top)
+  3. Şirket satırı: EQUSTO   TEKNOLOJİ   LİMİTED
+     • Üç kelime, kelime arası 3ch (margin-left), harf arası boşluk YOK
+     • font-weight: 300, letter-spacing: 0, ortalı
+     • DOM: üç <span class="eq-mfoot-co-part"> — i18n metin ile değiştirilmez
+  4. Tagline: Equsto Teknolojisi · Gastronomi Tasarımı (i18n footer.tagline)
+
+YASAK (onay olmadan):
+  • Şirket satırına letter-spacing / justify / harf harf aralık eklemek
+  • company_display i18n anahtarını şirket satırına bağlamak (data-i18n-skip kaldırmak)
+  • "Başa dön" / eq-mfoot-back / eq-mfoot-top geri getirmek
+  • Powered By Vitrum satırını vitrin sayfalarında göstermek (Besos hariç)
+  • eq-mfoot-brand hizalamasını sola almak
+
+── Kilitli dosyalar ───────────────────────────────────────────────────────
+  public/eq-footer.js              — companyMarkup, fixCompanyLine, watchCompanyLine
+  public/theme.css                 — .eq-mfoot-company word3, .eq-mfoot-brand
+  public/data/footer-vitrin.json   — companyDisplay, tagline, SSS link
+  public/i18n/tr.json + en.json    — footer.tagline (company_display yedek only)
+  lib/shop/assets.ts               — SHOP_ASSET_V
+  public/theme.js                  — enforceFooterBrandLock (runtime yedek)
+
+── Deploy / doğrulama ─────────────────────────────────────────────────────
+  npm run verify:footer-brand-kilit
+  Canlı: footer altında EQUSTO TEKNOLOJİ LİMİTED kelime aralığı düzgün
+
+═══════════════════════════════════════════════════════════════════════════
