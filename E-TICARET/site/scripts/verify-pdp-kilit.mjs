@@ -39,6 +39,30 @@ if (!inline.includes("function buyboxPriceParts")) {
 if (!inline.includes("pdp-epdp-KILIT.txt")) {
   fail("eq-product-page-inline.js: KİLİT başlığı yok");
 }
+if (!inline.includes("function __pdpT")) {
+  fail("eq-product-page-inline.js: __pdpT yok");
+}
+if (!inline.includes("function formatPdpPriceDisplay")) {
+  fail("eq-product-page-inline.js: formatPdpPriceDisplay yok");
+}
+if (!inline.includes('__pdpT("pdp.quote_for_contact"')) {
+  fail("eq-product-page-inline.js: pdp.quote_for_contact i18n yok");
+}
+if (!/function caglayanLeadParagraph[\s\S]*__pdpT\("pdp\.dim_length"/.test(inline)) {
+  fail("eq-product-page-inline.js: caglayanLeadParagraph ölçü i18n yok");
+}
+if (!/formatPdpPriceDisplay\(p\.price,\s*p\)/.test(inline)) {
+  fail("eq-product-page-inline.js: renderRelatedStrip formatPdpPriceDisplay kullanmıyor");
+}
+
+mustExist("scripts/build-i18n-en.mjs");
+const buildI18n = read("scripts/build-i18n-en.mjs");
+if (!buildI18n.includes("quote_for_contact")) {
+  fail("build-i18n-en.mjs: pdp.quote_for_contact EN override yok");
+}
+if (!buildI18n.includes("dim_length")) {
+  fail("build-i18n-en.mjs: pdp.dim_length EN override yok");
+}
 
 const css = read("public/eq-product-page.css");
 if (!css.includes(".eq-epdp-hero")) fail("eq-product-page.css: .eq-epdp-hero yok");
