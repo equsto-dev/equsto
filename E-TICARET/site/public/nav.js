@@ -1569,7 +1569,7 @@
     eqSyncMobileChrome();
   }
 
-  var EQ_FOOTER_ASSET_V = "20260530footer-letter1-word3b";
+  var EQ_FOOTER_ASSET_V = "20260530footer-kilit";
 
   function loadScriptSameDir(filename, flagName) {
     try {

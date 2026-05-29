@@ -89,7 +89,7 @@
   }
 
   function ensureGeoScripts() {
-    loadScriptOnce("/eq-footer.js?v=20260530footer-letter1-word3b");
+    loadScriptOnce("/eq-footer.js?v=20260530footer-kilit");
     loadScriptOnce("/contact.js?v=20260522wa", true);
   }
 

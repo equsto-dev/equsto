@@ -4,7 +4,7 @@
 
  * Veri: /data/footer-vitrin.json — href her zaman dolu (eski site / sitemap).
 
- * @version vitrum-powered 20260527f
+ * @version vitrum-powered 20260530footer-kilit
 
  */
 
@@ -69,10 +69,11 @@
 
   function applyCompanyLine(el) {
     if (!el) return;
+    el.setAttribute("data-i18n-skip", "");
+    el.setAttribute("data-eq-co-layout", "letter1-word3");
     if (el.textContent !== COMPANY_DISPLAY_LINE) {
       el.textContent = COMPANY_DISPLAY_LINE;
     }
-    el.setAttribute("data-eq-co-layout", "letter1-word3");
   }
 
   function fixCompanyLine(host) {
@@ -83,7 +84,20 @@
     document.querySelectorAll(".eq-mfoot-company").forEach(applyCompanyLine);
   }
 
+  function watchCompanyLine(host) {
+    if (!host || host.__eqCoWatch) return;
+    host.__eqCoWatch = true;
+    try {
+      var obs = new MutationObserver(function () {
+        fixCompanyLine(host);
+      });
+      obs.observe(host, { subtree: true, childList: true, characterData: true });
+      host.__eqCoObserver = obs;
+    } catch (_) {}
+  }
+
   window.__eqFixFooterCompanyAll = fixCompanyLine;
+  window.__eqFooterCompanyDisplayLine = COMPANY_DISPLAY_LINE;
 
 
 
@@ -709,6 +723,8 @@
     } catch (_) {}
 
     fixCompanyLine(host);
+
+    watchCompanyLine(host);
 
     var cookie = host.querySelector("#eq-mfoot-cookie");
 
