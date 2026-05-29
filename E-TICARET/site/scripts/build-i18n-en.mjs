@@ -466,7 +466,7 @@ const EN = {
   },
 
   footer: {
-    company_display: "E Q U S T O   T E C H N O L O G Y   L I M I T E D",
+    company_display: "E Q U S T O   T E K N O L O J İ   L İ M İ T E D",
     tagline: "Equsto Technology · Gastronomy Design",
     powered_by: "Powered By Vitrum",
     all_rights: "All rights reserved.",
@@ -863,6 +863,25 @@ const EN = {
     dims_prefix: "Dimensions:",
     pdf_catalog: "PDF catalogue",
     mfg_page: "Manufacturer page",
+    besos_other_modules: "Besos — other modules",
+    features_heading: "Features",
+    basic_info: "Basic information",
+    category_prefix: "Category:",
+    documents_heading: "Documents",
+    datasheet: "Datasheet",
+    product_catalog_pdf: "Product catalogue (PDF)",
+    quote_and_sales: "Quote and sales",
+    quote_contact: "Quote and contact",
+    quote_for_contact: "Contact for quote",
+    mfg_source: "Manufacturer source",
+    mfg_source_link: "Manufacturer / source page",
+    specs_request_quote:
+      "Request detailed technical specifications through the quote process.",
+    spec_group_electric: "Electrical",
+    spec_group_cooling: "Refrigeration",
+    spec_group_other: "Other",
+    inner_dims_prefix: "Internal dimensions: {dim}.",
+    besos_loader_waiting: "Waiting for Besos module loader… Refresh the page.",
   },
 };
 
