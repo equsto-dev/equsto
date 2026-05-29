@@ -1928,10 +1928,15 @@ body.eq-home.eq-home-mutbex .eq-home-cm .prod-card-wrap {
   border-color: var(--home-line);
 }
 
-body.eq-home.eq-home-mutbex .eq-home-cm .prod-card-wrap:hover,
+body.eq-home.eq-home-mutbex .eq-home-cm .prod-card-wrap:hover:not(.eq-prod-tint-active),
 body.eq-home.eq-home-mutbex .eq-home-cm .eq-rail-card:hover {
   box-shadow: var(--home-shadow);
   border-color: #c5cdd8;
+}
+
+body.eq-home.eq-home-mutbex .eq-home-cm .prod-card-wrap.eq-prod-tint-active {
+  border-color: var(--eq-prod-tint-border) !important;
+  box-shadow: var(--eq-prod-tint-shadow) !important;
 }
 
 body.eq-home.eq-home-mutbex .eq-home-cm .prod-img,

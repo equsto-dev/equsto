@@ -19,6 +19,7 @@ export const HOME_SCRIPTS = [
   `/eq-product-compare.js`,
   `/eq-vitrin-config.js?v=${v}`,
   `/eq-home-mutbex.js?v=${v}`,
+  `/eq-product-card-tint.js?v=${v}`,
   `/eq-analytics.js`,
 ];
 
