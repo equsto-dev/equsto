@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import BesosEqustoChrome from "@/components/besos/BesosEqustoChrome";
 import BesosModulProductScripts from "@/components/besos/BesosModulProductScripts";
 import ShopProductMain from "@/components/shop/ShopProductMain";
@@ -23,6 +24,9 @@ export const metadata: Metadata = {
 export default function BesosModulProductPage() {
   return (
     <>
+      <Script id="besos-modul-pdp-body-class" strategy="beforeInteractive">
+        {`(function(){try{document.body.classList.add("eq-besos-modul-pdp");}catch(e){}})();`}
+      </Script>
       {/* eslint-disable-next-line @next/next/no-css-tags */}
       <link rel="stylesheet" href={`/eq-product-page.css?v=${SHOP_ASSET_V}`} precedence="high" />
       <ShopStyles variant="product" />

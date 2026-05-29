@@ -935,6 +935,29 @@ body.bd-page.besos:has(.eq-epdp) .eq-mbg-card {
   color: #111111;
 }
 
+/* Besos modül PDP — shop sol filtre/nav sidebar kapalı (bd-page’de nav.js sidebar doldurur) */
+body.bd-page.besos.eq-besos-modul-pdp aside#eq-filter-col,
+body.bd-page.besos:has(.eq-epdp) aside#eq-filter-col {
+  display: none !important;
+}
+
+body.bd-page.besos.eq-besos-modul-pdp .pg > .body,
+body.bd-page.besos:has(.eq-epdp) .pg > .body {
+  display: block;
+}
+
+body.bd-page.besos.eq-besos-modul-pdp .right-col,
+body.bd-page.besos:has(.eq-epdp) .right-col {
+  width: 100%;
+  max-width: 100%;
+  flex: 1 1 auto;
+}
+
+body.bd-page.besos.eq-besos-modul-pdp .eq-product-main,
+body.bd-page.besos:has(.eq-epdp) .eq-product-main {
+  max-width: min(1500px, 100%);
+}
+
 /* PDP — katalog PDF (Çağlayan / Proso, yalnızca ürün sayfası) */
 .eq-pdp-pdf-embed-wrap {
   margin: 0;
