@@ -67,8 +67,8 @@
       }
     ]
   },
-  "companyDisplay": "E Q U S T O . T E K N O L O J İ . L İ M İ T E D",
-  "companyDisplayNote": "tek satır; harf arası 1ch, kelime arası \" . \"; özel isim çevrilmez",
+  "companyDisplay": "E Q U S T O   T E K N O L O J İ   L İ M İ T E D",
+  "companyDisplayNote": "tek satır; harf arası 1ch, kelime arası 3ch; özel isim çevrilmez",
   "companyDisplayKey": "footer.company_display",
   "tagline": "Equsto Teknolojisi · Gastronomi Tasarımı · Satış Mühendisliği",
   "legal": {
