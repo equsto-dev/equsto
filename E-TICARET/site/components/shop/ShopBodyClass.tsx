@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { mountEqShopChromeLayout } from "@/lib/shop/sync-shop-chrome";
 
 /** Legacy eq-dept-plp.js body class + data-eq-dept attribute */
 export default function ShopBodyClass({
@@ -30,8 +31,11 @@ export default function ShopBodyClass({
       window.eqSyncMobileChrome?.();
     } catch (_) {}
 
+    const unmountChrome = mountEqShopChromeLayout();
+
     return () => {
       window.clearTimeout(t);
+      unmountChrome();
       document.body.className = prevClass;
       if (prevDept) document.body.setAttribute("data-eq-dept", prevDept);
       else document.body.removeAttribute("data-eq-dept");
