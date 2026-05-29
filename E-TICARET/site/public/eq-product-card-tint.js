@@ -12,9 +12,10 @@
   window.__eqProductCardTintInited = true;
 
   var CACHE = Object.create(null);
-  var CACHE_VER = "v5";
+  var CACHE_VER = "v6";
   var SAMPLE = 56;
   var tintToken = new WeakMap();
+  var plpTintSrc = new WeakMap();
 
   function clamp(n, a, b) {
     return Math.max(a, Math.min(b, n));
@@ -314,9 +315,103 @@
     clearTint(card);
   }
 
+  function plpAmbientProps(r, g, b) {
+    var baseR = clamp(Math.round(245 + (r - 118) * 0.16), 232, 252);
+    var baseG = clamp(Math.round(246 + (g - 132) * 0.16), 232, 252);
+    var baseB = clamp(Math.round(248 + (b - 168) * 0.16), 234, 254);
+    return {
+      glow: "rgba(" + r + "," + g + "," + b + ",0.44)",
+      mid: "rgba(" + r + "," + g + "," + b + ",0.24)",
+      base: "rgb(" + baseR + "," + baseG + "," + baseB + ")",
+      border: "rgba(" + r + "," + g + "," + b + ",0.34)",
+    };
+  }
+
+  function applyPlpAmbientToWrap(wrap, rgb) {
+    if (!wrap || !rgb) return;
+    var t = plpAmbientProps(rgb.r, rgb.g, rgb.b);
+    wrap.style.setProperty("--eq-plp-ambient-glow", t.glow);
+    wrap.style.setProperty("--eq-plp-ambient-mid", t.mid);
+    wrap.style.setProperty("--eq-plp-ambient-base", t.base);
+    wrap.style.setProperty("--eq-plp-ambient-border", t.border);
+    wrap.classList.add("eq-plp-ambient-ready");
+  }
+
+  function tintOnePlpWrap(wrap) {
+    var img = wrap.querySelector("img");
+    if (!img) return;
+    var src = String(img.currentSrc || img.src || "");
+    if (plpTintSrc.get(wrap) === src && wrap.classList.contains("eq-plp-ambient-ready")) return;
+    var fallback = { r: 118, g: 132, b: 168 };
+
+    function finish(rgb) {
+      applyPlpAmbientToWrap(wrap, rgb || fallback);
+      plpTintSrc.set(wrap, src);
+    }
+
+    function sampleFull() {
+      sampleFromImage(img, function (rgb) {
+        finish(rgb || sampleFromImageSync(img) || fallback);
+      });
+    }
+
+    var instant = sampleFromImageSync(img);
+    if (instant) applyPlpAmbientToWrap(wrap, instant);
+
+    if (img.complete && img.naturalWidth) {
+      sampleFull();
+      return;
+    }
+
+    img.addEventListener(
+      "load",
+      function once() {
+        img.removeEventListener("load", once);
+        src = String(img.currentSrc || img.src || "");
+        sampleFull();
+      },
+      { once: true }
+    );
+    img.addEventListener(
+      "error",
+      function once() {
+        img.removeEventListener("error", once);
+        finish(fallback);
+      },
+      { once: true }
+    );
+  }
+
+  function refreshPlp(root) {
+    root = root || document;
+    var wraps = root.querySelectorAll(".eq-dept-plp-card__img");
+    for (var i = 0; i < wraps.length; i++) tintOnePlpWrap(wraps[i]);
+  }
+
+  function watchPlpGrids() {
+    ["eq-dept-plp-grid", "eq-arama-grid"].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (!el || el.__eqPlpTintObs) return;
+      el.__eqPlpTintObs = true;
+      refreshPlp(el);
+      try {
+        var obs = new MutationObserver(function () {
+          refreshPlp(el);
+        });
+        obs.observe(el, { childList: true, subtree: true });
+      } catch (_) {}
+    });
+  }
+
   function init() {
     document.addEventListener("pointerover", onPointerOver, true);
     document.addEventListener("pointerout", onPointerOut, true);
+    watchPlpGrids();
+    if (typeof document !== "undefined") {
+      document.addEventListener("equsto:plp-grid-updated", function (e) {
+        refreshPlp((e && e.detail && e.detail.root) || document);
+      });
+    }
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
@@ -327,5 +422,7 @@
   g.EqustoProductTint = {
     sampleFromImage: sampleFromImage,
     sampleFromImageSync: sampleFromImageSync,
+    refreshPlp: refreshPlp,
+    watchPlpGrids: watchPlpGrids,
   };
 })();

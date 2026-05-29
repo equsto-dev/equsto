@@ -764,6 +764,13 @@
     } else {
       grid.innerHTML = slice.map(renderProductCard).join('');
       if (typeof window.eqFixDataImagesInDom === 'function') window.eqFixDataImagesInDom(grid);
+      try {
+        if (window.EqustoProductTint && typeof window.EqustoProductTint.refreshPlp === 'function') {
+          window.EqustoProductTint.refreshPlp(grid);
+        } else {
+          document.dispatchEvent(new CustomEvent('equsto:plp-grid-updated', { detail: { root: grid } }));
+        }
+      } catch (_) {}
     }
 
     renderLoadMore(list);
