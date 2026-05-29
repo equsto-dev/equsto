@@ -29,14 +29,12 @@ function toggleDrawer() {
 type ShopEqustoChromeProps = {
   activeDept?: ShopDeptSlug | null;
   variant?: "shop" | "besos";
-  showBesosSubnav?: boolean;
 };
 
 /** Legacy vitrin üst bant — KİLİT: public/topnav-bar-design-KILIT.txt */
 export default function ShopEqustoChrome({
   activeDept,
   variant = "shop",
-  showBesosSubnav = false,
 }: ShopEqustoChromeProps) {
   const isBesos = variant === "besos";
   const searchRef = useRef<HTMLInputElement>(null);
@@ -216,24 +214,6 @@ export default function ShopEqustoChrome({
             </div>
           </div>
         </nav>
-
-        {showBesosSubnav ? (
-          <nav className="bd-besos-subnav" aria-label="Bar Design Studio" data-i18n-attr="aria-label:besos.hdr_studio">
-            <a href="/besos" className="is-active" data-i18n="besos.hdr_nav_vitrin">
-              Vitrin
-            </a>
-            <a href="/besos#bd-stations" data-i18n="besos.hdr_nav_modules">
-              Modüller
-            </a>
-            <a href="/besos#bd-vitrum-projects" data-i18n="besos.hdr_nav_refs">
-              Projeler
-            </a>
-            <a href="/besos/imt300">IMT300</a>
-            <a href="/besos#bd-foot" data-i18n="besos.hdr_nav_quote">
-              Teklif iste
-            </a>
-          </nav>
-        ) : null}
 
         <span data-eq-shop-chrome-v={SHOP_ASSET_V} hidden aria-hidden="true" />
       </div>
