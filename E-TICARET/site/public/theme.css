@@ -4570,8 +4570,6 @@ footer.eq-mfoot .eq-mfoot-company .eq-mfoot-co-part,
   font-weight: 300 !important;
   font-style: normal;
   font-synthesis: none;
-  letter-spacing: 0 !important;
-  word-spacing: normal !important;
 }
 footer.eq-mfoot .eq-mfoot-company .eq-mfoot-co-part,
 .eq-mfoot-company .eq-mfoot-co-part {
@@ -4580,7 +4578,13 @@ footer.eq-mfoot .eq-mfoot-company .eq-mfoot-co-part,
 }
 footer.eq-mfoot .eq-mfoot-company .eq-mfoot-co-part + .eq-mfoot-co-part,
 .eq-mfoot-company .eq-mfoot-co-part + .eq-mfoot-co-part {
-  margin-left: 3ch;
+  margin-left: 0;
+}
+footer.eq-mfoot .eq-mfoot-company .eq-mfoot-co-gap,
+.eq-mfoot-company .eq-mfoot-co-gap {
+  display: inline;
+  white-space: pre;
+  font-weight: 300 !important;
 }
 body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-company,
 body.bd-page.besos.eq-shop .eq-mfoot-company {
@@ -4708,16 +4712,6 @@ body.eq-shop:not(.admin-app) footer.footer.eq-mfoot #eq-mfoot-back {
 }
 body.eq-shop:not(.admin-app):not(.bd-page.besos) footer.footer.eq-mfoot .eq-mfoot-powered {
   display: none !important;
-}
-
-/* KİLİT — footer-brand-KILIT.txt · şirket satırı kelime3, harf arası yok */
-footer.eq-mfoot .eq-mfoot-company[data-eq-co-layout="word3"] {
-  letter-spacing: 0 !important;
-  text-align: center !important;
-}
-footer.eq-mfoot .eq-mfoot-company[data-eq-co-layout="word3"] .eq-mfoot-co-part {
-  letter-spacing: 0 !important;
-  text-transform: none !important;
 }
 
 /* Mobil alt şerit — Amazon mobil uygulama (yalnız çizgi ikonlar, beyaz zemin); masaüstünde gizli */
