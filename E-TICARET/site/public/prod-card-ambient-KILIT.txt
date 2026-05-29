@@ -22,6 +22,7 @@ YASAK (onay olmadan):
   • .prod-info arka planına gradient / tint eklemek
   • eq-product-card-tint.js’i ana sayfadan (HOME_SCRIPTS) kaldırmak
   • Ambient hover’ı tamamen devre dışı bırakmak
+  • Görünen <img> üzerinde crossOrigin set etmek (CDN PLP görselleri «Görsel» olur)
 
 ── Kilitli dosyalar ───────────────────────────────────────────────────────
   public/eq-product-card-tint.js     — renk örnekleme, CSS değişkenleri

@@ -45,6 +45,9 @@ if (!tint.includes("eq-prod-tint-active")) {
 if (tint.includes(".prod-info")) {
   fail("eq-product-card-tint.js: .prod-info tint — KİLİT ihlali");
 }
+if (/crossOrigin\s*=/.test(tint) || tint.includes("ensureImgCrossOrigin")) {
+  fail("eq-product-card-tint.js: görünen img crossOrigin — PLP görselleri kırılır");
+}
 
 const theme = read("public/theme.css");
 if (!theme.includes(".prod-card-wrap.eq-prod-tint-active")) {
