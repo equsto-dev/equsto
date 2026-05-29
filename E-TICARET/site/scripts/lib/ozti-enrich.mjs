@@ -331,6 +331,9 @@ export function mapOztiDeptAccessory(row) {
   if (/SU\s*OTOMATI/i.test(name)) return "icecek";
   if (/POŞET\s*ÇAY\s*STANDI|ÇAY\s*STANDI/i.test(name)) return "icecek";
 
+  /** Fritöz teli / sepet — aksesuar; «FRITOZ» pişirme kuralına düşmesin */
+  if (/^8150\./.test(kod) || /FR[İI]T[OÖ]Z\s*TEL/i.test(name)) return "set-ustu-mutfak";
+
   return null;
 }
 
