@@ -196,7 +196,7 @@ function buildRows(urun) {
     const brand = eqBrandName(urun.baslik || urun.slug);
     return [
       makeRow(urun.slug, brand, `${brand} EQ1`, gallery, undefined, {
-        caglayanModelSlug: undefined,
+        caglayanModelSlug: urun.slug,
         caglayanEqModel: brand,
         caglayanEqNo: 1,
         sku: eqSku(urun.baslik || urun.slug, 1),

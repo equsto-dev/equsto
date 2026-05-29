@@ -35,7 +35,7 @@ const rows = JSON.parse(fs.readFileSync(OUT_DEPT, "utf8"));
 let n = 0;
 for (const row of rows) {
   if (row.kaynak !== "caglayan-refrigeration") continue;
-  const slug = row.caglayanModelSlug || String(row.id || "").split("-")[0];
+  const slug = row.caglayanModelSlug || row.id;
   const urun = loadUrun(slug);
   if (!urun) continue;
   const pdf = extractCaglayanCatalogPdf(urun, SRC);

@@ -44,6 +44,18 @@ export function extractCaglayanCatalogPdf(urun, srcRoot) {
       return { rel: `caglayan-market/${slug}/${fileName}`, url: "", fileName };
     }
   }
+
+  const gorselDir = path.join(srcRoot, "gorseller", slug);
+  if (fs.existsSync(gorselDir)) {
+    const pdfs = fs
+      .readdirSync(gorselDir)
+      .filter((f) => /\.pdf$/i.test(f) && !/pdf-icon/i.test(f))
+      .sort();
+    if (pdfs.length) {
+      const fileName = pdfs[0];
+      return { rel: `caglayan-market/${slug}/${fileName}`, url: "", fileName };
+    }
+  }
   return null;
 }
 
