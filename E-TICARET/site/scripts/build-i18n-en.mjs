@@ -468,7 +468,7 @@ const EN = {
   footer: {
     company_display: "E Q U S T O   T E C H N O L O G Y   L I M I T E D",
     tagline: "Equsto Technology · Gastronomy Design",
-    powered_by: "Powered By Vitrum Group",
+    powered_by: "Powered By Vitrum",
     all_rights: "All rights reserved.",
     cookie_policy: "Cookie policy",
     privacy: "Privacy",
