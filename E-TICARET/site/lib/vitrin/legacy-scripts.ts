@@ -3,6 +3,7 @@ import { SHOP_ASSET_V } from "@/lib/shop/assets";
 const v = SHOP_ASSET_V;
 
 export const HOME_EXTRA_STYLES = [
+  `/eq-home-mutbex.css?v=${v}`,
   `/eq-home-decor.css?v=${v}`,
   `/contact.css?v=${v}`,
 ];
