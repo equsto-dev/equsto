@@ -12,8 +12,9 @@
   window.__eqProductCardTintInited = true;
 
   var CACHE = Object.create(null);
-  var CACHE_VER = "v11";
+  var CACHE_VER = "v12";
   var SAMPLE = 56;
+  var FALLBACK_RGB = { r: 118, g: 132, b: 168 };
   var tintToken = new WeakMap();
   var plpTintSrc = new WeakMap();
   var plpRgbCache = new WeakMap();
@@ -30,15 +31,27 @@
     return (Math.max(r, g, b) + Math.min(r, g, b)) / 2;
   }
 
+  function isFallbackRgb(rgb) {
+    return (
+      rgb &&
+      rgb.r === FALLBACK_RGB.r &&
+      rgb.g === FALLBACK_RGB.g &&
+      rgb.b === FALLBACK_RGB.b
+    );
+  }
+
+  function storeTintCache(key, rgb) {
+    if (key && rgb && !isFallbackRgb(rgb)) CACHE[key] = rgb;
+  }
+
   /**
-   * Doygunluğu artır. Açık gri arka plan → nötr mavi; koyu ürün gövdesi (siyah makine vb.) → koyu accent.
+   * Doygunluğu artır. Beyaz/gri fonda ortalama soluk kalırsa null — accentFromImageData en canlı piksele düşer.
    */
   function enrichRgb(r, g, b) {
     var max = Math.max(r, g, b);
     var min = Math.min(r, g, b);
     var d = max - min;
     var avg = (r + g + b) / 3;
-    var dev = Math.max(Math.abs(r - avg), Math.abs(g - avg), Math.abs(b - avg));
     var L = (max + min) / 2;
     if (d < 14 && L < 100) {
       var bias = 14;
@@ -50,8 +63,14 @@
         b: clamp(Math.round(b + (b - avg) * 0.35 + bias * 0.55), 28, 110),
       };
     }
-    if (d < 10 && dev < 8 && L > 155) {
-      return { r: 118, g: 132, b: 168 };
+    if (d < 12 && L > 150) {
+      if (d < 2) return null;
+      var boost = d < 8 ? 2.35 : 1.85;
+      return {
+        r: clamp(Math.round(avg + (r - avg) * boost), 0, 255),
+        g: clamp(Math.round(avg + (g - avg) * boost), 0, 255),
+        b: clamp(Math.round(avg + (b - avg) * boost), 0, 255),
+      };
     }
     var k = d < 42 ? 1.48 : 1.24;
     r = clamp(Math.round(avg + (r - avg) * k), 0, 255);
@@ -115,13 +134,21 @@
     var gg = Math.round(ag);
     var bb = Math.round(ab);
     var avgS = satRgb(rr, gg, bb);
-    if (bestS > avgS + 18 && bestS > 28) {
-      var t = clamp((bestS - avgS) / (bestS + 10), 0.35, 0.72);
+    if (avgS < 24 && bestS > 20) {
+      return enrichRgb(bestR, bestG, bestB);
+    }
+    if (bestS > avgS + 12 && bestS > 22) {
+      var t = clamp((bestS - avgS) / (bestS + 8), 0.42, 0.82);
       rr = Math.round(rr * (1 - t) + bestR * t);
       gg = Math.round(gg * (1 - t) + bestG * t);
       bb = Math.round(bb * (1 - t) + bestB * t);
     }
-    return enrichRgb(rr, gg, bb);
+    var enriched = enrichRgb(rr, gg, bb);
+    if (!enriched && bestS > 18) return enrichRgb(bestR, bestG, bestB);
+    if (enriched && satRgb(enriched.r, enriched.g, enriched.b) < 20 && bestS > 22) {
+      return enrichRgb(bestR, bestG, bestB);
+    }
+    return enriched;
   }
 
   function isSameOriginSrc(src) {
@@ -149,22 +176,41 @@
     }
   }
 
-  function sampleFromDisplayImgDeep(img) {
-    var out = sampleFromDisplayImg(img, SAMPLE);
-    if (!out || satRgb(out.r, out.g, out.b) >= 40 || img.naturalHeight <= 32) return out;
+  function sampleRegionFromImg(img, sx, sy, sw, sh) {
+    if (!img || !img.naturalWidth || !img.naturalHeight) return null;
     var c = document.createElement("canvas");
     c.width = SAMPLE;
     c.height = SAMPLE;
     var ctx = c.getContext("2d", { willReadFrequently: true });
-    if (!ctx) return out;
+    if (!ctx) return null;
     try {
-      var nw = img.naturalWidth;
-      var nh = img.naturalHeight;
-      var sy = Math.floor(nh * 0.32);
-      ctx.drawImage(img, 0, sy, nw, nh - sy, 0, 0, SAMPLE, SAMPLE);
-      var out2 = accentFromImageData(ctx.getImageData(0, 0, SAMPLE, SAMPLE).data);
-      if (out2 && satRgb(out2.r, out2.g, out2.b) > satRgb(out.r, out.g, out.b)) return out2;
-    } catch (e2) {}
+      ctx.drawImage(img, sx, sy, sw, sh, 0, 0, SAMPLE, SAMPLE);
+      return accentFromImageData(ctx.getImageData(0, 0, SAMPLE, SAMPLE).data);
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function pickRicherRgb(a, b) {
+    if (!a) return b || null;
+    if (!b) return a;
+    return satRgb(b.r, b.g, b.b) > satRgb(a.r, a.g, a.b) ? b : a;
+  }
+
+  function sampleFromDisplayImgDeep(img) {
+    var out = sampleFromDisplayImg(img, SAMPLE);
+    if (img.naturalHeight <= 32) return out;
+    var nw = img.naturalWidth;
+    var nh = img.naturalHeight;
+    var cx = Math.floor(nw * 0.2);
+    var cy = Math.floor(nh * 0.12);
+    var cw = Math.max(1, Math.floor(nw * 0.6));
+    var ch = Math.max(1, Math.floor(nh * 0.76));
+    out = pickRicherRgb(out, sampleRegionFromImg(img, cx, cy, cw, ch));
+    if (!out || satRgb(out.r, out.g, out.b) < 40) {
+      var sy = Math.floor(nh * 0.28);
+      out = pickRicherRgb(out, sampleRegionFromImg(img, 0, sy, nw, Math.max(1, nh - sy)));
+    }
     return out;
   }
 
@@ -190,6 +236,31 @@
       return;
     }
     done(out);
+  }
+
+  function sampleUrlsFromImg(img) {
+    var seen = Object.create(null);
+    var list = [];
+    function push(u) {
+      u = String(u || "").trim();
+      if (!u || seen[u]) return;
+      seen[u] = 1;
+      list.push(u);
+    }
+    push(img.currentSrc || img.src);
+    var raw = img.getAttribute && img.getAttribute("data-eq-img-raw");
+    if (raw) {
+      if (typeof window.equstoDataAssetHref === "function") {
+        try {
+          push(window.equstoDataAssetHref(raw));
+        } catch (e0) {}
+      }
+      if (typeof window.catalogImageCandidates === "function") {
+        var cands = window.catalogImageCandidates(raw);
+        for (var i = 0; i < cands.length && i < 4; i++) push(cands[i]);
+      }
+    }
+    return list;
   }
 
   function sampleFromImageUrl(src, done) {
@@ -227,6 +298,17 @@
       });
   }
 
+  function sampleFromImageUrls(urls, idx, done) {
+    if (!urls || idx >= urls.length) {
+      done(null);
+      return;
+    }
+    sampleFromImageUrl(urls[idx], function (rgb) {
+      if (rgb) done(rgb);
+      else sampleFromImageUrls(urls, idx + 1, done);
+    });
+  }
+
   function sampleFromImage(img, done) {
     var src = String(img.currentSrc || img.src || "");
     var ck = CACHE_VER + "\t" + src;
@@ -241,13 +323,13 @@
     if (isSameOriginSrc(src)) {
       var local = sampleFromDisplayImgDeep(img);
       if (local) {
-        CACHE[ck] = local;
+        storeTintCache(ck, local);
         done(local);
         return;
       }
     }
-    sampleFromImageUrl(src, function (rgb) {
-      if (rgb) CACHE[ck] = rgb;
+    sampleFromImageUrls(sampleUrlsFromImg(img), 0, function (rgb) {
+      storeTintCache(ck, rgb);
       done(rgb);
     });
   }
@@ -257,7 +339,7 @@
     if (!img || !img.naturalWidth || !img.naturalHeight) return null;
     var src = String(img.currentSrc || img.src || "");
     if (!isSameOriginSrc(src)) return null;
-    return sampleFromDisplayImg(img, 32);
+    return sampleFromDisplayImgDeep(img);
   }
 
   function tintCssProps(r, g, b) {
@@ -359,21 +441,20 @@
     var img = card.querySelector(".prod-img img");
     var gen = (tintToken.get(card) || 0) + 1;
     tintToken.set(card, gen);
-    var fallback = { r: 118, g: 132, b: 168 };
-
     function run() {
       if (tintToken.get(card) !== gen) return;
       if (!img) {
-        applyRgb(card, fallback);
+        applyRgb(card, FALLBACK_RGB);
         return;
       }
       /* Hemen renk (hover hissi); ardından yüksek çözünürlüklü örnek ile güncelle */
-      var instant = sampleFromImageSync(img) || fallback;
-      applyRgb(card, instant);
+      var instant = sampleFromImageSync(img);
+      if (instant) applyRgb(card, instant);
+      else applyRgb(card, FALLBACK_RGB);
       if (!img.naturalWidth) {
         var to = setTimeout(function () {
           if (tintToken.get(card) !== gen) return;
-          if (!img.naturalWidth) applyRgb(card, fallback);
+          if (!img.naturalWidth) applyRgb(card, FALLBACK_RGB);
         }, 1200);
         img.addEventListener(
           "load",
@@ -383,7 +464,7 @@
             if (tintToken.get(card) !== gen) return;
             sampleFromImage(img, function (rgb) {
               if (tintToken.get(card) !== gen) return;
-              applyRgb(card, rgb || fallback);
+              applyRgb(card, rgb || instant || FALLBACK_RGB);
             });
           },
           { once: true }
@@ -392,7 +473,7 @@
       }
       sampleFromImage(img, function (rgb) {
         if (tintToken.get(card) !== gen) return;
-        applyRgb(card, rgb || instant);
+        applyRgb(card, rgb || instant || FALLBACK_RGB);
       });
     }
     if (typeof requestAnimationFrame === "function") requestAnimationFrame(run);
@@ -428,7 +509,7 @@
   }
 
   function cachePlpRgb(wrap, rgb) {
-    if (wrap && rgb) plpRgbCache.set(wrap, rgb);
+    if (wrap && rgb && !isFallbackRgb(rgb)) plpRgbCache.set(wrap, rgb);
   }
 
   /** Renk değişkenleri yalnızca hover sırasında — CSS :hover gradient’i bunları kullanır. */
@@ -457,15 +538,20 @@
     if (!img || !wrap.matches(":hover")) return;
     var gen = (plpHoverGen.get(wrap) || 0) + 1;
     plpHoverGen.set(wrap, gen);
-    var fallback = { r: 118, g: 132, b: 168 };
     var cached = plpRgbCache.get(wrap);
     if (cached) setPlpAmbientVars(wrap, cached);
 
     function finish(rgb) {
       if (plpHoverGen.get(wrap) !== gen || !wrap.matches(":hover")) return;
-      var out = rgb || cached || fallback;
-      cachePlpRgb(wrap, out);
-      setPlpAmbientVars(wrap, out);
+      var out = rgb || cached;
+      if (out) {
+        cachePlpRgb(wrap, out);
+        setPlpAmbientVars(wrap, out);
+      } else if (cached) {
+        setPlpAmbientVars(wrap, cached);
+      } else {
+        setPlpAmbientVars(wrap, FALLBACK_RGB);
+      }
       plpTintSrc.set(wrap, String(img.currentSrc || img.src || ""));
     }
 
@@ -473,6 +559,8 @@
     if (instant) {
       cachePlpRgb(wrap, instant);
       setPlpAmbientVars(wrap, instant);
+    } else {
+      setPlpAmbientVars(wrap, FALLBACK_RGB);
     }
 
     if (img.complete && img.naturalWidth) {
@@ -501,17 +589,14 @@
     if (!img) return;
     var src = String(img.currentSrc || img.src || "");
     if (plpTintSrc.get(wrap) === src && plpRgbCache.has(wrap)) return;
-    var fallback = { r: 118, g: 132, b: 168 };
-
     function finish(rgb) {
-      cachePlpRgb(wrap, rgb || fallback);
+      var out = rgb || sampleFromImageSync(img);
+      if (out) cachePlpRgb(wrap, out);
       plpTintSrc.set(wrap, src);
     }
 
     function sampleFull() {
-      sampleFromImage(img, function (rgb) {
-        finish(rgb || sampleFromImageSync(img));
-      });
+      sampleFromImage(img, finish);
     }
 
     var warm = sampleFromImageSync(img);
