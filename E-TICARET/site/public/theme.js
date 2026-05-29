@@ -565,7 +565,7 @@
     if (b.classList.contains("pf-page")) return;
     if (!document.querySelector('script[src*="eq-footer"]')) {
       var f = document.createElement("script");
-      f.src = "/eq-footer.js?v=20260531sss8";
+      f.src = "/eq-footer.js?v=20260529mfoot-noarrow";
       f.defer = true;
       document.head.appendChild(f);
     }
