@@ -882,3 +882,55 @@ body.eq-shop .eq-product-specs .eq-specs-cols pre {
     flex-wrap: wrap;
   }
 }
+
+/* Besos modül PDP: besos-shell koyu --eq-text → beyaz E-PDP panelinde okunmaz */
+body.bd-page.besos:has(.eq-epdp) .pg,
+body.bd-page.besos:has(.eq-epdp) .pg > .body,
+body.bd-page.besos:has(.eq-epdp) .pg > .body .right-col,
+body.bd-page.besos:has(.eq-epdp) .eq-filter-col,
+body.bd-page.besos:has(.eq-epdp) .eq-product-main {
+  --eq-text: #111111;
+  --eq-text-secondary: #4b5563;
+  --eq-text-muted: #6b7280;
+  --eq-text-subtle: #9ca3af;
+  --eq-surface: #ffffff;
+  --eq-surface-2: #f8f9fb;
+  --eq-border: #e5e7eb;
+  --eq-border-soft: #eceff2;
+  color: #111111;
+}
+
+body.bd-page.besos:has(.eq-epdp) .pg {
+  width: 100%;
+  max-width: 1500px;
+  margin-inline: auto;
+  background: #ffffff;
+}
+
+body.bd-page.besos:has(.eq-epdp) .pg > .body {
+  background: #ffffff;
+}
+
+body.bd-page.besos:has(.eq-epdp) .breadcrumb {
+  color: var(--eq-text-muted);
+}
+
+body.bd-page.besos:has(.eq-epdp) .breadcrumb a {
+  color: #007185;
+}
+
+body.bd-page.besos:has(.eq-epdp) .eq-caglayan-acc summary {
+  color: #111111;
+}
+
+body.bd-page.besos:has(.eq-epdp) .eq-product-family-line,
+body.bd-page.besos:has(.eq-epdp) .eq-product-family-hint,
+body.bd-page.besos:has(.eq-epdp) .eq-product-family-lbl,
+body.bd-page.besos:has(.eq-epdp) .eq-mbg-title,
+body.bd-page.besos:has(.eq-epdp) .eq-mbg-card-title {
+  color: #111111;
+}
+
+body.bd-page.besos:has(.eq-epdp) .eq-mbg-card {
+  color: #111111;
+}
