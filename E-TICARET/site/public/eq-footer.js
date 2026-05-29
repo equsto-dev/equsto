@@ -4,8 +4,7 @@
 
  * Veri: /data/footer-vitrin.json — href her zaman dolu (eski site / sitemap).
 
- * @version vitrum-powered 20260530footer-brand-kilit
- * KİLİT: public/footer-brand-KILIT.txt — EQUSTO TEKNOLOJİ LİMİTED kelime3
+ * @version vitrum-powered 20260527f
 
  */
 
@@ -61,38 +60,35 @@
 
 
 
-  /** EQUSTO   TEKNOLOJİ   LİMİTED — kelime arası 3 boşluk (nbsp), harf arası yok */
+  /** E Q U S T O   T E K N O L O J İ   L İ M İ T E D — harf arası 1 boşluk, kelime arası 3 nbsp */
 
   var COMPANY_WORDS = ["EQUSTO", "TEKNOLOJİ", "LİMİTED"];
 
   var COMPANY_WORD_GAP = "\u00a0\u00a0\u00a0";
 
-  var COMPANY_DISPLAY_LINE = COMPANY_WORDS.join(COMPANY_WORD_GAP);
+  var LETTER_GAP = " ";
+
+  var WORD_GAP = COMPANY_WORD_GAP;
+
+  function spacedLetters(word) {
+    return String(word || "").split("").join(LETTER_GAP);
+  }
+
+  var COMPANY_DISPLAY_LINE = COMPANY_WORDS.map(spacedLetters).join(WORD_GAP);
 
   function companyMarkup() {
-    return COMPANY_WORDS.map(function (w) {
-      return '<span class="eq-mfoot-co-part">' + esc(w) + "</span>";
+    return COMPANY_WORDS.map(function (w, i) {
+      var html = '<span class="eq-mfoot-co-part">' + esc(spacedLetters(w)) + "</span>";
+      if (i < COMPANY_WORDS.length - 1) {
+        html += '<span class="eq-mfoot-co-gap" aria-hidden="true">' + WORD_GAP + "</span>";
+      }
+      return html;
     }).join("");
   }
 
   function fixCompanyLine(host) {
     var el = host && host.querySelector ? host.querySelector(".eq-mfoot-company") : null;
-    if (!el) return;
-    if (el.querySelectorAll(".eq-mfoot-co-part").length === 3) return;
-    el.innerHTML = companyMarkup();
-  }
-
-  function watchCompanyLine(host) {
-    var el = host && host.querySelector ? host.querySelector(".eq-mfoot-company") : null;
-    if (!el || typeof MutationObserver === "undefined") return;
-    var obs = new MutationObserver(function () {
-      if (el.querySelectorAll(".eq-mfoot-co-part").length !== 3) fixCompanyLine(host);
-    });
-    obs.observe(el, { childList: true, characterData: true, subtree: true });
-  }
-
-  function fixAllCompanyLines() {
-    document.querySelectorAll("footer.eq-mfoot").forEach(fixCompanyLine);
+    if (el) el.innerHTML = companyMarkup();
   }
 
 
@@ -580,7 +576,7 @@
 
       '<div class="eq-mfoot-brand">' +
 
-      '<p class="eq-mfoot-company" data-i18n-skip data-eq-co-layout="word3" aria-label="Equsto Teknoloji Limited">' +
+      '<p class="eq-mfoot-company" data-i18n-skip data-eq-co-layout="letter1-word3" aria-label="Equsto Teknoloji Limited">' +
 
       companyMarkup() +
 
@@ -719,7 +715,6 @@
     } catch (_) {}
 
     fixCompanyLine(host);
-    watchCompanyLine(host);
 
     var cookie = host.querySelector("#eq-mfoot-cookie");
 
@@ -804,7 +799,6 @@
 
 
   window.__eqMountMarketFooter = mount;
-  window.__eqFixFooterCompanyAll = fixAllCompanyLines;
 
 
 

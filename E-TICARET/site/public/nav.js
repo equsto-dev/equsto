@@ -1569,7 +1569,7 @@
     eqSyncMobileChrome();
   }
 
-  var EQ_FOOTER_ASSET_V = "20260529footer-wordgap3";
+  var EQ_FOOTER_ASSET_V = "20260530footer-letter1-word3";
 
   function loadScriptSameDir(filename, flagName) {
     try {

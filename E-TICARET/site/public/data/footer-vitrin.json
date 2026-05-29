@@ -67,8 +67,8 @@
       }
     ]
   },
-  "companyDisplay": "EQUSTO   TEKNOLOJİ   LİMİTED",
-  "companyDisplayNote": "EQUSTO + 3 bosluk + TEKNOLOJİ + 3 bosluk + LİMİTED; ozel isim cevrilmez",
+  "companyDisplay": "E Q U S T O   T E K N O L O J İ   L İ M İ T E D",
+  "companyDisplayNote": "Harf arasi 1 bosluk, kelime arasi 3 nbsp; ozel isim cevrilmez",
   "companyDisplayKey": "footer.company_display",
   "tagline": "Equsto Teknolojisi · Gastronomi Tasarımı · Satış Mühendisliği",
   "legal": {

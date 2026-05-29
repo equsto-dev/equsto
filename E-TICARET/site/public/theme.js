@@ -625,7 +625,7 @@
     if (b.classList.contains("pf-page")) return;
     if (!document.querySelector('script[src*="eq-footer"]')) {
       var f = document.createElement("script");
-      f.src = "/eq-footer.js?v=20260530footer-brand-kilit";
+      f.src = "/eq-footer.js?v=20260530footer-letter1-word3";
       f.defer = true;
       document.head.appendChild(f);
     }
