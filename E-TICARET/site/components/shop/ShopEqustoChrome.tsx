@@ -1,6 +1,7 @@
 "use client";
 
 import { Fragment } from "react";
+import ShopChromePortal from "@/components/shop/ShopChromePortal";
 import { SHOP_ASSET_V } from "@/lib/shop/assets";
 import type { ShopDeptSlug } from "@/lib/shop/depts";
 
@@ -26,7 +27,7 @@ function toggleDrawer() {
 
 export default function ShopEqustoChrome({ activeDept }: { activeDept?: ShopDeptSlug | null }) {
   return (
-    <>
+    <ShopChromePortal>
     <div className="eq-shop-chrome">
       <header className="hdr">
         <a className="logo" href="/" aria-label="Equsto" />
@@ -150,7 +151,6 @@ export default function ShopEqustoChrome({ activeDept }: { activeDept?: ShopDept
       </nav>
       <span data-eq-shop-chrome-v={SHOP_ASSET_V} hidden aria-hidden="true" />
     </div>
-    <div className="eq-shop-chrome-spacer" aria-hidden="true" />
-    </>
+    </ShopChromePortal>
   );
 }

@@ -520,38 +520,33 @@ body.eq-mid-drag * {
   cursor: grabbing !important;
 }
 
-/* Üst krom: arama şeridi + departmanlar — vitrinde viewport’a sabitlenir */
+/* Üst krom — body kökünde sticky; arama + departman birlikte */
+#eq-shop-chrome-root {
+  position: sticky;
+  top: 0;
+  z-index: 501;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) #eq-shop-chrome-root,
+body.bd-page.besos #eq-shop-chrome-root {
+  top: env(safe-area-inset-top, 0px);
+}
+
+body.eq-pfos #eq-shop-chrome-root,
+body.eq-pfos-public #eq-shop-chrome-root {
+  position: static;
+}
+
 .eq-shop-chrome {
   width: 100%;
-  align-self: stretch;
   box-sizing: border-box;
 }
 
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-shop-chrome,
-body.bd-page.besos .eq-shop-chrome {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  z-index: 501;
-}
-
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-shop-chrome-spacer,
-body.bd-page.besos .eq-shop-chrome-spacer {
-  display: block;
-  flex: 0 0 auto;
-  width: 100%;
-  height: var(--eq-shop-chrome-h, 96px);
-  pointer-events: none;
-}
-
-body.eq-pfos .eq-shop-chrome-spacer,
-body.eq-pfos-public .eq-shop-chrome-spacer {
-  display: none !important;
-  height: 0 !important;
-}
-
+#eq-shop-chrome-root .eq-shop-chrome > header.hdr,
+#eq-shop-chrome-root .eq-shop-chrome > nav.topnav,
+#eq-shop-chrome-root .eq-shop-chrome > .topnav,
 .eq-shop-chrome > header.hdr,
 .eq-shop-chrome > nav.topnav,
 .eq-shop-chrome > .topnav {
@@ -4325,10 +4320,6 @@ body.eq-shop:not(.admin-app):not(.bd-page) {
   --eq-topnav-dept-hover: rgba(0, 30, 80, 0.06);
   --eq-topnav-dept-sep: rgba(0, 0, 0, 0.2);
 }
-body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-pfos) .eq-shop-chrome {
-  top: env(safe-area-inset-top, 0px);
-}
-
 body.eq-shop:not(.admin-app):not(.bd-page) .eq-shop-chrome > header.hdr {
   position: relative !important;
   top: auto !important;

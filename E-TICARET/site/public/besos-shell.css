@@ -51,10 +51,6 @@ body.bd-page.besos .topnav {
   box-shadow: none !important;
 }
 
-body.bd-page.besos .eq-shop-chrome {
-  top: env(safe-area-inset-top, 0px);
-}
-
 body.bd-page.besos header.hdr > a.logo {
   display: inline-flex !important;
   visibility: visible !important;
