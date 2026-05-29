@@ -8,14 +8,15 @@ import { fileURLToPath } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const bodies = JSON.parse(
-  fs.readFileSync(path.join(root, "scripts/geo-bodies-600.json"), "utf8")
+  fs.readFileSync(path.join(root, "scripts/geo-bodies-350w.json"), "utf8")
 );
 
-function plainText(html) {
-  return String(html || "")
+function wordCount(html) {
+  const t = String(html || "")
     .replace(/<[^>]+>/g, " ")
     .replace(/\s+/g, " ")
     .trim();
+  return t ? t.split(/\s+/).filter(Boolean).length : 0;
 }
 
 function syncFile(rel) {
@@ -30,8 +31,8 @@ function syncFile(rel) {
       continue;
     }
     page.body = body;
-    const len = plainText(body).length;
-    if (len < 850) console.warn(`[warn] ${key}: ${len} chars`);
+    const w = wordCount(body);
+    if (w < 300 || w > 350) console.warn(`[warn] ${key}: ${w} sözcük`);
     n++;
   }
   fs.writeFileSync(p, JSON.stringify(data, null, 2) + "\n", "utf8");

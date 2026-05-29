@@ -60,23 +60,17 @@
 
 
 
-  /** E Q U S T O   T E K N O L O J İ   L İ M İ T E D — harf arası 1ch, kelime arası 3ch */
+  /** EQUSTO   TEKNOLOJİ   LİMİTED — kelime arası 3 boşluk (nbsp), harf arası yok */
 
   var COMPANY_WORDS = ["EQUSTO", "TEKNOLOJİ", "LİMİTED"];
 
-  var COMPANY_DISPLAY_LINE = COMPANY_WORDS.map(function (w) {
-    return Array.from(String(w || "")).join(" ");
-  }).join("   ");
+  var COMPANY_WORD_GAP = "\u00a0\u00a0\u00a0";
 
-  function letterSpacedHtml(word) {
-    return Array.from(String(word || ""), function (ch) {
-      return '<span class="eq-mfoot-co-ch">' + esc(ch) + "</span>";
-    }).join("");
-  }
+  var COMPANY_DISPLAY_LINE = COMPANY_WORDS.join(COMPANY_WORD_GAP);
 
   function companyMarkup() {
     return COMPANY_WORDS.map(function (w) {
-      return '<span class="eq-mfoot-co-part">' + letterSpacedHtml(w) + "</span>";
+      return '<span class="eq-mfoot-co-part">' + esc(w) + "</span>";
     }).join("");
   }
 
@@ -570,7 +564,7 @@
 
       '<div class="eq-mfoot-brand">' +
 
-      '<p class="eq-mfoot-company" data-i18n-skip data-eq-co-layout="ch1-word3" aria-label="Equsto Teknoloji Limited">' +
+      '<p class="eq-mfoot-company" data-i18n-skip data-eq-co-layout="word3" aria-label="Equsto Teknoloji Limited">' +
 
       companyMarkup() +
 
