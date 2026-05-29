@@ -1604,13 +1604,18 @@ body.bd-page.besos.eq-shop .eq-mfoot-col a:hover {
 }
 body.bd-page.besos.eq-shop .eq-mfoot-brand {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 16px 24px;
+  gap: 6px;
   margin-bottom: 18px;
   padding-top: 8px;
   border-top: 1px solid var(--bes-rule);
+}
+body.bd-page.besos.eq-shop .eq-mfoot-powered {
+  margin: 0;
+  text-align: center;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.45);
 }
 body.bd-page.besos.eq-shop .eq-mfoot-logo {
   display: inline-flex;
