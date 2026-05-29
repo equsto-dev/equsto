@@ -4,7 +4,7 @@
 
  * Veri: /data/footer-vitrin.json — href her zaman dolu (eski site / sitemap).
 
- * @version sss-page 20260531e
+ * @version vitrum-powered 20260527f
 
  */
 
@@ -258,7 +258,12 @@
 
       tagline: "Equsto Teknolojisi · Gastronomi Tasarımı",
 
-      legal: { terms: "/contact", privacy: "/contact", company: "Equsto Teknoloji Limited" },
+      legal: {
+        terms: "/contact",
+        privacy: "/contact",
+        returns: "/iade-politikasi",
+        company: "Equsto Teknoloji Limited",
+      },
 
       columns: [
 
@@ -514,6 +519,13 @@
 
 
 
+  function poweredByHtml() {
+    var prefix = t("footer.powered_by_prefix", "Powered By");
+    return esc(prefix) + ' <span class="eq-mfoot-vitrum-name">Vitrum</span>';
+  }
+
+
+
   function buildHtml(data) {
 
     var cols = normalizeColumns(data)
@@ -532,7 +544,7 @@
 
     var tagline = t("footer.tagline", (data && data.tagline) || defaultFooterData().tagline);
 
-    var poweredBy = t("footer.powered_by", "Powered By Vitrum");
+    var poweredBy = poweredByHtml();
 
     var legal = (data && data.legal) || defaultFooterData().legal;
 
@@ -566,9 +578,9 @@
 
       "</p>" +
 
-      '<p class="eq-mfoot-powered" data-i18n="footer.powered_by">' +
+      '<p class="eq-mfoot-powered">' +
 
-      esc(poweredBy) +
+      poweredBy +
 
       "</p>" +
 
@@ -605,6 +617,16 @@
       '">' +
 
       esc(t("footer.privacy", "Gizlilik")) +
+
+      "</a>" +
+
+      '<a href="' +
+
+      esc(resolveLinkHref(legal.returns || "/iade-politikasi")) +
+
+      '">' +
+
+      esc(t("footer.returns", "İade politikası")) +
 
       "</a>" +
 

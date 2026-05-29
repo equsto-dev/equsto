@@ -143,4 +143,10 @@ if (fs.existsSync(checkUtf8)) {
   if (r.status !== 0) process.exit(r.status ?? 1);
 }
 
+const verifyPdp = path.join(siteDir, "scripts/verify-pdp-kilit.mjs");
+if (fs.existsSync(verifyPdp)) {
+  const r = spawnSync(process.execPath, [verifyPdp], { cwd: siteDir, stdio: "inherit" });
+  if (r.status !== 0) process.exit(r.status ?? 1);
+}
+
 console.log("[vercel-prebuild] OK");
