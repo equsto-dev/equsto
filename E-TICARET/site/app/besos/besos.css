@@ -1543,8 +1543,17 @@ body.bd-page.besos.eq-shop footer.footer.eq-mfoot {
   color: rgba(255, 255, 255, 0.88);
   background: #000;
 }
-body.bd-page.besos.eq-shop .eq-mfoot-back {
+body.bd-page.besos.eq-shop .eq-mfoot-back,
+body.bd-page.besos.eq-shop #eq-mfoot-back,
+body.bd-page.besos.eq-shop .eq-mfoot-top,
+body.bd-page.besos.eq-shop #eq-mfoot-top,
+body.bd-page.besos.eq-shop a.eq-mfoot-top,
+body.bd-page.besos.eq-shop [data-eq-mfoot-top],
+body.bd-page.besos.eq-shop footer.footer.eq-mfoot .eq-mfoot-brand > button,
+body.bd-page.besos.eq-shop footer.footer.eq-mfoot .eq-mfoot-main > button {
   display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
 body.bd-page.besos.eq-shop .eq-mfoot-main,
 body.bd-page.besos.eq-shop .eq-mfoot-legal {

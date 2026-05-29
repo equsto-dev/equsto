@@ -681,17 +681,29 @@
 
 
 
-  function wire(host) {
-
-    wireLinkHrefs(host);
-
-    host
+  function removeScrollControls(root) {
+    var scope = root && root.querySelectorAll ? root : document;
+    scope
       .querySelectorAll(
-        ".eq-mfoot-back, #eq-mfoot-back, .eq-mfoot-top, #eq-mfoot-top, [data-eq-mfoot-top]"
+        ".eq-mfoot-back, #eq-mfoot-back, .eq-mfoot-top, #eq-mfoot-top, [data-eq-mfoot-top], a.eq-mfoot-top"
       )
       .forEach(function (el) {
         el.remove();
       });
+    if (root && root.querySelectorAll) {
+      root
+        .querySelectorAll(".eq-mfoot-brand > button, .eq-mfoot-main > button")
+        .forEach(function (el) {
+          if (el.id !== "eq-mfoot-cookie") el.remove();
+        });
+    }
+  }
+
+  function wire(host) {
+
+    wireLinkHrefs(host);
+
+    removeScrollControls(host);
 
     try {
 
@@ -748,6 +760,8 @@
     loadFooterData().then(function (data) {
 
       render(host, data);
+
+      removeScrollControls(document);
 
     });
 
