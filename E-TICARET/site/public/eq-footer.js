@@ -60,30 +60,29 @@
 
 
 
-  /** Tek satır — harf arası 1 nbsp, sözcük arası 3 nbsp (tarayıcı tek boşluğa indirgemesin). */
+  /** E Q U S T O   T E K N O L O J İ   L İ M İ T E D — harf arası 1, sözcük arası 3 boşluk. */
 
-  var COMPANY_PARTS = [
+  var COMPANY_WORDS = ["EQUSTO", "TEKNOLOJİ", "LİMİTED"];
 
-    "E Q U S T O",
+  var COMPANY_DISPLAY_LINE = COMPANY_WORDS.map(function (w) {
+    return Array.from(String(w || "")).join(" ");
+  }).join("   ");
 
-    "T E K N O L O J İ",
-
-    "L İ M İ T E D",
-
-  ];
-
-  var COMPANY_DISPLAY_LINE = COMPANY_PARTS.join("   ");
-
-
+  function letterSpacedHtml(word) {
+    return Array.from(String(word || ""), function (ch) {
+      return '<span class="eq-mfoot-co-ch">' + esc(ch) + "</span>";
+    }).join("");
+  }
 
   function companyMarkup() {
+    return COMPANY_WORDS.map(function (w) {
+      return '<span class="eq-mfoot-co-part">' + letterSpacedHtml(w) + "</span>";
+    }).join("");
+  }
 
-    return COMPANY_PARTS.map(function (part) {
-
-      return esc(part.replace(/ /g, "\u00a0"));
-
-    }).join("\u00a0\u00a0\u00a0");
-
+  function fixCompanyLine(host) {
+    var el = host && host.querySelector ? host.querySelector(".eq-mfoot-company") : null;
+    if (el) el.innerHTML = companyMarkup();
   }
 
 
@@ -545,8 +544,6 @@
 
 
 
-    var companyLine = t("footer.company_display", companyMarkup());
-
     var tagline = t("footer.tagline", (data && data.tagline) || defaultFooterData().tagline);
 
     var poweredBlock = isBesosPage()
@@ -573,9 +570,9 @@
 
       '<div class="eq-mfoot-brand">' +
 
-      '<p class="eq-mfoot-company" data-i18n="footer.company_display" aria-label="Equsto Teknoloji Limited">' +
+      '<p class="eq-mfoot-company" data-i18n-skip data-eq-co-layout="ch1-word3" aria-label="Equsto Teknoloji Limited">' +
 
-      esc(companyLine) +
+      companyMarkup() +
 
       "</p>" +
 
@@ -710,6 +707,8 @@
       if (typeof window.eqI18nApply === "function") window.eqI18nApply(host);
 
     } catch (_) {}
+
+    fixCompanyLine(host);
 
     var cookie = host.querySelector("#eq-mfoot-cookie");
 
