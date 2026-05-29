@@ -34,6 +34,7 @@
     "feed:google": "node scripts/build-google-merchant-feed.mjs",
     "feed:google:stats": "tsx scripts/run-google-merchant-feed.ts --stats",
     "verify:pdp-kilit": "node scripts/verify-pdp-kilit.mjs",
+    "verify:topnav-kilit": "node scripts/verify-topnav-kilit.mjs",
     "i18n:build": "node scripts/build-i18n-en.mjs && node scripts/build-pfos-labels-en.mjs",
     "i18n:check": "node scripts/check-i18n-parity.mjs",
     "i18n:geo-blog": "node scripts/fix-bloghub-i18n.mjs",

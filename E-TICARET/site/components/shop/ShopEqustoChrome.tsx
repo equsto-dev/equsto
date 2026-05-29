@@ -25,6 +25,7 @@ function toggleDrawer() {
   if (typeof fn === "function") fn();
 }
 
+/** Legacy vitrin üst bant — KİLİT: public/topnav-bar-design-KILIT.txt */
 export default function ShopEqustoChrome({ activeDept }: { activeDept?: ShopDeptSlug | null }) {
   return (
     <ShopChromePortal>

@@ -1,5 +1,5 @@
 /** Cache bust — shop App Router sayfaları */
-export const SHOP_ASSET_V = "20260529topnav-bar-design-end2";
+export const SHOP_ASSET_V = "20260529topnav-kilit";
 
 /** Dept / ekipmanlar JSON — legacy static JS */
 export const CATALOG_DATA_V = SHOP_ASSET_V;
