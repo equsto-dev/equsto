@@ -125,12 +125,6 @@ export default function ShopEqustoChrome({ activeDept }: { activeDept?: ShopDept
           <span className="topnav-sep" aria-hidden="true">
             |
           </span>
-          <div className="topnav-item topnav-besos" onClick={() => goDept("besos")} data-i18n="nav.bar_design">
-            Bar Design
-          </div>
-          <span className="topnav-sep" aria-hidden="true">
-            |
-          </span>
           {TOP_DEPTS.map((d, i) => (
             <Fragment key={d.key}>
               {i > 0 ? (
@@ -147,6 +141,12 @@ export default function ShopEqustoChrome({ activeDept }: { activeDept?: ShopDept
               </div>
             </Fragment>
           ))}
+          <span className="topnav-sep" aria-hidden="true">
+            |
+          </span>
+          <div className="topnav-item topnav-besos" onClick={() => goDept("besos")} data-i18n="nav.bar_design">
+            Bar Design
+          </div>
         </div>
       </nav>
       <span data-eq-shop-chrome-v={SHOP_ASSET_V} hidden aria-hidden="true" />

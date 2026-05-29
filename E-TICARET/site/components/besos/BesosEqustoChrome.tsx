@@ -177,6 +177,25 @@ export default function BesosEqustoChrome() {
           <span className="topnav-sep" aria-hidden="true">
             |
           </span>
+          {DEPT_NAV.map(({ key, labelKey, fallback }) => (
+            <Fragment key={key}>
+              <span className="topnav-sep" aria-hidden="true">
+                |
+              </span>
+              <div
+                className="topnav-item"
+                role="button"
+                tabIndex={0}
+                onClick={() => goEqDept(key)}
+                data-i18n={labelKey}
+              >
+                {fallback}
+              </div>
+            </Fragment>
+          ))}
+          <span className="topnav-sep" aria-hidden="true">
+            |
+          </span>
           <div
             className="topnav-item topnav-besos active"
             role="button"
@@ -195,25 +214,6 @@ export default function BesosEqustoChrome() {
               </span>
             </span>
           </div>
-          <span className="topnav-sep" aria-hidden="true">
-            |
-          </span>
-          {DEPT_NAV.map(({ key, labelKey, fallback }) => (
-            <Fragment key={key}>
-              <span className="topnav-sep" aria-hidden="true">
-                |
-              </span>
-              <div
-                className="topnav-item"
-                role="button"
-                tabIndex={0}
-                onClick={() => goEqDept(key)}
-                data-i18n={labelKey}
-              >
-                {fallback}
-              </div>
-            </Fragment>
-          ))}
         </div>
       </nav>
       <nav className="bd-besos-subnav" aria-label="Bar Design Studio" data-i18n-attr="aria-label:besos.hdr_studio">
