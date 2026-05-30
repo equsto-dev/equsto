@@ -72,7 +72,6 @@ export async function findProductForPdp(
         return { row, dept: urlDept };
       }
       if (catalogUrlSlug(row).toLowerCase() === slug) return { row, dept: urlDept };
-      if (legacyMeiliPathSlug(row) === slug) return { row, dept: urlDept };
       if (matchCatalogRowByPathSlug(row, slug)) return { row, dept: urlDept };
     }
   } catch {
