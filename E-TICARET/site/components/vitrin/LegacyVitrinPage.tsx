@@ -9,9 +9,11 @@ function applyLegacyVitrinI18n() {
   if (!root) return;
   const w = window as Window & {
     eqI18nApply?: (node?: ParentNode | Document) => void;
+    eqPfosI18nApply?: () => void;
     eqI18nReady?: Promise<void>;
   };
   if (typeof w.eqI18nApply === "function") w.eqI18nApply(root);
+  if (typeof w.eqPfosI18nApply === "function") w.eqPfosI18nApply();
 }
 
 type LegacyVitrinPageProps = {

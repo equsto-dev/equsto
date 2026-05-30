@@ -6,11 +6,18 @@
 
   var LABELS = null;
   var loadPromise = null;
+  var applyTimer = null;
+  var observer = null;
+
+  function labelsUrl() {
+    var v = window.__EQ_I18N_JSON_V || window.__EQ_PFOS_LABELS_V || "20260530pfos-i18n";
+    return "/i18n/pfos-labels-en.json?v=" + encodeURIComponent(v);
+  }
 
   function loadLabels() {
     if (LABELS) return Promise.resolve(LABELS);
     if (loadPromise) return loadPromise;
-    loadPromise = fetch("/i18n/pfos-labels-en.json", { credentials: "same-origin" })
+    loadPromise = fetch(labelsUrl(), { credentials: "same-origin", cache: "no-store" })
       .then(function (r) {
         return r.ok ? r.json() : { labels: {} };
       })
@@ -41,17 +48,7 @@
     if (!q || window.eqLang !== "en") return q;
     var out = Object.assign({}, q);
     if (out.text) out.text = pfosLabel(out.text);
-    if (Array.isArray(out.options)) {
-      out.options = out.options.map(pfosLabel);
-    }
-    if (out.branches && typeof out.branches === "object") {
-      var nb = {};
-      Object.keys(out.branches).forEach(function (k) {
-        var nk = pfosLabel(k);
-        nb[nk] = (out.branches[k] || []).map(pfosLabel);
-      });
-      out.branches = nb;
-    }
+    if (out.note) out.note = pfosLabel(out.note);
     return out;
   }
 
@@ -83,19 +80,13 @@
       var en = pfosLabel(t);
       if (en !== t) opt.textContent = en;
     });
-    root.querySelectorAll("[placeholder]").forEach(function (el) {
-      var ph = el.getAttribute("placeholder");
-      if (ph) {
-        var en = pfosLabel(ph);
-        if (en !== ph) el.setAttribute("placeholder", en);
-      }
-    });
-    root.querySelectorAll("[aria-label]").forEach(function (el) {
-      var al = el.getAttribute("aria-label");
-      if (al) {
-        var en = pfosLabel(al);
-        if (en !== al) el.setAttribute("aria-label", en);
-      }
+    ["placeholder", "aria-label", "title"].forEach(function (attr) {
+      root.querySelectorAll("[" + attr + "]").forEach(function (el) {
+        var val = el.getAttribute(attr);
+        if (!val) return;
+        var en = pfosLabel(val);
+        if (en !== val) el.setAttribute(attr, en);
+      });
     });
   }
 
@@ -106,6 +97,14 @@
       document.getElementById("eq-legacy-vitrin-root") ||
       document.body;
     walkText(root);
+  }
+
+  function scheduleApply() {
+    if (applyTimer) clearTimeout(applyTimer);
+    applyTimer = setTimeout(function () {
+      applyTimer = null;
+      applyPfosI18n();
+    }, 80);
   }
 
   function hookFetch() {
@@ -128,16 +127,22 @@
     };
   }
 
+  function observeRoot() {
+    if (observer) return;
+    var root = document.querySelector(".eq-pfos") || document.body;
+    observer = new MutationObserver(scheduleApply);
+    observer.observe(root, { childList: true, subtree: true, characterData: false });
+  }
+
   function boot() {
     if (window.eqLang !== "en") return;
     loadLabels().then(function () {
       hookFetch();
       applyPfosI18n();
-      var obs = new MutationObserver(function () {
-        applyPfosI18n();
-      });
-      var root = document.querySelector(".eq-pfos") || document.body;
-      obs.observe(root, { childList: true, subtree: true, characterData: false });
+      observeRoot();
+      try {
+        window.dispatchEvent(new CustomEvent("eq-pfos-i18n-ready"));
+      } catch (_) {}
     });
   }
 
@@ -149,6 +154,7 @@
   } else {
     boot();
   }
-  document.addEventListener("eq-i18n-ready", boot);
+  document.addEventListener("equsto:i18n-ready", boot);
   document.addEventListener("eq-lang-change", boot);
+  window.addEventListener("load", scheduleApply, { once: true });
 })();
