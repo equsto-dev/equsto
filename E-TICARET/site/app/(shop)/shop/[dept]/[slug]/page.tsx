@@ -1,12 +1,20 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { SHOP_ASSET_V } from "@/lib/shop/assets";
+import JsonLdScript from "@/components/seo/JsonLdScript";
 import ShopBodyClass from "@/components/shop/ShopBodyClass";
 import ShopEqustoChrome from "@/components/shop/ShopEqustoChrome";
 import ShopProductMain from "@/components/shop/ShopProductMain";
+import ShopProductPdpBoot from "@/components/shop/ShopProductPdpBoot";
 import ShopProductScripts from "@/components/shop/ShopProductScripts";
 import ShopStyles from "@/components/shop/ShopStyles";
+import { SHOP_ASSET_V } from "@/lib/shop/assets";
 import { isShopDeptSlug } from "@/lib/shop/depts";
+import {
+  buildProductJsonLd,
+  buildProductMetadata,
+  findProductForPdp,
+  rowToPdpSsr,
+} from "@/lib/shop/pdp-server";
 
 export const dynamic = "force-dynamic";
 
@@ -17,17 +25,14 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { dept, slug } = await params;
   if (!isShopDeptSlug(dept)) return {};
-  return {
-    title: "Ürün Detayı · Equsto",
-    description: "Endüstriyel mutfak ekipmanı ürün detayı. Teknik özellikler, fiyat, stok ve teklif.",
-    alternates: {
-      canonical: `https://equsto.com/shop/${dept}/${slug}`,
-      languages: {
-        tr: `https://equsto.com/shop/${dept}/${slug}`,
-        en: `https://equsto.com/en/shop/${dept}/${slug}`,
-      },
-    },
-  };
+  const found = await findProductForPdp(dept, slug);
+  if (!found) {
+    return {
+      title: "Ürün bulunamadı · Equsto",
+      robots: { index: false, follow: true },
+    };
+  }
+  return buildProductMetadata(rowToPdpSsr(found.row, found.dept));
 }
 
 export default async function ShopProductPage({
@@ -38,14 +43,22 @@ export default async function ShopProductPage({
   const { dept, slug } = await params;
   if (!isShopDeptSlug(dept) || !slug) notFound();
 
+  const found = await findProductForPdp(dept, slug);
+  if (!found) notFound();
+
+  const ssr = rowToPdpSsr(found.row, found.dept);
+  const jsonLd = buildProductJsonLd(ssr);
+
   return (
     <>
+      <JsonLdScript data={jsonLd} />
       {/* eslint-disable-next-line @next/next/no-css-tags */}
       <link rel="stylesheet" href={`/eq-product-page.css?v=${SHOP_ASSET_V}`} precedence="high" />
       <ShopStyles variant="product" />
       <ShopBodyClass className="eq-shop" />
       <ShopEqustoChrome activeDept={null} />
-      <ShopProductMain />
+      <ShopProductMain ssr={ssr} />
+      <ShopProductPdpBoot />
       <ShopProductScripts />
     </>
   );

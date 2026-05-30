@@ -123,7 +123,7 @@ export function absoluteAssetUrl(pathOrUrl: string, origin: string): string {
   return s.startsWith("/") ? `${base}${s}` : `${base}/${s}`;
 }
 
-function cleanDescription(row: CatalogRow, maxLen = 5000): string {
+export function cleanDescription(row: CatalogRow, maxLen = 5000): string {
   const parts = [
     String(row.name || ""),
     String(row.brand || ""),
@@ -138,7 +138,7 @@ function cleanDescription(row: CatalogRow, maxLen = 5000): string {
     .slice(0, maxLen);
 }
 
-function feedTitle(row: CatalogRow): string {
+export function feedTitle(row: CatalogRow): string {
   const name = String(row.name || "").trim();
   const brand = String(row.brand || "").trim();
   if (!name) return "";
