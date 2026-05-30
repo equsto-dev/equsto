@@ -6,6 +6,7 @@ import ShopBodyClass from "@/components/shop/ShopBodyClass";
 import ShopEqustoChrome from "@/components/shop/ShopEqustoChrome";
 import ShopProductMain from "@/components/shop/ShopProductMain";
 import ShopProductPdpBoot from "@/components/shop/ShopProductPdpBoot";
+import ShopProductPdpSeed from "@/components/shop/ShopProductPdpSeed";
 import ShopProductScripts from "@/components/shop/ShopProductScripts";
 import ShopStyles from "@/components/shop/ShopStyles";
 import { SHOP_ASSET_V } from "@/lib/shop/assets";
@@ -14,6 +15,7 @@ import {
   buildProductJsonLd,
   buildProductMetadata,
   findProductForPdp,
+  rowToPdpClientSeed,
   rowToPdpSsr,
 } from "@/lib/shop/pdp-server";
 
@@ -53,10 +55,12 @@ export default async function ShopProductPage({
   }
 
   const ssr = rowToPdpSsr(found.row, found.dept);
+  const seed = rowToPdpClientSeed(found.row, found.dept);
   const jsonLd = buildProductJsonLd(ssr);
 
   return (
     <>
+      <ShopProductPdpSeed seed={seed} />
       <JsonLdScript data={jsonLd} />
       {/* eslint-disable-next-line @next/next/no-css-tags */}
       <link rel="stylesheet" href={`/eq-product-page.css?v=${SHOP_ASSET_V}`} precedence="high" />
