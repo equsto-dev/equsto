@@ -18,7 +18,7 @@ export default function ShopProductScripts() {
       <Script src={`/eq-product-reviews.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-merchant-schema.js?v=${v}`} strategy="afterInteractive" />
       <Script src="/ecom-data.js" strategy="afterInteractive" />
-      <Script src={`/eq-shop-catalog-bootstrap.js?v=${v}`} strategy="beforeInteractive" />
+      <Script src={`/eq-shop-catalog-bootstrap.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-vendor-sanitize.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-competitor-redirects.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-display-terminology.js?v=${v}`} strategy="afterInteractive" />
