@@ -6,7 +6,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { fixMisfiledIzgaraCategory } from "../lib/catalog/atalay-pisirme-category.ts";
+import { fixAtalayPisirmeCategory } from "../lib/catalog/atalay-pisirme-category.ts";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const PISIRME = path.join(ROOT, "public/data/dept/pisirme.json");
@@ -18,7 +18,7 @@ let n = 0;
 
 for (const row of rows) {
   const prev = row.category;
-  const next = fixMisfiledIzgaraCategory(row);
+  const next = fixAtalayPisirmeCategory(row);
   if (next !== prev) {
     row.category = next;
     n++;
@@ -35,7 +35,7 @@ if (fs.existsSync(CATALOG)) {
   let c = 0;
   for (const row of cat.products || []) {
     const prev = row.category;
-    const next = fixMisfiledIzgaraCategory(row);
+    const next = fixAtalayPisirmeCategory(row);
     if (next !== prev) {
       row.category = next;
       c++;
