@@ -2,6 +2,7 @@
 
 import Script from "next/script";
 import { useEffect } from "react";
+import AssetCdnConfigScript from "@/components/shop/AssetCdnConfigScript";
 import { SHOP_ASSET_V } from "@/lib/shop/assets";
 
 type Props = {
@@ -45,6 +46,7 @@ export default function RawLegacyPage({
         <link rel="stylesheet" href={`/contact.css?v=${v}`} />
       ) : null}
       <Script src={`/theme.js?v=${v}`} strategy="beforeInteractive" />
+      <AssetCdnConfigScript />
       <Script src={`/eq-site-urls.js?v=${v}`} strategy="beforeInteractive" />
       <div className={bodyClass} dangerouslySetInnerHTML={{ __html: bodyHtml }} />
       <Script src={`/eq-i18n.js?v=${v}`} strategy="afterInteractive" />

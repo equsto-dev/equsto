@@ -1,0 +1,35 @@
+{
+  "updatedAt": "2026-05-30T14:01:54.564Z",
+  "bucket": "equsto-assets",
+  "region": "eu-central-1",
+  "totalFiles": 12965,
+  "totalMb": 2141.4,
+  "dirs": [
+    {
+      "prefix": "images/",
+      "s3Uri": "s3://equsto-assets/images",
+      "ok": true
+    },
+    {
+      "prefix": "data/caglayan-market/",
+      "s3Uri": "s3://equsto-assets/data/caglayan-market",
+      "ok": true
+    },
+    {
+      "prefix": "data/prosogutma-market/",
+      "s3Uri": "s3://equsto-assets/data/prosogutma-market",
+      "ok": true
+    },
+    {
+      "prefix": "data/vitrum-drawings/",
+      "s3Uri": "s3://equsto-assets/data/vitrum-drawings",
+      "ok": true
+    },
+    {
+      "prefix": "data/advanced-cuisine-clear-ice/images/",
+      "s3Uri": "s3://equsto-assets/data/advanced-cuisine-clear-ice/images",
+      "ok": true
+    }
+  ],
+  "cdnEnvHint": "(CloudFront URL → NEXT_PUBLIC_ASSET_CDN_URL)"
+}
