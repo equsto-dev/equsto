@@ -46,7 +46,7 @@
     var l = document.createElement('link');
     l.id = 'eq-cart-css';
     l.rel = 'stylesheet';
-    l.href = '/eq-cart.css?v=20260530cart-layout';
+    l.href = '/eq-cart.css?v=20260530cart-v2';
     document.head.appendChild(l);
   }
 
@@ -539,8 +539,12 @@
     var p = pRaw.replace(/^₺\s*/, '').trim();
     var c = card.getAttribute('data-eq-c') || '';
     var imgEl = card.querySelector('.prod-img img, .eq-rail-card-img img, .eq-dept-plp-card__img img');
-    var imgRaw = imgEl ? imgEl.getAttribute('data-eq-img-raw') || '' : '';
-    var imgSrc = imgEl ? imgEl.getAttribute('src') || '' : '';
+    var imgRaw = imgEl
+      ? imgEl.getAttribute('data-eq-img-raw') ||
+        imgEl.getAttribute('data-eq-img') ||
+        ''
+      : '';
+    var imgSrc = imgEl ? imgEl.getAttribute('src') || imgEl.currentSrc || '' : '';
     var img = imgRaw || imgSrc || card.getAttribute('data-eq-img') || '';
     if (!n && !b) return null;
     return { n: n, b: b, c: c, p: p, img: img };
@@ -714,6 +718,7 @@
       if (arr[i].id === id) {
         if (norm.quote) return 'merged';
         arr[i].q = (arr[i].q || 1) + qty;
+        if (norm.img) arr[i].img = resolveCartItemImg(norm.img);
         return 'merged';
       }
     }
@@ -1025,13 +1030,14 @@
   }
 
   function changeLineQty(id, delta) {
+    if (delta < 0) {
+      removeLine(id);
+      return;
+    }
     var arr = load();
     for (var i = 0; i < arr.length; i++) {
       if (arr[i].id === id) {
-        if (arr[i].quote || isQuotePriceLabel(arr[i].p)) {
-          if (delta < 0) removeLine(id);
-          return;
-        }
+        if (arr[i].quote || isQuotePriceLabel(arr[i].p)) return;
         setLineQty(id, (arr[i].q || 1) + delta);
         return;
       }
@@ -1043,7 +1049,7 @@
       '<button type="button" class="eq-cart-qty__btn equsto-cart-qty-minus" data-id="' +
       escAttr(x.id) +
       '" aria-label="' +
-      escAttr(__cartT('cart.decrease', 'Azalt')) +
+      escAttr(__cartT('cart.remove_line', 'Sepetten kaldır')) +
       '">−</button>';
     if (isQuote) {
       return (
@@ -1074,16 +1080,50 @@
     );
   }
 
+  function enrichCartLineImages(arr) {
+    var changed = false;
+    for (var i = 0; i < arr.length; i++) {
+      var line = arr[i];
+      if (!line) continue;
+      var resolved = resolveCartItemImg(String(line.img || '').trim());
+      if (resolved && resolved !== line.img) {
+        line.img = resolved;
+        changed = true;
+        continue;
+      }
+      if (line.img) continue;
+      var ozti = line.c || line.n || '';
+      if (typeof window.eqOztiAxImageFromSku === 'function' && ozti) {
+        var ax = window.eqOztiAxImageFromSku(String(ozti));
+        if (ax) {
+          line.img = resolveCartItemImg(ax);
+          changed = true;
+        }
+      }
+    }
+    if (changed) save(arr);
+    return arr;
+  }
+
   function renderCartLineHtml(x) {
     var q = x.q > 0 ? x.q : 1;
     var isQuote = !!(x.quote || isQuotePriceLabel(x.p));
     var unit = lineUnitNum(x);
     var total = lineTotalNum(x);
-    var src = cartImgSrc(x.img);
     var rawRel = String(x.img || '')
       .replace(/\\/g, '/')
       .replace(/^\.\//, '')
-      .replace(/^\/data\/images\//i, 'images/');
+      .replace(/^\/data\/images\//i, 'images/')
+      .replace(/^\//, '');
+    if (rawRel && !/^images\//i.test(rawRel) && /\.(jpe?g|png|webp|gif)(\?|#|$)/i.test(rawRel)) {
+      rawRel = 'images/' + rawRel;
+    }
+    var src = resolveCartItemImg(rawRel || String(x.img || '').trim());
+    if (!src && rawRel && typeof window.equstoDataAssetHref === 'function') {
+      try {
+        src = resolveCartItemImg(window.equstoDataAssetHref(rawRel));
+      } catch (eImg) {}
+    }
     var media = src
       ? '<img src="' +
         escAttr(src) +
@@ -1212,7 +1252,7 @@
   function renderPanelList() {
     var sc = document.getElementById('equsto-cart-scroll');
     if (!sc) return;
-    var arr = load();
+    var arr = enrichCartLineImages(load());
     if (!arr.length) {
       sc.innerHTML =
         '<div class="eq-cart-empty">' +
@@ -1633,6 +1673,7 @@
     toastCartAdded: toastCartAdded,
     clear: clearAll,
     syncFromServer: syncFromServer,
+    render: renderPanelList,
     _load: load,
   };
 

@@ -10,6 +10,18 @@ export default function ShopCartScripts() {
     <>
       <Script src="/ecom-data.js" strategy="afterInteractive" />
       <Script src={`/eq-shop-header.js?v=${v}`} strategy="afterInteractive" />
+      <Script
+        src={`/ecom-cart.js?v=${v}`}
+        strategy="afterInteractive"
+        onReady={() => {
+          try {
+            const cart = (window as Window & { EqustoCart?: { syncBadge?: () => void; render?: () => void } })
+              .EqustoCart;
+            cart?.syncBadge?.();
+            if (document.getElementById("equsto-cart-page")) cart?.render?.();
+          } catch (_) {}
+        }}
+      />
     </>
   );
 }

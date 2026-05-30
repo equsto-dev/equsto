@@ -905,7 +905,11 @@
     "total_qty_label": "Toplam adet",
     "grand_total": "Genel toplam",
     "hdr_cart_label": "Sepet",
-    "phone_prompt": "Telefon (ör. 0532…):"
+    "phone_prompt": "Telefon (ör. 0532…):",
+    "remove_line": "Sepetten kaldır",
+    "decrease": "Azalt",
+    "increase": "Artır",
+    "qty_aria": "Adet"
   },
   "login": {
     "title": "Üye girişi",
