@@ -53,7 +53,7 @@
         "type": "number",
         "required": "true",
         "mapsTo": "m2",
-        "motorEtkisi": "bant: ≤150 → 80-150; >150 → 150-250 (steakhouse/balikci)",
+        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan/birahane → 100-300 tek liste (ref 200 m²)",
         "note": "Bulut Mutfak ≤15 m²: yalnızca Grab&Go / Coffee Counter. Steakhouse/Balık: ≤150 → 80-150; >150 → 150-250."
       },
       {
@@ -132,6 +132,7 @@
             "Bilmiyorum"
           ],
           "Bar & Lounge": [
+            "Birahane",
             "Kokteyl Bar",
             "Wine Bar",
             "Beer Pub",
@@ -699,6 +700,31 @@
           "teklifKaynagi": "planlanan",
           "durum": "planlanan",
           "bantlar": []
+        },
+        "questions": []
+      },
+      {
+        "id": "bar_birahane",
+        "name": "Birahane",
+        "parent": "Bar & Lounge",
+        "desc": "Birahane / bira salonu · 100–300 m² referans ekipman listesi · motor: birahane",
+        "pfos": {
+          "motorSlug": "birahane",
+          "dukkanSecim": "Birahane",
+          "m2Min": 100,
+          "m2Max": 300,
+          "bantKurali": "Tek referans liste (100–300 m²); m² ile adet ölçeklenir",
+          "listeYolu": "proje-veri/11 BIRAHANE.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "100-300",
+              "label": "100–300 m²",
+              "referansM2": 200,
+              "listeDosya": "pfos-referans/birahane-100-300.json"
+            }
+          ]
         },
         "questions": []
       },
@@ -37879,6 +37905,6 @@
         "tip_kodu": ""
       }
     ],
-    "updated_at": "2026-05-30T01:24:58.597Z"
+    "updated_at": "2026-05-30T10:24:38.224Z"
   }
 }

@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-05-30T01:23:49.170Z",
+  "updated_at": "2026-05-30T10:22:13.452Z",
   "kategoriler": [
     {
       "id": "steakhouse",
@@ -109,7 +109,26 @@
             "kalemSayisi": 86,
             "toplamAdet": 104,
             "kaynakDosya": "03-italyan 100-300 m2.xlsx",
-            "yukleme": "2026-05-30T01:23:49.159Z"
+            "yukleme": "2026-05-30T10:21:38.514Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "birahane",
+      "label": "Birahane",
+      "ustKategori": "Bar & Lounge",
+      "bantlar": [
+        {
+          "id": "100-300",
+          "label": "100–300 m²",
+          "referansM2": 200,
+          "meta": {
+            "listeDosya": "birahane-100-300.json",
+            "kalemSayisi": 27,
+            "toplamAdet": 37,
+            "kaynakDosya": "11 BIRAHANE.xlsx",
+            "yukleme": "2026-05-30T10:22:13.449Z"
           }
         }
       ]
