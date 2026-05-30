@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-05-30T23:29:37.642Z",
+  "updated_at": "2026-05-30T23:38:31.707Z",
   "kategoriler": [
     {
       "id": "steakhouse",
@@ -110,6 +110,18 @@
             "toplamAdet": 104,
             "kaynakDosya": "03-italyan 100-300 m2.xlsx",
             "yukleme": "2026-05-30T10:21:38.514Z"
+          }
+        },
+        {
+          "id": "150-300",
+          "label": "150–300 m²",
+          "referansM2": 225,
+          "meta": {
+            "listeDosya": "italyan-150-300.json",
+            "kalemSayisi": 89,
+            "toplamAdet": 103,
+            "kaynakDosya": "19 THEHOUSE CAFE 150-300 m2.xlsx",
+            "yukleme": "2026-05-30T23:38:31.664Z"
           }
         }
       ]
@@ -295,6 +307,25 @@
             "toplamAdet": 31,
             "kaynakDosya": "17 TAVUKCU.xlsx",
             "yukleme": "2026-05-30T23:29:37.624Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "all-day-dining-cafe",
+      "label": "All Day Dining Cafe",
+      "ustKategori": "Restoran",
+      "bantlar": [
+        {
+          "id": "150-300",
+          "label": "150–300 m²",
+          "referansM2": 225,
+          "meta": {
+            "listeDosya": "all-day-dining-cafe-150-300.json",
+            "kalemSayisi": 89,
+            "toplamAdet": 103,
+            "kaynakDosya": "19 THEHOUSE CAFE 150-300 m2.xlsx",
+            "yukleme": "2026-05-30T23:38:31.704Z"
           }
         }
       ]

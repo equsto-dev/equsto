@@ -18,7 +18,8 @@ export type ListeBantId =
   | "300-500"
   | "40-100"
   | "kiosk"
-  | "60-100";
+  | "60-100"
+  | "150-300";
 
 export type M2BantTanim = {
   id: ListeBantId;
@@ -175,13 +176,14 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
       dukkanSecim: "İtalyan Restoran",
       m2Min: 100,
       m2Max: 300,
-      bantKurali: "Tek referans liste (100–300 m²); m² ile adet ölçeklenir",
+      bantKurali: "≤150 m² → 03-italyan (100–300); >150 m² → The House (150–300)",
       planPdf: "proje-veri/03-italyan.pdf",
-      listeYolu: "proje-veri/03-italyan 100-300 m2.xlsx",
+      listeYolu: "proje-veri/03-italyan 100-300 m2.xlsx · 19 THEHOUSE CAFE 150-300 m2.xlsx",
       teklifKaynagi: "pfos-referans",
       durum: "aktif",
       bantlar: [
-        liste("100-300", "100–300 m²", 200, "italyan"),
+        liste("100-300", "100–300 m² (≤150 m²)", 200, "italyan"),
+        liste("150-300", "150–300 m² (>150 m²)", 225, "italyan"),
       ],
     },
     questions: [],
@@ -338,16 +340,19 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
     id: "all_day_dining",
     name: "All Day Dining / Cafe",
     parent: "Restoran",
-    desc: "All dining cafe · teklif motoru: all-day-dining-cafe",
+    desc: "All day dining · 150–300 m² The House referans · >300 m² THC proforma",
     pfos: {
       motorSlug: "all-day-dining-cafe",
       dukkanSecim: "All Dining Cafe",
       m2Min: 150,
       m2Max: 400,
-      bantKurali: "Motor şablon; bant yok",
-      teklifKaynagi: "motor-sablon",
-      durum: "motor",
-      bantlar: [],
+      bantKurali: "150–300 m² → The House referans JSON; >300 m² → THC gömülü listeler",
+      listeYolu: "proje-veri/19 THEHOUSE CAFE 150-300 m2.xlsx",
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
+      bantlar: [
+        liste("150-300", "150–300 m²", 225, "all-day-dining-cafe"),
+      ],
     },
     questions: [],
   },

@@ -19,7 +19,8 @@ export type ReferansListeId =
   | "200-500"
   | "40-100"
   | "kiosk"
-  | "60-100";
+  | "60-100"
+  | "150-300";
 
 export function pickM2Bant(m2: number): M2BantId {
   return m2 <= 150 ? "80-150" : "150-250";
@@ -28,6 +29,16 @@ export function pickM2Bant(m2: number): M2BantId {
 /** Pizzacı: küçük salon 80–200, büyük 200–500 */
 export function pickPizzaciListe(m2: number): "80-200" | "200-500" {
   return m2 <= 200 ? "80-200" : "200-500";
+}
+
+/** İtalyan: ≤150 m² → 03-italyan (100–300); >150 → The House (150–300) */
+export function pickItalyanListe(m2: number): "100-300" | "150-300" {
+  return m2 <= 150 ? "100-300" : "150-300";
+}
+
+/** All day dining: 150–300 m² referans JSON (The House); >300 → gömülü THC listeleri */
+export function pickAllDayDiningListe(m2: number): "150-300" | null {
+  return m2 >= 150 && m2 <= 300 ? "150-300" : null;
 }
 
 /** Balıkçı: mahalle alt tipi veya m² bandı */
@@ -101,7 +112,8 @@ export async function loadReferansProfil(
     | "sarkuteri-kiosk"
     | "hamburger-kiosk"
     | "hotdog-kiosk"
-    | "tavukcu",
+    | "tavukcu"
+    | "all-day-dining-cafe",
   m2: number,
   listeId?: ReferansListeId,
   altTip?: string | null,
@@ -126,7 +138,11 @@ export async function loadReferansProfil(
                     ? "kiosk"
                     : kategoriId === "tavukcu"
                       ? "80-150"
-          : kategoriId === "italyan" || kategoriId === "birahane"
+                      : kategoriId === "italyan"
+                        ? pickItalyanListe(m2)
+                        : kategoriId === "all-day-dining-cafe"
+                          ? pickAllDayDiningListe(m2) ?? "150-300"
+          : kategoriId === "birahane"
           ? "100-300"
           : kategoriId === "balikci"
         ? pickBalikciListe(m2, altTip)

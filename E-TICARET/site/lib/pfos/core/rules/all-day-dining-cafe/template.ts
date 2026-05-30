@@ -1,8 +1,15 @@
 /**
- * All Day Dining Cafe — referans kütüphanesinden motor şablonu.
- * THC Bakü / The House Cafe tipi @ 280 m²
+ * All Day Dining Cafe — resolveTemplateForQuote ile m² bandına göre yüklenir.
  */
 
-import { buildAllDayDiningTemplate } from "@/lib/pfos/referans/all-day-dining";
+import type { ConceptTemplate } from "../../engine-types";
 
-export const allDayDiningCafe = buildAllDayDiningTemplate();
+export const allDayDiningCafe: ConceptTemplate = {
+  konsept: "all-day-dining-cafe",
+  label: "All Day Dining Cafe",
+  ornekler: ["The House Café", "Big Chefs"],
+  segmentBasis: "m2",
+  seatDensity: 1.5,
+  teklifPozModu: "referans",
+  items: [],
+};

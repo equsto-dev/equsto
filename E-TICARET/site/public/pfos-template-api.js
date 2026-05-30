@@ -7,7 +7,7 @@
   var API_QUOTE = "/api/pfos/quote";
   var API_CALC = "/api/pfos/calculate";
   var API_KONSEPT = "/api/pfos/konseptler";
-  var FALLBACK_KONSEPT = "/data/pfos-konseptler.json?v=20260527tavukcu";
+  var FALLBACK_KONSEPT = "/data/pfos-konseptler.json?v=20260527thehouse-150-300";
 
   var KAT_DEPT = {
     A: "kahve",
@@ -47,6 +47,13 @@
     if (d === "Pizzacı") return "pizzaci";
     if (d === "Pideci" || /pideci|pide\s*ci/i.test(d)) return "pideci";
     if (d === "Sushi" || /sushi|omakase/i.test(d) || /sushi/i.test(k)) return "sushi";
+    if (
+      d === "All Dining Cafe" ||
+      /all\s*day\s*dining|the\s*house\s*caf/i.test(d) ||
+      /all\s*day\s*dining/i.test(k)
+    ) {
+      return "all-day-dining-cafe";
+    }
     if (
       d === "Şarküteri Kiosk" ||
       /şarküteri\s*kiosk|sarkuteri\s*kiosk/i.test(d) ||

@@ -1,6 +1,6 @@
 /**
- * 03-italyan 100-300 m2.xlsx → public/data/pfos-referans + pfos-kategoriler.json
- * Kullanım: node scripts/import-italyan-konsept.mjs
+ * 19 THEHOUSE CAFE 150-300 m2.xlsx → italyan + all-day-dining-cafe (150–300 m²)
+ * Kullanım: node scripts/import-thehouse-150-300-konsept.mjs
  */
 import ExcelJS from "exceljs";
 import fs from "node:fs/promises";
@@ -13,10 +13,24 @@ const PROJE_VERI = path.join(SITE, "..", "..", "PFOS", "veri", "proje-veri");
 const OUT = path.join(SITE, "public", "data", "pfos-referans");
 const MANIFEST = path.join(SITE, "public", "data", "pfos-kategoriler.json");
 
-const KATEGORI_ID = "italyan";
-const BANT_ID = "100-300";
-const XLSX = "03-italyan 100-300 m2.xlsx";
-const REFERANS_M2 = 200;
+const BANT_ID = "150-300";
+const XLSX = "19 THEHOUSE CAFE 150-300 m2.xlsx";
+const REFERANS_M2 = 225;
+
+const TARGETS = [
+  {
+    kategoriId: "italyan",
+    label: "İtalyan Restoran 150–300 m²",
+    ustKategori: "Restaurant",
+    kategoriLabel: "İtalyan Restoran",
+  },
+  {
+    kategoriId: "all-day-dining-cafe",
+    label: "All Day Dining Cafe 150–300 m² (The House)",
+    ustKategori: "Restoran",
+    kategoriLabel: "All Day Dining Cafe",
+  },
+];
 
 const POZ_RE = /^[A-Z]\d{1,2}A?$|^\d{1,3}$/;
 function isPoz(s) {
@@ -39,12 +53,11 @@ function parseWs(ws) {
   let bolumAd = "";
   ws.eachRow({ includeEmpty: false }, (row, rowNumber) => {
     if (rowNumber < 4) return;
-    const cells = row.values;
-    const a = cellStr(cells[1]);
-    const b = cellStr(cells[2]);
-    const c = cellStr(cells[3]);
-    const d = cells[4];
-    const e = cells[5];
+    const a = cellStr(row.getCell(1).value);
+    const b = cellStr(row.getCell(2).value);
+    const c = cellStr(row.getCell(3).value);
+    const d = row.getCell(4).value;
+    const e = row.getCell(5).value;
     if (!a && !b && !c) return;
     const au = a.toUpperCase();
     if (au === "TOPLAM ADET") return;
@@ -54,10 +67,10 @@ function parseWs(ws) {
       bolum = a.split("-")[0]?.trim() || a.charAt(0);
       return;
     }
-    let poz = null,
-      ad = null,
-      olcu = null,
-      adetRaw = null;
+    let poz = null;
+    let ad = null;
+    let olcu = null;
+    let adetRaw = null;
     if (b && c && isPoz(b)) {
       poz = b;
       ad = c;
@@ -82,19 +95,15 @@ function parseWs(ws) {
   return rows;
 }
 
-async function main() {
-  const src = path.join(PROJE_VERI, XLSX);
-  const wb = new ExcelJS.Workbook();
-  await wb.xlsx.readFile(src);
-  const kalemler = parseWs(wb.worksheets[0]);
+async function writeListe(target, kalemler) {
   const toplamAdet = kalemler.reduce(
     (t, r) => (typeof r.adet === "number" ? t + r.adet : t),
     0,
   );
   const liste = {
-    kategoriId: KATEGORI_ID,
+    kategoriId: target.kategoriId,
     bantId: BANT_ID,
-    label: "İtalyan Restoran 100–300 m²",
+    label: target.label,
     referansM2: REFERANS_M2,
     kaynakDosya: XLSX,
     yukleme: new Date().toISOString(),
@@ -102,11 +111,29 @@ async function main() {
     toplamAdet,
     kalemler,
   };
-
-  await fs.mkdir(OUT, { recursive: true });
-  const dest = path.join(OUT, `${KATEGORI_ID}-${BANT_ID}.json`);
+  const dest = path.join(OUT, `${target.kategoriId}-${BANT_ID}.json`);
   await fs.writeFile(dest, JSON.stringify(liste, null, 2), "utf8");
   console.log("OK", dest, kalemler.length, "kalem");
+  return {
+    id: BANT_ID,
+    label: "150–300 m²",
+    referansM2: REFERANS_M2,
+    meta: {
+      listeDosya: `${target.kategoriId}-${BANT_ID}.json`,
+      kalemSayisi: liste.kalemSayisi,
+      toplamAdet: liste.toplamAdet,
+      kaynakDosya: liste.kaynakDosya,
+      yukleme: liste.yukleme,
+    },
+  };
+}
+
+async function main() {
+  const src = path.join(PROJE_VERI, XLSX);
+  const wb = new ExcelJS.Workbook();
+  await wb.xlsx.readFile(src);
+  const kalemler = parseWs(wb.worksheets[0]);
+  await fs.mkdir(OUT, { recursive: true });
 
   let manifest = { version: "1", updated_at: new Date().toISOString(), kategoriler: [] };
   try {
@@ -114,33 +141,25 @@ async function main() {
   } catch {
     /* yeni manifest */
   }
-  const meta = {
-    listeDosya: `${KATEGORI_ID}-${BANT_ID}.json`,
-    kalemSayisi: liste.kalemSayisi,
-    toplamAdet: liste.toplamAdet,
-    kaynakDosya: liste.kaynakDosya,
-    yukleme: liste.yukleme,
-  };
-  const kategoriler = Array.isArray(manifest.kategoriler) ? manifest.kategoriler : [];
-  const idx = kategoriler.findIndex((k) => k.id === KATEGORI_ID);
-  const bant = {
-    id: BANT_ID,
-    label: "100–300 m²",
-    referansM2: REFERANS_M2,
-    meta,
-  };
-  const existing = idx >= 0 ? kategoriler[idx] : null;
-  const otherBantlar = (existing?.bantlar ?? []).filter((b) => b.id !== BANT_ID);
-  const kayit = {
-    id: KATEGORI_ID,
-    label: "İtalyan Restoran",
-    ustKategori: "Restaurant",
-    bantlar: [...otherBantlar, bant].sort((a, b) =>
-      String(a.id).localeCompare(String(b.id)),
-    ),
-  };
-  if (idx >= 0) kategoriler[idx] = kayit;
-  else kategoriler.push(kayit);
+  const kategoriler = Array.isArray(manifest.kategoriler) ? [...manifest.kategoriler] : [];
+
+  for (const target of TARGETS) {
+    const bant = await writeListe(target, kalemler);
+    const idx = kategoriler.findIndex((k) => k.id === target.kategoriId);
+    const existing = idx >= 0 ? kategoriler[idx] : null;
+    const otherBantlar = (existing?.bantlar ?? []).filter((b) => b.id !== BANT_ID);
+    const kayit = {
+      id: target.kategoriId,
+      label: target.kategoriLabel,
+      ustKategori: target.ustKategori,
+      bantlar: [...otherBantlar, bant].sort((a, b) =>
+        String(a.id).localeCompare(String(b.id)),
+      ),
+    };
+    if (idx >= 0) kategoriler[idx] = kayit;
+    else kategoriler.push(kayit);
+  }
+
   manifest.kategoriler = kategoriler;
   manifest.updated_at = new Date().toISOString();
   await fs.writeFile(MANIFEST, JSON.stringify(manifest, null, 2), "utf8");

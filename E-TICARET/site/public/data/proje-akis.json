@@ -53,7 +53,7 @@
         "type": "number",
         "required": "true",
         "mapsTo": "m2",
-        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan/birahane → 100-300; pastane → 100-200; pideci → 100-250; sushi → 40-100; tavukcu → 80-150; sarkuteri-kiosk → kiosk; hamburger-kiosk → 60-100; hotdog-kiosk → kiosk; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu → 300-500 (zone şablon)",
+        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan ≤150→100-300, >150→150-300; all-day-dining 150–300→The House, >300→THC; birahane → 100-300; pastane → 100-200; pideci → 100-250; sushi → 40-100; tavukcu → 80-150; sarkuteri-kiosk → kiosk; hamburger-kiosk → 60-100; hotdog-kiosk → kiosk; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu → 300-500 (zone şablon)",
         "note": "Bulut Mutfak ≤15 m²: yalnızca Grab&Go / Coffee Counter. Steakhouse/Balık: ≤150 → 80-150; >150 → 150-250."
       },
       {
@@ -373,23 +373,29 @@
         "id": "restaurant_italyan",
         "name": "İtalyan Restoran",
         "parent": "Restoran",
-        "desc": "İtalyan / trattoria · 100–300 m² referans ekipman listesi · motor: italyan",
+        "desc": "İtalyan / trattoria · ≤150 m² 03-italyan · >150 m² The House · motor: italyan",
         "pfos": {
           "motorSlug": "italyan",
           "dukkanSecim": "İtalyan Restoran",
           "m2Min": 100,
           "m2Max": 300,
-          "bantKurali": "Tek referans liste (100–300 m²); m² ile adet ölçeklenir",
+          "bantKurali": "≤150 m² → 03-italyan (100–300); >150 m² → The House (150–300)",
           "planPdf": "proje-veri/03-italyan.pdf",
-          "listeYolu": "proje-veri/03-italyan 100-300 m2.xlsx",
+          "listeYolu": "proje-veri/03-italyan 100-300 m2.xlsx · 19 THEHOUSE CAFE 150-300 m2.xlsx",
           "teklifKaynagi": "pfos-referans",
           "durum": "aktif",
           "bantlar": [
             {
               "id": "100-300",
-              "label": "100–300 m²",
+              "label": "100–300 m² (≤150 m²)",
               "referansM2": 200,
               "listeDosya": "pfos-referans/italyan-100-300.json"
+            },
+            {
+              "id": "150-300",
+              "label": "150–300 m² (>150 m²)",
+              "referansM2": 225,
+              "listeDosya": "pfos-referans/italyan-150-300.json"
             }
           ]
         },
@@ -564,16 +570,24 @@
         "id": "all_day_dining",
         "name": "All Day Dining / Cafe",
         "parent": "Restoran",
-        "desc": "All dining cafe · teklif motoru: all-day-dining-cafe",
+        "desc": "All day dining · 150–300 m² The House referans · >300 m² THC proforma",
         "pfos": {
           "motorSlug": "all-day-dining-cafe",
           "dukkanSecim": "All Dining Cafe",
           "m2Min": 150,
           "m2Max": 400,
-          "bantKurali": "Motor şablon; bant yok",
-          "teklifKaynagi": "motor-sablon",
-          "durum": "motor",
-          "bantlar": []
+          "bantKurali": "150–300 m² → The House referans JSON; >300 m² → THC gömülü listeler",
+          "listeYolu": "proje-veri/19 THEHOUSE CAFE 150-300 m2.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "150-300",
+              "label": "150–300 m²",
+              "referansM2": 225,
+              "listeDosya": "pfos-referans/all-day-dining-cafe-150-300.json"
+            }
+          ]
         },
         "questions": []
       },
