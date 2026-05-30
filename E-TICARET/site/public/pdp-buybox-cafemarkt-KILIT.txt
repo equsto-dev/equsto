@@ -7,33 +7,32 @@ Bu dosya, onaylı PDP buybox düzeninin bozulmaması içindir.
 Değiştirmeden önce kullanıcıdan AÇIK ONAY alın.
 
 ── Beklenen görünüm (canlı hero sağ sütun) ─────────────────────────────
-1. Fiyat: büyük puntoda «323.785,00 TL» + yanında «(Kdv Dahil)»
-2. 2×2 avantaj ızgarası (.eq-cmf-perks): kargo, servis, voltaj/elektrik, garanti
-3. Satın alma satırı (.eq-cmf-purchase):
-   • Adet stepper (− / 1 / +) — .eq-cmf-qty
-   • Mavi tam genişlik «SEPETE EKLE» (.eq-cmf-add-btn)
-4. Havale promosyon şeridi (.eq-cmf-promo) — fiyat varsa %3 indirim metni
-5. Proje Fabrikası buybox İÇİNDE değil — yalnızca .eq-epdp-cta alt şeridinde
+1. Üst rozet: «Ücretsiz Kargo» (.eq-cmf-badge-ship)
+2. Tek fiyat: turuncu «323.785,00 TL» + «KDV dahil» (.eq-cmf-price__amount)
+3. Yeşil teslimat şeridi (.eq-cmf-ship-banner)
+4. Satın alma satırı (.eq-cmf-purchase): adet stepper + turuncu «Sepete Ekle»
+5. İki yeşil/teal düğme (.eq-cmf-actions--solid):
+   • Proje Fabrikası (.eq-cmf-btn--pfos)
+   • İletişime Geç (.eq-cmf-btn--contact)
+6. Alt çerçeveli düğmeler (.eq-cmf-actions--outline):
+   • Whatsapp ile Soru Sor (.eq-cmf-btn--wa)
+   • Ödeme Seçenekleri (.eq-cmf-btn--pay → .eq-cmf-pay-panel)
 
 YASAK (onay olmadan):
+  • KDV hariç ikinci fiyat satırı eklemek
   • Buybox’ı eski dikey «Sepete ekle + Proje Fabrikası» yığınına döndürmek
-  • Adet stepper’ı kaldırmak veya select dropdown’a çevirmek
-  • .eq-cmf-perks 2×2 ızgarasını kaldırmak
-  • Amazon sarı buybox (.eq-product-buybox gradient) geri getirmek
+  • Adet stepper’ı kaldırmak
+  • Proje Fabrikası / İletişime Geç’i buybox dışına taşımak (alt .eq-epdp-cta)
+  • Amazon sarı buybox geri getirmek
   • renderEpdpBuybox dışında buybox HTML üretmek
 
 ── Kilitli dosyalar ───────────────────────────────────────────────────────
-  public/eq-product-page-inline.js   — renderEpdpBuybox, pdpBuyboxPerks,
-                                       bindEpdpBuybox, buyboxPriceParts
-  public/eq-product-page.css         — .eq-cmf-buybox, .eq-cmf-perks,
-                                       .eq-cmf-purchase, .eq-cmf-qty
+  public/eq-product-page-inline.js   — renderEpdpBuybox, bindEpdpBuybox,
+                                       pdpWhatsAppHref, buyboxPriceParts
+  public/eq-product-page.css         — eq-cmf-buybox ve .eq-cmf-* sınıfları
   public/ecom-cart.js                — parseItemFromEl → .eq-cmf-qty okuma
   lib/shop/assets.ts                 — SHOP_ASSET_V
-  scripts/build-i18n-en.mjs          — pdp.add_to_cart_cmf, pdp.perk_*, pdp.havale_promo
-
-── Sepet ────────────────────────────────────────────────────────────────────
-  Adet: buybox .eq-cmf-qty__val → cartAddButtonAttrs tıklanınca data-q
-  Toast: data-eq-cart-toast="1" (PLP kartları ile aynı)
+  scripts/build-i18n-en.mjs          — pdp.buybox metinleri
 
 ── Deploy / doğrulama ─────────────────────────────────────────────────────
   npm run verify:pdp-buybox-kilit

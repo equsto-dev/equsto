@@ -1537,92 +1537,70 @@ window.searchFilter = window.searchFilter || function () {};
     }
 
     /** KİLİT: public/pdp-buybox-cafemarkt-KILIT.txt — Cafemarkt tarzı buybox */
-    function pdpBuyboxPerks(x) {
-      var specs =
-        String((x && x.specs) || "") +
-        " " +
-        (Array.isArray(x && x.teknik_ozellikler) ? x.teknik_ozellikler.join(" ") : "");
-      var perks = [
-        { cls: "ship", label: __pdpT("pdp.perk_shipping", "Bu üründe kargo ücretsiz!") },
-        { cls: "service", label: __pdpT("pdp.perk_install", "Servis kurulumu gerekebilir") },
-      ];
-      var volt = specs.match(/\b(\d+(?:\s*\/\s*\d+)?\s*V\b)/i);
-      perks.push({
-        cls: "power",
-        label: volt ? volt[1].replace(/\s+/g, " ").trim() : __pdpT("pdp.perk_power", "Endüstriyel elektrik bağlantısı"),
-      });
-      perks.push({ cls: "warranty", label: __pdpT("pdp.perk_warranty", "Garantili") });
-      return perks.slice(0, 4);
-    }
-
-    function pdpHavalePromoHtml(x, parts) {
-      if (!parts || parts.quoteOnly || parts.empty) return "";
-      var n = parsePriceTlNumber(x && x.price, x);
-      if (!(n > 0)) return "";
-      var discounted = Math.round(n * 0.97 * 100) / 100;
-      var price = discounted.toLocaleString("tr-TR", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-      return (
-        '<p class="eq-cmf-promo">' +
-        esc(
-          __pdpT(
-            "pdp.havale_promo",
-            "Bu ürünü havale ile ekstra %3 indirim ile {price} TL'ye satın alabilirsiniz.",
-            { price: price }
-          )
-        ) +
-        "</p>"
-      );
+    function pdpWhatsAppHref(x) {
+      var phone = "905326842608";
+      try {
+        if (window.EQUSTO_WHATSAPP_E164) {
+          phone = String(window.EQUSTO_WHATSAPP_E164).replace(/\D/g, "");
+        }
+      } catch (_) {}
+      var sku = (x && (x.sku || x.model)) || "";
+      var text =
+        "Merhaba, " +
+        ((x && x.name) || "ürün") +
+        (sku ? " (" + sku + ")" : "") +
+        " hakkında bilgi almak istiyorum.";
+      return "https://wa.me/" + phone + "?text=" + encodeURIComponent(text);
     }
 
     function renderEpdpBuybox(x, cartU) {
       var parts = buyboxPriceParts(x);
-      var priceRow = parts.quoteOnly
+      var pfosHref = eqHtmlUrl(typeof window.equstoUrl === "function" ? window.equstoUrl("pfos") : "pfos.html");
+      var contactHref = eqHtmlUrl(typeof window.equstoUrl === "function" ? window.equstoUrl("contact") : "contact.html");
+      var waHref = pdpWhatsAppHref(x);
+      var priceBlock = parts.quoteOnly
         ? '<div class="eq-cmf-price eq-cmf-price--quote">' +
           esc(__pdpT("pdp.quote_for_contact", "Teklif için iletişim")) +
           "</div>"
         : parts.empty
-          ? '<div class="eq-cmf-price"><span class="eq-cmf-price__val">—</span></div>'
+          ? '<div class="eq-cmf-price"><span class="eq-cmf-price__amount">—</span></div>'
           : '<div class="eq-cmf-price">' +
-            '<span class="eq-cmf-price__val">' +
-            esc(parts.int + (parts.frac ? "," + parts.frac : ",00")) +
-            '</span><span class="eq-cmf-price__cur">TL</span>' +
-            '<span class="eq-cmf-price__vat">' +
-            esc(__pdpT("pdp.vat_included_paren", "(Kdv Dahil)")) +
+            '<span class="eq-cmf-price__amount">' +
+            esc(parts.int + (parts.frac ? "," + parts.frac : ",00") + " TL") +
+            '</span><span class="eq-cmf-price__vat-tag">' +
+            esc(__pdpT("pdp.vat_included_tag", "KDV dahil")) +
             "</span></div>";
-      var perks = pdpBuyboxPerks(x)
-        .map(function (p) {
-          return (
-            '<div class="eq-cmf-perk eq-cmf-perk--' +
-            esc(p.cls) +
-            '"><span class="eq-cmf-perk__label">' +
-            esc(p.label) +
-            "</span></div>"
-          );
-        })
-        .join("");
-      var cartBtn =
-        window.EqustoCart && EqustoCart.cartAddButtonAttrs
-          ? "<button " +
-            EqustoCart.cartAddButtonAttrs(cartU) +
-            ' data-eq-cart-toast="1" class="eq-cart-add eq-cmf-add-btn">' +
-            esc(__pdpT("pdp.add_to_cart_cmf", "SEPETE EKLE")) +
-            "</button>"
-          : "";
       var quoteNote = parts.quoteOnly
         ? '<p class="eq-cmf-quote-note">' +
           esc(__pdpT("pdp.price_preparing", "Fiyat listesi hazırlanıyor — sepete ekleyip teklif isteyebilirsiniz.")) +
           "</p>"
         : "";
+      var cartBtn =
+        window.EqustoCart && EqustoCart.cartAddButtonAttrs
+          ? "<button " +
+            EqustoCart.cartAddButtonAttrs(cartU) +
+            ' data-eq-cart-toast="1" class="eq-cart-add eq-cmf-add-btn">' +
+            '<span class="eq-cmf-add-btn__icon" aria-hidden="true">' +
+            '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>' +
+            "</span>" +
+            esc(__pdpT("pdp.add_to_cart_cmf", "Sepete Ekle")) +
+            "</button>"
+          : "";
       return (
         '<div class="eq-epdp-buybox eq-cmf-buybox" aria-label="' +
         esc(__pdpT("pdp.buybox_aria", "Satın al")) +
         '">' +
-        priceRow +
+        '<div class="eq-cmf-topbar">' +
+        '<span class="eq-cmf-badge-ship">' +
+        esc(__pdpT("pdp.badge_free_ship", "Ücretsiz Kargo")) +
+        "</span></div>" +
+        priceBlock +
         quoteNote +
-        '<div class="eq-cmf-perks" aria-label="' +
-        esc(__pdpT("pdp.perks_aria", "Ürün avantajları")) +
-        '">' +
-        perks +
+        '<div class="eq-cmf-ship-banner">' +
+        '<span class="eq-cmf-ship-banner__icon" aria-hidden="true">' +
+        '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 6h13v9H1zM14 9h4l3 4v2h-7V9z"/><circle cx="6" cy="17" r="2"/><circle cx="18" cy="17" r="2"/></svg>' +
+        "</span>" +
+        esc(__pdpT("pdp.ship_banner", "Seçili bölgelerde ücretsiz teslimat")) +
         "</div>" +
         '<div class="eq-cmf-purchase">' +
         '<div class="eq-cmf-qty" role="group" aria-label="' +
@@ -1638,8 +1616,44 @@ window.searchFilter = window.searchFilter || function () {};
         "</div>" +
         cartBtn +
         "</div>" +
-        pdpHavalePromoHtml(x, parts) +
-        "</div>"
+        '<div class="eq-cmf-actions eq-cmf-actions--solid">' +
+        '<a class="eq-cmf-btn eq-cmf-btn--pfos" href="' +
+        esc(pfosHref) +
+        '">' +
+        esc(__pdpT("nav.pfos", "Proje Fabrikası")) +
+        "</a>" +
+        '<a class="eq-cmf-btn eq-cmf-btn--contact" href="' +
+        esc(contactHref) +
+        '">' +
+        esc(__pdpT("pdp.contact_cta", "İletişime Geç")) +
+        "</a></div>" +
+        '<div class="eq-cmf-actions eq-cmf-actions--outline">' +
+        '<a class="eq-cmf-btn-outline eq-cmf-btn--wa" href="' +
+        esc(waHref) +
+        '" target="_blank" rel="noopener">' +
+        '<span class="eq-cmf-btn-outline__icon" aria-hidden="true">' +
+        '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492l4.587-1.452A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.378l-.357-.212-3.064.972.998-2.988-.233-.375A9.818 9.818 0 0 1 2.182 12c0-5.422 4.396-9.818 9.818-9.818S21.818 6.578 21.818 12 17.422 21.818 12 21.818z"/></svg>' +
+        "</span>" +
+        esc(__pdpT("pdp.whatsapp_ask", "Whatsapp ile Soru Sor")) +
+        "</a>" +
+        '<button type="button" class="eq-cmf-btn-outline eq-cmf-btn--pay">' +
+        '<span class="eq-cmf-btn-outline__icon" aria-hidden="true">' +
+        '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>' +
+        "</span>" +
+        esc(__pdpT("pdp.payment_options", "Ödeme Seçenekleri")) +
+        "</button></div>" +
+        '<div class="eq-cmf-pay-panel" hidden>' +
+        "<ul>" +
+        "<li>" +
+        esc(__pdpT("pdp.pay_card", "Kredi kartı — 3D Secure ile güvenli ödeme")) +
+        "</li>" +
+        "<li>" +
+        esc(__pdpT("pdp.pay_wire", "Havale / EFT — ekstra %3 indirim")) +
+        "</li>" +
+        "<li>" +
+        esc(__pdpT("pdp.pay_corporate", "Kurumsal fatura ve vadeli ödeme — Proje Fabrikası teklifi sonrası")) +
+        "</li>" +
+        "</ul></div></div>"
       );
     }
 
@@ -1649,25 +1663,37 @@ window.searchFilter = window.searchFilter || function () {};
       var valEl = box.querySelector(".eq-cmf-qty__val");
       var minus = box.querySelector(".eq-cmf-qty__minus");
       var plus = box.querySelector(".eq-cmf-qty__plus");
-      if (!valEl || !minus || !plus) return;
-      function qty() {
-        return Math.max(1, Math.min(99, parseInt(valEl.textContent, 10) || 1));
+      if (valEl && minus && plus) {
+        function qty() {
+          return Math.max(1, Math.min(99, parseInt(valEl.textContent, 10) || 1));
+        }
+        function setQty(q) {
+          q = Math.max(1, Math.min(99, q));
+          valEl.textContent = String(q);
+          minus.disabled = q <= 1;
+          plus.disabled = q >= 99;
+        }
+        minus.addEventListener("click", function (e) {
+          e.preventDefault();
+          setQty(qty() - 1);
+        });
+        plus.addEventListener("click", function (e) {
+          e.preventDefault();
+          setQty(qty() + 1);
+        });
+        setQty(1);
       }
-      function setQty(q) {
-        q = Math.max(1, Math.min(99, q));
-        valEl.textContent = String(q);
-        minus.disabled = q <= 1;
-        plus.disabled = q >= 99;
+      var payBtn = box.querySelector(".eq-cmf-btn--pay");
+      var payPanel = box.querySelector(".eq-cmf-pay-panel");
+      if (payBtn && payPanel) {
+        payBtn.addEventListener("click", function (e) {
+          e.preventDefault();
+          var open = payPanel.hasAttribute("hidden");
+          if (open) payPanel.removeAttribute("hidden");
+          else payPanel.setAttribute("hidden", "");
+          payBtn.setAttribute("aria-expanded", open ? "true" : "false");
+        });
       }
-      minus.addEventListener("click", function (e) {
-        e.preventDefault();
-        setQty(qty() - 1);
-      });
-      plus.addEventListener("click", function (e) {
-        e.preventDefault();
-        setQty(qty() + 1);
-      });
-      setQty(1);
     }
 
     function renderEpdpFeaturesCol(x) {
@@ -2229,25 +2255,15 @@ window.searchFilter = window.searchFilter || function () {};
         esc(pdpLeadParagraph(x)) +
         "</p>" +
         renderEpdpBuybox(x, cartU) +
-        '<div class="eq-epdp-cta eq-caglayan-cta">' +
         (pdf && /\.pdf/i.test(pdf)
-          ? '<a class="eq-caglayan-btn" href="' +
+          ? '<div class="eq-epdp-cta eq-caglayan-cta">' +
+            '<a class="eq-caglayan-btn" href="' +
             esc(pdf) +
             '" target="_blank" rel="noopener">' +
             esc(__pdpT("pdp.pdf_catalog", "PDF katalog")) +
-            "</a>"
+            "</a></div>"
           : "") +
-        '<a class="eq-caglayan-btn" href="' +
-        esc(contactHref) +
-        '">' +
-        esc(__pdpT("pdp.quote_contact", "Teklif ve iletişim")) +
-        '</a>' +
-        '<a class="eq-caglayan-btn eq-caglayan-btn--primary" href="' +
-        esc(pfosHref) +
-        '">' +
-        esc(__pdpT("nav.pfos", "Proje Fabrikası")) +
-        "</a>" +
-        "</div></div></div>" +
+        "</div></div>" +
         '<div class="eq-epdp-panels eq-caglayan-panels">' +
         renderEpdpFeaturesCol(x) +
         renderEpdpDocsCol(x) +
