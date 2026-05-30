@@ -17,6 +17,8 @@
 ## Canlı site
 Deploy kökü yalnızca **`E-TICARET/site`** — buna toplu silme uygulanmaz.
 
+**Önemli:** `public/*-KILIT.txt` dosyaları Git'te **kalmalı** — `vercel-prebuild` deploy doğrulaması bunları arar. Faz A'da yanlışlıkla untrack edilmişti (2026-05-30 deploy hatası).
+
 ## Tekrar çalıştırma
 ```bash
 node scripts/faz-a-safe-repo-cleanup.mjs --dry-run

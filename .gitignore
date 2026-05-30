@@ -21,7 +21,7 @@ EQUSTO-WORK/PFOS/kaynaklar/
 equsto-v2/
 E-TICARET/veri/
 
-# Public yedek / kilit (canlıda gerekmez)
+# Public yedek (canlıda gerekmez) — *-KILIT.txt Git'te KALIR (vercel-prebuild verify)
 E-TICARET/site/public/data/ekipmanlar.json.legacy-off
 E-TICARET/site/public/data/ekipmanlar-full-archive.json
 E-TICARET/site/public/data/pfos-archive-extract.json
