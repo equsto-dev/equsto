@@ -7,7 +7,7 @@
   var API_QUOTE = "/api/pfos/quote";
   var API_CALC = "/api/pfos/calculate";
   var API_KONSEPT = "/api/pfos/konseptler";
-  var FALLBACK_KONSEPT = "/data/pfos-konseptler.json?v=20260531hotdog-kiosk";
+  var FALLBACK_KONSEPT = "/data/pfos-konseptler.json?v=20260527tavukcu";
 
   var KAT_DEPT = {
     A: "kahve",
@@ -67,6 +67,14 @@
       /hotdog|sosisli\s*kiosk/i.test(k)
     ) {
       return "hotdog-kiosk";
+    }
+    if (
+      d === "Tavukçu" ||
+      d === "Fried Chicken" ||
+      /tavukçu|tavukcu|fried\s*chicken|pilic\s*cevirme/i.test(d) ||
+      /tavukçu|fried\s*chicken/i.test(k)
+    ) {
+      return "tavukcu";
     }
     if (d === "Dönerci") return "kebap-ortadogu";
     return "";

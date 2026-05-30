@@ -1,0 +1,236 @@
+{
+  "kategoriId": "tavukcu",
+  "bantId": "80-150",
+  "label": "Tavukçu 80–150 m²",
+  "referansM2": 115,
+  "kaynakDosya": "17 TAVUKCU.xlsx",
+  "yukleme": "2026-05-30T23:29:37.624Z",
+  "kalemSayisi": 28,
+  "toplamAdet": 31,
+  "kalemler": [
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A1",
+      "ad": "ÇİFT EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "140*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A2",
+      "ad": "DUVAR RAFI",
+      "olcu": "140*30*3",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A3",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN RAFLI",
+      "olcu": "90*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A4",
+      "ad": "DUVAR RAFI",
+      "olcu": "90*30*3",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- SOĞUK ODA",
+      "poz": "B1",
+      "ad": "PANEL TİP SOĞUK ODA",
+      "olcu": "300*200*240",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- SOĞUK ODA",
+      "poz": "B2",
+      "ad": "İSTİF RAFI",
+      "olcu": "137*46*160",
+      "adet": 2
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- SOĞUK ODA",
+      "poz": "B3",
+      "ad": "İSTİF RAFI",
+      "olcu": "152*46*160",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME- SERVİS",
+      "poz": "C1",
+      "ad": "KASA BANKOSU",
+      "olcu": "100*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME- SERVİS",
+      "poz": "C2",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+      "olcu": "100*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME- SERVİS",
+      "poz": "C3",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "175*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME- SERVİS",
+      "poz": "C4",
+      "ad": "BUZ MAKİNASI, BREMA",
+      "olcu": "42 kg/gün",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME- SERVİS",
+      "poz": "C5",
+      "ad": "BULAŞIK YIKAMA MAKİNASI",
+      "olcu": "500 tb/saat",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME- SERVİS",
+      "poz": "C6",
+      "ad": "CAM KAPILI TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+      "olcu": "188*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME- SERVİS",
+      "poz": "C7",
+      "ad": "ÇAY OTOMATI",
+      "olcu": "23 lt.",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME- SERVİS",
+      "poz": "C8",
+      "ad": "PORTAKAL SIKMA MAKİNASı",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME- SERVİS",
+      "poz": "C9",
+      "ad": "BAR BLENDER, SANTOS",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME- SERVİS",
+      "poz": "C11",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+      "olcu": "90*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME- SERVİS",
+      "poz": "C12",
+      "ad": "ÇALIŞMA TEZGAHI",
+      "olcu": "125*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME- SERVİS",
+      "poz": "C13",
+      "ad": "SETALTI DERİN DONDURUCU",
+      "olcu": "60*60*85",
+      "adet": 2
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME- SERVİS",
+      "poz": "C14",
+      "ad": "SETALTI TEZGAH TİPİ BUZDOLABI, 2 KAPILI",
+      "olcu": "143*70*56",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME- SERVİS",
+      "poz": "C15",
+      "ad": "6 AÇIK ALEVLİ OCAK",
+      "olcu": "120*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME- SERVİS",
+      "poz": "C16",
+      "ad": "FRİTÖZ, ÇİFT HAZNELİ, ELK",
+      "olcu": "80*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME- SERVİS",
+      "poz": "C17",
+      "ad": "IZGARA, GAZLI, SETÜSTÜ",
+      "olcu": "40*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME- SERVİS",
+      "poz": "C18",
+      "ad": "TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+      "olcu": "188*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME- SERVİS",
+      "poz": "C19",
+      "ad": "PİLİÇ ÇEVİRME MAKİNASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME- SERVİS",
+      "poz": "C20",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+      "olcu": "90*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME- SERVİS",
+      "poz": "C21",
+      "ad": "SİNEK ÖLDÜRÜCÜ",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "Y- YER IZGARASI",
+      "poz": "Y1",
+      "ad": "YER IZGARASI",
+      "olcu": "—",
+      "adet": 2
+    }
+  ]
+}

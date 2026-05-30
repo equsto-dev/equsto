@@ -66,6 +66,12 @@
       "label": "Hotdog Kiosk",
       "kalemSayisi": 16,
       "not": "Kiosk referans (13 HOTDOG)"
+    },
+    {
+      "slug": "tavukcu",
+      "label": "Tavukçu",
+      "kalemSayisi": 28,
+      "not": "80–150 m² referans (17 TAVUKCU)"
     }
   ]
 }

@@ -99,6 +99,13 @@ export const PFOS_KATEGORI_TANIMLARI: PfosKategoriTanim[] = [
     bantlar: [{ id: "kiosk", label: "Kiosk referans", referansM2: 40 }],
   },
   {
+    id: "tavukcu",
+    label: "Tavukçu",
+    ustKategori: "Restoran",
+    planNot: "proje-veri/17 TAVUKCU.xlsx",
+    bantlar: [{ id: "80-150", label: "80–150 m²", referansM2: 115 }],
+  },
+  {
     id: "pizzaci",
     label: "Pizzacı",
     ustKategori: "Restaurant",

@@ -53,7 +53,7 @@
         "type": "number",
         "required": "true",
         "mapsTo": "m2",
-        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan/birahane → 100-300; pastane → 100-200; pideci → 100-250; sushi → 40-100; sarkuteri-kiosk → kiosk; hamburger-kiosk → 60-100; hotdog-kiosk → kiosk; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu → 300-500 (zone şablon)",
+        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan/birahane → 100-300; pastane → 100-200; pideci → 100-250; sushi → 40-100; tavukcu → 80-150; sarkuteri-kiosk → kiosk; hamburger-kiosk → 60-100; hotdog-kiosk → kiosk; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu → 300-500 (zone şablon)",
         "note": "Bulut Mutfak ≤15 m²: yalnızca Grab&Go / Coffee Counter. Steakhouse/Balık: ≤150 → 80-150; >150 → 150-250."
       },
       {
@@ -447,6 +447,31 @@
         "questions": []
       },
       {
+        "id": "restaurant_tavukcu",
+        "name": "Tavukçu",
+        "parent": "Restoran",
+        "desc": "Tavukçu / fried chicken · 80–150 m² referans ekipman listesi · motor: tavukcu",
+        "pfos": {
+          "motorSlug": "tavukcu",
+          "dukkanSecim": "Tavukçu",
+          "m2Min": 80,
+          "m2Max": 150,
+          "bantKurali": "Tek referans liste (80–150 m²); m² ile adet ölçeklenir",
+          "listeYolu": "proje-veri/17 TAVUKCU.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "80-150",
+              "label": "80–150 m²",
+              "referansM2": 115,
+              "listeDosya": "pfos-referans/tavukcu-80-150.json"
+            }
+          ]
+        },
+        "questions": []
+      },
+      {
         "id": "restaurant_kebap",
         "name": "Kebap & Ortadoğu",
         "parent": "Restoran",
@@ -783,16 +808,24 @@
         "id": "ff_fried_chicken",
         "name": "Fried Chicken",
         "parent": "Fast Food / QSR",
-        "desc": "Fried Chicken · liste hazırlanıyor — genel şablon",
+        "desc": "Fried chicken / tavukçu · 80–150 m² referans · motor: tavukcu",
         "pfos": {
-          "motorSlug": "",
+          "motorSlug": "tavukcu",
           "dukkanSecim": "Fried Chicken",
-          "m2Min": 40,
-          "m2Max": 200,
-          "bantKurali": "Liste hazırlanıyor — genel şablon",
-          "teklifKaynagi": "planlanan",
-          "durum": "planlanan",
-          "bantlar": []
+          "m2Min": 80,
+          "m2Max": 150,
+          "bantKurali": "Tek referans liste (80–150 m²); m² ile adet ölçeklenir",
+          "listeYolu": "proje-veri/17 TAVUKCU.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "80-150",
+              "label": "80–150 m²",
+              "referansM2": 115,
+              "listeDosya": "pfos-referans/tavukcu-80-150.json"
+            }
+          ]
         },
         "questions": []
       },
