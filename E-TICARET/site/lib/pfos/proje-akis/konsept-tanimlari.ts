@@ -5,7 +5,13 @@
  */
 
 /** m² bantı veya alt tip listesi (ör. mahalle balıkçı) */
-export type ListeBantId = "80-150" | "150-250" | "mahalle" | "referans" | "100-300";
+export type ListeBantId =
+  | "80-150"
+  | "150-250"
+  | "mahalle"
+  | "referans"
+  | "100-300"
+  | "100-200";
 
 export type M2BantTanim = {
   id: ListeBantId;
@@ -311,18 +317,21 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
   konseptPlanlanan("kafeterya", "Kafeterya", "Kafe / Coffee Shop", "Kafeterya", 80, 350),
   {
     id: "pastane",
-    name: "Pastane / Fırın",
-    parent: "Kafe / Coffee Shop",
-    desc: "Pastane & fırın hattı · motor planlanan",
+    name: "Pastane",
+    parent: "Pastane & Fırın",
+    desc: "Pastane / fırın · 100–200 m² referans ekipman listesi · motor: pastane",
     pfos: {
-      motorSlug: "",
-      dukkanSecim: "Pastane / Fırın",
-      m2Min: 40,
-      m2Max: 150,
-      bantKurali: "Liste hazırlanıyor — genel şablon",
-      teklifKaynagi: "planlanan",
-      durum: "planlanan",
-      bantlar: [],
+      motorSlug: "pastane",
+      dukkanSecim: "Pastane",
+      m2Min: 100,
+      m2Max: 200,
+      bantKurali: "Tek referans liste (100–200 m²); m² ile adet ölçeklenir",
+      listeYolu: "proje-veri/14-PASTANE.xlsx",
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
+      bantlar: [
+        liste("100-200", "100–200 m²", 150, "pastane"),
+      ],
     },
     questions: [],
   },

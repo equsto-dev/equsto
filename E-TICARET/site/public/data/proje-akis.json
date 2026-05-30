@@ -53,7 +53,7 @@
         "type": "number",
         "required": "true",
         "mapsTo": "m2",
-        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan/birahane → 100-300 tek liste (ref 200 m²)",
+        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan/birahane → 100-300; pastane → 100-200 (ref 150 m²)",
         "note": "Bulut Mutfak ≤15 m²: yalnızca Grab&Go / Coffee Counter. Steakhouse/Balık: ≤150 → 80-150; >150 → 150-250."
       },
       {
@@ -127,6 +127,7 @@
             "Bilmiyorum"
           ],
           "Pastane & Fırın": [
+            "Pastane",
             "Artisan / butik",
             "Endüstriyel fırın",
             "Bilmiyorum"
@@ -569,18 +570,26 @@
       },
       {
         "id": "pastane",
-        "name": "Pastane / Fırın",
-        "parent": "Kafe / Coffee Shop",
-        "desc": "Pastane & fırın hattı · motor planlanan",
+        "name": "Pastane",
+        "parent": "Pastane & Fırın",
+        "desc": "Pastane / fırın · 100–200 m² referans ekipman listesi · motor: pastane",
         "pfos": {
-          "motorSlug": "",
-          "dukkanSecim": "Pastane / Fırın",
-          "m2Min": 40,
-          "m2Max": 150,
-          "bantKurali": "Liste hazırlanıyor — genel şablon",
-          "teklifKaynagi": "planlanan",
-          "durum": "planlanan",
-          "bantlar": []
+          "motorSlug": "pastane",
+          "dukkanSecim": "Pastane",
+          "m2Min": 100,
+          "m2Max": 200,
+          "bantKurali": "Tek referans liste (100–200 m²); m² ile adet ölçeklenir",
+          "listeYolu": "proje-veri/14-PASTANE.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "100-200",
+              "label": "100–200 m²",
+              "referansM2": 150,
+              "listeDosya": "pfos-referans/pastane-100-200.json"
+            }
+          ]
         },
         "questions": []
       },
@@ -37905,6 +37914,6 @@
         "tip_kodu": ""
       }
     ],
-    "updated_at": "2026-05-30T10:24:38.224Z"
+    "updated_at": "2026-05-30T12:02:16.780Z"
   }
 }

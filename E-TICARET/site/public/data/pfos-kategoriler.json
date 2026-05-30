@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-05-30T10:22:13.452Z",
+  "updated_at": "2026-05-30T12:00:51.481Z",
   "kategoriler": [
     {
       "id": "steakhouse",
@@ -128,7 +128,26 @@
             "kalemSayisi": 27,
             "toplamAdet": 37,
             "kaynakDosya": "11 BIRAHANE.xlsx",
-            "yukleme": "2026-05-30T10:22:13.449Z"
+            "yukleme": "2026-05-30T11:53:21.707Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pastane",
+      "label": "Pastane",
+      "ustKategori": "Pastane & Fırın",
+      "bantlar": [
+        {
+          "id": "100-200",
+          "label": "100–200 m²",
+          "referansM2": 150,
+          "meta": {
+            "listeDosya": "pastane-100-200.json",
+            "kalemSayisi": 43,
+            "toplamAdet": 52,
+            "kaynakDosya": "14-PASTANE.xlsx",
+            "yukleme": "2026-05-30T12:00:51.439Z"
           }
         }
       ]

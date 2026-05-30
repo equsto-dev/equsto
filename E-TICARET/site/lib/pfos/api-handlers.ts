@@ -20,6 +20,7 @@ const M2_RANGES: Record<string, { min: number; max: number }> = {
   balikci: { min: 80, max: 250 },
   italyan: { min: 100, max: 300 },
   birahane: { min: 100, max: 300 },
+  pastane: { min: 100, max: 200 },
 };
 
 export function pfosGetConcepts() {
@@ -78,6 +79,15 @@ export function pfosGetConcepts() {
       m2Max: M2_RANGES.birahane.max,
       itemSayisi: 27,
       zorunluSayisi: 27,
+    },
+    {
+      konsept: "pastane",
+      label: KONSEPT_LABELS.pastane,
+      ornekler: ["Butik pastane", "Patisserie"],
+      m2Min: M2_RANGES.pastane.min,
+      m2Max: M2_RANGES.pastane.max,
+      itemSayisi: 43,
+      zorunluSayisi: 43,
     },
   ];
   return [...base.filter((t) => t.konsept !== "coffee-shop"), ...referansJson];
@@ -168,9 +178,14 @@ export async function pfosPostCalculate(req: NextRequest) {
   const staticTpl = PFOS_CONCEPT_BY_SLUG[pfosReq.konsept];
   if (
     !staticTpl &&
-    !["steakhouse", "balikci", "italyan", "birahane", "coffee-shop"].includes(
-      pfosReq.konsept,
-    )
+    ![
+      "steakhouse",
+      "balikci",
+      "italyan",
+      "birahane",
+      "pastane",
+      "coffee-shop",
+    ].includes(pfosReq.konsept)
   ) {
     return NextResponse.json(
       {
@@ -181,6 +196,7 @@ export async function pfosPostCalculate(req: NextRequest) {
           "balikci",
           "italyan",
           "birahane",
+          "pastane",
           "coffee-shop",
         ],
       },

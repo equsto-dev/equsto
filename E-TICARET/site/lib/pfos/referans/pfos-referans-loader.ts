@@ -8,7 +8,7 @@ const REF_DIR = () =>
   `${process.cwd()}/public/data/pfos-referans`;
 
 export type M2BantId = "80-150" | "150-250";
-export type ReferansListeId = M2BantId | "mahalle" | "referans" | "100-300";
+export type ReferansListeId = M2BantId | "mahalle" | "referans" | "100-300" | "100-200";
 
 export function pickM2Bant(m2: number): M2BantId {
   return m2 <= 150 ? "80-150" : "150-250";
@@ -72,7 +72,13 @@ export async function loadPfosReferansListe(
 }
 
 export async function loadReferansProfil(
-  kategoriId: "steakhouse" | "balikci" | "coffee-shop" | "italyan" | "birahane",
+  kategoriId:
+    | "steakhouse"
+    | "balikci"
+    | "coffee-shop"
+    | "italyan"
+    | "birahane"
+    | "pastane",
   m2: number,
   listeId?: ReferansListeId,
   altTip?: string | null,
@@ -81,9 +87,11 @@ export async function loadReferansProfil(
     listeId ??
     (kategoriId === "coffee-shop"
       ? "referans"
-      : kategoriId === "italyan" || kategoriId === "birahane"
-        ? "100-300"
-      : kategoriId === "balikci"
+      : kategoriId === "pastane"
+        ? "100-200"
+        : kategoriId === "italyan" || kategoriId === "birahane"
+          ? "100-300"
+          : kategoriId === "balikci"
         ? pickBalikciListe(m2, altTip)
         : pickM2Bant(m2));
   const raw = await loadPfosReferansListe(kategoriId, bantId);

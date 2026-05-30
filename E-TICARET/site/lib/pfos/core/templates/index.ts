@@ -14,6 +14,7 @@ import { buildCoffeeShopTemplate } from "../../referans/coffee-shop";
 import { buildSteakhouseTemplate } from "../../referans/steakhouse";
 import { buildItalyanTemplate } from "../../referans/italyan";
 import { buildBirahaneTemplate } from "../../referans/birahane";
+import { buildPastaneTemplate } from "../../referans/pastane";
 
 const DYNAMIC_KONSEPT = new Set<Konsept>([
   "steakhouse",
@@ -21,10 +22,14 @@ const DYNAMIC_KONSEPT = new Set<Konsept>([
   "coffee-shop",
   "italyan",
   "birahane",
+  "pastane",
 ]);
 
 export const TEMPLATES: Record<
-  Exclude<Konsept, "steakhouse" | "balikci" | "coffee-shop" | "italyan" | "birahane">,
+  Exclude<
+    Konsept,
+    "steakhouse" | "balikci" | "coffee-shop" | "italyan" | "birahane" | "pastane"
+  >,
   ConceptTemplate
 > = {
   "all-day-dining-cafe": allDayDiningCafe,
@@ -41,7 +46,10 @@ export function getTemplate(konsept: Konsept): ConceptTemplate {
     );
   }
   const t = TEMPLATES[
-    konsept as Exclude<Konsept, "steakhouse" | "balikci" | "coffee-shop" | "italyan" | "birahane">
+    konsept as Exclude<
+      Konsept,
+      "steakhouse" | "balikci" | "coffee-shop" | "italyan" | "birahane" | "pastane"
+    >
   ];
   if (!t) throw new Error(`Bilinmeyen konsept: ${konsept}`);
   return t;
@@ -58,6 +66,7 @@ export async function resolveTemplateForQuote(
   if (konsept === "coffee-shop") return buildCoffeeShopTemplate(m2);
   if (konsept === "italyan") return buildItalyanTemplate(m2);
   if (konsept === "birahane") return buildBirahaneTemplate(m2);
+  if (konsept === "pastane") return buildPastaneTemplate(m2);
   return getTemplate(konsept);
 }
 
