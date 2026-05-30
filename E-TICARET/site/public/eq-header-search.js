@@ -4,9 +4,9 @@
 ;(function () {
   "use strict";
 
-  var DEBOUNCE_MS = 300;
+  var DEBOUNCE_MS = 200;
   var MIN_CHARS = 2;
-  var SUGGEST_LIMIT = 8;
+  var SUGGEST_LIMIT = 12;
   var timer = null;
   var fetchCtrl = null;
   var activeIdx = -1;
@@ -30,17 +30,27 @@
     return "/arama?q=" + encodeURIComponent(q);
   }
 
+  function catalogSlugFromHit(hit) {
+    if (!hit) return "";
+    var id = String(hit.id || "").trim().toLowerCase();
+    if (id.indexOf("__") >= 0) return id.replace(/\//g, "-");
+    var slug = String(hit.slug || "").trim().toLowerCase();
+    if (slug.indexOf("__") >= 0) return slug.replace(/\//g, "-");
+    return slug;
+  }
+
   function productHref(hit) {
-    if (hit && hit.url) return hit.url;
-    if (hit && hit.dept && hit.slug) {
-      try {
-        if (typeof window.eqProductPath === "function") {
-          return window.eqProductPath(hit.dept, hit.slug);
-        }
-      } catch (_) {}
-      return "/shop/" + encodeURIComponent(hit.dept) + "/" + encodeURIComponent(hit.slug);
-    }
-    return "#";
+    if (!hit) return "#";
+    var dept = String(hit.dept || "pisirme").replace(/^\/+|\/+$/g, "");
+    if (dept === "market-reyon") dept = "market-reyonlari";
+    var slug = catalogSlugFromHit(hit);
+    if (!slug) return "#";
+    try {
+      if (typeof window.eqProductPath === "function") {
+        return window.eqProductPath(dept, slug);
+      }
+    } catch (_) {}
+    return "/shop/" + encodeURIComponent(dept) + "/" + encodeURIComponent(slug);
   }
 
   function imgSrc(hit) {
@@ -190,6 +200,16 @@
     activeIdx = -1;
   }
 
+  function showLoading(q) {
+    var panel = ensurePanel();
+    panel.innerHTML =
+      '<div class="eq-srch-panel__empty eq-srch-panel__loading">' +
+      esc(q) +
+      "…</div>";
+    panel.hidden = false;
+    positionPanel();
+  }
+
   function fetchSuggest(q) {
     q = trimQ(q);
     if (q.length < MIN_CHARS) {
@@ -202,7 +222,13 @@
       } catch (_) {}
     }
     fetchCtrl = new AbortController();
-    var url = "/api/search?q=" + encodeURIComponent(q) + "&limit=" + SUGGEST_LIMIT;
+    showLoading(q);
+    var url =
+      "/api/search?q=" +
+      encodeURIComponent(q) +
+      "&limit=" +
+      SUGGEST_LIMIT +
+      "&suggest=1";
     fetch(url, { signal: fetchCtrl.signal, headers: { Accept: "application/json" } })
       .then(function (r) {
         return r.json().then(function (data) {

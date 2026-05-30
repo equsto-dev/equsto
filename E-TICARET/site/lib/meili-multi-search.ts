@@ -8,8 +8,8 @@ export async function searchMeiliMulti(
   q: string,
   limit: number,
 ): Promise<{ hits: CatalogSearchHit[]; estimatedTotalHits: number }> {
-  const queries = expandSearchQueries(q).slice(0, 4);
-  const perQuery = Math.min(Math.max(limit * 2, 20), 50);
+  const queries = expandSearchQueries(q).slice(0, 6);
+  const perQuery = Math.min(Math.max(limit * 2, 40), 100);
   const index = client.index(indexUid);
 
   const results = await Promise.all(

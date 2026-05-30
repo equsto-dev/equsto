@@ -4,7 +4,9 @@
 ;(function () {
   "use strict";
 
-  var LIMIT = 48;
+  var PAGE_SIZE = 96;
+  var allHits = [];
+  var loadMoreBusy = false;
   var CATALOG_V = (function () {
     var el = document.querySelector("[data-eq-shop-chrome-v]");
     return (el && el.getAttribute("data-eq-shop-chrome-v")) || "20260529-9890-imgs";
@@ -40,17 +42,27 @@
     return String(q == null ? "" : q).trim();
   }
 
+  function catalogSlugFromHit(hit) {
+    if (!hit) return "";
+    var id = String(hit.id || "").trim().toLowerCase();
+    if (id.indexOf("__") >= 0) return id.replace(/\//g, "-");
+    var slug = String(hit.slug || "").trim().toLowerCase();
+    if (slug.indexOf("__") >= 0) return slug.replace(/\//g, "-");
+    return slug;
+  }
+
   function productHref(hit) {
-    if (hit && hit.url) return hit.url;
-    if (hit && hit.dept && hit.slug) {
-      try {
-        if (typeof window.eqProductPath === "function") {
-          return window.eqProductPath(hit.dept, hit.slug);
-        }
-      } catch (_) {}
-      return "/shop/" + encodeURIComponent(hit.dept) + "/" + encodeURIComponent(hit.slug);
-    }
-    return "#";
+    if (!hit) return "#";
+    var dept = String(hit.dept || "pisirme").replace(/^\/+|\/+$/g, "");
+    if (dept === "market-reyon") dept = "market-reyonlari";
+    var slug = catalogSlugFromHit(hit);
+    if (!slug) return "#";
+    try {
+      if (typeof window.eqProductPath === "function") {
+        return window.eqProductPath(dept, slug);
+      }
+    } catch (_) {}
+    return "/shop/" + encodeURIComponent(dept) + "/" + encodeURIComponent(slug);
   }
 
   function loadCatalogImageMap() {
@@ -208,8 +220,46 @@
     } catch (_) {}
   }
 
-  function render(hits, q, total, err) {
-    lastRender = { hits: hits || [], q: q || "", total: total, err: err };
+  function ensureMoreHost() {
+    var host = document.getElementById("eq-arama-more");
+    if (!host) {
+      host = document.createElement("div");
+      host.id = "eq-arama-more";
+      host.className = "eq-arama-more";
+      var grid = document.getElementById("eq-arama-grid");
+      if (grid && grid.parentNode) grid.parentNode.appendChild(host);
+    }
+    return host;
+  }
+
+  function renderMoreButton(q, total, hasMore) {
+    var host = ensureMoreHost();
+    if (!host) return;
+    if (!hasMore || !q) {
+      host.innerHTML = "";
+      return;
+    }
+    var shown = allHits.length;
+    host.innerHTML =
+      '<button type="button" class="eq-arama-more__btn" id="eq-arama-more-btn">' +
+      esc(__searchT("search.load_more", "{shown} / {total} — daha fazla göster", {
+        shown: String(shown),
+        total: String(total),
+      })) +
+      "</button>";
+    var btn = document.getElementById("eq-arama-more-btn");
+    if (btn) {
+      btn.onclick = function () {
+        fetchPage(q, shown, false);
+      };
+    }
+  }
+
+  function render(hits, q, total, err, opts) {
+    opts = opts || {};
+    allHits = hits || [];
+    hits = allHits;
+    lastRender = { hits: hits, q: q || "", total: total, err: err };
     var title = document.getElementById("eq-arama-title");
     var count = document.getElementById("eq-arama-count");
     var grid = document.getElementById("eq-arama-grid");
@@ -316,6 +366,77 @@
         document.dispatchEvent(new CustomEvent("equsto:plp-grid-updated", { detail: { root: grid } }));
       }
     } catch (_) {}
+    renderMoreButton(q, total != null ? total : hits.length, opts.hasMore);
+  }
+
+  function fetchPage(q, offset, replace) {
+    if (loadMoreBusy) return;
+    loadMoreBusy = true;
+    var grid = document.getElementById("eq-arama-grid");
+    if (replace && grid) {
+      grid.innerHTML =
+        '<p class="eq-dept-plp-status">' +
+        esc(__searchT("search.searching", "Aranıyor…")) +
+        "</p>";
+    } else {
+      var btn = document.getElementById("eq-arama-more-btn");
+      if (btn) btn.disabled = true;
+    }
+
+    fetch(
+      "/api/search?q=" +
+        encodeURIComponent(q) +
+        "&limit=" +
+        PAGE_SIZE +
+        "&offset=" +
+        offset,
+      { headers: { Accept: "application/json" } }
+    )
+      .then(function (r) {
+        return r.json().then(function (data) {
+          return { ok: r.ok, data: data };
+        });
+      })
+      .then(function (res) {
+        loadMoreBusy = false;
+        if (!res.ok || res.data.error) {
+          render(
+            replace ? [] : allHits.slice(),
+            q,
+            0,
+            res.data.error || __searchT("search.service_unavailable", "Arama servisi kullanılamıyor."),
+            { hasMore: false }
+          );
+          return;
+        }
+        var rawHits = sortHitsWithImagesFirst(res.data.hits || []);
+        var warn = res.data.warning ? " " + res.data.warning : "";
+        var total = res.data.estimatedTotalHits;
+        var hasMore = !!res.data.hasMore;
+        if (replace) allHits = rawHits;
+        else allHits = allHits.concat(rawHits);
+        render(allHits, q, total, warn || null, { hasMore: hasMore });
+        return loadCatalogImageMap().then(function () {
+          var enriched = sortHitsWithImagesFirst(enrichHits(res.data.hits || []));
+          if (replace) {
+            allHits = enriched;
+          } else {
+            var start = allHits.length - enriched.length;
+            for (var i = 0; i < enriched.length; i++) allHits[start + i] = enriched[i];
+          }
+          render(allHits, q, total, warn || null, { hasMore: hasMore });
+        });
+      })
+      .catch(function (e) {
+        loadMoreBusy = false;
+        render(
+          replace ? [] : allHits.slice(),
+          q,
+          0,
+          e && e.message ? e.message : __searchT("search.connection_error", "Bağlantı hatası"),
+          { hasMore: false }
+        );
+      });
   }
 
   function load() {
@@ -328,45 +449,7 @@
       return;
     }
 
-    var grid = document.getElementById("eq-arama-grid");
-    if (grid)
-      grid.innerHTML =
-        '<p class="eq-dept-plp-status">' +
-        esc(__searchT("search.searching", "Aranıyor…")) +
-        "</p>";
-
-    fetch("/api/search?q=" + encodeURIComponent(q) + "&limit=" + LIMIT, {
-      headers: { Accept: "application/json" },
-    })
-      .then(function (r) {
-        return r.json().then(function (data) {
-          return { ok: r.ok, data: data };
-        });
-      })
-      .then(function (res) {
-        if (!res.ok || res.data.error) {
-          render(
-            [],
-            q,
-            0,
-            res.data.error || __searchT("search.service_unavailable", "Arama servisi kullanılamıyor.")
-          );
-          return;
-        }
-        return loadCatalogImageMap().then(function () {
-          var hits = sortHitsWithImagesFirst(enrichHits(res.data.hits || []));
-          var warn = res.data.warning ? " " + res.data.warning : "";
-          render(hits, q, res.data.estimatedTotalHits, warn || null);
-        });
-      })
-      .catch(function (e) {
-        render(
-          [],
-          q,
-          0,
-          e && e.message ? e.message : __searchT("search.connection_error", "Bağlantı hatası")
-        );
-      });
+    fetchPage(q, 0, true);
   }
 
   document.addEventListener("equsto:kur-updated", function () {

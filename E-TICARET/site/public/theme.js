@@ -542,7 +542,7 @@
 
   if (!document.querySelector('script[src*="eq-header-search"]')) {
     var meiliHdr = document.createElement("script");
-    meiliHdr.src = "/eq-header-search.js?v=20260530search-slug-fix";
+    meiliHdr.src = "/eq-header-search.js?v=20260530search-izgara";
     meiliHdr.defer = true;
     document.head.appendChild(meiliHdr);
   }

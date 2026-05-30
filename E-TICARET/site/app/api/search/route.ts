@@ -3,7 +3,7 @@ import {
   fallbackCatalogSearch,
   type CatalogSearchHit,
 } from "@/lib/catalog-search-fallback";
-import { mergeSearchHitsDiverse } from "@/lib/merge-search-hits";
+import { mergeSearchHits, mergeSearchHitsDiverse } from "@/lib/merge-search-hits";
 import {
   getMeiliAdmin,
   getMeiliConfigStatus,
@@ -51,7 +51,11 @@ export async function GET(req: NextRequest) {
   }
 
   const q = sp.get("q")?.trim() || "";
-  const limit = Math.min(Number(sp.get("limit") || 20), 50);
+  const isSuggest = sp.get("suggest") === "1";
+  const limit = isSuggest
+    ? Math.min(Number(sp.get("limit") || 12), 15)
+    : Math.min(Number(sp.get("limit") || 48), 100);
+  const offset = isSuggest ? 0 : Math.max(Number(sp.get("offset") || 0), 0);
   const check = sp.get("check") === "1";
 
   const cfg = getMeiliConfigStatus();
@@ -74,7 +78,8 @@ export async function GET(req: NextRequest) {
   }
 
   const scopedDepts = searchDeptsForQuery(q) ?? undefined;
-  const fbLimit = Math.min(limit * 3, 60);
+  const fetchLimit = Math.min(limit + offset + (isSuggest ? 0 : limit), isSuggest ? limit : 200);
+  const fbLimit = Math.min(fetchLimit * 2, 300);
 
   const client = getMeiliAdmin();
   if (!client) {
@@ -92,12 +97,14 @@ export async function GET(req: NextRequest) {
 
   try {
     const [meili, fb] = await Promise.all([
-      searchMeiliMulti(client, PRODUCTS_INDEX, q, limit),
+      searchMeiliMulti(client, PRODUCTS_INDEX, q, fetchLimit),
       fallbackCatalogSearch(q, fbLimit, { depts: scopedDepts }),
     ]);
 
-    const merged = mergeSearchHitsDiverse(meili.hits, fb.hits, limit);
-    const usedFallback = merged.some(
+    const mergeFn = isSuggest ? mergeSearchHitsDiverse : mergeSearchHits;
+    const merged = mergeFn(meili.hits, fb.hits, fetchLimit);
+    const pageHits = merged.slice(offset, offset + limit);
+    const usedFallback = pageHits.some(
       (h) => !meili.hits.some((m) => m.id === h.id),
     );
     const total = Math.max(
@@ -105,12 +112,15 @@ export async function GET(req: NextRequest) {
       fb.estimatedTotalHits,
       merged.length,
     );
-    const hits = await canonicalizeSearchHits(merged);
+    const hits = await canonicalizeSearchHits(pageHits);
 
     return Response.json({
       query: q,
       hits,
+      offset,
+      limit,
       estimatedTotalHits: total,
+      hasMore: offset + hits.length < total,
       source: "hybrid",
       warning: usedFallback
         ? "Sonuçlar Meilisearch ile katalog aramasının birleşiminden oluşturuldu."

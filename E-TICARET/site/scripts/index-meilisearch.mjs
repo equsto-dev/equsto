@@ -211,9 +211,10 @@ async function main() {
       buzdolab: ["buzdolabi"],
       buzdolap: ["buzdolabi"],
       ozti: ["oztiryakiler"],
-      izgara: ["izgaralar", "ızgara", "gazli", "elektrikli"],
-      izgaralar: ["izgara", "ızgara"],
+      izgara: ["izgaralar", "ızgara", "gazli", "elektrikli", "salamander", "yer izgarasi"],
+      izgaralar: ["izgara", "ızgara", "gazli izgara"],
       ızgara: ["izgara", "izgaralar"],
+      salamander: ["izgara", "izgaralar"],
     },
     displayedAttributes: [
       "id",

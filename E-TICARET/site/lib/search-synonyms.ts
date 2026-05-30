@@ -13,8 +13,9 @@ const QUERY_ALIASES: Record<string, string[]> = {
   oztiryakiler: ["oztiryakiler"],
   atalay: ["atalay endustriyel"],
   firin: ["konveksiyonlu", "kombi"],
-  izgara: ["izgaralar", "yer izgarasi", "gazli", "elektrikli"],
-  izgaralar: ["izgara", "gazli izgara", "elektrikli izgara"],
+  izgara: ["izgaralar", "yer izgarasi", "gazli", "elektrikli", "salamander", "char"],
+  izgaralar: ["izgara", "ızgara", "gazli izgara", "elektrikli izgara", "yer izgarasi"],
+  ızgara: ["izgara", "izgaralar"],
   gazli: ["gaz", "lpg"],
   elektrikli: ["elektrik"],
   blender: ["blender", "robot coupe"],
@@ -94,19 +95,49 @@ export function deptSearchHints(dept: string, category: string): string {
 }
 
 const DEPT_QUERY_HINTS: Record<string, string[]> = {
-  pisirme: ["izgara", "izgaralar", "firin", "ocak", "fritoz", "konveksiyon", "izgar"],
+  pisirme: ["firin", "ocak", "fritoz", "konveksiyon", "salamander"],
   sogutma: ["buzdolab", "sogutma", "dondurucu", "dolap"],
   kahve: ["kahve", "espresso", "cay", "wmf"],
   yikama: ["bulasik", "bulaşık", "yikama"],
   hazirlik: ["blender", "mikser", "dograma"],
   icecek: ["sogutucu", "sikacak"],
+  "set-ustu-mutfak": ["gastronorm", "kuvet", "küvet", "servis"],
+  istif: ["istif", "raf"],
+  davlumbaz: ["davlumbaz", "aspirator"],
 };
 
-/** Dar dept JSON ile hızlı fallback (ör. izgara → yalnızca pisirme). */
+/** Birden fazla departmana yayılan geniş terimler — fallback tüm katalogda aranır. */
+const CROSS_DEPT_QUERY_TERMS = new Set([
+  "izgara",
+  "izgaralar",
+  "ızgara",
+  "izgar",
+  "gazli",
+  "elektrikli",
+  "salamander",
+  "char",
+  "ocak",
+  "firin",
+  "firinlar",
+  "buzdolab",
+  "buzdolabi",
+  "buzdolap",
+  "kahve",
+  "bulasik",
+  "bulaşık",
+]);
+
+/** Dar dept JSON ile hızlı fallback (ör. buzdolab → sogutma+dolap). Çok dept'li terimlerde null. */
 export function searchDeptsForQuery(q: string): string[] | null {
   const folded = foldTr(String(q || "").trim());
   if (!folded) return null;
   const tokens = folded.split(/\s+/).filter(Boolean);
+
+  for (const tok of tokens) {
+    if (CROSS_DEPT_QUERY_TERMS.has(tok)) return null;
+  }
+  if (CROSS_DEPT_QUERY_TERMS.has(folded)) return null;
+
   const depts = new Set<string>();
 
   function matchHint(hint: string) {
