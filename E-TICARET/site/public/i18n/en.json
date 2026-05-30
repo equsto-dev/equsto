@@ -253,6 +253,7 @@
     "add_to_cart": "Add to cart",
     "quote_contact": "Contact for quote",
     "price_hint": "VAT incl. · Öztiryakiler list EUR, {pct}% discount",
+    "price_hint_oem": "VAT incl. · list EUR, {pct}% discount",
     "vat_included": "KDV dahil",
     "price_plus_vat": "Fiyat + KDV",
     "load_more": "Load more products",

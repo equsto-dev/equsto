@@ -572,6 +572,7 @@ const EN = {
     add_to_cart: "Add to cart",
     quote_contact: "Contact for quote",
     price_hint: "VAT incl. · Öztiryakiler list EUR, {pct}% discount",
+    price_hint_oem: "VAT incl. · list EUR, {pct}% discount",
     load_more: "Load more products",
     load_more_aria: "Load more products",
     remaining: "left)",
