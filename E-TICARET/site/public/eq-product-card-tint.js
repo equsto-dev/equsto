@@ -263,8 +263,22 @@
     return list;
   }
 
+  function isCrossOriginAssetUrl(src) {
+    try {
+      var u = new URL(String(src || ""), location.href);
+      return u.origin !== location.origin;
+    } catch (_) {
+      return true;
+    }
+  }
+
   function sampleFromImageUrl(src, done) {
     if (!src || typeof fetch !== "function") {
+      done(null);
+      return;
+    }
+    /* CloudFront/CDN: fetch CORS ister; tint opsiyonel — cross-origin'de sessiz atla. */
+    if (isCrossOriginAssetUrl(src)) {
       done(null);
       return;
     }
