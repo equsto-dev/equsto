@@ -12,7 +12,10 @@ export default async function DeptPlpCrawlLinks({ dept }: Props) {
   if (!links.length) return null;
 
   return (
-    <nav className="eq-dept-plp-crawl-links" aria-label="Katalog ürün bağlantıları">
+    <nav
+      className="eq-dept-plp-crawl-links eq-sr-only"
+      aria-label="Katalog ürün bağlantıları"
+    >
       <h2 className="eq-dept-plp-crawl-links__title">Katalog ürünleri</h2>
       <ul className="eq-dept-plp-crawl-links__list">
         {links.map((l) => (
