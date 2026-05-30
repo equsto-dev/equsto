@@ -1,8 +1,4 @@
-import {
-  catalogUrlSlug,
-  legacyMeiliPathSlug,
-  matchCatalogRowByPathSlug,
-} from "@/lib/catalog-product-slug";
+import { catalogUrlSlug, matchCatalogRowByPathSlug } from "@/lib/catalog-product-slug";
 import { loadEkipmanlarJson } from "@/lib/catalog-json";
 import { readJsonFile, dataPath } from "@/lib/legacy-data";
 import {
