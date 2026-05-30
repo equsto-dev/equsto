@@ -15,7 +15,7 @@ Değiştirmeden önce kullanıcıdan AÇIK ONAY alın.
    • Proje Fabrikası (.eq-cmf-btn--pfos)
    • Sepete Ekle — Amazon sarı (.eq-cmf-btn--cart)
 6. Alt çerçeveli düğmeler (.eq-cmf-actions--outline):
-   • Whatsapp ile Soru Sor (.eq-cmf-btn--wa)
+   • Whatsapp ile Soru Sor (.eq-cmf-btn--wa) → Mr. Equsto kedi modalı (equstoOpenWhatsAppWebWindow)
    • Ödeme Seçenekleri (.eq-cmf-btn--pay → .eq-cmf-pay-panel)
 
 YASAK (onay olmadan):
