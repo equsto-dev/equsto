@@ -7,7 +7,7 @@
   var API_QUOTE = "/api/pfos/quote";
   var API_CALC = "/api/pfos/calculate";
   var API_KONSEPT = "/api/pfos/konseptler";
-  var FALLBACK_KONSEPT = "/data/pfos-konseptler.json?v=20260531hamburger-kiosk";
+  var FALLBACK_KONSEPT = "/data/pfos-konseptler.json?v=20260531hotdog-kiosk";
 
   var KAT_DEPT = {
     A: "kahve",
@@ -60,6 +60,13 @@
       /hamburger\s*kiosk/i.test(k)
     ) {
       return "hamburger-kiosk";
+    }
+    if (
+      d === "Hotdog Kiosk" ||
+      /hotdog\s*kiosk|hot\s*dog\s*kiosk/i.test(d) ||
+      /hotdog|sosisli\s*kiosk/i.test(k)
+    ) {
+      return "hotdog-kiosk";
     }
     if (d === "Dönerci") return "kebap-ortadogu";
     return "";

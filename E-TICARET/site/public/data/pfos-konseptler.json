@@ -58,8 +58,14 @@
     {
       "slug": "hamburger-kiosk",
       "label": "Hamburger Kiosk",
-      "kalemSayisi": 24,
+      "kalemSayisi": 22,
       "not": "60–100 m² kiosk (8 HAMBURGER)"
+    },
+    {
+      "slug": "hotdog-kiosk",
+      "label": "Hotdog Kiosk",
+      "kalemSayisi": 16,
+      "not": "Kiosk referans (13 HOTDOG)"
     }
   ]
 }

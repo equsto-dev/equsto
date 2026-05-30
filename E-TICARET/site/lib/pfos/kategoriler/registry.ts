@@ -92,6 +92,13 @@ export const PFOS_KATEGORI_TANIMLARI: PfosKategoriTanim[] = [
     bantlar: [{ id: "60-100", label: "60–100 m²", referansM2: 80 }],
   },
   {
+    id: "hotdog-kiosk",
+    label: "Hotdog Kiosk",
+    ustKategori: "Fast Food / QSR",
+    planNot: "proje-veri/13 HOTDOG.xlsx",
+    bantlar: [{ id: "kiosk", label: "Kiosk referans", referansM2: 40 }],
+  },
+  {
     id: "pizzaci",
     label: "Pizzacı",
     ustKategori: "Restaurant",

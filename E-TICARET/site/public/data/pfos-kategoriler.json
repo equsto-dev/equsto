@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-05-30T23:15:16.346Z",
+  "updated_at": "2026-05-30T23:20:54.085Z",
   "kategoriler": [
     {
       "id": "steakhouse",
@@ -257,6 +257,25 @@
             "toplamAdet": 31,
             "kaynakDosya": "8 HAMBURGER-60-150 m2 - Kopya.xlsx",
             "yukleme": "2026-05-30T23:15:16.339Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "hotdog-kiosk",
+      "label": "Hotdog Kiosk",
+      "ustKategori": "Fast Food / QSR",
+      "bantlar": [
+        {
+          "id": "kiosk",
+          "label": "Kiosk referans",
+          "referansM2": 40,
+          "meta": {
+            "listeDosya": "hotdog-kiosk-kiosk.json",
+            "kalemSayisi": 16,
+            "toplamAdet": 18,
+            "kaynakDosya": "13 HOTDOG.xlsx",
+            "yukleme": "2026-05-30T23:20:54.081Z"
           }
         }
       ]
