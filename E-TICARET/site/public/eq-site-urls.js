@@ -221,13 +221,26 @@
     if (curLang() !== "en") return base;
     return "/en" + base;
   };
-  /** PLP + product.html — canlı linklerle uyumlu (tr-TR küçük harf, Türkçe harfler düşer). */
+  /** tr-TR küçük harf + ASCII slug (ı/İ/ş/ğ… → i/s/g…) — SKU kodlarında I→ı kaybını önler. */
+  function eqFoldTrSlug(s) {
+    return String(s || "")
+      .toLocaleLowerCase("tr")
+      .replace(/ğ/g, "g")
+      .replace(/ü/g, "u")
+      .replace(/ş/g, "s")
+      .replace(/ö/g, "o")
+      .replace(/ç/g, "c")
+      .replace(/ı/g, "i")
+      .replace(/İ/g, "i");
+  }
+  window.eqFoldTrSlug = eqFoldTrSlug;
+
+  /** PLP + product.html — vitrin slug (lib/catalog-product-slug.ts ile uyumlu). */
   window.eqProductSlug = function (row) {
     if (!row) return "";
     var sku = String(row.sku || row.model || row.urun_kodu || row.stok_no || "").trim();
     if (sku) {
-      var fromSku = String(sku)
-        .toLocaleLowerCase("tr")
+      var fromSku = eqFoldTrSlug(sku)
         .replace(/\./g, "-")
         .replace(/[^a-z0-9+\-]+/g, "-")
         .replace(/-+/g, "-")
@@ -242,8 +255,7 @@
       return id.toLowerCase();
     }
     function slugify(s) {
-      return String(s || "")
-        .toLocaleLowerCase("tr")
+      return eqFoldTrSlug(s)
         .replace(/[^a-z0-9]+/g, "-")
         .replace(/^-+|-+$/g, "")
         .substring(0, 100);
@@ -284,8 +296,7 @@
       if (!row) continue;
       var sku = String(row.sku || row.model || row.urun_kodu || row.stok_no || "").trim();
       if (sku) {
-        var skuSl = sku
-          .toLocaleLowerCase("tr")
+        var skuSl = eqFoldTrSlug(sku)
           .replace(/\./g, "-")
           .replace(/[^a-z0-9+\-]+/g, "-")
           .replace(/-+/g, "-")
