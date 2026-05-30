@@ -432,7 +432,7 @@
     }
     if (filterState.priceMax !== "") {
       html +=
-        '<button type="button" class="eq-cm-chip" data-kind="priceMax">max " +
+        '<button type="button" class="eq-cm-chip" data-kind="priceMax">max ' +
         esc(filterState.priceMax) +
         " ×</button>";
     }
