@@ -10,6 +10,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { DONER_OCAK_ROWS } from "./data/atalay-doner-ocak-source.mjs";
 import { fetchTcmbEurRate } from "./fetch-tcmb-kur.mjs";
+import { atalayPisirmeCategoryOverride } from "../lib/catalog/atalay-pisirme-category.ts";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const RAW = path.join(ROOT, "scripts/data/atalay-pdf-catalog-raw.json");
@@ -95,11 +96,11 @@ function buildRow(p, discount, kaynak) {
   const seri = String(p.seri || "").trim();
   const listeEur = Number(p.euro);
   const netEur = listeEur * (1 - discount);
-  const category = mapCategory(kategori, p.section);
-  const dept = mapDept(category, p.section);
   const dims = (p.raw_fields || []).find((x) => /\d\s*x\s*\d/.test(x)) || "";
   const titleParts = [kategori.split("/")[0]?.trim(), model, plate, dims].filter(Boolean);
   const name = `Atalay ${titleParts.join(" ")}`.replace(/\s+/g, " ").trim();
+  const category = mapCategory(kategori, p.section, model, name);
+  const dept = mapDept(category, p.section);
   const specs = [
     name,
     "Kaynak: ATALAY 2025 YERLİ",
