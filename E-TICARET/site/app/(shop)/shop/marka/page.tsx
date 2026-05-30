@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import { redirect } from "next/navigation";
 import MarkaHubMount from "@/components/vitrin/MarkaHubMount";
 import MarkaHubScripts from "@/components/vitrin/MarkaHubScripts";
 import VitrinShell from "@/components/vitrin/VitrinShell";
+import { resolveBrandRedirectPath } from "@/lib/brand-shop-redirect";
 
 export const metadata: Metadata = {
   title: "İş ortaklarımız · Equsto",
@@ -12,7 +14,18 @@ export const metadata: Metadata = {
   },
 };
 
-export default function MarkaHubPage() {
+export default async function MarkaHubPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ b?: string; slug?: string }>;
+}) {
+  const sp = await searchParams;
+  const legacyB = (sp.b || sp.slug || "").trim();
+  if (legacyB) {
+    const dest = resolveBrandRedirectPath(legacyB);
+    if (dest) redirect(dest);
+  }
+
   return (
     <>
       <VitrinShell bodyClass="eq-shop eq-marka eq-marka-hub">
