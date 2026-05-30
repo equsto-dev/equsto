@@ -74,8 +74,17 @@ export function pfosGetConcepts() {
       ornekler: ["Trattoria", "Osteria"],
       m2Min: M2_RANGES.italyan.min,
       m2Max: M2_RANGES.italyan.max,
-      itemSayisi: 86,
-      zorunluSayisi: 86,
+      itemSayisi: 89,
+      zorunluSayisi: 89,
+    },
+    {
+      konsept: "all-day-dining-cafe",
+      label: KONSEPT_LABELS["all-day-dining-cafe"],
+      ornekler: ["The House Café", "Big Chefs"],
+      m2Min: M2_RANGES["all-day-dining-cafe"].min,
+      m2Max: M2_RANGES["all-day-dining-cafe"].max,
+      itemSayisi: 89,
+      zorunluSayisi: 89,
     },
     {
       konsept: "birahane",
@@ -149,6 +158,15 @@ export function pfosGetConcepts() {
       itemSayisi: 16,
       zorunluSayisi: 16,
     },
+    {
+      konsept: "tavukcu",
+      label: KONSEPT_LABELS.tavukcu,
+      ornekler: ["Pilic çevirme", "Fried chicken salonu"],
+      m2Min: M2_RANGES.tavukcu.min,
+      m2Max: M2_RANGES.tavukcu.max,
+      itemSayisi: 28,
+      zorunluSayisi: 28,
+    },
   ];
   return [...base.filter((t) => t.konsept !== "coffee-shop"), ...referansJson];
 }
@@ -190,7 +208,14 @@ export function pfosGetKonseptler() {
       label: KONSEPT_LABELS.italyan,
       ornekler: ["Trattoria", "Osteria"],
       seatDensity: 1.6,
-      kalemSayisi: 86,
+      kalemSayisi: 89,
+    },
+    {
+      slug: "all-day-dining-cafe",
+      label: KONSEPT_LABELS["all-day-dining-cafe"],
+      ornekler: ["The House Café", "Big Chefs"],
+      seatDensity: 1.5,
+      kalemSayisi: 89,
     },
     {
       slug: "birahane",
@@ -341,6 +366,7 @@ export async function pfosPostCalculate(req: NextRequest) {
           "hamburger-kiosk",
           "hotdog-kiosk",
           "tavukcu",
+          "all-day-dining-cafe",
           "coffee-shop",
         ],
       },

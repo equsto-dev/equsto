@@ -22,8 +22,14 @@
     {
       "slug": "italyan",
       "label": "İtalyan Restoran",
-      "kalemSayisi": 86,
-      "not": "100–300 m² referans (03-italyan)"
+      "kalemSayisi": 89,
+      "not": "≤150 m² 03-italyan · >150 m² The House (150–300)"
+    },
+    {
+      "slug": "all-day-dining-cafe",
+      "label": "All Day Dining Cafe",
+      "kalemSayisi": 89,
+      "not": "150–300 m² The House · >300 m² THC proforma"
     },
     {
       "slug": "birahane",

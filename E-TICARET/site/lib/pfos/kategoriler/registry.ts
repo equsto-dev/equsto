@@ -42,8 +42,16 @@ export const PFOS_KATEGORI_TANIMLARI: PfosKategoriTanim[] = [
     ustKategori: "Restaurant",
     planNot: "proje-veri/03-italyan 100-300 m2.xlsx",
     bantlar: [
-      { id: "100-300", label: "100–300 m²", referansM2: 200 },
+      { id: "100-300", label: "100–300 m² (≤150 m²)", referansM2: 200 },
+      { id: "150-300", label: "150–300 m² (>150 m²)", referansM2: 225 },
     ],
+  },
+  {
+    id: "all-day-dining-cafe",
+    label: "All Day Dining Cafe",
+    ustKategori: "Restoran",
+    planNot: "proje-veri/19 THEHOUSE CAFE 150-300 m2.xlsx · THC 200–400",
+    bantlar: [{ id: "150-300", label: "150–300 m²", referansM2: 225 }],
   },
   {
     id: "birahane",

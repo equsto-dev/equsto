@@ -106,6 +106,7 @@
     "pfos:hamburger-kiosk:import": "node scripts/import-hamburger-kiosk-konsept.mjs",
     "pfos:hotdog-kiosk:import": "node scripts/import-hotdog-kiosk-konsept.mjs",
     "pfos:tavukcu:import": "node scripts/import-tavukcu-konsept.mjs",
+    "pfos:thehouse-150-300:import": "node scripts/import-thehouse-150-300-konsept.mjs",
     "sync:legacy": "node scripts/sync-legacy-assets.mjs",
     "assets:cdn:config": "node scripts/generate-asset-cdn-config.mjs",
     "assets:cdn:verify": "node --import ./scripts/load-env.mjs scripts/faz-b-verify-cdn.mjs",
