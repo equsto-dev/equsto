@@ -63,6 +63,15 @@ export const PFOS_KATEGORI_TANIMLARI: PfosKategoriTanim[] = [
       { id: "100-200", label: "100–200 m²", referansM2: 150 },
     ],
   },
+  {
+    id: "pizzaci",
+    label: "Pizzacı",
+    ustKategori: "Restaurant",
+    planNot: "proje-veri/pizzaci-200-500-m2.xlsx (2025-116 Avcılar)",
+    bantlar: [
+      { id: "200-500", label: "200–500 m²", referansM2: 350 },
+    ],
+  },
 ];
 
 export function findKategoriTanim(kategoriId: string) {

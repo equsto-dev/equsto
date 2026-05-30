@@ -11,7 +11,8 @@ export type ListeBantId =
   | "mahalle"
   | "referans"
   | "100-300"
-  | "100-200";
+  | "100-200"
+  | "200-500";
 
 export type M2BantTanim = {
   id: ListeBantId;
@@ -200,16 +201,19 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
     id: "pizzaci",
     name: "Pizzacı",
     parent: "Restoran",
-    desc: "Pizza odaklı · teklif motoru: pizzaci",
+    desc: "Pizza odaklı · 200–500 m² referans (2025-116 Avcılar) · motor: pizzaci",
     pfos: {
       motorSlug: "pizzaci",
       dukkanSecim: "Pizzacı",
-      m2Min: 80,
-      m2Max: 300,
-      bantKurali: "Motor şablon; bant yok",
-      teklifKaynagi: "motor-sablon",
-      durum: "motor",
-      bantlar: [],
+      m2Min: 200,
+      m2Max: 500,
+      bantKurali: "Tek referans liste (200–500 m²); m² ile adet ölçeklenir",
+      listeYolu: "proje-veri/pizzaci-200-500-m2.xlsx",
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
+      bantlar: [
+        liste("200-500", "200–500 m²", 350, "pizzaci"),
+      ],
     },
     questions: [],
   },
