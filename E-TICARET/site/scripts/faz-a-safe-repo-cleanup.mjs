@@ -25,11 +25,7 @@ const FILE_UNTRACK = [
   "E-TICARET/site/public/data/pfos-archive-extract.json",
   "E-TICARET/site/public/data/admin-auth.json",
   "E-TICARET/site/public/data/atalay-merge-log.json",
-  "E-TICARET/site/public/pdp-epdp-KILIT.txt",
-  "E-TICARET/site/public/prod-card-ambient-KILIT.txt",
-  "E-TICARET/site/public/footer-brand-KILIT.txt",
-  "E-TICARET/site/public/topnav-bar-design-KILIT.txt",
-  "E-TICARET/site/public/buzdolap-nav-KILIT.txt",
+  // KILIT.txt — Git'te KALMALI (vercel-prebuild verify-pdp-kilit / ambient / buzdolap)
 ];
 
 function git(args, { quiet } = {}) {

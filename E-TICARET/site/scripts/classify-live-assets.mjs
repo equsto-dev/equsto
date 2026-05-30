@@ -17,11 +17,7 @@ const REMOVE_PATTERNS = [
   /^data\/pfos-archive-extract\.json$/,
   /^data\/admin-auth\.json$/,
   /^data\/atalay-merge-log\.json$/,
-  /^buzdolap-nav-KILIT\.txt$/,
-  /^pdp-epdp-KILIT\.txt$/,
-  /^prod-card-ambient-KILIT\.txt$/,
-  /^footer-brand-KILIT\.txt$/,
-  /^topnav-bar-design-KILIT\.txt$/,
+  // *-KILIT.txt → GIT_KEEP (vercel-prebuild verify scriptleri)
 ];
 
 const CDN_PREFIXES = [
