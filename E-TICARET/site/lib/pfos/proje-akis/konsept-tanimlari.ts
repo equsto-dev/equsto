@@ -19,7 +19,8 @@ export type ListeBantId =
   | "40-100"
   | "kiosk"
   | "60-100"
-  | "150-300";
+  | "150-300"
+  | "500-1000";
 
 export type M2BantTanim = {
   id: ListeBantId;
@@ -381,23 +382,60 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
     },
     questions: [],
   },
-  konseptPlanlanan(
-    "restaurant_fine_dining",
-    "Fine Dining",
-    "Restoran",
-    "Fine Dining",
-    120,
-    600,
-    "Fine dining · motor planlanan",
-  ),
-  konseptPlanlanan(
-    "restaurant_dunya",
-    "Dünya Mutfağı",
-    "Restoran",
-    "Dünya Mutfağı",
-    100,
-    500,
-  ),
+  {
+    id: "restaurant_buyuk_restoran",
+    name: "Büyük Restoran",
+    parent: "Restoran",
+    desc: "500–1000 m² · büyük yemek rezervasyonları · düğün & özel organizasyon · eğlence & etkinlik · motor: restoran",
+    pfos: {
+      motorSlug: "restoran",
+      dukkanSecim: "Büyük Restoran",
+      m2Min: 500,
+      m2Max: 1000,
+      bantKurali: "Tek referans liste (500–1000 m²); m² ile adet ölçeklenir",
+      listeYolu: "proje-veri/RESTORAN.xlsx",
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
+      bantlar: [liste("500-1000", "500–1000 m²", 750, "restoran")],
+    },
+    questions: [],
+  },
+  {
+    id: "restaurant_fine_dining",
+    name: "Fine Dining",
+    parent: "Restoran",
+    desc: "Fine dining · 500–1000 m² büyük restoran referansı · motor: restoran",
+    pfos: {
+      motorSlug: "restoran",
+      dukkanSecim: "Fine Dining",
+      m2Min: 500,
+      m2Max: 1000,
+      bantKurali: "Büyük restoran referans listesi (düğün · rezervasyon · eğlence)",
+      listeYolu: "proje-veri/RESTORAN.xlsx",
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
+      bantlar: [liste("500-1000", "500–1000 m²", 750, "restoran")],
+    },
+    questions: [],
+  },
+  {
+    id: "restaurant_dunya",
+    name: "Dünya Mutfağı",
+    parent: "Restoran",
+    desc: "Dünya mutfağı · 500–1000 m² büyük restoran referansı · motor: restoran",
+    pfos: {
+      motorSlug: "restoran",
+      dukkanSecim: "Dünya Mutfağı",
+      m2Min: 500,
+      m2Max: 1000,
+      bantKurali: "Büyük restoran referans listesi (düğün · rezervasyon · eğlence)",
+      listeYolu: "proje-veri/RESTORAN.xlsx",
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
+      bantlar: [liste("500-1000", "500–1000 m²", 750, "restoran")],
+    },
+    questions: [],
+  },
   konseptPlanlanan(
     "restaurant_sarkuteri",
     "Gurme Şarküteri",

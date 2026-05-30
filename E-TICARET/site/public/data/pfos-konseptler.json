@@ -78,6 +78,12 @@
       "label": "Tavukçu",
       "kalemSayisi": 28,
       "not": "80–150 m² referans (17 TAVUKCU)"
+    },
+    {
+      "slug": "restoran",
+      "label": "Büyük Restoran",
+      "kalemSayisi": 110,
+      "not": "500–1000 m² · düğün · büyük rezervasyon · eğlence (RESTORAN)"
     }
   ]
 }

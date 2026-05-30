@@ -124,6 +124,13 @@ export const PFOS_KATEGORI_TANIMLARI: PfosKategoriTanim[] = [
     ],
   },
   {
+    id: "restoran",
+    label: "Büyük Restoran",
+    ustKategori: "Restoran",
+    planNot: "proje-veri/RESTORAN.xlsx · düğün · büyük rezervasyon · eğlence",
+    bantlar: [{ id: "500-1000", label: "500–1000 m²", referansM2: 750 }],
+  },
+  {
     id: "kebap-ortadogu",
     label: "Kebap & Ortadoğu Mutfağı",
     ustKategori: "Restaurant",

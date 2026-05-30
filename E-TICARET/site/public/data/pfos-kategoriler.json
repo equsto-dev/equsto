@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-05-30T23:38:31.707Z",
+  "updated_at": "2026-05-30T23:45:49.436Z",
   "kategoriler": [
     {
       "id": "steakhouse",
@@ -326,6 +326,25 @@
             "toplamAdet": 103,
             "kaynakDosya": "19 THEHOUSE CAFE 150-300 m2.xlsx",
             "yukleme": "2026-05-30T23:38:31.704Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "restoran",
+      "label": "Büyük Restoran",
+      "ustKategori": "Restoran",
+      "bantlar": [
+        {
+          "id": "500-1000",
+          "label": "500–1000 m²",
+          "referansM2": 750,
+          "meta": {
+            "listeDosya": "restoran-500-1000.json",
+            "kalemSayisi": 110,
+            "toplamAdet": 149,
+            "kaynakDosya": "RESTORAN.xlsx",
+            "yukleme": "2026-05-30T23:45:49.431Z"
           }
         }
       ]

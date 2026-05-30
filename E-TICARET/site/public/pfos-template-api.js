@@ -7,7 +7,7 @@
   var API_QUOTE = "/api/pfos/quote";
   var API_CALC = "/api/pfos/calculate";
   var API_KONSEPT = "/api/pfos/konseptler";
-  var FALLBACK_KONSEPT = "/data/pfos-konseptler.json?v=20260527thehouse-150-300";
+  var FALLBACK_KONSEPT = "/data/pfos-konseptler.json?v=20260527restoran-500-1000";
 
   var KAT_DEPT = {
     A: "kahve",
@@ -84,6 +84,17 @@
       return "tavukcu";
     }
     if (d === "Dönerci") return "kebap-ortadogu";
+    if (
+      d === "Büyük Restoran" ||
+      d === "Fine Dining" ||
+      d === "Dünya Mutfağı" ||
+      /büyük\s*restoran|buyuk\s*restoran/i.test(d) ||
+      /fine\s*dining|dünya\s*mutfağı|dunya\s*mutfagi/i.test(d) ||
+      /düğün|dugun|rezervasyon|eğlence|eglence|banquet|organizasyon/i.test(d) ||
+      /büyük\s*restoran|düğün|rezervasyon/i.test(k)
+    ) {
+      return "restoran";
+    }
     return "";
   }
 
