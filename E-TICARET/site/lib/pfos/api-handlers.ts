@@ -28,6 +28,7 @@ const M2_RANGES: Record<string, { min: number; max: number }> = {
   "hotdog-kiosk": { min: 25, max: 60 },
   tavukcu: { min: 80, max: 150 },
   restoran: { min: 500, max: 1000 },
+  "kokteyl-kahve": { min: 30, max: 50 },
 };
 
 export function pfosGetConcepts() {
@@ -168,6 +169,28 @@ export function pfosGetConcepts() {
       itemSayisi: 28,
       zorunluSayisi: 28,
     },
+    {
+      konsept: "restoran",
+      label: KONSEPT_LABELS.restoran,
+      ornekler: [
+        "Büyük yemek rezervasyonları",
+        "Düğün & özel organizasyon",
+        "Eğlence & etkinlik",
+      ],
+      m2Min: M2_RANGES.restoran.min,
+      m2Max: M2_RANGES.restoran.max,
+      itemSayisi: 110,
+      zorunluSayisi: 110,
+    },
+    {
+      konsept: "kokteyl-kahve",
+      label: KONSEPT_LABELS["kokteyl-kahve"],
+      ornekler: ["No Fish Today", "Kokteyl & espresso bar"],
+      m2Min: M2_RANGES["kokteyl-kahve"].min,
+      m2Max: M2_RANGES["kokteyl-kahve"].max,
+      itemSayisi: 18,
+      zorunluSayisi: 18,
+    },
   ];
   return [...base.filter((t) => t.konsept !== "coffee-shop"), ...referansJson];
 }
@@ -292,6 +315,13 @@ export function pfosGetKonseptler() {
       seatDensity: 1.2,
       kalemSayisi: 110,
     },
+    {
+      slug: "kokteyl-kahve",
+      label: KONSEPT_LABELS["kokteyl-kahve"],
+      ornekler: ["No Fish Today", "Kokteyl & espresso bar"],
+      seatDensity: 0,
+      kalemSayisi: 18,
+    },
   ];
 }
 
@@ -360,6 +390,7 @@ export async function pfosPostCalculate(req: NextRequest) {
       "tavukcu",
       "all-day-dining-cafe",
       "restoran",
+      "kokteyl-kahve",
       "coffee-shop",
     ].includes(pfosReq.konsept)
   ) {
@@ -382,6 +413,7 @@ export async function pfosPostCalculate(req: NextRequest) {
           "tavukcu",
           "all-day-dining-cafe",
           "restoran",
+          "kokteyl-kahve",
           "coffee-shop",
         ],
       },

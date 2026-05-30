@@ -1,0 +1,157 @@
+{
+  "kategoriId": "kokteyl-kahve",
+  "bantId": "30-50",
+  "label": "Kokteyl + Kahve 30–50 m²",
+  "referansM2": 40,
+  "kaynakDosya": "no fish today urun_listesi.xlsx",
+  "not": "No Fish Today referans · kokteyl bar & kahve istasyonu",
+  "yukleme": "2026-05-30T23:56:19.994Z",
+  "kalemSayisi": 18,
+  "toplamAdet": 18,
+  "kalemler": [
+    {
+      "bolum": "A",
+      "bolumAd": "A- BAR & KAHVE",
+      "poz": "A1",
+      "ad": "YAŞ PASTA TATLI TEŞHİR DOLABI, DİK TİP",
+      "olcu": "70*70*180",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- BAR & KAHVE",
+      "poz": "A2",
+      "ad": "ŞİŞE SOĞUTUCU, 2 KAPILI, MOTORU DIŞARIDA",
+      "olcu": "90*60*96",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- BAR & KAHVE",
+      "poz": "A3",
+      "ad": "FİLTRE KAHVE MAKİNASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- BAR & KAHVE",
+      "poz": "A4",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN RAFLI, ÇEKMECELİ",
+      "olcu": "135*60*96",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- BAR & KAHVE",
+      "poz": "A5",
+      "ad": "ESPRESSO KAHVE MAKİNASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- BAR & KAHVE",
+      "poz": "A6",
+      "ad": "KAHVE DEĞİRMENİ",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- BAR & KAHVE",
+      "poz": "A7",
+      "ad": "BARDAK YIKAMA MAKİNASI, SETALTI",
+      "olcu": "60*60*82",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- BAR & KAHVE",
+      "poz": "A8",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+      "olcu": "140*60*86",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- BAR & KAHVE",
+      "poz": "A9",
+      "ad": "DERİN DONDURUCU, TEK KAPILI, SETALTI",
+      "olcu": "53*50*82",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- BAR & KAHVE",
+      "poz": "A10",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+      "olcu": "115*45*90",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- BAR & KAHVE",
+      "poz": "A11",
+      "ad": "ÇAY OTOMATI",
+      "olcu": "23 lt.",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- BAR & KAHVE",
+      "poz": "A12",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI, ÇÖP ÇEKMECELİ",
+      "olcu": "55*45*90",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- BAR & KAHVE",
+      "poz": "A13",
+      "ad": "ŞİŞE SOĞUTUCU, 3 CAM KAPILI, MOTORU BÜNYESİNDE",
+      "olcu": "180*45*90",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- BAR & KAHVE",
+      "poz": "A14",
+      "ad": "KOKTEYL İSTASYONU",
+      "olcu": "180*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- BAR & KAHVE",
+      "poz": "A15",
+      "ad": "TÜRK KAHVE MAKİNASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- BAR & KAHVE",
+      "poz": "A16",
+      "ad": "SETÜSTÜ KAHVE ÇEKMECESİ",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- BAR & KAHVE",
+      "poz": "A17",
+      "ad": "BAR BLENDER",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- BAR & KAHVE",
+      "poz": "A18",
+      "ad": "KAHVE FİLTRE ÜNİTESİ, AHŞAP GÖVDE",
+      "olcu": "-",
+      "adet": 1
+    }
+  ]
+}

@@ -53,7 +53,7 @@
         "type": "number",
         "required": "true",
         "mapsTo": "m2",
-        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan ≤150→100-300, >150→150-300; all-day-dining 150–300→The House, >300→THC; restoran → 500-1000; birahane → 100-300; pastane → 100-200; pideci → 100-250; sushi → 40-100; tavukcu → 80-150; sarkuteri-kiosk → kiosk; hamburger-kiosk → 60-100; hotdog-kiosk → kiosk; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu → 300-500 (zone şablon)",
+        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan ≤150→100-300, >150→150-300; all-day-dining 150–300→The House, >300→THC; restoran → 500-1000; kokteyl-kahve → 30-50; birahane → 100-300; pastane → 100-200; pideci → 100-250; sushi → 40-100; tavukcu → 80-150; sarkuteri-kiosk → kiosk; hamburger-kiosk → 60-100; hotdog-kiosk → kiosk; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu → 300-500 (zone şablon)",
         "note": "Bulut Mutfak ≤15 m²: yalnızca Grab&Go / Coffee Counter. Steakhouse/Balık: ≤150 → 80-150; >150 → 150-250."
       },
       {
@@ -140,6 +140,7 @@
           ],
           "Bar & Lounge": [
             "Birahane",
+            "Kokteyl + Kahve",
             "Kokteyl Bar",
             "Wine Bar",
             "Beer Pub",
@@ -979,19 +980,52 @@
         "questions": []
       },
       {
+        "id": "bar_kokteyl_kahve",
+        "name": "Kokteyl + Kahve",
+        "parent": "Bar & Lounge",
+        "desc": "Kokteyl & kahve bar · 30–50 m² referans (No Fish Today) · motor: kokteyl-kahve",
+        "pfos": {
+          "motorSlug": "kokteyl-kahve",
+          "dukkanSecim": "Kokteyl + Kahve",
+          "m2Min": 30,
+          "m2Max": 50,
+          "bantKurali": "Tek referans liste (30–50 m²); m² ile adet ölçeklenir",
+          "listeYolu": "veri/no fish today urun_listesi.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "30-50",
+              "label": "30–50 m²",
+              "referansM2": 40,
+              "listeDosya": "pfos-referans/kokteyl-kahve-30-50.json"
+            }
+          ]
+        },
+        "questions": []
+      },
+      {
         "id": "bar_kokteyl",
         "name": "Kokteyl Bar",
         "parent": "Bar & Lounge",
-        "desc": "Kokteyl Bar · liste hazırlanıyor — genel şablon",
+        "desc": "Kokteyl bar · 30–50 m² kokteyl+kahve referansı · motor: kokteyl-kahve",
         "pfos": {
-          "motorSlug": "",
+          "motorSlug": "kokteyl-kahve",
           "dukkanSecim": "Kokteyl Bar",
-          "m2Min": 60,
-          "m2Max": 250,
-          "bantKurali": "Liste hazırlanıyor — genel şablon",
-          "teklifKaynagi": "planlanan",
-          "durum": "planlanan",
-          "bantlar": []
+          "m2Min": 30,
+          "m2Max": 50,
+          "bantKurali": "Kokteyl + kahve referans listesi",
+          "listeYolu": "veri/no fish today urun_listesi.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "30-50",
+              "label": "30–50 m²",
+              "referansM2": 40,
+              "listeDosya": "pfos-referans/kokteyl-kahve-30-50.json"
+            }
+          ]
         },
         "questions": []
       },
@@ -1050,16 +1084,24 @@
         "id": "bar_mixology",
         "name": "Mixology Bar",
         "parent": "Bar & Lounge",
-        "desc": "Mixology Bar · liste hazırlanıyor — genel şablon",
+        "desc": "Mixology · 30–50 m² kokteyl+kahve referansı · motor: kokteyl-kahve",
         "pfos": {
-          "motorSlug": "",
+          "motorSlug": "kokteyl-kahve",
           "dukkanSecim": "Mixology Bar",
-          "m2Min": 50,
-          "m2Max": 180,
-          "bantKurali": "Liste hazırlanıyor — genel şablon",
-          "teklifKaynagi": "planlanan",
-          "durum": "planlanan",
-          "bantlar": []
+          "m2Min": 30,
+          "m2Max": 50,
+          "bantKurali": "Kokteyl + kahve referans listesi",
+          "listeYolu": "veri/no fish today urun_listesi.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "30-50",
+              "label": "30–50 m²",
+              "referansM2": 40,
+              "listeDosya": "pfos-referans/kokteyl-kahve-30-50.json"
+            }
+          ]
         },
         "questions": []
       },

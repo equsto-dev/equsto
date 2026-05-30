@@ -20,7 +20,8 @@ export type ListeBantId =
   | "kiosk"
   | "60-100"
   | "150-300"
-  | "500-1000";
+  | "500-1000"
+  | "30-50";
 
 export type M2BantTanim = {
   id: ListeBantId;
@@ -580,11 +581,63 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
     },
     questions: [],
   },
-  konseptPlanlanan("bar_kokteyl", "Kokteyl Bar", "Bar & Lounge", "Kokteyl Bar", 60, 250),
+  {
+    id: "bar_kokteyl_kahve",
+    name: "Kokteyl + Kahve",
+    parent: "Bar & Lounge",
+    desc: "Kokteyl & kahve bar · 30–50 m² referans (No Fish Today) · motor: kokteyl-kahve",
+    pfos: {
+      motorSlug: "kokteyl-kahve",
+      dukkanSecim: "Kokteyl + Kahve",
+      m2Min: 30,
+      m2Max: 50,
+      bantKurali: "Tek referans liste (30–50 m²); m² ile adet ölçeklenir",
+      listeYolu: "veri/no fish today urun_listesi.xlsx",
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
+      bantlar: [liste("30-50", "30–50 m²", 40, "kokteyl-kahve")],
+    },
+    questions: [],
+  },
+  {
+    id: "bar_kokteyl",
+    name: "Kokteyl Bar",
+    parent: "Bar & Lounge",
+    desc: "Kokteyl bar · 30–50 m² kokteyl+kahve referansı · motor: kokteyl-kahve",
+    pfos: {
+      motorSlug: "kokteyl-kahve",
+      dukkanSecim: "Kokteyl Bar",
+      m2Min: 30,
+      m2Max: 50,
+      bantKurali: "Kokteyl + kahve referans listesi",
+      listeYolu: "veri/no fish today urun_listesi.xlsx",
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
+      bantlar: [liste("30-50", "30–50 m²", 40, "kokteyl-kahve")],
+    },
+    questions: [],
+  },
   konseptPlanlanan("bar_wine", "Wine Bar", "Bar & Lounge", "Wine Bar", 50, 200),
   konseptPlanlanan("bar_beer", "Beer Pub", "Bar & Lounge", "Beer Pub", 80, 400),
   konseptPlanlanan("bar_irish", "Irish Pub", "Bar & Lounge", "Irish Pub", 100, 450),
-  konseptPlanlanan("bar_mixology", "Mixology Bar", "Bar & Lounge", "Mixology Bar", 50, 180),
+  {
+    id: "bar_mixology",
+    name: "Mixology Bar",
+    parent: "Bar & Lounge",
+    desc: "Mixology · 30–50 m² kokteyl+kahve referansı · motor: kokteyl-kahve",
+    pfos: {
+      motorSlug: "kokteyl-kahve",
+      dukkanSecim: "Mixology Bar",
+      m2Min: 30,
+      m2Max: 50,
+      bantKurali: "Kokteyl + kahve referans listesi",
+      listeYolu: "veri/no fish today urun_listesi.xlsx",
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
+      bantlar: [liste("30-50", "30–50 m²", 40, "kokteyl-kahve")],
+    },
+    questions: [],
+  },
   konseptPlanlanan("bar_lounge", "Lounger Bar", "Bar & Lounge", "Lounger Bar", 80, 350),
   konseptPlanlanan(
     "otel_sehir",
