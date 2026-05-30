@@ -37,9 +37,6 @@ if (!inline.includes("pdp-buybox-cafemarkt-KILIT.txt")) {
 if (!inline.includes("function renderEpdpBuybox")) {
   fail("eq-product-page-inline.js: renderEpdpBuybox yok");
 }
-if (!inline.includes("function pdpBuyboxPerks")) {
-  fail("eq-product-page-inline.js: pdpBuyboxPerks yok");
-}
 if (!inline.includes("function bindEpdpBuybox")) {
   fail("eq-product-page-inline.js: bindEpdpBuybox yok");
 }
@@ -52,15 +49,28 @@ if (!/eq-cmf-qty__val/.test(inline)) {
 if (!/eq-cmf-add-btn/.test(inline)) {
   fail("eq-product-page-inline.js: .eq-cmf-add-btn yok");
 }
-if (/eq-amz-btn-buynow/.test(inline) && /renderEpdpBuybox[\s\S]*eq-amz-btn-buynow/.test(inline)) {
-  fail("eq-product-page-inline.js: buybox içinde Proje Fabrikası (eq-amz-btn-buynow) — KİLİT ihlali");
+if (!/eq-cmf-btn--pfos/.test(inline)) {
+  fail("eq-product-page-inline.js: Proje Fabrikası düğmesi yok");
+}
+if (!/eq-cmf-btn--contact/.test(inline)) {
+  fail("eq-product-page-inline.js: İletişime Geç düğmesi yok");
+}
+if (!/eq-cmf-btn--pay/.test(inline)) {
+  fail("eq-product-page-inline.js: Ödeme Seçenekleri düğmesi yok");
+}
+if (!/eq-cmf-price__amount/.test(inline)) {
+  fail("eq-product-page-inline.js: tek KDV dahil fiyat satırı yok");
+}
+if (/renderEpdpBuybox[\s\S]*eq-amz-btn-buynow/.test(inline)) {
+  fail("eq-product-page-inline.js: buybox içinde eq-amz-btn-buynow — KİLİT ihlali");
 }
 
 const css = read("public/eq-product-page.css");
 if (!css.includes(".eq-cmf-buybox")) fail("eq-product-page.css: .eq-cmf-buybox yok");
-if (!css.includes(".eq-cmf-perks")) fail("eq-product-page.css: .eq-cmf-perks yok");
 if (!css.includes(".eq-cmf-purchase")) fail("eq-product-page.css: .eq-cmf-purchase yok");
 if (!css.includes(".eq-cmf-add-btn")) fail("eq-product-page.css: .eq-cmf-add-btn yok");
+if (!css.includes(".eq-cmf-btn--pfos")) fail("eq-product-page.css: .eq-cmf-btn--pfos yok");
+if (!css.includes(".eq-cmf-pay-panel")) fail("eq-product-page.css: .eq-cmf-pay-panel yok");
 
 const cart = read("public/ecom-cart.js");
 if (!cart.includes("eq-cmf-qty__val")) {
@@ -71,9 +81,12 @@ const buildI18n = read("scripts/build-i18n-en.mjs");
 if (!buildI18n.includes("add_to_cart_cmf")) {
   fail("build-i18n-en.mjs: pdp.add_to_cart_cmf EN override yok");
 }
+if (!buildI18n.includes("payment_options")) {
+  fail("build-i18n-en.mjs: pdp.payment_options EN override yok");
+}
 
 if (err) {
   console.error("\n[verify-pdp-buybox-kilit] KİLİT ihlali — pdp-buybox-cafemarkt-KILIT.txt");
   process.exit(1);
 }
-console.log("[verify-pdp-buybox-kilit] OK — Cafemarkt buybox + adet + perks kilidi");
+console.log("[verify-pdp-buybox-kilit] OK — Cafemarkt buybox v2 kilidi");
