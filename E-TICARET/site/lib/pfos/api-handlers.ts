@@ -26,6 +26,7 @@ const M2_RANGES: Record<string, { min: number; max: number }> = {
   "sarkuteri-kiosk": { min: 25, max: 80 },
   "hamburger-kiosk": { min: 60, max: 100 },
   "hotdog-kiosk": { min: 25, max: 60 },
+  tavukcu: { min: 80, max: 150 },
 };
 
 export function pfosGetConcepts() {
@@ -247,6 +248,13 @@ export function pfosGetKonseptler() {
       seatDensity: 0,
       kalemSayisi: 16,
     },
+    {
+      slug: "tavukcu",
+      label: KONSEPT_LABELS.tavukcu,
+      ornekler: ["Pilic çevirme", "Fried chicken salonu"],
+      seatDensity: 1.6,
+      kalemSayisi: 28,
+    },
   ];
 }
 
@@ -311,6 +319,8 @@ export async function pfosPostCalculate(req: NextRequest) {
       "sushi",
       "sarkuteri-kiosk",
       "hamburger-kiosk",
+      "hotdog-kiosk",
+      "tavukcu",
       "coffee-shop",
     ].includes(pfosReq.konsept)
   ) {
@@ -330,6 +340,7 @@ export async function pfosPostCalculate(req: NextRequest) {
           "sarkuteri-kiosk",
           "hamburger-kiosk",
           "hotdog-kiosk",
+          "tavukcu",
           "coffee-shop",
         ],
       },

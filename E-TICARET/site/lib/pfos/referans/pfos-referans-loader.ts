@@ -100,7 +100,8 @@ export async function loadReferansProfil(
     | "sushi"
     | "sarkuteri-kiosk"
     | "hamburger-kiosk"
-    | "hotdog-kiosk",
+    | "hotdog-kiosk"
+    | "tavukcu",
   m2: number,
   listeId?: ReferansListeId,
   altTip?: string | null,
@@ -123,6 +124,8 @@ export async function loadReferansProfil(
                   ? "60-100"
                   : kategoriId === "hotdog-kiosk"
                     ? "kiosk"
+                    : kategoriId === "tavukcu"
+                      ? "80-150"
           : kategoriId === "italyan" || kategoriId === "birahane"
           ? "100-300"
           : kategoriId === "balikci"
