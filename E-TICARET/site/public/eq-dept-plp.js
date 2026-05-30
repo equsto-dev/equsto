@@ -259,8 +259,11 @@
 
   function productUrl(item) {
     var raw = item.raw;
-    if (raw && raw.id && typeof window.eqProductPath === 'function') {
-      var idSlug = String(raw.id).trim();
+    if (raw && typeof window.eqProductPath === 'function') {
+      var idSlug =
+        typeof window.eqProductSlug === 'function'
+          ? window.eqProductSlug(raw)
+          : String(raw.id || '').trim();
       if (idSlug) {
         return window.eqProductPath(DEPT, idSlug);
       }

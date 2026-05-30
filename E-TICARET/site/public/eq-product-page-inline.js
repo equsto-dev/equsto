@@ -456,7 +456,10 @@ window.searchFilter = window.searchFilter || function () {};
           : x.equstoPage;
       }
       var idSlug = String(x.id || "").trim();
-      var sl = idSlug || productSlugEq(x);
+      var sl =
+        (typeof window.eqProductSlug === "function" ? window.eqProductSlug(x) : "") ||
+        idSlug ||
+        productSlugEq(x);
       if (!sl) return null;
       var cat = x.category || x.c || "";
       var seg =
@@ -2191,6 +2194,27 @@ window.searchFilter = window.searchFilter || function () {};
     }
     window.__eqRenderProduct = renderProduct;
 
+    function waitForShopCatalog(fn, attempt) {
+      attempt = attempt || 0;
+      if (window.EqustoShopCatalog && typeof window.EqustoShopCatalog.load === "function") {
+        fn();
+        return;
+      }
+      if (attempt >= 120) {
+        var missRoot = document.getElementById("eq-product-root");
+        if (missRoot) {
+          missRoot.innerHTML =
+            '<div class="eq-product-miss">' +
+            esc(__pdpT("pdp.catalog_loader_missing", "Katalog yükleyici yok. Sayfayı yenileyin; ecom-data.js ve eq-shop-catalog-bootstrap.js yüklü olmalı.")) +
+            "</div>";
+        }
+        return;
+      }
+      setTimeout(function () {
+        waitForShopCatalog(fn, attempt + 1);
+      }, 50);
+    }
+
     function bootProductPage() {
       if (/\/besos\/modul\/[^/?#]+/i.test(location.pathname || "")) {
         if (typeof window.__eqBootBesosModulPdp === "function") {
@@ -2212,11 +2236,7 @@ window.searchFilter = window.searchFilter || function () {};
         EqFilterColumn.buildBrands([], "", function () {});
       }
       var qs = new URLSearchParams(location.search || "");
-      if (!window.EqustoShopCatalog || typeof window.EqustoShopCatalog.load !== "function") {
-        document.getElementById("eq-product-root").innerHTML =
-          '<div class="eq-product-miss">Katalog yükleyici yok. Sayfayı yenileyin; <code>ecom-data.js</code> ve <code>eq-shop-catalog-bootstrap.js</code> yüklü olmalı.</div>';
-        return;
-      }
+      waitForShopCatalog(function () {
       var seoReady = fetch("/data/eq-category-seo.json", { credentials: "same-origin", cache: "default" })
         .then(function (r) { return r.ok ? r.json() : null; })
         .then(function (j) { window.__eqCategorySeo = j; })
@@ -2306,7 +2326,10 @@ window.searchFilter = window.searchFilter || function () {};
         });
       });
     });
+      });
     }
+
+    window.__eqBootProductPage = bootProductPage;
 
     if (document.readyState === "loading") {
       document.addEventListener("DOMContentLoaded", startProductPageBoot);

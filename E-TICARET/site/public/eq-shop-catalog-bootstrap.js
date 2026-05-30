@@ -6,7 +6,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260528caglayan-pdp-fix";
+  var CATALOG_V = "20260530pdp-sku-slug";
   var __fullMem = null;
   var __fullInflight = null;
   var __deptMem = Object.create(null);

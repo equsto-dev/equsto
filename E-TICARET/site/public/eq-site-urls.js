@@ -224,8 +224,23 @@
   /** PLP + product.html — canlı linklerle uyumlu (tr-TR küçük harf, Türkçe harfler düşer). */
   window.eqProductSlug = function (row) {
     if (!row) return "";
+    var sku = String(row.sku || row.model || row.urun_kodu || row.stok_no || "").trim();
+    if (sku) {
+      var fromSku = String(sku)
+        .toLocaleLowerCase("tr")
+        .replace(/\./g, "-")
+        .replace(/[^a-z0-9+\-]+/g, "-")
+        .replace(/-+/g, "-")
+        .replace(/^-+|-+$/g, "")
+        .substring(0, 80);
+      if (fromSku) return fromSku;
+    }
     var id = String(row.id || "").trim();
-    if (id) return id.toLowerCase();
+    if (id) {
+      var tail = id.indexOf("__") >= 0 ? id.split("__").pop() : "";
+      if (tail) return String(tail).toLowerCase();
+      return id.toLowerCase();
+    }
     function slugify(s) {
       return String(s || "")
         .toLocaleLowerCase("tr")
@@ -263,10 +278,20 @@
   /** Eski arama / Meilisearch slug → katalog satırı (PDP findRaw). */
   window.eqFindCatalogRowByPathSlug = function (all, pathSlug) {
     if (!all || !all.length || !pathSlug) return null;
-    var ps = String(pathSlug).toLowerCase();
+      var ps = String(pathSlug).toLowerCase().replace(/_/g, "-");
     for (var i = 0; i < all.length; i++) {
       var row = all[i];
       if (!row) continue;
+      var sku = String(row.sku || row.model || row.urun_kodu || row.stok_no || "").trim();
+      if (sku) {
+        var skuSl = sku
+          .toLocaleLowerCase("tr")
+          .replace(/\./g, "-")
+          .replace(/[^a-z0-9+\-]+/g, "-")
+          .replace(/-+/g, "-")
+          .replace(/^-+|-+$/g, "");
+        if (skuSl && skuSl === ps) return row;
+      }
       var id = String(row.id || "").trim().toLowerCase();
       if (id && id === ps) return row;
       if (id) {
@@ -554,6 +579,52 @@
       .join("/");
   }
 
+  /** Faz B — NEXT_PUBLIC_ASSET_CDN_URL → eq-asset-cdn-config.js */
+  function assetCdnBase() {
+    try {
+      var b = String(window.__EQUSTO_ASSET_CDN || "").trim();
+      if (b) return b.replace(/\/$/, "");
+    } catch (_) {}
+    return "";
+  }
+
+  function isCdnMigrateRel(rel) {
+    var r = String(rel || "")
+      .replace(/\\/g, "/")
+      .replace(/^\.\//, "")
+      .replace(/^\/+/, "");
+    if (!r) return false;
+    if (/^images\//i.test(r)) return true;
+    if (/^data\/caglayan-market\//i.test(r)) return true;
+    if (/^data\/prosogutma-market\//i.test(r)) return true;
+    if (/^data\/vitrum-drawings\//i.test(r)) return true;
+    if (/^data\/advanced-cuisine-clear-ice\/images\//i.test(r)) return true;
+    return false;
+  }
+
+  function equstoCdnAssetHref(rel) {
+    var base = assetCdnBase();
+    if (!base) return "";
+    var s = String(rel || "").replace(/\\/g, "/").replace(/^\.\//, "");
+    if (!s || /^https?:\/\//i.test(s)) return s;
+    if (s.charAt(0) === "/") s = s.slice(1);
+    if (/^data\//i.test(s)) {
+      if (!isCdnMigrateRel(s)) return "";
+      return base + "/" + encodeDataRelPath(s);
+    }
+    if (/^images\//i.test(s)) {
+      if (!isCdnMigrateRel(s)) return "";
+      return base + "/" + encodeDataRelPath(s);
+    }
+    if (/^catalog\//i.test(s)) {
+      s = "images/" + s;
+      return base + "/" + encodeDataRelPath(s);
+    }
+    return "";
+  }
+
+  window.equstoCdnAssetHref = equstoCdnAssetHref;
+
   function isEqustoLiveHost() {
     try {
       var h = (location.hostname || "").toLowerCase();
@@ -579,8 +650,10 @@
   }
   window.eqAllowRemoteImages = allowRemoteImages;
 
-  /** `images/foo.jpg` katalog yolu → tarayıcı kökü (sonunda `/`). Canlıda önce deploy hedefi `/data/images/`; __eqImgFail `/images/` dener. */
+  /** `images/foo.jpg` katalog yolu → tarayıcı kökü (sonunda `/`). CDN varsa Blob kökü. */
   function catalogImagesWebRoot() {
+    var cdn = assetCdnBase();
+    if (cdn) return cdn + "/images/";
     try {
       if (typeof location !== "undefined" && (location.protocol === "http:" || location.protocol === "https:")) {
         return "/data/images/";
@@ -860,6 +933,8 @@
     var s = String(p).replace(/\\/g, "/").replace(/^\.\//, "");
     if (/^https?:\/\//i.test(s)) return s;
     if (/^\/\//.test(s)) return "https:" + s;
+    var cdnHit = equstoCdnAssetHref(s);
+    if (cdnHit) return cdnHit;
     if (
       /^\/images\/(catalog|home)\//i.test(s) ||
       /^images\/(catalog|home)\//i.test(s)
@@ -883,6 +958,8 @@
     if (!s) return "";
     if (s === "#" || s.charAt(0) === "#") return s;
     if (/^https?:\/\//i.test(s)) return s;
+    var cdnHit = equstoCdnAssetHref(s.charAt(0) === "/" ? s.slice(1) : s);
+    if (cdnHit) return cdnHit;
     if (s.charAt(0) === "/") return s;
     if (s.indexOf("./") === 0 || s.indexOf("../") === 0) return s;
     return "/" + s;
