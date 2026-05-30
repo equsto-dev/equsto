@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
+import { catalogUrlSlug } from "@/lib/catalog-product-slug";
 import JsonLdScript from "@/components/seo/JsonLdScript";
 import ShopBodyClass from "@/components/shop/ShopBodyClass";
 import ShopEqustoChrome from "@/components/shop/ShopEqustoChrome";
@@ -45,6 +46,11 @@ export default async function ShopProductPage({
 
   const found = await findProductForPdp(dept, slug);
   if (!found) notFound();
+
+  const canonicalSlug = catalogUrlSlug(found.row).toLowerCase();
+  if (canonicalSlug && slug.toLowerCase().replace(/_/g, "-") !== canonicalSlug) {
+    redirect(`/shop/${dept}/${encodeURIComponent(canonicalSlug)}`);
+  }
 
   const ssr = rowToPdpSsr(found.row, found.dept);
   const jsonLd = buildProductJsonLd(ssr);

@@ -110,11 +110,19 @@
 
   function catalogSlugFromHit(hit) {
     if (!hit) return "";
+    if (typeof window.eqProductSlug === "function") {
+      var fromRow = window.eqProductSlug(hit);
+      if (fromRow) return fromRow;
+    }
+    var slug = String(hit.slug || "").trim().toLowerCase().replace(/_/g, "-");
+    if (slug && slug.indexOf("__") < 0 && slug.indexOf("oztiryakiler") < 0) return slug.replace(/\//g, "-");
     var id = String(hit.id || "").trim().toLowerCase();
-    if (id.indexOf("__") >= 0) return id.replace(/\//g, "-");
-    var slug = String(hit.slug || "").trim().toLowerCase();
-    if (slug.indexOf("__") >= 0) return slug.replace(/\//g, "-");
-    return slug;
+    if (id.indexOf("__") >= 0) {
+      var tail = id.split("__").pop();
+      if (tail) return tail.replace(/\//g, "-");
+    }
+    if (id) return id.replace(/\//g, "-");
+    return slug.replace(/\//g, "-");
   }
 
   function dedupeHits(hits) {

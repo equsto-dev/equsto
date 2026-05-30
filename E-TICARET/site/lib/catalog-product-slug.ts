@@ -36,9 +36,29 @@ export function slugifyCatalogPart(s: string) {
     .substring(0, 100);
 }
 
+/** Ürün kodu → URL parçası: 9580.APPIA.3V → 9580-appia-3v */
+export function skuPathSlug(sku: string): string {
+  return foldTr(String(sku || "").trim())
+    .replace(/\./g, "-")
+    .replace(/[^a-z0-9+\-]+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .substring(0, 80);
+}
+
+/** Vitrin PDP slug — stok kodu öncelikli (marka öneki yok). */
 export function catalogUrlSlug(row: Record<string, unknown>): string {
+  const sku = String(row.sku || row.model || row.urun_kodu || row.stok_no || "").trim();
+  if (sku) {
+    const fromSku = skuPathSlug(sku);
+    if (fromSku) return fromSku;
+  }
   const id = String(row.id || "").trim();
-  if (id) return id.toLowerCase();
+  if (id) {
+    const tail = id.includes("__") ? id.split("__").pop() || "" : "";
+    if (tail) return tail.toLowerCase();
+    return id.toLowerCase();
+  }
   const b = slugifyCatalogPart(String(row.brand || ""));
   const n = slugifyCatalogPart(String(row.name || ""));
   return (b ? `${b}-` : "") + n;
@@ -57,8 +77,13 @@ export function matchCatalogRowByPathSlug(
   row: Record<string, unknown>,
   pathSlug: string,
 ): boolean {
-  const ps = String(pathSlug || "").toLowerCase();
+  const ps = String(pathSlug || "").toLowerCase().replace(/_/g, "-");
   if (!ps) return false;
+
+  const skuSl = skuPathSlug(
+    String(row.sku || row.model || row.urun_kodu || row.stok_no || ""),
+  );
+  if (skuSl && skuSl === ps) return true;
 
   const id = String(row.id || "").trim().toLowerCase();
   if (id) {
