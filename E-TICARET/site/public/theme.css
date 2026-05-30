@@ -5990,9 +5990,15 @@ body.eq-cart-page .eq-cart-page__lead {
 body.eq-cart-page .eq-cart-page__list {
   min-height: 120px;
   margin-bottom: 20px;
-  padding: 4px 0;
-  border-top: 1px solid var(--eq-border);
-  border-bottom: 1px solid var(--eq-border);
+  padding: 0;
+  border: none;
+}
+
+body.eq-cart-page .eq-cart-page__list.eq-cart-lines {
+  border: 1px solid var(--eq-border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--eq-surface, #fff);
 }
 body.eq-cart-page .eq-cart-page__actions {
   display: flex;

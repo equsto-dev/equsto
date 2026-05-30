@@ -25,6 +25,10 @@ export default function ShopStyles({ variant = "plp" }: { variant?: "plp" | "pro
           <link rel="stylesheet" href={`/eq-product-page.css?v=${v}`} />
         </>
       ) : null}
+      {variant === "cart" ? (
+        /* eslint-disable-next-line @next/next/no-css-tags */
+        <link rel="stylesheet" href={`/eq-cart.css?v=${v}`} />
+      ) : null}
     </>
   );
 }
