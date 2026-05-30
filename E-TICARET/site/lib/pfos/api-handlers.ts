@@ -22,6 +22,7 @@ const M2_RANGES: Record<string, { min: number; max: number }> = {
   birahane: { min: 100, max: 300 },
   pastane: { min: 100, max: 200 },
   pideci: { min: 100, max: 250 },
+  sushi: { min: 40, max: 100 },
 };
 
 export function pfosGetConcepts() {
@@ -107,6 +108,15 @@ export function pfosGetConcepts() {
       m2Max: M2_RANGES.pideci.max,
       itemSayisi: 50,
       zorunluSayisi: 50,
+    },
+    {
+      konsept: "sushi",
+      label: KONSEPT_LABELS.sushi,
+      ornekler: ["Sushi bar", "Omakase"],
+      m2Min: M2_RANGES.sushi.min,
+      m2Max: M2_RANGES.sushi.max,
+      itemSayisi: 27,
+      zorunluSayisi: 27,
     },
   ];
   return [...base.filter((t) => t.konsept !== "coffee-shop"), ...referansJson];
@@ -240,6 +250,7 @@ export async function pfosPostCalculate(req: NextRequest) {
       "pastane",
       "pizzaci",
       "pideci",
+      "sushi",
       "coffee-shop",
     ].includes(pfosReq.konsept)
   ) {
@@ -255,6 +266,7 @@ export async function pfosPostCalculate(req: NextRequest) {
           "pastane",
           "pizzaci",
           "pideci",
+          "sushi",
           "coffee-shop",
         ],
       },

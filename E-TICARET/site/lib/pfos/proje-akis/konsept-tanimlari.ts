@@ -15,7 +15,8 @@ export type ListeBantId =
   | "100-200"
   | "100-250"
   | "200-500"
-  | "300-500";
+  | "300-500"
+  | "40-100";
 
 export type M2BantTanim = {
   id: ListeBantId;
@@ -199,6 +200,25 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
       teklifKaynagi: "pfos-referans",
       durum: "aktif",
       bantlar: [liste("100-250", "100–250 m²", 175, "pideci")],
+    },
+    questions: [],
+  },
+  {
+    id: "restaurant_sushi",
+    name: "Sushi",
+    parent: "Restoran",
+    desc: "Sushi bar / omakase · 40–100 m² referans ekipman listesi · motor: sushi",
+    pfos: {
+      motorSlug: "sushi",
+      dukkanSecim: "Sushi",
+      m2Min: 40,
+      m2Max: 100,
+      bantKurali: "Tek referans liste (40–100 m²); m² ile adet ölçeklenir",
+      planPdf: "proje-veri/06-SUSHI.pdf",
+      listeYolu: "proje-veri/06 SUSHI 40-100 m2.xlsx",
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
+      bantlar: [liste("40-100", "40–100 m²", 70, "sushi")],
     },
     questions: [],
   },

@@ -1,0 +1,228 @@
+{
+  "kategoriId": "sushi",
+  "bantId": "40-100",
+  "label": "Sushi 40–100 m²",
+  "referansM2": 70,
+  "kaynakDosya": "06 SUSHI 40-100 m2.xlsx",
+  "yukleme": "2026-05-30T23:03:27.393Z",
+  "kalemSayisi": 27,
+  "toplamAdet": 34,
+  "kalemler": [
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A1",
+      "ad": "İSTİF RAFI",
+      "olcu": "137*46*160",
+      "adet": 2
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- SOĞUK ODA",
+      "poz": "B1",
+      "ad": "PANEL TİP SOĞUK ODA",
+      "olcu": "285*250*240",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- SOĞUK ODA",
+      "poz": "B2",
+      "ad": "İSTİF RAFI",
+      "olcu": "137*46*160",
+      "adet": 2
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C1",
+      "ad": "KASA BANKOSU",
+      "olcu": "90*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C2",
+      "ad": "ÇALIŞMA TEZGAHI",
+      "olcu": "130*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C3",
+      "ad": "SETALTI DEEPFREEZE",
+      "olcu": "60*60*85",
+      "adet": 2
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C4",
+      "ad": "MAKE-UP ÜNİTESİ, 2 KAPILI",
+      "olcu": "143*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C5",
+      "ad": "SUSHI HAZIRLIK EVYESİ",
+      "olcu": "180*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C6",
+      "ad": "ÇÖP ARABASI",
+      "olcu": "Ø40*50",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C7",
+      "ad": "SUSHI TEŞHİR ÜNİTESİ",
+      "olcu": "140*40*30",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C8",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "170*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C9",
+      "ad": "BUZ MAKİNASI, BREMA",
+      "olcu": "42 kg/gün",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C10",
+      "ad": "BULAŞIK YIKAMA MAKİNASI, SETALTI",
+      "olcu": "500 tb/saat",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C11",
+      "ad": "CAM KAPILI TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+      "olcu": "188*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C12",
+      "ad": "BAR BLENDER",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C13",
+      "ad": "PORTAKAL SIKMA MAKİNASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C14",
+      "ad": "ESPRESSO KAHVE MAKİNASI, CIMBALI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C15",
+      "ad": "KAHVE DEĞİRMENİ",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C16",
+      "ad": "ÇALIŞMA TEZGAHI",
+      "olcu": "40*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C17",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+      "olcu": "60*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C18",
+      "ad": "WOK OCAĞI, GAZLI",
+      "olcu": "60*60*30",
+      "adet": 3
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C19",
+      "ad": "SETALTI ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLIİ, DOLAPL",
+      "olcu": "120*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C20",
+      "ad": "PİRİNÇ PİŞİRME MAKİNESİ",
+      "olcu": "-",
+      "adet": 2
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C21",
+      "ad": "4 AÇIK ALEVLİ OCAK, SETÜSTÜ",
+      "olcu": "80*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C22",
+      "ad": "FRİTÖZ, ÇİFT SEPETLİ, ELK., SETÜSTÜ",
+      "olcu": "80*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C23",
+      "ad": "DAVLUMBAZ, ORTA TİP, FİLTRELİ",
+      "olcu": "400*130*50",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C24",
+      "ad": "YER IZGARASI",
+      "olcu": "30*30*14",
+      "adet": 2
+    }
+  ]
+}
