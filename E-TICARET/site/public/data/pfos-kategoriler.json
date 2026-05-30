@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-05-30T22:53:26.385Z",
+  "updated_at": "2026-05-30T22:57:48.828Z",
   "kategoriler": [
     {
       "id": "steakhouse",
@@ -158,6 +158,19 @@
       "ustKategori": "Restaurant",
       "bantlar": [
         {
+          "id": "80-200",
+          "label": "80–200 m²",
+          "referansM2": 140,
+          "meta": {
+            "listeDosya": "pizzaci-80-200.json",
+            "kalemSayisi": 36,
+            "toplamAdet": 37,
+            "kaynakDosya": "pizzaci-80-200m2.xlsx",
+            "kaynakNot": "MIALIENTO Avcılar · 80–200 m² proforma",
+            "yukleme": "2026-05-30T22:57:48.779Z"
+          }
+        },
+        {
           "id": "200-500",
           "label": "200–500 m²",
           "referansM2": 350,
@@ -167,7 +180,7 @@
             "toplamAdet": 75,
             "kaynakDosya": "pizzaci-200-500-m2.xlsx",
             "kaynakNot": "2025-116 Pizzacı Avcılar (Murat Çaylar) · 2025-116-2.xlsx",
-            "yukleme": "2026-05-30T12:06:34.345Z"
+            "yukleme": "2026-05-30T22:57:48.819Z"
           }
         }
       ]

@@ -15,10 +15,16 @@ export type ReferansListeId =
   | "100-300"
   | "100-200"
   | "100-250"
+  | "80-200"
   | "200-500";
 
 export function pickM2Bant(m2: number): M2BantId {
   return m2 <= 150 ? "80-150" : "150-250";
+}
+
+/** Pizzacı: küçük salon 80–200, büyük 200–500 */
+export function pickPizzaciListe(m2: number): "80-200" | "200-500" {
+  return m2 <= 200 ? "80-200" : "200-500";
 }
 
 /** Balıkçı: mahalle alt tipi veya m² bandı */
@@ -97,7 +103,7 @@ export async function loadReferansProfil(
     (kategoriId === "coffee-shop"
       ? "referans"
       : kategoriId === "pizzaci"
-        ? "200-500"
+        ? pickPizzaciListe(m2)
         : kategoriId === "pastane"
           ? "100-200"
           : kategoriId === "pideci"
