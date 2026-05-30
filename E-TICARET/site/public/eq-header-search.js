@@ -303,6 +303,10 @@
       sessionStorage.setItem("eq_hdr_search_q", q);
     } catch (_) {}
     window.__eqHdrLastQ = q;
+    if (typeof window.eqNavigateArama === "function") {
+      window.eqNavigateArama(q);
+      return;
+    }
     var url = aramaUrl(q);
     if (url) location.href = url;
   }

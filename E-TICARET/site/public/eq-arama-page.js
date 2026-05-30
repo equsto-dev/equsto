@@ -963,7 +963,10 @@
   }
 
   function bootAramaPage() {
-    if (!isAramaPath()) return;
+    if (!isAramaPath()) {
+      lastBootQ = null;
+      return;
+    }
     waitForGrid(load);
   }
 
