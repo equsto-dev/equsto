@@ -22,6 +22,7 @@ import { buildHamburgerKioskTemplate } from "../../referans/hamburger-kiosk";
 import { buildHotdogKioskTemplate } from "../../referans/hotdog-kiosk";
 import { buildTavukcuTemplate } from "../../referans/tavukcu";
 import { buildRestoranTemplate } from "../../referans/restoran";
+import { buildKokteylKahveTemplate } from "../../referans/kokteyl-kahve";
 
 const DYNAMIC_KONSEPT = new Set<Konsept>([
   "steakhouse",
@@ -39,12 +40,13 @@ const DYNAMIC_KONSEPT = new Set<Konsept>([
   "tavukcu",
   "all-day-dining-cafe",
   "restoran",
+  "kokteyl-kahve",
 ]);
 
 export const TEMPLATES: Record<
   Exclude<
     Konsept,
-    "steakhouse" | "balikci" | "coffee-shop" | "italyan" | "birahane" | "pastane" | "pizzaci" | "pideci" | "sushi" | "sarkuteri-kiosk" | "hamburger-kiosk" | "hotdog-kiosk" | "tavukcu" | "all-day-dining-cafe" | "restoran"
+    "steakhouse" | "balikci" | "coffee-shop" | "italyan" | "birahane" | "pastane" | "pizzaci" | "pideci" | "sushi" | "sarkuteri-kiosk" | "hamburger-kiosk" | "hotdog-kiosk" | "tavukcu" | "all-day-dining-cafe" | "restoran" | "kokteyl-kahve"
   >,
   ConceptTemplate
 > = {
@@ -62,7 +64,7 @@ export function getTemplate(konsept: Konsept): ConceptTemplate {
   const t = TEMPLATES[
     konsept as Exclude<
       Konsept,
-      "steakhouse" | "balikci" | "coffee-shop" | "italyan" | "birahane" | "pastane" | "pizzaci" | "pideci" | "sushi" | "sarkuteri-kiosk" | "hamburger-kiosk" | "hotdog-kiosk" | "tavukcu" | "all-day-dining-cafe" | "restoran"
+      "steakhouse" | "balikci" | "coffee-shop" | "italyan" | "birahane" | "pastane" | "pizzaci" | "pideci" | "sushi" | "sarkuteri-kiosk" | "hamburger-kiosk" | "hotdog-kiosk" | "tavukcu" | "all-day-dining-cafe" | "restoran" | "kokteyl-kahve"
     >
   ];
   if (!t) throw new Error(`Bilinmeyen konsept: ${konsept}`);
@@ -90,6 +92,7 @@ export async function resolveTemplateForQuote(
   if (konsept === "tavukcu") return buildTavukcuTemplate(m2);
   if (konsept === "all-day-dining-cafe") return buildAllDayDiningTemplate(m2);
   if (konsept === "restoran") return buildRestoranTemplate(m2);
+  if (konsept === "kokteyl-kahve") return buildKokteylKahveTemplate(m2);
   return getTemplate(konsept);
 }
 

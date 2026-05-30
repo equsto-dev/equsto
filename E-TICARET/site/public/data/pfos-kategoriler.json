@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-05-30T23:45:49.436Z",
+  "updated_at": "2026-05-30T23:56:20.000Z",
   "kategoriler": [
     {
       "id": "steakhouse",
@@ -345,6 +345,25 @@
             "toplamAdet": 149,
             "kaynakDosya": "RESTORAN.xlsx",
             "yukleme": "2026-05-30T23:45:49.431Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "kokteyl-kahve",
+      "label": "Kokteyl + Kahve",
+      "ustKategori": "Bar & Lounge",
+      "bantlar": [
+        {
+          "id": "30-50",
+          "label": "30–50 m²",
+          "referansM2": 40,
+          "meta": {
+            "listeDosya": "kokteyl-kahve-30-50.json",
+            "kalemSayisi": 18,
+            "toplamAdet": 18,
+            "kaynakDosya": "no fish today urun_listesi.xlsx",
+            "yukleme": "2026-05-30T23:56:19.994Z"
           }
         }
       ]

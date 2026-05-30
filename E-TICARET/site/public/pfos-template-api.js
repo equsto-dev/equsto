@@ -7,7 +7,7 @@
   var API_QUOTE = "/api/pfos/quote";
   var API_CALC = "/api/pfos/calculate";
   var API_KONSEPT = "/api/pfos/konseptler";
-  var FALLBACK_KONSEPT = "/data/pfos-konseptler.json?v=20260527restoran-500-1000";
+  var FALLBACK_KONSEPT = "/data/pfos-konseptler.json?v=20260527kokteyl-kahve";
 
   var KAT_DEPT = {
     A: "kahve",
@@ -84,6 +84,16 @@
       return "tavukcu";
     }
     if (d === "Dönerci") return "kebap-ortadogu";
+    if (
+      d === "Kokteyl + Kahve" ||
+      d === "Kokteyl Bar" ||
+      d === "Mixology Bar" ||
+      /kokteyl\s*\+\s*kahve|kokteyl\s*bar|mixology/i.test(d) ||
+      /no\s*fish\s*today/i.test(d) ||
+      /kokteyl|mixology/i.test(k)
+    ) {
+      return "kokteyl-kahve";
+    }
     if (
       d === "Büyük Restoran" ||
       d === "Fine Dining" ||

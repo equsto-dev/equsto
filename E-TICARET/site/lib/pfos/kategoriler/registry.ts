@@ -54,6 +54,13 @@ export const PFOS_KATEGORI_TANIMLARI: PfosKategoriTanim[] = [
     bantlar: [{ id: "150-300", label: "150–300 m²", referansM2: 225 }],
   },
   {
+    id: "kokteyl-kahve",
+    label: "Kokteyl + Kahve",
+    ustKategori: "Bar & Lounge",
+    planNot: "PFOS/veri/no fish today urun_listesi.xlsx",
+    bantlar: [{ id: "30-50", label: "30–50 m²", referansM2: 40 }],
+  },
+  {
     id: "birahane",
     label: "Birahane",
     ustKategori: "Bar & Lounge",

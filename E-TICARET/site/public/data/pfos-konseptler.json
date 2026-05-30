@@ -84,6 +84,12 @@
       "label": "Büyük Restoran",
       "kalemSayisi": 110,
       "not": "500–1000 m² · düğün · büyük rezervasyon · eğlence (RESTORAN)"
+    },
+    {
+      "slug": "kokteyl-kahve",
+      "label": "Kokteyl + Kahve",
+      "kalemSayisi": 18,
+      "not": "30–50 m² · No Fish Today referans"
     }
   ]
 }
