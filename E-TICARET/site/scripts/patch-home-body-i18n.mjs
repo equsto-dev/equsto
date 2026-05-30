@@ -38,6 +38,12 @@ const pairs = [
   ['class=\\"eq-decor-promo__p\\">Konsept vitrin ve açık büfe — çok yakında.<', 'class=\\"eq-decor-promo__p\\" data-i18n=\\"home.decor_promo_yer_p\\">Konsept vitrin ve açık büfe — çok yakında.<'],
   ['class=\\"eq-mx-pop-cats__nav eq-mx-pop-cats__nav--prev\\" aria-label=\\"Önceki\\"', 'class=\\"eq-mx-pop-cats__nav eq-mx-pop-cats__nav--prev\\" aria-label=\\"Önceki\\" data-i18n-attr=\\"aria-label:home.pop_cat_prev\\"'],
   ['class=\\"eq-mx-pop-cats__nav eq-mx-pop-cats__nav--next\\" aria-label=\\"Sonraki\\"', 'class=\\"eq-mx-pop-cats__nav eq-mx-pop-cats__nav--next\\" aria-label=\\"Sonraki\\" data-i18n-attr=\\"aria-label:home.pop_cat_next\\"'],
+  ['aria-label=\\"Proje teklifi\\"', 'aria-label=\\"Proje teklifi\\" data-i18n-attr=\\"aria-label:home.cta_band_aria\\"'],
+  ['class=\\"eq-cta-kicker\\">Mr. Equsto ile çalış<', 'class=\\"eq-cta-kicker\\" data-i18n=\\"home.cta_kicker\\">Mr. Equsto ile çalış<'],
+  ['class=\\"eq-cta-h2\\">Profesyonel mutfağınızı birlikte planlayalım<', 'class=\\"eq-cta-h2\\" data-i18n=\\"home.cta_h2\\">Profesyonel mutfağınızı birlikte planlayalım<'],
+  ['class=\\"eq-cta-p\\">Konseptinizi anlatın; Mr. Equsto sizin için en uygun ekipman setini, kapasiteyi ve markayı seçsin — teklifinizi 24 saatte hazırlayalım.<', 'class=\\"eq-cta-p\\" data-i18n=\\"home.cta_p\\">Konseptinizi anlatın; Mr. Equsto sizin için en uygun ekipman setini, kapasiteyi ve markayı seçsin — teklifinizi 24 saatte hazırlayalım.<'],
+  ['class=\\"eq-cta-btn-primary\\" onclick=\\"eqGo(\'pfos\')\\">Proje Fabrikası\'na git<', 'class=\\"eq-cta-btn-primary\\" onclick=\\"eqGo(\'pfos\')\\" data-i18n=\\"home.cta_btn_pfos\\">Proje Fabrikası\'na git<'],
+  ['class=\\"eq-cta-btn-secondary\\" onclick=\\"typeof eqGo===\'function\'?eqGo(\'contact\'):location.href=\'/contact.html\'\\">Uzmana danış<', 'class=\\"eq-cta-btn-secondary\\" onclick=\\"typeof eqGo===\'function\'?eqGo(\'contact\'):location.href=\'/contact.html\'\\" data-i18n=\\"home.cta_btn_contact\\">Uzmana danış<'],
 ];
 
 let n = 0;

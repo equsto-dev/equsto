@@ -455,7 +455,13 @@
     "hero_cta": "Tüm Öztiryakiler ürünleri →",
     "brand_paragraph": "Türkiye'nin endüstriyel mutfak markası Öztiryakiler ile pişirme, soğutma ve hazırlık ekipmanlarının tamamı tek çatı altında.",
     "featured_title": "Öne çıkan ürünler",
-    "popular_categories": "Popüler Kategoriler"
+    "popular_categories": "Popüler Kategoriler",
+    "cta_band_aria": "Proje teklifi",
+    "cta_kicker": "Mr. Equsto ile çalış",
+    "cta_h2": "Profesyonel mutfağınızı birlikte planlayalım",
+    "cta_p": "Konseptinizi anlatın; Mr. Equsto sizin için en uygun ekipman setini, kapasiteyi ve markayı seçsin — teklifinizi 24 saatte hazırlayalım.",
+    "cta_btn_pfos": "Proje Fabrikası'na git",
+    "cta_btn_contact": "Uzmana danış"
   },
   "besos": {
     "search_placeholder": "Bar modülü, ürün veya kategori ara...",

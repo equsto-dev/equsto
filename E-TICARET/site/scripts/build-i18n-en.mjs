@@ -262,6 +262,13 @@ const EN = {
       "Cooking, refrigeration and prep from Turkey's commercial kitchen brand Öztiryakiler — all under one roof.",
     featured_title: "Featured products",
     popular_categories: "Popular categories",
+    cta_band_aria: "Project quote",
+    cta_kicker: "Work with Mr. Equsto",
+    cta_h2: "Let's plan your professional kitchen together",
+    cta_p:
+      "Tell us your concept; Mr. Equsto will pick the right equipment set, capacity and brand for you — we'll prepare your quote within 24 hours.",
+    cta_btn_pfos: "Go to Project Factory",
+    cta_btn_contact: "Talk to an expert",
   },
 
   besos: {
