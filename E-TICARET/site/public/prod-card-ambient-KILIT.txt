@@ -1,46 +1,59 @@
 ═══════════════════════════════════════════════════════════════════════════
 KİLİT — Ürün kartı ambient hover (YouTube benzeri çerçeve rengi)
-Onay: 2026-05-29 · Commit referans: aa76e95
+Onay: 2026-05-30 · Commit referans: 8ebec09 + 0ea2d35 (v12)
 ═══════════════════════════════════════════════════════════════════════════
 
 Bu dosya, onaylı ürün kartı hover davranışının bozulmaması içindir.
 Değiştirmeden önce kullanıcıdan AÇIK ONAY alın.
 
 ── Beklenen davranış ─────────────────────────────────────────────────────
-1. Fare kart üzerindeyken görselden baskın renk örneklenir (eq-product-card-tint.js)
-2. Kart çerçevesi + gölge o renge döner (--eq-prod-tint-border, --eq-prod-tint-shadow)
-3. Renk yıkaması yalnızca .prod-img arkasında — .prod-info / fiyat metni renklenmez
-4. Ana sayfa, katalog grid, vitrin showcase ve dept PLP aynı mantığı kullanır
+1. Fare kart üzerindeyken görselden baskın renk örneklenir (eq-product-card-tint.js v12)
+2. Her ürün kendi görseline göre farklı çerçeve rengi alır (sarı şerbet → sarı, kırmızı → kırmızı)
+3. Kart çerçevesi + gölge o renge döner (--eq-prod-tint-border, --eq-prod-tint-shadow)
+4. PLP: .eq-dept-plp-card__img hover → --eq-plp-ambient-* (ürün rengine göre)
+5. Renk yıkaması yalnızca .prod-img arkasında — .prod-info / fiyat metni renklenmez
+6. Ana sayfa, katalog grid, vitrin showcase ve dept PLP aynı mantığı kullanır
 
-── Kapsam (DOM) ───────────────────────────────────────────────────────────
-  .prod-card-wrap / .main .products .prod-card
-  .eq-mx-showcase__track--cards .prod-card-wrap
-  .eq-dept-plp-card__img (--eq-plp-ambient-*)
+── v12 renk örnekleme (kilitli mantık) ───────────────────────────────────
+  • CACHE_VER = "v12"
+  • enrichRgb: beyaz/gri fonda sabit gri-mavi DÖNDÜRMEZ — en canlı piksel (bestS) kullanılır
+  • sampleFromDisplayImgDeep: merkez bölge + alt bölge; en doygun renk seçilir
+  • FALLBACK_RGB yalnızca geçici hover; önbelleğe YAZILMAZ (isFallbackRgb)
+  • CDN görsel: data-eq-img-raw → catalogImageCandidates ile yedek URL dene
 
 YASAK (onay olmadan):
+  • Tüm kartlara aynı çerçeve rengi (sabit {118,132,168} enrichRgb dönüşü)
+  • Fallback rengini plpRgbCache / CACHE'e kalıcı yazmak
   • Hover’da çerçeveyi sabit griye kilitlemek (border-color: var(--eq-border) !important)
   • .prod-info arka planına gradient / tint eklemek
   • eq-product-card-tint.js’i ana sayfadan (HOME_SCRIPTS) kaldırmak
   • Ambient hover’ı tamamen devre dışı bırakmak
   • Görünen <img> üzerinde crossOrigin set etmek (CDN PLP görselleri «Görsel» olur)
 
+── Kapsam (DOM) ───────────────────────────────────────────────────────────
+  .prod-card-wrap / .main .products .prod-card
+  .eq-mx-showcase__track--cards .prod-card-wrap
+  .eq-dept-plp-card__img (--eq-plp-ambient-*)
+
 ── Kilitli dosyalar ───────────────────────────────────────────────────────
-  public/eq-product-card-tint.js     — renk örnekleme, CSS değişkenleri
+  public/eq-product-card-tint.js     — renk örnekleme v12, CSS değişkenleri
   public/theme.css                   — .eq-prod-tint-active + PLP ambient CSS
   public/eq-home-mutbex.css          — ana sayfa kart hover override
   lib/vitrin/legacy-scripts.ts       — HOME_SCRIPTS → eq-product-card-tint.js
   components/shop/ShopPlpScripts.tsx
   components/shop/ShopSearchScripts.tsx
   components/shop/ShopProductScripts.tsx
-  public/nav.js                      — lazy tint yükleme (shop sayfaları)
-  lib/shop/assets.ts                 — SHOP_ASSET_V (cache bust)
+  components/besos/BesosModulProductScripts.tsx
+  public/nav.js                      — EQ_TINT_ASSET_V + lazy tint ?v=
+  lib/shop/assets.ts                 — SHOP_ASSET_V (App Router cache bust)
 
 ── Script yükleme (en az biri kalmalı) ───────────────────────────────────
   1. HOME_SCRIPTS (ana sayfa)
-  2. ShopPlpScripts / ShopSearchScripts / ShopProductScripts
-  3. nav.js lazy load
+  2. ShopPlpScripts / ShopSearchScripts / ShopProductScripts / BesosModulProductScripts
+  3. nav.js lazy load (?v=EQ_TINT_ASSET_V)
 
 ── Deploy / doğrulama ─────────────────────────────────────────────────────
   npm run verify:prod-card-ambient-kilit
+  Canlı: farklı ürünlerde hover çerçevesi farklı renk (tek tip gri-mavi değil)
 
 ═══════════════════════════════════════════════════════════════════════════
