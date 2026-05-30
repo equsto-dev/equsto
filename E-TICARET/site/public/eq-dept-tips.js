@@ -795,7 +795,12 @@
     var idx = labelIndex[dept];
     if (idx && idx[lk]) return idx[lk];
     if (lk.indexOf("tost") >= 0 || /\batm[\s-]?\d/.test(lk)) return "tost-makineleri";
+    if (/\batkm|türk\s*kahve|turk\s*kahve|otomatik\s*kahve/.test(lk)) return "cay-makineleri";
+    if (lk.indexOf("döner robot") >= 0 || lk.indexOf("doner robot") >= 0 || /\badr[\s-]/.test(lk))
+      return "adr-seri-doner-robotu";
     if (lk.indexOf("döner") >= 0 || lk.indexOf("doner") >= 0) return "doner-ocaklari-";
+    if (/\bago[\s-]|\bayog[\s-]|yer\s*ocağı|yer\s*ocagi/.test(lk)) return "ocaklar";
+    if (/\bast[\s-]/.test(lk) && lk.indexOf("izgara") < 0) return "dolaplar-ve-taban-raflari-ara-tezgahlar";
     if (
       lk.indexOf("taşıma") >= 0 ||
       lk.indexOf("tasima") >= 0 ||
