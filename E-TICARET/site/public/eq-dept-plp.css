@@ -531,3 +531,27 @@ body.eq-arama-page > footer.footer {
   width: 100%;
   margin: 0 auto;
 }
+body.eq-arama-page .eq-arama-more {
+  display: flex;
+  justify-content: center;
+  padding: 20px 16px 32px;
+}
+body.eq-arama-page .eq-arama-more__btn {
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--eq-border, #e5e7eb);
+  background: var(--eq-surface, #fff);
+  color: var(--eq-text, #111);
+  cursor: pointer;
+}
+body.eq-arama-page .eq-arama-more__btn:hover:not(:disabled) {
+  border-color: var(--eq-accent, #2563eb);
+  color: var(--eq-accent, #2563eb);
+}
+body.eq-arama-page .eq-arama-more__btn:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}

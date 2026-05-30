@@ -4,7 +4,6 @@ import {
   legacyMeiliPathSlug,
 } from "@/lib/catalog-product-slug";
 import { loadDeptJson, loadEkipmanlarJson } from "@/lib/catalog-json";
-import { mergeSearchHitsDiverse } from "@/lib/search-diverse-merge";
 import { deptSearchHints, expandSearchQueries } from "@/lib/search-synonyms";
 
 export type CatalogSearchHit = {
@@ -189,6 +188,8 @@ function scoreRow(hay: string, tokens: string[]) {
     const words = hay.split(/\s+/);
     for (const w of words) {
       if (w.startsWith(t)) score += 4;
+      if (t.length >= 4 && w.includes(t)) score += 6;
+      if (t.length >= 4 && t.includes(w) && w.length >= 4) score += 3;
     }
   }
   return score;
@@ -242,7 +243,7 @@ export async function fallbackCatalogSearch(
 
   const scored = [...byId.values()].sort((a, b) => b.score - a.score);
   const ranked = scored.map((x) => x.hit);
-  const hits = mergeSearchHitsDiverse(ranked, [], limit);
+  const hits = ranked.slice(0, limit);
   return {
     hits,
     estimatedTotalHits: scored.length,
