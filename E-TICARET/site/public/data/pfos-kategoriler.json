@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-05-30T23:08:56.252Z",
+  "updated_at": "2026-05-30T23:15:16.346Z",
   "kategoriler": [
     {
       "id": "steakhouse",
@@ -238,6 +238,25 @@
             "toplamAdet": 26,
             "kaynakDosya": "7 ŞARKÜTERİ - KIOSK.xlsx",
             "yukleme": "2026-05-30T23:08:56.248Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "hamburger-kiosk",
+      "label": "Hamburger Kiosk",
+      "ustKategori": "Fast Food / QSR",
+      "bantlar": [
+        {
+          "id": "60-100",
+          "label": "60–100 m²",
+          "referansM2": 80,
+          "meta": {
+            "listeDosya": "hamburger-kiosk-60-100.json",
+            "kalemSayisi": 22,
+            "toplamAdet": 31,
+            "kaynakDosya": "8 HAMBURGER-60-150 m2 - Kopya.xlsx",
+            "yukleme": "2026-05-30T23:15:16.339Z"
           }
         }
       ]

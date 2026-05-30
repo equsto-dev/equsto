@@ -53,7 +53,7 @@
         "type": "number",
         "required": "true",
         "mapsTo": "m2",
-        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan/birahane → 100-300; pastane → 100-200; pideci → 100-250; sushi → 40-100; sarkuteri-kiosk → kiosk; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu → 300-500 (zone şablon)",
+        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan/birahane → 100-300; pastane → 100-200; pideci → 100-250; sushi → 40-100; sarkuteri-kiosk → kiosk; hamburger-kiosk → 60-100; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu → 300-500 (zone şablon)",
         "note": "Bulut Mutfak ≤15 m²: yalnızca Grab&Go / Coffee Counter. Steakhouse/Balık: ≤150 → 80-150; >150 → 150-250."
       },
       {
@@ -123,6 +123,7 @@
           ],
           "Fast Food / QSR": [
             "Burger",
+            "Hamburger Kiosk",
             "Pizza (paket)",
             "Fried Chicken",
             "Döner / Dürüm",
@@ -688,6 +689,31 @@
               "label": "100–200 m²",
               "referansM2": 150,
               "listeDosya": "pfos-referans/pastane-100-200.json"
+            }
+          ]
+        },
+        "questions": []
+      },
+      {
+        "id": "ff_hamburger_kiosk",
+        "name": "Hamburger Kiosk",
+        "parent": "Fast Food / QSR",
+        "desc": "Hamburger kiosk · 60–100 m² referans · motor: hamburger-kiosk",
+        "pfos": {
+          "motorSlug": "hamburger-kiosk",
+          "dukkanSecim": "Hamburger Kiosk",
+          "m2Min": 60,
+          "m2Max": 100,
+          "bantKurali": "Tek referans liste (60–100 m²); m² ile adet ölçeklenir",
+          "listeYolu": "proje-veri/8 HAMBURGER-60-150 m2 - Kopya.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "60-100",
+              "label": "60–100 m²",
+              "referansM2": 80,
+              "listeDosya": "pfos-referans/hamburger-kiosk-60-100.json"
             }
           ]
         },
