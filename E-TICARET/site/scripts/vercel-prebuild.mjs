@@ -155,6 +155,12 @@ if (fs.existsSync(verifyProdCardAmbient)) {
   if (r.status !== 0) process.exit(r.status ?? 1);
 }
 
+const verifyBuzdolapNav = path.join(siteDir, "scripts/verify-buzdolap-nav-kilit.mjs");
+if (fs.existsSync(verifyBuzdolapNav)) {
+  const r = spawnSync(process.execPath, [verifyBuzdolapNav], { cwd: siteDir, stdio: "inherit" });
+  if (r.status !== 0) process.exit(r.status ?? 1);
+}
+
 const buildSitemap = path.join(siteDir, "scripts/build-sitemap.mjs");
 if (fs.existsSync(buildSitemap)) {
   const r = spawnSync(process.execPath, [buildSitemap], { cwd: siteDir, stdio: "inherit" });
