@@ -14,6 +14,12 @@
       "label": "İtalyan Restoran",
       "kalemSayisi": 86,
       "not": "100–300 m² referans (03-italyan)"
+    },
+    {
+      "slug": "birahane",
+      "label": "Birahane",
+      "kalemSayisi": 27,
+      "not": "100–300 m² referans (11 BIRAHANE)"
     }
   ]
 }

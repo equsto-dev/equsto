@@ -72,7 +72,7 @@ export async function loadPfosReferansListe(
 }
 
 export async function loadReferansProfil(
-  kategoriId: "steakhouse" | "balikci" | "coffee-shop" | "italyan",
+  kategoriId: "steakhouse" | "balikci" | "coffee-shop" | "italyan" | "birahane",
   m2: number,
   listeId?: ReferansListeId,
   altTip?: string | null,
@@ -81,7 +81,7 @@ export async function loadReferansProfil(
     listeId ??
     (kategoriId === "coffee-shop"
       ? "referans"
-      : kategoriId === "italyan"
+      : kategoriId === "italyan" || kategoriId === "birahane"
         ? "100-300"
       : kategoriId === "balikci"
         ? pickBalikciListe(m2, altTip)
