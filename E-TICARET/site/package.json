@@ -35,6 +35,7 @@
     "feed:google:stats": "tsx scripts/run-google-merchant-feed.ts --stats",
     "catalog:atalay:gmc-images": "node scripts/fetch-atalay-gmc-images.mjs --fix-small",
     "verify:pdp-kilit": "node scripts/verify-pdp-kilit.mjs",
+    "verify:pdp-buybox-kilit": "node scripts/verify-pdp-buybox-kilit.mjs",
     "verify:topnav-kilit": "node scripts/verify-topnav-kilit.mjs",
     "verify:prod-card-ambient-kilit": "node scripts/verify-prod-card-ambient-kilit.mjs",
     "verify:footer-brand-kilit": "node scripts/verify-footer-brand-kilit.mjs",

@@ -507,6 +507,12 @@
 
   function parseItemFromEl(el) {
     if (!el) return null;
+    var q = 1;
+    var qtyWrap = el.closest(".eq-cmf-buybox, .eq-epdp-buybox");
+    if (qtyWrap) {
+      var valEl = qtyWrap.querySelector(".eq-cmf-qty__val");
+      if (valEl) q = Math.max(1, Math.min(99, parseInt(valEl.textContent, 10) || 1));
+    }
     return {
       n: el.getAttribute('data-eq-n') || '',
       b: el.getAttribute('data-eq-b') || '',
@@ -514,6 +520,7 @@
       p: el.getAttribute('data-eq-p') || '',
       img: el.getAttribute('data-eq-img') || '',
       quote: el.getAttribute('data-eq-quote') === '1',
+      q: q,
     };
   }
 

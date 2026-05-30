@@ -53,7 +53,7 @@ YASAK (onay olmadan):
 
 ── Fiyat ──────────────────────────────────────────────────────────────────
   buyboxPriceParts(x) — parsePriceTlNumber + toLocaleString tr-TR
-  renderEpdpBuybox içinde frac: ,XX (eq-buybox-frac)
+  renderEpdpBuybox — Cafemarkt tarzı (.eq-cmf-*); ayrıntı: pdp-buybox-cafemarkt-KILIT.txt
   quoteOnly → __pdpT("pdp.quote_for_contact") (buybox + ilgili şerit)
 
 ── Deploy / doğrulama ─────────────────────────────────────────────────────
