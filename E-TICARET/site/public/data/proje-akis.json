@@ -53,7 +53,7 @@
         "type": "number",
         "required": "true",
         "mapsTo": "m2",
-        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan/birahane → 100-300; pastane → 100-200; pideci → 100-250; sushi → 40-100; sarkuteri-kiosk → kiosk; hamburger-kiosk → 60-100; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu → 300-500 (zone şablon)",
+        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan/birahane → 100-300; pastane → 100-200; pideci → 100-250; sushi → 40-100; sarkuteri-kiosk → kiosk; hamburger-kiosk → 60-100; hotdog-kiosk → kiosk; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu → 300-500 (zone şablon)",
         "note": "Bulut Mutfak ≤15 m²: yalnızca Grab&Go / Coffee Counter. Steakhouse/Balık: ≤150 → 80-150; >150 → 150-250."
       },
       {
@@ -124,6 +124,7 @@
           "Fast Food / QSR": [
             "Burger",
             "Hamburger Kiosk",
+            "Hotdog Kiosk",
             "Pizza (paket)",
             "Fried Chicken",
             "Döner / Dürüm",
@@ -714,6 +715,31 @@
               "label": "60–100 m²",
               "referansM2": 80,
               "listeDosya": "pfos-referans/hamburger-kiosk-60-100.json"
+            }
+          ]
+        },
+        "questions": []
+      },
+      {
+        "id": "ff_hotdog_kiosk",
+        "name": "Hotdog Kiosk",
+        "parent": "Fast Food / QSR",
+        "desc": "Hotdog kiosk · referans ekipman listesi · motor: hotdog-kiosk",
+        "pfos": {
+          "motorSlug": "hotdog-kiosk",
+          "dukkanSecim": "Hotdog Kiosk",
+          "m2Min": 25,
+          "m2Max": 60,
+          "bantKurali": "Tek referans liste (kiosk); m² ile adet ölçeklenir",
+          "listeYolu": "proje-veri/13 HOTDOG.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "kiosk",
+              "label": "Kiosk referans",
+              "referansM2": 40,
+              "listeDosya": "pfos-referans/hotdog-kiosk-kiosk.json"
             }
           ]
         },

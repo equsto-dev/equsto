@@ -1,0 +1,140 @@
+{
+  "kategoriId": "hotdog-kiosk",
+  "bantId": "kiosk",
+  "label": "Hotdog Kiosk",
+  "referansM2": 40,
+  "kaynakDosya": "13 HOTDOG.xlsx",
+  "yukleme": "2026-05-30T23:20:54.081Z",
+  "kalemSayisi": 16,
+  "toplamAdet": 18,
+  "kalemler": [
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A1",
+      "ad": "İSTİF RAFI",
+      "olcu": "122*46*160",
+      "adet": 2
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- SOĞUK ODA",
+      "poz": "B1",
+      "ad": "PANEL TİP SOĞUK ODA",
+      "olcu": "120*200*240",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- SOĞUK ODA",
+      "poz": "B2",
+      "ad": "İSTİF RAFI",
+      "olcu": "183*46*160",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SERVİS TEŞHİR",
+      "poz": "C1",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "180*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SERVİS TEŞHİR",
+      "poz": "C2",
+      "ad": "BULAŞIK YIKAMA MAKİNASI",
+      "olcu": "500 Tb/saat",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SERVİS TEŞHİR",
+      "poz": "C3",
+      "ad": "BUZ MAKİNASI",
+      "olcu": "42 kg/gün",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SERVİS TEŞHİR",
+      "poz": "C4",
+      "ad": "MAKE UP ÜNİTESİ, 2 KAPILI",
+      "olcu": "143*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SERVİS TEŞHİR",
+      "poz": "C5",
+      "ad": "DUVAR RAFI",
+      "olcu": "143*30*3",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SERVİS TEŞHİR",
+      "poz": "C6",
+      "ad": "KASA TEZGAHI",
+      "olcu": "140*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SERVİS TEŞHİR",
+      "poz": "C7",
+      "ad": "KAZIKLI SOSİS PİŞİRME",
+      "olcu": "5 KAZIKLI",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SERVİS TEŞHİR",
+      "poz": "C8",
+      "ad": "TOST MAKİNASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SERVİS TEŞHİR",
+      "poz": "C9",
+      "ad": "TEZGAH TİPİ SOĞUK DOLAP",
+      "olcu": "188*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SERVİS TEŞHİR",
+      "poz": "C10",
+      "ad": "BAIN MARIE",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SERVİS TEŞHİR",
+      "poz": "C11",
+      "ad": "ROLLER",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SERVİS TEŞHİR",
+      "poz": "C12",
+      "ad": "SİNEK ÖLDÜRÜCÜ",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SERVİS TEŞHİR",
+      "poz": "C13",
+      "ad": "YER IZGARASI",
+      "olcu": "30*30*14",
+      "adet": 2
+    }
+  ]
+}

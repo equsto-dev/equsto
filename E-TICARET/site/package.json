@@ -103,6 +103,7 @@
     "pfos:sushi:import": "node scripts/import-sushi-konsept.mjs",
     "pfos:sarkuteri-kiosk:import": "node scripts/import-sarkuteri-kiosk-konsept.mjs",
     "pfos:hamburger-kiosk:import": "node scripts/import-hamburger-kiosk-konsept.mjs",
+    "pfos:hotdog-kiosk:import": "node scripts/import-hotdog-kiosk-konsept.mjs",
     "sync:legacy": "node scripts/sync-legacy-assets.mjs",
     "assets:cdn:config": "node scripts/generate-asset-cdn-config.mjs",
     "assets:cdn:verify": "node --import ./scripts/load-env.mjs scripts/faz-b-verify-cdn.mjs",

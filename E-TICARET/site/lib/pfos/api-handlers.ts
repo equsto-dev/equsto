@@ -25,6 +25,7 @@ const M2_RANGES: Record<string, { min: number; max: number }> = {
   sushi: { min: 40, max: 100 },
   "sarkuteri-kiosk": { min: 25, max: 80 },
   "hamburger-kiosk": { min: 60, max: 100 },
+  "hotdog-kiosk": { min: 25, max: 60 },
 };
 
 export function pfosGetConcepts() {
@@ -138,6 +139,15 @@ export function pfosGetConcepts() {
       itemSayisi: 22,
       zorunluSayisi: 22,
     },
+    {
+      konsept: "hotdog-kiosk",
+      label: KONSEPT_LABELS["hotdog-kiosk"],
+      ornekler: ["Sosisli kiosk", "AVM hot dog"],
+      m2Min: M2_RANGES["hotdog-kiosk"].min,
+      m2Max: M2_RANGES["hotdog-kiosk"].max,
+      itemSayisi: 16,
+      zorunluSayisi: 16,
+    },
   ];
   return [...base.filter((t) => t.konsept !== "coffee-shop"), ...referansJson];
 }
@@ -228,7 +238,14 @@ export function pfosGetKonseptler() {
       label: KONSEPT_LABELS["hamburger-kiosk"],
       ornekler: ["QSR burger kiosk", "AVM hamburger"],
       seatDensity: 0,
-      kalemSayisi: 24,
+      kalemSayisi: 22,
+    },
+    {
+      slug: "hotdog-kiosk",
+      label: KONSEPT_LABELS["hotdog-kiosk"],
+      ornekler: ["Sosisli kiosk", "AVM hot dog"],
+      seatDensity: 0,
+      kalemSayisi: 16,
     },
   ];
 }
@@ -312,6 +329,7 @@ export async function pfosPostCalculate(req: NextRequest) {
           "sushi",
           "sarkuteri-kiosk",
           "hamburger-kiosk",
+          "hotdog-kiosk",
           "coffee-shop",
         ],
       },
