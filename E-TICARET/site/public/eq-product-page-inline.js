@@ -1537,26 +1537,20 @@ window.searchFilter = window.searchFilter || function () {};
     }
 
     /** KİLİT: public/pdp-buybox-cafemarkt-KILIT.txt — Cafemarkt tarzı buybox */
-    function pdpWhatsAppHref(x) {
-      var phone = "905326842608";
-      try {
-        if (window.EQUSTO_WHATSAPP_E164) {
-          phone = String(window.EQUSTO_WHATSAPP_E164).replace(/\D/g, "");
-        }
-      } catch (_) {}
+    function pdpWhatsAppPrefill(x) {
       var sku = (x && (x.sku || x.model)) || "";
-      var text =
+      return (
         "Merhaba, " +
         ((x && x.name) || "ürün") +
         (sku ? " (" + sku + ")" : "") +
-        " hakkında bilgi almak istiyorum.";
-      return "https://wa.me/" + phone + "?text=" + encodeURIComponent(text);
+        " hakkında bilgi almak istiyorum."
+      );
     }
 
     function renderEpdpBuybox(x, cartU) {
       var parts = buyboxPriceParts(x);
       var pfosHref = eqHtmlUrl(typeof window.equstoUrl === "function" ? window.equstoUrl("pfos") : "pfos.html");
-      var waHref = pdpWhatsAppHref(x);
+      var waMsg = pdpWhatsAppPrefill(x);
       var priceBlock = parts.quoteOnly
         ? '<div class="eq-cmf-price eq-cmf-price--quote">' +
           esc(__pdpT("pdp.quote_for_contact", "Teklif için iletişim")) +
@@ -1620,14 +1614,14 @@ window.searchFilter = window.searchFilter || function () {};
         cartBtnSolid +
         "</div>" +
         '<div class="eq-cmf-actions eq-cmf-actions--outline">' +
-        '<a class="eq-cmf-btn-outline eq-cmf-btn--wa" href="' +
-        esc(waHref) +
-        '" target="_blank" rel="noopener">' +
+        '<button type="button" class="eq-cmf-btn-outline eq-cmf-btn--wa" data-eq-wa-msg="' +
+        esc(waMsg) +
+        '">' +
         '<span class="eq-cmf-btn-outline__icon" aria-hidden="true">' +
         '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492l4.587-1.452A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.378l-.357-.212-3.064.972.998-2.988-.233-.375A9.818 9.818 0 0 1 2.182 12c0-5.422 4.396-9.818 9.818-9.818S21.818 6.578 21.818 12 17.422 21.818 12 21.818z"/></svg>' +
         "</span>" +
         esc(__pdpT("pdp.whatsapp_ask", "Whatsapp ile Soru Sor")) +
-        "</a>" +
+        "</button>" +
         '<button type="button" class="eq-cmf-btn-outline eq-cmf-btn--pay">' +
         '<span class="eq-cmf-btn-outline__icon" aria-hidden="true">' +
         '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>' +
@@ -1684,6 +1678,19 @@ window.searchFilter = window.searchFilter || function () {};
           if (open) payPanel.removeAttribute("hidden");
           else payPanel.setAttribute("hidden", "");
           payBtn.setAttribute("aria-expanded", open ? "true" : "false");
+        });
+      }
+      var waBtn = box.querySelector(".eq-cmf-btn--wa");
+      if (waBtn) {
+        waBtn.addEventListener("click", function (e) {
+          e.preventDefault();
+          var text = waBtn.getAttribute("data-eq-wa-msg") || "";
+          if (typeof window.equstoOpenWhatsAppWebWindow === "function") {
+            window.equstoOpenWhatsAppWebWindow(null, text);
+          } else if (typeof window.equstoOpenWhatsApp === "function") {
+            window.EQUSTO_WHATSAPP_TEXT = text;
+            window.equstoOpenWhatsApp(e);
+          }
         });
       }
     }
