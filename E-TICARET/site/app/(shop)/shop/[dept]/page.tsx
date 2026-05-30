@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ShopBodyClass from "@/components/shop/ShopBodyClass";
+import DeptPlpCrawlLinks from "@/components/shop/DeptPlpCrawlLinks";
 import ShopDeptPlpMain from "@/components/shop/ShopDeptPlpMain";
 import ShopEqustoChrome from "@/components/shop/ShopEqustoChrome";
 import ShopPlpScripts from "@/components/shop/ShopPlpScripts";
@@ -46,6 +47,7 @@ export default async function ShopDeptPage({ params }: { params: Promise<{ dept:
       <ShopBodyClass className="eq-shop eq-dept eq-dept-plp" dataDept={dept} />
       <ShopEqustoChrome activeDept={dept as ShopDeptSlug} />
       <ShopDeptPlpMain meta={meta} />
+      <DeptPlpCrawlLinks dept={dept} />
       <ShopPlpScripts />
     </>
   );

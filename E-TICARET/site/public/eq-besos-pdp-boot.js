@@ -4,6 +4,7 @@
 (function () {
   "use strict";
 
+  var CATALOGUE_V = "20260527pdp-boot-nav";
   var FALLBACK_EUR_TRY = 52.8238;
 
   function nz(v) {
@@ -24,7 +25,19 @@
   }
 
   function catalogueUrl() {
-    return "/data/vitrum-bars-catalogue.json";
+    return "/data/vitrum-bars-catalogue.json?v=" + CATALOGUE_V;
+  }
+
+  function loadCatalogue() {
+    return fetch(catalogueUrl(), { cache: "default" })
+      .then(function (r) {
+        if (!r.ok) throw new Error("catalogue");
+        return r.json();
+      })
+      .catch(function () {
+        if (window.__VITRUM_CATALOGUE_FALLBACK) return window.__VITRUM_CATALOGUE_FALLBACK;
+        throw new Error("catalogue");
+      });
   }
 
   function eurToTryPriceString(eur, rate) {
@@ -148,13 +161,7 @@
       bcHome.href = window.equstoUrl("shop");
     }
 
-    Promise.all([
-      fetch(catalogueUrl(), { cache: "no-store" }).then(function (r) {
-        if (!r.ok) throw new Error("catalogue");
-        return r.json();
-      }),
-      ensureRate(),
-    ])
+    Promise.all([loadCatalogue(), ensureRate()])
       .then(function (res) {
         var data = res[0];
         var rate = res[1];
@@ -199,6 +206,26 @@
           '">' +
           escMiss(backLbl) +
           "</a></div>";
+        var bc = document.getElementById("eq-product-bc");
+        if (bc) {
+          var homeLbl = isEn() ? "Home" : "Ana Sayfa";
+          var crumbLbl =
+            err && err.message === "notfound"
+              ? isEn()
+                ? "Module"
+                : "Modül"
+              : isEn()
+                ? "Error"
+                : "Hata";
+          bc.innerHTML =
+            '<a href="' +
+            escMiss(besosHref) +
+            '">' +
+            escMiss(homeLbl) +
+            '</a> › <span>' +
+            escMiss(crumbLbl) +
+            "</span>";
+        }
       });
   };
 

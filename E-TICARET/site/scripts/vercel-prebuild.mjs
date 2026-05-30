@@ -155,4 +155,10 @@ if (fs.existsSync(verifyProdCardAmbient)) {
   if (r.status !== 0) process.exit(r.status ?? 1);
 }
 
+const buildSitemap = path.join(siteDir, "scripts/build-sitemap.mjs");
+if (fs.existsSync(buildSitemap)) {
+  const r = spawnSync(process.execPath, [buildSitemap], { cwd: siteDir, stdio: "inherit" });
+  if (r.status !== 0) process.exit(r.status ?? 1);
+}
+
 console.log("[vercel-prebuild] OK");

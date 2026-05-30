@@ -101,6 +101,7 @@ export type BesosProduct = {
   descriptionEn?: string;
   page?: number;
   image?: string;
+  imageLocal?: string;
   drawing?: string;
   totalDimensionsMm?: string;
   features?: string[];

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import GlobalSiteJsonLd from "@/components/seo/GlobalSiteJsonLd";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -29,6 +30,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
+        <GlobalSiteJsonLd />
         <div id="eq-shop-chrome-root" />
         {children}
       </body>
