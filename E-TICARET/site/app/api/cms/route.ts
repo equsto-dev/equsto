@@ -2,6 +2,7 @@ import { NextRequest } from "next/server";
 import { assertAdminBearer } from "@/lib/auth";
 import { adminErr, adminOk } from "@/lib/admin-response";
 import { dataPath, readJsonFile, writeJsonFile } from "@/lib/legacy-data";
+import { enrichShopTypesFromFile } from "@/lib/pfos/proje-akis/konsept-tanimlari";
 import { unwrapProjeAkisPayload } from "@/lib/pfos/proje-akis/unwrap";
 
 export const runtime = "nodejs";
@@ -45,7 +46,12 @@ export async function GET(req: NextRequest) {
 
   if (kind === "proje-akis") {
     const stored = await loadProjeAkis(req);
-    if (stored) return adminOk({ data: stored });
+    if (stored) {
+      const shopTypes = Array.isArray(stored.shopTypes)
+        ? enrichShopTypesFromFile(stored.shopTypes)
+        : [];
+      return adminOk({ data: { ...stored, shopTypes } });
+    }
     return adminOk({ data: EMPTY_PROJE });
   }
 
