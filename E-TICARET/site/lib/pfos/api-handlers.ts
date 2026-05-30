@@ -144,6 +144,41 @@ export function pfosGetKonseptler() {
       seatDensity: 1.5,
       kalemSayisi: 24,
     },
+    {
+      slug: "italyan",
+      label: KONSEPT_LABELS.italyan,
+      ornekler: ["Trattoria", "Osteria"],
+      seatDensity: 1.6,
+      kalemSayisi: 86,
+    },
+    {
+      slug: "birahane",
+      label: KONSEPT_LABELS.birahane,
+      ornekler: ["Mikro birahane", "Craft beer pub"],
+      seatDensity: 1.5,
+      kalemSayisi: 27,
+    },
+    {
+      slug: "pastane",
+      label: KONSEPT_LABELS.pastane,
+      ornekler: ["Butik pastane", "Patisserie"],
+      seatDensity: 1.4,
+      kalemSayisi: 43,
+    },
+    {
+      slug: "pizzaci",
+      label: KONSEPT_LABELS.pizzaci,
+      ornekler: ["Mialiento Avcılar", "Pizza Il Forno"],
+      seatDensity: 1.5,
+      kalemSayisi: 69,
+    },
+    {
+      slug: "pideci",
+      label: KONSEPT_LABELS.pideci,
+      ornekler: ["Lahmacun & pide salonu", "Taş fırın pideci"],
+      seatDensity: 1.5,
+      kalemSayisi: 50,
+    },
   ];
 }
 
@@ -204,6 +239,7 @@ export async function pfosPostCalculate(req: NextRequest) {
       "birahane",
       "pastane",
       "pizzaci",
+      "pideci",
       "coffee-shop",
     ].includes(pfosReq.konsept)
   ) {

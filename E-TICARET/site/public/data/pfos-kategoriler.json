@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-05-30T22:50:05.354Z",
+  "updated_at": "2026-05-30T22:53:26.385Z",
   "kategoriler": [
     {
       "id": "steakhouse",
@@ -186,7 +186,7 @@
             "kalemSayisi": 50,
             "toplamAdet": 54,
             "kaynakDosya": "PIDECI 100-250m2.xlsx",
-            "yukleme": "2026-05-30T22:50:05.346Z"
+            "yukleme": "2026-05-30T22:53:26.381Z"
           }
         }
       ]
