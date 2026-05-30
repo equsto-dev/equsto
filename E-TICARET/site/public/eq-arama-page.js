@@ -1,19 +1,47 @@
 /**
- * /arama?q= — Meilisearch sonuç sayfası (statik mağaza kromu)
+ * /arama?q= — Meilisearch sonuç sayfası + istemci filtreleri
  */
 ;(function () {
   "use strict";
 
   var PAGE_SIZE = 96;
-  var allHits = [];
+  var sourceHits = [];
   var loadMoreBusy = false;
   var CATALOG_V = (function () {
     var el = document.querySelector("[data-eq-shop-chrome-v]");
     return (el && el.getAttribute("data-eq-shop-chrome-v")) || "20260529-9890-imgs";
   })();
-  var lastRender = { hits: [], q: "", total: 0, err: null };
+  var lastRender = { q: "", total: 0, err: null, warning: "", hasMore: false };
   var catalogImgById = null;
   var catalogImgInflight = null;
+  var uiBound = false;
+
+  var filterState = {
+    depts: [],
+    brands: [],
+    sort: "",
+    priceMin: "",
+    priceMax: "",
+  };
+
+  var DEPT_LABELS = {
+    pisirme: { key: "nav.pisirme", fb: "Pişirme" },
+    sogutma: { key: "nav.sogutma", fb: "Soğutma" },
+    kahve: { key: "nav.kahve", fb: "Kahve" },
+    yikama: { key: "nav.yikama", fb: "Yıkama" },
+    hazirlik: { key: "nav.hazirlik", fb: "Hazırlık" },
+    icecek: { key: "nav.icecek", fb: "İçecek" },
+    tezgah: { key: "nav.tezgah", fb: "Tezgah" },
+    dolap: { key: "nav.dolap", fb: "Dolap" },
+    davlumbaz: { key: "nav.davlumbaz", fb: "Davlumbaz" },
+    tasima: { key: "nav.tasima", fb: "Taşıma" },
+    araba: { key: "nav.araba", fb: "Servis Arabaları" },
+    istif: { key: "nav.istif", fb: "İstif" },
+    "set-ustu-mutfak": { key: "nav.set_ustu", fb: "Set Üstü Mutfak" },
+    kuvetler: { key: "nav.kuvetler", fb: "Küvetler" },
+    "market-reyonlari": { key: "nav.market_reyonlari", fb: "Market Reyonları" },
+    "market-reyon": { key: "nav.market_reyonlari", fb: "Market Reyonları" },
+  };
 
   function __searchT(k, fb, vars) {
     var s = fb || k;
@@ -38,8 +66,45 @@
       .replace(/"/g, "&quot;");
   }
 
+  function lc(s) {
+    return String(s || "").toLocaleLowerCase("tr");
+  }
+
   function trimQ(q) {
     return String(q == null ? "" : q).trim();
+  }
+
+  function deptLabel(dept) {
+    var meta = DEPT_LABELS[dept];
+    if (!meta) return dept;
+    return __searchT(meta.key, meta.fb);
+  }
+
+  function hitDeptKey(h) {
+    var d = String((h && h.dept) || "").trim().toLowerCase();
+    if (d === "market-reyon") return "market-reyonlari";
+    return d || "pisirme";
+  }
+
+  function hitBrandKey(h) {
+    return String((h && h.brand) || "").trim();
+  }
+
+  function parsePriceFromHit(h) {
+    if (!h) return 0;
+    if (h.satis_eur_indirimli != null && Number(h.satis_eur_indirimli) > 0) {
+      return Number(h.satis_eur_indirimli);
+    }
+    if (h.liste_fiyati_eur != null && Number(h.liste_fiyati_eur) > 0) {
+      return Number(h.liste_fiyati_eur);
+    }
+    var s = String(h.price || "")
+      .split("\n")[0]
+      .replace(/\./g, "")
+      .replace(",", ".")
+      .replace(/[^\d.]/g, "");
+    var n = parseFloat(s);
+    return isNaN(n) ? 0 : n;
   }
 
   function catalogSlugFromHit(hit) {
@@ -64,6 +129,77 @@
       out.push(h);
     }
     return out;
+  }
+
+  function resetFilters() {
+    filterState.depts = [];
+    filterState.brands = [];
+    filterState.sort = "";
+    filterState.priceMin = "";
+    filterState.priceMax = "";
+    var sortEl = document.getElementById("eq-arama-sort");
+    if (sortEl) sortEl.value = "";
+  }
+
+  function hasActiveFilters() {
+    return (
+      filterState.depts.length > 0 ||
+      filterState.brands.length > 0 ||
+      filterState.priceMin !== "" ||
+      filterState.priceMax !== "" ||
+      !!filterState.sort
+    );
+  }
+
+  function poolForCounts(exclude) {
+    var list = sourceHits.slice();
+    if (filterState.depts.length && exclude !== "dept") {
+      list = list.filter(function (h) {
+        return filterState.depts.indexOf(hitDeptKey(h)) >= 0;
+      });
+    }
+    if (filterState.brands.length && exclude !== "brand") {
+      list = list.filter(function (h) {
+        return filterState.brands.indexOf(hitBrandKey(h)) >= 0;
+      });
+    }
+    if (filterState.priceMin !== "" && exclude !== "price") {
+      var lo = Number(filterState.priceMin);
+      list = list.filter(function (h) {
+        return parsePriceFromHit(h) >= lo;
+      });
+    }
+    if (filterState.priceMax !== "" && exclude !== "price") {
+      var hi = Number(filterState.priceMax);
+      list = list.filter(function (h) {
+        var n = parsePriceFromHit(h);
+        return !n || n <= hi;
+      });
+    }
+    return list;
+  }
+
+  function filteredHits() {
+    var list = poolForCounts(null);
+    list = list.slice();
+    if (filterState.sort === "name") {
+      list.sort(function (a, b) {
+        return String(a.name || "").localeCompare(String(b.name || ""), "tr");
+      });
+    } else if (filterState.sort === "name-desc") {
+      list.sort(function (a, b) {
+        return String(b.name || "").localeCompare(String(a.name || ""), "tr");
+      });
+    } else if (filterState.sort === "price-asc") {
+      list.sort(function (a, b) {
+        return parsePriceFromHit(a) - parsePriceFromHit(b);
+      });
+    } else if (filterState.sort === "price-desc") {
+      list.sort(function (a, b) {
+        return parsePriceFromHit(b) - parsePriceFromHit(a);
+      });
+    }
+    return list;
   }
 
   function productHref(hit) {
@@ -139,7 +275,6 @@
     );
   }
 
-  /** PLP ile uyumlu: cafemarkt foto önce; ax web render (katalog tablosu) kullanma. */
   function pickCatalogImage(row, mapped) {
     var imgs = (row && row.images) || [];
     var i;
@@ -152,9 +287,7 @@
     var rel = String(mapped || imgs[0] || "").replace(/\\/g, "/");
     if (rel && isCatalogRenderRel(rel)) {
       var kod = row && (row.sku || row.model || row.urun_kodu);
-      if (kod) {
-        return "images/catalog/ozti/cafemarkt/" + slugOzti(kod) + ".jpg";
-      }
+      if (kod) return "images/catalog/ozti/cafemarkt/" + slugOzti(kod) + ".jpg";
       return rel.replace("/ozti/web/", "/ozti/cafemarkt/");
     }
     return rel;
@@ -245,32 +378,22 @@
     } catch (_) {}
   }
 
-  function ensureMoreHost() {
+  function renderMoreButton(q, hasMore) {
     var host = document.getElementById("eq-arama-more");
-    if (!host) {
-      host = document.createElement("div");
-      host.id = "eq-arama-more";
-      host.className = "eq-arama-more";
-      var grid = document.getElementById("eq-arama-grid");
-      if (grid && grid.parentNode) grid.parentNode.appendChild(host);
-    }
-    return host;
-  }
-
-  function renderMoreButton(q, total, hasMore) {
-    var host = ensureMoreHost();
     if (!host) return;
     if (!hasMore || !q) {
       host.innerHTML = "";
       return;
     }
-    var shown = allHits.length;
+    var shown = sourceHits.length;
     host.innerHTML =
       '<button type="button" class="eq-arama-more__btn" id="eq-arama-more-btn">' +
-      esc(__searchT("search.load_more", "{shown} / {total} — daha fazla göster", {
-        shown: String(shown),
-        total: String(total),
-      })) +
+      esc(
+        __searchT("search.load_more", "{shown} / {total} — daha fazla göster", {
+          shown: String(shown),
+          total: String(lastRender.total != null ? lastRender.total : shown),
+        })
+      ) +
       "</button>";
     var btn = document.getElementById("eq-arama-more-btn");
     if (btn) {
@@ -280,38 +403,239 @@
     }
   }
 
-  function render(hits, q, total, err, opts) {
-    opts = opts || {};
-    allHits = dedupeHits(hits || []);
-    hits = allHits;
-    lastRender = { hits: hits, q: q || "", total: total, err: err, warning: opts.warning || "" };
-    var title = document.getElementById("eq-arama-title");
-    var count = document.getElementById("eq-arama-count");
+  function renderSelectedChips() {
+    var host = document.getElementById("eq-arama-selected");
+    var chips = document.getElementById("eq-arama-chips");
+    if (!host || !chips) return;
+    var html = "";
+    filterState.depts.forEach(function (d) {
+      html +=
+        '<button type="button" class="eq-cm-chip" data-kind="dept" data-value="' +
+        esc(d) +
+        '">' +
+        esc(deptLabel(d)) +
+        " ×</button>";
+    });
+    filterState.brands.forEach(function (b) {
+      html +=
+        '<button type="button" class="eq-cm-chip" data-kind="brand" data-value="' +
+        esc(b) +
+        '">' +
+        esc(b) +
+        " ×</button>";
+    });
+    if (filterState.priceMin !== "") {
+      html +=
+        '<button type="button" class="eq-cm-chip" data-kind="priceMin">min ' +
+        esc(filterState.priceMin) +
+        " ×</button>";
+    }
+    if (filterState.priceMax !== "") {
+      html +=
+        '<button type="button" class="eq-cm-chip" data-kind="priceMax">max " +
+        esc(filterState.priceMax) +
+        " ×</button>";
+    }
+    chips.innerHTML = html;
+    host.hidden = !html;
+    chips.querySelectorAll(".eq-cm-chip").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var kind = btn.getAttribute("data-kind");
+        var val = btn.getAttribute("data-value");
+        if (kind === "dept") {
+          filterState.depts = filterState.depts.filter(function (d) {
+            return d !== val;
+          });
+        } else if (kind === "brand") {
+          filterState.brands = filterState.brands.filter(function (b) {
+            return b !== val;
+          });
+        } else if (kind === "priceMin") filterState.priceMin = "";
+        else if (kind === "priceMax") filterState.priceMax = "";
+        renderAll();
+      });
+    });
+  }
+
+  function renderFacets() {
+    var host = document.getElementById("eq-arama-facets");
+    if (!host || !sourceHits.length) {
+      if (host) host.innerHTML = "";
+      return;
+    }
+
+    var deptPool = poolForCounts("dept");
+    var brandPool = poolForCounts("brand");
+    var pricePool = poolForCounts("price");
+    var deptCounts = Object.create(null);
+    var brandCounts = Object.create(null);
+    var priceMinAll = Infinity;
+    var priceMaxAll = 0;
+
+    deptPool.forEach(function (h) {
+      var d = hitDeptKey(h);
+      deptCounts[d] = (deptCounts[d] || 0) + 1;
+    });
+    brandPool.forEach(function (h) {
+      var b = hitBrandKey(h);
+      if (b) brandCounts[b] = (brandCounts[b] || 0) + 1;
+    });
+    pricePool.forEach(function (h) {
+      var pr = parsePriceFromHit(h);
+      if (pr > 0) {
+        if (pr < priceMinAll) priceMinAll = pr;
+        if (pr > priceMaxAll) priceMaxAll = pr;
+      }
+    });
+    if (!isFinite(priceMinAll)) priceMinAll = 0;
+
+    var depts = Object.keys(deptCounts).sort(function (a, b) {
+      return deptCounts[b] - deptCounts[a];
+    });
+    filterState.depts.forEach(function (d) {
+      if (depts.indexOf(d) < 0) depts.push(d);
+    });
+
+    var brands = Object.keys(brandCounts).sort(function (a, b) {
+      return brandCounts[b] - brandCounts[a];
+    });
+    filterState.brands.forEach(function (b) {
+      if (b && brands.indexOf(b) < 0) brands.push(b);
+    });
+
+    var html = "";
+
+    if (depts.length > 1) {
+      html +=
+        '<details class="eq-cm-facet" open><summary class="eq-cm-facet__hd">' +
+        esc(__searchT("search.filter_dept", "Departman")) +
+        '</summary><div class="eq-cm-facet__body"><ul class="eq-cm-facet__list">';
+      depts.forEach(function (d) {
+        var checked = filterState.depts.indexOf(d) >= 0 ? " checked" : "";
+        html +=
+          '<li class="eq-cm-facet__item"><label class="eq-cm-facet__label">' +
+          '<input type="checkbox" name="eq-arama-dept" value="' +
+          esc(d) +
+          '"' +
+          checked +
+          "><span>" +
+          esc(deptLabel(d)) +
+          '</span><span class="eq-cm-facet__count">(' +
+          deptCounts[d] +
+          ")</span></label></li>";
+      });
+      html += "</ul></div></details>";
+    }
+
+    html +=
+      '<details class="eq-cm-facet" open><summary class="eq-cm-facet__hd">' +
+      esc(__searchT("search.filter_brand", "Marka")) +
+      '</summary><div class="eq-cm-facet__body">' +
+      '<input type="search" class="eq-cm-facet__search" id="eq-arama-brand-q" placeholder="' +
+      esc(__searchT("search.brand_search_ph", "Marka ara")) +
+      '" autocomplete="off">' +
+      '<ul class="eq-cm-facet__list" id="eq-arama-brand-list">';
+    brands.slice(0, 80).forEach(function (b) {
+      var checked = filterState.brands.indexOf(b) >= 0 ? " checked" : "";
+      html +=
+        '<li class="eq-cm-facet__item" data-brand-label="' +
+        esc(lc(b)) +
+        '"><label class="eq-cm-facet__label">' +
+        '<input type="checkbox" name="eq-arama-brand" value="' +
+        esc(b) +
+        '"' +
+        checked +
+        "><span>" +
+        esc(b) +
+        '</span><span class="eq-cm-facet__count">(' +
+        brandCounts[b] +
+        ")</span></label></li>";
+    });
+    html += "</ul></div></details>";
+
+    html +=
+      '<details class="eq-cm-facet" open><summary class="eq-cm-facet__hd">' +
+      esc(__searchT("search.filter_price", "Fiyat")) +
+      '</summary><div class="eq-cm-facet__body">' +
+      '<div class="eq-cm-facet__price-row">' +
+      '<input type="number" id="eq-arama-price-min" min="0" step="1" placeholder="' +
+      esc(__searchT("search.price_min", "Min")) +
+      '" value="' +
+      esc(filterState.priceMin) +
+      '">' +
+      '<span>—</span>' +
+      '<input type="number" id="eq-arama-price-max" min="0" step="1" placeholder="' +
+      esc(__searchT("search.price_max", "Max")) +
+      '" value="' +
+      esc(filterState.priceMax) +
+      '">' +
+      "</div>" +
+      '<button type="button" class="eq-cm-facet__apply" id="eq-arama-price-apply">' +
+      esc(__searchT("search.price_apply", "Uygula")) +
+      "</button>";
+    if (priceMaxAll > 0) {
+      html +=
+        '<p class="eq-cm-facet__range-hint">' +
+        esc(
+          __searchT("search.price_range_hint", "Aralık: {min} – {max} EUR", {
+            min: String(Math.floor(priceMinAll)),
+            max: String(Math.ceil(priceMaxAll)),
+          })
+        ) +
+        "</p>";
+    }
+    html += "</div></details>";
+
+    host.innerHTML = html;
+
+    host.querySelectorAll('input[name="eq-arama-dept"]').forEach(function (inp) {
+      inp.addEventListener("change", function () {
+        var vals = [];
+        host.querySelectorAll('input[name="eq-arama-dept"]:checked').forEach(function (el) {
+          vals.push(el.value);
+        });
+        filterState.depts = vals;
+        renderAll();
+      });
+    });
+
+    host.querySelectorAll('input[name="eq-arama-brand"]').forEach(function (inp) {
+      inp.addEventListener("change", function () {
+        var vals = [];
+        host.querySelectorAll('input[name="eq-arama-brand"]:checked').forEach(function (el) {
+          vals.push(el.value);
+        });
+        filterState.brands = vals;
+        renderAll();
+      });
+    });
+
+    var brandQ = document.getElementById("eq-arama-brand-q");
+    if (brandQ) {
+      brandQ.addEventListener("input", function () {
+        var q = lc(brandQ.value);
+        document.querySelectorAll("#eq-arama-brand-list .eq-cm-facet__item").forEach(function (li) {
+          var lab = li.getAttribute("data-brand-label") || "";
+          li.style.display = !q || lab.indexOf(q) >= 0 ? "" : "none";
+        });
+      });
+    }
+
+    var applyBtn = document.getElementById("eq-arama-price-apply");
+    if (applyBtn) {
+      applyBtn.addEventListener("click", function () {
+        var minEl = document.getElementById("eq-arama-price-min");
+        var maxEl = document.getElementById("eq-arama-price-max");
+        filterState.priceMin = minEl && minEl.value !== "" ? minEl.value : "";
+        filterState.priceMax = maxEl && maxEl.value !== "" ? maxEl.value : "";
+        renderAll();
+      });
+    }
+  }
+
+  function renderGrid(hits, q, err) {
     var grid = document.getElementById("eq-arama-grid");
     if (!grid) return;
-
-    syncPageTitle(q);
-
-    if (title) {
-      title.textContent = q
-        ? __searchT("search.results_for", "Arama sonuçları")
-        : __searchT("search.title", "Arama");
-    }
-    if (count) {
-      if (err) count.textContent = err;
-      else if (!q) count.textContent = __searchT("search.enter_keyword", "Anahtar kelime girin.");
-      else if (hits.length === 0)
-        count.textContent = __searchT("search.no_results_for", "«{q}» için sonuç bulunamadı.", { q: q });
-      else {
-        count.textContent = __searchT("search.results_count_q", "«{q}» — {n} sonuç", {
-          q: q,
-          n: total != null ? total : hits.length,
-        });
-        if (opts.warning) {
-          count.textContent += " — " + opts.warning;
-        }
-      }
-    }
 
     if (err) {
       grid.innerHTML =
@@ -325,10 +649,17 @@
         "</p>";
       return;
     }
-    if (!hits.length) {
+    if (!sourceHits.length) {
       grid.innerHTML =
         '<p class="eq-dept-plp-empty">' +
         esc(__searchT("search.no_products", "Bu aramaya uygun ürün yok.")) +
+        "</p>";
+      return;
+    }
+    if (!hits.length) {
+      grid.innerHTML =
+        '<p class="eq-dept-plp-empty">' +
+        esc(__searchT("search.no_filter_match", "Seçili filtrelere uygun ürün yok.")) +
         "</p>";
       return;
     }
@@ -365,9 +696,7 @@
               esc(src) +
               '"' +
               (rawImg
-                ? ' data-eq-img-raw="' +
-                  esc(rawImg) +
-                  '" data-eq-img-step="0"'
+                ? ' data-eq-img-raw="' + esc(rawImg) + '" data-eq-img-step="0"'
                 : "") +
               ' alt="" loading="lazy" decoding="async" onerror="typeof __eqImgFail===\'function\'&&__eqImgFail(this)">'
             : '<span class="eq-dept-plp-card__ph">' + esc(imgPh) + "</span>") +
@@ -388,6 +717,7 @@
         );
       })
       .join("");
+
     try {
       if (window.EqustoProductTint && typeof window.EqustoProductTint.refreshPlp === "function") {
         window.EqustoProductTint.refreshPlp(grid);
@@ -395,7 +725,56 @@
         document.dispatchEvent(new CustomEvent("equsto:plp-grid-updated", { detail: { root: grid } }));
       }
     } catch (_) {}
-    renderMoreButton(q, total != null ? total : hits.length, opts.hasMore);
+  }
+
+  function renderAll() {
+    var q = lastRender.q;
+    var hits = filteredHits();
+    var title = document.getElementById("eq-arama-title");
+    var count = document.getElementById("eq-arama-count");
+    var filterCount = document.getElementById("eq-arama-filter-count");
+
+    syncPageTitle(q);
+
+    if (title) {
+      title.textContent = q
+        ? __searchT("search.results_for", "Arama sonuçları")
+        : __searchT("search.title", "Arama");
+    }
+    if (count) {
+      if (lastRender.err) count.textContent = lastRender.err;
+      else if (!q) count.textContent = __searchT("search.enter_keyword", "Anahtar kelime girin.");
+      else if (!sourceHits.length)
+        count.textContent = __searchT("search.no_results_for", "«{q}» için sonuç bulunamadı.", { q: q });
+      else {
+        count.textContent = __searchT("search.results_count_q", "«{q}» — {n} sonuç", {
+          q: q,
+          n: lastRender.total != null ? lastRender.total : sourceHits.length,
+        });
+        if (lastRender.warning) count.textContent += " — " + lastRender.warning;
+      }
+    }
+    if (filterCount) {
+      if (!q || !sourceHits.length) {
+        filterCount.textContent = "";
+      } else if (hasActiveFilters()) {
+        filterCount.innerHTML =
+          "<strong>" +
+          hits.length +
+          "</strong> / " +
+          sourceHits.length +
+          " " +
+          esc(__searchT("search.filtered_shown", "gösteriliyor"));
+      } else {
+        filterCount.innerHTML =
+          "<strong>" + sourceHits.length + "</strong> " + esc(__searchT("search.products", "ürün"));
+      }
+    }
+
+    renderFacets();
+    renderSelectedChips();
+    renderGrid(hits, q, lastRender.err);
+    renderMoreButton(q, lastRender.hasMore);
   }
 
   function fetchPage(q, offset, replace) {
@@ -429,59 +808,116 @@
       .then(function (res) {
         loadMoreBusy = false;
         if (!res.ok || res.data.error) {
-          render(
-            replace ? [] : allHits.slice(),
-            q,
-            0,
-            res.data.error || __searchT("search.service_unavailable", "Arama servisi kullanılamıyor."),
-            { hasMore: false }
-          );
+          lastRender = {
+            q: q,
+            total: 0,
+            err: res.data.error || __searchT("search.service_unavailable", "Arama servisi kullanılamıyor."),
+            warning: "",
+            hasMore: false,
+          };
+          if (replace) {
+            sourceHits = [];
+            resetFilters();
+          }
+          renderAll();
           return;
         }
+
         var rawHits = res.data.hits || [];
         var warn = res.data.warning ? String(res.data.warning) : "";
         var total = res.data.estimatedTotalHits;
         var hasMore = !!res.data.hasMore;
+
         if (replace) {
-          allHits = sortHitsWithImagesFirst(rawHits);
+          resetFilters();
+          sourceHits = sortHitsWithImagesFirst(rawHits);
         } else {
-          allHits = dedupeHits(allHits.concat(rawHits));
+          sourceHits = dedupeHits(sourceHits.concat(rawHits));
         }
-        render(allHits, q, total, null, { hasMore: hasMore, warning: warn });
+
+        lastRender = { q: q, total: total, err: null, warning: warn, hasMore: hasMore };
+        renderAll();
+
         return loadCatalogImageMap().then(function () {
           var enriched = enrichHits(rawHits);
           if (replace) {
-            allHits = sortHitsWithImagesFirst(enriched);
+            sourceHits = sortHitsWithImagesFirst(enriched);
           } else {
-            var start = allHits.length - enriched.length;
-            for (var i = 0; i < enriched.length; i++) {
-              var idx = start + i;
-              if (idx >= 0 && idx < allHits.length) allHits[idx] = enriched[i];
-            }
-            allHits = dedupeHits(allHits);
+            var idMap = Object.create(null);
+            sourceHits.forEach(function (h, idx) {
+              if (h && h.id) idMap[h.id] = idx;
+            });
+            enriched.forEach(function (h) {
+              if (h && h.id && idMap[h.id] != null) sourceHits[idMap[h.id]] = h;
+              else sourceHits.push(h);
+            });
+            sourceHits = dedupeHits(sourceHits);
           }
-          render(allHits, q, total, null, { hasMore: hasMore, warning: warn });
+          renderAll();
         });
       })
       .catch(function (e) {
         loadMoreBusy = false;
-        render(
-          replace ? [] : allHits.slice(),
-          q,
-          0,
-          e && e.message ? e.message : __searchT("search.connection_error", "Bağlantı hatası"),
-          { hasMore: false }
-        );
+        lastRender = {
+          q: q,
+          total: 0,
+          err: e && e.message ? e.message : __searchT("search.connection_error", "Bağlantı hatası"),
+          warning: "",
+          hasMore: false,
+        };
+        if (replace) {
+          sourceHits = [];
+          resetFilters();
+        }
+        renderAll();
       });
   }
 
+  function bindUi() {
+    if (uiBound) return;
+    uiBound = true;
+
+    var sortEl = document.getElementById("eq-arama-sort");
+    if (sortEl) {
+      sortEl.addEventListener("change", function () {
+        filterState.sort = sortEl.value || "";
+        renderAll();
+      });
+    }
+
+    var mob = document.getElementById("eq-arama-filter-mob");
+    var bd = document.getElementById("eq-arama-filter-backdrop");
+    if (mob) {
+      mob.addEventListener("click", function () {
+        document.body.classList.toggle("eq-dept-filter-open");
+      });
+    }
+    if (bd) {
+      bd.addEventListener("click", function () {
+        document.body.classList.remove("eq-dept-filter-open");
+      });
+    }
+
+    var clearAll = document.getElementById("eq-arama-clear-all");
+    if (clearAll) {
+      clearAll.addEventListener("click", function () {
+        resetFilters();
+        renderAll();
+      });
+    }
+  }
+
   function load() {
+    bindUi();
     var q = getQuery();
     var inp = document.querySelector("header .srch-input");
     if (inp && q) inp.value = q;
 
     if (!q) {
-      render([], "", 0, null);
+      lastRender = { q: "", total: 0, err: null, warning: "", hasMore: false };
+      sourceHits = [];
+      resetFilters();
+      renderAll();
       return;
     }
 
@@ -489,19 +925,11 @@
   }
 
   document.addEventListener("equsto:kur-updated", function () {
-    if (lastRender.q) {
-      render(lastRender.hits, lastRender.q, lastRender.total, lastRender.err, {
-        warning: lastRender.warning,
-      });
-    }
+    if (lastRender.q) renderAll();
   });
 
   window.addEventListener("equsto:i18n-ready", function () {
-    if (lastRender.q || lastRender.hits.length || !getQuery()) {
-      render(lastRender.hits, lastRender.q || getQuery(), lastRender.total, lastRender.err, {
-        warning: lastRender.warning,
-      });
-    }
+    if (lastRender.q || sourceHits.length || !getQuery()) renderAll();
   });
 
   if (document.readyState === "loading") {
