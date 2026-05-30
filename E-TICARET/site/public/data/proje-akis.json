@@ -53,7 +53,7 @@
         "type": "number",
         "required": "true",
         "mapsTo": "m2",
-        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan/birahane → 100-300; pastane → 100-200 (ref 150 m²)",
+        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan/birahane → 100-300; pastane → 100-200; pizzaci → 200-500 (ref 350 m²)",
         "note": "Bulut Mutfak ≤15 m²: yalnızca Grab&Go / Coffee Counter. Steakhouse/Balık: ≤150 → 80-150; >150 → 150-250."
       },
       {
@@ -411,16 +411,24 @@
         "id": "pizzaci",
         "name": "Pizzacı",
         "parent": "Restoran",
-        "desc": "Pizza odaklı · teklif motoru: pizzaci",
+        "desc": "Pizza odaklı · 200–500 m² referans (2025-116 Avcılar) · motor: pizzaci",
         "pfos": {
           "motorSlug": "pizzaci",
           "dukkanSecim": "Pizzacı",
-          "m2Min": 80,
-          "m2Max": 300,
-          "bantKurali": "Motor şablon; bant yok",
-          "teklifKaynagi": "motor-sablon",
-          "durum": "motor",
-          "bantlar": []
+          "m2Min": 200,
+          "m2Max": 500,
+          "bantKurali": "Tek referans liste (200–500 m²); m² ile adet ölçeklenir",
+          "listeYolu": "proje-veri/pizzaci-200-500-m2.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "200-500",
+              "label": "200–500 m²",
+              "referansM2": 350,
+              "listeDosya": "pfos-referans/pizzaci-200-500.json"
+            }
+          ]
         },
         "questions": []
       },
@@ -37914,6 +37922,6 @@
         "tip_kodu": ""
       }
     ],
-    "updated_at": "2026-05-30T12:02:16.780Z"
+    "updated_at": "2026-05-30T12:09:13.220Z"
   }
 }

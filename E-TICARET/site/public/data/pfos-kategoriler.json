@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-05-30T12:00:51.481Z",
+  "updated_at": "2026-05-30T12:06:34.352Z",
   "kategoriler": [
     {
       "id": "steakhouse",
@@ -148,6 +148,26 @@
             "toplamAdet": 52,
             "kaynakDosya": "14-PASTANE.xlsx",
             "yukleme": "2026-05-30T12:00:51.439Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pizzaci",
+      "label": "Pizzacı",
+      "ustKategori": "Restaurant",
+      "bantlar": [
+        {
+          "id": "200-500",
+          "label": "200–500 m²",
+          "referansM2": 350,
+          "meta": {
+            "listeDosya": "pizzaci-200-500.json",
+            "kalemSayisi": 69,
+            "toplamAdet": 75,
+            "kaynakDosya": "pizzaci-200-500-m2.xlsx",
+            "kaynakNot": "2025-116 Pizzacı Avcılar (Murat Çaylar) · 2025-116-2.xlsx",
+            "yukleme": "2026-05-30T12:06:34.345Z"
           }
         }
       ]

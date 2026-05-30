@@ -3,7 +3,12 @@
   "source": "static-fallback",
   "konseptler": [
     { "slug": "coffee-shop", "label": "Coffee Shop", "kalemSayisi": 24, "not": "referans JSON (coffee-shop-referans)" },
-    { "slug": "pizzaci", "label": "Pizzacı", "kalemSayisi": 32 },
+    {
+      "slug": "pizzaci",
+      "label": "Pizzacı",
+      "kalemSayisi": 69,
+      "not": "200–500 m² referans (2025-116 Avcılar)"
+    },
     { "slug": "turk-restoran", "label": "Türk Restoranı", "kalemSayisi": 35 },
     { "slug": "meyhane", "label": "Meyhane / Mezeli Restoran", "kalemSayisi": 32 },
     { "slug": "kebap-ortadogu", "label": "Kebap & Ortadoğu Mutfağı", "kalemSayisi": 46 },

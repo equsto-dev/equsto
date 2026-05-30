@@ -12,7 +12,7 @@ import { TEKLIF_DEFAULT_FIYAT_STRATEJISI } from "@/lib/pfos/teklif/teklif-policy
 const M2_RANGES: Record<string, { min: number; max: number }> = {
   "all-day-dining-cafe": { min: 150, max: 400 },
   "kebap-ortadogu": { min: 200, max: 300 },
-  pizzaci: { min: 80, max: 300 },
+  pizzaci: { min: 200, max: 500 },
   meyhane: { min: 100, max: 500 },
   "turk-restoran": { min: 100, max: 500 },
   "coffee-shop": { min: 60, max: 300 },
@@ -88,6 +88,15 @@ export function pfosGetConcepts() {
       m2Max: M2_RANGES.pastane.max,
       itemSayisi: 43,
       zorunluSayisi: 43,
+    },
+    {
+      konsept: "pizzaci",
+      label: KONSEPT_LABELS.pizzaci,
+      ornekler: ["Mialiento Avcılar", "Pizza Il Forno"],
+      m2Min: M2_RANGES.pizzaci.min,
+      m2Max: M2_RANGES.pizzaci.max,
+      itemSayisi: 69,
+      zorunluSayisi: 69,
     },
   ];
   return [...base.filter((t) => t.konsept !== "coffee-shop"), ...referansJson];
@@ -184,6 +193,7 @@ export async function pfosPostCalculate(req: NextRequest) {
       "italyan",
       "birahane",
       "pastane",
+      "pizzaci",
       "coffee-shop",
     ].includes(pfosReq.konsept)
   ) {
@@ -197,6 +207,7 @@ export async function pfosPostCalculate(req: NextRequest) {
           "italyan",
           "birahane",
           "pastane",
+          "pizzaci",
           "coffee-shop",
         ],
       },

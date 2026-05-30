@@ -5,7 +5,6 @@
 import type { ConceptTemplate } from "../engine-types";
 import { allDayDiningCafe } from "../rules/all-day-dining-cafe/template";
 import { kebapOrtadogu } from "../rules/kebap-ortadogu/template";
-import { pizzaci } from "../rules/pizzaci/template";
 import { meyhane } from "../rules/meyhane/template";
 import { turkRestoran } from "../rules/turk-restoran/template";
 import type { Konsept } from "../../schemas/pfos.schema";
@@ -15,6 +14,7 @@ import { buildSteakhouseTemplate } from "../../referans/steakhouse";
 import { buildItalyanTemplate } from "../../referans/italyan";
 import { buildBirahaneTemplate } from "../../referans/birahane";
 import { buildPastaneTemplate } from "../../referans/pastane";
+import { buildPizzaciReferansTemplate } from "../../referans/pizzaci";
 
 const DYNAMIC_KONSEPT = new Set<Konsept>([
   "steakhouse",
@@ -23,18 +23,18 @@ const DYNAMIC_KONSEPT = new Set<Konsept>([
   "italyan",
   "birahane",
   "pastane",
+  "pizzaci",
 ]);
 
 export const TEMPLATES: Record<
   Exclude<
     Konsept,
-    "steakhouse" | "balikci" | "coffee-shop" | "italyan" | "birahane" | "pastane"
+    "steakhouse" | "balikci" | "coffee-shop" | "italyan" | "birahane" | "pastane" | "pizzaci"
   >,
   ConceptTemplate
 > = {
   "all-day-dining-cafe": allDayDiningCafe,
   "kebap-ortadogu": kebapOrtadogu,
-  pizzaci,
   meyhane,
   "turk-restoran": turkRestoran,
 };
@@ -48,7 +48,7 @@ export function getTemplate(konsept: Konsept): ConceptTemplate {
   const t = TEMPLATES[
     konsept as Exclude<
       Konsept,
-      "steakhouse" | "balikci" | "coffee-shop" | "italyan" | "birahane" | "pastane"
+      "steakhouse" | "balikci" | "coffee-shop" | "italyan" | "birahane" | "pastane" | "pizzaci"
     >
   ];
   if (!t) throw new Error(`Bilinmeyen konsept: ${konsept}`);
@@ -67,6 +67,7 @@ export async function resolveTemplateForQuote(
   if (konsept === "italyan") return buildItalyanTemplate(m2);
   if (konsept === "birahane") return buildBirahaneTemplate(m2);
   if (konsept === "pastane") return buildPastaneTemplate(m2);
+  if (konsept === "pizzaci") return buildPizzaciReferansTemplate(m2);
   return getTemplate(konsept);
 }
 

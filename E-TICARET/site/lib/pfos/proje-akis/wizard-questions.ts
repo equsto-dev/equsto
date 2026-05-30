@@ -191,7 +191,7 @@ export const DEFAULT_WIZARD_QUESTIONS: Record<string, unknown>[] = [
     required: "true",
     mapsTo: "m2",
     motorEtkisi:
-      "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan/birahane → 100-300; pastane → 100-200 (ref 150 m²)",
+      "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan/birahane → 100-300; pastane → 100-200; pizzaci → 200-500 (ref 350 m²)",
     note: "Bulut Mutfak ≤15 m²: yalnızca Grab&Go / Coffee Counter. Steakhouse/Balık: ≤150 → 80-150; >150 → 150-250.",
   },
   {
