@@ -164,6 +164,8 @@ const nextConfig: NextConfig = {
       { source: "/en/marka", destination: "/en/shop/marka", permanent: true },
       { source: "/en/marka/", destination: "/en/shop/marka", permanent: true },
       { source: "/en/product.html", destination: "/en/shop", permanent: true },
+      { source: "/en/sepet.html", destination: "/en/cart", permanent: true },
+      { source: "/en/sepet", destination: "/en/cart", permanent: true },
       { source: "/urunler", destination: "/shop", permanent: true },
       { source: "/urunler/:path*", destination: "/shop/:path*", permanent: true },
       { source: "/proje-fabrikasi", destination: "/pfos", permanent: true },

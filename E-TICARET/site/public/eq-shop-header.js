@@ -116,7 +116,8 @@
           return;
         }
       } catch (_) {}
-      location.href = "/sepet.html";
+      location.href =
+        typeof window.equstoUrl === "function" ? window.equstoUrl("cart") : "/sepet";
     }
     cart.addEventListener("click", goCart);
     cart.addEventListener("keydown", function (e) {

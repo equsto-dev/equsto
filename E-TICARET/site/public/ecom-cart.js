@@ -928,7 +928,7 @@
 
   function cartPageHref() {
     if (typeof window.equstoUrl === 'function') return window.equstoUrl('cart');
-    return '/sepet.html';
+    return '/sepet';
   }
 
   function isCartPage() {
