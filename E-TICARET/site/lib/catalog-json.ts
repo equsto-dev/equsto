@@ -13,6 +13,10 @@ function localEkipmanlarPath(): string {
   return path.join(process.cwd(), "public", "data", "ekipmanlar.json");
 }
 
+function localDeptPath(dept: string): string {
+  return path.join(process.cwd(), "public", "data", "dept", `${dept}.json`);
+}
+
 /** Vercel'de public/ trace dışı — canlıda CDN'den okur */
 export async function loadEkipmanlarJson(): Promise<unknown> {
   const local = localEkipmanlarPath();
@@ -27,6 +31,29 @@ export async function loadEkipmanlarJson(): Promise<unknown> {
   });
   if (!res.ok) {
     throw new Error(`ekipmanlar.json fetch ${res.status}`);
+  }
+  return res.json() as Promise<unknown>;
+}
+
+/** Dept JSON — Vercel'de CDN; yerelde public/data/dept */
+export async function loadDeptJson(dept: string): Promise<unknown> {
+  const safe = String(dept || "")
+    .trim()
+    .replace(/[^a-z0-9-]/gi, "");
+  if (!safe) return [];
+
+  const local = localDeptPath(safe);
+  if (fs.existsSync(local)) {
+    const raw = await fs.promises.readFile(local, "utf8");
+    return JSON.parse(raw) as unknown;
+  }
+
+  const res = await fetch(`${siteOrigin()}/data/dept/${safe}.json`, {
+    cache: "no-store",
+    headers: { Accept: "application/json" },
+  });
+  if (!res.ok) {
+    throw new Error(`dept/${safe}.json fetch ${res.status}`);
   }
   return res.json() as Promise<unknown>;
 }
