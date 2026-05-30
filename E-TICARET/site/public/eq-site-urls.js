@@ -499,13 +499,22 @@
     if (file === "marka.html" && query) {
       try {
         var sp = new URLSearchParams(query.replace(/^\?/, ""));
-        var legacyB = sp.get("b");
+        var legacyB = sp.get("b") || sp.get("slug");
         if (legacyB && typeof window.eqBrandPath === "function") {
           return window.eqBrandPath(legacyB) + hash;
         }
       } catch (_) {}
     }
-    if (file === "marka.html") return withLang("/shop/marka", "shop") + query + hash;
+    if (file === "marka.html") return withLang("/shop/marka", "shop") + hash;
+    if (/\/shop\/marka\/?$/i.test(filePart.replace(/\/+$/, "")) && query) {
+      try {
+        var sp2 = new URLSearchParams(query.replace(/^\?/, ""));
+        var legacyB2 = sp2.get("b") || sp2.get("slug");
+        if (legacyB2 && typeof window.eqBrandPath === "function") {
+          return window.eqBrandPath(legacyB2) + hash;
+        }
+      } catch (_) {}
+    }
     if (/\/shop\/marka\//i.test(filePart)) return filePart + query + hash;
     return href;
   };

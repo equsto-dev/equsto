@@ -2,15 +2,21 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { resolveBrandRedirectPath } from "./lib/brand-shop-redirect";
 
-/** Eski ?b= / ?slug= marka.html sorguları → /shop/marka/{slug} */
+/** Eski ?b= / ?slug= marka sorguları → /shop/marka/{slug} veya departman ?marka= */
 function legacyMarkaRedirect(request: NextRequest): NextResponse | null {
   const { pathname } = request.nextUrl;
+  const langPrefix = pathname.startsWith("/en/") || pathname === "/en" ? "/en" : "";
   const isLegacyMarka =
     pathname === "/marka.html" ||
     pathname === "/marka" ||
     pathname === "/en/marka.html" ||
     pathname === "/en/marka";
-  if (!isLegacyMarka) return null;
+  const isShopMarkaHub =
+    pathname === "/shop/marka" ||
+    pathname === "/shop/marka/" ||
+    pathname === "/en/shop/marka" ||
+    pathname === "/en/shop/marka/";
+  if (!isLegacyMarka && !isShopMarkaHub) return null;
 
   const legacyB = (
     request.nextUrl.searchParams.get("b") ||
@@ -19,7 +25,6 @@ function legacyMarkaRedirect(request: NextRequest): NextResponse | null {
   ).trim();
   if (!legacyB) return null;
 
-  const langPrefix = pathname.startsWith("/en/") ? "/en" : "";
   const destPath = resolveBrandRedirectPath(legacyB, langPrefix);
   if (!destPath) return null;
 
