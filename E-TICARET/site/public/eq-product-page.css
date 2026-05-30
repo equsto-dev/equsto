@@ -944,16 +944,20 @@ body.eq-shop .eq-product-specs .eq-specs-cols pre {
 }
 
 .eq-cmf-btn--pfos {
-  background: var(--eq-cmf-brand, #001e50);
+  background: #fff;
+  color: var(--eq-cmf-brand, #001e50);
+  border: 1px solid var(--eq-cmf-brand, #001e50);
 }
 
 .eq-cmf-btn--pfos:hover {
-  background: var(--eq-cmf-brand-hover, #002a6b);
+  background: var(--eq-cmf-brand-soft, #e8eef6);
+  color: var(--eq-cmf-brand, #001e50);
 }
 
 /* Sepete Ekle — Electrolux mavisi (theme.css .eq-cart-add override) */
 body.eq-shop .eq-cmf-buybox .eq-cmf-btn.eq-cmf-btn--cart,
-body.eq-shop .eq-cmf-buybox button.eq-cart-add.eq-cmf-btn--cart {
+body.eq-shop .eq-cmf-buybox button.eq-cart-add.eq-cmf-btn--cart,
+body.eq-shop .eq-cmf-buybox .eq-cart-add {
   background: var(--eq-cmf-brand, #001e50) !important;
   color: #fff !important;
   border: 1px solid var(--eq-cmf-brand, #001e50) !important;
@@ -964,9 +968,11 @@ body.eq-shop .eq-cmf-buybox button.eq-cart-add.eq-cmf-btn--cart {
 }
 
 body.eq-shop .eq-cmf-buybox .eq-cmf-btn.eq-cmf-btn--cart:hover,
-body.eq-shop .eq-cmf-buybox button.eq-cart-add.eq-cmf-btn--cart:hover {
+body.eq-shop .eq-cmf-buybox button.eq-cart-add.eq-cmf-btn--cart:hover,
+body.eq-shop .eq-cmf-buybox .eq-cart-add:hover {
   background: var(--eq-cmf-brand-hover, #002a6b) !important;
   color: #fff !important;
+  border-color: var(--eq-cmf-brand-hover, #002a6b) !important;
   filter: none !important;
 }
 
