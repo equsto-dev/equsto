@@ -1,0 +1,196 @@
+{
+  "kategoriId": "sarkuteri-kiosk",
+  "bantId": "kiosk",
+  "label": "Şarküteri Kiosk",
+  "referansM2": 45,
+  "kaynakDosya": "7 ŞARKÜTERİ - KIOSK.xlsx",
+  "yukleme": "2026-05-30T23:08:56.248Z",
+  "kalemSayisi": 23,
+  "toplamAdet": 26,
+  "kalemler": [
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A1",
+      "ad": "İSTİF RAFI",
+      "olcu": "152*46*160",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A2",
+      "ad": "BLOK KAPAKLI DERİN DONDURUCU",
+      "olcu": "400 lt.",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- SOĞUK ODA",
+      "poz": "B1",
+      "ad": "PANEL TİP SOĞUK ODA",
+      "olcu": "270*220*240",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- SOĞUK ODA",
+      "poz": "B2",
+      "ad": "İSTİF RAFI",
+      "olcu": "152*46*160",
+      "adet": 3
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C1",
+      "ad": "KASA BANKOSU",
+      "olcu": "130*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C2",
+      "ad": "ÇALIŞMA TEZGAHI",
+      "olcu": "160*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C3",
+      "ad": "TÜRK KAHVE MAKİNASI",
+      "olcu": "130*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C4",
+      "ad": "KATI MEYVE PRESİ",
+      "olcu": "170*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C5",
+      "ad": "PORTAKAL SIKMA MAKİNASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C6",
+      "ad": "ÇAY OTOMATI",
+      "olcu": "23 lt.",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C7",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "60*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C8",
+      "ad": "ÇÖP ARABASI",
+      "olcu": "Ø40*50",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C9",
+      "ad": "BULAŞIK YIKAMA MAKİNASI",
+      "olcu": "500 tb/saat",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C10",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+      "olcu": "180*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C11",
+      "ad": "4 AÇIK ALEVLİ OCAK, SETÜSTÜ",
+      "olcu": "80*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C12",
+      "ad": "TOST MAKİNASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C13",
+      "ad": "ÇORBA POTU",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C14",
+      "ad": "BUZ MAKİNASI",
+      "olcu": "42 kg/gün",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C15",
+      "ad": "DAVLUMBAZ, ORTA TİP, FİLTRELİ",
+      "olcu": "140*90*50",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C16",
+      "ad": "ET TEŞHİR ÜNİTESİ",
+      "olcu": "1000*115*125",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C17",
+      "ad": "GIDA DİLİMLEME MAKİNASI",
+      "olcu": "Ø275 mm",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- PİŞİRME - TEŞHİR",
+      "poz": "C18",
+      "ad": "SİNEK ÖLDÜRÜCÜ",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "Y- YER IZGARASI",
+      "poz": "Y1",
+      "ad": "YER IZGARASI",
+      "olcu": "30*30*14",
+      "adet": 2
+    }
+  ]
+}

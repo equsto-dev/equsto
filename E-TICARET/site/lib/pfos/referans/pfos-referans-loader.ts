@@ -17,7 +17,8 @@ export type ReferansListeId =
   | "100-250"
   | "80-200"
   | "200-500"
-  | "40-100";
+  | "40-100"
+  | "kiosk";
 
 export function pickM2Bant(m2: number): M2BantId {
   return m2 <= 150 ? "80-150" : "150-250";
@@ -95,7 +96,8 @@ export async function loadReferansProfil(
     | "pastane"
     | "pizzaci"
     | "pideci"
-    | "sushi",
+    | "sushi"
+    | "sarkuteri-kiosk",
   m2: number,
   listeId?: ReferansListeId,
   altTip?: string | null,
@@ -112,6 +114,8 @@ export async function loadReferansProfil(
             ? "100-250"
             : kategoriId === "sushi"
               ? "40-100"
+              : kategoriId === "sarkuteri-kiosk"
+                ? "kiosk"
           : kategoriId === "italyan" || kategoriId === "birahane"
           ? "100-300"
           : kategoriId === "balikci"

@@ -16,7 +16,8 @@ export type ListeBantId =
   | "100-250"
   | "200-500"
   | "300-500"
-  | "40-100";
+  | "40-100"
+  | "kiosk";
 
 export type M2BantTanim = {
   id: ListeBantId;
@@ -219,6 +220,24 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
       teklifKaynagi: "pfos-referans",
       durum: "aktif",
       bantlar: [liste("40-100", "40–100 m²", 70, "sushi")],
+    },
+    questions: [],
+  },
+  {
+    id: "restaurant_sarkuteri_kiosk",
+    name: "Şarküteri Kiosk",
+    parent: "Restoran",
+    desc: "Şarküteri kiosk · referans ekipman listesi · motor: sarkuteri-kiosk",
+    pfos: {
+      motorSlug: "sarkuteri-kiosk",
+      dukkanSecim: "Şarküteri Kiosk",
+      m2Min: 25,
+      m2Max: 80,
+      bantKurali: "Tek referans liste (kiosk); m² ile adet ölçeklenir",
+      listeYolu: "proje-veri/7 ŞARKÜTERİ - KIOSK.xlsx",
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
+      bantlar: [liste("kiosk", "Kiosk referans", 45, "sarkuteri-kiosk")],
     },
     questions: [],
   },

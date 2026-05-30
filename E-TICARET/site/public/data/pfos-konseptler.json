@@ -48,6 +48,12 @@
       "label": "Sushi",
       "kalemSayisi": 27,
       "not": "40–100 m² referans (06 SUSHI)"
+    },
+    {
+      "slug": "sarkuteri-kiosk",
+      "label": "Şarküteri Kiosk",
+      "kalemSayisi": 23,
+      "not": "Kiosk referans (7 ŞARKÜTERİ)"
     }
   ]
 }
