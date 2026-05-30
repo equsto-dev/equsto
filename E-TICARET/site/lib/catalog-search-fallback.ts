@@ -4,7 +4,7 @@ import {
 } from "@/lib/catalog-product-slug";
 import { loadEkipmanlarJson } from "@/lib/catalog-json";
 import { deptSearchHints, expandSearchQueries } from "@/lib/search-synonyms";
-import { isIzgaraAccessory } from "@/lib/category-search-hints";
+import { isIzgaraAccessory, isKuzineWithFirin, isFirinAccessory } from "@/lib/category-search-hints";
 import { foldTr, splitQueryOrBranches } from "@/lib/search-query";
 import { rankSearchHitsByRelevance } from "@/lib/rank-search-hits";
 
@@ -237,6 +237,12 @@ export async function fallbackCatalogSearch(
     if (
       (queryFold === "izgara" || queryFold === "izgaralar" || queryFold === "ızgara") &&
       (dept === "istif" || isIzgaraAccessory(name, category))
+    ) {
+      continue;
+    }
+    if (
+      (queryFold === "firin" || queryFold === "firinlar" || queryFold === "fırın") &&
+      (isKuzineWithFirin(name, category) || isFirinAccessory(name, category))
     ) {
       continue;
     }

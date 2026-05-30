@@ -1,6 +1,9 @@
 import type { CatalogSearchHit } from "@/lib/catalog-search-fallback";
 import {
+  isFirinAccessory,
   isIzgaraAccessory,
+  isKuzineWithFirin,
+  isPrimaryFirinProduct,
   isPrimaryIzgaraProduct,
 } from "@/lib/category-search-hints";
 import { foldTr } from "@/lib/search-query";
@@ -19,7 +22,12 @@ const PRIMARY_EQUIPMENT_TERMS = new Set([
 ]);
 
 /** Aksesuar / yan ürün — ana ekipman sorgularında alta it. */
-function accessoryPenalty(name: string, category: string, tokens: string[]): number {
+function accessoryPenalty(
+  name: string,
+  category: string,
+  brand: string,
+  tokens: string[],
+): number {
   const n = foldTr(name);
   const cat = foldTr(category);
   let penalty = 0;
@@ -27,6 +35,12 @@ function accessoryPenalty(name: string, category: string, tokens: string[]): num
   if (tokens.some((t) => t === "izgara" || t === "izgaralar" || t === "ızgara")) {
     if (isIzgaraAccessory(name, category)) penalty += 120;
     else if (!isPrimaryIzgaraProduct(name, category)) penalty += 25;
+  }
+
+  if (tokens.some((t) => t.startsWith("firin"))) {
+    if (isKuzineWithFirin(name, category)) penalty += 140;
+    else if (isFirinAccessory(name, category)) penalty += 110;
+    else if (!isPrimaryFirinProduct(name, category, brand)) penalty += 30;
   }
 
   if (/tel firc|firca|temizlik firc/.test(n)) penalty += 90;
@@ -46,9 +60,15 @@ function accessoryPenalty(name: string, category: string, tokens: string[]): num
   return penalty;
 }
 
-function nameRelevanceBoost(name: string, category: string, tokens: string[]): number {
+function nameRelevanceBoost(
+  name: string,
+  category: string,
+  brand: string,
+  tokens: string[],
+): number {
   const n = foldTr(name);
   const cat = foldTr(category);
+  const b = foldTr(brand);
   let boost = 0;
 
   for (const t of tokens) {
@@ -58,12 +78,15 @@ function nameRelevanceBoost(name: string, category: string, tokens: string[]): n
       continue;
     }
     if (t.startsWith("firin") || stem === "firin") {
-      if (/konveksiyon|kombi firin|firinli|kuzine firin|bakertop|cheftop/.test(n)) {
-        boost += 70;
-      } else if (/firin/.test(n) && !/firca|arabasi|arabali|tepsi arab/.test(n)) {
-        boost += 45;
+      if (isPrimaryFirinProduct(name, category, brand)) boost += 100;
+      if (/unox|rational|firinmak/.test(b)) boost += 35;
+      if (
+        /kombi-firin|konveksiyonel-firin|rational-self-cooking|rational-combi|linemiss-linemicro-serisi-firin|pizza-firin|pastane-firin/.test(
+          cat,
+        )
+      ) {
+        boost += 28;
       }
-      if (/firin|kombi|konveksiyon|bakertop|cheftop/.test(cat)) boost += 25;
       continue;
     }
     if (n.includes(t) || (stem.length >= 4 && n.includes(stem))) {
@@ -97,8 +120,18 @@ export function rankSearchHitsByRelevance(
       h,
       idx,
       score:
-        nameRelevanceBoost(String(h.name || ""), String(h.category || ""), tokens) -
-        accessoryPenalty(String(h.name || ""), String(h.category || ""), tokens),
+        nameRelevanceBoost(
+          String(h.name || ""),
+          String(h.category || ""),
+          String(h.brand || ""),
+          tokens,
+        ) -
+        accessoryPenalty(
+          String(h.name || ""),
+          String(h.category || ""),
+          String(h.brand || ""),
+          tokens,
+        ),
     }))
     .sort((a, b) => b.score - a.score || a.idx - b.idx)
     .map((x) => x.h);
