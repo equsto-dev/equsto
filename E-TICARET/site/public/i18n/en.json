@@ -905,7 +905,11 @@
     "total_qty_label": "Total quantity",
     "grand_total": "Grand total",
     "hdr_cart_label": "Cart",
-    "phone_prompt": "Phone (e.g. +90 532…):"
+    "phone_prompt": "Phone (e.g. +90 532…):",
+    "remove_line": "Sepetten kaldır",
+    "decrease": "Azalt",
+    "increase": "Artır",
+    "qty_aria": "Adet"
   },
   "login": {
     "title": "Sign in",
