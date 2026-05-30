@@ -15,6 +15,20 @@ EQUSTO-WORK/E-TICARET/site/out/
 EQUSTO-WORK/E-TICARET/site/.vercel/
 EQUSTO-WORK/E-TICARET/site/*.tsbuildinfo
 
+# EQUSTO-WORK — mirror / arşiv (Faz A: Git dışı, diskte kalır)
+EQUSTO-WORK/E-TICARET/site/
+EQUSTO-WORK/PFOS/kaynaklar/
+equsto-v2/
+E-TICARET/veri/
+
+# Public yedek / kilit (canlıda gerekmez)
+E-TICARET/site/public/data/ekipmanlar.json.legacy-off
+E-TICARET/site/public/data/ekipmanlar-full-archive.json
+E-TICARET/site/public/data/pfos-archive-extract.json
+E-TICARET/site/public/data/admin-auth.json
+E-TICARET/site/public/data/atalay-merge-log.json
+E-TICARET/site/public/*-KILIT.txt
+
 # EQUSTO-WORK
 EQUSTO-WORK/E-TICARET/legacy-public/
 EQUSTO-WORK/**/.env

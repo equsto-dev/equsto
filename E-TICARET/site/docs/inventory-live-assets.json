@@ -1,0 +1,978 @@
+{
+  "generatedAt": "2026-05-30T11:24:44.362Z",
+  "siteRoot": "C:\\D Disk\\EQUSTO-WORK\\E-TICARET\\site",
+  "deployRoot": "E-TICARET/site (Vercel Root Directory)",
+  "public": {
+    "totalFiles": 13162,
+    "totalMB": 2159.4,
+    "byTopFolder": [
+      {
+        "folder": "images",
+        "files": 11148,
+        "mb": 1487.1
+      },
+      {
+        "folder": "data",
+        "files": 1883,
+        "mb": 659.3
+      },
+      {
+        "folder": "assets",
+        "files": 10,
+        "mb": 6.5
+      },
+      {
+        "folder": "docs",
+        "files": 2,
+        "mb": 2.1
+      },
+      {
+        "folder": "og-cover.jpg",
+        "files": 1,
+        "mb": 0.6
+      },
+      {
+        "folder": "og-cover-besos.jpg",
+        "files": 1,
+        "mb": 0.4
+      },
+      {
+        "folder": "sitemap-products-01.xml",
+        "files": 1,
+        "mb": 0.4
+      },
+      {
+        "folder": "sitemap-products-02.xml",
+        "files": 1,
+        "mb": 0.4
+      },
+      {
+        "folder": "sitemap-products-03.xml",
+        "files": 1,
+        "mb": 0.4
+      },
+      {
+        "folder": "sitemap-products-04.xml",
+        "files": 1,
+        "mb": 0.3
+      },
+      {
+        "folder": "theme.css",
+        "files": 1,
+        "mb": 0.2
+      },
+      {
+        "folder": "ecom-cart.js",
+        "files": 1,
+        "mb": 0.1
+      },
+      {
+        "folder": "eq-geo-landing.js",
+        "files": 1,
+        "mb": 0.1
+      },
+      {
+        "folder": "eq-home-mutbex.css",
+        "files": 1,
+        "mb": 0.1
+      },
+      {
+        "folder": "eq-pfos-wizard.css",
+        "files": 1,
+        "mb": 0.1
+      },
+      {
+        "folder": "eq-product-page-inline.js",
+        "files": 1,
+        "mb": 0.1
+      },
+      {
+        "folder": "equsto-bize-ulasin-isimlik.png",
+        "files": 1,
+        "mb": 0.1
+      },
+      {
+        "folder": "i18n",
+        "files": 3,
+        "mb": 0.1
+      },
+      {
+        "folder": "nav.js",
+        "files": 1,
+        "mb": 0.1
+      },
+      {
+        "folder": "admin-config.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "admin-config.sample.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "admin-eticaret-api.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "admin-eticaret-kategori-overrides.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "admin-eticaret-kategori-ui.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "admin-eticaret-kategori.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "admin-eticaret.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "admin-gate.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "admin-vitrin.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "bar-module.css",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "besos-shell.css",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "buzdolap-nav-KILIT.txt",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "contact.css",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "contact.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "ecom-data.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-analytics.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-arama-page.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-auth-api.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-bar-design-vitrum.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-bar-module-url.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-bar-module.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-besos-actions.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-besos-head-seo-config.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-besos-head-seo.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-besos-pdp-boot.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-besos-pricing.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-cart.css",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-category-overrides.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-category-shell.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-competitor-redirects.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-dept-cm-facets.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-dept-plp-config.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-dept-plp.css",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-dept-plp.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-dept-tips.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-display-terminology.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-filter-column.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-fiyatlar-bridge.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-footer.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-header-search.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-home-decor.css",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-home-mutbex.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-home-vitrin.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-i18n.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-imt300.css",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-kur-live.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-link-scroll.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-marka-hub.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-market-reyon.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-mutbex-chrome.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-pfos-i18n.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-pfos-programmatic-seo.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-pfos-public-chrome.css",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-photo-search.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-product-card-tint.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-product-compare.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-product-page.css",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-shop-catalog-bootstrap.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-shop-header.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-shop-vitrin.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-site-urls.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-sss-page.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-vendor-sanitize.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-vitrin-chrome.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-vitrin-config.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-vitrin-image-map.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-vitrum-catalogue-fallback.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-youtube-embed.css",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "eq-youtube-embed.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "equsto-adres-national.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "equsto-auth-client.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "equsto-engine.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "equsto-logo.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "equsto-member.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "equsto-pricing-core.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "file.svg",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "footer-brand-KILIT.txt",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "globe.svg",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "iade-politikasi.html",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "llms-full.txt",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "llms.txt",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "manifest.json",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "next.svg",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "partials",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "pdp-epdp-KILIT.txt",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "pfos-calc-engine.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "pfos-location.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "pfos-pricing.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "pfos-rule-engine.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "pfos-teklif-excel.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "pfos-teklif-ui.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "pfos-template-api.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "prod-card-ambient-KILIT.txt",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "robots.txt",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "sitemap-besos.xml",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "sitemap-pages.xml",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "sitemap-shop-hubs.xml",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "sitemap.xml",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "theme.js",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "topnav-bar-design-KILIT.txt",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "vercel.svg",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "folder": "window.svg",
+        "files": 1,
+        "mb": 0
+      }
+    ],
+    "dataSubfolders": [
+      {
+        "path": "data/caglayan-market",
+        "files": 1402,
+        "mb": 466.1
+      },
+      {
+        "path": "data/prosogutma-market",
+        "files": 297,
+        "mb": 55.4
+      },
+      {
+        "path": "data/vitrum-drawings",
+        "files": 84,
+        "mb": 48.4
+      },
+      {
+        "path": "data/advanced-cuisine-clear-ice",
+        "files": 28,
+        "mb": 27.1
+      },
+      {
+        "path": "data/dept",
+        "files": 14,
+        "mb": 17.4
+      },
+      {
+        "path": "data/ekipmanlar.json",
+        "files": 1,
+        "mb": 17.3
+      },
+      {
+        "path": "data/ekipmanlar.json.legacy-off",
+        "files": 1,
+        "mb": 12.2
+      },
+      {
+        "path": "data/ekipmanlar-full-archive.json",
+        "files": 1,
+        "mb": 10.5
+      },
+      {
+        "path": "data/referans-pilot",
+        "files": 5,
+        "mb": 1.8
+      },
+      {
+        "path": "data/proje-akis.json",
+        "files": 1,
+        "mb": 1.1
+      },
+      {
+        "path": "data/pfos-archive-extract.json",
+        "files": 1,
+        "mb": 0.6
+      },
+      {
+        "path": "data/atalay-pdf-catalog.json",
+        "files": 1,
+        "mb": 0.5
+      },
+      {
+        "path": "data/tr-adres.json",
+        "files": 1,
+        "mb": 0.4
+      },
+      {
+        "path": "data/geo-landings.json",
+        "files": 1,
+        "mb": 0.1
+      },
+      {
+        "path": "data/pfos-referans",
+        "files": 8,
+        "mb": 0.1
+      },
+      {
+        "path": "data/admin-auth.json",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "path": "data/atalay-doner-ocak.json",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "path": "data/atalay-merge-log.json",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "path": "data/caglayan-market-reyon-catalogue.json",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "path": "data/category-covers.json",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "path": "data/equsto-eur-try-rate.json",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "path": "data/fiyatlar.json",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "path": "data/footer-vitrin.json",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "path": "data/geo-landings-en.json",
+        "files": 1,
+        "mb": 0
+      },
+      {
+        "path": "data/homepage-vitrin.json",
+        "files": 1,
+        "mb": 0
+      }
+    ]
+  },
+  "codeReferences": {
+    "uniquePaths": 9066,
+    "sample": [
+      "assets/besos-ice-bar-uGGlF5Nj.png",
+      "assets/besos-ice-bar-uGGlF5Nj.png\\",
+      "assets/besos-ice-diamond-DMNdO_4O.png",
+      "assets/besos-ice-diamond-DMNdO_4O.png\\",
+      "assets/besos-ice-mint-DUtHKFgd.png",
+      "assets/besos-ice-mint-DUtHKFgd.png\\",
+      "assets/besos-ice-molds-6zkZE2su.png",
+      "assets/besos-ice-molds-6zkZE2su.png\\",
+      "assets/besos-ice-sphere-NLq_ILu6.png",
+      "assets/besos-ice-sphere-NLq_ILu6.png\\",
+      "assets/besos-ice-tong-DsigH4FN.png",
+      "assets/besos-ice-tong-DsigH4FN.png\\",
+      "assets/besos/vitrum-bars-hero-poster.jpg",
+      "assets/besos/vitrum-bars-hero.mp4",
+      "assets/besos/vitrum-bars-hero.webm",
+      "contact.css",
+      "data/${pick.replace(/^data\\//,",
+      "data/${rel}",
+      "data/${s}",
+      "data/:path*",
+      "data/:path*.json",
+      "data/:path*.pdf",
+      "data/admin-auth.json",
+      "data/advanced-cuisine-clear-ice/product-imt300.html",
+      "data/caglayan-market-reyon-catalogue.json",
+      "data/category-covers.json",
+      "data/dept",
+      "data/dept/",
+      "data/dept/*.json",
+      "data/dept/market-reyon.json",
+      "data/ekipmanlar-file-fallback.js",
+      "data/ekipmanlar.json",
+      "data/eq-category-seo.json",
+      "data/equsto-eur-try-rate.json",
+      "data/fiyat-matrisi.json",
+      "data/fiyatlar.json",
+      "data/footer-vitrin.json",
+      "data/geo-landings-en.json",
+      "data/geo-landings.json",
+      "data/homepage-vitrin.json"
+    ]
+  },
+  "usageEstimate": {
+    "referenced": {
+      "count": 11245,
+      "mb": 1545.5
+    },
+    "unreferenced": {
+      "count": 1917,
+      "mb": 613.9
+    },
+    "note": "Kaba tarama — dinamik URL, DB slug ve runtime birleştirme kaçabilir"
+  },
+  "largeUnreferencedFiles": [
+    {
+      "rel": "data/ekipmanlar-full-archive.json",
+      "mb": 10.46
+    },
+    {
+      "rel": "data/caglayan-market/nergis-fg/Nergis.pdf",
+      "mb": 10.34
+    },
+    {
+      "rel": "data/caglayan-market/nergis-lb-fg/Nergis.pdf",
+      "mb": 10.34
+    },
+    {
+      "rel": "data/caglayan-market/nergis-lb-fg-sky/Nergis.pdf",
+      "mb": 10.34
+    },
+    {
+      "rel": "data/caglayan-market/nergis-lb-lm/Nergis.pdf",
+      "mb": 10.34
+    },
+    {
+      "rel": "data/caglayan-market/nergis-lb-tp/Nergis.pdf",
+      "mb": 10.34
+    },
+    {
+      "rel": "data/caglayan-market/nergis-lb-tp-sky/Nergis.pdf",
+      "mb": 10.34
+    },
+    {
+      "rel": "data/caglayan-market/nergis-lm/Nergis.pdf",
+      "mb": 10.34
+    },
+    {
+      "rel": "data/caglayan-market/nergis-sky/Nergis.pdf",
+      "mb": 10.34
+    },
+    {
+      "rel": "data/caglayan-market/nergis-tp/Nergis.pdf",
+      "mb": 10.34
+    },
+    {
+      "rel": "data/caglayan-market/nergis-tp-sky/Nergis.pdf",
+      "mb": 10.34
+    },
+    {
+      "rel": "data/caglayan-market/fulya-hf-fg/Fulya.pdf",
+      "mb": 9.96
+    },
+    {
+      "rel": "data/caglayan-market/fulya-hf-fg-sky/Fulya.pdf",
+      "mb": 9.96
+    },
+    {
+      "rel": "data/caglayan-market/fulya-hf-fl/Fulya.pdf",
+      "mb": 9.96
+    },
+    {
+      "rel": "data/caglayan-market/fulya-hf-lm/Fulya.pdf",
+      "mb": 9.96
+    },
+    {
+      "rel": "data/caglayan-market/fulya-hf-pn/Fulya.pdf",
+      "mb": 9.96
+    },
+    {
+      "rel": "data/caglayan-market/fulya-hf-tp/Fulya.pdf",
+      "mb": 9.96
+    },
+    {
+      "rel": "data/caglayan-market/fulya-hf-tp-sky/Fulya.pdf",
+      "mb": 9.96
+    },
+    {
+      "rel": "data/caglayan-market/fulya-nv-fg/Fulya.pdf",
+      "mb": 9.96
+    },
+    {
+      "rel": "data/caglayan-market/fulya-nv-fg-sky/Fulya.pdf",
+      "mb": 9.96
+    },
+    {
+      "rel": "data/caglayan-market/fulya-nv-lm/Fulya.pdf",
+      "mb": 9.96
+    },
+    {
+      "rel": "data/caglayan-market/fulya-nv-pn/Fulya.pdf",
+      "mb": 9.96
+    },
+    {
+      "rel": "data/caglayan-market/fulya-nv-tp/Fulya.pdf",
+      "mb": 9.96
+    },
+    {
+      "rel": "data/caglayan-market/fulya-nv-tp-sky/Fulya.pdf",
+      "mb": 9.96
+    },
+    {
+      "rel": "data/advanced-cuisine-clear-ice/images/002-imt300-clear-ice-machine-2.png",
+      "mb": 9.56
+    },
+    {
+      "rel": "data/prosogutma-market/falcon-sld/falcon-sld.pdf",
+      "mb": 8.61
+    },
+    {
+      "rel": "data/advanced-cuisine-clear-ice/images/005-imt300-clear-ice-machine-5.png",
+      "mb": 8.04
+    },
+    {
+      "rel": "data/caglayan-market/lotus/Lotus.pdf",
+      "mb": 6.25
+    },
+    {
+      "rel": "data/caglayan-market/lotus-lb/Lotus.pdf",
+      "mb": 6.25
+    },
+    {
+      "rel": "data/caglayan-market/erguvan/Erguvan.pdf",
+      "mb": 5.31
+    }
+  ],
+  "buildTimeGenerated": [
+    "i18n/en.json (scripts/build-i18n-en.mjs)",
+    "i18n/pfos-labels-en.json (scripts/build-pfos-labels-en.mjs)",
+    "data/geo-landings-en.json (scripts/build-geo-landings-en.mjs)",
+    "lib/pfos/data/*.json → public/data (vercel-prebuild sync)",
+    "sitemap*.xml (scripts/build-sitemap.mjs)"
+  ],
+  "runtimeNotInGit": [
+    "DATABASE_URL / DIRECT_URL (Vercel env)",
+    "Meilisearch (MEILI_* env, varsa)",
+    "Admin bearer / cron secret (Vercel env)",
+    "Harici CDN: vitrum JSON (Besos modul PDP fetch)"
+  ],
+  "repoNotDeployed": [
+    "EQUSTO-WORK/E-TICARET/site/ — mirror kopya, Vercel root DEĞİL",
+    "EQUSTO-WORK/PFOS/kaynaklar/ — arşiv (.dwg, .bak, Excel)",
+    "E-TICARET/veri/ — kaynak medya (prosogutma vb.)",
+    "equsto-v2/ — eski/alternatif site",
+    "dokuman/, veri/ (repo kökü) — dokümantasyon"
+  ],
+  "criticalLiveAssets": [
+    {
+      "path": "public/data/ekipmanlar.json",
+      "role": "Ana katalog (~17 MB)",
+      "inGit": true
+    },
+    {
+      "path": "public/data/geo-landings*.json",
+      "role": "GEO landing SSR",
+      "inGit": true
+    },
+    {
+      "path": "public/i18n/*.json",
+      "role": "TR/EN çeviri",
+      "inGit": true
+    },
+    {
+      "path": "public/images/",
+      "role": "Ürün/vitrin görselleri",
+      "inGit": true
+    },
+    {
+      "path": "public/eq-*.js, theme.js, nav.js",
+      "role": "Legacy vitrin/PLP/PDP",
+      "inGit": true
+    },
+    {
+      "path": "lib/vitrin/bodies/*.ts",
+      "role": "PFOS/home HTML gövdeleri",
+      "inGit": true
+    },
+    {
+      "path": "app/",
+      "role": "Next.js sayfalar + API",
+      "inGit": true
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "generatedAt": "2026-05-30T12:26:47.443Z",
+  "catalogImageRefs": 8,
+  "public": {
+    "GIT_KEEP": {
+      "count": 199,
+      "mb": 52.8
+    },
+    "CDN_MIGRATE": {
+      "count": 12955,
+      "mb": 2083.3
+    },
+    "REPO_REMOVE": {
+      "count": 10,
+      "mb": 23.3
+    }
+  },
+  "repoOutsideSite": [
+    {
+      "label": "Workspace mirror (deploy kökü değil)",
+      "path": "EQUSTO-WORK/E-TICARET/site",
+      "count": 66267,
+      "mb": 3555.9,
+      "action": "REPO_REMOVE"
+    },
+    {
+      "label": "PFOS kaynak arşivi (.dwg, .bak, Excel)",
+      "path": "EQUSTO-WORK/PFOS/kaynaklar",
+      "count": 449,
+      "mb": 437.6,
+      "action": "REPO_REMOVE"
+    },
+    {
+      "label": "Eski alternatif site",
+      "path": "equsto-v2",
+      "count": 10771,
+      "mb": 2696.8,
+      "action": "REPO_REMOVE"
+    },
+    {
+      "label": "Kaynak medya (prosogutma vb.)",
+      "path": "E-TICARET/veri",
+      "count": 315,
+      "mb": 165.9,
+      "action": "REPO_REMOVE"
+    }
+  ],
+  "topCdnMigrate": [
+    {
+      "rel": "data/caglayan-market/nergis-fg/Nergis.pdf",
+      "mb": 10.34
+    },
+    {
+      "rel": "data/caglayan-market/nergis-lb-fg/Nergis.pdf",
+      "mb": 10.34
+    },
+    {
+      "rel": "data/caglayan-market/nergis-lb-fg-sky/Nergis.pdf",
+      "mb": 10.34
+    },
+    {
+      "rel": "data/caglayan-market/nergis-lb-lm/Nergis.pdf",
+      "mb": 10.34
+    },
+    {
+      "rel": "data/caglayan-market/nergis-lb-tp/Nergis.pdf",
+      "mb": 10.34
+    },
+    {
+      "rel": "data/caglayan-market/nergis-lb-tp-sky/Nergis.pdf",
+      "mb": 10.34
+    },
+    {
+      "rel": "data/caglayan-market/nergis-lm/Nergis.pdf",
+      "mb": 10.34
+    },
+    {
+      "rel": "data/caglayan-market/nergis-sky/Nergis.pdf",
+      "mb": 10.34
+    },
+    {
+      "rel": "data/caglayan-market/nergis-tp/Nergis.pdf",
+      "mb": 10.34
+    },
+    {
+      "rel": "data/caglayan-market/nergis-tp-sky/Nergis.pdf",
+      "mb": 10.34
+    },
+    {
+      "rel": "data/caglayan-market/fulya-hf-fg/Fulya.pdf",
+      "mb": 9.96
+    },
+    {
+      "rel": "data/caglayan-market/fulya-hf-fg-sky/Fulya.pdf",
+      "mb": 9.96
+    },
+    {
+      "rel": "data/caglayan-market/fulya-hf-fl/Fulya.pdf",
+      "mb": 9.96
+    },
+    {
+      "rel": "data/caglayan-market/fulya-hf-lm/Fulya.pdf",
+      "mb": 9.96
+    },
+    {
+      "rel": "data/caglayan-market/fulya-hf-pn/Fulya.pdf",
+      "mb": 9.96
+    },
+    {
+      "rel": "data/caglayan-market/fulya-hf-tp/Fulya.pdf",
+      "mb": 9.96
+    },
+    {
+      "rel": "data/caglayan-market/fulya-hf-tp-sky/Fulya.pdf",
+      "mb": 9.96
+    },
+    {
+      "rel": "data/caglayan-market/fulya-nv-fg/Fulya.pdf",
+      "mb": 9.96
+    },
+    {
+      "rel": "data/caglayan-market/fulya-nv-fg-sky/Fulya.pdf",
+      "mb": 9.96
+    },
+    {
+      "rel": "data/caglayan-market/fulya-nv-lm/Fulya.pdf",
+      "mb": 9.96
+    }
+  ],
+  "topRepoRemove": [
+    {
+      "rel": "data/ekipmanlar.json.legacy-off",
+      "mb": 12.2
+    },
+    {
+      "rel": "data/ekipmanlar-full-archive.json",
+      "mb": 10.46
+    },
+    {
+      "rel": "data/pfos-archive-extract.json",
+      "mb": 0.56
+    },
+    {
+      "rel": "pdp-epdp-KILIT.txt",
+      "mb": 0
+    },
+    {
+      "rel": "prod-card-ambient-KILIT.txt",
+      "mb": 0
+    },
+    {
+      "rel": "footer-brand-KILIT.txt",
+      "mb": 0
+    },
+    {
+      "rel": "topnav-bar-design-KILIT.txt",
+      "mb": 0
+    },
+    {
+      "rel": "buzdolap-nav-KILIT.txt",
+      "mb": 0
+    },
+    {
+      "rel": "data/atalay-merge-log.json",
+      "mb": 0
+    },
+    {
+      "rel": "data/admin-auth.json",
+      "mb": 0
+    }
+  ],
+  "recommendations": {
+    "phaseA": [
+      "Repodan çıkar: mirror, PFOS arşiv, legacy-off/full-archive JSON, KILIT.txt dosyaları",
+      ".gitignore güncelle; git rm --cached ile history'den kademeli temizlik (opsiyonel git filter-repo)"
+    ],
+    "phaseB": [
+      "CDN (Vercel Blob / R2): public/images/ (~1.5 GB) + büyük PDF klasörleri",
+      "ekipmanlar.json içindeki image path'leri CDN base URL ile güncelle"
+    ],
+    "phaseC": [
+      "Git'te kal: app/, lib/, legacy JS/CSS, ekipmanlar.json, geo/proje-akis/i18n, küçük data JSON",
+      "Build çıktıları: sitemap, en.json — commit veya CI artifact"
+    ]
+  }
+}
