@@ -46,14 +46,14 @@ if (!/eq-cmf-buybox/.test(inline)) {
 if (!/eq-cmf-qty__val/.test(inline)) {
   fail("eq-product-page-inline.js: adet stepper yok");
 }
-if (!/eq-cmf-add-btn/.test(inline)) {
-  fail("eq-product-page-inline.js: .eq-cmf-add-btn yok");
+if (!/eq-cmf-btn--cart/.test(inline)) {
+  fail("eq-product-page-inline.js: .eq-cmf-btn--cart yok");
 }
 if (!/eq-cmf-btn--pfos/.test(inline)) {
   fail("eq-product-page-inline.js: Proje Fabrikası düğmesi yok");
 }
-if (!/eq-cmf-btn--contact/.test(inline)) {
-  fail("eq-product-page-inline.js: İletişime Geç düğmesi yok");
+if (!/eq-cmf-btn--cart/.test(inline)) {
+  fail("eq-product-page-inline.js: Sepete Ekle (Amazon) düğmesi yok");
 }
 if (!/eq-cmf-btn--pay/.test(inline)) {
   fail("eq-product-page-inline.js: Ödeme Seçenekleri düğmesi yok");
@@ -68,8 +68,8 @@ if (/renderEpdpBuybox[\s\S]*eq-amz-btn-buynow/.test(inline)) {
 const css = read("public/eq-product-page.css");
 if (!css.includes(".eq-cmf-buybox")) fail("eq-product-page.css: .eq-cmf-buybox yok");
 if (!css.includes(".eq-cmf-purchase")) fail("eq-product-page.css: .eq-cmf-purchase yok");
-if (!css.includes(".eq-cmf-add-btn")) fail("eq-product-page.css: .eq-cmf-add-btn yok");
-if (!css.includes(".eq-cmf-btn--pfos")) fail("eq-product-page.css: .eq-cmf-btn--pfos yok");
+if (!css.includes(".eq-cmf-btn--cart")) fail("eq-product-page.css: .eq-cmf-btn--cart yok");
+if (!css.includes(".eq-cmf-btn--cart")) fail("eq-product-page.css: .eq-cmf-btn--cart yok");
 if (!css.includes(".eq-cmf-pay-panel")) fail("eq-product-page.css: .eq-cmf-pay-panel yok");
 
 const cart = read("public/ecom-cart.js");

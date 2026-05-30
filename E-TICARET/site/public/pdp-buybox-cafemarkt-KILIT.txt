@@ -11,9 +11,9 @@ Değiştirmeden önce kullanıcıdan AÇIK ONAY alın.
 2. Tek fiyat: turuncu «323.785,00 TL» + «KDV dahil» (.eq-cmf-price__amount)
 3. Yeşil teslimat şeridi (.eq-cmf-ship-banner)
 4. Satın alma satırı (.eq-cmf-purchase): adet stepper + turuncu «Sepete Ekle»
-5. İki yeşil/teal düğme (.eq-cmf-actions--solid):
+5. İki düğme (.eq-cmf-actions--solid):
    • Proje Fabrikası (.eq-cmf-btn--pfos)
-   • İletişime Geç (.eq-cmf-btn--contact)
+   • Sepete Ekle — Amazon sarı (.eq-cmf-btn--cart)
 6. Alt çerçeveli düğmeler (.eq-cmf-actions--outline):
    • Whatsapp ile Soru Sor (.eq-cmf-btn--wa)
    • Ödeme Seçenekleri (.eq-cmf-btn--pay → .eq-cmf-pay-panel)
@@ -22,7 +22,7 @@ YASAK (onay olmadan):
   • KDV hariç ikinci fiyat satırı eklemek
   • Buybox’ı eski dikey «Sepete ekle + Proje Fabrikası» yığınına döndürmek
   • Adet stepper’ı kaldırmak
-  • Proje Fabrikası / İletişime Geç’i buybox dışına taşımak (alt .eq-epdp-cta)
+  • Proje Fabrikası / Sepete Ekle’yi buybox dışına taşımak (alt .eq-epdp-cta)
   • Amazon sarı buybox geri getirmek
   • renderEpdpBuybox dışında buybox HTML üretmek
 

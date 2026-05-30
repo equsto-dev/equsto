@@ -1556,7 +1556,6 @@ window.searchFilter = window.searchFilter || function () {};
     function renderEpdpBuybox(x, cartU) {
       var parts = buyboxPriceParts(x);
       var pfosHref = eqHtmlUrl(typeof window.equstoUrl === "function" ? window.equstoUrl("pfos") : "pfos.html");
-      var contactHref = eqHtmlUrl(typeof window.equstoUrl === "function" ? window.equstoUrl("contact") : "contact.html");
       var waHref = pdpWhatsAppHref(x);
       var priceBlock = parts.quoteOnly
         ? '<div class="eq-cmf-price eq-cmf-price--quote">' +
@@ -1575,14 +1574,11 @@ window.searchFilter = window.searchFilter || function () {};
           esc(__pdpT("pdp.price_preparing", "Fiyat listesi hazırlanıyor — sepete ekleyip teklif isteyebilirsiniz.")) +
           "</p>"
         : "";
-      var cartBtn =
+      var cartBtnSolid =
         window.EqustoCart && EqustoCart.cartAddButtonAttrs
           ? "<button " +
             EqustoCart.cartAddButtonAttrs(cartU) +
-            ' data-eq-cart-toast="1" class="eq-cart-add eq-cmf-add-btn">' +
-            '<span class="eq-cmf-add-btn__icon" aria-hidden="true">' +
-            '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>' +
-            "</span>" +
+            ' data-eq-cart-toast="1" class="eq-cart-add eq-cmf-btn eq-cmf-btn--cart">' +
             esc(__pdpT("pdp.add_to_cart_cmf", "Sepete Ekle")) +
             "</button>"
           : "";
@@ -1614,7 +1610,6 @@ window.searchFilter = window.searchFilter || function () {};
         esc(__pdpT("pdp.qty_plus", "Artır")) +
         '">+</button>' +
         "</div>" +
-        cartBtn +
         "</div>" +
         '<div class="eq-cmf-actions eq-cmf-actions--solid">' +
         '<a class="eq-cmf-btn eq-cmf-btn--pfos" href="' +
@@ -1622,11 +1617,8 @@ window.searchFilter = window.searchFilter || function () {};
         '">' +
         esc(__pdpT("nav.pfos", "Proje Fabrikası")) +
         "</a>" +
-        '<a class="eq-cmf-btn eq-cmf-btn--contact" href="' +
-        esc(contactHref) +
-        '">' +
-        esc(__pdpT("pdp.contact_cta", "İletişime Geç")) +
-        "</a></div>" +
+        cartBtnSolid +
+        "</div>" +
         '<div class="eq-cmf-actions eq-cmf-actions--outline">' +
         '<a class="eq-cmf-btn-outline eq-cmf-btn--wa" href="' +
         esc(waHref) +
