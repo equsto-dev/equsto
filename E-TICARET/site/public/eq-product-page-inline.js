@@ -1559,7 +1559,7 @@ window.searchFilter = window.searchFilter || function () {};
           ? '<div class="eq-cmf-price"><span class="eq-cmf-price__amount">—</span></div>'
           : '<div class="eq-cmf-price">' +
             '<span class="eq-cmf-price__amount">' +
-            esc(parts.int + (parts.frac ? "," + parts.frac : ",00") + " TL") +
+            esc(parts.int + " TL") +
             '</span><span class="eq-cmf-price__vat-tag">' +
             esc(__pdpT("pdp.vat_included_tag", "KDV dahil")) +
             "</span></div>";
