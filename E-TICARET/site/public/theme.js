@@ -461,7 +461,20 @@
 
   if (typeof window.searchFilter !== "function") {
     window.searchFilter = function (q) {
-      window.__eqHdrLastQ = String(q == null ? "" : q);
+      q = String(q == null ? "" : q).trim();
+      if (!q) return false;
+      window.__eqHdrLastQ = q;
+      try {
+        if (typeof window.__eqDeptPlpApplySearch === "function" && window.__eqDeptPlpApplySearch(q)) {
+          return true;
+        }
+      } catch (_) {}
+      var url = globalSearchUrl(q);
+      if (url) {
+        location.href = url;
+        return true;
+      }
+      return false;
     };
   }
 
@@ -542,7 +555,7 @@
 
   if (!document.querySelector('script[src*="eq-header-search"]')) {
     var meiliHdr = document.createElement("script");
-    meiliHdr.src = "/eq-header-search.js?v=20260530search-izgara";
+    meiliHdr.src = "/eq-header-search.js?v=20260530search-engine-fix";
     meiliHdr.defer = true;
     document.head.appendChild(meiliHdr);
   }

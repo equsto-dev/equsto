@@ -51,8 +51,33 @@
     return slug;
   }
 
+  function dedupeHits(hits) {
+    if (!Array.isArray(hits) || hits.length < 2) return hits || [];
+    var seen = Object.create(null);
+    var out = [];
+    for (var i = 0; i < hits.length; i++) {
+      var h = hits[i];
+      if (!h) continue;
+      var key = String(h.id || h.slug || h.name || i);
+      if (seen[key]) continue;
+      seen[key] = 1;
+      out.push(h);
+    }
+    return out;
+  }
+
   function productHref(hit) {
     if (!hit) return "#";
+    if (hit.url) {
+      try {
+        if (typeof window.eqProductPath === "function" && hit.dept && hit.slug) {
+          var dept0 = String(hit.dept).replace(/^\/+|\/+$/g, "");
+          if (dept0 === "market-reyon") dept0 = "market-reyonlari";
+          return window.eqProductPath(dept0, catalogSlugFromHit(hit));
+        }
+      } catch (_) {}
+      return hit.url;
+    }
     var dept = String(hit.dept || "pisirme").replace(/^\/+|\/+$/g, "");
     if (dept === "market-reyon") dept = "market-reyonlari";
     var slug = catalogSlugFromHit(hit);
@@ -257,9 +282,9 @@
 
   function render(hits, q, total, err, opts) {
     opts = opts || {};
-    allHits = hits || [];
+    allHits = dedupeHits(hits || []);
     hits = allHits;
-    lastRender = { hits: hits, q: q || "", total: total, err: err };
+    lastRender = { hits: hits, q: q || "", total: total, err: err, warning: opts.warning || "" };
     var title = document.getElementById("eq-arama-title");
     var count = document.getElementById("eq-arama-count");
     var grid = document.getElementById("eq-arama-grid");
@@ -277,11 +302,15 @@
       else if (!q) count.textContent = __searchT("search.enter_keyword", "Anahtar kelime girin.");
       else if (hits.length === 0)
         count.textContent = __searchT("search.no_results_for", "«{q}» için sonuç bulunamadı.", { q: q });
-      else
+      else {
         count.textContent = __searchT("search.results_count_q", "«{q}» — {n} sonuç", {
           q: q,
           n: total != null ? total : hits.length,
         });
+        if (opts.warning) {
+          count.textContent += " — " + opts.warning;
+        }
+      }
     }
 
     if (err) {
@@ -409,22 +438,29 @@
           );
           return;
         }
-        var rawHits = sortHitsWithImagesFirst(res.data.hits || []);
-        var warn = res.data.warning ? " " + res.data.warning : "";
+        var rawHits = res.data.hits || [];
+        var warn = res.data.warning ? String(res.data.warning) : "";
         var total = res.data.estimatedTotalHits;
         var hasMore = !!res.data.hasMore;
-        if (replace) allHits = rawHits;
-        else allHits = allHits.concat(rawHits);
-        render(allHits, q, total, warn || null, { hasMore: hasMore });
+        if (replace) {
+          allHits = sortHitsWithImagesFirst(rawHits);
+        } else {
+          allHits = dedupeHits(allHits.concat(rawHits));
+        }
+        render(allHits, q, total, null, { hasMore: hasMore, warning: warn });
         return loadCatalogImageMap().then(function () {
-          var enriched = sortHitsWithImagesFirst(enrichHits(res.data.hits || []));
+          var enriched = enrichHits(rawHits);
           if (replace) {
-            allHits = enriched;
+            allHits = sortHitsWithImagesFirst(enriched);
           } else {
             var start = allHits.length - enriched.length;
-            for (var i = 0; i < enriched.length; i++) allHits[start + i] = enriched[i];
+            for (var i = 0; i < enriched.length; i++) {
+              var idx = start + i;
+              if (idx >= 0 && idx < allHits.length) allHits[idx] = enriched[i];
+            }
+            allHits = dedupeHits(allHits);
           }
-          render(allHits, q, total, warn || null, { hasMore: hasMore });
+          render(allHits, q, total, null, { hasMore: hasMore, warning: warn });
         });
       })
       .catch(function (e) {
@@ -454,13 +490,17 @@
 
   document.addEventListener("equsto:kur-updated", function () {
     if (lastRender.q) {
-      render(lastRender.hits, lastRender.q, lastRender.total, lastRender.err);
+      render(lastRender.hits, lastRender.q, lastRender.total, lastRender.err, {
+        warning: lastRender.warning,
+      });
     }
   });
 
   window.addEventListener("equsto:i18n-ready", function () {
     if (lastRender.q || lastRender.hits.length || !getQuery()) {
-      render(lastRender.hits, lastRender.q || getQuery(), lastRender.total, lastRender.err);
+      render(lastRender.hits, lastRender.q || getQuery(), lastRender.total, lastRender.err, {
+        warning: lastRender.warning,
+      });
     }
   });
 

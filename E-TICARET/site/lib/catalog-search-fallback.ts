@@ -1,10 +1,10 @@
 import {
   catalogUrlSlug,
-  foldTr,
   legacyMeiliPathSlug,
 } from "@/lib/catalog-product-slug";
-import { loadDeptJson, loadEkipmanlarJson } from "@/lib/catalog-json";
+import { loadEkipmanlarJson } from "@/lib/catalog-json";
 import { deptSearchHints, expandSearchQueries } from "@/lib/search-synonyms";
+import { foldTr, splitQueryOrBranches } from "@/lib/search-query";
 
 export type CatalogSearchHit = {
   id: string;
@@ -28,7 +28,6 @@ export type CatalogSearchHit = {
 type CatalogRow = Record<string, unknown>;
 
 let cache: { rows: CatalogRow[] } | null = null;
-const deptRowCache = new Map<string, CatalogRow[]>();
 
 type CatalogLookupMaps = {
   rows: CatalogRow[];
@@ -109,32 +108,6 @@ async function loadCatalogRows(): Promise<CatalogRow[]> {
   }
 }
 
-async function loadDeptRows(dept: string): Promise<CatalogRow[]> {
-  const key = String(dept || "").trim();
-  if (!key) return [];
-  const hit = deptRowCache.get(key);
-  if (hit) return hit;
-
-  try {
-    const raw = await loadDeptJson(key);
-    const list = Array.isArray(raw) ? (raw as CatalogRow[]) : [];
-    const rows = list.map((row) => ({
-      ...row,
-      dept: String(row.dept || key).trim(),
-    }));
-    deptRowCache.set(key, rows);
-    return rows;
-  } catch {
-    return [];
-  }
-}
-
-async function loadRowsForSearch(depts?: string[]): Promise<CatalogRow[]> {
-  if (!depts?.length) return loadCatalogRows();
-  const parts = await Promise.all(depts.map((d) => loadDeptRows(d)));
-  return parts.flat();
-}
-
 export async function getCatalogLookupMaps(): Promise<CatalogLookupMaps> {
   if (lookupMaps) return lookupMaps;
   const rows = await loadCatalogRows();
@@ -180,25 +153,34 @@ function rowHaystack(row: CatalogRow) {
   );
 }
 
-function scoreRow(hay: string, tokens: string[]) {
-  let score = 0;
-  for (const t of tokens) {
-    if (!t) continue;
-    if (hay.includes(t)) score += 10;
-    const words = hay.split(/\s+/);
-    for (const w of words) {
-      if (w.startsWith(t)) score += 4;
-      if (t.length >= 4 && w.includes(t)) score += 6;
-      if (t.length >= 4 && t.includes(w) && w.length >= 4) score += 3;
-    }
+function scoreToken(hay: string, t: string): number {
+  if (!t) return 0;
+  if (!hay.includes(t)) return 0;
+  let score = 10;
+  const words = hay.split(/\s+/);
+  for (const w of words) {
+    if (w.startsWith(t)) score += 4;
+    if (t.length >= 4 && w.includes(t)) score += 6;
   }
   return score;
 }
 
-function collectTokens(q: string) {
+/** Bir OR dalı — tüm tokenlar eşleşmeli. */
+function scoreBranch(hay: string, tokens: string[]): number {
+  if (!tokens.length) return 0;
+  let score = 0;
+  for (const t of tokens) {
+    const part = scoreToken(hay, t);
+    if (part <= 0) return 0;
+    score += part;
+  }
+  return score;
+}
+
+function collectTokensForBranch(branch: string): string[] {
   const seen = new Set<string>();
   const tokens: string[] = [];
-  for (const variant of expandSearchQueries(q)) {
+  for (const variant of expandSearchQueries(branch)) {
     for (const t of foldTr(variant).split(/\s+/)) {
       if (t.length < 2) continue;
       if (seen.has(t)) continue;
@@ -209,9 +191,24 @@ function collectTokens(q: string) {
   return tokens;
 }
 
+function collectOrTokenBranches(q: string): string[][] {
+  return splitQueryOrBranches(q)
+    .map(collectTokensForBranch)
+    .filter((tokens) => tokens.length > 0);
+}
+
+function scoreRowOr(hay: string, branches: string[][]): number {
+  let best = 0;
+  for (const tokens of branches) {
+    best = Math.max(best, scoreBranch(hay, tokens));
+  }
+  return best;
+}
+
 export type FallbackSearchOptions = {
-  /** Yalnızca bu dept JSON dosyalarında ara (daha hızlı). */
+  /** @deprecated Tüm katalogda aranır; dept kısıtı kullanılmaz. */
   depts?: string[];
+  offset?: number;
 };
 
 /** Meilisearch yokken veya hibrit tamamlamada — katalog JSON üzerinde arama */
@@ -221,19 +218,20 @@ export async function fallbackCatalogSearch(
   opts?: FallbackSearchOptions,
 ) {
   const query = String(q || "").trim();
+  const offset = Math.max(opts?.offset ?? 0, 0);
   if (!query) return { hits: [] as CatalogSearchHit[], estimatedTotalHits: 0 };
 
-  const tokens = collectTokens(query);
-  if (!tokens.length) {
+  const branches = collectOrTokenBranches(query);
+  if (!branches.length) {
     return { hits: [] as CatalogSearchHit[], estimatedTotalHits: 0 };
   }
 
-  const rows = await loadRowsForSearch(opts?.depts);
+  const rows = await loadCatalogRows();
   const byId = new Map<string, { hit: CatalogSearchHit; score: number }>();
 
   for (const row of rows) {
     const hay = rowHaystack(row);
-    const score = scoreRow(hay, tokens);
+    const score = scoreRowOr(hay, branches);
     if (score <= 0) continue;
     const hit = rowToHitFromRow(row);
     if (!hit) continue;
@@ -243,7 +241,7 @@ export async function fallbackCatalogSearch(
 
   const scored = [...byId.values()].sort((a, b) => b.score - a.score);
   const ranked = scored.map((x) => x.hit);
-  const hits = ranked.slice(0, limit);
+  const hits = ranked.slice(offset, offset + limit);
   return {
     hits,
     estimatedTotalHits: scored.length,

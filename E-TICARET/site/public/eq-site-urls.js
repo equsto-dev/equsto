@@ -169,6 +169,13 @@
   window.eqGo = function (key) {
     window.location.href = window.equstoUrl(key);
   };
+  /** Arama sonuç sayfası — TR /arama, EN /en/search */
+  window.eqAramaUrl = function (q) {
+    q = String(q || "").trim();
+    if (!q) return "";
+    var base = curLang() === "en" ? "/en/search" : "/arama";
+    return base + "?q=" + encodeURIComponent(q);
+  };
   /** Ana vitrin (/, /shop) — kategori sayfaları (/shop/pisirme …) ayrı HTML */
   window.eqIsHomeVitrin = function () {
     try {

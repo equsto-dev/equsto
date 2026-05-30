@@ -330,6 +330,28 @@
   function matchSearchQuery(hay, q) {
     var qs = lc(q).trim();
     if (!qs) return true;
+    if (qs.indexOf('|') >= 0) {
+      var branches = qs.split('|');
+      for (var bi = 0; bi < branches.length; bi++) {
+        var b = branches[bi].trim();
+        if (!b) continue;
+        if (hay.indexOf(b) >= 0) return true;
+        var bwords = b.split(/\s+/).filter(function (w) {
+          return w.length > 0;
+        });
+        if (bwords.length >= 2) {
+          var ok = true;
+          for (var wi = 0; wi < bwords.length; wi++) {
+            if (hay.indexOf(bwords[wi]) < 0) {
+              ok = false;
+              break;
+            }
+          }
+          if (ok) return true;
+        }
+      }
+      return false;
+    }
     if (hay.indexOf(qs) >= 0) return true;
     var words = qs.split(/\s+/).filter(function (w) {
       return w.length > 0;
@@ -914,6 +936,20 @@
     applyUrlState();
     render();
   }
+
+  window.__eqDeptPlpApplySearch = function (q) {
+    if (!state.ready) return false;
+    q = String(q == null ? '' : q).trim();
+    if (!q) return false;
+    state.q = q;
+    state.loadedCount = 24;
+    render();
+    try {
+      var main = document.getElementById('eq-dept-plp-main');
+      if (main) main.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } catch (_) {}
+    return true;
+  };
 
   var MARKET_REYON_JSON_V = '20260528caglayan-pdp-fix';
 
