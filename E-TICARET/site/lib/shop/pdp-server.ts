@@ -1,5 +1,9 @@
-import { catalogUrlSlug, matchCatalogRowByPathSlug } from "@/lib/catalog-product-slug";
-import { getCatalogLookupMaps } from "@/lib/catalog-search-fallback";
+import {
+  catalogUrlSlug,
+  legacyMeiliPathSlug,
+  matchCatalogRowByPathSlug,
+} from "@/lib/catalog-product-slug";
+import { loadEkipmanlarJson } from "@/lib/catalog-json";
 import { readJsonFile, dataPath } from "@/lib/legacy-data";
 import {
   absoluteAssetUrl,
@@ -62,18 +66,21 @@ export async function findProductForPdp(
     }
   }
 
-  const maps = await getCatalogLookupMaps();
-  const direct =
-    maps.byCatalogSlug.get(slug) ||
-    maps.byLegacySlug.get(slug) ||
-    maps.byMeiliId.get(slug);
-  if (direct && resolveShopDept(direct) === urlDept) {
-    return { row: direct, dept: urlDept };
-  }
-
-  for (const row of maps.rows) {
-    if (resolveShopDept(row) !== urlDept) continue;
-    if (matchCatalogRowByPathSlug(row, slug)) return { row, dept: urlDept };
+  try {
+    const raw = await loadEkipmanlarJson();
+    const rows = Array.isArray(raw) ? (raw as CatalogRow[]) : [];
+    for (const row of rows) {
+      if (!row || resolveShopDept(row) !== urlDept) continue;
+      const cid = String(row.id || "").trim().toLowerCase();
+      if (cid && (cid === slug || cid.replace(/__/g, "-") === slug)) {
+        return { row, dept: urlDept };
+      }
+      if (catalogUrlSlug(row).toLowerCase() === slug) return { row, dept: urlDept };
+      if (legacyMeiliPathSlug(row) === slug) return { row, dept: urlDept };
+      if (matchCatalogRowByPathSlug(row, slug)) return { row, dept: urlDept };
+    }
+  } catch {
+    /* ekipmanlar.json yoksa dept dosyası yeterli */
   }
 
   return null;
