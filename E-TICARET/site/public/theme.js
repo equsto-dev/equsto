@@ -669,7 +669,7 @@
     if (b.classList.contains("admin-app")) return;
     if (!document.querySelector('script[src*="eq-link-scroll"]')) {
       var ls = document.createElement("script");
-      ls.src = "/eq-link-scroll.js?v=20260530topnav-a";
+      ls.src = "/eq-link-scroll.js?v=20260530mid-native";
       ls.defer = true;
       document.head.appendChild(ls);
     }

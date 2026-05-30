@@ -799,7 +799,7 @@
           labelLink.addEventListener("click", function () {
             closeAfterNav();
           });
-          /* Orta tuş: sayfa kaydırma (eq-link-scroll.js) — yeni sekme açma */
+          /* Orta tuş: tarayıcı varsayılanı (yeni sekme) — eq-link-scroll.js müdahale etmez */
         }
         li.appendChild(rowWrap);
         ul.appendChild(li);
