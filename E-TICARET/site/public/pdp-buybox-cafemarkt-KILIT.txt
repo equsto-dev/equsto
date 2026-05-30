@@ -15,7 +15,7 @@ Değiştirmeden önce kullanıcıdan AÇIK ONAY alın.
    • Sol: Sepete Ekle — Electrolux mavisi (.eq-cmf-btn--cart, #001e50)
    • Sağ: Ödeme Seçenekleri (.eq-cmf-btn--pay → .eq-cmf-pay-panel)
 6. Alt 2×2 satır (.eq-cmf-actions--secondary):
-   • Sol: Proje Fabrikası — Electrolux mavisi (.eq-cmf-btn--pfos, #001e50)
+   • Sol: Proje Fabrikası — beyaz zemin, mavi çerçeve (.eq-cmf-btn--pfos)
    • Sağ: Whatsapp ile Soru Sor (.eq-cmf-btn--wa) → Mr. Equsto kedi modalı (equstoOpenWhatsAppWebWindow)
 
 YASAK (onay olmadan):
