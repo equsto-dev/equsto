@@ -54,6 +54,15 @@ export const PFOS_KATEGORI_TANIMLARI: PfosKategoriTanim[] = [
       { id: "100-300", label: "100–300 m²", referansM2: 200 },
     ],
   },
+  {
+    id: "pastane",
+    label: "Pastane",
+    ustKategori: "Pastane & Fırın",
+    planNot: "proje-veri/14-PASTANE.xlsx",
+    bantlar: [
+      { id: "100-200", label: "100–200 m²", referansM2: 150 },
+    ],
+  },
 ];
 
 export function findKategoriTanim(kategoriId: string) {

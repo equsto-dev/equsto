@@ -20,6 +20,12 @@
       "label": "Birahane",
       "kalemSayisi": 27,
       "not": "100–300 m² referans (11 BIRAHANE)"
+    },
+    {
+      "slug": "pastane",
+      "label": "Pastane",
+      "kalemSayisi": 43,
+      "not": "100–200 m² referans (14-PASTANE)"
     }
   ]
 }

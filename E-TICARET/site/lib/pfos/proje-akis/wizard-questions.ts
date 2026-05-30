@@ -55,7 +55,7 @@ export const PFOS_DUKKAN_BRANCHES: Record<string, string[]> = {
     "Pide / Lahmacun",
     "Bilmiyorum",
   ],
-  "Pastane & Fırın": ["Artisan / butik", "Endüstriyel fırın", "Bilmiyorum"],
+  "Pastane & Fırın": ["Pastane", "Artisan / butik", "Endüstriyel fırın", "Bilmiyorum"],
   "Bar & Lounge": [
     "Birahane",
     "Kokteyl Bar",
@@ -191,7 +191,7 @@ export const DEFAULT_WIZARD_QUESTIONS: Record<string, unknown>[] = [
     required: "true",
     mapsTo: "m2",
     motorEtkisi:
-      "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan/birahane → 100-300 tek liste (ref 200 m²)",
+      "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan/birahane → 100-300; pastane → 100-200 (ref 150 m²)",
     note: "Bulut Mutfak ≤15 m²: yalnızca Grab&Go / Coffee Counter. Steakhouse/Balık: ≤150 → 80-150; >150 → 150-250.",
   },
   {

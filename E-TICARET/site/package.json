@@ -94,6 +94,7 @@
     "pfos:kategoriler:seed": "node scripts/seed-pfos-kategoriler.mjs",
     "pfos:italyan:import": "node scripts/import-italyan-konsept.mjs",
     "pfos:birahane:import": "node scripts/import-birahane-konsept.mjs",
+    "pfos:pastane:import": "node scripts/import-pastane-konsept.mjs",
     "sync:legacy": "node scripts/sync-legacy-assets.mjs",
     "public:audit": "node scripts/audit-public-assets.mjs",
     "catalog:deploy:check": "node scripts/check-catalog-images-deploy.mjs",
