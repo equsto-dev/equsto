@@ -414,6 +414,7 @@
   }
 
   function commitGlobalSearch(q) {
+    /* KİLİT: arama-history-KILIT.txt */
     q = String(q == null ? "" : q).trim();
     if (!q) return;
     window.__eqHdrLastQ = q;

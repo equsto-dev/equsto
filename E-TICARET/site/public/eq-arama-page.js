@@ -963,6 +963,7 @@
   }
 
   function bootAramaPage() {
+    /* KİLİT: arama-history-KILIT.txt — popstate + lastBootQ */
     if (!isAramaPath()) {
       lastBootQ = null;
       return;
