@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-05-24T17:13:16.569Z",
+  "updated_at": "2026-05-30T01:23:49.170Z",
   "kategoriler": [
     {
       "id": "steakhouse",
@@ -91,6 +91,25 @@
             "toplamAdet": 28,
             "kaynakDosya": "coffee-shop-ekipman-listesi.xlsx",
             "yukleme": "2026-05-24T17:13:16.565Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "italyan",
+      "label": "İtalyan Restoran",
+      "ustKategori": "Restaurant",
+      "bantlar": [
+        {
+          "id": "100-300",
+          "label": "100–300 m²",
+          "referansM2": 200,
+          "meta": {
+            "listeDosya": "italyan-100-300.json",
+            "kalemSayisi": 86,
+            "toplamAdet": 104,
+            "kaynakDosya": "03-italyan 100-300 m2.xlsx",
+            "yukleme": "2026-05-30T01:23:49.159Z"
           }
         }
       ]

@@ -40,6 +40,7 @@ export const PFOS_DUKKAN_BRANCHES: Record<string, string[]> = {
     "Türk / Esnaf lokanta",
     "Meyhane",
     "All Dining Cafe",
+    "İtalyan Restoran",
     "Fine Dining",
     "Dünya Mutfağı",
     "Gurme Şarküteri",
