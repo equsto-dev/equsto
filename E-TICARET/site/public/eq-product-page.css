@@ -666,6 +666,10 @@ body.eq-shop .eq-product-specs .eq-specs-cols pre {
 
 /* ── Cafemarkt tarzı buybox (KİLİT: pdp-buybox-cafemarkt-KILIT.txt) ── */
 .eq-cmf-buybox {
+  --eq-cmf-brand: var(--eq-hdr-bar-bg, #001e50);
+  --eq-cmf-brand-hover: #002a6b;
+  --eq-cmf-brand-soft: #e8eef6;
+  --eq-cmf-brand-soft-border: #c5d4e8;
   padding: 14px 16px 16px;
 }
 
@@ -681,7 +685,7 @@ body.eq-shop .eq-product-specs .eq-specs-cols pre {
   font-size: 11px;
   font-weight: 600;
   color: #fff;
-  background: #2563eb;
+  background: var(--eq-cmf-brand, #001e50);
   border-radius: 4px;
 }
 
@@ -728,8 +732,9 @@ body.eq-shop .eq-product-specs .eq-specs-cols pre {
   padding: 8px 12px;
   font-size: 12px;
   font-weight: 500;
-  color: #166534;
-  background: #dcfce7;
+  color: var(--eq-cmf-brand, #001e50);
+  background: var(--eq-cmf-brand-soft, #e8eef6);
+  border: 1px solid var(--eq-cmf-brand-soft-border, #c5d4e8);
   border-radius: 4px;
 }
 
@@ -840,11 +845,11 @@ body.eq-shop .eq-product-specs .eq-specs-cols pre {
 }
 
 .eq-cmf-btn--pfos {
-  background: #059669;
+  background: var(--eq-cmf-brand, #001e50);
 }
 
 .eq-cmf-btn--pfos:hover {
-  background: #047857;
+  background: var(--eq-cmf-brand-hover, #002a6b);
 }
 
 /* Amazon «Add to Cart» — buybox Sepete Ekle (theme.css .eq-cart-add override) */
@@ -879,16 +884,16 @@ body.eq-shop .eq-cmf-buybox button.eq-cart-add.eq-cmf-btn--cart:hover {
   font-weight: 600;
   text-decoration: none;
   text-align: center;
-  border: 1px solid #059669;
+  border: 1px solid var(--eq-cmf-brand, #001e50);
   border-radius: 4px;
   background: #fff;
-  color: #059669;
+  color: var(--eq-cmf-brand, #001e50);
   cursor: pointer;
   font-family: inherit;
 }
 
 .eq-cmf-btn-outline:hover {
-  background: #ecfdf5;
+  background: var(--eq-cmf-brand-soft, #e8eef6);
 }
 
 .eq-cmf-btn-outline__icon {
