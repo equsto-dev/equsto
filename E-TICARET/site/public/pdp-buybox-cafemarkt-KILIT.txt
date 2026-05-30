@@ -12,7 +12,7 @@ Değiştirmeden önce kullanıcıdan AÇIK ONAY alın.
 3. Yeşil teslimat şeridi (.eq-cmf-ship-banner)
 4. Satın alma satırı (.eq-cmf-purchase): adet stepper + turuncu «Sepete Ekle»
 5. İki düğme (.eq-cmf-actions--solid):
-   • Proje Fabrikası (.eq-cmf-btn--pfos)
+   • Proje Fabrikası — Electrolux mavisi (.eq-cmf-btn--pfos, #001e50)
    • Sepete Ekle — Amazon sarı (.eq-cmf-btn--cart)
 6. Alt çerçeveli düğmeler (.eq-cmf-actions--outline):
    • Whatsapp ile Soru Sor (.eq-cmf-btn--wa) → Mr. Equsto kedi modalı (equstoOpenWhatsAppWebWindow)
