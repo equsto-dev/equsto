@@ -86,9 +86,16 @@
     right.appendChild(a);
   }
 
+  function dedupeReturns(right) {
+    if (!right) return;
+    if (!right.querySelector(".eq-hdr-orders")) return;
+    var dup = right.querySelector("[data-eq-hdr-returns]");
+    if (dup) dup.remove();
+  }
+
   function ensureReturns(right) {
     if (!right) return;
-    if (right.querySelector("[data-eq-hdr-returns]")) return;
+    if (right.querySelector("[data-eq-hdr-returns]") || right.querySelector(".eq-hdr-orders")) return;
     var box = el("div", { "data-eq-hdr-returns": "1", style: "display:flex;flex-direction:column;line-height:1.4;" });
     box.appendChild(el("span", { style: "font-size:10px;color:var(--eq-text-muted);", "data-i18n": "common.returns", text: "İadeler" }));
     box.appendChild(el("span", { style: "font-size:12px;font-weight:600;cursor:pointer;color:var(--eq-text);", "data-i18n": "common.and_orders", text: "ve Siparişler" }));
@@ -137,6 +144,7 @@
     // Temizlik: bazı sayfalarda sadece "Hesabım" anchor'ı var (account-title yok)
     ensureThemeWrap(right);
     ensureAccount(right);
+    dedupeReturns(right);
     ensureReturns(right);
     ensureCart(right);
   }
