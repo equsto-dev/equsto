@@ -27,8 +27,11 @@ Her satır için **Environments:** Production **ve** Preview işaretli.
 | `MEILISEARCH_HOST` | `.env.local` — `https://ms-….fra.meilisearch.io` (**tek** `https://`) |
 | `MEILISEARCH_MASTER_KEY` | `.env.local` — Admin API key (tırnak yok) |
 | `MEILISEARCH_INDEX` | `equsto_products` |
+| `NEXT_PUBLIC_ASSET_CDN_URL` | CloudFront kök URL (sonunda `/` yok) — bkz. `docs/FAZ-B-AWS.md` |
 
-**Adım adım (ekran görüntüsü gibi):** [`VERCEL-MEILISEARCH-ENV.md`](VERCEL-MEILISEARCH-ENV.md)
+**Medya (S3 upload)** yalnızca yerelde: `AWS_S3_BUCKET`, `AWS_REGION` — Vercel'e gerekmez.
+
+**Adım adım (Meilisearch):** [`VERCEL-MEILISEARCH-ENV.md`](VERCEL-MEILISEARCH-ENV.md)
 
 **Value kutusuna** `DATABASE_URL="postgresql://..."` şeklinde **tırnaklı yapıştırmayın** — sadece `postgresql://...` metni.
 

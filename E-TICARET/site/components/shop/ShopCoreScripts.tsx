@@ -1,6 +1,7 @@
 "use client";
 
 import Script from "next/script";
+import AssetCdnConfigScript from "@/components/shop/AssetCdnConfigScript";
 import { SHOP_ASSET_V } from "@/lib/shop/assets";
 
 const v = SHOP_ASSET_V;
@@ -10,6 +11,7 @@ export default function ShopCoreScripts() {
   return (
     <>
       <Script src={`/theme.js?v=${v}`} strategy="beforeInteractive" />
+      <AssetCdnConfigScript />
       <Script src={`/eq-site-urls.js?v=${v}`} strategy="beforeInteractive" />
       <Script
         src={`/eq-i18n.js?v=${v}`}

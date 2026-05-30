@@ -1,6 +1,7 @@
 "use client";
 
 import BesosDrawerShell from "@/components/besos/BesosDrawerShell";
+import AssetCdnConfigScript from "@/components/shop/AssetCdnConfigScript";
 import { useEffect } from "react";
 import Script from "next/script";
 
@@ -40,6 +41,7 @@ export default function PfosScripts() {
   return (
     <>
       <Script src="/theme.js" strategy="beforeInteractive" />
+      <AssetCdnConfigScript />
       <Script src="/eq-site-urls.js" strategy="beforeInteractive" />
       <Script src="/equsto-logo.js" strategy="afterInteractive" onReady={() => window.EQUSTO_LOGO_REFRESH?.()} />
       <Script src="/nav.js" strategy="afterInteractive" onReady={refreshNavDrawer} />

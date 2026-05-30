@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Vercel install/build — tek kaynak: E-TICARET/site
  */
 import fs from "node:fs";

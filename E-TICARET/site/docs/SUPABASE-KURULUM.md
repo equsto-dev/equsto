@@ -1,5 +1,7 @@
 # Supabase kurulumu — Equsto v2 (Prisma)
 
+**Rol:** Yalnızca **Postgres** — admin ürün, müşteri lead, PFOS eşleme. Görseller/PDF **AWS S3** (bkz. `docs/DEPLOY-MIMARI.md`).
+
 Proje ref: **gmnbhmwcmxukebulqwbn**  
 Dashboard: https://supabase.com/dashboard/project/gmnbhmwcmxukebulqwbn
 

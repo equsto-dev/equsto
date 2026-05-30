@@ -2,6 +2,7 @@
 
 import Script from "next/script";
 import { usePathname } from "next/navigation";
+import AssetCdnConfigScript from "@/components/shop/AssetCdnConfigScript";
 import { SHOP_ASSET_V } from "@/lib/shop/assets";
 
 const v = SHOP_ASSET_V;
@@ -35,6 +36,7 @@ export default function BesosScripts() {
         </>
       ) : null}
       <Script src={`/theme.js?v=${v}`} strategy="beforeInteractive" />
+      <AssetCdnConfigScript />
       <Script src={`/eq-site-urls.js?v=${v}`} strategy="beforeInteractive" />
       <Script src={`/eq-i18n.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/equsto-logo.js?v=${v}`} strategy="afterInteractive" />
