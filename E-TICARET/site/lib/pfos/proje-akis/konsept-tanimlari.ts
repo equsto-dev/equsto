@@ -12,7 +12,8 @@ export type ListeBantId =
   | "referans"
   | "100-300"
   | "100-200"
-  | "200-500";
+  | "200-500"
+  | "300-500";
 
 export type M2BantTanim = {
   id: ListeBantId;
@@ -184,16 +185,18 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
     id: "restaurant_kebap",
     name: "Kebap & Ortadoğu",
     parent: "Restoran",
-    desc: "Kebap / ocakbaşı · teklif motoru: kebap-ortadogu (zone şablonu)",
+    desc: "Kebap / ocakbaşı · 300–500 m² zone şablonu · motor: kebap-ortadogu",
     pfos: {
       motorSlug: "kebap-ortadogu",
       dukkanSecim: "Kebapçı",
-      m2Min: 200,
-      m2Max: 300,
-      bantKurali: "Tek şablon; zone kataloğu",
+      m2Min: 300,
+      m2Max: 500,
+      bantKurali: "Zone şablonu (300–500 m²); m² ile ekipman adetleri ölçeklenir",
       teklifKaynagi: "motor-sablon",
       durum: "aktif",
-      bantlar: [],
+      bantlar: [
+        liste("300-500", "300–500 m²", 400, "kebap-ortadogu"),
+      ],
     },
     questions: [],
   },

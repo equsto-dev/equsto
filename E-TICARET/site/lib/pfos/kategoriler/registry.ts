@@ -72,6 +72,15 @@ export const PFOS_KATEGORI_TANIMLARI: PfosKategoriTanim[] = [
       { id: "200-500", label: "200–500 m²", referansM2: 350 },
     ],
   },
+  {
+    id: "kebap-ortadogu",
+    label: "Kebap & Ortadoğu Mutfağı",
+    ustKategori: "Restaurant",
+    planNot: "Zone şablonu (CZN Burak referansı)",
+    bantlar: [
+      { id: "300-500", label: "300–500 m²", referansM2: 400 },
+    ],
+  },
 ];
 
 export function findKategoriTanim(kategoriId: string) {
