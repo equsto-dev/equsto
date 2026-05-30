@@ -176,6 +176,38 @@
     var base = curLang() === "en" ? "/en/search" : "/arama";
     return base + "?q=" + encodeURIComponent(q);
   };
+  function eqIsAramaPathname(pathname) {
+    var p = String(pathname || "").replace(/\/$/, "");
+    return p === "/arama" || p === "/en/search";
+  }
+  /** Arama sayfasına git — aynı URL'de history şişirmez; /arama içinde pushState kullanır. */
+  window.eqNavigateArama = function (q, opts) {
+    opts = opts || {};
+    q = String(q || "").trim();
+    if (!q) return false;
+    var url = window.eqAramaUrl(q);
+    if (!url) return false;
+    try {
+      sessionStorage.setItem("eq_hdr_search_q", q);
+    } catch (_) {}
+    window.__eqHdrLastQ = q;
+    try {
+      var target = new URL(url, location.origin);
+      var curPath = String(location.pathname || "").replace(/\/$/, "");
+      var tgtPath = target.pathname.replace(/\/$/, "");
+      var curQ = String(new URLSearchParams(location.search).get("q") || "").trim();
+      var tgtQ = String(target.searchParams.get("q") || "").trim();
+      if (curPath === tgtPath && curQ === tgtQ) return true;
+      if (eqIsAramaPathname(curPath) && eqIsAramaPathname(tgtPath)) {
+        if (opts.replace) history.replaceState(null, "", url);
+        else history.pushState(null, "", url);
+        if (typeof window.__eqAramaBoot === "function") window.__eqAramaBoot();
+        return true;
+      }
+    } catch (_) {}
+    location.href = url;
+    return true;
+  };
   /** Ana vitrin (/, /shop) — kategori sayfaları (/shop/pisirme …) ayrı HTML */
   window.eqIsHomeVitrin = function () {
     try {

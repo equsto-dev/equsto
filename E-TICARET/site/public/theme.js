@@ -420,6 +420,10 @@
     try {
       sessionStorage.setItem("eq_hdr_search_q", q);
     } catch (_) {}
+    if (typeof window.eqNavigateArama === "function") {
+      window.eqNavigateArama(q);
+      return;
+    }
     var url = globalSearchUrl(q);
     if (url) location.href = url;
   }
@@ -471,7 +475,11 @@
       } catch (_) {}
       var url = globalSearchUrl(q);
       if (url) {
-        location.href = url;
+        if (typeof window.eqNavigateArama === "function") {
+          window.eqNavigateArama(q);
+        } else {
+          location.href = url;
+        }
         return true;
       }
       return false;
