@@ -43,6 +43,7 @@ export const PFOS_DUKKAN_BRANCHES: Record<string, string[]> = {
     "Meyhane",
     "All Dining Cafe",
     "İtalyan Restoran",
+    "Büyük Restoran",
     "Fine Dining",
     "Dünya Mutfağı",
     "Gurme Şarküteri",
@@ -196,7 +197,7 @@ export const DEFAULT_WIZARD_QUESTIONS: Record<string, unknown>[] = [
     required: "true",
     mapsTo: "m2",
     motorEtkisi:
-      "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan ≤150→100-300, >150→150-300; all-day-dining 150–300→The House, >300→THC; birahane → 100-300; pastane → 100-200; pideci → 100-250; sushi → 40-100; tavukcu → 80-150; sarkuteri-kiosk → kiosk; hamburger-kiosk → 60-100; hotdog-kiosk → kiosk; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu → 300-500 (zone şablon)",
+      "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan ≤150→100-300, >150→150-300; all-day-dining 150–300→The House, >300→THC; restoran → 500-1000; birahane → 100-300; pastane → 100-200; pideci → 100-250; sushi → 40-100; tavukcu → 80-150; sarkuteri-kiosk → kiosk; hamburger-kiosk → 60-100; hotdog-kiosk → kiosk; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu → 300-500 (zone şablon)",
     note: "Bulut Mutfak ≤15 m²: yalnızca Grab&Go / Coffee Counter. Steakhouse/Balık: ≤150 → 80-150; >150 → 150-250.",
   },
   {
