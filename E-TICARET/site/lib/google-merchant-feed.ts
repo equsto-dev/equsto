@@ -1,7 +1,10 @@
 import { catalogUrlSlug } from "@/lib/catalog-product-slug";
 import { loadEkipmanlarJson } from "@/lib/catalog-json";
+import { getSiteOrigin } from "@/lib/site-origin";
 import { resolveShopDept } from "@/lib/shop/category-dept";
 import { isShopDeptSlug } from "@/lib/shop/depts";
+
+export { getSiteOrigin };
 
 export type CatalogRow = Record<string, unknown>;
 
@@ -27,16 +30,6 @@ export type MerchantFeedStats = {
   skippedNoDept: number;
   skippedInvalid: number;
 };
-
-export function getSiteOrigin(): string {
-  const prod = process.env.VERCEL_PROJECT_PRODUCTION_URL?.trim();
-  if (prod) return prod.startsWith("http") ? prod.replace(/\/$/, "") : `https://${prod}`;
-  const url = process.env.VERCEL_URL?.trim();
-  if (url) return url.startsWith("http") ? url.replace(/\/$/, "") : `https://${url}`;
-  const pub = process.env.NEXT_PUBLIC_SITE_ORIGIN?.trim();
-  if (pub) return pub.replace(/\/$/, "");
-  return "https://equsto.com";
-}
 
 function parseTrAmount(fragment: string): number {
   const n = parseFloat(
