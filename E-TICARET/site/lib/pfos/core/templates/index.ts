@@ -12,15 +12,17 @@ import type { Konsept } from "../../schemas/pfos.schema";
 import { buildBalikciTemplate } from "../../referans/balikci";
 import { buildCoffeeShopTemplate } from "../../referans/coffee-shop";
 import { buildSteakhouseTemplate } from "../../referans/steakhouse";
+import { buildItalyanTemplate } from "../../referans/italyan";
 
 const DYNAMIC_KONSEPT = new Set<Konsept>([
   "steakhouse",
   "balikci",
   "coffee-shop",
+  "italyan",
 ]);
 
 export const TEMPLATES: Record<
-  Exclude<Konsept, "steakhouse" | "balikci" | "coffee-shop">,
+  Exclude<Konsept, "steakhouse" | "balikci" | "coffee-shop" | "italyan">,
   ConceptTemplate
 > = {
   "all-day-dining-cafe": allDayDiningCafe,
@@ -37,7 +39,7 @@ export function getTemplate(konsept: Konsept): ConceptTemplate {
     );
   }
   const t = TEMPLATES[
-    konsept as Exclude<Konsept, "steakhouse" | "balikci" | "coffee-shop">
+    konsept as Exclude<Konsept, "steakhouse" | "balikci" | "coffee-shop" | "italyan">
   ];
   if (!t) throw new Error(`Bilinmeyen konsept: ${konsept}`);
   return t;
@@ -52,6 +54,7 @@ export async function resolveTemplateForQuote(
   if (konsept === "steakhouse") return buildSteakhouseTemplate(m2);
   if (konsept === "balikci") return buildBalikciTemplate(m2, undefined, altTip);
   if (konsept === "coffee-shop") return buildCoffeeShopTemplate(m2);
+  if (konsept === "italyan") return buildItalyanTemplate(m2);
   return getTemplate(konsept);
 }
 

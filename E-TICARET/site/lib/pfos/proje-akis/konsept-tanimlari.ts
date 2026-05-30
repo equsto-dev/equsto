@@ -5,7 +5,7 @@
  */
 
 /** m² bantı veya alt tip listesi (ör. mahalle balıkçı) */
-export type ListeBantId = "80-150" | "150-250" | "mahalle" | "referans";
+export type ListeBantId = "80-150" | "150-250" | "mahalle" | "referans" | "100-300";
 
 export type M2BantTanim = {
   id: ListeBantId;
@@ -148,6 +148,27 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
         liste("mahalle", "Mahalle balıkçı", 80, "balikci"),
         bant("80-150", 115, "balikci"),
         bant("150-250", 200, "balikci"),
+      ],
+    },
+    questions: [],
+  },
+  {
+    id: "restaurant_italyan",
+    name: "İtalyan Restoran",
+    parent: "Restoran",
+    desc: "İtalyan / trattoria · 100–300 m² referans ekipman listesi · motor: italyan",
+    pfos: {
+      motorSlug: "italyan",
+      dukkanSecim: "İtalyan Restoran",
+      m2Min: 100,
+      m2Max: 300,
+      bantKurali: "Tek referans liste (100–300 m²); m² ile adet ölçeklenir",
+      planPdf: "proje-veri/03-italyan.pdf",
+      listeYolu: "proje-veri/03-italyan 100-300 m2.xlsx",
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
+      bantlar: [
+        liste("100-300", "100–300 m²", 200, "italyan"),
       ],
     },
     questions: [],

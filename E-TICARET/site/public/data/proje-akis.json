@@ -106,6 +106,7 @@
             "Türk / Esnaf lokanta",
             "Meyhane",
             "All Dining Cafe",
+            "İtalyan Restoran",
             "Fine Dining",
             "Dünya Mutfağı",
             "Gurme Şarküteri",
@@ -356,6 +357,32 @@
               "label": "150–250 m²",
               "referansM2": 200,
               "listeDosya": "pfos-referans/balikci-150-250.json"
+            }
+          ]
+        },
+        "questions": []
+      },
+      {
+        "id": "restaurant_italyan",
+        "name": "İtalyan Restoran",
+        "parent": "Restoran",
+        "desc": "İtalyan / trattoria · 100–300 m² referans ekipman listesi · motor: italyan",
+        "pfos": {
+          "motorSlug": "italyan",
+          "dukkanSecim": "İtalyan Restoran",
+          "m2Min": 100,
+          "m2Max": 300,
+          "bantKurali": "Tek referans liste (100–300 m²); m² ile adet ölçeklenir",
+          "planPdf": "proje-veri/03-italyan.pdf",
+          "listeYolu": "proje-veri/03-italyan 100-300 m2.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "100-300",
+              "label": "100–300 m²",
+              "referansM2": 200,
+              "listeDosya": "pfos-referans/italyan-100-300.json"
             }
           ]
         },
@@ -37852,6 +37879,6 @@
         "tip_kodu": ""
       }
     ],
-    "updated_at": "2026-05-26T21:03:44.245Z"
+    "updated_at": "2026-05-30T01:24:58.597Z"
   }
 }
