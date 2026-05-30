@@ -1,0 +1,42 @@
+═══════════════════════════════════════════════════════════════════════════
+KİLİT — PDP buybox (Cafemarkt tarzı satın alma alanı)
+Onay: 2026-05-30 · Referans: cafemarkt.com ürün detay satın alma şeridi
+═══════════════════════════════════════════════════════════════════════════
+
+Bu dosya, onaylı PDP buybox düzeninin bozulmaması içindir.
+Değiştirmeden önce kullanıcıdan AÇIK ONAY alın.
+
+── Beklenen görünüm (canlı hero sağ sütun) ─────────────────────────────
+1. Fiyat: büyük puntoda «323.785,00 TL» + yanında «(Kdv Dahil)»
+2. 2×2 avantaj ızgarası (.eq-cmf-perks): kargo, servis, voltaj/elektrik, garanti
+3. Satın alma satırı (.eq-cmf-purchase):
+   • Adet stepper (− / 1 / +) — .eq-cmf-qty
+   • Mavi tam genişlik «SEPETE EKLE» (.eq-cmf-add-btn)
+4. Havale promosyon şeridi (.eq-cmf-promo) — fiyat varsa %3 indirim metni
+5. Proje Fabrikası buybox İÇİNDE değil — yalnızca .eq-epdp-cta alt şeridinde
+
+YASAK (onay olmadan):
+  • Buybox’ı eski dikey «Sepete ekle + Proje Fabrikası» yığınına döndürmek
+  • Adet stepper’ı kaldırmak veya select dropdown’a çevirmek
+  • .eq-cmf-perks 2×2 ızgarasını kaldırmak
+  • Amazon sarı buybox (.eq-product-buybox gradient) geri getirmek
+  • renderEpdpBuybox dışında buybox HTML üretmek
+
+── Kilitli dosyalar ───────────────────────────────────────────────────────
+  public/eq-product-page-inline.js   — renderEpdpBuybox, pdpBuyboxPerks,
+                                       bindEpdpBuybox, buyboxPriceParts
+  public/eq-product-page.css         — .eq-cmf-buybox, .eq-cmf-perks,
+                                       .eq-cmf-purchase, .eq-cmf-qty
+  public/ecom-cart.js                — parseItemFromEl → .eq-cmf-qty okuma
+  lib/shop/assets.ts                 — SHOP_ASSET_V
+  scripts/build-i18n-en.mjs          — pdp.add_to_cart_cmf, pdp.perk_*, pdp.havale_promo
+
+── Sepet ────────────────────────────────────────────────────────────────────
+  Adet: buybox .eq-cmf-qty__val → cartAddButtonAttrs tıklanınca data-q
+  Toast: data-eq-cart-toast="1" (PLP kartları ile aynı)
+
+── Deploy / doğrulama ─────────────────────────────────────────────────────
+  npm run verify:pdp-buybox-kilit
+  Canlı: eq-product-page.css?v={SHOP_ASSET_V} → HTTP 200
+
+═══════════════════════════════════════════════════════════════════════════

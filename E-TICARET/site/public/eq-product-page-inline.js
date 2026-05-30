@@ -1,6 +1,7 @@
 /**
  * ═══════════════════════════════════════════════════════════════════════════
  * KİLİT: E-PDP ürün detay (PDP). renderProduct → renderEpdpProduct.
+ * Buybox: public/pdp-buybox-cafemarkt-KILIT.txt (Cafemarkt tarzı)
  * Değiştirmeden önce kullanıcıdan açık onay alın. Ayrıntı: public/pdp-epdp-KILIT.txt
  * Cursor: .cursor/rules/pdp-epdp-kilit.mdc
  * ═══════════════════════════════════════════════════════════════════════════
@@ -1535,36 +1536,138 @@ window.searchFilter = window.searchFilter || function () {};
       return g;
     }
 
+    /** KİLİT: public/pdp-buybox-cafemarkt-KILIT.txt — Cafemarkt tarzı buybox */
+    function pdpBuyboxPerks(x) {
+      var specs =
+        String((x && x.specs) || "") +
+        " " +
+        (Array.isArray(x && x.teknik_ozellikler) ? x.teknik_ozellikler.join(" ") : "");
+      var perks = [
+        { cls: "ship", label: __pdpT("pdp.perk_shipping", "Bu üründe kargo ücretsiz!") },
+        { cls: "service", label: __pdpT("pdp.perk_install", "Servis kurulumu gerekebilir") },
+      ];
+      var volt = specs.match(/\b(\d+(?:\s*\/\s*\d+)?\s*V\b)/i);
+      perks.push({
+        cls: "power",
+        label: volt ? volt[1].replace(/\s+/g, " ").trim() : __pdpT("pdp.perk_power", "Endüstriyel elektrik bağlantısı"),
+      });
+      perks.push({ cls: "warranty", label: __pdpT("pdp.perk_warranty", "Garantili") });
+      return perks.slice(0, 4);
+    }
+
+    function pdpHavalePromoHtml(x, parts) {
+      if (!parts || parts.quoteOnly || parts.empty) return "";
+      var n = parsePriceTlNumber(x && x.price, x);
+      if (!(n > 0)) return "";
+      var discounted = Math.round(n * 0.97 * 100) / 100;
+      var price = discounted.toLocaleString("tr-TR", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      return (
+        '<p class="eq-cmf-promo">' +
+        esc(
+          __pdpT(
+            "pdp.havale_promo",
+            "Bu ürünü havale ile ekstra %3 indirim ile {price} TL'ye satın alabilirsiniz.",
+            { price: price }
+          )
+        ) +
+        "</p>"
+      );
+    }
+
     function renderEpdpBuybox(x, cartU) {
       var parts = buyboxPriceParts(x);
-      var priceHTML = parts.quoteOnly
-        ? '<span class="eq-buybox-int" style="font-size:1.05rem;">' + esc(__pdpT("pdp.quote_for_contact", "Teklif için iletişim")) + "</span>"
+      var priceRow = parts.quoteOnly
+        ? '<div class="eq-cmf-price eq-cmf-price--quote">' +
+          esc(__pdpT("pdp.quote_for_contact", "Teklif için iletişim")) +
+          "</div>"
         : parts.empty
-          ? '<span class="eq-buybox-int">—</span>'
-          : '<span class="eq-buybox-currency">₺</span><span class="eq-buybox-int">' +
-            esc(parts.int) +
-            "</span>" +
-            (parts.frac ? '<span class="eq-buybox-frac">,' + esc(parts.frac) + "</span>" : "");
+          ? '<div class="eq-cmf-price"><span class="eq-cmf-price__val">—</span></div>'
+          : '<div class="eq-cmf-price">' +
+            '<span class="eq-cmf-price__val">' +
+            esc(parts.int + (parts.frac ? "," + parts.frac : ",00")) +
+            '</span><span class="eq-cmf-price__cur">TL</span>' +
+            '<span class="eq-cmf-price__vat">' +
+            esc(__pdpT("pdp.vat_included_paren", "(Kdv Dahil)")) +
+            "</span></div>";
+      var perks = pdpBuyboxPerks(x)
+        .map(function (p) {
+          return (
+            '<div class="eq-cmf-perk eq-cmf-perk--' +
+            esc(p.cls) +
+            '"><span class="eq-cmf-perk__label">' +
+            esc(p.label) +
+            "</span></div>"
+          );
+        })
+        .join("");
       var cartBtn =
         window.EqustoCart && EqustoCart.cartAddButtonAttrs
-          ? "<button " + EqustoCart.cartAddButtonAttrs(cartU) + ">" + esc(__pdpT("pdp.add_to_cart", "Sepete ekle")) + "</button>"
+          ? "<button " +
+            EqustoCart.cartAddButtonAttrs(cartU) +
+            ' data-eq-cart-toast="1" class="eq-cart-add eq-cmf-add-btn">' +
+            esc(__pdpT("pdp.add_to_cart_cmf", "SEPETE EKLE")) +
+            "</button>"
           : "";
-      var pfosHref = eqHtmlUrl(typeof window.equstoUrl === "function" ? window.equstoUrl("pfos") : "pfos.html");
+      var quoteNote = parts.quoteOnly
+        ? '<p class="eq-cmf-quote-note">' +
+          esc(__pdpT("pdp.price_preparing", "Fiyat listesi hazırlanıyor — sepete ekleyip teklif isteyebilirsiniz.")) +
+          "</p>"
+        : "";
       return (
-        '<div class="eq-epdp-buybox" aria-label="' + esc(__pdpT("pdp.buybox_aria", "Satın al")) + '">' +
-        '<div class="eq-buybox-price">' +
-        priceHTML +
+        '<div class="eq-epdp-buybox eq-cmf-buybox" aria-label="' +
+        esc(__pdpT("pdp.buybox_aria", "Satın al")) +
+        '">' +
+        priceRow +
+        quoteNote +
+        '<div class="eq-cmf-perks" aria-label="' +
+        esc(__pdpT("pdp.perks_aria", "Ürün avantajları")) +
+        '">' +
+        perks +
         "</div>" +
-        (parts.quoteOnly
-          ? '<div class="eq-buybox-kdv">' + esc(__pdpT("pdp.price_preparing", "Fiyat listesi hazırlanıyor — sepete ekleyip teklif isteyebilirsiniz.")) + '</div>'
-          : '<div class="eq-buybox-kdv">' + esc(__pdpT("pdp.vat_included", "KDV dahil fiyat")) + '</div>') +
-        '<div class="eq-product-actions">' +
+        '<div class="eq-cmf-purchase">' +
+        '<div class="eq-cmf-qty" role="group" aria-label="' +
+        esc(__pdpT("pdp.qty_aria", "Adet")) +
+        '">' +
+        '<button type="button" class="eq-cmf-qty__btn eq-cmf-qty__minus" aria-label="' +
+        esc(__pdpT("pdp.qty_minus", "Azalt")) +
+        '">−</button>' +
+        '<span class="eq-cmf-qty__val">1</span>' +
+        '<button type="button" class="eq-cmf-qty__btn eq-cmf-qty__plus" aria-label="' +
+        esc(__pdpT("pdp.qty_plus", "Artır")) +
+        '">+</button>' +
+        "</div>" +
         cartBtn +
-        '<a class="eq-amz-btn-buynow" href="' +
-        esc(pfosHref) +
-        '">' + esc(__pdpT("nav.pfos", "Proje Fabrikası")) + "</a>" +
-        "</div></div>"
+        "</div>" +
+        pdpHavalePromoHtml(x, parts) +
+        "</div>"
       );
+    }
+
+    function bindEpdpBuybox() {
+      var box = document.querySelector(".eq-cmf-buybox");
+      if (!box) return;
+      var valEl = box.querySelector(".eq-cmf-qty__val");
+      var minus = box.querySelector(".eq-cmf-qty__minus");
+      var plus = box.querySelector(".eq-cmf-qty__plus");
+      if (!valEl || !minus || !plus) return;
+      function qty() {
+        return Math.max(1, Math.min(99, parseInt(valEl.textContent, 10) || 1));
+      }
+      function setQty(q) {
+        q = Math.max(1, Math.min(99, q));
+        valEl.textContent = String(q);
+        minus.disabled = q <= 1;
+        plus.disabled = q >= 99;
+      }
+      minus.addEventListener("click", function (e) {
+        e.preventDefault();
+        setQty(qty() - 1);
+      });
+      plus.addEventListener("click", function (e) {
+        e.preventDefault();
+        setQty(qty() + 1);
+      });
+      setQty(1);
     }
 
     function renderEpdpFeaturesCol(x) {
@@ -2154,6 +2257,7 @@ window.searchFilter = window.searchFilter || function () {};
         renderRecentlyViewed(x, all);
 
       bindEpdpGallery();
+      bindEpdpBuybox();
       bindFamilyRailFit();
       eqMbgBindRelated();
       (function bindPdpLightbox() {
