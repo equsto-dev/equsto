@@ -46,7 +46,7 @@
     var l = document.createElement('link');
     l.id = 'eq-cart-css';
     l.rel = 'stylesheet';
-    l.href = '/eq-cart.css?v=20260524cart4';
+    l.href = '/eq-cart.css?v=20260530cart-layout';
     document.head.appendChild(l);
   }
 
@@ -98,7 +98,7 @@
       b: b,
       c: c,
       p: p,
-      img: String(x.img || '').trim(),
+      img: resolveCartItemImg(String(x.img || '').trim()),
       q: quote ? 1 : Math.max(1, Math.round(Number(x.q) || 1)),
       quote: quote,
     };
@@ -539,7 +539,9 @@
     var p = pRaw.replace(/^₺\s*/, '').trim();
     var c = card.getAttribute('data-eq-c') || '';
     var imgEl = card.querySelector('.prod-img img, .eq-rail-card-img img, .eq-dept-plp-card__img img');
-    var img = imgEl ? imgEl.getAttribute('src') || '' : card.getAttribute('data-eq-img') || '';
+    var imgRaw = imgEl ? imgEl.getAttribute('data-eq-img-raw') || '' : '';
+    var imgSrc = imgEl ? imgEl.getAttribute('src') || '' : '';
+    var img = imgRaw || imgSrc || card.getAttribute('data-eq-img') || '';
     if (!n && !b) return null;
     return { n: n, b: b, c: c, p: p, img: img };
   }
@@ -993,8 +995,20 @@
     return img.charAt(0) === '/' ? img : '/' + String(img).replace(/^\.\//, '');
   }
 
+  function resolveCartItemImg(img) {
+    var raw = String(img || '').trim();
+    if (!raw) return '';
+    if (/^https?:\/\//i.test(raw)) return raw;
+    return cartImgSrc(raw.replace(/^\/data\/images\//i, 'images/').replace(/^\//, ''));
+  }
+
   function setLineQty(id, qty) {
-    qty = Math.max(1, Math.min(99, Math.round(Number(qty) || 1)));
+    qty = Math.round(Number(qty) || 0);
+    if (qty <= 0) {
+      removeLine(id);
+      return;
+    }
+    qty = Math.min(99, qty);
     var arr = load();
     var ok = false;
     for (var i = 0; i < arr.length; i++) {
@@ -1014,11 +1028,50 @@
     var arr = load();
     for (var i = 0; i < arr.length; i++) {
       if (arr[i].id === id) {
-        if (arr[i].quote || isQuotePriceLabel(arr[i].p)) return;
+        if (arr[i].quote || isQuotePriceLabel(arr[i].p)) {
+          if (delta < 0) removeLine(id);
+          return;
+        }
         setLineQty(id, (arr[i].q || 1) + delta);
         return;
       }
     }
+  }
+
+  function renderQtyControls(x, q, isQuote) {
+    var minus =
+      '<button type="button" class="eq-cart-qty__btn equsto-cart-qty-minus" data-id="' +
+      escAttr(x.id) +
+      '" aria-label="' +
+      escAttr(__cartT('cart.decrease', 'Azalt')) +
+      '">−</button>';
+    if (isQuote) {
+      return (
+        '<div class="eq-cart-qty eq-cart-qty--quote" role="group" aria-label="' +
+        escAttr(__cartT('cart.qty_aria', 'Adet')) +
+        '">' +
+        minus +
+        '<span class="eq-cart-qty__val">' +
+        escHtml(String(q)) +
+        '</span></div>'
+      );
+    }
+    return (
+      '<div class="eq-cart-qty" role="group" aria-label="' +
+      escAttr(__cartT('cart.qty_aria', 'Adet')) +
+      '">' +
+      minus +
+      '<span class="eq-cart-qty__val">' +
+      escHtml(String(q)) +
+      '</span>' +
+      '<button type="button" class="eq-cart-qty__btn equsto-cart-qty-plus" data-id="' +
+      escAttr(x.id) +
+      '" aria-label="' +
+      escAttr(__cartT('cart.increase', 'Artır')) +
+      '"' +
+      (q >= 99 ? ' disabled' : '') +
+      '>+</button></div>'
+    );
   }
 
   function renderCartLineHtml(x) {
@@ -1044,28 +1097,12 @@
         ? '₺' + formatMoneyTL(unit) + ' / adet'
         : 'Fiyat için teklif';
     var totalLbl = isQuote ? '' : total > 0 ? '₺' + formatMoneyTL(total) : '';
-    var actionsHtml = isQuote
-      ? '<button type="button" class="eq-cart-line__remove equsto-cart-remove" data-id="' +
-        escAttr(x.id) +
-        '">Kaldır</button>'
-      : '<div class="eq-cart-qty" role="group" aria-label="Adet">' +
-        '<button type="button" class="eq-cart-qty__btn equsto-cart-qty-minus" data-id="' +
-        escAttr(x.id) +
-        '" aria-label="Azalt"' +
-        (q <= 1 ? ' disabled' : '') +
-        '>−</button>' +
-        '<span class="eq-cart-qty__val">' +
-        escHtml(String(q)) +
-        '</span>' +
-        '<button type="button" class="eq-cart-qty__btn equsto-cart-qty-plus" data-id="' +
-        escAttr(x.id) +
-        '" aria-label="Artır"' +
-        (q >= 99 ? ' disabled' : '') +
-        '>+</button>' +
-        '</div>' +
-        '<button type="button" class="eq-cart-line__remove equsto-cart-remove" data-id="' +
-        escAttr(x.id) +
-        '">Kaldır</button>';
+    var totalBlock = isQuote
+      ? '<div class="eq-cart-line__total eq-cart-line__total--quote">' +
+        escHtml(__cartT('cart.quote_badge', 'Teklif')) +
+        '</div>'
+      : '<div class="eq-cart-line__total">' + escHtml(totalLbl || '—') + '</div>';
+    var qtyHtml = renderQtyControls(x, q, isQuote);
     return (
       '<article class="eq-cart-line' +
       (isQuote ? ' eq-cart-line--quote' : '') +
@@ -1075,27 +1112,24 @@
       '<div class="eq-cart-line__media">' +
       media +
       '</div>' +
-      '<div class="eq-cart-line__body">' +
+      '<div class="eq-cart-line__main">' +
+      '<div class="eq-cart-line__row eq-cart-line__row--head">' +
       '<div class="eq-cart-line__name">' +
       escHtml(x.n) +
       '</div>' +
+      totalBlock +
+      '</div>' +
       '<div class="eq-cart-line__meta">' +
       escHtml(x.b) +
-      (isQuote ? ' · Teklif kalemi' : '') +
+      (isQuote ? ' · ' + escHtml(__cartT('cart.quote_line_hint', 'Teklif kalemi')) : '') +
       '</div>' +
+      '<div class="eq-cart-line__row eq-cart-line__row--foot">' +
       '<div class="eq-cart-line__unit">' +
       escHtml(unitLbl) +
       '</div>' +
       '<div class="eq-cart-line__actions">' +
-      actionsHtml +
-      '</div></div>' +
-      (isQuote
-        ? ''
-        : '<div class="eq-cart-line__aside">' +
-          '<div class="eq-cart-line__total">' +
-          escHtml(totalLbl || '—') +
-          '</div></div>') +
-      '</article>'
+      qtyHtml +
+      '</div></div></div></article>'
     );
   }
 
@@ -1162,11 +1196,6 @@
 
   function bindCartLineEvents(root) {
     if (!root) return;
-    root.querySelectorAll('.equsto-cart-remove').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        removeLine(btn.getAttribute('data-id'));
-      });
-    });
     root.querySelectorAll('.equsto-cart-qty-minus').forEach(function (btn) {
       btn.addEventListener('click', function () {
         changeLineQty(btn.getAttribute('data-id'), -1);
@@ -1202,7 +1231,7 @@
       updatePanelMode();
       return;
     }
-    sc.className = sc.classList.contains('eq-cart-lines') ? 'eq-cart-lines' : sc.className;
+    sc.classList.add('eq-cart-lines');
     sc.innerHTML = arr.map(renderCartLineHtml).join('');
     bindCartLineEvents(sc);
     updateCartSummary();
