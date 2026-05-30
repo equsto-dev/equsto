@@ -19,7 +19,7 @@
     contact: "/contact",
     sss: "/sss",
     login: "/login.html",
-    cart: "/sepet.html",
+    cart: "/sepet",
     pisirme: "/shop/pisirme",
     sogutma: "/shop/sogutma",
     marketReyon: "/shop/market-reyonlari",
@@ -150,6 +150,7 @@
     if (LANG_NEUTRAL[key]) return path;
     if (curLang() !== "en") return path;
     if (path === "/") return "/en/";
+    if (key === "cart") return "/en/cart";
     return "/en" + path;
   }
   window.equstoUrl = function (key) {
@@ -251,6 +252,51 @@
     return (b ? b + "-" : "") + n;
   };
   window.__eqProductSlug = window.eqProductSlug;
+
+  /** Eski arama / Meilisearch slug → katalog satırı (PDP findRaw). */
+  window.eqFindCatalogRowByPathSlug = function (all, pathSlug) {
+    if (!all || !all.length || !pathSlug) return null;
+    var ps = String(pathSlug).toLowerCase();
+    for (var i = 0; i < all.length; i++) {
+      var row = all[i];
+      if (!row) continue;
+      var id = String(row.id || "").trim().toLowerCase();
+      if (id && id === ps) return row;
+      if (id) {
+        var idDash = id.replace(/__/g, "-");
+        if (idDash === ps || ps.endsWith("-" + idDash) || ps.endsWith(idDash)) return row;
+        var tail = id.indexOf("__") >= 0 ? id.split("__").pop() : "";
+        if (tail && (ps.endsWith(tail) || ps.endsWith(tail.replace(/__/g, "-")))) return row;
+      }
+      if (typeof window.eqProductSlug === "function" && window.eqProductSlug(row) === ps) return row;
+      if (
+        typeof window.eqProductSlugTransliterated === "function" &&
+        window.eqProductSlugTransliterated(row) === ps
+      ) {
+        return row;
+      }
+      if (typeof window.eqLegacyMeiliPathSlug === "function" && window.eqLegacyMeiliPathSlug(row) === ps) {
+        return row;
+      }
+    }
+    return null;
+  };
+
+  window.eqLegacyMeiliPathSlug = function (row) {
+    if (!row) return "";
+    function slugify(s) {
+      return String(s || "")
+        .toLocaleLowerCase("tr")
+        .replace(/[/\\]+/g, "-")
+        .replace(/[^a-z0-9+\-]+/g, "-")
+        .replace(/-+/g, "-")
+        .replace(/^-+|-+$/g, "")
+        .substring(0, 100);
+    }
+    var b = slugify(row.brand || row.b || "");
+    var n = slugify(row.name || row.n || "");
+    return (b ? b + "-" : "") + n;
+  };
 
   /** Popüler marka slug → katalogdaki tam marka adı */
   var EQ_BRAND_SLUG_ALIAS = {

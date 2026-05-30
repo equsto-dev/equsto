@@ -1524,7 +1524,7 @@
           return;
         }
       } catch (eCart) {}
-      location.href = "/sepet.html";
+      location.href = "/sepet";
     });
 
     var btnCat = document.createElement("button");
