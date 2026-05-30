@@ -1519,309 +1519,36 @@ window.searchFilter = window.searchFilter || function () {};
       return g;
     }
 
-    var __eqBrandLogoMap = null;
-
-    function loadBrandLogoMap(cb) {
-      if (__eqBrandLogoMap) {
-        if (typeof cb === "function") cb(__eqBrandLogoMap);
-        return;
-      }
-      fetch("/data/markalarimiz-brands.json", { credentials: "same-origin", cache: "force-cache" })
-        .then(function (r) {
-          return r.ok ? r.json() : { brands: [] };
-        })
-        .then(function (j) {
-          var map = Object.create(null);
-          (j.brands || []).forEach(function (b) {
-            if (!b || !b.logo) return;
-            var keys = [b.name, b.catalogName, b.slug].filter(Boolean);
-            keys.forEach(function (k) {
-              map[String(k).trim().toLowerCase()] = String(b.logo).trim();
-            });
-          });
-          __eqBrandLogoMap = map;
-          if (typeof cb === "function") cb(map);
-        })
-        .catch(function () {
-          __eqBrandLogoMap = Object.create(null);
-          if (typeof cb === "function") cb(__eqBrandLogoMap);
-        });
-    }
-
-    function brandLogoHtml(x) {
-      var brand = String((x && x.brand) || "").trim();
-      if (!brand) return "";
-      var logo = __eqBrandLogoMap && __eqBrandLogoMap[brand.toLowerCase()];
-      if (logo) {
-        return (
-          '<div class="eq-shop-brand">' +
-          '<img src="' +
-          esc(logo) +
-          '" alt="' +
-          esc(brand) +
-          '" class="eq-shop-brand__img" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement(\'span\'),{className:\'eq-shop-brand__txt\',textContent:this.alt}))">' +
-          "</div>"
-        );
-      }
-      return '<div class="eq-shop-brand"><span class="eq-shop-brand__txt">' + esc(brand) + "</span></div>";
-    }
-
-    function renderEpdpShopRating(x) {
-      var slug = productSlugEq(x);
-      var rating = x && x.rating != null ? Number(x.rating) : 0;
-      var count = x && x.reviewCount != null ? Number(x.reviewCount) : 0;
-      if (!(rating > 0) && window.EqustoProductReviews && typeof window.EqustoProductReviews.summaryFor === "function") {
-        var sum = window.EqustoProductReviews.summaryFor(x, slug);
-        if (sum) {
-          rating = Number(sum.rating) || 0;
-          count = Number(sum.count) || 0;
-        }
-      }
-      if (!(rating > 0)) return "";
-      var stars = "";
-      for (var i = 1; i <= 5; i++) {
-        stars += '<span class="eq-shop-star' + (i <= Math.round(rating) ? " eq-shop-star--on" : "") + '" aria-hidden="true">★</span>';
-      }
-      var countLbl =
-        count === 1
-          ? __pdpT("pdp.review_one", "1 yorum")
-          : __pdpT("pdp.review_count", "{n} yorum", { n: count });
-      return (
-        '<div class="eq-shop-rating" aria-label="' +
-        esc(__pdpT("pdp.rating_aria", "Değerlendirme {score}", { score: rating.toFixed(1) })) +
-        '">' +
-        stars +
-        '<span class="eq-shop-rating__score">' +
-        rating.toFixed(1) +
-        "</span>" +
-        (count > 0 ? '<span class="eq-shop-rating__count">' + esc(countLbl) + "</span>" : "") +
-        "</div>"
-      );
-    }
-
-    function renderEpdpShopVariants(x, all, keyFn) {
-      if (!x || !all || !all.length || !keyFn) return "";
-      var pack = pickRelatedProducts(x, all, keyFn);
-      var items = pack.items;
-      if (!items.length) return "";
-      var curSlug = String(x.slug || x.id || "").toLowerCase();
-      var cells = items
-        .map(function (p) {
-          var k = keyFn({ c: p.category || "", b: p.brand || "", n: p.name || "" });
-          var img = renderPdpThumbImg(p);
-          var lbl = esc(shortModelLabel(p));
-          var fHref = productSlugEq(p)
-            ? eqPathForProductObj(p) || "/urun/" + productSlugEq(p)
-            : "product.html?p=" + esc(encodeURIComponent(k));
-          var pSlug = String(p.slug || p.id || "").toLowerCase();
-          var curCls = pSlug && pSlug === curSlug ? " eq-shop-variant--current" : "";
-          var outOfStock = !!(p.stokta === false || p.available === false);
-          return (
-            '<a class="eq-shop-variant' +
-            curCls +
-            (outOfStock ? " eq-shop-variant--oos" : "") +
-            '" href="' +
-            esc(eqHtmlUrl(fHref)) +
-            '" title="' +
-            lbl +
-            '">' +
-            '<span class="eq-shop-variant__img">' +
-            img +
-            "</span>" +
-            '<span class="eq-shop-variant__lbl">' +
-            lbl +
-            "</span></a>"
-          );
-        })
-        .join("");
-      return (
-        '<div class="eq-shop-variants">' +
-        '<div class="eq-shop-variants__title">' +
-        esc(__pdpT("pdp.other_choices", "Ürünün diğer seçenekleri")) +
-        "</div>" +
-        '<div class="eq-shop-variants__row" role="list">' +
-        cells +
-        "</div></div>"
-      );
-    }
-
-    function renderEpdpShopPerks(x) {
-      var perks = [
-        {
-          icon: "truck",
-          text: __pdpT("pdp.perk_free_shipping", "Bu üründe kargo ücretsiz!"),
-        },
-        {
-          icon: "service",
-          text: __pdpT("pdp.perk_install", "Servis / kurulum gerekir"),
-        },
-        {
-          icon: "shield",
-          text: __pdpT("pdp.perk_warranty", "Garantili"),
-        },
-      ];
-      var svg = {
-        truck:
-          '<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M3 6h11v9H3V6zm12 2h2.3l2.7 3v4h-5V8zM6 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm10 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>',
-        service:
-          '<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M22.7 19.3l-1.4-1.4 1.3-1.3-1.4-1.4-1.3 1.3-1.4-1.4 1.3-1.3-1.4-1.4-1.3 1.3-1.4-1.4-1.3 1.3-1.4-1.4L9.7 2.3 2.3 9.7l1.4 1.4-1.3 1.3 1.4 1.4 1.3-1.3 1.4 1.4-1.3 1.3 1.4 1.4 1.3-1.3 1.4 1.4 1.3-1.3 1.4 1.4 7.4-7.4z"/></svg>',
-        shield:
-          '<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 2l8 3v6c0 5-3.4 9.7-8 11-4.6-1.3-8-6-8-11V5l8-3z"/></svg>',
-      };
-      return (
-        '<div class="eq-shop-perks">' +
-        perks
-          .map(function (p) {
-            return (
-              '<div class="eq-shop-perk"><span class="eq-shop-perk__ico">' +
-              (svg[p.icon] || "") +
-              '</span><span class="eq-shop-perk__txt">' +
-              esc(p.text) +
-              "</span></div>"
-            );
-          })
-          .join("") +
-        '<div class="eq-shop-perk eq-shop-perk--empty" aria-hidden="true"></div></div>"
-      );
-    }
-
-    function renderEpdpShopbox(x, cartU, all, keyFn) {
+    function renderEpdpBuybox(x, cartU) {
       var parts = buyboxPriceParts(x);
-      var code = String(x.sku || x.model || x.urun_kodu || "—").trim();
       var priceHTML = parts.quoteOnly
-        ? '<span class="eq-shop-price__quote">' + esc(__pdpT("pdp.quote_for_contact", "Teklif için iletişim")) + "</span>"
+        ? '<span class="eq-buybox-int" style="font-size:1.05rem;">' + esc(__pdpT("pdp.quote_for_contact", "Teklif için iletişim")) + "</span>"
         : parts.empty
-          ? '<span class="eq-shop-price__empty">—</span>'
-          : '<span class="eq-shop-price__int">' +
+          ? '<span class="eq-buybox-int">—</span>'
+          : '<span class="eq-buybox-currency">₺</span><span class="eq-buybox-int">' +
             esc(parts.int) +
-            (parts.frac ? "," + esc(parts.frac) : "") +
-            '</span><span class="eq-shop-price__cur"> TL</span>';
-      var vatNote = parts.quoteOnly
-        ? esc(__pdpT("pdp.price_preparing", "Fiyat listesi hazırlanıyor — sepete ekleyip teklif isteyebilirsiniz."))
-        : '<span class="eq-shop-price__vat">(' + esc(__pdpT("pdp.vat_paren", "KDV Dahil")) + ")</span>";
-      var imgSrc = "";
-      if (x.images && x.images[0]) imgSrc = resolveProductImgSrc(x.images[0]);
-      var compareAttrs =
-        'type="button" class="eq-shop-icon-btn" data-eq-compare data-eq-n="' +
-        esc(cartU.n) +
-        '" data-eq-b="' +
-        esc(cartU.b) +
-        '" data-eq-c="' +
-        esc(cartU.c) +
-        '" data-eq-p="' +
-        esc(cartU.p) +
-        '"' +
-        (imgSrc ? ' data-eq-img="' + esc(imgSrc) + '"' : "") +
-        ' aria-label="' +
-        esc(__pdpT("pdp.compare", "Karşılaştır")) +
-        '" title="' +
-        esc(__pdpT("pdp.compare", "Karşılaştır")) +
-        '"';
+            "</span>" +
+            (parts.frac ? '<span class="eq-buybox-frac">,' + esc(parts.frac) + "</span>" : "");
+      var cartBtn =
+        window.EqustoCart && EqustoCart.cartAddButtonAttrs
+          ? "<button " + EqustoCart.cartAddButtonAttrs(cartU) + ">" + esc(__pdpT("pdp.add_to_cart", "Sepete ekle")) + "</button>"
+          : "";
+      var pfosHref = eqHtmlUrl(typeof window.equstoUrl === "function" ? window.equstoUrl("pfos") : "pfos.html");
       return (
-        '<section class="eq-epdp-shop" aria-label="' +
-        esc(__pdpT("pdp.buybox_aria", "Satın al")) +
-        '">' +
-        '<p class="eq-shop-code">' +
-        esc(__pdpT("pdp.product_code_caps", "ÜRÜN KODU")) +
-        " : " +
-        esc(code) +
-        "</p>" +
-        '<div class="eq-shop-head">' +
-        '<h1 class="eq-shop-title">' +
-        esc(x.name || "") +
-        "</h1>" +
-        brandLogoHtml(x) +
-        "</div>" +
-        renderEpdpShopRating(x) +
-        '<div class="eq-shop-price-row">' +
-        '<div class="eq-shop-price">' +
+        '<div class="eq-epdp-buybox" aria-label="' + esc(__pdpT("pdp.buybox_aria", "Satın al")) + '">' +
+        '<div class="eq-buybox-price">' +
         priceHTML +
         "</div>" +
-        (parts.quoteOnly ? '<p class="eq-shop-price-note">' + vatNote + "</p>" : vatNote) +
-        "</div>" +
-        renderEpdpShopVariants(x, all, keyFn) +
-        renderEpdpShopPerks(x) +
-        '<div class="eq-shop-actions">' +
-        '<div class="eq-shop-qty" data-eq-shop-qty role="group" aria-label="' +
-        esc(__pdpT("pdp.qty_aria", "Adet")) +
-        '">' +
-        '<button type="button" class="eq-shop-qty__btn" data-qty-minus aria-label="' +
-        esc(__pdpT("pdp.qty_minus", "Azalt")) +
-        '">−</button>' +
-        '<span class="eq-shop-qty__val" data-qty-val>1</span>' +
-        '<button type="button" class="eq-shop-qty__btn" data-qty-plus aria-label="' +
-        esc(__pdpT("pdp.qty_plus", "Artır")) +
-        '">+</button>' +
-        "</div>" +
-        '<button type="button" class="eq-shop-cart-btn" id="eq-shop-add-cart" data-eq-n="' +
-        esc(cartU.n) +
-        '" data-eq-b="' +
-        esc(cartU.b) +
-        '" data-eq-c="' +
-        esc(cartU.c) +
-        '" data-eq-p="' +
-        esc(cartU.p) +
-        '"' +
-        (imgSrc ? ' data-eq-img="' + esc(imgSrc) + '"' : "") +
-        (parts.quoteOnly ? ' data-eq-quote="1"' : "") +
-        ">" +
-        esc(__pdpT("pdp.add_to_cart_upper", "SEPETE EKLE")) +
-        "</button>" +
-        "<button " +
-        compareAttrs +
-        '><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 8v8m-4-4h8"/><circle cx="12" cy="12" r="9"/></svg></button>' +
-        '<button type="button" class="eq-shop-icon-btn eq-shop-icon-btn--wish" data-eq-wishlist aria-label="' +
-        esc(__pdpT("pdp.wishlist", "Listeye ekle")) +
-        '" title="' +
-        esc(__pdpT("pdp.wishlist", "Listeye ekle")) +
-        '"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 20s-7-4.4-7-9.2C5 7.6 7.2 6 9.5 6c1.4 0 2.7.7 3.5 1.8C13.8 6.7 15.1 6 16.5 6 18.8 6 21 7.6 21 10.8 21 15.6 12 20 12 20z"/></svg></button>' +
-        "</div></section>"
+        (parts.quoteOnly
+          ? '<div class="eq-buybox-kdv">' + esc(__pdpT("pdp.price_preparing", "Fiyat listesi hazırlanıyor — sepete ekleyip teklif isteyebilirsiniz.")) + '</div>'
+          : '<div class="eq-buybox-kdv">' + esc(__pdpT("pdp.vat_included", "KDV dahil fiyat")) + '</div>') +
+        '<div class="eq-product-actions">' +
+        cartBtn +
+        '<a class="eq-amz-btn-buynow" href="' +
+        esc(pfosHref) +
+        '">' + esc(__pdpT("nav.pfos", "Proje Fabrikası")) + "</a>" +
+        "</div></div>"
       );
-    }
-
-    function bindEpdpShopbox(x, cartU) {
-      loadBrandLogoMap(function () {
-        var brandSlot = document.querySelector(".eq-epdp-shop .eq-shop-brand");
-        if (brandSlot) brandSlot.outerHTML = brandLogoHtml(x);
-      });
-      var qtyRoot = document.querySelector("[data-eq-shop-qty]");
-      var qtyVal = qtyRoot && qtyRoot.querySelector("[data-qty-val]");
-      var addBtn = document.getElementById("eq-shop-add-cart");
-      function readQty() {
-        var n = qtyVal ? parseInt(qtyVal.textContent, 10) : 1;
-        return Number.isFinite(n) && n > 0 ? Math.min(99, n) : 1;
-      }
-      function writeQty(n) {
-        if (qtyVal) qtyVal.textContent = String(n);
-      }
-      if (qtyRoot) {
-        qtyRoot.addEventListener("click", function (ev) {
-          var t = ev.target;
-          if (!t || !t.closest) return;
-          var q = readQty();
-          if (t.closest("[data-qty-minus]")) writeQty(Math.max(1, q - 1));
-          if (t.closest("[data-qty-plus]")) writeQty(Math.min(99, q + 1));
-        });
-      }
-      if (addBtn && window.EqustoCart && typeof EqustoCart.addFromItem === "function") {
-        addBtn.addEventListener("click", function (ev) {
-          ev.preventDefault();
-          var q = readQty();
-          EqustoCart.addFromItem(Object.assign({}, cartU, { q: q, img: addBtn.getAttribute("data-eq-img") || "" }));
-        });
-      }
-      var cmpBtn = document.querySelector(".eq-epdp-shop [data-eq-compare]");
-      if (cmpBtn && window.EqProductCompare && typeof window.EqProductCompare.toggle === "function") {
-        cmpBtn.addEventListener("click", function (ev) {
-          ev.preventDefault();
-          window.EqProductCompare.toggle({
-            n: cartU.n,
-            b: cartU.b,
-            img: cmpBtn.getAttribute("data-eq-img") || "",
-            href: location.pathname + location.search,
-          });
-        });
-      }
     }
 
     function renderEpdpFeaturesCol(x) {
@@ -2333,9 +2060,8 @@ window.searchFilter = window.searchFilter || function () {};
           "</div>";
       }
       var keyFn = window.EqustoCart && EqustoCart.itemKey;
-      var familyRail = "";
-
-      // Üst family rail yerine alışveriş kutusunda varyant şeridi
+      var familyRail =
+        keyFn && all && all.length ? renderFamilyRail(x, all, keyFn) : "";
 
       // Üstte family rail’de geçenleri alt şerit tekrar etmesin
       var exclude = Object.create(null);
@@ -2370,10 +2096,18 @@ window.searchFilter = window.searchFilter || function () {};
         '<p class="eq-epdp-eyebrow eq-caglayan-eyebrow">' +
         esc(pdpSeriesEyebrow(x)) +
         "</p>" +
+        '<h1 class="eq-epdp-title eq-caglayan-title">' +
+        esc(x.name || "") +
+        "</h1>" +
+        '<p class="eq-epdp-cod eq-caglayan-cod">' +
+        esc(__pdpT("pdp.product_code_prefix", "Ürün kodu:")) +
+        " <strong>" +
+        esc(x.sku || x.model || x.urun_kodu || "—") +
+        "</strong></p>" +
         '<p class="eq-epdp-lead eq-caglayan-lead">' +
         esc(pdpLeadParagraph(x)) +
         "</p>" +
-        renderEpdpShopbox(x, cartU, all, keyFn) +
+        renderEpdpBuybox(x, cartU) +
         '<div class="eq-epdp-cta eq-caglayan-cta">' +
         (pdf && /\.pdf/i.test(pdf)
           ? '<a class="eq-caglayan-btn" href="' +
@@ -2402,7 +2136,6 @@ window.searchFilter = window.searchFilter || function () {};
         renderRecentlyViewed(x, all);
 
       bindEpdpGallery();
-      bindEpdpShopbox(x, cartU);
       bindFamilyRailFit();
       eqMbgBindRelated();
       (function bindPdpLightbox() {
