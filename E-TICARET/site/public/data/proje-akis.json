@@ -53,7 +53,7 @@
         "type": "number",
         "required": "true",
         "mapsTo": "m2",
-        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan/birahane → 100-300; pastane → 100-200; pizzaci → 200-500; kebap-ortadogu → 300-500 (zone şablon)",
+        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan/birahane → 100-300; pastane → 100-200; pideci → 100-250; pizzaci → 200-500; kebap-ortadogu → 300-500 (zone şablon)",
         "note": "Bulut Mutfak ≤15 m²: yalnızca Grab&Go / Coffee Counter. Steakhouse/Balık: ≤150 → 80-150; >150 → 150-250."
       },
       {
@@ -103,6 +103,7 @@
             "Balık Restaurant",
             "Kebapçı",
             "Pizzacı",
+            "Pideci",
             "Türk / Esnaf lokanta",
             "Meyhane",
             "All Dining Cafe",
@@ -385,6 +386,32 @@
               "label": "100–300 m²",
               "referansM2": 200,
               "listeDosya": "pfos-referans/italyan-100-300.json"
+            }
+          ]
+        },
+        "questions": []
+      },
+      {
+        "id": "restaurant_pideci",
+        "name": "Pideci",
+        "parent": "Restoran",
+        "desc": "Pide / lahmacun · 100–250 m² referans ekipman listesi · motor: pideci",
+        "pfos": {
+          "motorSlug": "pideci",
+          "dukkanSecim": "Pideci",
+          "m2Min": 100,
+          "m2Max": 250,
+          "bantKurali": "Tek referans liste (100–250 m²); m² ile adet ölçeklenir",
+          "planPdf": "proje-veri/PIDECI.pdf",
+          "listeYolu": "proje-veri/PIDECI 100-250m2.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "100-250",
+              "label": "100–250 m²",
+              "referansM2": 175,
+              "listeDosya": "pfos-referans/pideci-100-250.json"
             }
           ]
         },
@@ -37929,6 +37956,6 @@
         "tip_kodu": ""
       }
     ],
-    "updated_at": "2026-05-30T12:17:33.739Z"
+    "updated_at": "2026-05-30T22:50:06.554Z"
   }
 }

@@ -98,6 +98,7 @@
     "pfos:italyan:import": "node scripts/import-italyan-konsept.mjs",
     "pfos:birahane:import": "node scripts/import-birahane-konsept.mjs",
     "pfos:pastane:import": "node scripts/import-pastane-konsept.mjs",
+    "pfos:pideci:import": "node scripts/import-pideci-konsept.mjs",
     "pfos:pizzaci:import": "node scripts/import-pizzaci-referans.mjs",
     "sync:legacy": "node scripts/sync-legacy-assets.mjs",
     "assets:cdn:config": "node scripts/generate-asset-cdn-config.mjs",

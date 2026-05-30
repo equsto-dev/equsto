@@ -12,6 +12,7 @@ export type ListeBantId =
   | "referans"
   | "100-300"
   | "100-200"
+  | "100-250"
   | "200-500"
   | "300-500";
 
@@ -178,6 +179,25 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
       bantlar: [
         liste("100-300", "100–300 m²", 200, "italyan"),
       ],
+    },
+    questions: [],
+  },
+  {
+    id: "restaurant_pideci",
+    name: "Pideci",
+    parent: "Restoran",
+    desc: "Pide / lahmacun · 100–250 m² referans ekipman listesi · motor: pideci",
+    pfos: {
+      motorSlug: "pideci",
+      dukkanSecim: "Pideci",
+      m2Min: 100,
+      m2Max: 250,
+      bantKurali: "Tek referans liste (100–250 m²); m² ile adet ölçeklenir",
+      planPdf: "proje-veri/PIDECI.pdf",
+      listeYolu: "proje-veri/PIDECI 100-250m2.xlsx",
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
+      bantlar: [liste("100-250", "100–250 m²", 175, "pideci")],
     },
     questions: [],
   },

@@ -64,6 +64,13 @@ export const PFOS_KATEGORI_TANIMLARI: PfosKategoriTanim[] = [
     ],
   },
   {
+    id: "pideci",
+    label: "Pideci",
+    ustKategori: "Restaurant",
+    planNot: "proje-veri/PIDECI 100-250m2.xlsx",
+    bantlar: [{ id: "100-250", label: "100–250 m²", referansM2: 175 }],
+  },
+  {
     id: "pizzaci",
     label: "Pizzacı",
     ustKategori: "Restaurant",

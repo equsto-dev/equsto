@@ -14,6 +14,7 @@ export type ReferansListeId =
   | "referans"
   | "100-300"
   | "100-200"
+  | "100-250"
   | "200-500";
 
 export function pickM2Bant(m2: number): M2BantId {
@@ -85,7 +86,8 @@ export async function loadReferansProfil(
     | "italyan"
     | "birahane"
     | "pastane"
-    | "pizzaci",
+    | "pizzaci"
+    | "pideci",
   m2: number,
   listeId?: ReferansListeId,
   altTip?: string | null,
@@ -98,6 +100,8 @@ export async function loadReferansProfil(
         ? "200-500"
         : kategoriId === "pastane"
           ? "100-200"
+          : kategoriId === "pideci"
+            ? "100-250"
           : kategoriId === "italyan" || kategoriId === "birahane"
           ? "100-300"
           : kategoriId === "balikci"

@@ -45,6 +45,7 @@
     if (/türk|turk|sütiş|sutis|restaurant/i.test(k) && !/steakhouse/i.test(k) && !/pizzac/i.test(d))
       return "turk-restoran";
     if (d === "Pizzacı") return "pizzaci";
+    if (d === "Pideci" || /pideci|pide\s*ci/i.test(d)) return "pideci";
     if (d === "Dönerci") return "kebap-ortadogu";
     return "";
   }

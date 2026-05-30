@@ -36,6 +36,12 @@
       "label": "Pastane",
       "kalemSayisi": 43,
       "not": "100–200 m² referans (14-PASTANE)"
+    },
+    {
+      "slug": "pideci",
+      "label": "Pideci",
+      "kalemSayisi": 50,
+      "not": "100–250 m² referans (PIDECI)"
     }
   ]
 }
