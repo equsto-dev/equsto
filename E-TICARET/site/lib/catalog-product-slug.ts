@@ -36,7 +36,7 @@ export function slugifyCatalogPart(s: string) {
     .substring(0, 100);
 }
 
-/** Ürün kodu → URL parçası: 9580.APPIA.3V → 9580-appia-3v */
+/** Örn. 9805.IM240X.NHC → 9805-im240x-nhc */
 export function skuPathSlug(sku: string): string {
   return foldTr(String(sku || "").trim())
     .replace(/\./g, "-")
@@ -44,6 +44,25 @@ export function skuPathSlug(sku: string): string {
     .replace(/-+/g, "-")
     .replace(/^-+|-+$/g, "")
     .substring(0, 80);
+}
+
+/** Eski istemci hatası: tr-TR I→ı, [^a-z] ile ı silinir → 9805-m240x-nhc */
+export function legacyBrokenSkuPathSlug(sku: string): string {
+  return String(sku || "")
+    .toLocaleLowerCase("tr")
+    .replace(/\./g, "-")
+    .replace(/[^a-z0-9+\-]+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .substring(0, 80);
+}
+
+function normPathSlug(s: string): string {
+  return String(s || "")
+    .toLowerCase()
+    .replace(/_/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-+|-+$/g, "");
 }
 
 /** Vitrin PDP slug — stok kodu öncelikli (marka öneki yok). */
@@ -83,7 +102,12 @@ export function matchCatalogRowByPathSlug(
   const skuSl = skuPathSlug(
     String(row.sku || row.model || row.urun_kodu || row.stok_no || ""),
   );
-  if (skuSl && skuSl === ps) return true;
+  if (skuSl && normPathSlug(skuSl) === normPathSlug(ps)) return true;
+
+  const brokenSkuSl = legacyBrokenSkuPathSlug(
+    String(row.sku || row.model || row.urun_kodu || row.stok_no || ""),
+  );
+  if (brokenSkuSl && normPathSlug(brokenSkuSl) === normPathSlug(ps)) return true;
 
   const id = String(row.id || "").trim().toLowerCase();
   if (id) {
