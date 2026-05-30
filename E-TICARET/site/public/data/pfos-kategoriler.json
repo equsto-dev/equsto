@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-05-30T22:57:48.828Z",
+  "updated_at": "2026-05-30T23:03:27.399Z",
   "kategoriler": [
     {
       "id": "steakhouse",
@@ -200,6 +200,25 @@
             "toplamAdet": 54,
             "kaynakDosya": "PIDECI 100-250m2.xlsx",
             "yukleme": "2026-05-30T22:53:26.381Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sushi",
+      "label": "Sushi",
+      "ustKategori": "Restoran",
+      "bantlar": [
+        {
+          "id": "40-100",
+          "label": "40–100 m²",
+          "referansM2": 70,
+          "meta": {
+            "listeDosya": "sushi-40-100.json",
+            "kalemSayisi": 27,
+            "toplamAdet": 34,
+            "kaynakDosya": "06 SUSHI 40-100 m2.xlsx",
+            "yukleme": "2026-05-30T23:03:27.393Z"
           }
         }
       ]

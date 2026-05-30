@@ -7,7 +7,7 @@
   var API_QUOTE = "/api/pfos/quote";
   var API_CALC = "/api/pfos/calculate";
   var API_KONSEPT = "/api/pfos/konseptler";
-  var FALLBACK_KONSEPT = "/data/pfos-konseptler.json?v=20260531pizzaci80200";
+  var FALLBACK_KONSEPT = "/data/pfos-konseptler.json?v=20260531sushi";
 
   var KAT_DEPT = {
     A: "kahve",
@@ -46,6 +46,7 @@
       return "turk-restoran";
     if (d === "Pizzacı") return "pizzaci";
     if (d === "Pideci" || /pideci|pide\s*ci/i.test(d)) return "pideci";
+    if (d === "Sushi" || /sushi|omakase/i.test(d) || /sushi/i.test(k)) return "sushi";
     if (d === "Dönerci") return "kebap-ortadogu";
     return "";
   }

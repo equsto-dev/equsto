@@ -53,7 +53,7 @@
         "type": "number",
         "required": "true",
         "mapsTo": "m2",
-        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan/birahane → 100-300; pastane → 100-200; pideci → 100-250; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu → 300-500 (zone şablon)",
+        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan/birahane → 100-300; pastane → 100-200; pideci → 100-250; sushi → 40-100; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu → 300-500 (zone şablon)",
         "note": "Bulut Mutfak ≤15 m²: yalnızca Grab&Go / Coffee Counter. Steakhouse/Balık: ≤150 → 80-150; >150 → 150-250."
       },
       {
@@ -104,6 +104,7 @@
             "Kebapçı",
             "Pizzacı",
             "Pideci",
+            "Sushi",
             "Türk / Esnaf lokanta",
             "Meyhane",
             "All Dining Cafe",
@@ -412,6 +413,31 @@
               "label": "100–250 m²",
               "referansM2": 175,
               "listeDosya": "pfos-referans/pideci-100-250.json"
+            }
+          ]
+        },
+        "questions": []
+      },
+      {
+        "id": "restaurant_sushi",
+        "name": "Sushi",
+        "parent": "Restoran",
+        "desc": "Sushi bar / omakase · 40–100 m² referans ekipman listesi · motor: sushi",
+        "pfos": {
+          "motorSlug": "sushi",
+          "dukkanSecim": "Sushi",
+          "m2Min": 40,
+          "m2Max": 100,
+          "bantKurali": "Tek referans liste (40–100 m²); m² ile adet ölçeklenir",
+          "listeYolu": "proje-veri/06 SUSHI 40-100 m2.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "40-100",
+              "label": "40–100 m²",
+              "referansM2": 70,
+              "listeDosya": "pfos-referans/sushi-40-100.json"
             }
           ]
         },

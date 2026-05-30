@@ -42,6 +42,12 @@
       "label": "Pideci",
       "kalemSayisi": 50,
       "not": "100–250 m² referans (PIDECI)"
+    },
+    {
+      "slug": "sushi",
+      "label": "Sushi",
+      "kalemSayisi": 27,
+      "not": "40–100 m² referans (06 SUSHI)"
     }
   ]
 }
