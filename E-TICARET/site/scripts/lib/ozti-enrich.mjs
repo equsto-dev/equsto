@@ -74,13 +74,44 @@ export function loadPdfByKod() {
   return map;
 }
 
+/** G/D/Y tablo satırı — Öztiryakiler PDF (KOD altında satır satır mm, lt, W, V, kg). */
+export function parseOztiGdyTable(hay, kod) {
+  const kodEsc = normKod(kod).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  if (!kodEsc) return null;
+  const re = new RegExp(
+    kodEsc +
+      "[\\s\\S]{0,80}?" +
+      "(\\d{2,4})\\s*[\\r\\n]+" +
+      "(\\d{2,4})\\s*[\\r\\n]+" +
+      "(\\d{2,4})\\s*[\\r\\n]+" +
+      "(\\d+(?:[.,]\\d+)?)\\s*lt\\.?\\s*[\\r\\n]+" +
+      "(\\d+(?:[.,]\\d+)?)\\s*W\\b\\s*[\\r\\n]+" +
+      "([^\\r\\n]+?)\\s*[\\r\\n]+" +
+      "(\\d+(?:[.,]\\d+)?)\\s*kg",
+    "i",
+  );
+  const m = String(hay || "").match(re);
+  if (!m) return null;
+  const gucW = String(m[5]).replace(",", ".");
+  return {
+    genislik_mm: Number(m[1]),
+    derinlik_mm: Number(m[2]),
+    yukseklik_mm: Number(m[3]),
+    kapasite_lt: String(m[4]).replace(",", "."),
+    guc_w: gucW,
+    guc_kw: String(Math.round((Number(gucW) / 1000) * 100) / 100),
+    gerilim: m[6].trim().replace(/\.$/, ""),
+    agirlik_kg: String(m[7]).replace(",", "."),
+  };
+}
+
 /** G×D×Y veya 80*90*85 gibi ölçüleri ürün adı / PDF metninden çıkar. */
 export function parseOlculer(text, kod) {
   const hay = String(text || "");
-  const out = {};
+  const out = parseOztiGdyTable(hay, kod) || {};
   const kodEsc = kod ? kod.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") : "";
 
-  if (kodEsc) {
+  if (kodEsc && !out.genislik_mm) {
     const after = hay.split(new RegExp(kodEsc, "i"))[1] || "";
     const trip = after.match(
       /(\d{2,4})\s*(?:mm)?\s*[x×*]\s*(\d{2,4})\s*(?:mm)?\s*[x×*]\s*(\d{2,4})\s*(?:mm)?/i,
@@ -161,8 +192,12 @@ export function buildKeywords(row, olculer, category) {
   ];
   if (olculer) {
     if (olculer.genislik_mm) parts.push(`${olculer.genislik_mm} mm`);
+    if (olculer.derinlik_mm && olculer.yukseklik_mm) {
+      parts.push(`${olculer.genislik_mm}×${olculer.derinlik_mm}×${olculer.yukseklik_mm} mm`);
+    }
     if (olculer.kapasite_lt) parts.push(`${olculer.kapasite_lt} litre`);
     if (olculer.guc_kw) parts.push(`${olculer.guc_kw} kW`);
+    if (olculer.agirlik_kg) parts.push(`${olculer.agirlik_kg} kg`);
   }
   const seen = new Set();
   const kw = [];
@@ -177,8 +212,44 @@ export function buildKeywords(row, olculer, category) {
   return kw.slice(0, 24);
 }
 
+/** PDF tablo bloğundan model satırı (ör. APPIA LIFE … ÜÇ GRUP TAM OTOMATİK). */
+export function pdfModelCaption(pdfEntry, kod) {
+  if (!pdfEntry?.pdf_metin_parcalari?.length || !kod) return "";
+  const hay = pdfEntry.pdf_metin_parcalari.join("\n");
+  const kodU = normKod(kod);
+  const lines = hay.split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
+  const start = lines.findIndex((l) => normKod(l) === kodU);
+  if (start < 0) return "";
+  for (let i = start + 1; i < lines.length && i < start + 12; i++) {
+    const ln = lines[i];
+    if (/^kod$|^g$|^d$|^y$|^kapasite$|^güç$|^gerilim$|^ağırlık$|^fiyat$/i.test(ln)) continue;
+    if (/^\d{2,4}$/.test(ln)) continue;
+    if (/^\d+(?:[.,]\d+)?\s*(?:lt\.?|w|kg\.?)$/i.test(ln)) continue;
+    if (/^\d[\d/\-]*v/i.test(ln)) continue;
+    if (/^[0-9]{2,4}\.[A-Z0-9][A-Z0-9.\-]{4,}$/i.test(ln)) break;
+    if (ln.length >= 12 && /[A-Za-zÇĞİÖŞÜçğıöşü]{4,}/.test(ln)) {
+      let caption = ln;
+      if (i + 1 < lines.length && i + 1 < start + 12) {
+        const next = lines[i + 1];
+        if (
+          next.length >= 6 &&
+          !/^[0-9]{2,4}\.[A-Z0-9]/i.test(next) &&
+          !/^kod$/i.test(next) &&
+          caption.length < 48
+        ) {
+          caption = `${caption} ${next}`;
+        }
+      }
+      return caption.replace(/\s+/g, " ").trim();
+    }
+  }
+  return "";
+}
+
 export function buildAciklama(row, pdfEntry, bullets) {
   const parts = [];
+  const caption = pdfModelCaption(pdfEntry, row.urun_kodu || row.sku);
+  if (caption) parts.push(caption);
   if (bullets.length) parts.push(bullets.join("\n"));
   else if (row.urun_tanimi) parts.push(String(row.urun_tanimi).trim());
   const pathStr = (row.kategori_yolu || []).filter(Boolean).join(" › ");
@@ -193,8 +264,11 @@ export function buildTeknikOzellikler(row, pdfEntry, olculer, bullets) {
     lines.push(`Derinlik: ${olculer.derinlik_mm} mm`);
     lines.push(`Yükseklik: ${olculer.yukseklik_mm} mm`);
   }
-  if (olculer?.kapasite_lt) lines.push(`Kapasite: ${olculer.kapasite_lt} lt`);
-  if (olculer?.guc_kw) lines.push(`Güç: ${olculer.guc_kw} kW`);
+  if (olculer?.kapasite_lt) lines.push(`Kapasite (kazan): ${olculer.kapasite_lt} lt`);
+  if (olculer?.guc_w) lines.push(`Güç: ${olculer.guc_w} W`);
+  else if (olculer?.guc_kw) lines.push(`Güç: ${olculer.guc_kw} kW`);
+  if (olculer?.gerilim) lines.push(`Gerilim: ${olculer.gerilim}`);
+  if (olculer?.agirlik_kg) lines.push(`Ağırlık: ${olculer.agirlik_kg} kg`);
   if (row.barkod) lines.push(`Barkod: ${row.barkod}`);
   if (pdfEntry?.pdf_sayfalar?.length) {
     lines.push(`Katalog sayfası: ${pdfEntry.pdf_sayfalar.join(", ")}`);
