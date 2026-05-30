@@ -15,6 +15,7 @@
   var catalogImgById = null;
   var catalogImgInflight = null;
   var uiBound = false;
+  var lastBootQ = null;
 
   var filterState = {
     depts: [],
@@ -778,7 +779,10 @@
   }
 
   function fetchPage(q, offset, replace) {
-    if (loadMoreBusy) return;
+    if (loadMoreBusy) {
+      if (replace && lastBootQ !== q) loadMoreBusy = false;
+      else return;
+    }
     loadMoreBusy = true;
     var grid = document.getElementById("eq-arama-grid");
     if (replace && grid) {
@@ -907,6 +911,23 @@
     }
   }
 
+  function isAramaPath() {
+    var p = String(location.pathname || "").replace(/\/$/, "");
+    return p === "/arama" || p === "/en/search";
+  }
+
+  function waitForGrid(cb, attempt) {
+    attempt = attempt || 0;
+    if (document.getElementById("eq-arama-grid")) {
+      cb();
+      return;
+    }
+    if (attempt >= 240) return;
+    requestAnimationFrame(function () {
+      waitForGrid(cb, attempt + 1);
+    });
+  }
+
   function load() {
     bindUi();
     var q = getQuery();
@@ -921,20 +942,36 @@
       return;
     }
 
+    if (lastBootQ !== q) {
+      loadMoreBusy = false;
+      sourceHits = [];
+      resetFilters();
+      lastBootQ = q;
+    }
+
     fetchPage(q, 0, true);
   }
+
+  function bootAramaPage() {
+    if (!isAramaPath()) return;
+    waitForGrid(load);
+  }
+
+  window.__eqAramaBoot = bootAramaPage;
 
   document.addEventListener("equsto:kur-updated", function () {
     if (lastRender.q) renderAll();
   });
 
   window.addEventListener("equsto:i18n-ready", function () {
-    if (lastRender.q || sourceHits.length || !getQuery()) renderAll();
+    if (lastRender.q || sourceHits.length || getQuery()) renderAll();
   });
 
+  window.addEventListener("popstate", bootAramaPage);
+
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", load);
+    document.addEventListener("DOMContentLoaded", bootAramaPage);
   } else {
-    load();
+    bootAramaPage();
   }
 })();

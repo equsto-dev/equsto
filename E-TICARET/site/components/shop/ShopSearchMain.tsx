@@ -46,11 +46,12 @@ export default function ShopSearchMain() {
               </select>
             </label>
           </div>
-          <div className="eq-dept-plp-grid eq-arama-grid" id="eq-arama-grid" role="list">
-            <p className="eq-dept-plp-status" data-i18n="search.loading">
-              Yükleniyor…
-            </p>
-          </div>
+          <div
+            className="eq-dept-plp-grid eq-arama-grid"
+            id="eq-arama-grid"
+            role="list"
+            suppressHydrationWarning
+          />
           <div className="eq-arama-more" id="eq-arama-more" />
         </div>
       </div>
