@@ -5,7 +5,7 @@
 (function () {
   "use strict";
 
-  var PARTIAL = "/partials/eq-d-header.html?v=20260526dhdr";
+  var PARTIAL = "/partials/eq-d-header.html?v=20260529topnav-bar-design-end2";
 
   function shouldInject() {
     var b = document.body;
@@ -17,6 +17,7 @@
     ) {
       return false;
     }
+    if (document.querySelector("#eq-shop-chrome-root .eq-shop-chrome")) return false;
     return !document.querySelector("header.hdr");
   }
 

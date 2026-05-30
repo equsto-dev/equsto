@@ -103,7 +103,8 @@
         window.EqustoCart.addFromItem(it);
         return;
       }
-      location.href = "/sepet.html";
+      location.href =
+        typeof window.equstoUrl === "function" ? window.equstoUrl("cart") : "/sepet";
     });
   }
 

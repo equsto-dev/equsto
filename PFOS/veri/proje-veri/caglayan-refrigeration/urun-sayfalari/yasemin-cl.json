@@ -1,0 +1,152 @@
+{
+  "slug": "yasemin-cl",
+  "baslik": "YASEMİN CL",
+  "tip": "model",
+  "ustSeriSlug": null,
+  "kategoriler": [
+    "cake-and-cookie-cabinets"
+  ],
+  "kapak": "https:\\/\\/caglayanrefrigeration.com\\/wp-content\\/uploads\\/2023\\/02\\/Yasemin-CL-Kapak-Caglayan-Refrigeration.webp",
+  "kapakYol": "gorseller/yasemin-cl/Yasemin-CL-Kapak-Caglayan-Refrigeration.webp",
+  "linkKaynak": "https://caglayanrefrigeration.com/tr/product/yasemin-cl/",
+  "cocuklar": [],
+  "ozellikler": [
+    {
+      "baslik": "",
+      "aciklama": "Pastries"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Cakes"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Cookies"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Drinks"
+    },
+    {
+      "baslik": "",
+      "aciklama": "High Efficiency Fans"
+    },
+    {
+      "baslik": "",
+      "aciklama": "LED Lighting"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Ventilated"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Remote Condensing Unit"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Off Cycle Defrost"
+    }
+  ],
+  "teknik": {
+    "akordeon": [],
+    "sekmeler": [],
+    "tablolar": [
+      {
+        "basliklar": [
+          "UZUNLUK / LENGTH (mm)",
+          "YÜKSEKLİK / HEIGHT (mm)",
+          "SICAKLIK SINIFI / TEMPERATURE CLASS",
+          "YÜKLEME ALANI / LOADING AREA (m²)",
+          "PANEL KALINLIĞI / END THICKNESS (mm)"
+        ],
+        "satirlar": [
+          [
+            "SL (3M2)",
+            "FL (3H1)",
+            "DERİNLİK / DEPTH (mm)"
+          ],
+          [
+            "725"
+          ],
+          [
+            "1000",
+            "1320",
+            "0 / +2 °C",
+            "+4 / +6 °C",
+            "1,33",
+            "25"
+          ],
+          [
+            "1300",
+            "1,73"
+          ],
+          [
+            "1600",
+            "2,13"
+          ],
+          [
+            "2000",
+            "2,66"
+          ]
+        ]
+      }
+    ]
+  },
+  "gorseller": {
+    "tum": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/Yasemin-CL-01-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/yasemin-cl/Yasemin-CL-01-Caglayan-Refrigeration.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/macaron.webp",
+        "dosya": "gorseller/yasemin-cl/macaron.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Yasemin.pdf",
+        "dosya": "gorseller/yasemin-cl/Yasemin.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Yasemin-CL-Kesit-01-Caglayan-Refrigeration-e1771581390478.webp",
+        "dosya": "gorseller/yasemin-cl/Yasemin-CL-Kesit-01-Caglayan-Refrigeration-e1771581390478.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/cookie.webp",
+        "dosya": "gorseller/yasemin-cl/cookie.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/yasemin-cl/pdf-icon.webp"
+      }
+    ],
+    "urun": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/Yasemin-CL-01-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/yasemin-cl/Yasemin-CL-01-Caglayan-Refrigeration.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/macaron.webp",
+        "dosya": "gorseller/yasemin-cl/macaron.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Yasemin.pdf",
+        "dosya": "gorseller/yasemin-cl/Yasemin.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/cookie.webp",
+        "dosya": "gorseller/yasemin-cl/cookie.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/yasemin-cl/pdf-icon.webp"
+      }
+    ],
+    "teknikCizim": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Yasemin-CL-Kesit-01-Caglayan-Refrigeration-e1771581390478.webp",
+        "dosya": "gorseller/yasemin-cl/Yasemin-CL-Kesit-01-Caglayan-Refrigeration-e1771581390478.webp"
+      }
+    ]
+  }
+}

@@ -5,7 +5,7 @@ export const EQ_DEPT_PATH: Record<string, string> = {
   pfos: "/pfos",
   besos: "/besos",
   contact: "/contact",
-  cart: "/sepet.html",
+  cart: "/sepet",
   pisirme: "/shop/pisirme",
   sogutma: "/shop/sogutma",
   kahve: "/shop/kahve",
@@ -39,7 +39,10 @@ export function goEqCart(): void {
     cart.goToCartPage();
     return;
   }
-  window.location.href = EQ_DEPT_PATH.cart;
+  const equstoUrl = (window as Window & { equstoUrl?: (k: string) => string })
+    .equstoUrl;
+  window.location.href =
+    typeof equstoUrl === "function" ? equstoUrl("cart") : EQ_DEPT_PATH.cart;
 }
 
 export function submitBesosSearch(query: string): void {

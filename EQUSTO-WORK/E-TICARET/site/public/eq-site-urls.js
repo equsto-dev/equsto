@@ -17,8 +17,9 @@
     yerSofrasi: "/yer-sofrasi",
     besos: "/besos",
     contact: "/contact",
+    sss: "/sss",
     login: "/login.html",
-    cart: "/sepet.html",
+    cart: "/sepet",
     pisirme: "/shop/pisirme",
     sogutma: "/shop/sogutma",
     marketReyon: "/shop/market-reyonlari",
@@ -33,6 +34,7 @@
     araba: "/shop/araba",
     istif: "/shop/istif",
     "set-ustu-mutfak": "/shop/set-ustu-mutfak",
+    kuvetler: "/shop/kuvetler",
   };
   /** file:// açılışında kullanılacak gerçek dosya adları */
   var FILE_FALLBACK = {
@@ -43,6 +45,7 @@
     yerSofrasi: "index.html",
     besos: "bar-design.html",
     contact: "contact.html",
+    sss: "sss.html",
     login: "login.html",
     cart: "sepet.html",
     pisirme: "pisirme.html",
@@ -59,6 +62,7 @@
     araba: "araba.html",
     istif: "istif.html",
     "set-ustu-mutfak": "set-ustu-mutfak.html",
+    kuvetler: "kuvetler.html",
   };
   var LANG_NEUTRAL = { admin: true };
 
@@ -96,6 +100,9 @@
   window.eqProductMatchesDept = function (u, dept) {
     if (!u || !dept) return false;
     var d = String(dept).toLowerCase();
+    if (d === "kuvetler") {
+      return !!(window.EqDeptTips && typeof window.EqDeptTips.isKuvetProduct === "function" && window.EqDeptTips.isKuvetProduct(u));
+    }
     if (u.dept && String(u.dept).toLowerCase() === d) return true;
     var cat = String(u.c || u.category || "").toLowerCase();
     if (cat === d) return true;
@@ -143,6 +150,7 @@
     if (LANG_NEUTRAL[key]) return path;
     if (curLang() !== "en") return path;
     if (path === "/") return "/en/";
+    if (key === "cart") return "/en/cart";
     return "/en" + path;
   }
   window.equstoUrl = function (key) {
@@ -160,6 +168,13 @@
   };
   window.eqGo = function (key) {
     window.location.href = window.equstoUrl(key);
+  };
+  /** Arama sonuç sayfası — TR /arama, EN /en/search */
+  window.eqAramaUrl = function (q) {
+    q = String(q || "").trim();
+    if (!q) return "";
+    var base = curLang() === "en" ? "/en/search" : "/arama";
+    return base + "?q=" + encodeURIComponent(q);
   };
   /** Ana vitrin (/, /shop) — kategori sayfaları (/shop/pisirme …) ayrı HTML */
   window.eqIsHomeVitrin = function () {
@@ -186,6 +201,7 @@
     "araba",
     "istif",
     "set-ustu-mutfak",
+    "kuvetler",
   ];
   window.eqIsDeptNavKey = function (key) {
     return EQ_DEPT_NAV_KEYS.indexOf(String(key || "")) >= 0;
@@ -199,6 +215,7 @@
   /** Vitrin ürün URL’si: /shop/{dept}/{slug} — EN’de /en/shop/… */
   window.eqProductPath = function (deptSeg, slug) {
     var d = String(deptSeg || "pisirme").replace(/^\/+|\/+$/g, "");
+    if (d === "market-reyon") d = "market-reyonlari";
     var sl = String(slug || "").replace(/^\/+/, "");
     var base = "/shop/" + d + "/" + sl;
     if (curLang() !== "en") return base;
@@ -242,6 +259,204 @@
     return (b ? b + "-" : "") + n;
   };
   window.__eqProductSlug = window.eqProductSlug;
+
+  /** Eski arama / Meilisearch slug → katalog satırı (PDP findRaw). */
+  window.eqFindCatalogRowByPathSlug = function (all, pathSlug) {
+    if (!all || !all.length || !pathSlug) return null;
+    var ps = String(pathSlug).toLowerCase();
+    for (var i = 0; i < all.length; i++) {
+      var row = all[i];
+      if (!row) continue;
+      var id = String(row.id || "").trim().toLowerCase();
+      if (id && id === ps) return row;
+      if (id) {
+        var idDash = id.replace(/__/g, "-");
+        if (idDash === ps || ps.endsWith("-" + idDash) || ps.endsWith(idDash)) return row;
+        var tail = id.indexOf("__") >= 0 ? id.split("__").pop() : "";
+        if (tail && (ps.endsWith(tail) || ps.endsWith(tail.replace(/__/g, "-")))) return row;
+      }
+      if (typeof window.eqProductSlug === "function" && window.eqProductSlug(row) === ps) return row;
+      if (
+        typeof window.eqProductSlugTransliterated === "function" &&
+        window.eqProductSlugTransliterated(row) === ps
+      ) {
+        return row;
+      }
+      if (typeof window.eqLegacyMeiliPathSlug === "function" && window.eqLegacyMeiliPathSlug(row) === ps) {
+        return row;
+      }
+    }
+    return null;
+  };
+
+  window.eqLegacyMeiliPathSlug = function (row) {
+    if (!row) return "";
+    function slugify(s) {
+      return String(s || "")
+        .toLocaleLowerCase("tr")
+        .replace(/[/\\]+/g, "-")
+        .replace(/[^a-z0-9+\-]+/g, "-")
+        .replace(/-+/g, "-")
+        .replace(/^-+|-+$/g, "")
+        .substring(0, 100);
+    }
+    var b = slugify(row.brand || row.b || "");
+    var n = slugify(row.name || row.n || "");
+    return (b ? b + "-" : "") + n;
+  };
+
+  /** Popüler marka slug → katalogdaki tam marka adı */
+  var EQ_BRAND_SLUG_ALIAS = {
+    atalay: "Atalay Endüstriyel Mutfak Ekipmanları",
+    oztiryakiler: "Öztiryakiler Endüstriyel Mutfak",
+    electrolux: "Electrolux Professional",
+    inoksan: "İnoksan",
+    "la-cimbali": "La Cimbali",
+    faema: "Faema",
+    rational: "Rational",
+    empero: "Empero",
+    samixir: "Samixir",
+    gtech: "Gtech",
+    "robot-coupe": "Robot Coupe",
+  };
+
+  /**
+   * Popüler marka → departman vitrini (?marka=facet) veya tüm katalog (/shop/marka/slug).
+   * facet: sol sütun Marka filtresindeki etiket (EqDeptCmFacets ile aynı).
+   */
+  var EQ_BRAND_SHOP_TARGET = {
+    atalay: { dept: "pisirme", facet: "Atalay" },
+    oztiryakiler: { markaHub: true },
+    electrolux: { dept: "pisirme", facet: "Electrolux" },
+    inoksan: { dept: "sogutma", facet: "İnoksan" },
+    "la-cimbali": { dept: "kahve", facet: "La Cimbali" },
+    faema: { dept: "kahve", facet: "Faema" },
+    rational: { dept: "pisirme", facet: "Rational" },
+    empero: { dept: "yikama", facet: "Empero" },
+    samixir: { dept: "hazirlik", facet: "Samixir" },
+    gtech: { dept: "hazirlik", facet: "Gtech" },
+    "robot-coupe": { dept: "hazirlik", facet: "Robot Coupe" },
+  };
+
+  function brandSlugify(name) {
+    var tr = { ğ: "g", ü: "u", ş: "s", ı: "i", ö: "o", ç: "c", Ğ: "g", Ü: "u", Ş: "s", İ: "i", Ö: "o", Ç: "c" };
+    return String(name || "")
+      .replace(/[ğüşıöçĞÜŞİÖÇ]/g, function (c) {
+        return tr[c] || c;
+      })
+      .toLocaleLowerCase("tr")
+      .replace(/ı/g, "i")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+  }
+
+  window.eqBrandSlug = function (brandName) {
+    var n = String(brandName || "").trim();
+    if (!n) return "";
+    var keys = Object.keys(EQ_BRAND_SLUG_ALIAS);
+    for (var i = 0; i < keys.length; i++) {
+      var slug = keys[i];
+      if (EQ_BRAND_SLUG_ALIAS[slug] === n) return slug;
+    }
+    var low = n.toLocaleLowerCase("tr");
+    for (var j = 0; j < keys.length; j++) {
+      var s = keys[j];
+      var lab = s.replace(/-/g, " ");
+      if (low === lab || low.indexOf(lab) === 0) return s;
+    }
+    return brandSlugify(n);
+  };
+
+  window.eqBrandFromSlug = function (slug) {
+    var s = String(slug || "")
+      .trim()
+      .toLowerCase()
+      .replace(/^\/+|\/+$/g, "");
+    if (!s) return "";
+    if (EQ_BRAND_SLUG_ALIAS[s]) return EQ_BRAND_SLUG_ALIAS[s];
+    return "";
+  };
+
+  window.eqParseBrandSlugFromPath = function () {
+    try {
+      var path = String(location.pathname || "");
+      path = path.replace(/^\/en(?=\/|$)/i, "");
+      var m = path.match(/\/shop\/marka\/([^/?#]+)/i);
+      return m ? decodeURIComponent(m[1]).toLowerCase().replace(/^\/+|\/+$/g, "") : "";
+    } catch (_) {
+      return "";
+    }
+  };
+
+  window.eqBrandFacetLabel = function (slugOrBrand) {
+    var raw = String(slugOrBrand || "").trim();
+    if (!raw) return "";
+    var slug = raw;
+    if (/\s/.test(raw) || /[ğüşıöçĞÜŞİÖÇ]/.test(raw)) slug = window.eqBrandSlug(raw);
+    slug = String(slug || "")
+      .toLowerCase()
+      .replace(/[^a-z0-9-]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+    var t = EQ_BRAND_SHOP_TARGET[slug];
+    if (t && t.facet) return t.facet;
+    if (slug === "oztiryakiler" || slug === "atalay") {
+      if (slug === "oztiryakiler") return "Öztiryakiler";
+      if (slug === "atalay") return "Atalay";
+    }
+    return raw;
+  };
+
+  window.eqBrandPath = function (slugOrBrand) {
+    var slug = String(slugOrBrand || "").trim();
+    if (!slug) return withLang("/shop/marka", "shop");
+    if (slug.indexOf("/") >= 0 || slug.indexOf("?") >= 0) return slug;
+    if (/\s/.test(slug) || /[ğüşıöçĞÜŞİÖÇ]/.test(slug)) slug = window.eqBrandSlug(slug);
+    slug = String(slug || "")
+      .toLowerCase()
+      .replace(/[^a-z0-9-]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+    var t = EQ_BRAND_SHOP_TARGET[slug];
+    if (t && t.markaHub) return withLang("/shop/marka/" + encodeURIComponent(slug), "shop");
+    if (t && t.dept && t.facet) {
+      return withLang(
+        "/shop/" + encodeURIComponent(t.dept) + "?marka=" + encodeURIComponent(t.facet),
+        "shop"
+      );
+    }
+    return withLang("/shop/marka/" + encodeURIComponent(slug), "shop");
+  };
+
+  window.eqBrandHref = function (slugOrBrand) {
+    var path = window.eqBrandPath(slugOrBrand);
+    if (isProd()) return ORIGIN + path;
+    try {
+      if (typeof location !== "undefined" && location.protocol === "file:") {
+        var m = path.match(/\/shop\/marka\/([^/?#]+)/i);
+        return m ? "marka.html?slug=" + encodeURIComponent(m[1]) : "marka.html";
+      }
+    } catch (_) {}
+    return path;
+  };
+
+  window.eqBrandMatchesRow = function (row, brandCanonical, slug) {
+    var b = String((row && (row.brand || row.b)) || "").trim();
+    if (!b) return false;
+    if (brandCanonical && b === brandCanonical) return true;
+    var low = b.toLocaleLowerCase("tr");
+    slug = String(slug || "").toLowerCase();
+    if (slug === "oztiryakiler" && low.indexOf("öztiryakiler") >= 0) return true;
+    if (slug === "atalay" && low.indexOf("atalay") >= 0) return true;
+    if (slug && !brandCanonical) {
+      var needle = slug.replace(/-/g, " ");
+      return low.indexOf(needle) >= 0;
+    }
+    if (brandCanonical) {
+      var canonLow = brandCanonical.toLocaleLowerCase("tr");
+      return low.indexOf(canonLow) === 0 || canonLow.indexOf(low) === 0;
+    }
+    return false;
+  };
+
   window.equstoPublicUrl = function (key) {
     var p = withLang(PATH[key] || "/", key);
     if (p === "/") return "equsto.com";
@@ -264,6 +479,7 @@
     if (file === "admin.html") return window.equstoUrl("admin") + query + hash;
     if (file === "bar.html" || file === "bar-design.html") return window.equstoUrl("besos") + query + hash;
     if (file === "contact.html") return window.equstoUrl("contact") + query + hash;
+    if (file === "sss.html") return window.equstoUrl("sss") + query + hash;
     if (file === "login.html") return window.equstoUrl("login") + query + hash;
     if (file === "sepet.html") return window.equstoUrl("cart") + query + hash;
     if (file === "pisirme.html") return window.equstoUrl("pisirme") + query + hash;
@@ -279,12 +495,34 @@
     if (file === "tasima.html") return window.equstoUrl("tasima") + query + hash;
     if (file === "araba.html") return window.equstoUrl("araba") + query + hash;
     if (file === "istif.html") return window.equstoUrl("istif") + query + hash;
+    if (file === "set-ustu-mutfak.html") return window.equstoUrl("set-ustu-mutfak") + query + hash;
+    if (file === "kuvetler.html") return window.equstoUrl("kuvetler") + query + hash;
     if (file === "steakhouse-kurulumu.html") return "/steakhouse-kurulumu" + query + hash;
     if (file === "cafe-kurulumu.html") return "/cafe-kurulumu" + query + hash;
     if (file === "catering-mutfagi.html") return "/catering-mutfagi" + query + hash;
     if (file === "fast-food-kurulumu.html") return "/fast-food-kurulumu" + query + hash;
     if (file === "fine-dining-kurulumu.html") return "/fine-dining-kurulumu" + query + hash;
     if (file === "imt300.html") return "/besos/imt300" + query + hash;
+    if (file === "marka.html" && query) {
+      try {
+        var sp = new URLSearchParams(query.replace(/^\?/, ""));
+        var legacyB = sp.get("b") || sp.get("slug");
+        if (legacyB && typeof window.eqBrandPath === "function") {
+          return window.eqBrandPath(legacyB) + hash;
+        }
+      } catch (_) {}
+    }
+    if (file === "marka.html") return withLang("/shop/marka", "shop") + hash;
+    if (/\/shop\/marka\/?$/i.test(filePart.replace(/\/+$/, "")) && query) {
+      try {
+        var sp2 = new URLSearchParams(query.replace(/^\?/, ""));
+        var legacyB2 = sp2.get("b") || sp2.get("slug");
+        if (legacyB2 && typeof window.eqBrandPath === "function") {
+          return window.eqBrandPath(legacyB2) + hash;
+        }
+      } catch (_) {}
+    }
+    if (/\/shop\/marka\//i.test(filePart)) return filePart + query + hash;
     return href;
   };
 
@@ -325,6 +563,22 @@
     }
   }
 
+  /**
+   * Harici görsel istekleri: varsayılan kapalı.
+   * - Canlı (equsto.com): kapalı (yalnızca sunucudaki/repodaki dosyalar).
+   * - Yerel dev (localhost/127.0.0.1): açık.
+   * İstenirse konsoldan: window.EQUSTO_ALLOW_REMOTE_IMAGES = true;
+   */
+  function allowRemoteImages() {
+    try {
+      if (typeof window !== "undefined" && window.EQUSTO_ALLOW_REMOTE_IMAGES === true) return true;
+      var h = (location.hostname || "").toLowerCase();
+      if (h === "localhost" || h === "127.0.0.1") return true;
+    } catch (_) {}
+    return false;
+  }
+  window.eqAllowRemoteImages = allowRemoteImages;
+
   /** `images/foo.jpg` katalog yolu → tarayıcı kökü (sonunda `/`). Canlıda önce deploy hedefi `/data/images/`; __eqImgFail `/images/` dener. */
   function catalogImagesWebRoot() {
     try {
@@ -337,11 +591,45 @@
 
   window.equstoCatalogImagesWebRoot = catalogImagesWebRoot;
 
+  /** ax-images yok — aynı ürün ailesi fotoğrafı (parça / adaptör). */
+  var OZTI_AX_PROXY = {
+    "2919.0B390.AD01.00": "7506.0B390.00",
+    "7919.47NTV.C2": "7919.47NTV.24",
+    "7919.46NTV.C2": "7919.47NTV.24",
+    "7919.37NTV.C2": "7919.37NTV.24",
+    "7919.36NTV.C2": "7919.36NTV.24",
+    "7919.27NTV.C2": "7919.26NTV.24",
+    "7919.26NTV.C2": "7919.26NTV.24",
+    "7919.47NTV.C1": "7919.47NTV.24",
+    "7919.46NTV.C1": "7919.47NTV.24",
+    "7919.37NTV.C1": "7919.37NTV.24",
+    "7919.36NTV.C1": "7919.36NTV.24",
+    "7919.27NTV.C1": "7919.26NTV.24",
+    "7919.26NTV.C1": "7919.26NTV.24",
+    "7919.47NTV.T1": "7919.47NTV.24",
+    "7919.37NTV.T1": "7919.37NTV.24",
+    "9805.IM240D.NHC": "9805.IM240X.NHC",
+    "9805.00IMD.00": "9805.IM45N.EHC"
+  };
+
+  function oztiResolveAxKod(k) {
+    if (OZTI_AX_PROXY[k]) return OZTI_AX_PROXY[k];
+    var m = k.match(/^7919\.(\d{2})NTV\.(C1|C2|T1)$/);
+    if (!m) return k;
+    if (m[2] === "T1" && m[1] === "27") return k;
+    if (m[2] === "T1" && m[1] === "37") return "7919.37NTV.24";
+    if (m[2] === "T1" && (m[1] === "47" || m[1] === "46")) return "7919.47NTV.24";
+    if (parseInt(m[1], 10) >= 46) return "7919.47NTV.24";
+    return "7919." + m[1] + "NTV.24";
+  }
+
   /** Öztiryakiler ürün kodu → ax-images CDN (PLP/PDP yedek). */
   window.eqOztiAxImageFromSku = function (sku) {
-    var k = String(sku || "")
-      .replace(/\s+/g, "")
-      .toUpperCase();
+    var k = oztiResolveAxKod(
+      String(sku || "")
+        .replace(/\s+/g, "")
+        .toUpperCase()
+    );
     if (!/^[0-9A-Z]{2,8}\.[A-Z0-9.\-]{2,}$/i.test(k)) return "";
     return (
       "https://oztiryakiler.com.tr/ax-images/images/" + encodeURIComponent(k) + ".jpg"
@@ -363,26 +651,99 @@
     return "images/catalog/ozti/web/" + slug + ".jpg";
   };
 
-  /** `images/catalog/ozti/web/ozti-8574-cm080-00.jpg` → Öztiryakiler ax-images CDN. */
-  function oztiAxImageFromWebPath(s) {
+  /** `…/ozti-073m-00000-ad.jpg` → `073M.00000.AD` (cafemarkt / web / pdf sayfa). */
+  function oztiKodFromCatalogRel(s) {
     var t = String(s || "")
       .trim()
       .replace(/\\/g, "/");
-    var m = /^images\/catalog\/ozti\/web\/ozti-([a-z0-9-]+)\.(jpe?g|png|webp)$/i.exec(t);
+    var m = t.match(/\/ozti-([a-z0-9-]+)\.(?:jpe?g|png|webp)$/i);
     if (!m) return "";
-    var parts = m[1].split("-").filter(Boolean);
-    if (parts.length < 2) return "";
-    var kod = parts
-      .map(function (p) {
-        return p.toUpperCase();
-      })
-      .join(".");
+    return m[1].replace(/-/g, ".").toUpperCase();
+  }
+
+  /** 8897.36/46/56*.P0 polipropilen istif — yanlış fırın görseli yerine doğru raf fotoğrafı. */
+  function ozti8897WidthToIp4(width) {
+    var w = Number(width);
+    if (!isFinite(w) || w <= 0) return "21";
+    var table = [
+      [70, "11"],
+      [80, "12"],
+      [90, "13"],
+      [100, "14"],
+      [110, "15"],
+      [120, "21"],
+      [130, "22"],
+      [141, "22"],
+      [151, "24"],
+      [161, "24"],
+      [171, "24"],
+    ];
+    var best = table[0][1];
+    var bestDiff = 1e9;
+    for (var i = 0; i < table.length; i++) {
+      var diff = Math.abs(table[i][0] - w);
+      if (diff < bestDiff) {
+        bestDiff = diff;
+        best = table[i][1];
+      }
+    }
+    return best;
+  }
+
+  function parse8897PolipropilenSku(kod) {
+    var k = String(kod || "")
+      .replace(/\s+/g, "")
+      .toUpperCase();
+    var m = k.match(/^8897\.(36|46|56)([0-9.]+)/);
+    if (!m) return null;
+    var rest = m[2].replace(/\.P0$/i, "").replace(/P$/i, "");
+    var width = parseFloat(rest);
+    if (!isFinite(width) || width <= 0) return null;
+    return { depth: m[1], width: width };
+  }
+
+  function ozti8897PolipropilenFallbackRel(s) {
+    var t = String(s || "")
+      .trim()
+      .replace(/\\/g, "/");
+    if (!/8897-(36|46|56)/i.test(t)) return "";
+    var kod = oztiKodFromCatalogRel(t);
+    var parsed = parse8897PolipropilenSku(kod);
+    if (!parsed) return "";
+    var ip = ozti8897WidthToIp4(parsed.width);
+    return "images/catalog/ozti/cafemarkt/ozti-8897-" + ip + "ip4-07.jpg";
+  }
+
+  /** Katalog yolu → oztiryakiler.com.tr ax-images (canlıda yerel dosya yokken). */
+  function oztiAxFromCatalogRel(s) {
+    var kod = oztiKodFromCatalogRel(s);
+    if (!kod) return "";
+    if (typeof window.eqOztiAxImageFromSku === "function") {
+      var ax = window.eqOztiAxImageFromSku(kod);
+      if (ax) return ax;
+    }
     return (
       "https://oztiryakiler.com.tr/ax-images/images/" + encodeURIComponent(kod) + ".jpg"
     );
   }
 
-  var EQ_CATALOG_IMG_V = "20260525p99fallback";
+  /** `images/catalog/ozti/web/ozti-8574-cm080-00.jpg` → ax-images (NTV proxy dahil). */
+  function oztiAxImageFromWebPath(s) {
+    var kod = oztiKodFromCatalogRel(s);
+    if (!kod) return "";
+    if (typeof window.eqOztiAxImageFromSku === "function") {
+      return window.eqOztiAxImageFromSku(kod) || "";
+    }
+    return (
+      "https://oztiryakiler.com.tr/ax-images/images/" +
+      encodeURIComponent(oztiResolveAxKod(kod)) +
+      ".jpg"
+    );
+  }
+
+  var EQ_CATALOG_IMG_V = "20260527robot-coupe-haz";
+  var EQ_OZTI_BAD_CAFE_STUB_MD5 = "6696b6d14fecffc05fb1dc0156c9f6b4";
+  var EQ_OZTI_BAD_CAFE_STUB_BYTES = 10995;
 
   function withCatalogImgV(url) {
     if (!url || !/\/images\/catalog\/(?:ozti\/(?:web|cafemarkt)|atalay\/)/i.test(url)) return url;
@@ -422,18 +783,24 @@
         continue;
       }
       var chunk = [];
+      var istifRel = ozti8897PolipropilenFallbackRel("images/" + file);
+      if (istifRel) {
+        file = istifRel.replace(/^images\//i, "");
+      }
+      if (allowRemoteImages() && isEqustoLiveHost() && /^catalog\/ozti\//i.test(file)) {
+        var axLive = oztiAxFromCatalogRel("images/" + file);
+        if (axLive) chunk.push(axLive);
+      }
       if (/^catalog\/ozti\/web\//i.test(file)) {
         chunk.push("/images/" + file);
         chunk.push("/images/" + encodeDataRelPath(file));
-        var ax = oztiAxImageFromWebPath("images/" + file);
+        var ax = allowRemoteImages() ? oztiAxImageFromWebPath("images/" + file) : "";
         if (ax) chunk.push(ax);
-      } else if (/^catalog\/ozti\/p\d+\/ozti-/i.test(file) && typeof window.eqOztiAxImageFromSku === "function") {
-        var slugM = file.match(/ozti-([0-9]{4})-([0-9][0-9a-z-]+(?:-[0-9]{2})?)\./i);
-        if (slugM) {
-          var kodGuess = slugM[1] + "." + slugM[2].replace(/-/g, ".");
-          var axK = window.eqOztiAxImageFromSku(kodGuess);
-          if (axK) chunk.push(axK);
-        }
+      } else if (/^catalog\/ozti\/(?:cafemarkt|p\d+)\/ozti-/i.test(file)) {
+        chunk.push("/images/" + file);
+        chunk.push("/images/" + encodeDataRelPath(file));
+        var axCm = allowRemoteImages() ? oztiAxFromCatalogRel("images/" + file) : "";
+        if (axCm) chunk.push(axCm);
       }
       var root = catalogImagesWebRoot();
       if (/^catalog\//i.test(file)) {
@@ -588,11 +955,42 @@
     return "/data/" + rel;
   }
 
+  /** cafemarkt yolu bilinen UNOX stub ise ax-images CDN kullan (canlı dahil). */
+  function oztiAxFallbackFromRel(s) {
+    var kod = oztiKodFromCatalogRel(s);
+    if (!kod) return "";
+    if (typeof window.eqOztiAxImageFromSku === "function") {
+      var ax = window.eqOztiAxImageFromSku(kod);
+      if (ax) return ax;
+    }
+    return (
+      "https://oztiryakiler.com.tr/ax-images/images/" + encodeURIComponent(kod) + ".jpg"
+    );
+  }
+
   window.eqProductImgSrc = function (p) {
     if (p == null || p === "") return "";
     var s = String(p).trim().replace(/\\/g, "/");
     if (!s) return "";
+    var istifFb = ozti8897PolipropilenFallbackRel(s);
+    if (istifFb) s = istifFb;
     if (/^https?:\/\//i.test(s)) return s;
+    if (/^images\/catalog\/ozti\/cafemarkt\//i.test(s)) {
+      var axCafe = oztiAxFallbackFromRel(s);
+      if (axCafe) return axCafe;
+    }
+    if (
+      isStaticPublicImage(s) &&
+      typeof window.eqAttrPath === "function"
+    ) {
+      return withCatalogImgV(window.eqAttrPath(s));
+    }
+    if (isEqustoLiveHost() && /catalog\/ozti\//i.test(s)) {
+      if (allowRemoteImages()) {
+        var axProd = oztiAxFromCatalogRel(s);
+        if (axProd) return axProd;
+      }
+    }
     if (isSogukOdaCatalogPath(s)) return sogukOdaVitrinHref();
     var pdfWeb = oztiPdfPageToWebRel(s);
     if (pdfWeb) s = pdfWeb;
@@ -603,10 +1001,15 @@
     ) {
       return withCatalogImgV(window.eqAttrPath(s));
     }
-    var ozAx = oztiAxImageFromWebPath(s);
+    var ozAx = allowRemoteImages() ? oztiAxImageFromWebPath(s) : "";
     if (ozAx) return ozAx;
     var vd = vitrumDrawingsHref(s);
     if (vd) return vd;
+    if (/^prosogutma-market\//i.test(s) || /^caglayan-market\//i.test(s)) {
+      var dataRel = "/data/" + s.replace(/^data\//i, "");
+      if (typeof window.eqAttrPath === "function") return window.eqAttrPath(dataRel);
+      return dataRel;
+    }
     var mapped = resolveVitrinImageMap(s);
     if (mapped) return mapped;
     if (isStaticPublicImage(s) && typeof window.eqAttrPath === "function") {
@@ -744,11 +1147,7 @@
       }
     }
     var oztiKod = img.getAttribute("data-eq-ozti-kod") || "";
-    if (
-      oztiKod &&
-      !/7919\.CR/i.test(oztiKod) &&
-      typeof window.eqOztiAxImageFromSku === "function"
-    ) {
+    if (oztiKod && !/7919\.CR/i.test(oztiKod) && typeof window.eqOztiAxImageFromSku === "function") {
       var axTry = window.eqOztiAxImageFromSku(oztiKod);
       if (axTry && axTry !== src && !img.dataset.eqImgAxTried) {
         img.dataset.eqImgAxTried = "1";

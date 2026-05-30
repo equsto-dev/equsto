@@ -1,0 +1,149 @@
+{
+  "slug": "penguin",
+  "wpId": 9159,
+  "title": "Penguin",
+  "baslik": "Penguin",
+  "url": "https://prosogutma.com/urun/penguin/",
+  "attributes": [
+    {
+      "label": "Ürünler",
+      "value": "Dondurma"
+    },
+    {
+      "label": "Kabin Türü",
+      "value": "Promosyon Kabinleri"
+    },
+    {
+      "label": "Plug-in",
+      "value": "Plug-in"
+    }
+  ],
+  "categories": [
+    {
+      "name": "Promosyon Kabinleri"
+    }
+  ],
+  "gallery": [
+    {
+      "src": "https://prosogutma.com/wp-content/uploads/2022/05/PENGUIN.jpg"
+    }
+  ],
+  "tabs": [
+    {
+      "name": "Ürün Hakkında",
+      "html": "<a href=\"https://prosogutma.com/wp-content/uploads/2022/06/penguin.svg\"><img loading=\"lazy\" class=\"alignnone size-full wp-image-10032\" role=\"img\" src=\"https://prosogutma.com/wp-content/uploads/2022/06/penguin.svg\" alt=\"\" width=\"1000\" height=\"99\" /></a></div>\n\t\t\t\t\t\t\t\t\t<div class=\"elementor-tab-title elementor-tab-mobile-title\" aria-selected=\"false\" data-tab=\"2\" role=\"tab\" tabindex=\"-1\" aria-controls=\"elementor-tab-content-1672\" aria-expanded=\"false\">Teknik Çizimler",
+      "links": [
+        {
+          "href": "https://prosogutma.com/wp-content/uploads/2022/06/penguin.svg",
+          "text": "href=\"https://prosogutma.com/wp-content/uploads/2022/06/penguin.svg\""
+        }
+      ],
+      "images": [
+        {
+          "src": "https://prosogutma.com/wp-content/uploads/2022/06/penguin.svg",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "name": "Teknik Çizimler",
+      "html": "<a href=\"https://prosogutma.com/wp-content/uploads/2022/05/PENGUIN.pdf\" target=\"_blank\" rel=\"noopener\">Teknik Çizimlere Gitmek İçin Tıklayınız.</a></div>\n\t\t\t\t\t\t\t\t\t<div class=\"elementor-tab-title elementor-tab-mobile-title\" aria-selected=\"false\" data-tab=\"3\" role=\"tab\" tabindex=\"-1\" aria-controls=\"elementor-tab-content-1673\" aria-expanded=\"false\">Katalog Sayfası",
+      "links": [
+        {
+          "href": "https://prosogutma.com/wp-content/uploads/2022/05/PENGUIN.pdf",
+          "text": "href=\"https://prosogutma.com/wp-content/uploads/2022/05/PENGUIN.pdf\""
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "Katalog Sayfası",
+      "html": "<a href=\"https://prosogutma.com/wp-content/uploads/2022/05/PENGUIN.pdf\" target=\"_blank\" rel=\"noopener\">Ürün Kataloğumuza Gitmek İçin Tıklayınız.</a></div>\n\t\t\t\t\t\t\t\t\t<div class=\"elementor-tab-title elementor-tab-mobile-title\" aria-selected=\"false\" data-tab=\"4\" role=\"tab\" tabindex=\"-1\" aria-controls=\"elementor-tab-content-1674\" aria-expanded=\"false\">Opsiyonlar",
+      "links": [
+        {
+          "href": "https://prosogutma.com/wp-content/uploads/2022/05/PENGUIN.pdf",
+          "text": "href=\"https://prosogutma.com/wp-content/uploads/2022/05/PENGUIN.pdf\""
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "Opsiyonlar",
+      "html": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p></div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t</div>\n\t\t\t\t\t</div>\n\t\t</section>\n\t\t\t\t</div>\n\t\t\n",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Ürün Hakkında",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Teknik Çizimler",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Teknik Çizimlere Gitmek İçin Tıklayınız.",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Katalog Sayfası",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Ürün Kataloğumuza Gitmek İçin Tıklayınız.",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Opsiyonlar",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+      "html": "",
+      "links": [],
+      "images": []
+    }
+  ],
+  "teknik": {
+    "tablolar": [
+      {
+        "basliklar": [
+          "Ürünler",
+          "Kabin Türü",
+          "Plug-in"
+        ],
+        "satirlar": [
+          [
+            "Ürünler",
+            "Dondurma"
+          ],
+          [
+            "Kabin Türü",
+            "Promosyon Kabinleri"
+          ],
+          [
+            "Plug-in",
+            "Plug-in"
+          ]
+        ]
+      }
+    ],
+    "pdfText": "www.prosogutma.com\r\nOperating Temperatures\r\nÇalışma Sıcaklıkları\r\nAmbient Conditions\r\nOrtam Koşulları\r\nL1 (-15/-18°C) - L2 (-12/-18°C)\r\n25°C / 60% RH (EN ISO 23953-2)\r\nAvailable Modules / Kullanılabilir Modüller\r\nLength (mm)\r\nUzunluk (mm)\r\n1000\r\n1330\r\n1495\r\n1825\r\nPENGUIN\r\nPlug-in Ice Cream Serve Over Counter \r\nİçten Motorlu Dondurma Servis Reyonu\r\nTechnicial Specifications  / Teknik Özellikler\r\nCategories\r\nKategoriler\r\nICE CREAM\r\n1100\r\n685\r\n935\r\n200\r\n1335\r\n360\r\n120\r\n400\r\n800\r\nPENGUIN 110 FG\r\n54 / 54\r\n",
+    "pdfUrl": "https://prosogutma.com/wp-content/uploads/2022/05/PENGUIN.pdf",
+    "pdfLocal": "media/products/penguin/pdfs/PENGUIN.pdf"
+  },
+  "pdfText": "www.prosogutma.com\r\nOperating Temperatures\r\nÇalışma Sıcaklıkları\r\nAmbient Conditions\r\nOrtam Koşulları\r\nL1 (-15/-18°C) - L2 (-12/-18°C)\r\n25°C / 60% RH (EN ISO 23953-2)\r\nAvailable Modules / Kullanılabilir Modüller\r\nLength (mm)\r\nUzunluk (mm)\r\n1000\r\n1330\r\n1495\r\n1825\r\nPENGUIN\r\nPlug-in Ice Cream Serve Over Counter \r\nİçten Motorlu Dondurma Servis Reyonu\r\nTechnicial Specifications  / Teknik Özellikler\r\nCategories\r\nKategoriler\r\nICE CREAM\r\n1100\r\n685\r\n935\r\n200\r\n1335\r\n360\r\n120\r\n400\r\n800\r\nPENGUIN 110 FG\r\n54 / 54\r\n",
+  "scrapedAt": "2026-05-28T23:52:48.593Z"
+}

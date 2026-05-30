@@ -1,0 +1,66 @@
+═══════════════════════════════════════════════════════════════════════════
+KİLİT — Ürün detay sayfası (PDP / E-PDP) · equsto.com/shop/{dept}/{slug}
+Onay: 2026-05-30 · Commit referans: 8726ae9 (+ i18n EN PDP)
+═══════════════════════════════════════════════════════════════════════════
+
+Bu dosya, onaylı PDP düzeninin bozulmaması içindir.
+Değiştirmeden önce kullanıcıdan AÇIK ONAY alın.
+
+── Beklenen görünüm (canlı) ─────────────────────────────────────────────
+1. Üstte aile / muadil modeller şeridi (.eq-mbg-*)
+2. Hero: solda galeri, sağda başlık + ürün kodu + buybox + Sepete ekle
+3. Altta Özellikler | Dökümanlar panelleri (akordeon)
+4. Fiyat TRY: ₺8.808,00 (buyboxPriceParts — virgül + 2 hane)
+5. EN (/en/…): ölçü etiketleri Length / Depth / Height; teklif metni
+   «Contact for quote» (katalogdaki «Teklif için iletişim» ham metni gösterilmez)
+
+── Render yolu (ZORUNLU) ─────────────────────────────────────────────────
+  renderProduct(x, all) → renderEpdpProduct(x, all)
+
+YASAK (onay olmadan):
+  • renderAmazonGridProduct / eq-product-grid 3 sütun Amazon şablonu
+  • renderProduct içinde renderEpdpProduct dışı çağrı
+  • scripts/restore-legacy-pdp-render.mjs çalıştırmak
+  • PDP gövdesinde sabit Türkçe UI metni (ölçü etiketi, Dökümanlar, teklif)
+  • İlgili şerit / buybox fiyatında katalog «Teklif için iletişim» passthrough
+
+── Kilitli dosyalar ───────────────────────────────────────────────────────
+  public/eq-product-page-inline.js   — renderEpdpProduct, buyboxPriceParts,
+                                       __pdpT, formatPdpPriceDisplay, caglayanLeadParagraph
+  public/eq-product-page.css         — .eq-epdp-* + .eq-mbg-* (git’te olmalı)
+  public/theme.css                   — /* PDP kritik */ .eq-epdp-hero yedek
+  app/(shop)/shop/[dept]/[slug]/page.tsx — sunucu <link eq-product-page.css>
+  components/shop/ShopStyles.tsx     — variant=product → eq-product-page.css
+  components/shop/ShopProductScripts.tsx — beforeInteractive CSS bootstrap
+  lib/shop/assets.ts                 — SHOP_ASSET_V (CSS/JS cache bust)
+  public/i18n/en.json                — üretilmiş; kaynak scripts/build-i18n-en.mjs
+  scripts/build-i18n-en.mjs          — pdp.* EN override anahtarları
+  public/eq-i18n.js                  — sözlük yükleme + JSON cache bust
+
+── EN i18n (ZORUNLU) ──────────────────────────────────────────────────────
+  __pdpT(k, fb, vars) — eqT + Türkçe fb; EN sayfada pdp.* anahtarları
+  formatPdpPriceDisplay(raw, item) — quoteOnly → pdp.quote_for_contact
+  caglayanLeadParagraph — dim_length / dim_depth / dim_height
+  renderRelatedStrip — formatPdpPriceDisplay (extractCartPrice ham teklif metni değil)
+  renderCaglayanFeaturesCol / renderCaglayanDocsCol / renderEpdpDocsCol — __pdpT
+  Yeni pdp.* metni: önce build-i18n-en.mjs → npm run i18n:build → SHOP_ASSET_V bump
+
+── CSS yükleme (en az biri değil, HEPSİ kalmalı) ─────────────────────────
+  1. page.tsx sunucu link (precedence=high)
+  2. ShopStyles variant="product"
+  3. ShopProductScripts beforeInteractive bootstrap
+  4. theme.css PDP kritik yedek
+
+── Fiyat ──────────────────────────────────────────────────────────────────
+  buyboxPriceParts(x) — parsePriceTlNumber + toLocaleString tr-TR
+  renderEpdpBuybox içinde frac: ,XX (eq-buybox-frac)
+  quoteOnly → __pdpT("pdp.quote_for_contact") (buybox + ilgili şerit)
+
+── Deploy / doğrulama ─────────────────────────────────────────────────────
+  npm run verify:pdp-kilit
+  Canlı: eq-product-page.css?v={SHOP_ASSET_V} → HTTP 200
+
+── Cursor ─────────────────────────────────────────────────────────────────
+  .cursor/rules/pdp-epdp-kilit.mdc
+
+═══════════════════════════════════════════════════════════════════════════

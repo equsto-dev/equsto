@@ -1,0 +1,72 @@
+{
+  "slug": "lilyum",
+  "baslik": "LİLYUM",
+  "tip": "seri",
+  "ustSeriSlug": null,
+  "kategoriler": [
+    "horizontal-cabinets"
+  ],
+  "kapak": "https:\\/\\/caglayanrefrigeration.com\\/wp-content\\/uploads\\/2023\\/02\\/Lilyum-DC-Kapak.webp",
+  "kapakYol": "gorseller/lilyum/Lilyum-DC-Kapak.webp",
+  "linkKaynak": "https://caglayanrefrigeration.com/tr/product/lilyum/",
+  "cocuklar": [
+    {
+      "slug": "lilyum-bc",
+      "ad": "LİLYUM BC",
+      "link": "https://caglayanrefrigeration.com/tr/product/lilyum-bc/",
+      "kapak": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/Lilyum-BC-Kapak-1.webp",
+      "kapakYol": "gorseller/lilyum/Lilyum-BC-Kapak-1.webp"
+    },
+    {
+      "slug": "lilyum-dc",
+      "ad": "LİLYUM DC",
+      "link": "https://caglayanrefrigeration.com/tr/product/lilyum-dc/",
+      "kapak": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Lilyum-DC-Kapak-Caglayan-Refrigeration.webp",
+      "kapakYol": "gorseller/lilyum/Lilyum-DC-Kapak-Caglayan-Refrigeration.webp"
+    },
+    {
+      "slug": "lilyum-md",
+      "ad": "LİLYUM MD",
+      "link": "https://caglayanrefrigeration.com/tr/product/lilyum-md/",
+      "kapak": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Lilyum-MD-Kapak-Caglayan-Refrigeration.webp",
+      "kapakYol": "gorseller/lilyum/Lilyum-MD-Kapak-Caglayan-Refrigeration.webp"
+    }
+  ],
+  "ozellikler": [],
+  "teknik": {
+    "akordeon": [],
+    "sekmeler": [],
+    "tablolar": []
+  },
+  "gorseller": {
+    "tum": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/Lilyum-BC-Kapak-1.webp",
+        "dosya": "gorseller/lilyum/Lilyum-BC-Kapak-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Lilyum-DC-Kapak-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/lilyum/Lilyum-DC-Kapak-Caglayan-Refrigeration.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Lilyum-MD-Kapak-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/lilyum/Lilyum-MD-Kapak-Caglayan-Refrigeration.webp"
+      }
+    ],
+    "urun": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/Lilyum-BC-Kapak-1.webp",
+        "dosya": "gorseller/lilyum/Lilyum-BC-Kapak-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Lilyum-DC-Kapak-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/lilyum/Lilyum-DC-Kapak-Caglayan-Refrigeration.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Lilyum-MD-Kapak-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/lilyum/Lilyum-MD-Kapak-Caglayan-Refrigeration.webp"
+      }
+    ],
+    "teknikCizim": []
+  }
+}

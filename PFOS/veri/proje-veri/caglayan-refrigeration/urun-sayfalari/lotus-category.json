@@ -1,0 +1,57 @@
+{
+  "slug": "lotus-category",
+  "baslik": "LOTUS",
+  "tip": "seri",
+  "ustSeriSlug": null,
+  "kategoriler": [
+    "vertical-multideck"
+  ],
+  "kapak": "https:\\/\\/caglayanrefrigeration.com\\/wp-content\\/uploads\\/2026\\/02\\/Lotus-LB-Kapak-Caglayan-Refrigeration.webp",
+  "kapakYol": "gorseller/lotus-category/Lotus-LB-Kapak-Caglayan-Refrigeration.webp",
+  "linkKaynak": "https://caglayanrefrigeration.com/tr/product/lotus-category/",
+  "cocuklar": [
+    {
+      "slug": "lotus",
+      "ad": "LOTUS",
+      "link": "https://caglayanrefrigeration.com/tr/product/lotus/",
+      "kapak": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-Kapak.webp",
+      "kapakYol": "gorseller/lotus-category/Lotus-Kapak.webp"
+    },
+    {
+      "slug": "lotus-lb",
+      "ad": "LOTUS LB",
+      "link": "https://caglayanrefrigeration.com/tr/product/lotus-lb/",
+      "kapak": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Lotus-LB-Kapak-Caglayan-Refrigeration.webp",
+      "kapakYol": "gorseller/lotus-category/Lotus-LB-Kapak-Caglayan-Refrigeration.webp"
+    }
+  ],
+  "ozellikler": [],
+  "teknik": {
+    "akordeon": [],
+    "sekmeler": [],
+    "tablolar": []
+  },
+  "gorseller": {
+    "tum": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-Kapak.webp",
+        "dosya": "gorseller/lotus-category/Lotus-Kapak.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Lotus-LB-Kapak-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/lotus-category/Lotus-LB-Kapak-Caglayan-Refrigeration.webp"
+      }
+    ],
+    "urun": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-Kapak.webp",
+        "dosya": "gorseller/lotus-category/Lotus-Kapak.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Lotus-LB-Kapak-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/lotus-category/Lotus-LB-Kapak-Caglayan-Refrigeration.webp"
+      }
+    ],
+    "teknikCizim": []
+  }
+}

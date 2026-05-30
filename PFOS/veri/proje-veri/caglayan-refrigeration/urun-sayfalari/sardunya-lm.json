@@ -1,0 +1,1169 @@
+{
+  "slug": "sardunya-lm",
+  "baslik": "SARDUNYA LM",
+  "tip": "model",
+  "ustSeriSlug": "sardunya",
+  "kategoriler": [
+    "sardunya-en"
+  ],
+  "kapak": "https:\\/\\/caglayanrefrigeration.com\\/wp-content\\/uploads\\/2023\\/05\\/Sardunya-Kapak.webp",
+  "kapakYol": "gorseller/sardunya-lm/Sardunya-Kapak.webp",
+  "linkKaynak": "https://caglayanrefrigeration.com/tr/product/sardunya-lm/",
+  "cocuklar": [],
+  "ozellikler": [
+    {
+      "baslik": "",
+      "aciklama": "Meat"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Chicken"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Cheese"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Olive"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Delicatessen"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Dairy Products"
+    },
+    {
+      "baslik": "",
+      "aciklama": "High Efficiency Fans"
+    },
+    {
+      "baslik": "",
+      "aciklama": "LED Lighting"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Ventilated"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Remote Condensing Unit"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Off Cycle Defrost"
+    }
+  ],
+  "teknik": {
+    "akordeon": [
+      {
+        "baslik": "SARDUNYA LM AD",
+        "sekmeler": [
+          {
+            "baslik": "TEKNİK ÇİZİMLER",
+            "gorseller": [
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-FG-SL_ML-1050-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-FG-SL_ML-1150-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-FG-SL_ML-1250-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-HG-SL_ML-1050-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-HG-SL_ML-1150-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-HG-SL_ML-1250-Model-1.webp"
+            ],
+            "tablolar": []
+          },
+          {
+            "baslik": "TEKNİK DETAYLAR",
+            "gorseller": [
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-FG-SL_ML-1050-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-FG-SL_ML-1150-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-FG-SL_ML-1250-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-HG-SL_ML-1050-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-HG-SL_ML-1150-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-HG-SL_ML-1250-Model-1.webp"
+            ],
+            "tablolar": []
+          }
+        ],
+        "tablolar": [
+          {
+            "basliklar": [
+              "UZUNLUK / LENGTH (mm)",
+              "YÜKSEKLİK / HEIGHT (mm)",
+              "SICAKLIK SINIFI / TEMPERATURE CLASS",
+              "YÜKLEME ALANI / LOADING AREA (m²)",
+              "PANEL KALINLIĞI / END THICKNESS (mm)"
+            ],
+            "satirlar": [
+              [
+                "ML (3M1)",
+                "SL (3M2)",
+                "DERİNLİK / DEPTH (mm)"
+              ],
+              [
+                "1050",
+                "1150",
+                "1250"
+              ],
+              [
+                "937",
+                "900",
+                "-1 / +1 °C",
+                "0 / +2 °C",
+                "0,74",
+                "0,83",
+                "0,93",
+                "25"
+              ],
+              [
+                "1200"
+              ],
+              [
+                "1250",
+                "900",
+                "0,99",
+                "1,11",
+                "1,24"
+              ],
+              [
+                "1200"
+              ],
+              [
+                "1875",
+                "900",
+                "1,48",
+                "1,67",
+                "1,86"
+              ],
+              [
+                "1200"
+              ],
+              [
+                "2500",
+                "900",
+                "1,98",
+                "2,23",
+                "2,48"
+              ],
+              [
+                "1200"
+              ],
+              [
+                "2812",
+                "900",
+                "2,22",
+                "2,50",
+                "2,78"
+              ],
+              [
+                "1200"
+              ],
+              [
+                "3750",
+                "900",
+                "2,96",
+                "3,34",
+                "3,71"
+              ],
+              [
+                "1200"
+              ],
+              [
+                "IK 45",
+                "900",
+                "-1 / +1 °C",
+                "0 / +2 °C",
+                "N/A",
+                "0,76",
+                "0,89",
+                "25"
+              ],
+              [
+                "1200"
+              ],
+              [
+                "DK 45",
+                "900",
+                "N/A",
+                "0,70",
+                "0,74"
+              ],
+              [
+                "1200"
+              ],
+              [
+                "IK 90",
+                "900",
+                "N/A",
+                "1,80",
+                "2,10"
+              ],
+              [
+                "1200"
+              ],
+              [
+                "DK 90",
+                "900",
+                "N/A",
+                "1,69",
+                "1,78"
+              ],
+              [
+                "1200"
+              ],
+              [
+                "OIK 90",
+                "900",
+                "N/A",
+                "1,85",
+                "N/A"
+              ],
+              [
+                "1200"
+              ],
+              [
+                "ODK 90",
+                "900",
+                "N/A",
+                "0,95",
+                "N/A"
+              ],
+              [
+                "1200"
+              ]
+            ]
+          }
+        ],
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-FG-SL_ML-1050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-FG-SL_ML-1150-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-FG-SL_ML-1250-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-HG-SL_ML-1050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-HG-SL_ML-1150-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-HG-SL_ML-1250-Model-1.webp"
+        ]
+      },
+      {
+        "baslik": "SARDUNYA LM MC",
+        "sekmeler": [
+          {
+            "baslik": "TEKNİK ÇİZİMLER",
+            "gorseller": [
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-FG-SL_ML-1050-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-FG-SL_ML-1150-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-FG-SL_ML-1250-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-HG-SL_ML-1050-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-HG-SL_ML-1150-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-HG-SL_ML-1250-Model-1.webp"
+            ],
+            "tablolar": []
+          },
+          {
+            "baslik": "TEKNİK DETAYLAR",
+            "gorseller": [
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-FG-SL_ML-1050-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-FG-SL_ML-1150-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-FG-SL_ML-1250-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-HG-SL_ML-1050-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-HG-SL_ML-1150-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-HG-SL_ML-1250-Model-1.webp"
+            ],
+            "tablolar": []
+          }
+        ],
+        "tablolar": [
+          {
+            "basliklar": [
+              "UZUNLUK / LENGTH (mm)",
+              "YÜKSEKLİK / HEIGHT (mm)",
+              "SICAKLIK SINIFI / TEMPERATURE CLASS",
+              "YÜKLEME ALANI / LOADING AREA (m²)",
+              "PANEL KALINLIĞI / END THICKNESS (mm)"
+            ],
+            "satirlar": [
+              [
+                "ML (3M1)",
+                "SL (3M2)",
+                "DERİNLİK / DEPTH (mm)"
+              ],
+              [
+                "1050",
+                "1150",
+                "1250"
+              ],
+              [
+                "937",
+                "900",
+                "-1 / +1 °C",
+                "0 / +2 °C",
+                "0,74",
+                "0,83",
+                "0,93",
+                "25"
+              ],
+              [
+                "1200"
+              ],
+              [
+                "1250",
+                "900",
+                "0,99",
+                "1,11",
+                "1,24"
+              ],
+              [
+                "1200"
+              ],
+              [
+                "1875",
+                "900",
+                "1,48",
+                "1,67",
+                "1,86"
+              ],
+              [
+                "1200"
+              ],
+              [
+                "2500",
+                "900",
+                "1,98",
+                "2,23",
+                "2,48"
+              ],
+              [
+                "1200"
+              ],
+              [
+                "2812",
+                "900",
+                "2,22",
+                "2,50",
+                "2,78"
+              ],
+              [
+                "1200"
+              ],
+              [
+                "3750",
+                "900",
+                "2,96",
+                "3,34",
+                "3,71"
+              ],
+              [
+                "1200"
+              ],
+              [
+                "IK 45",
+                "900",
+                "-1 / +1 °C",
+                "0 / +2 °C",
+                "N/A",
+                "0,76",
+                "0,89",
+                "25"
+              ],
+              [
+                "1200"
+              ],
+              [
+                "DK 45",
+                "900",
+                "N/A",
+                "0,70",
+                "0,74"
+              ],
+              [
+                "1200"
+              ],
+              [
+                "IK 90",
+                "900",
+                "N/A",
+                "1,80",
+                "2,10"
+              ],
+              [
+                "1200"
+              ],
+              [
+                "DK 90",
+                "900",
+                "N/A",
+                "1,69",
+                "1,78"
+              ],
+              [
+                "1200"
+              ],
+              [
+                "OIK 90",
+                "900",
+                "N/A",
+                "1,85",
+                "N/A"
+              ],
+              [
+                "1200"
+              ],
+              [
+                "ODK 90",
+                "900",
+                "N/A",
+                "0,95",
+                "N/A"
+              ],
+              [
+                "1200"
+              ]
+            ]
+          }
+        ],
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-FG-SL_ML-1050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-FG-SL_ML-1150-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-FG-SL_ML-1250-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-HG-SL_ML-1050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-HG-SL_ML-1150-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-HG-SL_ML-1250-Model-1.webp"
+        ]
+      }
+    ],
+    "sekmeler": [
+      {
+        "baslik": "TEKNİK ÇİZİMLER",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-FG-SL_ML-1050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-FG-SL_ML-1150-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-FG-SL_ML-1250-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-HG-SL_ML-1050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-HG-SL_ML-1150-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-HG-SL_ML-1250-Model-1.webp"
+        ],
+        "tablolar": []
+      },
+      {
+        "baslik": "TEKNİK DETAYLAR",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-FG-SL_ML-1050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-FG-SL_ML-1150-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-FG-SL_ML-1250-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-HG-SL_ML-1050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-HG-SL_ML-1150-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-HG-SL_ML-1250-Model-1.webp"
+        ],
+        "tablolar": []
+      },
+      {
+        "baslik": "TEKNİK ÇİZİMLER",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-FG-SL_ML-1050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-FG-SL_ML-1150-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-FG-SL_ML-1250-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-HG-SL_ML-1050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-HG-SL_ML-1150-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-HG-SL_ML-1250-Model-1.webp"
+        ],
+        "tablolar": []
+      },
+      {
+        "baslik": "TEKNİK DETAYLAR",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-FG-SL_ML-1050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-FG-SL_ML-1150-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-FG-SL_ML-1250-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-HG-SL_ML-1050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-HG-SL_ML-1150-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-HG-SL_ML-1250-Model-1.webp"
+        ],
+        "tablolar": []
+      },
+      {
+        "baslik": "TEKNİK ÇİZİMLER",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Sardunya-Kasa-Kesit-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Sardunya-Kasa-Kesit-2.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Sardunya-Kasa-Kesit-3.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Sardunya-Kasa-Kesit-4.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Sardunya-Oval-Kesit-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Sardunya-Oval-Kesit-2.webp"
+        ],
+        "tablolar": []
+      }
+    ],
+    "tablolar": [
+      {
+        "basliklar": [
+          "UZUNLUK / LENGTH (mm)",
+          "YÜKSEKLİK / HEIGHT (mm)",
+          "SICAKLIK SINIFI / TEMPERATURE CLASS",
+          "YÜKLEME ALANI / LOADING AREA (m²)",
+          "PANEL KALINLIĞI / END THICKNESS (mm)"
+        ],
+        "satirlar": [
+          [
+            "ML (3M1)",
+            "SL (3M2)",
+            "DERİNLİK / DEPTH (mm)"
+          ],
+          [
+            "1050",
+            "1150",
+            "1250"
+          ],
+          [
+            "937",
+            "900",
+            "-1 / +1 °C",
+            "0 / +2 °C",
+            "0,74",
+            "0,83",
+            "0,93",
+            "25"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "1250",
+            "900",
+            "0,99",
+            "1,11",
+            "1,24"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "1875",
+            "900",
+            "1,48",
+            "1,67",
+            "1,86"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "2500",
+            "900",
+            "1,98",
+            "2,23",
+            "2,48"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "2812",
+            "900",
+            "2,22",
+            "2,50",
+            "2,78"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "3750",
+            "900",
+            "2,96",
+            "3,34",
+            "3,71"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "IK 45",
+            "900",
+            "-1 / +1 °C",
+            "0 / +2 °C",
+            "N/A",
+            "0,76",
+            "0,89",
+            "25"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "DK 45",
+            "900",
+            "N/A",
+            "0,70",
+            "0,74"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "IK 90",
+            "900",
+            "N/A",
+            "1,80",
+            "2,10"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "DK 90",
+            "900",
+            "N/A",
+            "1,69",
+            "1,78"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "OIK 90",
+            "900",
+            "N/A",
+            "1,85",
+            "N/A"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "ODK 90",
+            "900",
+            "N/A",
+            "0,95",
+            "N/A"
+          ],
+          [
+            "1200"
+          ]
+        ]
+      },
+      {
+        "basliklar": [
+          "UZUNLUK / LENGTH (mm)",
+          "YÜKSEKLİK / HEIGHT (mm)",
+          "SICAKLIK SINIFI / TEMPERATURE CLASS",
+          "YÜKLEME ALANI / LOADING AREA (m²)",
+          "PANEL KALINLIĞI / END THICKNESS (mm)"
+        ],
+        "satirlar": [
+          [
+            "ML (3M1)",
+            "SL (3M2)",
+            "DERİNLİK / DEPTH (mm)"
+          ],
+          [
+            "1050",
+            "1150",
+            "1250"
+          ],
+          [
+            "937",
+            "900",
+            "-1 / +1 °C",
+            "0 / +2 °C",
+            "0,74",
+            "0,83",
+            "0,93",
+            "25"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "1250",
+            "900",
+            "0,99",
+            "1,11",
+            "1,24"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "1875",
+            "900",
+            "1,48",
+            "1,67",
+            "1,86"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "2500",
+            "900",
+            "1,98",
+            "2,23",
+            "2,48"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "2812",
+            "900",
+            "2,22",
+            "2,50",
+            "2,78"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "3750",
+            "900",
+            "2,96",
+            "3,34",
+            "3,71"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "IK 45",
+            "900",
+            "-1 / +1 °C",
+            "0 / +2 °C",
+            "N/A",
+            "0,76",
+            "0,89",
+            "25"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "DK 45",
+            "900",
+            "N/A",
+            "0,70",
+            "0,74"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "IK 90",
+            "900",
+            "N/A",
+            "1,80",
+            "2,10"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "DK 90",
+            "900",
+            "N/A",
+            "1,69",
+            "1,78"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "OIK 90",
+            "900",
+            "N/A",
+            "1,85",
+            "N/A"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "ODK 90",
+            "900",
+            "N/A",
+            "0,95",
+            "N/A"
+          ],
+          [
+            "1200"
+          ]
+        ]
+      }
+    ]
+  },
+  "gorseller": {
+    "tum": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/meat.webp",
+        "dosya": "gorseller/sardunya-lm/meat.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Sardunya-LM-FG-SL-ML-2.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-LM-FG-SL-ML-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Sardunya-LM-FG-SL-ML-1.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-LM-FG-SL-ML-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Sardunya-LM-HG-SL-ML-1.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-LM-HG-SL-ML-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Sardunya-LM-HG-SL-ML-2.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-LM-HG-SL-ML-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Sardunya-ZYT-1.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-ZYT-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Sardunya-ZYT-2.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-ZYT-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/12/Sardunya-1.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/12/Sardunya-Ic-Kose-Oval.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-Ic-Kose-Oval.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-2.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/sardunya-bankolu-1.webp",
+        "dosya": "gorseller/sardunya-lm/sardunya-bankolu-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-bankolu-4.webp",
+        "dosya": "gorseller/sardunya-lm/SARDUNYA-bankolu-4.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-DIS-KOSE-DIK.webp",
+        "dosya": "gorseller/sardunya-lm/SARDUNYA-DIS-KOSE-DIK.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/12/Sardunya-Ic-kose-Dik.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-Ic-kose-Dik.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya.pdf",
+        "dosya": "gorseller/sardunya-lm/Sardunya.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-FG-SL_ML-1050-Model-1.webp",
+        "dosya": "gorseller/sardunya-lm/SARDUNYA-LM-AD-FG-SL_ML-1050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-FG-SL_ML-1150-Model-1.webp",
+        "dosya": "gorseller/sardunya-lm/SARDUNYA-LM-AD-FG-SL_ML-1150-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-FG-SL_ML-1250-Model-1.webp",
+        "dosya": "gorseller/sardunya-lm/SARDUNYA-LM-AD-FG-SL_ML-1250-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-HG-SL_ML-1050-Model-1.webp",
+        "dosya": "gorseller/sardunya-lm/SARDUNYA-LM-AD-HG-SL_ML-1050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-HG-SL_ML-1150-Model-1.webp",
+        "dosya": "gorseller/sardunya-lm/SARDUNYA-LM-AD-HG-SL_ML-1150-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-HG-SL_ML-1250-Model-1.webp",
+        "dosya": "gorseller/sardunya-lm/SARDUNYA-LM-AD-HG-SL_ML-1250-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-FG-SL_ML-1050-Model-1.webp",
+        "dosya": "gorseller/sardunya-lm/SARDUNYA-LM-MC-FG-SL_ML-1050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-FG-SL_ML-1150-Model-1.webp",
+        "dosya": "gorseller/sardunya-lm/SARDUNYA-LM-MC-FG-SL_ML-1150-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-FG-SL_ML-1250-Model-1.webp",
+        "dosya": "gorseller/sardunya-lm/SARDUNYA-LM-MC-FG-SL_ML-1250-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-HG-SL_ML-1050-Model-1.webp",
+        "dosya": "gorseller/sardunya-lm/SARDUNYA-LM-MC-HG-SL_ML-1050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-HG-SL_ML-1150-Model-1.webp",
+        "dosya": "gorseller/sardunya-lm/SARDUNYA-LM-MC-HG-SL_ML-1150-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-HG-SL_ML-1250-Model-1.webp",
+        "dosya": "gorseller/sardunya-lm/SARDUNYA-LM-MC-HG-SL_ML-1250-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Sardunya-Kasa-Kesit-1.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-Kasa-Kesit-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Sardunya-Kasa-Kesit-2.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-Kasa-Kesit-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Sardunya-Kasa-Kesit-3.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-Kasa-Kesit-3.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Sardunya-Kasa-Kesit-4.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-Kasa-Kesit-4.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Sardunya-Oval-Kesit-1.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-Oval-Kesit-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Sardunya-Oval-Kesit-2.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-Oval-Kesit-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/circle-bg.webp",
+        "dosya": "gorseller/sardunya-lm/circle-bg.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/meat-2.webp",
+        "dosya": "gorseller/sardunya-lm/meat-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Sardunya-Bicaklik.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-Bicaklik.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Sardunya-Et-Aydinlatma.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-Et-Aydinlatma.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Sardunya-Kademeli-Tava.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-Kademeli-Tava.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Sardunya-Modul-Bolucu.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-Modul-Bolucu.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Sardunya-Plexi-Surgu.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-Plexi-Surgu.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Sardunya-Posetlik.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-Posetlik.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Sardunya-Sepetlik.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-Sepetlik.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Sardunya-Terazilik.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-Terazilik.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Sardunya-Urun-Bolucu.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-Urun-Bolucu.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/sardunya-lm/pdf-icon.webp"
+      }
+    ],
+    "urun": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/meat.webp",
+        "dosya": "gorseller/sardunya-lm/meat.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Sardunya-ZYT-1.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-ZYT-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Sardunya-ZYT-2.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-ZYT-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/12/Sardunya-1.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/12/Sardunya-Ic-Kose-Oval.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-Ic-Kose-Oval.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-2.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/sardunya-bankolu-1.webp",
+        "dosya": "gorseller/sardunya-lm/sardunya-bankolu-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-bankolu-4.webp",
+        "dosya": "gorseller/sardunya-lm/SARDUNYA-bankolu-4.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-DIS-KOSE-DIK.webp",
+        "dosya": "gorseller/sardunya-lm/SARDUNYA-DIS-KOSE-DIK.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/12/Sardunya-Ic-kose-Dik.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-Ic-kose-Dik.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya.pdf",
+        "dosya": "gorseller/sardunya-lm/Sardunya.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/circle-bg.webp",
+        "dosya": "gorseller/sardunya-lm/circle-bg.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/meat-2.webp",
+        "dosya": "gorseller/sardunya-lm/meat-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Sardunya-Bicaklik.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-Bicaklik.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Sardunya-Et-Aydinlatma.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-Et-Aydinlatma.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Sardunya-Kademeli-Tava.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-Kademeli-Tava.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Sardunya-Modul-Bolucu.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-Modul-Bolucu.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Sardunya-Plexi-Surgu.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-Plexi-Surgu.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Sardunya-Posetlik.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-Posetlik.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Sardunya-Sepetlik.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-Sepetlik.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Sardunya-Terazilik.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-Terazilik.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Sardunya-Urun-Bolucu.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-Urun-Bolucu.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/sardunya-lm/pdf-icon.webp"
+      }
+    ],
+    "teknikCizim": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Sardunya-LM-FG-SL-ML-2.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-LM-FG-SL-ML-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Sardunya-LM-FG-SL-ML-1.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-LM-FG-SL-ML-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Sardunya-LM-HG-SL-ML-1.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-LM-HG-SL-ML-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Sardunya-LM-HG-SL-ML-2.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-LM-HG-SL-ML-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-FG-SL_ML-1050-Model-1.webp",
+        "dosya": "gorseller/sardunya-lm/SARDUNYA-LM-AD-FG-SL_ML-1050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-FG-SL_ML-1150-Model-1.webp",
+        "dosya": "gorseller/sardunya-lm/SARDUNYA-LM-AD-FG-SL_ML-1150-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-FG-SL_ML-1250-Model-1.webp",
+        "dosya": "gorseller/sardunya-lm/SARDUNYA-LM-AD-FG-SL_ML-1250-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-HG-SL_ML-1050-Model-1.webp",
+        "dosya": "gorseller/sardunya-lm/SARDUNYA-LM-AD-HG-SL_ML-1050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-HG-SL_ML-1150-Model-1.webp",
+        "dosya": "gorseller/sardunya-lm/SARDUNYA-LM-AD-HG-SL_ML-1150-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-AD-HG-SL_ML-1250-Model-1.webp",
+        "dosya": "gorseller/sardunya-lm/SARDUNYA-LM-AD-HG-SL_ML-1250-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-FG-SL_ML-1050-Model-1.webp",
+        "dosya": "gorseller/sardunya-lm/SARDUNYA-LM-MC-FG-SL_ML-1050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-FG-SL_ML-1150-Model-1.webp",
+        "dosya": "gorseller/sardunya-lm/SARDUNYA-LM-MC-FG-SL_ML-1150-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-FG-SL_ML-1250-Model-1.webp",
+        "dosya": "gorseller/sardunya-lm/SARDUNYA-LM-MC-FG-SL_ML-1250-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-HG-SL_ML-1050-Model-1.webp",
+        "dosya": "gorseller/sardunya-lm/SARDUNYA-LM-MC-HG-SL_ML-1050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-HG-SL_ML-1150-Model-1.webp",
+        "dosya": "gorseller/sardunya-lm/SARDUNYA-LM-MC-HG-SL_ML-1150-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/SARDUNYA-LM-MC-HG-SL_ML-1250-Model-1.webp",
+        "dosya": "gorseller/sardunya-lm/SARDUNYA-LM-MC-HG-SL_ML-1250-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Sardunya-Kasa-Kesit-1.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-Kasa-Kesit-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Sardunya-Kasa-Kesit-2.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-Kasa-Kesit-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Sardunya-Kasa-Kesit-3.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-Kasa-Kesit-3.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Sardunya-Kasa-Kesit-4.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-Kasa-Kesit-4.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Sardunya-Oval-Kesit-1.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-Oval-Kesit-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Sardunya-Oval-Kesit-2.webp",
+        "dosya": "gorseller/sardunya-lm/Sardunya-Oval-Kesit-2.webp"
+      }
+    ]
+  }
+}

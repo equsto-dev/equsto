@@ -57,11 +57,15 @@
     'market-reyon': {
       title: 'Market Reyonları',
       lead:
-        'Çağlayan Soğutma süpermarket vitrin kataloğu — soğuk teşhir, dondurma, şarküteri ve self servis hatları',
+        'Proso ve Çağlayan market reyonları — sütlük, şarküteri, dikey dondurucu, ada tipi teşhir ve soğuk hava depoları',
     },
     'set-ustu-mutfak': {
       title: 'Set Üstü Mutfak Ekipmanları',
       lead: 'Öztiryakiler — servis gereçleri, gastronorm, chafing dish, tencere ve mutfak aksesuarları',
+    },
+    kuvetler: {
+      title: 'Küvetler',
+      lead: 'Gastronorm küvetler, GN kapaklar, polipropilen ve polikarbonat küvetler · Öztiryakiler',
     },
   };
 })(typeof window !== 'undefined' ? window : global);

@@ -1,0 +1,133 @@
+{
+  "slug": "fulya-hf",
+  "baslik": "FULYA HF",
+  "tip": "seri",
+  "ustSeriSlug": "fulya",
+  "kategoriler": [
+    "fulya-en"
+  ],
+  "kapak": "https:\\/\\/caglayanrefrigeration.com\\/wp-content\\/uploads\\/2023\\/02\\/Fulya-FG-Kapak.webp",
+  "kapakYol": "gorseller/fulya-hf/Fulya-FG-Kapak.webp",
+  "linkKaynak": "https://caglayanrefrigeration.com/tr/product/fulya-hf/",
+  "cocuklar": [
+    {
+      "slug": "fulya-hf-fg",
+      "ad": "FULYA HF FG",
+      "link": "https://caglayanrefrigeration.com/tr/product/fulya-hf-fg/",
+      "kapak": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/Fulya-FG-Kapak.webp",
+      "kapakYol": "gorseller/fulya-hf/Fulya-FG-Kapak.webp"
+    },
+    {
+      "slug": "fulya-hf-fg-sky",
+      "ad": "FULYA HF FG SKY",
+      "link": "https://caglayanrefrigeration.com/tr/product/fulya-hf-fg-sky/",
+      "kapak": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Fulya-FG-SKY-Kapak.webp",
+      "kapakYol": "gorseller/fulya-hf/Fulya-FG-SKY-Kapak.webp"
+    },
+    {
+      "slug": "fulya-hf-fl",
+      "ad": "FULYA HF FL",
+      "link": "https://caglayanrefrigeration.com/tr/product/fulya-hf-fl/",
+      "kapak": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Fulya-FL-Kapak.webp",
+      "kapakYol": "gorseller/fulya-hf/Fulya-FL-Kapak.webp"
+    },
+    {
+      "slug": "fulya-hf-lm",
+      "ad": "FULYA HF LM",
+      "link": "https://caglayanrefrigeration.com/tr/product/fulya-hf-lm/",
+      "kapak": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Fulya-LM-Kapak.webp",
+      "kapakYol": "gorseller/fulya-hf/Fulya-LM-Kapak.webp"
+    },
+    {
+      "slug": "fulya-hf-pn",
+      "ad": "FULYA HF PN",
+      "link": "https://caglayanrefrigeration.com/tr/product/fulya-hf-pn/",
+      "kapak": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Fulya-PN-Kapak.webp",
+      "kapakYol": "gorseller/fulya-hf/Fulya-PN-Kapak.webp"
+    },
+    {
+      "slug": "fulya-hf-tp",
+      "ad": "FULYA HF TP",
+      "link": "https://caglayanrefrigeration.com/tr/product/fulya-hf-tp/",
+      "kapak": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Fulya-TP-Kapak.webp",
+      "kapakYol": "gorseller/fulya-hf/Fulya-TP-Kapak.webp"
+    },
+    {
+      "slug": "fulya-hf-tp-sky",
+      "ad": "FULYA HF TP SKY",
+      "link": "https://caglayanrefrigeration.com/tr/product/fulya-hf-tp-sky/",
+      "kapak": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Fulya-TP-SKY-Kapak.webp",
+      "kapakYol": "gorseller/fulya-hf/Fulya-TP-SKY-Kapak.webp"
+    }
+  ],
+  "ozellikler": [],
+  "teknik": {
+    "akordeon": [],
+    "sekmeler": [],
+    "tablolar": []
+  },
+  "gorseller": {
+    "tum": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/Fulya-FG-Kapak.webp",
+        "dosya": "gorseller/fulya-hf/Fulya-FG-Kapak.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Fulya-FG-SKY-Kapak.webp",
+        "dosya": "gorseller/fulya-hf/Fulya-FG-SKY-Kapak.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Fulya-FL-Kapak.webp",
+        "dosya": "gorseller/fulya-hf/Fulya-FL-Kapak.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Fulya-LM-Kapak.webp",
+        "dosya": "gorseller/fulya-hf/Fulya-LM-Kapak.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Fulya-PN-Kapak.webp",
+        "dosya": "gorseller/fulya-hf/Fulya-PN-Kapak.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Fulya-TP-Kapak.webp",
+        "dosya": "gorseller/fulya-hf/Fulya-TP-Kapak.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Fulya-TP-SKY-Kapak.webp",
+        "dosya": "gorseller/fulya-hf/Fulya-TP-SKY-Kapak.webp"
+      }
+    ],
+    "urun": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Fulya-FL-Kapak.webp",
+        "dosya": "gorseller/fulya-hf/Fulya-FL-Kapak.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Fulya-PN-Kapak.webp",
+        "dosya": "gorseller/fulya-hf/Fulya-PN-Kapak.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Fulya-TP-Kapak.webp",
+        "dosya": "gorseller/fulya-hf/Fulya-TP-Kapak.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Fulya-TP-SKY-Kapak.webp",
+        "dosya": "gorseller/fulya-hf/Fulya-TP-SKY-Kapak.webp"
+      }
+    ],
+    "teknikCizim": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/Fulya-FG-Kapak.webp",
+        "dosya": "gorseller/fulya-hf/Fulya-FG-Kapak.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Fulya-FG-SKY-Kapak.webp",
+        "dosya": "gorseller/fulya-hf/Fulya-FG-SKY-Kapak.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Fulya-LM-Kapak.webp",
+        "dosya": "gorseller/fulya-hf/Fulya-LM-Kapak.webp"
+      }
+    ]
+  }
+}

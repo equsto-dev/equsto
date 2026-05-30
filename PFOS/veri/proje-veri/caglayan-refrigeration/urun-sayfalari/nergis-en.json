@@ -1,0 +1,57 @@
+{
+  "slug": "nergis-en",
+  "baslik": "NERGİS",
+  "tip": "seri",
+  "ustSeriSlug": null,
+  "kategoriler": [
+    "vertical-multideck"
+  ],
+  "kapak": "https:\\/\\/caglayanrefrigeration.com\\/wp-content\\/uploads\\/2023\\/03\\/Nergis-FG.-Kapak.webp",
+  "kapakYol": "gorseller/nergis-en/Nergis-FG.-Kapak.webp",
+  "linkKaynak": "https://caglayanrefrigeration.com/tr/product/nergis-en/",
+  "cocuklar": [
+    {
+      "slug": "nergis-lb",
+      "ad": "NERGİS LB",
+      "link": "https://caglayanrefrigeration.com/tr/product/nergis-lb/",
+      "kapak": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Nergis-LB-TP-Kapak-Caglayan-Refrigeration.webp",
+      "kapakYol": "gorseller/nergis-en/Nergis-LB-TP-Kapak-Caglayan-Refrigeration.webp"
+    },
+    {
+      "slug": "nergis",
+      "ad": "NERGİS",
+      "link": "https://caglayanrefrigeration.com/tr/product/nergis/",
+      "kapak": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG.-Kapak.webp",
+      "kapakYol": "gorseller/nergis-en/Nergis-FG.-Kapak.webp"
+    }
+  ],
+  "ozellikler": [],
+  "teknik": {
+    "akordeon": [],
+    "sekmeler": [],
+    "tablolar": []
+  },
+  "gorseller": {
+    "tum": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Nergis-LB-TP-Kapak-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/nergis-en/Nergis-LB-TP-Kapak-Caglayan-Refrigeration.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG.-Kapak.webp",
+        "dosya": "gorseller/nergis-en/Nergis-FG.-Kapak.webp"
+      }
+    ],
+    "urun": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Nergis-LB-TP-Kapak-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/nergis-en/Nergis-LB-TP-Kapak-Caglayan-Refrigeration.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG.-Kapak.webp",
+        "dosya": "gorseller/nergis-en/Nergis-FG.-Kapak.webp"
+      }
+    ],
+    "teknikCizim": []
+  }
+}

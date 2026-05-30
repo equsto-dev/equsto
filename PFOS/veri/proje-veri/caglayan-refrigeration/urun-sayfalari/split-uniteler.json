@@ -1,0 +1,74 @@
+{
+  "slug": "split-uniteler",
+  "baslik": "SPLİT ÜNİTELER",
+  "tip": "urun",
+  "ustSeriSlug": null,
+  "kategoriler": [
+    "refrigeration-systems"
+  ],
+  "kapak": "https:\\/\\/caglayanrefrigeration.com\\/wp-content\\/uploads\\/2023\\/02\\/Split-Unite-Kapak-Miapack.webp",
+  "kapakYol": "gorseller/split-uniteler/Split-Unite-Kapak-Miapack.webp",
+  "linkKaynak": "https://caglayanrefrigeration.com/tr/product/split-uniteler/",
+  "cocuklar": [],
+  "ozellikler": [],
+  "teknik": {
+    "akordeon": [],
+    "sekmeler": [],
+    "tablolar": []
+  },
+  "gorseller": {
+    "tum": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/06/Split-Unite-Miapack.webp",
+        "dosya": "gorseller/split-uniteler/Split-Unite-Miapack.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/ice.webp",
+        "dosya": "gorseller/split-uniteler/ice.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Split-Unite-1.webp",
+        "dosya": "gorseller/split-uniteler/Split-Unite-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Split-Uniteler-Monoblok-Uniteler.pdf",
+        "dosya": "gorseller/split-uniteler/Split-Uniteler-Monoblok-Uniteler.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/circle-bg.webp",
+        "dosya": "gorseller/split-uniteler/circle-bg.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/split-uniteler/pdf-icon.webp"
+      }
+    ],
+    "urun": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/06/Split-Unite-Miapack.webp",
+        "dosya": "gorseller/split-uniteler/Split-Unite-Miapack.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/ice.webp",
+        "dosya": "gorseller/split-uniteler/ice.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Split-Unite-1.webp",
+        "dosya": "gorseller/split-uniteler/Split-Unite-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Split-Uniteler-Monoblok-Uniteler.pdf",
+        "dosya": "gorseller/split-uniteler/Split-Uniteler-Monoblok-Uniteler.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/circle-bg.webp",
+        "dosya": "gorseller/split-uniteler/circle-bg.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/split-uniteler/pdf-icon.webp"
+      }
+    ],
+    "teknikCizim": []
+  }
+}

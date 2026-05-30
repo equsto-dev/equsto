@@ -1,11 +1,54 @@
-/* IMT300 — Besos koyu kabuk altında içerik */
-body.bd-page.besos.eq-imt-page {
+/* IMT300 — site kabuğu ile (sadece arka plan siyah) */
+body.eq-imt-page {
   font-size: 13px;
   line-height: 1.6;
 }
 
-body.bd-page.besos.eq-imt-page .pg.imt-page,
-body.bd-page.besos.eq-imt-page .imt-page-main {
+body.eq-imt-page {
+  background: #000;
+}
+
+body.eq-imt-page header.hdr,
+body.eq-imt-page nav.topnav,
+body.eq-imt-page .topnav {
+  background: #000 !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+body.eq-imt-page header.hdr {
+  color: #f2f2f7;
+}
+
+body.eq-imt-page header.hdr .hdr-alici,
+body.eq-imt-page header.hdr .hdr-right a,
+body.eq-imt-page header.hdr .hdr-right button,
+body.eq-imt-page nav.topnav .topnav-item,
+body.eq-imt-page nav.topnav .topnav-sep {
+  color: rgba(255, 255, 255, 0.92) !important;
+}
+
+body.eq-imt-page header.hdr .srch {
+  border-color: rgba(255, 255, 255, 0.18) !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+}
+
+body.eq-imt-page header.hdr .srch-cat,
+body.eq-imt-page header.hdr .srch-btn {
+  border-color: rgba(255, 255, 255, 0.18) !important;
+  background: transparent !important;
+  color: rgba(255, 255, 255, 0.92) !important;
+}
+
+body.eq-imt-page header.hdr .srch-input {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+
+body.eq-imt-page header.hdr .srch-input::placeholder {
+  color: rgba(255, 255, 255, 0.58) !important;
+}
+
+body.eq-imt-page .pg.imt-page,
+body.eq-imt-page .imt-page-main {
   width: 100%;
   max-width: none;
   margin: 0;

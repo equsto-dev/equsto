@@ -1,0 +1,57 @@
+{
+  "slug": "reyhan",
+  "baslik": "REYHAN",
+  "tip": "seri",
+  "ustSeriSlug": null,
+  "kategoriler": [
+    "horizontal-cabinets"
+  ],
+  "kapak": "https:\\/\\/caglayanrefrigeration.com\\/wp-content\\/uploads\\/2023\\/05\\/Reyhan-Kapak.webp",
+  "kapakYol": "gorseller/reyhan/Reyhan-Kapak.webp",
+  "linkKaynak": "https://caglayanrefrigeration.com/tr/product/reyhan/",
+  "cocuklar": [
+    {
+      "slug": "reyhan-cl",
+      "ad": "REYHAN CL",
+      "link": "https://caglayanrefrigeration.com/tr/product/reyhan-cl/",
+      "kapak": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Reyhan-Kapak.webp",
+      "kapakYol": "gorseller/reyhan/Reyhan-Kapak.webp"
+    },
+    {
+      "slug": "reyhan-wt",
+      "ad": "REYHAN WT",
+      "link": "https://caglayanrefrigeration.com/tr/product/reyhan-wt/",
+      "kapak": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Reyhan-WT-Kapak-Caglayan-Refrigeration.webp",
+      "kapakYol": "gorseller/reyhan/Reyhan-WT-Kapak-Caglayan-Refrigeration.webp"
+    }
+  ],
+  "ozellikler": [],
+  "teknik": {
+    "akordeon": [],
+    "sekmeler": [],
+    "tablolar": []
+  },
+  "gorseller": {
+    "tum": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Reyhan-Kapak.webp",
+        "dosya": "gorseller/reyhan/Reyhan-Kapak.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Reyhan-WT-Kapak-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/reyhan/Reyhan-WT-Kapak-Caglayan-Refrigeration.webp"
+      }
+    ],
+    "urun": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Reyhan-Kapak.webp",
+        "dosya": "gorseller/reyhan/Reyhan-Kapak.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Reyhan-WT-Kapak-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/reyhan/Reyhan-WT-Kapak-Caglayan-Refrigeration.webp"
+      }
+    ],
+    "teknikCizim": []
+  }
+}

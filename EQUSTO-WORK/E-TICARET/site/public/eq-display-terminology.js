@@ -88,6 +88,53 @@
     return eqPolishDisplayText(fallback || slug || '');
   }
 
+  var SPEC_TERMS = null;
+  var specLoadPromise = null;
+
+  function loadSpecTerms() {
+    if (SPEC_TERMS) return Promise.resolve(SPEC_TERMS);
+    if (specLoadPromise) return specLoadPromise;
+    specLoadPromise = fetch('/data/i18n/spec-terms-en.json', { credentials: 'same-origin' })
+      .then(function (r) { return r.ok ? r.json() : { terms: [] }; })
+      .then(function (j) {
+        SPEC_TERMS = (j && j.terms) || [];
+        SPEC_TERMS.sort(function (a, b) { return b[0].length - a[0].length; });
+        return SPEC_TERMS;
+      })
+      .catch(function () {
+        SPEC_TERMS = [];
+        return SPEC_TERMS;
+      });
+    return specLoadPromise;
+  }
+
+  function eqTranslateSpecEn(s) {
+    if (window.eqLang !== 'en' || s == null || s === '') return s;
+    var t = String(s);
+    if (SPEC_TERMS && SPEC_TERMS.length) {
+      for (var i = 0; i < SPEC_TERMS.length; i++) {
+        var pair = SPEC_TERMS[i];
+        if (pair[0] && t.indexOf(pair[0]) !== -1) {
+          t = t.split(pair[0]).join(pair[1]);
+        }
+      }
+    }
+    return eqProductNameEn(t, null);
+  }
+
+  function applyEnCatalogItem(x) {
+    if (!x || typeof x !== 'object' || window.eqLang !== 'en') return x;
+    if (x.name_en) x.name = String(x.name_en);
+    else if (x.name) x.name = eqProductNameEn(x.name, x);
+    if (x.specs_en) x.specs = String(x.specs_en);
+    else if (x.specs) x.specs = eqTranslateSpecEn(x.specs);
+    if (x.description_en) x.description = String(x.description_en);
+    else if (x.description) x.description = eqTranslateSpecEn(x.description);
+    if (x.aciklama_en) x.aciklama = String(x.aciklama_en);
+    else if (x.aciklama) x.aciklama = eqTranslateSpecEn(x.aciklama);
+    return x;
+  }
+
   function polishCatalogItem(x) {
     if (!x || typeof x !== 'object') return x;
     if (typeof window.eqSanitizeVendorProduct === 'function') {
@@ -100,7 +147,7 @@
     if (x.specs) x.specs = eqPolishDisplayText(x.specs);
     if (x.description) x.description = eqPolishDisplayText(x.description);
     if (x.aciklama) x.aciklama = eqPolishDisplayText(x.aciklama);
-    return x;
+    return applyEnCatalogItem(x);
   }
 
   function polishCatalogList(list) {
@@ -120,6 +167,12 @@
       u.n = eqPolishDisplayText(u.n);
     }
     if (u.specs) u.specs = eqPolishDisplayText(u.specs);
+    if (window.eqLang === 'en') {
+      if (u.raw && u.raw.name_en) u.n = String(u.raw.name_en);
+      else if (u.n) u.n = eqProductNameEn(u.n, u.raw || u);
+      if (u.raw && u.raw.specs_en) u.specs = String(u.raw.specs_en);
+      else if (u.specs) u.specs = eqTranslateSpecEn(u.specs);
+    }
     return u;
   }
 
@@ -129,8 +182,55 @@
     return list;
   }
 
+  /** PLP / EN — katalog slug aynı; görünen ürün adı kısa sözlük. */
+  function eqProductNameEn(name, raw) {
+    if (window.eqLang !== 'en') return name;
+    var t = String(name == null ? '' : name).trim();
+    if (!t) return t;
+    if (raw && raw.name_en) return String(raw.name_en).trim();
+    var lc = t.toLowerCase();
+    var reps = [
+      [/vitrifrigo\s*süt\s*soğutucu|vitrifrigo\s*sut\s*sogutucu/gi, 'Vitrifrigo milk cooler'],
+      [/bardak\s*ısıtıcı|bardak\s*isitici/gi, 'cup warmer'],
+      [/kopuklu\s*ayran|köpüklü\s*ayran/gi, 'Frothy ayran machine'],
+      [/ayran\s*makin/gi, 'Ayran machine'],
+      [/meyve\s*suyu\s*sogutma|meyve\s*suyu\s*soğutma/gi, 'Juice dispenser'],
+      [/karli\s*buzlu\s*serbet|slush/gi, 'Slush machine'],
+      [/serbet\s*\+\s*ayran/gi, 'Sherbet + ayran dispenser'],
+      [/serbet/gi, 'Sherbet'],
+      [/hoshizaki\s*buz\s*makin/gi, 'Hoshizaki ice machine'],
+      [/buz\s*mak[iİ]nes[iİ]/gi, 'Ice machine'],
+      [/buz\s*haznesi/gi, 'Ice bin'],
+      [/ba[gğ]lanti\s+kit[iİ]/gi, 'Connection kit'],
+      [/c[iİ]hazalt[iİ]/gi, 'Under-counter'],
+      [/(\d+)\s*kapil[iİ]/gi, '$1-door'],
+      [/(\d+)\s*çekmeceli|(\d+)\s*cekmece/gi, '$1-drawer'],
+      [/çekmeceli|cekmece/gi, 'drawer'],
+      [/havuzlu/gi, 'with sink'],
+      [/\bt\s+tip\b/gi, 'T-type'],
+      [/dolap/gi, 'cabinet'],
+      [/dolaplar/gi, 'cabinets'],
+      [/te[sş]hir/gi, 'display'],
+      [/buzdolab[ıi]/gi, 'refrigerator'],
+      [/derin\s*dondurucu/gi, 'freezer'],
+      [/frit[oö]z/gi, 'fryer'],
+      [/ocak/gi, 'range'],
+      [/f[ıi]r[ıi]n/gi, 'oven'],
+      [/davlumbaz/gi, 'hood'],
+      [/tezgah/gi, 'work table'],
+      [/konteyner/gi, 'container'],
+      [/iskonto/gi, 'discount']
+    ];
+    for (var i = 0; i < reps.length; i++) {
+      t = t.replace(reps[i][0], reps[i][1]);
+    }
+    return t.replace(/\s+/g, ' ').trim();
+  }
+
   window.eqSimplifyTezgahDavlumbazName = eqSimplifyTezgahDavlumbazName;
   window.eqPolishDisplayText = eqPolishDisplayText;
+  window.eqTranslateSpecEn = eqTranslateSpecEn;
+  window.eqProductNameEn = eqProductNameEn;
   window.eqCategorySlugLabel = eqCategorySlugLabel;
   window.eqPolishCatalogList = polishCatalogList;
   window.eqPolishShopList = polishShopList;
@@ -161,6 +261,10 @@
 
   hookIndexAllProducts();
   if (typeof document !== 'undefined') {
+    loadSpecTerms();
+    document.addEventListener('eq-i18n-ready', function () {
+      if (window.eqLang === 'en') loadSpecTerms();
+    });
     document.addEventListener('DOMContentLoaded', hookIndexAllProducts);
     setTimeout(hookIndexAllProducts, 0);
     setTimeout(hookIndexAllProducts, 120);

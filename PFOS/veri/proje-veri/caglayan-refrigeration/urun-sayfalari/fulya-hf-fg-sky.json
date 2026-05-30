@@ -1,0 +1,358 @@
+{
+  "slug": "fulya-hf-fg-sky",
+  "baslik": "FULYA HF FG SKY",
+  "tip": "model",
+  "ustSeriSlug": "fulya-hf",
+  "kategoriler": [
+    "fulya-hf-en"
+  ],
+  "kapak": "https:\\/\\/caglayanrefrigeration.com\\/wp-content\\/uploads\\/2023\\/09\\/Fulya-FG-SKY-Kapak.webp",
+  "kapakYol": "gorseller/fulya-hf-fg-sky/Fulya-FG-SKY-Kapak.webp",
+  "linkKaynak": "https://caglayanrefrigeration.com/tr/product/fulya-hf-fg-sky/",
+  "cocuklar": [],
+  "ozellikler": [
+    {
+      "baslik": "",
+      "aciklama": "Dairy Products"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Delicatessen"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Drinks"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Fruit and Vegetables"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Meat"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Chicken"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Cheese"
+    },
+    {
+      "baslik": "",
+      "aciklama": "High Efficiency Fans"
+    },
+    {
+      "baslik": "",
+      "aciklama": "LED Lighting"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Ventilated"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Off Cycle Defrost"
+    }
+  ],
+  "teknik": {
+    "akordeon": [],
+    "sekmeler": [
+      {
+        "baslik": "TEKNİK ÇİZİMLER",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/FULYA-HF-FG-SKY-SL_ML-Kesit-01.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/FULYA-HF-FG-SKY-SL_ML-Kesit-02.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/FULYA-HF-FG-SKY-SL_ML-Kesit-03.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/FULYA-HF-FG-SKY-SL_ML-Kesit-04.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/FULYA-HF-FG-SKY-SL_ML-Kesit-05.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/FULYA-HF-FG-SKY-SL_ML-Kesit-06.webp"
+        ],
+        "tablolar": []
+      },
+      {
+        "baslik": "TEKNİK DETAYLAR",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/FULYA-HF-FG-SKY-SL_ML-Kesit-01.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/FULYA-HF-FG-SKY-SL_ML-Kesit-02.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/FULYA-HF-FG-SKY-SL_ML-Kesit-03.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/FULYA-HF-FG-SKY-SL_ML-Kesit-04.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/FULYA-HF-FG-SKY-SL_ML-Kesit-05.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/FULYA-HF-FG-SKY-SL_ML-Kesit-06.webp"
+        ],
+        "tablolar": []
+      }
+    ],
+    "tablolar": [
+      {
+        "basliklar": [
+          "UZUNLUK / LENGTH (mm)",
+          "YÜKSEKLİK / HEIGHT (mm)",
+          "SICAKLIK SINIFI / TEMPERATURE CLASS",
+          "YÜKLEME ALANI / LOADING AREA (m²)",
+          "PANEL KALINLIĞI / END THICKNESS (mm)"
+        ],
+        "satirlar": [
+          [
+            "ML (3M1)",
+            "SL (3M2)",
+            "DERİNLİK / DEPTH (mm)"
+          ],
+          [
+            "740",
+            "840",
+            "940"
+          ],
+          [
+            "937",
+            "2070",
+            "-1 / +1 °C",
+            "0 / +2 °C",
+            "1,71",
+            "2,18",
+            "2,46",
+            "40"
+          ],
+          [
+            "2200",
+            "2,04",
+            "2,60",
+            "2,93"
+          ],
+          [
+            "1250",
+            "2070",
+            "2,28",
+            "2,91",
+            "3,28"
+          ],
+          [
+            "2200",
+            "2,72",
+            "3,47",
+            "3,91"
+          ],
+          [
+            "1875",
+            "2070",
+            "3,42",
+            "4,36",
+            "4,92"
+          ],
+          [
+            "2200",
+            "4,08",
+            "5,20",
+            "5,86"
+          ],
+          [
+            "2500",
+            "2070",
+            "4,56",
+            "5,81",
+            "6,56"
+          ],
+          [
+            "2200",
+            "5,44",
+            "6,94",
+            "7,81"
+          ]
+        ]
+      }
+    ]
+  },
+  "gorseller": {
+    "tum": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Fulya-FG-SKY.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/Fulya-FG-SKY.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/cheese.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/cheese.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/FULYA-FG-SKY-capraz.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/FULYA-FG-SKY-capraz.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Fulya.pdf",
+        "dosya": "gorseller/fulya-hf-fg-sky/Fulya.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/FULYA-HF-FG-SKY-SL_ML-Kesit-01.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/FULYA-HF-FG-SKY-SL_ML-Kesit-01.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/FULYA-HF-FG-SKY-SL_ML-Kesit-02.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/FULYA-HF-FG-SKY-SL_ML-Kesit-02.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/FULYA-HF-FG-SKY-SL_ML-Kesit-03.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/FULYA-HF-FG-SKY-SL_ML-Kesit-03.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/FULYA-HF-FG-SKY-SL_ML-Kesit-04.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/FULYA-HF-FG-SKY-SL_ML-Kesit-04.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/FULYA-HF-FG-SKY-SL_ML-Kesit-05.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/FULYA-HF-FG-SKY-SL_ML-Kesit-05.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/FULYA-HF-FG-SKY-SL_ML-Kesit-06.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/FULYA-HF-FG-SKY-SL_ML-Kesit-06.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/circle-bg.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/circle-bg.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/olives.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/olives.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Plexi-Product-Stopper.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/Inci-Plexi-Product-Stopper.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Plexi-Product-Divider.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/Inci-Plexi-Product-Divider.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Wire-Base-Dividder.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/Inci-Wire-Base-Dividder.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Meat-Hanger-Bar.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/Inci-Meat-Hanger-Bar.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Shelf-Lighting.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/Inci-Shelf-Lighting.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Wire-Base.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/Inci-Wire-Base.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Wire-Basket.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/Inci-Wire-Basket.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Panoramic-Side-Panel.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/Panoramic-Side-Panel.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Mirrored-Side-Panel.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/Mirrored-Side-Panel.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Closed-Side-Panel.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/Closed-Side-Panel.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/pdf-icon.webp"
+      }
+    ],
+    "urun": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/cheese.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/cheese.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Fulya.pdf",
+        "dosya": "gorseller/fulya-hf-fg-sky/Fulya.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/circle-bg.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/circle-bg.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/olives.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/olives.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Plexi-Product-Stopper.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/Inci-Plexi-Product-Stopper.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Plexi-Product-Divider.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/Inci-Plexi-Product-Divider.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Wire-Base-Dividder.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/Inci-Wire-Base-Dividder.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Meat-Hanger-Bar.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/Inci-Meat-Hanger-Bar.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Shelf-Lighting.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/Inci-Shelf-Lighting.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Wire-Base.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/Inci-Wire-Base.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Wire-Basket.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/Inci-Wire-Basket.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Panoramic-Side-Panel.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/Panoramic-Side-Panel.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Mirrored-Side-Panel.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/Mirrored-Side-Panel.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Closed-Side-Panel.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/Closed-Side-Panel.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/pdf-icon.webp"
+      }
+    ],
+    "teknikCizim": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Fulya-FG-SKY.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/Fulya-FG-SKY.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/FULYA-FG-SKY-capraz.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/FULYA-FG-SKY-capraz.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/FULYA-HF-FG-SKY-SL_ML-Kesit-01.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/FULYA-HF-FG-SKY-SL_ML-Kesit-01.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/FULYA-HF-FG-SKY-SL_ML-Kesit-02.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/FULYA-HF-FG-SKY-SL_ML-Kesit-02.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/FULYA-HF-FG-SKY-SL_ML-Kesit-03.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/FULYA-HF-FG-SKY-SL_ML-Kesit-03.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/FULYA-HF-FG-SKY-SL_ML-Kesit-04.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/FULYA-HF-FG-SKY-SL_ML-Kesit-04.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/FULYA-HF-FG-SKY-SL_ML-Kesit-05.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/FULYA-HF-FG-SKY-SL_ML-Kesit-05.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/FULYA-HF-FG-SKY-SL_ML-Kesit-06.webp",
+        "dosya": "gorseller/fulya-hf-fg-sky/FULYA-HF-FG-SKY-SL_ML-Kesit-06.webp"
+      }
+    ]
+  }
+}

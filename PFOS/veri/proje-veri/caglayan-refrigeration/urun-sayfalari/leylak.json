@@ -1,0 +1,200 @@
+{
+  "slug": "leylak",
+  "baslik": "LEYLAK",
+  "tip": "model",
+  "ustSeriSlug": null,
+  "kategoriler": [
+    "horizontal-freezers"
+  ],
+  "kapak": "https:\\/\\/caglayanrefrigeration.com\\/wp-content\\/uploads\\/2023\\/02\\/Leylak-Kapak.webp",
+  "kapakYol": "gorseller/leylak/Leylak-Kapak.webp",
+  "linkKaynak": "https://caglayanrefrigeration.com/tr/product/leylak/",
+  "cocuklar": [],
+  "ozellikler": [
+    {
+      "baslik": "",
+      "aciklama": "Ice Cream"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Frozen Food"
+    },
+    {
+      "baslik": "",
+      "aciklama": "High Efficiency Fans"
+    },
+    {
+      "baslik": "",
+      "aciklama": "LED Lighting"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Ventilated"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Remote Condensing Unit"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Electric Defrost"
+    }
+  ],
+  "teknik": {
+    "akordeon": [],
+    "sekmeler": [
+      {
+        "baslik": "TEKNİK ÇİZİMLER",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/LEYLAK-Model-01.webp"
+        ],
+        "tablolar": []
+      },
+      {
+        "baslik": "TEKNİK DETAYLAR",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/LEYLAK-Model-01.webp"
+        ],
+        "tablolar": []
+      }
+    ],
+    "tablolar": [
+      {
+        "basliklar": [
+          "UZUNLUK / LENGTH (mm)",
+          "YÜKSEKLİK / HEIGHT (mm)",
+          "SICAKLIK SINIFI / TEMPERATURE CLASS",
+          "YÜKLEME ALANI / LOADING AREA (m²)",
+          "PANEL KALINLIĞI / END THICKNESS (mm)"
+        ],
+        "satirlar": [
+          [
+            "3L1",
+            "DERİNLİK / DEPTH (mm)"
+          ],
+          [
+            "970"
+          ],
+          [
+            "1875",
+            "900",
+            "-22 / -25 °C",
+            "1,25",
+            "70"
+          ],
+          [
+            "2500",
+            "1,66"
+          ],
+          [
+            "3750",
+            "2,49"
+          ]
+        ]
+      }
+    ]
+  },
+  "gorseller": {
+    "tum": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LEYLAK-2.webp",
+        "dosya": "gorseller/leylak/LEYLAK-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pizza.webp",
+        "dosya": "gorseller/leylak/pizza.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LEYLAK-.webp",
+        "dosya": "gorseller/leylak/LEYLAK-.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LEYLAK-3.webp",
+        "dosya": "gorseller/leylak/LEYLAK-3.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Leylak.pdf",
+        "dosya": "gorseller/leylak/Leylak.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/LEYLAK-Model-01.webp",
+        "dosya": "gorseller/leylak/LEYLAK-Model-01.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/freeze-vegetable.webp",
+        "dosya": "gorseller/leylak/freeze-vegetable.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Manolya-Night-Blind.webp",
+        "dosya": "gorseller/leylak/Manolya-Night-Blind.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Manolya-Glass-Sliding-Cover.webp",
+        "dosya": "gorseller/leylak/Manolya-Glass-Sliding-Cover.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/Wire-Base-1.webp",
+        "dosya": "gorseller/leylak/Wire-Base-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Manolya-Wire-Product-Divider.webp",
+        "dosya": "gorseller/leylak/Manolya-Wire-Product-Divider.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/leylak/pdf-icon.webp"
+      }
+    ],
+    "urun": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LEYLAK-2.webp",
+        "dosya": "gorseller/leylak/LEYLAK-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pizza.webp",
+        "dosya": "gorseller/leylak/pizza.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LEYLAK-.webp",
+        "dosya": "gorseller/leylak/LEYLAK-.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LEYLAK-3.webp",
+        "dosya": "gorseller/leylak/LEYLAK-3.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Leylak.pdf",
+        "dosya": "gorseller/leylak/Leylak.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/LEYLAK-Model-01.webp",
+        "dosya": "gorseller/leylak/LEYLAK-Model-01.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/freeze-vegetable.webp",
+        "dosya": "gorseller/leylak/freeze-vegetable.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Manolya-Night-Blind.webp",
+        "dosya": "gorseller/leylak/Manolya-Night-Blind.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Manolya-Glass-Sliding-Cover.webp",
+        "dosya": "gorseller/leylak/Manolya-Glass-Sliding-Cover.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/Wire-Base-1.webp",
+        "dosya": "gorseller/leylak/Wire-Base-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Manolya-Wire-Product-Divider.webp",
+        "dosya": "gorseller/leylak/Manolya-Wire-Product-Divider.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/leylak/pdf-icon.webp"
+      }
+    ],
+    "teknikCizim": []
+  }
+}

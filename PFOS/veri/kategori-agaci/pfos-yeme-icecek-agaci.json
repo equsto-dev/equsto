@@ -1,0 +1,1091 @@
+{
+  "version": "1",
+  "alan": "yeme-icecek",
+  "aciklama": "PFOS konsept ve teklif motoru için yeme-içecek alan ağacı",
+  "guncelleme": "2026-05-24T18:34:08.649016+00:00",
+  "agac": {
+    "id": "yeme-icecek",
+    "ad": "Yeme-İçecek",
+    "tip": "kok",
+    "cocuklar": [
+      {
+        "id": "fast-food",
+        "ad": "Fast food",
+        "tip": "ust-segment",
+        "cocuklar": [
+          {
+            "id": "fast_food",
+            "ad": "Fast food / QSR",
+            "tip": "konsept",
+            "motorSlug": null,
+            "dukkanSecim": "Fast food",
+            "m2Min": 40,
+            "m2Max": 200,
+            "teklifKaynagi": "planlanan",
+            "bantlar": [],
+            "durum": "planlanan",
+            "ornekMarkalar": [
+              {
+                "ad": "Burger King",
+                "kaynakId": "kanyon",
+                "id": "burger-king-levent-kanyon-avm-istanbul"
+              },
+              {
+                "ad": "Carluccios",
+                "kaynakId": "kanyon",
+                "id": "carluccios-levent-kanyon-avm-istanbul"
+              },
+              {
+                "ad": "New Franks Hot Dog",
+                "kaynakId": "kanyon",
+                "id": "new-franks-hot-dog-levent-kanyon-avm-istanbul"
+              },
+              {
+                "ad": "Shake Shack",
+                "kaynakId": "kanyon",
+                "id": "shake-shack-levent-kanyon-avm-istanbul"
+              },
+              {
+                "ad": "Arby's",
+                "kaynakId": "zorlu",
+                "id": "arbys"
+              },
+              {
+                "ad": "Burger King",
+                "kaynakId": "zorlu",
+                "id": "burger-king"
+              },
+              {
+                "ad": "Carl's Jr.",
+                "kaynakId": "zorlu",
+                "id": "carls-jr"
+              },
+              {
+                "ad": "McDonald's",
+                "kaynakId": "zorlu",
+                "id": "mcdonalds"
+              },
+              {
+                "ad": "Popeyes",
+                "kaynakId": "zorlu",
+                "id": "popeyes"
+              },
+              {
+                "ad": "Really Fried Chicken",
+                "kaynakId": "zorlu",
+                "id": "really-fried-chicken"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "kafe",
+        "ad": "Kafe",
+        "tip": "ust-segment",
+        "cocuklar": [
+          {
+            "id": "coffee_shop",
+            "ad": "Coffee Shop",
+            "tip": "konsept",
+            "motorSlug": "coffee-shop",
+            "dukkanSecim": "Coffee Shop",
+            "m2Min": 60,
+            "m2Max": 300,
+            "teklifKaynagi": "referans-json",
+            "bantlar": [
+              "referans"
+            ],
+            "durum": "aktif",
+            "ornekMarkalar": [
+              {
+                "ad": "Espressamente Illy",
+                "kaynakId": "kanyon",
+                "id": "espressamente-illy-levent-kanyon-avm-istanbul"
+              },
+              {
+                "ad": "Kahve Dünyası",
+                "kaynakId": "kanyon",
+                "id": "kahve-dunyasi-levent-kanyon-avm-istanbul"
+              },
+              {
+                "ad": "Petra Roasting Co",
+                "kaynakId": "kanyon",
+                "id": "petra-roasting-co-levent-kanyon-avm-istanbul"
+              },
+              {
+                "ad": "Selamlique",
+                "kaynakId": "kanyon",
+                "id": "selamlique-levent-kanyon-avm-istanbul"
+              },
+              {
+                "ad": "Starbucks",
+                "kaynakId": "kanyon",
+                "id": "starbucks-levent-kanyon-avm-istanbul"
+              },
+              {
+                "ad": "The House Cafe",
+                "kaynakId": "kanyon",
+                "id": "the-house-cafe-levent-kanyon-avm-istanbul"
+              },
+              {
+                "ad": "Yoort",
+                "kaynakId": "kanyon",
+                "id": "yoort-levent-kanyon-avm-istanbul"
+              },
+              {
+                "ad": "Caffe Nero",
+                "kaynakId": "zorlu",
+                "id": "caffe-nero"
+              },
+              {
+                "ad": "Cup of Joy",
+                "kaynakId": "zorlu",
+                "id": "cup-of-joy"
+              },
+              {
+                "ad": "Günaydın Kasap & Steak House",
+                "kaynakId": "zorlu",
+                "id": "gunaydin-kasap-steak-house"
+              },
+              {
+                "ad": "Kronotrop",
+                "kaynakId": "zorlu",
+                "id": "kronotrop"
+              },
+              {
+                "ad": "Melez Tea",
+                "kaynakId": "zorlu",
+                "id": "melez-tea"
+              },
+              {
+                "ad": "Nespresso",
+                "kaynakId": "zorlu",
+                "id": "nespresso"
+              },
+              {
+                "ad": "Starbucks",
+                "kaynakId": "zorlu",
+                "id": "starbucks"
+              },
+              {
+                "ad": "Voi Coffee Company",
+                "kaynakId": "zorlu",
+                "id": "voi-coffee-company"
+              }
+            ]
+          },
+          {
+            "id": "pastane",
+            "ad": "Pastane / Fırın",
+            "tip": "konsept",
+            "motorSlug": null,
+            "dukkanSecim": "Pastane",
+            "m2Min": 40,
+            "m2Max": 150,
+            "teklifKaynagi": "planlanan",
+            "bantlar": [],
+            "durum": "planlanan",
+            "ornekMarkalar": [
+              {
+                "ad": "Backhaus",
+                "kaynakId": "kanyon",
+                "id": "backhaus-levent-kanyon-avm-istanbul"
+              },
+              {
+                "ad": "Krispy Kreme Kanyon Avm",
+                "kaynakId": "kanyon",
+                "id": "krispy-kreme-kanyon-avm-levent-kanyon-avm-istanbul"
+              },
+              {
+                "ad": "Krispy Kreme",
+                "kaynakId": "kanyon",
+                "id": "krispy-kreme-levent-kanyon-avm-istanbul"
+              },
+              {
+                "ad": "Godiva",
+                "kaynakId": "zorlu",
+                "id": "godiva"
+              },
+              {
+                "ad": "Marie Antoinette Chocolatier",
+                "kaynakId": "zorlu",
+                "id": "marie-antoinette-chocolatier"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "restaurant",
+        "ad": "Restaurant",
+        "tip": "ust-segment",
+        "cocuklar": [
+          {
+            "id": "restaurant_steakhouse",
+            "ad": "Steakhouse",
+            "tip": "konsept",
+            "motorSlug": "steakhouse",
+            "dukkanSecim": "Steakhouse",
+            "m2Min": 80,
+            "m2Max": 250,
+            "teklifKaynagi": "pfos-referans",
+            "bantlar": [
+              "80-150",
+              "150-250"
+            ],
+            "durum": "aktif",
+            "ornekMarkalar": [
+              {
+                "ad": "Nusret",
+                "kaynakId": "kanyon",
+                "id": "nusret-levent-kanyon-avm-istanbul"
+              },
+              {
+                "ad": "Ranchero",
+                "kaynakId": "zorlu",
+                "id": "ranchero"
+              },
+              {
+                "ad": "Welldone",
+                "kaynakId": "zorlu",
+                "id": "welldone"
+              }
+            ]
+          },
+          {
+            "id": "restaurant_balik",
+            "ad": "Balıkçı / Balık restoran",
+            "tip": "konsept",
+            "motorSlug": "balikci",
+            "dukkanSecim": "Balık Restaurant",
+            "m2Min": 80,
+            "m2Max": 250,
+            "teklifKaynagi": "pfos-referans",
+            "bantlar": [
+              "mahalle",
+              "80-150",
+              "150-250"
+            ],
+            "durum": "aktif",
+            "ornekMarkalar": [
+              {
+                "ad": "Sushico",
+                "kaynakId": "kanyon",
+                "id": "sushico-levent-kanyon-avm-istanbul"
+              },
+              {
+                "ad": "Sakhalin İstanbul",
+                "kaynakId": "zorlu",
+                "id": "sakhalin-istanbul"
+              },
+              {
+                "ad": "SushiCo",
+                "kaynakId": "zorlu",
+                "id": "sushico"
+              }
+            ]
+          },
+          {
+            "id": "restaurant_kebap",
+            "ad": "Kebap & Ortadoğu",
+            "tip": "konsept",
+            "motorSlug": "kebap-ortadogu",
+            "dukkanSecim": "Kebapçı",
+            "m2Min": 200,
+            "m2Max": 300,
+            "teklifKaynagi": "motor-sablon",
+            "bantlar": [],
+            "durum": "aktif",
+            "ornekMarkalar": [
+              {
+                "ad": "Dürümle",
+                "kaynakId": "zorlu",
+                "id": "durumle"
+              },
+              {
+                "ad": "Günaydın Köfte&Döner",
+                "kaynakId": "zorlu",
+                "id": "gunaydin-kofte-doner"
+              },
+              {
+                "ad": "Pidem",
+                "kaynakId": "zorlu",
+                "id": "pidem"
+              },
+              {
+                "ad": "Ramiz",
+                "kaynakId": "zorlu",
+                "id": "ramiz"
+              },
+              {
+                "ad": "Usta Dönerci",
+                "kaynakId": "zorlu",
+                "id": "usta-donerci"
+              },
+              {
+                "ad": "Ziyafe Kayseri Mutfağı",
+                "kaynakId": "zorlu",
+                "id": "ziyafe-kayseri-mutfagi"
+              }
+            ]
+          },
+          {
+            "id": "pizzaci",
+            "ad": "Pizzacı",
+            "tip": "konsept",
+            "motorSlug": "pizzaci",
+            "dukkanSecim": "Pizzacı",
+            "m2Min": 80,
+            "m2Max": 300,
+            "teklifKaynagi": "motor-sablon",
+            "bantlar": [],
+            "durum": "motor",
+            "ornekMarkalar": [
+              {
+                "ad": "Eataly",
+                "kaynakId": "zorlu",
+                "id": "eataly"
+              }
+            ]
+          },
+          {
+            "id": "turk_restoran",
+            "ad": "Türk Restoranı",
+            "tip": "konsept",
+            "motorSlug": "turk-restoran",
+            "dukkanSecim": "Türk Restoranı",
+            "m2Min": 100,
+            "m2Max": 500,
+            "teklifKaynagi": "motor-sablon",
+            "bantlar": [],
+            "durum": "motor",
+            "ornekMarkalar": [
+              {
+                "ad": "Edirne Kırkpınar Lokantası",
+                "kaynakId": "kanyon",
+                "id": "edirne-kirkpinar-lokantasi-levent-kanyon-avm-istanbul"
+              },
+              {
+                "ad": "Galata Muhallebicisi",
+                "kaynakId": "kanyon",
+                "id": "galata-muhallebicisi-levent-kanyon-avm-istanbul"
+              },
+              {
+                "ad": "Gram",
+                "kaynakId": "kanyon",
+                "id": "gram-levent-kanyon-avm-istanbul"
+              },
+              {
+                "ad": "Konyalı",
+                "kaynakId": "kanyon",
+                "id": "konyali-levent-kanyon-avm-istanbul"
+              },
+              {
+                "ad": "Saray Muhallebicisi",
+                "kaynakId": "kanyon",
+                "id": "saray-muhallebicisi-levent-kanyon-avm-istanbul"
+              },
+              {
+                "ad": "Morini",
+                "kaynakId": "zorlu",
+                "id": "morini"
+              },
+              {
+                "ad": "Saray Muhallebicisi",
+                "kaynakId": "zorlu",
+                "id": "saray-muhallebicisi"
+              },
+              {
+                "ad": "Tavuk Dünyası",
+                "kaynakId": "zorlu",
+                "id": "tavuk-dunyasi"
+              }
+            ]
+          },
+          {
+            "id": "meyhane",
+            "ad": "Meyhane / Mezeli",
+            "tip": "konsept",
+            "motorSlug": "meyhane",
+            "dukkanSecim": "Meyhane",
+            "m2Min": 100,
+            "m2Max": 500,
+            "teklifKaynagi": "motor-sablon",
+            "bantlar": [],
+            "durum": "motor",
+            "ornekMarkalar": [
+              {
+                "ad": "Walkers Bar",
+                "kaynakId": "zorlu",
+                "id": "walkers-bar"
+              }
+            ]
+          },
+          {
+            "id": "all_day_dining",
+            "ad": "All Day Dining / Cafe",
+            "tip": "konsept",
+            "motorSlug": "all-day-dining-cafe",
+            "dukkanSecim": "All Dining Cafe",
+            "m2Min": 150,
+            "m2Max": 400,
+            "teklifKaynagi": "motor-sablon",
+            "bantlar": [],
+            "durum": "motor",
+            "ornekMarkalar": [
+              {
+                "ad": "Fauchon",
+                "kaynakId": "kanyon",
+                "id": "fauchon-levent-kanyon-avm-istanbul"
+              },
+              {
+                "ad": "BigChefs",
+                "kaynakId": "zorlu",
+                "id": "bigchefs"
+              },
+              {
+                "ad": "Cantinery",
+                "kaynakId": "zorlu",
+                "id": "cantinery"
+              },
+              {
+                "ad": "Fauchon Paris",
+                "kaynakId": "zorlu",
+                "id": "fauchon-paris"
+              },
+              {
+                "ad": "Happy Moon's",
+                "kaynakId": "zorlu",
+                "id": "happy-moons"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "konseptler": [
+    {
+      "id": "restaurant_steakhouse",
+      "ad": "Steakhouse",
+      "ustSegment": "Restaurant",
+      "motorSlug": "steakhouse",
+      "dukkanSecim": "Steakhouse",
+      "m2Min": 80,
+      "m2Max": 250,
+      "teklifKaynagi": "pfos-referans",
+      "bantlar": [
+        "80-150",
+        "150-250"
+      ],
+      "durum": "aktif",
+      "ornekMarkalar": [
+        {
+          "ad": "Nusret",
+          "kaynakId": "kanyon",
+          "id": "nusret-levent-kanyon-avm-istanbul"
+        },
+        {
+          "ad": "Ranchero",
+          "kaynakId": "zorlu",
+          "id": "ranchero"
+        },
+        {
+          "ad": "Welldone",
+          "kaynakId": "zorlu",
+          "id": "welldone"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_balik",
+      "ad": "Balıkçı / Balık restoran",
+      "ustSegment": "Restaurant",
+      "motorSlug": "balikci",
+      "dukkanSecim": "Balık Restaurant",
+      "dukkanAltTipler": [
+        "Mahalle balıkçısı",
+        "Balık Restaurant",
+        "Balık lokantası"
+      ],
+      "m2Min": 80,
+      "m2Max": 250,
+      "teklifKaynagi": "pfos-referans",
+      "bantlar": [
+        "mahalle",
+        "80-150",
+        "150-250"
+      ],
+      "durum": "aktif",
+      "ornekMarkalar": [
+        {
+          "ad": "Sushico",
+          "kaynakId": "kanyon",
+          "id": "sushico-levent-kanyon-avm-istanbul"
+        },
+        {
+          "ad": "Sakhalin İstanbul",
+          "kaynakId": "zorlu",
+          "id": "sakhalin-istanbul"
+        },
+        {
+          "ad": "SushiCo",
+          "kaynakId": "zorlu",
+          "id": "sushico"
+        }
+      ]
+    },
+    {
+      "id": "coffee_shop",
+      "ad": "Coffee Shop",
+      "ustSegment": "Kafe",
+      "motorSlug": "coffee-shop",
+      "dukkanSecim": "Coffee Shop",
+      "m2Min": 60,
+      "m2Max": 300,
+      "teklifKaynagi": "referans-json",
+      "bantlar": [
+        "referans"
+      ],
+      "durum": "aktif",
+      "ornekMarkalar": [
+        {
+          "ad": "Espressamente Illy",
+          "kaynakId": "kanyon",
+          "id": "espressamente-illy-levent-kanyon-avm-istanbul"
+        },
+        {
+          "ad": "Kahve Dünyası",
+          "kaynakId": "kanyon",
+          "id": "kahve-dunyasi-levent-kanyon-avm-istanbul"
+        },
+        {
+          "ad": "Petra Roasting Co",
+          "kaynakId": "kanyon",
+          "id": "petra-roasting-co-levent-kanyon-avm-istanbul"
+        },
+        {
+          "ad": "Selamlique",
+          "kaynakId": "kanyon",
+          "id": "selamlique-levent-kanyon-avm-istanbul"
+        },
+        {
+          "ad": "Starbucks",
+          "kaynakId": "kanyon",
+          "id": "starbucks-levent-kanyon-avm-istanbul"
+        },
+        {
+          "ad": "The House Cafe",
+          "kaynakId": "kanyon",
+          "id": "the-house-cafe-levent-kanyon-avm-istanbul"
+        },
+        {
+          "ad": "Yoort",
+          "kaynakId": "kanyon",
+          "id": "yoort-levent-kanyon-avm-istanbul"
+        },
+        {
+          "ad": "Caffe Nero",
+          "kaynakId": "zorlu",
+          "id": "caffe-nero"
+        },
+        {
+          "ad": "Cup of Joy",
+          "kaynakId": "zorlu",
+          "id": "cup-of-joy"
+        },
+        {
+          "ad": "Günaydın Kasap & Steak House",
+          "kaynakId": "zorlu",
+          "id": "gunaydin-kasap-steak-house"
+        },
+        {
+          "ad": "Kronotrop",
+          "kaynakId": "zorlu",
+          "id": "kronotrop"
+        },
+        {
+          "ad": "Melez Tea",
+          "kaynakId": "zorlu",
+          "id": "melez-tea"
+        },
+        {
+          "ad": "Nespresso",
+          "kaynakId": "zorlu",
+          "id": "nespresso"
+        },
+        {
+          "ad": "Starbucks",
+          "kaynakId": "zorlu",
+          "id": "starbucks"
+        },
+        {
+          "ad": "Voi Coffee Company",
+          "kaynakId": "zorlu",
+          "id": "voi-coffee-company"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_kebap",
+      "ad": "Kebap & Ortadoğu",
+      "ustSegment": "Restaurant",
+      "motorSlug": "kebap-ortadogu",
+      "dukkanSecim": "Kebapçı",
+      "m2Min": 200,
+      "m2Max": 300,
+      "teklifKaynagi": "motor-sablon",
+      "bantlar": [],
+      "durum": "aktif",
+      "ornekMarkalar": [
+        {
+          "ad": "Dürümle",
+          "kaynakId": "zorlu",
+          "id": "durumle"
+        },
+        {
+          "ad": "Günaydın Köfte&Döner",
+          "kaynakId": "zorlu",
+          "id": "gunaydin-kofte-doner"
+        },
+        {
+          "ad": "Pidem",
+          "kaynakId": "zorlu",
+          "id": "pidem"
+        },
+        {
+          "ad": "Ramiz",
+          "kaynakId": "zorlu",
+          "id": "ramiz"
+        },
+        {
+          "ad": "Usta Dönerci",
+          "kaynakId": "zorlu",
+          "id": "usta-donerci"
+        },
+        {
+          "ad": "Ziyafe Kayseri Mutfağı",
+          "kaynakId": "zorlu",
+          "id": "ziyafe-kayseri-mutfagi"
+        }
+      ]
+    },
+    {
+      "id": "pizzaci",
+      "ad": "Pizzacı",
+      "ustSegment": "Restaurant",
+      "motorSlug": "pizzaci",
+      "dukkanSecim": "Pizzacı",
+      "m2Min": 80,
+      "m2Max": 300,
+      "teklifKaynagi": "motor-sablon",
+      "bantlar": [],
+      "durum": "motor",
+      "ornekMarkalar": [
+        {
+          "ad": "Eataly",
+          "kaynakId": "zorlu",
+          "id": "eataly"
+        }
+      ]
+    },
+    {
+      "id": "turk_restoran",
+      "ad": "Türk Restoranı",
+      "ustSegment": "Restaurant",
+      "motorSlug": "turk-restoran",
+      "dukkanSecim": "Türk Restoranı",
+      "m2Min": 100,
+      "m2Max": 500,
+      "teklifKaynagi": "motor-sablon",
+      "bantlar": [],
+      "durum": "motor",
+      "ornekMarkalar": [
+        {
+          "ad": "Edirne Kırkpınar Lokantası",
+          "kaynakId": "kanyon",
+          "id": "edirne-kirkpinar-lokantasi-levent-kanyon-avm-istanbul"
+        },
+        {
+          "ad": "Galata Muhallebicisi",
+          "kaynakId": "kanyon",
+          "id": "galata-muhallebicisi-levent-kanyon-avm-istanbul"
+        },
+        {
+          "ad": "Gram",
+          "kaynakId": "kanyon",
+          "id": "gram-levent-kanyon-avm-istanbul"
+        },
+        {
+          "ad": "Konyalı",
+          "kaynakId": "kanyon",
+          "id": "konyali-levent-kanyon-avm-istanbul"
+        },
+        {
+          "ad": "Saray Muhallebicisi",
+          "kaynakId": "kanyon",
+          "id": "saray-muhallebicisi-levent-kanyon-avm-istanbul"
+        },
+        {
+          "ad": "Morini",
+          "kaynakId": "zorlu",
+          "id": "morini"
+        },
+        {
+          "ad": "Saray Muhallebicisi",
+          "kaynakId": "zorlu",
+          "id": "saray-muhallebicisi"
+        },
+        {
+          "ad": "Tavuk Dünyası",
+          "kaynakId": "zorlu",
+          "id": "tavuk-dunyasi"
+        }
+      ]
+    },
+    {
+      "id": "meyhane",
+      "ad": "Meyhane / Mezeli",
+      "ustSegment": "Restaurant",
+      "motorSlug": "meyhane",
+      "dukkanSecim": "Meyhane",
+      "m2Min": 100,
+      "m2Max": 500,
+      "teklifKaynagi": "motor-sablon",
+      "bantlar": [],
+      "durum": "motor",
+      "ornekMarkalar": [
+        {
+          "ad": "Walkers Bar",
+          "kaynakId": "zorlu",
+          "id": "walkers-bar"
+        }
+      ]
+    },
+    {
+      "id": "all_day_dining",
+      "ad": "All Day Dining / Cafe",
+      "ustSegment": "Restaurant",
+      "motorSlug": "all-day-dining-cafe",
+      "dukkanSecim": "All Dining Cafe",
+      "m2Min": 150,
+      "m2Max": 400,
+      "teklifKaynagi": "motor-sablon",
+      "bantlar": [],
+      "durum": "motor",
+      "ornekMarkalar": [
+        {
+          "ad": "Fauchon",
+          "kaynakId": "kanyon",
+          "id": "fauchon-levent-kanyon-avm-istanbul"
+        },
+        {
+          "ad": "BigChefs",
+          "kaynakId": "zorlu",
+          "id": "bigchefs"
+        },
+        {
+          "ad": "Cantinery",
+          "kaynakId": "zorlu",
+          "id": "cantinery"
+        },
+        {
+          "ad": "Fauchon Paris",
+          "kaynakId": "zorlu",
+          "id": "fauchon-paris"
+        },
+        {
+          "ad": "Happy Moon's",
+          "kaynakId": "zorlu",
+          "id": "happy-moons"
+        }
+      ]
+    },
+    {
+      "id": "fast_food",
+      "ad": "Fast food / QSR",
+      "ustSegment": "Fast food",
+      "motorSlug": null,
+      "dukkanSecim": "Fast food",
+      "m2Min": 40,
+      "m2Max": 200,
+      "teklifKaynagi": "planlanan",
+      "bantlar": [],
+      "durum": "planlanan",
+      "ornekMarkalar": [
+        {
+          "ad": "Burger King",
+          "kaynakId": "kanyon",
+          "id": "burger-king-levent-kanyon-avm-istanbul"
+        },
+        {
+          "ad": "Carluccios",
+          "kaynakId": "kanyon",
+          "id": "carluccios-levent-kanyon-avm-istanbul"
+        },
+        {
+          "ad": "New Franks Hot Dog",
+          "kaynakId": "kanyon",
+          "id": "new-franks-hot-dog-levent-kanyon-avm-istanbul"
+        },
+        {
+          "ad": "Shake Shack",
+          "kaynakId": "kanyon",
+          "id": "shake-shack-levent-kanyon-avm-istanbul"
+        },
+        {
+          "ad": "Arby's",
+          "kaynakId": "zorlu",
+          "id": "arbys"
+        },
+        {
+          "ad": "Burger King",
+          "kaynakId": "zorlu",
+          "id": "burger-king"
+        },
+        {
+          "ad": "Carl's Jr.",
+          "kaynakId": "zorlu",
+          "id": "carls-jr"
+        },
+        {
+          "ad": "McDonald's",
+          "kaynakId": "zorlu",
+          "id": "mcdonalds"
+        },
+        {
+          "ad": "Popeyes",
+          "kaynakId": "zorlu",
+          "id": "popeyes"
+        },
+        {
+          "ad": "Really Fried Chicken",
+          "kaynakId": "zorlu",
+          "id": "really-fried-chicken"
+        }
+      ]
+    },
+    {
+      "id": "pastane",
+      "ad": "Pastane / Fırın",
+      "ustSegment": "Kafe",
+      "motorSlug": null,
+      "dukkanSecim": "Pastane",
+      "m2Min": 40,
+      "m2Max": 150,
+      "teklifKaynagi": "planlanan",
+      "bantlar": [],
+      "durum": "planlanan",
+      "ornekMarkalar": [
+        {
+          "ad": "Backhaus",
+          "kaynakId": "kanyon",
+          "id": "backhaus-levent-kanyon-avm-istanbul"
+        },
+        {
+          "ad": "Krispy Kreme Kanyon Avm",
+          "kaynakId": "kanyon",
+          "id": "krispy-kreme-kanyon-avm-levent-kanyon-avm-istanbul"
+        },
+        {
+          "ad": "Krispy Kreme",
+          "kaynakId": "kanyon",
+          "id": "krispy-kreme-levent-kanyon-avm-istanbul"
+        },
+        {
+          "ad": "Godiva",
+          "kaynakId": "zorlu",
+          "id": "godiva"
+        },
+        {
+          "ad": "Marie Antoinette Chocolatier",
+          "kaynakId": "zorlu",
+          "id": "marie-antoinette-chocolatier"
+        }
+      ]
+    }
+  ],
+  "ornekKaynaklari": [
+    {
+      "kaynakId": "zorlu",
+      "dosya": "ornekler/zorlu-yeme-icecek.json"
+    },
+    {
+      "kaynakId": "kanyon",
+      "dosya": "ornekler/kanyon-yeme-icecek.json"
+    }
+  ],
+  "eslesmeyenOrnekler": [
+    {
+      "ad": "Can Oba",
+      "kaynakId": "kanyon"
+    },
+    {
+      "ad": "Dean & Deluca",
+      "kaynakId": "kanyon"
+    },
+    {
+      "ad": "Fun Gate",
+      "kaynakId": "kanyon"
+    },
+    {
+      "ad": "Gina",
+      "kaynakId": "kanyon"
+    },
+    {
+      "ad": "Haagen Dazs",
+      "kaynakId": "kanyon"
+    },
+    {
+      "ad": "Kitchenette",
+      "kaynakId": "kanyon"
+    },
+    {
+      "ad": "Le Pain Quotidien",
+      "kaynakId": "kanyon"
+    },
+    {
+      "ad": "Macro Center Snack Bar",
+      "kaynakId": "kanyon"
+    },
+    {
+      "ad": "Macrocenter Snack Bar",
+      "kaynakId": "kanyon"
+    },
+    {
+      "ad": "Mahal Restaurant Kanyon",
+      "kaynakId": "kanyon"
+    },
+    {
+      "ad": "Mahal",
+      "kaynakId": "kanyon"
+    },
+    {
+      "ad": "Mezzaluna Express",
+      "kaynakId": "kanyon"
+    },
+    {
+      "ad": "Midpoint",
+      "kaynakId": "kanyon"
+    },
+    {
+      "ad": "Numnum",
+      "kaynakId": "kanyon"
+    },
+    {
+      "ad": "Papabubble",
+      "kaynakId": "kanyon"
+    },
+    {
+      "ad": "Pinkberry",
+      "kaynakId": "kanyon"
+    },
+    {
+      "ad": "Sosa",
+      "kaynakId": "kanyon"
+    },
+    {
+      "ad": "Tchibo",
+      "kaynakId": "kanyon"
+    },
+    {
+      "ad": "Wagamama",
+      "kaynakId": "kanyon"
+    },
+    {
+      "ad": "Arifoğlu",
+      "kaynakId": "zorlu"
+    },
+    {
+      "ad": "Bakırkazan",
+      "kaynakId": "zorlu"
+    },
+    {
+      "ad": "Bardot",
+      "kaynakId": "zorlu"
+    },
+    {
+      "ad": "Bites & Beats",
+      "kaynakId": "zorlu"
+    },
+    {
+      "ad": "Coni & Co",
+      "kaynakId": "zorlu"
+    },
+    {
+      "ad": "Doyuyo",
+      "kaynakId": "zorlu"
+    },
+    {
+      "ad": "Five O'Clock",
+      "kaynakId": "zorlu"
+    },
+    {
+      "ad": "Green Salads",
+      "kaynakId": "zorlu"
+    },
+    {
+      "ad": "Hello Sweetie",
+      "kaynakId": "zorlu"
+    },
+    {
+      "ad": "Le Baron",
+      "kaynakId": "zorlu"
+    },
+    {
+      "ad": "MOC",
+      "kaynakId": "zorlu"
+    },
+    {
+      "ad": "Nev İstanbul",
+      "kaynakId": "zorlu"
+    },
+    {
+      "ad": "Parle",
+      "kaynakId": "zorlu"
+    },
+    {
+      "ad": "Plus Kitchen",
+      "kaynakId": "zorlu"
+    },
+    {
+      "ad": "Rey Organic",
+      "kaynakId": "zorlu"
+    },
+    {
+      "ad": "Sail Loft Vakkorama",
+      "kaynakId": "zorlu"
+    },
+    {
+      "ad": "Sosa",
+      "kaynakId": "zorlu"
+    },
+    {
+      "ad": "Tahin",
+      "kaynakId": "zorlu"
+    },
+    {
+      "ad": "Terrazza Italia",
+      "kaynakId": "zorlu"
+    },
+    {
+      "ad": "The Grungy",
+      "kaynakId": "zorlu"
+    },
+    {
+      "ad": "Vakko L'Atelier",
+      "kaynakId": "zorlu"
+    },
+    {
+      "ad": "Zula",
+      "kaynakId": "zorlu"
+    }
+  ],
+  "ozet": {
+    "konseptSayisi": 10,
+    "aktifMotor": 4,
+    "ornekToplam": 98,
+    "eslesmeyen": 41
+  }
+}

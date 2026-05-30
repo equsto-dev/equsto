@@ -1,0 +1,57 @@
+{
+  "slug": "sardunya",
+  "baslik": "SARDUNYA",
+  "tip": "seri",
+  "ustSeriSlug": null,
+  "kategoriler": [
+    "serve-over-cabinets"
+  ],
+  "kapak": "https:\\/\\/caglayanrefrigeration.com\\/wp-content\\/uploads\\/2023\\/05\\/Sardunya-Kapak.webp",
+  "kapakYol": "gorseller/sardunya/Sardunya-Kapak.webp",
+  "linkKaynak": "https://caglayanrefrigeration.com/tr/product/sardunya/",
+  "cocuklar": [
+    {
+      "slug": "sardunya-gl",
+      "ad": "SARDUNYA GL",
+      "link": "https://caglayanrefrigeration.com/tr/product/sardunya-gl/",
+      "kapak": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-GL-Kapak.webp",
+      "kapakYol": "gorseller/sardunya/Sardunya-GL-Kapak.webp"
+    },
+    {
+      "slug": "sardunya-lm",
+      "ad": "SARDUNYA LM",
+      "link": "https://caglayanrefrigeration.com/tr/product/sardunya-lm/",
+      "kapak": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Kapak.webp",
+      "kapakYol": "gorseller/sardunya/Sardunya-Kapak.webp"
+    }
+  ],
+  "ozellikler": [],
+  "teknik": {
+    "akordeon": [],
+    "sekmeler": [],
+    "tablolar": []
+  },
+  "gorseller": {
+    "tum": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-GL-Kapak.webp",
+        "dosya": "gorseller/sardunya/Sardunya-GL-Kapak.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Kapak.webp",
+        "dosya": "gorseller/sardunya/Sardunya-Kapak.webp"
+      }
+    ],
+    "urun": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-GL-Kapak.webp",
+        "dosya": "gorseller/sardunya/Sardunya-GL-Kapak.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Kapak.webp",
+        "dosya": "gorseller/sardunya/Sardunya-Kapak.webp"
+      }
+    ],
+    "teknikCizim": []
+  }
+}

@@ -29,7 +29,7 @@ Yerel geliştirmede token yoksa `equsto2025` denenebilir (`lib/auth.ts`).
 | **Setler** | `eqSets[]` | Ürün paketleri (ör. “Steakhouse 115 m² — pişirme seti”) | `admin.html` → Ekipman setleri |
 | **Kurallar** | `rules[]` | “Şu konsept + şu cevaplar → şu set” | `admin.html` → Kurallar |
 
-**Steakhouse / Balıkçı m² listeleri** (Excel): `/yonetim/pfos` → **Kategoriler** → `pfos-referans/*.json` (referans ekipman satırları). Bu, `shopTypes` / `rules` ile aynı şey değil; ileride motora bağlanacak.
+**Steakhouse / Balıkçı m² listeleri** (Excel): `/yonetim/pfos` → **Kategoriler** → `pfos-referans/*.json`. Motor: `steakhouse` / `balikci` konseptleri `POST /api/pfos/quote` ile bu listelerden teklif üretir (`pfos.html` → `EqustoPfosTemplateApi`).
 
 ---
 

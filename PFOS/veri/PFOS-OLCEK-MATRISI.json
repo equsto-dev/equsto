@@ -1,0 +1,1520 @@
+{
+  "version": "1.0",
+  "aciklama": "PFOS veri arşivi referans m² → wizard hedef m² ölçek önerisi (taslak, canlı motor değil)",
+  "wizardM2": {
+    "min": 20,
+    "max": 1000,
+    "presets": [
+      20,
+      45,
+      80,
+      120,
+      150,
+      180,
+      250,
+      350,
+      500,
+      750,
+      1000
+    ]
+  },
+  "kurallar": {
+    "alanDagitimi": "bolumM2_hedef = bolumM2_referans × alanCarpani",
+    "adetGenel": "adet_hedef = max(1, round(adet_referans × adetCarpaniOneri))",
+    "singleton": "panel soğuk oda, davlumbaz, kasa: referans 1 ise hedef≤1.5× referansta 1 kalır",
+    "depoRaf": "istif rafı / raf: tam orantılı"
+  },
+  "konseptler": [
+    {
+      "slug": "03-italyan",
+      "label": "İTALYAN",
+      "band": null,
+      "planDosya": "ITALYAN-PLAN.pdf",
+      "listeDosya": "03-italyan-ekipman-listesi.xlsx",
+      "birlesikDosya": "03-ITALYAN-PLAN-birlesik.xlsx",
+      "planM2Baslik": 57.7,
+      "planM2EtiketToplami": 140.7,
+      "referansM2": 180,
+      "referansM2Kaynak": "proje-notu",
+      "ekipmanKalem": 86,
+      "toplamAdet": 104,
+      "planPozSayisi": 87,
+      "eslesenPoz": 86,
+      "plandaListeYok": [],
+      "plandaFazla": [
+        "B3"
+      ],
+      "eslesmeOrani": 1.0,
+      "durum": "kısmi",
+      "olcekBantlari": [
+        {
+          "hedefM2": 20,
+          "alanCarpani": 0.111,
+          "adetCarpaniOneri": 0.154,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 45,
+          "alanCarpani": 0.25,
+          "adetCarpaniOneri": 0.308,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 80,
+          "alanCarpani": 0.444,
+          "adetCarpaniOneri": 0.502,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 120,
+          "alanCarpani": 0.667,
+          "adetCarpaniOneri": 0.709,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 150,
+          "alanCarpani": 0.833,
+          "adetCarpaniOneri": 0.856,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 180,
+          "alanCarpani": 1.0,
+          "adetCarpaniOneri": 1.0,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 250,
+          "alanCarpani": 1.389,
+          "adetCarpaniOneri": 1.322,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 350,
+          "alanCarpani": 1.944,
+          "adetCarpaniOneri": 1.944,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 500,
+          "alanCarpani": 2.778,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 750,
+          "alanCarpani": 4.167,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 1000,
+          "alanCarpani": 5.556,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        }
+      ]
+    },
+    {
+      "slug": "06-sushi",
+      "label": "SUSHI",
+      "band": null,
+      "planDosya": "SUSHI.-PLANpdf.pdf",
+      "listeDosya": "06-SUSHI-ekipman-listesi.xlsx",
+      "birlesikDosya": "06-SUSHI-PLAN-birlesik.xlsx",
+      "planM2Baslik": 20.1,
+      "planM2EtiketToplami": 20.1,
+      "referansM2": 20.1,
+      "referansM2Kaynak": "plan-baslik",
+      "ekipmanKalem": 27,
+      "toplamAdet": 33,
+      "planPozSayisi": 24,
+      "eslesenPoz": 24,
+      "plandaListeYok": [
+        "A1",
+        "B1",
+        "B2"
+      ],
+      "plandaFazla": [],
+      "eslesmeOrani": 0.889,
+      "durum": "tam",
+      "olcekBantlari": [
+        {
+          "hedefM2": 20,
+          "alanCarpani": 0.995,
+          "adetCarpaniOneri": 0.996,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 45,
+          "alanCarpani": 2.239,
+          "adetCarpaniOneri": 2.239,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 80,
+          "alanCarpani": 3.98,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 120,
+          "alanCarpani": 5.97,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 150,
+          "alanCarpani": 7.463,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 180,
+          "alanCarpani": 8.955,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 250,
+          "alanCarpani": 12.438,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 350,
+          "alanCarpani": 17.413,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 500,
+          "alanCarpani": 24.876,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 750,
+          "alanCarpani": 37.313,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 1000,
+          "alanCarpani": 49.751,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        }
+      ]
+    },
+    {
+      "slug": "08-hamburger",
+      "label": "HAMBURGER",
+      "band": null,
+      "planDosya": "8 HAMBURGER-PLAN.pdf",
+      "listeDosya": "08-HAMBURGER-ekipman-listesi.xlsx",
+      "birlesikDosya": "08-HAMBURGER-PLAN-birlesik.xlsx",
+      "planM2Baslik": 20.0,
+      "planM2EtiketToplami": 20.0,
+      "referansM2": 20.0,
+      "referansM2Kaynak": "plan-baslik",
+      "ekipmanKalem": 17,
+      "toplamAdet": 0,
+      "planPozSayisi": 0,
+      "eslesenPoz": 0,
+      "plandaListeYok": [
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "plandaFazla": [],
+      "eslesmeOrani": 0.0,
+      "durum": "kısmi",
+      "olcekBantlari": [
+        {
+          "hedefM2": 20,
+          "alanCarpani": 1.0,
+          "adetCarpaniOneri": 1.0,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 45,
+          "alanCarpani": 2.25,
+          "adetCarpaniOneri": 2.25,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 80,
+          "alanCarpani": 4.0,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 120,
+          "alanCarpani": 6.0,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 150,
+          "alanCarpani": 7.5,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 180,
+          "alanCarpani": 9.0,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 250,
+          "alanCarpani": 12.5,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 350,
+          "alanCarpani": 17.5,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 500,
+          "alanCarpani": 25.0,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 750,
+          "alanCarpani": 37.5,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 1000,
+          "alanCarpani": 50.0,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        }
+      ]
+    },
+    {
+      "slug": "11-birahane",
+      "label": "BİRAHANE",
+      "band": null,
+      "planDosya": "11 BIRAHANE-PLAN.pdf",
+      "listeDosya": "11-BIRAHANE-ekipman-listesi.xlsx",
+      "birlesikDosya": "11-BIRAHANE-PLAN-birlesik.xlsx",
+      "planM2Baslik": 57.4,
+      "planM2EtiketToplami": 130.6,
+      "referansM2": 57.4,
+      "referansM2Kaynak": "plan-baslik",
+      "ekipmanKalem": 27,
+      "toplamAdet": 36,
+      "planPozSayisi": 24,
+      "eslesenPoz": 22,
+      "plandaListeYok": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "Y3"
+      ],
+      "plandaFazla": [
+        "H6",
+        "H9"
+      ],
+      "eslesmeOrani": 0.815,
+      "durum": "kısmi",
+      "olcekBantlari": [
+        {
+          "hedefM2": 20,
+          "alanCarpani": 0.348,
+          "adetCarpaniOneri": 0.408,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 45,
+          "alanCarpani": 0.784,
+          "adetCarpaniOneri": 0.813,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 80,
+          "alanCarpani": 1.394,
+          "adetCarpaniOneri": 1.326,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 120,
+          "alanCarpani": 2.091,
+          "adetCarpaniOneri": 2.091,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 150,
+          "alanCarpani": 2.613,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 180,
+          "alanCarpani": 3.136,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 250,
+          "alanCarpani": 4.355,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 350,
+          "alanCarpani": 6.098,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 500,
+          "alanCarpani": 8.711,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 750,
+          "alanCarpani": 13.066,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 1000,
+          "alanCarpani": 17.422,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        }
+      ]
+    },
+    {
+      "slug": "13-hotdog",
+      "label": "HOTDOG",
+      "band": null,
+      "planDosya": "13 HOTDOG-PLAN.pdf",
+      "listeDosya": "13-HOTDOG-ekipman-listesi.xlsx",
+      "birlesikDosya": "13-HOTDOG-PLAN-birlesik.xlsx",
+      "planM2Baslik": 7.7,
+      "planM2EtiketToplami": 7.7,
+      "referansM2": 7.7,
+      "referansM2Kaynak": "plan-baslik",
+      "ekipmanKalem": 16,
+      "toplamAdet": 18,
+      "planPozSayisi": 13,
+      "eslesenPoz": 13,
+      "plandaListeYok": [
+        "A1",
+        "B1",
+        "B2"
+      ],
+      "plandaFazla": [],
+      "eslesmeOrani": 0.812,
+      "durum": "tam",
+      "olcekBantlari": [
+        {
+          "hedefM2": 20,
+          "alanCarpani": 2.597,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 45,
+          "alanCarpani": 5.844,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 80,
+          "alanCarpani": 10.39,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 120,
+          "alanCarpani": 15.584,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 150,
+          "alanCarpani": 19.481,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 180,
+          "alanCarpani": 23.377,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 250,
+          "alanCarpani": 32.468,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 350,
+          "alanCarpani": 45.455,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 500,
+          "alanCarpani": 64.935,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 750,
+          "alanCarpani": 97.403,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 1000,
+          "alanCarpani": 129.87,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        }
+      ]
+    },
+    {
+      "slug": "14-pastane",
+      "label": "PASTANE",
+      "band": null,
+      "planDosya": "14 PASTANE-PLAN.pdf",
+      "listeDosya": "14-PASTANE-ekipman-listesi.xlsx",
+      "birlesikDosya": "14-PASTANE-PLAN-birlesik.xlsx",
+      "planM2Baslik": 14.7,
+      "planM2EtiketToplami": 133.5,
+      "referansM2": 14.7,
+      "referansM2Kaynak": "plan-baslik",
+      "ekipmanKalem": 42,
+      "toplamAdet": 50,
+      "planPozSayisi": 40,
+      "eslesenPoz": 39,
+      "plandaListeYok": [],
+      "plandaFazla": [
+        "A6"
+      ],
+      "eslesmeOrani": 1.0,
+      "durum": "kısmi",
+      "olcekBantlari": [
+        {
+          "hedefM2": 20,
+          "alanCarpani": 1.361,
+          "adetCarpaniOneri": 1.3,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 45,
+          "alanCarpani": 3.061,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 80,
+          "alanCarpani": 5.442,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 120,
+          "alanCarpani": 8.163,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 150,
+          "alanCarpani": 10.204,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 180,
+          "alanCarpani": 12.245,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 250,
+          "alanCarpani": 17.007,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 350,
+          "alanCarpani": 23.81,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 500,
+          "alanCarpani": 34.014,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 750,
+          "alanCarpani": 51.02,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 1000,
+          "alanCarpani": 68.027,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        }
+      ]
+    },
+    {
+      "slug": "17-tavukcu",
+      "label": "TAVUKÇU",
+      "band": null,
+      "planDosya": "17 TAVUKCU-PLAN.pdf",
+      "listeDosya": "17-TAVUKCU-ekipman-listesi.xlsx",
+      "birlesikDosya": "17-TAVUKCU-PLAN-birlesik.xlsx",
+      "planM2Baslik": 16.2,
+      "planM2EtiketToplami": 16.2,
+      "referansM2": 16.2,
+      "referansM2Kaynak": "plan-baslik",
+      "ekipmanKalem": 28,
+      "toplamAdet": 31,
+      "planPozSayisi": 19,
+      "eslesenPoz": 18,
+      "plandaListeYok": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "B1",
+        "B2",
+        "B3",
+        "C15",
+        "C16",
+        "C21"
+      ],
+      "plandaFazla": [
+        "C10"
+      ],
+      "eslesmeOrani": 0.643,
+      "durum": "kısmi",
+      "olcekBantlari": [
+        {
+          "hedefM2": 20,
+          "alanCarpani": 1.235,
+          "adetCarpaniOneri": 1.197,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 45,
+          "alanCarpani": 2.778,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 80,
+          "alanCarpani": 4.938,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 120,
+          "alanCarpani": 7.407,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 150,
+          "alanCarpani": 9.259,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 180,
+          "alanCarpani": 11.111,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 250,
+          "alanCarpani": 15.432,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 350,
+          "alanCarpani": 21.605,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 500,
+          "alanCarpani": 30.864,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 750,
+          "alanCarpani": 46.296,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 1000,
+          "alanCarpani": 61.728,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        }
+      ]
+    },
+    {
+      "slug": "19-thehouse-cafe",
+      "label": "THEHOUSE CAFE",
+      "band": null,
+      "planDosya": "19 THEHOUSE CAFE-PLAN.pdf",
+      "listeDosya": "19-THEHOUSE-CAFE-ekipman-listesi.xlsx",
+      "birlesikDosya": "19-THEHOUSE-CAFE-PLAN-birlesik.xlsx",
+      "planM2Baslik": 190.0,
+      "planM2EtiketToplami": 307.4,
+      "referansM2": 190.0,
+      "referansM2Kaynak": "plan-baslik",
+      "ekipmanKalem": 89,
+      "toplamAdet": 111,
+      "planPozSayisi": 89,
+      "eslesenPoz": 88,
+      "plandaListeYok": [
+        "G11"
+      ],
+      "plandaFazla": [
+        "G12"
+      ],
+      "eslesmeOrani": 0.989,
+      "durum": "kısmi",
+      "olcekBantlari": [
+        {
+          "hedefM2": 20,
+          "alanCarpani": 0.105,
+          "adetCarpaniOneri": 0.147,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 45,
+          "alanCarpani": 0.237,
+          "adetCarpaniOneri": 0.294,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 80,
+          "alanCarpani": 0.421,
+          "adetCarpaniOneri": 0.479,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 120,
+          "alanCarpani": 0.632,
+          "adetCarpaniOneri": 0.677,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 150,
+          "alanCarpani": 0.789,
+          "adetCarpaniOneri": 0.818,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 180,
+          "alanCarpani": 0.947,
+          "adetCarpaniOneri": 0.955,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 250,
+          "alanCarpani": 1.316,
+          "adetCarpaniOneri": 1.263,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 350,
+          "alanCarpani": 1.842,
+          "adetCarpaniOneri": 1.842,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 500,
+          "alanCarpani": 2.632,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 750,
+          "alanCarpani": 3.947,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 1000,
+          "alanCarpani": 5.263,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        }
+      ]
+    },
+    {
+      "slug": "20-dondurmaci-krep",
+      "label": "DONDURMACI-KREP",
+      "band": null,
+      "planDosya": "20 DONDURMACI - KREP-PLAN.pdf",
+      "listeDosya": "20-DONDURMACI---KREP-ekipman-listesi.xlsx",
+      "birlesikDosya": "20-DONDURMACI-KREP-PLAN-birlesik.xlsx",
+      "planM2Baslik": 7.0,
+      "planM2EtiketToplami": 7.0,
+      "referansM2": 7.0,
+      "referansM2Kaynak": "plan-baslik",
+      "ekipmanKalem": 14,
+      "toplamAdet": 19,
+      "planPozSayisi": 12,
+      "eslesenPoz": 12,
+      "plandaListeYok": [
+        "A1",
+        "A2"
+      ],
+      "plandaFazla": [],
+      "eslesmeOrani": 0.857,
+      "durum": "tam",
+      "olcekBantlari": [
+        {
+          "hedefM2": 20,
+          "alanCarpani": 2.857,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 45,
+          "alanCarpani": 6.429,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 80,
+          "alanCarpani": 11.429,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 120,
+          "alanCarpani": 17.143,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 150,
+          "alanCarpani": 21.429,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 180,
+          "alanCarpani": 25.714,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 250,
+          "alanCarpani": 35.714,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 350,
+          "alanCarpani": 50.0,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 500,
+          "alanCarpani": 71.429,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 750,
+          "alanCarpani": 107.143,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 1000,
+          "alanCarpani": 142.857,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        }
+      ]
+    },
+    {
+      "slug": "04-pideci",
+      "label": "PİDECİ",
+      "band": null,
+      "planDosya": "PIDECI-PLAN.pdf",
+      "listeDosya": "PIDECI-ekipman-listesi.xlsx",
+      "birlesikDosya": "04-PIDECI-PLAN-birlesik.xlsx",
+      "planM2Baslik": 33.0,
+      "planM2EtiketToplami": 115.8,
+      "referansM2": 33.0,
+      "referansM2Kaynak": "plan-baslik",
+      "ekipmanKalem": 51,
+      "toplamAdet": 56,
+      "planPozSayisi": 50,
+      "eslesenPoz": 49,
+      "plandaListeYok": [
+        "F13",
+        "F14"
+      ],
+      "plandaFazla": [
+        "G7"
+      ],
+      "eslesmeOrani": 0.961,
+      "durum": "kısmi",
+      "olcekBantlari": [
+        {
+          "hedefM2": 20,
+          "alanCarpani": 0.606,
+          "adetCarpaniOneri": 0.653,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 45,
+          "alanCarpani": 1.364,
+          "adetCarpaniOneri": 1.302,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 80,
+          "alanCarpani": 2.424,
+          "adetCarpaniOneri": 2.424,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 120,
+          "alanCarpani": 3.636,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 150,
+          "alanCarpani": 4.545,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 180,
+          "alanCarpani": 5.455,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 250,
+          "alanCarpani": 7.576,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 350,
+          "alanCarpani": 10.606,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 500,
+          "alanCarpani": 15.152,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 750,
+          "alanCarpani": 22.727,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 1000,
+          "alanCarpani": 30.303,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        }
+      ]
+    },
+    {
+      "slug": "restoran",
+      "label": "RESTORAN",
+      "band": null,
+      "planDosya": "RESTORAN-PLAN.pdf",
+      "listeDosya": "RESTORAN-ekipman-listesi.xlsx",
+      "birlesikDosya": "RESTORAN-PLAN-birlesik.xlsx",
+      "planM2Baslik": 506.4,
+      "planM2EtiketToplami": null,
+      "referansM2": 506.4,
+      "referansM2Kaynak": "plan-baslik",
+      "ekipmanKalem": 110,
+      "toplamAdet": 149,
+      "planPozSayisi": 111,
+      "eslesenPoz": 109,
+      "plandaListeYok": [
+        "L21A"
+      ],
+      "plandaFazla": [
+        "C4",
+        "F2A"
+      ],
+      "eslesmeOrani": 0.991,
+      "durum": "kısmi",
+      "olcekBantlari": [
+        {
+          "hedefM2": 20,
+          "alanCarpani": 0.039,
+          "adetCarpaniOneri": 0.063,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 45,
+          "alanCarpani": 0.089,
+          "adetCarpaniOneri": 0.128,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 80,
+          "alanCarpani": 0.158,
+          "adetCarpaniOneri": 0.208,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 120,
+          "alanCarpani": 0.237,
+          "adetCarpaniOneri": 0.294,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 150,
+          "alanCarpani": 0.296,
+          "adetCarpaniOneri": 0.355,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 180,
+          "alanCarpani": 0.355,
+          "adetCarpaniOneri": 0.415,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 250,
+          "alanCarpani": 0.494,
+          "adetCarpaniOneri": 0.549,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 350,
+          "alanCarpani": 0.691,
+          "adetCarpaniOneri": 0.73,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 500,
+          "alanCarpani": 0.987,
+          "adetCarpaniOneri": 0.989,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 750,
+          "alanCarpani": 1.481,
+          "adetCarpaniOneri": 1.396,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 1000,
+          "alanCarpani": 1.975,
+          "adetCarpaniOneri": 1.975,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        }
+      ]
+    },
+    {
+      "slug": "02-balikci-80-150",
+      "label": "BALIKÇI 80-150",
+      "band": "80-150",
+      "planDosya": "2 BALIKCI-PLAN.pdf",
+      "listeDosya": "BALIKCI/80-150 m2 BALIKCI-ekipman-listesi.xlsx",
+      "birlesikDosya": "02-BALIKCI-80-150-PLAN-birlesik.xlsx",
+      "planM2Baslik": 50.0,
+      "planM2EtiketToplami": 123.0,
+      "referansM2": 115.0,
+      "referansM2Kaynak": "m2-bant",
+      "ekipmanKalem": 42,
+      "toplamAdet": 50,
+      "planPozSayisi": 51,
+      "eslesenPoz": 41,
+      "plandaListeYok": [
+        "E13"
+      ],
+      "plandaFazla": [
+        "E1",
+        "E10",
+        "E11",
+        "E2",
+        "E9",
+        "F5",
+        "F8",
+        "G6",
+        "G9",
+        "Y2"
+      ],
+      "eslesmeOrani": 0.976,
+      "durum": "kısmi",
+      "olcekBantlari": [
+        {
+          "hedefM2": 20,
+          "alanCarpani": 0.174,
+          "adetCarpaniOneri": 0.226,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 45,
+          "alanCarpani": 0.391,
+          "adetCarpaniOneri": 0.45,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 80,
+          "alanCarpani": 0.696,
+          "adetCarpaniOneri": 0.735,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 120,
+          "alanCarpani": 1.043,
+          "adetCarpaniOneri": 1.036,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 150,
+          "alanCarpani": 1.304,
+          "adetCarpaniOneri": 1.253,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 180,
+          "alanCarpani": 1.565,
+          "adetCarpaniOneri": 1.565,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 250,
+          "alanCarpani": 2.174,
+          "adetCarpaniOneri": 2.174,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 350,
+          "alanCarpani": 3.043,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 500,
+          "alanCarpani": 4.348,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 750,
+          "alanCarpani": 6.522,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 1000,
+          "alanCarpani": 8.696,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        }
+      ]
+    },
+    {
+      "slug": "02-balikci-150-250",
+      "label": "BALIKÇI 150-250",
+      "band": "150-250",
+      "planDosya": "2 BALIKCI-PLAN.pdf",
+      "listeDosya": "BALIKCI/150-250 m2 BALIKCI-ekipman-listesi.xlsx",
+      "birlesikDosya": "02-BALIKCI-150-250-PLAN-birlesik.xlsx",
+      "planM2Baslik": 50.0,
+      "planM2EtiketToplami": 123.0,
+      "referansM2": 200.0,
+      "referansM2Kaynak": "m2-bant",
+      "ekipmanKalem": 52,
+      "toplamAdet": 62,
+      "planPozSayisi": 51,
+      "eslesenPoz": 51,
+      "plandaListeYok": [
+        "E13"
+      ],
+      "plandaFazla": [],
+      "eslesmeOrani": 0.981,
+      "durum": "tam",
+      "olcekBantlari": [
+        {
+          "hedefM2": 20,
+          "alanCarpani": 0.1,
+          "adetCarpaniOneri": 0.141,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 45,
+          "alanCarpani": 0.225,
+          "adetCarpaniOneri": 0.281,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 80,
+          "alanCarpani": 0.4,
+          "adetCarpaniOneri": 0.459,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 120,
+          "alanCarpani": 0.6,
+          "adetCarpaniOneri": 0.648,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 150,
+          "alanCarpani": 0.75,
+          "adetCarpaniOneri": 0.783,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 180,
+          "alanCarpani": 0.9,
+          "adetCarpaniOneri": 0.914,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 250,
+          "alanCarpani": 1.25,
+          "adetCarpaniOneri": 1.209,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 350,
+          "alanCarpani": 1.75,
+          "adetCarpaniOneri": 1.75,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 500,
+          "alanCarpani": 2.5,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 750,
+          "alanCarpani": 3.75,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 1000,
+          "alanCarpani": 5.0,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        }
+      ]
+    },
+    {
+      "slug": "01-steakhouse-80-150",
+      "label": "STEAKHOUSE 80-150",
+      "band": "80-150",
+      "planDosya": "STEAKHOUSE/STEAKHOUSE-PLAN.pdf",
+      "listeDosya": "STEAKHOUSE/80-150 m2-steakhouse-ekipman-listesi.xlsx",
+      "birlesikDosya": "01-STEAKHOUSE-80-150-PLAN-birlesik.xlsx",
+      "planM2Baslik": 128.4,
+      "planM2EtiketToplami": 247.1,
+      "referansM2": 115.0,
+      "referansM2Kaynak": "m2-bant",
+      "ekipmanKalem": 51,
+      "toplamAdet": 60,
+      "planPozSayisi": 83,
+      "eslesenPoz": 44,
+      "plandaListeYok": [
+        "K1",
+        "K2",
+        "K3",
+        "K5",
+        "K6",
+        "K7",
+        "K8"
+      ],
+      "plandaFazla": [
+        "B3",
+        "C1",
+        "C2",
+        "E1",
+        "E10",
+        "E11",
+        "E12",
+        "E13",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8",
+        "E9",
+        "G10",
+        "G11",
+        "G12",
+        "G13",
+        "G14",
+        "G15",
+        "G6",
+        "G8",
+        "I1",
+        "I2",
+        "I3",
+        "I4",
+        "I5",
+        "I6",
+        "I7",
+        "I8",
+        "J11",
+        "J12",
+        "J6",
+        "J7",
+        "J8",
+        "M2",
+        "Y2"
+      ],
+      "eslesmeOrani": 0.863,
+      "durum": "kısmi",
+      "olcekBantlari": [
+        {
+          "hedefM2": 20,
+          "alanCarpani": 0.174,
+          "adetCarpaniOneri": 0.226,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 45,
+          "alanCarpani": 0.391,
+          "adetCarpaniOneri": 0.45,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 80,
+          "alanCarpani": 0.696,
+          "adetCarpaniOneri": 0.735,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 120,
+          "alanCarpani": 1.043,
+          "adetCarpaniOneri": 1.036,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 150,
+          "alanCarpani": 1.304,
+          "adetCarpaniOneri": 1.253,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 180,
+          "alanCarpani": 1.565,
+          "adetCarpaniOneri": 1.565,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 250,
+          "alanCarpani": 2.174,
+          "adetCarpaniOneri": 2.174,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 350,
+          "alanCarpani": 3.043,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 500,
+          "alanCarpani": 4.348,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 750,
+          "alanCarpani": 6.522,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 1000,
+          "alanCarpani": 8.696,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        }
+      ]
+    },
+    {
+      "slug": "01-steakhouse-150-250",
+      "label": "STEAKHOUSE 150-250",
+      "band": "150-250",
+      "planDosya": "STEAKHOUSE/STEAKHOUSE-PLAN.pdf",
+      "listeDosya": "STEAKHOUSE/150-250 M2-steakhouse-ekipman-listesi.xlsx",
+      "birlesikDosya": "01-STEAKHOUSE-150-250-PLAN-birlesik.xlsx",
+      "planM2Baslik": 128.4,
+      "planM2EtiketToplami": 247.1,
+      "referansM2": 200.0,
+      "referansM2Kaynak": "m2-bant",
+      "ekipmanKalem": 64,
+      "toplamAdet": 80,
+      "planPozSayisi": 83,
+      "eslesenPoz": 55,
+      "plandaListeYok": [
+        "J10",
+        "J9",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7"
+      ],
+      "plandaFazla": [
+        "B3",
+        "E1",
+        "E10",
+        "E11",
+        "E12",
+        "E13",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8",
+        "E9",
+        "G13",
+        "G14",
+        "G15",
+        "I1",
+        "I2",
+        "I3",
+        "I4",
+        "I5",
+        "I6",
+        "I7",
+        "I8",
+        "J11",
+        "J12",
+        "M2"
+      ],
+      "eslesmeOrani": 0.859,
+      "durum": "kısmi",
+      "olcekBantlari": [
+        {
+          "hedefM2": 20,
+          "alanCarpani": 0.1,
+          "adetCarpaniOneri": 0.141,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 45,
+          "alanCarpani": 0.225,
+          "adetCarpaniOneri": 0.281,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 80,
+          "alanCarpani": 0.4,
+          "adetCarpaniOneri": 0.459,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 120,
+          "alanCarpani": 0.6,
+          "adetCarpaniOneri": 0.648,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 150,
+          "alanCarpani": 0.75,
+          "adetCarpaniOneri": 0.783,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 180,
+          "alanCarpani": 0.9,
+          "adetCarpaniOneri": 0.914,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 250,
+          "alanCarpani": 1.25,
+          "adetCarpaniOneri": 1.209,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 350,
+          "alanCarpani": 1.75,
+          "adetCarpaniOneri": 1.75,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 500,
+          "alanCarpani": 2.5,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 750,
+          "alanCarpani": 3.75,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        },
+        {
+          "hedefM2": 1000,
+          "alanCarpani": 5.0,
+          "adetCarpaniOneri": 2.5,
+          "not": "alan=doğrusal; adet≈referansAdet×adetCarpani (yuvarla); soğuk oda/panel tek kalabilir"
+        }
+      ]
+    }
+  ]
+}

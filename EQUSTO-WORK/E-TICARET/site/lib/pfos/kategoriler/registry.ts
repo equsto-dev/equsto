@@ -36,6 +36,24 @@ export const PFOS_KATEGORI_TANIMLARI: PfosKategoriTanim[] = [
       },
     ],
   },
+  {
+    id: "italyan",
+    label: "İtalyan Restoran",
+    ustKategori: "Restaurant",
+    planNot: "proje-veri/03-italyan 100-300 m2.xlsx",
+    bantlar: [
+      { id: "100-300", label: "100–300 m²", referansM2: 200 },
+    ],
+  },
+  {
+    id: "birahane",
+    label: "Birahane",
+    ustKategori: "Bar & Lounge",
+    planNot: "proje-veri/11 BIRAHANE.xlsx",
+    bantlar: [
+      { id: "100-300", label: "100–300 m²", referansM2: 200 },
+    ],
+  },
 ];
 
 export function findKategoriTanim(kategoriId: string) {

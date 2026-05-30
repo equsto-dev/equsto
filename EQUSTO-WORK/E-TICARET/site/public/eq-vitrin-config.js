@@ -14,6 +14,56 @@
       .replace(/"/g, '&quot;');
   }
 
+  function __vitrinT(k, fb) {
+    try {
+      if (typeof global.eqT === 'function') {
+        var v = global.eqT(k, null);
+        if (v != null && v !== k) return v;
+      }
+    } catch (_) {}
+    return fb != null ? fb : k;
+  }
+
+  function vitrinSlideCopy(s) {
+    var href = String((s && s.href) || '');
+    var title = (s && s.title) || '';
+    var subtitle = (s && s.subtitle) || '';
+    if (/pfos/i.test(href) || /proje fabrik/i.test(title)) {
+      return {
+        title: __vitrinT('nav.pfos', title),
+        subtitle: __vitrinT('home.vitrin_slide_pfos_sub', subtitle),
+      };
+    }
+    if (/bar-design|besos/i.test(href) || /bar design/i.test(title)) {
+      return {
+        title: __vitrinT('nav.bar_design', title),
+        subtitle: __vitrinT('home.vitrin_slide_bar_sub', subtitle),
+      };
+    }
+    if (/shop\/pisirme|endüstriyel mutfak vitrini/i.test(href + title)) {
+      return {
+        title: __vitrinT('home.main_title', title) === 'All Products' ? title : title,
+        subtitle: __vitrinT('home.vitrin_slide_catalog_sub', subtitle),
+      };
+    }
+    if (/oztiryakiler/i.test(title)) {
+      return { title: title, subtitle: subtitle };
+    }
+    return { title: title, subtitle: subtitle };
+  }
+
+  function vitrinTickerCopy(it) {
+    var strong = (it && it.strong) || '';
+    var text = (it && it.text) || '';
+    if (/proje fabrik/i.test(strong)) {
+      return {
+        strong: __vitrinT('nav.pfos', strong),
+        text: __vitrinT('home.vitrin_ticker_pfos_text', text),
+      };
+    }
+    return { strong: strong, text: text };
+  }
+
   function attrPath(p) {
     if (typeof global.eqAttrPath === 'function') return global.eqAttrPath(p);
     return p ? String(p) : '';
@@ -358,11 +408,12 @@
     var html = '';
     for (var i = 0; i < items.length; i++) {
       var it = items[i];
+      var tc = vitrinTickerCopy(it);
       html +=
         '<span class="eq-mx-ticker__item"><strong>' +
-        esc(it.strong || '') +
+        esc(tc.strong || '') +
         '</strong> ' +
-        esc(it.text || '') +
+        esc(tc.text || '') +
         '</span>';
     }
     track.innerHTML = html + html;
@@ -396,6 +447,7 @@
     var tHtml = '';
     for (var i = 0; i < slides.length; i++) {
       var s = slides[i];
+      var copy = vitrinSlideCopy(s);
       var bg = s.image
         ? 'background-image:' +
           (typeof global.eqCssBgUrl === 'function'
@@ -411,16 +463,16 @@
         '" style="' +
         bg +
         '"><div class="eq-mx-hero__slide-cap"><h2>' +
-        esc(s.title || '') +
+        esc(copy.title || '') +
         '</h2><p>' +
-        esc(s.subtitle || '') +
+        esc(copy.subtitle || '') +
         '</p></div></a>';
       var thumb = s.thumb || s.image || '';
       tHtml +=
         '<button type="button" class="eq-mx-hero__thumb' +
         active +
         '" aria-label="' +
-        esc(s.title || '') +
+        esc(copy.title || '') +
         '">' +
         (thumb
           ? '<img src="' +
@@ -517,4 +569,7 @@
   } else {
     global.EqVitrinConfig.applyHome();
   }
+  global.addEventListener('equsto:i18n-ready', function () {
+    whenReady(applyHome);
+  });
 })(typeof window !== 'undefined' ? window : global);

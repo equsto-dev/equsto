@@ -6,6 +6,16 @@
 
   var MEMBER_KEY = "equsto_member_v1";
 
+  function __memberT(k, fb) {
+    try {
+      if (typeof window.eqT === "function") {
+        var v = window.eqT(k, null);
+        if (v != null && v !== k) return v;
+      }
+    } catch (_) {}
+    return fb != null ? fb : k;
+  }
+
   function readMember() {
     try {
       var j = localStorage.getItem(MEMBER_KEY);
@@ -67,11 +77,11 @@
   window.equstoIsMemberLoggedIn = equstoIsMemberLoggedIn;
 
   function memberFirstName(o) {
-    if (!o) return "Üye";
+    if (!o) return __memberT("member.guest", "Üye");
     var raw = String(o.displayName || o.name || "").trim();
     if (raw) return raw.split(/\s+/)[0];
     if (o.email) return String(o.email).split("@")[0];
-    return "Üye";
+    return __memberT("member.guest", "Üye");
   }
 
   /** Üst bant: girişte «Alıcı Adem», misafirde «Teslimat Adresi» */
@@ -86,7 +96,7 @@
         wrap.children[0];
       if (!label || label.nodeType !== 1) return;
       if (logged) {
-        label.textContent = "Alıcı " + name;
+        label.textContent = __memberT("member.buyer_prefix", "Alıcı ") + name;
         label.setAttribute("data-i18n-skip", "");
         label.removeAttribute("data-i18n");
       } else {
@@ -114,10 +124,10 @@
       var title = a.querySelector(".eq-hdr-account-title");
       var sub = a.querySelector("span:first-of-type");
       if (logged) {
-        var label = o.displayName || o.name || o.email || "Hesabım";
+        var label = o.displayName || o.name || o.email || __memberT("member.my_account", "Hesabım");
         if (title) title.textContent = label + " ▾";
-        if (sub) sub.textContent = "Hesabım";
-        a.setAttribute("title", o.email || "Hesabım");
+        if (sub) sub.textContent = __memberT("member.my_account", "Hesabım");
+        a.setAttribute("title", o.email || __memberT("member.my_account", "Hesabım"));
         a.href =
           typeof window.equstoUrl === "function"
             ? window.equstoUrl("login")
@@ -126,8 +136,8 @@
               : "/login.html";
       } else {
         if (title) title.textContent = "Projeler ve Listeler ▾";
-        if (sub) sub.textContent = "Hesabım";
-        a.setAttribute("title", "Üye girişi");
+        if (sub) sub.textContent = __memberT("member.my_account", "Hesabım");
+        a.setAttribute("title", __memberT("member.login_title", "Üye girişi"));
         a.href =
           typeof window.equstoUrl === "function"
             ? window.equstoUrl("login")

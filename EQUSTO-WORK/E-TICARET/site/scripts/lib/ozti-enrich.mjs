@@ -331,6 +331,9 @@ export function mapOztiDeptAccessory(row) {
   if (/SU\s*OTOMATI/i.test(name)) return "icecek";
   if (/POŞET\s*ÇAY\s*STANDI|ÇAY\s*STANDI/i.test(name)) return "icecek";
 
+  /** Fritöz teli / sepet — aksesuar; «FRITOZ» pişirme kuralına düşmesin */
+  if (/^8150\./.test(kod) || /FR[İI]T[OÖ]Z\s*TEL/i.test(name)) return "set-ustu-mutfak";
+
   return null;
 }
 
@@ -346,8 +349,95 @@ export function isOztiDonerOcak(row) {
   return false;
 }
 
+/**
+ * Meyve suyu / ayran / şerbet soğutucu, slush (8477.*) — içecek PLP.
+ * «MEYVE SUYU SOĞUTUCULARI» soğutma kuralındaki SOĞUTUCU ile karışmasın.
+ */
+/**
+ * NTV cihazaltı / havuzlu dolaplar (7919.*NTV.*) — dolap PLP.
+ * Öztiryakiler «tezgah altı soğutucu» sınıfında; buz dolabı vitrini değil.
+ */
+export function isOztiCihazaltiDolap(row) {
+  const name = String(row.urun_tanimi || row.name || "").toLocaleUpperCase("tr");
+  if (/BUZDOLAB|DERİN\s*DONDURUCU|ŞOK\s*SO[GĞ]UT|SOĞUK\s*ODA/i.test(name)) return false;
+  if (/CİHAZALTI\s*DOLAP|CIHAZALTI\s*DOLAP/i.test(name)) return true;
+  if (/CİHAZALTI\s*\d+\s*KAPILI\s*DOLAP|CIHAZALTI\s*\d+\s*KAPILI\s*DOLAP/i.test(name)) return true;
+  if (/T\s+TİP\s+HAVUZLU\s*DOLAP|T\s+TIP\s+HUVUZLU\s*DOLAP|T\s+TIP\s+HAVUZLU\s*DOLAP/i.test(name)) return true;
+  if (/\bNTV\b/.test(name) && /\bDOLAP\b/.test(name) && !/BUZDOLAB/i.test(name)) return true;
+  return false;
+}
+
+/** Vitrifrigo süt soğutucu / bardak ısıtıcı (9868.FG10*) — bar içecek PLP. */
+export function isOztiIcecekMilkBar(row) {
+  const kod = normKod(row.urun_kodu || row.sku);
+  const name = String(row.urun_tanimi || row.name || "").toLocaleUpperCase("tr");
+  if (/^9868\.(0?FG10)/i.test(kod)) return true;
+  if (/VITRIFRIGO/i.test(name) && /SÜT\s*SOGUTUCU|SUT\s*SOGUTUCU|BARDAK\s*ISIT/i.test(name)) return true;
+  return false;
+}
+
+export function isOztiIcecekBeverageDispenser(row) {
+  const kod = normKod(row.urun_kodu || row.sku);
+  const name = String(row.urun_tanimi || row.name || "").toLocaleUpperCase("tr");
+  const kat = String(row.kategori || "").toLocaleUpperCase("tr");
+  const path = (row.kategori_yolu || []).join(" ").toLocaleUpperCase("tr");
+  if (/^8477\./.test(kod)) return true;
+  if (/MEYVE\s*SUYU\s*SO[GĞ]UTUCU/i.test(kat) || /MEYVE\s*SUYU\s*SO[GĞ]UTUCU/i.test(path)) return true;
+  if (/AYRAN\s*MAK|KÖPÜKLÜ\s*AYRAN|KOPUKLU\s*AYRAN/i.test(name)) return true;
+  if (/MEYVE\s*SUYU\s*SO[GĞ]UTMA|MEYVE\s*SUYU\s*SOGUTMA/i.test(name)) return true;
+  if (/SLUSH|GRANITA|KARBUZ\s*SO[GĞ]UTUCU/i.test(name)) return true;
+  return false;
+}
+
+/**
+ * Soğuk hazırlık / pizza hazırlık üniteleri (79E3.PZC*, SOĞUK HAZIRLIK ÜNİTELERİ).
+ * «PIZZA HAZIRLIK» adı hazirlik dept kuralına düşmesin — soğutma ekipmanı.
+ */
+export function isOztiSogukHazirlikUnitesi(row) {
+  const kod = normKod(row.urun_kodu || row.sku);
+  const name = String(row.urun_tanimi || row.name || "").toLocaleUpperCase("tr");
+  const kat = String(row.kategori || "").toLocaleUpperCase("tr");
+  const path = (row.kategori_yolu || []).join(" ").toLocaleUpperCase("tr");
+  if (/^79E3\.PZC/i.test(kod)) return true;
+  if (/SOĞUK\s*HAZIRLIK\s*ÜNİTELERİ|SOGUK\s*HAZIRLIK\s*UNITELERI/i.test(`${path} ${kat}`)) {
+    return true;
+  }
+  if (/\bPZC\s*\d{2}\b/.test(name) && /PIZZA\s*HAZIRLIK/i.test(name)) return true;
+  return false;
+}
+
+/**
+ * Sebze doğrama makineleri (Robot Coupe CL/R, SEBZE DOĞRAMA MAKİNELERİ).
+ * Set üstü veya soğutma değil — hazırlık PLP.
+ */
+export function isOztiSebzeDograma(row) {
+  const kod = normKod(row.urun_kodu || row.sku);
+  const name = String(row.urun_tanimi || row.name || "").toLocaleUpperCase("tr");
+  const kat = String(row.kategori || "").toLocaleUpperCase("tr");
+  const path = (row.kategori_yolu || []).join(" ").toLocaleUpperCase("tr");
+  const hay = `${path} ${kat} ${name}`;
+  if (/SEBZE\s*DO[GĞ]RAMA|SEBZE\s*DOĞRAMA\s*VE\s*HUMUS/i.test(hay)) return true;
+  if (/^9840\.(CL|R\d)/i.test(kod)) return true;
+  if (/^0830\./i.test(kod) && /SEBZE\s*DO[GĞ]RAMA/i.test(name)) return true;
+  if (/^5R1X\./i.test(kod) && /ROBOT\s*COUPE/i.test(name)) return true;
+  if (/ROBOT\s*COUPE/i.test(name) && /SEBZE\s*DO[GĞ]RAMA|CL\d{2}|R\s*\d{3}/i.test(name)) return true;
+  return false;
+}
+
+/** Buz konteyneri (BK-125 vb.) — soğutma / buz makineleri; araba veya taşıma değil */
+export function isOztiBuzKonteyner(row) {
+  const kod = String(row.urun_kodu || row.sku || "").trim();
+  if (/^8959\.BK|^7506\.0B390/i.test(kod)) return true;
+  const name = foldTr(row.urun_tanimi || row.name || "");
+  const kat = foldTr(row.kategori || "");
+  if (/buz\s*konteyner|izolasyonlu\s*125\s*litre/i.test(name)) return true;
+  if (/buz\s*makin/i.test(kat) && /konteyner/i.test(name)) return true;
+  return false;
+}
+
 /** Servis / et askı arabaları — set üstü değil, taşıma PLP */
 export function isOztiTasimaAraba(row) {
+  if (isOztiBuzKonteyner(row)) return false;
   if (isOztiDonerOcak(row)) return false;
   const kod = String(row.urun_kodu || row.sku || "").trim();
   if (/^7270\./i.test(kod)) return true;
@@ -430,6 +520,16 @@ export function mapOztiIcecekCategory(name, kod) {
   if (/^0466\.|BARDAK/i.test(hay)) return "icecek-bardaklari";
   if (/^0469\.|SÜRAHİ/i.test(hay)) return "surehi-ve-servis";
   if (/STAND|ZCP/i.test(hay)) return "cay-servis-aksesuarlari";
+  if (/^8477\./.test(k)) {
+    if (/AYRAN|KAM\d|KOPUKLU/i.test(hay)) return "ayran-makinesi";
+    if (/SLUSH/i.test(hay)) return "granita-slush";
+    if (/SERBET|ŞERBET/i.test(hay)) return "limonata-serbet";
+    return "meyve-suyu-sogutuculari";
+  }
+  if (/^9868\.(0?FG10)/i.test(k) || (/VITRIFRIGO/i.test(hay) && /SÜT|SUT|BARDAK\s*ISIT/i.test(hay)))
+    return "kahve-sunum";
+  if (/AYRAN\s*MAK|KOPUKLU\s*AYRAN/i.test(hay)) return "ayran-makinesi";
+  if (/MEYVE\s*SUYU\s*SO[GĞ]UTMA/i.test(hay)) return "meyve-suyu-sogutuculari";
   return "icecek-diger";
 }
 
@@ -476,7 +576,9 @@ export function detectOztiOemBrand(name, category, kod) {
   if (/^WMF\b/.test(up) || (/^9580\./.test(k) && /WMF/.test(fullUp))) return "WMF";
   if (/^NUOVA\s+SIMONELLI/.test(up) || /^NUOSI\b/.test(up)) return "Nuova Simonelli";
   if (/^BRAVILOR/.test(up) || /^9574\.B/.test(k)) return "Bravilor Bonamat";
-  if (/^RATIONAL\b/.test(up)) return "Rational";
+  /** Rational — Öztiryakiler bayi: 9890.* kombi fırın, 5RRX.* davlumbaz / mobil stand / aksesuar */
+  if (/^9890\./i.test(k) || /^5RRX\./i.test(k)) return "Rational";
+  if (/^RATIONAL\b/i.test(up) || /\bRATIONAL\b/i.test(fullUp)) return "Rational";
   if (/^ROBOT\s+COUPE/.test(up)) return "Robot Coupe";
   if (/^UNOX\b/.test(up)) return "Unox";
   if (/^HOSHIZAKI\b/.test(up)) return "Hoshizaki";
@@ -505,6 +607,12 @@ export function mapOztiDept(row, setUstuAllow) {
   const kod = String(row.urun_kodu || row.sku || "").trim();
   if (/^9710\./i.test(kod)) return "yikama";
   if (/^07[0-9][A-Z]\./i.test(kod)) return "yikama";
+  if (isOztiBuzKonteyner(row)) return "sogutma";
+  if (isOztiSogukHazirlikUnitesi(row)) return "sogutma";
+  if (isOztiSebzeDograma(row)) return "hazirlik";
+  if (isOztiIcecekBeverageDispenser(row)) return "icecek";
+  if (isOztiIcecekMilkBar(row)) return "icecek";
+  if (isOztiCihazaltiDolap(row)) return "dolap";
 
   const accessoryDept = mapOztiDeptAccessory(row);
   if (accessoryDept) return accessoryDept;
@@ -545,7 +653,7 @@ export function mapOztiDept(row, setUstuAllow) {
     [/TEZGAH|EVYE|EVYELİ|ÇALIŞMA\s*TEZGAH/i, "tezgah"],
     [/ARABA(?!LI)|TAŞIMA|BANKET|SERVİS\s*ÜNİT/i, "tasima"],
     [/DOLAP|RAF(?!.*İSTİF)/i, "dolap"],
-    [/HAZIRLIK|KESME\s*TAHTA|MİKSER|DOĞRAYICI|HAMUR/i, "hazirlik"],
+    [/HAZIRLIK|KESME\s*TAHTA|MİKSER|DOĞRAYICI|DO[GĞ]RAMA|HAMUR/i, "hazirlik"],
     [/İÇECEK|BAR\s*AKSESUAR|ÇAY\s*KAHVE\s*VE\s*BAR/i, "icecek"],
     [/SERVİS\s*GEREÇ|GASTRONORM|CHAFING|TENCERE|TAVA|GURMEAID|BAKIR\s*SUNUM|MASAÜSTÜ|MELAMİN|HELVA|SIĞ\s*TENCERE|SİLİNDİRİK|PRES\s*BASKI|KARIŞTIRMA|SÜZGEÇ|POLİETİLEN|POLİPROPİLEN|POLİKARBONAT|SİNEK/i, "set-ustu-mutfak"],
     [/BAIN\s*MARIE\s*(KAPAK|KÜVET|KUVET|ÇELİK|CELIK)/i, "set-ustu-mutfak"],
@@ -691,10 +799,10 @@ export function isOztiBrand(row) {
 
 const OZTI_AX_BASE = "https://oztiryakiler.com.tr/ax-images/images";
 
-/** Üretici CDN — dosya adı: {ÜRÜN_KODU}.jpg */
+/** Üretici CDN — dosya adı: {ÜRÜN_KODU}.jpg (NTV dolap proxy dahil). */
 export function oztiAxImageUrl(kod) {
-  const k = normKod(kod);
-  if (!k) return "";
+  const k = oztiAxProxyKod(kod);
+  if (!/^[0-9A-Z]{2,8}\.[A-Z0-9.\-]{2,}$/i.test(k)) return "";
   return `${OZTI_AX_BASE}/${encodeURIComponent(k)}.jpg`;
 }
 
@@ -731,7 +839,54 @@ export function oztiWebImageRel(kod) {
   return `images/catalog/ozti/web/${slug}.jpg`;
 }
 
-/** Yerel manifest → yoksa web sentetik yol (CDN yedek). */
+/** ax-images 404 / cafemarkt UNOX stub — NTV cihazaltı dolap aile fotoğrafı. */
+export const OZTI_AX_PROXY = {
+  "2919.0B390.AD01.00": "7506.0B390.00",
+  "7919.47NTV.C2": "7919.47NTV.24",
+  "7919.46NTV.C2": "7919.47NTV.24",
+  "7919.37NTV.C2": "7919.37NTV.24",
+  "7919.36NTV.C2": "7919.36NTV.24",
+  "7919.27NTV.C2": "7919.26NTV.24",
+  "7919.26NTV.C2": "7919.26NTV.24",
+  "7919.47NTV.C1": "7919.47NTV.24",
+  "7919.46NTV.C1": "7919.47NTV.24",
+  "7919.37NTV.C1": "7919.37NTV.24",
+  "7919.36NTV.C1": "7919.36NTV.24",
+  "7919.27NTV.C1": "7919.26NTV.24",
+  "7919.26NTV.C1": "7919.26NTV.24",
+  "7919.47NTV.T1": "7919.47NTV.24",
+  "7919.37NTV.T1": "7919.37NTV.24",
+  "9805.IM240D.NHC": "9805.IM240X.NHC",
+  "9805.00IMD.00": "9805.IM45N.EHC",
+};
+
+export function oztiAxProxyKod(kod) {
+  const k = normKod(kod);
+  if (OZTI_AX_PROXY[k]) return OZTI_AX_PROXY[k];
+  const m = k.match(/^7919\.(\d{2})NTV\.(C1|C2|T1)$/);
+  if (!m) return k;
+  if (m[2] === "T1" && m[1] === "27") return k;
+  if (m[2] === "T1" && m[1] === "37") return "7919.37NTV.24";
+  if (m[2] === "T1" && (m[1] === "47" || m[1] === "46")) return "7919.47NTV.24";
+  const series = m[1];
+  const alt24 = `7919.${series}NTV.24`;
+  if (parseInt(series, 10) >= 46) return "7919.47NTV.24";
+  return alt24;
+}
+
+/** Yerel dosya → ax (8477 / NTV proxy) → web sentetik yol. */
 export function oztiVitrinImageHref(kod, manifestRel) {
+  const k = normKod(kod);
+  const proxyAx = oztiAxImageUrl(kod);
+  if (
+    proxyAx &&
+    (/^8477\./i.test(k) ||
+      /^9868\.(0?FG10)/i.test(k) ||
+      /^9805\./i.test(k) ||
+      OZTI_AX_PROXY[k] ||
+      /^7919\.\d{2}NTV\.(C1|C2|T1)$/i.test(k))
+  ) {
+    return proxyAx;
+  }
   return oztiCatalogImageHref(kod, manifestRel) || oztiWebImageRel(kod);
 }

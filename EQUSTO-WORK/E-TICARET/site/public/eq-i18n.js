@@ -33,18 +33,74 @@
   var STORAGE_KEY = "eq-lang";
   var PREFIX_RE = /^\/en(\/|$)/i;
 
+  /** TR slug → EN pathname (without /en prefix) */
+  var EN_PATH_ALIASES = {
+    "/hakkimizda": "/about",
+    "/buradan-basladi": "/story",
+    "/contact": "/contact",
+    "/pfos": "/pfos",
+    "/sss": "/sss",
+    "/login": "/login",
+    "/blog": "/blog",
+    "/projeler": "/projects",
+  };
+
+  /** EN pathname (no /en) → TR kanonik yol */
+  var TR_PATH_ALIASES = {
+    "/about": "/hakkimizda",
+    "/story": "/buradan-basladi",
+    "/search": "/arama",
+    "/cart": "/sepet",
+  };
+  Object.keys(EN_PATH_ALIASES).forEach(function (trPath) {
+    TR_PATH_ALIASES[EN_PATH_ALIASES[trPath]] = trPath;
+  });
+
+  function trPathFromEnPath(stripped) {
+    if (!stripped || stripped === "/") return stripped;
+    if (TR_PATH_ALIASES[stripped]) return TR_PATH_ALIASES[stripped];
+    if (stripped.indexOf("/guides/") === 0) {
+      return "/rehber/" + stripped.slice("/guides/".length);
+    }
+    if (stripped.indexOf("/projects/") === 0) {
+      return "/projeler/" + stripped.slice("/projects/".length);
+    }
+    var slug = stripped.replace(/^\//, "");
+    var keys = Object.keys(TR_GEO_TO_EN_SLUG);
+    for (var i = 0; i < keys.length; i++) {
+      if (TR_GEO_TO_EN_SLUG[keys[i]] === slug) return "/" + keys[i];
+    }
+    return stripped;
+  }
+
+  var TR_GEO_TO_EN_SLUG = {
+    "steakhouse-kurulumu": "steakhouse-kitchen-setup",
+    "bulut-mutfak-kurulumu": "cloud-kitchen-setup",
+    "cafe-kurulumu": "cafe-setup",
+    "catering-mutfagi": "catering-kitchen",
+    "fine-dining-kurulumu": "fine-dining-kitchen-setup",
+    "all-day-dining-kurulumu": "all-day-dining-kitchen-setup",
+    "fast-food-kurulumu": "fast-food-kitchen-setup",
+    "market-kasap-sarkuteri-kurulumu": "market-butcher-deli-setup",
+    "endustriyel-mutfak-ekipmani-turkiye": "industrial-kitchen-equipment-turkey",
+    "restoran-mutfak-teklif": "restaurant-kitchen-quote",
+    "otel-mutfak-ekipman-tedarik": "hotel-kitchen-equipment",
+    "oztiryakiler-ekipmani-tedarik": "oztiryakiler-equipment-supply",
+    "soguk-oda-teklif": "cold-room-quote",
+    "havuzlu-dolap-tedarik": "deli-counter-refrigeration",
+    "endustriyel-pisirme-ekipmanlari": "industrial-cooking-equipment",
+    "mutfak-teklif-platformu": "kitchen-quote-platform",
+    "bar-tasarimi-turkiye": "bar-design-turkey",
+    blog: "blog",
+    projeler: "projects",
+  };
+
   /* ---------- dil tespiti ---------- */
 
   function detectLang() {
     try {
       var path = String(location.pathname || "").toLowerCase();
       if (PREFIX_RE.test(path)) return "en";
-      // file:// yerelde ise URL prefix yoktur; localStorage'a düş.
-      var saved = null;
-      try { saved = localStorage.getItem(STORAGE_KEY); } catch (_) {}
-      if (saved && SUPPORTED.indexOf(saved) !== -1) return saved;
-      var nav = (navigator.language || "").slice(0, 2).toLowerCase();
-      if (location.protocol === "file:" && nav === "en") return "en";
       return DEFAULT;
     } catch (_) {
       return DEFAULT;
@@ -59,23 +115,31 @@
 
   var DICT = {};
   var loadPromise = null;
+  var loadedLang = null;
 
   function fetchDict(lang) {
-    var base = (window.eqI18nBaseUrl || "/i18n/");
-    var url = base + lang + ".json";
-    return fetch(url, { cache: "force-cache" })
-      .then(function (r) {
-        if (!r.ok) throw new Error("i18n fetch " + r.status);
-        return r.json();
-      })
-      .catch(function () {
-        // file:// veya yerelde fetch düşerse: en kötü ihtimalle TR fallback'e geçer.
-        return null;
-      });
+    var custom = window.eqI18nBaseUrl;
+    var v = window.__EQ_I18N_JSON_V || "20260530pdp-dims-quote";
+    var urls = custom
+      ? [custom + lang + ".json?v=" + encodeURIComponent(v)]
+      : ["/i18n/" + lang + ".json?v=" + encodeURIComponent(v), "/locales/" + lang + ".json?v=" + encodeURIComponent(v)];
+    function tryAt(i) {
+      if (i >= urls.length) return Promise.resolve(null);
+      return fetch(urls[i], { cache: "no-store" })
+        .then(function (r) {
+          if (!r.ok) throw new Error("i18n fetch " + r.status);
+          return r.json();
+        })
+        .catch(function () {
+          return tryAt(i + 1);
+        });
+    }
+    return tryAt(0);
   }
 
   function loadDict(lang) {
-    if (loadPromise) return loadPromise;
+    if (loadPromise && loadedLang === lang) return loadPromise;
+    loadedLang = lang;
     loadPromise = fetchDict(lang).then(function (j) {
       if (j) DICT = j;
       return DICT;
@@ -105,6 +169,31 @@
     if (fallback != null) return fallback;
     return key;
   }
+
+  function tipKey(tip) {
+    return String(tip || "")
+      .replace(/-/g, "_")
+      .replace(/_+$/, "");
+  }
+
+  /** Departman alt dalı (?tip=) veya tile.id — nav.sub.* sözlüğü. */
+  function eqTipLabel(tipOrTile, fallback) {
+    var tip =
+      typeof tipOrTile === "string"
+        ? tipOrTile
+        : tipOrTile && (tipOrTile.id || tipOrTile.tip || "");
+    var fb =
+      fallback != null
+        ? fallback
+        : tipOrTile && typeof tipOrTile === "object"
+          ? tipOrTile.label
+          : "";
+    if (!tip) return fb != null ? String(fb) : "";
+    var lk = tipOrTile && tipOrTile.labelKey ? tipOrTile.labelKey : "nav.sub." + tipKey(tip);
+    return t(lk, fb != null ? fb : "");
+  }
+
+  window.eqTipLabel = eqTipLabel;
 
   /* ---------- DOM uygulama ---------- */
 
@@ -147,6 +236,24 @@
     for (var i = 0; i < list.length; i++) applyOne(list[i]);
     // root'un kendisi de hedef olabilir
     if (root.matches && root.matches(sel)) applyOne(root);
+    rewriteInternalLinks(root);
+  }
+
+  /** EN sayfalarında iç linkleri /en/… canonical yollarına çevir */
+  function rewriteInternalLinks(root) {
+    if ((window.eqLang || DEFAULT) !== "en") return;
+    root = root || document;
+    var links = root.querySelectorAll('a[href^="/"]');
+    for (var i = 0; i < links.length; i++) {
+      var a = links[i];
+      if (a.hasAttribute("data-i18n-skip")) continue;
+      if (a.hasAttribute("data-lang")) continue;
+      if (a.closest && a.closest(".eq-lang-switch")) continue;
+      var h = a.getAttribute("href");
+      if (!h || h.indexOf("/en/") === 0 || h === "/en") continue;
+      if (/^\/(api|data|images|_next)\//.test(h)) continue;
+      a.setAttribute("href", urlFor(h, "en"));
+    }
   }
 
   /* ---------- hreflang ---------- */
@@ -204,9 +311,32 @@
       }
       var p = u.pathname || "/";
       var stripped = p.replace(PREFIX_RE, "/");
-      var nextPath = lang === "en"
-        ? "/en" + (stripped === "/" ? "" : stripped)
-        : stripped;
+      var base = stripped === "/" ? "" : stripped;
+      if (lang !== "en") {
+        base = trPathFromEnPath(stripped === "/" ? "/" : stripped);
+        if (base === "/") base = "";
+      } else if (lang === "en") {
+        if (EN_PATH_ALIASES[stripped]) base = EN_PATH_ALIASES[stripped];
+        else if (stripped.indexOf("/rehber/") === 0) {
+          base = "/guides/" + stripped.slice("/rehber/".length);
+        } else if (stripped.indexOf("/projeler/") === 0) {
+          base = "/projects/" + stripped.slice("/projeler/".length);
+        } else {
+          var slug = stripped.replace(/^\//, "");
+          if (TR_GEO_TO_EN_SLUG[slug]) base = "/" + TR_GEO_TO_EN_SLUG[slug];
+        }
+      }
+      var nextPath;
+      if (lang === "en") {
+        nextPath = "/en" + base;
+      } else {
+        nextPath =
+          base === "" || base === "/"
+            ? "/"
+            : base.charAt(0) === "/"
+              ? base
+              : "/" + base;
+      }
       u.pathname = nextPath;
       if (isAbsolute) return u.toString();
       return u.pathname + u.search + u.hash;
@@ -232,10 +362,16 @@
         ' href="' + urlFor(location.pathname + location.search + location.hash, "en") + '"' +
         ' data-lang="en" aria-current="' + (lang === "en" ? "true" : "false") + '"' +
         ' title="' + (DICT["lang_switcher"] && DICT["lang_switcher"]["switch_to_en"] || "English") + '">EN</a>';
-    // Tıklamada localStorage'a kaydet
     wrap.querySelectorAll("a.eq-lang-opt").forEach(function (a) {
-      a.addEventListener("click", function () {
-        saveLang(a.getAttribute("data-lang") || DEFAULT);
+      a.addEventListener("click", function (e) {
+        var targetLang = a.getAttribute("data-lang") || DEFAULT;
+        var href = urlFor(
+          location.pathname + location.search + location.hash,
+          targetLang
+        );
+        saveLang(targetLang);
+        e.preventDefault();
+        window.location.assign(href || "/");
       });
     });
     return wrap;
@@ -260,7 +396,8 @@
   }
 
   function mountSwitcher(lang) {
-    if (document.querySelector(".eq-lang-switch")) return;
+    var existing = document.querySelector(".eq-lang-switch");
+    if (existing && existing.parentNode) existing.parentNode.removeChild(existing);
     ensureSwitcherStyles();
     var sw = buildSwitcher(lang);
     // 1) Tercih: sayfada [data-eq-lang-slot] varsa oraya
@@ -276,6 +413,10 @@
     sw.style.cssText = "position:fixed;top:8px;right:12px;z-index:9999;background:rgba(255,255,255,0.92);padding:2px 6px;border:1px solid #e3e3e3;border-radius:3px;";
     document.body.appendChild(sw);
   }
+
+  window.__eqRemountLangSwitcher = function () {
+    mountSwitcher(detectLang());
+  };
 
   /* ---------- boot ---------- */
 
@@ -301,19 +442,42 @@
     } catch (_) {}
   }
 
-  window.eqI18nReady = loadDict(lang).then(function () {
+  function dispatchI18nReady() {
+    try {
+      window.dispatchEvent(
+        new CustomEvent("equsto:i18n-ready", { detail: { lang: lang } })
+      );
+    } catch (_) {}
+  }
+
+  /** Yalnızca URL /en/… iken EN tut; TR yollarına localStorage ile zorla EN ekleme. */
+  function redirectToEnCanonical() {
+    var path = location.pathname || "/";
+    if (!PREFIX_RE.test(path)) {
+      saveLang("tr");
+      return;
+    }
+    saveLang("en");
+  }
+
+  function afterDictReady() {
     applyTree(document);
     ensureHreflang(lang);
+    mountSwitcher(lang);
+    rerunDynamicRenderers();
+    redirectToEnCanonical();
+    dispatchI18nReady();
+  }
+
+  window.eqI18nReady = loadDict(lang).then(function () {
     if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", function () {
-        mountSwitcher(lang);
-        applyTree(document);
-        rerunDynamicRenderers();
-      }, { once: true });
+      document.addEventListener("DOMContentLoaded", afterDictReady, { once: true });
     } else {
-      mountSwitcher(lang);
+      afterDictReady();
+    }
+    window.addEventListener("load", function () {
       applyTree(document);
       rerunDynamicRenderers();
-    }
+    }, { once: true });
   });
 })();

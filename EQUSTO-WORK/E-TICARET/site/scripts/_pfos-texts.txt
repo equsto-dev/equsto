@@ -1,0 +1,84 @@
+(opsiyonel)
+2× teşhir dolabı, 2× hazırlık tezgahı, gıda dilimleme makinası.
+Adımlar
+Alt Tip
+Altyapı bilgisi
+Ana Sayfa
+Ana sayfa
+Açacağınız yeri en yakın seçeneğe dokunun. Birkaç ek soru çıkabilir; hepsi listeden seçim.
+Aşağıdaki soruları yukarıdan aşağıya sırayla yanıtlayın. Her adımda yalnızca size uygun olanı seçmeniz yeterli.
+Ben Gastronomi Mekan Tasarımcısı Mr. Equsto. Hoş geldin.
+Benzer işletme örneği
+Beş dakikada yapılır, hemen teslim edilir.
+Bilgileriniz alınır, ekibimiz dönüş yapar
+Bilgisayarınızda posta kutusu açılır; metin hazırdır
+Bölüm bazlı m²
+Cadde / bulvar
+Devam
+Devam et →
+Dükkan Türü
+Dükkan veya mutfağın toplam metrekare tahmini. Emin değilseniz kabaca yazın; sonra düzeltebilirsiniz.
+E-posta ile yaz
+Ekipman listesinde yer alacak bölümleri seçin (en az bir kategori).
+Elektrik / Gaz gereksinimleri
+En az 20 m² girin (ör. 20, 45, 120).
+Equsto yapay zekadan yardım alır; hata yapabilir. Lütfen iletişime geçin.
+Excel indir
+Franchise marka adı
+Girilen m² toplamı, toplam alandan fazla.
+Görünen tutarlar kesin fiyat mıdır?
+Güncellenmiş fiyat teklifi
+Hangi bölgelere hizmet veriyorsunuz?
+Hazırlanıyor…
+Henüz konsept seçilmedi.
+Hoş geldiniz.
+Kendi cümlenizi eklemek için boş şablon
+Konsepte uygun PDF projeler
+Konseptinize uygun sahadan notlar
+Lütfen yıldızlı alanların hepsini doldurun.
+Mahalle
+Mesleğini söylemek ister misin?
+Mutfak kategorileri
+Ne tür bir işletme?
+Otomatik eklendi
+PDF / yazdır
+Proje Fabrikası
+Proje Fabrikası (PFOS)
+Proje Fabrikası ne işe yarar?
+Proje Fabrikası · Equsto ·
+Projenize özel öneriler — ekleyip çıkarabilirsiniz
+Referans
+Referans metinler
+Saha referansı
+Sayıyı yazın, kaydırıcıyı sürükleyin veya hazır değerlerden seçin (20–1000 m²).
+Seçilen ürünleri sepete ekle
+Son PFL'ler
+Sık sorulan sorular
+Tahmini tutar
+Tam adres teklif gönderiminde saklanır; veri bankası özetinde yalnızca şehir ve ilçe kullanılır.
+Teklif kalemleri · site kataloğu (ekipmanlar.json)
+Teklif v12 · yazdır veya PDF kaydet
+Teklif v12 · şartlar dahil
+Teklifi Equsto'ya gönder
+Teklifi Güncelle →
+Teklifi oluşturun veya detaylandırın; gerekirse özette m² değerini güncelleyebilirsiniz.
+Teslimat adresi seçin
+Toplam alan (m²)
+Yardımcı ekipmanlar
+Yazdırabilir veya ekibimize tek tıkla gönderebilirsiniz
+Zincir marka adını girin, hazır projeyi yükleyelim
+[email&#160;protected]
+il (şehir)
+yazın; listeden tıklayın. Sonra ilçe, mahalle ve cadde — mümkünse listeden seçin.
+Önce
+Örnek arşiv
+Örnek ekipman listesi
+Örnek listeniz hazır
+Özeti e-postayla gönder
+İl (şehir) *
+İletişim bilgilerim kiminle paylaşılır?
+İlçe
+İsterseniz rolünüzü seçin; seçmezseniz de devam edebilirsiniz.
+Şarküteri ekipmanları
+Şarküteri ekipmanları listeye eklendi:
+Şehir ve teslimat adresi

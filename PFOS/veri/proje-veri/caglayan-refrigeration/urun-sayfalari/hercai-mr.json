@@ -1,0 +1,387 @@
+{
+  "slug": "hercai-mr",
+  "baslik": "HERCAİ MR",
+  "tip": "model",
+  "ustSeriSlug": null,
+  "kategoriler": [
+    "semi-vertical-multideck"
+  ],
+  "kapak": "https:\\/\\/caglayanrefrigeration.com\\/wp-content\\/uploads\\/2023\\/03\\/Hercai-MR-Kapak.webp",
+  "kapakYol": "gorseller/hercai-mr/Hercai-MR-Kapak.webp",
+  "linkKaynak": "https://caglayanrefrigeration.com/tr/product/hercai-mr/",
+  "cocuklar": [],
+  "ozellikler": [
+    {
+      "baslik": "",
+      "aciklama": "Dairy Products"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Delicatessen"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Drinks"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Pre-Packed Fruit and Vegetables"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Meat"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Chicken"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Cheese"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Sandwiches"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Pastries"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Sushi"
+    },
+    {
+      "baslik": "",
+      "aciklama": "High Efficiency Fans"
+    },
+    {
+      "baslik": "",
+      "aciklama": "LED Lighting"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Ventilated"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Off Cycle Defrost"
+    }
+  ],
+  "teknik": {
+    "akordeon": [],
+    "sekmeler": [
+      {
+        "baslik": "TEKNİK ÇİZİMLER",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/HERCAI-MR-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/HERCAI-MR-PLG-Model-1.webp"
+        ],
+        "tablolar": []
+      },
+      {
+        "baslik": "TEKNİK DETAYLAR",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/HERCAI-MR-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/HERCAI-MR-PLG-Model-1.webp"
+        ],
+        "tablolar": []
+      }
+    ],
+    "tablolar": [
+      {
+        "basliklar": [
+          "UZUNLUK / LENGTH",
+          "YÜKSEKLİK / HEIGHT",
+          "SICAKLIK SINIFI / TEMPERATURE CLASS",
+          "YÜKLEME ALANI / LOADING AREA",
+          "PANEL KALINLIĞI / END THICKNESS"
+        ],
+        "satirlar": [
+          [
+            "mm",
+            "ML (3M1)",
+            "SL (3M2)",
+            "m²",
+            "mm"
+          ],
+          [
+            "°C",
+            "DERİNLİK / DEPTH (mm)",
+            "25"
+          ],
+          [
+            "912",
+            "1824"
+          ],
+          [
+            "1250",
+            "1200",
+            "-1 / +1",
+            "0 / +2",
+            "1,23",
+            "2,63"
+          ],
+          [
+            "1875",
+            "1,84",
+            "3,94"
+          ],
+          [
+            "2500",
+            "2,46",
+            "5,25"
+          ],
+          [
+            "GB (1824)",
+            "1,79",
+            "N/A"
+          ]
+        ]
+      },
+      {
+        "basliklar": [
+          "UZUNLUK / LENGTH (mm)",
+          "YÜKSEKLİK / HEIGHT (mm)",
+          "SICAKLIK SINIFI / TEMPERATURE CLASS",
+          "YÜKLEME ALANI / LOADING AREA (m²)",
+          "PANEL KALINLIĞI / END THICKNESS (mm)"
+        ],
+        "satirlar": [
+          [
+            "ML (3M1)",
+            "SL (3M2)",
+            "DERİNLİK / DEPTH (mm)"
+          ],
+          [
+            "912",
+            "1824"
+          ],
+          [
+            "1250",
+            "1200",
+            "-1 / +1 °C",
+            "0 / +2 °C",
+            "1,23",
+            "2,63",
+            "25"
+          ],
+          [
+            "1875",
+            "1,84",
+            "3,94"
+          ],
+          [
+            "2500",
+            "2,46",
+            "5,25"
+          ],
+          [
+            "GB (1824)",
+            "1,79",
+            "N/A"
+          ]
+        ]
+      }
+    ]
+  },
+  "gorseller": {
+    "tum": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Hercai-MR.webp",
+        "dosya": "gorseller/hercai-mr/Hercai-MR.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/06/susi.webp",
+        "dosya": "gorseller/hercai-mr/susi.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/12/Hercai-MR-Panjurlu-2.webp",
+        "dosya": "gorseller/hercai-mr/Hercai-MR-Panjurlu-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/12/Hercai-MR-Panjurlu.webp",
+        "dosya": "gorseller/hercai-mr/Hercai-MR-Panjurlu.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Hercai-MR-ADA-2.webp",
+        "dosya": "gorseller/hercai-mr/Hercai-MR-ADA-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/hercai-mr-mobilyasiz-1.webp",
+        "dosya": "gorseller/hercai-mr/hercai-mr-mobilyasiz-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/hercai-mr-mobilyasiz-2.webp",
+        "dosya": "gorseller/hercai-mr/hercai-mr-mobilyasiz-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/hercai-cift-tarafli-.webp",
+        "dosya": "gorseller/hercai-mr/hercai-cift-tarafli-.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/hercai-mr-mobilyasiz-3.webp",
+        "dosya": "gorseller/hercai-mr/hercai-mr-mobilyasiz-3.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Hercai.pdf",
+        "dosya": "gorseller/hercai-mr/Hercai.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/HERCAI-MR-Model-1.webp",
+        "dosya": "gorseller/hercai-mr/HERCAI-MR-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/HERCAI-MR-PLG-Model-1.webp",
+        "dosya": "gorseller/hercai-mr/HERCAI-MR-PLG-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/circle-bg.webp",
+        "dosya": "gorseller/hercai-mr/circle-bg.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/fruit-yogurt.webp",
+        "dosya": "gorseller/hercai-mr/fruit-yogurt.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Hook-Bar.webp",
+        "dosya": "gorseller/hercai-mr/Inci-Hook-Bar.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Meat-Hanger-Bar.webp",
+        "dosya": "gorseller/hercai-mr/Inci-Meat-Hanger-Bar.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Plexi-Product-Divider.webp",
+        "dosya": "gorseller/hercai-mr/Inci-Plexi-Product-Divider.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Plexi-Product-Stopper.webp",
+        "dosya": "gorseller/hercai-mr/Inci-Plexi-Product-Stopper.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Shelf-Lighting.webp",
+        "dosya": "gorseller/hercai-mr/Inci-Shelf-Lighting.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Sliding-Glass.webp",
+        "dosya": "gorseller/hercai-mr/Inci-Sliding-Glass.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Wire-Base-Dividder.webp",
+        "dosya": "gorseller/hercai-mr/Inci-Wire-Base-Dividder.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Wire-Base.webp",
+        "dosya": "gorseller/hercai-mr/Inci-Wire-Base.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Wire-Basket.webp",
+        "dosya": "gorseller/hercai-mr/Inci-Wire-Basket.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/hercai-mr/pdf-icon.webp"
+      }
+    ],
+    "urun": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Hercai-MR.webp",
+        "dosya": "gorseller/hercai-mr/Hercai-MR.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/06/susi.webp",
+        "dosya": "gorseller/hercai-mr/susi.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/12/Hercai-MR-Panjurlu-2.webp",
+        "dosya": "gorseller/hercai-mr/Hercai-MR-Panjurlu-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/12/Hercai-MR-Panjurlu.webp",
+        "dosya": "gorseller/hercai-mr/Hercai-MR-Panjurlu.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Hercai-MR-ADA-2.webp",
+        "dosya": "gorseller/hercai-mr/Hercai-MR-ADA-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/hercai-mr-mobilyasiz-1.webp",
+        "dosya": "gorseller/hercai-mr/hercai-mr-mobilyasiz-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/hercai-mr-mobilyasiz-2.webp",
+        "dosya": "gorseller/hercai-mr/hercai-mr-mobilyasiz-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/hercai-cift-tarafli-.webp",
+        "dosya": "gorseller/hercai-mr/hercai-cift-tarafli-.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/hercai-mr-mobilyasiz-3.webp",
+        "dosya": "gorseller/hercai-mr/hercai-mr-mobilyasiz-3.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Hercai.pdf",
+        "dosya": "gorseller/hercai-mr/Hercai.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/HERCAI-MR-Model-1.webp",
+        "dosya": "gorseller/hercai-mr/HERCAI-MR-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/HERCAI-MR-PLG-Model-1.webp",
+        "dosya": "gorseller/hercai-mr/HERCAI-MR-PLG-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/circle-bg.webp",
+        "dosya": "gorseller/hercai-mr/circle-bg.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/fruit-yogurt.webp",
+        "dosya": "gorseller/hercai-mr/fruit-yogurt.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Hook-Bar.webp",
+        "dosya": "gorseller/hercai-mr/Inci-Hook-Bar.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Meat-Hanger-Bar.webp",
+        "dosya": "gorseller/hercai-mr/Inci-Meat-Hanger-Bar.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Plexi-Product-Divider.webp",
+        "dosya": "gorseller/hercai-mr/Inci-Plexi-Product-Divider.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Plexi-Product-Stopper.webp",
+        "dosya": "gorseller/hercai-mr/Inci-Plexi-Product-Stopper.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Shelf-Lighting.webp",
+        "dosya": "gorseller/hercai-mr/Inci-Shelf-Lighting.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Sliding-Glass.webp",
+        "dosya": "gorseller/hercai-mr/Inci-Sliding-Glass.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Wire-Base-Dividder.webp",
+        "dosya": "gorseller/hercai-mr/Inci-Wire-Base-Dividder.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Wire-Base.webp",
+        "dosya": "gorseller/hercai-mr/Inci-Wire-Base.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Wire-Basket.webp",
+        "dosya": "gorseller/hercai-mr/Inci-Wire-Basket.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/hercai-mr/pdf-icon.webp"
+      }
+    ],
+    "teknikCizim": []
+  }
+}

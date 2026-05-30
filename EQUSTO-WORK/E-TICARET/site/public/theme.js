@@ -197,6 +197,32 @@
 
   window.__eqRerenderTopnavBesos = installTopnavBesosFaces;
 
+  /** KİLİT: topnav-bar-design-KILIT.txt — Bar Design her zaman departman listesinin sonunda (eski önbellek / partial uyumu). */
+  function normalizeTopnavBarDesignLast(root) {
+    root = root || document;
+    var inner = root.querySelector("nav.topnav .topnav-inner");
+    if (!inner) return;
+    var besos = inner.querySelector(".topnav-item.topnav-besos");
+    if (!besos) return;
+    var items = inner.querySelectorAll(".topnav-item");
+    if (!items.length || items[items.length - 1] === besos) return;
+
+    var next = besos.nextElementSibling;
+    if (next && next.classList.contains("topnav-sep")) next.remove();
+    var prev = besos.previousElementSibling;
+    if (prev && prev.classList.contains("topnav-sep")) prev.remove();
+    besos.remove();
+
+    var sep = document.createElement("span");
+    sep.className = "topnav-sep";
+    sep.setAttribute("aria-hidden", "true");
+    sep.textContent = "|";
+    inner.appendChild(sep);
+    inner.appendChild(besos);
+  }
+
+  window.__eqNormalizeTopnavBarDesignLast = normalizeTopnavBarDesignLast;
+
   /** Dış http(s) bağlantıları yeni sekmede; iç site linkleri aynı sekme. `data-eq-same-tab="1"` ile istisna. */
   function eqHostnameKey(h) {
     return String(h || "")
@@ -227,8 +253,10 @@
 
   function bootExternalLinks() {
     markExternalLinks(document);
+    normalizeTopnavBarDesignLast(document);
     installTopnavBesosFaces(document);
     upgradeTopnavDeptLinks();
+    normalizeTopnavBarDesignLast(document);
   }
 
   /** Üst departman şeridi: div+onclick yerine <a href> — sol tık aynı sekme, tekerlek (orta) tık tarayıcıda yeni sekme. */
@@ -238,12 +266,15 @@
     if (!nav) return;
     nav.querySelectorAll(".topnav-item").forEach(function (item) {
       if (item.tagName === "A" && item.getAttribute("href")) return;
+      if (item.classList.contains("topnav-all")) return;
+      var key = item.getAttribute("data-eq-nav-key");
       var oc = item.getAttribute("onclick");
-      if (!oc || typeof oc !== "string") return;
-      if (/toggle(Drawer|CatPicker)\s*\(/i.test(oc)) return;
-      var m = oc.match(/eq(?:Dept)?Go\s*\(\s*['"]([a-zA-Z0-9_-]+)['"]\s*\)/);
-      if (!m) return;
-      var key = m[1];
+      if (!key && oc && typeof oc === "string") {
+        if (/toggle(Drawer|CatPicker)\s*\(/i.test(oc)) return;
+        var m = oc.match(/eq(?:Dept)?Go\s*\(\s*['"]([a-zA-Z0-9_-]+)['"]\s*\)/);
+        if (m) key = m[1];
+      }
+      if (!key) return;
       var href;
       try {
         href = window.equstoUrl(key);
@@ -270,8 +301,31 @@
     }
   }
 
+  window.__eqUpgradeTopnavDeptLinks = upgradeTopnavDeptLinks;
+
+  function watchTopnavLinkUpgrade() {
+    var chromeRoot = document.getElementById("eq-shop-chrome-root");
+    if (!chromeRoot || typeof MutationObserver !== "function") return;
+    var pending = null;
+    var obs = new MutationObserver(function () {
+      if (pending) return;
+      pending = window.setTimeout(function () {
+        pending = null;
+        upgradeTopnavDeptLinks();
+        normalizeTopnavBarDesignLast(document);
+        installTopnavBesosFaces(document);
+      }, 0);
+    });
+    obs.observe(chromeRoot, { childList: true, subtree: true });
+  }
+
   window.__eqMarkExternalLinks = markExternalLinks;
   window.addEventListener("load", bootExternalLinks);
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", watchTopnavLinkUpgrade);
+  } else {
+    watchTopnavLinkUpgrade();
+  }
 })();
 
 /** Üst arama — theme.js ile erken yüklenir (inline oninput kırılmasın diye). */
@@ -327,6 +381,26 @@
 
   function isHomeVitrinPage() {
     return typeof window.eqIsHomeVitrin === "function" && window.eqIsHomeVitrin();
+  }
+
+  function isSearchResultsPage() {
+    try {
+      var p = String(location.pathname || "")
+        .replace(/\/$/, "")
+        .replace(/^\/en(?=\/|$)/, "");
+      return p === "/arama" || p === "/search";
+    } catch (_) {
+      return false;
+    }
+  }
+
+  function clearHeaderSearchState() {
+    window.__eqHdrLastQ = "";
+    try {
+      sessionStorage.removeItem("eq_hdr_search_q");
+    } catch (_) {}
+    var inp = document.querySelector("header.hdr .srch-input, header .srch .srch-input");
+    if (inp) inp.value = "";
   }
 
   function globalSearchUrl(q) {
@@ -387,7 +461,20 @@
 
   if (typeof window.searchFilter !== "function") {
     window.searchFilter = function (q) {
-      window.__eqHdrLastQ = String(q == null ? "" : q);
+      q = String(q == null ? "" : q).trim();
+      if (!q) return false;
+      window.__eqHdrLastQ = q;
+      try {
+        if (typeof window.__eqDeptPlpApplySearch === "function" && window.__eqDeptPlpApplySearch(q)) {
+          return true;
+        }
+      } catch (_) {}
+      var url = globalSearchUrl(q);
+      if (url) {
+        location.href = url;
+        return true;
+      }
+      return false;
     };
   }
 
@@ -423,7 +510,8 @@
     try {
       path = location.pathname || "";
     } catch (_) {}
-    if (path.indexOf("/arama") === 0) return;
+    if (path.indexOf("/arama") === 0 || path.indexOf("/search") === 0) return;
+    if (isSearchResultsPage()) return;
     if (!isHomeVitrinPage()) {
       commitGlobalSearch(q);
       return;
@@ -452,9 +540,22 @@
     setTimeout(drainUrlQ, 0);
   }
 
+  document.addEventListener(
+    "click",
+    function (ev) {
+      var a = ev.target && ev.target.closest && ev.target.closest("a.logo");
+      if (!a) return;
+      var href = String(a.getAttribute("href") || "").trim();
+      if (href === "/" || href === "/en" || href === "/en/") {
+        clearHeaderSearchState();
+      }
+    },
+    true
+  );
+
   if (!document.querySelector('script[src*="eq-header-search"]')) {
     var meiliHdr = document.createElement("script");
-    meiliHdr.src = "/eq-header-search.js?v=20260530meili";
+    meiliHdr.src = "/eq-header-search.js?v=20260530search-engine-fix";
     meiliHdr.defer = true;
     document.head.appendChild(meiliHdr);
   }
@@ -489,7 +590,7 @@
       !b.classList.contains("bd-page");
     if (shopHdr && !document.querySelector('script[src*="eq-shop-header"]')) {
       var hdrJs = document.createElement("script");
-      hdrJs.src = "/eq-shop-header.js?v=20260528hdr";
+      hdrJs.src = "/eq-shop-header.js?v=20260530hdr-returns-dedupe2";
       hdrJs.defer = true;
       document.head.appendChild(hdrJs);
     }
@@ -537,11 +638,28 @@
     if (b.classList.contains("pf-page")) return;
     if (!document.querySelector('script[src*="eq-footer"]')) {
       var f = document.createElement("script");
-      f.src = "/eq-footer.js?v=20260529helpcolsss";
+      f.src = "/eq-footer.js?v=20260530footer-kilit";
       f.defer = true;
       document.head.appendChild(f);
     }
   } catch (_) {}
+})();
+
+/** Footer marka şeridi — KİLİT: public/footer-brand-KILIT.txt */
+(function () {
+  function enforceFooterBrandLock() {
+    try {
+      if (typeof window.__eqFixFooterCompanyAll === "function") window.__eqFixFooterCompanyAll();
+    } catch (_) {}
+  }
+  window.addEventListener("equsto:i18n-ready", enforceFooterBrandLock);
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(enforceFooterBrandLock, 400);
+    });
+  } else {
+    setTimeout(enforceFooterBrandLock, 400);
+  }
 })();
 
 /** Eksik üst chrome (logo + arama + topnav) — GEO / rehber sayfaları */
@@ -564,7 +682,7 @@
     if (b.classList.contains("admin-app")) return;
     if (!document.querySelector('script[src*="eq-link-scroll"]')) {
       var ls = document.createElement("script");
-      ls.src = "/eq-link-scroll.js?v=20260528midscroll3";
+      ls.src = "/eq-link-scroll.js?v=20260530mid-native";
       ls.defer = true;
       document.head.appendChild(ls);
     }

@@ -1,0 +1,320 @@
+{
+  "slug": "manolya",
+  "baslik": "MANOLYA",
+  "tip": "model",
+  "ustSeriSlug": null,
+  "kategoriler": [
+    "vertical-freezers"
+  ],
+  "kapak": "https:\\/\\/caglayanrefrigeration.com\\/wp-content\\/uploads\\/2023\\/02\\/Manolya-Kapak.webp",
+  "kapakYol": "gorseller/manolya/Manolya-Kapak.webp",
+  "linkKaynak": "https://caglayanrefrigeration.com/tr/product/manolya/",
+  "cocuklar": [],
+  "ozellikler": [
+    {
+      "baslik": "",
+      "aciklama": "Ice Cream"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Frozen Food"
+    },
+    {
+      "baslik": "",
+      "aciklama": "High Efficiency Fans"
+    },
+    {
+      "baslik": "",
+      "aciklama": "LED Lighting"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Ventilated"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Remote Condensing Unit"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Electric Defrost"
+    }
+  ],
+  "teknik": {
+    "akordeon": [],
+    "sekmeler": [
+      {
+        "baslik": "TEKNİK ÇİZİMLER",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/MANOLYA-FG-HD-SRG-Kesit-01-Caglayan-Refrigeration.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/MANOLYA-FG-HD-SRG-Kesit-02-Caglayan-Refrigeration.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/MANOLYA-FG-SKY-SRG-Kesit-01-Caglayan-Refrigeration.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/MANOLYA-FG-SKY-SRG-Kesit-02-Caglayan-Refrigeration.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/MANOLYA-LM-HD-SRG-Kesit-01-Caglayan-Refrigeration.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/MANOLYA-LM-HD-SRG-Kesit-02-Caglayan-Refrigeration.webp"
+        ],
+        "tablolar": []
+      },
+      {
+        "baslik": "TEKNİK DETAYLAR",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/MANOLYA-FG-HD-SRG-Kesit-01-Caglayan-Refrigeration.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/MANOLYA-FG-HD-SRG-Kesit-02-Caglayan-Refrigeration.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/MANOLYA-FG-SKY-SRG-Kesit-01-Caglayan-Refrigeration.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/MANOLYA-FG-SKY-SRG-Kesit-02-Caglayan-Refrigeration.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/MANOLYA-LM-HD-SRG-Kesit-01-Caglayan-Refrigeration.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/MANOLYA-LM-HD-SRG-Kesit-02-Caglayan-Refrigeration.webp"
+        ],
+        "tablolar": []
+      }
+    ],
+    "tablolar": [
+      {
+        "basliklar": [
+          "UZUNLUK / LENGTH (mm)",
+          "YÜKSEKLİK / HEIGHT (mm)",
+          "SICAKLIK SINIFI / TEMPERATURE CLASS",
+          "YÜKLEME ALANI / LOADING AREA (m²)",
+          "PANEL KALINLIĞI / END THICKNESS (mm)"
+        ],
+        "satirlar": [
+          [
+            "3L1",
+            "DERİNLİK / DEPTH (mm)"
+          ],
+          [
+            "1112"
+          ],
+          [
+            "2500",
+            "2050",
+            "-22 / -25 °C",
+            "4,64",
+            "70"
+          ],
+          [
+            "2200",
+            "5,51"
+          ],
+          [
+            "3750",
+            "2050",
+            "6,96"
+          ],
+          [
+            "2200",
+            "8,27"
+          ]
+        ]
+      }
+    ]
+  },
+  "gorseller": {
+    "tum": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Manolya.webp",
+        "dosya": "gorseller/manolya/Manolya.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pizza.webp",
+        "dosya": "gorseller/manolya/pizza.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Manolya-LM.webp",
+        "dosya": "gorseller/manolya/Manolya-LM.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LM-2.webp",
+        "dosya": "gorseller/manolya/LM-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Manolya-SKY.webp",
+        "dosya": "gorseller/manolya/Manolya-SKY.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/FG-1.webp",
+        "dosya": "gorseller/manolya/FG-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/FG-2.webp",
+        "dosya": "gorseller/manolya/FG-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/FG-SKY-2.webp",
+        "dosya": "gorseller/manolya/FG-SKY-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MANOLYA-siyah-1.webp",
+        "dosya": "gorseller/manolya/MANOLYA-siyah-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MANOLYA-siyah-2.webp",
+        "dosya": "gorseller/manolya/MANOLYA-siyah-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Manolya.pdf",
+        "dosya": "gorseller/manolya/Manolya.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/MANOLYA-FG-HD-SRG-Kesit-01-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/manolya/MANOLYA-FG-HD-SRG-Kesit-01-Caglayan-Refrigeration.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/MANOLYA-FG-HD-SRG-Kesit-02-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/manolya/MANOLYA-FG-HD-SRG-Kesit-02-Caglayan-Refrigeration.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/MANOLYA-FG-SKY-SRG-Kesit-01-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/manolya/MANOLYA-FG-SKY-SRG-Kesit-01-Caglayan-Refrigeration.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/MANOLYA-FG-SKY-SRG-Kesit-02-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/manolya/MANOLYA-FG-SKY-SRG-Kesit-02-Caglayan-Refrigeration.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/MANOLYA-LM-HD-SRG-Kesit-01-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/manolya/MANOLYA-LM-HD-SRG-Kesit-01-Caglayan-Refrigeration.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/MANOLYA-LM-HD-SRG-Kesit-02-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/manolya/MANOLYA-LM-HD-SRG-Kesit-02-Caglayan-Refrigeration.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/circle-bg.webp",
+        "dosya": "gorseller/manolya/circle-bg.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/freeze-vegetable.webp",
+        "dosya": "gorseller/manolya/freeze-vegetable.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Manolya-Night-Blind.webp",
+        "dosya": "gorseller/manolya/Manolya-Night-Blind.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Manolya-Glass-Sliding-Cover.webp",
+        "dosya": "gorseller/manolya/Manolya-Glass-Sliding-Cover.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/Wire-Base-1.webp",
+        "dosya": "gorseller/manolya/Wire-Base-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Manolya-Wire-Product-Divider.webp",
+        "dosya": "gorseller/manolya/Manolya-Wire-Product-Divider.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Manolya-Wire-Shelf.webp",
+        "dosya": "gorseller/manolya/Manolya-Wire-Shelf.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/manolya/pdf-icon.webp"
+      }
+    ],
+    "urun": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Manolya.webp",
+        "dosya": "gorseller/manolya/Manolya.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pizza.webp",
+        "dosya": "gorseller/manolya/pizza.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Manolya-LM.webp",
+        "dosya": "gorseller/manolya/Manolya-LM.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Manolya-SKY.webp",
+        "dosya": "gorseller/manolya/Manolya-SKY.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MANOLYA-siyah-1.webp",
+        "dosya": "gorseller/manolya/MANOLYA-siyah-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MANOLYA-siyah-2.webp",
+        "dosya": "gorseller/manolya/MANOLYA-siyah-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Manolya.pdf",
+        "dosya": "gorseller/manolya/Manolya.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/circle-bg.webp",
+        "dosya": "gorseller/manolya/circle-bg.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/freeze-vegetable.webp",
+        "dosya": "gorseller/manolya/freeze-vegetable.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Manolya-Night-Blind.webp",
+        "dosya": "gorseller/manolya/Manolya-Night-Blind.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Manolya-Glass-Sliding-Cover.webp",
+        "dosya": "gorseller/manolya/Manolya-Glass-Sliding-Cover.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/Wire-Base-1.webp",
+        "dosya": "gorseller/manolya/Wire-Base-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Manolya-Wire-Product-Divider.webp",
+        "dosya": "gorseller/manolya/Manolya-Wire-Product-Divider.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Manolya-Wire-Shelf.webp",
+        "dosya": "gorseller/manolya/Manolya-Wire-Shelf.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/manolya/pdf-icon.webp"
+      }
+    ],
+    "teknikCizim": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LM-2.webp",
+        "dosya": "gorseller/manolya/LM-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/FG-1.webp",
+        "dosya": "gorseller/manolya/FG-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/FG-2.webp",
+        "dosya": "gorseller/manolya/FG-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/FG-SKY-2.webp",
+        "dosya": "gorseller/manolya/FG-SKY-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/MANOLYA-FG-HD-SRG-Kesit-01-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/manolya/MANOLYA-FG-HD-SRG-Kesit-01-Caglayan-Refrigeration.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/MANOLYA-FG-HD-SRG-Kesit-02-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/manolya/MANOLYA-FG-HD-SRG-Kesit-02-Caglayan-Refrigeration.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/MANOLYA-FG-SKY-SRG-Kesit-01-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/manolya/MANOLYA-FG-SKY-SRG-Kesit-01-Caglayan-Refrigeration.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/MANOLYA-FG-SKY-SRG-Kesit-02-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/manolya/MANOLYA-FG-SKY-SRG-Kesit-02-Caglayan-Refrigeration.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/MANOLYA-LM-HD-SRG-Kesit-01-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/manolya/MANOLYA-LM-HD-SRG-Kesit-01-Caglayan-Refrigeration.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/MANOLYA-LM-HD-SRG-Kesit-02-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/manolya/MANOLYA-LM-HD-SRG-Kesit-02-Caglayan-Refrigeration.webp"
+      }
+    ]
+  }
+}

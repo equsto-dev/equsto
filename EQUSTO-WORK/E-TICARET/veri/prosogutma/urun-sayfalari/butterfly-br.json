@@ -1,0 +1,152 @@
+{
+  "slug": "butterfly-br",
+  "wpId": 9331,
+  "title": "Butterfly BR",
+  "baslik": "Butterfly BR",
+  "url": "https://prosogutma.com/urun/butterfly-br/",
+  "attributes": [
+    {
+      "label": "Ürünler",
+      "value": "Pasta ve Unlu Mamuller"
+    },
+    {
+      "label": "Kabin Türü",
+      "value": "Butik Reyonları"
+    },
+    {
+      "label": "Plug-in",
+      "value": "Plug-in"
+    }
+  ],
+  "categories": [
+    {
+      "name": "Butik Reyonları"
+    }
+  ],
+  "gallery": [
+    {
+      "src": "https://prosogutma.com/wp-content/uploads/2022/05/Butterfly-BR-1.jpg"
+    },
+    {
+      "src": "https://prosogutma.com/wp-content/uploads/2022/05/butterfly-tum.png"
+    }
+  ],
+  "tabs": [
+    {
+      "name": "Ürün Hakkında",
+      "html": "<p><a href=\"https://prosogutma.com/wp-content/uploads/2023/02/butterfly-br.svg\"><img loading=\"lazy\" class=\"alignnone size-full wp-image-10830\" role=\"img\" src=\"https://prosogutma.com/wp-content/uploads/2023/02/butterfly-br.svg\" alt=\"\" width=\"539\" height=\"271\" /></a></p></div>\n\t\t\t\t\t\t\t\t\t<div class=\"elementor-tab-title elementor-tab-mobile-title\" aria-selected=\"false\" data-tab=\"2\" role=\"tab\" tabindex=\"-1\" aria-controls=\"elementor-tab-content-1672\" aria-expanded=\"false\">Teknik Çizimler",
+      "links": [
+        {
+          "href": "https://prosogutma.com/wp-content/uploads/2023/02/butterfly-br.svg",
+          "text": "href=\"https://prosogutma.com/wp-content/uploads/2023/02/butterfly-br.svg\""
+        }
+      ],
+      "images": [
+        {
+          "src": "https://prosogutma.com/wp-content/uploads/2023/02/butterfly-br.svg",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "name": "Teknik Çizimler",
+      "html": "<a href=\"https://prosogutma.com/wp-content/uploads/2023/02/butterfly-br-ba.pdf\" target=\"_blank\" rel=\"noopener\">Teknik Çizimlere Gitmek İçin Tıklayınız.</a></div>\n\t\t\t\t\t\t\t\t\t<div class=\"elementor-tab-title elementor-tab-mobile-title\" aria-selected=\"false\" data-tab=\"3\" role=\"tab\" tabindex=\"-1\" aria-controls=\"elementor-tab-content-1673\" aria-expanded=\"false\">Katalog Sayfası",
+      "links": [
+        {
+          "href": "https://prosogutma.com/wp-content/uploads/2023/02/butterfly-br-ba.pdf",
+          "text": "href=\"https://prosogutma.com/wp-content/uploads/2023/02/butterfly-br-ba.pdf\""
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "Katalog Sayfası",
+      "html": "<a href=\"https://prosogutma.com/wp-content/uploads/2023/02/butterfly-br-ba.pdf\" target=\"_blank\" rel=\"noopener\">Ürün Kataloğumuza Gitmek İçin Tıklayınız.</a></div>\n\t\t\t\t\t\t\t\t\t<div class=\"elementor-tab-title elementor-tab-mobile-title\" aria-selected=\"false\" data-tab=\"4\" role=\"tab\" tabindex=\"-1\" aria-controls=\"elementor-tab-content-1674\" aria-expanded=\"false\">Opsiyonlar",
+      "links": [
+        {
+          "href": "https://prosogutma.com/wp-content/uploads/2023/02/butterfly-br-ba.pdf",
+          "text": "href=\"https://prosogutma.com/wp-content/uploads/2023/02/butterfly-br-ba.pdf\""
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "Opsiyonlar",
+      "html": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p></div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t</div>\n\t\t\t\t\t</div>\n\t\t</section>\n\t\t\t\t</div>\n\t\t\n",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Ürün Hakkında",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Teknik Çizimler",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Teknik Çizimlere Gitmek İçin Tıklayınız.",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Katalog Sayfası",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Ürün Kataloğumuza Gitmek İçin Tıklayınız.",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Opsiyonlar",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+      "html": "",
+      "links": [],
+      "images": []
+    }
+  ],
+  "teknik": {
+    "tablolar": [
+      {
+        "basliklar": [
+          "Ürünler",
+          "Kabin Türü",
+          "Plug-in"
+        ],
+        "satirlar": [
+          [
+            "Ürünler",
+            "Pasta ve Unlu Mamuller"
+          ],
+          [
+            "Kabin Türü",
+            "Butik Reyonları"
+          ],
+          [
+            "Plug-in",
+            "Plug-in"
+          ]
+        ]
+      }
+    ],
+    "pdfText": "BUTTERFLY BR\r\nBUTTERFLY BA\r\nBread Display Cabinet\r\nEkmek Teşhir Reyonu\r\nBanco / Banko\r\n8mX`cXYc\\\u0001Df[lc\\j\u0001&\u0001BlccXeêcXY`c`i\u0001Df[cc\\i\r\nLength (mm)\r\nUzunluk (mm)\r\n937\r\n1250\r\nSide panel (mm)\r\nYan kapak (mm)\r\n30\r\n30\r\nTechnicial Specifications \r\nTeknik Özellikler\r\nTechnicial Specifications \r\nTeknik Özellikler\r\n8mX`cXYc\\\u0001Df[lc\\j\u0001&\u0001BlccXeêcXY`c`i\u0001Df[cc\\i\r\nLength (mm)\r\nUzunluk (mm)\r\n600\r\n800\r\n1000\r\n1200\r\nSide panel (mm)\r\nYan kapak (mm)\r\n30\r\n30\r\n30\r\n30\r\nBoutigue\r\n9lk`b\r\nCAKE\r\nBAKED PRODUCT\r\nCategories\r\nKategoriler\r\n1350\r\n570\r\n724\r\n395\r\n240\r\n465\r\n541\r\nBUTTERFLY V1 BR/75/135\r\n751\r\n900\r\n584\r\n516\r\nBUTTERFLY V1 BAR/75/90\r\n82 / 83\r\n",
+    "pdfUrl": "https://prosogutma.com/wp-content/uploads/2023/02/butterfly-br-ba.pdf",
+    "pdfLocal": "media/products/butterfly-br/pdfs/butterfly-br-ba.pdf"
+  },
+  "pdfText": "BUTTERFLY BR\r\nBUTTERFLY BA\r\nBread Display Cabinet\r\nEkmek Teşhir Reyonu\r\nBanco / Banko\r\n8mX`cXYc\\\u0001Df[lc\\j\u0001&\u0001BlccXeêcXY`c`i\u0001Df[cc\\i\r\nLength (mm)\r\nUzunluk (mm)\r\n937\r\n1250\r\nSide panel (mm)\r\nYan kapak (mm)\r\n30\r\n30\r\nTechnicial Specifications \r\nTeknik Özellikler\r\nTechnicial Specifications \r\nTeknik Özellikler\r\n8mX`cXYc\\\u0001Df[lc\\j\u0001&\u0001BlccXeêcXY`c`i\u0001Df[cc\\i\r\nLength (mm)\r\nUzunluk (mm)\r\n600\r\n800\r\n1000\r\n1200\r\nSide panel (mm)\r\nYan kapak (mm)\r\n30\r\n30\r\n30\r\n30\r\nBoutigue\r\n9lk`b\r\nCAKE\r\nBAKED PRODUCT\r\nCategories\r\nKategoriler\r\n1350\r\n570\r\n724\r\n395\r\n240\r\n465\r\n541\r\nBUTTERFLY V1 BR/75/135\r\n751\r\n900\r\n584\r\n516\r\nBUTTERFLY V1 BAR/75/90\r\n82 / 83\r\n",
+  "scrapedAt": "2026-05-28T23:47:51.132Z"
+}

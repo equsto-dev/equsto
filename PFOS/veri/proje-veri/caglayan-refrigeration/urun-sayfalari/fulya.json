@@ -1,0 +1,57 @@
+{
+  "slug": "fulya",
+  "baslik": "FULYA",
+  "tip": "seri",
+  "ustSeriSlug": null,
+  "kategoriler": [
+    "vertical-multideck"
+  ],
+  "kapak": "https:\\/\\/caglayanrefrigeration.com\\/wp-content\\/uploads\\/2023\\/02\\/Fulya-FG-Kapak.webp",
+  "kapakYol": "gorseller/fulya/Fulya-FG-Kapak.webp",
+  "linkKaynak": "https://caglayanrefrigeration.com/tr/product/fulya/",
+  "cocuklar": [
+    {
+      "slug": "fulya-hf",
+      "ad": "FULYA HF",
+      "link": "https://caglayanrefrigeration.com/tr/product/fulya-hf/",
+      "kapak": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/Fulya-FG-Kapak.webp",
+      "kapakYol": "gorseller/fulya/Fulya-FG-Kapak.webp"
+    },
+    {
+      "slug": "fulya-nv",
+      "ad": "FULYA NV",
+      "link": "https://caglayanrefrigeration.com/tr/product/fulya-nv/",
+      "kapak": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Fulya-NV-FG-Kapak-Caglayan-Refrigeration.webp",
+      "kapakYol": "gorseller/fulya/Fulya-NV-FG-Kapak-Caglayan-Refrigeration.webp"
+    }
+  ],
+  "ozellikler": [],
+  "teknik": {
+    "akordeon": [],
+    "sekmeler": [],
+    "tablolar": []
+  },
+  "gorseller": {
+    "tum": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/Fulya-FG-Kapak.webp",
+        "dosya": "gorseller/fulya/Fulya-FG-Kapak.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Fulya-NV-FG-Kapak-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/fulya/Fulya-NV-FG-Kapak-Caglayan-Refrigeration.webp"
+      }
+    ],
+    "urun": [],
+    "teknikCizim": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/Fulya-FG-Kapak.webp",
+        "dosya": "gorseller/fulya/Fulya-FG-Kapak.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Fulya-NV-FG-Kapak-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/fulya/Fulya-NV-FG-Kapak-Caglayan-Refrigeration.webp"
+      }
+    ]
+  }
+}

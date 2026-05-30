@@ -145,8 +145,36 @@
     { tip: "calisma-tezgahi", dept: "tezgah", label: "Çalışma Tezgahları", search: "çalışma tezgah|work table|paslanmaz çalışma" },
     { tip: "evyeli-tezgah", dept: "tezgah", label: "Evyeli Tezgahlar", search: "evyeli|evye|sink|lavabo" },
     { tip: "duvar-raf-tezgah", dept: "tezgah", label: "Duvar Raf Tezgahları", search: "duvar raf|wall shelf|raf tezgah" },
-    { tip: "soguk-teshir", dept: "market-reyon", label: "Soğuk Teşhir", search: "soguk-teshir|nilüfer|nilufer|lotus|nergis|lale|inci|krizantem|hercai|saladbar|salad bar|soğuk büfe|soguk bufe|büfe" },
-    { tip: "sicak-teshir", dept: "market-reyon", label: "Sıcak Teşhir", search: "sicak-teshir|sıcak|sicak|benmari|bain" },
+    { tip: "proso-tumu", dept: "market-reyon", label: "Proso", search: "proso profesyonel|prosogutma" },
+    { tip: "proso-sutluk", dept: "market-reyon", label: "Proso Sütlükler", search: "proso-sutluk|sütlük|sutluk|lion|rhino|falcon|puma|panther" },
+    { tip: "proso-kisa-sutluk", dept: "market-reyon", label: "Proso Kısa Sütlük", search: "proso-kisa|kısa sütlük|kisa sutluk" },
+    { tip: "proso-sarkuteri", dept: "market-reyon", label: "Proso Şarküteri", search: "proso-sarkuteri|şarküteri|sarkuteri|tiger|cobra|dragon" },
+    { tip: "proso-dikey-dondurucu", dept: "market-reyon", label: "Proso Dikey Dondurucu", search: "proso-dikey|dikey dondurucu|scorpion|orca|whale|kangaroo" },
+    { tip: "proso-ada-tipi", dept: "market-reyon", label: "Proso Ada Tipi", search: "proso-ada|ada tipi|phoenix|dolphin|barracuda" },
+    { tip: "proso-plugin", dept: "market-reyon", label: "Proso Plug-in", search: "proso-plugin|plug-in|plugin|falcon-plug" },
+    { tip: "proso-butik", dept: "market-reyon", label: "Proso Butik", search: "proso-butik|butik|butterfly|firefly|flamingo" },
+    { tip: "proso-soguk-hava", dept: "market-reyon", label: "Proso Soğuk Hava Deposu", search: "proso-soguk-hava|soğuk hava deposu|soguk hava" },
+    { tip: "proso-sogutma-sistemleri", dept: "market-reyon", label: "Proso Soğutma Sistemleri", search: "proso-sogutma|soğutma sistemi|split|endüstriyel" },
+    { tip: "proso-sise-sogutucu", dept: "market-reyon", label: "Proso Şişe Soğutucu", search: "proso-sise|şişe soğutucu|sise sogutucu" },
+    { tip: "caglayan-tumu", dept: "market-reyon", label: "Çağlayan", search: "çağlayan|caglayan refrigeration" },
+    { tip: "caglayan-nilufer", dept: "market-reyon", label: "Nilüfer", search: "nilüfer|nilufer" },
+    { tip: "caglayan-lotus", dept: "market-reyon", label: "Lotus", search: "lotus" },
+    { tip: "caglayan-nergis", dept: "market-reyon", label: "Nergis", search: "nergis" },
+    { tip: "caglayan-lale", dept: "market-reyon", label: "Lale", search: "lale" },
+    { tip: "caglayan-inci", dept: "market-reyon", label: "İnci", search: "inci" },
+    { tip: "caglayan-hercai", dept: "market-reyon", label: "Hercai", search: "hercai" },
+    { tip: "caglayan-reyhan", dept: "market-reyon", label: "Reyhan", search: "reyhan" },
+    { tip: "caglayan-sardunya", dept: "market-reyon", label: "Sardunya", search: "sardunya" },
+    { tip: "caglayan-gardenya", dept: "market-reyon", label: "Gardenya", search: "gardenya" },
+    { tip: "caglayan-anemon", dept: "market-reyon", label: "Anemon", search: "anemon" },
+    { tip: "caglayan-akasya", dept: "market-reyon", label: "Akasya", search: "akasya" },
+    { tip: "caglayan-begonvil", dept: "market-reyon", label: "Begonvil", search: "begonvil|begonvıl" },
+    { tip: "caglayan-defne", dept: "market-reyon", label: "Defne", search: "defne" },
+    { tip: "caglayan-erguvan", dept: "market-reyon", label: "Erguvan", search: "erguvan" },
+    { tip: "caglayan-leylak", dept: "market-reyon", label: "Leylak", search: "leylak" },
+    { tip: "caglayan-manolya", dept: "market-reyon", label: "Manolya", search: "manolya" },
+    { tip: "caglayan-krizantem", dept: "market-reyon", label: "Krizantem", search: "krizantem" },
+    { tip: "soguk-teshir", dept: "market-reyon", label: "Soğuk Teşhir", search: "soguk-teshir|saladbar|salad bar|soğuk büfe|soguk bufe|büfe" },
     { tip: "dondurma-reyon", dept: "market-reyon", label: "Dondurma Reyonu", search: "dondurma-reyon|dondurma|freezer|frozen" },
     { tip: "balik-sarkuteri", dept: "market-reyon", label: "Balık & Şarküteri", search: "balik-sarkuteri|balık|balik|şarküteri|sarkuteri|sardunya|et|fish" },
     { tip: "camli-dolap", dept: "market-reyon", label: "Camlı Teşhir", search: "camli-dolap|camlı|camli|vitrin|teşhir buzdolab" },
@@ -177,11 +205,34 @@
     { tip: "sicak-soguk-servis", dept: "set-ustu-mutfak", label: "Sıcak / Soğuk Servis", search: "sıcak.*soğuk servis" },
     { tip: "isitici-lamba", dept: "set-ustu-mutfak", label: "Isıtıcı Lambalar", search: "ısıtıcı lamba" },
     { tip: "patlamis-pamuk", dept: "set-ustu-mutfak", label: "Patlamış Mısır / Pamuk Şeker", search: "mısır patlatma|pamuk şeker" },
+    { tip: "gastronorm-kuvet", dept: "kuvetler", label: "Gastronorm Küvetler", search: "gastronorm|gn küvet|gn kuvet" },
+    { tip: "pp-pc-gn", dept: "kuvetler", label: "Polipropilen / Polikarbonat GN", search: "polipropilen|polikarbonat|pp gn" },
+    {
+      tip: "bain-marie-kap",
+      dept: "kuvetler",
+      label: "Bain Marie Çelik Saklama Kapları",
+      slug: "bain-marie-celik-saklama-kaplari",
+    },
+    {
+      tip: "karistirma-suzgec",
+      dept: "kuvetler",
+      label: "Karıştırma Kapları ve Süzgeçler",
+      search: "karıştırma kap|karistirma kap|süzgeç|suzgec",
+    },
   ];
 
   var byDept = {};
   var byTip = {};
   var labelIndex = {};
+
+  /** Market reyon PLP — soğutmalı reyonlarda «Sıcak Teşhir» filtresi yok (eski geniş eşleşme SICAKLIK vb.). */
+  var MARKET_REYON_HIDDEN_TIPS = { "sicak-teshir": true };
+
+  function filterMarketReyonTiles(tiles) {
+    return (tiles || []).filter(function (t) {
+      return t && t.id && !MARKET_REYON_HIDDEN_TIPS[t.id];
+    });
+  }
 
   function parseKeys(row) {
     if (row.slug) return null;
@@ -340,6 +391,18 @@
     return false;
   }
 
+  /** İzolasyonlu buz konteyneri — soğutma; araba / taşıma vitrininde gösterme */
+  function isBuzKonteynerProduct(u) {
+    var hay = productHaystack(u);
+    if (!hay) return false;
+    if (/\bbuz\s*konteyner|insulated\s*ice\s*container\b/i.test(hay)) return true;
+    var kod = String((u && u.raw && u.raw.urun_kodu) || (u && u.sku) || (u && u.model) || "")
+      .replace(/\s+/g, "")
+      .toUpperCase();
+    if (/^8959\.BK|^7506\.0B390/i.test(kod)) return true;
+    return false;
+  }
+
   function isServisTeshirProduct(u) {
     var hay = productHaystack(u);
     if (!hay) return false;
@@ -444,6 +507,7 @@
     if (dept === "sogutma" && isEtKiymaProduct(u)) return true;
     if (dept === "pisirme" && (isYardimciEkipmanProduct(u) || isYerIzgaraProduct(u))) return true;
     if (dept === "icecek" && isBuzMakinesiProduct(u)) return true;
+    if ((dept === "araba" || dept === "tasima") && isBuzKonteynerProduct(u)) return true;
     if (dept === "set-ustu-mutfak" && isOztiBainMarieMachineRow(u)) return true;
     if (dept === "set-ustu-mutfak" && isOztiSetUstuArabaRow(u)) return true;
     if (dept === "set-ustu-mutfak" && isOztiSetUstuDonerRow(u)) return true;
@@ -541,11 +605,65 @@
     "bar-aksesuarlari-tepsiler": "mutfak-aksesuar",
   };
 
+  /** Öztiryakiler küvet PLP — JSON category → vitrin ?tip= */
+  var KUVET_CAT_TIP = {
+    "gastronom-kuvetler": "gastronorm-kuvet",
+    kuvet: "gastronorm-kuvet",
+    "standart-gastronorm-kuvetler": "gastronorm-kuvet",
+    "kose-desenli-gastronorm-kuvetler": "gastronorm-kuvet",
+    "gastronorm-kapaklar": "gastronorm-kuvet",
+    "delikli-gastronom-kuvetler": "gastronorm-kuvet",
+    "delikli-kose-desenli-gastronorm-kuvetler": "gastronorm-kuvet",
+    "gn-kuvetler-yapismaz-kaplamali": "gastronorm-kuvet",
+    "sapli-gastronorm-kuvetler": "gastronorm-kuvet",
+    "sapli-kose-desenli-gastronorm-kuvetler": "gastronorm-kuvet",
+    "polipropilen-gastronorm-kuvetler": "pp-pc-gn",
+    "polikarbonat-gastronorm-kuvetler": "pp-pc-gn",
+    "bain-marie-celik-saklama-kaplari": "bain-marie-kap",
+    "karistirma-kaplari-ve-suzgecler": "karistirma-suzgec",
+    "helvane-ve-sig-tenceler-celik-suzgecler": "karistirma-suzgec",
+  };
+
+  function kuvetTipForCategory(cat) {
+    if (KUVET_CAT_TIP[cat]) return KUVET_CAT_TIP[cat];
+    var alias = SET_USTU_CAT_ALIASES[cat];
+    if (alias && byTip["kuvetler:" + alias]) return alias;
+    return "";
+  }
+
   function productCategorySlug(u) {
     var c = (u && u.c) || (u && u.category) || (u && u.raw && u.raw.category) || "";
     if (YIKAMA_CAT_ALIASES[c]) return YIKAMA_CAT_ALIASES[c];
     if (SET_USTU_CAT_ALIASES[c]) return SET_USTU_CAT_ALIASES[c];
     return c;
+  }
+
+  /** Gastronorm küvet, GN kapak ve ilgili saklama ürünleri (buzdolabı/bain marie makinesi hariç). */
+  function isKuvetProduct(u) {
+    if (!u) return false;
+    var c = productCategorySlug(u);
+    if (c === "gastronom-kuvetler" || c === "kuvet") return true;
+    if (
+      c === "kombi-konveksiyonlu-firin-aksesuarlar" ||
+      c === "kombi-konveksiyonlu-f-rin-aksesuarlar"
+    ) {
+      var tEarly = productHaystack(u);
+      if (!/küvet|kuvet|gastronom|gn\s*\d|bain\s*marie\s*kapak/i.test(tEarly)) return false;
+    }
+    var t = productHaystack(u);
+    if (/buzdolab|buz dolab|donduruc|soğuk oda/.test(t) && !/küvet(?!li)|kuvet(?!li)/.test(t)) return false;
+    if (/bain\s*marie|bainmarie|küvetli|kuvetli|küvetsiz|kuvetsiz|küvet\s*kapasiteli|kuvet\s*kapasiteli/i.test(t)) return false;
+    if (/küvet\s*ta[sş]|kuvet\s*ta[sş]|banket\s*arab.*kapasiteli/i.test(t)) return false;
+    if (/benmari/i.test(t) && !/gastronom\s*küvet|gastronom\s*kuvet/i.test(t)) return false;
+    if (/küvet\s*kapak|kuvet\s*kapak/i.test(t)) return true;
+    if (/küvet(?!li)|kuvet(?!li)/.test(t)) return true;
+    if (/gastronom(?!\s*seri)/.test(t)) return true;
+    if (/\bgn\s*\d{1,2}\s*\/\s*\d{1,2}/.test(t)) return true;
+    if (isOztiBainMarieKapRow(u)) return true;
+    if (c === "bain-marie-celik-saklama-kaplari") return true;
+    if (/polipropilen|polikarbonat|pp\s*gn/.test(t)) return true;
+    if (/karıştırma kap|karistirma kap|süzgeç|suzgec/.test(t)) return true;
+    return false;
   }
 
   function tileMatchProduct(u, tile) {
@@ -555,6 +673,9 @@
     if (tile.id === "bain-marie-kap") {
       return isOztiBainMarieKapRow(u);
     }
+
+    var kuvetTip = kuvetTipForCategory(cat);
+    if (kuvetTip) return tile.id === kuvetTip;
 
     if (isYikamaProduct(u) && cat && YIKAMA_STRICT_CAT[cat]) {
       if (tile.id === "bulasik-makineleri") return !!BULASIK_MAKINE_GROUP[cat];
@@ -571,6 +692,8 @@
       }
     }
     if (tile.id && u.raw && u.raw.tileId === tile.id) return true;
+    if (tile.id === "proso-tumu" && u.raw && u.raw.kaynak === "prosogutma") return true;
+    if (tile.id === "caglayan-tumu" && u.raw && u.raw.kaynak === "caglayan-refrigeration") return true;
     return false;
   }
 
@@ -648,6 +771,7 @@
       }
     });
     if (dept === "kahve" || dept === "yikama") return out;
+    if (dept === "market-reyon") return filterMarketReyonTiles(shuffleDeptList(dept, out, "tiles-merge"));
     return shuffleDeptList(dept, out, "tiles-merge");
   }
 
@@ -658,6 +782,7 @@
   function tilesFor(dept) {
     var tiles = byDept[dept] || [];
     if (dept === "kahve" || dept === "yikama") return tiles.slice();
+    if (dept === "market-reyon") return filterMarketReyonTiles(shuffleDeptList(dept, tiles, "tiles"));
     return shuffleDeptList(dept, tiles, "tiles");
   }
 
@@ -704,11 +829,66 @@
     if (lk.indexOf("çay kazan") >= 0 || lk.indexOf("cay kazan") >= 0) return "cay-kazani";
     if (lk.indexOf("çay mak") >= 0 || lk.indexOf("cay mak") >= 0) return "cay-makinesi";
     if (lk.indexOf("çay") >= 0 || lk.indexOf("cay") >= 0) return "cay-makinesi";
+    if (lk.indexOf("polipropilen") >= 0 || lk.indexOf("polikarbonat") >= 0) return "pp-pc-gn";
+    if (lk.indexOf("bain marie") >= 0 && lk.indexOf("kap") >= 0) return "bain-marie-kap";
+    if (lk.indexOf("karıştırma") >= 0 || lk.indexOf("karistirma") >= 0 || lk.indexOf("süzgeç") >= 0 || lk.indexOf("suzgec") >= 0)
+      return "karistirma-suzgec";
+    if (lk.indexOf("gastronorm") >= 0 && (lk.indexOf("küvet") >= 0 || lk.indexOf("kuvet") >= 0)) return "gastronorm-kuvet";
     return "";
   }
 
+  function foldTrSeries(s) {
+    return String(s || "")
+      .toLocaleLowerCase("tr")
+      .replace(/ğ/g, "g")
+      .replace(/ü/g, "u")
+      .replace(/ş/g, "s")
+      .replace(/ö/g, "o")
+      .replace(/ç/g, "c")
+      .replace(/ı/g, "i")
+      .replace(/İ/g, "i")
+      .trim();
+  }
+
+  function caglayanSeriesTipId(labelOrQ) {
+    var f = foldTrSeries(labelOrQ);
+    if (!f) return "";
+    return "caglayan-" + f.replace(/\s+/g, "-");
+  }
+
+  function resolveCaglayanSeriesTip(q) {
+    var id = caglayanSeriesTipId(q);
+    if (!id) return "";
+    return byTip["market-reyon:" + id] ? id : "";
+  }
+
+  function resolveProsoSeriesTip(q) {
+    var f = foldTrSeries(q);
+    if (!f) return "";
+    if (f.indexOf("proso") >= 0) return byTip["market-reyon:proso-tumu"] ? "proso-tumu" : "";
+    var tiles = byDept["market-reyon"] || [];
+    for (var i = 0; i < tiles.length; i++) {
+      var tile = tiles[i];
+      if (!tile.id || tile.id.indexOf("proso-") !== 0) continue;
+      if (tile.keys && tile.keys.length) {
+        for (var ki = 0; ki < tile.keys.length; ki++) {
+          if (f.indexOf(tile.keys[ki]) >= 0) return tile.id;
+        }
+      }
+      var slug = tile.id.replace(/^proso-/, "").replace(/-/g, " ");
+      if (slug && f.indexOf(slug) >= 0) return tile.id;
+    }
+    return "";
+  }
+
+  function marketReyonHref(tipId) {
+    var base = "market-reyonlari.html";
+    if (!tipId) return base;
+    return base + "?tip=" + encodeURIComponent(tipId);
+  }
+
   function deptPageHref(dept, tipId) {
-    var base = dept + ".html";
+    var base = dept === "market-reyon" ? "market-reyonlari.html" : dept + ".html";
     if (!tipId) return base;
     return base + "?tip=" + encodeURIComponent(tipId);
   }
@@ -732,6 +912,7 @@
   function normalizeTipParam(dept, tip) {
     if (!tip) return "";
     var t = String(tip).trim();
+    if (dept === "market-reyon" && MARKET_REYON_HIDDEN_TIPS[t]) return "";
     var map = TIP_PARAM_ALIASES[dept];
     if (map && map[t]) return map[t];
     if (byTip[dept + ":" + t]) return t;
@@ -750,6 +931,10 @@
     resolveTipId: resolveTipId,
     normalizeTipParam: normalizeTipParam,
     deptPageHref: deptPageHref,
+    marketReyonHref: marketReyonHref,
+    caglayanSeriesTipId: caglayanSeriesTipId,
+    resolveCaglayanSeriesTip: resolveCaglayanSeriesTip,
+    resolveProsoSeriesTip: resolveProsoSeriesTip,
     isEtKiymaProduct: isEtKiymaProduct,
     isSuzgecProduct: isSuzgecProduct,
     isMutfakTencereGereci: isMutfakTencereGereci,
@@ -759,6 +944,7 @@
     isBuzMakinesiProduct: isBuzMakinesiProduct,
     isServisTeshirProduct: isServisTeshirProduct,
     excludeFromDeptView: excludeFromDeptView,
+    isKuvetProduct: isKuvetProduct,
     all: RAW,
   };
 })();

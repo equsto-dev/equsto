@@ -1,0 +1,103 @@
+{
+  "slug": "nergis",
+  "baslik": "NERGİS",
+  "tip": "seri",
+  "ustSeriSlug": "nergis-en",
+  "kategoriler": [
+    "nergis-cat-en"
+  ],
+  "kapak": "https:\\/\\/caglayanrefrigeration.com\\/wp-content\\/uploads\\/2023\\/03\\/Nergis-FG.-Kapak.webp",
+  "kapakYol": "gorseller/nergis/Nergis-FG.-Kapak.webp",
+  "linkKaynak": "https://caglayanrefrigeration.com/tr/product/nergis/",
+  "cocuklar": [
+    {
+      "slug": "nergis-fg",
+      "ad": "NERGİS FG",
+      "link": "https://caglayanrefrigeration.com/tr/product/nergis-fg/",
+      "kapak": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG.-Kapak.webp",
+      "kapakYol": "gorseller/nergis/Nergis-FG.-Kapak.webp"
+    },
+    {
+      "slug": "nergis-tp",
+      "ad": "NERGİS TP",
+      "link": "https://caglayanrefrigeration.com/tr/product/nergis-tp/",
+      "kapak": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-TP-Kapak.webp",
+      "kapakYol": "gorseller/nergis/Nergis-TP-Kapak.webp"
+    },
+    {
+      "slug": "nergis-sky",
+      "ad": "NERGİS FG SKY",
+      "link": "https://caglayanrefrigeration.com/tr/product/nergis-sky/",
+      "kapak": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-SKY-Kapak.webp",
+      "kapakYol": "gorseller/nergis/Nergis-FG-SKY-Kapak.webp"
+    },
+    {
+      "slug": "nergis-tp-sky",
+      "ad": "NERGİS TP SKY",
+      "link": "https://caglayanrefrigeration.com/tr/product/nergis-tp-sky/",
+      "kapak": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Nergis-TP-SKY-Kapak.webp",
+      "kapakYol": "gorseller/nergis/Nergis-TP-SKY-Kapak.webp"
+    },
+    {
+      "slug": "nergis-lm",
+      "ad": "NERGİS LM",
+      "link": "https://caglayanrefrigeration.com/tr/product/nergis-lm/",
+      "kapak": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-LM-Kapak.webp",
+      "kapakYol": "gorseller/nergis/Nergis-LM-Kapak.webp"
+    }
+  ],
+  "ozellikler": [],
+  "teknik": {
+    "akordeon": [],
+    "sekmeler": [],
+    "tablolar": []
+  },
+  "gorseller": {
+    "tum": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG.-Kapak.webp",
+        "dosya": "gorseller/nergis/Nergis-FG.-Kapak.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-TP-Kapak.webp",
+        "dosya": "gorseller/nergis/Nergis-TP-Kapak.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-SKY-Kapak.webp",
+        "dosya": "gorseller/nergis/Nergis-FG-SKY-Kapak.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Nergis-TP-SKY-Kapak.webp",
+        "dosya": "gorseller/nergis/Nergis-TP-SKY-Kapak.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-LM-Kapak.webp",
+        "dosya": "gorseller/nergis/Nergis-LM-Kapak.webp"
+      }
+    ],
+    "urun": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG.-Kapak.webp",
+        "dosya": "gorseller/nergis/Nergis-FG.-Kapak.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-TP-Kapak.webp",
+        "dosya": "gorseller/nergis/Nergis-TP-Kapak.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Nergis-TP-SKY-Kapak.webp",
+        "dosya": "gorseller/nergis/Nergis-TP-SKY-Kapak.webp"
+      }
+    ],
+    "teknikCizim": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-SKY-Kapak.webp",
+        "dosya": "gorseller/nergis/Nergis-FG-SKY-Kapak.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-LM-Kapak.webp",
+        "dosya": "gorseller/nergis/Nergis-LM-Kapak.webp"
+      }
+    ]
+  }
+}

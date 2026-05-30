@@ -1,0 +1,248 @@
+{
+  "slug": "krizantem",
+  "baslik": "KRİZANTEM",
+  "tip": "model",
+  "ustSeriSlug": null,
+  "kategoriler": [
+    "semi-vertical-multideck"
+  ],
+  "kapak": "https:\\/\\/caglayanrefrigeration.com\\/wp-content\\/uploads\\/2026\\/02\\/Krizantem-Kapak-Caglayan-Refrigeration.webp",
+  "kapakYol": "gorseller/krizantem/Krizantem-Kapak-Caglayan-Refrigeration.webp",
+  "linkKaynak": "https://caglayanrefrigeration.com/tr/product/krizantem/",
+  "cocuklar": [],
+  "ozellikler": [
+    {
+      "baslik": "",
+      "aciklama": "Dairy Products"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Delicatessen"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Drinks"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Pre-Packed Fruit and Vegetables"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Meat"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Chicken"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Cheese"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Sandwiches"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Pastries"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Sushi"
+    },
+    {
+      "baslik": "",
+      "aciklama": "High Efficiency Fans"
+    },
+    {
+      "baslik": "",
+      "aciklama": "LED Lighting"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Ventilated"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Off Cycle Defrost"
+    }
+  ],
+  "teknik": {
+    "akordeon": [],
+    "sekmeler": [],
+    "tablolar": [
+      {
+        "basliklar": [
+          "UZUNLUK / LENGTH (mm)",
+          "YÜKSEKLİK / HEIGHT (mm)",
+          "SICAKLIK SINIFI / TEMPERATURE CLASS",
+          "YÜKLEME ALANI / LOADING AREA (m²)",
+          "PANEL KALINLIĞI / END THICKNESS (mm)"
+        ],
+        "satirlar": [
+          [
+            "ML (3M1)",
+            "SL (3M2)",
+            "DERİNLİK / DEPTH (mm)"
+          ],
+          [
+            "1300"
+          ],
+          [
+            "1250",
+            "1300",
+            "-1 / +1 °C",
+            "0 / +2 °C",
+            "2,36",
+            "50"
+          ],
+          [
+            "1875",
+            "3,54"
+          ],
+          [
+            "2500",
+            "4,73"
+          ]
+        ]
+      }
+    ]
+  },
+  "gorseller": {
+    "tum": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Krizantem-01-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/krizantem/Krizantem-01-Caglayan-Refrigeration.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/06/susi.webp",
+        "dosya": "gorseller/krizantem/susi.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Krizantem.pdf",
+        "dosya": "gorseller/krizantem/Krizantem.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Krizantem-Kesit-01-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/krizantem/Krizantem-Kesit-01-Caglayan-Refrigeration.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/circle-bg.webp",
+        "dosya": "gorseller/krizantem/circle-bg.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/fruit-yogurt.webp",
+        "dosya": "gorseller/krizantem/fruit-yogurt.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Hook-Bar.webp",
+        "dosya": "gorseller/krizantem/Inci-Hook-Bar.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Meat-Hanger-Bar.webp",
+        "dosya": "gorseller/krizantem/Inci-Meat-Hanger-Bar.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Plexi-Product-Divider.webp",
+        "dosya": "gorseller/krizantem/Inci-Plexi-Product-Divider.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Plexi-Product-Stopper.webp",
+        "dosya": "gorseller/krizantem/Inci-Plexi-Product-Stopper.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Shelf-Lighting.webp",
+        "dosya": "gorseller/krizantem/Inci-Shelf-Lighting.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Sliding-Glass.webp",
+        "dosya": "gorseller/krizantem/Inci-Sliding-Glass.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Wire-Base-Dividder.webp",
+        "dosya": "gorseller/krizantem/Inci-Wire-Base-Dividder.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Wire-Base.webp",
+        "dosya": "gorseller/krizantem/Inci-Wire-Base.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Wire-Basket.webp",
+        "dosya": "gorseller/krizantem/Inci-Wire-Basket.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/krizantem/pdf-icon.webp"
+      }
+    ],
+    "urun": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Krizantem-01-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/krizantem/Krizantem-01-Caglayan-Refrigeration.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/06/susi.webp",
+        "dosya": "gorseller/krizantem/susi.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Krizantem.pdf",
+        "dosya": "gorseller/krizantem/Krizantem.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/circle-bg.webp",
+        "dosya": "gorseller/krizantem/circle-bg.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/fruit-yogurt.webp",
+        "dosya": "gorseller/krizantem/fruit-yogurt.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Hook-Bar.webp",
+        "dosya": "gorseller/krizantem/Inci-Hook-Bar.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Meat-Hanger-Bar.webp",
+        "dosya": "gorseller/krizantem/Inci-Meat-Hanger-Bar.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Plexi-Product-Divider.webp",
+        "dosya": "gorseller/krizantem/Inci-Plexi-Product-Divider.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Plexi-Product-Stopper.webp",
+        "dosya": "gorseller/krizantem/Inci-Plexi-Product-Stopper.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Shelf-Lighting.webp",
+        "dosya": "gorseller/krizantem/Inci-Shelf-Lighting.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Sliding-Glass.webp",
+        "dosya": "gorseller/krizantem/Inci-Sliding-Glass.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Wire-Base-Dividder.webp",
+        "dosya": "gorseller/krizantem/Inci-Wire-Base-Dividder.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Wire-Base.webp",
+        "dosya": "gorseller/krizantem/Inci-Wire-Base.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Wire-Basket.webp",
+        "dosya": "gorseller/krizantem/Inci-Wire-Basket.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/krizantem/pdf-icon.webp"
+      }
+    ],
+    "teknikCizim": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Krizantem-Kesit-01-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/krizantem/Krizantem-Kesit-01-Caglayan-Refrigeration.webp"
+      }
+    ]
+  }
+}

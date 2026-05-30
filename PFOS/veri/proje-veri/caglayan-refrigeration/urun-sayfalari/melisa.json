@@ -1,0 +1,449 @@
+{
+  "slug": "melisa",
+  "baslik": "MELİSA",
+  "tip": "model",
+  "ustSeriSlug": null,
+  "kategoriler": [
+    "semi-vertical-multideck"
+  ],
+  "kapak": "https:\\/\\/caglayanrefrigeration.com\\/wp-content\\/uploads\\/2023\\/05\\/Melisa-Kapak.webp",
+  "kapakYol": "gorseller/melisa/Melisa-Kapak.webp",
+  "linkKaynak": "https://caglayanrefrigeration.com/tr/product/melisa/",
+  "cocuklar": [],
+  "ozellikler": [
+    {
+      "baslik": "",
+      "aciklama": "Dairy Products"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Delicatessen"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Drinks"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Pre-Packed Fruit and Vegetables"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Meat"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Chicken"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Cheese"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Sandwiches"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Pastries"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Sushi"
+    },
+    {
+      "baslik": "",
+      "aciklama": "High Efficiency Fans"
+    },
+    {
+      "baslik": "",
+      "aciklama": "LED Lighting"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Ventilated"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Off Cycle Defrost"
+    }
+  ],
+  "teknik": {
+    "akordeon": [],
+    "sekmeler": [
+      {
+        "baslik": "TEKNİK ÇİZİMLER",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-FG-LD-ML_SL-1500-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-FG-SKY-ML_SL-1500-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-SRG-ML_SL-1500-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-TP-ML_SL-1500-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-TP-SKY-ML_SL-1500-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-FG-LD-ML_SL-1800-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-FG-SKY-ML_SL-1800-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-SRG-ML_SL-1800-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-TP-ML_SL-1800-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-TP-SKY-ML_SL-1800-Model-1.webp"
+        ],
+        "tablolar": []
+      },
+      {
+        "baslik": "TEKNİK DETAYLAR",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-FG-LD-ML_SL-1500-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-FG-SKY-ML_SL-1500-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-SRG-ML_SL-1500-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-TP-ML_SL-1500-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-TP-SKY-ML_SL-1500-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-FG-LD-ML_SL-1800-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-FG-SKY-ML_SL-1800-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-SRG-ML_SL-1800-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-TP-ML_SL-1800-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-TP-SKY-ML_SL-1800-Model-1.webp"
+        ],
+        "tablolar": []
+      }
+    ],
+    "tablolar": [
+      {
+        "basliklar": [
+          "UZUNLUK / LENGTH (mm)",
+          "YÜKSEKLİK / HEIGHT (mm)",
+          "KAPI TİPİ / DOOR TYPE",
+          "SICAKLIK SINIFI / TEMPERATURE CLASS",
+          "YÜKLEME ALANI / LOADING AREA (m²)",
+          "PANEL KALINLIĞI / END THICKNESS (mm)"
+        ],
+        "satirlar": [
+          [
+            "SRG TP TP SKY FG LD FG SKY",
+            "ML (3M1)",
+            "SL (3M2)",
+            "DERİNLİK / DEPTH (mm)"
+          ],
+          [
+            "816"
+          ],
+          [
+            "1250",
+            "1500",
+            "-1 / +1 °C",
+            "0 / +2 °C",
+            "1,90",
+            "30"
+          ],
+          [
+            "1800",
+            "2,03"
+          ],
+          [
+            "1875",
+            "1500",
+            "2,86"
+          ],
+          [
+            "1800",
+            "3,04"
+          ],
+          [
+            "2500",
+            "1500",
+            "3,81"
+          ],
+          [
+            "1800",
+            "4,06"
+          ]
+        ]
+      }
+    ]
+  },
+  "gorseller": {
+    "tum": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Melisa.webp",
+        "dosya": "gorseller/melisa/Melisa.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/milk.webp",
+        "dosya": "gorseller/melisa/milk.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Melisa-1.webp",
+        "dosya": "gorseller/melisa/Melisa-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Melisa-2.webp",
+        "dosya": "gorseller/melisa/Melisa-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/melisa-fg-ld-1.webp",
+        "dosya": "gorseller/melisa/melisa-fg-ld-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/melisa-fg-ld-2.webp",
+        "dosya": "gorseller/melisa/melisa-fg-ld-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Melisa-3.webp",
+        "dosya": "gorseller/melisa/Melisa-3.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Melisa-4.webp",
+        "dosya": "gorseller/melisa/Melisa-4.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Melisa-5.webp",
+        "dosya": "gorseller/melisa/Melisa-5.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Melisa-6.webp",
+        "dosya": "gorseller/melisa/Melisa-6.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Melisa-FL.webp",
+        "dosya": "gorseller/melisa/Melisa-FL.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Melisa-FL-2.webp",
+        "dosya": "gorseller/melisa/Melisa-FL-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Melisa.pdf",
+        "dosya": "gorseller/melisa/Melisa.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-FG-LD-ML_SL-1500-Model-1.webp",
+        "dosya": "gorseller/melisa/MELISA-FG-LD-ML_SL-1500-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-FG-SKY-ML_SL-1500-Model-1.webp",
+        "dosya": "gorseller/melisa/MELISA-FG-SKY-ML_SL-1500-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-SRG-ML_SL-1500-Model-1.webp",
+        "dosya": "gorseller/melisa/MELISA-SRG-ML_SL-1500-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-TP-ML_SL-1500-Model-1.webp",
+        "dosya": "gorseller/melisa/MELISA-TP-ML_SL-1500-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-TP-SKY-ML_SL-1500-Model-1.webp",
+        "dosya": "gorseller/melisa/MELISA-TP-SKY-ML_SL-1500-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-FG-LD-ML_SL-1800-Model-1.webp",
+        "dosya": "gorseller/melisa/MELISA-FG-LD-ML_SL-1800-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-FG-SKY-ML_SL-1800-Model-1.webp",
+        "dosya": "gorseller/melisa/MELISA-FG-SKY-ML_SL-1800-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-SRG-ML_SL-1800-Model-1.webp",
+        "dosya": "gorseller/melisa/MELISA-SRG-ML_SL-1800-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-TP-ML_SL-1800-Model-1.webp",
+        "dosya": "gorseller/melisa/MELISA-TP-ML_SL-1800-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-TP-SKY-ML_SL-1800-Model-1.webp",
+        "dosya": "gorseller/melisa/MELISA-TP-SKY-ML_SL-1800-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/circle-bg.webp",
+        "dosya": "gorseller/melisa/circle-bg.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/fruit-yogurt.webp",
+        "dosya": "gorseller/melisa/fruit-yogurt.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Hook-Bar.webp",
+        "dosya": "gorseller/melisa/Inci-Hook-Bar.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Meat-Hanger-Bar.webp",
+        "dosya": "gorseller/melisa/Inci-Meat-Hanger-Bar.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Plexi-Product-Divider.webp",
+        "dosya": "gorseller/melisa/Inci-Plexi-Product-Divider.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Plexi-Product-Stopper.webp",
+        "dosya": "gorseller/melisa/Inci-Plexi-Product-Stopper.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Shelf-Lighting.webp",
+        "dosya": "gorseller/melisa/Inci-Shelf-Lighting.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Sliding-Glass.webp",
+        "dosya": "gorseller/melisa/Inci-Sliding-Glass.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Wire-Base-Dividder.webp",
+        "dosya": "gorseller/melisa/Inci-Wire-Base-Dividder.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Wire-Base.webp",
+        "dosya": "gorseller/melisa/Inci-Wire-Base.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Wire-Basket.webp",
+        "dosya": "gorseller/melisa/Inci-Wire-Basket.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/melisa/pdf-icon.webp"
+      }
+    ],
+    "urun": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Melisa.webp",
+        "dosya": "gorseller/melisa/Melisa.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/milk.webp",
+        "dosya": "gorseller/melisa/milk.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Melisa-1.webp",
+        "dosya": "gorseller/melisa/Melisa-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Melisa-2.webp",
+        "dosya": "gorseller/melisa/Melisa-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Melisa-3.webp",
+        "dosya": "gorseller/melisa/Melisa-3.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Melisa-4.webp",
+        "dosya": "gorseller/melisa/Melisa-4.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Melisa-5.webp",
+        "dosya": "gorseller/melisa/Melisa-5.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Melisa-6.webp",
+        "dosya": "gorseller/melisa/Melisa-6.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Melisa-FL.webp",
+        "dosya": "gorseller/melisa/Melisa-FL.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Melisa-FL-2.webp",
+        "dosya": "gorseller/melisa/Melisa-FL-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Melisa.pdf",
+        "dosya": "gorseller/melisa/Melisa.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-SRG-ML_SL-1500-Model-1.webp",
+        "dosya": "gorseller/melisa/MELISA-SRG-ML_SL-1500-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-TP-ML_SL-1500-Model-1.webp",
+        "dosya": "gorseller/melisa/MELISA-TP-ML_SL-1500-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-TP-SKY-ML_SL-1500-Model-1.webp",
+        "dosya": "gorseller/melisa/MELISA-TP-SKY-ML_SL-1500-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-SRG-ML_SL-1800-Model-1.webp",
+        "dosya": "gorseller/melisa/MELISA-SRG-ML_SL-1800-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-TP-ML_SL-1800-Model-1.webp",
+        "dosya": "gorseller/melisa/MELISA-TP-ML_SL-1800-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-TP-SKY-ML_SL-1800-Model-1.webp",
+        "dosya": "gorseller/melisa/MELISA-TP-SKY-ML_SL-1800-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/circle-bg.webp",
+        "dosya": "gorseller/melisa/circle-bg.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/fruit-yogurt.webp",
+        "dosya": "gorseller/melisa/fruit-yogurt.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Hook-Bar.webp",
+        "dosya": "gorseller/melisa/Inci-Hook-Bar.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Meat-Hanger-Bar.webp",
+        "dosya": "gorseller/melisa/Inci-Meat-Hanger-Bar.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Plexi-Product-Divider.webp",
+        "dosya": "gorseller/melisa/Inci-Plexi-Product-Divider.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Plexi-Product-Stopper.webp",
+        "dosya": "gorseller/melisa/Inci-Plexi-Product-Stopper.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Shelf-Lighting.webp",
+        "dosya": "gorseller/melisa/Inci-Shelf-Lighting.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Sliding-Glass.webp",
+        "dosya": "gorseller/melisa/Inci-Sliding-Glass.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Wire-Base-Dividder.webp",
+        "dosya": "gorseller/melisa/Inci-Wire-Base-Dividder.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Wire-Base.webp",
+        "dosya": "gorseller/melisa/Inci-Wire-Base.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Wire-Basket.webp",
+        "dosya": "gorseller/melisa/Inci-Wire-Basket.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/melisa/pdf-icon.webp"
+      }
+    ],
+    "teknikCizim": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/melisa-fg-ld-1.webp",
+        "dosya": "gorseller/melisa/melisa-fg-ld-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/melisa-fg-ld-2.webp",
+        "dosya": "gorseller/melisa/melisa-fg-ld-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-FG-LD-ML_SL-1500-Model-1.webp",
+        "dosya": "gorseller/melisa/MELISA-FG-LD-ML_SL-1500-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-FG-SKY-ML_SL-1500-Model-1.webp",
+        "dosya": "gorseller/melisa/MELISA-FG-SKY-ML_SL-1500-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-FG-LD-ML_SL-1800-Model-1.webp",
+        "dosya": "gorseller/melisa/MELISA-FG-LD-ML_SL-1800-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/MELISA-FG-SKY-ML_SL-1800-Model-1.webp",
+        "dosya": "gorseller/melisa/MELISA-FG-SKY-ML_SL-1800-Model-1.webp"
+      }
+    ]
+  }
+}

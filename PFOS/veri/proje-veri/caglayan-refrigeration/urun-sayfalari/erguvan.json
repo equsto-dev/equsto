@@ -1,0 +1,261 @@
+{
+  "slug": "erguvan",
+  "baslik": "ERGUVAN",
+  "tip": "model",
+  "ustSeriSlug": null,
+  "kategoriler": [
+    "horizontal-freezers"
+  ],
+  "kapak": "https:\\/\\/caglayanrefrigeration.com\\/wp-content\\/uploads\\/2023\\/02\\/Erguvan-Kapak.webp",
+  "kapakYol": "gorseller/erguvan/Erguvan-Kapak.webp",
+  "linkKaynak": "https://caglayanrefrigeration.com/tr/product/erguvan/",
+  "cocuklar": [],
+  "ozellikler": [
+    {
+      "baslik": "",
+      "aciklama": "Ice Cream"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Frozen Food"
+    },
+    {
+      "baslik": "",
+      "aciklama": "High Efficiency Fans"
+    },
+    {
+      "baslik": "",
+      "aciklama": "LED Lighting"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Ventilated"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Remote Condensing Unit"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Electric Defrost"
+    }
+  ],
+  "teknik": {
+    "akordeon": [],
+    "sekmeler": [
+      {
+        "baslik": "TEKNİK ÇİZİMLER",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/ERGUVAN-GB-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ERGUVAN-SRG-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ERGUVAN-SRG-RAFLI-Model-1.webp"
+        ],
+        "tablolar": []
+      },
+      {
+        "baslik": "TEKNİK DETAYLAR",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/ERGUVAN-GB-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ERGUVAN-SRG-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ERGUVAN-SRG-RAFLI-Model-1.webp"
+        ],
+        "tablolar": []
+      }
+    ],
+    "tablolar": [
+      {
+        "basliklar": [
+          "UZUNLUK / LENGTH (mm)",
+          "YÜKSEKLİK / HEIGHT (mm)",
+          "SICAKLIK SINIFI / TEMPERATURE CLASS",
+          "YÜKLEME ALANI / LOADING AREA (m²)",
+          "PANEL KALINLIĞI / END THICKNESS (mm)"
+        ],
+        "satirlar": [
+          [
+            "3L1",
+            "DERİNLİK / DEPTH (mm)"
+          ],
+          [
+            "940",
+            "1925"
+          ],
+          [
+            "1875",
+            "900",
+            "-22 / -25 °C",
+            "N/A",
+            "2,57",
+            "70"
+          ],
+          [
+            "2500",
+            "N/A",
+            "3,43"
+          ],
+          [
+            "3750",
+            "N/A",
+            "5,14"
+          ],
+          [
+            "GB(1925)",
+            "1,32",
+            "N/A"
+          ]
+        ]
+      }
+    ]
+  },
+  "gorseller": {
+    "tum": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ERGUVAN-ADA-RAFLI-PULL-PUCH.webp",
+        "dosya": "gorseller/erguvan/ERGUVAN-ADA-RAFLI-PULL-PUCH.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pizza.webp",
+        "dosya": "gorseller/erguvan/pizza.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ERGUVAN-ADA-1.webp",
+        "dosya": "gorseller/erguvan/ERGUVAN-ADA-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ERGUVAN-ADA-2.webp",
+        "dosya": "gorseller/erguvan/ERGUVAN-ADA-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ERGUVAN-ADA-3.webp",
+        "dosya": "gorseller/erguvan/ERGUVAN-ADA-3.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ERGUVAN.webp",
+        "dosya": "gorseller/erguvan/ERGUVAN.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ERGUVAN-ADA-RAFLI-2.webp",
+        "dosya": "gorseller/erguvan/ERGUVAN-ADA-RAFLI-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Erguvan.pdf",
+        "dosya": "gorseller/erguvan/Erguvan.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/ERGUVAN-GB-Model-1.webp",
+        "dosya": "gorseller/erguvan/ERGUVAN-GB-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ERGUVAN-SRG-Model-1.webp",
+        "dosya": "gorseller/erguvan/ERGUVAN-SRG-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ERGUVAN-SRG-RAFLI-Model-1.webp",
+        "dosya": "gorseller/erguvan/ERGUVAN-SRG-RAFLI-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/freeze-vegetable.webp",
+        "dosya": "gorseller/erguvan/freeze-vegetable.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Manolya-Night-Blind.webp",
+        "dosya": "gorseller/erguvan/Manolya-Night-Blind.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Manolya-Glass-Sliding-Cover.webp",
+        "dosya": "gorseller/erguvan/Manolya-Glass-Sliding-Cover.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/Wire-Base-1.webp",
+        "dosya": "gorseller/erguvan/Wire-Base-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Manolya-Wire-Product-Divider.webp",
+        "dosya": "gorseller/erguvan/Manolya-Wire-Product-Divider.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Erguvan-Shelf-Systeams.webp",
+        "dosya": "gorseller/erguvan/Erguvan-Shelf-Systeams.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/erguvan/pdf-icon.webp"
+      }
+    ],
+    "urun": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ERGUVAN-ADA-RAFLI-PULL-PUCH.webp",
+        "dosya": "gorseller/erguvan/ERGUVAN-ADA-RAFLI-PULL-PUCH.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pizza.webp",
+        "dosya": "gorseller/erguvan/pizza.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ERGUVAN-ADA-1.webp",
+        "dosya": "gorseller/erguvan/ERGUVAN-ADA-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ERGUVAN-ADA-2.webp",
+        "dosya": "gorseller/erguvan/ERGUVAN-ADA-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ERGUVAN-ADA-3.webp",
+        "dosya": "gorseller/erguvan/ERGUVAN-ADA-3.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ERGUVAN.webp",
+        "dosya": "gorseller/erguvan/ERGUVAN.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ERGUVAN-ADA-RAFLI-2.webp",
+        "dosya": "gorseller/erguvan/ERGUVAN-ADA-RAFLI-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Erguvan.pdf",
+        "dosya": "gorseller/erguvan/Erguvan.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/ERGUVAN-GB-Model-1.webp",
+        "dosya": "gorseller/erguvan/ERGUVAN-GB-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ERGUVAN-SRG-Model-1.webp",
+        "dosya": "gorseller/erguvan/ERGUVAN-SRG-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ERGUVAN-SRG-RAFLI-Model-1.webp",
+        "dosya": "gorseller/erguvan/ERGUVAN-SRG-RAFLI-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/freeze-vegetable.webp",
+        "dosya": "gorseller/erguvan/freeze-vegetable.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Manolya-Night-Blind.webp",
+        "dosya": "gorseller/erguvan/Manolya-Night-Blind.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Manolya-Glass-Sliding-Cover.webp",
+        "dosya": "gorseller/erguvan/Manolya-Glass-Sliding-Cover.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/Wire-Base-1.webp",
+        "dosya": "gorseller/erguvan/Wire-Base-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Manolya-Wire-Product-Divider.webp",
+        "dosya": "gorseller/erguvan/Manolya-Wire-Product-Divider.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Erguvan-Shelf-Systeams.webp",
+        "dosya": "gorseller/erguvan/Erguvan-Shelf-Systeams.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/erguvan/pdf-icon.webp"
+      }
+    ],
+    "teknikCizim": []
+  }
+}

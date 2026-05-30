@@ -1,0 +1,318 @@
+{
+  "slug": "akasya",
+  "baslik": "AKASYA",
+  "tip": "model",
+  "ustSeriSlug": null,
+  "kategoriler": [
+    "vertical-freezers"
+  ],
+  "kapak": "https:\\/\\/caglayanrefrigeration.com\\/wp-content\\/uploads\\/2023\\/02\\/Akasya-Kapak.webp",
+  "kapakYol": "gorseller/akasya/Akasya-Kapak.webp",
+  "linkKaynak": "https://caglayanrefrigeration.com/tr/product/akasya/",
+  "cocuklar": [],
+  "ozellikler": [
+    {
+      "baslik": "",
+      "aciklama": "Ice Cream"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Frozen Food"
+    },
+    {
+      "baslik": "",
+      "aciklama": "High Efficiency Fans"
+    },
+    {
+      "baslik": "",
+      "aciklama": "LED Lighting"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Ventilated"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Remote Condensing Unit"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Electric Defrost"
+    }
+  ],
+  "teknik": {
+    "akordeon": [],
+    "sekmeler": [
+      {
+        "baslik": "TEKNİK ÇİZİMLER",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/AKASYA-FG-HD-2050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/AKASYA-FG-SKY-2050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/AKASYA-LM-HD-2050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/AKASYA-FG-HD-2200-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/AKASYA-FG-SKY-2200-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/AKASYA-LM-HD-2200-Model-1.webp"
+        ],
+        "tablolar": []
+      },
+      {
+        "baslik": "TEKNİK DETAYLAR",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/AKASYA-FG-HD-2050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/AKASYA-FG-SKY-2050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/AKASYA-LM-HD-2050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/AKASYA-FG-HD-2200-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/AKASYA-FG-SKY-2200-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/AKASYA-LM-HD-2200-Model-1.webp"
+        ],
+        "tablolar": []
+      }
+    ],
+    "tablolar": [
+      {
+        "basliklar": [
+          "UZUNLUK / LENGTH (mm)",
+          "YÜKSEKLİK / HEIGHT (mm)",
+          "DERİNLİK / DEPTH (mm)",
+          "SICAKLIK SINIFI / TEMPERATURE CLASS",
+          "YÜKLEME ALANI / LOADING AREA (m²)",
+          "PANEL KALINLIĞI / END THICKNESS (mm)"
+        ],
+        "satirlar": [
+          [
+            "1562",
+            "2050",
+            "940",
+            "3L1",
+            "4,03",
+            "65"
+          ],
+          [
+            "2200",
+            "-22/-25 °C",
+            "4,81"
+          ],
+          [
+            "2343",
+            "2050",
+            "6,05"
+          ],
+          [
+            "2200",
+            "7,22"
+          ],
+          [
+            "3124",
+            "2050",
+            "8,06"
+          ],
+          [
+            "2200",
+            "9,63"
+          ],
+          [
+            "3905",
+            "2050",
+            "10.08"
+          ],
+          [
+            "2200",
+            "12,03"
+          ]
+        ]
+      }
+    ]
+  },
+  "gorseller": {
+    "tum": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Akasya.webp",
+        "dosya": "gorseller/akasya/Akasya.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pizza.webp",
+        "dosya": "gorseller/akasya/pizza.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Akasya-FG.webp",
+        "dosya": "gorseller/akasya/Akasya-FG.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Akasya-LM.webp",
+        "dosya": "gorseller/akasya/Akasya-LM.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Akasya-SKY-1.webp",
+        "dosya": "gorseller/akasya/Akasya-SKY-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Akasya-SKY-2.webp",
+        "dosya": "gorseller/akasya/Akasya-SKY-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Akasya-SKY-3.webp",
+        "dosya": "gorseller/akasya/Akasya-SKY-3.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Akasya-1.webp",
+        "dosya": "gorseller/akasya/Akasya-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Akasya-2.webp",
+        "dosya": "gorseller/akasya/Akasya-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Akasya.pdf",
+        "dosya": "gorseller/akasya/Akasya.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/AKASYA-FG-HD-2050-Model-1.webp",
+        "dosya": "gorseller/akasya/AKASYA-FG-HD-2050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/AKASYA-FG-SKY-2050-Model-1.webp",
+        "dosya": "gorseller/akasya/AKASYA-FG-SKY-2050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/AKASYA-LM-HD-2050-Model-1.webp",
+        "dosya": "gorseller/akasya/AKASYA-LM-HD-2050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/AKASYA-FG-HD-2200-Model-1.webp",
+        "dosya": "gorseller/akasya/AKASYA-FG-HD-2200-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/AKASYA-FG-SKY-2200-Model-1.webp",
+        "dosya": "gorseller/akasya/AKASYA-FG-SKY-2200-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/AKASYA-LM-HD-2200-Model-1.webp",
+        "dosya": "gorseller/akasya/AKASYA-LM-HD-2200-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/circle-bg.webp",
+        "dosya": "gorseller/akasya/circle-bg.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/freeze-vegetable.webp",
+        "dosya": "gorseller/akasya/freeze-vegetable.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/Plexi-Product-Stopper-1.webp",
+        "dosya": "gorseller/akasya/Plexi-Product-Stopper-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/Wire-Base-Dividder-1.webp",
+        "dosya": "gorseller/akasya/Wire-Base-Dividder-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/Wire-Basket-1.webp",
+        "dosya": "gorseller/akasya/Wire-Basket-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2021/08/Nilufer-Wire-Base.webp",
+        "dosya": "gorseller/akasya/Nilufer-Wire-Base.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/akasya/pdf-icon.webp"
+      }
+    ],
+    "urun": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Akasya.webp",
+        "dosya": "gorseller/akasya/Akasya.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pizza.webp",
+        "dosya": "gorseller/akasya/pizza.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Akasya-FG.webp",
+        "dosya": "gorseller/akasya/Akasya-FG.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Akasya-LM.webp",
+        "dosya": "gorseller/akasya/Akasya-LM.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Akasya-SKY-1.webp",
+        "dosya": "gorseller/akasya/Akasya-SKY-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Akasya-SKY-2.webp",
+        "dosya": "gorseller/akasya/Akasya-SKY-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Akasya-SKY-3.webp",
+        "dosya": "gorseller/akasya/Akasya-SKY-3.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Akasya-1.webp",
+        "dosya": "gorseller/akasya/Akasya-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Akasya-2.webp",
+        "dosya": "gorseller/akasya/Akasya-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Akasya.pdf",
+        "dosya": "gorseller/akasya/Akasya.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/circle-bg.webp",
+        "dosya": "gorseller/akasya/circle-bg.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/freeze-vegetable.webp",
+        "dosya": "gorseller/akasya/freeze-vegetable.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/Plexi-Product-Stopper-1.webp",
+        "dosya": "gorseller/akasya/Plexi-Product-Stopper-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/Wire-Base-Dividder-1.webp",
+        "dosya": "gorseller/akasya/Wire-Base-Dividder-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/Wire-Basket-1.webp",
+        "dosya": "gorseller/akasya/Wire-Basket-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2021/08/Nilufer-Wire-Base.webp",
+        "dosya": "gorseller/akasya/Nilufer-Wire-Base.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/akasya/pdf-icon.webp"
+      }
+    ],
+    "teknikCizim": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/AKASYA-FG-HD-2050-Model-1.webp",
+        "dosya": "gorseller/akasya/AKASYA-FG-HD-2050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/AKASYA-FG-SKY-2050-Model-1.webp",
+        "dosya": "gorseller/akasya/AKASYA-FG-SKY-2050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/AKASYA-LM-HD-2050-Model-1.webp",
+        "dosya": "gorseller/akasya/AKASYA-LM-HD-2050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/AKASYA-FG-HD-2200-Model-1.webp",
+        "dosya": "gorseller/akasya/AKASYA-FG-HD-2200-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/AKASYA-FG-SKY-2200-Model-1.webp",
+        "dosya": "gorseller/akasya/AKASYA-FG-SKY-2200-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/AKASYA-LM-HD-2200-Model-1.webp",
+        "dosya": "gorseller/akasya/AKASYA-LM-HD-2200-Model-1.webp"
+      }
+    ]
+  }
+}

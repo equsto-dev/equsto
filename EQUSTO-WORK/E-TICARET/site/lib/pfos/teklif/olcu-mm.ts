@@ -1,4 +1,4 @@
-import katalogOlcuMm from "../../../public/data/pfos-katalog-olcu-mm.json";
+import katalogOlcuMm from "@/lib/pfos/data/pfos-katalog-olcu-mm.json";
 
 /** SKU → G×D×Y (mm), Öztiryakiler PDF / katalog doğrulanmış */
 type SkuOlcuMap = Record<string, string>;

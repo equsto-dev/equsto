@@ -1,0 +1,152 @@
+{
+  "slug": "butterfly-sb",
+  "wpId": 9311,
+  "title": "Butterfly SB",
+  "baslik": "Butterfly SB",
+  "url": "https://prosogutma.com/urun/butterfly-sb/",
+  "attributes": [
+    {
+      "label": "Ürünler",
+      "value": "Pasta ve Unlu Mamuller"
+    },
+    {
+      "label": "Kabin Türü",
+      "value": "Butik Reyonları"
+    },
+    {
+      "label": "Plug-in",
+      "value": "Plug-in"
+    }
+  ],
+  "categories": [
+    {
+      "name": "Butik Reyonları"
+    }
+  ],
+  "gallery": [
+    {
+      "src": "https://prosogutma.com/wp-content/uploads/2022/05/butterfly-sb-2.png"
+    },
+    {
+      "src": "https://prosogutma.com/wp-content/uploads/2022/05/Butterfly-SB-1.jpg"
+    }
+  ],
+  "tabs": [
+    {
+      "name": "Ürün Hakkında",
+      "html": "<p><a href=\"https://prosogutma.com/wp-content/uploads/2023/02/butterfly-sb.svg\"><img loading=\"lazy\" class=\"alignnone size-full wp-image-10818\" role=\"img\" src=\"https://prosogutma.com/wp-content/uploads/2023/02/butterfly-sb.svg\" alt=\"\" width=\"539\" height=\"271\" /></a></p></div>\n\t\t\t\t\t\t\t\t\t<div class=\"elementor-tab-title elementor-tab-mobile-title\" aria-selected=\"false\" data-tab=\"2\" role=\"tab\" tabindex=\"-1\" aria-controls=\"elementor-tab-content-1672\" aria-expanded=\"false\">Teknik Çizimler",
+      "links": [
+        {
+          "href": "https://prosogutma.com/wp-content/uploads/2023/02/butterfly-sb.svg",
+          "text": "href=\"https://prosogutma.com/wp-content/uploads/2023/02/butterfly-sb.svg\""
+        }
+      ],
+      "images": [
+        {
+          "src": "https://prosogutma.com/wp-content/uploads/2023/02/butterfly-sb.svg",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "name": "Teknik Çizimler",
+      "html": "<a href=\"https://prosogutma.com/wp-content/uploads/2023/02/butterfly-sb.pdf\" target=\"_blank\" rel=\"noopener\">Teknik Çizimlere Gitmek İçin Tıklayınız.</a></div>\n\t\t\t\t\t\t\t\t\t<div class=\"elementor-tab-title elementor-tab-mobile-title\" aria-selected=\"false\" data-tab=\"3\" role=\"tab\" tabindex=\"-1\" aria-controls=\"elementor-tab-content-1673\" aria-expanded=\"false\">Katalog Sayfası",
+      "links": [
+        {
+          "href": "https://prosogutma.com/wp-content/uploads/2023/02/butterfly-sb.pdf",
+          "text": "href=\"https://prosogutma.com/wp-content/uploads/2023/02/butterfly-sb.pdf\""
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "Katalog Sayfası",
+      "html": "<a href=\"https://prosogutma.com/wp-content/uploads/2023/02/butterfly-sb.pdf\" target=\"_blank\" rel=\"noopener\">Ürün Kataloğumuza Gitmek İçin Tıklayınız.</a></div>\n\t\t\t\t\t\t\t\t\t<div class=\"elementor-tab-title elementor-tab-mobile-title\" aria-selected=\"false\" data-tab=\"4\" role=\"tab\" tabindex=\"-1\" aria-controls=\"elementor-tab-content-1674\" aria-expanded=\"false\">Opsiyonlar",
+      "links": [
+        {
+          "href": "https://prosogutma.com/wp-content/uploads/2023/02/butterfly-sb.pdf",
+          "text": "href=\"https://prosogutma.com/wp-content/uploads/2023/02/butterfly-sb.pdf\""
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "Opsiyonlar",
+      "html": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p></div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t</div>\n\t\t\t\t\t</div>\n\t\t</section>\n\t\t\t\t</div>\n\t\t\n",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Ürün Hakkında",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Teknik Çizimler",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Teknik Çizimlere Gitmek İçin Tıklayınız.",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Katalog Sayfası",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Ürün Kataloğumuza Gitmek İçin Tıklayınız.",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Opsiyonlar",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+      "html": "",
+      "links": [],
+      "images": []
+    }
+  ],
+  "teknik": {
+    "tablolar": [
+      {
+        "basliklar": [
+          "Ürünler",
+          "Kabin Türü",
+          "Plug-in"
+        ],
+        "satirlar": [
+          [
+            "Ürünler",
+            "Pasta ve Unlu Mamuller"
+          ],
+          [
+            "Kabin Türü",
+            "Butik Reyonları"
+          ],
+          [
+            "Plug-in",
+            "Plug-in"
+          ]
+        ]
+      }
+    ],
+    "pdfText": "BUTTERFLY SB \r\nPlug-in Refrigerated Salad-Bar Cabinet\r\nİçten Motorlu Soğutmalı Salat Bar Reyonu\r\n8mX`cXYc\\\u0001Df[lc\\j\u0001&\u0001BlccXeêcXY`c`i\u0001Df[cc\\i\r\nLength (mm)\r\nUzunluk (mm)\r\n937\r\n1250\r\nSide panel (mm)\r\nYan kapak (mm)\r\n30\r\n30\r\nFg\\iXk`e^\u0001K\\dg\\iXkli\\j\r\nxXcêŵdX\u0001JêZXbcêbcXiê\r\nAmbient Conditions\r\nFikXd\u0001BfŵlccXiê\r\nM2 (-1/+7 Cº)\r\n25°C / 60% RH \r\n(EN ISO 23953-2)\r\nBoutigue\r\n9lk`b\r\nCOLD MEAL\r\nCategories\r\nKategoriler\r\nTechnicial Specifications  / Teknik Özellikler\r\n547\r\n782\r\n301\r\n900\r\n1350\r\n150\r\n505\r\n342\r\nBUTTERFLY V1 SB/75/135\r\nTechnicial Specifications / Teknik Özellikle\r\n80 / 81\r\n",
+    "pdfUrl": "https://prosogutma.com/wp-content/uploads/2023/02/butterfly-sb.pdf",
+    "pdfLocal": "media/products/butterfly-sb/pdfs/butterfly-sb.pdf"
+  },
+  "pdfText": "BUTTERFLY SB \r\nPlug-in Refrigerated Salad-Bar Cabinet\r\nİçten Motorlu Soğutmalı Salat Bar Reyonu\r\n8mX`cXYc\\\u0001Df[lc\\j\u0001&\u0001BlccXeêcXY`c`i\u0001Df[cc\\i\r\nLength (mm)\r\nUzunluk (mm)\r\n937\r\n1250\r\nSide panel (mm)\r\nYan kapak (mm)\r\n30\r\n30\r\nFg\\iXk`e^\u0001K\\dg\\iXkli\\j\r\nxXcêŵdX\u0001JêZXbcêbcXiê\r\nAmbient Conditions\r\nFikXd\u0001BfŵlccXiê\r\nM2 (-1/+7 Cº)\r\n25°C / 60% RH \r\n(EN ISO 23953-2)\r\nBoutigue\r\n9lk`b\r\nCOLD MEAL\r\nCategories\r\nKategoriler\r\nTechnicial Specifications  / Teknik Özellikler\r\n547\r\n782\r\n301\r\n900\r\n1350\r\n150\r\n505\r\n342\r\nBUTTERFLY V1 SB/75/135\r\nTechnicial Specifications / Teknik Özellikle\r\n80 / 81\r\n",
+  "scrapedAt": "2026-05-28T23:47:57.636Z"
+}

@@ -1,0 +1,58 @@
+{
+  "slug": "monoblok-uniteler",
+  "baslik": "MONOBLOK ÜNİTELER",
+  "tip": "urun",
+  "ustSeriSlug": null,
+  "kategoriler": [
+    "refrigeration-systems"
+  ],
+  "kapak": "https:\\/\\/caglayanrefrigeration.com\\/wp-content\\/uploads\\/2023\\/02\\/Monoblock-Unite-Miapack-Kapak.webp",
+  "kapakYol": "gorseller/monoblok-uniteler/Monoblock-Unite-Miapack-Kapak.webp",
+  "linkKaynak": "https://caglayanrefrigeration.com/tr/product/monoblok-uniteler/",
+  "cocuklar": [],
+  "ozellikler": [],
+  "teknik": {
+    "akordeon": [],
+    "sekmeler": [],
+    "tablolar": []
+  },
+  "gorseller": {
+    "tum": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Monoblock-Unite-Miapack.webp",
+        "dosya": "gorseller/monoblok-uniteler/Monoblock-Unite-Miapack.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/ice.webp",
+        "dosya": "gorseller/monoblok-uniteler/ice.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Split-Uniteler-Monoblok-Uniteler.pdf",
+        "dosya": "gorseller/monoblok-uniteler/Split-Uniteler-Monoblok-Uniteler.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/monoblok-uniteler/pdf-icon.webp"
+      }
+    ],
+    "urun": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Monoblock-Unite-Miapack.webp",
+        "dosya": "gorseller/monoblok-uniteler/Monoblock-Unite-Miapack.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/ice.webp",
+        "dosya": "gorseller/monoblok-uniteler/ice.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Split-Uniteler-Monoblok-Uniteler.pdf",
+        "dosya": "gorseller/monoblok-uniteler/Split-Uniteler-Monoblok-Uniteler.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/monoblok-uniteler/pdf-icon.webp"
+      }
+    ],
+    "teknikCizim": []
+  }
+}

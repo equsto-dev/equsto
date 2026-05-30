@@ -25,10 +25,18 @@
     return slug;
   }
 
+  function vitrumModuleLangPrefix() {
+    try {
+      if (window.eqLang === "en" || /^\/en(\/|$)/i.test(location.pathname || "")) return "/en";
+    } catch (_) {}
+    return "";
+  }
+
   function vitrumModulePath(slug) {
     slug = String(slug || "").trim();
-    if (!slug) return "/besos";
-    return "/besos/modul/" + encodeURIComponent(slug);
+    var base = vitrumModuleLangPrefix() + "/besos";
+    if (!slug) return base;
+    return base + "/modul/" + encodeURIComponent(slug);
   }
 
   function vitrumModuleHref(p) {

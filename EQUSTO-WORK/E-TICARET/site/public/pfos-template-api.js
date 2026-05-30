@@ -28,6 +28,14 @@
   function normKonseptSlug(konsept, dukkan) {
     var k = String(konsept || "").trim();
     var d = String(dukkan || "").trim();
+    if (/steakhouse/i.test(k) || /steakhouse/i.test(d)) return "steakhouse";
+    if (
+      d === "Balık Restaurant" ||
+      /balık\s*restaurant|balik\s*restaurant|deniz\s*ürün|seafood/i.test(d) ||
+      (/balık|balik/i.test(d) && /restaurant|restoran|lokanta|bistro/i.test(d))
+    ) {
+      return "balikci";
+    }
     if (/pizzac/i.test(d) || /pizzac/i.test(k)) return "pizzaci";
     if (/dönerci|donerci/i.test(d)) return "kebap-ortadogu";
     if (/coffee|^cafe$|kafe-kafeterya|kafe$/i.test(k) || (/^cafe$/i.test(d) && !/restaurant/i.test(k)))
@@ -111,6 +119,7 @@
       lokasyon: opts.lokasyon || undefined,
       bolumM2: opts.bolumM2 || undefined,
       teslimatAdresi: opts.teslimatAdresi || undefined,
+      altTip: opts.altTip || undefined,
     };
     if (!body.konsept) throw new Error("konsept zorunlu");
     var r = await fetch(API_QUOTE, {
