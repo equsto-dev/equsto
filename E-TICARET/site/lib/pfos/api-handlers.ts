@@ -11,7 +11,7 @@ import { TEKLIF_DEFAULT_FIYAT_STRATEJISI } from "@/lib/pfos/teklif/teklif-policy
 
 const M2_RANGES: Record<string, { min: number; max: number }> = {
   "all-day-dining-cafe": { min: 150, max: 400 },
-  "kebap-ortadogu": { min: 200, max: 300 },
+  "kebap-ortadogu": { min: 300, max: 500 },
   pizzaci: { min: 200, max: 500 },
   meyhane: { min: 100, max: 500 },
   "turk-restoran": { min: 100, max: 500 },

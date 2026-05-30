@@ -2,7 +2,7 @@
  * PFOS Template: Kebap & Ortadoğu Mutfağı
  *
  * Referans proje: CZN Burak Vadi İstanbul AVM (2023-022-4)
- * m² aralığı: 200–300 m²
+ * m² aralığı: 300–500 m²
  * Segment bazı: m²  |  Koltuk yoğunluğu: 1 koltuk / 1.2 m²
  *
  * Konsept imzaları:
@@ -38,6 +38,7 @@ export const kebapOrtadogu: ConceptTemplate = {
       scale: { type: "threshold", thresholds: [
         { minM2: 0,   adet: 1 },
         { minM2: 250, adet: 2 },
+        { minM2: 400, adet: 3 },
       ]},
       elektrikGucuKwHint: 3.0,
       notlar: "Türk misafirperverliğinin gereği; her ölçekte zorunlu.",
@@ -110,6 +111,7 @@ export const kebapOrtadogu: ConceptTemplate = {
       scale: { type: "threshold", thresholds: [
         { minM2: 0,   adet: 1 },
         { minM2: 280, adet: 2 },
+        { minM2: 400, adet: 3 },
       ]},
       elektrikGucuKwHint: 0.6,
     },
@@ -510,6 +512,7 @@ export const kebapOrtadogu: ConceptTemplate = {
       scale: { type: "threshold", thresholds: [
         { minM2: 0,   adet: 1 },
         { minM2: 280, adet: 2 },
+        { minM2: 400, adet: 3 },
       ]},
       elektrikGucuKwHint: 0.3,
     },
