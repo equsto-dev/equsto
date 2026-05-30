@@ -1,3 +1,0 @@
-User
-DESKTOP-8U7SL9C 
-4 Temmuz 2025 Cuma  14:14:33

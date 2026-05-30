@@ -1,6 +1,0 @@
-{
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "framework": "nextjs",
-  "installCommand": "node scripts/vercel-install-clean.mjs",
-  "buildCommand": "node scripts/vercel-ci.mjs"
-}
