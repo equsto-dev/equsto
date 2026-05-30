@@ -1,6 +1,10 @@
-import { catalogUrlSlug, foldTr } from "@/lib/catalog-product-slug";
+import {
+  catalogUrlSlug,
+  legacyMeiliPathSlug,
+} from "@/lib/catalog-product-slug";
 import { loadEkipmanlarJson } from "@/lib/catalog-json";
 import { deptSearchHints, expandSearchQueries } from "@/lib/search-synonyms";
+import { foldTr, splitQueryOrBranches } from "@/lib/search-query";
 
 export type CatalogSearchHit = {
   id: string;
@@ -25,6 +29,15 @@ type CatalogRow = Record<string, unknown>;
 
 let cache: { rows: CatalogRow[] } | null = null;
 
+type CatalogLookupMaps = {
+  rows: CatalogRow[];
+  byMeiliId: Map<string, CatalogRow>;
+  byCatalogSlug: Map<string, CatalogRow>;
+  byLegacySlug: Map<string, CatalogRow>;
+};
+
+let lookupMaps: CatalogLookupMaps | null = null;
+
 function meiliId(raw: string) {
   return String(raw || "")
     .replace(/[/\\]+/g, "-")
@@ -47,7 +60,7 @@ function firstImage(row: CatalogRow) {
   return String(imgs[0]).replace(/\\/g, "/");
 }
 
-function rowToHit(row: CatalogRow): CatalogSearchHit | null {
+export function rowToHitFromRow(row: CatalogRow): CatalogSearchHit | null {
   const name = String(row.name || "").trim();
   if (!name) return null;
   const dept = String(row.dept || "").trim();
@@ -88,10 +101,37 @@ async function loadCatalogRows(): Promise<CatalogRow[]> {
     const rows = await loadEkipmanlarJson();
     const list = Array.isArray(rows) ? rows : [];
     cache = { rows: list };
+    lookupMaps = null;
     return list;
   } catch {
     return [];
   }
+}
+
+export async function getCatalogLookupMaps(): Promise<CatalogLookupMaps> {
+  if (lookupMaps) return lookupMaps;
+  const rows = await loadCatalogRows();
+  const byMeiliId = new Map<string, CatalogRow>();
+  const byCatalogSlug = new Map<string, CatalogRow>();
+  const byLegacySlug = new Map<string, CatalogRow>();
+
+  for (const row of rows) {
+    const dept = String(row.dept || "").trim();
+    if (!dept) continue;
+    const mid = docId(row, dept);
+    byMeiliId.set(mid, row);
+    const slug = catalogUrlSlug(row).toLowerCase();
+    byCatalogSlug.set(slug, row);
+    const cid = String(row.id || "")
+      .trim()
+      .toLowerCase();
+    if (cid) byCatalogSlug.set(cid, row);
+    const legacy = legacyMeiliPathSlug(row);
+    if (legacy) byLegacySlug.set(legacy, row);
+  }
+
+  lookupMaps = { rows, byMeiliId, byCatalogSlug, byLegacySlug };
+  return lookupMaps;
 }
 
 function rowHaystack(row: CatalogRow) {
@@ -113,23 +153,34 @@ function rowHaystack(row: CatalogRow) {
   );
 }
 
-function scoreRow(hay: string, tokens: string[]) {
-  let score = 0;
-  for (const t of tokens) {
-    if (!t) continue;
-    if (hay.includes(t)) score += 10;
-    const words = hay.split(/\s+/);
-    for (const w of words) {
-      if (w.startsWith(t)) score += 4;
-    }
+function scoreToken(hay: string, t: string): number {
+  if (!t) return 0;
+  if (!hay.includes(t)) return 0;
+  let score = 10;
+  const words = hay.split(/\s+/);
+  for (const w of words) {
+    if (w.startsWith(t)) score += 4;
+    if (t.length >= 4 && w.includes(t)) score += 6;
   }
   return score;
 }
 
-function collectTokens(q: string) {
+/** Bir OR dalı — tüm tokenlar eşleşmeli. */
+function scoreBranch(hay: string, tokens: string[]): number {
+  if (!tokens.length) return 0;
+  let score = 0;
+  for (const t of tokens) {
+    const part = scoreToken(hay, t);
+    if (part <= 0) return 0;
+    score += part;
+  }
+  return score;
+}
+
+function collectTokensForBranch(branch: string): string[] {
   const seen = new Set<string>();
   const tokens: string[] = [];
-  for (const variant of expandSearchQueries(q)) {
+  for (const variant of expandSearchQueries(branch)) {
     for (const t of foldTr(variant).split(/\s+/)) {
       if (t.length < 2) continue;
       if (seen.has(t)) continue;
@@ -140,13 +191,38 @@ function collectTokens(q: string) {
   return tokens;
 }
 
-/** Meilisearch yokken veya eksik sonuçta — ekipmanlar.json üzerinde arama */
-export async function fallbackCatalogSearch(q: string, limit: number) {
+function collectOrTokenBranches(q: string): string[][] {
+  return splitQueryOrBranches(q)
+    .map(collectTokensForBranch)
+    .filter((tokens) => tokens.length > 0);
+}
+
+function scoreRowOr(hay: string, branches: string[][]): number {
+  let best = 0;
+  for (const tokens of branches) {
+    best = Math.max(best, scoreBranch(hay, tokens));
+  }
+  return best;
+}
+
+export type FallbackSearchOptions = {
+  /** @deprecated Tüm katalogda aranır; dept kısıtı kullanılmaz. */
+  depts?: string[];
+  offset?: number;
+};
+
+/** Meilisearch yokken veya hibrit tamamlamada — katalog JSON üzerinde arama */
+export async function fallbackCatalogSearch(
+  q: string,
+  limit: number,
+  opts?: FallbackSearchOptions,
+) {
   const query = String(q || "").trim();
+  const offset = Math.max(opts?.offset ?? 0, 0);
   if (!query) return { hits: [] as CatalogSearchHit[], estimatedTotalHits: 0 };
 
-  const tokens = collectTokens(query);
-  if (!tokens.length) {
+  const branches = collectOrTokenBranches(query);
+  if (!branches.length) {
     return { hits: [] as CatalogSearchHit[], estimatedTotalHits: 0 };
   }
 
@@ -155,16 +231,17 @@ export async function fallbackCatalogSearch(q: string, limit: number) {
 
   for (const row of rows) {
     const hay = rowHaystack(row);
-    const score = scoreRow(hay, tokens);
+    const score = scoreRowOr(hay, branches);
     if (score <= 0) continue;
-    const hit = rowToHit(row);
+    const hit = rowToHitFromRow(row);
     if (!hit) continue;
     const prev = byId.get(hit.id);
     if (!prev || score > prev.score) byId.set(hit.id, { hit, score });
   }
 
   const scored = [...byId.values()].sort((a, b) => b.score - a.score);
-  const hits = scored.slice(0, limit).map((x) => x.hit);
+  const ranked = scored.map((x) => x.hit);
+  const hits = ranked.slice(offset, offset + limit);
   return {
     hits,
     estimatedTotalHits: scored.length,

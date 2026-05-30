@@ -1,6 +1,9 @@
 /**
- * Katalog kartları: görselden baskın renk → yalnızca hover’da arka plan yıkaması.
- * .main .products .prod-card + .eq-dept-plp-card__img (kategori / arama PLP).
+ * Katalog kartları: görselden baskın renk → hover’da arka plan yıkaması.
+ * Şu an: .prod-img + .prod-info (inline background-image, important).
+ *
+ * TODO (kullanıcı notu): Renk yalnızca görselin arkasına (.prod-img, <img> altında);
+ * açıklama / metin bloğu (.prod-info) renklendirilmeyecek — sonra uygulanacak.
  */
 (function () {
   "use strict";
@@ -9,10 +12,11 @@
   window.__eqProductCardTintInited = true;
 
   var CACHE = Object.create(null);
-  var CACHE_VER = "v7";
+  var CACHE_VER = "v9";
   var SAMPLE = 56;
   var tintToken = new WeakMap();
-  var deptTintToken = new WeakMap();
+  var plpTintSrc = new WeakMap();
+  var plpRgbCache = new WeakMap();
 
   function clamp(n, a, b) {
     return Math.max(a, Math.min(b, n));
@@ -27,8 +31,7 @@
   }
 
   /**
-   * Doygunluğu hafif artır; yalnızca gerçekten gri (neredeyse R=G=B) ise nötr mavi.
-   * Sarı/turuncu gibi “düşük max–min ama renkli” ortalamaları maviye çevirme.
+   * Doygunluğu artır. Açık gri arka plan → nötr mavi; koyu ürün gövdesi (siyah makine vb.) → koyu accent.
    */
   function enrichRgb(r, g, b) {
     var max = Math.max(r, g, b);
@@ -36,10 +39,21 @@
     var d = max - min;
     var avg = (r + g + b) / 3;
     var dev = Math.max(Math.abs(r - avg), Math.abs(g - avg), Math.abs(b - avg));
-    if (d < 10 && dev < 8) {
+    var L = (max + min) / 2;
+    if (d < 14 && L < 100) {
+      var bias = 14;
+      if (b >= r && b >= g) bias = 18;
+      else if (r >= g && r >= b) bias = 10;
+      return {
+        r: clamp(Math.round(r + (r - avg) * 0.35 + bias * 0.4), 22, 95),
+        g: clamp(Math.round(g + (g - avg) * 0.35 + bias * 0.25), 22, 95),
+        b: clamp(Math.round(b + (b - avg) * 0.35 + bias * 0.55), 28, 110),
+      };
+    }
+    if (d < 10 && dev < 8 && L > 155) {
       return { r: 118, g: 132, b: 168 };
     }
-    var k = d < 42 ? 1.42 : 1.2;
+    var k = d < 42 ? 1.48 : 1.24;
     r = clamp(Math.round(avg + (r - avg) * k), 0, 255);
     g = clamp(Math.round(avg + (g - avg) * k), 0, 255);
     b = clamp(Math.round(avg + (b - avg) * k), 0, 255);
@@ -72,9 +86,13 @@
       b = data[i + 2];
       s = satRgb(r, g, b);
       L = lightRgb(r, g, b);
-      if (L > 245) continue;
-      if (L > 232 && s < 22) continue;
-      w = (s * s + s * 10 + 6) * (a / 255);
+      if (L > 248) continue;
+      if (L > 228 && s < 18) continue;
+      if (L < 118 && s < 8) {
+        w = (140 - L + 12) * (a / 255);
+      } else {
+        w = (s * s + s * 10 + 6) * (a / 255);
+      }
       wr += r * w;
       wg += g * w;
       wb += b * w;
@@ -106,6 +124,81 @@
     return enrichRgb(rr, gg, bb);
   }
 
+  function isSameOriginSrc(src) {
+    try {
+      return new URL(src, location.href).origin === location.origin;
+    } catch (e) {
+      return true;
+    }
+  }
+
+  function ensureImgCrossOrigin(img) {
+    if (!img || img.crossOrigin || img.dataset.eqTintCors) return;
+    var src = String(img.currentSrc || img.src || "");
+    if (!src || isSameOriginSrc(src)) return;
+    img.crossOrigin = "anonymous";
+    img.dataset.eqTintCors = "1";
+  }
+
+  function sampleFromBitmap(bitmap, done) {
+    var c = document.createElement("canvas");
+    c.width = SAMPLE;
+    c.height = SAMPLE;
+    var ctx = c.getContext("2d", { willReadFrequently: true });
+    if (!ctx) {
+      done(null);
+      return;
+    }
+    try {
+      ctx.drawImage(bitmap, 0, 0, SAMPLE, SAMPLE);
+      var data = ctx.getImageData(0, 0, SAMPLE, SAMPLE).data;
+    } catch (e) {
+      done(null);
+      return;
+    }
+    var out = accentFromImageData(data);
+    if (!out) {
+      done(null);
+      return;
+    }
+    done(out);
+  }
+
+  function sampleFromImageUrl(src, done) {
+    if (!src || typeof fetch !== "function") {
+      done(null);
+      return;
+    }
+    fetch(src, { mode: "cors", credentials: "omit" })
+      .then(function (r) {
+        if (!r.ok) throw new Error("fetch");
+        return r.blob();
+      })
+      .then(function (blob) {
+        if (typeof createImageBitmap === "function") {
+          return createImageBitmap(blob).then(function (bmp) {
+            sampleFromBitmap(bmp, done);
+          });
+        }
+        var url = URL.createObjectURL(blob);
+        var probe = new Image();
+        probe.onload = function () {
+          sampleFromBitmap(probe, function (rgb) {
+            URL.revokeObjectURL(url);
+            done(rgb);
+          });
+        };
+        probe.onerror = function () {
+          URL.revokeObjectURL(url);
+          done(null);
+        };
+        probe.src = url;
+      })
+      .catch(function () {
+        done(null);
+      });
+  }
+
   function sampleFromImage(img, done) {
     var src = String(img.currentSrc || img.src || "");
     var ck = CACHE_VER + "\t" + src;
@@ -117,6 +210,7 @@
       done(null);
       return;
     }
+    ensureImgCrossOrigin(img);
     var c = document.createElement("canvas");
     c.width = SAMPLE;
     c.height = SAMPLE;
@@ -129,7 +223,10 @@
       ctx.drawImage(img, 0, 0, SAMPLE, SAMPLE);
       var data = ctx.getImageData(0, 0, SAMPLE, SAMPLE).data;
     } catch (e) {
-      done(null);
+      sampleFromImageUrl(src, function (rgb) {
+        if (rgb) CACHE[ck] = rgb;
+        done(rgb);
+      });
       return;
     }
     var out = accentFromImageData(data);
@@ -158,6 +255,7 @@
   /** Hızlı senkron örnek (32px) — hover anında renk; sonra SAMPLE ile iyileştirilir. */
   function sampleFromImageSync(img) {
     if (!img || !img.naturalWidth || !img.naturalHeight) return null;
+    ensureImgCrossOrigin(img);
     var c = document.createElement("canvas");
     var sz = 32;
     c.width = sz;
@@ -299,24 +397,12 @@
   }
 
   function onPointerOver(e) {
-    var plpRing = e.target.closest && e.target.closest(".eq-dept-plp-card__img");
-    if (plpRing) {
-      scheduleDeptAmbient(plpRing);
-      return;
-    }
     var card = e.target.closest && e.target.closest(".main .products .prod-card");
     if (!card) return;
     scheduleTint(card);
   }
 
   function onPointerOut(e) {
-    var plpRing = e.target.closest && e.target.closest(".eq-dept-plp-card__img");
-    if (plpRing) {
-      var relPlp = e.relatedTarget;
-      if (relPlp && plpRing.contains(relPlp)) return;
-      clearDeptAmbient(plpRing);
-      return;
-    }
     var card = e.target.closest && e.target.closest(".prod-card");
     if (!card || !card.closest(".main .products")) return;
     var rel = e.relatedTarget;
@@ -324,88 +410,187 @@
     clearTint(card);
   }
 
+  function plpAmbientProps(r, g, b) {
+    var L = (Math.max(r, g, b) + Math.min(r, g, b)) / 2;
+    var mix = L < 90 ? 0.52 : 0.38;
+    var baseR = clamp(Math.round(245 + (r - 245) * mix), 198, 252);
+    var baseG = clamp(Math.round(246 + (g - 246) * mix), 198, 252);
+    var baseB = clamp(Math.round(248 + (b - 248) * mix), 200, 254);
+    return {
+      glow: "rgba(" + r + "," + g + "," + b + ",0.78)",
+      mid: "rgba(" + r + "," + g + "," + b + ",0.48)",
+      base: "rgb(" + baseR + "," + baseG + "," + baseB + ")",
+      border: "rgba(" + r + "," + g + "," + b + ",0.58)",
+    };
+  }
+
+  function cachePlpRgb(wrap, rgb) {
+    if (wrap && rgb) plpRgbCache.set(wrap, rgb);
+  }
+
+  /** Renk değişkenleri yalnızca hover sırasında — CSS :hover gradient’i bunları kullanır. */
+  function setPlpAmbientVars(wrap, rgb) {
+    if (!wrap || !rgb || !wrap.matches(":hover")) return;
+    var t = plpAmbientProps(rgb.r, rgb.g, rgb.b);
+    wrap.style.setProperty("--eq-plp-ambient-glow", t.glow);
+    wrap.style.setProperty("--eq-plp-ambient-mid", t.mid);
+    wrap.style.setProperty("--eq-plp-ambient-base", t.base);
+    wrap.style.setProperty("--eq-plp-ambient-border", t.border);
+  }
+
+  function clearPlpAmbientWrap(wrap) {
+    if (!wrap) return;
+    wrap.classList.remove("eq-plp-ambient-ready", "eq-plp-ambient-active");
+    wrap.style.removeProperty("--eq-plp-ambient-glow");
+    wrap.style.removeProperty("--eq-plp-ambient-mid");
+    wrap.style.removeProperty("--eq-plp-ambient-base");
+    wrap.style.removeProperty("--eq-plp-ambient-border");
+  }
+
+  var plpHoverGen = new WeakMap();
+
+  function schedulePlpHoverTint(wrap) {
+    var img = wrap.querySelector("img");
+    if (!img || !wrap.matches(":hover")) return;
+    var gen = (plpHoverGen.get(wrap) || 0) + 1;
+    plpHoverGen.set(wrap, gen);
+    var fallback = { r: 118, g: 132, b: 168 };
+    var cached = plpRgbCache.get(wrap);
+    if (cached) setPlpAmbientVars(wrap, cached);
+
+    function finish(rgb) {
+      if (plpHoverGen.get(wrap) !== gen || !wrap.matches(":hover")) return;
+      var out = rgb || cached || fallback;
+      cachePlpRgb(wrap, out);
+      setPlpAmbientVars(wrap, out);
+      plpTintSrc.set(wrap, String(img.currentSrc || img.src || ""));
+    }
+
+    var instant = sampleFromImageSync(img) || cached;
+    if (instant) {
+      cachePlpRgb(wrap, instant);
+      setPlpAmbientVars(wrap, instant);
+    }
+
+    if (img.complete && img.naturalWidth) {
+      sampleFromImage(img, function (rgb) {
+        finish(rgb || instant);
+      });
+      return;
+    }
+
+    img.addEventListener(
+      "load",
+      function once() {
+        img.removeEventListener("load", once);
+        if (plpHoverGen.get(wrap) !== gen) return;
+        sampleFromImage(img, function (rgb) {
+          finish(rgb || instant);
+        });
+      },
+      { once: true }
+    );
+  }
+
+  /** Yalnızca bellek önbelleği — DOM / sınıf yok (sabit renk görünmesin). */
+  function prewarmPlpWrap(wrap) {
+    var img = wrap.querySelector("img");
+    if (!img) return;
+    var src = String(img.currentSrc || img.src || "");
+    if (plpTintSrc.get(wrap) === src && plpRgbCache.has(wrap)) return;
+    var fallback = { r: 118, g: 132, b: 168 };
+
+    function finish(rgb) {
+      cachePlpRgb(wrap, rgb || fallback);
+      plpTintSrc.set(wrap, src);
+    }
+
+    function sampleFull() {
+      sampleFromImage(img, function (rgb) {
+        finish(rgb || sampleFromImageSync(img));
+      });
+    }
+
+    var warm = sampleFromImageSync(img);
+    if (warm) cachePlpRgb(wrap, warm);
+
+    if (img.complete && img.naturalWidth) {
+      sampleFull();
+      return;
+    }
+
+    img.addEventListener(
+      "load",
+      function once() {
+        img.removeEventListener("load", once);
+        src = String(img.currentSrc || img.src || "");
+        sampleFull();
+      },
+      { once: true }
+    );
+  }
+
+  function refreshPlp(root) {
+    root = root || document;
+    var wraps = root.querySelectorAll(".eq-dept-plp-card__img");
+    for (var i = 0; i < wraps.length; i++) {
+      clearPlpAmbientWrap(wraps[i]);
+      prewarmPlpWrap(wraps[i]);
+    }
+  }
+
+  function watchPlpGrids() {
+    ["eq-dept-plp-grid", "eq-arama-grid"].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (!el || el.__eqPlpTintObs) return;
+      el.__eqPlpTintObs = true;
+      refreshPlp(el);
+      try {
+        var obs = new MutationObserver(function () {
+          refreshPlp(el);
+        });
+        obs.observe(el, { childList: true, subtree: true });
+      } catch (_) {}
+    });
+  }
+
+  function onPlpPointerOver(e) {
+    var wrap = e.target.closest && e.target.closest(".eq-dept-plp-card__img");
+    if (!wrap) return;
+    schedulePlpHoverTint(wrap);
+  }
+
+  function onPlpPointerOut(e) {
+    var wrap = e.target.closest && e.target.closest(".eq-dept-plp-card__img");
+    if (!wrap) return;
+    var rel = e.relatedTarget;
+    if (rel && wrap.contains(rel)) return;
+    plpHoverGen.set(wrap, (plpHoverGen.get(wrap) || 0) + 1);
+    clearPlpAmbientWrap(wrap);
+  }
+
   function init() {
     document.addEventListener("pointerover", onPointerOver, true);
     document.addEventListener("pointerout", onPointerOut, true);
+    document.addEventListener("pointerover", onPlpPointerOver, true);
+    document.addEventListener("pointerout", onPlpPointerOut, true);
+    watchPlpGrids();
+    if (typeof document !== "undefined") {
+      document.addEventListener("equsto:plp-grid-updated", function (e) {
+        refreshPlp((e && e.detail && e.detail.root) || document);
+      });
+    }
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
   else init();
-
-  /** Kategori / arama PLP: gri çerçeve hover’da baskın renk */
-  function ambientCssProps(r, g, b) {
-    return {
-      glow: "rgba(" + r + "," + g + "," + b + ",0.42)",
-      mid: "rgba(" + r + "," + g + "," + b + ",0.24)",
-      base: "color-mix(in srgb, rgb(" + r + "," + g + "," + b + ") 16%, #f5f6f8)",
-      border: "rgba(" + r + "," + g + "," + b + ",0.34)",
-    };
-  }
-
-  function applyDeptAmbient(ring, rgb) {
-    if (!ring || !rgb) return;
-    var t = ambientCssProps(rgb.r, rgb.g, rgb.b);
-    ring.style.setProperty("--eq-plp-ambient-glow", t.glow);
-    ring.style.setProperty("--eq-plp-ambient-mid", t.mid);
-    ring.style.setProperty("--eq-plp-ambient-base", t.base);
-    ring.style.setProperty("--eq-plp-ambient-border", t.border);
-    ring.classList.add("eq-plp-ambient-ready");
-  }
-
-  function clearDeptAmbient(ring) {
-    if (!ring) return;
-    ring.classList.remove("eq-plp-ambient-ready");
-    ring.style.removeProperty("--eq-plp-ambient-glow");
-    ring.style.removeProperty("--eq-plp-ambient-mid");
-    ring.style.removeProperty("--eq-plp-ambient-base");
-    ring.style.removeProperty("--eq-plp-ambient-border");
-    deptTintToken.set(ring, (deptTintToken.get(ring) || 0) + 1);
-  }
-
-  function scheduleDeptAmbient(ring) {
-    if (!ring) return;
-    var img = ring.querySelector("img");
-    var gen = (deptTintToken.get(ring) || 0) + 1;
-    deptTintToken.set(ring, gen);
-    var fallback = { r: 118, g: 132, b: 168 };
-
-    function run() {
-      if (deptTintToken.get(ring) !== gen) return;
-      if (!img || img.style.display === "none") {
-        applyDeptAmbient(ring, fallback);
-        return;
-      }
-      var instant = sampleFromImageSync(img) || fallback;
-      applyDeptAmbient(ring, instant);
-      if (!img.naturalWidth) {
-        img.addEventListener(
-          "load",
-          function once() {
-            img.removeEventListener("load", once);
-            if (deptTintToken.get(ring) !== gen) return;
-            sampleFromImage(img, function (rgb) {
-              if (deptTintToken.get(ring) !== gen) return;
-              applyDeptAmbient(ring, rgb || instant);
-            });
-          },
-          { once: true }
-        );
-        return;
-      }
-      sampleFromImage(img, function (rgb) {
-        if (deptTintToken.get(ring) !== gen) return;
-        applyDeptAmbient(ring, rgb || instant);
-      });
-    }
-
-    if (typeof requestAnimationFrame === "function") requestAnimationFrame(run);
-    else setTimeout(run, 0);
-  }
 
   /** Ürün detay (product.html): görselden accent — kart hover’ından bağımsız */
   var g = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : this;
   g.EqustoProductTint = {
     sampleFromImage: sampleFromImage,
     sampleFromImageSync: sampleFromImageSync,
+    refreshPlp: refreshPlp,
+    watchPlpGrids: watchPlpGrids,
   };
 })();

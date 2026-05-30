@@ -1,0 +1,149 @@
+{
+  "slug": "whale",
+  "wpId": 9128,
+  "title": "Whale",
+  "baslik": "Whale",
+  "url": "https://prosogutma.com/urun/whale/",
+  "attributes": [
+    {
+      "label": "Ürünler",
+      "value": "Dondurma, Dondurulmuş Ürünler"
+    },
+    {
+      "label": "Kabin Türü",
+      "value": "Derin Dondurucular, Ada Tipi Derin Dondurucular"
+    },
+    {
+      "label": "Plug-in",
+      "value": "Remote"
+    }
+  ],
+  "categories": [
+    {
+      "name": "Derin Dondurucular, Ada Tipi Derin Dondurucular"
+    }
+  ],
+  "gallery": [
+    {
+      "src": "https://prosogutma.com/wp-content/uploads/2022/05/Whale-1.jpg"
+    }
+  ],
+  "tabs": [
+    {
+      "name": "Ürün Hakkında",
+      "html": "<p><a href=\"https://prosogutma.com/wp-content/uploads/2023/02/whale.svg\"><img loading=\"lazy\" class=\"alignnone size-full wp-image-10695\" role=\"img\" src=\"https://prosogutma.com/wp-content/uploads/2023/02/whale.svg\" alt=\"\" width=\"539\" height=\"271\" /></a></p></div>\n\t\t\t\t\t\t\t\t\t<div class=\"elementor-tab-title elementor-tab-mobile-title\" aria-selected=\"false\" data-tab=\"2\" role=\"tab\" tabindex=\"-1\" aria-controls=\"elementor-tab-content-1672\" aria-expanded=\"false\">Teknik Çizimler",
+      "links": [
+        {
+          "href": "https://prosogutma.com/wp-content/uploads/2023/02/whale.svg",
+          "text": "href=\"https://prosogutma.com/wp-content/uploads/2023/02/whale.svg\""
+        }
+      ],
+      "images": [
+        {
+          "src": "https://prosogutma.com/wp-content/uploads/2023/02/whale.svg",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "name": "Teknik Çizimler",
+      "html": "<a href=\"https://prosogutma.com/wp-content/uploads/2023/02/whale.pdf\" target=\"_blank\" rel=\"noopener\">Teknik Çizimlere Gitmek İçin Tıklayınız.</a></div>\n\t\t\t\t\t\t\t\t\t<div class=\"elementor-tab-title elementor-tab-mobile-title\" aria-selected=\"false\" data-tab=\"3\" role=\"tab\" tabindex=\"-1\" aria-controls=\"elementor-tab-content-1673\" aria-expanded=\"false\">Katalog Sayfası",
+      "links": [
+        {
+          "href": "https://prosogutma.com/wp-content/uploads/2023/02/whale.pdf",
+          "text": "href=\"https://prosogutma.com/wp-content/uploads/2023/02/whale.pdf\""
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "Katalog Sayfası",
+      "html": "<a href=\"https://prosogutma.com/wp-content/uploads/2023/02/whale.pdf\" target=\"_blank\" rel=\"noopener\">Ürün Kataloğumuza Gitmek İçin Tıklayınız.</a></div>\n\t\t\t\t\t\t\t\t\t<div class=\"elementor-tab-title elementor-tab-mobile-title\" aria-selected=\"false\" data-tab=\"4\" role=\"tab\" tabindex=\"-1\" aria-controls=\"elementor-tab-content-1674\" aria-expanded=\"false\">Opsiyonlar",
+      "links": [
+        {
+          "href": "https://prosogutma.com/wp-content/uploads/2023/02/whale.pdf",
+          "text": "href=\"https://prosogutma.com/wp-content/uploads/2023/02/whale.pdf\""
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "Opsiyonlar",
+      "html": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p></div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t</div>\n\t\t\t\t\t</div>\n\t\t</section>\n\t\t\t\t</div>\n\t\t\n",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Ürün Hakkında",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Teknik Çizimler",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Teknik Çizimlere Gitmek İçin Tıklayınız.",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Katalog Sayfası",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Ürün Kataloğumuza Gitmek İçin Tıklayınız.",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Opsiyonlar",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+      "html": "",
+      "links": [],
+      "images": []
+    }
+  ],
+  "teknik": {
+    "tablolar": [
+      {
+        "basliklar": [
+          "Ürünler",
+          "Kabin Türü",
+          "Plug-in"
+        ],
+        "satirlar": [
+          [
+            "Ürünler",
+            "Dondurma, Dondurulmuş Ürünler"
+          ],
+          [
+            "Kabin Türü",
+            "Derin Dondurucular, Ada Tipi Derin Dondurucular"
+          ],
+          [
+            "Plug-in",
+            "Remote"
+          ]
+        ]
+      }
+    ],
+    "pdfText": "www.prosogutma.com\r\nWHALE\r\nDouble Island Type Freezer Cabinets\r\nÇift Yönlü Ada Tipi Derin Dondurucu Reyonlar\r\nTechnicial Specifications  / Teknik Özellikler\r\nFg\\iXk`e^\u0001K\\dg\\iXkli\\j\r\nxXcêŵdX\u0001JêZXbcêbcXiê\r\nAmbient Conditions\r\nFikXd\u0001BfŵlccXiê\r\nL1 (-15/-18°C) - L2 (-12/-18°C)\r\n25°C / 60% RH (EN ISO 23953-2)\r\n8mX`cXYc\\\u0001Df[lc\\j\u0001&\u0001BlccXeêcXY`c`i\u0001Df[cc\\i\r\nLength (mm)\r\nUzunluk (mm)\r\n1875\r\n2500\r\n3750\r\n2000\r\nHD\r\n1500\r\nHD\r\nSide panel (mm)\r\nYan kapak (mm)\r\n60\r\n60\r\n60\r\n60\r\n60\r\nreezer Cabinets\r\nerin Dondurucu Reyonlar\r\nf[lc\\j\u0001&\u0001BlccXeêcXY`c`i\u0001Df[cc\\i\r\nWHALE G50/200  PUSH - PULL\r\nWHALE G50/150 PUSH - PULL\r\nFROZEN FOOD\r\nICE CREAM\r\nCategories\r\nKategoriler\r\nWHALE G50/200\r\nWHALE G50/150\r\n1500\r\n400\r\n400\r\n575\r\n575\r\n250\r\n565\r\n565\r\n900\r\n480\r\n420\r\n2000\r\n825\r\n400\r\n815\r\n815\r\n825\r\n400\r\n250\r\n480\r\n420\r\n900\r\nWHALE G50/200 SLIDING\r\nWHALE G50/150 SLIDING\r\nWHALE G50/150 S.S.\r\nWHALE G50/200 S.S.\r\nIsland Freezers\r\n8[X\u0001K`g`\u0001;fe[lilZl\r\n52 / 53\r\n",
+    "pdfUrl": "https://prosogutma.com/wp-content/uploads/2023/02/whale.pdf",
+    "pdfLocal": "media/products/whale/pdfs/whale.pdf"
+  },
+  "pdfText": "www.prosogutma.com\r\nWHALE\r\nDouble Island Type Freezer Cabinets\r\nÇift Yönlü Ada Tipi Derin Dondurucu Reyonlar\r\nTechnicial Specifications  / Teknik Özellikler\r\nFg\\iXk`e^\u0001K\\dg\\iXkli\\j\r\nxXcêŵdX\u0001JêZXbcêbcXiê\r\nAmbient Conditions\r\nFikXd\u0001BfŵlccXiê\r\nL1 (-15/-18°C) - L2 (-12/-18°C)\r\n25°C / 60% RH (EN ISO 23953-2)\r\n8mX`cXYc\\\u0001Df[lc\\j\u0001&\u0001BlccXeêcXY`c`i\u0001Df[cc\\i\r\nLength (mm)\r\nUzunluk (mm)\r\n1875\r\n2500\r\n3750\r\n2000\r\nHD\r\n1500\r\nHD\r\nSide panel (mm)\r\nYan kapak (mm)\r\n60\r\n60\r\n60\r\n60\r\n60\r\nreezer Cabinets\r\nerin Dondurucu Reyonlar\r\nf[lc\\j\u0001&\u0001BlccXeêcXY`c`i\u0001Df[cc\\i\r\nWHALE G50/200  PUSH - PULL\r\nWHALE G50/150 PUSH - PULL\r\nFROZEN FOOD\r\nICE CREAM\r\nCategories\r\nKategoriler\r\nWHALE G50/200\r\nWHALE G50/150\r\n1500\r\n400\r\n400\r\n575\r\n575\r\n250\r\n565\r\n565\r\n900\r\n480\r\n420\r\n2000\r\n825\r\n400\r\n815\r\n815\r\n825\r\n400\r\n250\r\n480\r\n420\r\n900\r\nWHALE G50/200 SLIDING\r\nWHALE G50/150 SLIDING\r\nWHALE G50/150 S.S.\r\nWHALE G50/200 S.S.\r\nIsland Freezers\r\n8[X\u0001K`g`\u0001;fe[lilZl\r\n52 / 53\r\n",
+  "scrapedAt": "2026-05-28T23:52:59.462Z"
+}

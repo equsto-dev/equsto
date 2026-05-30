@@ -1,0 +1,295 @@
+{
+  "version": "1",
+  "kaynak": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek",
+  "kaynakId": "zorlu",
+  "kaynakAd": "Zorlu Center magaza listesi",
+  "guncelleme": "2026-05-24T17:57:07.737990+00:00",
+  "isletmeSayisi": 57,
+  "isletmeler": [
+    {
+      "id": "arbys",
+      "ad": "Arby's",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/arbys"
+    },
+    {
+      "id": "arifoglu",
+      "ad": "Arifoğlu",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/arifoglu"
+    },
+    {
+      "id": "bakirkazan",
+      "ad": "Bakırkazan",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/bakirkazan"
+    },
+    {
+      "id": "bardot",
+      "ad": "Bardot",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/bardot"
+    },
+    {
+      "id": "bigchefs",
+      "ad": "BigChefs",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/bigchefs"
+    },
+    {
+      "id": "bites-beats",
+      "ad": "Bites & Beats",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/bites-beats"
+    },
+    {
+      "id": "burger-king",
+      "ad": "Burger King",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/burger-king"
+    },
+    {
+      "id": "caffe-nero",
+      "ad": "Caffe Nero",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/caffe-nero"
+    },
+    {
+      "id": "cantinery",
+      "ad": "Cantinery",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/cantinery"
+    },
+    {
+      "id": "carls-jr",
+      "ad": "Carl's Jr.",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/carls-jr"
+    },
+    {
+      "id": "coni-co",
+      "ad": "Coni & Co",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/coni-co"
+    },
+    {
+      "id": "cup-of-joy",
+      "ad": "Cup of Joy",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/cup-of-joy"
+    },
+    {
+      "id": "doyuyo",
+      "ad": "Doyuyo",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/doyuyo"
+    },
+    {
+      "id": "durumle",
+      "ad": "Dürümle",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/durumle"
+    },
+    {
+      "id": "eataly",
+      "ad": "Eataly",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/eataly"
+    },
+    {
+      "id": "fauchon-paris",
+      "ad": "Fauchon Paris",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/fauchon-paris"
+    },
+    {
+      "id": "five-oclock",
+      "ad": "Five O'Clock",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/five-oclock"
+    },
+    {
+      "id": "godiva",
+      "ad": "Godiva",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/godiva"
+    },
+    {
+      "id": "green-salads",
+      "ad": "Green Salads",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/green-salads"
+    },
+    {
+      "id": "gunaydin-kasap-steak-house",
+      "ad": "Günaydın Kasap & Steak House",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/gunaydin-kasap-steak-house"
+    },
+    {
+      "id": "gunaydin-kofte-doner",
+      "ad": "Günaydın Köfte&Döner",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/gunaydin-kofte-doner"
+    },
+    {
+      "id": "happy-moons",
+      "ad": "Happy Moon's",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/happy-moons"
+    },
+    {
+      "id": "hello-sweetie",
+      "ad": "Hello Sweetie",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/hello-sweetie"
+    },
+    {
+      "id": "kronotrop",
+      "ad": "Kronotrop",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/kronotrop"
+    },
+    {
+      "id": "le-baron",
+      "ad": "Le Baron",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/le-baron"
+    },
+    {
+      "id": "marie-antoinette-chocolatier",
+      "ad": "Marie Antoinette Chocolatier",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/marie-antoinette-chocolatier"
+    },
+    {
+      "id": "mcdonalds",
+      "ad": "McDonald's",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/mcdonalds"
+    },
+    {
+      "id": "melez-tea",
+      "ad": "Melez Tea",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/melez-tea"
+    },
+    {
+      "id": "moc",
+      "ad": "MOC",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/moc"
+    },
+    {
+      "id": "morini",
+      "ad": "Morini",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/morini"
+    },
+    {
+      "id": "nespresso",
+      "ad": "Nespresso",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/nespresso"
+    },
+    {
+      "id": "nev-istanbul",
+      "ad": "Nev İstanbul",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/nev-istanbul"
+    },
+    {
+      "id": "parle",
+      "ad": "Parle",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/parle"
+    },
+    {
+      "id": "pidem",
+      "ad": "Pidem",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/pidem"
+    },
+    {
+      "id": "plus-kitchen",
+      "ad": "Plus Kitchen",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/plus-kitchen"
+    },
+    {
+      "id": "popeyes",
+      "ad": "Popeyes",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/popeyes"
+    },
+    {
+      "id": "ramiz",
+      "ad": "Ramiz",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/ramiz"
+    },
+    {
+      "id": "ranchero",
+      "ad": "Ranchero",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/ranchero"
+    },
+    {
+      "id": "really-fried-chicken",
+      "ad": "Really Fried Chicken",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/really-fried-chicken"
+    },
+    {
+      "id": "rey-organic",
+      "ad": "Rey Organic",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/rey-organic"
+    },
+    {
+      "id": "sail-loft-vakkorama",
+      "ad": "Sail Loft Vakkorama",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/sail-loft-vakkorama"
+    },
+    {
+      "id": "sakhalin-istanbul",
+      "ad": "Sakhalin İstanbul",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/sakhalin-istanbul"
+    },
+    {
+      "id": "saray-muhallebicisi",
+      "ad": "Saray Muhallebicisi",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/saray-muhallebicisi"
+    },
+    {
+      "id": "sosa",
+      "ad": "Sosa",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/sosa"
+    },
+    {
+      "id": "starbucks",
+      "ad": "Starbucks",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/starbucks"
+    },
+    {
+      "id": "sushico",
+      "ad": "SushiCo",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/sushico"
+    },
+    {
+      "id": "tahin",
+      "ad": "Tahin",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/tahin"
+    },
+    {
+      "id": "tavuk-dunyasi",
+      "ad": "Tavuk Dünyası",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/tavuk-dunyasi"
+    },
+    {
+      "id": "terrazza-italia",
+      "ad": "Terrazza Italia",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/terrazza-italia"
+    },
+    {
+      "id": "the-grungy",
+      "ad": "The Grungy",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/the-grungy"
+    },
+    {
+      "id": "usta-donerci",
+      "ad": "Usta Dönerci",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/usta-donerci"
+    },
+    {
+      "id": "vakko-latelier",
+      "ad": "Vakko L'Atelier",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/vakko-latelier"
+    },
+    {
+      "id": "voi-coffee-company",
+      "ad": "Voi Coffee Company",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/voi-coffee-company"
+    },
+    {
+      "id": "walkers-bar",
+      "ad": "Walkers Bar",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/walkers-bar"
+    },
+    {
+      "id": "welldone",
+      "ad": "Welldone",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/welldone"
+    },
+    {
+      "id": "ziyafe-kayseri-mutfagi",
+      "ad": "Ziyafe Kayseri Mutfağı",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/ziyafe-kayseri-mutfagi"
+    },
+    {
+      "id": "zula",
+      "ad": "Zula",
+      "url": "https://www.zorlucenter.com.tr/avm/magazalar/yiyecek-icecek/zula"
+    }
+  ]
+}

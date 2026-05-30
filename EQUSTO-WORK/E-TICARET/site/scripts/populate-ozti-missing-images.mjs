@@ -39,7 +39,7 @@ const PROXY = {
   "79K3.06NMV.10": { kod: "7919.06NMV.00" },
   "79K4.06NMV.10": { kod: "7919.06NMV.00" },
   "9805.IM240D.NHC": { kod: "9805.IM240X.NHC" },
-  "2919.0B390.AD01.00": "ozti-7919-47ntv-s0.jpg",
+  "2919.0B390.AD01.00": "ozti-7506-0b390-00.jpg",
 };
 
 function normKod(k) {

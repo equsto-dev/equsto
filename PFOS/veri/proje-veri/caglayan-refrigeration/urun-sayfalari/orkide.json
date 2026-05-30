@@ -1,0 +1,556 @@
+{
+  "slug": "orkide",
+  "baslik": "ORKİDE",
+  "tip": "model",
+  "ustSeriSlug": null,
+  "kategoriler": [
+    "serve-over-cabinets"
+  ],
+  "kapak": "https:\\/\\/caglayanrefrigeration.com\\/wp-content\\/uploads\\/2023\\/05\\/Orkide-Kapak.webp",
+  "kapakYol": "gorseller/orkide/Orkide-Kapak.webp",
+  "linkKaynak": "https://caglayanrefrigeration.com/tr/product/orkide/",
+  "cocuklar": [],
+  "ozellikler": [
+    {
+      "baslik": "",
+      "aciklama": "Meat"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Chicken"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Cheese"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Olive"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Delicatessen"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Dairy Products"
+    },
+    {
+      "baslik": "",
+      "aciklama": "High Efficiency Fans"
+    },
+    {
+      "baslik": "",
+      "aciklama": "LED Lighting"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Ventilated"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Off Cycle Defrost"
+    }
+  ],
+  "teknik": {
+    "akordeon": [
+      {
+        "baslik": "ORKİDE AD",
+        "sekmeler": [
+          {
+            "baslik": "TEKNİK ÇİZİMLER",
+            "gorseller": [
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-AD-FG-SL_ML-1150-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-AD-FG-SL_ML-1250-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-AD-HG-SL_ML-1150-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-AD-HG-SL_ML-1250-Model-1.webp"
+            ],
+            "tablolar": []
+          },
+          {
+            "baslik": "TEKNİK DETAYLAR",
+            "gorseller": [
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-AD-FG-SL_ML-1150-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-AD-FG-SL_ML-1250-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-AD-HG-SL_ML-1150-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-AD-HG-SL_ML-1250-Model-1.webp"
+            ],
+            "tablolar": []
+          }
+        ],
+        "tablolar": [
+          {
+            "basliklar": [
+              "UZUNLUK / LENGTH (mm)",
+              "YÜKSEKLİK / HEIGHT (mm)",
+              "SICAKLIK SINIFI / TEMPERATURE CLASS",
+              "YÜKLEME ALANI / LOADING AREA (m²)",
+              "PANEL KALINLIĞI / END THICKNESS (mm)"
+            ],
+            "satirlar": [
+              [
+                "ML (3M1)",
+                "SL (3M2)",
+                "DERİNLİK / DEPTH (mm)"
+              ],
+              [
+                "1150",
+                "1250"
+              ],
+              [
+                "937",
+                "900",
+                "-1 / +1 °C",
+                "0 / +2 °C",
+                "0,83",
+                "0,93",
+                "50"
+              ],
+              [
+                "1200"
+              ],
+              [
+                "1250",
+                "900",
+                "1,11",
+                "1,24"
+              ],
+              [
+                "1200"
+              ],
+              [
+                "1875",
+                "900",
+                "1,67",
+                "1,86"
+              ],
+              [
+                "1200"
+              ],
+              [
+                "2500",
+                "900",
+                "2,23",
+                "2,48"
+              ],
+              [
+                "1200"
+              ],
+              [
+                "2812",
+                "900",
+                "2,50",
+                "2,78"
+              ],
+              [
+                "1200"
+              ]
+            ]
+          }
+        ],
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-AD-FG-SL_ML-1150-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-AD-FG-SL_ML-1250-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-AD-HG-SL_ML-1150-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-AD-HG-SL_ML-1250-Model-1.webp"
+        ]
+      }
+    ],
+    "sekmeler": [
+      {
+        "baslik": "TEKNİK ÇİZİMLER",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-AD-FG-SL_ML-1150-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-AD-FG-SL_ML-1250-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-AD-HG-SL_ML-1150-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-AD-HG-SL_ML-1250-Model-1.webp"
+        ],
+        "tablolar": []
+      },
+      {
+        "baslik": "TEKNİK DETAYLAR",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-AD-FG-SL_ML-1150-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-AD-FG-SL_ML-1250-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-AD-HG-SL_ML-1150-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-AD-HG-SL_ML-1250-Model-1.webp"
+        ],
+        "tablolar": []
+      },
+      {
+        "baslik": "TEKNİK ÇİZİMLER",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-MC-FG-SL_ML-1150-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-MC-FG-SL_ML-1250-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-MC-HG-SL_ML-1150-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-MC-HG-SL_ML-1250-Model-1.webp"
+        ],
+        "tablolar": []
+      },
+      {
+        "baslik": "TEKNİK DETAYLAR",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-MC-FG-SL_ML-1150-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-MC-FG-SL_ML-1250-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-MC-HG-SL_ML-1150-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-MC-HG-SL_ML-1250-Model-1.webp"
+        ],
+        "tablolar": []
+      }
+    ],
+    "tablolar": [
+      {
+        "basliklar": [
+          "UZUNLUK / LENGTH (mm)",
+          "YÜKSEKLİK / HEIGHT (mm)",
+          "SICAKLIK SINIFI / TEMPERATURE CLASS",
+          "YÜKLEME ALANI / LOADING AREA (m²)",
+          "PANEL KALINLIĞI / END THICKNESS (mm)"
+        ],
+        "satirlar": [
+          [
+            "ML (3M1)",
+            "SL (3M2)",
+            "DERİNLİK / DEPTH (mm)"
+          ],
+          [
+            "1150",
+            "1250"
+          ],
+          [
+            "937",
+            "900",
+            "-1 / +1 °C",
+            "0 / +2 °C",
+            "0,83",
+            "0,93",
+            "50"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "1250",
+            "900",
+            "1,11",
+            "1,24"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "1875",
+            "900",
+            "1,67",
+            "1,86"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "2500",
+            "900",
+            "2,23",
+            "2,48"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "2812",
+            "900",
+            "2,50",
+            "2,78"
+          ],
+          [
+            "1200"
+          ]
+        ]
+      },
+      {
+        "basliklar": [
+          "UZUNLUK / LENGTH (mm)",
+          "YÜKSEKLİK / HEIGHT (mm)",
+          "SICAKLIK SINIFI / TEMPERATURE CLASS",
+          "YÜKLEME ALANI / LOADING AREA (m²)",
+          "PANEL KALINLIĞI / END THICKNESS (mm)"
+        ],
+        "satirlar": [
+          [
+            "ML (3M1)",
+            "SL (3M2)",
+            "DERİNLİK / DEPTH (mm)"
+          ],
+          [
+            "1150",
+            "1250"
+          ],
+          [
+            "937",
+            "900",
+            "-1 / +1 °C",
+            "0 / +2 °C",
+            "0,83",
+            "0,93",
+            "50"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "1250",
+            "900",
+            "1,11",
+            "1,24"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "1875",
+            "900",
+            "1,67",
+            "1,86"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "2500",
+            "900",
+            "2,23",
+            "2,48"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "2812",
+            "900",
+            "2,50",
+            "2,78"
+          ],
+          [
+            "1200"
+          ]
+        ]
+      }
+    ]
+  },
+  "gorseller": {
+    "tum": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Orkide.webp",
+        "dosya": "gorseller/orkide/Orkide.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/meat.webp",
+        "dosya": "gorseller/orkide/meat.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Orkide-1.webp",
+        "dosya": "gorseller/orkide/Orkide-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-self-servis-1.webp",
+        "dosya": "gorseller/orkide/ORKIDE-self-servis-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-self-servis-2.webp",
+        "dosya": "gorseller/orkide/ORKIDE-self-servis-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Orkide.pdf",
+        "dosya": "gorseller/orkide/Orkide.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-AD-FG-SL_ML-1150-Model-1.webp",
+        "dosya": "gorseller/orkide/ORKIDE-AD-FG-SL_ML-1150-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-AD-FG-SL_ML-1250-Model-1.webp",
+        "dosya": "gorseller/orkide/ORKIDE-AD-FG-SL_ML-1250-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-AD-HG-SL_ML-1150-Model-1.webp",
+        "dosya": "gorseller/orkide/ORKIDE-AD-HG-SL_ML-1150-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-AD-HG-SL_ML-1250-Model-1.webp",
+        "dosya": "gorseller/orkide/ORKIDE-AD-HG-SL_ML-1250-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-MC-FG-SL_ML-1150-Model-1.webp",
+        "dosya": "gorseller/orkide/ORKIDE-MC-FG-SL_ML-1150-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-MC-FG-SL_ML-1250-Model-1.webp",
+        "dosya": "gorseller/orkide/ORKIDE-MC-FG-SL_ML-1250-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-MC-HG-SL_ML-1150-Model-1.webp",
+        "dosya": "gorseller/orkide/ORKIDE-MC-HG-SL_ML-1150-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-MC-HG-SL_ML-1250-Model-1.webp",
+        "dosya": "gorseller/orkide/ORKIDE-MC-HG-SL_ML-1250-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/circle-bg.webp",
+        "dosya": "gorseller/orkide/circle-bg.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/meat-2.webp",
+        "dosya": "gorseller/orkide/meat-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Scale-Equipment.webp",
+        "dosya": "gorseller/orkide/Sardunya-Scale-Equipment.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Bag-Storage.webp",
+        "dosya": "gorseller/orkide/Sardunya-Bag-Storage.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Polyamide-Cuting-Pan.webp",
+        "dosya": "gorseller/orkide/Sardunya-Polyamide-Cuting-Pan.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Basket-Bar.webp",
+        "dosya": "gorseller/orkide/Sardunya-Basket-Bar.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Plexi-Glass-Sliding.webp",
+        "dosya": "gorseller/orkide/Sardunya-Plexi-Glass-Sliding.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Glass-Product-Divider.webp",
+        "dosya": "gorseller/orkide/Sardunya-Glass-Product-Divider.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Tiered-Pan.webp",
+        "dosya": "gorseller/orkide/Sardunya-Tiered-Pan.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Module-Divider.webp",
+        "dosya": "gorseller/orkide/Sardunya-Module-Divider.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Meat-Light.webp",
+        "dosya": "gorseller/orkide/Sardunya-Meat-Light.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/orkide/pdf-icon.webp"
+      }
+    ],
+    "urun": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Orkide.webp",
+        "dosya": "gorseller/orkide/Orkide.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/meat.webp",
+        "dosya": "gorseller/orkide/meat.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Orkide-1.webp",
+        "dosya": "gorseller/orkide/Orkide-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-self-servis-1.webp",
+        "dosya": "gorseller/orkide/ORKIDE-self-servis-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-self-servis-2.webp",
+        "dosya": "gorseller/orkide/ORKIDE-self-servis-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Orkide.pdf",
+        "dosya": "gorseller/orkide/Orkide.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-AD-HG-SL_ML-1150-Model-1.webp",
+        "dosya": "gorseller/orkide/ORKIDE-AD-HG-SL_ML-1150-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-AD-HG-SL_ML-1250-Model-1.webp",
+        "dosya": "gorseller/orkide/ORKIDE-AD-HG-SL_ML-1250-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-MC-HG-SL_ML-1150-Model-1.webp",
+        "dosya": "gorseller/orkide/ORKIDE-MC-HG-SL_ML-1150-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-MC-HG-SL_ML-1250-Model-1.webp",
+        "dosya": "gorseller/orkide/ORKIDE-MC-HG-SL_ML-1250-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/circle-bg.webp",
+        "dosya": "gorseller/orkide/circle-bg.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/meat-2.webp",
+        "dosya": "gorseller/orkide/meat-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Scale-Equipment.webp",
+        "dosya": "gorseller/orkide/Sardunya-Scale-Equipment.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Bag-Storage.webp",
+        "dosya": "gorseller/orkide/Sardunya-Bag-Storage.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Polyamide-Cuting-Pan.webp",
+        "dosya": "gorseller/orkide/Sardunya-Polyamide-Cuting-Pan.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Basket-Bar.webp",
+        "dosya": "gorseller/orkide/Sardunya-Basket-Bar.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Plexi-Glass-Sliding.webp",
+        "dosya": "gorseller/orkide/Sardunya-Plexi-Glass-Sliding.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Glass-Product-Divider.webp",
+        "dosya": "gorseller/orkide/Sardunya-Glass-Product-Divider.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Tiered-Pan.webp",
+        "dosya": "gorseller/orkide/Sardunya-Tiered-Pan.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Module-Divider.webp",
+        "dosya": "gorseller/orkide/Sardunya-Module-Divider.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Meat-Light.webp",
+        "dosya": "gorseller/orkide/Sardunya-Meat-Light.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/orkide/pdf-icon.webp"
+      }
+    ],
+    "teknikCizim": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-AD-FG-SL_ML-1150-Model-1.webp",
+        "dosya": "gorseller/orkide/ORKIDE-AD-FG-SL_ML-1150-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-AD-FG-SL_ML-1250-Model-1.webp",
+        "dosya": "gorseller/orkide/ORKIDE-AD-FG-SL_ML-1250-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-MC-FG-SL_ML-1150-Model-1.webp",
+        "dosya": "gorseller/orkide/ORKIDE-MC-FG-SL_ML-1150-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ORKIDE-MC-FG-SL_ML-1250-Model-1.webp",
+        "dosya": "gorseller/orkide/ORKIDE-MC-FG-SL_ML-1250-Model-1.webp"
+      }
+    ]
+  }
+}

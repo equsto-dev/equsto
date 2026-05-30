@@ -3602,16 +3602,22 @@ body.eq-shop .main .products {
     box-shadow 0.35s ease;
 }
 
-.eq-dept-plp-card__img:hover.eq-plp-ambient-ready,
-.eq-dept-plp-card__img.eq-plp-ambient-ready {
+/* Renk yalnızca :hover — eq-plp-ambient-ready / -active kullanılmaz */
+.eq-dept-plp-card__img:hover {
   background: radial-gradient(
-    ellipse 118% 108% at 50% 42%,
-    var(--eq-plp-ambient-glow, rgba(118, 132, 168, 0.38)) 0%,
-    var(--eq-plp-ambient-mid, rgba(118, 132, 168, 0.2)) 46%,
-    var(--eq-plp-ambient-base, #f5f6f8) 100%
+    ellipse 140% 120% at 50% 38%,
+    var(--eq-plp-ambient-glow, rgba(118, 132, 168, 0.55)) 0%,
+    var(--eq-plp-ambient-mid, rgba(118, 132, 168, 0.34)) 38%,
+    var(--eq-plp-ambient-base, #f0f2f6) 100%
   ) !important;
-  border-color: var(--eq-plp-ambient-border, #eee) !important;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+  border-color: var(--eq-plp-ambient-border, rgba(118, 132, 168, 0.45)) !important;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.35),
+    0 8px 26px rgba(0, 0, 0, 0.08);
+}
+
+.eq-dept-plp-card__img:hover img {
+  transform: scale(1.02);
 }
 
 /* Kategori sayfaları: üstteki alt-kategori şeridini (chip bar) kapat */

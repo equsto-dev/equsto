@@ -1,0 +1,9 @@
+{
+  "terminal.integrated.cwd": "C:\\D Disk\\EQUSTO-WORK\\E-TICARET\\site",
+  "files.exclude": {
+    "**/__pycache__": true
+  },
+  "search.exclude": {
+    "**/kaynaklar/**/node_modules": true
+  }
+}

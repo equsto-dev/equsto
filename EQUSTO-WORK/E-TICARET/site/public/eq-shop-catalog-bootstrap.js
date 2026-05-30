@@ -6,7 +6,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260525olculercm";
+  var CATALOG_V = "20260528caglayan-pdp-fix";
   var __fullMem = null;
   var __fullInflight = null;
   var __deptMem = Object.create(null);
@@ -27,11 +27,29 @@
     "istif",
     "set-ustu-mutfak",
     "market-reyon",
+    "kuvetler",
   ];
+
+  function mergeCatalogRows(parts) {
+    var seen = Object.create(null);
+    var out = [];
+    (parts || []).forEach(function (arr) {
+      (arr || []).forEach(function (row) {
+        if (!row) return;
+        var key = String(row.id || row.sku || row.model || row.name || "").trim();
+        if (!key) return;
+        if (seen[key]) return;
+        seen[key] = 1;
+        out.push(row);
+      });
+    });
+    return out;
+  }
 
   function urlDeptToCatalogDept(seg) {
     var d = String(seg || "").trim();
     if (d === "market-reyonlari") return "market-reyon";
+    if (d === "kuvetler") return "set-ustu-mutfak";
     return d;
   }
 
@@ -130,8 +148,22 @@
     return loadFullCatalog();
   }
 
+  /** Marka PLP — ekipmanlar + tüm departman JSON birleşimi */
+  function loadMergedCatalog() {
+    var jobs = [loadFullCatalog()];
+    DEPT_IDS.forEach(function (d) {
+      jobs.push(
+        fetchDeptJson(d).catch(function () {
+          return [];
+        })
+      );
+    });
+    return Promise.all(jobs).then(mergeCatalogRows);
+  }
+
   window.EqustoShopCatalog = {
     load: load,
+    loadMergedCatalog: loadMergedCatalog,
     loadForProductPage: loadForProductPage,
     loadDept: fetchDeptJson,
     catalogVersion: CATALOG_V,

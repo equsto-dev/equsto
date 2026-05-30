@@ -1,0 +1,149 @@
+{
+  "slug": "yasemin-nt",
+  "baslik": "YASEMİN NT",
+  "tip": "model",
+  "ustSeriSlug": null,
+  "kategoriler": [
+    "cake-and-cookie-cabinets"
+  ],
+  "kapak": "https:\\/\\/caglayanrefrigeration.com\\/wp-content\\/uploads\\/2026\\/02\\/Yasemin-NT-Kapak-Caglayan-Refrigeration.webp",
+  "kapakYol": "gorseller/yasemin-nt/Yasemin-NT-Kapak-Caglayan-Refrigeration.webp",
+  "linkKaynak": "https://caglayanrefrigeration.com/tr/product/yasemin-nt/",
+  "cocuklar": [],
+  "ozellikler": [
+    {
+      "baslik": "",
+      "aciklama": "Pastries"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Cakes"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Cookies"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Drinks"
+    },
+    {
+      "baslik": "",
+      "aciklama": "High Efficiency Fans"
+    },
+    {
+      "baslik": "",
+      "aciklama": "LED Lighting"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Ventilated"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Remote Condensing Unit"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Off Cycle Defrost"
+    }
+  ],
+  "teknik": {
+    "akordeon": [],
+    "sekmeler": [],
+    "tablolar": [
+      {
+        "basliklar": [
+          "UZUNLUK / LENGTH (mm)",
+          "YÜKSEKLİK / HEIGHT (mm)",
+          "SICAKLIK SINIFI / TEMPERATURE CLASS",
+          "YÜKLEME ALANI / LOADING AREA (m²)",
+          "PANEL KALINLIĞI / END THICKNESS (mm)"
+        ],
+        "satirlar": [
+          [
+            "DERİNLİK / DEPTH (mm)"
+          ],
+          [
+            "725"
+          ],
+          [
+            "1000",
+            "1320",
+            "Neutral",
+            "1,33",
+            "25"
+          ],
+          [
+            "1300",
+            "1,73"
+          ],
+          [
+            "1600",
+            "2,13"
+          ],
+          [
+            "2000",
+            "2,66"
+          ]
+        ]
+      }
+    ]
+  },
+  "gorseller": {
+    "tum": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Yasemin-NT-01-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/yasemin-nt/Yasemin-NT-01-Caglayan-Refrigeration.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/macaron.webp",
+        "dosya": "gorseller/yasemin-nt/macaron.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Yasemin.pdf",
+        "dosya": "gorseller/yasemin-nt/Yasemin.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Yasemin-NT-Kesit-01-Caglayan-Refrigeration-e1771581708944.webp",
+        "dosya": "gorseller/yasemin-nt/Yasemin-NT-Kesit-01-Caglayan-Refrigeration-e1771581708944.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/cookie.webp",
+        "dosya": "gorseller/yasemin-nt/cookie.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/yasemin-nt/pdf-icon.webp"
+      }
+    ],
+    "urun": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Yasemin-NT-01-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/yasemin-nt/Yasemin-NT-01-Caglayan-Refrigeration.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/macaron.webp",
+        "dosya": "gorseller/yasemin-nt/macaron.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Yasemin.pdf",
+        "dosya": "gorseller/yasemin-nt/Yasemin.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/cookie.webp",
+        "dosya": "gorseller/yasemin-nt/cookie.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/yasemin-nt/pdf-icon.webp"
+      }
+    ],
+    "teknikCizim": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Yasemin-NT-Kesit-01-Caglayan-Refrigeration-e1771581708944.webp",
+        "dosya": "gorseller/yasemin-nt/Yasemin-NT-Kesit-01-Caglayan-Refrigeration-e1771581708944.webp"
+      }
+    ]
+  }
+}

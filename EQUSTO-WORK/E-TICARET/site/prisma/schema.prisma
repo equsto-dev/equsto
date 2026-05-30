@@ -1,6 +1,5 @@
 generator client {
   provider   = "prisma-client-js"
-  output     = "./generated/client"
   /// DLL’i node_modules\.prisma\client altına kopyalamaz (Windows EPERM)
   engineType = "library"
 }

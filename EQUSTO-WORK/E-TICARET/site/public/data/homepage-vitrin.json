@@ -1135,7 +1135,7 @@
     {
       "title": "Öztiryakiler",
       "subtitle": "Soğutma ve pişirme · 9 taksit · ücretsiz kargo",
-      "href": "/marka.html?b=%C3%96ztiryakiler+End%C3%BCstriyel+Mutfak",
+      "href": "/shop/marka/oztiryakiler",
       "image": "/images/catalog/ozti/p200/ozti-9805-im240x-nhc.jpg",
       "gradient": "",
       "thumb": "/images/catalog/ozti/p200/ozti-9805-im240x-nhc.jpg",
@@ -1179,7 +1179,7 @@
       "emoji": "📋",
       "bg": "#dce8f4",
       "frame": "#9eb8d4",
-      "image": "/images/pfos/dis-mutfak-gece-render.jpg?v=20260527c",
+      "image": "/images/pfos/dis-mutfak-gece-render.jpg?v=20260528a",
       "aktif": true,
       "sort": 1
     },

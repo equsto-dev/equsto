@@ -55,6 +55,7 @@
     'Winterhalter',
     'Hobart',
     'Hoshizaki',
+    'HOSHIZAKI',
     'Unox',
     'WMF',
     'Nuova Simonelli',
@@ -71,6 +72,42 @@
     'İnoksan',
     'Inoksan',
     'Zanussi',
+    'SIMAG',
+    'Simag',
+    'Vitrifrigo',
+    'VITRIFRIGO',
+    'Berkel',
+    'BERKEL',
+    'Dualit',
+    'DUALIT',
+    'MenuMaster',
+    'MENUMaster',
+    'Imperia',
+    'IMPERIA',
+    'Hamilton Beach',
+    'HAMILTON BEACH',
+    'Swedlinghaus',
+    'Vesta',
+    'Bartscher',
+    'Copmak',
+    'COPMAK',
+    'Blanco',
+    'BLANCO',
+    'Alkan',
+    'ALKAN',
+    'Tribeca',
+    'TRIBECA',
+    'Fantom',
+    'FANTOM',
+    'PlateMate',
+    'PLATEMATE',
+    'OKY',
+    'AMX',
+    'OEK',
+    'GIA',
+    'Lava',
+    'LAVA',
+    'OBA',
   ];
   /** Katalog / fiyat listesi yazımı → filtre etiketi */
   var OEM_LABEL_CANON = {
@@ -82,7 +119,34 @@
     ateşe: 'Ateşe',
     atese: 'Ateşe',
     ats: 'Ateşe',
+    simag: 'SIMAG',
+    hoshizaki: 'Hoshizaki',
+    vitrifrigo: 'Vitrifrigo',
+    berkel: 'Berkel',
+    dualit: 'Dualit',
+    menumaster: 'MenuMaster',
+    imperia: 'Imperia',
+    'hamilton beach': 'Hamilton Beach',
+    swedlinghaus: 'Swedlinghaus',
+    vesta: 'Vesta',
+    bartscher: 'Bartscher',
+    copmak: 'Copmak',
+    blanco: 'Blanco',
+    alkan: 'Alkan',
+    tribeca: 'Tribeca',
+    fantom: 'Fantom',
+    platemate: 'PlateMate',
+    oky: 'OKY',
+    amx: 'AMX',
+    oek: 'OEK',
+    gia: 'GIA',
+    lava: 'Lava',
+    oba: 'OBA',
+    fac: 'FAC',
+    santos: 'SANTOS',
   };
+  /** Kısa önekler yalnızca ad başında; uzun markalar ad içinde de aranır. */
+  var OEM_WORD_BOUNDARY_MIN = 4;
   var oemPrefixCache = null;
 
   function normalizeOemLabel(prefix) {
@@ -121,11 +185,25 @@
     var bl = lc(b);
     if (bl.indexOf('atalay') === 0) return 'Atalay';
     if (bl.indexOf('oztiryakiler') === 0 || bl.indexOf('öztiryakiler') === 0) return 'Öztiryakiler';
+    if (bl.indexOf('proso') === 0) return 'Proso';
+    if (bl.indexOf('caglayan') === 0 || bl.indexOf('çağlayan') === 0) return 'Çağlayan';
     return b;
   }
 
   function facetBrandKey(brand) {
     return canonicalFacetBrand(brand) || String(brand || '').trim();
+  }
+
+  /** Tek marka seçiliyken kategori etiketinden marka önekini düşür (ör. «Proso Sütlükler» → «Sütlükler»). */
+  function facetTileDisplayLabel(label, state) {
+    var text = String(label || '').trim();
+    var brands = state && state.brands ? state.brands : [];
+    if (brands.length !== 1 || !text) return text;
+    var b = facetBrandKey(brands[0]);
+    if (!b) return text;
+    var re = new RegExp('^' + b.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\s+', 'i');
+    var out = text.replace(re, '').trim();
+    return out || text;
   }
 
   function stripOztiLeadName(name) {
@@ -137,21 +215,51 @@
     return n;
   }
 
-  function resolveFacetBrand(brand, name) {
+  function oemWordRe(prefix) {
+    var pu = String(prefix || '').trim();
+    if (!pu) return null;
+    var esc = pu.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return new RegExp('(^|\\s)' + esc + '(\\s|$|[./,-])', 'i');
+  }
+
+  function prefixMatchesOemName(prefix, nl, nu) {
+    var pl = lc(prefix);
+    if (!pl) return false;
+    if (nl.indexOf(pl) === 0) return true;
+    if (pl.length >= OEM_WORD_BOUNDARY_MIN || pl.indexOf(' ') >= 0) {
+      var re = oemWordRe(prefix);
+      return !!(re && re.test(nu));
+    }
+    return false;
+  }
+
+  function findOemBrandInName(name) {
+    var n = String(name || '').trim();
+    if (!n) return '';
+    var scan = stripOztiLeadName(n);
+    var namesToTry = scan === n ? [n] : [scan, n];
+    var prefixes = oemNamePrefixes();
+    for (var ni = 0; ni < namesToTry.length; ni++) {
+      var nl = lc(namesToTry[ni]);
+      var nu = namesToTry[ni].toLocaleUpperCase('tr');
+      if (/\bRATIONAL\b/.test(nu)) return 'Rational';
+      for (var pi = 0; pi < prefixes.length; pi++) {
+        var p = prefixes[pi];
+        if (prefixMatchesOemName(p, nl, nu)) return normalizeOemLabel(p);
+      }
+    }
+    return '';
+  }
+
+  function resolveFacetBrand(brand, name, sku) {
     var raw = String(brand || '').trim();
     if (!raw) return '';
     var n = String(name || '').trim();
-    if (OEM_RESELLER.test(lc(raw)) && n) {
-      var scan = stripOztiLeadName(n);
-      var namesToTry = scan === n ? [n] : [scan, n];
-      var prefixes = oemNamePrefixes();
-      for (var ni = 0; ni < namesToTry.length; ni++) {
-        var nl = lc(namesToTry[ni]);
-        for (var pi = 0; pi < prefixes.length; pi++) {
-          var p = prefixes[pi];
-          if (nl.indexOf(lc(p)) === 0) return normalizeOemLabel(p);
-        }
-      }
+    var kod = String(sku || '').trim();
+    if (OEM_RESELLER.test(lc(raw)) && (n || kod)) {
+      if (/^9890\.|^5RRX\./i.test(kod)) return 'Rational';
+      var oem = findOemBrandInName(n);
+      if (oem) return facetBrandKey(oem);
     }
     return facetBrandKey(raw);
   }
@@ -160,7 +268,8 @@
     if (!u) return '';
     var fb = String((u.fb || '')).trim();
     if (fb) return facetBrandKey(fb);
-    return facetBrandKey(resolveFacetBrand(u.b, u.n));
+    var sku = u.raw && (u.raw.sku || u.raw.urun_kodu || u.raw.model);
+    return facetBrandKey(resolveFacetBrand(u.b, u.n, sku));
   }
 
   function matchEnergy(u, energyId) {
@@ -292,7 +401,7 @@
           '"' +
           checked +
           '><span>' +
-          esc(row.tile.label) +
+          esc(facetTileDisplayLabel(row.tile.label, state)) +
           '</span><span class="eq-cm-facet__count">(' +
           row.count +
           ')</span></label></li>';
@@ -485,7 +594,7 @@
       var label = tid;
       for (var i = 0; i < tiles.length; i++) {
         if (tiles[i].id === tid) {
-          label = tiles[i].label;
+          label = facetTileDisplayLabel(tiles[i].label, state);
           break;
         }
       }
@@ -548,6 +657,7 @@
     parsePriceNum: parsePriceNum,
     resolveFacetBrand: resolveFacetBrand,
     facetBrandKey: facetBrandKey,
+    facetTileDisplayLabel: facetTileDisplayLabel,
     canonicalFacetBrand: canonicalFacetBrand,
     productBrand: productBrand,
   };

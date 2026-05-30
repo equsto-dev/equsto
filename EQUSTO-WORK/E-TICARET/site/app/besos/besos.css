@@ -20,48 +20,8 @@ body.bd-page.besos {
   background: #000 !important;
 }
 
-body.bd-page.besos header.hdr {
-  background: #000 !important;
-  border-bottom-color: rgba(255, 255, 255, 0.12) !important;
-  color: #fff;
-  position: relative;
-  z-index: 200;
-}
-
-body.bd-page.besos nav.topnav,
-body.bd-page.besos .topnav {
-  background: #000 !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
-  position: relative;
-  z-index: 200;
-}
-
-body.bd-page.besos header.hdr .pg-inner,
-body.bd-page.besos header.hdr .hdr-pg-inner {
-  background: transparent !important;
-}
-
-body.bd-page.besos header.hdr .srch {
-  --eq-hdr-bar-bg: #000;
-  max-width: min(380px, 38vw);
-  flex: 1 1 200px;
-}
-
-body.bd-page.besos .topnav-item {
-  color: #fff !important;
-  cursor: pointer;
-}
-
-body.bd-page.besos .srch-cat {
-  cursor: pointer;
-}
-
-body.bd-page.besos .topnav-item.active {
-  box-shadow: inset 0 -2px 0 0 var(--bes-gold, #c8a44a) !important;
-}
-
 body.bd-page.besos .bd-vitrum-jump {
-  top: 90px;
+  top: var(--bes-chrome-h, 108px);
 }
 
 .besos-page {
@@ -147,6 +107,18 @@ body.bd-page.besos .bd-vitrum-jump {
 .bd-hero-video {
   position: absolute;
   inset: 0;
+}
+.bd-hero-yt-iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  max-width: 100%;
+  max-height: 100%;
+  border: 0;
+  object-fit: cover;
 }
 .bd-hero-overlay {
   position: absolute;
@@ -1571,22 +1543,17 @@ body.bd-page.besos.eq-shop footer.footer.eq-mfoot {
   color: rgba(255, 255, 255, 0.88);
   background: #000;
 }
-body.bd-page.besos.eq-shop .eq-mfoot-back {
-  display: block;
-  width: 100%;
-  border: none;
-  padding: 14px 16px;
-  font: inherit;
-  font-size: 13px;
-  font-weight: 500;
-  color: #fff;
-  text-align: center;
-  cursor: pointer;
-  background: #0a0a0a;
-  border-top: 1px solid var(--bes-rule);
-}
-body.bd-page.besos.eq-shop .eq-mfoot-back:hover {
-  background: #141414;
+body.bd-page.besos.eq-shop .eq-mfoot-back,
+body.bd-page.besos.eq-shop #eq-mfoot-back,
+body.bd-page.besos.eq-shop .eq-mfoot-top,
+body.bd-page.besos.eq-shop #eq-mfoot-top,
+body.bd-page.besos.eq-shop a.eq-mfoot-top,
+body.bd-page.besos.eq-shop [data-eq-mfoot-top],
+body.bd-page.besos.eq-shop footer.footer.eq-mfoot .eq-mfoot-brand > button,
+body.bd-page.besos.eq-shop footer.footer.eq-mfoot .eq-mfoot-main > button {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
 body.bd-page.besos.eq-shop .eq-mfoot-main,
 body.bd-page.besos.eq-shop .eq-mfoot-legal {
@@ -1594,7 +1561,7 @@ body.bd-page.besos.eq-shop .eq-mfoot-legal {
 }
 body.bd-page.besos.eq-shop .eq-mfoot-main {
   border-top: 1px solid var(--bes-rule);
-  padding: 36px 20px 28px;
+  padding: 12px 16px 8px;
 }
 body.bd-page.besos.eq-shop .eq-mfoot-inner {
   max-width: 1500px;
@@ -1603,8 +1570,8 @@ body.bd-page.besos.eq-shop .eq-mfoot-inner {
 body.bd-page.besos.eq-shop .eq-mfoot-cols {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 28px 24px;
-  margin-bottom: 28px;
+  gap: 20px 20px;
+  margin-bottom: 8px;
 }
 body.bd-page.besos.eq-shop .eq-mfoot-col h3 {
   margin: 0 0 12px;
@@ -1631,14 +1598,25 @@ body.bd-page.besos.eq-shop .eq-mfoot-col a:hover {
   text-decoration: underline;
 }
 body.bd-page.besos.eq-shop .eq-mfoot-brand {
-  display: flex;
-  flex-wrap: wrap;
+  display: flex !important;
+  flex-direction: column !important;
+  flex-wrap: nowrap !important;
   align-items: center;
-  justify-content: center;
-  gap: 16px 24px;
-  margin-bottom: 18px;
-  padding-top: 8px;
+  gap: 2px;
+  margin-bottom: 4px;
+  padding-top: 4px;
   border-top: 1px solid var(--bes-rule);
+}
+body.bd-page.besos.eq-shop .eq-mfoot-powered {
+  display: block !important;
+  margin: 0;
+  text-align: center;
+  font-size: calc(10px * 1.4);
+  color: rgba(255, 255, 255, 0.45);
+}
+body.bd-page.besos.eq-shop .eq-mfoot-vitrum-name {
+  color: #c5a046;
+  font-weight: 600;
 }
 body.bd-page.besos.eq-shop .eq-mfoot-logo {
   display: inline-flex;
@@ -1670,7 +1648,7 @@ body.bd-page.besos.eq-shop .eq-mfoot-partners {
 }
 body.bd-page.besos.eq-shop .eq-mfoot-legal {
   border-top: 1px solid var(--bes-rule);
-  padding: 18px 20px 22px;
+  padding: 10px 16px 12px;
 }
 body.bd-page.besos.eq-shop .eq-mfoot-legal-inner {
   max-width: 1500px;
@@ -1716,6 +1694,6 @@ body.bd-page.besos.eq-shop .eq-mfoot-copy {
     gap: 20px;
   }
   body.bd-page.besos.eq-shop .eq-mfoot-main {
-    padding: 28px 16px 22px;
+    padding: 10px 12px 8px;
   }
 }

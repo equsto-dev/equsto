@@ -1,0 +1,1051 @@
+{
+  "source": "https://prosogutma.com",
+  "fetchedAt": "2026-05-28T23:39:56.683Z",
+  "count": 50,
+  "wpReportedTotal": 143,
+  "wpTotalPages": 3,
+  "categories": {
+    "15": {
+      "slug": "ada-tipi-dondurucular",
+      "name": "Ada Tipi Dondurucular",
+      "parent": 0,
+      "count": 4
+    },
+    "74": {
+      "slug": "sutlukler",
+      "name": "Sütlükler",
+      "parent": 0,
+      "count": 13
+    },
+    "75": {
+      "slug": "kisa-sutlukler",
+      "name": "Kısa Sütlükler",
+      "parent": 0,
+      "count": 2
+    },
+    "76": {
+      "slug": "sarkuteri-reyonlari",
+      "name": "Şarküteri Reyonları",
+      "parent": 0,
+      "count": 9
+    },
+    "78": {
+      "slug": "dikey-dondurucular",
+      "name": "Dikey Dondurucular",
+      "parent": 0,
+      "count": 4
+    },
+    "79": {
+      "slug": "sogutma-sistemleri",
+      "name": "Soğutma Sistemleri",
+      "parent": 0,
+      "count": 3
+    },
+    "80": {
+      "slug": "plug-in-kabinler",
+      "name": "Plug-in Kabinler",
+      "parent": 0,
+      "count": 18
+    },
+    "81": {
+      "slug": "butik",
+      "name": "Butik",
+      "parent": 0,
+      "count": 18
+    },
+    "83": {
+      "slug": "soguk-hava-depolari",
+      "name": "Soğuk Hava Depoları",
+      "parent": 0,
+      "count": 1
+    },
+    "129": {
+      "slug": "sise-sogutucular",
+      "name": "Şişe Soğutucular",
+      "parent": 0,
+      "count": 1
+    },
+    "142": {
+      "slug": "island-freezers",
+      "name": "Island Freezers",
+      "parent": 0,
+      "count": 4
+    },
+    "144": {
+      "slug": "mutlidecks",
+      "name": "Mutlidecks",
+      "parent": 0,
+      "count": 14
+    },
+    "146": {
+      "slug": "semi-verticals",
+      "name": "Semi-Verticals",
+      "parent": 0,
+      "count": 2
+    },
+    "148": {
+      "slug": "serve-over-counters",
+      "name": "Serve Over Counters",
+      "parent": 0,
+      "count": 9
+    },
+    "150": {
+      "slug": "upright-freezers",
+      "name": "Upright Freezers",
+      "parent": 0,
+      "count": 2
+    },
+    "152": {
+      "slug": "plug-in-cabinets",
+      "name": "Plug-in Cabinets",
+      "parent": 0,
+      "count": 15
+    },
+    "154": {
+      "slug": "boutique",
+      "name": "Boutique",
+      "parent": 0,
+      "count": 18
+    },
+    "156": {
+      "slug": "cooling-systems",
+      "name": "Cooling Systems",
+      "parent": 0,
+      "count": 3
+    },
+    "158": {
+      "slug": "cold-rooms",
+      "name": "Cold Rooms",
+      "parent": 0,
+      "count": 1
+    },
+    "160": {
+      "slug": "bottle-coolers",
+      "name": "Bottle Coolers",
+      "parent": 0,
+      "count": 0
+    },
+    "177": {
+      "slug": "sogutma-sistemleri-en",
+      "name": "Soğutma Sistemleri",
+      "parent": 0,
+      "count": 3
+    },
+    "179": {
+      "slug": "soguk-hava-depolari-en",
+      "name": "Soğuk Hava Depoları",
+      "parent": 0,
+      "count": 0
+    },
+    "181": {
+      "slug": "butik-en",
+      "name": "Butik",
+      "parent": 0,
+      "count": 0
+    },
+    "183": {
+      "slug": "plug-in-kabinler-en",
+      "name": "Plug-in Kabinler",
+      "parent": 0,
+      "count": 1
+    },
+    "185": {
+      "slug": "sutlukler-en",
+      "name": "Sütlükler",
+      "parent": 0,
+      "count": 0
+    },
+    "187": {
+      "slug": "island-freezers",
+      "name": "Island Freezers",
+      "parent": 0,
+      "count": 0
+    },
+    "189": {
+      "slug": "dikey-dondurucular-en",
+      "name": "Dikey Dondurucular",
+      "parent": 0,
+      "count": 0
+    },
+    "191": {
+      "slug": "sarkuteri-reyonlari-en",
+      "name": "Şarküteri Reyonları",
+      "parent": 0,
+      "count": 0
+    },
+    "193": {
+      "slug": "sise-sogutucular-en",
+      "name": "Şişe Soğutucular",
+      "parent": 0,
+      "count": 0
+    },
+    "195": {
+      "slug": "kisa-sutlukler-en",
+      "name": "Kısa Sütlükler",
+      "parent": 0,
+      "count": 0
+    },
+    "219": {
+      "slug": "genel",
+      "name": "Genel",
+      "parent": 0,
+      "count": 1
+    }
+  },
+  "brands": {},
+  "products": [
+    {
+      "id": 10919,
+      "slug": "scorpion-max-2",
+      "link": "https://prosogutma.com/en/urun/scorpion-max-2/",
+      "lang": "en",
+      "title": "Scorpion MAX",
+      "excerpt": "[html_block id=\"10673\"]\n",
+      "content": "",
+      "product_cat": [
+        219
+      ],
+      "product_brand": [],
+      "featured_media": 10676,
+      "date": "2023-02-17T15:14:56",
+      "modified": "2023-02-17T15:15:16",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2023/02/ScorpionMax-700x700.jpg"
+    },
+    {
+      "id": 10917,
+      "slug": "tiger-wfg-2",
+      "link": "https://prosogutma.com/en/urun/tiger-wfg-2/",
+      "lang": "en",
+      "title": "Tiger WFG",
+      "excerpt": "<p><strong>[html_block id=\"8858\"]</strong></p>\n",
+      "content": "",
+      "product_cat": [
+        148
+      ],
+      "product_brand": [],
+      "featured_media": 10887,
+      "date": "2023-02-17T15:12:48",
+      "modified": "2023-02-17T15:13:56",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2023/02/tigerwfgon-700x700.png"
+    },
+    {
+      "id": 10905,
+      "slug": "lion-pgd-2",
+      "link": "https://prosogutma.com/en/urun/lion-pgd-2/",
+      "lang": "en",
+      "title": "Lion PGD",
+      "excerpt": "<p><strong>[html_block id=\"10233\"]</strong></p>\n",
+      "content": "",
+      "product_cat": [
+        144
+      ],
+      "product_brand": [],
+      "featured_media": 10553,
+      "date": "2023-02-17T11:54:57",
+      "modified": "2023-02-17T12:00:58",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2023/02/LionPGD-700x700.jpg"
+    },
+    {
+      "id": 10904,
+      "slug": "lion-lgd-2",
+      "link": "https://prosogutma.com/en/urun/lion-lgd-2/",
+      "lang": "en",
+      "title": "Lion LGD",
+      "excerpt": "<p><strong>[html_block id=\"10563\"]</strong></p>\n",
+      "content": "",
+      "product_cat": [
+        144
+      ],
+      "product_brand": [],
+      "featured_media": 10565,
+      "date": "2023-02-17T11:54:51",
+      "modified": "2023-02-17T12:01:07",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2023/02/LionLGD-700x700.jpg"
+    },
+    {
+      "id": 10903,
+      "slug": "lion-tgd-2",
+      "link": "https://prosogutma.com/en/urun/lion-tgd-2/",
+      "lang": "en",
+      "title": "Lion TGD",
+      "excerpt": "<p><strong>[html_block id=\"10573\"]</strong></p>\n",
+      "content": "",
+      "product_cat": [
+        144
+      ],
+      "product_brand": [],
+      "featured_media": 10572,
+      "date": "2023-02-17T11:54:47",
+      "modified": "2023-02-17T12:01:16",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2023/02/LionTGD-700x700.jpg"
+    },
+    {
+      "id": 10902,
+      "slug": "lion-max-2",
+      "link": "https://prosogutma.com/en/urun/lion-max-2/",
+      "lang": "en",
+      "title": "Lion MAX",
+      "excerpt": "<p><strong>[html_block id=\"10581\"]</strong></p>\n",
+      "content": "",
+      "product_cat": [
+        144
+      ],
+      "product_brand": [],
+      "featured_media": 10580,
+      "date": "2023-02-17T11:54:42",
+      "modified": "2023-02-17T12:01:26",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2023/02/LionMAX-700x700.jpg"
+    },
+    {
+      "id": 10901,
+      "slug": "lion-retrobanco-dgd-2",
+      "link": "https://prosogutma.com/en/urun/lion-retrobanco-dgd-2/",
+      "lang": "en",
+      "title": "Lion Retrobanco DGD",
+      "excerpt": "[html_block id=\"10595\"]\n",
+      "content": "",
+      "product_cat": [
+        144
+      ],
+      "product_brand": [],
+      "featured_media": 10594,
+      "date": "2023-02-17T11:54:38",
+      "modified": "2023-02-17T12:01:35",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2023/02/LionRETRODGD-700x700.jpg"
+    },
+    {
+      "id": 10890,
+      "slug": "octopus-sld",
+      "link": "https://prosogutma.com/urun/octopus-sld/",
+      "lang": "tr",
+      "title": "Octopus SLD",
+      "excerpt": "[html_block id=\"8879\"]\n",
+      "content": "",
+      "product_cat": [
+        80
+      ],
+      "product_brand": [],
+      "featured_media": 10891,
+      "date": "2023-02-17T11:21:09",
+      "modified": "2023-02-17T11:22:00",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2023/02/octopus-sld-700x700.png"
+    },
+    {
+      "id": 10869,
+      "slug": "soguk-hava-deposu",
+      "link": "https://prosogutma.com/urun/soguk-hava-deposu/",
+      "lang": "tr",
+      "title": "Soğuk Hava Deposu",
+      "excerpt": "<p>42 kg/m3<br />\ndansite poliüretanla hazırlanmış kilitli sandviç panellerden oluşan soğuk hava<br />\ndepolarımızda et, süt, meyve-sebze, unlu gıdalar, çeşitli dondurulmuş ürünler ve dondurma<br />\ngibi tüm gıda maddeleri en iyi şartlarda ve en uzun süreyle muhafaza edilebilirler. İsteğinize<br />\ngöre cam kapaklı olarak da üretilebilen soğuk hava depolarımız mağaza içinde hem<br />\nmuhafaza hem de teşhir amaçlı kullanılabilir.</p>\n<ul>\n<li>Panellerimizin iç ve dış yüzeylerinde isteğinize bağlı olarak AISI 304, PVC kaplama ya da<br />\nelektrostatik toz boyalı saclar kullanılmaktadır.</li>\n<li>Panellerimiz; 80 mm, 100 mm, 120 mm, 160 mm ve 200 mm kalınlıklarında üretilebilmektedir.</li>\n<li>Büyük meyve ve sebze depoları için isteğe bağlı olarak Atmosfer Kontrollü Sistem ile<br />\nde kurulabilen soğuk hava depolarımızda, bu sistem ile meyve ve sebzeler en uygun<br />\nkoşullarda muhafaza edilebilir.</li>\n<li>Tek parça üretilebilen köşe panelimiz montajda kolaylık imkânı verirken aynı zamanda soğuk<br />\nhava depolarınızda daha kaliteli bir yalıtım sağlayarak enerji tüketiminizde verimlilik sağlar.</li>\n<li>İsteğinize bağlı olarak çarpma, sürgülü, monoray, seksiyonel, flip-flap, hızlı geçiş ve<br />\natmosfer kontrollü kapı seçenekleri mevcuttur.</li>\n</ul>\n<p><strong>[html_block id=\"10873\"]</strong></p>\n",
+      "content": "",
+      "product_cat": [
+        83
+      ],
+      "product_brand": [],
+      "featured_media": 10870,
+      "date": "2023-02-10T17:07:06",
+      "modified": "2023-02-17T11:16:53",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2023/02/Soguk-Oda-700x700.jpg"
+    },
+    {
+      "id": 10744,
+      "slug": "panther-dgd-sld",
+      "link": "https://prosogutma.com/urun/panther-dgd-sld/",
+      "lang": "tr",
+      "title": "Panther DGD-SLD",
+      "excerpt": "[html_block id=\"10738\"]\n",
+      "content": "",
+      "product_cat": [
+        80
+      ],
+      "product_brand": [],
+      "featured_media": 10745,
+      "date": "2023-02-09T21:39:19",
+      "modified": "2023-02-09T21:40:34",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2023/02/PantherDGD-700x700.jpg"
+    },
+    {
+      "id": 10735,
+      "slug": "panther-sgd",
+      "link": "https://prosogutma.com/urun/panther-sgd/",
+      "lang": "tr",
+      "title": "Panther SGD",
+      "excerpt": "[html_block id=\"10738\"]\n",
+      "content": "",
+      "product_cat": [
+        80
+      ],
+      "product_brand": [],
+      "featured_media": 10736,
+      "date": "2023-02-09T21:35:44",
+      "modified": "2023-02-09T21:38:50",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2023/02/PantherSGF-700x700.jpg"
+    },
+    {
+      "id": 10684,
+      "slug": "orca-plugin",
+      "link": "https://prosogutma.com/urun/orca-plugin/",
+      "lang": "tr",
+      "title": "Orca Plugin",
+      "excerpt": "[html_block id=\"10685\"]\n",
+      "content": "",
+      "product_cat": [
+        78
+      ],
+      "product_brand": [],
+      "featured_media": 10687,
+      "date": "2023-02-09T20:55:13",
+      "modified": "2023-02-09T20:57:02",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2023/02/OrcaPlugin-700x700.jpg"
+    },
+    {
+      "id": 10672,
+      "slug": "scorpion-max",
+      "link": "https://prosogutma.com/urun/scorpion-max/",
+      "lang": "tr",
+      "title": "Scorpion MAX",
+      "excerpt": "[html_block id=\"10673\"]\n",
+      "content": "",
+      "product_cat": [
+        78
+      ],
+      "product_brand": [],
+      "featured_media": 10676,
+      "date": "2023-02-09T20:25:49",
+      "modified": "2023-02-09T20:46:12",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2023/02/ScorpionMax-700x700.jpg"
+    },
+    {
+      "id": 10632,
+      "slug": "tiger-wfg",
+      "link": "https://prosogutma.com/urun/tiger-wfg/",
+      "lang": "tr",
+      "title": "Tiger WFG",
+      "excerpt": "<p><strong>[html_block id=\"8858\"]</strong></p>\n",
+      "content": "",
+      "product_cat": [
+        76
+      ],
+      "product_brand": [],
+      "featured_media": 10887,
+      "date": "2023-02-09T17:37:09",
+      "modified": "2023-03-16T14:44:48",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2023/02/tigerwfgon-700x700.png"
+    },
+    {
+      "id": 10593,
+      "slug": "lion-retrobanco-dgd",
+      "link": "https://prosogutma.com/urun/lion-retrobanco-dgd/",
+      "lang": "tr",
+      "title": "Lion Retrobanco DGD",
+      "excerpt": "[html_block id=\"10595\"]\n",
+      "content": "",
+      "product_cat": [
+        74
+      ],
+      "product_brand": [],
+      "featured_media": 10594,
+      "date": "2023-02-09T16:48:10",
+      "modified": "2023-02-09T16:49:22",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2023/02/LionRETRODGD-700x700.jpg"
+    },
+    {
+      "id": 10579,
+      "slug": "lion-max",
+      "link": "https://prosogutma.com/urun/lion-max/",
+      "lang": "tr",
+      "title": "Lion MAX",
+      "excerpt": "<p><strong>[html_block id=\"10581\"]</strong></p>\n",
+      "content": "",
+      "product_cat": [
+        74
+      ],
+      "product_brand": [],
+      "featured_media": 10580,
+      "date": "2023-02-09T16:38:21",
+      "modified": "2023-02-09T16:39:12",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2023/02/LionMAX-700x700.jpg"
+    },
+    {
+      "id": 10571,
+      "slug": "lion-tgd",
+      "link": "https://prosogutma.com/urun/lion-tgd/",
+      "lang": "tr",
+      "title": "Lion TGD",
+      "excerpt": "<p><strong>[html_block id=\"10573\"]</strong></p>\n",
+      "content": "",
+      "product_cat": [
+        74
+      ],
+      "product_brand": [],
+      "featured_media": 10572,
+      "date": "2023-02-09T16:35:18",
+      "modified": "2023-02-09T16:36:30",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2023/02/LionTGD-700x700.jpg"
+    },
+    {
+      "id": 10562,
+      "slug": "lion-lgd",
+      "link": "https://prosogutma.com/urun/lion-lgd/",
+      "lang": "tr",
+      "title": "Lion LGD",
+      "excerpt": "<p><strong>[html_block id=\"10563\"]</strong></p>\n",
+      "content": "",
+      "product_cat": [
+        74
+      ],
+      "product_brand": [],
+      "featured_media": 10565,
+      "date": "2023-02-09T16:32:33",
+      "modified": "2023-02-09T16:33:25",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2023/02/LionLGD-700x700.jpg"
+    },
+    {
+      "id": 10552,
+      "slug": "lion-pgd",
+      "link": "https://prosogutma.com/urun/lion-pgd/",
+      "lang": "tr",
+      "title": "Lion PGD",
+      "excerpt": "<p><strong>[html_block id=\"10233\"]</strong></p>\n",
+      "content": "",
+      "product_cat": [
+        74
+      ],
+      "product_brand": [],
+      "featured_media": 10553,
+      "date": "2023-02-09T16:27:38",
+      "modified": "2023-02-09T16:29:33",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2023/02/LionPGD-700x700.jpg"
+    },
+    {
+      "id": 10386,
+      "slug": "industrial-cooling-system",
+      "link": "https://prosogutma.com/en/urun/industrial-cooling-system/",
+      "lang": "en",
+      "title": "Industrial Cooling System",
+      "excerpt": "",
+      "content": "",
+      "product_cat": [
+        156,
+        177
+      ],
+      "product_brand": [],
+      "featured_media": 10171,
+      "date": "2022-12-12T13:21:04",
+      "modified": "2022-12-12T13:52:11",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2022/07/6-700x700.png"
+    },
+    {
+      "id": 10385,
+      "slug": "split-cooling-system",
+      "link": "https://prosogutma.com/en/urun/split-cooling-system/",
+      "lang": "en",
+      "title": "Split Cooling System",
+      "excerpt": "",
+      "content": "",
+      "product_cat": [
+        156,
+        177
+      ],
+      "product_brand": [],
+      "featured_media": 10172,
+      "date": "2022-12-12T13:20:34",
+      "modified": "2022-12-12T13:52:11",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2022/06/3-700x700.png"
+    },
+    {
+      "id": 10384,
+      "slug": "dual-regime-central-cooling",
+      "link": "https://prosogutma.com/en/urun/dual-regime-central-cooling/",
+      "lang": "en",
+      "title": "Dual Regime Central Cooling",
+      "excerpt": "",
+      "content": "",
+      "product_cat": [
+        156,
+        177
+      ],
+      "product_brand": [],
+      "featured_media": 10173,
+      "date": "2022-12-12T13:20:17",
+      "modified": "2022-12-12T13:52:11",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2022/06/4-700x700.png"
+    },
+    {
+      "id": 10383,
+      "slug": "modular-cold-storages",
+      "link": "https://prosogutma.com/en/urun/modular-cold-storages/",
+      "lang": "en",
+      "title": "Modular Cold Storages",
+      "excerpt": "",
+      "content": "",
+      "product_cat": [
+        158
+      ],
+      "product_brand": [],
+      "featured_media": 10172,
+      "date": "2022-12-12T13:19:56",
+      "modified": "2022-12-12T13:52:47",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2022/06/3-700x700.png"
+    },
+    {
+      "id": 10381,
+      "slug": "leopard-ifg-2",
+      "link": "https://prosogutma.com/en/urun/leopard-ifg-2/",
+      "lang": "en",
+      "title": "Leopard IFG",
+      "excerpt": "<p><strong>[html_block id=\"10119\"]</strong></p>\n",
+      "content": "",
+      "product_cat": [
+        152
+      ],
+      "product_brand": [],
+      "featured_media": 10170,
+      "date": "2022-12-12T13:19:25",
+      "modified": "2022-12-13T10:28:17",
+      "imageUrl": null
+    },
+    {
+      "id": 10380,
+      "slug": "lion-2",
+      "link": "https://prosogutma.com/en/urun/lion-2/",
+      "lang": "en",
+      "title": "Lion",
+      "excerpt": "<p><sub>Wall Mounted Cooler Cabinet</sub></p>\n<p><strong>[html_block id=\"9696\"]</strong></p>\n",
+      "content": "",
+      "product_cat": [
+        144
+      ],
+      "product_brand": [],
+      "featured_media": 10534,
+      "date": "2022-12-12T13:19:02",
+      "modified": "2023-02-17T11:52:31",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2022/05/lion22-700x700.jpg"
+    },
+    {
+      "id": 10379,
+      "slug": "firefly-br-2",
+      "link": "https://prosogutma.com/en/urun/firefly-br-2/",
+      "lang": "en",
+      "title": "Firefly BR",
+      "excerpt": "[html_block id=\"8914\"]\n",
+      "content": "",
+      "product_cat": [
+        154
+      ],
+      "product_brand": [],
+      "featured_media": 10866,
+      "date": "2022-12-12T13:18:43",
+      "modified": "2023-02-17T12:20:41",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2022/05/Firefly-BR-1-700x700.jpg"
+    },
+    {
+      "id": 10378,
+      "slug": "firefly-corners-2",
+      "link": "https://prosogutma.com/en/urun/firefly-corners-2/",
+      "lang": "en",
+      "title": "Firefly Corners",
+      "excerpt": "[html_block id=\"8913\"]\n",
+      "content": "",
+      "product_cat": [
+        154
+      ],
+      "product_brand": [],
+      "featured_media": 10860,
+      "date": "2022-12-12T13:18:26",
+      "modified": "2023-02-17T12:21:10",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2022/05/Firefly-Corners-700x700.jpg"
+    },
+    {
+      "id": 10377,
+      "slug": "firefly-pr-2",
+      "link": "https://prosogutma.com/en/urun/firefly-pr-2/",
+      "lang": "en",
+      "title": "Firefly PR",
+      "excerpt": "[html_block id=\"8912\"]\n",
+      "content": "",
+      "product_cat": [
+        154
+      ],
+      "product_brand": [],
+      "featured_media": 10857,
+      "date": "2022-12-12T13:18:11",
+      "modified": "2023-02-17T12:21:43",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2022/05/Firefly-PR-1-700x700.jpg"
+    },
+    {
+      "id": 10376,
+      "slug": "firefly-pn-2",
+      "link": "https://prosogutma.com/en/urun/firefly-pn-2/",
+      "lang": "en",
+      "title": "Firefly PN",
+      "excerpt": "[html_block id=\"8911\"]\n",
+      "content": "",
+      "product_cat": [
+        154
+      ],
+      "product_brand": [],
+      "featured_media": 10853,
+      "date": "2022-12-12T13:17:54",
+      "modified": "2023-02-17T12:21:57",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2022/05/Firefly-PN-1-700x700.jpg"
+    },
+    {
+      "id": 10375,
+      "slug": "flamingo-2",
+      "link": "https://prosogutma.com/en/urun/flamingo-2/",
+      "lang": "en",
+      "title": "Flamingo",
+      "excerpt": "[html_block id=\"8908\"]\n",
+      "content": "",
+      "product_cat": [
+        154
+      ],
+      "product_brand": [],
+      "featured_media": 10841,
+      "date": "2022-12-12T13:17:40",
+      "modified": "2023-02-17T12:22:20",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2022/05/Flamingo-1-700x700.jpg"
+    },
+    {
+      "id": 10374,
+      "slug": "butterfly-dvn-pr-pn-2",
+      "link": "https://prosogutma.com/en/urun/butterfly-dvn-pr-pn-2/",
+      "lang": "en",
+      "title": "Butterfly DVN PR PN",
+      "excerpt": "[html_block id=\"8909\"]\n",
+      "content": "",
+      "product_cat": [
+        154
+      ],
+      "product_brand": [],
+      "featured_media": 9345,
+      "date": "2022-12-12T13:17:22",
+      "modified": "2023-02-17T12:25:12",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2022/05/BUTTERFLY-DVN-PR-PN-700x700.jpg"
+    },
+    {
+      "id": 10373,
+      "slug": "butterfly-ba-2",
+      "link": "https://prosogutma.com/en/urun/butterfly-ba-2/",
+      "lang": "en",
+      "title": "Butterfly BA",
+      "excerpt": "[html_block id=\"8907\"]\n",
+      "content": "",
+      "product_cat": [
+        154
+      ],
+      "product_brand": [],
+      "featured_media": 10833,
+      "date": "2022-12-12T13:17:05",
+      "modified": "2023-02-17T12:25:32",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2022/05/Butterfly-BA-1-700x700.jpg"
+    },
+    {
+      "id": 10372,
+      "slug": "butterfly-br-2",
+      "link": "https://prosogutma.com/en/urun/butterfly-br-2/",
+      "lang": "en",
+      "title": "Butterfly BR",
+      "excerpt": "[html_block id=\"8906\"]\n",
+      "content": "",
+      "product_cat": [
+        154
+      ],
+      "product_brand": [],
+      "featured_media": 9332,
+      "date": "2022-12-12T13:16:47",
+      "modified": "2023-02-17T12:27:10",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2022/05/BUTTERFLY-BR-700x700.jpg"
+    },
+    {
+      "id": 10371,
+      "slug": "butterfly-sp-2",
+      "link": "https://prosogutma.com/en/urun/butterfly-sp-2/",
+      "lang": "en",
+      "title": "Butterfly SP",
+      "excerpt": "[html_block id=\"8900\"]\n",
+      "content": "",
+      "product_cat": [
+        154
+      ],
+      "product_brand": [],
+      "featured_media": 10822,
+      "date": "2022-12-12T13:16:30",
+      "modified": "2023-02-17T12:27:56",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2022/05/Butterfly-SP-1-700x700.jpg"
+    },
+    {
+      "id": 10370,
+      "slug": "butterfly-hp-2",
+      "link": "https://prosogutma.com/en/urun/butterfly-hp-2/",
+      "lang": "en",
+      "title": "Butterfly HP",
+      "excerpt": "[html_block id=\"8901\"]\n",
+      "content": "",
+      "product_cat": [
+        154
+      ],
+      "product_brand": [],
+      "featured_media": 10821,
+      "date": "2022-12-12T13:16:09",
+      "modified": "2023-02-17T12:28:18",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2022/05/Butterfly-HP-1-700x700.jpg"
+    },
+    {
+      "id": 10369,
+      "slug": "butterfly-sb-2",
+      "link": "https://prosogutma.com/en/urun/butterfly-sb-2/",
+      "lang": "en",
+      "title": "Butterfly SB",
+      "excerpt": "[html_block id=\"8902\"]\n",
+      "content": "",
+      "product_cat": [
+        154
+      ],
+      "product_brand": [],
+      "featured_media": 10896,
+      "date": "2022-12-12T13:15:52",
+      "modified": "2023-02-17T12:31:18",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2022/05/butterfly-sb-2-700x700.png"
+    },
+    {
+      "id": 10368,
+      "slug": "butterfly-bm-2",
+      "link": "https://prosogutma.com/en/urun/butterfly-bm-2/",
+      "lang": "en",
+      "title": "Butterfly BM",
+      "excerpt": "[html_block id=\"8903\"]\n",
+      "content": "",
+      "product_cat": [
+        154
+      ],
+      "product_brand": [],
+      "featured_media": 10813,
+      "date": "2022-12-12T13:15:35",
+      "modified": "2023-02-17T12:32:15",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2022/05/Butterfly-BM-1-700x700.jpg"
+    },
+    {
+      "id": 10367,
+      "slug": "butterfly-cg-pr-pn-ht-2",
+      "link": "https://prosogutma.com/en/urun/butterfly-cg-pr-pn-ht-2/",
+      "lang": "en",
+      "title": "Butterfly CG PR  PN HT",
+      "excerpt": "[html_block id=\"8904\"]\n",
+      "content": "",
+      "product_cat": [
+        154
+      ],
+      "product_brand": [],
+      "featured_media": 9300,
+      "date": "2022-12-12T12:41:59",
+      "modified": "2023-02-17T12:43:19",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2022/05/BUTTERFLY-CG-PR-PN-HT-700x700.jpg"
+    },
+    {
+      "id": 10366,
+      "slug": "butterfly-mft-2",
+      "link": "https://prosogutma.com/en/urun/butterfly-mft-2/",
+      "lang": "en",
+      "title": "Butterfly MFT",
+      "excerpt": "[html_block id=\"8905\"]\n",
+      "content": "",
+      "product_cat": [
+        154
+      ],
+      "product_brand": [],
+      "featured_media": 9294,
+      "date": "2022-12-12T12:41:07",
+      "modified": "2023-02-17T12:43:39",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2022/05/BUTTERFLY-MFT-700x700.jpg"
+    },
+    {
+      "id": 10365,
+      "slug": "butterfly-tk-2",
+      "link": "https://prosogutma.com/en/urun/butterfly-tk-2/",
+      "lang": "en",
+      "title": "Butterfly TK",
+      "excerpt": "[html_block id=\"8899\"]\n",
+      "content": "",
+      "product_cat": [
+        154
+      ],
+      "product_brand": [],
+      "featured_media": 10802,
+      "date": "2022-12-12T12:40:48",
+      "modified": "2023-02-17T12:43:54",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2022/05/Butterfly-TK-1-700x700.jpg"
+    },
+    {
+      "id": 10364,
+      "slug": "butterfly-dp-2",
+      "link": "https://prosogutma.com/en/urun/butterfly-dp-2/",
+      "lang": "en",
+      "title": "Butterfly DP",
+      "excerpt": "[html_block id=\"8895\"]\n",
+      "content": "",
+      "product_cat": [
+        154
+      ],
+      "product_brand": [],
+      "featured_media": 10796,
+      "date": "2022-12-12T12:40:11",
+      "modified": "2023-02-17T12:44:12",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2022/05/Butterfly-DP-1-700x700.jpg"
+    },
+    {
+      "id": 10363,
+      "slug": "butterfly-pn-2",
+      "link": "https://prosogutma.com/en/urun/butterfly-pn-2/",
+      "lang": "en",
+      "title": "Butterfly PN",
+      "excerpt": "[html_block id=\"8896\"]\n",
+      "content": "",
+      "product_cat": [
+        154
+      ],
+      "product_brand": [],
+      "featured_media": 10793,
+      "date": "2022-12-12T12:39:20",
+      "modified": "2023-02-17T12:44:34",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2022/05/ButterflyPN-700x700.jpg"
+    },
+    {
+      "id": 10362,
+      "slug": "butterfly-pr-2",
+      "link": "https://prosogutma.com/en/urun/butterfly-pr-2/",
+      "lang": "en",
+      "title": "Butterfly PR",
+      "excerpt": "[html_block id=\"8897\"]\n",
+      "content": "",
+      "product_cat": [
+        154
+      ],
+      "product_brand": [],
+      "featured_media": 10788,
+      "date": "2022-12-12T12:39:00",
+      "modified": "2023-02-17T12:44:52",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2022/05/ButterflyPR-700x700.jpg"
+    },
+    {
+      "id": 10361,
+      "slug": "buffalo-2",
+      "link": "https://prosogutma.com/en/urun/buffalo-2/",
+      "lang": "en",
+      "title": "Buffalo",
+      "excerpt": "[html_block id=\"8893\"]\n",
+      "content": "",
+      "product_cat": [
+        152
+      ],
+      "product_brand": [],
+      "featured_media": 10783,
+      "date": "2022-12-12T12:38:26",
+      "modified": "2023-02-17T12:45:37",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2022/05/Buffalo-1-700x700.jpg"
+    },
+    {
+      "id": 10360,
+      "slug": "falcon-plug-in-2",
+      "link": "https://prosogutma.com/en/urun/falcon-plug-in-2/",
+      "lang": "en",
+      "title": "Falcon Plug-in",
+      "excerpt": "[html_block id=\"8892\"]\n",
+      "content": "",
+      "product_cat": [
+        152
+      ],
+      "product_brand": [],
+      "featured_media": 10779,
+      "date": "2022-12-12T12:38:01",
+      "modified": "2023-02-17T12:45:58",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2022/05/FalconPlu-gin-700x700.jpg"
+    },
+    {
+      "id": 10359,
+      "slug": "leopard-2",
+      "link": "https://prosogutma.com/en/urun/leopard-2/",
+      "lang": "en",
+      "title": "Leopard",
+      "excerpt": "[html_block id=\"8894\"]\n",
+      "content": "",
+      "product_cat": [
+        152
+      ],
+      "product_brand": [],
+      "featured_media": 10774,
+      "date": "2022-12-12T12:37:44",
+      "modified": "2023-02-17T12:46:53",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2022/05/Leopard-1-700x700.jpg"
+    },
+    {
+      "id": 10358,
+      "slug": "fox-2",
+      "link": "https://prosogutma.com/en/urun/fox-2/",
+      "lang": "en",
+      "title": "Fox",
+      "excerpt": "[html_block id=\"8891\"]\n",
+      "content": "",
+      "product_cat": [
+        152
+      ],
+      "product_brand": [],
+      "featured_media": 10768,
+      "date": "2022-12-12T12:36:55",
+      "modified": "2023-02-17T12:47:15",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2022/05/Fox-1-700x700.jpg"
+    },
+    {
+      "id": 10357,
+      "slug": "iguana-2",
+      "link": "https://prosogutma.com/en/urun/iguana-2/",
+      "lang": "en",
+      "title": "Iguana",
+      "excerpt": "[html_block id=\"8890\"]\n",
+      "content": "",
+      "product_cat": [
+        152
+      ],
+      "product_brand": [],
+      "featured_media": 10764,
+      "date": "2022-12-12T12:36:16",
+      "modified": "2023-02-17T12:47:38",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2022/05/Iguana-1-700x700.jpg"
+    },
+    {
+      "id": 10356,
+      "slug": "puma-dgd-2",
+      "link": "https://prosogutma.com/en/urun/puma-dgd-2/",
+      "lang": "en",
+      "title": "Puma DGD",
+      "excerpt": "[html_block id=\"8889\"]\n",
+      "content": "",
+      "product_cat": [
+        152
+      ],
+      "product_brand": [],
+      "featured_media": 10754,
+      "date": "2022-12-12T12:35:55",
+      "modified": "2023-02-17T13:05:01",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2022/05/PumaDGD-700x700.jpg"
+    },
+    {
+      "id": 10355,
+      "slug": "puma-sgd-2",
+      "link": "https://prosogutma.com/en/urun/puma-sgd-2/",
+      "lang": "en",
+      "title": "Puma SGD",
+      "excerpt": "[html_block id=\"8888\"]\n",
+      "content": "",
+      "product_cat": [
+        152
+      ],
+      "product_brand": [],
+      "featured_media": 10756,
+      "date": "2022-12-12T12:24:10",
+      "modified": "2023-02-17T13:06:02",
+      "imageUrl": "https://prosogutma.com/wp-content/uploads/2022/05/PumaSGD-700x700.jpg"
+    }
+  ]
+}

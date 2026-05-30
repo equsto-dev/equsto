@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 import path from "path";
 
-/** Departman PLP — /shop/{slug} → {slug}.html (public/) */
+/** Departman PLP — eski *.html → /shop/{slug} */
 const DEPT_HTML: Record<string, string> = {
   pisirme: "/pisirme.html",
   sogutma: "/sogutma.html",
@@ -17,14 +17,8 @@ const DEPT_HTML: Record<string, string> = {
   istif: "/istif.html",
   "set-ustu-mutfak": "/set-ustu-mutfak.html",
   kuvetler: "/kuvetler.html",
+  "market-reyonlari": "/market-reyonlari.html",
 };
-
-function deptRewrites() {
-  return Object.entries(DEPT_HTML).map(([slug, file]) => ({
-    source: `/shop/${slug}`,
-    destination: file,
-  }));
-}
 
 function deptRedirects() {
   return Object.entries(DEPT_HTML).map(([slug, file]) => ({
@@ -34,47 +28,37 @@ function deptRedirects() {
   }));
 }
 
-/** SEO rehber / proje sayfaları — geo-landing.html + eq-geo-landing.js */
-const GEO_SLUGS = [
-  "steakhouse-kurulumu",
-  "bulut-mutfak-kurulumu",
-  "cafe-kurulumu",
-  "catering-mutfagi",
-  "fine-dining-kurulumu",
-  "all-day-dining-kurulumu",
-  "fast-food-kurulumu",
-  "endustriyel-mutfak-ekipmani-turkiye",
-  "restoran-mutfak-teklif",
-  "otel-mutfak-ekipman-tedarik",
-  "oztiryakiler-ekipmani-tedarik",
-  "soguk-oda-teklif",
-  "havuzlu-dolap-tedarik",
-  "endustriyel-pisirme-ekipmanlari",
-  "mutfak-teklif-platformu",
-  "bar-tasarimi-turkiye",
-  "blog",
-];
-
-function geoRewrites() {
-  const base = GEO_SLUGS.map((slug) => ({
-    source: `/${slug}`,
-    destination: "/geo-landing.html",
-  }));
-  return [
-    ...base,
-    { source: "/projeler", destination: "/geo-landing.html" },
-    { source: "/projeler/:slug", destination: "/geo-landing.html" },
-    { source: "/rehber/:slug", destination: "/geo-landing.html" },
-    { source: "/en/industrial-kitchen-supplier-turkey", destination: "/geo-landing.html" },
-    { source: "/en/commercial-kitchen-quotation", destination: "/geo-landing.html" },
+/** Eski vitrin HTML dosyaları → temiz URL (App Router) */
+function legacyHtmlRedirects() {
+  const pairs: [string, string][] = [
+    ["pfos.html", "/pfos"],
+    ["sss.html", "/sss"],
+    ["contact.html", "/contact"],
+    ["hakkimizda.html", "/hakkimizda"],
+    ["buradan-basladi.html", "/buradan-basladi"],
+    ["marka.html", "/shop/marka"],
+    ["login.html", "/login"],
+    ["admin.html", "/admin"],
+    ["bar-design.html", "/besos"],
+    ["imt300.html", "/besos/imt300"],
+    ["bar-module.html", "/besos"],
+    ["geo-landing.html", "/"],
+    ["arama.html", "/arama"],
+    ["sepet.html", "/sepet"],
+    ["product.html", "/shop"],
+    ["iade-politikasi.html", "/iade-politikasi"],
   ];
+  return pairs.map(([file, dest]) => ({
+    source: `/${file}`,
+    destination: dest,
+    permanent: true,
+  }));
 }
 
 /** Vercel lambda 250MB — public görseller/katalog trace dışı (runtime CDN/fs fetch) */
 const traceExcludes = [
   "./public/images/**",
   "./public/assets/**",
-  "./public/**/*.html",
   "./public/data/dept/**",
   "./public/data/vitrum-drawings/**",
   "./public/data/advanced-cuisine-clear-ice/**",
@@ -89,12 +73,9 @@ const traceExcludes = [
 ];
 
 const nextConfig: NextConfig = {
-  outputFileTracingRoot: path.join(__dirname),
-  serverExternalPackages: [
-    "@prisma/client",
-    "prisma",
-    "meilisearch",
-  ],
+  /** Monorepo (git kok = path0); Vercel paketleme icin */
+  outputFileTracingRoot: path.join(__dirname, "..", ".."),
+  serverExternalPackages: ["@prisma/client", "prisma", "meilisearch"],
   outputFileTracingExcludes: {
     "*": traceExcludes,
     "/api/*": traceExcludes,
@@ -109,27 +90,63 @@ const nextConfig: NextConfig = {
     const utf8Html = { key: "Content-Type", value: "text/html; charset=utf-8" };
     const utf8Json = { key: "Content-Type", value: "application/json; charset=utf-8" };
     return [
-      { source: "/:path*.html", headers: [utf8Html] },
       { source: "/", headers: [utf8Html] },
       { source: "/pfos", headers: [utf8Html] },
       { source: "/pfos/:path*", headers: [utf8Html] },
       { source: "/besos", headers: [utf8Html] },
       { source: "/besos/:path*", headers: [utf8Html] },
-      { source: "/bar-design", headers: [utf8Html] },
       { source: "/admin", headers: [utf8Html] },
       { source: "/contact", headers: [utf8Html] },
-      { source: "/besos/imt300", headers: [utf8Html] },
-      { source: "/besos/imt300/:path*", headers: [utf8Html] },
       { source: "/login", headers: [utf8Html] },
       { source: "/marka", headers: [utf8Html] },
+      { source: "/marka/:path*", headers: [utf8Html] },
+      { source: "/shop/marka", headers: [utf8Html] },
+      { source: "/shop/marka/:path*", headers: [utf8Html] },
+      { source: "/sss", headers: [utf8Html] },
+      { source: "/sss/:path*", headers: [utf8Html] },
       { source: "/arama", headers: [utf8Html] },
       { source: "/shop/:dept", headers: [utf8Html] },
+      { source: "/en", headers: [utf8Html] },
+      { source: "/en/:path*", headers: [utf8Html] },
       { source: "/i18n/:file.json", headers: [utf8Json] },
+      { source: "/locales/:file.json", headers: [utf8Json] },
       {
-        source: "/data/:path*",
+        source: "/eq-footer.js",
+        headers: [
+          { key: "Content-Type", value: "application/javascript; charset=utf-8" },
+          { key: "Cache-Control", value: "public, max-age=0, must-revalidate" },
+        ],
+      },
+      {
+        source: "/data/footer-vitrin.json",
         headers: [
           utf8Json,
           { key: "Cache-Control", value: "public, max-age=0, must-revalidate" },
+        ],
+      },
+      {
+        source: "/data/:path*.json",
+        headers: [
+          utf8Json,
+          { key: "Cache-Control", value: "public, max-age=0, must-revalidate" },
+        ],
+      },
+      {
+        source: "/data/:path*.pdf",
+        headers: [
+          { key: "Content-Type", value: "application/pdf" },
+          { key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" },
+        ],
+      },
+      {
+        source: "/data/:path*",
+        headers: [{ key: "Cache-Control", value: "public, max-age=0, must-revalidate" }],
+      },
+      {
+        source: "/feeds/google-products.xml",
+        headers: [
+          { key: "Content-Type", value: "application/xml; charset=utf-8" },
+          { key: "Cache-Control", value: "public, s-maxage=3600, stale-while-revalidate=86400" },
         ],
       },
     ];
@@ -141,6 +158,14 @@ const nextConfig: NextConfig = {
       { source: "/shop", destination: "/", permanent: true },
       { source: "/shop/:dept.html", destination: "/shop/:dept", permanent: true },
       ...deptRedirects(),
+      ...legacyHtmlRedirects(),
+      { source: "/marka", destination: "/shop/marka", permanent: true },
+      { source: "/marka/", destination: "/shop/marka", permanent: true },
+      { source: "/en/marka", destination: "/en/shop/marka", permanent: true },
+      { source: "/en/marka/", destination: "/en/shop/marka", permanent: true },
+      { source: "/en/product.html", destination: "/en/shop", permanent: true },
+      { source: "/en/sepet.html", destination: "/en/cart", permanent: true },
+      { source: "/en/sepet", destination: "/en/cart", permanent: true },
       { source: "/urunler", destination: "/shop", permanent: true },
       { source: "/urunler/:path*", destination: "/shop/:path*", permanent: true },
       { source: "/proje-fabrikasi", destination: "/pfos", permanent: true },
@@ -150,13 +175,17 @@ const nextConfig: NextConfig = {
       { source: "/bar-design.html", destination: "/besos", permanent: true },
       { source: "/imt300", destination: "/besos/imt300", permanent: true },
       { source: "/imt300/", destination: "/besos/imt300", permanent: true },
+      { source: "/en/project-factory", destination: "/en/pfos", permanent: true },
+      { source: "/en/project-factory/", destination: "/en/pfos", permanent: true },
     ];
   },
   async rewrites() {
     return {
       beforeFiles: [
-        { source: "/arama", destination: "/arama.html" },
-        { source: "/arama/", destination: "/arama.html" },
+        /* Katalog görselleri: /data/images/catalog/… → /images/catalog/… */
+        { source: "/data/images/:path*", destination: "/images/:path*" },
+        /* /i18n/ bazı tarayıcı eklentilerinde engellenir — /locales/ alias */
+        { source: "/locales/:file.json", destination: "/i18n/:file.json" },
         /* API birleştirme — Hobby 12 function limiti (geriye dönük URL) */
         { source: "/api/pfos/concepts", destination: "/api/pfos?action=concepts" },
         { source: "/api/pfos/konseptler", destination: "/api/pfos?action=konseptler" },
@@ -175,31 +204,6 @@ const nextConfig: NextConfig = {
           destination: "/api/urunler?katalogIndex=:index",
         },
         { source: "/api/whatsapp", destination: "/api/musteriler?whatsapp=1" },
-        { source: "/besos/imt300", destination: "/imt300.html" },
-        { source: "/besos/imt300/", destination: "/imt300.html" },
-      ],
-      afterFiles: [
-      { source: "/", destination: "/index.html" },
-      ...deptRewrites(),
-      { source: "/shop/:dept/:slug", destination: "/product.html" },
-      { source: "/pfos", destination: "/pfos.html" },
-      { source: "/pfos/", destination: "/pfos.html" },
-      { source: "/besos/modul/:slug", destination: "/bar-module.html" },
-      { source: "/besos/modul/:slug/", destination: "/bar-module.html" },
-      { source: "/admin", destination: "/admin.html" },
-      { source: "/admin/", destination: "/admin.html" },
-      /* /yonetim → Next.js App Router (Ant Design Pro) */
-      { source: "/contact", destination: "/contact.html" },
-      { source: "/contact/", destination: "/contact.html" },
-      { source: "/buradan-basladi", destination: "/buradan-basladi.html" },
-      { source: "/buradan-basladi/", destination: "/buradan-basladi.html" },
-      { source: "/hakkimizda", destination: "/hakkimizda.html" },
-      { source: "/hakkimizda/", destination: "/hakkimizda.html" },
-      { source: "/login", destination: "/login.html" },
-      { source: "/login/", destination: "/login.html" },
-      { source: "/marka", destination: "/marka.html" },
-      { source: "/marka/", destination: "/marka.html" },
-      ...geoRewrites(),
       ],
     };
   },

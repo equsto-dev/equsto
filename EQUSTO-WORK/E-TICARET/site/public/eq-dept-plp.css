@@ -28,6 +28,36 @@ body.eq-dept-plp {
   font-weight: 700;
   border-bottom: 1px solid #e8e8e8;
 }
+.eq-dept-kuvet-subnav {
+  border-bottom: 1px solid #e8e8e8;
+  padding: 8px 0 10px;
+}
+.eq-dept-kuvet-subnav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.eq-dept-kuvet-subnav__btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 8px 14px;
+  border: 0;
+  background: transparent;
+  font-size: 12px;
+  font-weight: 500;
+  color: #222;
+  cursor: pointer;
+  line-height: 1.35;
+}
+.eq-dept-kuvet-subnav__btn:hover {
+  background: #f3f6fb;
+}
+.eq-dept-kuvet-subnav__btn.is-active {
+  background: #e8eef8;
+  color: #001e50;
+  font-weight: 600;
+}
 /* Cafemarkt tarzı facet (eq-pisirme-cm-facets.js) */
 .eq-cm-facet {
   border-bottom: 1px solid #e8e8e8;
@@ -218,21 +248,24 @@ body.eq-dept-plp {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-.eq-dept-plp-grid {
+.eq-dept-plp-grid,
+.eq-arama-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px 14px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px 12px;
   min-height: 120px;
+  align-items: start;
 }
-@media (min-width: 640px) {
-  .eq-dept-plp-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+@media (max-width: 720px) {
+  .eq-dept-plp-grid,
+  .eq-arama-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-@media (min-width: 1024px) {
-  .eq-dept-plp-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 20px 16px;
+@media (min-width: 900px) {
+  .eq-dept-plp-grid,
+  .eq-arama-grid {
+    gap: 16px 14px;
   }
 }
 .eq-dept-plp-card {
@@ -245,10 +278,15 @@ body.eq-dept-plp {
   align-items: center;
   justify-content: center;
   aspect-ratio: 4 / 5;
-  min-height: 140px;
+  width: 100%;
+  min-height: 0;
   background: #f5f6f8;
   border: 1px solid #eee;
   overflow: hidden;
+  transition:
+    background 0.28s ease,
+    border-color 0.28s ease,
+    box-shadow 0.28s ease;
 }
 .eq-dept-plp-card__img img {
   display: block;
@@ -258,8 +296,11 @@ body.eq-dept-plp {
   max-height: 100%;
   object-fit: contain;
   object-position: center center;
-  padding: 8px;
+  padding: clamp(4px, 1.2vw, 8px);
   box-sizing: border-box;
+  transition: transform 0.28s ease;
+  position: relative;
+  z-index: 1;
 }
 .eq-dept-plp-card__img .eq-img-ph {
   display: flex;
@@ -267,24 +308,24 @@ body.eq-dept-plp {
   justify-content: center;
   width: 100%;
   height: 100%;
-  min-height: 120px;
-  font-size: 11px;
+  min-height: 0;
+  font-size: 10px;
   font-weight: 600;
   color: #8a92a8;
   background: #eef2f8;
 }
 .eq-dept-plp-card__name {
-  margin: 10px 0 6px;
-  font-size: 12px;
+  margin: 8px 0 5px;
+  font-size: 11px;
   font-weight: 500;
-  line-height: 1.4;
+  line-height: 1.35;
   color: #111;
   text-decoration: none;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  min-height: 3.9em;
+  min-height: 3.6em;
 }
 .eq-dept-plp-card__dims {
   font-size: 11px;
@@ -295,10 +336,17 @@ body.eq-dept-plp {
   letter-spacing: 0.01em;
 }
 .eq-dept-plp-card__price {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 4px;
   margin-top: auto;
+}
+.eq-dept-plp-card__price-note {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: #6b7280;
+  margin: 0 0 10px;
 }
 .eq-dept-plp-card__btn {
   width: 100%;
@@ -444,5 +492,81 @@ body.eq-dept-plp {
     inset: 0;
     z-index: 1190;
     background: rgba(0, 0, 0, 0.35);
+  }
+}
+
+/* ===== Arama sonuç sayfası (/arama) ===== */
+body.eq-arama-page {
+  background: #fff;
+}
+body.eq-arama-page .eq-arama-wrap {
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+body.eq-arama-page .eq-arama-layout {
+  align-items: stretch;
+}
+body.eq-arama-page .eq-arama-aside {
+  flex: 0 0 240px;
+}
+body.eq-arama-page .eq-arama-main {
+  padding: 16px 16px 32px;
+}
+body.eq-arama-page .eq-arama-title {
+  margin: 0 0 6px;
+  font-size: clamp(20px, 3vw, 26px);
+  font-weight: 700;
+  color: #111;
+  letter-spacing: -0.02em;
+}
+body.eq-arama-page .eq-arama-count {
+  margin: 0 0 12px;
+  padding-bottom: 0;
+  border-bottom: 0;
+  font-size: 13px;
+  color: #555;
+}
+body.eq-arama-page .eq-arama-grid .eq-dept-plp-card {
+  border: 1px solid #eee;
+  border-radius: 4px;
+  overflow: hidden;
+}
+body.eq-arama-page > footer.footer {
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+}
+body.eq-arama-page .eq-arama-more {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 8px;
+}
+body.eq-arama-page .eq-arama-more__btn {
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--eq-border, #e5e7eb);
+  background: var(--eq-surface, #fff);
+  color: var(--eq-text, #111);
+  cursor: pointer;
+}
+body.eq-arama-page .eq-arama-more__btn:hover:not(:disabled) {
+  border-color: var(--eq-accent, #2563eb);
+  color: var(--eq-accent, #2563eb);
+}
+body.eq-arama-page .eq-arama-more__btn:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+@media (max-width: 900px) {
+  body.eq-arama-page .eq-arama-aside {
+    top: 0;
+    max-height: none;
   }
 }

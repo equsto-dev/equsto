@@ -1,0 +1,57 @@
+{
+  "slug": "ortanca-2",
+  "baslik": "ORTANCA",
+  "tip": "seri",
+  "ustSeriSlug": null,
+  "kategoriler": [
+    "horizontal-cabinets"
+  ],
+  "kapak": "https:\\/\\/caglayanrefrigeration.com\\/wp-content\\/uploads\\/2026\\/02\\/Ortanca-Kapak-Caglayan-Refrigeration.webp",
+  "kapakYol": "gorseller/ortanca-2/Ortanca-Kapak-Caglayan-Refrigeration.webp",
+  "linkKaynak": "https://caglayanrefrigeration.com/tr/product/ortanca-2/",
+  "cocuklar": [
+    {
+      "slug": "ortanca",
+      "ad": "ORTANCA",
+      "link": "https://caglayanrefrigeration.com/tr/product/ortanca/",
+      "kapak": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Ortanca-Kapak-Caglayan-Refrigeration.webp",
+      "kapakYol": "gorseller/ortanca-2/Ortanca-Kapak-Caglayan-Refrigeration.webp"
+    },
+    {
+      "slug": "ortanca-wt",
+      "ad": "ORTANCA WT",
+      "link": "https://caglayanrefrigeration.com/tr/product/ortanca-wt/",
+      "kapak": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Ortanca-WT-Cover-Caglayan-Refrigeration.webp",
+      "kapakYol": "gorseller/ortanca-2/Ortanca-WT-Cover-Caglayan-Refrigeration.webp"
+    }
+  ],
+  "ozellikler": [],
+  "teknik": {
+    "akordeon": [],
+    "sekmeler": [],
+    "tablolar": []
+  },
+  "gorseller": {
+    "tum": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Ortanca-Kapak-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/ortanca-2/Ortanca-Kapak-Caglayan-Refrigeration.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Ortanca-WT-Cover-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/ortanca-2/Ortanca-WT-Cover-Caglayan-Refrigeration.webp"
+      }
+    ],
+    "urun": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Ortanca-Kapak-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/ortanca-2/Ortanca-Kapak-Caglayan-Refrigeration.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Ortanca-WT-Cover-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/ortanca-2/Ortanca-WT-Cover-Caglayan-Refrigeration.webp"
+      }
+    ],
+    "teknikCizim": []
+  }
+}

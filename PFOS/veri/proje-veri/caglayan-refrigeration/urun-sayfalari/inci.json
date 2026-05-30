@@ -1,0 +1,448 @@
+{
+  "slug": "inci",
+  "baslik": "İNCİ",
+  "tip": "model",
+  "ustSeriSlug": null,
+  "kategoriler": [
+    "semi-vertical-multideck"
+  ],
+  "kapak": "https:\\/\\/caglayanrefrigeration.com\\/wp-content\\/uploads\\/2023\\/03\\/Inci-Kapak.webp",
+  "kapakYol": "gorseller/inci/Inci-Kapak.webp",
+  "linkKaynak": "https://caglayanrefrigeration.com/tr/product/inci/",
+  "cocuklar": [],
+  "ozellikler": [
+    {
+      "baslik": "",
+      "aciklama": "Dairy Products"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Delicatessen"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Drinks"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Fruit and Vegetables"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Meat"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Chicken"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Cheese"
+    },
+    {
+      "baslik": "",
+      "aciklama": "High Efficiency Fans"
+    },
+    {
+      "baslik": "",
+      "aciklama": "LED Lighting"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Ventilated"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Remote Condensing Unit"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Off Cycle Defrost"
+    }
+  ],
+  "teknik": {
+    "akordeon": [],
+    "sekmeler": [
+      {
+        "baslik": "TEKNİK ÇİZİMLER",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-FG-LD-ML_SL-812x1500-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-FG-SKY-ML_SL-812x1500-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-PN-ML_SL-812x1500-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-SRG-ML_SL-812x1500-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-TP-ML_SL-812x1500-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-TP-SKY-ML_SL-812x1500-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-FG-LD-ML_SL-812x1800-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-FG-SKY-ML_SL-812x1800-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-PN-ML_SL-812x1800-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-SRG-ML_SL-812x1800-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-TP-ML_SL-812x1800-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-TP-SKY-ML_SL-812x1800-Model-1.webp"
+        ],
+        "tablolar": []
+      },
+      {
+        "baslik": "TEKNİK DETAYLAR",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-FG-LD-ML_SL-812x1500-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-FG-SKY-ML_SL-812x1500-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-PN-ML_SL-812x1500-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-SRG-ML_SL-812x1500-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-TP-ML_SL-812x1500-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-TP-SKY-ML_SL-812x1500-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-FG-LD-ML_SL-812x1800-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-FG-SKY-ML_SL-812x1800-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-PN-ML_SL-812x1800-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-SRG-ML_SL-812x1800-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-TP-ML_SL-812x1800-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-TP-SKY-ML_SL-812x1800-Model-1.webp"
+        ],
+        "tablolar": []
+      }
+    ],
+    "tablolar": [
+      {
+        "basliklar": [
+          "UZUNLUK / LENGTH (mm)",
+          "YÜKSEKLİK / HEIGHT (mm)",
+          "KAPI TİPİ / DOOR TYPE",
+          "SICAKLIK SINIFI / TEMPERATURE CLASS",
+          "YÜKLEME ALANI / LOADING AREA (m²)",
+          "PANEL KALINLIĞI / END THICKNESS (mm)"
+        ],
+        "satirlar": [
+          [
+            "SRG TP TP SKY FG LD FG SKY",
+            "ML (3M1)",
+            "SL (3M2)",
+            "DERİNLİK / DEPTH (mm)"
+          ],
+          [
+            "815"
+          ],
+          [
+            "937",
+            "1500",
+            "-1 / +1 °C",
+            "0 / +2 °C",
+            "1,47",
+            "50"
+          ],
+          [
+            "1800",
+            "1,71"
+          ],
+          [
+            "1250",
+            "1500",
+            "1,97"
+          ],
+          [
+            "1800",
+            "2,28"
+          ],
+          [
+            "1875",
+            "1500",
+            "2,95"
+          ],
+          [
+            "1800",
+            "3,42"
+          ],
+          [
+            "2500",
+            "1500",
+            "3,93"
+          ],
+          [
+            "1800",
+            "4,56"
+          ],
+          [
+            "2812",
+            "1500",
+            "4,42"
+          ],
+          [
+            "1800",
+            "5,13"
+          ],
+          [
+            "3750",
+            "1500",
+            "5,90"
+          ],
+          [
+            "1800",
+            "6,84"
+          ]
+        ]
+      }
+    ]
+  },
+  "gorseller": {
+    "tum": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Inci.webp",
+        "dosya": "gorseller/inci/Inci.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/milk.webp",
+        "dosya": "gorseller/inci/milk.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/12/Inci-Surgulu.webp",
+        "dosya": "gorseller/inci/Inci-Surgulu.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/12/Inci-Surgulu-2.webp",
+        "dosya": "gorseller/inci/Inci-Surgulu-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-1.webp",
+        "dosya": "gorseller/inci/Inci-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-2.webp",
+        "dosya": "gorseller/inci/Inci-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-3.webp",
+        "dosya": "gorseller/inci/INCI-3.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Inci.pdf",
+        "dosya": "gorseller/inci/Inci.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-FG-LD-ML_SL-812x1500-Model-1.webp",
+        "dosya": "gorseller/inci/INCI-FG-LD-ML_SL-812x1500-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-FG-SKY-ML_SL-812x1500-Model-1.webp",
+        "dosya": "gorseller/inci/INCI-FG-SKY-ML_SL-812x1500-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-PN-ML_SL-812x1500-Model-1.webp",
+        "dosya": "gorseller/inci/INCI-PN-ML_SL-812x1500-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-SRG-ML_SL-812x1500-Model-1.webp",
+        "dosya": "gorseller/inci/INCI-SRG-ML_SL-812x1500-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-TP-ML_SL-812x1500-Model-1.webp",
+        "dosya": "gorseller/inci/INCI-TP-ML_SL-812x1500-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-TP-SKY-ML_SL-812x1500-Model-1.webp",
+        "dosya": "gorseller/inci/INCI-TP-SKY-ML_SL-812x1500-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-FG-LD-ML_SL-812x1800-Model-1.webp",
+        "dosya": "gorseller/inci/INCI-FG-LD-ML_SL-812x1800-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-FG-SKY-ML_SL-812x1800-Model-1.webp",
+        "dosya": "gorseller/inci/INCI-FG-SKY-ML_SL-812x1800-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-PN-ML_SL-812x1800-Model-1.webp",
+        "dosya": "gorseller/inci/INCI-PN-ML_SL-812x1800-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-SRG-ML_SL-812x1800-Model-1.webp",
+        "dosya": "gorseller/inci/INCI-SRG-ML_SL-812x1800-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-TP-ML_SL-812x1800-Model-1.webp",
+        "dosya": "gorseller/inci/INCI-TP-ML_SL-812x1800-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-TP-SKY-ML_SL-812x1800-Model-1.webp",
+        "dosya": "gorseller/inci/INCI-TP-SKY-ML_SL-812x1800-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/circle-bg.webp",
+        "dosya": "gorseller/inci/circle-bg.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/fruit-yogurt.webp",
+        "dosya": "gorseller/inci/fruit-yogurt.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Hook-Bar.webp",
+        "dosya": "gorseller/inci/Inci-Hook-Bar.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Meat-Hanger-Bar.webp",
+        "dosya": "gorseller/inci/Inci-Meat-Hanger-Bar.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Plexi-Product-Divider.webp",
+        "dosya": "gorseller/inci/Inci-Plexi-Product-Divider.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Plexi-Product-Stopper.webp",
+        "dosya": "gorseller/inci/Inci-Plexi-Product-Stopper.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Shelf-Lighting.webp",
+        "dosya": "gorseller/inci/Inci-Shelf-Lighting.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Sliding-Glass.webp",
+        "dosya": "gorseller/inci/Inci-Sliding-Glass.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Wire-Base-Dividder.webp",
+        "dosya": "gorseller/inci/Inci-Wire-Base-Dividder.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Wire-Base.webp",
+        "dosya": "gorseller/inci/Inci-Wire-Base.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Wire-Basket.webp",
+        "dosya": "gorseller/inci/Inci-Wire-Basket.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/inci/pdf-icon.webp"
+      }
+    ],
+    "urun": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Inci.webp",
+        "dosya": "gorseller/inci/Inci.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/milk.webp",
+        "dosya": "gorseller/inci/milk.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/12/Inci-Surgulu.webp",
+        "dosya": "gorseller/inci/Inci-Surgulu.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/12/Inci-Surgulu-2.webp",
+        "dosya": "gorseller/inci/Inci-Surgulu-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-1.webp",
+        "dosya": "gorseller/inci/Inci-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-2.webp",
+        "dosya": "gorseller/inci/Inci-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-3.webp",
+        "dosya": "gorseller/inci/INCI-3.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Inci.pdf",
+        "dosya": "gorseller/inci/Inci.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-PN-ML_SL-812x1500-Model-1.webp",
+        "dosya": "gorseller/inci/INCI-PN-ML_SL-812x1500-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-SRG-ML_SL-812x1500-Model-1.webp",
+        "dosya": "gorseller/inci/INCI-SRG-ML_SL-812x1500-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-TP-ML_SL-812x1500-Model-1.webp",
+        "dosya": "gorseller/inci/INCI-TP-ML_SL-812x1500-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-TP-SKY-ML_SL-812x1500-Model-1.webp",
+        "dosya": "gorseller/inci/INCI-TP-SKY-ML_SL-812x1500-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-PN-ML_SL-812x1800-Model-1.webp",
+        "dosya": "gorseller/inci/INCI-PN-ML_SL-812x1800-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-SRG-ML_SL-812x1800-Model-1.webp",
+        "dosya": "gorseller/inci/INCI-SRG-ML_SL-812x1800-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-TP-ML_SL-812x1800-Model-1.webp",
+        "dosya": "gorseller/inci/INCI-TP-ML_SL-812x1800-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-TP-SKY-ML_SL-812x1800-Model-1.webp",
+        "dosya": "gorseller/inci/INCI-TP-SKY-ML_SL-812x1800-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/circle-bg.webp",
+        "dosya": "gorseller/inci/circle-bg.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/fruit-yogurt.webp",
+        "dosya": "gorseller/inci/fruit-yogurt.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Hook-Bar.webp",
+        "dosya": "gorseller/inci/Inci-Hook-Bar.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Meat-Hanger-Bar.webp",
+        "dosya": "gorseller/inci/Inci-Meat-Hanger-Bar.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Plexi-Product-Divider.webp",
+        "dosya": "gorseller/inci/Inci-Plexi-Product-Divider.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Plexi-Product-Stopper.webp",
+        "dosya": "gorseller/inci/Inci-Plexi-Product-Stopper.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Shelf-Lighting.webp",
+        "dosya": "gorseller/inci/Inci-Shelf-Lighting.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Sliding-Glass.webp",
+        "dosya": "gorseller/inci/Inci-Sliding-Glass.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Wire-Base-Dividder.webp",
+        "dosya": "gorseller/inci/Inci-Wire-Base-Dividder.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Wire-Base.webp",
+        "dosya": "gorseller/inci/Inci-Wire-Base.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Wire-Basket.webp",
+        "dosya": "gorseller/inci/Inci-Wire-Basket.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/inci/pdf-icon.webp"
+      }
+    ],
+    "teknikCizim": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-FG-LD-ML_SL-812x1500-Model-1.webp",
+        "dosya": "gorseller/inci/INCI-FG-LD-ML_SL-812x1500-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-FG-SKY-ML_SL-812x1500-Model-1.webp",
+        "dosya": "gorseller/inci/INCI-FG-SKY-ML_SL-812x1500-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-FG-LD-ML_SL-812x1800-Model-1.webp",
+        "dosya": "gorseller/inci/INCI-FG-LD-ML_SL-812x1800-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/INCI-FG-SKY-ML_SL-812x1800-Model-1.webp",
+        "dosya": "gorseller/inci/INCI-FG-SKY-ML_SL-812x1800-Model-1.webp"
+      }
+    ]
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "slug": "quokka",
+  "wpId": 9080,
+  "title": "Quokka",
+  "baslik": "Quokka",
+  "url": "https://prosogutma.com/urun/quokka/",
+  "attributes": [
+    {
+      "label": "Ürünler",
+      "value": "Et Ürünleri, İçecekler, Süt Ürünleri"
+    },
+    {
+      "label": "Kabin Türü",
+      "value": "Şarküteri Reyonları"
+    },
+    {
+      "label": "Plug-in",
+      "value": "Remote"
+    }
+  ],
+  "categories": [
+    {
+      "name": "Şarküteri Reyonları"
+    }
+  ],
+  "gallery": [
+    {
+      "src": "https://prosogutma.com/wp-content/uploads/2022/05/Quakka.jpg"
+    }
+  ],
+  "tabs": [
+    {
+      "name": "Ürün Hakkında",
+      "html": "<a href=\"https://prosogutma.com/wp-content/uploads/2022/06/quokka.svg\"><img loading=\"lazy\" class=\"alignnone size-full wp-image-10007\" role=\"img\" src=\"https://prosogutma.com/wp-content/uploads/2022/06/quokka.svg\" alt=\"\" width=\"1000\" height=\"116\" /></a></div>\n\t\t\t\t\t\t\t\t\t<div class=\"elementor-tab-title elementor-tab-mobile-title\" aria-selected=\"false\" data-tab=\"2\" role=\"tab\" tabindex=\"-1\" aria-controls=\"elementor-tab-content-1672\" aria-expanded=\"false\">Katalog Sayfası",
+      "links": [
+        {
+          "href": "https://prosogutma.com/wp-content/uploads/2022/06/quokka.svg",
+          "text": "href=\"https://prosogutma.com/wp-content/uploads/2022/06/quokka.svg\""
+        }
+      ],
+      "images": [
+        {
+          "src": "https://prosogutma.com/wp-content/uploads/2022/06/quokka.svg",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "name": "Katalog Sayfası",
+      "html": "<a href=\"https://prosogutma.com/wp-content/uploads/2022/05/QUOKKA.pdf\" target=\"_blank\" rel=\"noopener\">Ürün Kataloğumuzu Gitmek İçin Tıklayınız.</a></div>\n\t\t\t\t\t\t\t\t\t<div class=\"elementor-tab-title elementor-tab-mobile-title\" aria-selected=\"false\" data-tab=\"3\" role=\"tab\" tabindex=\"-1\" aria-controls=\"elementor-tab-content-1673\" aria-expanded=\"false\">Opsiyonlar",
+      "links": [
+        {
+          "href": "https://prosogutma.com/wp-content/uploads/2022/05/QUOKKA.pdf",
+          "text": "href=\"https://prosogutma.com/wp-content/uploads/2022/05/QUOKKA.pdf\""
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "Opsiyonlar",
+      "html": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p></div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t</div>\n\t\t\t\t\t</div>\n\t\t</section>\n\t\t\t\t</div>\n\t\t\n",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Ürün Hakkında",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Katalog Sayfası",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Ürün Kataloğumuzu Gitmek İçin Tıklayınız.",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Opsiyonlar",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+      "html": "",
+      "links": [],
+      "images": []
+    }
+  ],
+  "teknik": {
+    "tablolar": [
+      {
+        "basliklar": [
+          "Ürünler",
+          "Kabin Türü",
+          "Plug-in"
+        ],
+        "satirlar": [
+          [
+            "Ürünler",
+            "Et Ürünleri, İçecekler, Süt Ürünleri"
+          ],
+          [
+            "Kabin Türü",
+            "Şarküteri Reyonları"
+          ],
+          [
+            "Plug-in",
+            "Remote"
+          ]
+        ]
+      }
+    ],
+    "pdfText": "www.prosogutma.com\r\nQUOKKA\r\nDAIRY PRODUCTS\r\nPOULTRY\r\nMEAT\r\nCHEESE\r\nDELICATESSEN\r\nGASTRONOMY\r\nDRINKS\r\nCategories  / Kategoriler\r\nTechnicial Specifications  / Teknik Özellikler\r\nOperating Temperatures\r\nÇalışma Sıcaklıkları\r\nAmbient Conditions\r\nOrtam Koşulları\r\nM1 (-1/+5°C) -  M2 (-1/+7°C)\r\n25°C / 60% RH (EN ISO 23953-2)\r\nAvailable Modules / Kullanılabilir Modüller\r\nLength (mm)\r\nUzunluk (mm)\r\n937\r\n1250\r\n1875\r\n2500\r\n3750\r\nCorner Modules\r\nKöşe Modüller \r\nSide panel (mm)\r\nYan kapak (mm)\r\n40\r\n40\r\n40\r\n40\r\n40\r\n40\r\nRefrigerated, Combined Serve Over Counter With Flat Glas\r\nDüz Camlı, Soğutmalı Kombine Servis Reyonu\r\n34 / 34\r\n",
+    "pdfUrl": "https://prosogutma.com/wp-content/uploads/2022/05/QUOKKA.pdf",
+    "pdfLocal": "media/products/quokka/pdfs/QUOKKA.pdf"
+  },
+  "pdfText": "www.prosogutma.com\r\nQUOKKA\r\nDAIRY PRODUCTS\r\nPOULTRY\r\nMEAT\r\nCHEESE\r\nDELICATESSEN\r\nGASTRONOMY\r\nDRINKS\r\nCategories  / Kategoriler\r\nTechnicial Specifications  / Teknik Özellikler\r\nOperating Temperatures\r\nÇalışma Sıcaklıkları\r\nAmbient Conditions\r\nOrtam Koşulları\r\nM1 (-1/+5°C) -  M2 (-1/+7°C)\r\n25°C / 60% RH (EN ISO 23953-2)\r\nAvailable Modules / Kullanılabilir Modüller\r\nLength (mm)\r\nUzunluk (mm)\r\n937\r\n1250\r\n1875\r\n2500\r\n3750\r\nCorner Modules\r\nKöşe Modüller \r\nSide panel (mm)\r\nYan kapak (mm)\r\n40\r\n40\r\n40\r\n40\r\n40\r\n40\r\nRefrigerated, Combined Serve Over Counter With Flat Glas\r\nDüz Camlı, Soğutmalı Kombine Servis Reyonu\r\n34 / 34\r\n",
+  "scrapedAt": "2026-05-28T23:53:13.876Z"
+}

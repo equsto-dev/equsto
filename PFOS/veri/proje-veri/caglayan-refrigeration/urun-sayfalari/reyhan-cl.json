@@ -1,0 +1,343 @@
+{
+  "slug": "reyhan-cl",
+  "baslik": "REYHAN CL",
+  "tip": "model",
+  "ustSeriSlug": "reyhan",
+  "kategoriler": [
+    "reyhan-en"
+  ],
+  "kapak": "https:\\/\\/caglayanrefrigeration.com\\/wp-content\\/uploads\\/2023\\/05\\/Reyhan-Kapak.webp",
+  "kapakYol": "gorseller/reyhan-cl/Reyhan-Kapak.webp",
+  "linkKaynak": "https://caglayanrefrigeration.com/tr/product/reyhan-cl/",
+  "cocuklar": [],
+  "ozellikler": [
+    {
+      "baslik": "",
+      "aciklama": "Fruit and Vegetables"
+    },
+    {
+      "baslik": "",
+      "aciklama": "High Efficiency Fans"
+    },
+    {
+      "baslik": "",
+      "aciklama": "LED Lighting"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Ventilated"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Off Cycle Defrost"
+    }
+  ],
+  "teknik": {
+    "akordeon": [],
+    "sekmeler": [
+      {
+        "baslik": "TEKNİK DETAYLAR",
+        "gorseller": [],
+        "tablolar": [
+          {
+            "basliklar": [
+              "UZUNLUK / LENGTH",
+              "YÜKSEKLİK / HEIGHT",
+              "SICAKLIK SINIFI / TEMPERATURE CLASS",
+              "YÜKLEME ALANI / LOADING AREA",
+              "PANEL KALINLIĞI / END THICKNESS"
+            ],
+            "satirlar": [
+              [
+                "mm",
+                "FL (3H1)",
+                "m²",
+                "mm"
+              ],
+              [
+                "°C",
+                "DERİNLİK / DEPTH (mm)",
+                "40"
+              ],
+              [
+                "1020"
+              ],
+              [
+                "1250",
+                "1070",
+                "-6 / +4",
+                "1,01"
+              ],
+              [
+                "1875",
+                "1,51"
+              ],
+              [
+                "2500",
+                "2,01"
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "tablolar": [
+      {
+        "basliklar": [
+          "UZUNLUK / LENGTH",
+          "YÜKSEKLİK / HEIGHT",
+          "SICAKLIK SINIFI / TEMPERATURE CLASS",
+          "YÜKLEME ALANI / LOADING AREA",
+          "PANEL KALINLIĞI / END THICKNESS"
+        ],
+        "satirlar": [
+          [
+            "mm",
+            "FL (3H1)",
+            "m²",
+            "mm"
+          ],
+          [
+            "°C",
+            "DERİNLİK / DEPTH (mm)",
+            "40"
+          ],
+          [
+            "1020"
+          ],
+          [
+            "1250",
+            "1070",
+            "-6 / +4",
+            "1,01"
+          ],
+          [
+            "1875",
+            "1,51"
+          ],
+          [
+            "2500",
+            "2,01"
+          ]
+        ]
+      },
+      {
+        "basliklar": [
+          "UZUNLUK / LENGTH (mm)",
+          "YÜKSEKLİK / HEIGHT (mm)",
+          "SICAKLIK SINIFI / TEMPERATURE CLASS",
+          "YÜKLEME ALANI / LOADING AREA (m²)",
+          "PANEL KALINLIĞI / END THICKNESS (mm)"
+        ],
+        "satirlar": [
+          [
+            "FL (3H1)",
+            "DERİNLİK / DEPTH (mm)"
+          ],
+          [
+            "1020"
+          ],
+          [
+            "1250",
+            "1070",
+            "+4 / +6 °C",
+            "1,01",
+            "25"
+          ],
+          [
+            "1875",
+            "1,51"
+          ],
+          [
+            "2500",
+            "2,01"
+          ]
+        ]
+      }
+    ]
+  },
+  "gorseller": {
+    "tum": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/Reyhan-1.webp",
+        "dosya": "gorseller/reyhan-cl/Reyhan-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/vegetables-1.webp",
+        "dosya": "gorseller/reyhan-cl/vegetables-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/REYHAN-JPG-R.png",
+        "dosya": "gorseller/reyhan-cl/REYHAN-JPG-R.png"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Reyhan-Ada-1.webp",
+        "dosya": "gorseller/reyhan-cl/Reyhan-Ada-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Reyhan-Ada-2.webp",
+        "dosya": "gorseller/reyhan-cl/Reyhan-Ada-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Reyhan-Kesit-1.webp",
+        "dosya": "gorseller/reyhan-cl/Reyhan-Kesit-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/REYHAN-CL-Model.webp",
+        "dosya": "gorseller/reyhan-cl/REYHAN-CL-Model.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/REYHAN-CL-PLG-Model.webp",
+        "dosya": "gorseller/reyhan-cl/REYHAN-CL-PLG-Model.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Reyhan.pdf",
+        "dosya": "gorseller/reyhan-cl/Reyhan.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/circle-bg.webp",
+        "dosya": "gorseller/reyhan-cl/circle-bg.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/vegetables-2.webp",
+        "dosya": "gorseller/reyhan-cl/vegetables-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/reyhan-cl/pdf-icon.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/Circle.webp",
+        "dosya": "gorseller/reyhan-cl/Circle.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Hook-Bar.webp",
+        "dosya": "gorseller/reyhan-cl/Inci-Hook-Bar.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Meat-Hanger-Bar.webp",
+        "dosya": "gorseller/reyhan-cl/Inci-Meat-Hanger-Bar.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Plexi-Product-Divider.webp",
+        "dosya": "gorseller/reyhan-cl/Inci-Plexi-Product-Divider.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Plexi-Product-Stopper.webp",
+        "dosya": "gorseller/reyhan-cl/Inci-Plexi-Product-Stopper.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Shelf-Lighting.webp",
+        "dosya": "gorseller/reyhan-cl/Inci-Shelf-Lighting.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Sliding-Glass.webp",
+        "dosya": "gorseller/reyhan-cl/Inci-Sliding-Glass.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Wire-Base-Dividder.webp",
+        "dosya": "gorseller/reyhan-cl/Inci-Wire-Base-Dividder.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Wire-Base.webp",
+        "dosya": "gorseller/reyhan-cl/Inci-Wire-Base.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Wire-Basket.webp",
+        "dosya": "gorseller/reyhan-cl/Inci-Wire-Basket.webp"
+      }
+    ],
+    "urun": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/Reyhan-1.webp",
+        "dosya": "gorseller/reyhan-cl/Reyhan-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/vegetables-1.webp",
+        "dosya": "gorseller/reyhan-cl/vegetables-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/REYHAN-JPG-R.png",
+        "dosya": "gorseller/reyhan-cl/REYHAN-JPG-R.png"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Reyhan-Ada-1.webp",
+        "dosya": "gorseller/reyhan-cl/Reyhan-Ada-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Reyhan-Ada-2.webp",
+        "dosya": "gorseller/reyhan-cl/Reyhan-Ada-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/REYHAN-CL-Model.webp",
+        "dosya": "gorseller/reyhan-cl/REYHAN-CL-Model.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/REYHAN-CL-PLG-Model.webp",
+        "dosya": "gorseller/reyhan-cl/REYHAN-CL-PLG-Model.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Reyhan.pdf",
+        "dosya": "gorseller/reyhan-cl/Reyhan.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/circle-bg.webp",
+        "dosya": "gorseller/reyhan-cl/circle-bg.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/vegetables-2.webp",
+        "dosya": "gorseller/reyhan-cl/vegetables-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/reyhan-cl/pdf-icon.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/Circle.webp",
+        "dosya": "gorseller/reyhan-cl/Circle.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Hook-Bar.webp",
+        "dosya": "gorseller/reyhan-cl/Inci-Hook-Bar.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Meat-Hanger-Bar.webp",
+        "dosya": "gorseller/reyhan-cl/Inci-Meat-Hanger-Bar.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Plexi-Product-Divider.webp",
+        "dosya": "gorseller/reyhan-cl/Inci-Plexi-Product-Divider.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Plexi-Product-Stopper.webp",
+        "dosya": "gorseller/reyhan-cl/Inci-Plexi-Product-Stopper.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Shelf-Lighting.webp",
+        "dosya": "gorseller/reyhan-cl/Inci-Shelf-Lighting.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Sliding-Glass.webp",
+        "dosya": "gorseller/reyhan-cl/Inci-Sliding-Glass.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Wire-Base-Dividder.webp",
+        "dosya": "gorseller/reyhan-cl/Inci-Wire-Base-Dividder.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Wire-Base.webp",
+        "dosya": "gorseller/reyhan-cl/Inci-Wire-Base.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Inci-Wire-Basket.webp",
+        "dosya": "gorseller/reyhan-cl/Inci-Wire-Basket.webp"
+      }
+    ],
+    "teknikCizim": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Reyhan-Kesit-1.webp",
+        "dosya": "gorseller/reyhan-cl/Reyhan-Kesit-1.webp"
+      }
+    ]
+  }
+}

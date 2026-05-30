@@ -1,0 +1,228 @@
+{
+  "kategoriId": "birahane",
+  "bantId": "100-300",
+  "label": "Birahane 100–300 m²",
+  "referansM2": 200,
+  "kaynakDosya": "11 BIRAHANE.xlsx",
+  "yukleme": "2026-05-30T10:22:13.449Z",
+  "kalemSayisi": 27,
+  "toplamAdet": 37,
+  "kalemler": [
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A1",
+      "ad": "İSTİF RAFI",
+      "olcu": "152*46*160",
+      "adet": 2
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A2",
+      "ad": "BLOK KAPAKLI DERİN DONDURUCU",
+      "olcu": "400 lt.",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "B1",
+      "ad": "PANEL TİP SOĞUK ODA",
+      "olcu": "230*275*240",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "B2",
+      "ad": "İSTİF RAFI",
+      "olcu": "152*46*160",
+      "adet": 2
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "C1",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "180*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "C2",
+      "ad": "DUVAR RAFI",
+      "olcu": "180*30*3",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "C3",
+      "ad": "BARDAK YIKAMA MAKİNASI, SETALTI",
+      "olcu": "500 Tb/saat",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "C4",
+      "ad": "ÇÖP ARABASI",
+      "olcu": "Ø40*50",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "D1",
+      "ad": "IZGARA, GAZLI, SETÜSTÜ",
+      "olcu": "80*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "D2",
+      "ad": "PATATES DİNLENDİRME, SETÜSTÜ",
+      "olcu": "40*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "D3",
+      "ad": "FRİTÖZ, ÇİFT SEPETLİ, ELK., SETÜSTÜ",
+      "olcu": "80*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "D4",
+      "ad": "FRİTÖZ, TEK SEPETLİ, ELK., SETÜSTÜ",
+      "olcu": "40*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "D5",
+      "ad": "ÇALIŞMA TEZGAHI",
+      "olcu": "190*80*85",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "D6",
+      "ad": "SETALTI DERİN DONDURUCU",
+      "olcu": "60*60*85",
+      "adet": 3
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "D7",
+      "ad": "TOST MAKİNASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "D8",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+      "olcu": "240*97*50",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "E1",
+      "ad": "BAR ARKASI FIÇI TEZGAHI, DOLAPLI",
+      "olcu": "230*80*85",
+      "adet": 4
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "E2",
+      "ad": "KASA TEZGAHI",
+      "olcu": "140*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "E3",
+      "ad": "CAM KAPILI TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+      "olcu": "188*60*85",
+      "adet": 3
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "E4",
+      "ad": "PREMIX TEZGAHI, DOLAPLI",
+      "olcu": "180*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "E5",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "180*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "E6",
+      "ad": "BUZ MAKİNASI",
+      "olcu": "42 kg/gün",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "E7",
+      "ad": "BARDAK YIKAMA MAKİNASI",
+      "olcu": "60*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "E8",
+      "ad": "SİNEK ÖLDÜRÜCÜ",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "Y1",
+      "ad": "YER IZGARASI",
+      "olcu": "30*30*14",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "Y2",
+      "ad": "YER IZGARASI",
+      "olcu": "95*30*14",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "Y3",
+      "ad": "YER IZGARASI",
+      "olcu": "180*30*14",
+      "adet": 2
+    }
+  ]
+}

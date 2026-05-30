@@ -16,8 +16,8 @@ import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import {
   PFOS_KONSEPT_SHOP_TYPES,
+  enrichShopTypesFromFile,
   mergeShopTypes,
-  normalizeShopType,
   type ShopTypeKayit,
 } from "@/lib/pfos/proje-akis/konsept-tanimlari";
 import { DEFAULT_WIZARD_QUESTIONS } from "@/lib/pfos/proje-akis/wizard-questions";
@@ -62,6 +62,9 @@ export default function PfosProjeAkisPanel() {
     if (!Array.isArray(loaded.questions) || loaded.questions.length === 0) {
       loaded.questions = DEFAULT_WIZARD_QUESTIONS;
     }
+    if (Array.isArray(loaded.shopTypes)) {
+      loaded.shopTypes = enrichShopTypesFromFile(loaded.shopTypes);
+    }
     setData(loaded);
     setLoading(false);
   }, []);
@@ -84,8 +87,8 @@ export default function PfosProjeAkisPanel() {
     message.success("proje-akis.json kaydedildi");
   };
 
-  const shopTypes = ((data?.shopTypes ?? []) as Record<string, unknown>[]).map(
-    normalizeShopType,
+  const shopTypes = enrichShopTypesFromFile(
+    Array.isArray(data?.shopTypes) ? data.shopTypes : [],
   );
   const questions = (data?.questions ?? []) as Record<string, unknown>[];
   const rules = (data?.rules ?? []) as RuleRow[];

@@ -1,0 +1,58 @@
+{
+  "slug": "papatya",
+  "baslik": "PAPATYA",
+  "tip": "seri",
+  "ustSeriSlug": null,
+  "kategoriler": [
+    "vertical-freezers"
+  ],
+  "kapak": "https:\\/\\/caglayanrefrigeration.com\\/wp-content\\/uploads\\/2023\\/05\\/Papatya-Kapak.webp",
+  "kapakYol": "gorseller/papatya/Papatya-Kapak.webp",
+  "linkKaynak": "https://caglayanrefrigeration.com/tr/product/papatya/",
+  "cocuklar": [
+    {
+      "slug": "papatya-nv",
+      "ad": "PAPATYA NV",
+      "link": "https://caglayanrefrigeration.com/tr/product/papatya-nv/",
+      "kapak": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Papatya-NV-LM-Kapak-Caglayan-Refrigeration.webp",
+      "kapakYol": "gorseller/papatya/Papatya-NV-LM-Kapak-Caglayan-Refrigeration.webp"
+    },
+    {
+      "slug": "papatya-hf",
+      "ad": "PAPATYA HF",
+      "link": "https://caglayanrefrigeration.com/tr/product/papatya-hf/",
+      "kapak": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Papatya-Kapak.webp",
+      "kapakYol": "gorseller/papatya/Papatya-Kapak.webp"
+    }
+  ],
+  "ozellikler": [],
+  "teknik": {
+    "akordeon": [],
+    "sekmeler": [],
+    "tablolar": []
+  },
+  "gorseller": {
+    "tum": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Papatya-NV-LM-Kapak-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/papatya/Papatya-NV-LM-Kapak-Caglayan-Refrigeration.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Papatya-Kapak.webp",
+        "dosya": "gorseller/papatya/Papatya-Kapak.webp"
+      }
+    ],
+    "urun": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Papatya-Kapak.webp",
+        "dosya": "gorseller/papatya/Papatya-Kapak.webp"
+      }
+    ],
+    "teknikCizim": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Papatya-NV-LM-Kapak-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/papatya/Papatya-NV-LM-Kapak-Caglayan-Refrigeration.webp"
+      }
+    ]
+  }
+}

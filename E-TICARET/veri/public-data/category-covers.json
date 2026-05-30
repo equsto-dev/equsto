@@ -1,0 +1,24 @@
+{
+  "version": "1",
+  "updated": "2026-05-21",
+  "byDept": {
+    "icecek": "/images/catalog/ozti/p411/ozti-8224-0st20-00.jpg",
+    "pisirme": "/images/catalog/atalay/p7/atalay-e-aei---360.jpg",
+    "araba": "/images/catalog/atalay/p117/atalay-adk-102.jpg",
+    "davlumbaz": "/images/catalog/ozti/p285/ozti-7885-25155-00.jpg",
+    "dolap": "/images/catalog/ozti/p97/ozti-7868-98987-md.jpg",
+    "hazirlik": "/images/catalog/ozti/p135/ozti-9810-hl200-21.jpg",
+    "istif": "/images/catalog/ozti/p284/ozti-8897-11ip4-073.jpg",
+    "kahve": "/images/catalog/ozti/p453/ozti-8593-su080-00.jpg",
+    "set-ustu-mutfak": "/images/catalog/ozti/p50/ozti-6260-00072-70.jpg",
+    "sogutma": "/images/catalog/ozti/p200/ozti-9805-im240x-nhc.jpg",
+    "tasima": "/images/catalog/ozti/p445/ozti-8868-mwp30-10.jpg",
+    "tezgah": "/images/catalog/ozti/p49/ozti-7911-n1-40703-00.jpg",
+    "yikama": "/images/catalog/ozti/p238/ozti-7711-07075-24.jpg"
+  },
+  "byGo": {
+    "pfos": "/images/pfos/mutfak-plani-referans.jpg?v=20260522pfosplan",
+    "besos": "/images/home/hero-bar-cocktailstation.png",
+    "marketReyon": "/images/catalog/ozti/p200/ozti-9805-im240x-nhc.jpg"
+  }
+}

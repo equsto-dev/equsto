@@ -1,0 +1,620 @@
+{
+  "slug": "acelya",
+  "baslik": "AÇELYA",
+  "tip": "model",
+  "ustSeriSlug": null,
+  "kategoriler": [
+    "serve-over-cabinets"
+  ],
+  "kapak": "https:\\/\\/caglayanrefrigeration.com\\/wp-content\\/uploads\\/2023\\/02\\/Acelya-Kapak.webp",
+  "kapakYol": "gorseller/acelya/Acelya-Kapak.webp",
+  "linkKaynak": "https://caglayanrefrigeration.com/tr/product/acelya/",
+  "cocuklar": [],
+  "ozellikler": [
+    {
+      "baslik": "",
+      "aciklama": "Meat"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Chicken"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Cheese"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Olive"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Delicatessen"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Dairy Products"
+    },
+    {
+      "baslik": "",
+      "aciklama": "High Efficiency Fans"
+    },
+    {
+      "baslik": "",
+      "aciklama": "LED Lighting"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Ventilated"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Off Cycle Defrost"
+    }
+  ],
+  "teknik": {
+    "akordeon": [
+      {
+        "baslik": "AÇELYA LM AD",
+        "sekmeler": [
+          {
+            "baslik": "TEKNİK ÇİZİMLER",
+            "gorseller": [
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-FG-SL_ML-1050-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-FG-SL_ML-1150-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-FG-SL_ML-1250-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-HG-SL_ML-1050-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-HG-SL_ML-1150-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-HG-SL_ML-1250-Model-1.webp"
+            ],
+            "tablolar": []
+          },
+          {
+            "baslik": "TEKNİK DETAYLAR",
+            "gorseller": [
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-FG-SL_ML-1050-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-FG-SL_ML-1150-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-FG-SL_ML-1250-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-HG-SL_ML-1050-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-HG-SL_ML-1150-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-HG-SL_ML-1250-Model-1.webp"
+            ],
+            "tablolar": []
+          }
+        ],
+        "tablolar": [
+          {
+            "basliklar": [
+              "UZUNLUK / LENGTH (mm)",
+              "YÜKSEKLİK / HEIGHT (mm)",
+              "SICAKLIK SINIFI / TEMPERATURE CLASS",
+              "YÜKLEME ALANI / LOADING AREA (m²)",
+              "PANEL KALINLIĞI / END THICKNESS (mm)"
+            ],
+            "satirlar": [
+              [
+                "ML (3M1)",
+                "SL (3M2)",
+                "DERİNLİK / DEPTH (mm)"
+              ],
+              [
+                "1050",
+                "1150",
+                "1250"
+              ],
+              [
+                "937",
+                "900",
+                "-1 / +1 °C",
+                "0 / +2 °C",
+                "0,74",
+                "0,83",
+                "0,93",
+                "25"
+              ],
+              [
+                "1200"
+              ],
+              [
+                "1250",
+                "900",
+                "0,99",
+                "1,11",
+                "1,24"
+              ],
+              [
+                "1200"
+              ],
+              [
+                "1875",
+                "900",
+                "1,48",
+                "1,67",
+                "1,86"
+              ],
+              [
+                "1200"
+              ],
+              [
+                "2500",
+                "900",
+                "1,98",
+                "2,23",
+                "2,48"
+              ],
+              [
+                "1200"
+              ],
+              [
+                "2812",
+                "900",
+                "2,22",
+                "2,50",
+                "2,78"
+              ],
+              [
+                "1200"
+              ]
+            ]
+          }
+        ],
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-FG-SL_ML-1050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-FG-SL_ML-1150-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-FG-SL_ML-1250-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-HG-SL_ML-1050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-HG-SL_ML-1150-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-HG-SL_ML-1250-Model-1.webp"
+        ]
+      }
+    ],
+    "sekmeler": [
+      {
+        "baslik": "TEKNİK ÇİZİMLER",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-FG-SL_ML-1050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-FG-SL_ML-1150-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-FG-SL_ML-1250-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-HG-SL_ML-1050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-HG-SL_ML-1150-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-HG-SL_ML-1250-Model-1.webp"
+        ],
+        "tablolar": []
+      },
+      {
+        "baslik": "TEKNİK DETAYLAR",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-FG-SL_ML-1050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-FG-SL_ML-1150-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-FG-SL_ML-1250-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-HG-SL_ML-1050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-HG-SL_ML-1150-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-HG-SL_ML-1250-Model-1.webp"
+        ],
+        "tablolar": []
+      },
+      {
+        "baslik": "TEKNİK ÇİZİMLER",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-MC-FG-SL_ML-1050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-MC-FG-SL_ML-1150-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-MC-FG-SL_ML-1250-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-MC-HG-SL_ML-1050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-MC-HG-SL_ML-1150-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-MC-HG-SL_ML-1250-Model-1.webp"
+        ],
+        "tablolar": []
+      },
+      {
+        "baslik": "TEKNİK DETAYLAR",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-MC-FG-SL_ML-1050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-MC-FG-SL_ML-1150-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-MC-FG-SL_ML-1250-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-MC-HG-SL_ML-1050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-MC-HG-SL_ML-1150-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-MC-HG-SL_ML-1250-Model-1.webp"
+        ],
+        "tablolar": []
+      }
+    ],
+    "tablolar": [
+      {
+        "basliklar": [
+          "UZUNLUK / LENGTH (mm)",
+          "YÜKSEKLİK / HEIGHT (mm)",
+          "SICAKLIK SINIFI / TEMPERATURE CLASS",
+          "YÜKLEME ALANI / LOADING AREA (m²)",
+          "PANEL KALINLIĞI / END THICKNESS (mm)"
+        ],
+        "satirlar": [
+          [
+            "ML (3M1)",
+            "SL (3M2)",
+            "DERİNLİK / DEPTH (mm)"
+          ],
+          [
+            "1050",
+            "1150",
+            "1250"
+          ],
+          [
+            "937",
+            "900",
+            "-1 / +1 °C",
+            "0 / +2 °C",
+            "0,74",
+            "0,83",
+            "0,93",
+            "25"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "1250",
+            "900",
+            "0,99",
+            "1,11",
+            "1,24"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "1875",
+            "900",
+            "1,48",
+            "1,67",
+            "1,86"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "2500",
+            "900",
+            "1,98",
+            "2,23",
+            "2,48"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "2812",
+            "900",
+            "2,22",
+            "2,50",
+            "2,78"
+          ],
+          [
+            "1200"
+          ]
+        ]
+      },
+      {
+        "basliklar": [
+          "UZUNLUK / LENGTH (mm)",
+          "YÜKSEKLİK / HEIGHT (mm)",
+          "SICAKLIK SINIFI / TEMPERATURE CLASS",
+          "YÜKLEME ALANI / LOADING AREA (m²)",
+          "PANEL KALINLIĞI / END THICKNESS (mm)"
+        ],
+        "satirlar": [
+          [
+            "ML (3M1)",
+            "SL (3M2)",
+            "DERİNLİK / DEPTH (mm)"
+          ],
+          [
+            "1050",
+            "1150",
+            "1250"
+          ],
+          [
+            "937",
+            "900",
+            "-1 / +1 °C",
+            "0 / +2 °C",
+            "0,74",
+            "0,83",
+            "0,93",
+            "25"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "1250",
+            "900",
+            "0,99",
+            "1,11",
+            "1,24"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "1875",
+            "900",
+            "1,48",
+            "1,67",
+            "1,86"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "2500",
+            "900",
+            "1,98",
+            "2,23",
+            "2,48"
+          ],
+          [
+            "1200"
+          ],
+          [
+            "2812",
+            "900",
+            "2,22",
+            "2,50",
+            "2,78"
+          ],
+          [
+            "1200"
+          ]
+        ]
+      }
+    ]
+  },
+  "gorseller": {
+    "tum": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Acelya.webp",
+        "dosya": "gorseller/acelya/Acelya.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/meat.webp",
+        "dosya": "gorseller/acelya/meat.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Acelya-1.webp",
+        "dosya": "gorseller/acelya/Acelya-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-2.webp",
+        "dosya": "gorseller/acelya/ACELYA-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-SELF-SERVIS.webp",
+        "dosya": "gorseller/acelya/ACELYA-SELF-SERVIS.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Acelya.pdf",
+        "dosya": "gorseller/acelya/Acelya.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-FG-SL_ML-1050-Model-1.webp",
+        "dosya": "gorseller/acelya/ACELYA-LM-AD-FG-SL_ML-1050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-FG-SL_ML-1150-Model-1.webp",
+        "dosya": "gorseller/acelya/ACELYA-LM-AD-FG-SL_ML-1150-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-FG-SL_ML-1250-Model-1.webp",
+        "dosya": "gorseller/acelya/ACELYA-LM-AD-FG-SL_ML-1250-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-HG-SL_ML-1050-Model-1.webp",
+        "dosya": "gorseller/acelya/ACELYA-LM-AD-HG-SL_ML-1050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-HG-SL_ML-1150-Model-1.webp",
+        "dosya": "gorseller/acelya/ACELYA-LM-AD-HG-SL_ML-1150-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-HG-SL_ML-1250-Model-1.webp",
+        "dosya": "gorseller/acelya/ACELYA-LM-AD-HG-SL_ML-1250-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-MC-FG-SL_ML-1050-Model-1.webp",
+        "dosya": "gorseller/acelya/ACELYA-LM-MC-FG-SL_ML-1050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-MC-FG-SL_ML-1150-Model-1.webp",
+        "dosya": "gorseller/acelya/ACELYA-LM-MC-FG-SL_ML-1150-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-MC-FG-SL_ML-1250-Model-1.webp",
+        "dosya": "gorseller/acelya/ACELYA-LM-MC-FG-SL_ML-1250-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-MC-HG-SL_ML-1050-Model-1.webp",
+        "dosya": "gorseller/acelya/ACELYA-LM-MC-HG-SL_ML-1050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-MC-HG-SL_ML-1150-Model-1.webp",
+        "dosya": "gorseller/acelya/ACELYA-LM-MC-HG-SL_ML-1150-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-MC-HG-SL_ML-1250-Model-1.webp",
+        "dosya": "gorseller/acelya/ACELYA-LM-MC-HG-SL_ML-1250-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/circle-bg.webp",
+        "dosya": "gorseller/acelya/circle-bg.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/meat-2.webp",
+        "dosya": "gorseller/acelya/meat-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Scale-Equipment.webp",
+        "dosya": "gorseller/acelya/Sardunya-Scale-Equipment.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Bag-Storage.webp",
+        "dosya": "gorseller/acelya/Sardunya-Bag-Storage.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Polyamide-Cuting-Pan.webp",
+        "dosya": "gorseller/acelya/Sardunya-Polyamide-Cuting-Pan.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Basket-Bar.webp",
+        "dosya": "gorseller/acelya/Sardunya-Basket-Bar.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Plexi-Glass-Sliding.webp",
+        "dosya": "gorseller/acelya/Sardunya-Plexi-Glass-Sliding.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Glass-Product-Divider.webp",
+        "dosya": "gorseller/acelya/Sardunya-Glass-Product-Divider.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Tiered-Pan.webp",
+        "dosya": "gorseller/acelya/Sardunya-Tiered-Pan.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Module-Divider.webp",
+        "dosya": "gorseller/acelya/Sardunya-Module-Divider.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Meat-Light.webp",
+        "dosya": "gorseller/acelya/Sardunya-Meat-Light.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/acelya/pdf-icon.webp"
+      }
+    ],
+    "urun": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Acelya.webp",
+        "dosya": "gorseller/acelya/Acelya.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/meat.webp",
+        "dosya": "gorseller/acelya/meat.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Acelya-1.webp",
+        "dosya": "gorseller/acelya/Acelya-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-2.webp",
+        "dosya": "gorseller/acelya/ACELYA-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-SELF-SERVIS.webp",
+        "dosya": "gorseller/acelya/ACELYA-SELF-SERVIS.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Acelya.pdf",
+        "dosya": "gorseller/acelya/Acelya.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/circle-bg.webp",
+        "dosya": "gorseller/acelya/circle-bg.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/meat-2.webp",
+        "dosya": "gorseller/acelya/meat-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Scale-Equipment.webp",
+        "dosya": "gorseller/acelya/Sardunya-Scale-Equipment.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Bag-Storage.webp",
+        "dosya": "gorseller/acelya/Sardunya-Bag-Storage.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Polyamide-Cuting-Pan.webp",
+        "dosya": "gorseller/acelya/Sardunya-Polyamide-Cuting-Pan.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Basket-Bar.webp",
+        "dosya": "gorseller/acelya/Sardunya-Basket-Bar.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Plexi-Glass-Sliding.webp",
+        "dosya": "gorseller/acelya/Sardunya-Plexi-Glass-Sliding.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Glass-Product-Divider.webp",
+        "dosya": "gorseller/acelya/Sardunya-Glass-Product-Divider.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Tiered-Pan.webp",
+        "dosya": "gorseller/acelya/Sardunya-Tiered-Pan.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Module-Divider.webp",
+        "dosya": "gorseller/acelya/Sardunya-Module-Divider.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Sardunya-Meat-Light.webp",
+        "dosya": "gorseller/acelya/Sardunya-Meat-Light.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/acelya/pdf-icon.webp"
+      }
+    ],
+    "teknikCizim": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-FG-SL_ML-1050-Model-1.webp",
+        "dosya": "gorseller/acelya/ACELYA-LM-AD-FG-SL_ML-1050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-FG-SL_ML-1150-Model-1.webp",
+        "dosya": "gorseller/acelya/ACELYA-LM-AD-FG-SL_ML-1150-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-FG-SL_ML-1250-Model-1.webp",
+        "dosya": "gorseller/acelya/ACELYA-LM-AD-FG-SL_ML-1250-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-HG-SL_ML-1050-Model-1.webp",
+        "dosya": "gorseller/acelya/ACELYA-LM-AD-HG-SL_ML-1050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-HG-SL_ML-1150-Model-1.webp",
+        "dosya": "gorseller/acelya/ACELYA-LM-AD-HG-SL_ML-1150-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-AD-HG-SL_ML-1250-Model-1.webp",
+        "dosya": "gorseller/acelya/ACELYA-LM-AD-HG-SL_ML-1250-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-MC-FG-SL_ML-1050-Model-1.webp",
+        "dosya": "gorseller/acelya/ACELYA-LM-MC-FG-SL_ML-1050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-MC-FG-SL_ML-1150-Model-1.webp",
+        "dosya": "gorseller/acelya/ACELYA-LM-MC-FG-SL_ML-1150-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-MC-FG-SL_ML-1250-Model-1.webp",
+        "dosya": "gorseller/acelya/ACELYA-LM-MC-FG-SL_ML-1250-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-MC-HG-SL_ML-1050-Model-1.webp",
+        "dosya": "gorseller/acelya/ACELYA-LM-MC-HG-SL_ML-1050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-MC-HG-SL_ML-1150-Model-1.webp",
+        "dosya": "gorseller/acelya/ACELYA-LM-MC-HG-SL_ML-1150-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ACELYA-LM-MC-HG-SL_ML-1250-Model-1.webp",
+        "dosya": "gorseller/acelya/ACELYA-LM-MC-HG-SL_ML-1250-Model-1.webp"
+      }
+    ]
+  }
+}

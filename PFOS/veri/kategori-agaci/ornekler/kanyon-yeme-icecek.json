@@ -1,0 +1,215 @@
+{
+  "version": "1",
+  "kaynak": "https://menuburada.com/araclar/avm-listesi-ve-restoranlari/kanyon-avm-levent-istanbul",
+  "kaynakId": "kanyon",
+  "kaynakAd": "Kanyon Levent listesi",
+  "guncelleme": "2026-05-24T18:03:19.882537+00:00",
+  "isletmeSayisi": 41,
+  "isletmeler": [
+    {
+      "id": "backhaus-levent-kanyon-avm-istanbul",
+      "ad": "Backhaus",
+      "url": "https://menuburada.com/backhaus-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "burger-king-levent-kanyon-avm-istanbul",
+      "ad": "Burger King",
+      "url": "https://menuburada.com/burger-king-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "can-oba-levent-kanyon-avm-istanbul",
+      "ad": "Can Oba",
+      "url": "https://menuburada.com/can-oba-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "carluccios-levent-kanyon-avm-istanbul",
+      "ad": "Carluccios",
+      "url": "https://menuburada.com/carluccios-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "dean-deluca-levent-kanyon-avm-istanbul",
+      "ad": "Dean & Deluca",
+      "url": "https://menuburada.com/dean-deluca-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "edirne-kirkpinar-lokantasi-levent-kanyon-avm-istanbul",
+      "ad": "Edirne Kırkpınar Lokantası",
+      "url": "https://menuburada.com/edirne-kirkpinar-lokantasi-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "espressamente-illy-levent-kanyon-avm-istanbul",
+      "ad": "Espressamente Illy",
+      "url": "https://menuburada.com/espressamente-illy-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "fauchon-levent-kanyon-avm-istanbul",
+      "ad": "Fauchon",
+      "url": "https://menuburada.com/fauchon-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "fun-gate-levent-kanyon-avm-istanbul",
+      "ad": "Fun Gate",
+      "url": "https://menuburada.com/fun-gate-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "galata-muhallebicisi-levent-kanyon-avm-istanbul",
+      "ad": "Galata Muhallebicisi",
+      "url": "https://menuburada.com/galata-muhallebicisi-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "gina-levent-kanyon-avm-istanbul",
+      "ad": "Gina",
+      "url": "https://menuburada.com/gina-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "gram-levent-kanyon-avm-istanbul",
+      "ad": "Gram",
+      "url": "https://menuburada.com/gram-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "haagen-dazs-levent-kanyon-avm-istanbul",
+      "ad": "Haagen Dazs",
+      "url": "https://menuburada.com/haagen-dazs-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "kahve-dunyasi-levent-kanyon-avm-istanbul",
+      "ad": "Kahve Dünyası",
+      "url": "https://menuburada.com/kahve-dunyasi-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "kitchenette-levent-kanyon-avm-istanbul",
+      "ad": "Kitchenette",
+      "url": "https://menuburada.com/kitchenette-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "konyali-levent-kanyon-avm-istanbul",
+      "ad": "Konyalı",
+      "url": "https://menuburada.com/konyali-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "krispy-kreme-kanyon-avm-levent-kanyon-avm-istanbul",
+      "ad": "Krispy Kreme Kanyon Avm",
+      "url": "https://menuburada.com/krispy-kreme-kanyon-avm-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "krispy-kreme-levent-kanyon-avm-istanbul",
+      "ad": "Krispy Kreme",
+      "url": "https://menuburada.com/krispy-kreme-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "le-pain-quotidien-levent-kanyon-avm-istanbul",
+      "ad": "Le Pain Quotidien",
+      "url": "https://menuburada.com/le-pain-quotidien-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "macro-center-snack-bar-levent-kanyon-avm-istanbul",
+      "ad": "Macro Center Snack Bar",
+      "url": "https://menuburada.com/macro-center-snack-bar-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "macrocenter-snack-bar-levent-kanyon-avm-istanbul",
+      "ad": "Macrocenter Snack Bar",
+      "url": "https://menuburada.com/macrocenter-snack-bar-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "mahal-restaurant-kanyon-levent-kanyon-avm-istanbul",
+      "ad": "Mahal Restaurant Kanyon",
+      "url": "https://menuburada.com/mahal-restaurant-kanyon-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "mahal-levent-kanyon-avm-istanbul",
+      "ad": "Mahal",
+      "url": "https://menuburada.com/mahal-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "mezzaluna-express-levent-kanyon-avm-istanbul",
+      "ad": "Mezzaluna Express",
+      "url": "https://menuburada.com/mezzaluna-express-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "midpoint-levent-kanyon-avm-istanbul",
+      "ad": "Midpoint",
+      "url": "https://menuburada.com/midpoint-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "new-franks-hot-dog-levent-kanyon-avm-istanbul",
+      "ad": "New Franks Hot Dog",
+      "url": "https://menuburada.com/new-franks-hot-dog-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "numnum-levent-kanyon-avm-istanbul",
+      "ad": "Numnum",
+      "url": "https://menuburada.com/numnum-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "nusret-levent-kanyon-avm-istanbul",
+      "ad": "Nusret",
+      "url": "https://menuburada.com/nusret-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "papabubble-levent-kanyon-avm-istanbul",
+      "ad": "Papabubble",
+      "url": "https://menuburada.com/papabubble-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "petra-roasting-co-levent-kanyon-avm-istanbul",
+      "ad": "Petra Roasting Co",
+      "url": "https://menuburada.com/petra-roasting-co-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "pinkberry-levent-kanyon-avm-istanbul",
+      "ad": "Pinkberry",
+      "url": "https://menuburada.com/pinkberry-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "saray-muhallebicisi-levent-kanyon-avm-istanbul",
+      "ad": "Saray Muhallebicisi",
+      "url": "https://menuburada.com/saray-muhallebicisi-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "selamlique-levent-kanyon-avm-istanbul",
+      "ad": "Selamlique",
+      "url": "https://menuburada.com/selamlique-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "shake-shack-levent-kanyon-avm-istanbul",
+      "ad": "Shake Shack",
+      "url": "https://menuburada.com/shake-shack-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "sosa-levent-kanyon-avm-istanbul",
+      "ad": "Sosa",
+      "url": "https://menuburada.com/sosa-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "starbucks-levent-kanyon-avm-istanbul",
+      "ad": "Starbucks",
+      "url": "https://menuburada.com/starbucks-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "sushico-levent-kanyon-avm-istanbul",
+      "ad": "Sushico",
+      "url": "https://menuburada.com/sushico-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "tchibo-levent-kanyon-avm-istanbul",
+      "ad": "Tchibo",
+      "url": "https://menuburada.com/tchibo-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "the-house-cafe-levent-kanyon-avm-istanbul",
+      "ad": "The House Cafe",
+      "url": "https://menuburada.com/the-house-cafe-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "wagamama-levent-kanyon-avm-istanbul",
+      "ad": "Wagamama",
+      "url": "https://menuburada.com/wagamama-levent-kanyon-avm-istanbul/"
+    },
+    {
+      "id": "yoort-levent-kanyon-avm-istanbul",
+      "ad": "Yoort",
+      "url": "https://menuburada.com/yoort-levent-kanyon-avm-istanbul/"
+    }
+  ]
+}

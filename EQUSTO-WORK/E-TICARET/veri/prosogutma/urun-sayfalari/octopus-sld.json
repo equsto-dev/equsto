@@ -1,0 +1,149 @@
+{
+  "slug": "octopus-sld",
+  "wpId": 10890,
+  "title": "Octopus SLD",
+  "baslik": "Octopus SLD",
+  "url": "https://prosogutma.com/urun/octopus-sld/",
+  "attributes": [
+    {
+      "label": "Ürünler",
+      "value": "Dondurma, Dondurulmuş Ürünler"
+    },
+    {
+      "label": "Kabin Türü",
+      "value": "Promosyon Kabinleri"
+    },
+    {
+      "label": "Plug-in",
+      "value": "Plug-in"
+    }
+  ],
+  "categories": [
+    {
+      "name": "Promosyon Kabinleri"
+    }
+  ],
+  "gallery": [
+    {
+      "src": "https://prosogutma.com/wp-content/uploads/2023/02/octopus-sld.png"
+    }
+  ],
+  "tabs": [
+    {
+      "name": "Ürün Hakkında",
+      "html": "<p><a href=\"https://prosogutma.com/wp-content/uploads/2023/02/octopus.svg\"><img loading=\"lazy\" class=\"alignnone size-full wp-image-10711\" role=\"img\" src=\"https://prosogutma.com/wp-content/uploads/2023/02/octopus.svg\" alt=\"\" width=\"539\" height=\"271\" /></a></p></div>\n\t\t\t\t\t\t\t\t\t<div class=\"elementor-tab-title elementor-tab-mobile-title\" aria-selected=\"false\" data-tab=\"2\" role=\"tab\" tabindex=\"-1\" aria-controls=\"elementor-tab-content-1672\" aria-expanded=\"false\">Teknik Çizimler",
+      "links": [
+        {
+          "href": "https://prosogutma.com/wp-content/uploads/2023/02/octopus.svg",
+          "text": "href=\"https://prosogutma.com/wp-content/uploads/2023/02/octopus.svg\""
+        }
+      ],
+      "images": [
+        {
+          "src": "https://prosogutma.com/wp-content/uploads/2023/02/octopus.svg",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "name": "Teknik Çizimler",
+      "html": "<a href=\"https://prosogutma.com/wp-content/uploads/2023/02/octopus.pdf\" target=\"_blank\" rel=\"noopener\">Teknik Çizimlere Gitmek İçin Tıklayınız.</a></div>\n\t\t\t\t\t\t\t\t\t<div class=\"elementor-tab-title elementor-tab-mobile-title\" aria-selected=\"false\" data-tab=\"3\" role=\"tab\" tabindex=\"-1\" aria-controls=\"elementor-tab-content-1673\" aria-expanded=\"false\">Katalog Sayfası",
+      "links": [
+        {
+          "href": "https://prosogutma.com/wp-content/uploads/2023/02/octopus.pdf",
+          "text": "href=\"https://prosogutma.com/wp-content/uploads/2023/02/octopus.pdf\""
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "Katalog Sayfası",
+      "html": "<a href=\"https://prosogutma.com/wp-content/uploads/2023/02/octopus.pdf\" target=\"_blank\" rel=\"noopener\">Ürün Kataloğumuza Gitmek İçin Tıklayınız.</a></div>\n\t\t\t\t\t\t\t\t\t<div class=\"elementor-tab-title elementor-tab-mobile-title\" aria-selected=\"false\" data-tab=\"4\" role=\"tab\" tabindex=\"-1\" aria-controls=\"elementor-tab-content-1674\" aria-expanded=\"false\">Opsiyonlar",
+      "links": [
+        {
+          "href": "https://prosogutma.com/wp-content/uploads/2023/02/octopus.pdf",
+          "text": "href=\"https://prosogutma.com/wp-content/uploads/2023/02/octopus.pdf\""
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "Opsiyonlar",
+      "html": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p></div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t</div>\n\t\t\t\t\t</div>\n\t\t</section>\n\t\t\t\t</div>\n\t\t\n",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Ürün Hakkında",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Teknik Çizimler",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Teknik Çizimlere Gitmek İçin Tıklayınız.",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Katalog Sayfası",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Ürün Kataloğumuza Gitmek İçin Tıklayınız.",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Opsiyonlar",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+      "html": "",
+      "links": [],
+      "images": []
+    }
+  ],
+  "teknik": {
+    "tablolar": [
+      {
+        "basliklar": [
+          "Ürünler",
+          "Kabin Türü",
+          "Plug-in"
+        ],
+        "satirlar": [
+          [
+            "Ürünler",
+            "Dondurma, Dondurulmuş Ürünler"
+          ],
+          [
+            "Kabin Türü",
+            "Promosyon Kabinleri"
+          ],
+          [
+            "Plug-in",
+            "Plug-in"
+          ]
+        ]
+      }
+    ],
+    "pdfText": "Plug-ins\r\nųk\\e\u0001Dfkficl\u0001|\\ec\\i\r\nOCTOPUS\r\nPlug-in Refrigerated Island Type Freezer\r\nİçten Motorlu Soğutmalı Ada Tipi Derin Dondurucu\r\nTechnicial Specifications  / Teknik Özellikler\r\nFROZEN FOOD\r\nICE CREAM\r\nCategories\r\nKategoriler\r\n8mX`cXYc\\\u0001Df[lc\\j\u0001&\u0001BlccXeêcXY`c`i\u0001Df[cc\\i\r\nLength (mm)\r\nUzunluk (mm)\r\n1375\r\n1500\r\n2000\r\nFg\\iXk`e^\u0001K\\dg\\iXkli\\j\r\nxXcêŵdX\u0001JêZXbcêbcXiê\r\nAmbient Conditions\r\nFikXd\u0001BfŵlccXiê\r\nM1 ( -1/+5) - L1 (-15/-18°C) - L2 (-12/-18°C)\r\n25°C / 60% RH (EN ISO 23953-2)\r\nLength (mm\r\nUzunluk (mm\r\nFg\\iXk`e^\r\nxXcêŵdX\r\n270\r\n870\r\n950\r\n535\r\n380\r\n570\r\n1090\r\nOCTOPUS V2 110 SLD\r\n270\r\n870\r\n950\r\n535\r\n380\r\n570\r\n1090\r\nOCTOPUS V2 110 SLD\r\n270\r\n870\r\n950\r\n535\r\n380\r\n570\r\n1090\r\nOCTOPUS V2 110\r\n270\r\n870\r\n950\r\n535\r\n380\r\n570\r\n1090\r\nOCTOPUS V2 110\r\n380\r\n0\r\n58 / 59\r\n",
+    "pdfUrl": "https://prosogutma.com/wp-content/uploads/2023/02/octopus.pdf",
+    "pdfLocal": "media/products/octopus-sld/pdfs/octopus.pdf"
+  },
+  "pdfText": "Plug-ins\r\nųk\\e\u0001Dfkficl\u0001|\\ec\\i\r\nOCTOPUS\r\nPlug-in Refrigerated Island Type Freezer\r\nİçten Motorlu Soğutmalı Ada Tipi Derin Dondurucu\r\nTechnicial Specifications  / Teknik Özellikler\r\nFROZEN FOOD\r\nICE CREAM\r\nCategories\r\nKategoriler\r\n8mX`cXYc\\\u0001Df[lc\\j\u0001&\u0001BlccXeêcXY`c`i\u0001Df[cc\\i\r\nLength (mm)\r\nUzunluk (mm)\r\n1375\r\n1500\r\n2000\r\nFg\\iXk`e^\u0001K\\dg\\iXkli\\j\r\nxXcêŵdX\u0001JêZXbcêbcXiê\r\nAmbient Conditions\r\nFikXd\u0001BfŵlccXiê\r\nM1 ( -1/+5) - L1 (-15/-18°C) - L2 (-12/-18°C)\r\n25°C / 60% RH (EN ISO 23953-2)\r\nLength (mm\r\nUzunluk (mm\r\nFg\\iXk`e^\r\nxXcêŵdX\r\n270\r\n870\r\n950\r\n535\r\n380\r\n570\r\n1090\r\nOCTOPUS V2 110 SLD\r\n270\r\n870\r\n950\r\n535\r\n380\r\n570\r\n1090\r\nOCTOPUS V2 110 SLD\r\n270\r\n870\r\n950\r\n535\r\n380\r\n570\r\n1090\r\nOCTOPUS V2 110\r\n270\r\n870\r\n950\r\n535\r\n380\r\n570\r\n1090\r\nOCTOPUS V2 110\r\n380\r\n0\r\n58 / 59\r\n",
+  "scrapedAt": "2026-05-28T23:46:55.118Z"
+}

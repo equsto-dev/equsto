@@ -1,0 +1,279 @@
+{
+  "slug": "anemon",
+  "baslik": "ANEMON",
+  "tip": "model",
+  "ustSeriSlug": null,
+  "kategoriler": [
+    "serve-over-cabinets"
+  ],
+  "kapak": "https:\\/\\/caglayanrefrigeration.com\\/wp-content\\/uploads\\/2023\\/05\\/Anemon-Kapak.webp",
+  "kapakYol": "gorseller/anemon/Anemon-Kapak.webp",
+  "linkKaynak": "https://caglayanrefrigeration.com/tr/product/anemon/",
+  "cocuklar": [],
+  "ozellikler": [
+    {
+      "baslik": "",
+      "aciklama": "Meat"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Chicken"
+    },
+    {
+      "baslik": "",
+      "aciklama": "High Efficiency Fans"
+    },
+    {
+      "baslik": "",
+      "aciklama": "LED Lighting"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Ventilated"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Remote Condensing Unit"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Electric Defrost"
+    }
+  ],
+  "teknik": {
+    "akordeon": [],
+    "sekmeler": [
+      {
+        "baslik": "TEKNİK ÇİZİMLER",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Anemon-Kesit-01-Caglayan-Refrigeration.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Anemon-PLG-Kesit-01-Caglayan-Refrigeration.webp"
+        ],
+        "tablolar": []
+      },
+      {
+        "baslik": "TEKNİK DETAYLAR",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Anemon-Kesit-01-Caglayan-Refrigeration.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Anemon-PLG-Kesit-01-Caglayan-Refrigeration.webp"
+        ],
+        "tablolar": []
+      }
+    ],
+    "tablolar": [
+      {
+        "basliklar": [
+          "UZUNLUK / LENGTH (mm)",
+          "YÜKSEKLİK / HEIGHT (mm)",
+          "SICAKLIK SINIFI / TEMPERATURE CLASS",
+          "YÜKLEME ALANI / LOADING AREA (m²)",
+          "PANEL KALINLIĞI / END THICKNESS (mm)"
+        ],
+        "satirlar": [
+          [
+            "ST (3M1)",
+            "DERİNLİK / DEPTH (mm)"
+          ],
+          [
+            "1250"
+          ],
+          [
+            "1250",
+            "1200",
+            "-1 / +1 °C",
+            "0,99",
+            "25"
+          ],
+          [
+            "1875",
+            "1,48"
+          ],
+          [
+            "2500",
+            "1,98"
+          ],
+          [
+            "3750",
+            "2,96"
+          ]
+        ]
+      }
+    ]
+  },
+  "gorseller": {
+    "tum": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Anemon.webp",
+        "dosya": "gorseller/anemon/Anemon.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/meat.webp",
+        "dosya": "gorseller/anemon/meat.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Anemon-2.webp",
+        "dosya": "gorseller/anemon/Anemon-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Anemon-3.webp",
+        "dosya": "gorseller/anemon/Anemon-3.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Anemon-PLG-02-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/anemon/Anemon-PLG-02-Caglayan-Refrigeration.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Anemon-PLG-01-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/anemon/Anemon-PLG-01-Caglayan-Refrigeration.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Anemon.pdf",
+        "dosya": "gorseller/anemon/Anemon.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Anemon-Kesit-01-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/anemon/Anemon-Kesit-01-Caglayan-Refrigeration.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Anemon-PLG-Kesit-01-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/anemon/Anemon-PLG-Kesit-01-Caglayan-Refrigeration.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/circle-bg.webp",
+        "dosya": "gorseller/anemon/circle-bg.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/meat-2.webp",
+        "dosya": "gorseller/anemon/meat-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Sardunya-Bicaklik.webp",
+        "dosya": "gorseller/anemon/Sardunya-Bicaklik.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Sardunya-Et-Aydinlatma.webp",
+        "dosya": "gorseller/anemon/Sardunya-Et-Aydinlatma.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Sardunya-Kademeli-Tava.webp",
+        "dosya": "gorseller/anemon/Sardunya-Kademeli-Tava.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Sardunya-Modul-Bolucu.webp",
+        "dosya": "gorseller/anemon/Sardunya-Modul-Bolucu.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Sardunya-Plexi-Surgu.webp",
+        "dosya": "gorseller/anemon/Sardunya-Plexi-Surgu.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Sardunya-Posetlik.webp",
+        "dosya": "gorseller/anemon/Sardunya-Posetlik.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Sardunya-Sepetlik.webp",
+        "dosya": "gorseller/anemon/Sardunya-Sepetlik.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Sardunya-Terazilik.webp",
+        "dosya": "gorseller/anemon/Sardunya-Terazilik.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Sardunya-Urun-Bolucu.webp",
+        "dosya": "gorseller/anemon/Sardunya-Urun-Bolucu.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/anemon/pdf-icon.webp"
+      }
+    ],
+    "urun": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Anemon.webp",
+        "dosya": "gorseller/anemon/Anemon.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/meat.webp",
+        "dosya": "gorseller/anemon/meat.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Anemon-2.webp",
+        "dosya": "gorseller/anemon/Anemon-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Anemon-3.webp",
+        "dosya": "gorseller/anemon/Anemon-3.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Anemon-PLG-02-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/anemon/Anemon-PLG-02-Caglayan-Refrigeration.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Anemon-PLG-01-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/anemon/Anemon-PLG-01-Caglayan-Refrigeration.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Anemon.pdf",
+        "dosya": "gorseller/anemon/Anemon.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/circle-bg.webp",
+        "dosya": "gorseller/anemon/circle-bg.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/meat-2.webp",
+        "dosya": "gorseller/anemon/meat-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Sardunya-Bicaklik.webp",
+        "dosya": "gorseller/anemon/Sardunya-Bicaklik.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Sardunya-Et-Aydinlatma.webp",
+        "dosya": "gorseller/anemon/Sardunya-Et-Aydinlatma.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Sardunya-Kademeli-Tava.webp",
+        "dosya": "gorseller/anemon/Sardunya-Kademeli-Tava.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Sardunya-Modul-Bolucu.webp",
+        "dosya": "gorseller/anemon/Sardunya-Modul-Bolucu.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Sardunya-Plexi-Surgu.webp",
+        "dosya": "gorseller/anemon/Sardunya-Plexi-Surgu.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Sardunya-Posetlik.webp",
+        "dosya": "gorseller/anemon/Sardunya-Posetlik.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Sardunya-Sepetlik.webp",
+        "dosya": "gorseller/anemon/Sardunya-Sepetlik.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Sardunya-Terazilik.webp",
+        "dosya": "gorseller/anemon/Sardunya-Terazilik.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Sardunya-Urun-Bolucu.webp",
+        "dosya": "gorseller/anemon/Sardunya-Urun-Bolucu.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/anemon/pdf-icon.webp"
+      }
+    ],
+    "teknikCizim": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Anemon-Kesit-01-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/anemon/Anemon-Kesit-01-Caglayan-Refrigeration.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Anemon-PLG-Kesit-01-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/anemon/Anemon-PLG-Kesit-01-Caglayan-Refrigeration.webp"
+      }
+    ]
+  }
+}

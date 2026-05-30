@@ -168,13 +168,17 @@ export default function PfosProWizard() {
   }
 
   const seciliKonsept = konseptler.find((k) => k.konsept === state.konsept);
+  const m2Min = seciliKonsept?.m2Min ?? 30;
+  const m2Max = seciliKonsept?.m2Max ?? 2000;
   const profil = state.konsept ? PROFIL_BY_SLUG[state.konsept] : null;
   const zones = zonesForKonsept(state.konsept);
   const toplamM2 = parseM2(state.m2Toplam);
   const bolumToplam = sumBolum(state.bolumM2);
   const m2Fark = toplamM2 > 0 ? toplamM2 - bolumToplam : 0;
   const m2Ok =
-    toplamM2 >= 30 && (bolumToplam === 0 || Math.abs(m2Fark) < 1);
+    toplamM2 >= m2Min &&
+    toplamM2 <= m2Max &&
+    (bolumToplam === 0 || Math.abs(m2Fark) < 1);
 
   function handleKonsept(k: Konsept) {
     const t = parseM2(state.m2Toplam);
@@ -207,7 +211,7 @@ export default function PfosProWizard() {
   async function teklifOlustur() {
     if (!state.konsept) return;
     const m2 = parseM2(state.m2Toplam);
-    if (m2 < 30) return;
+    if (m2 < m2Min || m2 > m2Max) return;
 
     setYukleniyor(true);
     setHata(null);
@@ -596,11 +600,11 @@ export default function PfosProWizard() {
                 <Col xs={24} md={10} lg={8}>
                   <ProFormDigit
                     label="Toplam alan (m²)"
-                    min={30}
-                    max={2000}
+                    min={m2Min}
+                    max={m2Max}
                     extra={
                       seciliKonsept
-                        ? `Önerilen: ${seciliKonsept.m2Min}–${seciliKonsept.m2Max} m²`
+                        ? `Geçerli aralık: ${m2Min}–${m2Max} m²`
                         : undefined
                     }
                     fieldProps={{
@@ -614,8 +618,8 @@ export default function PfosProWizard() {
             ) : (
               <ProFormDigit
                 label="Toplam alan (m²)"
-                min={30}
-                max={2000}
+                min={m2Min}
+                max={m2Max}
                 fieldProps={{
                   value: toplamM2 || undefined,
                   onChange: handleM2Toplam,
@@ -623,7 +627,7 @@ export default function PfosProWizard() {
                 }}
                 extra={
                   seciliKonsept
-                    ? `Önerilen: ${seciliKonsept.m2Min}–${seciliKonsept.m2Max} m²`
+                    ? `Geçerli aralık: ${m2Min}–${m2Max} m²`
                     : undefined
                 }
               />

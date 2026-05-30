@@ -1,14 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import { besosAssetPath } from "@/lib/besos/asset-path";
+import type { BesosLocale } from "@/lib/besos/locale";
+import { localizeModular } from "@/lib/besos/locale";
+import { besosUi } from "@/lib/besos/ui-strings";
 import type { BesosModular as ModularData, BesosProduct } from "@/lib/besos/types";
 
 type Props = {
   modular: ModularData;
   products: BesosProduct[];
+  locale?: BesosLocale;
 };
 
-export default function BesosModular({ modular, products }: Props) {
+export default function BesosModular({ modular, products, locale = "tr" }: Props) {
+  const m = localizeModular(modular, locale);
   const images = products
     .filter((p) => p.image)
     .slice(0, 24)
@@ -17,10 +22,10 @@ export default function BesosModular({ modular, products }: Props) {
   const marquee = [...images, ...images];
 
   return (
-    <section className="bes-vitrum-modular" aria-label="Modüler sistem">
+    <section className="bes-vitrum-modular" aria-label={besosUi("modularAria", locale)}>
       <div className="bes-vitrum-modular-head">
-        <p className="bd-vl-kicker">{modular.kicker}</p>
-        <h2>{modular.title}</h2>
+        <p className="bd-vl-kicker">{m.kicker}</p>
+        <h2>{m.title}</h2>
       </div>
       <div className="bes-vitrum-modular-marquee" aria-hidden="true">
         <div className="bes-vitrum-modular-track">
@@ -30,11 +35,11 @@ export default function BesosModular({ modular, products }: Props) {
             </div>
           ))}
         </div>
-        <p className="bes-vitrum-modular-more">+ daha fazlası</p>
+        <p className="bes-vitrum-modular-more">{besosUi("modularMore", locale)}</p>
       </div>
       <div className="bes-vitrum-modular-cta-wrap">
         <Link className="bd-vl-modular-cta" href="#bd-stations">
-          42 modülü keşfet →
+          {besosUi("modularCta", locale)}
         </Link>
       </div>
     </section>

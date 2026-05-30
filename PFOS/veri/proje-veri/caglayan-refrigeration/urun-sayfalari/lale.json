@@ -1,0 +1,971 @@
+{
+  "slug": "lale",
+  "baslik": "LALE",
+  "tip": "model",
+  "ustSeriSlug": null,
+  "kategoriler": [
+    "semi-vertical-multideck"
+  ],
+  "kapak": "https:\\/\\/caglayanrefrigeration.com\\/wp-content\\/uploads\\/2023\\/03\\/Lale-Kapak-1.webp",
+  "kapakYol": "gorseller/lale/Lale-Kapak-1.webp",
+  "linkKaynak": "https://caglayanrefrigeration.com/tr/product/lale/",
+  "cocuklar": [],
+  "ozellikler": [
+    {
+      "baslik": "",
+      "aciklama": "Dairy Products"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Delicatessen"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Drinks"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Fruit and Vegetables"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Meat"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Chicken"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Cheese"
+    },
+    {
+      "baslik": "",
+      "aciklama": "High Efficiency Fans"
+    },
+    {
+      "baslik": "",
+      "aciklama": "LED Lighting"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Ventilated"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Remote Condensing Unit"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Off Cycle Defrost"
+    }
+  ],
+  "teknik": {
+    "akordeon": [
+      {
+        "baslik": "LALE",
+        "sekmeler": [
+          {
+            "baslik": "PN TEKNİK ÇİZİMLER",
+            "gorseller": [
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-ML_SL-920x1560-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-ML_SL-1020x1560-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-ML_SL-920x1760-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-ML_SL-1020x1760-Model-1.webp"
+            ],
+            "tablolar": []
+          },
+          {
+            "baslik": "SRG TEKNİK ÇİZİMLER",
+            "gorseller": [
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-ML_SL-920x1560-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-ML_SL-1020x1560-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-ML_SL-920x1760-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-ML_SL-1020x1760-Model-1.webp"
+            ],
+            "tablolar": []
+          },
+          {
+            "baslik": "TEKNİK DETAYLAR",
+            "gorseller": [
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-ML_SL-920x1560-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-ML_SL-1020x1560-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-ML_SL-920x1760-Model-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-ML_SL-1020x1760-Model-1.webp"
+            ],
+            "tablolar": []
+          }
+        ],
+        "tablolar": [
+          {
+            "basliklar": [
+              "UZUNLUK / LENGTH",
+              "YÜKSEKLİK / HEIGHT",
+              "SICAKLIK SINIFI / TEMPERATURE CLASS",
+              "YÜKLEME ALANI / LOADING AREA",
+              "PANEL KALINLIĞI / END THICKNESS"
+            ],
+            "satirlar": [
+              [
+                "mm",
+                "ML (3M1)",
+                "SL (3M2)",
+                "m²",
+                "mm"
+              ],
+              [
+                "937",
+                "1560",
+                "°C",
+                "1,59",
+                "1,73",
+                "50"
+              ],
+              [
+                "1760",
+                "-1 / +1",
+                "0 / +2",
+                "2,01",
+                "2,16"
+              ],
+              [
+                "1250",
+                "1560",
+                "2,13",
+                "2,31"
+              ],
+              [
+                "1760",
+                "2,69",
+                "2,88"
+              ],
+              [
+                "1875",
+                "1560",
+                "3,19",
+                "3,47"
+              ],
+              [
+                "1760",
+                "4,03",
+                "4,31"
+              ],
+              [
+                "2500",
+                "1560",
+                "4,25",
+                "4,63"
+              ],
+              [
+                "1760",
+                "5,38",
+                "5,75"
+              ],
+              [
+                "2815",
+                "1560",
+                "4,79",
+                "5,21"
+              ],
+              [
+                "1760",
+                "6,05",
+                "6,47"
+              ],
+              [
+                "3750",
+                "1560",
+                "6,38",
+                "6,94"
+              ],
+              [
+                "1760",
+                "8,06",
+                "8,63"
+              ],
+              [
+                "DERİNLİK / DEPTH (mm)"
+              ],
+              [
+                "920",
+                "1020"
+              ]
+            ]
+          },
+          {
+            "basliklar": [
+              "UZUNLUK / LENGTH (mm)",
+              "YÜKSEKLİK / HEIGHT (mm)",
+              "SICAKLIK SINIFI / TEMPERATURE CLASS",
+              "YÜKLEME ALANI / LOADING AREA (m²)",
+              "PANEL KALINLIĞI / END THICKNESS (mm)"
+            ],
+            "satirlar": [
+              [
+                "ML (3M1)",
+                "SL (3M2)",
+                "DERİNLİK / DEPTH (mm)"
+              ],
+              [
+                "920",
+                "1020"
+              ],
+              [
+                "937",
+                "1560",
+                "-1 / +1 °C",
+                "0 / +2 °C",
+                "1,59",
+                "1,73",
+                "50"
+              ],
+              [
+                "1760",
+                "2,01",
+                "2,16"
+              ],
+              [
+                "1250",
+                "1560",
+                "2,13",
+                "2,31"
+              ],
+              [
+                "1760",
+                "2,69",
+                "2,88"
+              ],
+              [
+                "1875",
+                "1560",
+                "3,19",
+                "3,47"
+              ],
+              [
+                "1760",
+                "4,03",
+                "4,31"
+              ],
+              [
+                "2500",
+                "1560",
+                "4,25",
+                "4,63"
+              ],
+              [
+                "1760",
+                "5,38",
+                "5,75"
+              ],
+              [
+                "2815",
+                "1560",
+                "4,79",
+                "5,21"
+              ],
+              [
+                "1760",
+                "6,05",
+                "6,47"
+              ],
+              [
+                "3750",
+                "1560",
+                "6,38",
+                "6,94"
+              ],
+              [
+                "1760",
+                "8,06",
+                "8,63"
+              ]
+            ]
+          }
+        ],
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-ML_SL-920x1560-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-ML_SL-1020x1560-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-ML_SL-920x1760-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-ML_SL-1020x1760-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-SRG-ML_SL-920x1560-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2024/03/LALE-SRG-ML-SL-1020x1560-Model.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-SRG-ML_SL-920x1760-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-SRG-ML_SL-1020x1760-Model-1.webp"
+        ]
+      }
+    ],
+    "sekmeler": [
+      {
+        "baslik": "PN TEKNİK ÇİZİMLER",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-ML_SL-920x1560-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-ML_SL-1020x1560-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-ML_SL-920x1760-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-ML_SL-1020x1760-Model-1.webp"
+        ],
+        "tablolar": []
+      },
+      {
+        "baslik": "SRG TEKNİK ÇİZİMLER",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-ML_SL-920x1560-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-ML_SL-1020x1560-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-ML_SL-920x1760-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-ML_SL-1020x1760-Model-1.webp"
+        ],
+        "tablolar": []
+      },
+      {
+        "baslik": "TEKNİK DETAYLAR",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-ML_SL-920x1560-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-ML_SL-1020x1560-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-ML_SL-920x1760-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-ML_SL-1020x1760-Model-1.webp"
+        ],
+        "tablolar": []
+      },
+      {
+        "baslik": "TEKNİK ÇİZİMLER",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-FL-920x1560-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-FL-1020x1560-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-FL-920x1760-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-FL-1020x1760-Model-1.webp"
+        ],
+        "tablolar": []
+      },
+      {
+        "baslik": "TEKNİK DETAYLAR",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-FL-920x1560-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-FL-1020x1560-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-FL-920x1760-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-FL-1020x1760-Model-1.webp"
+        ],
+        "tablolar": []
+      }
+    ],
+    "tablolar": [
+      {
+        "basliklar": [
+          "UZUNLUK / LENGTH",
+          "YÜKSEKLİK / HEIGHT",
+          "SICAKLIK SINIFI / TEMPERATURE CLASS",
+          "YÜKLEME ALANI / LOADING AREA",
+          "PANEL KALINLIĞI / END THICKNESS"
+        ],
+        "satirlar": [
+          [
+            "mm",
+            "ML (3M1)",
+            "SL (3M2)",
+            "m²",
+            "mm"
+          ],
+          [
+            "937",
+            "1560",
+            "°C",
+            "1,59",
+            "1,73",
+            "50"
+          ],
+          [
+            "1760",
+            "-1 / +1",
+            "0 / +2",
+            "2,01",
+            "2,16"
+          ],
+          [
+            "1250",
+            "1560",
+            "2,13",
+            "2,31"
+          ],
+          [
+            "1760",
+            "2,69",
+            "2,88"
+          ],
+          [
+            "1875",
+            "1560",
+            "3,19",
+            "3,47"
+          ],
+          [
+            "1760",
+            "4,03",
+            "4,31"
+          ],
+          [
+            "2500",
+            "1560",
+            "4,25",
+            "4,63"
+          ],
+          [
+            "1760",
+            "5,38",
+            "5,75"
+          ],
+          [
+            "2815",
+            "1560",
+            "4,79",
+            "5,21"
+          ],
+          [
+            "1760",
+            "6,05",
+            "6,47"
+          ],
+          [
+            "3750",
+            "1560",
+            "6,38",
+            "6,94"
+          ],
+          [
+            "1760",
+            "8,06",
+            "8,63"
+          ],
+          [
+            "DERİNLİK / DEPTH (mm)"
+          ],
+          [
+            "920",
+            "1020"
+          ]
+        ]
+      },
+      {
+        "basliklar": [
+          "UZUNLUK / LENGTH (mm)",
+          "YÜKSEKLİK / HEIGHT (mm)",
+          "SICAKLIK SINIFI / TEMPERATURE CLASS",
+          "YÜKLEME ALANI / LOADING AREA (m²)",
+          "PANEL KALINLIĞI / END THICKNESS (mm)"
+        ],
+        "satirlar": [
+          [
+            "ML (3M1)",
+            "SL (3M2)",
+            "DERİNLİK / DEPTH (mm)"
+          ],
+          [
+            "920",
+            "1020"
+          ],
+          [
+            "937",
+            "1560",
+            "-1 / +1 °C",
+            "0 / +2 °C",
+            "1,59",
+            "1,73",
+            "50"
+          ],
+          [
+            "1760",
+            "2,01",
+            "2,16"
+          ],
+          [
+            "1250",
+            "1560",
+            "2,13",
+            "2,31"
+          ],
+          [
+            "1760",
+            "2,69",
+            "2,88"
+          ],
+          [
+            "1875",
+            "1560",
+            "3,19",
+            "3,47"
+          ],
+          [
+            "1760",
+            "4,03",
+            "4,31"
+          ],
+          [
+            "2500",
+            "1560",
+            "4,25",
+            "4,63"
+          ],
+          [
+            "1760",
+            "5,38",
+            "5,75"
+          ],
+          [
+            "2815",
+            "1560",
+            "4,79",
+            "5,21"
+          ],
+          [
+            "1760",
+            "6,05",
+            "6,47"
+          ],
+          [
+            "3750",
+            "1560",
+            "6,38",
+            "6,94"
+          ],
+          [
+            "1760",
+            "8,06",
+            "8,63"
+          ]
+        ]
+      },
+      {
+        "basliklar": [
+          "UZUNLUK / LENGTH",
+          "YÜKSEKLİK / HEIGHT",
+          "SICAKLIK SINIFI / TEMPERATURE CLASS",
+          "YÜKLEME ALANI / LOADING AREA",
+          "PANEL KALINLIĞI / END THICKNESS"
+        ],
+        "satirlar": [
+          [
+            "mm",
+            "FL (3H1)",
+            "m²",
+            "mm"
+          ],
+          [
+            "937",
+            "1560",
+            "°C",
+            "1,59",
+            "1,73",
+            "50"
+          ],
+          [
+            "1760",
+            "+4 / +6",
+            "2,01",
+            "2,16"
+          ],
+          [
+            "1250",
+            "1560",
+            "2,13",
+            "2,31"
+          ],
+          [
+            "1760",
+            "2,69",
+            "2,88"
+          ],
+          [
+            "1875",
+            "1560",
+            "3,19",
+            "3,47"
+          ],
+          [
+            "1760",
+            "4,03",
+            "4,31"
+          ],
+          [
+            "2500",
+            "1560",
+            "4,25",
+            "4,63"
+          ],
+          [
+            "1760",
+            "5,38",
+            "5,75"
+          ],
+          [
+            "2815",
+            "1560",
+            "4,79",
+            "5,21"
+          ],
+          [
+            "1760",
+            "6,05",
+            "6,47"
+          ],
+          [
+            "3750",
+            "1560",
+            "6,38",
+            "6,94"
+          ],
+          [
+            "1760",
+            "8,06",
+            "8,63"
+          ],
+          [
+            "DERİNLİK / DEPTH (mm)"
+          ],
+          [
+            "920",
+            "1020"
+          ]
+        ]
+      },
+      {
+        "basliklar": [
+          "UZUNLUK / LENGTH (mm)",
+          "YÜKSEKLİK / HEIGHT (mm)",
+          "SICAKLIK SINIFI / TEMPERATURE CLASS",
+          "YÜKLEME ALANI / LOADING AREA (m²)",
+          "PANEL KALINLIĞI / END THICKNESS (mm)"
+        ],
+        "satirlar": [
+          [
+            "FL (3H1)",
+            "DERİNLİK / DEPTH (mm)"
+          ],
+          [
+            "920",
+            "1020"
+          ],
+          [
+            "937",
+            "1560",
+            "+4 / +6 °C",
+            "1,59",
+            "1,73",
+            "50"
+          ],
+          [
+            "1760",
+            "2,01",
+            "2,16"
+          ],
+          [
+            "1250",
+            "1560",
+            "2,13",
+            "2,31"
+          ],
+          [
+            "1760",
+            "2,69",
+            "2,88"
+          ],
+          [
+            "1875",
+            "1560",
+            "3,19",
+            "3,47"
+          ],
+          [
+            "1760",
+            "4,03",
+            "4,31"
+          ],
+          [
+            "2500",
+            "1560",
+            "4,25",
+            "4,63"
+          ],
+          [
+            "1760",
+            "5,38",
+            "5,75"
+          ],
+          [
+            "2815",
+            "1560",
+            "4,79",
+            "5,21"
+          ],
+          [
+            "1760",
+            "6,05",
+            "6,47"
+          ],
+          [
+            "3750",
+            "1560",
+            "6,38",
+            "6,94"
+          ],
+          [
+            "1760",
+            "8,06",
+            "8,63"
+          ]
+        ]
+      }
+    ]
+  },
+  "gorseller": {
+    "tum": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-4.webp",
+        "dosya": "gorseller/lale/LALE-4.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-1.webp",
+        "dosya": "gorseller/lale/LALE-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-2.webp",
+        "dosya": "gorseller/lale/LALE-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-3.webp",
+        "dosya": "gorseller/lale/LALE-3.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALLE-PN-FL-1.webp",
+        "dosya": "gorseller/lale/LALLE-PN-FL-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALLE-PN-FL-2.webp",
+        "dosya": "gorseller/lale/LALLE-PN-FL-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Lale.pdf",
+        "dosya": "gorseller/lale/Lale.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-ML_SL-920x1560-Model-1.webp",
+        "dosya": "gorseller/lale/LALE-PN-ML_SL-920x1560-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-ML_SL-1020x1560-Model-1.webp",
+        "dosya": "gorseller/lale/LALE-PN-ML_SL-1020x1560-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-ML_SL-920x1760-Model-1.webp",
+        "dosya": "gorseller/lale/LALE-PN-ML_SL-920x1760-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-ML_SL-1020x1760-Model-1.webp",
+        "dosya": "gorseller/lale/LALE-PN-ML_SL-1020x1760-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-SRG-ML_SL-920x1560-Model-1.webp",
+        "dosya": "gorseller/lale/LALE-SRG-ML_SL-920x1560-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2024/03/LALE-SRG-ML-SL-1020x1560-Model.webp",
+        "dosya": "gorseller/lale/LALE-SRG-ML-SL-1020x1560-Model.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-SRG-ML_SL-920x1760-Model-1.webp",
+        "dosya": "gorseller/lale/LALE-SRG-ML_SL-920x1760-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-SRG-ML_SL-1020x1760-Model-1.webp",
+        "dosya": "gorseller/lale/LALE-SRG-ML_SL-1020x1760-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-FL-920x1560-Model-1.webp",
+        "dosya": "gorseller/lale/LALE-PN-FL-920x1560-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-FL-1020x1560-Model-1.webp",
+        "dosya": "gorseller/lale/LALE-PN-FL-1020x1560-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-FL-920x1760-Model-1.webp",
+        "dosya": "gorseller/lale/LALE-PN-FL-920x1760-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-FL-1020x1760-Model-1.webp",
+        "dosya": "gorseller/lale/LALE-PN-FL-1020x1760-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/circle-bg.webp",
+        "dosya": "gorseller/lale/circle-bg.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/fresh-fruits.webp",
+        "dosya": "gorseller/lale/fresh-fruits.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lale-Hook-Bar.webp",
+        "dosya": "gorseller/lale/Lale-Hook-Bar.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lale-Meat-Hanger-Bar.webp",
+        "dosya": "gorseller/lale/Lale-Meat-Hanger-Bar.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lale-Plexi-Product-Divider.webp",
+        "dosya": "gorseller/lale/Lale-Plexi-Product-Divider.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lale-Plexi-Product-Stopper.webp",
+        "dosya": "gorseller/lale/Lale-Plexi-Product-Stopper.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lale-Shelf-Lighting.webp",
+        "dosya": "gorseller/lale/Lale-Shelf-Lighting.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lale-Sliding-Glass.webp",
+        "dosya": "gorseller/lale/Lale-Sliding-Glass.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lale-Wire-Base-Dividder.webp",
+        "dosya": "gorseller/lale/Lale-Wire-Base-Dividder.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lale-Wire-Base.webp",
+        "dosya": "gorseller/lale/Lale-Wire-Base.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lale-Wire-Basket.webp",
+        "dosya": "gorseller/lale/Lale-Wire-Basket.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/lale/pdf-icon.webp"
+      }
+    ],
+    "urun": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-4.webp",
+        "dosya": "gorseller/lale/LALE-4.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-1.webp",
+        "dosya": "gorseller/lale/LALE-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-2.webp",
+        "dosya": "gorseller/lale/LALE-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-3.webp",
+        "dosya": "gorseller/lale/LALE-3.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALLE-PN-FL-1.webp",
+        "dosya": "gorseller/lale/LALLE-PN-FL-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALLE-PN-FL-2.webp",
+        "dosya": "gorseller/lale/LALLE-PN-FL-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Lale.pdf",
+        "dosya": "gorseller/lale/Lale.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-ML_SL-920x1560-Model-1.webp",
+        "dosya": "gorseller/lale/LALE-PN-ML_SL-920x1560-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-ML_SL-1020x1560-Model-1.webp",
+        "dosya": "gorseller/lale/LALE-PN-ML_SL-1020x1560-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-ML_SL-920x1760-Model-1.webp",
+        "dosya": "gorseller/lale/LALE-PN-ML_SL-920x1760-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-ML_SL-1020x1760-Model-1.webp",
+        "dosya": "gorseller/lale/LALE-PN-ML_SL-1020x1760-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-SRG-ML_SL-920x1560-Model-1.webp",
+        "dosya": "gorseller/lale/LALE-SRG-ML_SL-920x1560-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2024/03/LALE-SRG-ML-SL-1020x1560-Model.webp",
+        "dosya": "gorseller/lale/LALE-SRG-ML-SL-1020x1560-Model.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-SRG-ML_SL-920x1760-Model-1.webp",
+        "dosya": "gorseller/lale/LALE-SRG-ML_SL-920x1760-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-SRG-ML_SL-1020x1760-Model-1.webp",
+        "dosya": "gorseller/lale/LALE-SRG-ML_SL-1020x1760-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-FL-920x1560-Model-1.webp",
+        "dosya": "gorseller/lale/LALE-PN-FL-920x1560-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-FL-1020x1560-Model-1.webp",
+        "dosya": "gorseller/lale/LALE-PN-FL-1020x1560-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-FL-920x1760-Model-1.webp",
+        "dosya": "gorseller/lale/LALE-PN-FL-920x1760-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LALE-PN-FL-1020x1760-Model-1.webp",
+        "dosya": "gorseller/lale/LALE-PN-FL-1020x1760-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/circle-bg.webp",
+        "dosya": "gorseller/lale/circle-bg.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/fresh-fruits.webp",
+        "dosya": "gorseller/lale/fresh-fruits.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lale-Hook-Bar.webp",
+        "dosya": "gorseller/lale/Lale-Hook-Bar.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lale-Meat-Hanger-Bar.webp",
+        "dosya": "gorseller/lale/Lale-Meat-Hanger-Bar.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lale-Plexi-Product-Divider.webp",
+        "dosya": "gorseller/lale/Lale-Plexi-Product-Divider.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lale-Plexi-Product-Stopper.webp",
+        "dosya": "gorseller/lale/Lale-Plexi-Product-Stopper.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lale-Shelf-Lighting.webp",
+        "dosya": "gorseller/lale/Lale-Shelf-Lighting.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lale-Sliding-Glass.webp",
+        "dosya": "gorseller/lale/Lale-Sliding-Glass.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lale-Wire-Base-Dividder.webp",
+        "dosya": "gorseller/lale/Lale-Wire-Base-Dividder.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lale-Wire-Base.webp",
+        "dosya": "gorseller/lale/Lale-Wire-Base.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lale-Wire-Basket.webp",
+        "dosya": "gorseller/lale/Lale-Wire-Basket.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/lale/pdf-icon.webp"
+      }
+    ],
+    "teknikCizim": []
+  }
+}

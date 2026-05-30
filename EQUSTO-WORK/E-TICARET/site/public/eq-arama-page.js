@@ -1,14 +1,63 @@
 /**
- * /arama?q= — Meilisearch sonuç sayfası (statik mağaza kromu)
+ * /arama?q= — Meilisearch sonuç sayfası + istemci filtreleri
  */
 ;(function () {
   "use strict";
 
-  var LIMIT = 48;
-  var CATALOG_V = "20260522kahve-acc-v1";
-  var lastRender = { hits: [], q: "", total: 0, err: null };
+  var PAGE_SIZE = 96;
+  var sourceHits = [];
+  var loadMoreBusy = false;
+  var CATALOG_V = (function () {
+    var el = document.querySelector("[data-eq-shop-chrome-v]");
+    return (el && el.getAttribute("data-eq-shop-chrome-v")) || "20260529-9890-imgs";
+  })();
+  var lastRender = { q: "", total: 0, err: null, warning: "", hasMore: false };
   var catalogImgById = null;
   var catalogImgInflight = null;
+  var uiBound = false;
+
+  var filterState = {
+    depts: [],
+    brands: [],
+    sort: "",
+    priceMin: "",
+    priceMax: "",
+  };
+
+  var DEPT_LABELS = {
+    pisirme: { key: "nav.pisirme", fb: "Pişirme" },
+    sogutma: { key: "nav.sogutma", fb: "Soğutma" },
+    kahve: { key: "nav.kahve", fb: "Kahve" },
+    yikama: { key: "nav.yikama", fb: "Yıkama" },
+    hazirlik: { key: "nav.hazirlik", fb: "Hazırlık" },
+    icecek: { key: "nav.icecek", fb: "İçecek" },
+    tezgah: { key: "nav.tezgah", fb: "Tezgah" },
+    dolap: { key: "nav.dolap", fb: "Dolap" },
+    davlumbaz: { key: "nav.davlumbaz", fb: "Davlumbaz" },
+    tasima: { key: "nav.tasima", fb: "Taşıma" },
+    araba: { key: "nav.araba", fb: "Servis Arabaları" },
+    istif: { key: "nav.istif", fb: "İstif" },
+    "set-ustu-mutfak": { key: "nav.set_ustu", fb: "Set Üstü Mutfak" },
+    kuvetler: { key: "nav.kuvetler", fb: "Küvetler" },
+    "market-reyonlari": { key: "nav.market_reyonlari", fb: "Market Reyonları" },
+    "market-reyon": { key: "nav.market_reyonlari", fb: "Market Reyonları" },
+  };
+
+  function __searchT(k, fb, vars) {
+    var s = fb || k;
+    try {
+      if (typeof window.eqT === "function") {
+        var v = window.eqT(k, null);
+        if (v != null && v !== k) s = v;
+      }
+    } catch (_) {}
+    if (vars) {
+      Object.keys(vars).forEach(function (kk) {
+        s = String(s).replace(new RegExp("\\{" + kk + "\\}", "g"), vars[kk]);
+      });
+    }
+    return s;
+  }
 
   function esc(s) {
     return String(s == null ? "" : s)
@@ -17,21 +66,164 @@
       .replace(/"/g, "&quot;");
   }
 
+  function lc(s) {
+    return String(s || "").toLocaleLowerCase("tr");
+  }
+
   function trimQ(q) {
     return String(q == null ? "" : q).trim();
   }
 
+  function deptLabel(dept) {
+    var meta = DEPT_LABELS[dept];
+    if (!meta) return dept;
+    return __searchT(meta.key, meta.fb);
+  }
+
+  function hitDeptKey(h) {
+    var d = String((h && h.dept) || "").trim().toLowerCase();
+    if (d === "market-reyon") return "market-reyonlari";
+    return d || "pisirme";
+  }
+
+  function hitBrandKey(h) {
+    return String((h && h.brand) || "").trim();
+  }
+
+  function parsePriceFromHit(h) {
+    if (!h) return 0;
+    if (h.satis_eur_indirimli != null && Number(h.satis_eur_indirimli) > 0) {
+      return Number(h.satis_eur_indirimli);
+    }
+    if (h.liste_fiyati_eur != null && Number(h.liste_fiyati_eur) > 0) {
+      return Number(h.liste_fiyati_eur);
+    }
+    var s = String(h.price || "")
+      .split("\n")[0]
+      .replace(/\./g, "")
+      .replace(",", ".")
+      .replace(/[^\d.]/g, "");
+    var n = parseFloat(s);
+    return isNaN(n) ? 0 : n;
+  }
+
+  function catalogSlugFromHit(hit) {
+    if (!hit) return "";
+    var id = String(hit.id || "").trim().toLowerCase();
+    if (id.indexOf("__") >= 0) return id.replace(/\//g, "-");
+    var slug = String(hit.slug || "").trim().toLowerCase();
+    if (slug.indexOf("__") >= 0) return slug.replace(/\//g, "-");
+    return slug;
+  }
+
+  function dedupeHits(hits) {
+    if (!Array.isArray(hits) || hits.length < 2) return hits || [];
+    var seen = Object.create(null);
+    var out = [];
+    for (var i = 0; i < hits.length; i++) {
+      var h = hits[i];
+      if (!h) continue;
+      var key = String(h.id || h.slug || h.name || i);
+      if (seen[key]) continue;
+      seen[key] = 1;
+      out.push(h);
+    }
+    return out;
+  }
+
+  function resetFilters() {
+    filterState.depts = [];
+    filterState.brands = [];
+    filterState.sort = "";
+    filterState.priceMin = "";
+    filterState.priceMax = "";
+    var sortEl = document.getElementById("eq-arama-sort");
+    if (sortEl) sortEl.value = "";
+  }
+
+  function hasActiveFilters() {
+    return (
+      filterState.depts.length > 0 ||
+      filterState.brands.length > 0 ||
+      filterState.priceMin !== "" ||
+      filterState.priceMax !== "" ||
+      !!filterState.sort
+    );
+  }
+
+  function poolForCounts(exclude) {
+    var list = sourceHits.slice();
+    if (filterState.depts.length && exclude !== "dept") {
+      list = list.filter(function (h) {
+        return filterState.depts.indexOf(hitDeptKey(h)) >= 0;
+      });
+    }
+    if (filterState.brands.length && exclude !== "brand") {
+      list = list.filter(function (h) {
+        return filterState.brands.indexOf(hitBrandKey(h)) >= 0;
+      });
+    }
+    if (filterState.priceMin !== "" && exclude !== "price") {
+      var lo = Number(filterState.priceMin);
+      list = list.filter(function (h) {
+        return parsePriceFromHit(h) >= lo;
+      });
+    }
+    if (filterState.priceMax !== "" && exclude !== "price") {
+      var hi = Number(filterState.priceMax);
+      list = list.filter(function (h) {
+        var n = parsePriceFromHit(h);
+        return !n || n <= hi;
+      });
+    }
+    return list;
+  }
+
+  function filteredHits() {
+    var list = poolForCounts(null);
+    list = list.slice();
+    if (filterState.sort === "name") {
+      list.sort(function (a, b) {
+        return String(a.name || "").localeCompare(String(b.name || ""), "tr");
+      });
+    } else if (filterState.sort === "name-desc") {
+      list.sort(function (a, b) {
+        return String(b.name || "").localeCompare(String(a.name || ""), "tr");
+      });
+    } else if (filterState.sort === "price-asc") {
+      list.sort(function (a, b) {
+        return parsePriceFromHit(a) - parsePriceFromHit(b);
+      });
+    } else if (filterState.sort === "price-desc") {
+      list.sort(function (a, b) {
+        return parsePriceFromHit(b) - parsePriceFromHit(a);
+      });
+    }
+    return list;
+  }
+
   function productHref(hit) {
-    if (hit && hit.url) return hit.url;
-    if (hit && hit.dept && hit.slug) {
+    if (!hit) return "#";
+    if (hit.url) {
       try {
-        if (typeof window.eqProductPath === "function") {
-          return window.eqProductPath(hit.dept, hit.slug);
+        if (typeof window.eqProductPath === "function" && hit.dept && hit.slug) {
+          var dept0 = String(hit.dept).replace(/^\/+|\/+$/g, "");
+          if (dept0 === "market-reyon") dept0 = "market-reyonlari";
+          return window.eqProductPath(dept0, catalogSlugFromHit(hit));
         }
       } catch (_) {}
-      return "/shop/" + encodeURIComponent(hit.dept) + "/" + encodeURIComponent(hit.slug);
+      return hit.url;
     }
-    return "#";
+    var dept = String(hit.dept || "pisirme").replace(/^\/+|\/+$/g, "");
+    if (dept === "market-reyon") dept = "market-reyonlari";
+    var slug = catalogSlugFromHit(hit);
+    if (!slug) return "#";
+    try {
+      if (typeof window.eqProductPath === "function") {
+        return window.eqProductPath(dept, slug);
+      }
+    } catch (_) {}
+    return "/shop/" + encodeURIComponent(dept) + "/" + encodeURIComponent(slug);
   }
 
   function loadCatalogImageMap() {
@@ -50,8 +242,10 @@
         if (Array.isArray(rows)) {
           rows.forEach(function (row) {
             if (!row || !row.id) return;
-            var imgs = row.images;
-            if (Array.isArray(imgs) && imgs[0]) map[String(row.id)] = String(imgs[0]);
+            map[String(row.id)] = {
+              images: row.images || [],
+              sku: row.sku || row.model || row.urun_kodu || "",
+            };
           });
         }
         catalogImgById = map;
@@ -67,12 +261,48 @@
     return catalogImgInflight;
   }
 
+  function isCatalogRenderRel(rel) {
+    return /\/catalog\/ozti\/(?:web|p287|pdf|katalog)\//i.test(String(rel || ""));
+  }
+
+  function slugOzti(kod) {
+    return (
+      "ozti-" +
+      String(kod || "")
+        .toLowerCase()
+        .replace(/\./g, "-")
+        .replace(/[^a-z0-9-]/g, "")
+    );
+  }
+
+  function pickCatalogImage(row, mapped) {
+    var imgs = (row && row.images) || [];
+    var i;
+    for (i = 0; i < imgs.length; i++) {
+      if (/cafemarkt/i.test(imgs[i])) return String(imgs[i]).replace(/\\/g, "/");
+    }
+    for (i = 0; i < imgs.length; i++) {
+      if (!isCatalogRenderRel(imgs[i])) return String(imgs[i]).replace(/\\/g, "/");
+    }
+    var rel = String(mapped || imgs[0] || "").replace(/\\/g, "/");
+    if (rel && isCatalogRenderRel(rel)) {
+      var kod = row && (row.sku || row.model || row.urun_kodu);
+      if (kod) return "images/catalog/ozti/cafemarkt/" + slugOzti(kod) + ".jpg";
+      return rel.replace("/ozti/web/", "/ozti/cafemarkt/");
+    }
+    return rel;
+  }
+
   function enrichHits(hits) {
     if (!catalogImgById || !Array.isArray(hits)) return hits || [];
     return hits.map(function (h) {
       if (!h) return h;
-      if (h.image) return h;
-      var img = catalogImgById[h.id];
+      var cat = catalogImgById[h.id];
+      var row = cat
+        ? { images: cat.images || [], sku: cat.sku || h.sku || h.model }
+        : { images: h.image ? [h.image] : [], sku: h.sku || h.model };
+      var img = pickCatalogImage(row, cat && cat.images && cat.images[0]);
+      if (!img && h.image) return h;
       if (!img) return h;
       return Object.assign({}, h, { image: img });
     });
@@ -91,7 +321,12 @@
     var img = hit && hit.image;
     if (!img) return "";
     img = String(img).replace(/\\/g, "/");
-    if (/^https?:\/\//i.test(img)) return img;
+    if (typeof window.eqProductImgSrc === "function") {
+      try {
+        var eq = window.eqProductImgSrc(img);
+        if (eq) return eq;
+      } catch (_) {}
+    }
     if (typeof window.catalogImageCandidates === "function") {
       try {
         var tries = window.catalogImageCandidates(img);
@@ -135,25 +370,272 @@
     }
   }
 
-  function render(hits, q, total, err) {
-    lastRender = { hits: hits || [], q: q || "", total: total, err: err };
-    var title = document.getElementById("eq-arama-title");
-    var count = document.getElementById("eq-arama-count");
+  function syncPageTitle(q) {
+    try {
+      document.title = q
+        ? __searchT("search.title_q", "Arama: «{q}»", { q: q }) + " · Equsto"
+        : __searchT("search.page_title", "Arama — Equsto");
+    } catch (_) {}
+  }
+
+  function renderMoreButton(q, hasMore) {
+    var host = document.getElementById("eq-arama-more");
+    if (!host) return;
+    if (!hasMore || !q) {
+      host.innerHTML = "";
+      return;
+    }
+    var shown = sourceHits.length;
+    host.innerHTML =
+      '<button type="button" class="eq-arama-more__btn" id="eq-arama-more-btn">' +
+      esc(
+        __searchT("search.load_more", "{shown} / {total} — daha fazla göster", {
+          shown: String(shown),
+          total: String(lastRender.total != null ? lastRender.total : shown),
+        })
+      ) +
+      "</button>";
+    var btn = document.getElementById("eq-arama-more-btn");
+    if (btn) {
+      btn.onclick = function () {
+        fetchPage(q, shown, false);
+      };
+    }
+  }
+
+  function renderSelectedChips() {
+    var host = document.getElementById("eq-arama-selected");
+    var chips = document.getElementById("eq-arama-chips");
+    if (!host || !chips) return;
+    var html = "";
+    filterState.depts.forEach(function (d) {
+      html +=
+        '<button type="button" class="eq-cm-chip" data-kind="dept" data-value="' +
+        esc(d) +
+        '">' +
+        esc(deptLabel(d)) +
+        " ×</button>";
+    });
+    filterState.brands.forEach(function (b) {
+      html +=
+        '<button type="button" class="eq-cm-chip" data-kind="brand" data-value="' +
+        esc(b) +
+        '">' +
+        esc(b) +
+        " ×</button>";
+    });
+    if (filterState.priceMin !== "") {
+      html +=
+        '<button type="button" class="eq-cm-chip" data-kind="priceMin">min ' +
+        esc(filterState.priceMin) +
+        " ×</button>";
+    }
+    if (filterState.priceMax !== "") {
+      html +=
+        '<button type="button" class="eq-cm-chip" data-kind="priceMax">max " +
+        esc(filterState.priceMax) +
+        " ×</button>";
+    }
+    chips.innerHTML = html;
+    host.hidden = !html;
+    chips.querySelectorAll(".eq-cm-chip").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var kind = btn.getAttribute("data-kind");
+        var val = btn.getAttribute("data-value");
+        if (kind === "dept") {
+          filterState.depts = filterState.depts.filter(function (d) {
+            return d !== val;
+          });
+        } else if (kind === "brand") {
+          filterState.brands = filterState.brands.filter(function (b) {
+            return b !== val;
+          });
+        } else if (kind === "priceMin") filterState.priceMin = "";
+        else if (kind === "priceMax") filterState.priceMax = "";
+        renderAll();
+      });
+    });
+  }
+
+  function renderFacets() {
+    var host = document.getElementById("eq-arama-facets");
+    if (!host || !sourceHits.length) {
+      if (host) host.innerHTML = "";
+      return;
+    }
+
+    var deptPool = poolForCounts("dept");
+    var brandPool = poolForCounts("brand");
+    var pricePool = poolForCounts("price");
+    var deptCounts = Object.create(null);
+    var brandCounts = Object.create(null);
+    var priceMinAll = Infinity;
+    var priceMaxAll = 0;
+
+    deptPool.forEach(function (h) {
+      var d = hitDeptKey(h);
+      deptCounts[d] = (deptCounts[d] || 0) + 1;
+    });
+    brandPool.forEach(function (h) {
+      var b = hitBrandKey(h);
+      if (b) brandCounts[b] = (brandCounts[b] || 0) + 1;
+    });
+    pricePool.forEach(function (h) {
+      var pr = parsePriceFromHit(h);
+      if (pr > 0) {
+        if (pr < priceMinAll) priceMinAll = pr;
+        if (pr > priceMaxAll) priceMaxAll = pr;
+      }
+    });
+    if (!isFinite(priceMinAll)) priceMinAll = 0;
+
+    var depts = Object.keys(deptCounts).sort(function (a, b) {
+      return deptCounts[b] - deptCounts[a];
+    });
+    filterState.depts.forEach(function (d) {
+      if (depts.indexOf(d) < 0) depts.push(d);
+    });
+
+    var brands = Object.keys(brandCounts).sort(function (a, b) {
+      return brandCounts[b] - brandCounts[a];
+    });
+    filterState.brands.forEach(function (b) {
+      if (b && brands.indexOf(b) < 0) brands.push(b);
+    });
+
+    var html = "";
+
+    if (depts.length > 1) {
+      html +=
+        '<details class="eq-cm-facet" open><summary class="eq-cm-facet__hd">' +
+        esc(__searchT("search.filter_dept", "Departman")) +
+        '</summary><div class="eq-cm-facet__body"><ul class="eq-cm-facet__list">';
+      depts.forEach(function (d) {
+        var checked = filterState.depts.indexOf(d) >= 0 ? " checked" : "";
+        html +=
+          '<li class="eq-cm-facet__item"><label class="eq-cm-facet__label">' +
+          '<input type="checkbox" name="eq-arama-dept" value="' +
+          esc(d) +
+          '"' +
+          checked +
+          "><span>" +
+          esc(deptLabel(d)) +
+          '</span><span class="eq-cm-facet__count">(' +
+          deptCounts[d] +
+          ")</span></label></li>";
+      });
+      html += "</ul></div></details>";
+    }
+
+    html +=
+      '<details class="eq-cm-facet" open><summary class="eq-cm-facet__hd">' +
+      esc(__searchT("search.filter_brand", "Marka")) +
+      '</summary><div class="eq-cm-facet__body">' +
+      '<input type="search" class="eq-cm-facet__search" id="eq-arama-brand-q" placeholder="' +
+      esc(__searchT("search.brand_search_ph", "Marka ara")) +
+      '" autocomplete="off">' +
+      '<ul class="eq-cm-facet__list" id="eq-arama-brand-list">';
+    brands.slice(0, 80).forEach(function (b) {
+      var checked = filterState.brands.indexOf(b) >= 0 ? " checked" : "";
+      html +=
+        '<li class="eq-cm-facet__item" data-brand-label="' +
+        esc(lc(b)) +
+        '"><label class="eq-cm-facet__label">' +
+        '<input type="checkbox" name="eq-arama-brand" value="' +
+        esc(b) +
+        '"' +
+        checked +
+        "><span>" +
+        esc(b) +
+        '</span><span class="eq-cm-facet__count">(' +
+        brandCounts[b] +
+        ")</span></label></li>";
+    });
+    html += "</ul></div></details>";
+
+    html +=
+      '<details class="eq-cm-facet" open><summary class="eq-cm-facet__hd">' +
+      esc(__searchT("search.filter_price", "Fiyat")) +
+      '</summary><div class="eq-cm-facet__body">' +
+      '<div class="eq-cm-facet__price-row">' +
+      '<input type="number" id="eq-arama-price-min" min="0" step="1" placeholder="' +
+      esc(__searchT("search.price_min", "Min")) +
+      '" value="' +
+      esc(filterState.priceMin) +
+      '">' +
+      '<span>—</span>' +
+      '<input type="number" id="eq-arama-price-max" min="0" step="1" placeholder="' +
+      esc(__searchT("search.price_max", "Max")) +
+      '" value="' +
+      esc(filterState.priceMax) +
+      '">' +
+      "</div>" +
+      '<button type="button" class="eq-cm-facet__apply" id="eq-arama-price-apply">' +
+      esc(__searchT("search.price_apply", "Uygula")) +
+      "</button>";
+    if (priceMaxAll > 0) {
+      html +=
+        '<p class="eq-cm-facet__range-hint">' +
+        esc(
+          __searchT("search.price_range_hint", "Aralık: {min} – {max} EUR", {
+            min: String(Math.floor(priceMinAll)),
+            max: String(Math.ceil(priceMaxAll)),
+          })
+        ) +
+        "</p>";
+    }
+    html += "</div></details>";
+
+    host.innerHTML = html;
+
+    host.querySelectorAll('input[name="eq-arama-dept"]').forEach(function (inp) {
+      inp.addEventListener("change", function () {
+        var vals = [];
+        host.querySelectorAll('input[name="eq-arama-dept"]:checked').forEach(function (el) {
+          vals.push(el.value);
+        });
+        filterState.depts = vals;
+        renderAll();
+      });
+    });
+
+    host.querySelectorAll('input[name="eq-arama-brand"]').forEach(function (inp) {
+      inp.addEventListener("change", function () {
+        var vals = [];
+        host.querySelectorAll('input[name="eq-arama-brand"]:checked').forEach(function (el) {
+          vals.push(el.value);
+        });
+        filterState.brands = vals;
+        renderAll();
+      });
+    });
+
+    var brandQ = document.getElementById("eq-arama-brand-q");
+    if (brandQ) {
+      brandQ.addEventListener("input", function () {
+        var q = lc(brandQ.value);
+        document.querySelectorAll("#eq-arama-brand-list .eq-cm-facet__item").forEach(function (li) {
+          var lab = li.getAttribute("data-brand-label") || "";
+          li.style.display = !q || lab.indexOf(q) >= 0 ? "" : "none";
+        });
+      });
+    }
+
+    var applyBtn = document.getElementById("eq-arama-price-apply");
+    if (applyBtn) {
+      applyBtn.addEventListener("click", function () {
+        var minEl = document.getElementById("eq-arama-price-min");
+        var maxEl = document.getElementById("eq-arama-price-max");
+        filterState.priceMin = minEl && minEl.value !== "" ? minEl.value : "";
+        filterState.priceMax = maxEl && maxEl.value !== "" ? maxEl.value : "";
+        renderAll();
+      });
+    }
+  }
+
+  function renderGrid(hits, q, err) {
     var grid = document.getElementById("eq-arama-grid");
     if (!grid) return;
-
-    if (title) {
-      title.textContent = q ? "Arama: «" + q + "»" : "Arama";
-    }
-    if (count) {
-      if (err) count.textContent = err;
-      else if (!q) count.textContent = "Anahtar kelime girin.";
-      else
-        count.textContent =
-          hits.length === 0
-            ? "Sonuç bulunamadı."
-            : (total != null ? total : hits.length) + " sonuç";
-    }
 
     if (err) {
       grid.innerHTML =
@@ -161,13 +643,29 @@
       return;
     }
     if (!q) {
-      grid.innerHTML = '<p class="eq-dept-plp-status">Üst çubuktan arama yapın.</p>';
+      grid.innerHTML =
+        '<p class="eq-dept-plp-status">' +
+        esc(__searchT("search.use_top_bar", "Üst çubuktan arama yapın.")) +
+        "</p>";
+      return;
+    }
+    if (!sourceHits.length) {
+      grid.innerHTML =
+        '<p class="eq-dept-plp-empty">' +
+        esc(__searchT("search.no_products", "Bu aramaya uygun ürün yok.")) +
+        "</p>";
       return;
     }
     if (!hits.length) {
-      grid.innerHTML = '<p class="eq-dept-plp-empty">Bu aramaya uygun ürün yok.</p>';
+      grid.innerHTML =
+        '<p class="eq-dept-plp-empty">' +
+        esc(__searchT("search.no_filter_match", "Seçili filtrelere uygun ürün yok.")) +
+        "</p>";
       return;
     }
+
+    var addLbl = __searchT("plp.add_to_cart", "SEPETE EKLE");
+    var imgPh = __searchT("search.image_ph", "Görsel");
 
     grid.innerHTML = hits
       .map(function (h) {
@@ -184,7 +682,9 @@
                 c: h.dept || "",
                 img: src,
               }) +
-              ">SEPETE EKLE</button>"
+              ">" +
+              esc(addLbl) +
+              "</button>"
             : "";
         return (
           '<article class="eq-dept-plp-card">' +
@@ -196,12 +696,10 @@
               esc(src) +
               '"' +
               (rawImg
-                ? ' data-eq-img-raw="' +
-                  esc(rawImg) +
-                  '" data-eq-img-step="0"'
+                ? ' data-eq-img-raw="' + esc(rawImg) + '" data-eq-img-step="0"'
                 : "") +
               ' alt="" loading="lazy" decoding="async" onerror="typeof __eqImgFail===\'function\'&&__eqImgFail(this)">'
-            : '<span class="eq-dept-plp-card__ph">Görsel</span>') +
+            : '<span class="eq-dept-plp-card__ph">' + esc(imgPh) + "</span>") +
           "</a>" +
           '<a class="eq-dept-plp-card__name" href="' +
           esc(href) +
@@ -219,49 +717,219 @@
         );
       })
       .join("");
+
+    try {
+      if (window.EqustoProductTint && typeof window.EqustoProductTint.refreshPlp === "function") {
+        window.EqustoProductTint.refreshPlp(grid);
+      } else {
+        document.dispatchEvent(new CustomEvent("equsto:plp-grid-updated", { detail: { root: grid } }));
+      }
+    } catch (_) {}
   }
 
-  function load() {
-    var q = getQuery();
-    var inp = document.querySelector("header .srch-input");
-    if (inp && q) inp.value = q;
+  function renderAll() {
+    var q = lastRender.q;
+    var hits = filteredHits();
+    var title = document.getElementById("eq-arama-title");
+    var count = document.getElementById("eq-arama-count");
+    var filterCount = document.getElementById("eq-arama-filter-count");
 
-    if (!q) {
-      render([], "", 0, null);
-      return;
+    syncPageTitle(q);
+
+    if (title) {
+      title.textContent = q
+        ? __searchT("search.results_for", "Arama sonuçları")
+        : __searchT("search.title", "Arama");
+    }
+    if (count) {
+      if (lastRender.err) count.textContent = lastRender.err;
+      else if (!q) count.textContent = __searchT("search.enter_keyword", "Anahtar kelime girin.");
+      else if (!sourceHits.length)
+        count.textContent = __searchT("search.no_results_for", "«{q}» için sonuç bulunamadı.", { q: q });
+      else {
+        count.textContent = __searchT("search.results_count_q", "«{q}» — {n} sonuç", {
+          q: q,
+          n: lastRender.total != null ? lastRender.total : sourceHits.length,
+        });
+        if (lastRender.warning) count.textContent += " — " + lastRender.warning;
+      }
+    }
+    if (filterCount) {
+      if (!q || !sourceHits.length) {
+        filterCount.textContent = "";
+      } else if (hasActiveFilters()) {
+        filterCount.innerHTML =
+          "<strong>" +
+          hits.length +
+          "</strong> / " +
+          sourceHits.length +
+          " " +
+          esc(__searchT("search.filtered_shown", "gösteriliyor"));
+      } else {
+        filterCount.innerHTML =
+          "<strong>" + sourceHits.length + "</strong> " + esc(__searchT("search.products", "ürün"));
+      }
     }
 
-    var grid = document.getElementById("eq-arama-grid");
-    if (grid) grid.innerHTML = '<p class="eq-dept-plp-status">Aranıyor…</p>';
+    renderFacets();
+    renderSelectedChips();
+    renderGrid(hits, q, lastRender.err);
+    renderMoreButton(q, lastRender.hasMore);
+  }
 
-    fetch("/api/search?q=" + encodeURIComponent(q) + "&limit=" + LIMIT, {
-      headers: { Accept: "application/json" },
-    })
+  function fetchPage(q, offset, replace) {
+    if (loadMoreBusy) return;
+    loadMoreBusy = true;
+    var grid = document.getElementById("eq-arama-grid");
+    if (replace && grid) {
+      grid.innerHTML =
+        '<p class="eq-dept-plp-status">' +
+        esc(__searchT("search.searching", "Aranıyor…")) +
+        "</p>";
+    } else {
+      var btn = document.getElementById("eq-arama-more-btn");
+      if (btn) btn.disabled = true;
+    }
+
+    fetch(
+      "/api/search?q=" +
+        encodeURIComponent(q) +
+        "&limit=" +
+        PAGE_SIZE +
+        "&offset=" +
+        offset,
+      { headers: { Accept: "application/json" } }
+    )
       .then(function (r) {
         return r.json().then(function (data) {
           return { ok: r.ok, data: data };
         });
       })
       .then(function (res) {
+        loadMoreBusy = false;
         if (!res.ok || res.data.error) {
-          render([], q, 0, res.data.error || "Arama servisi kullanılamıyor.");
+          lastRender = {
+            q: q,
+            total: 0,
+            err: res.data.error || __searchT("search.service_unavailable", "Arama servisi kullanılamıyor."),
+            warning: "",
+            hasMore: false,
+          };
+          if (replace) {
+            sourceHits = [];
+            resetFilters();
+          }
+          renderAll();
           return;
         }
+
+        var rawHits = res.data.hits || [];
+        var warn = res.data.warning ? String(res.data.warning) : "";
+        var total = res.data.estimatedTotalHits;
+        var hasMore = !!res.data.hasMore;
+
+        if (replace) {
+          resetFilters();
+          sourceHits = sortHitsWithImagesFirst(rawHits);
+        } else {
+          sourceHits = dedupeHits(sourceHits.concat(rawHits));
+        }
+
+        lastRender = { q: q, total: total, err: null, warning: warn, hasMore: hasMore };
+        renderAll();
+
         return loadCatalogImageMap().then(function () {
-          var hits = sortHitsWithImagesFirst(enrichHits(res.data.hits || []));
-          var warn = res.data.warning ? " " + res.data.warning : "";
-          render(hits, q, res.data.estimatedTotalHits, warn || null);
+          var enriched = enrichHits(rawHits);
+          if (replace) {
+            sourceHits = sortHitsWithImagesFirst(enriched);
+          } else {
+            var idMap = Object.create(null);
+            sourceHits.forEach(function (h, idx) {
+              if (h && h.id) idMap[h.id] = idx;
+            });
+            enriched.forEach(function (h) {
+              if (h && h.id && idMap[h.id] != null) sourceHits[idMap[h.id]] = h;
+              else sourceHits.push(h);
+            });
+            sourceHits = dedupeHits(sourceHits);
+          }
+          renderAll();
         });
       })
       .catch(function (e) {
-        render([], q, 0, e && e.message ? e.message : "Bağlantı hatası");
+        loadMoreBusy = false;
+        lastRender = {
+          q: q,
+          total: 0,
+          err: e && e.message ? e.message : __searchT("search.connection_error", "Bağlantı hatası"),
+          warning: "",
+          hasMore: false,
+        };
+        if (replace) {
+          sourceHits = [];
+          resetFilters();
+        }
+        renderAll();
       });
   }
 
-  document.addEventListener("equsto:kur-updated", function () {
-    if (lastRender.q) {
-      render(lastRender.hits, lastRender.q, lastRender.total, lastRender.err);
+  function bindUi() {
+    if (uiBound) return;
+    uiBound = true;
+
+    var sortEl = document.getElementById("eq-arama-sort");
+    if (sortEl) {
+      sortEl.addEventListener("change", function () {
+        filterState.sort = sortEl.value || "";
+        renderAll();
+      });
     }
+
+    var mob = document.getElementById("eq-arama-filter-mob");
+    var bd = document.getElementById("eq-arama-filter-backdrop");
+    if (mob) {
+      mob.addEventListener("click", function () {
+        document.body.classList.toggle("eq-dept-filter-open");
+      });
+    }
+    if (bd) {
+      bd.addEventListener("click", function () {
+        document.body.classList.remove("eq-dept-filter-open");
+      });
+    }
+
+    var clearAll = document.getElementById("eq-arama-clear-all");
+    if (clearAll) {
+      clearAll.addEventListener("click", function () {
+        resetFilters();
+        renderAll();
+      });
+    }
+  }
+
+  function load() {
+    bindUi();
+    var q = getQuery();
+    var inp = document.querySelector("header .srch-input");
+    if (inp && q) inp.value = q;
+
+    if (!q) {
+      lastRender = { q: "", total: 0, err: null, warning: "", hasMore: false };
+      sourceHits = [];
+      resetFilters();
+      renderAll();
+      return;
+    }
+
+    fetchPage(q, 0, true);
+  }
+
+  document.addEventListener("equsto:kur-updated", function () {
+    if (lastRender.q) renderAll();
+  });
+
+  window.addEventListener("equsto:i18n-ready", function () {
+    if (lastRender.q || sourceHits.length || !getQuery()) renderAll();
   });
 
   if (document.readyState === "loading") {

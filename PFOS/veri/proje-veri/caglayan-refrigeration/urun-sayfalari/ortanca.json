@@ -1,0 +1,202 @@
+{
+  "slug": "ortanca",
+  "baslik": "ORTANCA",
+  "tip": "model",
+  "ustSeriSlug": "ortanca-2",
+  "kategoriler": [
+    "ortance-en"
+  ],
+  "kapak": "https:\\/\\/caglayanrefrigeration.com\\/wp-content\\/uploads\\/2026\\/02\\/Ortanca-Kapak-Caglayan-Refrigeration.webp",
+  "kapakYol": "gorseller/ortanca/Ortanca-Kapak-Caglayan-Refrigeration.webp",
+  "linkKaynak": "https://caglayanrefrigeration.com/tr/product/ortanca/",
+  "cocuklar": [],
+  "ozellikler": [
+    {
+      "baslik": "",
+      "aciklama": "Sandwiches"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Pre-Packed Fruit and Vegetables"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Dairy Products"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Cheese"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Delicatessen"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Ice-Cream"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Frozen Food"
+    },
+    {
+      "baslik": "",
+      "aciklama": "High Efficiency Fans"
+    },
+    {
+      "baslik": "",
+      "aciklama": "LED Lighting"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Ventilated"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Hot Gas Defrost"
+    }
+  ],
+  "teknik": {
+    "akordeon": [],
+    "sekmeler": [
+      {
+        "baslik": "TEKNİK DETAYLAR",
+        "gorseller": [],
+        "tablolar": [
+          {
+            "basliklar": [
+              "UZUNLUK / LENGTH (mm)",
+              "YÜKSEKLİK / HEIGHT (mm)",
+              "SICAKLIK SINIFI / TEMPERATURE CLASS",
+              "YÜKLEME ALANI / LOADING AREA (m²)",
+              "PANEL KALINLIĞI / END THICKNESS (mm)"
+            ],
+            "satirlar": [
+              [
+                "ML (3M1)",
+                "DERİNLİK / DEPTH (mm)"
+              ],
+              [
+                "1060"
+              ],
+              [
+                "1250",
+                "1200",
+                "-1 / +1 °C",
+                "1,06",
+                "25"
+              ],
+              [
+                "1875",
+                "1,59"
+              ],
+              [
+                "2500",
+                "2,13"
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "tablolar": [
+      {
+        "basliklar": [
+          "UZUNLUK / LENGTH (mm)",
+          "YÜKSEKLİK / HEIGHT (mm)",
+          "SICAKLIK SINIFI / TEMPERATURE CLASS",
+          "YÜKLEME ALANI / LOADING AREA (m²)",
+          "PANEL KALINLIĞI / END THICKNESS (mm)"
+        ],
+        "satirlar": [
+          [
+            "ML (3M1)",
+            "DERİNLİK / DEPTH (mm)"
+          ],
+          [
+            "1060"
+          ],
+          [
+            "1250",
+            "1200",
+            "-1 / +1 °C",
+            "1,06",
+            "25"
+          ],
+          [
+            "1875",
+            "1,59"
+          ],
+          [
+            "2500",
+            "2,13"
+          ]
+        ]
+      }
+    ]
+  },
+  "gorseller": {
+    "tum": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Ortanca-01-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/ortanca/Ortanca-01-Caglayan-Refrigeration.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/cheese.webp",
+        "dosya": "gorseller/ortanca/cheese.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Ortanca-Kesit-01-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/ortanca/Ortanca-Kesit-01-Caglayan-Refrigeration.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Ortanca.pdf",
+        "dosya": "gorseller/ortanca/Ortanca.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/circle-bg.webp",
+        "dosya": "gorseller/ortanca/circle-bg.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/fruit-yogurt.webp",
+        "dosya": "gorseller/ortanca/fruit-yogurt.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/ortanca/pdf-icon.webp"
+      }
+    ],
+    "urun": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Ortanca-01-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/ortanca/Ortanca-01-Caglayan-Refrigeration.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/cheese.webp",
+        "dosya": "gorseller/ortanca/cheese.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Ortanca.pdf",
+        "dosya": "gorseller/ortanca/Ortanca.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/circle-bg.webp",
+        "dosya": "gorseller/ortanca/circle-bg.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/fruit-yogurt.webp",
+        "dosya": "gorseller/ortanca/fruit-yogurt.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/ortanca/pdf-icon.webp"
+      }
+    ],
+    "teknikCizim": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2026/02/Ortanca-Kesit-01-Caglayan-Refrigeration.webp",
+        "dosya": "gorseller/ortanca/Ortanca-Kesit-01-Caglayan-Refrigeration.webp"
+      }
+    ]
+  }
+}

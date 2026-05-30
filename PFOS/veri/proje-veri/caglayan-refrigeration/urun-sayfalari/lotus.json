@@ -1,0 +1,1298 @@
+{
+  "slug": "lotus",
+  "baslik": "LOTUS",
+  "tip": "model",
+  "ustSeriSlug": "lotus-category",
+  "kategoriler": [
+    "lotus-en"
+  ],
+  "kapak": "https:\\/\\/caglayanrefrigeration.com\\/wp-content\\/uploads\\/2023\\/03\\/Lotus-Kapak.webp",
+  "kapakYol": "gorseller/lotus/Lotus-Kapak.webp",
+  "linkKaynak": "https://caglayanrefrigeration.com/tr/product/lotus/",
+  "cocuklar": [],
+  "ozellikler": [
+    {
+      "baslik": "",
+      "aciklama": "Dairy Products"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Delicatessen"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Drinks"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Fruit and Vegetables"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Meat"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Chicken"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Cheese"
+    },
+    {
+      "baslik": "",
+      "aciklama": "High Efficiency Fans"
+    },
+    {
+      "baslik": "",
+      "aciklama": "LED Lighting"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Ventilated"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Remote Condensing Unit"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Off Cycle Defrost"
+    }
+  ],
+  "teknik": {
+    "akordeon": [
+      {
+        "baslik": "LOTUS",
+        "sekmeler": [
+          {
+            "baslik": "TEKNİK ÇİZİMLER",
+            "gorseller": [
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-2.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-3.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-4.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-5.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-6.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-7.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-8.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-9.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-10.webp"
+            ],
+            "tablolar": []
+          },
+          {
+            "baslik": "TEKNİK DETAYLAR",
+            "gorseller": [
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-2.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-3.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-4.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-5.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-6.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-7.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-8.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-9.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-10.webp"
+            ],
+            "tablolar": []
+          }
+        ],
+        "tablolar": [
+          {
+            "basliklar": [
+              "UZUNLUK / LENGTH",
+              "YÜKSEKLİK / HEIGHT",
+              "SICAKLIK SINIFI / TEMPERATURE CLASS",
+              "YÜKLEME ALANI / LOADING AREA",
+              "PANEL KALINLIĞI / END THICKNESS"
+            ],
+            "satirlar": [
+              [
+                "mm",
+                "ML (3M1)",
+                "SL (3M2)",
+                "m²",
+                "mm"
+              ],
+              [
+                "937",
+                "2050",
+                "°C",
+                "1,72",
+                "2,19",
+                "2,47",
+                "2,75",
+                "3,04",
+                "50"
+              ],
+              [
+                "2200",
+                "-1 / +1",
+                "0 / +2",
+                "2,05",
+                "2,61",
+                "2,94",
+                "3,27",
+                "3,60"
+              ],
+              [
+                "1250",
+                "2050",
+                "2,30",
+                "2,93",
+                "3,30",
+                "3,68",
+                "4,05"
+              ],
+              [
+                "2200",
+                "2,74",
+                "3,49",
+                "3,93",
+                "4,36",
+                "4,80"
+              ],
+              [
+                "1875",
+                "2050",
+                "3,45",
+                "4,39",
+                "4,95",
+                "5,51",
+                "6,08"
+              ],
+              [
+                "2200",
+                "4,11",
+                "5,23",
+                "5,89",
+                "6,54",
+                "7,20"
+              ],
+              [
+                "2500",
+                "2050",
+                "4,60",
+                "5,85",
+                "6,60",
+                "7,35",
+                "8,10"
+              ],
+              [
+                "2200",
+                "5,48",
+                "6,98",
+                "7,85",
+                "8,73",
+                "9,60"
+              ],
+              [
+                "2815",
+                "2050",
+                "5,18",
+                "6,59",
+                "7,43",
+                "8,28",
+                "9,12"
+              ],
+              [
+                "2200",
+                "6,16",
+                "7,85",
+                "8,84",
+                "9,82",
+                "10,81"
+              ],
+              [
+                "3750",
+                "2050",
+                "6,90",
+                "8,78",
+                "9,90",
+                "11,03",
+                "12,15"
+              ],
+              [
+                "2200",
+                "8,21",
+                "10,46",
+                "11,78",
+                "13,09",
+                "14,40"
+              ],
+              [
+                "DERİNLİK / DEPTH (mm)"
+              ],
+              [
+                "712",
+                "812",
+                "912",
+                "1012",
+                "1112"
+              ]
+            ]
+          },
+          {
+            "basliklar": [
+              "UZUNLUK / LENGTH (mm)",
+              "YÜKSEKLİK / HEIGHT (mm)",
+              "SICAKLIK SINIFI / TEMPERATURE CLASS",
+              "YÜKLEME ALANI / LOADING AREA (m²)",
+              "PANEL KALINLIĞI / END THICKNESS (mm)"
+            ],
+            "satirlar": [
+              [
+                "ML (3M1)",
+                "SL (3M2)",
+                "DERİNLİK / DEPTH (mm)"
+              ],
+              [
+                "720",
+                "812",
+                "912",
+                "1012",
+                "1112"
+              ],
+              [
+                "937",
+                "2050",
+                "-1 / +1 °C",
+                "0 / +2 °C",
+                "1,72",
+                "2,19",
+                "2,47",
+                "2,75",
+                "3,04",
+                "50"
+              ],
+              [
+                "2200",
+                "2,05",
+                "2,61",
+                "2,94",
+                "3,27",
+                "3,60"
+              ],
+              [
+                "1250",
+                "2050",
+                "2,30",
+                "2,93",
+                "3,30",
+                "3,68",
+                "4,05"
+              ],
+              [
+                "2200",
+                "2,74",
+                "3,49",
+                "3,93",
+                "4,36",
+                "4,80"
+              ],
+              [
+                "1875",
+                "2050",
+                "3,45",
+                "4,39",
+                "4,95",
+                "5,51",
+                "6,08"
+              ],
+              [
+                "2200",
+                "4,11",
+                "5,23",
+                "5,89",
+                "6,54",
+                "7,20"
+              ],
+              [
+                "2500",
+                "2050",
+                "4,60",
+                "5,85",
+                "6,60",
+                "7,35",
+                "8,10"
+              ],
+              [
+                "2200",
+                "5,48",
+                "6,98",
+                "7,85",
+                "8,73",
+                "9,60"
+              ],
+              [
+                "2815",
+                "2050",
+                "5,18",
+                "6,59",
+                "7,43",
+                "8,28",
+                "9,12"
+              ],
+              [
+                "2200",
+                "6,16",
+                "7,85",
+                "8,84",
+                "9,82",
+                "10,81"
+              ],
+              [
+                "3750",
+                "2050",
+                "6,90",
+                "8,78",
+                "9,90",
+                "11,03",
+                "12,15"
+              ],
+              [
+                "2200",
+                "8,21",
+                "10,46",
+                "11,78",
+                "13,09",
+                "14,40"
+              ]
+            ]
+          }
+        ],
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-2.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-3.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-4.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-5.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-6.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-7.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-8.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-9.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-10.webp"
+        ]
+      }
+    ],
+    "sekmeler": [
+      {
+        "baslik": "TEKNİK ÇİZİMLER",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-2.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-3.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-4.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-5.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-6.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-7.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-8.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-9.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-10.webp"
+        ],
+        "tablolar": []
+      },
+      {
+        "baslik": "TEKNİK DETAYLAR",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-2.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-3.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-4.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-5.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-6.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-7.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-8.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-9.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-10.webp"
+        ],
+        "tablolar": []
+      },
+      {
+        "baslik": "TEKNİK ÇİZİMLER",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LOTUS-FL-812x2050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LOTUS-FL-912x2050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LOTUS-FL-1012x2050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LOTUS-FL-1112x2050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LOTUS-FL-812x2200-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LOTUS-FL-912x2200-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LOTUS-FL-1012x2200-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LOTUS-FL-1112x2200-Model-1.webp"
+        ],
+        "tablolar": []
+      },
+      {
+        "baslik": "TEKNİK DETAYLAR",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LOTUS-FL-812x2050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LOTUS-FL-912x2050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LOTUS-FL-1012x2050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LOTUS-FL-1112x2050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LOTUS-FL-812x2200-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LOTUS-FL-912x2200-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LOTUS-FL-1012x2200-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LOTUS-FL-1112x2200-Model-1.webp"
+        ],
+        "tablolar": []
+      }
+    ],
+    "tablolar": [
+      {
+        "basliklar": [
+          "UZUNLUK / LENGTH",
+          "YÜKSEKLİK / HEIGHT",
+          "SICAKLIK SINIFI / TEMPERATURE CLASS",
+          "YÜKLEME ALANI / LOADING AREA",
+          "PANEL KALINLIĞI / END THICKNESS"
+        ],
+        "satirlar": [
+          [
+            "mm",
+            "ML (3M1)",
+            "SL (3M2)",
+            "m²",
+            "mm"
+          ],
+          [
+            "937",
+            "2050",
+            "°C",
+            "1,72",
+            "2,19",
+            "2,47",
+            "2,75",
+            "3,04",
+            "50"
+          ],
+          [
+            "2200",
+            "-1 / +1",
+            "0 / +2",
+            "2,05",
+            "2,61",
+            "2,94",
+            "3,27",
+            "3,60"
+          ],
+          [
+            "1250",
+            "2050",
+            "2,30",
+            "2,93",
+            "3,30",
+            "3,68",
+            "4,05"
+          ],
+          [
+            "2200",
+            "2,74",
+            "3,49",
+            "3,93",
+            "4,36",
+            "4,80"
+          ],
+          [
+            "1875",
+            "2050",
+            "3,45",
+            "4,39",
+            "4,95",
+            "5,51",
+            "6,08"
+          ],
+          [
+            "2200",
+            "4,11",
+            "5,23",
+            "5,89",
+            "6,54",
+            "7,20"
+          ],
+          [
+            "2500",
+            "2050",
+            "4,60",
+            "5,85",
+            "6,60",
+            "7,35",
+            "8,10"
+          ],
+          [
+            "2200",
+            "5,48",
+            "6,98",
+            "7,85",
+            "8,73",
+            "9,60"
+          ],
+          [
+            "2815",
+            "2050",
+            "5,18",
+            "6,59",
+            "7,43",
+            "8,28",
+            "9,12"
+          ],
+          [
+            "2200",
+            "6,16",
+            "7,85",
+            "8,84",
+            "9,82",
+            "10,81"
+          ],
+          [
+            "3750",
+            "2050",
+            "6,90",
+            "8,78",
+            "9,90",
+            "11,03",
+            "12,15"
+          ],
+          [
+            "2200",
+            "8,21",
+            "10,46",
+            "11,78",
+            "13,09",
+            "14,40"
+          ],
+          [
+            "DERİNLİK / DEPTH (mm)"
+          ],
+          [
+            "712",
+            "812",
+            "912",
+            "1012",
+            "1112"
+          ]
+        ]
+      },
+      {
+        "basliklar": [
+          "UZUNLUK / LENGTH (mm)",
+          "YÜKSEKLİK / HEIGHT (mm)",
+          "SICAKLIK SINIFI / TEMPERATURE CLASS",
+          "YÜKLEME ALANI / LOADING AREA (m²)",
+          "PANEL KALINLIĞI / END THICKNESS (mm)"
+        ],
+        "satirlar": [
+          [
+            "ML (3M1)",
+            "SL (3M2)",
+            "DERİNLİK / DEPTH (mm)"
+          ],
+          [
+            "720",
+            "812",
+            "912",
+            "1012",
+            "1112"
+          ],
+          [
+            "937",
+            "2050",
+            "-1 / +1 °C",
+            "0 / +2 °C",
+            "1,72",
+            "2,19",
+            "2,47",
+            "2,75",
+            "3,04",
+            "50"
+          ],
+          [
+            "2200",
+            "2,05",
+            "2,61",
+            "2,94",
+            "3,27",
+            "3,60"
+          ],
+          [
+            "1250",
+            "2050",
+            "2,30",
+            "2,93",
+            "3,30",
+            "3,68",
+            "4,05"
+          ],
+          [
+            "2200",
+            "2,74",
+            "3,49",
+            "3,93",
+            "4,36",
+            "4,80"
+          ],
+          [
+            "1875",
+            "2050",
+            "3,45",
+            "4,39",
+            "4,95",
+            "5,51",
+            "6,08"
+          ],
+          [
+            "2200",
+            "4,11",
+            "5,23",
+            "5,89",
+            "6,54",
+            "7,20"
+          ],
+          [
+            "2500",
+            "2050",
+            "4,60",
+            "5,85",
+            "6,60",
+            "7,35",
+            "8,10"
+          ],
+          [
+            "2200",
+            "5,48",
+            "6,98",
+            "7,85",
+            "8,73",
+            "9,60"
+          ],
+          [
+            "2815",
+            "2050",
+            "5,18",
+            "6,59",
+            "7,43",
+            "8,28",
+            "9,12"
+          ],
+          [
+            "2200",
+            "6,16",
+            "7,85",
+            "8,84",
+            "9,82",
+            "10,81"
+          ],
+          [
+            "3750",
+            "2050",
+            "6,90",
+            "8,78",
+            "9,90",
+            "11,03",
+            "12,15"
+          ],
+          [
+            "2200",
+            "8,21",
+            "10,46",
+            "11,78",
+            "13,09",
+            "14,40"
+          ]
+        ]
+      },
+      {
+        "basliklar": [
+          "UZUNLUK / LENGTH",
+          "YÜKSEKLİK / HEIGHT",
+          "SICAKLIK SINIFI / TEMPERATURE CLASS",
+          "YÜKLEME ALANI / LOADING AREA",
+          "PANEL KALINLIĞI / END THICKNESS"
+        ],
+        "satirlar": [
+          [
+            "mm",
+            "FL (3H1)",
+            "m²",
+            "mm"
+          ],
+          [
+            "937",
+            "2050",
+            "°C",
+            "1,35",
+            "1,54",
+            "1,72",
+            "1,91",
+            "50"
+          ],
+          [
+            "2200",
+            "+4 / +6",
+            "1,77",
+            "2,01",
+            "2,24",
+            "2,47"
+          ],
+          [
+            "1250",
+            "2050",
+            "1,80",
+            "2,05",
+            "2,30",
+            "2,55"
+          ],
+          [
+            "2200",
+            "2,36",
+            "2,68",
+            "2,99",
+            "3,30"
+          ],
+          [
+            "1875",
+            "2050",
+            "2,70",
+            "3,08",
+            "3,45",
+            "3,83"
+          ],
+          [
+            "2200",
+            "3,54",
+            "4,01",
+            "4,48",
+            "4,95"
+          ],
+          [
+            "2500",
+            "2050",
+            "3,60",
+            "4,10",
+            "4,60",
+            "5,10"
+          ],
+          [
+            "2200",
+            "4,73",
+            "5,35",
+            "5,98",
+            "6,60"
+          ],
+          [
+            "2815",
+            "2050",
+            "4,05",
+            "4,62",
+            "5,18",
+            "5,74"
+          ],
+          [
+            "2200",
+            "5,32",
+            "6,02",
+            "6,73",
+            "7,43"
+          ],
+          [
+            "3750",
+            "2050",
+            "5,40",
+            "6,15",
+            "6,90",
+            "7,65"
+          ],
+          [
+            "2200",
+            "7,09",
+            "8,03",
+            "8,96",
+            "9,90"
+          ],
+          [
+            "DERİNLİK / DEPTH (mm)"
+          ],
+          [
+            "812",
+            "912",
+            "1012",
+            "1112"
+          ]
+        ]
+      },
+      {
+        "basliklar": [
+          "UZUNLUK / LENGTH (mm)",
+          "YÜKSEKLİK / HEIGHT (mm)",
+          "SICAKLIK SINIFI / TEMPERATURE CLASS",
+          "YÜKLEME ALANI / LOADING AREA (m²)",
+          "PANEL KALINLIĞI / END THICKNESS (mm)"
+        ],
+        "satirlar": [
+          [
+            "FL (3H1)",
+            "DERİNLİK / DEPTH (mm)"
+          ],
+          [
+            "812",
+            "912",
+            "1012",
+            "1112"
+          ],
+          [
+            "937",
+            "2050",
+            "+4 / +6 °C",
+            "1,35",
+            "1,54",
+            "1,72",
+            "1,91",
+            "50"
+          ],
+          [
+            "2200",
+            "1,77",
+            "2,01",
+            "2,24",
+            "2,47"
+          ],
+          [
+            "1250",
+            "2050",
+            "1,80",
+            "2,05",
+            "2,30",
+            "2,55"
+          ],
+          [
+            "2200",
+            "2,36",
+            "2,68",
+            "2,99",
+            "3,30"
+          ],
+          [
+            "1875",
+            "2050",
+            "2,70",
+            "3,08",
+            "3,45",
+            "3,83"
+          ],
+          [
+            "2200",
+            "3,54",
+            "4,01",
+            "4,48",
+            "4,95"
+          ],
+          [
+            "2500",
+            "2050",
+            "3,60",
+            "4,10",
+            "4,60",
+            "5,10"
+          ],
+          [
+            "2200",
+            "4,73",
+            "5,35",
+            "5,98",
+            "6,60"
+          ],
+          [
+            "2815",
+            "2050",
+            "4,05",
+            "4,62",
+            "5,18",
+            "5,74"
+          ],
+          [
+            "2200",
+            "5,32",
+            "6,02",
+            "6,73",
+            "7,43"
+          ],
+          [
+            "3750",
+            "2050",
+            "5,40",
+            "6,15",
+            "6,90",
+            "7,65"
+          ],
+          [
+            "2200",
+            "7,09",
+            "8,03",
+            "8,96",
+            "9,90"
+          ]
+        ]
+      }
+    ]
+  },
+  "gorseller": {
+    "tum": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus.webp",
+        "dosya": "gorseller/lotus/Lotus.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/cheese.webp",
+        "dosya": "gorseller/lotus/cheese.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-1.webp",
+        "dosya": "gorseller/lotus/Lotus-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-2.webp",
+        "dosya": "gorseller/lotus/Lotus-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Lotus-3.webp",
+        "dosya": "gorseller/lotus/Lotus-3.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Lotus-4.webp",
+        "dosya": "gorseller/lotus/Lotus-4.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Lotus-ADA-1.webp",
+        "dosya": "gorseller/lotus/Lotus-ADA-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Lotus-ADA-2.webp",
+        "dosya": "gorseller/lotus/Lotus-ADA-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Lotus-FL.webp",
+        "dosya": "gorseller/lotus/Lotus-FL.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Lotus-FL-2.webp",
+        "dosya": "gorseller/lotus/Lotus-FL-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/lotus-FL.webp",
+        "dosya": "gorseller/lotus/lotus-FL.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Lotus.pdf",
+        "dosya": "gorseller/lotus/Lotus.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-1.webp",
+        "dosya": "gorseller/lotus/Lotus-SL-ML-Kesit-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-2.webp",
+        "dosya": "gorseller/lotus/Lotus-SL-ML-Kesit-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-3.webp",
+        "dosya": "gorseller/lotus/Lotus-SL-ML-Kesit-3.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-4.webp",
+        "dosya": "gorseller/lotus/Lotus-SL-ML-Kesit-4.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-5.webp",
+        "dosya": "gorseller/lotus/Lotus-SL-ML-Kesit-5.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-6.webp",
+        "dosya": "gorseller/lotus/Lotus-SL-ML-Kesit-6.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-7.webp",
+        "dosya": "gorseller/lotus/Lotus-SL-ML-Kesit-7.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-8.webp",
+        "dosya": "gorseller/lotus/Lotus-SL-ML-Kesit-8.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-9.webp",
+        "dosya": "gorseller/lotus/Lotus-SL-ML-Kesit-9.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-10.webp",
+        "dosya": "gorseller/lotus/Lotus-SL-ML-Kesit-10.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LOTUS-FL-812x2050-Model-1.webp",
+        "dosya": "gorseller/lotus/LOTUS-FL-812x2050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LOTUS-FL-912x2050-Model-1.webp",
+        "dosya": "gorseller/lotus/LOTUS-FL-912x2050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LOTUS-FL-1012x2050-Model-1.webp",
+        "dosya": "gorseller/lotus/LOTUS-FL-1012x2050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LOTUS-FL-1112x2050-Model-1.webp",
+        "dosya": "gorseller/lotus/LOTUS-FL-1112x2050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LOTUS-FL-812x2200-Model-1.webp",
+        "dosya": "gorseller/lotus/LOTUS-FL-812x2200-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LOTUS-FL-912x2200-Model-1.webp",
+        "dosya": "gorseller/lotus/LOTUS-FL-912x2200-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LOTUS-FL-1012x2200-Model-1.webp",
+        "dosya": "gorseller/lotus/LOTUS-FL-1012x2200-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LOTUS-FL-1112x2200-Model-1.webp",
+        "dosya": "gorseller/lotus/LOTUS-FL-1112x2200-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/circle-bg.webp",
+        "dosya": "gorseller/lotus/circle-bg.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/olives.webp",
+        "dosya": "gorseller/lotus/olives.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Aynali-Yan-Panel-1.webp",
+        "dosya": "gorseller/lotus/Lotus-Aynali-Yan-Panel-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Aynali-Yan-Panel-2.webp",
+        "dosya": "gorseller/lotus/Lotus-Aynali-Yan-Panel-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Et-Aski-Demiri.webp",
+        "dosya": "gorseller/lotus/Lotus-Et-Aski-Demiri.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Kancali-Raf-Sistemi.webp",
+        "dosya": "gorseller/lotus/Lotus-Kancali-Raf-Sistemi.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Panoramik-Yan-Panel.webp",
+        "dosya": "gorseller/lotus/Lotus-Panoramik-Yan-Panel.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Panoramik-Yan-Panel-1.webp",
+        "dosya": "gorseller/lotus/Lotus-Panoramik-Yan-Panel-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Plexi-Urun-Tutucu.webp",
+        "dosya": "gorseller/lotus/Lotus-Plexi-Urun-Tutucu.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Raf-Alti-Aydinlatma.webp",
+        "dosya": "gorseller/lotus/Lotus-Raf-Alti-Aydinlatma.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Tel-Sepet.webp",
+        "dosya": "gorseller/lotus/Lotus-Tel-Sepet.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Tel-Taban.webp",
+        "dosya": "gorseller/lotus/Lotus-Tel-Taban.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Urun-Bolucu.webp",
+        "dosya": "gorseller/lotus/Lotus-Urun-Bolucu.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/lotus/pdf-icon.webp"
+      }
+    ],
+    "urun": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus.webp",
+        "dosya": "gorseller/lotus/Lotus.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/cheese.webp",
+        "dosya": "gorseller/lotus/cheese.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-1.webp",
+        "dosya": "gorseller/lotus/Lotus-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-2.webp",
+        "dosya": "gorseller/lotus/Lotus-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Lotus-3.webp",
+        "dosya": "gorseller/lotus/Lotus-3.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Lotus-4.webp",
+        "dosya": "gorseller/lotus/Lotus-4.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Lotus-ADA-1.webp",
+        "dosya": "gorseller/lotus/Lotus-ADA-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Lotus-ADA-2.webp",
+        "dosya": "gorseller/lotus/Lotus-ADA-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Lotus-FL.webp",
+        "dosya": "gorseller/lotus/Lotus-FL.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Lotus-FL-2.webp",
+        "dosya": "gorseller/lotus/Lotus-FL-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/lotus-FL.webp",
+        "dosya": "gorseller/lotus/lotus-FL.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Lotus.pdf",
+        "dosya": "gorseller/lotus/Lotus.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LOTUS-FL-812x2050-Model-1.webp",
+        "dosya": "gorseller/lotus/LOTUS-FL-812x2050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LOTUS-FL-912x2050-Model-1.webp",
+        "dosya": "gorseller/lotus/LOTUS-FL-912x2050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LOTUS-FL-1012x2050-Model-1.webp",
+        "dosya": "gorseller/lotus/LOTUS-FL-1012x2050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LOTUS-FL-1112x2050-Model-1.webp",
+        "dosya": "gorseller/lotus/LOTUS-FL-1112x2050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LOTUS-FL-812x2200-Model-1.webp",
+        "dosya": "gorseller/lotus/LOTUS-FL-812x2200-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LOTUS-FL-912x2200-Model-1.webp",
+        "dosya": "gorseller/lotus/LOTUS-FL-912x2200-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LOTUS-FL-1012x2200-Model-1.webp",
+        "dosya": "gorseller/lotus/LOTUS-FL-1012x2200-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/LOTUS-FL-1112x2200-Model-1.webp",
+        "dosya": "gorseller/lotus/LOTUS-FL-1112x2200-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/circle-bg.webp",
+        "dosya": "gorseller/lotus/circle-bg.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/olives.webp",
+        "dosya": "gorseller/lotus/olives.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Aynali-Yan-Panel-1.webp",
+        "dosya": "gorseller/lotus/Lotus-Aynali-Yan-Panel-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Aynali-Yan-Panel-2.webp",
+        "dosya": "gorseller/lotus/Lotus-Aynali-Yan-Panel-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Et-Aski-Demiri.webp",
+        "dosya": "gorseller/lotus/Lotus-Et-Aski-Demiri.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Kancali-Raf-Sistemi.webp",
+        "dosya": "gorseller/lotus/Lotus-Kancali-Raf-Sistemi.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Panoramik-Yan-Panel.webp",
+        "dosya": "gorseller/lotus/Lotus-Panoramik-Yan-Panel.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Panoramik-Yan-Panel-1.webp",
+        "dosya": "gorseller/lotus/Lotus-Panoramik-Yan-Panel-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Plexi-Urun-Tutucu.webp",
+        "dosya": "gorseller/lotus/Lotus-Plexi-Urun-Tutucu.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Raf-Alti-Aydinlatma.webp",
+        "dosya": "gorseller/lotus/Lotus-Raf-Alti-Aydinlatma.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Tel-Sepet.webp",
+        "dosya": "gorseller/lotus/Lotus-Tel-Sepet.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Tel-Taban.webp",
+        "dosya": "gorseller/lotus/Lotus-Tel-Taban.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Urun-Bolucu.webp",
+        "dosya": "gorseller/lotus/Lotus-Urun-Bolucu.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/lotus/pdf-icon.webp"
+      }
+    ],
+    "teknikCizim": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-1.webp",
+        "dosya": "gorseller/lotus/Lotus-SL-ML-Kesit-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-2.webp",
+        "dosya": "gorseller/lotus/Lotus-SL-ML-Kesit-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-3.webp",
+        "dosya": "gorseller/lotus/Lotus-SL-ML-Kesit-3.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-4.webp",
+        "dosya": "gorseller/lotus/Lotus-SL-ML-Kesit-4.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-5.webp",
+        "dosya": "gorseller/lotus/Lotus-SL-ML-Kesit-5.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-6.webp",
+        "dosya": "gorseller/lotus/Lotus-SL-ML-Kesit-6.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-7.webp",
+        "dosya": "gorseller/lotus/Lotus-SL-ML-Kesit-7.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-8.webp",
+        "dosya": "gorseller/lotus/Lotus-SL-ML-Kesit-8.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-9.webp",
+        "dosya": "gorseller/lotus/Lotus-SL-ML-Kesit-9.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Lotus-SL-ML-Kesit-10.webp",
+        "dosya": "gorseller/lotus/Lotus-SL-ML-Kesit-10.webp"
+      }
+    ]
+  }
+}

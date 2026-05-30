@@ -1,0 +1,246 @@
+{
+  "slug": "itir",
+  "baslik": "ITIR",
+  "tip": "model",
+  "ustSeriSlug": null,
+  "kategoriler": [
+    "semi-vertical-multideck"
+  ],
+  "kapak": "https:\\/\\/caglayanrefrigeration.com\\/wp-content\\/uploads\\/2023\\/05\\/Itir-Kapak.webp",
+  "kapakYol": "gorseller/itir/Itir-Kapak.webp",
+  "linkKaynak": "https://caglayanrefrigeration.com/tr/product/itir/",
+  "cocuklar": [],
+  "ozellikler": [
+    {
+      "baslik": "",
+      "aciklama": "Sandwiches"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Drinks"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Pastries"
+    },
+    {
+      "baslik": "",
+      "aciklama": "High Efficiency Fans"
+    },
+    {
+      "baslik": "",
+      "aciklama": "LED Lighting"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Ventilated"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Off Cycle Defrost"
+    }
+  ],
+  "teknik": {
+    "akordeon": [],
+    "sekmeler": [
+      {
+        "baslik": "TEKNİK DETAYLAR",
+        "gorseller": [],
+        "tablolar": [
+          {
+            "basliklar": [
+              "UZUNLUK / LENGTH (mm)",
+              "YÜKSEKLİK / HEIGHT (mm)",
+              "SICAKLIK SINIFI / TEMPERATURE CLASS",
+              "YÜKLEME ALANI / LOADING AREA (m²)",
+              "PANEL KALINLIĞI / END THICKNESS (mm)"
+            ],
+            "satirlar": [
+              [
+                "ML (3M1)",
+                "DERİNLİK / DEPTH (mm)"
+              ],
+              [
+                "720"
+              ],
+              [
+                "650",
+                "1400",
+                "-1 / +1 °C",
+                "0,73",
+                "Included"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "baslik": "TEKNİK ÇİZİMLER",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ANTORYUM-PN-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ANTORYUM-SRG-Model-1.webp"
+        ],
+        "tablolar": []
+      },
+      {
+        "baslik": "TEKNİK DETAYLAR",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ANTORYUM-PN-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ANTORYUM-SRG-Model-1.webp"
+        ],
+        "tablolar": []
+      }
+    ],
+    "tablolar": [
+      {
+        "basliklar": [
+          "UZUNLUK / LENGTH (mm)",
+          "YÜKSEKLİK / HEIGHT (mm)",
+          "SICAKLIK SINIFI / TEMPERATURE CLASS",
+          "YÜKLEME ALANI / LOADING AREA (m²)",
+          "PANEL KALINLIĞI / END THICKNESS (mm)"
+        ],
+        "satirlar": [
+          [
+            "ML (3M1)",
+            "DERİNLİK / DEPTH (mm)"
+          ],
+          [
+            "720"
+          ],
+          [
+            "650",
+            "1400",
+            "-1 / +1 °C",
+            "0,73",
+            "Included"
+          ]
+        ]
+      },
+      {
+        "basliklar": [
+          "UZUNLUK / LENGTH (mm)",
+          "YÜKSEKLİK / HEIGHT (mm)",
+          "SICAKLIK SINIFI / TEMPERATURE CLASS",
+          "YÜKLEME ALANI / LOADING AREA (m²)",
+          "PANEL KALINLIĞI / END THICKNESS (mm)"
+        ],
+        "satirlar": [
+          [
+            "ML (3M1)",
+            "DERİNLİK / DEPTH (mm)"
+          ],
+          [
+            "715"
+          ],
+          [
+            "1000",
+            "1500",
+            "-1 / +1 °C",
+            "1,27",
+            "Included"
+          ],
+          [
+            "1250",
+            "1,59"
+          ]
+        ]
+      }
+    ]
+  },
+  "gorseller": {
+    "tum": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Itir.webp",
+        "dosya": "gorseller/itir/Itir.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Itir-1.webp",
+        "dosya": "gorseller/itir/Itir-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/itir-1.webp",
+        "dosya": "gorseller/itir/itir-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ITIR-2.webp",
+        "dosya": "gorseller/itir/ITIR-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ITIR-Model-1.webp",
+        "dosya": "gorseller/itir/ITIR-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Itir.pdf",
+        "dosya": "gorseller/itir/Itir.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ANTORYUM-PN-Model-1.webp",
+        "dosya": "gorseller/itir/ANTORYUM-PN-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ANTORYUM-SRG-Model-1.webp",
+        "dosya": "gorseller/itir/ANTORYUM-SRG-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/circle-bg.webp",
+        "dosya": "gorseller/itir/circle-bg.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/fresh-fruits.webp",
+        "dosya": "gorseller/itir/fresh-fruits.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/itir/pdf-icon.webp"
+      }
+    ],
+    "urun": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Itir.webp",
+        "dosya": "gorseller/itir/Itir.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Itir-1.webp",
+        "dosya": "gorseller/itir/Itir-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/itir-1.webp",
+        "dosya": "gorseller/itir/itir-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ITIR-2.webp",
+        "dosya": "gorseller/itir/ITIR-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ITIR-Model-1.webp",
+        "dosya": "gorseller/itir/ITIR-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Itir.pdf",
+        "dosya": "gorseller/itir/Itir.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ANTORYUM-PN-Model-1.webp",
+        "dosya": "gorseller/itir/ANTORYUM-PN-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/ANTORYUM-SRG-Model-1.webp",
+        "dosya": "gorseller/itir/ANTORYUM-SRG-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/circle-bg.webp",
+        "dosya": "gorseller/itir/circle-bg.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/fresh-fruits.webp",
+        "dosya": "gorseller/itir/fresh-fruits.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/itir/pdf-icon.webp"
+      }
+    ],
+    "teknikCizim": []
+  }
+}

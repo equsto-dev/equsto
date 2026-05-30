@@ -9,34 +9,41 @@ import {
   getMeiliConfigStatus,
   PRODUCTS_INDEX,
 } from "@/lib/meilisearch";
-import { expandSearchQueries } from "@/lib/search-synonyms";
+import { canonicalizeSearchHits } from "@/lib/canonicalize-search-hits";
+import { meiliSearchQuery } from "@/lib/search-query";
 
 export const runtime = "nodejs";
 
+function searchResponse(
+  body: Record<string, unknown>,
+  status = 200,
+): Response {
+  return Response.json(body, { status });
+}
+
 export async function GET(req: NextRequest) {
   const sp = req.nextUrl.searchParams;
+
   if (sp.get("health") === "1") {
-    const { getMeiliAdmin, getMeiliConfigStatus } = await import("@/lib/meilisearch");
     const cfg = getMeiliConfigStatus();
     if (!cfg.ok) {
-      return Response.json(
+      return searchResponse(
         {
           ok: false,
           missing: cfg.missing,
           index: cfg.index,
-          hint: "Vercel env ekleyip Production Redeploy yapın (Root Directory: equsto-v2).",
+          hint: "Vercel env: MEILISEARCH_HOST + MEILISEARCH_MASTER_KEY",
         },
-        { status: 503 },
+        503,
       );
     }
     const client = getMeiliAdmin();
     if (!client) {
-      return Response.json({ ok: false, error: "client" }, { status: 503 });
+      return searchResponse({ ok: false, error: "client" }, 503);
     }
     try {
-      const index = client.index(cfg.index);
-      const stats = await index.getStats();
-      return Response.json({
+      const stats = await client.index(cfg.index).getStats();
+      return searchResponse({
         ok: true,
         index: cfg.index,
         documents: stats.numberOfDocuments,
@@ -44,107 +51,98 @@ export async function GET(req: NextRequest) {
       });
     } catch (e) {
       const msg = e instanceof Error ? e.message : "Meilisearch bağlantı hatası";
-      return Response.json({ ok: false, index: cfg.index, error: msg }, { status: 502 });
+      return searchResponse({ ok: false, index: cfg.index, error: msg }, 502);
     }
   }
 
   const q = sp.get("q")?.trim() || "";
-  const limit = Math.min(Number(sp.get("limit") || 20), 50);
-  const check = sp.get("check") === "1";
-
+  const isSuggest = sp.get("suggest") === "1";
+  const limit = isSuggest
+    ? Math.min(Number(sp.get("limit") || 12), 15)
+    : Math.min(Number(sp.get("limit") || 48), 100);
+  const offset = isSuggest ? 0 : Math.max(Number(sp.get("offset") || 0), 0);
   const cfg = getMeiliConfigStatus();
 
-  if (check || !q) {
-    if (!q) {
-      return Response.json({
-        configured: cfg.ok,
-        missing: cfg.missing,
-        index: cfg.index,
-        hint: cfg.ok
-          ? "q parametresi ile arayın: ?q=izgara"
-          : "Vercel → Settings → Environment Variables; sonra Redeploy",
-      });
-    }
+  if (!q) {
+    return searchResponse({
+      configured: cfg.ok,
+      missing: cfg.missing,
+      index: cfg.index,
+      hits: [],
+      query: "",
+    });
   }
 
-  if (!q) {
-    return Response.json({ hits: [], query: "" });
+  async function respondFallback(fbOffset = offset, warning?: string) {
+    const fb = await fallbackCatalogSearch(q, limit, { offset: fbOffset });
+    const hits = await canonicalizeSearchHits(fb.hits);
+    const total = fb.estimatedTotalHits;
+    return searchResponse({
+      query: q,
+      hits,
+      offset: fbOffset,
+      limit,
+      estimatedTotalHits: total,
+      hasMore: fbOffset + hits.length < total,
+      source: "fallback",
+      warning:
+        warning ||
+        (!cfg.ok
+          ? "Meilisearch yapılandırılmadı — katalog JSON araması."
+          : undefined),
+      missing: cfg.missing.length ? cfg.missing : undefined,
+    });
   }
 
   const client = getMeiliAdmin();
   if (!client) {
-    const fb = await fallbackCatalogSearch(q, limit);
-    return Response.json({
-      query: q,
-      hits: fb.hits,
-      estimatedTotalHits: fb.estimatedTotalHits,
-      source: "fallback",
-      warning:
-        "Meilisearch yapılandırılmadı — ekipmanlar.json üzerinde yerel arama. MEILISEARCH_HOST + MEILISEARCH_MASTER_KEY ekleyin.",
-      missing: cfg.missing,
-    });
+    return respondFallback(
+      offset,
+      "Meilisearch yapılandırılmadı — katalog JSON üzerinde arama.",
+    );
   }
 
-  const meiliQueries = expandSearchQueries(q);
-
   try {
-    let meiliHits: CatalogSearchHit[] = [];
-    let estimatedTotalHits = 0;
+    const index = client.index(PRODUCTS_INDEX);
+    const meiliQ = meiliSearchQuery(q);
+    const meiliRes = await index.search(meiliQ, { limit, offset });
+    let hits = (meiliRes.hits || []) as CatalogSearchHit[];
+    let total = meiliRes.estimatedTotalHits ?? hits.length;
+    let source: "meilisearch" | "hybrid" = "meilisearch";
+    let warning: string | undefined;
 
-    for (const mq of meiliQueries) {
-      const res = await client.index(PRODUCTS_INDEX).search(mq, { limit });
-      estimatedTotalHits = Math.max(
-        estimatedTotalHits,
-        res.estimatedTotalHits ?? 0,
-      );
-      if (res.hits?.length) {
-        meiliHits = res.hits as CatalogSearchHit[];
-        break;
+    // İlk sayfa: Meili az döndürürse katalog tamamlaması (eksik indeks / eşanlam)
+    if (offset === 0 && hits.length < limit) {
+      const need = limit - hits.length;
+      const fb = await fallbackCatalogSearch(q, need + 32, { offset: 0 });
+      const seen = new Set(hits.map((h) => h.id));
+      const extras = fb.hits.filter((h) => h?.id && !seen.has(h.id));
+      if (extras.length) {
+        hits = mergeSearchHits(hits, extras, limit);
+        total = Math.max(total, fb.estimatedTotalHits);
+        source = "hybrid";
+        warning = "Sonuçlar Meilisearch + katalog birleşiminden oluşturuldu.";
       }
     }
 
-    const fb = await fallbackCatalogSearch(q, limit);
-    const merged = mergeSearchHits(meiliHits, fb.hits, limit);
+    hits = await canonicalizeSearchHits(hits);
 
-    const usedFallback = merged.length > meiliHits.length || meiliHits.length === 0;
-    const total = Math.max(estimatedTotalHits, fb.estimatedTotalHits, merged.length);
-
-    return Response.json({
+    return searchResponse({
       query: q,
-      hits: merged,
+      hits,
+      offset,
+      limit,
       estimatedTotalHits: total,
-      source: usedFallback && meiliHits.length === 0 ? "fallback" : "hybrid",
-      warning:
-        usedFallback && meiliHits.length === 0
-          ? "İndeks eksik veya eşleşmedi — tam katalogdan (5252+ ürün) tamamlandı. npm run search:index ile indeksi güncelleyin."
-          : usedFallback
-            ? "Bazı sonuçlar katalog dosyasından eklendi."
-            : undefined,
+      hasMore: offset + hits.length < total,
+      source,
+      warning,
     });
   } catch (e) {
     const msg = e instanceof Error ? e.message : "Arama hatası";
     console.error("[api/search] Meilisearch:", msg);
-
-    const fb = await fallbackCatalogSearch(q, limit);
-    if (fb.hits.length) {
-      return Response.json({
-        query: q,
-        hits: fb.hits,
-        estimatedTotalHits: fb.estimatedTotalHits,
-        source: "fallback",
-        warning: `Meilisearch erişilemedi (${msg}). Geçici olarak katalog dosyasında arandı.`,
-        index: PRODUCTS_INDEX,
-      });
-    }
-
-    return Response.json(
-      {
-        error: msg,
-        index: PRODUCTS_INDEX,
-        hint:
-          "Cloud instance çalışıyor mu? npm run search:health && npm run search:index",
-      },
-      { status: 502 },
+    return respondFallback(
+      offset,
+      `Meilisearch erişilemedi (${msg}). Katalog araması kullanıldı.`,
     );
   }
 }

@@ -13,7 +13,7 @@ export default function PfosEqustoChrome() {
   const searchRef = useRef<HTMLInputElement>(null);
 
   return (
-    <>
+    <div className="eq-shop-chrome">
       <header className="hdr">
         <a className="logo" href="/" aria-label="Equsto" />
         <div
@@ -194,14 +194,12 @@ export default function PfosEqustoChrome() {
             role="button"
             tabIndex={0}
             onClick={() => goEqDept("besos")}
+            data-i18n="nav.bar_design"
           >
-            <span className="topnav-besos__in" aria-hidden="true">
-              <span className="topnav-besos__face topnav-besos__face--plain">Bar Design</span>
-              <span className="topnav-besos__face topnav-besos__face--dark">Dark Side</span>
-            </span>
+            Bar Design
           </div>
         </div>
       </nav>
-    </>
+    </div>
   );
 }

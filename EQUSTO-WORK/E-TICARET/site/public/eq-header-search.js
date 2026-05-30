@@ -4,9 +4,9 @@
 ;(function () {
   "use strict";
 
-  var DEBOUNCE_MS = 300;
+  var DEBOUNCE_MS = 200;
   var MIN_CHARS = 2;
-  var SUGGEST_LIMIT = 8;
+  var SUGGEST_LIMIT = 12;
   var timer = null;
   var fetchCtrl = null;
   var activeIdx = -1;
@@ -27,26 +27,58 @@
   function aramaUrl(q) {
     q = trimQ(q);
     if (!q) return "";
+    try {
+      if (typeof window.eqAramaUrl === "function") {
+        var u = window.eqAramaUrl(q);
+        if (u) return u;
+      }
+    } catch (_) {}
     return "/arama?q=" + encodeURIComponent(q);
   }
 
+  function catalogSlugFromHit(hit) {
+    if (!hit) return "";
+    var id = String(hit.id || "").trim().toLowerCase();
+    if (id.indexOf("__") >= 0) return id.replace(/\//g, "-");
+    var slug = String(hit.slug || "").trim().toLowerCase();
+    if (slug.indexOf("__") >= 0) return slug.replace(/\//g, "-");
+    return slug;
+  }
+
   function productHref(hit) {
-    if (hit && hit.url) return hit.url;
-    if (hit && hit.dept && hit.slug) {
+    if (!hit) return "#";
+    if (hit.url) {
       try {
-        if (typeof window.eqProductPath === "function") {
-          return window.eqProductPath(hit.dept, hit.slug);
+        if (typeof window.eqProductPath === "function" && hit.dept && hit.slug) {
+          var dept = String(hit.dept).replace(/^\/+|\/+$/g, "");
+          if (dept === "market-reyon") dept = "market-reyonlari";
+          return window.eqProductPath(dept, catalogSlugFromHit(hit));
         }
       } catch (_) {}
-      return "/shop/" + encodeURIComponent(hit.dept) + "/" + encodeURIComponent(hit.slug);
+      return hit.url;
     }
-    return "#";
+    var dept = String(hit.dept || "pisirme").replace(/^\/+|\/+$/g, "");
+    if (dept === "market-reyon") dept = "market-reyonlari";
+    var slug = catalogSlugFromHit(hit);
+    if (!slug) return "#";
+    try {
+      if (typeof window.eqProductPath === "function") {
+        return window.eqProductPath(dept, slug);
+      }
+    } catch (_) {}
+    return "/shop/" + encodeURIComponent(dept) + "/" + encodeURIComponent(slug);
   }
 
   function imgSrc(hit) {
     var img = hit && hit.image;
     if (!img) return "";
     img = String(img).replace(/\\/g, "/");
+    if (typeof window.eqProductImgSrc === "function") {
+      try {
+        var eq = window.eqProductImgSrc(img);
+        if (eq) return eq;
+      } catch (_) {}
+    }
     if (/^https?:\/\//i.test(img)) return img;
     if (typeof window.catalogImageCandidates === "function") {
       try {
@@ -166,12 +198,14 @@
         "</span></a>";
     }
     var n = total != null ? total : hits.length;
+    var moreSuffix = meta.hasMore === false ? "" : "+";
     html +=
       '<a class="eq-srch-panel__all" href="' +
       esc(aramaUrl(q)) +
       '">Tüm sonuçları gör (' +
       esc(String(n)) +
-      "+)</a>";
+      moreSuffix +
+      ")</a>";
     if (meta.warning) {
       html +=
         '<div class="eq-srch-panel__warn" role="status">' +
@@ -182,6 +216,16 @@
     panel.hidden = false;
     positionPanel();
     activeIdx = -1;
+  }
+
+  function showLoading(q) {
+    var panel = ensurePanel();
+    panel.innerHTML =
+      '<div class="eq-srch-panel__empty eq-srch-panel__loading">' +
+      esc(q) +
+      "…</div>";
+    panel.hidden = false;
+    positionPanel();
   }
 
   function fetchSuggest(q) {
@@ -196,7 +240,13 @@
       } catch (_) {}
     }
     fetchCtrl = new AbortController();
-    var url = "/api/search?q=" + encodeURIComponent(q) + "&limit=" + SUGGEST_LIMIT;
+    showLoading(q);
+    var url =
+      "/api/search?q=" +
+      encodeURIComponent(q) +
+      "&limit=" +
+      SUGGEST_LIMIT +
+      "&suggest=1";
     fetch(url, { signal: fetchCtrl.signal, headers: { Accept: "application/json" } })
       .then(function (r) {
         return r.json().then(function (data) {
@@ -216,6 +266,7 @@
         lastHits = res.data.hits || [];
         renderPanel(lastHits, q, res.data.estimatedTotalHits, {
           warning: res.data.warning || "",
+          hasMore: !!res.data.hasMore,
         });
       })
       .catch(function (err) {
@@ -301,7 +352,6 @@
     hidePanel();
   }
 
-  window.eqAramaUrl = aramaUrl;
   window.__eqHdrMeiliSuggest = scheduleSuggest;
   window.eqCommitHeaderSearch = function () {
     var inp = getInput();

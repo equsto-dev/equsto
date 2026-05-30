@@ -1,41 +1,12 @@
-﻿/**
- * Vercel build — public/ kaynagi E-TICARET/site; app/ tam kopya EQUSTO-WORK veya equsto-v2.
+/**
+ * Vercel build — tek kaynak: E-TICARET/site (AGENTS.md).
+ * EQUSTO-WORK/E-TICARET/site ve equsto-v2 yedek; canlı build bunları kullanmaz.
  */
 import fs from "node:fs";
 import path from "node:path";
 import { findRepoRoot, isNextSite } from "./vercel-resolve-site.mjs";
 
 export { isNextSite, findRepoRoot };
-
-const SITE_CANDIDATES = (repo) => [
-  path.join(repo, "E-TICARET", "site"),
-  path.join(repo, "EQUSTO-WORK", "E-TICARET", "site"),
-  path.join(repo, "equsto-v2"),
-];
-
-/** Guncel statik dosyalar (kuvetler.html, nav.js, …). */
-export function resolvePublicSource(repo) {
-  const canonical = path.join(repo, "E-TICARET", "site");
-  if (fs.existsSync(path.join(canonical, "public"))) return canonical;
-  return SITE_CANDIDATES(repo).find(isNextSite) ?? null;
-}
-
-/** Tam Next.js app/ (git’te cogunlukla EQUSTO-WORK altinda). */
-export function resolveAppSource(repo) {
-  const nested = path.join(repo, "EQUSTO-WORK", "E-TICARET", "site");
-  const v2 = path.join(repo, "equsto-v2");
-  if (hasFullNextApp(nested)) return nested;
-  if (hasFullNextApp(v2)) return v2;
-  return SITE_CANDIDATES(repo).find((d) => isNextSite(d) && hasFullNextApp(d)) ?? null;
-}
-
-export function resolveCanonicalSource(repo) {
-  return resolvePublicSource(repo) ?? resolveAppSource(repo);
-}
-
-function hasPrismaSchema(dir) {
-  return fs.existsSync(path.join(dir, "prisma", "schema.prisma"));
-}
 
 export function hasFullNextApp(dir) {
   return (
@@ -44,8 +15,58 @@ export function hasFullNextApp(dir) {
   );
 }
 
+/** Canlı site dizini — her zaman E-TICARET/site. */
+export function resolveCanonicalSite(repo) {
+  const canonical = path.join(repo, "E-TICARET", "site");
+  if (isNextSite(canonical)) return canonical;
+  console.error("[vercel-sync] E-TICARET/site bulunamadi:", canonical);
+  process.exit(1);
+}
+
+/**
+ * Root Directory = E-TICARET/site iken kopyalama yok (hizli, tek kaynak).
+ * Repo kokunden build (nadir) ise tam site buraya materialize edilir.
+ */
+export function materializeVercelRoot(vercelRoot) {
+  const repo = findRepoRoot(vercelRoot);
+  const canonical = resolveCanonicalSite(repo);
+  const root = path.resolve(vercelRoot);
+  const canon = path.resolve(canonical);
+
+  if (root === canon && isNextSite(root) && hasFullNextApp(root)) {
+    console.log("[vercel-sync] OK — tek kaynak:", root);
+    return root;
+  }
+
+  if (!isNextSite(canon) || !hasFullNextApp(canon)) {
+    console.error("[vercel-sync] E-TICARET/site tam Next app degil (app/layout.tsx gerekli):", canon);
+    process.exit(1);
+  }
+
+  if (!isNextSite(root)) {
+    console.log("[vercel-sync] Materialize:", canon, "->", root);
+    copyFullSite(canon, root);
+    return root;
+  }
+
+  if (!hasFullNextApp(root)) {
+    console.log("[vercel-sync] Eksik app/ — E-TICARET/site ile tamamlaniyor");
+    syncAppStack(canon, root);
+    syncPublic(canon, root);
+  } else if (root !== canon) {
+    console.log("[vercel-sync] public/ guncelleniyor:", canon);
+    syncPublic(canon, root);
+  }
+
+  if (!hasFullNextApp(root)) {
+    console.error("[vercel-sync] Materialize sonrasi app/ hala eksik:", root);
+    process.exit(1);
+  }
+
+  return root;
+}
+
 const SYNC_DIRS = ["app", "components", "lib", "prisma"];
-const SYNC_LIB_EXTRA = ["prisma.vercel.ts"];
 const SYNC_FILES = [
   "next.config.ts",
   "package.json",
@@ -56,6 +77,7 @@ const SYNC_FILES = [
   "eslint.config.mjs",
   "proxy.ts",
   ".npmrc",
+  "vercel.json",
 ];
 
 function copyTree(src, dest) {
@@ -63,97 +85,31 @@ function copyTree(src, dest) {
   fs.cpSync(src, dest, { recursive: true });
 }
 
-function syncPublicFrom(src, vercelRoot) {
+function syncPublic(src, dest) {
   const publicSrc = path.join(src, "public");
   if (!fs.existsSync(publicSrc)) return;
-  const publicDest = path.join(vercelRoot, "public");
-  fs.mkdirSync(publicDest, { recursive: true });
-  fs.cpSync(publicSrc, publicDest, { recursive: true, force: true });
+  fs.cpSync(publicSrc, path.join(dest, "public"), { recursive: true, force: true });
 }
 
-function syncBuildScripts(src, vercelRoot) {
-  const scriptsSrc = path.join(src, "scripts");
-  const scriptsDest = path.join(vercelRoot, "scripts");
-  fs.mkdirSync(scriptsDest, { recursive: true });
-  for (const name of [
-    "generate-admin-config.mjs",
-    "prisma-postinstall-skip.mjs",
-    "load-env.mjs",
-    "vercel-resolve-site.mjs",
-    "vercel-site-sync.mjs",
-  ]) {
-    const from = path.join(scriptsSrc, name);
-    if (fs.existsSync(from)) fs.copyFileSync(from, path.join(scriptsDest, name));
-  }
-}
-
-function syncAppStackFrom(src, vercelRoot) {
+function syncAppStack(src, dest) {
   for (const name of SYNC_DIRS) {
     const from = path.join(src, name);
-    if (fs.existsSync(from)) copyTree(from, path.join(vercelRoot, name));
-  }
-  for (const name of SYNC_LIB_EXTRA) {
-    const from = path.join(src, "lib", name);
-    const to = path.join(vercelRoot, "lib", name);
-    if (fs.existsSync(from)) fs.copyFileSync(from, to);
+    if (fs.existsSync(from)) copyTree(from, path.join(dest, name));
   }
   for (const name of SYNC_FILES) {
     const from = path.join(src, name);
-    if (fs.existsSync(from)) fs.copyFileSync(from, path.join(vercelRoot, name));
+    if (fs.existsSync(from)) fs.copyFileSync(from, path.join(dest, name));
   }
-  syncBuildScripts(src, vercelRoot);
+  const scriptsSrc = path.join(src, "scripts");
+  const scriptsDest = path.join(dest, "scripts");
+  if (fs.existsSync(scriptsSrc)) {
+    fs.mkdirSync(scriptsDest, { recursive: true });
+    fs.cpSync(scriptsSrc, scriptsDest, { recursive: true, force: true });
+  }
 }
 
-export function materializeVercelRoot(vercelRoot) {
-  const repo = findRepoRoot(vercelRoot);
-  const publicSrc = resolvePublicSource(repo);
-  const appSrc = resolveAppSource(repo);
-
-  if (!publicSrc && !appSrc) {
-    console.error("[vercel-sync] Kaynak site bulunamadi, repo=", repo);
-    process.exit(1);
-  }
-
-  const stackSrc = appSrc || publicSrc;
-
-  if (isNextSite(vercelRoot)) {
-    if (!hasFullNextApp(vercelRoot) && stackSrc && path.resolve(stackSrc) !== path.resolve(vercelRoot)) {
-      console.log("[vercel-sync] Eksik app/ — tam stack:", stackSrc);
-      syncAppStackFrom(stackSrc, vercelRoot);
-    } else {
-      syncBuildScripts(stackSrc, vercelRoot);
-      if (!hasPrismaSchema(vercelRoot) && stackSrc && hasPrismaSchema(stackSrc)) {
-        console.log("[vercel-sync] prisma/ eksik — kaynaktan kopyalaniyor");
-        copyTree(path.join(stackSrc, "prisma"), path.join(vercelRoot, "prisma"));
-      }
-      if (!fs.existsSync(path.join(vercelRoot, "lib", "db.ts")) && stackSrc) {
-        const libSrc = path.join(stackSrc, "lib");
-        if (fs.existsSync(libSrc)) copyTree(libSrc, path.join(vercelRoot, "lib"));
-      }
-    }
-
-    if (publicSrc && path.resolve(publicSrc) !== path.resolve(vercelRoot)) {
-      console.log("[vercel-sync] public/ →", publicSrc);
-      syncPublicFrom(publicSrc, vercelRoot);
-    }
-
-    if (!isNextSite(vercelRoot) || !hasFullNextApp(vercelRoot)) {
-      console.error("[vercel-sync] Materialize sonrasi tam Next app yok:", vercelRoot);
-      process.exit(1);
-    }
-
-    return vercelRoot;
-  }
-
-  const materializeFrom = stackSrc;
-  console.log("[vercel-sync] Materialize:", materializeFrom, "->", vercelRoot);
-  syncAppStackFrom(materializeFrom, vercelRoot);
-  if (publicSrc) syncPublicFrom(publicSrc, vercelRoot);
-
-  if (!isNextSite(vercelRoot) || !hasFullNextApp(vercelRoot)) {
-    console.error("[vercel-sync] Materialize sonrasi app/ hala eksik:", vercelRoot);
-    process.exit(1);
-  }
-
-  return vercelRoot;
+function copyFullSite(src, dest) {
+  fs.mkdirSync(dest, { recursive: true });
+  syncAppStack(src, dest);
+  syncPublic(src, dest);
 }

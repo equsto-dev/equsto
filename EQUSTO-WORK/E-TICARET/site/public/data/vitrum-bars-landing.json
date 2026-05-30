@@ -19,7 +19,8 @@
       "tagline": "Her şeyi yapan bar",
       "taglineEn": "The bar that does it all",
       "blurb": "Profesyonel barmenlerin katkısıyla tasarlanan iki kişilik istasyonumuz; yoğun servis için anında sistem.",
-      "page": 23
+      "page": 23,
+      "blurbEn": "Our bestselling two-person station was designed with the input of professional bartenders. It is the cornerstone of our line-up, providing an instant system from which to run a busy bar service."
     },
     {
       "slug": "the-boulverdier",
@@ -27,7 +28,8 @@
       "tagline": "Kokteyl laboratuvarı",
       "taglineEn": "A self-contained mixology laboratory",
       "blurb": "Artizan kokteyller için özel iki kişilik istasyon; sınırlı alanda yüksek hacim üretimi.",
-      "page": 24
+      "page": 24,
+      "blurbEn": "A two-person station designed specifically for crafting artisanal cocktails. Born from a client who needed to produce large volumes of cocktails within a limited space, it has fast become a client favourite."
     },
     {
       "slug": "the-clover",
@@ -35,7 +37,8 @@
       "tagline": "Usta işi güç",
       "taglineEn": "An artisanal powerhouse",
       "blurb": "Karmaşık reçeteler ve garnitürler için geniş saklama ve ergonomik çalışma alanı.",
-      "page": 25
+      "page": 25,
+      "blurbEn": "For mixologists who craft intricate creations from myriad ingredients and garnishes, this station has been created to work with you. Its streamlined style and ample storage options are designed to stimulate creativity."
     }
   ],
   "modular": {
@@ -56,7 +59,9 @@
     "ctaCatalogHref": "#bd-stations",
     "ctaInfo": "Daha fazla bilgi istiyorum",
     "ctaInfoHref": "/contact",
-    "image": "images/catalog/besos/web/besos-bes-p23.avif"
+    "image": "images/catalog/besos/web/besos-bes-p23.avif",
+    "ctaCatalogEn": "Browse bar product catalogue",
+    "ctaInfoEn": "I'd like more information"
   },
   "method": [
     {
@@ -112,9 +117,25 @@
     }
   ],
   "stats": [
-    { "value": "30+", "label": "yıl deneyim", "labelEn": "years experience" },
-    { "value": "3000+", "label": "proje · 20+ ülke", "labelEn": "projects across 20+ countries" },
-    { "value": "15.000", "label": "m² üretim", "labelEn": "m² manufacturing" },
-    { "value": "360°", "label": "tam hizmet", "labelEn": "full-service support" }
+    {
+      "value": "30+",
+      "label": "yıl deneyim",
+      "labelEn": "years experience"
+    },
+    {
+      "value": "3000+",
+      "label": "proje · 20+ ülke",
+      "labelEn": "projects across 20+ countries"
+    },
+    {
+      "value": "15.000",
+      "label": "m² üretim",
+      "labelEn": "m² manufacturing"
+    },
+    {
+      "value": "360°",
+      "label": "tam hizmet",
+      "labelEn": "full-service support"
+    }
   ]
 }

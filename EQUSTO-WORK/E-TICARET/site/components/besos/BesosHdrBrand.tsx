@@ -5,7 +5,7 @@ type BesosHdrBrandProps = {
 export default function BesosHdrBrand({ active = "vitrin" }: BesosHdrBrandProps) {
   return (
     <div className="bd-hdr-brand">
-      <a className="bd-hdr-wordmark" href="/besos" aria-label="Besos vitrin" />
+      <a className="bd-hdr-wordmark" href="/" aria-label="Equsto" />
       <div className="bd-hdr-studio">Bar Design Studio</div>
       <nav className="bd-hdr-nav" aria-label="Besos">
         <a href="/besos" className={active === "vitrin" ? "is-active" : undefined}>

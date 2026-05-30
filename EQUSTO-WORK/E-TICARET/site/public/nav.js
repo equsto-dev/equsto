@@ -10,10 +10,19 @@
     } catch (_) {}
     return fb;
   }
-  /** Bir NAV item'ının görünür label'ı: labelKey varsa eqT, yoksa label. */
+  function __navSubLabelKey(it) {
+    if (!it) return "";
+    if (it.labelKey) return it.labelKey;
+    if (it.tip) return "nav.sub." + String(it.tip).replace(/-/g, "_").replace(/_+$/, "");
+    return "";
+  }
+
+  /** Bir NAV item'ının görünür label'ı: labelKey / tip → nav.sub.*, yoksa label. */
   function __navLabel(it) {
     if (!it) return "";
-    return __navT(it.labelKey, it.label || "");
+    var k = __navSubLabelKey(it);
+    if (k) return __navT(k, it.label || "");
+    return it.label || "";
   }
 
   /** Çağlayan kataloğu serileri — build ile güncellenir (caglayan-market-reyon-catalogue.json → navSubs). */
@@ -73,7 +82,7 @@
         { label: "Izgaralar", tip: "sanayi-tipi-izgaralar" },
         { label: "Kuzineler", tip: "kuzineler" },
         { label: "Fritözler", tip: "fritozler" },
-        { label: "Döner Ocakları", tip: "doner-ocaklari-" },
+        { label: "Döner Ocakları", tip: "doner-ocaklari" },
         { label: "Tost Makineleri", tip: "tost-makineleri" },
         { label: "Piliç Çevirme", tip: "pilic-cevirme-makineleri" },
       ],
@@ -84,21 +93,13 @@
       label: "Soğutma Ekipmanları",
       href: "sogutma.html",
       subs: [
-        {
-          label: "Buzdolapları",
-          subs: [
-            { label: "Tezgah Tipi", tip: "tezgah-tipi-buzdolabi" },
-            { label: "Make Up Dolapları", tip: "make-up-dolabi" },
-            { label: "Cihazaltı", tip: "tezgah-tipi-buzdolabi", search: "cihazaltı|cihaz altı|tezgahalt" },
-            { label: "Dik Tip", tip: "dik-tip-buzdolap" },
-            { label: "Pastane Buzdolapları", search: "pastane buzdolab|pastane dolap" },
-          ],
-        },
-        { label: "Buz Makineleri" },
-        { label: "Derin Dondurucular" },
-        { label: "Soğuk Odalar" },
-        { label: "Şarap Dolapları" },
-        { label: "Market Reyonları", subs: MARKET_REYON_SUBS },
+        /* KİLİT: buzdolap-nav-KILIT.txt — alt flyout yok; buzdolab|buzdolap araması */
+        { label: "Buzdolapları", labelKey: "nav.sub.buzdolaplari", search: "buzdolab|buzdolap" },
+        { label: "Buz Makineleri", labelKey: "nav.sub.buz_makineleri" },
+        { label: "Derin Dondurucular", labelKey: "nav.sub.derin_dondurucular" },
+        { label: "Soğuk Odalar", labelKey: "nav.sub.soguk_odalar" },
+        { label: "Şarap Dolapları", labelKey: "nav.sub.sarap_dolaplari" },
+        { label: "Market Reyonları", labelKey: "nav.sub.market_reyonlari", href: "market-reyonlari.html" },
       ],
     },
     {
@@ -111,7 +112,7 @@
         { label: "Değirmenler", tip: "kahve-degirmeni" },
         { label: "Filtre Kahve", tip: "filtre-kahve" },
         { label: "Türk Kahve", tip: "turk-kahve" },
-        { label: "Barista Aksesuarları", search: "barista|tamper|pitcher|süt köpürt" },
+        { label: "Barista Aksesuarları", labelKey: "nav.sub.barista_aksesuarlari", search: "barista|tamper|pitcher|süt köpürt" },
       ],
     },
     {
@@ -134,8 +135,8 @@
       label: "Hazırlık Ekipmanları",
       href: "hazirlik.html",
       subs: [
-        { label: "Mikserler", tip: "hamur-hazirlik", search: "mikser|spiral|planet" },
-        { label: "Blenderlar", search: "blender|robot coupe" },
+        { label: "Mikserler", labelKey: "nav.sub.mikserler", tip: "hamur-hazirlik", search: "mikser|spiral|planet" },
+        { label: "Blenderlar", labelKey: "nav.sub.blenderlar", search: "blender|robot coupe" },
         { label: "Dilimleme Makineleri", tip: "sebze-dograma", search: "dilimleme|doğrama" },
         { label: "Kıyma Makineleri", tip: "kiyma_makinesi" },
         { label: "Vakum Makineleri", tip: "vakum-makinesi" },
@@ -150,61 +151,33 @@
         { label: "Meyve Sıkacakları", tip: "portakal-sikma", search: "meyve suyu|sıkma|juice" },
         { label: "Soğuk İçecek Dispenserleri", tip: "soguk-dispenser" },
         { label: "Soda Makineleri", tip: "limonata-serbet", search: "soda|şerbet|serbet" },
-        { label: "Bira Sistemleri", search: "bira|draft|fıçı|fici" },
+        { label: "Bira Sistemleri", labelKey: "nav.sub.bira_sistemleri", search: "bira|draft|fıçı|fici" },
         { label: "Smoothie Blenderlar", tip: "bar-blender" },
       ],
     },
     {
       id: "servis",
+      labelKey: "nav.servis",
       label: "Servis & Teşhir",
       href: "market-reyonlari.html",
       subs: [
-        { label: "Self-Servis Hattı", search: "self servis", href: "market-reyonlari.html?tip=self-servis" },
-        { label: "Teşhir Dolapları", search: "teşhir|teshir", href: "market-reyonlari.html?tip=camli-dolap" },
-        { label: "Market Reyonları", subs: MARKET_REYON_SUBS },
+        { label: "Self-Servis Hattı", labelKey: "nav.sub.self_servis_hatti", search: "self servis", href: "market-reyonlari.html?tip=self-servis" },
+        { label: "Teşhir Dolapları", labelKey: "nav.sub.teshir_dolaplari", search: "teşhir|teshir", href: "market-reyonlari.html?tip=camli-dolap" },
+        { label: "Market Reyonları", labelKey: "nav.sub.market_reyonlari", href: "market-reyonlari.html" },
       ],
     },
-    { id: "dolap", label: "Dolaplar", href: "dolap.html" },
-    { id: "davlumbaz", label: "Davlumbazlar", href: "davlumbaz.html" },
-    { id: "tasima", label: "Taşıma Ekipmanları", href: "tasima.html" },
-    { id: "araba", label: "Arabalar", href: "araba.html" },
+    { id: "dolap", labelKey: "nav.dolap", label: "Dolaplar", href: "dolap.html" },
+    { id: "davlumbaz", labelKey: "nav.davlumbaz", label: "Davlumbazlar", href: "davlumbaz.html" },
+    { id: "tasima", labelKey: "nav.tasima", label: "Taşıma Ekipmanları", href: "tasima.html" },
+    { id: "araba", labelKey: "nav.araba", label: "Arabalar", href: "araba.html" },
     {
       id: "istif",
+      labelKey: "nav.istif",
       label: "İstif Rafları",
       href: "istif.html",
       subs: [{ label: "CAMBRO" }, { label: "Portashelf" }],
     },
-    {
-      id: "set-ustu-mutfak",
-      label: "Set Üstü Mutfak Ekipmanları",
-      href: "set-ustu-mutfak.html",
-      subs: [
-        { label: "Servis Gereçleri", tip: "servis-gerecleri", search: "servis gereç" },
-        { label: "Chafing Dishler", tip: "chafing-dish", search: "chafing" },
-        { label: "Helvane ve Sığ Tencereler", tip: "helvane-sig-tencere", search: "helvane|sığ tencere|sig tencere" },
-        { label: "Silindirik Tencereler", tip: "silindirik-tencere", search: "silindirik tencere" },
-        { label: "Kaçarola ve Buharlı Pişiriciler", tip: "kaserola-buharli", search: "kaçarola|kaserola|buharlı pişirici|buharli pisirici" },
-        { label: "Tavalar", tip: "tavalar", search: "tava" },
-        { label: "Bakır Sunum Ekipmanları", tip: "bakir-sunum", search: "bakır sunum|bakir sunum" },
-        { label: "Döküm Tencere ve Tavalar", tip: "dokum-tencere-tava", search: "döküm tencere|dokum tencere|lava döküm" },
-        { label: "Masaüstü Ekipmanları", tip: "masaustu-ekipman", search: "masaüstü|masaustu" },
-        { label: "Gastronorm Küvetler", tip: "gastronorm-kuvet", search: "gastronorm|gn küvet|gn kuvet" },
-        { label: "Pres Baskı Tepsiler", tip: "pres-baski-tepsi", search: "pres baskı|pres baski" },
-        { label: "Taşıma Ekipmanları", tip: "tasima-ekipman", search: "taşıma ekipman|tasima ekipman|servis arab" },
-        { label: "Bain Marie Çelik Saklama Kapları", tip: "bain-marie-kap", slug: "bain-marie-celik-saklama-kaplari" },
-        { label: "Melamin Sunum Kapları", tip: "melamin-sunum", search: "melamin sunum" },
-        { label: "Karıştırma Kapları ve Süzgeçler", tip: "karistirma-suzgec", search: "karıştırma kap|karistirma kap|süzgeç|suzgec" },
-        { label: "Polipropilen-Polikarbonat Gastronom Küvetler", tip: "pp-pc-gn", search: "polipropilen|polikarbonat|pp gn" },
-        { label: "Polietilen Kesme Tahtaları", tip: "kesme-tahtasi", search: "kesme tahta|polietilen" },
-        { label: "Gurmeaid Profesyonel Bıçaklar", tip: "gurmeaid-bicak", search: "gurmeaid.*bıçak|gurmeaid.*bicak" },
-        { label: "Gurmeaid Mutfak Aksesuarları", tip: "gurmeaid-aksesuar", search: "gurmeaid.*aksesuar" },
-        { label: "Mutfak Aksesuarları", tip: "mutfak-aksesuar", search: "mutfak aksesuar" },
-        { label: "Sinek Öldürücü Cihazlar", tip: "sinek-oldurucu", search: "sinek öldürücü|sinek oldurucu" },
-        { label: "Sıcak - Soğuk Servis Üniteleri", tip: "sicak-soguk-servis", search: "sıcak.*soğuk servis|sicak.*soguk servis" },
-        { label: "Isıtıcı Lambalar", tip: "isitici-lamba", search: "ısıtıcı lamba|isitici lamba" },
-        { label: "Mısır Patlatma ve Pamuk Şeker Makineleri", tip: "patlamis-pamuk", search: "mısır patlatma|misir patlatma|pamuk şeker|pamuk seker" },
-      ],
-    },
+    { id: "kuvetler", labelKey: "nav.kuvetler", label: "Küvetler", href: "kuvetler.html" },
   ];
 
   function equstoDeptHref(href) {
@@ -244,7 +217,7 @@
       tasima: "\uD83E\uDDF0",
       araba: "\uD83D\uDED2",
       istif: "\uD83D\uDCDA",
-      "set-ustu-mutfak": "\uD83C\uDF7D\uFE0F",
+      kuvetler: "\uD83E\uDD63",
     };
     return m[catId] || "\uD83D\uDCE6";
   }
@@ -359,7 +332,7 @@
   /** Mega drill sütunu satırı (kök ile aynı › kuralı). */
   function buildDrawerDrillRow(it, opts) {
     opts = opts || {};
-    var label = it && it.label ? String(it.label) : "";
+    var label = __navLabel(it);
     if (it && it.markaHref) {
       return buildDrawerSplitRow(label, {
         hasFlyout: false,
@@ -438,7 +411,7 @@
     if (!c.subs || !c.subs.length) return __navT("nav.drawer_cat_subtitle", "Kategoriye göz at");
     var parts = [];
     for (var i = 0; i < c.subs.length && parts.length < 3; i++) {
-      parts.push(c.subs[i].label);
+      parts.push(__navLabel(c.subs[i]));
     }
     return parts.join(" · ");
   }
@@ -826,16 +799,7 @@
           labelLink.addEventListener("click", function () {
             closeAfterNav();
           });
-          labelLink.addEventListener("auxclick", function (ev) {
-            if (!ev || ev.button !== 1) return;
-            var raw = c.href;
-            if (!raw) return;
-            var h = equstoDeptHref(raw);
-            if (!h || h === "#") return;
-            try {
-              window.open(h, "_blank", "noopener,noreferrer");
-            } catch (eAc) {}
-          });
+          /* Orta tuş: tarayıcı varsayılanı (yeni sekme) — eq-link-scroll.js müdahale etmez */
         }
         li.appendChild(rowWrap);
         ul.appendChild(li);
@@ -851,7 +815,7 @@
               var t = (a.textContent || "").trim();
               if (!t) return;
               var href = (a.getAttribute("href") || "").trim();
-              if (!href) href = "marka.html?b=" + encodeURIComponent(t);
+              if (!href) href = typeof window.eqBrandHref === "function" ? window.eqBrandHref(t) : "/shop/marka/" + encodeURIComponent(t);
               out.push({ label: t, markaHref: href });
             });
             if (out.length) return out;
@@ -861,7 +825,10 @@
           .map(function (name) {
             var s = String(name || "").trim();
             if (!s) return null;
-            return { label: s, markaHref: "marka.html?b=" + encodeURIComponent(s) };
+            return {
+              label: s,
+              markaHref: typeof window.eqBrandHref === "function" ? window.eqBrandHref(s) : "/shop/marka/" + encodeURIComponent(s),
+            };
           })
           .filter(Boolean);
       }
@@ -928,17 +895,17 @@
 
       (frame.items || []).forEach(function (it) {
         var rowIt = buildDrawerDrillRow(it, {
-          active: highlightChildLabel && it.label === highlightChildLabel,
+          active: highlightChildLabel && __navLabel(it) === highlightChildLabel,
         });
         if (navItemHasFlyout(it)) {
           var drillLabel = rowIt.querySelector(".eq-drawer-row-link");
           var drillChev = rowIt.querySelector(".eq-drawer-row-chev-btn");
           function openDrillIt() {
             var next = fi + 1;
-            if (__eqDrawerStack.length === next + 1 && __eqDrawerStack[next] && __eqDrawerStack[next].title === it.label) return;
+            if (__eqDrawerStack.length === next + 1 && __eqDrawerStack[next] && __eqDrawerStack[next].title === __navLabel(it)) return;
             __eqDrawerStack.length = next;
             __eqDrawerStack.push({
-              title: it.label,
+              title: __navLabel(it),
               items: it.subs || it.children || it.items,
               deptHref: frame.deptHref || null,
               catId: frame.catId || null,
@@ -973,7 +940,7 @@
             var next = fi + 1;
             if (
               __eqDrawerStack.length > next &&
-              (!__eqDrawerStack[next] || __eqDrawerStack[next].title !== it.label)
+              (!__eqDrawerStack[next] || __eqDrawerStack[next].title !== __navLabel(it))
             ) {
               __eqDrawerCollapseStack(next);
             }
@@ -1098,7 +1065,7 @@
     var ul = el("div", { class: "sb-sublist depth-" + depth });
     items.forEach(function (it) {
       var wrap = el("div", { class: "sb-subwrap" });
-      var row = el("div", { class: "sb-subitem" + (it.subs ? " has-children" : ""), role: "button", tabindex: "0", text: it.label });
+      var row = el("div", { class: "sb-subitem" + (it.subs ? " has-children" : ""), role: "button", tabindex: "0", text: __navLabel(it) });
       var arrow = it.subs ? el("span", { class: "sb-subarrow", text: "\u203A", "aria-hidden": "true" }) : null;
       if (arrow) row.appendChild(arrow);
 
@@ -1139,6 +1106,14 @@
     return ul;
   }
 
+  function isBesosModulPdp() {
+    try {
+      return /\/besos\/modul\/[^/?#]+/i.test(location.pathname || "");
+    } catch (_) {
+      return false;
+    }
+  }
+
   function render() {
     var root = document.getElementById("eq-sidebar");
     if (!root) return;
@@ -1149,7 +1124,10 @@
       !document.body.classList.contains("bd-page") &&
       root.parentNode &&
       root.parentNode.id === "eq-filter-col";
-    if (inVitrinFilterCol) {
+    if (
+      inVitrinFilterCol ||
+      (isBesosModulPdp() && root.parentNode && root.parentNode.id === "eq-filter-col")
+    ) {
       root.innerHTML = "";
       root.setAttribute("aria-hidden", "true");
       return;
@@ -1342,16 +1320,47 @@
     } catch (_) {}
   });
 
+  /** i18n — flyout metinleri textContent ile yazıldığı için sözlük hazır olunca yeniden çiz. */
+  window.__eqRerenderNav = function () {
+    try {
+      render();
+    } catch (_) {}
+    try {
+      var drawer = document.getElementById("catDrawer");
+      if (drawer) {
+        try {
+          if (drawer.querySelector(".eq-mcat-drawer-inner")) drawer.innerHTML = "";
+        } catch (_) {}
+        renderDrawer();
+      }
+    } catch (_) {}
+  };
+
   function bootNav() {
     eqSyncMobileChrome();
-    hydrateCaglayanNavSubs().finally(function () {
-      render();
-      eqSyncMobileChrome();
+    function paintNav() {
       try {
-        if (typeof window.__eqRerenderNav === "function") window.__eqRerenderNav();
-      } catch (_) {}
-    });
+        window.__eqRerenderNav();
+      } catch (_) {
+        try {
+          render();
+        } catch (_2) {}
+      }
+      eqSyncMobileChrome();
+    }
+    if (window.eqI18nReady && typeof window.eqI18nReady.then === "function") {
+      window.eqI18nReady.then(paintNav);
+    } else {
+      paintNav();
+    }
   }
+
+  document.addEventListener("equsto:i18n-ready", function () {
+    try {
+      window.__eqRerenderNav();
+    } catch (_) {}
+  });
+
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", bootNav);
   else bootNav();
 
@@ -1364,19 +1373,6 @@
     },
     { passive: true }
   );
-
-  /** i18n geç gelirse: sözlük yüklenir yüklenmez kenar çubuğu + çekmece yeniden çizilir. */
-  window.__eqRerenderNav = function () {
-    try { render(); } catch (_) {}
-    try {
-      var drawer = document.getElementById("catDrawer");
-      if (drawer) {
-        // Kök çekmeceyi sıfırla, yeniden çiz.
-        try { drawer.querySelector(".eq-mcat-drawer-inner") && (drawer.innerHTML = ""); } catch (_) {}
-        renderDrawer();
-      }
-    } catch (_) {}
-  };
 
   function renderDrawer() {
     var drawer = document.getElementById("catDrawer");
@@ -1491,7 +1487,7 @@
     var nav = document.createElement("nav");
     nav.id = "eq-bottom-tabbar";
     nav.className = "eq-bottom-tabbar";
-    nav.setAttribute("aria-label", "Alt menü");
+    nav.setAttribute("aria-label", __navT("nav.mobile_submenu", "Alt menü"));
 
     var aHome = document.createElement("a");
     aHome.className = "eq-bottom-tabbar__btn";
@@ -1513,7 +1509,7 @@
     btnCart.type = "button";
     btnCart.className = "eq-bottom-tabbar__btn";
     btnCart.setAttribute("data-eq-bnav", "cart");
-    btnCart.setAttribute("aria-label", "Sepet");
+    btnCart.setAttribute("aria-label", __navT("nav.mobile_cart", "Sepet"));
     btnCart.innerHTML =
       '<span class="eq-bottom-tabbar__ico eq-bottom-tabbar__ico--cart" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h13.2L18 17.5H7.4L6 7z"/><path d="M6 7 5 4.5H3"/></svg><span id="eq-bnav-cart-badge" class="eq-bottom-tabbar__cart-qty">0</span></span>';
     btnCart.addEventListener("click", function (ev) {
@@ -1528,14 +1524,14 @@
           return;
         }
       } catch (eCart) {}
-      location.href = "/sepet.html";
+      location.href = "/sepet";
     });
 
     var btnCat = document.createElement("button");
     btnCat.type = "button";
     btnCat.className = "eq-bottom-tabbar__btn";
     btnCat.setAttribute("data-eq-bnav", "category");
-    btnCat.setAttribute("aria-label", "Menü");
+    btnCat.setAttribute("aria-label", __navT("nav.mobile_menu", "Menü"));
     btnCat.innerHTML =
       '<span class="eq-bottom-tabbar__ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span>';
     btnCat.addEventListener("click", function (ev) {
@@ -1564,12 +1560,25 @@
     eqSyncMobileChrome();
   }
 
+  var EQ_FOOTER_ASSET_V = "20260530footer-kilit";
+  var EQ_TINT_ASSET_V = "20260530prod-card-tint-v12";
+
   function loadScriptSameDir(filename, flagName) {
     try {
       if (window[flagName]) return;
+      if (filename === "eq-footer.js" && typeof window.__eqMountMarketFooter === "function") {
+        window[flagName] = true;
+        return;
+      }
       var cur = document.currentScript;
       var base = cur && cur.src ? cur.src.replace(/[^/]+$/, "") : "";
       var url = base ? base + filename : "";
+      if (filename === "eq-footer.js" && url) {
+        url += (url.indexOf("?") >= 0 ? "&" : "?") + "v=" + EQ_FOOTER_ASSET_V;
+      }
+      if (filename === "eq-product-card-tint.js" && url) {
+        url += (url.indexOf("?") >= 0 ? "&" : "?") + "v=" + EQ_TINT_ASSET_V;
+      }
       if (!url) {
         try {
           url = new URL(filename, document.baseURI || window.location.href).href;

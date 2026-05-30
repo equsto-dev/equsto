@@ -5,7 +5,7 @@
  */
 
 /** m² bantı veya alt tip listesi (ör. mahalle balıkçı) */
-export type ListeBantId = "80-150" | "150-250" | "mahalle" | "referans";
+export type ListeBantId = "80-150" | "150-250" | "mahalle" | "referans" | "100-300";
 
 export type M2BantTanim = {
   id: ListeBantId;
@@ -148,6 +148,27 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
         liste("mahalle", "Mahalle balıkçı", 80, "balikci"),
         bant("80-150", 115, "balikci"),
         bant("150-250", 200, "balikci"),
+      ],
+    },
+    questions: [],
+  },
+  {
+    id: "restaurant_italyan",
+    name: "İtalyan Restoran",
+    parent: "Restoran",
+    desc: "İtalyan / trattoria · 100–300 m² referans ekipman listesi · motor: italyan",
+    pfos: {
+      motorSlug: "italyan",
+      dukkanSecim: "İtalyan Restoran",
+      m2Min: 100,
+      m2Max: 300,
+      bantKurali: "Tek referans liste (100–300 m²); m² ile adet ölçeklenir",
+      planPdf: "proje-veri/03-italyan.pdf",
+      listeYolu: "proje-veri/03-italyan 100-300 m2.xlsx",
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
+      bantlar: [
+        liste("100-300", "100–300 m²", 200, "italyan"),
       ],
     },
     questions: [],
@@ -354,6 +375,26 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
     80,
     800,
   ),
+  {
+    id: "bar_birahane",
+    name: "Birahane",
+    parent: "Bar & Lounge",
+    desc: "Birahane / bira salonu · 100–300 m² referans ekipman listesi · motor: birahane",
+    pfos: {
+      motorSlug: "birahane",
+      dukkanSecim: "Birahane",
+      m2Min: 100,
+      m2Max: 300,
+      bantKurali: "Tek referans liste (100–300 m²); m² ile adet ölçeklenir",
+      listeYolu: "proje-veri/11 BIRAHANE.xlsx",
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
+      bantlar: [
+        liste("100-300", "100–300 m²", 200, "birahane"),
+      ],
+    },
+    questions: [],
+  },
   konseptPlanlanan("bar_kokteyl", "Kokteyl Bar", "Bar & Lounge", "Kokteyl Bar", 60, 250),
   konseptPlanlanan("bar_wine", "Wine Bar", "Bar & Lounge", "Wine Bar", 50, 200),
   konseptPlanlanan("bar_beer", "Beer Pub", "Bar & Lounge", "Beer Pub", 80, 400),
@@ -483,16 +524,87 @@ export const DUKKAN_SECIM_ESLEME: Record<string, string> = Object.fromEntries(
 
 export type ShopType = ShopTypeKayit;
 
+function parseBantlar(raw: unknown): M2BantTanim[] {
+  if (!Array.isArray(raw)) return [];
+  const out: M2BantTanim[] = [];
+  for (const row of raw) {
+    if (!row || typeof row !== "object") continue;
+    const b = row as Record<string, unknown>;
+    const id = String(b.id ?? "").trim() as ListeBantId;
+    if (!id) continue;
+    out.push({
+      id,
+      label: String(b.label ?? id),
+      referansM2: Number(b.referansM2) || 0,
+      listeDosya: String(b.listeDosya ?? "").trim(),
+    });
+  }
+  return out;
+}
+
+/** proje-akis.json içindeki pfos bloğu — panel API yanıtı */
+export function pfosMetaFromRaw(raw: unknown): ShopTypePfosMeta | null {
+  if (!raw || typeof raw !== "object") return null;
+  const p = raw as Record<string, unknown>;
+  const motorSlug = String(p.motorSlug ?? "").trim();
+  const m2Min = Number(p.m2Min) || 0;
+  const m2Max = Number(p.m2Max) || 0;
+  const bantlar = parseBantlar(p.bantlar);
+  if (!motorSlug && !m2Min && !bantlar.length) return null;
+
+  const teklifKaynagi = String(p.teklifKaynagi ?? "").trim();
+  const kaynak = (
+    ["pfos-referans", "motor-sablon", "legacy-set", "referans-json", "planlanan"] as const
+  ).includes(teklifKaynagi as ShopTypePfosMeta["teklifKaynagi"])
+    ? (teklifKaynagi as ShopTypePfosMeta["teklifKaynagi"])
+    : motorSlug
+      ? "pfos-referans"
+      : "legacy-set";
+
+  return {
+    motorSlug,
+    dukkanSecim: String(p.dukkanSecim ?? "").trim(),
+    dukkanAltTipler: Array.isArray(p.dukkanAltTipler)
+      ? (p.dukkanAltTipler as string[])
+      : undefined,
+    m2Min,
+    m2Max,
+    bantlar,
+    bantKurali: String(p.bantKurali ?? "").trim(),
+    planPdf: String(p.planPdf ?? "").trim() || undefined,
+    listeYolu: String(p.listeYolu ?? "").trim() || undefined,
+    teklifKaynagi: kaynak,
+    durum:
+      p.durum === "aktif" || p.durum === "motor" || p.durum === "planlanan"
+        ? p.durum
+        : motorSlug
+          ? "aktif"
+          : "planlanan",
+  };
+}
+
 /** Eski kayıtları (yalnızca desc) güncel tanıma yükselt */
 export function normalizeShopType(raw: Record<string, unknown>): ShopTypeKayit {
   const id = String(raw.id ?? "");
   const canonical = PFOS_KONSEPT_SHOP_TYPES.find((t) => t.id === id);
+  const rawPfos = pfosMetaFromRaw(raw.pfos);
+  const questions = Array.isArray(raw.questions) ? raw.questions : [];
+
   if (canonical) {
+    return { ...canonical, questions };
+  }
+
+  if (rawPfos) {
     return {
-      ...canonical,
-      questions: Array.isArray(raw.questions) ? raw.questions : [],
+      id,
+      name: String(raw.name ?? id),
+      parent: String(raw.parent ?? ""),
+      desc: String(raw.desc ?? ""),
+      pfos: rawPfos,
+      questions,
     };
   }
+
   return {
     id,
     name: String(raw.name ?? id),
@@ -507,8 +619,20 @@ export function normalizeShopType(raw: Record<string, unknown>): ShopTypeKayit {
       teklifKaynagi: "legacy-set",
       bantlar: [],
     },
-    questions: Array.isArray(raw.questions) ? raw.questions : [],
+    questions,
   };
+}
+
+/** Yükleme / API: kod tanımları + dosyadaki kayıtlar birleşir (İtalyan 100–300 m² vb.) */
+export function enrichShopTypesFromFile(
+  rawList: unknown[],
+): ShopTypeKayit[] {
+  const normalized = rawList.map((row) =>
+    normalizeShopType(
+      row && typeof row === "object" ? (row as Record<string, unknown>) : {},
+    ),
+  );
+  return mergeShopTypes(normalized, PFOS_KONSEPT_SHOP_TYPES);
 }
 
 export function mergeShopTypes(

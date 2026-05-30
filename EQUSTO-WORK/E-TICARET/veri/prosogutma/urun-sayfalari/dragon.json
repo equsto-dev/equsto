@@ -1,0 +1,149 @@
+{
+  "slug": "dragon",
+  "wpId": 9041,
+  "title": "Dragon",
+  "baslik": "Dragon",
+  "url": "https://prosogutma.com/urun/dragon/",
+  "attributes": [
+    {
+      "label": "Ürünler",
+      "value": "İçecekler"
+    },
+    {
+      "label": "Kabin Türü",
+      "value": "Şişe Soğutucular"
+    },
+    {
+      "label": "Plug-in",
+      "value": "Remote"
+    }
+  ],
+  "categories": [
+    {
+      "name": "Şişe Soğutucular"
+    }
+  ],
+  "gallery": [
+    {
+      "src": "https://prosogutma.com/wp-content/uploads/2022/05/Dragon-1.jpg"
+    }
+  ],
+  "tabs": [
+    {
+      "name": "Ürün Hakkında",
+      "html": "<p><a href=\"https://prosogutma.com/wp-content/uploads/2023/02/dragon.svg\"><img loading=\"lazy\" class=\"alignnone size-full wp-image-10619\" role=\"img\" src=\"https://prosogutma.com/wp-content/uploads/2023/02/dragon.svg\" alt=\"\" width=\"539\" height=\"271\" /></a></p></div>\n\t\t\t\t\t\t\t\t\t<div class=\"elementor-tab-title elementor-tab-mobile-title\" aria-selected=\"false\" data-tab=\"2\" role=\"tab\" tabindex=\"-1\" aria-controls=\"elementor-tab-content-1672\" aria-expanded=\"false\">Teknik Çizimler",
+      "links": [
+        {
+          "href": "https://prosogutma.com/wp-content/uploads/2023/02/dragon.svg",
+          "text": "href=\"https://prosogutma.com/wp-content/uploads/2023/02/dragon.svg\""
+        }
+      ],
+      "images": [
+        {
+          "src": "https://prosogutma.com/wp-content/uploads/2023/02/dragon.svg",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "name": "Teknik Çizimler",
+      "html": "<a href=\"https://prosogutma.com/wp-content/uploads/2023/02/dragon.pdf\" target=\"_blank\" rel=\"noopener\">Teknik Çizimlere Gitmek İçin Tıklayınız.</a></div>\n\t\t\t\t\t\t\t\t\t<div class=\"elementor-tab-title elementor-tab-mobile-title\" aria-selected=\"false\" data-tab=\"3\" role=\"tab\" tabindex=\"-1\" aria-controls=\"elementor-tab-content-1673\" aria-expanded=\"false\">Katalog Sayfası",
+      "links": [
+        {
+          "href": "https://prosogutma.com/wp-content/uploads/2023/02/dragon.pdf",
+          "text": "href=\"https://prosogutma.com/wp-content/uploads/2023/02/dragon.pdf\""
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "Katalog Sayfası",
+      "html": "<a href=\"https://prosogutma.com/wp-content/uploads/2023/02/dragon.pdf\" target=\"_blank\" rel=\"noopener\">Ürün Kataloğuna Gitmek İçin Tıklayınız.</a></div>\n\t\t\t\t\t\t\t\t\t<div class=\"elementor-tab-title elementor-tab-mobile-title\" aria-selected=\"false\" data-tab=\"4\" role=\"tab\" tabindex=\"-1\" aria-controls=\"elementor-tab-content-1674\" aria-expanded=\"false\">Opsiyonlar",
+      "links": [
+        {
+          "href": "https://prosogutma.com/wp-content/uploads/2023/02/dragon.pdf",
+          "text": "href=\"https://prosogutma.com/wp-content/uploads/2023/02/dragon.pdf\""
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "Opsiyonlar",
+      "html": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p></div>\n\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t</div>\n\t\t\t\t\t</div>\n\t\t</section>\n\t\t\t\t</div>\n\t\t\n",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Ürün Hakkında",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Teknik Çizimler",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Teknik Çizimlere Gitmek İçin Tıklayınız.",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Katalog Sayfası",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Ürün Kataloğuna Gitmek İçin Tıklayınız.",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Opsiyonlar",
+      "html": "",
+      "links": [],
+      "images": []
+    },
+    {
+      "name": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+      "html": "",
+      "links": [],
+      "images": []
+    }
+  ],
+  "teknik": {
+    "tablolar": [
+      {
+        "basliklar": [
+          "Ürünler",
+          "Kabin Türü",
+          "Plug-in"
+        ],
+        "satirlar": [
+          [
+            "Ürünler",
+            "İçecekler"
+          ],
+          [
+            "Kabin Türü",
+            "Şişe Soğutucular"
+          ],
+          [
+            "Plug-in",
+            "Remote"
+          ]
+        ]
+      }
+    ],
+    "pdfText": "www.prosogutma.com\r\nDRAGON\r\nGlass Door Bottle Cooler\r\nCam Kapılı Şişe Soğutucu\r\n8mX`cXYc\\\u0001Df[lc\\j\u0001&\u0001BlccXeêcXY`c`i\u0001Df[cc\\i\r\nLength (mm)\r\nUzunluk (mm)\r\n2D\r\n1562\r\n3D\r\n2343\r\n4D\r\n3124\r\n5D\r\n3905\r\nSide panel (mm)\r\nYan kapak (mm)\r\n40\r\n40\r\n40\r\n40\r\nFg\\iXk`e^\u0001K\\dg\\iXkli\\j\r\nxXcêŵdX\u0001JêZXbcêbcXiê\r\nAmbient Conditions\r\nFikXd\u0001BfŵlccXiê\r\nH1 (+1/+10°C) \r\n25°C / 60% RH (EN ISO 23953-2)\r\nTechnicial Specifications  / Teknik Özellikler\r\nDAIRY PRODUCTS\r\nCategories  / Kategoriler\r\nDRINKS\r\nUpright Cooler\r\nŴ`ŵ\\\u0001JfŲlklZl\r\nDRAGON V2 90/220/205\r\n2300 / 2150\r\n390\r\n1710 / 1560\r\n2200 / 2050\r\n895\r\n335\r\n600\r\n270\r\n565\r\n2180 / 2030\r\n870\r\nDRAGON V2 75/220/205\r\n2300 / 2150\r\n2180 / 2030\r\n390\r\n1710 / 1560\r\n2200 / 2050\r\n335\r\n270\r\n415\r\n450\r\n745\r\n728\r\n30 / 31\r\n",
+    "pdfUrl": "https://prosogutma.com/wp-content/uploads/2023/02/dragon.pdf",
+    "pdfLocal": "media/products/dragon/pdfs/dragon.pdf"
+  },
+  "pdfText": "www.prosogutma.com\r\nDRAGON\r\nGlass Door Bottle Cooler\r\nCam Kapılı Şişe Soğutucu\r\n8mX`cXYc\\\u0001Df[lc\\j\u0001&\u0001BlccXeêcXY`c`i\u0001Df[cc\\i\r\nLength (mm)\r\nUzunluk (mm)\r\n2D\r\n1562\r\n3D\r\n2343\r\n4D\r\n3124\r\n5D\r\n3905\r\nSide panel (mm)\r\nYan kapak (mm)\r\n40\r\n40\r\n40\r\n40\r\nFg\\iXk`e^\u0001K\\dg\\iXkli\\j\r\nxXcêŵdX\u0001JêZXbcêbcXiê\r\nAmbient Conditions\r\nFikXd\u0001BfŵlccXiê\r\nH1 (+1/+10°C) \r\n25°C / 60% RH (EN ISO 23953-2)\r\nTechnicial Specifications  / Teknik Özellikler\r\nDAIRY PRODUCTS\r\nCategories  / Kategoriler\r\nDRINKS\r\nUpright Cooler\r\nŴ`ŵ\\\u0001JfŲlklZl\r\nDRAGON V2 90/220/205\r\n2300 / 2150\r\n390\r\n1710 / 1560\r\n2200 / 2050\r\n895\r\n335\r\n600\r\n270\r\n565\r\n2180 / 2030\r\n870\r\nDRAGON V2 75/220/205\r\n2300 / 2150\r\n2180 / 2030\r\n390\r\n1710 / 1560\r\n2200 / 2050\r\n335\r\n270\r\n415\r\n450\r\n745\r\n728\r\n30 / 31\r\n",
+  "scrapedAt": "2026-05-28T23:55:33.384Z"
+}

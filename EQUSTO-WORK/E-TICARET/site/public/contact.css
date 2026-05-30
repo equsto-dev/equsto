@@ -72,9 +72,14 @@
 }
 
 @media (max-width: 768px) {
-  body:not(.admin-app) #equsto-contact-fab,
-  body:not(.admin-app) .equsto-contact-fab:not(#eq-bottom-tabbar *) {
+  body:not(.admin-app):not(.eq-pfos) #equsto-contact-fab,
+  body:not(.admin-app):not(.eq-pfos) .equsto-contact-fab:not(#eq-bottom-tabbar *) {
     display: none !important;
+    pointer-events: none !important;
+  }
+  body.eq-pfos:not(.admin-app) #equsto-contact-fab,
+  body.eq-pfos:not(.admin-app) .equsto-contact-fab:not(#eq-bottom-tabbar *) {
+    display: flex !important;
     pointer-events: none !important;
   }
 }

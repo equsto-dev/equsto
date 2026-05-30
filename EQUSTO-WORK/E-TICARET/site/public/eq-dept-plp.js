@@ -4,9 +4,38 @@
 (function () {
   'use strict';
 
+  function __plpT(k, fb, vars) {
+    var s = fb || k;
+    try {
+      if (typeof window.eqT === 'function') {
+        var v = window.eqT(k, null);
+        if (v != null && v !== k) s = v;
+      }
+    } catch (_) {}
+    if (vars) {
+      Object.keys(vars).forEach(function (kk) {
+        var val = vars[kk];
+        s = String(s).replace(new RegExp('\\{' + kk + '\\}', 'g'), val);
+        s = String(s).replace(new RegExp('%\\{' + kk + '\\}', 'g'), val);
+      });
+    }
+    return s;
+  }
+
+  function displayProductName(item) {
+    var n = item && item.n != null ? String(item.n) : '';
+    if (!n) return '';
+    if (window.eqLang === 'en' && typeof window.eqProductNameEn === 'function') {
+      return window.eqProductNameEn(n, item.raw);
+    }
+    return n;
+  }
+
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260528dept-only-v1';
+  var CATALOG_V = '20260527robot-coupe-haz';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
+  /* Next.js URL slug → katalog dept id (data/dept/*.json) */
+  if (DEPT === 'market-reyonlari') DEPT = 'market-reyon';
   var deptCoverImg = '';
 
   var state = {
@@ -45,6 +74,9 @@
   }
 
   function formatPrice(p, raw) {
+    if (raw && (Number(raw.fiyat_bekleniyor) === 1 || /teklif\s+için/i.test(String(raw.price || p || '')))) {
+      return __plpT('plp.quote_contact', 'Teklif için iletişim');
+    }
     if (raw && isOztiListeTlRow(raw) && /KDV\s*dahil/i.test(String(raw.price || p || ''))) {
       return String(raw.price || p || '').split('\n')[0];
     }
@@ -66,6 +98,33 @@
     return '₺' + n.toLocaleString('tr-TR', { maximumFractionDigits: 0 }) + ',00';
   }
 
+  function isPlpTechnicalImg(rel) {
+    var fn = String(rel || '')
+      .split('?')[0]
+      .split('/')
+      .pop()
+      .toLowerCase();
+    if (/kesit/i.test(fn)) return true;
+    if (/[-_]model-\d+\.(jpe?g|webp|png|gif)$/i.test(fn)) return true;
+    return false;
+  }
+
+  function pickPlpHeroImage(images) {
+    if (!images || !images.length) return '';
+    var i;
+    for (i = 0; i < images.length; i++) {
+      var fn = String(images[i] || '')
+        .split('/')
+        .pop()
+        .toLowerCase();
+      if (/kapak/i.test(fn)) return images[i];
+    }
+    for (i = 0; i < images.length; i++) {
+      if (!isPlpTechnicalImg(images[i])) return images[i];
+    }
+    return images[0];
+  }
+
   function imgSrc(p) {
     if (!p) return '';
     if (typeof window.eqProductImgSrc === 'function') {
@@ -78,7 +137,12 @@
     if (/^caglayan-market\//i.test(s) || /^prosogutma-market\//i.test(s)) {
       return '/data/' + s.replace(/^data\//, '');
     }
-    if (/^https?:\/\//i.test(s)) return s;
+    if (/^https?:\/\//i.test(s)) {
+      try {
+        if (typeof window.eqAllowRemoteImages === 'function' && window.eqAllowRemoteImages()) return s;
+      } catch (_) {}
+      return '';
+    }
     if (s.charAt(0) === '/') return s;
     if (/^images\/catalog\//i.test(s)) return '/' + s;
     if (/^images\/home\//i.test(s)) return '/' + s;
@@ -105,20 +169,92 @@
     return '';
   }
 
-  /** PLP kart alt satırı — olculer (mm veya cm). */
-  function formatOlculerLine(raw) {
-    if (!raw || !raw.olculer) return '';
-    var o = raw.olculer;
-    var g = Number(o.genislik_mm);
-    var d = Number(o.derinlik_mm);
-    var y = Number(o.yukseklik_mm);
+  function dimLabelFromMm(g, d, y) {
     if (!g || !d || !y) return '';
-    var name = String(raw.name || '');
-    if (/×\d/.test(name)) return '';
     if (g >= 1000 && d >= 1000) {
       return Math.round(g / 10) + '×' + Math.round(d / 10) + '×' + Math.round(y / 10) + ' cm';
     }
     return g + '×' + d + '×' + y + ' mm';
+  }
+
+  /** Öztiryakiler soğuk/derin dondurucu oda (7919.CR / 7919.DF) — PDF ölçü istisnaları. */
+  var OZTI_PANEL_DIMS_MM = {
+    '7919.CR1517.00': [1500, 1750, 2400],
+    '7919.CR2022.00': [2000, 2250, 2400],
+    '7919.CR2517.00': [2500, 1750, 2400],
+    '7919.CR3017.00': [3000, 1750, 2400],
+    '7919.DF1517.00': [1500, 1750, 2400],
+    '7919.DF2015.00': [2500, 1500, 2400],
+    '7919.DF2020.00': [2000, 2250, 2400],
+    '7919.DF2022.00': [2000, 2000, 2400],
+    '7919.DF2517.00': [2500, 1750, 2400],
+    '7919.DF3017.00': [3000, 1750, 2400],
+  };
+
+  function oztiPanelDimsFromSku(sku) {
+    var k = String(sku || '')
+      .trim()
+      .toUpperCase();
+    if (!k) return null;
+    if (OZTI_PANEL_DIMS_MM[k]) return OZTI_PANEL_DIMS_MM[k];
+    var m = k.match(/^7919\.(DF|CR)(\d{2})(\d{2})\.00$/);
+    if (!m) return null;
+    return [Number(m[2]) * 100, Number(m[3]) * 100, 2400];
+  }
+
+  function parseDimsFromName(name) {
+    var s = String(name || '');
+    var mStar = s.match(/(\d{2,4})\*(\d{2,3})\*(\d{2,4})/);
+    if (mStar) {
+      return dimLabelFromMm(+mStar[1] * 10, +mStar[2] * 10, +mStar[3] * 10);
+    }
+    var mCm = s.match(/(\d{2,4})\s*[xX×]\s*(\d{2,4})\s*[xX×]\s*(\d{2,4})\s*cm\b/i);
+    if (mCm) {
+      return dimLabelFromMm(+mCm[1] * 10, +mCm[2] * 10, +mCm[3] * 10);
+    }
+    var mMm = s.match(/(\d{2,4})\s*[xX×]\s*(\d{2,4})\s*[xX×]\s*(\d{2,4})\s*mm\.?/i);
+    if (mMm) {
+      return dimLabelFromMm(+mMm[1], +mMm[2], +mMm[3]);
+    }
+    return '';
+  }
+
+  /** PLP kart alt satırı — olculer, ürün adı veya Öztiryakiler oda kodu. */
+  function formatOlculerLine(raw) {
+    if (!raw) return '';
+    var o = raw.olculer;
+    if (o) {
+      var g = Number(o.genislik_mm);
+      var d = Number(o.derinlik_mm);
+      var y = Number(o.yukseklik_mm);
+      if (g && d && y) {
+        var nameHasDim = /[xX×]\s*\d/.test(String(raw.name || ''));
+        if (!nameHasDim) return dimLabelFromMm(g, d, y);
+      }
+    }
+    var fromName = parseDimsFromName(raw.name);
+    if (fromName) return fromName;
+    var panel = oztiPanelDimsFromSku(raw.sku || raw.model || raw.urun_kodu);
+    if (panel) return dimLabelFromMm(panel[0], panel[1], panel[2]);
+    return '';
+  }
+
+  /** Fiyat altı kısa açıklama (liste / KDV). */
+  function formatPriceNote(raw) {
+    if (!raw) return '';
+    if (Number(raw.fiyat_bekleniyor) === 1 || /teklif/i.test(String(raw.price || ''))) {
+      return '';
+    }
+    var price = String(raw.price || '');
+    if (isOztiRow(raw) && Number(raw.liste_fiyati_eur) > 0 && Number(raw.fiyat_tl) > 0) {
+      var pct = Number(raw.iskonto_oran != null ? raw.iskonto_oran : raw.iskonto_yuzde);
+      if (!pct && raw.bayi_iskonto != null) pct = Math.round(Number(raw.bayi_iskonto) * 100);
+      if (!pct) pct = 65;
+      return __plpT('plp.price_hint', 'KDV dahil · Öztiryakiler liste EUR, {pct}% iskonto', { pct: pct });
+    }
+    if (/KDV\s*dahil/i.test(price)) return __plpT('plp.vat_included', 'KDV dahil');
+    if (/\+ *KDV/i.test(price)) return __plpT('plp.price_plus_vat', 'Fiyat + KDV');
+    return '';
   }
 
   function productUrl(item) {
@@ -287,7 +423,7 @@
     if (x.oem_brand) {
       fb = String(x.oem_brand).trim();
     } else if (window.EqDeptCmFacets && window.EqDeptCmFacets.resolveFacetBrand) {
-      fb = window.EqDeptCmFacets.resolveFacetBrand(b, n);
+      fb = window.EqDeptCmFacets.resolveFacetBrand(b, n, x.sku || x.urun_kodu || x.model);
     }
     var row = x;
     if (
@@ -301,12 +437,12 @@
       window.EqustoKurLive && typeof window.EqustoKurLive.priceForRow === 'function'
         ? window.EqustoKurLive.priceForRow(row)
         : String(row.price || '').split('\n')[0];
-    var imgRel = row.images && row.images[0] ? row.images[0] : '';
-    if (
-      row.category === 'soguk-odalar' ||
-      /7919\.CR/i.test(String(row.sku || row.urun_kodu || row.model || '')) ||
-      /soğuk oda|soguk oda|cold room/i.test(String(row.name || ''))
-    ) {
+    var imgRel = '';
+    if (row.images && row.images.length) {
+      imgRel = pickPlpHeroImage(row.images);
+    }
+    var ozSku = String(row.sku || row.urun_kodu || row.model || '');
+    if (row.category === 'soguk-odalar' || /7919\.CR/i.test(ozSku)) {
       imgRel = 'images/catalog/soguk-oda/soguk-oda-vitrin.png';
     }
     if (!imgRel && isOztiRow(row)) {
@@ -317,13 +453,18 @@
         imgRel = window.eqOztiAxImageFromSku(row.sku || row.model || row.urun_kodu) || imgRel;
       }
     }
+    var imgOut = '';
+    if (isOztiRow(row) && ozSku && typeof window.eqOztiAxImageFromSku === 'function') {
+      imgOut = window.eqOztiAxImageFromSku(ozSku) || '';
+    }
+    if (!imgOut && imgRel) imgOut = imgSrc(imgRel) || '';
     return {
       c: row.category || '',
       b: b,
       fb: fb,
       n: n,
       p: priceLine,
-      img: imgRel ? imgSrc(imgRel) : '',
+      img: imgOut,
       tip_kodu: row.tip_kodu || row.tipKodu || '',
       raw: row,
     };
@@ -488,6 +629,16 @@
     if (asideChips) window.EqDeptCmFacets.renderSelectedChips(asideChips, state, tiles, tileMatch, onRemove);
   }
 
+  function syncTipInUrl() {
+    if (DEPT !== 'kuvetler') return;
+    try {
+      var u = new URL(location.href);
+      if (state.activeTiles.length === 1) u.searchParams.set('tip', state.activeTiles[0]);
+      else u.searchParams.delete('tip');
+      history.replaceState(null, '', u.pathname + u.search + u.hash);
+    } catch (_) {}
+  }
+
   function renderFacets() {
     var host = document.getElementById('eq-dept-plp-facets');
     if (!host || !state.ready || !window.EqDeptCmFacets) return;
@@ -501,6 +652,7 @@
         if (kind === 'clear') clearAllFilters();
         state.loadedCount = PAGE_SIZE;
         document.body.classList.remove('eq-dept-filter-open');
+        syncTipInUrl();
         render();
       },
     });
@@ -513,7 +665,7 @@
       u.raw && u.raw.images && u.raw.images[0]
         ? String(u.raw.images[0]).replace(/\\/g, '/').replace(/^\//, '')
         : '';
-    var rawImg = catalogRel || '';
+    var rawImg = /^https?:\/\//i.test(catalogRel) ? '' : catalogRel || '';
     if (!rawImg && u.raw && u.raw.images && u.raw.images[0]) {
       rawImg = plpImgRawAttr(u.raw.images[0]) || '';
     }
@@ -525,14 +677,14 @@
         '"' +
         (rawImg ? ' data-eq-img-raw="' + esc(rawImg) + '" data-eq-img-step="0"' : '') +
         (oztiKod ? ' data-eq-ozti-kod="' + esc(oztiKod) + '"' : '') +
-        ' alt="" loading="lazy" decoding="async" onerror="typeof __eqImgFail===\'function\'&&__eqImgFail(this)">'
+        ' alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="typeof __eqImgFail===\'function\'&&__eqImgFail(this)">'
       : '';
     var cartBtn =
       window.EqustoCart && typeof window.EqustoCart.cartAddButtonAttrs === 'function'
         ? '<button class="eq-dept-plp-card__btn" ' +
           window.EqustoCart.cartAddButtonAttrs(u) +
-          '>SEPETE EKLE</button>'
-        : '<button type="button" class="eq-dept-plp-card__btn">SEPETE EKLE</button>';
+          '>' + __plpT('plp.add_to_cart', 'SEPETE EKLE') + '</button>'
+        : '<button type="button" class="eq-dept-plp-card__btn">' + __plpT('plp.add_to_cart', 'SEPETE EKLE') + '</button>';
     return (
       '<article class="eq-dept-plp-card">' +
       '<a class="eq-dept-plp-card__img" href="' +
@@ -552,6 +704,10 @@
       (u.p
         ? '<div class="eq-dept-plp-card__price">' + esc(formatPrice(u.p, u.raw)) + '</div>'
         : '') +
+      (function () {
+        var note = formatPriceNote(u.raw);
+        return note ? '<div class="eq-dept-plp-card__price-note">' + esc(note) + '</div>' : '';
+      })() +
       cartBtn +
       '</article>'
     );
@@ -569,13 +725,14 @@
     }
     host.hidden = false;
     host.className = 'eq-dept-plp-loadmore';
-    host.setAttribute('aria-label', 'Daha fazla ürün yükle');
+    host.setAttribute('aria-label', __plpT('plp.load_more_aria', 'Daha fazla ürün yükle'));
     host.innerHTML =
       '<button type="button" class="eq-dept-plp-loadmore__btn" id="eq-dept-plp-loadmore-btn">' +
-      'Daha fazla ürün yükle' +
+      __plpT('plp.load_more', 'Daha fazla ürün yükle') +
       '<span class="eq-dept-plp-loadmore__meta">(' +
       remaining +
-      ' kaldı)</span>' +
+      ' ' + __plpT('plp.remaining', 'kaldı)') +
+      '</span>' +
       '</button>';
     var btn = document.getElementById('eq-dept-plp-loadmore-btn');
     if (btn) {
@@ -592,7 +749,7 @@
     if (!grid) return;
 
     if (!state.ready) {
-      grid.innerHTML = '<p class="eq-dept-plp-status">Katalog yükleniyor…</p>';
+      grid.innerHTML = '<p class="eq-dept-plp-status">' + esc(__plpT('plp.loading_catalog', 'Katalog yükleniyor…')) + '</p>';
       if (countEl) countEl.textContent = '';
       return;
     }
@@ -610,14 +767,16 @@
       if (!list.length) {
         countEl.innerHTML = '';
       } else if (shown < list.length) {
-        countEl.innerHTML =
-          '<strong>' +
-          shown +
-          '</strong> / <strong>' +
-          list.length +
-          '</strong> ürün gösteriliyor.';
+        var ofLbl = __plpT('plp.showing_of', '{shown} / {total} ürün gösteriliyor.', {
+          shown: shown,
+          total: list.length,
+        });
+        countEl.innerHTML = ofLbl
+          .replace(String(shown), '<strong>' + shown + '</strong>')
+          .replace(String(list.length), '<strong>' + list.length + '</strong>');
       } else {
-        countEl.innerHTML = '<strong>' + list.length + '</strong> ürün görüntüleniyor.';
+        var allLbl = __plpT('plp.showing_all', '{total} ürün görüntüleniyor.', { total: list.length });
+        countEl.innerHTML = allLbl.replace(String(list.length), '<strong>' + list.length + '</strong>');
       }
     }
     var selWrap = document.getElementById('eq-dept-plp-selected');
@@ -634,10 +793,17 @@
 
     if (!slice.length) {
       grid.innerHTML =
-        '<p class="eq-dept-plp-empty">Bu filtrelere uygun ürün bulunamadı.</p>';
+        '<p class="eq-dept-plp-empty">' + esc(__plpT('plp.empty_filter', 'Bu filtrelere uygun ürün bulunamadı.')) + '</p>';
     } else {
       grid.innerHTML = slice.map(renderProductCard).join('');
       if (typeof window.eqFixDataImagesInDom === 'function') window.eqFixDataImagesInDom(grid);
+      try {
+        if (window.EqustoProductTint && typeof window.EqustoProductTint.refreshPlp === 'function') {
+          window.EqustoProductTint.refreshPlp(grid);
+        } else {
+          document.dispatchEvent(new CustomEvent('equsto:plp-grid-updated', { detail: { root: grid } }));
+        }
+      } catch (_) {}
     }
 
     renderLoadMore(list);
@@ -669,9 +835,44 @@
     }
   }
 
+  function resolveMarkaFacetLabel(raw) {
+    var label = String(raw || '').trim();
+    if (!label) return '';
+    try {
+      if (typeof window.eqBrandFacetLabel === 'function') {
+        var fromSlug = window.eqBrandFacetLabel(label);
+        if (fromSlug) label = fromSlug;
+      }
+    } catch (_) {}
+    if (!state.all || !state.all.length) return label;
+    var want = label.toLocaleLowerCase('tr');
+    var keys = {};
+    state.all.forEach(function (u) {
+      var k = brandKey(u);
+      if (k) keys[k] = true;
+    });
+    if (keys[label]) return label;
+    var hit = Object.keys(keys).filter(function (k) {
+      return k.toLocaleLowerCase('tr') === want || k.toLocaleLowerCase('tr').indexOf(want) === 0;
+    });
+    if (hit.length === 1) return hit[0];
+    if (hit.length > 1) {
+      hit.sort(function (a, b) {
+        return a.length - b.length;
+      });
+      return hit[0];
+    }
+    return label;
+  }
+
   function applyUrlState() {
     try {
       var sp = new URLSearchParams(location.search);
+      var markaRaw = sp.get('marka') || sp.get('brand');
+      if (markaRaw) {
+        var facet = resolveMarkaFacetLabel(decodeURIComponent(markaRaw));
+        if (facet) state.brands = [facet];
+      }
       var tip = normalizeUrlTip(sp.get('tip'));
       if (tip && findTile(tip)) state.activeTiles = [tip];
       var q = sp.get('q');
@@ -714,7 +915,7 @@
     render();
   }
 
-  var MARKET_REYON_JSON_V = '20260527caglayan-gallery11';
+  var MARKET_REYON_JSON_V = '20260528caglayan-pdp-fix';
 
   function fetchMarketReyonDeptJson() {
     return fetch('/data/dept/market-reyon.json?v=' + MARKET_REYON_JSON_V, {
@@ -733,7 +934,7 @@
 
   function loadMarketReyonCatalog() {
     var grid = document.getElementById('eq-dept-plp-grid');
-    if (grid) grid.innerHTML = '<p class="eq-dept-plp-status">Katalog yükleniyor…</p>';
+    if (grid) grid.innerHTML = '<p class="eq-dept-plp-status">' + esc(__plpT('plp.loading_catalog', 'Katalog yükleniyor…')) + '</p>';
 
     var loadDept =
       window.EqMarketReyon && typeof window.EqMarketReyon.loadCatalog === 'function'
@@ -752,7 +953,7 @@
       })
       .catch(function (e) {
         showError(
-          'Servis & teşhir kataloğu yüklenemedi. npm run dev ile açın; /shop/market-reyonlari — ' +
+          __plpT('plp.market_error_dev', 'Servis & teşhir kataloğu yüklenemedi. npm run dev ile açın; /shop/market-reyonlari — ') +
             (e && e.message ? e.message : String(e))
         );
       });
@@ -765,7 +966,7 @@
     }
 
     var grid = document.getElementById('eq-dept-plp-grid');
-    if (grid) grid.innerHTML = '<p class="eq-dept-plp-status">Ürün listesi indiriliyor…</p>';
+    if (grid) grid.innerHTML = '<p class="eq-dept-plp-status">' + esc(__plpT('plp.loading_products', 'Ürün listesi indiriliyor…')) + '</p>';
 
     function parseDeptText(text) {
       return new Promise(function (resolve, reject) {
@@ -818,7 +1019,7 @@
           }
           if (grid && i < arr.length) {
             grid.innerHTML =
-              '<p class="eq-dept-plp-status">Ürünler hazırlanıyor… ' +
+              '<p class="eq-dept-plp-status">' + esc(__plpT('plp.preparing_products', 'Ürünler hazırlanıyor…')) + ' ' +
               Math.round((100 * i) / arr.length) +
               '%</p>';
             setTimeout(step, 0);
@@ -846,7 +1047,7 @@
       })
       .catch(function (e) {
         showError(
-          'Katalog yüklenemedi. npm run dev:fresh ile açın; adres: /shop/' + DEPT + ' — ' +
+          __plpT('plp.catalog_error_dev', 'Katalog yüklenemedi. npm run dev:fresh ile açın; adres: /shop/{dept} — ', { dept: DEPT }) +
             (e && e.message ? e.message : String(e))
         );
       });
@@ -882,11 +1083,14 @@
     var title = page.title || '';
     var lead = page.lead || '';
     var h1 = document.querySelector('.eq-dept-plp-title');
-    if (h1 && title) h1.textContent = title;
+    if (h1 && title && !h1.getAttribute('data-i18n')) h1.textContent = title;
     var leadEl = document.querySelector('.eq-dept-plp-lead');
-    if (leadEl && lead) leadEl.textContent = lead;
+    if (leadEl && lead && !leadEl.getAttribute('data-i18n')) leadEl.textContent = lead;
     var asideHd = document.querySelector('.eq-dept-plp-aside__hd');
-    if (asideHd && title) asideHd.textContent = title;
+    if (asideHd && title && !asideHd.getAttribute('data-i18n')) asideHd.textContent = title;
+    try {
+      if (typeof window.eqI18nApply === 'function') window.eqI18nApply(document.querySelector('.eq-dept-plp-layout') || document);
+    } catch (_) {}
   }
 
   function refreshAllPrices() {
@@ -921,16 +1125,48 @@
       });
   }
 
+  function whenI18nReady(fn) {
+    if (window.eqI18nReady && typeof window.eqI18nReady.then === 'function') {
+      return window.eqI18nReady.then(fn);
+    }
+    try {
+      if (typeof window.eqT === 'function') {
+        var probe = window.eqT('plp.add_to_cart', null);
+        if (probe && probe !== 'plp.add_to_cart') return Promise.resolve(fn());
+      }
+    } catch (_) {}
+    return new Promise(function (resolve) {
+      window.addEventListener(
+        'equsto:i18n-ready',
+        function () {
+          resolve(fn());
+        },
+        { once: true }
+      );
+    });
+  }
+
   function boot() {
-    applyPageMeta();
     bindSearch();
     bindMobileFilter();
     loadDeptCover(loadCatalog);
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', boot);
-  } else {
+  function start() {
+    applyPageMeta();
     boot();
   }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () {
+      whenI18nReady(start);
+    });
+  } else {
+    whenI18nReady(start);
+  }
+
+  document.addEventListener('equsto:i18n-ready', function () {
+    applyPageMeta();
+    if (state.ready) render();
+  });
 })();

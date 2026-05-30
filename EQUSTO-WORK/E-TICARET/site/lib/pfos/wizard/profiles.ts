@@ -102,6 +102,35 @@ export const PROFIL_BY_SLUG: Record<Konsept, PfosProfilMeta> = {
       "kuru_depo",
     ],
   },
+  italyan: {
+    konsept: "italyan",
+    konseptUst: "Restaurant",
+    dukkan: "İtalyan Restoran",
+    pfosZones: [
+      "kuru_depo",
+      "soguk_oda",
+      "derin_dondurucu",
+      "sebze_hazirlik",
+      "et_hazirlik",
+      "ana_mutfak",
+      "show_mutfagi",
+      "bar",
+      "bulasikhane",
+    ],
+  },
+  birahane: {
+    konsept: "birahane",
+    konseptUst: "Bar & Lounge",
+    dukkan: "Birahane",
+    pfosZones: [
+      "bar",
+      "soguk_oda",
+      "ana_mutfak",
+      "sebze_hazirlik",
+      "bulasikhane",
+      "kuru_depo",
+    ],
+  },
 };
 
 export function zonesForKonsept(slug: Konsept | null): string[] {

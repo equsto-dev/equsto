@@ -1,3 +1,19 @@
+/** Eski Meilisearch indeksi — Türkçe harfler silinerek üretilmiş slug. */
+export function legacyMeiliPathSlug(row: Record<string, unknown>): string {
+  function slugify(s: string) {
+    return String(s || "")
+      .toLocaleLowerCase("tr")
+      .replace(/[/\\]+/g, "-")
+      .replace(/[^a-z0-9+\-]+/g, "-")
+      .replace(/-+/g, "-")
+      .replace(/^-+|-+$/g, "")
+      .substring(0, 100);
+  }
+  const b = slugify(String(row.brand || ""));
+  const n = slugify(String(row.name || ""));
+  return (b ? `${b}-` : "") + n;
+}
+
 /** Vitrin PDP slug — katalog `id` öncelikli; yoksa marka+ad slug. */
 export function foldTr(s: string) {
   return String(s || "")
@@ -58,6 +74,9 @@ export function matchCatalogRowByPathSlug(
   }
 
   if (catalogUrlSlug(row) === ps) return true;
+
+  const legacy = legacyMeiliPathSlug(row);
+  if (legacy && legacy === ps) return true;
 
   const code = extractProductCodeTail(ps);
   if (code && id && id.endsWith("__" + code)) return true;

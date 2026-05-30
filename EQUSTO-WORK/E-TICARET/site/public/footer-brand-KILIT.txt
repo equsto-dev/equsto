@@ -1,0 +1,37 @@
+═══════════════════════════════════════════════════════════════════════════
+KİLİT — Vitrin alt bant marka şeridi (SSS + şirket satırı + tagline)
+Onay: 2026-05-30 · Ekran görüntüsü onayı
+═══════════════════════════════════════════════════════════════════════════
+
+Bu dosya, onaylı footer alt marka bölümünün bozulmaması içindir.
+Değiştirmeden önce kullanıcıdan AÇIK ONAY alın.
+
+── Beklenen görünüm (yukarıdan aşağı) ────────────────────────────────────
+  1. Yardım sütununda son link: SSS → /sss
+  2. İnce ayırıcı çizgi (eq-mfoot-brand border-top)
+  3. Şirket satırı: E Q U S T O   T E K N O L O J İ   L İ M İ T E D
+     • Harf arası 1 boşluk, kelime arası 3 boşluk (letter1-word3, white-space: pre)
+     • font-weight: 300, letter-spacing: 0, ortalı
+     • DOM: tek satır textContent — i18n ile değiştirilmez (data-i18n-skip)
+  4. Tagline: Equsto Teknolojisi · Gastronomi Tasarımı (i18n footer.tagline)
+
+YASAK (onay olmadan):
+  • Şirket satırına letter-spacing / justify ile harf aralığı vermek (boşluk karakter dışında)
+  • company_display i18n anahtarını şirket satırına bağlamak (data-i18n-skip kaldırmak)
+  • "Başa dön" / eq-mfoot-back / eq-mfoot-top geri getirmek
+  • Powered By Vitrum satırını vitrin sayfalarında göstermek (Besos hariç)
+  • eq-mfoot-brand hizalamasını sola almak
+
+── Kilitli dosyalar ───────────────────────────────────────────────────────
+  public/eq-footer.js              — COMPANY_DISPLAY_LINE, fixCompanyLine, watchCompanyLine
+  public/theme.css                 — .eq-mfoot-company letter1-word3, .eq-mfoot-brand
+  public/data/footer-vitrin.json   — companyDisplay, tagline, SSS link
+  public/i18n/tr.json + en.json    — footer.tagline (company_display yedek only)
+  lib/shop/assets.ts               — SHOP_ASSET_V
+  public/theme.js                  — enforceFooterBrandLock (runtime yedek)
+
+── Deploy / doğrulama ─────────────────────────────────────────────────────
+  npm run verify:footer-brand-kilit
+  Canlı: footer altında E Q U S T O   T E K N O L O J İ   L İ M İ T E D (harf1 kelime3)
+
+═══════════════════════════════════════════════════════════════════════════

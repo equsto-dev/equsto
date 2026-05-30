@@ -1,0 +1,1128 @@
+{
+  "slug": "nergis-fg",
+  "baslik": "NERGİS FG",
+  "tip": "model",
+  "ustSeriSlug": "nergis",
+  "kategoriler": [
+    "nergis-en"
+  ],
+  "kapak": "https:\\/\\/caglayanrefrigeration.com\\/wp-content\\/uploads\\/2023\\/03\\/Nergis-FG.-Kapak.webp",
+  "kapakYol": "gorseller/nergis-fg/Nergis-FG.-Kapak.webp",
+  "linkKaynak": "https://caglayanrefrigeration.com/tr/product/nergis-fg/",
+  "cocuklar": [],
+  "ozellikler": [
+    {
+      "baslik": "",
+      "aciklama": "Dairy Products"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Delicatessen"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Drinks"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Fruit and Vegetables"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Meat"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Chicken"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Cheese"
+    },
+    {
+      "baslik": "",
+      "aciklama": "High Efficiency Fans"
+    },
+    {
+      "baslik": "",
+      "aciklama": "LED Lighting"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Ventilated"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Remote Condensing Unit"
+    },
+    {
+      "baslik": "",
+      "aciklama": "Off Cycle Defrost"
+    }
+  ],
+  "teknik": {
+    "akordeon": [
+      {
+        "baslik": "FULGLASS LD",
+        "sekmeler": [
+          {
+            "baslik": "TEKNİK ÇİZİMLER",
+            "gorseller": [
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/12/Nergis-FG-LD-ML-Kesit-2.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-3.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-4.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-5.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-6.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-7.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-8.webp"
+            ],
+            "tablolar": []
+          },
+          {
+            "baslik": "TEKNİK DETAYLAR",
+            "gorseller": [
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-1.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/12/Nergis-FG-LD-ML-Kesit-2.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-3.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-4.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-5.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-6.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-7.webp",
+              "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-8.webp"
+            ],
+            "tablolar": []
+          }
+        ],
+        "tablolar": [
+          {
+            "basliklar": [
+              "UZUNLUK / LENGTH",
+              "YÜKSEKLİK / HEIGHT",
+              "KAPI TİPİ / DOOR TYPE",
+              "SICAKLIK SINIFI / TEMPERATURE CLASS",
+              "YÜKLEME ALANI / LOADING AREA",
+              "PANEL KALINLIĞI / END THICKNESS"
+            ],
+            "satirlar": [
+              [
+                "mm",
+                "TP TP SKY FG LD LM LD FG SKY",
+                "ML (3M1)",
+                "SL (3M2)",
+                "m²",
+                "mm"
+              ],
+              [
+                "937",
+                "2050",
+                "°C",
+                "1,91",
+                "2,38",
+                "2,66",
+                "2,94",
+                "50"
+              ],
+              [
+                "2200",
+                "-1 / +1",
+                "0 / +2",
+                "2,29",
+                "2,85",
+                "3,18",
+                "3,50"
+              ],
+              [
+                "1250",
+                "2050",
+                "2,55",
+                "3,18",
+                "3,55",
+                "3,93"
+              ],
+              [
+                "2200",
+                "3,05",
+                "3,80",
+                "4,24",
+                "4,68"
+              ],
+              [
+                "1875",
+                "2050",
+                "3,83",
+                "4,76",
+                "5,33",
+                "5,89"
+              ],
+              [
+                "2200",
+                "4,58",
+                "5,70",
+                "6,36",
+                "7,01"
+              ],
+              [
+                "2500",
+                "2050",
+                "5,10",
+                "6,35",
+                "7,10",
+                "7,85"
+              ],
+              [
+                "2200",
+                "6,10",
+                "7,60",
+                "8,48",
+                "9,35"
+              ],
+              [
+                "3125",
+                "2050",
+                "6,38",
+                "7,94",
+                "8,88",
+                "9,81"
+              ],
+              [
+                "2200",
+                "7,63",
+                "9,50",
+                "10,59",
+                "11,69"
+              ],
+              [
+                "3750",
+                "2050",
+                "7,65",
+                "9,53",
+                "10,65",
+                "11,78"
+              ],
+              [
+                "2200",
+                "9,15",
+                "11,40",
+                "12,71",
+                "14,03"
+              ],
+              [
+                "DERİNLİK / DEPTH (mm)"
+              ],
+              [
+                "712",
+                "812",
+                "912",
+                "1012"
+              ]
+            ]
+          },
+          {
+            "basliklar": [
+              "UZUNLUK / LENGTH (mm)",
+              "YÜKSEKLİK / HEIGHT (mm)",
+              "KAPI TİPİ / DOOR TYPE",
+              "SICAKLIK SINIFI / TEMPERATURE CLASS",
+              "YÜKLEME ALANI / LOADING AREA (m²)",
+              "PANEL KALINLIĞI / END THICKNESS (mm)"
+            ],
+            "satirlar": [
+              [
+                "TP TP SKY FG LD LM LD FG SKY",
+                "ML (3M1)",
+                "SL (3M2)",
+                "DERİNLİK / DEPTH (mm)"
+              ],
+              [
+                "712",
+                "812",
+                "912",
+                "1012"
+              ],
+              [
+                "937",
+                "2050",
+                "-1 / +1 °C",
+                "0 / +2 °C",
+                "1,91",
+                "2,38",
+                "2,66",
+                "2,94",
+                "50"
+              ],
+              [
+                "2200",
+                "2,29",
+                "2,85",
+                "3,18",
+                "3,50"
+              ],
+              [
+                "1250",
+                "2050",
+                "2,55",
+                "3,18",
+                "3,55",
+                "3,93"
+              ],
+              [
+                "2200",
+                "3,05",
+                "3,80",
+                "4,24",
+                "4,68"
+              ],
+              [
+                "1875",
+                "2050",
+                "3,83",
+                "4,76",
+                "5,33",
+                "5,89"
+              ],
+              [
+                "2200",
+                "4,58",
+                "5,70",
+                "6,36",
+                "7,01"
+              ],
+              [
+                "2500",
+                "2050",
+                "5,10",
+                "6,35",
+                "7,10",
+                "7,85"
+              ],
+              [
+                "2200",
+                "6,10",
+                "7,60",
+                "8,48",
+                "9,35"
+              ],
+              [
+                "3125",
+                "2050",
+                "6,38",
+                "7,94",
+                "8,88",
+                "9,81"
+              ],
+              [
+                "2200",
+                "7,63",
+                "9,50",
+                "10,59",
+                "11,69"
+              ],
+              [
+                "3750",
+                "2050",
+                "7,65",
+                "9,53",
+                "10,65",
+                "11,78"
+              ],
+              [
+                "2200",
+                "9,15",
+                "11,40",
+                "12,71",
+                "14,03"
+              ]
+            ]
+          }
+        ],
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/12/Nergis-FG-LD-ML-Kesit-2.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-3.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-4.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-5.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-6.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-7.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-8.webp"
+        ]
+      }
+    ],
+    "sekmeler": [
+      {
+        "baslik": "TEKNİK ÇİZİMLER",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/12/Nergis-FG-LD-ML-Kesit-2.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-3.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-4.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-5.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-6.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-7.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-8.webp"
+        ],
+        "tablolar": []
+      },
+      {
+        "baslik": "TEKNİK DETAYLAR",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/12/Nergis-FG-LD-ML-Kesit-2.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-3.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-4.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-5.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-6.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-7.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-8.webp"
+        ],
+        "tablolar": []
+      },
+      {
+        "baslik": "TEKNİK ÇİZİMLER",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/NERGIS-FG-HD-ML_SL-712x2050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/NERGIS-FG-HD-ML_SL-812x2050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/NERGIS-FG-HD-ML_SL-912x2050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/NERGIS-FG-HD-ML_SL-1012x2050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/NERGIS-FG-HD-ML_SL-712x2200-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/NERGIS-FG-HD-ML_SL-812x2200-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/NERGIS-FG-HD-ML_SL-912x2200-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/NERGIS-FG-HD-ML_SL-1012x2200-Model-1.webp"
+        ],
+        "tablolar": []
+      },
+      {
+        "baslik": "TEKNİK DETAYLAR",
+        "gorseller": [
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/NERGIS-FG-HD-ML_SL-712x2050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/NERGIS-FG-HD-ML_SL-812x2050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/NERGIS-FG-HD-ML_SL-912x2050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/NERGIS-FG-HD-ML_SL-1012x2050-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/NERGIS-FG-HD-ML_SL-712x2200-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/NERGIS-FG-HD-ML_SL-812x2200-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/NERGIS-FG-HD-ML_SL-912x2200-Model-1.webp",
+          "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/NERGIS-FG-HD-ML_SL-1012x2200-Model-1.webp"
+        ],
+        "tablolar": []
+      }
+    ],
+    "tablolar": [
+      {
+        "basliklar": [
+          "UZUNLUK / LENGTH",
+          "YÜKSEKLİK / HEIGHT",
+          "KAPI TİPİ / DOOR TYPE",
+          "SICAKLIK SINIFI / TEMPERATURE CLASS",
+          "YÜKLEME ALANI / LOADING AREA",
+          "PANEL KALINLIĞI / END THICKNESS"
+        ],
+        "satirlar": [
+          [
+            "mm",
+            "TP TP SKY FG LD LM LD FG SKY",
+            "ML (3M1)",
+            "SL (3M2)",
+            "m²",
+            "mm"
+          ],
+          [
+            "937",
+            "2050",
+            "°C",
+            "1,91",
+            "2,38",
+            "2,66",
+            "2,94",
+            "50"
+          ],
+          [
+            "2200",
+            "-1 / +1",
+            "0 / +2",
+            "2,29",
+            "2,85",
+            "3,18",
+            "3,50"
+          ],
+          [
+            "1250",
+            "2050",
+            "2,55",
+            "3,18",
+            "3,55",
+            "3,93"
+          ],
+          [
+            "2200",
+            "3,05",
+            "3,80",
+            "4,24",
+            "4,68"
+          ],
+          [
+            "1875",
+            "2050",
+            "3,83",
+            "4,76",
+            "5,33",
+            "5,89"
+          ],
+          [
+            "2200",
+            "4,58",
+            "5,70",
+            "6,36",
+            "7,01"
+          ],
+          [
+            "2500",
+            "2050",
+            "5,10",
+            "6,35",
+            "7,10",
+            "7,85"
+          ],
+          [
+            "2200",
+            "6,10",
+            "7,60",
+            "8,48",
+            "9,35"
+          ],
+          [
+            "3125",
+            "2050",
+            "6,38",
+            "7,94",
+            "8,88",
+            "9,81"
+          ],
+          [
+            "2200",
+            "7,63",
+            "9,50",
+            "10,59",
+            "11,69"
+          ],
+          [
+            "3750",
+            "2050",
+            "7,65",
+            "9,53",
+            "10,65",
+            "11,78"
+          ],
+          [
+            "2200",
+            "9,15",
+            "11,40",
+            "12,71",
+            "14,03"
+          ],
+          [
+            "DERİNLİK / DEPTH (mm)"
+          ],
+          [
+            "712",
+            "812",
+            "912",
+            "1012"
+          ]
+        ]
+      },
+      {
+        "basliklar": [
+          "UZUNLUK / LENGTH (mm)",
+          "YÜKSEKLİK / HEIGHT (mm)",
+          "KAPI TİPİ / DOOR TYPE",
+          "SICAKLIK SINIFI / TEMPERATURE CLASS",
+          "YÜKLEME ALANI / LOADING AREA (m²)",
+          "PANEL KALINLIĞI / END THICKNESS (mm)"
+        ],
+        "satirlar": [
+          [
+            "TP TP SKY FG LD LM LD FG SKY",
+            "ML (3M1)",
+            "SL (3M2)",
+            "DERİNLİK / DEPTH (mm)"
+          ],
+          [
+            "712",
+            "812",
+            "912",
+            "1012"
+          ],
+          [
+            "937",
+            "2050",
+            "-1 / +1 °C",
+            "0 / +2 °C",
+            "1,91",
+            "2,38",
+            "2,66",
+            "2,94",
+            "50"
+          ],
+          [
+            "2200",
+            "2,29",
+            "2,85",
+            "3,18",
+            "3,50"
+          ],
+          [
+            "1250",
+            "2050",
+            "2,55",
+            "3,18",
+            "3,55",
+            "3,93"
+          ],
+          [
+            "2200",
+            "3,05",
+            "3,80",
+            "4,24",
+            "4,68"
+          ],
+          [
+            "1875",
+            "2050",
+            "3,83",
+            "4,76",
+            "5,33",
+            "5,89"
+          ],
+          [
+            "2200",
+            "4,58",
+            "5,70",
+            "6,36",
+            "7,01"
+          ],
+          [
+            "2500",
+            "2050",
+            "5,10",
+            "6,35",
+            "7,10",
+            "7,85"
+          ],
+          [
+            "2200",
+            "6,10",
+            "7,60",
+            "8,48",
+            "9,35"
+          ],
+          [
+            "3125",
+            "2050",
+            "6,38",
+            "7,94",
+            "8,88",
+            "9,81"
+          ],
+          [
+            "2200",
+            "7,63",
+            "9,50",
+            "10,59",
+            "11,69"
+          ],
+          [
+            "3750",
+            "2050",
+            "7,65",
+            "9,53",
+            "10,65",
+            "11,78"
+          ],
+          [
+            "2200",
+            "9,15",
+            "11,40",
+            "12,71",
+            "14,03"
+          ]
+        ]
+      },
+      {
+        "basliklar": [
+          "UZUNLUK / LENGTH",
+          "YÜKSEKLİK / HEIGHT",
+          "KAPI TİPİ / DOOR TYPE",
+          "SICAKLIK SINIFI / TEMPERATURE CLASS",
+          "YÜKLEME ALANI / LOADING AREA",
+          "PANEL KALINLIĞI / END THICKNESS"
+        ],
+        "satirlar": [
+          [
+            "mm",
+            "FG HD LM HD",
+            "ML (3M1)",
+            "SL (3M2)",
+            "m²",
+            "mm"
+          ],
+          [
+            "1562",
+            "2050",
+            "°C",
+            "3,19",
+            "3,97",
+            "4,44",
+            "4,90",
+            "50"
+          ],
+          [
+            "2200",
+            "-1 / +1",
+            "0 / +2",
+            "3,81",
+            "4,75",
+            "5,30",
+            "5,84"
+          ],
+          [
+            "2343",
+            "2050",
+            "4,78",
+            "5,95",
+            "6,65",
+            "7,36"
+          ],
+          [
+            "2200",
+            "5,72",
+            "7,12",
+            "7,94",
+            "8,76"
+          ],
+          [
+            "3124",
+            "2050",
+            "6,37",
+            "7,93",
+            "8,87",
+            "9,81"
+          ],
+          [
+            "2200",
+            "7,62",
+            "9,50",
+            "10,59",
+            "11,68"
+          ],
+          [
+            "3905",
+            "2050",
+            "7,97",
+            "9,92",
+            "11,09",
+            "12,26"
+          ],
+          [
+            "2200",
+            "9,53",
+            "11,87",
+            "13,24",
+            "14,60"
+          ],
+          [
+            "DERİNLİK / DEPTH (mm)"
+          ],
+          [
+            "712",
+            "812",
+            "912",
+            "1012"
+          ]
+        ]
+      },
+      {
+        "basliklar": [
+          "UZUNLUK / LENGTH (mm)",
+          "YÜKSEKLİK / HEIGHT (mm)",
+          "KAPI TİPİ / DOOR TYPE",
+          "SICAKLIK SINIFI / TEMPERATURE CLASS",
+          "YÜKLEME ALANI / LOADING AREA (m²)",
+          "PANEL KALINLIĞI / END THICKNESS (mm)"
+        ],
+        "satirlar": [
+          [
+            "FG HD LM HD",
+            "ML (3M1)",
+            "SL (3M2)",
+            "DERİNLİK / DEPTH (mm)"
+          ],
+          [
+            "712",
+            "812",
+            "912",
+            "1012"
+          ],
+          [
+            "1562",
+            "2050",
+            "-1 / +1 °C",
+            "0 / +2 °C",
+            "3,19",
+            "3,97",
+            "4,44",
+            "4,90",
+            "50"
+          ],
+          [
+            "2200",
+            "3,81",
+            "4,75",
+            "5,30",
+            "5,84"
+          ],
+          [
+            "2343",
+            "2050",
+            "4,78",
+            "5,95",
+            "6,65",
+            "7,36"
+          ],
+          [
+            "2200",
+            "5,72",
+            "7,12",
+            "7,94",
+            "8,76"
+          ],
+          [
+            "3124",
+            "2050",
+            "6,37",
+            "7,93",
+            "8,87",
+            "9,81"
+          ],
+          [
+            "2200",
+            "7,62",
+            "9,50",
+            "10,59",
+            "11,68"
+          ],
+          [
+            "3905",
+            "2050",
+            "7,97",
+            "9,92",
+            "11,09",
+            "12,26"
+          ],
+          [
+            "2200",
+            "9,53",
+            "11,87",
+            "13,24",
+            "14,60"
+          ]
+        ]
+      }
+    ]
+  },
+  "gorseller": {
+    "tum": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/Nergis-FG.webp",
+        "dosya": "gorseller/nergis-fg/Nergis-FG.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Nergis-FG-2.webp",
+        "dosya": "gorseller/nergis-fg/Nergis-FG-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/nergis-fg-1-acik-kapakli.webp",
+        "dosya": "gorseller/nergis-fg/nergis-fg-1-acik-kapakli.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/nergis-FG-ada-1.webp",
+        "dosya": "gorseller/nergis-fg/nergis-FG-ada-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/nergis-FG-ada-2.webp",
+        "dosya": "gorseller/nergis-fg/nergis-FG-ada-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Nergis.pdf",
+        "dosya": "gorseller/nergis-fg/Nergis.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-1.webp",
+        "dosya": "gorseller/nergis-fg/Nergis-FG-LD-ML-Kesit-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/12/Nergis-FG-LD-ML-Kesit-2.webp",
+        "dosya": "gorseller/nergis-fg/Nergis-FG-LD-ML-Kesit-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-3.webp",
+        "dosya": "gorseller/nergis-fg/Nergis-FG-LD-ML-Kesit-3.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-4.webp",
+        "dosya": "gorseller/nergis-fg/Nergis-FG-LD-ML-Kesit-4.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-5.webp",
+        "dosya": "gorseller/nergis-fg/Nergis-FG-LD-ML-Kesit-5.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-6.webp",
+        "dosya": "gorseller/nergis-fg/Nergis-FG-LD-ML-Kesit-6.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-7.webp",
+        "dosya": "gorseller/nergis-fg/Nergis-FG-LD-ML-Kesit-7.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-8.webp",
+        "dosya": "gorseller/nergis-fg/Nergis-FG-LD-ML-Kesit-8.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/NERGIS-FG-HD-ML_SL-712x2050-Model-1.webp",
+        "dosya": "gorseller/nergis-fg/NERGIS-FG-HD-ML_SL-712x2050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/NERGIS-FG-HD-ML_SL-812x2050-Model-1.webp",
+        "dosya": "gorseller/nergis-fg/NERGIS-FG-HD-ML_SL-812x2050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/NERGIS-FG-HD-ML_SL-912x2050-Model-1.webp",
+        "dosya": "gorseller/nergis-fg/NERGIS-FG-HD-ML_SL-912x2050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/NERGIS-FG-HD-ML_SL-1012x2050-Model-1.webp",
+        "dosya": "gorseller/nergis-fg/NERGIS-FG-HD-ML_SL-1012x2050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/NERGIS-FG-HD-ML_SL-712x2200-Model-1.webp",
+        "dosya": "gorseller/nergis-fg/NERGIS-FG-HD-ML_SL-712x2200-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/NERGIS-FG-HD-ML_SL-812x2200-Model-1.webp",
+        "dosya": "gorseller/nergis-fg/NERGIS-FG-HD-ML_SL-812x2200-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/NERGIS-FG-HD-ML_SL-912x2200-Model-1.webp",
+        "dosya": "gorseller/nergis-fg/NERGIS-FG-HD-ML_SL-912x2200-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/NERGIS-FG-HD-ML_SL-1012x2200-Model-1.webp",
+        "dosya": "gorseller/nergis-fg/NERGIS-FG-HD-ML_SL-1012x2200-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/circle-bg.webp",
+        "dosya": "gorseller/nergis-fg/circle-bg.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/fresh-fruits.webp",
+        "dosya": "gorseller/nergis-fg/fresh-fruits.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Aynali-Yan-Panel-1.webp",
+        "dosya": "gorseller/nergis-fg/Lotus-Aynali-Yan-Panel-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Aynali-Yan-Panel-2.webp",
+        "dosya": "gorseller/nergis-fg/Lotus-Aynali-Yan-Panel-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Et-Aski-Demiri.webp",
+        "dosya": "gorseller/nergis-fg/Lotus-Et-Aski-Demiri.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Kancali-Raf-Sistemi.webp",
+        "dosya": "gorseller/nergis-fg/Lotus-Kancali-Raf-Sistemi.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Panoramik-Yan-Panel.webp",
+        "dosya": "gorseller/nergis-fg/Lotus-Panoramik-Yan-Panel.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Panoramik-Yan-Panel-1.webp",
+        "dosya": "gorseller/nergis-fg/Lotus-Panoramik-Yan-Panel-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Plexi-Urun-Tutucu.webp",
+        "dosya": "gorseller/nergis-fg/Lotus-Plexi-Urun-Tutucu.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Raf-Alti-Aydinlatma.webp",
+        "dosya": "gorseller/nergis-fg/Lotus-Raf-Alti-Aydinlatma.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Tel-Sepet.webp",
+        "dosya": "gorseller/nergis-fg/Lotus-Tel-Sepet.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Tel-Taban.webp",
+        "dosya": "gorseller/nergis-fg/Lotus-Tel-Taban.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Urun-Bolucu.webp",
+        "dosya": "gorseller/nergis-fg/Lotus-Urun-Bolucu.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/nergis-fg/pdf-icon.webp"
+      }
+    ],
+    "urun": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/Nergis-FG.webp",
+        "dosya": "gorseller/nergis-fg/Nergis-FG.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/Nergis.pdf",
+        "dosya": "gorseller/nergis-fg/Nergis.pdf"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/02/circle-bg.webp",
+        "dosya": "gorseller/nergis-fg/circle-bg.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/fresh-fruits.webp",
+        "dosya": "gorseller/nergis-fg/fresh-fruits.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Aynali-Yan-Panel-1.webp",
+        "dosya": "gorseller/nergis-fg/Lotus-Aynali-Yan-Panel-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Aynali-Yan-Panel-2.webp",
+        "dosya": "gorseller/nergis-fg/Lotus-Aynali-Yan-Panel-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Et-Aski-Demiri.webp",
+        "dosya": "gorseller/nergis-fg/Lotus-Et-Aski-Demiri.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Kancali-Raf-Sistemi.webp",
+        "dosya": "gorseller/nergis-fg/Lotus-Kancali-Raf-Sistemi.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Panoramik-Yan-Panel.webp",
+        "dosya": "gorseller/nergis-fg/Lotus-Panoramik-Yan-Panel.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Panoramik-Yan-Panel-1.webp",
+        "dosya": "gorseller/nergis-fg/Lotus-Panoramik-Yan-Panel-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Plexi-Urun-Tutucu.webp",
+        "dosya": "gorseller/nergis-fg/Lotus-Plexi-Urun-Tutucu.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Raf-Alti-Aydinlatma.webp",
+        "dosya": "gorseller/nergis-fg/Lotus-Raf-Alti-Aydinlatma.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Tel-Sepet.webp",
+        "dosya": "gorseller/nergis-fg/Lotus-Tel-Sepet.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Tel-Taban.webp",
+        "dosya": "gorseller/nergis-fg/Lotus-Tel-Taban.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/Lotus-Urun-Bolucu.webp",
+        "dosya": "gorseller/nergis-fg/Lotus-Urun-Bolucu.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/05/pdf-icon.webp",
+        "dosya": "gorseller/nergis-fg/pdf-icon.webp"
+      }
+    ],
+    "teknikCizim": [
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/07/Nergis-FG-2.webp",
+        "dosya": "gorseller/nergis-fg/Nergis-FG-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/nergis-fg-1-acik-kapakli.webp",
+        "dosya": "gorseller/nergis-fg/nergis-fg-1-acik-kapakli.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/nergis-FG-ada-1.webp",
+        "dosya": "gorseller/nergis-fg/nergis-FG-ada-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/nergis-FG-ada-2.webp",
+        "dosya": "gorseller/nergis-fg/nergis-FG-ada-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-1.webp",
+        "dosya": "gorseller/nergis-fg/Nergis-FG-LD-ML-Kesit-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/12/Nergis-FG-LD-ML-Kesit-2.webp",
+        "dosya": "gorseller/nergis-fg/Nergis-FG-LD-ML-Kesit-2.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-3.webp",
+        "dosya": "gorseller/nergis-fg/Nergis-FG-LD-ML-Kesit-3.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-4.webp",
+        "dosya": "gorseller/nergis-fg/Nergis-FG-LD-ML-Kesit-4.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-5.webp",
+        "dosya": "gorseller/nergis-fg/Nergis-FG-LD-ML-Kesit-5.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-6.webp",
+        "dosya": "gorseller/nergis-fg/Nergis-FG-LD-ML-Kesit-6.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-7.webp",
+        "dosya": "gorseller/nergis-fg/Nergis-FG-LD-ML-Kesit-7.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/03/Nergis-FG-LD-ML-Kesit-8.webp",
+        "dosya": "gorseller/nergis-fg/Nergis-FG-LD-ML-Kesit-8.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/NERGIS-FG-HD-ML_SL-712x2050-Model-1.webp",
+        "dosya": "gorseller/nergis-fg/NERGIS-FG-HD-ML_SL-712x2050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/NERGIS-FG-HD-ML_SL-812x2050-Model-1.webp",
+        "dosya": "gorseller/nergis-fg/NERGIS-FG-HD-ML_SL-812x2050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/NERGIS-FG-HD-ML_SL-912x2050-Model-1.webp",
+        "dosya": "gorseller/nergis-fg/NERGIS-FG-HD-ML_SL-912x2050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/NERGIS-FG-HD-ML_SL-1012x2050-Model-1.webp",
+        "dosya": "gorseller/nergis-fg/NERGIS-FG-HD-ML_SL-1012x2050-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/NERGIS-FG-HD-ML_SL-712x2200-Model-1.webp",
+        "dosya": "gorseller/nergis-fg/NERGIS-FG-HD-ML_SL-712x2200-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/NERGIS-FG-HD-ML_SL-812x2200-Model-1.webp",
+        "dosya": "gorseller/nergis-fg/NERGIS-FG-HD-ML_SL-812x2200-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/NERGIS-FG-HD-ML_SL-912x2200-Model-1.webp",
+        "dosya": "gorseller/nergis-fg/NERGIS-FG-HD-ML_SL-912x2200-Model-1.webp"
+      },
+      {
+        "url": "https://caglayanrefrigeration.com/wp-content/uploads/2023/09/NERGIS-FG-HD-ML_SL-1012x2200-Model-1.webp",
+        "dosya": "gorseller/nergis-fg/NERGIS-FG-HD-ML_SL-1012x2200-Model-1.webp"
+      }
+    ]
+  }
+}
