@@ -74,8 +74,9 @@ export const PFOS_KATEGORI_TANIMLARI: PfosKategoriTanim[] = [
     id: "pizzaci",
     label: "Pizzacı",
     ustKategori: "Restaurant",
-    planNot: "proje-veri/pizzaci-200-500-m2.xlsx (2025-116 Avcılar)",
+    planNot: "proje-veri/pizzaci-80-200m2.xlsx · pizzaci-200-500-m2.xlsx",
     bantlar: [
+      { id: "80-200", label: "80–200 m²", referansM2: 140 },
       { id: "200-500", label: "200–500 m²", referansM2: 350 },
     ],
   },

@@ -6,6 +6,7 @@
 
 /** m² bantı veya alt tip listesi (ör. mahalle balıkçı) */
 export type ListeBantId =
+  | "80-200"
   | "80-150"
   | "150-250"
   | "mahalle"
@@ -224,17 +225,18 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
     id: "pizzaci",
     name: "Pizzacı",
     parent: "Restoran",
-    desc: "Pizza odaklı · 200–500 m² referans (2025-116 Avcılar) · motor: pizzaci",
+    desc: "Pizza odaklı · 80–500 m² (80–200 / 200–500 bant) · motor: pizzaci",
     pfos: {
       motorSlug: "pizzaci",
       dukkanSecim: "Pizzacı",
-      m2Min: 200,
+      m2Min: 80,
       m2Max: 500,
-      bantKurali: "Tek referans liste (200–500 m²); m² ile adet ölçeklenir",
-      listeYolu: "proje-veri/pizzaci-200-500-m2.xlsx",
+      bantKurali: "≤200 m² → 80–200 liste; >200 m² → 200–500 liste",
+      listeYolu: "proje-veri/pizzaci-80-200m2.xlsx",
       teklifKaynagi: "pfos-referans",
       durum: "aktif",
       bantlar: [
+        liste("80-200", "80–200 m²", 140, "pizzaci"),
         liste("200-500", "200–500 m²", 350, "pizzaci"),
       ],
     },
