@@ -1,0 +1,188 @@
+{
+  "kategoriId": "hamburger-kiosk",
+  "bantId": "60-100",
+  "label": "Hamburger Kiosk 60–150 m²",
+  "referansM2": 80,
+  "kaynakDosya": "8 HAMBURGER-60-150 m2 - Kopya.xlsx",
+  "yukleme": "2026-05-30T23:15:16.339Z",
+  "kalemSayisi": 22,
+  "toplamAdet": 31,
+  "kalemler": [
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A1",
+      "ad": "TEK EVİYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "190*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A2",
+      "ad": "BULAŞIK YIKAMA MAKİNASI",
+      "olcu": "500 tb/saat",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A3",
+      "ad": "ÇALIŞMA TEZGAHI - DOLAPLI , ARA RAFLI",
+      "olcu": "190*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A4",
+      "ad": "ÇALIŞMA TEZGAHI - DOLAPLI - ARA RAFLI",
+      "olcu": "190*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A5",
+      "ad": "CAM KAPILI TEZGAH TİPİ SOĞUK DOLAP, 2 KAPILI",
+      "olcu": "143*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A6",
+      "ad": "ÇALIŞMA TEZGAHI",
+      "olcu": "190*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A7",
+      "ad": "SET ALTI DEEP FREEZE",
+      "olcu": "60*60*5",
+      "adet": 2
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A8",
+      "ad": "ÇALIŞMA TEZGAHI - DOLAPLI , ARA RAFLI",
+      "olcu": "190*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A9",
+      "ad": "ÇALIŞMA TEZGAHI -DOLAPLI , ARA RAFLI",
+      "olcu": "170*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A10",
+      "ad": "2 AÇIK ALEVLİ OCAK, SETÜSTÜ",
+      "olcu": "40*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A11",
+      "ad": "FRİTÖZ, TEK SEPETLİ, ELK. SETÜSTÜ",
+      "olcu": "80*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A12",
+      "ad": "PATATES DİNLENDİRME, ELK. SETÜSTÜ",
+      "olcu": "40*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A13",
+      "ad": "OLUKLU IZGARA, GAZLI, MARENO",
+      "olcu": "80*70*30",
+      "adet": 2
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A14",
+      "ad": "YARI OLUKLU IZGARA, GAZL",
+      "olcu": "80*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A15",
+      "ad": "SETALTI BUZDOLABI, 4 KAPILI",
+      "olcu": "233*70*56",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A16",
+      "ad": "DAVLUMBAZ, ORTA TİP, FİLTRELİ",
+      "olcu": "300*130*50",
+      "adet": 1
+    },
+    {
+      "bolum": "",
+      "bolumAd": "",
+      "poz": "A17",
+      "ad": "YER IZGARASI",
+      "olcu": "30*30*14",
+      "adet": 2
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- KURU DEPO",
+      "poz": "B1",
+      "ad": "İSTİF RAFI",
+      "olcu": "137*53*183",
+      "adet": 3
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SOĞUK ODA",
+      "poz": "C1",
+      "ad": "PANEL TİP SOĞUK ODA",
+      "olcu": "150*200*240",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SOĞUK ODA",
+      "poz": "B1",
+      "ad": "İSTİF RAFI",
+      "olcu": "137*53*183",
+      "adet": 3
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D- DERİN DONDURUCU ODA",
+      "poz": "D1",
+      "ad": "PANEL TİP SOĞUK ODA",
+      "olcu": "150*200*240",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D- DERİN DONDURUCU ODA",
+      "poz": "B1",
+      "ad": "İSTİF RAFI",
+      "olcu": "137*53*183",
+      "adet": 3
+    }
+  ]
+}

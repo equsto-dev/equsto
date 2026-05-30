@@ -184,6 +184,18 @@ export const PROFIL_BY_SLUG: Record<Konsept, PfosProfilMeta> = {
       "bulasikhane",
     ],
   },
+  "hamburger-kiosk": {
+    konsept: "hamburger-kiosk",
+    konseptUst: "Fast Food / QSR",
+    dukkan: "Hamburger Kiosk",
+    pfosZones: [
+      "ana_mutfak",
+      "soguk_oda",
+      "derin_dondurucu",
+      "kuru_depo",
+      "bulasikhane",
+    ],
+  },
 };
 
 export function zonesForKonsept(slug: Konsept | null): string[] {

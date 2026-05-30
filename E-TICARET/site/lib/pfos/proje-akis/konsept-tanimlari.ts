@@ -17,7 +17,8 @@ export type ListeBantId =
   | "200-500"
   | "300-500"
   | "40-100"
-  | "kiosk";
+  | "kiosk"
+  | "60-100";
 
 export type M2BantTanim = {
   id: ListeBantId;
@@ -400,6 +401,24 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
       bantlar: [
         liste("100-200", "100–200 m²", 150, "pastane"),
       ],
+    },
+    questions: [],
+  },
+  {
+    id: "ff_hamburger_kiosk",
+    name: "Hamburger Kiosk",
+    parent: "Fast Food / QSR",
+    desc: "Hamburger kiosk · 60–100 m² referans · motor: hamburger-kiosk",
+    pfos: {
+      motorSlug: "hamburger-kiosk",
+      dukkanSecim: "Hamburger Kiosk",
+      m2Min: 60,
+      m2Max: 100,
+      bantKurali: "Tek referans liste (60–100 m²); m² ile adet ölçeklenir",
+      listeYolu: "proje-veri/8 HAMBURGER-60-150 m2 - Kopya.xlsx",
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
+      bantlar: [liste("60-100", "60–100 m²", 80, "hamburger-kiosk")],
     },
     questions: [],
   },

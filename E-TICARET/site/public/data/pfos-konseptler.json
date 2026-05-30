@@ -54,6 +54,12 @@
       "label": "Şarküteri Kiosk",
       "kalemSayisi": 23,
       "not": "Kiosk referans (7 ŞARKÜTERİ)"
+    },
+    {
+      "slug": "hamburger-kiosk",
+      "label": "Hamburger Kiosk",
+      "kalemSayisi": 24,
+      "not": "60–100 m² kiosk (8 HAMBURGER)"
     }
   ]
 }

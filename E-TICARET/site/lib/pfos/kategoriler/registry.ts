@@ -85,6 +85,13 @@ export const PFOS_KATEGORI_TANIMLARI: PfosKategoriTanim[] = [
     bantlar: [{ id: "kiosk", label: "Kiosk referans", referansM2: 45 }],
   },
   {
+    id: "hamburger-kiosk",
+    label: "Hamburger Kiosk",
+    ustKategori: "Fast Food / QSR",
+    planNot: "proje-veri/8 HAMBURGER-60-150 m2 - Kopya.xlsx",
+    bantlar: [{ id: "60-100", label: "60–100 m²", referansM2: 80 }],
+  },
+  {
     id: "pizzaci",
     label: "Pizzacı",
     ustKategori: "Restaurant",
