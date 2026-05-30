@@ -93,6 +93,7 @@
       label: "Soğutma Ekipmanları",
       href: "sogutma.html",
       subs: [
+        /* KİLİT: buzdolap-nav-KILIT.txt — alt flyout yok; buzdolab|buzdolap araması */
         { label: "Buzdolapları", labelKey: "nav.sub.buzdolaplari", search: "buzdolab|buzdolap" },
         { label: "Buz Makineleri", labelKey: "nav.sub.buz_makineleri" },
         { label: "Derin Dondurucular", labelKey: "nav.sub.derin_dondurucular" },

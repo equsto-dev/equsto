@@ -38,6 +38,7 @@
     "verify:topnav-kilit": "node scripts/verify-topnav-kilit.mjs",
     "verify:prod-card-ambient-kilit": "node scripts/verify-prod-card-ambient-kilit.mjs",
     "verify:footer-brand-kilit": "node scripts/verify-footer-brand-kilit.mjs",
+    "verify:buzdolap-nav-kilit": "node scripts/verify-buzdolap-nav-kilit.mjs",
     "sitemap:build": "node scripts/build-sitemap.mjs",
     "i18n:build": "node scripts/build-i18n-en.mjs && node scripts/build-pfos-labels-en.mjs",
     "i18n:check": "node scripts/check-i18n-parity.mjs",
