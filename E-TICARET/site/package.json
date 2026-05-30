@@ -22,6 +22,7 @@
     "catalog:atalay:merge": "node scripts/merge-atalay-dept-catalog.mjs",
     "catalog:atalay:full": "npm run catalog:atalay:pdf",
     "catalog:atalay:strip": "node scripts/strip-dept-to-atalay-only.mjs",
+    "catalog:atalay:fix-izgara": "node scripts/fix-pisirme-izgara-categories.mjs",
     "catalog:atalay:ekipmanlar": "node scripts/rebuild-ekipmanlar-from-dept.mjs",
     "catalog:atalay:purge": "npm run catalog:atalay:strip && npm run catalog:atalay:ekipmanlar && node scripts/clear-index-urunler-embed.mjs && node scripts/sync-atalay-catalog-to-legacy-public.mjs",
     "catalog:atalay:only": "npm run catalog:atalay:purge && npm run search:index",

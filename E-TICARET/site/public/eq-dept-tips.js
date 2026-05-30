@@ -794,7 +794,21 @@
       .trim();
     var idx = labelIndex[dept];
     if (idx && idx[lk]) return idx[lk];
+    if (lk.indexOf("tost") >= 0 || /\batm[\s-]?\d/.test(lk)) return "tost-makineleri";
+    if (lk.indexOf("döner") >= 0 || lk.indexOf("doner") >= 0) return "doner-ocaklari-";
+    if (
+      lk.indexOf("taşıma") >= 0 ||
+      lk.indexOf("tasima") >= 0 ||
+      lk.indexOf("tepsi taşı") >= 0 ||
+      lk.indexOf("banket") >= 0 ||
+      /\badta\b/.test(lk) ||
+      (/\bata\b/.test(lk) && lk.indexOf("izgara") < 0)
+    )
+      return lk.indexOf("banket") >= 0 || lk.indexOf("kumpir") >= 0
+        ? "banket-arabalari"
+        : "taban-raflari";
     if (lk.indexOf("ızgara") >= 0 || lk.indexOf("izgara") >= 0) {
+      if (/istif\s*raf|izgara\s*tabl|4\s*izgara\s*tabl/.test(lk)) return "taban-raflari";
       if (lk.indexOf("ocakbaşı") >= 0 || lk.indexOf("ocakbasi") >= 0) return "ocakbasi-izgara";
       if (lk.indexOf("lavta") >= 0) return "lavtasli_izgara";
       if (lk.indexOf("char") >= 0) return "char_izgara";
@@ -804,8 +818,6 @@
     if (lk.indexOf("ocak") >= 0 && lk.indexOf("döner") < 0 && lk.indexOf("doner") < 0) return "sanayi-ocaklari";
     if (lk.indexOf("fritöz") >= 0 || lk.indexOf("fritoz") >= 0) return "fritozler";
     if (lk.indexOf("kuzine") >= 0) return "kuzineler";
-    if (lk.indexOf("döner") >= 0 || lk.indexOf("doner") >= 0) return "doner-ocaklari-";
-    if (lk.indexOf("tost") >= 0) return "tost-makineleri";
     if (lk.indexOf("piliç") >= 0 || lk.indexOf("pilic") >= 0) return "pilic-cevirme-makineleri";
     if (lk.indexOf("buzdolab") >= 0 && lk.indexOf("tezgah") >= 0) return "tezgah-tipi-buzdolabi";
     if (lk.indexOf("bulaşık") >= 0 || lk.indexOf("bulasik") >= 0) return "bulasik-makineleri";
