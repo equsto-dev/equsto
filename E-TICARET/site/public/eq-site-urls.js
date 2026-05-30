@@ -170,6 +170,7 @@
     window.location.href = window.equstoUrl(key);
   };
   /** Arama sonuç sayfası — TR /arama, EN /en/search */
+  /** KİLİT: public/arama-history-KILIT.txt — eqNavigateArama / geri tuşu */
   window.eqAramaUrl = function (q) {
     q = String(q || "").trim();
     if (!q) return "";

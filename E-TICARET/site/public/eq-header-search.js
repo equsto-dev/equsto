@@ -296,6 +296,7 @@
   }
 
   function commitSearch(q) {
+    /* KİLİT: arama-history-KILIT.txt — eqNavigateArama, aynı URL'de history trap yok */
     q = trimQ(q);
     if (!q) return;
     hidePanel();

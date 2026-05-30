@@ -1,0 +1,33 @@
+═══════════════════════════════════════════════════════════════════════════
+KİLİT — /arama tarayıcı geri tuşu + arama geçmişi (history trap)
+Onay: 2026-05-30 · Commit referans: c9d821b
+═══════════════════════════════════════════════════════════════════════════
+
+Bu dosya, arama sayfasında tarayıcı «Geri» tuşunun aynı URL'de takılmasını
+önleyen davranışın bozulmaması içindir. Değiştirmeden önce AÇIK ONAY alın.
+
+── Beklenen davranış ─────────────────────────────────────────────────────
+1. Aynı sorgu tekrar gönderilirse (Enter / arama butonu) yeni history
+   kaydı OLUŞTURULMAZ — kullanıcı Geri ile önceki sayfaya dönebilir.
+2. Zaten /arama veya /en/search sayfasındayken yeni sorgu → pushState +
+   __eqAramaBoot (tam sayfa yenileme yok).
+3. Başka sayfadan arama → tek location.href geçişi.
+4. popstate → __eqAramaBoot; arama dışına çıkınca lastBootQ sıfırlanır.
+
+YASAK (onay olmadan):
+  • commitSearch / commitGlobalSearch içinde koşulsuz location.href = aramaUrl
+  • Aynı ?q= için history şişiren navigate
+  • eqNavigateArama kaldırmak veya bypass etmek
+  • popstate dinleyicisini kaldırmak
+
+── Kilitli dosyalar ───────────────────────────────────────────────────────
+  public/eq-site-urls.js       — eqNavigateArama, eqIsAramaPathname
+  public/eq-header-search.js   — commitSearch → eqNavigateArama
+  public/theme.js              — commitGlobalSearch, searchFilter
+  public/eq-arama-page.js      — popstate + lastBootQ reset
+
+── Deploy / doğrulama ─────────────────────────────────────────────────────
+  npm run verify:arama-kilit
+  Canlı: /arama?q=… → Geri → önceki sayfa (aynı aramada takılma yok)
+
+═══════════════════════════════════════════════════════════════════════════
