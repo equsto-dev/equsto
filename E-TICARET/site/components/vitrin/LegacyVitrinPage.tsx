@@ -43,7 +43,11 @@ export default function LegacyVitrinPage({
       w.eqI18nReady.then(applyLegacyVitrinI18n);
     }
     window.addEventListener("equsto:i18n-ready", applyLegacyVitrinI18n);
-    return () => window.removeEventListener("equsto:i18n-ready", applyLegacyVitrinI18n);
+    window.addEventListener("eq-pfos-i18n-ready", applyLegacyVitrinI18n);
+    return () => {
+      window.removeEventListener("equsto:i18n-ready", applyLegacyVitrinI18n);
+      window.removeEventListener("eq-pfos-i18n-ready", applyLegacyVitrinI18n);
+    };
   }, [bodyHtml]);
 
   return (

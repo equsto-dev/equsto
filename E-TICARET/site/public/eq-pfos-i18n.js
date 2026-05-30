@@ -5,17 +5,28 @@
   "use strict";
 
   var LABELS = null;
+  var labelsReady = false;
   var loadPromise = null;
   var applyTimer = null;
   var observer = null;
+  var booted = false;
+
+  function isEnPfos() {
+    if (window.eqLang === "en") return true;
+    try {
+      return /^\/en(\/|$)/i.test(String(location.pathname || ""));
+    } catch (_) {
+      return false;
+    }
+  }
 
   function labelsUrl() {
-    var v = window.__EQ_I18N_JSON_V || window.__EQ_PFOS_LABELS_V || "20260530pfos-i18n";
+    var v = window.__EQ_I18N_JSON_V || window.__EQ_PFOS_LABELS_V || "20260530pfos-i18n-v2";
     return "/i18n/pfos-labels-en.json?v=" + encodeURIComponent(v);
   }
 
   function loadLabels() {
-    if (LABELS) return Promise.resolve(LABELS);
+    if (labelsReady && LABELS) return Promise.resolve(LABELS);
     if (loadPromise) return loadPromise;
     loadPromise = fetch(labelsUrl(), { credentials: "same-origin", cache: "no-store" })
       .then(function (r) {
@@ -23,17 +34,20 @@
       })
       .then(function (j) {
         LABELS = (j && j.labels) || {};
+        labelsReady = Object.keys(LABELS).length > 0;
         return LABELS;
       })
       .catch(function () {
-        LABELS = {};
+        LABELS = LABELS || {};
+        labelsReady = false;
+        loadPromise = null;
         return LABELS;
       });
     return loadPromise;
   }
 
   function pfosLabel(tr) {
-    if (window.eqLang !== "en") return tr;
+    if (!isEnPfos()) return tr;
     var s = String(tr == null ? "" : tr).trim();
     if (!s) return s;
     if (LABELS && LABELS[s]) return LABELS[s];
@@ -45,7 +59,7 @@
   }
 
   function translateQuestion(q) {
-    if (!q || window.eqLang !== "en") return q;
+    if (!q || !isEnPfos()) return q;
     var out = Object.assign({}, q);
     if (out.text) out.text = pfosLabel(out.text);
     if (out.note) out.note = pfosLabel(out.note);
@@ -53,7 +67,7 @@
   }
 
   function translateSchema(data) {
-    if (!data || window.eqLang !== "en") return data;
+    if (!data || !isEnPfos()) return data;
     if (Array.isArray(data.questions)) {
       data.questions = data.questions.map(translateQuestion);
     }
@@ -61,7 +75,7 @@
   }
 
   function walkText(root) {
-    if (!root || window.eqLang !== "en") return;
+    if (!root || !isEnPfos()) return;
     var skip = { SCRIPT: 1, STYLE: 1, NOSCRIPT: 1 };
     var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null);
     var node;
@@ -91,10 +105,10 @@
   }
 
   function applyPfosI18n() {
-    if (window.eqLang !== "en") return;
+    if (!isEnPfos()) return;
     var root =
-      document.querySelector(".eq-pfos") ||
       document.getElementById("eq-legacy-vitrin-root") ||
+      document.querySelector(".eq-pfos") ||
       document.body;
     walkText(root);
   }
@@ -103,12 +117,16 @@
     if (applyTimer) clearTimeout(applyTimer);
     applyTimer = setTimeout(function () {
       applyTimer = null;
+      if (!labelsReady) {
+        loadLabels().then(applyPfosI18n);
+        return;
+      }
       applyPfosI18n();
     }, 80);
   }
 
   function hookFetch() {
-    if (window.__eqPfosFetchHooked || window.eqLang !== "en") return;
+    if (window.__eqPfosFetchHooked || !isEnPfos()) return;
     window.__eqPfosFetchHooked = true;
     var orig = window.fetch;
     window.fetch = function (input, init) {
@@ -129,17 +147,21 @@
 
   function observeRoot() {
     if (observer) return;
-    var root = document.querySelector(".eq-pfos") || document.body;
+    var root =
+      document.getElementById("eq-legacy-vitrin-root") ||
+      document.querySelector(".eq-pfos") ||
+      document.body;
     observer = new MutationObserver(scheduleApply);
     observer.observe(root, { childList: true, subtree: true, characterData: false });
   }
 
   function boot() {
-    if (window.eqLang !== "en") return;
+    if (!isEnPfos()) return;
     loadLabels().then(function () {
       hookFetch();
       applyPfosI18n();
       observeRoot();
+      booted = true;
       try {
         window.dispatchEvent(new CustomEvent("eq-pfos-i18n-ready"));
       } catch (_) {}
@@ -147,14 +169,24 @@
   }
 
   window.eqPfosLabel = pfosLabel;
-  window.eqPfosI18nApply = applyPfosI18n;
+  window.eqPfosI18nApply = function () {
+    if (!labelsReady) {
+      boot();
+      return;
+    }
+    applyPfosI18n();
+  };
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", boot);
   } else {
     boot();
   }
-  document.addEventListener("equsto:i18n-ready", boot);
-  document.addEventListener("eq-lang-change", boot);
+  window.addEventListener("equsto:i18n-ready", boot);
+  window.addEventListener("eq-lang-change", boot);
   window.addEventListener("load", scheduleApply, { once: true });
+
+  if (window.eqI18nReady && typeof window.eqI18nReady.then === "function") {
+    window.eqI18nReady.then(boot);
+  }
 })();
