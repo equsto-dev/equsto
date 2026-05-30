@@ -480,18 +480,23 @@ body.eq-shop .eq-product-specs .eq-specs-cols pre {
 .eq-mbg-track::-webkit-scrollbar {
   display: none;
 }
-.eq-mbg-card {
-  flex: 0 0 175px;
-  max-width: 175px;
+.eq-mbg-card,
+.eq-mbg-plp-card {
+  flex: 0 0 200px;
+  max-width: 200px;
   display: flex;
   flex-direction: column;
   background: var(--eq-surface);
   text-decoration: none;
   color: inherit;
   scroll-snap-align: start;
-  padding: 6px;
+  padding: 8px;
   border-radius: 6px;
+  border: 1px solid var(--eq-border);
   transition: background 0.15s ease;
+}
+.eq-mbg-plp-card {
+  text-decoration: none;
 }
 .eq-mbg-card:hover {
   background: var(--eq-surface-2);
@@ -587,6 +592,100 @@ body.eq-shop .eq-product-specs .eq-specs-cols pre {
   width: 18px;
   height: 18px;
   display: block;
+}
+
+.eq-mbg-complementary .eq-mbg-head {
+  justify-content: flex-start;
+}
+.eq-mbg-plp-card__img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  margin-bottom: 8px;
+  text-decoration: none;
+  color: inherit;
+}
+.eq-mbg-plp-card__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.eq-mbg-plp-card__name {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--eq-text);
+  text-decoration: none;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 48px;
+  margin-bottom: 4px;
+}
+.eq-mbg-plp-card__name:hover {
+  color: var(--eq-accent, #c7511f);
+}
+.eq-mbg-stars {
+  font-size: 13px;
+  line-height: 1;
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+}
+.eq-mbg-stars-on {
+  color: #e77600;
+}
+.eq-mbg-stars-off {
+  color: #d5d9d9;
+}
+.eq-mbg-plp-card__price {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--eq-text);
+  margin-bottom: 8px;
+}
+.eq-mbg-plp-card__btn {
+  width: 100%;
+  margin-top: auto;
+  padding: 8px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: 1px solid var(--eq-border);
+  border-radius: 4px;
+  background: var(--eq-surface);
+  color: var(--eq-text);
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+.eq-mbg-plp-card__btn:hover {
+  background: var(--eq-surface-2);
+  border-color: var(--eq-text-muted);
+}
+.eq-mbg-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 0 2px;
+}
+.eq-mbg-dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: #d5d9d9;
+  cursor: pointer;
+}
+.eq-mbg-dot.is-active {
+  background: var(--eq-text);
 }
 
 /* ===== E-PDP (eq-product-page-inline.js — tüm ürün detayları) ===== */
@@ -852,24 +951,22 @@ body.eq-shop .eq-product-specs .eq-specs-cols pre {
   background: var(--eq-cmf-brand-hover, #002a6b);
 }
 
-/* Amazon «Add to Cart» — buybox Sepete Ekle (theme.css .eq-cart-add override) */
+/* Sepete Ekle — Electrolux mavisi (theme.css .eq-cart-add override) */
 body.eq-shop .eq-cmf-buybox .eq-cmf-btn.eq-cmf-btn--cart,
 body.eq-shop .eq-cmf-buybox button.eq-cart-add.eq-cmf-btn--cart {
-  background: linear-gradient(180deg, #f7dfa5 0%, #f0c14b 100%) !important;
-  color: #111 !important;
-  border: 1px solid #a88734 !important;
-  border-radius: 8px;
-  box-shadow:
-    inset 0 1px 0 #fcf4dd,
-    0 1px 0 rgba(0, 0, 0, 0.06) !important;
+  background: var(--eq-cmf-brand, #001e50) !important;
+  color: #fff !important;
+  border: 1px solid var(--eq-cmf-brand, #001e50) !important;
+  border-radius: 4px;
+  box-shadow: none !important;
   font-weight: 600;
   filter: none !important;
 }
 
 body.eq-shop .eq-cmf-buybox .eq-cmf-btn.eq-cmf-btn--cart:hover,
 body.eq-shop .eq-cmf-buybox button.eq-cart-add.eq-cmf-btn--cart:hover {
-  background: linear-gradient(180deg, #f5d78e 0%, #eeb933 100%) !important;
-  color: #111 !important;
+  background: var(--eq-cmf-brand-hover, #002a6b) !important;
+  color: #fff !important;
   filter: none !important;
 }
 

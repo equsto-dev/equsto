@@ -1,6 +1,6 @@
 ═══════════════════════════════════════════════════════════════════════════
 KİLİT — PDP buybox (Cafemarkt tarzı satın alma alanı)
-Onay: 2026-05-30 · Referans: cafemarkt.com ürün detay satın alma şeridi
+Onay: 2026-05-27 · Referans: cafemarkt.com ürün detay satın alma şeridi
 ═══════════════════════════════════════════════════════════════════════════
 
 Bu dosya, onaylı PDP buybox düzeninin bozulmaması içindir.
@@ -10,13 +10,13 @@ Değiştirmeden önce kullanıcıdan AÇIK ONAY alın.
 1. Üst rozet: «Ücretsiz Kargo» (.eq-cmf-badge-ship)
 2. Tek fiyat: turuncu «323.785,00 TL» + «KDV dahil» (.eq-cmf-price__amount)
 3. Yeşil teslimat şeridi (.eq-cmf-ship-banner)
-4. Satın alma satırı (.eq-cmf-purchase): adet stepper + turuncu «Sepete Ekle»
-5. İki düğme (.eq-cmf-actions--solid):
-   • Proje Fabrikası — Electrolux mavisi (.eq-cmf-btn--pfos, #001e50)
-   • Sepete Ekle — Amazon sarı (.eq-cmf-btn--cart)
-6. Alt çerçeveli düğmeler (.eq-cmf-actions--outline):
-   • Whatsapp ile Soru Sor (.eq-cmf-btn--wa) → Mr. Equsto kedi modalı (equstoOpenWhatsAppWebWindow)
-   • Ödeme Seçenekleri (.eq-cmf-btn--pay → .eq-cmf-pay-panel)
+4. Satın alma satırı (.eq-cmf-purchase): yalnızca adet stepper
+5. Üst 2×2 satır (.eq-cmf-actions--primary):
+   • Sol: Sepete Ekle — Electrolux mavisi (.eq-cmf-btn--cart, #001e50)
+   • Sağ: Ödeme Seçenekleri (.eq-cmf-btn--pay → .eq-cmf-pay-panel)
+6. Alt 2×2 satır (.eq-cmf-actions--secondary):
+   • Sol: Proje Fabrikası — Electrolux mavisi (.eq-cmf-btn--pfos, #001e50)
+   • Sağ: Whatsapp ile Soru Sor (.eq-cmf-btn--wa) → Mr. Equsto kedi modalı (equstoOpenWhatsAppWebWindow)
 
 YASAK (onay olmadan):
   • KDV hariç ikinci fiyat satırı eklemek

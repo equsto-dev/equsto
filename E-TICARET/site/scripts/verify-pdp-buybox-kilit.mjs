@@ -26,7 +26,7 @@ function mustExist(rel) {
 mustExist("public/pdp-buybox-cafemarkt-KILIT.txt");
 
 const kilit = read("public/pdp-buybox-cafemarkt-KILIT.txt");
-if (!kilit.includes("2026-05-30") || !kilit.includes("eq-cmf-buybox")) {
+if (!kilit.includes("2026-05-27") || !kilit.includes("eq-cmf-buybox")) {
   fail("pdp-buybox-cafemarkt-KILIT.txt: onay tarihi / buybox referansı yok");
 }
 
@@ -52,8 +52,11 @@ if (!/eq-cmf-btn--cart/.test(inline)) {
 if (!/eq-cmf-btn--pfos/.test(inline)) {
   fail("eq-product-page-inline.js: Proje Fabrikası düğmesi yok");
 }
-if (!/eq-cmf-btn--cart/.test(inline)) {
-  fail("eq-product-page-inline.js: Sepete Ekle (Amazon) düğmesi yok");
+if (!/eq-cmf-actions--primary/.test(inline)) {
+  fail("eq-product-page-inline.js: üst düğme satırı (--primary) yok");
+}
+if (!/eq-cmf-actions--secondary/.test(inline)) {
+  fail("eq-product-page-inline.js: alt düğme satırı (--secondary) yok");
 }
 if (!/eq-cmf-btn--pay/.test(inline)) {
   fail("eq-product-page-inline.js: Ödeme Seçenekleri düğmesi yok");
@@ -69,7 +72,15 @@ const css = read("public/eq-product-page.css");
 if (!css.includes(".eq-cmf-buybox")) fail("eq-product-page.css: .eq-cmf-buybox yok");
 if (!css.includes(".eq-cmf-purchase")) fail("eq-product-page.css: .eq-cmf-purchase yok");
 if (!css.includes(".eq-cmf-btn--cart")) fail("eq-product-page.css: .eq-cmf-btn--cart yok");
-if (!css.includes(".eq-cmf-btn--cart")) fail("eq-product-page.css: .eq-cmf-btn--cart yok");
+if (!css.includes("--eq-cmf-brand")) {
+  fail("eq-product-page.css: Sepete Ekle Electrolux mavisi (--eq-cmf-brand) yok");
+}
+const cartBlock = css.match(
+  /body\.eq-shop \.eq-cmf-buybox[\s\S]*?\.eq-cmf-btn--cart[\s\S]*?(?=\n\.eq-cmf|\nbody\.eq-shop|\n\/\*|$)/,
+);
+if (cartBlock && /f7dfa5|f0c14b/.test(cartBlock[0])) {
+  fail("eq-product-page.css: buybox .eq-cmf-btn--cart Amazon sarı — KİLİT ihlali");
+}
 if (!css.includes(".eq-cmf-pay-panel")) fail("eq-product-page.css: .eq-cmf-pay-panel yok");
 
 const cart = read("public/ecom-cart.js");

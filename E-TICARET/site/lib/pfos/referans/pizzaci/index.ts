@@ -21,4 +21,4 @@ export async function buildPizzaciReferansTemplate(
     items: referansKalemlerToTemplateItems(ref.kalemler),
   };
 }
-
+

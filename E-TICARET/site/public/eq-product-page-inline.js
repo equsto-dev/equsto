@@ -1007,6 +1007,102 @@ window.searchFilter = window.searchFilter || function () {};
       return out;
     }
 
+    var COMPLEMENT_CATEGORY_SLUGS = {
+      "yardimci-ekipmanlar": true,
+      "mutfak-aksesuar": true,
+      "bar-aksesuarlari": true,
+      "bar-aksesuarlari-tepsiler": true,
+      "bain-marie-celik-saklama-kaplari": true,
+      "kombi-konveksiyonlu-firin-aksesuarlar": true,
+      "kombi-konveksiyonlu-f-rin-aksesuarlar": true,
+      "cay-servis-aksesuarlari": true,
+      "gastronom-kuvetler": true,
+      kuvet: true,
+    };
+
+    function isComplementProduct(p, x) {
+      if (!p || !x) return false;
+      var curBrand = String(x.brand || "").trim();
+      var pBrand = String(p.brand || "").trim();
+      var curCat = String(x.category || "");
+      var pCat = String(p.category || "");
+      if (curBrand && pBrand === curBrand && pCat && pCat !== curCat) return true;
+      if (pCat && COMPLEMENT_CATEGORY_SLUGS[pCat]) return true;
+      var hay = (String(p.name || "") + " " + pCat).toLocaleLowerCase("tr");
+      return /kartuş|kartus|filtre|aksesuar|yedek|kapak|conta|adaptör|adaptor|servis\s*tepsi|küvet|kuvet/i.test(
+        hay,
+      );
+    }
+
+    /** Aynı marka aksesuar / tamamlayıcı; yoksa aynı kategoride geniş liste. */
+    function pickComplementaryProducts(x, all, keyFn, excludeKeys, max) {
+      if (!x || !all || !all.length) return [];
+      if (isMarketReyonProduct(x)) return pickRelatedExtras(x, all, keyFn, excludeKeys, max);
+      if (!keyFn) return [];
+      var curKey = keyFn({ c: x.category || "", b: x.brand || "", n: x.name || "" });
+      var primary = [];
+      var fallback = [];
+      var seen = Object.create(null);
+      for (var i = 0; i < all.length; i++) {
+        var p = all[i];
+        if (!p) continue;
+        var k = keyFn({ c: p.category || "", b: p.brand || "", n: p.name || "" });
+        if (!k || k === curKey || seen[k]) continue;
+        if (excludeKeys && excludeKeys[k]) continue;
+        seen[k] = 1;
+        if (isComplementProduct(p, x)) primary.push(p);
+        else fallback.push(p);
+      }
+      primary.sort(function (a, b) {
+        return String(a.name || "").localeCompare(String(b.name || ""), "tr", { sensitivity: "base" });
+      });
+      fallback.sort(function (a, b) {
+        return String(a.name || "").localeCompare(String(b.name || ""), "tr", { sensitivity: "base" });
+      });
+      var out = primary.concat(fallback);
+      if (out.length < 4) {
+        var extra = pickRelatedExtras(x, all, keyFn, excludeKeys, max);
+        for (var ei = 0; ei < extra.length && out.length < (max || 24); ei++) {
+          var ek = keyFn({ c: extra[ei].category || "", b: extra[ei].brand || "", n: extra[ei].name || "" });
+          if (ek && !seen[ek]) {
+            out.push(extra[ei]);
+            seen[ek] = 1;
+          }
+        }
+      }
+      return out.slice(0, max || 24);
+    }
+
+    function pdpThumbSrcUrl(p) {
+      var rel = "";
+      if (p && p.images && p.images.length) {
+        if (isCaglayanRefrigeration(p)) {
+          for (var ti = 0; ti < p.images.length; ti++) {
+            if (isCaglayanPdpThumbImg(p.images[ti])) {
+              rel = p.images[ti];
+              break;
+            }
+          }
+        } else {
+          rel = p.images[0];
+        }
+      }
+      if (!rel && p) rel = oztiWebRelFromSku(p.sku || p.urun_kodu || p.model) || "";
+      var src = rel ? resolveProductImgSrc(rel) : thumbSrc(p);
+      return src ? eqHtmlUrl(src) : "";
+    }
+
+    function pdpCartRowFromProduct(p) {
+      return {
+        n: p.name || "",
+        b: p.brand || "",
+        c: p.category || "",
+        p: p.price || "",
+        img: pdpThumbSrcUrl(p),
+        raw: p,
+      };
+    }
+
     /** Specs metninden "Bu ürün hakkında" bullet üretici: ilk N anlamlı satır. */
     function buildAboutBullets(specs, max) {
       var s = String(specs || "");
@@ -1207,43 +1303,73 @@ window.searchFilter = window.searchFilter || function () {};
     }
 
     function renderRelatedStrip(x, all, keyFn, excludeKeys) {
-      var items = pickRelatedExtras(x, all, keyFn, excludeKeys, 24);
+      var items = pickComplementaryProducts(x, all, keyFn, excludeKeys, 24);
       if (!items.length) return "";
+      var addLbl = __pdpT("plp.add_to_cart", "SEPETE EKLE");
       var cells = items
         .map(function (p) {
           var k = keyFn({ c: p.category || "", b: p.brand || "", n: p.name || "" });
           var img = renderPdpThumbImg(p);
-          var lbl = esc(shortModelLabel(p));
-          var brand = esc(p.brand || "");
+          var lbl = esc((p.name || "").trim());
           var price = esc(formatPdpPriceDisplay(p.price, p));
           var pHref = productSlugEq(p)
             ? eqPathForProductObj(p) || "/urun/" + productSlugEq(p)
             : "product.html?p=" + esc(encodeURIComponent(k));
+          var cartRow = pdpCartRowFromProduct(p);
+          var cartBtn =
+            window.EqustoCart && typeof window.EqustoCart.cartAddButtonAttrs === "function"
+              ? '<button class="eq-mbg-plp-card__btn" ' +
+                window.EqustoCart.cartAddButtonAttrs(cartRow) +
+                ">" +
+                esc(addLbl) +
+                "</button>"
+              : "";
           return (
-            '<a class="eq-mbg-card" href="' + esc(eqHtmlUrl(pHref)) + '">' +
-            '<div class="eq-mbg-thumb">' + img + "</div>" +
-            (brand ? '<div class="eq-mbg-brand">' + brand + "</div>" : "") +
-            '<div class="eq-mbg-name">' + lbl + "</div>" +
-            (price ? '<div class="eq-mbg-price">' + price + "</div>" : "") +
-            "</a>"
+            '<article class="eq-mbg-plp-card">' +
+            '<a class="eq-mbg-plp-card__img" href="' +
+            esc(eqHtmlUrl(pHref)) +
+            '">' +
+            img +
+            "</a>" +
+            '<a class="eq-mbg-plp-card__name" href="' +
+            esc(eqHtmlUrl(pHref)) +
+            '">' +
+            lbl +
+            "</a>" +
+            '<div class="eq-mbg-stars" aria-hidden="true"><span class="eq-mbg-stars-on">★★★★</span><span class="eq-mbg-stars-off">☆</span></div>' +
+            (price ? '<div class="eq-mbg-plp-card__price">' + price + "</div>" : "") +
+            cartBtn +
+            "</article>"
           );
         })
         .join("");
       return (
-        '<section class="eq-mbg-related" aria-label="' + esc(__pdpT("pdp.mbg_related_aria", "Bu ürünleri de görüntüleyenler")) + '">' +
+        '<section class="eq-mbg-related eq-mbg-complementary" aria-label="' +
+        esc(__pdpT("pdp.mbg_complementary_aria", "Tamamlayıcı ürünler")) +
+        '">' +
         '<div class="eq-mbg-head">' +
-          '<h2 class="eq-mbg-title">' + esc(__pdpT("pdp.mbg_related_title", "Müşteriler bu ürünleri de görüntüledi")) + '</h2>' +
-          '<span class="eq-mbg-page" id="eq-mbg-page">' + esc(__pdpT("pdp.mbg_page", "Sayfa {page} / {total}", { page: 1, total: 1 })) + '</span>' +
-        '</div>' +
+        '<h2 class="eq-mbg-title">' +
+        esc(__pdpT("pdp.mbg_complementary_title", "Tamamlayıcı Ürünler")) +
+        "</h2>" +
+        "</div>" +
         '<div class="eq-mbg-wrap">' +
-          '<button type="button" class="eq-mbg-arrow eq-mbg-prev" aria-label="' + esc(__pdpT("pdp.mbg_prev", "Önceki")) + '" onclick="eqMbgScroll(-1)">' +
-            '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
-          '</button>' +
-          '<button type="button" class="eq-mbg-arrow eq-mbg-next" aria-label="' + esc(__pdpT("pdp.mbg_next", "Sonraki")) + '" onclick="eqMbgScroll(1)">' +
-            '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
-          '</button>' +
-          '<div class="eq-mbg-track" id="eq-mbg-track">' + cells + '</div>' +
-        '</div>' +
+        '<button type="button" class="eq-mbg-arrow eq-mbg-prev" aria-label="' +
+        esc(__pdpT("pdp.mbg_prev", "Önceki")) +
+        '" onclick="eqMbgScroll(-1)">' +
+        '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+        "</button>" +
+        '<button type="button" class="eq-mbg-arrow eq-mbg-next" aria-label="' +
+        esc(__pdpT("pdp.mbg_next", "Sonraki")) +
+        '" onclick="eqMbgScroll(1)">' +
+        '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+        "</button>" +
+        '<div class="eq-mbg-track" id="eq-mbg-track">' +
+        cells +
+        "</div>" +
+        "</div>" +
+        '<div class="eq-mbg-dots" id="eq-mbg-dots" role="tablist" aria-label="' +
+        esc(__pdpT("pdp.mbg_dots_aria", "Sayfa")) +
+        '"></div>' +
         "</section>"
       );
     }
@@ -1256,12 +1382,35 @@ window.searchFilter = window.searchFilter || function () {};
     }
     function eqMbgUpdatePage() {
       var tr = document.getElementById("eq-mbg-track");
-      var ind = document.getElementById("eq-mbg-page");
+      var dotsHost = document.getElementById("eq-mbg-dots");
       if (!tr) return;
       var w = Math.max(1, tr.clientWidth);
       var totalPages = Math.max(1, Math.ceil(tr.scrollWidth / w));
       var page = Math.min(totalPages, Math.floor(tr.scrollLeft / w) + 1);
-      if (ind) ind.textContent = __pdpT("pdp.mbg_page", "Sayfa {page} / {total}", { page: page, total: totalPages });
+      if (dotsHost) {
+        var dots = "";
+        for (var di = 1; di <= totalPages; di++) {
+          dots +=
+            '<button type="button" class="eq-mbg-dot' +
+            (di === page ? " is-active" : "") +
+            '" data-page="' +
+            di +
+            '" role="tab" aria-selected="' +
+            (di === page ? "true" : "false") +
+            '" aria-label="' +
+            esc(__pdpT("pdp.mbg_page_dot", "Sayfa {page}", { page: di })) +
+            '"></button>';
+        }
+        dotsHost.innerHTML = dots;
+        dotsHost.querySelectorAll(".eq-mbg-dot").forEach(function (btn) {
+          if (btn.__eqMbgDotBound) return;
+          btn.__eqMbgDotBound = true;
+          btn.addEventListener("click", function () {
+            var pg = Number(btn.getAttribute("data-page")) || 1;
+            tr.scrollTo({ left: (pg - 1) * w, behavior: "smooth" });
+          });
+        });
+      }
       var prev = document.querySelector(".eq-mbg-prev");
       var next = document.querySelector(".eq-mbg-next");
       if (prev) prev.disabled = tr.scrollLeft <= 2;
@@ -1280,6 +1429,11 @@ window.searchFilter = window.searchFilter || function () {};
       });
       window.addEventListener("resize", eqMbgUpdatePage);
       eqMbgUpdatePage();
+      try {
+        if (window.EqustoProductTint && typeof window.EqustoProductTint.refreshPlp === "function") {
+          window.EqustoProductTint.refreshPlp(tr.parentElement || tr);
+        }
+      } catch (_) {}
     }
 
     function familyRailSlotWidth() {
@@ -1605,15 +1759,20 @@ window.searchFilter = window.searchFilter || function () {};
         '">+</button>' +
         "</div>" +
         "</div>" +
-        '<div class="eq-cmf-actions eq-cmf-actions--solid">' +
+        '<div class="eq-cmf-actions eq-cmf-actions--primary">' +
+        cartBtnSolid +
+        '<button type="button" class="eq-cmf-btn-outline eq-cmf-btn--pay">' +
+        '<span class="eq-cmf-btn-outline__icon" aria-hidden="true">' +
+        '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>' +
+        "</span>" +
+        esc(__pdpT("pdp.payment_options", "Ödeme Seçenekleri")) +
+        "</button></div>" +
+        '<div class="eq-cmf-actions eq-cmf-actions--secondary">' +
         '<a class="eq-cmf-btn eq-cmf-btn--pfos" href="' +
         esc(pfosHref) +
         '">' +
         esc(__pdpT("nav.pfos", "Proje Fabrikası")) +
         "</a>" +
-        cartBtnSolid +
-        "</div>" +
-        '<div class="eq-cmf-actions eq-cmf-actions--outline">' +
         '<button type="button" class="eq-cmf-btn-outline eq-cmf-btn--wa" data-eq-wa-msg="' +
         esc(waMsg) +
         '">' +
@@ -1621,12 +1780,6 @@ window.searchFilter = window.searchFilter || function () {};
         '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492l4.587-1.452A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.378l-.357-.212-3.064.972.998-2.988-.233-.375A9.818 9.818 0 0 1 2.182 12c0-5.422 4.396-9.818 9.818-9.818S21.818 6.578 21.818 12 17.422 21.818 12 21.818z"/></svg>' +
         "</span>" +
         esc(__pdpT("pdp.whatsapp_ask", "Whatsapp ile Soru Sor")) +
-        "</button>" +
-        '<button type="button" class="eq-cmf-btn-outline eq-cmf-btn--pay">' +
-        '<span class="eq-cmf-btn-outline__icon" aria-hidden="true">' +
-        '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>' +
-        "</span>" +
-        esc(__pdpT("pdp.payment_options", "Ödeme Seçenekleri")) +
         "</button></div>" +
         '<div class="eq-cmf-pay-panel" hidden>' +
         "<ul>" +

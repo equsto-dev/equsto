@@ -19,4 +19,4 @@ export async function buildPastaneTemplate(m2: number): Promise<ConceptTemplate>
     items: referansKalemlerToTemplateItems(ref.kalemler),
   };
 }
-
+

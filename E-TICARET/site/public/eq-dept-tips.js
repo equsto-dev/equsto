@@ -354,6 +354,72 @@
     return /yer\s*ızgar|yer\s*izgar/i.test(name);
   }
 
+  function productModelCode(u) {
+    var raw = (u && u.raw) || u || {};
+    return String(raw.model || raw.sku || u.model || u.sku || "")
+      .toUpperCase()
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  /** Atalay gerçek ızgara modelleri (AEI, AGI, ALI …). */
+  function isAtalayGrillModelCode(model) {
+    if (!model) return false;
+    return /^(E\s+)?(AEI|AGI|AGL|AEGL|AEGI|AAIE|AAIG|ALI|ALIG|AAI[^MTKSB])([\s\-/]|$)/i.test(model);
+  }
+
+  /** PDF/Seri 600 — yanlış sanayi-tipi-izgaralar eşlemesini engelle. */
+  function atalayPisirmeTipFromModel(u) {
+    var m = productModelCode(u);
+    if (!m) return "";
+    if (/^ATKM[\s\-]?/.test(m)) return "cay-makineleri";
+    if (/^ATM[\s\-]?/.test(m)) return "tost-makineleri";
+    if (/^ADR-C/.test(m)) return "adr-seri-doner-robotu";
+    if (/^ADG|^ADE|^ADGC/.test(m)) return "doner-ocaklari-";
+    if (/^ATA[\s\-]|^ADTA/.test(m)) return "taban-raflari";
+    if (/^AKF|^ABA/.test(m)) return "banket-arabalari";
+    if (/^APFM|^ABS\s/.test(m)) return "firinlar";
+    if (/^AST[\s\-]|^E\s+AST/.test(m)) return "dolaplar-ve-taban-raflari-ara-tezgahlar";
+    if (/^AAT[\s\-]|^E\s+AAT/.test(m)) return "dolaplar-ve-taban-raflari-ara-tezgahlar";
+    if (/^AYOG|^AGO[\s\-]|^E\s+AGO|^AEO[\s\-]|^E\s+AEO|^AYOE/.test(m)) return "ocaklar";
+    if (/^AMPG[\s\-]|^E\s+AMP|^AMP[\s\-]/.test(m)) return "makarna-hafllamalar";
+    if (/^AEF[\s\-]|^E\s+AEF/.test(m)) return "fritozler";
+    if (/^APD[\s\-]|^E\s+APD/.test(m)) return "patates-dinlendirme";
+    if (/^APF[\s\-]/.test(m)) return "pizza-firinlari";
+    if (/^APMG|^APME/.test(m)) return "pilic-cevirme-makineleri";
+    if (/^AWMC|^AWM[\s\-]/.test(m)) return "waffle-krep-makineleri";
+    if (/^ADTG|^ADTE[\s\-]/.test(m)) return "devrilir-tava";
+    if (/^ADTS|^ADSA|^ADSK|^ADKM|^AKC[\s\-]|^AKA[\s\-]/.test(m)) return "yardimci-ekipmanlar";
+    if (/^AKTE|^AKTG|^AKIE|^AKEK|^AYEK[\s\-]/.test(m)) return "kaynatma-tenceresi";
+    if (/^AKE[\s\-]/.test(m)) return "dolaplar-ve-taban-raflari-ara-tezgahlar";
+    if (/^ATN[\s\-]|^ATI[\s\-]|^ATIA|^ASA[\s\-]/.test(m)) return "taban-raflari";
+    if (/^ACIE/.test(m)) return "ocakbasi-izgara";
+    if (/^GN[\s\-/]|^E\s+GN/.test(m)) return "benmariler";
+    if (/^ASBM|^ASSB|^ASB|^E\s+ASB/.test(m)) return "benmariler";
+    if (/^ASM[\s\-]/.test(m)) return "benmariler";
+    return "";
+  }
+
+  function isExcludedFromSanayiIzgaraTile(u) {
+    var alt = atalayPisirmeTipFromModel(u);
+    if (alt && alt !== "sanayi-tipi-izgaralar") return true;
+    var hay = productHaystack(u);
+    if (/tost\s*mak|\batm[\s\-]?\d|çay\s*mak|cay\s*mak|türk\s*kahve|turk\s*kahve/i.test(hay)) return true;
+    if (/döner\s*mak|doner\s*mak|döner\s*kalıp|doner\s*kalip/i.test(hay)) return true;
+    if (/tepsi\s*taşı|tepsi\s*tasi|taşıma\s*arab|tasima\s*arab|istif\s*raf/i.test(hay)) return true;
+    if (/banket|kumpir\s*fır|kumpir\s*fir/i.test(hay)) return true;
+    if (/makarna\s*piş|makarna\s*pis|ara\s*tezgah|nötr\s*ara|notr\s*ara/i.test(hay)) return true;
+    if (/waffle|krep\s*mak|benmari|bain\s*marie|pizza\s*fır|pizza\s*fir/i.test(hay)) return true;
+    if (/devrilir\s*tava|kaynatma\s*tencere|piliç\s*çevir|pilic\s*cevir/i.test(hay)) return true;
+    if (/servis\s*arab|ısıtmalı\s*tabak|isitmali\s*tabak|tabak\s*lıft|tabak\s*lift/i.test(hay)) return true;
+    var cat = productCategorySlug(u);
+    var model = productModelCode(u);
+    if (cat === "sanayi-tipi-izgaralar" && model && !isAtalayGrillModelCode(model)) return true;
+    if (cat === "ocaklar" && model && !/^AYOG|^AGO|^AEO|^AYOE|^E AGO|^E AEO|^AIO|^ACAG|^AMAY/i.test(model))
+      return true;
+    return false;
+  }
+
   /** Döküm/servis tava & tepsi — fırın kapasitesi (N tepsi 600×400) hariç. */
   function isMutfakTavaServisTepsi(u) {
     var name = productName(u);
@@ -670,6 +736,13 @@
     if (!tile) return false;
     var cat = productCategorySlug(u);
 
+    if (
+      (tile.id === "sanayi-tipi-izgaralar" || tile.slug === "sanayi-tipi-izgaralar") &&
+      isExcludedFromSanayiIzgaraTile(u)
+    ) {
+      return false;
+    }
+
     if (tile.id === "bain-marie-kap") {
       return isOztiBainMarieKapRow(u);
     }
@@ -795,12 +868,22 @@
     var idx = labelIndex[dept];
     if (idx && idx[lk]) return idx[lk];
     if (lk.indexOf("tost") >= 0 || /\batm[\s-]?\d/.test(lk)) return "tost-makineleri";
-    if (/\batkm|türk\s*kahve|turk\s*kahve|otomatik\s*kahve/.test(lk)) return "cay-makineleri";
-    if (lk.indexOf("döner robot") >= 0 || lk.indexOf("doner robot") >= 0 || /\badr[\s-]/.test(lk))
-      return "adr-seri-doner-robotu";
+    if (/\batkm[\s-]?\d/.test(lk) || (lk.indexOf("çay") >= 0 && lk.indexOf("mak") >= 0)) return "cay-makineleri";
     if (lk.indexOf("döner") >= 0 || lk.indexOf("doner") >= 0) return "doner-ocaklari-";
-    if (/\bago[\s-]|\bayog[\s-]|yer\s*ocağı|yer\s*ocagi/.test(lk)) return "ocaklar";
-    if (/\bast[\s-]/.test(lk) && lk.indexOf("izgara") < 0) return "dolaplar-ve-taban-raflari-ara-tezgahlar";
+    if (/\badr-c\d/.test(lk)) return "adr-seri-doner-robotu";
+    if (/\bast[\s-]?\d/.test(lk) && lk.indexOf("izgara") < 0) return "dolaplar-ve-taban-raflari-ara-tezgahlar";
+    if ((/\bayog|\bago[\s-]?\d|\baeo[\s-]/).test(lk) && lk.indexOf("izgara") < 0) return "ocaklar";
+    if (/\bamp[\s-]?\d|makarna\s*piş|makarna\s*pis/.test(lk)) return "makarna-hafllamalar";
+    if (/\baat[\s-]?\d|ara\s*tezgah/.test(lk)) return "dolaplar-ve-taban-raflari-ara-tezgahlar";
+    if (/\bgn\s+\d|\bgn\s*1\//.test(lk)) return "benmariler";
+    if (/\bapf[\s\-]|pizza\s*fır|pizza\s*fir/.test(lk)) return "pizza-firinlari";
+    if (/\bawmc|waffle|krep\s*mak/.test(lk)) return "waffle-krep-makineleri";
+    if (/\badtg|\badte[\s\-]|devrilir\s*tava/.test(lk)) return "devrilir-tava";
+    if (/\bakte|kaynatma\s*tencere/.test(lk)) return "kaynatma-tenceresi";
+    if (/\bapmg|piliç\s*çevir|pilic\s*cevir/.test(lk)) return "pilic-cevirme-makineleri";
+    if (/\batn[\s\-]|\bati[\s\-]|ısıtmalı|isitmali|servis\s*arab/.test(lk)) return "taban-raflari";
+    if (/\badsa|\badsk|\bakc[\s\-]|yardımcı|yardimci/.test(lk)) return "yardimci-ekipmanlar";
+    if (/benmari|bain\s*marie/.test(lk)) return "benmariler";
     if (
       lk.indexOf("taşıma") >= 0 ||
       lk.indexOf("tasima") >= 0 ||
@@ -817,6 +900,7 @@
       if (lk.indexOf("ocakbaşı") >= 0 || lk.indexOf("ocakbasi") >= 0) return "ocakbasi-izgara";
       if (lk.indexOf("lavta") >= 0) return "lavtasli_izgara";
       if (lk.indexOf("char") >= 0) return "char_izgara";
+      if (!/\b(aei|agi|ali|aaie|aaig|agl|aegl)\b/.test(lk)) return "";
       return "sanayi-tipi-izgaralar";
     }
     if (lk.indexOf("fırın") >= 0 || lk.indexOf("firin") >= 0) return "firinlar";
