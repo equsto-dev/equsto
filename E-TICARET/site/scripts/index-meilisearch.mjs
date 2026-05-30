@@ -88,6 +88,21 @@ function isIzgaraAccessory(name, category) {
   return false;
 }
 
+function isKuzineWithFirin(name, category) {
+  const n = foldTr(name || "");
+  const cat = foldTr(category || "");
+  if (
+    /gazli-firinli-kuzine|gazli-firinli-kuziler|elektrikli-kuzine|900-seri-kuzine|gazli-firinli-ve-setustu-gazli-ocak/.test(
+      cat,
+    )
+  ) {
+    return true;
+  }
+  if (/kuzine firinli|firinli kuzine|firinli gazli|buyuk firinli/.test(n)) return true;
+  if (/kuzine/.test(n) && /firinli/.test(n)) return true;
+  return false;
+}
+
 /** lib/category-search-hints.ts ile senkron — dept geneli ipucu yok. */
 function categorySearchHints(dept, category, name) {
   const hints = [];
@@ -101,12 +116,15 @@ function categorySearchHints(dept, category, name) {
     hints.push("izgara", "izgaralar");
   }
   if (
-    /firin|kombi|konveksiyon|bakertop|cheftop|pizza-firin/.test(cat) ||
-    /firin|kombi firin|konveksiyon/.test(n)
+    (/firin|kombi|konveksiyon|bakertop|cheftop|pizza-firin/.test(cat) ||
+      /firin|kombi firin|konveksiyon/.test(n)) &&
+    !isKuzineWithFirin(name, category)
   ) {
     hints.push("firin", "konveksiyonlu", "kombi");
   }
-  if (/ocak|kuzin/.test(cat) || /ocak|kuzin/.test(n)) hints.push("ocak", "kuzine");
+  if (/ocak|kuzin|gazli-firinli-kuzine|900-seri-kuzine/.test(cat) || /ocak|kuzine/.test(n)) {
+    hints.push("ocak", "kuzine");
+  }
   if (/fritoz/.test(cat) || /fritoz/.test(n)) hints.push("fritoz");
   if (/buzdolab|sogutma|derin-dondur|sok-dondur/.test(cat)) hints.push("buzdolabi", "sogutma");
   if (/kahve|espresso|cay|barista/.test(cat)) hints.push("kahve", "espresso", "cay");
