@@ -11,6 +11,7 @@ import {
 } from "@/lib/meilisearch";
 import { canonicalizeSearchHits } from "@/lib/canonicalize-search-hits";
 import { meiliSearchQuery } from "@/lib/search-query";
+import { rankSearchHitsByRelevance } from "@/lib/rank-search-hits";
 
 export const runtime = "nodejs";
 
@@ -126,6 +127,7 @@ export async function GET(req: NextRequest) {
     }
 
     hits = await canonicalizeSearchHits(hits);
+    hits = rankSearchHitsByRelevance(q, hits);
 
     return searchResponse({
       query: q,

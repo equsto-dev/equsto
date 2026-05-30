@@ -79,24 +79,35 @@ function firstImage(row) {
   return String(imgs[0]).replace(/\\/g, "/");
 }
 
-const DEPT_SEARCH_HINTS = {
-  kahve: "espresso wmf cay makinasi kahve makinesi barista",
-  sogutma: "buzdolabi sogutma dolabi derin dondurucu",
-  dolap: "buzdolabi dolap sogutma",
-  pisirme: "ocak izgara firin fritoz konveksiyon",
-  yikama: "bulasik makinesi bulaşık",
-  hazirlik: "mikser blender dograma",
-  icecek: "sogutucu meyve sikacagi",
-  "set-ustu-mutfak": "gastronorm tencere servis",
-};
 
-function searchHints(dept, category) {
-  const hints = [dept, category];
-  const d = String(dept || "").toLowerCase();
-  if (DEPT_SEARCH_HINTS[d]) hints.push(DEPT_SEARCH_HINTS[d]);
-  if (/buzdolab/i.test(category)) hints.push("buzdolabi sogutma");
-  if (/kahve|cay/i.test(category)) hints.push("kahve wmf espresso cay");
-  return hints.filter(Boolean).join(" ");
+/** lib/category-search-hints.ts ile senkron — dept geneli ipucu yok. */
+function categorySearchHints(dept, category, name) {
+  const hints = [];
+  const cat = foldTr(category);
+  const n = foldTr(name || "");
+
+  if (/izgar|salamander|charbroil|char-broil/.test(cat) || /izgar|salamander/.test(n)) {
+    hints.push("izgara", "izgaralar");
+  }
+  if (
+    /firin|kombi|konveksiyon|bakertop|cheftop|pizza-firin/.test(cat) ||
+    /firin|kombi firin|konveksiyon/.test(n)
+  ) {
+    hints.push("firin", "konveksiyonlu", "kombi");
+  }
+  if (/ocak|kuzin/.test(cat) || /ocak|kuzin/.test(n)) hints.push("ocak", "kuzine");
+  if (/fritoz/.test(cat) || /fritoz/.test(n)) hints.push("fritoz");
+  if (/buzdolab|sogutma|derin-dondur|sok-dondur/.test(cat)) hints.push("buzdolabi", "sogutma");
+  if (/kahve|espresso|cay|barista/.test(cat)) hints.push("kahve", "espresso", "cay");
+  if (/bulasik|yikama/.test(cat)) hints.push("bulasik", "yikama");
+  if (/blender|mikser|dograma/.test(cat) || /blender|mikser/.test(n)) {
+    hints.push("blender", "mikser");
+  }
+  return [...new Set(hints)].filter(Boolean).join(" ");
+}
+
+function searchHints(dept, category, name) {
+  return categorySearchHints(dept, category, name);
 }
 
 function rowToDoc(row, deptFallback) {
@@ -123,7 +134,7 @@ function rowToDoc(row, deptFallback) {
     iskonto_oran: Number(row.iskonto_oran) || null,
     image: firstImage(row),
     url: `/shop/${dept}/${slug}`,
-    search_hints: searchHints(dept, category),
+    search_hints: searchHints(dept, category, name),
     specs: [
       String(row.specs || ""),
       Array.isArray(row.keywords) ? row.keywords.join(" ") : "",
@@ -197,24 +208,33 @@ async function main() {
   await index.updateSettings({
     searchableAttributes: [
       "name",
-      "brand",
       "category",
-      "dept",
-      "search_hints",
+      "brand",
       "model",
       "sku",
-      "specs",
+      "search_hints",
+      "dept",
     ],
+    rankingRules: ["words", "typo", "proximity", "attribute", "sort", "exactness"],
+    typoTolerance: {
+      minWordSizeForTypos: {
+        oneTypo: 6,
+        twoTypos: 10,
+      },
+    },
     synonyms: {
       esp: ["wmf", "kahve", "espresso", "cay"],
       espresso: ["wmf", "kahve", "kahve makinesi"],
       buzdolab: ["buzdolabi"],
       buzdolap: ["buzdolabi"],
       ozti: ["oztiryakiler"],
-      izgara: ["izgaralar", "ızgara", "gazli", "elektrikli", "salamander", "yer izgarasi"],
-      izgaralar: ["izgara", "ızgara", "gazli izgara"],
-      ızgara: ["izgara", "izgaralar"],
-      salamander: ["izgara", "izgaralar"],
+      izgara: ["izgaralar", "ızgara"],
+      izgaralar: ["izgara", "ızgara"],
+      "ızgara": ["izgara", "izgaralar"],
+      firin: ["firinlar", "konveksiyonlu"],
+      firinlar: ["firin", "konveksiyonlu"],
+      kombi: ["konveksiyonlu", "firin"],
+      konveksiyon: ["konveksiyonlu", "firin"],
     },
     displayedAttributes: [
       "id",

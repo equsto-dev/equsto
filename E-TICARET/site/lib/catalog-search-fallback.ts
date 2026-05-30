@@ -5,6 +5,7 @@ import {
 import { loadEkipmanlarJson } from "@/lib/catalog-json";
 import { deptSearchHints, expandSearchQueries } from "@/lib/search-synonyms";
 import { foldTr, splitQueryOrBranches } from "@/lib/search-query";
+import { rankSearchHitsByRelevance } from "@/lib/rank-search-hits";
 
 export type CatalogSearchHit = {
   id: string;
@@ -137,18 +138,16 @@ export async function getCatalogLookupMaps(): Promise<CatalogLookupMaps> {
 function rowHaystack(row: CatalogRow) {
   const dept = String(row.dept || "");
   const category = String(row.category || "");
+  const name = String(row.name || "");
   return foldTr(
     [
-      row.name,
+      name,
       row.brand,
       category,
       dept,
-      deptSearchHints(dept, category),
+      deptSearchHints(dept, category, name),
       row.sku,
       row.model,
-      row.specs,
-      row.aciklama,
-      Array.isArray(row.keywords) ? (row.keywords as string[]).join(" ") : "",
     ].join(" "),
   );
 }
@@ -240,7 +239,10 @@ export async function fallbackCatalogSearch(
   }
 
   const scored = [...byId.values()].sort((a, b) => b.score - a.score);
-  const ranked = scored.map((x) => x.hit);
+  const ranked = rankSearchHitsByRelevance(
+    query,
+    scored.map((x) => x.hit),
+  );
   const hits = ranked.slice(offset, offset + limit);
   return {
     hits,
