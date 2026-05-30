@@ -53,7 +53,7 @@
         "type": "number",
         "required": "true",
         "mapsTo": "m2",
-        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan/birahane → 100-300; pastane → 100-200; pideci → 100-250; sushi → 40-100; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu → 300-500 (zone şablon)",
+        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan/birahane → 100-300; pastane → 100-200; pideci → 100-250; sushi → 40-100; sarkuteri-kiosk → kiosk; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu → 300-500 (zone şablon)",
         "note": "Bulut Mutfak ≤15 m²: yalnızca Grab&Go / Coffee Counter. Steakhouse/Balık: ≤150 → 80-150; >150 → 150-250."
       },
       {
@@ -112,6 +112,7 @@
             "Fine Dining",
             "Dünya Mutfağı",
             "Gurme Şarküteri",
+            "Şarküteri Kiosk",
             "Bilmiyorum"
           ],
           "Kafe / Coffee Shop": [
@@ -605,6 +606,31 @@
           "teklifKaynagi": "planlanan",
           "durum": "planlanan",
           "bantlar": []
+        },
+        "questions": []
+      },
+      {
+        "id": "restaurant_sarkuteri_kiosk",
+        "name": "Şarküteri Kiosk",
+        "parent": "Restoran",
+        "desc": "Şarküteri kiosk · referans ekipman listesi · motor: sarkuteri-kiosk",
+        "pfos": {
+          "motorSlug": "sarkuteri-kiosk",
+          "dukkanSecim": "Şarküteri Kiosk",
+          "m2Min": 25,
+          "m2Max": 80,
+          "bantKurali": "Tek referans liste (kiosk); m² ile adet ölçeklenir",
+          "listeYolu": "proje-veri/7 ŞARKÜTERİ - KIOSK.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "kiosk",
+              "label": "Kiosk referans",
+              "referansM2": 45,
+              "listeDosya": "pfos-referans/sarkuteri-kiosk-kiosk.json"
+            }
+          ]
         },
         "questions": []
       },

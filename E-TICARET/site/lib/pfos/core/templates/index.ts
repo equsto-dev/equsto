@@ -17,6 +17,7 @@ import { buildPastaneTemplate } from "../../referans/pastane";
 import { buildPizzaciReferansTemplate } from "../../referans/pizzaci";
 import { buildPideciTemplate } from "../../referans/pideci";
 import { buildSushiTemplate } from "../../referans/sushi";
+import { buildSarkuteriKioskTemplate } from "../../referans/sarkuteri-kiosk";
 
 const DYNAMIC_KONSEPT = new Set<Konsept>([
   "steakhouse",
@@ -33,7 +34,7 @@ const DYNAMIC_KONSEPT = new Set<Konsept>([
 export const TEMPLATES: Record<
   Exclude<
     Konsept,
-    "steakhouse" | "balikci" | "coffee-shop" | "italyan" | "birahane" | "pastane" | "pizzaci" | "pideci" | "sushi"
+    "steakhouse" | "balikci" | "coffee-shop" | "italyan" | "birahane" | "pastane" | "pizzaci" | "pideci" | "sushi" | "sarkuteri-kiosk"
   >,
   ConceptTemplate
 > = {
@@ -52,7 +53,7 @@ export function getTemplate(konsept: Konsept): ConceptTemplate {
   const t = TEMPLATES[
     konsept as Exclude<
       Konsept,
-      "steakhouse" | "balikci" | "coffee-shop" | "italyan" | "birahane" | "pastane" | "pizzaci" | "pideci" | "sushi"
+      "steakhouse" | "balikci" | "coffee-shop" | "italyan" | "birahane" | "pastane" | "pizzaci" | "pideci" | "sushi" | "sarkuteri-kiosk"
     >
   ];
   if (!t) throw new Error(`Bilinmeyen konsept: ${konsept}`);
@@ -74,6 +75,7 @@ export async function resolveTemplateForQuote(
   if (konsept === "pizzaci") return buildPizzaciReferansTemplate(m2);
   if (konsept === "pideci") return buildPideciTemplate(m2);
   if (konsept === "sushi") return buildSushiTemplate(m2);
+  if (konsept === "sarkuteri-kiosk") return buildSarkuteriKioskTemplate(m2);
   return getTemplate(konsept);
 }
 

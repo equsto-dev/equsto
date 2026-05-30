@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-05-30T23:03:27.399Z",
+  "updated_at": "2026-05-30T23:08:56.252Z",
   "kategoriler": [
     {
       "id": "steakhouse",
@@ -219,6 +219,25 @@
             "toplamAdet": 34,
             "kaynakDosya": "06 SUSHI 40-100 m2.xlsx",
             "yukleme": "2026-05-30T23:03:27.393Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sarkuteri-kiosk",
+      "label": "Şarküteri Kiosk",
+      "ustKategori": "Restoran",
+      "bantlar": [
+        {
+          "id": "kiosk",
+          "label": "Kiosk referans",
+          "referansM2": 45,
+          "meta": {
+            "listeDosya": "sarkuteri-kiosk-kiosk.json",
+            "kalemSayisi": 23,
+            "toplamAdet": 26,
+            "kaynakDosya": "7 ŞARKÜTERİ - KIOSK.xlsx",
+            "yukleme": "2026-05-30T23:08:56.248Z"
           }
         }
       ]

@@ -33,6 +33,7 @@ export const KonseptEnum = z.enum([
   "pastane",
   "pideci",
   "sushi",
+  "sarkuteri-kiosk",
 ]);
 export type Konsept = z.infer<typeof KonseptEnum>;
 
@@ -50,6 +51,7 @@ export const KONSEPT_LABELS: Record<Konsept, string> = {
   pastane: "Pastane",
   pideci: "Pideci",
   sushi: "Sushi",
+  "sarkuteri-kiosk": "Şarküteri Kiosk",
 };
 
 export type FiyatStratejisi = "ekonomik" | "orta" | "premium";

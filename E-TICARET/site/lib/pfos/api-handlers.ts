@@ -23,6 +23,7 @@ const M2_RANGES: Record<string, { min: number; max: number }> = {
   pastane: { min: 100, max: 200 },
   pideci: { min: 100, max: 250 },
   sushi: { min: 40, max: 100 },
+  "sarkuteri-kiosk": { min: 25, max: 80 },
 };
 
 export function pfosGetConcepts() {
@@ -118,6 +119,15 @@ export function pfosGetConcepts() {
       itemSayisi: 27,
       zorunluSayisi: 27,
     },
+    {
+      konsept: "sarkuteri-kiosk",
+      label: KONSEPT_LABELS["sarkuteri-kiosk"],
+      ornekler: ["Gurme şarküteri kiosk", "AVM şarküteri"],
+      m2Min: M2_RANGES["sarkuteri-kiosk"].min,
+      m2Max: M2_RANGES["sarkuteri-kiosk"].max,
+      itemSayisi: 23,
+      zorunluSayisi: 23,
+    },
   ];
   return [...base.filter((t) => t.konsept !== "coffee-shop"), ...referansJson];
 }
@@ -189,6 +199,20 @@ export function pfosGetKonseptler() {
       seatDensity: 1.5,
       kalemSayisi: 50,
     },
+    {
+      slug: "sushi",
+      label: KONSEPT_LABELS.sushi,
+      ornekler: ["Sushi bar", "Omakase"],
+      seatDensity: 1.8,
+      kalemSayisi: 27,
+    },
+    {
+      slug: "sarkuteri-kiosk",
+      label: KONSEPT_LABELS["sarkuteri-kiosk"],
+      ornekler: ["Gurme şarküteri kiosk", "AVM şarküteri"],
+      seatDensity: 0,
+      kalemSayisi: 23,
+    },
   ];
 }
 
@@ -251,6 +275,7 @@ export async function pfosPostCalculate(req: NextRequest) {
       "pizzaci",
       "pideci",
       "sushi",
+      "sarkuteri-kiosk",
       "coffee-shop",
     ].includes(pfosReq.konsept)
   ) {
@@ -267,6 +292,7 @@ export async function pfosPostCalculate(req: NextRequest) {
           "pizzaci",
           "pideci",
           "sushi",
+          "sarkuteri-kiosk",
           "coffee-shop",
         ],
       },

@@ -78,6 +78,13 @@ export const PFOS_KATEGORI_TANIMLARI: PfosKategoriTanim[] = [
     bantlar: [{ id: "40-100", label: "40–100 m²", referansM2: 70 }],
   },
   {
+    id: "sarkuteri-kiosk",
+    label: "Şarküteri Kiosk",
+    ustKategori: "Restoran",
+    planNot: "proje-veri/7 ŞARKÜTERİ - KIOSK.xlsx",
+    bantlar: [{ id: "kiosk", label: "Kiosk referans", referansM2: 45 }],
+  },
+  {
     id: "pizzaci",
     label: "Pizzacı",
     ustKategori: "Restaurant",

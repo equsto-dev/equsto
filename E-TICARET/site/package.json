@@ -101,6 +101,8 @@
     "pfos:pideci:import": "node scripts/import-pideci-konsept.mjs",
     "pfos:pizzaci:import": "node scripts/import-pizzaci-referans.mjs",
     "pfos:sushi:import": "node scripts/import-sushi-konsept.mjs",
+    "pfos:sarkuteri-kiosk:import": "node scripts/import-sarkuteri-kiosk-konsept.mjs",
+    "pfos:sarkuteri-kiosk:import": "node scripts/import-sarkuteri-kiosk-konsept.mjs",
     "sync:legacy": "node scripts/sync-legacy-assets.mjs",
     "assets:cdn:config": "node scripts/generate-asset-cdn-config.mjs",
     "assets:cdn:verify": "node --import ./scripts/load-env.mjs scripts/faz-b-verify-cdn.mjs",
