@@ -3,7 +3,7 @@ import { findBesosProduct } from "@/lib/besos/catalog";
 import { loadBesosCatalogue } from "@/lib/besos/load-data";
 import { vitrumModuleSlug } from "@/lib/besos/module-url";
 import type { BesosProduct } from "@/lib/besos/types";
-import { getSiteOrigin } from "@/lib/google-merchant-feed";
+import { getSiteOrigin } from "@/lib/site-origin";
 
 export type BesosModulSsr = {
   name: string;
@@ -54,16 +54,18 @@ export function besosToSsr(p: BesosProduct, locale: "tr" | "en" = "tr"): BesosMo
 
 export function buildBesosModulMetadata(ssr: BesosModulSsr): Metadata {
   const title = `${ssr.name} · Besos Bar Design · Equsto`;
+  const trUrl = ssr.canonical.replace("/en/besos/", "/besos/");
+  const enUrl = ssr.canonical.includes("/en/")
+    ? ssr.canonical
+    : ssr.canonical.replace("://equsto.com/", "://equsto.com/en/");
   return {
     title,
     description: ssr.description,
     alternates: {
       canonical: ssr.canonical,
       languages: {
-        tr: ssr.canonical.replace("/en/besos/", "/besos/"),
-        en: ssr.canonical.includes("/en/")
-          ? ssr.canonical
-          : ssr.canonical.replace("://equsto.com/", "://equsto.com/en/"),
+        tr: trUrl,
+        en: enUrl,
       },
     },
     openGraph: {
@@ -77,6 +79,7 @@ export function buildBesosModulMetadata(ssr: BesosModulSsr): Metadata {
 
 export function buildBesosModulJsonLd(ssr: BesosModulSsr) {
   const origin = getSiteOrigin();
+  const homeLabel = ssr.canonical.includes("/en/") ? "Home" : "Ana Sayfa";
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -97,7 +100,7 @@ export function buildBesosModulJsonLd(ssr: BesosModulSsr) {
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Ana Sayfa", item: `${origin}/` },
+          { "@type": "ListItem", position: 1, name: homeLabel, item: `${origin}/` },
           { "@type": "ListItem", position: 2, name: "Bar Design", item: `${origin}${ssr.deptHref}` },
           { "@type": "ListItem", position: 3, name: ssr.name, item: ssr.canonical },
         ],

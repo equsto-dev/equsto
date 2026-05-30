@@ -1,13 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-
-function siteOrigin(): string {
-  const prod = process.env.VERCEL_PROJECT_PRODUCTION_URL?.trim();
-  if (prod) return prod.startsWith("http") ? prod : `https://${prod}`;
-  const url = process.env.VERCEL_URL?.trim();
-  if (url) return url.startsWith("http") ? url : `https://${url}`;
-  return process.env.NEXT_PUBLIC_SITE_ORIGIN?.trim() || "https://equsto.com";
-}
+import { getSiteOrigin } from "@/lib/site-origin";
 
 function localEkipmanlarPath(): string {
   return path.join(process.cwd(), "public", "data", "ekipmanlar.json");
@@ -25,7 +18,7 @@ export async function loadEkipmanlarJson(): Promise<unknown> {
     return JSON.parse(raw) as unknown;
   }
 
-  const res = await fetch(`${siteOrigin()}/data/ekipmanlar.json`, {
+  const res = await fetch(`${getSiteOrigin()}/data/ekipmanlar.json`, {
     cache: "no-store",
     headers: { Accept: "application/json" },
   });
@@ -48,7 +41,7 @@ export async function loadDeptJson(dept: string): Promise<unknown> {
     return JSON.parse(raw) as unknown;
   }
 
-  const res = await fetch(`${siteOrigin()}/data/dept/${safe}.json`, {
+  const res = await fetch(`${getSiteOrigin()}/data/dept/${safe}.json`, {
     cache: "no-store",
     headers: { Accept: "application/json" },
   });
