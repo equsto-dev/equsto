@@ -27,9 +27,20 @@ if (!host || !key) {
   process.exit(1);
 }
 
-function slugify(s) {
+function foldTr(s) {
   return String(s || "")
     .toLocaleLowerCase("tr")
+    .replace(/ğ/g, "g")
+    .replace(/ü/g, "u")
+    .replace(/ş/g, "s")
+    .replace(/ö/g, "o")
+    .replace(/ç/g, "c")
+    .replace(/ı/g, "i")
+    .replace(/İ/g, "i");
+}
+
+function slugify(s) {
+  return foldTr(s)
     .replace(/[/\\]+/g, "-")
     .replace(/[^a-z0-9+\-]+/g, "-")
     .replace(/-+/g, "-")
@@ -200,6 +211,9 @@ async function main() {
       buzdolab: ["buzdolabi"],
       buzdolap: ["buzdolabi"],
       ozti: ["oztiryakiler"],
+      izgara: ["izgaralar", "ızgara", "gazli", "elektrikli"],
+      izgaralar: ["izgara", "ızgara"],
+      ızgara: ["izgara", "izgaralar"],
     },
     displayedAttributes: [
       "id",

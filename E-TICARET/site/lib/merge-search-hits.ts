@@ -1,4 +1,7 @@
 import type { CatalogSearchHit } from "@/lib/catalog-search-fallback";
+import { mergeSearchHitsDiverse } from "@/lib/search-diverse-merge";
+
+export { mergeSearchHitsDiverse };
 
 /** Meilisearch + fallback birleşimi; önce primary, sonra id ile tekilleştirilmiş ekler. */
 export function mergeSearchHits(

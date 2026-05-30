@@ -1,5 +1,10 @@
-import { catalogUrlSlug, foldTr } from "@/lib/catalog-product-slug";
-import { loadEkipmanlarJson } from "@/lib/catalog-json";
+import {
+  catalogUrlSlug,
+  foldTr,
+  legacyMeiliPathSlug,
+} from "@/lib/catalog-product-slug";
+import { loadDeptJson, loadEkipmanlarJson } from "@/lib/catalog-json";
+import { mergeSearchHitsDiverse } from "@/lib/search-diverse-merge";
 import { deptSearchHints, expandSearchQueries } from "@/lib/search-synonyms";
 
 export type CatalogSearchHit = {
@@ -24,6 +29,16 @@ export type CatalogSearchHit = {
 type CatalogRow = Record<string, unknown>;
 
 let cache: { rows: CatalogRow[] } | null = null;
+const deptRowCache = new Map<string, CatalogRow[]>();
+
+type CatalogLookupMaps = {
+  rows: CatalogRow[];
+  byMeiliId: Map<string, CatalogRow>;
+  byCatalogSlug: Map<string, CatalogRow>;
+  byLegacySlug: Map<string, CatalogRow>;
+};
+
+let lookupMaps: CatalogLookupMaps | null = null;
 
 function meiliId(raw: string) {
   return String(raw || "")
@@ -47,7 +62,7 @@ function firstImage(row: CatalogRow) {
   return String(imgs[0]).replace(/\\/g, "/");
 }
 
-function rowToHit(row: CatalogRow): CatalogSearchHit | null {
+export function rowToHitFromRow(row: CatalogRow): CatalogSearchHit | null {
   const name = String(row.name || "").trim();
   if (!name) return null;
   const dept = String(row.dept || "").trim();
@@ -88,10 +103,63 @@ async function loadCatalogRows(): Promise<CatalogRow[]> {
     const rows = await loadEkipmanlarJson();
     const list = Array.isArray(rows) ? rows : [];
     cache = { rows: list };
+    lookupMaps = null;
     return list;
   } catch {
     return [];
   }
+}
+
+async function loadDeptRows(dept: string): Promise<CatalogRow[]> {
+  const key = String(dept || "").trim();
+  if (!key) return [];
+  const hit = deptRowCache.get(key);
+  if (hit) return hit;
+
+  try {
+    const raw = await loadDeptJson(key);
+    const list = Array.isArray(raw) ? (raw as CatalogRow[]) : [];
+    const rows = list.map((row) => ({
+      ...row,
+      dept: String(row.dept || key).trim(),
+    }));
+    deptRowCache.set(key, rows);
+    return rows;
+  } catch {
+    return [];
+  }
+}
+
+async function loadRowsForSearch(depts?: string[]): Promise<CatalogRow[]> {
+  if (!depts?.length) return loadCatalogRows();
+  const parts = await Promise.all(depts.map((d) => loadDeptRows(d)));
+  return parts.flat();
+}
+
+export async function getCatalogLookupMaps(): Promise<CatalogLookupMaps> {
+  if (lookupMaps) return lookupMaps;
+  const rows = await loadCatalogRows();
+  const byMeiliId = new Map<string, CatalogRow>();
+  const byCatalogSlug = new Map<string, CatalogRow>();
+  const byLegacySlug = new Map<string, CatalogRow>();
+
+  for (const row of rows) {
+    const dept = String(row.dept || "").trim();
+    if (!dept) continue;
+    const mid = docId(row, dept);
+    byMeiliId.set(mid, row);
+    const slug = catalogUrlSlug(row).toLowerCase();
+    byCatalogSlug.set(slug, row);
+    const cid = String(row.id || "")
+      .trim()
+      .toLowerCase();
+    if (cid) byCatalogSlug.set(cid, row);
+    const legacy = legacyMeiliPathSlug(row);
+    if (legacy) byLegacySlug.set(legacy, row);
+  }
+
+  lookupMaps = { rows, byMeiliId, byCatalogSlug, byLegacySlug };
+  return lookupMaps;
 }
 
 function rowHaystack(row: CatalogRow) {
@@ -140,8 +208,17 @@ function collectTokens(q: string) {
   return tokens;
 }
 
-/** Meilisearch yokken veya eksik sonuçta — ekipmanlar.json üzerinde arama */
-export async function fallbackCatalogSearch(q: string, limit: number) {
+export type FallbackSearchOptions = {
+  /** Yalnızca bu dept JSON dosyalarında ara (daha hızlı). */
+  depts?: string[];
+};
+
+/** Meilisearch yokken veya hibrit tamamlamada — katalog JSON üzerinde arama */
+export async function fallbackCatalogSearch(
+  q: string,
+  limit: number,
+  opts?: FallbackSearchOptions,
+) {
   const query = String(q || "").trim();
   if (!query) return { hits: [] as CatalogSearchHit[], estimatedTotalHits: 0 };
 
@@ -150,21 +227,22 @@ export async function fallbackCatalogSearch(q: string, limit: number) {
     return { hits: [] as CatalogSearchHit[], estimatedTotalHits: 0 };
   }
 
-  const rows = await loadCatalogRows();
+  const rows = await loadRowsForSearch(opts?.depts);
   const byId = new Map<string, { hit: CatalogSearchHit; score: number }>();
 
   for (const row of rows) {
     const hay = rowHaystack(row);
     const score = scoreRow(hay, tokens);
     if (score <= 0) continue;
-    const hit = rowToHit(row);
+    const hit = rowToHitFromRow(row);
     if (!hit) continue;
     const prev = byId.get(hit.id);
     if (!prev || score > prev.score) byId.set(hit.id, { hit, score });
   }
 
   const scored = [...byId.values()].sort((a, b) => b.score - a.score);
-  const hits = scored.slice(0, limit).map((x) => x.hit);
+  const ranked = scored.map((x) => x.hit);
+  const hits = mergeSearchHitsDiverse(ranked, [], limit);
   return {
     hits,
     estimatedTotalHits: scored.length,
