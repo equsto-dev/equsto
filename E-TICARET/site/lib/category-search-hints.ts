@@ -12,6 +12,25 @@ export function foldTr(s: string): string {
     .replace(/İ/g, "i");
 }
 
+/** Izgara tablası / istif rafı — gerçek ızgara makinesi değil. */
+export function isIzgaraAccessory(name: string, category: string): boolean {
+  const n = foldTr(name);
+  const cat = foldTr(category);
+  if (/istif raf|izgara tabl|4 izgara tab|raf.*izgara tab/.test(n)) return true;
+  if (/istif-raf/.test(cat) && /izgara tab|izgara tabl/.test(n)) return true;
+  return false;
+}
+
+export function isPrimaryIzgaraProduct(name: string, category: string): boolean {
+  if (isIzgaraAccessory(name, category)) return false;
+  const cat = foldTr(category);
+  const n = foldTr(name);
+  if (/izgar|griller|salamander|kati-yakitli-izgar|sanayi-tipi-izgar|tost-mak/.test(cat)) {
+    return true;
+  }
+  return /\bizgara\b|\bizgaralar\b/.test(n) && !/tabl|istif raf/.test(n);
+}
+
 export function categorySearchHints(
   dept: string,
   category: string,
@@ -21,7 +40,10 @@ export function categorySearchHints(
   const cat = foldTr(category);
   const n = foldTr(name);
 
-  if (/izgar|salamander|charbroil|char-broil/.test(cat) || /izgar|salamander/.test(n)) {
+  if (
+    /izgar|salamander|charbroil|char-broil/.test(cat) ||
+    (/izgar|salamander/.test(n) && !isIzgaraAccessory(name, category))
+  ) {
     hints.push("izgara", "izgaralar");
   }
   if (

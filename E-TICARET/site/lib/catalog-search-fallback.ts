@@ -4,6 +4,7 @@ import {
 } from "@/lib/catalog-product-slug";
 import { loadEkipmanlarJson } from "@/lib/catalog-json";
 import { deptSearchHints, expandSearchQueries } from "@/lib/search-synonyms";
+import { isIzgaraAccessory } from "@/lib/category-search-hints";
 import { foldTr, splitQueryOrBranches } from "@/lib/search-query";
 import { rankSearchHitsByRelevance } from "@/lib/rank-search-hits";
 
@@ -229,6 +230,16 @@ export async function fallbackCatalogSearch(
   const byId = new Map<string, { hit: CatalogSearchHit; score: number }>();
 
   for (const row of rows) {
+    const name = String(row.name || "");
+    const category = String(row.category || "");
+    const dept = String(row.dept || "");
+    const queryFold = foldTr(query);
+    if (
+      (queryFold === "izgara" || queryFold === "izgaralar" || queryFold === "ızgara") &&
+      (dept === "istif" || isIzgaraAccessory(name, category))
+    ) {
+      continue;
+    }
     const hay = rowHaystack(row);
     const score = scoreRowOr(hay, branches);
     if (score <= 0) continue;

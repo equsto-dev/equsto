@@ -1,4 +1,8 @@
 import type { CatalogSearchHit } from "@/lib/catalog-search-fallback";
+import {
+  isIzgaraAccessory,
+  isPrimaryIzgaraProduct,
+} from "@/lib/category-search-hints";
 import { foldTr } from "@/lib/search-query";
 
 const PRIMARY_EQUIPMENT_TERMS = new Set([
@@ -15,28 +19,57 @@ const PRIMARY_EQUIPMENT_TERMS = new Set([
 ]);
 
 /** Aksesuar / yan ürün — ana ekipman sorgularında alta it. */
-function accessoryPenalty(name: string): number {
+function accessoryPenalty(name: string, category: string, tokens: string[]): number {
   const n = foldTr(name);
-  if (/tel firc|firca|firin icin tepsi|tepsi arab|mutfak arab|temizlik firc/.test(n)) {
-    return 80;
+  const cat = foldTr(category);
+  let penalty = 0;
+
+  if (tokens.some((t) => t === "izgara" || t === "izgaralar" || t === "ızgara")) {
+    if (isIzgaraAccessory(name, category)) penalty += 120;
+    else if (!isPrimaryIzgaraProduct(name, category)) penalty += 25;
   }
-  if (/arabasi|arabali|kit arab/.test(n) && /firin|tepsi|teps/.test(n) && !/konveksiyon|kombi firin|kuzine firin/.test(n)) {
-    return 40;
+
+  if (/tel firc|firca|temizlik firc/.test(n)) penalty += 90;
+  if (/firin icin tepsi|tepsi arab/.test(n)) penalty += 70;
+  if (/mutfak arab/.test(n) && !/konveksiyon|kombi firin/.test(n)) penalty += 50;
+  if (
+    /arabasi|arabali|kit arab/.test(n) &&
+    /firin|tepsi|teps/.test(n) &&
+    !/konveksiyon|kombi firin|kuzine firin/.test(n)
+  ) {
+    penalty += 45;
   }
-  return 0;
+  if (/istif-raf/.test(cat) && tokens.some((t) => t.startsWith("izgar"))) {
+    penalty += 100;
+  }
+
+  return penalty;
 }
 
 function nameRelevanceBoost(name: string, category: string, tokens: string[]): number {
   const n = foldTr(name);
   const cat = foldTr(category);
   let boost = 0;
+
   for (const t of tokens) {
     const stem = t.replace(/lar$|ler$/, "");
+    if (t.startsWith("izgar") || stem === "izgar") {
+      if (isPrimaryIzgaraProduct(name, category)) boost += 80;
+      continue;
+    }
+    if (t.startsWith("firin") || stem === "firin") {
+      if (/konveksiyon|kombi firin|firinli|kuzine firin|bakertop|cheftop/.test(n)) {
+        boost += 70;
+      } else if (/firin/.test(n) && !/firca|arabasi|arabali|tepsi arab/.test(n)) {
+        boost += 45;
+      }
+      if (/firin|kombi|konveksiyon|bakertop|cheftop/.test(cat)) boost += 25;
+      continue;
+    }
     if (n.includes(t) || (stem.length >= 4 && n.includes(stem))) {
-      boost += n.indexOf(t) >= 0 && n.indexOf(t) < 20 ? 50 : 35;
-      if (new RegExp(`(^|[\\s-])${stem}`, "i").test(name)) boost += 15;
+      boost += n.indexOf(t) >= 0 && n.indexOf(t) < 24 ? 40 : 28;
     } else if (cat.includes(stem)) {
-      boost += 20;
+      boost += 18;
     }
   }
   return boost;
@@ -65,7 +98,7 @@ export function rankSearchHitsByRelevance(
       idx,
       score:
         nameRelevanceBoost(String(h.name || ""), String(h.category || ""), tokens) -
-        accessoryPenalty(String(h.name || "")),
+        accessoryPenalty(String(h.name || ""), String(h.category || ""), tokens),
     }))
     .sort((a, b) => b.score - a.score || a.idx - b.idx)
     .map((x) => x.h);

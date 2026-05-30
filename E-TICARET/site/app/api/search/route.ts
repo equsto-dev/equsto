@@ -11,6 +11,7 @@ import {
 } from "@/lib/meilisearch";
 import { canonicalizeSearchHits } from "@/lib/canonicalize-search-hits";
 import { meiliSearchQuery } from "@/lib/search-query";
+import { meiliSearchParams } from "@/lib/meili-search-params";
 import { rankSearchHitsByRelevance } from "@/lib/rank-search-hits";
 
 export const runtime = "nodejs";
@@ -106,11 +107,20 @@ export async function GET(req: NextRequest) {
   try {
     const index = client.index(PRODUCTS_INDEX);
     const meiliQ = meiliSearchQuery(q);
-    const meiliRes = await index.search(meiliQ, { limit, offset });
+    const meiliOpts = meiliSearchParams(q, limit, offset);
+    const meiliRes = await index.search(meiliQ, {
+      limit: meiliOpts.limit,
+      offset: meiliOpts.offset,
+      ...(meiliOpts.filter ? { filter: meiliOpts.filter } : {}),
+    });
     let hits = (meiliRes.hits || []) as CatalogSearchHit[];
     let total = meiliRes.estimatedTotalHits ?? hits.length;
     let source: "meilisearch" | "hybrid" = "meilisearch";
     let warning: string | undefined;
+
+    if (meiliOpts.rerankPool && hits.length) {
+      hits = rankSearchHitsByRelevance(q, hits).slice(0, limit);
+    }
 
     // İlk sayfa: Meili az döndürürse katalog tamamlaması (eksik indeks / eşanlam)
     if (offset === 0 && hits.length < limit) {
@@ -127,7 +137,9 @@ export async function GET(req: NextRequest) {
     }
 
     hits = await canonicalizeSearchHits(hits);
-    hits = rankSearchHitsByRelevance(q, hits);
+    if (!meiliOpts.rerankPool) {
+      hits = rankSearchHitsByRelevance(q, hits);
+    }
 
     return searchResponse({
       query: q,
