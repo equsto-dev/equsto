@@ -2,6 +2,8 @@
  * Kısa / İngilizce arama terimleri → katalogdaki Türkçe adlar ve markalar.
  * Meilisearch + fallback ortak kullanır.
  */
+import { categorySearchHints, foldTr } from "@/lib/category-search-hints";
+
 const QUERY_ALIASES: Record<string, string[]> = {
   esp: ["wmf", "kahve", "kahve makinesi", "cay makinasi", "turk kahve", "espresso"],
   espresso: ["wmf", "kahve", "kahve makinesi", "cay makinasi"],
@@ -12,9 +14,11 @@ const QUERY_ALIASES: Record<string, string[]> = {
   öztiryak: ["oztiryakiler"],
   oztiryakiler: ["oztiryakiler"],
   atalay: ["atalay endustriyel"],
-  firin: ["konveksiyonlu", "kombi"],
-  izgara: ["izgaralar", "yer izgarasi", "gazli", "elektrikli", "salamander", "char"],
-  izgaralar: ["izgara", "ızgara", "gazli izgara", "elektrikli izgara", "yer izgarasi"],
+  firin: ["konveksiyonlu", "kombi", "firinlar"],
+  firinlar: ["firin", "konveksiyonlu"],
+  kombi: ["konveksiyonlu", "firin"],
+  izgara: ["izgaralar", "yer izgarasi"],
+  izgaralar: ["izgara", "ızgara", "yer izgarasi"],
   ızgara: ["izgara", "izgaralar"],
   gazli: ["gaz", "lpg"],
   elektrikli: ["elektrik"],
@@ -25,18 +29,6 @@ const QUERY_ALIASES: Record<string, string[]> = {
   cay: ["cay makinasi", "cay ocagi"],
   çay: ["cay makinasi", "cay ocagi"],
 };
-
-function foldTr(s: string) {
-  return String(s || "")
-    .toLocaleLowerCase("tr")
-    .replace(/ğ/g, "g")
-    .replace(/ü/g, "u")
-    .replace(/ş/g, "s")
-    .replace(/ö/g, "o")
-    .replace(/ç/g, "c")
-    .replace(/ı/g, "i")
-    .replace(/İ/g, "i");
-}
 
 /** Meilisearch ve fallback için genişletilmiş sorgu dizisi (orijinal + eşanlamlılar). */
 export function expandSearchQueries(q: string): string[] {
@@ -74,24 +66,9 @@ export function expandSearchQueries(q: string): string[] {
   return out;
 }
 
-/** İndeks belgesine eklenecek statik arama ipuçları (dept + kategori). */
-export function deptSearchHints(dept: string, category: string): string {
-  const d = foldTr(dept);
-  const hints: string[] = [dept, category];
-  const deptMap: Record<string, string[]> = {
-    kahve: ["espresso", "wmf", "cay makinasi", "kahve makinesi", "barista"],
-    sogutma: ["buzdolabi", "sogutma dolabi", "derin dondurucu"],
-    dolap: ["buzdolabi", "dolap", "sogutma"],
-    pisirme: ["ocak", "izgara", "firin", "fritoz"],
-    yikama: ["bulasik makinesi", "bulaşık"],
-    hazirlik: ["mikser", "blender", "dograma"],
-    icecek: ["sogutucu", "meyve sikacagi"],
-    "set-ustu-mutfak": ["gastronorm", "tencere", "servis"],
-  };
-  if (deptMap[d]) hints.push(...deptMap[d]);
-  if (/buzdolab/i.test(category)) hints.push("buzdolabi", "sogutma");
-  if (/kahve|cay/i.test(category)) hints.push("kahve", "wmf", "espresso", "cay");
-  return hints.filter(Boolean).join(" ");
+/** İndeks / fallback — kategori + ürün adına özel ipuçları. */
+export function deptSearchHints(dept: string, category: string, name = ""): string {
+  return categorySearchHints(dept, category, name);
 }
 
 const DEPT_QUERY_HINTS: Record<string, string[]> = {
@@ -153,3 +130,5 @@ export function searchDeptsForQuery(q: string): string[] | null {
   }
   return depts.size ? [...depts] : null;
 }
+
+export { categorySearchHints, foldTr, MEILI_SYNONYMS, MEILI_INDEX_SETTINGS } from "@/lib/category-search-hints";
