@@ -80,13 +80,24 @@ function firstImage(row) {
 }
 
 
+function isIzgaraAccessory(name, category) {
+  const n = foldTr(name || "");
+  const cat = foldTr(category || "");
+  if (/istif raf|izgara tabl|4 izgara tab|raf.*izgara tab/.test(n)) return true;
+  if (/istif-raf/.test(cat) && /izgara tab|izgara tabl/.test(n)) return true;
+  return false;
+}
+
 /** lib/category-search-hints.ts ile senkron — dept geneli ipucu yok. */
 function categorySearchHints(dept, category, name) {
   const hints = [];
   const cat = foldTr(category);
   const n = foldTr(name || "");
 
-  if (/izgar|salamander|charbroil|char-broil/.test(cat) || /izgar|salamander/.test(n)) {
+  if (
+    /izgar|salamander|charbroil|char-broil/.test(cat) ||
+    (/izgar|salamander/.test(n) && !isIzgaraAccessory(name, category))
+  ) {
     hints.push("izgara", "izgaralar");
   }
   if (
