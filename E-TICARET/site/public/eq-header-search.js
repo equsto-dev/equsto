@@ -27,6 +27,12 @@
   function aramaUrl(q) {
     q = trimQ(q);
     if (!q) return "";
+    try {
+      if (typeof window.eqAramaUrl === "function") {
+        var u = window.eqAramaUrl(q);
+        if (u) return u;
+      }
+    } catch (_) {}
     return "/arama?q=" + encodeURIComponent(q);
   }
 
@@ -41,6 +47,16 @@
 
   function productHref(hit) {
     if (!hit) return "#";
+    if (hit.url) {
+      try {
+        if (typeof window.eqProductPath === "function" && hit.dept && hit.slug) {
+          var dept = String(hit.dept).replace(/^\/+|\/+$/g, "");
+          if (dept === "market-reyon") dept = "market-reyonlari";
+          return window.eqProductPath(dept, catalogSlugFromHit(hit));
+        }
+      } catch (_) {}
+      return hit.url;
+    }
     var dept = String(hit.dept || "pisirme").replace(/^\/+|\/+$/g, "");
     if (dept === "market-reyon") dept = "market-reyonlari";
     var slug = catalogSlugFromHit(hit);
@@ -182,12 +198,14 @@
         "</span></a>";
     }
     var n = total != null ? total : hits.length;
+    var moreSuffix = meta.hasMore === false ? "" : "+";
     html +=
       '<a class="eq-srch-panel__all" href="' +
       esc(aramaUrl(q)) +
       '">Tüm sonuçları gör (' +
       esc(String(n)) +
-      "+)</a>";
+      moreSuffix +
+      ")</a>";
     if (meta.warning) {
       html +=
         '<div class="eq-srch-panel__warn" role="status">' +
@@ -248,6 +266,7 @@
         lastHits = res.data.hits || [];
         renderPanel(lastHits, q, res.data.estimatedTotalHits, {
           warning: res.data.warning || "",
+          hasMore: !!res.data.hasMore,
         });
       })
       .catch(function (err) {
@@ -333,7 +352,6 @@
     hidePanel();
   }
 
-  window.eqAramaUrl = aramaUrl;
   window.__eqHdrMeiliSuggest = scheduleSuggest;
   window.eqCommitHeaderSearch = function () {
     var inp = getInput();
