@@ -1459,6 +1459,17 @@ window.searchFilter = window.searchFilter || function () {};
       }
     }
 
+    function isOztiEqustoBrand(brand) {
+      var b = String(brand || "").trim();
+      if (!b) return false;
+      return /^(?:ÖZTİRYAKİLER|OZTIRYAKILER|Öztiryakiler|Oztiryakiler)(?:\s+(?:Endüstriyel\s+Mutfak|ENDÜSTRIYEL\s+MUTFAK|Endustriyel\s+Mutfak|ENDUSTRIYEL\s+MUTFAK))?$/i.test(b);
+    }
+
+    function pdpVisibleBrand(brand) {
+      if (!brand || isOztiEqustoBrand(brand)) return "";
+      return String(brand).trim();
+    }
+
     function pdpSeriesEyebrow(x) {
       if (isCaglayanRefrigeration(x)) return caglayanSeriesEyebrow(x);
       if (x && String(x.kaynak || "") === "besos-vitrum") {
@@ -1468,7 +1479,8 @@ window.searchFilter = window.searchFilter || function () {};
         return bp.join(" · ") || "Besos Bar Design";
       }
       var parts = [];
-      if (x.brand) parts.push(String(x.brand));
+      var visBrand = pdpVisibleBrand(x.brand);
+      if (visBrand) parts.push(visBrand);
       var ref = deptLink(x.category, x.dept);
       if (ref && ref.label) parts.push(ref.label);
       return parts.join(" · ") || "Endüstriyel mutfak";
@@ -1487,7 +1499,8 @@ window.searchFilter = window.searchFilter || function () {};
       if (dim) return __pdpT("pdp.inner_dims_prefix", "İç ölçüler: {dim}.", { dim: dim });
       var bullets = buildAboutBullets(splitSpecsCols(x.specs).left || x.specs, 3);
       if (bullets.length) return bullets.join(" · ");
-      return (x.brand ? x.brand + " — " : "") + "Equsto kataloğundan endüstriyel mutfak ekipmanı.";
+      var visBrand = pdpVisibleBrand(x.brand);
+      return (visBrand ? visBrand + " — " : "") + "Equsto kataloğundan endüstriyel mutfak ekipmanı.";
     }
 
     function pdpPdfHref(x) {
@@ -1562,7 +1575,8 @@ window.searchFilter = window.searchFilter || function () {};
         '</h2><div class="eq-caglayan-acc">';
       var ref = deptLink(x.category, x.dept);
       var temel = [];
-      if (x.brand) temel.push(__pdpT("pdp.brand_prefix", "Marka:") + " " + x.brand);
+      var visBrand = pdpVisibleBrand(x.brand);
+      if (visBrand) temel.push(__pdpT("pdp.brand_prefix", "Marka:") + " " + visBrand);
       if (x.sku || x.model) temel.push(__pdpT("pdp.product_code_prefix", "Ürün kodu:") + " " + (x.sku || x.model));
       if (ref.label) temel.push(__pdpT("pdp.category_prefix", "Kategori:") + " " + ref.label);
       var dim = formatOlculerLinePdp(x);
@@ -1884,7 +1898,8 @@ window.searchFilter = window.searchFilter || function () {};
     }
 
     function renderEpdpProduct(x, all) {
-      var prodTitle = ((x.brand ? x.brand + " " : "") + (x.name || "Ürün")).slice(0, 80);
+      var visBrandTitle = pdpVisibleBrand(x.brand);
+      var prodTitle = ((visBrandTitle ? visBrandTitle + " " : "") + (x.name || "Ürün")).slice(0, 80);
       document.title = prodTitle + " — Equsto";
       var root = document.getElementById("eq-product-root");
       if (root) {
