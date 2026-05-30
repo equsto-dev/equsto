@@ -15,10 +15,8 @@ export default function ShopProductScripts() {
           __html: `(function(){try{if(document.querySelector('link[data-eq-pdp-page-css]'))return;var l=document.createElement('link');l.rel='stylesheet';l.href='/eq-product-page.css?v=${v}';l.setAttribute('data-eq-pdp-page-css','1');document.head.appendChild(l);}catch(e){}})();`,
         }}
       />
-      <Script src={`/eq-product-reviews.js?v=${v}`} strategy="afterInteractive" />
-      <Script src={`/eq-merchant-schema.js?v=${v}`} strategy="afterInteractive" />
-      <Script src="/ecom-data.js" strategy="afterInteractive" />
-      <Script src={`/eq-shop-catalog-bootstrap.js?v=${v}`} strategy="afterInteractive" />
+      <Script src="/ecom-data.js" strategy="beforeInteractive" />
+      <Script src={`/eq-shop-catalog-bootstrap.js?v=${v}`} strategy="beforeInteractive" />
       <Script src={`/eq-vendor-sanitize.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-competitor-redirects.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-display-terminology.js?v=${v}`} strategy="afterInteractive" />
@@ -27,7 +25,9 @@ export default function ShopProductScripts() {
       <Script src={`/eq-fiyatlar-bridge.js?v=${v}`} strategy="afterInteractive" />
       <Script src="/eq-filter-column.js" strategy="afterInteractive" />
       <Script src={`/eq-product-card-tint.js?v=${v}`} strategy="afterInteractive" />
-      <Script src={`/eq-product-page-inline.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/eq-product-page-inline.js?v=${v}`} strategy="beforeInteractive" />
+      <Script src={`/eq-product-reviews.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/eq-merchant-schema.js?v=${v}`} strategy="afterInteractive" />
     </>
   );
 }

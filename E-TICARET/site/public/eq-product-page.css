@@ -1234,7 +1234,96 @@ body.bd-page.besos:has(.eq-epdp) .eq-product-main {
   color: var(--eq-accent, #2563eb);
 }
 
-/* SSR — Googlebot ilk HTML (JS öncesi) */
+/* SSR — SEO (görünmez; E-PDP boot sonrası değiştirilir) */
+.eq-product-seo-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Boot skeleton — JS gelene kadar E-PDP düzenine benzer */
+.eq-product-main.eq-pdp-booting:not(.eq-epdp) {
+  min-height: 420px;
+}
+
+.eq-pdp-skeleton__hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 24px 36px;
+  align-items: start;
+  padding: 16px 20px 32px;
+  max-width: min(1500px, 100%);
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.eq-pdp-skeleton__media {
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #f3f4f6 0%, #e5e7eb 50%, #f3f4f6 100%);
+  background-size: 200% 100%;
+  animation: eq-pdp-shimmer 1.2s ease-in-out infinite;
+}
+
+.eq-pdp-skeleton__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 8px;
+}
+
+.eq-pdp-skeleton__line {
+  height: 14px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #f3f4f6 0%, #e5e7eb 50%, #f3f4f6 100%);
+  background-size: 200% 100%;
+  animation: eq-pdp-shimmer 1.2s ease-in-out infinite;
+}
+
+.eq-pdp-skeleton__line--sm {
+  width: 42%;
+  height: 12px;
+}
+
+.eq-pdp-skeleton__line--md {
+  width: 68%;
+}
+
+.eq-pdp-skeleton__line--lg {
+  width: 92%;
+  height: 22px;
+}
+
+.eq-pdp-skeleton__box {
+  height: 200px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: #fafafa;
+  animation: eq-pdp-shimmer 1.2s ease-in-out infinite;
+}
+
+@keyframes eq-pdp-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .eq-pdp-skeleton__hero {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Eski SSR fallback — kaldırıldı */
 .eq-product-ssr {
   max-width: 920px;
 }

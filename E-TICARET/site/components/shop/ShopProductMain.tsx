@@ -47,42 +47,30 @@ export default function ShopProductMain({ ssr }: Props) {
               <span data-i18n="pdp.breadcrumb_loading">Yükleniyor…</span>
             )}
           </div>
-          <main className="eq-product-main" id="eq-product-root">
+          <main className="eq-product-main eq-pdp-booting" id="eq-product-root">
             {ssr ? (
-              <article className="eq-product-ssr" id="eq-product-ssr-fallback">
-                {ssr.image ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={ssr.image}
-                    alt={ssr.name}
-                    width={480}
-                    height={360}
-                    className="eq-product-ssr__img"
-                    loading="eager"
-                    decoding="async"
-                  />
+              <article className="eq-product-seo-only" aria-hidden="true">
+                <h1>{ssr.name}</h1>
+                {ssr.brand ? <p>{ssr.brand}</p> : null}
+                <p>{ssr.description}</p>
+                {ssr.priceLabel ? <p>{ssr.priceLabel}</p> : null}
+                {ssr.priceTry ? (
+                  <p>{ssr.priceTry.toLocaleString("tr-TR", { minimumFractionDigits: 2 })} ₺ KDV dahil</p>
                 ) : null}
-                <h1 className="eq-product-ssr__title">{ssr.name}</h1>
-                {ssr.brand ? <p className="eq-product-ssr__brand">{ssr.brand}</p> : null}
-                <p className="eq-product-ssr__lead">{ssr.description}</p>
-                {ssr.priceLabel ? (
-                  <p className="eq-product-ssr__price">{ssr.priceLabel}</p>
-                ) : ssr.priceTry ? (
-                  <p className="eq-product-ssr__price">
-                    {ssr.priceTry.toLocaleString("tr-TR", { minimumFractionDigits: 2 })} ₺ KDV dahil
-                  </p>
-                ) : (
-                  <p className="eq-product-ssr__price">Fiyat ve stok için teklif alın.</p>
-                )}
-                <p className="eq-product-ssr__note">
-                  Detaylı teknik özellikler ve sepete ekleme bu sayfada yüklenir.
-                </p>
               </article>
-            ) : (
-              <div className="eq-product-miss" data-i18n="pdp.loading_product">
-                Ürün bilgisi yükleniyor…
+            ) : null}
+            <div className="eq-pdp-skeleton" aria-hidden="true">
+              <div className="eq-pdp-skeleton__hero">
+                <div className="eq-pdp-skeleton__media" />
+                <div className="eq-pdp-skeleton__copy">
+                  <div className="eq-pdp-skeleton__line eq-pdp-skeleton__line--sm" />
+                  <div className="eq-pdp-skeleton__line eq-pdp-skeleton__line--lg" />
+                  <div className="eq-pdp-skeleton__line eq-pdp-skeleton__line--md" />
+                  <div className="eq-pdp-skeleton__box" />
+                  <div className="eq-pdp-skeleton__line eq-pdp-skeleton__line--md" />
+                </div>
               </div>
-            )}
+            </div>
           </main>
         </div>
       </div>

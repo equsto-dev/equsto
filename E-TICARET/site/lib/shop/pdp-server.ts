@@ -81,6 +81,13 @@ export async function findProductForPdp(
   return null;
 }
 
+/** Client boot — tek ürün satırı (FOUC önleme, anında E-PDP render). */
+export function rowToPdpClientSeed(row: CatalogRow, dept: ShopDeptSlug): CatalogRow {
+  const out = { ...row };
+  if (!out.dept) out.dept = dept;
+  return out;
+}
+
 export function rowToPdpSsr(row: CatalogRow, dept: ShopDeptSlug): PdpSsrPayload {
   const origin = getSiteOrigin();
   const slug = catalogUrlSlug(row);
