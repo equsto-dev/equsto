@@ -6,7 +6,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { applyMisfiledIzgaraFix } from "../lib/catalog/atalay-pisirme-category.ts";
+import { fixMisfiledIzgaraCategory } from "../lib/catalog/atalay-pisirme-category.ts";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const PISIRME = path.join(ROOT, "public/data/dept/pisirme.json");
@@ -18,14 +18,11 @@ let n = 0;
 
 for (const row of rows) {
   const prev = row.category;
-  const prevDept = row.dept;
-  if (applyMisfiledIzgaraFix(row)) {
+  const next = fixMisfiledIzgaraCategory(row);
+  if (next !== prev) {
+    row.category = next;
     n++;
-    const key =
-      prevDept && row.dept && prevDept !== row.dept
-        ? `${prev} → ${row.category} (${prevDept}→${row.dept})`
-        : `${prev} → ${row.category}`;
-    counts[key] = (counts[key] || 0) + 1;
+    counts[`${prev} → ${next}`] = (counts[`${prev} → ${next}`] || 0) + 1;
   }
 }
 
@@ -37,7 +34,12 @@ if (fs.existsSync(CATALOG)) {
   const cat = JSON.parse(fs.readFileSync(CATALOG, "utf8"));
   let c = 0;
   for (const row of cat.products || []) {
-    if (applyMisfiledIzgaraFix(row)) c++;
+    const prev = row.category;
+    const next = fixMisfiledIzgaraCategory(row);
+    if (next !== prev) {
+      row.category = next;
+      c++;
+    }
   }
   fs.writeFileSync(CATALOG, JSON.stringify(cat, null, 2) + "\n", "utf8");
   console.log("atalay-pdf-catalog.json:", c, "kayıt");
