@@ -10,7 +10,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { DONER_OCAK_ROWS } from "./data/atalay-doner-ocak-source.mjs";
 import { fetchTcmbEurRate } from "./fetch-tcmb-kur.mjs";
-import { atalayPisirmeRecategorize } from "../lib/catalog/atalay-pisirme-category.ts";
+import { normalizeAtalayPisirmeCategory } from "../lib/catalog/atalay-pisirme-category.ts";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const RAW = path.join(ROOT, "scripts/data/atalay-pdf-catalog-raw.json");
@@ -65,14 +65,7 @@ function priceBlock(listeEur, netEur, discountPct) {
   };
 }
 
-function mapCategory(kategori, section, model = "", name = "") {
-  const byModel = atalayPisirmeRecategorize({
-    model,
-    name,
-    category: "sanayi-tipi-izgaralar",
-  });
-  if (byModel?.category) return byModel.category;
-
+function mapCategory(kategori, section) {
   const map = fs.existsSync(KMAP) ? JSON.parse(fs.readFileSync(KMAP, "utf8")) : {};
   const key = String(kategori || "").trim();
   if (map[key]) return map[key];
@@ -106,11 +99,12 @@ function buildRow(p, discount, kaynak) {
   const dims = (p.raw_fields || []).find((x) => /\d\s*x\s*\d/.test(x)) || "";
   const titleParts = [kategori.split("/")[0]?.trim(), model, plate, dims].filter(Boolean);
   const name = `Atalay ${titleParts.join(" ")}`.replace(/\s+/g, " ").trim();
-  let category = mapCategory(kategori, p.section, model, name);
+  let category = mapCategory(kategori, p.section);
   let dept = mapDept(category, p.section);
-  const recat = atalayPisirmeRecategorize({ model, name, category });
-  if (recat?.dept) dept = recat.dept;
-  if (recat?.category && /^(cay-makineleri)$/.test(recat.category)) category = recat.category;
+  if (dept === "pisirme") {
+    category = normalizeAtalayPisirmeCategory({ model, name, specs: "", category });
+    dept = mapDept(category, p.section);
+  }
   const specs = [
     name,
     "Kaynak: ATALAY 2025 YERLİ",
