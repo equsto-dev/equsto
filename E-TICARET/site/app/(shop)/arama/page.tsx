@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
+import ShopAramaBoot from "@/components/shop/ShopAramaBoot";
 import ShopBodyClass from "@/components/shop/ShopBodyClass";
 import ShopEqustoChrome from "@/components/shop/ShopEqustoChrome";
 import ShopSearchMain from "@/components/shop/ShopSearchMain";
@@ -22,6 +24,9 @@ export default function AramaPage() {
       <ShopBodyClass className="eq-shop eq-arama-page" />
       <ShopEqustoChrome activeDept={null} />
       <ShopSearchMain />
+      <Suspense fallback={null}>
+        <ShopAramaBoot />
+      </Suspense>
       <footer className="footer" id="eq-shop-footer" />
       <ShopSearchScripts />
     </>
