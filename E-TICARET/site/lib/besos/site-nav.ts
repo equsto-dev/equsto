@@ -39,10 +39,10 @@ export function goEqCart(): void {
     cart.goToCartPage();
     return;
   }
+  const equstoUrl = (window as Window & { equstoUrl?: (k: string) => string })
+    .equstoUrl;
   window.location.href =
-    typeof (window as Window & { equstoUrl?: (k: string) => string }).equstoUrl === "function"
-      ? (window as Window & { equstoUrl: (k: string) => string }).equstoUrl("cart")
-      : EQ_DEPT_PATH.cart;
+    typeof equstoUrl === "function" ? equstoUrl("cart") : EQ_DEPT_PATH.cart;
 }
 
 export function submitBesosSearch(query: string): void {
