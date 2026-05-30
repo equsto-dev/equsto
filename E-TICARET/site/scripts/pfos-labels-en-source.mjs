@@ -179,4 +179,86 @@ export const PFOS_LABELS_EN = {
   "Konsepte uygun PDF projeler": "Sample PDF projects for your concept",
   "Henüz konsept seçilmedi. Konsept (ve varsa alan aralığı) eşleştiğinde, veri tabanındaki örnek proforma ve plan PDF bağlantıları burada kart olarak görünür.":
     "When concept and area range match, sample proforma and plan PDFs appear here as cards.",
+
+  /* Statik PFOS gövde — breadcrumb, sol panel, sağ sütun, FAQ */
+  "Proje Fabrikası": "Project Factory",
+  "Proje Fabrikası (PFOS)": "Project Factory (PFOS)",
+  "Proje Fabrikası · Equsto ·": "Project Factory · Equsto ·",
+  "Ana Sayfa": "Home",
+  "Hoş geldiniz.": "Welcome.",
+  Referans: "Reference",
+  "Referans metinler": "Reference texts",
+  "Saha referansı": "Field reference",
+  "Benzer işletme örneği": "Similar business example",
+  "Mobil menü": "Mobile menu",
+  "Aşağıdaki soruları yukarıdan aşağıya sırayla yanıtlayın. Her adımda yalnızca size uygun olanı seçmeniz yeterli.":
+    "Answer the questions below from top to bottom. At each step, choose only what applies to you.",
+  "Bilgileriniz alınır, ekibimiz dönüş yapar": "We receive your details and our team will get back to you.",
+  "Bilgisayarınızda posta kutusu açılır; metin hazırdır":
+    "Your email client opens with the message ready to send.",
+  "Bölüm bazlı m²": "Area by zone (m²)",
+  "(opsiyonel)": "(optional)",
+  "Equsto yapay zekadan yardım alır; hata yapabilir. Lütfen iletişime geçin.":
+    "Equsto uses AI assistance; it may make mistakes. Please contact us.",
+  "Güncellenmiş fiyat teklifi": "Updated price quote",
+  "Henüz konsept seçilmedi.": "No concept selected yet.",
+  "Kendi cümlenizi eklemek için boş şablon": "Blank template to add your own sentence",
+  "Otomatik eklendi": "Added automatically",
+  "Altyapı bilgisi": "MEP / infrastructure",
+  "Projenize özel öneriler — ekleyip çıkarabilirsiniz":
+    "Custom suggestions for your project — add or remove as needed",
+  "Sayıyı yazın, kaydırıcıyı sürükleyin veya hazır değerlerden seçin (20–1000 m²).":
+    "Type a number, drag the slider, or pick a preset (20–1000 m²).",
+  "Son PFL'ler": "Recent PFLs",
+  "Teklif kalemleri · site kataloğu (ekipmanlar.json)":
+    "Quote line items · site catalog (ekipmanlar.json)",
+  "Teklif v12 · yazdır veya PDF kaydet": "Quote v12 · print or save PDF",
+  "Teklif v12 · şartlar dahil": "Quote v12 · terms included",
+  "Yazdırabilir veya ekibimize tek tıkla gönderebilirsiniz":
+    "Print or send to our team in one click",
+  Önce: "First",
+  "Örnek arşiv": "Sample archive",
+  "il (şehir)": "city",
+  "İl (şehir) *": "City *",
+  "yazın; listeden tıklayın. Sonra ilçe, mahalle ve cadde — mümkünse listeden seçin.":
+    "type and pick from the list. Then district, neighbourhood and street — preferably from the list.",
+  "Şarküteri ekipmanları": "Deli equipment",
+  "Şarküteri ekipmanları listeye eklendi:": "Deli equipment added to list:",
+  "2× teşhir dolabı, 2× hazırlık tezgahı, gıda dilimleme makinası.":
+    "2× display cabinets, 2× prep benches, food slicer.",
+  "Konsept (ve varsa alan aralığı) eşleştiğinde, veri tabanındaki örnek proforma ve plan PDF bağlantıları burada kart olarak görünür.":
+    "When concept and area range match, sample proforma and plan PDF links appear here as cards.",
+  "Soldaki soru akışında işletme konseptinizi seçtiğinizde, bu bölümde aynı segmente yakın kısa profesyonel notlar listelenir.":
+    "When you choose your business concept in the question flow, short professional notes for a similar segment appear here.",
+  "İşletme konsepti, kapasite ve alan bilgilerinize göre endüstriyel mutfak ekipman listesi ile tahmini tutarı bir akışta görmenizi sağlar; ardından teklifi Equsto ekibine iletebilirsiniz.":
+    "Based on your business concept, capacity and floor area, see an industrial kitchen equipment list and estimated total in one flow — then send the quote to the Equsto team.",
+  "Ekrandaki rakamlar katalog liste fiyatları ve kurallara dayalı tahmindir. Nihai teklif, Satış Mühendisliği ekibinin onayı ve proje detaylarıyla netleşir.":
+    "On-screen figures are catalog list prices and rule-based estimates. Final quotes are confirmed by our sales engineering team and project details.",
+  "Teklif gönderiminde paylaştığınız ad, telefon ve isteğe bağlı e-posta yalnızca Equsto tarafından işlenir; üçüncü taraflara satılmaz.":
+    "Name, phone and optional email you share when sending a quote are processed by Equsto only; they are not sold to third parties.",
+  "Türkiye içi projelerin yanı sıra Orta Doğu, Orta Asya ve Balkanlar başta olmak üzere ihracat odaklı ekipman tedariği ve lojistik desteği sunulur.":
+    "Alongside domestic projects in Turkey, we provide export-focused equipment supply and logistics across the Middle East, Central Asia and the Balkans.",
+  ", Equsto'nun kural-motoru tabanlı online ekipman teklif sistemidir. Kullanıcı konsept (restoran, kafe, otel, bulut mutfak, steakhouse, catering, vb.), kapasite ve alan bilgilerini girer; sistem ekipman listesini, fiyat tahminini ve PDF teklifi saniyeler içinde üretir. Hizmet bölgeleri: Türkiye, Ortadoğu, Kafkaslar, Orta Asya ve Balkanlar. Fiyatlar 2026 Türk Lirası, KDV %20 hariç. Proje iskontoları teklif sırasında uygulanır.":
+    ", Equsto's rule-engine online equipment quote system. Enter concept (restaurant, café, hotel, cloud kitchen, steakhouse, catering, etc.), capacity and floor area; the system generates equipment lists, price estimates and PDF quotes in seconds. Service regions: Turkey, Middle East, Caucasus, Central Asia and Balkans. Prices in 2026 Turkish Lira, VAT 20% excluded. Project discounts apply at quote time.",
+
+  /* Teklif tablosu / PDF (pfos-teklif-ui.js) */
+  Büyüt: "Enlarge",
+  Kapat: "Close",
+  "PROFORMA FATURA": "PROFORMA INVOICE",
+  "GENEL TOPLAM (KDV HARİÇ)": "GRAND TOTAL (EXCL. VAT)",
+  "ŞARTLARIMIZ": "OUR TERMS",
+  Şartlarımız: "Our terms",
+  "Proje özet metrikleri": "Project summary metrics",
+  "Toplam m²": "Total m²",
+  Kategori: "Category",
+  "Ürün çeşidi": "Product variety",
+  "Toplam adet": "Total quantity",
+  "Tahmini toplam": "Estimated total",
+  "Kategori marka seçimi": "Category brand selection",
+  "Kategori toplamı": "Category total",
+  BÖLÜM: "ZONE",
+  "Proforma ekipman listesi": "Proforma equipment list",
+  "Equsto Proje Fabrikası Teklifi": "Equsto Project Factory quote",
+  "Pop-up engellendi. localhost için pop-up izni verin veya Excel indirin.":
+    "Pop-up blocked. Allow pop-ups for localhost or download Excel instead.",
 };
