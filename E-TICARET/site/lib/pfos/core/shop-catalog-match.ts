@@ -149,7 +149,8 @@ function isExcludedForTip(name: string, tip: string): boolean {
   return false;
 }
 
-function itemMatchesTip(row: AdminUrunRow, tipKodu: string): boolean {
+/** Tip sözlüğü senkronu — katalog satırı bu tip_kodu ile eşleşiyor mu */
+export function productMatchesTipKodu(row: AdminUrunRow, tipKodu: string): boolean {
   const tip = String(tipKodu || "").trim();
   if (!tip) return false;
   const name = normName(row.ad);
@@ -307,8 +308,8 @@ function scoreCandidate(
   }
 
   if (TIP_MATCH_RULES[tip]) {
-    score += itemMatchesTip(row, tip) ? 140 : -800;
-  } else if (itemMatchesTip(row, tip)) {
+    score += productMatchesTipKodu(row, tip) ? 140 : -800;
+  } else if (productMatchesTipKodu(row, tip)) {
     score += 90;
   }
 
