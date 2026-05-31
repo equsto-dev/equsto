@@ -1,4 +1,5 @@
 import { dataPath, readJsonFile } from "@/lib/legacy-data";
+import type { AdminUrunRow } from "@/lib/admin-urun";
 import { loadLegacyCatalogRows, invalidateLegacyCatalogCache } from "@/lib/legacy-catalog";
 import type { EslesmisUrun, FiyatStratejisi } from "../schemas/pfos.schema";
 import { enrichEslesmisFromKatalogRow } from "./catalog-enrich";

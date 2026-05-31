@@ -27,6 +27,7 @@ Türkiye'nin lider endüstriyel mutfak markası **Öztiryakiler** ile yetkili ba
 - [/rehber/dark-kitchen-bulut-mutfak-2026](https://equsto.com/rehber/dark-kitchen-bulut-mutfak-2026) - Dark kitchen setup
 - [/rehber/restoran-mutfak-kurulumu-checklist-2026](https://equsto.com/rehber/restoran-mutfak-kurulumu-checklist-2026) - Restoran kurulum checklist
 - [/rehber/kafe-acilis-ekipman-listesi-2026](https://equsto.com/rehber/kafe-acilis-ekipman-listesi-2026) - Kafe açılış listesi
+- [/market-kasap-sarkuteri-kurulumu](https://equsto.com/market-kasap-sarkuteri-kurulumu) - Market, kasap ve şarküteri reyon kurulumu
 - [/endustriyel-mutfak-ekipmani-turkiye](https://equsto.com/endustriyel-mutfak-ekipmani-turkiye) - TR endüstriyel mutfak ekipmanı
 - [/restoran-mutfak-teklif](https://equsto.com/restoran-mutfak-teklif) - Restoran mutfak teklifi
 - [/otel-mutfak-ekipman-tedarik](https://equsto.com/otel-mutfak-ekipman-tedarik) - Otel mutfak tedarik
@@ -57,7 +58,10 @@ Tam liste: `public/data/eq-category-seo.json` (6 departman, 16 katalog kategoris
 
 ## Marka ve Ürün
 
-- [/marka.html](https://equsto.com/marka.html) - Marka bazlı ürün listeleme (Öztiryakiler, CSA İnox, Iceinox, Empero, Frenox, Ndustrio, KitchenAid, Rational, Inoksan)
+- [/shop/marka](https://equsto.com/shop/marka) - Marka hub dizini (Öztiryakiler, Atalay, Çağlayan, Proso)
+- [/shop/marka/oztiryakiler](https://equsto.com/shop/marka/oztiryakiler) - Öztiryakiler yetkili bayi katalog hub (Brand JSON-LD)
+- [/shop/marka/atalay](https://equsto.com/shop/marka/atalay) - Atalay pişirme ekipmanları hub
+- [/marka.html](https://equsto.com/marka.html) - Marka bazlı ürün listeleme (legacy yönlendirme → /shop/marka)
 - [/shop/sogutma/oztiryakiler-tag-270-nmv-cift-kapili-tezgah-tipi-buzdolabi](https://equsto.com/shop/sogutma/oztiryakiler-tag-270-nmv-cift-kapili-tezgah-tipi-buzdolabi) - Ürün detay örneği
 
 ## Veri Kaynakları ve Dil

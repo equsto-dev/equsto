@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import GeoLandingJsonLd from "@/components/seo/GeoLandingJsonLd";
 import GeoLandingPage from "@/components/vitrin/GeoLandingPage";
+import { buildGeoMetadata } from "@/lib/geo/metadata";
 import { GEO_TR_SLUGS } from "@/lib/vitrin/geo-routes";
 
 export const dynamicParams = false;
@@ -15,14 +17,20 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  return {
-    title: `${slug.replace(/-/g, " ")} · Equsto`,
-    alternates: { canonical: `https://equsto.com/${slug}` },
-  };
+  return buildGeoMetadata(slug, "tr", "root");
 }
 
-export default async function GeoTrSlugPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function GeoTrSlugPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = await params;
   if (!GEO_TR_SLUGS.includes(slug as (typeof GEO_TR_SLUGS)[number])) notFound();
-  return <GeoLandingPage />;
+  return (
+    <>
+      <GeoLandingJsonLd slug={slug} lang="tr" kind="root" />
+      <GeoLandingPage />
+    </>
+  );
 }
