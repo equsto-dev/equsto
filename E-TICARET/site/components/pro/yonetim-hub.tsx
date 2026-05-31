@@ -184,7 +184,7 @@ export default function YonetimHub() {
           <Col xs={24} sm={12} lg={8} key={m.key}>
             <ProCard
               hoverable
-              variant="outlined"
+              bordered
               style={{ height: "100%" }}
               onClick={() => {
                 window.location.href = m.href;
