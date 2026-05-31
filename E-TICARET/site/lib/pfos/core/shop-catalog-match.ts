@@ -1,6 +1,4 @@
-import { readFile } from "fs/promises";
-import path from "path";
-import type { AdminUrunRow } from "@/lib/admin-urun";
+import { dataPath, readJsonFile } from "@/lib/legacy-data";
 import { loadLegacyCatalogRows, invalidateLegacyCatalogCache } from "@/lib/legacy-catalog";
 import type { EslesmisUrun, FiyatStratejisi } from "../schemas/pfos.schema";
 import { enrichEslesmisFromKatalogRow } from "./catalog-enrich";
@@ -180,20 +178,10 @@ function deptForRow(row: AdminUrunRow): string {
 
 async function loadTipShopLinks(): Promise<Record<string, TipShopLink>> {
   if (tipLinksCache) return tipLinksCache;
-  try {
-    const filePath = path.join(
-      process.cwd(),
-      "public",
-      "data",
-      "pfos-tip-shop-links.json",
-    );
-    const raw = JSON.parse(await readFile(filePath, "utf-8")) as {
-      links?: Record<string, TipShopLink>;
-    };
-    tipLinksCache = raw.links ?? {};
-  } catch {
-    tipLinksCache = {};
-  }
+  const raw = await readJsonFile<{ links?: Record<string, TipShopLink> }>(
+    dataPath("pfos-tip-shop-links.json"),
+  );
+  tipLinksCache = raw?.links ?? {};
   return tipLinksCache;
 }
 
