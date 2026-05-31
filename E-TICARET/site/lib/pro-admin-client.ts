@@ -806,3 +806,106 @@ export async function fetchProjeAkis(): Promise<{
   }
   return fetchProjeAkisStatic();
 }
+
+export type TipSozlukEntry = {
+  tip_kodu: string;
+  aciklama: string;
+  kategori: string;
+  kaynak?: string;
+  frekans?: number;
+  alt_kategori?: string | null;
+};
+
+export async function fetchTipSozlugu(): Promise<{
+  entries: TipSozlukEntry[];
+  error?: string;
+}> {
+  try {
+    const res = await fetch("/data/tip-sozlugu.json", { cache: "no-store" });
+    if (!res.ok) return { entries: [], error: `HTTP ${res.status}` };
+    const raw = await parseJson<{ entries?: TipSozlukEntry[] } | TipSozlukEntry[]>(
+      res,
+    );
+    const entries = Array.isArray(raw) ? raw : raw.entries ?? [];
+    return { entries };
+  } catch (e) {
+    const msg = e instanceof Error ? e.message : "tip-sozlugu.json okunamadı";
+    return { entries: [], error: msg };
+  }
+}
+
+export type ImportAnalizItem = {
+  ham_isim: string;
+  tip_kodu: string;
+  kategori: string;
+  adet?: number;
+  durum?: "eslesti" | "yeni" | "belirsiz";
+  sozlukte_var?: boolean;
+};
+
+export async function analyzeImportFile(payload: {
+  dosya_base64: string;
+  dosya_tip: string;
+  system_prompt: string;
+  user_prompt: string;
+}): Promise<{ data?: ImportAnalizItem[]; error?: string }> {
+  const token = getProToken();
+  try {
+    const res = await fetch("/api/import/analiz", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        ...(token ? { Authorization: `Bearer ${token}` } : {}),
+      },
+      body: JSON.stringify(payload),
+      signal: AbortSignal.timeout(20 * 60 * 1000),
+    });
+    const text = await res.text();
+    let body: { success?: boolean; data?: ImportAnalizItem[]; error?: string };
+    try {
+      body = JSON.parse(text) as typeof body;
+    } catch {
+      return { error: `HTTP ${res.status}: ${text.slice(0, 400)}` };
+    }
+    if (!res.ok || body.success === false) {
+      return { error: body.error || `HTTP ${res.status}` };
+    }
+    return { data: body.data ?? [] };
+  } catch (e) {
+    if (e instanceof Error && e.name === "AbortError") {
+      return { error: "İstek 20 dakikada tamamlanmadı (zaman aşımı)" };
+    }
+    const msg = e instanceof Error ? e.message : String(e);
+    if (/fetch/i.test(msg)) {
+      return {
+        error:
+          "Sunucuya ulaşılamadı. npm run dev:all veya npm run api (port 3001) çalıştırın.",
+      };
+    }
+    return { error: msg };
+  }
+}
+
+export async function saveImportItems(
+  ekipmanlar: Array<{ tip_kodu: string; ham_isim: string; kategori: string }>,
+): Promise<{ eklendi?: number; guncellendi?: number; error?: string }> {
+  const token = getProToken();
+  const res = await fetch("/api/import/kaydet", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+    },
+    body: JSON.stringify({ ekipmanlar }),
+  });
+  const body = await parseJson<{
+    success?: boolean;
+    eklendi?: number;
+    guncellendi?: number;
+    error?: string;
+  }>(res);
+  if (!res.ok || body.error || body.success === false) {
+    return { error: body.error || `HTTP ${res.status}` };
+  }
+  return { eklendi: body.eklendi, guncellendi: body.guncellendi };
+}

@@ -45,10 +45,10 @@ export default function YonetimGirisPage() {
     >
       <Card style={{ width: 400, maxWidth: "100%" }} bordered={false}>
         <Typography.Title level={3} style={{ textAlign: "center", marginTop: 0 }}>
-          Equsto Yönetim
+          Founder Decision Panel
         </Typography.Title>
         <Typography.Paragraph type="secondary" style={{ textAlign: "center" }}>
-          Ant Design Pro — API Bearer token
+          admin.html yönetim — API Bearer token
         </Typography.Paragraph>
         {serverHint && (
           <Typography.Paragraph
@@ -72,7 +72,11 @@ export default function YonetimGirisPage() {
             }
             setProToken(token);
             message.success("Giriş kaydedildi");
-            router.replace("/yonetim");
+            const next =
+              typeof window !== "undefined"
+                ? new URLSearchParams(window.location.search).get("next")
+                : null;
+            router.replace(next && next.startsWith("/yonetim") ? next : "/yonetim");
           }}
           submitter={{ searchConfig: { submitText: "Panele gir" } }}
         >
