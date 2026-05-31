@@ -566,6 +566,8 @@ export function mapOztiPisirmeCategory(row) {
     return "setustu-bain-marie";
   }
   if (isOztiDonerOcak(row)) return "doner-ocaklari-";
+  if (/SALAMANDER/.test(String(row.urun_tanimi || row.name || row.kategori || "").toLocaleUpperCase("tr")))
+    return "salamander";
   return slugify(row.kategori) || "diger";
 }
 
@@ -698,6 +700,8 @@ export function mapOztiDept(row, setUstuAllow) {
   const pathHay = (row.kategori_yolu || []).join(" ").toLocaleUpperCase("tr");
   const kat = String(row.kategori || "").toLocaleUpperCase("tr");
   const hay = `${pathHay} ${kat} ${String(row.urun_tanimi || row.name || "")}`;
+
+  if (/SALAMANDER/.test(hay)) return "pisirme";
 
   if (/SETÜSTÜ\s*MUTFAK|SETUSTU\s*MUTFAK/.test(hay)) return "set-ustu-mutfak";
   if (setUstuAllow?.length) {
