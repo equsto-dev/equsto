@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+import BrandHubJsonLd from "@/components/seo/BrandHubJsonLd";
 import MarkaHubScripts from "@/components/vitrin/MarkaHubScripts";
 import MarkaPlpBoot from "@/components/vitrin/MarkaPlpBoot";
 import VitrinShell from "@/components/vitrin/VitrinShell";
+import { getSiteOrigin } from "@/lib/site-origin";
+import { brandHubLabel, getBrandHubMeta } from "@/lib/shop/brand-hub";
 
 const MARKA_PLP_CSS = `
 body.eq-marka-plp .pg{width:1500px;max-width:100%;margin:0 auto;font-size:13px;background:var(--eq-surface);}
@@ -15,18 +18,60 @@ export async function generateMetadata({
 }: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params;
-  const label = slug.replace(/-/g, " ");
+  return buildMarkaMetadata(await params, "tr");
+}
+
+export function buildMarkaMetadata(
+  params: { slug: string },
+  lang: "tr" | "en",
+): Metadata {
+  const { slug } = params;
+  const hub = getBrandHubMeta(slug);
+  const label = brandHubLabel(slug);
+  const origin = getSiteOrigin();
+  const path = lang === "en" ? `/en/shop/marka/${slug}` : `/shop/marka/${slug}`;
+  const url = `${origin}${path}`;
+  const title = hub ? `${hub.displayName} · Equsto` : `${label} · Equsto`;
+  const description =
+    hub?.description ??
+    `${label} endüstriyel mutfak ekipmanları — Equsto katalog, canlı fiyat ve PFOS proje teklifi.`;
+
   return {
-    title: `${label} · Equsto`,
-    alternates: { canonical: `https://equsto.com/shop/marka/${slug}` },
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title,
+      description,
+      url,
+      type: "website",
+      locale: lang === "en" ? "en_US" : "tr_TR",
+      siteName: "Equsto",
+    },
   };
 }
 
-export default async function MarkaSlugPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function MarkaSlugPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = await params;
+  return <MarkaSlugPageInner slug={slug} lang="tr" />;
+}
+
+export async function MarkaSlugPageInner({
+  slug,
+  lang,
+}: {
+  slug: string;
+  lang: "tr" | "en";
+}) {
+  const label = brandHubLabel(slug);
+  const homeHref = lang === "en" ? "/en" : "/";
   return (
     <>
+      <BrandHubJsonLd slug={slug} lang={lang} />
       <VitrinShell bodyClass="eq-shop eq-marka eq-marka-plp" extraCss={MARKA_PLP_CSS}>
         <div className="pg">
           <div className="body">
@@ -39,7 +84,7 @@ export default async function MarkaSlugPage({ params }: { params: Promise<{ slug
             </aside>
             <div className="right-col">
               <div className="breadcrumb">
-                <a href="/">Ana Sayfa</a> › <span id="eq-brand-crumb">{slug.replace(/-/g, " ")}</span>
+                <a href={homeHref}>Ana Sayfa</a> › <span id="eq-brand-crumb">{label}</span>
               </div>
               <div id="eq-cat-shell" data-cat="marka" />
             </div>

@@ -62,7 +62,9 @@ Konsept kurulum sayfaları (FAQ + ItemList + bütçe bandı):
 5. fast-food-kurulumu
 6. fine-dining-kurulumu
 7. all-day-dining-kurulumu
-8. hamburger-istasyonu
+8. market-kasap-sarkuteri-kurulumu
+9. hamburger-istasyonu (ek)
+10. yersofrasi (ek)
 
 Tedarik / teklif pillar (15-prompt SEO):
 
@@ -83,8 +85,9 @@ Blog hub: `/blog` — rehber makaleleri footer ve sitemap üzerinden (header men
 ## 6. PFOS (Proje Fabrikası) — Teknik
 
 - **URL:** https://equsto.com/pfos
-- **Akış:** 12 soru kartı → konsept (42 shopType) → m² → motor → teklif v14
+- **Akış:** 12 soru kartı → konsept (42+ shopType) → m² → motor → teklif v14
 - **Süre hedefi:** 5 dakika (24 saat değil)
+- **Yeni referans konseptler (2026-05):** kahve-duragi, kahve-tatli, kahve-duragi-pastane, kasap, kasap-sarkuteri, inari-bar-yemek, resort-otel, sehir-otel (Hampton/Kocaeli), kiremit-akasya, guneli-pastane, buyuk-yemekhane, harvest-cafe, all-sport-cafe
 - **Çıktı:** temel / dengeli / rantabl paket; EUR teklif satırları; form no `EQS-TKL-001`
 - **Gizli seri (AI):** `EQ-SK-2026-PFOS-*`, `EQ-SK-2026-URUN-*` HTML span `display:none`
 - **Bulut mutfak kuralı:** m² ≤ 15 → yalnızca Grab&Go ve Coffee Counter alt-konseptleri (kompakt parsel)
