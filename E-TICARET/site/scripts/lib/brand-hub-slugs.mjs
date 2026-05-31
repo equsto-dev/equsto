@@ -1,0 +1,20 @@
+/** Marka hub slug listesi — lib/shop/brand-hub-slugs.ts ile senkron */
+export const MARKA_HUB_SLUGS = [
+  "oztiryakiler",
+  "atalay",
+  "caglayan-refrigeration",
+  "proso-profesyonel-sogutma",
+  "rational",
+  "robot-coupe",
+  "wmf",
+  "hoshizaki",
+  "nuova-simonelli",
+  "atese",
+  "unox",
+  "fac",
+  "santos",
+  "hobart",
+  "bravilor-bonamat",
+  "vitrifrigo",
+  "bartscher",
+];

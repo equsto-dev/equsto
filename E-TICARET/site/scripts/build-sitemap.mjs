@@ -16,6 +16,7 @@ import {
   tipDeptToShop,
   uniqueBrandSlugs,
 } from "./lib/sitemap-entities.mjs";
+import { MARKA_HUB_SLUGS } from "./lib/brand-hub-slugs.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const PUBLIC = path.join(ROOT, "public");
@@ -119,7 +120,26 @@ function buildShopEnHubs() {
 
 function buildBrands(rows) {
   const urls = [];
+  const seen = new Set();
+  for (const slug of MARKA_HUB_SLUGS) {
+    if (seen.has(slug)) continue;
+    seen.add(slug);
+    urls.push(
+      urlEntry(`${ORIGIN}/shop/marka/${encodeURIComponent(slug)}`, {
+        priority: "0.8",
+        changefreq: "weekly",
+      }),
+    );
+    urls.push(
+      urlEntry(`${ORIGIN}/en/shop/marka/${encodeURIComponent(slug)}`, {
+        priority: "0.78",
+        changefreq: "weekly",
+      }),
+    );
+  }
   for (const { slug } of uniqueBrandSlugs(rows)) {
+    if (seen.has(slug)) continue;
+    seen.add(slug);
     urls.push(
       urlEntry(`${ORIGIN}/shop/marka/${encodeURIComponent(slug)}`, {
         priority: "0.8",

@@ -15,22 +15,46 @@ const BRAND_SLUG_ALIAS: Record<string, string> = {
   samixir: "Samixir",
   gtech: "Gtech",
   "robot-coupe": "Robot Coupe",
+  wmf: "WMF",
+  hoshizaki: "Hoshizaki",
+  "nuova-simonelli": "Nuova Simonelli",
+  atese: "Ateşe",
+  unox: "Unox",
+  fac: "FAC",
+  santos: "Santos",
+  hobart: "Hobart",
+  "bravilor-bonamat": "Bravilor Bonamat",
+  vitrifrigo: "Vitrifrigo",
+  bartscher: "Bartscher",
 };
 
-type BrandTarget = { dept?: string; facet?: string; markaHub?: boolean };
+type BrandTarget = { dept?: string; facet?: string; markaHub?: boolean; oztiOwnOnly?: boolean };
 
 const BRAND_SHOP_TARGET: Record<string, BrandTarget> = {
-  atalay: { dept: "pisirme", facet: "Atalay" },
-  oztiryakiler: { markaHub: true },
+  atalay: { markaHub: true, facet: "Atalay" },
+  oztiryakiler: { markaHub: true, facet: "Öztiryakiler", oztiOwnOnly: true },
+  "caglayan-refrigeration": { markaHub: true },
+  "proso-profesyonel-sogutma": { markaHub: true },
+  rational: { markaHub: true, facet: "Rational" },
+  "robot-coupe": { markaHub: true, facet: "Robot Coupe" },
+  wmf: { markaHub: true, facet: "WMF" },
+  hoshizaki: { markaHub: true, facet: "Hoshizaki" },
+  "nuova-simonelli": { markaHub: true, facet: "Nuova Simonelli" },
+  atese: { markaHub: true, facet: "Ateşe" },
+  unox: { markaHub: true, facet: "Unox" },
+  fac: { markaHub: true, facet: "FAC" },
+  santos: { markaHub: true, facet: "Santos" },
+  hobart: { markaHub: true, facet: "Hobart" },
+  "bravilor-bonamat": { markaHub: true, facet: "Bravilor Bonamat" },
+  vitrifrigo: { markaHub: true, facet: "Vitrifrigo" },
+  bartscher: { markaHub: true, facet: "Bartscher" },
   electrolux: { dept: "pisirme", facet: "Electrolux" },
   inoksan: { dept: "sogutma", facet: "İnoksan" },
   "la-cimbali": { dept: "kahve", facet: "La Cimbali" },
   faema: { dept: "kahve", facet: "Faema" },
-  rational: { dept: "pisirme", facet: "Rational" },
   empero: { dept: "yikama", facet: "Empero" },
   samixir: { dept: "hazirlik", facet: "Samixir" },
   gtech: { dept: "hazirlik", facet: "Gtech" },
-  "robot-coupe": { dept: "hazirlik", facet: "Robot Coupe" },
 };
 
 function normBrand(name: string): string {

@@ -387,6 +387,17 @@
     samixir: "Samixir",
     gtech: "Gtech",
     "robot-coupe": "Robot Coupe",
+    wmf: "WMF",
+    hoshizaki: "Hoshizaki",
+    "nuova-simonelli": "Nuova Simonelli",
+    atese: "Ateşe",
+    unox: "Unox",
+    fac: "FAC",
+    santos: "Santos",
+    hobart: "Hobart",
+    "bravilor-bonamat": "Bravilor Bonamat",
+    vitrifrigo: "Vitrifrigo",
+    bartscher: "Bartscher",
   };
 
   /**
@@ -394,17 +405,30 @@
    * facet: sol sütun Marka filtresindeki etiket (EqDeptCmFacets ile aynı).
    */
   var EQ_BRAND_SHOP_TARGET = {
-    atalay: { dept: "pisirme", facet: "Atalay" },
-    oztiryakiler: { markaHub: true },
+    atalay: { markaHub: true, facet: "Atalay" },
+    oztiryakiler: { markaHub: true, facet: "Öztiryakiler", oztiOwnOnly: true },
+    "caglayan-refrigeration": { markaHub: true },
+    "proso-profesyonel-sogutma": { markaHub: true },
+    rational: { markaHub: true, facet: "Rational" },
+    "robot-coupe": { markaHub: true, facet: "Robot Coupe" },
+    wmf: { markaHub: true, facet: "WMF" },
+    hoshizaki: { markaHub: true, facet: "Hoshizaki" },
+    "nuova-simonelli": { markaHub: true, facet: "Nuova Simonelli" },
+    atese: { markaHub: true, facet: "Ateşe" },
+    unox: { markaHub: true, facet: "Unox" },
+    fac: { markaHub: true, facet: "FAC" },
+    santos: { markaHub: true, facet: "Santos" },
+    hobart: { markaHub: true, facet: "Hobart" },
+    "bravilor-bonamat": { markaHub: true, facet: "Bravilor Bonamat" },
+    vitrifrigo: { markaHub: true, facet: "Vitrifrigo" },
+    bartscher: { markaHub: true, facet: "Bartscher" },
     electrolux: { dept: "pisirme", facet: "Electrolux" },
     inoksan: { dept: "sogutma", facet: "İnoksan" },
     "la-cimbali": { dept: "kahve", facet: "La Cimbali" },
     faema: { dept: "kahve", facet: "Faema" },
-    rational: { dept: "pisirme", facet: "Rational" },
     empero: { dept: "yikama", facet: "Empero" },
     samixir: { dept: "hazirlik", facet: "Samixir" },
     gtech: { dept: "hazirlik", facet: "Gtech" },
-    "robot-coupe": { dept: "hazirlik", facet: "Robot Coupe" },
   };
 
   function brandSlugify(name) {
@@ -508,14 +532,33 @@
   };
 
   window.eqBrandMatchesRow = function (row, brandCanonical, slug) {
-    var b = String((row && (row.brand || row.b)) || "").trim();
-    if (!b) return false;
+    if (!row) return false;
+    var b = String((row.brand || row.b) || "").trim();
+    var oem = String(row.oem_brand || "").trim();
+    slug = String(slug || "").toLowerCase().replace(/^\/+|\/+$/g, "");
+    var t = EQ_BRAND_SHOP_TARGET[slug];
+    var facet =
+      (t && t.facet) ||
+      (typeof window.eqBrandFacetLabel === "function" ? window.eqBrandFacetLabel(slug) : "") ||
+      "";
+    var facetLc = facet ? facet.toLocaleLowerCase("tr") : "";
+
+    if (slug === "oztiryakiler" || (t && t.oztiOwnOnly)) {
+      if (!/öztiryakiler|oztiryakiler/i.test(b)) return false;
+      if (!oem || oem === "Öztiryakiler") return true;
+      return false;
+    }
+
+    if (facetLc) {
+      if (oem && oem.toLocaleLowerCase("tr") === facetLc) return true;
+      if (b && b.toLocaleLowerCase("tr") === facetLc) return true;
+      if (b && b.toLocaleLowerCase("tr").indexOf(facetLc) === 0) return true;
+    }
+
     if (brandCanonical && b === brandCanonical) return true;
     var low = b.toLocaleLowerCase("tr");
-    slug = String(slug || "").toLowerCase();
-    if (slug === "oztiryakiler" && low.indexOf("öztiryakiler") >= 0) return true;
     if (slug === "atalay" && low.indexOf("atalay") >= 0) return true;
-    if (slug && !brandCanonical) {
+    if (slug && !brandCanonical && !facet) {
       var needle = slug.replace(/-/g, " ");
       return low.indexOf(needle) >= 0;
     }

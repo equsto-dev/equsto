@@ -1,0 +1,22 @@
+/** Marka hub URL slug'ları — sitemap ve yönlendirme ile paylaşılır */
+export const MARKA_HUB_SLUGS = [
+  "oztiryakiler",
+  "atalay",
+  "caglayan-refrigeration",
+  "proso-profesyonel-sogutma",
+  "rational",
+  "robot-coupe",
+  "wmf",
+  "hoshizaki",
+  "nuova-simonelli",
+  "atese",
+  "unox",
+  "fac",
+  "santos",
+  "hobart",
+  "bravilor-bonamat",
+  "vitrifrigo",
+  "bartscher",
+] as const;
+
+export type MarkaHubSlug = (typeof MARKA_HUB_SLUGS)[number];

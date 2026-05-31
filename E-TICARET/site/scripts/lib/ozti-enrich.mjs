@@ -656,11 +656,17 @@ export function detectOztiOemBrand(name, category, kod) {
   if (/^9890\./i.test(k) || /^5RRX\./i.test(k)) return "Rational";
   if (/^RATIONAL\b/i.test(up) || /\bRATIONAL\b/i.test(fullUp)) return "Rational";
   if (/^ROBOT\s+COUPE/.test(up)) return "Robot Coupe";
+  /** Robot Coupe — bayi SKU: 5R1X.*, 9840.*, 9860.*, 0830.* */
+  if (/^5R1X\.|^9840\.|^9860\.|^0830\./i.test(k) && /ROBOT\s*COUPE|CL\d|R\s*\d{3}/i.test(fullUp)) {
+    return "Robot Coupe";
+  }
   if (/^UNOX\b/.test(up)) return "Unox";
-  if (/^HOSHIZAKI\b/.test(up)) return "Hoshizaki";
+  if (/^9805\./i.test(k) || /^HOSHIZAKI\b/.test(up) || /\bHOSHIZAKI\b/i.test(fullUp)) return "Hoshizaki";
   if (/^WINTERHALTER\b/.test(up)) return "Winterhalter";
-  if (/^HOBART\b/.test(up)) return "Hobart";
-  if (/^FAC\b/.test(up)) return "FAC";
+  if (/^HOBART\b/.test(up) || /\bHOBART\b/i.test(fullUp)) return "Hobart";
+  if (/^9830\./i.test(k) || /^FAC\b/.test(up) || /\bFAC\b/i.test(fullUp)) return "FAC";
+  if (/^9868\./i.test(k) || /^VITRIFRIGO\b/.test(up) || /\bVITRIFRIGO\b/i.test(fullUp)) return "Vitrifrigo";
+  if (/^BARTSCHER\b/.test(up) || /\bBARTSCHER\b/i.test(fullUp)) return "Bartscher";
   if (/^SANTOS\b/.test(up)) return "Santos";
   if (/^ELECTROLUX(?:\s+PROFESSIONAL)?\b/.test(up)) return up.startsWith("ELECTROLUX PROFESSIONAL") ? "Electrolux Professional" : "Electrolux";
   if (/^İNOKSAN\b|^INOKSAN\b/.test(up)) return "İnoksan";
