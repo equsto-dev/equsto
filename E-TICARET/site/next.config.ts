@@ -38,7 +38,6 @@ function legacyHtmlRedirects() {
     ["buradan-basladi.html", "/buradan-basladi"],
     ["marka.html", "/shop/marka"],
     ["login.html", "/login"],
-    ["admin.html", "/admin"],
     ["bar-design.html", "/besos"],
     ["imt300.html", "/besos/imt300"],
     ["bar-module.html", "/besos"],
@@ -154,6 +153,8 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       { source: "/index.html", destination: "/", permanent: true },
+      { source: "/admin", destination: "/admin.html", permanent: false },
+      { source: "/en/admin", destination: "/admin.html", permanent: false },
       { source: "/shop/index.html", destination: "/", permanent: true },
       { source: "/shop", destination: "/", permanent: true },
       { source: "/shop/:dept.html", destination: "/shop/:dept", permanent: true },
