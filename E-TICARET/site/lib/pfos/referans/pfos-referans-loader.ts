@@ -22,7 +22,8 @@ export type ReferansListeId =
   | "60-100"
   | "150-300"
   | "500-1000"
-  | "30-50";
+  | "30-50"
+  | "150-250";
 
 export function pickM2Bant(m2: number): M2BantId {
   return m2 <= 150 ? "80-150" : "150-250";
@@ -41,6 +42,11 @@ export function pickItalyanListe(m2: number): "100-300" | "150-300" {
 /** All day dining: 150–300 m² referans JSON (The House); >300 → gömülü THC listeleri */
 export function pickAllDayDiningListe(m2: number): "150-300" | null {
   return m2 >= 150 && m2 <= 300 ? "150-300" : null;
+}
+
+/** Pastane: ≤150 m² → 14-PASTANE (100–200); >150 → ekipman_listesi (150–250) */
+export function pickPastaneListe(m2: number): "100-200" | "150-250" {
+  return m2 <= 150 ? "100-200" : "150-250";
 }
 
 /** Balıkçı: mahalle alt tipi veya m² bandı */
@@ -129,7 +135,7 @@ export async function loadReferansProfil(
       : kategoriId === "pizzaci"
         ? pickPizzaciListe(m2)
         : kategoriId === "pastane"
-          ? "100-200"
+          ? pickPastaneListe(m2)
           : kategoriId === "pideci"
             ? "100-250"
             : kategoriId === "sushi"

@@ -73,9 +73,10 @@ export const PFOS_KATEGORI_TANIMLARI: PfosKategoriTanim[] = [
     id: "pastane",
     label: "Pastane",
     ustKategori: "Pastane & Fırın",
-    planNot: "proje-veri/14-PASTANE.xlsx",
+    planNot: "proje-veri/14-PASTANE.xlsx · veri/pastane ekipman_listesi.xlsx",
     bantlar: [
-      { id: "100-200", label: "100–200 m²", referansM2: 150 },
+      { id: "100-200", label: "100–200 m² (≤150 m²)", referansM2: 150 },
+      { id: "150-250", label: "150–250 m² (>150 m²)", referansM2: 200 },
     ],
   },
   {

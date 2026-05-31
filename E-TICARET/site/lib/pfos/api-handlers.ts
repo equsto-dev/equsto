@@ -20,7 +20,7 @@ const M2_RANGES: Record<string, { min: number; max: number }> = {
   balikci: { min: 80, max: 250 },
   italyan: { min: 100, max: 300 },
   birahane: { min: 100, max: 300 },
-  pastane: { min: 100, max: 200 },
+  pastane: { min: 100, max: 250 },
   pideci: { min: 100, max: 250 },
   sushi: { min: 40, max: 100 },
   "sarkuteri-kiosk": { min: 25, max: 80 },
@@ -103,8 +103,8 @@ export function pfosGetConcepts() {
       ornekler: ["Butik pastane", "Patisserie"],
       m2Min: M2_RANGES.pastane.min,
       m2Max: M2_RANGES.pastane.max,
-      itemSayisi: 43,
-      zorunluSayisi: 43,
+      itemSayisi: 41,
+      zorunluSayisi: 41,
     },
     {
       konsept: "pizzaci",
@@ -253,7 +253,7 @@ export function pfosGetKonseptler() {
       label: KONSEPT_LABELS.pastane,
       ornekler: ["Butik pastane", "Patisserie"],
       seatDensity: 1.4,
-      kalemSayisi: 43,
+      kalemSayisi: 41,
     },
     {
       slug: "pizzaci",
