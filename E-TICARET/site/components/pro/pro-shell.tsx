@@ -2,14 +2,11 @@
 
 import {
   DashboardOutlined,
-  SearchOutlined,
-  ShopOutlined,
-  DatabaseOutlined,
   LinkOutlined,
   LogoutOutlined,
   ProjectOutlined,
-  CloudUploadOutlined,
-  PictureOutlined,
+  ShopOutlined,
+  ToolOutlined,
 } from "@ant-design/icons";
 import { ProLayout } from "@ant-design/pro-layout";
 import { Dropdown } from "antd";
@@ -19,13 +16,10 @@ import { useEffect, useState, type ReactNode } from "react";
 import { clearProToken, getProToken } from "@/lib/pro-admin-client";
 
 const menuRoutes = [
-  { path: "/yonetim/kontrol", name: "Kontrol", icon: <DashboardOutlined /> },
-  { path: "/yonetim/katalog", name: "Katalog & görseller", icon: <PictureOutlined /> },
+  { path: "/yonetim", name: "Ana sayfa", icon: <DashboardOutlined /> },
+  { path: "/yonetim/eticaret", name: "E-ticaret", icon: <ShopOutlined /> },
   { path: "/yonetim/pfos", name: "PFOS", icon: <ProjectOutlined /> },
-  { path: "/yonetim/yayin", name: "Yayınlama", icon: <CloudUploadOutlined /> },
-  { path: "/yonetim/ozet", name: "Özet", icon: <DashboardOutlined /> },
-  { path: "/yonetim/urunler", name: "Ürünler", icon: <ShopOutlined /> },
-  { path: "/yonetim/arama", name: "Arama", icon: <SearchOutlined /> },
+  { path: "/yonetim/kontrol", name: "Kontrol", icon: <ToolOutlined /> },
 ];
 
 export function ProShell({ children }: { children: ReactNode }) {
@@ -47,7 +41,7 @@ export function ProShell({ children }: { children: ReactNode }) {
     <ProLayout
       title="Equsto Yönetim"
       logo={
-        <Link href="/yonetim/kontrol" style={{ color: "#fff", fontWeight: 700 }}>
+        <Link href="/yonetim" style={{ color: "#fff", fontWeight: 700 }}>
           EQUSTO
         </Link>
       }
@@ -121,6 +115,6 @@ export function ProShell({ children }: { children: ReactNode }) {
 export const proMenuIcons = {
   dashboard: <DashboardOutlined />,
   products: <ShopOutlined />,
-  catalog: <DatabaseOutlined />,
-  search: <SearchOutlined />,
+  eticaret: <ShopOutlined />,
+  pfos: <ProjectOutlined />,
 };

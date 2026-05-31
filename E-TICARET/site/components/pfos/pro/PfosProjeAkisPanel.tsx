@@ -9,6 +9,7 @@ import {
   Statistic,
   Table,
   Tabs,
+  Tag,
   Typography,
   message,
 } from "antd";
@@ -33,10 +34,89 @@ type RuleRow = {
   typeId: string;
   setId: string;
   desc?: string;
-  conditions?: { label: string; value: string }[];
+  priority?: number;
+  conditions?: { label?: string; questionId?: string; op?: string; value: string }[];
 };
 
-type EqSetRow = { id: string; name: string; selectedIds?: string[] };
+type EqSetRow = {
+  id: string;
+  name: string;
+  typeId?: string;
+  desc?: string;
+  source?: string;
+  selectedIds?: string[];
+};
+
+function buildEqSetId(typeId: string, bantId?: string) {
+  return `set_${typeId}${bantId ? `_${bantId}` : ""}`.replace(/[^a-z0-9_]+/gi, "_");
+}
+
+function buildRuleId(typeId: string, setId: string) {
+  return `rule_${typeId}_${setId}`.replace(/[^a-z0-9_]+/gi, "_");
+}
+
+function createStarterEqSets(shopTypes: ShopTypeKayit[]): EqSetRow[] {
+  const rows: EqSetRow[] = [];
+  for (const concept of shopTypes) {
+    if (concept.pfos.durum === "planlanan") continue;
+    if (concept.pfos.bantlar.length) {
+      for (const bant of concept.pfos.bantlar) {
+        rows.push({
+          id: buildEqSetId(concept.id, bant.id),
+          name: `${concept.name} - ${bant.label}`,
+          typeId: concept.id,
+          source: bant.listeDosya,
+          desc: `${concept.pfos.dukkanSecim} / ${bant.label} / ref ${bant.referansM2} m²`,
+          selectedIds: [],
+        });
+      }
+      continue;
+    }
+    rows.push({
+      id: buildEqSetId(concept.id),
+      name: `${concept.name} - motor şablon`,
+      typeId: concept.id,
+      source: concept.pfos.motorSlug || concept.pfos.teklifKaynagi,
+      desc: concept.pfos.bantKurali,
+      selectedIds: [],
+    });
+  }
+  return rows;
+}
+
+function createStarterRules(shopTypes: ShopTypeKayit[], eqSets: EqSetRow[]): RuleRow[] {
+  const rows: RuleRow[] = [];
+  for (const set of eqSets) {
+    const concept = shopTypes.find((t) => t.id === set.typeId);
+    if (!concept) continue;
+    const bant = concept.pfos.bantlar.find((b) => set.id.endsWith(`_${b.id}`));
+    const conditions: RuleRow["conditions"] = [
+      {
+        label: "Dükkan türü",
+        questionId: "q_dukkan_turu",
+        op: "equals",
+        value: concept.pfos.dukkanSecim,
+      },
+    ];
+    if (bant) {
+      conditions.push({
+        label: "m² bandı",
+        questionId: "q_m2",
+        op: "band",
+        value: bant.label,
+      });
+    }
+    rows.push({
+      id: buildRuleId(concept.id, set.id),
+      typeId: concept.id,
+      setId: set.id,
+      priority: bant ? 20 : 50,
+      desc: `${concept.name} seçilirse ${set.name} setini öner`,
+      conditions,
+    });
+  }
+  return rows;
+}
 
 export default function PfosProjeAkisPanel() {
   const [loading, setLoading] = useState(true);
@@ -94,6 +174,11 @@ export default function PfosProjeAkisPanel() {
   const rules = (data?.rules ?? []) as RuleRow[];
   const eqSets = (data?.eqSets ?? []) as EqSetRow[];
   const products = data?.products ?? [];
+  const setConceptIds = new Set(eqSets.map((s) => s.typeId).filter(Boolean));
+  const ruleSetIds = new Set(rules.map((r) => r.setId).filter(Boolean));
+  const activeConcepts = shopTypes.filter((t) => t.pfos.durum !== "planlanan");
+  const conceptsWithoutSet = activeConcepts.filter((t) => !setConceptIds.has(t.id));
+  const setsWithoutRule = eqSets.filter((s) => !ruleSetIds.has(s.id));
 
   return (
     <ProCard
@@ -351,20 +436,146 @@ export default function PfosProjeAkisPanel() {
           },
           {
             key: "set-kural",
-            label: "Set & Kural",
+            label: `Set & Kural (${eqSets.length}/${rules.length})`,
             children: (
-              <Alert
-                type="info"
-                showIcon
-                message="Set ve kural henüz panelden düzenlenmiyor"
-                description={
-                  <>
-                    Ekipman seti + kural zinciri için şimdilik{" "}
-                    <strong>admin.html</strong> → Setler / Kurallar. Motor
-                    (B) steakhouse/balikci için referans listesi yeterli.
-                  </>
-                }
-              />
+              <>
+                <Alert
+                  type="info"
+                  showIcon
+                  style={{ marginBottom: 12 }}
+                  message="Set ve kural taslakları"
+                  description="Bu alan proje-akis.json içindeki eqSets ve rules bloklarını yönetim paneline taşımak için ilk çalışma alanı. Üretilen taslaklar ürün seçimi yapmaz; konsept, m² bandı ve referans liste bağlantısını kurar."
+                />
+                <Space style={{ marginBottom: 12 }} wrap>
+                  <Button
+                    type="primary"
+                    loading={saving}
+                    onClick={() => {
+                      const nextSets = createStarterEqSets(shopTypes);
+                      const next = { ...withBase(), eqSets: nextSets };
+                      setData(next);
+                      persist(next);
+                    }}
+                  >
+                    Konseptlerden set taslağı üret
+                  </Button>
+                  <Button
+                    loading={saving}
+                    disabled={!eqSets.length}
+                    onClick={() => {
+                      const nextRules = createStarterRules(shopTypes, eqSets);
+                      const next = { ...withBase(), rules: nextRules };
+                      setData(next);
+                      persist(next);
+                    }}
+                  >
+                    Setlerden kural taslağı üret
+                  </Button>
+                  <Button
+                    loading={saving}
+                    onClick={() => {
+                      const next = { ...withBase(), eqSets: [], rules: [] };
+                      setData(next);
+                      persist(next);
+                    }}
+                  >
+                    Set ve kuralları temizle
+                  </Button>
+                </Space>
+                <Space size="large" style={{ marginBottom: 12 }} wrap>
+                  <Statistic title="Aktif konsept" value={activeConcepts.length} />
+                  <Statistic title="Setsiz konsept" value={conceptsWithoutSet.length} />
+                  <Statistic title="Kuralsız set" value={setsWithoutRule.length} />
+                </Space>
+                <Tabs
+                  size="small"
+                  items={[
+                    {
+                      key: "sets",
+                      label: `Setler (${eqSets.length})`,
+                      children: (
+                        <Table<EqSetRow & { key: string }>
+                          size="small"
+                          pagination={{ pageSize: 10 }}
+                          scroll={{ x: 1000 }}
+                          dataSource={eqSets.map((s) => ({ ...s, key: s.id }))}
+                          columns={[
+                            { title: "Set ID", dataIndex: "id", width: 220 },
+                            { title: "Set adı", dataIndex: "name", width: 240 },
+                            {
+                              title: "Konsept",
+                              dataIndex: "typeId",
+                              width: 180,
+                              render: (v) => (
+                                <Typography.Text code style={{ fontSize: 11 }}>
+                                  {String(v || "-")}
+                                </Typography.Text>
+                              ),
+                            },
+                            {
+                              title: "Kaynak",
+                              dataIndex: "source",
+                              width: 260,
+                              render: (v) => (
+                                <Typography.Text type="secondary" style={{ fontSize: 11 }}>
+                                  {String(v || "-")}
+                                </Typography.Text>
+                              ),
+                            },
+                            {
+                              title: "Ürün",
+                              width: 80,
+                              render: (_, row) => row.selectedIds?.length ?? 0,
+                            },
+                            { title: "Not", dataIndex: "desc" },
+                          ]}
+                        />
+                      ),
+                    },
+                    {
+                      key: "rules",
+                      label: `Kurallar (${rules.length})`,
+                      children: (
+                        <Table<RuleRow & { key: string }>
+                          size="small"
+                          pagination={{ pageSize: 10 }}
+                          scroll={{ x: 1000 }}
+                          dataSource={rules.map((r) => ({ ...r, key: r.id }))}
+                          columns={[
+                            { title: "Kural ID", dataIndex: "id", width: 240 },
+                            {
+                              title: "Konsept",
+                              dataIndex: "typeId",
+                              width: 160,
+                              render: (v) => (
+                                <Typography.Text code style={{ fontSize: 11 }}>
+                                  {String(v || "-")}
+                                </Typography.Text>
+                              ),
+                            },
+                            { title: "Set", dataIndex: "setId", width: 220 },
+                            { title: "Öncelik", dataIndex: "priority", width: 80 },
+                            {
+                              title: "Koşullar",
+                              width: 260,
+                              render: (_, row) => (
+                                <Space wrap size={[4, 4]}>
+                                  {(row.conditions ?? []).map((c, i) => (
+                                    <Tag key={`${row.id}-${i}`}>
+                                      {c.label || c.questionId}: {c.value}
+                                    </Tag>
+                                  ))}
+                                </Space>
+                              ),
+                            },
+                            { title: "Not", dataIndex: "desc" },
+                          ]}
+                        />
+                      ),
+                    },
+                  ]}
+                />
+              </>
             ),
           },
           {

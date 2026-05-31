@@ -72,7 +72,7 @@ export default function YonetimGirisPage() {
             }
             setProToken(token);
             message.success("Giriş kaydedildi");
-            router.replace("/yonetim/kontrol");
+            router.replace("/yonetim");
           }}
           submitter={{ searchConfig: { submitText: "Panele gir" } }}
         >

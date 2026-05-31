@@ -258,7 +258,211 @@ export async function fetchSearchPreview(q: string) {
 
 export async function fetchKur() {
   const res = await fetch("/api/kur");
-  return parseJson<{ rate?: number; success?: boolean }>(res);
+  return parseJson<{
+    rate?: number;
+    success?: boolean;
+    date?: string;
+    source?: string;
+    fallback?: boolean;
+  }>(res);
+}
+
+export type EticaretKampanya = {
+  ad: string;
+  desc?: string;
+  start?: string;
+  end?: string;
+  active: boolean;
+};
+
+export type EticaretKupon = {
+  kod: string;
+  tutar?: number;
+  yuzde?: number;
+  aktif: boolean;
+};
+
+export type EticaretBanner = {
+  url: string;
+  aciklama?: string;
+};
+
+export type EticaretIcerik = {
+  k: EticaretKampanya[];
+  kp: EticaretKupon[];
+  b: EticaretBanner[];
+  dy: unknown[];
+  r: unknown[];
+  a: Record<string, unknown>;
+};
+
+export const EMPTY_ETICARET_ICERIK: EticaretIcerik = {
+  k: [],
+  kp: [],
+  b: [],
+  dy: [],
+  r: [],
+  a: {},
+};
+
+export async function fetchEticaretIcerik(): Promise<{
+  data: EticaretIcerik;
+  error?: string;
+}> {
+  const token = getProToken();
+  const res = await fetch("/api/eticaret-icerik", {
+    headers: token ? { Authorization: `Bearer ${token}` } : {},
+    cache: "no-store",
+  });
+  const body = await parseJson<{
+    success?: boolean;
+    data?: EticaretIcerik;
+    error?: string;
+  }>(res);
+  if (!res.ok || body.error || body.success === false) {
+    return { data: { ...EMPTY_ETICARET_ICERIK }, error: body.error || `HTTP ${res.status}` };
+  }
+  const data = body.data ?? EMPTY_ETICARET_ICERIK;
+  return {
+    data: {
+      k: Array.isArray(data.k) ? data.k : [],
+      kp: Array.isArray(data.kp) ? data.kp : [],
+      b: Array.isArray(data.b) ? data.b : [],
+      dy: Array.isArray(data.dy) ? data.dy : [],
+      r: Array.isArray(data.r) ? data.r : [],
+      a: typeof data.a === "object" && data.a ? data.a : {},
+    },
+  };
+}
+
+export async function saveEticaretIcerik(
+  payload: EticaretIcerik,
+): Promise<{ data?: EticaretIcerik; error?: string }> {
+  const token = getProToken();
+  const res = await fetch("/api/eticaret-icerik", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+    },
+    body: JSON.stringify(payload),
+  });
+  const body = await parseJson<{
+    success?: boolean;
+    data?: EticaretIcerik;
+    error?: string;
+  }>(res);
+  if (!res.ok || body.error || body.success === false) {
+    return { error: body.error || `HTTP ${res.status}` };
+  }
+  return { data: body.data ?? payload };
+}
+
+export async function deleteEticaretItem(
+  type: "kampanya" | "kupon",
+  index: number,
+): Promise<{ data?: EticaretIcerik; error?: string }> {
+  const token = getProToken();
+  const q = new URLSearchParams({ type, index: String(index) });
+  const res = await fetch(`/api/eticaret-icerik?${q}`, {
+    method: "DELETE",
+    headers: token ? { Authorization: `Bearer ${token}` } : {},
+  });
+  const body = await parseJson<{
+    success?: boolean;
+    data?: EticaretIcerik;
+    error?: string;
+  }>(res);
+  if (!res.ok || body.error || body.success === false) {
+    return { error: body.error || `HTTP ${res.status}` };
+  }
+  return { data: body.data };
+}
+
+export async function fetchFiyatlarMap(): Promise<{
+  map: Record<string, number>;
+  error?: string;
+}> {
+  const token = getProToken();
+  const res = await fetch("/api/market?kind=fiyatlar", {
+    headers: token ? { Authorization: `Bearer ${token}` } : {},
+    cache: "no-store",
+  });
+  const body = await parseJson<{
+    success?: boolean;
+    data?: Record<string, number>;
+    error?: string;
+  }>(res);
+  if (!res.ok || body.error || body.success === false) {
+    return { map: {}, error: body.error || `HTTP ${res.status}` };
+  }
+  return { map: body.data && typeof body.data === "object" ? body.data : {} };
+}
+
+export async function saveFiyatlarMap(
+  fiyatlar: Record<string, number>,
+): Promise<{ count?: number; error?: string }> {
+  const token = getProToken();
+  const res = await fetch("/api/market?kind=fiyatlar", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+    },
+    body: JSON.stringify({ fiyatlar }),
+  });
+  const body = await parseJson<{ success?: boolean; count?: number; error?: string }>(res);
+  if (!res.ok || body.error || body.success === false) {
+    return { error: body.error || `HTTP ${res.status}` };
+  }
+  return { count: body.count };
+}
+
+export type PublishCheckItem = {
+  id: string;
+  label: string;
+  url: string;
+  ok: boolean;
+  detail?: string;
+};
+
+export async function fetchPublishChecks(): Promise<PublishCheckItem[]> {
+  const endpoints: Omit<PublishCheckItem, "ok" | "detail">[] = [
+    { id: "ekipmanlar", label: "Vitrin kataloğu", url: "/data/ekipmanlar.json" },
+    { id: "fiyatlar", label: "Fiyat listesi", url: "/data/fiyatlar.json" },
+    { id: "sitemap", label: "Sitemap", url: "/sitemap.xml" },
+    { id: "feed", label: "Google Merchant feed", url: "/feeds/google-products.xml" },
+    { id: "llms", label: "llms.txt (AI keşif)", url: "/llms.txt" },
+    { id: "robots", label: "robots.txt", url: "/robots.txt" },
+  ];
+
+  const results = await Promise.all(
+    endpoints.map(async (item) => {
+      try {
+        const res = await fetch(item.url, { cache: "no-store" });
+        let detail = `HTTP ${res.status}`;
+        if (item.id === "ekipmanlar" && res.ok) {
+          const rows = await res.json();
+          detail = Array.isArray(rows) ? `${rows.length} ürün` : detail;
+        }
+        if (item.id === "fiyatlar" && res.ok) {
+          const file = await res.json();
+          const inner =
+            file?.data && typeof file.data === "object" ? file.data : file;
+          const count =
+            inner && typeof inner === "object" && !Array.isArray(inner)
+              ? Object.keys(inner).length
+              : 0;
+          detail = `${count} fiyat anahtarı`;
+        }
+        return { ...item, ok: res.ok, detail };
+      } catch (e) {
+        const msg = e instanceof Error ? e.message : "İstek başarısız";
+        return { ...item, ok: false, detail: msg };
+      }
+    }),
+  );
+  return results;
 }
 
 export type CatalogStats = {
@@ -305,6 +509,43 @@ export const EMPTY_PROJE_AKIS: ProjeAkisData = {
 
 export function rowHasImage(row: EkipmanRow): boolean {
   return Array.isArray(row.images) && !!String(row.images[0] || "").trim();
+}
+
+/** Katalog satırı için fiyat anahtarları (eq-fiyatlar-bridge ile uyumlu). */
+export function resolveEkipmanPriceKeys(row: EkipmanRow): string[] {
+  const keys: string[] = [];
+  const tip = row.urun_kodu || row.sku || row.model;
+  if (tip) keys.push(String(tip).trim());
+  if (row.category) keys.push(String(row.category).trim());
+  if (row.id) keys.push(String(row.id).trim());
+  return keys;
+}
+
+export function ekipmanHasFiyat(
+  row: EkipmanRow,
+  map: Record<string, number>,
+): boolean {
+  for (const k of resolveEkipmanPriceKeys(row)) {
+    const v = map[k];
+    if (Number.isFinite(v) && v > 0) return true;
+  }
+  const brand = String(row.brand || "").toLowerCase();
+  if (/öztiryaki|oztiryaki|ozti/.test(brand)) {
+    const raw = row as EkipmanRow & {
+      satis_fiyati_eur?: number;
+      liste_fiyati_eur?: number;
+      bayi_iskonto?: number;
+    };
+    if (
+      Number(raw.satis_fiyati_eur) > 0 ||
+      (Number(raw.liste_fiyati_eur) > 0 &&
+        Number(raw.bayi_iskonto) > 0 &&
+        Number(raw.bayi_iskonto) < 1)
+    ) {
+      return true;
+    }
+  }
+  return false;
 }
 
 /** Öztiryakiler web yolu veya sku → ax-images önizleme URL. */

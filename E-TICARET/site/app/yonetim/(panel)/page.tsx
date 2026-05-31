@@ -1,6 +1,5 @@
-import { redirect } from "next/navigation";
+import YonetimHub from "@/components/pro/yonetim-hub";
 
-/** Giriş sonrası varsayılan: sistem kontrolü */
 export default function YonetimIndexPage() {
-  redirect("/yonetim/kontrol");
+  return <YonetimHub />;
 }
