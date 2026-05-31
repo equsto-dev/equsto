@@ -57,7 +57,12 @@ export function ProShell({ children }: { children: ReactNode }) {
         })),
       }}
       menuItemRender={(item, dom) => {
-        if (!item.path || item.path === pathname) return dom;
+        if (!item.path) return dom;
+        const active =
+          item.path === "/yonetim"
+            ? pathname === "/yonetim"
+            : pathname === item.path || pathname.startsWith(`${item.path}/`);
+        if (active) return dom;
         return <Link href={item.path}>{dom}</Link>;
       }}
       avatarProps={{

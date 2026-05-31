@@ -2,6 +2,9 @@
 
 import {
   AppstoreOutlined,
+  CalculatorOutlined,
+  CloudDownloadOutlined,
+  CloudUploadOutlined,
   ExportOutlined,
   FileAddOutlined,
   ProjectOutlined,
@@ -12,10 +15,13 @@ import { Alert, Button, Col, Row, Space, Tabs, Typography } from "antd";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { getProToken } from "@/lib/pro-admin-client";
+import PfosExportPanel from "@/components/pfos/pro/PfosExportPanel";
+import PfosImportPanel from "@/components/pfos/pro/PfosImportPanel";
 import PfosKategoriPanel from "@/components/pfos/pro/PfosKategoriPanel";
 import PfosProjeAkisPanel from "@/components/pfos/pro/PfosProjeAkisPanel";
 import PfosProjeList from "@/components/pfos/pro/PfosProjeList";
 import PfosProWizard from "@/components/pfos/pro/PfosProWizard";
+import PfosSogukOdaPanel from "@/components/pfos/pro/PfosSogukOdaPanel";
 import { fetchProjeAkis } from "@/lib/pro-admin-client";
 
 function PfosOzetPanel() {
@@ -113,14 +119,14 @@ function PfosOzetPanel() {
       </Row>
 
       <ProCard
-        title="Tam PFOS düzenleme (legacy)"
+        title="Legacy admin"
         style={{ marginTop: 16 }}
         extra={<ToolOutlined />}
       >
         <Typography.Paragraph>
-          PDF/Excel import, soru editörü ve kural setleri hâlâ{" "}
-          <strong>admin.html</strong> içinde. Teklif motoru ve sihirbaz bu panelde
-          (Ant Design Pro);           canlı müşteri sayfası: <strong>/pfos</strong> (soru seti v3).
+          Import, export ve soğuk oda hesabı bu panelde. Soru editörü ve kural
+          setleri için hâlâ <strong>admin.html</strong> kullanılabilir. Canlı
+          müşteri: <strong>/pfos</strong>.
         </Typography.Paragraph>
         <Space wrap>
           <Button
@@ -172,6 +178,33 @@ export default function YonetimPfosPage() {
               </span>
             ),
             children: <PfosProWizard />,
+          },
+          {
+            key: "import",
+            label: (
+              <span>
+                <CloudUploadOutlined /> Import
+              </span>
+            ),
+            children: <PfosImportPanel />,
+          },
+          {
+            key: "export",
+            label: (
+              <span>
+                <CloudDownloadOutlined /> Export
+              </span>
+            ),
+            children: <PfosExportPanel />,
+          },
+          {
+            key: "soguk-oda",
+            label: (
+              <span>
+                <CalculatorOutlined /> Soğuk oda
+              </span>
+            ),
+            children: <PfosSogukOdaPanel />,
           },
           {
             key: "kategoriler",

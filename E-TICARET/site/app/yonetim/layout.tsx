@@ -1,20 +1,12 @@
 import type { Metadata } from "next";
-import { ProProvider } from "@/components/pro/pro-provider";
-import "antd/dist/reset.css";
+import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
   title: "Equsto Yönetim",
-  description: "Ant Design Pro yönetim paneli",
+  robots: { index: false, follow: false },
 };
 
-export default function YonetimRootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <div style={{ minHeight: "100vh" }}>
-      <ProProvider>{children}</ProProvider>
-    </div>
-  );
+/** /yonetim → admin.html (giris hariç ayrı layout) */
+export default function YonetimRootLayout({ children }: { children: ReactNode }) {
+  return children;
 }

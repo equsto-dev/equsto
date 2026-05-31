@@ -1,0 +1,1143 @@
+{
+  "version": 1,
+  "updated": "2026-05-31T18:52:32.837Z",
+  "count": 142,
+  "entries": [
+    {
+      "tip_kodu": "bar_blender",
+      "aciklama": "Bar blender, ses hazneli",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 21
+    },
+    {
+      "tip_kodu": "bar_buzdolabi",
+      "aciklama": "sishe sogutucu · şişe soğutucu · bbc35",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "motor",
+      "frekans": 3
+    },
+    {
+      "tip_kodu": "bar_kuvet",
+      "aciklama": "kuvet · 40*40*25",
+      "kategori": "yikama",
+      "alt_kategori": null,
+      "kaynak": "motor",
+      "frekans": 972
+    },
+    {
+      "tip_kodu": "bar_mikser",
+      "aciklama": "bar mikser · milk frother · sut kop",
+      "kategori": "icecek",
+      "alt_kategori": null,
+      "kaynak": "motor",
+      "frekans": 3
+    },
+    {
+      "tip_kodu": "bardak_yikama",
+      "aciklama": "bardak yık · bardak yik · undercounter",
+      "kategori": "yikama",
+      "alt_kategori": null,
+      "kaynak": "motor",
+      "frekans": 18
+    },
+    {
+      "tip_kodu": "basket_rafi",
+      "aciklama": "Basket rafı",
+      "kategori": "yikama",
+      "alt_kategori": null,
+      "kaynak": "P2",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "bulasik_giyotin_1000",
+      "aciklama": "Bulaşık makinası, giyotin tip 1000 TB",
+      "kategori": "yikama",
+      "alt_kategori": null,
+      "kaynak": "P1+P2",
+      "frekans": 6
+    },
+    {
+      "tip_kodu": "bulasik_kose_540",
+      "aciklama": "Bulaşık makinası, setaltı köşe tipi",
+      "kategori": "yikama",
+      "alt_kategori": null,
+      "kaynak": "P1+P2",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "buz_makinasi",
+      "aciklama": "Buz makinası",
+      "kategori": "icecek",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 42
+    },
+    {
+      "tip_kodu": "buz_makinesi",
+      "aciklama": "OZTI BUZ MAKINESI ODB140A 140KG/GUN FLAT ICE CUBE",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "motor",
+      "frekans": 99
+    },
+    {
+      "tip_kodu": "bym_cikis_tez",
+      "aciklama": "makine çıkış · cikis tezgah · çıkış tezgah",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "P1+P2",
+      "frekans": 6
+    },
+    {
+      "tip_kodu": "bym_cikis_tezgah",
+      "aciklama": "BYM çıkış tezgahı",
+      "kategori": "yikama",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "bym_giris_tez",
+      "aciklama": "BYM giriş tezgahı, evyeli",
+      "kategori": "yikama",
+      "alt_kategori": null,
+      "kaynak": "P1+P2",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "bym_giris_tezgah",
+      "aciklama": "BYM giriş tezgahı",
+      "kategori": "yikama",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "bym_giyotin",
+      "aciklama": "Bulaşık yıkama makinası, giyotin tip",
+      "kategori": "yikama",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "bym_setalti",
+      "aciklama": "Bulaşık yıkama makinası, setaltı",
+      "kategori": "yikama",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "bym_siyirma_tezgah",
+      "aciklama": "Bulaşık sıyırma tezgahı",
+      "kategori": "yikama",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "calisma_tezgahi",
+      "aciklama": "calisma-tezgahi-taban-ara-dolapli-90",
+      "kategori": "hazirlik",
+      "alt_kategori": null,
+      "kaynak": "motor",
+      "frekans": 132
+    },
+    {
+      "tip_kodu": "calisma_tezgahi_dolap",
+      "aciklama": "calisma tezgah · çalışma tezgah · 140*60",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "motor",
+      "frekans": 219
+    },
+    {
+      "tip_kodu": "cay_ocagi_2demlik",
+      "aciklama": "Çay ocağı, 2 demlikli",
+      "kategori": "icecek",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "char_broil",
+      "aciklama": "plate ızgar · plate izgar · charbroil",
+      "kategori": "pisirme",
+      "alt_kategori": null,
+      "kaynak": "motor",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "cihazalti_buz_cekmeceli",
+      "aciklama": "Cihazaltı buzdolabı, çift sıra çekmeceli",
+      "kategori": "sogutma",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "cop_arabasi",
+      "aciklama": "çöp · cop kova",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "P2",
+      "frekans": 54
+    },
+    {
+      "tip_kodu": "cop_servant_tezgah",
+      "aciklama": "Çöp servant tezgahı, çöp arabalı dolaplı",
+      "kategori": "hazirlik",
+      "alt_kategori": null,
+      "kaynak": "P1+P2",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "cop_siyirma_tez",
+      "aciklama": "sıyırma · siyirma · bulaşık sıyır",
+      "kategori": "yikama",
+      "alt_kategori": null,
+      "kaynak": "P1+P2",
+      "frekans": 90
+    },
+    {
+      "tip_kodu": "cop_tezgahi",
+      "aciklama": "cop tezgah · çöp tezgah",
+      "kategori": "pisirme",
+      "alt_kategori": null,
+      "kaynak": "motor",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "davlumbaz_dekoratif",
+      "aciklama": "Fırın davlumbazı, dekoratif",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "P1+P2",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "davlumbaz_duvar",
+      "aciklama": "UNOX DAVLUMBAZ EECH-HC23 CHEFTOP",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "P1+P2",
+      "frekans": 387
+    },
+    {
+      "tip_kodu": "depo_buz_cift",
+      "aciklama": "Dik tip depo buzdolabı, çift kapaklı",
+      "kategori": "sogutma",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "depo_buz_tek",
+      "aciklama": "Dik tip depo buzdolabı, tek kapılı",
+      "kategori": "sogutma",
+      "alt_kategori": null,
+      "kaynak": "P2",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "depo_buzdolabi_pizza",
+      "aciklama": "Depo tipi pizza buzdolabı, tek kapılı",
+      "kategori": "sogutma",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "depo_buzdolabi_tek",
+      "aciklama": "Depo tipi buzdolabı, tek kapılı",
+      "kategori": "sogutma",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "depo_derin_don_tek",
+      "aciklama": "Depo tipi derin dondurucu, tek kapılı",
+      "kategori": "sogutma",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "derin_dondurucu_dik",
+      "aciklama": "GN 600 LMV TEK INOX KAPI DIK TIP DERIN DONDURUCU",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "P1+P2",
+      "frekans": 42
+    },
+    {
+      "tip_kodu": "dik_icecek_dol_acik",
+      "aciklama": "Dik tip içecek dolabı, önü açık",
+      "kategori": "icecek",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "dik_icecek_dol_tek",
+      "aciklama": "Dik tip içecek dolabı, tek kapılı",
+      "kategori": "icecek",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "dik_tip_buzdolabi",
+      "aciklama": "depo-buzdolabi-tek-kapili",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "motor",
+      "frekans": 36
+    },
+    {
+      "tip_kodu": "dik_tip_teshir_dolabi",
+      "aciklama": "Dik tip teşhir dolabı, iki kapılı",
+      "kategori": "sogutma",
+      "alt_kategori": null,
+      "kaynak": "P2",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "dilimleme_mak",
+      "aciklama": "Dilimleme makinası",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 18
+    },
+    {
+      "tip_kodu": "dilimleme_makinesi",
+      "aciklama": "dilimleme · gıda dilimleme · gida dilimleme",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "motor",
+      "frekans": 51
+    },
+    {
+      "tip_kodu": "dondurma_dolabi_8g",
+      "aciklama": "Dondurma dolabı, 8 gözlü",
+      "kategori": "sogutma",
+      "alt_kategori": null,
+      "kaynak": "P2",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "dus_sprey",
+      "aciklama": "Duş sprey ünitesi, tezgaha monte",
+      "kategori": "yikama",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 18
+    },
+    {
+      "tip_kodu": "duvar_rafi",
+      "aciklama": "duvar raf",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "motor",
+      "frekans": 30
+    },
+    {
+      "tip_kodu": "duvar_rafi_2k",
+      "aciklama": "Duvar rafı, 2 katlı",
+      "kategori": "hazirlik",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "duvar_rafi_aydinlatmali",
+      "aciklama": "Duvar rafı, aydınlatmalı",
+      "kategori": "hazirlik",
+      "alt_kategori": null,
+      "kaynak": "P2",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "el_yikama_lavabo_diz",
+      "aciklama": "Dizdenkumandalı el yıkama lavabosu",
+      "kategori": "yikama",
+      "alt_kategori": null,
+      "kaynak": "P1+P2",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "espresso_2gr",
+      "aciklama": "Espresso makinası, otomatik 2 gruplu",
+      "kategori": "icecek",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "espresso_mak_yari_oto",
+      "aciklama": "Espresso makinası, yarı otomatik 2 gruplu",
+      "kategori": "icecek",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "espresso_makinasi",
+      "aciklama": "NUOVA SIMONELLI APPIA LIFE II COMPACT YÜKSEK KAŞIKLI KAHVE MAKİNASI",
+      "kategori": "icecek",
+      "alt_kategori": null,
+      "kaynak": "motor",
+      "frekans": 15
+    },
+    {
+      "tip_kodu": "evye_dizden",
+      "aciklama": "Evye, dizdenkumandalı",
+      "kategori": "yikama",
+      "alt_kategori": null,
+      "kaynak": "P1+P2",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "evye_gozu",
+      "aciklama": "Evye gözü",
+      "kategori": "yikama",
+      "alt_kategori": null,
+      "kaynak": "P2",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "evye_mop",
+      "aciklama": "Mop yıkama evyesi",
+      "kategori": "yikama",
+      "alt_kategori": null,
+      "kaynak": "P2",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "evye_tezgah_dolap",
+      "aciklama": "evye tezgah · evyeli tezgah · evye dolap",
+      "kategori": "yikama",
+      "alt_kategori": null,
+      "kaynak": "motor",
+      "frekans": 111
+    },
+    {
+      "tip_kodu": "filter_coffee",
+      "aciklama": "filtre kahve · filter kahve · batch brew",
+      "kategori": "icecek",
+      "alt_kategori": null,
+      "kaynak": "motor",
+      "frekans": 12
+    },
+    {
+      "tip_kodu": "filtre_kahve_2x2",
+      "aciklama": "Filtre kahve makinası, 2×2 LT",
+      "kategori": "icecek",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "firin_alt_tez",
+      "aciklama": "Fırın alt tezgahı",
+      "kategori": "hazirlik",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 6
+    },
+    {
+      "tip_kodu": "fritoz_cift",
+      "aciklama": "Fritöz çift gözlü 2×12 LT",
+      "kategori": "pisirme",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "fritoz_cift_hazne_elk",
+      "aciklama": "Fritöz, çift hazneli, elektrikli setüstü",
+      "kategori": "pisirme",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "fritoz_tek",
+      "aciklama": "Atalay Fritözler AEF - 870 2 x Min. 6 lt. Max 12 lt 800 x 700 x 300",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "motor",
+      "frekans": 186
+    },
+    {
+      "tip_kodu": "hamur_yogurma_25l",
+      "aciklama": "Spiral hamur yoğurma, 25 LT",
+      "kategori": "pisirme",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "icecek_havuzu_soguk",
+      "aciklama": "icecek havuzu · içecek havuzu · soguk havuz",
+      "kategori": "pisirme",
+      "alt_kategori": null,
+      "kaynak": "motor",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "induksiyon_ocak_ikili",
+      "aciklama": "İndüksiyonlu ocak, ikili",
+      "kategori": "pisirme",
+      "alt_kategori": null,
+      "kaynak": "P2",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "istif_rafi",
+      "aciklama": "istif raf · istif rafi · demonte",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "P1+P2",
+      "frekans": 444
+    },
+    {
+      "tip_kodu": "istif_rafi_4kat",
+      "aciklama": "İstif rafı, 4 katlı, demonte",
+      "kategori": "hazirlik",
+      "alt_kategori": null,
+      "kaynak": "P1+P2",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "istif_rafi_antimikro",
+      "aciklama": "Antimikrobiyal istif rafı",
+      "kategori": "hazirlik",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "izgara_barbeku",
+      "aciklama": "Izgara barbekü HP, setüstü",
+      "kategori": "pisirme",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "izgara_duz_plyt",
+      "aciklama": "Izgara düz pleytli, doğalgaz",
+      "kategori": "pisirme",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "kahve_cekmecesi",
+      "aciklama": "Kahve çekmecesi",
+      "kategori": "icecek",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "kahve_degirmeni",
+      "aciklama": "NUOVA SIMONELLI MDX ( ON DEMAND ) KAHVE DEĞİRMENİ OTOMATİK 230 V SİYAH AMXS 602230",
+      "kategori": "icecek",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 78
+    },
+    {
+      "tip_kodu": "kasa_bankosu",
+      "aciklama": "Kasa bankosu",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "P1+P2",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "kemik_testere",
+      "aciklama": "kemik testere · kemik tester",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "motor",
+      "frekans": 6
+    },
+    {
+      "tip_kodu": "kiyma_makinesi",
+      "aciklama": "kıyma · kiyma · et kıyma",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "motor",
+      "frekans": 36
+    },
+    {
+      "tip_kodu": "kombi_firin_6t",
+      "aciklama": "kombili · icombi · konveksiyon",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 237
+    },
+    {
+      "tip_kodu": "kup_buz_44kg",
+      "aciklama": "Küp buz makinası, 44 kg setaltı",
+      "kategori": "icecek",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "makarna_cooker_1h",
+      "aciklama": "Makarna cooker, elektrikli 1 hazneli",
+      "kategori": "pisirme",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "makarna_pisirici_elk",
+      "aciklama": "Makarna pişirici, elektrikli setüstü",
+      "kategori": "pisirme",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "makeup_buz_2kapi_cam",
+      "aciklama": "Make-up buzdolabı, 2 kapılı camlı",
+      "kategori": "sogutma",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "makeup_buz_4kapi",
+      "aciklama": "Make-up buzdolabı, 4 kapılı",
+      "kategori": "sogutma",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "malzeme_dolabi",
+      "aciklama": "Malzeme dolabı",
+      "kategori": "hazirlik",
+      "alt_kategori": null,
+      "kaynak": "P2",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "meyve_sikacagi",
+      "aciklama": "meyve sik · portakal sik · katı meyve",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "motor",
+      "frekans": 21
+    },
+    {
+      "tip_kodu": "mikrodalga_firin",
+      "aciklama": "speed-oven-merry-chef",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "motor",
+      "frekans": 9
+    },
+    {
+      "tip_kodu": "mobil_bar_arabasi",
+      "aciklama": "Mobil bar arabası",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "montaj_nakliye",
+      "aciklama": "Montaj ve nakliye hizmeti",
+      "kategori": "pisirme",
+      "alt_kategori": null,
+      "kaynak": "alias",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "ocak_2gz",
+      "aciklama": "Ocak 2 gözlü, setüstü doğalgaz",
+      "kategori": "pisirme",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "ocak_4gz",
+      "aciklama": "4 · gözlü · gozlu",
+      "kategori": "pisirme",
+      "alt_kategori": null,
+      "kaynak": "motor",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "ocak_6gz",
+      "aciklama": "Ocak 6 gözlü, setüstü doğalgaz",
+      "kategori": "pisirme",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "ocak_acik_alevli_gaz_4",
+      "aciklama": "4 açık alevli ocak, gazlı setüstü",
+      "kategori": "pisirme",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "on_yikama_dusu",
+      "aciklama": "Ön yıkama duşu, ara musluklu",
+      "kategori": "yikama",
+      "alt_kategori": null,
+      "kaynak": "P1+P2",
+      "frekans": 9
+    },
+    {
+      "tip_kodu": "pasta_sandvic_dol",
+      "aciklama": "Pasta ve sandviç dolabı, 3 katlı",
+      "kategori": "sogutma",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "pasta_teshir_dolabi",
+      "aciklama": "Pasta teşhir dolabı",
+      "kategori": "sogutma",
+      "alt_kategori": null,
+      "kaynak": "P2",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "patates_dinlendirme",
+      "aciklama": "Patates dinlendirme ünitesi, elektrikli setüstü",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 9
+    },
+    {
+      "tip_kodu": "pizza_firini",
+      "aciklama": "Pizza fırını, kubbeli dijital",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 42
+    },
+    {
+      "tip_kodu": "pizza_firini_elk",
+      "aciklama": "Pizza fırını, elektrikli, tek katlı",
+      "kategori": "pisirme",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "pizza_firini_kubbeli_gaz",
+      "aciklama": "Kubbeli pizza fırını, döner tabanlı, gazlı dijital",
+      "kategori": "pisirme",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "pizza_servis_buzdolabi",
+      "aciklama": "Pizza servis buzdolabı, teşhir hattı",
+      "kategori": "sogutma",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "pizza_teshir_unitesi",
+      "aciklama": "Pizza teşhir ünitesi",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "plate_izgara_gaz",
+      "aciklama": "Plate ızgara, gazlı setüstü",
+      "kategori": "pisirme",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "portakal_sikma_oto",
+      "aciklama": "Otomatik portakal sıkma makinası",
+      "kategori": "icecek",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "raf_firin",
+      "aciklama": "raflı fırın · rafli firin · pastane fırın",
+      "kategori": "pisirme",
+      "alt_kategori": null,
+      "kaynak": "motor",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "rincer",
+      "aciklama": "Rincer",
+      "kategori": "icecek",
+      "alt_kategori": null,
+      "kaynak": "P2",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "rinser_evye",
+      "aciklama": "rinser · durulama · sprey unitesi",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "motor",
+      "frekans": 18
+    },
+    {
+      "tip_kodu": "salamander",
+      "aciklama": "Salamander",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 9
+    },
+    {
+      "tip_kodu": "sarap_dolabi",
+      "aciklama": "şarap dolab · sarap dolab",
+      "kategori": "pisirme",
+      "alt_kategori": null,
+      "kaynak": "motor",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "servis_rafi",
+      "aciklama": "servis arab · servis raf",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "motor",
+      "frekans": 99
+    },
+    {
+      "tip_kodu": "setalti_derin_dondurucu",
+      "aciklama": "setalti derin · setaltı derin · tezgah alti derin",
+      "kategori": "pisirme",
+      "alt_kategori": null,
+      "kaynak": "motor",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "sise_dolabi_2k",
+      "aciklama": "Şişe dolabı, 2 cam kapaklı",
+      "kategori": "sogutma",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "sise_sogutucu_2k",
+      "aciklama": "iki kapili · 2 kapili · 90*50",
+      "kategori": "hazirlik",
+      "alt_kategori": null,
+      "kaynak": "motor",
+      "frekans": 27
+    },
+    {
+      "tip_kodu": "sise_sogutucu_3k",
+      "aciklama": "uc kapili · 3 kapili · 135*50",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "motor",
+      "frekans": 6
+    },
+    {
+      "tip_kodu": "sogutma_tezgah",
+      "aciklama": "soğutmalı tezgah · sogutmali tezgah · hazırlık buzdolab",
+      "kategori": "pisirme",
+      "alt_kategori": null,
+      "kaynak": "motor",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "sogutml_saraplik",
+      "aciklama": "Soğutmalı şaraplık, duvara monte",
+      "kategori": "sogutma",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "spiral_hamur",
+      "aciklama": "spiral · hamur yoğur · planet mikser",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "motor",
+      "frekans": 45
+    },
+    {
+      "tip_kodu": "tabak_isitma",
+      "aciklama": "Tabak ısıtma tezgahı, fanlı",
+      "kategori": "hazirlik",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "tava_rafi",
+      "aciklama": "Tava rafı",
+      "kategori": "hazirlik",
+      "alt_kategori": null,
+      "kaynak": "P1+P2",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "tepsi_tasima_arabasi",
+      "aciklama": "Tepsi taşıma arabası",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "P1+P2",
+      "frekans": 21
+    },
+    {
+      "tip_kodu": "tepsi_tasima_kapali",
+      "aciklama": "Tepsi taşıma arabası, kapalı gövde",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "P2",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "teshir_vitrin",
+      "aciklama": "teşhir vitrin · teshir vitrin · soğuk vitrin",
+      "kategori": "pisirme",
+      "alt_kategori": null,
+      "kaynak": "motor",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "tezgah_alti_buz_cek",
+      "aciklama": "cihazaltı · cihaz alti · tezgah altı",
+      "kategori": "yikama",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 6
+    },
+    {
+      "tip_kodu": "tezgah_ara_notr_dol",
+      "aciklama": "Nötr ara tezgah, dolaplı",
+      "kategori": "hazirlik",
+      "alt_kategori": null,
+      "kaynak": "P1+P2",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "tezgah_ara_notr_setustu",
+      "aciklama": "Nötr ara tezgah, setüstü",
+      "kategori": "hazirlik",
+      "alt_kategori": null,
+      "kaynak": "P1+P2",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "tezgah_buz_cam_2k",
+      "aciklama": "Tezgah tipi buzdolabı, cam kapaklı 2 kapılı",
+      "kategori": "sogutma",
+      "alt_kategori": null,
+      "kaynak": "P2",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "tezgah_buz_cam_3k",
+      "aciklama": "Tezgah tipi buzdolabı, cam kapaklı 3 kapılı",
+      "kategori": "sogutma",
+      "alt_kategori": null,
+      "kaynak": "P2",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "tezgah_buz_cek",
+      "aciklama": "Tezgah tipi buzdolabı, çekmeceli",
+      "kategori": "sogutma",
+      "alt_kategori": null,
+      "kaynak": "P1+P2",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "tezgah_buz_evyeli",
+      "aciklama": "Tezgah tipi buzdolabı, evyeli",
+      "kategori": "sogutma",
+      "alt_kategori": null,
+      "kaynak": "P2",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "tezgah_buzdolabi_3kapi",
+      "aciklama": "Tezgah tipi buzdolabı, 3 kapılı",
+      "kategori": "sogutma",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "tezgah_cek",
+      "aciklama": "Çalışma tezgahı — blok çekmeceli",
+      "kategori": "hazirlik",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "tezgah_cihazalti",
+      "aciklama": "Cihazaltı çalışma tezgahı",
+      "kategori": "hazirlik",
+      "alt_kategori": null,
+      "kaynak": "P1+P2",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "tezgah_duz",
+      "aciklama": "nötr · notr · ara tezgah",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "P1+P2",
+      "frekans": 150
+    },
+    {
+      "tip_kodu": "tezgah_evyeli",
+      "aciklama": "evyeli tezgah · tek evye · çift evye",
+      "kategori": "yikama",
+      "alt_kategori": null,
+      "kaynak": "P1+P2",
+      "frekans": 111
+    },
+    {
+      "tip_kodu": "tezgah_hareketli",
+      "aciklama": "Hareketli çalışma tezgahı, ara raflı, çevresi kapalı",
+      "kategori": "hazirlik",
+      "alt_kategori": null,
+      "kaynak": "P1+P2",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "tezgah_kahve_cek",
+      "aciklama": "Çalışma tezgahı — kahve çekmeceli",
+      "kategori": "hazirlik",
+      "alt_kategori": null,
+      "kaynak": "P2",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "tezgah_rafli",
+      "aciklama": "Çalışma tezgahı — taban ve ara raflı",
+      "kategori": "hazirlik",
+      "alt_kategori": null,
+      "kaynak": "P1+P2",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "tezgah_rafli_dol",
+      "aciklama": "Çalışma tezgahı — taban raflı dolaplı",
+      "kategori": "hazirlik",
+      "alt_kategori": null,
+      "kaynak": "P1+P2",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "tezgah_tek_evye",
+      "aciklama": "Tek evyeli çalışma tezgahı",
+      "kategori": "hazirlik",
+      "alt_kategori": null,
+      "kaynak": "P1+P2",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "tezgah_tip_buzdolabi",
+      "aciklama": "tezgah tipi buzdolab · tezgah tip buzdolab",
+      "kategori": "pisirme",
+      "alt_kategori": null,
+      "kaynak": "motor",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "turk_kahve_cift",
+      "aciklama": "türk kahve · turk kahve · atkm",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 9
+    },
+    {
+      "tip_kodu": "un_seker_arabasi",
+      "aciklama": "Un şeker arabası",
+      "kategori": "hazirlik",
+      "alt_kategori": null,
+      "kaynak": "P2",
+      "frekans": 9
+    },
+    {
+      "tip_kodu": "uv_sarkit",
+      "aciklama": "UV sarkıt bant / lamba",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "vakum_makinasi",
+      "aciklama": "Vakum makinası",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 9
+    },
+    {
+      "tip_kodu": "vakum_makinesi",
+      "aciklama": "vakum · vakuum",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "motor",
+      "frekans": 9
+    },
+    {
+      "tip_kodu": "yag_tutucu",
+      "aciklama": "Yağ tutucu",
+      "kategori": "yikama",
+      "alt_kategori": null,
+      "kaynak": "P2",
+      "frekans": 6
+    },
+    {
+      "tip_kodu": "yer_izgara",
+      "aciklama": "YER IZGARASI TAVALI KENARDAN SİFONLU ALTTAN CIKISLI Q50 PVC 940*290",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "P2",
+      "frekans": 978
+    },
+    {
+      "tip_kodu": "yer_izgarasi",
+      "aciklama": "Yer ızgarası",
+      "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "P1+P2",
+      "frekans": 978
+    }
+  ]
+}

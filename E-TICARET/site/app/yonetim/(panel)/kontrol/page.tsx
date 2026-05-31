@@ -7,6 +7,7 @@ import {
 } from "@ant-design/icons";
 import { PageContainer, ProCard, ProDescriptions } from "@ant-design/pro-components";
 import { Alert, Button, Space, Tag, Typography } from "antd";
+import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import {
   fetchCatalogStats,
@@ -122,7 +123,7 @@ export default function YonetimKontrolPage() {
         showIcon
         style={{ marginBottom: 16 }}
         message={allOk ? "Tüm kontroller geçti" : "Bazı kontroller başarısız"}
-        description="Katalog & görseller → PFOS → Yayınlama menüsünü kullanın. Ana sayfa Pro düzeni sonraki faz."
+        description="Katalog, PFOS ve yayınlama modüllerine ana sayfadaki kartlardan veya sol menüden ulaşın."
       />
 
       <ProCard title="Kontrol listesi" loading={loading}>
@@ -148,12 +149,11 @@ export default function YonetimKontrolPage() {
         />
       </ProCard>
 
-      <ProCard title="Sonraki adım" style={{ marginTop: 16 }}>
+      <ProCard title="Hızlı bağlantılar" style={{ marginTop: 16 }}>
         <Typography.Paragraph>
-          Kontroller tamamsa: <strong>Ana sayfa düzeni</strong> için Ant Design Pro
-          bileşenleri (PageContainer, ProCard, grid) ile{" "}
-          <Typography.Text code>app/(storefront)</Typography.Text> veya yeni vitrin
-          route planlanacak.
+          Modül panelleri: <Link href="/yonetim">Ana sayfa</Link>,{" "}
+          <Link href="/yonetim/eticaret">E-ticaret</Link>,{" "}
+          <Link href="/yonetim/pfos">PFOS</Link>.
         </Typography.Paragraph>
         <Space wrap>
           {checks.some((c) => c.key === "api-urunler" && !c.ok) && (
@@ -167,10 +167,10 @@ export default function YonetimKontrolPage() {
               Yanlış token — yeniden giriş
             </Button>
           )}
-          <Button type="primary" href="/yonetim/urunler">
+          <Button type="primary" href="/yonetim/eticaret?tab=urunler">
             Ürünlere git
           </Button>
-          <Button href="/yonetim/arama">Arama</Button>
+          <Button href="/yonetim/eticaret?tab=arama">Arama</Button>
           <Button href="/" target="_blank">
             Mağazayı aç
           </Button>
