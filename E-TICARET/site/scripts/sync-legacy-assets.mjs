@@ -9,7 +9,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
-const LEGACY_PUBLIC = path.join(ROOT, "..", "public");
+const LEGACY_PUBLIC = path.join(ROOT, "..", "..", "public");
 const PUBLIC = path.join(ROOT, "public");
 const BASE = "https://equsto.com";
 
