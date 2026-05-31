@@ -1,9 +1,11 @@
 "use client";
 
-import BesosDrawerShell from "@/components/besos/BesosDrawerShell";
 import AssetCdnConfigScript from "@/components/shop/AssetCdnConfigScript";
+import { SHOP_ASSET_V } from "@/lib/shop/assets";
 import { useEffect } from "react";
 import Script from "next/script";
+
+const v = SHOP_ASSET_V;
 
 declare global {
   interface Window {
@@ -40,16 +42,23 @@ export default function PfosScripts() {
 
   return (
     <>
-      <Script src="/theme.js" strategy="beforeInteractive" />
+      <Script src={`/theme.js?v=${v}`} strategy="beforeInteractive" />
       <AssetCdnConfigScript />
-      <Script src="/eq-site-urls.js" strategy="beforeInteractive" />
-      <Script src="/equsto-logo.js" strategy="afterInteractive" onReady={() => window.EQUSTO_LOGO_REFRESH?.()} />
-      <Script src="/nav.js" strategy="afterInteractive" onReady={refreshNavDrawer} />
-      <Script src="/eq-header-search.js" strategy="afterInteractive" />
-      <Script src="/ecom-cart.js" strategy="afterInteractive" onReady={() => window.EqustoCart?.syncBadge?.()} />
-      <Script src="/eq-footer.js" strategy="afterInteractive" />
-      <Script src="/contact.js" strategy="lazyOnload" />
-      <BesosDrawerShell />
+      <Script src={`/eq-site-urls.js?v=${v}`} strategy="beforeInteractive" />
+      <Script
+        src={`/equsto-logo.js?v=${v}`}
+        strategy="afterInteractive"
+        onReady={() => window.EQUSTO_LOGO_REFRESH?.()}
+      />
+      <Script src={`/nav.js?v=${v}`} strategy="afterInteractive" onReady={refreshNavDrawer} />
+      <Script src={`/eq-header-search.js?v=${v}`} strategy="afterInteractive" />
+      <Script
+        src={`/ecom-cart.js?v=${v}`}
+        strategy="afterInteractive"
+        onReady={() => window.EqustoCart?.syncBadge?.()}
+      />
+      <Script src={`/eq-footer.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/contact.js?v=${v}`} strategy="lazyOnload" />
     </>
   );
 }
