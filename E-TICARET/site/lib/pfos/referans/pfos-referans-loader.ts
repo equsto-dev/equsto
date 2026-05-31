@@ -133,7 +133,8 @@ export async function loadReferansProfil(
     | "all-sport-cafe"
     | "buyuk-yemekhane"
     | "guneli-pastane"
-    | "sehir-otel",
+    | "sehir-otel"
+    | "kiremit-akasya",
   m2: number,
   listeId?: ReferansListeId,
   altTip?: string | null,
@@ -178,6 +179,8 @@ export async function loadReferansProfil(
                                         ? "200-400"
                                         : kategoriId === "sehir-otel"
                                           ? "500-2000"
+                                          : kategoriId === "kiremit-akasya"
+                                            ? "100-250"
           : kategoriId === "birahane"
           ? "100-300"
           : kategoriId === "balikci"

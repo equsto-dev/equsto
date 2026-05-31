@@ -35,6 +35,7 @@ const M2_RANGES: Record<string, { min: number; max: number }> = {
   "buyuk-yemekhane": { min: 2000, max: 3500 },
   "guneli-pastane": { min: 200, max: 400 },
   "sehir-otel": { min: 500, max: 2000 },
+  "kiremit-akasya": { min: 100, max: 250 },
 };
 
 export function pfosGetConcepts() {
@@ -262,6 +263,19 @@ export function pfosGetConcepts() {
       itemSayisi: 192,
       zorunluSayisi: 192,
     },
+    {
+      konsept: "kiremit-akasya",
+      label: KONSEPT_LABELS["kiremit-akasya"],
+      ornekler: [
+        "Kiremit Akasya AVM",
+        "Türk mutfağı self servis",
+        "Food court",
+      ],
+      m2Min: M2_RANGES["kiremit-akasya"].min,
+      m2Max: M2_RANGES["kiremit-akasya"].max,
+      itemSayisi: 30,
+      zorunluSayisi: 30,
+    },
   ];
   return [...base.filter((t) => t.konsept !== "coffee-shop"), ...referansJson];
 }
@@ -455,6 +469,17 @@ export function pfosGetKonseptler() {
       seatDensity: 0.8,
       kalemSayisi: 192,
     },
+    {
+      slug: "kiremit-akasya",
+      label: KONSEPT_LABELS["kiremit-akasya"],
+      ornekler: [
+        "Türk Mutfağı",
+        "Self Servis",
+        "Food Court",
+      ],
+      seatDensity: 1.8,
+      kalemSayisi: 30,
+    },
   ];
 }
 
@@ -529,6 +554,8 @@ export async function pfosPostCalculate(req: NextRequest) {
       "all-sport-cafe",
       "buyuk-yemekhane",
       "guneli-pastane",
+      "sehir-otel",
+      "kiremit-akasya",
       "coffee-shop",
     ].includes(pfosReq.konsept)
   ) {
@@ -558,6 +585,7 @@ export async function pfosPostCalculate(req: NextRequest) {
           "buyuk-yemekhane",
           "guneli-pastane",
           "sehir-otel",
+          "kiremit-akasya",
           "coffee-shop",
         ],
       },

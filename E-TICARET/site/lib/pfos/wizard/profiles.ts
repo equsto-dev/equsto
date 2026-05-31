@@ -322,6 +322,18 @@ export const PROFIL_BY_SLUG: Record<Konsept, PfosProfilMeta> = {
       "depo",
     ],
   },
+  "kiremit-akasya": {
+    konsept: "kiremit-akasya",
+    konseptUst: "Fast Food / QSR",
+    dukkan: "Kiremit Akasya",
+    pfosZones: [
+      "ana_mutfak",
+      "bulasikhane",
+      "soguk_oda",
+      "kuru_depo",
+      "bar",
+    ],
+  },
 };
 
 export function zonesForKonsept(slug: Konsept | null): string[] {
