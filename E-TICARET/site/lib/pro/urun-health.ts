@@ -15,10 +15,10 @@ export function isDbEditable(row: AdminUrunApiRow): boolean {
 
 export function urunIssues(row: AdminUrunApiRow): string[] {
   const issues: string[] = [];
-  if (!row.sku?.trim()) issues.push("SKU");
-  if (!row.fiyat_tl || row.fiyat_tl <= 0) issues.push("Fiyat");
-  if (!row.gorsel_url?.trim()) issues.push("Görsel");
-  if (!row.marka_id) issues.push("Marka");
+  if (!row.sku?.trim()) issues.push("SKU yok");
+  if (!row.fiyat_tl || row.fiyat_tl <= 0) issues.push("Fiyat yok");
+  if (!row.gorsel_url?.trim()) issues.push("Görsel yok");
+  if (!row.marka_id) issues.push("Marka yok");
   return issues;
 }
 
@@ -48,33 +48,29 @@ export function matchesUrunQuickFilter(
 
 export type UrunHealthStats = {
   total: number;
-  eksik: number;
   eksikFiyat: number;
   eksikSku: number;
+  eksikGorsel: number;
   pasif: number;
-  dbEditable: number;
 };
 
 export function computeUrunHealthStats(rows: AdminUrunApiRow[]): UrunHealthStats {
-  let eksik = 0;
   let eksikFiyat = 0;
   let eksikSku = 0;
+  let eksikGorsel = 0;
   let pasif = 0;
-  let dbEditable = 0;
   for (const row of rows) {
-    if (urunIssues(row).length > 0) eksik++;
     if (!row.fiyat_tl || row.fiyat_tl <= 0) eksikFiyat++;
     if (!row.sku?.trim()) eksikSku++;
+    if (!row.gorsel_url?.trim()) eksikGorsel++;
     if (row.durum === "pasif") pasif++;
-    if (isDbEditable(row)) dbEditable++;
   }
   return {
     total: rows.length,
-    eksik,
     eksikFiyat,
     eksikSku,
+    eksikGorsel,
     pasif,
-    dbEditable,
   };
 }
 
