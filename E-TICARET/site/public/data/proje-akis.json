@@ -53,7 +53,7 @@
         "type": "number",
         "required": "true",
         "mapsTo": "m2",
-        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan ≤150→100-300, >150→150-300; all-day-dining 150–300→The House, >300→THC; restoran → 500-1000; kokteyl-kahve → 30-50; kahve-atolyesi → 80-150; harvest-cafe → 100-200; all-sport-cafe → 100-200; buyuk-yemekhane → 2000-3500 kişi; guneli-pastane → 200-400; sehir-otel → 500-2000; birahane → 100-300; pastane ≤150→100-200, >150→150-250; pideci → 100-250; sushi → 40-100; tavukcu → 80-150; sarkuteri-kiosk → kiosk; hamburger-kiosk → 60-100; hotdog-kiosk → kiosk; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu → 300-500 (zone şablon)",
+        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan ≤150→100-300, >150→150-300; all-day-dining 150–300→The House, >300→THC; restoran → 500-1000; kokteyl-kahve → 30-50; kahve-atolyesi → 80-150; harvest-cafe → 100-200; all-sport-cafe → 100-200; buyuk-yemekhane → 2000-3500 kişi; guneli-pastane → 200-400; sehir-otel → 500-2000; kiremit-akasya → 100-250; birahane → 100-300; pastane ≤150→100-200, >150→150-250; pideci → 100-250; sushi → 40-100; tavukcu → 80-150; sarkuteri-kiosk → kiosk; hamburger-kiosk → 60-100; hotdog-kiosk → kiosk; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu → 300-500 (zone şablon)",
         "note": "Bulut Mutfak ≤15 m²: yalnızca Grab&Go / Coffee Counter. Steakhouse/Balık: ≤150 → 80-150; >150 → 150-250."
       },
       {
@@ -124,6 +124,9 @@
             "Bilmiyorum"
           ],
           "Fast Food / QSR": [
+            "Türk Mutfağı",
+            "Self Servis",
+            "Food Court",
             "Burger",
             "Hamburger Kiosk",
             "Hotdog Kiosk",
@@ -909,6 +912,81 @@
               "label": "200–400 m²",
               "referansM2": 300,
               "listeDosya": "pfos-referans/guneli-pastane-200-400.json"
+            }
+          ]
+        },
+        "questions": []
+      },
+      {
+        "id": "ff_turk_mutfagi",
+        "name": "Türk Mutfağı",
+        "parent": "Fast Food / QSR",
+        "desc": "Türk mutfağı self servis · 100–250 m² referans (2016-085 Kiremit Akasya) · motor: kiremit-akasya",
+        "pfos": {
+          "motorSlug": "kiremit-akasya",
+          "dukkanSecim": "Türk Mutfağı",
+          "m2Min": 100,
+          "m2Max": 250,
+          "bantKurali": "Tek referans liste (100–250 m²); m² ile adet ölçeklenir",
+          "listeYolu": "veri/kiremit-akasya-2016-085.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "100-250",
+              "label": "100–250 m²",
+              "referansM2": 175,
+              "listeDosya": "pfos-referans/kiremit-akasya-100-250.json"
+            }
+          ]
+        },
+        "questions": []
+      },
+      {
+        "id": "ff_self_servis",
+        "name": "Self Servis",
+        "parent": "Fast Food / QSR",
+        "desc": "Self servis hat · bain marie · teşhir · 100–250 m² Kiremit referans · motor: kiremit-akasya",
+        "pfos": {
+          "motorSlug": "kiremit-akasya",
+          "dukkanSecim": "Self Servis",
+          "m2Min": 100,
+          "m2Max": 250,
+          "bantKurali": "Tek referans liste (100–250 m²); m² ile adet ölçeklenir",
+          "listeYolu": "veri/kiremit-akasya-2016-085.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "100-250",
+              "label": "100–250 m²",
+              "referansM2": 175,
+              "listeDosya": "pfos-referans/kiremit-akasya-100-250.json"
+            }
+          ]
+        },
+        "questions": []
+      },
+      {
+        "id": "ff_food_court",
+        "name": "Food Court",
+        "parent": "Fast Food / QSR",
+        "desc": "AVM food court · çoklu outlet self servis · 100–250 m² Kiremit referans · motor: kiremit-akasya",
+        "pfos": {
+          "motorSlug": "kiremit-akasya",
+          "dukkanSecim": "Food Court",
+          "m2Min": 100,
+          "m2Max": 250,
+          "bantKurali": "Tek referans liste (100–250 m²); m² ile adet ölçeklenir",
+          "listeYolu": "veri/kiremit-akasya-2016-085.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "100-250",
+              "label": "100–250 m²",
+              "referansM2": 175,
+              "listeDosya": "pfos-referans/kiremit-akasya-100-250.json"
             }
           ]
         },
@@ -38417,6 +38495,6 @@
         "tip_kodu": ""
       }
     ],
-    "updated_at": "2026-05-31T01:40:14.025Z"
+    "updated_at": "2026-05-31T01:50:21.448Z"
   }
 }
