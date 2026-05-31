@@ -184,7 +184,7 @@ export default function YonetimPfosPage() {
           },
           {
             key: "proje-akis",
-            label: "Proje akışı (A)",
+            label: "Proje akışı (A) · Set & Kural",
             children: <PfosProjeAkisPanel />,
           },
           {

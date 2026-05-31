@@ -12,8 +12,10 @@ export function ProProvider({ children }: { children: ReactNode }) {
         locale={trTR}
         theme={{
           token: {
-            colorPrimary: "#1677ff",
+            colorPrimary: "#1463ff",
             borderRadius: 6,
+            fontFamily:
+              'Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif',
           },
         }}
       >
