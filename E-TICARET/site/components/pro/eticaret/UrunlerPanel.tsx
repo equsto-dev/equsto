@@ -53,13 +53,12 @@ type FormValues = {
   aciklama?: string;
 };
 
-const QUICK_FILTERS: { value: UrunQuickFilter; label: string }[] = [
-  { value: "all", label: "Tümü" },
-  { value: "eksik", label: "Eksik bilgi" },
-  { value: "eksik-fiyat", label: "Fiyatsız" },
-  { value: "eksik-sku", label: "SKU yok" },
-  { value: "pasif", label: "Pasif" },
-  { value: "db", label: "DB düzenlenebilir" },
+const QUICK_FILTER_DEFS: { value: UrunQuickFilter; label: string; countKey?: keyof ReturnType<typeof computeUrunHealthStats> }[] = [
+  { value: "all", label: "Tümü", countKey: "total" },
+  { value: "eksik-fiyat", label: "Fiyat yok", countKey: "eksikFiyat" },
+  { value: "eksik-sku", label: "SKU yok", countKey: "eksikSku" },
+  { value: "eksik-gorsel", label: "Görsel yok", countKey: "eksikGorsel" },
+  { value: "pasif", label: "Pasif", countKey: "pasif" },
 ];
 
 export default function UrunlerPanel() {
@@ -101,6 +100,23 @@ export default function UrunlerPanel() {
     () => categories.map((c) => ({ label: c.name, value: c.slug })),
     [categories],
   );
+  const quickFilterOptions = useMemo(
+    () =>
+      QUICK_FILTER_DEFS.map((f) => {
+        const n = f.countKey ? health[f.countKey] : 0;
+        return {
+          value: f.value,
+          label: f.countKey != null ? `${f.label} (${n})` : f.label,
+        };
+      }),
+    [health],
+  );
+
+  const hasIssues =
+    health.eksikFiyat > 0 ||
+    health.eksikSku > 0 ||
+    health.eksikGorsel > 0 ||
+    health.pasif > 0;
 
   const openCreate = () => {
     setEditing(null);
@@ -243,23 +259,23 @@ export default function UrunlerPanel() {
 
   return (
     <>
-      {health.eksik > 0 && (
+      {hasIssues && (
         <Alert
           type="warning"
           showIcon
           style={{ marginBottom: 16 }}
-          message={`${health.eksik} üründe eksik bilgi`}
+          message="Eksik veya pasif ürünler"
           description={
             <>
-              Fiyatsız: {health.eksikFiyat} · SKU yok: {health.eksikSku} · Pasif:{" "}
-              {health.pasif} · DB düzenlenebilir: {health.dbEditable}
+              Fiyat yok: {health.eksikFiyat} · SKU yok: {health.eksikSku} · Görsel yok:{" "}
+              {health.eksikGorsel} · Pasif: {health.pasif}
             </>
           }
         />
       )}
 
       <Segmented
-        options={QUICK_FILTERS.map((f) => ({ value: f.value, label: f.label }))}
+        options={quickFilterOptions}
         value={quickFilter}
         onChange={(v) => {
           setQuickFilter(v as UrunQuickFilter);
