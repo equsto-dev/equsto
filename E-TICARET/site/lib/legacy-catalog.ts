@@ -3,6 +3,8 @@ import path from "node:path";
 import { loadEkipmanlarJson } from "@/lib/catalog-json";
 import { ecomRowToAdminUrun, type AdminUrunRow } from "@/lib/admin-urun";
 
+export type { AdminUrunRow };
+
 let cache: { mtimeMs: number; rows: AdminUrunRow[] } | null = null;
 
 function catalogPath() {
