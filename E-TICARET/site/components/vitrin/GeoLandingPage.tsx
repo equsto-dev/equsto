@@ -7,10 +7,11 @@ import VitrinShell from "@/components/vitrin/VitrinShell";
 import { GEO_PAGE_CSS } from "@/lib/vitrin/page-css";
 
 type Props = {
-  ssrContent?: ReactNode;
+  children?: ReactNode;
+  hasSsr?: boolean;
 };
 
-export default function GeoLandingPage({ ssrContent }: Props) {
+export default function GeoLandingPage({ children, hasSsr }: Props) {
   const v = SHOP_ASSET_V;
   return (
     <>
@@ -19,10 +20,10 @@ export default function GeoLandingPage({ ssrContent }: Props) {
           <main
             id="eq-geo-main"
             className="eq-geo-main"
-            data-eq-geo-ssr={ssrContent ? "1" : undefined}
-            aria-live={ssrContent ? "off" : "polite"}
+            data-eq-geo-ssr={hasSsr ? "1" : undefined}
+            aria-live={hasSsr ? "off" : "polite"}
           >
-            {ssrContent}
+            {children}
           </main>
         </div>
       </VitrinShell>
