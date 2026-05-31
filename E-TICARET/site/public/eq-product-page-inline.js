@@ -2300,12 +2300,8 @@ window.searchFilter = window.searchFilter || function () {};
         }
       }
       var imgs = collectProductImgs(x);
-      var cartU = {
-        c: x.category || "",
-        b: x.brand || "",
-        n: x.name || "",
-        p: extractCartPrice(x.price, x),
-      };
+      var cartU = pdpCartRowFromProduct(x);
+      cartU.p = extractCartPrice(x.price, x);
       var heroIdx = 0;
       for (var hi = 0; hi < imgs.length; hi++) {
         if (!imgs[hi].lineart) {

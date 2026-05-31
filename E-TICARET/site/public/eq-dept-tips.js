@@ -14,7 +14,7 @@
     { tip: "pizza-firinlari", dept: "pisirme", label: "Pizza Fırınları", search: "pizza|kubbe|taş taban" },
     { tip: "mayalama-dolabi", dept: "pisirme", label: "Mayalama Dolapları", search: "mayalama|prover|ferment" },
     { tip: "induksiyonlu-ocak", dept: "pisirme", label: "İndüksiyonlu Ocaklar", search: "indüksiyon|induksiyon|induction" },
-    { tip: "asansorlu-izgara", dept: "pisirme", label: "Asansörlü Izgaralar", search: "asansör|asansor|elevator|izgara" },
+    { tip: "asansorlu-izgara", dept: "pisirme", label: "Asansörlü Izgaralar", search: "salamander|gratin|üst ızgara|ust izgara|gratinator|broiler" },
     { tip: "doner-ocaklari", dept: "pisirme", label: "Döner Ocakları", search: "döner|doner|kebab|kebap" },
     { tip: "pilic-cevirme", dept: "pisirme", label: "Piliç Çevirme Makineleri", search: "piliç|pilic|rotisserie|çevirme|cevirme" },
     { tip: "lavtasli_izgara", dept: "pisirme", label: "Lavtaşlı Izgara", search: "lavta|lavtaş|griddle|plancha" },
@@ -732,9 +732,43 @@
     return false;
   }
 
+  /** Asansörlü ızgara = salamander (üst ızgara); lavta/char/endüstriyel ızgara değil. */
+  function isSalamanderProduct(u) {
+    var cat = productCategorySlug(u);
+    if (cat === "salamander") return true;
+    var hay = productHaystack(u);
+    if (!hay) return false;
+    if (
+      /salat\s*bar.*asans|asans.*salat\s*bar|sicak\s*tutucu\s*lamba|ısıtıcı\s*lamba.*asans|isitici\s*lamba.*asans|krep\s*mak|waffle/.test(
+        hay
+      ) &&
+      !/\bsalamander\b/.test(hay)
+    ) {
+      return false;
+    }
+    if (/\bsalamander\b/.test(hay)) return true;
+    if (/\bgratin\b|\bgratinator\b|\bbroiler\b/.test(hay) && !/\bfırın\b|\bfirin\b|\bkuzine\b/.test(hay)) return true;
+    if (/üst\s*ızgara|ust\s*izgara|overhead\s*grill|elevator\s*grill/.test(hay)) return true;
+    var kod = String(
+      (u && u.raw && u.raw.urun_kodu) ||
+        (u && u.raw && u.raw.sku) ||
+        (u && u.sku) ||
+        (u && u.raw && u.raw.model) ||
+        ""
+    )
+      .replace(/\s+/g, "")
+      .toUpperCase();
+    if (/^7850\.(58575|N1\.58575)/.test(kod)) return true;
+    return false;
+  }
+
   function tileMatchProduct(u, tile) {
     if (!tile) return false;
     var cat = productCategorySlug(u);
+
+    if (tile.id === "asansorlu-izgara" || tile.id === "salamander") {
+      return isSalamanderProduct(u);
+    }
 
     if (
       (tile.id === "sanayi-tipi-izgaralar" || tile.slug === "sanayi-tipi-izgaralar") &&
