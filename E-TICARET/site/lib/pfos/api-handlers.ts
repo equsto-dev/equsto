@@ -29,6 +29,12 @@ const M2_RANGES: Record<string, { min: number; max: number }> = {
   tavukcu: { min: 80, max: 150 },
   restoran: { min: 500, max: 1000 },
   "kokteyl-kahve": { min: 30, max: 50 },
+  "kahve-atolyesi": { min: 80, max: 150 },
+  "harvest-cafe": { min: 100, max: 200 },
+  "all-sport-cafe": { min: 100, max: 200 },
+  "buyuk-yemekhane": { min: 2000, max: 3500 },
+  "guneli-pastane": { min: 200, max: 400 },
+  "sehir-otel": { min: 500, max: 2000 },
 };
 
 export function pfosGetConcepts() {
@@ -191,6 +197,71 @@ export function pfosGetConcepts() {
       itemSayisi: 18,
       zorunluSayisi: 18,
     },
+    {
+      konsept: "kahve-atolyesi",
+      label: KONSEPT_LABELS["kahve-atolyesi"],
+      ornekler: [
+        "Kahve Atölyesi markası",
+        "Kahve + kahvaltı & brunch",
+        "Espresso & hafif yemek",
+      ],
+      m2Min: M2_RANGES["kahve-atolyesi"].min,
+      m2Max: M2_RANGES["kahve-atolyesi"].max,
+      itemSayisi: 47,
+      zorunluSayisi: 47,
+    },
+    {
+      konsept: "harvest-cafe",
+      label: KONSEPT_LABELS["harvest-cafe"],
+      ornekler: [
+        "Harvest Cafe Bahçeşehir",
+        "A la carte menü",
+        "Tatlı & kahve ağırlıklı cafe",
+      ],
+      m2Min: M2_RANGES["harvest-cafe"].min,
+      m2Max: M2_RANGES["harvest-cafe"].max,
+      itemSayisi: 44,
+      zorunluSayisi: 44,
+    },
+    {
+      konsept: "all-sport-cafe",
+      label: KONSEPT_LABELS["all-sport-cafe"],
+      ornekler: [
+        "All Sport Cafe",
+        "All day cafe",
+        "Gün boyu kahve & sıcak yemek",
+      ],
+      m2Min: M2_RANGES["all-sport-cafe"].min,
+      m2Max: M2_RANGES["all-sport-cafe"].max,
+      itemSayisi: 32,
+      zorunluSayisi: 32,
+    },
+    {
+      konsept: "buyuk-yemekhane",
+      label: KONSEPT_LABELS["buyuk-yemekhane"],
+      ornekler: [
+        "Yozgat Hastanesi referans",
+        "Catering · fabrika · okul yemekhanesi",
+        "2000–3500 kişi/gün",
+      ],
+      m2Min: M2_RANGES["buyuk-yemekhane"].min,
+      m2Max: M2_RANGES["buyuk-yemekhane"].max,
+      itemSayisi: 285,
+      zorunluSayisi: 285,
+    },
+    {
+      konsept: "sehir-otel",
+      label: KONSEPT_LABELS["sehir-otel"],
+      ornekler: [
+        "Hilton Kocaeli referans",
+        "Ana mutfak · büfe · banquet",
+        "Servis bar · personel mutfağı",
+      ],
+      m2Min: M2_RANGES["sehir-otel"].min,
+      m2Max: M2_RANGES["sehir-otel"].max,
+      itemSayisi: 192,
+      zorunluSayisi: 192,
+    },
   ];
   return [...base.filter((t) => t.konsept !== "coffee-shop"), ...referansJson];
 }
@@ -322,6 +393,68 @@ export function pfosGetKonseptler() {
       seatDensity: 0,
       kalemSayisi: 18,
     },
+    {
+      slug: "kahve-atolyesi",
+      label: KONSEPT_LABELS["kahve-atolyesi"],
+      ornekler: [
+        "Kahve Atölyesi markası",
+        "Kahve + kahvaltı",
+        "Espresso & hafif yemek",
+      ],
+      seatDensity: 1.4,
+      kalemSayisi: 47,
+    },
+    {
+      slug: "harvest-cafe",
+      label: KONSEPT_LABELS["harvest-cafe"],
+      ornekler: [
+        "Harvest Cafe Bahçeşehir",
+        "A la carte",
+        "Tatlı & kahve",
+      ],
+      seatDensity: 1.5,
+      kalemSayisi: 44,
+    },
+    {
+      slug: "all-sport-cafe",
+      label: KONSEPT_LABELS["all-sport-cafe"],
+      ornekler: ["All Sport Cafe", "All day cafe"],
+      seatDensity: 1.5,
+      kalemSayisi: 32,
+    },
+    {
+      slug: "buyuk-yemekhane",
+      label: KONSEPT_LABELS["buyuk-yemekhane"],
+      ornekler: [
+        "Yozgat Hastanesi",
+        "Catering · fabrika · okul",
+        "2000–3500 kişi/gün",
+      ],
+      seatDensity: 0,
+      kalemSayisi: 285,
+    },
+    {
+      slug: "guneli-pastane",
+      label: KONSEPT_LABELS["guneli-pastane"],
+      ornekler: [
+        "Güneli Fırın",
+        "Pastane + yerel",
+        "Fırın üretim & satış",
+      ],
+      seatDensity: 1.3,
+      kalemSayisi: 46,
+    },
+    {
+      slug: "sehir-otel",
+      label: KONSEPT_LABELS["sehir-otel"],
+      ornekler: [
+        "Hilton Kocaeli",
+        "Şehir oteli F&B",
+        "Ana mutfak · büfe · banquet",
+      ],
+      seatDensity: 0.8,
+      kalemSayisi: 192,
+    },
   ];
 }
 
@@ -391,6 +524,11 @@ export async function pfosPostCalculate(req: NextRequest) {
       "all-day-dining-cafe",
       "restoran",
       "kokteyl-kahve",
+      "kahve-atolyesi",
+      "harvest-cafe",
+      "all-sport-cafe",
+      "buyuk-yemekhane",
+      "guneli-pastane",
       "coffee-shop",
     ].includes(pfosReq.konsept)
   ) {
@@ -414,6 +552,12 @@ export async function pfosPostCalculate(req: NextRequest) {
           "all-day-dining-cafe",
           "restoran",
           "kokteyl-kahve",
+          "kahve-atolyesi",
+          "harvest-cafe",
+          "all-sport-cafe",
+          "buyuk-yemekhane",
+          "guneli-pastane",
+          "sehir-otel",
           "coffee-shop",
         ],
       },

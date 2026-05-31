@@ -23,7 +23,11 @@ export type ReferansListeId =
   | "150-300"
   | "500-1000"
   | "30-50"
-  | "150-250";
+  | "150-250"
+  | "80-150"
+  | "2000-3500"
+  | "200-400"
+  | "500-2000";
 
 export function pickM2Bant(m2: number): M2BantId {
   return m2 <= 150 ? "80-150" : "150-250";
@@ -123,7 +127,13 @@ export async function loadReferansProfil(
     | "tavukcu"
     | "all-day-dining-cafe"
     | "restoran"
-    | "kokteyl-kahve",
+    | "kokteyl-kahve"
+    | "kahve-atolyesi"
+    | "harvest-cafe"
+    | "all-sport-cafe"
+    | "buyuk-yemekhane"
+    | "guneli-pastane"
+    | "sehir-otel",
   m2: number,
   listeId?: ReferansListeId,
   altTip?: string | null,
@@ -156,6 +166,18 @@ export async function loadReferansProfil(
                             ? "500-1000"
                             : kategoriId === "kokteyl-kahve"
                               ? "30-50"
+                              : kategoriId === "kahve-atolyesi"
+                                ? "80-150"
+                                : kategoriId === "harvest-cafe"
+                                  ? "100-200"
+                                  : kategoriId === "all-sport-cafe"
+                                    ? "100-200"
+                                    : kategoriId === "buyuk-yemekhane"
+                                      ? "2000-3500"
+                                      : kategoriId === "guneli-pastane"
+                                        ? "200-400"
+                                        : kategoriId === "sehir-otel"
+                                          ? "500-2000"
           : kategoriId === "birahane"
           ? "100-300"
           : kategoriId === "balikci"

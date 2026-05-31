@@ -39,6 +39,12 @@ export const KonseptEnum = z.enum([
   "tavukcu",
   "restoran",
   "kokteyl-kahve",
+  "kahve-atolyesi",
+  "harvest-cafe",
+  "all-sport-cafe",
+  "buyuk-yemekhane",
+  "guneli-pastane",
+  "sehir-otel",
 ]);
 export type Konsept = z.infer<typeof KonseptEnum>;
 
@@ -62,13 +68,19 @@ export const KONSEPT_LABELS: Record<Konsept, string> = {
   tavukcu: "Tavukçu",
   restoran: "Büyük Restoran",
   "kokteyl-kahve": "Kokteyl + Kahve",
+  "kahve-atolyesi": "Kahve Atölyesi",
+  "harvest-cafe": "Harvest Cafe",
+  "all-sport-cafe": "All Sport Cafe",
+  "buyuk-yemekhane": "Büyük Yemekhane",
+  "guneli-pastane": "Güneli Fırın",
+  "sehir-otel": "Şehir Oteli (Business)",
 };
 
 export type FiyatStratejisi = "ekonomik" | "orta" | "premium";
 
 export const PFOSRequestSchema = z.object({
   konsept: KonseptEnum,
-  m2: z.number().min(30).max(2000),
+  m2: z.number().min(30).max(10000),
   sehir: z.string().default("istanbul"),
   lokasyon: z.enum(["cadde", "avm"]).optional(),
   fiyatStratejisi: z.enum(["ekonomik", "orta", "premium"]).default("orta"),

@@ -7,7 +7,7 @@
   var API_QUOTE = "/api/pfos/quote";
   var API_CALC = "/api/pfos/calculate";
   var API_KONSEPT = "/api/pfos/konseptler";
-  var FALLBACK_KONSEPT = "/data/pfos-konseptler.json?v=20260527pastane-150-250";
+  var FALLBACK_KONSEPT = "/data/pfos-konseptler.json?v=20260531sehir-otel";
 
   var KAT_DEPT = {
     A: "kahve",
@@ -45,6 +45,52 @@
     if (/türk|turk|sütiş|sutis|restaurant/i.test(k) && !/steakhouse/i.test(k) && !/pizzac/i.test(d))
       return "turk-restoran";
     if (d === "Pizzacı") return "pizzaci";
+    if (
+      d === "Kahve Atölyesi" ||
+      /kahve\s*atölyesi|kahve\s*atolyesi/i.test(d) ||
+      /kahve\s*atölyesi/i.test(k)
+    ) {
+      return "kahve-atolyesi";
+    }
+    if (
+      d === "Harvest Cafe" ||
+      /harvest\s*cafe/i.test(d) ||
+      /harvest/i.test(k)
+    ) {
+      return "harvest-cafe";
+    }
+    if (
+      d === "All Sport Cafe" ||
+      /all\s*sport\s*cafe/i.test(d) ||
+      /all\s*sport/i.test(k)
+    ) {
+      return "all-sport-cafe";
+    }
+    if (
+      d === "Büyük Yemekhane (Catering)" ||
+      d === "Fabrika Yemekhanesi" ||
+      d === "Okul Yemekhanesi" ||
+      /büyük\s*yemekhane|buyuk\s*yemekhane/i.test(d) ||
+      /fabrika\s*yemekhane/i.test(d) ||
+      /okul\s*yemekhane/i.test(d)
+    ) {
+      return "buyuk-yemekhane";
+    }
+    if (
+      d === "Güneli Fırın" ||
+      d === "Pastane & Yerel" ||
+      /güneli\s*fırın|guneli\s*firin/i.test(d) ||
+      (/pastane/i.test(d) && /yerel/i.test(d))
+    ) {
+      return "guneli-pastane";
+    }
+    if (
+      d === "Şehir Oteli (Business)" ||
+      /şehir\s*oteli|sehir\s*oteli|business\s*hotel/i.test(d) ||
+      (/otel/i.test(k) && /şehir|sehir|business/i.test(d))
+    ) {
+      return "sehir-otel";
+    }
     if (d === "Pideci" || /pideci|pide\s*ci/i.test(d)) return "pideci";
     if (d === "Sushi" || /sushi|omakase/i.test(d) || /sushi/i.test(k)) return "sushi";
     if (

@@ -50,7 +50,13 @@ export const PFOS_DUKKAN_BRANCHES: Record<string, string[]> = {
     "Şarküteri Kiosk",
     "Bilmiyorum",
   ],
-  "Kafe / Coffee Shop": ["Coffee Shop", "Kafeterya", "Pastane / Fırın", "Bilmiyorum"],
+  "Kafe / Coffee Shop": [
+    "Coffee Shop",
+    "Kahve Atölyesi",
+    "Kafeterya",
+    "Pastane / Fırın",
+    "Bilmiyorum",
+  ],
   "Fast Food / QSR": [
     "Burger",
     "Hamburger Kiosk",
@@ -61,7 +67,14 @@ export const PFOS_DUKKAN_BRANCHES: Record<string, string[]> = {
     "Pide / Lahmacun",
     "Bilmiyorum",
   ],
-  "Pastane & Fırın": ["Pastane", "Artisan / butik", "Endüstriyel fırın", "Bilmiyorum"],
+  "Pastane & Fırın": [
+    "Pastane",
+    "Güneli Fırın",
+    "Pastane & Yerel",
+    "Artisan / butik",
+    "Endüstriyel fırın",
+    "Bilmiyorum",
+  ],
   "Bar & Lounge": [
     "Birahane",
     "Kokteyl + Kahve",
@@ -81,6 +94,8 @@ export const PFOS_DUKKAN_BRANCHES: Record<string, string[]> = {
     "Bilmiyorum",
   ],
   Catering: [
+    "Büyük Yemekhane (Catering)",
+    "Okul Yemekhanesi",
     "Üretim Fabrikası",
     "Yerinde Üretim",
     "Taşıma Yemek (Servis & Yıkama)",
@@ -198,7 +213,7 @@ export const DEFAULT_WIZARD_QUESTIONS: Record<string, unknown>[] = [
     required: "true",
     mapsTo: "m2",
     motorEtkisi:
-      "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan ≤150→100-300, >150→150-300; all-day-dining 150–300→The House, >300→THC; restoran → 500-1000; kokteyl-kahve → 30-50; birahane → 100-300; pastane ≤150→100-200, >150→150-250; pideci → 100-250; sushi → 40-100; tavukcu → 80-150; sarkuteri-kiosk → kiosk; hamburger-kiosk → 60-100; hotdog-kiosk → kiosk; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu → 300-500 (zone şablon)",
+      "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan ≤150→100-300, >150→150-300; all-day-dining 150–300→The House, >300→THC; restoran → 500-1000; kokteyl-kahve → 30-50; kahve-atolyesi → 80-150; harvest-cafe → 100-200; all-sport-cafe → 100-200; buyuk-yemekhane → 2000-3500 kişi; guneli-pastane → 200-400; sehir-otel → 500-2000; birahane → 100-300; pastane ≤150→100-200, >150→150-250; pideci → 100-250; sushi → 40-100; tavukcu → 80-150; sarkuteri-kiosk → kiosk; hamburger-kiosk → 60-100; hotdog-kiosk → kiosk; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu → 300-500 (zone şablon)",
     note: "Bulut Mutfak ≤15 m²: yalnızca Grab&Go / Coffee Counter. Steakhouse/Balık: ≤150 → 80-150; >150 → 150-250.",
   },
   {

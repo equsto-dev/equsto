@@ -1,0 +1,269 @@
+{
+  "kategoriId": "all-sport-cafe",
+  "bantId": "100-200",
+  "label": "All Sport Cafe 100–200 m²",
+  "referansM2": 150,
+  "kaynakDosya": "2016-064 ALL SPORT CAFE MEFFTECH/2016-064-1.xlsx",
+  "not": "All day cafe · gün boyu servis · kahve & sıcak yemek (All Sport Cafe)",
+  "yukleme": "2026-05-31T00:39:52.981Z",
+  "kalemSayisi": 32,
+  "toplamAdet": 32,
+  "kalemler": [
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M1",
+      "ad": "FIRIN TEZGAH, TABAN RAFLI, TEPSİ İSTİFLİ",
+      "olcu": "51*80*85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M2",
+      "ad": "FIRIN, COMPACT BY NABOO, 6 GN 1/1",
+      "olcu": "51*80*80",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M3",
+      "ad": "CİHAZALTI BUZDOLABI, ÇİFT SIRA ÇEKMECELİ, REMOTE CONTROL",
+      "olcu": "220*70*55",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M4",
+      "ad": "FRİTÖZ, TEK SEPETLİ, ELK., SETÜSTÜ",
+      "olcu": "40*63*30",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M5",
+      "ad": "MAKARNA PİŞİRİCİ, ELK., SETÜSTÜ",
+      "olcu": "40*63*30",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M6",
+      "ad": "4 AÇIK ALEVLİ OCAK, GAZLI, SETÜSTÜ",
+      "olcu": "60*63*30",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M7",
+      "ad": "DÖKÜM IZGARA, GAZLI, SETÜSTÜ",
+      "olcu": "40*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M8",
+      "ad": "SALAMANDER, ELK.",
+      "olcu": "60*60*60",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M9",
+      "ad": "TAVA VE SALAMANDER RAFI",
+      "olcu": "220*35*35",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M10",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+      "olcu": "270*100*50",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M11",
+      "ad": "MAKE-UP BUZDOLABI, 3 SIRA ÇEKMECELİ, REMOTE CONTROL",
+      "olcu": "120*70*85/105",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M12",
+      "ad": "SERVİS RAFI, 3 KATLI",
+      "olcu": "120*40*120",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M13",
+      "ad": "MİKRODALGA FIRIN",
+      "olcu": "100*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M14",
+      "ad": "TOST MAKİNASI",
+      "olcu": "100*40*120",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M15",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, ETRAFI KAPALI",
+      "olcu": "100*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M16",
+      "ad": "SERVİS RAFI, 3 KATLI",
+      "olcu": "100*40*120",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M17",
+      "ad": "HATCO TABAK ISITICI",
+      "olcu": "80*15*3",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M18",
+      "ad": "ÇALIŞMA TEZGAHI",
+      "olcu": "130*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M19",
+      "ad": "TEK KAPILI DERİN DONDURUCU",
+      "olcu": "60*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M20",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "120*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M21",
+      "ad": "ÇÖP ARABASI",
+      "olcu": "40*50",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M22",
+      "ad": "BULAŞIK YIKAMA MAKİNASI, SETALTI",
+      "olcu": "60*60*82",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B1",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI, TABAN RAFLI, DOLAPLI",
+      "olcu": "120*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B2",
+      "ad": "BULAŞIK YIKAMA MAKİNASI, SETALTI",
+      "olcu": "60*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B3",
+      "ad": "BUZ MAKİNASI",
+      "olcu": "42 kg/gün",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B4",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+      "olcu": "130*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B5",
+      "ad": "ESPRESSO KAHVE MAKİNASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B6",
+      "ad": "FİLTRE KAHVE MAKİNASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B7",
+      "ad": "PORTAKAL SIKMA MAKİNASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B8",
+      "ad": "BAR BLENDER, KABİNLİ",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B9",
+      "ad": "ÇAY OTOMATI",
+      "olcu": "23 lt.",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B10",
+      "ad": "ŞİŞE SOĞUTUCU, DUVAR TİPİ, REMOTE CONTROL",
+      "olcu": "230*45*100",
+      "adet": 1
+    }
+  ]
+}

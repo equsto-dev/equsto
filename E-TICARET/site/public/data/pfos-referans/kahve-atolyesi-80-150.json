@@ -1,0 +1,389 @@
+{
+  "kategoriId": "kahve-atolyesi",
+  "bantId": "80-150",
+  "label": "Kahve Atölyesi 80–150 m²",
+  "referansM2": 120,
+  "kaynakDosya": "2016-046 KAHVE ATÖLYESİ LAINOX/2016-046-1.xlsx",
+  "not": "Kahve ağırlıklı · kahvaltı & hafif yemek · Kahve Atölyesi markası",
+  "yukleme": "2026-05-31T00:15:28.660Z",
+  "kalemSayisi": 47,
+  "toplamAdet": 54,
+  "kalemler": [
+    {
+      "bolum": "K",
+      "bolumAd": "K- KURU DEPO",
+      "poz": "K1",
+      "ad": "İSTİF RAFI, DEMONTE, 4 KATLI",
+      "olcu": "152*53*160",
+      "adet": 2
+    },
+    {
+      "bolum": "K",
+      "bolumAd": "K- KURU DEPO",
+      "poz": "K2",
+      "ad": "İSTİF RAFI, DEMONTE, 4 KATLI",
+      "olcu": "122*53*160",
+      "adet": 2
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B1",
+      "ad": "SERVİS TEZGAHI, GRANİT MOBİLYA HARİÇTİR",
+      "olcu": "105*75*90",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B2",
+      "ad": "ÇİKOLATA  DOLABI, GRANİT MOBİLYA HARİÇTİR",
+      "olcu": "150*75*125",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B3",
+      "ad": "PASTA DOLABI,, GRANİT MOBİLYA HARİÇTİR",
+      "olcu": "150*75*125",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B4",
+      "ad": "CAM KAPILI TEZGAH TİPİ BUZDOLABI, 2 KAPILI",
+      "olcu": "150*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B5",
+      "ad": "BAR EKİPMANI 1",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B6",
+      "ad": "BAR EKİPMANI 2",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B7",
+      "ad": "BAR EKİPMANI 3",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B8",
+      "ad": "BAR EKİPMANI 4",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B9",
+      "ad": "ÇALIŞMA TEZGAHI, ARA RAFLI, DOLAPLI",
+      "olcu": "75*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B10",
+      "ad": "ESPRESSO KAHVE MAKİNASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B11",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI, DOLAPLI",
+      "olcu": "180*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B12",
+      "ad": "BUZ MAKİNASI",
+      "olcu": "40 kg/gün",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B13",
+      "ad": "BAR EKİPMANI 5",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BAR",
+      "poz": "B14",
+      "ad": "BAR EKİPMANI 6",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BULAŞIK YIKAMA",
+      "poz": "D1",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI, SIYIRMA HUNİLİ",
+      "olcu": "260*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BULAŞIK YIKAMA",
+      "poz": "D2",
+      "ad": "DUVAR RAFI",
+      "olcu": "260*30*4",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BULAŞIK YIKAMA",
+      "poz": "D3",
+      "ad": "ÇÖP ARABASI",
+      "olcu": "Ø40*50",
+      "adet": 2
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BULAŞIK YIKAMA",
+      "poz": "D4",
+      "ad": "BULAŞIK YIKAMA MAKİNASI, SETALTI",
+      "olcu": "500 tb/s",
+      "adet": 2
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BULAŞIK YIKAMA",
+      "poz": "D5",
+      "ad": "İSTİF RAFI, DEMONTE, 4 KATLI",
+      "olcu": "122*61*160",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BULAŞIK YIKAMA",
+      "poz": "D6",
+      "ad": "ÇİFT EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "120*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BULAŞIK YIKAMA",
+      "poz": "D7",
+      "ad": "DUVAR RAFI",
+      "olcu": "120*30*4",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BULAŞIK YIKAMA",
+      "poz": "D8",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+      "olcu": "120*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BULAŞIK YIKAMA",
+      "poz": "D9",
+      "ad": "DUVAR RAFI",
+      "olcu": "120*30*4",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BULAŞIK YIKAMA",
+      "poz": "D10",
+      "ad": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+      "olcu": "70*70*205",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- BULAŞIK YIKAMA",
+      "poz": "D11",
+      "ad": "DEPO TİPİ DERİN DONDURUCU, TEK KAPILI",
+      "olcu": "70*70*205",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M1",
+      "ad": "TEK EVYELİ .ÇALIŞMA TEZGAHI",
+      "olcu": "70*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M2",
+      "ad": "MAKE-UP DOLABI, 2 KAPILI, KÜVETLER DAHİL",
+      "olcu": "135*70*85/105",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M3",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN RAFLI",
+      "olcu": "120*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M4",
+      "ad": "ÇALIŞMA TEZGAHI, ARA RAFLI, DOLAPLI",
+      "olcu": "200*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M5",
+      "ad": "SERVİS RAFI",
+      "olcu": "270*40*60",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M6",
+      "ad": "FIRIN TEZGAHI, TEPSİ İSTİFLİ",
+      "olcu": "80*80*85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M7",
+      "ad": "KONVEKSİYONLU FIRIN",
+      "olcu": "10 GN 1/1",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M8",
+      "ad": "CİHAZALTI BUZDOLABI, ÇEKMECELİ",
+      "olcu": "200*70*55",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M9",
+      "ad": "SOS BAINMARIE, ELK., SETÜSTÜ",
+      "olcu": "40*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M10",
+      "ad": "4 AÇIK ALEVLİ OCAK, GAZLI, SETÜSTÜ",
+      "olcu": "80*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M11",
+      "ad": "FRİTÖZ, ÇİFT SEPETLİ, ELK., SETÜSTÜ",
+      "olcu": "80*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M12",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+      "olcu": "360*97*50",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M13",
+      "ad": "TAVA RAFI",
+      "olcu": "200*35*35",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M14",
+      "ad": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+      "olcu": "70*70*205",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M15",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN RAFLI",
+      "olcu": "100*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M16",
+      "ad": "DUVAR RAFI",
+      "olcu": "80*30*4",
+      "adet": 2
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M17",
+      "ad": "ÇALIŞMA TEZGAHI, ARA RAFLI, DOLAPLI",
+      "olcu": "200*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M18",
+      "ad": "DUVAR RAFI",
+      "olcu": "210*30*4",
+      "adet": 2
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "Y- YER IZGARASI",
+      "poz": "Y1",
+      "ad": "YER IZGARASI",
+      "olcu": "30*30*14",
+      "adet": 1
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "Y- YER IZGARASI",
+      "poz": "Y2",
+      "ad": "YER IZGARASI",
+      "olcu": "120*30*14",
+      "adet": 2
+    }
+  ]
+}

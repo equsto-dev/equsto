@@ -1,0 +1,2293 @@
+{
+  "kategoriId": "buyuk-yemekhane",
+  "bantId": "2000-3500",
+  "label": "Büyük Yemekhane 2000–3500 kişi",
+  "referansM2": 2750,
+  "kaynakDosya": "2016-070 YOZGAT YEMEKHANE LAINOX/YOZGAT YEMEK EKİPMAN.xlsx",
+  "not": "Büyük hastane mutfağı · Yozgat referans · catering / fabrika / okul yemekhanesi paketi",
+  "yukleme": "2026-05-31T01:01:22.903Z",
+  "kalemSayisi": 285,
+  "toplamAdet": 557,
+  "kalemler": [
+    {
+      "bolum": "SOĞUK_ODA",
+      "bolumAd": "SOĞUK ODA",
+      "poz": "2P1-01",
+      "ad": "SOGUK ODA, CANTEK",
+      "olcu": "5000x2850x2500",
+      "adet": 1
+    },
+    {
+      "bolum": "SOĞUK_ODA",
+      "bolumAd": "SOĞUK ODA",
+      "poz": "2P1-02",
+      "ad": "GN ARABA, PORTASHELF, MT162X",
+      "olcu": "660x580x1720",
+      "adet": 4
+    },
+    {
+      "bolum": "SOĞUK_ODA",
+      "bolumAd": "SOĞUK ODA",
+      "poz": "2P1-03",
+      "ad": "İSTİF ETAJERİ, PORTASHELF, 304K PASLANMAZ",
+      "olcu": "1830x460x1830",
+      "adet": 4
+    },
+    {
+      "bolum": "SOĞUK_ODA",
+      "bolumAd": "SOĞUK ODA",
+      "poz": "2P1-04",
+      "ad": "İSTİF ETAJERİ, PORTASHELF, 304K PASLANMAZ",
+      "olcu": "1520x460x1830",
+      "adet": 1
+    },
+    {
+      "bolum": "ISITMA_MUTFA",
+      "bolumAd": "ISITMA MUTFAĞI",
+      "poz": "2P1-10",
+      "ad": "YER YIKAMA HORTUMU, M.TEMİNİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "ISITMA_MUTFA",
+      "bolumAd": "ISITMA MUTFAĞI",
+      "poz": "2P1-11",
+      "ad": "EL YIKAMA EVYESI, BİLGE",
+      "olcu": "500x400x300",
+      "adet": 1
+    },
+    {
+      "bolum": "ISITMA_MUTFA",
+      "bolumAd": "ISITMA MUTFAĞI",
+      "poz": "2P1-12",
+      "ad": "DIK TIP BUZDOLABI, MAKPA-FR, VN7",
+      "olcu": "700x810x2050",
+      "adet": 1
+    },
+    {
+      "bolum": "ISITMA_MUTFA",
+      "bolumAd": "ISITMA MUTFAĞI",
+      "poz": "2P1-13",
+      "ad": "ÇALISMA TEZGAHI-TABAN RAFLI, YÜKSEL",
+      "olcu": "1900x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "ISITMA_MUTFA",
+      "bolumAd": "ISITMA MUTFAĞI",
+      "poz": "2P1-14",
+      "ad": "DUVAR RAFI, YÜKSEL",
+      "olcu": "1900x300x40",
+      "adet": 2
+    },
+    {
+      "bolum": "ISITMA_MUTFA",
+      "bolumAd": "ISITMA MUTFAĞI",
+      "poz": "2P1-15",
+      "ad": "TEK EVYELİ TEZGAH, YÜKSEL",
+      "olcu": "1900x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "ISITMA_MUTFA",
+      "bolumAd": "ISITMA MUTFAĞI",
+      "poz": "2P1-16",
+      "ad": "ÇÖP ARABASI, PORTASHELF, MB126X",
+      "olcu": "Ø50",
+      "adet": 1
+    },
+    {
+      "bolum": "ISITMA_MUTFA",
+      "bolumAd": "ISITMA MUTFAĞI",
+      "poz": "2P1-20",
+      "ad": "İSTİF ETAJERİ, PORTASHELF, 304K PASLANMAZ",
+      "olcu": "1830x460x1830",
+      "adet": 1
+    },
+    {
+      "bolum": "ISITMA_MUTFA",
+      "bolumAd": "ISITMA MUTFAĞI",
+      "poz": "2P1-21",
+      "ad": "İSTİF ETAJERİ, PORTASHELF, 304K PASLANMAZ",
+      "olcu": "1520x460x1830",
+      "adet": 1
+    },
+    {
+      "bolum": "SERVİS_1",
+      "bolumAd": "SERVİS 1",
+      "poz": "2P1-30",
+      "ad": "DIK TIP BUZDOLABI, MAKPA-FR, VN7",
+      "olcu": "700x810x2050",
+      "adet": 1
+    },
+    {
+      "bolum": "SERVİS_1",
+      "bolumAd": "SERVİS 1",
+      "poz": "2P1-31",
+      "ad": "DOLAPLI TEZGAH, YÜKSEL",
+      "olcu": "1800x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "SERVİS_1",
+      "bolumAd": "SERVİS 1",
+      "poz": "2P1-32",
+      "ad": "SICAK BANKET ARABASI, PORTASHELF, MBY211S",
+      "olcu": "780x840x1700",
+      "adet": 2
+    },
+    {
+      "bolum": "SERVİS_1",
+      "bolumAd": "SERVİS 1",
+      "poz": "2P1-35",
+      "ad": "MESRUBAT DOLABI SET ALTI, MAKPA-FR, BSN1",
+      "olcu": "600x600x845",
+      "adet": 1
+    },
+    {
+      "bolum": "SERVİS_1",
+      "bolumAd": "SERVİS 1",
+      "poz": "2P1-36",
+      "ad": "EVYELİ DOLAPLI TEZGAH, YÜKSEL",
+      "olcu": "1700x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "SERVİS_1",
+      "bolumAd": "SERVİS 1",
+      "poz": "2P1-38",
+      "ad": "CAY OTOMATI, OKYAY, OKYAY03",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "SERVİS_1",
+      "bolumAd": "SERVİS 1",
+      "poz": "2P1-40",
+      "ad": "ATIK ÜNİTESİ, YÜKSEL-K",
+      "olcu": "600x400x850",
+      "adet": 1
+    },
+    {
+      "bolum": "SERVİS_1",
+      "bolumAd": "SERVİS 1",
+      "poz": "2P1-41",
+      "ad": "DEKORATİF SERVİS BANKOSU, YÜKSEL",
+      "olcu": "6550x1100x850",
+      "adet": 1
+    },
+    {
+      "bolum": "SERVİS_1",
+      "bolumAd": "SERVİS 1",
+      "poz": "2P1-42",
+      "ad": "TEPSI OTOMATI, PORTASHELF, M0180X",
+      "olcu": "590x590x900",
+      "adet": 1
+    },
+    {
+      "bolum": "SERVİS_1",
+      "bolumAd": "SERVİS 1",
+      "poz": "2P1-43",
+      "ad": "KUVERLIK, YÜKSEL-K",
+      "olcu": "700x700x1200",
+      "adet": 1
+    },
+    {
+      "bolum": "SERVİS_1",
+      "bolumAd": "SERVİS 1",
+      "poz": "2P1-44",
+      "ad": "SICAK SERVIS UNITESI, MAKPA",
+      "olcu": "1750x650x600",
+      "adet": 1
+    },
+    {
+      "bolum": "SERVİS_1",
+      "bolumAd": "SERVİS 1",
+      "poz": "2P1-45",
+      "ad": "SERVIS RAFI, YÜKSEL-K",
+      "olcu": "1750x400x600",
+      "adet": 1
+    },
+    {
+      "bolum": "SERVİS_1",
+      "bolumAd": "SERVİS 1",
+      "poz": "2P1-46",
+      "ad": "SOGUK SERVIS UNITESI, MAKPA",
+      "olcu": "1520x700x600",
+      "adet": 1
+    },
+    {
+      "bolum": "BULAŞIK",
+      "bolumAd": "BULAŞIK",
+      "poz": "2P1-55",
+      "ad": "BULASIK SIYIRMA TEZGAHI, YÜKSEL-K",
+      "olcu": "2900x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "BULAŞIK",
+      "bolumAd": "BULAŞIK",
+      "poz": "2P1-56",
+      "ad": "BASKET RAFI, YÜKSEL-K",
+      "olcu": "2900x550x600",
+      "adet": 1
+    },
+    {
+      "bolum": "BULAŞIK",
+      "bolumAd": "BULAŞIK",
+      "poz": "2P1-57",
+      "ad": "BARDAK YIKAMA MAKINASI, COMENDA, RF51",
+      "olcu": "600x600x820",
+      "adet": 1
+    },
+    {
+      "bolum": "BULAŞIK",
+      "bolumAd": "BULAŞIK",
+      "poz": "2P1-58",
+      "ad": "ÇÖP ARABASI, PORTASHELF, MB126X",
+      "olcu": "Ø50",
+      "adet": 1
+    },
+    {
+      "bolum": "BULAŞIK",
+      "bolumAd": "BULAŞIK",
+      "poz": "2P1-59",
+      "ad": "MAKINA GIRIS TEZGAHI, YÜKSEL-K",
+      "olcu": "1000x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "BULAŞIK",
+      "bolumAd": "BULAŞIK",
+      "poz": "2P1-60",
+      "ad": "ON YIKAMA DUSU, LIVA",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "BULAŞIK",
+      "bolumAd": "BULAŞIK",
+      "poz": "2P1-61",
+      "ad": "BULASIK YIKAMA MAKINASI, COMENDA, RC411",
+      "olcu": "632x760x1460",
+      "adet": 1
+    },
+    {
+      "bolum": "BULAŞIK",
+      "bolumAd": "BULAŞIK",
+      "poz": "2P1-62",
+      "ad": "DAVLUMBAZ, YÜKSEL",
+      "olcu": "1000x1000x500",
+      "adet": 1
+    },
+    {
+      "bolum": "BULAŞIK",
+      "bolumAd": "BULAŞIK",
+      "poz": "2P1-63",
+      "ad": "MAKINA CIKIS TEZGAHI, YÜKSEL-K",
+      "olcu": "800x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "BULAŞIK",
+      "bolumAd": "BULAŞIK",
+      "poz": "2P1-64",
+      "ad": "İSTİF ETAJERİ, PORTASHELF, 304K PASLANMAZ",
+      "olcu": "1830x460x1830",
+      "adet": 1
+    },
+    {
+      "bolum": "BULAŞIK",
+      "bolumAd": "BULAŞIK",
+      "poz": "2P1-65",
+      "ad": "İSTİF ETAJERİ, PORTASHELF, 304K PASLANMAZ",
+      "olcu": "1520x460x1830",
+      "adet": 1
+    },
+    {
+      "bolum": "BULAŞIK",
+      "bolumAd": "BULAŞIK",
+      "poz": "2P1-66",
+      "ad": "BOS TEPSI TOPLAMA ARABASI, PORTASHELF, MB102X",
+      "olcu": "830x570x1600",
+      "adet": 3
+    },
+    {
+      "bolum": "ISITMA_MUTFA",
+      "bolumAd": "ISITMA MUTFAĞI 2",
+      "poz": "2P2-01",
+      "ad": "EL YIKAMA EVYESI, BİLGE",
+      "olcu": "500x400x300",
+      "adet": 1
+    },
+    {
+      "bolum": "ISITMA_MUTFA",
+      "bolumAd": "ISITMA MUTFAĞI 2",
+      "poz": "2P2-02",
+      "ad": "YER YIKAMA HORTUMU, M.TEMİNİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "ISITMA_MUTFA",
+      "bolumAd": "ISITMA MUTFAĞI 2",
+      "poz": "2P2-04",
+      "ad": "SICAK BANKET ARABASI, PORTASHELF, MBY211S",
+      "olcu": "780x840x1700",
+      "adet": 2
+    },
+    {
+      "bolum": "ISITMA_MUTFA",
+      "bolumAd": "ISITMA MUTFAĞI 2",
+      "poz": "2P2-06",
+      "ad": "TEK EVYELI TEZGAH, YÜKSEL",
+      "olcu": "1200x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "ISITMA_MUTFA",
+      "bolumAd": "ISITMA MUTFAĞI 2",
+      "poz": "2P2-07",
+      "ad": "DUVAR RAFI, YÜKSEL",
+      "olcu": "1200x300x40",
+      "adet": 2
+    },
+    {
+      "bolum": "ISITMA_MUTFA",
+      "bolumAd": "ISITMA MUTFAĞI 2",
+      "poz": "2P2-08",
+      "ad": "ÇÖP ARABASI, PORTASHELF, MB126X",
+      "olcu": "Ø50",
+      "adet": 1
+    },
+    {
+      "bolum": "ISITMA_MUTFA",
+      "bolumAd": "ISITMA MUTFAĞI 2",
+      "poz": "2P2-09",
+      "ad": "ÇALISMA TEZGAHI-TABAN RAFLI, YÜKSEL",
+      "olcu": "1200x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "ISITMA_MUTFA",
+      "bolumAd": "ISITMA MUTFAĞI 2",
+      "poz": "2P2-10",
+      "ad": "ÇALISMA TEZGAHI-TABAN RAFLI, YÜKSEL",
+      "olcu": "1900x700x850",
+      "adet": 2
+    },
+    {
+      "bolum": "SERVİS_2",
+      "bolumAd": "SERVİS 2",
+      "poz": "2P2-20",
+      "ad": "DIK TIP BUZDOLABI, MAKPA-FR, VN7",
+      "olcu": "700x810x2050",
+      "adet": 1
+    },
+    {
+      "bolum": "SERVİS_2",
+      "bolumAd": "SERVİS 2",
+      "poz": "2P2-21",
+      "ad": "DOLAPLI TEZGAH, YÜKSEL",
+      "olcu": "1400x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "SERVİS_2",
+      "bolumAd": "SERVİS 2",
+      "poz": "2P2-22",
+      "ad": "DUVAR RAFI, YÜKSEL",
+      "olcu": "1400x300x40",
+      "adet": 1
+    },
+    {
+      "bolum": "SERVİS_2",
+      "bolumAd": "SERVİS 2",
+      "poz": "2P2-23",
+      "ad": "MESRUBAT DOLABI, M.TEMİNİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "SERVİS_2",
+      "bolumAd": "SERVİS 2",
+      "poz": "2P2-24",
+      "ad": "EVYELI DOLAPLI TEZGAH, YÜKSEL",
+      "olcu": "1700x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "SERVİS_2",
+      "bolumAd": "SERVİS 2",
+      "poz": "2P2-25",
+      "ad": "ÇÖP ARABASI, PORTASHELF, MB126X",
+      "olcu": "Ø50",
+      "adet": 1
+    },
+    {
+      "bolum": "SERVİS_2",
+      "bolumAd": "SERVİS 2",
+      "poz": "2P2-26",
+      "ad": "CAY OTOMATI, OKYAY, OKYAY03",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "SERVİS_2",
+      "bolumAd": "SERVİS 2",
+      "poz": "2P2-29",
+      "ad": "DEKORATIF SERVIS BANKOSU, MAKPA-KR",
+      "olcu": "5750x1100x850",
+      "adet": 1
+    },
+    {
+      "bolum": "SERVİS_2",
+      "bolumAd": "SERVİS 2",
+      "poz": "2P2-30",
+      "ad": "TEPSI OTOMATI, PORTASHELF, M0180X",
+      "olcu": "590x590x900",
+      "adet": 1
+    },
+    {
+      "bolum": "SERVİS_2",
+      "bolumAd": "SERVİS 2",
+      "poz": "2P2-31",
+      "ad": "KUVERLIK, YÜKSEL-K",
+      "olcu": "700x700x1200",
+      "adet": 1
+    },
+    {
+      "bolum": "SERVİS_2",
+      "bolumAd": "SERVİS 2",
+      "poz": "2P2-32",
+      "ad": "SICAK SERVIS UNITESI, MAKPA",
+      "olcu": "1750x650x600",
+      "adet": 1
+    },
+    {
+      "bolum": "SERVİS_2",
+      "bolumAd": "SERVİS 2",
+      "poz": "2P2-33",
+      "ad": "SERVIS RAFI, YÜKSEL-K",
+      "olcu": "1750x400x600",
+      "adet": 1
+    },
+    {
+      "bolum": "SERVİS_2",
+      "bolumAd": "SERVİS 2",
+      "poz": "2P2-34",
+      "ad": "SOGUK SERVIS UNITESI, MAKPA",
+      "olcu": "1520x700x600",
+      "adet": 1
+    },
+    {
+      "bolum": "EKMEK_&_SU",
+      "bolumAd": "EKMEK & SU",
+      "poz": "2P2-40",
+      "ad": "EKMEK DOLABI, YÜKSEL",
+      "olcu": "2200x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "EKMEK_&_SU",
+      "bolumAd": "EKMEK & SU",
+      "poz": "2P2-42",
+      "ad": "SU SEBILI, TEKNOGRAND, C.SP-80",
+      "olcu": "—",
+      "adet": 4
+    },
+    {
+      "bolum": "EKMEK_&_SU",
+      "bolumAd": "EKMEK & SU",
+      "poz": "2P2-43",
+      "ad": "İSTİF ETAJERİ, PORTASHELF, 304K PASLANMAZ",
+      "olcu": "1520x460x1830",
+      "adet": 1
+    },
+    {
+      "bolum": "BULAŞIK",
+      "bolumAd": "BULAŞIK",
+      "poz": "2P2-55",
+      "ad": "BULASIK SIYIRMA TEZGAHI, YÜKSEL-K",
+      "olcu": "1900x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "BULAŞIK",
+      "bolumAd": "BULAŞIK",
+      "poz": "2P2-56",
+      "ad": "BASKET RAFI, YÜKSEL-K",
+      "olcu": "1900x550x600",
+      "adet": 1
+    },
+    {
+      "bolum": "BULAŞIK",
+      "bolumAd": "BULAŞIK",
+      "poz": "2P2-57",
+      "ad": "BARDAK YIKAMA MAKINASI, COMENDA, RF51",
+      "olcu": "600x600x820",
+      "adet": 1
+    },
+    {
+      "bolum": "BULAŞIK",
+      "bolumAd": "BULAŞIK",
+      "poz": "2P2-58",
+      "ad": "ÇÖP ARABASI, PORTASHELF, MB126X",
+      "olcu": "Ø50",
+      "adet": 1
+    },
+    {
+      "bolum": "BULAŞIK",
+      "bolumAd": "BULAŞIK",
+      "poz": "2P2-59",
+      "ad": "MAKINA GIRIS TEZGAHI, YÜKSEL-K",
+      "olcu": "1200x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "BULAŞIK",
+      "bolumAd": "BULAŞIK",
+      "poz": "2P2-60",
+      "ad": "ON YIKAMA DUSU, LIVA",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "BULAŞIK",
+      "bolumAd": "BULAŞIK",
+      "poz": "2P2-61",
+      "ad": "BULASIK YIKAMA MAKINASI, COMENDA, RC411",
+      "olcu": "632x760x1460",
+      "adet": 1
+    },
+    {
+      "bolum": "BULAŞIK",
+      "bolumAd": "BULAŞIK",
+      "poz": "2P2-62",
+      "ad": "DAVLUMBAZ, YÜKSEL",
+      "olcu": "1000x1000x500",
+      "adet": 1
+    },
+    {
+      "bolum": "BULAŞIK",
+      "bolumAd": "BULAŞIK",
+      "poz": "2P2-63",
+      "ad": "MAKINA CIKIS TEZGAHI, YÜKSEL-K",
+      "olcu": "1000x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "BULAŞIK",
+      "bolumAd": "BULAŞIK",
+      "poz": "2P2-64",
+      "ad": "İSTİF ETAJERİ, PORTASHELF, 304K PASLANMAZ",
+      "olcu": "1830x460x1830",
+      "adet": 2
+    },
+    {
+      "bolum": "BULAŞIK",
+      "bolumAd": "BULAŞIK",
+      "poz": "2P2-66",
+      "ad": "BOS TEPSI TOPLAMA ARABASI, PORTASHELF, MB102X",
+      "olcu": "830x570x1600",
+      "adet": 8
+    },
+    {
+      "bolum": "YER_IZGARALA",
+      "bolumAd": "YER IZGARALARI",
+      "poz": "DR-01",
+      "ad": "YER IZGARASI, PORTASHELF, B2 SIĞ TİP",
+      "olcu": "300x300",
+      "adet": 2
+    },
+    {
+      "bolum": "YER_IZGARALA",
+      "bolumAd": "YER IZGARALARI",
+      "poz": "DR-02",
+      "ad": "YER IZGARASI, PORTASHELF, B2 SIĞ TİP",
+      "olcu": "500x300",
+      "adet": 3
+    },
+    {
+      "bolum": "YER_IZGARALA",
+      "bolumAd": "YER IZGARALARI",
+      "poz": "DR-03",
+      "ad": "YER IZGARASI, PORTASHELF, B2 SIĞ TİP",
+      "olcu": "1200x300",
+      "adet": 1
+    },
+    {
+      "bolum": "DEPOLAR",
+      "bolumAd": "DEPOLAR",
+      "poz": "MK-001",
+      "ad": "DERIN DONDURUCU, CANTEK",
+      "olcu": "5400x2450x2500",
+      "adet": 1
+    },
+    {
+      "bolum": "DEPOLAR",
+      "bolumAd": "DEPOLAR",
+      "poz": "MK-002",
+      "ad": "SUTLU MAMUL SOGUK ODA, CANTEK",
+      "olcu": "5400x2280x2500",
+      "adet": 1
+    },
+    {
+      "bolum": "DEPOLAR",
+      "bolumAd": "DEPOLAR",
+      "poz": "MK-003",
+      "ad": "KAHVALTI SOGUK ODA, CANTEK",
+      "olcu": "5400x2300x2500",
+      "adet": 1
+    },
+    {
+      "bolum": "DEPOLAR",
+      "bolumAd": "DEPOLAR",
+      "poz": "MK-004",
+      "ad": "SEBZE SOGUK ODA, CANTEK",
+      "olcu": "5400x3750x2500",
+      "adet": 1
+    },
+    {
+      "bolum": "DEPOLAR",
+      "bolumAd": "DEPOLAR",
+      "poz": "MK-005",
+      "ad": "SEBZE DERIN DONDURUCU, CANTEK",
+      "olcu": "5400x2500x2500",
+      "adet": 1
+    },
+    {
+      "bolum": "DEPOLAR",
+      "bolumAd": "DEPOLAR",
+      "poz": "MK-006",
+      "ad": "ET SOGUK ODA, CANTEK",
+      "olcu": "5400x4650x2500",
+      "adet": 1
+    },
+    {
+      "bolum": "DEPOLAR",
+      "bolumAd": "DEPOLAR",
+      "poz": "MK-008",
+      "ad": "TAVUK SOGUK ODA, CANTEK",
+      "olcu": "5400x4500x2500",
+      "adet": 1
+    },
+    {
+      "bolum": "DEPOLAR",
+      "bolumAd": "DEPOLAR",
+      "poz": "MK-010",
+      "ad": "TATLI & KAHVALTI SOGUK ODA, CANTEK",
+      "olcu": "3600x3100x2500",
+      "adet": 1
+    },
+    {
+      "bolum": "DEPOLAR",
+      "bolumAd": "DEPOLAR",
+      "poz": "MK-011",
+      "ad": "SICAK MUTFAK SOĞUK ODA, CANTEK",
+      "olcu": "3600x3100x2500",
+      "adet": 1
+    },
+    {
+      "bolum": "DEPOLAR",
+      "bolumAd": "DEPOLAR",
+      "poz": "MK-012",
+      "ad": "DIYET MUTFAK SOGUK ODA, CANTEK",
+      "olcu": "3800x3600x2500",
+      "adet": 1
+    },
+    {
+      "bolum": "DEPOLAR",
+      "bolumAd": "DEPOLAR",
+      "poz": "MK-014",
+      "ad": "IADE SOGUK ODA, CANTEK",
+      "olcu": "2700x2550x2500",
+      "adet": 1
+    },
+    {
+      "bolum": "DEPOLAR",
+      "bolumAd": "DEPOLAR",
+      "poz": "MK-015",
+      "ad": "ÇÖP SOĞUK ODA, CANTEK",
+      "olcu": "5400x4950x2500",
+      "adet": 1
+    },
+    {
+      "bolum": "GENEL_ALANLA",
+      "bolumAd": "GENEL ALANLAR",
+      "poz": "MK-020",
+      "ad": "İSTİF ETAJERİ, PORTASHELF, 304K PASLANMAZ",
+      "olcu": "1520x460x1830",
+      "adet": 43
+    },
+    {
+      "bolum": "GENEL_ALANLA",
+      "bolumAd": "GENEL ALANLAR",
+      "poz": "MK-021",
+      "ad": "İSTİF ETAJERİ, PORTASHELF, 304K PASLANMAZ",
+      "olcu": "1830x460x1830",
+      "adet": 24
+    },
+    {
+      "bolum": "GENEL_ALANLA",
+      "bolumAd": "GENEL ALANLAR",
+      "poz": "MK-022",
+      "ad": "GN ARABA, PORTASHELF, MT162X",
+      "olcu": "660x580x1720",
+      "adet": 11
+    },
+    {
+      "bolum": "GENEL_ALANLA",
+      "bolumAd": "GENEL ALANLAR",
+      "poz": "MK-023",
+      "ad": "İSTİF ETAJERİ, PORTASHELF, 304K PASLANMAZ",
+      "olcu": "1830x460x1830",
+      "adet": 16
+    },
+    {
+      "bolum": "GENEL_ALANLA",
+      "bolumAd": "GENEL ALANLAR",
+      "poz": "MK-024",
+      "ad": "YER ETAJERİ, PORTASHELF, M80040",
+      "olcu": "910x530x200",
+      "adet": 9
+    },
+    {
+      "bolum": "GENEL_ALANLA",
+      "bolumAd": "GENEL ALANLAR",
+      "poz": "MK-025",
+      "ad": "PLATFORM ARABA, PORTASHELF, MT192G",
+      "olcu": "650x950x930",
+      "adet": 1
+    },
+    {
+      "bolum": "GENEL_ALANLA",
+      "bolumAd": "GENEL ALANLAR",
+      "poz": "MK-026",
+      "ad": "YER YIKAMA HORTUMU, M.TEMİNİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "GENEL_ALANLA",
+      "bolumAd": "GENEL ALANLAR",
+      "poz": "MK-027",
+      "ad": "EL YIKAMA EVYESI, BİLGE",
+      "olcu": "500x400x300",
+      "adet": 1
+    },
+    {
+      "bolum": "GENEL_ALANLA",
+      "bolumAd": "GENEL ALANLAR",
+      "poz": "MK-028",
+      "ad": "YER ETAJERİ, PORTASHELF, M0682136P1834K",
+      "olcu": "910x530x200",
+      "adet": 3
+    },
+    {
+      "bolum": "GENEL_ALANLA",
+      "bolumAd": "GENEL ALANLAR",
+      "poz": "MK-029",
+      "ad": "PLATFORM TARTI, ENDER, EB-TEB-600",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "GENEL_ALANLA",
+      "bolumAd": "GENEL ALANLAR",
+      "poz": "MK-030",
+      "ad": "SINEK OLDURUCU, ELECTROFROG, FI 0550",
+      "olcu": "—",
+      "adet": 5
+    },
+    {
+      "bolum": "GENEL_ALANLA",
+      "bolumAd": "GENEL ALANLAR",
+      "poz": "MK-031",
+      "ad": "ÇÖP KONTEYNIRI, UÇAK, 240L",
+      "olcu": "—",
+      "adet": 9
+    },
+    {
+      "bolum": "SEBZE_ON_HAZ",
+      "bolumAd": "SEBZE ON HAZIRLIK & SEBZE HAZIRLIK",
+      "poz": "MK-040",
+      "ad": "PATATES SOYMA MAKINASI, SIRMAN, PPJ20",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "SEBZE_ON_HAZ",
+      "bolumAd": "SEBZE ON HAZIRLIK & SEBZE HAZIRLIK",
+      "poz": "MK-041",
+      "ad": "SEBZE SUZME TEZGAHI, YÜKSEL",
+      "olcu": "1400x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "SEBZE_ON_HAZ",
+      "bolumAd": "SEBZE ON HAZIRLIK & SEBZE HAZIRLIK",
+      "poz": "MK-042",
+      "ad": "ON YIKAMA DUSU, LIVA",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "SEBZE_ON_HAZ",
+      "bolumAd": "SEBZE ON HAZIRLIK & SEBZE HAZIRLIK",
+      "poz": "MK-043",
+      "ad": "ÇALISMA TEZGAHI-TABAN RAFLI, YÜKSEL",
+      "olcu": "900x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "SEBZE_ON_HAZ",
+      "bolumAd": "SEBZE ON HAZIRLIK & SEBZE HAZIRLIK",
+      "poz": "MK-044",
+      "ad": "DUVAR RAFI, YÜKSEL",
+      "olcu": "900x300x40",
+      "adet": 1
+    },
+    {
+      "bolum": "SEBZE_ON_HAZ",
+      "bolumAd": "SEBZE ON HAZIRLIK & SEBZE HAZIRLIK",
+      "poz": "MK-045",
+      "ad": "EL YIKAMA EVYESI, BİLGE",
+      "olcu": "500x400x300",
+      "adet": 1
+    },
+    {
+      "bolum": "SEBZE_ON_HAZ",
+      "bolumAd": "SEBZE ON HAZIRLIK & SEBZE HAZIRLIK",
+      "poz": "MK-046",
+      "ad": "SEBZE TASIMA ARABASI, PORTASHELF, MT140X",
+      "olcu": "900x600x500",
+      "adet": 2
+    },
+    {
+      "bolum": "SEBZE_ON_HAZ",
+      "bolumAd": "SEBZE ON HAZIRLIK & SEBZE HAZIRLIK",
+      "poz": "MK-047",
+      "ad": "CIFT EVIYELI CALISMA TEZGAHI, YÜKSEL",
+      "olcu": "1400x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "SEBZE_ON_HAZ",
+      "bolumAd": "SEBZE ON HAZIRLIK & SEBZE HAZIRLIK",
+      "poz": "MK-048",
+      "ad": "ÇALISMA TEZGAHI-TABAN RAFLI, YÜKSEL",
+      "olcu": "1400x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "SEBZE_ON_HAZ",
+      "bolumAd": "SEBZE ON HAZIRLIK & SEBZE HAZIRLIK",
+      "poz": "MK-049",
+      "ad": "ÇÖP ARABASI, PORTASHELF, MB126X",
+      "olcu": "Ø50",
+      "adet": 1
+    },
+    {
+      "bolum": "SEBZE_ON_HAZ",
+      "bolumAd": "SEBZE ON HAZIRLIK & SEBZE HAZIRLIK",
+      "poz": "MK-050",
+      "ad": "DUVAR RAFI, YÜKSEL",
+      "olcu": "2300x300x40",
+      "adet": 1
+    },
+    {
+      "bolum": "SEBZE_ON_HAZ",
+      "bolumAd": "SEBZE ON HAZIRLIK & SEBZE HAZIRLIK",
+      "poz": "MK-051",
+      "ad": "BICAK STERIL DOLABI, PORTASHELF, M08220",
+      "olcu": "520x140x520",
+      "adet": 1
+    },
+    {
+      "bolum": "SEBZE_ON_HAZ",
+      "bolumAd": "SEBZE ON HAZIRLIK & SEBZE HAZIRLIK",
+      "poz": "MK-052",
+      "ad": "SEBZE YIKAMA MAKİNASI, NILMA, ATIR I TILTING",
+      "olcu": "1570x1090x1710",
+      "adet": 1
+    },
+    {
+      "bolum": "SEBZE_ON_HAZ",
+      "bolumAd": "SEBZE ON HAZIRLIK & SEBZE HAZIRLIK",
+      "poz": "MK-053",
+      "ad": "SEBZE KURUTMA MAKİNASI, NILMA, IDROVER 50",
+      "olcu": "Ø65",
+      "adet": 1
+    },
+    {
+      "bolum": "SEBZE_ON_HAZ",
+      "bolumAd": "SEBZE ON HAZIRLIK & SEBZE HAZIRLIK",
+      "poz": "MK-053",
+      "ad": "POLIETILEN TABLALI CALISMA TEZGAHI, YÜKSEL",
+      "olcu": "1800x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "SEBZE_ON_HAZ",
+      "bolumAd": "SEBZE ON HAZIRLIK & SEBZE HAZIRLIK",
+      "poz": "MK-054",
+      "ad": "SET USTU TARTI, ENDER, EB-NT-30",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "SEBZE_ON_HAZ",
+      "bolumAd": "SEBZE ON HAZIRLIK & SEBZE HAZIRLIK",
+      "poz": "MK-055",
+      "ad": "ÇALISMA TEZGAHI-TABAN RAFLI, YÜKSEL",
+      "olcu": "1800x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "SEBZE_ON_HAZ",
+      "bolumAd": "SEBZE ON HAZIRLIK & SEBZE HAZIRLIK",
+      "poz": "MK-056",
+      "ad": "SEBZE DOGRAMA PARCALAMA MAKINASI, ROBOT-COUPE, R5PLUS",
+      "olcu": "280x350x490",
+      "adet": 1
+    },
+    {
+      "bolum": "SEBZE_ON_HAZ",
+      "bolumAd": "SEBZE ON HAZIRLIK & SEBZE HAZIRLIK",
+      "poz": "MK-057",
+      "ad": "SEBZE DOGRAMA MAKINASI, ROBOT-COUPE, CL55 İTME KAFALI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "SEBZE_ON_HAZ",
+      "bolumAd": "SEBZE ON HAZIRLIK & SEBZE HAZIRLIK",
+      "poz": "MK-057A",
+      "ad": "SEBZE DOGRAMA DİSK TAKIMI, ROBOT-COUPE, 1943",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "ET_HAZIRLIK",
+      "bolumAd": "ET HAZIRLIK",
+      "poz": "MK-065",
+      "ad": "EL YIKAMA EVYESI, BİLGE",
+      "olcu": "500x400x300",
+      "adet": 1
+    },
+    {
+      "bolum": "ET_HAZIRLIK",
+      "bolumAd": "ET HAZIRLIK",
+      "poz": "MK-066",
+      "ad": "EVIYELI CALISMA TEZGAHI, YÜKSEL",
+      "olcu": "1200x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "ET_HAZIRLIK",
+      "bolumAd": "ET HAZIRLIK",
+      "poz": "MK-067",
+      "ad": "ÇÖP ARABASI, PORTASHELF, MB126X",
+      "olcu": "Ø50",
+      "adet": 2
+    },
+    {
+      "bolum": "ET_HAZIRLIK",
+      "bolumAd": "ET HAZIRLIK",
+      "poz": "MK-068",
+      "ad": "BICAK STERIL DOLABI, PORTASHELF, M08220",
+      "olcu": "520x140x520",
+      "adet": 1
+    },
+    {
+      "bolum": "ET_HAZIRLIK",
+      "bolumAd": "ET HAZIRLIK",
+      "poz": "MK-068",
+      "ad": "ÇALISMA TEZGAHI-TABAN RAFLI, YÜKSEL",
+      "olcu": "1100x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "ET_HAZIRLIK",
+      "bolumAd": "ET HAZIRLIK",
+      "poz": "MK-069",
+      "ad": "DUVAR RAFI, YÜKSEL",
+      "olcu": "1800x300x40",
+      "adet": 1
+    },
+    {
+      "bolum": "ET_HAZIRLIK",
+      "bolumAd": "ET HAZIRLIK",
+      "poz": "MK-070",
+      "ad": "ET KUTUGU, YÜKSEL",
+      "olcu": "700x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "ET_HAZIRLIK",
+      "bolumAd": "ET HAZIRLIK",
+      "poz": "MK-071",
+      "ad": "HAREKETLI CALISMA TEZGAHI, YÜKSEL",
+      "olcu": "1400x600x850",
+      "adet": 1
+    },
+    {
+      "bolum": "ET_HAZIRLIK",
+      "bolumAd": "ET HAZIRLIK",
+      "poz": "MK-072",
+      "ad": "POLIETILEN CALISMA TEZGAHI, YÜKSEL",
+      "olcu": "1800x700x850",
+      "adet": 2
+    },
+    {
+      "bolum": "ET_HAZIRLIK",
+      "bolumAd": "ET HAZIRLIK",
+      "poz": "MK-073",
+      "ad": "DUVAR RAFI, YÜKSEL",
+      "olcu": "1800x300x40",
+      "adet": 2
+    },
+    {
+      "bolum": "ET_HAZIRLIK",
+      "bolumAd": "ET HAZIRLIK",
+      "poz": "MK-074",
+      "ad": "KIYMA MAKINASI, YILMAZ, INOX 2000 STR",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "ET_HAZIRLIK",
+      "bolumAd": "ET HAZIRLIK",
+      "poz": "MK-076",
+      "ad": "SET USTU TARTI, ENDER, EB-NT-30",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "TAVUK_HAZIRL",
+      "bolumAd": "TAVUK HAZIRLIK",
+      "poz": "MK-080",
+      "ad": "EL YIKAMA EVYESI, BİLGE",
+      "olcu": "500x400x300",
+      "adet": 1
+    },
+    {
+      "bolum": "TAVUK_HAZIRL",
+      "bolumAd": "TAVUK HAZIRLIK",
+      "poz": "MK-081",
+      "ad": "EVIYELI CALISMA TEZGAHI, YÜKSEL",
+      "olcu": "1200x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "TAVUK_HAZIRL",
+      "bolumAd": "TAVUK HAZIRLIK",
+      "poz": "MK-082",
+      "ad": "BICAK STERIL DOLABI, PORTASHELF, M08220",
+      "olcu": "520x140x520",
+      "adet": 1
+    },
+    {
+      "bolum": "TAVUK_HAZIRL",
+      "bolumAd": "TAVUK HAZIRLIK",
+      "poz": "MK-083",
+      "ad": "ÇÖP ARABASI, PORTASHELF, MB126X",
+      "olcu": "Ø50",
+      "adet": 2
+    },
+    {
+      "bolum": "TAVUK_HAZIRL",
+      "bolumAd": "TAVUK HAZIRLIK",
+      "poz": "MK-084",
+      "ad": "ÇALISMA TEZGAHI-TABAN RAFLI, YÜKSEL",
+      "olcu": "1100x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "TAVUK_HAZIRL",
+      "bolumAd": "TAVUK HAZIRLIK",
+      "poz": "MK-085",
+      "ad": "DUVAR RAFI, YÜKSEL",
+      "olcu": "1800x300x40",
+      "adet": 1
+    },
+    {
+      "bolum": "TAVUK_HAZIRL",
+      "bolumAd": "TAVUK HAZIRLIK",
+      "poz": "MK-086",
+      "ad": "ET KUTUGU, YÜKSEL",
+      "olcu": "700x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "TAVUK_HAZIRL",
+      "bolumAd": "TAVUK HAZIRLIK",
+      "poz": "MK-087",
+      "ad": "HAREKETLI CALISMA TEZGAHI, YÜKSEL",
+      "olcu": "1400x600x850",
+      "adet": 1
+    },
+    {
+      "bolum": "TAVUK_HAZIRL",
+      "bolumAd": "TAVUK HAZIRLIK",
+      "poz": "MK-088",
+      "ad": "POLIETILEN CALISMA TEZGAHI, YÜKSEL",
+      "olcu": "1800x700x850",
+      "adet": 2
+    },
+    {
+      "bolum": "TAVUK_HAZIRL",
+      "bolumAd": "TAVUK HAZIRLIK",
+      "poz": "MK-089",
+      "ad": "DUVAR RAFI, YÜKSEL",
+      "olcu": "1800x300x40",
+      "adet": 2
+    },
+    {
+      "bolum": "TAVUK_HAZIRL",
+      "bolumAd": "TAVUK HAZIRLIK",
+      "poz": "MK-091",
+      "ad": "SET USTU TARTI, ENDER, EB-NT-30",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "TAVUK_HAZIRL",
+      "bolumAd": "TAVUK HAZIRLIK",
+      "poz": "MK-092",
+      "ad": "KIYMA MAKINASI, YILMAZ, INOX 2000 STR",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "SICAK_MUTFAK",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "MK-100",
+      "ad": "EL YIKAMA EVYESI, BİLGE",
+      "olcu": "500x400x300",
+      "adet": 1
+    },
+    {
+      "bolum": "SICAK_MUTFAK",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "MK-101",
+      "ad": "YER YIKAMA HORTUMU, M.TEMİNİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "SICAK_MUTFAK",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "MK-102",
+      "ad": "ÇALISMA TEZGAHI-TABAN RAFLI, YÜKSEL",
+      "olcu": "1600x700x850",
+      "adet": 2
+    },
+    {
+      "bolum": "SICAK_MUTFAK",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "MK-103",
+      "ad": "DUVAR RAFI, YÜKSEL",
+      "olcu": "1600x300x40",
+      "adet": 2
+    },
+    {
+      "bolum": "SICAK_MUTFAK",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "MK-104",
+      "ad": "TEZGAH TIP BUZDOLABI, MAKPA-FR, CGN3",
+      "olcu": "1865x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "SICAK_MUTFAK",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "MK-105",
+      "ad": "DUVAR RAFI, YÜKSEL",
+      "olcu": "1865x300x40",
+      "adet": 1
+    },
+    {
+      "bolum": "SICAK_MUTFAK",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "MK-106",
+      "ad": "EVIYELI CALISMA TEZGAHI, YÜKSEL",
+      "olcu": "1400x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "SICAK_MUTFAK",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "MK-107",
+      "ad": "ÇÖP ARABASI, PORTASHELF, MB126X",
+      "olcu": "Ø50",
+      "adet": 1
+    },
+    {
+      "bolum": "SICAK_MUTFAK",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "MK-108",
+      "ad": "ÇALISMA TEZGAHI-TABAN RAFLI, YÜKSEL",
+      "olcu": "1400x700x850",
+      "adet": 2
+    },
+    {
+      "bolum": "SICAK_MUTFAK",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "MK-109",
+      "ad": "DUVAR RAFI, YÜKSEL",
+      "olcu": "1400x300x40",
+      "adet": 3
+    },
+    {
+      "bolum": "SICAK_MUTFAK",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "MK-110",
+      "ad": "HAREKETLI CALISMA TEZGAHI, YÜKSEL",
+      "olcu": "1400x600x850",
+      "adet": 4
+    },
+    {
+      "bolum": "SICAK_MUTFAK",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "MK-111",
+      "ad": "YER OCAGI, MAKPA-TR, TC.KOG100",
+      "olcu": "600x600x550",
+      "adet": 6
+    },
+    {
+      "bolum": "SICAK_MUTFAK",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "MK-112",
+      "ad": "FILTRELI DAVLUMBAZ, YÜKSEL",
+      "olcu": "5000x3300x500",
+      "adet": 1
+    },
+    {
+      "bolum": "SICAK_MUTFAK",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "MK-113",
+      "ad": "ÇALISMA TEZGAHI-TABAN RAFLI, YÜKSEL",
+      "olcu": "1600x700x850",
+      "adet": 2
+    },
+    {
+      "bolum": "SICAK_MUTFAK",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "MK-114",
+      "ad": "EVIYELI CALISMA TEZGAHI, YÜKSEL",
+      "olcu": "1600x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "SICAK_MUTFAK",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "MK-115",
+      "ad": "DUVAR RAFI, YÜKSEL",
+      "olcu": "1600x300x40",
+      "adet": 3
+    },
+    {
+      "bolum": "SICAK_MUTFAK",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "MK-116",
+      "ad": "ÇÖP ARABASI, PORTASHELF, MB126X",
+      "olcu": "Ø50",
+      "adet": 1
+    },
+    {
+      "bolum": "SICAK_MUTFAK",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "MK-117",
+      "ad": "FIRIN ARABASI, RATIONAL, N°: 60.22.086",
+      "olcu": "—",
+      "adet": 2
+    },
+    {
+      "bolum": "SICAK_MUTFAK",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "MK-118",
+      "ad": "KOMBI FIRIN, RATIONAL, CMP 202G",
+      "olcu": "1084x996x1782",
+      "adet": 2
+    },
+    {
+      "bolum": "SICAK_MUTFAK",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "MK-118A",
+      "ad": "KONVEKSİYONEL FIRIN, ELECTROLUX, 260704",
+      "olcu": "890x1215x1700",
+      "adet": 1
+    },
+    {
+      "bolum": "SICAK_MUTFAK",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "MK-119",
+      "ad": "FILTRELI DAVLUMBAZ, YÜKSEL",
+      "olcu": "4700x1800x500",
+      "adet": 1
+    },
+    {
+      "bolum": "SICAK_MUTFAK",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "MK-120",
+      "ad": "SOK DONDURUCU, POLARIS, PBF201ASP",
+      "olcu": "1200x1150x2130",
+      "adet": 1
+    },
+    {
+      "bolum": "SICAK_MUTFAK",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "MK-121",
+      "ad": "DEVRILIR TAVA, MARENO, NBR912EIM",
+      "olcu": "1200x900x870",
+      "adet": 2
+    },
+    {
+      "bolum": "SICAK_MUTFAK",
+      "bolumAd": "SICAK MUTFAK",
+      "poz": "MK-122",
+      "ad": "FILTRELI DAVLUMBAZ, YÜKSEL",
+      "olcu": "3400x1300x500",
+      "adet": 1
+    },
+    {
+      "bolum": "DIYET_MUTFAG",
+      "bolumAd": "DIYET MUTFAGI",
+      "poz": "MK-130",
+      "ad": "EL YIKAMA EVYESI, BİLGE",
+      "olcu": "500x400x300",
+      "adet": 1
+    },
+    {
+      "bolum": "DIYET_MUTFAG",
+      "bolumAd": "DIYET MUTFAGI",
+      "poz": "MK-131",
+      "ad": "YER YIKAMA HORTUMU, M.TEMİNİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "DIYET_MUTFAG",
+      "bolumAd": "DIYET MUTFAGI",
+      "poz": "MK-132",
+      "ad": "GN ARABA, PORTASHELF, MT162X",
+      "olcu": "660x580x1720",
+      "adet": 6
+    },
+    {
+      "bolum": "DIYET_MUTFAG",
+      "bolumAd": "DIYET MUTFAGI",
+      "poz": "MK-133",
+      "ad": "ÇALISMA TEZGAHI-TABAN RAFLI, YÜKSEL",
+      "olcu": "1400x700x850",
+      "adet": 2
+    },
+    {
+      "bolum": "DIYET_MUTFAG",
+      "bolumAd": "DIYET MUTFAGI",
+      "poz": "MK-134",
+      "ad": "DUVAR RAFI, YÜKSEL",
+      "olcu": "1400x300x40",
+      "adet": 3
+    },
+    {
+      "bolum": "DIYET_MUTFAG",
+      "bolumAd": "DIYET MUTFAGI",
+      "poz": "MK-135",
+      "ad": "EVIYELI CALISMA TEZGAHI, YÜKSEL",
+      "olcu": "1400x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "DIYET_MUTFAG",
+      "bolumAd": "DIYET MUTFAGI",
+      "poz": "MK-136",
+      "ad": "ÇÖP ARABASI, PORTASHELF, MB126X",
+      "olcu": "Ø50",
+      "adet": 1
+    },
+    {
+      "bolum": "DIYET_MUTFAG",
+      "bolumAd": "DIYET MUTFAGI",
+      "poz": "MK-137",
+      "ad": "HAREKETLI CALISMA TEZGAHI, YÜKSEL",
+      "olcu": "1400x700x850",
+      "adet": 3
+    },
+    {
+      "bolum": "DIYET_MUTFAG",
+      "bolumAd": "DIYET MUTFAGI",
+      "poz": "MK-138",
+      "ad": "YER OCAGI, MAKPA-TR, TC.KOG100",
+      "olcu": "600x600x550",
+      "adet": 2
+    },
+    {
+      "bolum": "DIYET_MUTFAG",
+      "bolumAd": "DIYET MUTFAGI",
+      "poz": "MK-138A",
+      "ad": "KUZİNE, MAKPA-TR, TC.1KE1010",
+      "olcu": "1000x1000x850",
+      "adet": 1
+    },
+    {
+      "bolum": "DIYET_MUTFAG",
+      "bolumAd": "DIYET MUTFAGI",
+      "poz": "MK-139",
+      "ad": "KOMBI FIRIN, RATIONAL, CMP 101G",
+      "olcu": "847x771x1042",
+      "adet": 1
+    },
+    {
+      "bolum": "DIYET_MUTFAG",
+      "bolumAd": "DIYET MUTFAGI",
+      "poz": "MK-139A",
+      "ad": "ALT STAND, YÜKSEL",
+      "olcu": "850x800x850",
+      "adet": 1
+    },
+    {
+      "bolum": "DIYET_MUTFAG",
+      "bolumAd": "DIYET MUTFAGI",
+      "poz": "MK-140",
+      "ad": "TEPSİ ARABASI, PORTASHELF, MB102X",
+      "olcu": "830x570x1600",
+      "adet": 1
+    },
+    {
+      "bolum": "DIYET_MUTFAG",
+      "bolumAd": "DIYET MUTFAGI",
+      "poz": "MK-141",
+      "ad": "FILTRELI DAVLUMBAZ, YÜKSEL",
+      "olcu": "5700x1800x500",
+      "adet": 1
+    },
+    {
+      "bolum": "KAHVALTI_SOĞ",
+      "bolumAd": "KAHVALTI SOĞUK MUTFAK",
+      "poz": "MK-145",
+      "ad": "EL YIKAMA EVYESI, BİLGE",
+      "olcu": "500x400x300",
+      "adet": 1
+    },
+    {
+      "bolum": "KAHVALTI_SOĞ",
+      "bolumAd": "KAHVALTI SOĞUK MUTFAK",
+      "poz": "MK-146",
+      "ad": "YER YIKAMA HORTUMU, M.TEMİNİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "KAHVALTI_SOĞ",
+      "bolumAd": "KAHVALTI SOĞUK MUTFAK",
+      "poz": "MK-147",
+      "ad": "ÇALIŞMA TEZGAHI, YÜKSEL",
+      "olcu": "1865x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "KAHVALTI_SOĞ",
+      "bolumAd": "KAHVALTI SOĞUK MUTFAK",
+      "poz": "MK-149",
+      "ad": "DUVAR RAFI, YÜKSEL",
+      "olcu": "1865x300x40",
+      "adet": 1
+    },
+    {
+      "bolum": "KAHVALTI_SOĞ",
+      "bolumAd": "KAHVALTI SOĞUK MUTFAK",
+      "poz": "MK-150",
+      "ad": "ÇALISMA TEZGAHI-TABAN RAFLI, YÜKSEL",
+      "olcu": "1600x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "KAHVALTI_SOĞ",
+      "bolumAd": "KAHVALTI SOĞUK MUTFAK",
+      "poz": "MK-151",
+      "ad": "DUVAR RAFI, YÜKSEL",
+      "olcu": "1600x300x40",
+      "adet": 1
+    },
+    {
+      "bolum": "KAHVALTI_SOĞ",
+      "bolumAd": "KAHVALTI SOĞUK MUTFAK",
+      "poz": "MK-153",
+      "ad": "DIK TIP BUZDOLABI, MAKPA-FR, VN7",
+      "olcu": "700x810x2050",
+      "adet": 2
+    },
+    {
+      "bolum": "KAHVALTI_SOĞ",
+      "bolumAd": "KAHVALTI SOĞUK MUTFAK",
+      "poz": "MK-154",
+      "ad": "EVIYELI CALISMA TEZGAHI, YÜKSEL",
+      "olcu": "1600x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "KAHVALTI_SOĞ",
+      "bolumAd": "KAHVALTI SOĞUK MUTFAK",
+      "poz": "MK-155",
+      "ad": "DUVAR RAFI, YÜKSEL",
+      "olcu": "1600x300x40",
+      "adet": 1
+    },
+    {
+      "bolum": "KAHVALTI_SOĞ",
+      "bolumAd": "KAHVALTI SOĞUK MUTFAK",
+      "poz": "MK-156",
+      "ad": "ÇÖP ARABASI, PORTASHELF, MB126X",
+      "olcu": "Ø50",
+      "adet": 1
+    },
+    {
+      "bolum": "KAHVALTI_SOĞ",
+      "bolumAd": "KAHVALTI SOĞUK MUTFAK",
+      "poz": "MK-157",
+      "ad": "ÇALISMA TEZGAHI-TABAN RAFLI, YÜKSEL",
+      "olcu": "1600x700x850",
+      "adet": 2
+    },
+    {
+      "bolum": "KAHVALTI_SOĞ",
+      "bolumAd": "KAHVALTI SOĞUK MUTFAK",
+      "poz": "MK-158",
+      "ad": "DUVAR RAFI, YÜKSEL",
+      "olcu": "1600x300x40",
+      "adet": 2
+    },
+    {
+      "bolum": "KAHVALTI_SOĞ",
+      "bolumAd": "KAHVALTI SOĞUK MUTFAK",
+      "poz": "MK-160",
+      "ad": "GN ARABA, PORTASHELF, MT162X",
+      "olcu": "660x580x1720",
+      "adet": 2
+    },
+    {
+      "bolum": "TATLI_&_KAHV",
+      "bolumAd": "TATLI & KAHVALTI",
+      "poz": "MK-165",
+      "ad": "EL YIKAMA EVYESI, BİLGE",
+      "olcu": "500x400x300",
+      "adet": 1
+    },
+    {
+      "bolum": "TATLI_&_KAHV",
+      "bolumAd": "TATLI & KAHVALTI",
+      "poz": "MK-166",
+      "ad": "YER YIKAMA HORTUMU, M.TEMİNİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "TATLI_&_KAHV",
+      "bolumAd": "TATLI & KAHVALTI",
+      "poz": "MK-167",
+      "ad": "GN ARABA, PORTASHELF, MT162X",
+      "olcu": "660x580x1720",
+      "adet": 3
+    },
+    {
+      "bolum": "TATLI_&_KAHV",
+      "bolumAd": "TATLI & KAHVALTI",
+      "poz": "MK-168",
+      "ad": "ÇALISMA TEZGAHI-TABAN RAFLI, YÜKSEL",
+      "olcu": "2000x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "TATLI_&_KAHV",
+      "bolumAd": "TATLI & KAHVALTI",
+      "poz": "MK-169",
+      "ad": "DUVAR RAFI, YÜKSEL",
+      "olcu": "2000x300x40",
+      "adet": 1
+    },
+    {
+      "bolum": "TATLI_&_KAHV",
+      "bolumAd": "TATLI & KAHVALTI",
+      "poz": "MK-170",
+      "ad": "ÇALISMA TEZGAHI-TABAN RAFLI, YÜKSEL",
+      "olcu": "1600x700x850",
+      "adet": 2
+    },
+    {
+      "bolum": "TATLI_&_KAHV",
+      "bolumAd": "TATLI & KAHVALTI",
+      "poz": "MK-171",
+      "ad": "DUVAR RAFI, YÜKSEL",
+      "olcu": "1600x300x40",
+      "adet": 3
+    },
+    {
+      "bolum": "TATLI_&_KAHV",
+      "bolumAd": "TATLI & KAHVALTI",
+      "poz": "MK-172",
+      "ad": "TEZGAH TIP BUZDOLABI, MAKPA-FR, CGN3",
+      "olcu": "1865x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "TATLI_&_KAHV",
+      "bolumAd": "TATLI & KAHVALTI",
+      "poz": "MK-173",
+      "ad": "DUVAR RAFI, YÜKSEL",
+      "olcu": "1865x300x40",
+      "adet": 1
+    },
+    {
+      "bolum": "TATLI_&_KAHV",
+      "bolumAd": "TATLI & KAHVALTI",
+      "poz": "MK-174",
+      "ad": "GIDA DILIMLEME MAKINASI, SIRMAN, MIRRA300",
+      "olcu": "—",
+      "adet": 2
+    },
+    {
+      "bolum": "TATLI_&_KAHV",
+      "bolumAd": "TATLI & KAHVALTI",
+      "poz": "MK-175",
+      "ad": "EVIYELI CALISMA TEZGAHI, YÜKSEL",
+      "olcu": "1600x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "TATLI_&_KAHV",
+      "bolumAd": "TATLI & KAHVALTI",
+      "poz": "MK-176",
+      "ad": "ÇÖP ARABASI, PORTASHELF, MB126X",
+      "olcu": "Ø50",
+      "adet": 1
+    },
+    {
+      "bolum": "TATLI_&_KAHV",
+      "bolumAd": "TATLI & KAHVALTI",
+      "poz": "MK-177",
+      "ad": "MIKSER, DIRMAK, IBT 100-VEL",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "TATLI_&_KAHV",
+      "bolumAd": "TATLI & KAHVALTI",
+      "poz": "MK-179",
+      "ad": "FIRIN ARABASI (20GN2/1), ELECTROLUX, 922134",
+      "olcu": "650x976x1689",
+      "adet": 1
+    },
+    {
+      "bolum": "TATLI_&_KAHV",
+      "bolumAd": "TATLI & KAHVALTI",
+      "poz": "MK-180",
+      "ad": "KONVEKSİYONEL FIRIN(20GN2/1), ELECTROLUX, 260704",
+      "olcu": "890x1215x1700",
+      "adet": 1
+    },
+    {
+      "bolum": "TATLI_&_KAHV",
+      "bolumAd": "TATLI & KAHVALTI",
+      "poz": "MK-181",
+      "ad": "YER OCAGI, MAKPA-TR, TC.KOG100",
+      "olcu": "600x600x550",
+      "adet": 2
+    },
+    {
+      "bolum": "TATLI_&_KAHV",
+      "bolumAd": "TATLI & KAHVALTI",
+      "poz": "MK-182",
+      "ad": "FILTRELI DAVLUMBAZ, YÜKSEL",
+      "olcu": "5700x1800x500",
+      "adet": 1
+    },
+    {
+      "bolum": "TATLI_&_KAHV",
+      "bolumAd": "TATLI & KAHVALTI",
+      "poz": "MK-183",
+      "ad": "HAREKETLI CALISMA TEZGAHI, YÜKSEL",
+      "olcu": "1400x600x850",
+      "adet": 3
+    },
+    {
+      "bolum": "KAZAN_YIKAMA",
+      "bolumAd": "KAZAN YIKAMA",
+      "poz": "MK-190",
+      "ad": "ÇALISMA TEZGAHI-TABAN RAFLI, YÜKSEL",
+      "olcu": "1800x800x850",
+      "adet": 1
+    },
+    {
+      "bolum": "KAZAN_YIKAMA",
+      "bolumAd": "KAZAN YIKAMA",
+      "poz": "MK-191",
+      "ad": "KEPCE ASKILIGI, YÜKSEL-K",
+      "olcu": "1000",
+      "adet": 1
+    },
+    {
+      "bolum": "KAZAN_YIKAMA",
+      "bolumAd": "KAZAN YIKAMA",
+      "poz": "MK-192",
+      "ad": "CIFT EVIYELI TEZGAH, YÜKSEL",
+      "olcu": "1600x800x850",
+      "adet": 1
+    },
+    {
+      "bolum": "KAZAN_YIKAMA",
+      "bolumAd": "KAZAN YIKAMA",
+      "poz": "MK-193",
+      "ad": "ON YIKAMA DUSU, LIVA",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "KAZAN_YIKAMA",
+      "bolumAd": "KAZAN YIKAMA",
+      "poz": "MK-194",
+      "ad": "KAZAN YIKAMA MAKINASI, COMENDA, GE1005E RCD",
+      "olcu": "1500x900x1930",
+      "adet": 1
+    },
+    {
+      "bolum": "KAZAN_YIKAMA",
+      "bolumAd": "KAZAN YIKAMA",
+      "poz": "MK-197",
+      "ad": "EL YIKAMA EVYESI, BİLGE",
+      "olcu": "500x400x300",
+      "adet": 1
+    },
+    {
+      "bolum": "KAZAN_YIKAMA",
+      "bolumAd": "KAZAN YIKAMA",
+      "poz": "MK-198",
+      "ad": "YER YIKAMA HORTUMU, M.TEMİNİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "KAZAN_YIKAMA",
+      "bolumAd": "KAZAN YIKAMA",
+      "poz": "MK-199",
+      "ad": "COP KONTEYNIRI, UÇAK, 240L",
+      "olcu": "—",
+      "adet": 2
+    },
+    {
+      "bolum": "KAZAN_YIKAMA",
+      "bolumAd": "KAZAN YIKAMA",
+      "poz": "MK-200",
+      "ad": "İSTİF ETAJERİ, PORTASHELF, 304K PASLANMAZ",
+      "olcu": "1520x530x1830",
+      "adet": 2
+    },
+    {
+      "bolum": "PORSIYONLAMA",
+      "bolumAd": "PORSIYONLAMA MUTFAGI",
+      "poz": "MK-210",
+      "ad": "TEPSİ ARABASI, PORTASHELF, MB102X",
+      "olcu": "830x570x1600",
+      "adet": 2
+    },
+    {
+      "bolum": "PORSIYONLAMA",
+      "bolumAd": "PORSIYONLAMA MUTFAGI",
+      "poz": "MK-211",
+      "ad": "ÇATAL KAŞIK ARABASI, PORTASHELF, M120X+A1",
+      "olcu": "850x550x900",
+      "adet": 2
+    },
+    {
+      "bolum": "PORSIYONLAMA",
+      "bolumAd": "PORSIYONLAMA MUTFAGI",
+      "poz": "MK-212",
+      "ad": "PORSİYONLAMA KONVEYOR ÜNİTESİ, RIEBER, GSV-6",
+      "olcu": "6000x500x900",
+      "adet": 1
+    },
+    {
+      "bolum": "PORSIYONLAMA",
+      "bolumAd": "PORSIYONLAMA MUTFAGI",
+      "poz": "MK-213",
+      "ad": "HAREKETLİ SOĞUK ÜNİTE, MAKPA",
+      "olcu": "1200x700x850",
+      "adet": 4
+    },
+    {
+      "bolum": "PORSIYONLAMA",
+      "bolumAd": "PORSIYONLAMA MUTFAGI",
+      "poz": "MK-214",
+      "ad": "HAREKETLİ SICAK ÜNİTE, MAKPA",
+      "olcu": "1200x700x850",
+      "adet": 4
+    },
+    {
+      "bolum": "PORSIYONLAMA",
+      "bolumAd": "PORSIYONLAMA MUTFAGI",
+      "poz": "MK-215",
+      "ad": "KASE ISITMA ARABASI, RIEBER, REH-2-290",
+      "olcu": "955x480x900",
+      "adet": 3
+    },
+    {
+      "bolum": "PORSIYONLAMA",
+      "bolumAd": "PORSIYONLAMA MUTFAGI",
+      "poz": "MK-216",
+      "ad": "TABAK ISITMA ARABASI, PORTASHELF, M0112X/ISITMALI",
+      "olcu": "720x440x940",
+      "adet": 3
+    },
+    {
+      "bolum": "PORSIYONLAMA",
+      "bolumAd": "PORSIYONLAMA MUTFAGI",
+      "poz": "MK-217",
+      "ad": "YEMEK TAŞIMA ARABASI, BURLODGE, RTS-TALL HL",
+      "olcu": "—",
+      "adet": 30
+    },
+    {
+      "bolum": "PORSIYONLAMA",
+      "bolumAd": "PORSIYONLAMA MUTFAGI",
+      "poz": "MK-217A",
+      "ad": "YEMEK TAŞIMA ARABASI, BURLODGE, MULTIGEN II",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "PORSIYONLAMA",
+      "bolumAd": "PORSIYONLAMA MUTFAGI",
+      "poz": "MK-218",
+      "ad": "İSTİF ETAJERİ, PORTASHELF, 304K PASLANMAZ",
+      "olcu": "1520x610x1830",
+      "adet": 1
+    },
+    {
+      "bolum": "PORSIYONLAMA",
+      "bolumAd": "PORSIYONLAMA MUTFAGI",
+      "poz": "MK-219",
+      "ad": "EVIYELI CALISMA TEZGAHI, YÜKSEL",
+      "olcu": "2000x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "PORSIYONLAMA",
+      "bolumAd": "PORSIYONLAMA MUTFAGI",
+      "poz": "MK-220",
+      "ad": "DUVAR RAFI, YÜKSEL",
+      "olcu": "2000x300x40",
+      "adet": 1
+    },
+    {
+      "bolum": "PORSIYONLAMA",
+      "bolumAd": "PORSIYONLAMA MUTFAGI",
+      "poz": "MK-221",
+      "ad": "İSTİF ETAJERİ, PORTASHELF, 304K PASLANMAZ",
+      "olcu": "1520x460x1830",
+      "adet": 3
+    },
+    {
+      "bolum": "PORSIYONLAMA",
+      "bolumAd": "PORSIYONLAMA MUTFAGI",
+      "poz": "MK-222",
+      "ad": "İSTİF ETAJERİ, PORTASHELF, 304K PASLANMAZ",
+      "olcu": "1830x460x1830",
+      "adet": 4
+    },
+    {
+      "bolum": "PORSIYONLAMA",
+      "bolumAd": "PORSIYONLAMA MUTFAGI",
+      "poz": "MK-223",
+      "ad": "EL YIKAMA EVYESI, BİLGE",
+      "olcu": "500x400x300",
+      "adet": 1
+    },
+    {
+      "bolum": "PORSIYONLAMA",
+      "bolumAd": "PORSIYONLAMA MUTFAGI",
+      "poz": "MK-224",
+      "ad": "YER YIKAMA HORTUMU, M.TEMİNİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "PORSIYONLAMA",
+      "bolumAd": "PORSIYONLAMA MUTFAGI",
+      "poz": "MK-225",
+      "ad": "ÇALIŞMA TEZGAHI - TABAN RAFLI, YÜKSEL",
+      "olcu": "2000x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "PORSIYONLAMA",
+      "bolumAd": "PORSIYONLAMA MUTFAGI",
+      "poz": "MK-226",
+      "ad": "DUVAR RAFI, YÜKSEL",
+      "olcu": "2000x300x40",
+      "adet": 1
+    },
+    {
+      "bolum": "BULASIK",
+      "bolumAd": "BULASIK",
+      "poz": "MK-230",
+      "ad": "BULASIK ALMA TEZGAHI, YÜKSEL-K",
+      "olcu": "2000x900x850",
+      "adet": 2
+    },
+    {
+      "bolum": "BULASIK",
+      "bolumAd": "BULASIK",
+      "poz": "MK-231",
+      "ad": "BASKET RAFI, YÜKSEL-K",
+      "olcu": "2000x500x600",
+      "adet": 2
+    },
+    {
+      "bolum": "BULASIK",
+      "bolumAd": "BULASIK",
+      "poz": "MK-232",
+      "ad": "ÇÖP ARABASI, PORTASHELF, MB126X",
+      "olcu": "Ø50",
+      "adet": 2
+    },
+    {
+      "bolum": "BULASIK",
+      "bolumAd": "BULASIK",
+      "poz": "MK-233",
+      "ad": "ÇALISMA TEZGAHI-TABAN RAFLI, YÜKSEL",
+      "olcu": "1400x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "BULASIK",
+      "bolumAd": "BULASIK",
+      "poz": "MK-234",
+      "ad": "MAKINA GIRIS TEZGAHI, YÜKSEL-K",
+      "olcu": "1900x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "BULASIK",
+      "bolumAd": "BULASIK",
+      "poz": "MK-235",
+      "ad": "ON YIKAMA DUSU, LIVA",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "BULASIK",
+      "bolumAd": "BULASIK",
+      "poz": "MK-236",
+      "ad": "BULASIK YIKAMA MAKINASI, COMENDA, AC2EP5",
+      "olcu": "2250x795x1670",
+      "adet": 1
+    },
+    {
+      "bolum": "BULASIK",
+      "bolumAd": "BULASIK",
+      "poz": "MK-237",
+      "ad": "KURUTMA TUNELI, COMENDA, AS600",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "BULASIK",
+      "bolumAd": "BULASIK",
+      "poz": "MK-238",
+      "ad": "DAVLUMBAZ, YÜKSEL",
+      "olcu": "3400x1000x500",
+      "adet": 1
+    },
+    {
+      "bolum": "BULASIK",
+      "bolumAd": "BULASIK",
+      "poz": "MK-239",
+      "ad": "MAKINA CIKIS TEZGAHI, YÜKSEL-K",
+      "olcu": "900x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "BULASIK",
+      "bolumAd": "BULASIK",
+      "poz": "MK-240",
+      "ad": "İSTİF ETAJERİ, PORTASHELF, 304K PASLANMAZ",
+      "olcu": "1520x460x1830",
+      "adet": 3
+    },
+    {
+      "bolum": "BULASIK",
+      "bolumAd": "BULASIK",
+      "poz": "MK-241",
+      "ad": "COP KONTEYNIRI, UÇAK, 240L",
+      "olcu": "—",
+      "adet": 2
+    },
+    {
+      "bolum": "BULASIK",
+      "bolumAd": "BULASIK",
+      "poz": "MK-242",
+      "ad": "YER YIKAMA HORTUMU, M.TEMİNİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "BULASIK",
+      "bolumAd": "BULASIK",
+      "poz": "MK-243",
+      "ad": "YER IZGARASI, PORTASHELF, B2 SIĞ TİP",
+      "olcu": "3000x300",
+      "adet": 1
+    },
+    {
+      "bolum": "PERSONEL_SER",
+      "bolumAd": "PERSONEL SERVIS",
+      "poz": "MK-250",
+      "ad": "DEKORATIF SERVIS BANKOSU, MAKPA-KR",
+      "olcu": "6100x1100x850",
+      "adet": 1
+    },
+    {
+      "bolum": "PERSONEL_SER",
+      "bolumAd": "PERSONEL SERVIS",
+      "poz": "MK-251",
+      "ad": "KUVER UNITESI, YÜKSEL-K",
+      "olcu": "700x700x1200",
+      "adet": 1
+    },
+    {
+      "bolum": "PERSONEL_SER",
+      "bolumAd": "PERSONEL SERVIS",
+      "poz": "MK-252",
+      "ad": "TEPSI OTOMATI, PORTASHELF, M0180X",
+      "olcu": "590x590x900",
+      "adet": 1
+    },
+    {
+      "bolum": "PERSONEL_SER",
+      "bolumAd": "PERSONEL SERVIS",
+      "poz": "MK-253",
+      "ad": "SICAK SERVIS UNITESI, MAKPA",
+      "olcu": "1700x610x850",
+      "adet": 1
+    },
+    {
+      "bolum": "PERSONEL_SER",
+      "bolumAd": "PERSONEL SERVIS",
+      "poz": "MK-254",
+      "ad": "SERVIS RAFI, YÜKSEL-K",
+      "olcu": "1700x400x600",
+      "adet": 1
+    },
+    {
+      "bolum": "PERSONEL_SER",
+      "bolumAd": "PERSONEL SERVIS",
+      "poz": "MK-255",
+      "ad": "KATLI TESHIR UNITESI, MAKPA",
+      "olcu": "1520x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "PERSONEL_SER",
+      "bolumAd": "PERSONEL SERVIS",
+      "poz": "MK-256",
+      "ad": "DIK TIP BUZDOLABI, MAKPA-FR, VN7",
+      "olcu": "700x810x2050",
+      "adet": 1
+    },
+    {
+      "bolum": "PERSONEL_SER",
+      "bolumAd": "PERSONEL SERVIS",
+      "poz": "MK-257",
+      "ad": "SICAK TAŞIMA ARABASI, AVATHERM, AVATHERM 600MX2",
+      "olcu": "440x670x630",
+      "adet": 2
+    },
+    {
+      "bolum": "PERSONEL_SER",
+      "bolumAd": "PERSONEL SERVIS",
+      "poz": "MK-258",
+      "ad": "MESRUBAT BUZDOLABI, M.TEMİNİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "PERSONEL_SER",
+      "bolumAd": "PERSONEL SERVIS",
+      "poz": "MK-259",
+      "ad": "EVIYELI CALISMA TEZGAHI, YÜKSEL",
+      "olcu": "1500x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "PERSONEL_SER",
+      "bolumAd": "PERSONEL SERVIS",
+      "poz": "MK-260",
+      "ad": "ÇÖP ARABASI, PORTASHELF, MB126X",
+      "olcu": "Ø50",
+      "adet": 1
+    },
+    {
+      "bolum": "PERSONEL_SER",
+      "bolumAd": "PERSONEL SERVIS",
+      "poz": "MK-261",
+      "ad": "ÇAYOMAT, OKYAY, OKYAY 03",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "PERSONEL_SER",
+      "bolumAd": "PERSONEL SERVIS",
+      "poz": "MK-263",
+      "ad": "FILTRE KAHVE MAKINASI, M.TEMİNİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "PERSONEL_SER",
+      "bolumAd": "PERSONEL SERVIS",
+      "poz": "MK-264",
+      "ad": "MESRUBAT DISPANSERI, M.TEMİNİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "MUTFAK",
+      "bolumAd": "MUTFAK",
+      "poz": "MK-270",
+      "ad": "ÇALISMA TEZGAHI-TABAN RAFLI, YÜKSEL",
+      "olcu": "1400x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "MUTFAK",
+      "bolumAd": "MUTFAK",
+      "poz": "MK-271",
+      "ad": "ÇALISMA TEZGAHI-TABAN RAFLI, YÜKSEL",
+      "olcu": "1600x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "MUTFAK",
+      "bolumAd": "MUTFAK",
+      "poz": "MK-272",
+      "ad": "DUVAR RAFI, YÜKSEL",
+      "olcu": "1600x300x40",
+      "adet": 1
+    },
+    {
+      "bolum": "MUTFAK",
+      "bolumAd": "MUTFAK",
+      "poz": "MK-273",
+      "ad": "EVIYELI CALISMA TEZGAHI, YÜKSEL",
+      "olcu": "700x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "MUTFAK",
+      "bolumAd": "MUTFAK",
+      "poz": "MK-274",
+      "ad": "EL YIKAMA EVYESI, BİLGE",
+      "olcu": "500x400x300",
+      "adet": 1
+    },
+    {
+      "bolum": "BULASIK",
+      "bolumAd": "BULASIK",
+      "poz": "MK-280",
+      "ad": "BULASIK ALMA TEZGAHI, YÜKSEL-K",
+      "olcu": "1800x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "BULASIK",
+      "bolumAd": "BULASIK",
+      "poz": "MK-281",
+      "ad": "BASKET RAFI, YÜKSEL-K",
+      "olcu": "1800x500x600",
+      "adet": 1
+    },
+    {
+      "bolum": "BULASIK",
+      "bolumAd": "BULASIK",
+      "poz": "MK-282",
+      "ad": "MAKINA GIRIS TEZGAHI, YÜKSEL-K",
+      "olcu": "1000x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "BULASIK",
+      "bolumAd": "BULASIK",
+      "poz": "MK-283",
+      "ad": "ON YIKAMA DUSU, LIVA",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "BULASIK",
+      "bolumAd": "BULASIK",
+      "poz": "MK-284",
+      "ad": "BULASIK YIKAMA MAKINASI, COMENDA, RC411",
+      "olcu": "632x760x1460",
+      "adet": 1
+    },
+    {
+      "bolum": "BULASIK",
+      "bolumAd": "BULASIK",
+      "poz": "MK-285",
+      "ad": "DAVLUMBAZ, YÜKSEL",
+      "olcu": "1000x1000x500",
+      "adet": 1
+    },
+    {
+      "bolum": "BULASIK",
+      "bolumAd": "BULASIK",
+      "poz": "MK-286",
+      "ad": "MAKINA CIKIS TEZGAHI, YÜKSEL-K",
+      "olcu": "800x700x850",
+      "adet": 1
+    },
+    {
+      "bolum": "BULASIK",
+      "bolumAd": "BULASIK",
+      "poz": "MK-287",
+      "ad": "İSTİF ETAJERİ, PORTASHELF, 304K PASLANMAZ",
+      "olcu": "1830x460x1830",
+      "adet": 1
+    },
+    {
+      "bolum": "YER_IZGARALA",
+      "bolumAd": "YER IZGARALARI",
+      "poz": "DR-001",
+      "ad": "YER IZGARASI, PORTASHELF, B2 SIĞ TİP",
+      "olcu": "300x300",
+      "adet": 17
+    },
+    {
+      "bolum": "YER_IZGARALA",
+      "bolumAd": "YER IZGARALARI",
+      "poz": "DR-002",
+      "ad": "YER IZGARASI, PORTASHELF, B2 SIĞ TİP",
+      "olcu": "500x300",
+      "adet": 5
+    },
+    {
+      "bolum": "YER_IZGARALA",
+      "bolumAd": "YER IZGARALARI",
+      "poz": "DR-003",
+      "ad": "YER IZGARASI, PORTASHELF, B2 SIĞ TİP",
+      "olcu": "1850x300",
+      "adet": 8
+    },
+    {
+      "bolum": "YER_IZGARALA",
+      "bolumAd": "YER IZGARALARI",
+      "poz": "DR-004",
+      "ad": "YER IZGARASI, PORTASHELF, B2 SIĞ TİP",
+      "olcu": "950x500",
+      "adet": 2
+    }
+  ]
+}

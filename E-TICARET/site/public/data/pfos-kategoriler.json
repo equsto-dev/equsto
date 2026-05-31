@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-05-31T00:03:40.738Z",
+  "updated_at": "2026-05-31T01:40:12.438Z",
   "kategoriler": [
     {
       "id": "steakhouse",
@@ -376,6 +376,120 @@
             "toplamAdet": 18,
             "kaynakDosya": "no fish today urun_listesi.xlsx",
             "yukleme": "2026-05-30T23:56:19.994Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "kahve-atolyesi",
+      "label": "Kahve Atölyesi",
+      "ustKategori": "Kafe / Coffee Shop",
+      "bantlar": [
+        {
+          "id": "80-150",
+          "label": "80–150 m²",
+          "referansM2": 120,
+          "meta": {
+            "listeDosya": "kahve-atolyesi-80-150.json",
+            "kalemSayisi": 47,
+            "toplamAdet": 54,
+            "kaynakDosya": "2016-046 KAHVE ATÖLYESİ LAINOX/2016-046-1.xlsx",
+            "yukleme": "2026-05-31T00:15:28.660Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "harvest-cafe",
+      "label": "Harvest Cafe",
+      "ustKategori": "Kafe / Coffee Shop",
+      "bantlar": [
+        {
+          "id": "100-200",
+          "label": "100–200 m²",
+          "referansM2": 150,
+          "meta": {
+            "listeDosya": "harvest-cafe-100-200.json",
+            "kalemSayisi": 44,
+            "toplamAdet": 47,
+            "kaynakDosya": "2016-051 HARVEST BAHÇEŞEHİR MEFFTECH/2016-051-4.xlsx",
+            "yukleme": "2026-05-31T00:30:06.923Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "all-sport-cafe",
+      "label": "All Sport Cafe",
+      "ustKategori": "Kafe / Coffee Shop",
+      "bantlar": [
+        {
+          "id": "100-200",
+          "label": "100–200 m²",
+          "referansM2": 150,
+          "meta": {
+            "listeDosya": "all-sport-cafe-100-200.json",
+            "kalemSayisi": 32,
+            "toplamAdet": 32,
+            "kaynakDosya": "2016-064 ALL SPORT CAFE MEFFTECH/2016-064-1.xlsx",
+            "yukleme": "2026-05-31T00:39:52.981Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "buyuk-yemekhane",
+      "label": "Büyük Yemekhane",
+      "ustKategori": "Catering / Kurumsal",
+      "bantlar": [
+        {
+          "id": "2000-3500",
+          "label": "2000–3500 kişi/gün",
+          "referansM2": 2750,
+          "meta": {
+            "listeDosya": "buyuk-yemekhane-2000-3500.json",
+            "kalemSayisi": 285,
+            "toplamAdet": 557,
+            "kaynakDosya": "2016-070 YOZGAT YEMEKHANE LAINOX/YOZGAT YEMEK EKİPMAN.xlsx",
+            "yukleme": "2026-05-31T01:01:22.903Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "guneli-pastane",
+      "label": "Güneli Fırın",
+      "ustKategori": "Pastane & Fırın",
+      "bantlar": [
+        {
+          "id": "200-400",
+          "label": "200–400 m²",
+          "referansM2": 300,
+          "meta": {
+            "listeDosya": "guneli-pastane-200-400.json",
+            "kalemSayisi": 46,
+            "toplamAdet": 49,
+            "kaynakDosya": "2016-075 GÜNELİ FIRIN/2016-075.xlsx",
+            "yukleme": "2026-05-31T01:14:28.990Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sehir-otel",
+      "label": "Şehir Oteli (Business)",
+      "ustKategori": "Otel F&B",
+      "bantlar": [
+        {
+          "id": "500-2000",
+          "label": "500–2000 m²",
+          "referansM2": 1000,
+          "meta": {
+            "listeDosya": "sehir-otel-500-2000.json",
+            "kalemSayisi": 192,
+            "toplamAdet": 264,
+            "kaynakDosya": "2016-077 HILTON KOCAELİ LAINOX/2016-077.xlsx",
+            "yukleme": "2026-05-31T01:40:12.432Z"
           }
         }
       ]
