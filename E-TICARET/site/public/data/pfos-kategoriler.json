@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-05-31T01:40:12.438Z",
+  "updated_at": "2026-05-31T01:50:19.559Z",
   "kategoriler": [
     {
       "id": "steakhouse",
@@ -490,6 +490,25 @@
             "toplamAdet": 264,
             "kaynakDosya": "2016-077 HILTON KOCAELİ LAINOX/2016-077.xlsx",
             "yukleme": "2026-05-31T01:40:12.432Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "kiremit-akasya",
+      "label": "Kiremit Akasya",
+      "ustKategori": "Fast Food / QSR",
+      "bantlar": [
+        {
+          "id": "100-250",
+          "label": "100–250 m²",
+          "referansM2": 175,
+          "meta": {
+            "listeDosya": "kiremit-akasya-100-250.json",
+            "kalemSayisi": 30,
+            "toplamAdet": 30,
+            "kaynakDosya": "2016-085 KİREMİT AKASYA MEFFTECH/2016-085.xlsx",
+            "yukleme": "2026-05-31T01:50:19.554Z"
           }
         }
       ]
