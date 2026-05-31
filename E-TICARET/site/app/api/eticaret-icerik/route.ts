@@ -2,6 +2,7 @@ import { NextRequest } from "next/server";
 import { assertAdminBearer } from "@/lib/auth";
 import { adminErr, adminOk } from "@/lib/admin-response";
 import { dataPath, readJsonFile, writeJsonFile } from "@/lib/legacy-data";
+import { normalizeEticaretIcerik } from "@/lib/pro/eticaret-normalize";
 
 export const runtime = "nodejs";
 
@@ -22,7 +23,15 @@ const EMPTY_ETICARET = {
     yuzde?: number;
     aktif: boolean;
   }>,
-  b: [] as Array<{ url: string; aciklama?: string }>, // Banners
+  b: [] as Array<{
+    url: string;
+    aciklama?: string;
+    baslik?: string;
+    konum?: string;
+    image?: string;
+    icon?: string;
+    aktif?: boolean;
+  }>,
   dy: [] as unknown[], // Dinamik Yonler
   r: [] as unknown[], // Reklamlar
   a: {} as Record<string, unknown>, // Ayarlar
@@ -66,15 +75,14 @@ export async function POST(req: NextRequest) {
   try {
     const payload = await req.json();
 
-    // Validate and sanitize
-    const data = {
+    const data = normalizeEticaretIcerik({
       k: Array.isArray(payload.k) ? payload.k : [],
       kp: Array.isArray(payload.kp) ? payload.kp : [],
       b: Array.isArray(payload.b) ? payload.b : [],
       dy: Array.isArray(payload.dy) ? payload.dy : [],
       r: Array.isArray(payload.r) ? payload.r : [],
       a: typeof payload.a === "object" && payload.a ? payload.a : {},
-    };
+    });
 
     // Save to disk
     await writeJsonFile(ETICARET_FILE(), data);

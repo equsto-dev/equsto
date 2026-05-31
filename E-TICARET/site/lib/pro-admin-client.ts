@@ -270,9 +270,11 @@ export async function fetchKur() {
 export type EticaretKampanya = {
   ad: string;
   desc?: string;
+  acik?: string;
   start?: string;
   end?: string;
   active: boolean;
+  aktif?: boolean;
 };
 
 export type EticaretKupon = {
@@ -285,6 +287,11 @@ export type EticaretKupon = {
 export type EticaretBanner = {
   url: string;
   aciklama?: string;
+  baslik?: string;
+  konum?: "anasayfa_hero" | "anasayfa_alt" | string;
+  image?: string;
+  icon?: string;
+  aktif?: boolean;
 };
 
 export type EticaretIcerik = {
@@ -430,6 +437,8 @@ export async function fetchPublishChecks(): Promise<PublishCheckItem[]> {
   const endpoints: Omit<PublishCheckItem, "ok" | "detail">[] = [
     { id: "ekipmanlar", label: "Vitrin kataloğu", url: "/data/ekipmanlar.json" },
     { id: "fiyatlar", label: "Fiyat listesi", url: "/data/fiyatlar.json" },
+    { id: "eticaret", label: "E-ticaret içeriği", url: "/api/eticaret-icerik" },
+    { id: "search", label: "Meilisearch API", url: "/api/search?check=1" },
     { id: "sitemap", label: "Sitemap", url: "/sitemap.xml" },
     { id: "feed", label: "Google Merchant feed", url: "/feeds/google-products.xml" },
     { id: "llms", label: "llms.txt (AI keşif)", url: "/llms.txt" },
@@ -441,9 +450,12 @@ export async function fetchPublishChecks(): Promise<PublishCheckItem[]> {
       try {
         const res = await fetch(item.url, { cache: "no-store" });
         let detail = `HTTP ${res.status}`;
+        let ok = res.ok;
+
         if (item.id === "ekipmanlar" && res.ok) {
           const rows = await res.json();
-          detail = Array.isArray(rows) ? `${rows.length} ürün` : detail;
+          const count = Array.isArray(rows) ? rows.length : 0;
+          detail = `${count} ürün`;
         }
         if (item.id === "fiyatlar" && res.ok) {
           const file = await res.json();
@@ -455,7 +467,25 @@ export async function fetchPublishChecks(): Promise<PublishCheckItem[]> {
               : 0;
           detail = `${count} fiyat anahtarı`;
         }
-        return { ...item, ok: res.ok, detail };
+        if (item.id === "eticaret" && res.ok) {
+          const body = await res.json();
+          const et = body?.data;
+          if (et && typeof et === "object") {
+            const k = Array.isArray(et.k) ? et.k.length : 0;
+            const kp = Array.isArray(et.kp) ? et.kp.length : 0;
+            const b = Array.isArray(et.b) ? et.b.length : 0;
+            detail = `${k} kampanya · ${kp} kupon · ${b} banner`;
+          }
+        }
+        if (item.id === "search" && res.ok) {
+          const body = await res.json();
+          ok = !!body.configured;
+          detail = ok
+            ? `İndeks: ${body.index || "equsto_products"}`
+            : `Eksik: ${JSON.stringify(body.missing || [])}`;
+        }
+
+        return { ...item, ok, detail };
       } catch (e) {
         const msg = e instanceof Error ? e.message : "İstek başarısız";
         return { ...item, ok: false, detail: msg };

@@ -1,6 +1,6 @@
 "use client";
 
-import { PlusOutlined } from "@ant-design/icons";
+import { PlusOutlined, UploadOutlined } from "@ant-design/icons";
 import type { ActionType, ProColumns } from "@ant-design/pro-components";
 import {
   ModalForm,
@@ -10,7 +10,19 @@ import {
   ProFormTextArea,
   ProTable,
 } from "@ant-design/pro-components";
-import { App, Button, Popconfirm, Select, Space, Tag } from "antd";
+import {
+  Alert,
+  App,
+  Button,
+  Modal,
+  Popconfirm,
+  Segmented,
+  Select,
+  Space,
+  Table,
+  Tag,
+  Upload,
+} from "antd";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { AdminUrunApiRow, UrunMetaBrand, UrunMetaCategory } from "@/lib/pro-admin-client";
 import {
@@ -19,6 +31,14 @@ import {
   fetchUrunlerMeta,
   saveUrun,
 } from "@/lib/pro-admin-client";
+import {
+  computeUrunHealthStats,
+  matchesUrunQuickFilter,
+  parseBulkUrunCsv,
+  urunIssues,
+  type BulkUrunRow,
+  type UrunQuickFilter,
+} from "@/lib/pro/urun-health";
 
 type FormValues = {
   ad: string;
@@ -33,6 +53,15 @@ type FormValues = {
   aciklama?: string;
 };
 
+const QUICK_FILTERS: { value: UrunQuickFilter; label: string }[] = [
+  { value: "all", label: "Tümü" },
+  { value: "eksik", label: "Eksik bilgi" },
+  { value: "eksik-fiyat", label: "Fiyatsız" },
+  { value: "eksik-sku", label: "SKU yok" },
+  { value: "pasif", label: "Pasif" },
+  { value: "db", label: "DB düzenlenebilir" },
+];
+
 export default function UrunlerPanel() {
   const { message } = App.useApp();
   const actionRef = useRef<ActionType>(null);
@@ -41,8 +70,14 @@ export default function UrunlerPanel() {
   const [source, setSource] = useState<string>("");
   const [filterMarka, setFilterMarka] = useState<string | undefined>();
   const [filterKategori, setFilterKategori] = useState<string | undefined>();
+  const [quickFilter, setQuickFilter] = useState<UrunQuickFilter>("all");
+  const [health, setHealth] = useState(computeUrunHealthStats([]));
   const [modalOpen, setModalOpen] = useState(false);
   const [editing, setEditing] = useState<AdminUrunApiRow | null>(null);
+  const [bulkOpen, setBulkOpen] = useState(false);
+  const [bulkRows, setBulkRows] = useState<BulkUrunRow[]>([]);
+  const [bulkErrors, setBulkErrors] = useState<string[]>([]);
+  const [bulkImporting, setBulkImporting] = useState(false);
 
   const loadMeta = useCallback(async () => {
     const meta = await fetchUrunlerMeta();
@@ -98,25 +133,43 @@ export default function UrunlerPanel() {
         title: "Ad",
         dataIndex: "ad",
         ellipsis: true,
-        width: 260,
+        width: 220,
+      },
+      {
+        title: "Uyarı",
+        width: 140,
+        search: false,
+        render: (_, row) => {
+          const issues = urunIssues(row);
+          if (!issues.length) return <Tag color="green">Tam</Tag>;
+          return (
+            <Space size={[0, 4]} wrap>
+              {issues.map((i) => (
+                <Tag key={i} color="warning">
+                  {i}
+                </Tag>
+              ))}
+            </Space>
+          );
+        },
       },
       {
         title: "Kategori",
         dataIndex: "kategori_ad",
-        width: 140,
+        width: 120,
         ellipsis: true,
         render: (_, row) => row.kategori_ad || row.kategori,
       },
       {
         title: "Marka",
         dataIndex: "marka_ad",
-        width: 140,
+        width: 120,
         ellipsis: true,
       },
       {
         title: "Fiyat (TL)",
         dataIndex: "fiyat_tl",
-        width: 120,
+        width: 110,
         search: false,
         render: (_, row) =>
           row.fiyat_tl > 0
@@ -124,25 +177,9 @@ export default function UrunlerPanel() {
             : "—",
       },
       {
-        title: "El. kW",
-        dataIndex: "el_guc",
-        width: 80,
-        search: false,
-        render: (_, row) =>
-          row.el_guc != null && Number.isFinite(row.el_guc) ? row.el_guc : "—",
-      },
-      {
-        title: "Gaz kW",
-        dataIndex: "gaz_guc",
-        width: 80,
-        search: false,
-        render: (_, row) =>
-          row.gaz_guc != null && Number.isFinite(row.gaz_guc) ? row.gaz_guc : "—",
-      },
-      {
         title: "Durum",
         dataIndex: "durum",
-        width: 88,
+        width: 80,
         search: false,
         render: (_, row) => (
           <Tag color={row.durum === "aktif" ? "green" : "default"}>{row.durum}</Tag>
@@ -151,7 +188,7 @@ export default function UrunlerPanel() {
       {
         title: "İşlem",
         valueType: "option",
-        width: 140,
+        width: 120,
         fixed: "right",
         render: (_, row) => [
           <a key="edit" onClick={() => openEdit(row)}>
@@ -177,16 +214,65 @@ export default function UrunlerPanel() {
         ],
       },
     ],
-    [message, openEdit],
+    [openEdit],
   );
+
+  async function runBulkImport() {
+    if (!bulkRows.length) return;
+    setBulkImporting(true);
+    let ok = 0;
+    let fail = 0;
+    for (const row of bulkRows) {
+      const r = await saveUrun({
+        ad: row.ad,
+        sku: row.sku,
+        marka_id: row.marka_id,
+        kategori: row.kategori,
+        fiyat_tl: row.fiyat_tl,
+        durum: row.durum || "aktif",
+      });
+      if (r.ok) ok++;
+      else fail++;
+    }
+    setBulkImporting(false);
+    message.info(`Toplu yükleme: ${ok} eklendi, ${fail} hata`);
+    setBulkOpen(false);
+    setBulkRows([]);
+    actionRef.current?.reload();
+  }
 
   return (
     <>
+      {health.eksik > 0 && (
+        <Alert
+          type="warning"
+          showIcon
+          style={{ marginBottom: 16 }}
+          message={`${health.eksik} üründe eksik bilgi`}
+          description={
+            <>
+              Fiyatsız: {health.eksikFiyat} · SKU yok: {health.eksikSku} · Pasif:{" "}
+              {health.pasif} · DB düzenlenebilir: {health.dbEditable}
+            </>
+          }
+        />
+      )}
+
+      <Segmented
+        options={QUICK_FILTERS.map((f) => ({ value: f.value, label: f.label }))}
+        value={quickFilter}
+        onChange={(v) => {
+          setQuickFilter(v as UrunQuickFilter);
+          actionRef.current?.reload();
+        }}
+        style={{ marginBottom: 16 }}
+      />
+
       <ProTable<AdminUrunApiRow>
         actionRef={actionRef}
         rowKey="id"
         columns={columns}
-        params={{ marka: filterMarka, kategori: filterKategori }}
+        params={{ marka: filterMarka, kategori: filterKategori, quickFilter }}
         request={async (params) => {
           const { rows, source: src, error } = await fetchUrunler({
             marka: filterMarka,
@@ -198,7 +284,8 @@ export default function UrunlerPanel() {
             return { data: [], success: false, total: 0 };
           }
           setSource(src);
-          let data = rows;
+          setHealth(computeUrunHealthStats(rows));
+          let data = rows.filter((r) => matchesUrunQuickFilter(r, quickFilter));
           const skuQ = typeof params.sku === "string" ? params.sku.trim() : "";
           if (skuQ) {
             const low = skuQ.toLowerCase();
@@ -217,8 +304,8 @@ export default function UrunlerPanel() {
           <Select
             key="marka"
             allowClear
-            placeholder="Marka filtresi"
-            style={{ minWidth: 160 }}
+            placeholder="Marka"
+            style={{ minWidth: 140 }}
             options={brandOptions}
             value={filterMarka}
             onChange={(v) => {
@@ -229,8 +316,8 @@ export default function UrunlerPanel() {
           <Select
             key="kat"
             allowClear
-            placeholder="Kategori filtresi"
-            style={{ minWidth: 160 }}
+            placeholder="Kategori"
+            style={{ minWidth: 140 }}
             options={categoryOptions}
             value={filterKategori}
             onChange={(v) => {
@@ -243,12 +330,79 @@ export default function UrunlerPanel() {
               {source === "db" ? "PostgreSQL" : source}
             </Tag>
           ) : null,
+          <Button key="bulk" icon={<UploadOutlined />} onClick={() => setBulkOpen(true)}>
+            Toplu yükle
+          </Button>,
           <Button key="add" type="primary" icon={<PlusOutlined />} onClick={openCreate}>
             Yeni ürün
           </Button>,
         ]}
-        scroll={{ x: 1100 }}
+        scroll={{ x: 1000 }}
       />
+
+      <Modal
+        title="Toplu ürün yükleme (CSV)"
+        open={bulkOpen}
+        onCancel={() => {
+          setBulkOpen(false);
+          setBulkRows([]);
+          setBulkErrors([]);
+        }}
+        onOk={runBulkImport}
+        okText="İçe aktar"
+        confirmLoading={bulkImporting}
+        okButtonProps={{ disabled: bulkRows.length === 0 }}
+        width={720}
+        destroyOnClose
+      >
+        <Alert
+          type="info"
+          showIcon
+          style={{ marginBottom: 12 }}
+          message="Sütun sırası"
+          description="ad, sku, marka_id, kategori, fiyat_tl, durum — virgül veya noktalı virgül. İlk satır başlık olabilir."
+        />
+        <Upload
+          accept=".csv,.txt"
+          maxCount={1}
+          beforeUpload={(file) => {
+            const reader = new FileReader();
+            reader.onload = () => {
+              const parsed = parseBulkUrunCsv(String(reader.result || ""));
+              setBulkRows(parsed.rows);
+              setBulkErrors(parsed.errors);
+            };
+            reader.readAsText(file);
+            return false;
+          }}
+        >
+          <Button icon={<UploadOutlined />}>CSV seç</Button>
+        </Upload>
+        {bulkErrors.length > 0 && (
+          <Alert
+            type="error"
+            style={{ marginTop: 12 }}
+            message={`${bulkErrors.length} satır hatası`}
+            description={bulkErrors.slice(0, 5).join(" · ")}
+          />
+        )}
+        {bulkRows.length > 0 && (
+          <Table
+            size="small"
+            style={{ marginTop: 12 }}
+            rowKey={(_, i) => String(i)}
+            dataSource={bulkRows}
+            pagination={{ pageSize: 5 }}
+            columns={[
+              { title: "Ad", dataIndex: "ad", ellipsis: true },
+              { title: "SKU", dataIndex: "sku", width: 100 },
+              { title: "Marka", dataIndex: "marka_id", width: 100 },
+              { title: "Kategori", dataIndex: "kategori", width: 100 },
+              { title: "TL", dataIndex: "fiyat_tl", width: 80 },
+            ]}
+          />
+        )}
+      </Modal>
 
       <ModalForm<FormValues>
         title={editing ? "Ürün düzenle" : "Yeni ürün"}

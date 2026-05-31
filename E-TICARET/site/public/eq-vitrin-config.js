@@ -163,13 +163,13 @@
     }
 
     var camps = (et.k || []).filter(function (k) {
-      return k && k.aktif !== false;
+      return k && k.aktif !== false && k.active !== false;
     });
     if (camps.length) {
       var tick = camps.map(function (k, i) {
         return {
           strong: String(k.ad || '').trim(),
-          text: String(k.acik || '').trim(),
+          text: String(k.acik || k.desc || k.description || '').trim(),
           aktif: true,
           sort: 80 + i,
           fromAdmin: true,
