@@ -21,7 +21,7 @@ export default function MarkaHubScripts() {
       <Script src={`/eq-shop-catalog-bootstrap.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-filter-column.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-category-shell.js?v=${v}`} strategy="afterInteractive" />
-      <Script src={`/eq-marka-hub.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/eq-marka-plp-boot.js?v=${v}`} strategy="afterInteractive" />
     </>
   );
 }

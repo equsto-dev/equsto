@@ -121,6 +121,75 @@ export const BRAND_HUB_META: Record<string, BrandHubMeta> = {
     facet: "Bartscher",
     sameAs: ["https://www.bartscher.com"],
   },
+  alkan: {
+    displayName: "Alkan",
+    description: "Alkan çay ve servis ekipmanları — Öztiryakiler bayi ağı üzerinden Equsto katalogunda.",
+    facet: "Alkan",
+  },
+  fantom: {
+    displayName: "Fantom",
+    description: "Fantom servis arabaları ve taşıma ekipmanları Equsto vitrininde.",
+    facet: "Fantom",
+  },
+  imperia: {
+    displayName: "Imperia",
+    description: "Imperia makarna makineleri — profesyonel mutfak hazırlık hatları Equsto katalogunda.",
+    facet: "Imperia",
+    sameAs: ["https://www.imperia.com"],
+  },
+  platemate: {
+    displayName: "PlateMate",
+    description: "PlateMate tabak taşıma arabaları Equsto katalogunda.",
+    facet: "PlateMate",
+  },
+  "hamilton-beach": {
+    displayName: "Hamilton Beach",
+    description: "Hamilton Beach bar blender ve içecek ekipmanları Equsto vitrininde.",
+    facet: "Hamilton Beach",
+    sameAs: ["https://www.hamiltonbeach.com"],
+  },
+  menumaster: {
+    displayName: "MenuMaster",
+    description: "MenuMaster mikrodalga ve hızlı pişirme ekipmanları Equsto katalogunda.",
+    facet: "MenuMaster",
+  },
+  tribeca: {
+    displayName: "Tribeca",
+    description: "Tribeca termobox ve taşıma ekipmanları Equsto vitrininde.",
+    facet: "Tribeca",
+  },
+  dualit: {
+    displayName: "Dualit",
+    description: "Dualit ekmek kızartma makineleri Equsto katalogunda.",
+    facet: "Dualit",
+    sameAs: ["https://www.dualit.com"],
+  },
+  swedlinghaus: {
+    displayName: "Swedlinghaus",
+    description: "Swedlinghaus et hazırlık ekipmanları Equsto vitrininde.",
+    facet: "Swedlinghaus",
+  },
+  vesta: {
+    displayName: "Vesta",
+    description: "Vesta sous vide ve pişirme ekipmanları Equsto katalogunda.",
+    facet: "Vesta",
+  },
+  copmak: {
+    displayName: "Copmak",
+    description: "Copmak çöp öğütme makineleri Equsto vitrininde.",
+    facet: "Copmak",
+  },
+  blanco: {
+    displayName: "Blanco",
+    description: "Blanco çöp öğütücü ve mutfak ekipmanları Equsto katalogunda.",
+    facet: "Blanco",
+    sameAs: ["https://www.blanco.com"],
+  },
+  simag: {
+    displayName: "SIMAG",
+    description: "SIMAG buz makineleri — Öztiryakiler bayi ağı üzerinden Equsto katalogunda.",
+    facet: "SIMAG",
+  },
 };
 
 export function getBrandHubMeta(slug: string): BrandHubMeta | null {

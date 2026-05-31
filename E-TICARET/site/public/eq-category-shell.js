@@ -112,7 +112,7 @@
         '<a class="eq-cat-card__img" href="' + esc(href) + '">' + img + "</a>" +
         '<div class="eq-cat-card__body">' +
         '<a class="eq-cat-card__name" href="' + esc(href) + '">' + esc(x.name || "") + "</a>" +
-        '<div class="eq-cat-card__brand">' + esc(x.brand || "") + "</div>" +
+        '<div class="eq-cat-card__brand">' + esc(x.oem_brand && x.oem_brand !== x.brand ? x.oem_brand : x.brand || "") + "</div>" +
         '<div class="eq-cat-card__price">' + esc(priceOneLine(x.price)) + "</div>" +
         '<button type="button" class="eq-cat-card__btn" onclick=\"location.href=\\'/sepet.html\\'\">SEPETE EKLE</button>' +
         "</div></article>"
@@ -171,9 +171,13 @@
 
     // Data load
     var loader =
-      global.EqustoShopCatalog && typeof global.EqustoShopCatalog.load === "function"
-        ? global.EqustoShopCatalog.load()
-        : Promise.resolve([]);
+      typeof opts.catalogLoader === "function"
+        ? opts.catalogLoader()
+        : global.EqustoShopCatalog && typeof global.EqustoShopCatalog.loadMergedCatalog === "function"
+          ? global.EqustoShopCatalog.loadMergedCatalog()
+          : global.EqustoShopCatalog && typeof global.EqustoShopCatalog.load === "function"
+            ? global.EqustoShopCatalog.load()
+            : Promise.resolve([]);
 
     loader
       .then(function (all) {

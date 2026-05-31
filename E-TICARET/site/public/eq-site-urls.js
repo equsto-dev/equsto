@@ -398,6 +398,19 @@
     "bravilor-bonamat": "Bravilor Bonamat",
     vitrifrigo: "Vitrifrigo",
     bartscher: "Bartscher",
+    alkan: "Alkan",
+    fantom: "Fantom",
+    imperia: "Imperia",
+    platemate: "PlateMate",
+    "hamilton-beach": "Hamilton Beach",
+    menumaster: "MenuMaster",
+    tribeca: "Tribeca",
+    dualit: "Dualit",
+    swedlinghaus: "Swedlinghaus",
+    vesta: "Vesta",
+    copmak: "Copmak",
+    blanco: "Blanco",
+    simag: "SIMAG",
   };
 
   /**
@@ -422,6 +435,19 @@
     "bravilor-bonamat": { markaHub: true, facet: "Bravilor Bonamat" },
     vitrifrigo: { markaHub: true, facet: "Vitrifrigo" },
     bartscher: { markaHub: true, facet: "Bartscher" },
+    alkan: { markaHub: true, facet: "Alkan" },
+    fantom: { markaHub: true, facet: "Fantom" },
+    imperia: { markaHub: true, facet: "Imperia" },
+    platemate: { markaHub: true, facet: "PlateMate" },
+    "hamilton-beach": { markaHub: true, facet: "Hamilton Beach" },
+    menumaster: { markaHub: true, facet: "MenuMaster" },
+    tribeca: { markaHub: true, facet: "Tribeca" },
+    dualit: { markaHub: true, facet: "Dualit" },
+    swedlinghaus: { markaHub: true, facet: "Swedlinghaus" },
+    vesta: { markaHub: true, facet: "Vesta" },
+    copmak: { markaHub: true, facet: "Copmak" },
+    blanco: { markaHub: true, facet: "Blanco" },
+    simag: { markaHub: true, facet: "SIMAG" },
     electrolux: { dept: "pisirme", facet: "Electrolux" },
     inoksan: { dept: "sogutma", facet: "İnoksan" },
     "la-cimbali": { dept: "kahve", facet: "La Cimbali" },
@@ -553,6 +579,11 @@
       if (oem && oem.toLocaleLowerCase("tr") === facetLc) return true;
       if (b && b.toLocaleLowerCase("tr") === facetLc) return true;
       if (b && b.toLocaleLowerCase("tr").indexOf(facetLc) === 0) return true;
+      if (/öztiryakiler|oztiryakiler/i.test(b)) {
+        var nUp = String(row.name || row.n || "").toLocaleUpperCase("tr");
+        var facetUp = facet.toLocaleUpperCase("tr");
+        if (nUp.indexOf(facetUp) >= 0) return true;
+      }
     }
 
     if (brandCanonical && b === brandCanonical) return true;

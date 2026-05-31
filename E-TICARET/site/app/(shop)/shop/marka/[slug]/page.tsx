@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import BrandHubJsonLd from "@/components/seo/BrandHubJsonLd";
 import MarkaHubScripts from "@/components/vitrin/MarkaHubScripts";
-import MarkaPlpBoot from "@/components/vitrin/MarkaPlpBoot";
 import VitrinShell from "@/components/vitrin/VitrinShell";
 import { getSiteOrigin } from "@/lib/site-origin";
 import { brandHubLabel, getBrandHubMeta } from "@/lib/shop/brand-hub";
@@ -86,12 +85,11 @@ export async function MarkaSlugPageInner({
               <div className="breadcrumb">
                 <a href={homeHref}>Ana Sayfa</a> › <span id="eq-brand-crumb">{label}</span>
               </div>
-              <div id="eq-cat-shell" data-cat="marka" />
+              <div id="eq-cat-shell" data-cat="marka" data-slug={slug} data-label={label} />
             </div>
           </div>
         </div>
       </VitrinShell>
-      <MarkaPlpBoot slug={slug} />
       <MarkaHubScripts />
     </>
   );
