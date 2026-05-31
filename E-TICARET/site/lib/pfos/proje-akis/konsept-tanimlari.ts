@@ -13,6 +13,7 @@ export type ListeBantId =
   | "referans"
   | "100-300"
   | "100-200"
+  | "150-200"
   | "100-250"
   | "200-500"
   | "300-500"
@@ -26,7 +27,9 @@ export type ListeBantId =
   | "80-150"
   | "2000-3500"
   | "200-400"
-  | "500-2000";
+  | "500-2000"
+  | "500-2000-kocaeli"
+  | "200-500";
 
 export type M2BantTanim = {
   id: ListeBantId;
@@ -148,7 +151,7 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
     id: "restaurant_balik",
     name: "Balıkçı / Balık restoran",
     parent: "Restoran",
-    desc: "Balık restoran + mahalle balıkçı · m² bantlı listeler + mahalle listesi · motor: balikci",
+    desc: "Balık restoran + mahalle balıkçı · 150–250 m² Uçan Balık referans (2016-094) · motor: balikci",
     pfos: {
       motorSlug: "balikci",
       dukkanSecim: "Balık Restaurant",
@@ -161,7 +164,8 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
       m2Min: 80,
       m2Max: 250,
       bantKurali:
-        "Mahalle balıkçı → mahalle listesi; m² ≤ 150 → 80-150; m² > 150 → 150-250",
+        "Mahalle balıkçı → mahalle listesi; m² ≤ 150 → 80-150; m² > 150 → 150-250 (Uçan Balık)",
+      listeYolu: "veri/ucan-balik-2016-094.xlsx · proje-veri/150-250 m2 BALIKCI",
       planPdf: "2 BALIKCI-PLAN.pdf",
       teklifKaynagi: "pfos-referans",
       durum: "aktif",
@@ -230,6 +234,24 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
       teklifKaynagi: "pfos-referans",
       durum: "aktif",
       bantlar: [liste("40-100", "40–100 m²", 70, "sushi")],
+    },
+    questions: [],
+  },
+  {
+    id: "restaurant_inari_bar_yemek",
+    name: "Bar + Yemek (Hafif Asya)",
+    parent: "Restoran",
+    desc: "Bar + yemek · hafif Asya mutfağı · 100–200 m² referans (2016-093 Inari) · motor: inari-bar-yemek",
+    pfos: {
+      motorSlug: "inari-bar-yemek",
+      dukkanSecim: "Bar + Yemek (Hafif Asya)",
+      m2Min: 100,
+      m2Max: 200,
+      bantKurali: "Tek referans liste (100–200 m²); m² ile adet ölçeklenir",
+      listeYolu: "veri/inari-restaurant-2016-093-2.xlsx",
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
+      bantlar: [liste("100-200", "100–200 m²", 150, "inari-bar-yemek")],
     },
     questions: [],
   },
@@ -400,6 +422,30 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
     questions: [],
   },
   {
+    id: "kafe_kahve_duragi",
+    name: "Kahve Durağı",
+    parent: "Kafe / Coffee Shop",
+    desc:
+      "Cafe-restaurant zincir · kahve+kahvaltı+tatlı · m²<150 Konyaaltı (105) · m²≥150 Karabük (106) · motor: kahve-duragi",
+    pfos: {
+      motorSlug: "kahve-duragi",
+      dukkanSecim: "Kahve Durağı",
+      m2Min: 100,
+      m2Max: 200,
+      bantKurali:
+        "m² < 150 → 100–200 (Konyaaltı kompakt); m² ≥ 150 → 150–200 (Karabük standart)",
+      listeYolu:
+        "veri/kave-duragi-2016-105.xlsx · veri/kahve-duragi-karabuk-2016-106.xlsx",
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
+      bantlar: [
+        liste("100-200", "100–150 m² (Konyaaltı)", 125, "kahve-duragi"),
+        liste("150-200", "150–200 m² (Karabük)", 175, "kahve-duragi"),
+      ],
+    },
+    questions: [],
+  },
+  {
     id: "kafe_all_sport_cafe",
     name: "All Sport Cafe",
     parent: "Kafe / Coffee Shop",
@@ -418,18 +464,56 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
     questions: [],
   },
   {
+    id: "kafe_kahve_duragi_pastane",
+    name: "Kahve Durağı — Pastane & Kahvaltı",
+    parent: "Kafe / Coffee Shop",
+    desc:
+      "Pastane + kahvaltı + hafif yemek · 100–200 m² Sultangazi (2016-135) · motor: kahve-duragi-pastane",
+    pfos: {
+      motorSlug: "kahve-duragi-pastane",
+      dukkanSecim: "Kahve Durağı — Pastane & Kahvaltı",
+      m2Min: 100,
+      m2Max: 200,
+      bantKurali: "Tek referans liste (100–200 m²); m² ile adet ölçeklenir",
+      listeYolu: "veri/kahve-duragi-sultangazi-2016-135.xlsx",
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
+      bantlar: [liste("100-200", "100–200 m² (Sultangazi)", 150, "kahve-duragi-pastane")],
+    },
+    questions: [],
+  },
+  {
+    id: "kafe_kahve_tatli",
+    name: "Kahve & Tatlı",
+    parent: "Kafe / Coffee Shop",
+    desc:
+      "Kahve + pasta/poğaça teşhir · alt kat üretim · 40–100 m² Hacıbozan Çemberlitaş (2016-132) · motor: kahve-tatli",
+    pfos: {
+      motorSlug: "kahve-tatli",
+      dukkanSecim: "Kahve & Tatlı",
+      m2Min: 40,
+      m2Max: 100,
+      bantKurali: "Tek referans liste (40–100 m²); m² ile adet ölçeklenir",
+      listeYolu: "veri/hacibozan-cemberlitas-2016-132.xlsx",
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
+      bantlar: [liste("40-100", "40–100 m²", 70, "kahve-tatli")],
+    },
+    questions: [],
+  },
+  {
     id: "coffee_shop",
     name: "Coffee Shop",
     parent: "Kafe / Coffee Shop",
-    desc: "Kahve / içecek odaklı · referans: coffee-shop-referans.json",
+    desc: "Espressolab Watergarden referans (2016-114) · kahve + pasta teşhir · motor: coffee-shop",
     pfos: {
       motorSlug: "coffee-shop",
       dukkanSecim: "Coffee Shop",
       m2Min: 60,
       m2Max: 300,
-      bantKurali: "Tek referans liste; m² ile adet ölçeklenir",
-      teklifKaynagi: "referans-json",
-      listeYolu: "proje-veri/coffee-shop-ekipman-listesi.xlsx",
+      bantKurali: "Tek referans liste (Espressolab Watergarden); m² ile adet ölçeklenir",
+      teklifKaynagi: "pfos-referans",
+      listeYolu: "veri/espresolab-watergarden-2016-114.xlsx · proje-veri/coffee-shop-ekipman-listesi.xlsx",
       durum: "aktif",
       bantlar: [
         {
@@ -493,6 +577,42 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
       teklifKaynagi: "pfos-referans",
       durum: "aktif",
       bantlar: [liste("500-1000", "500–1000 m²", 750, "restoran")],
+    },
+    questions: [],
+  },
+  {
+    id: "kasap_yalniz",
+    name: "Kasap",
+    parent: "Restoran",
+    desc: "Yalnızca kasap hizmeti · et teşhir · hazırlık · Ortaklar Rota (2016-087 kasap) · motor: kasap",
+    pfos: {
+      motorSlug: "kasap",
+      dukkanSecim: "Kasap",
+      m2Min: 100,
+      m2Max: 250,
+      bantKurali: "Tek referans liste (100–250 m²); m² ile adet ölçeklenir",
+      listeYolu: "veri/kasap-ortaklar-kasap-2016-087.xlsx",
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
+      bantlar: [liste("100-250", "100–250 m²", 175, "kasap")],
+    },
+    questions: [],
+  },
+  {
+    id: "kasap_sarkuteri",
+    name: "Kasap + Şarküteri",
+    parent: "Restoran",
+    desc: "Kasap + şarküteri teşhir · hazırlık mutfağı · Ortaklar Rota tam liste (2016-087) · motor: kasap-sarkuteri",
+    pfos: {
+      motorSlug: "kasap-sarkuteri",
+      dukkanSecim: "Kasap + Şarküteri",
+      m2Min: 100,
+      m2Max: 250,
+      bantKurali: "Tek referans liste (100–250 m²); m² ile adet ölçeklenir",
+      listeYolu: "veri/kasap-ortaklar-2016-087.xlsx",
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
+      bantlar: [liste("100-250", "100–250 m²", 200, "kasap-sarkuteri")],
     },
     questions: [],
   },
@@ -577,6 +697,28 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
       teklifKaynagi: "pfos-referans",
       durum: "aktif",
       bantlar: [liste("100-250", "100–250 m²", 175, "kiremit-akasya")],
+    },
+    questions: [],
+  },
+  {
+    id: "ff_mus_selinoz_turk",
+    name: "Türk Mutfağı — Muş Selinöz (101)",
+    parent: "Fast Food / QSR",
+    desc:
+      "2016-101 referans · 89 kalem · Kiremit Akasya’dan AYRI · bar+pasta+mutfak · konsept detaylandırılacak",
+    pfos: {
+      motorSlug: "",
+      dukkanSecim: "",
+      m2Min: 100,
+      m2Max: 400,
+      bantKurali:
+        "Liste içe aktarıldı — motor/sihirbaz bağlantısı yok; m² ve işletme tipi netleşince aktifleştirilecek",
+      listeYolu: "veri/mus-selinoz-2016-101.xlsx · HATIRLATMA-KONSEPTLER.md",
+      teklifKaynagi: "referans-json",
+      durum: "planlanan",
+      bantlar: [
+        liste("100-250", "100–250 m² (Muş 101 taslak)", 200, "mus-selinoz-turk"),
+      ],
     },
     questions: [],
   },
@@ -793,21 +935,42 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
     id: "otel_sehir",
     name: "Şehir Oteli (Business)",
     parent: "Otel F&B",
-    desc: "Şehir oteli F&B · ana mutfak · büfe · banquet · Hilton Kocaeli referans (2016-077) · motor: sehir-otel",
+    desc: "Şehir/business otel F&B · Hampton Bolu (2016-088) · Hilton Kocaeli (2016-077) · motor: sehir-otel",
     pfos: {
       motorSlug: "sehir-otel",
       dukkanSecim: "Şehir Oteli (Business)",
       m2Min: 500,
       m2Max: 2000,
-      bantKurali: "Tek referans liste (500–2000 m²); m² ile adet ölçeklenir",
-      listeYolu: "veri/hilton-sehir-otel-2016-077.xlsx",
+      bantKurali: "Varsayılan referans Hampton Bolu (500–2000 m²); Kocaeli listesi ayrı bant",
+      listeYolu: "veri/hampton-sehir-otel-2016-088.xls · veri/hilton-sehir-otel-2016-077.xlsx",
       teklifKaynagi: "pfos-referans",
       durum: "aktif",
-      bantlar: [liste("500-2000", "500–2000 m²", 1000, "sehir-otel")],
+      bantlar: [
+        liste("500-2000", "500–2000 m² (Hampton Bolu)", 1000, "sehir-otel"),
+        liste("500-2000-kocaeli", "500–2000 m² (Kocaeli)", 1000, "sehir-otel"),
+      ],
     },
     questions: [],
   },
-  konseptPlanlanan("otel_resort", "Resort Otel", "Otel F&B", "Resort Otel", 300, 5000),
+  {
+    id: "otel_resort",
+    name: "Resort Otel (ölçekli)",
+    parent: "Otel F&B",
+    desc:
+      "Boutique / resort F&B · Zigana Alaçatı 2016-159 · 200–500 m² · motor: resort-otel",
+    pfos: {
+      motorSlug: "resort-otel",
+      dukkanSecim: "Resort Otel",
+      m2Min: 200,
+      m2Max: 500,
+      bantKurali: "Tek referans liste (ölçekli resort); m² ile adet ölçeklenir",
+      listeYolu: "veri/zigana-otel-2016-159.xls",
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
+      bantlar: [liste("200-500", "200–500 m² (Zigana)", 300, "resort-otel")],
+    },
+    questions: [],
+  },
   konseptPlanlanan(
     "otel_dag",
     "Dağ-Kayak Oteli",

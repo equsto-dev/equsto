@@ -1,0 +1,358 @@
+{
+  "kategoriId": "kahve-duragi-pastane",
+  "bantId": "100-200",
+  "label": "Kahve Durağı — Pastane & Kahvaltı 100–200 m²",
+  "referansM2": 150,
+  "kaynakDosya": "2016-135 KAHVE DURAĞI SULTANGAZİ LAINOX/2016-135.xlsx",
+  "not": "Sultangazi · pastane teşhir + bar · mutfak (kahvaltı & hafif yemek)",
+  "konseptSinif": "pastane-kahvalti-hafif-yemek",
+  "yukleme": "2026-05-31T03:13:51.691Z",
+  "kalemSayisi": 43,
+  "toplamAdet": 48,
+  "kalemler": [
+    {
+      "bolum": "B",
+      "bolumAd": "BAR",
+      "poz": "A1",
+      "ad": "KASA TEZGAHI",
+      "olcu": "90*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BAR",
+      "poz": "A2",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+      "olcu": "100*60*85",
+      "adet": 2
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BAR",
+      "poz": "A3",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, KAHVE ÇEKMECELİ",
+      "olcu": "120*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BAR",
+      "poz": "A4",
+      "ad": "ESPRESSO KAHVE MAKİNASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BAR",
+      "poz": "A5",
+      "ad": "KAHVE DEĞİRMENİ",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BAR",
+      "poz": "A6",
+      "ad": "PASTA DOLABI",
+      "olcu": "150*75*125",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BAR",
+      "poz": "A7",
+      "ad": "ÇİKOLATA DOLABI",
+      "olcu": "110*75*1125",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BAR",
+      "poz": "A8",
+      "ad": "TEZGAH T İPİ BUZDOLABI, 2 KAPILI",
+      "olcu": "143*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BAR",
+      "poz": "A9",
+      "ad": "PORTAKAL SIKMA MAKİNASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BAR",
+      "poz": "A10",
+      "ad": "BAR BLENDER",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BAR",
+      "poz": "A11",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+      "olcu": "90*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BAR",
+      "poz": "A12",
+      "ad": "ÇAY OCAĞI",
+      "olcu": "3 DEMLİKLİ",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BAR",
+      "poz": "A13",
+      "ad": "ÇAY OCAĞI DAVLUMBAZI",
+      "olcu": "100*60*40",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BAR",
+      "poz": "A14",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI, DOLAPLI",
+      "olcu": "120*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BAR",
+      "poz": "A15",
+      "ad": "BARDAK YIKAMA MAKİNASI, SETALTI",
+      "olcu": "60*60*82",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BAR",
+      "poz": "A16",
+      "ad": "BUZ MAKİNASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "MUTFAK",
+      "poz": "B1",
+      "ad": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+      "olcu": "70*80*205",
+      "adet": 2
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "MUTFAK",
+      "poz": "B2",
+      "ad": "DEPO TİPİ DERİN DONDURUCU, TEK KAPILI",
+      "olcu": "70*80*205",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "MUTFAK",
+      "poz": "B3",
+      "ad": "İSTİF RAFI, 4 KATLI, DEMONTE",
+      "olcu": "107*53*160",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "MUTFAK",
+      "poz": "B4",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "120*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "MUTFAK",
+      "poz": "B5",
+      "ad": "DUVAR RAFI",
+      "olcu": "120*30*4",
+      "adet": 2
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "MUTFAK",
+      "poz": "B6",
+      "ad": "MAKE-UP DOLABI, 2 KAPILI",
+      "olcu": "143*60*85/105",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "MUTFAK",
+      "poz": "B7",
+      "ad": "DUVAR RAFI",
+      "olcu": "143*30*4",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "MUTFAK",
+      "poz": "B8",
+      "ad": "FIRIN TEZGAHI, TEPSİ İSTİFLİ",
+      "olcu": "90*90*70",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "MUTFAK",
+      "poz": "B9",
+      "ad": "FIRIN",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "MUTFAK",
+      "poz": "B10",
+      "ad": "CİHAZALTI ÇALIŞMA TEZGAHI, TABAN RAFLI",
+      "olcu": "240*70*55",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "MUTFAK",
+      "poz": "B11",
+      "ad": "IZGARA",
+      "olcu": "80*60*30",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "MUTFAK",
+      "poz": "B12",
+      "ad": "NÖTR ARA TEZGAH, SETÜSTÜ",
+      "olcu": "40*60*30",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "MUTFAK",
+      "poz": "B13",
+      "ad": "MAKARNA PİŞİRİCİ, ELK., SETÜSTÜ",
+      "olcu": "40*60*30",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "MUTFAK",
+      "poz": "B14",
+      "ad": "4 AÇIK ALEVLİ OCAK, GAZLI, SETÜSTÜ",
+      "olcu": "80*60*30",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "MUTFAK",
+      "poz": "B15",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+      "olcu": "120*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "MUTFAK",
+      "poz": "B16",
+      "ad": "TOST MAKİNASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "MUTFAK",
+      "poz": "B17",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+      "olcu": "450*97*50",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "MUTFAK",
+      "poz": "B18",
+      "ad": "SERVİS TEZGAHI, TABAN VE ARA RAFLI",
+      "olcu": "140*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "MUTFAK",
+      "poz": "B19",
+      "ad": "SERVİS RAFI",
+      "olcu": "140*40*60",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "MUTFAK",
+      "poz": "B20",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "195*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "MUTFAK",
+      "poz": "B21",
+      "ad": "BULAŞIK YIKAMA MAKİNASI, SETALTI",
+      "olcu": "60*60*82",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "MUTFAK",
+      "poz": "B22",
+      "ad": "DUVAR RAFI",
+      "olcu": "195*30*4",
+      "adet": 2
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "MUTFAK",
+      "poz": "B23",
+      "ad": "SIYIRMA TEZGAHI",
+      "olcu": "80*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "MUTFAK",
+      "poz": "B24",
+      "ad": "DUVAR RAFI",
+      "olcu": "120*30*4",
+      "adet": 2
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "MUTFAK",
+      "poz": "B25",
+      "ad": "ÇÖP ARABASI",
+      "olcu": "40*50",
+      "adet": 1
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "YER IZGARASI",
+      "poz": "Y1",
+      "ad": "YER IZGARASI",
+      "olcu": "30*30*14",
+      "adet": 1
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "YER IZGARASI",
+      "poz": "Y2",
+      "ad": "YER IZGARASI",
+      "olcu": "120*30*14",
+      "adet": 1
+    }
+  ]
+}

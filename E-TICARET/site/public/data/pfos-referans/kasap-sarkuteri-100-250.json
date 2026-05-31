@@ -1,0 +1,301 @@
+{
+  "kategoriId": "kasap-sarkuteri",
+  "bantId": "100-250",
+  "label": "Kasap + Şarküteri 100–250 m²",
+  "referansM2": 200,
+  "kaynakDosya": "2016-087 KASAP ORTAKLAR ROTA/2016-087.xlsx",
+  "not": "Kasap + şarküteri teşhir · hazırlık mutfağı (Ortaklar Rota tam liste)",
+  "yukleme": "2026-05-31T02:05:33.087Z",
+  "kalemSayisi": 36,
+  "toplamAdet": 46,
+  "kalemler": [
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT SATIŞ ALANI",
+      "poz": "A1",
+      "ad": "KASA TEZGAHI",
+      "olcu": "60*80*90",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT SATIŞ ALANI",
+      "poz": "A2",
+      "ad": "ET TEŞHİR REYONU",
+      "olcu": "525*130*130",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT SATIŞ ALANI",
+      "poz": "A3",
+      "ad": "MEZE TEŞHİR REYONU",
+      "olcu": "200/200*130*130",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT SATIŞ ALANI",
+      "poz": "A4",
+      "ad": "ŞARKÜTERİ TEŞHİR REYONU",
+      "olcu": "200*130*130",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT SATIŞ ALANI",
+      "poz": "A5",
+      "ad": "ÇALIŞMA TEZGAHI, KAHVE ÇEKMECELİ, BLOK ÇEKMECELİ, DOLAPLI",
+      "olcu": "250*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT SATIŞ ALANI",
+      "poz": "A6",
+      "ad": "ESPRESSO KAHVE MAKİNASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT SATIŞ ALANI",
+      "poz": "A6A",
+      "ad": "ÇÖP ARABASI",
+      "olcu": "40*50",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT SATIŞ ALANI",
+      "poz": "A7",
+      "ad": "KAHVE DEĞİRMENİ",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT SATIŞ ALANI",
+      "poz": "A8",
+      "ad": "KONVEKSİYONLU FIRIN, ELK.",
+      "olcu": "4 TEPSİLİ",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT SATIŞ ALANI",
+      "poz": "A9",
+      "ad": "ÇAY OTOMATI",
+      "olcu": "23 LT.",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT SATIŞ ALANI",
+      "poz": "A10",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI, DOLAPLI",
+      "olcu": "60*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT SATIŞ ALANI",
+      "poz": "A11",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN RAFLI, DOLAPLI",
+      "olcu": "170*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT SATIŞ ALANI",
+      "poz": "A12",
+      "ad": "VAKUM MAKİNASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT SATIŞ ALANI",
+      "poz": "A13",
+      "ad": "ET KIYMA MAKİNASI, SOĞUTMALI",
+      "olcu": "NO: 32",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT SATIŞ ALANI",
+      "poz": "A14",
+      "ad": "ŞİŞE SOĞUTUCU SOĞUK DOLAP, CAM SÜRGÜ KAPILI",
+      "olcu": "265*60*120",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT SATIŞ ALANI",
+      "poz": "A15",
+      "ad": "PASLANMAZ TABLA",
+      "olcu": "330*60*4",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT SATIŞ ALANI",
+      "poz": "A16",
+      "ad": "ŞİŞE SOĞUTUCU SOĞUK DOLAP, CAM SÜRGÜ KAPILI",
+      "olcu": "160*60*120",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT SATIŞ ALANI",
+      "poz": "A17",
+      "ad": "PASLANMAZ TABLA",
+      "olcu": "185*60*4",
+      "adet": 1
+    },
+    {
+      "bolum": "Z",
+      "bolumAd": "ZEMİN KAT SATIŞ ALANI",
+      "poz": "A18",
+      "ad": "SÜTLÜK, CEPHE CAMLI, SÜRGÜ CAM KAPILI",
+      "olcu": "295*80*210",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "ALT KAT HAZIRLIK MUTFAĞI",
+      "poz": "M1",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "170*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "ALT KAT HAZIRLIK MUTFAĞI",
+      "poz": "M2",
+      "ad": "4 GÖZLÜ OCAK, TABAN RAFLI",
+      "olcu": "100*100*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "ALT KAT HAZIRLIK MUTFAĞI",
+      "poz": "M3",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+      "olcu": "140*140*50",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "ALT KAT HAZIRLIK MUTFAĞI",
+      "poz": "M4",
+      "ad": "TEZGAH TİPİ BUZDOLABI, 2 SIRA ÇEKMECELİ",
+      "olcu": "180*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "ALT KAT HAZIRLIK MUTFAĞI",
+      "poz": "M5",
+      "ad": "POLİETİLEN TABLALI ÇALIŞMA TEZGAHI, TEK ÇEKMECELİ, TABAN RAFLI",
+      "olcu": "170*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "ALT KAT HAZIRLIK MUTFAĞI",
+      "poz": "M6",
+      "ad": "POLİETİLEN TABLALI ÇALIŞMA TEZGAHI, TEK ÇEKMECELİ, TABAN RAFLI",
+      "olcu": "170*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "ALT KAT HAZIRLIK MUTFAĞI",
+      "poz": "M7",
+      "ad": "HAMUR (KÖFTE) YOĞURMA MAKİNASI",
+      "olcu": "15 KG/SEFER",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "ALT KAT HAZIRLIK MUTFAĞI",
+      "poz": "M8",
+      "ad": "TARTI, ET ASKILI",
+      "olcu": "300 KG",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "ALT KAT HAZIRLIK MUTFAĞI",
+      "poz": "M9",
+      "ad": "HAREKETLİ ÇALIŞMA TEZGAHI, TABAN RAFI",
+      "olcu": "150*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "ALT KAT HAZIRLIK MUTFAĞI",
+      "poz": "M10",
+      "ad": "ÇALIŞMA TEZGAHI",
+      "olcu": "100*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "ALT KAT HAZIRLIK MUTFAĞI",
+      "poz": "M11",
+      "ad": "ÇÖP ARABASI",
+      "olcu": "40*50",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "ALT KAT HAZIRLIK MUTFAĞI",
+      "poz": "M12",
+      "ad": "BIÇAK STERİL DOLABI",
+      "olcu": "10 BIÇAKLIK",
+      "adet": 1
+    },
+    {
+      "bolum": "Ş",
+      "bolumAd": "ŞARKÜTERİ SOĞUK ODA",
+      "poz": "C1",
+      "ad": "PANEL TİP SOĞUK ODA",
+      "olcu": "325*300*230",
+      "adet": 1
+    },
+    {
+      "bolum": "Ş",
+      "bolumAd": "ŞARKÜTERİ SOĞUK ODA",
+      "poz": "C2",
+      "ad": "İSTİF RAFI",
+      "olcu": "137*53*160",
+      "adet": 6
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "ET SOĞUK ODA",
+      "poz": "D1",
+      "ad": "PANEL TİP SOĞUK ODA",
+      "olcu": "325*275*230",
+      "adet": 1
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "ET SOĞUK ODA",
+      "poz": "D2",
+      "ad": "İSTİF RAFI",
+      "olcu": "137*53*160",
+      "adet": 6
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "YER IZGARASI",
+      "poz": "Y1",
+      "ad": "YER IZGARASI",
+      "olcu": "50*30*14",
+      "adet": 1
+    }
+  ]
+}

@@ -3,1546 +3,1498 @@
   "bantId": "500-2000",
   "label": "Şehir Oteli (Business) 500–2000 m²",
   "referansM2": 1000,
-  "kaynakDosya": "2016-077 HILTON KOCAELİ LAINOX/2016-077.xlsx",
-  "not": "Hilton Kocaeli · ana mutfak · büfe · banquet · servis bar",
-  "yukleme": "2026-05-31T01:40:12.432Z",
-  "kalemSayisi": 192,
-  "toplamAdet": 264,
+  "kaynakDosya": "2016-088 HAMPTON BY HILTON BOLU/Hampton By Hilton.xls",
+  "not": "Hampton By Hilton Bolu · şehir/business otel F&B",
+  "yukleme": "2026-05-31T02:13:59.546Z",
+  "kalemSayisi": 186,
+  "toplamAdet": 288,
   "kalemler": [
     {
       "bolum": "A",
-      "bolumAd": "A- SERVİS BÜFELERİ",
-      "poz": "A01",
-      "ad": "Sıcak servis ünitesi",
-      "olcu": "7300 × 750 × 900",
-      "adet": 2
-    },
-    {
-      "bolum": "A",
-      "bolumAd": "A- SERVİS BÜFELERİ",
-      "poz": "A02",
-      "ad": "Soğuk servis büfesi",
-      "olcu": "3200 × 900 × 900",
-      "adet": 1
-    },
-    {
-      "bolum": "A",
-      "bolumAd": "A-SICAK MUTFAK",
+      "bolumAd": "S I C A K  M U T F A K",
       "poz": "001",
-      "ad": "El yıkama eviyesi, Dizden kumandalı, çift su girişli",
-      "olcu": "500 × 425 × 550",
+      "ad": "Izgara, Perfect 900seri, 1/2M, gazl�, d�z, set�st� (OLIS)",
+      "olcu": "400 � 900 � 230",
       "adet": 1
     },
     {
       "bolum": "A",
-      "bolumAd": "A-SICAK MUTFAK",
+      "bolumAd": "S I C A K  M U T F A K",
       "poz": "002",
-      "ad": "Geri toplamalı ön yıkama duşu,  15 mt.",
-      "olcu": "350 × 350 × 80",
-      "adet": 1
-    },
-    {
-      "bolum": "A",
-      "bolumAd": "A-SICAK MUTFAK",
-      "poz": "003",
-      "ad": "Kaynatma tenceresi, Perfect 900seri, gazlı, silindirik, 100Lt.",
-      "olcu": "800 × 900 × 850",
-      "adet": 1
-    },
-    {
-      "bolum": "A",
-      "bolumAd": "A-SICAK MUTFAK",
-      "poz": "004",
-      "ad": "Devrilir tava, Perfect 900seri, gazlı, 80Lt.",
-      "olcu": "800 × 900 × 850",
-      "adet": 1
-    },
-    {
-      "bolum": "A",
-      "bolumAd": "A-SICAK MUTFAK",
-      "poz": "005",
-      "ad": "Izgara, Perfect 900seri, 1M, gazlı, setüstü, düz+oluklu",
-      "olcu": "800 × 900 × 230",
-      "adet": 1
-    },
-    {
-      "bolum": "A",
-      "bolumAd": "A-SICAK MUTFAK",
-      "poz": "006",
-      "ad": "Dolap, Perfect 900seri, 1modül, kapılı",
-      "olcu": "800 × 876 × 620",
-      "adet": 2
-    },
-    {
-      "bolum": "A",
-      "bolumAd": "A-SICAK MUTFAK",
-      "poz": "007",
-      "ad": "Ara tezgah, Perfect 900seri, 1/2modül, setüstü",
-      "olcu": "400 × 900 × 230",
-      "adet": 2
-    },
-    {
-      "bolum": "A",
-      "bolumAd": "A-SICAK MUTFAK",
-      "poz": "008",
-      "ad": "Dolap, Perfect 900seri, 1/2modül, kapılı",
-      "olcu": "400 × 876 × 620",
-      "adet": 3
-    },
-    {
-      "bolum": "A",
-      "bolumAd": "A-SICAK MUTFAK",
-      "poz": "009",
-      "ad": "Fritöz, Perfect 900seri, 1M, elektrikli, setüstü",
-      "olcu": "800 × 900 × 230",
-      "adet": 1
-    },
-    {
-      "bolum": "A",
-      "bolumAd": "A-SICAK MUTFAK",
-      "poz": "010",
-      "ad": "Sosbenmari, Perfect 900seri, 1/2M, elektrikli, setüstü",
-      "olcu": "400 × 900 × 230",
-      "adet": 1
-    },
-    {
-      "bolum": "A",
-      "bolumAd": "A-SICAK MUTFAK",
-      "poz": "011",
-      "ad": "Kuzine, Perfect 900seri, 1.5M, gazlı, 6 açık ocak, setüstü",
-      "olcu": "1200 × 900 × 230",
-      "adet": 1
-    },
-    {
-      "bolum": "A",
-      "bolumAd": "A-SICAK MUTFAK",
-      "poz": "012",
-      "ad": "Dolap, Perfect 900seri, 1.5modül, kapılı",
-      "olcu": "1200 × 876 × 620",
-      "adet": 1
-    },
-    {
-      "bolum": "A",
-      "bolumAd": "A-SICAK MUTFAK",
-      "poz": "013",
-      "ad": "Davlumbaz, Duvar tipi, hava perdeli",
-      "olcu": "6000 × 1170 × 500",
-      "adet": 1
-    },
-    {
-      "bolum": "A",
-      "bolumAd": "A-SICAK MUTFAK",
-      "poz": "014",
-      "ad": "Çalışma tezgahı, Hareketli, alt tablalı",
-      "olcu": "1600 × 700 × 850",
-      "adet": 2
-    },
-    {
-      "bolum": "A",
-      "bolumAd": "A-SICAK MUTFAK",
-      "poz": "015",
-      "ad": "Buhar konveksiyonlu fırın,elektrikli, 20 GN2/1, dokunmatik ekran, 9 pişirme fazlı Et problu, yıkama duşlu, Türkçe kullanım dili (16550)",
-      "olcu": "910 × 1200 × 1850",
-      "adet": 2
-    },
-    {
-      "bolum": "A",
-      "bolumAd": "A-SICAK MUTFAK",
-      "poz": "016",
-      "ad": "Davlumbaz, Duvar tipi, hava perdeli",
-      "olcu": "3000 × 1470 × 500",
-      "adet": 1
-    },
-    {
-      "bolum": "A",
-      "bolumAd": "A-SICAK MUTFAK",
-      "poz": "017",
-      "ad": "Tepsi taşıma arabası, GN2/1",
-      "olcu": "590 × 670 × 1650",
-      "adet": 1
-    },
-    {
-      "bolum": "A",
-      "bolumAd": "A-SICAK MUTFAK",
-      "poz": "018",
-      "ad": "Şok soğutucu/dondurucu, 15 x GN 1/1 tepsi kapasiteli +90 +3C 40 kg şok soğutma,+90 -18 C 30 kg dondurma (6900)",
-      "olcu": "900 × 850 × 2040",
-      "adet": 1
-    },
-    {
-      "bolum": "B",
-      "bolumAd": "B-SOĞUK MUTFAK",
-      "poz": "001",
-      "ad": "Depo tipi buzdolabı, Tek kapılı, poliüretan gövdeli",
-      "olcu": "700 × 770 × 2100",
-      "adet": 1
-    },
-    {
-      "bolum": "B",
-      "bolumAd": "B-SOĞUK MUTFAK",
-      "poz": "002",
-      "ad": "Tek küvetli tezgah, 50*50*30 küvetli, sağ, damlalıklı",
-      "olcu": "1000 × 700 × 850",
-      "adet": 1
-    },
-    {
-      "bolum": "B",
-      "bolumAd": "B-SOĞUK MUTFAK",
-      "poz": "003",
-      "ad": "Bıçak sterilizatörü, 10 bıçaklık",
-      "olcu": "575 × 100 × 480",
-      "adet": 1
-    },
-    {
-      "bolum": "B",
-      "bolumAd": "B-SOĞUK MUTFAK",
-      "poz": "004",
-      "ad": "Pizza hazırlık ünitesi, Paslanmaz tablalı, yüksek garnitür üniteli",
-      "olcu": "1400 × 700 × 850",
-      "adet": 1
-    },
-    {
-      "bolum": "B",
-      "bolumAd": "B-SOĞUK MUTFAK",
-      "poz": "005",
-      "ad": "Çalışma tezgahı, Alt tablalı",
-      "olcu": "1000 × 700 × 850",
-      "adet": 1
-    },
-    {
-      "bolum": "B",
-      "bolumAd": "B-SOĞUK MUTFAK",
-      "poz": "006",
-      "ad": "Salam dilimleme makinesi, ekonomik model,çap: 300 mm",
-      "olcu": "690 × 510 × 440",
-      "adet": 1
-    },
-    {
-      "bolum": "B",
-      "bolumAd": "B-SOĞUK MUTFAK",
-      "poz": "007",
-      "ad": "Polietilen tablalı tezgah, Alt tablalı",
-      "olcu": "1600 × 700 × 850",
-      "adet": 1
-    },
-    {
-      "bolum": "B",
-      "bolumAd": "B-SOĞUK MUTFAK",
-      "poz": "008",
-      "ad": "Duvar rafı",
-      "olcu": "1600 × 300 × 30",
-      "adet": 1
-    },
-    {
-      "bolum": "B",
-      "bolumAd": "B-SOĞUK MUTFAK",
-      "poz": "009",
-      "ad": "Ordövr Tabak toplama arabası (100 tabak)",
-      "olcu": "760 × 760 × 1770",
-      "adet": 10
-    },
-    {
-      "bolum": "C",
-      "bolumAd": "C-SERVİS BULAŞIK",
-      "poz": "001",
-      "ad": "Bulaşık alma tezgahı",
-      "olcu": "2400 × 1100 × 850",
-      "adet": 1
-    },
-    {
-      "bolum": "C",
-      "bolumAd": "C-SERVİS BULAŞIK",
-      "poz": "002",
-      "ad": "Kaset rafı, Tezgaha monte",
-      "olcu": "2400 × 600 × 600",
-      "adet": 1
-    },
-    {
-      "bolum": "C",
-      "bolumAd": "C-SERVİS BULAŞIK",
-      "poz": "003",
-      "ad": "Çöp kazanı kapaklı Ø400  AISI304, 4 tekerlekli",
-      "olcu": "400 × 400 × 500",
-      "adet": 1
-    },
-    {
-      "bolum": "C",
-      "bolumAd": "C-SERVİS BULAŞIK",
-      "poz": "004",
-      "ad": "Makina giriş eviyesi, sırt parçası dahil, 50*40*25 küvetli, sol",
-      "olcu": "1000 × 725 × 850",
-      "adet": 1
-    },
-    {
-      "bolum": "C",
-      "bolumAd": "C-SERVİS BULAŞIK",
-      "poz": "005",
-      "ad": "Ön yıkama duşu tezgaha monte",
-      "olcu": "150 × 440 × 1200",
-      "adet": 1
-    },
-    {
-      "bolum": "C",
-      "bolumAd": "C-SERVİS BULAŞIK",
-      "poz": "006",
-      "ad": "Bulaşık yıkama makinası, konveyörlü, 1600-2200 tb/h, sol (6000)",
-      "olcu": "1800 × 785 × 1720",
-      "adet": 1
-    },
-    {
-      "bolum": "C",
-      "bolumAd": "C-SERVİS BULAŞIK",
-      "poz": "007",
-      "ad": "Kurutma ünitesi 70cm (1500)",
-      "olcu": "1 × 1 × 1",
-      "adet": 1
-    },
-    {
-      "bolum": "C",
-      "bolumAd": "C-SERVİS BULAŞIK",
-      "poz": "008",
-      "ad": "Köşe konveyör çıkış tezgahı, 90° dönüşlü, sağ, (BYK seri makinalar için) (900)",
-      "olcu": "850 × 850 × 850",
-      "adet": 1
-    },
-    {
-      "bolum": "C",
-      "bolumAd": "C-SERVİS BULAŞIK",
-      "poz": "009",
-      "ad": "Makina giriş-çıkış tezgahı",
-      "olcu": "1200 × 580 × 850",
-      "adet": 1
-    },
-    {
-      "bolum": "C",
-      "bolumAd": "C-SERVİS BULAŞIK",
-      "poz": "010",
-      "ad": "Davlumbaz, Duvar tipi, filtresiz",
-      "olcu": "2500 × 970 × 500",
-      "adet": 1
-    },
-    {
-      "bolum": "C",
-      "bolumAd": "C-SERVİS BULAŞIK",
-      "poz": "011",
-      "ad": "Tel Raf-4 Katlı- ınox304-61*152*183",
-      "olcu": "1520 × 610 × 1830",
-      "adet": 3
-    },
-    {
-      "bolum": "C",
-      "bolumAd": "C-SERVİS BULAŞIK",
-      "poz": "012",
-      "ad": "Tel Raf-4 Katlı- ınox304-61*122*183",
-      "olcu": "1220 × 610 × 1830",
-      "adet": 3
-    },
-    {
-      "bolum": "C",
-      "bolumAd": "C-SERVİS BULAŞIK",
-      "poz": "013",
-      "ad": "Tel Raf-4 Katlı- ınox304-61*137*183",
-      "olcu": "1370 × 610 × 1830",
-      "adet": 2
-    },
-    {
-      "bolum": "D",
-      "bolumAd": "D -MUTFAK BULAŞIK",
-      "poz": "001",
-      "ad": "Kepçe askı borusu, 1000mm",
-      "olcu": "1000 × 100 × 100",
-      "adet": 1
-    },
-    {
-      "bolum": "D",
-      "bolumAd": "D -MUTFAK BULAŞIK",
-      "poz": "002",
-      "ad": "Çalışma tezgahı",
-      "olcu": "1000 × 700 × 850",
-      "adet": 1
-    },
-    {
-      "bolum": "D",
-      "bolumAd": "D -MUTFAK BULAŞIK",
-      "poz": "003",
-      "ad": "Derin çift küvetli tezgah, Pres tablalı, 500*700*400mm küvetli",
-      "olcu": "1600 × 700 × 850",
-      "adet": 1
-    },
-    {
-      "bolum": "D",
-      "bolumAd": "D -MUTFAK BULAŞIK",
-      "poz": "004",
-      "ad": "Ön yıkama duşu tezgaha monte",
-      "olcu": "150 × 440 × 1200",
-      "adet": 1
-    },
-    {
-      "bolum": "D",
-      "bolumAd": "D -MUTFAK BULAŞIK",
-      "poz": "005",
-      "ad": "Kazan yıkama makinesi,1320*700 basket, 850mm iç yüksklik,3.66 m³ iç hcim,400/50/3p,15,5kw Deterjan ve parlatıcı dispenseri standart (10000)",
-      "olcu": "850 × 1470 × 1900",
-      "adet": 1
-    },
-    {
-      "bolum": "D",
-      "bolumAd": "D -MUTFAK BULAŞIK",
-      "poz": "006",
-      "ad": "Tel Raf-4 Katlı- ınox304-61*137*183",
-      "olcu": "1370 × 610 × 1830",
-      "adet": 3
-    },
-    {
-      "bolum": "D",
-      "bolumAd": "D -MUTFAK BULAŞIK",
-      "poz": "007",
-      "ad": "Davlumbaz, Duvar tipi, filtresiz",
-      "olcu": "2000 × 1170 × 500",
-      "adet": 1
-    },
-    {
-      "bolum": "E",
-      "bolumAd": "E -ET HAZIRLIK",
-      "poz": "001",
-      "ad": "Tek küvetli tezgah, 50*50*30 küvetli, sağ, damlalıklı",
-      "olcu": "1000 × 700 × 850",
-      "adet": 1
-    },
-    {
-      "bolum": "E",
-      "bolumAd": "E -ET HAZIRLIK",
-      "poz": "002",
-      "ad": "Et kütüğü, Polietilen tablalı",
-      "olcu": "700 × 700 × 850",
-      "adet": 1
-    },
-    {
-      "bolum": "E",
-      "bolumAd": "E -ET HAZIRLIK",
-      "poz": "003",
-      "ad": "Çöp kazanı kapaklı Ø400  AISI304, 4 tekerlekli",
-      "olcu": "400 × 400 × 500",
-      "adet": 1
-    },
-    {
-      "bolum": "E",
-      "bolumAd": "E -ET HAZIRLIK",
-      "poz": "004",
-      "ad": "Polietilen tablalı tezgah, Alt tablalı",
-      "olcu": "1100 × 700 × 850",
-      "adet": 1
-    },
-    {
-      "bolum": "E",
-      "bolumAd": "E -ET HAZIRLIK",
-      "poz": "005",
-      "ad": "Kıyma Mak. K.Paslanmaz  Soğutmalı-32 no- 380 V, saat kg.  600",
-      "olcu": "695 × 365 × 470",
-      "adet": 1
-    },
-    {
-      "bolum": "E",
-      "bolumAd": "E -ET HAZIRLIK",
-      "poz": "006",
-      "ad": "Polietilen tablalı tezgah, Alt tablalı",
-      "olcu": "1100 × 700 × 850",
-      "adet": 1
-    },
-    {
-      "bolum": "E",
-      "bolumAd": "E -ET HAZIRLIK",
-      "poz": "007",
-      "ad": "Bıçak sterilizatörü, 10 bıçaklık",
-      "olcu": "575 × 100 × 480",
-      "adet": 1
-    },
-    {
-      "bolum": "E",
-      "bolumAd": "E -ET HAZIRLIK",
-      "poz": "008",
-      "ad": "Tel Raf-4 Katlı- ınox304-46*152*183",
-      "olcu": "1520 × 460 × 1830",
-      "adet": 1
-    },
-    {
-      "bolum": "E",
-      "bolumAd": "E -ET HAZIRLIK",
-      "poz": "009",
-      "ad": "Tel Raf-4 Katlı- ınox304-46*137*183",
-      "olcu": "1370 × 460 × 1830",
-      "adet": 2
-    },
-    {
-      "bolum": "E",
-      "bolumAd": "E -ET HAZIRLIK",
-      "poz": "010",
-      "ad": "Tel Raf-4 Katlı- ınox304-46*107*183",
-      "olcu": "1070 × 460 × 1830",
-      "adet": 1
-    },
-    {
-      "bolum": "G",
-      "bolumAd": "G -SEBZE HAZIRLIK",
-      "poz": "001",
-      "ad": "Süzme havuzlu tezgah, Pres tablalı",
-      "olcu": "1200 × 600 × 850",
-      "adet": 1
-    },
-    {
-      "bolum": "G",
-      "bolumAd": "G -SEBZE HAZIRLIK",
-      "poz": "002",
-      "ad": "İki küvetli tezgah, 50*40*25 küvetli, pres tablalı",
-      "olcu": "1200 × 600 × 850",
-      "adet": 1
-    },
-    {
-      "bolum": "G",
-      "bolumAd": "G -SEBZE HAZIRLIK",
-      "poz": "003",
-      "ad": "Ön yıkama duşu tezgaha monte",
-      "olcu": "150 × 440 × 1200",
-      "adet": 2
-    },
-    {
-      "bolum": "G",
-      "bolumAd": "G -SEBZE HAZIRLIK",
-      "poz": "004",
-      "ad": "Patates soyma makinası, Elektronik, 10Kg/sefer",
-      "olcu": "670 × 420 × 910",
-      "adet": 1
-    },
-    {
-      "bolum": "G",
-      "bolumAd": "G -SEBZE HAZIRLIK",
-      "poz": "005",
-      "ad": "Polietilen tablalı tezgah, Alt tablalı",
-      "olcu": "1600 × 700 × 850",
-      "adet": 1
-    },
-    {
-      "bolum": "G",
-      "bolumAd": "G -SEBZE HAZIRLIK",
-      "poz": "006",
-      "ad": "Bıçak sterilizatörü, 10 bıçaklık",
-      "olcu": "575 × 100 × 480",
-      "adet": 1
-    },
-    {
-      "bolum": "G",
-      "bolumAd": "G -SEBZE HAZIRLIK",
-      "poz": "007",
-      "ad": "Duvar rafı",
-      "olcu": "1100 × 300 × 30",
-      "adet": 1
-    },
-    {
-      "bolum": "G",
-      "bolumAd": "G -SEBZE HAZIRLIK",
-      "poz": "008",
-      "ad": "Çalışma tezgahı, Alt tablalı",
-      "olcu": "900 × 700 × 850",
-      "adet": 1
-    },
-    {
-      "bolum": "G",
-      "bolumAd": "G -SEBZE HAZIRLIK",
-      "poz": "009",
-      "ad": "Sebze doğrama makinesi,, 1 hız, 375 dv/dk, polikarbonat baza",
-      "olcu": "350 × 320 × 590",
-      "adet": 1
-    },
-    {
-      "bolum": "G",
-      "bolumAd": "G -SEBZE HAZIRLIK",
-      "poz": "009 A",
-      "ad": "CL 50/52/55/60/R502/R602  disk seti,12 disklik, dilimleme 2-5mm, rendel 2-5 mm,jülyen 3x3-4x4mm, küb 10x10 mm,parmak patates 10 mm,20X20 küp",
-      "olcu": "400 × 300 × 460",
-      "adet": 1
-    },
-    {
-      "bolum": "G",
-      "bolumAd": "G -SEBZE HAZIRLIK",
-      "poz": "010",
-      "ad": "Duvar rafı",
-      "olcu": "900 × 300 × 30",
-      "adet": 1
-    },
-    {
-      "bolum": "G",
-      "bolumAd": "G -SEBZE HAZIRLIK",
-      "poz": "011",
-      "ad": "Tel Raf-4 Katlı- ınox304-61*152*183",
-      "olcu": "1520 × 610 × 1830",
-      "adet": 1
-    },
-    {
-      "bolum": "G",
-      "bolumAd": "G -SEBZE HAZIRLIK",
-      "poz": "012",
-      "ad": "Tel Raf-4 Katlı- ınox304-61*122*183",
-      "olcu": "1220 × 610 × 1830",
-      "adet": 1
-    },
-    {
-      "bolum": "H",
-      "bolumAd": "H- PATİSERİ",
-      "poz": "001",
-      "ad": "Planet mikser,Kapasite:60lt,Koruma kalkanlı, 380V-50HZ-3PH, 3hızlı",
-      "olcu": "920 × 1000 × 1460",
-      "adet": 1
-    },
-    {
-      "bolum": "H",
-      "bolumAd": "H- PATİSERİ",
-      "poz": "002",
-      "ad": "Hamur yoğurma mak.Spiral 75  lt.kazanlı, çift  devirli 380 V  25 kg un kapasiteli",
-      "olcu": "650 × 1050 × 1050",
-      "adet": 1
-    },
-    {
-      "bolum": "H",
-      "bolumAd": "H- PATİSERİ",
-      "poz": "003",
-      "ad": "Tek küvetli tezgah, 50*50*30 küvetli(sol), damlalıklı",
-      "olcu": "1200 × 700 × 850",
-      "adet": 1
-    },
-    {
-      "bolum": "H",
-      "bolumAd": "H- PATİSERİ",
-      "poz": "004",
-      "ad": "Çöp kazanı kapaklı Ø400  AISI304, 4 tekerlekli",
-      "olcu": "400 × 400 × 500",
-      "adet": 1
-    },
-    {
-      "bolum": "H",
-      "bolumAd": "H- PATİSERİ",
-      "poz": "005",
-      "ad": "Çalışma tezgahı, Alt tablalı",
-      "olcu": "1400 × 700 × 850",
-      "adet": 1
-    },
-    {
-      "bolum": "H",
-      "bolumAd": "H- PATİSERİ",
-      "poz": "006",
-      "ad": "Duvar dolabı, Kapılı",
-      "olcu": "1400 × 400 × 600",
-      "adet": 3
-    },
-    {
-      "bolum": "H",
-      "bolumAd": "H- PATİSERİ",
-      "poz": "007",
-      "ad": "Tezgah tipi buzdolabı, Mermer tablalı, 2 kapılı, poliüretan gövdeli",
-      "olcu": "1400 × 700 × 850",
-      "adet": 1
-    },
-    {
-      "bolum": "H",
-      "bolumAd": "H- PATİSERİ",
-      "poz": "008",
-      "ad": "Mermer tablalı tezgah",
-      "olcu": "1400 × 700 × 850",
-      "adet": 1
-    },
-    {
-      "bolum": "H",
-      "bolumAd": "H- PATİSERİ",
-      "poz": "009",
-      "ad": "Malzeme (erzak) arabası , Plastik , 102 lt., Beyaz renk",
-      "olcu": "750 × 420 × 710",
-      "adet": 3
-    },
-    {
-      "bolum": "H",
-      "bolumAd": "H- PATİSERİ",
-      "poz": "010",
-      "ad": "25 cm. iç yük. fırın mod., 3 adet 60x40 tepsilik, Buhar jeneratörlü, taş taban ilaveli, 11,2 kw ST-99 dijital kontrol panelli(her modül)",
-      "olcu": "1717 × 1140 × 315",
-      "adet": 2
-    },
-    {
-      "bolum": "H",
-      "bolumAd": "H- PATİSERİ",
-      "poz": "010 A",
-      "ad": "Taban , tavan ilavesi, E modülü için, Fırın siparişlerinde mutlaka bu ilave verilmelidir",
-      "olcu": "1717 × 914 × 300",
-      "adet": 1
-    },
-    {
-      "bolum": "H",
-      "bolumAd": "H- PATİSERİ",
-      "poz": "010 B",
-      "ad": "Mayalama dolabı, E modülü  fırın için, Mayalama dolabı (ısıtma+mayalama), tekerlekli Kapasite: 18 adet 60x40 lık tepsi",
-      "olcu": "1717 × 914 × 706",
-      "adet": 1
-    },
-    {
-      "bolum": "H",
-      "bolumAd": "H- PATİSERİ",
-      "poz": "011",
-      "ad": "Davlumbaz, Duvar tipi, hava perdeli",
-      "olcu": "2000 × 1470 × 500",
-      "adet": 1
-    },
-    {
-      "bolum": "H",
-      "bolumAd": "H- PATİSERİ",
-      "poz": "012",
-      "ad": "Tel Raf-4 Katlı- ınox304-61*137*183",
-      "olcu": "1370 × 610 × 1830",
-      "adet": 1
-    },
-    {
-      "bolum": "H",
-      "bolumAd": "H- PATİSERİ",
-      "poz": "013",
-      "ad": "Tel Raf-4 Katlı- ınox304-61*122*183",
-      "olcu": "1220 × 610 × 1830",
-      "adet": 1
-    },
-    {
-      "bolum": "L",
-      "bolumAd": "L -GARSON HOLÜ",
-      "poz": "001",
-      "ad": "Soğuk banket arabası +2 / +10, 7 adet GN 2/1 kapasite",
-      "olcu": "720 × 840 × 1720",
-      "adet": 3
-    },
-    {
-      "bolum": "L",
-      "bolumAd": "L -GARSON HOLÜ",
-      "poz": "002",
-      "ad": "Banket arabası, Isıtmalı, GN1/1 20ad. tepsi kapasiteli",
-      "olcu": "632 × 830 × 1566",
+      "ad": "Dolap, Perfect 900seri, 1/2mod�l, kap�l� (OLIS)",
+      "olcu": "400 � 876 � 620",
       "adet": 4
     },
     {
-      "bolum": "L",
-      "bolumAd": "L -GARSON HOLÜ",
+      "bolum": "A",
+      "bolumAd": "S I C A K  M U T F A K",
       "poz": "003",
-      "ad": "Çalışma tezgahı, dolaplı, ara raflı",
-      "olcu": "1900 × 700 × 850",
+      "ad": "Frit�z, Perfect 900seri, 1/2M, elektrikli, set�st� (OLIS)",
+      "olcu": "400 � 900 � 230",
       "adet": 1
     },
     {
-      "bolum": "L",
-      "bolumAd": "L -GARSON HOLÜ",
+      "bolum": "A",
+      "bolumAd": "S I C A K  M U T F A K",
       "poz": "004",
-      "ad": "Modüler buz makinesi, kapasite: 320 kg/gün , paslanmaz çelik",
-      "olcu": "620 × 760 × 660",
-      "adet": 1
+      "ad": "Ara tezgah, Perfect 900seri, 1/2mod�l, set�st� (OLIS)",
+      "olcu": "400 � 900 � 230",
+      "adet": 2
     },
     {
-      "bolum": "L",
-      "bolumAd": "L -GARSON HOLÜ",
-      "poz": "004 A",
-      "ad": "Buz makinesi deposu, kapasite: 252 kg N202-302-402-502M, F120,F200 SF300 VE SF500 ile birlikte kullanılır",
-      "olcu": "910 × 1140 × 960",
-      "adet": 1
-    },
-    {
-      "bolum": "L",
-      "bolumAd": "L -GARSON HOLÜ",
-      "poz": "004 B",
-      "ad": "Depo kapağı, N-202M , N-302M ,N402M ve N-502M model buz makineleri ile D305 depo birlikte verildiğinde",
-      "olcu": "570 × 1120 × 60",
-      "adet": 1
-    },
-    {
-      "bolum": "L",
-      "bolumAd": "L -GARSON HOLÜ",
+      "bolum": "A",
+      "bolumAd": "S I C A K  M U T F A K",
       "poz": "005",
-      "ad": "Filtre kahve makinesi , Combi, kap:60lt/h,2 konteynerli,timer,LC göstergeli",
-      "olcu": "907 × 465 × 785",
+      "ad": "Kuzine, Perfect 900seri, 1M, gazl�, 4 a��k ocak, set�st� (OLIS)",
+      "olcu": "800 � 900 � 230",
       "adet": 1
     },
     {
-      "bolum": "L",
-      "bolumAd": "L -GARSON HOLÜ",
+      "bolum": "A",
+      "bolumAd": "S I C A K  M U T F A K",
       "poz": "006",
-      "ad": "Kahve değirmeni, kapasite:3.5 kg/saat, Kahve konteynır kap: 500 gr, yarı otomatik 110V/230V - 50/60 Hz",
-      "olcu": "140 × 335 × 440",
+      "ad": "Dolap, Perfect 900seri, 1mod�l, kap�l� (OLIS)",
+      "olcu": "800 � 876 � 620",
       "adet": 1
     },
     {
-      "bolum": "L",
-      "bolumAd": "L -GARSON HOLÜ",
+      "bolum": "A",
+      "bolumAd": "S I C A K  M U T F A K",
       "poz": "007",
-      "ad": "Espresso kahve makinesi,yarı otomatik, 2 gruplu, 240 fincan/saat espresso kapasitesi 11 lt boyler,3200W(120V)",
-      "olcu": "780 × 560 × 480",
+      "ad": "Buharl� f�r�n, otomatik y�kamal�, Gazl�, 20GN1/1 (LAINOX)",
+      "olcu": "1180 � 1070 � 1190",
       "adet": 1
     },
     {
-      "bolum": "L",
-      "bolumAd": "L -GARSON HOLÜ",
+      "bolum": "A",
+      "bolumAd": "S I C A K  M U T F A K",
       "poz": "008",
-      "ad": "Tek küvetli tezgah, 40*50*25 küvetli, pres tablalı",
-      "olcu": "600 × 700 × 850",
+      "ad": "F�r�n stand� (PORTASHELF)",
+      "olcu": "1017 � 830 � 690",
       "adet": 1
     },
     {
-      "bolum": "L",
-      "bolumAd": "L -GARSON HOLÜ",
+      "bolum": "A",
+      "bolumAd": "S I C A K  M U T F A K",
       "poz": "009",
-      "ad": "Depo tipi buzdolabı, Çift kapılı, poliüretan gövdeli",
-      "olcu": "1400 × 770 × 2100",
+      "ad": "Davlumbaz, Duvar tipi, hava perdeli (PORTASHELF)",
+      "olcu": "4000 � 1470 � 500",
       "adet": 1
     },
     {
-      "bolum": "M",
-      "bolumAd": "M-DEPOLAR",
+      "bolum": "A",
+      "bolumAd": "S I C A K  M U T F A K",
+      "poz": "009 01",
+      "ad": "Davlumbaz ayd�nlatma �nitesi, floresan, 1000mm 21W, Duvar tipi:2,0m-1ad., 4,0-4,5m-2ad., 6,0m-3ad.",
+      "olcu": "1 � 1 � 1",
+      "adet": 2
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "S I C A K  M U T F A K",
+      "poz": "010",
+      "ad": "�al��ma tezgah�, dolapl�, Premium seri, Ara rafl� (PORTASHELF)",
+      "olcu": "1100 � 700 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "S O � U K  M U T F A K",
       "poz": "001",
-      "ad": "Tel Raf-4 Katlı- ınox304-61*152*183",
-      "olcu": "1520 × 610 × 1830",
+      "ad": "Tek k�vetli tezgah, 40*50*25 k�vetli, pres tablal� (PORTASHELF)",
+      "olcu": "600 � 700 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "S O � U K  M U T F A K",
+      "poz": "002",
+      "ad": "Duvar raf� (PORTASHELF)",
+      "olcu": "1700 � 300 � 30",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "S O � U K  M U T F A K",
+      "poz": "003",
+      "ad": "Salam dilimleme makinesi, ekonomik model,�ap: 300 mm",
+      "olcu": "690 � 510 � 440",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "S O � U K  M U T F A K",
+      "poz": "004",
+      "ad": "�al��ma tezgah�, Premium seri (PORTASHELF)",
+      "olcu": "1100 � 700 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "S O � U K  M U T F A K",
+      "poz": "005",
+      "ad": "Pizza haz�rl�k �nitesi, Paslanmaz tablal�, y�ksek garnit�r �niteli (FRENOX)",
+      "olcu": "1400 � 700 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "S O � U K  M U T F A K",
+      "poz": "006",
+      "ad": "Depo tipi buzdolab�, Tek kap�l�, poli�retan g�vdeli (FRENOX)",
+      "olcu": "700 � 790 � 2100",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "S E R V � S  B U L A � I K",
+      "poz": "001",
+      "ad": "Makina giri�-��k�� tezgah� (PORTASHELF)",
+      "olcu": "1000 � 580 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "S E R V � S  B U L A � I K",
+      "poz": "002",
+      "ad": "Bula��k y�kama makinas�, 1080 Tb/h (DIHR)",
+      "olcu": "740 � 743 � 1540",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "S E R V � S  B U L A � I K",
+      "poz": "003",
+      "ad": "Davlumbaz, Duvar tipi, filtresiz (PORTASHELF)",
+      "olcu": "1000 � 970 � 500",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "S E R V � S  B U L A � I K",
+      "poz": "004",
+      "ad": "�n y�kama du�u tezgaha monte (CANCAN)",
+      "olcu": "150 � 440 � 1200",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "S E R V � S  B U L A � I K",
+      "poz": "005",
+      "ad": "Makina giri� eviyesi, s�rt par�as� dahil, 50*40*25 k�vetli, sa� (PORTASHELF)",
+      "olcu": "1200 � 725 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "S E R V � S  B U L A � I K",
+      "poz": "006",
+      "ad": "��p kazan� kapakl� �400  AISI304, 4 tekerlekli (PORTASHELF)",
+      "olcu": "400 � 400 � 500",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "S E R V � S  B U L A � I K",
+      "poz": "007",
+      "ad": "Bula��k alma tezgah� (PORTASHELF)",
+      "olcu": "1800 � 725 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "S E R V � S  B U L A � I K",
+      "poz": "008",
+      "ad": "Kaset raf�, Tezgaha monte (PORTASHELF)",
+      "olcu": "1800 � 600 � 600",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "S E R V � S  B U L A � I K",
+      "poz": "009",
+      "ad": "Tel Raf-4 Katl�- �nox304-53*152*183 (PORTASHELF)",
+      "olcu": "1520 � 530 � 1830",
+      "adet": 2
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "S E R V � S  B U L A � I K",
+      "poz": "010",
+      "ad": "Tabak Ta��ma Arabas� - Ayarlanabilir, 6 B�lmeli  - Siyah ve Kahverengi (PORTASHELF)",
+      "olcu": "710 � 1100 � 800",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "S E B Z E  H A Z I R L I K",
+      "poz": "001",
+      "ad": "Depo tipi buzdolab�, Tek kap�l�, poli�retan g�vdeli (FRENOX)",
+      "olcu": "700 � 790 � 2100",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "S E B Z E  H A Z I R L I K",
+      "poz": "002",
+      "ad": "�ki k�vetli tezgah, 50*50*30 k�vetli, pres tablal� (PORTASHELF)",
+      "olcu": "1200 � 700 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "S E B Z E  H A Z I R L I K",
+      "poz": "003",
+      "ad": "Polietilen tablal� tezgah, Premium seri, Alt tablal� (PORTASHELF)",
+      "olcu": "1600 � 700 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "S E B Z E  H A Z I R L I K",
+      "poz": "004",
+      "ad": "�al��ma tezgah�, Premium seri, Hareketli, alt tablal� (PORTASHELF)",
+      "olcu": "1100 � 700 � 850",
+      "adet": 2
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "S E B Z E  H A Z I R L I K",
+      "poz": "005",
+      "ad": "Tel Raf-4 Katl�- �nox304-46*122*183 (PORTASHELF)",
+      "olcu": "1220 � 460 � 1830",
+      "adet": 3
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S E R V � S  B A R",
+      "poz": "001",
+      "ad": "Tezgah tipi buzdolab�, 2 kap�l�, poli�retan g�vdeli (FRENOX)",
+      "olcu": "1400 � 600 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S E R V � S  B A R",
+      "poz": "001 01",
+      "ad": "Yatay Buzd. Ada Serisi 2+2 Cam kap�l�, -2/+8 C� , 281 lt. 0,45 KW 140*70*85 CM. (FRENOX)",
+      "olcu": "1400 � 700 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S E R V � S  B A R",
+      "poz": "002",
+      "ad": "�al��ma tezgah�, Premium seri (PORTASHELF)",
+      "olcu": "1300 � 600 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S E R V � S  B A R",
+      "poz": "003",
+      "ad": "Espresso kahve makinesi,yar� otomatik, 2 gruplu, 240 fincan/saat espresso kapasitesi 11 lt boyler,3200W(120V) (RANCILIO)",
+      "olcu": "780 � 560 � 480",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S E R V � S  B A R",
+      "poz": "004",
+      "ad": "Kahve de�irmeni, kapasite:7-9 kg/saat, Kahve konteyn�r kap: 1,3kg, yar� otomatik 110V/230V - 50/60 Hz,���tme �ap�:64mm (CUNILL)",
+      "olcu": "220 � 385 � 575",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S E R V � S  B A R",
+      "poz": "005",
+      "ad": "Kokteyl tezgah� (PORTASHELF)",
+      "olcu": "400 � 600 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S E R V � S  B A R",
+      "poz": "006",
+      "ad": "�al��ma tezgah�, Premium seri (PORTASHELF)",
+      "olcu": "1900 � 600 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S E R V � S  B A R",
+      "poz": "007",
+      "ad": "Bar blender, 1.25 lt.polikarbonat konteynerli, boyal� bazal� (SANTOS)",
+      "olcu": "180 � 180 � 420",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S E R V � S  B A R",
+      "poz": "008",
+      "ad": "Portakal s�kma makinesi, boyal� bazal� (SANTOS)",
+      "olcu": "200 � 300 � 350",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S E R V � S  B A R",
+      "poz": "009",
+      "ad": "Kendinden depolu buz makinesi, kapasite: 35 kg/g�n depo kap: 12 kg (ICEMATIC)",
+      "olcu": "450 � 545 � 690",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S E R V � S  B A R",
+      "poz": "010",
+      "ad": "Bar tezgah�, S�zme tablal�, 2 rafl� (PORTASHELF)",
+      "olcu": "800 � 600 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S E R V � S  B A R",
+      "poz": "011",
+      "ad": "Bardak y�kama makinas�, 600-800 Bardak/saat, parlat�c� pompal� (DIHR)",
+      "olcu": "460 � 560 � 730",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S E R V � S  B A R",
+      "poz": "012",
+      "ad": "Tek k�vetli tezgah, 40*40*25 k�vetli(sol), damlal�kl� (PORTASHELF)",
+      "olcu": "1200 � 600 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D E P O L A R",
+      "poz": "001",
+      "ad": "El y�kama eviyesi, Dizden kumandal�, �ift su giri�li (PORTASHELF)",
+      "olcu": "500 � 425 � 550",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D E P O L A R",
+      "poz": "002",
+      "ad": "Geri toplamal� �n y�kama du�u,  15 mt. (CANCAN)",
+      "olcu": "350 � 350 � 80",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D E P O L A R",
+      "poz": "003",
+      "ad": "Plastik ��p Konteyneri - 770 LT.- Ye�il, 4 TEKERLEKL� (UZAY)",
+      "olcu": "1 � 1 � 1",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D E P O L A R",
+      "poz": "004",
+      "ad": "Plastil ��p Konteyneri , 240 lt. , ye�il, 2 tekerlekli (UZAY)",
+      "olcu": "700 � 650 � 1250",
+      "adet": 6
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D E P O L A R",
+      "poz": "005",
+      "ad": "Tel Raf-4 Katl�- �nox304-53*122*183 (PORTASHELF)",
+      "olcu": "1220 � 530 � 1830",
+      "adet": 4
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S E R V � S  O F � S �",
+      "poz": "001",
+      "ad": "Filtre kahve makinesi,224 fincan (18ltr), 2 cam potlu, 2x1.8 ltr, 2 hot plate li, (ANIMO)",
+      "olcu": "420 � 380 � 625",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S E R V � S  O F � S �",
+      "poz": "002",
+      "ad": "�ay otomat� Master 2000, 23 lt.CC-23 (REMTA)",
+      "olcu": "400 � 400 � 650",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S E R V � S  O F � S �",
+      "poz": "003",
+      "ad": "Espresso kahve makinesi,yar� otomatik, 2 gruplu, 240 fincan/saat espresso kapasitesi 11 lt boyler,3200W(120V) (RANCILIO)",
+      "olcu": "780 � 560 � 480",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S E R V � S  O F � S �",
+      "poz": "003 01",
+      "ad": "Kahve de�irmeni, kapasite:7-9 kg/saat, Kahve konteyn�r kap: 1,3kg, yar� otomatik 110V/230V - 50/60 Hz,���tme �ap�:64mm (CUNILL)",
+      "olcu": "220 � 385 � 575",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S E R V � S  O F � S �",
+      "poz": "004",
+      "ad": "Bar Buzdolab�, tek kap�l�,  +2/+12 c , 217 W (FRENOX)",
+      "olcu": "595 � 500 � 910",
+      "adet": 2
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S E R V � S  O F � S �",
+      "poz": "005",
+      "ad": "�nd�ksiyonlu s�cak tutma �nitesi,ankastre,1kW, Schott ceran cam,dokunmatik kontrol panel, Kablosuz uzaktan kumanda, 230V/50-60Hz (SCHOLL)",
+      "olcu": "36 � 36 � 9",
+      "adet": 5
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S E R V � S  O F � S �",
+      "poz": "005 01",
+      "ad": "Induction Chafing Dish, D�� � 39 cm. Hepp (SCHOLL)",
+      "olcu": "390 � 390 � 200",
+      "adet": 5
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S E R V � S  O F � S �",
+      "poz": "005 02",
+      "ad": "Porselen i�lik, � 30 cm. 3 lt. Hepp",
+      "olcu": "300 � 300 � 50",
       "adet": 5
     },
     {
       "bolum": "Y",
-      "bolumAd": "Y-YER IZGARALARI",
+      "bolumAd": "YER IZGARALARI",
       "poz": "001",
-      "ad": "Yer ızgarası, tavalı, alttan çıkışlı,orta eğimli, Sığ tip,   300*1826*145  mm  DN 70 PVC(Ø75mm)",
-      "olcu": "300 × 1826 × 145",
+      "ad": "Yer �zgaras�, taval�,yatay  ��k��l�, e�imsiz, 300*300*122  mm  DN 70 PVC(�75mm), SI� T�P (PORTASHELF)",
+      "olcu": "300 � 300 � 122",
+      "adet": 6
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "YER IZGARALARI",
+      "poz": "002",
+      "ad": "Yer �zgaras�, taval�, alttan ��k��l�, e�imsiz, 300*300*122  mm   DN 70 PVC(�75mm),  S�� tip (PORTASHELF)",
+      "olcu": "300 � 300 � 122",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "SO�UK ODALAR",
+      "poz": "001",
+      "ad": "So�uk Oda, Alarm sistemli (ROTA)",
+      "olcu": "2900 � 2200 � 2300",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "SO�UK ODALAR",
+      "poz": "002",
+      "ad": "��p So�uk Oda (ROTA)",
+      "olcu": "3530 � 2500 � 2300",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "S I C A K  M U T F A K",
+      "poz": "001",
+      "ad": "Tezgah tipi buzdolab�, 3 kap�l�, poli�retan g�vdeli (FRENOX)",
+      "olcu": "1865 � 700 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "S I C A K  M U T F A K",
+      "poz": "002",
+      "ad": "Duvar raf� (PORTASHELF)",
+      "olcu": "1900 � 300 � 30",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "S I C A K  M U T F A K",
+      "poz": "003",
+      "ad": "F�r�n arabas�, 20xGN 2/1 f�r�n i�in",
+      "olcu": "1 � 1 � 1",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "S I C A K  M U T F A K",
+      "poz": "004",
+      "ad": "Davlumbaz, Duvar tipi, hava perdeli (PORTASHELF)",
+      "olcu": "5500 � 1470 � 500",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "S I C A K  M U T F A K",
+      "poz": "004 01",
+      "ad": "Davlumbaz ayd�nlatma �nitesi, floresan, 1300mm 28W, Duvar tipi:2,5m-1ad., 5,0-5,5m-2ad.",
+      "olcu": "1 � 1 � 1",
       "adet": 2
     },
     {
-      "bolum": "Y",
-      "bolumAd": "Y-YER IZGARALARI",
-      "poz": "002",
-      "ad": "Yer ızgarası, tavalı, alttan çıkışlı,orta eğimli, Sığ tip,   300*1626*145  mm  DN 70 PVC(Ø75mm)",
-      "olcu": "300 × 1626 × 145",
-      "adet": 1
-    },
-    {
-      "bolum": "Y",
-      "bolumAd": "Y-YER IZGARALARI",
-      "poz": "003",
-      "ad": "Yer ızgarası, tavalı, alttan çıkışlı, eğimsiz, 300*300*122  mm   DN 70 PVC(Ø75mm),  Sığ tip",
-      "olcu": "300 × 300 × 122",
-      "adet": 8
-    },
-    {
-      "bolum": "Y",
-      "bolumAd": "Y-YER IZGARALARI",
-      "poz": "004",
-      "ad": "Yer ızgarası, tavalı, alttan çıkışlı,orta eğimli, Sığ tip,   300*1184*145  mm  DN 70 PVC(Ø75mm)",
-      "olcu": "300 × 1184 × 145",
-      "adet": 1
-    },
-    {
-      "bolum": "Y",
-      "bolumAd": "Y-YER IZGARALARI",
+      "bolum": "A",
+      "bolumAd": "S I C A K  M U T F A K",
       "poz": "005",
-      "ad": "Yer ızgarası, tavalı, alttan çıkışlı,orta eğimli, Sığ tip,  300*941*145  mm  DN 70 PVC(Ø75mm)",
-      "olcu": "300 × 941 × 145",
-      "adet": 1
-    },
-    {
-      "bolum": "Y",
-      "bolumAd": "Y-YER IZGARALARI",
-      "poz": "006",
-      "ad": "Yer ızgarası, tavalı, alttan çıkışlı, eğimsiz, 300*300*122  mm   DN 70 PVC(Ø75mm),  Sığ tip",
-      "olcu": "300 × 300 × 122",
-      "adet": 1
-    },
-    {
-      "bolum": "Y",
-      "bolumAd": "Y-YER IZGARALARI",
-      "poz": "007",
-      "ad": "Yer ızgarası, tavalı, alttan çıkışlı, eğimsiz, 300*741*122  mm  DN 70 PVC(Ø75mm),  Sığ tip",
-      "olcu": "741 × 300 × 122",
-      "adet": 1
-    },
-    {
-      "bolum": "Z",
-      "bolumAd": "Z-SOĞUK ODALAR",
-      "poz": "001",
-      "ad": "Patiseri soğuk depo",
-      "olcu": "2150 × 2300 × 2300",
-      "adet": 1
-    },
-    {
-      "bolum": "Z",
-      "bolumAd": "Z-SOĞUK ODALAR",
-      "poz": "002",
-      "ad": "Soğuk mutfak soğuk depo",
-      "olcu": "2820 × 3820 × 2300",
-      "adet": 1
-    },
-    {
-      "bolum": "Z",
-      "bolumAd": "Z-SOĞUK ODALAR",
-      "poz": "003",
-      "ad": "Et derin dondurucu",
-      "olcu": "2300 × 1830 × 2300",
-      "adet": 1
-    },
-    {
-      "bolum": "Z",
-      "bolumAd": "Z-SOĞUK ODALAR",
-      "poz": "004",
-      "ad": "Et soğuk depo",
-      "olcu": "2300 × 1830 × 2300",
-      "adet": 1
-    },
-    {
-      "bolum": "Z",
-      "bolumAd": "Z-SOĞUK ODALAR",
-      "poz": "005",
-      "ad": "Sebze soğuk depo",
-      "olcu": "2160 × 2300 × 2300",
-      "adet": 1
-    },
-    {
-      "bolum": "C",
-      "bolumAd": "C-SERVİS BULAŞIK",
-      "poz": "001",
-      "ad": "Bulaşık alma tezgahı",
-      "olcu": "1400 × 750 × 850",
-      "adet": 1
-    },
-    {
-      "bolum": "C",
-      "bolumAd": "C-SERVİS BULAŞIK",
-      "poz": "002",
-      "ad": "Çöp kazanı kapaklı Ø400  AISI304, 4 tekerlekli",
-      "olcu": "400 × 400 × 500",
-      "adet": 1
-    },
-    {
-      "bolum": "C",
-      "bolumAd": "C-SERVİS BULAŞIK",
-      "poz": "003",
-      "ad": "Bulaşık yıkama makinası, 500 Tb/h, parlatıcı pompalı (1400)",
-      "olcu": "600 × 600 × 835",
-      "adet": 1
-    },
-    {
-      "bolum": "C",
-      "bolumAd": "C-SERVİS BULAŞIK",
-      "poz": "004",
-      "ad": "Makina giriş eviyesi, sırt parçası dahil, 50*40*25 küvetli, sol",
-      "olcu": "1000 × 725 × 850",
-      "adet": 1
-    },
-    {
-      "bolum": "C",
-      "bolumAd": "C-SERVİS BULAŞIK",
-      "poz": "005",
-      "ad": "Ön yıkama duşu tezgaha monte",
-      "olcu": "150 × 440 × 1200",
-      "adet": 1
-    },
-    {
-      "bolum": "C",
-      "bolumAd": "C-SERVİS BULAŞIK",
-      "poz": "006",
-      "ad": "Bulaşık yıkama makinası, 1080 Tb/h (2000)",
-      "olcu": "740 × 743 × 1540",
-      "adet": 1
-    },
-    {
-      "bolum": "C",
-      "bolumAd": "C-SERVİS BULAŞIK",
-      "poz": "007",
-      "ad": "Davlumbaz, Duvar tipi, filtresiz",
-      "olcu": "1000 × 970 × 500",
-      "adet": 1
-    },
-    {
-      "bolum": "C",
-      "bolumAd": "C-SERVİS BULAŞIK",
-      "poz": "008",
-      "ad": "Makina giriş-çıkış tezgahı",
-      "olcu": "1000 × 580 × 850",
-      "adet": 1
-    },
-    {
-      "bolum": "C",
-      "bolumAd": "C-SERVİS BULAŞIK",
-      "poz": "009",
-      "ad": "Tel Raf-4 Katlı- ınox304-61*137*183",
-      "olcu": "1370 × 610 × 1830",
+      "ad": "Buhar konveksiyonlu f�r�n,elektrikli, 20 GN2/1, dijital panel, 9 pi�irme fazl� (LAINOX)",
+      "olcu": "910 � 1200 � 1850",
       "adet": 2
     },
     {
-      "bolum": "I",
-      "bolumAd": "I -SERVİS BAR",
-      "poz": "001",
-      "ad": "Tek küvetli tezgah, 40*40*25 küvetli(sağ), damlalıklı",
-      "olcu": "1000 × 600 × 850",
-      "adet": 1
-    },
-    {
-      "bolum": "I",
-      "bolumAd": "I -SERVİS BAR",
-      "poz": "002",
-      "ad": "Kendinden depolu buz makinesi, kapasite: 46kg/gün, depo kapasitesi: 16kg",
-      "olcu": "600 × 500 × 690",
-      "adet": 1
-    },
-    {
-      "bolum": "I",
-      "bolumAd": "I -SERVİS BAR",
-      "poz": "003",
-      "ad": "Çöp kazanı kapaklı Ø400  AISI304, 4 tekerlekli",
-      "olcu": "400 × 400 × 500",
-      "adet": 1
-    },
-    {
-      "bolum": "I",
-      "bolumAd": "I -SERVİS BAR",
-      "poz": "004",
-      "ad": "Premix tezgahı",
-      "olcu": "1000 × 600 × 850",
-      "adet": 1
-    },
-    {
-      "bolum": "I",
-      "bolumAd": "I -SERVİS BAR",
-      "poz": "005",
-      "ad": "Portakal sıkma makinesi, boyalı bazalı",
-      "olcu": "200 × 300 × 350",
-      "adet": 1
-    },
-    {
-      "bolum": "I",
-      "bolumAd": "I -SERVİS BAR",
+      "bolum": "A",
+      "bolumAd": "S I C A K  M U T F A K",
       "poz": "006",
-      "ad": "Kokteyl tezgahı",
-      "olcu": "400 × 600 × 850",
+      "ad": "Davlumbaz, Orta tip, hava perdeli (PORTASHELF)",
+      "olcu": "4000 � 2470 � 500",
       "adet": 1
     },
     {
-      "bolum": "I",
-      "bolumAd": "I -SERVİS BAR",
+      "bolum": "A",
+      "bolumAd": "S I C A K  M U T F A K",
+      "poz": "006 01",
+      "ad": "Davlumbaz ayd�nlatma �nitesi, floresan, 1000mm 21W, Duvar tipi:2,0m-1ad., 4,0-4,5m-2ad., 6,0m-3ad.",
+      "olcu": "1 � 1 � 1",
+      "adet": 4
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "S I C A K  M U T F A K",
       "poz": "007",
-      "ad": "Tezgah tipi buzdolabı, 2 kapılı, poliüretan gövdeli",
-      "olcu": "1400 × 600 × 850",
+      "ad": "Kaynatma tenceresi, Perfect 900seri, gazl�, silindirik, 100Lt. (OLIS)",
+      "olcu": "800 � 900 � 850",
       "adet": 1
     },
     {
-      "bolum": "I",
-      "bolumAd": "I -SERVİS BAR",
+      "bolum": "A",
+      "bolumAd": "S I C A K  M U T F A K",
       "poz": "008",
-      "ad": "Buz kırma makinesi",
-      "olcu": "520 × 210 × 255",
+      "ad": "Izgara, Perfect 900seri, 1M, gazl�, set�st�, d�z+oluklu (OLIS)",
+      "olcu": "800 � 900 � 230",
       "adet": 1
     },
     {
-      "bolum": "I",
-      "bolumAd": "I -SERVİS BAR",
+      "bolum": "A",
+      "bolumAd": "S I C A K  M U T F A K",
       "poz": "009",
-      "ad": "Mikser, 2 lt. polikarbonat konteynerli, boyalı bazalı",
-      "olcu": "215 × 230 × 615",
-      "adet": 1
+      "ad": "Dolap, Perfect 900seri, 1mod�l, kap�l� (OLIS)",
+      "olcu": "800 � 876 � 620",
+      "adet": 4
     },
     {
-      "bolum": "I",
-      "bolumAd": "I -SERVİS BAR",
+      "bolum": "A",
+      "bolumAd": "S I C A K  M U T F A K",
       "poz": "010",
-      "ad": "Bar blender, 1.25 lt.polikarbonat konteynerli, boyalı bazalı",
-      "olcu": "180 × 180 × 420",
+      "ad": "Ara tezgah, Perfect 900seri, 1mod�l, set�st� (OLIS)",
+      "olcu": "800 � 900 � 230",
       "adet": 1
     },
     {
-      "bolum": "I",
-      "bolumAd": "I -SERVİS BAR",
+      "bolum": "A",
+      "bolumAd": "S I C A K  M U T F A K",
       "poz": "011",
-      "ad": "Çalışma tezgahı",
-      "olcu": "900 × 600 × 850",
+      "ad": "Frit�z, Perfect 900seri, 1M, elektrikli, set�st� (OLIS)",
+      "olcu": "800 � 900 � 230",
       "adet": 1
     },
     {
-      "bolum": "I",
-      "bolumAd": "I -SERVİS BAR",
+      "bolum": "A",
+      "bolumAd": "S I C A K  M U T F A K",
       "poz": "012",
-      "ad": "Bulaşık yıkama makinası, 500 Tb/h, parlatıcı pompalı (1400)",
-      "olcu": "600 × 600 × 835",
+      "ad": "Kuzine, Perfect 900seri, 1.5M, gazl�, 6 a��k ocak, set�st� (OLIS)",
+      "olcu": "1200 � 900 � 230",
       "adet": 1
     },
     {
-      "bolum": "I",
-      "bolumAd": "I -SERVİS BAR",
+      "bolum": "A",
+      "bolumAd": "S I C A K  M U T F A K",
       "poz": "013",
-      "ad": "Bar tezgahı, Süzme tablalı, 2 raflı",
-      "olcu": "800 × 600 × 850",
+      "ad": "Dolap, Perfect 900seri, 1.5mod�l, kap�l� (OLIS)",
+      "olcu": "1200 � 876 � 620",
       "adet": 1
     },
     {
-      "bolum": "I",
-      "bolumAd": "I -SERVİS BAR",
+      "bolum": "A",
+      "bolumAd": "S I C A K  M U T F A K",
       "poz": "014",
-      "ad": "Yiyecek ısıtıcı lamba, çap:225 mm, heliks kablolu,850-1700 mm ayarlı Krom kaplı 250W infrared ısıtıcılı. 230V/250W",
-      "olcu": "225 × 225 × 850",
-      "adet": 3
+      "ad": "Sosbenmari, Perfect 900seri, 1M, gazl�, set�st� (OLIS)",
+      "olcu": "800 � 900 � 230",
+      "adet": 1
     },
     {
-      "bolum": "I",
-      "bolumAd": "I -SERVİS BAR",
+      "bolum": "A",
+      "bolumAd": "S I C A K  M U T F A K",
       "poz": "015",
-      "ad": "Banket arabası, Isıtmalı, GN1/1 20ad. tepsi kapasiteli",
-      "olcu": "632 × 830 × 1566",
+      "ad": "Ara tezgah, Perfect 900seri, 1/2mod�l, set�st� (OLIS)",
+      "olcu": "400 � 900 � 230",
       "adet": 1
     },
     {
-      "bolum": "I",
-      "bolumAd": "I -SERVİS BAR",
+      "bolum": "A",
+      "bolumAd": "S I C A K  M U T F A K",
       "poz": "016",
-      "ad": "Çalışma tezgahı, Hareketli, alt tablalı",
-      "olcu": "1400 × 700 × 850",
-      "adet": 2
-    },
-    {
-      "bolum": "I",
-      "bolumAd": "I -SERVİS BAR",
-      "poz": "017",
-      "ad": "Bar Buzdolabı, tek kapılı,  +2/+12 c , 217 W",
-      "olcu": "595 × 500 × 910",
-      "adet": 2
-    },
-    {
-      "bolum": "I",
-      "bolumAd": "I -SERVİS BAR",
-      "poz": "018",
-      "ad": "Filtre kahve makinesi,224 fincan (18ltr), 2 cam potlu, 2x1.8 ltr, 2 hot plate li,",
-      "olcu": "420 × 380 × 625",
+      "ad": "Dolap, Perfect 900seri, 1/2mod�l, kap�l� (OLIS)",
+      "olcu": "400 � 876 � 620",
       "adet": 1
     },
     {
-      "bolum": "I",
-      "bolumAd": "I -SERVİS BAR",
+      "bolum": "A",
+      "bolumAd": "S I C A K  M U T F A K",
+      "poz": "017",
+      "ad": "Devrilir tava, Perfect 900seri, gazl�, 80Lt. (OLIS)",
+      "olcu": "800 � 900 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "S I C A K  M U T F A K",
+      "poz": "018",
+      "ad": "Tezgah tipi buzdolab�, 2 kap�l�, poli�retan g�vdeli (FRENOX)",
+      "olcu": "1400 � 700 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "S I C A K  M U T F A K",
       "poz": "019",
-      "ad": "Kahve değirmeni, kapasite:3.5 kg/saat, Kahve konteynır kap: 500 gr, yarı otomatik 110V/230V - 50/60 Hz",
-      "olcu": "140 × 335 × 440",
+      "ad": "Duvar raf� (PORTASHELF)",
+      "olcu": "2100 � 300 � 30",
       "adet": 1
     },
     {
-      "bolum": "I",
-      "bolumAd": "I -SERVİS BAR",
+      "bolum": "A",
+      "bolumAd": "S I C A K  M U T F A K",
       "poz": "020",
-      "ad": "Espresso kahve makinesi,yarı otomatik, 2 gruplu, 240 fincan/saat espresso kapasitesi 11 lt boyler,3200W(120V)",
-      "olcu": "780 × 560 × 480",
+      "ad": "Tek k�vetli tezgah, 50*50*30 k�vetli, pres tablal� (PORTASHELF)",
+      "olcu": "700 � 700 � 850",
       "adet": 1
     },
     {
-      "bolum": "I",
-      "bolumAd": "I -SERVİS BAR",
+      "bolum": "A",
+      "bolumAd": "S I C A K  M U T F A K",
       "poz": "021",
-      "ad": "Kahve-çöp çekmeceli devrilir tezgah, ETRAFI KAPALI DOLAPLI ALTI KAHVE VE DEVRİLİR ÇÖP ÇEKMECELİ",
-      "olcu": "1050 × 600 × 850",
-      "adet": 1
+      "ad": "Servis tezgah�, Ara rafl� (PORTASHELF)",
+      "olcu": "1900 � 700 � 850",
+      "adet": 2
     },
     {
-      "bolum": "I",
-      "bolumAd": "I -SERVİS BAR",
+      "bolum": "A",
+      "bolumAd": "S I C A K  M U T F A K",
       "poz": "022",
-      "ad": "Soğuk banket arabası +2 / +10, 7 adet GN 2/1 kapasite",
-      "olcu": "720 × 840 × 1720",
-      "adet": 1
+      "ad": "Servis raf�, Tek s�ra (PORTASHELF)",
+      "olcu": "1900 � 400 � 450",
+      "adet": 2
     },
     {
-      "bolum": "I",
-      "bolumAd": "I -SERVİS BAR",
-      "poz": "023",
-      "ad": "Kendinden depolu buz makinesi, kapasite: 142 kg/24saat depo kap: 70 kg",
-      "olcu": "640 × 860 × 1050",
-      "adet": 1
-    },
-    {
-      "bolum": "I",
-      "bolumAd": "I -SERVİS BAR",
-      "poz": "024",
-      "ad": "Depo tipi buzdolabı, Çift kapılı, poliüretan gövdeli",
-      "olcu": "1400 × 770 × 2100",
-      "adet": 1
-    },
-    {
-      "bolum": "L",
-      "bolumAd": "L-GARSON HOLÜ",
+      "bolum": "B",
+      "bolumAd": "S O � U K  M U T F A K",
       "poz": "001",
-      "ad": "Depo tipi buzdolabı, Tek kapılı, poliüretan gövdeli",
-      "olcu": "700 × 770 × 2100",
+      "ad": "�ki k�vetli tezgah, 50*50*30 k�vetli, pres tablal� (PORTASHELF)",
+      "olcu": "1200 � 700 � 850",
       "adet": 1
     },
     {
-      "bolum": "L",
-      "bolumAd": "L-GARSON HOLÜ",
+      "bolum": "B",
+      "bolumAd": "S O � U K  M U T F A K",
       "poz": "002",
-      "ad": "Modüler buz makinesi, kapasite: 320 kg/gün , paslanmaz çelik",
-      "olcu": "620 × 760 × 660",
+      "ad": "B��ak sterilizat�r�, 10 b��akl�k",
+      "olcu": "575 � 100 � 480",
       "adet": 1
     },
     {
-      "bolum": "L",
-      "bolumAd": "L-GARSON HOLÜ",
-      "poz": "002 A",
-      "ad": "Buz makinesi deposu, kapasite: 252 kg N202-302-402-502M, F120,F200 SF300 VE SF500 ile birlikte kullanılır",
-      "olcu": "910 × 1140 × 960",
-      "adet": 1
-    },
-    {
-      "bolum": "L",
-      "bolumAd": "L-GARSON HOLÜ",
-      "poz": "002 B",
-      "ad": "Depo kapağı, N-202M , N-302M ,N402M ve N-502M model buz makineleri ile D305 depo birlikte verildiğinde",
-      "olcu": "570 × 1120 × 60",
-      "adet": 1
-    },
-    {
-      "bolum": "L",
-      "bolumAd": "L-GARSON HOLÜ",
+      "bolum": "B",
+      "bolumAd": "S O � U K  M U T F A K",
       "poz": "003",
-      "ad": "Tek küvetli tezgah, 50*50*30 küvetli, pres tablalı",
-      "olcu": "700 × 700 × 850",
+      "ad": "Salam dilimleme makinesi, ekonomik model,�ap: 300 mm",
+      "olcu": "690 � 510 � 440",
       "adet": 1
     },
     {
-      "bolum": "L",
-      "bolumAd": "L-GARSON HOLÜ",
+      "bolum": "B",
+      "bolumAd": "S O � U K  M U T F A K",
       "poz": "004",
-      "ad": "Filtre kahve makinesi , Combi, kap:60lt/h,2 konteynerli,timer,LC göstergeli",
-      "olcu": "907 × 465 × 785",
+      "ad": "�al��ma tezgah�, Premium seri, Alt tablal� (PORTASHELF)",
+      "olcu": "1500 � 700 � 850",
       "adet": 1
     },
     {
-      "bolum": "L",
-      "bolumAd": "L-GARSON HOLÜ",
+      "bolum": "B",
+      "bolumAd": "S O � U K  M U T F A K",
       "poz": "005",
-      "ad": "Kahve değirmeni, kapasite:3.5 kg/saat, Kahve konteynır kap: 500 gr, yarı otomatik 110V/230V - 50/60 Hz",
-      "olcu": "140 × 335 × 440",
+      "ad": "Pizza haz�rl�k �nitesi, Paslanmaz tablal�, y�ksek garnit�r �niteli",
+      "olcu": "1865 � 700 � 850",
       "adet": 1
     },
     {
-      "bolum": "L",
-      "bolumAd": "L-GARSON HOLÜ",
+      "bolum": "B",
+      "bolumAd": "S O � U K  M U T F A K",
       "poz": "006",
-      "ad": "Espresso kahve makinesi,yarı otomatik, 2 gruplu, 240 fincan/saat espresso kapasitesi 11 lt boyler,3200W(120V)",
-      "olcu": "780 × 560 × 480",
+      "ad": "�al��ma tezgah�, Premium seri, Alt tablal� (PORTASHELF)",
+      "olcu": "1900 � 700 � 850",
       "adet": 1
     },
     {
-      "bolum": "L",
-      "bolumAd": "L-GARSON HOLÜ",
+      "bolum": "B",
+      "bolumAd": "S O � U K  M U T F A K",
       "poz": "007",
-      "ad": "Çalışma tezgahı, dolaplı, ara raflı",
-      "olcu": "1900 × 700 × 850",
+      "ad": "Duvar dolab�, Kap�l� (PORTASHELF)",
+      "olcu": "1900 � 400 � 600",
       "adet": 1
     },
     {
-      "bolum": "M",
-      "bolumAd": "M-DEPOLAR",
+      "bolum": "B",
+      "bolumAd": "S O � U K  M U T F A K",
+      "poz": "008",
+      "ad": "Ord�vr Tabak toplama arabas� (100 tabak)",
+      "olcu": "680 � 680 � 1900",
+      "adet": 4
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "S E R V � S  B U L A � I K",
       "poz": "001",
-      "ad": "Kasa taşıma arabası",
-      "olcu": "1000 × 650 × 850",
+      "ad": "Bula��k alma tezgah� (PORTASHELF)",
+      "olcu": "2300 � 1100 � 850",
       "adet": 1
     },
     {
-      "bolum": "M",
-      "bolumAd": "M-DEPOLAR",
+      "bolum": "C",
+      "bolumAd": "S E R V � S  B U L A � I K",
       "poz": "002",
-      "ad": "El yıkama eviyesi, Dizden kumandalı, çift su girişli",
-      "olcu": "500 × 425 × 550",
+      "ad": "Kaset raf�, Tezgaha monte (PORTASHELF)",
+      "olcu": "2300 � 600 � 600",
       "adet": 1
     },
     {
-      "bolum": "M",
-      "bolumAd": "M-DEPOLAR",
+      "bolum": "C",
+      "bolumAd": "S E R V � S  B U L A � I K",
       "poz": "003",
-      "ad": "Tartım baskülü,  300  LCD ekran, 70*80 cm ptatform. otomatik sıfırlama",
-      "olcu": "800 × 1150 × 290",
+      "ad": "��p kazan� kapakl� �500  AISI304, 4 tekerlekli (PORTASHELF)",
+      "olcu": "500 � 500 � 600",
       "adet": 1
     },
     {
-      "bolum": "M",
-      "bolumAd": "M-DEPOLAR",
+      "bolum": "C",
+      "bolumAd": "S E R V � S  B U L A � I K",
       "poz": "004",
-      "ad": "Geri toplamalı ön yıkama duşu,  15 mt.",
-      "olcu": "350 × 350 × 80",
+      "ad": "Makina giri� eviyesi, s�rt par�as� dahil, 50*40*25 k�vetli, sa� (PORTASHELF)",
+      "olcu": "1400 � 725 � 850",
       "adet": 1
     },
     {
-      "bolum": "S",
-      "bolumAd": "S-SERVİS OFİSİ",
-      "poz": "001",
-      "ad": "Pizza hazırlık ünitesi, Paslanmaz tablalı, garnitür üniteli",
-      "olcu": "1865 × 700 × 850",
-      "adet": 1
-    },
-    {
-      "bolum": "S",
-      "bolumAd": "S-SERVİS OFİSİ",
-      "poz": "002",
-      "ad": "Izgara, Perfect 900seri, 1M, gazlı, setüstü, düz+oluklu",
-      "olcu": "800 × 900 × 230",
-      "adet": 1
-    },
-    {
-      "bolum": "S",
-      "bolumAd": "S-SERVİS OFİSİ",
-      "poz": "003",
-      "ad": "Dolap, Perfect 900seri, 1modül, kapılı",
-      "olcu": "800 × 876 × 620",
-      "adet": 3
-    },
-    {
-      "bolum": "S",
-      "bolumAd": "S-SERVİS OFİSİ",
-      "poz": "004",
-      "ad": "Fritöz, Perfect 900seri, 1M, elektrikli, setüstü",
-      "olcu": "800 × 900 × 230",
-      "adet": 1
-    },
-    {
-      "bolum": "S",
-      "bolumAd": "S-SERVİS OFİSİ",
+      "bolum": "C",
+      "bolumAd": "S E R V � S  B U L A � I K",
       "poz": "005",
-      "ad": "Ara tezgah, Perfect 900seri, 1/2modül, setüstü",
-      "olcu": "400 × 900 × 230",
+      "ad": "�n y�kama du�u tezgaha monte (CANCAN)",
+      "olcu": "150 � 440 � 1200",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "S E R V � S  B U L A � I K",
+      "poz": "006",
+      "ad": "Davlumbaz, Duvar tipi, filtresiz (PORTASHELF)",
+      "olcu": "3500 � 970 � 500",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "S E R V � S  B U L A � I K",
+      "poz": "007",
+      "ad": "Bula��k y�kama makinas�, konvey�rl�, �n y�kamal�, 2800-3600 tb/h, sol, �ift durulamal� (DIHR)",
+      "olcu": "2550 � 785 � 1720",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "S E R V � S  B U L A � I K",
+      "poz": "008",
+      "ad": "Kurutma �nitesi 70cm (DIHR)",
+      "olcu": "700 � 680 � 1225",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "S E R V � S  B U L A � I K",
+      "poz": "009",
+      "ad": "Makina biti� tezgah�, Konvey�rl� (DIHR)",
+      "olcu": "1600 � 535 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "S E R V � S  B U L A � I K",
+      "poz": "010",
+      "ad": "Tel Raf-4 Katl�- �nox304-61*137*183 (PORTASHELF)",
+      "olcu": "1370 � 610 � 1830",
+      "adet": 5
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "S E R V � S  B U L A � I K",
+      "poz": "011",
+      "ad": "Tel Raf-4 Katl�- �nox304-61*152*183 (PORTASHELF)",
+      "olcu": "1520 � 610 � 1830",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "M U T F A K  B U L A � I K",
+      "poz": "001",
+      "ad": "Kazan y�kama eviyesi, Izgara tablal� (PORTASHELF)",
+      "olcu": "1400 � 1000 � 570",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "M U T F A K  B U L A � I K",
+      "poz": "002",
+      "ad": "�n Y�kama Du�u - Duvara monte, Tek g�vde duvara monte bataryal� (CANCAN)",
+      "olcu": "190 � 420 � 1200",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "M U T F A K  B U L A � I K",
+      "poz": "003",
+      "ad": "�al��ma tezgah�, Premium seri (PORTASHELF)",
+      "olcu": "1600 � 700 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "M U T F A K  B U L A � I K",
+      "poz": "004",
+      "ad": "Kep�e ask� borusu, 1000mm (PORTASHELF)",
+      "olcu": "1000 � 100 � 100",
+      "adet": 1
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "M U T F A K  B U L A � I K",
+      "poz": "005",
+      "ad": "Demonte istif raf�, Kazan/tencere (PORTASHELF)",
+      "olcu": "1390 � 750 � 1600",
+      "adet": 2
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "M U T F A K  B U L A � I K",
+      "poz": "006",
+      "ad": "Demonte istif raf�, Kazan/tencere (PORTASHELF)",
+      "olcu": "1200 � 550 � 1600",
+      "adet": 1
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "E T  H A Z I R L I K",
+      "poz": "001",
+      "ad": "�ki k�vetli tezgah, 50*50*30 k�vetli, pres tablal� (PORTASHELF)",
+      "olcu": "1200 � 700 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "E T  H A Z I R L I K",
+      "poz": "002",
+      "ad": "Polietilen tablal� tezgah, Premium seri, Alt tablal� (PORTASHELF)",
+      "olcu": "1600 � 700 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "E T  H A Z I R L I K",
+      "poz": "003",
+      "ad": "Duvar raf� (PORTASHELF)",
+      "olcu": "1600 � 300 � 30",
+      "adet": 1
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "E T  H A Z I R L I K",
+      "poz": "004",
+      "ad": "�al��ma tezgah�, Premium seri, Alt tablal� (PORTASHELF)",
+      "olcu": "800 � 700 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "E T  H A Z I R L I K",
+      "poz": "005",
+      "ad": "K�yma Mak. K.Paslanmaz  So�utmal�-32 no- 380 V, saat kg.  600 (BOSFOR)",
+      "olcu": "695 � 365 � 470",
+      "adet": 1
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "E T  H A Z I R L I K",
+      "poz": "006",
+      "ad": "Et k�t���, Polietilen tablal� (PORTASHELF)",
+      "olcu": "700 � 700 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "E T  H A Z I R L I K",
+      "poz": "007",
+      "ad": "��p kazan� kapakl� �400  AISI304, 4 tekerlekli (PORTASHELF)",
+      "olcu": "400 � 400 � 500",
+      "adet": 1
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "E T  H A Z I R L I K",
+      "poz": "008",
+      "ad": "Polietilen tablal� tezgah, Premium seri, Alt tablal� (PORTASHELF)",
+      "olcu": "1400 � 700 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "E T  H A Z I R L I K",
+      "poz": "009",
+      "ad": "B��ak sterilizat�r�, 10 b��akl�k (PORTASHELF)",
+      "olcu": "575 � 100 � 480",
+      "adet": 1
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "E T  H A Z I R L I K",
+      "poz": "010",
+      "ad": "Tel Raf-4 Katl�- �nox304-61*122*183 (PORTASHELF)",
+      "olcu": "1220 � 610 � 1830",
+      "adet": 2
+    },
+    {
+      "bolum": "E",
+      "bolumAd": "E T  H A Z I R L I K",
+      "poz": "011",
+      "ad": "Tel Raf-4 Katl�- �nox304-61*152*183 (PORTASHELF)",
+      "olcu": "1520 � 610 � 1830",
+      "adet": 2
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "S E B Z E  H A Z I R L I K",
+      "poz": "001",
+      "ad": "�ki k�vetli tezgah, 50*50*30 k�vetli, pres tablal� (PORTASHELF)",
+      "olcu": "1400 � 700 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "S E B Z E  H A Z I R L I K",
+      "poz": "002",
+      "ad": "�n y�kama du�u tezgaha monte (CANCAN)",
+      "olcu": "150 � 440 � 1200",
+      "adet": 2
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "S E B Z E  H A Z I R L I K",
+      "poz": "003",
+      "ad": "��p kazan� kapakl� �500  AISI304, 4 tekerlekli (PORTASHELF)",
+      "olcu": "500 � 500 � 600",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "S E B Z E  H A Z I R L I K",
+      "poz": "004",
+      "ad": "S�zme havuzlu tezgah, Pres tablal� (PORTASHELF)",
+      "olcu": "1400 � 700 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "S E B Z E  H A Z I R L I K",
+      "poz": "005",
+      "ad": "Patates soyma makinas�, Elektronik, 10Kg/sefer (BOSFOR)",
+      "olcu": "670 � 420 � 910",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "S E B Z E  H A Z I R L I K",
+      "poz": "006",
+      "ad": "Polietilen tablal� tezgah, Premium seri, Alt tablal� (PORTASHELF)",
+      "olcu": "1400 � 700 � 850",
+      "adet": 2
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "S E B Z E  H A Z I R L I K",
+      "poz": "007",
+      "ad": "Duvar raf� (PORTASHELF)",
+      "olcu": "2100 � 300 � 30",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "S E B Z E  H A Z I R L I K",
+      "poz": "008",
+      "ad": "B��ak sterilizat�r�, 10 b��akl�k (PORTASHELF)",
+      "olcu": "575 � 100 � 480",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "S E B Z E  H A Z I R L I K",
+      "poz": "009",
+      "ad": "Tel Raf-4 Katl�- �nox304-61*152*183 (PORTASHELF)",
+      "olcu": "1520 � 610 � 1830",
+      "adet": 2
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "S E B Z E  H A Z I R L I K",
+      "poz": "010",
+      "ad": "Tel Raf-4 Katl�- �nox304-61*122*183 (PORTASHELF)",
+      "olcu": "1220 � 610 � 1830",
+      "adet": 2
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "P A T � S E R �",
+      "poz": "001",
+      "ad": "Tezgah tipi buzdolab�, Mermer tablal�, 2 kap�l�, poli�retan g�vdeli (FRENOX)",
+      "olcu": "1400 � 700 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "P A T � S E R �",
+      "poz": "002",
+      "ad": "Malzeme (erzak) arabas� , Plastik , 102 lt., Beyaz renk (UZAY)",
+      "olcu": "750 � 420 � 710",
+      "adet": 2
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "P A T � S E R �",
+      "poz": "003",
+      "ad": "Mermer tablal� tezgah, Premium seri, Alt tablal� (PORTASHELF)",
+      "olcu": "1400 � 700 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "P A T � S E R �",
+      "poz": "004",
+      "ad": "Duvar dolab�, Kap�l� (PORTASHELF)",
+      "olcu": "1400 � 400 � 600",
+      "adet": 1
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "P A T � S E R �",
+      "poz": "005",
+      "ad": "�al��ma tezgah�, Premium seri, Alt tablal� (PORTASHELF)",
+      "olcu": "900 � 700 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "P A T � S E R �",
+      "poz": "006",
+      "ad": "Tek k�vetli tezgah, 40*50*25 k�vetli, pres tablal� (PORTASHELF)",
+      "olcu": "600 � 700 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "P A T � S E R �",
+      "poz": "007",
+      "ad": "Hamur yo�urma mak.Spiral 75  lt.kazanl�, �ift  devirli 380 V  25 kg un kapasiteli (BOSFOR)",
+      "olcu": "650 � 1050 � 1050",
+      "adet": 1
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "P A T � S E R �",
+      "poz": "008",
+      "ad": "Planet mikser,Kapasite:60lt,Koruma kalkanl�, 380V-50HZ-3PH, 3h�zl� (BOSFOR)",
+      "olcu": "920 � 1000 � 1460",
+      "adet": 1
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "P A T � S E R �",
+      "poz": "009",
+      "ad": "Tel Raf-4 Katl�- �nox304-53*137*183 (PORTASHELF)",
+      "olcu": "1370 � 530 � 1830",
+      "adet": 2
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "P A T � S E R �",
+      "poz": "011",
+      "ad": "20 cm. i� y�k. f�r�n mod., 3 adet 60x40 tepsilik, Buhar jenerat�rl�, ta� taban ilaveli, 9,2 kw ST-99 dijital kontrol panelli(her mod�l) (SALVA)",
+      "olcu": "1717 � 1140 � 315",
+      "adet": 2
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "P A T � S E R �",
+      "poz": "011 01",
+      "ad": "Ta� taban ilavesi, E model f�r�n i�in, 67X121,5 (SALVA)",
+      "olcu": "1 � 1 � 1",
+      "adet": 1
+    },
+    {
+      "bolum": "H",
+      "bolumAd": "P A T � S E R �",
+      "poz": "011 02",
+      "ad": "Mayalama dolab�, E mod�l�  f�r�n i�in, Mayalama dolab� (�s�tma+mayalama), tekerlekli Kapasite: 15 adet 60x40 l�k tepsi (SALVA)",
+      "olcu": "1717 � 914 � 706",
       "adet": 1
     },
     {
       "bolum": "S",
-      "bolumAd": "S-SERVİS OFİSİ",
+      "bolumAd": "S E R V � S  B A R",
+      "poz": "001",
+      "ad": "�al��ma tezgah�, dolapl�, Premium seri, Ara rafl� (PORTASHELF)",
+      "olcu": "1400 � 600 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S E R V � S  B A R",
+      "poz": "002",
+      "ad": "Tek k�vetli tezgah, 40*40*25 k�vetli, pres tablal� (PORTASHELF)",
+      "olcu": "600 � 600 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S E R V � S  B A R",
+      "poz": "003",
+      "ad": "Tezgah tipi buzdolab�, 2 kap�l�, poli�retan g�vdeli (FRENOX)",
+      "olcu": "1400 � 700 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S E R V � S  B A R",
+      "poz": "004",
+      "ad": "Portakal s�kma makinesi, kollu,  alt+ �st boyal� (SANTOS)",
+      "olcu": "200 � 300 � 380",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S E R V � S  B A R",
+      "poz": "005",
+      "ad": "Servis tezgah�, Dolapl�, ara rafl� (PORTASHELF)",
+      "olcu": "1200 � 700 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S E R V � S  B A R",
       "poz": "006",
-      "ad": "Dolap, Perfect 900seri, 1/2modül, kapılı",
-      "olcu": "400 × 876 × 620",
+      "ad": "Kahve de�irmeni, kapasite:7-9 kg/saat, Kahve konteyn�r kap: 1,3kg, yar� otomatik 110V/230V - 50/60 Hz,���tme �ap�:64mm (CUNILL)",
+      "olcu": "220 � 385 � 575",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S E R V � S  B A R",
+      "poz": "007",
+      "ad": "Espresso kahve makinesi,yar� otomatik, 2 gruplu, 240 fincan/saat espresso kapasitesi 11 lt boyler,3200W(120V) (RANCILIO)",
+      "olcu": "780 � 560 � 480",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "S E R V � S  B A R",
+      "poz": "008",
+      "ad": "Tel Raf-4 Katl�- �nox304-61*122*183 (PORTASHELF)",
+      "olcu": "1220 � 610 � 1830",
       "adet": 2
     },
     {
       "bolum": "S",
-      "bolumAd": "S-SERVİS OFİSİ",
-      "poz": "007",
-      "ad": "Kuzine, Perfect 900seri, 1M, gazlı, 4 açık ocak, setüstü",
-      "olcu": "800 × 900 × 230",
-      "adet": 1
-    },
-    {
-      "bolum": "S",
-      "bolumAd": "S-SERVİS OFİSİ",
-      "poz": "008",
-      "ad": "Sosbenmari, Perfect 900seri, 1/2M, elektrikli, setüstü",
-      "olcu": "400 × 900 × 230",
-      "adet": 1
-    },
-    {
-      "bolum": "S",
-      "bolumAd": "S-SERVİS OFİSİ",
+      "bolumAd": "S E R V � S  B A R",
       "poz": "009",
-      "ad": "Buhar konveksiyonlu fırın, elektrikli, 10 GN1/1, dokunmatik ekran,9 pişirme fazı (3800)",
-      "olcu": "770 × 850 × 1060",
+      "ad": "Tel Raf-4 Katl�- �nox304-61*152*183 (PORTASHELF)",
+      "olcu": "1520 � 610 � 1830",
       "adet": 1
     },
     {
-      "bolum": "S",
-      "bolumAd": "S-SERVİS OFİSİ",
-      "poz": "010",
-      "ad": "Stand, dört tarafı açık, raflıksız, 10 GN1/1 fırınlar için",
-      "olcu": "610 × 790 × 700",
+      "bolum": "G",
+      "bolumAd": "G A R S O N  H O L �",
+      "poz": "001",
+      "ad": "So�uk banket arabas� +2 / +10, 7 adet GN 2/1 kapasite (FRENOX)",
+      "olcu": "720 � 840 � 1720",
+      "adet": 2
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "G A R S O N  H O L �",
+      "poz": "002",
+      "ad": "Banket arabas�, Is�tmal�, GN1/1 20ad. tepsi kapasiteli (PORTASHELF)",
+      "olcu": "632 � 830 � 1566",
+      "adet": 6
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D E P O L A R",
+      "poz": "001",
+      "ad": "Tart�m bask�l�,  300  LCD ekran, 70*80 cm ptatform. otomatik s�f�rlama (TEM)",
+      "olcu": "800 � 1150 � 290",
       "adet": 1
     },
     {
-      "bolum": "S",
-      "bolumAd": "S-SERVİS OFİSİ",
-      "poz": "010 A",
-      "ad": "Stand raflık ünitesi,TSB10 model stand için",
-      "olcu": "1 × 1 × 1",
+      "bolum": "D",
+      "bolumAd": "D E P O L A R",
+      "poz": "002",
+      "ad": "El y�kama eviyesi, Dizden kumandal�, �ift su giri�li (PORTASHELF)",
+      "olcu": "500 � 425 � 550",
       "adet": 1
     },
     {
-      "bolum": "S",
-      "bolumAd": "S-SERVİS OFİSİ",
-      "poz": "011",
-      "ad": "Salamander ızgara, Elektrikli, küçük boy",
-      "olcu": "500 × 450 × 470",
+      "bolum": "D",
+      "bolumAd": "D E P O L A R",
+      "poz": "003",
+      "ad": "Geri toplamal� �n y�kama du�u,  15 mt. (CANCAN)",
+      "olcu": "350 � 350 � 80",
       "adet": 1
     },
     {
-      "bolum": "S",
-      "bolumAd": "S-SERVİS OFİSİ",
-      "poz": "012",
-      "ad": "Çalışma tezgahı, Alt tablalı",
-      "olcu": "1600 × 700 × 850",
-      "adet": 1
+      "bolum": "D",
+      "bolumAd": "D E P O L A R",
+      "poz": "004",
+      "ad": "Kasa ta��ma arabas� (PORTASHELF)",
+      "olcu": "1000 � 650 � 850",
+      "adet": 2
     },
     {
-      "bolum": "S",
-      "bolumAd": "S-SERVİS OFİSİ",
-      "poz": "013",
-      "ad": "Davlumbaz, Duvar tipi, hava perdeli",
-      "olcu": "5000 × 1170 × 500",
-      "adet": 1
-    },
-    {
-      "bolum": "S",
-      "bolumAd": "S-SERVİS OFİSİ",
-      "poz": "014",
-      "ad": "Tek küvetli tezgah, 50*50*30 küvetli, pres tablalı",
-      "olcu": "700 × 700 × 850",
-      "adet": 1
-    },
-    {
-      "bolum": "S",
-      "bolumAd": "S-SERVİS OFİSİ",
-      "poz": "015",
-      "ad": "İndüksiyonlu sıcak tutma ünitesi,ankastre,1kW, Schott ceran cam,dokunmatik kontrol panel, Kablosuz uzaktan kumanda, 230V/50-60Hz",
-      "olcu": "36 × 36 × 9",
-      "adet": 5
-    },
-    {
-      "bolum": "S",
-      "bolumAd": "S-SERVİS OFİSİ",
-      "poz": "016",
-      "ad": "Yiyecek ısıtıcı lamba, çap:225 mm, heliks kablolu,850-1700 mm ayarlı Krom kaplı 250W infrared ısıtıcılı. 230V/250W",
-      "olcu": "225 × 225 × 850",
+      "bolum": "D",
+      "bolumAd": "D E P O L A R",
+      "poz": "005",
+      "ad": "Tel Raf-4 Katl�- �nox304-61*137*183 (PORTASHELF)",
+      "olcu": "1370 � 610 � 1830",
       "adet": 3
     },
     {
-      "bolum": "S",
-      "bolumAd": "S-SERVİS OFİSİ",
-      "poz": "017",
-      "ad": "Tezgah tipi buzdolabı, 3 kapılı, poliüretan gövdeli",
-      "olcu": "1865 × 700 × 850",
-      "adet": 1
+      "bolum": "D",
+      "bolumAd": "D E P O L A R",
+      "poz": "006",
+      "ad": "Plastik ��p Konteyneri - 120 lt. ye�il, 2 tekerlekli (UZAY)",
+      "olcu": "600 � 500 � 1050",
+      "adet": 2
     },
     {
-      "bolum": "S",
-      "bolumAd": "S-SERVİS OFİSİ",
-      "poz": "017 A",
-      "ad": "Çekmece farkı, 700mm tezgah tipi buzd. için, 1/2",
-      "olcu": "1 × 1 × 1",
-      "adet": 3
-    },
-    {
-      "bolum": "S",
-      "bolumAd": "S-SERVİS OFİSİ",
-      "poz": "018",
-      "ad": "Tel Raf-4 Katlı- ınox304-61*152*183",
-      "olcu": "1520 × 610 × 1830",
+      "bolum": "D",
+      "bolumAd": "D E P O L A R",
+      "poz": "007",
+      "ad": "Tel Raf-4 Katl�- �nox304-61*152*183 (PORTASHELF)",
+      "olcu": "1520 � 610 � 1830",
       "adet": 4
     },
     {
-      "bolum": "Y",
-      "bolumAd": "Y -YER IZGARALARI",
-      "poz": "001",
-      "ad": "Yer ızgarası, tavalı, alttan çıkışlı, eğimsiz, 300*300*122  mm   DN 70 PVC(Ø75mm),  Sığ tip",
-      "olcu": "300 × 300 × 122",
-      "adet": 7
-    },
-    {
-      "bolum": "Y",
-      "bolumAd": "Y -YER IZGARALARI",
-      "poz": "002",
-      "ad": "Yer ızgarası, tavalı, alttan çıkışlı, eğimsiz, 300*300*122  mm   DN 70 PVC(Ø75mm),  Sığ tip",
-      "olcu": "300 × 300 × 122",
-      "adet": 1
-    },
-    {
-      "bolum": "Y",
-      "bolumAd": "Y -YER IZGARALARI",
-      "poz": "003",
-      "ad": "Yer ızgarası, tavalı, alttan çıkışlı,orta eğimli, Sığ tip,  300*1384*145  mm  DN 70 PVC(Ø75mm)",
-      "olcu": "300 × 1384 × 145",
-      "adet": 1
-    },
-    {
-      "bolum": "Y",
-      "bolumAd": "Y -YER IZGARALARI",
-      "poz": "004",
-      "ad": "Yer ızgarası, tavalı, alttan çıkışlı,orta eğimli, Sığ tip,   300*1626*145  mm  DN 70 PVC(Ø75mm)",
-      "olcu": "300 × 1626 × 145",
-      "adet": 1
-    },
-    {
-      "bolum": "Z",
-      "bolumAd": "Z -SOĞUK ODALAR",
-      "poz": "001",
-      "ad": "Soğuk oda",
-      "olcu": "3650 × 2450 × 2300",
-      "adet": 1
-    },
-    {
-      "bolum": "Z",
-      "bolumAd": "Z -SOĞUK ODALAR",
-      "poz": "002",
-      "ad": "Çöp soğuk oda",
-      "olcu": "3950 × 2450 × 2300",
-      "adet": 1
-    },
-    {
-      "bolum": "P",
-      "bolumAd": "P -PERSONEL MUTFAĞI",
-      "poz": "001",
-      "ad": "Kuver ünitesi, GN1/4*3ad., GN1/1*1ad.",
-      "olcu": "700 × 700 × 1300",
-      "adet": 1
-    },
-    {
-      "bolum": "P",
-      "bolumAd": "P -PERSONEL MUTFAĞI",
-      "poz": "002",
-      "ad": "Sıcak servis ünitesi, Elektrikli, GN1/1*4",
-      "olcu": "1600 × 700 × 850",
-      "adet": 1
-    },
-    {
-      "bolum": "P",
-      "bolumAd": "P -PERSONEL MUTFAĞI",
-      "poz": "004",
-      "ad": "Tepsi standı,, Cr-Ni boru",
-      "olcu": "1600 × 320 × 30",
-      "adet": 1
-    },
-    {
-      "bolum": "P",
-      "bolumAd": "P -PERSONEL MUTFAĞI",
-      "poz": "005",
-      "ad": "Vitrin, Soğutmalı, buzdolaplı",
-      "olcu": "1400 × 700 × 1600",
-      "adet": 1
-    },
-    {
-      "bolum": "P",
-      "bolumAd": "P -PERSONEL MUTFAĞI",
-      "poz": "006",
-      "ad": "Tepsi standı, Cr-Ni boru",
-      "olcu": "1400 × 320 × 30",
-      "adet": 1
-    },
-    {
-      "bolum": "P",
-      "bolumAd": "P -PERSONEL MUTFAĞI",
-      "poz": "007",
-      "ad": "Çalışma tezgahı, dolaplı, ara raflı",
-      "olcu": "1600 × 700 × 850",
-      "adet": 1
-    },
-    {
-      "bolum": "P",
-      "bolumAd": "P -PERSONEL MUTFAĞI",
+      "bolum": "D",
+      "bolumAd": "D E P O L A R",
       "poz": "008",
-      "ad": "Espresso kahve makinesi,yarı otomatik, 1 gruplu, 120 fincan/saat espresso kapasitesi 4 lt boyler,1600-1700W,120V/220-240V",
-      "olcu": "385 × 560 × 480",
-      "adet": 1
+      "ad": "Ord�vr Tabak toplama arabas� (100 tabak) (ORMEL)",
+      "olcu": "680 � 680 � 1900",
+      "adet": 12
     },
     {
-      "bolum": "P",
-      "bolumAd": "P -PERSONEL MUTFAĞI",
+      "bolum": "D",
+      "bolumAd": "D E P O L A R",
       "poz": "009",
-      "ad": "Kahve değirmeni, kapasite:3.5 kg/saat, Kahve konteynır kap: 500 gr, yarı otomatik 110V/230V - 50/60 Hz",
-      "olcu": "140 × 335 × 440",
+      "ad": "Sinek �ld�r�c� , Yap��kanl�-Paslanmaz, 50 m2 etkili, 2*40 W. KISA AMPUL (Y�BER)",
+      "olcu": "700 � 500 � 250",
+      "adet": 2
+    },
+    {
+      "bolum": "D",
+      "bolumAd": "D E P O L A R",
+      "poz": "010",
+      "ad": "Hijyen Paspas,Taval�,Aluminyum kasa-55*85 cm., Gri Paspas (PORTASHELF)",
+      "olcu": "850 � 550 � 22",
       "adet": 1
     },
     {
-      "bolum": "P",
-      "bolumAd": "P -PERSONEL MUTFAĞI",
-      "poz": "010",
-      "ad": "Çay otomatı Master 2000, 23 lt.CC-23",
-      "olcu": "400 × 400 × 650",
+      "bolum": "Y",
+      "bolumAd": "YER IZGARALARI",
+      "poz": "001",
+      "ad": "Yer �zgaras�, taval�, alttan ��k��l�, e�imsiz, 300*300*122  mm   DN 70 PVC(�75mm),  S�� tip (PORTASHELF)",
+      "olcu": "300 � 300 � 122",
+      "adet": 2
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "YER IZGARALARI",
+      "poz": "002",
+      "ad": "Yer �zgaras�, taval�,yatay  ��k��l�, e�imsiz, 300*300*122  mm  DN 70 PVC(�75mm), SI� T�P (PORTASHELF)",
+      "olcu": "300 � 300 � 122",
+      "adet": 12
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "YER IZGARALARI",
+      "poz": "003",
+      "ad": "Yer �zgaras�, taval�, yatay  ��k��l�,orta e�imli, S�� tip, 400*1384*145  mm  DN 70 PVC(�75mm) (PORTASHELF)",
+      "olcu": "400 � 1384 � 145",
+      "adet": 1
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "YER IZGARALARI",
+      "poz": "004",
+      "ad": "Yer �zgaras�, taval�, alttan ��k��l�,orta e�imli, S�� tip,  300*941*145  mm  DN 70 PVC(�75mm) (PORTASHELF)",
+      "olcu": "300 � 941 � 145",
+      "adet": 1
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "YER IZGARALARI",
+      "poz": "005",
+      "ad": "Yer �zgaras�, taval�, alttan ��k��l�,orta e�imli, S�� tip,  300*1384*145  mm  DN 70 PVC(�75mm) (PORTASHELF)",
+      "olcu": "300 � 1384 � 145",
+      "adet": 2
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "YER IZGARALARI",
+      "poz": "006",
+      "ad": "Yer �zgaras�, taval�, alttan ��k��l�,orta e�imli, S�� tip,   300*1626*145  mm  DN 70 PVC(�75mm) (PORTASHELF)",
+      "olcu": "300 � 1626 � 145",
+      "adet": 2
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "SO�UK ODALAR",
+      "poz": "001",
+      "ad": "��p So�uk Oda, 0-10 m3  aras� so�uk oda (ROTA)",
+      "olcu": "1830 � 2290 � 2300",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "SO�UK ODALAR",
+      "poz": "002",
+      "ad": "Patiseri  So�uk Oda, 0-10 m3  aras� so�uk oda (ROTA)",
+      "olcu": "3300 � 2050 � 2300",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "SO�UK ODALAR",
+      "poz": "003",
+      "ad": "So�uk Oda, 0-10 m3  aras� so�uk oda (ROTA)",
+      "olcu": "2740 � 2400 � 2300",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "SO�UK ODALAR",
+      "poz": "004",
+      "ad": "So�uk Oda, 0-10 m3  aras� so�uk oda (ROTA)",
+      "olcu": "2810 � 2400 � 2300",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "SO�UK ODALAR",
+      "poz": "005",
+      "ad": "So�uk Mutfak So�uk Oda, 0-10 m3  aras� so�uk oda (ROTA)",
+      "olcu": "2520 � 2030 � 2300",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "SO�UK ODALAR",
+      "poz": "006",
+      "ad": "Sebze So�uk Oda, 0-10 m3  aras� so�uk oda (ROTA)",
+      "olcu": "2940 � 2290 � 2300",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "SO�UK ODALAR",
+      "poz": "007",
+      "ad": "Et So�uk Oda, 0-10 m3  aras� so�uk oda (ROTA)",
+      "olcu": "2840 � 2290 � 2300",
+      "adet": 1
+    },
+    {
+      "bolum": "S",
+      "bolumAd": "SO�UK ODALAR",
+      "poz": "008",
+      "ad": "��ecek So�uk Oda, 0-10 m3  aras� so�uk oda (ROTA)",
+      "olcu": "2800 � 2290 � 2300",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BANQUET MUTFA�I TOPLAM",
+      "poz": "001",
+      "ad": "Kuver �nitesi, GN1/4*3ad., GN1/1*1ad. (PORTASHELF)",
+      "olcu": "700 � 700 � 1300",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BANQUET MUTFA�I TOPLAM",
+      "poz": "002",
+      "ad": "S�cak servis �nitesi, Elektrikli, GN1/1*4 (PORTASHELF)",
+      "olcu": "1600 � 700 � 850",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BANQUET MUTFA�I TOPLAM",
+      "poz": "003",
+      "ad": "Servis raf�, Tek s�ra (PORTASHELF)",
+      "olcu": "1600 � 400 � 450",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BANQUET MUTFA�I TOPLAM",
+      "poz": "004",
+      "ad": "Tepsi stand�,, Cr-Ni boru (PORTASHELF)",
+      "olcu": "1600 � 320 � 30",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BANQUET MUTFA�I TOPLAM",
+      "poz": "005",
+      "ad": "Vitrin, So�utmal�, buzdolapl� (PORTASHELF)",
+      "olcu": "1400 � 700 � 1600",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BANQUET MUTFA�I TOPLAM",
+      "poz": "006",
+      "ad": "Tepsi stand�, Cr-Ni boru (PORTASHELF)",
+      "olcu": "1400 � 320 � 30",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BANQUET MUTFA�I TOPLAM",
+      "poz": "007",
+      "ad": "Tek k�vetli tezgah, 50*50*30 k�vetli(sol), damlal�kl� (PORTASHELF)",
+      "olcu": "1400 � 700 � 850",
       "adet": 1
     }
   ]

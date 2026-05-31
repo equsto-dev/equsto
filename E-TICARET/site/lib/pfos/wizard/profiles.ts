@@ -268,6 +268,45 @@ export const PROFIL_BY_SLUG: Record<Konsept, PfosProfilMeta> = {
       "izgara_meze",
     ],
   },
+  "kahve-duragi": {
+    konsept: "kahve-duragi",
+    konseptUst: "Kafe / Coffee Shop",
+    dukkan: "Kahve Durağı",
+    pfosZones: [
+      "bar",
+      "ana_mutfak",
+      "pastane",
+      "sebze_hazirlik",
+      "bulasikhane",
+      "kuru_depo",
+      "izgara_meze",
+    ],
+  },
+  "kahve-tatli": {
+    konsept: "kahve-tatli",
+    konseptUst: "Kafe / Coffee Shop",
+    dukkan: "Kahve & Tatlı",
+    pfosZones: [
+      "bar",
+      "pastane",
+      "ana_mutfak",
+      "bulasikhane",
+      "kuru_depo",
+    ],
+  },
+  "kahve-duragi-pastane": {
+    konsept: "kahve-duragi-pastane",
+    konseptUst: "Kafe / Coffee Shop",
+    dukkan: "Kahve Durağı — Pastane & Kahvaltı",
+    pfosZones: [
+      "bar",
+      "pastane",
+      "ana_mutfak",
+      "bulasikhane",
+      "kuru_depo",
+      "izgara_meze",
+    ],
+  },
   "all-sport-cafe": {
     konsept: "all-sport-cafe",
     konseptUst: "Kafe / Coffee Shop",
@@ -307,6 +346,20 @@ export const PROFIL_BY_SLUG: Record<Konsept, PfosProfilMeta> = {
       "bar",
     ],
   },
+  "resort-otel": {
+    konsept: "resort-otel",
+    konseptUst: "Otel F&B",
+    dukkan: "Resort Otel",
+    pfosZones: [
+      "ana_mutfak",
+      "soguk_oda",
+      "sebze_hazirlik",
+      "bulasikhane",
+      "bar",
+      "kuru_depo",
+      "depo",
+    ],
+  },
   "sehir-otel": {
     konsept: "sehir-otel",
     konseptUst: "Otel F&B",
@@ -333,6 +386,31 @@ export const PROFIL_BY_SLUG: Record<Konsept, PfosProfilMeta> = {
       "kuru_depo",
       "bar",
     ],
+  },
+  kasap: {
+    konsept: "kasap",
+    konseptUst: "Şarküteri & Kasap",
+    dukkan: "Kasap",
+    pfosZones: ["ana_mutfak", "soguk_oda", "kuru_depo", "bulasikhane"],
+  },
+  "kasap-sarkuteri": {
+    konsept: "kasap-sarkuteri",
+    konseptUst: "Şarküteri & Kasap",
+    dukkan: "Kasap + Şarküteri",
+    pfosZones: [
+      "ana_mutfak",
+      "soguk_oda",
+      "sebze_hazirlik",
+      "kuru_depo",
+      "bar",
+      "bulasikhane",
+    ],
+  },
+  "inari-bar-yemek": {
+    konsept: "inari-bar-yemek",
+    konseptUst: "Restoran",
+    dukkan: "Bar + Yemek (Hafif Asya)",
+    pfosZones: ["bar", "ana_mutfak", "bulasikhane", "soguk_oda", "kuru_depo"],
   },
 };
 

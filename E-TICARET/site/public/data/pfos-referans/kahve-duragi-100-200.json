@@ -1,0 +1,383 @@
+{
+  "kategoriId": "kahve-duragi",
+  "bantId": "100-200",
+  "label": "Kahve Durağı 100–150 m² (Konyaaltı)",
+  "referansM2": 125,
+  "kaynakDosya": "2016-105 KAVE DURAĞI KONYALTI LAINOX/2016-105.xlsx",
+  "not": "Kompakt şube · davlumbaz + sıcak mutfak · servis bar · pasta/dondurma",
+  "konseptSinif": "cafe-restaurant-kompakt",
+  "menuNot": "Zincir menü: kahve (espresso/latte), kahvaltı, tatlı-pasta, soğuk içecek; marka ayrıca Türk/dünya mutfağı ve retail (lokum/çikolata) — bkz. kahveduragi.com.tr, QR menü",
+  "yukleme": "2026-05-31T02:52:38.696Z",
+  "kalemSayisi": 46,
+  "toplamAdet": 53,
+  "kalemler": [
+    {
+      "bolum": "A",
+      "bolumAd": "A- SICAK MUTFAK",
+      "poz": "A1",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+      "olcu": "350*125*50",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SICAK MUTFAK",
+      "poz": "A2",
+      "ad": "FIRIN STANDI",
+      "olcu": "90*80*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SICAK MUTFAK",
+      "poz": "A3",
+      "ad": "BUHAR KONVEKSİYONLU FIRIN, ELK",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SICAK MUTFAK",
+      "poz": "A4",
+      "ad": "CİHAZALTI DOLAP, KAPISIZ",
+      "olcu": "40*60*55",
+      "adet": 2
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SICAK MUTFAK",
+      "poz": "A5",
+      "ad": "ARA TEZGAH",
+      "olcu": "40*60*30",
+      "adet": 2
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SICAK MUTFAK",
+      "poz": "A6",
+      "ad": "MAKARNA PİŞİRİCİ",
+      "olcu": "40*60*30",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SICAK MUTFAK",
+      "poz": "A7",
+      "ad": "IZGARA",
+      "olcu": "40*60*30",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SICAK MUTFAK",
+      "poz": "A8",
+      "ad": "KUZİNE",
+      "olcu": "80*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SICAK MUTFAK",
+      "poz": "A9",
+      "ad": "CİHAZALTI DOLAP",
+      "olcu": "40*60*55",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SICAK MUTFAK",
+      "poz": "A10",
+      "ad": "TEK KAPAKLI TOST MAKİNASI",
+      "olcu": "-",
+      "adet": 2
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SICAK MUTFAK",
+      "poz": "A11",
+      "ad": "TAVA RAFI",
+      "olcu": "240*35*35",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SICAK MUTFAK",
+      "poz": "A12",
+      "ad": "TEL RAF 4 KATLI",
+      "olcu": "91*36*160",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SICAK MUTFAK",
+      "poz": "A13",
+      "ad": "GARNİTÜR ÜNİTELİ BUZDOLABI",
+      "olcu": "142*70*85/105",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SICAK MUTFAK",
+      "poz": "A14",
+      "ad": "SERVİS TEZGAHI",
+      "olcu": "115*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SICAK MUTFAK",
+      "poz": "A15",
+      "ad": "GARSON BANKOSU",
+      "olcu": "115*40*60",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SERVİS BULAŞIK",
+      "poz": "C1",
+      "ad": "KASET RAFI",
+      "olcu": "135*40*60",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SERVİS BULAŞIK",
+      "poz": "C2",
+      "ad": "BULAŞIK SIYIRMA TEZGAHI",
+      "olcu": "135*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SERVİS BULAŞIK",
+      "poz": "C3",
+      "ad": "ÇÖP ARABASI",
+      "olcu": "40*50",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SERVİS BULAŞIK",
+      "poz": "C4",
+      "ad": "DUVAR RAFI",
+      "olcu": "120*30*4",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SERVİS BULAŞIK",
+      "poz": "C5",
+      "ad": "TEK KÜVETLİ TEZGAH",
+      "olcu": "120*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SERVİS BULAŞIK",
+      "poz": "C6",
+      "ad": "BULAŞIK YIKAMA MAKİNASI",
+      "olcu": "500 TB/S",
+      "adet": 1
+    },
+    {
+      "bolum": "C",
+      "bolumAd": "C- SERVİS BULAŞIK",
+      "poz": "C7",
+      "ad": "TEL RAF 4 KATLI",
+      "olcu": "107*46*160",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "G- SEBZE HAZIRLIK",
+      "poz": "G1",
+      "ad": "TEK KÜVETLİ TEZGAH",
+      "olcu": "60*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "G- SEBZE HAZIRLIK",
+      "poz": "G2",
+      "ad": "ÇALIŞMA TEZGAHI",
+      "olcu": "120*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "G- SEBZE HAZIRLIK",
+      "poz": "G3",
+      "ad": "DUVAR RAFI",
+      "olcu": "120*30*4",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "I- SERVİS BAR",
+      "poz": "I1",
+      "ad": "ÇALIŞMA TEZGAHI",
+      "olcu": "90*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "I- SERVİS BAR",
+      "poz": "I2",
+      "ad": "ÇALIŞMA TEZGAHI",
+      "olcu": "100*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "I- SERVİS BAR",
+      "poz": "I3",
+      "ad": "ÇALIŞMA TEZGAHI",
+      "olcu": "150*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "I- SERVİS BAR",
+      "poz": "I4",
+      "ad": "ESPRESSO KAHVE MAKİNASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "I- SERVİS BAR",
+      "poz": "I5",
+      "ad": "KAHVE ÖĞÜTÜCÜ",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "I- SERVİS BAR",
+      "poz": "I6",
+      "ad": "PASTA TEŞHİR DOLABI",
+      "olcu": "140*70*125",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "I- SERVİS BAR",
+      "poz": "I7",
+      "ad": "ÇİKOLATA",
+      "olcu": "110*70*125",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "I- SERVİS BAR",
+      "poz": "I8",
+      "ad": "TEZGAH TİPİ BUZDOLABI, (CAMLI OLMALI)",
+      "olcu": "142*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "I- SERVİS BAR",
+      "poz": "I9",
+      "ad": "BAR BLENDER",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "I- SERVİS BAR",
+      "poz": "I10",
+      "ad": "PORTAKAL SIKMA MAKİNASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "I- SERVİS BAR",
+      "poz": "I11",
+      "ad": "ÇALIŞMA TEZGAHI",
+      "olcu": "110*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "I- SERVİS BAR",
+      "poz": "I12",
+      "ad": "ÇAY OCAĞI DAVLUMBAZI",
+      "olcu": "100*60*40",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "I- SERVİS BAR",
+      "poz": "I13",
+      "ad": "KAHVE OCAĞI OTOMATİK",
+      "olcu": "3 demlikli",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "I- SERVİS BAR",
+      "poz": "I14",
+      "ad": "TEK KÜVETLİ TEZGAH",
+      "olcu": "120*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "I- SERVİS BAR",
+      "poz": "I15",
+      "ad": "BULAŞIK YIKAMA MAKİNASI",
+      "olcu": "500 TB/S",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "I- SERVİS BAR",
+      "poz": "I16",
+      "ad": "BUZ MAKİNASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "I",
+      "bolumAd": "I- SERVİS BAR",
+      "poz": "I17",
+      "ad": "DONDURMA TEŞHİR 7 KOVALI",
+      "olcu": "135*70*125",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- DEPOLAR",
+      "poz": "M1",
+      "ad": "TEL RAF 4 KATLI",
+      "olcu": "107*46*160",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- DEPOLAR",
+      "poz": "M2",
+      "ad": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+      "olcu": "70*70*205",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- DEPOLAR",
+      "poz": "M3",
+      "ad": "DEPO TİPİ DERİN DONDURUCU, TEK KAPILI",
+      "olcu": "70*70*205",
+      "adet": 2
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "Y- YER IZGARALARI",
+      "poz": "Y1",
+      "ad": "YER IZGARASI",
+      "olcu": "30*30*14",
+      "adet": 4
+    }
+  ]
+}

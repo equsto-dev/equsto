@@ -14,6 +14,7 @@ export type ReferansListeId =
   | "referans"
   | "100-300"
   | "100-200"
+  | "150-200"
   | "100-250"
   | "80-200"
   | "200-500"
@@ -27,7 +28,9 @@ export type ReferansListeId =
   | "80-150"
   | "2000-3500"
   | "200-400"
-  | "500-2000";
+  | "500-2000"
+  | "500-2000-kocaeli"
+  | "200-500";
 
 export function pickM2Bant(m2: number): M2BantId {
   return m2 <= 150 ? "80-150" : "150-250";
@@ -51,6 +54,11 @@ export function pickAllDayDiningListe(m2: number): "150-300" | null {
 /** Pastane: ≤150 m² → 14-PASTANE (100–200); >150 → ekipman_listesi (150–250) */
 export function pickPastaneListe(m2: number): "100-200" | "150-250" {
   return m2 <= 150 ? "100-200" : "150-250";
+}
+
+/** Kahve Durağı: kompakt Konyaaltı vs standart Karabük */
+export function pickKahveDuragiListe(m2: number): "100-200" | "150-200" {
+  return m2 < 150 ? "100-200" : "150-200";
 }
 
 /** Balıkçı: mahalle alt tipi veya m² bandı */
@@ -134,7 +142,14 @@ export async function loadReferansProfil(
     | "buyuk-yemekhane"
     | "guneli-pastane"
     | "sehir-otel"
-    | "kiremit-akasya",
+    | "kiremit-akasya"
+    | "kasap"
+    | "kasap-sarkuteri"
+    | "inari-bar-yemek"
+    | "kahve-duragi"
+    | "kahve-tatli"
+    | "kahve-duragi-pastane"
+    | "resort-otel",
   m2: number,
   listeId?: ReferansListeId,
   altTip?: string | null,
@@ -179,8 +194,21 @@ export async function loadReferansProfil(
                                         ? "200-400"
                                         : kategoriId === "sehir-otel"
                                           ? "500-2000"
+                                          : kategoriId === "resort-otel"
+                                            ? "200-500"
                                           : kategoriId === "kiremit-akasya"
                                             ? "100-250"
+                                            : kategoriId === "kasap" ||
+                                                kategoriId === "kasap-sarkuteri"
+                                              ? "100-250"
+                                              : kategoriId === "inari-bar-yemek"
+                                                ? "100-200"
+                                                : kategoriId === "kahve-duragi"
+                                                  ? pickKahveDuragiListe(m2)
+                                                  : kategoriId === "kahve-tatli"
+                                                    ? "40-100"
+                                                    : kategoriId === "kahve-duragi-pastane"
+                                                      ? "100-200"
           : kategoriId === "birahane"
           ? "100-300"
           : kategoriId === "balikci"

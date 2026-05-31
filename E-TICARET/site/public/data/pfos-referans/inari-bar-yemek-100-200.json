@@ -1,0 +1,309 @@
+{
+  "kategoriId": "inari-bar-yemek",
+  "bantId": "100-200",
+  "label": "Bar + Yemek (Hafif Asya) 100–200 m²",
+  "referansM2": 150,
+  "kaynakDosya": "2016-093 INARI RESTAURANT/2016-093-2.xlsx",
+  "not": "Inari Restaurant · bar + yemek · hafif Asya mutfağı",
+  "yukleme": "2026-05-31T02:19:26.986Z",
+  "kalemSayisi": 37,
+  "toplamAdet": 37,
+  "kalemler": [
+    {
+      "bolum": "B",
+      "bolumAd": "B-  BAR",
+      "poz": "B1",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI, ŞİŞELİK SETLİ",
+      "olcu": "150*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B-  BAR",
+      "poz": "B3",
+      "ad": "ÇÖP ARABASI, PASLANMAZ ÇELİK",
+      "olcu": "40*50",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B-  BAR",
+      "poz": "B4",
+      "ad": "ÇALIŞMA TEZGAHI",
+      "olcu": "130*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B-  BAR",
+      "poz": "B5",
+      "ad": "BARDAK YIKAMA MAKİNASI",
+      "olcu": "60*60*82",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B-  BAR",
+      "poz": "B6",
+      "ad": "BUZ MAKİNASI",
+      "olcu": "42 kg/gün",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B-  BAR",
+      "poz": "B7",
+      "ad": "BAR MİKSER",
+      "olcu": "no: 54",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B-  BAR",
+      "poz": "B8",
+      "ad": "PORTAKAL SIKMA MAKİNASI",
+      "olcu": "no: 11",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B-  BAR",
+      "poz": "B9",
+      "ad": "BAR BLENDER",
+      "olcu": "no: 33",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B-  BAR",
+      "poz": "B10",
+      "ad": "TEZGAH TİPİ BUZDOLABI, ÇEKMECELİ",
+      "olcu": "140*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B-  BAR",
+      "poz": "B11",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "130*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B-  BAR",
+      "poz": "B12",
+      "ad": "ÇÖP ARABASI, PASLANMAZ ÇELİK",
+      "olcu": "40*50",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B-  BAR",
+      "poz": "B13",
+      "ad": "CAM KAPILI TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+      "olcu": "186*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B-  BAR",
+      "poz": "B14",
+      "ad": "ESPRESSO KAHVE MAKİNASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B-  BAR",
+      "poz": "B15",
+      "ad": "KAHVE DEĞİRMENİ",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B-  BAR",
+      "poz": "B16",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+      "olcu": "100*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B-  BAR",
+      "poz": "B17",
+      "ad": "TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+      "olcu": "186*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B-  BAR",
+      "poz": "B18",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+      "olcu": "120*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B-  BAR",
+      "poz": "B19",
+      "ad": "TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+      "olcu": "186*45*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B-  BAR",
+      "poz": "B20",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN RAFLI, DOLAPLI",
+      "olcu": "60*45*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B-  BAR",
+      "poz": "B21",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "50*50*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B-  BAR",
+      "poz": "B22",
+      "ad": "TEZGAH TİPİ BUZDOLABI, 2 KAPILI",
+      "olcu": "150*45*85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M1",
+      "ad": "NÖTR ARA TEZGAH, TABAN VE ARA RAFLI",
+      "olcu": "40*90*85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M2",
+      "ad": "MAKARNA PİŞİRİCİ, DOLAPLI",
+      "olcu": "40*90*85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M3",
+      "ad": "FRİTÖZ, ELK., DOLAPLI",
+      "olcu": "40*90*85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M4",
+      "ad": "IZGARA, GAZLI, SETÜSTÜ",
+      "olcu": "80*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M5",
+      "ad": "CİHAZALTI ÇALIŞMA TEZGAHI, TABAN RAFLI",
+      "olcu": "80*70*55",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M6",
+      "ad": "4 AÇIK ALEVLİ OCAK, GAZLI",
+      "olcu": "80*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M7",
+      "ad": "NÖTR ARA TEZGAH, TABAN VE ARA RAFLI",
+      "olcu": "80*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M8",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+      "olcu": "400*117*50",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M9",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "120*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M10",
+      "ad": "SERVİS RAFI",
+      "olcu": "120*40*60",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M11",
+      "ad": "TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+      "olcu": "186*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M12",
+      "ad": "SERVİS RAFI",
+      "olcu": "186*40*60",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M13",
+      "ad": "SERVİS TEZGAHI, TABAN VE ARA RAFLI",
+      "olcu": "140*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "M",
+      "bolumAd": "M- MUTFAK",
+      "poz": "M14",
+      "ad": "SERVİS RAFI",
+      "olcu": "140*40*60",
+      "adet": 1
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "Y- YER IZGARASI",
+      "poz": "Y1",
+      "ad": "YER IZGARASI",
+      "olcu": "30*30*14",
+      "adet": 1
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "Y- YER IZGARASI",
+      "poz": "Y2",
+      "ad": "YER IZGARASI",
+      "olcu": "120*30*14",
+      "adet": 1
+    }
+  ]
+}

@@ -1,0 +1,526 @@
+{
+  "kategoriId": "resort-otel",
+  "bantId": "200-500",
+  "label": "Resort otel 200–500 m² (Zigana Alaçatı)",
+  "referansM2": 300,
+  "kaynakDosya": "2016-159 ZİGANA OTEL LAINOX/MUTFAK MALZEME zigana resort hotel alaçatı.xls",
+  "not": "Zigana Resort Alaçatı · üst kat restaurant + personel mutfak · ölçekli otel (Lainox)",
+  "konseptSinif": "resort-otel-olcekli",
+  "yukleme": "2026-05-31T03:26:42.218Z",
+  "kalemSayisi": 64,
+  "toplamAdet": 82,
+  "kalemler": [
+    {
+      "bolum": "üst-kat-restaourant",
+      "bolumAd": "ÜST  KAT  RESTAOURANT",
+      "poz": "01",
+      "ad": "Kuzine, 4 açık ocaklı, alt tablalı (fırınsız), d.gazlı",
+      "olcu": "1000 × 1000 × 850",
+      "adet": 1
+    },
+    {
+      "bolum": "üst-kat-restaourant",
+      "bolumAd": "ÜST  KAT  RESTAOURANT",
+      "poz": "01",
+      "ad": "Sosbenmari, Perfect 700seri, 1M, elektrikli, setüstü",
+      "olcu": "800 × 730 × 230",
+      "adet": 1
+    },
+    {
+      "bolum": "üst-kat-restaourant",
+      "bolumAd": "ÜST  KAT  RESTAOURANT",
+      "poz": "01",
+      "ad": "Dolap, Perfect 700seri, 1 modül, kapılı",
+      "olcu": "800 × 706 × 620",
+      "adet": 3
+    },
+    {
+      "bolum": "üst-kat-restaourant",
+      "bolumAd": "ÜST  KAT  RESTAOURANT",
+      "poz": "01",
+      "ad": "Izgara, Perfect 700seri, 1M, elektrikli, setüstü Düz kızartma yüzeyli",
+      "olcu": "800 × 730 × 230",
+      "adet": 1
+    },
+    {
+      "bolum": "üst-kat-restaourant",
+      "bolumAd": "ÜST  KAT  RESTAOURANT",
+      "poz": "01",
+      "ad": "Makarna pişirici, Perfect 700seri, 1M, elektrikli, dolaplı 2 havuz 4 sepet, 40 lt su kpst.",
+      "olcu": "800 × 730 × 850",
+      "adet": 1
+    },
+    {
+      "bolum": "üst-kat-restaourant",
+      "bolumAd": "ÜST  KAT  RESTAOURANT",
+      "poz": "01",
+      "ad": "Fritöz, Perfect 700seri, 1M, elektrikli, setüstü 2 havuz 4 sepet, 24 lt yağ-30 kg/h patates kpst.",
+      "olcu": "800 × 730 × 230",
+      "adet": 1
+    },
+    {
+      "bolum": "üst-kat-restaourant",
+      "bolumAd": "ÜST  KAT  RESTAOURANT",
+      "poz": "01",
+      "ad": "Davlumbaz, Duvar tipi, 8 ad. f.g. filtreli",
+      "olcu": "5000 × 1470 × 500",
+      "adet": 1
+    },
+    {
+      "bolum": "üst-kat-restaourant",
+      "bolumAd": "ÜST  KAT  RESTAOURANT",
+      "poz": "01",
+      "ad": "Davlumbaz aydınlatma ünitesi, Duvar tipi : 5.0 m 2 ad. floresan, 130 cm 28 w",
+      "olcu": "—",
+      "adet": 2
+    },
+    {
+      "bolum": "üst-kat-restaourant",
+      "bolumAd": "ÜST  KAT  RESTAOURANT",
+      "poz": "01",
+      "ad": "Çalışma tezgahı, Hareketli, alt tablalı",
+      "olcu": "1400 × 700 × 850",
+      "adet": 3
+    },
+    {
+      "bolum": "üst-kat-restaourant",
+      "bolumAd": "ÜST  KAT  RESTAOURANT",
+      "poz": "01",
+      "ad": "Servis tezgahı, Sıcaklık dolaplı, elektrikli",
+      "olcu": "1600 × 700 × 850",
+      "adet": 1
+    },
+    {
+      "bolum": "üst-kat-restaourant",
+      "bolumAd": "ÜST  KAT  RESTAOURANT",
+      "poz": "01",
+      "ad": "Bulaşık toplama arabası, Derin havuzlu",
+      "olcu": "790 × 500 × 950",
+      "adet": 1
+    },
+    {
+      "bolum": "üst-kat-restaourant",
+      "bolumAd": "ÜST  KAT  RESTAOURANT",
+      "poz": "01",
+      "ad": "Çöp kazanı, 50 lt, kapaklı, 4 tekerlekli",
+      "olcu": "400 × 400 × 500",
+      "adet": 1
+    },
+    {
+      "bolum": "üst-kat-restaourant",
+      "bolumAd": "ÜST  KAT  RESTAOURANT",
+      "poz": "01",
+      "ad": "Makina giriş eviyesi, 50*40*25 küvetli, sağ, sırt parçası dahil",
+      "olcu": "1200 × 725 × 850",
+      "adet": 1
+    },
+    {
+      "bolum": "üst-kat-restaourant",
+      "bolumAd": "ÜST  KAT  RESTAOURANT",
+      "poz": "01",
+      "ad": "Ön yıkama duşu, Tezgaha monte, çift batarya",
+      "olcu": "150 × 440 × 1200",
+      "adet": 1
+    },
+    {
+      "bolum": "üst-kat-restaourant",
+      "bolumAd": "ÜST  KAT  RESTAOURANT",
+      "poz": "01",
+      "ad": "Bulaşık yıkama makinası, 1080 tbk/h, giyotin tip, 3 programlı, elektronik",
+      "olcu": "740 × 743 × 1540",
+      "adet": 1
+    },
+    {
+      "bolum": "üst-kat-restaourant",
+      "bolumAd": "ÜST  KAT  RESTAOURANT",
+      "poz": "01",
+      "ad": "Davlumbaz, Duvar tipi, filtresiz",
+      "olcu": "1000 × 970 × 500",
+      "adet": 1
+    },
+    {
+      "bolum": "üst-kat-restaourant",
+      "bolumAd": "ÜST  KAT  RESTAOURANT",
+      "poz": "01",
+      "ad": "Makina çıkış tezgahı",
+      "olcu": "1200 × 580 × 850",
+      "adet": 1
+    },
+    {
+      "bolum": "üst-kat-restaourant",
+      "bolumAd": "ÜST  KAT  RESTAOURANT",
+      "poz": "01",
+      "ad": "Demonte istif rafı, 4 düz tablalı",
+      "olcu": "1000 × 550 × 1600",
+      "adet": 1
+    },
+    {
+      "bolum": "üst-kat-restaourant",
+      "bolumAd": "ÜST  KAT  RESTAOURANT",
+      "poz": "01",
+      "ad": "Demonte istif rafı, 4 düz tablalı",
+      "olcu": "1000 × 550 × 1600",
+      "adet": 4
+    },
+    {
+      "bolum": "üst-kat-restaourant",
+      "bolumAd": "ÜST  KAT  RESTAOURANT",
+      "poz": "01",
+      "ad": "Tek küvetli tezgah, 50*50*30 küvetli(sol), damlalıklı",
+      "olcu": "1200 × 700 × 850",
+      "adet": 1
+    },
+    {
+      "bolum": "üst-kat-restaourant",
+      "bolumAd": "ÜST  KAT  RESTAOURANT",
+      "poz": "01",
+      "ad": "İki küvetli tezgah, 50*50*30 küvetli, pres tablalı",
+      "olcu": "1400 × 700 × 850",
+      "adet": 1
+    },
+    {
+      "bolum": "üst-kat-restaourant",
+      "bolumAd": "ÜST  KAT  RESTAOURANT",
+      "poz": "01",
+      "ad": "Mermer tablalı tezgah, Alt tablalı",
+      "olcu": "1400 × 700 × 850",
+      "adet": 1
+    },
+    {
+      "bolum": "üst-kat-restaourant",
+      "bolumAd": "ÜST  KAT  RESTAOURANT",
+      "poz": "01",
+      "ad": "Tekerlek, 4 adet (2 frenli+2 frensiz), tablalı Ø 125*32 mm",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "üst-kat-restaourant",
+      "bolumAd": "ÜST  KAT  RESTAOURANT",
+      "poz": "01",
+      "ad": "Kaset taşıma arabası",
+      "olcu": "550 × 550 × 780",
+      "adet": 1
+    },
+    {
+      "bolum": "üst-kat-restaourant",
+      "bolumAd": "ÜST  KAT  RESTAOURANT",
+      "poz": "01",
+      "ad": "Konveksiyonlu fırın, GN 1/1*40, çift devirli, elektrikli",
+      "olcu": "1200 × 1105 × 1630",
+      "adet": 1
+    },
+    {
+      "bolum": "üst-kat-restaourant",
+      "bolumAd": "ÜST  KAT  RESTAOURANT",
+      "poz": "01",
+      "ad": "Konveksiyonlu fırın tepsi taşıma arabası, GN 1/1*40 tepsi taşıma ünitesi",
+      "olcu": "633 × 1014 × 200",
+      "adet": 1
+    },
+    {
+      "bolum": "üst-kat-restaourant",
+      "bolumAd": "ÜST  KAT  RESTAOURANT",
+      "poz": "01",
+      "ad": "Davlumbaz, Duvar tipi, 3 ad. f.g. filtreli",
+      "olcu": "1500 × 1470 × 500",
+      "adet": 1
+    },
+    {
+      "bolum": "üst-kat-restaourant",
+      "bolumAd": "ÜST  KAT  RESTAOURANT",
+      "poz": "01",
+      "ad": "Davlumbaz aydınlatma ünitesi, Duvar tipi : 1.5 m 1 ad. floresan, 70 cm 14 w",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "üst-kat-restaourant",
+      "bolumAd": "ÜST  KAT  RESTAOURANT",
+      "poz": "01",
+      "ad": "Depo tipi buzdolabı, Çift kapılı, -2/+8`C, poliüretan gövdeli",
+      "olcu": "1400 × 790 × 2100",
+      "adet": 1
+    },
+    {
+      "bolum": "üst-kat-restaourant",
+      "bolumAd": "ÜST  KAT  RESTAOURANT",
+      "poz": "01",
+      "ad": "Depo tipi buzdolabı, Tek kapılı,-2/+8`C, poliüretan gövdeli",
+      "olcu": "700 × 790 × 2100",
+      "adet": 1
+    },
+    {
+      "bolum": "üst-kat-restaourant",
+      "bolumAd": "ÜST  KAT  RESTAOURANT",
+      "poz": "01",
+      "ad": "Kasa taşıma arabası",
+      "olcu": "1000 × 650 × 850",
+      "adet": 1
+    },
+    {
+      "bolum": "üst-kat-restaourant",
+      "bolumAd": "ÜST  KAT  RESTAOURANT",
+      "poz": "01",
+      "ad": "Tepsi taşıma arabası, GN 2/1*65 mm 11 adet kpst.",
+      "olcu": "590 × 670 × 1650",
+      "adet": 1
+    },
+    {
+      "bolum": "üst-kat-restaourant",
+      "bolumAd": "ÜST  KAT  RESTAOURANT",
+      "poz": "01",
+      "ad": "El yıkama eviyesi, Dizden kumandalı, çift su girişli",
+      "olcu": "500 × 425 × 550",
+      "adet": 1
+    },
+    {
+      "bolum": "personel",
+      "bolumAd": "PERSONEL",
+      "poz": "01",
+      "ad": "Çöp kazanı, 50 lt, kapaklı, 4 tekerlekli",
+      "olcu": "400 × 400 × 500",
+      "adet": 1
+    },
+    {
+      "bolum": "personel",
+      "bolumAd": "PERSONEL",
+      "poz": "01",
+      "ad": "Makina giriş eviyesi, 50*40*25 küvetli, sağ, sırt parçası dahil",
+      "olcu": "1200 × 725 × 850",
+      "adet": 1
+    },
+    {
+      "bolum": "personel",
+      "bolumAd": "PERSONEL",
+      "poz": "01",
+      "ad": "Ön yıkama duşu, Tezgaha monte, çift batarya",
+      "olcu": "150 × 440 × 1200",
+      "adet": 1
+    },
+    {
+      "bolum": "personel",
+      "bolumAd": "PERSONEL",
+      "poz": "01",
+      "ad": "Bulaşık yıkama makinası, 1080 tbk/h, giyotin tip, 3 programlı, elektronik",
+      "olcu": "740 × 743 × 1540",
+      "adet": 1
+    },
+    {
+      "bolum": "personel",
+      "bolumAd": "PERSONEL",
+      "poz": "01",
+      "ad": "Davlumbaz, Duvar tipi, filtresiz",
+      "olcu": "1000 × 970 × 500",
+      "adet": 1
+    },
+    {
+      "bolum": "personel",
+      "bolumAd": "PERSONEL",
+      "poz": "01",
+      "ad": "Makina çıkış tezgahı",
+      "olcu": "1200 × 580 × 850",
+      "adet": 1
+    },
+    {
+      "bolum": "personel",
+      "bolumAd": "PERSONEL",
+      "poz": "01",
+      "ad": "Demonte istif rafı, 4 düz tablalı",
+      "olcu": "1000 × 550 × 1600",
+      "adet": 1
+    },
+    {
+      "bolum": "personel",
+      "bolumAd": "PERSONEL",
+      "poz": "01",
+      "ad": "Yer ocağı, Çift yanışlı, d.gazlı",
+      "olcu": "600 × 800 × 500",
+      "adet": 2
+    },
+    {
+      "bolum": "personel",
+      "bolumAd": "PERSONEL",
+      "poz": "01",
+      "ad": "Davlumbaz, Duvar tipi, 4 ad. f.g. filtreli",
+      "olcu": "2500 × 1170 × 500",
+      "adet": 1
+    },
+    {
+      "bolum": "personel",
+      "bolumAd": "PERSONEL",
+      "poz": "01",
+      "ad": "Davlumbaz aydınlatma ünitesi, Duvar tipi : 2.5 m 1 ad. floresan, 130 cm 28 w",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "personel",
+      "bolumAd": "PERSONEL",
+      "poz": "01",
+      "ad": "Mermer tablalı tezgah, Alt tablalı",
+      "olcu": "1400 × 700 × 850",
+      "adet": 1
+    },
+    {
+      "bolum": "personel",
+      "bolumAd": "PERSONEL",
+      "poz": "01",
+      "ad": "Tekerlek, 4 adet (2 frenli+2 frensiz), tablalı Ø 125*32 mm",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "personel",
+      "bolumAd": "PERSONEL",
+      "poz": "01",
+      "ad": "Servis tezgahı, Ara raflı",
+      "olcu": "1000 × 700 × 850",
+      "adet": 1
+    },
+    {
+      "bolum": "personel",
+      "bolumAd": "PERSONEL",
+      "poz": "01",
+      "ad": "Servis rafı, Tek sıra",
+      "olcu": "1000 × 400 × 450",
+      "adet": 1
+    },
+    {
+      "bolum": "personel",
+      "bolumAd": "PERSONEL",
+      "poz": "01",
+      "ad": "Tepsi standı, Cr-Ni boru",
+      "olcu": "1000 × 320 × 30",
+      "adet": 1
+    },
+    {
+      "bolum": "personel",
+      "bolumAd": "PERSONEL",
+      "poz": "01",
+      "ad": "Sıcak servis ünitesi, GN 1/1*150 mm 4 ad. kap+kapaklı, elektrikli",
+      "olcu": "1500 × 700 × 850",
+      "adet": 1
+    },
+    {
+      "bolum": "personel",
+      "bolumAd": "PERSONEL",
+      "poz": "01",
+      "ad": "Servis rafı, Tek sıra",
+      "olcu": "1500 × 400 × 450",
+      "adet": 1
+    },
+    {
+      "bolum": "personel",
+      "bolumAd": "PERSONEL",
+      "poz": "01",
+      "ad": "Tepsi standı, Cr-Ni boru",
+      "olcu": "1500 × 320 × 30",
+      "adet": 1
+    },
+    {
+      "bolum": "personel",
+      "bolumAd": "PERSONEL",
+      "poz": "01",
+      "ad": "Davlumbaz, Duvar tipi, filtresiz",
+      "olcu": "2000 × 1170 × 500",
+      "adet": 1
+    },
+    {
+      "bolum": "personel",
+      "bolumAd": "PERSONEL",
+      "poz": "01",
+      "ad": "Servis tezgahı, Ara raflı",
+      "olcu": "700 × 700 × 850",
+      "adet": 1
+    },
+    {
+      "bolum": "personel",
+      "bolumAd": "PERSONEL",
+      "poz": "01",
+      "ad": "Kuver rafı, GN 1/4*150 mm 3 ad. kuver kabı",
+      "olcu": "600 × 400 × 450",
+      "adet": 1
+    },
+    {
+      "bolum": "personel",
+      "bolumAd": "PERSONEL",
+      "poz": "01",
+      "ad": "Tepsi standı, Cr-Ni boru",
+      "olcu": "700 × 320 × 30",
+      "adet": 1
+    },
+    {
+      "bolum": "personel",
+      "bolumAd": "PERSONEL",
+      "poz": "01",
+      "ad": "Tezgah tipi buzdolabı, 2 kapılı, -2/+8`C, mermer tablalı",
+      "olcu": "1400 × 700 × 850",
+      "adet": 1
+    },
+    {
+      "bolum": "personel",
+      "bolumAd": "PERSONEL",
+      "poz": "01",
+      "ad": "Tek küvetli tezgah, 50*50*30 küvetli(sağ), damlalıklı",
+      "olcu": "1200 × 700 × 850",
+      "adet": 1
+    },
+    {
+      "bolum": "personel",
+      "bolumAd": "PERSONEL",
+      "poz": "01",
+      "ad": "Konveksiyonlu fırın, GN 1/1(veya 40x60)*10, çift devirli, elektrikli",
+      "olcu": "980 × 880 × 980",
+      "adet": 1
+    },
+    {
+      "bolum": "personel",
+      "bolumAd": "PERSONEL",
+      "poz": "01",
+      "ad": "Setüstü konveksiyonlu fırın standı, 6-10 tepsili fırınlar için, 5 sıra raflı",
+      "olcu": "980 × 730 × 650",
+      "adet": 1
+    },
+    {
+      "bolum": "personel",
+      "bolumAd": "PERSONEL",
+      "poz": "01",
+      "ad": "Davlumbaz, Duvar tipi, 3 ad. f.g. filtreli",
+      "olcu": "1500 × 1170 × 500",
+      "adet": 1
+    },
+    {
+      "bolum": "personel",
+      "bolumAd": "PERSONEL",
+      "poz": "01",
+      "ad": "Davlumbaz aydınlatma ünitesi, Duvar tipi : 1.5 m 1 ad. floresan, 70 cm 14 w",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "personel",
+      "bolumAd": "PERSONEL",
+      "poz": "01",
+      "ad": "Yer ızgarası, Sığ tip, tavalı, alttan çıkışlı, orta eğimli",
+      "olcu": "941 × 300 × 145",
+      "adet": 10
+    },
+    {
+      "bolum": "personel",
+      "bolumAd": "PERSONEL",
+      "poz": "01",
+      "ad": "Yağ ayırıcı, 1 lt/sn, gömme tip, katı atık tutuculu, manuel 40 lt yağ toplama hacmi",
+      "olcu": "1280 × 580 × 970",
+      "adet": 1
+    },
+    {
+      "bolum": "personel",
+      "bolumAd": "PERSONEL",
+      "poz": "01",
+      "ad": "Yağ ayırıcı, 2 lt/sn, gömme tip, katı atık tutuculu, manuel 80 lt yağ toplama hacmi",
+      "olcu": "1580 × 800 × 970",
+      "adet": 1
+    }
+  ]
+}

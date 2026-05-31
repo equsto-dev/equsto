@@ -2,7 +2,7 @@
   "success": true,
   "source": "static-fallback",
   "konseptler": [
-    { "slug": "coffee-shop", "label": "Coffee Shop", "kalemSayisi": 24, "not": "referans JSON (coffee-shop-referans)" },
+    { "slug": "coffee-shop", "label": "Coffee Shop", "kalemSayisi": 21, "not": "Espressolab Watergarden (2016-114) · AVM coffee shop" },
     {
       "slug": "pizzaci",
       "label": "Pizzacı",
@@ -18,7 +18,7 @@
       "not": "300–500 m² zone şablonu"
     },
     { "slug": "steakhouse", "label": "Steakhouse", "kalemSayisi": 0, "not": "m² bantlı referans listesi" },
-    { "slug": "balikci", "label": "Balıkçı", "kalemSayisi": 0, "not": "m² bantlı referans listesi" },
+    { "slug": "balikci", "label": "Balıkçı", "kalemSayisi": 56, "not": "80–150 / 150–250 m² · Uçan Balık (094) · mahalle" },
     {
       "slug": "italyan",
       "label": "İtalyan Restoran",
@@ -98,6 +98,24 @@
       "not": "80–150 m² · kahve + kahvaltı & hafif yemek (2016-046)"
     },
     {
+      "slug": "kahve-duragi",
+      "label": "Kahve Durağı",
+      "kalemSayisi": 51,
+      "not": "m²<150 Konyaaltı (105) · m²≥150 Karabük (106) · cafe-restaurant zincir"
+    },
+    {
+      "slug": "kahve-tatli",
+      "label": "Kahve & Tatlı",
+      "kalemSayisi": 34,
+      "not": "40–100 m² · Hacıbozan Çemberlitaş (132) · teşhir+bar / alt mutfak"
+    },
+    {
+      "slug": "kahve-duragi-pastane",
+      "label": "Kahve Durağı — Pastane & Kahvaltı",
+      "kalemSayisi": 43,
+      "not": "100–200 m² · Sultangazi (135) · pastane + kahvaltı + hafif yemek"
+    },
+    {
       "slug": "harvest-cafe",
       "label": "Harvest Cafe",
       "kalemSayisi": 44,
@@ -122,16 +140,40 @@
       "not": "200–400 m² · pastane + yerel (2016-075)"
     },
     {
+      "slug": "resort-otel",
+      "label": "Resort Otel (ölçekli)",
+      "kalemSayisi": 64,
+      "not": "200–500 m² · Zigana Alaçatı (159) · restaurant + personel"
+    },
+    {
       "slug": "sehir-otel",
       "label": "Şehir Oteli (Business)",
-      "kalemSayisi": 192,
-      "not": "500–2000 m² · Hilton Kocaeli F&B (2016-077)"
+      "kalemSayisi": 186,
+      "not": "500–2000 m² · Hampton Bolu (088) · Kocaeli (077)"
     },
     {
       "slug": "kiremit-akasya",
       "label": "Kiremit Akasya",
       "kalemSayisi": 30,
       "not": "100–250 m² · Türk mutfağı · self servis · food court (2016-085)"
+    },
+    {
+      "slug": "kasap",
+      "label": "Kasap",
+      "kalemSayisi": 28,
+      "not": "100–250 m² · yalnızca kasap (2016-087 kasap)"
+    },
+    {
+      "slug": "kasap-sarkuteri",
+      "label": "Kasap + Şarküteri",
+      "kalemSayisi": 36,
+      "not": "100–250 m² · kasap + şarküteri tam liste (2016-087)"
+    },
+    {
+      "slug": "inari-bar-yemek",
+      "label": "Bar + Yemek (Hafif Asya)",
+      "kalemSayisi": 37,
+      "not": "100–200 m² · Inari · bar + yemek · hafif Asya (2016-093)"
     }
   ]
 }

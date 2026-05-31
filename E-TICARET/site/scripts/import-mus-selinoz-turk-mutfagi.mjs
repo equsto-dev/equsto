@@ -1,7 +1,8 @@
 /**
- * 2016-077 Hilton Kocaeli → pfos-referans + pfos-kategoriler.json
- * Kaynak: PFOS/veri/hilton-sehir-otel-2016-077.xlsx
- * Kullanım: node scripts/import-sehir-otel-konsept.mjs
+ * 2016-101 Muş Selinöz Mimarlık → ayrı Türk mutfağı referans (Kiremit’ten bağımsız)
+ * Kaynak: PFOS/veri/mus-selinoz-2016-101.xlsx
+ * Kullanım: node scripts/import-mus-selinoz-turk-mutfagi.mjs
+ * Not: Motor/sihirbaz bağlantısı yok — detaylandırma sonrası ff_mus_selinoz_turk aktifleştirilecek.
  */
 import ExcelJS from "exceljs";
 import fs from "node:fs/promises";
@@ -14,11 +15,15 @@ const VERI_DIR = path.join(SITE, "..", "..", "PFOS", "veri");
 const OUT = path.join(SITE, "public", "data", "pfos-referans");
 const MANIFEST = path.join(SITE, "public", "data", "pfos-kategoriler.json");
 
-const KATEGORI_ID = "sehir-otel";
-const BANT_ID = "500-2000-kocaeli";
-const XLSX = "hilton-sehir-otel-2016-077.xlsx";
-const REFERANS_M2 = 1000;
+const KATEGORI_ID = "mus-selinoz-turk";
+const BANT_ID = "100-250";
+const XLSX = "mus-selinoz-2016-101.xlsx";
+const REFERANS_M2 = 200;
 
+const POZ_RE = /^[A-Z]\d{1,2}A?$/i;
+function isPoz(s) {
+  return POZ_RE.test(String(s).trim());
+}
 function cellStr(v) {
   if (v == null) return "";
   if (typeof v === "object" && v && "text" in v) return String(v.text).trim();
@@ -31,39 +36,31 @@ function parseAdet(raw) {
   return Number.isFinite(n) && n > 0 ? n : 1;
 }
 
-/** Hilton Lainox: col1=poz, col2=ürün, col3-7=ölçü, col8=marka, col10=adet */
-function parseHiltonWs(ws) {
+/** Mefftech: col1=poz, col2=ürün, col5=ölçü, col9=adet */
+function parseTeklifWs(ws) {
   const rows = [];
   let bolum = "";
   let bolumAd = "";
   ws.eachRow({ includeEmpty: false }, (row, rowNumber) => {
-    if (rowNumber < 13) return;
+    if (rowNumber < 18) return;
     const poz = cellStr(row.getCell(1).value);
     const ad = cellStr(row.getCell(2).value);
-    const marka = cellStr(row.getCell(8).value);
-    const adetRaw = row.getCell(10).value;
-    if (!ad) return;
-    if (/^ürün|açıklama|sıra/i.test(ad)) return;
-
-    const hasAdet = adetRaw != null && adetRaw !== "";
-    if (!poz && ad.length > 3 && !hasAdet) {
+    const olcu = row.getCell(5).value;
+    const adetRaw = row.getCell(9).value;
+    if (!poz && !ad) return;
+    if (/^no$/i.test(poz) || /^malin/i.test(ad)) return;
+    if (!poz && ad && (adetRaw == null || adetRaw === "")) {
       bolumAd = ad;
-      bolum = ad.replace(/[^A-ZÇĞİÖŞÜ]/gi, "").charAt(0) || ad.charAt(0);
+      bolum = ad.split("-")[0]?.trim() || ad.charAt(0);
       return;
     }
-    if (poz && hasAdet) {
-      const olcuParts = [3, 4, 5, 6, 7]
-        .map((c) => cellStr(row.getCell(c).value))
-        .filter((s) => s && s !== "x" && s !== "X");
-      const olcu = olcuParts.length ? olcuParts.join(" × ") : "—";
-      const parts = [ad];
-      if (marka) parts.push(`(${marka})`);
+    if (poz && isPoz(poz) && ad && !/^malin|toplam/i.test(ad)) {
       rows.push({
         bolum,
         bolumAd,
         poz: poz.toUpperCase(),
-        ad: parts.join(" "),
-        olcu,
+        ad,
+        olcu: olcu != null && String(olcu).trim() ? String(olcu).trim() : "—",
         adet: parseAdet(adetRaw),
       });
     }
@@ -75,7 +72,7 @@ async function main() {
   const src = path.join(VERI_DIR, XLSX);
   const wb = new ExcelJS.Workbook();
   await wb.xlsx.readFile(src);
-  const kalemler = parseHiltonWs(wb.worksheets[0]);
+  const kalemler = parseTeklifWs(wb.worksheets[0]);
   const toplamAdet = kalemler.reduce(
     (t, r) => (typeof r.adet === "number" ? t + r.adet : t),
     0,
@@ -83,10 +80,10 @@ async function main() {
   const liste = {
     kategoriId: KATEGORI_ID,
     bantId: BANT_ID,
-    label: "Şehir Oteli (Business) 500–2000 m² (Kocaeli)",
+    label: "Muş Selinöz Türk mutfağı 100–250 m² (taslak)",
     referansM2: REFERANS_M2,
-    kaynakDosya: "2016-077 HILTON KOCAELİ LAINOX/2016-077.xlsx",
-    not: "Hilton Kocaeli şehir oteli · ana mutfak · büfe · banquet",
+    kaynakDosya: "2016-101 MUŞ SELİNÖZ MİMARLIK/2016-101.xlsx",
+    not: "Türk mutfağı · Kiremit Akasya’dan AYRI · bar+pasta teşhir · tam mutfak · konsept detay bekliyor",
     yukleme: new Date().toISOString(),
     kalemSayisi: kalemler.length,
     toplamAdet,
@@ -110,33 +107,29 @@ async function main() {
     toplamAdet: liste.toplamAdet,
     kaynakDosya: liste.kaynakDosya,
     yukleme: liste.yukleme,
+    durum: "planlanan",
   };
   const kategoriler = Array.isArray(manifest.kategoriler) ? manifest.kategoriler : [];
   const idx = kategoriler.findIndex((k) => k.id === KATEGORI_ID);
   const kayit = {
     id: KATEGORI_ID,
-    label: "Şehir Oteli (Business)",
-    ustKategori: "Otel F&B",
-    bantlar: [],
+    label: "Muş Selinöz Türk mutfağı (101)",
+    ustKategori: "Türk mutfağı · planlanan",
+    bantlar: [
+      {
+        id: BANT_ID,
+        label: "100–250 m² (taslak referans m²)",
+        referansM2: REFERANS_M2,
+        meta,
+      },
+    ],
   };
-  const existing = idx >= 0 ? kategoriler[idx] : kayit;
-  const bantlar = Array.isArray(existing.bantlar) ? [...existing.bantlar] : [];
-  const bi = bantlar.findIndex((b) => b.id === BANT_ID);
-  const bantKayit = {
-    id: BANT_ID,
-    label: "500–2000 m² (Kocaeli)",
-    referansM2: REFERANS_M2,
-    meta,
-  };
-  if (bi >= 0) bantlar[bi] = bantKayit;
-  else bantlar.push(bantKayit);
-  kayit.bantlar = bantlar;
   if (idx >= 0) kategoriler[idx] = kayit;
   else kategoriler.push(kayit);
   manifest.kategoriler = kategoriler;
   manifest.updated_at = new Date().toISOString();
   await fs.writeFile(MANIFEST, JSON.stringify(manifest, null, 2), "utf8");
-  console.log("Manifest:", MANIFEST);
+  console.log("Manifest güncellendi");
 }
 
 main().catch((e) => {
