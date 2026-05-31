@@ -15,6 +15,10 @@ declare global {
       loadMergedCatalog?: () => Promise<unknown[]>;
     };
     eqBrandFromSlug?: (slug: string) => string;
-    eqBrandMatchesRow?: (row: { brand?: string; marka?: string; name?: string }, brand: string) => boolean;
+    eqBrandMatchesRow?: (
+      row: { brand?: string; marka?: string; name?: string; oem_brand?: string },
+      brand: string,
+      slug?: string,
+    ) => boolean;
   }
 }

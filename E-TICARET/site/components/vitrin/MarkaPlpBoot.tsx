@@ -47,10 +47,10 @@ export default function MarkaPlpBoot({ slug }: Props) {
     if (!loadAll || !window.EqCategoryShell) return;
 
     loadAll.then(function (all: unknown[]) {
-      const nameMatch = function (x: { brand?: string; marka?: string; name?: string }) {
+      const nameMatch = function (x: { brand?: string; marka?: string; name?: string; oem_brand?: string }) {
         if (!x) return false;
         if (typeof window.eqBrandMatchesRow === "function") {
-          return window.eqBrandMatchesRow(x, brand || slug);
+          return window.eqBrandMatchesRow(x, brand || slug, slug);
         }
         const n = String(x.brand || x.marka || x.name || "").toLowerCase();
         return n.includes(String(brand).toLowerCase());
