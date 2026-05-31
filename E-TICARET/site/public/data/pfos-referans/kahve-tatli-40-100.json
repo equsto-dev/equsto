@@ -1,0 +1,286 @@
+{
+  "kategoriId": "kahve-tatli",
+  "bantId": "40-100",
+  "label": "Kahve & Tatlı 40–100 m²",
+  "referansM2": 70,
+  "kaynakDosya": "2016-132 HACIBOZAN ÇEMBERLİTAŞ LAINOX/2016-132-2.xlsx",
+  "not": "Hacıbozan Çemberlitaş · giriş kat teşhir+bar · alt kat üretim mutfağı",
+  "konseptSinif": "kahve-tatli-pastane",
+  "yukleme": "2026-05-31T03:06:14.399Z",
+  "kalemSayisi": 34,
+  "toplamAdet": 38,
+  "kalemler": [
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A1",
+      "ad": "YAŞ PASTA DOLABBI",
+      "olcu": "235*70*100",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A2",
+      "ad": "SICAK POĞAÇA BÖREK DOLABI",
+      "olcu": "235*70*15/60",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A3",
+      "ad": "SANDVİÇ DOLABI",
+      "olcu": "100*70*125",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A4",
+      "ad": "SÜTLÜ TATLI DOLABI, DİK TİP",
+      "olcu": "250*70*200",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A5",
+      "ad": "KUMDA KAHVE ARABASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A6",
+      "ad": "ÇALIŞMA TEZGAHI",
+      "olcu": "150*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A7",
+      "ad": "ŞİŞE DOLABI, 2 KAPILI",
+      "olcu": "90*50*90",
+      "adet": 2
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A8",
+      "ad": "BAR BLENDER",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A9",
+      "ad": "PORTAKAL SIKMA MAKİNASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A10",
+      "ad": "TÜRK KAHVE MAKİNASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A11",
+      "ad": "ESPRESSO KAHVE MAKİNASI TAM OTOMATİK",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A12",
+      "ad": "TEZGAHA ANKASTRE MONTE  FIRIN, ELK.",
+      "olcu": "4 TEPSİİ",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A13",
+      "ad": "ÇAY OCAĞI, 2 DEMLİKLİ",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A14",
+      "ad": "ÇALIŞMA TEZGAHI",
+      "olcu": "150*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A15",
+      "ad": "TOST MAKİNASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A16",
+      "ad": "FRİTÖZ, ELK.",
+      "olcu": "3 LT.",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A17",
+      "ad": "2 AÇIK ALEVLİ OCAK, GAZLI, SETÜSTÜ",
+      "olcu": "40*60*30",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A18",
+      "ad": "IZGARA, GAZLI, SETÜSTÜ",
+      "olcu": "40*60*30",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A19",
+      "ad": "CİHAZALTI ÇALIŞMA TEZGAHI, DOLAPLI, TABAN RAFLI",
+      "olcu": "80*80*55",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A20",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+      "olcu": "270*115*50",
+      "adet": 1
+    },
+    {
+      "bolum": "G",
+      "bolumAd": "GİRİŞ KAT SATIŞ ALANI",
+      "poz": "A21",
+      "ad": "DİZDEN KUMANDALI EL YIKAMA LAVABOSU",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "ALT KAT MUTFAK",
+      "poz": "B1",
+      "ad": "HAMUR DOLABI, DERİNDONDURUCU, DİK TİP, TEK KAPILI",
+      "olcu": "70*80*160",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "ALT KAT MUTFAK",
+      "poz": "B2",
+      "ad": "FIRIN ALTI MAYALAMA DOLABI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "ALT KAT MUTFAK",
+      "poz": "B3",
+      "ad": "FIRIN TEZGAHI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "ALT KAT MUTFAK",
+      "poz": "B4",
+      "ad": "FIRIN",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "ALT KAT MUTFAK",
+      "poz": "B5",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+      "olcu": "120*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "ALT KAT MUTFAK",
+      "poz": "B6",
+      "ad": "BLOK KAPAKLI DERİNDONDURUCU",
+      "olcu": "100 LT.",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "ALT KAT MUTFAK",
+      "poz": "B7",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+      "olcu": "120*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "ALT KAT MUTFAK",
+      "poz": "B8",
+      "ad": "DUVAR RAFI",
+      "olcu": "120*30*4",
+      "adet": 2
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "ALT KAT MUTFAK",
+      "poz": "B9",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "120*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "ALT KAT MUTFAK",
+      "poz": "B10",
+      "ad": "DUVAR RAFI",
+      "olcu": "120*30*4",
+      "adet": 2
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "ALT KAT MUTFAK",
+      "poz": "B11",
+      "ad": "ÇÖP ARABASI",
+      "olcu": "40*50",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "ALT KAT MUTFAK",
+      "poz": "B12",
+      "ad": "TEZGAH TİPİ BUZDOLABI, 2 KAPILI",
+      "olcu": "143*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "ALT KAT MUTFAK",
+      "poz": "B13",
+      "ad": "DUVAR RAFI",
+      "olcu": "143*30*4",
+      "adet": 2
+    }
+  ]
+}

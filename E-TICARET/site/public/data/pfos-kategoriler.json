@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-05-31T01:50:19.559Z",
+  "updated_at": "2026-05-31T03:26:42.225Z",
   "kategoriler": [
     {
       "id": "steakhouse",
@@ -64,14 +64,14 @@
         },
         {
           "id": "150-250",
-          "label": "150–250 m²",
+          "label": "150–250 m² (Uçan Balık)",
           "referansM2": 200,
           "meta": {
             "listeDosya": "balikci-150-250.json",
-            "kalemSayisi": 52,
-            "toplamAdet": 62,
-            "kaynakDosya": "150-250 m2 BALIKCI-ekipman-listesi.xlsx",
-            "yukleme": "2026-05-24T17:13:16.550Z"
+            "kalemSayisi": 56,
+            "toplamAdet": 68,
+            "kaynakDosya": "2016-094 UÇAN BALIK/2016-094.xlsx",
+            "yukleme": "2026-05-31T02:25:09.103Z"
           }
         }
       ]
@@ -79,18 +79,18 @@
     {
       "id": "coffee-shop",
       "label": "Coffee Shop",
-      "ustKategori": "Kafe",
+      "ustKategori": "Kafe / Coffee Shop",
       "bantlar": [
         {
           "id": "referans",
-          "label": "Referans liste",
+          "label": "Espressolab Watergarden referans",
           "referansM2": 120,
           "meta": {
             "listeDosya": "coffee-shop-referans.json",
-            "kalemSayisi": 24,
-            "toplamAdet": 28,
-            "kaynakDosya": "coffee-shop-ekipman-listesi.xlsx",
-            "yukleme": "2026-05-24T17:13:16.565Z"
+            "kalemSayisi": 21,
+            "toplamAdet": 22,
+            "kaynakDosya": "2016-114 ESPRESOLAB WATERGARDEN/2016-114-1.xlsx",
+            "yukleme": "2026-05-31T02:59:34.639Z"
           }
         }
       ]
@@ -482,10 +482,22 @@
       "bantlar": [
         {
           "id": "500-2000",
-          "label": "500–2000 m²",
+          "label": "500–2000 m² (Hampton Bolu)",
           "referansM2": 1000,
           "meta": {
             "listeDosya": "sehir-otel-500-2000.json",
+            "kalemSayisi": 186,
+            "toplamAdet": 288,
+            "kaynakDosya": "2016-088 HAMPTON BY HILTON BOLU/Hampton By Hilton.xls",
+            "yukleme": "2026-05-31T02:13:59.546Z"
+          }
+        },
+        {
+          "id": "500-2000-kocaeli",
+          "label": "500–2000 m² (Kocaeli)",
+          "referansM2": 1000,
+          "meta": {
+            "listeDosya": "sehir-otel-500-2000-kocaeli.json",
             "kalemSayisi": 192,
             "toplamAdet": 264,
             "kaynakDosya": "2016-077 HILTON KOCAELİ LAINOX/2016-077.xlsx",
@@ -509,6 +521,176 @@
             "toplamAdet": 30,
             "kaynakDosya": "2016-085 KİREMİT AKASYA MEFFTECH/2016-085.xlsx",
             "yukleme": "2026-05-31T01:50:19.554Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "kasap",
+      "label": "Kasap",
+      "ustKategori": "Şarküteri & Kasap",
+      "bantlar": [
+        {
+          "id": "100-250",
+          "label": "100–250 m²",
+          "referansM2": 175,
+          "meta": {
+            "listeDosya": "kasap-100-250.json",
+            "kalemSayisi": 28,
+            "toplamAdet": 38,
+            "kaynakDosya": "2016-087 KASAP ORTAKLAR ROTA/2016-087 kasap.xlsx",
+            "yukleme": "2026-05-31T02:05:32.421Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "kasap-sarkuteri",
+      "label": "Kasap + Şarküteri",
+      "ustKategori": "Şarküteri & Kasap",
+      "bantlar": [
+        {
+          "id": "100-250",
+          "label": "100–250 m²",
+          "referansM2": 200,
+          "meta": {
+            "listeDosya": "kasap-sarkuteri-100-250.json",
+            "kalemSayisi": 36,
+            "toplamAdet": 46,
+            "kaynakDosya": "2016-087 KASAP ORTAKLAR ROTA/2016-087.xlsx",
+            "yukleme": "2026-05-31T02:05:33.087Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "inari-bar-yemek",
+      "label": "Bar + Yemek (Hafif Asya)",
+      "ustKategori": "Restoran",
+      "bantlar": [
+        {
+          "id": "100-200",
+          "label": "100–200 m²",
+          "referansM2": 150,
+          "meta": {
+            "listeDosya": "inari-bar-yemek-100-200.json",
+            "kalemSayisi": 37,
+            "toplamAdet": 37,
+            "kaynakDosya": "2016-093 INARI RESTAURANT/2016-093-2.xlsx",
+            "yukleme": "2026-05-31T02:19:26.986Z"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mus-selinoz-turk",
+      "label": "Muş Selinöz Türk mutfağı (101)",
+      "ustKategori": "Türk mutfağı · planlanan",
+      "bantlar": [
+        {
+          "id": "100-250",
+          "label": "100–250 m² (taslak referans m²)",
+          "referansM2": 200,
+          "meta": {
+            "listeDosya": "mus-selinoz-turk-100-250.json",
+            "kalemSayisi": 89,
+            "toplamAdet": 100,
+            "kaynakDosya": "2016-101 MUŞ SELİNÖZ MİMARLIK/2016-101.xlsx",
+            "yukleme": "2026-05-31T02:33:20.890Z",
+            "durum": "planlanan"
+          }
+        }
+      ]
+    },
+    {
+      "id": "kahve-duragi",
+      "label": "Kahve Durağı",
+      "ustKategori": "Kafe / Coffee Shop · Cafe-Restaurant",
+      "bantlar": [
+        {
+          "id": "100-200",
+          "label": "Kahve Durağı 100–150 m² (Konyaaltı)",
+          "referansM2": 125,
+          "meta": {
+            "listeDosya": "kahve-duragi-100-200.json",
+            "kalemSayisi": 46,
+            "toplamAdet": 53,
+            "kaynakDosya": "2016-105 KAVE DURAĞI KONYALTI LAINOX/2016-105.xlsx",
+            "yukleme": "2026-05-31T02:52:38.696Z",
+            "konseptSinif": "cafe-restaurant-kompakt"
+          }
+        },
+        {
+          "id": "150-200",
+          "label": "Kahve Durağı 150–200 m² (Karabük)",
+          "referansM2": 175,
+          "meta": {
+            "listeDosya": "kahve-duragi-150-200.json",
+            "kalemSayisi": 51,
+            "toplamAdet": 62,
+            "kaynakDosya": "2016-106 KAHVE DURAĞI KARABÜK LAINOX/2016-106.xlsx",
+            "yukleme": "2026-05-31T02:52:38.725Z",
+            "konseptSinif": "cafe-restaurant-standart"
+          }
+        }
+      ]
+    },
+    {
+      "id": "kahve-tatli",
+      "label": "Kahve & Tatlı",
+      "ustKategori": "Kafe / Coffee Shop",
+      "bantlar": [
+        {
+          "id": "40-100",
+          "label": "40–100 m² (Çemberlitaş)",
+          "referansM2": 70,
+          "meta": {
+            "listeDosya": "kahve-tatli-40-100.json",
+            "kalemSayisi": 34,
+            "toplamAdet": 38,
+            "kaynakDosya": "2016-132 HACIBOZAN ÇEMBERLİTAŞ LAINOX/2016-132-2.xlsx",
+            "yukleme": "2026-05-31T03:06:14.399Z",
+            "konseptSinif": "kahve-tatli-pastane"
+          }
+        }
+      ]
+    },
+    {
+      "id": "kahve-duragi-pastane",
+      "label": "Kahve Durağı — Pastane & Kahvaltı",
+      "ustKategori": "Kafe / Coffee Shop",
+      "bantlar": [
+        {
+          "id": "100-200",
+          "label": "100–200 m² (Sultangazi)",
+          "referansM2": 150,
+          "meta": {
+            "listeDosya": "kahve-duragi-pastane-100-200.json",
+            "kalemSayisi": 43,
+            "toplamAdet": 48,
+            "kaynakDosya": "2016-135 KAHVE DURAĞI SULTANGAZİ LAINOX/2016-135.xlsx",
+            "yukleme": "2026-05-31T03:13:51.691Z",
+            "konseptSinif": "pastane-kahvalti-hafif-yemek"
+          }
+        }
+      ]
+    },
+    {
+      "id": "resort-otel",
+      "label": "Resort Otel (ölçekli)",
+      "ustKategori": "Otel F&B",
+      "bantlar": [
+        {
+          "id": "200-500",
+          "label": "200–500 m² (Zigana Alaçatı)",
+          "referansM2": 300,
+          "meta": {
+            "listeDosya": "resort-otel-200-500.json",
+            "kalemSayisi": 64,
+            "toplamAdet": 82,
+            "kaynakDosya": "2016-159 ZİGANA OTEL LAINOX/MUTFAK MALZEME zigana resort hotel alaçatı.xls",
+            "yukleme": "2026-05-31T03:26:42.218Z",
+            "konseptSinif": "resort-otel-olcekli"
           }
         }
       ]

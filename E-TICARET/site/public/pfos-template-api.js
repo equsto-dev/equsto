@@ -7,7 +7,7 @@
   var API_QUOTE = "/api/pfos/quote";
   var API_CALC = "/api/pfos/calculate";
   var API_KONSEPT = "/api/pfos/konseptler";
-  var FALLBACK_KONSEPT = "/data/pfos-konseptler.json?v=20260531kiremit-akasya";
+  var FALLBACK_KONSEPT = "/data/pfos-konseptler.json?v=20260531resort-otel";
 
   var KAT_DEPT = {
     A: "kahve",
@@ -32,12 +32,22 @@
     if (
       d === "Balık Restaurant" ||
       /balık\s*restaurant|balik\s*restaurant|deniz\s*ürün|seafood/i.test(d) ||
-      (/balık|balik/i.test(d) && /restaurant|restoran|lokanta|bistro/i.test(d))
+      (/balık|balik/i.test(d) && /restaurant|restoran|lokanta|bistro/i.test(d)) ||
+      /uçan\s*balık|ucan\s*balik/i.test(d) ||
+      /uçan\s*balık|ucan\s*balik/i.test(k)
     ) {
       return "balikci";
     }
     if (/pizzac/i.test(d) || /pizzac/i.test(k)) return "pizzaci";
     if (/dönerci|donerci/i.test(d)) return "kebap-ortadogu";
+    if (
+      /espressolab|espresso\s*lab/i.test(d) ||
+      /espressolab|espresso\s*lab/i.test(k) ||
+      /watergarden/i.test(d) ||
+      /watergarden/i.test(k)
+    ) {
+      return "coffee-shop";
+    }
     if (/coffee|^cafe$|kafe-kafeterya|kafe$/i.test(k) || (/^cafe$/i.test(d) && !/restaurant/i.test(k)))
       return "coffee-shop";
     if (/meyhane|meze|gurme şarküteri/i.test(d) || /meyhane/i.test(k)) return "meyhane";
@@ -51,6 +61,28 @@
       /kahve\s*atölyesi/i.test(k)
     ) {
       return "kahve-atolyesi";
+    }
+    if (
+      /pastane\s*&\s*kahvaltı|pastane\s*ve\s*kahvaltı|sultangazi/i.test(d) ||
+      /pastane\s*kahvalt/i.test(k)
+    ) {
+      return "kahve-duragi-pastane";
+    }
+    if (
+      d === "Kahve Durağı" ||
+      (/kahve\s*durağı|kahve\s*duragi|kave\s*durağı|kave\s*duragi/i.test(d) &&
+        !/pastane|kahvaltı|kahvalti|sultangazi/i.test(d)) ||
+      (/kahve\s*durağı|kahve\s*duragi/i.test(k) && !/pastane|kahvalt/i.test(k))
+    ) {
+      return "kahve-duragi";
+    }
+    if (
+      d === "Kahve & Tatlı" ||
+      /kahve\s*(ve|&)\s*tatlı|kahve\s*(ve|&)\s*tatli/i.test(d) ||
+      /hacıbozan|hacibozan|çemberlitaş|cemberlitas/i.test(d) ||
+      /kahve\s*tatlı|kahve-tatli/i.test(k)
+    ) {
+      return "kahve-tatli";
     }
     if (
       d === "Harvest Cafe" ||
@@ -85,9 +117,17 @@
       return "guneli-pastane";
     }
     if (
+      d === "Resort Otel" ||
+      /zigana|alaçatı|alacati|resort\s*otel|resort\s*hotel/i.test(d) ||
+      (/otel/i.test(k) && /resort|zigana|alaçatı|alacati/i.test(d))
+    ) {
+      return "resort-otel";
+    }
+    if (
       d === "Şehir Oteli (Business)" ||
       /şehir\s*oteli|sehir\s*oteli|business\s*hotel/i.test(d) ||
-      (/otel/i.test(k) && /şehir|sehir|business/i.test(d))
+      /hampton/i.test(d) ||
+      (/otel/i.test(k) && /şehir|sehir|business|hampton/i.test(d))
     ) {
       return "sehir-otel";
     }
@@ -101,6 +141,27 @@
       /kiremit/i.test(d)
     ) {
       return "kiremit-akasya";
+    }
+    if (
+      d === "Kasap + Şarküteri" ||
+      (/kasap/i.test(d) && /şarküteri|sarkuteri/i.test(d))
+    ) {
+      return "kasap-sarkuteri";
+    }
+    if (
+      d === "Kasap" ||
+      (/^kasap$/i.test(d) && !/şarküteri|sarkuteri|pişirme|pisirme/i.test(d)) ||
+      /yalnızca\s*kasap|sadece\s*kasap/i.test(d)
+    ) {
+      return "kasap";
+    }
+    if (
+      d === "Bar + Yemek (Hafif Asya)" ||
+      /inari/i.test(d) ||
+      (/bar/i.test(d) && /yemek/i.test(d) && /asya|hafif/i.test(d)) ||
+      /hafif\s*asya.*bar|bar.*hafif\s*asya/i.test(d)
+    ) {
+      return "inari-bar-yemek";
     }
     if (d === "Pideci" || /pideci|pide\s*ci/i.test(d)) return "pideci";
     if (d === "Sushi" || /sushi|omakase/i.test(d) || /sushi/i.test(k)) return "sushi";

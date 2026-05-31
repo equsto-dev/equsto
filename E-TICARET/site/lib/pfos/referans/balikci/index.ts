@@ -14,7 +14,7 @@ export async function buildBalikciTemplate(
   return {
     konsept: "balikci",
     label: "Balıkçı",
-    ornekler: ["Balık restoran", "Deniz ürünleri"],
+    ornekler: ["Uçan Balık referans", "Balık restoran", "Deniz ürünleri"],
     segmentBasis: "m2",
     seatDensity: 1.5,
     teklifPozModu: "referans",

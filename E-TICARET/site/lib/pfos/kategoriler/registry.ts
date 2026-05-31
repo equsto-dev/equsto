@@ -73,6 +73,27 @@ export const PFOS_KATEGORI_TANIMLARI: PfosKategoriTanim[] = [
     bantlar: [{ id: "100-250", label: "100–250 m²", referansM2: 175 }],
   },
   {
+    id: "kasap",
+    label: "Kasap",
+    ustKategori: "Şarküteri & Kasap",
+    planNot: "2016-087 KASAP ORTAKLAR ROTA/2016-087 kasap.xlsx",
+    bantlar: [{ id: "100-250", label: "100–250 m²", referansM2: 175 }],
+  },
+  {
+    id: "kasap-sarkuteri",
+    label: "Kasap + Şarküteri",
+    ustKategori: "Şarküteri & Kasap",
+    planNot: "2016-087 KASAP ORTAKLAR ROTA/2016-087.xlsx",
+    bantlar: [{ id: "100-250", label: "100–250 m²", referansM2: 200 }],
+  },
+  {
+    id: "inari-bar-yemek",
+    label: "Bar + Yemek (Hafif Asya)",
+    ustKategori: "Restoran",
+    planNot: "2016-093 INARI RESTAURANT/2016-093-2.xlsx",
+    bantlar: [{ id: "100-200", label: "100–200 m²", referansM2: 150 }],
+  },
+  {
     id: "coffee-shop",
     label: "Coffee Shop",
     ustKategori: "Kafe",

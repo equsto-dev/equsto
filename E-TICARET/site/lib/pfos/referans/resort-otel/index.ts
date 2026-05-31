@@ -2,22 +2,22 @@ import type { ConceptTemplate } from "../../core/engine-types";
 import { referansKalemlerToTemplateItems } from "../build-template-items";
 import { loadReferansProfil } from "../pfos-referans-loader";
 
-export async function buildSehirOtelTemplate(m2: number): Promise<ConceptTemplate> {
-  const ref = await loadReferansProfil("sehir-otel", m2);
+export async function buildResortOtelTemplate(m2: number): Promise<ConceptTemplate> {
+  const ref = await loadReferansProfil("resort-otel", m2);
   return {
-    konsept: "sehir-otel",
-    label: "Şehir Oteli (Business)",
+    konsept: "resort-otel",
+    label: "Resort Otel",
     ornekler: [
-      "Hampton By Hilton Bolu",
-      "Hilton Kocaeli şehir oteli",
-      "Ana mutfak · büfe · banquet",
+      "Zigana Resort Alaçatı",
+      "Boutique resort F&B",
+      "Restaurant + personel mutfak",
     ],
     segmentBasis: "m2",
     seatDensity: 0.8,
     teklifPozModu: "referans",
     teklifBolum: {
-      no: "088",
-      baslik: `088. ŞEHİR OTELİ · ${ref.label.toUpperCase()}`,
+      no: "159",
+      baslik: `159. ZİGANA RESORT · ${ref.label.toUpperCase()}`,
     },
     referansId: ref.id,
     items: referansKalemlerToTemplateItems(ref.kalemler),

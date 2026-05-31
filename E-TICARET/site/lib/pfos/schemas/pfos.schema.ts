@@ -46,6 +46,13 @@ export const KonseptEnum = z.enum([
   "guneli-pastane",
   "sehir-otel",
   "kiremit-akasya",
+  "kasap",
+  "kasap-sarkuteri",
+  "inari-bar-yemek",
+  "kahve-duragi",
+  "kahve-tatli",
+  "kahve-duragi-pastane",
+  "resort-otel",
 ]);
 export type Konsept = z.infer<typeof KonseptEnum>;
 
@@ -76,6 +83,13 @@ export const KONSEPT_LABELS: Record<Konsept, string> = {
   "guneli-pastane": "Güneli Fırın",
   "sehir-otel": "Şehir Oteli (Business)",
   "kiremit-akasya": "Kiremit Akasya",
+  kasap: "Kasap",
+  "kasap-sarkuteri": "Kasap + Şarküteri",
+  "inari-bar-yemek": "Bar + Yemek (Hafif Asya)",
+  "kahve-duragi": "Kahve Durağı",
+  "kahve-tatli": "Kahve & Tatlı",
+  "kahve-duragi-pastane": "Kahve Durağı — Pastane & Kahvaltı",
+  "resort-otel": "Resort Otel (ölçekli)",
 };
 
 export type FiyatStratejisi = "ekonomik" | "orta" | "premium";
