@@ -13,11 +13,9 @@ export default function GeoLandingRoute({ slug, lang, kind = "root" }: Props) {
   return (
     <>
       <GeoLandingJsonLd slug={slug} lang={lang} kind={kind} />
-      <GeoLandingPage
-        ssrContent={
-          <GeoLandingSsrContent slug={slug} lang={lang} kind={kind} />
-        }
-      />
+      <GeoLandingPage hasSsr>
+        <GeoLandingSsrContent slug={slug} lang={lang} kind={kind} />
+      </GeoLandingPage>
     </>
   );
 }
