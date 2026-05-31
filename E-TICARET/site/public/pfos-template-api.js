@@ -7,7 +7,7 @@
   var API_QUOTE = "/api/pfos/quote";
   var API_CALC = "/api/pfos/calculate";
   var API_KONSEPT = "/api/pfos/konseptler";
-  var FALLBACK_KONSEPT = "/data/pfos-konseptler.json?v=20260527kokteyl-kahve";
+  var FALLBACK_KONSEPT = "/data/pfos-konseptler.json?v=20260527pastane-150-250";
 
   var KAT_DEPT = {
     A: "kahve",

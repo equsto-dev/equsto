@@ -53,7 +53,7 @@
         "type": "number",
         "required": "true",
         "mapsTo": "m2",
-        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan ≤150→100-300, >150→150-300; all-day-dining 150–300→The House, >300→THC; restoran → 500-1000; kokteyl-kahve → 30-50; birahane → 100-300; pastane → 100-200; pideci → 100-250; sushi → 40-100; tavukcu → 80-150; sarkuteri-kiosk → kiosk; hamburger-kiosk → 60-100; hotdog-kiosk → kiosk; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu → 300-500 (zone şablon)",
+        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan ≤150→100-300, >150→150-300; all-day-dining 150–300→The House, >300→THC; restoran → 500-1000; kokteyl-kahve → 30-50; birahane → 100-300; pastane ≤150→100-200, >150→150-250; pideci → 100-250; sushi → 40-100; tavukcu → 80-150; sarkuteri-kiosk → kiosk; hamburger-kiosk → 60-100; hotdog-kiosk → kiosk; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu → 300-500 (zone şablon)",
         "note": "Bulut Mutfak ≤15 m²: yalnızca Grab&Go / Coffee Counter. Steakhouse/Balık: ≤150 → 80-150; >150 → 150-250."
       },
       {
@@ -756,22 +756,28 @@
         "id": "pastane",
         "name": "Pastane",
         "parent": "Pastane & Fırın",
-        "desc": "Pastane / fırın · 100–200 m² referans ekipman listesi · motor: pastane",
+        "desc": "Pastane / fırın · ≤150 m² 14-PASTANE · >150 m² ekipman listesi · motor: pastane",
         "pfos": {
           "motorSlug": "pastane",
           "dukkanSecim": "Pastane",
           "m2Min": 100,
-          "m2Max": 200,
-          "bantKurali": "Tek referans liste (100–200 m²); m² ile adet ölçeklenir",
-          "listeYolu": "proje-veri/14-PASTANE.xlsx",
+          "m2Max": 250,
+          "bantKurali": "≤150 m² → 14-PASTANE (100–200); >150 m² → pastane ekipman_listesi (150–250)",
+          "listeYolu": "proje-veri/14-PASTANE.xlsx · veri/pastane ekipman_listesi.xlsx",
           "teklifKaynagi": "pfos-referans",
           "durum": "aktif",
           "bantlar": [
             {
               "id": "100-200",
-              "label": "100–200 m²",
+              "label": "100–200 m² (≤150 m²)",
               "referansM2": 150,
               "listeDosya": "pfos-referans/pastane-100-200.json"
+            },
+            {
+              "id": "150-250",
+              "label": "150–250 m² (>150 m²)",
+              "referansM2": 200,
+              "listeDosya": "pfos-referans/pastane-150-250.json"
             }
           ]
         },

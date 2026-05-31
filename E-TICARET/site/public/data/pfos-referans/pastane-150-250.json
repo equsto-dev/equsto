@@ -1,0 +1,340 @@
+{
+  "kategoriId": "pastane",
+  "bantId": "150-250",
+  "label": "Pastane 150–250 m²",
+  "referansM2": 200,
+  "kaynakDosya": "pastane ekipman_listesi.xlsx",
+  "yukleme": "2026-05-31T00:03:40.703Z",
+  "kalemSayisi": 41,
+  "toplamAdet": 41,
+  "kalemler": [
+    {
+      "bolum": "P",
+      "bolumAd": "PASTANE BÖLÜMÜ",
+      "poz": "A1",
+      "ad": "MEŞRUBAT DOLABI",
+      "olcu": "102*80*140",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PASTANE BÖLÜMÜ",
+      "poz": "A2",
+      "ad": "KASA TEZGAHI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PASTANE BÖLÜMÜ",
+      "poz": "A3",
+      "ad": "PASTA DOLABI",
+      "olcu": "150/ 150*80*140",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PASTANE BÖLÜMÜ",
+      "poz": "A4",
+      "ad": "DİLİM PASTA DOLABI",
+      "olcu": "210*80*140",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PASTANE BÖLÜMÜ",
+      "poz": "A5",
+      "ad": "ÇİKOLATA DOLABI",
+      "olcu": "210*80*140",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PASTANE BÖLÜMÜ",
+      "poz": "A6",
+      "ad": "POĞAÇA SİMİT DOLABI",
+      "olcu": "300*80*140",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PASTANE BÖLÜMÜ",
+      "poz": "A7",
+      "ad": "BÖREK PİŞİRME",
+      "olcu": "80*80*140",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PASTANE BÖLÜMÜ",
+      "poz": "A8",
+      "ad": "SICAK BÖREK DOLABI",
+      "olcu": "150*80*140",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PASTANE BÖLÜMÜ",
+      "poz": "A9",
+      "ad": "PASTA BÖREK FIRINI",
+      "olcu": "90*90*160",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PASTANE BÖLÜMÜ",
+      "poz": "A10",
+      "ad": "HAMUR BUZDOLABI",
+      "olcu": "80*80*210",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PASTANE BÖLÜMÜ",
+      "poz": "M1",
+      "ad": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+      "olcu": "70*70*205",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PASTANE BÖLÜMÜ",
+      "poz": "M2",
+      "ad": "DEPO TİPİ DERİN DONDURUCU, TEK KAPILI",
+      "olcu": "70*70*205",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PASTANE BÖLÜMÜ",
+      "poz": "M3",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN RAFLI",
+      "olcu": "100*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PASTANE BÖLÜMÜ",
+      "poz": "M4",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "60*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PASTANE BÖLÜMÜ",
+      "poz": "M5",
+      "ad": "ÇÖP ARABASI",
+      "olcu": "Ø40*50",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PASTANE BÖLÜMÜ",
+      "poz": "M6",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+      "olcu": "125*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PASTANE BÖLÜMÜ",
+      "poz": "M7",
+      "ad": "TOST MAKİNASI",
+      "olcu": "2745",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PASTANE BÖLÜMÜ",
+      "poz": "M8",
+      "ad": "CİHAZALTI ÇALIŞMA TEZGAHI, TABAN RAFLI",
+      "olcu": "280*70*55",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PASTANE BÖLÜMÜ",
+      "poz": "M9",
+      "ad": "FRİTÖZ, ÇİFT SEPETLİ, ELK., SETÜSTÜ",
+      "olcu": "80*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PASTANE BÖLÜMÜ",
+      "poz": "M10",
+      "ad": "NÖTR ARA TEZGAHI, SETÜSTÜ",
+      "olcu": "40*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PASTANE BÖLÜMÜ",
+      "poz": "M11",
+      "ad": "4 AÇIK ALEVLİ OCAK, GAZLI, SETÜSTÜ",
+      "olcu": "80*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PASTANE BÖLÜMÜ",
+      "poz": "M12",
+      "ad": "IZGARA, GAZLI, SETÜSTÜ",
+      "olcu": "80*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PASTANE BÖLÜMÜ",
+      "poz": "M13",
+      "ad": "TAVA RAFI",
+      "olcu": "335*35*35",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PASTANE BÖLÜMÜ",
+      "poz": "M14",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+      "olcu": "335*97*50",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PASTANE BÖLÜMÜ",
+      "poz": "M15",
+      "ad": "DUVAR RAFI",
+      "olcu": "100*30*4",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PASTANE BÖLÜMÜ",
+      "poz": "M16",
+      "ad": "DUVAR RAFI",
+      "olcu": "120*30*4",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIK VE İÇECEK BÖLÜMÜ",
+      "poz": "D1",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "180*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIK VE İÇECEK BÖLÜMÜ",
+      "poz": "D2",
+      "ad": "DUVAR RAFI",
+      "olcu": "210*30*4",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIK VE İÇECEK BÖLÜMÜ",
+      "poz": "D3",
+      "ad": "BULAŞIK YIKAMA MAKİNASI, SETALTI",
+      "olcu": "500 tb/s",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIK VE İÇECEK BÖLÜMÜ",
+      "poz": "D4",
+      "ad": "ÇÖP ARABASI",
+      "olcu": "Ø40*50",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIK VE İÇECEK BÖLÜMÜ",
+      "poz": "D5",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+      "olcu": "210*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIK VE İÇECEK BÖLÜMÜ",
+      "poz": "D6",
+      "ad": "DUVAR RAFI",
+      "olcu": "210*30*4",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIK VE İÇECEK BÖLÜMÜ",
+      "poz": "D7",
+      "ad": "BAR BLENDER",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIK VE İÇECEK BÖLÜMÜ",
+      "poz": "D8",
+      "ad": "PORTAKAL SIKMA MAKİNASI",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIK VE İÇECEK BÖLÜMÜ",
+      "poz": "D9",
+      "ad": "TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+      "olcu": "188*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIK VE İÇECEK BÖLÜMÜ",
+      "poz": "D10",
+      "ad": "ÇAY OCAĞI, 3 DEMLİKLİ",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIK VE İÇECEK BÖLÜMÜ",
+      "poz": "D11",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ",
+      "olcu": "100*60*40",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIK VE İÇECEK BÖLÜMÜ",
+      "poz": "D12",
+      "ad": "ESPRESSO KAHVE MAKİNASI",
+      "olcu": "çift gruplu",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIK VE İÇECEK BÖLÜMÜ",
+      "poz": "D13",
+      "ad": "KAHVE DEĞİRMENİ",
+      "olcu": "-",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIK VE İÇECEK BÖLÜMÜ",
+      "poz": "Y1",
+      "ad": "YER IZGARASI",
+      "olcu": "30*30*14",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIK VE İÇECEK BÖLÜMÜ",
+      "poz": "Y2",
+      "ad": "YER IZGARASI",
+      "olcu": "95*30*14",
+      "adet": 1
+    }
+  ]
+}

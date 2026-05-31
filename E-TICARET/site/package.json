@@ -99,6 +99,7 @@
     "pfos:italyan:import": "node scripts/import-italyan-konsept.mjs",
     "pfos:birahane:import": "node scripts/import-birahane-konsept.mjs",
     "pfos:pastane:import": "node scripts/import-pastane-konsept.mjs",
+    "pfos:pastane-150-250:import": "node scripts/import-pastane-150-250-konsept.mjs",
     "pfos:pideci:import": "node scripts/import-pideci-konsept.mjs",
     "pfos:pizzaci:import": "node scripts/import-pizzaci-referans.mjs",
     "pfos:sushi:import": "node scripts/import-sushi-konsept.mjs",

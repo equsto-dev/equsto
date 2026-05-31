@@ -21,7 +21,8 @@ export type ListeBantId =
   | "60-100"
   | "150-300"
   | "500-1000"
-  | "30-50";
+  | "30-50"
+  | "150-250";
 
 export type M2BantTanim = {
   id: ListeBantId;
@@ -450,18 +451,19 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
     id: "pastane",
     name: "Pastane",
     parent: "Pastane & Fırın",
-    desc: "Pastane / fırın · 100–200 m² referans ekipman listesi · motor: pastane",
+    desc: "Pastane / fırın · ≤150 m² 14-PASTANE · >150 m² ekipman listesi · motor: pastane",
     pfos: {
       motorSlug: "pastane",
       dukkanSecim: "Pastane",
       m2Min: 100,
-      m2Max: 200,
-      bantKurali: "Tek referans liste (100–200 m²); m² ile adet ölçeklenir",
-      listeYolu: "proje-veri/14-PASTANE.xlsx",
+      m2Max: 250,
+      bantKurali: "≤150 m² → 14-PASTANE (100–200); >150 m² → pastane ekipman_listesi (150–250)",
+      listeYolu: "proje-veri/14-PASTANE.xlsx · veri/pastane ekipman_listesi.xlsx",
       teklifKaynagi: "pfos-referans",
       durum: "aktif",
       bantlar: [
-        liste("100-200", "100–200 m²", 150, "pastane"),
+        liste("100-200", "100–200 m² (≤150 m²)", 150, "pastane"),
+        liste("150-250", "150–250 m² (>150 m²)", 200, "pastane"),
       ],
     },
     questions: [],
