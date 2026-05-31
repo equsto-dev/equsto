@@ -2,8 +2,10 @@
 
 import {
   AppstoreOutlined,
+  CheckCircleOutlined,
   CloudUploadOutlined,
   ProjectOutlined,
+  RightOutlined,
   SearchOutlined,
   ShopOutlined,
 } from "@ant-design/icons";
@@ -101,13 +103,50 @@ const MODULES: ModuleCard[] = [
   },
 ];
 
-const ROADMAP = [
-  "Panel yerelde aktif — giriş, PFOS, e-ticaret modülü, kontrol.",
-  "E-ticaret — fiyat sağlığı, kampanya/kupon, yayın dosya kontrolü.",
-  "PFOS Set & Kural editörü — konseptlerden taslak üret, proje-akis.json kaydet.",
-  "Ürün yönetimi — hızlı filtreler, eksik bilgi uyarıları, toplu yükleme.",
-  "Kampanya — vitrin banner ve kupon entegrasyonu mağazada.",
-  "Yayınlama — indeks, sitemap ve Google feed tek listede.",
+type RoadmapStep = {
+  id: string;
+  label: string;
+  href: string;
+  status: "done" | "current" | "pending";
+};
+
+const ROADMAP: RoadmapStep[] = [
+  {
+    id: "panel",
+    label: "Panel yerelde aktif — giriş, PFOS, e-ticaret modülü, kontrol.",
+    href: "/yonetim/kontrol",
+    status: "done",
+  },
+  {
+    id: "eticaret",
+    label: "E-ticaret — fiyat sağlığı, kampanya/kupon, yayın dosya kontrolü.",
+    href: "/yonetim/eticaret",
+    status: "done",
+  },
+  {
+    id: "pfos-sk",
+    label: "PFOS Set & Kural editörü — konseptlerden taslak üret, proje-akis.json kaydet.",
+    href: "/yonetim/pfos",
+    status: "done",
+  },
+  {
+    id: "urun",
+    label: "Ürün yönetimi — hızlı filtreler, eksik bilgi uyarıları, toplu yükleme.",
+    href: "/yonetim/eticaret?tab=urunler",
+    status: "done",
+  },
+  {
+    id: "kampanya",
+    label: "Kampanya — vitrin banner ve kupon entegrasyonu mağazada.",
+    href: "/yonetim/eticaret?tab=kampanya",
+    status: "done",
+  },
+  {
+    id: "yayin",
+    label: "Yayınlama — indeks, sitemap ve Google feed tek listede.",
+    href: "/yonetim/eticaret?tab=yayin",
+    status: "done",
+  },
 ];
 
 export default function YonetimHub() {
@@ -236,10 +275,10 @@ export default function YonetimHub() {
       <ProCard title="Geliştirme sırası" style={{ marginTop: 16 }}>
         {ROADMAP.map((step, i) => (
           <div
-            key={step}
+            key={step.id}
             style={{
               display: "grid",
-              gridTemplateColumns: "28px 1fr",
+              gridTemplateColumns: "28px 1fr auto",
               gap: 12,
               alignItems: "start",
               padding: "10px 0",
@@ -251,7 +290,12 @@ export default function YonetimHub() {
                 width: 28,
                 height: 28,
                 borderRadius: "50%",
-                background: "#1463ff",
+                background:
+                  step.status === "done"
+                    ? "#52c41a"
+                    : step.status === "current"
+                      ? "#1463ff"
+                      : "#d9d9d9",
                 color: "#fff",
                 display: "grid",
                 placeItems: "center",
@@ -259,9 +303,29 @@ export default function YonetimHub() {
                 fontWeight: 700,
               }}
             >
-              {i + 1}
+              {step.status === "done" ? (
+                <CheckCircleOutlined style={{ fontSize: 14 }} />
+              ) : (
+                i + 1
+              )}
             </span>
-            <span>{step}</span>
+            <div>
+              <Typography.Text
+                style={{
+                  color: step.status === "pending" ? "rgba(0,0,0,.45)" : undefined,
+                }}
+              >
+                {step.label}
+              </Typography.Text>
+              {step.status === "done" && (
+                <Tag color="success" style={{ marginLeft: 8 }}>
+                  Tamam
+                </Tag>
+              )}
+            </div>
+            <Link href={step.href}>
+              <RightOutlined /> Panele git
+            </Link>
           </div>
         ))}
       </ProCard>

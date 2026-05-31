@@ -39,7 +39,7 @@ export default function EticaretYayinPanel() {
         showIcon
         style={{ marginBottom: 16 }}
         message={`Yayın kontrolü: ${okCount}/${checks.length} hazır`}
-        description="Katalog, fiyat, sitemap, Google feed ve AI keşif dosyalarının erişilebilirliği."
+        description="Katalog, fiyat, e-ticaret içeriği, Meilisearch indeksi, sitemap, Google feed ve AI keşif dosyaları — tek liste."
         action={
           <Button size="small" onClick={load} loading={loading}>
             Yenile

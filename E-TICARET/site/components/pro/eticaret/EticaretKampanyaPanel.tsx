@@ -3,12 +3,13 @@
 import {
   ModalForm,
   ProCard,
+  ProFormSelect,
   ProFormSwitch,
   ProFormText,
   ProFormTextArea,
   ProTable,
 } from "@ant-design/pro-components";
-import { App, Button, Popconfirm, Space, Tabs, Tag } from "antd";
+import { App, Button, Popconfirm, Space, Tabs, Tag, Typography } from "antd";
 import { useCallback, useEffect, useState } from "react";
 import type {
   EticaretBanner,
@@ -81,7 +82,12 @@ export default function EticaretKampanyaPanel() {
                   dataSource={data.k.map((k, _idx) => ({ ...k, _idx }))}
                   columns={[
                     { title: "Ad", dataIndex: "ad", ellipsis: true },
-                    { title: "Açıklama", dataIndex: "desc", ellipsis: true },
+                    {
+                      title: "Ticker metni",
+                      dataIndex: "acik",
+                      ellipsis: true,
+                      render: (_, r) => r.acik || r.desc || "—",
+                    },
                     { title: "Başlangıç", dataIndex: "start", width: 120 },
                     { title: "Bitiş", dataIndex: "end", width: 120 },
                     {
@@ -211,12 +217,19 @@ export default function EticaretKampanyaPanel() {
                   dataSource={data.b.map((b, _idx) => ({ ...b, _idx }))}
                   columns={[
                     {
+                      title: "Konum",
+                      dataIndex: "konum",
+                      width: 130,
+                      render: (_, r) =>
+                        r.konum === "anasayfa_alt" ? "Alt şerit" : "Hero",
+                    },
+                    { title: "Başlık", dataIndex: "baslik", ellipsis: true },
+                    {
                       title: "URL",
                       dataIndex: "url",
                       ellipsis: true,
                       copyable: true,
                     },
-                    { title: "Açıklama", dataIndex: "aciklama", ellipsis: true },
                     {
                       title: "",
                       width: 80,
@@ -250,9 +263,18 @@ export default function EticaretKampanyaPanel() {
         open={kampanyaOpen}
         modalProps={{ destroyOnClose: true, onCancel: () => setKampanyaOpen(false) }}
         onFinish={async (values) => {
+          const active = !!values.active;
           const ok = await persist({
             ...data,
-            k: [...data.k, { ...values, active: !!values.active }],
+            k: [
+              ...data.k,
+              {
+                ...values,
+                acik: values.desc,
+                active,
+                aktif: active,
+              },
+            ],
           });
           if (ok) setKampanyaOpen(false);
           return ok;
@@ -309,18 +331,41 @@ export default function EticaretKampanyaPanel() {
         onFinish={async (values) => {
           const ok = await persist({
             ...data,
-            b: [...data.b, values],
+            b: [
+              ...data.b,
+              {
+                ...values,
+                baslik: values.baslik || values.aciklama,
+                aciklama: values.aciklama || values.baslik,
+                konum: values.konum || "anasayfa_hero",
+                aktif: values.aktif !== false,
+              },
+            ],
           });
           if (ok) setBannerOpen(false);
           return ok;
         }}
       >
-        <ProFormText
-          name="url"
-          label="Görsel URL"
+        <ProFormSelect
+          name="konum"
+          label="Vitrin konumu"
+          initialValue="anasayfa_hero"
+          options={[
+            { label: "Ana sayfa hero slider", value: "anasayfa_hero" },
+            { label: "Ana sayfa alt şerit", value: "anasayfa_alt" },
+          ]}
           rules={[{ required: true }]}
         />
-        <ProFormText name="aciklama" label="Açıklama" />
+        <ProFormText name="baslik" label="Başlık" rules={[{ required: true }]} />
+        <ProFormText
+          name="url"
+          label="Link veya görsel URL"
+          rules={[{ required: true }]}
+        />
+        <ProFormText name="image" label="Görsel URL (opsiyonel)" />
+        <ProFormText name="icon" label="Alt metin / emoji (opsiyonel)" />
+        <ProFormText name="aciklama" label="Açıklama (yönetim notu)" />
+        <ProFormSwitch name="aktif" label="Vitrinde göster" initialValue />
       </ModalForm>
     </>
   );
@@ -329,9 +374,14 @@ export default function EticaretKampanyaPanel() {
 function AlertCompat() {
   return (
     <ProCard style={{ marginBottom: 16 }}>
-      Kampanya, kupon ve vitrin banner verisi{" "}
-      <code>public/data/eticaret-icerik.json</code> dosyasına kaydedilir. Mağaza vitrini{" "}
-      <code>/api/eticaret-icerik</code> veya statik JSON üzerinden okur.
+      <Typography.Paragraph style={{ marginBottom: 8 }}>
+        Kampanya ticker, hero banner ve alt şerit{" "}
+        <code>public/data/eticaret-icerik.json</code> dosyasına kaydedilir. Mağaza
+        ana sayfası <code>/api/eticaret-icerik</code> üzerinden okur.
+      </Typography.Paragraph>
+      <Button href="/" target="_blank" size="small">
+        Vitrini önizle →
+      </Button>
     </ProCard>
   );
 }
