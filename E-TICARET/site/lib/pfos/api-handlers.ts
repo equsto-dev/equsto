@@ -664,7 +664,8 @@ export async function pfosPostQuote(req: NextRequest) {
       return NextResponse.json({ error: err.message }, { status: 400 });
     }
     console.error("[PFOS quote]", err);
-    return NextResponse.json({ error: "Sunucu hatası" }, { status: 500 });
+    const msg = err instanceof Error ? err.message : "Sunucu hatası";
+    return NextResponse.json({ error: msg }, { status: 500 });
   }
 }
 
