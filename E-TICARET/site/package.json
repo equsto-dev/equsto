@@ -107,6 +107,7 @@
     "pfos:all-sport-cafe:import": "node scripts/import-all-sport-cafe-konsept.mjs",
     "pfos:buyuk-yemekhane:import": "node scripts/import-buyuk-yemekhane-konsept.mjs",
     "pfos:guneli-pastane:import": "node scripts/import-guneli-pastane-konsept.mjs",
+    "pfos:sehir-otel:import": "node scripts/import-sehir-otel-konsept.mjs",
     "pfos:pideci:import": "node scripts/import-pideci-konsept.mjs",
     "pfos:pizzaci:import": "node scripts/import-pizzaci-referans.mjs",
     "pfos:sushi:import": "node scripts/import-sushi-konsept.mjs",

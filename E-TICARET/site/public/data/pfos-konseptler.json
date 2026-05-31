@@ -90,6 +90,42 @@
       "label": "Kokteyl + Kahve",
       "kalemSayisi": 18,
       "not": "30–50 m² · No Fish Today referans"
+    },
+    {
+      "slug": "kahve-atolyesi",
+      "label": "Kahve Atölyesi",
+      "kalemSayisi": 47,
+      "not": "80–150 m² · kahve + kahvaltı & hafif yemek (2016-046)"
+    },
+    {
+      "slug": "harvest-cafe",
+      "label": "Harvest Cafe",
+      "kalemSayisi": 44,
+      "not": "100–200 m² · a la carte · tatlı & kahve (2016-051 Harvest)"
+    },
+    {
+      "slug": "all-sport-cafe",
+      "label": "All Sport Cafe",
+      "kalemSayisi": 32,
+      "not": "100–200 m² · all day cafe (2016-064)"
+    },
+    {
+      "slug": "buyuk-yemekhane",
+      "label": "Büyük Yemekhane",
+      "kalemSayisi": 285,
+      "not": "2000–3500 kişi/gün · Yozgat hastane (catering / fabrika / okul)"
+    },
+    {
+      "slug": "guneli-pastane",
+      "label": "Güneli Fırın",
+      "kalemSayisi": 46,
+      "not": "200–400 m² · pastane + yerel (2016-075)"
+    },
+    {
+      "slug": "sehir-otel",
+      "label": "Şehir Oteli (Business)",
+      "kalemSayisi": 192,
+      "not": "500–2000 m² · Hilton Kocaeli F&B (2016-077)"
     }
   ]
 }

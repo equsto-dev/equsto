@@ -53,7 +53,7 @@
         "type": "number",
         "required": "true",
         "mapsTo": "m2",
-        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan ≤150→100-300, >150→150-300; all-day-dining 150–300→The House, >300→THC; restoran → 500-1000; kokteyl-kahve → 30-50; birahane → 100-300; pastane ≤150→100-200, >150→150-250; pideci → 100-250; sushi → 40-100; tavukcu → 80-150; sarkuteri-kiosk → kiosk; hamburger-kiosk → 60-100; hotdog-kiosk → kiosk; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu → 300-500 (zone şablon)",
+        "motorEtkisi": "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan ≤150→100-300, >150→150-300; all-day-dining 150–300→The House, >300→THC; restoran → 500-1000; kokteyl-kahve → 30-50; kahve-atolyesi → 80-150; harvest-cafe → 100-200; all-sport-cafe → 100-200; buyuk-yemekhane → 2000-3500 kişi; guneli-pastane → 200-400; sehir-otel → 500-2000; birahane → 100-300; pastane ≤150→100-200, >150→150-250; pideci → 100-250; sushi → 40-100; tavukcu → 80-150; sarkuteri-kiosk → kiosk; hamburger-kiosk → 60-100; hotdog-kiosk → kiosk; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu → 300-500 (zone şablon)",
         "note": "Bulut Mutfak ≤15 m²: yalnızca Grab&Go / Coffee Counter. Steakhouse/Balık: ≤150 → 80-150; >150 → 150-250."
       },
       {
@@ -118,6 +118,7 @@
           ],
           "Kafe / Coffee Shop": [
             "Coffee Shop",
+            "Kahve Atölyesi",
             "Kafeterya",
             "Pastane / Fırın",
             "Bilmiyorum"
@@ -134,6 +135,8 @@
           ],
           "Pastane & Fırın": [
             "Pastane",
+            "Güneli Fırın",
+            "Pastane & Yerel",
             "Artisan / butik",
             "Endüstriyel fırın",
             "Bilmiyorum"
@@ -157,6 +160,8 @@
             "Bilmiyorum"
           ],
           "Catering": [
+            "Büyük Yemekhane (Catering)",
+            "Okul Yemekhanesi",
             "Üretim Fabrikası",
             "Yerinde Üretim",
             "Taşıma Yemek (Servis & Yıkama)",
@@ -375,7 +380,7 @@
         "id": "restaurant_italyan",
         "name": "İtalyan Restoran",
         "parent": "Restoran",
-        "desc": "İtalyan / trattoria · ≤150 m² 03-italyan · >150 m² The House · motor: italyan",
+        "desc": "İtalyan / trattoria · 100–300 m² referans ekipman listesi · motor: italyan",
         "pfos": {
           "motorSlug": "italyan",
           "dukkanSecim": "İtalyan Restoran",
@@ -440,6 +445,7 @@
           "m2Min": 40,
           "m2Max": 100,
           "bantKurali": "Tek referans liste (40–100 m²); m² ile adet ölçeklenir",
+          "planPdf": "proje-veri/06-SUSHI.pdf",
           "listeYolu": "proje-veri/06 SUSHI 40-100 m2.xlsx",
           "teklifKaynagi": "pfos-referans",
           "durum": "aktif",
@@ -474,6 +480,31 @@
               "label": "80–150 m²",
               "referansM2": 115,
               "listeDosya": "pfos-referans/tavukcu-80-150.json"
+            }
+          ]
+        },
+        "questions": []
+      },
+      {
+        "id": "restaurant_sarkuteri_kiosk",
+        "name": "Şarküteri Kiosk",
+        "parent": "Restoran",
+        "desc": "Şarküteri kiosk · referans ekipman listesi · motor: sarkuteri-kiosk",
+        "pfos": {
+          "motorSlug": "sarkuteri-kiosk",
+          "dukkanSecim": "Şarküteri Kiosk",
+          "m2Min": 25,
+          "m2Max": 80,
+          "bantKurali": "Tek referans liste (kiosk); m² ile adet ölçeklenir",
+          "listeYolu": "proje-veri/7 ŞARKÜTERİ - KIOSK.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "kiosk",
+              "label": "Kiosk referans",
+              "referansM2": 45,
+              "listeDosya": "pfos-referans/sarkuteri-kiosk-kiosk.json"
             }
           ]
         },
@@ -594,6 +625,81 @@
         "questions": []
       },
       {
+        "id": "kafe_kahve_atolyesi",
+        "name": "Kahve Atölyesi",
+        "parent": "Kafe / Coffee Shop",
+        "desc": "Kahve ağırlıklı · kahvaltı & hafif yemek · 80–150 m² referans (2016-046) · motor: kahve-atolyesi",
+        "pfos": {
+          "motorSlug": "kahve-atolyesi",
+          "dukkanSecim": "Kahve Atölyesi",
+          "m2Min": 80,
+          "m2Max": 150,
+          "bantKurali": "Tek referans liste (80–150 m²); m² ile adet ölçeklenir",
+          "listeYolu": "veri/kahve-atolyesi-2016-046-1.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "80-150",
+              "label": "80–150 m²",
+              "referansM2": 120,
+              "listeDosya": "pfos-referans/kahve-atolyesi-80-150.json"
+            }
+          ]
+        },
+        "questions": []
+      },
+      {
+        "id": "kafe_harvest_cafe",
+        "name": "Harvest Cafe",
+        "parent": "Kafe / Coffee Shop",
+        "desc": "A la carte · tatlı satış · kahve ağırlıklı cafe · 100–200 m² referans (2016-051) · motor: harvest-cafe",
+        "pfos": {
+          "motorSlug": "harvest-cafe",
+          "dukkanSecim": "Harvest Cafe",
+          "m2Min": 100,
+          "m2Max": 200,
+          "bantKurali": "Tek referans liste (100–200 m²); m² ile adet ölçeklenir",
+          "listeYolu": "veri/harvest-cafe-2016-051-4.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "100-200",
+              "label": "100–200 m²",
+              "referansM2": 150,
+              "listeDosya": "pfos-referans/harvest-cafe-100-200.json"
+            }
+          ]
+        },
+        "questions": []
+      },
+      {
+        "id": "kafe_all_sport_cafe",
+        "name": "All Sport Cafe",
+        "parent": "Kafe / Coffee Shop",
+        "desc": "All day cafe · gün boyu servis · 100–200 m² referans (2016-064) · motor: all-sport-cafe",
+        "pfos": {
+          "motorSlug": "all-sport-cafe",
+          "dukkanSecim": "All Sport Cafe",
+          "m2Min": 100,
+          "m2Max": 200,
+          "bantKurali": "Tek referans liste (100–200 m²); m² ile adet ölçeklenir",
+          "listeYolu": "veri/all-sport-cafe-2016-064-1.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "100-200",
+              "label": "100–200 m²",
+              "referansM2": 150,
+              "listeDosya": "pfos-referans/all-sport-cafe-100-200.json"
+            }
+          ]
+        },
+        "questions": []
+      },
+      {
         "id": "coffee_shop",
         "name": "Coffee Shop",
         "parent": "Kafe / Coffee Shop",
@@ -653,7 +759,7 @@
           "dukkanSecim": "Fine Dining",
           "m2Min": 500,
           "m2Max": 1000,
-          "bantKurali": "Büyük restoran referans (düğün · rezervasyon · eğlence)",
+          "bantKurali": "Büyük restoran referans listesi (düğün · rezervasyon · eğlence)",
           "listeYolu": "proje-veri/RESTORAN.xlsx",
           "teklifKaynagi": "pfos-referans",
           "durum": "aktif",
@@ -678,7 +784,7 @@
           "dukkanSecim": "Dünya Mutfağı",
           "m2Min": 500,
           "m2Max": 1000,
-          "bantKurali": "Büyük restoran referans (düğün · rezervasyon · eğlence)",
+          "bantKurali": "Büyük restoran referans listesi (düğün · rezervasyon · eğlence)",
           "listeYolu": "proje-veri/RESTORAN.xlsx",
           "teklifKaynagi": "pfos-referans",
           "durum": "aktif",
@@ -688,31 +794,6 @@
               "label": "500–1000 m²",
               "referansM2": 750,
               "listeDosya": "pfos-referans/restoran-500-1000.json"
-            }
-          ]
-        },
-        "questions": []
-      },
-      {
-        "id": "restaurant_sarkuteri_kiosk",
-        "name": "Şarküteri Kiosk",
-        "parent": "Restoran",
-        "desc": "Şarküteri kiosk · referans ekipman listesi · motor: sarkuteri-kiosk",
-        "pfos": {
-          "motorSlug": "sarkuteri-kiosk",
-          "dukkanSecim": "Şarküteri Kiosk",
-          "m2Min": 25,
-          "m2Max": 80,
-          "bantKurali": "Tek referans liste (kiosk); m² ile adet ölçeklenir",
-          "listeYolu": "proje-veri/7 ŞARKÜTERİ - KIOSK.xlsx",
-          "teklifKaynagi": "pfos-referans",
-          "durum": "aktif",
-          "bantlar": [
-            {
-              "id": "kiosk",
-              "label": "Kiosk referans",
-              "referansM2": 45,
-              "listeDosya": "pfos-referans/sarkuteri-kiosk-kiosk.json"
             }
           ]
         },
@@ -778,6 +859,56 @@
               "label": "150–250 m² (>150 m²)",
               "referansM2": 200,
               "listeDosya": "pfos-referans/pastane-150-250.json"
+            }
+          ]
+        },
+        "questions": []
+      },
+      {
+        "id": "pastane_guneli",
+        "name": "Güneli Fırın",
+        "parent": "Pastane & Fırın",
+        "desc": "Pastane + yerel satış · 200–400 m² referans (2016-075) · motor: guneli-pastane",
+        "pfos": {
+          "motorSlug": "guneli-pastane",
+          "dukkanSecim": "Güneli Fırın",
+          "m2Min": 200,
+          "m2Max": 400,
+          "bantKurali": "Tek referans liste (200–400 m²); m² ile adet ölçeklenir",
+          "listeYolu": "veri/guneli-pastane-2016-075.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "200-400",
+              "label": "200–400 m²",
+              "referansM2": 300,
+              "listeDosya": "pfos-referans/guneli-pastane-200-400.json"
+            }
+          ]
+        },
+        "questions": []
+      },
+      {
+        "id": "pastane_yerel",
+        "name": "Pastane & Yerel",
+        "parent": "Pastane & Fırın",
+        "desc": "Pastane + yerel perakende · 200–400 m² Güneli referans · motor: guneli-pastane",
+        "pfos": {
+          "motorSlug": "guneli-pastane",
+          "dukkanSecim": "Pastane & Yerel",
+          "m2Min": 200,
+          "m2Max": 400,
+          "bantKurali": "Tek referans liste (200–400 m²); m² ile adet ölçeklenir",
+          "listeYolu": "veri/guneli-pastane-2016-075.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "200-400",
+              "label": "200–400 m²",
+              "referansM2": 300,
+              "listeDosya": "pfos-referans/guneli-pastane-200-400.json"
             }
           ]
         },
@@ -1132,16 +1263,24 @@
         "id": "otel_sehir",
         "name": "Şehir Oteli (Business)",
         "parent": "Otel F&B",
-        "desc": "Şehir Oteli (Business) · liste hazırlanıyor — genel şablon",
+        "desc": "Şehir oteli F&B · ana mutfak · büfe · banquet · Hilton Kocaeli referans (2016-077) · motor: sehir-otel",
         "pfos": {
-          "motorSlug": "",
+          "motorSlug": "sehir-otel",
           "dukkanSecim": "Şehir Oteli (Business)",
-          "m2Min": 200,
+          "m2Min": 500,
           "m2Max": 2000,
-          "bantKurali": "Liste hazırlanıyor — genel şablon",
-          "teklifKaynagi": "planlanan",
-          "durum": "planlanan",
-          "bantlar": []
+          "bantKurali": "Tek referans liste (500–2000 m²); m² ile adet ölçeklenir",
+          "listeYolu": "veri/hilton-sehir-otel-2016-077.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "500-2000",
+              "label": "500–2000 m²",
+              "referansM2": 1000,
+              "listeDosya": "pfos-referans/sehir-otel-500-2000.json"
+            }
+          ]
         },
         "questions": []
       },
@@ -1193,6 +1332,81 @@
           "teklifKaynagi": "planlanan",
           "durum": "planlanan",
           "bantlar": []
+        },
+        "questions": []
+      },
+      {
+        "id": "catering_buyuk_yemekhane",
+        "name": "Büyük Yemekhane (Catering)",
+        "parent": "Catering",
+        "desc": "Büyük hastane / kurumsal mutfak · 2000–3500 kişi/gün · Yozgat referans (2016-070) · motor: buyuk-yemekhane",
+        "pfos": {
+          "motorSlug": "buyuk-yemekhane",
+          "dukkanSecim": "Büyük Yemekhane (Catering)",
+          "m2Min": 2000,
+          "m2Max": 3500,
+          "bantKurali": "Tek referans liste (2000–3500 kişi/gün); kapasite ile adet ölçeklenir",
+          "listeYolu": "veri/yozgat-yemekhane-2016-070.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "2000-3500",
+              "label": "2000–3500 kişi/gün",
+              "referansM2": 2750,
+              "listeDosya": "pfos-referans/buyuk-yemekhane-2000-3500.json"
+            }
+          ]
+        },
+        "questions": []
+      },
+      {
+        "id": "fabrika_yemekhanesi",
+        "name": "Fabrika Yemekhanesi",
+        "parent": "Üretim / Fabrika",
+        "desc": "Fabrika personel yemekhanesi · 2000–3500 kişi/gün · Yozgat referans · motor: buyuk-yemekhane",
+        "pfos": {
+          "motorSlug": "buyuk-yemekhane",
+          "dukkanSecim": "Fabrika Yemekhanesi",
+          "m2Min": 2000,
+          "m2Max": 3500,
+          "bantKurali": "Tek referans liste (2000–3500 kişi/gün); kapasite ile adet ölçeklenir",
+          "listeYolu": "veri/yozgat-yemekhane-2016-070.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "2000-3500",
+              "label": "2000–3500 kişi/gün",
+              "referansM2": 2750,
+              "listeDosya": "pfos-referans/buyuk-yemekhane-2000-3500.json"
+            }
+          ]
+        },
+        "questions": []
+      },
+      {
+        "id": "okul_yemekhanesi",
+        "name": "Okul Yemekhanesi",
+        "parent": "Catering",
+        "desc": "Okul / kampüs yemekhanesi · 2000–3500 kişi/gün · Yozgat referans · motor: buyuk-yemekhane",
+        "pfos": {
+          "motorSlug": "buyuk-yemekhane",
+          "dukkanSecim": "Okul Yemekhanesi",
+          "m2Min": 2000,
+          "m2Max": 3500,
+          "bantKurali": "Tek referans liste (2000–3500 kişi/gün); kapasite ile adet ölçeklenir",
+          "listeYolu": "veri/yozgat-yemekhane-2016-070.xlsx",
+          "teklifKaynagi": "pfos-referans",
+          "durum": "aktif",
+          "bantlar": [
+            {
+              "id": "2000-3500",
+              "label": "2000–3500 kişi/gün",
+              "referansM2": 2750,
+              "listeDosya": "pfos-referans/buyuk-yemekhane-2000-3500.json"
+            }
+          ]
         },
         "questions": []
       },
@@ -38203,6 +38417,6 @@
         "tip_kodu": ""
       }
     ],
-    "updated_at": "2026-05-30T22:50:06.554Z"
+    "updated_at": "2026-05-31T01:40:14.025Z"
   }
 }

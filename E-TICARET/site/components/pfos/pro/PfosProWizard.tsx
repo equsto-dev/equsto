@@ -699,7 +699,7 @@ export default function PfosProWizard() {
                     <ProFormDigit
                       label={zoneLabel(z)}
                       min={0}
-                      max={2000}
+                      max={m2Max}
                       fieldProps={{
                         value: parseM2(state.bolumM2[z]) || undefined,
                         onChange: (v) =>
