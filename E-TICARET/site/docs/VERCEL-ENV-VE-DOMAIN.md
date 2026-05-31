@@ -17,6 +17,7 @@ Her satır için **Environments:** Production **ve** Preview işaretli.
 | `DATABASE_URL` | `.env.local` — Transaction, port **6543** (tırnak **yok**) |
 | `DIRECT_URL` | `.env.local` — Session, port **5432** (tırnak **yok**) |
 | `EQUSTO_ADMIN_BEARER` | `.env.local` — `eq_adm_...` |
+| `EQUSTO_ADMIN_RECOVERY_CODE` | `.env.local` — `eq_rc_...` (admin «Şifremi unuttum») |
 | `LEGACY_DATA_BASE` | `https://equsto.com` |
 | `NEXT_PUBLIC_SITE_URL` | `https://equsto.com` |
 | `NEXT_PUBLIC_SUPABASE_URL` | `https://gmnbhmwcmxukebulqwbn.supabase.co` (Auth hazırlığı) |
