@@ -777,6 +777,15 @@
 
   function boot() {
     var key = pathKey();
+    var root = document.getElementById("eq-geo-main");
+    if (root && root.getAttribute("data-eq-geo-ssr") === "1") {
+      var isEn = key.indexOf("en/") === 0;
+      ensureVitrinChrome().then(function () {
+        ensureGeoScripts();
+      });
+      if (isEn) document.documentElement.lang = "en";
+      return;
+    }
     var isEn = key.indexOf("en/") === 0;
     var miss = uiStrings(isEn ? "en" : "tr");
     ensureVitrinChrome()

@@ -1,5 +1,5 @@
 import JsonLdScript from "@/components/seo/JsonLdScript";
-import { getSiteOrigin } from "@/lib/google-merchant-feed";
+import { getSiteOrigin } from "@/lib/site-origin";
 
 export default function GlobalSiteJsonLd() {
   const origin = getSiteOrigin();
@@ -11,10 +11,32 @@ export default function GlobalSiteJsonLd() {
         "@type": "Organization",
         "@id": `${origin}/#organization`,
         name: "Equsto Teknoloji Limited",
+        alternateName: ["Equsto", "Equsto Endüstriyel Mutfak"],
         url: origin,
         logo: `${origin}/images/equsto-logo.png`,
+        foundingDate: "2026",
         description:
-          "Equsto; restoran, otel, kafe ve bulut mutfak projeleri için endüstriyel mutfak ekipmanı ve proje planlama platformudur.",
+          "Equsto; restoran, otel, kafe ve bulut mutfak projeleri için endüstriyel mutfak ekipmanı ve proje planlama platformudur. Öztiryakiler yetkili bayii.",
+        knowsAbout: [
+          "Endüstriyel mutfak ekipmanı",
+          "Commercial kitchen equipment",
+          "Restoran mutfak teklifi",
+          "Öztiryakiler bayii",
+          "Proje Fabrikası PFOS",
+          "Bulut mutfak kurulumu",
+          "Steakhouse mutfak",
+        ],
+        areaServed: [
+          { "@type": "Country", name: "Turkey" },
+          { "@type": "Country", name: "United Arab Emirates" },
+          { "@type": "Country", name: "Qatar" },
+          { "@type": "Country", name: "Saudi Arabia" },
+        ],
+        sameAs: [
+          "https://equsto.com/llms.txt",
+          "https://equsto.com/hakkimizda",
+          "https://equsto.com/pfos",
+        ],
         contactPoint: {
           "@type": "ContactPoint",
           contactType: "sales",
@@ -44,8 +66,9 @@ export default function GlobalSiteJsonLd() {
         provider: { "@id": `${origin}/#organization` },
         areaServed: "TR",
         description:
-          "Restoran, otel, kafe ve bulut mutfak projeleri için endüstriyel mutfak ekipmanları ve proje planlama. Mr. Equsto ile 24 saatte teklif.",
+          "Restoran, otel, kafe ve bulut mutfak projeleri için endüstriyel mutfak ekipmanları ve proje planlama. Mr. Equsto ile 5 dakikada teklif.",
         serviceType: "Endüstriyel mutfak ekipmanı ve proje danışmanlığı",
+        url: `${origin}/pfos`,
       },
     ],
   };

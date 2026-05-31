@@ -1,5 +1,6 @@
 import landingsTr from "./landings.json";
 import landingsEn from "./landings-en.json";
+import { PILLAR_FAQ } from "./pillar-faq";
 
 export type GeoFaqItem = [string, string];
 
@@ -32,7 +33,9 @@ export function getGeoLanding(
   const store = lang === "en" ? landingsEn : landingsTr;
   const raw = (store as Record<string, unknown>)[key];
   if (!raw || typeof raw !== "object") return null;
-  return raw as GeoLandingRecord;
+  const page = raw as GeoLandingRecord;
+  const faq = page.faq?.length ? page.faq : PILLAR_FAQ[key];
+  return faq?.length ? { ...page, faq } : page;
 }
 
 export function geoCanonicalPath(

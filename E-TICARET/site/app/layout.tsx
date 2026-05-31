@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import GlobalSiteJsonLd from "@/components/seo/GlobalSiteJsonLd";
+import SiteDiscoveryFaqJsonLd from "@/components/seo/SiteDiscoveryFaqJsonLd";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -14,8 +15,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Equsto",
-  description: "Profesyonel mutfak ekipmanları — Sprint 0 omurga",
+  title: "Equsto | Endüstriyel Mutfak & Gastronomi Platformu",
+  description:
+    "Equsto — Türkiye endüstriyel mutfak ekipmanı, Öztiryakiler yetkili bayii, PFOS ile 5 dakikada restoran mutfak teklifi. Restoran, otel, kafe, bulut mutfak.",
+  metadataBase: new URL("https://equsto.com"),
+  alternates: {
+    types: {
+      "text/plain": [{ url: "/llms.txt", title: "Equsto — LLMs" }],
+    },
+  },
 };
 
 export default function RootLayout({
@@ -31,6 +39,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
         <GlobalSiteJsonLd />
+        <SiteDiscoveryFaqJsonLd />
         <div id="eq-shop-chrome-root" />
         {children}
       </body>

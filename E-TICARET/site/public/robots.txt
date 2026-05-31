@@ -2,6 +2,7 @@ User-agent: *
 Allow: /
 
 # AI / GEO asistanları (içerik özeti: /llms.txt)
+# LLMs: https://equsto.com/llms.txt
 User-agent: GPTBot
 Allow: /
 User-agent: ChatGPT-User

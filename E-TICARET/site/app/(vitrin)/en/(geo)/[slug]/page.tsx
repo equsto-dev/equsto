@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import GeoLandingJsonLd from "@/components/seo/GeoLandingJsonLd";
-import GeoLandingPage from "@/components/vitrin/GeoLandingPage";
+import GeoLandingRoute from "@/components/vitrin/GeoLandingRoute";
 import { buildGeoMetadata } from "@/lib/geo/metadata";
 import { GEO_EN_SLUGS } from "@/lib/vitrin/geo-routes";
 
@@ -27,10 +26,5 @@ export default async function GeoEnSlugPage({
 }) {
   const { slug } = await params;
   if (!GEO_EN_SLUGS.includes(slug as (typeof GEO_EN_SLUGS)[number])) notFound();
-  return (
-    <>
-      <GeoLandingJsonLd slug={slug} lang="en" kind="root" />
-      <GeoLandingPage />
-    </>
-  );
+  return <GeoLandingRoute slug={slug} lang="en" kind="root" />;
 }
