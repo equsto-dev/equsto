@@ -1,5 +1,6 @@
 /**
- * Admin şifre kapısı — canlıda veya EQUSTO_ADMIN_PW_SHA256 tanımlıysa zorunlu.
+ * Admin şifre kapısı — kapalı (panel doğrudan açılır).
+ * API yazma işlemleri hâlâ EQUSTO_ADMIN_BEARER ile korunur (admin-config.js).
  */
 (function () {
   const SESSION_OK = 'equsto_admin_ok';
@@ -19,9 +20,7 @@
   }
 
   function gateRequired() {
-    if (window.EQUSTO_ADMIN_PW_SHA256) return true;
-    var h = (location.hostname || '').toLowerCase();
-    return h === 'equsto.com' || h === 'www.equsto.com';
+    return false;
   }
 
   function apiBase() {
