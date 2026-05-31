@@ -66,6 +66,13 @@ export const PFOS_KATEGORI_TANIMLARI: PfosKategoriTanim[] = [
     bantlar: [{ id: "500-2000", label: "500–2000 m²", referansM2: 1000 }],
   },
   {
+    id: "kiremit-akasya",
+    label: "Kiremit Akasya",
+    ustKategori: "Fast Food / QSR",
+    planNot: "2016-085 KİREMİT AKASYA MEFFTECH/2016-085.xlsx",
+    bantlar: [{ id: "100-250", label: "100–250 m²", referansM2: 175 }],
+  },
+  {
     id: "coffee-shop",
     label: "Coffee Shop",
     ustKategori: "Kafe",

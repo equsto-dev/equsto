@@ -7,7 +7,7 @@
   var API_QUOTE = "/api/pfos/quote";
   var API_CALC = "/api/pfos/calculate";
   var API_KONSEPT = "/api/pfos/konseptler";
-  var FALLBACK_KONSEPT = "/data/pfos-konseptler.json?v=20260531sehir-otel";
+  var FALLBACK_KONSEPT = "/data/pfos-konseptler.json?v=20260531kiremit-akasya";
 
   var KAT_DEPT = {
     A: "kahve",
@@ -90,6 +90,17 @@
       (/otel/i.test(k) && /şehir|sehir|business/i.test(d))
     ) {
       return "sehir-otel";
+    }
+    if (
+      d === "Türk Mutfağı" ||
+      d === "Self Servis" ||
+      d === "Food Court" ||
+      /türk\s*mutfağı|turk\s*mutfagi/i.test(d) ||
+      /^self\s*servis$/i.test(d) ||
+      /food\s*court/i.test(d) ||
+      /kiremit/i.test(d)
+    ) {
+      return "kiremit-akasya";
     }
     if (d === "Pideci" || /pideci|pide\s*ci/i.test(d)) return "pideci";
     if (d === "Sushi" || /sushi|omakase/i.test(d) || /sushi/i.test(k)) return "sushi";
