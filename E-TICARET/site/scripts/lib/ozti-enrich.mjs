@@ -668,9 +668,47 @@ export function detectOztiOemBrand(name, category, kod) {
   if (/^9868\./i.test(k) || /^VITRIFRIGO\b/.test(up) || /\bVITRIFRIGO\b/i.test(fullUp)) return "Vitrifrigo";
   if (/^BARTSCHER\b/.test(up) || /\bBARTSCHER\b/i.test(fullUp)) return "Bartscher";
   if (/^SANTOS\b/.test(up)) return "Santos";
-  if (/^ELECTROLUX(?:\s+PROFESSIONAL)?\b/.test(up)) return up.startsWith("ELECTROLUX PROFESSIONAL") ? "Electrolux Professional" : "Electrolux";
+  if (/^ELECTROLUX(?:\s+PROFESSIONAL)?\b/.test(up)) {
+    return up.startsWith("ELECTROLUX PROFESSIONAL") ? "Electrolux Professional" : "Electrolux";
+  }
   if (/^İNOKSAN\b|^INOKSAN\b/.test(up)) return "İnoksan";
   if (/^ZANUSSI\b/.test(up)) return "Zanussi";
+  if (/^MEIKO\b/.test(up) || /\bMEIKO\b/i.test(fullUp)) return "Meiko";
+
+  /** Ad önekli bayi markaları — eq-dept-cm-facets OEM_PREFIXES ile uyumlu */
+  const OEM_LEAD = [
+    ["Hamilton Beach", /^HAMILTON\s+BEACH\b/i],
+    ["Electrolux Professional", /^ELECTROLUX\s+PROFESSIONAL\b/i],
+    ["Nuova Simonelli", /^NUOVA\s+SIMONELLI\b/i],
+    ["Bravilor Bonamat", /^BRAVILOR(?:\s+BONAMAT)?\b/i],
+    ["Robot Coupe", /^ROBOT\s+COUPE\b/i],
+    ["MenuMaster", /^MENUMASTER\b/i],
+    ["PlateMate", /^PLATEMATE\b/i],
+    ["Imperia", /^IMPERIA\b/i],
+    ["Swedlinghaus", /^SWEDLINGHAUS\b/i],
+    ["Hamilton Beach", /^HAMILTON\s+BEACH\b/i],
+    ["Vitrifrigo", /^VITRIFRIGO\b/i],
+    ["Bartscher", /^BARTSCHER\b/i],
+    ["Hoshizaki", /^HOSHIZAKI\b/i],
+    ["Alkan", /^ALKAN\b/i],
+    ["Fantom", /^FANTOM\b/i],
+    ["Tribeca", /^TRIBECA\b/i],
+    ["Copmak", /^COPMAK\b/i],
+    ["Blanco", /^BLANCO\b/i],
+    ["Dualit", /^DUALIT\b/i],
+    ["Vesta", /^VESTA\b/i],
+    ["SIMAG", /^SIMAG\b/i],
+    ["Berkel", /^BERKEL\b/i],
+    ["Dito Sama", /^DITO\s+SAMA\b/i],
+    ["Sammic", /^SAMMIC\b/i],
+    ["Smeg", /^SMEG\b/i],
+    ["Fimar", /^FIMAR\b/i],
+    ["Colged", /^COLGED\b/i],
+    ["Miele", /^MIELE\b/i],
+  ];
+  for (const [label, re] of OEM_LEAD) {
+    if (re.test(up) || re.test(fullUp)) return label;
+  }
 
   if (cat.includes("wmf")) return "WMF";
   if (cat.includes("nuova-simonelli") || cat.includes("espresso")) {

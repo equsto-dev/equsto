@@ -17,6 +17,19 @@ export const MARKA_HUB_SLUGS = [
   "bravilor-bonamat",
   "vitrifrigo",
   "bartscher",
+  "alkan",
+  "fantom",
+  "imperia",
+  "platemate",
+  "hamilton-beach",
+  "menumaster",
+  "tribeca",
+  "dualit",
+  "swedlinghaus",
+  "vesta",
+  "copmak",
+  "blanco",
+  "simag",
 ] as const;
 
 export type MarkaHubSlug = (typeof MARKA_HUB_SLUGS)[number];
