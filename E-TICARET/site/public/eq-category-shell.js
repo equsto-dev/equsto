@@ -105,7 +105,9 @@
       var href = productHref(x);
       var im = x.images && x.images[0] ? String(x.images[0]) : "";
       var img = im
-        ? '<img src="' + esc(imgSrc(im)) + '" alt="" loading="lazy" decoding="async" onerror="typeof __eqImgFail===\\'function\\'&&__eqImgFail(this)">'
+        ? '<img src="' +
+          esc(imgSrc(im)) +
+          '" alt="" loading="lazy" decoding="async" onerror="typeof __eqImgFail===\'function\'&&__eqImgFail(this)">'
         : '<span class="eq-cat-card__ph" aria-hidden="true"></span>';
       return (
         '<article class="eq-cat-card">' +
@@ -114,7 +116,7 @@
         '<a class="eq-cat-card__name" href="' + esc(href) + '">' + esc(x.name || "") + "</a>" +
         '<div class="eq-cat-card__brand">' + esc(x.oem_brand && x.oem_brand !== x.brand ? x.oem_brand : x.brand || "") + "</div>" +
         '<div class="eq-cat-card__price">' + esc(priceOneLine(x.price)) + "</div>" +
-        '<button type="button" class="eq-cat-card__btn" onclick=\"location.href=\\'/sepet.html\\'\">SEPETE EKLE</button>' +
+        '<button type="button" class="eq-cat-card__btn" onclick="location.href=\'/sepet\'">SEPETE EKLE</button>' +
         "</div></article>"
       );
     }
