@@ -397,17 +397,111 @@
 }
 
 .secEnter {
-  animation: pfosSecEnter 0.48s cubic-bezier(0.22, 1, 0.36, 1);
+  animation: pfosSecEnter 0.82s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.secEnter .secBd {
+  animation: pfosSecBodyEnter 0.72s cubic-bezier(0.16, 1, 0.3, 1) 0.14s both;
+}
+
+.secEnter .optionBtn,
+.secEnter .presetBtn,
+.secEnter .multiLabel,
+.secEnter .alanField,
+.secEnter .adresGrid,
+.secEnter .textInput {
+  animation: pfosChildFlow 0.62s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.secEnter .optionBtn:nth-child(1),
+.secEnter .presetBtn:nth-child(1),
+.secEnter .multiLabel:nth-child(1) {
+  animation-delay: 0.18s;
+}
+.secEnter .optionBtn:nth-child(2),
+.secEnter .presetBtn:nth-child(2),
+.secEnter .multiLabel:nth-child(2) {
+  animation-delay: 0.24s;
+}
+.secEnter .optionBtn:nth-child(3),
+.secEnter .presetBtn:nth-child(3),
+.secEnter .multiLabel:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.secEnter .optionBtn:nth-child(4),
+.secEnter .presetBtn:nth-child(4),
+.secEnter .multiLabel:nth-child(4) {
+  animation-delay: 0.36s;
+}
+.secEnter .optionBtn:nth-child(5),
+.secEnter .presetBtn:nth-child(5),
+.secEnter .multiLabel:nth-child(5) {
+  animation-delay: 0.42s;
+}
+.secEnter .optionBtn:nth-child(6),
+.secEnter .presetBtn:nth-child(6),
+.secEnter .multiLabel:nth-child(6) {
+  animation-delay: 0.48s;
+}
+.secEnter .optionBtn:nth-child(n + 7),
+.secEnter .presetBtn:nth-child(n + 7),
+.secEnter .multiLabel:nth-child(n + 7) {
+  animation-delay: 0.54s;
+}
+
+.proformaEnter {
+  animation: pfosSecEnter 0.82s cubic-bezier(0.16, 1, 0.3, 1) 0.08s both;
+}
+
+.railEnter {
+  animation: pfosSecBodyEnter 0.68s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 @keyframes pfosSecEnter {
   from {
     opacity: 0;
-    transform: translateY(14px);
+    transform: translateY(28px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes pfosSecBodyEnter {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes pfosChildFlow {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .secEnter,
+  .secEnter .secBd,
+  .secEnter .optionBtn,
+  .secEnter .presetBtn,
+  .secEnter .multiLabel,
+  .secEnter .alanField,
+  .secEnter .adresGrid,
+  .secEnter .textInput,
+  .proformaEnter,
+  .railEnter {
+    animation: none !important;
   }
 }
 

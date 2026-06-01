@@ -96,12 +96,25 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   const [teklifV14, setTeklifV14] = useState<TeklifModelV14 | null>(null);
   const [finished, setFinished] = useState(false);
   const [enteringPanelId, setEnteringPanelId] = useState<string | null>(null);
+  const [resultEntering, setResultEntering] = useState(false);
+  const [railEntering, setRailEntering] = useState(false);
   const [m2Touched, setM2Touched] = useState(false);
   const [adresListOpen, setAdresListOpen] = useState(false);
   const [referansOnizleme, setReferansOnizleme] =
     useState<ReferansOnizleme | null>(null);
   const [referansYukleniyor, setReferansYukleniyor] = useState(false);
   const prevOpenPanelIdRef = useRef("s1");
+  const mountedRef = useRef(false);
+
+  const triggerPanelEnter = useCallback((panelId: string) => {
+    setEnteringPanelId(panelId);
+    window.setTimeout(() => {
+      setEnteringPanelId(null);
+      document
+        .getElementById(`pfos-sec-${panelId}`)
+        ?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }, 880);
+  }, []);
 
   useEffect(() => {
     let cancelled = false;
@@ -170,15 +183,35 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     openPanelIndexRef.current = openPanelIndex;
     const openId = panels[openPanelIndex]?.id;
     if (!openId) return;
-    setEnteringPanelId(openId);
-    const t = window.setTimeout(() => {
-      setEnteringPanelId(null);
-      document
-        .getElementById(`pfos-sec-${openId}`)
-        ?.scrollIntoView({ behavior: "smooth", block: "nearest" });
-    }, 420);
+    triggerPanelEnter(openId);
+  }, [openPanelIndex, panels, triggerPanelEnter]);
+
+  useEffect(() => {
+    if (mountedRef.current) return;
+    mountedRef.current = true;
+    const firstId = panels[0]?.id;
+    if (firstId) triggerPanelEnter(firstId);
+  }, [panels, triggerPanelEnter]);
+
+  useEffect(() => {
+    if (!(finished && sonuc && teklifV14)) {
+      setResultEntering(false);
+      return;
+    }
+    setResultEntering(true);
+    const t = window.setTimeout(() => setResultEntering(false), 880);
     return () => window.clearTimeout(t);
-  }, [openPanelIndex, panels]);
+  }, [finished, sonuc, teklifV14]);
+
+  useEffect(() => {
+    if (!referansOnizleme || referansYukleniyor) {
+      setRailEntering(false);
+      return;
+    }
+    setRailEntering(true);
+    const t = window.setTimeout(() => setRailEntering(false), 720);
+    return () => window.clearTimeout(t);
+  }, [referansOnizleme, referansYukleniyor]);
 
   const motorGirdi = useMemo(
     () => soruCevaplarindanMotorGirdi(answers),
@@ -723,7 +756,9 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
 
         {finished && sonuc && teklifV14 ? (
           <>
-            <section className={`${styles.sec} ${styles.secVis} ${styles.secDone}`}>
+            <section
+              className={`${styles.sec} ${styles.secVis} ${styles.secDone}${resultEntering ? ` ${styles.secEnter}` : ""}`}
+            >
               <div className={styles.secHd}>
                 <span className={styles.secNum}>✓</span>
                 <span className={styles.secInfo}>
@@ -748,7 +783,9 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
                 </button>
               </div>
             </section>
-            <div className={styles.proformaWrap}>
+            <div
+              className={`${styles.proformaWrap}${resultEntering ? ` ${styles.proformaEnter}` : ""}`}
+            >
               <TeklifV14Proforma model={teklifV14} />
             </div>
           </>
@@ -775,7 +812,9 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
           ) : referansYukleniyor ? (
             <p className={styles.railPlaceholder}>{t("Referans dosyası aranıyor…")}</p>
           ) : referansOnizleme ? (
-            <div className={styles.railReferans}>
+            <div
+              className={`${styles.railReferans}${railEntering ? ` ${styles.railEnter}` : ""}`}
+            >
               <p className={styles.railReferansMeta}>
                 <b>{t(motorGirdi.dukkanSecim)}</b>
                 {" · "}
