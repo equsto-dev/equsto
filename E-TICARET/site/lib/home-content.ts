@@ -21,6 +21,7 @@ export const heroPillars = [
     soon: false,
     tag: "Proje Çözümleri",
     title: "Proje Fabrikası",
+    tagline: "Beş dakikada yapılır, hemen teslim edilir.",
     pitch: "Adım adım soru-cevap ile ekipman listeniz ve anlık teklif.",
     cta: "Projeyi başlat →",
     visual: "pfos" as const,
