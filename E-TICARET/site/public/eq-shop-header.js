@@ -127,24 +127,13 @@
     right.appendChild(box);
   }
 
-  function ensureCart(right) {
-    if (!right) return;
-    if (right.querySelector("#equsto-hdr-cart")) return;
-    var cart = el("div", {
-      id: "equsto-hdr-cart",
-      class: "equsto-hdr-cart",
-      style: "display:flex;flex-direction:column;line-height:1.4;cursor:pointer;",
-      title: "Sepeti aç",
-      role: "button",
-      tabindex: "0",
-      "data-i18n-attr": "title:common.cart_aria_title",
-    });
-    cart.appendChild(el("span", { id: "equsto-cart-count", style: "font-size:10px;color:var(--eq-text-muted);", text: "🛒 0" }));
-    cart.appendChild(el("span", { style: "font-size:12px;font-weight:600;color:var(--eq-text);", "data-i18n": "common.cart", text: "Alışveriş Sepeti" }));
+  function bindHdrCartGo(cart) {
+    if (!cart || cart.getAttribute("data-eq-hdr-cart-bound") === "1") return;
+    cart.setAttribute("data-eq-hdr-cart-bound", "1");
     function goCart() {
       try {
-        if (typeof window.EqustoCart === "object" && typeof window.EqustoCart.open === "function") {
-          window.EqustoCart.open();
+        if (window.EqustoCart && typeof window.EqustoCart.goToCartPage === "function") {
+          window.EqustoCart.goToCartPage();
           return;
         }
       } catch (_) {}
@@ -158,6 +147,27 @@
         goCart();
       }
     });
+  }
+
+  function ensureCart(right) {
+    if (!right) return;
+    var existing = right.querySelector("#equsto-hdr-cart");
+    if (existing) {
+      bindHdrCartGo(existing);
+      return;
+    }
+    var cart = el("div", {
+      id: "equsto-hdr-cart",
+      class: "equsto-hdr-cart",
+      style: "display:flex;flex-direction:column;line-height:1.4;cursor:pointer;",
+      title: "Sepeti aç",
+      role: "button",
+      tabindex: "0",
+      "data-i18n-attr": "title:common.cart_aria_title",
+    });
+    cart.appendChild(el("span", { id: "equsto-cart-count", style: "font-size:10px;color:var(--eq-text-muted);", "aria-hidden": "true", html: '<span class="eq-hdr-cart-badge">0</span>' }));
+    cart.appendChild(el("span", { style: "font-size:12px;font-weight:600;color:var(--eq-text);", "data-i18n": "common.cart", text: "Alışveriş Sepeti" }));
+    bindHdrCartGo(cart);
     right.appendChild(cart);
   }
 
