@@ -206,8 +206,28 @@ const TIP_RULES: TipRule[] = [
         n.length > 12),
   },
   {
+    tip: "bulasik-makinesi-setalti",
+    test: (n) =>
+      (n.includes("bulasik") || n.includes("bulaşık")) &&
+      (n.includes("setalti") ||
+        n.includes("set alti") ||
+        n.includes("500 tb") ||
+        n.includes("neo dw")),
+  },
+  {
     tip: "bulasik-makinesi-giyotin",
-    test: (n) => n.includes("giyotin") || n.includes("bulaşık makina"),
+    test: (n) =>
+      n.includes("giyotin") ||
+      ((n.includes("bulasik") || n.includes("bulaşık")) &&
+        n.includes("1000 tb")),
+  },
+  {
+    tip: "bulasik-makinesi-giyotin",
+    test: (n) =>
+      (n.includes("bulasik") || n.includes("bulaşık")) &&
+      !n.includes("setalti") &&
+      !n.includes("bardak") &&
+      !n.includes("500 tb"),
   },
   {
     tip: "davlumbaz-duvar",

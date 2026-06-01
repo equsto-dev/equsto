@@ -63,8 +63,18 @@
     },
     "buz_makinesi": {
       "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "9805.ODB14.0A",
-      "name": "OZTI BUZ MAKINESI ODB140A 140KG/GUN FLAT ICE CUBE"
+      "sku": "9805.OKB46.A0",
+      "name": "OZTI BUZ MAKINESI OKB46A 46KG/GUN — yalnızca markasız referans için; Brema/kg aile kuralı öncelikli"
+    },
+    "bulasik_setalti": {
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "sku": "075T.11110.AD",
+      "name": "TEZGAHALTI BULASIK YIKAMA MAK. TOUCH OBY 50T PDRT"
+    },
+    "bulasik_giyotin_1000": {
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "sku": "071T.11110.BB",
+      "name": "GIYOTIN TIP BULASIK YIKAMA MAK. TOUCH OBM 1080T PDRT"
     },
     "derin_dondurucu_dik": {
       "brand": "Öztiryakiler Endüstriyel Mutfak",
