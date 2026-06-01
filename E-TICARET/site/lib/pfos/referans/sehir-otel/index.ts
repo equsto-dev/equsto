@@ -10,6 +10,7 @@ export async function buildSehirOtelTemplate(m2: number): Promise<ConceptTemplat
     ornekler: [
       "Hampton By Hilton Bolu",
       "Hilton Kocaeli şehir oteli",
+      "DoubleTree Hilton Topkapı (140 oda)",
       "Ana mutfak · büfe · banquet",
     ],
     segmentBasis: "m2",

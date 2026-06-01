@@ -1,8 +1,14 @@
 /**
- * Türk Restoranı — referans kütüphanesinden motor şablonu.
- * S13-388 yerleşim modeli @ 150–300 m²
+ * Türk Restoranı — çoklu referans (S13-388 + Sütiş Excel).
+ * Teklif: resolveTemplateForQuote; isteğe referansId ile liste seçimi.
  */
-
-import { buildTurkRestoranTemplate } from "@/lib/pfos/referans/turk-restoran";
-
-export const turkRestoran = buildTurkRestoranTemplate();
+export {
+  buildTurkRestoranTemplate,
+  listTurkRestoranReferansKaynaklari,
+  listTurkRestoranReferanslar,
+  pickTurkRestoranReferansId,
+  TURK_RESTORAN_DEFAULT_REFERANS_ID,
+  TURK_RESTORAN_REFERANSLAR,
+  TURK_RESTORAN_S13_ID,
+  TURK_RESTORAN_SUTIS_BAND,
+} from "@/lib/pfos/referans/turk-restoran";

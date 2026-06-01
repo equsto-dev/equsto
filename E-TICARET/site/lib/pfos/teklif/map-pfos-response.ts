@@ -8,15 +8,24 @@ import {
   bolumForKalem,
   finalizeKalemlerForTeklif,
 } from "./assign-poz";
-import { formatTarihTr, isOlcuMetni, olcuForTeklifUrun, tlToEur, yeniTeklifSayisi } from "./format-v14";
+import {
+  birimEurFromEslesmis,
+  formatTarihTr,
+  isOlcuMetni,
+  olcuForTeklifUrun,
+  yeniTeklifSayisi,
+} from "./format-v14";
 import { resolveTeklifMarka } from "../core/catalog-enrich";
+import { displayIsimFromSablon } from "../core/ozel-imalat";
+import { repairPfosDisplayText } from "@/lib/utf8/repair-turkish-fffd";
 
 function specAciklama(k: PFOSResponse["kalemler"][number]): string {
   const u = k.urun;
   const lines: string[] = [];
-  if (u?.ad && u.ad !== k.isim) lines.push(`•  ${u.ad}`);
-  if (k.notlar && !isOlcuMetni(k.notlar)) lines.push(`•  ${k.notlar}`);
-  if (u?.sku) lines.push(`•  Stok: ${u.sku}`);
+  if (u?.ad && u.ad !== k.isim) lines.push(`•  ${repairPfosDisplayText(u.ad)}`);
+  if (k.notlar && !isOlcuMetni(k.notlar))
+    lines.push(`•  ${repairPfosDisplayText(k.notlar)}`);
+  if (u?.sku?.trim()) lines.push(`•  Stok: ${u.sku}`);
   if (u?.model && u.model !== u.sku) lines.push(`•  Model: ${u.model}`);
   const marka = resolveTeklifMarka({
     katalogMarka: u?.marka,
@@ -54,7 +63,7 @@ export function pfosResponseToTeklifV14(
   const satirlar: TeklifV14Satir[] = kalemler.map((k) => {
     const u = k.urun;
     const adet = k.adet;
-    const birimEur = tlToEur(u?.fiyat ?? null, eurTry);
+    const birimEur = birimEurFromEslesmis(u, eurTry);
     const { bolumNo, bolumBaslik } = bolumForKalem(k, res.teklifLayout);
 
     return {
@@ -63,7 +72,7 @@ export function pfosResponseToTeklifV14(
       poz: k.poz,
       ek: "",
       stokNo: u?.sku ?? "",
-      tanim: k.isim,
+      tanim: displayIsimFromSablon(k.isim),
       marka: resolveTeklifMarka({
         katalogMarka: u?.marka,
         urunAd: u?.ad,

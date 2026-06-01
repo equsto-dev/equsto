@@ -5,6 +5,7 @@
  * A şıkkı: mapsTo + motorEtkisi alanları mevcut proje-akis şemasına eklenir;
  * konsept (shopTypes) ve ürün (products) ayrı yönetilir.
  */
+import { buildDukkanBranchesFromKonseptler } from "./konsept-tanimlari";
 
 export const PFOS_Q_MESLEK = [
   "Yatırımcı",
@@ -30,100 +31,9 @@ export const PFOS_Q_UST_SEGMENT = [
   "Bilmiyorum",
 ] as const;
 
-/** Üst segment → dükkan türü dalları (PFOS adım 02 → 03) */
-export const PFOS_DUKKAN_BRANCHES: Record<string, string[]> = {
-  Restoran: [
-    "Steakhouse",
-    "Balık Restaurant",
-    "Kebapçı",
-    "Pizzacı",
-    "Pideci",
-    "Sushi",
-    "Bar + Yemek (Hafif Asya)",
-    "Türk / Esnaf lokanta",
-    "Meyhane",
-    "All Dining Cafe",
-    "İtalyan Restoran",
-    "Büyük Restoran",
-    "Fine Dining",
-    "Dünya Mutfağı",
-    "Gurme Şarküteri",
-    "Kasap",
-    "Kasap + Şarküteri",
-    "Şarküteri Kiosk",
-    "Bilmiyorum",
-  ],
-  "Kafe / Coffee Shop": [
-    "Coffee Shop",
-    "Kahve Atölyesi",
-    "Kahve Durağı",
-    "Kahve Durağı — Pastane & Kahvaltı",
-    "Kahve & Tatlı",
-    "Kafeterya",
-    "Pastane / Fırın",
-    "Bilmiyorum",
-  ],
-  "Fast Food / QSR": [
-    "Türk Mutfağı",
-    "Self Servis",
-    "Food Court",
-    "Burger",
-    "Hamburger Kiosk",
-    "Hotdog Kiosk",
-    "Pizza (paket)",
-    "Fried Chicken",
-    "Döner / Dürüm",
-    "Pide / Lahmacun",
-    "Bilmiyorum",
-  ],
-  "Pastane & Fırın": [
-    "Pastane",
-    "Güneli Fırın",
-    "Pastane & Yerel",
-    "Artisan / butik",
-    "Endüstriyel fırın",
-    "Bilmiyorum",
-  ],
-  "Bar & Lounge": [
-    "Birahane",
-    "Kokteyl + Kahve",
-    "Kokteyl Bar",
-    "Wine Bar",
-    "Beer Pub",
-    "Irish Pub",
-    "Mixology Bar",
-    "Lounger Bar",
-    "Bilmiyorum",
-  ],
-  "Otel F&B": [
-    "Şehir Oteli (Business)",
-    "Resort Otel",
-    "Dağ-Kayak Oteli",
-    "Tatil Oteli",
-    "Bilmiyorum",
-  ],
-  Catering: [
-    "Büyük Yemekhane (Catering)",
-    "Okul Yemekhanesi",
-    "Üretim Fabrikası",
-    "Yerinde Üretim",
-    "Taşıma Yemek (Servis & Yıkama)",
-    "Bilmiyorum",
-  ],
-  "Bulut Mutfak": [
-    "Grab&Go",
-    "Coffee Counter",
-    "Döner",
-    "Pizza",
-    "Pide & Lahmacun",
-    "Burger",
-    "Ev Yemekleri",
-    "Kebap & Türk Mutfağı",
-    "Bilmiyorum",
-  ],
-  "Üretim / Fabrika": ["500–2000 m²", "2000–5000 m²", "5000–10000 m²", "Bilmiyorum"],
-  Bilmiyorum: ["Bilmiyorum"],
-};
+/** Üst segment → dükkan türü dalları (yalnızca durum=aktif paketler) */
+export const PFOS_DUKKAN_BRANCHES: Record<string, string[]> =
+  buildDukkanBranchesFromKonseptler();
 
 export const PFOS_Q_BALIK_ALT = [
   "Mahalle balıkçısı",
@@ -222,7 +132,7 @@ export const DEFAULT_WIZARD_QUESTIONS: Record<string, unknown>[] = [
     required: "true",
     mapsTo: "m2",
     motorEtkisi:
-      "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan ≤150→100-300, >150→150-300; all-day-dining 150–300→The House, >300→THC; restoran → 500-1000; kokteyl-kahve → 30-50; kahve-atolyesi → 80-150; kahve-tatli → 40-100; kahve-duragi <150→100-200, ≥150→150-200; kahve-duragi-pastane → 100-200; harvest-cafe → 100-200; all-sport-cafe → 100-200; buyuk-yemekhane → 2000-3500 kişi; guneli-pastane → 200-400; resort-otel → 200-500; sehir-otel → 500-2000; kiremit-akasya → 100-250; kasap/kasap-sarkuteri → 100-250; inari-bar-yemek → 100-200; birahane → 100-300; pastane ≤150→100-200, >150→150-250; pideci → 100-250; sushi → 40-100; tavukcu → 80-150; sarkuteri-kiosk → kiosk; hamburger-kiosk → 60-100; hotdog-kiosk → kiosk; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu → 300-500 (zone şablon)",
+      "bant: steakhouse/balikci ≤150→80-150, >150→150-250; italyan ≤150→100-300, >150→150-300; all-day-dining 150–300→The House, >300→THC; restoran → 500-1000; turk-restoran → ≤300 S13-388, >300 Sütiş (200-5000); kokteyl-kahve → 30-50; kahve-atolyesi → 80-150; kahve-tatli → 40-100; kahve-duragi <150→100-200, ≥150→150-200; kahve-duragi-pastane → 100-200; harvest-cafe → 100-200; all-sport-cafe → 100-200; casual-cafe → 50-150; buyuk-yemekhane → 2000-3500 kişi; guneli-pastane → 200-400; resort-otel → 200-500; sehir-otel → 500-2000; kiremit-akasya → 100-250; mus-selinoz-turk → 100-250; kasap/kasap-sarkuteri → 100-250; inari-bar-yemek → 100-200; birahane → 100-300; pastane ≤150→100-200, >150→150-250; pideci → 100-250; sushi → 40-100; tavukcu → 80-150; sarkuteri-kiosk → kiosk; hamburger-kiosk → 60-100; hotdog-kiosk → kiosk; pizzaci ≤200→80-200, >200→200-500; kebap-ortadogu → 300-500 (zone şablon)",
     note: "Bulut Mutfak ≤15 m²: yalnızca Grab&Go / Coffee Counter. Steakhouse/Balık: ≤150 → 80-150; >150 → 150-250.",
   },
   {

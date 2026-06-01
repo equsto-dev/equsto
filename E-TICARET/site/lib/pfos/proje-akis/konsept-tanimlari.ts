@@ -25,11 +25,15 @@ export type ListeBantId =
   | "30-50"
   | "150-250"
   | "80-150"
+  | "50-150"
   | "2000-3500"
   | "200-400"
   | "500-2000"
   | "500-2000-kocaeli"
-  | "200-500";
+  | "500-2000-topkapi"
+  | "200-500"
+  | "20-60"
+  | "200-5000";
 
 export type M2BantTanim = {
   id: ListeBantId;
@@ -335,16 +339,28 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
     id: "turk_restoran",
     name: "Türk Restoranı",
     parent: "Restoran",
-    desc: "Türk / esnaf lokanta · teklif motoru: turk-restoran",
+    desc:
+      "Türk / esnaf lokanta · S13-388 (150–300) + Sütiş 2017-006 (200–5000) · motor: turk-restoran",
     pfos: {
       motorSlug: "turk-restoran",
       dukkanSecim: "Türk / Esnaf lokanta",
-      m2Min: 100,
-      m2Max: 500,
-      bantKurali: "Motor şablon; bant yok",
-      teklifKaynagi: "motor-sablon",
-      durum: "motor",
-      bantlar: [],
+      m2Min: 150,
+      m2Max: 5000,
+      bantKurali:
+        "≤300 m² → S13-388; >300 m² → Sütiş Excel; referansId ile AI/manuel seçim (ileride)",
+      listeYolu:
+        "lib/pfos/data/pfos-s13-388-referanslar.json · veri/sutis-sislihane-2017-006.xlsx",
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
+      bantlar: [
+        {
+          id: "150-300",
+          label: "150–300 m² (S13-388)",
+          referansM2: 220,
+          listeDosya: "lib/pfos/data/pfos-s13-388-referanslar.json",
+        },
+        liste("200-5000", "200–5000 m² (Sütiş Şişhane)", 500, "turk-restoran"),
+      ],
     },
     questions: [],
   },
@@ -400,6 +416,25 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
       teklifKaynagi: "pfos-referans",
       durum: "aktif",
       bantlar: [liste("80-150", "80–150 m²", 120, "kahve-atolyesi")],
+    },
+    questions: [],
+  },
+  {
+    id: "kafe_casual_cafe",
+    name: "Casual Cafe",
+    parent: "Kafe / Coffee Shop",
+    desc:
+      "Casual cafe · servis mutfağı · pasta & simit teşhir · 50–150 m² referans (2017-026 Şifa Cafe Beykent) · motor: casual-cafe",
+    pfos: {
+      motorSlug: "casual-cafe",
+      dukkanSecim: "Casual Cafe",
+      m2Min: 50,
+      m2Max: 150,
+      bantKurali: "Tek referans liste (50–150 m²); m² ile adet ölçeklenir",
+      listeYolu: "veri/beykent-sifa-cafe-2017-026.xlsx",
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
+      bantlar: [liste("50-150", "50–150 m²", 100, "casual-cafe")],
     },
     questions: [],
   },
@@ -702,22 +737,21 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
   },
   {
     id: "ff_mus_selinoz_turk",
-    name: "Türk Mutfağı — Muş Selinöz (101)",
+    name: "Türk Mutfağı — Lokanta",
     parent: "Fast Food / QSR",
     desc:
-      "2016-101 referans · 89 kalem · Kiremit Akasya’dan AYRI · bar+pasta+mutfak · konsept detaylandırılacak",
+      "2016-101 Muş Selinöz · 89 kalem · bar+pasta+mutfak · Kiremit’ten ayrı · motor: mus-selinoz-turk",
     pfos: {
-      motorSlug: "",
-      dukkanSecim: "",
+      motorSlug: "mus-selinoz-turk",
+      dukkanSecim: "Türk Mutfağı — Lokanta",
       m2Min: 100,
-      m2Max: 400,
-      bantKurali:
-        "Liste içe aktarıldı — motor/sihirbaz bağlantısı yok; m² ve işletme tipi netleşince aktifleştirilecek",
-      listeYolu: "veri/mus-selinoz-2016-101.xlsx · HATIRLATMA-KONSEPTLER.md",
-      teklifKaynagi: "referans-json",
-      durum: "planlanan",
+      m2Max: 250,
+      bantKurali: "Tek referans liste (101); m² ile adet ölçeklenir",
+      listeYolu: "veri/mus-selinoz-2016-101.xlsx",
+      teklifKaynagi: "pfos-referans",
+      durum: "aktif",
       bantlar: [
-        liste("100-250", "100–250 m² (Muş 101 taslak)", 200, "mus-selinoz-turk"),
+        liste("100-250", "100–250 m² (Muş 101)", 200, "mus-selinoz-turk"),
       ],
     },
     questions: [],
@@ -935,19 +969,21 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
     id: "otel_sehir",
     name: "Şehir Oteli (Business)",
     parent: "Otel F&B",
-    desc: "Şehir/business otel F&B · Hampton Bolu (2016-088) · Hilton Kocaeli (2016-077) · motor: sehir-otel",
+    desc: "Şehir/business otel F&B · Hampton Bolu (2016-088) · Hilton Kocaeli (2016-077) · DoubleTree Topkapı 140 oda (2017-050) · motor: sehir-otel",
     pfos: {
       motorSlug: "sehir-otel",
       dukkanSecim: "Şehir Oteli (Business)",
       m2Min: 500,
       m2Max: 2000,
-      bantKurali: "Varsayılan referans Hampton Bolu (500–2000 m²); Kocaeli listesi ayrı bant",
-      listeYolu: "veri/hampton-sehir-otel-2016-088.xls · veri/hilton-sehir-otel-2016-077.xlsx",
+      bantKurali: "Varsayılan Hampton Bolu; Kocaeli ve DoubleTree Topkapı (140 oda) ayrı bantlar",
+      listeYolu:
+        "veri/hampton-sehir-otel-2016-088.xls · veri/hilton-sehir-otel-2016-077.xlsx · veri/doubletree-hilton-topkapi-2017-050.xlsx",
       teklifKaynagi: "pfos-referans",
       durum: "aktif",
       bantlar: [
         liste("500-2000", "500–2000 m² (Hampton Bolu)", 1000, "sehir-otel"),
         liste("500-2000-kocaeli", "500–2000 m² (Kocaeli)", 1000, "sehir-otel"),
+        liste("500-2000-topkapi", "500–2000 m² (DoubleTree Topkapı · 140 oda)", 1000, "sehir-otel"),
       ],
     },
     questions: [],
@@ -1042,14 +1078,27 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
     200,
     3000,
   ),
-  konseptPlanlanan(
-    "catering_yerinde",
-    "Yerinde Üretim",
-    "Catering",
-    "Yerinde Üretim",
-    80,
-    800,
-  ),
+  {
+    id: "catering_yerinde",
+    name: "Yerinde Üretim",
+    parent: "Catering",
+    desc:
+      "20–60 kişilik fabrika mutfağı · Liva 2016-178 referans · motor: yerinde-uretim (planlanan)",
+    pfos: {
+      motorSlug: "",
+      dukkanSecim: "Yerinde Üretim",
+      m2Min: 20,
+      m2Max: 60,
+      bantKurali: "Kişi sayısı bandı (20–60); referans liste Liva 178",
+      listeYolu: "veri/liva-fabrika-2016-178.xlsx",
+      teklifKaynagi: "referans-json",
+      durum: "planlanan",
+      bantlar: [
+        liste("20-60", "20–60 kişi (Liva 178)", 40, "yerinde-uretim"),
+      ],
+    },
+    questions: [],
+  },
   konseptPlanlanan(
     "catering_tasima",
     "Taşıma Yemek",
@@ -1128,6 +1177,28 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
     10000,
   ),
 ];
+
+/** Aktif paketlerden üst segment → dükkan seçenekleri (public /pfos + proje-akis soruları) */
+export function buildDukkanBranchesFromKonseptler(
+  shopTypes: ShopTypeKayit[] = PFOS_KONSEPT_SHOP_TYPES,
+): Record<string, string[]> {
+  const branches: Record<string, string[]> = {};
+  for (const t of shopTypes) {
+    if (t.pfos.durum !== "aktif") continue;
+    const parent = (t.parent || "Bilmiyorum").trim();
+    const sel = (t.pfos.dukkanSecim || t.name || "").trim();
+    if (!sel) continue;
+    if (!branches[parent]) branches[parent] = [];
+    if (!branches[parent].includes(sel)) branches[parent].push(sel);
+  }
+  for (const parent of Object.keys(branches)) {
+    if (!branches[parent].includes("Bilmiyorum")) {
+      branches[parent].push("Bilmiyorum");
+    }
+  }
+  if (!branches.Bilmiyorum) branches.Bilmiyorum = ["Bilmiyorum"];
+  return branches;
+}
 
 /** q_dukkan_turu cevabı → shopTypes.pfos.dukkanSecim (tek kaynak) */
 export const DUKKAN_SECIM_ESLEME: Record<string, string> = Object.fromEntries(

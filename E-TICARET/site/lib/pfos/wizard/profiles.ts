@@ -318,6 +318,18 @@ export const PROFIL_BY_SLUG: Record<Konsept, PfosProfilMeta> = {
       "kuru_depo",
     ],
   },
+  "casual-cafe": {
+    konsept: "casual-cafe",
+    konseptUst: "Kafe / Coffee Shop",
+    dukkan: "Casual Cafe",
+    pfosZones: [
+      "bar",
+      "ana_mutfak",
+      "pastane",
+      "bulasikhane",
+      "kuru_depo",
+    ],
+  },
   "buyuk-yemekhane": {
     konsept: "buyuk-yemekhane",
     konseptUst: "Catering / Kurumsal",
@@ -373,6 +385,21 @@ export const PROFIL_BY_SLUG: Record<Konsept, PfosProfilMeta> = {
       "bar",
       "kuru_depo",
       "depo",
+    ],
+  },
+  "mus-selinoz-turk": {
+    konsept: "mus-selinoz-turk",
+    konseptUst: "Fast Food / QSR",
+    dukkan: "Türk Mutfağı — Lokanta",
+    pfosZones: [
+      "bar",
+      "pastane",
+      "ana_mutfak",
+      "sebze_hazirlik",
+      "soguk_oda",
+      "izgara_meze",
+      "bulasikhane",
+      "kuru_depo",
     ],
   },
   "kiremit-akasya": {

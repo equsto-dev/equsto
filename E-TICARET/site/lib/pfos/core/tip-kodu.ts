@@ -96,7 +96,7 @@ export const URUN_TIPI_ALIASES: Record<string, string> = {
 
 /** tip_kodu → ekipmanlar.json adında aranacak kelimeler */
 export const TIP_SEARCH_TERMS: Record<string, string[]> = {
-  kombi_firin_6t: ["kombili", "icombi", "konveksiyon", "combi"],
+  kombi_firin_6t: ["kombili", "icombi", "combi", "kombi firin"],
   davlumbaz_duvar: ["davlumbaz", "duvar"],
   ocak_4gz: ["4", "gözlü", "gozlu", "ocak", "alevli"],
   tezgah_alti_buz_cek: ["cihazaltı", "cihaz alti", "tezgah altı", "tezgahalti", "setaltı buzdolab"],

@@ -1,5 +1,10 @@
 import type { AdminUrunRow } from "@/lib/admin-urun";
 import { olcuMmFromSku, toOlcuMmDisplay, formatOlcuMm } from "../teklif/olcu-mm";
+import {
+  isOzelImalatMotor,
+  isOzelImalatSablon,
+  OZEL_IMALAT_MARKA,
+} from "./ozel-imalat";
 
 /** Tanınan imalat markaları — uzun eşleşme önce */
 const IMALAT_MARKALAR = [
@@ -111,6 +116,9 @@ export function markaFromSablonIsim(isim: string | null | undefined): string | n
   const inner = m[1].trim();
   if (!inner || /^\d/.test(inner)) return null;
   if (PARANTEZ_DEGIL_MARKA.test(foldTr(inner))) return null;
+  if (foldTr(inner) === "portashelf" || foldTr(inner) === "equsto") {
+    return OZEL_IMALAT_MARKA;
+  }
   for (const brand of IMALAT_MARKALAR) {
     if (foldTr(inner) === foldTr(brand)) return brand;
   }
@@ -118,6 +126,7 @@ export function markaFromSablonIsim(isim: string | null | undefined): string | n
   for (const brand of IMALAT_MARKALAR) {
     if (foldTr(canon) === foldTr(brand)) return brand;
   }
+  if (canon && canon !== "—") return canon;
   return null;
 }
 
@@ -133,13 +142,16 @@ export function resolveTeklifMarka(opts: {
   linkMarka?: string | null;
   zoneMarka?: string | null;
 }): string {
-  if (opts.linkMarka?.trim()) return markaCanonLabel(opts.linkMarka);
+  if (isOzelImalatMotor({ sablonIsim: opts.sablonIsim })) return OZEL_IMALAT_MARKA;
+  if (isOzelImalatSablon(opts.sablonIsim)) return OZEL_IMALAT_MARKA;
 
-  const fromMetin = markaFromKatalogMetin(opts.urunAd, opts.urunMetin);
-  if (fromMetin) return markaCanonLabel(fromMetin);
+  if (opts.linkMarka?.trim()) return markaCanonLabel(opts.linkMarka);
 
   const fromIsim = markaFromSablonIsim(opts.sablonIsim);
   if (fromIsim && fromIsim !== "—") return fromIsim;
+
+  const fromMetin = markaFromKatalogMetin(opts.urunAd, opts.urunMetin);
+  if (fromMetin) return markaCanonLabel(fromMetin);
 
   if (opts.zoneMarka?.trim() && !isOztiDistributorMarka(opts.zoneMarka)) {
     return markaCanonLabel(opts.zoneMarka);

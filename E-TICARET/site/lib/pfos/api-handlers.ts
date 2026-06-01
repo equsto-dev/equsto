@@ -14,7 +14,7 @@ const M2_RANGES: Record<string, { min: number; max: number }> = {
   "kebap-ortadogu": { min: 300, max: 500 },
   pizzaci: { min: 80, max: 500 },
   meyhane: { min: 100, max: 500 },
-  "turk-restoran": { min: 100, max: 500 },
+  "turk-restoran": { min: 150, max: 5000 },
   "coffee-shop": { min: 60, max: 300 },
   steakhouse: { min: 80, max: 250 },
   balikci: { min: 80, max: 250 },
@@ -32,10 +32,12 @@ const M2_RANGES: Record<string, { min: number; max: number }> = {
   "kahve-atolyesi": { min: 80, max: 150 },
   "harvest-cafe": { min: 100, max: 200 },
   "all-sport-cafe": { min: 100, max: 200 },
+  "casual-cafe": { min: 50, max: 150 },
   "buyuk-yemekhane": { min: 2000, max: 3500 },
   "guneli-pastane": { min: 200, max: 400 },
   "sehir-otel": { min: 500, max: 2000 },
   "kiremit-akasya": { min: 100, max: 250 },
+  "mus-selinoz-turk": { min: 100, max: 250 },
   kasap: { min: 100, max: 250 },
   "kasap-sarkuteri": { min: 100, max: 250 },
   "inari-bar-yemek": { min: 100, max: 200 },
@@ -92,6 +94,19 @@ export function pfosGetConcepts() {
       m2Max: M2_RANGES.italyan.max,
       itemSayisi: 89,
       zorunluSayisi: 89,
+    },
+    {
+      konsept: "turk-restoran",
+      label: KONSEPT_LABELS["turk-restoran"],
+      ornekler: [
+        "Sütiş Şişhane",
+        "S13-388 yerleşim",
+        "Türk / esnaf lokanta",
+      ],
+      m2Min: M2_RANGES["turk-restoran"].min,
+      m2Max: M2_RANGES["turk-restoran"].max,
+      itemSayisi: 77,
+      zorunluSayisi: 77,
     },
     {
       konsept: "all-day-dining-cafe",
@@ -245,6 +260,19 @@ export function pfosGetConcepts() {
       zorunluSayisi: 32,
     },
     {
+      konsept: "casual-cafe",
+      label: KONSEPT_LABELS["casual-cafe"],
+      ornekler: [
+        "Şifa Cafe Beykent",
+        "Servis mutfağı & teşhir",
+        "Casual cafe · pasta & simit",
+      ],
+      m2Min: M2_RANGES["casual-cafe"].min,
+      m2Max: M2_RANGES["casual-cafe"].max,
+      itemSayisi: 49,
+      zorunluSayisi: 49,
+    },
+    {
       konsept: "kahve-duragi",
       label: KONSEPT_LABELS["kahve-duragi"],
       ornekler: [
@@ -321,6 +349,19 @@ export function pfosGetConcepts() {
       m2Max: M2_RANGES["sehir-otel"].max,
       itemSayisi: 186,
       zorunluSayisi: 186,
+    },
+    {
+      konsept: "mus-selinoz-turk",
+      label: KONSEPT_LABELS["mus-selinoz-turk"],
+      ornekler: [
+        "Muş Selinöz Mimarlık",
+        "Bar + pasta teşhir",
+        "Tam mutfak hatları",
+      ],
+      m2Min: M2_RANGES["mus-selinoz-turk"].min,
+      m2Max: M2_RANGES["mus-selinoz-turk"].max,
+      itemSayisi: 89,
+      zorunluSayisi: 89,
     },
     {
       konsept: "kiremit-akasya",
@@ -412,6 +453,13 @@ export function pfosGetKonseptler() {
       ornekler: ["Trattoria", "Osteria"],
       seatDensity: 1.6,
       kalemSayisi: 89,
+    },
+    {
+      slug: "turk-restoran",
+      label: KONSEPT_LABELS["turk-restoran"],
+      ornekler: ["Sütiş Şişhane", "Türk lokanta", "Pide & bar"],
+      seatDensity: 1.3,
+      kalemSayisi: 77,
     },
     {
       slug: "all-day-dining-cafe",
@@ -564,6 +612,13 @@ export function pfosGetKonseptler() {
       kalemSayisi: 32,
     },
     {
+      slug: "casual-cafe",
+      label: KONSEPT_LABELS["casual-cafe"],
+      ornekler: ["Şifa Cafe Beykent", "Casual cafe", "Servis mutfağı"],
+      seatDensity: 1.5,
+      kalemSayisi: 49,
+    },
+    {
       slug: "buyuk-yemekhane",
       label: KONSEPT_LABELS["buyuk-yemekhane"],
       ornekler: [
@@ -608,6 +663,17 @@ export function pfosGetKonseptler() {
       kalemSayisi: 186,
     },
     {
+      slug: "mus-selinoz-turk",
+      label: KONSEPT_LABELS["mus-selinoz-turk"],
+      ornekler: [
+        "Muş Selinöz 101",
+        "Lokanta / bar + pasta",
+        "Kiremit’ten ayrı liste",
+      ],
+      seatDensity: 1.6,
+      kalemSayisi: 89,
+    },
+    {
       slug: "kiremit-akasya",
       label: KONSEPT_LABELS["kiremit-akasya"],
       ornekler: [
@@ -650,6 +716,7 @@ export async function pfosPostQuote(req: NextRequest) {
       input.konsept,
       input.m2,
       input.altTip,
+      input.referansId,
     );
     const response = await calculateQuote(input, template);
     return NextResponse.json(response, { status: 200 });
@@ -697,6 +764,7 @@ export async function pfosPostCalculate(req: NextRequest) {
       "steakhouse",
       "balikci",
       "italyan",
+      "turk-restoran",
       "birahane",
       "pastane",
       "pizzaci",
@@ -715,6 +783,7 @@ export async function pfosPostCalculate(req: NextRequest) {
       "kahve-duragi-pastane",
       "harvest-cafe",
       "all-sport-cafe",
+      "casual-cafe",
       "buyuk-yemekhane",
       "guneli-pastane",
       "resort-otel",
@@ -734,6 +803,7 @@ export async function pfosPostCalculate(req: NextRequest) {
           "steakhouse",
           "balikci",
           "italyan",
+          "turk-restoran",
           "birahane",
           "pastane",
           "pizzaci",
@@ -752,11 +822,13 @@ export async function pfosPostCalculate(req: NextRequest) {
           "kahve-duragi-pastane",
           "harvest-cafe",
           "all-sport-cafe",
+          "casual-cafe",
           "buyuk-yemekhane",
           "guneli-pastane",
           "resort-otel",
           "sehir-otel",
           "kiremit-akasya",
+          "mus-selinoz-turk",
           "kasap",
           "kasap-sarkuteri",
           "inari-bar-yemek",
@@ -771,6 +843,8 @@ export async function pfosPostCalculate(req: NextRequest) {
     const template = await resolveTemplateForQuote(
       pfosReq.konsept as Konsept,
       pfosReq.m2,
+      pfosReq.altTip,
+      pfosReq.referansId,
     );
     const data = await calculateQuote(pfosReq, template);
     return NextResponse.json({ success: true, data });

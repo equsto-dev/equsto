@@ -26,6 +26,40 @@ export function tlToEur(
   return Math.round(tl * 100) / 100;
 }
 
+/** KDV dahil TL (mağaza fiyat_tl) → KDV hariç EUR birim */
+export function tlKdvDahilToEurNet(
+  tlKdvDahil: number | null | undefined,
+  eurTry: number | null | undefined,
+  kdvOran = 20,
+): number | null {
+  if (tlKdvDahil == null || !Number.isFinite(tlKdvDahil) || tlKdvDahil <= 0) {
+    return null;
+  }
+  if (!(eurTry != null && eurTry > 0)) return null;
+  const netTl = tlKdvDahil / (1 + kdvOran / 100);
+  return Math.round((netTl / eurTry) * 100) / 100;
+}
+
+/** PFOS proforma birim EUR — önce katalog satış EUR, yoksa KDV hariç TL/kur */
+export function birimEurFromEslesmis(
+  u: {
+    fiyat?: number | null;
+    fiyatEur?: number | null;
+    doviz?: string | null;
+  } | null
+  | undefined,
+  eurTry: number | null | undefined,
+  kdvOran = 20,
+): number | null {
+  if (!u) return null;
+  const eur = Number(u.fiyatEur);
+  if (Number.isFinite(eur) && eur > 0) return Math.round(eur * 100) / 100;
+  if (u.doviz === "EUR" && Number(u.fiyat) > 0) {
+    return Math.round(Number(u.fiyat) * 100) / 100;
+  }
+  return tlKdvDahilToEurNet(u.fiyat, eurTry, kdvOran);
+}
+
 /** W×D×H, 120*70*85, 90 kg/gün gibi fiziksel ölçü / kapasite metni */
 const OLCU_BOYUT =
   /\d+(?:[.,]\d+)?\s*[*×xX]\s*\d+(?:[.,]\d+)?(?:\s*[*×xX]\s*\d+(?:[.,]\d+)?)?/;
@@ -61,9 +95,13 @@ export function olcuForTeklifUrun(
   urun: { sku?: string | null; olcu?: string | null; model?: string | null } | null | undefined,
   notlar?: string | null,
 ): string {
+  const referansOlcu = String(notlar ?? "")
+    .replace(/^ölçü:\s*/i, "")
+    .trim();
   return olcuForTeklifSatir(
-    olcuMmFromSku(urun?.sku),
+    isOlcuMetni(referansOlcu) ? referansOlcu : null,
     urun?.olcu ?? null,
+    olcuMmFromSku(urun?.sku),
     notlar,
     urun?.model,
   );
