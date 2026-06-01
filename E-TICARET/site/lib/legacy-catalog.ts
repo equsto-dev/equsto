@@ -11,6 +11,21 @@ function catalogPath() {
   return path.join(process.cwd(), "public", "data", "ekipmanlar.json");
 }
 
+function pfosEkKatalogPath() {
+  return path.join(process.cwd(), "public", "data", "pfos-ek-katalog.json");
+}
+
+async function loadPfosEkKatalogItems(): Promise<unknown[]> {
+  try {
+    const raw = JSON.parse(
+      await fs.readFile(pfosEkKatalogPath(), "utf8"),
+    ) as { items?: unknown[] };
+    return Array.isArray(raw?.items) ? raw.items : [];
+  } catch {
+    return [];
+  }
+}
+
 export async function legacyCatalogExists() {
   try {
     await fs.access(catalogPath());
@@ -45,7 +60,12 @@ export async function loadLegacyCatalogRows(): Promise<AdminUrunRow[]> {
       ? (raw as { items: unknown[] }).items
       : [];
 
-  const rows = items.map((row, i) => ecomRowToAdminUrun(row as Parameters<typeof ecomRowToAdminUrun>[0], i));
+  const ekItems = await loadPfosEkKatalogItems();
+  const merged = [...items, ...ekItems];
+
+  const rows = merged.map((row, i) =>
+    ecomRowToAdminUrun(row as Parameters<typeof ecomRowToAdminUrun>[0], i),
+  );
   cache = { mtimeMs, rows };
   return rows;
 }

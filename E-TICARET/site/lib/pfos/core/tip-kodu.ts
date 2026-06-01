@@ -58,6 +58,8 @@ export const URUN_TIPI_ALIASES: Record<string, string> = {
   "evye-cift-gozlu": "tezgah_evyeli",
   "konveksiyon-firin-unox": "raf_firin",
   "tas-firin": "tas_tabanli_firin",
+  "buz-makinesi-brema-cb416": "buz_makinesi_brema_42",
+  "buz-makinesi-brema-cb425": "buz_makinesi_brema_48",
   "pizza-firin-tas-tabanli": "tas_tabanli_firin",
   "speed-oven-merry-chef": "mikrodalga_firin",
   "sise-sogutucu-2-kapili": "sise_sogutucu_2k",

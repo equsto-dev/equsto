@@ -92,9 +92,12 @@ function buzKgFromKatalog(ad: string): number | null {
 
 function bulasikFormFromKatalog(ad: string): ReferansNitelikleri["bulasikForm"] {
   const k = norm(ad);
+  if (/firin|konveksiyon|fritoz/.test(k) && !/bulasik|bulaşık|yikama\s*mak/.test(k)) {
+    return null;
+  }
   if (/bardak\s*yik/.test(k)) return "bardak";
   if (/giyotin/.test(k)) return "giyotin";
-  if (/tezgahalti|tezgah alti|setalti|set alti|oby\s*50/.test(k))
+  if (/tezgahalti|tezgah alti|oby\s*50|bulasik.*setalti|setalti.*bulasik/.test(k))
     return "setalti";
   if (/kazan\s*yik/.test(k)) return "kazan";
   if (/konveyor|konveyör|flight/.test(k)) return "konveyor";
@@ -130,6 +133,16 @@ export function referansKatalogCeliski(
     const form = bulasikFormFromKatalog(katalogAd);
     if (form === "giyotin" || form === "kazan" || form === "konveyor")
       return true;
+  }
+
+  if (/bulasik\s*yik|bulaşık\s*yik|bardak\s*yik/.test(norm(isim))) {
+    const k = norm(katalogAd);
+    if (
+      /firin|konveksiyon|fritoz|izgara|ocak|kuzine/.test(k) &&
+      !/bulasik|bulaşık|yikama\s*mak|dishwash/.test(k)
+    ) {
+      return true;
+    }
   }
   if (ref.bulasikForm === "bardak" && /giyotin|kazan|tezgahalti bulasik/.test(k)) {
     return true;

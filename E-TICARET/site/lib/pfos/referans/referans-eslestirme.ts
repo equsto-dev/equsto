@@ -16,8 +16,8 @@ import {
 import { enrichEslesmisFromKatalogRow } from "../core/catalog-enrich";
 import { productMatchesTipKodu } from "../core/shop-catalog-match";
 import { resolveTipKodu } from "../core/tip-kodu";
+import { buildOzelImalatEslesmis } from "../core/ozel-imalat-build";
 import {
-  buildOzelImalatEslesmis,
   isOzelImalatMotor,
 } from "../core/ozel-imalat";
 import { inferUrunTipiFromReferansSatir } from "./infer-urun-tipi";
@@ -123,7 +123,7 @@ function isGenericReferansIsim(isim: string): boolean {
 }
 
 function referansLinkKey(listeKey: string, poz: string): string {
-  return `${listeKey}|${poz}`.toLowerCase();
+  return `${listeKey.trim().toLowerCase()}|${poz.trim().toUpperCase()}`;
 }
 
 function rowToEslesmis(row: AdminUrunRow): EslesmisUrun {
@@ -166,6 +166,13 @@ export function referansKatalogUyumsuz(
   }
   if (s.includes("bardak yik") && k.includes("giyotin")) return true;
   if (s.includes("giyotin") && k.includes("bardak yik")) return true;
+  if (
+    (s.includes("bulasik yik") || s.includes("bulaşık yik")) &&
+    /firin|konveksiyon|fritoz|izgara|ocak|kuzine/.test(k) &&
+    !/bulasik|bulaşık|yikama mak/.test(k)
+  ) {
+    return true;
+  }
   return false;
 }
 
@@ -414,7 +421,7 @@ async function matchStrictCatalog(
   return rowToEslesmis(scored[0].row);
 }
 
-function fallbackOzelImalat(input: ReferansMatchInput): EslesmisUrun {
+async function fallbackOzelImalat(input: ReferansMatchInput): Promise<EslesmisUrun> {
   return buildOzelImalatEslesmis({
     isim: input.isim,
     urunTipi: input.urunTipi,
@@ -440,7 +447,7 @@ export async function matchReferansKalem(
   }
 
   if (isOzelImalatMotor({ sablonIsim: input.isim, urunTipi: input.urunTipi })) {
-    return buildOzelImalatEslesmis({
+    return await buildOzelImalatEslesmis({
       isim: input.isim,
       urunTipi: input.urunTipi,
       notlar: input.notlar,
@@ -459,12 +466,12 @@ export async function matchReferansKalem(
   if (strict) return strict;
 
   if (isOzelImalatMotor({ sablonIsim: input.isim })) {
-    return buildOzelImalatEslesmis({
+    return await buildOzelImalatEslesmis({
       isim: input.isim,
       urunTipi: input.urunTipi,
       notlar: input.notlar,
     });
   }
 
-  return fallbackOzelImalat(input);
+  return await fallbackOzelImalat(input);
 }

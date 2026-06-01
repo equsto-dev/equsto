@@ -64,7 +64,17 @@
     "buz_makinesi": {
       "brand": "Öztiryakiler Endüstriyel Mutfak",
       "sku": "9805.OKB46.A0",
-      "name": "OZTI BUZ MAKINESI OKB46A 46KG/GUN — yalnızca markasız referans için; Brema/kg aile kuralı öncelikli"
+      "name": "OZTI BUZ MAKINESI OKB46A 46KG/GUN — markasız referans; Brema/kg aile kuralı öncelikli"
+    },
+    "buz_makinesi_brema_42": {
+      "brand": "Brema",
+      "sku": "9805.CB416.HC",
+      "name": "BREMA KÜP BUZ MAKİNESİ CB416 44 KG/GÜN B-QUBE"
+    },
+    "buz_makinesi_brema_48": {
+      "brand": "Brema",
+      "sku": "9805.CB425.HC",
+      "name": "BREMA KÜP BUZ MAKİNESİ CB425 48 KG/GÜN B-QUBE"
     },
     "bulasik_setalti": {
       "brand": "Öztiryakiler Endüstriyel Mutfak",
