@@ -64,7 +64,7 @@
       cb();
       return;
     }
-    if (tries > 200) {
+    if (tries > 400) {
       var root = document.getElementById("eq-cat-shell");
       if (root) {
         root.innerHTML =
