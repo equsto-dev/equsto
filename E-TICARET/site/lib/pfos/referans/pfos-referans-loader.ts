@@ -137,6 +137,7 @@ function altKategoriFromSatir(s: PfosEkipmanSatir): string {
 
 export function ekipmanToReferansKalemler(
   kalemler: PfosEkipmanSatir[],
+  referansListeKey?: string,
 ): ReferansKalem[] {
   const bolumOrder = new Map<string, number>();
   let nextBolum = 0;
@@ -159,6 +160,7 @@ export function ekipmanToReferansKalemler(
       altKategori: altKategoriFromSatir(s),
       referansBolumKey: key,
       referansBolumSira: bolumOrder.get(key)!,
+      referansListeKey,
     };
   });
 }
@@ -294,6 +296,6 @@ export async function loadReferansProfil(
     label: raw.label,
     referansM2: raw.referansM2,
     kaynak: raw.kaynakDosya,
-    kalemler: ekipmanToReferansKalemler(raw.kalemler),
+    kalemler: ekipmanToReferansKalemler(raw.kalemler, `${kategoriId}-${bantId}`),
   };
 }

@@ -108,10 +108,12 @@ async function buildTemplateKalemler(
     const urun = referansListOnly
       ? await matchProductForReferansKalem({
           urunTipi: item.urunTipi,
-          kategoriKodu: item.kategoriKodu,
           fiyatStratejisi,
           isim: item.isim,
           notlar: item.notlar,
+          referansPoz: item.referansPoz,
+          referansListeKey:
+            item.referansListeKey ?? template.referansId ?? undefined,
         })
       : await matchProductForMotor(
           item.urunTipi,
@@ -283,6 +285,19 @@ export async function calculateUnifiedQuote(
     uyarilar.push(
       "Ekipman listesi yalnızca kayıtlı referans dosyasından alındı (proje-akis shopTypes / m² bandı).",
     );
+    const fiyatsiz = kalemler.filter(
+      (k) => k.tip === "zorunlu" && (!k.urun || k.urun.fiyat <= 0),
+    );
+    if (fiyatsiz.length > 0) {
+      uyarilar.push(
+        `${fiyatsiz.length} kalem için katalog fiyatı bulunamadı — Equsto özel imalat / pfos-referans-sku-links.json ile doğrulanmalı: ` +
+          fiyatsiz
+            .slice(0, 6)
+            .map((k) => `${k.referansPoz ?? k.poz} ${k.isim}`)
+            .join("; ") +
+          (fiyatsiz.length > 6 ? "…" : ""),
+      );
+    }
   } else if (zoneKalemler.length === 0 && zoneKeys.length > 0) {
     uyarilar.push(
       "Mutfak bölümü seçildi ancak zone kataloğundan kalem üretilemedi — yalnızca konsept şablonu uygulandı.",

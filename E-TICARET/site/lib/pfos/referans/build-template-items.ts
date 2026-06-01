@@ -17,5 +17,6 @@ export function referansKalemlerToTemplateItems(
     sablonSira: index,
     referansBolumSira: k.referansBolumSira,
     referansBolumKey: k.referansBolumKey,
+    referansListeKey: k.referansListeKey,
   }));
 }

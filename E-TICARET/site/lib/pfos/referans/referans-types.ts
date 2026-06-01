@@ -14,6 +14,8 @@ export type ReferansKalem = {
   /** Excel listesindeki bölüm sırası (ilk görünüm) */
   referansBolumSira?: number;
   referansBolumKey?: string;
+  /** pfos-referans/{kategoriId}-{bantId} — SKU link anahtarı */
+  referansListeKey?: string;
   elektrikGucuKwHint?: number;
   gazGucuKwHint?: number;
 };
