@@ -337,6 +337,19 @@ body.eq-imt-page .imt-page-main {
   color: var(--eq-text-muted);
 }
 
+/* Koyu vitrin — parti adet rakamları okunaklı */
+body.eq-imt-page .imt-fmt h3 {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+body.eq-imt-page .imt-fmt-cap {
+  color: #fff;
+}
+
+body.eq-imt-page .imt-fmt-cap span {
+  color: rgba(255, 255, 255, 0.88);
+}
+
 .imt-fmt-size {
   font-size: 11px;
   color: var(--eq-text-muted);
