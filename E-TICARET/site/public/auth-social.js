@@ -114,18 +114,38 @@
     }
   }
 
-  window.equstoGoogleSignIn = function () {
-    var clientId =
-      (window.EQUSTO_AUTH && window.EQUSTO_AUTH.googleClientId) || "";
-    if (!clientId) {
-      var el = document.getElementById("auth-social-msg");
-      if (el) {
-        el.textContent = "Google girişi yapılandırılmamış (GOOGLE_CLIENT_ID).";
-        el.className = "auth-msg";
-        el.style.display = "block";
-      }
+  function googleClientIdOrFetch(cb) {
+    var id = (window.EQUSTO_AUTH && window.EQUSTO_AUTH.googleClientId) || "";
+    if (id) {
+      cb(id);
       return;
     }
+    if (typeof window.equstoAuthFetchConfig !== "function") {
+      cb("");
+      return;
+    }
+    window.equstoAuthFetchConfig().then(function () {
+      cb((window.EQUSTO_AUTH && window.EQUSTO_AUTH.googleClientId) || "");
+    });
+  }
+
+  window.equstoGoogleSignIn = function () {
+    googleClientIdOrFetch(function (clientId) {
+      if (!clientId) {
+        var el = document.getElementById("auth-social-msg");
+        if (el) {
+          el.textContent =
+            "Google girişi yapılandırılmamış (GOOGLE_CLIENT_ID). Vercel ortam değişkenini kontrol edin.";
+          el.className = "auth-msg";
+          el.style.display = "block";
+        }
+        return;
+      }
+      equstoGoogleSignInWithClient(clientId);
+    });
+  };
+
+  function equstoGoogleSignInWithClient(clientId) {
     loadGoogleScript()
       .then(function () {
         if (!window.google || !window.google.accounts) throw new Error("gsi");
@@ -147,17 +167,17 @@
           el.style.display = "block";
         }
       });
-  };
+  }
 
   window.equstoInitSocialAuth = function () {
-    var clientId =
-      (window.EQUSTO_AUTH && window.EQUSTO_AUTH.googleClientId) || "";
-    if (!clientId) return;
-    loadGoogleScript()
-      .then(function () {
-        renderGoogleButton(clientId);
-      })
-      .catch(function () {});
+    googleClientIdOrFetch(function (clientId) {
+      if (!clientId) return;
+      loadGoogleScript()
+        .then(function () {
+          renderGoogleButton(clientId);
+        })
+        .catch(function () {});
+    });
   };
 
   function bindTabs() {
