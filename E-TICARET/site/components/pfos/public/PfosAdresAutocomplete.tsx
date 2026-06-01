@@ -83,7 +83,7 @@ function AutocompleteField({
     <label className={styles.fieldLabel}>
       {label}
       {required ? " *" : ""}
-      <div className={styles.acWrap}>
+        <div className={`${styles.acWrap}${open ? ` ${styles.acWrapOpen}` : ""}`}>
         <input
           ref={inputRef}
           className={styles.textInput}
