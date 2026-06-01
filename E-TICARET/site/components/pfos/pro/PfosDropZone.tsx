@@ -11,6 +11,8 @@ type PfosDropZoneProps = {
   fileName?: string | null;
   fileMeta?: string | null;
   disabled?: boolean;
+  /** İki sütunlu import düzeni — daha az dikey boşluk */
+  compact?: boolean;
   onFile: (file: File) => void;
   onClear?: () => void;
 };
@@ -22,6 +24,7 @@ export default function PfosDropZone({
   fileName,
   fileMeta,
   disabled,
+  compact,
   onFile,
   onClear,
 }: PfosDropZoneProps) {
@@ -89,12 +92,18 @@ export default function PfosDropZone({
         style={{
           border: `2px dashed ${drag ? "#1677ff" : "#d9d9d9"}`,
           borderRadius: 8,
-          padding: "32px 24px",
+          padding: compact ? "24px 16px" : "32px 24px",
+          minHeight: compact ? 220 : undefined,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
           textAlign: "center",
           background: drag ? "#f0f5ff" : "#fafafa",
           cursor: disabled ? "not-allowed" : "pointer",
           opacity: disabled ? 0.6 : 1,
           transition: "border-color .15s, background .15s",
+          boxSizing: "border-box",
         }}
       >
         <input
