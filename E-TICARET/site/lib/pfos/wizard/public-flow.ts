@@ -36,6 +36,10 @@ const STEP_RANK: Record<string, number> = {
   "6": 60,
 };
 
+function m2MinForAnswers(answers: SoruCevapHaritasi): number {
+  return String(answers.q_ust_segment ?? "").trim() === "Bulut Mutfak" ? 8 : 20;
+}
+
 export function sortWizardQuestions(list: WizardQuestion[]): WizardQuestion[] {
   return [...list].sort((a, b) => {
     const sa = STEP_RANK[String(a.step ?? "")] ?? 999;
@@ -96,7 +100,8 @@ export function isQuestionAnswered(
   }
   if (q.type === "number") {
     const n = Number(v);
-    return Number.isFinite(n) && n >= 20;
+    const min = id === "q_m2" ? m2MinForAnswers(answers) : 20;
+    return Number.isFinite(n) && n >= min;
   }
   return v !== undefined && v !== null && String(v).trim() !== "";
 }

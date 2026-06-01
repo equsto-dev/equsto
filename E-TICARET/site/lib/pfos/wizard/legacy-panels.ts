@@ -125,6 +125,18 @@ export function orderedLegacyPanels(
   });
 }
 
+export function getM2MinForAnswers(answers: SoruCevapHaritasi): number {
+  return String(answers.q_ust_segment ?? "").trim() === "Bulut Mutfak" ? 8 : 20;
+}
+
+export function isM2AnswerValid(answers: SoruCevapHaritasi): boolean {
+  const raw = answers.q_m2;
+  if (raw === undefined || raw === null || String(raw).trim() === "") return false;
+  const n = Number(raw);
+  const min = getM2MinForAnswers(answers);
+  return Number.isFinite(n) && n >= min && n <= 10000;
+}
+
 export function isLegacyPanelComplete(
   panel: LegacyPanelDef,
   questions: WizardQuestion[],
@@ -137,6 +149,9 @@ export function isLegacyPanelComplete(
   }
   if (panel.id === "s1") {
     return String(answers.q_meslek ?? "").trim().length > 0;
+  }
+  if (panel.id === "s5") {
+    return isM2AnswerValid(answers);
   }
   if (panel.optional && qs.every((q) => q.required === "false")) {
     const needsPick = qs.some(

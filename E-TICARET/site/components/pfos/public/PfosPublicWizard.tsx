@@ -16,6 +16,7 @@ import TeklifV14Proforma from "@/components/pfos/TeklifV14Proforma";
 import {
   clearDownstreamAnswers,
   isLegacyPanelComplete,
+  isM2AnswerValid,
   orderedLegacyPanels,
   panelAnswerSummary,
   panelQuestions,
@@ -54,7 +55,7 @@ type Props = {
   initialQuestions?: WizardQuestion[];
 };
 
-const M2_PRESETS = [15, 40, 80, 120, 200, 350];
+const M2_PRESETS = [40, 80, 120, 200, 350];
 
 function formatTry(n: number) {
   return new Intl.NumberFormat("tr-TR", {
@@ -83,6 +84,8 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   const [teklifV14, setTeklifV14] = useState<TeklifModelV14 | null>(null);
   const [finished, setFinished] = useState(false);
   const [enteringPanelId, setEnteringPanelId] = useState<string | null>(null);
+  const [m2Touched, setM2Touched] = useState(false);
+  const prevOpenPanelIdRef = useRef("s1");
 
   useEffect(() => {
     let cancelled = false;
@@ -110,12 +113,28 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
 
   const openPanelIndex = useMemo(() => {
     for (let i = 0; i < panels.length; i++) {
-      if (!isLegacyPanelComplete(panels[i], questions, answers)) return i;
+      const panel = panels[i];
+      if (panel.id === "s5") {
+        if (!m2Touched || !isM2AnswerValid(answers)) return i;
+        continue;
+      }
+      if (!isLegacyPanelComplete(panel, questions, answers)) return i;
     }
     return Math.max(0, panels.length - 1);
-  }, [panels, questions, answers]);
+  }, [panels, questions, answers, m2Touched]);
 
   const openPanelId = panels[openPanelIndex]?.id ?? "s1";
+
+  useEffect(() => {
+    if (openPanelId === "s5" && prevOpenPanelIdRef.current !== "s5") {
+      setM2Touched(false);
+      setAnswers((prev) => {
+        if (prev.q_m2 != null && String(prev.q_m2).trim() !== "") return prev;
+        return { ...prev, q_m2: "80" };
+      });
+    }
+    prevOpenPanelIdRef.current = openPanelId;
+  }, [openPanelId]);
 
   const donePanelIds = useMemo(
     () => new Set(panels.slice(0, openPanelIndex).map((p) => p.id)),
@@ -180,6 +199,21 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     },
     [panels],
   );
+
+  const setM2Value = useCallback((value: string) => {
+    setM2Touched(true);
+    setAnswers((prev) => {
+      let merged = clearDownstreamAnswers({ ...prev, q_m2: value }, "q_m2");
+      if (!bulutDukkanGecerliMi(String(merged.q_dukkan_turu ?? ""), merged)) {
+        merged = { ...merged, q_dukkan_turu: "" };
+      }
+      return merged;
+    });
+    setError(null);
+    setFinished(false);
+    setSonuc(null);
+    setTeklifV14(null);
+  }, []);
 
   const setAnswer = useCallback(
     (
@@ -304,6 +338,8 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
 
   function resetWizard() {
     setAnswers({});
+    setM2Touched(false);
+    prevOpenPanelIdRef.current = "s1";
     openPanelIndexRef.current = 0;
     setFinished(false);
     setSonuc(null);
@@ -333,7 +369,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
             min={minM2}
             max={2000}
             value={val}
-            onChange={(e) => setAnswer("q_m2", e.target.value, panel)}
+            onChange={(e) => setM2Value(e.target.value)}
           />
           <span className={styles.alanUnit}>m²</span>
         </div>
@@ -343,7 +379,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
           min={minM2}
           max={1000}
           value={Math.min(Math.max(val, minM2), 1000)}
-          onChange={(e) => setAnswer("q_m2", e.target.value, panel)}
+          onChange={(e) => setM2Value(e.target.value)}
         />
         <div className={styles.alanPresets} role="group">
           {M2_PRESETS.map((n) => (
@@ -351,7 +387,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
               key={n}
               type="button"
               className={`${styles.presetBtn}${val === n ? ` ${styles.presetBtnActive}` : ""}`}
-              onClick={() => setAnswer("q_m2", String(n), panel)}
+              onClick={() => setM2Value(String(n))}
             >
               {n} m²
             </button>
