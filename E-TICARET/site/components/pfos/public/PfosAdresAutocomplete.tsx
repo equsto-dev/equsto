@@ -20,6 +20,7 @@ import { usePfosLabel } from "@/lib/pfos/use-pfos-label";
 import styles from "./pfos-public.module.css";
 
 type FieldProps = {
+  fieldKey: string;
   label: string;
   required?: boolean;
   placeholder: string;
@@ -33,6 +34,7 @@ type FieldProps = {
 };
 
 function AutocompleteField({
+  fieldKey,
   label,
   required,
   placeholder,
@@ -46,6 +48,8 @@ function AutocompleteField({
 }: FieldProps) {
   const listId = useId();
   const [highlight, setHighlight] = useState(0);
+  const [armed, setArmed] = useState(false);
+  const inputName = `pfos_${fieldKey}_${listId.replace(/:/g, "")}`;
 
   useEffect(() => {
     setHighlight(0);
@@ -74,20 +78,34 @@ function AutocompleteField({
       <div className={styles.acWrap}>
         <input
           className={styles.textInput}
-          type="text"
+          type="search"
+          name={inputName}
+          id={inputName}
           placeholder={placeholder}
           value={value}
           disabled={disabled}
+          readOnly={!armed}
           autoComplete="off"
+          autoCorrect="off"
+          autoCapitalize="off"
           spellCheck={false}
+          data-lpignore="true"
+          data-1p-ignore
+          data-bwignore
+          data-form-type="other"
+          enterKeyHint="next"
           role="combobox"
+          aria-autocomplete="list"
           aria-expanded={open}
           aria-controls={listId}
           onChange={(e) => {
             onChange(e.target.value);
             onOpen(true);
           }}
-          onFocus={() => onOpen(true)}
+          onFocus={() => {
+            setArmed(true);
+            onOpen(true);
+          }}
           onBlur={() => setTimeout(() => onOpen(false), 160)}
           onKeyDown={onKeyDown}
         />
@@ -191,12 +209,17 @@ export default function PfosAdresAutocomplete({
   const canDevam = Boolean(value.il.trim() && value.ilce.trim());
 
   return (
-    <div className={styles.adresGrid}>
+    <form
+      className={styles.adresGrid}
+      autoComplete="off"
+      onSubmit={(e) => e.preventDefault()}
+    >
       {!ready ? (
         <p className={styles.questionNote}>{t("Adres listesi yükleniyor…")}</p>
       ) : null}
 
       <AutocompleteField
+        fieldKey="il"
         label={t("İl (şehir)")}
         required
         placeholder={t("Yazmaya başlayın — örn. İstanbul")}
@@ -218,6 +241,7 @@ export default function PfosAdresAutocomplete({
       />
 
       <AutocompleteField
+        fieldKey="ilce"
         label="İlçe"
         required
         placeholder={
@@ -245,6 +269,7 @@ export default function PfosAdresAutocomplete({
       />
 
       <AutocompleteField
+        fieldKey="mahalle"
         label={t("Mahalle")}
         placeholder={
           districtId != null
@@ -274,6 +299,6 @@ export default function PfosAdresAutocomplete({
       >
         {t("Devam")}
       </button>
-    </div>
+    </form>
   );
 }
