@@ -40,16 +40,19 @@
       window.equstoRefreshMemberHeader();
     }
     try {
-      document.dispatchEvent(new CustomEvent('equsto-member-session'));
+      document.dispatchEvent(
+        new CustomEvent('equsto-member-session', {
+          detail: { items: Array.isArray(data.items) ? data.items : [] },
+        }),
+      );
     } catch (e) {}
   }
 
   function apiUnavailableMsg(status) {
     if (status === 404) {
       return (
-        'Üye girişi API’si bulunamadı (HTTP 404). Canlı sitede <code>claude-api-proxy</code> çalışmalı ' +
-        've <code>/api/auth</code> yolu erişilebilir olmalı. cPanel Node veya <code>auth-api-base.json</code> ' +
-        'ile harici API adresi tanımlayın.'
+        'Üye girişi API’si bulunamadı (HTTP 404). <code>/api/auth</code> yolu erişilebilir olmalı; ' +
+        'Vercel deploy ve veritabanı (ShopMember) kontrol edin.'
       );
     }
     return 'Sunucuya ulaşılamadı' + (status ? ' (HTTP ' + status + ')' : '') + '.';

@@ -20,13 +20,14 @@ export default function LoginPage() {
     <RawLegacyPage
       bodyClass="eq-shop eq-auth"
       bodyHtml={LoginBodyHtml}
-      withContactWidget
       extraStyles={[`/theme.css?v=${v}`, `/auth.css?v=${v}`]}
       scripts={[
+        `/eq-i18n.js?v=${v}`,
+        `/eq-site-urls.js?v=${v}`,
+        `/equsto-logo.js?v=${v}`,
         `/equsto-member.js?v=${v}`,
         `/eq-auth-api.js`,
         `/equsto-auth-client.js?v=${v}`,
-        `/equsto-logo.js?v=${v}`,
         ...LOGIN_SCRIPTS,
       ]}
     />

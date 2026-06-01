@@ -455,7 +455,7 @@
     toast(
       __cartT(
         'cart.sync_server_needed',
-        'Cihazlar arası sepet için sunucu güncellemesi gerekli (equsto-api-canli.zip). Bu cihazda sepet kaydedildi.'
+        'Cihazlar arası sepet için giriş yapın veya /sepet üzerinden eşitleme kodu kullanın. Bu cihazda sepet kaydedildi.'
       )
     );
   }
