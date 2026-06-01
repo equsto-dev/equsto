@@ -57,7 +57,14 @@ export async function GET(req: NextRequest) {
 }
 
 export async function PUT(req: NextRequest) {
-  let body: { syncToken?: string; memberEmail?: string; items?: unknown; token?: string };
+  let body: {
+    syncToken?: string;
+    memberEmail?: string;
+    items?: unknown;
+    token?: string;
+    replace?: boolean;
+    clear?: boolean;
+  };
   try {
     body = await req.json();
   } catch {
@@ -68,14 +75,14 @@ export async function PUT(req: NextRequest) {
     return json({ success: false, error: "syncToken veya memberEmail gerekli" }, 400);
   }
   const incoming = normalizeShopCartItems(body.items ?? []);
+  const replace = body.replace === true || body.clear === true;
   try {
-    if (memberEmail && syncToken) {
+    if (memberEmail && syncToken && !replace) {
       await mergeGuestShopCartIntoMember(syncToken, memberEmail);
     }
     const existing = await db.shopCart.findUnique({ where: { cartKey } });
-    const merged = existing
-      ? mergeShopCartItems(existing.items, incoming)
-      : incoming;
+    const merged =
+      replace || !existing ? incoming : mergeShopCartItems(existing.items, incoming);
     const row = await db.shopCart.upsert({
       where: { cartKey },
       create: { cartKey, items: shopCartItemsToJson(merged) },
