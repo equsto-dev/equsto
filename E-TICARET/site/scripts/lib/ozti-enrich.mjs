@@ -686,7 +686,6 @@ export function detectOztiOemBrand(name, category, kod) {
     ["PlateMate", /^PLATEMATE\b/i],
     ["Imperia", /^IMPERIA\b/i],
     ["Swedlinghaus", /^SWEDLINGHAUS\b/i],
-    ["Hamilton Beach", /^HAMILTON\s+BEACH\b/i],
     ["Vitrifrigo", /^VITRIFRIGO\b/i],
     ["Bartscher", /^BARTSCHER\b/i],
     ["Hoshizaki", /^HOSHIZAKI\b/i],
