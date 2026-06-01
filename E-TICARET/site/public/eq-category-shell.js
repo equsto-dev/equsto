@@ -258,7 +258,9 @@
           ? '<div class="' + gridClass + '">' + page.map(cardFn).join("") + "</div>"
           : '<div class="eq-cat-empty">Bu markada ürün bulunamadı.</div>';
 
-      var moreHost = plpMode ? '<div id="eq-marka-plp-more" class="eq-dept-plp-pages"></div>' : "";
+      var moreHost = plpMode
+        ? '<div id="eq-marka-plp-more" class="eq-dept-plp-pages eq-dept-plp-loadmore"></div>'
+        : "";
 
       root.innerHTML = hero + toolbar + tilesHtml + grid + moreHost;
 
