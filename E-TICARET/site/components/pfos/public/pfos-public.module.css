@@ -396,99 +396,77 @@
   display: block;
 }
 
-.secEnter {
-  animation: pfosSecEnter 2.4s cubic-bezier(0.22, 0.61, 0.36, 1) both;
-  will-change: opacity, transform, filter;
+.secPending {
+  overflow: hidden;
+  pointer-events: none;
 }
 
-.secEnter .secBd {
-  animation: pfosSecBodyEnter 1.75s cubic-bezier(0.22, 0.61, 0.36, 1) 0.65s both;
+.secPending:not(.secReveal) {
+  opacity: 0;
+  clip-path: inset(0 0 100% 0 round 12px);
 }
 
-.secEnter .optionBtn,
-.secEnter .presetBtn,
-.secEnter .multiLabel,
-.secEnter .alanField,
-.secEnter .adresGrid,
-.secEnter .textInput {
-  animation: pfosChildFlow 1.15s cubic-bezier(0.22, 0.61, 0.36, 1) both;
-  animation-delay: calc(0.75s + var(--pfos-stagger, 0) * 0.3s);
+.secReveal {
+  transition:
+    opacity 5.2s ease-out,
+    clip-path 6s ease-out;
 }
 
-.proformaEnter {
-  animation: pfosSecEnter 2.2s cubic-bezier(0.22, 0.61, 0.36, 1) 0.2s both;
+.secPending.secReveal {
+  opacity: 1;
+  clip-path: inset(0 0 0 0 round 12px);
+  pointer-events: auto;
 }
 
-.railEnter {
-  animation: pfosSecBodyEnter 1.85s cubic-bezier(0.22, 0.61, 0.36, 1) 0.15s both;
+.secPending:not(.secReveal) .optionBtn,
+.secPending:not(.secReveal) .presetBtn,
+.secPending:not(.secReveal) .multiLabel,
+.secPending:not(.secReveal) .alanHero,
+.secPending:not(.secReveal) .alanRange,
+.secPending:not(.secReveal) .adresGrid,
+.secPending:not(.secReveal) .textInput {
+  opacity: 0;
 }
 
-@keyframes pfosSecEnter {
-  0% {
-    opacity: 0;
-    transform: translateY(64px) scale(0.95);
-    filter: blur(8px);
-  }
-  45% {
-    opacity: 0.35;
-    transform: translateY(28px) scale(0.98);
-    filter: blur(3px);
-  }
-  75% {
-    opacity: 0.82;
-    transform: translateY(8px) scale(0.995);
-    filter: blur(0.5px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    filter: blur(0);
-  }
-}
-
-@keyframes pfosSecBodyEnter {
-  0% {
-    opacity: 0;
-    transform: translateY(28px);
-    max-height: 0;
-  }
-  35% {
-    opacity: 0.25;
-    max-height: 800px;
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-    max-height: 2000px;
-  }
-}
-
-@keyframes pfosChildFlow {
-  0% {
-    opacity: 0;
-    transform: translateY(22px) scale(0.97);
-  }
-  50% {
-    opacity: 0.55;
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+.secPending.secReveal .optionBtn,
+.secPending.secReveal .presetBtn,
+.secPending.secReveal .multiLabel,
+.secPending.secReveal .alanHero,
+.secPending.secReveal .alanRange,
+.secPending.secReveal .adresGrid,
+.secPending.secReveal .textInput {
+  opacity: 1;
+  transition: opacity 3.6s ease-out;
+  transition-delay: calc(4.2s + var(--pfos-stagger, 0) * 0.6s);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .secEnter,
-  .secEnter .secBd,
-  .secEnter .optionBtn,
-  .secEnter .presetBtn,
-  .secEnter .multiLabel,
-  .secEnter .alanField,
-  .secEnter .adresGrid,
-  .secEnter .textInput,
-  .proformaEnter,
-  .railEnter {
-    animation: none !important;
+  .secPending:not(.secReveal) {
+    opacity: 1;
+    clip-path: none;
+    pointer-events: auto;
+  }
+
+  .secReveal {
+    transition: none !important;
+  }
+
+  .secPending:not(.secReveal) .optionBtn,
+  .secPending:not(.secReveal) .presetBtn,
+  .secPending:not(.secReveal) .multiLabel,
+  .secPending:not(.secReveal) .alanHero,
+  .secPending:not(.secReveal) .alanRange,
+  .secPending:not(.secReveal) .adresGrid,
+  .secPending:not(.secReveal) .textInput,
+  .secPending.secReveal .optionBtn,
+  .secPending.secReveal .presetBtn,
+  .secPending.secReveal .multiLabel,
+  .secPending.secReveal .alanHero,
+  .secPending.secReveal .alanRange,
+  .secPending.secReveal .adresGrid,
+  .secPending.secReveal .textInput {
+    opacity: 1 !important;
+    transition: none !important;
   }
 }
 
