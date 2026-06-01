@@ -202,6 +202,9 @@
       if (eqIsAramaPathname(curPath) && eqIsAramaPathname(tgtPath)) {
         if (opts.replace) history.replaceState(null, "", url);
         else history.pushState(null, "", url);
+        if (typeof window.eqClearHeaderSearchInput === "function") {
+          window.eqClearHeaderSearchInput();
+        }
         if (typeof window.__eqAramaBoot === "function") window.__eqAramaBoot();
         return true;
       }
