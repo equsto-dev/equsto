@@ -81,6 +81,7 @@
           : NaN
     );
     if (!(isk > 0) && row.bayi_iskonto > 0 && row.bayi_iskonto < 1) {
+      /* Öztiryakiler Excel: bayi_iskonto = indirim oranı (0,73 → %73) */
       isk = row.bayi_iskonto * 100;
     }
     if (isk > 0 && isk < 1) isk = isk * 100;
