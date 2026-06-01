@@ -1371,6 +1371,55 @@
     );
   }
 
+  function normalizeNameBrandKey(n, b) {
+    var name = String(n || '')
+      .trim()
+      .toUpperCase()
+      .replace(/\s+/g, ' ');
+    var brand = String(b || '')
+      .trim()
+      .toUpperCase()
+      .split(/\s+/)[0];
+    return name + '|' + brand;
+  }
+
+  function oztiKodFromCartLine(line) {
+    if (!line) return '';
+    var c = String(line.c || '').trim();
+    if (/^[0-9A-Z]{2,8}\.[A-Z0-9.\-]{2,}$/i.test(c)) return c.toUpperCase();
+    var tokens = String(line.n || '').toUpperCase().split(/\s+/);
+    for (var i = 0; i < tokens.length; i++) {
+      var t = tokens[i];
+      if (/^[0-9A-Z]{2,8}\.[A-Z0-9.\-]{2,}$/i.test(t)) return t;
+      if (/^[0-9]{3,5}\.[A-Z0-9.\-]{2,}$/i.test(t)) return t;
+    }
+    return '';
+  }
+
+  function cartLineResolvedSrc(line) {
+    if (!line) return '';
+    var raw = String(line.img || '').trim();
+    if (!raw) return '';
+    return resolveCartItemImg(raw);
+  }
+
+  function cartLineNeedsCatalog(line) {
+    if (!line) return false;
+    if (!String(line.img || '').trim()) return true;
+    return !cartLineResolvedSrc(line);
+  }
+
+  function catalogRelFromRow(row) {
+    if (!row) return '';
+    if (row.images && row.images.length) return String(row.images[0] || '').trim();
+    var sku = row.sku || row.urun_kodu || row.model || row.modelCode || '';
+    if (sku && typeof window.eqOztiWebRelFromSku === 'function') {
+      var relSku = window.eqOztiWebRelFromSku(sku);
+      if (relSku) return relSku;
+    }
+    return String(row.img || row.gorsel_url || '').trim();
+  }
+
   function cartImgFromCatalogRow(row) {
     if (!row) return '';
     var rel = '';
@@ -1394,22 +1443,44 @@
 
   function enrichCartLineImagesFromCatalog(arr, catalog) {
     if (!Array.isArray(catalog) || !catalog.length || !arr || !arr.length) return false;
-    var map = Object.create(null);
+    var byId = Object.create(null);
+    var byNameBrand = Object.create(null);
     for (var ci = 0; ci < catalog.length; ci++) {
       var row = catalog[ci];
       if (!row) continue;
-      var k = lineId({ c: row.category || '', b: row.brand || '', n: row.name || '' });
-      if (k && !map[k]) map[k] = row;
+      var n = row.name || row.ad || '';
+      var b = row.brand || row.brand_ad || row.marka_ad || '';
+      var k = lineId({ c: row.category || row.kategori || '', b: b, n: n });
+      if (k && !byId[k]) byId[k] = row;
+      var nb = normalizeNameBrandKey(n, b);
+      if (nb && !byNameBrand[nb]) byNameBrand[nb] = row;
     }
     var changed = false;
     for (var li = 0; li < arr.length; li++) {
       var line = arr[li];
-      if (!line || line.img) continue;
-      var hit = map[line.id];
+      if (!line || !cartLineNeedsCatalog(line)) continue;
+      var hit = byId[line.id] || byNameBrand[normalizeNameBrandKey(line.n, line.b)];
+      if (!hit) {
+        var oz = oztiKodFromCartLine(line);
+        if (oz) {
+          for (var cj = 0; cj < catalog.length && !hit; cj++) {
+            var cr = catalog[cj];
+            if (!cr) continue;
+            var cs = String(cr.sku || cr.urun_kodu || cr.model || '').toUpperCase();
+            if (cs === oz) hit = cr;
+          }
+        }
+      }
       if (!hit) continue;
-      var img = cartImgFromCatalogRow(hit);
-      if (img) {
-        line.img = img;
+      var rel = catalogRelFromRow(hit);
+      if (rel) {
+        line.img = rel.replace(/\\/g, '/').replace(/^\.\//, '').replace(/^\/data\/images\//i, 'images/');
+        changed = true;
+        continue;
+      }
+      var imgUrl = cartImgFromCatalogRow(hit);
+      if (imgUrl) {
+        line.img = imgUrl;
         changed = true;
       }
     }
@@ -1421,30 +1492,26 @@
     for (var i = 0; i < arr.length; i++) {
       var line = arr[i];
       if (!line) continue;
-      var resolved = resolveCartItemImg(String(line.img || '').trim());
-      if (resolved && resolved !== line.img) {
-        line.img = resolved;
-        changed = true;
-        continue;
-      }
-      if (line.img) continue;
-      var skuGuess = '';
-      if (typeof window.eqOztiAxImageFromSku === 'function') {
-        var nameParts = String(line.n || '').split(/\s+/);
-        for (var pi = 0; pi < nameParts.length && !skuGuess; pi++) {
-          var tok = String(nameParts[pi] || '').replace(/\s+/g, '').toUpperCase();
-          if (/^[0-9A-Z]{2,8}\.[A-Z0-9.\-]{2,}$/i.test(tok)) skuGuess = tok;
+      if (!cartLineNeedsCatalog(line)) continue;
+      var oz = oztiKodFromCartLine(line);
+      if (oz && typeof window.eqOztiWebRelFromSku === 'function') {
+        var relOz = window.eqOztiWebRelFromSku(oz);
+        if (relOz) {
+          line.img = relOz;
+          changed = true;
+          continue;
         }
-        if (skuGuess) {
-          var axSku = window.eqOztiAxImageFromSku(skuGuess);
-          if (axSku) {
-            line.img = resolveCartItemImg(axSku);
-            changed = true;
-          }
+      }
+      if (oz && typeof window.eqOztiAxImageFromSku === 'function') {
+        var axSku = window.eqOztiAxImageFromSku(oz);
+        if (axSku) {
+          line.img = axSku;
+          changed = true;
+          continue;
         }
       }
     }
-    if (changed) save(arr);
+    if (changed) saveLocal(arr);
     return arr;
   }
 
@@ -1461,17 +1528,27 @@
     if (rawRel && !/^images\//i.test(rawRel) && /\.(jpe?g|png|webp|gif)(\?|#|$)/i.test(rawRel)) {
       rawRel = 'images/' + rawRel;
     }
+    var ozKod = oztiKodFromCartLine(x);
     var src = resolveCartItemImg(rawRel || String(x.img || '').trim());
+    if (!src && ozKod && typeof window.eqOztiAxImageFromSku === 'function') {
+      src = window.eqOztiAxImageFromSku(ozKod);
+    }
     if (!src && rawRel && typeof window.equstoDataAssetHref === 'function') {
       try {
         src = resolveCartItemImg(window.equstoDataAssetHref(rawRel));
       } catch (eImg) {}
+    }
+    if (!src && typeof window.eqProductImgSrc === 'function' && rawRel) {
+      try {
+        src = window.eqProductImgSrc(rawRel);
+      } catch (eProd) {}
     }
     var media = src
       ? '<img src="' +
         escAttr(src) +
         '"' +
         (rawRel ? ' data-eq-img-raw="' + escAttr(rawRel) + '" data-eq-img-step="0"' : '') +
+        (ozKod ? ' data-eq-ozti-kod="' + escAttr(ozKod) + '"' : '') +
         ' alt="" loading="lazy" decoding="async" onerror="typeof __eqImgFail===\'function\'&&__eqImgFail(this)">'
       : '<span class="eq-cart-line__ph" aria-hidden="true">📦</span>';
     var unitLbl = isQuote
@@ -1590,17 +1667,34 @@
       });
     });
     if (typeof window.eqFixDataImagesInDom === 'function') window.eqFixDataImagesInDom(root);
+    root.querySelectorAll('.eq-cart-line__media img').forEach(function (imgEl) {
+      if (imgEl.getAttribute('data-eq-cart-img-bound') === '1') return;
+      imgEl.setAttribute('data-eq-cart-img-bound', '1');
+      imgEl.addEventListener('error', function () {
+        if (typeof window.__eqImgFail === 'function') window.__eqImgFail(imgEl);
+        var media = imgEl.closest('.eq-cart-line__media');
+        if (!media || media.querySelector('.eq-cart-line__ph')) return;
+        imgEl.style.display = 'none';
+        var ph = document.createElement('span');
+        ph.className = 'eq-cart-line__ph';
+        ph.setAttribute('aria-hidden', 'true');
+        ph.textContent = '📦';
+        media.appendChild(ph);
+      });
+    });
   }
 
   function renderPanelList() {
     var sc = document.getElementById('equsto-cart-scroll');
     if (!sc) return;
     var arr = enrichCartLineImages(load());
-    var needsCatalog = false;
-    for (var ni = 0; ni < arr.length; ni++) {
-      if (arr[ni] && !arr[ni].img) {
-        needsCatalog = true;
-        break;
+    var needsCatalog = isCartPage();
+    if (!needsCatalog) {
+      for (var ni = 0; ni < arr.length; ni++) {
+        if (cartLineNeedsCatalog(arr[ni])) {
+          needsCatalog = true;
+          break;
+        }
       }
     }
     if (
@@ -1650,6 +1744,7 @@
     sc.classList.add('eq-cart-lines');
     sc.innerHTML = arr.map(renderCartLineHtml).join('');
     bindCartLineEvents(sc);
+    if (typeof window.eqFixDataImagesInDom === 'function') window.eqFixDataImagesInDom(sc);
     updateCartSummary();
     updatePanelMode();
   }
