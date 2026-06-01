@@ -6,7 +6,11 @@ import { loadEkipmanlarJson } from "@/lib/catalog-json";
 import { deptSearchHints, expandSearchQueries } from "@/lib/search-synonyms";
 import { isIzgaraAccessory, isKuzineWithFirin, isFirinAccessory } from "@/lib/category-search-hints";
 import { foldTr, splitQueryOrBranches } from "@/lib/search-query";
-import { rankSearchHitsByRelevance } from "@/lib/rank-search-hits";
+import {
+  diversifySearchHits,
+  rankSearchHitsByRelevance,
+  shouldDiversifySearchHits,
+} from "@/lib/rank-search-hits";
 
 export type CatalogSearchHit = {
   id: string;
@@ -256,10 +260,13 @@ export async function fallbackCatalogSearch(
   }
 
   const scored = [...byId.values()].sort((a, b) => b.score - a.score);
-  const ranked = rankSearchHitsByRelevance(
+  let ranked = rankSearchHitsByRelevance(
     query,
     scored.map((x) => x.hit),
   );
+  if (shouldDiversifySearchHits(query)) {
+    ranked = diversifySearchHits(query, ranked, ranked.length);
+  }
   const hits = ranked.slice(offset, offset + limit);
   return {
     hits,

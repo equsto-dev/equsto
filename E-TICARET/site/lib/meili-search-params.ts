@@ -30,11 +30,11 @@ export function meiliSearchParams(
 
   if (IZGARA_TERMS.has(term)) {
     filter = 'dept != "istif"';
-    fetchLimit = Math.min(Math.max(limit * 4, 40), 100);
+    fetchLimit = Math.min(Math.max(limit * 6, 120), 250);
     rerankPool = true;
   } else if (FIRIN_TERMS.has(term)) {
     filter = kuzineFirinMeiliFilter();
-    fetchLimit = Math.min(Math.max(limit * 8, 80), 200);
+    fetchLimit = Math.min(Math.max(limit * 8, 120), 250);
     rerankPool = true;
   }
 

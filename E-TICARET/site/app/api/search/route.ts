@@ -12,7 +12,11 @@ import {
 import { canonicalizeSearchHits } from "@/lib/canonicalize-search-hits";
 import { meiliSearchQuery } from "@/lib/search-query";
 import { meiliSearchParams } from "@/lib/meili-search-params";
-import { rankSearchHitsByRelevance } from "@/lib/rank-search-hits";
+import {
+  diversifySearchHits,
+  rankSearchHitsByRelevance,
+  shouldDiversifySearchHits,
+} from "@/lib/rank-search-hits";
 
 export const runtime = "nodejs";
 
@@ -76,8 +80,20 @@ export async function GET(req: NextRequest) {
   }
 
   async function respondFallback(fbOffset = offset, warning?: string) {
-    const fb = await fallbackCatalogSearch(q, limit, { offset: fbOffset });
-    const hits = await canonicalizeSearchHits(fb.hits);
+    const fbPool = shouldDiversifySearchHits(q)
+      ? Math.min(Math.max(limit * 6, 120), 250)
+      : limit;
+    const fb = await fallbackCatalogSearch(q, fbPool, {
+      offset: shouldDiversifySearchHits(q) ? 0 : fbOffset,
+    });
+    let fbHits = fb.hits;
+    if (shouldDiversifySearchHits(q)) {
+      fbHits = diversifySearchHits(q, fbHits, fbHits.length).slice(
+        fbOffset,
+        fbOffset + limit,
+      );
+    }
+    const hits = await canonicalizeSearchHits(fbHits);
     const total = fb.estimatedTotalHits;
     return searchResponse({
       query: q,
@@ -108,9 +124,10 @@ export async function GET(req: NextRequest) {
     const index = client.index(PRODUCTS_INDEX);
     const meiliQ = meiliSearchQuery(q);
     const meiliOpts = meiliSearchParams(q, limit, offset);
+    const meiliOffset = meiliOpts.rerankPool ? 0 : meiliOpts.offset;
     const meiliRes = await index.search(meiliQ, {
       limit: meiliOpts.limit,
-      offset: meiliOpts.offset,
+      offset: meiliOffset,
       ...(meiliOpts.filter ? { filter: meiliOpts.filter } : {}),
     });
     let hits = (meiliRes.hits || []) as CatalogSearchHit[];
@@ -119,11 +136,30 @@ export async function GET(req: NextRequest) {
     let warning: string | undefined;
 
     if (meiliOpts.rerankPool && hits.length) {
-      hits = rankSearchHitsByRelevance(q, hits).slice(0, limit);
-    }
+      let pool = rankSearchHitsByRelevance(q, hits);
 
-    // İlk sayfa: Meili az döndürürse katalog tamamlaması (eksik indeks / eşanlam)
-    if (offset === 0 && hits.length < limit) {
+      if (pool.length < meiliOpts.limit) {
+        const fb = await fallbackCatalogSearch(q, meiliOpts.limit + 32, {
+          offset: 0,
+        });
+        const seen = new Set(pool.map((h) => h.id));
+        const extras = fb.hits.filter((h) => h?.id && !seen.has(h.id));
+        if (extras.length) {
+          pool = rankSearchHitsByRelevance(
+            q,
+            mergeSearchHits(pool, extras, meiliOpts.limit),
+          );
+          total = Math.max(total, fb.estimatedTotalHits);
+          source = "hybrid";
+          warning = "Sonuçlar Meilisearch + katalog birleşiminden oluşturuldu.";
+        }
+      }
+
+      hits = diversifySearchHits(q, pool, pool.length).slice(
+        offset,
+        offset + limit,
+      );
+    } else if (offset === 0 && hits.length < limit) {
       const need = limit - hits.length;
       const fb = await fallbackCatalogSearch(q, need + 32, { offset: 0 });
       const seen = new Set(hits.map((h) => h.id));

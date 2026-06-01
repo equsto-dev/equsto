@@ -6,6 +6,7 @@ import {
   isPrimaryFirinProduct,
   isPrimaryIzgaraProduct,
 } from "@/lib/category-search-hints";
+import { mergeSearchHitsDiverse } from "@/lib/search-diverse-merge";
 import { foldTr } from "@/lib/search-query";
 
 const PRIMARY_EQUIPMENT_TERMS = new Set([
@@ -135,4 +136,35 @@ export function rankSearchHitsByRelevance(
     }))
     .sort((a, b) => b.score - a.score || a.idx - b.idx)
     .map((x) => x.h);
+}
+
+const DIVERSIFY_SINGLE_TERMS = new Set([
+  "izgara",
+  "izgaralar",
+  "ızgara",
+  "firin",
+  "firinlar",
+  "fırın",
+]);
+
+/** Izgara / fırın gibi geniş ekipman sorgularında marka tekeline düşmeyi önle. */
+export function shouldDiversifySearchHits(q: string): boolean {
+  const term = foldTr(q).trim();
+  if (DIVERSIFY_SINGLE_TERMS.has(term)) return true;
+  const tokens = term.split(/\s+/).filter((t) => t.length >= 3);
+  return tokens.some(
+    (t) => t.startsWith("izgar") || t.startsWith("firin") || t === "firin",
+  );
+}
+
+/** Relevance sırası korunur; markalar round-robin ile karıştırılır. */
+export function diversifySearchHits(
+  q: string,
+  hits: CatalogSearchHit[],
+  limit: number,
+): CatalogSearchHit[] {
+  if (!hits.length || !shouldDiversifySearchHits(q)) {
+    return hits.slice(0, limit);
+  }
+  return mergeSearchHitsDiverse(hits, [], limit);
 }
