@@ -602,6 +602,36 @@ body.eq-cart-page .eq-cart-layout__aside.is-empty {
 }
 
 /* Cihazlar arası sepet eşitleme (/sepet) */
+.eq-cart-login-hint {
+  margin: 1.25rem 0 0;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--eq-border, #e2e8f0);
+  border-radius: 12px;
+  background: var(--eq-surface-muted, #f8fafc);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+}
+
+.eq-cart-login-hint[hidden] {
+  display: none !important;
+}
+
+.eq-cart-login-hint__text {
+  margin: 0;
+  flex: 1 1 14rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--eq-text-muted, #475569);
+}
+
+.eq-cart-login-hint__cta {
+  flex: 0 0 auto;
+  text-decoration: none;
+  text-align: center;
+}
+
 .eq-cart-sync {
   margin: 24px 0;
   padding: 16px;

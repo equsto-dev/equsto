@@ -1,6 +1,12 @@
 import { NextRequest } from "next/server";
 import { db } from "@/lib/db";
 import {
+  getSessionByToken,
+  mergeGuestShopCartIntoMember,
+  readBearerToken,
+  readTokenFromBody,
+} from "@/lib/member-auth";
+import {
   mergeShopCartItems,
   normalizeShopCartItems,
   resolveShopCartKey,
@@ -16,15 +22,27 @@ function json(data: unknown, status = 200) {
   });
 }
 
-function readKey(req: NextRequest, body?: { syncToken?: string; memberEmail?: string }) {
+async function readKey(
+  req: NextRequest,
+  body?: { syncToken?: string; memberEmail?: string; token?: string },
+) {
   const q = req.nextUrl.searchParams;
   const syncToken = body?.syncToken ?? q.get("syncToken");
-  const memberEmail = body?.memberEmail ?? q.get("memberEmail");
-  return resolveShopCartKey(syncToken, memberEmail);
+  let memberEmail = body?.memberEmail ?? q.get("memberEmail");
+  const token =
+    readBearerToken(req) ||
+    readTokenFromBody(body as Record<string, unknown> | undefined) ||
+    q.get("access_token");
+  if (token) {
+    const session = await getSessionByToken(token);
+    if (session?.user?.email) memberEmail = session.user.email;
+  }
+  const cartKey = resolveShopCartKey(syncToken, memberEmail);
+  return { cartKey, syncToken, memberEmail: memberEmail ?? null };
 }
 
 export async function GET(req: NextRequest) {
-  const cartKey = readKey(req);
+  const { cartKey } = await readKey(req);
   if (!cartKey) {
     return json({ success: false, error: "syncToken veya memberEmail gerekli" }, 400);
   }
@@ -39,18 +57,21 @@ export async function GET(req: NextRequest) {
 }
 
 export async function PUT(req: NextRequest) {
-  let body: { syncToken?: string; memberEmail?: string; items?: unknown };
+  let body: { syncToken?: string; memberEmail?: string; items?: unknown; token?: string };
   try {
     body = await req.json();
   } catch {
     return json({ success: false, error: "Geçersiz JSON" }, 400);
   }
-  const cartKey = readKey(req, body);
+  const { cartKey, syncToken, memberEmail } = await readKey(req, body);
   if (!cartKey) {
     return json({ success: false, error: "syncToken veya memberEmail gerekli" }, 400);
   }
   const incoming = normalizeShopCartItems(body.items ?? []);
   try {
+    if (memberEmail && syncToken) {
+      await mergeGuestShopCartIntoMember(syncToken, memberEmail);
+    }
     const existing = await db.shopCart.findUnique({ where: { cartKey } });
     const merged = existing
       ? mergeShopCartItems(existing.items, incoming)
