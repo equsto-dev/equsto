@@ -70,14 +70,6 @@ export const LEGACY_PANELS: LegacyPanelDef[] = [
     questionIds: ["q_dukkan_turu"],
   },
   {
-    id: "s4c",
-    num: "↳",
-    title: "Servis modeli",
-    sub: "Masa, self servis veya paket ağırlığı (opsiyonel).",
-    questionIds: ["q_servis_model"],
-    optional: true,
-  },
-  {
     id: "s4b",
     num: "↳",
     title: "Alt tip",
@@ -187,8 +179,6 @@ export function panelAnswerSummary(
       return String(answers.q_franchise_marka ?? "");
     case "s4":
       return String(answers.q_dukkan_turu ?? "");
-    case "s4c":
-      return String(answers.q_servis_model ?? "");
     case "s4b":
       return String(answers.q_balik_alt ?? answers.q_fast_alt ?? "");
     case "s6":
