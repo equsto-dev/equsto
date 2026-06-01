@@ -89,6 +89,12 @@ function PfosOzetPanel() {
         <Col xs={12} sm={8} lg={4}>
           <StatisticCard
             loading={loading}
+            statistic={{ title: "Konsept", value: counts.types }}
+          />
+        </Col>
+        <Col xs={12} sm={8} lg={4}>
+          <StatisticCard
+            loading={loading}
             statistic={{ title: "Sorular", value: counts.questions }}
           />
         </Col>
@@ -101,19 +107,13 @@ function PfosOzetPanel() {
         <Col xs={12} sm={8} lg={4}>
           <StatisticCard
             loading={loading}
-            statistic={{ title: "PFOS ürün", value: counts.products }}
-          />
-        </Col>
-        <Col xs={12} sm={8} lg={4}>
-          <StatisticCard
-            loading={loading}
             statistic={{ title: "Setler", value: counts.sets }}
           />
         </Col>
         <Col xs={12} sm={8} lg={4}>
           <StatisticCard
             loading={loading}
-            statistic={{ title: "Konsept", value: counts.types }}
+            statistic={{ title: "PFOS ürün", value: counts.products }}
           />
         </Col>
       </Row>

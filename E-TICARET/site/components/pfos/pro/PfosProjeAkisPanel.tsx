@@ -222,8 +222,8 @@ export default function PfosProjeAkisPanel() {
       )}
 
       <Space size="large" style={{ marginBottom: 16 }} wrap>
-        <Statistic title="Sorular" value={questions.length} loading={loading} />
         <Statistic title="Konsept" value={shopTypes.length} loading={loading} />
+        <Statistic title="Sorular" value={questions.length} loading={loading} />
         <Statistic title="Kurallar" value={rules.length} loading={loading} />
         <Statistic title="Setler" value={eqSets.length} loading={loading} />
         <Statistic title="PFOS ürün" value={products.length} loading={loading} />
