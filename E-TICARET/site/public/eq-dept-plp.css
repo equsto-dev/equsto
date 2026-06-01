@@ -626,6 +626,55 @@ body.eq-dept-plp {
   }
 }
 
+/* Mobil (≤768px): sıralama ve filtre yok — yalnızca ürün sayısı */
+@media (max-width: 768px) {
+  .eq-dept-plp-filter-mob,
+  .eq-arama-filter-mob,
+  .eq-dept-plp-toolbar__row--sort,
+  .eq-dept-plp-sort {
+    display: none !important;
+  }
+
+  .eq-dept-plp-toolbar {
+    display: block;
+    padding: 8px 0 12px;
+    margin-bottom: 12px;
+  }
+
+  .eq-dept-plp-toolbar__row--primary {
+    display: block;
+    width: 100%;
+  }
+
+  .eq-dept-plp-count,
+  #eq-arama-filter-count {
+    display: block;
+    width: 100%;
+    flex: none;
+    text-align: center;
+    grid-column: auto;
+    grid-row: auto;
+    padding-top: 0;
+  }
+
+  .eq-dept-plp-selected,
+  body.eq-arama-page #eq-arama-selected {
+    display: none !important;
+  }
+
+  body.eq-shop.eq-dept-plp .eq-dept-plp-aside,
+  body.eq-arama-page .eq-arama-aside {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transform: none !important;
+  }
+
+  body.eq-dept-filter-open .eq-dept-filter-backdrop {
+    display: none !important;
+  }
+}
+
 /* ===== Arama sonuç sayfası (/arama) ===== */
 body.eq-arama-page {
   background: #fff;
