@@ -289,6 +289,7 @@ body.eq-dept-plp {
 }
 @media (min-width: 769px) {
   .eq-dept-plp-toolbar {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
@@ -296,15 +297,22 @@ body.eq-dept-plp {
     gap: 12px 16px;
   }
   .eq-dept-plp-toolbar__row--primary {
+    display: flex;
     flex: 1 1 auto;
     width: auto;
     justify-content: flex-start;
     gap: 16px;
   }
   .eq-dept-plp-toolbar__row--sort {
+    display: block;
     flex: 0 1 auto;
     width: auto;
     margin-left: auto;
+  }
+  .eq-dept-plp-sort {
+    flex-direction: row;
+    align-items: center;
+    width: auto;
   }
   .eq-dept-plp-count {
     text-align: left;
@@ -536,10 +544,59 @@ body.eq-dept-plp {
   .eq-dept-plp-layout {
     flex-direction: column;
   }
-  .eq-dept-plp-filter-mob {
+  /* Mobil: Filtrele + Sıralama aynı satır; ürün sayısı altında */
+  .eq-dept-plp-toolbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+    gap: 8px 10px;
+    align-items: stretch;
+    padding: 12px 0;
+  }
+  .eq-dept-plp-toolbar__row--primary,
+  .eq-dept-plp-toolbar__row--sort {
+    display: contents;
+  }
+  .eq-dept-plp-filter-mob,
+  .eq-arama-filter-mob {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    min-width: 0;
+    padding: 10px 12px;
+    box-sizing: border-box;
+  }
+  .eq-dept-plp-sort {
+    grid-column: 2;
+    grid-row: 1;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    width: 100%;
+    min-width: 0;
+  }
+  .eq-dept-plp-sort > span {
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #333;
+  }
+  .eq-dept-plp-sort select {
+    width: 100%;
+    min-height: 44px;
+  }
+  .eq-dept-plp-count,
+  #eq-arama-filter-count {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+    flex: none;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.35;
+    padding-top: 2px;
   }
   .eq-dept-plp-main {
     padding-left: max(12px, env(safe-area-inset-left, 0px));
