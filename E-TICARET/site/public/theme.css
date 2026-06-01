@@ -2351,6 +2351,14 @@ body.eq-shop .eq-amazon-shop-all a.cat-drawer-item {
     overflow: hidden;
   }
 
+  /* Kapalı çekmece: -108% hâlâ üstte bir satır gösterebiliyordu (ör. Servis & Teşhir) */
+  body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-cat-drawer-open) .cat-drawer:not(.open),
+  body.eq-shop:not(.admin-app):not(.bd-page):not(.eq-cat-drawer-open) .cat-drawer.eq-amazon-shop-all:not(.open) {
+    visibility: hidden;
+    pointer-events: none;
+    clip-path: inset(0 0 100% 0);
+  }
+
   body.eq-shop:not(.admin-app):not(.bd-page) .cat-drawer.open,
   body.eq-shop:not(.admin-app):not(.bd-page) .cat-drawer.eq-amazon-shop-all.open {
     transform: translate3d(0, 0, 0) !important;

@@ -199,20 +199,8 @@ nav.topnav {
   }
 }
 
-/* ── Kategori / arama PLP ────────────────────────────────────────────────── */
+/* ── Kategori / arama PLP (toolbar: eq-dept-plp.css) ─────────────────────── */
 @media (max-width: 768px) {
-  .eq-dept-plp-toolbar,
-  .eq-arama-toolbar {
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  .eq-dept-plp-sort,
-  .eq-arama-sort {
-    flex: 1 1 100%;
-    min-width: 0;
-  }
-
   .eq-dept-plp-grid,
   .eq-arama-grid {
     gap: 10px 8px;

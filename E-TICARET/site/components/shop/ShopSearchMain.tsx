@@ -21,10 +21,13 @@ export default function ShopSearchMain() {
             </button>
           </div>
           <div className="eq-dept-plp-toolbar">
-            <button type="button" className="eq-dept-plp-filter-mob" id="eq-arama-filter-mob" data-i18n="plp.filter_mob">
-              Filtrele
-            </button>
-            <div className="eq-dept-plp-count" id="eq-arama-filter-count" />
+            <div className="eq-dept-plp-toolbar__row eq-dept-plp-toolbar__row--primary">
+              <button type="button" className="eq-dept-plp-filter-mob" id="eq-arama-filter-mob" data-i18n="plp.filter_mob">
+                Filtrele
+              </button>
+              <div className="eq-dept-plp-count" id="eq-arama-filter-count" />
+            </div>
+            <div className="eq-dept-plp-toolbar__row eq-dept-plp-toolbar__row--sort">
             <label className="eq-dept-plp-sort">
               <span data-i18n="plp.sort_label">Sıralama</span>
               <select id="eq-arama-sort" aria-label="Sıralama" data-i18n-attr="aria-label:plp.sort_aria">
@@ -45,6 +48,7 @@ export default function ShopSearchMain() {
                 </option>
               </select>
             </label>
+            </div>
           </div>
           <div
             className="eq-dept-plp-grid eq-arama-grid"

@@ -22,10 +22,13 @@ export default function ShopDeptPlpMain({ meta }: { meta: ShopDeptMeta }) {
             <div className="eq-cm-selected__chips" id="eq-dept-cm-chips-main" />
           </div>
           <div className="eq-dept-plp-toolbar">
-            <button type="button" className="eq-dept-plp-filter-mob" id="eq-dept-plp-filter-mob" data-i18n="plp.filter_mob">
-              Filtrele
-            </button>
-            <div className="eq-dept-plp-count" id="eq-dept-plp-count" />
+            <div className="eq-dept-plp-toolbar__row eq-dept-plp-toolbar__row--primary">
+              <button type="button" className="eq-dept-plp-filter-mob" id="eq-dept-plp-filter-mob" data-i18n="plp.filter_mob">
+                Filtrele
+              </button>
+              <div className="eq-dept-plp-count" id="eq-dept-plp-count" />
+            </div>
+            <div className="eq-dept-plp-toolbar__row eq-dept-plp-toolbar__row--sort">
             <label className="eq-dept-plp-sort">
               <span data-i18n="plp.sort_label">Sıralama</span>
               <select id="eq-dept-plp-sort" aria-label="Sıralama" data-i18n-attr="aria-label:plp.sort_aria">
@@ -46,6 +49,7 @@ export default function ShopDeptPlpMain({ meta }: { meta: ShopDeptMeta }) {
                 </option>
               </select>
             </label>
+            </div>
           </div>
           <div className="eq-dept-plp-grid" id="eq-dept-plp-grid" role="list">
             <p className="eq-dept-plp-status" data-i18n="plp.loading_catalog">

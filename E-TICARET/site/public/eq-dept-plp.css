@@ -205,12 +205,16 @@ body.eq-dept-plp {
 }
 .eq-dept-plp-filter-mob {
   display: none;
-  padding: 6px 14px;
+  flex: 0 0 auto;
+  padding: 10px 16px;
+  min-height: 44px;
   border: 1px solid #111;
+  border-radius: 6px;
   background: #fff;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 .eq-dept-filter-backdrop {
   display: none;
@@ -227,26 +231,90 @@ body.eq-dept-plp {
 }
 .eq-dept-plp-toolbar {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
   padding: 14px 0;
   border-bottom: 1px solid #eee;
   margin-bottom: 16px;
 }
+.eq-dept-plp-toolbar__row--primary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  min-width: 0;
+}
+.eq-dept-plp-toolbar__row--sort {
+  width: 100%;
+  min-width: 0;
+}
 .eq-dept-plp-count {
   font-size: 13px;
+  line-height: 1.35;
   color: #444;
+  text-align: right;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 .eq-dept-plp-count strong {
   color: #111;
 }
+.eq-dept-plp-sort {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+}
+.eq-dept-plp-sort > span {
+  flex: 0 0 auto;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+}
 .eq-dept-plp-sort select {
-  padding: 6px 10px;
-  font-size: 12px;
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 44px;
+  padding: 8px 10px;
+  font-size: 16px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 6px;
+  background: #fff;
+  color: #111;
+}
+@media (min-width: 769px) {
+  .eq-dept-plp-toolbar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px 16px;
+  }
+  .eq-dept-plp-toolbar__row--primary {
+    flex: 1 1 auto;
+    width: auto;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+  .eq-dept-plp-toolbar__row--sort {
+    flex: 0 1 auto;
+    width: auto;
+    margin-left: auto;
+  }
+  .eq-dept-plp-count {
+    text-align: left;
+    flex: 0 1 auto;
+  }
+  .eq-dept-plp-sort select {
+    min-height: 0;
+    font-size: 12px;
+    padding: 6px 10px;
+  }
 }
 .eq-dept-plp-grid,
 .eq-arama-grid {
@@ -469,7 +537,13 @@ body.eq-dept-plp {
     flex-direction: column;
   }
   .eq-dept-plp-filter-mob {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .eq-dept-plp-main {
+    padding-left: max(12px, env(safe-area-inset-left, 0px));
+    padding-right: max(12px, env(safe-area-inset-right, 0px));
   }
   .eq-dept-plp-aside {
     position: fixed;
