@@ -4,6 +4,7 @@ import {
   useCallback,
   useEffect,
   useId,
+  useRef,
   useState,
   type KeyboardEvent,
 } from "react";
@@ -47,9 +48,17 @@ function AutocompleteField({
   onPick,
 }: FieldProps) {
   const listId = useId();
+  const inputRef = useRef<HTMLInputElement>(null);
   const [highlight, setHighlight] = useState(0);
-  const [armed, setArmed] = useState(false);
   const inputName = `pfos_${fieldKey}_${listId.replace(/:/g, "")}`;
+
+  function armInput(el: HTMLInputElement | null) {
+    if (el) el.readOnly = false;
+  }
+
+  function disarmInput(el: HTMLInputElement | null) {
+    if (el) el.readOnly = true;
+  }
 
   useEffect(() => {
     setHighlight(0);
@@ -77,15 +86,16 @@ function AutocompleteField({
       {required ? " *" : ""}
       <div className={styles.acWrap}>
         <input
+          ref={inputRef}
           className={styles.textInput}
-          type="search"
+          type="text"
           name={inputName}
           id={inputName}
           placeholder={placeholder}
           value={value}
           disabled={disabled}
-          readOnly={!armed}
-          autoComplete="off"
+          readOnly
+          autoComplete="one-time-code"
           autoCorrect="off"
           autoCapitalize="off"
           spellCheck={false}
@@ -98,15 +108,20 @@ function AutocompleteField({
           aria-autocomplete="list"
           aria-expanded={open}
           aria-controls={listId}
+          onMouseDown={() => armInput(inputRef.current)}
+          onTouchStart={() => armInput(inputRef.current)}
           onChange={(e) => {
             onChange(e.target.value);
             onOpen(true);
           }}
-          onFocus={() => {
-            setArmed(true);
+          onFocus={(e) => {
+            armInput(e.currentTarget);
             onOpen(true);
           }}
-          onBlur={() => setTimeout(() => onOpen(false), 160)}
+          onBlur={(e) => {
+            disarmInput(e.currentTarget);
+            setTimeout(() => onOpen(false), 160);
+          }}
           onKeyDown={onKeyDown}
         />
         {open && suggestions.length > 0 ? (
@@ -210,6 +225,23 @@ export default function PfosAdresAutocomplete({
       autoComplete="off"
       onSubmit={(e) => e.preventDefault()}
     >
+      {/* Chrome adres otofill tuzağı — gerçek alanlar aşağıda */}
+      <div className={styles.adresAutofillTrap} aria-hidden="true">
+        <input
+          type="text"
+          name="pfos_trap_street"
+          autoComplete="street-address"
+          tabIndex={-1}
+          defaultValue=""
+        />
+        <input
+          type="text"
+          name="pfos_trap_city"
+          autoComplete="address-level2"
+          tabIndex={-1}
+          defaultValue=""
+        />
+      </div>
       {!ready ? (
         <p className={styles.questionNote}>{t("Adres listesi yükleniyor…")}</p>
       ) : null}
