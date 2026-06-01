@@ -173,7 +173,8 @@ export async function buildTemplateFromShopType(
   const raw = await loadReferansListeFromBant(baglam.bant);
   if (!raw?.kalemler?.length) return null;
 
-  const kalemler = ekipmanToReferansKalemler(raw.kalemler);
+  const listeKey = `${raw.kategoriId}-${raw.bantId}`;
+  const kalemler = ekipmanToReferansKalemler(raw.kalemler, listeKey);
   const slug = shopType.pfos.motorSlug || shopType.id;
 
   return {
@@ -183,7 +184,7 @@ export async function buildTemplateFromShopType(
     segmentBasis: "m2",
     seatDensity: 1.8,
     teklifPozModu: "referans",
-    referansId: `${slug}-${baglam.bant.id as ListeBantId}`,
+    referansId: listeKey,
     items: referansKalemlerToTemplateItems(kalemler),
   };
 }

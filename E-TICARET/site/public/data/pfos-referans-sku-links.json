@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "note": "Doğrulanmış referans poz → katalog SKU. Anahtar: {listeKey}|{poz} örn. balikci-150-250|Y1. Boş bırakılırsa isim+ölçü sıkı eşleme ve aile kuralları kullanılır.",
+  "links": {
+    "balikci-150-250|Y1": {
+      "sku": "7960.02929.5O1",
+      "name": "YER IZGARASI TAVALI ALTTAN CIKISLI Q50 PVC 290*290"
+    },
+    "balikci-150-250|Y2": {
+      "sku": "7960.09429.5Y1",
+      "name": "YER IZGARASI TAVALI ALTTAN CIKISLI Q50 PVC 940*290"
+    }
+  }
+}

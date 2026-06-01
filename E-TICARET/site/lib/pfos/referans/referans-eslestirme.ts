@@ -1,0 +1,306 @@
+/**
+ * Referans listesi → katalog fiyat eşlemesi (kalıcı politika).
+ *
+ * 1) pfos-referans-sku-links.json (listeKey|poz → SKU) — doğrulanmış
+ * 2) Aile kuralları (yer ızgarası ölçü, vb.)
+ * 3) İsim + ölçü ile sıkı katalog araması (tek SKU shortcut yok)
+ * 4) Özel imalat (Equsto) — yanlış SKU asla dönmez
+ */
+import { dataPath, readJsonFile } from "@/lib/legacy-data";
+import type { EslesmisUrun, FiyatStratejisi } from "../schemas/pfos.schema";
+import {
+  loadLegacyCatalogRows,
+  type AdminUrunRow,
+} from "@/lib/legacy-catalog";
+import { enrichEslesmisFromKatalogRow } from "../core/catalog-enrich";
+import { productMatchesTipKodu } from "../core/shop-catalog-match";
+import { resolveTipKodu } from "../core/tip-kodu";
+import {
+  buildOzelImalatEslesmis,
+  isOzelImalatMotor,
+} from "../core/ozel-imalat";
+import { inferUrunTipiFromReferansSatir } from "./infer-urun-tipi";
+import type { PfosEkipmanSatir } from "../kategoriler/types";
+import {
+  extractOlcuFromNotlar,
+  isYerIzgarasiReferans,
+  matchYerIzgarasiByOlcu,
+} from "./yer-izgara-match";
+
+export type ReferansMatchInput = {
+  isim: string;
+  urunTipi: string;
+  referansPoz?: string;
+  referansListeKey?: string;
+  notlar?: string | null;
+  fiyatStratejisi: FiyatStratejisi;
+  sku?: string | null;
+};
+
+type SkuLinksFile = {
+  links?: Record<
+    string,
+    { sku: string; marka?: string; name?: string; fiyat_try?: number }
+  >;
+};
+
+let skuLinksCache: NonNullable<SkuLinksFile["links"]> | null = null;
+
+function norm(s: string): string {
+  return String(s ?? "")
+    .toLocaleLowerCase("tr")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/ı/g, "i")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+async function loadReferansSkuLinks(): Promise<
+  NonNullable<SkuLinksFile["links"]>
+> {
+  if (skuLinksCache) return skuLinksCache;
+  try {
+    const raw = await readJsonFile<SkuLinksFile>(
+      dataPath("pfos-referans-sku-links.json"),
+    );
+    skuLinksCache = raw?.links ?? {};
+  } catch {
+    skuLinksCache = {};
+  }
+  return skuLinksCache;
+}
+
+function referansLinkKey(listeKey: string, poz: string): string {
+  return `${listeKey}|${poz}`.toLowerCase();
+}
+
+function rowToEslesmis(row: AdminUrunRow): EslesmisUrun {
+  const enriched = enrichEslesmisFromKatalogRow(row, {});
+  return {
+    id: row.id,
+    slug: row.id.replace(/^ecom_/, ""),
+    sku: row.sku,
+    ad: row.ad,
+    marka: enriched.marka,
+    model: enriched.model,
+    olcu: enriched.olcu,
+    elektrikGucuKw: row.el_guc,
+    gazGucuKw: row.gaz_guc,
+    fiyat: row.fiyat_tl,
+    doviz: "TRY",
+    gorselUrl: row.gorsel_url,
+  };
+}
+
+/** Referans satırı ile katalog adı çelişiyorsa reddet */
+export function referansKatalogUyumsuz(
+  sablonIsim: string,
+  katalogAd: string,
+): boolean {
+  const s = norm(sablonIsim);
+  const k = norm(katalogAd);
+  if (!s || !k) return false;
+  if (s.includes("karbuz") && k.includes("buz mak") && !k.includes("karbuz")) {
+    return true;
+  }
+  if (
+    s.includes("espresso") &&
+    !k.includes("espresso") &&
+    !k.includes("kahve mak")
+  ) {
+    return true;
+  }
+  if (s.includes("bardak yik") && k.includes("giyotin")) return true;
+  if (s.includes("giyotin") && k.includes("bardak yik")) return true;
+  return false;
+}
+
+function olcuSayilari(olcu: string): number[] {
+  return [...String(olcu).matchAll(/(\d+(?:[.,]\d+)?)/g)]
+    .map((m) => Number(m[1].replace(",", ".")))
+    .filter((n) => Number.isFinite(n) && n >= 8);
+}
+
+/** Referans ölçüsü (cm) ↔ katalog adındaki mm/cm boyutları */
+function olcuEslesmeSkoru(olcu: string, urunAd: string): number {
+  const nums = olcuSayilari(olcu);
+  if (!nums.length) return 0;
+  const ad = norm(urunAd);
+  let score = 0;
+  for (const n of nums) {
+    const mm = Math.round(n * 10);
+    if (ad.includes(`${n}*`) || ad.includes(`${n}x`) || ad.includes(` ${n} `)) {
+      score += 45;
+    }
+    if (ad.includes(`${mm}*`) || ad.includes(`${mm}x`)) score += 55;
+    if (ad.includes(String(n)) || ad.includes(String(mm))) score += 15;
+  }
+  return score;
+}
+
+function isimEslesmeSkoru(isim: string, urunAd: string): number {
+  const a = norm(isim);
+  const b = norm(urunAd);
+  if (!a || !b) return 0;
+  if (a === b) return 200;
+  if (b.includes(a) || a.includes(b)) return 120;
+
+  const tokens = a
+    .split(/\s+/)
+    .filter((w) => w.length >= 4 && !/^(gazli|elektrikli|setalti|dolapli)$/.test(w));
+  if (!tokens.length) return 0;
+  let hit = 0;
+  for (const t of tokens) {
+    if (b.includes(t)) hit++;
+  }
+  return hit >= 2 ? hit * 35 : hit * 15;
+}
+
+function inferFamilyTip(isim: string, poz: string): string {
+  const satir: PfosEkipmanSatir = {
+    bolum: "",
+    bolumAd: "",
+    poz,
+    ad: isim,
+    olcu: "",
+    adet: 1,
+  };
+  return inferUrunTipiFromReferansSatir(satir);
+}
+
+async function matchByExplicitSku(
+  sku: string,
+): Promise<EslesmisUrun | null> {
+  const needle = norm(sku);
+  if (!needle) return null;
+  const rows = await loadLegacyCatalogRows();
+  const hit = rows.find(
+    (r) => r.durum === "aktif" && r.fiyat_tl > 0 && norm(r.sku ?? "") === needle,
+  );
+  return hit ? rowToEslesmis(hit) : null;
+}
+
+async function matchByVerifiedLink(
+  input: ReferansMatchInput,
+): Promise<EslesmisUrun | null> {
+  if (input.sku?.trim()) {
+    return matchByExplicitSku(input.sku);
+  }
+  const liste = input.referansListeKey?.trim();
+  const poz = input.referansPoz?.trim();
+  if (!liste || !poz) return null;
+
+  const links = await loadReferansSkuLinks();
+  const link = links[referansLinkKey(liste, poz)];
+  if (!link?.sku) return null;
+
+  const bySku = await matchByExplicitSku(link.sku);
+  if (bySku) return bySku;
+  if (link.fiyat_try && link.fiyat_try > 0) {
+    return {
+      id: `ref-link-${liste}-${poz}`,
+      sku: link.sku,
+      ad: link.name ?? input.isim,
+      marka: link.marka ?? "Öztiryakiler",
+      model: link.sku,
+      olcu: extractOlcuFromNotlar(input.notlar) || null,
+      elektrikGucuKw: null,
+      gazGucuKw: null,
+      fiyat: Math.round(link.fiyat_try),
+      doviz: "TRY",
+      gorselUrl: null,
+    };
+  }
+  return null;
+}
+
+async function matchByFamilyRules(
+  input: ReferansMatchInput,
+  olcu: string,
+): Promise<EslesmisUrun | null> {
+  if (isYerIzgarasiReferans(input.isim) || /^yer-izgara-\d+$/.test(input.urunTipi)) {
+    return matchYerIzgarasiByOlcu(olcu, input.notlar, input.fiyatStratejisi);
+  }
+  return null;
+}
+
+const MIN_STRICT_SCORE = 95;
+
+/** İsim + ölçü — pfos-tip-shop-links tek-SKU kısayolu kullanılmaz */
+async function matchStrictCatalog(
+  input: ReferansMatchInput,
+  olcu: string,
+): Promise<EslesmisUrun | null> {
+  const familyTip = resolveTipKodu(inferFamilyTip(input.isim, input.referansPoz ?? ""));
+  const rows = (await loadLegacyCatalogRows()).filter(
+    (r) => r.durum === "aktif" && r.fiyat_tl > 0,
+  );
+
+  const scored = rows
+    .map((row) => {
+      if (referansKatalogUyumsuz(input.isim, row.ad)) {
+        return { row, score: -9999 };
+      }
+      let score = isimEslesmeSkoru(input.isim, row.ad);
+      if (olcu) score += olcuEslesmeSkoru(olcu, row.ad);
+      if (familyTip && !familyTip.startsWith("pfos_")) {
+        if (productMatchesTipKodu(row, familyTip)) score += 40;
+        else score -= 30;
+      }
+      if (row.gorsel_url) score += 5;
+      return { row, score };
+    })
+    .filter((x) => x.score >= MIN_STRICT_SCORE)
+    .sort((a, b) => b.score - a.score);
+
+  if (!scored.length) return null;
+  return rowToEslesmis(scored[0].row);
+}
+
+function fallbackOzelImalat(input: ReferansMatchInput): EslesmisUrun {
+  return buildOzelImalatEslesmis({
+    isim: input.isim,
+    urunTipi: input.urunTipi,
+    notlar: input.notlar,
+    fiyatTry: 0,
+  });
+}
+
+/** Referans satırı için güvenli katalog eşlemesi */
+export async function matchReferansKalem(
+  input: ReferansMatchInput,
+): Promise<EslesmisUrun | null> {
+  const olcu =
+    extractOlcuFromNotlar(input.notlar) ||
+    (input.notlar?.match(/(\d+\s*[*xX×]\s*\d+)/)?.[1] ?? "");
+
+  const verified = await matchByVerifiedLink(input);
+  if (verified) return verified;
+
+  const family = await matchByFamilyRules(input, olcu);
+  if (family && !referansKatalogUyumsuz(input.isim, family.ad)) {
+    return family;
+  }
+
+  if (isOzelImalatMotor({ sablonIsim: input.isim, urunTipi: input.urunTipi })) {
+    return buildOzelImalatEslesmis({
+      isim: input.isim,
+      urunTipi: input.urunTipi,
+      notlar: input.notlar,
+    });
+  }
+
+  const strict = await matchStrictCatalog(input, olcu);
+  if (strict) return strict;
+
+  if (isOzelImalatMotor({ sablonIsim: input.isim })) {
+    return buildOzelImalatEslesmis({
+      isim: input.isim,
+      urunTipi: input.urunTipi,
+      notlar: input.notlar,
+    });
+  }
+
+  return fallbackOzelImalat(input);
+}
