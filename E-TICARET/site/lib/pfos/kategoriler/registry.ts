@@ -45,6 +45,13 @@ export const PFOS_KATEGORI_TANIMLARI: PfosKategoriTanim[] = [
     bantlar: [{ id: "100-200", label: "100–200 m²", referansM2: 150 }],
   },
   {
+    id: "casual-cafe",
+    label: "Casual Cafe",
+    ustKategori: "Kafe / Coffee Shop",
+    planNot: "2017-026 BEYKENT ŞİFA CAFE/2017-026.xlsx",
+    bantlar: [{ id: "50-150", label: "50–150 m²", referansM2: 100 }],
+  },
+  {
     id: "buyuk-yemekhane",
     label: "Büyük Yemekhane",
     ustKategori: "Catering / Kurumsal",
@@ -71,6 +78,13 @@ export const PFOS_KATEGORI_TANIMLARI: PfosKategoriTanim[] = [
     ustKategori: "Fast Food / QSR",
     planNot: "2016-085 KİREMİT AKASYA MEFFTECH/2016-085.xlsx",
     bantlar: [{ id: "100-250", label: "100–250 m²", referansM2: 175 }],
+  },
+  {
+    id: "mus-selinoz-turk",
+    label: "Türk Mutfağı — Lokanta",
+    ustKategori: "Fast Food / QSR",
+    planNot: "2016-101 MUŞ SELİNÖZ MİMARLIK/2016-101.xlsx",
+    bantlar: [{ id: "100-250", label: "100–250 m² (Muş 101)", referansM2: 200 }],
   },
   {
     id: "kasap",

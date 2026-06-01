@@ -2,7 +2,8 @@ import type { PfosKategoriKodu } from "@/lib/prisma";
 import { db } from "@/lib/db";
 import type { EslesmisUrun, FiyatStratejisi } from "../schemas/pfos.schema";
 import { olcuMmFromSku } from "../teklif/olcu-mm";
-import { matchCatalogFallback } from "./catalog-fallback";
+import { matchCatalogFallback, matchOzelImalatForSablon } from "./catalog-fallback";
+import { isOzelImalatMotor } from "./ozel-imalat";
 
 let dbPfosSeeded: boolean | null = null;
 const matchCache = new Map<string, EslesmisUrun | null>();
@@ -74,20 +75,33 @@ function productToEslesmis(product: {
 async function fallbackMatch(
   urunTipi: string,
   fiyatStratejisi: FiyatStratejisi,
+  sablonIsim?: string | null,
 ): Promise<EslesmisUrun | null> {
-  return matchCatalogFallback(urunTipi, fiyatStratejisi);
+  return matchCatalogFallback(urunTipi, fiyatStratejisi, sablonIsim);
 }
 
 export async function matchProductForMotor(
   urunTipi: string,
   kategoriKodu: string,
   fiyatStratejisi: FiyatStratejisi,
+  sablonIsim?: string | null,
+  notlar?: string | null,
 ): Promise<EslesmisUrun | null> {
-  const key = cacheKey(urunTipi, kategoriKodu, fiyatStratejisi);
+  const key = `${cacheKey(urunTipi, kategoriKodu, fiyatStratejisi)}|${String(sablonIsim ?? "")}`;
   if (matchCache.has(key)) return matchCache.get(key)!;
 
+  if (isOzelImalatMotor({ sablonIsim, urunTipi })) {
+    const ozel = await matchOzelImalatForSablon(
+      String(sablonIsim ?? ""),
+      urunTipi,
+      notlar,
+    );
+    matchCache.set(key, ozel);
+    return ozel;
+  }
+
   if (!(await dbHasPfosProducts())) {
-    const catalog = await fallbackMatch(urunTipi, fiyatStratejisi);
+    const catalog = await fallbackMatch(urunTipi, fiyatStratejisi, sablonIsim);
     matchCache.set(key, catalog);
     return catalog;
   }
@@ -127,7 +141,7 @@ export async function matchProductForMotor(
       orderBy,
     });
     if (!loose) {
-      const catalog = await fallbackMatch(urunTipi, fiyatStratejisi);
+      const catalog = await fallbackMatch(urunTipi, fiyatStratejisi, sablonIsim);
       matchCache.set(key, catalog);
       return catalog;
     }

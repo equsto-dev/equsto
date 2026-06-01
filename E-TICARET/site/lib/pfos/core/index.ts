@@ -9,7 +9,11 @@ export type {
 export { allDayDiningCafe } from "./rules/all-day-dining-cafe/template";
 export { buildCoffeeShopTemplate } from "../referans/coffee-shop";
 export { pizzaci } from "./rules/pizzaci/template";
-export { turkRestoran } from "./rules/turk-restoran/template";
+export {
+  buildTurkRestoranTemplate,
+  listTurkRestoranReferansKaynaklari,
+  pickTurkRestoranReferansId,
+} from "../referans/turk-restoran";
 export { meyhane } from "./rules/meyhane/template";
 export { kebapOrtadogu } from "./rules/kebap-ortadogu/template";
 

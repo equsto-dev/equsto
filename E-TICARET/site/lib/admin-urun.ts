@@ -13,6 +13,8 @@ export type AdminUrunRow = {
   model: string | null;
   stok: number;
   fiyat_tl: number;
+  satis_fiyat_eur?: number | null;
+  kdv_oran?: number;
   /** Elektrik gücü (kW) */
   el_guc: number | null;
   /** Gaz gücü (kW) */
@@ -43,6 +45,10 @@ type EcomRow = {
   sku?: string;
   model?: string;
   fiyat_tl?: number;
+  fiyat_tl_net?: number;
+  satis_fiyati_eur?: number;
+  satis_eur_indirimli?: number;
+  kdv_oran?: number;
   tip_kodu?: string;
   olculer?: {
     genislik_mm?: number;
@@ -82,6 +88,10 @@ export function ecomRowToAdminUrun(u: EcomRow, index: number): AdminUrunRow {
     u?.fiyat_tl != null && Number(u.fiyat_tl) > 0
       ? Number(u.fiyat_tl)
       : parseFirstTl(u?.price);
+  const satisEur =
+    Number(u?.satis_fiyati_eur ?? u?.satis_eur_indirimli) > 0
+      ? Number(u?.satis_fiyati_eur ?? u?.satis_eur_indirimli)
+      : null;
   const elKw = u?.olculer?.guc_kw;
   const elGuc =
     elKw != null && Number.isFinite(Number(elKw)) ? Number(elKw) : null;
@@ -98,6 +108,8 @@ export function ecomRowToAdminUrun(u: EcomRow, index: number): AdminUrunRow {
     model: u?.model ? String(u.model) : null,
     stok: 0,
     fiyat_tl: fiyat,
+    satis_fiyat_eur: satisEur,
+    kdv_oran: Number(u?.kdv_oran) > 0 ? Number(u.kdv_oran) : 20,
     el_guc: elGuc,
     gaz_guc: null,
     aciklama: u?.specs ? String(u.specs) : null,

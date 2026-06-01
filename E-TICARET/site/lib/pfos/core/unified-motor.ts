@@ -17,6 +17,33 @@ import type {
 } from "../schemas/pfos.schema";
 import { KONSEPT_LABELS, type Konsept } from "../schemas/pfos.schema";
 import { finalizeKalemlerForTeklif } from "../teklif/assign-poz";
+import type { KategoriKodu } from "../schemas/pfos.schema";
+
+const YIKAMA_TIP_KODU = new Set([
+  "bulasik_giyotin_1000",
+  "bulasik_makinesi_giyotin",
+  "bardak_yikama",
+  "cop_siyirma_tez",
+  "bym_cikis_tez",
+  "bulasik_cikis_tezgahi",
+  "yag_tutucu",
+  "on_yikama_dusu",
+]);
+
+function normalizeKategoriKodu(k: PFOSKalemi): PFOSKalemi {
+  const tip = resolveTipKodu(k.urunTipi);
+  const isim = String(k.isim || "").toLocaleLowerCase("tr");
+  if (
+    YIKAMA_TIP_KODU.has(tip) ||
+    /bulaşık|bulasik|giyotin|bym |sıyırma|yıkama|yikama|yağ tutucu|yag tutucu/.test(isim)
+  ) {
+    if (k.kategoriKodu !== "H") return { ...k, kategoriKodu: "H" as KategoriKodu };
+  }
+  if (/^davlumbaz/.test(k.urunTipi.replace(/_/g, "-")) && k.kategoriKodu === "G") {
+    return { ...k, kategoriKodu: "B" as KategoriKodu };
+  }
+  return k;
+}
 
 export function resolveBolumM2(
   konsept: Konsept,
@@ -75,6 +102,8 @@ async function buildTemplateKalemler(
       item.urunTipi,
       item.kategoriKodu,
       fiyatStratejisi,
+      item.isim,
+      item.notlar,
     );
 
     kalemler.push({
@@ -186,7 +215,7 @@ export async function calculateUnifiedQuote(
   );
 
   const kalemler = finalizeKalemlerForTeklif(
-    dedupeKalemler([...zoneKalemler, ...templateKalemler]),
+    dedupeKalemler([...zoneKalemler, ...templateKalemler]).map(normalizeKategoriKodu),
     template.teklifPozModu || template.teklifBolum
       ? {
           pozModu: template.teklifPozModu ?? "kategori",

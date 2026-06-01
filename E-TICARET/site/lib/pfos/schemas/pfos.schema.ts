@@ -42,10 +42,12 @@ export const KonseptEnum = z.enum([
   "kahve-atolyesi",
   "harvest-cafe",
   "all-sport-cafe",
+  "casual-cafe",
   "buyuk-yemekhane",
   "guneli-pastane",
   "sehir-otel",
   "kiremit-akasya",
+  "mus-selinoz-turk",
   "kasap",
   "kasap-sarkuteri",
   "inari-bar-yemek",
@@ -79,10 +81,12 @@ export const KONSEPT_LABELS: Record<Konsept, string> = {
   "kahve-atolyesi": "Kahve Atölyesi",
   "harvest-cafe": "Harvest Cafe",
   "all-sport-cafe": "All Sport Cafe",
+  "casual-cafe": "Casual Cafe",
   "buyuk-yemekhane": "Büyük Yemekhane",
   "guneli-pastane": "Güneli Fırın",
   "sehir-otel": "Şehir Oteli (Business)",
   "kiremit-akasya": "Kiremit Akasya",
+  "mus-selinoz-turk": "Türk Mutfağı — Lokanta",
   kasap: "Kasap",
   "kasap-sarkuteri": "Kasap + Şarküteri",
   "inari-bar-yemek": "Bar + Yemek (Hafif Asya)",
@@ -107,6 +111,8 @@ export const PFOSRequestSchema = z.object({
   musteri: z.string().optional(),
   /** Balıkçı mahalle / alt tip — referans liste seçimi */
   altTip: z.string().optional(),
+  /** Açık referans liste id (ör. s13-388-turk-220 | turk-restoran-200-5000); yoksa m² kuralı */
+  referansId: z.string().optional(),
 });
 
 export type PFOSRequest = z.infer<typeof PFOSRequestSchema>;
@@ -122,6 +128,8 @@ export const EslesmisUrunSchema = z.object({
   elektrikGucuKw: z.number().nullable(),
   gazGucuKw: z.number().nullable(),
   fiyat: z.number(),
+  /** Katalog Equsto satış (EUR, KDV hariç) — proforma birim fiyat */
+  fiyatEur: z.number().nullable().optional(),
   doviz: z.enum(["EUR", "TRY", "USD"]),
   gorselUrl: z.string().nullable(),
   slug: z.string().optional(),

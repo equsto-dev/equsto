@@ -44,20 +44,33 @@ function normName(s: string): string {
     .replace(/\s+/g, " ");
 }
 
+/** Unox fırın üstü davlumbaz — PFOS özel imalat / duvar tipi eşleşmesine girmesin */
+function isUnoxCheftopHoodName(name: string): boolean {
+  const n = normName(name);
+  return (
+    n.includes("eech") ||
+    n.includes("cheftop") ||
+    n.includes("cheft") ||
+    (n.includes("unox") && n.includes("davlumbaz"))
+  );
+}
+
 function isCombiOvenName(name: string): boolean {
   const n = normName(name);
   if (!n) return false;
-  const hasCombi =
-    n.includes("icombi") ||
-    n.includes("kombili") ||
-    /\bcombi\b/.test(n) ||
-    /\bkombi\b/.test(n) ||
-    (n.includes("kombi") && !n.includes("kombin") && !n.includes("kombine"));
-  if (!hasCombi && !n.includes("konveks")) return false;
   if (n.includes("buzdolab") || n.includes("dondurucu")) return false;
   if (n.includes("kombi tip") || n.includes("kombine")) return false;
   if (n.includes("blender") || n.includes("mikser")) return false;
-  return hasCombi || n.includes("konveks");
+  if (n.includes("mikrodalga")) return false;
+  return (
+    n.includes("icombi") ||
+    n.includes("kombili") ||
+    /\bcombi\b/.test(n) ||
+    (n.includes("kombi") &&
+      !n.includes("kombin") &&
+      !n.includes("kombine") &&
+      n.includes("firin"))
+  );
 }
 
 const TIP_MATCH_RULES: Record<string, (name: string) => boolean> = {
@@ -71,7 +84,15 @@ const TIP_MATCH_RULES: Record<string, (name: string) => boolean> = {
     (name.includes("bulasik") || name.includes("bulaşık") || name.includes("tabak")),
   calisma_tezgahi: (name) =>
     name.includes("tezgah") && !name.includes("buzdolab") && !name.includes("evye"),
-  davlumbaz_duvar: (name) => name.includes("davlumbaz") && !name.includes("izgar"),
+  davlumbaz_duvar: (name) => {
+    if (isUnoxCheftopHoodName(name)) return false;
+    if (name.includes("ultravent") || name.includes("yogusturma")) return false;
+    return (
+      name.includes("davlumbaz") &&
+      (name.includes("duvar") || name.includes("duvar tipi")) &&
+      !name.includes("izgar")
+    );
+  },
   yer_izgara: (name) =>
     (name.includes("yer izgar") || name.includes("yer ızgar")) &&
     !name.includes("istif") &&
@@ -98,6 +119,10 @@ const TIP_MATCH_RULES: Record<string, (name: string) => boolean> = {
       name.includes("kahve makinesi")
     );
   },
+  bar_blender: (name) =>
+    name.includes("blender") &&
+    !name.includes("mikrodalga") &&
+    !name.includes("robot coupe el blenderi cmp"),
   kahve_degirmeni: (name) => {
     if (name.includes("kahve makin") || name.includes("espresso")) return false;
     if (/wmf 1[13]00/.test(name)) return false;
@@ -127,6 +152,9 @@ const TIP_MATCH_RULES: Record<string, (name: string) => boolean> = {
 
 function isExcludedForTip(name: string, tip: string): boolean {
   const n = normName(name);
+  if (/^davlumbaz/.test(tip.replace(/_/g, "-")) && isUnoxCheftopHoodName(n)) {
+    return true;
+  }
   if (tip === "derin_dondurucu_dik") {
     return n.includes("panel") || n.includes("split");
   }
@@ -259,6 +287,11 @@ function adminRowToEslesmis(
     zoneMarka: ctx?.zoneMeta?.marka,
     zoneOlcu: ctx?.zoneMeta?.olcu,
   });
+  const fiyatEur =
+    row.satis_fiyat_eur != null && Number(row.satis_fiyat_eur) > 0
+      ? Math.round(Number(row.satis_fiyat_eur) * 100) / 100
+      : null;
+
   return {
     id: row.id,
     slug: row.id.replace(/^ecom_/, ""),
@@ -270,6 +303,7 @@ function adminRowToEslesmis(
     elektrikGucuKw: row.el_guc,
     gazGucuKw: row.gaz_guc,
     fiyat: row.fiyat_tl,
+    fiyatEur,
     doviz: "TRY",
     gorselUrl: row.gorsel_url,
   };
@@ -358,7 +392,9 @@ export async function matchShopCatalog(
     const bySku = pool.find(
       (r) => r.sku && normName(r.sku) === normName(link.sku!),
     );
-    if (bySku) return adminRowToEslesmis(bySku, ctx);
+    if (bySku && productMatchesTipKodu(bySku, tip)) {
+      return adminRowToEslesmis(bySku, ctx);
+    }
     if (link.name || link.brand) {
       return adminRowToEslesmis(pseudoRowFromLink(link, tip), ctx);
     }

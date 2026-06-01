@@ -6,6 +6,11 @@ import {
 } from "./zone-catalog-loader";
 import { matchShopCatalog } from "./shop-catalog-match";
 import { normalizeTipKodu, resolveTipKodu, URUN_TIPI_ALIASES } from "./tip-kodu";
+import {
+  buildOzelImalatEslesmis,
+  displayIsimFromSablon,
+  isOzelImalatMotor,
+} from "./ozel-imalat";
 
 export { URUN_TIPI_ALIASES, normalizeTipKodu, resolveTipKodu };
 
@@ -97,8 +102,27 @@ async function matchZoneCatalog(urunTipi: string): Promise<EslesmisUrun | null> 
 export async function matchCatalogFallback(
   urunTipi: string,
   fiyatStratejisi: "ekonomik" | "orta" | "premium" = "ekonomik",
+  sablonIsim?: string | null,
 ): Promise<EslesmisUrun | null> {
+  if (isOzelImalatMotor({ sablonIsim, urunTipi })) return null;
   const shop = await matchShopCatalog(urunTipi, fiyatStratejisi);
   if (shop) return shop;
   return matchZoneCatalog(urunTipi);
+}
+
+/** Portashelf / özel imalat — katalog SKU yok; zone medyan fiyat + Equsto marka */
+export async function matchOzelImalatForSablon(
+  isim: string,
+  urunTipi: string,
+  notlar?: string | null,
+): Promise<EslesmisUrun> {
+  const zone = await matchZoneCatalog(urunTipi);
+  return buildOzelImalatEslesmis({
+    isim: displayIsimFromSablon(isim) || isim,
+    urunTipi,
+    notlar,
+    fiyatTry: zone?.fiyat ?? 0,
+    elektrikGucuKw: zone?.elektrikGucuKw ?? null,
+    gazGucuKw: zone?.gazGucuKw ?? null,
+  });
 }
