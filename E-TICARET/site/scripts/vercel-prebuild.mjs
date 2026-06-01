@@ -104,6 +104,12 @@ if (fs.existsSync(buildPfosLabels)) {
   if (r.status !== 0) process.exit(r.status ?? 1);
 }
 
+const buildProductI18n = path.join(siteDir, "scripts/build-product-i18n-en.mjs");
+if (fs.existsSync(buildProductI18n)) {
+  const r = spawnSync(process.execPath, [buildProductI18n], { cwd: siteDir, stdio: "inherit" });
+  if (r.status !== 0) process.exit(r.status ?? 1);
+}
+
 const buildEn = path.join(siteDir, "scripts/build-geo-landings-en.mjs");
 if (fs.existsSync(buildEn)) {
   const r = spawnSync(process.execPath, [buildEn], { cwd: siteDir, stdio: "inherit" });
@@ -177,6 +183,21 @@ const buildSitemap = path.join(siteDir, "scripts/build-sitemap.mjs");
 if (fs.existsSync(buildSitemap)) {
   const r = spawnSync(process.execPath, [buildSitemap], { cwd: siteDir, stdio: "inherit" });
   if (r.status !== 0) process.exit(r.status ?? 1);
+}
+
+const dbUrl = process.env.DATABASE_URL || "";
+if (process.env.VERCEL === "1" && dbUrl && !dbUrl.includes("127.0.0.1:5432/build")) {
+  console.log("[vercel-prebuild] prisma db push (şema — ShopCart)");
+  const npx = process.platform === "win32" ? "npx.cmd" : "npx";
+  const push = spawnSync(npx, ["prisma", "db", "push", "--skip-generate"], {
+    cwd: siteDir,
+    stdio: "inherit",
+    env: process.env,
+    shell: process.platform === "win32",
+  });
+  if (push.status !== 0) {
+    console.warn("[vercel-prebuild] db push uyarı — ShopCart tabloları manuel oluşturulmalı");
+  }
 }
 
 console.log("[vercel-prebuild] OK");
