@@ -929,24 +929,7 @@
 
         lastRender = { q: q, total: total, err: null, warning: warn, hasMore: hasMore };
         renderAll();
-
-        return loadCatalogImageMap().then(function () {
-          var enriched = enrichHits(rawHits);
-          if (replace) {
-            sourceHits = sortHitsWithImagesFirst(enriched);
-          } else {
-            var idMap = Object.create(null);
-            sourceHits.forEach(function (h, idx) {
-              if (h && h.id) idMap[h.id] = idx;
-            });
-            enriched.forEach(function (h) {
-              if (h && h.id && idMap[h.id] != null) sourceHits[idMap[h.id]] = h;
-              else sourceHits.push(h);
-            });
-            sourceHits = dedupeHits(sourceHits);
-          }
-          renderAll();
-        });
+        enrichHitsAsync(rawHits, replace);
       })
       .catch(function (e) {
         if (e && e.name === "AbortError") return;
@@ -971,6 +954,7 @@
   function bindUi() {
     if (uiBound) return;
     uiBound = true;
+    bindFacetEvents();
 
     var sortEl = document.getElementById("eq-arama-sort");
     if (sortEl) {
@@ -1022,8 +1006,9 @@
   function load() {
     bindUi();
     var q = getQuery();
-    var inp = document.querySelector("header .srch-input");
-    if (inp && q) inp.value = q;
+    if (typeof window.eqClearHeaderSearchInput === "function") {
+      window.eqClearHeaderSearchInput();
+    }
 
     if (!q) {
       lastRender = { q: "", total: 0, err: null, warning: "", hasMore: false };

@@ -295,6 +295,15 @@
     }, DEBOUNCE_MS);
   }
 
+  function clearSearchInputs() {
+    try {
+      document.querySelectorAll("header .srch-input").forEach(function (inp) {
+        inp.value = "";
+      });
+    } catch (_) {}
+    hidePanel();
+  }
+
   function commitSearch(q) {
     /* KİLİT: arama-history-KILIT.txt — eqNavigateArama, aynı URL'de history trap yok */
     q = trimQ(q);
@@ -304,6 +313,7 @@
       sessionStorage.setItem("eq_hdr_search_q", q);
     } catch (_) {}
     window.__eqHdrLastQ = q;
+    clearSearchInputs();
     if (typeof window.eqNavigateArama === "function") {
       window.eqNavigateArama(q);
       return;
@@ -311,6 +321,8 @@
     var url = aramaUrl(q);
     if (url) location.href = url;
   }
+
+  window.eqClearHeaderSearchInput = clearSearchInputs;
 
   function setActive(idx) {
     var panel = document.getElementById("eq-srch-panel");
@@ -397,6 +409,15 @@
     true
   );
 
+  function isAramaResultsPage() {
+    try {
+      var p = String(location.pathname || "").replace(/\/$/, "");
+      return p === "/arama" || p === "/en/search";
+    } catch (_) {
+      return false;
+    }
+  }
+
   function drainInputFromUrl() {
     var q = "";
     try {
@@ -409,9 +430,14 @@
     }
     q = trimQ(q);
     if (!q) return;
+    window.__eqHdrLastQ = q;
+    /* Sonuç sayfasında kutuyu boş bırak — sorgu başlıkta görünür. */
+    if (isAramaResultsPage()) {
+      clearSearchInputs();
+      return;
+    }
     var inp = getInput();
     if (inp) inp.value = q;
-    window.__eqHdrLastQ = q;
   }
 
   if (document.readyState === "loading") {
