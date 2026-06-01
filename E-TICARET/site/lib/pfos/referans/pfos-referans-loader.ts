@@ -3,7 +3,7 @@ import type { PfosEkipmanSatir } from "@/lib/pfos/kategoriler/types";
 import type { PfosKategoriKodu } from "@/lib/pfos/core/engine-types";
 import type { ReferansKalem, ReferansProfil } from "./referans-types";
 import { inferUrunTipiFromReferansSatir } from "./infer-urun-tipi";
-import { repairPfosDisplayText } from "@/lib/pfos/text/repair-pfos-display";
+import { repairPfosDisplayText } from "@/lib/utf8/repair-turkish-fffd";
 import {
   displayBolumBaslik,
   kategoriFromBolumAd,
