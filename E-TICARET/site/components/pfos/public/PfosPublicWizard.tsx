@@ -536,14 +536,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
           />
           <span className={styles.alanUnit}>m²</span>
         </div>
-        <input
-          type="range"
-          className={styles.alanRange}
-          min={minM2}
-          max={1000}
-          value={Math.min(Math.max(val, minM2), 1000)}
-          onChange={(e) => setM2Value(e.target.value)}
-        />
         <div className={styles.alanPresets} role="group">
           {M2_PRESETS.map((n, i) => (
             <button

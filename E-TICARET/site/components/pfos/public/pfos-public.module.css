@@ -422,7 +422,7 @@
 .secPending:not(.secReveal) .presetBtn,
 .secPending:not(.secReveal) .multiLabel,
 .secPending:not(.secReveal) .alanHero,
-.secPending:not(.secReveal) .alanRange,
+.secPending:not(.secReveal) .alanPresets,
 .secPending:not(.secReveal) .adresGrid,
 .secPending:not(.secReveal) .textInput {
   opacity: 0;
@@ -432,7 +432,7 @@
 .secPending.secReveal .presetBtn,
 .secPending.secReveal .multiLabel,
 .secPending.secReveal .alanHero,
-.secPending.secReveal .alanRange,
+.secPending.secReveal .alanPresets,
 .secPending.secReveal .adresGrid,
 .secPending.secReveal .textInput {
   opacity: 1;
@@ -589,11 +589,6 @@
 .alanUnit {
   font-size: 1.1rem;
   color: #6b7280;
-}
-
-.alanRange {
-  width: 100%;
-  accent-color: #001e50;
 }
 
 .alanPresets {
