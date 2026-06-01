@@ -50,7 +50,11 @@ async function action(req: NextRequest, ctx: Ctx): Promise<Response> {
 
   if (path === "login" && method === "POST") {
     try {
-      const session = await loginWithEmail(String(body.email || ""), String(body.password || ""));
+      const session = await loginWithEmail(
+        String(body.email || ""),
+        String(body.password || ""),
+        typeof body.syncToken === "string" ? body.syncToken : null,
+      );
       return json(sessionResponse(session));
     } catch (e) {
       return err(e instanceof Error ? e.message : "Giriş başarısız", 401);
@@ -74,7 +78,10 @@ async function action(req: NextRequest, ctx: Ctx): Promise<Response> {
     try {
       const credential = String(body.credential || body.id_token || "");
       if (!credential) return err("Google credential gerekli", 400);
-      const session = await loginWithGoogle(credential);
+      const session = await loginWithGoogle(
+        credential,
+        typeof body.syncToken === "string" ? body.syncToken : null,
+      );
       return json(sessionResponse(session));
     } catch (e) {
       return err(e instanceof Error ? e.message : "Google girişi başarısız", 401);

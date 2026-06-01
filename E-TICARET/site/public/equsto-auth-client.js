@@ -58,6 +58,21 @@
     return 'Sunucuya ulaşılamadı' + (status ? ' (HTTP ' + status + ')' : '') + '.';
   }
 
+  function readCartSyncToken() {
+    try {
+      var t = localStorage.getItem('equsto_cart_sync_v1');
+      if (t && /^[0-9a-f-]{36}$/i.test(t)) return t;
+    } catch (e) {}
+    return '';
+  }
+
+  function withCartSync(json) {
+    var o = Object.assign({}, json || {});
+    var st = readCartSyncToken();
+    if (st) o.syncToken = st;
+    return o;
+  }
+
   function apiFetch(path, opts) {
     opts = opts || {};
     var headers = Object.assign({ Accept: 'application/json' }, opts.headers || {});
@@ -127,7 +142,10 @@
   };
 
   window.equstoAuthEmailLogin = function (email, password) {
-    return apiFetch('/login', { method: 'POST', json: { email: email, password: password } }).then(function (j) {
+    return apiFetch('/login', {
+      method: 'POST',
+      json: withCartSync({ email: email, password: password }),
+    }).then(function (j) {
       if (j && j.success) applySession(j);
       return j;
     });
@@ -136,7 +154,7 @@
   window.equstoAuthEmailRegister = function (email, password, name) {
     return apiFetch('/register', {
       method: 'POST',
-      json: { email: email, password: password, name: name || '' },
+      json: withCartSync({ email: email, password: password, name: name || '' }),
     }).then(function (j) {
       if (j && j.success) applySession(j);
       return j;
@@ -144,7 +162,10 @@
   };
 
   window.equstoAuthGoogleCredential = function (credential) {
-    return apiFetch('/google', { method: 'POST', json: { credential: credential } }).then(function (j) {
+    return apiFetch('/google', {
+      method: 'POST',
+      json: withCartSync({ credential: credential }),
+    }).then(function (j) {
       if (j && j.success) {
         applySession(j);
         setMsg('');
