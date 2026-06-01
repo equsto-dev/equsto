@@ -129,7 +129,10 @@ export async function createSessionForMember(memberId: string): Promise<MemberSe
   await db.shopMemberSession.create({
     data: { token, memberId, expiresAt },
   });
-  const items = normalizeShopCartItems(member.cartItems);
+  const items = await loadUnifiedShopCart({
+    memberEmail: member.email,
+    memberId: member.id,
+  });
   return {
     token,
     expiresAt: expiresAt.getTime(),
@@ -148,7 +151,10 @@ export async function getSessionByToken(token: string): Promise<MemberSessionPay
     if (row) await db.shopMemberSession.delete({ where: { token } }).catch(() => {});
     return null;
   }
-  const items = normalizeShopCartItems(row.member.cartItems);
+  const items = await loadUnifiedShopCart({
+    memberEmail: row.member.email,
+    memberId: row.member.id,
+  });
   return {
     token: row.token,
     expiresAt: row.expiresAt.getTime(),
@@ -278,16 +284,61 @@ export async function mergeGuestShopCartIntoMember(
 }
 
 async function syncMemberCartFromShopEmail(memberId: string, email: string): Promise<void> {
-  const emailKey = resolveShopCartKey(null, email);
-  if (!emailKey) return;
-  const shopRow = await db.shopCart.findUnique({ where: { cartKey: emailKey } });
-  const member = await db.shopMember.findUnique({ where: { id: memberId } });
-  if (!member) return;
-  const merged = mergeShopCartItems(member.cartItems, shopRow?.items ?? []);
-  await db.shopMember.update({
-    where: { id: memberId },
-    data: { cartItems: shopCartItemsToJson(merged) },
-  });
+  const merged = await loadUnifiedShopCart({ memberEmail: email, memberId });
+  await persistUnifiedShopCart({ memberId, memberEmail: email, items: merged });
+}
+
+/** Üye + e-posta ShopCart + misafir token — tek birleşik sepet (cihazlar arası). */
+export async function loadUnifiedShopCart(opts: {
+  syncToken?: string | null;
+  memberEmail?: string | null;
+  memberId?: string | null;
+}): Promise<ShopCartLine[]> {
+  const { syncToken, memberEmail, memberId } = opts;
+  let merged: ShopCartLine[] = [];
+
+  if (memberId) {
+    const member = await db.shopMember.findUnique({ where: { id: memberId } });
+    merged = mergeShopCartItems(merged, member?.cartItems ?? []);
+  }
+
+  const emailKey = resolveShopCartKey(null, memberEmail);
+  if (emailKey) {
+    const row = await db.shopCart.findUnique({ where: { cartKey: emailKey } });
+    merged = mergeShopCartItems(merged, row?.items ?? []);
+  }
+
+  const guestKey = resolveShopCartKey(syncToken, null);
+  if (guestKey?.startsWith("guest:") && guestKey !== emailKey) {
+    const guest = await db.shopCart.findUnique({ where: { cartKey: guestKey } });
+    merged = mergeShopCartItems(merged, guest?.items ?? []);
+  }
+
+  return normalizeShopCartItems(merged);
+}
+
+/** Üye kaydı ve e-posta ShopCart satırını aynı içerikle günceller. */
+export async function persistUnifiedShopCart(opts: {
+  memberId?: string | null;
+  memberEmail?: string | null;
+  items: ShopCartLine[];
+}): Promise<ShopCartLine[]> {
+  const items = normalizeShopCartItems(opts.items);
+  const emailKey = resolveShopCartKey(null, opts.memberEmail);
+  if (emailKey) {
+    await db.shopCart.upsert({
+      where: { cartKey: emailKey },
+      create: { cartKey: emailKey, items: shopCartItemsToJson(items) },
+      update: { items: shopCartItemsToJson(items) },
+    });
+  }
+  if (opts.memberId) {
+    await db.shopMember.update({
+      where: { id: opts.memberId },
+      data: { cartItems: shopCartItemsToJson(items) },
+    });
+  }
+  return items;
 }
 
 export function sessionResponse(payload: MemberSessionPayload) {

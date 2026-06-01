@@ -216,11 +216,27 @@
     });
   }
 
+  function readSyncTokenCookie() {
+    try {
+      var m = String(document.cookie || '').match(/(?:^|;\s*)equsto_cart_sync=([0-9a-f-]{36})/i);
+      return m ? m[1] : '';
+    } catch (e) {
+      return '';
+    }
+  }
+
   function getSyncToken() {
     try {
       var t = localStorage.getItem(SYNC_TOKEN_KEY);
       if (t && /^[0-9a-f-]{36}$/i.test(t)) return t;
     } catch (e) {}
+    var fromCookie = readSyncTokenCookie();
+    if (fromCookie) {
+      try {
+        localStorage.setItem(SYNC_TOKEN_KEY, fromCookie);
+      } catch (eCookie) {}
+      return fromCookie;
+    }
     var created = newSyncToken();
     try {
       localStorage.setItem(SYNC_TOKEN_KEY, created);
@@ -283,7 +299,11 @@
       .then(function (j) {
         if (!j || !j.success) return false;
         shopCartPulled = true;
+        if (usesAuthCartSync()) sessionCartPulled = true;
+        lastSyncAt = Date.now();
         applyShopPulledCart(Array.isArray(j.items) ? j.items : []);
+        syncBadge();
+        renderPanelList();
         return true;
       })
       .catch(function () {
@@ -623,28 +643,7 @@
   }
 
   function flushPush() {
-    if (!canPushToServer()) return;
-    var payload = load();
-    if (!payload.length) return;
-    var token = authToken();
-    if (syncPushTimer) {
-      clearTimeout(syncPushTimer);
-      syncPushTimer = null;
-    }
-    try {
-      fetch(cartAuthUrl(), {
-        method: 'PUT',
-        credentials: cartApiBase() ? 'omit' : 'same-origin',
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-          Authorization: 'Bearer ' + token,
-          'X-Equsto-Authorization': token,
-        },
-        body: JSON.stringify({ items: payload, token: token }),
-        keepalive: true,
-      });
-    } catch (e) {}
+    flushShopCartPush();
   }
 
   function usesAuthCartSync() {
@@ -653,11 +652,19 @@
 
   function save(arr) {
     var clean = normalizeCart(arr || []);
+    var isEmpty = !clean.length;
     saveLocal(clean);
     if (usesAuthCartSync()) {
-      schedulePush(clean);
-      pushShopCartNow(clean);
-      pushCartNow(clean, { force: true });
+      if (isEmpty) {
+        pushShopCartNow([], { replace: true });
+      } else {
+        scheduleShopCartPush(clean);
+        pushShopCartNow(clean);
+      }
+    } else if (isEmpty) {
+      if (shopCartPushTimer) clearTimeout(shopCartPushTimer);
+      shopCartPushTimer = null;
+      pushShopCartNow([], { replace: true });
     } else {
       scheduleShopCartPush(clean);
       pushShopCartNow(clean);
@@ -1100,6 +1107,11 @@
   }
 
   function clearAll() {
+    cartClearGraceUntil = Date.now() + 5000;
+    if (shopCartPushTimer) clearTimeout(shopCartPushTimer);
+    shopCartPushTimer = null;
+    if (syncPushTimer) clearTimeout(syncPushTimer);
+    syncPushTimer = null;
     save([]);
     syncBadge();
     renderPanelList();
@@ -1979,11 +1991,7 @@
     opts = opts || {};
     if (usesAuthCartSync()) {
       sessionCartPulled = false;
-      return syncFromServer(opts).then(function (ok) {
-        return shopCartPull(opts).then(function () {
-          return ok;
-        });
-      });
+      shopCartPulled = false;
     }
     return shopCartPull(opts);
   }
@@ -2048,23 +2056,10 @@
     syncBadge();
     document.addEventListener('click', onDocClick);
     document.addEventListener('keydown', onKeyDown);
-    document.addEventListener('equsto-member-session', function (ev) {
-      var d = ev && ev.detail;
-      sessionCartPulled = true;
-      shopCartPulled = true;
-      lastSyncAt = Date.now();
-      if (d && Array.isArray(d.items)) {
-        var remote = normalizeCart(d.items);
-        var local = load();
-        var out = mergeCartMaxQty(remote, local);
-        saveLocal(out);
-        syncBadge();
-        pushCartNow(out, { force: true });
-        pushShopCartNow(out);
-        renderPanelList();
-      } else {
-        scheduleMemberCartSync();
-      }
+    document.addEventListener('equsto-member-session', function () {
+      sessionCartPulled = false;
+      shopCartPulled = false;
+      pullCartFromServer({ force: true });
     });
     window.addEventListener('equsto-member-changed', function (ev) {
       if (ev && ev.detail && ev.detail.active === false) resetCartSyncState();

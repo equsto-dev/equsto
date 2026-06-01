@@ -1,8 +1,11 @@
 import { NextRequest } from "next/server";
 import { db } from "@/lib/db";
 import {
+  getMemberIdByToken,
   getSessionByToken,
+  loadUnifiedShopCart,
   mergeGuestShopCartIntoMember,
+  persistUnifiedShopCart,
   readBearerToken,
   readTokenFromBody,
 } from "@/lib/member-auth";
@@ -15,11 +18,19 @@ import {
 
 export const dynamic = "force-dynamic";
 
-function json(data: unknown, status = 200) {
+function json(data: unknown, status = 200, extraHeaders?: Record<string, string>) {
   return Response.json(data, {
     status,
-    headers: { "Cache-Control": "no-store" },
+    headers: { "Cache-Control": "no-store", ...extraHeaders },
   });
+}
+
+function syncTokenCookie(syncToken: string | null | undefined) {
+  const tok = String(syncToken ?? "").trim().toLowerCase();
+  if (!/^[0-9a-f-]{36}$/.test(tok)) return {};
+  return {
+    "Set-Cookie": `equsto_cart_sync=${tok}; Path=/; Max-Age=31536000; Secure; SameSite=Lax`,
+  };
 }
 
 async function readKey(
@@ -27,29 +38,46 @@ async function readKey(
   body?: { syncToken?: string; memberEmail?: string; token?: string },
 ) {
   const q = req.nextUrl.searchParams;
-  const syncToken = body?.syncToken ?? q.get("syncToken");
+  const syncToken =
+    body?.syncToken ?? q.get("syncToken") ?? req.cookies.get("equsto_cart_sync")?.value;
   let memberEmail = body?.memberEmail ?? q.get("memberEmail");
   const token =
     readBearerToken(req) ||
     readTokenFromBody(body as Record<string, unknown> | undefined) ||
     q.get("access_token");
+  let memberId: string | null = null;
   if (token) {
     const session = await getSessionByToken(token);
     if (session?.user?.email) memberEmail = session.user.email;
+    memberId = await getMemberIdByToken(token);
   }
   const cartKey = resolveShopCartKey(syncToken, memberEmail);
-  return { cartKey, syncToken, memberEmail: memberEmail ?? null };
+  return { cartKey, syncToken, memberEmail: memberEmail ?? null, memberId, token };
 }
 
 export async function GET(req: NextRequest) {
-  const { cartKey } = await readKey(req);
+  const { cartKey, syncToken, memberEmail, memberId } = await readKey(req);
   if (!cartKey) {
     return json({ success: false, error: "syncToken veya memberEmail gerekli" }, 400);
   }
   try {
+    const items =
+      memberId || memberEmail
+        ? await loadUnifiedShopCart({ syncToken, memberEmail, memberId })
+        : normalizeShopCartItems(
+            (await db.shopCart.findUnique({ where: { cartKey } }))?.items ?? [],
+          );
     const row = await db.shopCart.findUnique({ where: { cartKey } });
-    const items = normalizeShopCartItems(row?.items ?? []);
-    return json({ success: true, items, cartKey, updatedAt: row?.updatedAt?.toISOString() ?? null });
+    return json(
+      {
+        success: true,
+        items,
+        cartKey,
+        updatedAt: row?.updatedAt?.toISOString() ?? null,
+      },
+      200,
+      syncTokenCookie(syncToken),
+    );
   } catch (e) {
     console.error("[shop/cart GET]", e);
     return json({ success: false, error: "Sepet okunamadı" }, 503);
@@ -70,16 +98,34 @@ export async function PUT(req: NextRequest) {
   } catch {
     return json({ success: false, error: "Geçersiz JSON" }, 400);
   }
-  const { cartKey, syncToken, memberEmail } = await readKey(req, body);
+  const { cartKey, syncToken, memberEmail, memberId } = await readKey(req, body);
   if (!cartKey) {
     return json({ success: false, error: "syncToken veya memberEmail gerekli" }, 400);
   }
   const incoming = normalizeShopCartItems(body.items ?? []);
   const replace = body.replace === true || body.clear === true;
   try {
-    if (memberEmail && syncToken && !replace) {
-      await mergeGuestShopCartIntoMember(syncToken, memberEmail);
+    if (memberId && memberEmail) {
+      if (!replace) await mergeGuestShopCartIntoMember(syncToken, memberEmail);
+      const existing = await loadUnifiedShopCart({ syncToken, memberEmail, memberId });
+      const merged = replace ? incoming : mergeShopCartItems(existing, incoming);
+      const saved = await persistUnifiedShopCart({
+        memberId,
+        memberEmail,
+        items: merged,
+      });
+      return json(
+        {
+          success: true,
+          items: saved,
+          cartKey,
+          updatedAt: new Date().toISOString(),
+        },
+        200,
+        syncTokenCookie(syncToken),
+      );
     }
+
     const existing = await db.shopCart.findUnique({ where: { cartKey } });
     const merged =
       replace || !existing ? incoming : mergeShopCartItems(existing.items, incoming);
@@ -88,12 +134,16 @@ export async function PUT(req: NextRequest) {
       create: { cartKey, items: shopCartItemsToJson(merged) },
       update: { items: shopCartItemsToJson(merged) },
     });
-    return json({
-      success: true,
-      items: normalizeShopCartItems(row.items),
-      cartKey,
-      updatedAt: row.updatedAt.toISOString(),
-    });
+    return json(
+      {
+        success: true,
+        items: normalizeShopCartItems(row.items),
+        cartKey,
+        updatedAt: row.updatedAt.toISOString(),
+      },
+      200,
+      syncTokenCookie(syncToken),
+    );
   } catch (e) {
     console.error("[shop/cart PUT]", e);
     return json({ success: false, error: "Sepet kaydedilemedi" }, 503);
