@@ -99,27 +99,41 @@ export function getNeighborhoodNames(districtId: string): string[] {
   return neighborhoodsByDistrict.get(districtId) ?? [];
 }
 
-export function filterProvinces(query: string, limit = 12): TrProvince[] {
+export function filterProvinces(query: string, limit?: number): TrProvince[] {
   const q = normAdresKey(query);
-  if (!q) return provinces.slice(0, limit);
-  return provinces
-    .filter(
+  let list: TrProvince[];
+  if (!q) {
+    list = [...provinces].sort((a, b) =>
+      a.name.localeCompare(b.name, "tr-TR"),
+    );
+  } else {
+    list = provinces.filter(
       (p) =>
         normAdresKey(p.name).includes(q) ||
         String(p.plate).startsWith(q.replace(/\D/g, "")),
-    )
-    .slice(0, limit);
+    );
+  }
+  if (limit != null && limit > 0) return list.slice(0, limit);
+  return list;
 }
 
 export function filterDistricts(
   provinceId: number,
   query: string,
-  limit = 14,
+  limit?: number,
 ): TrDistrict[] {
   const rows = getDistricts(provinceId);
   const q = normAdresKey(query);
-  if (!q) return rows.slice(0, limit);
-  return rows.filter((d) => normAdresKey(d.name).includes(q)).slice(0, limit);
+  let list: TrDistrict[];
+  if (!q) {
+    list = [...rows].sort((a, b) =>
+      a.name.localeCompare(b.name, "tr-TR"),
+    );
+  } else {
+    list = rows.filter((d) => normAdresKey(d.name).includes(q));
+  }
+  if (limit != null && limit > 0) return list.slice(0, limit);
+  return list;
 }
 
 export function filterNeighborhoods(
