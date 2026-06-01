@@ -10,8 +10,10 @@ import {
   Alert,
   Button,
   Checkbox,
+  Col,
   Input,
   Progress,
+  Row,
   Select,
   Space,
   Statistic,
@@ -51,6 +53,17 @@ type ImportRow = ImportAnalizItem & {
   onaylandi: boolean;
 };
 
+function buildImportUserPrompt(notes: string): string {
+  const trimmed = notes.trim();
+  if (!trimmed) return "Dosyayı analiz et:";
+  return `Dosyayı analiz et.
+
+Yükleyenin liste notları (bağlam — dosyada olmayan bilgileri buradan kullan):
+---
+${trimmed}
+---`;
+}
+
 function fileKind(file: File): "pdf" | "excel" | null {
   const ext = (file.name.split(".").pop() || "").toLowerCase();
   if (ext === "pdf") return "pdf";
@@ -68,6 +81,7 @@ export default function PfosImportPanel() {
   const [parseStep, setParseStep] = useState("");
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [importNotes, setImportNotes] = useState("");
 
   useEffect(() => {
     fetchTipSozlugu().then(({ entries }) => setTipSozlugu(entries));
@@ -80,6 +94,7 @@ export default function PfosImportPanel() {
     setRows([]);
     setError(null);
     setParseStep("");
+    setImportNotes("");
   }, []);
 
   const loadFile = useCallback((f: File) => {
@@ -156,7 +171,7 @@ SADECE JSON döndür, başka hiçbir şey yazma:
           ? "application/pdf"
           : "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
       system_prompt: systemPrompt,
-      user_prompt: "Dosyayı analiz et:",
+      user_prompt: buildImportUserPrompt(importNotes),
     });
 
     window.clearInterval(timer);
@@ -231,20 +246,61 @@ SADECE JSON döndür, başka hiçbir şey yazma:
           Claude API proxy (<code>npm run api</code>, port 3001) çalışıyor olmalı.
         </Typography.Paragraph>
 
-        <PfosDropZone
-          accept=".pdf,.xlsx,.xls"
-          title="PDF veya Excel dosyasını sürükle ya da tıkla"
-          hint="Teklif listesi · proforma · ekipman listesi"
-          fileName={file?.name}
-          fileMeta={
-            file
-              ? `${(file.size / 1024).toFixed(1)} KB · ${fileType?.toUpperCase()}`
-              : null
-          }
-          disabled={parsing}
-          onFile={loadFile}
-          onClear={reset}
-        />
+        <Row gutter={16} align="stretch">
+          <Col xs={24} lg={12}>
+            <PfosDropZone
+              compact
+              accept=".pdf,.xlsx,.xls"
+              title="PDF veya Excel dosyasını sürükle ya da tıkla"
+              hint="Teklif listesi · proforma · ekipman listesi"
+              fileName={file?.name}
+              fileMeta={
+                file
+                  ? `${(file.size / 1024).toFixed(1)} KB · ${fileType?.toUpperCase()}`
+                  : null
+              }
+              disabled={parsing}
+              onFile={loadFile}
+              onClear={reset}
+            />
+          </Col>
+          <Col xs={24} lg={12}>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                height: "100%",
+                minHeight: 220,
+              }}
+            >
+              <Typography.Text strong style={{ display: "block", marginBottom: 8 }}>
+                Liste notları
+              </Typography.Text>
+              <Typography.Paragraph
+                type="secondary"
+                style={{ marginTop: 0, marginBottom: 8, fontSize: 12 }}
+              >
+                Proje adı, mutfak tipi, özel istekler — analiz sırasında Claude bu metni
+                okur.
+              </Typography.Paragraph>
+              <Input.TextArea
+                value={importNotes}
+                onChange={(e) => setImportNotes(e.target.value)}
+                disabled={parsing}
+                placeholder="Örn: Steakhouse 250 m², H yıkama ayrı bölüm, Öztiryakiler ağırlıklı teklif…"
+                style={{
+                  flex: 1,
+                  minHeight: 160,
+                  resize: "vertical",
+                  fontSize: 13,
+                  lineHeight: 1.5,
+                }}
+                maxLength={8000}
+                showCount
+              />
+            </div>
+          </Col>
+        </Row>
 
         <Space style={{ marginTop: 16 }} wrap>
           <Button
