@@ -2,11 +2,14 @@ import path from "node:path";
 
 /** PLP / kart — kesit ve model çizimi ön plana alınmaz. */
 export function isTechnicalCatalogImage(relOrUrl) {
-  const fn = path.basename(String(relOrUrl || "")).toLowerCase();
+  const s = String(relOrUrl || "").replace(/\\/g, "/");
+  const fn = path.basename(s).toLowerCase();
   if (!fn) return false;
   if (/kesit/i.test(fn)) return true;
   if (/[-_]model-\d+\.(jpe?g|webp|png|gif)$/i.test(fn)) return true;
   if (/\d{3,4}[-_]model-\d/i.test(fn)) return true;
+  /** PDF sayfa kırpıntısı (tablo / ölçü metni) — Cafemarkt yerine p119 vb. */
+  if (/\/atalay\/p\d{2,3}\/atalay-adst-/i.test(s)) return true;
   return false;
 }
 

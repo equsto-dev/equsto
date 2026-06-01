@@ -99,13 +99,11 @@
   }
 
   function isPlpTechnicalImg(rel) {
-    var fn = String(rel || '')
-      .split('?')[0]
-      .split('/')
-      .pop()
-      .toLowerCase();
+    var s = String(rel || '').split('?')[0].replace(/\\/g, '/');
+    var fn = s.split('/').pop().toLowerCase();
     if (/kesit/i.test(fn)) return true;
     if (/[-_]model-\d+\.(jpe?g|webp|png|gif)$/i.test(fn)) return true;
+    if (/\/atalay\/p\d{2,3}\/atalay-adst-/i.test(s)) return true;
     return false;
   }
 

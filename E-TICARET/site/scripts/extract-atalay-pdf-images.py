@@ -432,19 +432,19 @@ def patch_dept_files(manifest: dict) -> int:
             for row in rows:
                 if "atalay" not in str(row.get("brand", "")).lower():
                     continue
-            model = str(row.get("model") or "").strip()
-            if not model:
-                continue
-            cur = str((row.get("images") or [""])[0]).replace("\\", "/")
-            if "/catalog/atalay/cafemarkt/" in cur:
-                continue
-            hit = manifest.get(model)
-            if not hit:
-                continue
-            rel = hit.lstrip("/")
-            if row.get("images") != [rel]:
-                row["images"] = [rel]
-                changed += 1
+                model = str(row.get("model") or "").strip()
+                if not model:
+                    continue
+                cur = str((row.get("images") or [""])[0]).replace("\\", "/")
+                if "/catalog/atalay/cafemarkt/" in cur:
+                    continue
+                hit = manifest.get(model)
+                if not hit:
+                    continue
+                rel = hit.lstrip("/")
+                if row.get("images") != [rel]:
+                    row["images"] = [rel]
+                    changed += 1
             if changed:
                 dept_file.write_text(
                     json.dumps(rows, ensure_ascii=False), encoding="utf-8"
