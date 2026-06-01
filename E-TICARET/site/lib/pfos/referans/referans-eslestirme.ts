@@ -33,6 +33,18 @@ import {
   matchKonveksiyonFirinByReferans,
   matchTasFirinByReferans,
 } from "./firin-match";
+import {
+  isBuzMakinesiReferans,
+  matchBuzMakinesiByReferans,
+} from "./buz-makinesi-match";
+import {
+  isBulasikMakinesiReferans,
+  matchBulasikByReferans,
+} from "./bulasik-match";
+import {
+  referansKatalogCeliski,
+  tipShopLinkUygun,
+} from "./referans-nitelikleri";
 
 export type ReferansMatchInput = {
   isim: string;
@@ -136,7 +148,9 @@ function rowToEslesmis(row: AdminUrunRow): EslesmisUrun {
 export function referansKatalogUyumsuz(
   sablonIsim: string,
   katalogAd: string,
+  notlar?: string | null,
 ): boolean {
+  if (referansKatalogCeliski(sablonIsim, katalogAd, notlar)) return true;
   const s = norm(sablonIsim);
   const k = norm(katalogAd);
   if (!s || !k) return false;
@@ -238,12 +252,33 @@ async function matchByTipShopLink(
   if (!urunTipi || urunTipi.startsWith("pfos_")) return null;
 
   const tip = referansTipKodu(input);
+  if (
+    (tip === "calisma_tezgahi" || tip === "calisma_tezgahi_dolap") &&
+    /tek\s*evyeli|mermer\s*tabla|\(imalat\)/i.test(input.isim)
+  ) {
+    return null;
+  }
+  if (tip === "buz_makinesi" && isBuzMakinesiReferans(input.isim)) {
+    return null;
+  }
+  if (
+    (tip === "bulasik_giyotin_1000" || tip === "bardak_yikama") &&
+    isBulasikMakinesiReferans(input.isim)
+  ) {
+    return null;
+  }
+
   const links = await loadTipShopLinks();
   const link = links[tip];
   if (!link?.sku) return null;
+  if (!tipShopLinkUygun(input.isim, input.notlar, link.name ?? link.sku)) {
+    return null;
+  }
 
   const bySku = await matchByExplicitSku(link.sku);
-  if (bySku) return bySku;
+  if (bySku && !referansKatalogUyumsuz(input.isim, bySku.ad, input.notlar)) {
+    return bySku;
+  }
 
   if (link.fiyat_try && link.fiyat_try > 0) {
     return {
@@ -312,6 +347,20 @@ async function matchByFamilyRules(
       input.fiyatStratejisi,
     );
   }
+  if (isBuzMakinesiReferans(input.isim)) {
+    return matchBuzMakinesiByReferans(
+      input.isim,
+      input.notlar,
+      input.fiyatStratejisi,
+    );
+  }
+  if (isBulasikMakinesiReferans(input.isim)) {
+    return matchBulasikByReferans(
+      input.isim,
+      input.notlar,
+      input.fiyatStratejisi,
+    );
+  }
   if (
     isTasFirinReferans(input.isim) ||
     input.urunTipi === "tas-firin" ||
@@ -346,7 +395,7 @@ async function matchStrictCatalog(
 
   const scored = rows
     .map((row) => {
-      if (referansKatalogUyumsuz(input.isim, row.ad)) {
+      if (referansKatalogUyumsuz(input.isim, row.ad, input.notlar)) {
         return { row, score: -9999 };
       }
       let score = isimEslesmeSkoru(input.isim, row.ad);
@@ -385,13 +434,8 @@ export async function matchReferansKalem(
   const verified = await matchByVerifiedLink(input);
   if (verified) return verified;
 
-  const tipLinked = await matchByTipShopLink(input);
-  if (tipLinked && !referansKatalogUyumsuz(input.isim, tipLinked.ad)) {
-    return tipLinked;
-  }
-
   const family = await matchByFamilyRules(input, olcu);
-  if (family && !referansKatalogUyumsuz(input.isim, family.ad)) {
+  if (family && !referansKatalogUyumsuz(input.isim, family.ad, input.notlar)) {
     return family;
   }
 
@@ -401,6 +445,14 @@ export async function matchReferansKalem(
       urunTipi: input.urunTipi,
       notlar: input.notlar,
     });
+  }
+
+  const tipLinked = await matchByTipShopLink(input);
+  if (
+    tipLinked &&
+    !referansKatalogUyumsuz(input.isim, tipLinked.ad, input.notlar)
+  ) {
+    return tipLinked;
   }
 
   const strict = await matchStrictCatalog(input, olcu);
