@@ -77,7 +77,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   );
   const [shopTypes, setShopTypes] = useState<ShopTypeRow[]>([]);
   const [answers, setAnswers] = useState<SoruCevapHaritasi>({});
-  const [donePanels, setDonePanels] = useState<Set<string>>(new Set());
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [sonuc, setSonuc] = useState<PFOSResponse | null>(null);
@@ -109,20 +108,28 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     [questions, answers],
   );
 
-  const openPanelId = useMemo(() => {
-    const next = panels.find((p) => !donePanels.has(p.id));
-    return next?.id ?? panels.at(-1)?.id ?? "s1";
-  }, [panels, donePanels]);
+  const openPanelIndex = useMemo(() => {
+    for (let i = 0; i < panels.length; i++) {
+      if (!isLegacyPanelComplete(panels[i], questions, answers)) return i;
+    }
+    return Math.max(0, panels.length - 1);
+  }, [panels, questions, answers]);
 
-  const doneCountRef = useRef(0);
+  const openPanelId = panels[openPanelIndex]?.id ?? "s1";
+
+  const donePanelIds = useMemo(
+    () => new Set(panels.slice(0, openPanelIndex).map((p) => p.id)),
+    [panels, openPanelIndex],
+  );
+
+  const openPanelIndexRef = useRef(openPanelIndex);
   useEffect(() => {
-    const n = donePanels.size;
-    if (n <= doneCountRef.current) {
-      doneCountRef.current = n;
+    if (openPanelIndex <= openPanelIndexRef.current) {
+      openPanelIndexRef.current = openPanelIndex;
       return;
     }
-    doneCountRef.current = n;
-    const openId = panels.find((p) => !donePanels.has(p.id))?.id;
+    openPanelIndexRef.current = openPanelIndex;
+    const openId = panels[openPanelIndex]?.id;
     if (!openId) return;
     setEnteringPanelId(openId);
     const t = window.setTimeout(() => {
@@ -132,7 +139,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
         ?.scrollIntoView({ behavior: "smooth", block: "nearest" });
     }, 420);
     return () => window.clearTimeout(t);
-  }, [donePanels, panels]);
+  }, [openPanelIndex, panels]);
 
   const motorGirdi = useMemo(
     () => soruCevaplarindanMotorGirdi(answers),
@@ -145,48 +152,13 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   const konsept = parseKonsept(motorSlug);
 
   const hint = useMemo(() => {
-    const h = wizardHint(panels, donePanels, openPanelId);
+    const h = wizardHint(panels, donePanelIds, openPanelId);
     return { pct: h.pct, title: t(h.title), sub: t(h.sub) };
-  }, [panels, donePanels, openPanelId, t]);
-
-  const visibleThroughIndex = useMemo(() => {
-    const i = panels.findIndex((p) => !donePanels.has(p.id));
-    return i === -1 ? Math.max(0, panels.length - 1) : i;
-  }, [panels, donePanels]);
+  }, [panels, donePanelIds, openPanelId, t]);
 
   const panelVisible = useCallback(
-    (_panel: LegacyPanelDef, index: number) => index <= visibleThroughIndex,
-    [visibleThroughIndex],
-  );
-
-  const completePanel = useCallback((panelId: string) => {
-    setDonePanels((prev) => {
-      if (prev.has(panelId)) return prev;
-      return new Set([...prev, panelId]);
-    });
-    setError(null);
-  }, []);
-
-  const maybeAdvancePanel = useCallback(
-    (
-      panel: LegacyPanelDef | undefined,
-      merged: SoruCevapHaritasi,
-      changedId: keyof SoruCevapHaritasi,
-      autoAdvance: boolean,
-    ) => {
-      if (!autoAdvance || !panel || changedId === "q_karar") return;
-      if (!isLegacyPanelComplete(panel, questions, merged)) return;
-
-      const qs = panelQuestions(panel, questions, merged);
-      const singleSelect =
-        qs.length === 1 &&
-        (qs[0].type === "select" || qs[0].type === "select_conditional");
-
-      if (singleSelect || changedId === "q_m2") {
-        window.setTimeout(() => completePanel(panel.id), singleSelect ? 280 : 420);
-      }
-    },
-    [questions, completePanel],
+    (_panel: LegacyPanelDef, index: number) => index <= openPanelIndex,
+    [openPanelIndex],
   );
 
   const reopenPanel = useCallback(
@@ -196,9 +168,13 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
       setFinished(false);
       setSonuc(null);
       setTeklifV14(null);
-      setDonePanels((prev) => {
-        const next = new Set(prev);
-        for (let i = idx; i < panels.length; i++) next.delete(panels[i].id);
+      setAnswers((prev) => {
+        const next = { ...prev };
+        for (let i = idx; i < panels.length; i++) {
+          for (const qid of panels[i].questionIds) {
+            delete next[qid as keyof SoruCevapHaritasi];
+          }
+        }
         return next;
       });
     },
@@ -209,12 +185,10 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     (
       id: keyof SoruCevapHaritasi,
       value: string | string[],
-      panel?: LegacyPanelDef,
-      autoAdvance = true,
+      _panel?: LegacyPanelDef,
     ) => {
-      let merged: SoruCevapHaritasi = {};
       setAnswers((prev) => {
-        merged = clearDownstreamAnswers({ ...prev, [id]: value }, id);
+        let merged = clearDownstreamAnswers({ ...prev, [id]: value }, id);
         if (
           id === "q_m2" &&
           !bulutDukkanGecerliMi(String(merged.q_dukkan_turu ?? ""), merged)
@@ -223,13 +197,12 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
         }
         return merged;
       });
-      maybeAdvancePanel(panel, merged, id, autoAdvance);
       setError(null);
       setFinished(false);
       setSonuc(null);
       setTeklifV14(null);
     },
-    [maybeAdvancePanel],
+    [],
   );
 
   const toggleMulti = (opt: string, panel?: LegacyPanelDef) => {
@@ -238,21 +211,12 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     const i = arr.indexOf(opt);
     if (i >= 0) arr.splice(i, 1);
     else arr.push(opt);
-    let merged: SoruCevapHaritasi = {};
-    setAnswers((prev) => {
-      merged = clearDownstreamAnswers(
+    setAnswers((prev) =>
+      clearDownstreamAnswers(
         { ...prev, q_ne_pisireceksin: arr },
         "q_ne_pisireceksin",
-      );
-      return merged;
-    });
-    if (
-      panel &&
-      arr.length > 0 &&
-      isLegacyPanelComplete(panel, questions, merged)
-    ) {
-      window.setTimeout(() => completePanel(panel.id), 320);
-    }
+      ),
+    );
     setFinished(false);
     setSonuc(null);
     setTeklifV14(null);
@@ -262,7 +226,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     const karar = kararOpt ?? String(answers.q_karar ?? "");
     if (karar.includes("detaylandır")) {
       setFinished(true);
-      completePanel("s6");
       return;
     }
 
@@ -320,7 +283,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
         }),
       );
       setFinished(true);
-      completePanel("s6");
     } catch (e) {
       setError(e instanceof Error ? e.message : t("Beklenmeyen hata"));
     } finally {
@@ -342,8 +304,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
 
   function resetWizard() {
     setAnswers({});
-    setDonePanels(new Set());
-    doneCountRef.current = 0;
+    openPanelIndexRef.current = 0;
     setFinished(false);
     setSonuc(null);
     setTeklifV14(null);
@@ -372,7 +333,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
             min={minM2}
             max={2000}
             value={val}
-            onChange={(e) => setAnswer("q_m2", e.target.value, panel, false)}
+            onChange={(e) => setAnswer("q_m2", e.target.value, panel)}
           />
           <span className={styles.alanUnit}>m²</span>
         </div>
@@ -382,7 +343,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
           min={minM2}
           max={1000}
           value={Math.min(Math.max(val, minM2), 1000)}
-          onChange={(e) => setAnswer("q_m2", e.target.value, panel, false)}
+          onChange={(e) => setAnswer("q_m2", e.target.value, panel)}
         />
         <div className={styles.alanPresets} role="group">
           {M2_PRESETS.map((n) => (
@@ -390,7 +351,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
               key={n}
               type="button"
               className={`${styles.presetBtn}${val === n ? ` ${styles.presetBtnActive}` : ""}`}
-              onClick={() => setAnswer("q_m2", String(n), panel, false)}
+              onClick={() => setAnswer("q_m2", String(n), panel)}
             >
               {n} m²
             </button>
@@ -497,21 +458,16 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
           value={adresForm}
           onChange={(v) => {
             const mapped = adresFormToAnswers(v);
-            let merged: SoruCevapHaritasi = {};
-            setAnswers((prev) => {
-              merged = clearDownstreamAnswers(
+            setAnswers((prev) =>
+              clearDownstreamAnswers(
                 {
                   ...prev,
                   q_lokasyon: mapped.q_lokasyon,
                   q_acik_adres: mapped.q_acik_adres,
                 },
                 "q_lokasyon",
-              );
-              return merged;
-            });
-            if (isLegacyPanelComplete(panel, questions, merged)) {
-              window.setTimeout(() => completePanel(panel.id), 450);
-            }
+              ),
+            );
             setFinished(false);
             setSonuc(null);
             setTeklifV14(null);
@@ -526,10 +482,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
         className={styles.textInput}
         type="text"
         value={answers[id] != null ? String(answers[id]) : ""}
-        onChange={(e) => setAnswer(id, e.target.value, panel, false)}
-        onBlur={() => {
-          if (panel.optional) completePanel(panel.id);
-        }}
+        onChange={(e) => setAnswer(id, e.target.value, panel)}
         placeholder={t("Marka adı…")}
       />
     );
@@ -540,8 +493,8 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     const qs = panelQuestions(panel, questions, answers);
     if (qs.length === 0 && panel.skipIfEmpty) return null;
 
-    const isDone = donePanels.has(panel.id);
-    const isActive = panel.id === openPanelId;
+    const isDone = index < openPanelIndex;
+    const isActive = index === openPanelIndex;
     const showBody = isDone || isActive;
     const summary = panelAnswerSummary(panel, answers);
     const summaryDisplay = summary

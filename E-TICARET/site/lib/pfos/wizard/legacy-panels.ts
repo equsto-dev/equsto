@@ -138,7 +138,23 @@ export function isLegacyPanelComplete(
   if (panel.id === "s1") {
     return String(answers.q_meslek ?? "").trim().length > 0;
   }
-  if (panel.optional && qs.every((q) => q.required === "false")) return true;
+  if (panel.optional && qs.every((q) => q.required === "false")) {
+    const needsPick = qs.some(
+      (q) =>
+        q.type === "select" ||
+        q.type === "select_conditional" ||
+        q.type === "multi_select",
+    );
+    if (needsPick) {
+      return qs.some((q) => {
+        const id = q.id as keyof SoruCevapHaritasi;
+        const v = answers[id];
+        if (Array.isArray(v)) return v.length > 0;
+        return v !== undefined && v !== null && String(v).trim() !== "";
+      });
+    }
+    return true;
+  }
   return qs.every((q) => isQuestionAnswered(q, answers));
 }
 
