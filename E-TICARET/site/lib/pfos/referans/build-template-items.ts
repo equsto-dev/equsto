@@ -15,5 +15,7 @@ export function referansKalemlerToTemplateItems(
     notlar: k.notlar,
     elektrikGucuKwHint: k.elektrikGucuKwHint,
     sablonSira: index,
+    referansBolumSira: k.referansBolumSira,
+    referansBolumKey: k.referansBolumKey,
   }));
 }

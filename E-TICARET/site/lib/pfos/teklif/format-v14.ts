@@ -53,7 +53,13 @@ export function birimEurFromEslesmis(
 ): number | null {
   if (!u) return null;
   const eur = Number(u.fiyatEur);
-  if (Number.isFinite(eur) && eur > 0) return Math.round(eur * 100) / 100;
+  if (Number.isFinite(eur) && eur > 0) {
+    return Math.round(eur * 100) / 100;
+  }
+  const satisTl = Number((u as { satis_fiyati_tl?: number }).satis_fiyati_tl);
+  if (satisTl > 0 && eurTry != null && eurTry > 0) {
+    return Math.round((satisTl / eurTry) * 100) / 100;
+  }
   if (u.doviz === "EUR" && Number(u.fiyat) > 0) {
     return Math.round(Number(u.fiyat) * 100) / 100;
   }

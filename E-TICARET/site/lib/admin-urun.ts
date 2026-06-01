@@ -13,7 +13,11 @@ export type AdminUrunRow = {
   model: string | null;
   stok: number;
   fiyat_tl: number;
+  alis_fiyati_eur?: number | null;
+  alis_fiyati_tl?: number | null;
   satis_fiyat_eur?: number | null;
+  satis_fiyati_tl?: number | null;
+  para_birimi?: string | null;
   kdv_oran?: number;
   /** Elektrik gücü (kW) */
   el_guc: number | null;
@@ -46,8 +50,12 @@ type EcomRow = {
   model?: string;
   fiyat_tl?: number;
   fiyat_tl_net?: number;
+  alis_fiyati_eur?: number;
+  alis_fiyati_tl?: number;
   satis_fiyati_eur?: number;
+  satis_fiyati_tl?: number;
   satis_eur_indirimli?: number;
+  para_birimi?: string;
   kdv_oran?: number;
   tip_kodu?: string;
   olculer?: {
@@ -92,6 +100,9 @@ export function ecomRowToAdminUrun(u: EcomRow, index: number): AdminUrunRow {
     Number(u?.satis_fiyati_eur ?? u?.satis_eur_indirimli) > 0
       ? Number(u?.satis_fiyati_eur ?? u?.satis_eur_indirimli)
       : null;
+  const alisEur = Number(u?.alis_fiyati_eur) > 0 ? Number(u.alis_fiyati_eur) : null;
+  const alisTl = Number(u?.alis_fiyati_tl) > 0 ? Number(u.alis_fiyati_tl) : null;
+  const satisTl = Number(u?.satis_fiyati_tl) > 0 ? Number(u.satis_fiyati_tl) : null;
   const elKw = u?.olculer?.guc_kw;
   const elGuc =
     elKw != null && Number.isFinite(Number(elKw)) ? Number(elKw) : null;
@@ -108,7 +119,11 @@ export function ecomRowToAdminUrun(u: EcomRow, index: number): AdminUrunRow {
     model: u?.model ? String(u.model) : null,
     stok: 0,
     fiyat_tl: fiyat,
+    alis_fiyati_eur: alisEur,
+    alis_fiyati_tl: alisTl,
     satis_fiyat_eur: satisEur,
+    satis_fiyati_tl: satisTl,
+    para_birimi: u?.para_birimi ? String(u.para_birimi) : null,
     kdv_oran: Number(u?.kdv_oran) > 0 ? Number(u.kdv_oran) : 20,
     el_guc: elGuc,
     gaz_guc: null,

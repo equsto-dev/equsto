@@ -157,6 +157,9 @@ export const PFOSKalemiSchema = z.object({
   referansPoz: z.string().optional(),
   /** Referans şablon satır sırası (poz ataması için) */
   sablonSira: z.number().optional(),
+  /** Excel bölüm sırası — teklif gruplama / sıralama */
+  referansBolumSira: z.number().optional(),
+  referansBolumKey: z.string().optional(),
 });
 
 export type PFOSKalemi = z.infer<typeof PFOSKalemiSchema>;

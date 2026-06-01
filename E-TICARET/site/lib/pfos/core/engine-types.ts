@@ -56,6 +56,8 @@ export type ConceptTemplateItem = {
   notlar?: string;
   /** Referans şablon satır sırası */
   sablonSira?: number;
+  referansBolumSira?: number;
+  referansBolumKey?: string;
 };
 
 export type ConceptTemplate = {

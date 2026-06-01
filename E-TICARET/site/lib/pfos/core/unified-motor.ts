@@ -111,6 +111,8 @@ async function buildTemplateKalemler(
       referansPoz: item.referansPoz,
       kategoriKodu: item.kategoriKodu,
       altKategori: item.altKategori,
+      referansBolumSira: item.referansBolumSira,
+      referansBolumKey: item.referansBolumKey,
       urunTipi: item.urunTipi,
       isim: item.isim,
       tip: item.tip,

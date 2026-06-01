@@ -9,12 +9,36 @@ import { enrichEslesmisFromKatalogRow } from "./catalog-enrich";
 import {
   loadZoneCatalog,
 } from "./zone-catalog-loader";
+import fs from "node:fs";
+import path from "node:path";
 import {
   normalizeTipKodu,
   resolveTipKodu,
   TIP_SEARCH_TERMS,
   TIP_SHOP_CATS,
 } from "./tip-kodu";
+
+/** Katalog Equsto satış EUR — Excel net alış × 1,08 (satis_fiyati_* alanları) */
+function equstoSatisEurFromRow(row: AdminUrunRow): number | null {
+  const eur = Number(row.satis_fiyat_eur);
+  if (eur > 0) return Math.round(eur * 100) / 100;
+  const tl = Number(row.satis_fiyati_tl);
+  if (tl > 0) {
+    let kur = 53.2979;
+    try {
+      const snap = path.join(
+        process.cwd(),
+        "scripts/data/tcmb-kur-snapshot.json",
+      );
+      const j = JSON.parse(fs.readFileSync(snap, "utf8")) as { rate?: number };
+      if (j.rate && j.rate > 0) kur = j.rate;
+    } catch {
+      /* */
+    }
+    return Math.round((tl / kur) * 100) / 100;
+  }
+  return null;
+}
 
 const MIN_SCORE = 72;
 
@@ -287,10 +311,7 @@ function adminRowToEslesmis(
     zoneMarka: ctx?.zoneMeta?.marka,
     zoneOlcu: ctx?.zoneMeta?.olcu,
   });
-  const fiyatEur =
-    row.satis_fiyat_eur != null && Number(row.satis_fiyat_eur) > 0
-      ? Math.round(Number(row.satis_fiyat_eur) * 100) / 100
-      : null;
+  const fiyatEur = equstoSatisEurFromRow(row);
 
   return {
     id: row.id,
