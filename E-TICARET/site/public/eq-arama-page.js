@@ -1040,6 +1040,10 @@
     /* KİLİT: arama-history-KILIT.txt — popstate + lastBootQ */
     if (!isAramaPath()) {
       lastBootQ = null;
+      try {
+        sessionStorage.removeItem("eq_hdr_search_q");
+      } catch (_) {}
+      window.__eqHdrLastQ = "";
       return;
     }
     waitForGrid(load);

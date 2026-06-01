@@ -126,6 +126,29 @@
     }).format(Math.round(v));
   }
 
+  function repairPfosText(s) {
+    if (s == null || s === '') return '';
+    var t = String(s);
+    if (t.indexOf('\uFFFD') >= 0) {
+      t = t
+        .replace(/\uFFFDal\uFFFD\uFFFDma/gi, 'çalışma')
+        .replace(/haz\uFFFDrl\uFFFDk/gi, 'hazırlık')
+        .replace(/so\uFFFDuk/gi, 'soğuk')
+        .replace(/F\uFFFDr\uFFFDn/gi, 'Fırın')
+        .replace(/\uFFFD/g, '');
+    }
+    t = t.replace(/\bFrn\s+stand/gi, 'Fırın stand');
+    t = t.replace(/\bFrn\b/gi, 'Fırın');
+    t = t.replace(/(\d{2,4})\s+ı\s+(\d{2,4})\s+ı\s+(\d{2,4})/gi, '$1×$2×$3');
+    t = t.replace(/(\d{2,4})\s+ı\s+(\d{2,4})/gi, '$1×$2');
+    t = t.replace(/S\s+E\s+R\s+V\s+ı\s+S/gi, 'SERVIS');
+    t = t.replace(/B\s+U\s+L\s+A\s+ı\s+I\s+K/gi, 'BULAŞIK');
+    t = t.replace(/konveyırl/gi, 'konveyörl');
+    t = t.replace(/polişretan/gi, 'poliüretan');
+    t = t.replace(/,\s*ıap:/g, ', çap:');
+    return t;
+  }
+
   function escHtml(s) {
     if (typeof window.esc === 'function') return window.esc(s);
     return String(s == null ? '' : s)
@@ -253,8 +276,9 @@
         lines.shift();
       }
     }
+    lines = lines.map(repairPfosText);
     if (!lines.length) {
-      if (r.ad) lines.push(r.ad);
+      if (r.ad) lines.push(repairPfosText(r.ad));
       var dim = pfosDimMmPlain(r);
       if (dim !== '\u2014') lines.push('\u00d6l\u00e7\u00fc: ' + dim);
       if (r.tip_kodu) lines.push('Stok / tip: ' + r.tip_kodu);
@@ -500,11 +524,16 @@
     if (en != null && boy != null && yuk != null) {
       return String(en) + '\u00d7' + String(boy) + '\u00d7' + String(yuk) + ' mm';
     }
-    var raw = r.olcu || r.olcuText || r.dimensions || '';
+    var raw = repairPfosText(r.olcu || r.olcuText || r.dimensions || '');
     if (!raw) return '\u2014';
     var m = String(raw).match(
-      /(\d+(?:[.,]\d+)?)\s*[x\u00d7X*]\s*(\d+(?:[.,]\d+)?)\s*[x\u00d7X*]\s*(\d+(?:[.,]\d+)?)/i
+      /(\d+(?:[.,]\d+)?)\s+ı\s+(\d+(?:[.,]\d+)?)\s+ı\s+(\d+(?:[.,]\d+)?)/i
     );
+    if (!m) {
+      m = String(raw).match(
+        /(\d+(?:[.,]\d+)?)\s*[x\u00d7X*]\s*(\d+(?:[.,]\d+)?)\s*[x\u00d7X*]\s*(\d+(?:[.,]\d+)?)/i
+      );
+    }
     if (!m) return String(raw);
     function num(s) {
       return Math.round(parseFloat(String(s).replace(',', '.')));

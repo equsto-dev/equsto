@@ -427,7 +427,12 @@ label{
 #pane-pdfimport .admin-pfos .eq-acl .acit{padding:10px 12px;font-size:12px;cursor:pointer;border-bottom:.5px solid var(--border)}
 #pane-pdfimport .admin-pfos .eq-acl .acit:last-child{border-bottom:none}
 #pane-pdfimport .admin-pfos .eq-acl .acit:hover{background:color-mix(in srgb, var(--gold) 12%, transparent);color:var(--text)}
-/* E-Ticaret Ayarlar — Proje Fabrikası ile aynı adres API + açılır liste */
+/* E-Ticaret Ayarlar — teslimat adresi (yerel veritabanı + OSM) */
+#pane-eticaret .et-inp{
+  width:100%;padding:10px 12px;border:.5px solid var(--border2);border-radius:8px;
+  background:var(--bg3);color:var(--text);font-size:13px;font-family:inherit;
+}
+#pane-eticaret .et-inp:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px color-mix(in srgb, var(--gold) 14%, transparent)}
 #et-ayarlar .eq-acw{position:relative;margin-top:0}
 #et-ayarlar .eq-acl{
   position:absolute;top:calc(100% + 4px);left:0;right:0;background:var(--bg2);
@@ -604,6 +609,72 @@ body.admin-locked .adm-footer{visibility:hidden;pointer-events:none;height:0;ove
 /* PDF import — dikey ritim */
 #pane-pdfimport .admin-pfos{display:flex;flex-direction:column;gap:18px;}
 #pane-pdfimport .admin-pfos .qb-card{margin-top:0;}
+/* Konsept Tipleri — yalnızca aktif sekmede görünür */
+#pane-proje-akis.active{
+  overflow:hidden;padding:20px 22px 24px;display:flex;flex-direction:column;
+  min-height:0;flex:1 1 auto;background:var(--bg2);
+}
+.pa-intro{font-size:13px;color:var(--muted);line-height:1.55;margin-bottom:16px;max-width:100%;}
+.pa-intro strong{color:var(--text);}
+.pa-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:8px;flex-shrink:0;}
+.pa-head .pa-title{font-size:16px;font-weight:600;color:var(--text);margin-right:auto;}
+.pa-banner{display:none;padding:10px 14px;border-radius:6px;font-size:12px;margin-bottom:12px;border:1px solid var(--border);flex-shrink:0;}
+.pa-banner--info{background:var(--info);color:var(--infoT);}
+.pa-banner--ok{background:var(--success);color:var(--successT);}
+.pa-banner--err{background:var(--danger);color:var(--dangerT);}
+.pa-stats{display:flex;flex-wrap:wrap;gap:32px 40px;margin-bottom:20px;flex-shrink:0;}
+.pa-stat{min-width:72px;padding:0;border:none;background:transparent;}
+.pa-stat-n{display:block;font-size:30px;font-weight:600;font-variant-numeric:tabular-nums;color:var(--text);line-height:1.2;}
+.pa-stat-l{display:block;font-size:13px;color:var(--muted);margin-top:4px;}
+.pa-stat--warn .pa-stat-n{color:var(--dangerT);}
+.pa-tabs{display:flex;flex-wrap:wrap;gap:0;margin-bottom:0;border-bottom:1px solid var(--border);flex-shrink:0;}
+.pa-itab{
+  padding:10px 16px;font-size:14px;cursor:pointer;color:var(--muted);
+  border-bottom:2px solid transparent;margin-bottom:-1px;background:transparent;
+}
+.pa-itab:hover{color:var(--gold);}
+.pa-itab.active{color:var(--gold);border-bottom-color:var(--gold);font-weight:500;}
+.pa-toolbar{
+  display:flex;flex-wrap:wrap;align-items:center;gap:8px;
+  padding:14px 0 12px;flex-shrink:0;
+}
+.pa-toolbar .btn-primary{background:var(--gold);border-color:var(--gold);color:#fff;}
+.pa-hint{font-size:12px;color:var(--muted);margin-right:8px;}
+.pa-table-wrap{
+  overflow:auto;border:1px solid var(--border);border-radius:8px;background:#fff;
+  flex:1 1 auto;min-height:240px;max-height:calc(100vh - 300px);
+}
+.pa-table-wrap--pro{box-shadow:0 1px 2px rgba(0,0,0,.04);}
+.pa-table{width:100%;border-collapse:collapse;font-size:13px;}
+.pa-table.pa-table-pro{min-width:1100px;}
+.pa-table.pa-table-pro th{
+  text-align:left;padding:12px 14px;font-size:13px;font-weight:600;
+  color:var(--text);background:#fafafa;border-bottom:1px solid var(--border);
+  white-space:nowrap;position:sticky;top:0;z-index:2;
+}
+.pa-table.pa-table-pro td{padding:12px 14px;border-bottom:1px solid var(--border);vertical-align:top;color:var(--text);}
+.pa-table.pa-table-pro tbody tr:hover td{background:#f5f8fc;}
+.pa-table.pa-table-pro tbody tr:last-child td{border-bottom:none;}
+.pa-table code{font-size:12px;font-family:var(--mono);color:var(--gold2);background:var(--bg3);padding:2px 6px;border-radius:4px;}
+.pa-code-sm{font-size:11px;}
+.pa-cell-muted{font-size:12px;color:var(--muted);line-height:1.45;min-width:200px;}
+.pa-col-id{min-width:168px;}
+.pa-col-name{min-width:140px;font-weight:500;}
+.pa-empty{text-align:center;color:var(--muted);padding:32px!important;}
+.pa-subh{font-size:13px;font-weight:600;margin:16px 0 8px;color:var(--text);}
+.pa-tag{display:inline-block;padding:2px 8px;margin:2px 4px 2px 0;background:var(--bg3);border:1px solid var(--border);border-radius:4px;font-size:10px;}
+.pa-foot{margin-top:12px;padding-top:12px;border-top:1px solid var(--border);flex-shrink:0;}
+.pa-ipane{display:none;flex-direction:column;flex:1 1 auto;min-height:0;}
+.pa-ipane.active{display:flex;}
+.pa-editor-fold{margin-top:12px;flex-shrink:0;border:1px solid var(--border);border-radius:8px;background:var(--bg);}
+.pa-editor-fold summary{
+  padding:10px 14px;font-size:12px;font-weight:600;color:var(--muted);cursor:pointer;list-style:none;
+}
+.pa-editor-fold summary::-webkit-details-marker{display:none;}
+.pa-editor-fold[open] summary{border-bottom:1px solid var(--border);}
+.pa-editor-fold .pa-editor-inner{padding:12px 14px 14px;}
+.pa-add-row{margin-bottom:12px;}
+.pa-urun-block{margin-bottom:8px;}
 /* Soğuk oda — içerik ortada, mobilde tek sütun */
 .soguk-layout{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:960px;margin:0 auto;width:100%;align-items:start;}
 @media(max-width:900px){.soguk-layout{grid-template-columns:1fr;}}
@@ -675,7 +746,6 @@ body.admin-locked .adm-footer{visibility:hidden;pointer-events:none;height:0;ove
 
 <div class="stats-bar">
   <div class="stat"><div class="stat-val" id="s-tip">0</div><div class="stat-lbl">Tip Sözlüğü</div></div>
-  <div class="stat"><div class="stat-val" id="s-soru">0</div><div class="stat-lbl">Import soru</div></div>
   <div class="stat"><div class="stat-val" id="s-types">0</div><div class="stat-lbl">Konsept</div></div>
   <div class="stat"><div class="stat-val" id="s-rules">0</div><div class="stat-lbl">Mr. Equsto</div></div>
   <div class="stat"><div class="stat-val" id="s-sets">0</div><div class="stat-lbl">Ekipman Seti</div></div>
@@ -684,11 +754,11 @@ body.admin-locked .adm-footer{visibility:hidden;pointer-events:none;height:0;ove
 
 <div class="tabs">
   <div class="tab active" data-tab="pdfimport">PDF / Excel Import</div>
-  <div class="tab" data-tab="sorular">Proje / Liste Export <span class="tab-cnt" id="tc-soru" title="PDF/Excel import soru alanı sayısı">0</span></div>
-  <div class="tab" data-tab="types">Konsept Tipleri <span class="tab-cnt" id="tc-types">0</span></div>
+  <div class="tab" data-tab="sorular">PDF / Excel Export</div>
+  <div class="tab" data-tab="proje-akis">Konsept Tipleri <span class="tab-cnt" id="tc-pa-konsept" title="Konsept">0</span><span class="tab-cnt" id="tc-pa-soru" title="Sorular" style="margin-left:2px">0</span></div>
   <div class="tab" data-tab="rules">Mr. Equsto — Kurallar <span class="tab-cnt" id="tc-rules">0</span></div>
   <div class="tab" data-tab="sets">Ekipman Setleri <span class="tab-cnt" id="tc-sets">0</span></div>
-  <div class="tab" data-tab="products">Ürünler <span class="tab-cnt" id="tc-products">0</span></div>
+  <div class="tab" data-tab="products">Katalog (gelişmiş) <span class="tab-cnt" id="tc-products">0</span></div>
   <div class="tab" data-tab="eticaret">E-Ticaret</div>
   <div class="tab" data-tab="export">JSON Export</div>
   <div class="tab" data-tab="sogukoda">🧊 Soğuk Oda Hesap</div>
@@ -717,7 +787,6 @@ body.admin-locked .adm-footer{visibility:hidden;pointer-events:none;height:0;ove
         <div style="font-size:11px;color:var(--muted);margin-top:6px;font-family:var(--mono);line-height:1.4">Teklif listesi · proforma · ekipman listesi</div>
       </div>
     </div>
-
     <div class="qb-card" id="import-proje-kart">
       <span class="qb-kicker">Proje bilgisi · opsiyonel · <span id="imp-soru-count-disp">—</span> soru alanı</span>
       <p class="pisir-intro">Aşağıdaki dört blokta toplanır: (1) proje ve m², (2) rol ve menü, (3) lokasyon ve adres, (4) teklif kararı ve altyapı. Analiz isteğine bağlam olarak eklenir; boş bırakılabilir.</p>
@@ -1022,55 +1091,103 @@ body.admin-locked .adm-footer{visibility:hidden;pointer-events:none;height:0;ove
   </div>
 </div>
 
-<!-- ═══ SORULAR ══════════════════════════════════════════════════════════════ -->
-<div class="pane" id="pane-sorular">
-
-  <!-- Proje Yükle / Liste Gönder -->
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:24px">
-    <!-- Projeni Yükle -->
-    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px 22px;box-shadow:0 1px 4px rgba(0,0,0,.06)">
-      <div style="font-size:18px;font-weight:700;color:var(--text);margin-bottom:6px">Projeni yükle, fiyatlandıralım.</div>
-      <div style="font-size:13px;color:var(--muted);margin-bottom:16px;line-height:1.5">Elindeki teklif listesini, proforma faturayı veya ekipman listesini yükle — analiz edip fiyatlandıralım.</div>
-      <div id="pf-drop-zone"
-        onclick="document.getElementById('pf-file-input').click()"
-        ondragover="event.preventDefault();this.style.borderColor='var(--gold)'"
-        ondragleave="this.style.borderColor='var(--border2)'"
-        ondrop="pfHandleDrop(event)"
-        style="border:2px dashed var(--border2);border-radius:6px;padding:20px;text-align:center;cursor:pointer;transition:border .2s">
-        <div style="font-size:28px;margin-bottom:6px">📄</div>
-        <div style="font-size:12px;color:var(--text);font-weight:600">PDF veya Excel dosyasını sürükle ya da tıkla</div>
-        <div style="font-size:11px;color:var(--muted);margin-top:4px">.pdf · .xlsx · .xls</div>
+<!-- ═══ KONSEPT TİPLERİ — konsept / soru v3 / set-kural ═══════════════════════ -->
+<div class="pane" id="pane-proje-akis">
+  <div class="pa-head">
+    <div class="pa-title">Konsept Tipleri</div>
+    <button type="button" class="btn btn-ghost btn-sm" id="pa-btn-reload">Yenile</button>
+    <button type="button" class="btn btn-ghost btn-sm" id="pa-btn-pro-sync" title="Ant Design Pro kanonik veri">Pro panel verisi</button>
+    <button type="button" class="btn btn-primary btn-sm" id="pa-btn-save">Kaydet</button>
+  </div>
+  <p class="pa-intro"><strong>Adım 1 — Konsept:</strong> Müşteri sihirbazında görünen işletme tipi (<code>shopTypes</code>). Her satırda <strong>motor slug</strong> (Teklif oluştur) ve <strong>m² bantları</strong> (Kategoriler listeleri) tanımlı olmalı.</p>
+  <div id="pa-status" class="pa-banner" role="status"></div>
+  <div class="pa-stats" id="pa-stats"></div>
+  <div class="pa-tabs" id="pa-tabs">
+    <div class="pa-itab active" data-patab="konsept">Konsept (0)</div>
+    <div class="pa-itab" data-patab="sorular">Sorular (0)</div>
+    <div class="pa-itab" data-patab="setkural">Set &amp; Kural (0/0)</div>
+  </div>
+  <div class="pa-toolbar" id="pa-toolbar"></div>
+  <div class="pa-ipane active" id="pa-ipane-konsept">
+    <div class="pa-table-wrap pa-table-wrap--pro" id="pa-table-konsept"></div>
+    <details class="pa-editor-fold">
+      <summary>Kart düzenleyici (isteğe bağlı)</summary>
+      <div class="pa-editor-inner">
+        <div class="add-row pa-add-row">
+          <button type="button" class="btn btn-ghost btn-sm" onclick="loadDefaultTypes()">↺ Kanonik konsept yükle</button>
+          <button type="button" class="btn btn-gold btn-sm" onclick="openTypeModal()">+ Konsept ekle</button>
+        </div>
+        <div id="types-list"></div>
       </div>
-      <input type="file" id="pf-file-input" accept=".pdf,.xlsx,.xls" style="display:none" onchange="pfHandleFile(this.files[0])">
-      <div id="pf-file-name" style="margin-top:8px;font-size:11px;color:var(--successT);display:none"></div>
-      <button class="btn btn-gold" style="margin-top:12px;width:100%" onclick="pfGoToImport()">⚡ Analiz Et → PDF Import</button>
-    </div>
-    <!-- Listeni Gönder -->
-    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px 22px;box-shadow:0 1px 4px rgba(0,0,0,.06)">
-      <div style="font-size:18px;font-weight:700;color:var(--text);margin-bottom:6px">Listeni gönder, fiyatlandıralım.</div>
-      <div style="font-size:13px;color:var(--muted);margin-bottom:16px;line-height:1.5">İhtiyaç listeni buraya yapıştır, ekipmanları tanımlayıp fiyatlandıralım.</div>
-      <textarea id="pf-liste-text" rows="5" style="width:100%;font-size:13px;resize:vertical" placeholder="Örn:&#10;1 adet kombili fırın 6 tepsi&#10;1 adet bulaşık makinası giyotin tip&#10;2 adet tezgah altı buzdolabı&#10;…"></textarea>
-      <button class="btn btn-gold" style="margin-top:12px;width:100%" onclick="pfListeGonder()">⚡ Analiz Et → PDF Import</button>
-    </div>
+    </details>
   </div>
-
-  <div style="border-top:1px solid var(--border);margin-bottom:20px"></div>
-
-  <!-- Soru Yönetimi -->
-  <div class="add-row">
-    <button class="btn btn-ghost btn-sm" onclick="loadDefaultQuestions()">↺ Varsayılanları Yükle</button>
-    <button class="btn btn-gold" onclick="openQModal()">+ Soru Ekle</button>
+  <div class="pa-ipane" id="pa-ipane-sorular">
+    <div class="pa-table-wrap pa-table-wrap--pro" id="pa-table-sorular"></div>
+    <details class="pa-editor-fold">
+      <summary>Soru kartları (isteğe bağlı)</summary>
+      <div class="pa-editor-inner">
+        <div class="add-row pa-add-row">
+          <button type="button" class="btn btn-ghost btn-sm" onclick="loadDefaultQuestions()">↺ Kanonik soru seti yükle</button>
+          <button type="button" class="btn btn-gold btn-sm" onclick="openQModal()">+ Soru ekle</button>
+        </div>
+        <div id="questions-list"></div>
+      </div>
+    </details>
   </div>
-  <div id="questions-list"></div>
+  <div class="pa-ipane" id="pa-ipane-setkural">
+    <div class="pa-table-wrap pa-table-wrap--pro" id="pa-table-setkural"></div>
+    <details class="pa-editor-fold" id="pa-referans-fold">
+      <summary>Referans listeleri — m² bantlı Excel</summary>
+      <div class="pa-editor-inner">
+        <p class="pa-hint" style="display:block;margin:0 0 10px">Steakhouse, Balıkçı vb. listeler <code>public/data/pfos-referans/</code> altına kaydedilir.</p>
+        <div class="pa-table-wrap" id="pa-kat-table-wrap"><div class="pa-empty">Set &amp; Kural sekmesinde «↺ Referans listeleri» ile yükleyin.</div></div>
+      </div>
+    </details>
+    <details class="pa-editor-fold">
+      <summary>Set / kural — tam editör</summary>
+      <div class="pa-editor-inner">
+        <div class="add-row pa-add-row">
+          <button type="button" class="btn btn-ghost btn-sm" onclick="document.querySelector('.tab[data-tab=sets]')?.click()">Ekipman setleri →</button>
+          <button type="button" class="btn btn-ghost btn-sm" onclick="document.querySelector('.tab[data-tab=rules]')?.click()">Kurallar →</button>
+        </div>
+      </div>
+    </details>
+  </div>
+  <div class="pa-foot">
+    <span style="font-size:11px;color:var(--muted)">Kaynak: <code>/api/pfos/kaynak</code> · Kalıcı: <code>/api/proje-akis</code> · Ürün kataloğu: <button type="button" class="btn btn-ghost btn-sm" style="padding:0 6px;font-size:11px;vertical-align:baseline" onclick="document.querySelector('.tab[data-tab=eticaret]')?.click();setTimeout(function(){if(typeof showEtab==='function')showEtab(document.querySelector('#pane-eticaret .etab[onclick*=et-urunler]'),'et-urunler');},80)">E-Ticaret → Ürünler</button> · <button type="button" class="btn btn-ghost btn-sm" style="padding:0 6px;font-size:11px;vertical-align:baseline" onclick="document.querySelector('.tab[data-tab=products]')?.click()">Katalog (gelişmiş)</button></span>
+  </div>
 </div>
 
-<!-- ═══ KONSEPT TİPLERİ ══════════════════════════════════════════════════════ -->
-<div class="pane" id="pane-types">
-  <div class="add-row">
-    <button class="btn btn-ghost btn-sm" onclick="loadDefaultTypes()">↺ Varsayılanları Yükle</button>
-    <button class="btn btn-gold" onclick="openTypeModal()">+ Konsept Tipi Ekle</button>
+<!-- ═══ PDF / EXCEL EXPORT — teklif yükle · liste gönder ═══════════════════════ -->
+<div class="pane" id="pane-sorular">
+  <div class="admin-pfos admin-pfos--narrow">
+    <p class="pisir-intro" style="margin:0 0 16px">Teklif PDF/Excel veya satır satır liste — analiz için <strong>PDF / Excel Import</strong> sekmesine aktarılır. Wizard soruları: <button type="button" class="btn btn-ghost btn-sm" style="padding:0 6px;font-size:11px;vertical-align:baseline" onclick="document.querySelector('.tab[data-tab=proje-akis]')?.click();setTimeout(function(){if(window.EqProjeAkis&&typeof EqProjeAkis.setPaTab==='function')EqProjeAkis.setPaTab('sorular');},80)">Konsept Tipleri → Sorular</button></p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px 22px;box-shadow:0 1px 4px rgba(0,0,0,.06)">
+        <div style="font-size:18px;font-weight:700;color:var(--text);margin-bottom:6px">Projeni yükle, fiyatlandıralım.</div>
+        <div style="font-size:13px;color:var(--muted);margin-bottom:16px;line-height:1.5">Elindeki teklif listesini, proforma faturayı veya ekipman listesini yükle — analiz edip fiyatlandıralım.</div>
+        <div id="pf-drop-zone"
+          onclick="document.getElementById('pf-file-input').click()"
+          ondragover="event.preventDefault();this.style.borderColor='var(--gold)'"
+          ondragleave="this.style.borderColor='var(--border2)'"
+          ondrop="pfHandleDrop(event)"
+          style="border:2px dashed var(--border2);border-radius:6px;padding:20px;text-align:center;cursor:pointer;transition:border .2s">
+          <div style="font-size:28px;margin-bottom:6px">📄</div>
+          <div style="font-size:12px;color:var(--text);font-weight:600">PDF veya Excel dosyasını sürükle ya da tıkla</div>
+          <div style="font-size:11px;color:var(--muted);margin-top:4px">.pdf · .xlsx · .xls</div>
+        </div>
+        <input type="file" id="pf-file-input" accept=".pdf,.xlsx,.xls" style="display:none" onchange="pfHandleFile(this.files[0])">
+        <div id="pf-file-name" style="margin-top:8px;font-size:11px;color:var(--successT);display:none"></div>
+        <button type="button" class="btn btn-gold" style="margin-top:12px;width:100%" onclick="pfGoToImport()">⚡ Analiz et → Import sekmesi</button>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px 22px;box-shadow:0 1px 4px rgba(0,0,0,.06)">
+        <div style="font-size:18px;font-weight:700;color:var(--text);margin-bottom:6px">Listeni gönder, fiyatlandıralım.</div>
+        <div style="font-size:13px;color:var(--muted);margin-bottom:16px;line-height:1.5">İhtiyaç listeni buraya yapıştır; ekipmanları tanımlayıp fiyatlandıralım.</div>
+        <textarea id="pf-liste-text" rows="5" style="width:100%;font-size:13px;resize:vertical" placeholder="Örn:&#10;1 adet kombili fırın 6 tepsi&#10;1 adet bulaşık makinası giyotin tip&#10;2 adet tezgah altı buzdolabı&#10;…"></textarea>
+        <button type="button" class="btn btn-gold" style="margin-top:12px;width:100%" onclick="pfListeGonder()">⚡ Analiz et → Import sekmesi</button>
+      </div>
+    </div>
   </div>
-  <div id="types-list"></div>
 </div>
 
 <!-- ═══ KURALLAR ═════════════════════════════════════════════════════════════ -->
@@ -1117,6 +1234,7 @@ body.admin-locked .adm-footer{visibility:hidden;pointer-events:none;height:0;ove
           <option value="hazirlik">Hazırlık</option>
           <option value="diger">Diğer</option>
         </select>
+        <button type="button" class="btn btn-ghost btn-sm" onclick="syncTipSozlugu()" title="7.530 ürün kataloğundan tip kodlarını yenile">↺ Tip sözlüğünü güncelle</button>
         <span style="font-size:13px;color:var(--muted);align-self:center;" id="sozluk-count"></span>
       </div>
       <div class="card">
@@ -1461,14 +1579,14 @@ body.admin-locked .adm-footer{visibility:hidden;pointer-events:none;height:0;ove
       <div class="card" style="margin-top:8px"><div class="card-bd">
         <div class="field"><label>Firma Adı</label><input id="ay-firma" value="SKTÜRK ENDÜSTRİYEL MUTFAK SAN. VE TİC. LTD. ŞTİ."></div>
         <div class="field"><label>Vergi No</label><input id="ay-vkn" style="font-family:var(--mono)"></div>
-        <div class="section-lbl" style="margin-top:12px">Adres — Proje Fabrikası ile aynı API</div>
-        <p style="font-size:12px;color:var(--muted);margin-bottom:10px;line-height:1.5">İl, ilçe ve mahalle <b>yerel adres veritabanından</b>; <b>cadde</b> için <b>OpenStreetMap</b> önerileri; alt satıra kapı no ve bina detayı (pdf import ile aynı mantık).</p>
+        <div class="section-lbl" style="margin-top:12px">Teslimat adresi</div>
+        <p style="font-size:12px;color:var(--muted);margin-bottom:10px;line-height:1.5">İl, ilçe ve mahalle <b>yerel adres veritabanından</b>; <b>cadde</b> için <b>OpenStreetMap</b> önerileri; alt satıra kapı no ve bina detayı.</p>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px 14px;margin-bottom:12px">
-          <div class="field" style="margin-bottom:0"><label>Şehir (il)</label><input type="text" class="pfos-sel" id="ay-adr-sehir" placeholder="örn. İstanbul" autocomplete="off" style="cursor:text;width:100%;padding:10px 12px"></div>
-          <div class="field" style="margin-bottom:0"><label>İlçe</label><input type="text" class="pfos-sel" id="ay-adr-ilce" placeholder="İlçe" autocomplete="off" style="cursor:text;width:100%;padding:10px 12px"></div>
-          <div class="field" style="margin-bottom:0"><label>Mahalle</label><input type="text" class="pfos-sel" id="ay-adr-mahalle" placeholder="Mahalle" autocomplete="off" style="cursor:text;width:100%;padding:10px 12px"></div>
-          <div class="field" style="margin-bottom:0"><label>Cadde</label><input type="text" class="pfos-sel" id="ay-adr-cadde" placeholder="Cadde / bulvar" autocomplete="off" style="cursor:text;width:100%;padding:10px 12px"></div>
-          <div class="field" style="margin-bottom:0;grid-column:1/-1"><label>Kapı no ve detay</label><input type="text" class="pfos-sel" id="ay-adr-sokak" placeholder="Bina, kapı no, blok…" autocomplete="off" style="cursor:text;width:100%;padding:10px 12px"></div>
+          <div class="field" style="margin-bottom:0"><label>Şehir (il)</label><input type="text" class="et-inp" id="ay-adr-sehir" placeholder="örn. İstanbul" autocomplete="off"></div>
+          <div class="field" style="margin-bottom:0"><label>İlçe</label><input type="text" class="et-inp" id="ay-adr-ilce" placeholder="İlçe" autocomplete="off"></div>
+          <div class="field" style="margin-bottom:0"><label>Mahalle</label><input type="text" class="et-inp" id="ay-adr-mahalle" placeholder="Mahalle" autocomplete="off"></div>
+          <div class="field" style="margin-bottom:0"><label>Cadde</label><input type="text" class="et-inp" id="ay-adr-cadde" placeholder="Cadde / bulvar" autocomplete="off"></div>
+          <div class="field" style="margin-bottom:0;grid-column:1/-1"><label>Kapı no ve detay</label><input type="text" class="et-inp" id="ay-adr-sokak" placeholder="Bina, kapı no, blok…" autocomplete="off"></div>
         </div>
         <div class="field"><label>Kapı, daire, ek not (isteğe bağlı)</label><textarea id="ay-adres" rows="2" style="width:100%" placeholder="Üst satırlara ek olarak detay…"></textarea></div>
         <div class="row"><div class="field"><label>Tel</label><input id="ay-tel"></div><div class="field"><label>E-posta</label><input id="ay-mail"></div></div>
@@ -1908,7 +2026,7 @@ body.admin-locked .adm-footer{visibility:hidden;pointer-events:none;height:0;ove
           <select id="np-catalog-slug"><option value="">— Slug seç —</option></select>
           <input id="np-catalog-slug-custom" type="text" placeholder="yeni-slug (ör. suzgecler)" style="display:none;margin-top:6px;font-family:var(--mono);font-size:12px" autocomplete="off" spellcheck="false">
         </div>
-        <div class="field"><label>PFOS tip kodu (opsiyonel)</label>
+        <div class="field"><label>Tip kodu (opsiyonel)</label>
           <select id="np-tipkod"><option value="">— Seç —</option></select>
         </div>
       </div>
@@ -1945,17 +2063,6 @@ body.admin-locked .adm-footer{visibility:hidden;pointer-events:none;height:0;ove
         <div id="np-gorsel-preview" style="width:80px;height:80px;border:1px solid var(--border);border-radius:4px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--bg3);flex-shrink:0;margin-top:22px">
           <span style="font-size:9px;color:var(--muted);text-align:center;line-height:1.4">Görsel<br>yok</span>
         </div>
-      </div>
-      <!-- MODÜL BAĞLANTISI -->
-      <div class="section-lbl" style="margin-top:14px">Modül Bağlantısı</div>
-      <div style="display:flex;gap:16px;margin-top:8px;align-items:center">
-        <label style="display:flex;gap:8px;align-items:center;text-transform:none;font-size:13px">
-          <input type="checkbox" id="np-pf-aktif" checked>
-          Proje Fabrikası — Ekipman Setleri'nde görünsün
-        </label>
-      </div>
-      <div style="margin-top:6px;font-size:11px;color:var(--muted)">
-        E-Ticaret sitesinde her zaman gösterilir. Proje Fabrikası işareti kaldırılırsa ekipman setlerine eklenemez.
       </div>
     </div>
     <div class="modal-ft">
@@ -1999,11 +2106,28 @@ body.admin-locked .adm-footer{visibility:hidden;pointer-events:none;height:0;ove
 function isLocalhostHost(h) {
   return h === '127.0.0.1' || h === 'localhost' || h === '[::1]';
 }
+function fixLocalApiBaseMismatch(configured){
+  if(!configured||window.location.protocol==='file:') return configured;
+  if(!isLocalhostHost(window.location.hostname)) return configured;
+  try{
+    var cfg=new URL(configured,window.location.href);
+    var page=new URL(window.location.href);
+    if(cfg.hostname===page.hostname){
+      var cfgPort=cfg.port||(cfg.protocol==='https:'?'443':'80');
+      var pagePort=page.port||(page.protocol==='https:'?'443':'80');
+      if(String(cfgPort)!==String(pagePort)) return page.origin+'/api';
+    }
+  }catch(_e){}
+  return configured;
+}
 function defaultProductsApiBase(){
-  if (typeof window.EQUSTO_PRODUCTS_API_BASE === 'string') return window.EQUSTO_PRODUCTS_API_BASE;
-  if (typeof window.EQUSTO_API_BASE === 'string') return window.EQUSTO_API_BASE;
-  if (window.location.protocol === 'file:') return 'http://127.0.0.1:3001/api';
-  if (isLocalhostHost(window.location.hostname)) return 'http://127.0.0.1:3001/api';
+  var configured=null;
+  if(typeof window.EQUSTO_PRODUCTS_API_BASE==='string') configured=window.EQUSTO_PRODUCTS_API_BASE;
+  else if(typeof window.EQUSTO_API_BASE==='string') configured=window.EQUSTO_API_BASE;
+  configured=fixLocalApiBaseMismatch(configured);
+  if(configured) return configured;
+  if(window.location.protocol==='file:') return 'http://127.0.0.1:3099/api';
+  if(isLocalhostHost(window.location.hostname)) return window.location.origin+'/api';
   return '/api';
 }
 let PRODUCTS_API_BASE = defaultProductsApiBase().toString().replace(/\/$/, '');
@@ -2017,25 +2141,39 @@ function defaultClaudeApiBase(){
 }
 let CLAUDE_API_BASE = defaultClaudeApiBase().toString().replace(/\/$/, '');
 
-async function detectProductsApiOnline() {
-  // Backend cevap vermezse offline JSON fallback'i kullanılır.
-  if (!PRODUCTS_API_BASE) return false;
-  try {
-    const ac = new AbortController();
-    const t = setTimeout(() => { try { ac.abort(); } catch(_e){} }, 900);
-    const r = await fetch(PRODUCTS_API_BASE + '/urunler', {
-      method: 'GET',
-      headers: { Accept: 'application/json', 'Authorization': 'Bearer ' + _authToken },
-      signal: ac.signal
-    }).finally(() => clearTimeout(t));
-    if (!r.ok) return false;
-    const ct = (r.headers.get('content-type') || '').toLowerCase();
-    if (!ct.includes('application/json')) return false;
-    const j = await r.json();
-    return !!(j && j.success === true);
-  } catch (_e) {
+async function probeProductsApi(base){
+  if(!base) return false;
+  try{
+    const ac=new AbortController();
+    const t=setTimeout(()=>{try{ac.abort();}catch(_e){}},2500);
+    const r=await fetch(base.replace(/\/$/,'')+'/urunler',{
+      method:'GET',
+      headers:{Accept:'application/json',Authorization:'Bearer '+_authToken},
+      signal:ac.signal
+    }).finally(()=>clearTimeout(t));
+    if(!r.ok) return false;
+    const ct=(r.headers.get('content-type')||'').toLowerCase();
+    if(!ct.includes('application/json')) return false;
+    const j=await r.json();
+    return !!(j&&j.success===true);
+  }catch(_e){
     return false;
   }
+}
+async function detectProductsApiOnline() {
+  // Sağlık kontrolü: GET {PRODUCTS_API_BASE}/urunler → { success: true }
+  if (!PRODUCTS_API_BASE) return false;
+  if (await probeProductsApi(PRODUCTS_API_BASE)) return true;
+  if (window.location.protocol!=='file:'&&isLocalhostHost(window.location.hostname)){
+    var sameOrigin=(window.location.origin+'/api').replace(/\/$/,'');
+    if(sameOrigin!==PRODUCTS_API_BASE.replace(/\/$/,'')){
+      if(await probeProductsApi(sameOrigin)){
+        PRODUCTS_API_BASE=sameOrigin;
+        return true;
+      }
+    }
+  }
+  return false;
 }
 
 // ── Auth ──────────────────────────────────────────────────────────────────────
@@ -2361,7 +2499,7 @@ const SET_ALT_KATLAR={
 const KAT_COLORS={pisirme:"#c06060",icecek:"#6aaddf",sogutma:"#6adfdf",yikama:"#8fcc5b",hazirlik:"#cc8f5b",tezgah_davlumbaz:"#d4965b",depolama:"#7ba3c8",araba:"#5b9b6b",yardimci:"#9b6bd4",sunum:"#c8a45b",diger:"#aaaaaa"};
 
 // Proje Fabrikası / JSON export ile uyumlu soru şablonu (pfos.html sabitleriyle aynı dil).
-// PDF/Excel Import kartındaki alanlar ayrıca kalır; bu liste «Proje / Liste Export» sekmesinde düzenlenir.
+// PDF/Excel Import kartındaki proje alanları; teklif/liste girişi «PDF / Excel Export» sekmesindedir.
 const PFOS_Q_MESLEK=['Yatırımcı','Şef / Aşçı','Satınalmacı','Mimar','Franchise Sahibi','Söylemek İstemiyorum','Bilmiyorum'];
 const PFOS_Q_KONSEPT=['Restaurant','Cafe','Bulut Mutfak','Pastane & Patisserie','Hotel','Bar','Catering','Bilmiyorum'];
 const PFOS_Q_NE_GENEL=['Kahvaltı','Izgara','Kebap','Döner','Pizza','Pide / Lahmacun','Burger','Fried Chicken','Balık / Deniz Ürünleri','Ev Yemekleri / Sulu Yemek','Makarna','Tatlı / Pastane','Kahve / İçecek','Açık Büfe','Diğer','Bilmiyorum'];
@@ -2405,6 +2543,10 @@ const DEFAULT_QUESTIONS=[
 ];
 // ── State ─────────────────────────────────────────────────────────────────────
 let questions=[],shopTypes=[],rules=[],eqSets=[],products=[],markalar=[],fiyatlar={},dovizRates={};
+window.questions=questions;
+window.shopTypes=shopTypes;
+window.rules=rules;
+window.eqSets=eqSets;
 function syncAdminProductsGlobal(){ window.products=products; }
 window.syncAdminProductsGlobal=syncAdminProductsGlobal;
 syncAdminProductsGlobal();
@@ -2478,14 +2620,37 @@ function ensureBarMixologyOption(){
 }
 
 // ── Persist ───────────────────────────────────────────────────────────────────
+/** Eski admin localStorage — soru/konsept/kural/set (Pro panel sunucu kaynağı kullanılır) */
+function clearLsProjeAkisFields(){
+  try{
+    const d=JSON.parse(_ls.getItem('equsto_admin')||'{}');
+    delete d.questions;
+    delete d.shopTypes;
+    delete d.rules;
+    delete d.eqSets;
+    _ls.setItem('equsto_admin',JSON.stringify(d));
+  }catch(e){}
+}
+window.clearLsProjeAkisFields=clearLsProjeAkisFields;
+
 function persist(){
-  const d={questions,shopTypes,rules,eqSets,products,markalar,fiyatlar};
+  const d={questions,shopTypes,rules,eqSets,markalar,fiyatlar};
   try{_ls.setItem('equsto_admin',JSON.stringify(d));}catch(e){}
   updateStats();
   try{ if(typeof pushProjeAkisToApi==='function') pushProjeAkisToApi(); }catch(_){}
 }
 
 let __projeAkisPushTimer=null;
+function buildProjeAkisProductsPayload(){
+  return (Array.isArray(products)?products:[])
+    .filter(function(p){return p&&p.proje_fab_aktif!==false;})
+    .map(function(p){
+      return {id:p.id,cat:p.cat,name:p.name,brand:p.brand||'',model:p.model||'',tip_kodu:p.tip_kodu||''};
+    });
+}
+function countPfosAktifUrunler(){
+  return buildProjeAkisProductsPayload().length;
+}
 function pushProjeAkisToApi(){
   if(!PRODUCTS_API_BASE) return;
   if(__projeAkisPushTimer) clearTimeout(__projeAkisPushTimer);
@@ -2497,9 +2662,9 @@ function pushProjeAkisToApi(){
         shopTypes:Array.isArray(shopTypes)?shopTypes:[],
         rules:Array.isArray(rules)?rules:[],
         eqSets:Array.isArray(eqSets)?eqSets:[],
-        products:Array.isArray(products)?products.map(function(p){
+        products:typeof buildProjeAkisProductsPayload==='function'?buildProjeAkisProductsPayload():(Array.isArray(products)?products.map(function(p){
           return {id:p.id,cat:p.cat,name:p.name,brand:p.brand,model:p.model,tip_kodu:p.tip_kodu||''};
-        }):[]
+        }):[])
       };
       fetch(PRODUCTS_API_BASE+'/proje-akis',{
         method:'POST',
@@ -2606,12 +2771,25 @@ async function refreshCatalogProducts(){
 }
 
 async function load(){
-  // Sorular/kurallar/setler hâlâ _ls'den (ilerleyen aşamada API'ye taşınacak)
+  // Proje akışı: eski localStorage soru/konsept/kural/set kullanılmaz (sunucu + kaynak API)
+  questions=[];shopTypes=[];rules=[];eqSets=[];
   try{
     const d=JSON.parse(_ls.getItem('equsto_admin')||'{}');
-    questions=d.questions||[];shopTypes=d.shopTypes||[];rules=d.rules||[];
-    eqSets=d.eqSets||[];markalar=d.markalar||[];fiyatlar=d.fiyatlar||{};
+    markalar=d.markalar||[];fiyatlar=d.fiyatlar||{};
   }catch(e){}
+  try{
+    if(window.EqProjeAkis&&typeof EqProjeAkis.loadFromServer==='function'){
+      await EqProjeAkis.loadFromServer({mergeLs:false});
+      if(typeof EqProjeAkis.hydrateIfEmpty==='function'){
+        await EqProjeAkis.hydrateIfEmpty();
+      }
+    }
+  }catch(e){console.warn('proje-akis API:',e);}
+  try{
+    if(new URLSearchParams(location.search).get('sync')==='pro'&&window.EqProjeAkis&&typeof EqProjeAkis.loadProPanelCanonical==='function'){
+      await EqProjeAkis.loadProPanelCanonical({confirm:false});
+    }
+  }catch(e){console.warn('pro sync:',e);}
 
   let online = false;
   try {
@@ -2679,9 +2857,16 @@ async function load(){
   try { loadET(); } catch (e) { console.warn('loadET hata:', e); }
   try { applyEtAyarlarToDom(); } catch (e) { console.warn('applyEtAyarlarToDom hata:', e); }
   try { loadTipSozluguAPI(); } catch (e) { console.warn('loadTipSozluguAPI hata:', e); }
-  try { if (ensureDefaultQuestionUpdates()) persist(); } catch (e) { console.warn('soru migrasyonu hata:', e); }
+  try {
+    if(!questions.some(function(q){return q&&q.mapsTo;})){
+      if(ensureDefaultQuestionUpdates())persist();
+    }
+  } catch (e) { console.warn('soru migrasyonu hata:', e); }
   try { updateStats(); } catch (e) { console.warn('updateStats hata:', e); }
   try { renderAll(); } catch (e) { console.warn('renderAll hata:', e); }
+  try{
+    if(window.EqProjeAkis&&typeof EqProjeAkis.render==='function') EqProjeAkis.render();
+  }catch(e){console.warn('EqProjeAkis render:',e);}
 }
 
 // API → local format dönüştürücüler (kategori eşlemesi: admin-eticaret-kategori.js — KILIT)
@@ -2773,7 +2958,6 @@ function updateStats(){
   };
   const aktif=products.filter(p=>p.aktif!==false).length;
   const impSoru=getImportSoruSayisi();
-  setText('s-soru', impSoru);
   const tipCnt = (typeof apiTipSozlugu !== 'undefined' && apiTipSozlugu.length) ? apiTipSozlugu.length : TIP_SOZLUGU.length;
   setText('s-tip', tipCnt);
   setText('tc-sozluk', tipCnt);
@@ -2783,9 +2967,10 @@ function updateStats(){
   setText('s-sets', eqSets.length);
   setText('s-products', products.length);
   setText('s-aktif', aktif ? (aktif + ' aktif') : '');
-  setText('tc-soru', impSoru);
   const icd=document.getElementById('imp-soru-count-disp'); if(icd) icd.textContent=String(impSoru);
   setText('tc-types', shopTypes.length);
+  setText('tc-pa-konsept', shopTypes.length);
+  setText('tc-pa-soru', questions.length);
   setText('tc-rules', rules.length);
   setText('tc-sets', eqSets.length);
   setText('tc-products', products.length);
@@ -2796,6 +2981,13 @@ function updateStats(){
 // ── Tabs ──────────────────────────────────────────────────────────────────────
 document.querySelectorAll('.tabs .tab').forEach(t=>{
   t.addEventListener('click',function(){
+    var paRedirect=this.dataset.redirectPa;
+    if(paRedirect){
+      var paTab=document.querySelector('.tabs .tab[data-tab="proje-akis"]');
+      if(paTab)paTab.click();
+      if(window.EqProjeAkis&&typeof EqProjeAkis.setPaTab==='function')EqProjeAkis.setPaTab(paRedirect);
+      return;
+    }
     document.querySelectorAll('.tabs .tab').forEach(x=>x.classList.remove('active'));
     document.querySelectorAll('.admin-app-main .pane').forEach(x=>x.classList.remove('active'));
     this.classList.add('active');
@@ -2803,6 +2995,7 @@ document.querySelectorAll('.tabs .tab').forEach(t=>{
     if (paneEl) paneEl.classList.add('active');
     if(this.dataset.tab==='products')loadTipSozluguAPI();
     if(this.dataset.tab==='export')renderJSON();
+    if(this.dataset.tab==='proje-akis'&&window.EqProjeAkis&&typeof EqProjeAkis.render==='function')EqProjeAkis.render();
     if(this.dataset.tab==='eticaret'){
       renderFiyatlar();
       if(window.EqustoEticaret&&typeof window.EqustoEticaret.onMainTabOpen==='function')window.EqustoEticaret.onMainTabOpen();
@@ -2810,13 +3003,53 @@ document.querySelectorAll('.tabs .tab').forEach(t=>{
   });
 });
 (function(){
+  function applyEtSub(){
+    var et=new URLSearchParams(location.search).get('et');
+    if(!et||!/^[a-z0-9_-]+$/i.test(et))return;
+    setTimeout(function(){
+      if(typeof showEtab==='function')showEtab(null,et);
+    },80);
+  }
+  function applyPaSub(){
+    var pa=new URLSearchParams(location.search).get('pa');
+    if(pa==='urunler'){
+      setTimeout(function(){
+        document.querySelector('.tab[data-tab="eticaret"]')?.click();
+        if(typeof showEtab==='function')showEtab(document.querySelector('#pane-eticaret .etab[onclick*="et-urunler"]'),'et-urunler');
+      },100);
+      return;
+    }
+    if(!pa||!/^(konsept|sorular|setkural)$/i.test(pa))return;
+    setTimeout(function(){
+      if(window.EqProjeAkis&&typeof EqProjeAkis.setPaTab==='function')EqProjeAkis.setPaTab(pa);
+    },100);
+  }
   function applyAdminHashTab(){
     var raw=(location.hash||'').replace(/^#/,'');
-    if(!raw)return;
+    if(!raw){applyEtSub();applyPaSub();return;}
     var id=raw.indexOf('=')>=0?raw.split('=').pop():raw;
     if(!id||!/^[a-z0-9_-]+$/i.test(id))return;
     var tabEl=document.querySelector('.tabs .tab[data-tab="'+id+'"]');
     if(tabEl)tabEl.click();
+    if(id==='eticaret'){
+      if(window.EqustoEticaret&&typeof window.EqustoEticaret.onMainTabOpen==='function'){
+        window.EqustoEticaret.onMainTabOpen();
+      }
+      applyEtSub();
+    }
+    if(id==='products'&&typeof loadTipSozluguAPI==='function')loadTipSozluguAPI();
+    if(id==='export'&&typeof renderJSON==='function')renderJSON();
+    if(id==='proje-akis'){
+      applyPaSub();
+      if(window.EqProjeAkis&&typeof EqProjeAkis.render==='function')EqProjeAkis.render();
+    }
+    if(id==='types'){
+      document.querySelector('.tab[data-tab="proje-akis"]')?.click();
+      if(window.EqProjeAkis&&typeof EqProjeAkis.setPaTab==='function')EqProjeAkis.setPaTab('konsept');
+    }
+    if(id==='sorular'){
+      document.querySelector('.tab[data-tab="pdfimport"]')?.click();
+    }
   }
   applyAdminHashTab();
   window.addEventListener('hashchange',applyAdminHashTab);
@@ -2927,10 +3160,23 @@ function renderQuestions(){
     </div>`).join('');
 }
 
-function loadDefaultQuestions(){
-  if(questions.length&&!confirm('Proje Fabrikası soru listesi fabrika varsayılanına dönecek (mevcut liste silinir). Devam?'))return;
+async function loadDefaultQuestions(){
+  if(questions.length&&!confirm('Kanonik soru seti v3 yüklenecek (mevcut liste silinir). Devam?'))return;
+  try{
+    if(window.EqProjeAkis&&typeof EqProjeAkis.fetchKaynak==='function'){
+      const src=await EqProjeAkis.fetchKaynak();
+      if(src&&src.questions&&src.questions.length){
+        questions=JSON.parse(JSON.stringify(src.questions));
+        persist();renderQuestions();
+        if(typeof EqProjeAkis.render==='function')EqProjeAkis.render();
+        if(typeof adminToast==='function')adminToast('Soru seti v3 yüklendi ('+questions.length+')','ok');
+        return;
+      }
+    }
+  }catch(e){console.warn('kaynak sorular:',e);}
   questions=[...DEFAULT_QUESTIONS.map(q=>({...q}))];
   persist();renderQuestions();
+  if(window.EqProjeAkis&&typeof EqProjeAkis.render==='function')EqProjeAkis.render();
 }
 
 function openQModal(editIdx=-1){
@@ -2973,10 +3219,11 @@ function saveQuestion(){
   if(type!=='text'&&type!=='number')q.options=[...tempQOpts];
   if(editQIdx>=0)questions[editQIdx]=q;else questions.push(q);
   persist();renderQuestions();closeModal('q-modal');
+  try{if(window.EqProjeAkis&&typeof EqProjeAkis.render==='function')EqProjeAkis.render();}catch(_){}
 }
 
 function editQuestion(i){openQModal(i);}
-function deleteQuestion(i){if(!confirm('Soruyu sil?'))return;questions.splice(i,1);persist();renderQuestions();}
+function deleteQuestion(i){if(!confirm('Soruyu sil?'))return;questions.splice(i,1);persist();renderQuestions();try{if(window.EqProjeAkis&&typeof EqProjeAkis.render==='function')EqProjeAkis.render();}catch(_){}}
 
 // ══════════════════════════════════════════════════════════════════════════════
 // KONSEPT TİPLERİ
@@ -3022,31 +3269,47 @@ const DEFAULT_TYPES=[
 
 function renderTypes(){
   const el=document.getElementById('types-list');
-  if(!shopTypes.length){el.innerHTML='<div class="empty">Henüz konsept tipi yok. Varsayılanları yükle.</div>';return;}
-  // Group by parent
+  if(!el)return;
+  if(!shopTypes.length){el.innerHTML='<div class="empty">Henüz konsept yok. «Kanonik konsept yükle» ile PFOS tanımlarını getirin.</div>';return;}
   const groups={};
   shopTypes.forEach(t=>{const p=t.parent||'—';if(!groups[p])groups[p]=[];groups[p].push(t);});
   el.innerHTML=Object.entries(groups).map(([parent,types])=>`
     <div style="margin-bottom:16px;">
       <div class="section-lbl">${parent}</div>
-      ${types.map((t,i)=>{const idx=shopTypes.indexOf(t);return `
+      ${types.map((t)=>{const idx=shopTypes.indexOf(t);const pfos=t.pfos||{};
+        const motor=pfos.motorSlug?`<span class="badge badge-gold" style="font-size:9px;font-family:var(--mono)">${pfos.motorSlug}</span>`:'';
+        const bant=(pfos.bantlar&&pfos.bantlar.length)?`<span class="badge badge-muted" style="font-size:9px">${pfos.bantlar.length} bant</span>`:(pfos.teklifKaynagi==='motor-sablon'?'<span class="badge badge-muted" style="font-size:9px">motor</span>':'');
+        return `
         <div class="card">
           <div class="card-hd">
             <span class="tag">${t.id}</span>
             <span style="font-weight:600;flex:1;margin:0 10px;">${t.name}</span>
+            ${motor}${bant}
             ${t.questions?.length?`<span class="badge badge-muted">${t.questions.length} ek soru</span>`:''}
             <div style="display:flex;gap:6px;margin-left:8px;">
               <button class="btn btn-ghost btn-xs" onclick="editType(${idx})">Düzenle</button>
               <button class="btn btn-danger btn-xs" onclick="deleteType(${idx})">Sil</button>
             </div>
           </div>
-          ${t.desc?`<div class="card-bd" style="font-size:12px;color:var(--muted)">${t.desc}</div>`:''}
+          ${t.desc||pfos.dukkanSecim?`<div class="card-bd" style="font-size:12px;color:var(--muted)">${t.desc||''}${pfos.dukkanSecim?` · <span style="font-family:var(--mono);font-size:11px">${pfos.dukkanSecim}</span>`:''}</div>`:''}
         </div>`;}).join('')}
     </div>`).join('');
 }
 
-function loadDefaultTypes(){
-  if(shopTypes.length&&!confirm('Mevcut tipler silinecek. Devam?'))return;
+async function loadDefaultTypes(){
+  if(shopTypes.length&&!confirm('Kanonik PFOS konsept listesi yüklenecek (mevcut liste silinir). Devam?'))return;
+  try{
+    if(window.EqProjeAkis&&typeof EqProjeAkis.fetchKaynak==='function'){
+      const src=await EqProjeAkis.fetchKaynak();
+      if(src&&src.shopTypes&&src.shopTypes.length){
+        shopTypes=JSON.parse(JSON.stringify(src.shopTypes));
+        persist();renderTypes();
+        if(typeof adminToast==='function')adminToast('Konsept listesi yüklendi ('+shopTypes.length+')','ok');
+        return;
+      }
+    }
+  }catch(e){console.warn('kaynak konsept:',e);}
+  if(shopTypes.length&&!confirm('Kanonik API yok — eski şablon yüklensin mi?'))return;
   shopTypes=[...DEFAULT_TYPES.map(t=>({...t}))];
   persist();renderTypes();
 }
@@ -3093,10 +3356,11 @@ function saveType(){
   const obj={id,name,parent:document.getElementById('ti-parent').value,desc:document.getElementById('ti-desc').value.trim(),questions:tempTypeQs.filter(q=>q.label)};
   if(editTypeIdx>=0)shopTypes[editTypeIdx]=obj;else shopTypes.push(obj);
   persist();renderTypes();closeModal('type-modal');
+  try{if(window.EqProjeAkis&&typeof EqProjeAkis.render==='function')EqProjeAkis.render();}catch(_){}
 }
 
 function editType(i){openTypeModal(i);}
-function deleteType(i){if(!confirm('Sil?'))return;shopTypes.splice(i,1);persist();renderTypes();}
+function deleteType(i){if(!confirm('Sil?'))return;shopTypes.splice(i,1);persist();renderTypes();try{if(window.EqProjeAkis&&typeof EqProjeAkis.render==='function')EqProjeAkis.render();}catch(_){}}
 
 // ══════════════════════════════════════════════════════════════════════════════
 // KURALLAR
@@ -3395,6 +3659,12 @@ function renderProductsSummary(){
     </p>`;
 }
 
+/** E-ticaret ürün kaydı — PFOS set seçimi Konsept Tipleri panelinde yönetilir. */
+function productProjeFabAktifForSave(editIdx){
+  if(editIdx>=0&&products[editIdx]) return products[editIdx].proje_fab_aktif!==false;
+  return false;
+}
+
 function openProductModal(){
   // Reset edit mode
   const idxEl=document.getElementById('np-edit-idx');if(idxEl)idxEl.value=-1;
@@ -3411,7 +3681,6 @@ function openProductModal(){
   // Clear fields
   ['np-name','np-sku','np-model','np-fiyat','np-stok','np-el-guc','np-gaz-guc','np-acik','np-gorsel'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
   previewGorsel('');
-  const pfEl=document.getElementById('np-pf-aktif');if(pfEl)pfEl.checked=true;
   const aktifEl=document.getElementById('np-aktif');if(aktifEl)aktifEl.value='aktif';
   document.getElementById('product-modal').classList.remove('hidden');
 }
@@ -3471,7 +3740,7 @@ async function addProduct(){
     aciklama:document.getElementById('np-acik')?.value.trim()||'',
     gorsel_url:document.getElementById('np-gorsel')?.value.trim()||'',
     aktif:aktifVal!=='pasif',
-    proje_fab_aktif:document.getElementById('np-pf-aktif')?.checked!==false,
+    proje_fab_aktif:productProjeFabAktifForSave(editIdx),
   };
   // API payload
   const payload = {
@@ -3482,7 +3751,7 @@ async function addProduct(){
     durum: p.aktif===false?'pasif':'aktif',
     aciklama: p.aciklama||null,
     gorsel_url: p.gorsel_url||null,
-    proje_fab_aktif: p.proje_fab_aktif!==false
+    proje_fab_aktif: productProjeFabAktifForSave(editIdx),
   };
 
   try {
@@ -3720,6 +3989,22 @@ async function loadTipSozluguAPI(){
   }
   updateStats();
   renderSozluk();
+}
+
+async function syncTipSozlugu(){
+  if(!__ADMIN_ONLINE){alert('API kapalı — önce giriş yapın ve sunucunun çalıştığından emin olun.');return;}
+  if(!confirm('Tip sözlüğü katalog ve PFOS motor anahtarlarından yenilenecek. Devam?'))return;
+  try{
+    const res=await api('POST','/proje/tip-sozlugu',{});
+    apiTipSozlugu=res.data||[];
+    updateStats();
+    renderSozluk();
+    const n=res.count!=null?res.count:apiTipSozlugu.length;
+    const k=res.stats&&res.stats.katalog_eslesme!=null?res.stats.katalog_eslesme:'—';
+    adminToast('Tip sözlüğü güncellendi: '+n+' tip · katalog eşleşmesi: '+k,'ok');
+  }catch(e){
+    alert('Güncelleme hatası: '+(e&&e.message?e.message:e));
+  }
 }
 
 function renderSozluk(){
@@ -4134,6 +4419,7 @@ function renderAll(){
   renderProductsSummary();renderMarkalar();renderFiyatlar();
   renderEtOzet();
   try{renderEtUrunler();}catch(e){console.warn('renderEtUrunler:',e);}
+  try{if(window.EqProjeAkis&&typeof EqProjeAkis.render==='function')EqProjeAkis.render();}catch(e){console.warn('EqProjeAkis:',e);}
 }
 
 
@@ -5000,7 +5286,6 @@ function editEtUrun(i){
   set('np-el-guc',p.el_guc||'');set('np-gaz-guc',p.gaz_guc||'');set('np-acik',p.aciklama||'');
   set('np-gorsel',p.gorsel_url||'');previewGorsel(p.gorsel_url||'');
   const aktifEl=document.getElementById('np-aktif');if(aktifEl)aktifEl.value=p.aktif===false?'pasif':'aktif';
-  const pfEl=document.getElementById('np-pf-aktif');if(pfEl)pfEl.checked=p.proje_fab_aktif!==false;
   // Store edit index
   const idxEl=document.getElementById('np-edit-idx');if(idxEl)idxEl.value=i;
   if(typeof fillNpCategorySelects==='function')fillNpCategorySelects(p);
@@ -5208,7 +5493,9 @@ function startAdminApp() {
   try { applyEtAyarlarToDom(); } catch (e) { console.warn('applyEtAyarlarToDom hata:', e); }
   try {
     load().then(function () {
-      var boot = __ADMIN_ONLINE ? 'Panel yüklendi · API bağlı' : 'Panel yüklendi · API kapalı';
+      var boot = __ADMIN_ONLINE
+        ? ('Panel yüklendi · API bağlı ('+PRODUCTS_API_BASE+')')
+        : ('Panel yüklendi · API kapalı ('+PRODUCTS_API_BASE+'/urunler) — npm run dev');
       if (products.length) boot += ' · ' + products.length.toLocaleString('tr-TR') + ' ürün';
       else if (__ADMIN_ONLINE) boot += ' · ürün listesi boş (Ürünler sekmesinde Yenile)';
       else if (location.protocol === 'file:') boot += ' · katalog için http:// ile açın';
@@ -5301,7 +5588,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="modal-bd">
       <div class="row"><div class="field" style="flex:0 0 55px"><label>İkon</label><input id="et-ban-icon" placeholder="🖼️" style="font-size:18px;text-align:center"></div><div class="field"><label>Başlık</label><input id="et-ban-baslik"></div></div>
       <div class="field"><label>Bağlantı URL</label><input id="et-ban-url" placeholder="/kategori/pisirme"></div>
-      <div class="field"><label>Konum</label><select id="et-ban-konum"><option value="anasayfa_hero">Ana Sayfa Hero</option><option value="anasayfa_alt">Ana Sayfa Alt</option><option value="kategori">Kategori Sayfası</option><option value="proje_fabrikasi">Proje Fabrikası</option></select></div>
+      <div class="field"><label>Konum</label><select id="et-ban-konum"><option value="anasayfa_hero">Ana Sayfa Hero</option><option value="anasayfa_alt">Ana Sayfa Alt</option><option value="kategori">Kategori Sayfası</option><option value="proje_fabrikasi">Teklif / proje sayfası</option></select></div>
     </div>
     <div class="modal-ft"><button class="btn btn-ghost" onclick="closeModal('et-banner-modal')">İptal</button><button class="btn btn-gold" onclick="saveEtBanner()">Kaydet</button></div>
   </div>
@@ -5426,6 +5713,7 @@ async function doSetKaydet() {
 <script src="equsto-adres-national.js"></script>
 <script src="admin-vitrin.js"></script>
 <script src="admin-eticaret-kategori-ui.js?v=20260603bulk2"></script>
+<script src="admin-proje-akis.js?v=20260531et"></script>
 <script src="admin-eticaret.js?v=20260531"></script>
 <script src="admin-eticaret-api.js?v=20260531"></script>
 <footer class="adm-footer">

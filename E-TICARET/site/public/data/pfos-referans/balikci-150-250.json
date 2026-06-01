@@ -13,7 +13,7 @@
       "bolum": "K",
       "bolumAd": "K- KURU DEPO",
       "poz": "A1",
-      "ad": "İSTİF RAFI, 4 KATLI (portashelf)",
+      "ad": "İSTİF RAFI, 4 KATLI",
       "olcu": "137*46*160",
       "adet": 2
     },
@@ -29,7 +29,7 @@
       "bolum": "A",
       "bolumAd": "A- SEBZE SOĞUK ODA",
       "poz": "A2",
-      "ad": "İSTİF RAFI, 4 KATLI (portashelf)",
+      "ad": "İSTİF RAFI, 4 KATLI",
       "olcu": "122*46*160",
       "adet": 2
     },
@@ -37,7 +37,7 @@
       "bolum": "A",
       "bolumAd": "A- SEBZE SOĞUK ODA",
       "poz": "A3",
-      "ad": "İSTİF RAFI, 4 KATLI (portashelf)",
+      "ad": "İSTİF RAFI, 4 KATLI",
       "olcu": "137*46*160",
       "adet": 1
     },
@@ -53,7 +53,7 @@
       "bolum": "H",
       "bolumAd": "H- BALIK SOĞUK ODA",
       "poz": "H2",
-      "ad": "İSTİF RAFI, 4 KATLI (portashelf)",
+      "ad": "İSTİF RAFI, 4 KATLI",
       "olcu": "137*46*160",
       "adet": 1
     },
@@ -61,7 +61,7 @@
       "bolum": "H",
       "bolumAd": "H- BALIK SOĞUK ODA",
       "poz": "H3",
-      "ad": "İSTİF RAFI, 4 KATLI (portashelf)",
+      "ad": "İSTİF RAFI, 4 KATLI",
       "olcu": "152*46*160",
       "adet": 2
     },
@@ -77,7 +77,7 @@
       "bolum": "F",
       "bolumAd": "F- BALIK DERİN DONDURUCU",
       "poz": "F2",
-      "ad": "İSTİF RAFI, 4 KATLI (portashelf)",
+      "ad": "İSTİF RAFI, 4 KATLI",
       "olcu": "152*46*160",
       "adet": 4
     },
@@ -117,7 +117,7 @@
       "bolum": "G",
       "bolumAd": "G- BALIK HAZIRLIK",
       "poz": "G5",
-      "ad": "ÇÖP ARABASI (portashelf)",
+      "ad": "ÇÖP ARABASI",
       "olcu": "40*50",
       "adet": 1
     },
@@ -149,7 +149,7 @@
       "bolum": "M",
       "bolumAd": "M- MUTFAK",
       "poz": "M4",
-      "ad": "ÇÖP ARABASI (portashelf)",
+      "ad": "ÇÖP ARABASI",
       "olcu": "40*50",
       "adet": 1
     },
@@ -301,7 +301,7 @@
       "bolum": "D",
       "bolumAd": "D- BULAŞIKHANE",
       "poz": "D3",
-      "ad": "ÇÖP ARABASI (portashelf)",
+      "ad": "ÇÖP ARABASI",
       "olcu": "40*50",
       "adet": 1
     },
@@ -349,7 +349,7 @@
       "bolum": "D",
       "bolumAd": "D- BULAŞIKHANE",
       "poz": "D9",
-      "ad": "İSTİF RAFI, 4 KATLI (portashelf)",
+      "ad": "İSTİF RAFI, 4 KATLI",
       "olcu": "122*53*160",
       "adet": 1
     },
@@ -445,7 +445,7 @@
       "bolum": "Y",
       "bolumAd": "Y- YER IZGARASI",
       "poz": "Y1",
-      "ad": "YER IZGARASI (portashelf)",
+      "ad": "YER IZGARASI",
       "olcu": "30*30*14",
       "adet": 3
     },
@@ -453,7 +453,7 @@
       "bolum": "Y",
       "bolumAd": "Y- YER IZGARASI",
       "poz": "Y2",
-      "ad": "YER IZGARASI (portashelf)",
+      "ad": "YER IZGARASI",
       "olcu": "120*30*14",
       "adet": 4
     }

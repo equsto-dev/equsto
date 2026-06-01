@@ -16,6 +16,8 @@ const raw = JSON.parse(readFileSync(jsonPath, "utf8")) as {
 const data = (raw.data ?? raw) as Record<string, unknown>;
 data.questions = DEFAULT_WIZARD_QUESTIONS;
 data.shopTypes = PFOS_KONSEPT_SHOP_TYPES;
+data.rules = [];
+data.eqSets = [];
 data.updated_at = new Date().toISOString();
 
 const out = raw.data ? { ...raw, data } : data;

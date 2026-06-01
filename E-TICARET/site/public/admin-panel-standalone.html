@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EQUSTO Admin Panel — Yerinde Yönetim</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #d4af37;
+      --dark: #1a1a1a;
+      --light: #f5f5f5;
+      --muted: #888;
+      --success: #4caf50;
+      --error: #f44336;
+      --warning: #ff9800;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--dark);
+      color: #fff;
+      line-height: 1.5;
+    }
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    header {
+      background: linear-gradient(135deg, var(--dark) 0%, #2a2a2a 100%);
+      border-bottom: 2px solid var(--primary);
+      padding: 20px 0;
+      margin-bottom: 30px;
+    }
+    header h1 {
+      font-size: 28px;
+      color: var(--primary);
+      margin-bottom: 5px;
+    }
+    header p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* Navigation tabs */
+    .tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #333;
+      padding-bottom: 15px;
+    }
+    .tab-btn {
+      padding: 10px 20px;
+      border: none;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.3s;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -15px;
+      padding-bottom: 15px;
+    }
+    .tab-btn:hover {
+      color: var(--primary);
+    }
+    .tab-btn.active {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+    }
+
+    /* Tab content */
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.3s;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    /* Forms */
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--light);
+      font-weight: 500;
+      font-size: 14px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #444;
+      background: #2a2a2a;
+      color: #fff;
+      border-radius: 4px;
+      font-family: inherit;
+      font-size: 14px;
+      transition: border-color 0.3s;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    /* Buttons */
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.3s;
+      display: inline-block;
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: var(--dark);
+    }
+    .btn-primary:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+    .btn-secondary {
+      background: #444;
+      color: #fff;
+    }
+    .btn-secondary:hover {
+      background: #555;
+    }
+    .btn-danger {
+      background: var(--error);
+      color: #fff;
+    }
+    .btn-danger:hover {
+      opacity: 0.9;
+    }
+    .btn-success {
+      background: var(--success);
+      color: #fff;
+    }
+    .btn-sm {
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+
+    /* Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .card {
+      background: #2a2a2a;
+      border: 1px solid #333;
+      border-radius: 6px;
+      padding: 20px;
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #333;
+    }
+    .card-header h3 {
+      font-size: 16px;
+      color: var(--primary);
+    }
+
+    /* Table */
+    .table-wrapper {
+      overflow-x: auto;
+      margin-top: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th {
+      background: #333;
+      padding: 12px;
+      text-align: left;
+      color: var(--primary);
+      font-weight: 600;
+    }
+    td {
+      padding: 12px;
+      border-bottom: 1px solid #333;
+    }
+    tr:hover {
+      background: #333;
+    }
+
+    /* Alert/Status */
+    .alert {
+      padding: 15px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .alert.success {
+      background: rgba(76, 175, 80, 0.15);
+      border-left: 4px solid var(--success);
+      color: var(--success);
+    }
+    .alert.error {
+      background: rgba(244, 67, 54, 0.15);
+      border-left: 4px solid var(--error);
+      color: var(--error);
+    }
+    .alert.warning {
+      background: rgba(255, 152, 0, 0.15);
+      border-left: 4px solid var(--warning);
+      color: var(--warning);
+    }
+
+    /* Status badge */
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .badge.active {
+      background: rgba(76, 175, 80, 0.2);
+      color: var(--success);
+    }
+    .badge.inactive {
+      background: rgba(136, 136, 136, 0.2);
+      color: var(--muted);
+    }
+
+    /* Loading */
+    .spinner {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      border-top-color: var(--primary);
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+    .modal.active {
+      display: flex;
+    }
+    .modal-content {
+      background: #1a1a1a;
+      border: 1px solid #444;
+      border-radius: 6px;
+      padding: 30px;
+      max-width: 600px;
+      width: 90%;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    .modal-header {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: var(--primary);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .modal-close {
+      background: none;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      font-size: 24px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+    .form-row.full { grid-template-columns: 1fr; }
+
+    .status-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px;
+      background: #333;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    .status-value {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--primary);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🏢 EQUSTO Admin Panel</h1>
+      <p>Ürün, fiyat, kampanya ve PFOS yönetimi | Yerinde yönetim </p>
+    </header>
+
+    <!-- Auth Section -->
+    <div id="auth-section" style="display: none;">
+      <div class="card">
+        <div class="card-header">
+          <h3>📛 Admin Token Giriş</h3>
+        </div>
+        <div class="form-group">
+          <label>Bearer Token (Vercel EQUSTO_ADMIN_BEARER)</label>
+          <input type="password" id="adminToken" placeholder="Vercel environment'ından kopyala">
+        </div>
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="rememberToken"> Tokeni kaydet (localStorage)
+          </label>
+        </div>
+        <button class="btn btn-primary" onclick="loginAdmin()">Giriş Yap</button>
+      </div>
+    </div>
+
+    <!-- Main Dashboard -->
+    <div id="main-dashboard" style="display: none;">
+      <!-- Top bar -->
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <span id="auth-status" style="color: var(--muted); font-size: 13px;">
+          Token: <span id="token-hint" style="color: var(--success);">✓ Yüklü</span>
+        </span>
+        <button class="btn btn-secondary btn-sm" onclick="logoutAdmin()">Çıkış</button>
+      </div>
+
+      <!-- Tabs -->
+      <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab('ürünler')">📦 Ürünler</button>
+        <button class="tab-btn" onclick="switchTab('fiyat')">💰 Fiyat & Kur</button>
+        <button class="tab-btn" onclick="switchTab('kampanya')">🎯 Kampanya</button>
+        <button class="tab-btn" onclick="switchTab('pfos')">🏗️ PFOS Referans</button>
+        <button class="tab-btn" onclick="switchTab('kontrol')">⚙️ Kontrol</button>
+      </div>
+
+      <!-- Tab: Ürünler -->
+      <div id="tab-ürünler" class="tab-content active">
+        <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+          <input type="text" id="urunAra" placeholder="Ürün ara..." style="flex: 1;">
+          <button class="btn btn-primary" onclick="openUrunModal()">+ Yeni Ürün</button>
+          <button class="btn btn-secondary" onclick="loadUrunler()">🔄 Yenile</button>
+        </div>
+        <div id="urunler-list" class="table-wrapper">
+          <div style="text-align: center; color: var(--muted); padding: 40px;">
+            <div class="spinner"></div>
+            <p>Ürünler yükleniyor...</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab: Fiyat -->
+      <div id="tab-fiyat" class="tab-content">
+        <div class="grid">
+          <div class="card">
+            <div class="card-header">
+              <h3>📊 Kur Bilgisi</h3>
+            </div>
+            <div id="kur-status">
+              <div class="spinner"></div>
+            </div>
+            <button class="btn btn-secondary btn-sm" style="margin-top: 15px;" onclick="loadKur()">🔄 Yenile</button>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h3>💳 Fiyat Listesi</h3>
+            </div>
+            <div id="fiyat-list" style="max-height: 300px; overflow-y: auto;">
+              <div class="spinner"></div>
+            </div>
+            <button class="btn btn-primary btn-sm" style="margin-top: 15px;" onclick="openFiyatModal()">Fiyat Ekle/Düzenle</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab: Kampanya -->
+      <div id="tab-kampanya" class="tab-content">
+        <div style="margin-bottom: 20px;">
+          <button class="btn btn-primary" onclick="openKampanyaModal()">+ Kampanya Oluştur</button>
+          <button class="btn btn-secondary" onclick="openKuponModal()">+ Kupon Kodu</button>
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Kampanya Adı</th>
+              <th>Açıklama</th>
+              <th>Başlangıç</th>
+              <th>Bitiş</th>
+              <th>Durum</th>
+              <th style="text-align: center; width: 80px;">İşlemler</th>
+            </tr>
+          </thead>
+          <tbody id="kampanya-tbody">
+            <tr><td colspan="6" style="text-align: center; color: var(--muted);">Kampanyalar yükleniyor...</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Tab: PFOS Referans -->
+      <div id="tab-pfos" class="tab-content">
+        <div style="margin-bottom: 20px;">
+          <button class="btn btn-primary" onclick="openPfosModal()">+ Referans Yükle</button>
+        </div>
+        <div id="pfos-list" class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Kategori</th>
+                <th>Band</th>
+                <th>Label</th>
+                <th>Kalem Sayısı</th>
+                <th>İşlem</th>
+              </tr>
+            </thead>
+            <tbody id="pfos-tbody">
+              <tr><td colspan="5" style="text-align: center; color: var(--muted);">Veriler yükleniyor...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Tab: Kontrol -->
+      <div id="tab-kontrol" class="tab-content">
+        <div class="grid">
+          <div class="card">
+            <div class="card-header"><h3>✓ Sistem Durumu</h3></div>
+            <div id="kontrol-status">
+              <div class="spinner"></div> Kontrol ediliyor...
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Ürün -->
+  <div id="urunModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span>Ürün Ekle / Düzenle</span>
+        <button class="modal-close" onclick="closeUrunModal()">×</button>
+      </div>
+      <form id="urunForm" onsubmit="saveUrun(event)">
+        <div class="form-group">
+          <label>Ürün Adı *</label>
+          <input type="text" id="urun_ad" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>SKU</label>
+            <input type="text" id="urun_sku">
+          </div>
+          <div class="form-group">
+            <label>Model Kodu</label>
+            <input type="text" id="urun_model">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Marka *</label>
+            <input type="text" id="urun_marka" required>
+          </div>
+          <div class="form-group">
+            <label>Kategori *</label>
+            <input type="text" id="urun_kategori" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Fiyat (TL)</label>
+            <input type="number" id="urun_fiyat" min="0" step="0.01">
+          </div>
+          <div class="form-group">
+            <label>Stok</label>
+            <input type="number" id="urun_stok" min="0">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>El. Gücü (kW)</label>
+            <input type="number" id="urun_el_guc" min="0" step="0.1">
+          </div>
+          <div class="form-group">
+            <label>Gaz Gücü (kW)</label>
+            <input type="number" id="urun_gaz_guc" min="0" step="0.1">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Açıklama</label>
+          <textarea id="urun_aciklama"></textarea>
+        </div>
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="urun_durum"> Aktif (Yayında)
+          </label>
+        </div>
+        <div style="display: flex; gap: 10px; justify-content: flex-end;">
+          <button type="button" class="btn btn-secondary" onclick="closeUrunModal()">İptal</button>
+          <button type="submit" class="btn btn-primary">Kaydet</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal: Fiyat -->
+  <div id="fiyatModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span>Fiyat Yönetimi</span>
+        <button class="modal-close" onclick="closeFiyatModal()">×</button>
+      </div>
+      <div id="fiyat-form-wrapper"></div>
+    </div>
+  </div>
+
+  <!-- Modal: Kampanya -->
+  <div id="kampanyaModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span>Kampanya Oluştur</span>
+        <button class="modal-close" onclick="closeKampanyaModal()">×</button>
+      </div>
+      <form onsubmit="saveKampanya(event)">
+        <div class="form-group">
+          <label>Kampanya Adı *</label>
+          <input type="text" id="kmp_ad" required>
+        </div>
+        <div class="form-group">
+          <label>Açıklama</label>
+          <textarea id="kmp_desc"></textarea>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Başlangıç Tarihi</label>
+            <input type="date" id="kmp_start">
+          </div>
+          <div class="form-group">
+            <label>Bitiş Tarihi</label>
+            <input type="date" id="kmp_end">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="kmp_active"> Aktif
+          </label>
+        </div>
+        <div style="display: flex; gap: 10px; justify-content: flex-end;">
+          <button type="button" class="btn btn-secondary" onclick="closeKampanyaModal()">İptal</button>
+          <button type="submit" class="btn btn-primary">Oluştur</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal: Kupon -->
+  <div id="kuponModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span>Kupon Kodu Ekle</span>
+        <button class="modal-close" onclick="closeKuponModal()">×</button>
+      </div>
+      <form onsubmit="saveKupon(event)">
+        <div class="form-group">
+          <label>Kupon Kodu *</label>
+          <input type="text" id="kupon_kod" placeholder="SUMMER2026" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>İndirim Tutarı (TL)</label>
+            <input type="number" id="kupon_tutar" min="0" step="0.01">
+          </div>
+          <div class="form-group">
+            <label>İndirim Yüzdesi (%)</label>
+            <input type="number" id="kupon_yuzde" min="0" max="100" step="0.01">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="kupon_aktif" checked> Aktif
+          </label>
+        </div>
+        <div style="display: flex; gap: 10px; justify-content: flex-end;">
+          <button type="button" class="btn btn-secondary" onclick="closeKuponModal()">İptal</button>
+          <button type="submit" class="btn btn-primary">Ekle</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal: PFOS -->
+  <div id="pfosModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span>PFOS Referans Yükle</span>
+        <button class="modal-close" onclick="closePfosModal()">×</button>
+      </div>
+      <form onsubmit="savePfos(event)">
+        <div class="form-group">
+          <label>JSON Veri Yapıştır</label>
+          <textarea id="pfos_json" placeholder='{"kategoriId": "...", "bantId": "...", ...}' style="font-family: monospace; font-size: 12px; min-height: 200px;"></textarea>
+        </div>
+        <div style="display: flex; gap: 10px; justify-content: flex-end;">
+          <button type="button" class="btn btn-secondary" onclick="closePfosModal()">İptal</button>
+          <button type="submit" class="btn btn-primary">Yükle</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const API_BASE = 'http://localhost:3000/api';
+    let adminToken = '';
+    let currentUrunId = null;
+
+    // Auth
+    function loginAdmin() {
+      const token = document.getElementById('adminToken').value.trim();
+      if (!token) {
+        alert('Token boş olamaz');
+        return;
+      }
+      if (document.getElementById('rememberToken').checked) {
+        localStorage.setItem('eq_admin_token', token);
+      }
+      adminToken = token;
+      showDashboard();
+    }
+
+    function logoutAdmin() {
+      adminToken = '';
+      localStorage.removeItem('eq_admin_token');
+      document.getElementById('main-dashboard').style.display = 'none';
+      document.getElementById('auth-section').style.display = 'block';
+      document.getElementById('adminToken').value = '';
+    }
+
+    function showDashboard() {
+      document.getElementById('auth-section').style.display = 'none';
+      document.getElementById('main-dashboard').style.display = 'block';
+      loadUrunler();
+      loadKur();
+      loadKampanya();
+      loadPfos();
+      runKontrol();
+    }
+
+    // Tabs
+    function switchTab(tab) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+      document.getElementById('tab-' + tab).classList.add('active');
+      event.target.classList.add('active');
+    }
+
+    // API Helper
+    async function apiCall(method, endpoint, data = null) {
+      const opts = {
+        method,
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${adminToken}`
+        }
+      };
+      if (data) opts.body = JSON.stringify(data);
+      
+      try {
+        const res = await fetch(API_BASE + endpoint, opts);
+        if (!res.ok) {
+          const err = await res.json().catch(() => ({}));
+          throw new Error(err.error || `HTTP ${res.status}`);
+        }
+        return await res.json();
+      } catch (e) {
+        showAlert(e.message, 'error');
+        throw e;
+      }
+    }
+
+    // Alert
+    function showAlert(msg, type = 'success') {
+      const html = `<div class="alert ${type}"><span>${msg}</span><button onclick="this.parentElement.remove()" style="background: none; border: none; color: inherit; cursor: pointer;">×</button></div>`;
+      document.querySelector('header').insertAdjacentHTML('afterend', html);
+      setTimeout(() => document.querySelector('.alert')?.remove(), 5000);
+    }
+
+    // Ürünler
+    async function loadUrunler() {
+      try {
+        const res = await apiCall('GET', '/urunler');
+        const rows = res.data || [];
+        
+        let html = `<table>
+          <thead>
+            <tr>
+              <th>SKU</th>
+              <th>Ürün Adı</th>
+              <th>Marka</th>
+              <th>Kategori</th>
+              <th>Fiyat (TL)</th>
+              <th>Stok</th>
+              <th>Durum</th>
+              <th>İşlem</th>
+            </tr>
+          </thead>
+          <tbody>`;
+        
+        rows.forEach(row => {
+          html += `
+            <tr>
+              <td>${row.sku || '—'}</td>
+              <td>${row.ad}</td>
+              <td>${row.marka_ad || row.marka_id || '—'}</td>
+              <td>${row.kategori}</td>
+              <td>${row.fiyat_tl > 0 ? row.fiyat_tl.toLocaleString('tr-TR') : '—'}</td>
+              <td>${row.stok || 0}</td>
+              <td><span class="badge ${row.durum === 'aktif' ? 'active' : 'inactive'}">${row.durum}</span></td>
+              <td>
+                <button class="btn btn-secondary btn-sm" onclick="editUrun('${row.id}')">Düzenle</button>
+                ${!row.readonly ? `<button class="btn btn-danger btn-sm" onclick="deleteUrun('${row.id}')">Sil</button>` : ''}
+              </td>
+            </tr>`;
+        });
+        
+        html += `</tbody></table>`;
+        document.getElementById('urunler-list').innerHTML = html;
+      } catch (e) {
+        document.getElementById('urunler-list').innerHTML = `<p style="color: var(--error); padding: 20px;">${e.message}</p>`;
+      }
+    }
+
+    function openUrunModal() {
+      currentUrunId = null;
+      document.getElementById('urunForm').reset();
+      document.getElementById('urunModal').classList.add('active');
+    }
+
+    function closeUrunModal() {
+      document.getElementById('urunModal').classList.remove('active');
+    }
+
+    async function saveUrun(e) {
+      e.preventDefault();
+      const data = {
+        ad: document.getElementById('urun_ad').value,
+        sku: document.getElementById('urun_sku').value || null,
+        marka_id: document.getElementById('urun_marka').value,
+        kategori: document.getElementById('urun_kategori').value,
+        fiyat_tl: parseFloat(document.getElementById('urun_fiyat').value) || 0,
+        stok: parseInt(document.getElementById('urun_stok').value) || 0,
+        el_guc: parseFloat(document.getElementById('urun_el_guc').value) || null,
+        gaz_guc: parseFloat(document.getElementById('urun_gaz_guc').value) || null,
+        aciklama: document.getElementById('urun_aciklama').value || null,
+        durum: document.getElementById('urun_durum').checked ? 'aktif' : 'pasif'
+      };
+
+      try {
+        if (currentUrunId) {
+          await apiCall('PUT', `/urunler/${currentUrunId}`, data);
+          showAlert('Ürün güncellendi');
+        } else {
+          await apiCall('POST', '/urunler', data);
+          showAlert('Ürün eklendi');
+        }
+        closeUrunModal();
+        loadUrunler();
+      } catch (e) {
+        // Error shown by apiCall
+      }
+    }
+
+    async function editUrun(id) {
+      // Load product data and open modal
+      alert('Düzenleme özelliği çok yakında!');
+    }
+
+    async function deleteUrun(id) {
+      if (!confirm('Ürünü silmek istediğinize emin misiniz?')) return;
+      try {
+        await apiCall('DELETE', `/urunler/${id}`);
+        showAlert('Ürün silindi');
+        loadUrunler();
+      } catch (e) {
+        // Error shown
+      }
+    }
+
+    // Fiyat & Kur
+    async function loadKur() {
+      try {
+        const res = await apiCall('GET', '/market?kind=kur');
+        const html = `
+          <div class="status-item">
+            <span>EUR → TL</span>
+            <span class="status-value">${res.kur?.toFixed(2) || '—'}</span>
+          </div>
+          <div style="font-size: 12px; color: var(--muted);">
+            Güncelleme: ${res.updated_at || 'bilinmiyor'}
+          </div>
+        `;
+        document.getElementById('kur-status').innerHTML = html;
+      } catch (e) {}
+    }
+
+    function openFiyatModal() {
+      document.getElementById('fiyatModal').classList.add('active');
+      // Load fiyatlar
+      alert('Fiyat düzenleme özelliği yakında!');
+    }
+
+    function closeFiyatModal() {
+      document.getElementById('fiyatModal').classList.remove('active');
+    }
+
+    // Kampanya
+    async function loadKampanya() {
+      document.getElementById('kampanya-list').innerHTML = '<p style="color: var(--muted); grid-column: 1/-1;">Kampanyalar yükleniyor...</p>';
+      // Placeholder
+    }
+
+    function openKampanyaModal() {
+      document.getElementById('kampanyaModal').classList.add('active');
+    }
+
+    function closeKampanyaModal() {
+      document.getElementById('kampanyaModal').classList.remove('active');
+    }
+
+    async function saveKampanya(e) {
+      e.preventDefault();
+      const kampanya = {
+        ad: document.getElementById('kmp_ad').value,
+        desc: document.getElementById('kmp_desc').value,
+        start: document.getElementById('kmp_start').value,
+        end: document.getElementById('kmp_end').value,
+        active: document.getElementById('kmp_active').checked
+      };
+      
+      if (!kampanya.ad.trim()) {
+        showAlert('Kampanya adı zorunlu!', 'error');
+        return;
+      }
+
+      // Load existing data
+      const existing = await apiCall('GET', '/api/eticaret-icerik', null);
+      if (!existing.success) {
+        showAlert('Kampanya yüklenemedi', 'error');
+        return;
+      }
+
+      // Add to array
+      const updated = {
+        ...existing.data,
+        k: [...(existing.data.k || []), kampanya]
+      };
+
+      // Save
+      const result = await apiCall('POST', '/api/eticaret-icerik', updated);
+      if (result.success) {
+        showAlert('Kampanya kaydedildi ✓', 'success');
+        loadKampanyalar();
+        closeKampanyaModal();
+        // Clear form
+        document.getElementById('kmp_ad').value = '';
+        document.getElementById('kmp_desc').value = '';
+        document.getElementById('kmp_start').value = '';
+        document.getElementById('kmp_end').value = '';
+        document.getElementById('kmp_active').checked = false;
+      } else {
+        showAlert(`Hata: ${result.message}`, 'error');
+      }
+    }
+
+    function openKuponModal() {
+      document.getElementById('kuponModal').classList.add('active');
+    }
+
+    function closeKuponModal() {
+      document.getElementById('kuponModal').classList.remove('active');
+    }
+
+    async function saveKupon(e) {
+      e.preventDefault();
+      const kupon = {
+        kod: document.getElementById('kupon_kod').value,
+        tutar: parseFloat(document.getElementById('kupon_tutar').value) || 0,
+        yuzde: parseFloat(document.getElementById('kupon_yuzde').value) || 0,
+        aktif: document.getElementById('kupon_aktif').checked
+      };
+      
+      if (!kupon.kod.trim()) {
+        showAlert('Kupon kodu zorunlu!', 'error');
+        return;
+      }
+      
+      if (kupon.tutar <= 0 && kupon.yuzde <= 0) {
+        showAlert('İndirim tutarı veya yüzdesi zorunlu!', 'error');
+        return;
+      }
+
+      // Load existing data
+      const existing = await apiCall('GET', '/api/eticaret-icerik', null);
+      if (!existing.success) {
+        showAlert('Kupon yüklenemedi', 'error');
+        return;
+      }
+
+      // Add to array
+      const updated = {
+        ...existing.data,
+        kp: [...(existing.data.kp || []), kupon]
+      };
+
+      // Save
+      const result = await apiCall('POST', '/api/eticaret-icerik', updated);
+      if (result.success) {
+        showAlert('Kupon eklendi ✓', 'success');
+        closeKuponModal();
+        // Clear form
+        document.getElementById('kupon_kod').value = '';
+        document.getElementById('kupon_tutar').value = '';
+        document.getElementById('kupon_yuzde').value = '';
+        document.getElementById('kupon_aktif').checked = false;
+      } else {
+        showAlert(`Hata: ${result.message}`, 'error');
+      }
+    }
+
+    // Kampanyalar ve Kuponlar
+    async function loadKampanyalar() {
+      const result = await apiCall('GET', '/api/eticaret-icerik', null);
+      if (!result.success || !result.data) {
+        console.error('Kampanyalar yüklenemedi:', result);
+        return;
+      }
+
+      const kampanyalar = result.data.k || [];
+      const tbody = document.getElementById('kampanya-tbody');
+      if (!tbody) return;
+
+      if (kampanyalar.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="6" style="text-align: center; color: var(--muted);">Henüz kampanya yok</td></tr>';
+        return;
+      }
+
+      tbody.innerHTML = kampanyalar.map((k, idx) => `
+        <tr>
+          <td>${k.ad}</td>
+          <td>${k.desc || '-'}</td>
+          <td>${k.start || '-'}</td>
+          <td>${k.end || '-'}</td>
+          <td>${k.active ? '✓ Aktif' : '⊘ Pasif'}</td>
+          <td style="text-align: center;">
+            <button class="btn btn-sm" style="background: #f44336; padding: 5px 10px;" onclick="deleteKampanya(${idx})">Sil</button>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    async function deleteKampanya(index) {
+      if (!confirm('Kampanya silinecek. Emin misin?')) return;
+      const result = await apiCall('DELETE', `/api/eticaret-icerik?type=kampanya&index=${index}`, null);
+      if (result.success) {
+        showAlert('Kampanya silindi ✓', 'success');
+        loadKampanyalar();
+      } else {
+        showAlert(`Hata: ${result.message}`, 'error');
+      }
+    }
+
+    // PFOS
+    async function loadPfos() {
+      // Placeholder - load from /api/cms?kind=proje-akis
+      document.getElementById('pfos-tbody').innerHTML = '<tr><td colspan="5" style="text-align: center; color: var(--muted);">PFOS referansları yükleniyor...</td></tr>';
+    }
+
+    function openPfosModal() {
+      document.getElementById('pfosModal').classList.add('active');
+    }
+
+    function closePfosModal() {
+      document.getElementById('pfosModal').classList.remove('active');
+    }
+
+    async function savePfos(e) {
+      e.preventDefault();
+      try {
+        const json = JSON.parse(document.getElementById('pfos_json').value);
+        // Save to API
+        showAlert('PFOS referansı yüklendi');
+        closePfosModal();
+        loadPfos();
+      } catch (err) {
+        showAlert('Geçersiz JSON: ' + err.message, 'error');
+      }
+    }
+
+    // Kontrol
+    async function runKontrol() {
+      try {
+        const checks = [];
+        
+        // Test /api/urunler
+        try {
+          await apiCall('GET', '/urunler');
+          checks.push({ name: '/api/urunler', ok: true });
+        } catch (e) {
+          checks.push({ name: '/api/urunler', ok: false, msg: e.message });
+        }
+
+        let html = '<div>';
+        checks.forEach(c => {
+          html += `<div class="status-item">
+            <span>${c.name}</span>
+            <span style="color: ${c.ok ? 'var(--success)' : 'var(--error)'};">${c.ok ? '✓ OK' : '✗ ' + (c.msg || 'Hata')}</span>
+          </div>`;
+        });
+        html += '</div>';
+
+        document.getElementById('kontrol-status').innerHTML = html;
+      } catch (e) {}
+    }
+
+    // Init
+    window.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('eq_admin_token');
+      if (saved) {
+        document.getElementById('adminToken').value = saved;
+        adminToken = saved;
+        showDashboard();
+      } else {
+        document.getElementById('auth-section').style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>

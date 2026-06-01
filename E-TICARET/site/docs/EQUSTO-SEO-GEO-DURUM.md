@@ -40,3 +40,22 @@ Kaynak: `EQUSTO SEO G0O 3.docx` + uygulama (2026-05-24)
 - https://equsto.com/blog
 - https://equsto.com/mutfak-teklif-platformu
 - https://equsto.com/en/industrial-kitchen-supplier-turkey
+
+## Bekleyen — sırası gelince (2026-05-28 notu)
+
+Teknik GEO SSR + discovery FAQ canlı (`e7081eb`, `cf85f44`). AI testlerinde henüz Equsto çıkmadı — **indeksleme + dış otorite** bekleniyor. Kullanıcı: *“daha sonra hatırlat, sırası gelince yapalım”*.
+
+**Hatırlatılacaklar (kod dışı):**
+
+1. GSC → URL Inspection → 5 pillar indeks isteği:
+   - `/endustriyel-mutfak-ekipmani-turkiye`
+   - `/restoran-mutfak-teklif`
+   - `/oztiryakiler-ekipmani-tedarik`
+   - `/steakhouse-kurulumu`
+   - `/en/industrial-kitchen-supplier-turkey`
+2. Google Business Profile (İstanbul, endüstriyel mutfak)
+3. LinkedIn şirket sayfası + düzenli paylaşım
+4. Sektör dizinleri / Öztiryakiler bayii listesi kontrolü
+5. **1–2 hafta sonra** aynı 5 AI sorgusunu tekrar test (Perplexity web açık)
+
+**GSC eşik:** indekslenen sayfa ~50+ olunca anlamlı GEO sinyali beklenir.

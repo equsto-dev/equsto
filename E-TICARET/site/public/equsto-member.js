@@ -135,7 +135,7 @@
               ? window.equstoResolveNavHref("login.html")
               : "/login.html";
       } else {
-        if (title) title.textContent = "Projeler ve Listeler ▾";
+        if (title) title.textContent = __memberT("common.account_projects", "Projeler ve Listeler ▾");
         if (sub) sub.textContent = __memberT("member.my_account", "Hesabım");
         a.setAttribute("title", __memberT("member.login_title", "Üye girişi"));
         a.href =
@@ -158,8 +158,13 @@
     if (window.eqI18nReady && typeof window.eqI18nReady.then === "function") {
       window.eqI18nReady.then(function () {
         equstoRefreshDeliveryHeader();
+        equstoRefreshMemberHeader();
       });
     }
+    window.addEventListener("equsto:i18n-ready", function () {
+      equstoRefreshDeliveryHeader();
+      equstoRefreshMemberHeader();
+    });
   }
 
   if (document.readyState === "loading") {

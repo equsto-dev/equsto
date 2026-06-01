@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-05-31T18:52:32.837Z",
+  "updated": "2026-05-31T19:46:53.185Z",
   "count": 142,
   "entries": [
     {
@@ -9,7 +9,7 @@
       "kategori": "diger",
       "alt_kategori": null,
       "kaynak": "P1",
-      "frekans": 21
+      "frekans": 28
     },
     {
       "tip_kodu": "bar_buzdolabi",
@@ -17,7 +17,7 @@
       "kategori": "diger",
       "alt_kategori": null,
       "kaynak": "motor",
-      "frekans": 3
+      "frekans": 4
     },
     {
       "tip_kodu": "bar_kuvet",
@@ -25,7 +25,7 @@
       "kategori": "yikama",
       "alt_kategori": null,
       "kaynak": "motor",
-      "frekans": 972
+      "frekans": 1296
     },
     {
       "tip_kodu": "bar_mikser",
@@ -33,7 +33,7 @@
       "kategori": "icecek",
       "alt_kategori": null,
       "kaynak": "motor",
-      "frekans": 3
+      "frekans": 4
     },
     {
       "tip_kodu": "bardak_yikama",
@@ -41,7 +41,7 @@
       "kategori": "yikama",
       "alt_kategori": null,
       "kaynak": "motor",
-      "frekans": 18
+      "frekans": 24
     },
     {
       "tip_kodu": "basket_rafi",
@@ -57,7 +57,7 @@
       "kategori": "yikama",
       "alt_kategori": null,
       "kaynak": "P1+P2",
-      "frekans": 6
+      "frekans": 8
     },
     {
       "tip_kodu": "bulasik_kose_540",
@@ -73,7 +73,7 @@
       "kategori": "icecek",
       "alt_kategori": null,
       "kaynak": "P1",
-      "frekans": 42
+      "frekans": 56
     },
     {
       "tip_kodu": "buz_makinesi",
@@ -81,7 +81,7 @@
       "kategori": "diger",
       "alt_kategori": null,
       "kaynak": "motor",
-      "frekans": 99
+      "frekans": 132
     },
     {
       "tip_kodu": "bym_cikis_tez",
@@ -89,7 +89,7 @@
       "kategori": "diger",
       "alt_kategori": null,
       "kaynak": "P1+P2",
-      "frekans": 6
+      "frekans": 8
     },
     {
       "tip_kodu": "bym_cikis_tezgah",
@@ -145,7 +145,7 @@
       "kategori": "hazirlik",
       "alt_kategori": null,
       "kaynak": "motor",
-      "frekans": 132
+      "frekans": 176
     },
     {
       "tip_kodu": "calisma_tezgahi_dolap",
@@ -153,7 +153,7 @@
       "kategori": "diger",
       "alt_kategori": null,
       "kaynak": "motor",
-      "frekans": 219
+      "frekans": 292
     },
     {
       "tip_kodu": "cay_ocagi_2demlik",
@@ -185,7 +185,7 @@
       "kategori": "diger",
       "alt_kategori": null,
       "kaynak": "P2",
-      "frekans": 54
+      "frekans": 72
     },
     {
       "tip_kodu": "cop_servant_tezgah",
@@ -201,7 +201,7 @@
       "kategori": "yikama",
       "alt_kategori": null,
       "kaynak": "P1+P2",
-      "frekans": 90
+      "frekans": 120
     },
     {
       "tip_kodu": "cop_tezgahi",
@@ -225,7 +225,7 @@
       "kategori": "diger",
       "alt_kategori": null,
       "kaynak": "P1+P2",
-      "frekans": 387
+      "frekans": 516
     },
     {
       "tip_kodu": "depo_buz_cift",
@@ -273,7 +273,7 @@
       "kategori": "diger",
       "alt_kategori": null,
       "kaynak": "P1+P2",
-      "frekans": 42
+      "frekans": 56
     },
     {
       "tip_kodu": "dik_icecek_dol_acik",
@@ -297,7 +297,7 @@
       "kategori": "diger",
       "alt_kategori": null,
       "kaynak": "motor",
-      "frekans": 36
+      "frekans": 48
     },
     {
       "tip_kodu": "dik_tip_teshir_dolabi",
@@ -313,7 +313,7 @@
       "kategori": "diger",
       "alt_kategori": null,
       "kaynak": "P1",
-      "frekans": 18
+      "frekans": 24
     },
     {
       "tip_kodu": "dilimleme_makinesi",
@@ -321,7 +321,7 @@
       "kategori": "diger",
       "alt_kategori": null,
       "kaynak": "motor",
-      "frekans": 51
+      "frekans": 68
     },
     {
       "tip_kodu": "dondurma_dolabi_8g",
@@ -337,7 +337,7 @@
       "kategori": "yikama",
       "alt_kategori": null,
       "kaynak": "P1",
-      "frekans": 18
+      "frekans": 24
     },
     {
       "tip_kodu": "duvar_rafi",
@@ -345,7 +345,7 @@
       "kategori": "diger",
       "alt_kategori": null,
       "kaynak": "motor",
-      "frekans": 30
+      "frekans": 40
     },
     {
       "tip_kodu": "duvar_rafi_2k",
@@ -393,7 +393,7 @@
       "kategori": "icecek",
       "alt_kategori": null,
       "kaynak": "motor",
-      "frekans": 15
+      "frekans": 20
     },
     {
       "tip_kodu": "evye_dizden",
@@ -425,7 +425,7 @@
       "kategori": "yikama",
       "alt_kategori": null,
       "kaynak": "motor",
-      "frekans": 111
+      "frekans": 148
     },
     {
       "tip_kodu": "filter_coffee",
@@ -433,7 +433,7 @@
       "kategori": "icecek",
       "alt_kategori": null,
       "kaynak": "motor",
-      "frekans": 12
+      "frekans": 16
     },
     {
       "tip_kodu": "filtre_kahve_2x2",
@@ -449,7 +449,7 @@
       "kategori": "hazirlik",
       "alt_kategori": null,
       "kaynak": "P1",
-      "frekans": 6
+      "frekans": 8
     },
     {
       "tip_kodu": "fritoz_cift",
@@ -473,7 +473,7 @@
       "kategori": "diger",
       "alt_kategori": null,
       "kaynak": "motor",
-      "frekans": 186
+      "frekans": 248
     },
     {
       "tip_kodu": "hamur_yogurma_25l",
@@ -505,7 +505,7 @@
       "kategori": "diger",
       "alt_kategori": null,
       "kaynak": "P1+P2",
-      "frekans": 444
+      "frekans": 592
     },
     {
       "tip_kodu": "istif_rafi_4kat",
@@ -553,7 +553,7 @@
       "kategori": "icecek",
       "alt_kategori": null,
       "kaynak": "P1",
-      "frekans": 78
+      "frekans": 104
     },
     {
       "tip_kodu": "kasa_bankosu",
@@ -569,7 +569,7 @@
       "kategori": "diger",
       "alt_kategori": null,
       "kaynak": "motor",
-      "frekans": 6
+      "frekans": 8
     },
     {
       "tip_kodu": "kiyma_makinesi",
@@ -577,7 +577,7 @@
       "kategori": "diger",
       "alt_kategori": null,
       "kaynak": "motor",
-      "frekans": 36
+      "frekans": 48
     },
     {
       "tip_kodu": "kombi_firin_6t",
@@ -585,7 +585,7 @@
       "kategori": "diger",
       "alt_kategori": null,
       "kaynak": "P1",
-      "frekans": 237
+      "frekans": 316
     },
     {
       "tip_kodu": "kup_buz_44kg",
@@ -641,7 +641,7 @@
       "kategori": "diger",
       "alt_kategori": null,
       "kaynak": "motor",
-      "frekans": 21
+      "frekans": 28
     },
     {
       "tip_kodu": "mikrodalga_firin",
@@ -649,7 +649,7 @@
       "kategori": "diger",
       "alt_kategori": null,
       "kaynak": "motor",
-      "frekans": 9
+      "frekans": 12
     },
     {
       "tip_kodu": "mobil_bar_arabasi",
@@ -705,7 +705,7 @@
       "kategori": "yikama",
       "alt_kategori": null,
       "kaynak": "P1+P2",
-      "frekans": 9
+      "frekans": 12
     },
     {
       "tip_kodu": "pasta_sandvic_dol",
@@ -729,7 +729,7 @@
       "kategori": "diger",
       "alt_kategori": null,
       "kaynak": "P1",
-      "frekans": 9
+      "frekans": 12
     },
     {
       "tip_kodu": "pizza_firini",
@@ -737,7 +737,7 @@
       "kategori": "diger",
       "alt_kategori": null,
       "kaynak": "P1",
-      "frekans": 42
+      "frekans": 56
     },
     {
       "tip_kodu": "pizza_firini_elk",
@@ -809,7 +809,7 @@
       "kategori": "diger",
       "alt_kategori": null,
       "kaynak": "motor",
-      "frekans": 18
+      "frekans": 24
     },
     {
       "tip_kodu": "salamander",
@@ -817,7 +817,7 @@
       "kategori": "diger",
       "alt_kategori": null,
       "kaynak": "P1",
-      "frekans": 9
+      "frekans": 12
     },
     {
       "tip_kodu": "sarap_dolabi",
@@ -833,7 +833,7 @@
       "kategori": "diger",
       "alt_kategori": null,
       "kaynak": "motor",
-      "frekans": 99
+      "frekans": 132
     },
     {
       "tip_kodu": "setalti_derin_dondurucu",
@@ -857,7 +857,7 @@
       "kategori": "hazirlik",
       "alt_kategori": null,
       "kaynak": "motor",
-      "frekans": 27
+      "frekans": 36
     },
     {
       "tip_kodu": "sise_sogutucu_3k",
@@ -865,7 +865,7 @@
       "kategori": "diger",
       "alt_kategori": null,
       "kaynak": "motor",
-      "frekans": 6
+      "frekans": 8
     },
     {
       "tip_kodu": "sogutma_tezgah",
@@ -889,7 +889,7 @@
       "kategori": "diger",
       "alt_kategori": null,
       "kaynak": "motor",
-      "frekans": 45
+      "frekans": 60
     },
     {
       "tip_kodu": "tabak_isitma",
@@ -913,7 +913,7 @@
       "kategori": "diger",
       "alt_kategori": null,
       "kaynak": "P1+P2",
-      "frekans": 21
+      "frekans": 28
     },
     {
       "tip_kodu": "tepsi_tasima_kapali",
@@ -937,7 +937,7 @@
       "kategori": "yikama",
       "alt_kategori": null,
       "kaynak": "P1",
-      "frekans": 6
+      "frekans": 8
     },
     {
       "tip_kodu": "tezgah_ara_notr_dol",
@@ -1017,7 +1017,7 @@
       "kategori": "diger",
       "alt_kategori": null,
       "kaynak": "P1+P2",
-      "frekans": 150
+      "frekans": 200
     },
     {
       "tip_kodu": "tezgah_evyeli",
@@ -1025,7 +1025,7 @@
       "kategori": "yikama",
       "alt_kategori": null,
       "kaynak": "P1+P2",
-      "frekans": 111
+      "frekans": 148
     },
     {
       "tip_kodu": "tezgah_hareketli",
@@ -1081,7 +1081,7 @@
       "kategori": "diger",
       "alt_kategori": null,
       "kaynak": "P1",
-      "frekans": 9
+      "frekans": 12
     },
     {
       "tip_kodu": "un_seker_arabasi",
@@ -1089,7 +1089,7 @@
       "kategori": "hazirlik",
       "alt_kategori": null,
       "kaynak": "P2",
-      "frekans": 9
+      "frekans": 12
     },
     {
       "tip_kodu": "uv_sarkit",
@@ -1105,7 +1105,7 @@
       "kategori": "diger",
       "alt_kategori": null,
       "kaynak": "P1",
-      "frekans": 9
+      "frekans": 12
     },
     {
       "tip_kodu": "vakum_makinesi",
@@ -1113,7 +1113,7 @@
       "kategori": "diger",
       "alt_kategori": null,
       "kaynak": "motor",
-      "frekans": 9
+      "frekans": 12
     },
     {
       "tip_kodu": "yag_tutucu",
@@ -1121,7 +1121,7 @@
       "kategori": "yikama",
       "alt_kategori": null,
       "kaynak": "P2",
-      "frekans": 6
+      "frekans": 8
     },
     {
       "tip_kodu": "yer_izgara",
@@ -1129,7 +1129,7 @@
       "kategori": "diger",
       "alt_kategori": null,
       "kaynak": "P2",
-      "frekans": 978
+      "frekans": 1304
     },
     {
       "tip_kodu": "yer_izgarasi",
@@ -1137,7 +1137,7 @@
       "kategori": "diger",
       "alt_kategori": null,
       "kaynak": "P1+P2",
-      "frekans": 978
+      "frekans": 1304
     }
   ]
 }

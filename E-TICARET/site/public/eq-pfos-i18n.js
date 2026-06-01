@@ -21,7 +21,7 @@
   }
 
   function labelsUrl() {
-    var v = window.__EQ_I18N_JSON_V || window.__EQ_PFOS_LABELS_V || "20260530pfos-i18n-v2";
+    var v = window.__EQ_I18N_JSON_V || window.__EQ_PFOS_LABELS_V || "20260527pfos-en-v3";
     return "/i18n/pfos-labels-en.json?v=" + encodeURIComponent(v);
   }
 

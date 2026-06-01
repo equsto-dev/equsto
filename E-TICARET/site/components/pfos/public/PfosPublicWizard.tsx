@@ -38,6 +38,7 @@ import {
   bulutMutfakKompaktMi,
   BULUT_KOMPAKT_M2_MAX,
 } from "@/lib/pfos/wizard/bulut-mutfak-kompakt";
+import { usePfosLabel } from "@/lib/pfos/use-pfos-label";
 import styles from "./pfos-public.module.css";
 
 type ShopTypeRow = {
@@ -70,6 +71,7 @@ function parseKonsept(slug: string | null): Konsept | null {
 }
 
 export default function PfosPublicWizard({ initialQuestions }: Props) {
+  const { t } = usePfosLabel();
   const [questions, setQuestions] = useState<WizardQuestion[]>(
     initialQuestions ?? defaultPublicQuestions(),
   );
@@ -117,10 +119,10 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   );
   const konsept = parseKonsept(motorSlug);
 
-  const hint = useMemo(
-    () => wizardHint(panels, donePanels, activePanelId),
-    [panels, donePanels, activePanelId],
-  );
+  const hint = useMemo(() => {
+    const h = wizardHint(panels, donePanels, activePanelId);
+    return { pct: h.pct, title: t(h.title), sub: t(h.sub) };
+  }, [panels, donePanels, activePanelId, t]);
 
   const panelVisible = useCallback(
     (panel: LegacyPanelDef, index: number) => {
@@ -222,15 +224,15 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     if (!konsept) {
       setError(
         motorGirdi.dukkanSecim
-          ? `"${motorGirdi.dukkanSecim}" için teklif motoru henüz bağlı değil.`
-          : "Dükkan türü seçilmedi.",
+          ? `"${t(motorGirdi.dukkanSecim)}"${t("için teklif motoru henüz bağlı değil.")}`
+          : t("Dükkan türü seçilmedi."),
       );
       return;
     }
 
     const m2 = motorGirdi.m2;
     if (m2 < 20) {
-      setError("Toplam alan en az 20 m² olmalı.");
+      setError(t("Toplam alan en az 20 m² olmalı."));
       return;
     }
 
@@ -256,7 +258,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
       const data = await res.json();
       if (!res.ok) {
         throw new Error(
-          (data as { error?: string }).error ?? "Teklif oluşturulamadı",
+          (data as { error?: string }).error ?? t("Teklif oluşturulamadı"),
         );
       }
       setSonuc(data as PFOSResponse);
@@ -275,7 +277,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
       setFinished(true);
       completePanel("s6");
     } catch (e) {
-      setError(e instanceof Error ? e.message : "Beklenmeyen hata");
+      setError(e instanceof Error ? e.message : t("Beklenmeyen hata"));
     } finally {
       setLoading(false);
     }
@@ -313,8 +315,9 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
       <div className={styles.alanField}>
         {bulutSeg ? (
           <p className={styles.alanHint} style={{ marginBottom: 10 }}>
-            Bulut mutfak: {BULUT_KOMPAKT_M2_MAX} m² ve altında yalnızca Grab&amp;Go
-            ve Coffee Counter konseptleri açılır.
+            {t(
+              `Bulut mutfak: ${BULUT_KOMPAKT_M2_MAX} m² ve altında yalnızca Grab&Go ve Coffee Counter konseptleri açılır.`,
+            )}
           </p>
         ) : null}
         <div className={styles.alanHero}>
@@ -386,7 +389,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
               disabled={loading}
               onClick={() => onKararSelect(opt)}
             >
-              {opt}
+              {t(opt)}
             </button>
           ))}
         </div>
@@ -406,8 +409,9 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
         <>
           {bulutKompakt ? (
             <p className={styles.alanHint} style={{ marginBottom: 8 }}>
-              Alan {BULUT_KOMPAKT_M2_MAX} m² altı — kompakt konsept listesi
-              gösteriliyor.
+              {t(
+                `Alan ${BULUT_KOMPAKT_M2_MAX} m² altı — kompakt konsept listesi gösteriliyor.`,
+              )}
             </p>
           ) : null}
           <div
@@ -420,7 +424,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
                 className={`${styles.optionBtn}${val === opt ? ` ${styles.optionBtnSelected}` : ""}`}
                 onClick={() => setAnswer(id, opt, panel)}
               >
-                {opt}
+                {t(opt)}
               </button>
             ))}
           </div>
@@ -431,7 +435,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
               style={{ marginTop: 10 }}
               onClick={() => completePanel(panel.id)}
             >
-              Atla / Devam
+              {t("Atla / Devam")}
             </button>
           ) : null}
         </>
@@ -455,7 +459,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
                   checked={selected.includes(opt)}
                   onChange={() => toggleMulti(opt)}
                 />
-                {opt}
+                {t(opt)}
               </label>
             ))}
           </div>
@@ -466,7 +470,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
             disabled={selected.length === 0}
             onClick={() => completePanel(panel.id)}
           >
-            Devam
+            {t("Devam")}
           </button>
         </>
       );
@@ -506,7 +510,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
           type="text"
           value={answers[id] != null ? String(answers[id]) : ""}
           onChange={(e) => setAnswer(id, e.target.value, panel, false)}
-          placeholder="Marka adı…"
+          placeholder={t("Marka adı…")}
         />
         <button
           type="button"
@@ -514,7 +518,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
           style={{ marginTop: 10 }}
           onClick={() => completePanel(panel.id)}
         >
-          Atla / Devam
+          {t("Atla / Devam")}
         </button>
       </>
     );
@@ -528,6 +532,12 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     const isDone = donePanels.has(panel.id);
     const isActive = activePanelId === panel.id && !isDone;
     const summary = panelAnswerSummary(panel, answers);
+    const summaryDisplay = summary
+      ? summary
+          .split(/[,·]/)
+          .map((part) => t(part.trim()))
+          .join(summary.includes("·") ? " · " : ", ")
+      : "";
 
     return (
       <section
@@ -543,12 +553,12 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
         >
           <span className={styles.secNum}>{isDone ? "✓" : panel.num}</span>
           <span className={styles.secInfo}>
-            <span className={styles.secTitle}>{panel.title}</span>
+            <span className={styles.secTitle}>{t(panel.title)}</span>
             {isActive ? (
-              <span className={styles.secSub}>{panel.sub}</span>
+              <span className={styles.secSub}>{t(panel.sub)}</span>
             ) : null}
-            {summary && isDone ? (
-              <span className={styles.secAns}>{summary}</span>
+            {summaryDisplay && isDone ? (
+              <span className={styles.secAns}>{summaryDisplay}</span>
             ) : null}
           </span>
         </button>
@@ -561,10 +571,10 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
                 q.id !== "q_karar" ? (
                   <>
                     {q.text ? (
-                      <h3 className={styles.qInlineTitle}>{String(q.text)}</h3>
+                      <h3 className={styles.qInlineTitle}>{t(String(q.text))}</h3>
                     ) : null}
                     {q.note ? (
-                      <p className={styles.questionNote}>{String(q.note)}</p>
+                      <p className={styles.questionNote}>{t(String(q.note))}</p>
                     ) : null}
                   </>
                 ) : null}
@@ -585,9 +595,11 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
             <div className={styles.secHd}>
               <span className={styles.secNum}>✓</span>
               <span className={styles.secInfo}>
-                <span className={styles.secTitle}>Teşekkürler</span>
+                <span className={styles.secTitle}>{t("Teşekkürler")}</span>
                 <span className={styles.secSub}>
-                  Detaylandırma tercihiniz alındı; ekibimiz sizinle iletişime geçecek.
+                  {t(
+                    "Detaylandırma tercihiniz alındı; ekibimiz sizinle iletişime geçecek.",
+                  )}
                 </span>
               </span>
             </div>
@@ -597,7 +609,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
             className={`${styles.btn} ${styles.btnPrimary}`}
             onClick={resetWizard}
           >
-            Yeni proje
+            {t("Yeni proje")}
           </button>
         </div>
       </div>
@@ -608,9 +620,11 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     <div className={styles.layout}>
       <div className={styles.leftCol}>
         <p className={styles.mreGreeting}>
-          Ben Gastronomi Mekan Tasarımcısı Mr. Equsto. Hoş geldin.
+          {t("Ben Gastronomi Mekan Tasarımcısı Mr. Equsto. Hoş geldin.")}
         </p>
-        <p className={styles.mreMotto}>Beş dakikada yapılır, hemen teslim edilir.</p>
+        <p className={styles.mreMotto}>
+          {t("Beş dakikada yapılır, hemen teslim edilir.")}
+        </p>
 
         <div className={styles.pfProgress}>
           <div className={styles.pfProgressTrack}>
@@ -652,7 +666,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
                   className={`${styles.btn} ${styles.btnGhost}`}
                   onClick={resetWizard}
                 >
-                  Yeni proje
+                  {t("Yeni proje")}
                 </button>
               </div>
             </section>
@@ -663,39 +677,43 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
         ) : null}
 
         {loading ? (
-          <p className={styles.questionNote}>Teklif hesaplanıyor…</p>
+          <p className={styles.questionNote}>{t("Teklif hesaplanıyor…")}</p>
         ) : null}
       </div>
 
-      <aside className={styles.rightCol} aria-label="Referans ve notlar">
+      <aside className={styles.rightCol} aria-label={t("Referans ve notlar")}>
         <section className={styles.railSection}>
-          <span className={styles.railKicker}>Referans metinler</span>
-          <span className={styles.railTitle}>Konseptinize uygun sahadan notlar</span>
+          <span className={styles.railKicker}>{t("Referans metinler")}</span>
+          <span className={styles.railTitle}>
+            {t("Konseptinize uygun sahadan notlar")}
+          </span>
           <p className={styles.railPlaceholder}>
             {motorGirdi.dukkanSecim ? (
               <>
-                <b>{motorGirdi.dukkanSecim}</b> segmenti için ekipman listesi motor
-                tarafından oluşturulur.
+                <b>{t(motorGirdi.dukkanSecim)}</b>
+                {t("segmenti için ekipman listesi motor tarafından oluşturulur.")}
               </>
             ) : (
               <>
-                <b>Henüz konsept seçilmedi.</b> Soldaki soru akışında işletme
-                konseptinizi seçtiğinizde bu bölümde segment notları listelenir.
+                <b>{t("Henüz konsept seçilmedi.")}</b>{" "}
+                {t(
+                  "Soldaki soru akışında işletme konseptinizi seçtiğinizde bu bölümde segment notları listelenir.",
+                )}
               </>
             )}
           </p>
         </section>
         <section className={styles.railSection}>
-          <span className={styles.railKicker}>Teklif motoru</span>
-          <span className={styles.railTitle}>Bağlantı durumu</span>
+          <span className={styles.railKicker}>{t("Teklif motoru")}</span>
+          <span className={styles.railTitle}>{t("Bağlantı durumu")}</span>
           <dl className={styles.railMeta}>
-            <dt>Konsept</dt>
-            <dd>{motorGirdi.dukkanSecim || "—"}</dd>
-            <dt>Motor</dt>
-            <dd>{motorSlug || "planlanan"}</dd>
-            <dt>Alan</dt>
+            <dt>{t("Konsept")}</dt>
+            <dd>{motorGirdi.dukkanSecim ? t(motorGirdi.dukkanSecim) : "—"}</dd>
+            <dt>{t("Motor")}</dt>
+            <dd>{motorSlug || t("planlanan")}</dd>
+            <dt>{t("Alan")}</dt>
             <dd>{motorGirdi.m2 ? `${motorGirdi.m2} m²` : "—"}</dd>
-            <dt>Lokasyon</dt>
+            <dt>{t("Lokasyon")}</dt>
             <dd>{motorGirdi.lokasyon || "—"}</dd>
           </dl>
         </section>

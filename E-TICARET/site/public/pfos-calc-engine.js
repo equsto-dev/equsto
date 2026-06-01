@@ -594,7 +594,15 @@
       return name.includes('duvar') && name.includes('raf');
     },
     davlumbaz_duvar: function (name) {
-      return name.includes('davlumbaz') && !name.includes('izgar');
+      if (name.includes('eech') || name.includes('cheftop') || name.includes('cheft')) {
+        return false;
+      }
+      if (name.includes('ultravent') || name.includes('yogusturma')) return false;
+      return (
+        name.includes('davlumbaz') &&
+        (name.includes('duvar') || name.includes('duvar tipi')) &&
+        !name.includes('izgar')
+      );
     },
     davlumbaz: function (name) {
       return name.includes('davlumbaz');

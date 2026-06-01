@@ -1646,9 +1646,11 @@ window.searchFilter = window.searchFilter || function () {};
       var desc =
         window.eqLang === "en" && x.descriptionEn && String(x.descriptionEn).trim()
           ? String(x.descriptionEn).trim()
-          : x.description && String(x.description).trim()
-            ? String(x.description).trim()
-            : "";
+          : window.eqLang === "en" && x.aciklama && String(x.aciklama).trim()
+            ? String(x.aciklama).trim()
+            : x.description && String(x.description).trim()
+              ? String(x.description).trim()
+              : "";
       if (desc) return desc.split(/\n/)[0].slice(0, 320);
       var dim = formatOlculerLinePdp(x);
       if (dim) return __pdpT("pdp.inner_dims_prefix", "İç ölçüler: {dim}.", { dim: dim });

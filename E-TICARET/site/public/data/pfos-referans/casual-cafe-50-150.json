@@ -1,0 +1,405 @@
+{
+  "kategoriId": "casual-cafe",
+  "bantId": "50-150",
+  "label": "Casual Cafe 50–150 m²",
+  "referansM2": 100,
+  "kaynakDosya": "2017-026 BEYKENT ŞİFA CAFE/2017-026.xlsx",
+  "not": "Casual cafe · servis mutfağı · pasta & simit teşhir (Şifa Cafe Beykent)",
+  "yukleme": "2026-05-31T13:58:42.688Z",
+  "kalemSayisi": 49,
+  "toplamAdet": 49,
+  "kalemler": [
+    {
+      "bolum": "A",
+      "bolumAd": "A- SERVİS MUTFAĞI",
+      "poz": "A1",
+      "ad": "İÇECEK DOLABI, DİK TİP, MOBİLYASIZ",
+      "olcu": "140*70*200",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SERVİS MUTFAĞI",
+      "poz": "A2",
+      "ad": "SİMİT & POĞAÇA DOLABI, MOBİLYASIZ",
+      "olcu": "170*70*130",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SERVİS MUTFAĞI",
+      "poz": "A3",
+      "ad": "SERVİS TEZGAHI, MOBİLYASIZ",
+      "olcu": "120/120*90*90",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SERVİS MUTFAĞI",
+      "poz": "A4",
+      "ad": "PASTA DOLABI, MOBİLYASIZ",
+      "olcu": "130*70*130",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SERVİS MUTFAĞI",
+      "poz": "A5",
+      "ad": "SALATA DOLABI, MOBİLYASIZ",
+      "olcu": "130*70*130",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SERVİS MUTFAĞI",
+      "poz": "A6",
+      "ad": "KASA TEZGAHI, MOBİLYASIZ",
+      "olcu": "140*70*90",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SERVİS MUTFAĞI",
+      "poz": "A7",
+      "ad": "SICAK MAYALAMA DOLABI",
+      "olcu": "—",
+      "adet": "—"
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SERVİS MUTFAĞI",
+      "poz": "A8",
+      "ad": "PATISERRIE FIRINI",
+      "olcu": "—",
+      "adet": "—"
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SERVİS MUTFAĞI",
+      "poz": "A9",
+      "ad": "FIRIN DAVLUMBAZI",
+      "olcu": "—",
+      "adet": "—"
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SERVİS MUTFAĞI",
+      "poz": "A10",
+      "ad": "SOĞUK MAYALAMA DOLABI, DİK TİP",
+      "olcu": "70*80*205",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SERVİS MUTFAĞI",
+      "poz": "A11",
+      "ad": "TÜRK KAHVE MAKİNASI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SERVİS MUTFAĞI",
+      "poz": "A12",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+      "olcu": "160*60*90",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SERVİS MUTFAĞI",
+      "poz": "A13",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+      "olcu": "250*60*90",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SERVİS MUTFAĞI",
+      "poz": "A14",
+      "ad": "DÖNER OCAĞI, GAZLI",
+      "olcu": "4 RADYANLI",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SERVİS MUTFAĞI",
+      "poz": "A15",
+      "ad": "GARNİTÜRLÜK",
+      "olcu": "3 GN 1/4",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SERVİS MUTFAĞI",
+      "poz": "A16",
+      "ad": "TOST MAKİNASI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SERVİS MUTFAĞI",
+      "poz": "A17",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ",
+      "olcu": "230*90*50",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SERVİS MUTFAĞI",
+      "poz": "A18",
+      "ad": "MİKRODALGA FIRIN",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SERVİS MUTFAĞI",
+      "poz": "A19",
+      "ad": "ÇALIŞMA TEZGAHI",
+      "olcu": "150*60*90",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SERVİS MUTFAĞI",
+      "poz": "A20",
+      "ad": "BAR BUZDOLABI, 3 KAPILI",
+      "olcu": "135*50*90",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SERVİS MUTFAĞI",
+      "poz": "A21",
+      "ad": "ESPRESSO KAHVE MAKİNASI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SERVİS MUTFAĞI",
+      "poz": "A22",
+      "ad": "KAHVE DEĞİRMENİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SERVİS MUTFAĞI",
+      "poz": "A23",
+      "ad": "KAHVE ÇEKMECESİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SERVİS MUTFAĞI",
+      "poz": "A24",
+      "ad": "PORTAKAL SIKMA MAKİNASI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SERVİS MUTFAĞI",
+      "poz": "A25",
+      "ad": "KATI MEYVE SIKACAĞI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SERVİS MUTFAĞI",
+      "poz": "A26",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI, DOLAPLI",
+      "olcu": "190*60*90",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SERVİS MUTFAĞI",
+      "poz": "A27",
+      "ad": "BULAŞIK YIKAMA MAKİNASI, SETALTI",
+      "olcu": "500 tb/saat",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SERVİS MUTFAĞI",
+      "poz": "A28",
+      "ad": "BUZ MAKİNASI",
+      "olcu": "50 kg/gün",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SERVİS MUTFAĞI",
+      "poz": "A29",
+      "ad": "BAR BLENDER",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SERVİS MUTFAĞI",
+      "poz": "A30",
+      "ad": "DUVAR RAFI",
+      "olcu": "190*30*4",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SERVİS MUTFAĞI",
+      "poz": "A31",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+      "olcu": "170*60*90",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SERVİS MUTFAĞI",
+      "poz": "A32",
+      "ad": "ÇAY OCAĞI, MEŞALE TİP",
+      "olcu": "3 DEMLİKLİ",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SERVİS MUTFAĞI",
+      "poz": "A33",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ",
+      "olcu": "110*60*40",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "A- SERVİS MUTFAĞI",
+      "poz": "A34",
+      "ad": "ŞERBETLİK",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- HAZIRLIK MUTFAĞI",
+      "poz": "B1",
+      "ad": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+      "olcu": "70*80*205",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- HAZIRLIK MUTFAĞI",
+      "poz": "B2",
+      "ad": "BLOK KAPAKLI DERİN DONDURUCU",
+      "olcu": "300 lt.",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- HAZIRLIK MUTFAĞI",
+      "poz": "B3",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN RAFLI",
+      "olcu": "140*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- HAZIRLIK MUTFAĞI",
+      "poz": "B4",
+      "ad": "BAINMARIE, 3 GN 1/1, SETÜSTÜ",
+      "olcu": "140*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- HAZIRLIK MUTFAĞI",
+      "poz": "B5",
+      "ad": "CİHAZALTI ÇALIŞMA TEZGAHI",
+      "olcu": "40*70*55",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- HAZIRLIK MUTFAĞI",
+      "poz": "B6",
+      "ad": "FRİTÖZ, TEK SEPETLİ, ELK., SETÜSTÜ",
+      "olcu": "40*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- HAZIRLIK MUTFAĞI",
+      "poz": "B7",
+      "ad": "6 AÇIK ALEVLİ KUZİNE",
+      "olcu": "120*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- HAZIRLIK MUTFAĞI",
+      "poz": "B8",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ",
+      "olcu": "210*97*50",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- HAZIRLIK MUTFAĞI",
+      "poz": "B9",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN RAFLI",
+      "olcu": "140*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- HAZIRLIK MUTFAĞI",
+      "poz": "B10",
+      "ad": "TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+      "olcu": "190*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- HAZIRLIK MUTFAĞI",
+      "poz": "B11",
+      "ad": "DUVAR RAFI",
+      "olcu": "260*30*4",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- HAZIRLIK MUTFAĞI",
+      "poz": "B12",
+      "ad": "ÇİFT EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "190*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- HAZIRLIK MUTFAĞI",
+      "poz": "B13",
+      "ad": "BULAŞIK YIKAMA MAKİNASI, SETALTI",
+      "olcu": "500 tb/saat",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "B- HAZIRLIK MUTFAĞI",
+      "poz": "B14",
+      "ad": "DUVAR RAFI",
+      "olcu": "180*30*4",
+      "adet": 1
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "Y- YER IZGARASI",
+      "poz": "Y1",
+      "ad": "YER IZGARASI",
+      "olcu": "50*30*14",
+      "adet": 4
+    }
+  ]
+}

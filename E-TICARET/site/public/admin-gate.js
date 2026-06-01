@@ -71,6 +71,13 @@
     sessionStorage.setItem(SESSION_OK, '1');
   }
 
+  function syncYonetimBearer() {
+    try {
+      var pro = (localStorage.getItem('equsto_pro_admin_token') || '').trim();
+      if (pro) applyBearer(pro);
+    } catch (_e) {}
+  }
+
   function clearRemember() {
     try {
       localStorage.removeItem(REMEMBER_KEY);
@@ -283,6 +290,7 @@
   };
 
   document.addEventListener('DOMContentLoaded', function () {
+    syncYonetimBearer();
     bindOverlay();
     if (gateRequired() && !isAuthed()) restoreRemember();
     if (!gateRequired() || isAuthed()) {

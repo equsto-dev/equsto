@@ -501,31 +501,43 @@
   );
 
   function drainUrlQ() {
-    var q = "";
+    var urlQ = "";
     try {
-      q = new URLSearchParams(location.search).get("q") || "";
+      urlQ = new URLSearchParams(location.search).get("q") || "";
     } catch (_) {}
-    q = String(q);
-    if (!q.trim()) {
-      try {
-        q = sessionStorage.getItem("eq_hdr_search_q") || "";
-        if (q.trim()) sessionStorage.removeItem("eq_hdr_search_q");
-      } catch (_2) {}
-    }
-    if (!q.trim()) return;
+    urlQ = String(urlQ).trim();
+
+    var sessionQ = "";
+    try {
+      sessionQ = String(sessionStorage.getItem("eq_hdr_search_q") || "").trim();
+    } catch (_2) {}
+
+    var q = urlQ || sessionQ;
+    if (!q) return;
+
     var inp = document.querySelector("header.hdr .srch-input, header .srch .srch-input");
     if (inp) inp.value = q;
+
     var path = "";
     try {
       path = location.pathname || "";
     } catch (_) {}
     if (path.indexOf("/arama") === 0 || path.indexOf("/search") === 0) return;
     if (isSearchResultsPage()) return;
+
+    /* sessionStorage yalnızca kutu metni; geri tuşu sonrası /arama'ya zorla dönme (history trap). */
+    if (!urlQ) {
+      try {
+        sessionStorage.removeItem("eq_hdr_search_q");
+      } catch (_3) {}
+      return;
+    }
+
     if (!isHomeVitrinPage()) {
       commitGlobalSearch(q);
       return;
     }
-    window.__eqHdrLastQ = q.trim();
+    window.__eqHdrLastQ = q;
     if (typeof window.__eqHomeSearch === "function") {
       try {
         window.__eqHomeSearch(q);
@@ -533,6 +545,13 @@
       } catch (_) {}
     }
   }
+
+  window.addEventListener("pageshow", function () {
+    if (isSearchResultsPage()) return;
+    try {
+      sessionStorage.removeItem("eq_hdr_search_q");
+    } catch (_) {}
+  });
 
   document.addEventListener("eqCatShellMounted", function () {
     var q = window.__eqHdrLastQ || "";

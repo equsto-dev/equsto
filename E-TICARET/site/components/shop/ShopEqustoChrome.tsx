@@ -6,6 +6,7 @@ import { Fragment, useRef } from "react";
 import LangSwitcherSlot from "@/components/shop/LangSwitcherSlot";
 import ShopChromePortal from "@/components/shop/ShopChromePortal";
 import { SHOP_ASSET_V } from "@/lib/shop/assets";
+import { CHROME_HDR, chromeLangFromPath } from "@/lib/shop/chrome-i18n";
 import type { ShopDeptSlug } from "@/lib/shop/depts";
 
 const TOP_DEPTS: { key: ShopDeptSlug | string; labelKey: string; fallback: string }[] = [
@@ -52,6 +53,8 @@ export default function ShopEqustoChrome({
 }: ShopEqustoChromeProps) {
   const isBesos = variant === "besos";
   const pathname = usePathname();
+  const lang = chromeLangFromPath(pathname);
+  const h = CHROME_HDR[lang];
   const searchRef = useRef<HTMLInputElement>(null);
   const onToggleDrawer = isBesos ? toggleEqDrawer : toggleDrawer;
   const hrefFor = (key: string) => topnavHref(key, pathname);
@@ -64,10 +67,10 @@ export default function ShopEqustoChrome({
           <div className="pg-inner hdr-pg-inner">
             <div className="hdr-alici">
               <div style={{ fontSize: 9, color: "var(--eq-text-subtle)" }} data-i18n="common.delivery_to">
-                Teslimat Adresi
+                {h.delivery_label}
               </div>
               <div style={{ fontSize: 11, fontWeight: 600 }} data-i18n="common.delivery_city">
-                İstanbul, Türkiye
+                {h.delivery_city}
               </div>
             </div>
             <div className="srch">
@@ -84,14 +87,18 @@ export default function ShopEqustoChrome({
                 }}
                 data-i18n="common.all_categories_caps"
               >
-                ☰ Tüm Kategoriler
+                {h.all_categories}
               </div>
               <input
                 ref={isBesos ? searchRef : undefined}
                 className="srch-input"
                 type="search"
                 placeholder={
-                  isBesos ? "Bar modülü, ürün veya kategori ara..." : "Ürün, marka veya kategori ara..."
+                  isBesos
+                    ? lang === "en"
+                      ? "Search bar modules, products or categories…"
+                      : "Bar modülü, ürün veya kategori ara..."
+                    : h.search_placeholder
                 }
                 autoComplete="off"
                 spellCheck={isBesos ? false : undefined}
@@ -117,8 +124,8 @@ export default function ShopEqustoChrome({
               <button
                 type="button"
                 className="srch-btn"
-                aria-label="Ara"
-                title="Ara"
+                aria-label={h.search_aria}
+                title={h.search_aria}
                 data-i18n-attr="aria-label:common.search_aria, title:common.search_aria"
                 onClick={
                   isBesos ? () => submitBesosSearch(searchRef.current?.value ?? "") : undefined
@@ -153,41 +160,43 @@ export default function ShopEqustoChrome({
                   className="theme-toggle"
                   id="theme-toggle"
                   onClick={() => (window as Window & { equstoCycleTheme?: () => void }).equstoCycleTheme?.()}
-                  title="Tema"
+                  title={h.theme_title}
                   data-i18n-attr="title:common.theme_title"
                 >
                   ◐
                 </button>
                 <span className="theme-legend" data-i18n="common.theme_label">
-                  Sistem · Açık · Koyu
+                  {h.theme_label}
                 </span>
               </div>
-              <a href="/login" className="eq-hdr-account" title="Üye girişi" data-i18n-attr="title:common.login_title">
-                <span data-i18n="common.my_account">Hesabım</span>
+              <a href="/login" className="eq-hdr-account" title={h.login_title} data-i18n-attr="title:common.login_title">
+                <span data-i18n="common.my_account">{h.my_account}</span>
                 <span className="eq-hdr-account-title" data-i18n="common.account_projects">
-                  Projeler ve Listeler ▾
+                  {h.account_projects}
                 </span>
               </a>
               <div className="eq-hdr-orders">
-                <span data-i18n="common.returns">İadeler</span>
-                <span data-i18n="common.and_orders">ve Siparişler</span>
+                <span data-i18n="common.returns">{h.returns}</span>
+                <span data-i18n="common.and_orders">{h.and_orders}</span>
               </div>
               <div
                 id="equsto-hdr-cart"
                 className="equsto-hdr-cart"
-                title="Sepeti aç"
+                title={h.cart_title}
                 role="button"
                 tabIndex={0}
                 data-i18n-attr="title:common.cart_aria_title"
               >
-                <span id="equsto-cart-count">🛒 0</span>
-                <span data-i18n="common.cart">Alışveriş Sepeti</span>
+                <span id="equsto-cart-count" aria-hidden="true">
+                  <span className="eq-hdr-cart-badge">0</span>
+                </span>
+                <span data-i18n="common.cart">{h.cart}</span>
               </div>
             </div>
           </div>
         </header>
 
-        <nav className="topnav" aria-label="Departmanlar" data-i18n-attr="aria-label:nav.departments_aria">
+        <nav className="topnav" aria-label={h.departments_aria} data-i18n-attr="aria-label:nav.departments_aria">
           <div className="pg-inner topnav-inner">
             <button
               type="button"
@@ -195,7 +204,7 @@ export default function ShopEqustoChrome({
               onClick={onToggleDrawer}
               data-i18n="common.all_categories_lower"
             >
-              ☰ Tüm kategoriler
+              {h.all_categories_lower}
             </button>
             <span className="topnav-sep" aria-hidden="true">
               |

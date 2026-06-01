@@ -29,12 +29,18 @@ function resolveSiteUrl() {
   }
   if (explicit) return explicit;
   if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
-  return "http://localhost:3000";
+  const port = String(process.env.PORT || "3099").replace(/\D/g, "") || "3099";
+  return `http://localhost:${port}`;
 }
 
 const site = resolveSiteUrl();
+const isLocalDev =
+  !process.env.VERCEL_ENV &&
+  /localhost|127\.0\.0\.1/i.test(site) &&
+  !process.env.NEXT_PUBLIC_SITE_URL;
 
-const apiBase = `${site}/api`;
+/** Yerelde admin.html hangi porttaysa /api — 3000/3099 uyumsuzluğunu önler */
+const apiBase = isLocalDev ? "/api" : `${site}/api`;
 const bearer = process.env.EQUSTO_ADMIN_BEARER || "";
 const pwSha = process.env.EQUSTO_ADMIN_PW_SHA256 || "";
 
