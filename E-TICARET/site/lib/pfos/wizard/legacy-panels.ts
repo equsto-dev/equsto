@@ -86,13 +86,6 @@ export const LEGACY_PANELS: LegacyPanelDef[] = [
     skipIfEmpty: true,
   },
   {
-    id: "s4n",
-    num: "↳",
-    title: "Ne pişireceksiniz?",
-    sub: "Menü hattınızı işaretleyin (birden fazla seçilebilir).",
-    questionIds: ["q_ne_pisireceksin"],
-  },
-  {
     id: "s6",
     num: "06",
     title: "Tahmini tutar",
@@ -198,10 +191,6 @@ export function panelAnswerSummary(
       return String(answers.q_servis_model ?? "");
     case "s4b":
       return String(answers.q_balik_alt ?? answers.q_fast_alt ?? "");
-    case "s4n": {
-      const v = answers.q_ne_pisireceksin;
-      return Array.isArray(v) ? v.join(", ") : String(v ?? "");
-    }
     case "s6":
       return String(answers.q_karar ?? "");
     default:
