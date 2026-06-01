@@ -44,19 +44,23 @@ export const PFOS_SCRIPTS = [
   `/eq-display-terminology.js?v=${v}`,
   `/eq-pfos-i18n.js?v=${v}`,
   `/eq-pfos-programmatic-seo.js`,
+  `/pfos-wizard-schema.js?v=${v}`,
+  `/pfos-template-api.js?v=${v}`,
   `/equsto-engine.js`,
   `/pfos-rule-engine.js`,
   `/equsto-pricing-core.js`,
   `/pfos-pricing.js`,
   `/pfos-calc-engine.js`,
+  `/pfos-wizard-bootstrap.js?v=${v}`,
   `/pfos-location.js`,
   `/pfos-teklif-ui.js`,
   `/pfos-teklif-excel.js`,
   `/equsto-adres-national.js`,
+  `/pfos-wizard.js?v=${v}`,
   `/eq-analytics.js`,
 ];
 
-export const LOGIN_SCRIPTS = [`/auth-social.js?v=${v}`];
+export const LOGIN_SCRIPTS = [`/auth-social.js?v=${v}`, `/theme.js?v=${v}`];
 
 export const IMT300_SCRIPTS = [`/eq-youtube-embed.js`];
 

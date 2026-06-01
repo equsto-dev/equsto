@@ -216,3 +216,29 @@ model ShopCartLinkCode {
   @@index([expiresAt])
   @@index([cartKey])
 }
+
+/// Vitrin üye girişi (e-posta / Google)
+model ShopMember {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String?
+  name         String   @default("")
+  provider     String   @default("email")
+  picture      String?
+  cartItems    Json     @default("[]")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  sessions ShopMemberSession[]
+}
+
+model ShopMemberSession {
+  token     String     @id
+  memberId  String
+  member    ShopMember @relation(fields: [memberId], references: [id], onDelete: Cascade)
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+
+  @@index([memberId])
+  @@index([expiresAt])
+}
