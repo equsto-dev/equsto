@@ -143,11 +143,9 @@ export function adresFormToAnswers(v: PfosAdresFormValue): {
   q_lokasyon: string;
   q_acik_adres: string;
 } {
-  const ilce = v.ilce.trim();
-  const mahalle = v.mahalle.trim();
   return {
     q_lokasyon: v.il.trim(),
-    q_acik_adres: [ilce, mahalle].filter(Boolean).join(" · "),
+    q_acik_adres: v.ilce.trim(),
   };
 }
 
@@ -158,11 +156,11 @@ export function answersToAdresForm(answers: {
   const il = String(answers.q_lokasyon ?? "").trim();
   const not = String(answers.q_acik_adres ?? "").trim();
   if (!not) return { il, ilce: "", mahalle: "" };
-  const parts = not.split(" · ").map((s) => s.trim()).filter(Boolean);
+  const ilce = not.split(" · ")[0]?.trim() ?? not;
   return {
     il,
-    ilce: parts[0] ?? "",
-    mahalle: parts.slice(1).join(" · "),
+    ilce,
+    mahalle: "",
   };
 }
 

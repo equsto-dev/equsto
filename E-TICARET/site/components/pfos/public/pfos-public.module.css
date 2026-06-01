@@ -556,6 +556,19 @@
   gap: 0.75rem;
 }
 
+.adresRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  align-items: start;
+}
+
+@media (max-width: 540px) {
+  .adresRow {
+    grid-template-columns: 1fr;
+  }
+}
+
 .adresAutofillTrap {
   position: absolute;
   left: -9999px;
