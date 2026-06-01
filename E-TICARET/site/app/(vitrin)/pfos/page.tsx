@@ -34,6 +34,8 @@ export default function PfosPage() {
       <link rel="stylesheet" href={`/eq-pfos-wizard.css?v=${v}`} />
       {/* eslint-disable-next-line @next/next/no-css-tags */}
       <link rel="stylesheet" href={`/contact.css?v=${v}`} />
+      {/* eslint-disable-next-line @next/next/no-css-tags */}
+      <link rel="stylesheet" href={`/eq-mobile.css?v=${v}`} />
       <PfosPublicPage />
     </>
   );

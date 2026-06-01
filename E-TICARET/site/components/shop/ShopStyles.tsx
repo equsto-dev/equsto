@@ -29,6 +29,9 @@ export default function ShopStyles({ variant = "plp" }: { variant?: "plp" | "pro
         /* eslint-disable-next-line @next/next/no-css-tags */
         <link rel="stylesheet" href={`/eq-cart.css?v=${v}`} />
       ) : null}
+      {/* Site geneli mobil katman — en son yüklensin */}
+      {/* eslint-disable-next-line @next/next/no-css-tags */}
+      <link rel="stylesheet" href={`/eq-mobile.css?v=${v}`} />
     </>
   );
 }

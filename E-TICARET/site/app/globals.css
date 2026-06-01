@@ -23,4 +23,13 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: clip;
+  max-width: 100%;
+}
+
+/* Storefront (Tailwind) — dar ekran */
+@media (max-width: 640px) {
+  .eq-storefront-grid {
+    grid-template-columns: 1fr !important;
+  }
 }

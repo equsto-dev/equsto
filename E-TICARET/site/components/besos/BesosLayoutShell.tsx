@@ -20,6 +20,8 @@ export default function BesosLayoutShell({ children }: { children: ReactNode }) 
       <link rel="stylesheet" href={`/besos-shell.css?v=${SHOP_ASSET_V}`} />
       {/* eslint-disable-next-line @next/next/no-css-tags */}
       <link rel="stylesheet" href={`/contact.css?v=${SHOP_ASSET_V}`} />
+      {/* eslint-disable-next-line @next/next/no-css-tags */}
+      <link rel="stylesheet" href={`/eq-mobile.css?v=${SHOP_ASSET_V}`} />
       <Script id="besos-body-class-boot" strategy="beforeInteractive">
         {`(function(){try{document.body.classList.add("bd-page","besos","eq-shop");}catch(e){}})();`}
       </Script>
