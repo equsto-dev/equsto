@@ -11,7 +11,7 @@ import {
   ToolOutlined,
 } from "@ant-design/icons";
 import { PageContainer, ProCard, StatisticCard } from "@ant-design/pro-components";
-import { Alert, Button, Col, Row, Space, Tabs, Typography } from "antd";
+import { Alert, Button, Space, Tabs, Typography } from "antd";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { getProToken } from "@/lib/pro-admin-client";
@@ -85,38 +85,34 @@ function PfosOzetPanel() {
         />
       )}
 
-      <Row gutter={[16, 16]}>
-        <Col xs={12} sm={8} lg={4}>
-          <StatisticCard
-            loading={loading}
-            statistic={{ title: "Konsept", value: counts.types }}
-          />
-        </Col>
-        <Col xs={12} sm={8} lg={4}>
-          <StatisticCard
-            loading={loading}
-            statistic={{ title: "Sorular", value: counts.questions }}
-          />
-        </Col>
-        <Col xs={12} sm={8} lg={4}>
-          <StatisticCard
-            loading={loading}
-            statistic={{ title: "Kurallar", value: counts.rules }}
-          />
-        </Col>
-        <Col xs={12} sm={8} lg={4}>
-          <StatisticCard
-            loading={loading}
-            statistic={{ title: "Setler", value: counts.sets }}
-          />
-        </Col>
-        <Col xs={12} sm={8} lg={4}>
-          <StatisticCard
-            loading={loading}
-            statistic={{ title: "PFOS ürün", value: counts.products }}
-          />
-        </Col>
-      </Row>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(148px, 1fr))",
+          gap: 16,
+        }}
+      >
+        <StatisticCard
+          loading={loading}
+          statistic={{ title: "Konsept", value: counts.types }}
+        />
+        <StatisticCard
+          loading={loading}
+          statistic={{ title: "Sorular", value: counts.questions }}
+        />
+        <StatisticCard
+          loading={loading}
+          statistic={{ title: "Kurallar", value: counts.rules }}
+        />
+        <StatisticCard
+          loading={loading}
+          statistic={{ title: "Setler", value: counts.sets }}
+        />
+        <StatisticCard
+          loading={loading}
+          statistic={{ title: "PFOS ürün", value: counts.products }}
+        />
+      </div>
 
       <ProCard
         title="Legacy admin"

@@ -13,6 +13,8 @@ type PfosDropZoneProps = {
   disabled?: boolean;
   /** İki sütunlu import düzeni — daha az dikey boşluk */
   compact?: boolean;
+  /** Sütun yüksekliğini sağ panel ile eşitle */
+  fillHeight?: boolean;
   onFile: (file: File) => void;
   onClear?: () => void;
 };
@@ -25,6 +27,7 @@ export default function PfosDropZone({
   fileMeta,
   disabled,
   compact,
+  fillHeight,
   onFile,
   onClear,
 }: PfosDropZoneProps) {
@@ -44,7 +47,16 @@ export default function PfosDropZone({
   );
 
   return (
-    <div style={{ position: "relative" }}>
+    <div
+      style={{
+        position: "relative",
+        height: fillHeight ? "100%" : undefined,
+        flex: fillHeight ? 1 : undefined,
+        display: fillHeight ? "flex" : undefined,
+        flexDirection: fillHeight ? "column" : undefined,
+        minWidth: 0,
+      }}
+    >
       {onClear && fileName && (
         <button
           type="button"
@@ -93,7 +105,9 @@ export default function PfosDropZone({
           border: `2px dashed ${drag ? "#1677ff" : "#d9d9d9"}`,
           borderRadius: 8,
           padding: compact ? "24px 16px" : "32px 24px",
-          minHeight: compact ? 220 : undefined,
+          minHeight: compact ? 240 : undefined,
+          height: fillHeight ? "100%" : undefined,
+          flex: fillHeight ? 1 : undefined,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
