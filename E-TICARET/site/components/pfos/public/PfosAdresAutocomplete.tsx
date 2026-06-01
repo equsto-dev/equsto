@@ -49,14 +49,15 @@ function AutocompleteField({
   const listId = useId();
   const inputRef = useRef<HTMLInputElement>(null);
   const [highlight, setHighlight] = useState(0);
+  const [armed, setArmed] = useState(false);
   const inputName = `pfos_${fieldKey}_${listId.replace(/:/g, "")}`;
 
-  function armInput(el: HTMLInputElement | null) {
-    if (el) el.readOnly = false;
+  function armInput() {
+    setArmed(true);
   }
 
-  function disarmInput(el: HTMLInputElement | null) {
-    if (el) el.readOnly = true;
+  function disarmInput() {
+    setArmed(false);
   }
 
   useEffect(() => {
@@ -93,7 +94,7 @@ function AutocompleteField({
           placeholder={placeholder}
           value={value}
           disabled={disabled}
-          readOnly
+          readOnly={!armed}
           autoComplete="one-time-code"
           autoCorrect="off"
           autoCapitalize="off"
@@ -108,25 +109,26 @@ function AutocompleteField({
           aria-expanded={open}
           aria-controls={listId}
           onMouseDown={() => {
-            armInput(inputRef.current);
+            armInput();
             onOpen(true);
           }}
           onTouchStart={() => {
-            armInput(inputRef.current);
+            armInput();
             onOpen(true);
           }}
           onChange={(e) => {
             onChange(e.target.value);
             onOpen(true);
           }}
-          onFocus={(e) => {
-            armInput(e.currentTarget);
+          onFocus={() => {
+            armInput();
             onOpen(true);
           }}
-          onBlur={(e) => {
-            disarmInput(e.currentTarget);
-            const input = e.currentTarget;
+          onBlur={() => {
+            disarmInput();
+            const input = inputRef.current;
             setTimeout(() => {
+              if (!input) return;
               const root = input.closest("[data-pfos-adres-form]");
               const active = document.activeElement;
               if (
@@ -143,6 +145,11 @@ function AutocompleteField({
           }}
           onKeyDown={onKeyDown}
         />
+        {open && value.trim() && suggestions.length === 0 ? (
+          <div className={styles.acList} id={listId} role="listbox">
+            <div className={styles.acEmpty}>Eşleşen sonuç yok</div>
+          </div>
+        ) : null}
         {open && suggestions.length > 0 ? (
           <div className={styles.acList} id={listId} role="listbox">
             {suggestions.map((item, i) => (
