@@ -89,7 +89,36 @@ function writeDataRow(
   ws.getCell(rowNum, 13).value = satir.doviz;
 }
 
-function writeSpecRow(
+function absFetchUrl(url: string): string {
+  const u = url.trim();
+  if (!u) return "";
+  if (/^https?:\/\//i.test(u)) return u;
+  if (typeof window !== "undefined") {
+    return new URL(u.startsWith("/") ? u : `/${u}`, window.location.origin).href;
+  }
+  return u;
+}
+
+async function fetchImageBuffer(
+  url: string,
+): Promise<{ buffer: ArrayBuffer; extension: "png" | "jpeg" | "gif" } | null> {
+  try {
+    const res = await fetch(absFetchUrl(url), { cache: "force-cache" });
+    if (!res.ok) return null;
+    const ct = (res.headers.get("content-type") || "").toLowerCase();
+    const extension: "png" | "jpeg" | "gif" = ct.includes("png")
+      ? "png"
+      : ct.includes("gif")
+        ? "gif"
+        : "jpeg";
+    return { buffer: await res.arrayBuffer(), extension };
+  } catch {
+    return null;
+  }
+}
+
+async function writeSpecRow(
+  wb: ExcelJS.Workbook,
   ws: ExcelJS.Worksheet,
   rowNum: number,
   satir: TeklifV14Satir,
@@ -98,18 +127,33 @@ function writeSpecRow(
   applyRowStyle(ws, rowNum, specTpl);
   try {
     ws.mergeCells(`A${rowNum}:G${rowNum}`);
-    ws.mergeCells(`G${rowNum}:M${rowNum}`);
+    ws.mergeCells(`H${rowNum}:M${rowNum}`);
   } catch {
     /* merged */
   }
-  ws.getCell(rowNum, 1).value = satir.fotoNot ?? "📷\nFotoğraf";
-  ws.getCell(rowNum, 1).alignment = {
-    horizontal: "center",
-    vertical: "middle",
-    wrapText: true,
-  } as ExcelJS.Alignment;
-  ws.getCell(rowNum, 7).value = satir.aciklama ?? "";
-  ws.getCell(rowNum, 7).alignment = {
+
+  const img = satir.fotoUrl ? await fetchImageBuffer(satir.fotoUrl) : null;
+  if (img) {
+    const imageId = wb.addImage({
+      buffer: img.buffer,
+      extension: img.extension,
+    });
+    ws.addImage(imageId, {
+      tl: { col: 0.2, row: rowNum - 1 + 0.15 },
+      ext: { width: 110, height: 90 },
+    });
+    ws.getCell(rowNum, 1).value = "";
+  } else {
+    ws.getCell(rowNum, 1).value = satir.fotoNot ?? "📷\nFotoğraf";
+    ws.getCell(rowNum, 1).alignment = {
+      horizontal: "center",
+      vertical: "middle",
+      wrapText: true,
+    } as ExcelJS.Alignment;
+  }
+
+  ws.getCell(rowNum, 8).value = satir.aciklama ?? "";
+  ws.getCell(rowNum, 8).alignment = {
     horizontal: "left",
     vertical: "top",
     wrapText: true,
@@ -128,7 +172,11 @@ function applyBolumRowFill(ws: ExcelJS.Worksheet, rowNum: number, colCount = 13)
   }
 }
 
-function buildProductBlock(ws: ExcelJS.Worksheet, model: TeklifModelV14) {
+async function buildProductBlock(
+  ws: ExcelJS.Worksheet,
+  model: TeklifModelV14,
+  wb: ExcelJS.Workbook,
+) {
   const dataTpl = captureRowStyle(ws, DATA_TEMPLATE_ROW);
   const specTpl = captureRowStyle(ws, SPEC_TEMPLATE_ROW);
   const sectionTpl = captureRowStyle(ws, SECTION_TEMPLATE_ROW);
@@ -168,7 +216,7 @@ function buildProductBlock(ws: ExcelJS.Worksheet, model: TeklifModelV14) {
       rowNum++;
 
       ws.insertRow(rowNum, []);
-      writeSpecRow(ws, rowNum, satir, specTpl);
+      await writeSpecRow(wb, ws, rowNum, satir, specTpl);
       rowNum++;
     }
   }
@@ -243,7 +291,7 @@ export async function downloadTeklifV14Excel(model: TeklifModelV14) {
   if (!ws) throw new Error("Excel sayfası bulunamadı");
 
   fillHeader(ws, merged);
-  buildProductBlock(ws, merged);
+  await buildProductBlock(ws, merged, wb);
 
   const buffer = await wb.xlsx.writeBuffer();
   const blob = new Blob([buffer], {

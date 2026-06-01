@@ -43,6 +43,8 @@ dist/
 
 # Büyük şablonlar (isteğe bağlı — Git LFS veya canlıdan sync)
 **/*.xlsx
+!E-TICARET/site/public/data/templates/equsto_teklif_v14.xlsx
+!E-TICARET/site/templates/teklif-v14.xlsx
 
 # Cursor / IDE
 .cursor/
