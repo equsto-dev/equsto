@@ -10,6 +10,7 @@ import {
   kategoriFromUrunAd,
   referansBolumKey,
 } from "./kategori-from-bolum";
+import { yerIzgarasiTipFromOlcu } from "./yer-izgara-match";
 
 const REF_DIR = () =>
   `${process.cwd()}/public/data/pfos-referans`;
@@ -97,6 +98,14 @@ export function kategoriFromReferansSatir(s: PfosEkipmanSatir): PfosKategoriKodu
 }
 
 function urunTipiFromSatir(s: PfosEkipmanSatir): string {
+  const n = String(s.ad ?? "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/ı/g, "i");
+  if (/yer\s*izgar/.test(n) && s.olcu) {
+    return yerIzgarasiTipFromOlcu(String(s.olcu));
+  }
   return inferUrunTipiFromReferansSatir(s);
 }
 
