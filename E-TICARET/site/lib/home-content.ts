@@ -44,6 +44,7 @@ export const heroPillars = [
     soon: false,
     tag: "Bar & Beverages",
     title: "Bar Design",
+    tagline: "İlham versin diye tasarlandı.",
     pitch: "Modüler kokteyl istasyonu ve bar ekipman seçimi.",
     cta: "Bar Design →",
     visual: "besos" as const,

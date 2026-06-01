@@ -123,6 +123,7 @@ const EN = {
     hero_card2_pitch: "Concept showcase, table layout and service lines — coming soon.",
     hero_card3_tag: "Bar & Beverages",
     hero_card3_title: "Bar Design",
+    hero_card3_tagline: "Designed to inspire.",
     hero_card3_pitch: "IMT300 clear ice · modular cocktail station.",
     hero_card3_cta: "Bar Design →",
     soru_aria: "Mr. Equsto asks",
