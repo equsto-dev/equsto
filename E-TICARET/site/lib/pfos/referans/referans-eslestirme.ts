@@ -2,9 +2,10 @@
  * Referans listesi → katalog fiyat eşlemesi (kalıcı politika).
  *
  * 1) pfos-referans-sku-links.json (listeKey|poz → SKU) — doğrulanmış
- * 2) Aile kuralları (yer ızgarası ölçü, vb.)
- * 3) İsim + ölçü ile sıkı katalog araması (tek SKU shortcut yok)
- * 4) Özel imalat (Equsto) — yanlış SKU asla dönmez
+ * 2) pfos-tip-shop-links.json (urunTipi → SKU) — doğrulanmış tip eşlemesi
+ * 3) Aile kuralları (yer ızgarası, make-up, fırın, vb.)
+ * 4) İsim + ölçü ile sıkı katalog araması
+ * 5) Özel imalat (Equsto) — yanlış SKU asla dönmez
  */
 import { dataPath, readJsonFile } from "@/lib/legacy-data";
 import type { EslesmisUrun, FiyatStratejisi } from "../schemas/pfos.schema";
@@ -27,6 +28,11 @@ import {
   matchYerIzgarasiByOlcu,
 } from "./yer-izgara-match";
 import { isMakeUpReferans, matchMakeUpByReferans } from "./make-up-match";
+import {
+  isTasFirinReferans,
+  matchKonveksiyonFirinByReferans,
+  matchTasFirinByReferans,
+} from "./firin-match";
 
 export type ReferansMatchInput = {
   isim: string;
@@ -70,6 +76,38 @@ async function loadReferansSkuLinks(): Promise<
     skuLinksCache = {};
   }
   return skuLinksCache;
+}
+
+type TipShopLinksFile = {
+  links?: Record<string, { sku?: string; name?: string; brand?: string; fiyat_try?: number }>;
+};
+
+let tipShopLinksCache: NonNullable<TipShopLinksFile["links"]> | null = null;
+
+async function loadTipShopLinks(): Promise<NonNullable<TipShopLinksFile["links"]>> {
+  if (tipShopLinksCache) return tipShopLinksCache;
+  try {
+    const raw = await readJsonFile<TipShopLinksFile>(
+      dataPath("pfos-tip-shop-links.json"),
+    );
+    tipShopLinksCache = raw?.links ?? {};
+  } catch {
+    tipShopLinksCache = {};
+  }
+  return tipShopLinksCache;
+}
+
+function referansTipKodu(input: ReferansMatchInput): string {
+  const fromItem = String(input.urunTipi ?? "").trim();
+  if (fromItem && !fromItem.startsWith("pfos_")) {
+    return resolveTipKodu(fromItem);
+  }
+  return resolveTipKodu(inferFamilyTip(input.isim, input.referansPoz ?? ""));
+}
+
+function isGenericReferansIsim(isim: string): boolean {
+  const n = norm(isim);
+  return n.length <= 24 || /^(firin|fırın|tas firin|taş fırın)$/.test(n);
 }
 
 function referansLinkKey(listeKey: string, poz: string): string {
@@ -175,11 +213,54 @@ async function matchByExplicitSku(
 ): Promise<EslesmisUrun | null> {
   const needle = norm(sku);
   if (!needle) return null;
-  const rows = await loadLegacyCatalogRows();
-  const hit = rows.find(
-    (r) => r.durum === "aktif" && r.fiyat_tl > 0 && norm(r.sku ?? "") === needle,
+  const rows = (await loadLegacyCatalogRows()).filter(
+    (r) => r.durum === "aktif" && r.fiyat_tl > 0,
   );
-  return hit ? rowToEslesmis(hit) : null;
+  const exact = rows.find((r) => norm(r.sku ?? "") === needle);
+  if (exact) return rowToEslesmis(exact);
+
+  const prefixHits = rows.filter((r) => norm(r.sku ?? "").startsWith(needle));
+  if (prefixHits.length === 1) return rowToEslesmis(prefixHits[0]);
+  if (prefixHits.length > 1) {
+    prefixHits.sort(
+      (a, b) => norm(a.sku ?? "").length - norm(b.sku ?? "").length,
+    );
+    return rowToEslesmis(prefixHits[0]);
+  }
+  return null;
+}
+
+/** Doğrulanmış tip_kodu → SKU (pfos-tip-shop-links) — yalnızca referans urunTipi ile */
+async function matchByTipShopLink(
+  input: ReferansMatchInput,
+): Promise<EslesmisUrun | null> {
+  const urunTipi = String(input.urunTipi ?? "").trim();
+  if (!urunTipi || urunTipi.startsWith("pfos_")) return null;
+
+  const tip = referansTipKodu(input);
+  const links = await loadTipShopLinks();
+  const link = links[tip];
+  if (!link?.sku) return null;
+
+  const bySku = await matchByExplicitSku(link.sku);
+  if (bySku) return bySku;
+
+  if (link.fiyat_try && link.fiyat_try > 0) {
+    return {
+      id: `tip-link-${tip}`,
+      sku: link.sku,
+      ad: link.name ?? input.isim,
+      marka: link.brand ?? "Öztiryakiler",
+      model: link.sku,
+      olcu: extractOlcuFromNotlar(input.notlar) || null,
+      elektrikGucuKw: null,
+      gazGucuKw: null,
+      fiyat: Math.round(link.fiyat_try),
+      doviz: "TRY",
+      gorselUrl: null,
+    };
+  }
+  return null;
 }
 
 async function matchByVerifiedLink(
@@ -231,6 +312,23 @@ async function matchByFamilyRules(
       input.fiyatStratejisi,
     );
   }
+  if (
+    isTasFirinReferans(input.isim) ||
+    input.urunTipi === "tas-firin" ||
+    referansTipKodu(input) === "tas_tabanli_firin"
+  ) {
+    return matchTasFirinByReferans(input.isim, input.fiyatStratejisi);
+  }
+  if (
+    input.urunTipi === "konveksiyon-firin-pastane" ||
+    input.urunTipi === "konveksiyon-firin-unox" ||
+    (isGenericReferansIsim(input.isim) && /firin|fırın/.test(norm(input.isim)))
+  ) {
+    return matchKonveksiyonFirinByReferans(
+      input.isim,
+      input.fiyatStratejisi,
+    );
+  }
   return null;
 }
 
@@ -241,7 +339,7 @@ async function matchStrictCatalog(
   input: ReferansMatchInput,
   olcu: string,
 ): Promise<EslesmisUrun | null> {
-  const familyTip = resolveTipKodu(inferFamilyTip(input.isim, input.referansPoz ?? ""));
+  const familyTip = referansTipKodu(input);
   const rows = (await loadLegacyCatalogRows()).filter(
     (r) => r.durum === "aktif" && r.fiyat_tl > 0,
   );
@@ -286,6 +384,11 @@ export async function matchReferansKalem(
 
   const verified = await matchByVerifiedLink(input);
   if (verified) return verified;
+
+  const tipLinked = await matchByTipShopLink(input);
+  if (tipLinked && !referansKatalogUyumsuz(input.isim, tipLinked.ad)) {
+    return tipLinked;
+  }
 
   const family = await matchByFamilyRules(input, olcu);
   if (family && !referansKatalogUyumsuz(input.isim, family.ad)) {
