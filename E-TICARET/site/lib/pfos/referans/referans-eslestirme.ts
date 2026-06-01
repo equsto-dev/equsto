@@ -26,6 +26,7 @@ import {
   isYerIzgarasiReferans,
   matchYerIzgarasiByOlcu,
 } from "./yer-izgara-match";
+import { isMakeUpReferans, matchMakeUpByReferans } from "./make-up-match";
 
 export type ReferansMatchInput = {
   isim: string;
@@ -221,6 +222,14 @@ async function matchByFamilyRules(
 ): Promise<EslesmisUrun | null> {
   if (isYerIzgarasiReferans(input.isim) || /^yer-izgara-\d+$/.test(input.urunTipi)) {
     return matchYerIzgarasiByOlcu(olcu, input.notlar, input.fiyatStratejisi);
+  }
+  if (isMakeUpReferans(input.isim)) {
+    return matchMakeUpByReferans(
+      input.isim,
+      olcu,
+      input.notlar,
+      input.fiyatStratejisi,
+    );
   }
   return null;
 }
