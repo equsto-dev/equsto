@@ -113,6 +113,8 @@ export const PFOSRequestSchema = z.object({
   altTip: z.string().optional(),
   /** Açık referans liste id (ör. s13-388-turk-220 | turk-restoran-200-5000); yoksa m² kuralı */
   referansId: z.string().optional(),
+  /** q_dukkan_turu → shopTypes.pfos.dukkanSecim (referans dosyası seçimi) */
+  dukkanSecim: z.string().optional(),
 });
 
 export type PFOSRequest = z.infer<typeof PFOSRequestSchema>;

@@ -71,8 +71,12 @@ const TIP_RULES: TipRule[] = [
       n.includes("makina"),
   },
   {
+    tip: "karbuz-makinesi",
+    test: (n) => n.includes("karbuz") && n.includes("makin"),
+  },
+  {
     tip: "buz-makinesi-90kg",
-    test: (n) => n.includes("buz makin"),
+    test: (n) => /(?:^|\s|,)buz\s+makin/.test(n) && !n.includes("karbuz"),
   },
   {
     tip: "glass-washer",

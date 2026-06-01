@@ -51,6 +51,18 @@ type ShopTypeRow = {
   };
 };
 
+type ReferansOnizleme = {
+  bant: { id: string; label: string; referansM2: number; listeDosya: string };
+  listeDosya: string;
+  kaynakDosya?: string;
+  kalemSayisi: number;
+  planPdf?: string;
+  bantKurali: string;
+  listeYolu?: string;
+  kalemlerOzet: { poz: string; ad: string }[];
+  motorSlug: string;
+};
+
 type Props = {
   initialQuestions?: WizardQuestion[];
 };
@@ -86,6 +98,9 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   const [enteringPanelId, setEnteringPanelId] = useState<string | null>(null);
   const [m2Touched, setM2Touched] = useState(false);
   const [adresListOpen, setAdresListOpen] = useState(false);
+  const [referansOnizleme, setReferansOnizleme] =
+    useState<ReferansOnizleme | null>(null);
+  const [referansYukleniyor, setReferansYukleniyor] = useState(false);
   const prevOpenPanelIdRef = useRef("s1");
 
   useEffect(() => {
@@ -125,6 +140,10 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   }, [panels, questions, answers, m2Touched]);
 
   const openPanelId = panels[openPanelIndex]?.id ?? "s1";
+
+  useEffect(() => {
+    setAdresListOpen(false);
+  }, [openPanelIndex]);
 
   useEffect(() => {
     if (openPanelId === "s5" && prevOpenPanelIdRef.current !== "s5") {
@@ -170,6 +189,51 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     [motorGirdi.dukkanSecim, shopTypes],
   );
   const konsept = parseKonsept(motorSlug);
+
+  useEffect(() => {
+    const dukkan = motorGirdi.dukkanSecim?.trim();
+    if (!dukkan) {
+      setReferansOnizleme(null);
+      return;
+    }
+    const m2 = motorGirdi.m2 >= 8 ? motorGirdi.m2 : 80;
+    let cancelled = false;
+    setReferansYukleniyor(true);
+    void (async () => {
+      try {
+        const res = await fetch("/api/pfos/referans-onizleme", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            dukkanSecim: dukkan,
+            m2,
+            altTip: motorGirdi.altTip,
+          }),
+        });
+        const json = (await res.json()) as {
+          success?: boolean;
+          data?: ReferansOnizleme;
+        };
+        if (cancelled) return;
+        if (res.ok && json.success && json.data) {
+          setReferansOnizleme(json.data);
+        } else {
+          setReferansOnizleme(null);
+        }
+      } catch {
+        if (!cancelled) setReferansOnizleme(null);
+      } finally {
+        if (!cancelled) setReferansYukleniyor(false);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [
+    motorGirdi.dukkanSecim,
+    motorGirdi.m2,
+    motorGirdi.altTip,
+  ]);
 
   const hint = useMemo(() => {
     const h = wizardHint(panels, donePanelIds, openPanelId);
@@ -278,6 +342,15 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
       setError(t("Toplam alan en az 20 m² olmalı."));
       return;
     }
+    if (
+      motorGirdi.dukkanSecim === "Balık Restaurant" &&
+      !motorGirdi.altTip?.trim()
+    ) {
+      setError(
+        t("Balık işletme modeli seçin (mahalle balıkçısı, restoran veya lokanta)."),
+      );
+      return;
+    }
 
     setLoading(true);
     setError(null);
@@ -288,6 +361,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           konsept,
+          dukkanSecim: motorGirdi.dukkanSecim,
           m2,
           sehir,
           fiyatStratejisi: TEKLIF_DEFAULT_FIYAT_STRATEJISI,
@@ -687,25 +761,67 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
 
       <aside className={styles.rightCol} aria-label={t("Referans ve notlar")}>
         <section className={styles.railSection}>
-          <span className={styles.railKicker}>{t("Referans metinler")}</span>
+          <span className={styles.railKicker}>{t("Referans listesi")}</span>
           <span className={styles.railTitle}>
-            {t("Konseptinize uygun sahadan notlar")}
+            {t("Kayıtlı proforma dosyası")}
           </span>
-          <p className={styles.railPlaceholder}>
-            {motorGirdi.dukkanSecim ? (
-              <>
+          {!motorGirdi.dukkanSecim ? (
+            <p className={styles.railPlaceholder}>
+              <b>{t("Henüz dükkan türü seçilmedi.")}</b>{" "}
+              {t(
+                "Dükkan türünü seçince proje-akis shopTypes kurallarına göre m² bandı ve referans JSON yüklenir.",
+              )}
+            </p>
+          ) : referansYukleniyor ? (
+            <p className={styles.railPlaceholder}>{t("Referans dosyası aranıyor…")}</p>
+          ) : referansOnizleme ? (
+            <div className={styles.railReferans}>
+              <p className={styles.railReferansMeta}>
                 <b>{t(motorGirdi.dukkanSecim)}</b>
-                {t("segmenti için ekipman listesi motor tarafından oluşturulur.")}
-              </>
-            ) : (
-              <>
-                <b>{t("Henüz konsept seçilmedi.")}</b>{" "}
-                {t(
-                  "Soldaki soru akışında işletme konseptinizi seçtiğinizde bu bölümde segment notları listelenir.",
-                )}
-              </>
-            )}
-          </p>
+                {" · "}
+                {referansOnizleme.bant.label} ({referansOnizleme.bant.referansM2}{" "}
+                m² ref.)
+              </p>
+              <p className={styles.railReferansDosya}>
+                {t("Liste")}: <code>{referansOnizleme.listeDosya}</code>
+              </p>
+              {referansOnizleme.kaynakDosya ? (
+                <p className={styles.railReferansDosya}>
+                  {t("Kaynak")}: {referansOnizleme.kaynakDosya}
+                </p>
+              ) : null}
+              {referansOnizleme.listeYolu ? (
+                <p className={styles.railReferansHint}>
+                  {referansOnizleme.listeYolu}
+                </p>
+              ) : null}
+              <p className={styles.railReferansKalem}>
+                {referansOnizleme.kalemSayisi} {t("kalem (referans dosyasından)")}
+              </p>
+              <ul className={styles.railReferansList}>
+                {referansOnizleme.kalemlerOzet.map((k) => (
+                  <li key={`${k.poz}-${k.ad}`}>
+                    {k.poz ? `${k.poz} · ` : ""}
+                    {k.ad}
+                  </li>
+                ))}
+              </ul>
+              {referansOnizleme.kalemSayisi >
+              referansOnizleme.kalemlerOzet.length ? (
+                <p className={styles.railReferansHint}>
+                  +{referansOnizleme.kalemSayisi - referansOnizleme.kalemlerOzet.length}{" "}
+                  {t("kalem daha")}
+                </p>
+              ) : null}
+            </div>
+          ) : (
+            <p className={styles.railPlaceholder}>
+              <b>{t(motorGirdi.dukkanSecim)}</b>
+              {t(
+                " için kayıtlı referans listesi bulunamadı — yönetim panelinden shopTypes / bant tanımını kontrol edin.",
+              )}
+            </p>
+          )}
         </section>
         <section className={styles.railSection}>
           <span className={styles.railKicker}>{t("Teklif motoru")}</span>
@@ -719,6 +835,12 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
             <dd>{motorGirdi.m2 ? `${motorGirdi.m2} m²` : "—"}</dd>
             <dt>{t("Lokasyon")}</dt>
             <dd>{motorGirdi.lokasyon || "—"}</dd>
+            {referansOnizleme?.bantKurali ? (
+              <>
+                <dt>{t("Bant kuralı")}</dt>
+                <dd>{referansOnizleme.bantKurali}</dd>
+              </>
+            ) : null}
           </dl>
         </section>
       </aside>

@@ -8,6 +8,8 @@ import { kebapOrtadogu } from "../rules/kebap-ortadogu/template";
 import { meyhane } from "../rules/meyhane/template";
 import { buildTurkRestoranTemplate } from "../../referans/turk-restoran";
 import type { Konsept } from "../../schemas/pfos.schema";
+import type { ShopTypeKayit } from "../../proje-akis/konsept-tanimlari";
+import { buildTemplateFromShopType } from "../../proje-akis/shop-type-referans";
 import { buildBalikciTemplate } from "../../referans/balikci";
 import { buildCoffeeShopTemplate } from "../../referans/coffee-shop";
 import { buildSteakhouseTemplate } from "../../referans/steakhouse";
@@ -109,7 +111,16 @@ export async function resolveTemplateForQuote(
   m2: number,
   altTip?: string | null,
   referansId?: string | null,
+  shopType?: ShopTypeKayit | null,
 ): Promise<ConceptTemplate> {
+  if (
+    shopType &&
+    shopType.pfos.teklifKaynagi !== "planlanan" &&
+    shopType.pfos.bantlar.length > 0
+  ) {
+    const fromShop = await buildTemplateFromShopType(shopType, m2, altTip);
+    if (fromShop) return fromShop;
+  }
   if (konsept === "steakhouse") return buildSteakhouseTemplate(m2);
   if (konsept === "balikci") return buildBalikciTemplate(m2, undefined, altTip);
   if (konsept === "coffee-shop") return buildCoffeeShopTemplate(m2);

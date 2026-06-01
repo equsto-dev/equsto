@@ -92,15 +92,8 @@ export const PROFIL_BY_SLUG: Record<Konsept, PfosProfilMeta> = {
     konsept: "balikci",
     konseptUst: "Restaurant",
     dukkan: "Balık Restaurant",
-    pfosZones: [
-      "ana_mutfak",
-      "sebze_hazirlik",
-      "soguk_oda",
-      "derin_dondurucu",
-      "bulasikhane",
-      "bar",
-      "kuru_depo",
-    ],
+    /** Uçan Balık / mahalle referans listesi — zone katalog bar seti eklemez */
+    pfosZones: [],
   },
   italyan: {
     konsept: "italyan",
