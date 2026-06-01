@@ -2,5 +2,13 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
   "installCommand": "node scripts/vercel-install-clean.mjs",
-  "buildCommand": "node scripts/vercel-ci.mjs"
+  "buildCommand": "node scripts/vercel-ci.mjs",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.equsto.com" }],
+      "destination": "https://equsto.com/:path*",
+      "permanent": true
+    }
+  ]
 }
