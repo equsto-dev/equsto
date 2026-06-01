@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { Konsept, PFOSResponse } from "@/lib/pfos/schemas/pfos.schema";
 import { KonseptEnum } from "@/lib/pfos/schemas/pfos.schema";
 import {
@@ -78,7 +78,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   const [shopTypes, setShopTypes] = useState<ShopTypeRow[]>([]);
   const [answers, setAnswers] = useState<SoruCevapHaritasi>({});
   const [donePanels, setDonePanels] = useState<Set<string>>(new Set());
-  const [activePanelId, setActivePanelId] = useState("s1");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [sonuc, setSonuc] = useState<PFOSResponse | null>(null);
@@ -110,6 +109,31 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     [questions, answers],
   );
 
+  const openPanelId = useMemo(() => {
+    const next = panels.find((p) => !donePanels.has(p.id));
+    return next?.id ?? panels.at(-1)?.id ?? "s1";
+  }, [panels, donePanels]);
+
+  const doneCountRef = useRef(0);
+  useEffect(() => {
+    const n = donePanels.size;
+    if (n <= doneCountRef.current) {
+      doneCountRef.current = n;
+      return;
+    }
+    doneCountRef.current = n;
+    const openId = panels.find((p) => !donePanels.has(p.id))?.id;
+    if (!openId) return;
+    setEnteringPanelId(openId);
+    const t = window.setTimeout(() => {
+      setEnteringPanelId(null);
+      document
+        .getElementById(`pfos-sec-${openId}`)
+        ?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }, 420);
+    return () => window.clearTimeout(t);
+  }, [donePanels, panels]);
+
   const motorGirdi = useMemo(
     () => soruCevaplarindanMotorGirdi(answers),
     [answers],
@@ -121,9 +145,9 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   const konsept = parseKonsept(motorSlug);
 
   const hint = useMemo(() => {
-    const h = wizardHint(panels, donePanels, activePanelId);
+    const h = wizardHint(panels, donePanels, openPanelId);
     return { pct: h.pct, title: t(h.title), sub: t(h.sub) };
-  }, [panels, donePanels, activePanelId, t]);
+  }, [panels, donePanels, openPanelId, t]);
 
   const visibleThroughIndex = useMemo(() => {
     const i = panels.findIndex((p) => !donePanels.has(p.id));
@@ -135,32 +159,34 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     [visibleThroughIndex],
   );
 
-  const completePanel = useCallback(
-    (panelId: string) => {
-      const idx = panels.findIndex((p) => p.id === panelId);
-      if (idx < 0) return;
-      let advanced = false;
-      setDonePanels((prev) => {
-        if (prev.has(panelId)) return prev;
-        advanced = true;
-        return new Set([...prev, panelId]);
-      });
-      if (!advanced) return;
-      const next = panels[idx + 1];
-      const nextId = next?.id ?? panelId;
-      setActivePanelId(nextId);
-      setError(null);
-      if (next && next.id !== panelId) {
-        setEnteringPanelId(next.id);
-        window.setTimeout(() => {
-          setEnteringPanelId(null);
-          document
-            .getElementById(`pfos-sec-${next.id}`)
-            ?.scrollIntoView({ behavior: "smooth", block: "nearest" });
-        }, 420);
+  const completePanel = useCallback((panelId: string) => {
+    setDonePanels((prev) => {
+      if (prev.has(panelId)) return prev;
+      return new Set([...prev, panelId]);
+    });
+    setError(null);
+  }, []);
+
+  const maybeAdvancePanel = useCallback(
+    (
+      panel: LegacyPanelDef | undefined,
+      merged: SoruCevapHaritasi,
+      changedId: keyof SoruCevapHaritasi,
+      autoAdvance: boolean,
+    ) => {
+      if (!autoAdvance || !panel || changedId === "q_karar") return;
+      if (!isLegacyPanelComplete(panel, questions, merged)) return;
+
+      const qs = panelQuestions(panel, questions, merged);
+      const singleSelect =
+        qs.length === 1 &&
+        (qs[0].type === "select" || qs[0].type === "select_conditional");
+
+      if (singleSelect || changedId === "q_m2") {
+        window.setTimeout(() => completePanel(panel.id), singleSelect ? 280 : 420);
       }
     },
-    [panels],
+    [questions, completePanel],
   );
 
   const reopenPanel = useCallback(
@@ -175,7 +201,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
         for (let i = idx; i < panels.length; i++) next.delete(panels[i].id);
         return next;
       });
-      setActivePanelId(panelId);
     },
     [panels],
   );
@@ -187,43 +212,24 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
       panel?: LegacyPanelDef,
       autoAdvance = true,
     ) => {
+      let merged: SoruCevapHaritasi = {};
       setAnswers((prev) => {
-        let merged = clearDownstreamAnswers({ ...prev, [id]: value }, id);
+        merged = clearDownstreamAnswers({ ...prev, [id]: value }, id);
         if (
           id === "q_m2" &&
           !bulutDukkanGecerliMi(String(merged.q_dukkan_turu ?? ""), merged)
         ) {
           merged = { ...merged, q_dukkan_turu: "" };
         }
-        if (
-          autoAdvance &&
-          panel &&
-          id !== "q_karar" &&
-          isLegacyPanelComplete(panel, questions, merged)
-        ) {
-          const qs = panelQuestions(panel, questions, merged);
-          const singleSelect =
-            qs.length === 1 &&
-            (qs[0].type === "select" || qs[0].type === "select_conditional");
-          if (singleSelect) {
-            window.setTimeout(() => completePanel(panel.id), 280);
-          }
-        }
-        if (
-          panel &&
-          id === "q_m2" &&
-          isLegacyPanelComplete(panel, questions, merged)
-        ) {
-          window.setTimeout(() => completePanel(panel.id), 420);
-        }
         return merged;
       });
+      maybeAdvancePanel(panel, merged, id, autoAdvance);
       setError(null);
       setFinished(false);
       setSonuc(null);
       setTeklifV14(null);
     },
-    [questions, completePanel],
+    [maybeAdvancePanel],
   );
 
   const toggleMulti = (opt: string, panel?: LegacyPanelDef) => {
@@ -232,20 +238,21 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     const i = arr.indexOf(opt);
     if (i >= 0) arr.splice(i, 1);
     else arr.push(opt);
+    let merged: SoruCevapHaritasi = {};
     setAnswers((prev) => {
-      const merged = clearDownstreamAnswers(
+      merged = clearDownstreamAnswers(
         { ...prev, q_ne_pisireceksin: arr },
         "q_ne_pisireceksin",
       );
-      if (
-        panel &&
-        arr.length > 0 &&
-        isLegacyPanelComplete(panel, questions, merged)
-      ) {
-        window.setTimeout(() => completePanel(panel.id), 320);
-      }
       return merged;
     });
+    if (
+      panel &&
+      arr.length > 0 &&
+      isLegacyPanelComplete(panel, questions, merged)
+    ) {
+      window.setTimeout(() => completePanel(panel.id), 320);
+    }
     setFinished(false);
     setSonuc(null);
     setTeklifV14(null);
@@ -336,7 +343,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   function resetWizard() {
     setAnswers({});
     setDonePanels(new Set());
-    setActivePanelId("s1");
+    doneCountRef.current = 0;
     setFinished(false);
     setSonuc(null);
     setTeklifV14(null);
@@ -490,8 +497,9 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
           value={adresForm}
           onChange={(v) => {
             const mapped = adresFormToAnswers(v);
+            let merged: SoruCevapHaritasi = {};
             setAnswers((prev) => {
-              const merged = clearDownstreamAnswers(
+              merged = clearDownstreamAnswers(
                 {
                   ...prev,
                   q_lokasyon: mapped.q_lokasyon,
@@ -499,13 +507,11 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
                 },
                 "q_lokasyon",
               );
-              if (
-                isLegacyPanelComplete(panel, questions, merged)
-              ) {
-                window.setTimeout(() => completePanel(panel.id), 450);
-              }
               return merged;
             });
+            if (isLegacyPanelComplete(panel, questions, merged)) {
+              window.setTimeout(() => completePanel(panel.id), 450);
+            }
             setFinished(false);
             setSonuc(null);
             setTeklifV14(null);
@@ -535,7 +541,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     if (qs.length === 0 && panel.skipIfEmpty) return null;
 
     const isDone = donePanels.has(panel.id);
-    const isActive = activePanelId === panel.id && !isDone;
+    const isActive = panel.id === openPanelId;
     const showBody = isDone || isActive;
     const summary = panelAnswerSummary(panel, answers);
     const summaryDisplay = summary
