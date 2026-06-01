@@ -436,8 +436,8 @@
 .secPending.secReveal .adresGrid,
 .secPending.secReveal .textInput {
   opacity: 1;
-  transition: opacity 3.6s ease-out;
-  transition-delay: calc(4.2s + var(--pfos-stagger, 0) * 0.6s);
+  transition: opacity 0.45s ease-out;
+  transition-delay: calc(0.5s + var(--pfos-stagger, 0) * 0.04s);
 }
 
 @media (prefers-reduced-motion: reduce) {
