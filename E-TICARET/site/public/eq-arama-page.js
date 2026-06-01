@@ -15,8 +15,11 @@
   var catalogImgById = null;
   var catalogImgInflight = null;
   var uiBound = false;
+  var facetsBound = false;
   var lastBootQ = null;
   var searchFetchCtrl = null;
+  var renderAllRaf = 0;
+  var CATALOG_MAP_TIMEOUT_MS = 6000;
 
   var filterState = {
     depts: [],
@@ -241,36 +244,82 @@
   function loadCatalogImageMap() {
     if (catalogImgById) return Promise.resolve(catalogImgById);
     if (catalogImgInflight) return catalogImgInflight;
-    catalogImgInflight = fetch("/data/ekipmanlar.json?v=" + CATALOG_V, {
-      cache: "default",
-      headers: { Accept: "application/json" },
-    })
-      .then(function (r) {
-        if (!r.ok) throw new Error("ekipmanlar HTTP " + r.status);
-        return r.json();
+
+    function buildMap(rows) {
+      var map = Object.create(null);
+      if (Array.isArray(rows)) {
+        rows.forEach(function (row) {
+          if (!row || !row.id) return;
+          map[String(row.id)] = {
+            images: row.images || [],
+            sku: row.sku || row.model || row.urun_kodu || "",
+          };
+        });
+      }
+      catalogImgById = map;
+      return map;
+    }
+
+    var loader = null;
+    if (window.EqustoEcomData && typeof window.EqustoEcomData.loadEkipmanlar === "function") {
+      loader = window.EqustoEcomData.loadEkipmanlar().then(buildMap);
+    } else {
+      loader = fetch("/data/ekipmanlar.json?v=" + CATALOG_V, {
+        cache: "default",
+        headers: { Accept: "application/json" },
       })
-      .then(function (rows) {
-        var map = Object.create(null);
-        if (Array.isArray(rows)) {
-          rows.forEach(function (row) {
-            if (!row || !row.id) return;
-            map[String(row.id)] = {
-              images: row.images || [],
-              sku: row.sku || row.model || row.urun_kodu || "",
-            };
-          });
-        }
-        catalogImgById = map;
-        return map;
-      })
+        .then(function (r) {
+          if (!r.ok) throw new Error("ekipmanlar HTTP " + r.status);
+          return r.json();
+        })
+        .then(buildMap);
+    }
+
+    var timeout = new Promise(function (resolve) {
+      setTimeout(function () {
+        resolve(catalogImgById || Object.create(null));
+      }, CATALOG_MAP_TIMEOUT_MS);
+    });
+
+    catalogImgInflight = Promise.race([loader, timeout])
       .catch(function () {
-        catalogImgById = Object.create(null);
+        catalogImgById = catalogImgById || Object.create(null);
         return catalogImgById;
       })
       .finally(function () {
         catalogImgInflight = null;
       });
     return catalogImgInflight;
+  }
+
+  function hitsNeedCatalogEnrich(hits) {
+    if (!Array.isArray(hits) || !hits.length) return false;
+    for (var i = 0; i < hits.length; i++) {
+      var h = hits[i];
+      if (h && !h.image) return true;
+    }
+    return false;
+  }
+
+  function enrichHitsAsync(hits, replace) {
+    if (!hitsNeedCatalogEnrich(hits)) return;
+    loadCatalogImageMap().then(function () {
+      var enriched = enrichHits(hits);
+      if (replace) {
+        sourceHits = sortHitsWithImagesFirst(enriched);
+      } else {
+        var idMap = Object.create(null);
+        sourceHits.forEach(function (h, idx) {
+          if (h && h.id) idMap[h.id] = idx;
+        });
+        enriched.forEach(function (h) {
+          if (h && h.id && idMap[h.id] != null) sourceHits[idMap[h.id]] = h;
+          else sourceHits.push(h);
+        });
+        sourceHits = dedupeHits(sourceHits);
+      }
+      renderAll();
+    });
   }
 
   function isCatalogRenderRel(rel) {
@@ -599,50 +648,55 @@
     html += "</div></details>";
 
     host.innerHTML = html;
+  }
 
-    host.querySelectorAll('input[name="eq-arama-dept"]').forEach(function (inp) {
-      inp.addEventListener("change", function () {
-        var vals = [];
+  function bindFacetEvents() {
+    if (facetsBound) return;
+    var host = document.getElementById("eq-arama-facets");
+    if (!host) return;
+    facetsBound = true;
+
+    host.addEventListener("change", function (ev) {
+      var t = ev.target;
+      if (!t || !t.name) return;
+      if (t.name === "eq-arama-dept") {
+        var deptVals = [];
         host.querySelectorAll('input[name="eq-arama-dept"]:checked').forEach(function (el) {
-          vals.push(el.value);
+          deptVals.push(el.value);
         });
-        filterState.depts = vals;
+        filterState.depts = deptVals;
         renderAll();
-      });
-    });
-
-    host.querySelectorAll('input[name="eq-arama-brand"]').forEach(function (inp) {
-      inp.addEventListener("change", function () {
-        var vals = [];
+        return;
+      }
+      if (t.name === "eq-arama-brand") {
+        var brandVals = [];
         host.querySelectorAll('input[name="eq-arama-brand"]:checked').forEach(function (el) {
-          vals.push(el.value);
+          brandVals.push(el.value);
         });
-        filterState.brands = vals;
+        filterState.brands = brandVals;
         renderAll();
+      }
+    });
+
+    host.addEventListener("input", function (ev) {
+      var t = ev.target;
+      if (!t || t.id !== "eq-arama-brand-q") return;
+      var q = lc(t.value);
+      host.querySelectorAll("#eq-arama-brand-list .eq-cm-facet__item").forEach(function (li) {
+        var lab = li.getAttribute("data-brand-label") || "";
+        li.style.display = !q || lab.indexOf(q) >= 0 ? "" : "none";
       });
     });
 
-    var brandQ = document.getElementById("eq-arama-brand-q");
-    if (brandQ) {
-      brandQ.addEventListener("input", function () {
-        var q = lc(brandQ.value);
-        document.querySelectorAll("#eq-arama-brand-list .eq-cm-facet__item").forEach(function (li) {
-          var lab = li.getAttribute("data-brand-label") || "";
-          li.style.display = !q || lab.indexOf(q) >= 0 ? "" : "none";
-        });
-      });
-    }
-
-    var applyBtn = document.getElementById("eq-arama-price-apply");
-    if (applyBtn) {
-      applyBtn.addEventListener("click", function () {
-        var minEl = document.getElementById("eq-arama-price-min");
-        var maxEl = document.getElementById("eq-arama-price-max");
-        filterState.priceMin = minEl && minEl.value !== "" ? minEl.value : "";
-        filterState.priceMax = maxEl && maxEl.value !== "" ? maxEl.value : "";
-        renderAll();
-      });
-    }
+    host.addEventListener("click", function (ev) {
+      var t = ev.target;
+      if (!t || t.id !== "eq-arama-price-apply") return;
+      var minEl = document.getElementById("eq-arama-price-min");
+      var maxEl = document.getElementById("eq-arama-price-max");
+      filterState.priceMin = minEl && minEl.value !== "" ? minEl.value : "";
+      filterState.priceMax = maxEl && maxEl.value !== "" ? maxEl.value : "";
+      renderAll();
+    });
   }
 
   function renderGrid(hits, q, err) {
@@ -740,7 +794,7 @@
     } catch (_) {}
   }
 
-  function renderAll() {
+  function renderAllNow() {
     var q = lastRender.q;
     var hits = filteredHits();
     var title = document.getElementById("eq-arama-title");
@@ -788,6 +842,14 @@
     renderSelectedChips();
     renderGrid(hits, q, lastRender.err);
     renderMoreButton(q, lastRender.hasMore);
+  }
+
+  function renderAll() {
+    if (renderAllRaf) cancelAnimationFrame(renderAllRaf);
+    renderAllRaf = requestAnimationFrame(function () {
+      renderAllRaf = 0;
+      renderAllNow();
+    });
   }
 
   function fetchPage(q, offset, replace) {
