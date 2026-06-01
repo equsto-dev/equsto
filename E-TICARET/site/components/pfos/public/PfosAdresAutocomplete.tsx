@@ -10,7 +10,6 @@ import {
 } from "react";
 import {
   filterDistricts,
-  filterNeighborhoods,
   filterProvinces,
   findDistrictByName,
   findProvinceByName,
@@ -161,9 +160,7 @@ export default function PfosAdresAutocomplete({
   const [ready, setReady] = useState(false);
   const [provinceId, setProvinceId] = useState<number | null>(null);
   const [districtId, setDistrictId] = useState<string | null>(null);
-  const [openField, setOpenField] = useState<"il" | "ilce" | "mahalle" | null>(
-    null,
-  );
+  const [openField, setOpenField] = useState<"il" | "ilce" | null>(null);
 
   useEffect(() => {
     void loadTrAdres().then(setReady);
@@ -189,10 +186,6 @@ export default function PfosAdresAutocomplete({
     provinceId != null
       ? filterDistricts(provinceId, value.ilce).map((d) => d.name)
       : [];
-  const mahalleSuggestions =
-    districtId != null
-      ? filterNeighborhoods(districtId, value.mahalle)
-      : [];
 
   function pickIl(name: string) {
     const p = findProvinceByName(name);
@@ -211,11 +204,6 @@ export default function PfosAdresAutocomplete({
     const d = pid != null ? findDistrictByName(pid, name) : null;
     setDistrictId(d?.id ?? null);
     patch({ ilce: d?.name ?? name, mahalle: "" });
-    setOpenField(null);
-  }
-
-  function pickMahalle(name: string) {
-    patch({ mahalle: name });
     setOpenField(null);
   }
 
@@ -246,72 +234,57 @@ export default function PfosAdresAutocomplete({
         <p className={styles.questionNote}>{t("Adres listesi yükleniyor…")}</p>
       ) : null}
 
-      <AutocompleteField
-        fieldKey="il"
-        label={t("İl (şehir)")}
-        required
-        placeholder={t("Yazmaya başlayın — örn. İstanbul")}
-        value={value.il}
-        suggestions={ilSuggestions}
-        open={openField === "il"}
-        onOpen={(o) => setOpenField(o ? "il" : null)}
-        onChange={(il) => {
-          const prevP = findProvinceByName(value.il);
-          const nextP = findProvinceByName(il);
-          setProvinceId(nextP?.id ?? null);
-          if (prevP?.id !== nextP?.id) {
-            patch({ il, ilce: "", mahalle: "" });
-          } else {
-            patch({ il });
-          }
-        }}
-        onPick={pickIl}
-      />
+      <div className={styles.adresRow}>
+        <AutocompleteField
+          fieldKey="il"
+          label={t("İl (şehir)")}
+          required
+          placeholder={t("Yazmaya başlayın — örn. İstanbul")}
+          value={value.il}
+          suggestions={ilSuggestions}
+          open={openField === "il"}
+          onOpen={(o) => setOpenField(o ? "il" : null)}
+          onChange={(il) => {
+            const prevP = findProvinceByName(value.il);
+            const nextP = findProvinceByName(il);
+            setProvinceId(nextP?.id ?? null);
+            if (prevP?.id !== nextP?.id) {
+              patch({ il, ilce: "", mahalle: "" });
+            } else {
+              patch({ il });
+            }
+          }}
+          onPick={pickIl}
+        />
 
-      <AutocompleteField
-        fieldKey="ilce"
-        label="İlçe"
-        required
-        placeholder={
-          provinceId != null
-            ? "Listeden seçin veya yazın"
-            : "Önce il seçin"
-        }
-        value={value.ilce}
-        disabled={!value.il.trim()}
-        suggestions={ilceSuggestions}
-        open={openField === "ilce"}
-        onOpen={(o) => setOpenField(o ? "ilce" : null)}
-        onChange={(ilce) => {
-          if (provinceId == null) {
-            const p = findProvinceByName(value.il);
-            if (p) setProvinceId(p.id);
+        <AutocompleteField
+          fieldKey="ilce"
+          label="İlçe"
+          required
+          placeholder={
+            provinceId != null
+              ? "Listeden seçin veya yazın"
+              : "Önce il seçin"
           }
-          const pid = provinceId ?? findProvinceByName(value.il)?.id;
-          const d =
-            pid != null ? findDistrictByName(pid, ilce) : null;
-          setDistrictId(d?.id ?? null);
-          patch({ ilce, mahalle: d ? "" : value.mahalle });
-        }}
-        onPick={pickIlce}
-      />
-
-      <AutocompleteField
-        fieldKey="mahalle"
-        label={t("Mahalle")}
-        placeholder={
-          districtId != null
-            ? t("Listeden seçin (opsiyonel)")
-            : t("Önce ilçe seçin")
-        }
-        value={value.mahalle}
-        disabled={!value.ilce.trim()}
-        suggestions={mahalleSuggestions}
-        open={openField === "mahalle"}
-        onOpen={(o) => setOpenField(o ? "mahalle" : null)}
-        onChange={(mahalle) => patch({ mahalle })}
-        onPick={pickMahalle}
-      />
+          value={value.ilce}
+          disabled={!value.il.trim()}
+          suggestions={ilceSuggestions}
+          open={openField === "ilce"}
+          onOpen={(o) => setOpenField(o ? "ilce" : null)}
+          onChange={(ilce) => {
+            if (provinceId == null) {
+              const p = findProvinceByName(value.il);
+              if (p) setProvinceId(p.id);
+            }
+            const pid = provinceId ?? findProvinceByName(value.il)?.id;
+            const d =
+              pid != null ? findDistrictByName(pid, ilce) : null;
+            setDistrictId(d?.id ?? null);
+            patch({ ilce, mahalle: "" });
+          }}
+          onPick={pickIlce}
+        />
+      </div>
 
       {provinceId != null && value.ilce && !districtId ? (
         <p className={styles.adresWarn}>
