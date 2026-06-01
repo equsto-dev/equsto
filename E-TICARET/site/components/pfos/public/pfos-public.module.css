@@ -650,6 +650,12 @@
   background: #eef3fb;
 }
 
+.acEmpty {
+  padding: 10px 12px;
+  font-size: 0.82rem;
+  color: #667085;
+}
+
 .adresWarn {
   margin: 0;
   font-size: 0.78rem;

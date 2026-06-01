@@ -99,8 +99,21 @@ export function getNeighborhoodNames(districtId: string): string[] {
   return neighborhoodsByDistrict.get(districtId) ?? [];
 }
 
-function byProvincePopulationDesc(a: TrProvince, b: TrProvince): number {
-  return (Number(b.population) || 0) - (Number(a.population) || 0);
+function provinceMatches(p: TrProvince, q: string): boolean {
+  const name = normAdresKey(p.name);
+  const digits = q.replace(/\D/g, "");
+  if (name.includes(q)) return true;
+  if (digits.length > 0 && String(p.plate).startsWith(digits)) return true;
+  return false;
+}
+
+function provinceSearchRank(p: TrProvince, q: string): number {
+  const name = normAdresKey(p.name);
+  const pop = Number(p.population) || 0;
+  if (name === q) return 1_000_000_000 + pop;
+  if (name.startsWith(q)) return 100_000_000 + pop;
+  if (name.includes(q)) return 10_000_000 + pop;
+  return pop;
 }
 
 export function filterProvinces(query: string, limit?: number): TrProvince[] {
@@ -110,15 +123,23 @@ export function filterProvinces(query: string, limit?: number): TrProvince[] {
     list = provinces;
   } else {
     list = provinces
-      .filter(
-        (p) =>
-          normAdresKey(p.name).includes(q) ||
-          String(p.plate).startsWith(q.replace(/\D/g, "")),
-      )
-      .sort(byProvincePopulationDesc);
+      .filter((p) => provinceMatches(p, q))
+      .sort((a, b) => provinceSearchRank(b, q) - provinceSearchRank(a, q));
   }
   if (limit != null && limit > 0) return list.slice(0, limit);
   return list;
+}
+
+function districtMatches(d: TrDistrict, q: string): boolean {
+  return normAdresKey(d.name).includes(q);
+}
+
+function districtSearchRank(d: TrDistrict, q: string): number {
+  const name = normAdresKey(d.name);
+  if (name === q) return 1_000_000;
+  if (name.startsWith(q)) return 100_000;
+  if (name.includes(q)) return 10_000;
+  return 0;
 }
 
 export function filterDistricts(
@@ -134,7 +155,9 @@ export function filterDistricts(
       a.name.localeCompare(b.name, "tr-TR"),
     );
   } else {
-    list = rows.filter((d) => normAdresKey(d.name).includes(q));
+    list = rows
+      .filter((d) => districtMatches(d, q))
+      .sort((a, b) => districtSearchRank(b, q) - districtSearchRank(a, q));
   }
   if (limit != null && limit > 0) return list.slice(0, limit);
   return list;
