@@ -19,38 +19,15 @@ export default function ShopCartMain() {
             </p>
           </header>
           <div id="equsto-cart-scroll" className="eq-cart-page__list" aria-live="polite" />
-          <section className="eq-cart-sync" id="eq-cart-sync-block" aria-labelledby="eq-cart-sync-title">
-            <h2 id="eq-cart-sync-title" className="eq-cart-sync__title" data-i18n="cart.sync_title">
-              Cihazlar arası sepet
-            </h2>
-            <p className="eq-cart-sync__lead" data-i18n="cart.sync_lead">
-              Telefon ve bilgisayarda aynı sepeti görmek için kod oluşturun veya diğer cihazdaki kodu girin.
+          <aside className="eq-cart-login-hint" id="eq-cart-login-hint" hidden aria-live="polite">
+            <p className="eq-cart-login-hint__text" data-i18n="cart.login_hint">
+              Telefon ve bilgisayarda aynı sepeti görmek için giriş yapın; sepetiniz hesabınıza otomatik
+              kaydedilir.
             </p>
-            <div className="eq-cart-sync__row">
-              <button type="button" id="eq-cart-sync-generate" className="eq-cart-page__btn eq-cart-page__btn--outline">
-                Kod oluştur
-              </button>
-              <strong id="eq-cart-sync-code" className="eq-cart-sync__code" aria-live="polite" />
-            </div>
-            <div className="eq-cart-sync__row eq-cart-sync__row--join">
-              <label className="eq-cart-sync__label" htmlFor="eq-cart-sync-input">
-                Diğer cihazdaki kod
-              </label>
-              <input
-                id="eq-cart-sync-input"
-                className="eq-cart-sync__input"
-                type="text"
-                inputMode="text"
-                autoComplete="off"
-                maxLength={8}
-                placeholder="ABC123"
-              />
-              <button type="button" id="eq-cart-sync-join" className="eq-cart-page__btn eq-cart-page__btn--primary">
-                Eşitle
-              </button>
-            </div>
-            <p id="eq-cart-sync-msg" className="eq-cart-sync__msg" role="status" />
-          </section>
+            <a href="/login?next=/sepet" className="eq-cart-page__btn eq-cart-page__btn--outline eq-cart-login-hint__cta">
+              Giriş yap veya kayıt ol
+            </a>
+          </aside>
           <div className="eq-cart-page__actions">
             <button
               type="button"

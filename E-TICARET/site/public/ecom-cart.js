@@ -24,7 +24,6 @@
   var STORAGE_KEY = 'equsto-ecom-cart-v1';
   var SYNC_TOKEN_KEY = 'equsto_cart_sync_v1';
   var SHOP_CART_API = '/api/shop/cart';
-  var SHOP_CART_LINK_API = '/api/shop/cart/link';
   var MAX_LINES = 250;
   var BULK_MAX_LINES = 500;
 
@@ -240,12 +239,24 @@
     var email = o && o.email ? String(o.email).trim().toLowerCase() : '';
     var base = { syncToken: getSyncToken() };
     if (email && email.indexOf('@') > 0) base.memberEmail = email;
+    var token = authToken();
+    if (token) base.token = token;
     if (extra && typeof extra === 'object') {
       Object.keys(extra).forEach(function (k) {
         base[k] = extra[k];
       });
     }
     return base;
+  }
+
+  function shopCartFetchHeaders() {
+    var h = { Accept: 'application/json' };
+    var token = authToken();
+    if (token) {
+      h.Authorization = 'Bearer ' + token;
+      h['X-Equsto-Authorization'] = token;
+    }
+    return h;
   }
 
   function shopCartPull(opts) {
@@ -260,7 +271,7 @@
     return fetch(SHOP_CART_API + q, {
       method: 'GET',
       credentials: 'same-origin',
-      headers: { Accept: 'application/json' },
+      headers: shopCartFetchHeaders(),
       cache: 'no-store',
     })
       .then(function (r) {
@@ -289,10 +300,12 @@
       clearTimeout(shopCartPushTimer);
       shopCartPushTimer = null;
     }
+    var putHeaders = shopCartFetchHeaders();
+    putHeaders['Content-Type'] = 'application/json';
     return fetch(SHOP_CART_API, {
       method: 'PUT',
       credentials: 'same-origin',
-      headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
+      headers: putHeaders,
       body: JSON.stringify(payload),
       keepalive: !!opts.keepalive,
     })
@@ -341,108 +354,16 @@
     pushShopCartNow(payload, { keepalive: true });
   }
 
-  function createCartLinkCode() {
-    return fetch(SHOP_CART_LINK_API, {
-      method: 'POST',
-      credentials: 'same-origin',
-      headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
-      body: JSON.stringify(shopCartPayload({ action: 'create' })),
-    }).then(function (r) {
-      return r.json();
-    });
+  function updateCartLoginHint() {
+    var hint = document.getElementById('eq-cart-login-hint');
+    if (!hint) return;
+    hint.hidden = !!isLoggedIn();
   }
 
-  function joinCartWithCode(code) {
-    return fetch(SHOP_CART_LINK_API, {
-      method: 'POST',
-      credentials: 'same-origin',
-      headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
-      body: JSON.stringify({ action: 'join', code: String(code || '').trim() }),
-    }).then(function (r) {
-      return r.json();
-    });
-  }
-
-  function bindCartSyncUi() {
-    var block = document.getElementById('eq-cart-sync-block');
-    if (!block || block.dataset.eqBound === '1') return;
-    block.dataset.eqBound = '1';
-    var codeOut = document.getElementById('eq-cart-sync-code');
-    var genBtn = document.getElementById('eq-cart-sync-generate');
-    var input = document.getElementById('eq-cart-sync-input');
-    var joinBtn = document.getElementById('eq-cart-sync-join');
-    var msg = document.getElementById('eq-cart-sync-msg');
-
-    function setMsg(t, ok) {
-      if (!msg) return;
-      msg.textContent = t || '';
-      msg.className = 'eq-cart-sync__msg' + (ok ? ' eq-cart-sync__msg--ok' : t ? ' eq-cart-sync__msg--err' : '');
-    }
-
-    if (genBtn) {
-      genBtn.addEventListener('click', function () {
-        genBtn.disabled = true;
-        setMsg(__cartT('cart.sync_code_loading', 'Kod oluşturuluyor…'), true);
-        pushShopCartNow(load())
-          .then(function () {
-            return createCartLinkCode();
-          })
-          .then(function (j) {
-            if (j && j.success && j.code) {
-              if (codeOut) codeOut.textContent = j.code;
-              setMsg(
-                __cartT('cart.sync_code_ready', 'Diğer cihazda bu kodu girin (15 dk geçerli).'),
-                true
-              );
-            } else {
-              setMsg(
-                (j && j.error) ||
-                  __cartT('cart.sync_code_fail', 'Kod oluşturulamadı — sayfayı yenileyin.'),
-                false
-              );
-            }
-          })
-          .catch(function () {
-            setMsg(__cartT('cart.sync_code_fail', 'Kod oluşturulamadı — sayfayı yenileyin.'), false);
-          })
-          .finally(function () {
-            genBtn.disabled = false;
-          });
-      });
-    }
-
-    if (joinBtn && input) {
-      joinBtn.addEventListener('click', function () {
-        var code = String(input.value || '').trim();
-        if (code.length < 6) {
-          setMsg(__cartT('cart.sync_code_invalid', '6 karakterlik kodu girin.'), false);
-          return;
-        }
-        joinBtn.disabled = true;
-        setMsg(__cartT('cart.sync_join_loading', 'Sepet eşitleniyor…'), true);
-        joinCartWithCode(code)
-          .then(function (j) {
-            if (!j || !j.success) {
-              setMsg(
-                (j && j.error) || __cartT('cart.sync_join_fail', 'Kod geçersiz veya süresi dolmuş.'),
-                false
-              );
-              return;
-            }
-            if (j.syncToken) setSyncToken(j.syncToken);
-            applyShopPulledCart(j.items || []);
-            renderPanelList();
-            setMsg(__cartT('cart.sync_join_ok', 'Sepet bu cihazla eşitlendi.'), true);
-            input.value = '';
-          })
-          .catch(function () {
-            setMsg(__cartT('cart.sync_join_fail', 'Kod geçersiz veya süresi dolmuş.'), false);
-          })
-          .finally(function () {
-            joinBtn.disabled = false;
-          });
-      });
-    }
+  function bindCartLoginHint() {
+    updateCartLoginHint();
+    window.addEventListener('equsto-member-changed', updateCartLoginHint);
+    document.addEventListener('equsto-member-session', updateCartLoginHint);
   }
 
   function memberAuthUrl() {
@@ -455,7 +376,7 @@
     toast(
       __cartT(
         'cart.sync_server_needed',
-        'Cihazlar arası sepet için giriş yapın veya /sepet üzerinden eşitleme kodu kullanın. Bu cihazda sepet kaydedildi.'
+        'Sepet sunucuya kaydedildi. Telefon ve bilgisayarda aynı sepet için giriş yapın.'
       )
     );
   }
@@ -2046,34 +1967,47 @@
   }
 
   var visibleSyncTimer = null;
+  function pullCartFromServer(opts) {
+    opts = opts || {};
+    if (usesAuthCartSync()) {
+      sessionCartPulled = false;
+      return syncFromServer(opts).then(function (ok) {
+        return shopCartPull(opts).then(function () {
+          return ok;
+        });
+      });
+    }
+    return shopCartPull(opts);
+  }
+
   function onAppForeground() {
     if (visibleSyncTimer) clearTimeout(visibleSyncTimer);
     visibleSyncTimer = setTimeout(function () {
       visibleSyncTimer = null;
-      if (usesAuthCartSync()) {
-        sessionCartPulled = false;
-        syncFromServer({ force: true });
-      } else {
-        shopCartPull({ force: true });
-      }
+      pullCartFromServer({ force: true });
     }, 120);
   }
 
   function bootCartSync() {
-    if (usesAuthCartSync()) {
-      whenAuthApiReady(function () {
-        syncFromServer({ force: true });
-      });
-      return;
-    }
-    shopCartPull({ force: true }).then(function () {
-      var local = load();
-      if (local.length) pushShopCartNow(local);
-    });
     whenAuthApiReady(function () {
       if (typeof window.equstoAuthValidateSession === 'function') {
         window.equstoAuthValidateSession().then(function (ok) {
-          if (ok && usesAuthCartSync()) syncFromServer({ force: true });
+          if (ok && usesAuthCartSync()) {
+            pullCartFromServer({ force: true });
+            return;
+          }
+          shopCartPull({ force: true }).then(function () {
+            var local = load();
+            if (local.length) pushShopCartNow(local);
+          });
+        });
+        return;
+      }
+      if (usesAuthCartSync()) pullCartFromServer({ force: true });
+      else {
+        shopCartPull({ force: true }).then(function () {
+          var local = load();
+          if (local.length) pushShopCartNow(local);
         });
       }
     });
@@ -2156,17 +2090,16 @@
     window.addEventListener('equsto-cart-changed', onCartChangedRemote);
     if (isCartPage()) {
       bindCartPageActions();
-      bindCartSyncUi();
+      bindCartLoginHint();
       renderPanelList();
       prefillCheckoutForm();
-      if (isLoggedIn() && authToken()) syncFromServer({ force: true });
+      if (isLoggedIn() && authToken()) pullCartFromServer({ force: true });
     }
     bootCartSync();
     setInterval(function () {
       if (document.visibilityState !== 'visible') return;
-      if (usesAuthCartSync()) syncFromServer();
-      else shopCartPull();
-    }, 15000);
+      pullCartFromServer();
+    }, 12000);
   }
 
   function productFieldAttrs(u, withCartTrigger) {
