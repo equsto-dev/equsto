@@ -205,6 +205,14 @@ nav.topnav {
   .eq-arama-grid {
     gap: 10px 8px;
   }
+
+  /* Vitrin / katalog: mobilde sıralama ve filtre araç çubuğu gizli */
+  .eq-mx-vitrin--mutbex-grid .eq-mx-sort-label,
+  .eq-mx-vitrin--mutbex-grid .eq-mx-filter-drawer-btn,
+  body.eq-shop-mutbex.eq-mutbex-catalog .eq-mx-main-filters,
+  body.eq-shop .main .main-filters {
+    display: none !important;
+  }
 }
 
 @media (max-width: 380px) {
