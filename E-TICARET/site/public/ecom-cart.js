@@ -1383,10 +1383,30 @@
     return name + '|' + brand;
   }
 
+  function oztiKodFromImgRel(img) {
+    var t = String(img || '')
+      .trim()
+      .replace(/\\/g, '/');
+    var m = t.match(/\/ozti-([a-z0-9-]+)\.(?:jpe?g|png|webp)(\?|#|$)/i);
+    if (!m) return '';
+    return m[1].replace(/-/g, '.').toUpperCase();
+  }
+
+  function isEqustoLiveCartHost() {
+    try {
+      var h = (location.hostname || '').toLowerCase();
+      return h === 'equsto.com' || h.slice(-12) === '.equsto.com';
+    } catch (_) {
+      return false;
+    }
+  }
+
   function oztiKodFromCartLine(line) {
     if (!line) return '';
     var c = String(line.c || '').trim();
     if (/^[0-9A-Z]{2,8}\.[A-Z0-9.\-]{2,}$/i.test(c)) return c.toUpperCase();
+    var fromImg = oztiKodFromImgRel(line.img);
+    if (fromImg) return fromImg;
     var tokens = String(line.n || '').toUpperCase().split(/\s+/);
     for (var i = 0; i < tokens.length; i++) {
       var t = tokens[i];
@@ -1394,6 +1414,22 @@
       if (/^[0-9]{3,5}\.[A-Z0-9.\-]{2,}$/i.test(t)) return t;
     }
     return '';
+  }
+
+  function cartOztiAxSrc(line) {
+    var kod = oztiKodFromCartLine(line);
+    if (!kod || typeof window.eqOztiAxImageFromSku !== 'function') return '';
+    return window.eqOztiAxImageFromSku(kod) || '';
+  }
+
+  function cartLineImageSrc(line) {
+    if (!line) return '';
+    var ax = cartOztiAxSrc(line);
+    if (ax && (isEqustoLiveCartHost() || !String(line.img || '').trim())) return ax;
+    var raw = String(line.img || '').trim();
+    if (!raw) return ax || '';
+    if (ax && /catalog\/ozti\//i.test(raw.replace(/\\/g, '/'))) return ax;
+    return resolveCartItemImg(raw);
   }
 
   function cartLineResolvedSrc(line) {
@@ -1405,7 +1441,10 @@
 
   function cartLineNeedsCatalog(line) {
     if (!line) return false;
-    if (!String(line.img || '').trim()) return true;
+    var img = String(line.img || '').trim();
+    if (!img) return true;
+    if (isEqustoLiveCartHost() && /^https:\/\/oztiryakiler\.com\.tr\/ax-images\//i.test(img)) return false;
+    if (isEqustoLiveCartHost() && /catalog\/ozti\//i.test(img.replace(/\\/g, '/'))) return true;
     return !cartLineResolvedSrc(line);
   }
 
@@ -1422,17 +1461,27 @@
 
   function cartImgFromCatalogRow(row) {
     if (!row) return '';
+    var sku = String(row.sku || row.urun_kodu || row.model || '')
+      .replace(/\s+/g, '')
+      .toUpperCase();
+    if (sku && typeof window.eqOztiAxImageFromSku === 'function') {
+      var axSku = window.eqOztiAxImageFromSku(sku);
+      if (axSku && (isEqustoLiveCartHost() || !row.images || !row.images.length)) return axSku;
+    }
     var rel = '';
     if (row.images && row.images.length) rel = String(row.images[0] || '').trim();
-    var sku = row.sku || row.urun_kodu || row.model || '';
     if (!rel && typeof window.eqOztiWebRelFromSku === 'function') {
       rel = window.eqOztiWebRelFromSku(sku) || '';
     }
     if (!rel && sku && typeof window.eqOztiAxImageFromSku === 'function') {
       var ax = window.eqOztiAxImageFromSku(sku);
-      if (ax) return resolveCartItemImg(ax);
+      if (ax) return ax;
     }
     if (!rel) return '';
+    if (isEqustoLiveCartHost() && /catalog\/ozti\//i.test(rel)) {
+      var axLive = cartOztiAxSrc({ img: rel, c: sku });
+      if (axLive) return axLive;
+    }
     if (typeof window.eqProductImgSrc === 'function') {
       try {
         return resolveCartItemImg(window.eqProductImgSrc(rel));
@@ -1472,15 +1521,15 @@
         }
       }
       if (!hit) continue;
-      var rel = catalogRelFromRow(hit);
-      if (rel) {
-        line.img = rel.replace(/\\/g, '/').replace(/^\.\//, '').replace(/^\/data\/images\//i, 'images/');
-        changed = true;
-        continue;
-      }
       var imgUrl = cartImgFromCatalogRow(hit);
       if (imgUrl) {
         line.img = imgUrl;
+        changed = true;
+        continue;
+      }
+      var rel = catalogRelFromRow(hit);
+      if (rel) {
+        line.img = rel.replace(/\\/g, '/').replace(/^\.\//, '').replace(/^\/data\/images\//i, 'images/');
         changed = true;
       }
     }
@@ -1494,18 +1543,18 @@
       if (!line) continue;
       if (!cartLineNeedsCatalog(line)) continue;
       var oz = oztiKodFromCartLine(line);
-      if (oz && typeof window.eqOztiWebRelFromSku === 'function') {
-        var relOz = window.eqOztiWebRelFromSku(oz);
-        if (relOz) {
-          line.img = relOz;
-          changed = true;
-          continue;
-        }
-      }
       if (oz && typeof window.eqOztiAxImageFromSku === 'function') {
         var axSku = window.eqOztiAxImageFromSku(oz);
         if (axSku) {
           line.img = axSku;
+          changed = true;
+          continue;
+        }
+      }
+      if (oz && !isEqustoLiveCartHost() && typeof window.eqOztiWebRelFromSku === 'function') {
+        var relOz = window.eqOztiWebRelFromSku(oz);
+        if (relOz) {
+          line.img = relOz;
           changed = true;
           continue;
         }
@@ -1529,10 +1578,7 @@
       rawRel = 'images/' + rawRel;
     }
     var ozKod = oztiKodFromCartLine(x);
-    var src = resolveCartItemImg(rawRel || String(x.img || '').trim());
-    if (!src && ozKod && typeof window.eqOztiAxImageFromSku === 'function') {
-      src = window.eqOztiAxImageFromSku(ozKod);
-    }
+    var src = cartLineImageSrc(x);
     if (!src && rawRel && typeof window.equstoDataAssetHref === 'function') {
       try {
         src = resolveCartItemImg(window.equstoDataAssetHref(rawRel));
