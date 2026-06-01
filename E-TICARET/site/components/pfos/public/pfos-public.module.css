@@ -408,8 +408,8 @@
 
 .secReveal {
   transition:
-    opacity 5.2s ease-out,
-    clip-path 6s ease-out;
+    opacity 1.2s ease-out,
+    clip-path 1.2s ease-out;
 }
 
 .secPending.secReveal {
