@@ -138,23 +138,49 @@ export function rankSearchHitsByRelevance(
     .map((x) => x.h);
 }
 
-const DIVERSIFY_SINGLE_TERMS = new Set([
+/** Geniş ekipman aramalarında marka tekeline düşmeyi önle (izgara, ocak, fırın vb.). */
+export const DIVERSIFY_SEARCH_TERMS = new Set([
   "izgara",
   "izgaralar",
   "ızgara",
   "firin",
   "firinlar",
   "fırın",
+  "ocak",
+  "ocaklar",
+  "ocakbasi",
+  "kuzine",
+  "kuzineler",
+  "fritoz",
+  "fritozler",
+  "buzdolab",
+  "buzdolabi",
+  "buzdolap",
+  "blender",
+  "mikser",
+  "mikserler",
+  "davlumbaz",
+  "davlumbazlar",
+  "bulasik",
+  "bulasikmakinesi",
+  "yikama",
 ]);
 
-/** Izgara / fırın gibi geniş ekipman sorgularında marka tekeline düşmeyi önle. */
+function tokenWantsDiversify(t: string): boolean {
+  if (DIVERSIFY_SEARCH_TERMS.has(t)) return true;
+  if (t.startsWith("izgar") || t.startsWith("firin") || t === "firin") return true;
+  if (t.startsWith("ocak") || t.startsWith("kuzin") || t.startsWith("fritoz")) return true;
+  if (t.startsWith("buzdol") || t.startsWith("davlumbaz") || t.startsWith("bulasik")) {
+    return true;
+  }
+  return false;
+}
+
 export function shouldDiversifySearchHits(q: string): boolean {
   const term = foldTr(q).trim();
-  if (DIVERSIFY_SINGLE_TERMS.has(term)) return true;
+  if (DIVERSIFY_SEARCH_TERMS.has(term)) return true;
   const tokens = term.split(/\s+/).filter((t) => t.length >= 3);
-  return tokens.some(
-    (t) => t.startsWith("izgar") || t.startsWith("firin") || t === "firin",
-  );
+  return tokens.some(tokenWantsDiversify);
 }
 
 /** Relevance sırası korunur; markalar round-robin ile karıştırılır. */

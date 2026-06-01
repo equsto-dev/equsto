@@ -1,4 +1,5 @@
 import { KUZINE_FIRIN_MEILI_FILTER_CATEGORIES } from "@/lib/category-search-hints";
+import { DIVERSIFY_SEARCH_TERMS } from "@/lib/rank-search-hits";
 import { foldTr } from "@/lib/search-query";
 
 export type MeiliSearchParams = {
@@ -35,6 +36,9 @@ export function meiliSearchParams(
   } else if (FIRIN_TERMS.has(term)) {
     filter = kuzineFirinMeiliFilter();
     fetchLimit = Math.min(Math.max(limit * 8, 120), 250);
+    rerankPool = true;
+  } else if (DIVERSIFY_SEARCH_TERMS.has(term)) {
+    fetchLimit = Math.min(Math.max(limit * 6, 120), 250);
     rerankPool = true;
   }
 
