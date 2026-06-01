@@ -99,19 +99,23 @@ export function getNeighborhoodNames(districtId: string): string[] {
   return neighborhoodsByDistrict.get(districtId) ?? [];
 }
 
+function byProvincePopulationDesc(a: TrProvince, b: TrProvince): number {
+  return (Number(b.population) || 0) - (Number(a.population) || 0);
+}
+
 export function filterProvinces(query: string, limit?: number): TrProvince[] {
   const q = normAdresKey(query);
   let list: TrProvince[];
   if (!q) {
-    list = [...provinces].sort((a, b) =>
-      a.name.localeCompare(b.name, "tr-TR"),
-    );
+    list = provinces;
   } else {
-    list = provinces.filter(
-      (p) =>
-        normAdresKey(p.name).includes(q) ||
-        String(p.plate).startsWith(q.replace(/\D/g, "")),
-    );
+    list = provinces
+      .filter(
+        (p) =>
+          normAdresKey(p.name).includes(q) ||
+          String(p.plate).startsWith(q.replace(/\D/g, "")),
+      )
+      .sort(byProvincePopulationDesc);
   }
   if (limit != null && limit > 0) return list.slice(0, limit);
   return list;
