@@ -397,11 +397,12 @@
 }
 
 .secEnter {
-  animation: pfosSecEnter 0.82s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: pfosSecEnter 2.4s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  will-change: opacity, transform, filter;
 }
 
 .secEnter .secBd {
-  animation: pfosSecBodyEnter 0.72s cubic-bezier(0.16, 1, 0.3, 1) 0.14s both;
+  animation: pfosSecBodyEnter 1.75s cubic-bezier(0.22, 0.61, 0.36, 1) 0.65s both;
 }
 
 .secEnter .optionBtn,
@@ -410,83 +411,69 @@
 .secEnter .alanField,
 .secEnter .adresGrid,
 .secEnter .textInput {
-  animation: pfosChildFlow 0.62s cubic-bezier(0.16, 1, 0.3, 1) both;
-}
-
-.secEnter .optionBtn:nth-child(1),
-.secEnter .presetBtn:nth-child(1),
-.secEnter .multiLabel:nth-child(1) {
-  animation-delay: 0.18s;
-}
-.secEnter .optionBtn:nth-child(2),
-.secEnter .presetBtn:nth-child(2),
-.secEnter .multiLabel:nth-child(2) {
-  animation-delay: 0.24s;
-}
-.secEnter .optionBtn:nth-child(3),
-.secEnter .presetBtn:nth-child(3),
-.secEnter .multiLabel:nth-child(3) {
-  animation-delay: 0.3s;
-}
-.secEnter .optionBtn:nth-child(4),
-.secEnter .presetBtn:nth-child(4),
-.secEnter .multiLabel:nth-child(4) {
-  animation-delay: 0.36s;
-}
-.secEnter .optionBtn:nth-child(5),
-.secEnter .presetBtn:nth-child(5),
-.secEnter .multiLabel:nth-child(5) {
-  animation-delay: 0.42s;
-}
-.secEnter .optionBtn:nth-child(6),
-.secEnter .presetBtn:nth-child(6),
-.secEnter .multiLabel:nth-child(6) {
-  animation-delay: 0.48s;
-}
-.secEnter .optionBtn:nth-child(n + 7),
-.secEnter .presetBtn:nth-child(n + 7),
-.secEnter .multiLabel:nth-child(n + 7) {
-  animation-delay: 0.54s;
+  animation: pfosChildFlow 1.15s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  animation-delay: calc(0.75s + var(--pfos-stagger, 0) * 0.3s);
 }
 
 .proformaEnter {
-  animation: pfosSecEnter 0.82s cubic-bezier(0.16, 1, 0.3, 1) 0.08s both;
+  animation: pfosSecEnter 2.2s cubic-bezier(0.22, 0.61, 0.36, 1) 0.2s both;
 }
 
 .railEnter {
-  animation: pfosSecBodyEnter 0.68s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: pfosSecBodyEnter 1.85s cubic-bezier(0.22, 0.61, 0.36, 1) 0.15s both;
 }
 
 @keyframes pfosSecEnter {
-  from {
+  0% {
     opacity: 0;
-    transform: translateY(28px) scale(0.985);
+    transform: translateY(64px) scale(0.95);
+    filter: blur(8px);
   }
-  to {
+  45% {
+    opacity: 0.35;
+    transform: translateY(28px) scale(0.98);
+    filter: blur(3px);
+  }
+  75% {
+    opacity: 0.82;
+    transform: translateY(8px) scale(0.995);
+    filter: blur(0.5px);
+  }
+  100% {
     opacity: 1;
     transform: translateY(0) scale(1);
+    filter: blur(0);
   }
 }
 
 @keyframes pfosSecBodyEnter {
-  from {
+  0% {
     opacity: 0;
-    transform: translateY(16px);
+    transform: translateY(28px);
+    max-height: 0;
   }
-  to {
+  35% {
+    opacity: 0.25;
+    max-height: 800px;
+  }
+  100% {
     opacity: 1;
     transform: translateY(0);
+    max-height: 2000px;
   }
 }
 
 @keyframes pfosChildFlow {
-  from {
+  0% {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(22px) scale(0.97);
   }
-  to {
+  50% {
+    opacity: 0.55;
+  }
+  100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 }
 

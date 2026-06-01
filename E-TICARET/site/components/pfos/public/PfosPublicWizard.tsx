@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import type { Konsept, PFOSResponse } from "@/lib/pfos/schemas/pfos.schema";
 import { KonseptEnum } from "@/lib/pfos/schemas/pfos.schema";
 import {
@@ -69,6 +69,15 @@ type Props = {
 
 const M2_PRESETS = [40, 80, 120, 200, 350];
 
+/** CSS animasyon süresiyle eşleşmeli — secEnter sınıfı bu kadar tutulur */
+const PFOS_PANEL_ENTER_MS = 4600;
+const PFOS_RESULT_ENTER_MS = 4200;
+const PFOS_RAIL_ENTER_MS = 3600;
+
+function pfosStaggerStyle(index: number): CSSProperties {
+  return { ["--pfos-stagger" as string]: index };
+}
+
 function formatTry(n: number) {
   return new Intl.NumberFormat("tr-TR", {
     style: "currency",
@@ -105,15 +114,13 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   const [referansYukleniyor, setReferansYukleniyor] = useState(false);
   const prevOpenPanelIdRef = useRef("s1");
   const mountedRef = useRef(false);
+  const enterTimerRef = useRef<number | null>(null);
 
-  const triggerPanelEnter = useCallback((panelId: string) => {
-    setEnteringPanelId(panelId);
-    window.setTimeout(() => {
-      setEnteringPanelId(null);
-      document
-        .getElementById(`pfos-sec-${panelId}`)
-        ?.scrollIntoView({ behavior: "smooth", block: "nearest" });
-    }, 880);
+  const clearEnterTimer = useCallback(() => {
+    if (enterTimerRef.current != null) {
+      window.clearTimeout(enterTimerRef.current);
+      enterTimerRef.current = null;
+    }
   }, []);
 
   useEffect(() => {
@@ -175,41 +182,52 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   );
 
   const openPanelIndexRef = useRef(openPanelIndex);
-  useEffect(() => {
-    if (openPanelIndex <= openPanelIndexRef.current) {
+  useLayoutEffect(() => {
+    clearEnterTimer();
+
+    let panelId: string | null = null;
+    if (!mountedRef.current) {
+      mountedRef.current = true;
+      panelId = panels[openPanelIndex]?.id ?? null;
+      openPanelIndexRef.current = openPanelIndex;
+    } else if (openPanelIndex > openPanelIndexRef.current) {
+      panelId = panels[openPanelIndex]?.id ?? null;
+      openPanelIndexRef.current = openPanelIndex;
+    } else {
       openPanelIndexRef.current = openPanelIndex;
       return;
     }
-    openPanelIndexRef.current = openPanelIndex;
-    const openId = panels[openPanelIndex]?.id;
-    if (!openId) return;
-    triggerPanelEnter(openId);
-  }, [openPanelIndex, panels, triggerPanelEnter]);
 
-  useEffect(() => {
-    if (mountedRef.current) return;
-    mountedRef.current = true;
-    const firstId = panels[0]?.id;
-    if (firstId) triggerPanelEnter(firstId);
-  }, [panels, triggerPanelEnter]);
+    if (!panelId) return;
 
-  useEffect(() => {
+    setEnteringPanelId(panelId);
+    enterTimerRef.current = window.setTimeout(() => {
+      setEnteringPanelId(null);
+      document
+        .getElementById(`pfos-sec-${panelId}`)
+        ?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }, PFOS_PANEL_ENTER_MS);
+
+    return clearEnterTimer;
+  }, [openPanelIndex, panels, clearEnterTimer]);
+
+  useLayoutEffect(() => {
     if (!(finished && sonuc && teklifV14)) {
       setResultEntering(false);
       return;
     }
     setResultEntering(true);
-    const t = window.setTimeout(() => setResultEntering(false), 880);
+    const t = window.setTimeout(() => setResultEntering(false), PFOS_RESULT_ENTER_MS);
     return () => window.clearTimeout(t);
   }, [finished, sonuc, teklifV14]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!referansOnizleme || referansYukleniyor) {
       setRailEntering(false);
       return;
     }
     setRailEntering(true);
-    const t = window.setTimeout(() => setRailEntering(false), 720);
+    const t = window.setTimeout(() => setRailEntering(false), PFOS_RAIL_ENTER_MS);
     return () => window.clearTimeout(t);
   }, [referansOnizleme, referansYukleniyor]);
 
@@ -448,7 +466,9 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     setAnswers({});
     setM2Touched(false);
     prevOpenPanelIdRef.current = "s1";
-    openPanelIndexRef.current = 0;
+    openPanelIndexRef.current = -1;
+    clearEnterTimer();
+    setEnteringPanelId(null);
     setFinished(false);
     setSonuc(null);
     setTeklifV14(null);
@@ -461,8 +481,12 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     const bulutSeg =
       String(answers.q_ust_segment ?? "").trim() === "Bulut Mutfak";
     const minM2 = bulutSeg ? 8 : 20;
+    const isEntering = enteringPanelId === panel.id;
     return (
-      <div className={styles.alanField}>
+      <div
+        className={styles.alanField}
+        style={isEntering ? pfosStaggerStyle(0) : undefined}
+      >
         {bulutSeg ? (
           <p className={styles.alanHint} style={{ marginBottom: 10 }}>
             {t(
@@ -490,11 +514,12 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
           onChange={(e) => setM2Value(e.target.value)}
         />
         <div className={styles.alanPresets} role="group">
-          {M2_PRESETS.map((n) => (
+          {M2_PRESETS.map((n, i) => (
             <button
               key={n}
               type="button"
               className={`${styles.presetBtn}${val === n ? ` ${styles.presetBtnActive}` : ""}`}
+              style={isEntering ? pfosStaggerStyle(i + 1) : undefined}
               onClick={() => setM2Value(String(n))}
             >
               {n} m²
@@ -512,6 +537,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
 
   function renderQuestion(q: WizardQuestion, panel: LegacyPanelDef) {
     const id = q.id as keyof SoruCevapHaritasi;
+    const isEntering = enteringPanelId === panel.id;
 
     if (q.id === "q_m2") return renderM2Field(panel);
 
@@ -519,11 +545,12 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
       const val = String(answers[id] ?? "");
       return (
         <div className={styles.options}>
-          {((q.options as string[]) ?? []).map((opt) => (
+          {((q.options as string[]) ?? []).map((opt, i) => (
             <button
               key={opt}
               type="button"
               className={`${styles.optionBtn}${val === opt ? ` ${styles.optionBtnSelected}` : ""}`}
+              style={isEntering ? pfosStaggerStyle(i) : undefined}
               disabled={loading}
               onClick={() => onKararSelect(opt)}
             >
@@ -555,11 +582,12 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
           <div
             className={`${styles.options}${twoCol ? ` ${styles.twoCol}` : ""}${panel.id === "s3" ? ` ${styles.konseptGrid}` : ""}`}
           >
-            {opts.map((opt) => (
+            {opts.map((opt, i) => (
               <button
                 key={opt}
                 type="button"
                 className={`${styles.optionBtn}${val === opt ? ` ${styles.optionBtnSelected}` : ""}`}
+                style={isEntering ? pfosStaggerStyle(i) : undefined}
                 onClick={() => setAnswer(id, opt, panel)}
               >
                 {t(opt)}
@@ -577,10 +605,11 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
       return (
         <>
           <div className={styles.multiGrid}>
-            {((q.options as string[]) ?? []).map((opt) => (
+            {((q.options as string[]) ?? []).map((opt, i) => (
               <label
                 key={opt}
                 className={`${styles.multiLabel}${selected.includes(opt) ? ` ${styles.multiLabelSelected}` : ""}`}
+                style={isEntering ? pfosStaggerStyle(i) : undefined}
               >
                 <input
                   type="checkbox"
