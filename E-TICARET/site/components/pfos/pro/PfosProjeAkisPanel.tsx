@@ -221,13 +221,20 @@ export default function PfosProjeAkisPanel() {
         />
       )}
 
-      <Space size="large" style={{ marginBottom: 16 }} wrap>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(120px, 1fr))",
+          gap: 16,
+          marginBottom: 16,
+        }}
+      >
         <Statistic title="Konsept" value={shopTypes.length} loading={loading} />
         <Statistic title="Sorular" value={questions.length} loading={loading} />
         <Statistic title="Kurallar" value={rules.length} loading={loading} />
         <Statistic title="Setler" value={eqSets.length} loading={loading} />
         <Statistic title="PFOS ürün" value={products.length} loading={loading} />
-      </Space>
+      </div>
 
       <Tabs
         items={[

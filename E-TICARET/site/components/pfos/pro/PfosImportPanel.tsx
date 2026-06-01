@@ -23,7 +23,7 @@ import {
   message,
 } from "antd";
 import Link from "next/link";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, type CSSProperties } from "react";
 import PfosDropZone from "@/components/pfos/pro/PfosDropZone";
 import {
   analyzeImportFile,
@@ -33,6 +33,28 @@ import {
   type ImportAnalizItem,
   type TipSozlukEntry,
 } from "@/lib/pro-admin-client";
+
+/** Sürükle-bırak ve not alanı — mobil/masaüstü aynı minimum yükseklik */
+const IMPORT_SPLIT_MIN_H = 240;
+
+const importSplitColStyle: CSSProperties = {
+  display: "flex",
+  flexDirection: "column",
+  minWidth: 0,
+};
+
+const importNotesPanelStyle: CSSProperties = {
+  flex: 1,
+  display: "flex",
+  flexDirection: "column",
+  minHeight: IMPORT_SPLIT_MIN_H,
+  height: "100%",
+  border: "1px solid #d9d9d9",
+  borderRadius: 8,
+  padding: 16,
+  background: "#fafafa",
+  boxSizing: "border-box",
+};
 
 const KATEGORILER = [
   "pisirme",
@@ -246,10 +268,11 @@ SADECE JSON döndür, başka hiçbir şey yazma:
           Claude API proxy (<code>npm run api</code>, port 3001) çalışıyor olmalı.
         </Typography.Paragraph>
 
-        <Row gutter={16} align="stretch">
-          <Col xs={24} lg={12}>
+        <Row gutter={[16, 16]} align="stretch">
+          <Col xs={24} md={12} style={importSplitColStyle}>
             <PfosDropZone
               compact
+              fillHeight
               accept=".pdf,.xlsx,.xls"
               title="PDF veya Excel dosyasını sürükle ya da tıkla"
               hint="Teklif listesi · proforma · ekipman listesi"
@@ -264,15 +287,8 @@ SADECE JSON döndür, başka hiçbir şey yazma:
               onClear={reset}
             />
           </Col>
-          <Col xs={24} lg={12}>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                height: "100%",
-                minHeight: 220,
-              }}
-            >
+          <Col xs={24} md={12} style={importSplitColStyle}>
+            <div style={importNotesPanelStyle}>
               <Typography.Text strong style={{ display: "block", marginBottom: 8 }}>
                 Liste notları
               </Typography.Text>
@@ -290,8 +306,8 @@ SADECE JSON döndür, başka hiçbir şey yazma:
                 placeholder="Örn: Steakhouse 250 m², H yıkama ayrı bölüm, Öztiryakiler ağırlıklı teklif…"
                 style={{
                   flex: 1,
-                  minHeight: 160,
-                  resize: "vertical",
+                  minHeight: 120,
+                  resize: "none",
                   fontSize: 13,
                   lineHeight: 1.5,
                 }}
