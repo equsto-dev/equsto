@@ -27,6 +27,8 @@ export default function HomePage() {
       <link rel="preload" href={`/theme.css?v=${SHOP_ASSET_V}`} as="style" />
       {/* eslint-disable-next-line @next/next/no-css-tags */}
       <link rel="stylesheet" href={`/theme.css?v=${SHOP_ASSET_V}`} />
+      {/* eslint-disable-next-line @next/next/no-css-tags */}
+      <link rel="stylesheet" href={`/eq-mobile.css?v=${SHOP_ASSET_V}`} />
       <style id="eq-home-critical-css" dangerouslySetInnerHTML={{ __html: HOME_CRITICAL_CSS }} />
       <Script id="home-body-class-boot" strategy="beforeInteractive">
         {`(function(){try{var c=${JSON.stringify(HOME_BODY_CLASS)};if(document.body)document.body.className=c;}catch(e){}})();`}

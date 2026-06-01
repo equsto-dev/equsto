@@ -21,14 +21,14 @@ export function StoreShell({
 }) {
   return (
     <div className="min-h-screen flex flex-col border-neutral-200">
-      <header className="border-b border-neutral-200 px-4 py-3">
+      <header className="border-b border-neutral-200 px-4 py-3 sm:px-6">
         <div
-          className={`mx-auto flex flex-wrap items-center gap-4 justify-between ${fullBleed ? "max-w-[90rem]" : "max-w-6xl"}`}
+          className={`mx-auto flex flex-wrap items-center gap-3 sm:gap-4 justify-between ${fullBleed ? "max-w-[90rem]" : "max-w-6xl"}`}
         >
-          <Link href="/" className="font-semibold tracking-tight text-neutral-900">
+          <Link href="/" className="font-semibold tracking-tight text-neutral-900 shrink-0">
             EQUSTO
           </Link>
-          <nav className="flex flex-wrap gap-4 text-sm text-neutral-600">
+          <nav className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-neutral-600 w-full sm:w-auto sm:justify-end">
             <Link href="/arama">Arama</Link>
             <Link href="/kategori/pisirme">Pişirme</Link>
             <Link href="/marka/atalay">Atalay</Link>

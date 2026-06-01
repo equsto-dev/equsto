@@ -1,8 +1,15 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import GlobalSiteJsonLd from "@/components/seo/GlobalSiteJsonLd";
 import SiteDiscoveryFaqJsonLd from "@/components/seo/SiteDiscoveryFaqJsonLd";
+import { SHOP_ASSET_V } from "@/lib/shop/assets";
 import "./globals.css";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,6 +45,8 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
+        {/* eslint-disable-next-line @next/next/no-css-tags */}
+        <link rel="stylesheet" href={`/eq-mobile.css?v=${SHOP_ASSET_V}`} />
         <GlobalSiteJsonLd />
         <SiteDiscoveryFaqJsonLd />
         <div id="eq-shop-chrome-root" />
