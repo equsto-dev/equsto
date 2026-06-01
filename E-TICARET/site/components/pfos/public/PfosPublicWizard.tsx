@@ -89,10 +89,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   const prevOpenPanelIdRef = useRef("s1");
 
   useEffect(() => {
-    setAdresListOpen(false);
-  }, [openPanelIndex]);
-
-  useEffect(() => {
     let cancelled = false;
     void loadTrAdres();
     void (async () => {
