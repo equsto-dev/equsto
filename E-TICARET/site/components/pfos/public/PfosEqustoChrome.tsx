@@ -6,10 +6,16 @@ import {
   submitBesosSearch,
   toggleEqDrawer,
 } from "@/lib/besos/site-nav";
+import LangSwitcherSlot from "@/components/shop/LangSwitcherSlot";
+import { CHROME_HDR, chromeLangFromPath } from "@/lib/shop/chrome-i18n";
+import { usePathname } from "next/navigation";
 import { useRef } from "react";
 
 /** Vitrin d-header — Besos / shop ile aynı üst bank + departman şeridi */
 export default function PfosEqustoChrome() {
+  const pathname = usePathname();
+  const lang = chromeLangFromPath(pathname);
+  const h = CHROME_HDR[lang];
   const searchRef = useRef<HTMLInputElement>(null);
 
   return (
@@ -28,20 +34,23 @@ export default function PfosEqustoChrome() {
           }}
         >
           <div className="hdr-alici">
-            <div style={{ fontSize: 9, color: "var(--eq-text-subtle)" }}>Teslimat Adresi</div>
-            <div style={{ fontSize: 11, fontWeight: 600, color: "var(--eq-drawer-head-text)" }}>
-              İstanbul, Türkiye
+            <div style={{ fontSize: 9, color: "var(--eq-text-subtle)" }} data-i18n="common.delivery_to">
+              {h.delivery_label}
+            </div>
+            <div style={{ fontSize: 11, fontWeight: 600, color: "var(--eq-drawer-head-text)" }} data-i18n="common.delivery_city">
+              {h.delivery_city}
             </div>
           </div>
           <div className="srch">
-            <div className="srch-cat" role="button" tabIndex={0} onClick={toggleEqDrawer}>
-              ☰ Tüm Kategoriler
+            <div className="srch-cat" role="button" tabIndex={0} onClick={toggleEqDrawer} data-i18n="common.all_categories_caps">
+              {h.all_categories}
             </div>
             <input
               ref={searchRef}
               className="srch-input"
               type="search"
-              placeholder="Ürün, marka veya kategori ara…"
+              placeholder={h.search_placeholder}
+              data-i18n-attr="placeholder:common.search_placeholder"
               onKeyDown={(e) => {
                 if (e.key === "Enter") {
                   submitBesosSearch(e.currentTarget.value);
@@ -51,8 +60,9 @@ export default function PfosEqustoChrome() {
             <button
               type="button"
               className="srch-btn"
-              aria-label="Ara"
-              title="Ara"
+              aria-label={h.search_aria}
+              title={h.search_aria}
+              data-i18n-attr="aria-label:common.search_aria, title:common.search_aria"
               onClick={() => submitBesosSearch(searchRef.current?.value ?? "")}
             >
               <svg
@@ -78,6 +88,7 @@ export default function PfosEqustoChrome() {
             </button>
           </div>
           <div className="hdr-right">
+            <LangSwitcherSlot />
             <div className="theme-wrap">
               <button
                 type="button"
@@ -87,22 +98,31 @@ export default function PfosEqustoChrome() {
                 onClick={() =>
                   (window as Window & { equstoCycleTheme?: () => void }).equstoCycleTheme?.()
                 }
-                title="Sistem teması"
-                aria-label="Sistem teması — tıklayı değiştir"
+                title={h.theme_title}
+                aria-label={h.theme_title}
+                data-i18n-attr="title:common.theme_title"
               >
                 ◐
               </button>
-              <span className="theme-legend">Sistem · Açık · Koyu</span>
+              <span className="theme-legend" data-i18n="common.theme_label">
+                {h.theme_label}
+              </span>
             </div>
-            <a href="/login.html" className="eq-hdr-account" title="Üye girişi">
-              <span style={{ fontSize: 10, color: "var(--eq-text-muted)" }}>Hesabım</span>
-              <span className="eq-hdr-account-title" style={{ fontSize: 12, fontWeight: 600 }}>
-                Projeler ve Listeler ▾
+            <a href="/login.html" className="eq-hdr-account" title={h.login_title} data-i18n-attr="title:common.login_title">
+              <span style={{ fontSize: 10, color: "var(--eq-text-muted)" }} data-i18n="common.my_account">
+                {h.my_account}
+              </span>
+              <span className="eq-hdr-account-title" style={{ fontSize: 12, fontWeight: 600 }} data-i18n="common.account_projects">
+                {h.account_projects}
               </span>
             </a>
-            <div style={{ display: "flex", flexDirection: "column", lineHeight: 1.4 }}>
-              <span style={{ fontSize: 10, color: "var(--eq-text-muted)" }}>İadeler</span>
-              <span style={{ fontSize: 12, fontWeight: 600, cursor: "pointer" }}>ve Siparişler</span>
+            <div className="eq-hdr-orders" style={{ display: "flex", flexDirection: "column", lineHeight: 1.4 }}>
+              <span style={{ fontSize: 10, color: "var(--eq-text-muted)" }} data-i18n="common.returns">
+                {h.returns}
+              </span>
+              <span style={{ fontSize: 12, fontWeight: 600, cursor: "pointer" }} data-i18n="common.and_orders">
+                {h.and_orders}
+              </span>
             </div>
             <div
               id="equsto-hdr-cart"
@@ -113,7 +133,8 @@ export default function PfosEqustoChrome() {
                 lineHeight: 1.4,
                 cursor: "pointer",
               }}
-              title="Sepeti aç"
+              title={h.cart_title}
+              data-i18n-attr="title:common.cart_aria_title"
               role="button"
               tabIndex={0}
               onClick={goEqCart}
@@ -124,19 +145,21 @@ export default function PfosEqustoChrome() {
                 }
               }}
             >
-              <span id="equsto-cart-count" style={{ fontSize: 10, color: "var(--eq-text-muted)" }}>
-                🛒 0
+              <span id="equsto-cart-count" style={{ fontSize: 10, color: "var(--eq-text-muted)" }} aria-hidden="true">
+                <span className="eq-hdr-cart-badge">0</span>
               </span>
-              <span style={{ fontSize: 12, fontWeight: 600 }}>Alışveriş Sepeti</span>
+              <span style={{ fontSize: 12, fontWeight: 600 }} data-i18n="common.cart">
+                {h.cart}
+              </span>
             </div>
           </div>
         </div>
       </header>
 
-      <nav className="topnav" aria-label="Departmanlar">
+      <nav className="topnav" aria-label={h.departments_aria} data-i18n-attr="aria-label:nav.departments_aria">
         <div className="pg-inner topnav-inner">
-          <div className="topnav-item topnav-all" role="button" tabIndex={0} onClick={toggleEqDrawer}>
-            ☰ Tüm kategoriler
+          <div className="topnav-item topnav-all" role="button" tabIndex={0} onClick={toggleEqDrawer} data-i18n="common.all_categories_lower">
+            {h.all_categories_lower}
           </div>
           <span className="topnav-sep" aria-hidden="true">
             |

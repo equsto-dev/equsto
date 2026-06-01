@@ -16,6 +16,7 @@ import {
   loadTrAdres,
   type PfosAdresFormValue,
 } from "@/lib/pfos/adres/tr-adres";
+import { usePfosLabel } from "@/lib/pfos/use-pfos-label";
 import styles from "./pfos-public.module.css";
 
 type FieldProps = {
@@ -125,6 +126,7 @@ export default function PfosAdresAutocomplete({
   onChange,
   onDevam,
 }: Props) {
+  const { t } = usePfosLabel();
   const [ready, setReady] = useState(false);
   const [provinceId, setProvinceId] = useState<number | null>(null);
   const [districtId, setDistrictId] = useState<string | null>(null);
@@ -191,13 +193,13 @@ export default function PfosAdresAutocomplete({
   return (
     <div className={styles.adresGrid}>
       {!ready ? (
-        <p className={styles.questionNote}>Adres listesi yükleniyor…</p>
+        <p className={styles.questionNote}>{t("Adres listesi yükleniyor…")}</p>
       ) : null}
 
       <AutocompleteField
-        label="İl (şehir)"
+        label={t("İl (şehir)")}
         required
-        placeholder="Yazmaya başlayın — örn. İstanbul"
+        placeholder={t("Yazmaya başlayın — örn. İstanbul")}
         value={value.il}
         suggestions={ilSuggestions}
         open={openField === "il"}
@@ -243,11 +245,11 @@ export default function PfosAdresAutocomplete({
       />
 
       <AutocompleteField
-        label="Mahalle"
+        label={t("Mahalle")}
         placeholder={
           districtId != null
-            ? "Listeden seçin (opsiyonel)"
-            : "Önce ilçe seçin"
+            ? t("Listeden seçin (opsiyonel)")
+            : t("Önce ilçe seçin")
         }
         value={value.mahalle}
         disabled={!value.ilce.trim()}
@@ -260,7 +262,7 @@ export default function PfosAdresAutocomplete({
 
       {provinceId != null && value.ilce && !districtId ? (
         <p className={styles.adresWarn}>
-          İlçe listeden eşleşmedi — yine de devam edebilirsiniz.
+          {t("İlçe listeden eşleşmedi — yine de devam edebilirsiniz.")}
         </p>
       ) : null}
 
@@ -270,7 +272,7 @@ export default function PfosAdresAutocomplete({
         disabled={!canDevam}
         onClick={onDevam}
       >
-        Devam
+        {t("Devam")}
       </button>
     </div>
   );

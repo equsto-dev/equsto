@@ -90,6 +90,43 @@
 
   var SPEC_TERMS = null;
   var specLoadPromise = null;
+  var PRODUCT_EN_BY_ID = null;
+  var productEnLoadPromise = null;
+
+  function loadProductEnOverlay() {
+    if (PRODUCT_EN_BY_ID) return Promise.resolve(PRODUCT_EN_BY_ID);
+    if (productEnLoadPromise) return productEnLoadPromise;
+    productEnLoadPromise = fetch('/data/i18n/products-en-by-id.json', { credentials: 'same-origin' })
+      .then(function (r) { return r.ok ? r.json() : { byId: {} }; })
+      .then(function (j) {
+        PRODUCT_EN_BY_ID = (j && j.byId) || {};
+        return PRODUCT_EN_BY_ID;
+      })
+      .catch(function () {
+        PRODUCT_EN_BY_ID = {};
+        return PRODUCT_EN_BY_ID;
+      });
+    return productEnLoadPromise;
+  }
+
+  function productEnEntry(x) {
+    if (!x || !PRODUCT_EN_BY_ID) return null;
+    var id = String(x.id || '').trim();
+    return id && PRODUCT_EN_BY_ID[id] ? PRODUCT_EN_BY_ID[id] : null;
+  }
+
+  function applyProductEnOverlay(x) {
+    var o = productEnEntry(x);
+    if (!o) return x;
+    if (o.n) x.name = String(o.n);
+    if (o.s) x.specs = String(o.s);
+    if (o.d) {
+      x.description = String(o.d);
+      x.descriptionEn = String(o.d);
+      x.aciklama = String(o.d);
+    }
+    return x;
+  }
 
   function loadSpecTerms() {
     if (SPEC_TERMS) return Promise.resolve(SPEC_TERMS);
@@ -124,14 +161,24 @@
 
   function applyEnCatalogItem(x) {
     if (!x || typeof x !== 'object' || window.eqLang !== 'en') return x;
+    applyProductEnOverlay(x);
     if (x.name_en) x.name = String(x.name_en);
     else if (x.name) x.name = eqProductNameEn(x.name, x);
     if (x.specs_en) x.specs = String(x.specs_en);
     else if (x.specs) x.specs = eqTranslateSpecEn(x.specs);
-    if (x.description_en) x.description = String(x.description_en);
-    else if (x.description) x.description = eqTranslateSpecEn(x.description);
-    if (x.aciklama_en) x.aciklama = String(x.aciklama_en);
-    else if (x.aciklama) x.aciklama = eqTranslateSpecEn(x.aciklama);
+    var descSrc =
+      (x.description_en && String(x.description_en).trim()) ||
+      (x.aciklama_en && String(x.aciklama_en).trim()) ||
+      (x.aciklama && String(x.aciklama).trim()) ||
+      (x.description && String(x.description).trim()) ||
+      '';
+    if (descSrc) {
+      var descEn =
+        x.description_en ? String(x.description_en) : eqTranslateSpecEn(descSrc);
+      x.description = descEn;
+      x.descriptionEn = descEn;
+      if (!x.aciklama_en) x.aciklama = descEn;
+    }
     return x;
   }
 
@@ -168,9 +215,13 @@
     }
     if (u.specs) u.specs = eqPolishDisplayText(u.specs);
     if (window.eqLang === 'en') {
-      if (u.raw && u.raw.name_en) u.n = String(u.raw.name_en);
-      else if (u.n) u.n = eqProductNameEn(u.n, u.raw || u);
-      if (u.raw && u.raw.specs_en) u.specs = String(u.raw.specs_en);
+      var raw = u.raw || u;
+      var pe = productEnEntry(raw);
+      if (pe && pe.n) u.n = String(pe.n);
+      else if (raw && raw.name_en) u.n = String(raw.name_en);
+      else if (u.n) u.n = eqProductNameEn(u.n, raw);
+      if (pe && pe.s) u.specs = String(pe.s);
+      else if (raw && raw.specs_en) u.specs = String(raw.specs_en);
       else if (u.specs) u.specs = eqTranslateSpecEn(u.specs);
     }
     return u;
@@ -219,7 +270,15 @@
       [/davlumbaz/gi, 'hood'],
       [/tezgah/gi, 'work table'],
       [/konteyner/gi, 'container'],
-      [/iskonto/gi, 'discount']
+      [/iskonto/gi, 'discount'],
+      [/yufka\s*yedek\s*acma/gi, 'Yufka dough sheeter spare'],
+      [/yufka\s*yedek\s*a[cç]ma/gi, 'Yufka dough sheeter spare'],
+      [/hamur\s*acma\s*makin/gi, 'dough sheeter'],
+      [/hamur\s*a[cç]ma\s*makin/gi, 'dough sheeter'],
+      [/hamur\s*yogurma|hamur\s*yo[gğ]urma/gi, 'dough mixer'],
+      [/merdane\s*hiz\s*kontrollu/gi, 'speed-controlled roller'],
+      [/merdane/gi, 'roller'],
+      [/hiz\s*kontrollu/gi, 'speed-controlled']
     ];
     for (var i = 0; i < reps.length; i++) {
       t = t.replace(reps[i][0], reps[i][1]);
@@ -239,7 +298,13 @@
     if (!obj || typeof obj[method] !== 'function' || obj['__eqTermHook_' + method]) return;
     var orig = obj[method];
     obj[method] = function () {
-      return Promise.resolve(orig.apply(obj, arguments)).then(function (list) {
+      var chain = Promise.resolve(orig.apply(obj, arguments));
+      if (window.eqLang === 'en') {
+        chain = chain.then(function (list) {
+          return loadProductEnOverlay().then(function () { return list; });
+        });
+      }
+      return chain.then(function (list) {
         return polishCatalogList(list);
       });
     };
@@ -263,8 +328,12 @@
   if (typeof document !== 'undefined') {
     loadSpecTerms();
     document.addEventListener('eq-i18n-ready', function () {
-      if (window.eqLang === 'en') loadSpecTerms();
+      if (window.eqLang === 'en') {
+        loadSpecTerms();
+        loadProductEnOverlay();
+      }
     });
+    if (window.eqLang === 'en') loadProductEnOverlay();
     document.addEventListener('DOMContentLoaded', hookIndexAllProducts);
     setTimeout(hookIndexAllProducts, 0);
     setTimeout(hookIndexAllProducts, 120);

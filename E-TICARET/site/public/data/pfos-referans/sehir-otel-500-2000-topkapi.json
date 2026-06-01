@@ -1,0 +1,773 @@
+{
+  "kategoriId": "sehir-otel",
+  "bantId": "500-2000-topkapi",
+  "label": "Şehir Oteli (Business) 500–2000 m² (DoubleTree Topkapı)",
+  "referansM2": 1000,
+  "kaynakDosya": "2017-050 DOUBLETREE HILTON TOPKAPI/2017-050.xlsx",
+  "not": "140 odalı şehir/business otel · lounge · yer ızgarası · ana mutfak · banquet · bulaşıkhane",
+  "yukleme": "2026-05-31T15:34:37.309Z",
+  "kalemSayisi": 95,
+  "toplamAdet": 116,
+  "kalemler": [
+    {
+      "bolum": "L",
+      "bolumAd": "LOUNGE MUTFAK",
+      "poz": "A1",
+      "ad": "TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
+      "olcu": "186*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "L",
+      "bolumAd": "LOUNGE MUTFAK",
+      "poz": "A2",
+      "ad": "DUVAR DOLABI",
+      "olcu": "186*40*60",
+      "adet": 1
+    },
+    {
+      "bolum": "L",
+      "bolumAd": "LOUNGE MUTFAK",
+      "poz": "A3",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+      "olcu": "120*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "L",
+      "bolumAd": "LOUNGE MUTFAK",
+      "poz": "A4",
+      "ad": "DUVAR DOLABI",
+      "olcu": "120*40*60",
+      "adet": 1
+    },
+    {
+      "bolum": "L",
+      "bolumAd": "LOUNGE MUTFAK",
+      "poz": "A5",
+      "ad": "MİKRODALGA FIRIN",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "L",
+      "bolumAd": "LOUNGE MUTFAK",
+      "poz": "A6",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+      "olcu": "60*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "L",
+      "bolumAd": "LOUNGE MUTFAK",
+      "poz": "A7",
+      "ad": "CİHAZALTI BUZDOLABI, ÇEKMECELİ",
+      "olcu": "186*60*60",
+      "adet": 1
+    },
+    {
+      "bolum": "L",
+      "bolumAd": "LOUNGE MUTFAK",
+      "poz": "A8",
+      "ad": "IZGARA, GAZLI, ETÜSTÜ",
+      "olcu": "40*60*30",
+      "adet": 1
+    },
+    {
+      "bolum": "L",
+      "bolumAd": "LOUNGE MUTFAK",
+      "poz": "A9",
+      "ad": "SOS BAINMARIE, ELK., SETÜSTÜ",
+      "olcu": "40*60*30",
+      "adet": 1
+    },
+    {
+      "bolum": "L",
+      "bolumAd": "LOUNGE MUTFAK",
+      "poz": "A10",
+      "ad": "2 AÇIK ALEVLİ OCAK, GAZLI, SETÜSTÜ",
+      "olcu": "40*60*30",
+      "adet": 1
+    },
+    {
+      "bolum": "L",
+      "bolumAd": "LOUNGE MUTFAK",
+      "poz": "A11",
+      "ad": "NÖTR ARA TEZGAH, SETÜSTÜ",
+      "olcu": "70*60*30",
+      "adet": 1
+    },
+    {
+      "bolum": "L",
+      "bolumAd": "LOUNGE MUTFAK",
+      "poz": "A12",
+      "ad": "TOST MAKİNASI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "L",
+      "bolumAd": "LOUNGE MUTFAK",
+      "poz": "A13",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
+      "olcu": "210*80*50",
+      "adet": 1
+    },
+    {
+      "bolum": "L",
+      "bolumAd": "LOUNGE MUTFAK",
+      "poz": "A14",
+      "ad": "TAVA RAFI",
+      "olcu": "120*35*35",
+      "adet": 1
+    },
+    {
+      "bolum": "L",
+      "bolumAd": "LOUNGE MUTFAK",
+      "poz": "A15",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "160*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "L",
+      "bolumAd": "LOUNGE MUTFAK",
+      "poz": "A16",
+      "ad": "DUVAR RAFI",
+      "olcu": "160*30*4",
+      "adet": 1
+    },
+    {
+      "bolum": "L",
+      "bolumAd": "LOUNGE MUTFAK",
+      "poz": "A17",
+      "ad": "BULAŞIK YIKAMA MAKİNASI, SETALTI",
+      "olcu": "500 tb/s",
+      "adet": 1
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "YER IZGARASI",
+      "poz": "Y1",
+      "ad": "YER IZGARASI",
+      "olcu": "30*30*14",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "ANA MUTFAK DERİN DONDURUCU DEPO",
+      "poz": "B1",
+      "ad": "PANEL TİP DERİN DONDURUCU ODA",
+      "olcu": "240*270*240",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "ANA MUTFAK DERİN DONDURUCU DEPO",
+      "poz": "B2",
+      "ad": "İSTİF RAFI",
+      "olcu": "107*53*160",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "ANA MUTFAK DERİN DONDURUCU DEPO",
+      "poz": "B3",
+      "ad": "İSTİF RAFI",
+      "olcu": "152*53*160",
+      "adet": 1
+    },
+    {
+      "bolum": "A",
+      "bolumAd": "ANA MUTFAK DERİN DONDURUCU DEPO",
+      "poz": "B4",
+      "ad": "İSTİF RAFI",
+      "olcu": "183*53*160",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PERSONEL YEMEKHANESİ",
+      "poz": "C1",
+      "ad": "KUVER ÜNİTESİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PERSONEL YEMEKHANESİ",
+      "poz": "C2",
+      "ad": "BAINMARIE",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PERSONEL YEMEKHANESİ",
+      "poz": "C3",
+      "ad": "SERVİS TEZGAHI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PERSONEL YEMEKHANESİ",
+      "poz": "C4",
+      "ad": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+      "olcu": "70*80*205",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PERSONEL YEMEKHANESİ",
+      "poz": "C5",
+      "ad": "BANKET ARABASI",
+      "olcu": "12 GN 2/1",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PERSONEL YEMEKHANESİ",
+      "poz": "C6",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+      "olcu": "160*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PERSONEL YEMEKHANESİ",
+      "poz": "C7",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+      "olcu": "160*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PERSONEL YEMEKHANESİ",
+      "poz": "C8",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+      "olcu": "160*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PERSONEL YEMEKHANESİ",
+      "poz": "C9",
+      "ad": "ÇAY OTOMATI",
+      "olcu": "23 lt.",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PERSONEL BULAŞIKHANE",
+      "poz": "D1",
+      "ad": "TEK EVYELİ ÇALIMA TEZGAHI",
+      "olcu": "160*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PERSONEL BULAŞIKHANE",
+      "poz": "D2",
+      "ad": "DUVAR RAFI",
+      "olcu": "160*30*4",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PERSONEL BULAŞIKHANE",
+      "poz": "D3",
+      "ad": "BULAŞIK YIKAMA MAKİNASI, SETALTI",
+      "olcu": "500 tb/s",
+      "adet": 1
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PERSONEL BULAŞIKHANE",
+      "poz": "D4",
+      "ad": "İSTİF RAFI",
+      "olcu": "152*53*160",
+      "adet": 2
+    },
+    {
+      "bolum": "P",
+      "bolumAd": "PERSONEL BULAŞIKHANE",
+      "poz": "D5",
+      "ad": "TEPSİ TOPLAMA ARABASI",
+      "olcu": "15 TEPSİ",
+      "adet": 2
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "YER IZGARASI",
+      "poz": "Y1",
+      "ad": "YER IZGARASI",
+      "olcu": "30*30*14",
+      "adet": 1
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E1",
+      "ad": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+      "olcu": "—",
+      "adet": 2
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E2",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+      "olcu": "160*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E3",
+      "ad": "DUVAR RAFI",
+      "olcu": "160*30*4",
+      "adet": 1
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E4",
+      "ad": "PİZZA HAZIRLIK BUZDOLABI, MERMER TABLALI, 2 KAPILI",
+      "olcu": "143*70*85/135",
+      "adet": 1
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E5",
+      "ad": "HAMUR YOĞURMA MAKİNASI",
+      "olcu": "35 kg/sefer",
+      "adet": 1
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E6",
+      "ad": "FIRIN TEZGAHI",
+      "olcu": "130*80*85",
+      "adet": 1
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E7",
+      "ad": "PİZZA FIRINI, ÇİFT KATLI",
+      "olcu": "6262DE",
+      "adet": 1
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E8",
+      "ad": "FIRIN DAVLUMBAZI",
+      "olcu": "130*110*20",
+      "adet": 1
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E9",
+      "ad": "ÇİFT EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "120*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E10",
+      "ad": "DUVAR RAFI",
+      "olcu": "120*30*4",
+      "adet": 1
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E11",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+      "olcu": "210*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E12",
+      "ad": "DUVAR RAFI",
+      "olcu": "210*30*4",
+      "adet": 1
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E13",
+      "ad": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
+      "olcu": "70*80*205",
+      "adet": 1
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E14",
+      "ad": "DEPO TİPİ DERİN DONDURUCU, TEK KAPILI",
+      "olcu": "70*80*205",
+      "adet": 1
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E15",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
+      "olcu": "180*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E16",
+      "ad": "DUVAR RAFI",
+      "olcu": "180*30*4",
+      "adet": 1
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E17",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "70*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E18",
+      "ad": "MAKE-UP BUZDOLABI, YÜKSEK BORULU",
+      "olcu": "186*70*85/135",
+      "adet": 1
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E19",
+      "ad": "FIRIN TEZGAHI, TEPSİ İSTİFLİ, TABAN VE ARA RAFLI",
+      "olcu": "140*80*85",
+      "adet": 1
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E20",
+      "ad": "COMBI FIRIN",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E21",
+      "ad": "CİHAZLATI BUZDOLABI, ÇEKMECELİ",
+      "olcu": "143*70*60",
+      "adet": 2
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E22",
+      "ad": "NÖTR ARA TEZGAH, SETÜSTÜ",
+      "olcu": "20*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E23",
+      "ad": "FRİTÖZ, TEK SEPETLİ, ELK., SETÜSTÜ",
+      "olcu": "40*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E24",
+      "ad": "4 AÇIK ALEVLİ OCAK, GAZLI, SETÜSTÜ",
+      "olcu": "80*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E25",
+      "ad": "DÖKÜM IZGARA, GAZLI, SETÜSTÜ",
+      "olcu": "80*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E26",
+      "ad": "NÖTR ARA TEZGAH, SETÜSTÜ",
+      "olcu": "65*70*30",
+      "adet": 1
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E27",
+      "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
+      "olcu": "140*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E28",
+      "ad": "MİKRODALGA FIRIN",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E29",
+      "ad": "SALAMANDER, ELK., ASANSÖRLÜ",
+      "olcu": "60*60*85",
+      "adet": 1
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E30",
+      "ad": "TOST MAKİNASI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E31",
+      "ad": "TAVA VE SALAMANDER RAFI",
+      "olcu": "180*35*35",
+      "adet": 1
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E32",
+      "ad": "DAVLUMBAZ, ORTA TİP, FİLTRELİ",
+      "olcu": "350*200*50",
+      "adet": 1
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E33",
+      "ad": "SERVİS TEZGAHI, TABAN VE ARA RAFLI, SICAKLIK DOLAPLI",
+      "olcu": "165*70*85",
+      "adet": 2
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E34",
+      "ad": "SERVİS RAFI",
+      "olcu": "165*40*60",
+      "adet": 2
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E35",
+      "ad": "INFRARED ISITICI",
+      "olcu": "—",
+      "adet": 3
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E36",
+      "ad": "SERVİS TEZGAHI, TABAN VE ARA RAFLI",
+      "olcu": "170*70*85",
+      "adet": 1
+    },
+    {
+      "bolum": "R",
+      "bolumAd": "RESTAURANT MUTFAĞI",
+      "poz": "E37",
+      "ad": "INDÜKSİYONLU OCAK, SETÜSTÜ",
+      "olcu": "38*44*15",
+      "adet": 2
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BANKET HATTI",
+      "poz": "F1",
+      "ad": "ÇALIŞMA TEGAHI",
+      "olcu": "—",
+      "adet": 3
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BANKET HATTI",
+      "poz": "F2",
+      "ad": "DUVAR RAFI",
+      "olcu": "—",
+      "adet": 3
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BANKET HATTI",
+      "poz": "F3",
+      "ad": "BANKET ARABASI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BARDAK YIKAMA",
+      "poz": "G1",
+      "ad": "BUZ MAKİNASI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BARDAK YIKAMA",
+      "poz": "G2",
+      "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BARDAK YIKAMA",
+      "poz": "G3",
+      "ad": "DUVAR RAFI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BARDAK YIKAMA",
+      "poz": "G4",
+      "ad": "BARDAK YIKAMA MAKİNASI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BARDAK YIKAMA",
+      "poz": "G5",
+      "ad": "ÇALIŞMA TEGAHI, DOLAPLI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BARDAK YIKAMA",
+      "poz": "G6",
+      "ad": "ÇAY OCAĞI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BARDAK YIKAMA",
+      "poz": "G7",
+      "ad": "DAVLUMBAZ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIKHANE",
+      "poz": "H1",
+      "ad": "SIYIRMA TEZGAHI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIKHANE",
+      "poz": "H2",
+      "ad": "BASKET RAFI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIKHANE",
+      "poz": "H3",
+      "ad": "ÇÖP ARABASI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIKHANE",
+      "poz": "H4",
+      "ad": "ÇİFT EVYELİ ÇALIŞMA TEZGAHI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIKHANE",
+      "poz": "H5",
+      "ad": "ÖN YIKAMA DUŞU",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIKHANE",
+      "poz": "H6",
+      "ad": "BULAŞIK YIKAMA MAKİNASI, GİYOTİN TİP",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIKHANE",
+      "poz": "H7",
+      "ad": "DAVLUMBAZ, DUVAR TİPİ",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIKHANE",
+      "poz": "H8",
+      "ad": "BYM ÇIKIŞ TEZGAHI",
+      "olcu": "—",
+      "adet": 1
+    },
+    {
+      "bolum": "B",
+      "bolumAd": "BULAŞIKHANE",
+      "poz": "H9",
+      "ad": "İSTİF RAFI",
+      "olcu": "—",
+      "adet": 4
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "YER IZGARASI",
+      "poz": "Y1",
+      "ad": "YER IZGARASI",
+      "olcu": "30*30*14",
+      "adet": 1
+    },
+    {
+      "bolum": "Y",
+      "bolumAd": "YER IZGARASI",
+      "poz": "Y2",
+      "ad": "YER IZGARASI",
+      "olcu": "120*30*14",
+      "adet": 6
+    }
+  ]
+}

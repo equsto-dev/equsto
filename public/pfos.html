@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
@@ -2735,7 +2735,7 @@ function buildEkipmanList() {
     return pfosPostProcessCatalogItems(list);
   }
   const ctx = {
-    konsept: D.konsept,
+    konsept: typeof pfosKonseptLegacy==='function' ? pfosKonseptLegacy(D.konsept) : D.konsept,
     dukkan: D.dukkan || '',
     alt: D.alt || '',
     pisir: D.pisir || [],
@@ -3207,12 +3207,19 @@ function think(msg, cb){ /* TODO: spinner animasyonu */ if(typeof cb==='function
 
 // ── Init ──────────────────────────────────────────────────────────────────────
 function pfosBootWizard(){
-  pfosFillOpts('o1',MESLEKLER,'setMeslek',D.meslek);
-  renderKonseptButtons();
-  initTrAdres().then(function(){ refreshWizardHint(); });
-  refreshWizardHint();
-  pfMobileInit();
-  loadPfosProjects().then(function(){ refreshKonseptRail(); });
+  function boot(){
+    pfosFillOpts('o1',MESLEKLER,'setMeslek',D.meslek);
+    renderKonseptButtons();
+    initTrAdres().then(function(){ refreshWizardHint(); });
+    refreshWizardHint();
+    pfMobileInit();
+    loadPfosProjects().then(function(){ refreshKonseptRail(); });
+  }
+  if(typeof window.pfosLoadWizardSchema==='function'){
+    window.pfosLoadWizardSchema().finally(boot);
+  }else{
+    boot();
+  }
 }
 if(document.readyState==='loading'){
   document.addEventListener('DOMContentLoaded',pfosBootWizard);
@@ -3821,6 +3828,17 @@ function pfosDefaultPisirForDukkan(dukkan) {
 
 function setDukkan(val){
   D.dukkan=val; D.alt=null; D.pisir=pfosDefaultPisirForDukkan(val);
+  if(typeof pfosSuggestM2ForDukkan==='function'){
+    const m2h=pfosSuggestM2ForDukkan(val);
+    if(m2h&&m2h.ref){
+      D.alan=m2h.ref;
+      const inp=document.getElementById('alan-inp');
+      const sl=document.getElementById('alan-slider');
+      if(inp) inp.value=m2h.ref;
+      if(sl){ sl.min=Math.max(20,m2h.min); sl.max=Math.min(1000,m2h.max); sl.value=m2h.ref; }
+      if(typeof onAlan==='function') onAlan();
+    }
+  }
   document.querySelectorAll('#s4-bd .opt').forEach(b=>b.classList.toggle('sel',b.dataset.v===val));
   document.getElementById('a4').textContent=val;
   done('s4'); hideFrom('s4b');

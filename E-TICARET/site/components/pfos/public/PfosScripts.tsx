@@ -46,6 +46,16 @@ export default function PfosScripts() {
       <AssetCdnConfigScript />
       <Script src={`/eq-site-urls.js?v=${v}`} strategy="beforeInteractive" />
       <Script
+        src={`/eq-i18n.js?v=${v}`}
+        strategy="afterInteractive"
+        onReady={() => {
+          try {
+            if (typeof window.__eqRerenderNav === "function") window.__eqRerenderNav();
+          } catch (_) {}
+        }}
+      />
+      <Script src={`/eq-pfos-i18n.js?v=${v}`} strategy="afterInteractive" />
+      <Script
         src={`/equsto-logo.js?v=${v}`}
         strategy="afterInteractive"
         onReady={() => window.EQUSTO_LOGO_REFRESH?.()}
@@ -58,6 +68,7 @@ export default function PfosScripts() {
         onReady={() => window.EqustoCart?.syncBadge?.()}
       />
       <Script src={`/eq-footer.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/equsto-member.js?v=${v}`} strategy="lazyOnload" />
       <Script src={`/contact.js?v=${v}`} strategy="lazyOnload" />
     </>
   );

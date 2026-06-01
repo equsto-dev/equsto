@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "updated_at": "2026-05-31T03:26:42.225Z",
+  "updated_at": "2026-05-31T15:34:37.314Z",
   "kategoriler": [
     {
       "id": "steakhouse",
@@ -503,6 +503,18 @@
             "kaynakDosya": "2016-077 HILTON KOCAELİ LAINOX/2016-077.xlsx",
             "yukleme": "2026-05-31T01:40:12.432Z"
           }
+        },
+        {
+          "id": "500-2000-topkapi",
+          "label": "500–2000 m² (DoubleTree Topkapı · 140 oda)",
+          "referansM2": 1000,
+          "meta": {
+            "listeDosya": "sehir-otel-500-2000-topkapi.json",
+            "kalemSayisi": 95,
+            "toplamAdet": 116,
+            "kaynakDosya": "2017-050 DOUBLETREE HILTON TOPKAPI/2017-050.xlsx",
+            "yukleme": "2026-05-31T15:34:37.309Z"
+          }
         }
       ]
     },
@@ -691,6 +703,76 @@
             "kaynakDosya": "2016-159 ZİGANA OTEL LAINOX/MUTFAK MALZEME zigana resort hotel alaçatı.xls",
             "yukleme": "2026-05-31T03:26:42.218Z",
             "konseptSinif": "resort-otel-olcekli"
+          }
+        }
+      ]
+    },
+    {
+      "id": "yerinde-uretim",
+      "label": "Yerinde Üretim (fabrika mutfağı)",
+      "ustKategori": "Catering",
+      "bantlar": [
+        {
+          "id": "20-60",
+          "label": "20–60 kişi (Liva 178)",
+          "referansM2": 40,
+          "meta": {
+            "listeDosya": "yerinde-uretim-20-60.json",
+            "kalemSayisi": 18,
+            "toplamAdet": 18,
+            "kaynakDosya": "2016-178 LİVA FABRİKA/2016-178.xlsx",
+            "yukleme": "2026-05-31T11:18:07.472Z",
+            "konseptSinif": "yerinde-uretim-mutfak"
+          }
+        }
+      ]
+    },
+    {
+      "id": "turk-restoran",
+      "label": "Türk Restoranı",
+      "ustKategori": "Restoran",
+      "bantlar": [
+        {
+          "id": "150-300",
+          "label": "150–300 m² (S13-388)",
+          "referansM2": 220,
+          "meta": {
+            "listeDosya": "lib/pfos/data/pfos-s13-388-referanslar.json",
+            "konseptSinif": "s13-388-turk",
+            "kaynakDosya": "S13-388-2-Model.pdf",
+            "not": "Gömülü referans — silinmez"
+          }
+        },
+        {
+          "id": "200-5000",
+          "label": "200–5000 m² (Sütiş Şişhane)",
+          "referansM2": 500,
+          "meta": {
+            "listeDosya": "turk-restoran-200-5000.json",
+            "kalemSayisi": 77,
+            "toplamAdet": 84,
+            "kaynakDosya": "2017-006 SÜTİŞ ŞİŞHANE/2017-006-2.xlsx",
+            "yukleme": "2026-05-31T12:44:02.643Z",
+            "konseptSinif": "turk-restoran-sutis"
+          }
+        }
+      ]
+    },
+    {
+      "id": "casual-cafe",
+      "label": "Casual Cafe",
+      "ustKategori": "Kafe / Coffee Shop",
+      "bantlar": [
+        {
+          "id": "50-150",
+          "label": "50–150 m²",
+          "referansM2": 100,
+          "meta": {
+            "listeDosya": "casual-cafe-50-150.json",
+            "kalemSayisi": 49,
+            "toplamAdet": 49,
+            "kaynakDosya": "2017-026 BEYKENT ŞİFA CAFE/2017-026.xlsx",
+            "yukleme": "2026-05-31T13:58:42.688Z"
           }
         }
       ]

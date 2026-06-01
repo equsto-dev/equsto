@@ -21,7 +21,7 @@
       "bolum": "SOĞUK_ODA",
       "bolumAd": "SOĞUK ODA",
       "poz": "2P1-02",
-      "ad": "GN ARABA, PORTASHELF, MT162X",
+      "ad": "GN ARABA, MT162X",
       "olcu": "660x580x1720",
       "adet": 4
     },
@@ -29,7 +29,7 @@
       "bolum": "SOĞUK_ODA",
       "bolumAd": "SOĞUK ODA",
       "poz": "2P1-03",
-      "ad": "İSTİF ETAJERİ, PORTASHELF, 304K PASLANMAZ",
+      "ad": "İSTİF ETAJERİ, 304K PASLANMAZ",
       "olcu": "1830x460x1830",
       "adet": 4
     },
@@ -37,7 +37,7 @@
       "bolum": "SOĞUK_ODA",
       "bolumAd": "SOĞUK ODA",
       "poz": "2P1-04",
-      "ad": "İSTİF ETAJERİ, PORTASHELF, 304K PASLANMAZ",
+      "ad": "İSTİF ETAJERİ, 304K PASLANMAZ",
       "olcu": "1520x460x1830",
       "adet": 1
     },
@@ -93,7 +93,7 @@
       "bolum": "ISITMA_MUTFA",
       "bolumAd": "ISITMA MUTFAĞI",
       "poz": "2P1-16",
-      "ad": "ÇÖP ARABASI, PORTASHELF, MB126X",
+      "ad": "ÇÖP ARABASI, MB126X",
       "olcu": "Ø50",
       "adet": 1
     },
@@ -101,7 +101,7 @@
       "bolum": "ISITMA_MUTFA",
       "bolumAd": "ISITMA MUTFAĞI",
       "poz": "2P1-20",
-      "ad": "İSTİF ETAJERİ, PORTASHELF, 304K PASLANMAZ",
+      "ad": "İSTİF ETAJERİ, 304K PASLANMAZ",
       "olcu": "1830x460x1830",
       "adet": 1
     },
@@ -109,7 +109,7 @@
       "bolum": "ISITMA_MUTFA",
       "bolumAd": "ISITMA MUTFAĞI",
       "poz": "2P1-21",
-      "ad": "İSTİF ETAJERİ, PORTASHELF, 304K PASLANMAZ",
+      "ad": "İSTİF ETAJERİ, 304K PASLANMAZ",
       "olcu": "1520x460x1830",
       "adet": 1
     },
@@ -133,7 +133,7 @@
       "bolum": "SERVİS_1",
       "bolumAd": "SERVİS 1",
       "poz": "2P1-32",
-      "ad": "SICAK BANKET ARABASI, PORTASHELF, MBY211S",
+      "ad": "SICAK BANKET ARABASI, MBY211S",
       "olcu": "780x840x1700",
       "adet": 2
     },
@@ -181,7 +181,7 @@
       "bolum": "SERVİS_1",
       "bolumAd": "SERVİS 1",
       "poz": "2P1-42",
-      "ad": "TEPSI OTOMATI, PORTASHELF, M0180X",
+      "ad": "TEPSI OTOMATI, M0180X",
       "olcu": "590x590x900",
       "adet": 1
     },
@@ -245,7 +245,7 @@
       "bolum": "BULAŞIK",
       "bolumAd": "BULAŞIK",
       "poz": "2P1-58",
-      "ad": "ÇÖP ARABASI, PORTASHELF, MB126X",
+      "ad": "ÇÖP ARABASI, MB126X",
       "olcu": "Ø50",
       "adet": 1
     },
@@ -293,7 +293,7 @@
       "bolum": "BULAŞIK",
       "bolumAd": "BULAŞIK",
       "poz": "2P1-64",
-      "ad": "İSTİF ETAJERİ, PORTASHELF, 304K PASLANMAZ",
+      "ad": "İSTİF ETAJERİ, 304K PASLANMAZ",
       "olcu": "1830x460x1830",
       "adet": 1
     },
@@ -301,7 +301,7 @@
       "bolum": "BULAŞIK",
       "bolumAd": "BULAŞIK",
       "poz": "2P1-65",
-      "ad": "İSTİF ETAJERİ, PORTASHELF, 304K PASLANMAZ",
+      "ad": "İSTİF ETAJERİ, 304K PASLANMAZ",
       "olcu": "1520x460x1830",
       "adet": 1
     },
@@ -309,7 +309,7 @@
       "bolum": "BULAŞIK",
       "bolumAd": "BULAŞIK",
       "poz": "2P1-66",
-      "ad": "BOS TEPSI TOPLAMA ARABASI, PORTASHELF, MB102X",
+      "ad": "BOS TEPSI TOPLAMA ARABASI, MB102X",
       "olcu": "830x570x1600",
       "adet": 3
     },
@@ -333,7 +333,7 @@
       "bolum": "ISITMA_MUTFA",
       "bolumAd": "ISITMA MUTFAĞI 2",
       "poz": "2P2-04",
-      "ad": "SICAK BANKET ARABASI, PORTASHELF, MBY211S",
+      "ad": "SICAK BANKET ARABASI, MBY211S",
       "olcu": "780x840x1700",
       "adet": 2
     },
@@ -357,7 +357,7 @@
       "bolum": "ISITMA_MUTFA",
       "bolumAd": "ISITMA MUTFAĞI 2",
       "poz": "2P2-08",
-      "ad": "ÇÖP ARABASI, PORTASHELF, MB126X",
+      "ad": "ÇÖP ARABASI, MB126X",
       "olcu": "Ø50",
       "adet": 1
     },
@@ -421,7 +421,7 @@
       "bolum": "SERVİS_2",
       "bolumAd": "SERVİS 2",
       "poz": "2P2-25",
-      "ad": "ÇÖP ARABASI, PORTASHELF, MB126X",
+      "ad": "ÇÖP ARABASI, MB126X",
       "olcu": "Ø50",
       "adet": 1
     },
@@ -445,7 +445,7 @@
       "bolum": "SERVİS_2",
       "bolumAd": "SERVİS 2",
       "poz": "2P2-30",
-      "ad": "TEPSI OTOMATI, PORTASHELF, M0180X",
+      "ad": "TEPSI OTOMATI, M0180X",
       "olcu": "590x590x900",
       "adet": 1
     },
@@ -501,7 +501,7 @@
       "bolum": "EKMEK_&_SU",
       "bolumAd": "EKMEK & SU",
       "poz": "2P2-43",
-      "ad": "İSTİF ETAJERİ, PORTASHELF, 304K PASLANMAZ",
+      "ad": "İSTİF ETAJERİ, 304K PASLANMAZ",
       "olcu": "1520x460x1830",
       "adet": 1
     },
@@ -533,7 +533,7 @@
       "bolum": "BULAŞIK",
       "bolumAd": "BULAŞIK",
       "poz": "2P2-58",
-      "ad": "ÇÖP ARABASI, PORTASHELF, MB126X",
+      "ad": "ÇÖP ARABASI, MB126X",
       "olcu": "Ø50",
       "adet": 1
     },
@@ -581,7 +581,7 @@
       "bolum": "BULAŞIK",
       "bolumAd": "BULAŞIK",
       "poz": "2P2-64",
-      "ad": "İSTİF ETAJERİ, PORTASHELF, 304K PASLANMAZ",
+      "ad": "İSTİF ETAJERİ, 304K PASLANMAZ",
       "olcu": "1830x460x1830",
       "adet": 2
     },
@@ -589,7 +589,7 @@
       "bolum": "BULAŞIK",
       "bolumAd": "BULAŞIK",
       "poz": "2P2-66",
-      "ad": "BOS TEPSI TOPLAMA ARABASI, PORTASHELF, MB102X",
+      "ad": "BOS TEPSI TOPLAMA ARABASI, MB102X",
       "olcu": "830x570x1600",
       "adet": 8
     },
@@ -597,7 +597,7 @@
       "bolum": "YER_IZGARALA",
       "bolumAd": "YER IZGARALARI",
       "poz": "DR-01",
-      "ad": "YER IZGARASI, PORTASHELF, B2 SIĞ TİP",
+      "ad": "YER IZGARASI, B2 SIĞ TİP",
       "olcu": "300x300",
       "adet": 2
     },
@@ -605,7 +605,7 @@
       "bolum": "YER_IZGARALA",
       "bolumAd": "YER IZGARALARI",
       "poz": "DR-02",
-      "ad": "YER IZGARASI, PORTASHELF, B2 SIĞ TİP",
+      "ad": "YER IZGARASI, B2 SIĞ TİP",
       "olcu": "500x300",
       "adet": 3
     },
@@ -613,7 +613,7 @@
       "bolum": "YER_IZGARALA",
       "bolumAd": "YER IZGARALARI",
       "poz": "DR-03",
-      "ad": "YER IZGARASI, PORTASHELF, B2 SIĞ TİP",
+      "ad": "YER IZGARASI, B2 SIĞ TİP",
       "olcu": "1200x300",
       "adet": 1
     },
@@ -717,7 +717,7 @@
       "bolum": "GENEL_ALANLA",
       "bolumAd": "GENEL ALANLAR",
       "poz": "MK-020",
-      "ad": "İSTİF ETAJERİ, PORTASHELF, 304K PASLANMAZ",
+      "ad": "İSTİF ETAJERİ, 304K PASLANMAZ",
       "olcu": "1520x460x1830",
       "adet": 43
     },
@@ -725,7 +725,7 @@
       "bolum": "GENEL_ALANLA",
       "bolumAd": "GENEL ALANLAR",
       "poz": "MK-021",
-      "ad": "İSTİF ETAJERİ, PORTASHELF, 304K PASLANMAZ",
+      "ad": "İSTİF ETAJERİ, 304K PASLANMAZ",
       "olcu": "1830x460x1830",
       "adet": 24
     },
@@ -733,7 +733,7 @@
       "bolum": "GENEL_ALANLA",
       "bolumAd": "GENEL ALANLAR",
       "poz": "MK-022",
-      "ad": "GN ARABA, PORTASHELF, MT162X",
+      "ad": "GN ARABA, MT162X",
       "olcu": "660x580x1720",
       "adet": 11
     },
@@ -741,7 +741,7 @@
       "bolum": "GENEL_ALANLA",
       "bolumAd": "GENEL ALANLAR",
       "poz": "MK-023",
-      "ad": "İSTİF ETAJERİ, PORTASHELF, 304K PASLANMAZ",
+      "ad": "İSTİF ETAJERİ, 304K PASLANMAZ",
       "olcu": "1830x460x1830",
       "adet": 16
     },
@@ -749,7 +749,7 @@
       "bolum": "GENEL_ALANLA",
       "bolumAd": "GENEL ALANLAR",
       "poz": "MK-024",
-      "ad": "YER ETAJERİ, PORTASHELF, M80040",
+      "ad": "YER ETAJERİ, M80040",
       "olcu": "910x530x200",
       "adet": 9
     },
@@ -757,7 +757,7 @@
       "bolum": "GENEL_ALANLA",
       "bolumAd": "GENEL ALANLAR",
       "poz": "MK-025",
-      "ad": "PLATFORM ARABA, PORTASHELF, MT192G",
+      "ad": "PLATFORM ARABA, MT192G",
       "olcu": "650x950x930",
       "adet": 1
     },
@@ -781,7 +781,7 @@
       "bolum": "GENEL_ALANLA",
       "bolumAd": "GENEL ALANLAR",
       "poz": "MK-028",
-      "ad": "YER ETAJERİ, PORTASHELF, M0682136P1834K",
+      "ad": "YER ETAJERİ, M0682136P1834K",
       "olcu": "910x530x200",
       "adet": 3
     },
@@ -861,7 +861,7 @@
       "bolum": "SEBZE_ON_HAZ",
       "bolumAd": "SEBZE ON HAZIRLIK & SEBZE HAZIRLIK",
       "poz": "MK-046",
-      "ad": "SEBZE TASIMA ARABASI, PORTASHELF, MT140X",
+      "ad": "SEBZE TASIMA ARABASI, MT140X",
       "olcu": "900x600x500",
       "adet": 2
     },
@@ -885,7 +885,7 @@
       "bolum": "SEBZE_ON_HAZ",
       "bolumAd": "SEBZE ON HAZIRLIK & SEBZE HAZIRLIK",
       "poz": "MK-049",
-      "ad": "ÇÖP ARABASI, PORTASHELF, MB126X",
+      "ad": "ÇÖP ARABASI, MB126X",
       "olcu": "Ø50",
       "adet": 1
     },
@@ -901,7 +901,7 @@
       "bolum": "SEBZE_ON_HAZ",
       "bolumAd": "SEBZE ON HAZIRLIK & SEBZE HAZIRLIK",
       "poz": "MK-051",
-      "ad": "BICAK STERIL DOLABI, PORTASHELF, M08220",
+      "ad": "BICAK STERIL DOLABI, M08220",
       "olcu": "520x140x520",
       "adet": 1
     },
@@ -989,7 +989,7 @@
       "bolum": "ET_HAZIRLIK",
       "bolumAd": "ET HAZIRLIK",
       "poz": "MK-067",
-      "ad": "ÇÖP ARABASI, PORTASHELF, MB126X",
+      "ad": "ÇÖP ARABASI, MB126X",
       "olcu": "Ø50",
       "adet": 2
     },
@@ -997,7 +997,7 @@
       "bolum": "ET_HAZIRLIK",
       "bolumAd": "ET HAZIRLIK",
       "poz": "MK-068",
-      "ad": "BICAK STERIL DOLABI, PORTASHELF, M08220",
+      "ad": "BICAK STERIL DOLABI, M08220",
       "olcu": "520x140x520",
       "adet": 1
     },
@@ -1085,7 +1085,7 @@
       "bolum": "TAVUK_HAZIRL",
       "bolumAd": "TAVUK HAZIRLIK",
       "poz": "MK-082",
-      "ad": "BICAK STERIL DOLABI, PORTASHELF, M08220",
+      "ad": "BICAK STERIL DOLABI, M08220",
       "olcu": "520x140x520",
       "adet": 1
     },
@@ -1093,7 +1093,7 @@
       "bolum": "TAVUK_HAZIRL",
       "bolumAd": "TAVUK HAZIRLIK",
       "poz": "MK-083",
-      "ad": "ÇÖP ARABASI, PORTASHELF, MB126X",
+      "ad": "ÇÖP ARABASI, MB126X",
       "olcu": "Ø50",
       "adet": 2
     },
@@ -1221,7 +1221,7 @@
       "bolum": "SICAK_MUTFAK",
       "bolumAd": "SICAK MUTFAK",
       "poz": "MK-107",
-      "ad": "ÇÖP ARABASI, PORTASHELF, MB126X",
+      "ad": "ÇÖP ARABASI, MB126X",
       "olcu": "Ø50",
       "adet": 1
     },
@@ -1293,7 +1293,7 @@
       "bolum": "SICAK_MUTFAK",
       "bolumAd": "SICAK MUTFAK",
       "poz": "MK-116",
-      "ad": "ÇÖP ARABASI, PORTASHELF, MB126X",
+      "ad": "ÇÖP ARABASI, MB126X",
       "olcu": "Ø50",
       "adet": 1
     },
@@ -1373,7 +1373,7 @@
       "bolum": "DIYET_MUTFAG",
       "bolumAd": "DIYET MUTFAGI",
       "poz": "MK-132",
-      "ad": "GN ARABA, PORTASHELF, MT162X",
+      "ad": "GN ARABA, MT162X",
       "olcu": "660x580x1720",
       "adet": 6
     },
@@ -1405,7 +1405,7 @@
       "bolum": "DIYET_MUTFAG",
       "bolumAd": "DIYET MUTFAGI",
       "poz": "MK-136",
-      "ad": "ÇÖP ARABASI, PORTASHELF, MB126X",
+      "ad": "ÇÖP ARABASI, MB126X",
       "olcu": "Ø50",
       "adet": 1
     },
@@ -1453,7 +1453,7 @@
       "bolum": "DIYET_MUTFAG",
       "bolumAd": "DIYET MUTFAGI",
       "poz": "MK-140",
-      "ad": "TEPSİ ARABASI, PORTASHELF, MB102X",
+      "ad": "TEPSİ ARABASI, MB102X",
       "olcu": "830x570x1600",
       "adet": 1
     },
@@ -1541,7 +1541,7 @@
       "bolum": "KAHVALTI_SOĞ",
       "bolumAd": "KAHVALTI SOĞUK MUTFAK",
       "poz": "MK-156",
-      "ad": "ÇÖP ARABASI, PORTASHELF, MB126X",
+      "ad": "ÇÖP ARABASI, MB126X",
       "olcu": "Ø50",
       "adet": 1
     },
@@ -1565,7 +1565,7 @@
       "bolum": "KAHVALTI_SOĞ",
       "bolumAd": "KAHVALTI SOĞUK MUTFAK",
       "poz": "MK-160",
-      "ad": "GN ARABA, PORTASHELF, MT162X",
+      "ad": "GN ARABA, MT162X",
       "olcu": "660x580x1720",
       "adet": 2
     },
@@ -1589,7 +1589,7 @@
       "bolum": "TATLI_&_KAHV",
       "bolumAd": "TATLI & KAHVALTI",
       "poz": "MK-167",
-      "ad": "GN ARABA, PORTASHELF, MT162X",
+      "ad": "GN ARABA, MT162X",
       "olcu": "660x580x1720",
       "adet": 3
     },
@@ -1661,7 +1661,7 @@
       "bolum": "TATLI_&_KAHV",
       "bolumAd": "TATLI & KAHVALTI",
       "poz": "MK-176",
-      "ad": "ÇÖP ARABASI, PORTASHELF, MB126X",
+      "ad": "ÇÖP ARABASI, MB126X",
       "olcu": "Ø50",
       "adet": 1
     },
@@ -1781,7 +1781,7 @@
       "bolum": "KAZAN_YIKAMA",
       "bolumAd": "KAZAN YIKAMA",
       "poz": "MK-200",
-      "ad": "İSTİF ETAJERİ, PORTASHELF, 304K PASLANMAZ",
+      "ad": "İSTİF ETAJERİ, 304K PASLANMAZ",
       "olcu": "1520x530x1830",
       "adet": 2
     },
@@ -1789,7 +1789,7 @@
       "bolum": "PORSIYONLAMA",
       "bolumAd": "PORSIYONLAMA MUTFAGI",
       "poz": "MK-210",
-      "ad": "TEPSİ ARABASI, PORTASHELF, MB102X",
+      "ad": "TEPSİ ARABASI, MB102X",
       "olcu": "830x570x1600",
       "adet": 2
     },
@@ -1797,7 +1797,7 @@
       "bolum": "PORSIYONLAMA",
       "bolumAd": "PORSIYONLAMA MUTFAGI",
       "poz": "MK-211",
-      "ad": "ÇATAL KAŞIK ARABASI, PORTASHELF, M120X+A1",
+      "ad": "ÇATAL KAŞIK ARABASI, M120X+A1",
       "olcu": "850x550x900",
       "adet": 2
     },
@@ -1837,7 +1837,7 @@
       "bolum": "PORSIYONLAMA",
       "bolumAd": "PORSIYONLAMA MUTFAGI",
       "poz": "MK-216",
-      "ad": "TABAK ISITMA ARABASI, PORTASHELF, M0112X/ISITMALI",
+      "ad": "TABAK ISITMA ARABASI, M0112X/ISITMALI",
       "olcu": "720x440x940",
       "adet": 3
     },
@@ -1861,7 +1861,7 @@
       "bolum": "PORSIYONLAMA",
       "bolumAd": "PORSIYONLAMA MUTFAGI",
       "poz": "MK-218",
-      "ad": "İSTİF ETAJERİ, PORTASHELF, 304K PASLANMAZ",
+      "ad": "İSTİF ETAJERİ, 304K PASLANMAZ",
       "olcu": "1520x610x1830",
       "adet": 1
     },
@@ -1885,7 +1885,7 @@
       "bolum": "PORSIYONLAMA",
       "bolumAd": "PORSIYONLAMA MUTFAGI",
       "poz": "MK-221",
-      "ad": "İSTİF ETAJERİ, PORTASHELF, 304K PASLANMAZ",
+      "ad": "İSTİF ETAJERİ, 304K PASLANMAZ",
       "olcu": "1520x460x1830",
       "adet": 3
     },
@@ -1893,7 +1893,7 @@
       "bolum": "PORSIYONLAMA",
       "bolumAd": "PORSIYONLAMA MUTFAGI",
       "poz": "MK-222",
-      "ad": "İSTİF ETAJERİ, PORTASHELF, 304K PASLANMAZ",
+      "ad": "İSTİF ETAJERİ, 304K PASLANMAZ",
       "olcu": "1830x460x1830",
       "adet": 4
     },
@@ -1949,7 +1949,7 @@
       "bolum": "BULASIK",
       "bolumAd": "BULASIK",
       "poz": "MK-232",
-      "ad": "ÇÖP ARABASI, PORTASHELF, MB126X",
+      "ad": "ÇÖP ARABASI, MB126X",
       "olcu": "Ø50",
       "adet": 2
     },
@@ -2013,7 +2013,7 @@
       "bolum": "BULASIK",
       "bolumAd": "BULASIK",
       "poz": "MK-240",
-      "ad": "İSTİF ETAJERİ, PORTASHELF, 304K PASLANMAZ",
+      "ad": "İSTİF ETAJERİ, 304K PASLANMAZ",
       "olcu": "1520x460x1830",
       "adet": 3
     },
@@ -2037,7 +2037,7 @@
       "bolum": "BULASIK",
       "bolumAd": "BULASIK",
       "poz": "MK-243",
-      "ad": "YER IZGARASI, PORTASHELF, B2 SIĞ TİP",
+      "ad": "YER IZGARASI, B2 SIĞ TİP",
       "olcu": "3000x300",
       "adet": 1
     },
@@ -2061,7 +2061,7 @@
       "bolum": "PERSONEL_SER",
       "bolumAd": "PERSONEL SERVIS",
       "poz": "MK-252",
-      "ad": "TEPSI OTOMATI, PORTASHELF, M0180X",
+      "ad": "TEPSI OTOMATI, M0180X",
       "olcu": "590x590x900",
       "adet": 1
     },
@@ -2125,7 +2125,7 @@
       "bolum": "PERSONEL_SER",
       "bolumAd": "PERSONEL SERVIS",
       "poz": "MK-260",
-      "ad": "ÇÖP ARABASI, PORTASHELF, MB126X",
+      "ad": "ÇÖP ARABASI, MB126X",
       "olcu": "Ø50",
       "adet": 1
     },
@@ -2253,7 +2253,7 @@
       "bolum": "BULASIK",
       "bolumAd": "BULASIK",
       "poz": "MK-287",
-      "ad": "İSTİF ETAJERİ, PORTASHELF, 304K PASLANMAZ",
+      "ad": "İSTİF ETAJERİ, 304K PASLANMAZ",
       "olcu": "1830x460x1830",
       "adet": 1
     },
@@ -2261,7 +2261,7 @@
       "bolum": "YER_IZGARALA",
       "bolumAd": "YER IZGARALARI",
       "poz": "DR-001",
-      "ad": "YER IZGARASI, PORTASHELF, B2 SIĞ TİP",
+      "ad": "YER IZGARASI, B2 SIĞ TİP",
       "olcu": "300x300",
       "adet": 17
     },
@@ -2269,7 +2269,7 @@
       "bolum": "YER_IZGARALA",
       "bolumAd": "YER IZGARALARI",
       "poz": "DR-002",
-      "ad": "YER IZGARASI, PORTASHELF, B2 SIĞ TİP",
+      "ad": "YER IZGARASI, B2 SIĞ TİP",
       "olcu": "500x300",
       "adet": 5
     },
@@ -2277,7 +2277,7 @@
       "bolum": "YER_IZGARALA",
       "bolumAd": "YER IZGARALARI",
       "poz": "DR-003",
-      "ad": "YER IZGARASI, PORTASHELF, B2 SIĞ TİP",
+      "ad": "YER IZGARASI, B2 SIĞ TİP",
       "olcu": "1850x300",
       "adet": 8
     },
@@ -2285,7 +2285,7 @@
       "bolum": "YER_IZGARALA",
       "bolumAd": "YER IZGARALARI",
       "poz": "DR-004",
-      "ad": "YER IZGARASI, PORTASHELF, B2 SIĞ TİP",
+      "ad": "YER IZGARASI, B2 SIĞ TİP",
       "olcu": "950x500",
       "adet": 2
     }

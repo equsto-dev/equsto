@@ -7,7 +7,7 @@
   var API_QUOTE = "/api/pfos/quote";
   var API_CALC = "/api/pfos/calculate";
   var API_KONSEPT = "/api/pfos/konseptler";
-  var FALLBACK_KONSEPT = "/data/pfos-konseptler.json?v=20260531resort-otel";
+  var FALLBACK_KONSEPT = "/data/pfos-konseptler.json?v=20260531mus-selinoz-turk";
 
   var KAT_DEPT = {
     A: "kahve",
@@ -52,7 +52,13 @@
       return "coffee-shop";
     if (/meyhane|meze|gurme şarküteri/i.test(d) || /meyhane/i.test(k)) return "meyhane";
     if (/kebap|ortadoğu|ocakbaşı|ocakbasi/i.test(k) || /kebap/i.test(d)) return "kebap-ortadogu";
-    if (/türk|turk|sütiş|sutis|restaurant/i.test(k) && !/steakhouse/i.test(k) && !/pizzac/i.test(d))
+    if (
+      /sütiş|sutis|şişhane|sislihane/i.test(d) ||
+      (/türk|turk/i.test(k) && /esnaf|lokanta|sütiş|sutis/i.test(d))
+    ) {
+      return "turk-restoran";
+    }
+    if (/türk|turk|restaurant/i.test(k) && !/steakhouse/i.test(k) && !/pizzac/i.test(d))
       return "turk-restoran";
     if (d === "Pizzacı") return "pizzaci";
     if (
@@ -99,6 +105,13 @@
       return "all-sport-cafe";
     }
     if (
+      d === "Casual Cafe" ||
+      /casual\s*cafe/i.test(d) ||
+      /şifa\s*cafe|sifa\s*cafe|beykent/i.test(k)
+    ) {
+      return "casual-cafe";
+    }
+    if (
       d === "Büyük Yemekhane (Catering)" ||
       d === "Fabrika Yemekhanesi" ||
       d === "Okul Yemekhanesi" ||
@@ -130,6 +143,14 @@
       (/otel/i.test(k) && /şehir|sehir|business|hampton/i.test(d))
     ) {
       return "sehir-otel";
+    }
+    if (
+      d === "Türk Mutfağı — Lokanta" ||
+      /muş\s*selinöz|mus\s*selinoz|selinöz\s*mimarlık/i.test(d) ||
+      (/türk\s*mutfağı|turk\s*mutfagi/i.test(d) &&
+        /lokanta|muş|mus|selinöz|selinoz|101/i.test(d + " " + k))
+    ) {
+      return "mus-selinoz-turk";
     }
     if (
       d === "Türk Mutfağı" ||

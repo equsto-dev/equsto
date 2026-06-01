@@ -82,5 +82,7 @@ def parse_workbook(path):
 
 
 if __name__ == "__main__":
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
     path = sys.argv[1]
     print(json.dumps(parse_workbook(path), ensure_ascii=False))

@@ -9,7 +9,12 @@
       "kalemSayisi": 69,
       "not": "80–500 m² (80–200 MIALIENTO · 200–500 Avcılar)"
     },
-    { "slug": "turk-restoran", "label": "Türk Restoranı", "kalemSayisi": 35 },
+    {
+      "slug": "turk-restoran",
+      "label": "Türk Restoranı",
+      "kalemSayisi": 77,
+      "not": "150–5000 m² · S13-388 + Sütiş 2017-006 (çift referans, silinmez)"
+    },
     { "slug": "meyhane", "label": "Meyhane / Mezeli Restoran", "kalemSayisi": 32 },
     {
       "slug": "kebap-ortadogu",
@@ -128,6 +133,12 @@
       "not": "100–200 m² · all day cafe (2016-064)"
     },
     {
+      "slug": "casual-cafe",
+      "label": "Casual Cafe",
+      "kalemSayisi": 49,
+      "not": "50–150 m² · Şifa Cafe Beykent (2017-026)"
+    },
+    {
       "slug": "buyuk-yemekhane",
       "label": "Büyük Yemekhane",
       "kalemSayisi": 285,
@@ -150,6 +161,12 @@
       "label": "Şehir Oteli (Business)",
       "kalemSayisi": 186,
       "not": "500–2000 m² · Hampton Bolu (088) · Kocaeli (077)"
+    },
+    {
+      "slug": "mus-selinoz-turk",
+      "label": "Türk Mutfağı — Lokanta",
+      "kalemSayisi": 89,
+      "not": "100–250 m² · Muş Selinöz (101) · bar+pasta+mutfak · Kiremit’ten ayrı"
     },
     {
       "slug": "kiremit-akasya",

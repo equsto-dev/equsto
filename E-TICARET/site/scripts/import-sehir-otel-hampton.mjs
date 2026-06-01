@@ -22,7 +22,15 @@ const XLS = "hampton-sehir-otel-2016-088.xls";
 const REFERANS_M2 = 1000;
 
 function parseXls(src) {
-  const raw = execFileSync("python", [PY, src], { encoding: "utf8", maxBuffer: 20 * 1024 * 1024 });
+  const raw = execFileSync("python", [PY, src], {
+    encoding: "utf8",
+    maxBuffer: 20 * 1024 * 1024,
+    env: {
+      ...process.env,
+      PYTHONIOENCODING: "utf-8",
+      PYTHONUTF8: "1",
+    },
+  });
   return JSON.parse(raw);
 }
 
