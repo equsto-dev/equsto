@@ -374,8 +374,22 @@
 .secActive {
   border-color: #001e50;
   box-shadow: 0 2px 12px rgba(0, 30, 80, 0.08);
-  overflow: visible;
+  overflow: hidden;
   z-index: 4;
+}
+
+.secActive.secAdresExpanded {
+  z-index: 5;
+}
+
+.secBd {
+  padding: 0 1.1rem 1.1rem;
+  overflow: visible;
+  transition: padding-bottom 0.22s ease;
+}
+
+.secAdresExpanded .secBd {
+  padding-bottom: 1.35rem;
 }
 
 .secVis {
@@ -477,11 +491,6 @@
   font-weight: 500;
 }
 
-.secBd {
-  padding: 0 1.1rem 1.1rem;
-  overflow: visible;
-}
-
 .qInlineTitle {
   margin: 0 0 0.35rem;
   font-size: 1rem;
@@ -576,6 +585,10 @@
   }
 }
 
+.adresGridOpen {
+  padding-bottom: 0.15rem;
+}
+
 .adresAutofillTrap {
   position: absolute;
   left: -9999px;
@@ -588,25 +601,31 @@
 
 .acWrap {
   position: relative;
-  z-index: 1;
-}
-
-.acWrapOpen {
-  z-index: 30;
 }
 
 .acList {
-  position: absolute;
-  top: calc(100% + 4px);
-  left: 0;
-  right: 0;
-  z-index: 40;
+  position: relative;
+  width: 100%;
+  margin-top: 4px;
+  z-index: 1;
   background: #fff;
   border: 1px solid #cdd6e4;
   border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(0, 30, 80, 0.14);
+  box-shadow: 0 4px 14px rgba(0, 30, 80, 0.1);
   max-height: 220px;
   overflow-y: auto;
+  animation: pfosAcListIn 0.18s ease;
+}
+
+@keyframes pfosAcListIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .acItem {
