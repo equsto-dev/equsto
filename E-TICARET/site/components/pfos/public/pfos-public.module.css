@@ -455,14 +455,14 @@
   .secPending:not(.secReveal) .presetBtn,
   .secPending:not(.secReveal) .multiLabel,
   .secPending:not(.secReveal) .alanHero,
-  .secPending:not(.secReveal) .alanRange,
+  .secPending:not(.secReveal) .alanPresets,
   .secPending:not(.secReveal) .adresGrid,
   .secPending:not(.secReveal) .textInput,
   .secPending.secReveal .optionBtn,
   .secPending.secReveal .presetBtn,
   .secPending.secReveal .multiLabel,
   .secPending.secReveal .alanHero,
-  .secPending.secReveal .alanRange,
+  .secPending.secReveal .alanPresets,
   .secPending.secReveal .adresGrid,
   .secPending.secReveal .textInput {
     opacity: 1 !important;
