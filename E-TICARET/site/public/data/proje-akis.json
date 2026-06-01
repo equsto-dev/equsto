@@ -16,8 +16,7 @@
           "Mimar",
           "İşletme Müdürü",
           "Franchise",
-          "Söylemek istemiyorum",
-          "Bilmiyorum"
+          "Boş ver"
         ],
         "mapsTo": "analitik.rol",
         "motorEtkisi": "yok — segment / ton",

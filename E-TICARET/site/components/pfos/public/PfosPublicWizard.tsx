@@ -84,6 +84,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   const [sonuc, setSonuc] = useState<PFOSResponse | null>(null);
   const [teklifV14, setTeklifV14] = useState<TeklifModelV14 | null>(null);
   const [finished, setFinished] = useState(false);
+  const [enteringPanelId, setEnteringPanelId] = useState<string | null>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -124,23 +125,40 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     return { pct: h.pct, title: t(h.title), sub: t(h.sub) };
   }, [panels, donePanels, activePanelId, t]);
 
+  const visibleThroughIndex = useMemo(() => {
+    const i = panels.findIndex((p) => !donePanels.has(p.id));
+    return i === -1 ? Math.max(0, panels.length - 1) : i;
+  }, [panels, donePanels]);
+
   const panelVisible = useCallback(
-    (panel: LegacyPanelDef, index: number) => {
-      if (index === 0) return true;
-      const prev = panels[index - 1];
-      return prev ? donePanels.has(prev.id) : false;
-    },
-    [panels, donePanels],
+    (_panel: LegacyPanelDef, index: number) => index <= visibleThroughIndex,
+    [visibleThroughIndex],
   );
 
   const completePanel = useCallback(
     (panelId: string) => {
       const idx = panels.findIndex((p) => p.id === panelId);
       if (idx < 0) return;
-      setDonePanels((prev) => new Set([...prev, panelId]));
+      let advanced = false;
+      setDonePanels((prev) => {
+        if (prev.has(panelId)) return prev;
+        advanced = true;
+        return new Set([...prev, panelId]);
+      });
+      if (!advanced) return;
       const next = panels[idx + 1];
-      setActivePanelId(next?.id ?? panelId);
+      const nextId = next?.id ?? panelId;
+      setActivePanelId(nextId);
       setError(null);
+      if (next && next.id !== panelId) {
+        setEnteringPanelId(next.id);
+        window.setTimeout(() => {
+          setEnteringPanelId(null);
+          document
+            .getElementById(`pfos-sec-${next.id}`)
+            ?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }, 420);
+      }
     },
     [panels],
   );
@@ -188,8 +206,15 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
             qs.length === 1 &&
             (qs[0].type === "select" || qs[0].type === "select_conditional");
           if (singleSelect) {
-            setTimeout(() => completePanel(panel.id), 0);
+            window.setTimeout(() => completePanel(panel.id), 280);
           }
+        }
+        if (
+          panel &&
+          id === "q_m2" &&
+          isLegacyPanelComplete(panel, questions, merged)
+        ) {
+          window.setTimeout(() => completePanel(panel.id), 420);
         }
         return merged;
       });
@@ -201,13 +226,26 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     [questions, completePanel],
   );
 
-  const toggleMulti = (opt: string) => {
+  const toggleMulti = (opt: string, panel?: LegacyPanelDef) => {
     const cur = answers.q_ne_pisireceksin;
     const arr = Array.isArray(cur) ? [...cur] : cur ? [String(cur)] : [];
     const i = arr.indexOf(opt);
     if (i >= 0) arr.splice(i, 1);
     else arr.push(opt);
-    setAnswers((prev) => clearDownstreamAnswers({ ...prev, q_ne_pisireceksin: arr }, "q_ne_pisireceksin"));
+    setAnswers((prev) => {
+      const merged = clearDownstreamAnswers(
+        { ...prev, q_ne_pisireceksin: arr },
+        "q_ne_pisireceksin",
+      );
+      if (
+        panel &&
+        arr.length > 0 &&
+        isLegacyPanelComplete(panel, questions, merged)
+      ) {
+        window.setTimeout(() => completePanel(panel.id), 320);
+      }
+      return merged;
+    });
     setFinished(false);
     setSonuc(null);
     setTeklifV14(null);
@@ -356,18 +394,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
             {motorSlug ? `Motor: ${motorSlug}` : "Motor henüz bağlı değil"}
           </p>
         ) : null}
-        <button
-          type="button"
-          className={`${styles.btn} ${styles.btnGold}`}
-          disabled={val < minM2}
-          onClick={() => {
-            if (isLegacyPanelComplete(panel, questions, answers)) {
-              completePanel(panel.id);
-            }
-          }}
-        >
-          Devam
-        </button>
       </div>
     );
   }
@@ -428,16 +454,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
               </button>
             ))}
           </div>
-          {panel.id === "s1" ? (
-            <button
-              type="button"
-              className={`${styles.btn} ${styles.btnGhost}`}
-              style={{ marginTop: 10 }}
-              onClick={() => completePanel(panel.id)}
-            >
-              {t("Atla / Devam")}
-            </button>
-          ) : null}
         </>
       );
     }
@@ -457,21 +473,12 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
                 <input
                   type="checkbox"
                   checked={selected.includes(opt)}
-                  onChange={() => toggleMulti(opt)}
+                  onChange={() => toggleMulti(opt, panel)}
                 />
                 {t(opt)}
               </label>
             ))}
           </div>
-          <button
-            type="button"
-            className={`${styles.btn} ${styles.btnGold}`}
-            style={{ marginTop: 12 }}
-            disabled={selected.length === 0}
-            onClick={() => completePanel(panel.id)}
-          >
-            {t("Devam")}
-          </button>
         </>
       );
     }
@@ -483,44 +490,42 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
           value={adresForm}
           onChange={(v) => {
             const mapped = adresFormToAnswers(v);
-            setAnswers((prev) =>
-              clearDownstreamAnswers(
+            setAnswers((prev) => {
+              const merged = clearDownstreamAnswers(
                 {
                   ...prev,
                   q_lokasyon: mapped.q_lokasyon,
                   q_acik_adres: mapped.q_acik_adres,
                 },
                 "q_lokasyon",
-              ),
-            );
+              );
+              if (
+                isLegacyPanelComplete(panel, questions, merged)
+              ) {
+                window.setTimeout(() => completePanel(panel.id), 450);
+              }
+              return merged;
+            });
             setFinished(false);
             setSonuc(null);
             setTeklifV14(null);
             setError(null);
           }}
-          onDevam={() => completePanel(panel.id)}
         />
       );
     }
 
     return (
-      <>
-        <input
-          className={styles.textInput}
-          type="text"
-          value={answers[id] != null ? String(answers[id]) : ""}
-          onChange={(e) => setAnswer(id, e.target.value, panel, false)}
-          placeholder={t("Marka adı…")}
-        />
-        <button
-          type="button"
-          className={`${styles.btn} ${styles.btnGhost}`}
-          style={{ marginTop: 10 }}
-          onClick={() => completePanel(panel.id)}
-        >
-          {t("Atla / Devam")}
-        </button>
-      </>
+      <input
+        className={styles.textInput}
+        type="text"
+        value={answers[id] != null ? String(answers[id]) : ""}
+        onChange={(e) => setAnswer(id, e.target.value, panel, false)}
+        onBlur={() => {
+          if (panel.optional) completePanel(panel.id);
+        }}
+        placeholder={t("Marka adı…")}
+      />
     );
   }
 
@@ -531,6 +536,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
 
     const isDone = donePanels.has(panel.id);
     const isActive = activePanelId === panel.id && !isDone;
+    const showBody = isDone || isActive;
     const summary = panelAnswerSummary(panel, answers);
     const summaryDisplay = summary
       ? summary
@@ -542,7 +548,8 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     return (
       <section
         key={panel.id}
-        className={`${styles.sec} ${styles.secVis}${isDone ? ` ${styles.secDone}` : ""}${isActive ? ` ${styles.secActive}` : ""}`}
+        id={`pfos-sec-${panel.id}`}
+        className={`${styles.sec} ${styles.secVis}${isDone ? ` ${styles.secDone}` : ""}${isActive ? ` ${styles.secActive}` : ""}${enteringPanelId === panel.id ? ` ${styles.secEnter}` : ""}`}
       >
         <button
           type="button"
@@ -557,12 +564,12 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
             {isActive ? (
               <span className={styles.secSub}>{t(panel.sub)}</span>
             ) : null}
-            {summaryDisplay && isDone ? (
+            {summaryDisplay && isDone && !isActive ? (
               <span className={styles.secAns}>{summaryDisplay}</span>
             ) : null}
           </span>
         </button>
-        {isActive ? (
+        {showBody ? (
           <div className={styles.secBd}>
             {qs.map((q) => (
               <div key={q.id}>

@@ -49,6 +49,7 @@ export const PFOS_LABELS_EN = {
   "— (opsiyonel) —": "— (optional) —",
   "Bilmiyorum": "Not sure",
   "Söylemek istemiyorum": "Prefer not to say",
+  "Boş ver": "Skip for now",
 
   /* Soru metinleri */
   Mesleğiniz: "Your role",
