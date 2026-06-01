@@ -719,6 +719,52 @@
   color: #1a1d2b;
 }
 
+.railReferans {
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: #4b5563;
+}
+
+.railReferansMeta {
+  margin: 0 0 0.5rem;
+  color: #1a1d2b;
+}
+
+.railReferansDosya {
+  margin: 0.35rem 0 0;
+  word-break: break-word;
+}
+
+.railReferansDosya code {
+  font-size: 0.75rem;
+  background: #f4f6fa;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+}
+
+.railReferansKalem {
+  margin: 0.65rem 0 0.35rem;
+  font-weight: 600;
+  color: #001e50;
+}
+
+.railReferansList {
+  margin: 0;
+  padding-left: 1.1rem;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.railReferansList li {
+  margin-bottom: 0.25rem;
+}
+
+.railReferansHint {
+  margin: 0.35rem 0 0;
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
 .railMeta {
   margin: 0;
   font-size: 0.82rem;

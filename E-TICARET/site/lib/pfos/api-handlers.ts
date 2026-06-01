@@ -8,6 +8,10 @@ import {
   type Konsept,
 } from "@/lib/pfos/schemas/pfos.schema";
 import { TEKLIF_DEFAULT_FIYAT_STRATEJISI } from "@/lib/pfos/teklif/teklif-policy";
+import {
+  findShopTypeByDukkanSecim,
+  loadProjeAkisShopTypes,
+} from "@/lib/pfos/proje-akis/load-shop-types";
 
 const M2_RANGES: Record<string, { min: number; max: number }> = {
   "all-day-dining-cafe": { min: 150, max: 400 },
@@ -712,11 +716,18 @@ export async function pfosPostQuote(req: NextRequest) {
   try {
     const body = await req.json();
     const input = PFOSRequestSchema.parse(body);
+    const shopTypes = await loadProjeAkisShopTypes();
+    const shopType = findShopTypeByDukkanSecim(
+      shopTypes,
+      input.dukkanSecim ?? "",
+      input.konsept,
+    );
     const template = await resolveTemplateForQuote(
       input.konsept,
       input.m2,
       input.altTip,
       input.referansId,
+      shopType,
     );
     const response = await calculateQuote(input, template);
     return NextResponse.json(response, { status: 200 });

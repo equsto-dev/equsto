@@ -18,6 +18,8 @@ import type {
 import { KONSEPT_LABELS, type Konsept } from "../schemas/pfos.schema";
 import { finalizeKalemlerForTeklif } from "../teklif/assign-poz";
 import type { KategoriKodu } from "../schemas/pfos.schema";
+import { isDynamicKonsept } from "./templates";
+import { matchProductForReferansKalem } from "../referans/match-referans-kalem";
 
 const YIKAMA_TIP_KODU = new Set([
   "bulasik_giyotin_1000",
@@ -80,6 +82,7 @@ async function buildTemplateKalemler(
   m2: number,
   fiyatStratejisi: FiyatStratejisi,
   existingTips: Set<string>,
+  referansListOnly = false,
 ): Promise<PFOSKalemi[]> {
   const eligibleItems = template.items.filter((item) => {
     if (item.minM2 !== undefined && m2 < item.minM2) return false;
@@ -97,14 +100,26 @@ async function buildTemplateKalemler(
       : tipResolved;
     if (existingTips.has(tipKey)) continue;
 
-    const adet = calcAdet(item.scale, m2, template.seatDensity);
-    const urun = await matchProductForMotor(
-      item.urunTipi,
-      item.kategoriKodu,
-      fiyatStratejisi,
-      item.isim,
-      item.notlar,
-    );
+    const adet = referansListOnly
+      ? item.scale.type === "fixed"
+        ? item.scale.adet
+        : calcAdet(item.scale, m2, template.seatDensity)
+      : calcAdet(item.scale, m2, template.seatDensity);
+    const urun = referansListOnly
+      ? await matchProductForReferansKalem({
+          urunTipi: item.urunTipi,
+          kategoriKodu: item.kategoriKodu,
+          fiyatStratejisi,
+          isim: item.isim,
+          notlar: item.notlar,
+        })
+      : await matchProductForMotor(
+          item.urunTipi,
+          item.kategoriKodu,
+          fiyatStratejisi,
+          item.isim,
+          item.notlar,
+        );
 
     kalemler.push({
       poz: item.referansPoz ?? "",
@@ -199,12 +214,19 @@ export async function calculateUnifiedQuote(
           (z) => (bolumM2Effective[z] ?? 0) > 0,
         );
 
-  /** Zone katalog (ZRN) + konsept şablonu birleşimi */
-  const zoneKalemler = await buildZoneCatalogKalemler({
-    zoneKeys,
-    bolumM2: bolumM2Effective,
-    fiyatStratejisi,
-  });
+  /** Referans JSON konseptlerinde zone katalog (bar espresso vb.) eklenmez */
+  const referansListOnly =
+    template.teklifPozModu === "referans" ||
+    isDynamicKonsept(konseptKey) ||
+    Boolean(template.referansId);
+
+  const zoneKalemler = referansListOnly
+    ? []
+    : await buildZoneCatalogKalemler({
+        zoneKeys,
+        bolumM2: bolumM2Effective,
+        fiyatStratejisi,
+      });
 
   const existingTips = new Set(
     zoneKalemler.map((k) => resolveTipKodu(k.urunTipi)),
@@ -214,6 +236,7 @@ export async function calculateUnifiedQuote(
     req.m2,
     fiyatStratejisi,
     existingTips,
+    referansListOnly,
   );
 
   const kalemler = finalizeKalemlerForTeklif(
@@ -256,7 +279,11 @@ export async function calculateUnifiedQuote(
       : 0.8;
 
   const uyarilar: string[] = [];
-  if (zoneKalemler.length === 0 && zoneKeys.length > 0) {
+  if (referansListOnly) {
+    uyarilar.push(
+      "Ekipman listesi yalnızca kayıtlı referans dosyasından alındı (proje-akis shopTypes / m² bandı).",
+    );
+  } else if (zoneKalemler.length === 0 && zoneKeys.length > 0) {
     uyarilar.push(
       "Mutfak bölümü seçildi ancak zone kataloğundan kalem üretilemedi — yalnızca konsept şablonu uygulandı.",
     );
@@ -277,9 +304,11 @@ export async function calculateUnifiedQuote(
       "Güven skoru düşük — ürün kataloğunun bu konsept için genişletilmesi önerilir.",
     );
   }
-  uyarilar.push(
-    "PFOS yapay zekadan yardım alır; hata yapabilir. Teklif öncesi uzmanla doğrulayınız.",
-  );
+  if (!referansListOnly) {
+    uyarilar.push(
+      "PFOS yapay zekadan yardım alır; hata yapabilir. Teklif öncesi uzmanla doğrulayınız.",
+    );
+  }
 
   return {
     konsept,

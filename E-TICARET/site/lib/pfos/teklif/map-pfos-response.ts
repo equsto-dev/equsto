@@ -19,10 +19,19 @@ import { resolveTeklifMarka } from "../core/catalog-enrich";
 import { displayIsimFromSablon } from "../core/ozel-imalat";
 import { repairPfosDisplayText } from "@/lib/utf8/repair-turkish-fffd";
 
-function specAciklama(k: PFOSResponse["kalemler"][number]): string {
+function specAciklama(
+  k: PFOSResponse["kalemler"][number],
+  referansListe = false,
+): string {
   const u = k.urun;
   const lines: string[] = [];
-  if (u?.ad && u.ad !== k.isim) lines.push(`•  ${repairPfosDisplayText(u.ad)}`);
+  if (
+    !referansListe &&
+    u?.ad &&
+    u.ad !== k.isim
+  ) {
+    lines.push(`•  ${repairPfosDisplayText(u.ad)}`);
+  }
   if (k.notlar && !isOlcuMetni(k.notlar))
     lines.push(`•  ${repairPfosDisplayText(k.notlar)}`);
   if (u?.sku?.trim()) lines.push(`•  Stok: ${u.sku}`);
@@ -57,6 +66,9 @@ export function pfosResponseToTeklifV14(
   },
 ): TeklifModelV14 {
   const kalemler = finalizeKalemlerForTeklif(res.kalemler, res.teklifLayout);
+  const referansListe =
+    res.teklifLayout?.pozModu === "referans" ||
+    kalemler.every((k) => !!k.referansPoz);
   const eurTry = meta.eurTry ?? null;
   const doviz: TeklifV14Satir["doviz"] = "EUR";
 
@@ -86,7 +98,7 @@ export function pfosResponseToTeklifV14(
       toplamSatis: birimEur != null ? birimEur * adet : null,
       doviz,
       fotoNot: u?.gorselUrl ? `Fotoğraf\n${u.gorselUrl}` : undefined,
-      aciklama: specAciklama(k) || undefined,
+      aciklama: specAciklama(k, referansListe) || undefined,
     };
   });
 

@@ -105,6 +105,27 @@ function adetSayi(adet: number | string): number {
   return 1;
 }
 
+function pozBolumHarfi(poz: string): string {
+  return String(poz ?? "")
+    .trim()
+    .match(/^([A-Z]+)/i)?.[1]
+    ?.toUpperCase() ?? "";
+}
+
+function referansBolumKeyFromSatir(s: PfosEkipmanSatir): string {
+  const fromExcel = referansBolumKey(s.bolum, s.bolumAd);
+  if (fromExcel && fromExcel !== "?") return fromExcel;
+  const harf = pozBolumHarfi(s.poz);
+  return harf || "?";
+}
+
+function altKategoriFromSatir(s: PfosEkipmanSatir): string {
+  const excel = displayBolumBaslik(s.bolumAd, s.bolum);
+  if (excel && excel !== "—") return repairPfosDisplayText(excel);
+  const harf = pozBolumHarfi(s.poz);
+  return harf ? repairPfosDisplayText(`Bölüm ${harf}`) : "";
+}
+
 export function ekipmanToReferansKalemler(
   kalemler: PfosEkipmanSatir[],
 ): ReferansKalem[] {
@@ -112,7 +133,7 @@ export function ekipmanToReferansKalemler(
   let nextBolum = 0;
 
   return kalemler.map((s) => {
-    const key = referansBolumKey(s.bolum, s.bolumAd);
+    const key = referansBolumKeyFromSatir(s);
     if (!bolumOrder.has(key)) bolumOrder.set(key, nextBolum++);
 
     return {
@@ -126,9 +147,7 @@ export function ekipmanToReferansKalemler(
         s.olcu && s.olcu !== "—"
           ? repairPfosDisplayText(`Ölçü: ${s.olcu}`)
           : undefined,
-      altKategori: repairPfosDisplayText(
-        displayBolumBaslik(s.bolumAd, s.bolum),
-      ),
+      altKategori: altKategoriFromSatir(s),
       referansBolumKey: key,
       referansBolumSira: bolumOrder.get(key)!,
     };
