@@ -1,9 +1,15 @@
 /**
- * Marka slug PLP — script yüklemesini bekler, katalog + oem_brand filtresi.
- * MarkaHubScripts içinde son sırada yüklenir.
+ * Marka slug PLP — mağaza grid (kategori kutuları yok), öncelikli karışık sıra.
  */
 (function () {
   "use strict";
+
+  var PAGE_PRIO = [
+    { re: /pisirme|izgara|kuzine|fritez|ocak|salamander|wok|doner|sanayi-ocak|pisirici/i, label: "pişirme" },
+    { re: /firin|konveksiyon|pastane.fir|kombi|pompe/i, label: "fırın" },
+    { re: /buzdolab|derin.donduruc|sogutuc|buz.makin|donduruc|sogutma|teshir/i, label: "soğutma" },
+    { re: /yikama|bulasik|giyotin|kurutma|flight|konveyor|cop.siyirma|bardak.yik/i, label: "yıkama" },
+  ];
 
   function esc(s) {
     return String(s == null ? "" : s)
@@ -11,6 +17,42 @@
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;");
+  }
+
+  function normHay(row) {
+    return (String(row.category || "") + " " + String(row.name || ""))
+      .toLocaleLowerCase("tr")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
+  }
+
+  function hashStr(s) {
+    var h = 0;
+    var i;
+    for (i = 0; i < s.length; i++) {
+      h = (h * 31 + s.charCodeAt(i)) | 0;
+    }
+    return Math.abs(h);
+  }
+
+  function brandPriorityRank(row) {
+    var cat = String(row.category || row.cat || "").toLocaleLowerCase("tr");
+    var h = normHay(row);
+    var i;
+    for (i = 0; i < PAGE_PRIO.length; i++) {
+      if (PAGE_PRIO[i].re.test(cat) || PAGE_PRIO[i].re.test(h)) return i;
+    }
+    return PAGE_PRIO.length;
+  }
+
+  function brandProductSorter(a, b) {
+    var ra = brandPriorityRank(a);
+    var rb = brandPriorityRank(b);
+    if (ra !== rb) return ra - rb;
+    var ha = hashStr(String(a.sku || a.id || a.name || ""));
+    var hb = hashStr(String(b.sku || b.id || b.name || ""));
+    if (ha !== hb) return ha - hb;
+    return String(a.name || "").localeCompare(String(b.name || ""), "tr");
   }
 
   function getSlug() {
@@ -84,7 +126,7 @@
     if (!root) return;
 
     root.setAttribute("data-slug", slug);
-    document.body.classList.add("eq-marka-plp");
+    document.body.classList.add("eq-marka-plp", "eq-marka-plp-shop");
 
     var displayName =
       root.getAttribute("data-label") ||
@@ -101,32 +143,14 @@
 
     window.EqustoShopCatalog.loadMergedCatalog()
       .then(function (all) {
-        var rows = (all || []).filter(predicate);
-        var catCounts = {};
-        rows.forEach(function (r) {
-          var c = String(r.category || r.cat || "").trim();
-          if (c) catCounts[c] = (catCounts[c] || 0) + 1;
-        });
-        var cats = Object.keys(catCounts).sort(function (a, b) {
-          return catCounts[b] - catCounts[a];
-        });
-        var tiles = cats.map(function (c) {
-          return {
-            id: c,
-            slug: c,
-            label: c.replace(/-+$/, "").replace(/-/g, " "),
-          };
-        });
-
+        var total = (all || []).filter(predicate).length;
         window.EqCategoryShell.mount({
           root: root,
           catLabel: displayName,
-          catDesc: displayName + " markalı tüm ürünler — kategoriye göre incele.",
-          catSlugs: cats,
-          tiles: tiles,
-          tilesHdr: "Kategoriye göre incele",
-          hideBrandStrip: true,
+          catDesc: total ? total + " ürün" : "",
+          plpMode: true,
           productPredicate: predicate,
+          productSorter: brandProductSorter,
           catalogLoader:
             window.EqustoShopCatalog && typeof window.EqustoShopCatalog.loadMergedCatalog === "function"
               ? window.EqustoShopCatalog.loadMergedCatalog.bind(window.EqustoShopCatalog)

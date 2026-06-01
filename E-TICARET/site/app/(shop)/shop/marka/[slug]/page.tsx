@@ -10,6 +10,9 @@ body.eq-marka-plp .pg{width:1500px;max-width:100%;margin:0 auto;font-size:13px;b
 body.eq-marka-plp .breadcrumb{padding:10px 20px;font-size:11px;color:var(--eq-text-muted);border-bottom:1px solid var(--eq-border);}
 body.eq-marka-plp .body{display:flex;background:var(--eq-surface);}
 body.eq-marka-plp .right-col{flex:1;min-width:0;display:flex;flex-direction:column;}
+body.eq-marka-plp-shop .eq-cat-tiles{display:none!important;}
+body.eq-marka-plp-shop .eq-cat-shell{padding:12px 16px 28px;}
+body.eq-marka-plp-shop .eq-cat-hero h1{font-size:20px;}
 `;
 
 export async function generateMetadata({
