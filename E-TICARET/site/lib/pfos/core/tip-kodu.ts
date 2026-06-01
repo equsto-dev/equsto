@@ -184,6 +184,7 @@ export function normalizeTipKodu(value: string): string {
 
 export function resolveTipKodu(urunTipi: string): string {
   const trimmed = String(urunTipi || "").trim();
+  if (/^yer-izgara-\d+$/i.test(trimmed)) return "yer_izgara";
   if (URUN_TIPI_ALIASES[trimmed]) return URUN_TIPI_ALIASES[trimmed];
   return normalizeTipKodu(trimmed);
 }

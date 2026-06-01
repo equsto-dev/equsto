@@ -2,6 +2,11 @@ import type { EslesmisUrun, FiyatStratejisi } from "../schemas/pfos.schema";
 import { matchProductForMotor } from "../core/match-product";
 import { matchOzelImalatForSablon } from "../core/catalog-fallback";
 import { isOzelImalatMotor } from "../core/ozel-imalat";
+import {
+  extractOlcuFromNotlar,
+  isYerIzgarasiReferans,
+  matchYerIzgarasiByOlcu,
+} from "./yer-izgara-match";
 
 function norm(s: string): string {
   return String(s ?? "")
@@ -42,7 +47,17 @@ export async function matchProductForReferansKalem(opts: {
   notlar?: string | null;
 }): Promise<EslesmisUrun | null> {
   const tip = String(opts.urunTipi ?? "").trim();
-  if (!tip || tip.startsWith("pfos_")) return null;
+  if (!tip) return null;
+
+  if (isYerIzgarasiReferans(opts.isim) || /^yer-izgara-\d+$/.test(tip)) {
+    return matchYerIzgarasiByOlcu(
+      extractOlcuFromNotlar(opts.notlar),
+      opts.notlar,
+      opts.fiyatStratejisi,
+    );
+  }
+
+  if (tip.startsWith("pfos_")) return null;
 
   if (isOzelImalatMotor({ sablonIsim: opts.isim, urunTipi: tip })) {
     return matchOzelImalatForSablon(opts.isim, tip, opts.notlar);
