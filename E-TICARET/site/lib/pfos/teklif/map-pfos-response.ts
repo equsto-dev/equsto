@@ -19,6 +19,13 @@ import { resolveTeklifMarka } from "../core/catalog-enrich";
 import { displayIsimFromSablon } from "../core/ozel-imalat";
 import { repairPfosDisplayText } from "@/lib/utf8/repair-turkish-fffd";
 
+function normalizeGorselUrl(url: string | null | undefined): string | undefined {
+  const u = String(url ?? "").trim();
+  if (!u) return undefined;
+  if (/^https?:\/\//i.test(u)) return u;
+  return u.startsWith("/") ? u : `/${u}`;
+}
+
 function specAciklama(
   k: PFOSResponse["kalemler"][number],
   referansListe = false,
@@ -97,7 +104,7 @@ export function pfosResponseToTeklifV14(
       birimSatis: birimEur,
       toplamSatis: birimEur != null ? birimEur * adet : null,
       doviz,
-      fotoNot: u?.gorselUrl ? `Fotoğraf\n${u.gorselUrl}` : undefined,
+      fotoUrl: normalizeGorselUrl(u?.gorselUrl),
       aciklama: specAciklama(k, referansListe) || undefined,
     };
   });

@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "node scripts/generate-admin-config.mjs && node scripts/generate-asset-cdn-config.mjs && next dev -p 3099",
     "predev": "node scripts/generate-admin-config.mjs && node scripts/generate-asset-cdn-config.mjs",
-    "build": "node scripts/generate-asset-cdn-config.mjs && prisma generate && next build",
+    "build": "node scripts/generate-teklif-v14-template.mjs && node scripts/generate-asset-cdn-config.mjs && prisma generate && next build",
     "start": "next start",
     "lint": "eslint",
     "db:generate": "prisma generate",
@@ -103,6 +103,7 @@
     "ozti:trial:margin": "node scripts/trial-ozti-equsto-margin.mjs --xlsx",
     "pfos:referans": "npm run pfos:referans:extract && npm run pfos:referans:build",
     "pfos:motor:test": "node --import ./scripts/load-env.mjs ./node_modules/tsx/dist/cli.mjs scripts/test-pfos-motor.mjs",
+    "teklif:generate-v14": "node scripts/generate-teklif-v14-template.mjs",
     "pfos:kategoriler:seed": "node scripts/seed-pfos-kategoriler.mjs",
     "pfos:italyan:import": "node scripts/import-italyan-konsept.mjs",
     "pfos:birahane:import": "node scripts/import-birahane-konsept.mjs",

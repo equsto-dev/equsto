@@ -1,12 +1,13 @@
 "use client";
 
-import { DownloadOutlined } from "@ant-design/icons";
+import { DownloadOutlined, PrinterOutlined } from "@ant-design/icons";
 import { Button, Collapse, Typography } from "antd";
 import { Fragment, useState, type CSSProperties } from "react";
 import type { TeklifModelV14 } from "@/lib/pfos/teklif/teklif-v14.types";
 import { groupTeklifV14Satirlar } from "@/lib/pfos/teklif/group-v14-bolumler";
 import { formatTarihTr, formatKwHucre } from "@/lib/pfos/teklif/format-v14";
 import { downloadTeklifV14Excel } from "@/lib/pfos/teklif/export-teklif-v14.client";
+import { printTeklifV14 } from "@/lib/pfos/teklif/print-teklif-v14.client";
 import { TEKLIF_V14_FORM_NO, TEKLIF_BOLUM_ROW_FILL } from "@/lib/pfos/teklif/constants";
 
 type Props = {
@@ -158,10 +159,25 @@ export default function TeklifV14Proforma({ model }: Props) {
                           : "—"}
                       </td>
                     </tr>
-                    {(row.fotoNot || row.aciklama) && (
+                    {(row.fotoUrl || row.fotoNot || row.aciklama) && (
                       <tr>
-                        <td colSpan={7} style={specTd}>
-                          {row.fotoNot ?? "📷 Fotoğraf"}
+                        <td colSpan={7} style={specTdFoto}>
+                          {row.fotoUrl ? (
+                            // eslint-disable-next-line @next/next/no-img-element
+                            <img
+                              src={row.fotoUrl}
+                              alt=""
+                              style={{
+                                maxWidth: 120,
+                                maxHeight: 100,
+                                objectFit: "contain",
+                                display: "block",
+                                margin: "0 auto",
+                              }}
+                            />
+                          ) : (
+                            row.fotoNot ?? "📷 Fotoğraf"
+                          )}
                         </td>
                         <td colSpan={5} style={specTd}>
                           <pre style={{ margin: 0, whiteSpace: "pre-wrap" }}>
@@ -216,6 +232,9 @@ export default function TeklifV14Proforma({ model }: Props) {
           onClick={handleExport}
         >
           Excel indir
+        </Button>
+        <Button icon={<PrinterOutlined />} onClick={() => printTeklifV14(model)}>
+          PDF / Yazdır
         </Button>
         <Typography.Text type="secondary" style={{ fontSize: 12 }}>
           Form no: {TEKLIF_V14_FORM_NO}
@@ -280,4 +299,10 @@ const specTd: CSSProperties = {
   background: "#fafafa",
   fontSize: 10,
   verticalAlign: "top",
+};
+
+const specTdFoto: CSSProperties = {
+  ...specTd,
+  textAlign: "center",
+  verticalAlign: "middle",
 };
