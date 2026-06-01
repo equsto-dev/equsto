@@ -85,7 +85,12 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   const [finished, setFinished] = useState(false);
   const [enteringPanelId, setEnteringPanelId] = useState<string | null>(null);
   const [m2Touched, setM2Touched] = useState(false);
+  const [adresListOpen, setAdresListOpen] = useState(false);
   const prevOpenPanelIdRef = useRef("s1");
+
+  useEffect(() => {
+    setAdresListOpen(false);
+  }, [openPanelIndex]);
 
   useEffect(() => {
     let cancelled = false;
@@ -492,6 +497,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
       return (
         <PfosAdresAutocomplete
           value={adresForm}
+          onListOpenChange={setAdresListOpen}
           onChange={(v) => {
             const mapped = adresFormToAnswers(v);
             setAnswers((prev) =>
@@ -544,7 +550,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
       <section
         key={panel.id}
         id={`pfos-sec-${panel.id}`}
-        className={`${styles.sec} ${styles.secVis}${isDone ? ` ${styles.secDone}` : ""}${isActive ? ` ${styles.secActive}` : ""}${enteringPanelId === panel.id ? ` ${styles.secEnter}` : ""}`}
+        className={`${styles.sec} ${styles.secVis}${isDone ? ` ${styles.secDone}` : ""}${isActive ? ` ${styles.secActive}` : ""}${isActive && adresListOpen && qs.some((q) => q.id === "q_lokasyon") ? ` ${styles.secAdresExpanded}` : ""}${enteringPanelId === panel.id ? ` ${styles.secEnter}` : ""}`}
       >
         <button
           type="button"

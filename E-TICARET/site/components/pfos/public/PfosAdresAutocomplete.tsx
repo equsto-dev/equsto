@@ -150,11 +150,13 @@ function AutocompleteField({
 type Props = {
   value: PfosAdresFormValue;
   onChange: (value: PfosAdresFormValue) => void;
+  onListOpenChange?: (open: boolean) => void;
 };
 
 export default function PfosAdresAutocomplete({
   value,
   onChange,
+  onListOpenChange,
 }: Props) {
   const { t } = usePfosLabel();
   const [ready, setReady] = useState(false);
@@ -173,6 +175,11 @@ export default function PfosAdresAutocomplete({
     const d = p ? findDistrictByName(p.id, value.ilce) : null;
     setDistrictId(d?.id ?? null);
   }, [ready, value.il, value.ilce]);
+
+  useEffect(() => {
+    onListOpenChange?.(openField !== null);
+    return () => onListOpenChange?.(false);
+  }, [openField, onListOpenChange]);
 
   const patch = useCallback(
     (patch: Partial<PfosAdresFormValue>) => {
@@ -209,7 +216,7 @@ export default function PfosAdresAutocomplete({
 
   return (
     <form
-      className={styles.adresGrid}
+      className={`${styles.adresGrid}${openField ? ` ${styles.adresGridOpen}` : ""}`}
       autoComplete="off"
       onSubmit={(e) => e.preventDefault()}
     >
