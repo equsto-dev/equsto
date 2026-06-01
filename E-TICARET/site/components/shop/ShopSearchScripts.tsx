@@ -16,15 +16,7 @@ export default function ShopSearchScripts() {
     <>
       <Script src={`/eq-header-search.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-product-card-tint.js?v=${v}`} strategy="afterInteractive" />
-      <Script
-        src={`/eq-arama-page.js?v=${v}`}
-        strategy="afterInteractive"
-        onLoad={() => {
-          try {
-            window.__eqAramaBoot?.();
-          } catch (_) {}
-        }}
-      />
+      <Script src={`/eq-arama-page.js?v=${v}`} strategy="afterInteractive" />
     </>
   );
 }

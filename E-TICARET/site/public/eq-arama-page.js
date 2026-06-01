@@ -16,6 +16,7 @@
   var catalogImgInflight = null;
   var uiBound = false;
   var lastBootQ = null;
+  var searchFetchCtrl = null;
 
   var filterState = {
     depts: [],
@@ -693,6 +694,7 @@
                 c: h.dept || "",
                 img: src,
               }) +
+              ' data-eq-cart-toast="1"' +
               ">" +
               esc(addLbl) +
               "</button>"
@@ -790,9 +792,21 @@
 
   function fetchPage(q, offset, replace) {
     if (loadMoreBusy) {
-      if (replace && lastBootQ !== q) loadMoreBusy = false;
-      else return;
+      if (!replace) return;
+      if (lastBootQ === q && sourceHits.length > 0) return;
+      if (searchFetchCtrl) {
+        try {
+          searchFetchCtrl.abort();
+        } catch (_) {}
+      }
+      loadMoreBusy = false;
     }
+    if (searchFetchCtrl) {
+      try {
+        searchFetchCtrl.abort();
+      } catch (_) {}
+    }
+    searchFetchCtrl = typeof AbortController !== "undefined" ? new AbortController() : null;
     loadMoreBusy = true;
     var grid = document.getElementById("eq-arama-grid");
     if (replace && grid) {
@@ -805,6 +819,9 @@
       if (btn) btn.disabled = true;
     }
 
+    var fetchOpts = { headers: { Accept: "application/json" } };
+    if (searchFetchCtrl) fetchOpts.signal = searchFetchCtrl.signal;
+
     fetch(
       "/api/search?q=" +
         encodeURIComponent(q) +
@@ -812,7 +829,7 @@
         PAGE_SIZE +
         "&offset=" +
         offset,
-      { headers: { Accept: "application/json" } }
+      fetchOpts
     )
       .then(function (r) {
         return r.json().then(function (data) {
@@ -820,7 +837,6 @@
         });
       })
       .then(function (res) {
-        loadMoreBusy = false;
         if (!res.ok || res.data.error) {
           lastRender = {
             q: q,
@@ -871,7 +887,7 @@
         });
       })
       .catch(function (e) {
-        loadMoreBusy = false;
+        if (e && e.name === "AbortError") return;
         lastRender = {
           q: q,
           total: 0,
@@ -884,6 +900,9 @@
           resetFilters();
         }
         renderAll();
+      })
+      .finally(function () {
+        loadMoreBusy = false;
       });
   }
 
@@ -952,11 +971,19 @@
       return;
     }
 
-    if (lastBootQ !== q) {
+    var queryChanged = lastBootQ !== q;
+    if (queryChanged) {
       loadMoreBusy = false;
       sourceHits = [];
       resetFilters();
       lastBootQ = q;
+      fetchPage(q, 0, true);
+      return;
+    }
+
+    if (sourceHits.length > 0 && lastRender.q === q && !lastRender.err) {
+      renderAll();
+      return;
     }
 
     fetchPage(q, 0, true);
