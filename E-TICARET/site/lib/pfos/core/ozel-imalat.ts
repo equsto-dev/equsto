@@ -1,5 +1,5 @@
 import type { EslesmisUrun } from "../schemas/pfos.schema";
-import { repairPfosDisplayText } from "@/lib/utf8/repair-turkish-fffd";
+import { repairPfosDisplayText } from "@/lib/pfos/text/repair-pfos-display";
 import { toOlcuMmDisplay } from "../teklif/olcu-mm";
 
 /** Özel imalat / atölye — katalog markası yok; teklifte Equsto */
