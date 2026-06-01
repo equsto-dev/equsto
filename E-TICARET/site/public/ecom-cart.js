@@ -132,6 +132,27 @@
   var syncApiWarned = false;
   var lastSyncAt = 0;
   var sessionCartPulled = false;
+  var CART_BC_NAME = 'equsto-ecom-cart-v1';
+  var cartBc =
+    typeof BroadcastChannel !== 'undefined' ? new BroadcastChannel(CART_BC_NAME) : null;
+
+  function notifyCartChanged() {
+    try {
+      if (cartBc) cartBc.postMessage({ t: 'update', at: Date.now() });
+    } catch (e) {}
+    try {
+      window.dispatchEvent(new CustomEvent('equsto-cart-changed'));
+    } catch (e2) {}
+  }
+
+  function onCartChangedRemote() {
+    syncBadge();
+    var cartOv = document.getElementById('equsto-cart-overlay');
+    if (cartOv && cartOv.classList.contains('is-open')) {
+      renderPanelList();
+    }
+    if (isCartPage()) renderPanelList();
+  }
 
   function readMemberFromStorage() {
     try {
@@ -407,6 +428,7 @@
   function saveLocal(arr) {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(arr));
+      notifyCartChanged();
     } catch (e) {}
   }
 
@@ -454,6 +476,9 @@
     var clean = normalizeCart(arr || []);
     saveLocal(clean);
     schedulePush(clean);
+    if (isLoggedIn() && authToken() && !sessionCartPulled && !syncPullInFlight) {
+      syncFromServer({ force: true });
+    }
   }
 
   function syncFromServer(opts) {
@@ -647,8 +672,13 @@
       el.innerHTML =
         '<span class="eq-hdr-cart-badge" aria-hidden="true">' +
         escHtml(q > 99 ? '99+' : String(q)) +
-        '</span> ' +
-        escHtml(__cartT('cart.hdr_cart_label', 'Sepet'));
+        '</span>';
+      try {
+        if (typeof window.eqI18nApply === 'function') {
+          var cartRoot = document.getElementById('equsto-hdr-cart');
+          if (cartRoot) window.eqI18nApply(cartRoot);
+        }
+      } catch (_) {}
     }
     var bn = document.getElementById('eq-bnav-cart-badge');
     if (bn) bn.textContent = q > 99 ? '99+' : String(q);
@@ -745,6 +775,9 @@
     }
     save(arr);
     syncBadge();
+    if (isLoggedIn() && authToken() && sessionCartPulled) {
+      pushCartNow(load(), { force: true });
+    }
     if (!opts.silent) toastCartAdded(it && it.n ? it.n : '');
   }
 
@@ -1684,6 +1717,17 @@
     });
     window.addEventListener('focus', onAppForeground);
     window.addEventListener('pagehide', flushPush);
+    window.addEventListener('storage', function (e) {
+      if (e.key !== STORAGE_KEY) return;
+      onCartChangedRemote();
+      if (isLoggedIn() && authToken()) onAppForeground();
+    });
+    if (cartBc) {
+      cartBc.addEventListener('message', function () {
+        onCartChangedRemote();
+      });
+    }
+    window.addEventListener('equsto-cart-changed', onCartChangedRemote);
     var h = document.getElementById('equsto-hdr-cart');
     if (h) {
       h.addEventListener('click', goToCartPage);
