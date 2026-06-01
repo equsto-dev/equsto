@@ -17,7 +17,7 @@ import {
 } from "./format-v14";
 import { resolveTeklifMarka } from "../core/catalog-enrich";
 import { displayIsimFromSablon } from "../core/ozel-imalat";
-import { repairPfosDisplayText } from "@/lib/pfos/text/repair-pfos-display";
+import { repairPfosDisplayText } from "@/lib/utf8/repair-turkish-fffd";
 
 function specAciklama(k: PFOSResponse["kalemler"][number]): string {
   const u = k.urun;
