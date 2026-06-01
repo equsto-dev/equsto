@@ -1,6 +1,4 @@
-import type { EslesmisUrun } from "../schemas/pfos.schema";
 import { repairPfosDisplayText } from "@/lib/utf8/repair-turkish-fffd";
-import { toOlcuMmDisplay } from "../teklif/olcu-mm";
 
 /** Özel imalat / atölye — katalog markası yok; teklifte Equsto */
 export const OZEL_IMALAT_MARKA = "Equsto";
@@ -30,6 +28,7 @@ const OZEL_IMALAT_AD_KALIP = [
   /\bbanket\s*arabas/i,
   /\bet\s*kütüğ/i,
   /\bçöp\s*kazan/i,
+  /\bkasa\s*banko/i,
 ];
 
 export function isOzelImalatSablon(isim: string | null | undefined): boolean {
@@ -72,34 +71,4 @@ export function displayIsimFromSablon(isim: string | null | undefined): string {
       .trim(),
   );
 }
-
-export function buildOzelImalatEslesmis(opts: {
-  isim: string;
-  urunTipi?: string;
-  notlar?: string | null;
-  fiyatTry?: number;
-  elektrikGucuKw?: number | null;
-  gazGucuKw?: number | null;
-}): EslesmisUrun {
-  const olcuRaw = String(opts.notlar ?? "")
-    .replace(/^ölçü:\s*/i, "")
-    .trim();
-  const olcu = toOlcuMmDisplay(olcuRaw) ?? (olcuRaw || null);
-  const tip = opts.urunTipi ?? "ozel-imalat";
-  const fiyat = Math.max(0, Math.round(Number(opts.fiyatTry) || 0));
-
-  return {
-    id: `pfos-ozel-${tip}`,
-    sku: "",
-    ad: displayIsimFromSablon(opts.isim),
-    marka: OZEL_IMALAT_MARKA,
-    model: null,
-    olcu,
-    elektrikGucuKw: opts.elektrikGucuKw ?? null,
-    gazGucuKw: opts.gazGucuKw ?? null,
-    fiyat,
-    fiyatEur: null,
-    doviz: "TRY",
-    gorselUrl: null,
-  };
-}
+

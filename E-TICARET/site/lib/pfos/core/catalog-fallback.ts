@@ -8,6 +8,8 @@ import { matchShopCatalog } from "./shop-catalog-match";
 import { normalizeTipKodu, resolveTipKodu, URUN_TIPI_ALIASES } from "./tip-kodu";
 import {
   buildOzelImalatEslesmis,
+} from "./ozel-imalat-build";
+import {
   displayIsimFromSablon,
   isOzelImalatMotor,
   OZEL_IMALAT_KAR_ORAN,
@@ -123,7 +125,7 @@ export async function matchOzelImalatForSablon(
     zoneTry > 0
       ? Math.round(zoneTry * (1 + OZEL_IMALAT_KAR_ORAN))
       : 0;
-  return buildOzelImalatEslesmis({
+  return await buildOzelImalatEslesmis({
     isim: displayIsimFromSablon(isim) || isim,
     urunTipi,
     notlar,

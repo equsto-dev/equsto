@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "note": "PFOS referans eşlemesi — ekipmanlar.json'da olmayan doğrulanmış OEM ürünler (Brema vb.)",
+  "items": [
+    {
+      "category": "buz-makineleri",
+      "brand": "Brema",
+      "name": "BREMA KÜP BUZ MAKİNESİ CB416 44 KG/GÜN B-QUBE",
+      "sku": "9805.CB416.HC",
+      "model": "CB416 HC B-QUBE",
+      "fiyat_tl": 83200,
+      "liste_fiyati_eur": 2200,
+      "satis_eur_indirimli": 1300,
+      "satis_fiyati_tl": 83200,
+      "para_birimi": "EUR",
+      "kdv_oran": 20,
+      "kaynak_fiyat_listesi": "pfos-brema-oem-2026",
+      "dept": "sogutma",
+      "specs": "Brema CB416 HC B-QUBE küp buz makinesi\nGünlük kapasite: 44 kg/gün\nDepo: ~16 kg\nKaynak: Brema OEM — Equsto satış ~1300 EUR\nÜrün kodu: 9805.CB416.HC",
+      "images": []
+    },
+    {
+      "category": "buz-makineleri",
+      "brand": "Brema",
+      "name": "BREMA KÜP BUZ MAKİNESİ CB425 48 KG/GÜN B-QUBE",
+      "sku": "9805.CB425.HC",
+      "model": "CB425 HC B-QUBE",
+      "fiyat_tl": 86400,
+      "liste_fiyati_eur": 2350,
+      "satis_eur_indirimli": 1350,
+      "satis_fiyati_tl": 86400,
+      "para_birimi": "EUR",
+      "kdv_oran": 20,
+      "kaynak_fiyat_listesi": "pfos-brema-oem-2026",
+      "dept": "sogutma",
+      "specs": "Brema CB425 HC B-QUBE küp buz makinesi\nGünlük kapasite: 48 kg/gün\nDepo: ~25 kg\nKaynak: Brema OEM — Equsto satış ~1350 EUR\nÜrün kodu: 9805.CB425.HC",
+      "images": []
+    },
+    {
+      "category": "sinek-ld-r-c-cihazlar",
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "name": "SINEK OLDURUCU CIHAZ 40 M2 KP40",
+      "sku": "8799.70240.00",
+      "model": "KP40",
+      "fiyat_tl": 12870,
+      "liste_fiyati_eur": 446.875,
+      "satis_eur_indirimli": 201.09,
+      "satis_fiyati_tl": 12870,
+      "para_birimi": "EUR",
+      "kdv_oran": 20,
+      "kaynak_fiyat_listesi": "ozti-2025-set-ustu-mutfak",
+      "dept": "set-ustu-mutfak",
+      "specs": "SINEK OLDURUCU CIHAZ 40 M2 KP40\nTesir alanı: 35-40 m²\nÜrün kodu: 8799.70240.00\nKaynak: Öztiryakiler Fiyat Listesi 2025",
+      "images": []
+    }
+  ]
+}

@@ -39,14 +39,27 @@ function rowToEslesmis(row: AdminUrunRow): EslesmisUrun {
   };
 }
 
+function isBulasikKatalogAd(ad: string): boolean {
+  const k = norm(ad);
+  if (
+    /firin|konveksiyon|fritoz|izgara|ocak|kuzine|salamander|merrychef/.test(k) &&
+    !/bulasik|bulaşık|yikama\s*mak|dishwash/.test(k)
+  ) {
+    return false;
+  }
+  return /bulasik|bulaşık|dishwash|bardak\s*yik|yikama\s*mak|tezgahalti/.test(k);
+}
+
 function scoreBulasikRow(
   ad: string,
   form: ReturnType<typeof parseReferansNitelikleri>["bulasikForm"],
 ): number {
   const k = norm(ad);
+  if (!isBulasikKatalogAd(ad)) return -9999;
+
   if (form === "setalti") {
     if (/kazan|giyotin|konveyor|flight/.test(k)) return -9999;
-    if (/tezgahalti|oby\s*50|setalti/.test(k)) return 200;
+    if (/tezgahalti|oby\s*50|bulasik.*setalti|setalti.*bulasik/.test(k)) return 200;
     return -9999;
   }
   if (form === "giyotin") {

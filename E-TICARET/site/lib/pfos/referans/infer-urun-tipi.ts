@@ -75,8 +75,21 @@ const TIP_RULES: TipRule[] = [
     test: (n) => n.includes("karbuz") && n.includes("makin"),
   },
   {
+    tip: "buz-makinesi-brema-cb425",
+    test: (n) => /brema/.test(n) && /cb425|425/.test(n),
+  },
+  {
+    tip: "buz-makinesi-brema-cb416",
+    test: (n) =>
+      /brema/.test(n) &&
+      (/cb416|416|42\s*kg|44\s*kg/.test(n) || !/cb425|425/.test(n)),
+  },
+  {
     tip: "buz-makinesi-90kg",
-    test: (n) => /(?:^|\s|,)buz\s+makin/.test(n) && !n.includes("karbuz"),
+    test: (n) =>
+      /(?:^|\s|,)buz\s+makin/.test(n) &&
+      !n.includes("karbuz") &&
+      !n.includes("brema"),
   },
   {
     tip: "glass-washer",

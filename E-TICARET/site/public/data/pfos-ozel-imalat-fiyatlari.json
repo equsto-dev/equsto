@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "note": "Equsto atölye tezgah fiyatları — referans ölçüsüne göre (cm). pfos-referans-sku-links fiyat_try yoksa yedek.",
+  "kur_eur_try_kdv_dahil": 64,
+  "tezgah": {
+    "taban_eur_m2": 220,
+    "tek_evye_ek_eur": 185,
+    "cift_evye_ek_eur": 320,
+    "dolap_ek_eur": 145,
+    "kasa_banko_ek_eur": 95,
+    "min_eur": 420
+  }
+}
