@@ -389,18 +389,6 @@ body.eq-home-simple .hero-card-visual__shade--pfos {
   );
 }
 
-body.eq-home-simple .hero-card-visual--pfos .hero-pfos-promise {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -58%);
-  z-index: 2;
-  padding: 10px 14px 12px;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
-  box-shadow: 0 8px 24px rgba(0, 30, 80, 0.14);
-}
-
 @media (max-width: 768px) {
   body.eq-home-simple .eq-home-hero-ads .hero-card-visual {
     max-height: 160px;
