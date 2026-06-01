@@ -1,8 +1,13 @@
 import { createHash, randomBytes, scryptSync, timingSafeEqual } from "node:crypto";
 import { NextRequest } from "next/server";
 import { db } from "@/lib/db";
-import { normalizeShopCartItems, shopCartItemsToJson, type ShopCartLine } from "@/lib/shop-cart";
-
+import {
+  mergeShopCartItems,
+  normalizeShopCartItems,
+  resolveShopCartKey,
+  shopCartItemsToJson,
+  type ShopCartLine,
+} from "@/lib/shop-cart";
 const SESSION_DAYS = 90;
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -166,12 +171,18 @@ export async function revokeSession(token: string): Promise<void> {
   await db.shopMemberSession.delete({ where: { token } }).catch(() => {});
 }
 
-export async function loginWithEmail(email: string, password: string): Promise<MemberSessionPayload> {
+export async function loginWithEmail(
+  email: string,
+  password: string,
+  syncToken?: string | null,
+): Promise<MemberSessionPayload> {
   const norm = normalizeEmail(email);
   if (!EMAIL_RE.test(norm)) throw new Error("Geçerli e-posta girin");
   const member = await db.shopMember.findUnique({ where: { email: norm } });
   if (!member || !member.passwordHash) throw new Error("E-posta veya şifre hatalı");
   if (!verifyPassword(password, member.passwordHash)) throw new Error("E-posta veya şifre hatalı");
+  await mergeGuestShopCartIntoMember(syncToken, norm);
+  await syncMemberCartFromShopEmail(member.id, norm);
   return createSessionForMember(member.id);
 }
 
@@ -179,6 +190,7 @@ export async function registerWithEmail(
   email: string,
   password: string,
   name: string,
+  syncToken?: string | null,
 ): Promise<MemberSessionPayload> {
   const norm = normalizeEmail(email);
   if (!EMAIL_RE.test(norm)) throw new Error("Geçerli e-posta girin");
@@ -193,10 +205,15 @@ export async function registerWithEmail(
       provider: "email",
     },
   });
+  await mergeGuestShopCartIntoMember(syncToken, norm);
+  await syncMemberCartFromShopEmail(member.id, norm);
   return createSessionForMember(member.id);
 }
 
-export async function loginWithGoogle(idToken: string): Promise<MemberSessionPayload> {
+export async function loginWithGoogle(
+  idToken: string,
+  syncToken?: string | null,
+): Promise<MemberSessionPayload> {
   const g = await verifyGoogleIdToken(idToken);
   let member = await db.shopMember.findUnique({ where: { email: g.email } });
   if (!member) {
@@ -218,16 +235,53 @@ export async function loginWithGoogle(idToken: string): Promise<MemberSessionPay
       },
     });
   }
+  await mergeGuestShopCartIntoMember(syncToken, g.email);
+  await syncMemberCartFromShopEmail(member.id, g.email);
   return createSessionForMember(member.id);
 }
 
 export async function updateMemberCart(memberId: string, items: ShopCartLine[]) {
-  const norm = normalizeShopCartItems(items);
+  const member = await db.shopMember.findUnique({ where: { id: memberId } });
+  const merged = mergeShopCartItems(member?.cartItems ?? [], items);
   await db.shopMember.update({
     where: { id: memberId },
-    data: { cartItems: shopCartItemsToJson(norm) },
+    data: { cartItems: shopCartItemsToJson(merged) },
   });
-  return norm;
+  return merged;
+}
+
+/** Misafir sepetini üye e-posta anahtarına taşır (cihazlar arası). */
+export async function mergeGuestShopCartIntoMember(
+  syncToken: string | null | undefined,
+  memberEmail: string,
+): Promise<void> {
+  const guestKey = resolveShopCartKey(syncToken, null);
+  const emailKey = resolveShopCartKey(null, memberEmail);
+  if (!guestKey || !emailKey || guestKey === emailKey || !guestKey.startsWith("guest:")) {
+    return;
+  }
+  const guest = await db.shopCart.findUnique({ where: { cartKey: guestKey } });
+  if (!guest) return;
+  const emailRow = await db.shopCart.findUnique({ where: { cartKey: emailKey } });
+  const merged = mergeShopCartItems(emailRow?.items ?? [], guest.items);
+  await db.shopCart.upsert({
+    where: { cartKey: emailKey },
+    create: { cartKey: emailKey, items: shopCartItemsToJson(merged) },
+    update: { items: shopCartItemsToJson(merged) },
+  });
+}
+
+async function syncMemberCartFromShopEmail(memberId: string, email: string): Promise<void> {
+  const emailKey = resolveShopCartKey(null, email);
+  if (!emailKey) return;
+  const shopRow = await db.shopCart.findUnique({ where: { cartKey: emailKey } });
+  const member = await db.shopMember.findUnique({ where: { id: memberId } });
+  if (!member) return;
+  const merged = mergeShopCartItems(member.cartItems, shopRow?.items ?? []);
+  await db.shopMember.update({
+    where: { id: memberId },
+    data: { cartItems: shopCartItemsToJson(merged) },
+  });
 }
 
 export function sessionResponse(payload: MemberSessionPayload) {

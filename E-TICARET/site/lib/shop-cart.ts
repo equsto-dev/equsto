@@ -92,6 +92,12 @@ export function shopCartItemsToJson(items: ShopCartLine[]): Prisma.InputJsonValu
   return normalizeShopCartItems(items) as unknown as Prisma.InputJsonValue;
 }
 
+/** İki sepet listesini birleştirir (aynı üründe adet = max). */
+export function mergeShopCartItems(a: unknown, b: unknown): ShopCartLine[] {
+  const combined = [...normalizeShopCartItems(a), ...normalizeShopCartItems(b)];
+  return normalizeShopCartItems(combined);
+}
+
 export function guestTokenFromCartKey(cartKey: string): string | null {
   if (cartKey.startsWith("guest:")) return cartKey.slice(6);
   return null;

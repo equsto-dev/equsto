@@ -1,6 +1,7 @@
 import { NextRequest } from "next/server";
 import { db } from "@/lib/db";
 import {
+  mergeShopCartItems,
   normalizeShopCartItems,
   resolveShopCartKey,
   shopCartItemsToJson,
@@ -48,12 +49,16 @@ export async function PUT(req: NextRequest) {
   if (!cartKey) {
     return json({ success: false, error: "syncToken veya memberEmail gerekli" }, 400);
   }
-  const items = normalizeShopCartItems(body.items ?? []);
+  const incoming = normalizeShopCartItems(body.items ?? []);
   try {
+    const existing = await db.shopCart.findUnique({ where: { cartKey } });
+    const merged = existing
+      ? mergeShopCartItems(existing.items, incoming)
+      : incoming;
     const row = await db.shopCart.upsert({
       where: { cartKey },
-      create: { cartKey, items: shopCartItemsToJson(items) },
-      update: { items: shopCartItemsToJson(items) },
+      create: { cartKey, items: shopCartItemsToJson(merged) },
+      update: { items: shopCartItemsToJson(merged) },
     });
     return json({
       success: true,
