@@ -70,9 +70,9 @@ type Props = {
 const M2_PRESETS = [40, 80, 120, 200, 350];
 
 /** Panel geçiş süreleri (CSS transition ile eşleşmeli) */
-const PFOS_PANEL_FADE_MS = 1200;
-const PFOS_RESULT_FADE_MS = 1200;
-const PFOS_RAIL_FADE_MS = 1200;
+const PFOS_PANEL_FADE_MS = 700;
+const PFOS_RESULT_FADE_MS = 700;
+const PFOS_RAIL_FADE_MS = 700;
 
 function pfosStaggerStyle(index: number): CSSProperties {
   return { ["--pfos-stagger" as string]: index };
@@ -213,7 +213,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     enterTimerRef.current = window.setTimeout(() => {
       setAnimatingPanelId(null);
       setAnimatingPanelReveal(false);
-    }, PFOS_PANEL_FADE_MS + 800);
+    }, PFOS_PANEL_FADE_MS + 200);
 
     return clearEnterTimer;
   }, [openPanelIndex, panels, clearEnterTimer]);
@@ -235,7 +235,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     const t = window.setTimeout(() => {
       setResultEntering(false);
       setResultReveal(false);
-    }, PFOS_RESULT_FADE_MS + 800);
+    }, PFOS_RESULT_FADE_MS + 200);
     return () => {
       cleanup();
       window.clearTimeout(t);
@@ -254,7 +254,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     const t = window.setTimeout(() => {
       setRailEntering(false);
       setRailReveal(false);
-    }, PFOS_RAIL_FADE_MS + 800);
+    }, PFOS_RAIL_FADE_MS + 200);
     return () => {
       cleanup();
       window.clearTimeout(t);
