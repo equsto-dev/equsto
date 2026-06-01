@@ -123,10 +123,26 @@ const TIP_RULES: TipRule[] = [
     test: (n) => n.includes("kuvet"),
   },
   {
+    tip: "tas-firin",
+    test: (n) =>
+      n.includes("tas firin") ||
+      n.includes("taş fırın") ||
+      n.includes("tas taban") ||
+      n.includes("taş taban"),
+  },
+  {
     tip: "konveksiyon-firin-unox",
     test: (n) =>
       (n.includes("firin") || n.includes("fırın")) &&
       (n.includes("unox") || n.includes("jet firin")),
+  },
+  {
+    tip: "konveksiyon-firin-pastane",
+    test: (n) =>
+      (n === "firin" || n === "fırın") &&
+      !n.includes("pizza") &&
+      !n.includes("tas") &&
+      !n.includes("taş"),
   },
   {
     tip: "speed-oven-merry-chef",
@@ -183,7 +199,11 @@ const TIP_RULES: TipRule[] = [
     test: (n) =>
       n.includes("kombi") ||
       n.includes("konveksiyon") ||
-      (n.includes("firin") && !n.includes("unox")),
+      (n.includes("firin") &&
+        !n.includes("unox") &&
+        !n.includes("tas") &&
+        !n.includes("taş") &&
+        n.length > 12),
   },
   {
     tip: "bulasik-makinesi-giyotin",
