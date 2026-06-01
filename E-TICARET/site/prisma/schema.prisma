@@ -195,3 +195,24 @@ model Musteri {
   @@index([tip])
   @@index([createdAt])
 }
+
+/// Vitrin sepeti — cihazlar arası (guest UUID veya üye e-postası)
+model ShopCart {
+  cartKey   String   @id
+  items     Json     @default("[]")
+  updatedAt DateTime @updatedAt
+  createdAt DateTime @default(now())
+
+  @@index([updatedAt])
+}
+
+/// 6 haneli eşitleme kodu → cartKey (15 dk)
+model ShopCartLinkCode {
+  code      String   @id @db.VarChar(8)
+  cartKey   String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+
+  @@index([expiresAt])
+  @@index([cartKey])
+}
