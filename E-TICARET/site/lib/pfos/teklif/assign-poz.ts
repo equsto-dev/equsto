@@ -35,16 +35,28 @@ export function bolumBaslikFromKategori(kat: KategoriKodu): string {
   return `${bolumNoFromKategori(kat)}. ${label.toUpperCase()}`;
 }
 
-/** Espressolab A1, A4, A27 → sıra numarası */
+/** A12 → 12; 005 / 009 01 → sayısal sıra (poz harfi kategori için kullanılmaz) */
 export function referansPozSira(poz: string): number {
-  const m = String(poz || "").trim().match(/^[A-Z]+(\d+)$/i);
-  return m ? parseInt(m[1], 10) : 9999;
+  const p = String(poz || "").trim();
+  const letterNum = p.match(/^[A-Z]+(\d+)/i);
+  if (letterNum) return parseInt(letterNum[1], 10);
+  const num = parseInt(p.replace(/\s.*/, ""), 10);
+  return Number.isFinite(num) ? num : 9999;
+}
+
+function bolumSiraForKalem(k: PFOSKalemi): number {
+  if (k.referansBolumSira != null) return k.referansBolumSira;
+  return kategoriSiraIndex(k.kategoriKodu);
 }
 
 export function sortKalemlerForTeklif(a: PFOSKalemi, b: PFOSKalemi): number {
+  const ba = bolumSiraForKalem(a);
+  const bb = bolumSiraForKalem(b);
+  if (ba !== bb) return ba - bb;
+
   if (a.referansPoz && b.referansPoz) {
-    const sa = a.sablonSira ?? referansPozSira(a.referansPoz);
-    const sb = b.sablonSira ?? referansPozSira(b.referansPoz);
+    const sa = referansPozSira(a.referansPoz);
+    const sb = referansPozSira(b.referansPoz);
     if (sa !== sb) return sa - sb;
   }
   const ka = kategoriSiraIndex(a.kategoriKodu);
@@ -92,10 +104,26 @@ export function finalizeKalemlerForTeklif(
   return assignPozNumbersKategori(kalemler);
 }
 
+function excelBolumBaslik(k: PFOSKalemi): string | null {
+  const excelBolum = String(k.altKategori ?? "").trim();
+  if (excelBolum.length > 1 && !/^[A-H]$/i.test(excelBolum)) {
+    return excelBolum.replace(/\s+/g, " ").toUpperCase();
+  }
+  return null;
+}
+
 export function bolumForKalem(
   k: PFOSKalemi,
   layout?: TeklifLayoutMeta,
 ): { bolumNo: string; bolumBaslik: string } {
+  const excel = excelBolumBaslik(k);
+  if (excel) {
+    const sira = bolumSiraForKalem(k);
+    return {
+      bolumNo: String(sira + 1).padStart(2, "0"),
+      bolumBaslik: excel,
+    };
+  }
   if (layout?.bolum) {
     return { bolumNo: layout.bolum.no, bolumBaslik: layout.bolum.baslik };
   }

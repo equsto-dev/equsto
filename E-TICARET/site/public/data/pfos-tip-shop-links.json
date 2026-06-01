@@ -4,13 +4,14 @@
   "links": {
     "kombi_firin_6t": {
       "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "7890.60400.3T",
-      "marka": "Rational"
+      "sku": "9890.ICCLS61.E0",
+      "marka": "Rational",
+      "name": "RATIONAL BUHAR KONVEKSİYONLU ELEKTRİKLİ FIRIN 6*1/1 GN İcombi Classic"
     },
     "davlumbaz_duvar": {
       "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "9885.EECHC.00",
-      "name": "UNOX DAVLUMBAZ EECH-HC23 CHEFTOP"
+      "sku": "7885.20125.11",
+      "name": "DAVLUMBAZ DUVAR TİPİ FİLTRELİ 200*120"
     },
     "cop_arabasi": {
       "brand": "Öztiryakiler Endüstriyel Mutfak",
@@ -132,27 +133,25 @@
     },
     "raf_firin": {
       "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "9891.RMS51.0TS",
-      "name": "JET FIRIN / UNOX",
-      "fiyat_try": 95000
+      "sku": "9890.XBC10.E1",
+      "name": "UNOX BAKERTOP 10 TEPSI KOMBI FIRIN ELEKTRIKLI"
     },
     "bar_blender": {
       "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "9891.RMS51.0TS",
-      "name": "BAR BLENDER",
-      "fiyat_try": 18500
+      "sku": "9563.HBB90.80",
+      "marka": "Hamilton Beach",
+      "name": "HAMILTON BEACH BAR BLENDER HBB908R-CE"
     },
     "meyve_sikacagi": {
       "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "9891.RMS51.0TS",
-      "name": "KATI MEYVE SIKACAĞI",
-      "fiyat_try": 32000
+      "sku": "9860.00011.00",
+      "marka": "Santos",
+      "name": "SANTOS PORTAKAL SIKMA MAKINASI NO 11"
     },
     "bar_mikser": {
       "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "9891.RMS51.0TS",
-      "name": "BAR MİKSER",
-      "fiyat_try": 12000
+      "sku": "9563.BL811.00",
+      "name": "ÖZTİRYAKİLER BAR BLENDER BL811"
     },
     "rinser_evye": {
       "brand": "Öztiryakiler Endüstriyel Mutfak",

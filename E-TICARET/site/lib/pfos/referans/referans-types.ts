@@ -11,6 +11,9 @@ export type ReferansKalem = {
   tip?: "zorunlu" | "tavsiye" | "opsiyonel";
   notlar?: string;
   altKategori?: string;
+  /** Excel listesindeki bölüm sırası (ilk görünüm) */
+  referansBolumSira?: number;
+  referansBolumKey?: string;
   elektrikGucuKwHint?: number;
   gazGucuKwHint?: number;
 };

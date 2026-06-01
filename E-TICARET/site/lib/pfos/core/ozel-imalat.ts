@@ -4,6 +4,8 @@ import { toOlcuMmDisplay } from "../teklif/olcu-mm";
 
 /** Özel imalat / atölye — katalog markası yok; teklifte Equsto */
 export const OZEL_IMALAT_MARKA = "Equsto";
+/** Zone/referans TL fiyatına uygulanan Equsto kar (katalog Öztiryakiler ile aynı) */
+export const OZEL_IMALAT_KAR_ORAN = 0.08;
 
 /** Referans şablonunda Portashelf etiketi (ürün henüz katalogda yok) */
 export function isPortashelfSablon(isim: string | null | undefined): boolean {
@@ -96,6 +98,7 @@ export function buildOzelImalatEslesmis(opts: {
     elektrikGucuKw: opts.elektrikGucuKw ?? null,
     gazGucuKw: opts.gazGucuKw ?? null,
     fiyat,
+    fiyatEur: null,
     doviz: "TRY",
     gorselUrl: null,
   };

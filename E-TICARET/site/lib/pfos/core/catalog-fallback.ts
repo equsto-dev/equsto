@@ -10,6 +10,7 @@ import {
   buildOzelImalatEslesmis,
   displayIsimFromSablon,
   isOzelImalatMotor,
+  OZEL_IMALAT_KAR_ORAN,
 } from "./ozel-imalat";
 
 export { URUN_TIPI_ALIASES, normalizeTipKodu, resolveTipKodu };
@@ -117,11 +118,16 @@ export async function matchOzelImalatForSablon(
   notlar?: string | null,
 ): Promise<EslesmisUrun> {
   const zone = await matchZoneCatalog(urunTipi);
+  const zoneTry = Math.round(Number(zone?.fiyat) || 0);
+  const fiyatTry =
+    zoneTry > 0
+      ? Math.round(zoneTry * (1 + OZEL_IMALAT_KAR_ORAN))
+      : 0;
   return buildOzelImalatEslesmis({
     isim: displayIsimFromSablon(isim) || isim,
     urunTipi,
     notlar,
-    fiyatTry: zone?.fiyat ?? 0,
+    fiyatTry,
     elektrikGucuKw: zone?.elektrikGucuKw ?? null,
     gazGucuKw: zone?.gazGucuKw ?? null,
   });

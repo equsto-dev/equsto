@@ -4,6 +4,12 @@ import type { PfosKategoriKodu } from "@/lib/pfos/core/engine-types";
 import type { ReferansKalem, ReferansProfil } from "./referans-types";
 import { inferUrunTipiFromReferansSatir } from "./infer-urun-tipi";
 import { repairPfosDisplayText } from "@/lib/utf8/repair-turkish-fffd";
+import {
+  displayBolumBaslik,
+  kategoriFromBolumAd,
+  kategoriFromUrunAd,
+  referansBolumKey,
+} from "./kategori-from-bolum";
 
 const REF_DIR = () =>
   `${process.cwd()}/public/data/pfos-referans`;
@@ -75,64 +81,18 @@ export function pickBalikciListe(
   return pickM2Bant(m2);
 }
 
-/** Excel referans: poz 001/005 değil bolum + ürün adı → PFOS A–H */
+/**
+ * Excel referans → PFOS A–H.
+ * Öncelik: bolumAd (bölüm başlığı) → ürün adı (net tip) → G.
+ * Poz harfleri (A12, D5) ve bolum tek harfi kategori için kullanılmaz.
+ */
 export function kategoriFromReferansSatir(s: PfosEkipmanSatir): PfosKategoriKodu {
-  const urun = String(s.ad || "")
-    .toLocaleLowerCase("tr")
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "");
-  const bolumAd = String(s.bolumAd || "")
-    .toLocaleLowerCase("tr")
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "");
-  const hay = `${bolumAd} ${urun}`;
+  const fromBolum = kategoriFromBolumAd(s.bolumAd);
+  if (fromBolum) return fromBolum;
 
-  if (
-    /bulasik|yikama|giyotin|bym |on yikama|cop siyirma|bardak yik|kurutma makin|yag tutucu|basket rafi|kepce aski|on yikama/.test(
-      hay,
-    )
-  ) {
-    return "H";
-  }
-  if (/istif raf|tel raf|kuru depo|malzeme dolab|kazan/.test(hay) && !/bulasik|yikama/.test(hay)) {
-    return "G";
-  }
-  if (/servis bar|espresso|kahve mak|kokteyl|bar blender|milk frother/.test(hay)) {
-    return "A";
-  }
-  if (/pastane|pasta firin|hamur|konveksiyon.*pasta|mikser.*hamur/.test(hay)) {
-    return "D";
-  }
-  if (/sebze|et hazirlik|kiyma|testere|0\s*c\s*oda|soguk oda/.test(hay)) {
-    return "C";
-  }
-  if (/soguk|buzdolab|derin donduruc|buz makin|teshir/.test(hay) && !/sicak/.test(hay)) {
-    return "E";
-  }
-  if (
-    /sicak mutfak|izgara|firin|ocak|kuzine|fritez|salamander|davlumbaz|buharli firin/.test(
-      hay,
-    )
-  ) {
-    return "B";
-  }
+  const fromUrun = kategoriFromUrunAd(s.ad);
+  if (fromUrun) return fromUrun;
 
-  const bolum = String(s.bolum || "")
-    .trim()
-    .toUpperCase();
-  const BOLUM: Record<string, PfosKategoriKodu> = {
-    A: "B",
-    B: "C",
-    C: "B",
-    D: "H",
-    E: "C",
-    G: "C",
-    S: "A",
-  };
-  if (BOLUM[bolum]) return BOLUM[bolum];
-
-  const pozC = s.poz.trim().charAt(0).toUpperCase();
-  if ("ABCDEFGH".includes(pozC)) return pozC as PfosKategoriKodu;
   return "G";
 }
 
@@ -148,19 +108,31 @@ function adetSayi(adet: number | string): number {
 export function ekipmanToReferansKalemler(
   kalemler: PfosEkipmanSatir[],
 ): ReferansKalem[] {
-  return kalemler.map((s) => ({
-    referansPoz: s.poz,
-    isim: repairPfosDisplayText(s.ad),
-    urunTipi: urunTipiFromSatir(s),
-    kategoriKodu: kategoriFromReferansSatir(s),
-    adet: adetSayi(s.adet),
-    tip: "zorunlu" as const,
-    notlar:
-      s.olcu && s.olcu !== "—"
-        ? repairPfosDisplayText(`Ölçü: ${s.olcu}`)
-        : undefined,
-    altKategori: repairPfosDisplayText(s.bolum || s.bolumAd || undefined),
-  }));
+  const bolumOrder = new Map<string, number>();
+  let nextBolum = 0;
+
+  return kalemler.map((s) => {
+    const key = referansBolumKey(s.bolum, s.bolumAd);
+    if (!bolumOrder.has(key)) bolumOrder.set(key, nextBolum++);
+
+    return {
+      referansPoz: s.poz,
+      isim: repairPfosDisplayText(s.ad),
+      urunTipi: urunTipiFromSatir(s),
+      kategoriKodu: kategoriFromReferansSatir(s),
+      adet: adetSayi(s.adet),
+      tip: "zorunlu" as const,
+      notlar:
+        s.olcu && s.olcu !== "—"
+          ? repairPfosDisplayText(`Ölçü: ${s.olcu}`)
+          : undefined,
+      altKategori: repairPfosDisplayText(
+        displayBolumBaslik(s.bolumAd, s.bolum),
+      ),
+      referansBolumKey: key,
+      referansBolumSira: bolumOrder.get(key)!,
+    };
+  });
 }
 
 export type PfosReferansListeDosya = {
