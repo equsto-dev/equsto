@@ -50,18 +50,21 @@
     return b.indexOf(needle) >= 0 || oem.indexOf(needle) >= 0;
   }
 
-  function waitDeps(tries, cb) {
-    if (
+  function depsReady() {
+    return (
       window.EqustoShopCatalog &&
       typeof window.EqustoShopCatalog.loadMergedCatalog === "function" &&
       window.EqCategoryShell &&
-      typeof window.EqCategoryShell.mount === "function" &&
-      typeof window.eqBrandMatchesRow === "function"
-    ) {
+      typeof window.EqCategoryShell.mount === "function"
+    );
+  }
+
+  function waitDeps(tries, cb) {
+    if (depsReady()) {
       cb();
       return;
     }
-    if (tries > 120) {
+    if (tries > 200) {
       var root = document.getElementById("eq-cat-shell");
       if (root) {
         root.innerHTML =
