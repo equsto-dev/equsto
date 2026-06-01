@@ -27,9 +27,14 @@
     if (c.group && c.group.default_iskonto_oran != null) {
       return num(c.group.default_iskonto_oran, 0);
     }
-    if (p.iskonto_oran != null) return num(p.iskonto_oran, 0);
+    if (p.iskonto_yuzde != null && p.iskonto_yuzde > 0) return num(p.iskonto_yuzde, 0);
+    if (p.iskonto_oran != null) {
+      var o = num(p.iskonto_oran, 0);
+      return o > 0 && o < 1 ? o * 100 : o;
+    }
+    /* Öztiryakiler Excel: bayi_iskonto = indirim oranı (0,73 → %73) */
     if (p.bayi_iskonto != null && p.bayi_iskonto > 0 && p.bayi_iskonto < 1) {
-      return num(p.bayi_iskonto, 0) * 100;
+      return Math.round(num(p.bayi_iskonto, 0) * 10000) / 100;
     }
     return 0;
   }

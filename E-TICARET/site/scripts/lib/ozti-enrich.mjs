@@ -795,6 +795,17 @@ export function isOztiListeTl(row) {
   return p === "TL" || p === "TRY" || p === "₺";
 }
 
+/**
+ * Excel «BAYİ İSKONTO» = indirim oranı (ondalık).
+ * Örn. 0,73 → %73 iskonto, bayi net = liste × 0,27.
+ */
+export function oztiOdemeCarpani(bayiIsk) {
+  const isk = Number(bayiIsk);
+  if (!Number.isFinite(isk) || isk <= 0 || isk >= 1) return 1;
+  return Math.round((1 - isk) * 10000) / 10000;
+}
+
+/** Bayi net alış = liste × (1 − iskonto oranı) */
 export function oztiSatisEur(liste, bayiIsk) {
   const L = Number(liste);
   if (!(L > 0)) return null;
@@ -810,6 +821,8 @@ export function oztiIskontoYuzde(bayiIsk) {
 }
 
 export const OZTI_KDV_ORAN = 20;
+/** Equsto satış: bayi net alış üzerine (varsayılan %8) */
+export const OZTI_EQUSTO_KAR_ORAN = 0.08;
 
 export function oztiFmtTry(n) {
   const v = Math.round(Number(n));
@@ -824,32 +837,38 @@ export function oztiPriceLabelTl(pricing) {
   return "";
 }
 
-/** Fiyat listesi 2025: satış = liste × (1 − bayi_iskonto); EUR satırlar × kur; TL satırlar doğrudan TRY. */
-export function oztiPricingFields(row, kurTry) {
+/** Fiyat listesi 2025: bayi net = liste × (1 − iskonto); Equsto = bayi net × (1 + kar). */
+export function oztiPricingFields(row, kurTry, opts) {
   const liste = Number(row.liste_fiyati_eur ?? row.liste_fiyati) || 0;
   const bayi = Number(row.bayi_iskonto);
   const tlListe = isOztiListeTl(row);
+  const kalanOran = oztiOdemeCarpani(bayi);
   const iskPct = oztiIskontoYuzde(bayi);
-  const odeme =
-    iskPct > 0 && bayi > 0 && bayi < 1
-      ? Math.round((1 - bayi) * 10000) / 10000
-      : 1;
-  const satis =
+  const karOran = Number(
+    opts?.equstoKarOran != null ? opts.equstoKarOran : OZTI_EQUSTO_KAR_ORAN,
+  );
+  const bayiNet =
     oztiSatisEur(liste, bayi) ??
-    (Number(row.satis_fiyati_eur) > 0 ? Number(row.satis_fiyati_eur) : null) ??
-    (Number(row.satis_fiyati_tl) > 0 ? Number(row.satis_fiyati_tl) : null);
+    (Number(row.alis_fiyati_eur ?? row.alis_fiyati) > 0
+      ? Number(row.alis_fiyati_eur ?? row.alis_fiyati)
+      : null) ??
+    (Number(row.alis_fiyati_tl) > 0 ? Number(row.alis_fiyati_tl) : null);
+  let equstoNet = bayiNet;
+  if (bayiNet > 0 && karOran > 0) {
+    equstoNet = Math.round(bayiNet * (1 + karOran) * 100) / 100;
+  }
 
   const kur = Number(kurTry);
   let fiyat_tl_net = null;
   let fiyat_tl = null;
   let price = "";
-  if (satis > 0) {
+  if (equstoNet > 0) {
     if (tlListe) {
-      fiyat_tl_net = Math.round(satis);
+      fiyat_tl_net = Math.round(equstoNet);
       fiyat_tl = Math.round(fiyat_tl_net * (1 + OZTI_KDV_ORAN / 100));
       price = oztiPriceLabelTl({ fiyat_tl });
     } else if (kur > 0) {
-      fiyat_tl_net = Math.round(satis * kur);
+      fiyat_tl_net = Math.round(equstoNet * kur);
       fiyat_tl = Math.round(fiyat_tl_net * (1 + OZTI_KDV_ORAN / 100));
       price = oztiPriceLabelTl({ fiyat_tl });
     }
@@ -859,15 +878,17 @@ export function oztiPricingFields(row, kurTry) {
     liste_fiyati: liste || null,
     liste_fiyati_eur: tlListe ? null : liste || null,
     liste_fiyati_tl: tlListe ? liste || null : null,
-    alis_fiyati: satis,
-    alis_fiyati_eur: tlListe ? null : satis,
-    alis_fiyati_tl: tlListe ? satis : null,
-    satis_fiyati_eur: tlListe ? null : satis,
-    satis_fiyati_tl: tlListe ? satis : null,
-    satis_eur_indirimli: tlListe ? null : satis,
-    iskontolu_fiyat: satis,
+    alis_fiyati: bayiNet,
+    alis_fiyati_eur: tlListe ? null : bayiNet,
+    alis_fiyati_tl: tlListe ? bayiNet : null,
+    satis_fiyati_eur: tlListe ? null : equstoNet,
+    satis_fiyati_tl: tlListe ? equstoNet : null,
+    satis_eur_indirimli: tlListe ? null : equstoNet,
+    iskontolu_fiyat: equstoNet,
+    equsto_kar_oran: karOran > 0 ? karOran : null,
     bayi_iskonto: Number.isFinite(bayi) ? bayi : null,
-    odeme_carpani: odeme,
+    odeme_carpani: kalanOran,
+    kalan_oran: kalanOran,
     iskonto_yuzde: iskPct,
     iskonto_oran: iskPct,
     para_birimi: row.para_birimi || (tlListe ? "TL" : "EUR"),
@@ -886,20 +907,23 @@ export function oztiPriceLabelEur(pricing) {
   return oztiPriceLabelTl(pricing);
 }
 
-export function oztiPricingLines(row, kurTry) {
-  const px = oztiPricingFields(row, kurTry);
+export function oztiPricingLines(row, kurTry, opts) {
+  const px = oztiPricingFields(row, kurTry, opts);
   const tlListe = isOztiListeTl(row);
   const liste = tlListe ? px.liste_fiyati_tl : px.liste_fiyati_eur;
+  const bayiNet = tlListe ? px.alis_fiyati_tl : px.alis_fiyati_eur;
   const satis = tlListe ? px.satis_fiyati_tl : px.satis_fiyati_eur;
   const iskPct = px.iskonto_yuzde;
-  const odeme = px.odeme_carpani;
+  const kalan = px.kalan_oran ?? px.odeme_carpani;
+  const karPct = px.equsto_kar_oran != null ? Math.round(px.equsto_kar_oran * 10000) / 100 : 0;
   const birim = tlListe ? "TL" : "EUR";
   const lines = [
     `Ürün kodu: ${row.urun_kodu}`,
     `Liste fiyatı (${birim}): ${liste ?? "—"}`,
-    `Bayi iskonto: %${iskPct || "—"} (ödeme çarpanı ${odeme})`,
-    `Equsto satış (${birim}): ${satis ?? "—"}`,
-    `Hesap: liste × (1 − bayi iskonto)`,
+    `Bayi iskonto: %${iskPct || "—"} (kalan oran ${kalan})`,
+    `Bayi net alış (${birim}): ${bayiNet ?? "—"}`,
+    `Equsto satış (${birim}): ${satis ?? "—"}${karPct ? ` (+%${karPct} kar)` : ""}`,
+    `Hesap: liste × (1 − bayi iskonto); Equsto = bayi net × ${1 + (px.equsto_kar_oran || 0)}`,
   ];
   if (px.fiyat_tl > 0) {
     lines.push(

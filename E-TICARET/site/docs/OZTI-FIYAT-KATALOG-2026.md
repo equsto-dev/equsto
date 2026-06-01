@@ -30,29 +30,30 @@ python scripts/merge-ozti-fiyat-katalog.py
 - **Sadece fiyat listesi:** ~426 (PDF’te metin olarak yok — yeni/variant veya görsel sayfa)
 - **Sadece PDF:** ~661 (fiyat listesinde satır yok — aksesuar / eski kod / farklı format)
 
-### Bayi iskonto → satış fiyatı (EUR)
+### Bayi iskonto → net alış → Equsto satış
 
-Excel **BAYİ İSKONTO** = **indirim oranı** (ondalık). Örn. **0,65** → **%65 indirim**, ödeme çarpanı **0,35**:
+Excel **BAYİ İSKONTO** sütunu = **indirim oranı** (ondalık). H1 *«pişiriciler %73 iskonto»* → sütunda **0,73** = **%73 iskonto**.
 
 ```
-odeme_carpani     = 1 − bayi_iskonto
-satis_fiyati_eur  = liste_fiyati_eur × odeme_carpani
-iskonto_yuzde     = bayi_iskonto × 100
+iskonto_yuzde     = bayi_iskonto × 100           (örn. 0,73 → %73)
+kalan_oran        = 1 − bayi_iskonto             (örn. 0,27)
+bayi_net_eur      = liste_fiyati_eur × kalan_oran
+equsto_net_eur    = bayi_net_eur × 1,08          (%8 Equsto kar)
+fiyat_tl_kdv_dahil = equsto_net_eur × kur × 1,20
 ```
 
-Örnek: liste **1.461,57 EUR**, bayi iskonto **0,65** → satış **511,55 EUR** (liste × **0,35**).
+Örnek **7865.N1.80908.10**: liste **5.877,18 EUR**, iskonto **0,73** → bayi net **1.586,84 EUR** → Equsto **1.713,79 EUR** (+ %8).
 
-| Bayi iskonto (Excel) | İndirim % | Ödeme çarpanı | Ürün sayısı (yaklaşık) |
-|----------------------|-----------|---------------|------------------------|
-| 0,65 | 65 | 0,35 | 2.301 |
-| 0,55 | 55 | 0,45 | 1.250 |
-| 0,60 | 60 | 0,40 | 1.023 |
-| 0,50 | 50 | 0,50 | 40 |
-| (boş) | 0 | 1,00 | 140 |
+| Excel (iskonto oranı) | İskonto % | Ürün sayısı (2025-3 xlsx) |
+|----------------------|-----------|---------------------------|
+| 0,73 | 73 | ~2.098 |
+| 0,58 | 58 | ~738 |
+| 0,65 | 65 | ~583 |
+| 0,60 | 60 | ~94 |
 
-JSON: `liste_fiyati_eur`, `bayi_iskonto`, `odeme_carpani`, `satis_fiyati_eur`, `iskonto_yuzde`, `iskonto_tutar_eur`.
+JSON: `liste_fiyati_eur`, `bayi_iskonto`, `kalan_oran`, `alis_fiyati_eur` (bayi net), `satis_fiyati_eur` (Equsto net + %8).
 
-Mağaza: `equsto-pricing-core.js` + `eq-kur-live.js` + `eq-fiyatlar-bridge.js` — satış EUR (`liste × (1 − bayi_iskonto)`) × TCMB kuru → TL + KDV. Dept JSON: `liste_fiyati_eur`, `satis_fiyati_eur`, `iskonto_oran`, yedek `price` (€ etiket).
+Mağaza: `ozti-enrich.mjs` (`OZTI_EQUSTO_KAR_ORAN = 0,08`), `eq-kur-live.js`, `equsto-pricing-core.js`.
 
 ## Set üstü vitrin (sol liste)
 

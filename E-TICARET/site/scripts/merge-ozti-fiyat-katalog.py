@@ -82,15 +82,16 @@ def resolve_pdf(k: str, pdf_by_kod: dict[str, dict], soft_to_kod: dict[str, str]
 
 def satis_eur_from_liste(liste: float | None, bayi_iskonto: float | None) -> dict:
     """
-    Excel «BAYİ İSKONTO» = indirim oranı (0,65 → %65 indirim).
-    Satış EUR = liste × (1 − bayi_iskonto) → ödeme çarpanı 0,35.
+    Excel «BAYİ İSKONTO» = indirim oranı (ondalık).
+    Örn. 0,73 → %73 iskonto, bayi net = liste × 0,27.
     """
     out: dict = {
         "satis_fiyati_eur": None,
         "iskonto_yuzde": None,
         "iskonto_tutar_eur": None,
         "odeme_carpani": None,
-        "fiyatlandirma": "liste_eur_x_odeme_carpani",
+        "kalan_oran": None,
+        "fiyatlandirma": "liste_x_1_minus_iskonto_excel",
     }
     if liste is None or liste <= 0:
         out["not"] = "liste_fiyati_yok"
@@ -100,14 +101,18 @@ def satis_eur_from_liste(liste: float | None, bayi_iskonto: float | None) -> dic
         out["iskonto_yuzde"] = 0.0
         out["iskonto_tutar_eur"] = 0.0
         out["odeme_carpani"] = 1.0
+        out["kalan_oran"] = 1.0
         out["not"] = "bayi_iskonto_yok_liste_satis"
         return out
-    odeme = 1 - bayi_iskonto
-    satis = round(liste * odeme, 2)
+    isk = float(bayi_iskonto)
+    kalan = round(1 - isk, 4)
+    satis = round(liste * kalan, 2)
+    iskonto_pct = round(isk * 100, 2)
     out["satis_fiyati_eur"] = satis
-    out["iskonto_yuzde"] = round(bayi_iskonto * 100, 2)
+    out["iskonto_yuzde"] = iskonto_pct
     out["iskonto_tutar_eur"] = round(liste - satis, 2)
-    out["odeme_carpani"] = round(odeme, 4)
+    out["odeme_carpani"] = kalan
+    out["kalan_oran"] = kalan
     return out
 
 

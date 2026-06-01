@@ -1,42 +1,35 @@
 {
-  "fiyat_listesi_urun": 5250,
+  "fiyat_listesi_urun": 3559,
   "pdf_kod_sayisi": 4906,
-  "eslesen": 4335,
+  "eslesen": 3238,
   "eslesen_soft_kod": 8,
-  "sadece_fiyat_listesinde": 909,
-  "sadece_pdf_katalogda": 654,
+  "sadece_fiyat_listesinde": 320,
+  "sadece_pdf_katalogda": 1728,
   "iskonto_gruplari": {
-    "0.65": 2631,
-    "0.55": 1310,
-    "0.6": 1044,
-    "nan": 156,
-    "0.5": 109
+    "0.73": 2098,
+    "0.58": 738,
+    "0.65": 583,
+    "0.6": 94,
+    "nan": 38,
+    "0.55": 8
   },
   "kategori_leaf_sayilari": {
     "YER IZGARALARI": 335,
-    "GURMEAID MUTFAK AKSESUARLARI": 179,
-    "AKSESUARLAR": 154,
     "ÇALIŞMA TEZGAHLARI": 136,
-    "SERVİS GEREÇLERİ": 134,
-    "LAVA DÖKÜM TENCERE VE TAVALAR": 125,
-    "GURMEAID PROFESYONEL BIÇAKLAR": 114,
+    "AKSESUARLAR": 110,
     "EVYE TABLALARI": 76,
-    "PASTANE EKİPMANLARI": 76,
     "EVYELİ TEZGAHLAR (ÇİFT EVYELİ, TEK DAMLALIKLI, PERDELİ TEZGAHLAR)": 74,
-    "TEZGAH TİPİ SOĞUTUCULAR": 73,
     "İSTİF RAFLARI": 73,
+    "TEZGAH TİPİ SOĞUTUCULAR": 67,
     "POLİETİLEN KESME TAHTALARI": 62,
     "GN SERVİS TEPSİLERİ": 60,
     "EVYELİ TEZGAHLAR (ÇİFT EVYELİ, TEK DAMLALIKLI, TABAN RAFLI, PERDELİ TEZGAHLAR)": 56,
-    "BAKIR SUNUM EKİPMANLARI": 56,
     "STANDART GASTRONORM KÜVETLER": 48,
-    "SİLİNDİRİK TENCERE KAPAKLARI": 46,
     "LINEMISS / LINEMICRO SERİSİ FIRINLAR": 45,
     "KÖŞE DESENLİ GASTRONORM KÜVETLER": 45,
     "SOĞUK ODALAR": 44,
     "DERİN DONDURUCU ODALAR": 44,
-    "CHAFING DISHLER": 43,
-    "TEMİZLİK VE HİJYEN ÜRÜNLERİ": 41,
+    "CHAFING DISHLER": 41,
     "GASTRONORM KAPAKLAR": 41,
     "BUZ MAKİNELERİ": 40,
     "EVYELİ TEZGAHLAR": 40,
@@ -44,17 +37,12 @@
     "BUZDOLAPLARI VE DERİN DONDURUCULAR": 38,
     "BULAŞIK MAKİNESİ GİRİŞ VE ÇIKIŞ TEZGAHLARI": 36,
     "ÇALIŞMA TEZGAHLARI (BULAŞIK MAKİNESİ TEZGAHLARI)": 36,
-    "ANKASTRE SELF SERVİS TEŞHİR ÜNİTELERİ": 36,
     "DELİKLİ KÖŞE DESENLİ GASTRONORM KÜVETLER": 36,
     "PRES BASKI TEPSİLER": 36,
     "EL YIKAMA EVYELERİ": 35,
-    "SİLİNDİRİK TENCERELER": 35,
-    "BAR AKSESUARLARI": 34,
     "POLİPROPİLEN TABLALI İSTİF RAFLARI": 33,
     "EVYELİ TEZGAHLAR (TEK EVYELİ VE PERDELİ TEZGAHLAR)": 30,
-    "DUVAR TİPİ TEŞHİR ÜNİTELERİ": 30,
     "GN KÜVETLER YAPIŞMAZ KAPLAMALI": 30,
-    "GURMEAID SİLİKON PASTA KALIPLARI": 30,
     "ÇAY OCAKLARI VE KAHVE MAKİNELERİ": 29,
     "EVYELİ TEZGAHLAR (TEK EVYELİ, TEK DAMLALIKLI VE PERDELİ TEZGAHLAR)": 28,
     "EVYELİ TEZGAHLAR (TEK EVYELİ, TEK DAMLALIKLI, TABAN RAFLI VE PERDELİ TEZGAHLAR)": 28,
@@ -62,7 +50,20 @@
     "ÇALIŞMA TEZGAHLARI (TABAN RAFLI, SIRTSIZ ÇALIŞMA TEZGAHI)": 28,
     "ARABALAR": 28,
     "SAPLI GASTRONORM KÜVETLER": 28,
-    "TAVALAR": 28
+    "MİKSER AKSESUAR": 27,
+    "TAŞIMA EKİPMANLARI": 27,
+    "POLİPROPİLEN GASTRONORM KÜVETLER": 27,
+    "DAVLUMBAZLAR (ORTA TİP ALEV SAVAR FİLTRELİ DAVLUMBAZ)": 26,
+    "DAVLUMBAZLAR (ORTA TİP TEMİZ HAVA ÜFLEMELİ FİLTRELİ DAVLUMBAZ)": 26,
+    "BANKET ARABALARI": 26,
+    "POLİKARBONAT GASTRONORM KÜVETLER": 26,
+    "GURMEAID PROFESYONEL BIÇAKLAR": 26,
+    "DAVLUMBAZLAR (DUVAR TİP FİLTRESİZ DAVLUMBAZ)": 24,
+    "DAVLUMBAZLAR (DUVAR TİP ALEV SAVAR TİP FİLTRELİ DAVLUMBAZ)": 22,
+    "DAVLUMBAZLAR (DUVAR TİP TEMİZ HAVA ÜFLEMELİ FİLTRELİ DAVLUMBAZ)": 21,
+    "EVYELİ TEZGAHLAR (TEK EVYELİ,TABAN RAFLI VE PERDELİ TEZGAHLAR)": 20,
+    "İSTİF RAFLARI (SOĞUK DEPO İSTİF RAFI)": 20,
+    "İSTİF RAFLARI (KAZAN TENCERE İSTİF RAFI)": 20
   },
   "fiyatlandirma": "satis_fiyati_eur = liste_fiyati_eur × (1 − bayi_iskonto); ör. bayi_iskonto 0,65 → %65 indirim, ödeme ×0,35",
   "ornek_eslesen": [
@@ -70,9 +71,9 @@
       "urun_kodu": "7865.N1.80908.10",
       "kategori": "900 SERİ KUZİNELER",
       "liste_fiyati_eur": 5877.18,
-      "bayi_iskonto": 0.65,
-      "iskonto_yuzde": 65.0,
-      "satis_fiyati_eur": 2057.01,
+      "bayi_iskonto": 0.73,
+      "iskonto_yuzde": 73.0,
+      "satis_fiyati_eur": 1586.84,
       "pdf_sayfa": [
         9,
         34
@@ -82,9 +83,9 @@
       "urun_kodu": "7865.N1.80908.10P",
       "kategori": "900 SERİ KUZİNELER",
       "liste_fiyati_eur": 5954.43,
-      "bayi_iskonto": 0.65,
-      "iskonto_yuzde": 65.0,
-      "satis_fiyati_eur": 2084.05,
+      "bayi_iskonto": 0.73,
+      "iskonto_yuzde": 73.0,
+      "satis_fiyati_eur": 1607.7,
       "pdf_sayfa": [
         9,
         34
@@ -94,9 +95,9 @@
       "urun_kodu": "7865.N1.12908.10",
       "kategori": "900 SERİ KUZİNELER",
       "liste_fiyati_eur": 8008.25,
-      "bayi_iskonto": 0.65,
-      "iskonto_yuzde": 65.0,
-      "satis_fiyati_eur": 2802.89,
+      "bayi_iskonto": 0.73,
+      "iskonto_yuzde": 73.0,
+      "satis_fiyati_eur": 2162.23,
       "pdf_sayfa": [
         9,
         34
@@ -106,9 +107,9 @@
       "urun_kodu": "7865.N1.80908.12",
       "kategori": "900 SERİ KUZİNELER",
       "liste_fiyati_eur": 6476.64,
-      "bayi_iskonto": 0.65,
-      "iskonto_yuzde": 65.0,
-      "satis_fiyati_eur": 2266.82,
+      "bayi_iskonto": 0.73,
+      "iskonto_yuzde": 73.0,
+      "satis_fiyati_eur": 1748.69,
       "pdf_sayfa": [
         9,
         34
@@ -118,9 +119,9 @@
       "urun_kodu": "7865.N1.12908.50",
       "kategori": "900 SERİ KUZİNELER",
       "liste_fiyati_eur": 8462.48,
-      "bayi_iskonto": 0.65,
-      "iskonto_yuzde": 65.0,
-      "satis_fiyati_eur": 2961.87,
+      "bayi_iskonto": 0.73,
+      "iskonto_yuzde": 73.0,
+      "satis_fiyati_eur": 2284.87,
       "pdf_sayfa": [
         9,
         34
@@ -130,9 +131,9 @@
       "urun_kodu": "7865.N1.80908.10E",
       "kategori": "900 SERİ KUZİNELER",
       "liste_fiyati_eur": 5778.3,
-      "bayi_iskonto": 0.65,
-      "iskonto_yuzde": 65.0,
-      "satis_fiyati_eur": 2022.4,
+      "bayi_iskonto": 0.73,
+      "iskonto_yuzde": 73.0,
+      "satis_fiyati_eur": 1560.14,
       "pdf_sayfa": [
         9,
         34
@@ -142,9 +143,9 @@
       "urun_kodu": "7865.N1.80908.10PE",
       "kategori": "900 SERİ KUZİNELER",
       "liste_fiyati_eur": 5849.37,
-      "bayi_iskonto": 0.65,
-      "iskonto_yuzde": 65.0,
-      "satis_fiyati_eur": 2047.28,
+      "bayi_iskonto": 0.73,
+      "iskonto_yuzde": 73.0,
+      "satis_fiyati_eur": 1579.33,
       "pdf_sayfa": [
         9,
         34
@@ -154,9 +155,9 @@
       "urun_kodu": "7865.N1.12908.10E",
       "kategori": "900 SERİ KUZİNELER",
       "liste_fiyati_eur": 7851.69,
-      "bayi_iskonto": 0.65,
-      "iskonto_yuzde": 65.0,
-      "satis_fiyati_eur": 2748.09,
+      "bayi_iskonto": 0.73,
+      "iskonto_yuzde": 73.0,
+      "satis_fiyati_eur": 2119.96,
       "pdf_sayfa": [
         9
       ]
@@ -165,9 +166,9 @@
       "urun_kodu": "7865.N1.12908.50E",
       "kategori": "900 SERİ KUZİNELER",
       "liste_fiyati_eur": 8601.53,
-      "bayi_iskonto": 0.65,
-      "iskonto_yuzde": 65.0,
-      "satis_fiyati_eur": 3010.54,
+      "bayi_iskonto": 0.73,
+      "iskonto_yuzde": 73.0,
+      "satis_fiyati_eur": 2322.41,
       "pdf_sayfa": [
         9,
         34
@@ -177,9 +178,9 @@
       "urun_kodu": "7865.N1.40903.20",
       "kategori": "GAZLI SET ÜSTÜ OCAK",
       "liste_fiyati_eur": 1837.52,
-      "bayi_iskonto": 0.65,
-      "iskonto_yuzde": 65.0,
-      "satis_fiyati_eur": 643.13,
+      "bayi_iskonto": 0.73,
+      "iskonto_yuzde": 73.0,
+      "satis_fiyati_eur": 496.13,
       "pdf_sayfa": [
         9,
         34
@@ -189,9 +190,9 @@
       "urun_kodu": "7865.N1.80903.20",
       "kategori": "GAZLI SET ÜSTÜ OCAK",
       "liste_fiyati_eur": 3240.38,
-      "bayi_iskonto": 0.65,
-      "iskonto_yuzde": 65.0,
-      "satis_fiyati_eur": 1134.13,
+      "bayi_iskonto": 0.73,
+      "iskonto_yuzde": 73.0,
+      "satis_fiyati_eur": 874.9,
       "pdf_sayfa": [
         9,
         34
@@ -201,9 +202,9 @@
       "urun_kodu": "7865.N1.80903.20P",
       "kategori": "GAZLI SET ÜSTÜ OCAK",
       "liste_fiyati_eur": 3318.66,
-      "bayi_iskonto": 0.65,
-      "iskonto_yuzde": 65.0,
-      "satis_fiyati_eur": 1161.53,
+      "bayi_iskonto": 0.73,
+      "iskonto_yuzde": 73.0,
+      "satis_fiyati_eur": 896.04,
       "pdf_sayfa": [
         9,
         34
@@ -213,9 +214,9 @@
       "urun_kodu": "7865.N1.80903.53",
       "kategori": "GAZLI SET ÜSTÜ OCAK",
       "liste_fiyati_eur": 2213.47,
-      "bayi_iskonto": 0.65,
-      "iskonto_yuzde": 65.0,
-      "satis_fiyati_eur": 774.71,
+      "bayi_iskonto": 0.73,
+      "iskonto_yuzde": 73.0,
+      "satis_fiyati_eur": 597.64,
       "pdf_sayfa": [
         9,
         34
@@ -225,9 +226,9 @@
       "urun_kodu": "7865.N1.12903.20",
       "kategori": "GAZLI SET ÜSTÜ OCAK",
       "liste_fiyati_eur": 4485.65,
-      "bayi_iskonto": 0.65,
-      "iskonto_yuzde": 65.0,
-      "satis_fiyati_eur": 1569.98,
+      "bayi_iskonto": 0.73,
+      "iskonto_yuzde": 73.0,
+      "satis_fiyati_eur": 1211.13,
       "pdf_sayfa": [
         9,
         34
@@ -237,9 +238,9 @@
       "urun_kodu": "7865.N1.80908.11",
       "kategori": "ELEKTRİKLİ KUZİNELER",
       "liste_fiyati_eur": 7590.07,
-      "bayi_iskonto": 0.65,
-      "iskonto_yuzde": 65.0,
-      "satis_fiyati_eur": 2656.52,
+      "bayi_iskonto": 0.73,
+      "iskonto_yuzde": 73.0,
+      "satis_fiyati_eur": 2049.32,
       "pdf_sayfa": [
         10
       ]
@@ -249,77 +250,77 @@
     {
       "urun_kodu": "7865.N1.80708.10L",
       "kategori": "GAZLI FIRINLI KUZİNE",
-      "bayi_iskonto": 0.65
+      "bayi_iskonto": 0.73
     },
     {
       "urun_kodu": "7865.N1.80708.10EL",
       "kategori": "GAZLI FIRINLI KUZİNE",
-      "bayi_iskonto": 0.65
+      "bayi_iskonto": 0.73
     },
     {
       "urun_kodu": "7865.N1.80708.10LP",
       "kategori": "GAZLI FIRINLI KUZİNE",
-      "bayi_iskonto": 0.65
+      "bayi_iskonto": 0.73
     },
     {
       "urun_kodu": "7865.N1.80708.10ELP",
       "kategori": "GAZLI FIRINLI KUZİNE",
-      "bayi_iskonto": 0.65
+      "bayi_iskonto": 0.73
     },
     {
       "urun_kodu": "7865.N1.80708.10LS",
       "kategori": "GAZLI FIRINLI KUZİNE",
-      "bayi_iskonto": 0.65
+      "bayi_iskonto": 0.73
     },
     {
       "urun_kodu": "7865.N1.80708.10ELS",
       "kategori": "GAZLI FIRINLI KUZİNE",
-      "bayi_iskonto": 0.65
+      "bayi_iskonto": 0.73
     },
     {
       "urun_kodu": "7865.N1.40703.33L",
       "kategori": "GAZLI SET ÜSTÜ OCAKLARI",
-      "bayi_iskonto": 0.65
+      "bayi_iskonto": 0.73
     },
     {
       "urun_kodu": "7865.N1.80703.35L",
       "kategori": "GAZLI SET ÜSTÜ OCAKLARI",
-      "bayi_iskonto": 0.65
+      "bayi_iskonto": 0.73
     },
     {
       "urun_kodu": "7865.N1.40703.33LP",
       "kategori": "GAZLI SET ÜSTÜ OCAKLARI",
-      "bayi_iskonto": 0.65
+      "bayi_iskonto": 0.73
     },
     {
       "urun_kodu": "7865.N1.80703.35LP",
       "kategori": "GAZLI SET ÜSTÜ OCAKLARI",
-      "bayi_iskonto": 0.65
+      "bayi_iskonto": 0.73
     },
     {
       "urun_kodu": "7865.N1.40703.33LS",
       "kategori": "GAZLI SET ÜSTÜ OCAKLARI",
-      "bayi_iskonto": 0.65
+      "bayi_iskonto": 0.73
     },
     {
       "urun_kodu": "7865.N1.80703.35LS",
       "kategori": "GAZLI SET ÜSTÜ OCAKLARI",
-      "bayi_iskonto": 0.65
+      "bayi_iskonto": 0.73
     },
     {
       "urun_kodu": "7865.N1.12708.10L",
       "kategori": "GAZLI FIRINLI KUZİLER",
-      "bayi_iskonto": 0.65
+      "bayi_iskonto": 0.73
     },
     {
       "urun_kodu": "7865.N1.12708.10LP",
       "kategori": "GAZLI FIRINLI KUZİLER",
-      "bayi_iskonto": 0.65
+      "bayi_iskonto": 0.73
     },
     {
       "urun_kodu": "7865.N1.12708.10LS",
       "kategori": "GAZLI FIRINLI KUZİLER",
-      "bayi_iskonto": 0.65
+      "bayi_iskonto": 0.73
     }
   ]
 }
