@@ -107,8 +107,14 @@ function AutocompleteField({
           aria-autocomplete="list"
           aria-expanded={open}
           aria-controls={listId}
-          onMouseDown={() => armInput(inputRef.current)}
-          onTouchStart={() => armInput(inputRef.current)}
+          onMouseDown={() => {
+            armInput(inputRef.current);
+            onOpen(true);
+          }}
+          onTouchStart={() => {
+            armInput(inputRef.current);
+            onOpen(true);
+          }}
           onChange={(e) => {
             onChange(e.target.value);
             onOpen(true);
@@ -119,7 +125,21 @@ function AutocompleteField({
           }}
           onBlur={(e) => {
             disarmInput(e.currentTarget);
-            setTimeout(() => onOpen(false), 160);
+            const input = e.currentTarget;
+            setTimeout(() => {
+              const root = input.closest("[data-pfos-adres-form]");
+              const active = document.activeElement;
+              if (
+                root &&
+                active instanceof HTMLElement &&
+                root.contains(active) &&
+                (active.getAttribute("role") === "combobox" ||
+                  active.closest('[role="listbox"]'))
+              ) {
+                return;
+              }
+              onOpen(false);
+            }, 160);
           }}
           onKeyDown={onKeyDown}
         />
@@ -164,6 +184,13 @@ export default function PfosAdresAutocomplete({
   const [districtId, setDistrictId] = useState<string | null>(null);
   const [openField, setOpenField] = useState<"il" | "ilce" | null>(null);
 
+  const setFieldOpen = useCallback((field: "il" | "ilce", open: boolean) => {
+    setOpenField((cur) => {
+      if (open) return field;
+      return cur === field ? null : cur;
+    });
+  }, []);
+
   useEffect(() => {
     void loadTrAdres().then(setReady);
   }, []);
@@ -178,8 +205,11 @@ export default function PfosAdresAutocomplete({
 
   useEffect(() => {
     onListOpenChange?.(openField !== null);
-    return () => onListOpenChange?.(false);
   }, [openField, onListOpenChange]);
+
+  useEffect(() => {
+    return () => onListOpenChange?.(false);
+  }, [onListOpenChange]);
 
   const patch = useCallback(
     (patch: Partial<PfosAdresFormValue>) => {
@@ -217,6 +247,7 @@ export default function PfosAdresAutocomplete({
   return (
     <form
       className={`${styles.adresGrid}${openField ? ` ${styles.adresGridOpen}` : ""}`}
+      data-pfos-adres-form=""
       autoComplete="off"
       onSubmit={(e) => e.preventDefault()}
     >
@@ -250,7 +281,7 @@ export default function PfosAdresAutocomplete({
           value={value.il}
           suggestions={ilSuggestions}
           open={openField === "il"}
-          onOpen={(o) => setOpenField(o ? "il" : null)}
+          onOpen={(o) => setFieldOpen("il", o)}
           onChange={(il) => {
             const prevP = findProvinceByName(value.il);
             const nextP = findProvinceByName(il);
@@ -277,7 +308,7 @@ export default function PfosAdresAutocomplete({
           disabled={!value.il.trim()}
           suggestions={ilceSuggestions}
           open={openField === "ilce"}
-          onOpen={(o) => setOpenField(o ? "ilce" : null)}
+          onOpen={(o) => setFieldOpen("ilce", o)}
           onChange={(ilce) => {
             if (provinceId == null) {
               const p = findProvinceByName(value.il);
