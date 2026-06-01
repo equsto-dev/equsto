@@ -367,6 +367,15 @@
   border-radius: 12px;
   overflow: hidden;
   margin-bottom: 0.75rem;
+  position: relative;
+  z-index: 0;
+}
+
+.secActive {
+  border-color: #001e50;
+  box-shadow: 0 2px 12px rgba(0, 30, 80, 0.08);
+  overflow: visible;
+  z-index: 4;
 }
 
 .secVis {
@@ -386,11 +395,6 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.secActive {
-  border-color: #001e50;
-  box-shadow: 0 2px 12px rgba(0, 30, 80, 0.08);
 }
 
 .secDone {
@@ -475,6 +479,7 @@
 
 .secBd {
   padding: 0 1.1rem 1.1rem;
+  overflow: visible;
 }
 
 .qInlineTitle {
@@ -554,6 +559,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  overflow: visible;
 }
 
 .adresRow {
@@ -561,6 +567,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 0.75rem;
   align-items: start;
+  overflow: visible;
 }
 
 @media (max-width: 540px) {
@@ -581,6 +588,11 @@
 
 .acWrap {
   position: relative;
+  z-index: 1;
+}
+
+.acWrapOpen {
+  z-index: 30;
 }
 
 .acList {
@@ -588,11 +600,11 @@
   top: calc(100% + 4px);
   left: 0;
   right: 0;
-  z-index: 30;
+  z-index: 40;
   background: #fff;
   border: 1px solid #cdd6e4;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 30, 80, 0.14);
   max-height: 220px;
   overflow-y: auto;
 }
