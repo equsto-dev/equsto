@@ -25,12 +25,13 @@ function json(data: unknown, status = 200, extraHeaders?: Record<string, string>
   });
 }
 
-function syncTokenCookie(syncToken: string | null | undefined) {
+function syncTokenCookie(syncToken: string | null | undefined): Record<string, string> {
+  const headers: Record<string, string> = {};
   const tok = String(syncToken ?? "").trim().toLowerCase();
-  if (!/^[0-9a-f-]{36}$/.test(tok)) return {};
-  return {
-    "Set-Cookie": `equsto_cart_sync=${tok}; Path=/; Max-Age=31536000; Secure; SameSite=Lax`,
-  };
+  if (!/^[0-9a-f-]{36}$/.test(tok)) return headers;
+  headers["Set-Cookie"] =
+    `equsto_cart_sync=${tok}; Path=/; Max-Age=31536000; Secure; SameSite=Lax`;
+  return headers;
 }
 
 async function readKey(
