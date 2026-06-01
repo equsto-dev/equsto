@@ -20,22 +20,7 @@ export default function MarkaHubScripts() {
       <style id="eq-marka-hub-page-css">{MARKA_HUB_CSS}</style>
       <AssetCdnConfigScript />
       <Script src={`/eq-site-urls.js?v=${v}`} strategy="beforeInteractive" />
-      <Script src={`/eq-display-terminology.js?v=${v}`} strategy="afterInteractive" />
-      <Script src={`/eq-shop-catalog-bootstrap.js?v=${v}`} strategy="afterInteractive" />
-      <Script src={`/eq-filter-column.js?v=${v}`} strategy="afterInteractive" />
-      <Script
-        src={`/eq-category-shell.js?v=${v}`}
-        strategy="afterInteractive"
-        onReady={() => {
-          const id = "eq-marka-plp-boot-js";
-          if (document.getElementById(id)) return;
-          const el = document.createElement("script");
-          el.id = id;
-          el.src = `/eq-marka-plp-boot.js?v=${v}`;
-          el.async = false;
-          document.body.appendChild(el);
-        }}
-      />
+      <Script src={`/eq-marka-scripts-loader.js?v=${v}`} strategy="afterInteractive" />
     </>
   );
 }
