@@ -109,7 +109,12 @@ async function action(req: NextRequest, ctx: Ctx): Promise<Response> {
   if (path === "me" && method === "PUT") {
     const memberId = await getMemberIdByToken(token);
     if (!memberId) return err("Oturum geçersiz", 401);
-    const items = await updateMemberCart(memberId, normalizeShopCartItems(body.items));
+    const replace = body.replace === true || body.clear === true;
+    const items = await updateMemberCart(
+      memberId,
+      normalizeShopCartItems(body.items),
+      replace,
+    );
     return json({ success: true, items });
   }
 
@@ -122,7 +127,12 @@ async function action(req: NextRequest, ctx: Ctx): Promise<Response> {
   if (path === "cart" && (method === "PUT" || method === "POST")) {
     const memberId = await getMemberIdByToken(token);
     if (!memberId) return err("Oturum geçersiz", 401);
-    const items = await updateMemberCart(memberId, normalizeShopCartItems(body.items));
+    const replace = body.replace === true || body.clear === true;
+    const items = await updateMemberCart(
+      memberId,
+      normalizeShopCartItems(body.items),
+      replace,
+    );
     return json({ success: true, items });
   }
 

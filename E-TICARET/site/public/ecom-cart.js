@@ -137,6 +137,7 @@
   var shopCartPulled = false;
   var shopCartPullInFlight = false;
   var shopCartPushTimer = null;
+  var cartClearGraceUntil = 0;
   var CART_BC_NAME = 'equsto-ecom-cart-v1';
   var cartBc =
     typeof BroadcastChannel !== 'undefined' ? new BroadcastChannel(CART_BC_NAME) : null;
@@ -296,6 +297,7 @@
   function pushShopCartNow(arr, opts) {
     opts = opts || {};
     var payload = shopCartPayload({ items: arr || load() });
+    if (opts.replace) payload.replace = true;
     if (shopCartPushTimer) {
       clearTimeout(shopCartPushTimer);
       shopCartPushTimer = null;
@@ -336,6 +338,7 @@
   }
 
   function applyShopPulledCart(remote) {
+    if (Date.now() < cartClearGraceUntil && (remote || []).length) return;
     var remoteNorm = normalizeCart(remote || []);
     var out = mergeCartMaxQty(remoteNorm, load());
     saveLocal(out);
@@ -445,8 +448,11 @@
       });
   }
 
-  function cartApiFetch(method, items) {
-    var body = items !== undefined ? { items: items } : undefined;
+  function cartApiFetch(method, bodyIn) {
+    var body = bodyIn;
+    if (bodyIn !== undefined && Array.isArray(bodyIn)) {
+      body = { items: bodyIn };
+    }
     return authApiFetch(cartAuthUrl(), method, body).then(function (j) {
       if (j && j._httpStatus === 404 && method === 'GET') {
         return authApiFetch(memberAuthUrl(), 'GET').then(function (me) {
@@ -457,12 +463,12 @@
           return j;
         });
       }
-      if (j && j._httpStatus === 404 && (method === 'PUT' || method === 'POST') && items !== undefined) {
-        return authApiFetch(memberAuthUrl(), 'PUT', { items: items }).then(function (me) {
+      if (j && j._httpStatus === 404 && (method === 'PUT' || method === 'POST') && bodyIn !== undefined) {
+        return authApiFetch(memberAuthUrl(), 'PUT', body).then(function (me) {
           if (me && me.success) {
             return {
               success: true,
-              items: Array.isArray(me.items) ? me.items : items,
+              items: Array.isArray(me.items) ? me.items : body && body.items,
               _viaMe: true,
             };
           }
@@ -521,12 +527,13 @@
     opts = opts || {};
     if (!isLoggedIn() || !authToken()) return Promise.resolve(false);
     if (!opts.force && !canPushToServer()) return Promise.resolve(false);
-    var payload = arr || load();
+    var body = { items: arr || load() };
+    if (opts.replace) body.replace = true;
     if (syncPushTimer) {
       clearTimeout(syncPushTimer);
       syncPushTimer = null;
     }
-    return cartApiFetch('PUT', payload).then(function (j) {
+    return cartApiFetch('PUT', body).then(function (j) {
       return !!(j && j.success);
     });
   }
@@ -568,6 +575,7 @@
 
   /** Sunucu + yerel birleşimi (aynı üründe adet = max). */
   function applyPulledCart(remote) {
+    if (Date.now() < cartClearGraceUntil && (remote || []).length) return;
     var remoteNorm = normalizeCart(remote || []);
     var out = mergeCartMaxQty(remoteNorm, load());
     saveLocal(out);

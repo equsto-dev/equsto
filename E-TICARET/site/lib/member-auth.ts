@@ -240,9 +240,15 @@ export async function loginWithGoogle(
   return createSessionForMember(member.id);
 }
 
-export async function updateMemberCart(memberId: string, items: ShopCartLine[]) {
+export async function updateMemberCart(
+  memberId: string,
+  items: ShopCartLine[],
+  replace = false,
+) {
   const member = await db.shopMember.findUnique({ where: { id: memberId } });
-  const merged = mergeShopCartItems(member?.cartItems ?? [], items);
+  const merged = replace
+    ? normalizeShopCartItems(items)
+    : mergeShopCartItems(member?.cartItems ?? [], items);
   await db.shopMember.update({
     where: { id: memberId },
     data: { cartItems: shopCartItemsToJson(merged) },
