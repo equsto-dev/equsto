@@ -136,13 +136,11 @@ function AutocompleteField({
 type Props = {
   value: PfosAdresFormValue;
   onChange: (value: PfosAdresFormValue) => void;
-  onDevam: () => void;
 };
 
 export default function PfosAdresAutocomplete({
   value,
   onChange,
-  onDevam,
 }: Props) {
   const { t } = usePfosLabel();
   const [ready, setReady] = useState(false);
@@ -205,8 +203,6 @@ export default function PfosAdresAutocomplete({
     patch({ mahalle: name });
     setOpenField(null);
   }
-
-  const canDevam = Boolean(value.il.trim() && value.ilce.trim());
 
   return (
     <form
@@ -290,15 +286,6 @@ export default function PfosAdresAutocomplete({
           {t("İlçe listeden eşleşmedi — yine de devam edebilirsiniz.")}
         </p>
       ) : null}
-
-      <button
-        type="button"
-        className={`${styles.btn} ${styles.btnGold}`}
-        disabled={!canDevam}
-        onClick={onDevam}
-      >
-        {t("Devam")}
-      </button>
     </form>
   );
 }

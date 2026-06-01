@@ -14,8 +14,7 @@ export const PFOS_Q_MESLEK = [
   "Mimar",
   "İşletme Müdürü",
   "Franchise",
-  "Söylemek istemiyorum",
-  "Bilmiyorum",
+  "Boş ver",
 ] as const;
 
 export const PFOS_Q_UST_SEGMENT = [
