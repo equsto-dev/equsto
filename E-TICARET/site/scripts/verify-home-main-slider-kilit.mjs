@@ -68,7 +68,8 @@ if (indexBody.includes('<section class="eq-mx-vitrin eq-decor-slider-only"')) {
 }
 
 const page = read("app/(vitrin)/page.tsx");
-if (!page.includes("HomeVitrinPortals")) fail("page.tsx: HomeVitrinPortals yok");
+if (!page.includes("HomeVitrinPortalsDynamic")) fail("page.tsx: HomeVitrinPortalsDynamic yok");
+if (page.includes("ssr: false")) fail("page.tsx: ssr:false Server Component icinde olmamali");
 
 const decor = read("public/eq-home-decor.css");
 if (!decor.includes("proje-fabrikasi-bar-plan-eskiz.png")) {

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { HomeVitrinPortals } from "@/components/home/HomeVitrinPortals";
+import { HomeVitrinPortalsDynamic } from "@/components/home/HomeVitrinPortalsDynamic";
 import LegacyVitrinPage from "@/components/vitrin/LegacyVitrinPage";
 import { SHOP_ASSET_V } from "@/lib/shop/assets";
 import { IndexBodyHtml } from "@/lib/vitrin/bodies/index";
@@ -39,7 +39,7 @@ export default function HomePage() {
         bodyHtml={IndexBodyHtml}
         scripts={HOME_SCRIPTS}
         headStyles={HOME_EXTRA_STYLES}
-        portal={<HomeVitrinPortals />}
+        portal={<HomeVitrinPortalsDynamic />}
       />
     </>
   );
