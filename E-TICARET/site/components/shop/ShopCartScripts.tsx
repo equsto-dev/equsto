@@ -8,10 +8,20 @@ const v = SHOP_ASSET_V;
 
 function refreshCartUi() {
   try {
-    const cart = (window as Window & { EqustoCart?: { syncBadge?: () => void; render?: () => void } })
-      .EqustoCart;
+    const cart = (
+      window as Window & {
+        EqustoCart?: {
+          syncBadge?: () => void;
+          render?: () => void;
+          bindPageActions?: () => void;
+        };
+      }
+    ).EqustoCart;
     cart?.syncBadge?.();
-    if (document.getElementById("equsto-cart-page")) cart?.render?.();
+    if (document.getElementById("equsto-cart-page")) {
+      cart?.bindPageActions?.();
+      cart?.render?.();
+    }
   } catch (_) {}
 }
 

@@ -318,6 +318,7 @@
     opts = opts || {};
     var payload = shopCartPayload({ items: arr || load() });
     if (opts.replace) payload.replace = true;
+    if (opts.clear) payload.clear = true;
     if (shopCartPushTimer) {
       clearTimeout(shopCartPushTimer);
       shopCartPushTimer = null;
@@ -358,11 +359,19 @@
   }
 
   function applyShopPulledCart(remote) {
-    if (Date.now() < cartClearGraceUntil && (remote || []).length) return;
     var remoteNorm = normalizeCart(remote || []);
-    var out = mergeCartMaxQty(remoteNorm, load());
+    if (Date.now() < cartClearGraceUntil && remoteNorm.length) return;
+    if (!remoteNorm.length) {
+      saveLocal([]);
+      syncBadge();
+      renderPanelList();
+      return;
+    }
+    var local = load();
+    var out = local.length ? mergeCartMaxQty(remoteNorm, local) : remoteNorm;
     saveLocal(out);
     syncBadge();
+    renderPanelList();
     if (
       out.length &&
       (cartFingerprint(out) !== cartFingerprint(remoteNorm) || (!remoteNorm.length && out.length))
@@ -595,11 +604,19 @@
 
   /** Sunucu + yerel birleşimi (aynı üründe adet = max). */
   function applyPulledCart(remote) {
-    if (Date.now() < cartClearGraceUntil && (remote || []).length) return;
     var remoteNorm = normalizeCart(remote || []);
-    var out = mergeCartMaxQty(remoteNorm, load());
+    if (Date.now() < cartClearGraceUntil && remoteNorm.length) return;
+    if (!remoteNorm.length) {
+      saveLocal([]);
+      syncBadge();
+      renderPanelList();
+      return;
+    }
+    var local = load();
+    var out = local.length ? mergeCartMaxQty(remoteNorm, local) : remoteNorm;
     saveLocal(out);
     syncBadge();
+    renderPanelList();
     if (!sessionCartPulled) return;
     if (
       out.length &&
@@ -654,21 +671,27 @@
     var clean = normalizeCart(arr || []);
     var isEmpty = !clean.length;
     saveLocal(clean);
-    if (usesAuthCartSync()) {
-      if (isEmpty) {
-        pushShopCartNow([], { replace: true });
-      } else {
-        scheduleShopCartPush(clean);
-        pushShopCartNow(clean);
-      }
-    } else if (isEmpty) {
+    if (isEmpty) {
       if (shopCartPushTimer) clearTimeout(shopCartPushTimer);
       shopCartPushTimer = null;
-      pushShopCartNow([], { replace: true });
-    } else {
+      if (syncPushTimer) clearTimeout(syncPushTimer);
+      syncPushTimer = null;
+      return pushShopCartNow([], { replace: true, clear: true }).then(function (ok) {
+        if (ok) {
+          shopCartPulled = true;
+          lastSyncAt = Date.now();
+        }
+        return ok;
+      });
+    }
+    if (usesAuthCartSync()) {
       scheduleShopCartPush(clean);
       pushShopCartNow(clean);
+      return Promise.resolve(true);
     }
+    scheduleShopCartPush(clean);
+    pushShopCartNow(clean);
+    return Promise.resolve(true);
   }
 
   function syncFromServer(opts) {
@@ -1107,14 +1130,23 @@
   }
 
   function clearAll() {
-    cartClearGraceUntil = Date.now() + 5000;
+    cartClearGraceUntil = Date.now() + 20000;
     if (shopCartPushTimer) clearTimeout(shopCartPushTimer);
     shopCartPushTimer = null;
     if (syncPushTimer) clearTimeout(syncPushTimer);
     syncPushTimer = null;
-    save([]);
+    saveLocal([]);
     syncBadge();
     renderPanelList();
+    pushShopCartNow([], { replace: true, clear: true }).then(function (ok) {
+      if (!ok) {
+        toast(__cartT('cart.clear_failed', 'Sepet sunucuda temizlenemedi — tekrar deneyin.'));
+        shopCartPull({ force: true });
+        return;
+      }
+      shopCartPulled = true;
+      lastSyncAt = Date.now();
+    });
   }
 
   function buildWaText() {
@@ -1742,7 +1774,13 @@
     if (clearBtn && clearBtn.dataset.eqCartBound !== '1') {
       clearBtn.dataset.eqCartBound = '1';
       clearBtn.addEventListener('click', function () {
-        if (window.confirm(__cartT('cart.confirm_clear', 'Sepetteki tüm ürünleri kaldırmak istiyor musunuz?'))) clearAll();
+        if (
+          window.confirm(
+            __cartT('cart.confirm_clear', 'Sepetteki tüm ürünleri kaldırmak istiyor musunuz?'),
+          )
+        ) {
+          clearAll();
+        }
       });
     }
     var waBtn = document.getElementById('equsto-cart-wa');
@@ -2166,6 +2204,7 @@
     addFromCard: addFromCard,
     toastCartAdded: toastCartAdded,
     clear: clearAll,
+    bindPageActions: bindCartPageActions,
     syncFromServer: syncFromServer,
     render: renderPanelList,
     _load: load,
