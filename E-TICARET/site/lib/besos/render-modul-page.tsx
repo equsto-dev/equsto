@@ -4,6 +4,7 @@ import BesosEqustoChrome from "@/components/besos/BesosEqustoChrome";
 import BesosModulPdpBoot from "@/components/besos/BesosModulPdpBoot";
 import BesosModulProductScripts from "@/components/besos/BesosModulProductScripts";
 import JsonLdScript from "@/components/seo/JsonLdScript";
+import ShopFooterHost from "@/components/shop/ShopFooterHost";
 import ShopProductMain from "@/components/shop/ShopProductMain";
 import ShopStyles from "@/components/shop/ShopStyles";
 import {
@@ -36,6 +37,7 @@ export async function renderBesosModulPage(
       <ShopProductMain ssr={ssr} />
       <BesosModulPdpBoot />
       <BesosModulProductScripts />
+      <ShopFooterHost />
     </>
   );
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import BesosEqustoChrome from "@/components/besos/BesosEqustoChrome";
+import ShopFooterHost from "@/components/shop/ShopFooterHost";
 import Imt300BodyClass from "@/components/besos/Imt300BodyClass";
 import { Imt300BodyHtml } from "@/lib/vitrin/bodies/imt300";
 import { SHOP_ASSET_V } from "@/lib/shop/assets";
@@ -57,7 +58,7 @@ export default function Imt300Page() {
       <Imt300BodyClass />
       <BesosEqustoChrome />
       <div id="eq-legacy-vitrin-root" dangerouslySetInnerHTML={{ __html: Imt300BodyHtml }} />
-      <footer className="footer" id="eq-shop-footer" />
+      <ShopFooterHost />
       <Script src={`/eq-youtube-embed.js?v=${v}`} strategy="afterInteractive" />
       <Script id="imt300-interactions" strategy="afterInteractive">
         {IMT300_INTERACTIONS}

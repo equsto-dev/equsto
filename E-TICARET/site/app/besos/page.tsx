@@ -1,5 +1,6 @@
 import BesosCatalog from "@/components/besos/BesosCatalog";
 import BesosEqustoChrome from "@/components/besos/BesosEqustoChrome";
+import ShopFooterHost from "@/components/shop/ShopFooterHost";
 import BesosImt300Hero from "@/components/besos/BesosImt300Hero";
 import BesosMethod from "@/components/besos/BesosMethod";
 import BesosModular from "@/components/besos/BesosModular";
@@ -59,7 +60,7 @@ export async function BesosPageContent({ locale = "tr" }: Props) {
         <BesosCatalog products={products} locale={locale} />
         <BesosProjects projectsData={projects} products={products} locale={locale} />
       </main>
-      <footer className="footer" id="eq-shop-footer" />
+      <ShopFooterHost />
     </>
   );
 }
