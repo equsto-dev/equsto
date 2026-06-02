@@ -36,8 +36,19 @@ body.eq-home-decor .eq-mx-hero__thumbs {
   width: 100%;
   height: 52px;
 }
+.eq-mx-hero__slide--pfos {
+  background-color: #0a1628;
+  background-image:
+    linear-gradient(180deg, rgba(0, 20, 50, 0.25) 0%, rgba(0, 20, 50, 0.78) 100%),
+    url("/images/pfos/proje-fabrikasi-eskiz.svg?v=20260602eskiz-svg");
+  background-size: cover;
+  background-position: center;
+}
+
 .eq-mx-hero__thumb-ph--pfos {
-  background: linear-gradient(135deg, #dce8f4 0%, #001e50 100%);
+  background:
+    linear-gradient(180deg, rgba(0, 20, 50, 0.2) 0%, rgba(0, 20, 50, 0.65) 100%),
+    url("/images/pfos/proje-fabrikasi-eskiz.svg?v=20260602eskiz-svg") center / cover no-repeat;
 }
 
 /* İkonsuz kategori şeridi */
