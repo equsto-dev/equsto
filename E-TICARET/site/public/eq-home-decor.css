@@ -403,7 +403,7 @@ body.eq-home-simple .hero-card-img--pfos-cover {
 }
 
 body.eq-home-simple .eq-home-hero-ads .hero-card-visual--pfos {
-  aspect-ratio: var(--eq-home-hero-visual-aspect, 4 / 3);
+  aspect-ratio: 1024 / 798;
   background: #fff;
 }
 
