@@ -671,57 +671,12 @@
         return !!(res && res.ok);
       });
     }
-    if (usesAuthCartSync()) {
-      scheduleShopCartPush(clean);
-      pushShopCartNow(clean);
-      return Promise.resolve(true);
-    }
     scheduleShopCartPush(clean);
-    pushShopCartNow(clean);
     return Promise.resolve(true);
   }
 
   function syncFromServer(opts) {
-    opts = opts || {};
-    if (!isLoggedIn() || !authToken()) return Promise.resolve(false);
-    var now = Date.now();
-    if (!opts.force && sessionCartPulled && now - lastSyncAt < 2000) {
-      return Promise.resolve(false);
-    }
-    if (syncPullInFlight) {
-      syncPullQueued = true;
-      return Promise.resolve(false);
-    }
-    syncPullInFlight = true;
-    var localBefore = normalizeCart(load());
-    return cartApiFetch('GET')
-      .then(function (j) {
-        if (!j || !j.success) {
-          if (j && (j._httpStatus === 404 || j._network) && isLocalDev()) {
-            if (typeof window.equstoClearMemberSession === 'function') {
-              window.equstoClearMemberSession();
-            }
-            return false;
-          }
-          if (j && j._httpStatus !== 401 && localBefore.length && sessionCartPulled) {
-            pushCartNow(localBefore);
-          }
-          return false;
-        }
-        sessionCartPulled = true;
-        lastSyncAt = Date.now();
-        applyPulledCart(Array.isArray(j.items) ? j.items : []);
-        syncBadge();
-        renderPanelList();
-        return true;
-      })
-      .finally(function () {
-        syncPullInFlight = false;
-        if (syncPullQueued) {
-          syncPullQueued = false;
-          syncFromServer({ force: true });
-        }
-      });
+    return shopCartPull(opts || {});
   }
 
   function totalQty(arr) {
@@ -2022,12 +1977,7 @@
 
   var visibleSyncTimer = null;
   function pullCartFromServer(opts) {
-    opts = opts || {};
-    if (usesAuthCartSync()) {
-      sessionCartPulled = false;
-      shopCartPulled = false;
-    }
-    return shopCartPull(opts);
+    return shopCartPull(opts || {});
   }
 
   function onAppForeground() {
@@ -2040,26 +1990,17 @@
 
   function bootCartSync() {
     whenAuthApiReady(function () {
-      if (typeof window.equstoAuthValidateSession === 'function') {
-        window.equstoAuthValidateSession().then(function (ok) {
-          if (ok && usesAuthCartSync()) {
-            pullCartFromServer({ force: true });
-            return;
-          }
-          shopCartPull({ force: true }).then(function () {
-            var local = load();
-            if (local.length) pushShopCartNow(local);
-          });
+      var runPull = function () {
+        shopCartPull({ force: true }).then(function () {
+          shopCartPulled = true;
+          if (usesAuthCartSync()) sessionCartPulled = true;
         });
+      };
+      if (typeof window.equstoAuthValidateSession === 'function') {
+        window.equstoAuthValidateSession().then(runPull);
         return;
       }
-      if (usesAuthCartSync()) pullCartFromServer({ force: true });
-      else {
-        shopCartPull({ force: true }).then(function () {
-          var local = load();
-          if (local.length) pushShopCartNow(local);
-        });
-      }
+      runPull();
     });
   }
 
@@ -2090,10 +2031,17 @@
     syncBadge();
     document.addEventListener('click', onDocClick);
     document.addEventListener('keydown', onKeyDown);
-    document.addEventListener('equsto-member-session', function () {
-      sessionCartPulled = false;
-      shopCartPulled = false;
-      pullCartFromServer({ force: true });
+    document.addEventListener('equsto-member-session', function (ev) {
+      var fromLogin =
+        ev && ev.detail && Array.isArray(ev.detail.items) ? ev.detail.items : null;
+      if (fromLogin) {
+        applyShopPulledCart(fromLogin);
+        shopCartPulled = true;
+        sessionCartPulled = true;
+        lastSyncAt = Date.now();
+        return;
+      }
+      shopCartPull({ force: true });
     });
     window.addEventListener('equsto-member-changed', function (ev) {
       if (ev && ev.detail && ev.detail.active === false) resetCartSyncState();
@@ -2115,9 +2063,13 @@
       flushPush();
     });
     window.addEventListener('storage', function (e) {
-      if (e.key !== STORAGE_KEY && e.key !== SYNC_TOKEN_KEY) return;
-      onCartChangedRemote();
-      onAppForeground();
+      if (e.key === STORAGE_KEY) {
+        onCartChangedRemote();
+        return;
+      }
+      if (e.key === SYNC_TOKEN_KEY) {
+        shopCartPull({ force: true });
+      }
     });
     if (cartBc) {
       cartBc.addEventListener('message', function () {
@@ -2130,13 +2082,8 @@
       bindCartLoginHint();
       renderPanelList();
       prefillCheckoutForm();
-      if (isLoggedIn() && authToken()) pullCartFromServer({ force: true });
     }
     bootCartSync();
-    setInterval(function () {
-      if (document.visibilityState !== 'visible') return;
-      pullCartFromServer();
-    }, 12000);
   }
 
   function productFieldAttrs(u, withCartTrigger) {

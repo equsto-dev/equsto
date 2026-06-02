@@ -252,14 +252,18 @@ export async function updateMemberCart(
   replace = false,
 ) {
   const member = await db.shopMember.findUnique({ where: { id: memberId } });
-  const merged = replace
-    ? normalizeShopCartItems(items)
-    : mergeShopCartItems(member?.cartItems ?? [], items);
-  await db.shopMember.update({
-    where: { id: memberId },
-    data: { cartItems: shopCartItemsToJson(merged) },
+  if (!member) throw new Error("Üye bulunamadı");
+  const incoming = normalizeShopCartItems(items);
+  if (replace && incoming.length === 0) {
+    return clearUnifiedShopCart({ memberId, memberEmail: member.email, syncToken: null });
+  }
+  const existing = normalizeShopCartItems(member.cartItems ?? []);
+  const merged = replace ? incoming : mergeShopCartItems(existing, incoming);
+  return persistUnifiedShopCart({
+    memberId,
+    memberEmail: member.email,
+    items: merged,
   });
-  return merged;
 }
 
 /** Misafir sepetini üye e-posta anahtarına taşır (cihazlar arası). */
@@ -281,40 +285,50 @@ export async function mergeGuestShopCartIntoMember(
     create: { cartKey: emailKey, items: shopCartItemsToJson(merged) },
     update: { items: shopCartItemsToJson(merged) },
   });
+  await db.shopCart.upsert({
+    where: { cartKey: guestKey },
+    create: { cartKey: guestKey, items: shopCartItemsToJson([]) },
+    update: { items: shopCartItemsToJson([]) },
+  });
 }
 
 async function syncMemberCartFromShopEmail(memberId: string, email: string): Promise<void> {
-  const merged = await loadUnifiedShopCart({ memberEmail: email, memberId });
-  await persistUnifiedShopCart({ memberId, memberEmail: email, items: merged });
+  const normEmail = normalizeEmail(email);
+  const member = await db.shopMember.findUnique({ where: { id: memberId } });
+  let items = normalizeShopCartItems(member?.cartItems ?? []);
+  const emailKey = resolveShopCartKey(null, normEmail);
+  if (emailKey) {
+    const row = await db.shopCart.findUnique({ where: { cartKey: emailKey } });
+    items = mergeShopCartItems(items, row?.items ?? []);
+  }
+  await persistUnifiedShopCart({ memberId, memberEmail: normEmail, items });
 }
 
-/** Üye + e-posta ShopCart + misafir token — tek birleşik sepet (cihazlar arası). */
+/** Oturumlu üye → shopMember; misafir → guest; yalnız e-posta → email ShopCart (üçlü birleştirme yok). */
 export async function loadUnifiedShopCart(opts: {
   syncToken?: string | null;
   memberEmail?: string | null;
   memberId?: string | null;
 }): Promise<ShopCartLine[]> {
   const { syncToken, memberEmail, memberId } = opts;
-  let merged: ShopCartLine[] = [];
-
   if (memberId) {
     const member = await db.shopMember.findUnique({ where: { id: memberId } });
-    merged = mergeShopCartItems(merged, member?.cartItems ?? []);
+    return normalizeShopCartItems(member?.cartItems ?? []);
   }
-
-  const emailKey = resolveShopCartKey(null, memberEmail);
-  if (emailKey) {
-    const row = await db.shopCart.findUnique({ where: { cartKey: emailKey } });
-    merged = mergeShopCartItems(merged, row?.items ?? []);
+  const email = memberEmail ? normalizeEmail(String(memberEmail)) : "";
+  if (email && EMAIL_RE.test(email)) {
+    const emailKey = resolveShopCartKey(null, email);
+    if (emailKey) {
+      const row = await db.shopCart.findUnique({ where: { cartKey: emailKey } });
+      return normalizeShopCartItems(row?.items ?? []);
+    }
   }
-
   const guestKey = resolveShopCartKey(syncToken, null);
-  if (guestKey?.startsWith("guest:") && guestKey !== emailKey) {
+  if (guestKey?.startsWith("guest:")) {
     const guest = await db.shopCart.findUnique({ where: { cartKey: guestKey } });
-    merged = mergeShopCartItems(merged, guest?.items ?? []);
+    return normalizeShopCartItems(guest?.items ?? []);
   }
-
-  return normalizeShopCartItems(merged);
+  return [];
 }
 
 /** Üye kaydı ve e-posta ShopCart satırını aynı içerikle günceller. */
