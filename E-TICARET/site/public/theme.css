@@ -1377,7 +1377,7 @@ body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--pfos
 body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-visual--pfos {
   background: #fff;
   overflow: hidden;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: var(--eq-home-hero-visual-aspect);
 }
 body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img--pfos-cover {
   position: absolute;
@@ -1387,8 +1387,8 @@ body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img--
   height: 100% !important;
   max-width: none !important;
   max-height: none !important;
-  object-fit: contain;
-  object-position: center center;
+  object-fit: cover;
+  object-position: center 38%;
   filter: none;
 }
 body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-visual__shade--pfos {
