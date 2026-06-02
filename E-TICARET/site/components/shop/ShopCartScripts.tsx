@@ -14,12 +14,14 @@ function refreshCartUi() {
           syncBadge?: () => void;
           render?: () => void;
           bindPageActions?: () => void;
+          prefillCheckout?: () => void;
         };
       }
     ).EqustoCart;
     cart?.syncBadge?.();
     if (document.getElementById("equsto-cart-page")) {
       cart?.bindPageActions?.();
+      cart?.prefillCheckout?.();
       cart?.render?.();
     }
   } catch (_) {}
