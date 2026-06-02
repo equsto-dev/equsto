@@ -1784,35 +1784,6 @@ body.eq-home.eq-home-mutbex .eq-mx-vitrin {
   box-sizing: border-box;
 }
 
-body.eq-home.eq-home-mutbex .eq-mx-vitrin.eq-decor-slider-only {
-  max-width: none;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-  background: #0a1628;
-  margin-bottom: 0;
-}
-
-body.eq-home.eq-home-mutbex .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__stage {
-  border: none;
-  border-radius: 0;
-}
-
-body.eq-home.eq-home-mutbex .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero {
-  max-width: none;
-  padding: 0;
-}
-
-body.eq-home.eq-home-mutbex .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slides {
-  max-height: none;
-  min-height: clamp(320px, 58vh, 720px);
-  height: clamp(320px, 58vh, 720px);
-  aspect-ratio: auto;
-}
-
 body.eq-home.eq-home-mutbex .eq-home-platform-hero {
   background: var(--home-card);
   border: 1px solid var(--home-line);
