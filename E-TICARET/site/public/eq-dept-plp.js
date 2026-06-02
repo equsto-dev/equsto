@@ -237,21 +237,8 @@
     return '';
   }
 
-  /** Fiyat altı kısa açıklama (liste / KDV). */
-  function formatPriceNote(raw) {
-    if (!raw) return '';
-    if (Number(raw.fiyat_bekleniyor) === 1 || /teklif/i.test(String(raw.price || ''))) {
-      return '';
-    }
-    var price = String(raw.price || '');
-    if (isOztiRow(raw) && Number(raw.liste_fiyati_eur) > 0 && Number(raw.fiyat_tl) > 0) {
-      var pct = Number(raw.iskonto_oran != null ? raw.iskonto_oran : raw.iskonto_yuzde);
-      if (!pct && raw.bayi_iskonto != null) pct = Math.round(Number(raw.bayi_iskonto) * 100);
-      if (!pct) pct = 65;
-      return __plpT('plp.price_hint', 'KDV dahil · Öztiryakiler liste EUR, {pct}% iskonto', { pct: pct });
-    }
-    if (/KDV\s*dahil/i.test(price)) return __plpT('plp.vat_included', 'KDV dahil');
-    if (/\+ *KDV/i.test(price)) return __plpT('plp.price_plus_vat', 'Fiyat + KDV');
+  /** Fiyat altı kısa açıklama — vitrinde gösterilmez (liste/iskonto metni kaldırıldı). */
+  function formatPriceNote() {
     return '';
   }
 

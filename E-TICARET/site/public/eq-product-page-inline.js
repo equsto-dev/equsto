@@ -1103,9 +1103,34 @@ window.searchFilter = window.searchFilter || function () {};
       };
     }
 
+    /** Dahili fiyat listesi / iskonto satırları müşteriye gösterilmez. */
+    function isInternalPriceSpecLine(ln) {
+      var t = String(ln || "").trim();
+      if (!t) return false;
+      if (/^liste fiyatı/i.test(t)) return true;
+      if (/^bayi\b/i.test(t)) return true;
+      if (/^equsto\b/i.test(t) && /(satış|fiyat|eur|tl|kar)/i.test(t)) return true;
+      if (/^hesap\s*:/i.test(t)) return true;
+      if (/^kur\s*:/i.test(t)) return true;
+      if (/^kaynak\s*:/i.test(t)) return true;
+      if (/iskonto/i.test(t) && /liste|eur|bayi|kalan|%/i.test(t)) return true;
+      return false;
+    }
+
+    function publicSpecsText(specs) {
+      return String(specs || "")
+        .split(/\r?\n/)
+        .filter(function (ln) {
+          return !isInternalPriceSpecLine(ln);
+        })
+        .join("\n")
+        .replace(/\n{3,}/g, "\n\n")
+        .trim();
+    }
+
     /** Specs metninden "Bu ürün hakkında" bullet üretici: ilk N anlamlı satır. */
     function buildAboutBullets(specs, max) {
-      var s = String(specs || "");
+      var s = publicSpecsText(specs);
       if (!s.trim()) return [];
       var lines = s.split(/\r?\n/);
       var out = [];
@@ -1125,7 +1150,7 @@ window.searchFilter = window.searchFilter || function () {};
     }
 
     function splitSpecsCols(specs) {
-      var s = String(specs || "");
+      var s = publicSpecsText(specs);
       if (!s.trim()) return { left: "", right: "" };
       var lines = s.split(/\r?\n/);
       var idx = -1;
@@ -1221,10 +1246,11 @@ window.searchFilter = window.searchFilter || function () {};
             "</div></div>"
           );
         }
-        if (!String(x.specs || "").trim()) return "";
+        var specsPublic = publicSpecsText(x.specs);
+        if (!specsPublic.trim()) return "";
         return (
           '<div class="eq-product-specs"><h2>' + esc(__pdpT("pdp.specs_heading", "Teknik özellikler ve açıklama")) + '</h2><pre>' +
-          esc(x.specs) +
+          esc(specsPublic) +
           "</pre></div>"
         );
       }

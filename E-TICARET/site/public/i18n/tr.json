@@ -252,7 +252,7 @@
   "plp": {
     "add_to_cart": "SEPETE EKLE",
     "quote_contact": "Teklif için iletişim",
-    "price_hint": "KDV dahil · Öztiryakiler liste EUR, {pct}% iskonto",
+    "price_hint": "",
     "vat_included": "KDV dahil",
     "price_plus_vat": "Fiyat + KDV",
     "load_more": "Daha fazla ürün yükle",
