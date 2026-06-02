@@ -363,7 +363,9 @@ body.eq-home-simple .eq-home-hero-ads .hero-card {
 }
 
 body.eq-home-simple .eq-home-hero-ads .hero-card-visual {
-  max-height: 200px;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  max-height: none;
 }
 
 body.eq-home-simple .hero-card-img--pfos-cover {
@@ -391,6 +393,7 @@ body.eq-home-simple .hero-card-visual__shade--pfos {
 
 @media (max-width: 768px) {
   body.eq-home-simple .eq-home-hero-ads .hero-card-visual {
-    max-height: 160px;
+    aspect-ratio: 4 / 3;
+    max-height: none;
   }
 }
