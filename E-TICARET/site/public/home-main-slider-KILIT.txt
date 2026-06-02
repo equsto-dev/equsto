@@ -1,0 +1,39 @@
+═══════════════════════════════════════════════════════════════════════════
+KİLİT — Ana sayfa alt slider (PFOS · Bar Design · Soğutma)
+Onay: 2026-06-03
+═══════════════════════════════════════════════════════════════════════════
+
+«Öne çıkanlar» bandının altındaki büyük carousel. Üstteki üçlü hero vitrinden
+AYRI bileşendir (HomeMainSlider). Değiştirmeden önce AÇIK ONAY alın.
+
+── Beklenen görünüm ───────────────────────────────────────────────────────
+  • 1024/522 kutu; PFOS slayt object-fit: contain (kırpma yok)
+  • PFOS görsel: bar/mutfak plan eskizi (parşömen, kahve/kokteyl planı)
+  • Sol alt kapak: Proje Fabrikası · Beş dakikada… · Keşfet →
+  • 3 thumb; otomatik geçiş (eq-home-mutbex.js initHero)
+
+── Kilitli dosyalar ───────────────────────────────────────────────────────
+  components/home/HomeMainSlider.tsx
+  components/home/HomeMainSliderMount.tsx
+  components/home/HomeVitrinPortals.tsx
+  lib/home-slider-content.ts
+  lib/vitrin/bodies/index.ts          — #eq-home-slider-mount (gömülü HTML yok)
+  app/(vitrin)/page.tsx               — HomeVitrinPortals portal
+  public/eq-home-decor.css            — slider PFOS contain + parşömen zemin
+  public/images/pfos/proje-fabrikasi-bar-plan-eskiz.png
+  lib/shop/assets.ts                  — SHOP_ASSET_V
+
+── PFOS slider görseli (kilitli) ─────────────────────────────────────────
+  /images/pfos/proje-fabrikasi-bar-plan-eskiz.png (1024×524)
+  Üst üçlü vitrin PFOS kartı: proje-fabrikasi-mutfak-eskiz.png (ayrı kilit)
+
+YASAK (onay olmadan):
+  • Slider HTML'ini index.ts gövdesine geri gömmek
+  • PFOS slaytta mutfak-eskiz.jpg / bar-eskiz.png ile değiştirmek
+  • object-fit: cover ile eskizi kırpmak
+  • HomeMainSlider'ı kaldırıp yalnız legacy HTML kullanmak
+
+── Doğrulama ─────────────────────────────────────────────────────────────
+  npm run verify:home-main-slider-kilit
+
+═══════════════════════════════════════════════════════════════════════════
