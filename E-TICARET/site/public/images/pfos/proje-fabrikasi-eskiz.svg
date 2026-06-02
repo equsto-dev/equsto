@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Proje Fabrikas1  bar ve kahve hatt1 plan eskizi">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#101018"/>
+      <stop offset="100%" stop-color="#050508"/>
+    </linearGradient>
+    <linearGradient id="frame" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1a24"/>
+      <stop offset="100%" stop-color="#0c0c10"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c9a227"/>
+      <stop offset="100%" stop-color="#e8c547"/>
+    </linearGradient>
+    <filter id="soft" x="-4%" y="-4%" width="108%" height="108%">
+      <feGaussianBlur stdDeviation="0.4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="fold" width="12" height="12" patternUnits="userSpaceOnUse">
+      <path d="M0 12 L6 0 L12 12" fill="none" stroke="#3a3a48" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="grid" width="14" height="14" patternUnits="userSpaceOnUse">
+      <path d="M14 0 L0 0 0 14" fill="none" stroke="#4a5568" stroke-width="0.6" opacity="0.5"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect x="28" y="24" width="1144" height="752" rx="20" fill="url(#frame)" stroke="#2a2a36" stroke-width="1"/>
+
+  <!-- Arka bar (B1B7) -->
+  <g fill="none" stroke="#e8ecf2" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" opacity="0.92">
+    <rect x="120" y="96" width="960" height="88" rx="6"/>
+    <line x1="248" y1="96" x2="248" y2="184"/>
+    <line x1="376" y1="96" x2="376" y2="184"/>
+    <line x1="504" y1="96" x2="504" y2="184"/>
+    <line x1="632" y1="96" x2="632" y2="184"/>
+    <line x1="760" y1="96" x2="760" y2="184"/>
+    <line x1="888" y1="96" x2="888" y2="184"/>
+  </g>
+
+  <!-- Espresso (kahve) -->
+  <g fill="none" stroke="#f0f2f6" stroke-width="1" opacity="0.9">
+    <rect x="136" y="112" width="96" height="56" rx="4"/>
+    <rect x="148" y="124" width="28" height="36" rx="3"/>
+    <rect x="192" y="124" width="28" height="36" rx="3"/>
+    <circle cx="162" cy="118" r="5"/>
+    <circle cx="206" cy="118" r="5"/>
+  </g>
+
+  <!-- B3B5 ekipman -->
+  <g fill="none" stroke="#c8cdd6" stroke-width="0.9" opacity="0.75">
+    <rect x="392" y="118" width="40" height="40" rx="3"/>
+    <circle cx="452" cy="138" r="14"/>
+    <rect x="520" y="118" width="48" height="40" rx="3"/>
+    <rect x="584" y="118" width="40" height="40" rx="3"/>
+  </g>
+
+  <!-- B6 dairesel ünite -->
+  <circle cx="696" cy="140" r="28" fill="none" stroke="#e8ecf2" stroke-width="1.1" opacity="0.85"/>
+
+  <!-- Katlan1r kapak (merkez) -->
+  <rect x="760" y="104" width="112" height="72" rx="4" fill="url(#fold)" stroke="#5a6070" stroke-width="0.8" opacity="0.85"/>
+
+  <!-- B7 -->
+  <rect x="888" y="112" width="80" height="56" rx="4" fill="none" stroke="#e8ecf2" stroke-width="1"/>
+
+  <!-- Ana bar  d1_ hat (U / stadyum) -->
+  <g fill="none" stroke="#f2f4f8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.95">
+    <path d="M220 620 Q220 420 380 380 Q540 340 600 340 Q660 340 820 380 Q980 420 980 620 Q980 680 600 680 Q220 680 220 620 Z"/>
+    <!-- 0ç tezgah hatt1 -->
+    <path d="M280 580 Q280 440 400 410 Q520 385 600 385 Q680 385 800 410 Q920 440 920 580" stroke-width="1.1" opacity="0.55" stroke-dasharray="8 6"/>
+  </g>
+
+  <!-- Tabureler (10) -->
+  <g fill="none" stroke="#8b95a5" stroke-width="1" opacity="0.55">
+    <circle cx="268" cy="548" r="16"/>
+    <circle cx="332" cy="498" r="16"/>
+    <circle cx="408" cy="458" r="16"/>
+    <circle cx="492" cy="438" r="16"/>
+    <circle cx="600" cy="428" r="16"/>
+    <circle cx="708" cy="438" r="16"/>
+    <circle cx="792" cy="458" r="16"/>
+    <circle cx="868" cy="498" r="16"/>
+    <circle cx="932" cy="548" r="16"/>
+    <circle cx="600" cy="658" r="16"/>
+  </g>
+
+  <!-- Servis istasyonlar1 (iç) -->
+  <g fill="none" stroke="#e8ecf2" stroke-width="1" opacity="0.82">
+    <rect x="300" y="468" width="64" height="44" rx="3"/>
+    <rect x="380" y="468" width="64" height="44" rx="3"/>
+    <rect x="460" y="468" width="64" height="44" rx="3"/>
+    <!-- Kokteyl  speed rail / buz -->
+    <rect x="548" y="456" width="104" height="56" rx="4"/>
+    <g stroke="#9ca3af" stroke-width="0.7" opacity="0.7">
+      <circle cx="564" cy="472" r="4"/><circle cx="580" cy="472" r="4"/><circle cx="596" cy="472" r="4"/><circle cx="612" cy="472" r="4"/><circle cx="628" cy="472" r="4"/>
+      <circle cx="572" cy="488" r="4"/><circle cx="588" cy="488" r="4"/><circle cx="604" cy="488" r="4"/><circle cx="620" cy="488" r="4"/>
+      <circle cx="564" cy="504" r="4"/><circle cx="580" cy="504" r="4"/><circle cx="596" cy="504" r="4"/><circle cx="612" cy="504" r="4"/><circle cx="628" cy="504" r="4"/>
+    </g>
+    <!-- Lavabo (X) -->
+    <rect x="672" y="468" width="56" height="44" rx="3"/>
+    <line x1="684" y1="480" x2="716" y2="500" stroke="#94a3b8" stroke-width="0.9"/>
+    <line x1="716" y1="480" x2="684" y2="500" stroke="#94a3b8" stroke-width="0.9"/>
+    <rect x="744" y="468" width="56" height="44" rx="3"/>
+    <rect x="816" y="468" width="56" height="44" rx="3"/>
+    <circle cx="844" cy="490" r="14"/>
+  </g>
+
+  <!-- Y1 grid alan1 -->
+  <rect x="488" y="248" width="72" height="72" rx="4" fill="url(#grid)" stroke="#64748b" stroke-width="0.9" opacity="0.75"/>
+
+  <!-- Sa kanat B8B9 + kap1 -->
+  <g fill="none" stroke="#d1d5db" stroke-width="1" opacity="0.7">
+    <rect x="980" y="420" width="72" height="120" rx="4"/>
+    <path d="M980 480 Q940 480 940 520" stroke-dasharray="5 4"/>
+  </g>
+
+  <!-- Ölçü -->
+  <g stroke="#5b8fd9" stroke-width="0.9" fill="#5b8fd9" opacity="0.7">
+    <line x1="220" y1="718" x2="980" y2="718"/>
+    <line x1="220" y1="712" x2="220" y2="724"/>
+    <line x1="980" y1="712" x2="980" y2="724"/>
+    <text x="600" y="742" fill="#5b8fd9" stroke="none" font-family="Arial,sans-serif" font-size="12" text-anchor="middle">7.60 m</text>
+  </g>
+
+  <!-- Etiketler -->
+  <text x="600" y="318" fill="#f8fafc" font-family="Georgia,serif" font-size="26" font-weight="600" text-anchor="middle" letter-spacing="0.12em" opacity="0.96">PROJE FABR0KASI</text>
+  <text x="600" y="346" fill="#94a3b8" font-family="Arial,sans-serif" font-size="11" text-anchor="middle" letter-spacing="0.22em">BAR · KAHVE · KOKTEYL</text>
+
+  <!-- kahve ok -->
+  <path d="M248 220 Q200 200 168 228" fill="none" stroke="#d4af37" stroke-width="1.3" stroke-linecap="round" opacity="0.85"/>
+  <path d="M176 220 L168 228 L178 232" fill="none" stroke="#d4af37" stroke-width="1.3" stroke-linecap="round"/>
+  <text x="148" y="196" fill="#e8c547" font-family="Georgia,serif" font-size="15" font-style="italic" opacity="0.92">kahve</text>
+
+  <!-- kokteyl ok -->
+  <path d="M680 420 Q720 392 760 408" fill="none" stroke="#d4af37" stroke-width="1.3" stroke-linecap="round" opacity="0.85"/>
+  <path d="M752 400 L760 408 L752 416" fill="none" stroke="#d4af37" stroke-width="1.3" stroke-linecap="round"/>
+  <text x="668" y="378" fill="#e8c547" font-family="Georgia,serif" font-size="15" font-style="italic" opacity="0.92">kokteyl</text>
+
+  <!-- Modül kodlar1 (hafif) -->
+  <g fill="#6b7280" font-family="Arial,sans-serif" font-size="9" opacity="0.45">
+    <text x="168" y="188">B1</text>
+    <text x="292" y="188">B2</text>
+    <text x="412" y="188">B3</text>
+    <text x="536" y="188">B4</text>
+    <text x="660" y="188">B6</text>
+    <text x="808" y="188">B7</text>
+    <text x="516" y="292">Y1</text>
+    <text x="592" y="452">B14</text>
+  </g>
+
+  <!-- Alt alt1n çizgi -->
+  <rect x="420" y="756" width="360" height="2" rx="1" fill="url(#gold)" opacity="0.55"/>
+</svg>
