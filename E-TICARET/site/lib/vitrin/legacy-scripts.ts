@@ -8,9 +8,8 @@ export const HOME_CRITICAL_CSS = `
 body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads{display:grid;grid-template-columns:repeat(3,1fr);overflow:hidden}
 body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card{position:relative;height:auto;min-height:0;max-height:none;overflow:hidden;box-sizing:border-box;display:flex;flex-direction:column}
 body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card-visual{position:relative;width:100%;aspect-ratio:var(--eq-home-hero-visual-aspect);flex:0 0 auto;overflow:hidden}
-body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card-img--pfos-cover{position:absolute;inset:0;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:cover;object-position:center 38%}
-body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card-img--bar-combo,
-body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card-img--yer-bufe{position:absolute;inset:0;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:cover}
+body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card-img--pfos-cover,body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card-img--bar-combo,body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card-img--yer-bufe{position:absolute;inset:0;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:contain;object-position:center center}
+body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card-img--bar-combo,body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card-img--yer-bufe{position:absolute;inset:0;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:contain;object-position:center center}
 @media(max-width:768px){body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads{grid-template-columns:1fr}}
 `.trim();
 

@@ -1818,8 +1818,8 @@ body.eq-home.eq-home-mutbex .eq-home-hero-ads .hero-card--pfos:not(.hero-card--s
 
 body.eq-home.eq-home-mutbex .eq-home-hero-ads .hero-card-img--pfos-cover {
   transition: transform 0.25s ease;
-  object-fit: cover;
-  object-position: center 38%;
+  object-fit: contain;
+  object-position: center center;
   filter: none;
 }
 
