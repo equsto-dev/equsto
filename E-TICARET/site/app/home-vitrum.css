@@ -187,7 +187,13 @@
 }
 
 .eq-v-pillar-visual--yer {
-  background: #e7e5e4;
+  background: #060608;
+}
+
+.eq-v-pillar-visual--yer .eq-v-pillar-img--eskiz {
+  object-fit: contain;
+  padding: 8%;
+  filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.5));
 }
 
 .eq-v-pillar-visual--besos {

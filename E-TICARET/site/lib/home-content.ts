@@ -37,7 +37,7 @@ export const heroPillars = [
     pitch: "Konsept vitrin, masa düzeni ve servis hatları.",
     cta: null,
     visual: "yer" as const,
-    image: "/images/home/hero-yer-sofrasi-bufe.png",
+    image: "/images/home/hero-yer-sofrasi-eskiz.svg",
   },
   {
     id: "besos",
