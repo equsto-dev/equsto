@@ -1462,13 +1462,12 @@ body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img--
   object-position: center 42%;
   filter: none;
 }
-/* Yer Sofrası: plan eskizi (siyah zemin, beyaz çizgi — Bar Design / PFOS eskiz dili) */
+/* Yer Sofrası: tam çerçeve kaplama (genel .hero-card-img %56 kuralının üstüne) */
 body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-visual--yer {
   display: block;
   overflow: hidden;
-  background: #060608;
+  background: #e8e4de;
 }
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img--yer-eskiz,
 body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img--yer-bufe {
   position: absolute;
   inset: 0;
@@ -1477,26 +1476,9 @@ body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img--
   height: 100% !important;
   max-width: none !important;
   max-height: none !important;
-  object-fit: contain !important;
+  object-fit: cover !important;
   object-position: center center;
-  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.45));
-}
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-visual--yer::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(
-    180deg,
-    rgba(6, 6, 8, 0.15) 0%,
-    rgba(6, 6, 8, 0.05) 45%,
-    rgba(255, 255, 255, 0.35) 82%,
-    rgba(255, 255, 255, 0.88) 100%
-  );
-}
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--yer .hero-card-body {
-  position: relative;
-  z-index: 2;
+  filter: none;
 }
 body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card:not(.hero-card--soon):hover {
   background: var(--eq-surface-2);
