@@ -164,10 +164,14 @@ nav.topnav {
   }
 
   .eq-home-band-inner,
-  .eq-mx-pop-cats-inner,
-  .eq-mx-hero {
+  .eq-mx-pop-cats-inner {
     padding-left: max(10px, env(safe-area-inset-left, 0px));
     padding-right: max(10px, env(safe-area-inset-right, 0px));
+  }
+
+  body.eq-home .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .eq-home .main-top,
