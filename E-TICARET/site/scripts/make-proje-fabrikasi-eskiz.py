@@ -2,13 +2,17 @@ from __future__ import annotations
 
 import glob
 import os
+import shutil
 
-from PIL import Image, ImageEnhance, ImageOps
+from PIL import Image, ImageEnhance, ImageFilter, ImageOps
 
 
-def resolve_sketch_path() -> str:
+def resolve_sketch_path() -> str | None:
     root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-    candidates = [os.path.join(root, "scripts", "data", "pfos-eskiz-source.png")]
+    candidates = [
+        os.path.join(root, "scripts", "data", "pfos-eskiz-source.png"),
+        os.path.join(root, "scripts", "data", "pfos-eskiz-source.jpg"),
+    ]
     for p in candidates:
         if os.path.isfile(p):
             return p
@@ -19,22 +23,44 @@ def resolve_sketch_path() -> str:
     found = sorted(glob.glob(pattern), key=os.path.getmtime)
     if found:
         return found[-1]
-    raise FileNotFoundError("PFOS eskiz kaynağı bulunamadı")
+    return None
+
+
+def beautify_raster(src: Image.Image) -> Image.Image:
+    """El çizimi eskizi vitrin için yumuşatılmış, kontrastlı hale getirir."""
+    img = src.convert("RGB")
+    w, h = img.size
+    crop = img.crop((int(w * 0.02), int(h * 0.02), int(w * 0.98), int(h * 0.98)))
+    framed = ImageOps.fit(crop, (1600, 1200), method=Image.LANCZOS, centering=(0.5, 0.5))
+    framed = ImageEnhance.Contrast(framed).enhance(1.08)
+    framed = ImageEnhance.Brightness(framed).enhance(1.03)
+    framed = framed.filter(ImageFilter.UnsharpMask(radius=1.2, percent=90, threshold=3))
+    return framed
 
 
 def main() -> None:
     root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-    sketch = Image.open(resolve_sketch_path()).convert("RGB")
-
-    W, H = 1600, 1200
-    framed = ImageOps.fit(sketch, (W, H), method=Image.LANCZOS, centering=(0.5, 0.5))
-    framed = ImageEnhance.Contrast(framed).enhance(1.02)
-
     out_dir = os.path.join(root, "public", "images", "pfos")
     os.makedirs(out_dir, exist_ok=True)
-    out_path = os.path.join(out_dir, "proje-fabrikasi-eskiz.jpg")
-    framed.save(out_path, quality=92, subsampling=1, optimize=True)
-    print(out_path)
+
+    svg_src = os.path.join(out_dir, "proje-fabrikasi-eskiz.svg")
+    svg_out = svg_src
+    if os.path.isfile(svg_src):
+        print("svg:", svg_out)
+
+    sketch_path = resolve_sketch_path()
+    if sketch_path:
+        out_path = os.path.join(out_dir, "proje-fabrikasi-eskiz.jpg")
+        framed = beautify_raster(Image.open(sketch_path))
+        framed.save(out_path, quality=92, subsampling=1, optimize=True)
+        print("jpg:", out_path)
+        return
+
+    if os.path.isfile(svg_src):
+        print("Kaynak PNG yok; vitrin SVG kullanıyor:", svg_src)
+        return
+
+    raise FileNotFoundError("PFOS eskiz kaynağı veya SVG bulunamadı")
 
 
 if __name__ == "__main__":
