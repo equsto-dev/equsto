@@ -5,7 +5,6 @@ import {
   getSessionByToken,
   clearUnifiedShopCart,
   loadUnifiedShopCart,
-  mergeGuestShopCartIntoMember,
   persistUnifiedShopCart,
   readBearerToken,
   readTokenFromBody,
@@ -122,7 +121,6 @@ export async function PUT(req: NextRequest) {
     }
 
     if (memberId && memberEmail) {
-      if (!replace) await mergeGuestShopCartIntoMember(syncToken, memberEmail);
       const existing = await loadUnifiedShopCart({ syncToken, memberEmail, memberId });
       const merged = replace ? incoming : mergeShopCartItems(existing, incoming);
       const saved = await persistUnifiedShopCart({
