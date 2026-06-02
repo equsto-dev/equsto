@@ -170,6 +170,10 @@ const TIP_RULES: TipRule[] = [
     test: (n) => n.includes("bar mikser") || n.includes("milk frother"),
   },
   {
+    tip: "kokteyl-tezgah",
+    test: (n) => n.includes("kokteyl istasyon") || n.includes("kokteyl tezgah"),
+  },
+  {
     tip: "kati-meyve-sikacagi",
     test: (n) => n.includes("meyve sik") || n.includes("portakal sik"),
   },

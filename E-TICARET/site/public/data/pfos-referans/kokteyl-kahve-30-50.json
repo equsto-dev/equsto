@@ -6,15 +6,15 @@
   "kaynakDosya": "no fish today urun_listesi.xlsx",
   "not": "No Fish Today referans · kokteyl bar & kahve istasyonu",
   "yukleme": "2026-05-30T23:56:19.994Z",
-  "kalemSayisi": 18,
-  "toplamAdet": 18,
+  "kalemSayisi": 17,
+  "toplamAdet": 17,
   "kalemler": [
     {
       "bolum": "A",
       "bolumAd": "A- BAR & KAHVE",
       "poz": "A1",
-      "ad": "YAŞ PASTA TATLI TEŞHİR DOLABI, DİK TİP",
-      "olcu": "70*70*180",
+      "ad": "KOKTEYL İSTASYONU",
+      "olcu": "180*70*85",
       "adet": 1
     },
     {
@@ -117,14 +117,6 @@
       "bolum": "A",
       "bolumAd": "A- BAR & KAHVE",
       "poz": "A14",
-      "ad": "KOKTEYL İSTASYONU",
-      "olcu": "180*70*85",
-      "adet": 1
-    },
-    {
-      "bolum": "A",
-      "bolumAd": "A- BAR & KAHVE",
-      "poz": "A15",
       "ad": "TÜRK KAHVE MAKİNASI",
       "olcu": "-",
       "adet": 1
@@ -132,7 +124,7 @@
     {
       "bolum": "A",
       "bolumAd": "A- BAR & KAHVE",
-      "poz": "A16",
+      "poz": "A15",
       "ad": "SETÜSTÜ KAHVE ÇEKMECESİ",
       "olcu": "-",
       "adet": 1
@@ -140,7 +132,7 @@
     {
       "bolum": "A",
       "bolumAd": "A- BAR & KAHVE",
-      "poz": "A17",
+      "poz": "A16",
       "ad": "BAR BLENDER",
       "olcu": "-",
       "adet": 1
@@ -148,7 +140,7 @@
     {
       "bolum": "A",
       "bolumAd": "A- BAR & KAHVE",
-      "poz": "A18",
+      "poz": "A17",
       "ad": "KAHVE FİLTRE ÜNİTESİ, AHŞAP GÖVDE",
       "olcu": "-",
       "adet": 1

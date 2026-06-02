@@ -53,7 +53,7 @@ export default function CartPairing() {
       margin: 1,
       width: 164,
       color: { dark: "#001e50", light: "#ffffff" },
-    }).then((url) => {
+    }).then((url: string) => {
       if (!alive) return;
       setQrDataUrl(url);
     });
