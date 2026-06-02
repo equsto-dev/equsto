@@ -10,8 +10,7 @@ body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card{positio
 body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card-visual{position:absolute;inset:0}
 body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card-img--pfos-cover{position:absolute;inset:0;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:cover;object-position:center center}
 body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card-img--bar-combo,
-body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card-visual--yer{background:#060608}
-body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card-img--yer-eskiz,body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card-img--yer-bufe{position:absolute;inset:0;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:contain}
+body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card-img--yer-bufe{position:absolute;inset:0;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:cover}
 @media(max-width:1024px){body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card{height:var(--eq-home-hero-card-h-1024);min-height:var(--eq-home-hero-card-h-1024);max-height:var(--eq-home-hero-card-h-1024)}}
 @media(max-width:768px){body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads{grid-template-columns:1fr}body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card{height:var(--eq-home-hero-card-h-768);min-height:var(--eq-home-hero-card-h-768);max-height:var(--eq-home-hero-card-h-768)}}
 `.trim();
