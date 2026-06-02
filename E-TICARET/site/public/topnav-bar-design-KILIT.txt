@@ -25,6 +25,7 @@ YASAK (onay olmadan):
 
 ── Kilitli dosyalar ───────────────────────────────────────────────────────
   components/shop/ShopEqustoChrome.tsx
+  components/shop/EqustoLogoLink.tsx   — besos-chrome-KILIT.txt (wordmark)
   components/besos/BesosEqustoChrome.tsx
   components/pfos/public/PfosEqustoChrome.tsx
   public/partials/eq-d-header.html

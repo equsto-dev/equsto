@@ -1,0 +1,55 @@
+═══════════════════════════════════════════════════════════════════════════
+KİLİT — Bar Design (/besos) · EQUSTO logosu + vitrin alt bandı (footer)
+Onay: 2026-06-02 · Commit referans: fdd95636
+═══════════════════════════════════════════════════════════════════════════
+
+Bu dosya, /besos sayfalarında üst bant logosu ve Amazon tarzı alt footer'ın
+kaybolmaması içindir. Değiştirmeden önce kullanıcıdan AÇIK ONAY alın.
+
+── Kök neden (tekrar etme) ───────────────────────────────────────────────
+  • Header ShopChromePortal ile geç mount olur → boş <a class="logo"> kalır
+  • eq-footer.js içerik doldurur → React hydration footer'ı boşaltır
+  Çözüm: SSR wordmark + hydration sonrası yeniden mount (kilitli bileşenler)
+
+── Beklenen görünüm ───────────────────────────────────────────────────────
+  Üst bant (siyah):
+    • Sol üst: EQUSTO wordmark (beyaz PNG, /images/equsto-logo-white.png)
+    • Teslimat + arama + departman şeridi (topnav-bar-design-KILIT.txt)
+  Alt bant:
+    • footer.footer.eq-mfoot — 4 sütun + marka şeridi + yasal (footer-brand-KILIT)
+    • Besos: siyah zemin (#000), "Powered By Vitrum" görünür
+
+YASAK (onay olmadan):
+  • ShopEqustoChrome'da boş <a class="logo" /> geri getirmek (yalnız JS'e bırakmak)
+  • EqustoLogoLink / ShopFooterHost kaldırmak veya sadece legacy HTML'e dönmek
+  • BesosScripts'te equsto-logo.js / eq-footer.js onReady mount'larını silmek
+  • equsto-logo.js içinde #eq-shop-chrome-root MutationObserver'ı kaldırmak
+  • /besos footer'ı React'ta sabit innerHTML ile değiştirmek (eq-footer tek kaynak)
+  • body.bd-page.besos için .eq-mfoot display:none veya footer'ı tamamen gizlemek
+
+── Kilitli dosyalar ───────────────────────────────────────────────────────
+  components/shop/EqustoLogoLink.tsx     — SSR img + EQUSTO_LOGO_REFRESH
+  components/shop/ShopFooterHost.tsx     — hydration sonrası __eqMountMarketFooter
+  components/shop/ShopEqustoChrome.tsx   — <EqustoLogoLink /> (portal içi)
+  components/besos/BesosEqustoChrome.tsx — variant="besos"
+  components/besos/BesosScripts.tsx      — logo/footer onReady
+  components/besos/BesosBodyClass.tsx    — mountFooter yedek (400ms)
+  app/besos/page.tsx                     — <ShopFooterHost />
+  app/besos/imt300/page.tsx              — <ShopFooterHost />
+  lib/besos/render-modul-page.tsx        — <ShopFooterHost /> (modül PDP)
+  lib/shop/logo.ts                       — EQUSTO_LOGO_V / LIGHT / DARK yolları
+  public/equsto-logo.js                  — chrome root MutationObserver
+  public/eq-footer.js                    — shouldMount: bd-page.besos dahil
+  app/besos/besos.css                    — footer.footer.eq-mfoot siyah stil
+  public/besos-shell.css                 — header.hdr > a.logo görünür
+  lib/shop/assets.ts                     — SHOP_ASSET_V
+
+── İlgili kilitler (ayrı dosya) ───────────────────────────────────────────
+  public/topnav-bar-design-KILIT.txt
+  public/footer-brand-KILIT.txt
+
+── Deploy / doğrulama ─────────────────────────────────────────────────────
+  npm run verify:besos-chrome-kilit
+  Canlı /besos: sol üst logo + sayfa sonu link sütunları (eq-mfoot)
+
+═══════════════════════════════════════════════════════════════════════════
