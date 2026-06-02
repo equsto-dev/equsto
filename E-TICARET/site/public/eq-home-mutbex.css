@@ -76,9 +76,29 @@ body.eq-home .eq-mx-vitrin .eq-mx-spotlight-wrap {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.45s ease;
-  background: center / cover no-repeat #0a1628;
+  background-color: #0a1628;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
   display: block;
   text-decoration: none;
+}
+.eq-mx-hero__slide-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+.eq-mx-hero__slide-shade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(0, 20, 50, 0.25) 0%, rgba(0, 20, 50, 0.78) 100%);
 }
 .eq-mx-hero__slide.is-active {
   opacity: 1;
@@ -89,6 +109,7 @@ body.eq-home .eq-mx-vitrin .eq-mx-spotlight-wrap {
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 2;
   padding: 20px 24px;
   background: linear-gradient(transparent, rgba(0, 20, 50, 0.82));
   color: #fff;
