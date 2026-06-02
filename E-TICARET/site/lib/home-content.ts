@@ -33,6 +33,7 @@ export const heroPillars = [
     soon: true,
     tag: "Restoran & Catering",
     title: "Yer Sofrası",
+    tagline: "Pek yakında.",
     pitch: "Konsept vitrin, masa düzeni ve servis hatları.",
     cta: null,
     visual: "yer" as const,

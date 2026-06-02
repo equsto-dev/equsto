@@ -20,7 +20,9 @@ function HeroPillar({
   const visualClass = `eq-v-pillar-visual eq-v-pillar-visual--${pillar.visual}`;
   const body = (
     <>
-      {pillar.soon ? <span className="eq-v-soon">PEK YAKINDA</span> : null}
+      {pillar.soon && !("tagline" in pillar && pillar.tagline) ? (
+        <span className="eq-v-soon">PEK YAKINDA</span>
+      ) : null}
       <div className={visualClass}>
         {pillar.image ? (
           // eslint-disable-next-line @next/next/no-img-element
@@ -35,7 +37,15 @@ function HeroPillar({
       </div>
       <div className="eq-v-pillar-body">
         <div className="eq-v-pillar-tag">{pillar.tag}</div>
-        <h2 className="eq-v-pillar-title">{pillar.title}</h2>
+        <h2 className="eq-v-pillar-title">
+          {pillar.title}
+          {"tagline" in pillar && pillar.tagline ? (
+            <>
+              <span className="eq-v-pillar-title-sep"> | </span>
+              <span className="eq-v-pillar-title-tagline">{pillar.tagline}</span>
+            </>
+          ) : null}
+        </h2>
         <p className="eq-v-pillar-pitch">{pillar.pitch}</p>
         {pillar.cta ? <span className="eq-v-pillar-cta">{pillar.cta}</span> : null}
       </div>
