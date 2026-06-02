@@ -70,6 +70,14 @@ body.eq-home-decor .eq-mx-hero__thumbs {
   background: linear-gradient(180deg, transparent 55%, rgba(0, 20, 50, 0.55) 100%);
 }
 
+.eq-mx-hero__slide--sogutma {
+  background-color: #001e50;
+}
+
+.eq-mx-hero__slide--sogutma .eq-mx-hero__slide-shade {
+  background: linear-gradient(180deg, rgba(0, 20, 50, 0.08) 0%, rgba(0, 20, 50, 0.72) 100%);
+}
+
 .eq-mx-hero__thumb-ph--pfos {
   background:
     linear-gradient(180deg, rgba(0, 20, 50, 0.2) 0%, rgba(0, 20, 50, 0.65) 100%),
