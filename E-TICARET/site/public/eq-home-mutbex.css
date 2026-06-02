@@ -1811,12 +1811,16 @@ body.eq-home.eq-home-mutbex .eq-home-hero-ads .hero-card--pfos .hero-card-visual
 }
 
 body.eq-home.eq-home-mutbex .eq-home-hero-ads .hero-card--pfos:not(.hero-card--soon):hover .hero-card-img--pfos-cover {
-  filter: drop-shadow(0 14px 36px rgba(0, 30, 80, 0.22));
-  transition: filter 0.25s ease;
+  filter: none;
+  transform: scale(1.01);
+  transition: transform 0.25s ease;
 }
 
 body.eq-home.eq-home-mutbex .eq-home-hero-ads .hero-card-img--pfos-cover {
-  transition: filter 0.25s ease;
+  transition: transform 0.25s ease;
+  object-fit: contain;
+  object-position: center center;
+  filter: none;
 }
 
 body.eq-home.eq-home-mutbex .eq-home-platform-hero .eq-home-hero-ads.hero {
