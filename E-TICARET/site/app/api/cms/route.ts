@@ -55,15 +55,16 @@ export async function GET(req: NextRequest) {
     return adminOk({ data: EMPTY_PROJE });
   }
 
-  const denied = assertAdminBearer(req);
-  if (denied) return denied;
-
-  const file = await readJsonFile<Record<string, unknown>>(VITRIN_FILE());
-  if (!file) return adminOk({ data: { version: "1.0", layout: {} } });
-  if (file.success && file.data && typeof file.data === "object") {
-    return adminOk({ data: file.data as Record<string, unknown> });
+  if (kind === "vitrin") {
+    const file = await readJsonFile<Record<string, unknown>>(VITRIN_FILE());
+    if (!file) return adminOk({ data: { version: "1.0", layout: {} } });
+    if (file.success && file.data && typeof file.data === "object") {
+      return adminOk({ data: file.data as Record<string, unknown> });
+    }
+    return adminOk({ data: file });
   }
-  return adminOk({ data: file });
+
+  return adminErr("Geçersiz kind", 400);
 }
 
 export async function POST(req: NextRequest) {

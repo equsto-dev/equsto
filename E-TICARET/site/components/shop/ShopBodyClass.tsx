@@ -12,9 +12,9 @@ export default function ShopBodyClass({
   dataDept?: string;
 }) {
   useEffect(() => {
-    const prevClass = document.body.className;
     const prevDept = document.body.getAttribute("data-eq-dept");
-    document.body.className = className;
+    const classes = className.split(/\s+/).filter(Boolean);
+    for (const c of classes) document.body.classList.add(c);
     if (dataDept) document.body.setAttribute("data-eq-dept", dataDept);
     else document.body.removeAttribute("data-eq-dept");
 
@@ -36,7 +36,7 @@ export default function ShopBodyClass({
     return () => {
       window.clearTimeout(t);
       unmountChrome();
-      document.body.className = prevClass;
+      for (const c of classes) document.body.classList.remove(c);
       if (prevDept) document.body.setAttribute("data-eq-dept", prevDept);
       else document.body.removeAttribute("data-eq-dept");
     };
