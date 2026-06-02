@@ -26,8 +26,8 @@ export const heroPillars = [
     cta: null,
     visual: "pfos" as const,
     image: "/images/pfos/proje-fabrikasi-mutfak-eskiz.png",
-    imageWidth: 956,
-    imageHeight: 1024,
+    imageWidth: 495,
+    imageHeight: 394,
   },
   {
     id: "yer",
