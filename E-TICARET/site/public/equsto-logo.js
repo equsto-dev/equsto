@@ -108,4 +108,11 @@
       attributeFilter: ["data-theme"],
     });
   } catch (_) {}
+
+  try {
+    var chromeRoot = document.getElementById("eq-shop-chrome-root");
+    if (chromeRoot) {
+      new MutationObserver(schedule).observe(chromeRoot, { childList: true, subtree: true });
+    }
+  } catch (_) {}
 })();

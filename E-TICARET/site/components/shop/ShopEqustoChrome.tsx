@@ -3,6 +3,7 @@
 import { EQ_DEPT_PATH, submitBesosSearch, toggleEqDrawer } from "@/lib/besos/site-nav";
 import { usePathname } from "next/navigation";
 import { Fragment, useRef } from "react";
+import EqustoLogoLink from "@/components/shop/EqustoLogoLink";
 import LangSwitcherSlot from "@/components/shop/LangSwitcherSlot";
 import ShopChromePortal from "@/components/shop/ShopChromePortal";
 import { SHOP_ASSET_V } from "@/lib/shop/assets";
@@ -63,7 +64,7 @@ export default function ShopEqustoChrome({
     <ShopChromePortal>
       <div className="eq-shop-chrome">
         <header className="hdr">
-          <a className="logo" href="/" aria-label="Equsto" />
+          <EqustoLogoLink />
           <div className="pg-inner hdr-pg-inner">
             <div className="hdr-alici">
               <div style={{ fontSize: 9, color: "var(--eq-text-subtle)" }} data-i18n="common.delivery_to">

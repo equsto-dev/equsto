@@ -15,6 +15,7 @@ declare global {
     };
     filterStations?: (q: string) => void;
     __eqMountMarketFooter?: () => void;
+    EQUSTO_LOGO_REFRESH?: () => void;
     eqGo?: (key: string) => void;
     toggleDrawer?: () => void;
     EqustoCart?: { goToCartPage?: () => void; syncBadge?: () => void };
@@ -39,7 +40,14 @@ export default function BesosScripts() {
       <AssetCdnConfigScript />
       <Script src={`/eq-site-urls.js?v=${v}`} strategy="beforeInteractive" />
       <Script src={`/eq-i18n.js?v=${v}`} strategy="afterInteractive" />
-      <Script src={`/equsto-logo.js?v=${v}`} strategy="afterInteractive" />
+      <Script
+        src={`/equsto-logo.js?v=${v}`}
+        strategy="afterInteractive"
+        onReady={() => {
+          window.EQUSTO_LOGO_REFRESH?.();
+          window.setTimeout(() => window.EQUSTO_LOGO_REFRESH?.(), 120);
+        }}
+      />
       <Script src={`/nav.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-bar-module-url.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-besos-pricing.js?v=${v}`} strategy="afterInteractive" />
@@ -50,7 +58,14 @@ export default function BesosScripts() {
         onReady={() => window.EqustoCart?.syncBadge?.()}
       />
       <Script src={`/eq-besos-actions.js?v=${v}`} strategy="afterInteractive" />
-      <Script src={`/eq-footer.js?v=${v}`} strategy="afterInteractive" />
+      <Script
+        src={`/eq-footer.js?v=${v}`}
+        strategy="afterInteractive"
+        onReady={() => {
+          window.__eqMountMarketFooter?.();
+          window.setTimeout(() => window.__eqMountMarketFooter?.(), 120);
+        }}
+      />
       <Script
         src={`/contact.js?v=${v}`}
         strategy="afterInteractive"
