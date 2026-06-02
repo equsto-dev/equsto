@@ -28,7 +28,7 @@
   </defs>
 
   <rect width="1200" height="800" fill="url(#bg)"/>
-  <rect x="16" y="12" width="1168" height="776" rx="14" fill="url(#frame)" stroke="#2a2a36" stroke-width="1"/>
+  <rect x="28" y="24" width="1144" height="752" rx="20" fill="url(#frame)" stroke="#2a2a36" stroke-width="1"/>
 
   <!-- Arka bar (B1B7) -->
   <g fill="none" stroke="#e8ecf2" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" opacity="0.92">
@@ -58,7 +58,7 @@
     <rect x="584" y="118" width="40" height="40" rx="3"/>
   </g>
 
-  <!-- B6 dairesel ùnite -->
+  <!-- B6 dairesel ¸nite -->
   <circle cx="696" cy="140" r="28" fill="none" stroke="#e8ecf2" stroke-width="1.1" opacity="0.85"/>
 
   <!-- Katlan1r kapak (merkez) -->
@@ -70,7 +70,7 @@
   <!-- Ana bar  d1_ hat (U / stadyum) -->
   <g fill="none" stroke="#f2f4f8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.95">
     <path d="M220 620 Q220 420 380 380 Q540 340 600 340 Q660 340 820 380 Q980 420 980 620 Q980 680 600 680 Q220 680 220 620 Z"/>
-    <!-- 0ù tezgah hatt1 -->
+    <!-- 0Á tezgah hatt1 -->
     <path d="M280 580 Q280 440 400 410 Q520 385 600 385 Q680 385 800 410 Q920 440 920 580" stroke-width="1.1" opacity="0.55" stroke-dasharray="8 6"/>
   </g>
 
@@ -88,7 +88,7 @@
     <circle cx="600" cy="658" r="16"/>
   </g>
 
-  <!-- Servis istasyonlar1 (iù) -->
+  <!-- Servis istasyonlar1 (iÁ) -->
   <g fill="none" stroke="#e8ecf2" stroke-width="1" opacity="0.82">
     <rect x="300" y="468" width="64" height="44" rx="3"/>
     <rect x="380" y="468" width="64" height="44" rx="3"/>
@@ -118,7 +118,7 @@
     <path d="M980 480 Q940 480 940 520" stroke-dasharray="5 4"/>
   </g>
 
-  <!-- ùlùù -->
+  <!-- ÷lÁ¸ -->
   <g stroke="#5b8fd9" stroke-width="0.9" fill="#5b8fd9" opacity="0.7">
     <line x1="220" y1="718" x2="980" y2="718"/>
     <line x1="220" y1="712" x2="220" y2="724"/>
@@ -128,7 +128,7 @@
 
   <!-- Etiketler -->
   <text x="600" y="318" fill="#f8fafc" font-family="Georgia,serif" font-size="26" font-weight="600" text-anchor="middle" letter-spacing="0.12em" opacity="0.96">PROJE FABR0KASI</text>
-  <text x="600" y="346" fill="#94a3b8" font-family="Arial,sans-serif" font-size="11" text-anchor="middle" letter-spacing="0.22em">BAR ù KAHVE ù KOKTEYL</text>
+  <text x="600" y="346" fill="#94a3b8" font-family="Arial,sans-serif" font-size="11" text-anchor="middle" letter-spacing="0.22em">BAR ∑ KAHVE ∑ KOKTEYL</text>
 
   <!-- kahve ok -->
   <path d="M248 220 Q200 200 168 228" fill="none" stroke="#d4af37" stroke-width="1.3" stroke-linecap="round" opacity="0.85"/>
@@ -140,7 +140,7 @@
   <path d="M752 400 L760 408 L752 416" fill="none" stroke="#d4af37" stroke-width="1.3" stroke-linecap="round"/>
   <text x="668" y="378" fill="#e8c547" font-family="Georgia,serif" font-size="15" font-style="italic" opacity="0.92">kokteyl</text>
 
-  <!-- Modùl kodlar1 (hafif) -->
+  <!-- Mod¸l kodlar1 (hafif) -->
   <g fill="#6b7280" font-family="Arial,sans-serif" font-size="9" opacity="0.45">
     <text x="168" y="188">B1</text>
     <text x="292" y="188">B2</text>
@@ -152,6 +152,6 @@
     <text x="592" y="452">B14</text>
   </g>
 
-  <!-- Alt alt1n ùizgi -->
+  <!-- Alt alt1n Áizgi -->
   <rect x="420" y="756" width="360" height="2" rx="1" fill="url(#gold)" opacity="0.55"/>
 </svg>
