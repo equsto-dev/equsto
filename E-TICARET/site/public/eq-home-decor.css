@@ -23,8 +23,33 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero {
   padding: 12px 10px 8px;
 }
 
-body.eq-home-decor .eq-mx-hero__slides {
-  max-height: min(42vh, 420px);
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slides {
+  aspect-ratio: 1024 / 522;
+  max-height: none;
+  min-height: 0;
+  height: auto;
+}
+
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__stage {
+  background: #e8dcc8;
+}
+
+.eq-mx-hero__slide--pfos {
+  background-color: #e8dcc8;
+}
+
+/* Alt slider — kutu sabit, görseller kırpılmadan contain */
+.eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide-bg {
+  object-fit: contain;
+  object-position: center center;
+}
+
+.eq-mx-hero__slide--pfos .eq-mx-hero__slide-shade {
+  background: linear-gradient(180deg, transparent 50%, rgba(0, 20, 50, 0.55) 100%);
+}
+
+.eq-mx-hero__slide--pfos .eq-mx-hero__slide-cap {
+  background: linear-gradient(transparent, rgba(0, 20, 50, 0.78));
 }
 
 body.eq-home-decor .eq-mx-hero__thumbs {
@@ -35,19 +60,6 @@ body.eq-home-decor .eq-mx-hero__thumbs {
   display: block;
   width: 100%;
   height: 52px;
-}
-.eq-mx-hero__slide--pfos {
-  background-color: #0a1628;
-}
-
-/* Alt slider — kutu sabit, görseller kırpılmadan contain */
-.eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide-bg {
-  object-fit: contain;
-  object-position: center center;
-}
-
-.eq-mx-hero__slide--pfos .eq-mx-hero__slide-shade {
-  background: linear-gradient(180deg, transparent 55%, rgba(0, 20, 50, 0.62) 100%);
 }
 
 .eq-mx-hero__slide--bar {
@@ -61,7 +73,7 @@ body.eq-home-decor .eq-mx-hero__thumbs {
 .eq-mx-hero__thumb-ph--pfos {
   background:
     linear-gradient(180deg, rgba(0, 20, 50, 0.2) 0%, rgba(0, 20, 50, 0.65) 100%),
-    url("/images/pfos/proje-fabrikasi-bar-eskiz.png?v=20260603bar-eskiz") center / contain no-repeat;
+    url("/images/pfos/proje-fabrikasi-bar-eskiz.png?v=20260603slider-bar") center / contain no-repeat;
 }
 
 /* İkonsuz kategori şeridi */
