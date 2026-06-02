@@ -1,0 +1,54 @@
+═══════════════════════════════════════════════════════════════════════════
+KİLİT — Ana sayfa üst üçlü vitrin (PFOS · Yer Sofrası · Bar Design)
+Onay: 2026-06-03 · Commit referans: b04a99b5
+═══════════════════════════════════════════════════════════════════════════
+
+Bu dosya, equsto.com ana sayfasındaki «DÜNYADA BİR İLK!» altındaki üçlü
+hero kartlarının bozulmaması içindir. Değiştirmeden önce kullanıcıdan AÇIK ONAY alın.
+
+── Beklenen görünüm ───────────────────────────────────────────────────────
+  • 3 sütun grid (masaüstü); mobilde tek sütun
+  • Her kart görsel alanı 4:3 (--eq-home-hero-visual-aspect: 4 / 3)
+  • Görseller object-fit: contain; tam genişlikte tek sütun yığını YOK
+  • Sol: Proje Fabrikası — kırpılmış mutfak eskizi (495×394)
+  • Orta: Yer Sofrası — chafing/büfe (soon)
+  • Sağ: Bar Design — kokteyl istasyonu
+
+── Kök neden (tekrar etme) ───────────────────────────────────────────────
+  • Hero React portal ile #eq-home-hero-mount içine taşındı
+  • Eski CSS .right-col > section.hero (doğrudan çocuk) grid uyguluyordu
+  • Portal sonrası grid kırıldı → görseller tam genişlikte alt alta dizildi
+  Çözüm: .eq-home-hero-mount > section.hero.eq-home-hero-ads seçicileri
+
+YASAK (onay olmadan):
+  • Hero HTML'ini tekrar index.ts gövdesine gömmek (HomeHeroAds React'i kaldırmak)
+  • .right-col > section.hero.eq-home-hero-ads ile yalnız doğrudan çocuk seçmek
+  • PFOS kartında aspect-ratio: 956 / 1024 geri getirmek
+  • Üç karttan birinin görsel alanını farklı orana zorlamak (hepsi 4:3)
+  • object-fit: cover ile eskizi kırpmak (contain kilitli)
+  • proje-fabrikasi-mutfak-eskiz.png yolunu bar-eskiz / eski PNG ile değiştirmek
+  • patch-home-hero-mount.mjs ile mount noktasını kaldırmak
+
+── Kilitli dosyalar ───────────────────────────────────────────────────────
+  components/home/HomeHeroAds.tsx       — üç kart içeriği + görseller
+  components/home/HomeHeroAdsMount.tsx  — #eq-home-hero-mount portal
+  lib/home-content.ts                   — heroPillars (pfos / yer / besos)
+  lib/vitrin/bodies/index.ts            — eq-home-hero-mount boş mount noktası
+  lib/vitrin/legacy-scripts.ts          — HOME_CRITICAL_CSS (4:3 grid)
+  app/(vitrin)/page.tsx                 — HomeHeroAdsMount portal
+  public/theme.css                      — eq-home-hero-mount + 4:3 hero CSS
+  public/eq-mobile.css                  — mobil hero tipografi
+  public/eq-home-decor.css              — PFOS 4:3 (956/1024 yok)
+  public/images/pfos/proje-fabrikasi-mutfak-eskiz.png
+  lib/shop/assets.ts                    — SHOP_ASSET_V
+
+── Görseller (kilitli yollar) ─────────────────────────────────────────────
+  PFOS:  /images/pfos/proje-fabrikasi-mutfak-eskiz.png
+  Yer:   /images/home/hero-yer-sofrasi-bufe.png
+  Besos: /images/home/hero-bar-cocktailstation.png
+
+── Deploy / doğrulama ─────────────────────────────────────────────────────
+  npm run verify:home-hero-ads-kilit
+  Canlı /: üç kart yan yana, eşit 4:3 görsel kutusu, PFOS eskiz sol kutuda
+
+═══════════════════════════════════════════════════════════════════════════

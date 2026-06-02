@@ -1,5 +1,6 @@
 "use client";
 
+/** Kilit: public/home-hero-ads-KILIT.txt — npm run verify:home-hero-ads-kilit */
 import { heroPillars } from "@/lib/home-content";
 import { SHOP_ASSET_V } from "@/lib/shop/assets";
 
