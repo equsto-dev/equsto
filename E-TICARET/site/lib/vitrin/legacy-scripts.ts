@@ -4,15 +4,14 @@ const v = SHOP_ASSET_V;
 
 /** İlk boya öncesi hero ızgarası — body sınıfları / theme.css gelmeden PFOS görseli tam genişlikte görünmesin */
 export const HOME_CRITICAL_CSS = `
-:root{--eq-home-hero-card-h:380px;--eq-home-hero-card-h-1024:320px;--eq-home-hero-card-h-768:260px}
+:root{--eq-home-hero-visual-aspect:4/3}
 body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads{display:grid;grid-template-columns:repeat(3,1fr);overflow:hidden}
-body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card{position:relative;height:var(--eq-home-hero-card-h);min-height:var(--eq-home-hero-card-h);max-height:var(--eq-home-hero-card-h);overflow:hidden;box-sizing:border-box}
-body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card-visual{position:absolute;inset:0}
+body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card{position:relative;height:auto;min-height:0;max-height:none;overflow:hidden;box-sizing:border-box;display:flex;flex-direction:column}
+body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card-visual{position:relative;width:100%;aspect-ratio:var(--eq-home-hero-visual-aspect);flex:0 0 auto;overflow:hidden}
 body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card-img--pfos-cover{position:absolute;inset:0;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:cover;object-position:center center}
 body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card-img--bar-combo,
 body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card-img--yer-bufe{position:absolute;inset:0;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:cover}
-@media(max-width:1024px){body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card{height:var(--eq-home-hero-card-h-1024);min-height:var(--eq-home-hero-card-h-1024);max-height:var(--eq-home-hero-card-h-1024)}}
-@media(max-width:768px){body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads{grid-template-columns:1fr}body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card{height:var(--eq-home-hero-card-h-768);min-height:var(--eq-home-hero-card-h-768);max-height:var(--eq-home-hero-card-h-768)}}
+@media(max-width:768px){body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads{grid-template-columns:1fr}}
 `.trim();
 
 export const HOME_BODY_CLASS = "eq-shop eq-home eq-home-mutbex eq-home-decor";
