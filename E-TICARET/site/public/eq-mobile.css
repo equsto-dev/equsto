@@ -120,15 +120,15 @@ nav.topnav {
 
 /* ── Ana sayfa: üçlü hero + dekor ───────────────────────────────────────── */
 @media (max-width: 768px) {
-  body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-body {
+  body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card-body {
     padding: 12px 14px 14px;
   }
 
-  body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card .hero-title {
+  body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card .hero-title {
     font-size: 14px;
   }
 
-  body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card .hero-pitch {
+  body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card .hero-pitch {
     font-size: 12px;
   }
 
