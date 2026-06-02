@@ -1,5 +1,6 @@
 "use client";
 
+/** Kilit: public/home-main-slider-KILIT.txt — npm run verify:home-main-slider-kilit */
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { HomeMainSlider } from "@/components/home/HomeMainSlider";

@@ -1,0 +1,27 @@
+═══════════════════════════════════════════════════════════════════════════
+KİLİT — Ana sayfa vitrin (üst üçlü hero + alt slider)
+Onay: 2026-06-03 · Commit referans: 0bd35f30
+═══════════════════════════════════════════════════════════════════════════
+
+equsto.com ana sayfasında «DÜNYADA BİR İLK!» sonrası iki ayrı React vitrin
+bölümü vardır. İkisi de HomeVitrinPortals ile mount edilir.
+
+  1) ÜST — üçlü hero kartları (4:3)
+     Kaynak: public/home-hero-ads-KILIT.txt
+     npm run verify:home-hero-ads-kilit
+
+  2) ALT — büyük carousel slider (PFOS plan eskizi · Bar · Soğutma)
+     Kaynak: public/home-main-slider-KILIT.txt
+     npm run verify:home-main-slider-kilit
+
+  Birlikte: npm run verify:home-vitrin-kilit
+  Vercel prebuild: her iki doğrulama zorunlu
+
+── Ortak mount ───────────────────────────────────────────────────────────
+  components/home/HomeVitrinPortals.tsx
+  app/(vitrin)/page.tsx                 — portal={<HomeVitrinPortals />}
+
+── Kaldırılmış (geri getirme) ─────────────────────────────────────────────
+  eq-decor-promos alt promo bandı (2+1 metin kutuları)
+
+═══════════════════════════════════════════════════════════════════════════

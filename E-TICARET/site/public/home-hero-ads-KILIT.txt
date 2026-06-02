@@ -35,7 +35,7 @@ YASAK (onay olmadan):
   lib/home-content.ts                   — heroPillars (pfos / yer / besos)
   lib/vitrin/bodies/index.ts            — eq-home-hero-mount boş mount noktası
   lib/vitrin/legacy-scripts.ts          — HOME_CRITICAL_CSS (4:3 grid)
-  app/(vitrin)/page.tsx                 — HomeHeroAdsMount portal
+  app/(vitrin)/page.tsx                 — HomeVitrinPortals portal
   public/theme.css                      — eq-home-hero-mount + 4:3 hero CSS
   public/eq-mobile.css                  — mobil hero tipografi
   public/eq-home-decor.css              — PFOS 4:3 (956/1024 yok)
@@ -49,6 +49,7 @@ YASAK (onay olmadan):
 
 ── Deploy / doğrulama ─────────────────────────────────────────────────────
   npm run verify:home-hero-ads-kilit
+  npm run verify:home-vitrin-kilit   (üst + alt birlikte)
   Canlı /: üç kart yan yana, eşit 4:3 görsel kutusu, PFOS eskiz sol kutuda
 
 ═══════════════════════════════════════════════════════════════════════════
