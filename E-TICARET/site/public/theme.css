@@ -1278,7 +1278,8 @@ body.eq-shop.eq-dept .eq-cat-shell-root {
  * Üçlü vitrin: yalnız ana sayfa (index.html, body.eq-shop.eq-home).
  * Görsel alanı --eq-home-hero-visual-aspect (4:3); metin alanı altta.
  */
-body.eq-shop.eq-home .right-col > section.hero {
+body.eq-shop.eq-home .right-col > section.hero,
+body.eq-shop.eq-home .right-col .eq-home-hero-mount > section.hero.eq-home-hero-ads {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   border-bottom: 1px solid var(--eq-border);
@@ -1286,7 +1287,12 @@ body.eq-shop.eq-home .right-col > section.hero {
   flex: 0 0 auto;
   align-items: start;
 }
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card {
+body.eq-shop.eq-home .right-col .eq-home-hero-mount {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card {
   position: relative;
   height: auto;
   min-height: 0;
@@ -1301,15 +1307,15 @@ body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card {
   padding: 0;
   border-right: 1px solid var(--eq-border);
 }
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card:last-child {
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card:last-child {
   border-right: none;
 }
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--soon {
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card--soon {
   cursor: default;
   pointer-events: none;
   filter: saturate(0.88);
 }
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-visual {
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card-visual {
   position: relative;
   inset: auto;
   width: 100%;
@@ -1319,45 +1325,45 @@ body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-visua
   pointer-events: none;
   overflow: hidden;
 }
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-body {
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card-body {
   position: relative;
   z-index: 2;
   padding: 14px 16px 16px;
   background: var(--eq-surface);
   border-top: 1px solid var(--eq-border-soft);
 }
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card .hero-tag,
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card .hero-title,
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card .hero-pitch,
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card .hero-cta {
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card .hero-tag,
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card .hero-title,
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card .hero-pitch,
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card .hero-cta {
   position: relative;
   z-index: 1;
 }
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card .hero-tag {
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card .hero-tag {
   color: var(--eq-text-muted);
   font-size: 10px;
   margin-bottom: 4px;
 }
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card .hero-title {
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card .hero-title {
   color: var(--eq-hero-title);
   font-size: 15px;
   font-weight: 600;
   margin-bottom: 6px;
 }
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card .hero-pitch {
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card .hero-pitch {
   color: var(--eq-text-secondary);
   font-size: 11px;
   line-height: 1.4;
   margin: 0 0 8px;
 }
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card .hero-cta {
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card .hero-cta {
   display: inline-block;
   font-size: 11px;
   font-weight: 600;
   color: #001e50;
   letter-spacing: 0.04em;
 }
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-soon-badge {
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-soon-badge {
   position: absolute;
   top: 12px;
   right: 12px;
@@ -1370,19 +1376,19 @@ body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-soon-badge
   background: var(--eq-accent-gold);
   border-radius: 2px;
 }
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--pfos {
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card--pfos {
   background: var(--eq-surface);
   box-shadow: inset -1px 0 0 var(--eq-border-soft);
 }
 /* === Üst vitrin kartları (PFOS · Yer Sofrası · Bar Design) — kutu sabit, görsel contain === */
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-visual--pfos {
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card-visual--pfos {
   background: #fff;
   overflow: hidden;
   aspect-ratio: 956 / 1024;
 }
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img--pfos-cover,
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img--bar-combo,
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img--yer-bufe {
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card-img--pfos-cover,
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card-img--bar-combo,
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card-img--yer-bufe {
   position: absolute;
   inset: 0;
   display: block;
@@ -1394,7 +1400,7 @@ body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img--
   object-position: center center;
   filter: none;
 }
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-visual__shade--pfos {
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card-visual__shade--pfos {
   position: absolute;
   inset: 0;
   z-index: 1;
@@ -1407,47 +1413,47 @@ body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-visua
     rgba(255, 255, 255, 0.78) 100%
   );
 }
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--pfos .hero-card-body {
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card--pfos .hero-card-body {
   box-shadow: 0 -10px 28px rgba(0, 30, 80, 0.1);
 }
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--pfos .hero-title,
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--besos .hero-title,
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--yer .hero-title {
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card--pfos .hero-title,
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card--besos .hero-title,
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card--yer .hero-title {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
   gap: 0;
   line-height: 1.3;
 }
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--pfos .hero-title-sep,
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--besos .hero-title-sep,
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--yer .hero-title-sep {
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card--pfos .hero-title-sep,
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card--besos .hero-title-sep,
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card--yer .hero-title-sep {
   margin: 0 0.35em;
   font-weight: 400;
   font-style: normal;
   color: var(--eq-text-muted, #6b7280);
 }
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--pfos .hero-title-tagline,
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--besos .hero-title-tagline,
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--yer .hero-title-tagline {
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card--pfos .hero-title-tagline,
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card--besos .hero-title-tagline,
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card--yer .hero-title-tagline {
   font-style: italic;
   font-weight: 500;
   font-size: 0.9em;
   color: var(--eq-text-secondary, #374151);
 }
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--yer {
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card--yer {
   background: var(--eq-surface);
 }
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--besos {
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card--besos {
   background: var(--eq-surface);
 }
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-visual--besos {
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card-visual--besos {
   display: block;
   padding: 0;
   overflow: hidden;
   background: #2e2e2e;
 }
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img:not(.hero-card-img--bar-combo):not(.hero-card-img--yer-bufe):not(.hero-card-img--yer-eskiz):not(.hero-card-img--pfos-cover) {
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card-img:not(.hero-card-img--bar-combo):not(.hero-card-img--yer-bufe):not(.hero-card-img--yer-eskiz):not(.hero-card-img--pfos-cover) {
   max-height: 56%;
   width: auto;
   max-width: 46%;
@@ -1455,7 +1461,7 @@ body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img:n
   object-position: bottom center;
   filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.14));
 }
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img--bar-combo {
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card-img--bar-combo {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -1467,12 +1473,12 @@ body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img--
   filter: none;
 }
 /* Yer Sofrası: tam çerçeve kaplama (genel .hero-card-img %56 kuralının üstüne) */
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-visual--yer {
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card-visual--yer {
   display: block;
   overflow: hidden;
   background: #e8e4de;
 }
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img--yer-bufe {
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card-img--yer-bufe {
   position: absolute;
   inset: 0;
   display: block;
@@ -1484,10 +1490,10 @@ body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img--
   object-position: center center;
   filter: none;
 }
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card:not(.hero-card--soon):hover {
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card:not(.hero-card--soon):hover {
   background: var(--eq-surface-2);
 }
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card:not(.hero-card--soon):hover .hero-cta {
+body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card:not(.hero-card--soon):hover .hero-cta {
   text-decoration: underline;
 }
 @media (max-width: 1024px) {
@@ -1498,14 +1504,15 @@ body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card:not(.
   }
 }
 @media (max-width: 768px) {
-  body.eq-shop.eq-home .right-col > section.hero {
+  body.eq-shop.eq-home .right-col > section.hero,
+  body.eq-shop.eq-home .right-col .eq-home-hero-mount > section.hero.eq-home-hero-ads {
     grid-template-columns: 1fr;
   }
-  body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card {
+  body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card {
     border-right: none;
     border-bottom: 1px solid var(--eq-border);
   }
-  body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card:last-child {
+  body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card:last-child {
     border-bottom: none;
   }
   body.eq-shop.eq-home .right-col > section.hero:not(.eq-home-hero-ads) .hero-card {
@@ -5225,7 +5232,7 @@ html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .e
     word-break: break-word;
   }
 
-  body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card {
+  body.eq-shop.eq-home .right-col section.hero.eq-home-hero-ads .hero-card {
     height: auto !important;
     min-height: 0 !important;
     max-height: none !important;
