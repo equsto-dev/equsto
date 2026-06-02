@@ -408,8 +408,8 @@
 
 .secReveal {
   transition:
-    opacity 0.7s ease-out,
-    clip-path 0.7s ease-out;
+    opacity 0.5s ease-out,
+    clip-path 0.5s ease-out;
 }
 
 .secPending.secReveal {
@@ -436,8 +436,8 @@
 .secPending.secReveal .adresGrid,
 .secPending.secReveal .textInput {
   opacity: 1;
-  transition: opacity 0.45s ease-out;
-  transition-delay: calc(0.5s + var(--pfos-stagger, 0) * 0.04s);
+  transition: opacity 0.18s ease-out;
+  transition-delay: calc(0.18s + var(--pfos-stagger, 0) * 0.012s);
 }
 
 @media (prefers-reduced-motion: reduce) {
