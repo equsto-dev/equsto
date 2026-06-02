@@ -150,6 +150,11 @@
 
   function bootMemberUi() {
     window.equstoRefreshMemberHeader();
+    if (equstoIsMemberLoggedIn()) {
+      try {
+        document.dispatchEvent(new CustomEvent("equsto-member-session"));
+      } catch (_) {}
+    }
     if (typeof window.equstoAuthValidateSession === "function") {
       window.equstoAuthValidateSession().finally(function () {
         equstoRefreshDeliveryHeader();
