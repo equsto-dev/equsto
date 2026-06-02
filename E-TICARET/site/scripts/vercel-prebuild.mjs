@@ -179,6 +179,12 @@ if (fs.existsSync(verifyArama)) {
   if (r.status !== 0) process.exit(r.status ?? 1);
 }
 
+const verifyHomeVitrin = path.join(siteDir, "scripts/verify-home-vitrin-kilit.mjs");
+if (fs.existsSync(verifyHomeVitrin)) {
+  const r = spawnSync(process.execPath, [verifyHomeVitrin], { cwd: siteDir, stdio: "inherit" });
+  if (r.status !== 0) process.exit(r.status ?? 1);
+}
+
 const buildSitemap = path.join(siteDir, "scripts/build-sitemap.mjs");
 if (fs.existsSync(buildSitemap)) {
   const r = spawnSync(process.execPath, [buildSitemap], { cwd: siteDir, stdio: "inherit" });

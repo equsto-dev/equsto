@@ -28,6 +28,7 @@ mustExist("components/home/HomeMainSliderMount.tsx");
 mustExist("components/home/HomeVitrinPortals.tsx");
 mustExist("lib/home-slider-content.ts");
 mustExist("public/images/pfos/proje-fabrikasi-bar-plan-eskiz.png");
+mustExist("public/images/home/hero-sogutma-pisirme-combo.jpg");
 
 const slider = read("components/home/HomeMainSlider.tsx");
 if (!slider.includes("eq-mx-vitrin eq-decor-slider-only")) fail("HomeMainSlider.tsx: vitrin sınıfı yok");
@@ -45,6 +46,19 @@ if (!content.includes("width: 1024") || !content.includes("height: 524")) {
   fail("home-slider-content.ts: PFOS boyut 1024×524 değil");
 }
 
+if (!content.includes("homeMainSliderSogutmaPisirmeImage")) {
+  fail("home-slider-content.ts: sogutma kompozit sabiti yok");
+}
+if (!content.includes('path: "/images/home/hero-sogutma-pisirme-combo.jpg"')) {
+  fail("home-slider-content.ts: sogutma kompozit yolu değişmiş");
+}
+if (!content.includes("Atalay pişirme")) {
+  fail("home-slider-content.ts: sogutma slayt metni değişmiş");
+}
+
+const portals = read("components/home/HomeVitrinPortals.tsx");
+if (!portals.includes("HomeMainSliderMount")) fail("HomeVitrinPortals.tsx: slider mount yok");
+
 const indexBody = read("lib/vitrin/bodies/index.ts");
 if (!indexBody.includes("eq-home-slider-mount")) {
   fail("index.ts: eq-home-slider-mount yok");
@@ -59,6 +73,9 @@ if (!page.includes("HomeVitrinPortals")) fail("page.tsx: HomeVitrinPortals yok")
 const decor = read("public/eq-home-decor.css");
 if (!decor.includes("proje-fabrikasi-bar-plan-eskiz.png")) {
   fail("eq-home-decor.css: bar plan eskiz referansı yok");
+}
+if (!decor.includes("eq-mx-hero__slide--sogutma")) {
+  fail("eq-home-decor.css: sogutma slayt stili yok");
 }
 if (!decor.includes("object-fit: contain")) fail("eq-home-decor.css: contain kuralı yok");
 

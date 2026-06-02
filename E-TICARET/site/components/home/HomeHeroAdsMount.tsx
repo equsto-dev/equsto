@@ -1,5 +1,6 @@
 "use client";
 
+/** Kilit: public/home-hero-ads-KILIT.txt — npm run verify:home-hero-ads-kilit */
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { HomeHeroAds } from "@/components/home/HomeHeroAds";

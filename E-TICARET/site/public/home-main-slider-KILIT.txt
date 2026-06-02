@@ -1,6 +1,6 @@
 ═══════════════════════════════════════════════════════════════════════════
 KİLİT — Ana sayfa alt slider (PFOS · Bar Design · Soğutma)
-Onay: 2026-06-03
+Onay: 2026-06-03 · Commit referans: 0bd35f30
 ═══════════════════════════════════════════════════════════════════════════
 
 «Öne çıkanlar» bandının altındaki büyük carousel. Üstteki üçlü hero vitrinden
@@ -10,6 +10,7 @@ AYRI bileşendir (HomeMainSlider). Değiştirmeden önce AÇIK ONAY alın.
   • 1024/522 kutu; PFOS slayt object-fit: contain (kırpma yok)
   • PFOS görsel: bar/mutfak plan eskizi (parşömen, kahve/kokteyl planı)
   • Sol alt kapak: Proje Fabrikası · Beş dakikada… · Keşfet →
+  • 3. slayt: Soğutma & pişirme — hero-sogutma-pisirme-combo.jpg (2048×1044)
   • 3 thumb; otomatik geçiş (eq-home-mutbex.js initHero)
 
 ── Kilitli dosyalar ───────────────────────────────────────────────────────
@@ -21,11 +22,13 @@ AYRI bileşendir (HomeMainSlider). Değiştirmeden önce AÇIK ONAY alın.
   app/(vitrin)/page.tsx               — HomeVitrinPortals portal
   public/eq-home-decor.css            — slider PFOS contain + parşömen zemin
   public/images/pfos/proje-fabrikasi-bar-plan-eskiz.png
+  public/images/home/hero-sogutma-pisirme-combo.jpg
   lib/shop/assets.ts                  — SHOP_ASSET_V
 
 ── PFOS slider görseli (kilitli) ─────────────────────────────────────────
   /images/pfos/proje-fabrikasi-bar-plan-eskiz.png (1024×524)
-  Üst üçlü vitrin PFOS kartı: proje-fabrikasi-mutfak-eskiz.png (ayrı kilit)
+  Üst üçlü vitrin PFOS kartı: proje-fabrikasi-mutfak-eskiz.png (home-hero-ads-KILIT)
+  Soğutma slayt: /images/home/hero-sogutma-pisirme-combo.jpg
 
 YASAK (onay olmadan):
   • Slider HTML'ini index.ts gövdesine geri gömmek
@@ -33,7 +36,8 @@ YASAK (onay olmadan):
   • object-fit: cover ile eskizi kırpmak
   • HomeMainSlider'ı kaldırıp yalnız legacy HTML kullanmak
 
-── Doğrulama ─────────────────────────────────────────────────────────────
+── Deploy / doğrulama ─────────────────────────────────────────────────────
   npm run verify:home-main-slider-kilit
+  npm run verify:home-vitrin-kilit   (üst + alt birlikte)
 
 ═══════════════════════════════════════════════════════════════════════════
