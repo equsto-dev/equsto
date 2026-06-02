@@ -26,7 +26,7 @@ def main() -> None:
     root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
     sketch = Image.open(resolve_sketch_path()).convert("RGB")
 
-    W, H = 1600, 900
+    W, H = 1600, 1200
     framed = ImageOps.fit(sketch, (W, H), method=Image.LANCZOS, centering=(0.5, 0.5))
     framed = ImageEnhance.Contrast(framed).enhance(1.02)
 
