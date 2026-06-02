@@ -1,5 +1,5 @@
 /** Cache bust — shop App Router sayfaları */
-export const SHOP_ASSET_V = "20260603no-decor-promos";
+export const SHOP_ASSET_V = "20260603strip-decor-promos";
 
 /** Dept / ekipmanlar JSON — legacy static JS */
 export const CATALOG_DATA_V = SHOP_ASSET_V;

@@ -59,6 +59,9 @@ if (!indexBody.includes("eq-home-hero-mount")) {
 if (indexBody.includes('<section class="hero eq-home-hero-ads"')) {
   fail("index.ts: gömülü hero HTML geri gelmiş (React portal kullanılmalı)");
 }
+if (indexBody.includes("eq-decor-promos")) {
+  fail("index.ts: eq-decor-promos alt promo bandı geri gelmiş (kaldırılmalı)");
+}
 
 const page = read("app/(vitrin)/page.tsx");
 if (!page.includes("HomeHeroAdsMount")) fail("page.tsx: HomeHeroAdsMount yok");
@@ -84,7 +87,10 @@ if (/hero-card-visual--pfos[\s\S]{0,120}aspect-ratio:\s*956\s*\/\s*1024/.test(th
 }
 
 const decor = read("public/eq-home-decor.css");
-if (/aspect-ratio:\s*956\s*\/\s*1024/.test(decor)) {
+if (!decor.includes("body.eq-home-decor .eq-decor-promos") || !decor.includes("display: none !important")) {
+  fail("eq-home-decor.css: eq-decor-promos gizleme kuralı yok");
+}
+if (/hero-card-visual--pfos[\s\S]{0,120}aspect-ratio:\s*956\s*\/\s*1024/.test(decor)) {
   fail("eq-home-decor.css: PFOS 956/1024 override geri gelmiş");
 }
 
