@@ -601,7 +601,86 @@ body.eq-cart-page .eq-cart-layout__aside.is-empty {
   order: -1;
 }
 
-/* Cihazlar arası sepet eşitleme (/sepet) */
+/* Teslimat / iletişim (/sepet) */
+.eq-cart-checkout {
+  margin: 1.25rem 0 0;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--eq-border, #e2e8f0);
+  border-radius: 12px;
+  background: var(--eq-surface-muted, #f8fafc);
+}
+
+.eq-cart-checkout__title {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--eq-text, #0f172a);
+}
+
+.eq-cart-checkout__member {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem 1rem;
+}
+
+.eq-cart-checkout__member[hidden],
+.eq-cart-checkout__form[hidden] {
+  display: none !important;
+}
+
+.eq-cart-checkout__who {
+  margin: 0;
+  flex: 1 1 12rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--eq-text-muted, #475569);
+}
+
+.eq-cart-checkout__edit {
+  flex: 0 0 auto;
+}
+
+.eq-cart-checkout__form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .eq-cart-checkout__form {
+    grid-template-columns: 1fr 1fr;
+  }
+  .eq-cart-checkout__field--full {
+    grid-column: 1 / -1;
+  }
+}
+
+.eq-cart-checkout__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  color: var(--eq-text-muted, #475569);
+}
+
+.eq-cart-checkout__field input,
+.eq-cart-checkout__field textarea {
+  font: inherit;
+  font-size: 0.95rem;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid var(--eq-border, #e2e8f0);
+  border-radius: 8px;
+  background: var(--eq-surface, #fff);
+  color: var(--eq-text, #0f172a);
+}
+
+.eq-cart-checkout__field textarea {
+  resize: vertical;
+  min-height: 2.5rem;
+}
+
+/* Cihazlar arası sepet eşitleme (/sepet) — kaldırıldı */
 .eq-cart-login-hint {
   margin: 1.25rem 0 0;
   padding: 1rem 1.1rem;

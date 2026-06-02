@@ -23,6 +23,7 @@
 
   var STORAGE_KEY = 'equsto-ecom-cart-v1';
   var SYNC_TOKEN_KEY = 'equsto_cart_sync_v1';
+  var CHECKOUT_STORAGE_KEY = 'equsto_checkout_v1';
   var SHOP_CART_API = '/api/shop/cart';
   var MAX_LINES = 250;
   var BULK_MAX_LINES = 500;
@@ -1822,9 +1823,38 @@
     return Number.isFinite(n) ? n : 0;
   }
 
+  function readCheckoutStorage() {
+    try {
+      var j = JSON.parse(localStorage.getItem(CHECKOUT_STORAGE_KEY) || 'null');
+      return j && typeof j === 'object' ? j : null;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function saveCheckoutStorage(data) {
+    try {
+      localStorage.setItem(CHECKOUT_STORAGE_KEY, JSON.stringify(data));
+    } catch (e) {}
+  }
+
+  function memberCheckoutDefaults() {
+    var m = readMemberFromStorage();
+    var saved = readCheckoutStorage() || {};
+    var ad = (m && (m.ad || m.displayName || m.name)) || saved.ad || '';
+    var eposta = (m && (m.email || m.eposta)) || saved.eposta || '';
+    var tel = (m && (m.telefon || m.phone)) || saved.telefon || saved.tel || '';
+    return {
+      ad: String(ad).trim(),
+      tel: String(tel).trim(),
+      eposta: String(eposta).trim(),
+      not: '',
+    };
+  }
+
   function readCheckoutForm() {
     var form = document.getElementById('equsto-cart-checkout-form');
-    if (!form) return null;
+    if (!form) return memberCheckoutDefaults();
     var ad = (form.elements.ad && form.elements.ad.value) || '';
     var tel = (form.elements.telefon && form.elements.telefon.value) || '';
     var eposta = (form.elements.eposta && form.elements.eposta.value) || '';
@@ -1837,26 +1867,106 @@
     };
   }
 
+  function showCheckoutForm() {
+    var form = document.getElementById('equsto-cart-checkout-form');
+    var memberBox = document.getElementById('eq-cart-checkout-member');
+    if (form) form.hidden = false;
+    if (memberBox) memberBox.hidden = true;
+    var telEl = form && form.elements.telefon;
+    if (telEl && !String(telEl.value || '').trim()) {
+      try {
+        telEl.focus();
+      } catch (e) {}
+    }
+  }
+
+  function updateCheckoutUi() {
+    var form = document.getElementById('equsto-cart-checkout-form');
+    var memberBox = document.getElementById('eq-cart-checkout-member');
+    var who = document.getElementById('eq-cart-checkout-who');
+    if (!form) return;
+    var d = readCheckoutForm();
+    if (!d.ad || !d.tel) {
+      var defs = memberCheckoutDefaults();
+      if (!d.ad && defs.ad && form.elements.ad) form.elements.ad.value = defs.ad;
+      if (!d.tel && defs.tel && form.elements.telefon) form.elements.telefon.value = defs.tel;
+      if (!d.eposta && defs.eposta && form.elements.eposta) form.elements.eposta.value = defs.eposta;
+      d = readCheckoutForm();
+    }
+    var logged = isLoggedIn();
+    var complete = !!(d.ad && d.tel);
+    if (logged && complete) {
+      form.hidden = true;
+      if (memberBox) memberBox.hidden = false;
+      if (who) {
+        who.textContent =
+          d.ad + (d.eposta ? ' · ' + d.eposta : '') + ' · ' + d.tel;
+      }
+    } else {
+      form.hidden = false;
+      if (memberBox) memberBox.hidden = true;
+    }
+  }
+
   function prefillCheckoutForm() {
     var form = document.getElementById('equsto-cart-checkout-form');
     if (!form) return;
-    var m = readMemberFromStorage();
-    if (!m) return;
-    if (form.elements.ad && !form.elements.ad.value && m.ad) form.elements.ad.value = m.ad;
-    if (form.elements.eposta && !form.elements.eposta.value && m.eposta) form.elements.eposta.value = m.eposta;
-    if (form.elements.telefon && !form.elements.telefon.value && m.telefon) form.elements.telefon.value = m.telefon;
+    var d = memberCheckoutDefaults();
+    if (form.elements.ad && !form.elements.ad.value && d.ad) form.elements.ad.value = d.ad;
+    if (form.elements.eposta && !form.elements.eposta.value && d.eposta) form.elements.eposta.value = d.eposta;
+    if (form.elements.telefon && !form.elements.telefon.value && d.tel) form.elements.telefon.value = d.tel;
+    updateCheckoutUi();
+  }
+
+  function bindCheckoutUi() {
+    if (!isCartPage()) return;
+    var form = document.getElementById('equsto-cart-checkout-form');
+    var editBtn = document.getElementById('eq-cart-checkout-edit');
+    if (editBtn && editBtn.dataset.eqCartBound !== '1') {
+      editBtn.dataset.eqCartBound = '1';
+      editBtn.addEventListener('click', showCheckoutForm);
+    }
+    if (form && form.dataset.eqCartBound !== '1') {
+      form.dataset.eqCartBound = '1';
+      form.addEventListener('input', updateCheckoutUi);
+      form.addEventListener('change', updateCheckoutUi);
+    }
+    window.addEventListener('equsto-member-changed', function () {
+      prefillCheckoutForm();
+    });
+    document.addEventListener('equsto-member-session', function () {
+      prefillCheckoutForm();
+    });
   }
 
   function submitOrder() {
     var arr = load();
     if (!arr.length) { toast('Sepet boş.'); return; }
+    prefillCheckoutForm();
     var f = readCheckoutForm();
-    var ad = f ? f.ad : (window.prompt('Ad Soyad:') || '').trim();
-    if (!ad) { toast(__cartT('cart.name_required', 'Ad soyad gerekli.')); return; }
-    var tel = f ? f.tel : (window.prompt(__cartT('cart.phone_prompt', 'Telefon (ör. 0532…):')) || '').trim();
-    if (!tel) { toast(__cartT('cart.phone_required', 'Telefon gerekli.')); return; }
-    var eposta = f ? f.eposta : (window.prompt('E-posta (opsiyonel):') || '').trim();
-    var not = f ? f.not : (window.prompt('Not (opsiyonel):') || '').trim();
+    var ad = f.ad;
+    var tel = f.tel;
+    var eposta = f.eposta;
+    var not = f.not;
+    if (!ad || !tel) {
+      var defs = memberCheckoutDefaults();
+      if (!ad) ad = defs.ad;
+      if (!tel) tel = defs.tel;
+      if (!eposta) eposta = defs.eposta;
+    }
+    if (!ad || !tel) {
+      showCheckoutForm();
+      toast(
+        !ad
+          ? __cartT('cart.name_required', 'Ad soyad gerekli.')
+          : __cartT('cart.phone_required', 'Telefon gerekli.')
+      );
+      return;
+    }
+    saveCheckoutStorage({ ad: ad, telefon: tel, eposta: eposta });
+    if (isLoggedIn() && typeof window.equstoSetMemberActive === 'function') {
+      window.equstoSetMemberActive({ ad: ad, telefon: tel, eposta: eposta });
+    }
     var btn = document.getElementById('equsto-cart-order');
     if (btn) { btn.disabled = true; btn.textContent = __cartT('cart.order_sending', 'Gönderiliyor…'); }
     var kalemler = arr.map(function (x) {
@@ -2069,6 +2179,7 @@
     window.addEventListener('equsto-cart-changed', onCartChangedRemote);
     if (isCartPage()) {
       bindCartPageActions();
+      bindCheckoutUi();
       renderPanelList();
       prefillCheckoutForm();
     }
@@ -2137,6 +2248,7 @@
     toastCartAdded: toastCartAdded,
     clear: clearAll,
     bindPageActions: bindCartPageActions,
+    prefillCheckout: prefillCheckoutForm,
     syncFromServer: syncFromServer,
     render: renderPanelList,
     _load: load,
