@@ -1807,10 +1807,11 @@ body.eq-home.eq-home-mutbex .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero {
 }
 
 body.eq-home.eq-home-mutbex .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slides {
+  width: 100%;
+  height: auto;
+  min-height: 0;
   max-height: none;
-  min-height: clamp(320px, 58vh, 720px);
-  height: clamp(320px, 58vh, 720px);
-  aspect-ratio: auto;
+  aspect-ratio: 1200 / 800;
 }
 
 body.eq-home.eq-home-mutbex .eq-home-platform-hero {

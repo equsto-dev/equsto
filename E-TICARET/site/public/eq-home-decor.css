@@ -37,10 +37,11 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__stage {
 }
 
 body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slides {
+  width: 100%;
+  height: auto;
+  min-height: 0;
   max-height: none;
-  min-height: clamp(320px, 58vh, 720px);
-  height: clamp(320px, 58vh, 720px);
-  aspect-ratio: auto;
+  aspect-ratio: 1200 / 800;
 }
 
 body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__thumbs {
@@ -65,7 +66,19 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__thumbs {
 }
 
 .eq-mx-hero__slide--pfos .eq-mx-hero__slide-shade {
-  background: linear-gradient(180deg, rgba(0, 20, 50, 0.08) 0%, rgba(0, 20, 50, 0.72) 100%);
+  background: linear-gradient(180deg, transparent 62%, rgba(0, 20, 50, 0.42) 100%);
+}
+
+.eq-mx-hero__slide--pfos .eq-mx-hero__slide-cap {
+  right: auto;
+  width: min(460px, 68%);
+  padding: 12px 16px 14px;
+  background: linear-gradient(
+    105deg,
+    rgba(0, 20, 50, 0.86) 0%,
+    rgba(0, 20, 50, 0.52) 72%,
+    transparent 100%
+  );
 }
 
 .eq-mx-hero__thumb-ph--pfos {
@@ -323,8 +336,9 @@ body.eq-home-decor .eq-decor-bottom .eq-brand-grid {
     padding: 7px 12px;
   }
   body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slides {
-    min-height: clamp(240px, 48vh, 520px);
-    height: clamp(240px, 48vh, 520px);
+    aspect-ratio: 1200 / 800;
+    height: auto;
+    min-height: 0;
   }
 }
 
