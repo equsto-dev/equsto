@@ -1401,7 +1401,8 @@ body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--pfos
   box-shadow: 0 -10px 28px rgba(0, 30, 80, 0.1);
 }
 body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--pfos .hero-title,
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--besos .hero-title {
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--besos .hero-title,
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--yer .hero-title {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
@@ -1409,14 +1410,16 @@ body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--beso
   line-height: 1.3;
 }
 body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--pfos .hero-title-sep,
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--besos .hero-title-sep {
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--besos .hero-title-sep,
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--yer .hero-title-sep {
   margin: 0 0.35em;
   font-weight: 400;
   font-style: normal;
   color: var(--eq-text-muted, #6b7280);
 }
 body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--pfos .hero-title-tagline,
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--besos .hero-title-tagline {
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--besos .hero-title-tagline,
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--yer .hero-title-tagline {
   font-style: italic;
   font-weight: 500;
   font-size: 0.9em;
