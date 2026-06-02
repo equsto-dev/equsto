@@ -1374,12 +1374,15 @@ body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--pfos
   background: var(--eq-surface);
   box-shadow: inset -1px 0 0 var(--eq-border-soft);
 }
+/* === Üst vitrin kartları (PFOS · Yer Sofrası · Bar Design) — kutu sabit, görsel contain === */
 body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-visual--pfos {
   background: #fff;
   overflow: hidden;
   aspect-ratio: var(--eq-home-hero-visual-aspect);
 }
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img--pfos-cover {
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img--pfos-cover,
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img--bar-combo,
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img--yer-bufe {
   position: absolute;
   inset: 0;
   display: block;
@@ -1387,8 +1390,8 @@ body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img--
   height: 100% !important;
   max-width: none !important;
   max-height: none !important;
-  object-fit: cover;
-  object-position: center 38%;
+  object-fit: contain;
+  object-position: center center;
   filter: none;
 }
 body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-visual__shade--pfos {
@@ -1459,8 +1462,8 @@ body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img--
   height: 100%;
   max-width: none;
   max-height: none;
-  object-fit: cover;
-  object-position: center 42%;
+  object-fit: contain;
+  object-position: center center;
   filter: none;
 }
 /* Yer Sofrası: tam çerçeve kaplama (genel .hero-card-img %56 kuralının üstüne) */
