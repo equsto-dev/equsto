@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import LegacyVitrinPage from "@/components/vitrin/LegacyVitrinPage";
-import { HomeHeroAdsMount } from "@/components/home/HomeHeroAdsMount";
 import { SHOP_ASSET_V } from "@/lib/shop/assets";
 import { IndexBodyHtml } from "@/lib/vitrin/bodies/index";
 import {
@@ -39,7 +38,6 @@ export default function HomePage() {
         bodyHtml={IndexBodyHtml}
         scripts={HOME_SCRIPTS}
         headStyles={HOME_EXTRA_STYLES}
-        portal={<HomeHeroAdsMount />}
       />
     </>
   );
