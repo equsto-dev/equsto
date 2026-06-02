@@ -1380,7 +1380,7 @@ body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img--
   height: 100% !important;
   max-width: none !important;
   max-height: none !important;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center center;
   filter: drop-shadow(0 10px 28px rgba(0, 30, 80, 0.18));
 }
