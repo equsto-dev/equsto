@@ -61,7 +61,7 @@ body.eq-home-decor .eq-mx-hero__thumbs {
 .eq-mx-hero__thumb-ph--pfos {
   background:
     linear-gradient(180deg, rgba(0, 20, 50, 0.2) 0%, rgba(0, 20, 50, 0.65) 100%),
-    url("/images/pfos/proje-fabrikasi-bar-plan.png?v=20260602slider-contain") center / contain no-repeat;
+    url("/images/pfos/proje-fabrikasi-bar-eskiz.png?v=20260603bar-eskiz") center / contain no-repeat;
 }
 
 /* İkonsuz kategori şeridi */
@@ -403,7 +403,7 @@ body.eq-home-simple .hero-card-img--pfos-cover {
 }
 
 body.eq-home-simple .eq-home-hero-ads .hero-card-visual--pfos {
-  aspect-ratio: 1024 / 798;
+  aspect-ratio: 1024 / 522;
   background: #fff;
 }
 
