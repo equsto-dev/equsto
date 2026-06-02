@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
 import Script from "next/script";
+import { HomeVitrinPortals } from "@/components/home/HomeVitrinPortals";
 import LegacyVitrinPage from "@/components/vitrin/LegacyVitrinPage";
 import { SHOP_ASSET_V } from "@/lib/shop/assets";
 import { IndexBodyHtml } from "@/lib/vitrin/bodies/index";
@@ -10,11 +10,6 @@ import {
   HOME_EXTRA_STYLES,
   HOME_SCRIPTS,
 } from "@/lib/vitrin/legacy-scripts";
-
-const HomeVitrinPortals = dynamic(
-  () => import("@/components/home/HomeVitrinPortals").then((m) => m.HomeVitrinPortals),
-  { ssr: false },
-);
 
 export const metadata: Metadata = {
   title: "Equsto | Endüstriyel Mutfak & Gastronomi Platformu",
