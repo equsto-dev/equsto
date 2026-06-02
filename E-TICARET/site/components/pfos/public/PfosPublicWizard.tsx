@@ -70,9 +70,9 @@ type Props = {
 const M2_PRESETS = [40, 80, 120, 200, 350];
 
 /** Panel geçiş süreleri (CSS transition ile eşleşmeli) */
-const PFOS_PANEL_FADE_MS = 700;
-const PFOS_RESULT_FADE_MS = 700;
-const PFOS_RAIL_FADE_MS = 700;
+const PFOS_PANEL_FADE_MS = 500;
+const PFOS_RESULT_FADE_MS = 500;
+const PFOS_RAIL_FADE_MS = 500;
 
 function pfosStaggerStyle(index: number): CSSProperties {
   return { ["--pfos-stagger" as string]: index };
