@@ -8,7 +8,7 @@ export const HOME_CRITICAL_CSS = `
 body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads{display:grid;grid-template-columns:repeat(3,1fr);overflow:hidden}
 body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card{position:relative;height:var(--eq-home-hero-card-h);min-height:var(--eq-home-hero-card-h);max-height:var(--eq-home-hero-card-h);overflow:hidden;box-sizing:border-box}
 body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card-visual{position:absolute;inset:0}
-body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card-img--pfos-cover,
+body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card-img--pfos-cover{position:absolute;inset:0;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:contain;object-position:center center}
 body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card-img--bar-combo,
 body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card-img--yer-bufe{position:absolute;inset:0;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:cover}
 @media(max-width:1024px){body.eq-shop.eq-home .right-col>section.hero.eq-home-hero-ads .hero-card{height:var(--eq-home-hero-card-h-1024);min-height:var(--eq-home-hero-card-h-1024);max-height:var(--eq-home-hero-card-h-1024)}}
