@@ -115,6 +115,16 @@ export async function PUT(req: NextRequest) {
         memberEmail,
         items: merged,
       });
+      if (replace && incoming.length === 0) {
+        const guestKey = resolveShopCartKey(syncToken, null);
+        if (guestKey?.startsWith("guest:")) {
+          await db.shopCart.upsert({
+            where: { cartKey: guestKey },
+            create: { cartKey: guestKey, items: shopCartItemsToJson([]) },
+            update: { items: shopCartItemsToJson([]) },
+          });
+        }
+      }
       return json(
         {
           success: true,
