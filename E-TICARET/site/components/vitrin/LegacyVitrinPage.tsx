@@ -60,7 +60,11 @@ export default function LegacyVitrinPage({
       ))}
       {headScripts}
       <VitrinShell bodyClass={bodyClass} extraCss={extraCss} styleVariant={styleVariant}>
-        <div id="eq-legacy-vitrin-root" dangerouslySetInnerHTML={{ __html: bodyHtml }} />
+        <div
+          id="eq-legacy-vitrin-root"
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{ __html: bodyHtml }}
+        />
         {portal}
       </VitrinShell>
       {scripts.map((src) => (
