@@ -148,7 +148,11 @@ body.eq-home-decor .eq-decor-featured .eq-rail {
   gap: 12px;
 }
 
-/* Alt promo: PFOS · Bar · Yer */
+/* Alt promo: PFOS · Bar · Yer — kaldırıldı (üstteki 3'lü hero vitrin yeterli) */
+body.eq-home-decor .eq-decor-promos {
+  display: none !important;
+}
+
 .eq-decor-promos {
   padding: 0 10px 16px;
   background: #fff;
