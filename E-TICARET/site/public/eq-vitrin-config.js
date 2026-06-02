@@ -383,9 +383,8 @@
     }
     var twinCta = document.querySelector('.eq-home-cm-mutbex > .eq-cm-twin-wrap.eq-mx-o-8');
     if (twinCta) {
-      var showTwin = L.showHomeTwinCta !== false;
-      twinCta.hidden = !showTwin;
-      twinCta.style.display = showTwin ? '' : 'none';
+      twinCta.hidden = true;
+      twinCta.style.display = 'none';
     }
     var homeMain = document.querySelector('.eq-home-cm-mutbex > main.main');
     if (homeMain) {
