@@ -30,11 +30,8 @@ def beautify_raster(src: Image.Image) -> Image.Image:
     """El çizimi eskizi vitrin için yumuşatılmış, kontrastlı hale getirir."""
     img = src.convert("RGB")
     w, h = img.size
-    crop = img.crop((int(w * 0.01), int(h * 0.01), int(w * 0.99), int(h * 0.99)))
-    target_w, target_h = 1200, 800
-    contained = ImageOps.contain(crop, (target_w, target_h), method=Image.LANCZOS)
-    framed = Image.new("RGB", (target_w, target_h), (10, 22, 40))
-    framed.paste(contained, ((target_w - contained.width) // 2, (target_h - contained.height) // 2))
+    crop = img.crop((int(w * 0.02), int(h * 0.02), int(w * 0.98), int(h * 0.98)))
+    framed = ImageOps.fit(crop, (1600, 1200), method=Image.LANCZOS, centering=(0.5, 0.5))
     framed = ImageEnhance.Contrast(framed).enhance(1.08)
     framed = ImageEnhance.Brightness(framed).enhance(1.03)
     framed = framed.filter(ImageFilter.UnsharpMask(radius=1.2, percent=90, threshold=3))
