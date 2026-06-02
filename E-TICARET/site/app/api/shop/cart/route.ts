@@ -3,6 +3,7 @@ import { db } from "@/lib/db";
 import {
   getMemberIdByToken,
   getSessionByToken,
+  clearUnifiedShopCart,
   loadUnifiedShopCart,
   mergeGuestShopCartIntoMember,
   persistUnifiedShopCart,
@@ -106,6 +107,20 @@ export async function PUT(req: NextRequest) {
   const incoming = normalizeShopCartItems(body.items ?? []);
   const replace = body.replace === true || body.clear === true;
   try {
+    if (replace && incoming.length === 0) {
+      const saved = await clearUnifiedShopCart({ syncToken, memberEmail, memberId });
+      return json(
+        {
+          success: true,
+          items: saved,
+          cartKey,
+          updatedAt: new Date().toISOString(),
+        },
+        200,
+        syncTokenCookie(syncToken),
+      );
+    }
+
     if (memberId && memberEmail) {
       if (!replace) await mergeGuestShopCartIntoMember(syncToken, memberEmail);
       const existing = await loadUnifiedShopCart({ syncToken, memberEmail, memberId });
@@ -115,16 +130,6 @@ export async function PUT(req: NextRequest) {
         memberEmail,
         items: merged,
       });
-      if (replace && incoming.length === 0) {
-        const guestKey = resolveShopCartKey(syncToken, null);
-        if (guestKey?.startsWith("guest:")) {
-          await db.shopCart.upsert({
-            where: { cartKey: guestKey },
-            create: { cartKey: guestKey, items: shopCartItemsToJson([]) },
-            update: { items: shopCartItemsToJson([]) },
-          });
-        }
-      }
       return json(
         {
           success: true,

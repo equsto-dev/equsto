@@ -341,6 +341,37 @@ export async function persistUnifiedShopCart(opts: {
   return items;
 }
 
+/** Üye, e-posta ShopCart ve misafir anahtarlarını birlikte sıfırlar (sepeti temizle). */
+export async function clearUnifiedShopCart(opts: {
+  syncToken?: string | null;
+  memberEmail?: string | null;
+  memberId?: string | null;
+}): Promise<ShopCartLine[]> {
+  const email = opts.memberEmail ? normalizeEmail(String(opts.memberEmail)) : "";
+  let memberId = opts.memberId ?? null;
+  if (!memberId && email && EMAIL_RE.test(email)) {
+    const member = await db.shopMember.findUnique({
+      where: { email },
+      select: { id: true },
+    });
+    if (member) memberId = member.id;
+  }
+  await persistUnifiedShopCart({
+    memberId,
+    memberEmail: email || opts.memberEmail,
+    items: [],
+  });
+  const guestKey = resolveShopCartKey(opts.syncToken, null);
+  if (guestKey?.startsWith("guest:")) {
+    await db.shopCart.upsert({
+      where: { cartKey: guestKey },
+      create: { cartKey: guestKey, items: shopCartItemsToJson([]) },
+      update: { items: shopCartItemsToJson([]) },
+    });
+  }
+  return [];
+}
+
 export function sessionResponse(payload: MemberSessionPayload) {
   return {
     success: true,

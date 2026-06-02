@@ -138,6 +138,8 @@
   var shopCartPullInFlight = false;
   var shopCartPushTimer = null;
   var cartClearGraceUntil = 0;
+  var cartClearPending = false;
+  var shopCartPullGen = 0;
   var CART_BC_NAME = 'equsto-ecom-cart-v1';
   var cartBc =
     typeof BroadcastChannel !== 'undefined' ? new BroadcastChannel(CART_BC_NAME) : null;
@@ -278,7 +280,9 @@
 
   function shopCartPull(opts) {
     opts = opts || {};
+    if (cartClearPending) return Promise.resolve(false);
     if (shopCartPullInFlight && !opts.force) return Promise.resolve(false);
+    var pullGen = ++shopCartPullGen;
     shopCartPullInFlight = true;
     var p = shopCartPayload();
     var q =
@@ -297,13 +301,12 @@
         });
       })
       .then(function (j) {
+        if (pullGen !== shopCartPullGen) return false;
         if (!j || !j.success) return false;
         shopCartPulled = true;
         if (usesAuthCartSync()) sessionCartPulled = true;
         lastSyncAt = Date.now();
         applyShopPulledCart(Array.isArray(j.items) ? j.items : []);
-        syncBadge();
-        renderPanelList();
         return true;
       })
       .catch(function () {
@@ -338,10 +341,17 @@
         });
       })
       .then(function (j) {
-        return !!(j && j.success);
+        if (!j || !j.success) return { ok: false, items: [] };
+        var items = normalizeCart(Array.isArray(j.items) ? j.items : []);
+        if (opts.clear || (opts.replace && !(arr && arr.length))) {
+          saveLocal(items);
+          syncBadge();
+          if (isCartPage()) renderPanelList();
+        }
+        return { ok: true, items: items };
       })
       .catch(function () {
-        return false;
+        return { ok: false, items: [] };
       });
   }
 
@@ -359,28 +369,19 @@
   }
 
   function applyShopPulledCart(remote) {
+    if (cartClearPending) return;
     var remoteNorm = normalizeCart(remote || []);
     if (Date.now() < cartClearGraceUntil && remoteNorm.length) return;
-    if (!remoteNorm.length) {
-      saveLocal([]);
-      syncBadge();
-      renderPanelList();
-      return;
-    }
-    var local = load();
-    var out = local.length ? mergeCartMaxQty(remoteNorm, local) : remoteNorm;
-    saveLocal(out);
+    saveLocal(remoteNorm);
     syncBadge();
-    renderPanelList();
-    if (
-      out.length &&
-      (cartFingerprint(out) !== cartFingerprint(remoteNorm) || (!remoteNorm.length && out.length))
-    ) {
-      pushShopCartNow(out);
-    }
+    if (isCartPage()) renderPanelList();
   }
 
   function flushShopCartPush() {
+    if (cartClearPending) {
+      pushShopCartNow([], { replace: true, clear: true, keepalive: true });
+      return;
+    }
     var payload = load();
     if (!payload.length) return;
     pushShopCartNow(payload, { keepalive: true });
@@ -604,26 +605,12 @@
 
   /** Sunucu + yerel birleşimi (aynı üründe adet = max). */
   function applyPulledCart(remote) {
+    if (cartClearPending) return;
     var remoteNorm = normalizeCart(remote || []);
     if (Date.now() < cartClearGraceUntil && remoteNorm.length) return;
-    if (!remoteNorm.length) {
-      saveLocal([]);
-      syncBadge();
-      renderPanelList();
-      return;
-    }
-    var local = load();
-    var out = local.length ? mergeCartMaxQty(remoteNorm, local) : remoteNorm;
-    saveLocal(out);
+    saveLocal(remoteNorm);
     syncBadge();
-    renderPanelList();
-    if (!sessionCartPulled) return;
-    if (
-      out.length &&
-      (cartFingerprint(out) !== cartFingerprint(remoteNorm) || (!remoteNorm.length && out.length))
-    ) {
-      pushCartNow(out, { force: true });
-    }
+    if (isCartPage()) renderPanelList();
   }
 
   function load() {
@@ -676,12 +663,12 @@
       shopCartPushTimer = null;
       if (syncPushTimer) clearTimeout(syncPushTimer);
       syncPushTimer = null;
-      return pushShopCartNow([], { replace: true, clear: true }).then(function (ok) {
-        if (ok) {
+      return pushShopCartNow([], { replace: true, clear: true }).then(function (res) {
+        if (res && res.ok) {
           shopCartPulled = true;
           lastSyncAt = Date.now();
         }
-        return ok;
+        return !!(res && res.ok);
       });
     }
     if (usesAuthCartSync()) {
@@ -1130,7 +1117,9 @@
   }
 
   function clearAll() {
-    cartClearGraceUntil = Date.now() + 20000;
+    cartClearPending = true;
+    cartClearGraceUntil = Date.now() + 60000;
+    shopCartPullGen += 1;
     if (shopCartPushTimer) clearTimeout(shopCartPushTimer);
     shopCartPushTimer = null;
     if (syncPushTimer) clearTimeout(syncPushTimer);
@@ -1138,14 +1127,21 @@
     saveLocal([]);
     syncBadge();
     renderPanelList();
-    pushShopCartNow([], { replace: true, clear: true }).then(function (ok) {
-      if (!ok) {
+    return pushShopCartNow([], { replace: true, clear: true }).then(function (res) {
+      cartClearPending = false;
+      if (!res || !res.ok) {
         toast(__cartT('cart.clear_failed', 'Sepet sunucuda temizlenemedi — tekrar deneyin.'));
         shopCartPull({ force: true });
-        return;
+        return false;
       }
+      saveLocal(normalizeCart(res.items || []));
+      syncBadge();
+      renderPanelList();
       shopCartPulled = true;
+      sessionCartPulled = true;
       lastSyncAt = Date.now();
+      cartClearGraceUntil = Date.now() + 8000;
+      return true;
     });
   }
 
