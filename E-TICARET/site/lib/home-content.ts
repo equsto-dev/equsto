@@ -25,7 +25,9 @@ export const heroPillars = [
     pitch: "Adım adım soru-cevap ile ekipman listeniz ve anlık teklif.",
     cta: null,
     visual: "pfos" as const,
-    image: "/images/pfos/proje-fabrikasi-bar-eskiz.png?v=20260603slider-bar",
+    image: "/images/pfos/proje-fabrikasi-mutfak-eskiz.png",
+    imageWidth: 956,
+    imageHeight: 1024,
   },
   {
     id: "yer",
@@ -38,6 +40,8 @@ export const heroPillars = [
     cta: null,
     visual: "yer" as const,
     image: "/images/home/hero-yer-sofrasi-bufe.png",
+    imageWidth: 1200,
+    imageHeight: 800,
   },
   {
     id: "besos",
@@ -50,6 +54,8 @@ export const heroPillars = [
     cta: null,
     visual: "besos" as const,
     image: "/images/home/hero-bar-cocktailstation.png",
+    imageWidth: 1200,
+    imageHeight: 714,
   },
 ];
 

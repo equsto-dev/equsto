@@ -23,6 +23,7 @@ type LegacyVitrinPageProps = {
   extraCss?: string;
   headStyles?: string[];
   headScripts?: ReactNode;
+  portal?: ReactNode;
   styleVariant?: "plp" | "product" | "cart" | "search" | "pfos";
 };
 
@@ -34,6 +35,7 @@ export default function LegacyVitrinPage({
   extraCss,
   headStyles = [],
   headScripts,
+  portal,
   styleVariant = "plp",
 }: LegacyVitrinPageProps) {
   useEffect(() => {
@@ -59,6 +61,7 @@ export default function LegacyVitrinPage({
       {headScripts}
       <VitrinShell bodyClass={bodyClass} extraCss={extraCss} styleVariant={styleVariant}>
         <div id="eq-legacy-vitrin-root" dangerouslySetInnerHTML={{ __html: bodyHtml }} />
+        {portal}
       </VitrinShell>
       {scripts.map((src) => (
         <Script key={src} src={src} strategy="afterInteractive" />
