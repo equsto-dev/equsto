@@ -31,6 +31,12 @@ export type HomeMainSliderSlide =
       thumbSrc: string;
     };
 
+export const homeMainSliderSogutmaPisirmeImage = {
+  path: "/images/home/hero-sogutma-pisirme-combo.jpg",
+  width: 2048,
+  height: 1044,
+} as const;
+
 export const homeMainSliderSlides: HomeMainSliderSlide[] = [
   {
     id: "pfos",
@@ -58,12 +64,13 @@ export const homeMainSliderSlides: HomeMainSliderSlide[] = [
   {
     id: "sogutma",
     href: "/shop/sogutma",
+    slideClass: "eq-mx-hero__slide eq-mx-hero__slide--sogutma",
     title: "Soğutma & pişirme",
-    subtitle: "Departman katalogları · profesyonel fiyatlandırma",
+    subtitle: "Atalay pişirme · Öztiryakiler soğutma · canlı fiyat",
     cta: "Keşfet →",
     thumbLabel: "Soğutma",
     kind: "background",
-    background: "linear-gradient(135deg,#001e50,#2a5a9e)",
-    thumbSrc: "/images/catalog/ozti/p200/ozti-9805-im240x-nhc.jpg",
+    background: homeMainSliderSogutmaPisirmeImage.path,
+    thumbSrc: homeMainSliderSogutmaPisirmeImage.path,
   },
 ];
