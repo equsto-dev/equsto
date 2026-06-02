@@ -64,8 +64,9 @@ if (indexBody.includes("eq-decor-promos")) {
 }
 
 const page = read("app/(vitrin)/page.tsx");
-if (!page.includes("HomeHeroAdsMount")) fail("page.tsx: HomeHeroAdsMount yok");
-if (!page.includes("portal={<HomeHeroAdsMount />}")) fail("page.tsx: hero portal prop yok");
+if (!page.includes("HomeVitrinPortals")) fail("page.tsx: HomeVitrinPortals yok");
+const portals = read("components/home/HomeVitrinPortals.tsx");
+if (!portals.includes("HomeHeroAdsMount")) fail("HomeVitrinPortals.tsx: HomeHeroAdsMount yok");
 
 const critical = read("lib/vitrin/legacy-scripts.ts");
 if (!critical.includes("eq-home-hero-mount>section.hero.eq-home-hero-ads")) {
