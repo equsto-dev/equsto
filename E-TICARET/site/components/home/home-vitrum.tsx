@@ -29,7 +29,7 @@ function HeroPillar({
           <img
             src={pillar.image}
             alt=""
-            className="eq-v-pillar-img"
+            className={`eq-v-pillar-img${pillar.visual === "yer" ? " eq-v-pillar-img--eskiz" : ""}`}
             loading="lazy"
             decoding="async"
           />

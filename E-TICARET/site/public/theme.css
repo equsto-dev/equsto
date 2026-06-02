@@ -35,7 +35,8 @@
   --eq-topnav-dept-sep: rgba(0, 0, 0, 0.2);
   --eq-topnav-dept-border: #e5e5e5;
   --eq-topnav-dept-active-line: #febd69;
-  /* Üçlü vitrin (PFOS / Yer Sofrası / Besos): ana sayfa ≠ kategori — yalnızca bu değişkenleri düzenleyin */
+  /* Üçlü vitrin (PFOS / Yer Sofrası / Besos): görsel alanı 4:3 */
+  --eq-home-hero-visual-aspect: 4 / 3;
   --eq-home-hero-card-h: 380px;
   --eq-home-hero-card-h-1024: 320px;
   --eq-home-hero-card-h-768: 260px;
@@ -111,6 +112,7 @@ html[data-theme="dark"] {
   --eq-topnav-dept-border: #e5e5e5;
   --eq-topnav-dept-active-line: #febd69;
   /* Üçlü vitrin: ana sayfa ≠ kategori (ayrı yükseklik; light ile aynı px) */
+  --eq-home-hero-visual-aspect: 4 / 3;
   --eq-home-hero-card-h: 380px;
   --eq-home-hero-card-h-1024: 320px;
   --eq-home-hero-card-h-768: 260px;
@@ -1274,7 +1276,7 @@ body.eq-shop.eq-dept .eq-cat-shell-root {
 
 /*
  * Üçlü vitrin: yalnız ana sayfa (index.html, body.eq-shop.eq-home).
- * Yükseklik :root --eq-home-hero-card-h* değişkenleri.
+ * Görsel alanı --eq-home-hero-visual-aspect (4:3); metin alanı altta.
  */
 body.eq-shop.eq-home .right-col > section.hero {
   display: grid;
@@ -1286,16 +1288,16 @@ body.eq-shop.eq-home .right-col > section.hero {
 }
 body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card {
   position: relative;
-  height: var(--eq-home-hero-card-h);
-  min-height: var(--eq-home-hero-card-h);
-  max-height: var(--eq-home-hero-card-h);
+  height: auto;
+  min-height: 0;
+  max-height: none;
   box-sizing: border-box;
   flex: 0 0 auto;
   overflow: hidden;
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   padding: 0;
   border-right: 1px solid var(--eq-border);
 }
@@ -1308,10 +1310,14 @@ body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--soon
   filter: saturate(0.88);
 }
 body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-visual {
-  position: absolute;
-  inset: 0;
+  position: relative;
+  inset: auto;
+  width: 100%;
+  aspect-ratio: var(--eq-home-hero-visual-aspect);
+  flex: 0 0 auto;
   z-index: 0;
   pointer-events: none;
+  overflow: hidden;
 }
 body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-body {
   position: relative;
@@ -1437,7 +1443,7 @@ body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-visua
   overflow: hidden;
   background: #2e2e2e;
 }
-body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img:not(.hero-card-img--bar-combo):not(.hero-card-img--yer-bufe):not(.hero-card-img--pfos-cover) {
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img:not(.hero-card-img--bar-combo):not(.hero-card-img--yer-bufe):not(.hero-card-img--yer-eskiz):not(.hero-card-img--pfos-cover) {
   max-height: 56%;
   width: auto;
   max-width: 46%;
@@ -1456,12 +1462,13 @@ body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img--
   object-position: center 42%;
   filter: none;
 }
-/* Yer Sofrası: tam çerçeve kaplama (genel .hero-card-img %56 kuralının üstüne) */
+/* Yer Sofrası: plan eskizi (siyah zemin, beyaz çizgi — Bar Design / PFOS eskiz dili) */
 body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-visual--yer {
   display: block;
   overflow: hidden;
-  background: #e8e4de;
+  background: #060608;
 }
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img--yer-eskiz,
 body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img--yer-bufe {
   position: absolute;
   inset: 0;
@@ -1470,9 +1477,26 @@ body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img--
   height: 100% !important;
   max-width: none !important;
   max-height: none !important;
-  object-fit: cover !important;
+  object-fit: contain !important;
   object-position: center center;
-  filter: none;
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.45));
+}
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-visual--yer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(6, 6, 8, 0.15) 0%,
+    rgba(6, 6, 8, 0.05) 45%,
+    rgba(255, 255, 255, 0.35) 82%,
+    rgba(255, 255, 255, 0.88) 100%
+  );
+}
+body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--yer .hero-card-body {
+  position: relative;
+  z-index: 2;
 }
 body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card:not(.hero-card--soon):hover {
   background: var(--eq-surface-2);
@@ -1481,7 +1505,7 @@ body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card:not(.
   text-decoration: underline;
 }
 @media (max-width: 1024px) {
-  body.eq-shop.eq-home .right-col > section.hero .hero-card {
+  body.eq-shop.eq-home .right-col > section.hero:not(.eq-home-hero-ads) .hero-card {
     height: var(--eq-home-hero-card-h-1024);
     min-height: var(--eq-home-hero-card-h-1024);
     max-height: var(--eq-home-hero-card-h-1024);
@@ -1491,19 +1515,26 @@ body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card:not(.
   body.eq-shop.eq-home .right-col > section.hero {
     grid-template-columns: 1fr;
   }
-  body.eq-shop.eq-home .right-col > section.hero .hero-card {
+  body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card {
+    border-right: none;
+    border-bottom: 1px solid var(--eq-border);
+  }
+  body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card:last-child {
+    border-bottom: none;
+  }
+  body.eq-shop.eq-home .right-col > section.hero:not(.eq-home-hero-ads) .hero-card {
     height: var(--eq-home-hero-card-h-768);
     min-height: var(--eq-home-hero-card-h-768);
     max-height: var(--eq-home-hero-card-h-768);
     border-right: none;
     border-bottom: 1px solid var(--eq-border);
   }
-  body.eq-shop.eq-home .right-col > section.hero .hero-card:last-child {
+  body.eq-shop.eq-home .right-col > section.hero:not(.eq-home-hero-ads) .hero-card:last-child {
     border-bottom: none;
   }
 }
 @media (max-width: 520px) {
-  body.eq-shop.eq-home .right-col > section.hero .hero-card {
+  body.eq-shop.eq-home .right-col > section.hero:not(.eq-home-hero-ads) .hero-card {
     height: var(--eq-home-hero-card-h-520);
     min-height: var(--eq-home-hero-card-h-520);
     max-height: var(--eq-home-hero-card-h-520);
@@ -5208,11 +5239,11 @@ html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .e
     word-break: break-word;
   }
 
-  body.eq-shop.eq-home .right-col > section.hero .hero-card {
-    height: var(--eq-home-hero-card-h-768) !important;
-    min-height: var(--eq-home-hero-card-h-768) !important;
+  body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card {
+    height: auto !important;
+    min-height: 0 !important;
     max-height: none !important;
-    padding: 14px 16px !important;
+    padding: 0 !important;
   }
 }
 

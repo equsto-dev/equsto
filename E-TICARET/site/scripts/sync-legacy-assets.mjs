@@ -81,6 +81,7 @@ const LIVE_FILES = [
   "data/templates/equsto_teklif_v14.xlsx",
   "images/favicon.svg",
   "images/home/hero-yer-sofrasi-bufe.png",
+  "images/home/hero-yer-sofrasi-eskiz.svg",
   "images/home/hero-bar-cocktailstation.png",
   "images/home/hero-pfos-cover.jpg",
   "images/equsto-logo.png",
