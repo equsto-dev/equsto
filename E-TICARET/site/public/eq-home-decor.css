@@ -379,9 +379,14 @@ body.eq-home-simple .hero-card-img--pfos-cover {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center center;
-  filter: drop-shadow(0 10px 28px rgba(0, 30, 80, 0.18));
+  filter: none;
+}
+
+body.eq-home-simple .eq-home-hero-ads .hero-card-visual--pfos {
+  aspect-ratio: 3 / 2;
+  background: #fff;
 }
 
 body.eq-home-simple .hero-card-visual__shade--pfos {

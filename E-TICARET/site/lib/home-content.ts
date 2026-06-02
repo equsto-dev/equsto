@@ -25,7 +25,7 @@ export const heroPillars = [
     pitch: "Adım adım soru-cevap ile ekipman listeniz ve anlık teklif.",
     cta: null,
     visual: "pfos" as const,
-    image: "/images/pfos/proje-fabrikasi-eskiz.jpg?v=20260602eskiz-jpg",
+    image: "/images/pfos/proje-fabrikasi-mutfak-eskiz.jpg?v=20260602mutfak-eskiz",
   },
   {
     id: "yer",

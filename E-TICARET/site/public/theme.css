@@ -1375,8 +1375,9 @@ body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--pfos
   box-shadow: inset -1px 0 0 var(--eq-border-soft);
 }
 body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-visual--pfos {
-  background: #f5f6f8;
+  background: #fff;
   overflow: hidden;
+  aspect-ratio: 3 / 2;
 }
 body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img--pfos-cover {
   position: absolute;
@@ -1386,9 +1387,9 @@ body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-img--
   height: 100% !important;
   max-width: none !important;
   max-height: none !important;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center center;
-  filter: drop-shadow(0 10px 28px rgba(0, 30, 80, 0.18));
+  filter: none;
 }
 body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-visual__shade--pfos {
   position: absolute;
@@ -1397,10 +1398,10 @@ body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card-visua
   pointer-events: none;
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.08) 0%,
-    rgba(0, 0, 0, 0.18) 42%,
-    rgba(255, 255, 255, 0.55) 78%,
-    rgba(255, 255, 255, 0.92) 100%
+    transparent 0%,
+    transparent 58%,
+    rgba(255, 255, 255, 0.35) 82%,
+    rgba(255, 255, 255, 0.78) 100%
   );
 }
 body.eq-shop.eq-home .right-col > section.hero.eq-home-hero-ads .hero-card--pfos .hero-card-body {
