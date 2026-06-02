@@ -42,6 +42,7 @@
     "verify:footer-brand-kilit": "node scripts/verify-footer-brand-kilit.mjs",
     "verify:buzdolap-nav-kilit": "node scripts/verify-buzdolap-nav-kilit.mjs",
     "verify:arama-kilit": "node scripts/verify-arama-kilit.mjs",
+    "verify:besos-chrome-kilit": "node scripts/verify-besos-chrome-kilit.mjs",
     "sitemap:build": "node scripts/build-sitemap.mjs",
     "seo:audit": "node scripts/audit-seo-geo.mjs",
     "seo:sitemap": "node scripts/build-sitemap.mjs && node scripts/audit-seo-geo.mjs",
