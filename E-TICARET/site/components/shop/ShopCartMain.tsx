@@ -1,3 +1,5 @@
+import CartPairing from "@/components/shop/CartPairing";
+
 export default function ShopCartMain() {
   return (
     <>
@@ -27,6 +29,7 @@ export default function ShopCartMain() {
               Giriş yap veya kayıt ol
             </a>
           </aside>
+          <CartPairing />
           <div className="eq-cart-page__actions">
             <button
               type="button"
