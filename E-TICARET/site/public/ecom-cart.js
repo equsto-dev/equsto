@@ -172,11 +172,13 @@
   }
 
   function isLoggedIn() {
-    if (typeof window.equstoIsMemberLoggedIn === 'function' && window.equstoIsMemberLoggedIn()) {
-      return true;
+    if (typeof window.equstoIsMemberLoggedIn === 'function') {
+      return window.equstoIsMemberLoggedIn();
     }
     var o = readMemberFromStorage();
-    return !!(o && o.active === true && o.token);
+    if (!o || o.active !== true) return false;
+    if (o.expiresAt && Number(o.expiresAt) < Date.now()) return false;
+    return true;
   }
 
   function authToken() {
@@ -385,18 +387,6 @@
     var payload = load();
     if (!payload.length) return;
     pushShopCartNow(payload, { keepalive: true });
-  }
-
-  function updateCartLoginHint() {
-    var hint = document.getElementById('eq-cart-login-hint');
-    if (!hint) return;
-    hint.hidden = !!isLoggedIn();
-  }
-
-  function bindCartLoginHint() {
-    updateCartLoginHint();
-    window.addEventListener('equsto-member-changed', updateCartLoginHint);
-    document.addEventListener('equsto-member-session', updateCartLoginHint);
   }
 
   function memberAuthUrl() {
@@ -2079,7 +2069,6 @@
     window.addEventListener('equsto-cart-changed', onCartChangedRemote);
     if (isCartPage()) {
       bindCartPageActions();
-      bindCartLoginHint();
       renderPanelList();
       prefillCheckoutForm();
     }

@@ -19,14 +19,6 @@ export default function ShopCartMain() {
             </p>
           </header>
           <div id="equsto-cart-scroll" className="eq-cart-page__list" aria-live="polite" />
-          <aside className="eq-cart-login-hint" id="eq-cart-login-hint" hidden aria-live="polite">
-            <p className="eq-cart-login-hint__text" data-i18n="cart.login_hint">
-              Aynı hesaba giriş yaptığınızda sepetiniz tüm cihazlarda otomatik eşitlenir.
-            </p>
-            <a href="/login?next=/sepet" className="eq-cart-page__btn eq-cart-page__btn--outline eq-cart-login-hint__cta">
-              Giriş yap veya kayıt ol
-            </a>
-          </aside>
           <div className="eq-cart-page__actions">
             <button
               type="button"
