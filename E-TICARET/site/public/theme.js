@@ -639,10 +639,6 @@
       sv.src = "/eq-shop-vitrin.js";
       sv.defer = true;
       document.head.appendChild(sv);
-      var mx = document.createElement("script");
-      mx.src = "/eq-mutbex-chrome.js";
-      mx.defer = true;
-      document.head.appendChild(mx);
       var cmp = document.createElement("script");
       cmp.src = "/eq-product-compare.js";
       cmp.defer = true;

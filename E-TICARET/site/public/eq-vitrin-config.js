@@ -339,7 +339,7 @@
       var carousel = vitrin.querySelector('.eq-mx-hero');
       var stories = vitrin.querySelector('.eq-mx-story-wrap');
       var spotlight = vitrin.querySelector('.eq-mx-spotlight-wrap');
-      if (ticker) ticker.style.display = L.showMutbexTicker === false ? 'none' : '';
+      if (ticker) ticker.style.display = 'none';
       if (carousel) carousel.style.display = L.showMutbexCarousel === false ? 'none' : '';
       if (stories) stories.style.display = L.showMutbexStories === false ? 'none' : '';
       var popCats = vitrin.querySelector('.eq-mx-pop-cats-wrap');
@@ -402,7 +402,11 @@
 
   function renderTicker(cfg) {
     var track = document.querySelector('.eq-mx-ticker__track');
+    var wrap = document.querySelector('.eq-mx-ticker');
+    if (wrap) wrap.style.display = 'none';
     if (!track) return;
+    track.innerHTML = '';
+    return;
     var items = activeList(cfg.ticker);
     if (!items.length) return;
     var html = '';

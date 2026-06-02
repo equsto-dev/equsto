@@ -1,8 +1,10 @@
 /**
  * Mağaza sayfalarında üst şerit ticker (Mutbex chrome).
+ * Ticker kapatıldı — kayar promosyon şeridi kullanılmıyor.
  */
 (function (global) {
   'use strict';
+  return;
 
   var body = global.document && global.document.body;
   if (!body || !body.classList.contains('eq-shop')) return;

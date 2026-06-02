@@ -1,4 +1,11 @@
 /* Equsto ana sayfa — Mutbex e-ticaret iskeleti, Equsto mimari dili */
+
+/* Kayar promosyon şeridi — site geneli kapalı */
+.eq-mx-chrome-bar,
+.eq-mx-ticker {
+  display: none !important;
+}
+
 .eq-mx-vitrin {
   --mx-navy: var(--eq-topnav-dept-bg, #001e50);
   --mx-gold: var(--eq-accent-gold, #b88a00);
