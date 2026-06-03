@@ -1,4 +1,4 @@
-/** Ana sayfa alt slider — PFOS · Bar · Soğutma (kilit: public/home-main-slider-KILIT.txt) */
+/** Ana sayfa alt slider — PFOS · Bar · Soğutma · IMT300 (kilit: public/home-main-slider-KILIT.txt) */
 
 export const homeMainSliderPfosImage = {
   path: "/images/pfos/proje-fabrikasi-bar-plan-eskiz.png",
@@ -19,7 +19,7 @@ export type HomeMainSliderSlide =
       image: typeof homeMainSliderPfosImage;
     }
   | {
-      id: "besos" | "sogutma";
+      id: "besos" | "sogutma" | "imt300";
       href: string;
       slideClass?: string;
       title: string;
@@ -35,6 +35,12 @@ export const homeMainSliderSogutmaPisirmeImage = {
   path: "/images/home/hero-sogutma-pisirme-combo.jpg",
   width: 2048,
   height: 1044,
+} as const;
+
+export const homeMainSliderImt300Image = {
+  path: "/images/imt300/imt300-1.jpg",
+  width: 800,
+  height: 600,
 } as const;
 
 export const homeMainSliderSlides: HomeMainSliderSlide[] = [
@@ -72,5 +78,17 @@ export const homeMainSliderSlides: HomeMainSliderSlide[] = [
     kind: "background",
     background: homeMainSliderSogutmaPisirmeImage.path,
     thumbSrc: homeMainSliderSogutmaPisirmeImage.path,
+  },
+  {
+    id: "imt300",
+    href: "/besos/imt300",
+    slideClass: "eq-mx-hero__slide eq-mx-hero__slide--imt300",
+    title: "IMT300",
+    subtitle: "Berrak buz makinesi · küp, küre, çubuk · yerinde üretim",
+    cta: "Keşfet →",
+    thumbLabel: "IMT300",
+    kind: "background",
+    background: homeMainSliderImt300Image.path,
+    thumbSrc: homeMainSliderImt300Image.path,
   },
 ];
