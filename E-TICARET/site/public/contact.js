@@ -753,6 +753,7 @@
   }
 
   function mountFabInTabbar() {
+    if (!window.matchMedia("(max-width: 768px)").matches) return false;
     var slot = document.getElementById("eq-bnav-wa-slot");
     if (!slot) return false;
     removeFloatingFab();
@@ -891,7 +892,8 @@
     } catch (_) {}
     var tries = 0;
     var waitTabbar = setInterval(function () {
-      if (mountFabInTabbar() || ++tries > 48) clearInterval(waitTabbar);
+      syncFabPlacement();
+      if (++tries > 48) clearInterval(waitTabbar);
     }, 50);
     window.addEventListener("resize", syncFabPlacement, { passive: true });
     window.addEventListener("load", syncFabPlacement, { once: true });
