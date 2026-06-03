@@ -15,6 +15,7 @@ export function HomeMainSliderMount() {
 
   useEffect(() => {
     if (!mount) return;
+    mount.setAttribute("data-eq-slider-kilit", "1");
     mount.removeAttribute("aria-busy");
     const w = window as Window & {
       eqI18nApply?: (node?: ParentNode | Document) => void;

@@ -1,0 +1,493 @@
+/**
+ * Ana sayfa — Cafemarkt tarzı vitrin (kilitli slider altı).
+ * İçerik: lib/home-cafemarkt-content.ts
+ */
+
+body.eq-home-cafemarkt-on .eq-mx-pop-cats-wrap.eq-legacy-hidden,
+body.eq-home-cafemarkt-on #eq-mx-promo-section.eq-legacy-hidden {
+  display: none !important;
+}
+
+.eq-cmkt {
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.eq-cmkt-inner {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 16px 10px 24px;
+}
+
+/* ── Hero promo grid (2/3 + 1/3) ── */
+.eq-cmkt-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.eq-cmkt-hero-side {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 100%;
+}
+
+.eq-cmkt-hero-side-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  flex: 1;
+}
+
+.eq-cmkt-promo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 148px;
+  padding: 18px 16px 14px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: #1a1d2b;
+  overflow: hidden;
+  border: 1px solid rgba(0, 30, 80, 0.07);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.eq-cmkt-promo:hover {
+  box-shadow: 0 10px 28px rgba(0, 30, 80, 0.12);
+  transform: translateY(-1px);
+}
+
+.eq-cmkt-promo--light {
+  color: #fff;
+}
+
+.eq-cmkt-promo--main {
+  min-height: 320px;
+  padding: 24px 20px;
+}
+
+.eq-cmkt-promo--compact {
+  min-height: 154px;
+}
+
+.eq-cmkt-promo--wide {
+  flex: 1;
+  min-height: 154px;
+}
+
+.eq-cmkt-promo__brand {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.eq-cmkt-promo__title {
+  margin: 8px 0 0;
+  font-size: clamp(15px, 1.6vw, 22px);
+  font-weight: 800;
+  line-height: 1.25;
+  max-width: 58%;
+  z-index: 1;
+}
+
+.eq-cmkt-promo--main .eq-cmkt-promo__title {
+  max-width: 52%;
+  font-size: clamp(18px, 2vw, 26px);
+}
+
+.eq-cmkt-promo--compact .eq-cmkt-promo__title {
+  font-size: 13px;
+  max-width: 100%;
+}
+
+.eq-cmkt-promo__sub {
+  margin: 8px 0 0;
+  font-size: 13px;
+  line-height: 1.4;
+  max-width: 50%;
+  opacity: 0.92;
+  z-index: 1;
+}
+
+.eq-cmkt-promo__cta {
+  margin-top: auto;
+  align-self: flex-start;
+  margin-top: 14px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: #1565c0;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  z-index: 1;
+}
+
+.eq-cmkt-promo--light .eq-cmkt-promo__cta {
+  background: #fff;
+  color: #0d47a1;
+}
+
+.eq-cmkt-promo--compact .eq-cmkt-promo__cta {
+  padding: 6px 12px;
+  font-size: 10px;
+}
+
+.eq-cmkt-promo__img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 48%;
+  max-width: 280px;
+  max-height: 92%;
+  object-fit: contain;
+  object-position: bottom right;
+  pointer-events: none;
+}
+
+.eq-cmkt-promo--main .eq-cmkt-promo__img {
+  width: 52%;
+  max-width: 420px;
+}
+
+.eq-cmkt-promo--compact .eq-cmkt-promo__img {
+  width: 72%;
+  max-width: 120px;
+  opacity: 0.95;
+}
+
+/* ── Popüler kategoriler ── */
+.eq-cmkt-cats-wrap {
+  margin-bottom: 28px;
+}
+
+.eq-cmkt-cats__title {
+  margin: 0 0 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: clamp(18px, 2.2vw, 22px);
+  font-weight: 700;
+  color: #1a1d2b;
+  letter-spacing: -0.02em;
+}
+
+.eq-cmkt-cats {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+}
+
+.eq-cmkt-cats__viewport {
+  flex: 1;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  cursor: grab;
+  container-type: inline-size;
+  touch-action: pan-x pinch-zoom;
+}
+
+.eq-cmkt-cats__viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.eq-cmkt-cats__viewport.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+  user-select: none;
+}
+
+.eq-cmkt-cats__viewport.is-dragging .eq-cmkt-cat {
+  pointer-events: none;
+}
+
+.eq-cmkt-cats__track {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  min-width: 100%;
+}
+
+.eq-cmkt-cats__nav {
+  flex: 0 0 auto;
+  align-self: center;
+  width: 34px;
+  height: 34px;
+  margin: 0 6px;
+  border: 1px solid #e2e8f0;
+  border-radius: 50%;
+  background: #fff;
+  color: #334155;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: background 0.15s;
+}
+
+.eq-cmkt-cats__nav:hover {
+  background: #f8fafc;
+}
+
+.eq-cmkt-cats__dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  min-height: 10px;
+}
+
+.eq-cmkt-cats__dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #c5cdd8;
+  cursor: pointer;
+  transition: width 0.2s ease, border-radius 0.2s ease, background 0.2s ease;
+}
+
+.eq-cmkt-cats__dot.is-active {
+  width: 28px;
+  border-radius: 999px;
+  background: #1a1d2b;
+}
+
+.eq-cmkt-cat {
+  flex: 0 0 calc((100cqi - 12px * (var(--eq-cmkt-cats-cols, 5) - 1)) / var(--eq-cmkt-cats-cols, 5));
+  scroll-snap-align: start;
+  min-width: 0;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+}
+
+.eq-cmkt-cat__img-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  border-radius: 14px;
+  background: #e8f4fc;
+  padding: 12px;
+  margin-bottom: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.eq-cmkt-cat:hover .eq-cmkt-cat__img-wrap {
+  box-shadow: 0 6px 18px rgba(13, 71, 161, 0.12);
+}
+
+.eq-cmkt-cat__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.eq-cmkt-cat__label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #334155;
+  line-height: 1.3;
+}
+
+/* ── Bento grid (Cafemarkt 3 sütun) ── */
+.eq-cmkt-bento {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr 1fr;
+  grid-template-rows: repeat(3, minmax(118px, auto));
+  gap: 12px;
+}
+
+.eq-cmkt-bento__tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 118px;
+  padding: 16px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: #1a1d2b;
+  overflow: hidden;
+  border: 1px solid rgba(0, 30, 80, 0.06);
+  transition: box-shadow 0.2s;
+}
+
+.eq-cmkt-bento__tile:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.eq-cmkt-bento__tile:nth-child(2) {
+  grid-column: 1;
+  grid-row: 2 / span 2;
+  min-height: 250px;
+}
+
+.eq-cmkt-bento__tile:nth-child(3) {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  min-height: 250px;
+}
+
+.eq-cmkt-bento__tile:nth-child(4) {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.eq-cmkt-bento__tile:nth-child(5) {
+  grid-column: 3;
+  grid-row: 2 / span 2;
+  min-height: 250px;
+}
+
+.eq-cmkt-bento__tile:nth-child(6) {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.eq-cmkt-bento__tile:hover {
+  box-shadow: 0 8px 24px rgba(0, 30, 80, 0.1);
+}
+
+.eq-cmkt-bento__tile--light {
+  color: #fff;
+}
+
+.eq-cmkt-bento__tile--sm,
+.eq-cmkt-bento__tile--tall,
+.eq-cmkt-bento__tile--lg {
+  /* grid-area nth-child ile */
+}
+
+.eq-cmkt-bento__copy {
+  position: relative;
+  z-index: 1;
+  max-width: 70%;
+}
+
+.eq-cmkt-bento__title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.eq-cmkt-bento__tile--lg .eq-cmkt-bento__title {
+  font-size: clamp(18px, 2vw, 24px);
+}
+
+.eq-cmkt-bento__sub {
+  margin: 6px 0 0;
+  font-size: 12px;
+  opacity: 0.88;
+}
+
+.eq-cmkt-bento__cta {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: #1565c0;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.eq-cmkt-bento__tile--light .eq-cmkt-bento__cta {
+  background: #fff;
+  color: #0d47a1;
+}
+
+.eq-cmkt-bento__badge {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #0d47a1;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.eq-cmkt-bento__img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 46%;
+  max-height: 88%;
+  object-fit: contain;
+  object-position: bottom right;
+  pointer-events: none;
+}
+
+@media (max-width: 1100px) {
+  .eq-cmkt-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .eq-cmkt-promo--main {
+    min-height: 240px;
+  }
+
+  .eq-cmkt-bento {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .eq-cmkt-bento__tile:nth-child(n) {
+    grid-column: auto;
+    grid-row: auto;
+    margin-left: 0;
+    width: auto;
+    min-height: 140px;
+  }
+}
+
+@media (max-width: 640px) {
+  .eq-cmkt-hero-side-row {
+    grid-template-columns: 1fr;
+  }
+
+  .eq-cmkt-cats__nav {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+
+  .eq-cmkt-bento {
+    grid-template-columns: 1fr;
+  }
+
+  .eq-cmkt-bento__tile:nth-child(n) {
+    grid-column: 1;
+    grid-row: auto;
+    margin-left: 0;
+    width: auto;
+  }
+
+  .eq-cmkt-promo__title,
+  .eq-cmkt-promo--main .eq-cmkt-promo__title {
+    max-width: 100%;
+  }
+
+  .eq-cmkt-promo__img {
+    width: 42%;
+    opacity: 0.85;
+  }
+}

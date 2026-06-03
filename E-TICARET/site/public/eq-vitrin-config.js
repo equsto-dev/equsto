@@ -440,7 +440,15 @@
     inner.innerHTML = html;
   }
 
+  function isHomeMainSliderLocked() {
+    var mount = document.getElementById('eq-home-slider-mount');
+    if (!mount) return false;
+    if (mount.getAttribute('data-eq-slider-kilit') === '1') return true;
+    return !!mount.querySelector('.eq-decor-slider-only');
+  }
+
   function renderHeroFromConfig(cfg) {
+    if (isHomeMainSliderLocked()) return;
     var slidesEl = document.querySelector('.eq-mx-hero__slides');
     var thumbsEl = document.querySelector('.eq-mx-hero__thumbs');
     if (!slidesEl || !thumbsEl) return;
