@@ -11,7 +11,11 @@ function assetUrl(path: string): string {
 
 export function HomeMainSlider() {
   return (
-    <section className="eq-mx-vitrin eq-decor-slider-only" aria-label="Ana slider">
+    <section
+      className="eq-mx-vitrin eq-decor-slider-only"
+      aria-label="Ana slider"
+      data-eq-slider-kilit="1"
+    >
       <div className="eq-mx-hero">
         <div className="eq-mx-hero__stage">
           <div className="eq-mx-hero__slides">

@@ -80,6 +80,24 @@ if (!decor.includes("eq-mx-hero__slide--sogutma")) {
 }
 if (!decor.includes("object-fit: contain")) fail("eq-home-decor.css: contain kuralı yok");
 
+const vitrinCfg = read("public/eq-vitrin-config.js");
+if (!vitrinCfg.includes("isHomeMainSliderLocked")) {
+  fail("eq-vitrin-config.js: slider kilit koruması yok");
+}
+if (!vitrinCfg.includes("data-eq-slider-kilit")) {
+  fail("eq-vitrin-config.js: data-eq-slider-kilit kontrolü yok");
+}
+
+if (mount.includes('data-eq-slider-kilit')) {
+  // ok — mount işaretleniyor
+} else {
+  fail("HomeMainSliderMount.tsx: data-eq-slider-kilit set edilmiyor");
+}
+
+if (!slider.includes('data-eq-slider-kilit="1"')) {
+  fail("HomeMainSlider.tsx: data-eq-slider-kilit yok");
+}
+
 if (err) {
   console.error("[verify-home-main-slider-kilit] Kilit ihlali");
   process.exit(1);

@@ -40,4 +40,8 @@ YASAK (onay olmadan):
   npm run verify:home-main-slider-kilit
   npm run verify:home-vitrin-kilit   (üst + alt birlikte)
 
+── Vitrin config (admin) ───────────────────────────────────────────────────
+  eq-vitrin-config.js renderHeroFromConfig, #eq-home-slider-mount kilitliyken
+  React slider HTML'ini EZMEZ (data-eq-slider-kilit="1" / .eq-decor-slider-only).
+
 ═══════════════════════════════════════════════════════════════════════════

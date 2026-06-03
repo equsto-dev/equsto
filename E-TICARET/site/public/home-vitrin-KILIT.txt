@@ -14,8 +14,16 @@ bölümü vardır. İkisi de HomeVitrinPortals ile mount edilir.
      Kaynak: public/home-main-slider-KILIT.txt
      npm run verify:home-main-slider-kilit
 
+  3) ALT (slider sonrası) — Cafemarkt tarzı vitrin (React, revizyon açık)
+     Mount: #eq-home-cafemarkt-mount
+     Bileşen: components/home/HomeCafemarktBlock.tsx
+     İçerik: lib/home-cafemarkt-content.ts
+     Stil: public/eq-home-cafemarkt.css
+
   Birlikte: npm run verify:home-vitrin-kilit
   Vercel prebuild: her iki doğrulama zorunlu
+
+  Admin vitrin (eq-vitrin-config.js) kilitli alt slider'ı ezmez.
 
 ── Ortak mount ───────────────────────────────────────────────────────────
   components/home/HomeVitrinPortals.tsx
