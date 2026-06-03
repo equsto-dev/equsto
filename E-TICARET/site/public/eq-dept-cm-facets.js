@@ -4,6 +4,37 @@
 (function (global) {
   'use strict';
 
+  function __facetT(k, fb, vars) {
+    var s = fb || k;
+    try {
+      if (typeof global.eqT === 'function') {
+        var v = global.eqT(k, null);
+        if (v != null && v !== k) s = v;
+      }
+    } catch (_) {}
+    if (vars) {
+      Object.keys(vars).forEach(function (kk) {
+        var val = vars[kk];
+        s = String(s).replace(new RegExp('\\{' + kk + '\\}', 'g'), val);
+      });
+    }
+    return s;
+  }
+
+  function tipNavSubKey(tipId) {
+    if (!tipId) return '';
+    return 'nav.sub.' + String(tipId).replace(/-/g, '_');
+  }
+
+  function energyFacetLabel(e) {
+    if (!e || !e.id) return '';
+    return __facetT('plp.energy_' + e.id, e.label);
+  }
+
+  function priceLocale() {
+    return global.eqLang === 'en' ? 'en-US' : 'tr-TR';
+  }
+
   var ENERGY_TYPES = [
     { id: 'elektrik', label: 'Elektrikli', keys: ['elektrikli', 'elektrik', 'electric'] },
     { id: 'dogalgaz', label: 'Doğalgazlı', keys: ['doğalgaz', 'dogalgaz', 'doğal gaz', 'dogal gaz'] },
@@ -195,8 +226,13 @@
   }
 
   /** Tek marka seçiliyken kategori etiketinden marka önekini düşür (ör. «Proso Sütlükler» → «Sütlükler»). */
-  function facetTileDisplayLabel(label, state) {
+  function facetTileDisplayLabel(label, state, tileId) {
     var text = String(label || '').trim();
+    if (tileId && global.eqLang === 'en' && typeof global.eqT === 'function') {
+      var subKey = tipNavSubKey(tileId);
+      var tr = global.eqT(subKey, null);
+      if (tr != null && tr !== subKey) text = tr;
+    }
     var brands = state && state.brands ? state.brands : [];
     if (brands.length !== 1 || !text) return text;
     var b = facetBrandKey(brands[0]);
@@ -383,14 +419,18 @@
     var html = '';
 
     html += '<div class="eq-cm-selected" id="eq-dept-cm-selected" hidden>';
-    html += '<div class="eq-cm-selected__hd">Seçilen Filtreler</div>';
+    html += '<div class="eq-cm-selected__hd">' + esc(__facetT('plp.facet_selected', 'Seçilen Filtreler')) + '</div>';
     html += '<div class="eq-cm-selected__chips" id="eq-dept-cm-chips"></div>';
     html +=
-      '<button type="button" class="eq-cm-selected__clear" id="eq-dept-cm-clear-all">HEPSİNİ SİL</button></div>';
+      '<button type="button" class="eq-cm-selected__clear" id="eq-dept-cm-clear-all">' +
+      esc(__facetT('plp.facet_clear_all', 'HEPSİNİ SİL')) +
+      '</button></div>';
 
     if (tileItems.length) {
       html +=
-        '<details class="eq-cm-facet" open><summary class="eq-cm-facet__hd">Kategoriler</summary><div class="eq-cm-facet__body"><ul class="eq-cm-facet__list">';
+        '<details class="eq-cm-facet" open><summary class="eq-cm-facet__hd">' +
+        esc(__facetT('plp.facet_categories', 'Kategoriler')) +
+        '</summary><div class="eq-cm-facet__body"><ul class="eq-cm-facet__list">';
       tileItems.forEach(function (row) {
         var tid = row.tile.id;
         var checked = activeTiles.indexOf(tid) >= 0 ? ' checked' : '';
@@ -401,7 +441,7 @@
           '"' +
           checked +
           '><span>' +
-          esc(facetTileDisplayLabel(row.tile.label, state)) +
+          esc(facetTileDisplayLabel(row.tile.label, state, row.tile.id)) +
           '</span><span class="eq-cm-facet__count">(' +
           row.count +
           ')</span></label></li>';
@@ -414,7 +454,9 @@
     });
     if (showEnergy && energyRows.length) {
       html +=
-        '<details class="eq-cm-facet" open><summary class="eq-cm-facet__hd">Enerji / Yakıt</summary><div class="eq-cm-facet__body"><ul class="eq-cm-facet__list">';
+        '<details class="eq-cm-facet" open><summary class="eq-cm-facet__hd">' +
+        esc(__facetT('plp.facet_energy', 'Enerji / Yakıt')) +
+        '</summary><div class="eq-cm-facet__body"><ul class="eq-cm-facet__list">';
       energyRows.forEach(function (e) {
         var checked = (state.energy || []).indexOf(e.id) >= 0 ? ' checked' : '';
         html +=
@@ -424,7 +466,7 @@
           '"' +
           checked +
           '><span>' +
-          esc(e.label) +
+          esc(energyFacetLabel(e)) +
           '</span><span class="eq-cm-facet__count">(' +
           energyCounts[e.id] +
           ')</span></label></li>';
@@ -433,9 +475,13 @@
     }
 
     html +=
-      '<details class="eq-cm-facet" open><summary class="eq-cm-facet__hd">Marka</summary>' +
+      '<details class="eq-cm-facet" open><summary class="eq-cm-facet__hd">' +
+      esc(__facetT('plp.facet_brand', 'Marka')) +
+      '</summary>' +
       '<div class="eq-cm-facet__body">' +
-      '<input type="search" class="eq-cm-facet__search" id="eq-dept-cm-brand-q" placeholder="Marka ara" autocomplete="off">' +
+      '<input type="search" class="eq-cm-facet__search" id="eq-dept-cm-brand-q" placeholder="' +
+      esc(__facetT('plp.facet_brand_ph', 'Marka ara')) +
+      '" autocomplete="off">' +
       '<ul class="eq-cm-facet__list" id="eq-dept-cm-brand-list">';
     brands.slice(0, 80).forEach(function (b) {
       var label = facetBrandKey(b);
@@ -463,9 +509,13 @@
 
     if (models.length) {
       html +=
-        '<details class="eq-cm-facet" open><summary class="eq-cm-facet__hd">Model</summary>' +
+        '<details class="eq-cm-facet" open><summary class="eq-cm-facet__hd">' +
+        esc(__facetT('plp.facet_model', 'Model')) +
+        '</summary>' +
         '<div class="eq-cm-facet__body">' +
-        '<input type="search" class="eq-cm-facet__search" id="eq-dept-cm-model-q" placeholder="Model ara" autocomplete="off">' +
+        '<input type="search" class="eq-cm-facet__search" id="eq-dept-cm-model-q" placeholder="' +
+        esc(__facetT('plp.facet_model_ph', 'Model ara')) +
+        '" autocomplete="off">' +
         '<ul class="eq-cm-facet__list" id="eq-dept-cm-model-list">';
       models.forEach(function (m) {
         var checked = (state.models || []).indexOf(m) >= 0 ? ' checked' : '';
@@ -487,7 +537,9 @@
     }
 
     html +=
-      '<details class="eq-cm-facet" open><summary class="eq-cm-facet__hd">Fiyat</summary>' +
+      '<details class="eq-cm-facet" open><summary class="eq-cm-facet__hd">' +
+      esc(__facetT('plp.facet_price', 'Fiyat')) +
+      '</summary>' +
       '<div class="eq-cm-facet__body">' +
       '<div class="eq-cm-facet__price-row">' +
       '<input type="number" id="eq-dept-cm-price-min" min="0" step="1" placeholder="Min" value="' +
@@ -496,13 +548,15 @@
       '<input type="number" id="eq-dept-cm-price-max" min="0" step="1" placeholder="Max" value="' +
       (state.priceMax !== '' && state.priceMax != null ? esc(String(state.priceMax)) : '') +
       '"></div>' +
-      '<button type="button" class="eq-cm-facet__apply" id="eq-dept-cm-price-apply">Seçimi Filtrele</button>';
+      '<button type="button" class="eq-cm-facet__apply" id="eq-dept-cm-price-apply">' +
+      esc(__facetT('plp.facet_apply', 'Seçimi Filtrele')) +
+      '</button>';
     if (priceMaxAll > 0) {
       html +=
         '<p class="eq-cm-facet__range-hint">' +
-        esc(Math.floor(priceMinAll).toLocaleString('tr-TR')) +
+        esc(Math.floor(priceMinAll).toLocaleString(priceLocale())) +
         ' – ' +
-        esc(Math.ceil(priceMaxAll).toLocaleString('tr-TR')) +
+        esc(Math.ceil(priceMaxAll).toLocaleString(priceLocale())) +
         ' TL</p>';
     }
     html += '</div></details>';
@@ -594,7 +648,7 @@
       var label = tid;
       for (var i = 0; i < tiles.length; i++) {
         if (tiles[i].id === tid) {
-          label = facetTileDisplayLabel(tiles[i].label, state);
+          label = facetTileDisplayLabel(tiles[i].label, state, tid);
           break;
         }
       }
@@ -610,15 +664,23 @@
     (state.energy || []).forEach(function (eid) {
       var lbl = eid;
       ENERGY_TYPES.forEach(function (e) {
-        if (e.id === eid) lbl = e.label;
+        if (e.id === eid) lbl = energyFacetLabel(e);
       });
       chips.push({ type: 'energy', value: eid, text: lbl });
     });
     if (state.priceMin !== '' && state.priceMin != null) {
-      chips.push({ type: 'priceMin', value: state.priceMin, text: 'Min ' + state.priceMin + ' TL' });
+      chips.push({
+        type: 'priceMin',
+        value: state.priceMin,
+        text: __facetT('plp.chip_price_min', 'Min {n} TL', { n: state.priceMin }),
+      });
     }
     if (state.priceMax !== '' && state.priceMax != null) {
-      chips.push({ type: 'priceMax', value: state.priceMax, text: 'Max ' + state.priceMax + ' TL' });
+      chips.push({
+        type: 'priceMax',
+        value: state.priceMax,
+        text: __facetT('plp.chip_price_max', 'Max {n} TL', { n: state.priceMax }),
+      });
     }
 
     var wrap = container.closest('.eq-cm-selected');
