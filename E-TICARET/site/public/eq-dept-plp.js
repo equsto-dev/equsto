@@ -683,7 +683,7 @@
       '<a class="eq-dept-plp-card__name" href="' +
       esc(href) +
       '">' +
-      esc(u.n) +
+      esc(displayProductName(u)) +
       '</a>' +
       (function () {
         var dim = formatOlculerLine(u.raw);
