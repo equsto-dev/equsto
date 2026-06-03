@@ -233,12 +233,16 @@
     return list;
   }
 
-  /** PLP / EN — katalog slug aynı; görünen ürün adı kısa sözlük. */
+  /** PLP / EN — önce products-en-by-id; yoksa kısa sözlük. */
   function eqProductNameEn(name, raw) {
     if (window.eqLang !== 'en') return name;
     var t = String(name == null ? '' : name).trim();
     if (!t) return t;
-    if (raw && raw.name_en) return String(raw.name_en).trim();
+    if (raw) {
+      var pe = productEnEntry(raw);
+      if (pe && pe.n) return String(pe.n).trim();
+      if (raw.name_en) return String(raw.name_en).trim();
+    }
     var lc = t.toLowerCase();
     var reps = [
       [/vitrifrigo\s*süt\s*soğutucu|vitrifrigo\s*sut\s*sogutucu/gi, 'Vitrifrigo milk cooler'],
@@ -262,6 +266,19 @@
       [/dolap/gi, 'cabinet'],
       [/dolaplar/gi, 'cabinets'],
       [/te[sş]hir/gi, 'display'],
+      [/so[gğ]uk\s*servis\s*bankosu/gi, 'cold service counter'],
+      [/tek\s*cam\s*kapil[iİ]/gi, 'single glass door'],
+      [/tek\s*inox\s*kapi/gi, 'single stainless door'],
+      [/cift\s*inox\s*kapi|çift\s*inox\s*kapi/gi, 'twin stainless door'],
+      [/(\d+)\s*inox\s*kapi/gi, '$1 stainless door'],
+      [/dik\s*tip/gi, 'upright'],
+      [/buz\s*mak[iİ]nes[iİ]/gi, 'ice machine'],
+      [/kg\s*\/\s*g[uü]n/gi, 'kg/day'],
+      [/hazne/gi, 'bin'],
+      [/hazirlik\s*dolab[ıi]|hazırlık\s*dolab[ıi]/gi, 'prep cabinet'],
+      [/so[gğ]uk\s*oda/gi, 'cold room'],
+      [/servis\s*bankosu|servİs\s*bankosu/gi, 'service counter'],
+      [/k\s*tip/gi, 'Type K'],
       [/buzdolab[ıi]/gi, 'refrigerator'],
       [/derin\s*dondurucu/gi, 'freezer'],
       [/frit[oö]z/gi, 'fryer'],
@@ -306,6 +323,7 @@
   window.eqCategorySlugLabel = eqCategorySlugLabel;
   window.eqPolishCatalogList = polishCatalogList;
   window.eqPolishShopList = polishShopList;
+  window.eqLoadProductEnOverlay = loadProductEnOverlay;
 
   function hookLoader(obj, method) {
     if (!obj || typeof obj[method] !== 'function' || obj['__eqTermHook_' + method]) return;

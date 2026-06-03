@@ -1114,20 +1114,26 @@
   }
 
   function whenI18nReady(fn) {
+    function afterDict() {
+      if (window.eqLang === 'en' && typeof window.eqLoadProductEnOverlay === 'function') {
+        return window.eqLoadProductEnOverlay().then(fn);
+      }
+      return fn();
+    }
     if (window.eqI18nReady && typeof window.eqI18nReady.then === 'function') {
-      return window.eqI18nReady.then(fn);
+      return window.eqI18nReady.then(afterDict);
     }
     try {
       if (typeof window.eqT === 'function') {
         var probe = window.eqT('plp.add_to_cart', null);
-        if (probe && probe !== 'plp.add_to_cart') return Promise.resolve(fn());
+        if (probe && probe !== 'plp.add_to_cart') return Promise.resolve(afterDict());
       }
     } catch (_) {}
     return new Promise(function (resolve) {
       window.addEventListener(
         'equsto:i18n-ready',
         function () {
-          resolve(fn());
+          resolve(afterDict());
         },
         { once: true }
       );
@@ -1155,6 +1161,12 @@
 
   document.addEventListener('equsto:i18n-ready', function () {
     applyPageMeta();
+    if (window.eqLang === 'en' && typeof window.eqLoadProductEnOverlay === 'function') {
+      window.eqLoadProductEnOverlay().then(function () {
+        if (state.ready) render();
+      });
+      return;
+    }
     if (state.ready) render();
   });
 })();
