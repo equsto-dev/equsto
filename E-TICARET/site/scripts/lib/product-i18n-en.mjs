@@ -59,11 +59,64 @@ export const NAME_PHRASES = [
   ["HIZ KONTROLLÜ", "speed-controlled"],
   ["YEDEK ACMA", "spare sheeter"],
   ["YEDEK AÇMA", "spare sheeter"],
+  ["NUOVA SIMONELLI KAHVE MAKİNELERİ", "Nuova Simonelli coffee machines"],
+  ["NUOVA SIMONELLI KAHVE MAKINESI", "Nuova Simonelli coffee machines"],
+  ["KAHVE MAKİNELERİ", "coffee machines"],
+  ["KAHVE MAKINESI", "coffee machines"],
+  ["KAHVE MAKİNASI", "espresso machine"],
+  ["KAHVE MAKINESI", "espresso machine"],
+  ["ESPRESSO MAKİNESİ", "espresso machine"],
+  ["ESPRESSO MAKINESI", "espresso machine"],
+  ["FILTRE KAHVE MAKINASI", "filter coffee brewer"],
+  ["FILTRE KAHVE MAKİNASI", "filter coffee brewer"],
+  ["ÇAY OCAKLARI VE KAHVE MAKİNELERİ", "tea brewers and coffee machines"],
+  ["WMF KAHVE MAKİNALARI", "WMF coffee machines"],
+  ["3 GRUPLU KAHVE", "3-group espresso"],
+  ["2 GRUPLU KAHVE", "2-group espresso"],
+  ["1 GRUPLU KAHVE", "1-group espresso"],
+  ["3 GRUPLU", "3-group"],
+  ["2 GRUPLU", "2-group"],
+  ["1 GRUPLU", "1-group"],
+  ["ÜÇ GRUP TAM OTOMATİK", "3-group fully automatic"],
+  ["ÜÇ GRUP TAM OTOMATIK", "3-group fully automatic"],
+  ["İKİ GRUP TAM OTOMATİK", "2-group fully automatic"],
+  ["BİR GRUP TAM OTOMATİK", "1-group fully automatic"],
+  ["TAM OTOMATİK", "fully automatic"],
+  ["TAM OTOMATIK", "fully automatic"],
+  ["DOZAJ AYARLI", "dose-adjustable"],
+  ["APPIA LIFE MODEL", "Appia Life"],
+  ["APPIA LIFE", "Appia Life"],
+  ["NUOVA SIMONELLI", "Nuova Simonelli"],
+  ["NUOSI APPIA", "Nuova Simonelli Appia"],
+  ["NUOSI", "Nuova Simonelli"],
+  ["yüksek performansı", "high performance"],
+  ["yüksek performanı", "high performance"],
+  ["fincanda yüksek kaliteyi garantiler", "guarantees high quality in the cup"],
+  ["fincanda yüksek kaliteyi garantiler.", "guarantees high quality in the cup."],
+  ["ﬁncanda yüksek kaliteyi garantiler", "guarantees high quality in the cup"],
+  ["ﬁncanda yüksek kaliteyi garantiler.", "guarantees high quality in the cup."],
+  ["ŞEBEKE BAĞLANTI KİTİ", "mains water connection kit"],
+  ["SEBEKE BAGLANTI KITI", "mains water connection kit"],
+  ["SICAK SU", "hot water"],
+  ["SOĞUTUCU", "cooler"],
+  ["SOGUTUCU", "cooler"],
+  ["SÜT KÖPÜRTME", "milk frothing"],
+  ["SUT KOPURTME", "milk frothing"],
+  ["BARDAK ISITICI", "cup warmer"],
+  ["BARDAK ISITICI", "cup warmer"],
+  ["BULAŞIK YIKAMA", "dishwashing"],
+  ["BULASIK YIKAMA", "dishwashing"],
+  ["ÇAY MAKİNESİ", "tea brewer"],
+  ["CAY MAKINASI", "tea brewer"],
+  ["ENDÜSTRİYEL TİP", "commercial type"],
+  ["ENDUSTRIYEL TIP", "commercial type"],
 ];
 
 export const NAME_WORDS = [
   ["MAKİNASI", "machine"],
+  ["MAKİNELERİ", "machines"],
   ["MAKİNESİ", "machine"],
+  ["MAKINELERI", "machines"],
   ["MAKINASI", "machine"],
   ["MAKINESI", "machine"],
   ["ELEKTRİKLİ", "electric"],
@@ -130,6 +183,70 @@ export const NAME_WORDS = [
   ["BUZ", "ice"],
   ["ISKONTO", "discount"],
   ["İSKONTO", "discount"],
+  ["KAHVE", "coffee"],
+  ["GRUPLU", "group"],
+  ["GRUP", "group"],
+  ["DOZAJ", "dose"],
+  ["AYARLI", "adjustable"],
+  ["OTOMATİK", "automatic"],
+  ["OTOMATIK", "automatic"],
+  ["ÜÇ", "three"],
+  ["UC", "three"],
+  ["İKİ", "two"],
+  ["IKI", "two"],
+  ["BİR", "one"],
+  ["BIR", "one"],
+  ["GERİLİM", "voltage"],
+  ["GERILIM", "voltage"],
+  ["BARDAK", "cup"],
+  ["ÇIKOLATA", "chocolate"],
+  ["CIKOLATA", "chocolate"],
+  ["GRINDER", "grinder"],
+  ["SICAK", "hot"],
+  ["SOĞUK", "cold"],
+  ["SOGUK", "cold"],
+  ["ŞEBEKE", "mains"],
+  ["SEBEKE", "mains"],
+  ["BAĞLANTI", "connection"],
+  ["BAGLANTI", "connection"],
+  ["KİTİ", "kit"],
+  ["KITI", "kit"],
+  ["KÖPÜRTME", "frothing"],
+  ["KOPURTME", "frothing"],
+  ["SÜT", "milk"],
+  ["SUT", "milk"],
+  ["ÇAY", "tea"],
+  ["CAY", "tea"],
+  ["MODEL", "model"],
+  ["PERFORMANS", "performance"],
+  ["PERFORMANI", "performance"],
+  ["FİNCAN", "cup"],
+  ["FINCAN", "cup"],
+  ["FİNCANDA", "in the cup"],
+  ["FINCANDA", "in the cup"],
+  ["KALİTE", "quality"],
+  ["KALITE", "quality"],
+  ["GARANTİ", "guarantee"],
+  ["GARANTI", "guarantee"],
+  ["GARANTİLER", "guarantees"],
+  ["GARANTILER", "guarantees"],
+  ["YÜKSEK", "high"],
+  ["YUKSEK", "high"],
+  ["LİSTE", "list"],
+  ["LISTE", "list"],
+  ["BAYİ", "dealer"],
+  ["BAYI", "dealer"],
+  ["ALIŞ", "purchase"],
+  ["ALIS", "purchase"],
+  ["SATIŞ", "sale"],
+  ["SATIS", "sale"],
+  ["KAR", "margin"],
+  ["KALAN", "remaining"],
+  ["ORAN", "rate"],
+  ["ÖDEME", "payment"],
+  ["ODEME", "payment"],
+  ["ÇARPAN", "multiplier"],
+  ["CARPAN", "multiplier"],
 ];
 
 export const SPEC_LABELS = [
@@ -139,7 +256,13 @@ export const SPEC_LABELS = [
   ["Ürün Kodu", "Product code"],
   ["Liste fiyatı (EUR)", "List price (EUR)"],
   ["Bayi iskonto", "Dealer discount"],
+  ["Bayi net alış (EUR)", "Dealer net (EUR)"],
+  ["Bayi net alış", "Dealer net purchase"],
   ["Bayi discount", "Dealer discount"],
+  ["kalan oran", "remaining factor"],
+  ["Equsto fiyatı", "Equsto price"],
+  ["+%8 kar", "+8% margin"],
+  ["bayi net", "dealer net"],
   ["ödeme çarpanı", "payment multiplier"],
   ["Equsto satış (EUR)", "Equsto price (EUR)"],
   ["Equsto satış (TL, KDV dahil)", "Equsto price (TRY, VAT incl.)"],
@@ -155,6 +278,10 @@ export const SPEC_LABELS = [
   ["Katalog Sayfası", "Catalogue page"],
   ["Barkod", "Barcode"],
   ["Güç", "Power"],
+  ["Gerilim:", "Voltage:"],
+  ["Gerilim", "Voltage"],
+  ["Ağırlık:", "Weight:"],
+  ["Ağırlık", "Weight"],
   ["Genişlik", "Width"],
   ["Derinlik", "Depth"],
   ["Yükseklik", "Height"],
@@ -195,7 +322,28 @@ export const DESC_PHRASES = [
   ["Ara tezgahlarda kullanılan paslanmaz çelik yüzey hijyenik ve ağır şartlarda çalışma", "Stainless steel surface — hygienic and built for heavy-duty use"],
   ["paslanmaz çelik yüzey hijyenik", "hygienic stainless steel surface"],
   ["ağır şartlarda çalışma", "heavy-duty operation"],
+  ["APPIA LIFE MODEL KAHVE MAKİNESİ", "Appia Life espresso machine"],
+  ["APPIA LIFE MODEL KAHVE MAKINESI", "Appia Life espresso machine"],
+  ["yüksek performanı and", "high performance and"],
+  ["yüksek performansı and", "high performance and"],
 ];
+
+/** @type {[string, string][]} */
+const NAME_WORDS_SORTED = [...NAME_WORDS].sort((a, b) => b[0].length - a[0].length);
+
+/**
+ * Phrase + word replacements (longest phrases first via NAME_PHRASES order).
+ * @param {string} s
+ */
+export function applyWordReplacements(s) {
+  let t = applyPhrasePairs(String(s == null ? "" : s), NAME_PHRASES);
+  for (const [from, to] of NAME_WORDS_SORTED) {
+    if (from && t.indexOf(from) !== -1) t = t.split(from).join(to);
+  }
+  t = t.replace(/\bve\b/gi, "and");
+  t = t.replace(/\s+/g, " ").trim();
+  return t;
+}
 
 /**
  * @param {string} s
@@ -216,10 +364,7 @@ export function applyPhrasePairs(s, pairs) {
 export function translateProductName(name) {
   let t = String(name == null ? "" : name).trim();
   if (!t) return t;
-  t = applyPhrasePairs(t, NAME_PHRASES);
-  for (const [from, to] of NAME_WORDS) {
-    if (t.indexOf(from) !== -1) t = t.split(from).join(to);
-  }
+  t = applyWordReplacements(t);
   t = t.replace(/\b(\d+)\s*CM\b/gi, "$1 cm");
   t = t.replace(/\b(\d+)\s*MM\b/gi, "$1 mm");
   t = t.replace(/\b(\d+)\s*KG\b/gi, "$1 kg");
@@ -242,15 +387,18 @@ export function translateProductSpecs(specs, extraTerms) {
       if (from && t.indexOf(from) !== -1) t = t.split(from).join(to);
     }
   }
-  t = t.replace(/\s+ve\s+/gi, " and ");
   const lines = t.split("\n");
   const out = [];
   for (let i = 0; i < lines.length; i++) {
     let line = lines[i];
-    if (i === 0 && line.trim()) {
-      line = translateProductName(line);
-    } else if (/^Description:/i.test(line.trim())) {
-      line = "Description: " + translateProductDescription(line.replace(/^Description:\s*/i, ""));
+    if (line.trim()) {
+      if (i === 0) line = translateProductName(line);
+      else if (/^Description:/i.test(line.trim())) {
+        line = "Description: " + translateProductDescription(line.replace(/^Description:\s*/i, ""));
+      } else {
+        line = applyPhrasePairs(line, DESC_PHRASES);
+        line = applyWordReplacements(line);
+      }
     }
     out.push(line);
   }
@@ -263,12 +411,12 @@ export function translateProductSpecs(specs, extraTerms) {
 export function translateProductDescription(text) {
   let t = String(text == null ? "" : text).trim();
   if (!t) return t;
-  if (t.length < 120 && !/\n/.test(t) && /^[A-Z0-9\s*.,\-/()]+$/i.test(t)) {
+  if (t.length < 160 && !/\n/.test(t) && /^[A-Z0-9ÇĞİÖŞÜçğıöşü\s*.,\-/()]+$/i.test(t)) {
     return translateProductName(t);
   }
   t = applyPhrasePairs(t, DESC_PHRASES);
   t = applyPhrasePairs(t, SPEC_LABELS);
-  t = translateProductSpecs(t);
+  t = applyWordReplacements(t);
   return t.replace(/\s+/g, " ").trim();
 }
 

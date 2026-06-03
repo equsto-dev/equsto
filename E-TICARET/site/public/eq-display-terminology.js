@@ -278,7 +278,20 @@
       [/hamur\s*yogurma|hamur\s*yo[gğ]urma/gi, 'dough mixer'],
       [/merdane\s*hiz\s*kontrollu/gi, 'speed-controlled roller'],
       [/merdane/gi, 'roller'],
-      [/hiz\s*kontrollu/gi, 'speed-controlled']
+      [/hiz\s*kontrollu/gi, 'speed-controlled'],
+      [/nuova\s*simonelli|nuosi\s*appia/gi, 'Nuova Simonelli'],
+      [/kahve\s*makin/gi, 'espresso machine'],
+      [/kahve\s*mak[iİ]neler[iİ]/gi, 'coffee machines'],
+      [/(\d+)\s*gruplu/gi, '$1-group'],
+      [/dozaj\s*ayarli/gi, 'dose-adjustable'],
+      [/tam\s*otomatik/gi, 'fully automatic'],
+      [/üç\s*grup|uc\s*grup/gi, '3-group'],
+      [/iki\s*grup/gi, '2-group'],
+      [/bir\s*grup/gi, '1-group'],
+      [/yüksek\s*performan/i, 'high performance'],
+      [/fincanda\s*yüksek\s*kaliteyi\s*garantiler/gi, 'guarantees high quality in the cup'],
+      [/gerilim/gi, 'voltage'],
+      [/şebeke\s*ba[gğ]lanti\s*kit/i, 'mains water connection kit']
     ];
     for (var i = 0; i < reps.length; i++) {
       t = t.replace(reps[i][0], reps[i][1]);
