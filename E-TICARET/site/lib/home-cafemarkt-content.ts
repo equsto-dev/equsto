@@ -100,7 +100,6 @@ const cafemarktPopCats: CafemarktCategory[] = [
   {
     id: "outlet",
     label: "Outlet Ürünler",
-    href: "/shop/sogutma",
     ...shopCat("sogutma", "tezgah-tipi-buzdolabi"),
     image: "/images/home/pop-cat-outlet.svg",
   },
