@@ -10,7 +10,21 @@ export function HomeHeroAdsMount() {
   const [mount, setMount] = useState<HTMLElement | null>(null);
 
   useEffect(() => {
-    setMount(document.getElementById("eq-home-hero-mount"));
+    const mountEl = document.getElementById("eq-home-hero-mount");
+    const banner = document.querySelector(
+      ".right-col > .hero-banner.eq-world-first-banner",
+    );
+    if (banner && mountEl && !mountEl.parentElement?.classList.contains("eq-home-platform-hero")) {
+      const wrap = document.createElement("div");
+      wrap.className = "eq-home-platform-hero";
+      const parent = banner.parentElement;
+      if (parent) {
+        parent.insertBefore(wrap, banner);
+        wrap.appendChild(banner);
+        wrap.appendChild(mountEl);
+      }
+    }
+    setMount(mountEl);
   }, []);
 
   useEffect(() => {
