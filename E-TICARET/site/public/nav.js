@@ -97,7 +97,7 @@
         { label: "Buzdolapları", labelKey: "nav.sub.buzdolaplari", search: "buzdolab|buzdolap" },
         { label: "Buz Makineleri", labelKey: "nav.sub.buz_makineleri" },
         { label: "Derin Dondurucular", labelKey: "nav.sub.derin_dondurucular" },
-        { label: "Soğuk Odalar", labelKey: "nav.sub.soguk_odalar" },
+        { label: "Soğuk Odalar", labelKey: "nav.sub.soguk_odalar", tip: "soguk-oda" },
         { label: "Şarap Dolapları", labelKey: "nav.sub.sarap_dolaplari" },
         { label: "Market Reyonları", labelKey: "nav.sub.market_reyonlari", href: "market-reyonlari.html" },
       ],

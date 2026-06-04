@@ -560,6 +560,29 @@
     return path;
   };
 
+  /** Öztiryakiler marka vitrini — buzdolabı/buz makinesi aksesuarları (yanlış sınıflama) */
+  window.eqOztiBrandHubExcludeRow = function (row) {
+    if (!row) return false;
+    var name = String(row.name || row.n || "");
+    var kod = String(row.sku || row.urun_kodu || row.model || "")
+      .replace(/\s+/g, "")
+      .toUpperCase();
+    if (/^8959\.BK/.test(kod)) return true;
+    if (/servis\s*raf/i.test(name) && /^7897\.\d+30\./.test(kod)) return true;
+    if (window.EqDeptTips) {
+      if (typeof window.EqDeptTips.isOztiServisRafiProduct === "function" && window.EqDeptTips.isOztiServisRafiProduct(row)) {
+        return true;
+      }
+      if (typeof window.EqDeptTips.isBuzKonteynerProduct === "function" && window.EqDeptTips.isBuzKonteynerProduct(row)) {
+        return true;
+      }
+      if (typeof window.EqDeptTips.isSogukOdaProduct === "function" && window.EqDeptTips.isSogukOdaProduct(row)) {
+        return true;
+      }
+    }
+    return false;
+  };
+
   window.eqBrandMatchesRow = function (row, brandCanonical, slug) {
     if (!row) return false;
     var b = String((row.brand || row.b) || "").trim();
@@ -573,6 +596,9 @@
     var facetLc = facet ? facet.toLocaleLowerCase("tr") : "";
 
     if (slug === "oztiryakiler" || (t && t.oztiOwnOnly)) {
+      if (typeof window.eqOztiBrandHubExcludeRow === "function" && window.eqOztiBrandHubExcludeRow(row)) {
+        return false;
+      }
       if (!/öztiryakiler|oztiryakiler/i.test(b)) return false;
       if (!oem || oem === "Öztiryakiler") return true;
       return false;

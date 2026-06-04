@@ -235,8 +235,8 @@
   }
 
   function parseKeys(row) {
-    if (row.slug) return null;
-    var s = row.search || row.label || row.tip;
+    if (!row.search) return null;
+    var s = row.search;
     return String(s)
       .split("|")
       .map(function (p) {
@@ -248,10 +248,8 @@
   function toTile(row) {
     var tile = { id: row.tip, label: row.label };
     if (row.slug) tile.slug = row.slug;
-    else {
-      var keys = parseKeys(row);
-      if (keys && keys.length) tile.keys = keys;
-    }
+    var keys = parseKeys(row);
+    if (keys && keys.length) tile.keys = keys;
     return tile;
   }
 
@@ -457,7 +455,7 @@
     return false;
   }
 
-  /** İzolasyonlu buz konteyneri — soğutma; araba / taşıma vitrininde gösterme */
+  /** İzolasyonlu buz konteyneri — buz makinesi aksesuarı; soğutma PLP / marka buzdolabı vitrininde gösterme */
   function isBuzKonteynerProduct(u) {
     var hay = productHaystack(u);
     if (!hay) return false;
@@ -466,6 +464,31 @@
       .replace(/\s+/g, "")
       .toUpperCase();
     if (/^8959\.BK|^7506\.0B390/i.test(kod)) return true;
+    return false;
+  }
+
+  /** Panel / split tip soğuk oda — Öztiryakiler marka filtresinde değil; ?tip=soguk-oda */
+  function isSogukOdaProduct(u) {
+    var cat = productCategorySlug(u);
+    if (cat === "soguk-oda") return true;
+    var hay = productHaystack(u);
+    if (/\bsoğuk\s*oda\b|\bsoguk\s*oda\b|\bcold\s*room\b/i.test(hay)) return true;
+    var kod = String((u && u.raw && u.raw.urun_kodu) || (u && u.sku) || (u && u.model) || "")
+      .replace(/\s+/g, "")
+      .toUpperCase();
+    if (/^7919\.CR/i.test(kod)) return true;
+    return false;
+  }
+
+  /** Servis rafı aksesuarı — Excel «TEZGAH TİPİ SOĞUTUCULAR» altında yanlış sınıflanmış */
+  function isOztiServisRafiProduct(u) {
+    var name = productName(u);
+    if (!name || !/servis\s*raf/.test(name)) return false;
+    var kod = String((u && u.raw && u.raw.urun_kodu) || (u && u.sku) || (u && u.model) || "")
+      .replace(/\s+/g, "")
+      .toUpperCase();
+    if (/^7897\.\d+30\./.test(kod)) return true;
+    if (/servis\s*raf/.test(name)) return true;
     return false;
   }
 
@@ -571,9 +594,9 @@
   function excludeFromDeptView(dept, u) {
     if (dept === "kahve" && isOztiCayNotKahveProduct(u)) return true;
     if (dept === "sogutma" && isEtKiymaProduct(u)) return true;
+    if (dept === "sogutma" && (isOztiServisRafiProduct(u) || isBuzKonteynerProduct(u))) return true;
     if (dept === "pisirme" && (isYardimciEkipmanProduct(u) || isYerIzgaraProduct(u))) return true;
     if (dept === "icecek" && isBuzMakinesiProduct(u)) return true;
-    if ((dept === "araba" || dept === "tasima") && isBuzKonteynerProduct(u)) return true;
     if (dept === "set-ustu-mutfak" && isOztiBainMarieMachineRow(u)) return true;
     if (dept === "set-ustu-mutfak" && isOztiSetUstuArabaRow(u)) return true;
     if (dept === "set-ustu-mutfak" && isOztiSetUstuDonerRow(u)) return true;
@@ -589,6 +612,13 @@
     "doner-makineleri-duvara-monte": true,
     "compact-seri-doner-robotu": true,
     "adr-seri-doner-robotu": true,
+  };
+
+  /** Öztiryakiler soğutma — Excel kategori slug → ?tip= (buz makinesi satırları) */
+  var SOGUTMA_CAT_ALIASES = {
+    "buz-makineleri": "buz-makinesi",
+    "icecek-berrak-buz-makineleri": "buz-makinesi",
+    "soguk-odalar": "soguk-oda",
   };
 
   /** Eski build: Türkçe slugify bozuk category → kanonik ?tip= */
@@ -699,6 +729,7 @@
 
   function productCategorySlug(u) {
     var c = (u && u.c) || (u && u.category) || (u && u.raw && u.raw.category) || "";
+    if (SOGUTMA_CAT_ALIASES[c]) return SOGUTMA_CAT_ALIASES[c];
     if (YIKAMA_CAT_ALIASES[c]) return YIKAMA_CAT_ALIASES[c];
     if (SET_USTU_CAT_ALIASES[c]) return SET_USTU_CAT_ALIASES[c];
     return c;
@@ -778,6 +809,7 @@
 
   function tileMatchProduct(u, tile) {
     if (!tile) return false;
+    if (isSogukOdaProduct(u)) return tile.id === "soguk-oda";
     var cat = productCategorySlug(u);
 
     if (tile.id === "taban-rafli" || tile.id === "taban-ve-ara-rafli" || tile.id === "dolapli-tezgah") {
@@ -797,6 +829,17 @@
 
     if (tile.id === "bain-marie-kap") {
       return isOztiBainMarieKapRow(u);
+    }
+
+    if (tile.id === "tezgah-tipi-buzdolabi" && isOztiServisRafiProduct(u)) return false;
+    if (tile.id === "buz-makinesi" && isBuzKonteynerProduct(u)) return false;
+    if (
+      (tile.id === "dik-tip-buzdolap" ||
+        tile.id === "tezgah-tipi-buzdolabi" ||
+        tile.id === "derin-dondurucu") &&
+      (isOztiServisRafiProduct(u) || isBuzKonteynerProduct(u))
+    ) {
+      return false;
     }
 
     var kuvetTip = kuvetTipForCategory(cat);
@@ -979,6 +1022,7 @@
     if (lk.indexOf("çikolata") >= 0 || lk.indexOf("cikolata") >= 0 || lk.indexOf("sahlep") >= 0)
       return "sicak-cikolata";
     if (lk.indexOf("buz mak") >= 0 || lk.indexOf("berrak") >= 0) return "buz-makinesi";
+    if (lk.indexOf("soğuk oda") >= 0 || lk.indexOf("soguk oda") >= 0) return "soguk-oda";
     if (lk.indexOf("çay kazan") >= 0 || lk.indexOf("cay kazan") >= 0) return "cay-kazani";
     if (lk.indexOf("çay mak") >= 0 || lk.indexOf("cay mak") >= 0) return "cay-makinesi";
     if (lk.indexOf("çay") >= 0 || lk.indexOf("cay") >= 0) return "cay-makinesi";
@@ -1095,6 +1139,8 @@
     isYerIzgaraProduct: isYerIzgaraProduct,
     isYardimciEkipmanProduct: isYardimciEkipmanProduct,
     isBuzMakinesiProduct: isBuzMakinesiProduct,
+    isSogukOdaProduct: isSogukOdaProduct,
+    isOztiServisRafiProduct: isOztiServisRafiProduct,
     isServisTeshirProduct: isServisTeshirProduct,
     excludeFromDeptView: excludeFromDeptView,
     isKuvetProduct: isKuvetProduct,
