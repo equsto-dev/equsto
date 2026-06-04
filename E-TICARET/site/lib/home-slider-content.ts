@@ -19,7 +19,7 @@ export type HomeMainSliderSlide =
       image: typeof homeMainSliderPfosImage;
     }
   | {
-      id: "besos" | "sogutma" | "imt300";
+      id: "besos" | "sogutma";
       href: string;
       slideClass?: string;
       title: string;
@@ -28,6 +28,18 @@ export type HomeMainSliderSlide =
       thumbLabel: string;
       kind: "background";
       background: string;
+      thumbSrc: string;
+    }
+  | {
+      id: "imt300";
+      href: string;
+      slideClass?: string;
+      title: string;
+      subtitle: string;
+      cta: string;
+      thumbLabel: string;
+      kind: "hero-img";
+      image: typeof homeMainSliderImt300Image;
       thumbSrc: string;
     };
 
@@ -87,8 +99,8 @@ export const homeMainSliderSlides: HomeMainSliderSlide[] = [
     subtitle: "Berrak buz makinesi · küp, küre, çubuk · yerinde üretim",
     cta: "Keşfet →",
     thumbLabel: "IMT300",
-    kind: "background",
-    background: homeMainSliderImt300Image.path,
+    kind: "hero-img",
+    image: homeMainSliderImt300Image,
     thumbSrc: homeMainSliderImt300Image.path,
   },
 ];
