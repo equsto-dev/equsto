@@ -103,7 +103,7 @@ export const homeMainSliderSlides: HomeMainSliderSlide[] = [
     slideClass: "eq-mx-hero__slide eq-mx-hero__slide--imt300",
     title: "IMT300",
     subtitle: "Berrak buz makinesi · küp, küre, çubuk · yerinde üretim",
-    cta: "Keşfet →",
+    cta: "Ürün sayfasına git →",
     thumbLabel: "IMT300",
     kind: "hero-img",
     image: homeMainSliderImt300Image,
