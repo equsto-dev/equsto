@@ -11,9 +11,10 @@ export function HomeHeroAdsMount() {
 
   useEffect(() => {
     const mountEl = document.getElementById("eq-home-hero-mount");
-    const banner = document.querySelector(
-      ".right-col > .hero-banner.eq-world-first-banner",
-    );
+    const banner =
+      document.querySelector(
+        ".right-col > .eq-home-platform-hero > .hero-banner.eq-world-first-banner",
+      ) || document.querySelector(".right-col > .hero-banner.eq-world-first-banner");
     if (banner && mountEl && !mountEl.parentElement?.classList.contains("eq-home-platform-hero")) {
       const wrap = document.createElement("div");
       wrap.className = "eq-home-platform-hero";

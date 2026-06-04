@@ -80,8 +80,8 @@ if (!critical.includes("--eq-home-hero-visual-aspect:4/3")) {
 }
 
 const theme = read("public/theme.css");
-if (!theme.includes(".eq-home-hero-mount > section.hero.eq-home-hero-ads")) {
-  fail("theme.css: eq-home-hero-mount grid seçicisi yok");
+if (!theme.includes(".eq-home-platform-hero > .hero-banner")) {
+  fail("theme.css: platform-hero icindeki banner secicisi yok");
 }
 if (!theme.includes("--eq-home-hero-visual-aspect: 4 / 3")) {
   fail("theme.css: --eq-home-hero-visual-aspect 4/3 yok");

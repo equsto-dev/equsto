@@ -31,16 +31,25 @@ body.eq-home-decor.eq-home-mutbex .right-col .eq-home-cm > #eq-home-slider-mount
 }
 
 body.eq-home-decor.eq-home-mutbex .right-col > .eq-home-platform-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  overflow: hidden;
   margin-bottom: var(--eq-home-vitrin-gap) !important;
 }
 
 body.eq-home-decor.eq-home-mutbex .right-col > .eq-home-platform-hero > .hero-banner.eq-world-first-banner:not(.hero-banner--slim) {
   width: 100% !important;
   max-width: none !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+  margin: 0 !important;
+  padding: 22px 16px 16px !important;
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-bottom: 1px solid var(--home-line, #e5e7eb) !important;
+  box-sizing: border-box;
 }
 
 body.eq-home-decor.eq-home-mutbex .right-col .eq-home-hero-mount {
@@ -48,13 +57,45 @@ body.eq-home-decor.eq-home-mutbex .right-col .eq-home-hero-mount {
   padding: 0 !important;
   width: 100% !important;
   max-width: none !important;
+  flex: 0 0 auto;
 }
 
 body.eq-home-decor.eq-home-mutbex .right-col .eq-home-hero-mount > section.hero.eq-home-hero-ads {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  align-items: stretch !important;
   width: 100% !important;
   max-width: none !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+body.eq-home-decor.eq-home-mutbex .right-col .eq-home-hero-mount > section.hero.eq-home-hero-ads .hero-card {
+  display: flex !important;
+  flex-direction: column !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+}
+
+body.eq-home-decor.eq-home-mutbex .right-col .eq-home-hero-mount > section.hero.eq-home-hero-ads .hero-card-visual {
+  width: 100%;
+  aspect-ratio: var(--eq-home-hero-visual-aspect, 4 / 3);
+  flex: 0 0 auto;
+}
+
+body.eq-home-decor.eq-home-mutbex .right-col .eq-home-hero-mount > section.hero.eq-home-hero-ads .hero-card-body {
+  display: block !important;
+  flex: 1 1 auto;
+}
+
+@media (max-width: 768px) {
+  body.eq-home-decor.eq-home-mutbex .right-col .eq-home-hero-mount > section.hero.eq-home-hero-ads {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 body.eq-home-decor.eq-home-mutbex .eq-home-cm.eq-home-cm-mutbex {

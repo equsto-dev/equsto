@@ -1048,11 +1048,13 @@ body.admin-app header.hdr > a.logo .eq-logo-img {
  * - Ana sayfada departman seçili (eq-cat-landing): dikey padding ~%50; position tek kaynak (F5 tutarlılığı).
  * - pisirme/sogutma/… vitrin: .hero-banner--slim (kategori HTML; eq-cat-landing ile aynı dikey ölçü).
  */
-body.eq-shop.eq-home:not(.eq-cat-landing) .right-col > .hero-banner.eq-world-first-banner:not(.hero-banner--slim) {
+body.eq-shop.eq-home:not(.eq-cat-landing) .right-col > .hero-banner.eq-world-first-banner:not(.hero-banner--slim),
+body.eq-shop.eq-home:not(.eq-cat-landing) .right-col > .eq-home-platform-hero > .hero-banner.eq-world-first-banner:not(.hero-banner--slim) {
   background: var(--eq-surface);
   color: var(--eq-text);
 }
-body.eq-shop.eq-home:not(.eq-cat-landing) .right-col > .hero-banner.eq-world-first-banner .hero-platform-line {
+body.eq-shop.eq-home:not(.eq-cat-landing) .right-col > .hero-banner.eq-world-first-banner .hero-platform-line,
+body.eq-shop.eq-home:not(.eq-cat-landing) .right-col > .eq-home-platform-hero > .hero-banner.eq-world-first-banner .hero-platform-line {
   margin: 0 0 10px;
   font-size: clamp(13px, 2.2vw, 16px);
   font-weight: 500;
@@ -1060,7 +1062,8 @@ body.eq-shop.eq-home:not(.eq-cat-landing) .right-col > .hero-banner.eq-world-fir
   color: var(--eq-text-secondary);
   line-height: 1.35;
 }
-body.eq-shop.eq-home:not(.eq-cat-landing) .right-col > .hero-banner.eq-world-first-banner .eq-wf-headline {
+body.eq-shop.eq-home:not(.eq-cat-landing) .right-col > .hero-banner.eq-world-first-banner .eq-wf-headline,
+body.eq-shop.eq-home:not(.eq-cat-landing) .right-col > .eq-home-platform-hero > .hero-banner.eq-world-first-banner .eq-wf-headline {
   margin: 0;
   font-size: clamp(28px, 5.2vw, 46px) !important;
   font-weight: 800;
@@ -1082,7 +1085,8 @@ body.eq-shop.eq-dept .eq-dept-hero-strip .hero-banner.eq-world-first-banner.hero
   letter-spacing: 0.1em;
 }
 
-body.eq-shop.eq-home:not(.eq-cat-landing) .right-col > .hero-banner:not(.hero-banner--slim) {
+body.eq-shop.eq-home:not(.eq-cat-landing) .right-col > .hero-banner:not(.hero-banner--slim),
+body.eq-shop.eq-home:not(.eq-cat-landing) .right-col > .eq-home-platform-hero > .hero-banner:not(.hero-banner--slim) {
   background: var(--eq-surface);
   text-align: center;
   border-bottom: 1px solid var(--eq-border);
