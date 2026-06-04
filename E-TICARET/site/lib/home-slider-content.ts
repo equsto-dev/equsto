@@ -49,15 +49,32 @@ export type HomeMainSliderSlide =
       thumbSrc: string;
     }
   | {
-      id: "besos" | "imt300";
+      id: "besos";
       href: string;
       slideClass?: string;
       title: string;
       subtitle: string;
+      promoLead: string;
       cta: string;
       thumbLabel: string;
       kind: "hero-img";
-      image: typeof homeMainSliderBarImage | typeof homeMainSliderImt300Image;
+      image: typeof homeMainSliderBarImage;
+      thumbSrc: string;
+    }
+  | {
+      id: "imt300";
+      href: string;
+      slideClass?: string;
+      title: string;
+      titleEm: string;
+      promoKicker: string;
+      promoLead: string;
+      promoBadges: readonly string[];
+      promoPoints: readonly string[];
+      cta: string;
+      thumbLabel: string;
+      kind: "hero-img";
+      image: typeof homeMainSliderImt300Image;
       thumbSrc: string;
     };
 
@@ -84,6 +101,7 @@ export const homeMainSliderSlides: HomeMainSliderSlide[] = [
     kind: "hero-img",
     image: homeMainSliderBarImage,
     thumbSrc: homeMainSliderBarImage.path,
+    promoLead: "Modüler kokteyl istasyonu — bar vitrinine göz atın",
   },
   {
     id: "sogutma",
@@ -102,7 +120,17 @@ export const homeMainSliderSlides: HomeMainSliderSlide[] = [
     href: "/besos/imt300",
     slideClass: "eq-mx-hero__slide eq-mx-hero__slide--imt300",
     title: "IMT300",
-    subtitle: "Berrak buz makinesi · küp, küre, çubuk · yerinde üretim",
+    titleEm: "Berrak Buz Makinesi",
+    promoKicker: "Besos · Bar Design Studio · Skyra IMT300",
+    promoLead:
+      "Kesim gerektirmeden, standart formlarda parti halinde berrak buz üreten ticari ünite. Bar, otel ve restoranlar için yerinde üretim — dışarıdan buz tedarik maliyetini düşürür, kokteyl ve premium içecek sunumunu yükseltir.",
+    promoBadges: ["2 tepsi", "5 buz formu", "Tek dokunuş", "Paslanmaz çelik"],
+    promoPoints: [
+      "Yavaş erime — kokteylde sulandırma azalır",
+      "Kesim yok — küp, küre, çubuk ve elmas form",
+      "Tek panelden dolum, dondurma ve depolama",
+      "Yüksek hacimde dış buz lojistiği maliyetini düşürür",
+    ],
     cta: "Ürün sayfasına git →",
     thumbLabel: "IMT300",
     kind: "hero-img",
