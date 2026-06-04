@@ -31,7 +31,7 @@ export type HomeMainSliderSlide =
       thumbSrc: string;
     }
   | {
-      id: "imt300";
+      id: "besos" | "imt300";
       href: string;
       slideClass?: string;
       title: string;
@@ -39,7 +39,7 @@ export type HomeMainSliderSlide =
       cta: string;
       thumbLabel: string;
       kind: "hero-img";
-      image: typeof homeMainSliderImt300Image;
+      image: typeof homeMainSliderBarImage | typeof homeMainSliderImt300Image;
       thumbSrc: string;
     };
 
@@ -75,9 +75,9 @@ export const homeMainSliderSlides: HomeMainSliderSlide[] = [
     subtitle: "IMT300 berrak buz · modüler kokteyl istasyonu",
     cta: "Keşfet →",
     thumbLabel: "Bar Design",
-    kind: "background",
-    background: "/images/home/hero-bar-cocktailstation.png",
-    thumbSrc: "/images/home/hero-bar-cocktailstation.png",
+    kind: "hero-img",
+    image: homeMainSliderBarImage,
+    thumbSrc: homeMainSliderBarImage.path,
   },
   {
     id: "sogutma",
