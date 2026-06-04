@@ -86,7 +86,6 @@ function shopCat(dept: string, tip?: string): Pick<CafemarktCategory, "href" | "
 const CM_POP_CAT = "/images/home/pop-cats";
 /** Katalog PDF sayfası değil — beyaz zemin ürün foto (ozti/web, atalay/cafemarkt) */
 const OZ_WEB = "/images/catalog/ozti/web";
-const AT_CM = "/images/catalog/atalay/cafemarkt";
 
 const cafemarktPopCats: CafemarktCategory[] = [
   {
