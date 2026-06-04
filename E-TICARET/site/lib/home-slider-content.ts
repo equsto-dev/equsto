@@ -25,15 +25,15 @@ export const homeMainSliderSogutmaOztiImage = {
 } as const;
 
 export const homeMainSliderBarImage = {
-  path: "/images/home/hero-bar-cocktailstation.png",
+  path: "/images/home/hero-bar-cocktailstation-popcat-white.png",
   width: 1200,
   height: 713,
 } as const;
 
 export const homeMainSliderImt300Image = {
-  path: "/images/imt300/imt300-1.jpg",
-  width: 800,
-  height: 600,
+  path: "/images/imt300/imt300-5.png",
+  width: 3106,
+  height: 2486,
 } as const;
 
 export const homeMainSliderElectroluxXpImage = {
@@ -66,7 +66,7 @@ export const homeMainSliderBesosComplements = [
     name: "Bar Module",
     code: "PL/BM.F.3.1-18",
     href: "/besos/modul/pl-bm-f-3-1-18",
-    image: "/images/catalog/besos/pdf/besos-pl-bm-f-3-1-18.png",
+    image: "/images/catalog/besos/web/besos-pl-bm-f-3-1-18.avif",
   },
 ] as const;
 
@@ -74,13 +74,18 @@ export type HomeMainSliderSlide =
   | {
       id: "pfos";
       href: string;
-      slideClass: string;
+      slideClass?: string;
       title: string;
-      subtitle: string;
+      titleEm: string;
+      promoKicker: string;
+      promoLead: string;
+      promoBadges: readonly string[];
+      promoPoints: readonly string[];
       cta: string;
       thumbLabel: string;
-      kind: "pfos-img";
+      kind: "hero-img";
       image: typeof homeMainSliderPfosImage;
+      thumbSrc: string;
     }
   | {
       id: "electrolux-xp";
@@ -138,11 +143,21 @@ export const homeMainSliderSlides: HomeMainSliderSlide[] = [
     href: "pfos.html",
     slideClass: "eq-mx-hero__slide eq-mx-hero__slide--pfos",
     title: "Proje Fabrikası",
-    subtitle: "Beş dakikada ekipman listesi ve anlık teklif",
+    titleEm: "Anlık teklif",
+    promoKicker: "Equsto · PFOS · proje listesi",
+    promoLead:
+      "Beş dakikada ekipman listesi, CAD yerleşim ve PDF teklif — bar, mutfak ve soğutma hatları tek platformda.",
+    promoBadges: ["5 dakikada liste", "PDF teklif", "Bar & mutfak", "Canlı fiyat"],
+    promoPoints: [
+      "Departman bazlı seçim — pişirme, soğutma, yıkama, hazırlık",
+      "PFOS referans projeleri ile hızlı başlangıç",
+      "Tek tıkla teklif — satış ekibine hazır çıktı",
+    ],
     cta: "Keşfet →",
     thumbLabel: "Proje Fabrikası",
-    kind: "pfos-img",
+    kind: "hero-img",
     image: homeMainSliderPfosImage,
+    thumbSrc: homeMainSliderPfosImage.path,
   },
   {
     id: "imt300",

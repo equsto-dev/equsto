@@ -8,6 +8,13 @@ export type CafemarktPromoCard = {
   brand?: string;
   title: string;
   subtitle?: string;
+  /** Electrolux XP tarzı split vitrin */
+  layout?: "default" | "split";
+  promoKicker?: string;
+  titleEm?: string;
+  promoLead?: string;
+  promoBadges?: readonly string[];
+  promoPoints?: readonly string[];
   cta: string;
   href: string;
   legacyGo?: string;
@@ -16,15 +23,25 @@ export type CafemarktPromoCard = {
   textLight?: boolean;
 };
 
+/** Öztiryakiler 79E3.37NMV.03 — oztiryakiler.com.tr ürün sayfası teknik tablosu */
 export const cafemarktHeroMain: CafemarktPromoCard = {
   id: "ozti-dual",
-  brand: "Öztiryakiler",
-  title: "Türkiye'nin en ekonomik tezgah tipi soğutma serisi",
-  subtitle: "TAG 370 · 9 çekmeceli · canlı fiyat, 9 taksit",
-  cta: "Ürünleri gör",
-  href: "/shop/sogutma?tip=tezgah-tipi-buzdolabi",
+  layout: "split",
+  promoKicker: "Öztiryakiler · tezgah tipi soğutma · TAG 370 NMV",
+  title: "9 Çekmeceli",
+  titleEm: "Yatay Tip Buzdolabı",
+  promoLead:
+    "GN 1/1 uyumlu dokuz çekmeceli tezgah tipi buzdolabı — profesyonel mutfaklarda erişilebilir soğutma, HACCP dijital kontrol ve yüksek verimli monoblok soğutma sistemi.",
+  promoBadges: ["GN 1/1", "9 çekmeceli", "-2/+8 °C", "457 L", "304 paslanmaz"],
+  promoPoints: [
+    "1780 × 700 × 850 mm · 0,39 kW · 230 V / 50 Hz · R134A (187 g)",
+    "Monoblok soğutma · fan destekli sirkülasyon · tel kondenser",
+    "60 mm CFC-free izolasyon · max 60 dB · net 161 kg · 79E3.37NMV.03",
+  ],
+  cta: "Ürün sayfasına git →",
+  href: "/shop/sogutma/oztiryakiler-endustriyel-mutfak__79e3-37nmv-03",
   image: "/images/catalog/ozti/web/ozti-79e3-37nmv-03.jpg",
-  bg: "linear-gradient(135deg, #0d47a1 0%, #1565c0 48%, #42a5f5 100%)",
+  bg: "#001e50",
   textLight: true,
 };
 

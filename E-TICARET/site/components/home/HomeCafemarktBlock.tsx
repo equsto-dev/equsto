@@ -37,6 +37,75 @@ function goLink(
   window.location.href = card.href;
 }
 
+function isSplitPromo(
+  card: CafemarktPromoCard,
+): card is CafemarktPromoCard & {
+  layout: "split";
+  promoKicker: string;
+  titleEm: string;
+  promoLead: string;
+  promoBadges: readonly string[];
+  promoPoints: readonly string[];
+  image: string;
+} {
+  return card.layout === "split";
+}
+
+function SplitPromoCard({
+  card,
+  className,
+}: {
+  card: CafemarktPromoCard & {
+    layout: "split";
+    promoKicker: string;
+    titleEm: string;
+    promoLead: string;
+    promoBadges: readonly string[];
+    promoPoints: readonly string[];
+    image: string;
+  };
+  className?: string;
+}) {
+  return (
+    <a
+      className={`eq-cmkt-promo eq-cmkt-promo--split ${className ?? ""}${card.textLight ? " eq-cmkt-promo--light" : ""}`}
+      href={card.href}
+      style={{ backgroundColor: card.bg }}
+      onClick={(e) => goLink(e, card)}
+    >
+      <div className="eq-cmkt-promo__media">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          className="eq-cmkt-promo__media-img"
+          src={assetUrl(card.image)}
+          alt="Öztiryakiler TAG 370 NMV — 9 çekmeceli yatay tip buzdolabı"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <div className="eq-cmkt-promo__panel">
+        <p className="eq-cmkt-promo__kicker">{card.promoKicker}</p>
+        <h3 className="eq-cmkt-promo__title">
+          {card.title}{" "}
+          <em className="eq-cmkt-promo__em">{card.titleEm}</em>
+        </h3>
+        <p className="eq-cmkt-promo__lead">{card.promoLead}</p>
+        <ul className="eq-cmkt-promo__badges">
+          {card.promoBadges.map((badge) => (
+            <li key={badge}>{badge}</li>
+          ))}
+        </ul>
+        <ul className="eq-cmkt-promo__points">
+          {card.promoPoints.map((point) => (
+            <li key={point}>{point}</li>
+          ))}
+        </ul>
+        <span className="eq-cmkt-promo__cta">{card.cta}</span>
+      </div>
+    </a>
+  );
+}
+
 function PromoCard({
   card,
   className,
@@ -113,7 +182,11 @@ export function HomeCafemarktBlock() {
     <section className="eq-cmkt" aria-label="Equsto vitrin">
       <div className="eq-cmkt-inner">
         <div className="eq-cmkt-hero-grid">
-          <PromoCard card={cafemarktHeroMain} className="eq-cmkt-promo--main" />
+          {isSplitPromo(cafemarktHeroMain) ? (
+            <SplitPromoCard card={cafemarktHeroMain} className="eq-cmkt-promo--main" />
+          ) : (
+            <PromoCard card={cafemarktHeroMain} className="eq-cmkt-promo--main" />
+          )}
           <div className="eq-cmkt-hero-side">
             <div className="eq-cmkt-hero-side-row">
               {cafemarktHeroSideTop.map((c) => (
