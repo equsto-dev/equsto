@@ -24,6 +24,34 @@ export const homeMainSliderImt300Image = {
   height: 600,
 } as const;
 
+/** Manhattan PDP tamamlayıcıları — vitrum-bars-catalogue.json */
+export const homeMainSliderBesosComplements = [
+  {
+    name: "The Manhattan",
+    code: "BES-P23",
+    href: "/besos/modul/the-manhattan",
+    image: "/images/catalog/besos/web/besos-bes-p23.avif",
+  },
+  {
+    name: "The Boulverdier",
+    code: "BES-P24",
+    href: "/besos/modul/the-boulverdier",
+    image: "/images/catalog/besos/web/besos-bes-p24.avif",
+  },
+  {
+    name: "The Clover",
+    code: "BES-P25",
+    href: "/besos/modul/the-clover",
+    image: "/images/catalog/besos/web/besos-bes-p25.avif",
+  },
+  {
+    name: "Bar Module",
+    code: "PL/BM.F.3.1-18",
+    href: "/besos/modul/pl-bm-f-3-1-18",
+    image: "/images/catalog/besos/pdf/besos-pl-bm-f-3-1-18.png",
+  },
+] as const;
+
 export type HomeMainSliderSlide =
   | {
       id: "pfos";
@@ -54,7 +82,9 @@ export type HomeMainSliderSlide =
       slideClass?: string;
       title: string;
       subtitle: string;
+      promoKicker: string;
       promoLead: string;
+      complements: typeof homeMainSliderBesosComplements;
       cta: string;
       thumbLabel: string;
       kind: "hero-img";
@@ -101,7 +131,10 @@ export const homeMainSliderSlides: HomeMainSliderSlide[] = [
     kind: "hero-img",
     image: homeMainSliderBarImage,
     thumbSrc: homeMainSliderBarImage.path,
-    promoLead: "Modüler kokteyl istasyonu — bar vitrinine göz atın",
+    promoKicker: "Tamamlayıcı ürünler · The Manhattan",
+    promoLead:
+      "En çok satan iki kişilik istasyon; entegre dondurucu çekmeceleri, genişletilmiş damlama tepsisi, evye ve bardak saklama.",
+    complements: homeMainSliderBesosComplements,
   },
   {
     id: "sogutma",

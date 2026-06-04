@@ -69,8 +69,13 @@ export function HomeMainSlider() {
 
                 if (slide.id === "besos") {
                   return (
-                    <a key={slide.id} className={activeClass} href={slide.href}>
-                      <div className="eq-mx-hero__slide-media">
+                    <div
+                      key={slide.id}
+                      className={activeClass}
+                      data-slide-href={slide.href}
+                      data-slide-go="besos"
+                    >
+                      <a className="eq-mx-hero__slide-media" href="/besos">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                           className="eq-mx-hero__slide-bg"
@@ -80,14 +85,34 @@ export function HomeMainSlider() {
                           height={slide.image.height}
                           decoding="async"
                         />
-                      </div>
+                      </a>
                       <div className="eq-mx-hero__slide-promo">
                         <h2>{slide.title}</h2>
                         <p className="eq-mx-hero__slide-promo-sub">{slide.subtitle}</p>
+                        <p className="eq-mx-hero__slide-promo-kicker">{slide.promoKicker}</p>
                         <p className="eq-mx-hero__slide-promo-lead">{slide.promoLead}</p>
-                        <span className="eq-mx-hero__slide-cta">{slide.cta}</span>
+                        <div
+                          className="eq-mx-hero__slide-complements"
+                          aria-label="Tamamlayıcı ürünler"
+                        >
+                          {slide.complements.map((item) => (
+                            <a
+                              key={item.href}
+                              className="eq-mx-hero__slide-complement"
+                              href={item.href}
+                            >
+                              {/* eslint-disable-next-line @next/next/no-img-element */}
+                              <img src={assetUrl(item.image)} alt="" loading="lazy" decoding="async" />
+                              <span className="eq-mx-hero__slide-complement-name">{item.name}</span>
+                              <span className="eq-mx-hero__slide-complement-code">{item.code}</span>
+                            </a>
+                          ))}
+                        </div>
+                        <a className="eq-mx-hero__slide-cta" href="/besos">
+                          {slide.cta}
+                        </a>
                       </div>
-                    </a>
+                    </div>
                   );
                 }
 
