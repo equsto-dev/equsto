@@ -1,5 +1,5 @@
 ═══════════════════════════════════════════════════════════════════════════
-KİLİT — Ana sayfa alt slider (PFOS · Bar Design · Electrolux XP · IMT300)
+KİLİT — Ana sayfa alt slider (PFOS · IMT300 · Bar Design · Electrolux XP)
 Onay: 2026-06-04 · Commit referans: 1094ec6d
 ═══════════════════════════════════════════════════════════════════════════
 

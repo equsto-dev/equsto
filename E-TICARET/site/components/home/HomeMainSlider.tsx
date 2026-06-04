@@ -206,19 +206,27 @@ export function HomeMainSlider() {
           </button>
         </div>
         <div className="eq-mx-hero__thumbs">
-          {homeMainSliderSlides.map((slide, index) => (
+          {homeMainSliderSlides.map((slide, index) => {
+            const thumbSrc =
+              slide.kind === "hero-img"
+                ? slide.thumbSrc
+                : slide.kind === "pfos-img"
+                  ? slide.image.path
+                  : null;
+            return (
             <button
               key={slide.id}
               type="button"
-              className={`eq-mx-hero__thumb${index === 0 ? " is-active" : ""}`}
+              className={`eq-mx-hero__thumb eq-mx-hero__thumb--${slide.id}${index === 0 ? " is-active" : ""}`}
               aria-label={slide.thumbLabel}
             >
-              {slide.kind === "pfos-img" || slide.kind === "hero-img" ? (
+              {thumbSrc ? (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={assetUrl(slide.image.path)} alt="" />
+                <img src={assetUrl(thumbSrc)} alt="" />
               ) : null}
             </button>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

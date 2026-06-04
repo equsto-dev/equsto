@@ -167,6 +167,20 @@ body.eq-home-decor .eq-mx-hero__thumbs {
   margin-top: 8px;
 }
 
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__thumb img {
+  object-fit: contain;
+  object-position: center;
+  background: #f4f6f9;
+}
+
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__thumb--pfos img {
+  background: #e8dcc8;
+}
+
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__thumb--electrolux-xp img {
+  background: #000;
+}
+
 .eq-mx-hero__thumb-ph {
   display: block;
   width: 100%;
