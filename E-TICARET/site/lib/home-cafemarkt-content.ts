@@ -82,80 +82,82 @@ function shopCat(dept: string, tip?: string): Pick<CafemarktCategory, "href" | "
   };
 }
 
-/** Cafemarkt vitrin sırası (canlı cafemarkt.com — slider #260) */
+/** Cafemarkt vitrin — witcdn slider-2601…12 (scripts/fetch-cafemarkt-home-pop-cats.mjs) */
+const CM_POP_CAT = "/images/home/pop-cats";
+
 const cafemarktPopCats: CafemarktCategory[] = [
   {
     id: "hazirlik-mak",
     label: "Hazırlık Makineleri",
     ...shopCat("hazirlik"),
-    image: "/images/catalog/ozti/web/ozti-0820-00030-11.jpg",
+    image: `${CM_POP_CAT}/cm-hazirlik-makineleri.png`,
   },
   {
     id: "kampanya",
     label: "Kampanyalar",
     href: "/",
     anchor: "eq-rail-kampanyali",
-    image: "/images/home/pop-cat-kampanya.svg",
+    image: `${CM_POP_CAT}/cm-kampanyalar.webp`,
   },
   {
     id: "outlet",
     label: "Outlet Ürünler",
     ...shopCat("sogutma", "tezgah-tipi-buzdolabi"),
-    image: "/images/home/pop-cat-outlet.svg",
+    image: `${CM_POP_CAT}/cm-outlet-urunler.jpg`,
   },
   {
     id: "bulasikhane",
     label: "Bulaşıkhane Ekipmanları",
     ...shopCat("yikama", "konveyorlu-bulasik"),
-    image: "/images/catalog/ozti/web/ozti-076r-00100-bd.jpg",
+    image: `${CM_POP_CAT}/cm-bulasikhane-ekipmanlari.png`,
   },
   {
     id: "gastronorm",
     label: "Gastronorm Küvetler",
     ...shopCat("kuvetler", "gastronorm-kuvet"),
-    image: "/images/catalog/ozti/web/ozti-0311-11065-10.jpg",
+    image: `${CM_POP_CAT}/cm-gastronorm-kuvetler.jpg`,
   },
   {
     id: "acik-bufe",
     label: "Açık Büfe Ekipmanları",
     ...shopCat("set-ustu-mutfak", "chafing-dish"),
-    image: "/images/catalog/atalay/cafemarkt/atalay-gn-11-150.jpg",
+    image: `${CM_POP_CAT}/cm-acik-bufe-ekipmanlari.jpg`,
   },
   {
     id: "cay",
     label: "Çay Makineleri",
     ...shopCat("icecek", "cay-makinesi"),
-    image: "/images/catalog/ozti/web/ozti-8574-cm080-00.jpg",
+    image: `${CM_POP_CAT}/cm-cay-makineleri.png`,
   },
   {
     id: "soguk-teshir",
     label: "Soğuk Teşhir Dolapları",
     ...shopCat("market-reyonlari", "soguk-teshir"),
-    image: "/images/catalog/ozti/web/ozti-7912-15070-o0.jpg",
+    image: `${CM_POP_CAT}/cm-soguk-teshir-dolaplari.png`,
   },
   {
     id: "bar-blender",
     label: "Bar Blenderları",
     ...shopCat("icecek", "bar-blender"),
-    image: "/images/catalog/ozti/web/ozti-9563-cb699-0d.jpg",
+    image: `${CM_POP_CAT}/cm-bar-blenderlari.jpg`,
   },
   {
     id: "pizza",
     label: "Pizza Fırınları",
     ...shopCat("pisirme", "pizza-firinlari"),
-    image: "/images/catalog/ozti/web/ozti-8890-p5050-01.jpg",
+    image: `${CM_POP_CAT}/cm-pizza-firinlari.webp`,
   },
   {
     id: "filtre-kahve",
     label: "Filtre Kahve Makineleri",
     ...shopCat("kahve", "filtre-kahve"),
-    image: "/images/catalog/ozti/web/ozti-8574-fm250-00.jpg",
+    image: `${CM_POP_CAT}/cm-filtre-kahve-makineleri.jpg`,
   },
   {
     id: "kahve-degirmeni",
     label: "Kahve Değirmenleri",
     ...shopCat("kahve", "kahve-degirmeni"),
-    image: "/images/catalog/ozti/cafemarkt/ozti-9584-00mdx-00.jpg",
+    image: `${CM_POP_CAT}/cm-kahve-degirmenleri.webp`,
   },
 ];
 
