@@ -56,6 +56,9 @@ const indexBody = read("lib/vitrin/bodies/index.ts");
 if (!indexBody.includes("eq-home-hero-mount")) {
   fail("index.ts: eq-home-hero-mount yok");
 }
+if (!indexBody.includes("eq-home-platform-hero")) {
+  fail("index.ts: eq-home-platform-hero sarmalayici yok");
+}
 if (indexBody.includes('<section class="hero eq-home-hero-ads"')) {
   fail("index.ts: gömülü hero HTML geri gelmiş (React portal kullanılmalı)");
 }

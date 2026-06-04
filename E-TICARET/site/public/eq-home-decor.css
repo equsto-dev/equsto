@@ -12,49 +12,67 @@ body.eq-home-decor .eq-trust-band {
   display: none !important;
 }
 
-/* Üst üçlü hero ↔ alt slider — aynı yatay iz, aralarında boşluk */
+/* Üst platform hero ↔ alt slider — aynı genişlik, arada boşluk */
 body.eq-home-decor.eq-home-mutbex {
   --eq-home-vitrin-max: 1500px;
   --eq-home-vitrin-pad: var(--home-pad-x, 12px);
-  --eq-home-vitrin-gap: 18px;
+  --eq-home-vitrin-gap: 20px;
 }
 
-body.eq-home-decor.eq-home-mutbex .right-col > .hero-banner.eq-world-first-banner:not(.hero-banner--slim),
-body.eq-home-decor.eq-home-mutbex .right-col > .eq-home-hero-mount,
-body.eq-home-decor.eq-home-mutbex .eq-home-cm > #eq-home-slider-mount {
+body.eq-home-decor.eq-home-mutbex .right-col > .eq-home-platform-hero,
+body.eq-home-decor.eq-home-mutbex .right-col .eq-home-cm > #eq-home-slider-mount {
   box-sizing: border-box;
   width: 100%;
-  max-width: var(--eq-home-vitrin-max);
-  margin-left: auto;
-  margin-right: auto;
-}
-
-body.eq-home-decor.eq-home-mutbex .right-col > .hero-banner.eq-world-first-banner:not(.hero-banner--slim) {
+  max-width: var(--eq-home-vitrin-max) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
   padding-left: var(--eq-home-vitrin-pad) !important;
   padding-right: var(--eq-home-vitrin-pad) !important;
 }
 
-body.eq-home-decor.eq-home-mutbex .right-col > .eq-home-hero-mount {
-  margin-bottom: var(--eq-home-vitrin-gap);
-  padding-left: var(--eq-home-vitrin-pad);
-  padding-right: var(--eq-home-vitrin-pad);
+body.eq-home-decor.eq-home-mutbex .right-col > .eq-home-platform-hero {
+  margin-bottom: var(--eq-home-vitrin-gap) !important;
+}
+
+body.eq-home-decor.eq-home-mutbex .right-col > .eq-home-platform-hero > .hero-banner.eq-world-first-banner:not(.hero-banner--slim) {
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+body.eq-home-decor.eq-home-mutbex .right-col .eq-home-hero-mount {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  max-width: none !important;
+}
+
+body.eq-home-decor.eq-home-mutbex .right-col .eq-home-hero-mount > section.hero.eq-home-hero-ads {
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 body.eq-home-decor.eq-home-mutbex .eq-home-cm.eq-home-cm-mutbex {
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
-body.eq-home-decor.eq-home-mutbex .eq-home-cm > #eq-home-slider-mount {
-  padding-left: var(--eq-home-vitrin-pad);
-  padding-right: var(--eq-home-vitrin-pad);
+body.eq-home-decor.eq-home-mutbex .right-col .eq-home-cm > #eq-home-slider-mount {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 
-body.eq-home-decor.eq-home-mutbex #eq-home-slider-mount .eq-mx-vitrin.eq-decor-slider-only {
-  max-width: none;
-  width: 100%;
-  margin-left: 0;
-  margin-right: 0;
+body.eq-home-decor.eq-home-mutbex #eq-home-slider-mount > .eq-mx-vitrin.eq-decor-slider-only {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  border-top: 1px solid var(--home-line, #e5e7eb) !important;
+  border-radius: var(--home-radius, 6px) !important;
 }
 
 body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only {
