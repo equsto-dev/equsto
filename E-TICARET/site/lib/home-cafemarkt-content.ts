@@ -244,7 +244,7 @@ const equstoDeptCats: CafemarktCategory[] = [
     id: "istif",
     label: "İstif Rafları",
     ...shopCat("istif"),
-    image: `${OZ_WEB}/ozti-7897-12050-04.jpg`,
+    image: `${CM_POP_CAT}/istif-izgara-tel.jpg`,
   },
   {
     id: "kuvetler",
