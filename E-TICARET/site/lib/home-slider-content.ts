@@ -19,7 +19,7 @@ export type HomeMainSliderSlide =
       image: typeof homeMainSliderPfosImage;
     }
   | {
-      id: "besos" | "sogutma";
+      id: "sogutma";
       href: string;
       slideClass?: string;
       title: string;
@@ -47,6 +47,12 @@ export const homeMainSliderSogutmaPisirmeImage = {
   path: "/images/home/hero-sogutma-pisirme-combo.jpg",
   width: 2048,
   height: 1044,
+} as const;
+
+export const homeMainSliderBarImage = {
+  path: "/images/home/hero-bar-cocktailstation.png",
+  width: 1200,
+  height: 713,
 } as const;
 
 export const homeMainSliderImt300Image = {

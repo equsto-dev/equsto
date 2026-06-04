@@ -28,11 +28,25 @@ mustExist("components/home/HomeMainSliderMount.tsx");
 mustExist("components/home/HomeVitrinPortals.tsx");
 mustExist("lib/home-slider-content.ts");
 mustExist("public/images/pfos/proje-fabrikasi-bar-plan-eskiz.png");
+mustExist("public/images/home/hero-bar-cocktailstation.png");
 mustExist("public/images/home/hero-sogutma-pisirme-combo.jpg");
+mustExist("public/images/imt300/imt300-1.jpg");
+
+const kilit = read("public/home-main-slider-KILIT.txt");
+if (!kilit.includes("hero-bar-cocktailstation.png")) {
+  fail("home-main-slider-KILIT.txt: Bar Design görsel kilidi yok");
+}
+if (!kilit.includes("eq-mx-hero__slide--bar")) {
+  fail("home-main-slider-KILIT.txt: Bar contain kilidi yok");
+}
+if (!kilit.includes("imt300-1.jpg")) fail("home-main-slider-KILIT.txt: IMT300 kilidi yok");
 
 const slider = read("components/home/HomeMainSlider.tsx");
 if (!slider.includes("eq-mx-vitrin eq-decor-slider-only")) fail("HomeMainSlider.tsx: vitrin sınıfı yok");
-if (!slider.includes("eq-mx-hero__slide-bg")) fail("HomeMainSlider.tsx: PFOS img slayt yok");
+if (!slider.includes("eq-mx-hero__slide-bg")) fail("HomeMainSlider.tsx: img slayt yok");
+if (!slider.includes("Besos modüler kokteyl istasyonu")) {
+  fail("HomeMainSlider.tsx: Bar Design alt metni yok");
+}
 
 const mount = read("components/home/HomeMainSliderMount.tsx");
 if (!mount.includes("eq-home-slider-mount")) fail("HomeMainSliderMount.tsx: mount id yok");
@@ -46,6 +60,44 @@ if (!content.includes("width: 1024") || !content.includes("height: 331")) {
   fail("home-slider-content.ts: PFOS boyut 1024×331 değil");
 }
 
+if (!content.includes("homeMainSliderBarImage")) {
+  fail("home-slider-content.ts: homeMainSliderBarImage sabiti yok");
+}
+if (!content.includes('path: "/images/home/hero-bar-cocktailstation.png"')) {
+  fail("home-slider-content.ts: Bar Design görsel yolu değişmiş");
+}
+if (!content.includes("width: 1200") || !content.includes("height: 713")) {
+  fail("home-slider-content.ts: Bar Design boyut 1200×713 değil");
+}
+const slidesStart = content.indexOf("export const homeMainSliderSlides");
+const slidesBody = slidesStart >= 0 ? content.slice(slidesStart) : content;
+const besosIdx = slidesBody.indexOf('id: "besos",');
+const sogutmaIdx = slidesBody.indexOf('id: "sogutma",');
+if (besosIdx < 0 || sogutmaIdx < 0) {
+  fail("home-slider-content.ts: besos/sogutma slayt tanımı yok");
+} else {
+  const besosBlock = slidesBody.slice(besosIdx, sogutmaIdx);
+  if (!besosBlock.includes('kind: "hero-img"')) {
+    fail("home-slider-content.ts: Bar Design kind hero-img değil");
+  }
+  if (besosBlock.includes('kind: "background"')) {
+    fail("home-slider-content.ts: Bar Design background slaytına dönmüş");
+  }
+}
+
+if (!content.includes("homeMainSliderImt300Image")) {
+  fail("home-slider-content.ts: homeMainSliderImt300Image sabiti yok");
+}
+if (!content.includes('path: "/images/imt300/imt300-1.jpg"')) {
+  fail("home-slider-content.ts: IMT300 görsel yolu değişmiş");
+}
+const imtIdx = slidesBody.indexOf('id: "imt300",');
+if (imtIdx < 0) {
+  fail("home-slider-content.ts: IMT300 slayt tanımı yok");
+} else if (!slidesBody.slice(imtIdx).includes('kind: "hero-img"')) {
+  fail("home-slider-content.ts: IMT300 kind hero-img değil");
+}
+
 if (!content.includes("homeMainSliderSogutmaPisirmeImage")) {
   fail("home-slider-content.ts: sogutma kompozit sabiti yok");
 }
@@ -54,6 +106,9 @@ if (!content.includes('path: "/images/home/hero-sogutma-pisirme-combo.jpg"')) {
 }
 if (!content.includes("Atalay pişirme")) {
   fail("home-slider-content.ts: sogutma slayt metni değişmiş");
+}
+if (!content.includes("Bar Design Studio")) {
+  fail("home-slider-content.ts: Bar Design başlığı değişmiş");
 }
 
 const portals = read("components/home/HomeVitrinPortals.tsx");
@@ -75,10 +130,21 @@ const decor = read("public/eq-home-decor.css");
 if (!decor.includes("proje-fabrikasi-bar-plan-eskiz.png")) {
   fail("eq-home-decor.css: bar plan eskiz referansı yok");
 }
+if (!decor.includes("eq-mx-hero__slide--bar")) {
+  fail("eq-home-decor.css: bar slayt sınıfı yok");
+}
+if (!decor.includes("eq-mx-hero__slide--imt300")) {
+  fail("eq-home-decor.css: imt300 slayt stili yok");
+}
 if (!decor.includes("eq-mx-hero__slide--sogutma")) {
   fail("eq-home-decor.css: sogutma slayt stili yok");
 }
-if (!decor.includes("object-fit: contain")) fail("eq-home-decor.css: contain kuralı yok");
+const barContain = decor.includes(".eq-mx-hero__slide--bar .eq-mx-hero__slide-bg") &&
+  decor.includes("object-fit: contain");
+const imtContain = decor.includes(".eq-mx-hero__slide--imt300 .eq-mx-hero__slide-bg") &&
+  decor.includes("object-fit: contain");
+if (!barContain) fail("eq-home-decor.css: Bar Design contain kuralı yok");
+if (!imtContain) fail("eq-home-decor.css: IMT300 contain kuralı yok");
 
 const vitrinCfg = read("public/eq-vitrin-config.js");
 if (!vitrinCfg.includes("isHomeMainSliderLocked")) {
@@ -88,9 +154,7 @@ if (!vitrinCfg.includes("data-eq-slider-kilit")) {
   fail("eq-vitrin-config.js: data-eq-slider-kilit kontrolü yok");
 }
 
-if (mount.includes('data-eq-slider-kilit')) {
-  // ok — mount işaretleniyor
-} else {
+if (!mount.includes("data-eq-slider-kilit")) {
   fail("HomeMainSliderMount.tsx: data-eq-slider-kilit set edilmiyor");
 }
 
@@ -102,4 +166,4 @@ if (err) {
   console.error("[verify-home-main-slider-kilit] Kilit ihlali");
   process.exit(1);
 }
-console.log("[verify-home-main-slider-kilit] OK — React slider + bar plan eskizi");
+console.log("[verify-home-main-slider-kilit] OK — PFOS · Bar contain · Soğutma · IMT300");
