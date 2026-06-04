@@ -7,6 +7,7 @@
   var SLUG_LABELS = {
     'sanayi-ocaklari': 'Endüstriyel Ocaklar',
     'sanayi-ocaklari-': 'Endüstriyel Ocaklar',
+    'ocak-vitrini': 'Ocaklar',
     'sanayi-tipi-izgaralar': 'Endüstriyel Izgaralar'
   };
 

@@ -25,15 +25,15 @@ export const homeMainSliderSogutmaOztiImage = {
 } as const;
 
 export const homeMainSliderBarImage = {
-  path: "/images/home/hero-bar-cocktailstation-popcat-white.png",
+  path: "/images/home/hero-bar-cocktailstation-cutout.png",
   width: 1200,
   height: 713,
 } as const;
 
 export const homeMainSliderImt300Image = {
-  path: "/images/imt300/imt300-5.png",
-  width: 3106,
-  height: 2486,
+  path: "/images/imt300/imt300-2.png",
+  width: 3381,
+  height: 3007,
 } as const;
 
 export const homeMainSliderElectroluxXpImage = {

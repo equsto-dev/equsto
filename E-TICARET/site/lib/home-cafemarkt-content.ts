@@ -35,7 +35,7 @@ export const cafemarktHeroMain: CafemarktPromoCard = {
   promoBadges: ["GN 1/1", "9 çekmeceli", "-2/+8 °C", "457 L", "304 paslanmaz"],
   cta: "Ürün sayfasına git →",
   href: "/shop/sogutma/oztiryakiler-endustriyel-mutfak__79e3-37nmv-03",
-  image: "/images/catalog/ozti/web/ozti-79e3-37nmv-03.jpg",
+  image: "/images/catalog/ozti/web/ozti-79e3-37nmv-03-cutout.png",
   bg: "#001e50",
   textLight: true,
 };
@@ -68,7 +68,7 @@ export const cafemarktHeroSideBottom: CafemarktPromoCard = {
   title: "Set üstü dörtlü ocak",
   subtitle: "900 serisi gazlı — 80×90 cm, pişirme hattı",
   cta: "Pişirme vitrini",
-  href: "/shop/pisirme?tip=sanayi-ocaklari",
+  href: "/shop/pisirme?tip=ocak-vitrini",
   image: "/images/catalog/ozti/web/ozti-7865-n1-80903-20.jpg",
   bg: "#e8eef5",
 };
