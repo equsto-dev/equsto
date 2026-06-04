@@ -74,12 +74,13 @@ body.eq-home-decor .eq-mx-hero__thumbs {
   background: linear-gradient(180deg, rgba(0, 20, 50, 0.08) 0%, rgba(0, 20, 50, 0.72) 100%);
 }
 
-.eq-mx-hero__slide--bar,
-.eq-mx-hero__slide--imt300 {
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--bar,
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300 {
   background-color: #001e50;
   display: flex;
   flex-direction: row;
   align-items: stretch;
+  overflow: hidden;
 }
 
 .eq-mx-hero__slide--bar .eq-mx-hero__slide-media,
@@ -118,6 +119,8 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300
 
 .eq-mx-hero__slide--bar .eq-mx-hero__slide-promo,
 .eq-mx-hero__slide--imt300 .eq-mx-hero__slide-promo {
+  position: relative;
+  z-index: 2;
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
@@ -127,6 +130,13 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300
   padding: clamp(16px, 3vw, 36px) clamp(20px, 4vw, 48px);
   color: #fff;
   background: linear-gradient(105deg, #001e50 0%, #003366 55%, #004080 100%);
+}
+
+.eq-mx-hero__slide--imt300 .eq-mx-hero__slide-cta {
+  display: inline-block;
+  margin-top: 12px;
+  text-decoration: none;
+  color: #fff;
 }
 
 .eq-mx-hero__slide--bar .eq-mx-hero__slide-promo h2,
