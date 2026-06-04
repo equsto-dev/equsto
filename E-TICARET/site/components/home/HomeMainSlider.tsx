@@ -27,7 +27,9 @@ export function HomeMainSlider() {
                 const alt =
                   slide.id === "imt300"
                     ? "IMT300 berrak buz makinesi"
-                    : "Proje Fabrikası — bar ve mutfak plan eskizi";
+                    : slide.id === "besos"
+                      ? "Besos modüler kokteyl istasyonu"
+                      : "Proje Fabrikası — bar ve mutfak plan eskizi";
                 return (
                   <a key={slide.id} className={activeClass} href={slide.href}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}

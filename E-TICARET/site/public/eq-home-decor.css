@@ -66,6 +66,11 @@ body.eq-home-decor .eq-mx-hero__thumbs {
   background-color: #f5f6f8;
 }
 
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--bar .eq-mx-hero__slide-bg {
+  object-fit: contain;
+  object-position: center center;
+}
+
 .eq-mx-hero__slide--bar .eq-mx-hero__slide-shade {
   background: linear-gradient(180deg, transparent 55%, rgba(0, 20, 50, 0.55) 100%);
 }
