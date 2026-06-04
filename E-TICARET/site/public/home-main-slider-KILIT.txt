@@ -1,5 +1,5 @@
 ═══════════════════════════════════════════════════════════════════════════
-KİLİT — Ana sayfa alt slider (PFOS · Bar Design · Soğutma · IMT300)
+KİLİT — Ana sayfa alt slider (PFOS · Bar Design · Electrolux XP · IMT300)
 Onay: 2026-06-04 · Commit referans: 1094ec6d
 ═══════════════════════════════════════════════════════════════════════════
 
@@ -10,7 +10,7 @@ AYRI bileşendir (HomeMainSlider). Değiştirmeden önce AÇIK ONAY alın.
   • 4 slayt, 4 thumb; otomatik geçiş (eq-home-mutbex.js initHero)
   • PFOS: <img> + object-fit contain — plan eskizi tam görünür (1024×331)
   • Bar Design: split — sol kokteyl istasyonu (contain, beyaz zemin), sağ tanıtım + Manhattan tamamlayıcı kartları
-  • Soğutma: background-image cover (hero-sogutma-pisirme-combo.jpg)
+  • Electrolux XP: split — sol modüler pişirme hattı (contain, siyah zemin), sağ tanıtım metni
   • IMT300: <img> + object-fit contain — berrak buz makinesi tam görünür
   • Sol alt kapak metinleri (title · subtitle · Keşfet →) değişmez
 
@@ -20,8 +20,9 @@ AYRI bileşendir (HomeMainSlider). Değiştirmeden önce AÇIK ONAY alın.
   Bar Design (hero-img, eq-mx-hero__slide--bar):
     /images/home/hero-bar-cocktailstation.png (1200×713)
     Metin: Bar Design Studio · IMT300 berrak buz · modüler kokteyl istasyonu
-  Soğutma (background, eq-mx-hero__slide--sogutma):
-    /images/home/hero-sogutma-pisirme-combo.jpg (2048×1044)
+  Electrolux XP (hero-img, eq-mx-hero__slide--electrolux-xp):
+    /images/home/electrolux-xp-pisirme.webp (600×360)
+    Metin: XP Pişirme Serisi · 700XP · 900XP · modüler pişirme hattı
   IMT300 (hero-img, eq-mx-hero__slide--imt300):
     /images/imt300/imt300-1.jpg (800×600)
 
@@ -37,7 +38,7 @@ AYRI bileşendir (HomeMainSlider). Değiştirmeden önce AÇIK ONAY alın.
   public/eq-home-decor.css            — --bar / --imt300 contain, PFOS contain
   public/images/pfos/proje-fabrikasi-bar-plan-eskiz.png
   public/images/home/hero-bar-cocktailstation.png
-  public/images/home/hero-sogutma-pisirme-combo.jpg
+  public/images/home/electrolux-xp-pisirme.webp
   public/images/imt300/imt300-1.jpg
   lib/shop/assets.ts                  — SHOP_ASSET_V
 

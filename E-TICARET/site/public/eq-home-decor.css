@@ -282,7 +282,7 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--sogutm
 /* mutbex.css .eq-mx-hero__slide { display:block } dosyadan sonra gelir — yüksek özgüllük şart */
 body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--bar,
 body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300,
-body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--sogutma,
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--electrolux-xp,
 body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split {
   background-color: #001e50;
   display: flex;
@@ -305,12 +305,18 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split 
 }
 
 .eq-mx-hero__slide--bar.eq-mx-hero__slide--split .eq-mx-hero__slide-media,
-.eq-mx-hero__slide--imt300.eq-mx-hero__slide--split .eq-mx-hero__slide-media {
+.eq-mx-hero__slide--imt300.eq-mx-hero__slide--split .eq-mx-hero__slide-media,
+.eq-mx-hero__slide--electrolux-xp.eq-mx-hero__slide--split .eq-mx-hero__slide-media {
   background: #001e50;
 }
 
+.eq-mx-hero__slide--electrolux-xp.eq-mx-hero__slide--split .eq-mx-hero__slide-media {
+  background: #000;
+}
+
 .eq-mx-hero__slide--bar.eq-mx-hero__slide--split .eq-mx-hero__slide-media .eq-mx-hero__slide-bg,
-.eq-mx-hero__slide--imt300.eq-mx-hero__slide--split .eq-mx-hero__slide-media .eq-mx-hero__slide-bg {
+.eq-mx-hero__slide--imt300.eq-mx-hero__slide--split .eq-mx-hero__slide-media .eq-mx-hero__slide-bg,
+.eq-mx-hero__slide--electrolux-xp.eq-mx-hero__slide--split .eq-mx-hero__slide-media .eq-mx-hero__slide-bg {
   object-fit: contain;
   object-position: right center;
 }
@@ -319,8 +325,13 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split 
   object-position: left center;
 }
 
+.eq-mx-hero__slide--electrolux-xp.eq-mx-hero__slide--split .eq-mx-hero__slide-media .eq-mx-hero__slide-bg {
+  object-position: center center;
+}
+
 body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--bar .eq-mx-hero__slide-media .eq-mx-hero__slide-bg,
 body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300 .eq-mx-hero__slide-media .eq-mx-hero__slide-bg,
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--electrolux-xp .eq-mx-hero__slide-media .eq-mx-hero__slide-bg,
 body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split .eq-mx-hero__slide-media .eq-mx-hero__slide-bg {
   position: relative;
   inset: auto;
@@ -361,7 +372,8 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split 
   box-sizing: border-box;
 }
 
-.eq-mx-hero__slide--imt300 .eq-mx-hero__slide-cta {
+.eq-mx-hero__slide--imt300 .eq-mx-hero__slide-cta,
+.eq-mx-hero__slide--electrolux-xp .eq-mx-hero__slide-cta {
   display: inline-block;
   margin-top: 12px;
   text-decoration: none;
@@ -377,7 +389,8 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split 
 }
 
 .eq-mx-hero__slide--bar .eq-mx-hero__slide-promo-kicker,
-.eq-mx-hero__slide--imt300 .eq-mx-hero__slide-promo-kicker {
+.eq-mx-hero__slide--imt300 .eq-mx-hero__slide-promo-kicker,
+.eq-mx-hero__slide--electrolux-xp .eq-mx-hero__slide-promo-kicker {
   margin: 0 0 6px;
   font-size: 11px;
   font-weight: 600;
@@ -386,13 +399,15 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split 
 }
 
 .eq-mx-hero__slide--bar .eq-mx-hero__slide-promo-em,
-.eq-mx-hero__slide--imt300 .eq-mx-hero__slide-promo-em {
+.eq-mx-hero__slide--imt300 .eq-mx-hero__slide-promo-em,
+.eq-mx-hero__slide--electrolux-xp .eq-mx-hero__slide-promo-em {
   font-style: italic;
   font-weight: 600;
 }
 
 .eq-mx-hero__slide--bar .eq-mx-hero__slide-promo-lead,
-.eq-mx-hero__slide--imt300 .eq-mx-hero__slide-promo-lead {
+.eq-mx-hero__slide--imt300 .eq-mx-hero__slide-promo-lead,
+.eq-mx-hero__slide--electrolux-xp .eq-mx-hero__slide-promo-lead {
   flex: 0 0 auto;
   margin: 0 0 8px;
   font-size: clamp(10px, 1.05vw, 13px);
@@ -403,7 +418,8 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split 
 }
 
 .eq-mx-hero__slide--bar .eq-mx-hero__slide-promo-badges,
-.eq-mx-hero__slide--imt300 .eq-mx-hero__slide-promo-badges {
+.eq-mx-hero__slide--imt300 .eq-mx-hero__slide-promo-badges,
+.eq-mx-hero__slide--electrolux-xp .eq-mx-hero__slide-promo-badges {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
@@ -413,7 +429,8 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split 
 }
 
 .eq-mx-hero__slide--bar .eq-mx-hero__slide-promo-badges li,
-.eq-mx-hero__slide--imt300 .eq-mx-hero__slide-promo-badges li {
+.eq-mx-hero__slide--imt300 .eq-mx-hero__slide-promo-badges li,
+.eq-mx-hero__slide--electrolux-xp .eq-mx-hero__slide-promo-badges li {
   padding: 4px 10px;
   border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 2px;
@@ -423,7 +440,8 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split 
 }
 
 .eq-mx-hero__slide--bar .eq-mx-hero__slide-promo-points,
-.eq-mx-hero__slide--imt300 .eq-mx-hero__slide-promo-points {
+.eq-mx-hero__slide--imt300 .eq-mx-hero__slide-promo-points,
+.eq-mx-hero__slide--electrolux-xp .eq-mx-hero__slide-promo-points {
   flex: 0 1 auto;
   margin: 8px 0 0;
   padding: 0 0 0 1.15em;
@@ -433,12 +451,14 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split 
 }
 
 .eq-mx-hero__slide--bar .eq-mx-hero__slide-promo-points li,
-.eq-mx-hero__slide--imt300 .eq-mx-hero__slide-promo-points li {
+.eq-mx-hero__slide--imt300 .eq-mx-hero__slide-promo-points li,
+.eq-mx-hero__slide--electrolux-xp .eq-mx-hero__slide-promo-points li {
   margin-bottom: 4px;
 }
 
 .eq-mx-hero__slide--bar .eq-mx-hero__slide-promo-points li:last-child,
-.eq-mx-hero__slide--imt300 .eq-mx-hero__slide-promo-points li:last-child {
+.eq-mx-hero__slide--imt300 .eq-mx-hero__slide-promo-points li:last-child,
+.eq-mx-hero__slide--electrolux-xp .eq-mx-hero__slide-promo-points li:last-child {
   margin-bottom: 0;
 }
 
@@ -502,7 +522,8 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split 
 }
 
 .eq-mx-hero__slide--bar .eq-mx-hero__slide-cta,
-.eq-mx-hero__slide--imt300 .eq-mx-hero__slide-cta {
+.eq-mx-hero__slide--imt300 .eq-mx-hero__slide-cta,
+.eq-mx-hero__slide--electrolux-xp .eq-mx-hero__slide-cta {
   margin-top: 12px;
   font-size: clamp(13px, 1.4vw, 16px);
   align-self: flex-start;
@@ -512,7 +533,8 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split 
 
 /* Split — mutbex flex yedeğini geçersiz kıl; tanıtım metni boşluğu doldurur */
 body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--bar.eq-mx-hero__slide--split,
-body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300.eq-mx-hero__slide--split {
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300.eq-mx-hero__slide--split,
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--electrolux-xp.eq-mx-hero__slide--split {
   display: grid !important;
   grid-template-columns: minmax(200px, 36%) minmax(0, 1fr);
   gap: 0;
@@ -520,8 +542,10 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300
 
 body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--bar.eq-mx-hero__slide--split .eq-mx-hero__slide-media,
 body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300.eq-mx-hero__slide--split .eq-mx-hero__slide-media,
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--electrolux-xp.eq-mx-hero__slide--split .eq-mx-hero__slide-media,
 body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--bar.eq-mx-hero__slide--split .eq-mx-hero__slide-promo,
-body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300.eq-mx-hero__slide--split .eq-mx-hero__slide-promo {
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300.eq-mx-hero__slide--split .eq-mx-hero__slide-promo,
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--electrolux-xp.eq-mx-hero__slide--split .eq-mx-hero__slide-promo {
   flex: unset !important;
   width: 100% !important;
   max-width: none !important;
@@ -531,13 +555,13 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300
 @media (max-width: 720px) {
   body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--bar.eq-mx-hero__slide--split,
   body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300.eq-mx-hero__slide--split,
-  body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--sogutma.eq-mx-hero__slide--split {
+  body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--electrolux-xp.eq-mx-hero__slide--split {
     grid-template-columns: 1fr !important;
   }
 
   body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--bar,
   body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300,
-  body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--sogutma,
+  body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--electrolux-xp,
   body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split {
     flex-direction: column;
   }
@@ -562,7 +586,8 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300
   }
 
   .eq-mx-hero__slide--bar .eq-mx-hero__slide-promo-points,
-  .eq-mx-hero__slide--imt300 .eq-mx-hero__slide-promo-points {
+  .eq-mx-hero__slide--imt300 .eq-mx-hero__slide-promo-points,
+  .eq-mx-hero__slide--electrolux-xp .eq-mx-hero__slide-promo-points {
     display: none;
   }
 

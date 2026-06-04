@@ -29,7 +29,7 @@ mustExist("components/home/HomeVitrinPortals.tsx");
 mustExist("lib/home-slider-content.ts");
 mustExist("public/images/pfos/proje-fabrikasi-bar-plan-eskiz.png");
 mustExist("public/images/home/hero-bar-cocktailstation.png");
-mustExist("public/images/home/hero-sogutma-pisirme-combo.jpg");
+mustExist("public/images/home/electrolux-xp-pisirme.webp");
 mustExist("public/images/imt300/imt300-1.jpg");
 
 const kilit = read("public/home-main-slider-KILIT.txt");
@@ -49,6 +49,9 @@ if (slider.includes('slide.id === "besos" || slide.id === "sogutma"')) {
 }
 if (!slider.includes("Besos modüler kokteyl istasyonu")) {
   fail("HomeMainSlider.tsx: Bar Design alt metni yok");
+}
+if (!slider.includes("Electrolux Professional XP pişirme serisi")) {
+  fail("HomeMainSlider.tsx: Electrolux XP alt metni yok");
 }
 if (!slider.includes("eq-mx-hero__slide-promo-em")) {
   fail("HomeMainSlider.tsx: split slayt promo-em yok");
@@ -81,11 +84,11 @@ if (!content.includes("width: 1200") || !content.includes("height: 713")) {
 const slidesStart = content.indexOf("export const homeMainSliderSlides");
 const slidesBody = slidesStart >= 0 ? content.slice(slidesStart) : content;
 const besosIdx = slidesBody.indexOf('id: "besos",');
-const sogutmaIdx = slidesBody.indexOf('id: "sogutma",');
-if (besosIdx < 0 || sogutmaIdx < 0) {
-  fail("home-slider-content.ts: besos/sogutma slayt tanımı yok");
+const electroluxIdx = slidesBody.indexOf('id: "electrolux-xp",');
+if (besosIdx < 0 || electroluxIdx < 0) {
+  fail("home-slider-content.ts: besos/electrolux-xp slayt tanımı yok");
 } else {
-  const besosBlock = slidesBody.slice(besosIdx, sogutmaIdx);
+  const besosBlock = slidesBody.slice(besosIdx, electroluxIdx);
   if (!besosBlock.includes('kind: "hero-img"')) {
     fail("home-slider-content.ts: Bar Design kind hero-img değil");
   }
@@ -113,8 +116,17 @@ if (!content.includes("homeMainSliderSogutmaPisirmeImage")) {
 if (!content.includes('path: "/images/home/hero-sogutma-pisirme-combo.jpg"')) {
   fail("home-slider-content.ts: sogutma kompozit yolu değişmiş");
 }
-if (!content.includes("Atalay pişirme")) {
-  fail("home-slider-content.ts: sogutma slayt metni değişmiş");
+if (!content.includes("homeMainSliderElectroluxXpImage")) {
+  fail("home-slider-content.ts: Electrolux XP görsel sabiti yok");
+}
+if (!content.includes('path: "/images/home/electrolux-xp-pisirme.webp"')) {
+  fail("home-slider-content.ts: Electrolux XP görsel yolu değişmiş");
+}
+if (!content.includes("XP Pişirme Serisi")) {
+  fail("home-slider-content.ts: Electrolux XP slayt başlığı değişmiş");
+}
+if (!content.includes("700XP ve 900XP")) {
+  fail("home-slider-content.ts: Electrolux XP slayt metni değişmiş");
 }
 if (!content.includes("Bar Design Studio")) {
   fail("home-slider-content.ts: Bar Design başlığı değişmiş");
@@ -151,8 +163,8 @@ if (!decor.includes("eq-mx-hero__slide--bar")) {
 if (!decor.includes("eq-mx-hero__slide--imt300")) {
   fail("eq-home-decor.css: imt300 slayt stili yok");
 }
-if (!decor.includes("eq-mx-hero__slide--sogutma")) {
-  fail("eq-home-decor.css: sogutma slayt stili yok");
+if (!decor.includes("eq-mx-hero__slide--electrolux-xp")) {
+  fail("eq-home-decor.css: electrolux-xp slayt stili yok");
 }
 const decorNorm = decor.replace(/\s+/g, " ");
 const splitContain =
@@ -164,7 +176,11 @@ const splitContain =
 const splitFlex =
   decorNorm.includes(
     "body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300",
-  ) && decor.includes("display: flex");
+  ) &&
+  decorNorm.includes(
+    "body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--electrolux-xp",
+  ) &&
+  decor.includes("display: flex");
 if (!splitContain) fail("eq-home-decor.css: split slayt contain kuralı yok");
 if (!splitFlex) fail("eq-home-decor.css: IMT300 yüksek özgüllüklü flex kuralı yok");
 if (!decor.includes("eq-home-platform-hero")) {
@@ -197,4 +213,4 @@ if (err) {
   console.error("[verify-home-main-slider-kilit] Kilit ihlali");
   process.exit(1);
 }
-console.log("[verify-home-main-slider-kilit] OK — PFOS · Bar contain · Soğutma · IMT300");
+console.log("[verify-home-main-slider-kilit] OK — PFOS · Bar contain · Electrolux XP · IMT300");
