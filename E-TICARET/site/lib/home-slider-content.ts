@@ -6,6 +6,24 @@ export const homeMainSliderPfosImage = {
   height: 331,
 } as const;
 
+export const homeMainSliderSogutmaPisirmeImage = {
+  path: "/images/home/hero-sogutma-pisirme-combo.jpg",
+  width: 2048,
+  height: 1044,
+} as const;
+
+export const homeMainSliderBarImage = {
+  path: "/images/home/hero-bar-cocktailstation.png",
+  width: 1200,
+  height: 713,
+} as const;
+
+export const homeMainSliderImt300Image = {
+  path: "/images/imt300/imt300-1.jpg",
+  width: 800,
+  height: 600,
+} as const;
+
 export type HomeMainSliderSlide =
   | {
       id: "pfos";
@@ -42,24 +60,6 @@ export type HomeMainSliderSlide =
       image: typeof homeMainSliderBarImage | typeof homeMainSliderImt300Image;
       thumbSrc: string;
     };
-
-export const homeMainSliderSogutmaPisirmeImage = {
-  path: "/images/home/hero-sogutma-pisirme-combo.jpg",
-  width: 2048,
-  height: 1044,
-} as const;
-
-export const homeMainSliderBarImage = {
-  path: "/images/home/hero-bar-cocktailstation.png",
-  width: 1200,
-  height: 713,
-} as const;
-
-export const homeMainSliderImt300Image = {
-  path: "/images/imt300/imt300-1.jpg",
-  width: 800,
-  height: 600,
-} as const;
 
 export const homeMainSliderSlides: HomeMainSliderSlide[] = [
   {
