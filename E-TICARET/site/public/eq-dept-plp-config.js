@@ -31,8 +31,8 @@
       lead: 'Çay, meyve suyu, bar blender ve sıcak içecek ekipmanları',
     },
     tezgah: {
-      title: 'Çalışma Tezgahları',
-      lead: 'Paslanmaz çalışma tezgahları, evyeli modeller ve duvar raf üniteleri',
+      title: 'Tezgahları',
+      lead: 'Taban raflı, taban ve ara raflı ile dolaplı paslanmaz çalışma tezgahları',
     },
     dolap: {
       title: 'Dolaplar',

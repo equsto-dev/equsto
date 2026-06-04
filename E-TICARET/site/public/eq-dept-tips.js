@@ -142,9 +142,9 @@
     { tip: "cafe-aksesuar", dept: "icecek", label: "Cafe Tezgah & Aksesuar", search: "ahşap ön|ahsap on|baza paslanmaz|küver|kuver|şampanya kovası|sampanya kovasi|tepsi kaydır" },
     { tip: "slug-cay", dept: "icecek", label: "Çay Ekipmanları (diğer)", slug: "cay-kazanlari-cay-makineleri-cay-otomatlari" },
     { tip: "slug-otom", dept: "icecek", label: "Yiyecek & İçecek Hattı", slug: "yiyecek-ve-icecek-otomatlari-" },
-    { tip: "calisma-tezgahi", dept: "tezgah", label: "Çalışma Tezgahları", search: "çalışma tezgah|work table|paslanmaz çalışma" },
-    { tip: "evyeli-tezgah", dept: "tezgah", label: "Evyeli Tezgahlar", search: "evyeli|evye|sink|lavabo" },
-    { tip: "duvar-raf-tezgah", dept: "tezgah", label: "Duvar Raf Tezgahları", search: "duvar raf|wall shelf|raf tezgah" },
+    { tip: "taban-rafli", dept: "tezgah", label: "Taban Raflı", search: "taban raf|taban-raf" },
+    { tip: "taban-ve-ara-rafli", dept: "tezgah", label: "Taban ve Ara Raflı", search: "taban raf|ara raf" },
+    { tip: "dolapli-tezgah", dept: "tezgah", label: "Dolaplı", search: "dolapli|dolaplı|setalti dolap" },
     { tip: "proso-tumu", dept: "market-reyon", label: "Proso", search: "proso profesyonel|prosogutma" },
     { tip: "proso-sutluk", dept: "market-reyon", label: "Proso Sütlükler", search: "proso-sutluk|sütlük|sutluk|lion|rhino|falcon|puma|panther" },
     { tip: "proso-kisa-sutluk", dept: "market-reyon", label: "Proso Kısa Sütlük", search: "proso-kisa|kısa sütlük|kisa sutluk" },
@@ -762,9 +762,27 @@
     return false;
   }
 
+  function tezgahStructureMatch(u, tileId) {
+    var hay = productHaystack(u);
+    var cat = productCategorySlug(u);
+    var blob = hay + " " + cat;
+    var hasTabanRaf = /taban[\s\-_]*raf|taban-raf/.test(blob) && !/taban[\s\-_]*rafsiz|taban-rafsiz/.test(blob);
+    var hasAraRaf = /ara[\s\-_]*raf|ara-raf/.test(blob);
+    var hasDolap =
+      /\bdolapli\b|dolaplı|setalti-dolap|set-alti-dolap|aratezgah-ve-dolap|dolapli-calisma/.test(blob);
+    if (tileId === "dolapli-tezgah") return hasDolap;
+    if (tileId === "taban-ve-ara-rafli") return hasTabanRaf && hasAraRaf && !hasDolap;
+    if (tileId === "taban-rafli") return hasTabanRaf && !hasAraRaf && !hasDolap;
+    return false;
+  }
+
   function tileMatchProduct(u, tile) {
     if (!tile) return false;
     var cat = productCategorySlug(u);
+
+    if (tile.id === "taban-rafli" || tile.id === "taban-ve-ara-rafli" || tile.id === "dolapli-tezgah") {
+      return tezgahStructureMatch(u, tile.id);
+    }
 
     if (tile.id === "asansorlu-izgara" || tile.id === "salamander") {
       return isSalamanderProduct(u);
@@ -877,7 +895,7 @@
         seen[t.id] = true;
       }
     });
-    if (dept === "kahve" || dept === "yikama") return out;
+    if (dept === "kahve" || dept === "yikama" || dept === "tezgah") return out;
     if (dept === "market-reyon") return filterMarketReyonTiles(shuffleDeptList(dept, out, "tiles-merge"));
     return shuffleDeptList(dept, out, "tiles-merge");
   }
@@ -888,7 +906,7 @@
 
   function tilesFor(dept) {
     var tiles = byDept[dept] || [];
-    if (dept === "kahve" || dept === "yikama") return tiles.slice();
+    if (dept === "kahve" || dept === "yikama" || dept === "tezgah") return tiles.slice();
     if (dept === "market-reyon") return filterMarketReyonTiles(shuffleDeptList(dept, tiles, "tiles"));
     return shuffleDeptList(dept, tiles, "tiles");
   }
