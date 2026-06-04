@@ -50,6 +50,12 @@ if (slider.includes('slide.id === "besos" || slide.id === "sogutma"')) {
 if (!slider.includes("Besos modüler kokteyl istasyonu")) {
   fail("HomeMainSlider.tsx: Bar Design alt metni yok");
 }
+if (!slider.includes("eq-mx-hero__slide-promo-em")) {
+  fail("HomeMainSlider.tsx: split slayt promo-em yok");
+}
+if (!slider.includes("eq-mx-hero__slide-complements")) {
+  fail("HomeMainSlider.tsx: Bar tamamlayıcı kartları yok");
+}
 
 const mount = read("components/home/HomeMainSliderMount.tsx");
 if (!mount.includes("eq-home-slider-mount")) fail("HomeMainSliderMount.tsx: mount id yok");
@@ -113,6 +119,12 @@ if (!content.includes("Atalay pişirme")) {
 if (!content.includes("Bar Design Studio")) {
   fail("home-slider-content.ts: Bar Design başlığı değişmiş");
 }
+if (!content.includes("Modüler Kokteyl İstasyonu")) {
+  fail("home-slider-content.ts: Bar Design titleEm yok");
+}
+if (!content.includes("homeMainSliderBesosComplements")) {
+  fail("home-slider-content.ts: Manhattan tamamlayıcıları yok");
+}
 
 const portals = read("components/home/HomeVitrinPortals.tsx");
 if (!portals.includes("HomeMainSliderMount")) fail("HomeVitrinPortals.tsx: slider mount yok");
@@ -142,12 +154,25 @@ if (!decor.includes("eq-mx-hero__slide--imt300")) {
 if (!decor.includes("eq-mx-hero__slide--sogutma")) {
   fail("eq-home-decor.css: sogutma slayt stili yok");
 }
-const barContain = decor.includes(".eq-mx-hero__slide--bar .eq-mx-hero__slide-bg") &&
+const decorNorm = decor.replace(/\s+/g, " ");
+const splitContain =
+  decor.includes("eq-mx-hero__slide--split") &&
+  decorNorm.includes(
+    "body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300 .eq-mx-hero__slide-media .eq-mx-hero__slide-bg",
+  ) &&
   decor.includes("object-fit: contain");
-const imtContain = decor.includes(".eq-mx-hero__slide--imt300 .eq-mx-hero__slide-bg") &&
-  decor.includes("object-fit: contain");
-if (!barContain) fail("eq-home-decor.css: Bar Design contain kuralı yok");
-if (!imtContain) fail("eq-home-decor.css: IMT300 contain kuralı yok");
+const splitFlex =
+  decorNorm.includes(
+    "body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300",
+  ) && decor.includes("display: flex");
+if (!splitContain) fail("eq-home-decor.css: split slayt contain kuralı yok");
+if (!splitFlex) fail("eq-home-decor.css: IMT300 yüksek özgüllüklü flex kuralı yok");
+if (!decor.includes("eq-mx-hero__slide-complements")) {
+  fail("eq-home-decor.css: tamamlayıcı ürün ızgarası yok");
+}
+if (!decor.includes("eq-mx-hero__slide--bar .eq-mx-hero__slide-promo-badges")) {
+  fail("eq-home-decor.css: Bar promo rozetleri yok");
+}
 
 const vitrinCfg = read("public/eq-vitrin-config.js");
 if (!vitrinCfg.includes("isHomeMainSliderLocked")) {

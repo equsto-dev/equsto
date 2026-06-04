@@ -17,6 +17,7 @@ import type {
 } from "../schemas/pfos.schema";
 import { KONSEPT_LABELS, type Konsept } from "../schemas/pfos.schema";
 import { finalizeKalemlerForTeklif } from "../teklif/assign-poz";
+import { applyNakliyeMontajToKalemler } from "../teklif/nakliye-montaj";
 import type { KategoriKodu } from "../schemas/pfos.schema";
 import { isDynamicKonsept } from "./templates";
 import { matchProductForReferansKalem } from "../referans/match-referans-kalem";
@@ -241,7 +242,7 @@ export async function calculateUnifiedQuote(
     referansListOnly,
   );
 
-  const kalemler = finalizeKalemlerForTeklif(
+  const kalemlerRaw = finalizeKalemlerForTeklif(
     dedupeKalemler([...zoneKalemler, ...templateKalemler]).map(normalizeKategoriKodu),
     template.teklifPozModu || template.teklifBolum
       ? {
@@ -250,6 +251,11 @@ export async function calculateUnifiedQuote(
         }
       : undefined,
   );
+
+  const kalemler = await applyNakliyeMontajToKalemler(kalemlerRaw, {
+    m2: req.m2,
+    sehir: sehir ?? null,
+  });
 
   const zorunluKalemler = kalemler.filter((k) => k.tip === "zorunlu");
   const eslesmisZorunlu = zorunluKalemler.filter((k) => k.urun !== null);

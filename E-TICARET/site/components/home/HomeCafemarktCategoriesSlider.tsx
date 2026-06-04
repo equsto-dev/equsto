@@ -19,48 +19,6 @@ function assetUrl(path: string): string {
   return `${path}${sep}v=${SHOP_ASSET_V}`;
 }
 
-function goLink(
-  e: React.MouseEvent,
-  card: {
-    href: string;
-    legacyGo?: string;
-    dept?: string;
-    anchor?: string;
-  },
-  didDrag: boolean,
-) {
-  if (didDrag) {
-    e.preventDefault();
-    return;
-  }
-  e.preventDefault();
-  const w = window as Window & {
-    eqGo?: (key: string) => void;
-    eqDeptGo?: (dept: string) => void;
-  };
-  if (card.anchor) {
-    const el = document.getElementById(card.anchor);
-    const onHome = window.location.pathname === "/" || window.location.pathname === "";
-    if (onHome && el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-      return;
-    }
-    window.location.href = card.anchor.startsWith("#")
-      ? `/${card.anchor}`
-      : `/#${card.anchor}`;
-    return;
-  }
-  if (card.legacyGo && typeof w.eqGo === "function") {
-    w.eqGo(card.legacyGo);
-    return;
-  }
-  if (card.dept && typeof w.eqDeptGo === "function" && !card.href.includes("?")) {
-    w.eqDeptGo(card.dept);
-    return;
-  }
-  window.location.href = card.href;
-}
-
 function perPageForWidth(w: number): number {
   if (w <= 640) return 2;
   if (w <= 1100) return 3;
@@ -94,7 +52,9 @@ function CategoryCard({
       className="eq-cmkt-cat"
       href={cat.href}
       draggable={false}
-      onClick={(e) => goLink(e, cat, didDragRef.current)}
+      onClick={(e) => {
+        if (didDragRef.current) e.preventDefault();
+      }}
     >
       <span className={popCatImgWrapClass(cat)}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -261,6 +221,8 @@ export function HomeCafemarktCategoriesSlider({
 
   const onPointerDown = (e: ReactPointerEvent<HTMLDivElement>) => {
     if (e.pointerType !== "mouse" || e.button !== 0) return;
+    const target = e.target;
+    if (target instanceof Element && target.closest(".eq-cmkt-cat")) return;
     const vp = viewportRef.current;
     if (!vp) return;
 

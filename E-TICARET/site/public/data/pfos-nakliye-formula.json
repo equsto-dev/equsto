@@ -1,0 +1,54 @@
+{
+  "version": 2,
+  "kdv_dahil": true,
+  "not": "Nakliye: İstanbul çıkış × km. Montaj: sahada m² + kalem. KDV dahil TL.",
+  "cikis_sehir": "İstanbul",
+  "nakliye_km": {
+    "taban_tl": 1200,
+    "km_birim_tl": 32,
+    "min_km": 25,
+    "agirlik_birim_tl": 95
+  },
+  "montaj": {
+    "satir_birim_tl": 140,
+    "hacim_sqrt_katsayi": 45,
+    "ekipman_oran": 0.004,
+    "m2": [
+      { "min_m2": 200, "tl": 5500 },
+      { "min_m2": 120, "tl": 3800 },
+      { "min_m2": 80, "tl": 2800 },
+      { "min_m2": 0, "tl": 1800 }
+    ]
+  },
+  "cap": {
+    "min_tl": 3500,
+    "max_tl": 14000,
+    "ekipman_oran_max": 0.012
+  },
+  "heavy_kod": {
+    "EQ-PIS-001": 3,
+    "EQ-PIS-012": 2.5,
+    "EQ-PIS-014": 2,
+    "EQ-YIK-001": 3,
+    "EQ-YIK-002": 2,
+    "EQ-CAT-001": 2,
+    "EQ-STK-001": 2,
+    "EQ-SOG-010": 2.5,
+    "EQ-SOG-003": 1.5,
+    "EQ-BKR-001": 2,
+    "EQ-BKR-003": 2
+  },
+  "heavy_keywords": [
+    "bulaşık",
+    "bulasik",
+    "konveksiyon",
+    "soğuk oda",
+    "soguk oda",
+    "kombi",
+    "fırın",
+    "firin",
+    "buzdolabı",
+    "buzdolabi",
+    "tezgah tip"
+  ]
+}

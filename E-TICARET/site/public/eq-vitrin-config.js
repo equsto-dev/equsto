@@ -441,6 +441,7 @@
   }
 
   function isHomeMainSliderLocked() {
+    if (document.querySelector('[data-eq-slider-kilit="1"]')) return true;
     var mount = document.getElementById('eq-home-slider-mount');
     if (!mount) return false;
     if (mount.getAttribute('data-eq-slider-kilit') === '1') return true;

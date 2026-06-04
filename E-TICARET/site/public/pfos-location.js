@@ -113,24 +113,119 @@
     'EQ-BKR-003': 2,
   };
 
+  var NAKLIYE_FORMULA = {
+    cikis_sehir: 'İstanbul',
+    nakliye_km: {
+      taban_tl: 1200,
+      km_birim_tl: 32,
+      min_km: 25,
+      agirlik_birim_tl: 95,
+    },
+    montaj: {
+      satir_birim_tl: 140,
+      hacim_sqrt_katsayi: 45,
+      ekipman_oran: 0.004,
+      m2: [
+        { min_m2: 200, tl: 5500 },
+        { min_m2: 120, tl: 3800 },
+        { min_m2: 80, tl: 2800 },
+        { min_m2: 0, tl: 1800 },
+      ],
+    },
+    cap: { min_tl: 3500, max_tl: 14000, ekipman_oran_max: 0.012 },
+    heavy_keywords: [
+      'bulaşık',
+      'bulasik',
+      'konveksiyon',
+      'soğuk oda',
+      'soguk oda',
+      'kombi',
+      'fırın',
+      'firin',
+      'buzdolabı',
+      'buzdolabi',
+      'tezgah tip',
+    ],
+  };
+
+  var SEHIR_KM = { km_by_sehir: { İstanbul: 0 } };
   var bolgeLoadPromise = null;
+
+  function lookupKmTablo(sehir) {
+    var s = normSehir(sehir);
+    if (!s || !SEHIR_KM.km_by_sehir) return null;
+    if (SEHIR_KM.km_by_sehir[s] != null) return SEHIR_KM.km_by_sehir[s];
+    var low = s.toLocaleLowerCase('tr-TR');
+    var keys = Object.keys(SEHIR_KM.km_by_sehir);
+    for (var i = 0; i < keys.length; i++) {
+      if (keys[i].toLocaleLowerCase('tr-TR') === low) return SEHIR_KM.km_by_sehir[keys[i]];
+    }
+    return null;
+  }
+
+  function effectiveKm(tabloKm, minKm) {
+    var k = Number(tabloKm) || 0;
+    var m = Number(minKm) || 25;
+    if (k <= 0) return m;
+    return Math.max(k, m);
+  }
+
+  function kmFromIstanbul(sehir) {
+    var hedef = normSehir(sehir);
+    var tablo = lookupKmTablo(hedef);
+    if (tablo == null) {
+      return { km: 0, gecerli: false, cikis: NAKLIYE_FORMULA.cikis_sehir || 'İstanbul', hedef: hedef };
+    }
+    var nk = NAKLIYE_FORMULA.nakliye_km || {};
+    return {
+      km: effectiveKm(tablo, nk.min_km || 25),
+      tablo_km: tablo,
+      gecerli: true,
+      cikis: (SEHIR_KM.cikis && SEHIR_KM.cikis.sehir) || 'İstanbul',
+      hedef: hedef,
+    };
+  }
 
   function loadBolgeConfig() {
     if (bolgeLoadPromise) return bolgeLoadPromise;
-    bolgeLoadPromise = fetch('/data/pfos-nakliye-bolgeler.json', { cache: 'default' })
-      .then(function (r) {
-        if (!r.ok) return null;
-        return r.json();
-      })
-      .then(function (j) {
+    bolgeLoadPromise = Promise.all([
+      fetch('/data/pfos-nakliye-bolgeler.json', { cache: 'default' }).then(function (r) {
+        return r.ok ? r.json() : null;
+      }),
+      fetch('/data/pfos-nakliye-formula.json', { cache: 'default' }).then(function (r) {
+        return r.ok ? r.json() : null;
+      }),
+      fetch('/data/pfos-sehir-km.json', { cache: 'default' }).then(function (r) {
+        return r.ok ? r.json() : null;
+      }),
+    ])
+      .then(function (pair) {
+        var j = pair[0];
+        var f = pair[1];
+        var km = pair[2];
         if (j && j.bolge_katsayi) BOLGE_KATSAYI = j.bolge_katsayi;
         if (j && j.sehir_bolge) SEHIR_BOLGE = j.sehir_bolge;
+        if (f) NAKLIYE_FORMULA = Object.assign({}, NAKLIYE_FORMULA, f);
+        if (f && f.heavy_kod) HEAVY_KOD = Object.assign({}, HEAVY_KOD, f.heavy_kod);
+        if (km && km.km_by_sehir) SEHIR_KM = km;
       })
       .catch(function () {});
     return bolgeLoadPromise;
   }
 
   loadBolgeConfig();
+
+  function montajTlForAlan(alan) {
+    var mj = NAKLIYE_FORMULA.montaj || {};
+    var tiers = mj.m2 || NAKLIYE_FORMULA.montaj_m2 || [];
+    var sorted = tiers.slice().sort(function (a, b) {
+      return b.min_m2 - a.min_m2;
+    });
+    for (var i = 0; i < sorted.length; i++) {
+      if (alan >= sorted[i].min_m2) return sorted[i].tl;
+    }
+    return sorted.length ? sorted[sorted.length - 1].tl : 1800;
+  }
 
   function normSehir(s) {
     return String(s || '')
@@ -180,10 +275,13 @@
 
   function lineWeight(row) {
     if (!row) return 1;
-    var kod = row.kod || '';
+    var kod = row.kod || row.sku || '';
     if (HEAVY_KOD[kod]) return HEAVY_KOD[kod];
     var ad = String(row.ad || '').toLocaleLowerCase('tr-TR');
-    if (/bulaşık|konveksiyon|soğuk oda|kombi|fırın|buzdolabı|tezgah tip/i.test(ad)) return 1.8;
+    var kws = NAKLIYE_FORMULA.heavy_keywords || [];
+    for (var i = 0; i < kws.length; i++) {
+      if (ad.indexOf(String(kws[i]).toLocaleLowerCase('tr-TR')) >= 0) return 1.8;
+    }
     return 1;
   }
 
@@ -205,7 +303,17 @@
     }
 
     var bolge = lok.bolge || bolgeForSehir(lok.sehir);
-    var katsayi = lok.bolge_katsayi || katsayiForBolge(bolge);
+    var kmInfo = kmFromIstanbul(lok.sehir);
+    if (!kmInfo.gecerli) {
+      return {
+        tutar: 0,
+        gecerli: false,
+        not: 'Şehir km tablosunda bulunamadı',
+        bolge: bolge,
+        bolge_katsayi: 1,
+        km: 0,
+      };
+    }
 
     var adetToplam = 0;
     var agirlik = 0;
@@ -215,25 +323,46 @@
       agirlik += lineWeight(r) * a;
     });
 
-    var taban = bolge === 'sehirici' ? 4200 : 5200;
-    var satirPayi = Math.round(agirlik * 520);
-    var hacimPayi = Math.round(Math.sqrt(Math.max(alan, 40)) * 180);
-    var degerPayi = ekipmanToplam > 0 ? Math.round(ekipmanToplam * 0.028) : 0;
-    var montaj = alan >= 150 ? 9500 : alan >= 80 ? 6500 : 4200;
+    var F = NAKLIYE_FORMULA;
+    var nk = F.nakliye_km || {};
+    var mj = F.montaj || {};
+    var nakliyeTaban = nk.taban_tl || 1200;
+    var kmPayi = Math.round(kmInfo.km * (nk.km_birim_tl || 32));
+    var nakliyeAgirlik = Math.round(agirlik * (nk.agirlik_birim_tl || 95));
+    var nakliyeTl = nakliyeTaban + kmPayi + nakliyeAgirlik;
 
-    var ham = (taban + satirPayi + hacimPayi + degerPayi + montaj) * katsayi;
+    var montajM2 = montajTlForAlan(alan);
+    var montajSatir = Math.round(agirlik * (mj.satir_birim_tl || 140));
+    var montajHacim = Math.round(Math.sqrt(Math.max(alan, 40)) * (mj.hacim_sqrt_katsayi || 45));
+    var montajDeger =
+      ekipmanToplam > 0 ? Math.round(ekipmanToplam * (mj.ekipman_oran || 0.004)) : 0;
+    var montajTl = montajM2 + montajSatir + montajHacim + montajDeger;
+
+    var cap = F.cap || {};
+    var capMin = cap.min_tl || 3500;
+    var montajCap = Math.min(
+      cap.max_tl || 14000,
+      ekipmanToplam > 0
+        ? Math.round(ekipmanToplam * (cap.ekipman_oran_max || 0.012))
+        : cap.max_tl || 14000,
+    );
+    var montajFinal = montajTl > montajCap ? montajCap : montajTl;
+    var ham = nakliyeTl + montajFinal;
+    if (ham < capMin) ham = capMin;
     var tutar = Math.round(ham / 100) * 100;
 
+    var cikis = kmInfo.cikis || 'İstanbul';
+    var notKm = cikis + ' → ' + kmInfo.hedef + ' · ' + kmInfo.km + ' km nakliye';
     return {
       tutar: tutar,
       gecerli: true,
       bolge: bolge,
-      bolge_katsayi: katsayi,
-      montaj_tl: Math.round(montaj * katsayi / 100) * 100,
-      not:
-        lok.ilce
-          ? lok.sehir + ' / ' + lok.ilce + ' · ' + bolge + ' bölgesi'
-          : lok.sehir + ' · ' + bolge + ' bölgesi',
+      bolge_katsayi: 1,
+      km: kmInfo.km,
+      tablo_km: kmInfo.tablo_km,
+      nakliye_tl: nakliyeTl,
+      montaj_tl: montajFinal,
+      not: lok.ilce ? lok.sehir + ' / ' + lok.ilce + ' · ' + notKm : notKm,
       kalem_sayisi: rows.length,
       adet_toplam: adetToplam,
     };
@@ -344,6 +473,7 @@
   global.EqustoPfosLocation = {
     loadBolgeConfig: loadBolgeConfig,
     bolgeForSehir: bolgeForSehir,
+    kmFromIstanbul: kmFromIstanbul,
     readFromDom: readFromDom,
     estimateNakliye: estimateNakliye,
     rowsToProducts: rowsToProducts,

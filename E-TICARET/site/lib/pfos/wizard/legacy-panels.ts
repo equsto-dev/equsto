@@ -274,7 +274,7 @@ export function wizardHint(
       sub: "Toplam metrekareyi yazın veya kaydırıcıdan seçin.",
     };
   }
-  if (activeId === "s3" || activeId === "s4" || activeId === "s4b" || activeId === "s4c") {
+  if (activeId === "s3" || activeId === "s4" || activeId === "s4b") {
     return {
       pct,
       title: "Konsept seçimi",

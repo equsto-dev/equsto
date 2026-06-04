@@ -186,6 +186,17 @@ const TIP_RULES: TipRule[] = [
     test: (n) => n.includes("icecek havuzu") || n.includes("içecek havuzu"),
   },
   {
+    tip: "setalti-buzdolabi-tek",
+    test: (n) =>
+      n.includes("buzdolab") &&
+      !n.includes("derin") &&
+      !n.includes("derindonduruc") &&
+      (n.includes("setalti") ||
+        n.includes("set alti") ||
+        n.includes("cihazalti") ||
+        n.includes("tezgahalti")),
+  },
+  {
     tip: "depo-buzdolabi-tek-kapili",
     test: (n) =>
       n.includes("buzdolab") &&
@@ -196,16 +207,20 @@ const TIP_RULES: TipRule[] = [
   {
     tip: "setalti-derin-dondurucu",
     test: (n) =>
-      n.includes("derin donduruc") &&
+      (n.includes("derin donduruc") || n.includes("derindonduruc")) &&
       !n.includes("depo") &&
       (n.includes("setalti") ||
+        n.includes("set alti") ||
         n.includes("cihazalti") ||
         n.includes("tek kapili") ||
         n.includes("60*60")),
   },
   {
     tip: "depo-derin-dondurucu",
-    test: (n) => n.includes("derin donduruc") || n.includes("derindonduruc"),
+    test: (n) =>
+      (n.includes("derin donduruc") || n.includes("derindonduruc")) &&
+      !n.includes("setalti") &&
+      !n.includes("cihazalti"),
   },
   {
     tip: "istif-rafi",

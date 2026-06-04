@@ -24,6 +24,9 @@ bölümü vardır. İkisi de HomeVitrinPortals ile mount edilir.
   Birlikte: npm run verify:home-vitrin-kilit
   Vercel prebuild: her iki doğrulama zorunlu
 
+  Yatay hizalama (eq-home-decor): banner + üst üçlü + alt slider aynı max-width
+  (1500px) ve --eq-home-vitrin-pad; üçlü ile slider arası --eq-home-vitrin-gap.
+
   Admin vitrin (eq-vitrin-config.js) kilitli alt slider'ı ezmez.
 
 ── Ortak mount ───────────────────────────────────────────────────────────

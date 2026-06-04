@@ -6,8 +6,8 @@
   "kaynakDosya": "2016-114 ESPRESOLAB WATERGARDEN/2016-114-1.xlsx",
   "not": "Espressolab AVM şube · soğuk teşhir · espresso bar · pasta/kurabiye fırını · bulaşık",
   "yukleme": "2026-05-31T02:59:34.639Z",
-  "kalemSayisi": 21,
-  "toplamAdet": 22,
+  "kalemSayisi": 20,
+  "toplamAdet": 21,
   "kalemler": [
     {
       "bolum": "",
@@ -133,16 +133,8 @@
       "bolum": "",
       "bolumAd": "",
       "poz": "A15",
-      "ad": "FİLTRE KAHVE MAKİNASI",
-      "olcu": "-",
-      "adet": 1
-    },
-    {
-      "bolum": "",
-      "bolumAd": "",
-      "poz": "A16",
-      "ad": "FİLTRE KAHVE MAKİNASI",
-      "olcu": "-",
+      "ad": "FİLTRE KAHVE MAKİNASI (ANIMO M200)",
+      "olcu": "420*380*625",
       "adet": 1
     },
     {

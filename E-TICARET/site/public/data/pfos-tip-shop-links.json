@@ -51,9 +51,10 @@
       "name": "NUOVA SIMONELLI APPIA LIFE II COMPACT YÜKSEK KAŞIKLI KAHVE MAKİNASI"
     },
     "filter_coffee": {
-      "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "9574.B10HW.00",
-      "marka": "Bravilor"
+      "brand": "Animo",
+      "sku": "9574.M200.00",
+      "marka": "Animo",
+      "name": "FILTRE KAHVE MAKINESI ANIMO M200 Cam Sürahi"
     },
     "kahve_degirmeni": {
       "brand": "Nuova Simonelli",
@@ -93,7 +94,8 @@
     },
     "bardak_yikama": {
       "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "073M.11010.AD"
+      "sku": "073M.11010.AD",
+      "name": "BARDAK YIKAMA MAKİNASI OBY 500 B Plus (35x35) PDT — 500 bardak/saat"
     },
     "yer_izgara": {
       "brand": "Öztiryakiler Endüstriyel Mutfak",
@@ -124,8 +126,7 @@
     "montaj_nakliye": {
       "brand": "Equsto Proje Fabrikası",
       "sku": "PFOS-MONTAJ",
-      "name": "Montaj ve nakliye hizmeti",
-      "fiyat_try": 85000
+      "name": "Montaj ve nakliye hizmeti"
     },
     "teshir_vitrin": {
       "brand": "Öztiryakiler Endüstriyel Mutfak",
@@ -184,11 +185,15 @@
       "name": "RINCER EVYESİ",
       "fiyat_try": 15000
     },
+    "setalti_buzdolabi": {
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "sku": "79E4.27NMV.00",
+      "name": "TAG 270 NMV YATAY TİP BUZDOLABI (setaltı, 60×60 modül)"
+    },
     "setalti_derin_dondurucu": {
       "brand": "Öztiryakiler Endüstriyel Mutfak",
       "sku": "7919.06LMV.00",
-      "name": "SETALTI DERİN DONDURUCU",
-      "fiyat_try": 72000
+      "name": "GN 600 LMV TEK KAPI SETALTI DERİN DONDURUCU"
     },
     "dik_tip_buzdolabi": {
       "brand": "Öztiryakiler Endüstriyel Mutfak",

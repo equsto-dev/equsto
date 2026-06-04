@@ -742,7 +742,7 @@ const EQ_ITEMS = {
   // Yıkama
   BULASIK_T:  {kod:'EQ-YIK-001', ad:'Bulaşık Makinası (Tünel Tipi)',        marka:'Winterhalter PT Series',    adet:1, elk:8.7,  gaz:0,  pct:.09, pfDept:'yikama', pfB:'Öztiryakiler Endüstriyel Mutfak', pfN:'Öztiryakiler Bulaşık Makinesi Dijital Programlı OBY500DETR Profesyonel oby500detr'},
   BULASIK_K:  {kod:'EQ-YIK-002', ad:'Bulaşık Makinası (Sepet Tipi)',        marka:'Winterhalter UC Series',    adet:1, elk:4.5,  gaz:0,  pct:.06, pfDept:'yikama', pfB:'Öztiryakiler Endüstriyel Mutfak', pfN:'Öztiryakiler Bulaşık Makinesi Dijital Programlı OBY500DETR Profesyonel oby500detr'},
-  BARDAK_YIK: {kod:'EQ-YIK-003', ad:'Bardak Yıkayıcı (Undercounter)',       marka:'Winterhalter GS315',        adet:1, elk:2.1,  gaz:0,  pct:.04, pfDept:'yikama', pfB:'Öztiryakiler Endüstriyel Mutfak', pfN:'Öztiryakiler Bulaşık Makinesi Dijital Programlı OBY500DETR Profesyonel oby500detr'},
+  BARDAK_YIK: {kod:'EQ-YIK-003', ad:'Bardak Yıkayıcı (Undercounter)',       marka:'Winterhalter GS315',        adet:1, elk:2.1,  gaz:0,  pct:.04, pfDept:'yikama', pfB:'Öztiryakiler Endüstriyel Mutfak', pfN:'BARDAK YIKAMA MAKINASI MEKANIK, (35x35 cm) OBY 500 B Plus PDT 073M.11010.AD'},
   // Davlumbaz
   DAV_B:      {kod:'EQ-DAV-001', ad:'Davlumbaz (Egzoz + Kompanzasyon)',     marka:'Öztiryakiler',              adet:1, elk:2.2,  gaz:0,  pct:.06, davlumbaz:true, pfDept:'pisirme'},
   DAV_K:      {kod:'EQ-DAV-002', ad:'Davlumbaz (Küçük, Egzoz)',             marka:'Öztiryakiler',              adet:1, elk:0.75, gaz:0,  pct:.03, davlumbaz:true, pfDept:'pisirme'},

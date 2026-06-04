@@ -75,6 +75,8 @@ export const URUN_TIPI_ALIASES: Record<string, string> = {
   "icecek-havuzu-soguk": "icecek_havuzu_soguk",
   "depo-derin-dondurucu-cift-kapili": "derin_dondurucu_dik",
   "setalti-derin-dondurucu": "setalti_derin_dondurucu",
+  "setalti-buzdolabi-tek": "setalti_buzdolabi",
+  "setaltı-buzdolabi": "setalti_buzdolabi",
   "filter-coffee-makinesi-2": "filter_coffee",
   "montaj-nakliye": "montaj_nakliye",
   "mikser-planet": "spiral_hamur",
@@ -140,7 +142,7 @@ export const TIP_SEARCH_TERMS: Record<string, string[]> = {
   sarap_dolabi: ["şarap dolab", "sarap dolab"],
   bardak_yikama: ["bardak yık", "bardak yik", "undercounter"],
   teshir_vitrin: ["teşhir vitrin", "teshir vitrin", "soğuk vitrin"],
-  filter_coffee: ["filtre kahve", "filter kahve", "batch brew", "bravilor"],
+  filter_coffee: ["filtre kahve", "filter kahve", "batch brew", "animo", "m200"],
   turk_kahve_cift: ["türk kahve", "turk kahve", "atkm", "cezveli"],
   sise_sogutucu_2k: ["iki kapili", "2 kapili", "90*50", "icecek dolab"],
   sise_sogutucu_3k: ["uc kapili", "3 kapili", "135*50", "icecek dolab"],
@@ -152,6 +154,14 @@ export const TIP_SEARCH_TERMS: Record<string, string[]> = {
   calisma_tezgahi_dolap: ["calisma tezgah", "çalışma tezgah", "140*60"],
   bar_kuvet: ["kuvet", "40*40*25"],
   setalti_derin_dondurucu: ["setalti derin", "setaltı derin", "tezgah alti derin", "cihazalti derin"],
+  setalti_buzdolabi: [
+    "tag 270",
+    "yatay tip buzdolab",
+    "tezgah tipi",
+    "setalti buzdolab",
+    "setaltı buzdolab",
+    "cihazalti buzdolab",
+  ],
   icecek_havuzu_soguk: ["icecek havuzu", "içecek havuzu", "soguk havuz", "soğuk havuz"],
 };
 
@@ -172,6 +182,7 @@ export const TIP_SHOP_CATS: Record<string, string[]> = {
   sise_sogutucu_2k: ["sogutma"],
   sise_sogutucu_3k: ["sogutma"],
   bar_buzdolabi: ["sogutma"],
+  setalti_buzdolabi: ["sogutma"],
   cop_arabasi: ["yardimci"],
   meyve_sikacagi: ["hazirlik", "icecek"],
 };
