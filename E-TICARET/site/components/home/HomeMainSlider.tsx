@@ -30,11 +30,44 @@ export function HomeMainSlider() {
                     : slide.id === "besos"
                       ? "Besos modüler kokteyl istasyonu"
                       : "Proje Fabrikası — bar ve mutfak plan eskizi";
-                if (slide.id === "imt300" || slide.id === "besos") {
-                  const promoLead =
-                    slide.id === "imt300"
-                      ? "Ürün sayfasına git"
-                      : "Modüler kokteyl istasyonu — bar vitrinine göz atın";
+                if (slide.id === "imt300") {
+                  return (
+                    <a key={slide.id} className={activeClass} href={slide.href}>
+                      <div className="eq-mx-hero__slide-media">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          className="eq-mx-hero__slide-bg"
+                          src={assetUrl(slide.image.path)}
+                          alt={alt}
+                          width={slide.image.width}
+                          height={slide.image.height}
+                          decoding="async"
+                        />
+                      </div>
+                      <div className="eq-mx-hero__slide-promo">
+                        <p className="eq-mx-hero__slide-promo-kicker">{slide.promoKicker}</p>
+                        <h2>
+                          {slide.title}{" "}
+                          <em className="eq-mx-hero__slide-promo-em">{slide.titleEm}</em>
+                        </h2>
+                        <p className="eq-mx-hero__slide-promo-lead">{slide.promoLead}</p>
+                        <ul className="eq-mx-hero__slide-promo-badges">
+                          {slide.promoBadges.map((badge) => (
+                            <li key={badge}>{badge}</li>
+                          ))}
+                        </ul>
+                        <ul className="eq-mx-hero__slide-promo-points">
+                          {slide.promoPoints.map((point) => (
+                            <li key={point}>{point}</li>
+                          ))}
+                        </ul>
+                        <span className="eq-mx-hero__slide-cta">{slide.cta}</span>
+                      </div>
+                    </a>
+                  );
+                }
+
+                if (slide.id === "besos") {
                   return (
                     <a key={slide.id} className={activeClass} href={slide.href}>
                       <div className="eq-mx-hero__slide-media">
@@ -51,7 +84,7 @@ export function HomeMainSlider() {
                       <div className="eq-mx-hero__slide-promo">
                         <h2>{slide.title}</h2>
                         <p className="eq-mx-hero__slide-promo-sub">{slide.subtitle}</p>
-                        <p className="eq-mx-hero__slide-promo-lead">{promoLead}</p>
+                        <p className="eq-mx-hero__slide-promo-lead">{slide.promoLead}</p>
                         <span className="eq-mx-hero__slide-cta">{slide.cta}</span>
                       </div>
                     </a>
