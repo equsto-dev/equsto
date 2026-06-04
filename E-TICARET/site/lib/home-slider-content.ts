@@ -12,6 +12,18 @@ export const homeMainSliderSogutmaPisirmeImage = {
   height: 1044,
 } as const;
 
+export const homeMainSliderSogutmaAtalayImage = {
+  path: "/images/catalog/atalay/cafemarkt/atalay-e-agi---660.jpg",
+  width: 800,
+  height: 600,
+} as const;
+
+export const homeMainSliderSogutmaOztiImage = {
+  path: "/images/catalog/ozti/web/ozti-7919-06nmv-00.jpg",
+  width: 800,
+  height: 600,
+} as const;
+
 export const homeMainSliderBarImage = {
   path: "/images/home/hero-bar-cocktailstation.png",
   width: 1200,
@@ -72,9 +84,13 @@ export type HomeMainSliderSlide =
       subtitle: string;
       cta: string;
       thumbLabel: string;
-      kind: "background";
-      background: string;
+      kind: "hero-img";
+      image: typeof homeMainSliderSogutmaPisirmeImage;
       thumbSrc: string;
+      showcase: readonly {
+        tag: string;
+        image: typeof homeMainSliderSogutmaAtalayImage | typeof homeMainSliderSogutmaOztiImage;
+      }[];
     }
   | {
       id: "besos";
@@ -152,9 +168,13 @@ export const homeMainSliderSlides: HomeMainSliderSlide[] = [
     subtitle: "Atalay pişirme · Öztiryakiler soğutma · canlı fiyat",
     cta: "Keşfet →",
     thumbLabel: "Soğutma",
-    kind: "background",
-    background: homeMainSliderSogutmaPisirmeImage.path,
+    kind: "hero-img",
+    image: homeMainSliderSogutmaPisirmeImage,
     thumbSrc: homeMainSliderSogutmaPisirmeImage.path,
+    showcase: [
+      { tag: "Atalay pişirme", image: homeMainSliderSogutmaAtalayImage },
+      { tag: "Öztiryakiler soğutma", image: homeMainSliderSogutmaOztiImage },
+    ],
   },
   {
     id: "imt300",
