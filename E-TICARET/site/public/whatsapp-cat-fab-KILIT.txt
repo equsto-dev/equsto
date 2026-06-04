@@ -1,0 +1,46 @@
+═══════════════════════════════════════════════════════════════════════════
+KİLİT — WhatsApp yüzen kedi FAB (masaüstü)
+Onay: 2026-06-03 · Commit referans: f6a5c453 (mobil guard düzeltmesi)
+═══════════════════════════════════════════════════════════════════════════
+
+Sağ alttaki WhatsApp «kedi» görseli (#equsto-contact-fab). Mobil alt şeritte
+SVG ikon kullanılır; yüzen kedi yalnızca masaüstünde (≥769px) görünür.
+
+── Beklenen davranış ───────────────────────────────────────────────────────
+  • Masaüstü (body.eq-shop, admin/bd-page hariç): sağ alt 62×62 kedi PNG
+  • Görsel: /equsto-bize-ulasin-isimlik.png (yüklenmezse yeşil WA SVG fallback)
+  • Tıklama: sayfa-içi WhatsApp sohbet kartı (web.whatsapp.com açılmaz)
+  • Mobil (≤768px): yüzen kedi GİZLİ; #eq-bnav-wa-slot alt şerit ikonu
+  • PFOS mobil: yüzen kedi kalabilir (theme.css istisnası)
+  • Alt şerit DOM’u masaüstünde de oluşsa kedi SİLİNMEZ (mountFabInTabbar mobil guard)
+
+── Kilitli dosyalar ───────────────────────────────────────────────────────
+  public/contact.js                 — mountFloatingFab, syncFabPlacement, mountFabInTabbar
+  public/contact.css                — FAB boyut/konum
+  public/nav.js                     — eqEnforceMobileChrome, eqSyncMobileChrome
+  public/theme.css                  — FAB yedek stiller (contact.css yüklenmezse)
+  public/equsto-bize-ulasin-isimlik.png
+  components/shop/ShopCoreScripts.tsx — contact.js + equstoSyncContactFab onReady
+  components/shop/ShopStyles.tsx    — contact.css
+  app/(vitrin)/layout.tsx           — ShopCoreScripts vitrin sayfalarında
+  components/shop/ShopBodyClass.tsx — equstoSyncContactFab tetikleme
+  scripts/sync-legacy-assets.mjs    — kedi PNG canlı senkron listesinde
+
+── Kritik kod (bozulursa kedi kaybolur) ───────────────────────────────────
+  mountFabInTabbar: ilk satır → max-width 768px değilse return false
+  init waitTabbar: mountFabInTabbar() DEĞİL → syncFabPlacement() döngüsü
+  eqEnforceMobileChrome: yalnız mobilde #equsto-contact-fab remove
+  WA_FAB_IMG = "/equsto-bize-ulasin-isimlik.png"
+
+YASAK (onay olmadan):
+  • mountFabInTabbar içinde mobil kontrolü kaldırmak
+  • waitTabbar döngüsünde doğrudan mountFabInTabbar() çağırmak
+  • Masaüstünde eqEnforceMobileChrome ile kediyi kalıcı silmek
+  • Kedi PNG yolunu değiştirmek / SVG-only FAB’a geçmek
+  • contact.js’i vitrin layout’tan çıkarmak
+
+── Doğrulama ─────────────────────────────────────────────────────────────
+  npm run verify:whatsapp-cat-fab-kilit
+  Vercel prebuild: zorunlu
+
+═══════════════════════════════════════════════════════════════════════════

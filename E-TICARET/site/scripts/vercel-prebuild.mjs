@@ -185,6 +185,12 @@ if (fs.existsSync(verifyHomeVitrin)) {
   if (r.status !== 0) process.exit(r.status ?? 1);
 }
 
+const verifyWaCatFab = path.join(siteDir, "scripts/verify-whatsapp-cat-fab-kilit.mjs");
+if (fs.existsSync(verifyWaCatFab)) {
+  const r = spawnSync(process.execPath, [verifyWaCatFab], { cwd: siteDir, stdio: "inherit" });
+  if (r.status !== 0) process.exit(r.status ?? 1);
+}
+
 const buildSitemap = path.join(siteDir, "scripts/build-sitemap.mjs");
 if (fs.existsSync(buildSitemap)) {
   const r = spawnSync(process.execPath, [buildSitemap], { cwd: siteDir, stdio: "inherit" });

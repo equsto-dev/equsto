@@ -46,6 +46,7 @@
     "verify:home-hero-ads-kilit": "node scripts/verify-home-hero-ads-kilit.mjs",
     "verify:home-main-slider-kilit": "node scripts/verify-home-main-slider-kilit.mjs",
     "verify:home-vitrin-kilit": "node scripts/verify-home-vitrin-kilit.mjs",
+    "verify:whatsapp-cat-fab-kilit": "node scripts/verify-whatsapp-cat-fab-kilit.mjs",
     "sitemap:build": "node scripts/build-sitemap.mjs",
     "seo:audit": "node scripts/audit-seo-geo.mjs",
     "seo:sitemap": "node scripts/build-sitemap.mjs && node scripts/audit-seo-geo.mjs",
