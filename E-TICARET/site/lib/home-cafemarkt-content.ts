@@ -224,7 +224,7 @@ const equstoDeptCats: CafemarktCategory[] = [
   },
   {
     id: "tezgah",
-    label: "Tezgahları",
+    label: "Tezgahlar",
     ...shopCat("tezgah"),
     image: `${OZ_WEB}/ozti-7911-n1-40703-00.jpg`,
   },
