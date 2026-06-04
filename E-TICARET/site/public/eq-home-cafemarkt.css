@@ -379,6 +379,16 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
   padding: 8px;
 }
 
+/* Popüler Kategoriler — Bar Design: beyaz zemin (gri PNG yalnız slider/üst vitrinde) */
+.eq-cmkt-cat__img-wrap--bar-white {
+  background: #fff;
+}
+
+.eq-cmkt-cat__img-wrap--bar-white img {
+  padding: 8px;
+  object-fit: contain;
+}
+
 .eq-cmkt-cat__label {
   display: block;
   font-size: 12px;
