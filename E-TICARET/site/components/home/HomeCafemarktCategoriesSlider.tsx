@@ -66,6 +66,14 @@ function perPageForWidth(w: number): number {
   return 5;
 }
 
+/** Cafemarkt witcdn (cm-*) görselleri zaten mavi kutulu — tek çerçeve için cover */
+function popCatImgWrapClass(image: string): string {
+  const cafemarktBaked = /\/cm-|pop-cats\/cm-/i.test(image);
+  return cafemarktBaked
+    ? "eq-cmkt-cat__img-wrap"
+    : "eq-cmkt-cat__img-wrap eq-cmkt-cat__img-wrap--contain";
+}
+
 function CategoryCard({
   cat,
   didDragRef,
@@ -80,7 +88,7 @@ function CategoryCard({
       draggable={false}
       onClick={(e) => goLink(e, cat, didDragRef.current)}
     >
-      <span className="eq-cmkt-cat__img-wrap">
+      <span className={popCatImgWrapClass(cat.image)}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={assetUrl(cat.image)} alt="" loading="lazy" decoding="async" draggable={false} />
       </span>
