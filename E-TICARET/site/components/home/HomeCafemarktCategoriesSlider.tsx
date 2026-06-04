@@ -66,12 +66,12 @@ function perPageForWidth(w: number): number {
   return 5;
 }
 
-/** Cafemarkt witcdn (cm-*) görselleri zaten mavi kutulu — tek çerçeve için cover */
+/** Beyaz zemin: cm-* işlendi; katalog fotoğrafları contain */
 function popCatImgWrapClass(image: string): string {
-  const cafemarktBaked = /\/cm-|pop-cats\/cm-/i.test(image);
-  return cafemarktBaked
-    ? "eq-cmkt-cat__img-wrap"
-    : "eq-cmkt-cat__img-wrap eq-cmkt-cat__img-wrap--contain";
+  const catalogShot = !/\/cm-|pop-cats\/cm-/i.test(image);
+  return catalogShot
+    ? "eq-cmkt-cat__img-wrap eq-cmkt-cat__img-wrap--contain"
+    : "eq-cmkt-cat__img-wrap eq-cmkt-cat__img-wrap--cm";
 }
 
 function CategoryCard({
