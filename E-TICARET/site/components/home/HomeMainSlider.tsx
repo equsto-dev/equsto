@@ -30,7 +30,11 @@ export function HomeMainSlider() {
                     : slide.id === "besos"
                       ? "Besos modüler kokteyl istasyonu"
                       : "Proje Fabrikası — bar ve mutfak plan eskizi";
-                if (slide.id === "imt300") {
+                if (slide.id === "imt300" || slide.id === "besos") {
+                  const promoLead =
+                    slide.id === "imt300"
+                      ? "Ürün sayfasına git"
+                      : "Modüler kokteyl istasyonu — bar vitrinine göz atın";
                   return (
                     <a key={slide.id} className={activeClass} href={slide.href}>
                       <div className="eq-mx-hero__slide-media">
@@ -47,7 +51,7 @@ export function HomeMainSlider() {
                       <div className="eq-mx-hero__slide-promo">
                         <h2>{slide.title}</h2>
                         <p className="eq-mx-hero__slide-promo-sub">{slide.subtitle}</p>
-                        <p className="eq-mx-hero__slide-promo-lead">Ürün sayfasına git</p>
+                        <p className="eq-mx-hero__slide-promo-lead">{promoLead}</p>
                         <span className="eq-mx-hero__slide-cta">{slide.cta}</span>
                       </div>
                     </a>
