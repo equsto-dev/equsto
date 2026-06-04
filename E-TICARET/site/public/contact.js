@@ -31,6 +31,7 @@
   }
   var THREADS_KEY = "equsto_wa_threads_v1";
   var CHAT_KEY = "equsto_wa_chat_v1";
+  /** Kilit: public/whatsapp-cat-fab-KILIT.txt — npm run verify:whatsapp-cat-fab-kilit */
   var WA_FAB_IMG = "/equsto-bize-ulasin-isimlik.png";
   /** Modal şablonu değişince artırın (eski DOM'u zorla yeniler). */
   var WA_MODAL_BUILD = 11;
@@ -722,6 +723,7 @@
     var wrap = document.createElement("div");
     wrap.id = "equsto-contact-fab";
     wrap.className = "equsto-contact-fab";
+    wrap.setAttribute("data-eq-wa-cat-kilit", "1");
     wrap.style.cssText =
       "position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));" +
       "z-index:9999;display:flex;flex-direction:column;gap:10px;align-items:flex-end;pointer-events:none;" +
