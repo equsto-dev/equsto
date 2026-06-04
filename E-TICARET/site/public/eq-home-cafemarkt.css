@@ -279,16 +279,18 @@ body.eq-home-cafemarkt-on #eq-mx-promo-section.eq-legacy-hidden {
   align-items: center;
   justify-content: center;
   aspect-ratio: 1;
-  border-radius: 14px;
-  background: #e8f4fc;
+  border-radius: 0;
+  background: #fff;
+  border: 1px solid #001e50;
   padding: 0;
   margin-bottom: 8px;
   overflow: hidden;
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .eq-cmkt-cat:hover .eq-cmkt-cat__img-wrap {
-  box-shadow: 0 6px 18px rgba(13, 71, 161, 0.12);
+  border-color: #001e50;
+  box-shadow: 0 4px 14px rgba(0, 30, 80, 0.14);
 }
 
 .eq-cmkt-cat__img-wrap img {
@@ -297,7 +299,7 @@ body.eq-home-cafemarkt-on #eq-mx-promo-section.eq-legacy-hidden {
   object-fit: cover;
   object-position: center center;
   display: block;
-  border-radius: inherit;
+  border-radius: 0;
 }
 
 /* Beyaz zemin katalog foto — tek mavi kutu, iç boşluk yok */
