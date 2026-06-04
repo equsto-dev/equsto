@@ -43,11 +43,11 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
   box-sizing: border-box;
 }
 
-/* ── Hero promo grid: sol ana ~55%, sağ üçlü ~45% ── */
+/* ── Hero promo grid: sol ana ~70%, sağ üçlü ~30% ── */
 .eq-cmkt-hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 11fr) minmax(0, 9fr);
-  gap: 12px;
+  grid-template-columns: minmax(0, 14fr) minmax(0, 6fr);
+  gap: 10px;
   width: 100%;
   margin-bottom: 28px;
 }
@@ -55,14 +55,14 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
 .eq-cmkt-hero-side {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   min-height: 100%;
 }
 
 .eq-cmkt-hero-side-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  gap: 10px;
   flex: 1;
 }
 
@@ -95,12 +95,14 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
 }
 
 .eq-cmkt-promo--compact {
-  min-height: 154px;
+  min-height: 132px;
+  padding: 14px 12px 12px;
 }
 
 .eq-cmkt-promo--wide {
   flex: 1;
-  min-height: 154px;
+  min-height: 132px;
+  padding: 14px 12px 12px;
 }
 
 .eq-cmkt-promo__brand {
@@ -126,8 +128,12 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
 }
 
 .eq-cmkt-promo--compact .eq-cmkt-promo__title {
-  font-size: 13px;
+  font-size: 12px;
   max-width: 100%;
+}
+
+.eq-cmkt-promo--compact .eq-cmkt-promo__sub {
+  font-size: 11px;
 }
 
 .eq-cmkt-promo__sub {
@@ -175,8 +181,8 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
 }
 
 .eq-cmkt-promo--main .eq-cmkt-promo__img {
-  width: 52%;
-  max-width: 420px;
+  width: 62%;
+  max-width: 540px;
 }
 
 .eq-cmkt-promo--compact .eq-cmkt-promo__img {
