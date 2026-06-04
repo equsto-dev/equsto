@@ -64,9 +64,7 @@ export function HomeMainSlider() {
                   href={slide.href}
                   style={{ backgroundImage: bg }}
                 >
-                  {slide.id === "besos" || slide.id === "sogutma" ? (
-                    <div className="eq-mx-hero__slide-shade" aria-hidden="true" />
-                  ) : null}
+                  <div className="eq-mx-hero__slide-shade" aria-hidden="true" />
                   <div className="eq-mx-hero__slide-cap">
                     <h2>{slide.title}</h2>
                     <p>{slide.subtitle}</p>
