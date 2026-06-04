@@ -29,8 +29,9 @@ mustExist("components/home/HomeVitrinPortals.tsx");
 mustExist("lib/home-slider-content.ts");
 mustExist("public/images/pfos/proje-fabrikasi-bar-plan-eskiz.png");
 mustExist("public/images/home/hero-bar-cocktailstation.png");
+mustExist("public/images/home/hero-bar-cocktailstation-popcat-white.png");
 mustExist("public/images/home/electrolux-xp-pisirme.webp");
-mustExist("public/images/imt300/imt300-1.jpg");
+mustExist("public/images/imt300/imt300-5.png");
 
 const kilit = read("public/home-main-slider-KILIT.txt");
 if (!kilit.includes("hero-bar-cocktailstation.png")) {
@@ -39,7 +40,7 @@ if (!kilit.includes("hero-bar-cocktailstation.png")) {
 if (!kilit.includes("eq-mx-hero__slide--bar")) {
   fail("home-main-slider-KILIT.txt: Bar contain kilidi yok");
 }
-if (!kilit.includes("imt300-1.jpg")) fail("home-main-slider-KILIT.txt: IMT300 kilidi yok");
+if (!kilit.includes("imt300-5.png")) fail("home-main-slider-KILIT.txt: IMT300 kilidi yok");
 
 const slider = read("components/home/HomeMainSlider.tsx");
 if (!slider.includes("eq-mx-vitrin eq-decor-slider-only")) fail("HomeMainSlider.tsx: vitrin sınıfı yok");
@@ -56,8 +57,11 @@ if (!slider.includes("Electrolux Professional XP pişirme serisi")) {
 if (!slider.includes("eq-mx-hero__slide-promo-em")) {
   fail("HomeMainSlider.tsx: split slayt promo-em yok");
 }
-if (!slider.includes("eq-mx-hero__slide-complements")) {
-  fail("HomeMainSlider.tsx: Bar tamamlayıcı kartları yok");
+if (!slider.includes("SplitPromoSlideView")) {
+  fail("HomeMainSlider.tsx: birleşik split promo bileşeni yok");
+}
+if (!slider.includes("Proje Fabrikası — bar ve mutfak plan eskizi")) {
+  fail("HomeMainSlider.tsx: PFOS split alt metni yok");
 }
 
 const mount = read("components/home/HomeMainSliderMount.tsx");
@@ -75,7 +79,7 @@ if (!content.includes("width: 1024") || !content.includes("height: 331")) {
 if (!content.includes("homeMainSliderBarImage")) {
   fail("home-slider-content.ts: homeMainSliderBarImage sabiti yok");
 }
-if (!content.includes('path: "/images/home/hero-bar-cocktailstation.png"')) {
+if (!content.includes('path: "/images/home/hero-bar-cocktailstation-popcat-white.png"')) {
   fail("home-slider-content.ts: Bar Design görsel yolu değişmiş");
 }
 if (!content.includes("width: 1200") || !content.includes("height: 713")) {
@@ -100,11 +104,22 @@ if (besosIdx < 0 || electroluxIdx < 0) {
 if (!content.includes("homeMainSliderImt300Image")) {
   fail("home-slider-content.ts: homeMainSliderImt300Image sabiti yok");
 }
-if (!content.includes('path: "/images/imt300/imt300-1.jpg"')) {
+if (!content.includes('path: "/images/imt300/imt300-5.png"')) {
   fail("home-slider-content.ts: IMT300 görsel yolu değişmiş");
 }
 const pfosIdx = slidesBody.indexOf('id: "pfos",');
 const imtIdx = slidesBody.indexOf('id: "imt300",');
+if (pfosIdx < 0) {
+  fail("home-slider-content.ts: PFOS slayt tanımı yok");
+} else {
+  const pfosBlock = slidesBody.slice(pfosIdx, imtIdx >= 0 ? imtIdx : slidesBody.length);
+  if (!pfosBlock.includes('kind: "hero-img"')) {
+    fail("home-slider-content.ts: PFOS kind hero-img değil");
+  }
+  if (!pfosBlock.includes("promoKicker")) {
+    fail("home-slider-content.ts: PFOS split promo alanları yok");
+  }
+}
 if (imtIdx < 0) {
   fail("home-slider-content.ts: IMT300 slayt tanımı yok");
 } else if (!slidesBody.slice(imtIdx).includes('kind: "hero-img"')) {
@@ -169,14 +184,23 @@ if (!decor.includes("eq-mx-hero__slide--imt300")) {
 if (!decor.includes("eq-mx-hero__slide--electrolux-xp")) {
   fail("eq-home-decor.css: electrolux-xp slayt stili yok");
 }
+if (!decor.includes("eq-mx-hero__slide--pfos")) {
+  fail("eq-home-decor.css: pfos slayt stili yok");
+}
+if (!decor.includes("grid-template-columns: minmax(0, 3fr) minmax(0, 2fr)")) {
+  fail("eq-home-decor.css: split 3fr/2fr grid kilidi yok");
+}
 const decorNorm = decor.replace(/\s+/g, " ");
 const splitContain =
   decor.includes("eq-mx-hero__slide--split") &&
   decorNorm.includes(
-    "body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300 .eq-mx-hero__slide-media .eq-mx-hero__slide-bg",
+    "body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--pfos .eq-mx-hero__slide-media .eq-mx-hero__slide-bg",
   ) &&
   decor.includes("object-fit: contain");
 const splitFlex =
+  decorNorm.includes(
+    "body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--pfos",
+  ) &&
   decorNorm.includes(
     "body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300",
   ) &&
@@ -185,12 +209,15 @@ const splitFlex =
   ) &&
   decor.includes("display: flex");
 if (!splitContain) fail("eq-home-decor.css: split slayt contain kuralı yok");
-if (!splitFlex) fail("eq-home-decor.css: IMT300 yüksek özgüllüklü flex kuralı yok");
+if (!splitFlex) fail("eq-home-decor.css: split slayt flex/grid kuralı yok");
 if (!decor.includes("eq-home-platform-hero")) {
   fail("eq-home-decor.css: platform hero hizalama yok");
 }
 if (!decor.includes("grid-template-columns: repeat(3, minmax(0, 1fr))")) {
   fail("eq-home-decor.css: uc lu hero grid kilidi yok");
+}
+if (!decor.includes("eq-mx-hero__slide--pfos .eq-mx-hero__slide-promo-badges")) {
+  fail("eq-home-decor.css: PFOS promo rozetleri yok");
 }
 if (!decor.includes("eq-mx-hero__slide--bar .eq-mx-hero__slide-promo-badges")) {
   fail("eq-home-decor.css: Bar promo rozetleri yok");
@@ -216,4 +243,4 @@ if (err) {
   console.error("[verify-home-main-slider-kilit] Kilit ihlali");
   process.exit(1);
 }
-console.log("[verify-home-main-slider-kilit] OK — PFOS · IMT300 · Bar contain · Electrolux XP");
+console.log("[verify-home-main-slider-kilit] OK — PFOS · IMT300 · Bar · Electrolux XP (split 3/5·2/5)");
