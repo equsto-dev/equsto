@@ -32,8 +32,8 @@ export function HomeMainSlider() {
                       : "Proje Fabrikası — bar ve mutfak plan eskizi";
                 if (slide.id === "imt300") {
                   return (
-                    <a key={slide.id} className={activeClass} href={slide.href}>
-                      <div className="eq-mx-hero__slide-media">
+                    <div key={slide.id} className={activeClass}>
+                      <a className="eq-mx-hero__slide-media" href={slide.href}>
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                           className="eq-mx-hero__slide-bg"
@@ -43,7 +43,7 @@ export function HomeMainSlider() {
                           height={slide.image.height}
                           decoding="async"
                         />
-                      </div>
+                      </a>
                       <div className="eq-mx-hero__slide-promo">
                         <p className="eq-mx-hero__slide-promo-kicker">{slide.promoKicker}</p>
                         <h2>
@@ -61,9 +61,11 @@ export function HomeMainSlider() {
                             <li key={point}>{point}</li>
                           ))}
                         </ul>
-                        <span className="eq-mx-hero__slide-cta">{slide.cta}</span>
+                        <a className="eq-mx-hero__slide-cta" href={slide.href}>
+                          {slide.cta}
+                        </a>
                       </div>
-                    </a>
+                    </div>
                   );
                 }
 
