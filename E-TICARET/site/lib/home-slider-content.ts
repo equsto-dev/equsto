@@ -75,15 +75,8 @@ export type HomeMainSliderSlide =
       id: "pfos";
       href: string;
       slideClass?: string;
-      title: string;
-      titleEm: string;
-      promoKicker: string;
-      promoLead: string;
-      promoBadges: readonly string[];
-      promoPoints: readonly string[];
-      cta: string;
       thumbLabel: string;
-      kind: "hero-img";
+      kind: "sketch";
       image: typeof homeMainSliderPfosImage;
       thumbSrc: string;
     }
@@ -142,20 +135,8 @@ export const homeMainSliderSlides: HomeMainSliderSlide[] = [
     id: "pfos",
     href: "pfos.html",
     slideClass: "eq-mx-hero__slide eq-mx-hero__slide--pfos",
-    title: "Proje Fabrikası",
-    titleEm: "Anlık teklif",
-    promoKicker: "Equsto · PFOS · proje listesi",
-    promoLead:
-      "Beş dakikada ekipman listesi, CAD yerleşim ve PDF teklif — bar, mutfak ve soğutma hatları tek platformda.",
-    promoBadges: ["5 dakikada liste", "PDF teklif", "Bar & mutfak", "Canlı fiyat"],
-    promoPoints: [
-      "Departman bazlı seçim — pişirme, soğutma, yıkama, hazırlık",
-      "PFOS referans projeleri ile hızlı başlangıç",
-      "Tek tıkla teklif — satış ekibine hazır çıktı",
-    ],
-    cta: "Keşfet →",
     thumbLabel: "Proje Fabrikası",
-    kind: "hero-img",
+    kind: "sketch",
     image: homeMainSliderPfosImage,
     thumbSrc: homeMainSliderPfosImage.path,
   },

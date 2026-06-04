@@ -33,11 +33,6 @@ export const cafemarktHeroMain: CafemarktPromoCard = {
   promoLead:
     "GN 1/1 uyumlu dokuz çekmeceli tezgah tipi buzdolabı — profesyonel mutfaklarda erişilebilir soğutma, HACCP dijital kontrol ve yüksek verimli monoblok soğutma sistemi.",
   promoBadges: ["GN 1/1", "9 çekmeceli", "-2/+8 °C", "457 L", "304 paslanmaz"],
-  promoPoints: [
-    "1780 × 700 × 850 mm · 0,39 kW · 230 V / 50 Hz · R134A (187 g)",
-    "Monoblok soğutma · fan destekli sirkülasyon · tel kondenser",
-    "60 mm CFC-free izolasyon · max 60 dB · net 161 kg · 79E3.37NMV.03",
-  ],
   cta: "Ürün sayfasına git →",
   href: "/shop/sogutma/oztiryakiler-endustriyel-mutfak__79e3-37nmv-03",
   image: "/images/catalog/ozti/web/ozti-79e3-37nmv-03.jpg",
