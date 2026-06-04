@@ -166,7 +166,7 @@
         { label: "Market Reyonları", labelKey: "nav.sub.market_reyonlari", href: "market-reyonlari.html" },
       ],
     },
-    { id: "dolap", labelKey: "nav.dolap", label: "Dolaplar", href: "dolap.html" },
+    { id: "tezgah", labelKey: "nav.tezgah", label: "Tezgahları", href: "tezgah.html" },
     { id: "davlumbaz", labelKey: "nav.davlumbaz", label: "Davlumbazlar", href: "davlumbaz.html" },
     { id: "tasima", labelKey: "nav.tasima", label: "Taşıma Ekipmanları", href: "tasima.html" },
     { id: "araba", labelKey: "nav.araba", label: "Arabalar", href: "araba.html" },

@@ -77,12 +77,12 @@ export const SHOP_DEPTS: Record<ShopDeptSlug, ShopDeptMeta> = {
     metaDescriptionEn: "Beverage equipment — tea brewers, juice dispensers and bar blenders.",
   },
   tezgah: {
-    title: "Çalışma Tezgahları",
-    lead: "Paslanmaz çalışma tezgahları, evyeli modeller ve duvar raf üniteleri",
+    title: "Tezgahları",
+    lead: "Taban raflı, taban ve ara raflı ile dolaplı paslanmaz çalışma tezgahları ve ara tezgahlar",
     leadKey: "dept.tezgah_lead",
     navKey: "nav.tezgah",
-    metaDescription: "Paslanmaz çalışma tezgahları ve mutfak bankoları.",
-    metaDescriptionEn: "Stainless work tables and kitchen benches.",
+    metaDescription: "Endüstriyel çalışma tezgahları — taban raflı, ara raflı ve dolaplı modeller.",
+    metaDescriptionEn: "Commercial work tables — base shelf, mid shelf and cabinet models.",
   },
   dolap: {
     title: "Dolaplar",

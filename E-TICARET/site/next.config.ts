@@ -158,6 +158,9 @@ const nextConfig: NextConfig = {
       { source: "/shop/index.html", destination: "/", permanent: true },
       { source: "/shop", destination: "/", permanent: true },
       { source: "/shop/:dept.html", destination: "/shop/:dept", permanent: true },
+      { source: "/dolap.html", destination: "/shop/tezgah", permanent: true },
+      { source: "/shop/dolap", destination: "/shop/tezgah", permanent: true },
+      { source: "/shop/dolap/:path*", destination: "/shop/tezgah/:path*", permanent: true },
       ...deptRedirects(),
       ...legacyHtmlRedirects(),
       { source: "/marka", destination: "/shop/marka", permanent: true },
@@ -178,6 +181,17 @@ const nextConfig: NextConfig = {
       { source: "/imt300/", destination: "/besos/imt300", permanent: true },
       { source: "/en/project-factory", destination: "/en/pfos", permanent: true },
       { source: "/en/project-factory/", destination: "/en/pfos", permanent: true },
+      /* Cafemarkt şablon önizleme — statik HTML yedek (App route ile birlikte deploy) */
+      {
+        source: "/onizleme/cafemarkt",
+        destination: "/cafemarkt-sablon.html",
+        permanent: false,
+      },
+      {
+        source: "/cafemarkt-sablon",
+        destination: "/cafemarkt-sablon.html",
+        permanent: false,
+      },
     ];
   },
   async rewrites() {

@@ -223,10 +223,10 @@ const equstoDeptCats: CafemarktCategory[] = [
     image: `${CM_POP_CAT}/cm-soguk-teshir-dolaplari.png`,
   },
   {
-    id: "dolap",
-    label: "Dolaplar",
-    ...shopCat("dolap"),
-    image: `${OZ_WEB}/ozti-7919-37ntv-c1.jpg`,
+    id: "tezgah",
+    label: "Tezgahları",
+    ...shopCat("tezgah"),
+    image: `${OZ_WEB}/ozti-7911-n1-40703-00.jpg`,
   },
   {
     id: "davlumbaz",
