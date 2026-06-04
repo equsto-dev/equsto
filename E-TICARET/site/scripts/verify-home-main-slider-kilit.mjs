@@ -167,8 +167,11 @@ const splitFlex =
   ) && decor.includes("display: flex");
 if (!splitContain) fail("eq-home-decor.css: split slayt contain kuralı yok");
 if (!splitFlex) fail("eq-home-decor.css: IMT300 yüksek özgüllüklü flex kuralı yok");
-if (!decor.includes("eq-mx-hero__slide-complements")) {
-  fail("eq-home-decor.css: tamamlayıcı ürün ızgarası yok");
+if (!decor.includes("eq-home-platform-hero")) {
+  fail("eq-home-decor.css: platform hero hizalama yok");
+}
+if (!decor.includes("grid-template-columns: repeat(3, minmax(0, 1fr))")) {
+  fail("eq-home-decor.css: uc lu hero grid kilidi yok");
 }
 if (!decor.includes("eq-mx-hero__slide--bar .eq-mx-hero__slide-promo-badges")) {
   fail("eq-home-decor.css: Bar promo rozetleri yok");
