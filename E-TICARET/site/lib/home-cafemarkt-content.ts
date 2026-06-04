@@ -255,6 +255,7 @@ export const cafemarktCategories: CafemarktCategory[] = [
 
 export type CafemarktBentoTile = {
   id: string;
+  brand?: string;
   title: string;
   subtitle?: string;
   cta: string;
@@ -262,6 +263,7 @@ export type CafemarktBentoTile = {
   legacyGo?: string;
   dept?: string;
   image?: string;
+  showcase?: readonly { tag: string; image: string }[];
   bg: string;
   badge?: string;
   variant: "sm" | "lg" | "tall" | "wide";
@@ -271,12 +273,27 @@ export type CafemarktBentoTile = {
 export const cafemarktBentoTiles: CafemarktBentoTile[] = [
   {
     id: "atalay",
+    brand: "Atalay",
     title: "Atalay pişirme serisi",
+    subtitle: "Izgara · fritöz · ocak — Seri 600",
     cta: "Keşfet",
     href: "/shop/pisirme?marka=Atalay",
-    image: "/images/home/hero-sogutma-pisirme-combo.jpg",
-    bg: "#eef4fb",
+    bg: "linear-gradient(135deg, #eef4fb 0%, #e3edf9 55%, #dce8f5 100%)",
     variant: "sm",
+    showcase: [
+      {
+        tag: "Gazlı plaka",
+        image: "/images/catalog/atalay/cafemarkt/atalay-e-agi---1060.jpg",
+      },
+      {
+        tag: "Elektrikli ızgara",
+        image: "/images/catalog/atalay/cafemarkt/atalay-e-aei---660.jpg",
+      },
+      {
+        tag: "Fritöz",
+        image: "/images/catalog/atalay/cafemarkt/atalay-e-aef---660.jpg",
+      },
+    ],
   },
   {
     id: "yikama",

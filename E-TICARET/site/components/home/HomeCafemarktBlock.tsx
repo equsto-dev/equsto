@@ -72,18 +72,29 @@ function PromoCard({
 function BentoTile({ tile }: { tile: CafemarktBentoTile }) {
   return (
     <a
-      className={`eq-cmkt-bento__tile eq-cmkt-bento__tile--${tile.variant}${tile.textLight ? " eq-cmkt-bento__tile--light" : ""}`}
+      className={`eq-cmkt-bento__tile eq-cmkt-bento__tile--${tile.variant} eq-cmkt-bento__tile--${tile.id}${tile.textLight ? " eq-cmkt-bento__tile--light" : ""}`}
       href={tile.href}
       style={{ background: tile.bg }}
       onClick={(e) => goLink(e, tile)}
     >
       <div className="eq-cmkt-bento__copy">
+        {tile.brand ? <span className="eq-cmkt-bento__brand">{tile.brand}</span> : null}
         <h3 className="eq-cmkt-bento__title">{tile.title}</h3>
         {tile.subtitle ? <p className="eq-cmkt-bento__sub">{tile.subtitle}</p> : null}
         <span className="eq-cmkt-bento__cta">{tile.cta}</span>
         {tile.badge ? <span className="eq-cmkt-bento__badge">{tile.badge}</span> : null}
       </div>
-      {tile.image ? (
+      {tile.showcase?.length ? (
+        <div className="eq-cmkt-bento__showcase" aria-hidden="true">
+          {tile.showcase.map((item) => (
+            <figure key={item.tag} className="eq-cmkt-bento__showcase-item">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={assetUrl(item.image)} alt="" loading="lazy" decoding="async" />
+              <figcaption>{item.tag}</figcaption>
+            </figure>
+          ))}
+        </div>
+      ) : tile.image ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img
           className="eq-cmkt-bento__img"
