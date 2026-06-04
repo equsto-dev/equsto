@@ -45,7 +45,7 @@ function isSplitPromo(
   titleEm: string;
   promoLead: string;
   promoBadges: readonly string[];
-  promoPoints: readonly string[];
+  promoPoints?: readonly string[];
   image: string;
 } {
   return card.layout === "split";
@@ -61,8 +61,8 @@ function SplitPromoCard({
     titleEm: string;
     promoLead: string;
     promoBadges: readonly string[];
-    promoPoints: readonly string[];
     image: string;
+    promoPoints?: readonly string[];
   };
   className?: string;
 }) {
@@ -95,11 +95,13 @@ function SplitPromoCard({
             <li key={badge}>{badge}</li>
           ))}
         </ul>
-        <ul className="eq-cmkt-promo__points">
-          {card.promoPoints.map((point) => (
-            <li key={point}>{point}</li>
-          ))}
-        </ul>
+        {card.promoPoints?.length ? (
+          <ul className="eq-cmkt-promo__points">
+            {card.promoPoints.map((point) => (
+              <li key={point}>{point}</li>
+            ))}
+          </ul>
+        ) : null}
         <span className="eq-cmkt-promo__cta">{card.cta}</span>
       </div>
     </a>

@@ -8,17 +8,17 @@ AYRI bileşendir (HomeMainSlider). Değiştirmeden önce AÇIK ONAY alın.
 
 ── Beklenen görünüm ───────────────────────────────────────────────────────
   • 4 slayt, 4 thumb; otomatik geçiş (eq-home-mutbex.js initHero)
-  • Tüm slaytlar: split — sol görsel 3/5, sağ promo panel 2/5 (Electrolux XP şablonu)
-  • Zemin: Electrolux mavisi #001e50; promo: kicker · başlık · lead · rozetler · maddeler · CTA
-  • PFOS: sol plan eskizi (parşömen zemin #e8dcc8, contain)
+  • IMT300 · Bar · Electrolux XP: split — sol görsel 3/5, sağ promo panel 2/5
+  • PFOS: yalnız plan eskizi — tam genişlik, promo metin yok (parşömen zemin #e8dcc8, contain)
+  • Zemin (split slaytlar): Electrolux mavisi #001e50; promo: kicker · başlık · lead · rozetler · maddeler · CTA
   • IMT300: sol berrak buz makinesi (contain, Electrolux mavisi #001e50)
   • Bar Design: sol kokteyl istasyonu (contain, Electrolux mavisi #001e50)
   • Electrolux XP: sol modüler pişirme hattı (contain)
 
 ── Kilitli slayt görselleri ───────────────────────────────────────────────
-  PFOS (hero-img, eq-mx-hero__slide--pfos):
+  PFOS (sketch, eq-mx-hero__slide--pfos eq-mx-hero__slide--sketch-only):
     /images/pfos/proje-fabrikasi-bar-plan-eskiz.png (1024×331)
-    Metin: Proje Fabrikası · Anlık teklif · PFOS proje listesi
+    Metin yok — yalnız eskiz; tıklanınca pfos.html
   IMT300 (hero-img, eq-mx-hero__slide--imt300):
     /images/imt300/imt300-5.png (3106×2486, şeffaf kesit · mavi zemin)
   Bar Design (hero-img, eq-mx-hero__slide--bar):
@@ -32,7 +32,7 @@ AYRI bileşendir (HomeMainSlider). Değiştirmeden önce AÇIK ONAY alın.
   Üst üçlü vitrin PFOS kartı: proje-fabrikasi-mutfak-eskiz.png (home-hero-ads-KILIT)
 
 ── Kilitli dosyalar ───────────────────────────────────────────────────────
-  components/home/HomeMainSlider.tsx       — SplitPromoSlideView (tüm slaytlar)
+  components/home/HomeMainSlider.tsx       — PfosSketchSlideView + SplitPromoSlideView
   components/home/HomeMainSliderMount.tsx
   components/home/HomeVitrinPortals.tsx
   lib/home-slider-content.ts

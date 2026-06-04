@@ -12,19 +12,47 @@ function assetUrl(path: string): string {
   return `${path}${sep}v=${SHOP_ASSET_V}`;
 }
 
-type SplitPromoSlide = Extract<HomeMainSliderSlide, { promoKicker: string }>;
+type SplitPromoSlide = Extract<HomeMainSliderSlide, { kind: "hero-img" }>;
+type SketchSlide = Extract<HomeMainSliderSlide, { kind: "sketch" }>;
+
+function isSketchSlide(slide: HomeMainSliderSlide): slide is SketchSlide {
+  return slide.kind === "sketch";
+}
 
 function isSplitPromoSlide(slide: HomeMainSliderSlide): slide is SplitPromoSlide {
   return slide.kind === "hero-img";
 }
 
 function splitAlt(slide: SplitPromoSlide): string {
-  if (slide.id === "pfos") return "Proje Fabrikası — bar ve mutfak plan eskizi";
   if (slide.id === "imt300") return "IMT300 berrak buz makinesi";
   if (slide.id === "electrolux-xp") {
     return "Electrolux Professional XP pişirme serisi — modüler pişirme hattı";
   }
   return "Besos modüler kokteyl istasyonu";
+}
+
+function PfosSketchSlideView({
+  slide,
+  activeClass,
+}: {
+  slide: SketchSlide;
+  activeClass: string;
+}) {
+  return (
+    <div key={slide.id} className={`${activeClass} eq-mx-hero__slide--sketch-only`}>
+      <a className="eq-mx-hero__slide-media" href={slide.href}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          className="eq-mx-hero__slide-bg"
+          src={assetUrl(slide.image.path)}
+          alt="Proje Fabrikası — bar ve mutfak plan eskizi"
+          width={slide.image.width}
+          height={slide.image.height}
+          decoding="async"
+        />
+      </a>
+    </div>
+  );
 }
 
 function SplitPromoSlideView({
@@ -84,8 +112,10 @@ function SplitPromoSlideView({
                   className="eq-mx-hero__slide-complement"
                   href={item.href}
                 >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={assetUrl(item.image)} alt="" />
+                  <span className="eq-mx-hero__slide-complement-photo">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={assetUrl(item.image)} alt="" />
+                  </span>
                   <span className="eq-mx-hero__slide-complement-name">{item.name}</span>
                   <span className="eq-mx-hero__slide-complement-code">{item.code}</span>
                 </a>
@@ -115,6 +145,12 @@ export function HomeMainSlider() {
               const baseClass = slide.slideClass ?? "eq-mx-hero__slide";
               const activeClass = index === 0 ? `${baseClass} is-active` : baseClass;
 
+              if (isSketchSlide(slide)) {
+                return (
+                  <PfosSketchSlideView key={slide.id} slide={slide} activeClass={activeClass} />
+                );
+              }
+
               if (isSplitPromoSlide(slide)) {
                 return (
                   <SplitPromoSlideView key={slide.id} slide={slide} activeClass={activeClass} />
@@ -139,7 +175,7 @@ export function HomeMainSlider() {
               className={`eq-mx-hero__thumb eq-mx-hero__thumb--${slide.id}${index === 0 ? " is-active" : ""}`}
               aria-label={slide.thumbLabel}
             >
-              {slide.kind === "hero-img" ? (
+              {slide.kind === "hero-img" || slide.kind === "sketch" ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img src={assetUrl(slide.thumbSrc)} alt="" />
               ) : null}
