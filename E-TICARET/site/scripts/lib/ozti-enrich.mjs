@@ -661,6 +661,8 @@ export function detectOztiOemBrand(name, category, kod) {
     return "Robot Coupe";
   }
   if (/^UNOX\b/.test(up)) return "Unox";
+  /** SIMAG buz makinesi — 9805.* SKU Hoshizaki ile paylaşılır; ad önce */
+  if (/^SIMAG\b/i.test(up) || /\bSIMAG\b/i.test(fullUp)) return "SIMAG";
   if (/^9805\./i.test(k) || /^HOSHIZAKI\b/.test(up) || /\bHOSHIZAKI\b/i.test(fullUp)) return "Hoshizaki";
   if (/^WINTERHALTER\b/.test(up)) return "Winterhalter";
   if (/^HOBART\b/.test(up) || /\bHOBART\b/i.test(fullUp)) return "Hobart";

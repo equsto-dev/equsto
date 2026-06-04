@@ -294,6 +294,7 @@
     var kod = String(sku || '').trim();
     if (OEM_RESELLER.test(lc(raw)) && (n || kod)) {
       if (/^9890\.|^5RRX\./i.test(kod)) return 'Rational';
+      if (/^9912\.|^9805\.(SDE|SV|SPN)/i.test(kod) && /\bSIMAG\b/i.test(n.toLocaleUpperCase('tr'))) return 'SIMAG';
       var oem = findOemBrandInName(n);
       if (oem) return facetBrandKey(oem);
     }
@@ -302,6 +303,9 @@
 
   function productBrand(u) {
     if (!u) return '';
+    if (window.EqDeptTips && typeof window.EqDeptTips.isSogukOdaProduct === 'function' && window.EqDeptTips.isSogukOdaProduct(u)) {
+      return '';
+    }
     var fb = String((u.fb || '')).trim();
     if (fb) return facetBrandKey(fb);
     var sku = u.raw && (u.raw.sku || u.raw.urun_kodu || u.raw.model);

@@ -39,6 +39,8 @@ const PROXY = {
   "79K3.06NMV.10": { kod: "7919.06NMV.00" },
   "79K4.06NMV.10": { kod: "7919.06NMV.00" },
   "9805.IM240D.NHC": { kod: "9805.IM240X.NHC" },
+  /** SIMAG SDE18 — ax-images 404; SDE24 aynı seri */
+  "9805.SDE18.00": "ozti-9805-sde24-00.jpg",
   "2919.0B390.AD01.00": "ozti-7506-0b390-00.jpg",
   /** WMF şebeke kiti — ax-images yok; 1100S/1300S makine görseli (Cafemarkt). */
   "9868.11986.6001": { kod: "9580.1100S.00" },
