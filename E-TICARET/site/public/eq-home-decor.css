@@ -84,16 +84,94 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--bar .e
 }
 
 .eq-mx-hero__slide--imt300 {
-  background-color: #0a0a0c;
+  background-color: #001e50;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.eq-mx-hero__slide--imt300 .eq-mx-hero__slide-media {
+  position: relative;
+  flex: 0 0 min(52%, 58vh);
+  max-width: 58%;
+  height: 100%;
+  min-width: 0;
+  background: #0a0a0c;
 }
 
 body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300 .eq-mx-hero__slide-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
-  object-position: center center;
+  object-position: left center;
 }
 
-.eq-mx-hero__slide--imt300 .eq-mx-hero__slide-shade {
-  background: linear-gradient(180deg, transparent 55%, rgba(0, 20, 50, 0.72) 100%);
+.eq-mx-hero__slide--imt300 .eq-mx-hero__slide-promo {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-width: 0;
+  padding: clamp(16px, 3vw, 36px) clamp(20px, 4vw, 48px);
+  color: #fff;
+  background: linear-gradient(105deg, #001e50 0%, #003366 55%, #004080 100%);
+}
+
+.eq-mx-hero__slide--imt300 .eq-mx-hero__slide-promo h2 {
+  margin: 0 0 8px;
+  font-size: clamp(20px, 2.8vw, 32px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.eq-mx-hero__slide--imt300 .eq-mx-hero__slide-promo-sub {
+  margin: 0 0 16px;
+  font-size: clamp(12px, 1.35vw, 15px);
+  line-height: 1.45;
+  opacity: 0.92;
+  max-width: 36ch;
+}
+
+.eq-mx-hero__slide--imt300 .eq-mx-hero__slide-promo-lead {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+  font-size: clamp(22px, 3.6vw, 42px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.eq-mx-hero__slide--imt300 .eq-mx-hero__slide-cta {
+  margin-top: 12px;
+  font-size: clamp(13px, 1.4vw, 16px);
+}
+
+@media (max-width: 720px) {
+  .eq-mx-hero__slide--imt300 {
+    flex-direction: column;
+  }
+
+  .eq-mx-hero__slide--imt300 .eq-mx-hero__slide-media {
+    flex: 0 0 52%;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .eq-mx-hero__slide--imt300 .eq-mx-hero__slide-promo {
+    flex: 1 1 auto;
+    padding: 16px 20px 20px;
+  }
+
+  .eq-mx-hero__slide--imt300 .eq-mx-hero__slide-promo-lead {
+    flex: 0 0 auto;
+    font-size: clamp(18px, 5vw, 26px);
+  }
 }
 
 .eq-mx-hero__thumb-ph--pfos {
