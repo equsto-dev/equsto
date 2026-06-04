@@ -8,6 +8,11 @@ body.eq-home-cafemarkt-on #eq-mx-promo-section.eq-legacy-hidden {
   display: none !important;
 }
 
+/* Eski HTML pop-cats şeridi — React vitrin (#eq-home-cafemarkt-mount) kullanılır */
+body.eq-home.eq-home-decor .eq-decor-bottom .eq-mx-pop-cats-wrap.eq-decor-pop-bottom {
+  display: none !important;
+}
+
 .eq-cmkt {
   width: 100%;
   background: #fff;
@@ -26,6 +31,20 @@ body.eq-home-cafemarkt-on .eq-home-cafemarkt-mount {
   display: block;
   width: 100%;
   max-width: none;
+}
+
+body.eq-home.eq-home-mutbex .eq-home-cafemarkt-mount,
+body.eq-home.eq-home-mutbex .eq-cmkt,
+body.eq-home.eq-home-mutbex .eq-cmkt-inner {
+  width: 100%;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.eq-cmkt-hero-grid {
+  width: 100%;
 }
 
 /* ── Hero promo grid (2/3 + 1/3) ── */
@@ -283,14 +302,42 @@ body.eq-home-cafemarkt-on .eq-home-cafemarkt-mount {
 
 .eq-cmkt-cat {
   box-sizing: border-box;
-  flex: 0 0 var(--eq-cmkt-cat-w, 160px);
-  width: var(--eq-cmkt-cat-w, 160px);
-  max-width: var(--eq-cmkt-cat-w, 160px);
+  flex: 0 0 var(--eq-cmkt-cat-w, calc((100% - 48px) / 5));
+  width: var(--eq-cmkt-cat-w, calc((100% - 48px) / 5));
+  max-width: var(--eq-cmkt-cat-w, calc((100% - 48px) / 5));
   scroll-snap-align: start;
   min-width: 0;
   text-decoration: none;
   color: inherit;
   text-align: center;
+}
+
+@media (min-width: 1101px) {
+  .eq-cmkt-cats__viewport {
+    scroll-snap-type: x mandatory;
+  }
+
+  .eq-cmkt-cat {
+    flex: 0 0 calc((100% - 48px) / 5);
+    width: calc((100% - 48px) / 5);
+    max-width: calc((100% - 48px) / 5);
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1100px) {
+  .eq-cmkt-cat {
+    flex: 0 0 calc((100% - 24px) / 3);
+    width: calc((100% - 24px) / 3);
+    max-width: calc((100% - 24px) / 3);
+  }
+}
+
+@media (max-width: 640px) {
+  .eq-cmkt-cat {
+    flex: 0 0 calc((100% - 12px) / 2);
+    width: calc((100% - 12px) / 2);
+    max-width: calc((100% - 12px) / 2);
+  }
 }
 
 .eq-cmkt-cat__img-wrap {
