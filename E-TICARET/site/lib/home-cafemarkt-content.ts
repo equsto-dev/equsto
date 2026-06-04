@@ -22,8 +22,8 @@ export const cafemarktHeroMain: CafemarktPromoCard = {
   title: "Türkiye'nin en ekonomik tezgah tipi soğutma serisi",
   subtitle: "TAG & GN serisi — canlı fiyat, 9 taksit",
   cta: "Ürünleri gör",
-  href: "/shop/sogutma",
-  image: "/images/home/hero-sogutma-pisirme-combo.jpg",
+  href: "/shop/sogutma?tip=tezgah-tipi-buzdolabi",
+  image: "/images/catalog/ozti/web/ozti-79e3-27nmv-02.jpg",
   bg: "linear-gradient(135deg, #0d47a1 0%, #1565c0 48%, #42a5f5 100%)",
   textLight: true,
 };

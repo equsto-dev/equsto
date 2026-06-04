@@ -29,7 +29,9 @@ export function HomeMainSlider() {
                     ? "IMT300 berrak buz makinesi"
                     : slide.id === "besos"
                       ? "Besos modüler kokteyl istasyonu"
-                      : "Proje Fabrikası — bar ve mutfak plan eskizi";
+                      : slide.id === "sogutma"
+                        ? "Atalay pişirme ve Öztiryakiler soğutma"
+                        : "Proje Fabrikası — bar ve mutfak plan eskizi";
                 if (slide.id === "imt300") {
                   return (
                     <div key={slide.id} className={`${activeClass} eq-mx-hero__slide--split`}>
@@ -133,6 +135,41 @@ export function HomeMainSlider() {
                   );
                 }
 
+                if (slide.id === "sogutma") {
+                  return (
+                    <div
+                      key={slide.id}
+                      className={`${activeClass} eq-mx-hero__slide--split eq-mx-hero__slide--sogutma-split`}
+                    >
+                      <div className="eq-mx-hero__slide-promo eq-mx-hero__slide-promo--sogutma">
+                        <h2>{slide.title}</h2>
+                        <p className="eq-mx-hero__slide-promo-lead">{slide.subtitle}</p>
+                        <a className="eq-mx-hero__slide-cta" href={slide.href}>
+                          {slide.cta}
+                        </a>
+                      </div>
+                      <div className="eq-mx-hero__slide-media eq-mx-hero__slide-media--sogutma">
+                        <div className="eq-mx-hero__slide-showcase" aria-label="Pişirme ve soğutma">
+                          {slide.showcase.map((item) => (
+                            <figure key={item.tag} className="eq-mx-hero__slide-showcase-item">
+                              {/* eslint-disable-next-line @next/next/no-img-element */}
+                              <img
+                                src={assetUrl(item.image.path)}
+                                alt=""
+                                width={item.image.width}
+                                height={item.image.height}
+                                loading="lazy"
+                                decoding="async"
+                              />
+                              <figcaption>{item.tag}</figcaption>
+                            </figure>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  );
+                }
+
                 return (
                   <a key={slide.id} className={activeClass} href={slide.href}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -154,27 +191,7 @@ export function HomeMainSlider() {
                 );
               }
 
-              const bg =
-                slide.background.startsWith("linear-gradient") ||
-                slide.background.startsWith("url(")
-                  ? slide.background
-                  : `url(${assetUrl(slide.background)})`;
-
-              return (
-                <a
-                  key={slide.id}
-                  className={activeClass}
-                  href={slide.href}
-                  style={{ backgroundImage: bg }}
-                >
-                  <div className="eq-mx-hero__slide-shade" aria-hidden="true" />
-                  <div className="eq-mx-hero__slide-cap">
-                    <h2>{slide.title}</h2>
-                    <p>{slide.subtitle}</p>
-                    <span className="eq-mx-hero__slide-cta">{slide.cta}</span>
-                  </div>
-                </a>
-              );
+              return null;
             })}
           </div>
           <button type="button" className="eq-mx-hero__nav eq-mx-hero__nav--prev" aria-label="Önceki">
@@ -195,10 +212,7 @@ export function HomeMainSlider() {
               {slide.kind === "pfos-img" || slide.kind === "hero-img" ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img src={assetUrl(slide.image.path)} alt="" />
-              ) : (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img src={assetUrl(slide.thumbSrc)} alt="" />
-              )}
+              ) : null}
             </button>
           ))}
         </div>

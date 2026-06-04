@@ -181,6 +181,100 @@ body.eq-home-decor .eq-mx-hero__thumbs {
   background-color: #001e50;
 }
 
+/* Soğutma — sol metin (~34%), sağ ürün vitrin (~66%) */
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--sogutma.eq-mx-hero__slide--split {
+  display: grid !important;
+  grid-template-columns: minmax(200px, 34%) minmax(0, 1fr);
+  gap: 0;
+  background-color: #001e50;
+}
+
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--sogutma-split .eq-mx-hero__slide-promo,
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--sogutma-split .eq-mx-hero__slide-media {
+  flex: unset !important;
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0 !important;
+}
+
+.eq-mx-hero__slide-promo--sogutma {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 18px;
+  color: #fff;
+  background: linear-gradient(105deg, #001e50 0%, #003366 55%, #004080 100%);
+}
+
+.eq-mx-hero__slide-promo--sogutma h2 {
+  margin: 0 0 8px;
+  font-size: clamp(17px, 2vw, 26px);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.eq-mx-hero__slide-promo--sogutma .eq-mx-hero__slide-promo-lead {
+  margin: 0;
+  font-size: clamp(11px, 1.1vw, 14px);
+  line-height: 1.45;
+  opacity: 0.92;
+  max-width: none;
+}
+
+.eq-mx-hero__slide-promo--sogutma .eq-mx-hero__slide-cta {
+  display: inline-block;
+  margin-top: 14px;
+  align-self: flex-start;
+  text-decoration: none;
+  color: #fff;
+  font-size: clamp(13px, 1.3vw, 16px);
+}
+
+.eq-mx-hero__slide-media--sogutma {
+  background: #eef2f7;
+  min-height: 0;
+}
+
+.eq-mx-hero__slide-showcase {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  height: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.eq-mx-hero__slide-showcase-item {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 8px 8px;
+  border: 1px solid rgba(0, 30, 80, 0.08);
+}
+
+.eq-mx-hero__slide-showcase-item img {
+  flex: 1 1 auto;
+  width: 100%;
+  max-height: 82%;
+  object-fit: contain;
+  object-position: center center;
+}
+
+.eq-mx-hero__slide-showcase-item figcaption {
+  flex: 0 0 auto;
+  margin-top: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #001e50;
+  text-align: center;
+  line-height: 1.25;
+}
+
 .eq-mx-hero__slide--sogutma .eq-mx-hero__slide-shade {
   background: linear-gradient(180deg, rgba(0, 20, 50, 0.08) 0%, rgba(0, 20, 50, 0.72) 100%);
 }
@@ -188,6 +282,7 @@ body.eq-home-decor .eq-mx-hero__thumbs {
 /* mutbex.css .eq-mx-hero__slide { display:block } dosyadan sonra gelir — yüksek özgüllük şart */
 body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--bar,
 body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300,
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--sogutma,
 body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split {
   background-color: #001e50;
   display: flex;
@@ -435,14 +530,20 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300
 
 @media (max-width: 720px) {
   body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--bar.eq-mx-hero__slide--split,
-  body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300.eq-mx-hero__slide--split {
+  body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300.eq-mx-hero__slide--split,
+  body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--sogutma.eq-mx-hero__slide--split {
     grid-template-columns: 1fr !important;
   }
 
   body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--bar,
   body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300,
+  body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--sogutma,
   body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split {
     flex-direction: column;
+  }
+
+  .eq-mx-hero__slide--sogutma-split .eq-mx-hero__slide-media {
+    min-height: 180px;
   }
 
   .eq-mx-hero__slide--split .eq-mx-hero__slide-media {

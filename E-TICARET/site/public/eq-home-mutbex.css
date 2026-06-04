@@ -2353,6 +2353,7 @@ body.eq-home .eq-brand-banner.eq-brand-banner--vitrin .eq-bb-prod {
 /* Ana slider — mutbex tekrar yüklense bile flex kalsın (görsel sol, tanıtım sağ) */
 body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--bar,
 body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300,
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--sogutma,
 body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split {
   display: flex;
   flex-direction: row;
