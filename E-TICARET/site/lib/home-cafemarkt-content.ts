@@ -84,6 +84,9 @@ function shopCat(dept: string, tip?: string): Pick<CafemarktCategory, "href" | "
 
 /** Cafemarkt vitrin — witcdn slider-2601…12 (scripts/fetch-cafemarkt-home-pop-cats.mjs) */
 const CM_POP_CAT = "/images/home/pop-cats";
+/** Katalog PDF sayfası değil — beyaz zemin ürün foto (ozti/web, atalay/cafemarkt) */
+const OZ_WEB = "/images/catalog/ozti/web";
+const AT_CM = "/images/catalog/atalay/cafemarkt";
 
 const cafemarktPopCats: CafemarktCategory[] = [
   {
@@ -161,7 +164,7 @@ const cafemarktPopCats: CafemarktCategory[] = [
   },
 ];
 
-/** Sol menü departmanları — Cafemarkt listesine ek */
+/** Sol menü departmanları — Cafemarkt listesine ek (cm-* + ozti/web ürün foto) */
 const equstoDeptCats: CafemarktCategory[] = [
   {
     id: "pfos",
@@ -181,80 +184,80 @@ const equstoDeptCats: CafemarktCategory[] = [
     id: "pisirme",
     label: "Pişirme Ekipmanları",
     ...shopCat("pisirme"),
-    image: "/images/catalog/atalay/p7/atalay-e-aei---360.jpg",
+    image: `${CM_POP_CAT}/cm-pizza-firinlari.webp`,
   },
   {
     id: "sogutma",
     label: "Soğutma Ekipmanları",
     ...shopCat("sogutma"),
-    image: "/images/catalog/ozti/p200/ozti-9805-im240x-nhc.jpg",
+    image: `${OZ_WEB}/ozti-7919-06nmv-00.jpg`,
   },
   {
     id: "kahve",
     label: "Kahve Ekipmanları",
     ...shopCat("kahve"),
-    image: "/images/catalog/ozti/p453/ozti-8593-su080-00.jpg",
+    image: `${CM_POP_CAT}/cm-filtre-kahve-makineleri.jpg`,
   },
   {
     id: "yikama",
     label: "Yıkama Ekipmanları",
     ...shopCat("yikama"),
-    image: "/images/catalog/ozti/p238/ozti-7711-07075-24.jpg",
+    image: `${CM_POP_CAT}/cm-bulasikhane-ekipmanlari.png`,
   },
   {
     id: "hazirlik",
     label: "Hazırlık Ekipmanları",
     ...shopCat("hazirlik"),
-    image: "/images/catalog/ozti/p135/ozti-9810-hl200-21.jpg",
+    image: `${CM_POP_CAT}/cm-hazirlik-makineleri.png`,
   },
   {
     id: "icecek",
     label: "İçecek Ekipmanları",
     ...shopCat("icecek"),
-    image: "/images/catalog/ozti/p453/ozti-8593-su080-00.jpg",
+    image: `${CM_POP_CAT}/cm-cay-makineleri.png`,
   },
   {
     id: "servis",
     label: "Servis & Teşhir",
     href: "/shop/market-reyonlari",
     legacyGo: "marketReyon",
-    image: "/images/catalog/ozti/p200/ozti-9805-im240x-nhc.jpg",
+    image: `${CM_POP_CAT}/cm-soguk-teshir-dolaplari.png`,
   },
   {
     id: "dolap",
     label: "Dolaplar",
     ...shopCat("dolap"),
-    image: "/images/catalog/ozti/p238/ozti-7711-07075-24.jpg",
+    image: `${OZ_WEB}/ozti-7919-37ntv-c1.jpg`,
   },
   {
     id: "davlumbaz",
     label: "Davlumbazlar",
     ...shopCat("davlumbaz"),
-    image: "/images/catalog/atalay/p7/atalay-e-aei---360.jpg",
+    image: `${OZ_WEB}/ozti-7885-15155-10.jpg`,
   },
   {
     id: "tasima",
     label: "Taşıma Ekipmanları",
     ...shopCat("tasima"),
-    image: "/images/catalog/atalay/p7/atalay-e-aei---360.jpg",
+    image: `${OZ_WEB}/ozti-7912-12070-a0.jpg`,
   },
   {
     id: "araba",
     label: "Arabalar",
     ...shopCat("araba"),
-    image: "/images/catalog/atalay/p117/atalay-adk-102.jpg",
+    image: `${AT_CM}/atalay-adk-102.jpg`,
   },
   {
     id: "istif",
     label: "İstif Rafları",
     ...shopCat("istif"),
-    image: "/images/catalog/atalay/p117/atalay-adk-102.jpg",
+    image: `${OZ_WEB}/ozti-7897-12050-04.jpg`,
   },
   {
     id: "kuvetler",
     label: "Küvetler",
     ...shopCat("kuvetler"),
-    image: "/images/catalog/ozti/p238/ozti-7711-07075-24.jpg",
+    image: `${CM_POP_CAT}/cm-gastronorm-kuvetler.jpg`,
   },
 ];
 
