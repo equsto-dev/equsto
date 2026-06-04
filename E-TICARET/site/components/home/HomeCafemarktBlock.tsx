@@ -73,16 +73,6 @@ function SplitPromoCard({
       style={{ backgroundColor: card.bg }}
       onClick={(e) => goLink(e, card)}
     >
-      <div className="eq-cmkt-promo__media">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          className="eq-cmkt-promo__media-img"
-          src={assetUrl(card.image)}
-          alt="Öztiryakiler TAG 370 NMV — 9 çekmeceli yatay tip buzdolabı"
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
       <div className="eq-cmkt-promo__panel">
         <p className="eq-cmkt-promo__kicker">{card.promoKicker}</p>
         <h3 className="eq-cmkt-promo__title">
@@ -103,6 +93,16 @@ function SplitPromoCard({
           </ul>
         ) : null}
         <span className="eq-cmkt-promo__cta">{card.cta}</span>
+      </div>
+      <div className="eq-cmkt-promo__media">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          className="eq-cmkt-promo__media-img"
+          src={assetUrl(card.image)}
+          alt="Öztiryakiler TAG 370 NMV — 9 çekmeceli yatay tip buzdolabı"
+          loading="lazy"
+          decoding="async"
+        />
       </div>
     </a>
   );

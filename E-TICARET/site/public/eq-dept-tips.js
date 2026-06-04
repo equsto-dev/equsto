@@ -24,6 +24,12 @@
     { tip: "setustu-bain-marie", dept: "pisirme", label: "Set Üstü Bain Marie", slug: "setustu-bain-marie" },
     { tip: "hareketli-bain-marie", dept: "pisirme", label: "Hareketli Bain Marie", slug: "hareketli-bain-marie" },
     { tip: "sanayi-ocaklari", dept: "pisirme", label: "Endüstriyel Ocaklar", slug: "sanayi-ocaklari" },
+    {
+      tip: "ocak-vitrini",
+      dept: "pisirme",
+      label: "Ocaklar",
+      search: "set üstü ocak|setustu ocak|wok ocak|kuzine|indüksiyon|induksiyon|döner ocak|doner ocak",
+    },
     { tip: "sanayi-tipi-izgaralar", dept: "pisirme", label: "Endüstriyel Izgaralar", slug: "sanayi-tipi-izgaralar" },
     { tip: "kuzineler", dept: "pisirme", label: "Kuzineler", slug: "kuzineler" },
     { tip: "fritozler", dept: "pisirme", label: "Fritözler", slug: "fritozler" },
@@ -807,8 +813,21 @@
     return false;
   }
 
+  function isOcakVitriniProduct(u) {
+    if (!u) return false;
+    if (isSuzgecProduct(u) || isMutfakTencereGereci(u) || isOyacakSoyacakProduct(u)) return false;
+    var cat = productCategorySlug(u);
+    if (cat && /ocak|kuzine|wok|induksiyon|indüksiyon/.test(cat)) return true;
+    var hay = productHaystack(u);
+    if (/fırın|firin|fritöz|fritoz|salamander|tost\s*mak|benmari|bain\s*marie/.test(hay)) {
+      if (!/ocak|kuzine|wok|indüksiyon|induksiyon/.test(hay)) return false;
+    }
+    return /ocak|kuzine|wok|indüksiyon|induksiyon|set üstü ocak|setustu ocak|döner ocak|doner ocak/.test(hay);
+  }
+
   function tileMatchProduct(u, tile) {
     if (!tile) return false;
+    if (tile.id === "ocak-vitrini") return isOcakVitriniProduct(u);
     if (isSogukOdaProduct(u)) return tile.id === "soguk-oda";
     var cat = productCategorySlug(u);
 

@@ -95,20 +95,32 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
   padding: 24px 20px;
 }
 
-/* Split promo — Electrolux XP slider şablonu (3/5 görsel · 2/5 metin) */
+/* Split promo — metin sol 2/5 · görsel sağ 3/5 (Electrolux mavisi) */
 .eq-cmkt-promo--split {
   display: grid;
-  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
   gap: 0;
   padding: 0;
-  min-height: 260px;
+  min-height: 340px;
   border-color: rgba(255, 255, 255, 0.12);
   background-color: #001e50;
 }
 
 .eq-cmkt-promo--split.eq-cmkt-promo--main {
   padding: 0;
-  min-height: 260px;
+  min-height: 340px;
+}
+
+.eq-cmkt-promo--split .eq-cmkt-promo__panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  min-height: 0;
+  padding: 20px 18px 18px 20px;
+  color: #fff;
+  background: #001e50;
+  box-sizing: border-box;
 }
 
 .eq-cmkt-promo--split .eq-cmkt-promo__media {
@@ -118,7 +130,7 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
   align-items: center;
   justify-content: center;
   min-height: 0;
-  padding: 10px 14px;
+  padding: 8px 12px 8px 0;
   background: #001e50;
   overflow: hidden;
 }
@@ -126,24 +138,14 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
 .eq-cmkt-promo--split .eq-cmkt-promo__media-img {
   position: relative;
   z-index: 2;
-  width: 100%;
-  height: auto;
-  max-height: 220px;
+  width: auto;
+  max-width: 100%;
+  height: 100%;
+  max-height: none;
+  min-height: 280px;
   object-fit: contain;
   object-position: center center;
   pointer-events: none;
-}
-
-.eq-cmkt-promo--split .eq-cmkt-promo__panel {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  min-width: 0;
-  min-height: 0;
-  padding: 14px 16px 12px;
-  color: #fff;
-  background: linear-gradient(105deg, #001e50 0%, #003366 55%, #004080 100%);
-  box-sizing: border-box;
 }
 
 .eq-cmkt-promo--split .eq-cmkt-promo__kicker {
@@ -154,7 +156,8 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
   opacity: 0.88;
 }
 
-.eq-cmkt-promo--split .eq-cmkt-promo__title {
+.eq-cmkt-promo--split .eq-cmkt-promo__title,
+.eq-cmkt-promo--split.eq-cmkt-promo--main .eq-cmkt-promo__title {
   margin: 0 0 6px;
   max-width: none;
   font-size: clamp(21px, 2.4vw, 30px);
@@ -763,11 +766,11 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
 
   .eq-cmkt-promo--split,
   .eq-cmkt-promo--split.eq-cmkt-promo--main {
-    min-height: 220px;
+    min-height: 280px;
   }
 
   .eq-cmkt-promo--split .eq-cmkt-promo__media {
-    min-height: 160px;
+    min-height: 220px;
     padding: 10px 12px;
   }
 
@@ -776,7 +779,10 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
   }
 
   .eq-cmkt-promo--split .eq-cmkt-promo__media-img {
-    max-height: 180px;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    max-height: 240px;
   }
 
   .eq-cmkt-bento {

@@ -29,9 +29,10 @@ mustExist("components/home/HomeVitrinPortals.tsx");
 mustExist("lib/home-slider-content.ts");
 mustExist("public/images/pfos/proje-fabrikasi-bar-plan-eskiz.png");
 mustExist("public/images/home/hero-bar-cocktailstation.png");
+mustExist("public/images/home/hero-bar-cocktailstation-cutout.png");
 mustExist("public/images/home/hero-bar-cocktailstation-popcat-white.png");
 mustExist("public/images/home/electrolux-xp-pisirme.webp");
-mustExist("public/images/imt300/imt300-5.png");
+mustExist("public/images/imt300/imt300-2.png");
 
 const kilit = read("public/home-main-slider-KILIT.txt");
 if (!kilit.includes("hero-bar-cocktailstation.png")) {
@@ -40,7 +41,7 @@ if (!kilit.includes("hero-bar-cocktailstation.png")) {
 if (!kilit.includes("eq-mx-hero__slide--bar")) {
   fail("home-main-slider-KILIT.txt: Bar contain kilidi yok");
 }
-if (!kilit.includes("imt300-5.png")) fail("home-main-slider-KILIT.txt: IMT300 kilidi yok");
+if (!kilit.includes("imt300-2.png")) fail("home-main-slider-KILIT.txt: IMT300 kilidi yok");
 
 const slider = read("components/home/HomeMainSlider.tsx");
 if (!slider.includes("eq-mx-vitrin eq-decor-slider-only")) fail("HomeMainSlider.tsx: vitrin sınıfı yok");
@@ -85,7 +86,7 @@ if (!content.includes("width: 1024") || !content.includes("height: 331")) {
 if (!content.includes("homeMainSliderBarImage")) {
   fail("home-slider-content.ts: homeMainSliderBarImage sabiti yok");
 }
-if (!content.includes('path: "/images/home/hero-bar-cocktailstation-popcat-white.png"')) {
+if (!content.includes('path: "/images/home/hero-bar-cocktailstation-cutout.png"')) {
   fail("home-slider-content.ts: Bar Design görsel yolu değişmiş");
 }
 if (!content.includes("width: 1200") || !content.includes("height: 713")) {
@@ -110,8 +111,11 @@ if (besosIdx < 0 || electroluxIdx < 0) {
 if (!content.includes("homeMainSliderImt300Image")) {
   fail("home-slider-content.ts: homeMainSliderImt300Image sabiti yok");
 }
-if (!content.includes('path: "/images/imt300/imt300-5.png"')) {
+if (!content.includes('path: "/images/imt300/imt300-2.png"')) {
   fail("home-slider-content.ts: IMT300 görsel yolu değişmiş");
+}
+if (!content.includes("width: 3381") || !content.includes("height: 3007")) {
+  fail("home-slider-content.ts: IMT300 boyut 3381×3007 değil");
 }
 const pfosIdx = slidesBody.indexOf('id: "pfos",');
 const imtIdx = slidesBody.indexOf('id: "imt300",');
