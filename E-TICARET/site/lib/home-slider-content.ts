@@ -1,4 +1,4 @@
-/** Ana sayfa alt slider — PFOS · Bar · Soğutma · IMT300 (kilit: public/home-main-slider-KILIT.txt) */
+/** Ana sayfa alt slider — PFOS · Bar · Electrolux XP · IMT300 (kilit: public/home-main-slider-KILIT.txt) */
 
 export const homeMainSliderPfosImage = {
   path: "/images/pfos/proje-fabrikasi-bar-plan-eskiz.png",
@@ -34,6 +34,12 @@ export const homeMainSliderImt300Image = {
   path: "/images/imt300/imt300-1.jpg",
   width: 800,
   height: 600,
+} as const;
+
+export const homeMainSliderElectroluxXpImage = {
+  path: "/images/home/electrolux-xp-pisirme.webp",
+  width: 600,
+  height: 360,
 } as const;
 
 /** Manhattan PDP tamamlayıcıları — vitrum-bars-catalogue.json */
@@ -77,20 +83,20 @@ export type HomeMainSliderSlide =
       image: typeof homeMainSliderPfosImage;
     }
   | {
-      id: "sogutma";
+      id: "electrolux-xp";
       href: string;
       slideClass?: string;
       title: string;
-      subtitle: string;
+      titleEm: string;
+      promoKicker: string;
+      promoLead: string;
+      promoBadges: readonly string[];
+      promoPoints: readonly string[];
       cta: string;
       thumbLabel: string;
       kind: "hero-img";
-      image: typeof homeMainSliderSogutmaPisirmeImage;
+      image: typeof homeMainSliderElectroluxXpImage;
       thumbSrc: string;
-      showcase: readonly {
-        tag: string;
-        image: typeof homeMainSliderSogutmaAtalayImage | typeof homeMainSliderSogutmaOztiImage;
-      }[];
     }
   | {
       id: "besos";
@@ -161,20 +167,23 @@ export const homeMainSliderSlides: HomeMainSliderSlide[] = [
     thumbSrc: homeMainSliderBarImage.path,
   },
   {
-    id: "sogutma",
-    href: "/shop/sogutma",
-    slideClass: "eq-mx-hero__slide eq-mx-hero__slide--sogutma",
-    title: "Soğutma & pişirme",
-    subtitle: "Atalay pişirme · Öztiryakiler soğutma · canlı fiyat",
-    cta: "Keşfet →",
-    thumbLabel: "Soğutma",
-    kind: "hero-img",
-    image: homeMainSliderSogutmaPisirmeImage,
-    thumbSrc: homeMainSliderSogutmaPisirmeImage.path,
-    showcase: [
-      { tag: "Atalay pişirme", image: homeMainSliderSogutmaAtalayImage },
-      { tag: "Öztiryakiler soğutma", image: homeMainSliderSogutmaOztiImage },
+    id: "electrolux-xp",
+    href: "/shop/pisirme?marka=Electrolux",
+    slideClass: "eq-mx-hero__slide eq-mx-hero__slide--electrolux-xp",
+    title: "XP Pişirme Serisi",
+    titleEm: "700XP · 900XP",
+    promoKicker: "Electrolux Professional · modüler pişirme hattı",
+    promoLead:
+      "XP pişirme serisi hem fast-food hem de alakart restoranlara yönelik bir çözümdür. Modüler tasarımı, verimliliği, güvenilirliği, güvenlik özellikleri, kolay bakımı, sürdürülebilirlik ile ilgili avantajları, özel destek ve servisi ile XP serisi bir mutfakta ihtiyacınız olan her şeyi sunuyor.",
+    promoBadges: ["Fast-food", "À la carte", "Modüler", "200+ model", "Gaz · Elektrik"],
+    promoPoints: [
+      "Gazlı ve elektrikli olmak üzere 200'den fazla modeli olan 700XP ve 900XP serileri, sırasıyla 700 mm ve 900 mm derinlikleriyle, her ölçekte mutfağa en iyi esnekliği ve uyarlanabilirliği getiriyor.",
     ],
+    cta: "Keşfet →",
+    thumbLabel: "Electrolux XP",
+    kind: "hero-img",
+    image: homeMainSliderElectroluxXpImage,
+    thumbSrc: homeMainSliderElectroluxXpImage.path,
   },
   {
     id: "imt300",

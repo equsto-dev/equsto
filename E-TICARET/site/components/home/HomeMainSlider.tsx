@@ -27,11 +27,50 @@ export function HomeMainSlider() {
                 const alt =
                   slide.id === "imt300"
                     ? "IMT300 berrak buz makinesi"
-                    : slide.id === "besos"
-                      ? "Besos modüler kokteyl istasyonu"
-                      : slide.id === "sogutma"
-                        ? "Atalay pişirme ve Öztiryakiler soğutma"
+                    : slide.id === "electrolux-xp"
+                      ? "Electrolux Professional XP pişirme serisi — modüler pişirme hattı"
+                      : slide.id === "besos"
+                        ? "Besos modüler kokteyl istasyonu"
                         : "Proje Fabrikası — bar ve mutfak plan eskizi";
+                if (slide.id === "electrolux-xp") {
+                  return (
+                    <div key={slide.id} className={`${activeClass} eq-mx-hero__slide--split`}>
+                      <a className="eq-mx-hero__slide-media" href={slide.href}>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          className="eq-mx-hero__slide-bg"
+                          src={assetUrl(slide.image.path)}
+                          alt={alt}
+                          width={slide.image.width}
+                          height={slide.image.height}
+                          decoding="async"
+                        />
+                      </a>
+                      <div className="eq-mx-hero__slide-promo">
+                        <p className="eq-mx-hero__slide-promo-kicker">{slide.promoKicker}</p>
+                        <h2>
+                          {slide.title}{" "}
+                          <em className="eq-mx-hero__slide-promo-em">{slide.titleEm}</em>
+                        </h2>
+                        <p className="eq-mx-hero__slide-promo-lead">{slide.promoLead}</p>
+                        <ul className="eq-mx-hero__slide-promo-badges">
+                          {slide.promoBadges.map((badge) => (
+                            <li key={badge}>{badge}</li>
+                          ))}
+                        </ul>
+                        <ul className="eq-mx-hero__slide-promo-points">
+                          {slide.promoPoints.map((point) => (
+                            <li key={point}>{point}</li>
+                          ))}
+                        </ul>
+                        <a className="eq-mx-hero__slide-cta" href={slide.href}>
+                          {slide.cta}
+                        </a>
+                      </div>
+                    </div>
+                  );
+                }
+
                 if (slide.id === "imt300") {
                   return (
                     <div key={slide.id} className={`${activeClass} eq-mx-hero__slide--split`}>
@@ -130,41 +169,6 @@ export function HomeMainSlider() {
                         <a className="eq-mx-hero__slide-cta" href={slide.href}>
                           {slide.cta}
                         </a>
-                      </div>
-                    </div>
-                  );
-                }
-
-                if (slide.id === "sogutma") {
-                  return (
-                    <div
-                      key={slide.id}
-                      className={`${activeClass} eq-mx-hero__slide--split eq-mx-hero__slide--sogutma-split`}
-                    >
-                      <div className="eq-mx-hero__slide-promo eq-mx-hero__slide-promo--sogutma">
-                        <h2>{slide.title}</h2>
-                        <p className="eq-mx-hero__slide-promo-lead">{slide.subtitle}</p>
-                        <a className="eq-mx-hero__slide-cta" href={slide.href}>
-                          {slide.cta}
-                        </a>
-                      </div>
-                      <div className="eq-mx-hero__slide-media eq-mx-hero__slide-media--sogutma">
-                        <div className="eq-mx-hero__slide-showcase" aria-label="Pişirme ve soğutma">
-                          {slide.showcase.map((item) => (
-                            <figure key={item.tag} className="eq-mx-hero__slide-showcase-item">
-                              {/* eslint-disable-next-line @next/next/no-img-element */}
-                              <img
-                                src={assetUrl(item.image.path)}
-                                alt=""
-                                width={item.image.width}
-                                height={item.image.height}
-                                loading="lazy"
-                                decoding="async"
-                              />
-                              <figcaption>{item.tag}</figcaption>
-                            </figure>
-                          ))}
-                        </div>
                       </div>
                     </div>
                   );
