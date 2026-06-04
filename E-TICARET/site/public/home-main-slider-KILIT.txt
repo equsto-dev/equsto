@@ -7,7 +7,7 @@ Onay: 2026-06-03 · Commit referans: 0bd35f30
 AYRI bileşendir (HomeMainSlider). Değiştirmeden önce AÇIK ONAY alın.
 
 ── Beklenen görünüm ───────────────────────────────────────────────────────
-  • 1024/522 kutu; PFOS slayt object-fit: contain (kırpma yok)
+  • 1024/331 kutu; PFOS slayt object-fit: contain (kırpma yok)
   • PFOS görsel: bar/mutfak plan eskizi (parşömen, kahve/kokteyl planı)
   • Sol alt kapak: Proje Fabrikası · Beş dakikada… · Keşfet →
   • 3. slayt: Soğutma & pişirme — hero-sogutma-pisirme-combo.jpg (2048×1044)
@@ -26,7 +26,7 @@ AYRI bileşendir (HomeMainSlider). Değiştirmeden önce AÇIK ONAY alın.
   lib/shop/assets.ts                  — SHOP_ASSET_V
 
 ── PFOS slider görseli (kilitli) ─────────────────────────────────────────
-  /images/pfos/proje-fabrikasi-bar-plan-eskiz.png (1024×524)
+  /images/pfos/proje-fabrikasi-bar-plan-eskiz.png (1024×331)
   Üst üçlü vitrin PFOS kartı: proje-fabrikasi-mutfak-eskiz.png (home-hero-ads-KILIT)
   Soğutma slayt: /images/home/hero-sogutma-pisirme-combo.jpg
 

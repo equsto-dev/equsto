@@ -42,8 +42,8 @@ const content = read("lib/home-slider-content.ts");
 if (!content.includes('path: "/images/pfos/proje-fabrikasi-bar-plan-eskiz.png"')) {
   fail("home-slider-content.ts: bar plan eskiz yolu değişmiş");
 }
-if (!content.includes("width: 1024") || !content.includes("height: 524")) {
-  fail("home-slider-content.ts: PFOS boyut 1024×524 değil");
+if (!content.includes("width: 1024") || !content.includes("height: 331")) {
+  fail("home-slider-content.ts: PFOS boyut 1024×331 değil");
 }
 
 if (!content.includes("homeMainSliderSogutmaPisirmeImage")) {
