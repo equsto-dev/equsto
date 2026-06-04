@@ -81,9 +81,11 @@ export type HomeMainSliderSlide =
       href: string;
       slideClass?: string;
       title: string;
-      subtitle: string;
+      titleEm: string;
       promoKicker: string;
       promoLead: string;
+      promoBadges: readonly string[];
+      promoPoints: readonly string[];
       complements: typeof homeMainSliderBesosComplements;
       cta: string;
       thumbLabel: string;
@@ -122,19 +124,25 @@ export const homeMainSliderSlides: HomeMainSliderSlide[] = [
   },
   {
     id: "besos",
-    href: "bar-design.html",
+    href: "/besos",
     slideClass: "eq-mx-hero__slide eq-mx-hero__slide--bar",
     title: "Bar Design Studio",
-    subtitle: "IMT300 berrak buz · modüler kokteyl istasyonu",
-    cta: "Keşfet →",
+    titleEm: "Modüler Kokteyl İstasyonu",
+    promoKicker: "Besos · Bar Design Studio · Vitrum modüller",
+    promoLead:
+      "En çok satan iki kişilik istasyonumuz; entegre dondurucu çekmeceleri, genişletilmiş damlama tepsisi, evye ve bardak saklama alanı ile. IMT300 berrak buz ile aynı hatta premium kokteyl servisi.",
+    promoBadges: ["2 kişilik istasyon", "Dondurucu çekmecesi", "Damlama tepsisi", "IMT300 uyumlu"],
+    promoPoints: [
+      "Modüler paslanmaz çelik — alana göre genişletilir",
+      "The Manhattan hattı — vitrin + servis tek blokta",
+      "42 Besos modülü — CAD ile yerleşim ve teklif",
+    ],
+    complements: homeMainSliderBesosComplements,
+    cta: "Bar Design Studio'ya git →",
     thumbLabel: "Bar Design",
     kind: "hero-img",
     image: homeMainSliderBarImage,
     thumbSrc: homeMainSliderBarImage.path,
-    promoKicker: "Tamamlayıcı ürünler · The Manhattan",
-    promoLead:
-      "En çok satan iki kişilik istasyon; entegre dondurucu çekmeceleri, genişletilmiş damlama tepsisi, evye ve bardak saklama.",
-    complements: homeMainSliderBesosComplements,
   },
   {
     id: "sogutma",

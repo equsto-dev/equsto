@@ -97,8 +97,7 @@ const cafemarktPopCats: CafemarktCategory[] = [
   {
     id: "kampanya",
     label: "Kampanyalar",
-    href: "/",
-    anchor: "eq-rail-kampanyali",
+    href: "/#eq-rail-kampanyali",
     image: `${CM_POP_CAT}/cm-kampanyalar.webp`,
   },
   {

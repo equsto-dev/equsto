@@ -9,7 +9,7 @@ AYRI bileşendir (HomeMainSlider). Değiştirmeden önce AÇIK ONAY alın.
 ── Beklenen görünüm ───────────────────────────────────────────────────────
   • 4 slayt, 4 thumb; otomatik geçiş (eq-home-mutbex.js initHero)
   • PFOS: <img> + object-fit contain — plan eskizi tam görünür (1024×331)
-  • Bar Design: <img> + object-fit contain — kokteyl istasyonu tam görünür
+  • Bar Design: split — sol kokteyl istasyonu (contain, beyaz zemin), sağ tanıtım + Manhattan tamamlayıcı kartları
   • Soğutma: background-image cover (hero-sogutma-pisirme-combo.jpg)
   • IMT300: <img> + object-fit contain — berrak buz makinesi tam görünür
   • Sol alt kapak metinleri (title · subtitle · Keşfet →) değişmez

@@ -188,13 +188,33 @@ function olcuEslesmeSkoru(olcu: string, urunAd: string): number {
   if (!nums.length) return 0;
   const ad = norm(urunAd);
   let score = 0;
+
+  if (nums.length >= 3) {
+    const [a, b, c] = nums;
+    const triples = [
+      `${a}*${b}*${c}`,
+      `${a}x${b}x${c}`,
+      `${Math.round(a * 10)}*${Math.round(b * 10)}*${Math.round(c * 10)}`,
+    ];
+    if (triples.some((t) => ad.includes(t))) score += 120;
+  }
+  if (nums.length >= 2) {
+    const [a, b] = nums;
+    if (ad.includes(`${a}*${b}`) || ad.includes(`${a}x${b}`)) score += 70;
+    const mmA = Math.round(a * 10);
+    const mmB = Math.round(b * 10);
+    if (ad.includes(`${mmA}*${mmB}`) || ad.includes(`${mmA}x${mmB}`)) score += 80;
+  }
+
   for (const n of nums) {
     const mm = Math.round(n * 10);
     if (ad.includes(`${n}*`) || ad.includes(`${n}x`) || ad.includes(` ${n} `)) {
       score += 45;
     }
     if (ad.includes(`${mm}*`) || ad.includes(`${mm}x`)) score += 55;
-    if (ad.includes(String(n)) || ad.includes(String(mm))) score += 15;
+    if (nums.length >= 2 && (ad.includes(String(n)) || ad.includes(String(mm)))) {
+      score += 6;
+    }
   }
   return score;
 }
@@ -302,6 +322,22 @@ async function matchByTipShopLink(
       gorselUrl: null,
     };
   }
+
+  if (tip === "montaj_nakliye") {
+    return {
+      id: `tip-link-${tip}`,
+      sku: link.sku,
+      ad: link.name ?? input.isim,
+      marka: link.brand ?? "Equsto Proje Fabrikası",
+      model: link.sku,
+      olcu: null,
+      elektrikGucuKw: null,
+      gazGucuKw: null,
+      fiyat: 0,
+      doviz: "TRY",
+      gorselUrl: null,
+    };
+  }
   return null;
 }
 
@@ -320,7 +356,13 @@ async function matchByVerifiedLink(
   if (!link?.sku) return null;
 
   const bySku = await matchByExplicitSku(link.sku);
-  if (bySku) return bySku;
+  if (bySku) {
+    return {
+      ...bySku,
+      ad: link.name ?? bySku.ad,
+      marka: link.marka?.trim() || bySku.marka,
+    };
+  }
   if (link.fiyat_try && link.fiyat_try > 0) {
     return {
       id: `ref-link-${liste}-${poz}`,

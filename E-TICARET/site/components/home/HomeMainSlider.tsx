@@ -32,7 +32,7 @@ export function HomeMainSlider() {
                       : "Proje Fabrikası — bar ve mutfak plan eskizi";
                 if (slide.id === "imt300") {
                   return (
-                    <div key={slide.id} className={activeClass}>
+                    <div key={slide.id} className={`${activeClass} eq-mx-hero__slide--split`}>
                       <a className="eq-mx-hero__slide-media" href={slide.href}>
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
@@ -73,11 +73,11 @@ export function HomeMainSlider() {
                   return (
                     <div
                       key={slide.id}
-                      className={activeClass}
+                      className={`${activeClass} eq-mx-hero__slide--split`}
                       data-slide-href={slide.href}
                       data-slide-go="besos"
                     >
-                      <a className="eq-mx-hero__slide-media" href="/besos">
+                      <a className="eq-mx-hero__slide-media" href={slide.href}>
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                           className="eq-mx-hero__slide-bg"
@@ -89,10 +89,25 @@ export function HomeMainSlider() {
                         />
                       </a>
                       <div className="eq-mx-hero__slide-promo">
-                        <h2>{slide.title}</h2>
-                        <p className="eq-mx-hero__slide-promo-sub">{slide.subtitle}</p>
                         <p className="eq-mx-hero__slide-promo-kicker">{slide.promoKicker}</p>
+                        <h2>
+                          {slide.title}{" "}
+                          <em className="eq-mx-hero__slide-promo-em">{slide.titleEm}</em>
+                        </h2>
                         <p className="eq-mx-hero__slide-promo-lead">{slide.promoLead}</p>
+                        <ul className="eq-mx-hero__slide-promo-badges">
+                          {slide.promoBadges.map((badge) => (
+                            <li key={badge}>{badge}</li>
+                          ))}
+                        </ul>
+                        <ul className="eq-mx-hero__slide-promo-points">
+                          {slide.promoPoints.map((point) => (
+                            <li key={point}>{point}</li>
+                          ))}
+                        </ul>
+                        <p className="eq-mx-hero__slide-promo-complements-label">
+                          Tamamlayıcı ürünler · The Manhattan
+                        </p>
                         <div
                           className="eq-mx-hero__slide-complements"
                           aria-label="Tamamlayıcı ürünler"
@@ -110,7 +125,7 @@ export function HomeMainSlider() {
                             </a>
                           ))}
                         </div>
-                        <a className="eq-mx-hero__slide-cta" href="/besos">
+                        <a className="eq-mx-hero__slide-cta" href={slide.href}>
                           {slide.cta}
                         </a>
                       </div>

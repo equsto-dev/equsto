@@ -39,8 +39,18 @@ function rowToEslesmis(row: AdminUrunRow): EslesmisUrun {
   };
 }
 
+function isBulasikAksesuar(ad: string): boolean {
+  const k = norm(ad);
+  return (
+    /\bbasket\b|\bsepeti\b|\bsepet\b|yükseltici|yukseltici|tabak konveyor/.test(
+      k,
+    ) && !/tezgahalti\s*bulasik|bulasik\s*yikama\s*mak/.test(k)
+  );
+}
+
 function isBulasikKatalogAd(ad: string): boolean {
   const k = norm(ad);
+  if (isBulasikAksesuar(ad)) return false;
   if (
     /firin|konveksiyon|fritoz|izgara|ocak|kuzine|salamander|merrychef/.test(k) &&
     !/bulasik|bulaşık|yikama\s*mak|dishwash/.test(k)
@@ -67,7 +77,12 @@ function scoreBulasikRow(
     return -9999;
   }
   if (form === "bardak") {
-    if (/bardak\s*yik|oby\s*35|oby\s*40/.test(k)) return 200;
+    if (isBulasikAksesuar(ad)) return -9999;
+    if (
+      /bardak\s*yik.*mak|oby\s*35|oby\s*40|oby\s*500|073m\.|074m\./.test(k)
+    ) {
+      return 200;
+    }
     return -9999;
   }
   if (/bulasik\s*yik|bulaşık\s*yik/.test(k) && !/chafing|fiskiye/.test(k)) {
@@ -100,7 +115,16 @@ export async function matchBulasikByReferans(
       score: scoreBulasikRow(row.ad, form),
     }))
     .filter((x) => x.score >= 100)
-    .sort((a, b) => b.score - a.score || a.row.fiyat_tl - b.row.fiyat_tl);
+    .sort((a, b) => {
+      if (b.score !== a.score) return b.score - a.score;
+      if (form === "bardak") {
+        const prefer = (ad: string) =>
+          /11010|pdt|oby\s*500|500\s*b\s*plus/.test(norm(ad)) ? 1 : 0;
+        const diff = prefer(b.row.ad) - prefer(a.row.ad);
+        if (diff) return diff;
+      }
+      return b.row.fiyat_tl - a.row.fiyat_tl;
+    });
 
   if (!scored.length) return null;
   return rowToEslesmis(scored[0].row);

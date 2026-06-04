@@ -231,6 +231,20 @@
     return palette[i % palette.length];
   }
 
+  function popCatHref(item) {
+    if (!item) return '#';
+    var url = typeof global.equstoUrl === 'function' ? global.equstoUrl.bind(global) : null;
+    if (item.go === 'pfos') return url ? url('pfos') : '/pfos';
+    if (item.go === 'besos') return url ? url('besos') : '/besos';
+    if (item.go === 'marketReyon') return url ? url('marketReyon') : '/shop/market-reyonlari';
+    if (item.dept) return url ? url(item.dept) : '/shop/' + item.dept;
+    if (item.cat) {
+      var home = url ? url('home') : '/';
+      return home + (home.indexOf('#') >= 0 ? '' : '#') + String(item.cat).replace(/^#/, '');
+    }
+    return '#';
+  }
+
   function popCatImgRaw(item) {
     var s = resolvePopCatImage(item);
     if (!s) return '';
@@ -259,10 +273,13 @@
         ' alt="" loading="lazy" decoding="async" onerror="typeof __eqImgFail===\'function\'&&__eqImgFail(this)">' +
         '<span class="eq-mx-pop-cat__scrim" aria-hidden="true"></span>'
       : '<span class="eq-mx-pop-cat__ph" aria-hidden="true">' + esc(storyEmoji(item)) + '</span>';
+    var cardHref = popCatHref(item);
     return (
       '<a class="eq-mx-pop-cat' +
       (hasPhoto ? ' eq-mx-pop-cat--photo' : '') +
-      '" href="#" style="' +
+      '" href="' +
+      esc(cardHref) +
+      '" style="' +
       style +
       '" data-pop-idx="' +
       idx +
@@ -380,8 +397,13 @@
         .join('');
       track.querySelectorAll('.eq-mx-pop-cat').forEach(function (link, idx) {
         link.addEventListener('click', function (e) {
+          if (track.__eqPopCatDidDrag) {
+            e.preventDefault();
+            return;
+          }
+          var href = link.getAttribute('href') || '';
+          if (href && href !== '#') return;
           e.preventDefault();
-          if (track.__eqPopCatDidDrag) return;
           storyClick(items[idx]);
         });
       });

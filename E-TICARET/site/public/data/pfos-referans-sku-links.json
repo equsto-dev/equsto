@@ -127,6 +127,26 @@
     "tavukcu-80-150|Y1": {
       "sku": "7960.09429.5Y1",
       "name": "YER IZGARASI TAVALI ALTTAN CIKISLI Q50 PVC 940*290"
+    },
+    "coffee-shop-referans|A8": {
+      "sku": "073M.11010.AD",
+      "marka": "Öztiryakiler",
+      "name": "BARDAK YIKAMA MAKİNASI OBY 500 B Plus (35x35) PDT — 500 bardak/saat"
+    },
+    "coffee-shop-referans|A15": {
+      "sku": "9574.M200.00",
+      "marka": "Animo",
+      "name": "FILTRE KAHVE MAKINESI ANIMO M200 Cam Sürahi"
+    },
+    "coffee-shop-referans|A18": {
+      "sku": "79E4.27NMV.00",
+      "marka": "Öztiryakiler",
+      "name": "TAG 270 NMV YATAY TİP BUZDOLABI (setaltı modül)"
+    },
+    "coffee-shop-referans|A19": {
+      "sku": "7919.06LMV.00",
+      "marka": "Öztiryakiler",
+      "name": "GN 600 LMV TEK KAPI SETALTI DERİN DONDURUCU"
     }
   }
 }

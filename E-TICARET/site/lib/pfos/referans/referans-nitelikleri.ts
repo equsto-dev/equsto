@@ -144,6 +144,20 @@ export function referansKatalogCeliski(
       return true;
     }
   }
+
+  if (/buzdolab/.test(norm(isim)) && /davlumbaz|aspirator/.test(norm(katalogAd))) {
+    return true;
+  }
+  if (/davlumbaz/.test(norm(isim)) && /buzdolab|derin donduruc|sogutuc/.test(norm(katalogAd))) {
+    return true;
+  }
+  if (
+    /setalti.*buzdolab|buzdolab.*setalti/.test(norm(isim)) &&
+    /davlumbaz|firin|fritoz|izgara|ocak/.test(norm(katalogAd)) &&
+    !/buzdolab|sogutuc|yatay tip/.test(norm(katalogAd))
+  ) {
+    return true;
+  }
   if (ref.bulasikForm === "bardak" && /giyotin|kazan|tezgahalti bulasik/.test(k)) {
     return true;
   }

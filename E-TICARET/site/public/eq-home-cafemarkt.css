@@ -310,6 +310,7 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
   text-decoration: none;
   color: inherit;
   text-align: center;
+  cursor: pointer;
 }
 
 @media (min-width: 1101px) {
