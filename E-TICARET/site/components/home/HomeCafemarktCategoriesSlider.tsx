@@ -168,12 +168,16 @@ export function HomeCafemarktCategoriesSlider({
       if (!vp) return;
 
       const clamped = ((target % pageCount) + pageCount) % pageCount;
-      const cardIndex = Math.min(clamped * perPage, categories.length - 1);
-      const card = cardsInViewport(vp)[cardIndex] ?? null;
-      if (card) {
-        card.scrollIntoView({ behavior, inline: "start", block: "nearest" });
+      const pageWidth = vp.clientWidth;
+      if (pageWidth > 0) {
+        vp.scrollTo({ left: clamped * pageWidth, behavior });
       } else {
-        vp.scrollTo({ left: clamped * vp.clientWidth, behavior });
+        const cardIndex = Math.min(clamped * perPage, categories.length - 1);
+        cardsInViewport(vp)[cardIndex]?.scrollIntoView({
+          behavior,
+          inline: "start",
+          block: "nearest",
+        });
       }
       setPage(clamped);
     },
@@ -216,22 +220,11 @@ export function HomeCafemarktCategoriesSlider({
     const vp = viewportRef.current;
     if (!vp) return;
 
-    const vpLeft = vp.getBoundingClientRect().left;
-    const cards = cardsInViewport(vp);
-    let best = 0;
-    let bestDist = Infinity;
-
-    for (let i = 0; i < cards.length; i += perPage) {
-      const el = cards[i];
-      if (!el) continue;
-      const dist = Math.abs(el.getBoundingClientRect().left - vpLeft);
-      if (dist < bestDist) {
-        bestDist = dist;
-        best = Math.floor(i / perPage);
-      }
-    }
-
-    const clamped = Math.max(0, Math.min(pageCount - 1, best));
+    const pageWidth = vp.clientWidth;
+    const clamped =
+      pageWidth > 0
+        ? Math.max(0, Math.min(pageCount - 1, Math.round(vp.scrollLeft / pageWidth)))
+        : 0;
     if (clamped !== pageRef.current) setPage(clamped);
   }, [pageCount, perPage]);
 
@@ -253,9 +246,10 @@ export function HomeCafemarktCategoriesSlider({
         didDragRef.current = false;
       }, 80);
       syncPageFromScroll();
-      const cardIndex = pageRef.current * perPage;
-      const card = cardsInViewport(vp)[Math.min(cardIndex, categories.length - 1)] ?? null;
-      card?.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
+      const pageWidth = vp.clientWidth;
+      if (pageWidth > 0) {
+        vp.scrollTo({ left: pageRef.current * pageWidth, behavior: "smooth" });
+      }
       pauseUntilRef.current = Date.now() + AUTO_MS;
     }
 
