@@ -120,12 +120,6 @@ const cafemarktPopCats: CafemarktCategory[] = [
     image: `${CM_POP_CAT}/cm-gastronorm-kuvetler.jpg`,
   },
   {
-    id: "acik-bufe",
-    label: "Açık Büfe Ekipmanları",
-    ...shopCat("set-ustu-mutfak", "chafing-dish"),
-    image: `${CM_POP_CAT}/cm-acik-bufe-ekipmanlari.jpg`,
-  },
-  {
     id: "cay",
     label: "Çay Makineleri",
     ...shopCat("icecek", "cay-makinesi"),
