@@ -236,16 +236,10 @@ const equstoDeptCats: CafemarktCategory[] = [
     image: `${OZ_WEB}/ozti-7885-15155-10.jpg`,
   },
   {
-    id: "tasima",
-    label: "Taşıma Ekipmanları",
-    ...shopCat("tasima"),
-    image: `${OZ_WEB}/ozti-7912-12070-a0.jpg`,
-  },
-  {
     id: "araba",
     label: "Arabalar",
     ...shopCat("araba"),
-    image: `${AT_CM}/atalay-adk-102.jpg`,
+    image: `${CM_POP_CAT}/araba-tepsi-tasima-gn.jpg`,
   },
   {
     id: "istif",
