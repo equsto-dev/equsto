@@ -90,7 +90,7 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
 }
 
 .eq-cmkt-promo--main {
-  min-height: 320px;
+  min-height: 340px;
   padding: 24px 20px;
 }
 
@@ -123,8 +123,12 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
 }
 
 .eq-cmkt-promo--main .eq-cmkt-promo__title {
-  max-width: 52%;
+  max-width: 46%;
   font-size: clamp(18px, 2vw, 26px);
+}
+
+.eq-cmkt-promo--main .eq-cmkt-promo__sub {
+  max-width: 42%;
 }
 
 .eq-cmkt-promo--compact .eq-cmkt-promo__title {
@@ -181,8 +185,9 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
 }
 
 .eq-cmkt-promo--main .eq-cmkt-promo__img {
-  width: 62%;
-  max-width: 540px;
+  width: 74%;
+  max-width: 680px;
+  max-height: 98%;
 }
 
 .eq-cmkt-promo--compact .eq-cmkt-promo__img {
@@ -584,5 +589,11 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
   .eq-cmkt-promo__img {
     width: 42%;
     opacity: 0.85;
+  }
+
+  .eq-cmkt-promo--main .eq-cmkt-promo__img {
+    width: 58%;
+    max-width: none;
+    max-height: 92%;
   }
 }
