@@ -103,11 +103,14 @@ if (!content.includes("homeMainSliderImt300Image")) {
 if (!content.includes('path: "/images/imt300/imt300-1.jpg"')) {
   fail("home-slider-content.ts: IMT300 görsel yolu değişmiş");
 }
+const pfosIdx = slidesBody.indexOf('id: "pfos",');
 const imtIdx = slidesBody.indexOf('id: "imt300",');
 if (imtIdx < 0) {
   fail("home-slider-content.ts: IMT300 slayt tanımı yok");
 } else if (!slidesBody.slice(imtIdx).includes('kind: "hero-img"')) {
   fail("home-slider-content.ts: IMT300 kind hero-img değil");
+} else if (pfosIdx < 0 || imtIdx <= pfosIdx) {
+  fail("home-slider-content.ts: IMT300 slaytı Proje Fabrikasından sonra değil");
 }
 
 if (!content.includes("homeMainSliderSogutmaPisirmeImage")) {
@@ -213,4 +216,4 @@ if (err) {
   console.error("[verify-home-main-slider-kilit] Kilit ihlali");
   process.exit(1);
 }
-console.log("[verify-home-main-slider-kilit] OK — PFOS · Bar contain · Electrolux XP · IMT300");
+console.log("[verify-home-main-slider-kilit] OK — PFOS · IMT300 · Bar contain · Electrolux XP");

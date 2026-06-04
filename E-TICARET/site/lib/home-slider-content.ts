@@ -1,4 +1,4 @@
-/** Ana sayfa alt slider — PFOS · Bar · Electrolux XP · IMT300 (kilit: public/home-main-slider-KILIT.txt) */
+/** Ana sayfa alt slider — PFOS · IMT300 · Bar · Electrolux XP (kilit: public/home-main-slider-KILIT.txt) */
 
 export const homeMainSliderPfosImage = {
   path: "/images/pfos/proje-fabrikasi-bar-plan-eskiz.png",
@@ -145,6 +145,28 @@ export const homeMainSliderSlides: HomeMainSliderSlide[] = [
     image: homeMainSliderPfosImage,
   },
   {
+    id: "imt300",
+    href: "/besos/imt300",
+    slideClass: "eq-mx-hero__slide eq-mx-hero__slide--imt300",
+    title: "IMT300",
+    titleEm: "Berrak Buz Makinesi",
+    promoKicker: "Besos · Bar Design Studio · Skyra IMT300",
+    promoLead:
+      "Kesim gerektirmeden, standart formlarda parti halinde berrak buz üreten ticari ünite. Bar, otel ve restoranlar için yerinde üretim — dışarıdan buz tedarik maliyetini düşürür, kokteyl ve premium içecek sunumunu yükseltir.",
+    promoBadges: ["2 tepsi", "5 buz formu", "Tek dokunuş", "Paslanmaz çelik"],
+    promoPoints: [
+      "Yavaş erime — kokteylde sulandırma azalır",
+      "Kesim yok — küp, küre, çubuk ve elmas form",
+      "Tek panelden dolum, dondurma ve depolama",
+      "Yüksek hacimde dış buz lojistiği maliyetini düşürür",
+    ],
+    cta: "Ürün sayfasına git →",
+    thumbLabel: "IMT300",
+    kind: "hero-img",
+    image: homeMainSliderImt300Image,
+    thumbSrc: homeMainSliderImt300Image.path,
+  },
+  {
     id: "besos",
     href: "/besos",
     slideClass: "eq-mx-hero__slide eq-mx-hero__slide--bar",
@@ -184,27 +206,5 @@ export const homeMainSliderSlides: HomeMainSliderSlide[] = [
     kind: "hero-img",
     image: homeMainSliderElectroluxXpImage,
     thumbSrc: homeMainSliderElectroluxXpImage.path,
-  },
-  {
-    id: "imt300",
-    href: "/besos/imt300",
-    slideClass: "eq-mx-hero__slide eq-mx-hero__slide--imt300",
-    title: "IMT300",
-    titleEm: "Berrak Buz Makinesi",
-    promoKicker: "Besos · Bar Design Studio · Skyra IMT300",
-    promoLead:
-      "Kesim gerektirmeden, standart formlarda parti halinde berrak buz üreten ticari ünite. Bar, otel ve restoranlar için yerinde üretim — dışarıdan buz tedarik maliyetini düşürür, kokteyl ve premium içecek sunumunu yükseltir.",
-    promoBadges: ["2 tepsi", "5 buz formu", "Tek dokunuş", "Paslanmaz çelik"],
-    promoPoints: [
-      "Yavaş erime — kokteylde sulandırma azalır",
-      "Kesim yok — küp, küre, çubuk ve elmas form",
-      "Tek panelden dolum, dondurma ve depolama",
-      "Yüksek hacimde dış buz lojistiği maliyetini düşürür",
-    ],
-    cta: "Ürün sayfasına git →",
-    thumbLabel: "IMT300",
-    kind: "hero-img",
-    image: homeMainSliderImt300Image,
-    thumbSrc: homeMainSliderImt300Image.path,
   },
 ];
