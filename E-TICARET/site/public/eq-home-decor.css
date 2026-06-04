@@ -178,7 +178,7 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__thumb--pfos i
 }
 
 body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__thumb--electrolux-xp img {
-  background: #000;
+  background: #001e50;
 }
 
 .eq-mx-hero__thumb-ph {
@@ -325,7 +325,8 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split 
 }
 
 .eq-mx-hero__slide--electrolux-xp.eq-mx-hero__slide--split .eq-mx-hero__slide-media {
-  background: #000;
+  flex: 0 0 60%;
+  max-width: 60%;
 }
 
 .eq-mx-hero__slide--bar.eq-mx-hero__slide--split .eq-mx-hero__slide-media .eq-mx-hero__slide-bg,
@@ -384,6 +385,10 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split 
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
+}
+
+.eq-mx-hero__slide--electrolux-xp .eq-mx-hero__slide-promo {
+  background: linear-gradient(105deg, #001e50 0%, #002b5c 50%, #003d7a 100%);
 }
 
 .eq-mx-hero__slide--imt300 .eq-mx-hero__slide-cta,
@@ -547,11 +552,18 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split 
 
 /* Split — mutbex flex yedeğini geçersiz kıl; tanıtım metni boşluğu doldurur */
 body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--bar.eq-mx-hero__slide--split,
-body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300.eq-mx-hero__slide--split,
-body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--electrolux-xp.eq-mx-hero__slide--split {
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300.eq-mx-hero__slide--split {
   display: grid !important;
   grid-template-columns: minmax(200px, 36%) minmax(0, 1fr);
   gap: 0;
+}
+
+/* Electrolux XP — görsel 3/5, metin 2/5, marka mavisi zemin */
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--electrolux-xp.eq-mx-hero__slide--split {
+  display: grid !important;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 0;
+  background-color: #001e50;
 }
 
 body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--bar.eq-mx-hero__slide--split .eq-mx-hero__slide-media,
