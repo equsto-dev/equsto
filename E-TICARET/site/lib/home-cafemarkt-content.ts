@@ -31,11 +31,11 @@ export const cafemarktHeroMain: CafemarktPromoCard = {
 export const cafemarktHeroSideTop: CafemarktPromoCard[] = [
   {
     id: "kahve",
-    brand: "Kahve",
-    title: "La Cimbali & Faema makineleri",
+    brand: "Nuova Simonelli",
+    title: "NUOSI APPIA LIFE 3 gruplu kahve makinası",
     cta: "Hemen al",
-    href: "/shop/kahve",
-    image: "/images/home/hero-bar-cocktailstation.png",
+    href: "/shop/kahve?tip=espresso-makinesi&marka=Nuova+Simonelli",
+    image: "/images/catalog/ozti/web/ozti-9580-appia-3v.jpg",
     bg: "#eef4fb",
   },
   {
