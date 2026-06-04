@@ -466,11 +466,18 @@
     }, 6000);
     setHeroSlide(0);
     document.querySelectorAll('.eq-mx-hero__slide').forEach(function (el) {
-      var href = (el.getAttribute('href') || '').toLowerCase();
+      var href = (el.getAttribute('href') || el.getAttribute('data-slide-href') || '').toLowerCase();
+      var slideGo = el.getAttribute('data-slide-go') || '';
       if (href.indexOf('pfos') >= 0) {
         el.addEventListener('click', function (e) {
           e.preventDefault();
           if (typeof global.eqGo === 'function') global.eqGo('pfos');
+        });
+      } else if (slideGo === 'besos') {
+        el.addEventListener('click', function (e) {
+          if (e.target && e.target.closest && e.target.closest('a')) return;
+          e.preventDefault();
+          if (typeof global.eqGo === 'function') global.eqGo('besos');
         });
       } else if (href.indexOf('bar-design') >= 0) {
         el.addEventListener('click', function (e) {
