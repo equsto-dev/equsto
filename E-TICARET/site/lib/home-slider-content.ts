@@ -3,7 +3,7 @@
 export const homeMainSliderPfosImage = {
   path: "/images/pfos/proje-fabrikasi-bar-plan-eskiz.png",
   width: 1024,
-  height: 524,
+  height: 331,
 } as const;
 
 export type HomeMainSliderSlide =
