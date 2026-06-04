@@ -23,14 +23,18 @@ export function HomeMainSlider() {
               const baseClass = slide.slideClass ?? "eq-mx-hero__slide";
               const activeClass = index === 0 ? `${baseClass} is-active` : baseClass;
 
-              if (slide.kind === "pfos-img") {
+              if (slide.kind === "pfos-img" || slide.kind === "hero-img") {
+                const alt =
+                  slide.id === "imt300"
+                    ? "IMT300 berrak buz makinesi"
+                    : "Proje Fabrikası — bar ve mutfak plan eskizi";
                 return (
                   <a key={slide.id} className={activeClass} href={slide.href}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       className="eq-mx-hero__slide-bg"
                       src={assetUrl(slide.image.path)}
-                      alt="Proje Fabrikası — bar ve mutfak plan eskizi"
+                      alt={alt}
                       width={slide.image.width}
                       height={slide.image.height}
                       decoding="async"
@@ -58,7 +62,7 @@ export function HomeMainSlider() {
                   href={slide.href}
                   style={{ backgroundImage: bg }}
                 >
-                  {slide.id === "besos" || slide.id === "sogutma" || slide.id === "imt300" ? (
+                  {slide.id === "besos" || slide.id === "sogutma" ? (
                     <div className="eq-mx-hero__slide-shade" aria-hidden="true" />
                   ) : null}
                   <div className="eq-mx-hero__slide-cap">
@@ -85,7 +89,7 @@ export function HomeMainSlider() {
               className={`eq-mx-hero__thumb${index === 0 ? " is-active" : ""}`}
               aria-label={slide.thumbLabel}
             >
-              {slide.kind === "pfos-img" ? (
+              {slide.kind === "pfos-img" || slide.kind === "hero-img" ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img src={assetUrl(slide.image.path)} alt="" />
               ) : (

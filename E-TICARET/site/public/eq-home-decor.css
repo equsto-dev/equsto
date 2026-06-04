@@ -80,12 +80,15 @@ body.eq-home-decor .eq-mx-hero__thumbs {
 
 .eq-mx-hero__slide--imt300 {
   background-color: #0a0a0c;
-  background-size: contain;
-  background-position: center center;
+}
+
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300 .eq-mx-hero__slide-bg {
+  object-fit: contain;
+  object-position: center center;
 }
 
 .eq-mx-hero__slide--imt300 .eq-mx-hero__slide-shade {
-  background: linear-gradient(180deg, transparent 45%, rgba(0, 20, 50, 0.78) 100%);
+  background: linear-gradient(180deg, transparent 55%, rgba(0, 20, 50, 0.72) 100%);
 }
 
 .eq-mx-hero__thumb-ph--pfos {
