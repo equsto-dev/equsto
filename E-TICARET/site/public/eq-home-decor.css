@@ -198,10 +198,10 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split 
 
 .eq-mx-hero__slide--split .eq-mx-hero__slide-media {
   position: relative;
-  flex: 1 1 0;
-  max-width: none;
+  flex: 0 0 34%;
+  max-width: 38%;
+  min-width: 200px;
   height: 100%;
-  min-width: 0;
   display: block;
   text-decoration: none;
   color: inherit;
@@ -211,9 +211,6 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split 
 
 .eq-mx-hero__slide--bar.eq-mx-hero__slide--split .eq-mx-hero__slide-media,
 .eq-mx-hero__slide--imt300.eq-mx-hero__slide--split .eq-mx-hero__slide-media {
-  flex: 0 1 46%;
-  max-width: 50%;
-  min-width: 220px;
   background: #001e50;
 }
 
@@ -223,14 +220,8 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split 
   object-position: right center;
 }
 
-.eq-mx-hero__slide--bar.eq-mx-hero__slide--split .eq-mx-hero__slide-promo,
-.eq-mx-hero__slide--imt300.eq-mx-hero__slide--split .eq-mx-hero__slide-promo {
-  flex: 1 1 0;
-  width: auto;
-  max-width: none;
-  min-width: min(280px, 100%);
-  padding-left: clamp(18px, 2.2vw, 32px);
-  padding-right: clamp(16px, 2vw, 24px);
+.eq-mx-hero__slide--imt300.eq-mx-hero__slide--split .eq-mx-hero__slide-media .eq-mx-hero__slide-bg {
+  object-position: left center;
 }
 
 body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--bar .eq-mx-hero__slide-media .eq-mx-hero__slide-bg,
@@ -251,21 +242,28 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split 
 .eq-mx-hero__slide--split .eq-mx-hero__slide-promo {
   position: relative;
   z-index: 2;
-  flex: 0 0 clamp(300px, 42%, 500px);
-  width: clamp(300px, 42%, 500px);
-  max-width: 500px;
-  min-width: 280px;
+  flex: 1 1 0;
+  width: auto;
+  max-width: none;
+  min-width: 0;
   min-height: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: stretch;
   overflow-x: hidden;
   overflow-y: auto;
-  padding: 16px 22px 16px clamp(28px, 3.2vw, 44px);
+  padding: 14px 18px 14px 16px;
   color: #fff;
   background: linear-gradient(105deg, #001e50 0%, #003366 55%, #004080 100%);
   -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+}
+
+.eq-mx-hero__slide--split .eq-mx-hero__slide-promo > * {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .eq-mx-hero__slide--imt300 .eq-mx-hero__slide-cta {
@@ -306,7 +304,7 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split 
   font-weight: 400;
   line-height: 1.4;
   opacity: 0.95;
-  max-width: 48ch;
+  max-width: none;
 }
 
 .eq-mx-hero__slide--bar .eq-mx-hero__slide-promo-badges,
@@ -412,9 +410,35 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split 
 .eq-mx-hero__slide--imt300 .eq-mx-hero__slide-cta {
   margin-top: 12px;
   font-size: clamp(13px, 1.4vw, 16px);
+  align-self: flex-start;
+  width: auto;
+  max-width: 100%;
+}
+
+/* Split — mutbex flex yedeğini geçersiz kıl; tanıtım metni boşluğu doldurur */
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--bar.eq-mx-hero__slide--split,
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300.eq-mx-hero__slide--split {
+  display: grid !important;
+  grid-template-columns: minmax(200px, 36%) minmax(0, 1fr);
+  gap: 0;
+}
+
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--bar.eq-mx-hero__slide--split .eq-mx-hero__slide-media,
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300.eq-mx-hero__slide--split .eq-mx-hero__slide-media,
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--bar.eq-mx-hero__slide--split .eq-mx-hero__slide-promo,
+body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300.eq-mx-hero__slide--split .eq-mx-hero__slide-promo {
+  flex: unset !important;
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0 !important;
 }
 
 @media (max-width: 720px) {
+  body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--bar.eq-mx-hero__slide--split,
+  body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300.eq-mx-hero__slide--split {
+    grid-template-columns: 1fr !important;
+  }
+
   body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--bar,
   body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--imt300,
   body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split {
