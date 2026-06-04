@@ -523,8 +523,6 @@
           orig();
           return;
         }
-        var r0 = document.getElementById('eq-rail-featured');
-        if (r0) r0.innerHTML = pickFeaturedMixed(pool, 12).map(renderRailCard).join('');
         if (rK) rK.innerHTML = pickProducts(pool, rails.kampanyali).map(renderRailCard).join('');
         if (rC) rC.innerHTML = pickProducts(pool, rails.cokSatan).map(renderRailCard).join('');
         if (rY) rY.innerHTML = pickProducts(pool, rails.yeni).map(renderRailCard).join('');

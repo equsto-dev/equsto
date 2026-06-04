@@ -9,14 +9,23 @@ body.eq-home-cafemarkt-on #eq-mx-promo-section.eq-legacy-hidden {
 }
 
 .eq-cmkt {
+  width: 100%;
   background: #fff;
   border-bottom: 1px solid #e5e7eb;
 }
 
 .eq-cmkt-inner {
+  box-sizing: border-box;
+  width: 100%;
   max-width: 1500px;
   margin: 0 auto;
   padding: 16px 10px 24px;
+}
+
+body.eq-home-cafemarkt-on .eq-home-cafemarkt-mount {
+  display: block;
+  width: 100%;
+  max-width: none;
 }
 
 /* ── Hero promo grid (2/3 + 1/3) ── */
@@ -162,6 +171,7 @@ body.eq-home-cafemarkt-on #eq-mx-promo-section.eq-legacy-hidden {
 
 /* ── Popüler kategoriler ── */
 .eq-cmkt-cats-wrap {
+  width: 100%;
   margin-bottom: 28px;
 }
 
@@ -177,13 +187,16 @@ body.eq-home-cafemarkt-on #eq-mx-promo-section.eq-legacy-hidden {
 
 .eq-cmkt-cats {
   position: relative;
-  display: flex;
-  align-items: stretch;
-  gap: 0;
+  width: 100%;
 }
 
 .eq-cmkt-cats__viewport {
-  flex: 1;
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  gap: 12px;
+  width: 100%;
   min-width: 0;
   overflow-x: auto;
   overflow-y: hidden;
@@ -192,7 +205,6 @@ body.eq-home-cafemarkt-on #eq-mx-promo-section.eq-legacy-hidden {
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   cursor: grab;
-  container-type: inline-size;
   touch-action: pan-x pinch-zoom;
 }
 
@@ -211,28 +223,32 @@ body.eq-home-cafemarkt-on #eq-mx-promo-section.eq-legacy-hidden {
   pointer-events: none;
 }
 
-.eq-cmkt-cats__track {
-  display: flex;
-  gap: 12px;
-  width: max-content;
-  min-width: 100%;
-}
-
 .eq-cmkt-cats__nav {
-  flex: 0 0 auto;
-  align-self: center;
-  width: 34px;
-  height: 34px;
-  margin: 0 6px;
-  border: 1px solid #e2e8f0;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 4;
+  width: 36px;
+  height: 36px;
+  margin: 0;
+  border: 1px solid rgba(226, 232, 240, 0.95);
   border-radius: 50%;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.94);
   color: #334155;
   font-size: 20px;
   line-height: 1;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  transition: background 0.15s;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.12);
+  transition: background 0.15s, box-shadow 0.15s;
+  pointer-events: auto;
+}
+
+.eq-cmkt-cats__nav--prev {
+  left: 8px;
+}
+
+.eq-cmkt-cats__nav--next {
+  right: 8px;
 }
 
 .eq-cmkt-cats__nav:hover {
@@ -266,7 +282,10 @@ body.eq-home-cafemarkt-on #eq-mx-promo-section.eq-legacy-hidden {
 }
 
 .eq-cmkt-cat {
-  flex: 0 0 calc((100cqi - 12px * (var(--eq-cmkt-cats-cols, 5) - 1)) / var(--eq-cmkt-cats-cols, 5));
+  box-sizing: border-box;
+  flex: 0 0 var(--eq-cmkt-cat-w, 160px);
+  width: var(--eq-cmkt-cat-w, 160px);
+  max-width: var(--eq-cmkt-cat-w, 160px);
   scroll-snap-align: start;
   min-width: 0;
   text-decoration: none;

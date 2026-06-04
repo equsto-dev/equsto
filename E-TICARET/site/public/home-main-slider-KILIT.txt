@@ -3,7 +3,7 @@ KİLİT — Ana sayfa alt slider (PFOS · Bar Design · Soğutma)
 Onay: 2026-06-03 · Commit referans: 0bd35f30
 ═══════════════════════════════════════════════════════════════════════════
 
-«Öne çıkanlar» bandının altındaki büyük carousel. Üstteki üçlü hero vitrinden
+Departman şeridinin altındaki büyük carousel. Üstteki üçlü hero vitrinden
 AYRI bileşendir (HomeMainSlider). Değiştirmeden önce AÇIK ONAY alın.
 
 ── Beklenen görünüm ───────────────────────────────────────────────────────

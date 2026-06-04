@@ -12,6 +12,7 @@ import { SHOP_ASSET_V } from "@/lib/shop/assets";
 
 const AUTO_MS = 5500;
 const DRAG_THRESH = 5;
+const CAT_GAP_PX = 12;
 
 function assetUrl(path: string): string {
   const sep = path.includes("?") ? "&" : "?";
@@ -66,6 +67,10 @@ function perPageForWidth(w: number): number {
   return 5;
 }
 
+function cardsInViewport(vp: HTMLElement): HTMLElement[] {
+  return Array.from(vp.querySelectorAll<HTMLElement>(".eq-cmkt-cat"));
+}
+
 /** Beyaz zemin: cm-* işlendi; katalog fotoğrafları contain */
 function popCatImgWrapClass(image: string): string {
   const catalogShot = !/\/cm-|pop-cats\/cm-/i.test(image);
@@ -111,7 +116,6 @@ export function HomeCafemarktCategoriesSlider({
   categories: CafemarktCategory[];
 }) {
   const viewportRef = useRef<HTMLDivElement>(null);
-  const trackRef = useRef<HTMLDivElement>(null);
   const didDragRef = useRef(false);
   const dragRef = useRef<DragState>({
     active: false,
@@ -141,15 +145,31 @@ export function HomeCafemarktCategoriesSlider({
     return () => window.removeEventListener("resize", update);
   }, []);
 
+  useEffect(() => {
+    const vp = viewportRef.current;
+    if (!vp) return;
+
+    const applyCardWidth = () => {
+      const w = vp.clientWidth;
+      if (w <= 0) return;
+      const cardW = (w - CAT_GAP_PX * (perPage - 1)) / perPage;
+      vp.style.setProperty("--eq-cmkt-cat-w", `${cardW}px`);
+    };
+
+    applyCardWidth();
+    const ro = new ResizeObserver(applyCardWidth);
+    ro.observe(vp);
+    return () => ro.disconnect();
+  }, [perPage]);
+
   const scrollToPage = useCallback(
     (target: number, behavior: ScrollBehavior = "smooth") => {
       const vp = viewportRef.current;
-      const track = trackRef.current;
-      if (!vp || !track) return;
+      if (!vp) return;
 
       const clamped = ((target % pageCount) + pageCount) % pageCount;
       const cardIndex = Math.min(clamped * perPage, categories.length - 1);
-      const card = track.children.item(cardIndex) as HTMLElement | null;
+      const card = cardsInViewport(vp)[cardIndex] ?? null;
       if (card) {
         card.scrollIntoView({ behavior, inline: "start", block: "nearest" });
       } else {
@@ -194,15 +214,15 @@ export function HomeCafemarktCategoriesSlider({
 
   const syncPageFromScroll = useCallback(() => {
     const vp = viewportRef.current;
-    const track = trackRef.current;
-    if (!vp || !track) return;
+    if (!vp) return;
 
     const vpLeft = vp.getBoundingClientRect().left;
+    const cards = cardsInViewport(vp);
     let best = 0;
     let bestDist = Infinity;
 
-    for (let i = 0; i < track.children.length; i += perPage) {
-      const el = track.children.item(i) as HTMLElement | null;
+    for (let i = 0; i < cards.length; i += perPage) {
+      const el = cards[i];
       if (!el) continue;
       const dist = Math.abs(el.getBoundingClientRect().left - vpLeft);
       if (dist < bestDist) {
@@ -234,10 +254,7 @@ export function HomeCafemarktCategoriesSlider({
       }, 80);
       syncPageFromScroll();
       const cardIndex = pageRef.current * perPage;
-      const track = trackRef.current;
-      const card = track?.children.item(Math.min(cardIndex, categories.length - 1)) as
-        | HTMLElement
-        | null;
+      const card = cardsInViewport(vp)[Math.min(cardIndex, categories.length - 1)] ?? null;
       card?.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
       pauseUntilRef.current = Date.now() + AUTO_MS;
     }
@@ -302,6 +319,19 @@ export function HomeCafemarktCategoriesSlider({
     >
       <h2 className="eq-cmkt-cats__title">Popüler Kategoriler</h2>
       <div className="eq-cmkt-cats">
+        <div
+          ref={viewportRef}
+          className={`eq-cmkt-cats__viewport${dragging ? " is-dragging" : ""}`}
+          onScroll={onScroll}
+          onPointerDown={onPointerDown}
+          onPointerMove={onPointerMove}
+          onPointerUp={onPointerUp}
+          onPointerCancel={onPointerUp}
+        >
+          {categories.map((cat) => (
+            <CategoryCard key={cat.id} cat={cat} didDragRef={didDragRef} />
+          ))}
+        </div>
         <button
           type="button"
           className="eq-cmkt-cats__nav eq-cmkt-cats__nav--prev"
@@ -310,22 +340,6 @@ export function HomeCafemarktCategoriesSlider({
         >
           ‹
         </button>
-        <div
-          ref={viewportRef}
-          className={`eq-cmkt-cats__viewport${dragging ? " is-dragging" : ""}`}
-          style={{ ["--eq-cmkt-cats-cols" as string]: String(perPage) }}
-          onScroll={onScroll}
-          onPointerDown={onPointerDown}
-          onPointerMove={onPointerMove}
-          onPointerUp={onPointerUp}
-          onPointerCancel={onPointerUp}
-        >
-          <div ref={trackRef} className="eq-cmkt-cats__track">
-            {categories.map((cat) => (
-              <CategoryCard key={cat.id} cat={cat} didDragRef={didDragRef} />
-            ))}
-          </div>
-        </div>
         <button
           type="button"
           className="eq-cmkt-cats__nav eq-cmkt-cats__nav--next"

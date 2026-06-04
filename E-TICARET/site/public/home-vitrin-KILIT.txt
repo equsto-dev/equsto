@@ -31,5 +31,6 @@ bölümü vardır. İkisi de HomeVitrinPortals ile mount edilir.
 
 ── Kaldırılmış (geri getirme) ─────────────────────────────────────────────
   eq-decor-promos alt promo bandı (2+1 metin kutuları)
+  eq-decor-featured «Atalay · Öne çıkanlar» ürün şeridi (eq-rail-featured)
 
 ═══════════════════════════════════════════════════════════════════════════
