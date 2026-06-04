@@ -44,6 +44,9 @@ if (!kilit.includes("imt300-1.jpg")) fail("home-main-slider-KILIT.txt: IMT300 ki
 const slider = read("components/home/HomeMainSlider.tsx");
 if (!slider.includes("eq-mx-vitrin eq-decor-slider-only")) fail("HomeMainSlider.tsx: vitrin sınıfı yok");
 if (!slider.includes("eq-mx-hero__slide-bg")) fail("HomeMainSlider.tsx: img slayt yok");
+if (slider.includes('slide.id === "besos" || slide.id === "sogutma"')) {
+  fail("HomeMainSlider.tsx: background dalinda besos karsilastirmasi (TS hatasi)");
+}
 if (!slider.includes("Besos modüler kokteyl istasyonu")) {
   fail("HomeMainSlider.tsx: Bar Design alt metni yok");
 }
