@@ -171,7 +171,8 @@ const equstoDeptCats: CafemarktCategory[] = [
     label: "Bar Design",
     href: "/besos",
     legacyGo: "besos",
-    image: "/images/home/hero-bar-cocktailstation.png",
+    /** Popüler Kategoriler — beyaz zemin (gri kaynak: hero-bar-cocktailstation.png) */
+    image: "/images/home/hero-bar-cocktailstation-popcat-white.png",
   },
   {
     id: "pisirme",

@@ -72,8 +72,11 @@ function cardsInViewport(vp: HTMLElement): HTMLElement[] {
 }
 
 /** Beyaz zemin: cm-* işlendi; katalog fotoğrafları contain */
-function popCatImgWrapClass(image: string): string {
-  const catalogShot = !/\/cm-|pop-cats\/cm-/i.test(image);
+function popCatImgWrapClass(cat: CafemarktCategory): string {
+  if (cat.id === "besos") {
+    return "eq-cmkt-cat__img-wrap eq-cmkt-cat__img-wrap--bar-white";
+  }
+  const catalogShot = !/\/cm-|pop-cats\/cm-/i.test(cat.image);
   return catalogShot
     ? "eq-cmkt-cat__img-wrap eq-cmkt-cat__img-wrap--contain"
     : "eq-cmkt-cat__img-wrap eq-cmkt-cat__img-wrap--cm";
@@ -93,7 +96,7 @@ function CategoryCard({
       draggable={false}
       onClick={(e) => goLink(e, cat, didDragRef.current)}
     >
-      <span className={popCatImgWrapClass(cat.image)}>
+      <span className={popCatImgWrapClass(cat)}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={assetUrl(cat.image)} alt="" loading="lazy" decoding="async" draggable={false} />
       </span>
