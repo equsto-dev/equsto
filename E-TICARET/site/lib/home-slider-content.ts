@@ -106,7 +106,6 @@ export type HomeMainSliderSlide =
       promoLead: string;
       promoBadges: readonly string[];
       promoPoints: readonly string[];
-      complements: typeof homeMainSliderBesosComplements;
       cta: string;
       thumbLabel: string;
       kind: "hero-img";
@@ -177,7 +176,6 @@ export const homeMainSliderSlides: HomeMainSliderSlide[] = [
       "The Manhattan hattı — vitrin + servis tek blokta",
       "42 Besos modülü — CAD ile yerleşim ve teklif",
     ],
-    complements: homeMainSliderBesosComplements,
     cta: "Bar Design Studio'ya git →",
     thumbLabel: "Bar Design",
     kind: "hero-img",
