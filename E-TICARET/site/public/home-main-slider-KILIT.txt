@@ -1,17 +1,31 @@
 ═══════════════════════════════════════════════════════════════════════════
-KİLİT — Ana sayfa alt slider (PFOS · Bar Design · Soğutma)
-Onay: 2026-06-03 · Commit referans: 0bd35f30
+KİLİT — Ana sayfa alt slider (PFOS · Bar Design · Soğutma · IMT300)
+Onay: 2026-06-04 · Commit referans: 1094ec6d
 ═══════════════════════════════════════════════════════════════════════════
 
 Departman şeridinin altındaki büyük carousel. Üstteki üçlü hero vitrinden
 AYRI bileşendir (HomeMainSlider). Değiştirmeden önce AÇIK ONAY alın.
 
 ── Beklenen görünüm ───────────────────────────────────────────────────────
-  • 1024/331 kutu; PFOS slayt object-fit: contain (kırpma yok)
-  • PFOS görsel: bar/mutfak plan eskizi (parşömen, kahve/kokteyl planı)
-  • Sol alt kapak: Proje Fabrikası · Beş dakikada… · Keşfet →
-  • 3. slayt: Soğutma & pişirme — hero-sogutma-pisirme-combo.jpg (2048×1044)
-  • 3 thumb; otomatik geçiş (eq-home-mutbex.js initHero)
+  • 4 slayt, 4 thumb; otomatik geçiş (eq-home-mutbex.js initHero)
+  • PFOS: <img> + object-fit contain — plan eskizi tam görünür (1024×331)
+  • Bar Design: <img> + object-fit contain — kokteyl istasyonu tam görünür
+  • Soğutma: background-image cover (hero-sogutma-pisirme-combo.jpg)
+  • IMT300: <img> + object-fit contain — berrak buz makinesi tam görünür
+  • Sol alt kapak metinleri (title · subtitle · Keşfet →) değişmez
+
+── Kilitli slayt görselleri ───────────────────────────────────────────────
+  PFOS (pfos-img):
+    /images/pfos/proje-fabrikasi-bar-plan-eskiz.png (1024×331)
+  Bar Design (hero-img, eq-mx-hero__slide--bar):
+    /images/home/hero-bar-cocktailstation.png (1200×713)
+    Metin: Bar Design Studio · IMT300 berrak buz · modüler kokteyl istasyonu
+  Soğutma (background, eq-mx-hero__slide--sogutma):
+    /images/home/hero-sogutma-pisirme-combo.jpg (2048×1044)
+  IMT300 (hero-img, eq-mx-hero__slide--imt300):
+    /images/imt300/imt300-1.jpg (800×600)
+
+  Üst üçlü vitrin PFOS kartı: proje-fabrikasi-mutfak-eskiz.png (home-hero-ads-KILIT)
 
 ── Kilitli dosyalar ───────────────────────────────────────────────────────
   components/home/HomeMainSlider.tsx
@@ -20,20 +34,19 @@ AYRI bileşendir (HomeMainSlider). Değiştirmeden önce AÇIK ONAY alın.
   lib/home-slider-content.ts
   lib/vitrin/bodies/index.ts          — #eq-home-slider-mount (gömülü HTML yok)
   app/(vitrin)/page.tsx               — HomeVitrinPortals portal
-  public/eq-home-decor.css            — slider PFOS contain + parşömen zemin
+  public/eq-home-decor.css            — --bar / --imt300 contain, PFOS contain
   public/images/pfos/proje-fabrikasi-bar-plan-eskiz.png
+  public/images/home/hero-bar-cocktailstation.png
   public/images/home/hero-sogutma-pisirme-combo.jpg
+  public/images/imt300/imt300-1.jpg
   lib/shop/assets.ts                  — SHOP_ASSET_V
-
-── PFOS slider görseli (kilitli) ─────────────────────────────────────────
-  /images/pfos/proje-fabrikasi-bar-plan-eskiz.png (1024×331)
-  Üst üçlü vitrin PFOS kartı: proje-fabrikasi-mutfak-eskiz.png (home-hero-ads-KILIT)
-  Soğutma slayt: /images/home/hero-sogutma-pisirme-combo.jpg
 
 YASAK (onay olmadan):
   • Slider HTML'ini index.ts gövdesine geri gömmek
   • PFOS slaytta mutfak-eskiz.jpg / bar-eskiz.png ile değiştirmek
-  • object-fit: cover ile eskizi kırpmak
+  • Bar / IMT300 slaytta background-image + cover (ürün kırpılır)
+  • Bar / IMT300 için kind: "background" veya object-fit: cover
+  • hero-bar-cocktailstation.png / imt300-1.jpg yolunu değiştirmek
   • HomeMainSlider'ı kaldırıp yalnız legacy HTML kullanmak
 
 ── Deploy / doğrulama ─────────────────────────────────────────────────────

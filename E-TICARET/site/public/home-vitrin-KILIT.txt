@@ -1,6 +1,6 @@
 ═══════════════════════════════════════════════════════════════════════════
 KİLİT — Ana sayfa vitrin (üst üçlü hero + alt slider)
-Onay: 2026-06-03 · Commit referans: 0bd35f30
+Onay: 2026-06-04 · Commit referans: 1094ec6d (slider Bar/IMT300 contain)
 ═══════════════════════════════════════════════════════════════════════════
 
 equsto.com ana sayfasında «DÜNYADA BİR İLK!» sonrası iki ayrı React vitrin
@@ -10,8 +10,9 @@ bölümü vardır. İkisi de HomeVitrinPortals ile mount edilir.
      Kaynak: public/home-hero-ads-KILIT.txt
      npm run verify:home-hero-ads-kilit
 
-  2) ALT — büyük carousel slider (PFOS plan eskizi · Bar · Soğutma)
+  2) ALT — büyük carousel slider (PFOS · Bar · Soğutma · IMT300)
      Kaynak: public/home-main-slider-KILIT.txt
+     Bar + IMT300: hero-img + object-fit contain (ürün tam görünür)
      npm run verify:home-main-slider-kilit
 
   3) ALT (slider sonrası) — Cafemarkt tarzı vitrin (React, revizyon açık)
