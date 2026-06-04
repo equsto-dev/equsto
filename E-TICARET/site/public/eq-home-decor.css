@@ -401,7 +401,7 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split 
 
 .eq-mx-hero__slide--split .eq-mx-hero__slide-promo h2 {
   margin: 0 0 6px;
-  font-size: clamp(17px, 2.2vw, 26px);
+  font-size: clamp(21px, 2.6vw, 30px);
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.2;
@@ -411,7 +411,7 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split 
 .eq-mx-hero__slide--imt300 .eq-mx-hero__slide-promo-kicker,
 .eq-mx-hero__slide--electrolux-xp .eq-mx-hero__slide-promo-kicker {
   margin: 0 0 6px;
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.05em;
   opacity: 0.88;
@@ -429,7 +429,7 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split 
 .eq-mx-hero__slide--electrolux-xp .eq-mx-hero__slide-promo-lead {
   flex: 0 0 auto;
   margin: 0 0 8px;
-  font-size: clamp(10px, 1.05vw, 13px);
+  font-size: clamp(14px, 1.25vw, 17px);
   font-weight: 400;
   line-height: 1.4;
   opacity: 0.95;
@@ -450,10 +450,10 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split 
 .eq-mx-hero__slide--bar .eq-mx-hero__slide-promo-badges li,
 .eq-mx-hero__slide--imt300 .eq-mx-hero__slide-promo-badges li,
 .eq-mx-hero__slide--electrolux-xp .eq-mx-hero__slide-promo-badges li {
-  padding: 4px 10px;
+  padding: 5px 12px;
   border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 2px;
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 600;
   line-height: 1.3;
 }
@@ -464,7 +464,7 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split 
   flex: 0 1 auto;
   margin: 8px 0 0;
   padding: 0 0 0 1.15em;
-  font-size: clamp(11px, 1.08vw, 13px);
+  font-size: clamp(15px, 1.28vw, 17px);
   line-height: 1.45;
   opacity: 0.92;
 }
@@ -483,7 +483,7 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split 
 
 .eq-mx-hero__slide--bar .eq-mx-hero__slide-promo-complements-label {
   margin: 10px 0 6px;
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.05em;
   opacity: 0.88;
@@ -528,14 +528,14 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split 
 
 .eq-mx-hero__slide--bar .eq-mx-hero__slide-complement-name {
   margin-top: 4px;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 1.25;
   text-align: center;
 }
 
 .eq-mx-hero__slide--bar .eq-mx-hero__slide-complement-code {
-  font-size: 9px;
+  font-size: 13px;
   opacity: 0.85;
   line-height: 1.2;
 }
@@ -544,7 +544,7 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split 
 .eq-mx-hero__slide--imt300 .eq-mx-hero__slide-cta,
 .eq-mx-hero__slide--electrolux-xp .eq-mx-hero__slide-cta {
   margin-top: 12px;
-  font-size: clamp(13px, 1.4vw, 16px);
+  font-size: clamp(17px, 1.6vw, 20px);
   align-self: flex-start;
   width: auto;
   max-width: 100%;
