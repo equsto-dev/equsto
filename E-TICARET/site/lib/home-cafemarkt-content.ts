@@ -51,13 +51,13 @@ export const cafemarktHeroSideTop: CafemarktPromoCard[] = [
 ];
 
 export const cafemarktHeroSideBottom: CafemarktPromoCard = {
-  id: "besos",
-  brand: "Bar Design Studio",
-  title: "IMT300 berrak buz · modüler kokteyl istasyonu",
-  cta: "Alışverişe başla",
-  href: "/besos",
-  legacyGo: "besos",
-  image: "/images/home/hero-bar-cocktailstation.png",
+  id: "pisirme-ocak",
+  brand: "Öztiryakiler",
+  title: "Set üstü dörtlü ocak",
+  subtitle: "900 serisi gazlı — 80×90 cm, pişirme hattı",
+  cta: "Pişirme vitrini",
+  href: "/shop/pisirme?tip=sanayi-ocaklari",
+  image: "/images/catalog/ozti/web/ozti-7865-n1-80903-20.jpg",
   bg: "#e8eef5",
 };
 
