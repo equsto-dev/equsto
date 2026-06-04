@@ -44,7 +44,6 @@ export const URUN_TIPI_ALIASES: Record<string, string> = {
   "hamur-yogurma-50lt": "spiral_hamur",
   "mikrodalgali-firin": "mikrodalga_firin",
   "calisma-tezgahi-cekmeceli": "calisma_tezgahi",
-  "setaltı-buzdolabi": "tezgah_alti_buz_cek",
   "bar-sogutucu-setaltı": "bar_buzdolabi",
   "tezgah-buzdolabi-3-kapili": "tezgah_tip_buzdolabi",
   "cihazalti-buzdolabi-cekme": "tezgah_alti_buz_cek",

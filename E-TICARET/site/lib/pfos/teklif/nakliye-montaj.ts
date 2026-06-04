@@ -331,8 +331,8 @@ export async function applyNakliyeMontajToKalemler(
     ekipmanToplamTl,
     kalemler: others.map((k) => ({
       adet: k.adet,
-      kod: k.urun?.sku,
-      sku: k.urun?.sku,
+      kod: k.urun?.sku ?? undefined,
+      sku: k.urun?.sku ?? undefined,
       ad: k.isim || (k.urun as { isim?: string })?.isim,
     })),
   });
