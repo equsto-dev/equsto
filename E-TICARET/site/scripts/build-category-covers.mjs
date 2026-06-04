@@ -32,7 +32,7 @@ const DEPT_OVERRIDES = {
   dolap: `${OZ}/ozti-7919-37ntv-c1.jpg`,
   davlumbaz: `${OZ}/ozti-7885-15155-10.jpg`,
   araba: `${CM}/araba-tepsi-tasima-gn.jpg`,
-  istif: `${OZ}/ozti-7897-12050-04.jpg`,
+  istif: `${CM}/istif-izgara-tel.jpg`,
   "set-ustu-mutfak": `${CM}/cm-hazirlik-makineleri.png`,
   kuvetler: `${CM}/cm-gastronorm-kuvetler.jpg`,
 };
