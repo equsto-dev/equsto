@@ -210,7 +210,24 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--split 
 }
 
 .eq-mx-hero__slide--bar.eq-mx-hero__slide--split .eq-mx-hero__slide-media {
-  background: #fff;
+  flex: 0 1 46%;
+  max-width: 50%;
+  min-width: 220px;
+  background: #001e50;
+}
+
+.eq-mx-hero__slide--bar.eq-mx-hero__slide--split .eq-mx-hero__slide-media .eq-mx-hero__slide-bg {
+  object-fit: contain;
+  object-position: right center;
+}
+
+.eq-mx-hero__slide--bar.eq-mx-hero__slide--split .eq-mx-hero__slide-promo {
+  flex: 1 1 0;
+  width: auto;
+  max-width: none;
+  min-width: min(280px, 100%);
+  padding-left: clamp(18px, 2.2vw, 32px);
+  padding-right: clamp(16px, 2vw, 24px);
 }
 
 .eq-mx-hero__slide--imt300.eq-mx-hero__slide--split .eq-mx-hero__slide-media {
