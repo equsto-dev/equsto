@@ -102,27 +102,6 @@ function SplitPromoSlideView({
             <li key={point}>{point}</li>
           ))}
         </ul>
-        {"complements" in slide && slide.complements?.length ? (
-          <>
-            <p className="eq-mx-hero__slide-promo-complements-label">Manhattan hattı modülleri</p>
-            <div className="eq-mx-hero__slide-complements">
-              {slide.complements.map((item) => (
-                <a
-                  key={item.code}
-                  className="eq-mx-hero__slide-complement"
-                  href={item.href}
-                >
-                  <span className="eq-mx-hero__slide-complement-photo">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={assetUrl(item.image)} alt="" />
-                  </span>
-                  <span className="eq-mx-hero__slide-complement-name">{item.name}</span>
-                  <span className="eq-mx-hero__slide-complement-code">{item.code}</span>
-                </a>
-              ))}
-            </div>
-          </>
-        ) : null}
         <a className="eq-mx-hero__slide-cta" href={slide.href}>
           {slide.cta}
         </a>

@@ -421,7 +421,7 @@ body.eq-home-decor
 }
 
 .eq-mx-hero__slide--imt300.eq-mx-hero__slide--split .eq-mx-hero__slide-media .eq-mx-hero__slide-bg {
-  object-position: left center;
+  object-position: center center;
 }
 
 body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slide--electrolux-xp .eq-mx-hero__slide-media .eq-mx-hero__slide-bg,
@@ -464,6 +464,7 @@ body.eq-home-decor
   align-items: center;
   justify-content: flex-start;
   padding: 0 12px 0 0;
+  overflow: visible;
 }
 
 body.eq-home-decor
@@ -479,7 +480,9 @@ body.eq-home-decor
   height: 100%;
   max-height: none;
   object-fit: contain;
-  object-position: left center;
+  object-position: center center;
+  margin-left: 50%;
+  transform: translateX(-50%);
   z-index: 2;
   mix-blend-mode: lighten;
 }
