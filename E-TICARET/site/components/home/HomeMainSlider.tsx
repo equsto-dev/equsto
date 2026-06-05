@@ -25,10 +25,7 @@ function isSplitPromoSlide(slide: HomeMainSliderSlide): slide is SplitPromoSlide
 
 function splitAlt(slide: SplitPromoSlide): string {
   if (slide.id === "imt300") return "IMT300 berrak buz makinesi";
-  if (slide.id === "electrolux-xp") {
-    return "Electrolux Professional XP pişirme serisi — modüler pişirme hattı";
-  }
-  return "Besos modüler kokteyl istasyonu";
+  return "Electrolux Professional XP pişirme serisi — modüler pişirme hattı";
 }
 
 function PfosSketchSlideView({
@@ -63,16 +60,11 @@ function SplitPromoSlideView({
   activeClass: string;
 }) {
   const alt = splitAlt(slide);
-  const rootProps =
-    slide.id === "besos"
-      ? { "data-slide-href": slide.href, "data-slide-go": "besos" as const }
-      : {};
 
   return (
     <div
       key={slide.id}
       className={`${activeClass} eq-mx-hero__slide--split`}
-      {...rootProps}
     >
       <a className="eq-mx-hero__slide-media" href={slide.href}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
