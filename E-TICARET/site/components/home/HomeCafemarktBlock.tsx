@@ -1,5 +1,7 @@
 "use client";
 
+/** Hero kutuları KİLİTLİ — public/home-cafemarkt-hero-KILIT.txt · npm run verify:home-cafemarkt-hero-kilit */
+
 import {
   cafemarktBentoTiles,
   cafemarktCategories,
