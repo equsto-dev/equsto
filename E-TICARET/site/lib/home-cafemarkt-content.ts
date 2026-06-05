@@ -41,7 +41,7 @@ export const cafemarktHeroMain: CafemarktPromoCard = {
   textLight: true,
 };
 
-export const cafemarktHeroSideTop: CafemarktPromoCard[] = [
+export const cafemarktHeroSide: CafemarktPromoCard[] = [
   {
     id: "kahve",
     brand: "Nuova Simonelli",
@@ -61,18 +61,27 @@ export const cafemarktHeroSideTop: CafemarktPromoCard[] = [
     image: "/images/catalog/ozti/web/ozti-075t-00010-ad.jpg",
     bg: "#f3efe6",
   },
+  {
+    id: "pisirme-ocak",
+    brand: "Öztiryakiler",
+    title: "Set üstü dörtlü ocak",
+    subtitle: "900 serisi gazlı — 80×90 cm",
+    cta: "Pişirme vitrini",
+    href: "/shop/pisirme?tip=ocak-vitrini",
+    image: "/images/catalog/ozti/web/ozti-7865-n1-80903-20.jpg",
+    bg: "#e8eef5",
+  },
+  {
+    id: "pisirme-firin",
+    brand: "Öztiryakiler",
+    title: "Pizza fırını",
+    subtitle: "Profesyonel pişirme hattı",
+    cta: "Keşfet",
+    href: "/shop/pisirme?tip=pizza-firinlari",
+    image: "/images/home/pop-cats/cm-pizza-firinlari.webp",
+    bg: "#f5f0ea",
+  },
 ];
-
-export const cafemarktHeroSideBottom: CafemarktPromoCard = {
-  id: "pisirme-ocak",
-  brand: "Öztiryakiler",
-  title: "Set üstü dörtlü ocak",
-  subtitle: "900 serisi gazlı — 80×90 cm, pişirme hattı",
-  cta: "Pişirme vitrini",
-  href: "/shop/pisirme?tip=ocak-vitrini",
-  image: "/images/catalog/ozti/web/ozti-7865-n1-80903-20.jpg",
-  bg: "#e8eef5",
-};
 
 export type CafemarktCategory = {
   id: string;

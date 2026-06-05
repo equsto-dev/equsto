@@ -8,8 +8,7 @@ ve bento şeridi bu kilidin DIŞINDA (içerik revizyonu açık kalabilir).
 
 ── Beklenen düzen ─────────────────────────────────────────────────────────
   • Sol: split promo (Öztiryakiler buzdolabı) — sağ 2 satırın TOPLAM yüksekliği
-  • Sağ üst: kahve + bulaşık (2 kompakt kart, yan yana)
-  • Sağ alt: geniş ocak kartı (grid row 2)
+  • Sağ: 2×2 grid — 4 eşit kompakt kart (kahve · yıkama · ocak · pizza fırını)
   • Alt CTA bandı YOK («Profesyonel mutfağınızı…» kaldırıldı)
 
 ── Kilitli ölçüler (eq-home-cafemarkt.css) ───────────────────────────────
@@ -26,13 +25,11 @@ ve bento şeridi bu kilidin DIŞINDA (içerik revizyonu açık kalabilir).
     grid-column: 1; grid-row: 1 / span 2; height: 100%
 
   Sağ sarmalayıcı (.eq-cmkt-hero-side):
-    display: contents
+    grid-column: 2; grid-row: 1 / span 2
+    display: grid · 2×2 (1fr 1fr · 1fr 1fr) · gap 6px
 
-  Sağ üst satır (.eq-cmkt-hero-side-row):
-    grid-column: 2; grid-row: 1; gap: 10px (iç 2 sütun)
-
-  Sağ alt geniş (.eq-cmkt-promo--wide):
-    grid-column: 2; grid-row: 2
+  Sağ kartlar (.eq-cmkt-promo--compact × 4):
+    kahve · yikama · pisirme-ocak · pisirme-firin
 
   Split promo (sol buzdolabı):
     grid-template-columns: minmax(0, 2fr) minmax(0, 3fr)
@@ -40,15 +37,14 @@ ve bento şeridi bu kilidin DIŞINDA (içerik revizyonu açık kalabilir).
     media img: 125% boyut, object-fit: contain — transform scale YOK (masaüstü)
 
   Hero-scoped tipografi (.eq-cmkt-hero-grid …):
-    compact/wide — brand 9px · title 10–12px · sub 8–10px · CTA 9px · title/sub max-width ~54%
+    compact — brand 9px · title 10–12px · sub 8–10px · CTA 9px · title/sub max-width ~54%
     split — kicker 11px · title clamp(15–19px) · lead 10–12px (2 satır) · rozet 9px · CTA 11–13px
     border-radius 9px; compact/wide padding 6px 8px 5px; img width 40% max-height 74%
     split panel padding 6px 6px 4px 8px; media padding 3px 5px 3px 0; buzdolabı img 125%
 
 ── Kilitli içerik (lib/home-cafemarkt-content.ts) ─────────────────────────
   cafemarktHeroMain: layout split · ozti-79e3-37nmv-03-cutout.png · #001e50
-  cafemarktHeroSideTop: kahve (Appia) + yikama (OBY 50T)
-  cafemarktHeroSideBottom: pisirme-ocak (set üstü dörtlü ocak)
+  cafemarktHeroSide: kahve · yikama · pisirme-ocak · pisirme-firin
 
 ── Kilitli dosyalar ───────────────────────────────────────────────────────
   components/home/HomeCafemarktBlock.tsx   — eq-cmkt-hero-grid yapısı
@@ -62,7 +58,7 @@ ve bento şeridi bu kilidin DIŞINDA (içerik revizyonu açık kalabilir).
 YASAK (onay olmadan):
   • --cmkt-hero-h veya 21fr/19fr (sol %25 dar · sağ geniş) oranını değiştirmek
   • Sol kutuyu tek satıra indirmek (span 2 kaldırmak)
-  • .eq-cmkt-hero-side için display: contents yerine flex/wrapper
+  • .eq-cmkt-hero-side 2×2 grid yerine tek geniş alt satır (wide ocak)
   • Buzdolabı görselinde transform: scale (masaüstü hero)
   • object-fit: cover ile buzdolabı kırpmak
   • Alt CTA bandını index.ts gövdesine geri eklemek

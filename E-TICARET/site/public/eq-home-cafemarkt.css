@@ -69,22 +69,14 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
 }
 
 .eq-cmkt-hero-side {
-  display: contents;
-}
-
-.eq-cmkt-hero-side-row {
   grid-column: 2;
-  grid-row: 1;
+  grid-row: 1 / span 2;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  grid-template-rows: 1fr 1fr;
+  gap: 6px;
   min-height: 0;
-}
-
-.eq-cmkt-hero-side > .eq-cmkt-promo--wide {
-  grid-column: 2;
-  grid-row: 2;
-  min-height: 0;
+  min-width: 0;
 }
 
 /* Hero vitrin — kompakt tipografi + metin/görsel düzeni (kutu ölçüsü sabit) */
@@ -93,8 +85,7 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
   border-radius: 9px;
 }
 
-.eq-cmkt-hero-grid .eq-cmkt-promo--compact,
-.eq-cmkt-hero-grid .eq-cmkt-promo--wide {
+.eq-cmkt-hero-grid .eq-cmkt-promo--compact {
   padding: 6px 8px 5px;
   overflow: hidden;
 }
@@ -108,8 +99,7 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
   opacity: 0.85;
 }
 
-.eq-cmkt-hero-grid .eq-cmkt-promo--compact .eq-cmkt-promo__title,
-.eq-cmkt-hero-grid .eq-cmkt-promo--wide .eq-cmkt-promo__title {
+.eq-cmkt-hero-grid .eq-cmkt-promo--compact .eq-cmkt-promo__title {
   margin: 3px 0 0;
   max-width: 54%;
   font-size: clamp(10px, 0.82vw, 12px);
@@ -118,13 +108,7 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
   line-height: 1.22;
 }
 
-.eq-cmkt-hero-grid .eq-cmkt-promo--wide .eq-cmkt-promo__title {
-  max-width: 58%;
-  font-size: clamp(11px, 0.9vw, 13px);
-}
-
-.eq-cmkt-hero-grid .eq-cmkt-promo--compact .eq-cmkt-promo__sub,
-.eq-cmkt-hero-grid .eq-cmkt-promo--wide .eq-cmkt-promo__sub {
+.eq-cmkt-hero-grid .eq-cmkt-promo--compact .eq-cmkt-promo__sub {
   margin: 2px 0 0;
   max-width: 54%;
   font-size: clamp(8px, 0.62vw, 10px);
@@ -137,8 +121,7 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
   overflow: hidden;
 }
 
-.eq-cmkt-hero-grid .eq-cmkt-promo--compact .eq-cmkt-promo__cta,
-.eq-cmkt-hero-grid .eq-cmkt-promo--wide .eq-cmkt-promo__cta {
+.eq-cmkt-hero-grid .eq-cmkt-promo--compact .eq-cmkt-promo__cta {
   margin-top: auto;
   padding: 4px 10px;
   font-size: 9px;
@@ -940,20 +923,11 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
   }
 
   .eq-cmkt-hero-side {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
     gap: 10px;
     grid-column: 1;
-    grid-row: auto;
-  }
-
-  .eq-cmkt-hero-side-row {
-    grid-column: auto;
-    grid-row: auto;
-  }
-
-  .eq-cmkt-hero-side > .eq-cmkt-promo--wide {
-    grid-column: auto;
     grid-row: auto;
   }
 
@@ -998,8 +972,9 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
 }
 
 @media (max-width: 640px) {
-  .eq-cmkt-hero-side-row {
+  .eq-cmkt-hero-side {
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
   }
 
   .eq-cmkt-cats__nav {
