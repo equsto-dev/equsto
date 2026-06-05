@@ -9,7 +9,7 @@ import type {
 async function readJson<T>(name: string): Promise<T> {
   const raw = await readJsonFile<T>(name);
   if (raw == null) {
-    throw new Error(`Besos data ${name} fetch failed`);
+    throw new Error(`Besos data ${name} unavailable`);
   }
   return raw;
 }
