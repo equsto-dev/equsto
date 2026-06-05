@@ -45,12 +45,15 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
 
 /* ── Hero promo grid: sol yükseklik = sağ (üst 2 + alt ocak) toplamı ── */
 .eq-cmkt-hero-grid {
+  --cmkt-hero-h: clamp(168px, 17.28vw, 372px);
   display: grid;
   grid-template-columns: minmax(0, 14fr) minmax(0, 6fr);
-  grid-template-rows: auto auto;
-  gap: 10px;
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 6px;
   width: 100%;
-  margin-bottom: 28px;
+  height: var(--cmkt-hero-h);
+  max-height: var(--cmkt-hero-h);
+  margin-bottom: 17px;
   align-items: stretch;
 }
 
@@ -81,6 +84,85 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
   grid-column: 2;
   grid-row: 2;
   min-height: 0;
+}
+
+/* Hero vitrin — tüm kutular ~%40 daha kısa (60% yükseklik) */
+.eq-cmkt-hero-grid .eq-cmkt-promo {
+  min-height: 0;
+  border-radius: 9px;
+}
+
+.eq-cmkt-hero-grid .eq-cmkt-promo--compact,
+.eq-cmkt-hero-grid .eq-cmkt-promo--wide {
+  padding: 5px 4px 4px;
+}
+
+.eq-cmkt-hero-grid .eq-cmkt-promo__brand {
+  font-size: 9px;
+}
+
+.eq-cmkt-hero-grid .eq-cmkt-promo--compact .eq-cmkt-promo__title,
+.eq-cmkt-hero-grid .eq-cmkt-promo--wide .eq-cmkt-promo__title {
+  margin-top: 3px;
+  font-size: 10px;
+  line-height: 1.2;
+}
+
+.eq-cmkt-hero-grid .eq-cmkt-promo--compact .eq-cmkt-promo__sub,
+.eq-cmkt-hero-grid .eq-cmkt-promo--wide .eq-cmkt-promo__sub {
+  margin-top: 3px;
+  font-size: 9px;
+  line-height: 1.25;
+}
+
+.eq-cmkt-hero-grid .eq-cmkt-promo--compact .eq-cmkt-promo__cta,
+.eq-cmkt-hero-grid .eq-cmkt-promo--wide .eq-cmkt-promo__cta {
+  margin-top: 4px;
+  padding: 3px 8px;
+  font-size: 9px;
+}
+
+.eq-cmkt-hero-grid .eq-cmkt-promo__img {
+  max-height: 78%;
+  width: 44%;
+}
+
+.eq-cmkt-hero-grid .eq-cmkt-promo--split .eq-cmkt-promo__panel {
+  padding: 6px 6px 4px 8px;
+}
+
+.eq-cmkt-hero-grid .eq-cmkt-promo--split .eq-cmkt-promo__kicker {
+  margin-bottom: 2px;
+  font-size: 9px;
+}
+
+.eq-cmkt-hero-grid .eq-cmkt-promo--split .eq-cmkt-promo__title {
+  margin-bottom: 2px;
+  font-size: clamp(11px, 1.05vw, 14px);
+}
+
+.eq-cmkt-hero-grid .eq-cmkt-promo--split .eq-cmkt-promo__lead {
+  margin-bottom: 2px;
+  font-size: clamp(9px, 0.72vw, 11px);
+  line-height: 1.25;
+}
+
+.eq-cmkt-hero-grid .eq-cmkt-promo--split .eq-cmkt-promo__badges {
+  gap: 2px;
+}
+
+.eq-cmkt-hero-grid .eq-cmkt-promo--split .eq-cmkt-promo__badges li {
+  padding: 1px 4px;
+  font-size: 8px;
+}
+
+.eq-cmkt-hero-grid .eq-cmkt-promo--split .eq-cmkt-promo__cta {
+  margin-top: 3px;
+  font-size: clamp(9px, 0.8vw, 11px);
+}
+
+.eq-cmkt-hero-grid .eq-cmkt-promo--split .eq-cmkt-promo__media {
+  padding: 3px 5px 3px 0;
 }
 
 .eq-cmkt-promo {
@@ -791,6 +873,10 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
   .eq-cmkt-hero-grid {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+    height: auto;
+    max-height: none;
+    gap: 10px;
+    margin-bottom: 28px;
   }
 
   .eq-cmkt-hero-grid > .eq-cmkt-promo--main {
