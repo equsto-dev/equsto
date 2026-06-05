@@ -963,7 +963,7 @@
     );
   }
 
-  var EQ_CATALOG_IMG_V = "20260527robot-coupe-haz";
+  var EQ_CATALOG_IMG_V = "20260602cdn-plp-priority";
   var EQ_OZTI_BAD_CAFE_STUB_MD5 = "6696b6d14fecffc05fb1dc0156c9f6b4";
   var EQ_OZTI_BAD_CAFE_STUB_BYTES = 10995;
 
@@ -1021,19 +1021,21 @@
       if (istifRel) {
         file = istifRel.replace(/^images\//i, "");
       }
-      if (allowRemoteImages() && isEqustoLiveHost() && /^catalog\/ozti\//i.test(file)) {
+      var cdnFirst = equstoCdnAssetHref("images/" + file);
+      if (cdnFirst) chunk.push(cdnFirst);
+      if (isEqustoLiveHost() && /^catalog\/ozti\//i.test(file)) {
         var axLive = oztiAxFromCatalogRel("images/" + file);
         if (axLive) chunk.push(axLive);
       }
       if (/^catalog\/ozti\/web\//i.test(file)) {
         chunk.push("/images/" + file);
         chunk.push("/images/" + encodeDataRelPath(file));
-        var ax = allowRemoteImages() ? oztiAxImageFromWebPath("images/" + file) : "";
+        var ax = oztiAxImageFromWebPath("images/" + file);
         if (ax) chunk.push(ax);
       } else if (/^catalog\/ozti\/(?:cafemarkt|p\d+)\/ozti-/i.test(file)) {
         chunk.push("/images/" + file);
         chunk.push("/images/" + encodeDataRelPath(file));
-        var axCm = allowRemoteImages() ? oztiAxFromCatalogRel("images/" + file) : "";
+        var axCm = oztiAxFromCatalogRel("images/" + file);
         if (axCm) chunk.push(axCm);
       }
       var root = catalogImagesWebRoot();

@@ -442,10 +442,10 @@
       }
     }
     var imgOut = '';
-    if (isOztiRow(row) && ozSku && typeof window.eqOztiAxImageFromSku === 'function') {
+    if (imgRel) imgOut = imgSrc(imgRel) || '';
+    if (!imgOut && isOztiRow(row) && ozSku && typeof window.eqOztiAxImageFromSku === 'function') {
       imgOut = window.eqOztiAxImageFromSku(ozSku) || '';
     }
-    if (!imgOut && imgRel) imgOut = imgSrc(imgRel) || '';
     return {
       c: row.category || '',
       b: b,
