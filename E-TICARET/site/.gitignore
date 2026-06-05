@@ -43,6 +43,13 @@ yarn-error.log*
 # Canlı: S3/CloudFront (data/electrolux-professional/docs/). Import: catalog:electrolux:import
 /public/data/electrolux-professional/docs/
 
+# Faz B — medya S3/CloudFront; git yalnızca katalog JSON + JS
+/public/images/
+/public/data/caglayan-market/
+/public/data/prosogutma-market/
+/public/data/vitrum-drawings/
+/public/data/advanced-cuisine-clear-ice/
+
 # env — .env.example commit edilir
 .env
 .env.local
