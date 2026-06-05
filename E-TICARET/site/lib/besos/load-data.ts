@@ -1,7 +1,4 @@
-import { readFile } from "fs/promises";
-import fs from "node:fs";
-import path from "path";
-import { getSiteOrigin } from "@/lib/site-origin";
+import { readJsonFile } from "@/lib/legacy-data";
 import type {
   BesosCatalogue,
   BesosHeroVideo,
@@ -9,32 +6,12 @@ import type {
   BesosProjectsData,
 } from "./types";
 
-function dataPath(name: string): string {
-  return path.join(process.cwd(), "public", "data", name);
-}
-
-/**
- * Vercel lambda: public/data/*.json trace dışı (next.config) — yerel yoksa CDN.
- */
 async function readJson<T>(name: string): Promise<T> {
-  const local = dataPath(name);
-  try {
-    if (fs.existsSync(local)) {
-      const raw = await readFile(local, "utf8");
-      return JSON.parse(raw) as T;
-    }
-  } catch {
-    /* fetch fallback */
+  const raw = await readJsonFile<T>(name);
+  if (raw == null) {
+    throw new Error(`Besos data ${name} fetch failed`);
   }
-
-  const res = await fetch(`${getSiteOrigin()}/data/${name}`, {
-    cache: "no-store",
-    headers: { Accept: "application/json" },
-  });
-  if (!res.ok) {
-    throw new Error(`Besos data ${name} fetch ${res.status}`);
-  }
-  return res.json() as Promise<T>;
+  return raw;
 }
 
 export async function loadBesosLanding(): Promise<BesosLanding> {

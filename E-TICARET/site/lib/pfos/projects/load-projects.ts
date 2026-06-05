@@ -1,5 +1,4 @@
-import { readFile } from "fs/promises";
-import path from "path";
+import { readJsonFile } from "@/lib/legacy-data";
 import type {
   PfosProjeProfil,
   PfosProjeRow,
@@ -31,10 +30,6 @@ type ReferansProject = {
 };
 
 let cache: PfosProjelerResponse | null = null;
-
-function dataPath(name: string): string {
-  return path.join(process.cwd(), "public", "data", name);
-}
 
 function yilFromId(id: string): string {
   const m = id.match(/^(\d{4})/);
@@ -147,24 +142,24 @@ function rowFromArchive(
 export async function loadPfosProjects(): Promise<PfosProjelerResponse> {
   if (cache) return cache;
 
-  const [archiveRaw, referansRaw, kurallarRaw, vitrinRaw] = await Promise.all([
-    readFile(dataPath("pfos-archive-extract.json"), "utf-8"),
-    readFile(dataPath("pfos-referans-projeler.json"), "utf-8"),
-    readFile(dataPath("pfos-zone-proje-kurallari.json"), "utf-8"),
-    readFile(dataPath("pfos-projects.json"), "utf-8").catch(() => "{}"),
+  const [archive, referans, kurallar, vitrin] = await Promise.all([
+    readJsonFile<{ projects: ArchiveProject[] }>("pfos-archive-extract.json"),
+    readJsonFile<{ projects: ReferansProject[] }>("pfos-referans-projeler.json"),
+    readJsonFile<{ profiles: PfosProjeProfil[] }>("pfos-zone-proje-kurallari.json"),
+    readJsonFile<{
+      projects?: {
+        id: string;
+        baslik: string;
+        match?: { konsept?: string; dukkan?: string };
+        lines?: unknown[];
+      }[];
+    }>("pfos-projects.json"),
   ]);
 
-  const archive = JSON.parse(archiveRaw) as { projects: ArchiveProject[] };
-  const referans = JSON.parse(referansRaw) as { projects: ReferansProject[] };
-  const kurallar = JSON.parse(kurallarRaw) as { profiles: PfosProjeProfil[] };
-  const vitrin = JSON.parse(vitrinRaw) as {
-    projects?: {
-      id: string;
-      baslik: string;
-      match?: { konsept?: string; dukkan?: string };
-      lines?: unknown[];
-    }[];
-  };
+  if (!archive || !referans || !kurallar) {
+    cache = { projects: [], yillar: [], konseptler: [], dukkanlar: [], profiles: [] };
+    return cache;
+  }
 
   const profiles = kurallar.profiles ?? [];
   const referansById = new Map(referans.projects.map((p) => [p.id, p]));
@@ -175,7 +170,7 @@ export async function loadPfosProjects(): Promise<PfosProjelerResponse> {
     byId.set(p.id, rowFromArchive(p, referansById, referansIds, profiles));
   }
 
-  for (const v of vitrin.projects ?? []) {
+  for (const v of vitrin?.projects ?? []) {
     if (byId.has(v.id)) continue;
     const zones = ["ana_mutfak", "bar", "bulasikhane"];
     const match = bestProfile(zones, profiles);
