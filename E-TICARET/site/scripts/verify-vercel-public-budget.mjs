@@ -23,9 +23,10 @@ function relPosix(from, file) {
 }
 
 function ignored(rel, patterns) {
-  for (const pat of patterns) {
-    const p = pat.replace(/\\/g, "/").replace(/\/$/, "");
-    if (rel === p || rel.startsWith(`${p}/`)) return true;
+  for (let pat of patterns) {
+    pat = pat.replace(/\\/g, "/").replace(/\/$/, "");
+    if (pat.startsWith("public/")) pat = pat.slice("public/".length);
+    if (rel === pat || rel.startsWith(`${pat}/`)) return true;
   }
   return false;
 }
