@@ -63,6 +63,12 @@ if (!catsBlock.includes("calc((100% - 12px) / 2)")) {
 }
 
 const slider = read("components/home/HomeCafemarktCategoriesSlider.tsx");
+if (!slider.includes('from "@/lib/public-asset-url"')) {
+  fail("CategoriesSlider: public-asset-url import yok (cdn-asset-urls-KILIT)");
+}
+if (!slider.includes("publicAssetUrl(")) {
+  fail("CategoriesSlider: publicAssetUrl() kullanılmıyor");
+}
 if (!slider.includes("const AUTO_MS = 5500")) fail("CategoriesSlider: AUTO_MS 5500 değil");
 if (!slider.includes("const CAT_GAP_PX = 12")) fail("CategoriesSlider: CAT_GAP_PX 12 değil");
 if (!slider.includes("if (w <= 640) return 2")) fail("CategoriesSlider: mobil perPage 2 yok");

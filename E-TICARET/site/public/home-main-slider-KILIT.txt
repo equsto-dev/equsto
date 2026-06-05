@@ -47,6 +47,7 @@ AYRI bileşendir (HomeMainSlider). Değiştirmeden önce AÇIK ONAY alın.
   public/images/home/electrolux-xp-pisirme.webp
   public/images/imt300/imt300-2.png
   lib/shop/assets.ts                  — SHOP_ASSET_V
+  lib/public-asset-url.ts             — publicAssetUrl() (cdn-asset-urls-KILIT)
 
 YASAK (onay olmadan):
   • Slider HTML'ini index.ts gövdesine geri gömmek

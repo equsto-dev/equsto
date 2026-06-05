@@ -47,6 +47,12 @@ if (!mount.includes("HomeHeroAds")) fail("HomeHeroAdsMount.tsx: HomeHeroAds port
 const hero = read("components/home/HomeHeroAds.tsx");
 if (!hero.includes("eq-home-hero-ads")) fail("HomeHeroAds.tsx: eq-home-hero-ads yok");
 if (!hero.includes("hero-card-img--pfos-cover")) fail("HomeHeroAds.tsx: PFOS img sınıfı yok");
+if (!hero.includes('from "@/lib/public-asset-url"')) {
+  fail("HomeHeroAds.tsx: public-asset-url import yok (cdn-asset-urls-KILIT)");
+}
+if (!hero.includes("publicAssetUrl(pillar.image)")) {
+  fail("HomeHeroAds.tsx: publicAssetUrl() kullanılmıyor");
+}
 
 const home = read("lib/home-content.ts");
 if (!home.includes('image: "/images/pfos/proje-fabrikasi-mutfak-eskiz.png"')) {

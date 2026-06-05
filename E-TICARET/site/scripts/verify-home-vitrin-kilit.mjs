@@ -15,6 +15,7 @@ if (!fs.existsSync(path.join(siteDir, "public/home-vitrin-KILIT.txt"))) {
 }
 
 for (const script of [
+  "verify-cdn-asset-urls-kilit.mjs",
   "verify-home-hero-ads-kilit.mjs",
   "verify-home-main-slider-kilit.mjs",
   "verify-home-cafemarkt-hero-kilit.mjs",
@@ -27,4 +28,4 @@ for (const script of [
   if (r.status !== 0) process.exit(r.status ?? 1);
 }
 
-console.log("[verify-home-vitrin-kilit] OK — hero + slider + cafemarkt hero + pop cats");
+console.log("[verify-home-vitrin-kilit] OK — CDN + hero + slider + cafemarkt hero + pop cats");

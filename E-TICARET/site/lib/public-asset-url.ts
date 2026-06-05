@@ -1,3 +1,4 @@
+/** KİLİT: public/cdn-asset-urls-KILIT.txt — Faz B CloudFront img src */
 import { SHOP_ASSET_V } from "@/lib/shop/assets";
 
 /** docs/s3-upload-manifest.json cdnEnvHint — istemci güvenli (fs yok) */
