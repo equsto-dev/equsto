@@ -48,7 +48,7 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
 .eq-cmkt-hero-grid {
   --cmkt-hero-h: clamp(168px, 17.28vw, 372px);
   display: grid;
-  grid-template-columns: minmax(0, 14fr) minmax(0, 6fr);
+  grid-template-columns: minmax(0, 21fr) minmax(0, 19fr);
   grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
   gap: 6px;
   width: 100%;
