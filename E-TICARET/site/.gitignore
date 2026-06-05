@@ -39,6 +39,10 @@ yarn-error.log*
 # Eski tam katalog yedeği (~12k) — canlıda / aramada kullanılmaz
 /public/data/ekipmanlar-full-archive.json
 
+# Electrolux PDF/DWG/RFA (~4 GB) — kaynak: PFOS/veri/electrolux-professional/media/documents
+# Canlı: S3/CloudFront (data/electrolux-professional/docs/). Import: catalog:electrolux:import
+/public/data/electrolux-professional/docs/
+
 # env — .env.example commit edilir
 .env
 .env.local

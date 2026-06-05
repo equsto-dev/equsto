@@ -2,50 +2,58 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
     <loc>https://equsto.com/sitemap-pages.xml</loc>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-06-05</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://equsto.com/sitemap-shop-hubs.xml</loc>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-06-05</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://equsto.com/sitemap-shop-en-hubs.xml</loc>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-06-05</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://equsto.com/sitemap-shop-brands.xml</loc>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-06-05</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://equsto.com/sitemap-shop-categories.xml</loc>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-06-05</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://equsto.com/sitemap-besos.xml</loc>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-06-05</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://equsto.com/sitemap-shop-products-01.xml</loc>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-06-05</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://equsto.com/sitemap-shop-products-02.xml</loc>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-06-05</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://equsto.com/sitemap-shop-products-03.xml</loc>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-06-05</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://equsto.com/sitemap-shop-products-04.xml</loc>
+    <lastmod>2026-06-05</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://equsto.com/sitemap-shop-products-en-01.xml</loc>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-06-05</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://equsto.com/sitemap-shop-products-en-02.xml</loc>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-06-05</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://equsto.com/sitemap-shop-products-en-03.xml</loc>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-06-05</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://equsto.com/sitemap-shop-products-en-04.xml</loc>
+    <lastmod>2026-06-05</lastmod>
   </sitemap>
 </sitemapindex>
