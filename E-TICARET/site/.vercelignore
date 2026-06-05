@@ -12,3 +12,7 @@ public/data/caglayan-market/
 public/data/prosogutma-market/
 public/data/vitrum-drawings/
 public/data/advanced-cuisine-clear-ice/
+
+# CloudFront'ta zaten var — ~1.4 GB deploy tasarrufu
+public/images/catalog/ozti/
+public/images/catalog/cafemarkt-images/
