@@ -39,7 +39,7 @@ ve bento şeridi bu kilidin DIŞINDA (içerik revizyonu açık kalabilir).
   Hero-scoped tipografi (.eq-cmkt-hero-grid …):
     compact — brand 9px · title 10–12px · sub 8–10px · CTA 9px · title/sub max-width ~54%
     split — kicker 11px · title clamp(15–19px) · lead 10–12px (2 satır) · rozet 9px · CTA 11–13px
-    border-radius 9px; compact padding 6px 8px 5px; img sağ %48 alanda ortalı max-height 89%
+    border-radius 9px; compact padding 6px 8px 5px; img sağ alanda ortalı max 125%/111% (+25%)
     split panel padding 6px 6px 4px 8px; media padding 3px 5px 3px 0; buzdolabı img 125%
 
 ── Kilitli içerik (lib/home-cafemarkt-content.ts) ─────────────────────────
