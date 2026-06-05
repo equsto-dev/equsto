@@ -10,16 +10,11 @@ import {
   type PointerEvent as ReactPointerEvent,
 } from "react";
 import type { CafemarktCategory } from "@/lib/home-cafemarkt-content";
-import { SHOP_ASSET_V } from "@/lib/shop/assets";
+import { publicAssetUrl } from "@/lib/public-asset-url";
 
 const AUTO_MS = 5500;
 const DRAG_THRESH = 5;
 const CAT_GAP_PX = 12;
-
-function assetUrl(path: string): string {
-  const sep = path.includes("?") ? "&" : "?";
-  return `${path}${sep}v=${SHOP_ASSET_V}`;
-}
 
 function perPageForWidth(w: number): number {
   if (w <= 640) return 2;
@@ -60,7 +55,7 @@ function CategoryCard({
     >
       <span className={popCatImgWrapClass(cat)}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={assetUrl(cat.image)} alt="" loading="lazy" decoding="async" draggable={false} />
+        <img src={publicAssetUrl(cat.image)} alt="" loading="lazy" decoding="async" draggable={false} />
       </span>
       <span className="eq-cmkt-cat__label">{cat.label}</span>
     </a>

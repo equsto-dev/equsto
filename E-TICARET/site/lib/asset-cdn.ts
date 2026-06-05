@@ -1,5 +1,8 @@
 /** CDN object storage — Faz B (public/images + büyük data medya) */
 
+import fs from "node:fs";
+import path from "node:path";
+
 const CDN_PREFIXES = [
   "images/",
   "data/caglayan-market/",
@@ -25,12 +28,25 @@ function encodeRelPath(rel: string): string {
     .join("/");
 }
 
-/** Vercel Blob / R2 public base — sonunda `/` yok */
+function manifestCdnHint(): string {
+  try {
+    const manifestPath = path.join(process.cwd(), "docs/s3-upload-manifest.json");
+    const hint = JSON.parse(fs.readFileSync(manifestPath, "utf8")).cdnEnvHint;
+    if (typeof hint === "string" && /^https?:\/\//i.test(hint)) {
+      return hint.trim().replace(/\/$/, "");
+    }
+  } catch {
+    /* manifest yok */
+  }
+  return "";
+}
+
+/** CloudFront kökü — sonunda `/` yok */
 export function getAssetCdnBase(): string {
   const raw =
     process.env.NEXT_PUBLIC_ASSET_CDN_URL?.trim() ||
     process.env.ASSET_CDN_URL?.trim() ||
-    "";
+    manifestCdnHint();
   return raw.replace(/\/$/, "");
 }
 

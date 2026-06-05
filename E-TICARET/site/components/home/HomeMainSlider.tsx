@@ -5,12 +5,7 @@ import {
   homeMainSliderSlides,
   type HomeMainSliderSlide,
 } from "@/lib/home-slider-content";
-import { SHOP_ASSET_V } from "@/lib/shop/assets";
-
-function assetUrl(path: string): string {
-  const sep = path.includes("?") ? "&" : "?";
-  return `${path}${sep}v=${SHOP_ASSET_V}`;
-}
+import { publicAssetUrl } from "@/lib/public-asset-url";
 
 type SplitPromoSlide = Extract<HomeMainSliderSlide, { kind: "hero-img" }>;
 type SketchSlide = Extract<HomeMainSliderSlide, { kind: "sketch" }>;
@@ -41,7 +36,7 @@ function PfosSketchSlideView({
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           className="eq-mx-hero__slide-bg"
-          src={assetUrl(slide.image.path)}
+          src={publicAssetUrl(slide.image.path)}
           alt="Proje Fabrikası — bar ve mutfak plan eskizi"
           width={slide.image.width}
           height={slide.image.height}
@@ -70,7 +65,7 @@ function SplitPromoSlideView({
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           className="eq-mx-hero__slide-bg"
-          src={assetUrl(slide.image.path)}
+          src={publicAssetUrl(slide.image.path)}
           alt={alt}
           width={slide.image.width}
           height={slide.image.height}
@@ -148,7 +143,7 @@ export function HomeMainSlider() {
             >
               {slide.kind === "hero-img" || slide.kind === "sketch" ? (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={assetUrl(slide.thumbSrc)} alt="" />
+                <img src={publicAssetUrl(slide.thumbSrc)} alt="" />
               ) : null}
             </button>
           ))}

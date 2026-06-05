@@ -727,12 +727,13 @@
   }
 
   /** Faz B — NEXT_PUBLIC_ASSET_CDN_URL → eq-asset-cdn-config.js */
+  var DEFAULT_ASSET_CDN = "https://dqb0g8etbedva.cloudfront.net";
   function assetCdnBase() {
     try {
       var b = String(window.__EQUSTO_ASSET_CDN || "").trim();
       if (b) return b.replace(/\/$/, "");
     } catch (_) {}
-    return "";
+    return DEFAULT_ASSET_CDN;
   }
 
   function isCdnMigrateRel(rel) {
