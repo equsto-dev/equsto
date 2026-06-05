@@ -23,6 +23,7 @@ const OUT_DOC = path.join(ROOT, "public/data/electrolux-professional/docs");
 const MANIFEST = path.join(ROOT, "public/data/electrolux-professional/manifest.json");
 
 const BRAND = "Electrolux Professional";
+const OEM_BRAND = "Electrolux";
 const BRAND_ID = "electrolux-professional";
 const KAYNAK = "electrolux-professional";
 const dryRun = process.argv.includes("--dry-run");
@@ -171,6 +172,7 @@ function toRow(p) {
     dept,
     category,
     brand: BRAND,
+    oem_brand: OEM_BRAND,
     name: p.title || `Electrolux ${cod}`,
     price: "Teklif için iletişim",
     fiyat_bekleniyor: true,

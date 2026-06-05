@@ -451,7 +451,7 @@
     copmak: { markaHub: true, facet: "Copmak" },
     blanco: { markaHub: true, facet: "Blanco" },
     simag: { markaHub: true, facet: "SIMAG" },
-    electrolux: { dept: "pisirme", facet: "Electrolux" },
+    electrolux: { markaHub: true, facet: "Electrolux" },
     inoksan: { dept: "sogutma", facet: "İnoksan" },
     "la-cimbali": { dept: "kahve", facet: "La Cimbali" },
     faema: { dept: "kahve", facet: "Faema" },

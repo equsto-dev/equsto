@@ -212,4 +212,10 @@ if (process.env.VERCEL === "1" && dbUrl && !dbUrl.includes("127.0.0.1:5432/build
   }
 }
 
+const verifyElectrolux = path.join(siteDir, "scripts/verify-electrolux-catalog.mjs");
+if (fs.existsSync(verifyElectrolux)) {
+  const r = spawnSync(process.execPath, [verifyElectrolux], { cwd: siteDir, stdio: "inherit" });
+  if (r.status !== 0) process.exit(r.status ?? 1);
+}
+
 console.log("[vercel-prebuild] OK");
