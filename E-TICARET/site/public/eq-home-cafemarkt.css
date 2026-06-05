@@ -43,6 +43,7 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
   box-sizing: border-box;
 }
 
+/* KİLİT: public/home-cafemarkt-hero-KILIT.txt */
 /* ── Hero promo grid: sol yükseklik = sağ (üst 2 + alt ocak) toplamı ── */
 .eq-cmkt-hero-grid {
   --cmkt-hero-h: clamp(168px, 17.28vw, 372px);

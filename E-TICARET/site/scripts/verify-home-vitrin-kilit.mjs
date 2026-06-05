@@ -14,7 +14,11 @@ if (!fs.existsSync(path.join(siteDir, "public/home-vitrin-KILIT.txt"))) {
   process.exit(1);
 }
 
-for (const script of ["verify-home-hero-ads-kilit.mjs", "verify-home-main-slider-kilit.mjs"]) {
+for (const script of [
+  "verify-home-hero-ads-kilit.mjs",
+  "verify-home-main-slider-kilit.mjs",
+  "verify-home-cafemarkt-hero-kilit.mjs",
+]) {
   const r = spawnSync(process.execPath, [path.join(siteDir, "scripts", script)], {
     cwd: siteDir,
     stdio: "inherit",
@@ -22,4 +26,4 @@ for (const script of ["verify-home-hero-ads-kilit.mjs", "verify-home-main-slider
   if (r.status !== 0) process.exit(r.status ?? 1);
 }
 
-console.log("[verify-home-vitrin-kilit] OK — üst hero + alt slider");
+console.log("[verify-home-vitrin-kilit] OK — üst hero + alt slider + cafemarkt hero");

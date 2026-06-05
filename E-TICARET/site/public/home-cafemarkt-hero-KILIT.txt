@@ -1,0 +1,73 @@
+═══════════════════════════════════════════════════════════════════════════
+KİLİT — Ana sayfa Cafemarkt hero kutuları (5 promo kartı)
+Onay: 2026-06-05 · Commit referans: 96707dd3 (hero yükseklik %60 · hizalı grid)
+═══════════════════════════════════════════════════════════════════════════
+
+Slider (#eq-home-slider-mount) altındaki üst promo ızgarası. Kategori slider
+ve bento şeridi bu kilidin DIŞINDA (içerik revizyonu açık kalabilir).
+
+── Beklenen düzen ─────────────────────────────────────────────────────────
+  • Sol: split promo (Öztiryakiler buzdolabı) — sağ 2 satırın TOPLAM yüksekliği
+  • Sağ üst: kahve + bulaşık (2 kompakt kart, yan yana)
+  • Sağ alt: geniş ocak kartı (grid row 2)
+  • Alt CTA bandı YOK («Profesyonel mutfağınızı…» kaldırıldı)
+
+── Kilitli ölçüler (eq-home-cafemarkt.css) ───────────────────────────────
+  .eq-cmkt-hero-grid
+    --cmkt-hero-h: clamp(168px, 17.28vw, 372px)
+    grid-template-columns: minmax(0, 14fr) minmax(0, 6fr)
+    grid-template-rows: minmax(0, 1fr) minmax(0, 1fr)
+    gap: 6px
+    height / max-height: var(--cmkt-hero-h)
+    margin-bottom: 17px
+    align-items: stretch
+
+  Sol ana (.eq-cmkt-promo--main):
+    grid-column: 1; grid-row: 1 / span 2; height: 100%
+
+  Sağ sarmalayıcı (.eq-cmkt-hero-side):
+    display: contents
+
+  Sağ üst satır (.eq-cmkt-hero-side-row):
+    grid-column: 2; grid-row: 1; gap: 10px (iç 2 sütun)
+
+  Sağ alt geniş (.eq-cmkt-promo--wide):
+    grid-column: 2; grid-row: 2
+
+  Split promo (sol buzdolabı):
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr)
+    panel: justify-content: flex-start
+    media img: width/height 100%, object-fit: contain — transform scale YOK (masaüstü)
+
+  Hero-scoped kompakt tipografi / padding (.eq-cmkt-hero-grid …):
+    border-radius 9px; compact/wide padding 5px 4px 4px; img max-height 78% width 44%
+    split panel padding 6px 6px 4px 8px; media padding 3px 5px 3px 0
+
+── Kilitli içerik (lib/home-cafemarkt-content.ts) ─────────────────────────
+  cafemarktHeroMain: layout split · ozti-79e3-37nmv-03-cutout.png · #001e50
+  cafemarktHeroSideTop: kahve (Appia) + yikama (OBY 50T)
+  cafemarktHeroSideBottom: pisirme-ocak (set üstü dörtlü ocak)
+
+── Kilitli dosyalar ───────────────────────────────────────────────────────
+  components/home/HomeCafemarktBlock.tsx   — eq-cmkt-hero-grid yapısı
+  components/home/HomeCafemarktMount.tsx   — #eq-home-cafemarkt-mount portal
+  components/home/HomeVitrinPortals.tsx
+  lib/home-cafemarkt-content.ts            — hero kart sabitleri (üst bölüm)
+  public/eq-home-cafemarkt.css             — hero grid + split + hero-scoped kurallar
+  lib/shop/assets.ts                     — SHOP_ASSET_V
+  lib/vitrin/bodies/index.ts               — #eq-home-cafemarkt-mount (CTA bandı yok)
+
+YASAK (onay olmadan):
+  • --cmkt-hero-h veya 14fr/6fr oranını değiştirmek
+  • Sol kutuyu tek satıra indirmek (span 2 kaldırmak)
+  • .eq-cmkt-hero-side için display: contents yerine flex/wrapper
+  • Buzdolabı görselinde transform: scale (masaüstü hero)
+  • object-fit: cover ile buzdolabı kırpmak
+  • Alt CTA bandını index.ts gövdesine geri eklemek
+  • Hero grid yüksekliğini eski ~%100 değerlere döndürmek (280px / 28.8vw / 620px)
+
+── Deploy / doğrulama ─────────────────────────────────────────────────────
+  npm run verify:home-cafemarkt-hero-kilit
+  npm run verify:home-vitrin-kilit   (üst hero + slider + cafemarkt hero)
+
+═══════════════════════════════════════════════════════════════════════════
