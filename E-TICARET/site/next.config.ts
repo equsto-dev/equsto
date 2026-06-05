@@ -54,21 +54,26 @@ function legacyHtmlRedirects() {
   }));
 }
 
-/** Vercel lambda 250MB — public görseller/katalog trace dışı (runtime CDN/fs fetch) */
+/** Vercel lambda 300MB — static dosyalar trace dışı (runtime CDN / fetch) */
+const tracingRoot = path.join(__dirname, "..", "..");
+const siteRel = path.relative(tracingRoot, __dirname).replace(/\\/g, "/");
+
 const traceExcludes = [
-  "./public/images/**",
-  "./public/assets/**",
-  "./public/data/dept/**",
-  "./public/data/vitrum-drawings/**",
-  "./public/data/advanced-cuisine-clear-ice/**",
-  "./public/data/ekipmanlar.json",
-  "./public/data/ekipmanlar-full-archive.json",
-  "./public/data/*.json",
-  "./scripts/**",
+  `./${siteRel}/public/images/**`,
+  `./${siteRel}/public/assets/**`,
+  `./${siteRel}/public/data/**`,
+  `./${siteRel}/scripts/**`,
+  `./${siteRel}/prisma/generated/**`,
+  `./PFOS/kaynaklar/**`,
+  `./EQUSTO-WORK/E-TICARET/site/**`,
   "./**/*.md",
   "./**/*.pdf",
   "./**/*.py",
-  "./prisma/generated/**",
+];
+
+const apiTraceExcludes = [
+  ...traceExcludes,
+  `./${siteRel}/public/**`,
 ];
 
 const nextConfig: NextConfig = {
@@ -77,7 +82,7 @@ const nextConfig: NextConfig = {
   serverExternalPackages: ["@prisma/client", "prisma", "meilisearch"],
   outputFileTracingExcludes: {
     "*": traceExcludes,
-    "/api/*": traceExcludes,
+    "/api/**": apiTraceExcludes,
   },
   transpilePackages: [
     "antd",
