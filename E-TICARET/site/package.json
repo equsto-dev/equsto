@@ -87,6 +87,7 @@
     "catalog:proso:cek": "node scripts/prosogutma-cek.mjs",
     "catalog:electrolux:discover": "node scripts/scrape-electrolux-professional.mjs --discover-only",
     "catalog:electrolux:cek": "node scripts/scrape-electrolux-professional.mjs --resume",
+    "catalog:electrolux:import": "node scripts/import-electrolux-professional.mjs",
     "catalog:proso:import": "node scripts/import-prosogutma-market-reyon.mjs",
     "catalog:proso:full": "npm run catalog:proso:cek && npm run catalog:proso:import && npm run catalog:ozti:ekipmanlar",
     "geo:words:apply": "node scripts/apply-geo-bodies-words.mjs",

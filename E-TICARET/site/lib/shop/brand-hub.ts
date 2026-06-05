@@ -190,6 +190,13 @@ export const BRAND_HUB_META: Record<string, BrandHubMeta> = {
     description: "SIMAG buz makineleri — Öztiryakiler bayi ağı üzerinden Equsto katalogunda.",
     facet: "SIMAG",
   },
+  electrolux: {
+    displayName: "Electrolux Professional",
+    description:
+      "Electrolux Professional modüler pişirme (700XP/900XP), SkyLine fırınlar, green&clean bulaşık hatları ve ecostore soğutma — resmi katalog verisi, teknik özellikler ve veri sayfaları Equsto vitrininde.",
+    facet: "Electrolux",
+    sameAs: ["https://www.electroluxprofessional.com/tr/"],
+  },
 };
 
 export function getBrandHubMeta(slug: string): BrandHubMeta | null {
