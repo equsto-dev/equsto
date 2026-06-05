@@ -1,0 +1,51 @@
+═══════════════════════════════════════════════════════════════════════════
+KİLİT — Faz B site görselleri (S3/CloudFront · Vercel proxy)
+Onay: 2026-06-02 · Commit referans: 8e238a05
+═══════════════════════════════════════════════════════════════════════════
+
+Faz B sonrası public/images/ ve büyük data/ medya Vercel deploy'da YOK.
+Görseller yalnızca CloudFront'ta. equsto.com/images/… doğrudan istenirse 404.
+
+── Zorunlu davranış ───────────────────────────────────────────────────────
+  • React vitrin img: lib/public-asset-url.ts → publicAssetUrl() → CloudFront
+  • Legacy JS (shop/arama): eq-site-urls.js assetCdnBase() + equstoCdnAssetHref
+  • eq-asset-cdn-config.js: window.__EQUSTO_ASSET_CDN dolu
+  • next.config.ts: fallback rewrite → CloudFront (cdnAssetFallbackRewrites)
+  • lib/asset-cdn.ts + scripts/lib/asset-cdn-base.mjs: manifest cdnEnvHint yedek
+
+CloudFront kök (kilitli):
+  https://dqb0g8etbedva.cloudfront.net
+
+YASAK (onay olmadan):
+  • Ana sayfa bileşenlerinde src={"/images/…"} veya yerel assetUrl() geri getirmek
+  • eq-asset-cdn-config.js içinde boş __EQUSTO_ASSET_CDN
+  • eq-site-urls.js assetCdnBase() boş string döndürmek
+  • next.config.ts CDN fallback rewrite'ları kaldırmak
+  • Tüm public/images/ git'e geri eklemek (Faz B geri alma — ayrı onay gerekir)
+
+── Kilitli dosyalar ───────────────────────────────────────────────────────
+  lib/public-asset-url.ts
+  lib/asset-cdn.ts
+  scripts/lib/asset-cdn-base.mjs
+  scripts/lib/must-exist-or-cdn.mjs
+  scripts/generate-asset-cdn-config.mjs
+  scripts/vercel-ci.mjs
+  next.config.ts                        — cdnBase + fallback rewrites
+  public/eq-asset-cdn-config.js
+  public/eq-site-urls.js                — DEFAULT_ASSET_CDN
+  components/home/HomeHeroAds.tsx
+  components/home/HomeMainSlider.tsx
+  components/home/HomeCafemarktBlock.tsx
+  components/home/HomeCafemarktCategoriesSlider.tsx
+  docs/s3-upload-manifest.json          — cdnEnvHint
+
+── Deploy / doğrulama ─────────────────────────────────────────────────────
+  npm run verify:cdn-asset-urls-kilit
+  npm run verify:home-vitrin-kilit      (CDN + vitrin birlikte)
+  Vercel prebuild: verify-cdn-asset-urls-kilit zorunlu
+
+Canlı test:
+  • / → üçlü hero + slider görselleri dolu
+  • equsto.com/images/pfos/… → 200 (rewrite) veya img src CloudFront URL
+
+═══════════════════════════════════════════════════════════════════════════

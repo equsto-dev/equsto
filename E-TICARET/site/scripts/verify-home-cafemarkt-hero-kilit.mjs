@@ -86,6 +86,12 @@ if (desktopSplitImg.includes("transform:") && desktopSplitImg.includes("scale"))
 }
 
 const block = read("components/home/HomeCafemarktBlock.tsx");
+if (!block.includes('from "@/lib/public-asset-url"')) {
+  fail("HomeCafemarktBlock.tsx: public-asset-url import yok (cdn-asset-urls-KILIT)");
+}
+if (!block.includes("publicAssetUrl(")) {
+  fail("HomeCafemarktBlock.tsx: publicAssetUrl() kullanılmıyor");
+}
 if (!block.includes("eq-cmkt-hero-grid")) fail("HomeCafemarktBlock.tsx: hero grid yok");
 if (!block.includes("eq-cmkt-hero-side")) fail("HomeCafemarktBlock.tsx: hero side yok");
 if (!block.includes("eq-cmkt-promo--main")) fail("HomeCafemarktBlock.tsx: main promo yok");

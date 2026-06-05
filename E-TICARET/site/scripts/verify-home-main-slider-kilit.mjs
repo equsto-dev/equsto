@@ -57,6 +57,12 @@ if (!kilit.includes("Bar Design slaytı YOK")) {
 if (!kilit.includes("imt300-2.png")) fail("home-main-slider-KILIT.txt: IMT300 kilidi yok");
 
 const slider = read("components/home/HomeMainSlider.tsx");
+if (!slider.includes('from "@/lib/public-asset-url"')) {
+  fail("HomeMainSlider.tsx: public-asset-url import yok (cdn-asset-urls-KILIT)");
+}
+if (!slider.includes("publicAssetUrl(")) {
+  fail("HomeMainSlider.tsx: publicAssetUrl() kullanılmıyor");
+}
 if (!slider.includes("eq-mx-vitrin eq-decor-slider-only")) fail("HomeMainSlider.tsx: vitrin sınıfı yok");
 if (!slider.includes("eq-mx-hero__slide-bg")) fail("HomeMainSlider.tsx: img slayt yok");
 if (slider.includes('slide.id === "besos" || slide.id === "sogutma"')) {

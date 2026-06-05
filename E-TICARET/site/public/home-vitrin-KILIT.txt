@@ -6,6 +6,10 @@ Onay: 2026-06-04 · Commit referans: 1094ec6d (slider Bar/IMT300 contain)
 equsto.com ana sayfasında «DÜNYADA BİR İLK!» sonrası iki ayrı React vitrin
 bölümü vardır. İkisi de HomeVitrinPortals ile mount edilir.
 
+  0) CDN görseller (Faz B — tüm site img)
+     Kaynak: public/cdn-asset-urls-KILIT.txt
+     npm run verify:cdn-asset-urls-kilit
+
   1) ÜST — üçlü hero kartları (4:3)
      Kaynak: public/home-hero-ads-KILIT.txt
      npm run verify:home-hero-ads-kilit
@@ -32,7 +36,7 @@ bölümü vardır. İkisi de HomeVitrinPortals ile mount edilir.
      Stil: public/eq-home-cafemarkt.css (.eq-cmkt-cats*)
 
   Birlikte: npm run verify:home-vitrin-kilit
-  Vercel prebuild: dört alt doğrulama zorunlu
+  Vercel prebuild: CDN + dört alt vitrin doğrulama zorunlu
 
   Yatay hizalama (eq-home-decor): .eq-home-platform-hero + #eq-home-slider-mount
   aynı max-width (1500px) ve yatay pad; aralarında --eq-home-vitrin-gap (20px).
