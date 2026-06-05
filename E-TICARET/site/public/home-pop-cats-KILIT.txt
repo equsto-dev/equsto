@@ -1,0 +1,62 @@
+═══════════════════════════════════════════════════════════════════════════
+KİLİT — Ana sayfa Popüler Kategoriler şeridi (yatay carousel)
+Onay: 2026-06-05 · Commit referans: 59b49858 (çerçeve %98 · ortalı contain)
+═══════════════════════════════════════════════════════════════════════════
+
+HomeCafemarktBlock içinde hero kutularının altında. Bento şeridi bu kilidin
+DIŞINDA (içerik revizyonu açık kalabilir).
+
+── Beklenen görünüm ───────────────────────────────────────────────────────
+  • Başlık: «Popüler Kategoriler»
+  • Yatay kaydırma: oklar + noktalar + sürükle (pointer)
+  • Otomatik geçiş: 5500 ms (prefers-reduced-motion: atlanır)
+  • Sayfa başına kart: masaüstü 5 · tablet 3 · mobil 2
+  • Kare çerçeve: beyaz zemin · #001e50 1px border · aspect-ratio 1:1
+  • Çerçeve genişliği: kartın %98'i (ortalanmış)
+  • Görsel: object-fit contain · object-position center
+  • Bar Design kartı: beyaz zemin (--bar-white)
+
+── Kilitli ölçüler (eq-home-cafemarkt.css) ───────────────────────────────
+  .eq-cmkt-cats__viewport
+    gap: 12px
+    scroll-snap-type: x mandatory (masaüstü)
+
+  .eq-cmkt-cat (responsive genişlik)
+    masaüstü (>1100): calc((100% - 48px) / 5)
+    tablet (641–1100): calc((100% - 24px) / 3)
+    mobil (≤640): calc((100% - 12px) / 2)
+
+  .eq-cmkt-cat__img-wrap
+    width: 98%; margin auto; aspect-ratio: 1
+    border: 1px solid #001e50; background #fff
+
+  .eq-cmkt-cat__img-wrap img
+    object-fit: contain; object-position: center center
+
+  .eq-cmkt-cat__label
+    font-size: 12px; font-weight: 600
+
+── Kilitli davranış (HomeCafemarktCategoriesSlider.tsx) ───────────────────
+  AUTO_MS = 5500 · CAT_GAP_PX = 12 · DRAG_THRESH = 5
+  perPageForWidth: ≤640 → 2 · ≤1100 → 3 · else 5
+  --eq-cmkt-cat-w JS ile viewport genişliğine göre hesaplanır
+
+── Kilitli dosyalar ───────────────────────────────────────────────────────
+  components/home/HomeCafemarktCategoriesSlider.tsx
+  components/home/HomeCafemarktBlock.tsx   — cafemarktCategories prop
+  lib/home-cafemarkt-content.ts            — cafemarktPopCats + equstoDeptCats
+  public/eq-home-cafemarkt.css             — .eq-cmkt-cats* kuralları
+  lib/shop/assets.ts                       — SHOP_ASSET_V
+
+YASAK (onay olmadan):
+  • Çerçeve width 98% veya #001e50 border'ı kaldırmak / cover'a çevirmek
+  • gap 12px veya sayfa başına 5/3/2 kırılımını değiştirmek
+  • AUTO_MS / sürükle davranışını kaldırmak
+  • Legacy HTML pop-cats şeridine geri dönmek (eq-mx-pop-cats-wrap gizli kalır)
+  • Bar Design popcat'ta gri hero-bar-cocktailstation.png kullanmak
+
+── Deploy / doğrulama ─────────────────────────────────────────────────────
+  npm run verify:home-pop-cats-kilit
+  npm run verify:home-vitrin-kilit   (hero + slider + cafemarkt hero + pop cats)
+
+═══════════════════════════════════════════════════════════════════════════

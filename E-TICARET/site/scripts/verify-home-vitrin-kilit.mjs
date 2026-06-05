@@ -18,6 +18,7 @@ for (const script of [
   "verify-home-hero-ads-kilit.mjs",
   "verify-home-main-slider-kilit.mjs",
   "verify-home-cafemarkt-hero-kilit.mjs",
+  "verify-home-pop-cats-kilit.mjs",
 ]) {
   const r = spawnSync(process.execPath, [path.join(siteDir, "scripts", script)], {
     cwd: siteDir,
@@ -26,4 +27,4 @@ for (const script of [
   if (r.status !== 0) process.exit(r.status ?? 1);
 }
 
-console.log("[verify-home-vitrin-kilit] OK — üst hero + alt slider + cafemarkt hero");
+console.log("[verify-home-vitrin-kilit] OK — hero + slider + cafemarkt hero + pop cats");
