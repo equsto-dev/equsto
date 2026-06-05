@@ -6,8 +6,7 @@ import {
   cafemarktBentoTiles,
   cafemarktCategories,
   cafemarktHeroMain,
-  cafemarktHeroSideBottom,
-  cafemarktHeroSideTop,
+  cafemarktHeroSide,
   type CafemarktBentoTile,
   type CafemarktPromoCard,
 } from "@/lib/home-cafemarkt-content";
@@ -192,12 +191,9 @@ export function HomeCafemarktBlock() {
             <PromoCard card={cafemarktHeroMain} className="eq-cmkt-promo--main" />
           )}
           <div className="eq-cmkt-hero-side">
-            <div className="eq-cmkt-hero-side-row">
-              {cafemarktHeroSideTop.map((c) => (
-                <PromoCard key={c.id} card={c} className="eq-cmkt-promo--compact" />
-              ))}
-            </div>
-            <PromoCard card={cafemarktHeroSideBottom} className="eq-cmkt-promo--wide" />
+            {cafemarktHeroSide.map((c) => (
+              <PromoCard key={c.id} card={c} className="eq-cmkt-promo--compact" />
+            ))}
           </div>
         </div>
 

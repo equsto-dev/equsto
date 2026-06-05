@@ -64,8 +64,8 @@ if (!heroGridBlock.includes("margin-bottom: 17px")) {
 if (!css.includes("grid-row: 1 / span 2")) {
   fail("eq-home-cafemarkt.css: sol kutu span 2 kilidi yok");
 }
-if (!/\.eq-cmkt-hero-side\s*\{\s*display:\s*contents;\s*\}/.test(css)) {
-  fail("eq-home-cafemarkt.css: hero-side display: contents yok");
+if (!/\.eq-cmkt-hero-side\s*\{[\s\S]*?grid-row:\s*1\s*\/\s*span\s*2;[\s\S]*?grid-template-columns:\s*1fr\s+1fr;[\s\S]*?grid-template-rows:\s*1fr\s+1fr;/.test(css)) {
+  fail("eq-home-cafemarkt.css: hero-side 2x2 grid yok");
 }
 if (!css.includes("grid-template-columns: minmax(0, 2fr) minmax(0, 3fr)")) {
   fail("eq-home-cafemarkt.css: split 2fr/3fr kilidi yok");
@@ -90,10 +90,8 @@ if (!block.includes("eq-cmkt-hero-grid")) fail("HomeCafemarktBlock.tsx: hero gri
 if (!block.includes("eq-cmkt-hero-side")) fail("HomeCafemarktBlock.tsx: hero side yok");
 if (!block.includes("eq-cmkt-promo--main")) fail("HomeCafemarktBlock.tsx: main promo yok");
 if (!block.includes("eq-cmkt-promo--compact")) fail("HomeCafemarktBlock.tsx: compact promo yok");
-if (!block.includes("eq-cmkt-promo--wide")) fail("HomeCafemarktBlock.tsx: wide ocak promo yok");
 if (!block.includes("SplitPromoCard")) fail("HomeCafemarktBlock.tsx: SplitPromoCard yok");
-if (!block.includes("cafemarktHeroSideTop")) fail("HomeCafemarktBlock.tsx: side top map yok");
-if (!block.includes("cafemarktHeroSideBottom")) fail("HomeCafemarktBlock.tsx: side bottom yok");
+if (!block.includes("cafemarktHeroSide")) fail("HomeCafemarktBlock.tsx: hero side map yok");
 
 const mount = read("components/home/HomeCafemarktMount.tsx");
 if (!mount.includes("eq-home-cafemarkt-mount")) fail("HomeCafemarktMount.tsx: mount id yok");
@@ -110,6 +108,10 @@ if (!content.includes("ozti-79e3-37nmv-03-cutout.png")) {
 if (!content.includes('id: "kahve"')) fail("home-cafemarkt-content.ts: kahve kartı yok");
 if (!content.includes('id: "yikama"')) fail("home-cafemarkt-content.ts: yikama kartı yok");
 if (!content.includes('id: "pisirme-ocak"')) fail("home-cafemarkt-content.ts: ocak kartı yok");
+if (!content.includes('id: "pisirme-firin"')) fail("home-cafemarkt-content.ts: firin kartı yok");
+if (!content.includes("export const cafemarktHeroSide")) {
+  fail("home-cafemarkt-content.ts: cafemarktHeroSide yok");
+}
 
 const indexBody = read("lib/vitrin/bodies/index.ts");
 if (!indexBody.includes("eq-home-cafemarkt-mount")) {
@@ -129,5 +131,5 @@ if (err) {
   process.exit(1);
 }
 console.log(
-  "[verify-home-cafemarkt-hero-kilit] OK — 21/19 grid · span-2 sol · split contain",
+  "[verify-home-cafemarkt-hero-kilit] OK — 21/19 grid · span-2 sol · sağ 2x2 · split contain",
 );
