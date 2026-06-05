@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import fs from "node:fs";
 import path from "path";
 
 /** Departman PLP — eski *.html → /shop/{slug} */
@@ -55,30 +56,39 @@ function legacyHtmlRedirects() {
 }
 
 /** Vercel lambda 300MB — static dosyalar trace dışı (runtime CDN / fetch) */
-const tracingRoot = path.join(__dirname, "..", "..");
-const siteRel = path.relative(tracingRoot, __dirname).replace(/\\/g, "/");
+const parentRepo = path.join(__dirname, "..", "..");
+const tracingRoot = fs.existsSync(
+  path.join(parentRepo, "E-TICARET", "site", "package.json"),
+)
+  ? parentRepo
+  : __dirname;
+const siteRel =
+  tracingRoot === __dirname
+    ? "."
+    : path.relative(tracingRoot, __dirname).replace(/\\/g, "/");
+
+function tracePath(subpath: string): string {
+  return siteRel === "." ? `./${subpath}` : `./${siteRel}/${subpath}`;
+}
 
 const traceExcludes = [
-  `./${siteRel}/public/images/**`,
-  `./${siteRel}/public/assets/**`,
-  `./${siteRel}/public/data/**`,
-  `./${siteRel}/scripts/**`,
-  `./${siteRel}/prisma/generated/**`,
-  `./PFOS/kaynaklar/**`,
-  `./EQUSTO-WORK/E-TICARET/site/**`,
+  tracePath("public/images/**"),
+  tracePath("public/assets/**"),
+  tracePath("public/data/**"),
+  tracePath("scripts/**"),
+  tracePath("prisma/generated/**"),
+  "./PFOS/kaynaklar/**",
+  "./EQUSTO-WORK/E-TICARET/site/**",
   "./**/*.md",
   "./**/*.pdf",
   "./**/*.py",
 ];
 
-const apiTraceExcludes = [
-  ...traceExcludes,
-  `./${siteRel}/public/**`,
-];
+const apiTraceExcludes = [...traceExcludes, tracePath("public/**")];
 
 const nextConfig: NextConfig = {
   /** Monorepo (git kok = path0); Vercel paketleme icin */
-  outputFileTracingRoot: path.join(__dirname, "..", ".."),
+  outputFileTracingRoot: tracingRoot,
   serverExternalPackages: ["@prisma/client", "prisma", "meilisearch"],
   outputFileTracingExcludes: {
     "*": traceExcludes,

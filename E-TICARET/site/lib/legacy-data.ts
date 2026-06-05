@@ -45,9 +45,16 @@ export function publicDataUrlFromPath(file: string): string | null {
   return `${getSiteOrigin()}/data/${rel}`;
 }
 
+function canReadLocalPublicData(): boolean {
+  if (process.env.NEXT_PHASE === "phase-production-build") return true;
+  if (!process.env.VERCEL) return true;
+  // Vercel build worker (NEXT_RUNTIME yalnızca istek anında)
+  if (!process.env.NEXT_RUNTIME) return true;
+  return false;
+}
+
 async function readLocalDataJson<T>(rel: string): Promise<T | null> {
-  // Vercel runtime: public/data trace dışı — yalnızca /data/* fetch
-  if (process.env.VERCEL_ENV) return null;
+  if (!canReadLocalPublicData()) return null;
   const root = await resolveSiteRoot();
   if (!root) return null;
   try {
@@ -58,9 +65,13 @@ async function readLocalDataJson<T>(rel: string): Promise<T | null> {
   }
 }
 
-/** JSON okuma — canlıda /data/* fetch; yerelde build/SSR için fs yedek */
+/** JSON okuma — build/yerel: disk; canlı lambda: /data/* fetch */
 export async function readJsonFile<T>(fileOrRel: string): Promise<T | null> {
   const rel = normalizeDataRel(fileOrRel);
+
+  const local = await readLocalDataJson<T>(rel);
+  if (local != null) return local;
+
   try {
     const res = await fetch(`${getSiteOrigin()}/data/${rel}`, {
       cache: "no-store",
@@ -70,5 +81,5 @@ export async function readJsonFile<T>(fileOrRel: string): Promise<T | null> {
   } catch {
     /* origin / CDN */
   }
-  return readLocalDataJson<T>(rel);
+  return null;
 }
