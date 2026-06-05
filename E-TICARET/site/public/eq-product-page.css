@@ -1078,6 +1078,61 @@ body.eq-shop .eq-cmf-buybox .eq-cart-add:hover {
   margin-bottom: 24px;
 }
 
+.eq-epdp-panels:has(> .eq-epdp-panel:only-child),
+.eq-epdp-panels:has(> .eq-caglayan-panel:only-child) {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 720px;
+}
+
+.eq-epdp-panels .eq-epdp-panel,
+.eq-epdp-panels .eq-caglayan-panel {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.eq-epdp-panels .eq-epdp-panel > h2,
+.eq-epdp-panels .eq-caglayan-panel > h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a365d;
+}
+
+.eq-epdp-panels .eq-elx-acc ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.eq-epdp-panels .eq-elx-acc li {
+  margin-bottom: 0.35rem;
+}
+
+.eq-epdp-panels .eq-caglayan-acc {
+  border-top: 1px solid #e3e8ee;
+}
+
+.eq-epdp-panels .eq-caglayan-acc details {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  border-bottom: 1px solid #e3e8ee;
+}
+
+.eq-epdp-panels .eq-caglayan-acc summary {
+  padding: 14px 2px 14px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a365d;
+}
+
+.eq-epdp-panels .eq-caglayan-acc__body {
+  padding: 0 0 16px;
+}
+
 .eq-epdp-panel,
 .eq-caglayan-panel {
   min-width: 0;
@@ -1145,8 +1200,253 @@ body.eq-shop .eq-cmf-buybox .eq-cart-add:hover {
 }
 
 .eq-epdp-doc-links a {
-  display: inline-block;
+  display: block;
   margin-bottom: 0.35rem;
+}
+
+/* Dökümanlar — Electrolux tarzı düz akordeon */
+.eq-epdp-docs-acc {
+  border-top: 1px solid var(--eq-border-soft, #e3e8ee);
+}
+
+.eq-epdp-docs-acc__item {
+  margin: 0;
+  border: none;
+  border-bottom: 1px solid var(--eq-border-soft, #e3e8ee);
+  border-radius: 0;
+  background: transparent;
+  overflow: visible;
+}
+
+.eq-epdp-docs-acc__item[open] {
+  background: transparent;
+}
+
+.eq-epdp-docs-acc__summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 2px 14px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a365d;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.eq-epdp-docs-acc__summary::-webkit-details-marker {
+  display: none;
+}
+
+.eq-epdp-docs-acc__chev {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  color: #1a365d;
+  transition: transform 0.18s ease;
+}
+
+.eq-epdp-docs-acc__item[open] .eq-epdp-docs-acc__chev {
+  transform: rotate(180deg);
+}
+
+.eq-epdp-docs-acc__body {
+  padding: 0 0 14px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--eq-text, #111);
+}
+
+.eq-epdp-docs-acc__body a {
+  color: #007185;
+  text-decoration: none;
+}
+
+.eq-epdp-docs-acc__body a:hover {
+  text-decoration: underline;
+}
+
+.eq-epdp-docs-acc__empty {
+  margin: 0;
+  color: var(--eq-text-muted, #6b7280);
+  font-size: 13px;
+}
+
+/* Electrolux PDP — özellikler + döküman kartları */
+.eq-epdp--electrolux .eq-elx-panel {
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+.eq-epdp--electrolux .eq-elx-panel h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a365d;
+}
+
+.eq-elx-acc {
+  border-top: 1px solid #e3e8ee;
+}
+
+.eq-elx-acc__item {
+  border-bottom: 1px solid #e3e8ee;
+}
+
+.eq-elx-acc__summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 2px 14px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a365d;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.eq-elx-acc__summary::-webkit-details-marker {
+  display: none;
+}
+
+.eq-elx-acc__chev {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  color: #1a365d;
+  transition: transform 0.18s ease;
+}
+
+.eq-elx-acc__item[open] .eq-elx-acc__chev {
+  transform: rotate(180deg);
+}
+
+.eq-elx-acc__body {
+  padding: 0 0 16px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #1f2937;
+}
+
+.eq-elx-acc__empty {
+  margin: 0;
+  color: #6b7280;
+}
+
+.eq-elx-desc {
+  margin: 0 0 12px;
+  color: #374151;
+}
+
+.eq-elx-spec-row {
+  margin: 0 0 8px;
+}
+
+.eq-elx-spec-row--text {
+  color: #374151;
+}
+
+.eq-elx-spec-val {
+  font-weight: 700;
+  color: #111827;
+}
+
+.eq-elx-doc-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 20px 16px;
+}
+
+.eq-elx-doc-grid--2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.eq-elx-doc-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  min-width: 0;
+}
+
+.eq-elx-doc-card:hover .eq-elx-doc-card__title strong {
+  text-decoration: underline;
+}
+
+.eq-elx-doc-card__visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 180px;
+  min-height: 140px;
+  margin-bottom: 10px;
+}
+
+.eq-elx-doc-card__visual--icon {
+  width: 120px;
+  height: 120px;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  background: #f8fafc;
+  color: #64748b;
+}
+
+.eq-elx-doc-card__visual--icon svg {
+  width: 56px;
+  height: 56px;
+}
+
+.eq-elx-doc-card__thumb {
+  display: block;
+  max-width: 100%;
+  max-height: 180px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.eq-elx-doc-card__title {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  line-height: 1.35;
+  color: #1a365d;
+}
+
+.eq-elx-doc-card__title strong {
+  font-weight: 700;
+}
+
+.eq-elx-doc-card__dl {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #007185;
+}
+
+.eq-elx-doc-card__dl-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.eq-elx-doc-card__size {
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .eq-elx-doc-grid--2 {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 .eq-epdp-cad-list {

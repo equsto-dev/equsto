@@ -1859,11 +1859,13 @@
     var tel = (form.elements.telefon && form.elements.telefon.value) || '';
     var eposta = (form.elements.eposta && form.elements.eposta.value) || '';
     var not = (form.elements.not && form.elements.not.value) || '';
+    var kupon = (form.elements.kupon && form.elements.kupon.value) || '';
     return {
       ad: String(ad).trim(),
       tel: String(tel).trim(),
       eposta: String(eposta).trim(),
       not: String(not).trim(),
+      kupon: String(kupon).trim().toUpperCase(),
     };
   }
 
@@ -1930,12 +1932,70 @@
       form.dataset.eqCartBound = '1';
       form.addEventListener('input', updateCheckoutUi);
       form.addEventListener('change', updateCheckoutUi);
+      if (form.elements.kupon) {
+        form.elements.kupon.addEventListener('blur', function () {
+          previewKupon();
+        });
+      }
     }
     window.addEventListener('equsto-member-changed', function () {
       prefillCheckoutForm();
     });
     document.addEventListener('equsto-member-session', function () {
       prefillCheckoutForm();
+    });
+  }
+
+  function cartSubtotal(arr) {
+    return arr.reduce(function (s, x) {
+      var birim = parsePriceNum(x.p);
+      var adet = x.q > 0 ? x.q : 1;
+      return s + birim * adet;
+    }, 0);
+  }
+
+  function setKuponMsg(text, ok) {
+    var el = document.getElementById('eq-cart-kupon-msg');
+    if (!el) return;
+    if (!text) { el.hidden = true; el.textContent = ''; return; }
+    el.hidden = false;
+    el.textContent = text;
+    el.style.color = ok ? 'var(--ok, #389e0d)' : 'var(--danger, #cf1322)';
+  }
+
+  function previewKupon(cb) {
+    var f = readCheckoutForm();
+    var arr = load();
+    var toplam = cartSubtotal(arr);
+    if (!f.kupon) {
+      setKuponMsg('', true);
+      if (cb) cb(null, toplam);
+      return;
+    }
+    fetch(eqApiBase() + '/kupon/dogrula', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ kod: f.kupon, sepet_toplam_tl: toplam })
+    }).then(function (r) {
+      return r.json().then(function (j) { return { ok: r.ok, j: j }; });
+    }).then(function (res) {
+      if (!res.ok || !(res.j && res.j.success)) {
+        var msg = (res.j && (res.j.error || res.j.message)) || 'Kupon geçersiz';
+        setKuponMsg(msg, false);
+        if (cb) cb(msg, toplam);
+        return;
+      }
+      var d = res.j.data || {};
+      var ind = d.indirim_tl || 0;
+      setKuponMsg(
+        __cartT('cart.coupon_ok', 'Kupon uygulandı') + (ind ? ': −' + ind.toLocaleString('tr-TR') + ' ₺' : ''),
+        true
+      );
+      if (cb) cb(null, d.yeni_toplam_tl != null ? d.yeni_toplam_tl : toplam, d);
+    }).catch(function (e) {
+      var em = e && e.message ? e.message : String(e);
+      setKuponMsg(em, false);
+      if (cb) cb(em, toplam);
     });
   }
 
@@ -1982,36 +2042,52 @@
       };
     });
     var toplam = kalemler.reduce(function (s, k) { return s + (k.ara_toplam_tl || 0); }, 0);
-    var payload = {
-      musteri: { ad: ad, telefon: tel, eposta: eposta },
-      not: not,
-      kalemler: kalemler,
-      toplam_kalem: kalemler.length,
-      toplam_adet: totalQty(arr),
-      toplam_tl: toplam,
-      kaynak: 'web-sepet'
-    };
-    fetch(eqApiBase() + '/siparisler', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    }).then(function (r) {
-      return r.json().then(function (j) { return { ok: r.ok, j: j }; });
-    }).then(function (res) {
-      if (btn) { btn.disabled = false; btn.textContent = __cartT('cart.order', 'Siparişi oluştur'); }
-      if (!res.ok || !(res.j && res.j.success)) {
-        var msg = (res.j && (res.j.error || res.j.message)) || ('HTTP hata');
-        toast(__cartT('cart.order_failed', 'Sipariş gönderilemedi: ') + msg);
+
+    function sendOrder(finalToplam, kuponData) {
+      var payload = {
+        musteri: { ad: ad, telefon: tel, eposta: eposta },
+        not: not,
+        kalemler: kalemler,
+        toplam_kalem: kalemler.length,
+        toplam_adet: totalQty(arr),
+        toplam_tl: finalToplam,
+        kaynak: 'web-sepet'
+      };
+      if (kuponData && kuponData.kod) {
+        payload.kupon_kod = kuponData.kod;
+        payload.indirim_tl = kuponData.indirim_tl || 0;
+      }
+      fetch(eqApiBase() + '/siparisler', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      }).then(function (r) {
+        return r.json().then(function (j) { return { ok: r.ok, j: j }; });
+      }).then(function (res) {
+        if (btn) { btn.disabled = false; btn.textContent = __cartT('cart.order', 'Siparişi oluştur'); }
+        if (!res.ok || !(res.j && res.j.success)) {
+          var msg = (res.j && (res.j.error || res.j.message)) || ('HTTP hata');
+          toast(__cartT('cart.order_failed', 'Sipariş gönderilemedi: ') + msg);
+          return;
+        }
+        var no = (res.j.data && (res.j.data.siparis_no || res.j.data.id)) || '';
+        toast(__cartT('cart.order_received', 'Sipariş alındı') + (no ? ' (' + no + ')' : ''));
+        clearAll();
+        dismissCartUi();
+      }).catch(function (e) {
+        if (btn) { btn.disabled = false; btn.textContent = __cartT('cart.order', 'Siparişi oluştur'); }
+        var em = e && e.message ? e.message : String(e);
+        toast(__cartT('cart.order_failed', 'Sipariş gönderilemedi: ') + em);
+      });
+    }
+
+    previewKupon(function (err, finalToplam, kuponData) {
+      if (err && f.kupon) {
+        if (btn) { btn.disabled = false; btn.textContent = __cartT('cart.order', 'Siparişi oluştur'); }
+        toast(__cartT('cart.order_failed', 'Sipariş gönderilemedi: ') + err);
         return;
       }
-      var no = (res.j.data && (res.j.data.siparis_no || res.j.data.id)) || '';
-      toast(__cartT('cart.order_received', 'Sipariş alındı') + (no ? ' (' + no + ')' : ''));
-      clearAll();
-      dismissCartUi();
-    }).catch(function (e) {
-      if (btn) { btn.disabled = false; btn.textContent = __cartT('cart.order', 'Siparişi oluştur'); }
-      var em = e && e.message ? e.message : String(e);
-      toast(__cartT('cart.order_failed', 'Sipariş gönderilemedi: ') + em);
+      sendOrder(finalToplam != null ? finalToplam : toplam, kuponData);
     });
   }
 

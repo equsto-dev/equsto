@@ -5,6 +5,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { mustExistOrCdn } from "./lib/must-exist-or-cdn.mjs";
 
 const siteDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 let err = 0;
@@ -27,12 +28,18 @@ mustExist("components/home/HomeMainSlider.tsx");
 mustExist("components/home/HomeMainSliderMount.tsx");
 mustExist("components/home/HomeVitrinPortals.tsx");
 mustExist("lib/home-slider-content.ts");
-mustExist("public/images/pfos/proje-fabrikasi-bar-plan-eskiz.png");
-mustExist("public/images/home/hero-bar-cocktailstation.png");
-mustExist("public/images/home/hero-bar-cocktailstation-cutout.png");
-mustExist("public/images/home/hero-bar-cocktailstation-popcat-white.png");
-mustExist("public/images/home/electrolux-xp-pisirme.webp");
-mustExist("public/images/imt300/imt300-2.png");
+
+const HERO_IMAGES = [
+  "public/images/pfos/proje-fabrikasi-bar-plan-eskiz.png",
+  "public/images/home/hero-bar-cocktailstation.png",
+  "public/images/home/hero-bar-cocktailstation-cutout.png",
+  "public/images/home/hero-bar-cocktailstation-popcat-white.png",
+  "public/images/home/electrolux-xp-pisirme.webp",
+  "public/images/imt300/imt300-2.png",
+];
+for (const rel of HERO_IMAGES) {
+  await mustExistOrCdn(siteDir, rel, fail, "[verify-home-main-slider-kilit]");
+}
 
 const kilit = read("public/home-main-slider-KILIT.txt");
 if (!kilit.includes("hero-bar-cocktailstation.png")) {

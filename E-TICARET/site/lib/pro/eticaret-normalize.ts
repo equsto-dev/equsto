@@ -18,6 +18,7 @@ export function normalizeEticaretIcerik(raw: EticaretIcerik): EticaretIcerik {
       ...item,
       kod: String(item.kod || "").trim().toUpperCase(),
       aktif: item.aktif !== false,
+      ku: Number(item.ku ?? 0) || 0,
     })),
     b: (raw.b || []).map((item) => ({
       ...item,
@@ -26,6 +27,7 @@ export function normalizeEticaretIcerik(raw: EticaretIcerik): EticaretIcerik {
       aciklama: item.aciklama || item.baslik || "",
       konum: item.konum || "anasayfa_hero",
       aktif: item.aktif !== false,
+      ab_variant: item.ab_variant || "A",
     })),
     dy: Array.isArray(raw.dy) ? raw.dy : [],
     r: Array.isArray(raw.r) ? raw.r : [],

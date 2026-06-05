@@ -281,6 +281,10 @@ export type EticaretKupon = {
   kod: string;
   tutar?: number;
   yuzde?: number;
+  ind?: number;
+  tip?: string;
+  lim?: number | null;
+  ku?: number;
   aktif: boolean;
 };
 
@@ -292,6 +296,7 @@ export type EticaretBanner = {
   image?: string;
   icon?: string;
   aktif?: boolean;
+  ab_variant?: "A" | "B" | string;
 };
 
 export type EticaretIcerik = {
@@ -908,4 +913,248 @@ export async function saveImportItems(
     return { error: body.error || `HTTP ${res.status}` };
   }
   return { eklendi: body.eklendi, guncellendi: body.guncellendi };
+}
+
+// ── İşletme: sipariş, teklif, müşteri, rapor ──
+
+export type SiparisAdminRow = {
+  id: string;
+  siparis_no: string;
+  musteri_ad: string;
+  musteri_tel: string;
+  musteri_mail: string;
+  not_: string | null;
+  kalemler: unknown[];
+  toplam_kalem: number;
+  toplam_adet: number;
+  toplam_tl: number;
+  durum: string;
+  kaynak: string | null;
+  kupon_kod: string | null;
+  indirim_tl: number | null;
+  created_at: string;
+};
+
+export type TeklifAdminRow = {
+  id: string;
+  ref_no: string;
+  musteri_ad: string;
+  konsept: string;
+  toplam_tl: number;
+  gecerlilik_bitis: string | null;
+  durum: string;
+  not_: string | null;
+  kaynak: string | null;
+  created_at: string;
+};
+
+export type MusteriAdminRow = {
+  id: string;
+  firma: string;
+  yetkili: string;
+  tel: string;
+  mail: string;
+  sehir: string;
+  tip: string;
+  not: string;
+  kaynak: string | null;
+  created_at: string;
+};
+
+export type MagazaAyarlari = {
+  whatsapp_e164: string;
+  whatsapp_prefill: string;
+  ucretsiz_kargo: boolean;
+  ucretsiz_kargo_limit_tl: number;
+  kargo_bolgeleri: string[];
+  kdv_gosterim: "dahil" | "haric";
+  kdv_oran: number;
+  i18n_overrides: Record<string, Record<string, string>>;
+};
+
+async function adminFetch<T>(url: string, init?: RequestInit): Promise<T> {
+  const token = getProToken();
+  const res = await fetch(url, {
+    ...init,
+    headers: {
+      ...(init?.headers || {}),
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+    },
+    cache: "no-store",
+  });
+  return parseJson<T>(res);
+}
+
+export async function fetchSiparisler(): Promise<{
+  rows: SiparisAdminRow[];
+  error?: string;
+}> {
+  const body = await adminFetch<{ success?: boolean; data?: SiparisAdminRow[]; error?: string }>(
+    "/api/siparisler",
+  );
+  if (body.error || body.success === false) {
+    return { rows: [], error: body.error || "Liste alınamadı" };
+  }
+  return { rows: body.data || [] };
+}
+
+export async function fetchSiparis(id: string): Promise<{
+  row?: SiparisAdminRow;
+  error?: string;
+}> {
+  const body = await adminFetch<{ success?: boolean; data?: SiparisAdminRow; error?: string }>(
+    `/api/siparisler/${encodeURIComponent(id)}`,
+  );
+  if (body.error || body.success === false) {
+    return { error: body.error || "Detay alınamadı" };
+  }
+  return { row: body.data };
+}
+
+export async function updateSiparisDurum(
+  id: string,
+  durum: string,
+): Promise<{ ok: boolean; error?: string }> {
+  const token = getProToken();
+  const res = await fetch(`/api/siparisler/${encodeURIComponent(id)}/durum`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+    },
+    body: JSON.stringify({ durum }),
+  });
+  const body = await parseJson<{ success?: boolean; error?: string }>(res);
+  if (!res.ok || body.error || body.success === false) {
+    return { ok: false, error: body.error || `HTTP ${res.status}` };
+  }
+  return { ok: true };
+}
+
+export async function fetchTeklifler(): Promise<{
+  rows: TeklifAdminRow[];
+  error?: string;
+}> {
+  const body = await adminFetch<{ success?: boolean; data?: TeklifAdminRow[]; error?: string }>(
+    "/api/teklifler",
+  );
+  if (body.error || body.success === false) {
+    return { rows: [], error: body.error || "Liste alınamadı" };
+  }
+  return { rows: body.data || [] };
+}
+
+export async function updateTeklifDurum(
+  id: string,
+  durum: string,
+): Promise<{ ok: boolean; error?: string }> {
+  const token = getProToken();
+  const res = await fetch(`/api/teklifler/${encodeURIComponent(id)}/durum`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+    },
+    body: JSON.stringify({ durum }),
+  });
+  const body = await parseJson<{ success?: boolean; error?: string }>(res);
+  if (!res.ok || body.error || body.success === false) {
+    return { ok: false, error: body.error || `HTTP ${res.status}` };
+  }
+  return { ok: true };
+}
+
+export async function fetchMusteriler(): Promise<{
+  rows: MusteriAdminRow[];
+  error?: string;
+}> {
+  const body = await adminFetch<{ success?: boolean; data?: MusteriAdminRow[]; error?: string }>(
+    "/api/musteriler",
+  );
+  if (body.error || body.success === false) {
+    return { rows: [], error: body.error || "Liste alınamadı" };
+  }
+  return { rows: body.data || [] };
+}
+
+export async function saveMusteri(
+  payload: Partial<MusteriAdminRow> & { firma?: string; yetkili?: string },
+  id?: string,
+): Promise<{ ok: boolean; error?: string }> {
+  const token = getProToken();
+  const url = id ? `/api/musteriler/${encodeURIComponent(id)}` : "/api/musteriler";
+  const res = await fetch(url, {
+    method: id ? "PUT" : "POST",
+    headers: {
+      "Content-Type": "application/json",
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+    },
+    body: JSON.stringify(payload),
+  });
+  const body = await parseJson<{ success?: boolean; error?: string }>(res);
+  if (!res.ok || body.error || body.success === false) {
+    return { ok: false, error: body.error || `HTTP ${res.status}` };
+  }
+  return { ok: true };
+}
+
+export async function deleteMusteri(id: string): Promise<{ ok: boolean; error?: string }> {
+  const token = getProToken();
+  const res = await fetch(`/api/musteriler/${encodeURIComponent(id)}`, {
+    method: "DELETE",
+    headers: token ? { Authorization: `Bearer ${token}` } : {},
+  });
+  const body = await parseJson<{ success?: boolean; error?: string }>(res);
+  if (!res.ok || body.error || body.success === false) {
+    return { ok: false, error: body.error || `HTTP ${res.status}` };
+  }
+  return { ok: true };
+}
+
+export type RaporOzet = {
+  siparis: { toplam: number; durum: Record<string, number>; ciro_tl: number };
+  teklif: { toplam: number; onaylandi: number; gonderildi: number };
+  birlikte_sepet: Array<{ a: string; b: string; count: number }>;
+  marka_kategori: Array<{ marka: string; kategori: string; adet: number; tutar: number }>;
+  arama: Array<{ query: string; count: number; avg_hits: number }>;
+};
+
+export async function fetchRaporlar(kind?: string): Promise<{
+  data?: RaporOzet | unknown;
+  error?: string;
+}> {
+  const qs = kind ? `?kind=${encodeURIComponent(kind)}` : "";
+  const body = await adminFetch<{ success?: boolean; data?: RaporOzet; error?: string }>(
+    `/api/raporlar${qs}`,
+  );
+  if (body.error) return { error: body.error };
+  return { data: body.data };
+}
+
+export function magazaAyarlariFromEticaret(a: Record<string, unknown>): MagazaAyarlari {
+  const i18nRaw = a.i18n_overrides;
+  let i18n: Record<string, Record<string, string>> = {};
+  if (i18nRaw && typeof i18nRaw === "object" && !Array.isArray(i18nRaw)) {
+    for (const [locale, vals] of Object.entries(i18nRaw)) {
+      if (vals && typeof vals === "object") {
+        i18n[locale] = Object.fromEntries(
+          Object.entries(vals as Record<string, unknown>).filter(
+            (e): e is [string, string] => typeof e[1] === "string",
+          ),
+        );
+      }
+    }
+  }
+  return {
+    whatsapp_e164: String(a.whatsapp_e164 ?? "905326842608"),
+    whatsapp_prefill: String(a.whatsapp_prefill ?? "Merhaba, equsto.com üzerinden yazıyorum."),
+    ucretsiz_kargo: a.ucretsiz_kargo !== false,
+    ucretsiz_kargo_limit_tl: Number(a.ucretsiz_kargo_limit_tl ?? 0) || 0,
+    kargo_bolgeleri: Array.isArray(a.kargo_bolgeleri)
+      ? a.kargo_bolgeleri.map(String)
+      : ["Türkiye geneli"],
+    kdv_gosterim: String(a.kdv_gosterim) === "haric" ? "haric" : "dahil",
+    kdv_oran: Number(a.kdv_oran ?? 20) || 20,
+    i18n_overrides: i18n,
+  };
 }

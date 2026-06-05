@@ -29,21 +29,41 @@ const KAYNAK = "electrolux-professional";
 const dryRun = process.argv.includes("--dry-run");
 
 function mapDept(p) {
+  const rawUrl = String(p.url || "").toLowerCase();
+  if (rawUrl.includes("/dinamik-haz") || rawUrl.includes("dinamik-hazirlik")) return "hazirlik";
+  if (
+    rawUrl.includes("pisirme-ekipman") ||
+    rawUrl.includes("pi%C5%9Firme") ||
+    /\/900xp\/|\/700xp\/|\/800xp\//.test(rawUrl)
+  )
+    return "pisirme";
   const h = foldTr(
     [p.category, p.title, p.description, p.listing || "", p.url || ""].join(" "),
   );
+  if (
+    /moduler pisirme|\b700xp\b|\b900xp\b|\b800xp\b|powergrill|combioven|konveksiyonlu firin|tristar|speedelight|touchline|induksiyon ocak|gazli izgara|elektrikli izgara|barbek|lavatas izgara|fritoz|kaynatma|brattop|wok|kuzine|moduler ocak/.test(
+      h,
+    )
+  )
+    return "pisirme";
   if (/bulasik|bardak yikama|green.?clean|neoblue|giyotin tip|konveyor|hygiene|yikama mak/.test(h))
     return "yikama";
   if (/buzdolab|sogutucu|dondurucu|buz mak|soguk oda|ecostore|blast|sok sogut|saladet|sarap dolap|tezgah tipi sogut|vitrin/.test(h))
     return "sogutma";
   if (/espresso|kahve mak|nuova|appia/.test(h)) return "kahve";
-  if (/dograyici|blender|vakum|hamur|planet|sebze|trinity|kesme diski|yogur/.test(h)) return "hazirlik";
+  if (
+    /dograyici|blender|vakum|hamur|planet|sebze hazirlik|sebze kes|sebze yikama|trinity|kesme diski|yogur|dilimleme|turbo|mikser|tbx|el mikser|dinamik hazirlik|et hazirlik|balik hazirlik|parcalayici|ricer|cutter|kesme mak|sivi lastirici/.test(
+      h,
+    )
+  )
+    return "hazirlik";
   if (/dispenser|icecek|soft serve|slush|ayran/.test(h)) return "icecek";
   if (/havalandirma|davlumbaz|aspirasyon|hood system/.test(h)) return "davlumbaz";
   if (/servis arab|tepsi araba|tabak araba|mutfak araba|termobox|flexy|teshir/.test(h)) return "servis";
   if (/araba|tekerlekli tasima|platemate/.test(h)) return "araba";
   if (/calisma tezgah|paslanmaz celik imal|ara tezgah|evye|lavabo/.test(h)) return "tezgah";
-  if (/dolap|alt dolap|ust dolap|depolama/.test(h) && !/buzdolab|sogutucu/.test(h)) return "dolap";
+  if (/dolap|alt dolap|ust dolap|depolama/.test(h) && !/buzdolab|sogutucu|dolapli/.test(h))
+    return "dolap";
   return "pisirme";
 }
 
@@ -156,6 +176,19 @@ function copyProductMedia(p) {
       });
     } else if (d.url && !docRel.some((x) => x.url === d.url)) {
       docRel.push({ category: d.category, type: d.type, title: d.title, url: d.url });
+    }
+  }
+  const codDir = path.join(OUT_DOC, cod);
+  if (fs.existsSync(codDir)) {
+    for (const row of docRel) {
+      if (row.size != null) continue;
+      const localName = row.local ? path.basename(row.local) : "";
+      const diskPath = localName ? path.join(codDir, localName) : "";
+      if (diskPath && fs.existsSync(diskPath)) {
+        try {
+          row.size = fs.statSync(diskPath).size;
+        } catch (_) {}
+      }
     }
   }
   return { images: imgRel, documents: docRel };

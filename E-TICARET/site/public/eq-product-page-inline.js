@@ -1924,7 +1924,11 @@ window.searchFilter = window.searchFilter || function () {};
     }
 
     function getElectroluxDocuments(x) {
-      return Array.isArray(x && x.electrolux_documents) ? x.electrolux_documents : [];
+      var all = Array.isArray(x && x.electrolux_documents) ? x.electrolux_documents : [];
+      var categorized = all.filter(function (d) {
+        return String((d && d.category) || "").trim();
+      });
+      return dedupeElectroluxDocs(categorized.length ? categorized : all);
     }
 
     function electroluxDocHref(doc) {
@@ -1975,20 +1979,46 @@ window.searchFilter = window.searchFilter || function () {};
       var cat = String(doc.category || "");
       var type = String(doc.type || "").toUpperCase();
       var title = String(doc.title || "").toLowerCase();
-      if (/bro[sş]ür|leaflet|el bro[sş]ür/i.test(cat)) return true;
-      if (type === "BR" || type === "CLF") return true;
-      if (/brochure|leaflet|^br_|^clf_/i.test(title)) return true;
+      if (/el bro[sş]ür/i.test(cat) || type === "CLF") return false;
+      if (/bro[sş]ür/i.test(cat)) return true;
+      if (type === "BR") return true;
+      if (/brochure|^br_/i.test(title)) return true;
+      return false;
+    }
+
+    function isElectroluxHandout(doc) {
+      var cat = String(doc.category || "");
+      var type = String(doc.type || "").toUpperCase();
+      var title = String(doc.title || "").toLowerCase();
+      if (/el bro[sş]ür/i.test(cat)) return true;
+      if (type === "CLF") return true;
+      if (/^clf_|leaflet/i.test(title)) return true;
+      return false;
+    }
+
+    function isElectroluxCadDrawing(doc) {
+      var cat = String(doc.category || "");
+      var type = String(doc.type || "").toUpperCase();
+      var title = String(doc.title || "");
+      if (/bim|revit/i.test(cat)) return false;
+      if (/cad|çizim/i.test(cat)) return true;
+      if (type === "DWG" || type === "CAD") return true;
+      if (/\.dwg$/i.test(title)) return true;
+      return false;
+    }
+
+    function isElectroluxBimDoc(doc) {
+      var cat = String(doc.category || "");
+      var type = String(doc.type || "").toUpperCase();
+      var title = String(doc.title || "");
+      if (/bim|revit/i.test(cat)) return true;
+      if (type === "RFA" || type === "REVIT") return true;
+      if (/\.rfa$/i.test(title)) return true;
       return false;
     }
 
     function isElectroluxTechnicalDrawing(doc) {
-      var cat = String(doc.category || "");
-      var type = String(doc.type || "").toUpperCase();
-      var title = String(doc.title || "");
-      if (/cad|çizim|bim|revit|drawing/i.test(cat)) return true;
-      if (type === "DWG" || type === "CAD" || type === "RFA" || type === "REVIT") return true;
-      if (/\.dwg$/i.test(title) || /\.rfa$/i.test(title)) return true;
-      return false;
+      return isElectroluxCadDrawing(doc) || isElectroluxBimDoc(doc);
     }
 
     function isElectroluxDatasheet(doc) {
@@ -2005,10 +2035,42 @@ window.searchFilter = window.searchFilter || function () {};
       });
     }
 
-    function getElectroluxTechnicalDocs(x) {
-      return dedupeElectroluxDocs(getElectroluxDocuments(x).filter(isElectroluxTechnicalDrawing)).sort(function (a, b) {
+    function getElectroluxHandouts(x) {
+      return dedupeElectroluxDocs(getElectroluxDocuments(x).filter(isElectroluxHandout)).sort(function (a, b) {
         return (b.local ? 1 : 0) - (a.local ? 1 : 0);
       });
+    }
+
+    function getElectroluxCadDocs(x) {
+      return dedupeElectroluxDocs(getElectroluxDocuments(x).filter(isElectroluxCadDrawing)).sort(function (a, b) {
+        return (b.local ? 1 : 0) - (a.local ? 1 : 0);
+      });
+    }
+
+    function getElectroluxBimDocs(x) {
+      return dedupeElectroluxDocs(getElectroluxDocuments(x).filter(isElectroluxBimDoc)).sort(function (a, b) {
+        return (b.local ? 1 : 0) - (a.local ? 1 : 0);
+      });
+    }
+
+    function getElectroluxDatasheetDocs(x) {
+      return dedupeElectroluxDocs(getElectroluxDocuments(x).filter(isElectroluxDatasheet)).sort(function (a, b) {
+        return (b.local ? 1 : 0) - (a.local ? 1 : 0);
+      });
+    }
+
+    function getElectroluxDocsGrouped(x) {
+      return {
+        brochures: getElectroluxBrochures(x),
+        cad: getElectroluxCadDocs(x),
+        datasheet: getElectroluxDatasheetDocs(x),
+        handouts: getElectroluxHandouts(x),
+        bim: getElectroluxBimDocs(x),
+      };
+    }
+
+    function getElectroluxTechnicalDocs(x) {
+      return getElectroluxCadDocs(x);
     }
 
     function getElectroluxDatasheetDoc(x) {
@@ -2023,13 +2085,13 @@ window.searchFilter = window.searchFilter || function () {};
     function renderEpdpDocLinkList(docs) {
       if (!docs.length) {
         return (
-          '<p class="eq-caglayan-acc__body">' +
+          '<div class="eq-epdp-docs-acc__body"><p class="eq-epdp-docs-acc__empty">' +
           esc(__pdpT("pdp.no_documents", "Henüz yüklenmedi.")) +
-          "</p>"
+          "</p></div>"
         );
       }
       return (
-        '<div class="eq-caglayan-acc__body eq-epdp-doc-links">' +
+        '<div class="eq-epdp-docs-acc__body eq-epdp-doc-links">' +
         docs
           .map(function (doc) {
             var href = electroluxDocHref(doc);
@@ -2043,9 +2105,256 @@ window.searchFilter = window.searchFilter || function () {};
             );
           })
           .filter(Boolean)
-          .join("<br>") +
+          .join("") +
         "</div>"
       );
+    }
+
+    function formatElectroluxDocSize(bytes) {
+      var n = Number(bytes);
+      if (!n || n < 1) return "";
+      if (n >= 1048576) return (n / 1048576).toFixed(2).replace(".", ",") + " MB";
+      if (n >= 1024) return (n / 1024).toFixed(2).replace(".", ",") + " KB";
+      return n + " B";
+    }
+
+    function electroluxDocSizeLabel(doc) {
+      if (!doc) return "";
+      if (doc.size != null) return formatElectroluxDocSize(doc.size);
+      if (doc.bytes != null) return formatElectroluxDocSize(doc.bytes);
+      return "";
+    }
+
+    function electroluxDocPreviewUrl(doc) {
+      if (!doc) return "";
+      if (doc.preview) return String(doc.preview);
+      var url = String(doc.url || "");
+      var type = String(doc.type || "").toUpperCase();
+      if (!url || (type !== "BR" && type !== "CLF")) return "";
+      var m = url.match(/\/Mirror\/Doc\/(BR|CLF)\/([^?]+)$/i);
+      if (!m) return "";
+      try {
+        var file = decodeURIComponent(m[2]);
+        var png = file.replace(/\.pdf$/i, ".png");
+        return "https://tools.electroluxprofessional.com/Mirror/Doc/" + m[1] + "_200x200/" + png;
+      } catch (_) {
+        return "";
+      }
+    }
+
+    function electroluxDocIconSvg() {
+      return (
+        '<svg viewBox="0 0 48 48" fill="none" aria-hidden="true">' +
+        '<rect x="10" y="6" width="28" height="36" rx="2" stroke="currentColor" stroke-width="2"/>' +
+        '<path d="M16 16h16M16 22h16M16 28h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>'
+      );
+    }
+
+    function electroluxDownloadIconSvg() {
+      return (
+        '<svg class="eq-elx-doc-card__dl-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">' +
+        '<path d="M12 3v12m0 0l4-4m-4 4L8 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>' +
+        '<path d="M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>'
+      );
+    }
+
+    function renderElectroluxDocCard(doc) {
+      var href = electroluxDocHref(doc);
+      if (!href) return "";
+      var name = electroluxDocDisplayName(doc);
+      var thumb = electroluxDocPreviewUrl(doc);
+      var size = electroluxDocSizeLabel(doc);
+      var visual = thumb
+        ? '<span class="eq-elx-doc-card__visual"><img class="eq-elx-doc-card__thumb" src="' +
+          esc(thumb) +
+          '" alt="" loading="lazy" decoding="async" onerror="this.closest(\'.eq-elx-doc-card__visual\').classList.add(\'eq-elx-doc-card__visual--icon\');this.remove();"></span>'
+        : '<span class="eq-elx-doc-card__visual eq-elx-doc-card__visual--icon">' +
+          electroluxDocIconSvg() +
+          "</span>";
+      return (
+        '<a class="eq-elx-doc-card" href="' +
+        esc(href) +
+        '" target="_blank" rel="noopener">' +
+        visual +
+        '<span class="eq-elx-doc-card__title"><strong>' +
+        esc(name) +
+        "</strong></span>" +
+        '<span class="eq-elx-doc-card__dl">' +
+        electroluxDownloadIconSvg() +
+        (size ? '<span class="eq-elx-doc-card__size">(' + esc(size) + ")</span>" : "") +
+        "</span></a>"
+      );
+    }
+
+    var EPDP_DOC_GROUP_DEFS = [
+      { key: "brochures", t: "pdp.doc_brochures", fb: "Broşürler" },
+      { key: "cad", t: "pdp.doc_cad", fb: "CAD Çizimleri" },
+      { key: "datasheet", t: "pdp.doc_datasheet", fb: "Veri Sayfası" },
+      { key: "handouts", t: "pdp.doc_handouts", fb: "El Broşürleri" },
+      { key: "bim", t: "pdp.doc_bim", fb: "BIM/Revit" },
+    ];
+
+    function epdpAccChevSvg() {
+      return (
+        '<svg class="eq-elx-acc__chev" viewBox="0 0 24 24" fill="none" aria-hidden="true">' +
+        '<path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+      );
+    }
+
+    function electroluxSpecSectionLabel(title) {
+      var t = String(title || "").trim();
+      var map = {
+        "Main Features": "Ana özellikler",
+        Construction: "Yapı / malzeme",
+      };
+      return map[t] || t;
+    }
+
+    function renderEpdpFlatAccSection(title, bodyHtml, open) {
+      return (
+        '<details class="eq-elx-acc__item"' +
+        (open ? " open" : "") +
+        '><summary class="eq-elx-acc__summary"><span>' +
+        esc(title) +
+        "</span>" +
+        epdpAccChevSvg() +
+        '</summary><div class="eq-elx-acc__body">' +
+        bodyHtml +
+        "</div></details>"
+      );
+    }
+
+    function renderEpdpFeaturesPanel(title, sectionsHtml) {
+      return (
+        '<div class="eq-epdp-panel eq-caglayan-panel eq-elx-panel"><h2>' +
+        esc(title) +
+        '</h2><div class="eq-elx-acc eq-elx-acc--specs">' +
+        sectionsHtml +
+        "</div></div>"
+      );
+    }
+
+    function renderEpdpDocsPanel(title, accordionHtml) {
+      return (
+        '<div class="eq-epdp-panel eq-caglayan-panel eq-elx-panel"><h2>' +
+        esc(title) +
+        "</h2>" +
+        accordionHtml +
+        "</div>"
+      );
+    }
+
+    function renderElectroluxDocGroupBody(docs, groupKey) {
+      if (!docs.length) {
+        return (
+          '<div class="eq-elx-acc__body"><p class="eq-elx-acc__empty">' +
+          esc(__pdpT("pdp.no_documents", "Henüz yüklenmedi.")) +
+          "</p></div>"
+        );
+      }
+      var gridClass = groupKey === "handouts" && docs.length > 1 ? " eq-elx-doc-grid--2" : "";
+      return (
+        '<div class="eq-elx-acc__body"><div class="eq-elx-doc-grid' +
+        gridClass +
+        '">' +
+        docs.map(renderElectroluxDocCard).filter(Boolean).join("") +
+        "</div></div>"
+      );
+    }
+
+    function renderEpdpDocsAccordion(grouped, extraSections, opts) {
+      opts = opts || {};
+      var showEmpty = opts.showEmpty !== false;
+      var renderGroupBody =
+        typeof opts.renderGroupBody === "function"
+          ? opts.renderGroupBody
+          : function (_def, docs, extra) {
+              if (extra) return extra;
+              return renderEpdpDocLinkList(docs);
+            };
+      var html = '<div class="eq-elx-acc eq-elx-acc--docs eq-epdp-docs-acc">';
+      EPDP_DOC_GROUP_DEFS.forEach(function (def) {
+        var docs = (grouped && grouped[def.key]) || [];
+        var extra = extraSections && extraSections[def.key];
+        if (!showEmpty && !docs.length && !extra) return;
+        html +=
+          '<details class="eq-elx-acc__item eq-epdp-docs-acc__item"><summary class="eq-elx-acc__summary eq-epdp-docs-acc__summary"><span>' +
+          esc(__pdpT(def.t, def.fb)) +
+          "</span>" +
+          epdpAccChevSvg() +
+          "</summary>";
+        html += renderGroupBody(def, docs, extra);
+        html += "</details>";
+      });
+      html += "</div>";
+      return html;
+    }
+
+    function parseElectroluxSpecSections(x) {
+      var sp = String((x && x.specs) || "");
+      var sections = [];
+      var current = null;
+      sp.split(/\r?\n/).forEach(function (line) {
+        var m = line.match(/^===\s*(.+?)\s*===$/);
+        if (m) {
+          current = { title: m[1].trim(), items: [] };
+          sections.push(current);
+          return;
+        }
+        if (!current) return;
+        var ln = String(line || "").trim();
+        if (!ln || /^Kaynak:/i.test(ln) || /^Ürün sayfası:/i.test(ln)) return;
+        current.items.push(ln);
+      });
+      return sections.filter(function (s) {
+        if (!s.items.length) return false;
+        return !/^Dökümanlar$/i.test(s.title);
+      });
+    }
+
+    function renderElectroluxSpecRow(ln) {
+      var idx = ln.indexOf(":");
+      if (idx > 0 && idx < 96) {
+        var label = ln.slice(0, idx).trim();
+        var val = ln.slice(idx + 1).trim();
+        if (label && val && label !== val) {
+          return (
+            '<p class="eq-elx-spec-row">' +
+            esc(label) +
+            ': <strong class="eq-elx-spec-val">' +
+            esc(val) +
+            "</strong></p>"
+          );
+        }
+      }
+      return '<p class="eq-elx-spec-row eq-elx-spec-row--text">' + esc(ln) + "</p>";
+    }
+
+    function electroluxLeadDescription(x) {
+      var raw =
+        window.eqLang === "en" && x.descriptionEn && String(x.descriptionEn).trim()
+          ? String(x.descriptionEn).trim()
+          : x.description && String(x.description).trim()
+            ? String(x.description).trim()
+            : x.aciklama && String(x.aciklama).trim()
+              ? String(x.aciklama).trim()
+              : "";
+      if (!raw) return "";
+      return raw.split(/\n\n/)[0].trim();
+    }
+
+    function renderElectroluxFeaturesCol(x) {
+      var sections = parseElectroluxSpecSections(x);
+      var lead = electroluxLeadDescription(x);
+      if (!sections.length && !lead) return renderEpdpFeaturesCol(x);
+      var acc = "";
+      sections.forEach(function (sec, idx) {
+        var body = "";
+        if (idx === 0 && lead) body += '<p class="eq-elx-desc">' + esc(lead) + "</p>";
+        body += sec.items.map(renderElectroluxSpecRow).join("");
+        acc += renderEpdpFlatAccSection(electroluxSpecSectionLabel(sec.title), body, idx === 0);
+      });
+      return renderEpdpFeaturesPanel(__pdpT("pdp.features_heading", "Özellikler"), acc);
     }
 
     function isOztiEqustoBrand(brand) {
@@ -2291,10 +2600,7 @@ window.searchFilter = window.searchFilter || function () {};
 
     function renderEpdpFeaturesCol(x) {
       if (isCaglayanRefrigeration(x)) return renderCaglayanFeaturesCol(x);
-      var html =
-        '<div class="eq-epdp-panel eq-caglayan-panel"><h2>' +
-        esc(__pdpT("pdp.features_heading", "Özellikler")) +
-        '</h2><div class="eq-caglayan-acc">';
+      if (isElectroluxProfessional(x)) return renderElectroluxFeaturesCol(x);
       var ref = deptLink(x.category, x.dept);
       var temel = [];
       var visBrand = pdpVisibleBrand(x.brand);
@@ -2303,129 +2609,76 @@ window.searchFilter = window.searchFilter || function () {};
       if (ref.label) temel.push(__pdpT("pdp.category_prefix", "Kategori:") + " " + ref.label);
       var dim = formatOlculerLinePdp(x);
       if (dim) temel.push(__pdpT("pdp.dims_prefix", "Ölçüler:") + " " + dim);
-      if (temel.length) {
-        html +=
-          '<details open><summary>' +
-          esc(__pdpT("pdp.basic_info", "Temel bilgiler")) +
-          '</summary><div class="eq-caglayan-acc__body"><ul>' +
-          temel.map(function (l) { return "<li>" + esc(l) + "</li>"; }).join("") +
-          "</ul></div></details>";
-      }
       var groups = groupPdpSpecLines(pdpTeknikLines(x));
+      if (groups.temel.length) temel = temel.concat(groups.temel);
+      var acc = "";
+      if (temel.length) {
+        acc += renderEpdpFlatAccSection(
+          __pdpT("pdp.basic_info", "Temel bilgiler"),
+          "<ul>" + temel.map(function (l) { return "<li>" + esc(l) + "</li>"; }).join("") + "</ul>",
+          true
+        );
+      }
       [
         ["elektrik", __pdpT("pdp.spec_group_electric", "Elektrik")],
-        ["sogutma", __pdpT("pdp.spec_group_cooling", "Soğutma")],
+        ["sogutma", __pdpT("pdp.spec_group_cooling", "Çalışma koşulları")],
         ["diger", __pdpT("pdp.spec_group_other", "Diğer")],
       ].forEach(function (pair) {
         var key = pair[0];
         var title = pair[1];
         if (!groups[key].length) return;
-        html +=
-          "<details><summary>" +
-          esc(title) +
-          '</summary><div class="eq-caglayan-acc__body"><ul>' +
-          groups[key].map(function (l) { return "<li>" + esc(l) + "</li>"; }).join("") +
-          "</ul></div></details>";
+        acc += renderEpdpFlatAccSection(
+          title,
+          "<ul>" + groups[key].map(function (l) { return "<li>" + esc(l) + "</li>"; }).join("") + "</ul>",
+          false
+        );
       });
-      if (!temel.length && !groups.elektrik.length && !groups.sogutma.length && !groups.diger.length) {
-        html +=
-          '<p class="eq-caglayan-acc__body">' +
+      if (!acc) {
+        acc =
+          '<p class="eq-elx-acc__empty">' +
           esc(__pdpT("pdp.specs_request_quote", "Detaylı teknik özellikler için teklif sürecinden talep edebilirsiniz.")) +
           "</p>";
       }
-      html += "</div></div>";
-      return html;
+      return renderEpdpFeaturesPanel(__pdpT("pdp.features_heading", "Özellikler"), acc);
+    }
+
+    function buildEpdpDocsExtra(x) {
+      var extra = Object.create(null);
+      var pdf = pdpPdfHref(x);
+      if (pdf && pdf.indexOf(".pdf") >= 0) {
+        extra.datasheet =
+          '<div class="eq-elx-acc__body">' + pdpPdfEmbedBlock(pdf, marketReyonPdfLabel(x)) + "</div>";
+      }
+      if (getEpdpDrawingImgs(x).length) {
+        extra.cad =
+          '<div class="eq-elx-acc__body"><a href="#eq-epdp-drawings">' +
+          esc(__pdpT("pdp.go_to_drawings", "Sayfadaki teknik görsellere git")) +
+          "</a></div>";
+      }
+      return extra;
     }
 
     function renderEpdpDocsCol(x) {
       if (isCaglayanRefrigeration(x)) {
         return renderCaglayanDocsCol(x).replace(/eq-caglayan-drawings/g, "eq-epdp-drawings");
       }
-      var pdf = pdpPdfHref(x);
-      var contactHref = eqHtmlUrl(typeof window.equstoUrl === "function" ? window.equstoUrl("contact") : "contact.html");
-      var pfosHref = eqHtmlUrl(typeof window.equstoUrl === "function" ? window.equstoUrl("pfos") : "pfos.html");
-      var html =
-        '<div class="eq-epdp-panel eq-caglayan-panel"><h2>' +
-        esc(__pdpT("pdp.documents_heading", "Dökümanlar")) +
-        '</h2><div class="eq-caglayan-acc">';
-      if (pdf && pdf.indexOf(".pdf") >= 0) {
-        var pdfLabel = isElectroluxProfessional(x)
-          ? electroluxDocDisplayName(getElectroluxDatasheetDoc(x) || { title: __pdpT("pdp.datasheet", "Veri sayfası") })
-          : marketReyonPdfLabel(x);
-        html +=
-          '<details open><summary>' +
-          esc(__pdpT("pdp.datasheet", "Veri sayfası")) +
-          '</summary><div class="eq-caglayan-acc__body">' +
-          pdpPdfEmbedBlock(pdf, pdfLabel) +
-          "</div></details>";
-      }
-      html +=
-        "<details" +
-        (pdf && pdf.indexOf(".pdf") >= 0 ? "" : " open") +
-        '><summary>' +
-        esc(__pdpT("pdp.quote_and_sales", "Teklif ve satış")) +
-        '</summary><div class="eq-caglayan-acc__body"><a href="' +
-        esc(contactHref) +
-        '">' +
-        esc(__pdpT("pdp.quote_contact", "Teklif ve iletişim")) +
-        '</a> · <a href="' +
-        esc(pfosHref) +
-        '">' +
-        esc(__pdpT("nav.pfos", "Proje Fabrikası")) +
-        "</a></div></details>";
-      var src = x.linkKaynak || x.kaynak_url || "";
-      if (src) {
-        html +=
-          '<details><summary>' +
-          esc(__pdpT("pdp.mfg_source", "Üretici kaynağı")) +
-          '</summary><div class="eq-caglayan-acc__body"><a href="' +
-          esc(src) +
-          '" target="_blank" rel="noopener" title="' +
-          esc(src) +
-          '">' +
-          esc(isElectroluxProfessional(x) ? electroluxSourceLinkText(src) : __pdpT("pdp.mfg_source_link", "Üretici / kaynak sayfası")) +
-          "</a></div></details>";
-      }
       if (isElectroluxProfessional(x)) {
-        var brochures = getElectroluxBrochures(x);
-        if (brochures.length) {
-          html +=
-            "<details><summary>" +
-            esc(__pdpT("pdp.brochures", "Broşürler")) +
-            "</summary>" +
-            renderEpdpDocLinkList(brochures) +
-            "</details>";
-        }
-        var cadDocs = getElectroluxTechnicalDocs(x);
-        html +=
-          "<details" +
-          (cadDocs.length ? " open" : "") +
-          "><summary>" +
-          esc(__pdpT("pdp.technical_drawings", "Teknik çizimler")) +
-          "</summary>";
-        if (cadDocs.length) {
-          html += renderEpdpDocLinkList(cadDocs);
-          html +=
-            '<p class="eq-caglayan-acc__body"><a href="#eq-epdp-drawings">' +
-            esc(__pdpT("pdp.go_to_drawings", "Sayfadaki teknik görsellere git")) +
-            "</a></p>";
-        } else {
-          html +=
-            '<div class="eq-caglayan-acc__body"><a href="#eq-epdp-drawings">' +
-            esc(__pdpT("pdp.go_to_drawings", "Sayfadaki teknik görsellere git")) +
-            "</a></div>";
-        }
-        html += "</details>";
-      } else {
-        html +=
-          '<details><summary>' +
-          esc(__pdpT("pdp.technical_drawings", "Teknik çizimler")) +
-          '</summary><div class="eq-caglayan-acc__body"><a href="#eq-epdp-drawings">' +
-          esc(__pdpT("pdp.go_to_drawings", "Sayfadaki teknik görsellere git")) +
-          "</a></div></details>";
+        return renderEpdpDocsPanel(
+          __pdpT("pdp.documents_heading", "Dökümanlar"),
+          renderEpdpDocsAccordion(getElectroluxDocsGrouped(x), null, {
+            showEmpty: true,
+            renderGroupBody: function (_def, docs, _extra) {
+              return renderElectroluxDocGroupBody(docs, _def.key);
+            },
+          })
+        );
       }
-      html += "</div></div>";
-      return html;
+      var extra = buildEpdpDocsExtra(x);
+      if (!Object.keys(extra).length) return "";
+      return renderEpdpDocsPanel(
+        __pdpT("pdp.documents_heading", "Dökümanlar"),
+        renderEpdpDocsAccordion(null, extra, { showEmpty: false })
+      );
     }
 
     function getEpdpDrawingImgs(x) {
@@ -2641,52 +2894,23 @@ window.searchFilter = window.searchFilter || function () {};
     }
 
     function renderCaglayanDocsCol(x) {
+      var extra = Object.create(null);
       var pdf = caglayanPdfHref(x);
-      var pdfLabel = marketReyonPdfLabel(x);
-      var src = x.linkKaynak || "";
-      var html =
-        '<div class="eq-caglayan-panel"><h2>' +
-        esc(__pdpT("pdp.documents_heading", "Dökümanlar")) +
-        '</h2><div class="eq-caglayan-acc">';
       if (pdf) {
-        html +=
-          "<details open><summary>" +
-          esc(__pdpT("pdp.datasheet", "Veri sayfası")) +
-          '</summary><div class="eq-caglayan-acc__body">' +
-          pdpPdfEmbedBlock(pdf, pdfLabel) +
-          "</div></details>";
+        extra.datasheet =
+          '<div class="eq-elx-acc__body">' + pdpPdfEmbedBlock(pdf, marketReyonPdfLabel(x)) + "</div>";
       }
-      html +=
-        "<details" +
-        (pdf ? "" : " open") +
-        "><summary>" +
-        esc(__pdpT("pdp.quote_and_sales", "Teklif ve satış")) +
-        '</summary><div class="eq-caglayan-acc__body">' +
-        '<a href="' +
-        esc(eqHtmlUrl(typeof window.equstoUrl === "function" ? window.equstoUrl("contact") : "contact.html")) +
-        '">' +
-        esc(__pdpT("pdp.quote_contact", "Teklif ve iletişim")) +
-        "</a> · " +
-        '<a href="' +
-        esc(eqHtmlUrl(typeof window.equstoUrl === "function" ? window.equstoUrl("pfos") : "pfos.html")) +
-        '">' +
-        esc(__pdpT("nav.pfos", "Proje Fabrikası")) +
-        "</a></div></details>";
-      if (src) {
-        html +=
-          "<details><summary>" +
-          esc(__pdpT("pdp.mfg_page", "Üretici sayfası")) +
-          '</summary><div class="eq-caglayan-acc__body">' +
-          '<a href="' +
-          esc(src) +
-          '" target="_blank" rel="noopener">' +
-          esc(mfgHostLabel(src)) +
-          "</a></div></details>";
+      if (getEpdpDrawingImgs(x).length) {
+        extra.cad =
+          '<div class="eq-elx-acc__body"><a href="#eq-epdp-drawings">' +
+          esc(__pdpT("pdp.go_to_drawings", "Sayfadaki teknik görsellere git")) +
+          "</a></div>";
       }
-      html +=
-        '<details><summary>' + esc(__pdpT("pdp.technical_drawings", "Teknik çizimler")) + '</summary><div class="eq-caglayan-acc__body"><a href="#eq-epdp-drawings">' + esc(__pdpT("pdp.go_to_drawings", "Sayfadaki teknik görsellere git")) + '</a></div></details>';
-      html += "</div></div>";
-      return html;
+      if (!Object.keys(extra).length) return "";
+      return renderEpdpDocsPanel(
+        __pdpT("pdp.documents_heading", "Dökümanlar"),
+        renderEpdpDocsAccordion(null, extra, { showEmpty: false })
+      );
     }
 
     function renderEpdpProduct(x, all) {
@@ -2695,7 +2919,10 @@ window.searchFilter = window.searchFilter || function () {};
       document.title = prodTitle + " — Equsto";
       var root = document.getElementById("eq-product-root");
       if (root) {
-        root.className = "eq-product-main eq-epdp" + (isCaglayanRefrigeration(x) ? " eq-caglayan-pdp" : "");
+        root.className =
+          "eq-product-main eq-epdp" +
+          (isCaglayanRefrigeration(x) ? " eq-caglayan-pdp" : "") +
+          (isElectroluxProfessional(x) ? " eq-epdp--electrolux" : "");
       }
 
       /* Canonical + OG meta güncellemeleri */

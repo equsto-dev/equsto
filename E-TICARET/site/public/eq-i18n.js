@@ -122,13 +122,17 @@
     var v = window.__EQ_I18N_JSON_V || "20260530pdp-dims-quote";
     var urls = custom
       ? [custom + lang + ".json?v=" + encodeURIComponent(v)]
-      : ["/i18n/" + lang + ".json?v=" + encodeURIComponent(v), "/locales/" + lang + ".json?v=" + encodeURIComponent(v)];
+      : ["/api/i18n/" + lang, "/i18n/" + lang + ".json?v=" + encodeURIComponent(v), "/locales/" + lang + ".json?v=" + encodeURIComponent(v)];
     function tryAt(i) {
       if (i >= urls.length) return Promise.resolve(null);
       return fetch(urls[i], { cache: "no-store" })
         .then(function (r) {
           if (!r.ok) throw new Error("i18n fetch " + r.status);
           return r.json();
+        })
+        .then(function (j) {
+          if (j && j.data && typeof j.data === "object" && !Array.isArray(j.data)) return j.data;
+          return j;
         })
         .catch(function () {
           return tryAt(i + 1);

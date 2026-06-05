@@ -6,6 +6,7 @@ import {
   LogoutOutlined,
   ProjectOutlined,
   ShopOutlined,
+  TeamOutlined,
   ToolOutlined,
 } from "@ant-design/icons";
 import { ProLayout } from "@ant-design/pro-layout";
@@ -18,6 +19,7 @@ import { clearProToken, getProToken } from "@/lib/pro-admin-client";
 const menuRoutes = [
   { path: "/yonetim", name: "Ana sayfa", icon: <DashboardOutlined /> },
   { path: "/yonetim/eticaret", name: "E-ticaret", icon: <ShopOutlined /> },
+  { path: "/yonetim/isletme", name: "İşletme", icon: <TeamOutlined /> },
   { path: "/yonetim/pfos", name: "PFOS", icon: <ProjectOutlined /> },
   { path: "/yonetim/kontrol", name: "Kontrol", icon: <ToolOutlined /> },
 ];

@@ -242,3 +242,85 @@ model ShopMemberSession {
   @@index([memberId])
   @@index([expiresAt])
 }
+
+enum SiparisDurum {
+  beklemede
+  hazirlaniyor
+  kargoda
+  teslim
+  iptal
+}
+
+enum TeklifDurum {
+  taslak
+  gonderildi
+  onaylandi
+  reddedildi
+  revize
+  iptal
+}
+
+/// Vitrin sepetinden gelen sipariş talebi (B2B — ödeme yok)
+model Siparis {
+  id          String       @id @default(cuid())
+  siparisNo   String       @unique @map("siparis_no")
+  musteriAd   String       @default("") @map("musteri_ad")
+  musteriTel  String       @default("") @map("musteri_tel")
+  musteriMail String       @default("") @map("musteri_mail")
+  not         String?      @db.Text
+  kalemler    Json         @default("[]")
+  toplamKalem Int          @default(0) @map("toplam_kalem")
+  toplamAdet  Int          @default(0) @map("toplam_adet")
+  toplamTl    Decimal      @default(0) @map("toplam_tl") @db.Decimal(14, 2)
+  durum       SiparisDurum @default(beklemede)
+  kaynak      String?
+  kuponKod    String?      @map("kupon_kod")
+  indirimTl   Decimal?     @map("indirim_tl") @db.Decimal(12, 2)
+  musteriId   String?      @map("musteri_id")
+  payload     Json?
+  createdAt   DateTime     @default(now()) @map("created_at")
+  updatedAt   DateTime     @updatedAt @map("updated_at")
+
+  @@index([durum])
+  @@index([createdAt])
+  @@index([musteriId])
+  @@map("siparis")
+}
+
+/// PFOS / admin teklif kaydı
+model Teklif {
+  id              String      @id @default(cuid())
+  refNo           String      @unique @map("ref_no")
+  musteriAd       String      @default("") @map("musteri_ad")
+  musteriTel      String      @default("") @map("musteri_tel")
+  musteriMail     String      @default("") @map("musteri_mail")
+  konsept         String      @default("")
+  toplamTl        Decimal     @default(0) @map("toplam_tl") @db.Decimal(14, 2)
+  gecerlilikBitis DateTime?   @map("gecerlilik_bitis")
+  durum           TeklifDurum @default(gonderildi)
+  not             String?     @map("not_") @db.Text
+  kalemler        Json?
+  kaynak          String?
+  payload         Json?
+  musteriId       String?     @map("musteri_id")
+  createdAt       DateTime    @default(now()) @map("created_at")
+  updatedAt       DateTime    @updatedAt @map("updated_at")
+
+  @@index([durum])
+  @@index([createdAt])
+  @@index([musteriId])
+  @@map("teklif")
+}
+
+/// Meilisearch / vitrin arama sorguları (rapor)
+model SearchQueryLog {
+  id        String   @id @default(cuid())
+  query     String
+  hitCount  Int      @default(0) @map("hit_count")
+  source    String?
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@index([createdAt])
+  @@index([query])
+  @@map("search_query_log")
+}

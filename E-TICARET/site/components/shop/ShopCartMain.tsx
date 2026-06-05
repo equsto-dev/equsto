@@ -47,6 +47,11 @@ export default function ShopCartMain() {
                 <span data-i18n="cart.checkout_email">E-posta</span>
                 <input type="email" name="eposta" autoComplete="email" />
               </label>
+              <label className="eq-cart-checkout__field">
+                <span data-i18n="cart.checkout_coupon">Kupon kodu (opsiyonel)</span>
+                <input type="text" name="kupon" autoComplete="off" placeholder="EQUSTO20" />
+              </label>
+              <p id="eq-cart-kupon-msg" className="eq-cart-checkout__kupon-msg" hidden />
               <label className="eq-cart-checkout__field eq-cart-checkout__field--full">
                 <span data-i18n="cart.checkout_note">Sipariş notu (opsiyonel)</span>
                 <textarea name="not" rows={2} />

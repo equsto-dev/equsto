@@ -6,17 +6,12 @@ import "./load-env.mjs";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { assetCdnBase } from "./lib/asset-cdn-base.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const OUT = path.join(ROOT, "public", "eq-asset-cdn-config.js");
 
-const cdn = (
-  process.env.NEXT_PUBLIC_ASSET_CDN_URL ||
-  process.env.ASSET_CDN_URL ||
-  ""
-)
-  .trim()
-  .replace(/\/$/, "");
+const cdn = assetCdnBase(ROOT);
 
 const body = [
   "/* Otomatik — scripts/generate-asset-cdn-config.mjs */",

@@ -6,6 +6,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { mustExistOrCdn } from "./lib/must-exist-or-cdn.mjs";
 
 const siteDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 let err = 0;
@@ -26,7 +27,13 @@ function mustExist(rel) {
 mustExist("public/home-hero-ads-KILIT.txt");
 mustExist("components/home/HomeHeroAds.tsx");
 mustExist("components/home/HomeHeroAdsMount.tsx");
-mustExist("public/images/pfos/proje-fabrikasi-mutfak-eskiz.png");
+
+await mustExistOrCdn(
+  siteDir,
+  "public/images/pfos/proje-fabrikasi-mutfak-eskiz.png",
+  fail,
+  "[verify-home-hero-ads-kilit]",
+);
 
 const kilit = read("public/home-hero-ads-KILIT.txt");
 if (!kilit.includes("b04a99b5") || !kilit.includes("4:3")) {
