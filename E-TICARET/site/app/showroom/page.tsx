@@ -9,8 +9,8 @@ export const metadata = {
   description: "Showroom modeli: hero üçlü + vitrin grid",
 };
 
-export default function ShowroomPage() {
-  const products = loadShowroomProducts(12);
+export default async function ShowroomPage() {
+  const products = await loadShowroomProducts(12);
 
   return (
     <MainLayout>
