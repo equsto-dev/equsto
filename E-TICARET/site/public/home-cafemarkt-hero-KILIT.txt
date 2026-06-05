@@ -3,8 +3,8 @@ KİLİT — Ana sayfa Cafemarkt hero kutuları (5 promo kartı)
 Onay: 2026-06-05 · Commit referans: 96707dd3 (hero yükseklik %60 · hizalı grid)
 ═══════════════════════════════════════════════════════════════════════════
 
-Slider (#eq-home-slider-mount) altındaki üst promo ızgarası. Kategori slider
-ve bento şeridi bu kilidin DIŞINDA (içerik revizyonu açık kalabilir).
+Slider (#eq-home-slider-mount) altındaki üst promo ızgarası. Popüler Kategoriler
+ayrı kilit: public/home-pop-cats-KILIT.txt · Bento şeridi ayrı (değiştirilebilir).
 
 ── Beklenen düzen ─────────────────────────────────────────────────────────
   • Sol: split promo (Öztiryakiler buzdolabı) — sağ 2 satırın TOPLAM yüksekliği

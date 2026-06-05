@@ -1,5 +1,7 @@
 "use client";
 
+/** Popüler Kategoriler KİLİTLİ — public/home-pop-cats-KILIT.txt · npm run verify:home-pop-cats-kilit */
+
 import {
   useCallback,
   useEffect,
