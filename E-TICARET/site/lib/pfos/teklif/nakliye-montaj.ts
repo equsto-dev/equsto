@@ -4,8 +4,7 @@
  * Km tablosu: public/data/pfos-sehir-km.json
  */
 
-import { readFile } from "node:fs/promises";
-import path from "node:path";
+import { readJsonFile } from "@/lib/legacy-data";
 import type { PFOSKalemi } from "../schemas/pfos.schema";
 import { resolveTipKodu } from "../core/tip-kodu";
 import {
@@ -104,10 +103,6 @@ const DEFAULT_FORMULA: NakliyeFormulaConfig = {
 
 let formulaCache: NakliyeFormulaConfig | null = null;
 
-function formulaPath(): string {
-  return path.join(process.cwd(), "public/data/pfos-nakliye-formula.json");
-}
-
 function normalizeLoadedFormula(raw: Record<string, unknown>): NakliyeFormulaConfig {
   if (raw.nakliye_km && raw.montaj) {
     return { ...DEFAULT_FORMULA, ...raw } as NakliyeFormulaConfig;
@@ -134,12 +129,8 @@ function normalizeLoadedFormula(raw: Record<string, unknown>): NakliyeFormulaCon
 
 export async function loadNakliyeFormula(): Promise<NakliyeFormulaConfig> {
   if (formulaCache) return formulaCache;
-  try {
-    const raw = await readFile(formulaPath(), "utf8");
-    formulaCache = normalizeLoadedFormula(JSON.parse(raw));
-  } catch {
-    formulaCache = DEFAULT_FORMULA;
-  }
+  const raw = await readJsonFile<Record<string, unknown>>("pfos-nakliye-formula.json");
+  formulaCache = raw ? normalizeLoadedFormula(raw) : DEFAULT_FORMULA;
   return formulaCache;
 }
 

@@ -2,7 +2,8 @@ import { NextRequest } from "next/server";
 import { readFile } from "node:fs/promises";
 import { assertAdminBearer } from "@/lib/auth";
 import { adminErr, adminOk } from "@/lib/admin-response";
-import { dataPath, readJsonFile, writeJsonFile } from "@/lib/legacy-data";
+import { readJsonFile } from "@/lib/legacy-data";
+import { dataPath, writeJsonFile } from "@/lib/legacy-data-fs";
 import { unwrapProjeAkisPayload } from "@/lib/pfos/proje-akis/unwrap";
 
 export const runtime = "nodejs";
@@ -70,7 +71,7 @@ export async function POST(req: NextRequest) {
 
   const products = (rows as EkipRow[]).map(rowToProjeProduct);
 
-  const existing = await readJsonFile<unknown>(dataPath("proje-akis.json"));
+  const existing = await readJsonFile<unknown>("proje-akis.json");
   const unwrapped = unwrapProjeAkisPayload(existing);
   const prevCount = Array.isArray(unwrapped?.products) ? unwrapped.products.length : 0;
 

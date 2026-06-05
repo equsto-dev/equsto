@@ -1,5 +1,4 @@
-import fs from "node:fs";
-import path from "node:path";
+import { readJsonFile } from "@/lib/legacy-data";
 
 export type ShowroomProduct = {
   name: string;
@@ -27,10 +26,9 @@ function slugify(s: string) {
 }
 
 /** Vitrin örneği — dept/pisirme.json ilk N görseli ürün */
-export function loadShowroomProducts(limit = 12): ShowroomProduct[] {
-  const file = path.join(process.cwd(), "public/data/dept/pisirme.json");
-  if (!fs.existsSync(file)) return [];
-  const rows = JSON.parse(fs.readFileSync(file, "utf8")) as Array<Record<string, unknown>>;
+export async function loadShowroomProducts(limit = 12): Promise<ShowroomProduct[]> {
+  const rows =
+    (await readJsonFile<Array<Record<string, unknown>>>("dept/pisirme.json")) ?? [];
   const out: ShowroomProduct[] = [];
   for (const row of rows) {
     if (out.length >= limit) break;
@@ -42,8 +40,7 @@ export function loadShowroomProducts(limit = 12): ShowroomProduct[] {
     const dept = String(row.dept || "pisirme");
     const sku = String(row.sku || row.model || "");
     const price = String(row.price || "").split("\n")[0];
-    const slug =
-      slugify(brand) + (brand ? "-" : "") + slugify(name);
+    const slug = slugify(brand) + (brand ? "-" : "") + slugify(name);
     out.push({
       name,
       brand,

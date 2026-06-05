@@ -1,5 +1,5 @@
-import path from "node:path";
-import { dataPath, readJsonFile, writeJsonFile } from "@/lib/legacy-data";
+import { dataRel, readJsonFile } from "@/lib/legacy-data";
+import { dataPath, writeJsonFile } from "@/lib/legacy-data-fs";
 import {
   findBantTanim,
   findKategoriTanim,
@@ -11,20 +11,21 @@ import type {
   PfosKategorilerManifest,
 } from "./types";
 
-const MANIFEST = () => dataPath("pfos-kategoriler.json");
-const REF_DIR = () => dataPath("pfos-referans");
+const MANIFEST_REL = "pfos-kategoriler.json";
+
+function referansListeRel(kategoriId: string, bantId: string) {
+  return dataRel("pfos-referans", listeDosyaAdi(kategoriId, bantId));
+}
 
 export function referansListePath(kategoriId: string, bantId: string) {
-  return path.join(REF_DIR(), listeDosyaAdi(kategoriId, bantId));
+  return dataPath("pfos-referans", listeDosyaAdi(kategoriId, bantId));
 }
 
 export async function readListeKayit(
   kategoriId: string,
   bantId: string,
 ): Promise<PfosKategoriListeKayit | null> {
-  return readJsonFile<PfosKategoriListeKayit>(
-    referansListePath(kategoriId, bantId),
-  );
+  return readJsonFile<PfosKategoriListeKayit>(referansListeRel(kategoriId, bantId));
 }
 
 export async function writeListeKayit(kayit: PfosKategoriListeKayit) {
@@ -65,12 +66,12 @@ export async function buildManifest(): Promise<PfosKategorilerManifest> {
 export async function refreshManifestFile() {
   const manifest = await buildManifest();
   manifest.updated_at = new Date().toISOString();
-  await writeJsonFile(MANIFEST(), manifest);
+  await writeJsonFile(dataPath(MANIFEST_REL), manifest);
   return manifest;
 }
 
 export async function readManifest(): Promise<PfosKategorilerManifest> {
-  const stored = await readJsonFile<PfosKategorilerManifest>(MANIFEST());
+  const stored = await readJsonFile<PfosKategorilerManifest>(MANIFEST_REL);
   if (stored?.kategoriler?.length) return stored;
   return refreshManifestFile();
 }

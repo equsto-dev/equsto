@@ -2,8 +2,8 @@
  * İstanbul çıkış → montaj şehri karayolu km (pfos-sehir-km.json).
  */
 
-import { readFile } from "node:fs/promises";
-import path from "node:path";
+import { readJsonFile } from "@/lib/legacy-data";
+
 export function normSehir(sehir: string | null | undefined): string {
   return String(sehir ?? "")
     .trim()
@@ -19,23 +19,16 @@ export type SehirKmConfig = {
 
 let kmCache: SehirKmConfig | null = null;
 
-function kmPath(): string {
-  return path.join(process.cwd(), "public/data/pfos-sehir-km.json");
-}
-
 export async function loadSehirKm(): Promise<SehirKmConfig> {
   if (kmCache) return kmCache;
-  try {
-    const raw = await readFile(kmPath(), "utf8");
-    kmCache = JSON.parse(raw) as SehirKmConfig;
-  } catch {
-    kmCache = {
+  const parsed = await readJsonFile<SehirKmConfig>("pfos-sehir-km.json");
+  kmCache =
+    parsed ?? {
       version: 1,
       cikis: { sehir: "İstanbul", lat: 41.0082, lng: 28.9784 },
       yol_katsayi: 1.2,
       km_by_sehir: { İstanbul: 0 },
     };
-  }
   return kmCache;
 }
 
@@ -82,10 +75,7 @@ export async function kmFromIstanbul(
 }
 
 /** Nakliye faturasında kullanılan etkin km (şehir içi taban mesafe dahil) */
-export function effectiveNakliyeKm(
-  tabloKm: number,
-  minKm: number,
-): number {
+export function effectiveNakliyeKm(tabloKm: number, minKm: number): number {
   if (tabloKm <= 0) return minKm;
   return Math.max(tabloKm, minKm);
 }

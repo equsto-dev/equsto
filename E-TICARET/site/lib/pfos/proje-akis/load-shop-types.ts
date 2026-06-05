@@ -1,4 +1,4 @@
-import { readJsonFile, dataPath } from "@/lib/legacy-data";
+import { readJsonFile } from "@/lib/legacy-data";
 import {
   enrichShopTypesFromFile,
   type ShopTypeKayit,
@@ -12,7 +12,7 @@ const TTL_MS = 60_000;
 /** proje-akis.json → normalize shopTypes (admin kayıtları + kod tanımları) */
 export async function loadProjeAkisShopTypes(): Promise<ShopTypeKayit[]> {
   if (cache && Date.now() - cacheAt < TTL_MS) return cache;
-  const raw = await readJsonFile<unknown>(dataPath("proje-akis.json"));
+  const raw = await readJsonFile<unknown>("proje-akis.json");
   const data = unwrapProjeAkisPayload(raw);
   const list = Array.isArray(data?.shopTypes) ? data!.shopTypes : [];
   cache = enrichShopTypesFromFile(list);
