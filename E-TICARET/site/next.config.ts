@@ -78,6 +78,50 @@ const tracingRoot = fs.existsSync(
   ? parentRepo
   : __dirname;
 
+/** Faz B — Vercel'de public/images yok; yerel dosya yoksa CloudFront fallback */
+function assetCdnBaseForRewrites(): string {
+  const fromEnv = (
+    process.env.NEXT_PUBLIC_ASSET_CDN_URL?.trim() ||
+    process.env.AWS_CLOUDFRONT_URL?.trim() ||
+    ""
+  ).replace(/\/$/, "");
+  if (fromEnv) return fromEnv;
+  try {
+    const hint = JSON.parse(
+      fs.readFileSync(path.join(__dirname, "docs/s3-upload-manifest.json"), "utf8"),
+    ).cdnEnvHint;
+    if (typeof hint === "string" && /^https?:\/\//i.test(hint)) {
+      return hint.trim().replace(/\/$/, "");
+    }
+  } catch {
+    /* manifest yok */
+  }
+  return "";
+}
+
+function cdnAssetFallbackRewrites(base: string) {
+  return [
+    { source: "/images/:path*", destination: `${base}/images/:path*` },
+    { source: "/data/images/:path*", destination: `${base}/images/:path*` },
+    { source: "/data/caglayan-market/:path*", destination: `${base}/data/caglayan-market/:path*` },
+    {
+      source: "/data/prosogutma-market/:path*",
+      destination: `${base}/data/prosogutma-market/:path*`,
+    },
+    { source: "/data/vitrum-drawings/:path*", destination: `${base}/data/vitrum-drawings/:path*` },
+    {
+      source: "/data/advanced-cuisine-clear-ice/:path*",
+      destination: `${base}/data/advanced-cuisine-clear-ice/:path*`,
+    },
+    {
+      source: "/data/electrolux-professional/:path*",
+      destination: `${base}/data/electrolux-professional/:path*`,
+    },
+  ];
+}
+
+const cdnBase = assetCdnBaseForRewrites();
+
 const nextConfig: NextConfig = {
   /** Monorepo (git kok = path0); Vercel paketleme icin */
   outputFileTracingRoot: tracingRoot,
@@ -205,8 +249,10 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return {
       beforeFiles: [
-        /* Katalog görselleri: /data/images/catalog/… → /images/catalog/… */
-        { source: "/data/images/:path*", destination: "/images/:path*" },
+        /* Yerel geliştirme — CDN yokken /data/images → public/images */
+        ...(cdnBase
+          ? []
+          : [{ source: "/data/images/:path*", destination: "/images/:path*" }]),
         /* /i18n/ bazı tarayıcı eklentilerinde engellenir — /locales/ alias */
         { source: "/locales/:file.json", destination: "/i18n/:file.json" },
         /* API birleştirme — Hobby 12 function limiti (geriye dönük URL) */
@@ -228,6 +274,8 @@ const nextConfig: NextConfig = {
         },
         { source: "/api/whatsapp", destination: "/api/musteriler?whatsapp=1" },
       ],
+      /* public/images Vercel'de yok — diskte dosya yoksa CloudFront */
+      fallback: cdnBase ? cdnAssetFallbackRewrites(cdnBase) : [],
     };
   },
 };

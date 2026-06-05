@@ -11,12 +11,7 @@ import {
   type CafemarktPromoCard,
 } from "@/lib/home-cafemarkt-content";
 import { HomeCafemarktCategoriesSlider } from "@/components/home/HomeCafemarktCategoriesSlider";
-import { SHOP_ASSET_V } from "@/lib/shop/assets";
-
-function assetUrl(path: string): string {
-  const sep = path.includes("?") ? "&" : "?";
-  return `${path}${sep}v=${SHOP_ASSET_V}`;
-}
+import { publicAssetUrl } from "@/lib/public-asset-url";
 
 function goLink(
   e: React.MouseEvent,
@@ -99,7 +94,7 @@ function SplitPromoCard({
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           className="eq-cmkt-promo__media-img"
-          src={assetUrl(card.image)}
+          src={publicAssetUrl(card.image)}
           alt="Öztiryakiler TAG 370 NMV — 9 çekmeceli yatay tip buzdolabı"
           loading="lazy"
           decoding="async"
@@ -131,7 +126,7 @@ function PromoCard({
         // eslint-disable-next-line @next/next/no-img-element
         <img
           className="eq-cmkt-promo__img"
-          src={assetUrl(card.image)}
+          src={publicAssetUrl(card.image)}
           alt=""
           loading="lazy"
           decoding="async"
@@ -161,7 +156,7 @@ function BentoTile({ tile }: { tile: CafemarktBentoTile }) {
           {tile.showcase.map((item) => (
             <figure key={item.tag} className="eq-cmkt-bento__showcase-item">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={assetUrl(item.image)} alt="" loading="lazy" decoding="async" />
+              <img src={publicAssetUrl(item.image)} alt="" loading="lazy" decoding="async" />
               <figcaption>{item.tag}</figcaption>
             </figure>
           ))}
@@ -170,7 +165,7 @@ function BentoTile({ tile }: { tile: CafemarktBentoTile }) {
         // eslint-disable-next-line @next/next/no-img-element
         <img
           className="eq-cmkt-bento__img"
-          src={assetUrl(tile.image)}
+          src={publicAssetUrl(tile.image)}
           alt=""
           loading="lazy"
           decoding="async"

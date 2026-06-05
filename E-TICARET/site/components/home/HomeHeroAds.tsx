@@ -2,12 +2,7 @@
 
 /** Kilit: public/home-hero-ads-KILIT.txt — npm run verify:home-hero-ads-kilit */
 import { heroPillars } from "@/lib/home-content";
-import { SHOP_ASSET_V } from "@/lib/shop/assets";
-
-function assetUrl(path: string): string {
-  const sep = path.includes("?") ? "&" : "?";
-  return `${path}${sep}v=${SHOP_ASSET_V}`;
-}
+import { publicAssetUrl } from "@/lib/public-asset-url";
 
 function goLegacy(href: string | null, legacyKey?: string) {
   if (typeof window === "undefined") return;
@@ -44,7 +39,7 @@ export function HomeHeroAds() {
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
                   className={imgClass(pillar.visual)}
-                  src={assetUrl(pillar.image)}
+                  src={publicAssetUrl(pillar.image)}
                   alt={
                     pillar.visual === "pfos"
                       ? "Proje Fabrikası — endüstriyel mutfak eskizi"
