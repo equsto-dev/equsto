@@ -4,3 +4,11 @@ prisma/generated
 .git
 *.log
 .env.local
+
+# Faz B — büyük medya Vercel deploy dışı (S3/CloudFront veya kaynak CDN)
+# public/ ~6 GB olunca Vercel statik çıktı güncellenmez; katalog JSON takılı kalır.
+public/data/electrolux-professional/
+public/data/caglayan-market/
+public/data/prosogutma-market/
+public/data/vitrum-drawings/
+public/data/advanced-cuisine-clear-ice/

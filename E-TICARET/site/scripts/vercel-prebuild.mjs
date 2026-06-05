@@ -218,4 +218,9 @@ if (fs.existsSync(verifyElectrolux)) {
   if (r.status !== 0) process.exit(r.status ?? 1);
 }
 
+const verifyPublicBudget = path.join(siteDir, "scripts/verify-vercel-public-budget.mjs");
+if (fs.existsSync(verifyPublicBudget)) {
+  spawnSync(process.execPath, [verifyPublicBudget], { cwd: siteDir, stdio: "inherit" });
+}
+
 console.log("[vercel-prebuild] OK");
