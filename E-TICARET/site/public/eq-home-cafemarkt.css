@@ -43,7 +43,7 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
   box-sizing: border-box;
 }
 
-/* ── Hero promo grid: sol ana alt satır (ocak hizası) · sağ üst 2 + alt 1 ── */
+/* ── Hero promo grid: sol ana üst satır · sağ üst 2 + alt 1 ── */
 .eq-cmkt-hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 14fr) minmax(0, 6fr);
@@ -51,15 +51,17 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
   gap: 10px;
   width: 100%;
   margin-bottom: 28px;
-  align-items: stretch;
+  align-items: start;
 }
 
-/* Buzdolabı split — 2. satır; sağdaki geniş ocak kartı ile aynı hizada */
+/* Buzdolabı split — 1. satır; sağ üst kartlarla üst hizada, yükseklik %40 kısa */
 .eq-cmkt-hero-grid > .eq-cmkt-promo--main {
   grid-column: 1;
-  grid-row: 2;
+  grid-row: 1;
+  align-self: start;
   min-height: 0;
-  height: 100%;
+  height: auto;
+  max-height: clamp(200px, 23.4vw, 370px);
 }
 
 .eq-cmkt-hero-side {
@@ -69,6 +71,7 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
 .eq-cmkt-hero-side-row {
   grid-column: 2;
   grid-row: 1;
+  align-self: start;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
@@ -127,7 +130,7 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
 .eq-cmkt-promo--split.eq-cmkt-promo--main {
   padding: 0;
   min-height: 0;
-  height: 100%;
+  height: auto;
 }
 
 .eq-cmkt-promo--split .eq-cmkt-promo__panel {
@@ -204,6 +207,10 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
+}
+
+.eq-cmkt-promo--split.eq-cmkt-promo--main .eq-cmkt-promo__lead {
+  -webkit-line-clamp: 1;
 }
 
 .eq-cmkt-promo--split .eq-cmkt-promo__badges {
@@ -791,6 +798,7 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
     grid-column: 1;
     grid-row: auto;
     height: auto;
+    max-height: none;
   }
 
   .eq-cmkt-hero-side {
@@ -831,8 +839,8 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
     width: 100%;
     height: auto;
     min-height: 0;
-    max-height: clamp(120px, 34vw, 168px);
-    transform: scale(1.12);
+    max-height: clamp(72px, 20.4vw, 101px);
+    transform: scale(1.1);
   }
 
   .eq-cmkt-bento {
