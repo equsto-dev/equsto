@@ -1,6 +1,6 @@
 import { catalogUrlSlug, matchCatalogRowByPathSlug } from "@/lib/catalog-product-slug";
 import { loadEkipmanlarJson } from "@/lib/catalog-json";
-import { readJsonFile, dataPath } from "@/lib/legacy-data";
+import { readJsonFile, dataRel } from "@/lib/legacy-data";
 import {
   absoluteAssetUrl,
   cleanDescription,
@@ -53,7 +53,7 @@ export async function findProductForPdp(
   const slug = decodeURIComponent(pathSlug).toLowerCase();
 
   const fileDept = urlDeptToFileDept(urlDept);
-  const deptRows = await readJsonFile<CatalogRow[]>(dataPath("dept", `${fileDept}.json`));
+  const deptRows = await readJsonFile<CatalogRow[]>(dataRel("dept", `${fileDept}.json`));
   if (Array.isArray(deptRows)) {
     for (const row of deptRows) {
       if (!row) continue;
@@ -188,7 +188,7 @@ export async function getDeptCrawlLinks(
   limit = 120,
 ): Promise<{ href: string; label: string }[]> {
   const fileDept = urlDeptToFileDept(dept);
-  const rows = await readJsonFile<CatalogRow[]>(dataPath("dept", `${fileDept}.json`));
+  const rows = await readJsonFile<CatalogRow[]>(dataRel("dept", `${fileDept}.json`));
   if (!Array.isArray(rows)) return [];
 
   const out: { href: string; label: string }[] = [];

@@ -1,5 +1,4 @@
-import path from "node:path";
-import { readJsonFile } from "@/lib/legacy-data";
+import { dataRel, readJsonFile } from "@/lib/legacy-data";
 import type { ConceptTemplate } from "@/lib/pfos/core/engine-types";
 import { referansKalemlerToTemplateItems } from "@/lib/pfos/referans/build-template-items";
 import {
@@ -102,29 +101,31 @@ export function pickShopTypeBant(
   );
 }
 
-function resolveListePath(listeDosya: string): string | null {
+function resolveListeRel(listeDosya: string): string | null {
   const dosya = listeDosya.trim();
   if (!dosya) return null;
-  const cwd = process.cwd();
 
   if (dosya.startsWith("pfos-referans/")) {
-    return path.join(cwd, "public", "data", "pfos-referans", dosya.slice("pfos-referans/".length));
+    return dataRel("pfos-referans", dosya.slice("pfos-referans/".length));
   }
-  if (dosya.startsWith("lib/pfos/")) {
-    return path.join(cwd, dosya.replace(/\//g, path.sep));
+  if (dosya.startsWith("lib/pfos/data/")) {
+    return dataRel(dosya.slice("lib/pfos/data/".length));
   }
-  if (dosya.endsWith(".json")) {
-    return path.join(cwd, "public", "data", "pfos-referans", dosya);
+  if (dosya.endsWith(".json") && !dosya.includes("/")) {
+    return dataRel("pfos-referans", dosya);
   }
-  return path.join(cwd, "public", "data", dosya);
+  if (dosya.includes("/")) {
+    return dataRel(dosya);
+  }
+  return dataRel("pfos-referans", dosya);
 }
 
 export async function loadReferansListeFromBant(
   bant: M2BantTanim,
 ): Promise<PfosReferansListeDosya | null> {
-  const file = resolveListePath(bant.listeDosya);
-  if (!file) return null;
-  return readJsonFile<PfosReferansListeDosya>(file);
+  const rel = resolveListeRel(bant.listeDosya);
+  if (!rel) return null;
+  return readJsonFile<PfosReferansListeDosya>(rel);
 }
 
 /** Dükkan türü + m² → kayıtlı referans JSON (uydurma yok) */
