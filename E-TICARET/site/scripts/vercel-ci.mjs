@@ -6,11 +6,13 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { findRepoRoot } from "./vercel-resolve-site.mjs";
+import { ensureAssetCdnEnv } from "./lib/asset-cdn-base.mjs";
 
 const siteDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const repo = findRepoRoot(siteDir);
 
 process.env.VERCEL = "1";
+ensureAssetCdnEnv(siteDir);
 process.env.DATABASE_URL =
   process.env.DATABASE_URL || "postgresql://build:build@127.0.0.1:5432/build?schema=public";
 process.env.DIRECT_URL = process.env.DIRECT_URL || process.env.DATABASE_URL;

@@ -12,6 +12,7 @@ import {
 import { canonicalizeSearchHits } from "@/lib/canonicalize-search-hits";
 import { meiliSearchQuery } from "@/lib/search-query";
 import { meiliSearchParams } from "@/lib/meili-search-params";
+import { logSearchQuery } from "@/lib/search-log";
 import {
   diversifySearchHits,
   rankSearchHitsByRelevance,
@@ -95,6 +96,7 @@ export async function GET(req: NextRequest) {
     }
     const hits = await canonicalizeSearchHits(fbHits);
     const total = fb.estimatedTotalHits;
+    logSearchQuery(q, total, "fallback");
     return searchResponse({
       query: q,
       hits,
@@ -176,6 +178,8 @@ export async function GET(req: NextRequest) {
     if (!meiliOpts.rerankPool) {
       hits = rankSearchHitsByRelevance(q, hits);
     }
+
+    logSearchQuery(q, total, source);
 
     return searchResponse({
       query: q,

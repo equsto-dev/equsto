@@ -9,6 +9,18 @@
 (function () {
   window.EQUSTO_WHATSAPP_E164 = window.EQUSTO_WHATSAPP_E164 || "905326842608";
 
+  try {
+    fetch("/api/magaza-ayarlar", { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (j) {
+        var d = j && j.data ? j.data : null;
+        if (!d) return;
+        if (d.whatsapp_e164) window.EQUSTO_WHATSAPP_E164 = String(d.whatsapp_e164);
+        if (d.whatsapp_prefill) window.EQUSTO_WHATSAPP_TEXT = String(d.whatsapp_prefill);
+      })
+      .catch(function () {});
+  } catch (_) {}
+
   function __waT(k, fb) {
     try {
       if (typeof window.eqT === "function") {

@@ -1,3 +1,4 @@
+import "./scripts/load-env.mjs";
 import { defineConfig } from "prisma/config";
 
 export default defineConfig({

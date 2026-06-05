@@ -42,6 +42,16 @@ const MODULES: ModuleCard[] = [
     ready: true,
   },
   {
+    key: "isletme",
+    pill: "İşletme",
+    pillColor: "purple",
+    title: "Sipariş & CRM",
+    desc: "Sipariş, teklif, müşteri, rapor, ayarlar ve kupon raporu.",
+    href: "/yonetim/isletme",
+    icon: <ShopOutlined />,
+    ready: true,
+  },
+  {
     key: "eticaret",
     pill: "E-ticaret",
     pillColor: "green",
