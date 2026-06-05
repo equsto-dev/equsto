@@ -653,6 +653,10 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
   aspect-ratio: 1;
   border-radius: 0;
   background: #fff;
