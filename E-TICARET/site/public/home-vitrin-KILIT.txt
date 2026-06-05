@@ -15,14 +15,17 @@ bölümü vardır. İkisi de HomeVitrinPortals ile mount edilir.
      Bar + IMT300: hero-img + object-fit contain (ürün tam görünür)
      npm run verify:home-main-slider-kilit
 
-  3) ALT (slider sonrası) — Cafemarkt tarzı vitrin (React, revizyon açık)
+  3) ALT (slider sonrası) — Cafemarkt vitrin hero kutuları (KİLİTLİ)
+     Kaynak: public/home-cafemarkt-hero-KILIT.txt
      Mount: #eq-home-cafemarkt-mount
      Bileşen: components/home/HomeCafemarktBlock.tsx
-     İçerik: lib/home-cafemarkt-content.ts
-     Stil: public/eq-home-cafemarkt.css
+     İçerik: lib/home-cafemarkt-content.ts (hero kartları)
+     Stil: public/eq-home-cafemarkt.css (--cmkt-hero-h · 14/6 grid)
+     npm run verify:home-cafemarkt-hero-kilit
+     Kategori slider + bento: içerik revizyonu açık
 
   Birlikte: npm run verify:home-vitrin-kilit
-  Vercel prebuild: her iki doğrulama zorunlu
+  Vercel prebuild: üç alt doğrulama zorunlu
 
   Yatay hizalama (eq-home-decor): .eq-home-platform-hero + #eq-home-slider-mount
   aynı max-width (1500px) ve yatay pad; aralarında --eq-home-vitrin-gap (20px).

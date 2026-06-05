@@ -1,6 +1,7 @@
 /**
  * Ana sayfa Cafemarkt tarzı vitrin — kilitli slider altı.
- * İçerik revizyonu: bu dosyayı düzenleyin.
+ * Hero kutuları KİLİTLİ: public/home-cafemarkt-hero-KILIT.txt
+ * Kategori + bento içeriği revize edilebilir.
  */
 
 export type CafemarktPromoCard = {
