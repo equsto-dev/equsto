@@ -1,7 +1,7 @@
 import "server-only";
 
 import fs from "node:fs/promises";
-import path from "node:path";
+import { existsSync } from "node:fs";
 
 function dataRel(...parts: string[]): string {
   return parts
@@ -10,16 +10,23 @@ function dataRel(...parts: string[]): string {
     .join("/");
 }
 
-/** Yerel yazma — yalnızca admin API (path.join + dynamic trace yok) */
+function siteRoot(): string {
+  const cwd = process.cwd().replace(/\\/g, "/");
+  if (existsSync(`${cwd}/public/data`)) return cwd;
+  const nested = `${cwd}/E-TICARET/site`;
+  if (existsSync(`${nested}/public/data`)) return nested;
+  return cwd;
+}
+
+/** Yerel yazma — yalnızca admin API (path.join dynamic trace yok) */
 export function dataPath(...parts: string[]): string {
-  const rel = dataRel(...parts);
-  const root = path.join(process.cwd(), "public", "data");
-  return `${root}${path.sep}${rel.replace(/\//g, path.sep)}`;
+  return `${siteRoot()}/public/data/${dataRel(...parts)}`;
 }
 
 export async function writeJsonFile(file: string, data: unknown) {
   const tmp = `${file}.tmp`;
-  await fs.mkdir(path.dirname(file), { recursive: true });
+  const dir = file.slice(0, file.lastIndexOf("/"));
+  await fs.mkdir(dir, { recursive: true });
   await fs.writeFile(tmp, JSON.stringify(data, null, 2), "utf8");
   await fs.rename(tmp, file);
 }

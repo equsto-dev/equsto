@@ -55,36 +55,27 @@ function legacyHtmlRedirects() {
   }));
 }
 
-/** Vercel lambda 300MB — static dosyalar trace dışı (runtime CDN / fetch) */
+/** Vercel lambda 300MB — excludes path.join(dir, pattern); dir = Next project (E-TICARET/site) */
+const traceExcludes = [
+  "./public/images/**",
+  "./public/assets/**",
+  "./public/data/**",
+  "./scripts/**",
+  "./prisma/generated/**",
+  "./**/*.md",
+  "./**/*.pdf",
+  "./**/*.py",
+];
+
+const apiTraceExcludes = [...traceExcludes, "./public/**"];
+
+/** Monorepo: node_modules / shared packages repo kökünden trace edilebilir */
 const parentRepo = path.join(__dirname, "..", "..");
 const tracingRoot = fs.existsSync(
   path.join(parentRepo, "E-TICARET", "site", "package.json"),
 )
   ? parentRepo
   : __dirname;
-const siteRel =
-  tracingRoot === __dirname
-    ? "."
-    : path.relative(tracingRoot, __dirname).replace(/\\/g, "/");
-
-function tracePath(subpath: string): string {
-  return siteRel === "." ? `./${subpath}` : `./${siteRel}/${subpath}`;
-}
-
-const traceExcludes = [
-  tracePath("public/images/**"),
-  tracePath("public/assets/**"),
-  tracePath("public/data/**"),
-  tracePath("scripts/**"),
-  tracePath("prisma/generated/**"),
-  "./PFOS/kaynaklar/**",
-  "./EQUSTO-WORK/E-TICARET/site/**",
-  "./**/*.md",
-  "./**/*.pdf",
-  "./**/*.py",
-];
-
-const apiTraceExcludes = [...traceExcludes, tracePath("public/**")];
 
 const nextConfig: NextConfig = {
   /** Monorepo (git kok = path0); Vercel paketleme icin */
@@ -93,6 +84,7 @@ const nextConfig: NextConfig = {
   outputFileTracingExcludes: {
     "*": traceExcludes,
     "/api/**": apiTraceExcludes,
+    "/**": apiTraceExcludes,
   },
   transpilePackages: [
     "antd",
