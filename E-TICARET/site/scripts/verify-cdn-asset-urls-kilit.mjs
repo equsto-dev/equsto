@@ -56,9 +56,17 @@ if (cdnConfig.includes('__EQUSTO_ASSET_CDN=""')) {
   fail("eq-asset-cdn-config.js: boş CDN (Faz B kırılır)");
 }
 
+const plp = read("public/eq-dept-plp.js");
+if (!plp.includes("if (imgRel) imgOut = imgSrc(imgRel)")) {
+  fail("eq-dept-plp.js: CDN/imgSrc önce ax-images yedek sırası bozulmuş");
+}
+
 const siteUrls = read("public/eq-site-urls.js");
 if (!siteUrls.includes("DEFAULT_ASSET_CDN")) {
   fail("eq-site-urls.js: DEFAULT_ASSET_CDN fallback yok");
+}
+if (!siteUrls.includes("equstoCdnAssetHref(\"images/\" + file)")) {
+  fail("eq-site-urls.js: catalogImageCandidates CDN önceliği yok");
 }
 if (!siteUrls.includes(CDN)) fail("eq-site-urls.js: CloudFront kök yok");
 

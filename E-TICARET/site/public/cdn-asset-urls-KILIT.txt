@@ -18,6 +18,7 @@ CloudFront kök (kilitli):
 
 YASAK (onay olmadan):
   • Ana sayfa bileşenlerinde src={"/images/…"} veya yerel assetUrl() geri getirmek
+  • eq-dept-plp.js içinde ax-images URL'sini imgSrc/CDN'den önce zorlamak
   • eq-asset-cdn-config.js içinde boş __EQUSTO_ASSET_CDN
   • eq-site-urls.js assetCdnBase() boş string döndürmek
   • next.config.ts CDN fallback rewrite'ları kaldırmak
@@ -32,12 +33,13 @@ YASAK (onay olmadan):
   scripts/vercel-ci.mjs
   next.config.ts                        — cdnBase + fallback rewrites
   public/eq-asset-cdn-config.js
-  public/eq-site-urls.js                — DEFAULT_ASSET_CDN
+  public/eq-site-urls.js                — DEFAULT_ASSET_CDN + catalogImageCandidates
   components/home/HomeHeroAds.tsx
   components/home/HomeMainSlider.tsx
   components/home/HomeCafemarktBlock.tsx
   components/home/HomeCafemarktCategoriesSlider.tsx
-  docs/s3-upload-manifest.json          — cdnEnvHint
+  public/eq-dept-plp.js                 — PLP kart img: CDN önce, ax-images yedek
+  lib/shop/assets.ts                    — SHOP_ASSET_V
 
 ── Deploy / doğrulama ─────────────────────────────────────────────────────
   npm run verify:cdn-asset-urls-kilit
