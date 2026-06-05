@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "node scripts/generate-admin-config.mjs && node scripts/generate-asset-cdn-config.mjs && next dev -p 3099",
     "predev": "node scripts/generate-admin-config.mjs && node scripts/generate-asset-cdn-config.mjs",
-    "build": "node scripts/generate-teklif-v14-template.mjs && node scripts/generate-asset-cdn-config.mjs && prisma generate && next build",
+    "build": "node scripts/generate-teklif-v14-template.mjs && node scripts/generate-asset-cdn-config.mjs && prisma generate && next build --webpack",
     "start": "next start",
     "lint": "eslint",
     "db:generate": "prisma generate",

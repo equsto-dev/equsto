@@ -1,11 +1,16 @@
 import crypto from "node:crypto";
 import fs from "node:fs/promises";
-import path from "node:path";
+import { existsSync } from "node:fs";
 import { DEV_ADMIN_BEARER, normalizeAdminBearer } from "@/lib/auth";
 import { getSiteOrigin } from "@/lib/site-origin";
 
-/** Sabit yol — legacy-data dataPath() trace genişlemesini admin route'lara taşımaz */
-const ADMIN_AUTH_FILE = path.join(process.cwd(), "public", "data", "admin-auth.json");
+function adminAuthFile(): string {
+  const cwd = process.cwd().replace(/\\/g, "/");
+  if (existsSync(`${cwd}/public/data`)) return `${cwd}/public/data/admin-auth.json`;
+  const nested = `${cwd}/E-TICARET/site`;
+  if (existsSync(`${nested}/public/data`)) return `${nested}/public/data/admin-auth.json`;
+  return `${cwd}/public/data/admin-auth.json`;
+}
 
 export function sha256AdminPassword(pw: string): string {
   return crypto.createHash("sha256").update(String(pw)).digest("hex");
@@ -15,7 +20,7 @@ type AdminAuthJson = { pw_sha256?: string; updated_at?: string };
 
 async function readAdminAuthJson(): Promise<AdminAuthJson | null> {
   try {
-    return JSON.parse(await fs.readFile(ADMIN_AUTH_FILE, "utf8")) as AdminAuthJson;
+    return JSON.parse(await fs.readFile(adminAuthFile(), "utf8")) as AdminAuthJson;
   } catch {
     /* Vercel: dosya trace dışı — canlıda CDN */
   }
@@ -33,10 +38,13 @@ async function readAdminAuthJson(): Promise<AdminAuthJson | null> {
 }
 
 async function writeAdminAuthJson(payload: AdminAuthJson): Promise<void> {
-  const tmp = `${ADMIN_AUTH_FILE}.tmp`;
-  await fs.mkdir(path.dirname(ADMIN_AUTH_FILE), { recursive: true });
+  const file = adminAuthFile();
+  const slash = file.lastIndexOf("/");
+  const dir = slash >= 0 ? file.slice(0, slash) : file;
+  const tmp = `${file}.tmp`;
+  await fs.mkdir(dir, { recursive: true });
   await fs.writeFile(tmp, JSON.stringify(payload, null, 2), "utf8");
-  await fs.rename(tmp, ADMIN_AUTH_FILE);
+  await fs.rename(tmp, file);
 }
 
 export async function readAdminPwHash(): Promise<string | null> {
