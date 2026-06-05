@@ -37,9 +37,14 @@ ve bento şeridi bu kilidin DIŞINDA (içerik revizyonu açık kalabilir).
   Split promo (sol buzdolabı):
     grid-template-columns: minmax(0, 2fr) minmax(0, 3fr)
     panel: justify-content: flex-start
-    media img: width/height 100%, object-fit: contain — transform scale YOK (masaüstü)
+    media img: 125% boyut, object-fit: contain — transform scale YOK (masaüstü)
 
-  Hero-scoped kompakt tipografi / padding (.eq-cmkt-hero-grid …):
+  Hero-scoped tipografi (.eq-cmkt-hero-grid …) — üst slider ile aynı (eq-home-decor.css):
+    kicker / brand: 15px · fw 600
+    başlık: clamp(21px, 2.6vw, 30px) · fw 700
+    lead / alt: clamp(14px, 1.25vw, 17px)
+    rozet: 15px · padding 5px 12px
+    CTA: clamp(17px, 1.6vw, 20px)
     border-radius 9px; compact/wide padding 5px 4px 4px; img max-height 78% width 44%
     split panel padding 6px 6px 4px 8px; media padding 3px 5px 3px 0
 
