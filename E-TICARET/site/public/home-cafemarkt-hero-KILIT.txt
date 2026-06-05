@@ -15,7 +15,7 @@ ve bento şeridi bu kilidin DIŞINDA (içerik revizyonu açık kalabilir).
 ── Kilitli ölçüler (eq-home-cafemarkt.css) ───────────────────────────────
   .eq-cmkt-hero-grid
     --cmkt-hero-h: clamp(168px, 17.28vw, 372px)
-    grid-template-columns: minmax(0, 14fr) minmax(0, 6fr)
+    grid-template-columns: minmax(0, 21fr) minmax(0, 19fr)
     grid-template-rows: minmax(0, 1fr) minmax(0, 1fr)
     gap: 6px
     height / max-height: var(--cmkt-hero-h)
@@ -63,7 +63,7 @@ ve bento şeridi bu kilidin DIŞINDA (içerik revizyonu açık kalabilir).
   lib/vitrin/bodies/index.ts               — #eq-home-cafemarkt-mount (CTA bandı yok)
 
 YASAK (onay olmadan):
-  • --cmkt-hero-h veya 14fr/6fr oranını değiştirmek
+  • --cmkt-hero-h veya 21fr/19fr (sol %25 dar · sağ geniş) oranını değiştirmek
   • Sol kutuyu tek satıra indirmek (span 2 kaldırmak)
   • .eq-cmkt-hero-side için display: contents yerine flex/wrapper
   • Buzdolabı görselinde transform: scale (masaüstü hero)

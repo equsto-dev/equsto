@@ -47,8 +47,8 @@ if (!css.includes("/* KİLİT: public/home-cafemarkt-hero-KILIT.txt */")) {
 if (!css.includes("--cmkt-hero-h: clamp(168px, 17.28vw, 372px)")) {
   fail("eq-home-cafemarkt.css: --cmkt-hero-h değişmiş");
 }
-if (!css.includes("grid-template-columns: minmax(0, 14fr) minmax(0, 6fr)")) {
-  fail("eq-home-cafemarkt.css: 14fr/6fr sütun kilidi yok");
+if (!css.includes("grid-template-columns: minmax(0, 21fr) minmax(0, 19fr)")) {
+  fail("eq-home-cafemarkt.css: 21fr/19fr sütun kilidi yok");
 }
 if (!css.includes("grid-template-rows: minmax(0, 1fr) minmax(0, 1fr)")) {
   fail("eq-home-cafemarkt.css: 2 satır grid kilidi yok");
@@ -129,5 +129,5 @@ if (err) {
   process.exit(1);
 }
 console.log(
-  "[verify-home-cafemarkt-hero-kilit] OK — 14/6 grid · span-2 sol · %60 yükseklik · split contain",
+  "[verify-home-cafemarkt-hero-kilit] OK — 21/19 grid · span-2 sol · split contain",
 );
