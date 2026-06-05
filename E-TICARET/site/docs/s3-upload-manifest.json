@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-05-30T14:01:54.564Z",
+  "updatedAt": "2026-06-05T19:45:22.801Z",
   "bucket": "equsto-assets",
   "region": "eu-central-1",
-  "totalFiles": 12965,
-  "totalMb": 2141.4,
+  "totalFiles": 16956,
+  "totalMb": 6415,
   "dirs": [
     {
       "prefix": "images/",
@@ -29,7 +29,12 @@
       "prefix": "data/advanced-cuisine-clear-ice/images/",
       "s3Uri": "s3://equsto-assets/data/advanced-cuisine-clear-ice/images",
       "ok": true
+    },
+    {
+      "prefix": "data/electrolux-professional/",
+      "s3Uri": "s3://equsto-assets/data/electrolux-professional",
+      "ok": true
     }
   ],
-  "cdnEnvHint": "(CloudFront URL → NEXT_PUBLIC_ASSET_CDN_URL)"
+  "cdnEnvHint": "https://dqb0g8etbedva.cloudfront.net"
 }

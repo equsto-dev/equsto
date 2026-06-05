@@ -36,7 +36,9 @@ function encodeRel(rel) {
 
 const files = listCdnMigrateFiles(publicDir);
 const picks = [
-  ...files.filter((f) => f.rel.startsWith("images/catalog/")).slice(0, 3),
+  ...files.filter((f) => f.rel.startsWith("images/catalog/electrolux/")).slice(0, 2),
+  ...files.filter((f) => f.rel.startsWith("images/catalog/ozti/")).slice(0, 2),
+  ...files.filter((f) => f.rel.startsWith("images/catalog/")).slice(0, 2),
   ...files.filter((f) => f.rel.endsWith(".pdf")).slice(0, 2),
   ...files.slice(0, 2),
 ]

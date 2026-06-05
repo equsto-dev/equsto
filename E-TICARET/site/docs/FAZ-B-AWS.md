@@ -83,15 +83,22 @@ npm run assets:s3:sync
 
 Sync edilen prefix'ler:
 
-- `images/` (~1,5 GB)
+- `images/` (~1,6 GB — ozti, cafemarkt, electrolux, atalay, …)
 - `data/caglayan-market/`
 - `data/prosogutma-market/`
 - `data/vitrum-drawings/`
 - `data/advanced-cuisine-clear-ice/images/`
+- `data/electrolux-professional/` (~4 GB PDF/DWG/RFA)
+
+Tek komut (yükleyip doğrula):
+
+```powershell
+npm run assets:aws:all
+```
 
 Manifest: `docs/s3-upload-manifest.json`
 
-**20 GB hedef:** Aynı bucket; yeni medya ekledikçe tekrar `assets:s3:sync` (incremental).
+**Vercel'de kalan (~100 MB):** katalog JSON (`dept/`, `ekipmanlar.json`), JS/CSS, küçük statikler — güncelleme hızı için.
 
 ---
 

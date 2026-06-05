@@ -164,6 +164,7 @@
     "assets:cdn:verify": "node --import ./scripts/load-env.mjs scripts/faz-b-verify-cdn.mjs",
     "assets:s3:dry-run": "node --import ./scripts/load-env.mjs scripts/faz-b-upload-s3.mjs --dry-run",
     "assets:s3:sync": "node --import ./scripts/load-env.mjs scripts/faz-b-upload-s3.mjs --sync",
+    "assets:aws:all": "node --import ./scripts/load-env.mjs scripts/faz-b-upload-s3.mjs --sync && npm run assets:cdn:verify",
     "assets:blob:dry-run": "node scripts/faz-b-upload-cdn.mjs --dry-run",
     "assets:blob:upload": "node scripts/faz-b-upload-cdn.mjs --upload",
     "assets:cdn:untrack": "node scripts/faz-b-untrack-cdn.mjs --dry-run",

@@ -5,14 +5,10 @@ prisma/generated
 *.log
 .env.local
 
-# Faz B — büyük medya Vercel deploy dışı (S3/CloudFront veya kaynak CDN)
-# public/ ~6 GB olunca Vercel statik çıktı güncellenmez; katalog JSON takılı kalır.
-public/data/electrolux-professional/
+# Faz B — tüm medya AWS S3/CloudFront (Vercel yalnızca JSON + JS/CSS)
+public/images/
 public/data/caglayan-market/
 public/data/prosogutma-market/
 public/data/vitrum-drawings/
 public/data/advanced-cuisine-clear-ice/
-
-# CloudFront'ta zaten var — ~1.4 GB deploy tasarrufu
-public/images/catalog/ozti/
-public/images/catalog/cafemarkt-images/
+public/data/electrolux-professional/
