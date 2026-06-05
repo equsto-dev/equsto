@@ -14,7 +14,7 @@ function cleanStaleNextDirs(dir) {
   const repo = findRepoRoot(dir);
   for (const target of [path.join(dir, ".next"), path.join(repo, ".next")]) {
     if (!fs.existsSync(target)) continue;
-    fs.rmSync(target, { recursive: true, force: true });
+    fs.rmSync(target, { recursive: true, force: true, maxRetries: 3, retryDelay: 200 });
     console.log("[vercel-prebuild] eski .next silindi:", target);
   }
 }
