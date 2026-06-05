@@ -136,8 +136,9 @@ body.eq-home-decor.eq-home-mutbex .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero
 
 body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slides {
   aspect-ratio: 1024 / 331;
+  /* PFOS eskiz oranı + split slaytlarda (IMT300) tam ürün görseli için alt sınır */
+  min-height: min(50vh, 500px);
   max-height: none;
-  min-height: 0;
   height: auto;
 }
 
@@ -460,11 +461,13 @@ body.eq-home-decor
   .eq-mx-vitrin.eq-decor-slider-only
   .eq-mx-hero__slide--imt300.eq-mx-hero__slide--split
   .eq-mx-hero__slide-media {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  padding: 0 12px 0 0;
-  overflow: visible;
+  justify-content: center;
+  padding: 14px 16px;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 body.eq-home-decor
@@ -472,17 +475,17 @@ body.eq-home-decor
   .eq-mx-hero__slide--imt300.eq-mx-hero__slide--split
   .eq-mx-hero__slide-media
   .eq-mx-hero__slide-bg {
-  position: relative;
+  position: static;
   inset: auto;
   display: block;
   width: auto;
+  height: auto;
   max-width: 100%;
-  height: 100%;
-  max-height: none;
+  max-height: 100%;
+  margin: 0;
+  transform: none;
   object-fit: contain;
   object-position: center center;
-  margin-left: 50%;
-  transform: translateX(-50%);
   z-index: 2;
   mix-blend-mode: lighten;
 }

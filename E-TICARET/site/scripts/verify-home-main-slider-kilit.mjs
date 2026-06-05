@@ -36,10 +36,16 @@ mustExist("public/images/imt300/imt300-2.png");
 
 const kilit = read("public/home-main-slider-KILIT.txt");
 if (!kilit.includes("hero-bar-cocktailstation.png")) {
-  fail("home-main-slider-KILIT.txt: Bar Design görsel kilidi yok");
+  fail("home-main-slider-KILIT.txt: Bar görsel kilidi yok (vitrin)");
 }
-if (!kilit.includes("eq-mx-hero__slide--bar")) {
-  fail("home-main-slider-KILIT.txt: Bar contain kilidi yok");
+if (kilit.includes("4 slayt, 4 thumb")) {
+  fail("home-main-slider-KILIT.txt: Bar slaytı kaldırıldı — 3 slayt olmalı");
+}
+if (!kilit.includes("3 slayt, 3 thumb")) {
+  fail("home-main-slider-KILIT.txt: 3 slayt kilidi yok");
+}
+if (!kilit.includes("Bar Design slaytı YOK")) {
+  fail("home-main-slider-KILIT.txt: Bar slider'dan çıkarıldı notu yok");
 }
 if (!kilit.includes("imt300-2.png")) fail("home-main-slider-KILIT.txt: IMT300 kilidi yok");
 
@@ -48,9 +54,6 @@ if (!slider.includes("eq-mx-vitrin eq-decor-slider-only")) fail("HomeMainSlider.
 if (!slider.includes("eq-mx-hero__slide-bg")) fail("HomeMainSlider.tsx: img slayt yok");
 if (slider.includes('slide.id === "besos" || slide.id === "sogutma"')) {
   fail("HomeMainSlider.tsx: background dalinda besos karsilastirmasi (TS hatasi)");
-}
-if (!slider.includes("Besos modüler kokteyl istasyonu")) {
-  fail("HomeMainSlider.tsx: Bar Design alt metni yok");
 }
 if (!slider.includes("Electrolux Professional XP pişirme serisi")) {
   fail("HomeMainSlider.tsx: Electrolux XP alt metni yok");
@@ -94,18 +97,12 @@ if (!content.includes("width: 1200") || !content.includes("height: 713")) {
 }
 const slidesStart = content.indexOf("export const homeMainSliderSlides");
 const slidesBody = slidesStart >= 0 ? content.slice(slidesStart) : content;
-const besosIdx = slidesBody.indexOf('id: "besos",');
+if (slidesBody.includes('id: "besos",')) {
+  fail("home-slider-content.ts: Bar Design slaytı ana slider'da hâlâ var");
+}
 const electroluxIdx = slidesBody.indexOf('id: "electrolux-xp",');
-if (besosIdx < 0 || electroluxIdx < 0) {
-  fail("home-slider-content.ts: besos/electrolux-xp slayt tanımı yok");
-} else {
-  const besosBlock = slidesBody.slice(besosIdx, electroluxIdx);
-  if (!besosBlock.includes('kind: "hero-img"')) {
-    fail("home-slider-content.ts: Bar Design kind hero-img değil");
-  }
-  if (besosBlock.includes('kind: "background"')) {
-    fail("home-slider-content.ts: Bar Design background slaytına dönmüş");
-  }
+if (electroluxIdx < 0) {
+  fail("home-slider-content.ts: electrolux-xp slayt tanımı yok");
 }
 
 if (!content.includes("homeMainSliderImt300Image")) {
@@ -156,14 +153,8 @@ if (!content.includes("XP Pişirme Serisi")) {
 if (!content.includes("700XP ve 900XP")) {
   fail("home-slider-content.ts: Electrolux XP slayt metni değişmiş");
 }
-if (!content.includes("Bar Design Studio")) {
-  fail("home-slider-content.ts: Bar Design başlığı değişmiş");
-}
-if (!content.includes("Modüler Kokteyl İstasyonu")) {
-  fail("home-slider-content.ts: Bar Design titleEm yok");
-}
 if (!content.includes("homeMainSliderBesosComplements")) {
-  fail("home-slider-content.ts: Manhattan tamamlayıcıları yok");
+  fail("home-slider-content.ts: Manhattan tamamlayıcıları sabiti yok");
 }
 
 const portals = read("components/home/HomeVitrinPortals.tsx");
@@ -217,9 +208,6 @@ if (!splitFlex) fail("eq-home-decor.css: split slayt flex/grid kuralı yok");
 if (!decor.includes("eq-mx-hero__slide--sketch-only")) {
   fail("eq-home-decor.css: PFOS sketch-only stili yok");
 }
-if (!decor.includes("eq-mx-hero__slide--bar .eq-mx-hero__slide-promo-badges")) {
-  fail("eq-home-decor.css: Bar promo rozetleri yok");
-}
 if (!decor.includes("eq-home-platform-hero")) {
   fail("eq-home-decor.css: platform hero hizalama yok");
 }
@@ -247,4 +235,4 @@ if (err) {
   console.error("[verify-home-main-slider-kilit] Kilit ihlali");
   process.exit(1);
 }
-console.log("[verify-home-main-slider-kilit] OK — PFOS eskiz · IMT300 · Bar · Electrolux XP (split 3/5·2/5)");
+console.log("[verify-home-main-slider-kilit] OK — PFOS eskiz · IMT300 · Electrolux XP (3 slayt)");

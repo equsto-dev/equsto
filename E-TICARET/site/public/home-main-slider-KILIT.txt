@@ -1,33 +1,34 @@
 ═══════════════════════════════════════════════════════════════════════════
-KİLİT — Ana sayfa alt slider (PFOS · IMT300 · Bar Design · Electrolux XP)
-Onay: 2026-06-04 · Commit referans: slider-split-unified
+KİLİT — Ana sayfa alt slider (PFOS · IMT300 · Electrolux XP)
+Onay: 2026-06-04 · Bar Design slaytı ana slider'dan çıkarıldı
 ═══════════════════════════════════════════════════════════════════════════
 
 Departman şeridinin altındaki büyük carousel. Üstteki üçlü hero vitrinden
 AYRI bileşendir (HomeMainSlider). Değiştirmeden önce AÇIK ONAY alın.
 
 ── Beklenen görünüm ───────────────────────────────────────────────────────
-  • 4 slayt, 4 thumb; otomatik geçiş (eq-home-mutbex.js initHero)
-  • IMT300 · Bar · Electrolux XP: split — sol görsel 3/5, sağ promo panel 2/5
+  • 3 slayt, 3 thumb; otomatik geçiş (eq-home-mutbex.js initHero)
+  • IMT300 · Electrolux XP: split — sol görsel 3/5, sağ promo panel 2/5
   • PFOS: yalnız plan eskizi — tam genişlik, promo metin yok (parşömen zemin #e8dcc8, contain)
   • Zemin (split slaytlar): Electrolux mavisi #001e50; promo: kicker · başlık · lead · rozetler · maddeler · CTA
-  • IMT300: sol berrak buz makinesi (contain, Electrolux mavisi #001e50)
-  • Bar Design: sol kokteyl istasyonu (contain, Electrolux mavisi #001e50)
-  • Electrolux XP: sol modüler pişirme hattı (contain)
+  • IMT300: berrak buz makinesi (imt300-2.png · lighten · contain · tam görünür · mavi zemin #001e50)
+  • Electrolux XP: modüler pişirme hattı (contain)
+  • Bar Design slaytı YOK — Besos vitrin /besos sayfasında
 
 ── Kilitli slayt görselleri ───────────────────────────────────────────────
   PFOS (sketch, eq-mx-hero__slide--pfos eq-mx-hero__slide--sketch-only):
     /images/pfos/proje-fabrikasi-bar-plan-eskiz.png (1024×331)
     Metin yok — yalnız eskiz; tıklanınca pfos.html
   IMT300 (hero-img, eq-mx-hero__slide--imt300):
-    /images/imt300/imt300-2.png (3381×3007, siyah zemin · lighten · sol hizalı · mavi zemin)
-  Bar Design (hero-img, eq-mx-hero__slide--bar):
-    /images/home/hero-bar-cocktailstation-cutout.png (1200×713, şeffaf kesit · mavi zemin #001e50)
-    (kaynak: hero-bar-cocktailstation.png · popcat-white yalnız vitrin kartları)
-    Metin: Bar Design Studio · Modüler Kokteyl İstasyonu
+    /images/imt300/imt300-2.png (3381×3007, siyah zemin · lighten · mavi zemin)
   Electrolux XP (hero-img, eq-mx-hero__slide--electrolux-xp):
     /images/home/electrolux-xp-pisirme.webp (600×360)
     Metin: XP Pişirme Serisi · 700XP · 900XP
+
+  Bar görselleri (slider dışı — vitrin / pop-cats):
+    /images/home/hero-bar-cocktailstation-cutout.png
+    /images/home/hero-bar-cocktailstation-popcat-white.png
+    /images/home/hero-bar-cocktailstation.png
 
   Üst üçlü vitrin PFOS kartı: proje-fabrikasi-mutfak-eskiz.png (home-hero-ads-KILIT)
 
@@ -50,9 +51,10 @@ AYRI bileşendir (HomeMainSlider). Değiştirmeden önce AÇIK ONAY alın.
 YASAK (onay olmadan):
   • Slider HTML'ini index.ts gövdesine geri gömmek
   • PFOS slaytta mutfak-eskiz.jpg / bar-eskiz.png ile değiştirmek
-  • Bar / IMT300 / PFOS için kind: "background" veya object-fit: cover
+  • IMT300 / PFOS için kind: "background" veya object-fit: cover
   • Split grid'i 36%/64% veya overlay caption'a geri döndürmek
-  • hero-bar-cocktailstation-cutout.png / imt300-2.png yolunu değiştirmek
+  • imt300-2.png yolunu değiştirmek
+  • Bar Design slaytını onaysız geri eklemek
   • HomeMainSlider'ı kaldırıp yalnız legacy HTML kullanmak
 
 ── Deploy / doğrulama ─────────────────────────────────────────────────────
