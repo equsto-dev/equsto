@@ -1,46 +1,45 @@
-import fs from "node:fs/promises";
-import path from "node:path";
 import { getSiteOrigin } from "@/lib/site-origin";
 
-export function dataPath(...parts: string[]) {
-  return path.join(process.cwd(), "public", "data", ...parts);
+/** public/data altında göreli yol (path.join yok — Turbopack trace güvenli) */
+export function dataRel(...parts: string[]): string {
+  return parts
+    .flatMap((p) => p.split(/[/\\]+/))
+    .filter(Boolean)
+    .join("/");
 }
 
-/** public/data/… dosya yolu → /data/… CDN URL (Vercel trace dışı JSON) */
-export function publicDataUrlFromPath(file: string): string | null {
-  const normalized = file.replace(/\\/g, "/");
+/** Mutlak veya göreli yolu public/data altına indirger */
+export function normalizeDataRel(fileOrRel: string): string {
+  const n = fileOrRel.replace(/\\/g, "/");
   const marker = "/public/data/";
-  const idx = normalized.indexOf(marker);
-  if (idx === -1) return null;
-  const rel = normalized.slice(idx + marker.length);
+  const idx = n.indexOf(marker);
+  if (idx >= 0) return n.slice(idx + marker.length);
+  if (n.startsWith("public/data/")) return n.slice("public/data/".length);
+  return n.replace(/^\/+/, "");
+}
+
+export function publicDataUrl(...parts: string[]): string {
+  return `${getSiteOrigin()}/data/${dataRel(...parts)}`;
+}
+
+/** @deprecated publicDataUrl(...parts) veya normalizeDataRel kullanın */
+export function publicDataUrlFromPath(file: string): string | null {
+  const rel = normalizeDataRel(file);
+  if (!rel) return null;
   return `${getSiteOrigin()}/data/${rel}`;
 }
 
-export async function readJsonFile<T>(file: string): Promise<T | null> {
+/** JSON okuma — canlıda /data/* fetch; path.join ile fs trace yok */
+export async function readJsonFile<T>(fileOrRel: string): Promise<T | null> {
+  const rel = normalizeDataRel(fileOrRel);
   try {
-    return JSON.parse(await fs.readFile(file, "utf8")) as T;
-  } catch {
-    /* Vercel: public/data/*.json trace dışı — canlıda CDN */
-  }
-
-  const url = publicDataUrlFromPath(file);
-  if (!url) return null;
-
-  try {
-    const res = await fetch(url, {
+    const res = await fetch(`${getSiteOrigin()}/data/${rel}`, {
       cache: "no-store",
       headers: { Accept: "application/json" },
     });
-    if (!res.ok) return null;
-    return (await res.json()) as T;
+    if (res.ok) return (await res.json()) as T;
   } catch {
-    return null;
+    /* origin / CDN */
   }
-}
-
-export async function writeJsonFile(file: string, data: unknown) {
-  const tmp = file + ".tmp";
-  await fs.mkdir(path.dirname(file), { recursive: true });
-  await fs.writeFile(tmp, JSON.stringify(data, null, 2), "utf8");
-  await fs.rename(tmp, file);
+  return null;
 }

@@ -1,4 +1,4 @@
-import { readJsonFile } from "@/lib/legacy-data";
+import { dataRel, readJsonFile } from "@/lib/legacy-data";
 import type { PfosEkipmanSatir } from "@/lib/pfos/kategoriler/types";
 import type { PfosKategoriKodu } from "@/lib/pfos/core/engine-types";
 import type { ReferansKalem, ReferansProfil } from "./referans-types";
@@ -12,8 +12,7 @@ import {
 } from "./kategori-from-bolum";
 import { yerIzgarasiTipFromOlcu } from "./yer-izgara-match";
 
-const REF_DIR = () =>
-  `${process.cwd()}/public/data/pfos-referans`;
+const REF_DIR = "pfos-referans";
 
 export type M2BantId = "80-150" | "150-250";
 export type ReferansListeId =
@@ -178,8 +177,9 @@ export async function loadPfosReferansListe(
   kategoriId: string,
   listeId: ReferansListeId,
 ): Promise<PfosReferansListeDosya | null> {
-  const path = `${REF_DIR()}/${kategoriId}-${listeId}.json`;
-  return readJsonFile<PfosReferansListeDosya>(path);
+  return readJsonFile<PfosReferansListeDosya>(
+    dataRel(REF_DIR, `${kategoriId}-${listeId}.json`),
+  );
 }
 
 export async function loadReferansProfil(

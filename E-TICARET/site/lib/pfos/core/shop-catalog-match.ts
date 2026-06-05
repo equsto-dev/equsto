@@ -1,4 +1,4 @@
-import { dataPath, readJsonFile } from "@/lib/legacy-data";
+import { readJsonFile } from "@/lib/legacy-data";
 import {
   loadLegacyCatalogRows,
   invalidateLegacyCatalogCache,
@@ -236,7 +236,7 @@ function deptForRow(row: AdminUrunRow): string {
 async function loadTipShopLinks(): Promise<Record<string, TipShopLink>> {
   if (tipLinksCache) return tipLinksCache;
   const raw = await readJsonFile<{ links?: Record<string, TipShopLink> }>(
-    dataPath("pfos-tip-shop-links.json"),
+    "pfos-tip-shop-links.json",
   );
   tipLinksCache = raw?.links ?? {};
   return tipLinksCache;

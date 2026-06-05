@@ -7,7 +7,7 @@
  * 4) İsim + ölçü ile sıkı katalog araması
  * 5) Özel imalat (Equsto) — yanlış SKU asla dönmez
  */
-import { dataPath, readJsonFile } from "@/lib/legacy-data";
+import { readJsonFile } from "@/lib/legacy-data";
 import type { EslesmisUrun, FiyatStratejisi } from "../schemas/pfos.schema";
 import {
   loadLegacyCatalogRows,
@@ -80,9 +80,7 @@ async function loadReferansSkuLinks(): Promise<
 > {
   if (skuLinksCache) return skuLinksCache;
   try {
-    const raw = await readJsonFile<SkuLinksFile>(
-      dataPath("pfos-referans-sku-links.json"),
-    );
+    const raw = await readJsonFile<SkuLinksFile>("pfos-referans-sku-links.json");
     skuLinksCache = raw?.links ?? {};
   } catch {
     skuLinksCache = {};
@@ -99,9 +97,7 @@ let tipShopLinksCache: NonNullable<TipShopLinksFile["links"]> | null = null;
 async function loadTipShopLinks(): Promise<NonNullable<TipShopLinksFile["links"]>> {
   if (tipShopLinksCache) return tipShopLinksCache;
   try {
-    const raw = await readJsonFile<TipShopLinksFile>(
-      dataPath("pfos-tip-shop-links.json"),
-    );
+    const raw = await readJsonFile<TipShopLinksFile>("pfos-tip-shop-links.json");
     tipShopLinksCache = raw?.links ?? {};
   } catch {
     tipShopLinksCache = {};

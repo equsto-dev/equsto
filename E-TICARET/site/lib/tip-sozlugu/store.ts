@@ -1,12 +1,13 @@
 import fs from "node:fs/promises";
 import path from "node:path";
-import { dataPath, readJsonFile, writeJsonFile } from "@/lib/legacy-data";
+import { readJsonFile } from "@/lib/legacy-data";
+import { dataPath, writeJsonFile } from "@/lib/legacy-data-fs";
 import type { TipSozlukEntry, TipSozlukFile } from "./types";
 
 const FILE = () => dataPath("tip-sozlugu.json");
 
 export async function loadTipSozluguEntries(): Promise<TipSozlukEntry[]> {
-  const raw = await readJsonFile<TipSozlukFile | TipSozlukEntry[]>(FILE());
+  const raw = await readJsonFile<TipSozlukFile | TipSozlukEntry[]>("tip-sozlugu.json");
   if (!raw) return [];
   if (Array.isArray(raw)) return raw;
   return Array.isArray(raw.entries) ? raw.entries : [];

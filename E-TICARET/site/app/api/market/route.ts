@@ -1,7 +1,8 @@
 import { NextRequest } from "next/server";
 import { assertAdminBearer } from "@/lib/auth";
 import { adminErr, adminOk } from "@/lib/admin-response";
-import { dataPath, readJsonFile, writeJsonFile } from "@/lib/legacy-data";
+import { readJsonFile } from "@/lib/legacy-data";
+import { dataPath, writeJsonFile } from "@/lib/legacy-data-fs";
 import { getTcmbEurEfektifSatis, kurToApiPayload } from "@/lib/tcmb-kur";
 
 export const dynamic = "force-dynamic";
@@ -21,7 +22,7 @@ export async function GET(req: NextRequest) {
     const file = await readJsonFile<{
       success?: boolean;
       data?: Record<string, number>;
-    }>(FIYATLAR_FILE());
+    }>("fiyatlar.json");
 
     if (file && typeof file === "object" && "data" in file) {
       const inner = (file as { data?: Record<string, number> }).data;

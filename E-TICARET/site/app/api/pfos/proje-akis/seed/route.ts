@@ -1,7 +1,8 @@
 import { NextRequest } from "next/server";
 import { assertAdminBearer } from "@/lib/auth";
 import { adminErr, adminOk } from "@/lib/admin-response";
-import { dataPath, readJsonFile, writeJsonFile } from "@/lib/legacy-data";
+import { readJsonFile } from "@/lib/legacy-data";
+import { dataPath, writeJsonFile } from "@/lib/legacy-data-fs";
 import { PFOS_KONSEPT_SHOP_TYPES } from "@/lib/pfos/proje-akis/konsept-tanimlari";
 import { DEFAULT_WIZARD_QUESTIONS } from "@/lib/pfos/proje-akis/wizard-questions";
 import { unwrapProjeAkisPayload } from "@/lib/pfos/proje-akis/unwrap";
@@ -15,7 +16,7 @@ export async function POST(req: NextRequest) {
   const denied = assertAdminBearer(req);
   if (denied) return denied;
 
-  const existing = await readJsonFile<unknown>(PROJE_FILE());
+  const existing = await readJsonFile<unknown>("proje-akis.json");
   const unwrapped = unwrapProjeAkisPayload(existing);
   const prevProducts = Array.isArray(unwrapped?.products) ? unwrapped.products : [];
 

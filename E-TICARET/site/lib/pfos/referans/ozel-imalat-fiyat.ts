@@ -1,4 +1,4 @@
-import { dataPath, readJsonFile } from "@/lib/legacy-data";
+import { readJsonFile } from "@/lib/legacy-data";
 
 type OzelFiyatConfig = {
   kur_eur_try_kdv_dahil?: number;
@@ -17,9 +17,7 @@ let cache: OzelFiyatConfig | null = null;
 async function loadConfig(): Promise<OzelFiyatConfig> {
   if (cache) return cache;
   try {
-    cache = await readJsonFile<OzelFiyatConfig>(
-      dataPath("pfos-ozel-imalat-fiyatlari.json"),
-    );
+    cache = await readJsonFile<OzelFiyatConfig>("pfos-ozel-imalat-fiyatlari.json");
   } catch {
     cache = { kur_eur_try_kdv_dahil: 64, tezgah: { min_eur: 420, taban_eur_m2: 220 } };
   }

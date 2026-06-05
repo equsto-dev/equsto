@@ -1,7 +1,8 @@
 import { NextRequest } from "next/server";
 import { assertAdminBearer } from "@/lib/auth";
 import { adminErr, adminOk } from "@/lib/admin-response";
-import { dataPath, readJsonFile, writeJsonFile } from "@/lib/legacy-data";
+import { readJsonFile } from "@/lib/legacy-data";
+import { dataPath, writeJsonFile } from "@/lib/legacy-data-fs";
 import { normalizeEticaretIcerik } from "@/lib/pro/eticaret-normalize";
 
 export const runtime = "nodejs";
@@ -43,7 +44,7 @@ const EMPTY_ETICARET = {
  */
 export async function GET(req: NextRequest) {
   try {
-    const file = await readJsonFile<typeof EMPTY_ETICARET>(ETICARET_FILE());
+    const file = await readJsonFile<typeof EMPTY_ETICARET>("eticaret-icerik.json");
     if (file && typeof file === "object" && file.k) {
       return adminOk({ data: file });
     }
@@ -113,7 +114,7 @@ export async function PUT(req: NextRequest) {
 
     // Load current data
     const current =
-      (await readJsonFile<typeof EMPTY_ETICARET>(ETICARET_FILE())) || EMPTY_ETICARET;
+      (await readJsonFile<typeof EMPTY_ETICARET>("eticaret-icerik.json")) || EMPTY_ETICARET;
 
     // Update based on type
     if (type === "kampanya" && Array.isArray(current.k) && typeof index === "number") {
@@ -160,7 +161,7 @@ export async function DELETE(req: NextRequest) {
 
     // Load current data
     const current =
-      (await readJsonFile<typeof EMPTY_ETICARET>(ETICARET_FILE())) || EMPTY_ETICARET;
+      (await readJsonFile<typeof EMPTY_ETICARET>("eticaret-icerik.json")) || EMPTY_ETICARET;
 
     // Delete based on type
     if (type === "kampanya" && Array.isArray(current.k)) {

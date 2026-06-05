@@ -157,7 +157,18 @@ export async function loadPfosProjects(): Promise<PfosProjelerResponse> {
   ]);
 
   if (!archive || !referans || !kurallar) {
-    cache = { projects: [], yillar: [], konseptler: [], dukkanlar: [], profiles: [] };
+    cache = {
+      projects: [],
+      profiles: [],
+      stats: {
+        total: 0,
+        referans: 0,
+        yillar: [],
+        konseptler: [],
+        dukkanlar: [],
+        zones: [],
+      },
+    };
     return cache;
   }
 

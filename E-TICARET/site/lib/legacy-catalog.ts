@@ -1,59 +1,37 @@
 import fs from "node:fs/promises";
-import path from "node:path";
 import { loadEkipmanlarJson } from "@/lib/catalog-json";
+import { dataPath, writeJsonFile } from "@/lib/legacy-data-fs";
 import { ecomRowToAdminUrun, type AdminUrunRow } from "@/lib/admin-urun";
+import { readJsonFile } from "@/lib/legacy-data";
 
 export type { AdminUrunRow };
 
-let cache: { mtimeMs: number; rows: AdminUrunRow[] } | null = null;
-
-function catalogPath() {
-  return path.join(process.cwd(), "public", "data", "ekipmanlar.json");
-}
-
-function pfosEkKatalogPath() {
-  return path.join(process.cwd(), "public", "data", "pfos-ek-katalog.json");
-}
+let cache: { rows: AdminUrunRow[] } | null = null;
 
 async function loadPfosEkKatalogItems(): Promise<unknown[]> {
-  try {
-    const raw = JSON.parse(
-      await fs.readFile(pfosEkKatalogPath(), "utf8"),
-    ) as { items?: unknown[] };
-    return Array.isArray(raw?.items) ? raw.items : [];
-  } catch {
-    return [];
-  }
+  const raw = await readJsonFile<{ items?: unknown[] }>("pfos-ek-katalog.json");
+  return Array.isArray(raw?.items) ? raw.items : [];
 }
 
 export async function legacyCatalogExists() {
   try {
-    await fs.access(catalogPath());
+    await loadEkipmanlarJson();
     return true;
   } catch {
-    try {
-      await loadEkipmanlarJson();
-      return true;
-    } catch {
-      return false;
-    }
+    return false;
   }
 }
 
 export async function loadLegacyCatalogRows(): Promise<AdminUrunRow[]> {
-  const file = catalogPath();
-  let mtimeMs = Date.now();
-  let raw: unknown;
+  if (cache) return cache.rows;
 
+  let raw: unknown;
   try {
-    const stat = await fs.stat(file);
-    mtimeMs = stat.mtimeMs;
-    if (cache && cache.mtimeMs === mtimeMs) return cache.rows;
-    raw = JSON.parse(await fs.readFile(file, "utf8")) as unknown;
-  } catch {
-    if (cache) return cache.rows;
     raw = await loadEkipmanlarJson();
+  } catch {
+    return [];
   }
+
   const items = Array.isArray(raw)
     ? raw
     : raw && typeof raw === "object" && Array.isArray((raw as { items?: unknown[] }).items)
@@ -66,7 +44,7 @@ export async function loadLegacyCatalogRows(): Promise<AdminUrunRow[]> {
   const rows = merged.map((row, i) =>
     ecomRowToAdminUrun(row as Parameters<typeof ecomRowToAdminUrun>[0], i),
   );
-  cache = { mtimeMs, rows };
+  cache = { rows };
   return rows;
 }
 
@@ -75,7 +53,7 @@ export function invalidateLegacyCatalogCache() {
 }
 
 export async function deleteLegacyCatalogIndex(index: number): Promise<boolean> {
-  const file = catalogPath();
+  const file = dataPath("ekipmanlar.json");
   const raw = JSON.parse(await fs.readFile(file, "utf8")) as unknown;
   const items = Array.isArray(raw)
     ? [...raw]
@@ -87,9 +65,7 @@ export async function deleteLegacyCatalogIndex(index: number): Promise<boolean> 
   items.splice(index, 1);
 
   const out = Array.isArray(raw) ? items : { ...(raw as object), items };
-  const tmp = file + ".tmp";
-  await fs.writeFile(tmp, JSON.stringify(out), "utf8");
-  await fs.rename(tmp, file);
+  await writeJsonFile(file, out);
   invalidateLegacyCatalogCache();
   return true;
 }

@@ -1,5 +1,5 @@
 import fs from "node:fs/promises";
-import { dataPath, readJsonFile } from "@/lib/legacy-data";
+import { readJsonFile } from "@/lib/legacy-data";
 import { loadLegacyCatalogRows, type AdminUrunRow } from "@/lib/legacy-catalog";
 import { productMatchesTipKodu } from "@/lib/pfos/core/shop-catalog-match";
 import {
@@ -68,7 +68,7 @@ function mergeEntry(
 
 async function loadPfosLinks(): Promise<Record<string, { name?: string }>> {
   const raw = await readJsonFile<{ links?: Record<string, { name?: string }> }>(
-    dataPath("pfos-tip-shop-links.json"),
+    "pfos-tip-shop-links.json",
   );
   return raw?.links ?? {};
 }

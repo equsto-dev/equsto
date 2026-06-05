@@ -1,7 +1,8 @@
 import { NextRequest } from "next/server";
 import { assertAdminBearer } from "@/lib/auth";
 import { adminErr, adminOk } from "@/lib/admin-response";
-import { dataPath, readJsonFile, writeJsonFile } from "@/lib/legacy-data";
+import { readJsonFile } from "@/lib/legacy-data";
+import { dataPath, writeJsonFile } from "@/lib/legacy-data-fs";
 import { enrichShopTypesFromFile } from "@/lib/pfos/proje-akis/konsept-tanimlari";
 import { unwrapProjeAkisPayload } from "@/lib/pfos/proje-akis/unwrap";
 
@@ -19,7 +20,7 @@ const EMPTY_PROJE = {
 };
 
 async function loadProjeAkis(req: NextRequest) {
-  const fromDisk = await readJsonFile<unknown>(PROJE_FILE());
+  const fromDisk = await readJsonFile<unknown>("proje-akis.json");
   const unwrapped = unwrapProjeAkisPayload(fromDisk);
   if (unwrapped) return unwrapped;
 
@@ -56,7 +57,7 @@ export async function GET(req: NextRequest) {
   }
 
   if (kind === "vitrin") {
-    const file = await readJsonFile<Record<string, unknown>>(VITRIN_FILE());
+    const file = await readJsonFile<Record<string, unknown>>("homepage-vitrin.json");
     if (!file) return adminOk({ data: { version: "1.0", layout: {} } });
     if (file.success && file.data && typeof file.data === "object") {
       return adminOk({ data: file.data as Record<string, unknown> });
