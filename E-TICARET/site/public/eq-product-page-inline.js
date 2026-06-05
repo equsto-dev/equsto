@@ -48,12 +48,26 @@ window.searchFilter = window.searchFilter || function () {};
     }
 
     function normImgPath(p) {
+      if (typeof window.eqProductImgSrc === "function") {
+        try {
+          var via = window.eqProductImgSrc(p);
+          if (via) return via;
+        } catch (_) {}
+      }
       if (typeof window.equstoDataAssetHref === "function") {
         try {
           return window.equstoDataAssetHref(p);
         } catch (_) {}
       }
-      var s = String(p).replace(/\\/g, "/").replace(/^\.\//, "").replace(/^data\//, "");
+      var s = String(p || "")
+        .replace(/\\/g, "/")
+        .replace(/^\.\//, "")
+        .replace(/^\/+/, "")
+        .replace(/^data\//i, "");
+      if (/^https?:\/\//i.test(s)) return s;
+      if (/^images\//i.test(s)) {
+        return typeof window.eqAttrPath === "function" ? window.eqAttrPath(s) : "/" + s;
+      }
       return s ? "/data/" + s : "";
     }
 
@@ -1034,24 +1048,277 @@ window.searchFilter = window.searchFilter || function () {};
       );
     }
 
-    /** Aynı marka aksesuar / tamamlayıcı; yoksa aynı kategoride geniş liste. */
+    /** Pişirme hattı / hazırlık ailesi — tamamlayıcı ürün skorlaması için rol tespiti. */
+    var COOKLINE_ROLES = {
+      fritoz: true,
+      izgara: true,
+      kuzine: true,
+      ocak: true,
+      firin: true,
+      kaynatma: true,
+      "makarna-pisirici": true,
+      "devrilir-tava": true,
+    };
+
+    var PREP_ROLES = {
+      kiyma: true,
+      dilimleme: true,
+      "kemik-testere": true,
+      "hamur-yogurma": true,
+      "hamur-acma": true,
+      "sebze-dograma": true,
+      vakum: true,
+    };
+
+    var ROLE_COMPLEMENTS = {
+      fritoz: ["izgara", "fritoz", "kuzine", "kaynatma", "devrilir-tava", "makarna-pisirici", "firin", "ocak"],
+      izgara: ["fritoz", "izgara", "kuzine", "kaynatma", "devrilir-tava", "ocak", "firin"],
+      kuzine: ["fritoz", "izgara", "kuzine", "kaynatma", "ocak"],
+      ocak: ["izgara", "fritoz", "kuzine", "kaynatma", "ocak"],
+      firin: ["kuzine", "izgara", "fritoz", "kaynatma", "firin"],
+      kaynatma: ["fritoz", "izgara", "kuzine", "kaynatma", "devrilir-tava"],
+      "makarna-pisirici": ["fritoz", "izgara", "kaynatma", "kuzine"],
+      "devrilir-tava": ["fritoz", "izgara", "kuzine", "kaynatma"],
+      kiyma: ["dilimleme", "kemik-testere", "hamur-yogurma", "vakum", "sebze-dograma"],
+      dilimleme: ["kiyma", "kemik-testere", "vakum", "hamur-yogurma", "sebze-dograma"],
+      "kemik-testere": ["kiyma", "dilimleme", "vakum", "hamur-yogurma"],
+      "hamur-yogurma": ["hamur-acma", "sebze-dograma", "kiyma", "dilimleme"],
+      "hamur-acma": ["hamur-yogurma", "sebze-dograma"],
+      "sebze-dograma": ["hamur-yogurma", "hamur-acma", "kiyma", "dilimleme"],
+      vakum: ["kiyma", "dilimleme", "kemik-testere", "hamur-yogurma"],
+    };
+
+    function productHaystack(p) {
+      return (
+        String((p && p.name) || "") +
+        " " +
+        String((p && p.category) || "") +
+        " " +
+        String((p && p.dept) || "")
+      ).toLocaleLowerCase("tr");
+    }
+
+    function detectProductRole(p) {
+      if (!p) return "";
+      var hay = productHaystack(p);
+      var cat = String(p.category || "");
+      var nameHay = String((p && p.name) || "").toLocaleLowerCase("tr");
+
+      if (/kemik\s*testere|et\s*kemik\b|kemik\s*testere/.test(nameHay)) return "kemik-testere";
+      if (/kıyma|kiyma/.test(nameHay) && !/kemik/.test(nameHay)) return "kiyma";
+      if (/dilimleme|dilimleyici|dilim\s*mak|gida-dilim|gıda-dilim/.test(nameHay)) return "dilimleme";
+      if (/vakum\s*paket|vakum\s*mak|setustu-vakum|setüstü\s*vakum/.test(nameHay) || (cat.indexOf("vakum") !== -1 && /vakum/.test(nameHay))) {
+        return "vakum";
+      }
+      if (/hamur\s*yoğurma|hamur\s*yogurma|spiral\s*mikser|planetary/.test(nameHay)) return "hamur-yogurma";
+      if (/hamur\s*açma|hamur\s*acma/.test(nameHay)) return "hamur-acma";
+      if (/sebze\s*do[ğg]rama|do[ğg]rama\s*mak/.test(nameHay)) return "sebze-dograma";
+
+      if (/fritöz|fritoz/.test(hay)) return "fritoz";
+      if (/devrilir\s*tava|devrilir\s*tepsi/.test(hay)) return "devrilir-tava";
+      if (/makarna\s*pişir|makarna\s*pisir/.test(hay)) return "makarna-pisirici";
+      if (/kaynat|kazan/.test(hay) && (p.dept === "pisirme" || /pişirme|pisirme/.test(hay))) return "kaynatma";
+      if (/konveksiyon|kombi\s*fırın|kombi\s*firin|kombin\s*fırın/.test(hay)) return "firin";
+      if (/kuzine/.test(hay)) return "kuzine";
+      if (/ızgara|izgara|powergrill|grill/.test(hay) && !/\bocak\b/.test(hay)) return "izgara";
+      if (/\bocak\b/.test(hay) && p.dept === "pisirme") return "ocak";
+
+      return "";
+    }
+
+    function inferRoleFromCategory(p) {
+      if (!p) return "";
+      var cat = String(p.category || "");
+      var nameHay = String((p && p.name) || "").toLocaleLowerCase("tr");
+      if (/et-kiyma-ve-vakum/.test(cat)) {
+        if (/kemik|testere/.test(nameHay)) return "kemik-testere";
+        if (/vakum/.test(nameHay)) return "vakum";
+      }
+      if (/fritoz/.test(cat)) return "fritoz";
+      if (/izgar/.test(cat)) return "izgara";
+      if (/kuzin/.test(cat)) return "kuzine";
+      if (/kaynat|devrilir/.test(cat)) return /devrilir/.test(cat) ? "devrilir-tava" : "kaynatma";
+      if (/makarna-pisir/.test(cat)) return "makarna-pisirici";
+      if (/ocak/.test(cat) && p.dept === "pisirme") return "ocak";
+      if (/firin|konveksiyon/.test(cat)) return "firin";
+      if (/kiyma/.test(cat)) return "kiyma";
+      if (/dilim/.test(cat)) return "dilimleme";
+      if (/hamur-yogurma/.test(cat)) return "hamur-yogurma";
+      if (/hamur-acma/.test(cat)) return "hamur-acma";
+      if (/vakum/.test(cat)) return "vakum";
+      if (/sebze-dograma/.test(cat)) return "sebze-dograma";
+      if (/kemik/.test(cat)) return "kemik-testere";
+      return "";
+    }
+
+    function extractSeriesHints(p) {
+      var hay = String((p && p.name) || "");
+      var hints = [];
+      var m = hay.match(/\b(900XP|700XP|600XP|500XP|400XP)\b/i);
+      if (m) hints.push(m[1].toUpperCase());
+      m = hay.match(/Seri\s*(\d{3})/i);
+      if (m) hints.push("SERI-" + m[1]);
+      if (/modüler\s*pişirme|moduler\s*pisirme/i.test(hay)) hints.push("MODULER-PISIRME");
+      m = hay.match(/\b(\d{3,4})\s*mm\b/i);
+      if (m) hints.push("W-" + m[1]);
+      return hints;
+    }
+
+    function seriesMatchScore(a, b) {
+      var sa = extractSeriesHints(a);
+      var sb = extractSeriesHints(b);
+      var score = 0;
+      for (var i = 0; i < sa.length; i++) {
+        if (sb.indexOf(sa[i]) === -1) continue;
+        if (/XP|SERI|MODULER/.test(sa[i])) score += 35;
+        else if (/^W-/.test(sa[i])) score += 15;
+      }
+      return score;
+    }
+
+    function brandsMatch(a, b) {
+      var ba = String((a && a.brand) || "").trim().toLocaleLowerCase("tr");
+      var bb = String((b && b.brand) || "").trim().toLocaleLowerCase("tr");
+      if (!ba || !bb) return false;
+      if (ba === bb) return true;
+      if (ba.indexOf("electrolux") !== -1 && bb.indexOf("electrolux") !== -1) return true;
+      if (ba.indexOf("atalay") !== -1 && bb.indexOf("atalay") !== -1) return true;
+      if (ba.indexOf("öztiryakiler") !== -1 && bb.indexOf("öztiryakiler") !== -1) return true;
+      if (ba.indexOf("oztiryakiler") !== -1 && bb.indexOf("oztiryakiler") !== -1) return true;
+      return false;
+    }
+
+    function isWeakAccessoryProduct(p) {
+      if (!p) return true;
+      var pCat = String(p.category || "");
+      if (COMPLEMENT_CATEGORY_SLUGS[pCat]) return true;
+      var hay = (String(p.name || "") + " " + pCat).toLocaleLowerCase("tr");
+      return /aksesuar|yedek|kapak|conta|adaptör|adaptor|servis\s*tepsi|kartuş|kartus|filtre|küvet|kuvet|sepet|kalıp|kalip|tepsi/.test(
+        hay,
+      );
+    }
+
+    function scoreComplementCandidate(p, x, curRole) {
+      var wantRoles = ROLE_COMPLEMENTS[curRole];
+      if (!wantRoles) return isComplementProduct(p, x) ? 12 : 0;
+
+      if (isWeakAccessoryProduct(p) && (COOKLINE_ROLES[curRole] || PREP_ROLES[curRole])) return 0;
+
+      var pRole = detectProductRole(p) || inferRoleFromCategory(p);
+      if (!pRole) {
+        if (isComplementProduct(p, x) && !COOKLINE_ROLES[curRole]) return 8;
+        return 0;
+      }
+
+      var idx = wantRoles.indexOf(pRole);
+      if (idx === -1) return 0;
+
+      var score = 120 - idx * 10;
+
+      if (COOKLINE_ROLES[curRole]) {
+        if (brandsMatch(p, x)) score += 45;
+        score += seriesMatchScore(x, p);
+        if (p.dept === x.dept) score += 12;
+      } else if (PREP_ROLES[curRole]) {
+        var pDept = String(p.dept || "");
+        if (pDept === "hazirlik" || pDept === "set-ustu-mutfak") score += 15;
+        if (brandsMatch(p, x)) score += 20;
+      }
+
+      return score;
+    }
+
+    /** Aynı rolden yığılma olmasın: önce her tamamlayıcı rolden en iyi aday, sonra skora göre doldur. */
+    function diversifyRoleComplements(scored, curRole, maxN) {
+      if (!scored.length) return [];
+      var wantRoles = ROLE_COMPLEMENTS[curRole];
+      if (!wantRoles || scored.length <= maxN) {
+        return scored.slice(0, maxN).map(function (row) {
+          return row.p;
+        });
+      }
+      var byRole = Object.create(null);
+      for (var di = 0; di < scored.length; di++) {
+        var row = scored[di];
+        var role = detectProductRole(row.p) || inferRoleFromCategory(row.p);
+        if (!role || byRole[role]) continue;
+        byRole[role] = row;
+      }
+      var out = [];
+      var used = Object.create(null);
+      for (var wi = 0; wi < wantRoles.length && out.length < maxN; wi++) {
+        var pick = byRole[wantRoles[wi]];
+        if (!pick) continue;
+        var pk = pick.p.id || pick.p.slug || pick.p.name;
+        if (used[pk]) continue;
+        used[pk] = 1;
+        out.push(pick.p);
+      }
+      for (var si = 0; si < scored.length && out.length < maxN; si++) {
+        var sp = scored[si].p;
+        var sk = sp.id || sp.slug || sp.name;
+        if (used[sk]) continue;
+        used[sk] = 1;
+        out.push(sp);
+      }
+      return out;
+    }
+
+    /** Bağlama göre tamamlayıcı ürünler (pişirme hattı / et-hazırlık ailesi); yoksa marka aksesuarı. */
     function pickComplementaryProducts(x, all, keyFn, excludeKeys, max) {
       if (!x || !all || !all.length) return [];
       if (isMarketReyonProduct(x)) return pickRelatedExtras(x, all, keyFn, excludeKeys, max);
       if (!keyFn) return [];
       var curKey = keyFn({ c: x.category || "", b: x.brand || "", n: x.name || "" });
+      var maxN = max || 24;
+      var curRole = detectProductRole(x) || inferRoleFromCategory(x);
+
+      if (curRole && ROLE_COMPLEMENTS[curRole]) {
+        var scored = [];
+        var seen = Object.create(null);
+        for (var ri = 0; ri < all.length; ri++) {
+          var rp = all[ri];
+          if (!rp) continue;
+          var rk = keyFn({ c: rp.category || "", b: rp.brand || "", n: rp.name || "" });
+          if (!rk || rk === curKey || seen[rk]) continue;
+          if (excludeKeys && excludeKeys[rk]) continue;
+          var rs = scoreComplementCandidate(rp, x, curRole);
+          if (rs <= 0) continue;
+          seen[rk] = 1;
+          scored.push({ p: rp, s: rs });
+        }
+        scored.sort(function (a, b) {
+          if (b.s !== a.s) return b.s - a.s;
+          return String(a.p.name || "").localeCompare(String(b.p.name || ""), "tr", { sensitivity: "base" });
+        });
+        var roleOut = diversifyRoleComplements(scored, curRole, maxN);
+        if (roleOut.length >= 4) return roleOut.slice(0, maxN);
+        for (var fi = 0; fi < all.length && roleOut.length < maxN; fi++) {
+          var fp = all[fi];
+          if (!fp) continue;
+          var fk = keyFn({ c: fp.category || "", b: fp.brand || "", n: fp.name || "" });
+          if (!fk || fk === curKey || seen[fk]) continue;
+          if (excludeKeys && excludeKeys[fk]) continue;
+          if (isComplementProduct(fp, x)) {
+            seen[fk] = 1;
+            roleOut.push(fp);
+          }
+        }
+        if (roleOut.length >= 4) return roleOut.slice(0, maxN);
+      }
+
       var primary = [];
       var fallback = [];
-      var seen = Object.create(null);
+      var seenLegacy = Object.create(null);
       for (var i = 0; i < all.length; i++) {
         var p = all[i];
         if (!p) continue;
         var k = keyFn({ c: p.category || "", b: p.brand || "", n: p.name || "" });
-        if (!k || k === curKey || seen[k]) continue;
+        if (!k || k === curKey || seenLegacy[k]) continue;
         if (excludeKeys && excludeKeys[k]) continue;
-        seen[k] = 1;
+        seenLegacy[k] = 1;
         if (isComplementProduct(p, x)) primary.push(p);
-        else fallback.push(p);
+        else if (!curRole || !COOKLINE_ROLES[curRole]) fallback.push(p);
       }
       primary.sort(function (a, b) {
         return String(a.name || "").localeCompare(String(b.name || ""), "tr", { sensitivity: "base" });
@@ -1062,15 +1329,15 @@ window.searchFilter = window.searchFilter || function () {};
       var out = primary.concat(fallback);
       if (out.length < 4) {
         var extra = pickRelatedExtras(x, all, keyFn, excludeKeys, max);
-        for (var ei = 0; ei < extra.length && out.length < (max || 24); ei++) {
+        for (var ei = 0; ei < extra.length && out.length < maxN; ei++) {
           var ek = keyFn({ c: extra[ei].category || "", b: extra[ei].brand || "", n: extra[ei].name || "" });
-          if (ek && !seen[ek]) {
+          if (ek && !seenLegacy[ek]) {
             out.push(extra[ei]);
-            seen[ek] = 1;
+            seenLegacy[ek] = 1;
           }
         }
       }
-      return out.slice(0, max || 24);
+      return out.slice(0, maxN);
     }
 
     function pdpThumbSrcUrl(p) {
@@ -1640,6 +1907,147 @@ window.searchFilter = window.searchFilter || function () {};
       }
     }
 
+    function electroluxSourceLinkText(url) {
+      try {
+        var u = new URL(String(url));
+        var path = decodeURIComponent(u.pathname || "/");
+        return u.hostname.replace(/^www\./i, "") + path;
+      } catch (_) {
+        return String(url || "").trim();
+      }
+    }
+
+    function isElectroluxProfessional(x) {
+      if (!x) return false;
+      if (String(x.kaynak || "") === "electrolux-professional") return true;
+      return /electrolux\s*professional/i.test(String(x.brand || ""));
+    }
+
+    function getElectroluxDocuments(x) {
+      return Array.isArray(x && x.electrolux_documents) ? x.electrolux_documents : [];
+    }
+
+    function electroluxDocHref(doc) {
+      if (!doc) return "";
+      if (doc.local) {
+        if (typeof window.equstoDataAssetHref === "function") {
+          try {
+            var via = window.equstoDataAssetHref(doc.local);
+            if (via) return via;
+          } catch (_) {}
+        }
+        return eqHtmlUrl("/" + String(doc.local).replace(/^\/+/, ""));
+      }
+      if (doc.url) return String(doc.url);
+      return "";
+    }
+
+    function electroluxDocDisplayName(doc) {
+      var title = String((doc && doc.title) || "").trim();
+      if (title && doc.category && title.indexOf("%") < 0 && !/\.(pdf|dwg|rfa)$/i.test(title)) {
+        return title;
+      }
+      if (title) {
+        try {
+          return decodeURIComponent(title.replace(/_/g, " "));
+        } catch (_) {
+          return title.replace(/_/g, " ");
+        }
+      }
+      return (doc && doc.type) || "Döküman";
+    }
+
+    function dedupeElectroluxDocs(docs) {
+      var seen = Object.create(null);
+      var out = [];
+      (docs || []).forEach(function (doc) {
+        var key = String(doc.local || doc.url || doc.title || "")
+          .toLowerCase()
+          .replace(/\\/g, "/");
+        if (!key || seen[key]) return;
+        seen[key] = 1;
+        out.push(doc);
+      });
+      return out;
+    }
+
+    function isElectroluxBrochure(doc) {
+      var cat = String(doc.category || "");
+      var type = String(doc.type || "").toUpperCase();
+      var title = String(doc.title || "").toLowerCase();
+      if (/bro[sş]ür|leaflet|el bro[sş]ür/i.test(cat)) return true;
+      if (type === "BR" || type === "CLF") return true;
+      if (/brochure|leaflet|^br_|^clf_/i.test(title)) return true;
+      return false;
+    }
+
+    function isElectroluxTechnicalDrawing(doc) {
+      var cat = String(doc.category || "");
+      var type = String(doc.type || "").toUpperCase();
+      var title = String(doc.title || "");
+      if (/cad|çizim|bim|revit|drawing/i.test(cat)) return true;
+      if (type === "DWG" || type === "CAD" || type === "RFA" || type === "REVIT") return true;
+      if (/\.dwg$/i.test(title) || /\.rfa$/i.test(title)) return true;
+      return false;
+    }
+
+    function isElectroluxDatasheet(doc) {
+      var cat = String(doc.category || "");
+      var type = String(doc.type || "").toUpperCase();
+      if (/veri sayfas/i.test(cat)) return true;
+      if (type === "MAD2" || type === "MAD") return true;
+      return false;
+    }
+
+    function getElectroluxBrochures(x) {
+      return dedupeElectroluxDocs(getElectroluxDocuments(x).filter(isElectroluxBrochure)).sort(function (a, b) {
+        return (b.local ? 1 : 0) - (a.local ? 1 : 0);
+      });
+    }
+
+    function getElectroluxTechnicalDocs(x) {
+      return dedupeElectroluxDocs(getElectroluxDocuments(x).filter(isElectroluxTechnicalDrawing)).sort(function (a, b) {
+        return (b.local ? 1 : 0) - (a.local ? 1 : 0);
+      });
+    }
+
+    function getElectroluxDatasheetDoc(x) {
+      var docs = getElectroluxDocuments(x);
+      var ds = docs.filter(isElectroluxDatasheet);
+      if (ds.length) return ds[0];
+      return docs.find(function (d) {
+        return String(d.type || "").toUpperCase() === "PDF" && !isElectroluxBrochure(d);
+      });
+    }
+
+    function renderEpdpDocLinkList(docs) {
+      if (!docs.length) {
+        return (
+          '<p class="eq-caglayan-acc__body">' +
+          esc(__pdpT("pdp.no_documents", "Henüz yüklenmedi.")) +
+          "</p>"
+        );
+      }
+      return (
+        '<div class="eq-caglayan-acc__body eq-epdp-doc-links">' +
+        docs
+          .map(function (doc) {
+            var href = electroluxDocHref(doc);
+            if (!href) return "";
+            return (
+              '<a href="' +
+              esc(href) +
+              '" target="_blank" rel="noopener">' +
+              esc(electroluxDocDisplayName(doc)) +
+              "</a>"
+            );
+          })
+          .filter(Boolean)
+          .join("<br>") +
+        "</div>"
+      );
+    }
+
     function isOztiEqustoBrand(brand) {
       var b = String(brand || "").trim();
       if (!b) return false;
@@ -1689,6 +2097,11 @@ window.searchFilter = window.searchFilter || function () {};
     function pdpPdfHref(x) {
       var c = caglayanPdfHref(x);
       if (c) return c;
+      if (isElectroluxProfessional(x)) {
+        var ds = getElectroluxDatasheetDoc(x);
+        var href = ds ? electroluxDocHref(ds) : "";
+        if (href) return href;
+      }
       var sp = String(x.specs || "");
       var m = sp.match(/Katalog sayfası:\s*(\d+)/i);
       if (m && /ozti|öztiryakiler/i.test(String(x.brand || "") + sp)) {
@@ -1936,11 +2349,14 @@ window.searchFilter = window.searchFilter || function () {};
         esc(__pdpT("pdp.documents_heading", "Dökümanlar")) +
         '</h2><div class="eq-caglayan-acc">';
       if (pdf && pdf.indexOf(".pdf") >= 0) {
+        var pdfLabel = isElectroluxProfessional(x)
+          ? electroluxDocDisplayName(getElectroluxDatasheetDoc(x) || { title: __pdpT("pdp.datasheet", "Veri sayfası") })
+          : marketReyonPdfLabel(x);
         html +=
           '<details open><summary>' +
           esc(__pdpT("pdp.datasheet", "Veri sayfası")) +
           '</summary><div class="eq-caglayan-acc__body">' +
-          pdpPdfEmbedBlock(pdf, marketReyonPdfLabel(x)) +
+          pdpPdfEmbedBlock(pdf, pdfLabel) +
           "</div></details>";
       }
       html +=
@@ -1957,18 +2373,57 @@ window.searchFilter = window.searchFilter || function () {};
         '">' +
         esc(__pdpT("nav.pfos", "Proje Fabrikası")) +
         "</a></div></details>";
-      if (x.linkKaynak) {
+      var src = x.linkKaynak || x.kaynak_url || "";
+      if (src) {
         html +=
           '<details><summary>' +
           esc(__pdpT("pdp.mfg_source", "Üretici kaynağı")) +
           '</summary><div class="eq-caglayan-acc__body"><a href="' +
-          esc(x.linkKaynak) +
-          '" target="_blank" rel="noopener">' +
-          esc(__pdpT("pdp.mfg_source_link", "Üretici / kaynak sayfası")) +
+          esc(src) +
+          '" target="_blank" rel="noopener" title="' +
+          esc(src) +
+          '">' +
+          esc(isElectroluxProfessional(x) ? electroluxSourceLinkText(src) : __pdpT("pdp.mfg_source_link", "Üretici / kaynak sayfası")) +
           "</a></div></details>";
       }
-      html +=
-        '<details><summary>' + esc(__pdpT("pdp.technical_drawings", "Teknik çizimler")) + '</summary><div class="eq-caglayan-acc__body"><a href="#eq-epdp-drawings">' + esc(__pdpT("pdp.go_to_drawings", "Sayfadaki teknik görsellere git")) + '</a></div></details>';
+      if (isElectroluxProfessional(x)) {
+        var brochures = getElectroluxBrochures(x);
+        if (brochures.length) {
+          html +=
+            "<details><summary>" +
+            esc(__pdpT("pdp.brochures", "Broşürler")) +
+            "</summary>" +
+            renderEpdpDocLinkList(brochures) +
+            "</details>";
+        }
+        var cadDocs = getElectroluxTechnicalDocs(x);
+        html +=
+          "<details" +
+          (cadDocs.length ? " open" : "") +
+          "><summary>" +
+          esc(__pdpT("pdp.technical_drawings", "Teknik çizimler")) +
+          "</summary>";
+        if (cadDocs.length) {
+          html += renderEpdpDocLinkList(cadDocs);
+          html +=
+            '<p class="eq-caglayan-acc__body"><a href="#eq-epdp-drawings">' +
+            esc(__pdpT("pdp.go_to_drawings", "Sayfadaki teknik görsellere git")) +
+            "</a></p>";
+        } else {
+          html +=
+            '<div class="eq-caglayan-acc__body"><a href="#eq-epdp-drawings">' +
+            esc(__pdpT("pdp.go_to_drawings", "Sayfadaki teknik görsellere git")) +
+            "</a></div>";
+        }
+        html += "</details>";
+      } else {
+        html +=
+          '<details><summary>' +
+          esc(__pdpT("pdp.technical_drawings", "Teknik çizimler")) +
+          '</summary><div class="eq-caglayan-acc__body"><a href="#eq-epdp-drawings">' +
+          esc(__pdpT("pdp.go_to_drawings", "Sayfadaki teknik görsellere git")) +
+          "</a></div></details>";
+      }
       html += "</div></div>";
       return html;
     }
@@ -2013,24 +2468,52 @@ window.searchFilter = window.searchFilter || function () {};
 
     function renderEpdpDrawings(x) {
       var tek = getEpdpDrawingImgs(x);
-      if (!tek.length) return "";
-      return (
+      var cad = isElectroluxProfessional(x) ? getElectroluxTechnicalDocs(x) : [];
+      if (!tek.length && !cad.length) return "";
+      var html =
         '<section class="eq-epdp-drawings eq-caglayan-drawings" id="eq-epdp-drawings">' +
-        "<h2>" + esc(__pdpT("pdp.drawings_heading", "Teknik çizimler")) + "</h2>" +
-        '<div class="eq-epdp-drawings-grid eq-caglayan-drawings-grid">' +
-        tek
-          .map(function (item) {
-            return (
-              '<img src="' +
-              esc(item.src) +
-              '" alt="' +
-              esc(item.label || __pdpT("pdp.technical_drawing", "Teknik çizim")) +
-              '" loading="lazy" decoding="async">'
-            );
-          })
-          .join("") +
-        "</div></section>"
-      );
+        "<h2>" +
+        esc(__pdpT("pdp.drawings_heading", "Teknik çizimler")) +
+        "</h2>";
+      if (tek.length) {
+        html +=
+          '<div class="eq-epdp-drawings-grid eq-caglayan-drawings-grid">' +
+          tek
+            .map(function (item) {
+              return (
+                '<img src="' +
+                esc(item.src) +
+                '" alt="' +
+                esc(item.label || __pdpT("pdp.technical_drawing", "Teknik çizim")) +
+                '" loading="lazy" decoding="async">'
+              );
+            })
+            .join("") +
+          "</div>";
+      }
+      if (cad.length) {
+        html +=
+          '<ul class="eq-epdp-cad-list">' +
+          cad
+            .map(function (doc) {
+              var href = electroluxDocHref(doc);
+              if (!href) return "";
+              return (
+                "<li><a href=\"" +
+                esc(href) +
+                '" target="_blank" rel="noopener">' +
+                esc(electroluxDocDisplayName(doc)) +
+                " (" +
+                esc(String(doc.type || "CAD")) +
+                ")</a></li>"
+              );
+            })
+            .filter(Boolean)
+            .join("") +
+          "</ul>";
+      }
+      html += "</section>";
+      return html;
     }
 
     function bindEpdpGallery() {

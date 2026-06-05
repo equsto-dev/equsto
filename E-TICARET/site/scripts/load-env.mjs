@@ -3,11 +3,16 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-const root = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
+export const envRoot = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
+
+/** Hangi dosya yüklendi (tanılama) */
+export let envLoadedFrom = "";
+
 for (const name of [".env.local", ".env"]) {
-  const file = path.join(root, name);
+  const file = path.join(envRoot, name);
   if (!fs.existsSync(file)) continue;
-  for (const line of fs.readFileSync(file, "utf8").split(/\r?\n/)) {
+  envLoadedFrom = file;
+  for (const line of fs.readFileSync(file, "utf8").replace(/^\uFEFF/, "").split(/\r?\n/)) {
     const t = line.trim();
     if (!t || t.startsWith("#")) continue;
     const i = t.indexOf("=");

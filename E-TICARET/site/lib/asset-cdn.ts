@@ -6,6 +6,7 @@ const CDN_PREFIXES = [
   "data/prosogutma-market/",
   "data/vitrum-drawings/",
   "data/advanced-cuisine-clear-ice/images/",
+  "data/electrolux-professional/",
 ] as const;
 
 const CDN_THRESHOLD_BYTES = 1 * 1048576;

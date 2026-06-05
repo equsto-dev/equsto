@@ -27,7 +27,6 @@ export default function ShopProductScripts() {
       <Script src={`/eq-product-card-tint.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-product-page-inline.js?v=${v}`} strategy="beforeInteractive" />
       <Script src={`/eq-product-reviews.js?v=${v}`} strategy="afterInteractive" />
-      <Script src={`/eq-merchant-schema.js?v=${v}`} strategy="afterInteractive" />
     </>
   );
 }

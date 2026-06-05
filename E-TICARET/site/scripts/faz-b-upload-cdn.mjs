@@ -22,6 +22,7 @@ const CDN_PREFIXES = [
   "data/prosogutma-market/",
   "data/vitrum-drawings/",
   "data/advanced-cuisine-clear-ice/images/",
+  "data/electrolux-professional/",
 ];
 
 const dryRun = process.argv.includes("--dry-run");

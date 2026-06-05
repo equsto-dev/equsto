@@ -1144,6 +1144,26 @@ body.eq-shop .eq-cmf-buybox .eq-cart-add:hover {
   text-decoration: underline;
 }
 
+.eq-epdp-doc-links a {
+  display: inline-block;
+  margin-bottom: 0.35rem;
+}
+
+.eq-epdp-cad-list {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+}
+
+.eq-epdp-cad-list a {
+  color: var(--eq-link, #1a5fb4);
+  text-decoration: none;
+}
+
+.eq-epdp-cad-list a:hover {
+  text-decoration: underline;
+}
+
 .eq-epdp-drawings,
 .eq-caglayan-drawings {
   margin: 24px 0 8px;
