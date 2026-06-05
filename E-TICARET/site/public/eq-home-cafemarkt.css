@@ -129,10 +129,10 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
 }
 
 .eq-cmkt-hero-grid .eq-cmkt-promo__img {
-  right: 2px;
-  bottom: 2px;
-  width: 40%;
-  max-height: 74%;
+  right: 0;
+  bottom: 0;
+  width: 48%;
+  max-height: 89%;
 }
 
 .eq-cmkt-hero-grid .eq-cmkt-promo--split .eq-cmkt-promo__panel {
