@@ -169,6 +169,7 @@
     "assets:blob:dry-run": "node scripts/faz-b-upload-cdn.mjs --dry-run",
     "assets:blob:upload": "node scripts/faz-b-upload-cdn.mjs --upload",
     "assets:cdn:untrack": "node scripts/faz-b-untrack-cdn.mjs --dry-run",
+    "assets:cdn:untrack:apply": "node scripts/faz-b-untrack-cdn.mjs",
     "catalog:deploy:check": "node scripts/check-catalog-images-deploy.mjs",
     "search:up": "docker compose -f docker-compose.meilisearch.yml up -d",
     "search:health": "node --import ./scripts/load-env.mjs scripts/meili-health.mjs",
