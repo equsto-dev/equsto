@@ -24,6 +24,7 @@ const CDN_PREFIXES = [
   "E-TICARET/site/public/data/prosogutma-market/",
   "E-TICARET/site/public/data/vitrum-drawings/",
   "E-TICARET/site/public/data/advanced-cuisine-clear-ice/images/",
+  "E-TICARET/site/public/data/electrolux-professional/",
 ];
 
 function git(args, { quiet } = {}) {

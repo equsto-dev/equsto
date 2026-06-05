@@ -746,6 +746,7 @@
     if (/^data\/prosogutma-market\//i.test(r)) return true;
     if (/^data\/vitrum-drawings\//i.test(r)) return true;
     if (/^data\/advanced-cuisine-clear-ice\/images\//i.test(r)) return true;
+    if (/^data\/electrolux-professional\//i.test(r)) return true;
     return false;
   }
 
@@ -976,6 +977,10 @@
       .replace(/\\/g, "/")
       .replace(/^\.\//, "")
       .trim();
+    if (/^https?:\/\//i.test(raw)) {
+      var abs = withCatalogImgV(raw);
+      return abs ? [abs] : [];
+    }
     if (!/^images\//i.test(raw)) raw = "images/" + raw.replace(/^\/+/, "");
     var rels = [];
     var pdfRel = /^images\/catalog\/ozti\/p\d+\//i.test(raw) ? raw : "";
@@ -993,6 +998,14 @@
         .replace(/^data\//i, "")
         .replace(/^images\//i, "");
       if (!file) continue;
+      if (/^https?:\/\//i.test(file)) {
+        var absFile = withCatalogImgV(file);
+        if (absFile && !seen[absFile]) {
+          seen[absFile] = 1;
+          list.push(absFile);
+        }
+        continue;
+      }
       if (isSogukOdaCatalogPath("images/" + file)) {
         [sogukOdaVitrinHref(), EQ_SOGUK_ODA_VITRIN_CDN].forEach(function (u) {
           if (u && !seen[u]) {
@@ -1049,13 +1062,19 @@
   window.catalogImageCandidates = catalogImageCandidates;
 
   function hrefFromDataRel(dataRel) {
-    if (/^images\//i.test(dataRel)) {
-      var file = dataRel.replace(/^images\//i, "");
+    var rel = String(dataRel || "")
+      .replace(/\\/g, "/")
+      .replace(/^\.\//, "")
+      .replace(/^\/+/, "")
+      .replace(/^data\//i, "");
+    if (/^https?:\/\//i.test(rel)) return rel;
+    if (/^images\//i.test(rel)) {
+      var file = rel.replace(/^images\//i, "");
       var cands = catalogImageCandidates("images/" + file);
       if (cands.length) return cands[0];
       return catalogImagesWebRoot() + encodeDataRelPath(file);
     }
-    var enc = encodeDataRelPath(dataRel);
+    var enc = encodeDataRelPath(rel);
     try {
       if (typeof location !== "undefined" && (location.protocol === "http:" || location.protocol === "https:")) {
         return "/data/" + enc;
@@ -1094,7 +1113,17 @@
     if (dataRel !== null) {
       return hrefFromDataRel(dataRel);
     }
-    if (s.charAt(0) === "/") return s;
+    if (s.charAt(0) === "/") {
+      var lead = s.slice(1);
+      if (/^https?:\/\//i.test(lead)) return s.charAt(0) === "/" && s.charAt(1) === "/" ? "https:" + s : lead;
+      if (/^(?:data\/)?images\//i.test(lead)) {
+        var cdnLead = equstoCdnAssetHref(lead.replace(/^data\//i, ""));
+        if (cdnLead) return cdnLead;
+        return hrefFromDataRel(lead.replace(/^data\//i, ""));
+      }
+      if (/^data\//i.test(lead)) return hrefFromDataRel(lead.replace(/^data\//i, ""));
+      return s;
+    }
     return hrefFromDataRel(s.replace(/^data\//, ""));
   };
 

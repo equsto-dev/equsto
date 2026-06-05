@@ -17,7 +17,6 @@ export default function BesosModulProductScripts() {
         }}
       />
       <Script src={`/eq-product-reviews.js?v=${v}`} strategy="afterInteractive" />
-      <Script src={`/eq-merchant-schema.js?v=${v}`} strategy="afterInteractive" />
       <Script src="/eq-vitrum-catalogue-fallback.js" strategy="beforeInteractive" />
       <Script src="/ecom-data.js" strategy="afterInteractive" />
       <Script src={`/eq-shop-catalog-bootstrap.js?v=${v}`} strategy="afterInteractive" />

@@ -11,7 +11,7 @@
  *   AWS_PROFILE=equsto          (opsiyonel)
  *   NEXT_PUBLIC_ASSET_CDN_URL=  (CloudFront — sync sonrası Vercel'e)
  */
-import "./load-env.mjs";
+import { envLoadedFrom, envRoot } from "./load-env.mjs";
 import { spawnSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
@@ -95,7 +95,29 @@ if (!awsVersion()) {
 console.log("[faz-b-s3]", awsVersion());
 
 if (!bucket) {
-  console.error("[faz-b-s3] AWS_S3_BUCKET tanımlı değil (.env.local)");
+  const envLocal = path.join(envRoot, ".env.local");
+  console.error("[faz-b-s3] AWS_S3_BUCKET tanımlı değil");
+  console.error("[faz-b-s3] site:", siteDir);
+  if (fs.existsSync(envLocal)) {
+    const raw = fs.readFileSync(envLocal, "utf8");
+    const commented = /^#\s*AWS_S3_BUCKET=/m.test(raw);
+    console.error("[faz-b-s3] .env.local:", envLocal);
+    if (commented) {
+      console.error("[faz-b-s3] AWS_S3_BUCKET satırı # ile yorumlu — başındaki # kaldırın");
+    } else if (!/^AWS_S3_BUCKET=/m.test(raw)) {
+      console.error("[faz-b-s3] AWS_S3_BUCKET satırı eksik");
+    }
+    console.error("[faz-b-s3] şu satırlar aktif olmalı (başında # yok):");
+    console.error("  AWS_S3_BUCKET=equsto-assets");
+    console.error("  AWS_REGION=eu-central-1");
+    console.error("  AWS_PROFILE=equsto");
+  } else {
+    console.error("[faz-b-s3] .env.local yok — kopyalayın:");
+    console.error("  copy .env.local.template .env.local");
+  }
+  if (envLoadedFrom && envLoadedFrom !== envLocal) {
+    console.error("[faz-b-s3] yüklü env:", envLoadedFrom);
+  }
   process.exit(1);
 }
 
