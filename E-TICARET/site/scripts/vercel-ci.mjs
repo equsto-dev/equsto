@@ -57,5 +57,8 @@ const build = spawnSync(npm, ["run", "build"], {
 });
 if (build.status !== 0) process.exit(build.status ?? 1);
 
+runNode("scripts/strip-lambda-public-trace.mjs");
+runNode("scripts/audit-api-trace.mjs");
+
 publishNextAtRepoRoot();
 console.log("[vercel-ci] OK");

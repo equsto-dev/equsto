@@ -55,8 +55,9 @@ function legacyHtmlRedirects() {
   }));
 }
 
-/** Vercel lambda 300MB — excludes path.join(dir, pattern); dir = Next project (E-TICARET/site) */
+/** Vercel lambda 300MB — glob'lar Next proje kökünden (E-TICARET/site). Turbopack'ta excludes atlanır → strip-lambda-public-trace.mjs */
 const traceExcludes = [
+  "./public/**",
   "./public/images/**",
   "./public/assets/**",
   "./public/data/**",
@@ -67,7 +68,7 @@ const traceExcludes = [
   "./**/*.py",
 ];
 
-const apiTraceExcludes = [...traceExcludes, "./public/**"];
+const apiTraceExcludes = [...traceExcludes];
 
 /** Monorepo: node_modules / shared packages repo kökünden trace edilebilir */
 const parentRepo = path.join(__dirname, "..", "..");
@@ -82,9 +83,9 @@ const nextConfig: NextConfig = {
   outputFileTracingRoot: tracingRoot,
   serverExternalPackages: ["@prisma/client", "prisma", "meilisearch"],
   outputFileTracingExcludes: {
-    "*": traceExcludes,
-    "/api/**": apiTraceExcludes,
     "/**": apiTraceExcludes,
+    "/api/**": apiTraceExcludes,
+    "/api/cms": apiTraceExcludes,
   },
   transpilePackages: [
     "antd",
