@@ -6,7 +6,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260527ozti-pricing";
+  var CATALOG_V = "20260605electrolux-import";
   var __fullMem = null;
   var __fullInflight = null;
   var __deptMem = Object.create(null);
@@ -28,6 +28,7 @@
     "set-ustu-mutfak",
     "market-reyon",
     "kuvetler",
+    "servis",
   ];
 
   function mergeCatalogRows(parts) {
@@ -150,7 +151,11 @@
 
   /** Marka PLP — ekipmanlar + tüm departman JSON birleşimi */
   function loadMergedCatalog() {
-    var jobs = [loadFullCatalog()];
+    var jobs = [
+      loadFullCatalog().catch(function () {
+        return [];
+      }),
+    ];
     DEPT_IDS.forEach(function (d) {
       jobs.push(
         fetchDeptJson(d).catch(function () {
