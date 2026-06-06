@@ -52,7 +52,6 @@
     { tip: "dry_age_dolabi", dept: "sogutma", label: "Dry-Age Dolabı", search: "dry age|dry-age|olgunlaştır" },
     { tip: "blast-chiller", dept: "sogutma", label: "Blast Chiller", search: "blast|şok|sok|chiller|shock" },
     { tip: "soguk-oda", dept: "sogutma", label: "Soğuk Odalar", search: "soğuk oda|soguk oda|cold room" },
-    { tip: "balik-teshir", dept: "sogutma", label: "Balık Teşhir Reyonları", search: "balık|balik|fish|teşhir" },
     { tip: "sarap-dolabi", dept: "sogutma", label: "Şarap Dolapları", search: "şarap|sarap|wine" },
     {
       tip: "espresso-makinesi",
@@ -1145,10 +1144,68 @@
     return shuffleDeptList(dept, other, "other-brands").concat(mergedRc);
   }
 
+  function istifItemFields(u) {
+    var raw = (u && u.raw) || u || {};
+    return {
+      model: String(raw.model || raw.sku || raw.urun_kodu || ""),
+      name: lc((u && u.n) || raw.name || ""),
+      brand: lc((u && u.fb) || (u && u.b) || raw.brand || ""),
+      kaynak: lc(raw.kaynak_fiyat_listesi || raw.kaynak || ""),
+    };
+  }
+
+  /** Düşük = önce. Yüksel katlı raf (46-X-91-X-183 vb.) → tel izgara 4 katlı → diğer Yüksel. */
+  function istifSortTier(u) {
+    var f = istifItemFields(u);
+    if (/yuksel-2025-yerli|yuksel endustriyel/.test(f.kaynak + " " + f.brand)) {
+      if (/^\d{2}-x-\d+-x-\d+/i.test(f.model) || /katli\s*raflar|tier\s*shelving/.test(f.name)) return 0;
+      return 2;
+    }
+    if (/8897\.\d+ip4/i.test(f.model) || (/izgara\s*tabl/.test(f.name) && /4\s*katli/.test(f.name))) return 1;
+    if (/istif\s*raf/.test(f.name) && /4\s*katli/.test(f.name) && /izgara/.test(f.name)) return 1;
+    return 10;
+  }
+
+  function istifDimSortKey(model) {
+    var m = String(model || "").match(/^(\d{2})-x-(\d+)-x-(\d+)/i);
+    if (!m) return model || "";
+    return (
+      String(parseInt(m[3], 10)).padStart(4, "0") +
+      String(parseInt(m[2], 10)).padStart(4, "0") +
+      String(parseInt(m[1], 10)).padStart(4, "0")
+    );
+  }
+
+  function sortIstifProducts(list) {
+    var pinned = list.slice().sort(function (a, b) {
+      var ta = istifSortTier(a);
+      var tb = istifSortTier(b);
+      if (ta !== tb) return ta - tb;
+      var fa = istifItemFields(a);
+      var fb = istifItemFields(b);
+      if (ta === 0) {
+        var ka = istifDimSortKey(fa.model);
+        var kb = istifDimSortKey(fb.model);
+        if (ka !== kb) return ka < kb ? -1 : 1;
+      }
+      return String(a.n || fa.model).localeCompare(String(b.n || fb.model), "tr");
+    });
+    var head = [];
+    var tail = [];
+    pinned.forEach(function (u) {
+      if (istifSortTier(u) <= 2) head.push(u);
+      else tail.push(u);
+    });
+    return head.concat(shuffleDeptList("istif", tail, "products-tail"));
+  }
+
   /** Kahve: espresso → değirmen → filtre → türk; yıkama: 500/1000 tb/s + marka karışımı. */
   function sortProductsDefault(dept, list) {
     if (dept === "yikama") {
       return sortYikamaProducts(list);
+    }
+    if (dept === "istif") {
+      return sortIstifProducts(list);
     }
     if (dept === "kahve") {
       return list.slice().sort(function (a, b) {

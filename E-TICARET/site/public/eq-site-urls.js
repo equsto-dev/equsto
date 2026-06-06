@@ -1238,12 +1238,8 @@
     if (p == null || p === "") return "";
     var s = String(p).trim().replace(/\\/g, "/");
     if (!s) return "";
-    if (/^images\/catalog\/yuksel\//i.test(s)) {
-      return typeof window.eqAttrPath === "function" ? window.eqAttrPath(s) : "/" + s;
-    }
     if (/^images\/yuksel-/i.test(s)) {
-      var yRel = "images/catalog/yuksel/" + s.replace(/^images\//i, "");
-      return typeof window.eqAttrPath === "function" ? window.eqAttrPath(yRel) : "/" + yRel;
+      s = "images/catalog/yuksel/" + s.replace(/^images\//i, "");
     }
     var istifFb = ozti8897PolipropilenFallbackRel(s);
     if (istifFb) s = istifFb;

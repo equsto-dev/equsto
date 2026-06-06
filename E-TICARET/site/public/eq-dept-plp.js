@@ -32,7 +32,7 @@
   }
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260606proso-expand';
+  var CATALOG_V = '20260606istif-yuksel-live';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   /* Next.js URL slug → katalog dept id (data/dept/*.json) */
   if (DEPT === 'market-reyonlari') DEPT = 'market-reyon';
@@ -121,16 +121,6 @@
       if (!isPlpTechnicalImg(images[i])) return images[i];
     }
     return images[0];
-  }
-
-  function yukselLocalImgHref(rel) {
-    var s = String(rel || '')
-      .trim()
-      .replace(/\\/g, '/')
-      .replace(/^\.\//, '');
-    if (/^images\/catalog\/yuksel\//i.test(s)) return '/' + s;
-    if (/^images\/yuksel-/i.test(s)) return '/images/catalog/yuksel/' + s.replace(/^images\//i, '');
-    return '';
   }
 
   function imgSrc(p) {
