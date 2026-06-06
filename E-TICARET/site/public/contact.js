@@ -45,7 +45,7 @@
   /** Kilit: public/whatsapp-cat-fab-KILIT.txt — npm run verify:whatsapp-cat-fab-kilit */
   var WA_FAB_IMG = "/equsto-bize-ulasin-isimlik.png";
   /** Modal şablonu değişince artırın (eski DOM'u zorla yeniler). */
-  var WA_MODAL_BUILD = 16;
+  var WA_MODAL_BUILD = 18;
 
   var waModalDigits = "";
   var waModalLastSentText = "";
@@ -558,6 +558,11 @@
         msgEl.value = "";
         syncWaComposeSendMode();
         waModalLastSentText = text;
+        try {
+          if (typeof window.equstoTrackConversion === "function") {
+            window.equstoTrackConversion("lead", { kaynak: payload.kaynak, sayfa: payload.sayfa });
+          }
+        } catch (_) {}
         appendChatMessage(
           "team",
           __waT(
@@ -605,14 +610,13 @@
     var go = document.getElementById("equsto-wa-go");
     if (!msgEl || !go) return;
     var hasText = String(msgEl.value || "").trim().length > 0;
+    var loading = go.classList.contains("equsto-wa-bar-btn--loading");
     go.classList.toggle("equsto-wa-bar-btn--has-text", hasText);
-    go.setAttribute(
-      "aria-label",
-      hasText ? __waT("wa.send", "Gönder") : __waT("wa.voice_msg", "Sesli mesaj")
-    );
+    go.setAttribute("aria-label", __waT("wa.send", "Gönder"));
+    go.disabled = !hasText || loading;
     try {
       msgEl.style.height = "auto";
-      msgEl.style.height = Math.min(msgEl.scrollHeight, 100) + "px";
+      msgEl.style.height = Math.min(msgEl.scrollHeight, 72) + "px";
     } catch (_) {}
   }
 
@@ -686,17 +690,7 @@
         '"/></svg>'
       );
     };
-    var waIcoVideo =
-      "M17 10.5V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3.5l4 4v-11l-4 4z";
-    var waIcoPhone =
-      "M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24 11.36 11.36 0 0 0 3.56.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.56 1 1 0 0 1-.25 1.01l-2.2 2.22z";
     var waIcoMenu = "M12 7a2 2 0 1 0-.001-4.001A2 2 0 0 0 12 7zm0 2a2 2 0 1 0-.001 4.001A2 2 0 0 0 12 9zm0 6a2 2 0 1 0-.001 4.001A2 2 0 0 0 12 15z";
-    var waIcoEmoji =
-      "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 7.5c-.83 0-1.5-.67-1.5-1.5S9.17 6.5 10 6.5s1.5.67 1.5 1.5S10.83 9.5 10 9.5zm4 0c-.83 0-1.5-.67-1.5-1.5S13.17 6.5 14 6.5s1.5.67 1.5 1.5S14.83 9.5 14 9.5zm-4.5 6.5c1.93 0 3.57-1.04 4.5-2.58.93 1.54 2.57 2.58 4.5 2.58v1.5c-2.48 0-4.65-1.28-5.88-3.22C11.15 16.72 8.98 18 6.5 18v-1.5z";
-    var waIcoAttach =
-      "M16.5 6v11.5a4 4 0 1 1-8 0V5a2.5 2.5 0 0 1 5 0v10.5a1 1 0 1 1-2 0V6h-1.5v9.5a2.5 2.5 0 0 0 5 0V5a4 4 0 0 0-8 0v12.5a5.5 5.5 0 0 0 11 0V6H16.5z";
-    var waIcoMic =
-      "M12 14a3 3 0 0 0 3-3V5a3 3 0 1 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z";
     var waIcoSend = "M2.01 21L23 12 2.01 3 2 10l15 2-15 2z";
 
     overlay.innerHTML =
@@ -716,16 +710,6 @@
       "</div>" +
       "</div>" +
       '<div class="equsto-wa-head-actions">' +
-      '<button type="button" class="equsto-wa-head-btn" aria-label="' +
-      escWa(__waT("wa.video_call", "Görüntülü arama")) +
-      '" tabindex="-1">' +
-      waSvgIco(waIcoVideo) +
-      "</button>" +
-      '<button type="button" class="equsto-wa-head-btn" aria-label="' +
-      escWa(__waT("wa.voice_call", "Sesli arama")) +
-      '" tabindex="-1">' +
-      waSvgIco(waIcoPhone) +
-      "</button>" +
       '<button type="button" class="equsto-wa-head-btn equsto-wa-head-btn--menu" id="equsto-wa-close-x" aria-label="' +
       escWa(__waT("wa.close_aria", "Kapat")) +
       '" data-i18n-attr="aria-label:wa.close_aria">' +
@@ -752,30 +736,15 @@
       "</div>" +
       '<div class="equsto-wa-compose equsto-wa-compose--chat">' +
       '<div class="equsto-wa-input-bar">' +
-      '<button type="button" class="equsto-wa-bar-btn equsto-wa-bar-btn--emoji" aria-label="' +
-      escWa(__waT("wa.emoji", "Emoji")) +
-      '" tabindex="-1">' +
-      waSvgIco(waIcoEmoji) +
-      "</button>" +
       '<div class="equsto-wa-input-field">' +
       '<textarea id="equsto-wa-msg" class="equsto-wa-msg equsto-wa-msg--chat" rows="1" maxlength="8000" placeholder="' +
       escWa(__waT("wa.msg_ph", "Mesaj")) +
       '" data-i18n-attr="placeholder:wa.msg_ph"></textarea>' +
       "</div>" +
-      '<button type="button" class="equsto-wa-bar-btn equsto-wa-bar-btn--attach" aria-label="' +
-      escWa(__waT("wa.attach", "Dosya ekle")) +
-      '" tabindex="-1">' +
-      waSvgIco(waIcoAttach) +
-      "</button>" +
       '<button type="button" class="equsto-wa-bar-btn equsto-wa-bar-btn--send" id="equsto-wa-go" aria-label="' +
-      escWa(__waT("wa.voice_msg", "Sesli mesaj")) +
-      '">' +
-      '<span class="equsto-wa-bar-ico equsto-wa-bar-ico--mic">' +
-      waSvgIco(waIcoMic) +
-      "</span>" +
-      '<span class="equsto-wa-bar-ico equsto-wa-bar-ico--send">' +
+      escWa(__waT("wa.send", "Gönder")) +
+      '" disabled>' +
       waSvgIco(waIcoSend) +
-      "</span>" +
       "</button>" +
       "</div>" +
       '<p class="equsto-wa-status" id="equsto-wa-status" role="status" aria-live="polite"></p>' +
