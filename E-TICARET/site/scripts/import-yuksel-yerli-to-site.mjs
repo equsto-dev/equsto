@@ -216,11 +216,36 @@ function isYukselYerli(row) {
   return String(row.kaynak_fiyat_listesi || "").includes("yuksel-2025-yerli");
 }
 
-/** Parça / aksesuar — vitrinde satılmaz (PERFORE dikme, EPOXY tabla vb.). */
+/** Vitrinde satılacak Yüksel istif — yalnızca katlı raf sistemleri. */
+function isYukselIstifShopAllowed(item) {
+  const hay = yukselHaystack(item);
+  const model = String(item.model || item.sku || "").trim();
+  if (/katli\s*raflar|tier\s*shelving/.test(hay)) return true;
+  if (/^\d{2}-x-\d+-x-\d+/i.test(model.replace(/\s+/g, ""))) return true;
+  return false;
+}
+
+/** Parça / aksesuar — vitrinde satılmaz. */
 function isYukselYerliShopExcluded(item) {
+  if (isCoolingProduct(item)) return false;
+
   const hay = yukselHaystack(item);
   if (/perfore\s*raf\s*boyali/.test(hay)) return true;
   if (/epoxy\s*\+\s*plastic|powder\s*coated/.test(hay)) return true;
+  if (/olcu\s*\/\s*size|ölçü\s*\/\s*size/.test(hay)) return true;
+  if (/standart\s*tel\s*raf\s*boyali/.test(hay)) return true;
+  if (/tel\s*raf\s*dikme/.test(hay)) return true;
+  if (/tel\s*izgara/.test(hay)) return true;
+  if (/rail\s*basket/.test(hay)) return true;
+  if (/ozel\s*kalip\s*formlu|özel\s*kalıp\s*formlu/.test(hay)) return true;
+  if (/^m\d{6,}$/i.test(String(item.model || item.sku || "").trim())) return true;
+  if (
+    String(item.dept || "") === "istif" &&
+    !isCoolingProduct(item) &&
+    !isYukselIstifShopAllowed(item)
+  ) {
+    return true;
+  }
   return false;
 }
 
