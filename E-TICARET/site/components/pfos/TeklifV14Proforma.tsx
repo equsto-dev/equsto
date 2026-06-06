@@ -1,7 +1,7 @@
 "use client";
 
 import { DownloadOutlined, PrinterOutlined, SendOutlined } from "@ant-design/icons";
-import { Button, Collapse, Form, Input, Modal, Typography, message } from "antd";
+import { Button, Collapse, Form, Input, Modal, Typography } from "antd";
 import { Fragment, useState, type CSSProperties } from "react";
 import type { TeklifModelV14 } from "@/lib/pfos/teklif/teklif-v14.types";
 import { groupTeklifV14Satirlar } from "@/lib/pfos/teklif/group-v14-bolumler";
@@ -65,6 +65,21 @@ export default function TeklifV14Proforma({ model }: Props) {
     setSendOpen(true);
   }
 
+  function slimKalemler() {
+    return model.satirlar.map((s) => ({
+      bolumNo: s.bolumNo,
+      bolumBaslik: s.bolumBaslik,
+      poz: s.poz,
+      stokNo: s.stokNo,
+      tanim: s.tanim,
+      marka: s.marka,
+      adet: s.adet,
+      birimSatis: s.birimSatis,
+      toplamSatis: s.toplamSatis,
+      doviz: s.doviz,
+    }));
+  }
+
   async function handleSend(values: {
     ad: string;
     telefon: string;
@@ -97,7 +112,7 @@ export default function TeklifV14Proforma({ model }: Props) {
             sehir: meta.sehir,
           },
           tahmini_toplam_tl: toplamTl,
-          kalemler: model.satirlar,
+          kalemler: slimKalemler(),
           kaynak: "pfos-v14",
           teklif_sayi: ust.sayi,
         }),
@@ -126,15 +141,21 @@ export default function TeklifV14Proforma({ model }: Props) {
       } catch {
         /* analytics optional */
       }
-      message.success(
-        refNo
-          ? `Teklifiniz alındı. Referans: ${refNo}`
-          : "Teklifiniz alındı. Ekibimiz en kısa sürede dönüş yapacak.",
-      );
       setSendOpen(false);
       form.resetFields();
+      Modal.success({
+        title: "Teklifiniz alındı",
+        content: refNo
+          ? `Referans: ${refNo}. Ekibimiz en kısa sürede sizinle iletişime geçecek.`
+          : "Ekibimiz en kısa sürede sizinle iletişime geçecek.",
+        okText: "Tamam",
+      });
     } catch (e) {
-      message.error(e instanceof Error ? e.message : "Teklif gönderilemedi");
+      Modal.error({
+        title: "Teklif gönderilemedi",
+        content: e instanceof Error ? e.message : "Lütfen tekrar deneyin.",
+        okText: "Tamam",
+      });
     } finally {
       setSending(false);
     }
