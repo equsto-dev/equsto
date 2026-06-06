@@ -1,5 +1,6 @@
 import type { Prisma, Siparis, SiparisDurum } from "@/lib/prisma";
 import { db } from "@/lib/db";
+import { notifyNewSiparis } from "@/lib/notify";
 
 export type SiparisAdminRow = {
   id: string;
@@ -180,6 +181,10 @@ export async function createSiparis(body: Record<string, unknown>) {
       musteriId,
       payload: body as Prisma.InputJsonValue,
     },
+  });
+
+  void notifyNewSiparis(row).catch((e) => {
+    console.error("[notify] siparis", e);
   });
 
   return siparisToAdmin(row);
