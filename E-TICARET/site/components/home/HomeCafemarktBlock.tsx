@@ -148,7 +148,6 @@ function BentoTile({ tile }: { tile: CafemarktBentoTile }) {
         {tile.brand ? <span className="eq-cmkt-bento__brand">{tile.brand}</span> : null}
         <h3 className="eq-cmkt-bento__title">{tile.title}</h3>
         {tile.subtitle ? <p className="eq-cmkt-bento__sub">{tile.subtitle}</p> : null}
-        {tile.cta ? <span className="eq-cmkt-bento__cta">{tile.cta}</span> : null}
         {tile.badge ? <span className="eq-cmkt-bento__badge">{tile.badge}</span> : null}
       </div>
       {tile.tagline ? <p className="eq-cmkt-bento__tagline">{tile.tagline}</p> : null}
