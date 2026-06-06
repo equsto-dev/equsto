@@ -139,7 +139,7 @@ function PromoCard({
 function BentoTile({ tile }: { tile: CafemarktBentoTile }) {
   return (
     <a
-      className={`eq-cmkt-bento__tile eq-cmkt-bento__tile--${tile.variant} eq-cmkt-bento__tile--${tile.id}${tile.textLight ? " eq-cmkt-bento__tile--light" : ""}`}
+      className={`eq-cmkt-bento__tile eq-cmkt-bento__tile--${tile.variant} eq-cmkt-bento__tile--${tile.id}${tile.textLight ? " eq-cmkt-bento__tile--light" : ""}${tile.imageLayout === "cover" ? " eq-cmkt-bento__tile--photo" : ""}`}
       href={tile.href}
       style={{ background: tile.bg }}
       onClick={(e) => goLink(e, tile)}
@@ -164,7 +164,7 @@ function BentoTile({ tile }: { tile: CafemarktBentoTile }) {
       ) : tile.image ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img
-          className="eq-cmkt-bento__img"
+          className={`eq-cmkt-bento__img${tile.imageAnchor === "top-right" ? " eq-cmkt-bento__img--top-right" : ""}${tile.imageLayout === "cover" ? " eq-cmkt-bento__img--cover" : ""}`}
           src={publicAssetUrl(tile.image)}
           alt=""
           loading="lazy"
