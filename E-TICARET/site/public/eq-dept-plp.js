@@ -32,7 +32,7 @@
   }
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260606live-deploy';
+  var CATALOG_V = '20260606proso-expand';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   /* Next.js URL slug → katalog dept id (data/dept/*.json) */
   if (DEPT === 'market-reyonlari') DEPT = 'market-reyon';
@@ -135,8 +135,6 @@
 
   function imgSrc(p) {
     if (!p) return '';
-    var yukselHit = yukselLocalImgHref(p);
-    if (yukselHit) return yukselHit;
     if (typeof window.eqProductImgSrc === 'function') {
       try {
         var resolved = window.eqProductImgSrc(p);

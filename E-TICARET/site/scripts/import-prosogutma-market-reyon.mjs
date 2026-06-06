@@ -19,6 +19,7 @@ import {
   variantModelNo,
   variantSlugId,
 } from "./lib/proso-variants.mjs";
+import { loadProsoPriceIndex, PROSO_XLSX_DEFAULT } from "./lib/proso-display-price-list.mjs";
 
 const execFileAsync = promisify(execFile);
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -269,12 +270,12 @@ async function collectImages(product) {
   return relPaths;
 }
 
-function buildRows(product, gallery) {
+function buildRows(product, gallery, excelIndex) {
   const tip = detectTip(product);
   const name = product.title || product.baslik || product.slug;
   const series = name.split(/\s+/)[0]?.toUpperCase() || name;
   const urun = toUrunRecord(product);
-  const variants = extractProsoVariants(urun);
+  const variants = extractProsoVariants(urun, { excelIndex });
 
   const common = {
     dept: "market-reyon",
@@ -317,7 +318,7 @@ function buildRows(product, gallery) {
         prosoEqModel: brand,
         prosoEqNo: 1,
         sku: eqSku(name, 1),
-        prosoModelSlug: undefined,
+        prosoModelSlug: product.slug,
       }),
     ];
   }
@@ -361,6 +362,14 @@ async function main() {
     process.exit(1);
   }
 
+  let excelIndex = new Map();
+  try {
+    excelIndex = await loadProsoPriceIndex(PROSO_XLSX_DEFAULT);
+    console.log("[proso-import] Excel genişlik indeksi:", excelIndex.size);
+  } catch (e) {
+    console.warn("[proso-import] Excel yüklenemedi, slug map devre dışı:", e.message);
+  }
+
   let existing = [];
   if (fs.existsSync(OUT_DEPT)) {
     existing = JSON.parse(fs.readFileSync(OUT_DEPT, "utf8"));
@@ -370,7 +379,7 @@ async function main() {
   const rows = [];
   for (const p of products) {
     const gallery = await collectImages(p);
-    rows.push(...buildRows(p, gallery));
+    rows.push(...buildRows(p, gallery, excelIndex));
   }
 
   rows.sort((a, b) =>

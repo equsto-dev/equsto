@@ -4,7 +4,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260528caglayan-pdp-fix";
+  var CATALOG_V = "20260606proso-expand";
 
   window.EqMarketReyon = {
     loadCatalog: function () {
