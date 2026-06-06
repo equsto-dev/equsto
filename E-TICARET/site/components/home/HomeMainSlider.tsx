@@ -45,7 +45,12 @@ function PfosSketchSlideView({
           />
         </span>
         {slide.sketchCaption ? (
-          <p className="eq-mx-hero__sketch-caption">{slide.sketchCaption}</p>
+          <p className="eq-mx-hero__sketch-caption">
+            <span className="eq-mx-hero__sketch-caption-inner">
+              <span className="eq-mx-hero__sketch-caption-lead">Projeni/ listeni gönder,</span>
+              <em className="eq-mx-hero__sketch-caption-em">fiyatlandıralım</em>
+            </span>
+          </p>
         ) : null}
       </a>
     </div>
