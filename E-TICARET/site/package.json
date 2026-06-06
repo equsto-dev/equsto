@@ -27,6 +27,7 @@
     "catalog:atalay:purge": "npm run catalog:atalay:strip && npm run catalog:atalay:ekipmanlar && node scripts/clear-index-urunler-embed.mjs && node scripts/sync-atalay-catalog-to-legacy-public.mjs",
     "catalog:atalay:only": "npm run catalog:atalay:purge && npm run search:index",
     "catalog:robot-coupe:yuksel": "node scripts/update-robot-coupe-yuksel.mjs",
+    "catalog:cafemarkt:robot-coupe": "node scripts/fetch-cafemarkt-robot-coupe.mjs && node scripts/apply-cafemarkt-robot-coupe-to-equsto.mjs",
     "catalog:ozti:merge": "python scripts/merge-ozti-fiyat-katalog.py",
     "catalog:ozti:images": "python scripts/extract-ozti-pdf-images.py",
     "catalog:ozti:web-images": "node scripts/fetch-ozti-web-images.mjs",
