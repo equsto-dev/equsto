@@ -1,7 +1,7 @@
 import { NextRequest } from "next/server";
 import { assertAdminBearer } from "@/lib/auth";
 import { adminErr, adminOk } from "@/lib/admin-response";
-import { notifyChannelsConfigured, sendInstantAlert } from "@/lib/notify";
+import { notifyChannelsConfigured, notifyEnvHints, sendInstantAlert } from "@/lib/notify";
 
 export const dynamic = "force-dynamic";
 
@@ -11,9 +11,11 @@ export async function POST(req: NextRequest) {
   if (denied) return denied;
 
   const configured = notifyChannelsConfigured();
+  const hints = notifyEnvHints();
   if (!configured.length) {
     return adminErr(
-      "Bildirim kanalı yapılandırılmamış. Bkz. docs/BILDIRIM-KURULUM.md (Telegram önerilir).",
+      "Bildirim kanalı yapılandırılmamış. Vercel env + Production + Redeploy gerekli. " +
+        JSON.stringify(hints),
       503
     );
   }
@@ -42,5 +44,9 @@ export async function POST(req: NextRequest) {
 export async function GET(req: NextRequest) {
   const denied = assertAdminBearer(req);
   if (denied) return denied;
-  return adminOk({ configured: notifyChannelsConfigured() });
+  return adminOk({
+    configured: notifyChannelsConfigured(),
+    env: notifyEnvHints(),
+    note: "env missing ise Vercel → Settings → Environment Variables → Production → Redeploy",
+  });
 }

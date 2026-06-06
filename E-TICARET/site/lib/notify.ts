@@ -178,3 +178,13 @@ export function notifyChannelsConfigured(): string[] {
   }
   return out;
 }
+
+/** Vercel tanılama — değerler loglanmaz, yalnızca dolu/boş */
+export function notifyEnvHints() {
+  return {
+    TELEGRAM_BOT_TOKEN: env("TELEGRAM_BOT_TOKEN") ? "set" : "missing",
+    TELEGRAM_CHAT_ID: env("TELEGRAM_CHAT_ID") ? "set" : "missing",
+    RESEND_API_KEY: env("RESEND_API_KEY") ? "set" : "missing",
+    EQUSTO_NOTIFY_EMAIL: env("EQUSTO_NOTIFY_EMAIL") ? "set" : "missing",
+  };
+}
