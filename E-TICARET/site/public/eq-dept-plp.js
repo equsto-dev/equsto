@@ -32,7 +32,7 @@
   }
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260606robot-coupe-sort';
+  var CATALOG_V = '20260606proso-price';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   /* Next.js URL slug → katalog dept id (data/dept/*.json) */
   if (DEPT === 'market-reyonlari') DEPT = 'market-reyon';
@@ -123,8 +123,19 @@
     return images[0];
   }
 
+  function yukselLocalImgHref(rel) {
+    var s = String(rel || '')
+      .trim()
+      .replace(/\\/g, '/')
+      .replace(/^\.\//, '');
+    if (!/^images\/yuksel-/i.test(s)) return '';
+    return '/data/images/' + s.replace(/^images\//i, '');
+  }
+
   function imgSrc(p) {
     if (!p) return '';
+    var yukselHit = yukselLocalImgHref(p);
+    if (yukselHit) return yukselHit;
     if (typeof window.eqProductImgSrc === 'function') {
       try {
         var resolved = window.eqProductImgSrc(p);
