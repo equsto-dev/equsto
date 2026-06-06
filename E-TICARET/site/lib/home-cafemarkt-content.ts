@@ -281,7 +281,7 @@ export const cafemarktCategories: CafemarktCategory[] = [
 export type CafemarktBentoTile = {
   id: string;
   brand?: string;
-  title: string;
+  title?: string;
   subtitle?: string;
   cta?: string;
   href: string;
@@ -295,8 +295,10 @@ export type CafemarktBentoTile = {
   showcase?: readonly { tag: string; image: string }[];
   bg: string;
   badge?: string;
-  /** Sağ tarafta eğik tagline (ör. ozti-marka) */
+  /** Sağ tarafta eğik tagline (tek satır) */
   tagline?: string;
+  /** Çok satırlı eğik tagline (ör. ozti-marka) */
+  taglineLines?: readonly string[];
   /** Sol alt köşe notu (ör. ozti-marka) */
   footnote?: string;
   variant: "sm" | "lg" | "tall" | "wide";
@@ -340,11 +342,9 @@ export const cafemarktBentoTiles: CafemarktBentoTile[] = [
   },
   {
     id: "ozti-marka",
-    title: "Equsto'da avantajlı fiyatlar",
-    subtitle: "Su filtrasyon · markalar",
-    tagline: "Sadece sana özel.... Hayal et.",
+    taglineLines: ["Sadece sana özel...", "Hayal et."],
     footnote: "Projeni/ listeni gönder fiyatlandıralım.",
-    href: "/shop/marka/oztiryakiler",
+    href: "/pfos",
     bg: "#fff8e1",
     variant: "sm",
   },
