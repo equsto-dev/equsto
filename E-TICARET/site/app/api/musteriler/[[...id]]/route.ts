@@ -20,7 +20,7 @@ async function resolveId(ctx: Ctx): Promise<string | null> {
 }
 
 const DEFAULT_WHATSAPP =
-  process.env.EQUSTO_WHATSAPP_E164?.trim() || "905326842608";
+  process.env.EQUSTO_WHATSAPP_E164?.trim() || "905326840152";
 
 export async function GET(req: NextRequest, ctx: Ctx) {
   const segment = await resolveId(ctx);

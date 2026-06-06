@@ -100,7 +100,7 @@ export default function IsletmeAyarlarPanel() {
             <ProFormText
               name="whatsapp_e164"
               label="WhatsApp (E.164)"
-              placeholder="905326842608"
+              placeholder="905326840152"
               rules={[{ required: true }]}
             />
             <ProFormTextArea name="whatsapp_prefill" label="WhatsApp ön metin" fieldProps={{ rows: 2 }} />
