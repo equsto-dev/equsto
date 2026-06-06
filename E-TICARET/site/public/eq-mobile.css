@@ -375,9 +375,9 @@ nav.topnav {
   }
 
   .equsto-wa-modal {
-    width: 100%;
-    max-height: none;
-    margin: 0;
+    width: min(100vw - 24px, 420px);
+    max-height: min(90vh, 640px);
+    margin: 12px;
   }
 }
 
