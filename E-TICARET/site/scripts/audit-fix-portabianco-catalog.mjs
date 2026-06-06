@@ -21,6 +21,8 @@ const UA = "Mozilla/5.0 (Equsto; +https://equsto.com)";
 const MIN_IMG = 8000;
 
 const dryRun = process.argv.includes("--dry-run");
+const CM_DISCOUNT = Number(process.env.EQUSTO_CAFE_DISCOUNT || "0.07");
+const CM_MULT = 1 - CM_DISCOUNT;
 const ISKONTO = Number(process.env.EQUSTO_YUKSEL_ISKONTO || "0.55");
 const NET_MULT = Math.max(0, Math.min(1, 1 - ISKONTO));
 const KDV = Number(process.env.EQUSTO_KDV_ORAN || "20");
@@ -40,6 +42,20 @@ function fmtTry(n) {
   const parts = n.toFixed(2).split(".");
   const int = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
   return `${int},${parts[1]}`;
+}
+
+function priceFromCafemarkt(cmPriceKdvDahil) {
+  const cm = Number(cmPriceKdvDahil);
+  if (!cm || cm <= 0) return null;
+  const kdvDahil = Math.round(cm * CM_MULT * 100) / 100;
+  const netTry = kdvDahil / (1 + KDV / 100);
+  return {
+    kdvDahil,
+    netTry,
+    price: `₺${fmtTry(netTry)} + KDV\nKDV Dahil ₺${fmtTry(kdvDahil)}`,
+    fiyat_tl: Math.round(netTry),
+    cm_ref: cm,
+  };
 }
 
 function priceFromEuro(listEur) {
@@ -186,13 +202,19 @@ function buildCmIndex(cmRows) {
   return byModel;
 }
 
-function findCm(sku, cmIndex) {
+function findCmExact(sku, cmIndex) {
   for (const key of rowLookupKeys(sku)) {
-    if (cmIndex.has(key)) return { cm: cmIndex.get(key), via: key };
+    if (cmIndex.has(key)) return { cm: cmIndex.get(key), via: key, exact: true };
   }
+  return null;
+}
+
+function findCm(sku, cmIndex) {
+  const exact = findCmExact(sku, cmIndex);
+  if (exact) return exact;
   for (const fb of fallbackSkus(sku)) {
     for (const key of rowLookupKeys(fb)) {
-      if (cmIndex.has(key)) return { cm: cmIndex.get(key), via: `${sku}→${fb}` };
+      if (cmIndex.has(key)) return { cm: cmIndex.get(key), via: `${sku}→${fb}`, exact: false };
     }
   }
   return null;
@@ -271,6 +293,7 @@ async function main() {
     prices: 0,
     images: 0,
     imgFallback: 0,
+    cmPriceExact: 0,
     noCm: 0,
     noSrc: 0,
   };
@@ -298,6 +321,7 @@ async function main() {
 
     const hit = findCm(sku, cmIndex);
     const cm = hit?.cm;
+    const exactHit = findCmExact(sku, cmIndex);
     if (hit?.via?.includes("→")) stats.imgFallback++;
 
     const newName = displayName(sku, src?.alt_kategori, cm?.name);
@@ -307,7 +331,29 @@ async function main() {
       if (row.aciklama?.startsWith("Portabianco")) row.aciklama = newName;
     }
 
-    if (src) {
+    const cmPrice = priceFromCafemarkt(exactHit?.cm?.price_try_kdv_dahil);
+    if (cmPrice) {
+      stats.cmPriceExact++;
+      stats.prices++;
+      row.fiyat_tl = cmPrice.fiyat_tl;
+      row.price = cmPrice.price;
+      row.fiyat_kaynak = "cafemarkt";
+      row.cafemarkt_fiyat_kdv_dahil = cmPrice.cm_ref;
+      row.cafemarkt_fiyat_equsto_kdv_dahil = cmPrice.kdvDahil;
+      row.cafemarkt_indirim_oran = CM_DISCOUNT;
+      if (EUR_TRY > 0) {
+        row.liste_fiyati_eur = Math.round((cmPrice.cm_ref / EUR_TRY) * 100) / 100;
+        row.satis_eur_net = Math.round((cmPrice.kdvDahil / (1 + KDV / 100) / EUR_TRY) * 100) / 100;
+      }
+      const specsLines = String(row.specs || "")
+        .split("\n")
+        .filter((l) => !/^Kaynak fiyat \(Cafemarkt|^Equsto Cafemarkt/i.test(l));
+      specsLines.push(
+        `Kaynak fiyat (Cafemarkt KDV dahil): ₺${fmtTry(cmPrice.cm_ref)}`,
+        `Equsto Cafemarkt −%${Math.round(CM_DISCOUNT * 100)} (KDV dahil): ₺${fmtTry(cmPrice.kdvDahil)}`,
+      );
+      row.specs = specsLines.join("\n");
+    } else if (src) {
       const listEur = Number(src.fiyat_euro);
       if (listEur > 0) {
         const { netEur, price, fiyat_tl } = priceFromEuro(listEur);
@@ -317,6 +363,7 @@ async function main() {
           row.satis_eur_net = netEur;
           row.fiyat_tl = fiyat_tl;
           row.price = price;
+          row.fiyat_kaynak = "yuksel-2025-yerli";
         }
       }
     }
@@ -350,6 +397,11 @@ async function main() {
       eki.fiyat_tl = row.fiyat_tl;
       eki.liste_fiyati_eur = row.liste_fiyati_eur;
       eki.satis_eur_net = row.satis_eur_net;
+      eki.fiyat_kaynak = row.fiyat_kaynak;
+      eki.cafemarkt_fiyat_kdv_dahil = row.cafemarkt_fiyat_kdv_dahil;
+      eki.cafemarkt_fiyat_equsto_kdv_dahil = row.cafemarkt_fiyat_equsto_kdv_dahil;
+      eki.cafemarkt_indirim_oran = row.cafemarkt_indirim_oran;
+      eki.specs = row.specs;
       if (row.images) eki.images = row.images;
       eki.cafemarkt_url = row.cafemarkt_url;
       eki.cafemarkt_image_source = row.cafemarkt_image_source;
@@ -379,7 +431,7 @@ async function main() {
   console.log("\n[audit-pb] Portabianco:", stats.total);
   console.log("[audit-pb] Silinen olcu satiri:", stats.purged);
   console.log("[audit-pb] Isim duzeltildi:", stats.names);
-  console.log("[audit-pb] Fiyat guncellendi:", stats.prices);
+  console.log("[audit-pb] Fiyat guncellendi:", stats.prices, `(cafemarkt -%${Math.round(CM_DISCOUNT * 100)}: ${stats.cmPriceExact})`);
   console.log("[audit-pb] Cafemarkt gorsel:", stats.images, `(aile eslesme: ${stats.imgFallback})`);
   console.log("[audit-pb] Cafemarkt eslesme yok:", stats.noCm);
   console.log("[audit-pb] witcdn map keys:", Object.keys(witMap).length);
