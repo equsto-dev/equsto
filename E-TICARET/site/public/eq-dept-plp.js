@@ -32,7 +32,7 @@
   }
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260527ozti-pricing';
+  var CATALOG_V = '20260606robot-coupe-facet';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   /* Next.js URL slug → katalog dept id (data/dept/*.json) */
   if (DEPT === 'market-reyonlari') DEPT = 'market-reyon';
@@ -410,7 +410,12 @@
     var fb = b;
     if (window.EqDeptCmFacets && window.EqDeptCmFacets.resolveFacetBrand) {
       fb =
-        window.EqDeptCmFacets.resolveFacetBrand(b, n, x.sku || x.urun_kodu || x.model) ||
+        window.EqDeptCmFacets.resolveFacetBrand(
+          b,
+          n,
+          x.sku || x.urun_kodu || x.model,
+          x.oem_brand
+        ) ||
         (x.oem_brand ? String(x.oem_brand).trim() : '') ||
         b;
     } else if (x.oem_brand) {

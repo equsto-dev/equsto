@@ -68,7 +68,11 @@ function normHay(s) {
 
 function slugFromUrl(url) {
   const base = path.basename(String(url || "").split("?")[0]);
-  return base.replace(/[^a-z0-9._-]/gi, "-").toLowerCase();
+  const cleaned = base.replace(/[^a-z0-9._-]/gi, "-");
+  if (/-O\.jpg$/i.test(cleaned)) {
+    return `${cleaned.slice(0, -5).toLowerCase()}-O.jpg`;
+  }
+  return cleaned.toLowerCase();
 }
 
 function sleep(ms) {
@@ -166,7 +170,7 @@ function makeNewRow(cm, imgRel) {
 
   return {
     category,
-    brand: oztiSku ? "Öztiryakiler Endüstriyel Mutfak" : "Robot Coupe",
+    brand: "Öztiryakiler Endüstriyel Mutfak",
     name,
     price: priceStr,
     specs: `${name}\nKaynak: Cafemarkt\nRobot Coupe ref: ${cm.code}\nCafemarkt: ${cm.url}`,
