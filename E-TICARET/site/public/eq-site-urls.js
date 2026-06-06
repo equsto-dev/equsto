@@ -964,7 +964,7 @@
     );
   }
 
-  var EQ_CATALOG_IMG_V = "20260606yuksel-white-bg";
+  var EQ_CATALOG_IMG_V = "20260606portabianco-cm-img";
   var EQ_OZTI_BAD_CAFE_STUB_MD5 = "6696b6d14fecffc05fb1dc0156c9f6b4";
   var EQ_OZTI_BAD_CAFE_STUB_BYTES = 10995;
 
@@ -1234,6 +1234,30 @@
     return "https://witcdn.cafemarkt.com/" + fname;
   }
 
+  /** Portabianco PLP — yerel yol CDN'de yoksa witcdn (Cafemarkt). */
+  function portabiancoCafemarktWitCdn(s) {
+    var t = String(s || "").trim().replace(/\\/g, "/");
+    var m = t.match(/\/portabianco\/cafemarkt\/([^/?#]+)$/i);
+    if (!m) return "";
+    var fname = m[1]
+      .replace(/-14--O\.jpg$/i, "-14-O.jpg")
+      .replace(/-14--B\.jpg$/i, "-14-B.jpg")
+      .replace(/-o\.jpg$/i, "-O.jpg")
+      .replace(/-b\.jpg$/i, "-B.jpg");
+    if (/-O\.jpg$/i.test(fname)) fname = fname.replace(/-O\.jpg$/i, "-B.jpg");
+    return "https://witcdn.cafemarkt.com/" + fname;
+  }
+
+  /** Yüksel PDF yolu → Cafemarkt witcdn (canlı JSON eski kalsa bile). */
+  function portabiancoYukselRelToWit(s) {
+    var m = String(s || "").match(/\/catalog\/yuksel\/yuksel-([a-z0-9-]+)_/i);
+    if (!m) return "";
+    var map = typeof window !== "undefined" && window.EQ_PB_CM_WITCDN;
+    if (!map) return "";
+    var key = m[1].replace(/-/g, "").toUpperCase();
+    return map[key] || "";
+  }
+
   window.eqProductImgSrc = function (p) {
     if (p == null || p === "") return "";
     var s = String(p).trim().replace(/\\/g, "/");
@@ -1246,6 +1270,10 @@
     if (/^https?:\/\//i.test(s)) return s;
     var rcWit = robotCoupeCafemarktWitCdn(s);
     if (rcWit) return rcWit;
+    var pbWit = portabiancoCafemarktWitCdn(s);
+    if (pbWit) return pbWit;
+    var pbYukselWit = portabiancoYukselRelToWit(s);
+    if (pbYukselWit) return pbYukselWit;
     if (/^images\/catalog\/ozti\/cafemarkt\//i.test(s)) {
       var axCafe = oztiAxFallbackFromRel(s);
       if (axCafe) return axCafe;
