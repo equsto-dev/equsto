@@ -8,6 +8,7 @@ import {
   normalizeMusteriPayload,
   validatePublicMusteriPayload,
 } from "@/lib/musteri";
+import { notifyNewLead } from "@/lib/notify";
 
 export const dynamic = "force-dynamic";
 
@@ -63,6 +64,9 @@ export async function POST(req: NextRequest, ctx: Ctx) {
 
   try {
     const row = await db.musteri.create({ data });
+    void notifyNewLead(row).catch((e) => {
+      console.error("[notify] lead", e);
+    });
     return adminOk({ data: musteriToAdmin(row) }, 201);
   } catch (e) {
     const msg = e instanceof Error ? e.message : "Kayıt başarısız";
