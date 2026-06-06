@@ -151,6 +151,7 @@ function BentoTile({ tile }: { tile: CafemarktBentoTile }) {
         {tile.badge ? <span className="eq-cmkt-bento__badge">{tile.badge}</span> : null}
       </div>
       {tile.tagline ? <p className="eq-cmkt-bento__tagline">{tile.tagline}</p> : null}
+      {tile.footnote ? <p className="eq-cmkt-bento__footnote">{tile.footnote}</p> : null}
       {tile.showcase?.length ? (
         <div className="eq-cmkt-bento__showcase" aria-hidden="true">
           {tile.showcase.map((item) => (
