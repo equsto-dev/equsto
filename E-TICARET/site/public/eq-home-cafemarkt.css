@@ -900,6 +900,10 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
   max-width: 50%;
 }
 
+.eq-cmkt-bento__tile--yaz .eq-cmkt-bento__img--cover {
+  object-position: center 35%;
+}
+
 .eq-cmkt-bento__img {
   position: absolute;
   right: 0;
