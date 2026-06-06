@@ -31,6 +31,7 @@
     "catalog:yuksel:yerli:images": "python scripts/extract-yuksel-yerli-pdf-images.py",
     "catalog:yuksel:yerli:fix-bg": "python scripts/extract-yuksel-yerli-pdf-images.py --fix-bg",
     "catalog:yuksel:yerli:import": "node scripts/import-yuksel-yerli-to-site.mjs",
+    "catalog:yuksel:yerli:purge-dimension-junk": "node scripts/purge-yuksel-dimension-junk.mjs",
     "catalog:yuksel:yerli:patch-images": "node scripts/patch-yuksel-image-paths.mjs",
     "catalog:yuksel:yerli:full": "npm run catalog:yuksel:yerli:extract && npm run catalog:yuksel:yerli:images && npm run catalog:yuksel:yerli:import && npm run catalog:yuksel:yerli:patch-images",
     "catalog:cafemarkt:robot-coupe": "node scripts/fetch-cafemarkt-robot-coupe.mjs && node scripts/apply-cafemarkt-robot-coupe-to-equsto.mjs",

@@ -964,7 +964,7 @@
     );
   }
 
-  var EQ_CATALOG_IMG_V = "20260606portabianco-cm-img";
+  var EQ_CATALOG_IMG_V = "20260606yuksel-dimension-purge";
   var EQ_OZTI_BAD_CAFE_STUB_MD5 = "6696b6d14fecffc05fb1dc0156c9f6b4";
   var EQ_OZTI_BAD_CAFE_STUB_BYTES = 10995;
 
