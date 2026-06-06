@@ -7,7 +7,7 @@
  * Üye bayrağı: equsto-member.js → equstoSetMemberActive / equstoIsMemberLoggedIn
  */
 (function () {
-  window.EQUSTO_WHATSAPP_E164 = window.EQUSTO_WHATSAPP_E164 || "905326842608";
+  window.EQUSTO_WHATSAPP_E164 = window.EQUSTO_WHATSAPP_E164 || "905326840152";
 
   try {
     fetch("/api/magaza-ayarlar", { cache: "no-store" })

@@ -1146,7 +1146,7 @@ export function magazaAyarlariFromEticaret(a: Record<string, unknown>): MagazaAy
     }
   }
   return {
-    whatsapp_e164: String(a.whatsapp_e164 ?? "905326842608"),
+    whatsapp_e164: String(a.whatsapp_e164 ?? "905326840152"),
     whatsapp_prefill: String(a.whatsapp_prefill ?? "Merhaba, equsto.com üzerinden yazıyorum."),
     ucretsiz_kargo: a.ucretsiz_kargo !== false,
     ucretsiz_kargo_limit_tl: Number(a.ucretsiz_kargo_limit_tl ?? 0) || 0,
