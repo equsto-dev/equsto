@@ -1,4 +1,6 @@
 import type { Musteri, Siparis } from "@/lib/prisma";
+import { normalizeWaRecipient } from "@/lib/whatsapp/config";
+import { buildWaMeUrl } from "@/lib/whatsapp/link";
 import {
   sendWhatsAppText,
   whatsAppNotifyTo,
@@ -180,6 +182,27 @@ export async function sendInstantAlert(
   return { sent, skipped, errors };
 }
 
+/** Telegram bildirimine tıklanabilir wa.me (müşteriye cevap). */
+function customerWhatsAppLines(
+  tel: string | null | undefined,
+  previewMessage?: string | null
+): string[] {
+  const phone = normalizeWaRecipient(String(tel || ""));
+  if (!phone) {
+    return [
+      "WhatsApp: Müşteri telefonu yok — site handoff (wa.me) bekleyin veya panelden dönün.",
+    ];
+  }
+
+  const intro = "Merhaba, equsto.com üzerinden yazmıştınız.";
+  const msg = String(previewMessage || "").trim();
+  const text = [intro, msg].filter(Boolean).join("\n\n").slice(0, 800);
+  const url = buildWaMeUrl(phone, text);
+  if (!url) return [];
+
+  return [`WhatsApp (müşteriye yaz): ${url}`];
+}
+
 function leadBody(m: Musteri): string {
   return [
     `Kim: ${m.yetkili || "Ziyaretçi"}`,
@@ -189,6 +212,7 @@ function leadBody(m: Musteri): string {
     m.not && !m.mesaj ? `Not: ${m.not}` : "",
     m.kaynak ? `Kaynak: ${m.kaynak}` : "",
     m.sayfa ? `Sayfa: ${m.sayfa}` : "",
+    ...customerWhatsAppLines(m.tel, m.mesaj),
     `Zaman: ${m.createdAt.toISOString()}`,
     `Panel: ${siteUrl()}/yonetim/isletme`,
   ]
@@ -209,6 +233,10 @@ function siparisBody(s: Siparis): string {
     `Kalem: ${s.toplamKalem} · Adet: ${s.toplamAdet}`,
     `Tutar: ₺${Number(s.toplamTl)}`,
     s.kaynak ? `Kaynak: ${s.kaynak}` : "",
+    ...customerWhatsAppLines(
+      s.musteriTel,
+      `Sipariş ${s.siparisNo} (${Number(s.toplamTl)} TL) hakkında yazıyorum.`
+    ),
     `Panel: ${siteUrl()}/yonetim/isletme`,
   ]
     .filter(Boolean)
