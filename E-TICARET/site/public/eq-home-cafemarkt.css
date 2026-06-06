@@ -843,8 +843,17 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
   line-height: 1.3;
 }
 
-.eq-cmkt-bento__tile--lg .eq-cmkt-bento__title {
-  font-size: clamp(18px, 2vw, 24px);
+/* Foto vitrin kutuları — bar / bar dizayn / kafe: aynı tipografi */
+.eq-cmkt-bento__tile--photo .eq-cmkt-bento__title {
+  font-size: clamp(14px, 1.25vw, 17px);
+  line-height: 1.28;
+}
+
+.eq-cmkt-bento__tile--photo .eq-cmkt-bento__sub {
+  margin-top: 6px;
+  font-size: clamp(11px, 0.95vw, 12px);
+  line-height: 1.35;
+  opacity: 0.92;
 }
 
 .eq-cmkt-bento__sub {
