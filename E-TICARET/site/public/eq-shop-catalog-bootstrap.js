@@ -6,7 +6,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260606portabianco-cm-img";
+  var CATALOG_V = "20260606yuksel-dimension-purge";
   var __fullMem = null;
   var __fullInflight = null;
   var __deptMem = Object.create(null);

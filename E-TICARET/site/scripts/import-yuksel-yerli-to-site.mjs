@@ -74,10 +74,20 @@ function yukselHaystack(item) {
     .replace(/ç/g, "c");
 }
 
+/** PDF tablosundan ölçü satırı (144X64X62 vb.) — ürün kodu değil. */
+function isDimensionOnlySku(model) {
+  const m = String(model || "")
+    .trim()
+    .replace(/\s+/g, "");
+  return /^\d{2,3}[Xx]\d{2}[Xx]\d{2,3}(\/\d+)?$/.test(m);
+}
+
 function isCoolingProduct(item) {
   const model = String(item.model || item.sku || "")
     .trim()
     .replace(/\s+/g, "");
+  if (isDimensionOnlySku(model)) return false;
+
   const hay = yukselHaystack(item) + " " + model.toLowerCase();
   const folder = String(item.equsto_folder || item.category || "").toLowerCase();
 
@@ -96,9 +106,6 @@ function isCoolingProduct(item) {
       hay,
     )
   ) {
-    return true;
-  }
-  if (/^\d{2,3}X\d{2}X\d{2,3}/i.test(model) && /her kapi|tezgah|portabianco|make|buzdolab/.test(hay)) {
     return true;
   }
   return false;
@@ -227,14 +234,18 @@ function isYukselIstifShopAllowed(item) {
 
 /** Parça / aksesuar — vitrinde satılmaz. */
 function isYukselYerliShopExcluded(item) {
+  const model = String(item.model || item.sku || "").trim();
+  const hay = yukselHaystack(item);
+
+  if (isDimensionOnlySku(model)) return true;
+  if (/tel\s*raf\s*dikme/.test(hay)) return true;
+
   if (isCoolingProduct(item)) return false;
 
-  const hay = yukselHaystack(item);
   if (/perfore\s*raf\s*boyali/.test(hay)) return true;
   if (/epoxy\s*\+\s*plastic|powder\s*coated/.test(hay)) return true;
   if (/olcu\s*\/\s*size|ölçü\s*\/\s*size/.test(hay)) return true;
   if (/standart\s*tel\s*raf\s*boyali/.test(hay)) return true;
-  if (/tel\s*raf\s*dikme/.test(hay)) return true;
   if (/tel\s*izgara/.test(hay)) return true;
   if (/rail\s*basket/.test(hay)) return true;
   if (/ozel\s*kalip\s*formlu|özel\s*kalıp\s*formlu/.test(hay)) return true;
