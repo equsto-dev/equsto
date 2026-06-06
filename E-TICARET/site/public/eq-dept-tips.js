@@ -606,7 +606,16 @@
     return false;
   }
 
+  function isYukselIstifPartProduct(u) {
+    var f = istifItemFields(u);
+    if (!/yuksel-2025-yerli/.test(f.kaynak)) return false;
+    if (/katli\s*raflar|tier\s*shelving/.test(f.name)) return false;
+    if (/^\d{2}-x-\d+-x-\d+/i.test(String(f.model || "").replace(/\s+/g, ""))) return false;
+    return true;
+  }
+
   function excludeFromDeptView(dept, u) {
+    if (dept === "istif" && isYukselIstifPartProduct(u)) return true;
     if (dept === "kahve" && isOztiCayNotKahveProduct(u)) return true;
     if (dept === "sogutma" && isEtKiymaProduct(u)) return true;
     if (dept === "sogutma" && (isOztiServisRafiProduct(u) || isBuzKonteynerProduct(u))) return true;
