@@ -69,14 +69,6 @@
     return '';
   }
 
-  function preferWaApp() {
-    try {
-      if (window.matchMedia('(max-width: 768px)').matches) return true;
-      if (window.matchMedia('(hover: none) and (pointer: coarse)').matches) return true;
-    } catch (e) {}
-    return /Android|iPhone|iPad|iPod|webOS|IEMobile|Opera Mini/i.test(navigator.userAgent || '');
-  }
-
   try {
     fetch('/api/magaza-ayarlar', { cache: 'no-store' })
       .then(function (r) { return r.ok ? r.json() : null; })
@@ -1139,11 +1131,6 @@
       return;
     }
     var phone = resolveWaDigits();
-    if (window.equstoOpenWhatsAppDirect && phone && preferWaApp()) {
-      window.equstoOpenWhatsAppDirect(phone, text);
-      dismissCartUi();
-      return;
-    }
     if (window.equstoOpenWhatsAppWebWindow && phone) {
       window.equstoOpenWhatsAppWebWindow(phone, text);
       dismissCartUi();
@@ -1155,16 +1142,13 @@
       );
       return;
     }
-    var url =
-      (preferWaApp() ? 'https://wa.me/' : 'https://web.whatsapp.com/send?phone=') +
-      encodeURIComponent(phone);
-    if (preferWaApp()) {
-      url += '?text=' + encodeURIComponent(text);
-    } else {
-      url += '&text=' + encodeURIComponent(text);
+    if (typeof window.equstoOpenWhatsApp === 'function') {
+      window.EQUSTO_WHATSAPP_TEXT = text;
+      window.equstoOpenWhatsApp(null);
+      dismissCartUi();
+      return;
     }
-    window.location.assign(url);
-    dismissCartUi();
+    toast(__cartT('cart.wa_unavailable', 'Sohbet kartı yüklenemedi.'));
   }
 
   function cartPageHref() {

@@ -1,7 +1,6 @@
 /**
- * equsto.com — WhatsApp (mobil alt şerit + sayfa-içi kart)
- * PC yüzen kedi: sayfa-içi sohbet kartı (WhatsApp Web açılmaz).
- * Mobil alt şerit: doğrudan WhatsApp uygulaması.
+ * equsto.com — WhatsApp (mobil alt şerit + sayfa-içi kedi sohbeti)
+ * wa.me / WhatsApp uygulaması açılmaz; kullanıcı Mr. Equsto kartında yazar.
  *
  * window.EQUSTO_WHATSAPP_E164 bu scriptten önce tanımlanarak geçilebilir.
  * Üye bayrağı: equsto-member.js → equstoSetMemberActive / equstoIsMemberLoggedIn
@@ -46,7 +45,7 @@
   /** Kilit: public/whatsapp-cat-fab-KILIT.txt — npm run verify:whatsapp-cat-fab-kilit */
   var WA_FAB_IMG = "/equsto-bize-ulasin-isimlik.png";
   /** Modal şablonu değişince artırın (eski DOM'u zorla yeniler). */
-  var WA_MODAL_BUILD = 12;
+  var WA_MODAL_BUILD = 13;
 
   var waModalDigits = "";
   var waModalResizeHandler = null;
@@ -294,21 +293,19 @@
   }
 
   function applyWaModalView() {
-    var memberOn = equstoIsMember();
     var guest = document.getElementById("equsto-wa-guest");
     var member = document.getElementById("equsto-wa-member");
     var loginGuest = document.getElementById("equsto-wa-login-cta-guest");
     var loginSecondary = document.getElementById("equsto-wa-login-cta");
 
-    if (guest) guest.style.display = memberOn ? "none" : "flex";
-    if (member) member.style.display = memberOn ? "flex" : "none";
+    /* Ziyaretçi + üye: aynı kedi sohbet kartı (giriş zorunlu değil) */
+    if (guest) guest.style.display = "none";
+    if (member) member.style.display = "flex";
     if (loginGuest) loginGuest.href = equstoLoginHref();
-    if (loginSecondary) loginSecondary.hidden = true;
+    if (loginSecondary) loginSecondary.hidden = !equstoIsMember();
 
-    if (memberOn) {
-      renderWaHistoryList();
-      renderWaChat();
-    }
+    renderWaHistoryList();
+    renderWaChat();
   }
 
   function refreshWaHistory() {
@@ -391,17 +388,10 @@
       applyWaModalView();
       syncWaModalNearFab();
       syncWaModalAuthBtn();
-      if (equstoIsMember() && msgEl) {
+      if (msgEl) {
         try {
           msgEl.focus();
         } catch (e) {}
-      } else {
-        var loginGuest = document.getElementById("equsto-wa-login-cta-guest");
-        if (loginGuest) {
-          try {
-            loginGuest.focus();
-          } catch (e) {}
-        }
       }
     }, 280);
   }
@@ -429,10 +419,6 @@
   }
 
   function equstoWaSubmitFromModal() {
-    if (!equstoIsMember()) {
-      equstoWaLoginClick(null);
-      return;
-    }
     var msgEl = document.getElementById("equsto-wa-msg");
     var st = document.getElementById("equsto-wa-status");
     var go = document.getElementById("equsto-wa-go");
@@ -463,7 +449,7 @@
       mesaj: text,
       kaynak: "whatsapp-modal",
       sayfa: location.pathname || "",
-      telefon: waModalDigits || equstoResolveWhatsAppDigits() || "",
+      telefon: "",
     };
     if (equstoIsMember() && typeof window.equstoGetMemberProfile === "function") {
       try {
@@ -480,16 +466,53 @@
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
-    }).catch(function () {});
-
-    if (go) {
-      go.disabled = false;
-      go.textContent = __waT("wa.send", "Gönder");
-    }
-    msgEl.value = "";
-
-    /* Site içi kart CRM kaydı tutar; bildirim WhatsApp uygulamasından gelir. */
-    equstoWaOpenWithMessage(text);
+    })
+      .then(function (r) {
+        return r.json().then(function (j) {
+          return { ok: r.ok, j: j };
+        });
+      })
+      .then(function (res) {
+        if (go) {
+          go.disabled = false;
+          go.textContent = __waT("wa.send", "Gönder");
+        }
+        if (!res.ok || !(res.j && res.j.success)) {
+          var msg =
+            (res.j && (res.j.error || res.j.message)) ||
+            __waT("wa.send_failed", "Gönderilemedi");
+          if (st) {
+            st.textContent = msg;
+            st.className = "equsto-wa-status equsto-wa-status--err";
+          }
+          return;
+        }
+        msgEl.value = "";
+        appendChatMessage(
+          "team",
+          __waT(
+            "wa.received",
+            "Mesajınız alındı. Equsto ekibi en kısa sürede size dönüş yapacak."
+          )
+        );
+        renderWaHistoryList();
+        if (st) {
+          st.textContent = "";
+          st.className = "equsto-wa-status equsto-wa-status--ok";
+        }
+      })
+      .catch(function (err) {
+        if (go) {
+          go.disabled = false;
+          go.textContent = __waT("wa.send", "Gönder");
+        }
+        var em = err && err.message ? err.message : String(err);
+        if (st) {
+          st.textContent =
+            __waT("wa.server_unreachable", "Sunucuya ulaşılamadı: ") + em;
+          st.className = "equsto-wa-status equsto-wa-status--err";
+        }
+      });
   }
 
   function purgeWaModalLegacyLogout() {
@@ -509,26 +532,13 @@
   }
 
   /**
-   * PFOS, sepet vb.: önce sayfa-içi kart.
+   * PFOS, sepet vb.: sayfa-içi kedi sohbet kartı (wa.me açılmaz).
    */
   window.equstoOpenWhatsAppWebWindow = function (phoneDigits, plainText) {
-    var phone = digitsOnly(phoneDigits);
-    if (equstoPreferDirectWhatsAppApp()) {
-      equstoOpenWhatsAppDirect(phone, plainText != null ? plainText : "");
-      return null;
-    }
+    var phone = digitsOnly(phoneDigits) || equstoResolveWhatsAppDigits();
     equstoShowWhatsAppModal(phone, plainText != null ? plainText : "");
     return null;
   };
-
-  function equstoWaClickFromPcCat(ev) {
-    try {
-      var el = ev && (ev.currentTarget || ev.target);
-      return !!(el && el.closest && el.closest("#equsto-contact-fab"));
-    } catch (_) {
-      return false;
-    }
-  }
 
   window.equstoOpenWhatsApp = function (ev) {
     if (ev && ev.preventDefault) ev.preventDefault();
@@ -542,23 +552,11 @@
       );
       return false;
     }
-    var msg = window.EQUSTO_WHATSAPP_TEXT != null ? String(window.EQUSTO_WHATSAPP_TEXT) : defaultPrefill();
-
-    /* Mobil / alt şerit: doğrudan WhatsApp uygulaması (wa.me) */
-    if (
-      equstoPreferDirectWhatsAppApp() ||
-      (document.body && document.body.classList.contains("eq-has-bottom-tabbar"))
-    ) {
-      return equstoOpenWhatsAppDirect(phone, msg);
-    }
-
-    /* PC yüzen kedi: sayfa-içi sohbet kartı → Gönder = WhatsApp Web */
-    if (equstoWaClickFromPcCat(ev)) {
-      equstoShowWhatsAppModal(phone, msg);
-      return false;
-    }
-
-    window.equstoOpenWhatsAppWebWindow(phone, msg);
+    var msg =
+      window.EQUSTO_WHATSAPP_TEXT != null
+        ? String(window.EQUSTO_WHATSAPP_TEXT)
+        : defaultPrefill();
+    equstoShowWhatsAppModal(phone, msg);
     return false;
   };
 
