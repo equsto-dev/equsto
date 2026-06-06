@@ -32,7 +32,7 @@
   }
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260606proso-price';
+  var CATALOG_V = '20260606live-deploy';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   /* Next.js URL slug → katalog dept id (data/dept/*.json) */
   if (DEPT === 'market-reyonlari') DEPT = 'market-reyon';
@@ -128,8 +128,9 @@
       .trim()
       .replace(/\\/g, '/')
       .replace(/^\.\//, '');
-    if (!/^images\/yuksel-/i.test(s)) return '';
-    return '/data/images/' + s.replace(/^images\//i, '');
+    if (/^images\/catalog\/yuksel\//i.test(s)) return '/' + s;
+    if (/^images\/yuksel-/i.test(s)) return '/images/catalog/yuksel/' + s.replace(/^images\//i, '');
+    return '';
   }
 
   function imgSrc(p) {

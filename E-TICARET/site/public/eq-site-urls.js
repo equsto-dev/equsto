@@ -1238,6 +1238,13 @@
     if (p == null || p === "") return "";
     var s = String(p).trim().replace(/\\/g, "/");
     if (!s) return "";
+    if (/^images\/catalog\/yuksel\//i.test(s)) {
+      return typeof window.eqAttrPath === "function" ? window.eqAttrPath(s) : "/" + s;
+    }
+    if (/^images\/yuksel-/i.test(s)) {
+      var yRel = "images/catalog/yuksel/" + s.replace(/^images\//i, "");
+      return typeof window.eqAttrPath === "function" ? window.eqAttrPath(yRel) : "/" + yRel;
+    }
     var istifFb = ozti8897PolipropilenFallbackRel(s);
     if (istifFb) s = istifFb;
     if (/^https?:\/\//i.test(s)) return s;
@@ -1343,6 +1350,7 @@
           /\/data\/images\//i.test(raw) ||
           (!/^\//.test(raw) && /\.(jpe?g|png|webp|gif|svg)(\?|#|$)/i.test(raw));
         if (needsFix && isStaticPublicImage(raw)) needsFix = false;
+        if (needsFix && /\/catalog\/yuksel\//i.test(raw)) needsFix = false;
         if (!needsFix) return;
         var fixed =
           typeof window.healCatalogImageSrc === "function"
