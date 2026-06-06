@@ -9,8 +9,8 @@ SVG ikon kullanılır; yüzen kedi yalnızca masaüstünde (≥769px) görünür
 ── Beklenen davranış ───────────────────────────────────────────────────────
   • Masaüstü (body.eq-shop, admin/bd-page hariç): sağ alt 62×62 kedi PNG
   • Görsel: /equsto-bize-ulasin-isimlik.png (yüklenmezse yeşil WA SVG fallback)
-  • Tıklama: sayfa-içi kedi sohbet kartı → Gönder → wa.me / WhatsApp Web handoff
-  • Mesaj iş telefonundaki WhatsApp uygulamasına düşer (ziyaretçi WhatsApp'ta Gönder'e basar)
+  • Tıklama: sayfa-içi kedi sohbet — Gönder modal içinde kalır (Telegram bildirimi)
+  • İsteğe bağlı: «WhatsApp'ta devam edin» ile wa.me (otomatik açılmaz)
   • Mobil (≤768px): yüzen kedi GİZLİ; #eq-bnav-wa-slot alt şerit ikonu
   • PFOS mobil: yüzen kedi kalabilir (theme.css istisnası)
   • Alt şerit DOM’u masaüstünde de oluşsa kedi SİLİNMEZ (mountFabInTabbar mobil guard)
