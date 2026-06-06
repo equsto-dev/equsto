@@ -17,7 +17,7 @@ export type CafemarktPromoCard = {
   promoLead?: string;
   promoBadges?: readonly string[];
   promoPoints?: readonly string[];
-  cta: string;
+  cta?: string;
   href: string;
   legacyGo?: string;
   image?: string;
@@ -79,7 +79,6 @@ export const cafemarktHeroSide: CafemarktPromoCard[] = [
     brand: "Öztiryakiler",
     title: "Pizza fırını",
     subtitle: "Profesyonel pişirme hattı",
-    cta: "Keşfet",
     href: "/shop/pisirme?tip=pizza-firinlari",
     image: "/images/home/pop-cats/cm-pizza-firinlari.webp",
     bg: "#f5f0ea",

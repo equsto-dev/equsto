@@ -869,7 +869,35 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
 }
 
 .eq-cmkt-bento__tile--ozti-marka {
+  display: block;
   min-height: 118px;
+  padding: 14px 16px 16px;
+}
+
+/* Eski bundle cache — başlık/alt yazı asla görünmesin */
+.eq-cmkt-bento__tile--ozti-marka .eq-cmkt-bento__copy,
+.eq-cmkt-bento__tile--ozti-marka .eq-cmkt-bento__title,
+.eq-cmkt-bento__tile--ozti-marka .eq-cmkt-bento__sub,
+.eq-cmkt-bento__tile--ozti-marka .eq-cmkt-bento__cta {
+  display: none !important;
+}
+
+.eq-cmkt-bento__tile--ozti-marka .eq-cmkt-bento__tagline {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(16px, 1.75vw, 22px);
+  line-height: 1.45;
+  color: #5c4a32;
+  text-align: right;
 }
 
 .eq-cmkt-bento__tagline {
@@ -893,12 +921,31 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 2px;
+  gap: 4px;
+}
+
+.eq-cmkt-bento__tagline-line1,
+.eq-cmkt-bento__tagline-line2 {
+  display: block;
 }
 
 .eq-cmkt-bento__tagline-line2 {
-  display: block;
-  padding-left: 2.75rem;
+  padding-left: 3.25rem;
+}
+
+.eq-cmkt-bento__tile--ozti-marka .eq-cmkt-bento__footnote {
+  position: absolute;
+  left: 16px;
+  bottom: 14px;
+  z-index: 2;
+  margin: 0;
+  max-width: 58%;
+  font-family: inherit;
+  font-size: 12pt;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.35;
+  color: #5c4a32;
 }
 
 .eq-cmkt-bento__footnote {

@@ -121,7 +121,7 @@ function PromoCard({
       {card.brand ? <span className="eq-cmkt-promo__brand">{card.brand}</span> : null}
       <h3 className="eq-cmkt-promo__title">{card.title}</h3>
       {card.subtitle ? <p className="eq-cmkt-promo__sub">{card.subtitle}</p> : null}
-      <span className="eq-cmkt-promo__cta">{card.cta}</span>
+      {card.cta ? <span className="eq-cmkt-promo__cta">{card.cta}</span> : null}
       {card.image ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img
@@ -136,7 +136,30 @@ function PromoCard({
   );
 }
 
+function OztiMarkaTile({ tile }: { tile: CafemarktBentoTile }) {
+  return (
+    <a
+      className="eq-cmkt-bento__tile eq-cmkt-bento__tile--sm eq-cmkt-bento__tile--ozti-marka"
+      href={tile.href}
+      style={{ background: tile.bg }}
+      onClick={(e) => goLink(e, tile)}
+    >
+      <p className="eq-cmkt-bento__footnote">
+        {tile.footnote ?? "Projeni/ listeni gönder fiyatlandıralım."}
+      </p>
+      <p className="eq-cmkt-bento__tagline eq-cmkt-bento__tagline--stack">
+        <span className="eq-cmkt-bento__tagline-line1">Sadece sana özel...</span>
+        <span className="eq-cmkt-bento__tagline-line2">Hayal et.</span>
+      </p>
+    </a>
+  );
+}
+
 function BentoTile({ tile }: { tile: CafemarktBentoTile }) {
+  if (tile.id === "ozti-marka") {
+    return <OztiMarkaTile tile={tile} />;
+  }
+
   return (
     <a
       className={`eq-cmkt-bento__tile eq-cmkt-bento__tile--${tile.variant} eq-cmkt-bento__tile--${tile.id}${tile.textLight ? " eq-cmkt-bento__tile--light" : ""}${tile.imageLayout === "cover" ? " eq-cmkt-bento__tile--photo" : ""}`}
@@ -152,18 +175,7 @@ function BentoTile({ tile }: { tile: CafemarktBentoTile }) {
           {tile.badge ? <span className="eq-cmkt-bento__badge">{tile.badge}</span> : null}
         </div>
       ) : null}
-      {tile.taglineLines?.length ? (
-        <p className="eq-cmkt-bento__tagline eq-cmkt-bento__tagline--stack">
-          {tile.taglineLines.map((line, i) => (
-            <span key={line} className={i === 1 ? "eq-cmkt-bento__tagline-line2" : undefined}>
-              {line}
-            </span>
-          ))}
-        </p>
-      ) : tile.tagline ? (
-        <p className="eq-cmkt-bento__tagline">{tile.tagline}</p>
-      ) : null}
-      {tile.footnote ? <p className="eq-cmkt-bento__footnote">{tile.footnote}</p> : null}
+      {tile.tagline ? <p className="eq-cmkt-bento__tagline">{tile.tagline}</p> : null}
       {tile.showcase?.length ? (
         <div className="eq-cmkt-bento__showcase" aria-hidden="true">
           {tile.showcase.map((item) => (
