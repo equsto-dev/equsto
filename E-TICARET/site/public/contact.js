@@ -45,7 +45,7 @@
   /** Kilit: public/whatsapp-cat-fab-KILIT.txt — npm run verify:whatsapp-cat-fab-kilit */
   var WA_FAB_IMG = "/equsto-bize-ulasin-isimlik.png";
   /** Modal şablonu değişince artırın (eski DOM'u zorla yeniler). */
-  var WA_MODAL_BUILD = 13;
+  var WA_MODAL_BUILD = 14;
 
   var waModalDigits = "";
   var waModalResizeHandler = null;
@@ -127,6 +127,54 @@
     return false;
   }
   window.equstoOpenWhatsAppDirect = equstoOpenWhatsAppDirect;
+
+  /** Site mesajı → wa.me metni (sayfa bağlamı ile) */
+  function equstoBuildWaHandoffMessage(userText) {
+    var intro = defaultPrefill();
+    var body = String(userText || "").trim();
+    var lines = [intro];
+    if (body) lines.push("", body);
+    try {
+      var path = location.pathname || "";
+      if (path && path !== "/") {
+        lines.push("", "Sayfa: " + location.origin + path);
+      }
+    } catch (e) {}
+    return lines.join("\n").trim();
+  }
+
+  /**
+   * Resmi handoff: ziyaretçi WhatsApp'ta Gönder'e basınca mesaj iş numaranıza düşer.
+   * @returns {{ ok: boolean, mode?: string, reason?: string, url?: string }}
+   */
+  function equstoHandoffToWhatsApp(phoneDigits, userText) {
+    var phone = digitsOnly(phoneDigits) || equstoResolveWhatsAppDigits();
+    if (!phone || phone.length < 10) {
+      return { ok: false, reason: "no_phone" };
+    }
+    var full = equstoBuildWaHandoffMessage(userText);
+    try {
+      pushThread(phone, full);
+    } catch (e) {}
+
+    if (equstoPreferDirectWhatsAppApp()) {
+      equstoOpenWhatsAppDirect(phone, full);
+      return { ok: true, mode: "app" };
+    }
+
+    var url = equstoWhatsAppWebSendUrl(phone, full);
+    if (!url) return { ok: false, reason: "no_url" };
+    var tab = window.open(url, "_blank", "noopener,noreferrer");
+    if (!tab) {
+      return { ok: false, reason: "blocked", url: url };
+    }
+    try {
+      tab.opener = null;
+      tab.focus();
+    } catch (e) {}
+    return { ok: true, mode: "web" };
+  }
+  window.equstoHandoffToWhatsApp = equstoHandoffToWhatsApp;
 
   function equstoWhatsAppUrl() {
     var phone = equstoResolveWhatsAppDigits();
@@ -447,7 +495,7 @@
 
     var payload = {
       mesaj: text,
-      kaynak: "whatsapp-modal",
+      kaynak: "whatsapp-handoff",
       sayfa: location.pathname || "",
       telefon: "",
     };
@@ -488,17 +536,43 @@
           return;
         }
         msgEl.value = "";
+        var handoff = equstoHandoffToWhatsApp(waModalDigits, text);
         appendChatMessage(
           "team",
-          __waT(
-            "wa.received",
-            "Mesajınız alındı. Equsto ekibi en kısa sürede size dönüş yapacak."
-          )
+          handoff.ok
+            ? __waT(
+                "wa.handoff_opening",
+                "WhatsApp açılıyor — lütfen uygulamada «Gönder»e basın. Sohbet telefonumuzda devam eder; size Telegram ile de bildirim gider."
+              )
+            : handoff.reason === "blocked"
+              ? __waT(
+                  "wa.handoff_blocked",
+                  "Tarayıcı pencereyi engelledi. Aşağıdaki «WhatsApp'ta gönder» bağlantısına tıklayın."
+                )
+              : __waT(
+                  "wa.received",
+                  "Mesajınız kaydedildi. Equsto ekibi en kısa sürede size dönüş yapacak."
+                )
         );
         renderWaHistoryList();
         if (st) {
-          st.textContent = "";
-          st.className = "equsto-wa-status equsto-wa-status--ok";
+          if (handoff.reason === "blocked" && handoff.url) {
+            st.className = "equsto-wa-status equsto-wa-status--ok";
+            st.innerHTML =
+              '<a class="equsto-wa-handoff-link" href="' +
+              escWa(handoff.url) +
+              '" target="_blank" rel="noopener noreferrer">' +
+              escWa(__waT("wa.handoff_link", "WhatsApp'ta gönder")) +
+              "</a>";
+          } else {
+            st.textContent = "";
+            st.className = "equsto-wa-status equsto-wa-status--ok";
+          }
+        }
+        if (handoff.ok && handoff.mode === "web") {
+          window.setTimeout(function () {
+            equstoHideWhatsAppModal();
+          }, 1200);
         }
       })
       .catch(function (err) {
@@ -532,7 +606,7 @@
   }
 
   /**
-   * PFOS, sepet vb.: sayfa-içi kedi sohbet kartı (wa.me açılmaz).
+   * PFOS, sepet vb.: sayfa-içi kedi sohbet kartı; gönderimde wa.me handoff.
    */
   window.equstoOpenWhatsAppWebWindow = function (phoneDigits, plainText) {
     var phone = digitsOnly(phoneDigits) || equstoResolveWhatsAppDigits();
