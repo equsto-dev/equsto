@@ -318,7 +318,7 @@ export const cafemarktBentoTiles: CafemarktBentoTile[] = [
     title: "Yaz fırsatları",
     subtitle: "Pişirme · soğutma · kahve",
     href: "/shop/pisirme",
-    image: "/images/home/hero-yaz-kafe-bar.jpg",
+    image: "/images/home/hero-yaz-kafe-bar.png",
     imageLayout: "cover",
     bg: "#1a120e",
     variant: "lg",
