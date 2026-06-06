@@ -83,6 +83,9 @@ if (!slider.includes("PfosSketchSlideView")) {
 if (!slider.includes("eq-mx-hero__slide--sketch-only")) {
   fail("HomeMainSlider.tsx: PFOS sketch-only sınıfı yok");
 }
+if (!slider.includes("eq-mx-hero__sketch-caption")) {
+  fail("HomeMainSlider.tsx: PFOS eskiz sol alt caption yok");
+}
 if (!slider.includes("Proje Fabrikası — bar ve mutfak plan eskizi")) {
   fail("HomeMainSlider.tsx: PFOS eskiz alt metni yok");
 }
@@ -92,6 +95,9 @@ if (!mount.includes("eq-home-slider-mount")) fail("HomeMainSliderMount.tsx: moun
 if (!mount.includes("__eqMxReinitHero")) fail("HomeMainSliderMount.tsx: hero reinit yok");
 
 const content = read("lib/home-slider-content.ts");
+if (!content.includes("Projeni/ listeni gönder, fiyatlandıralım")) {
+  fail("home-slider-content.ts: PFOS sketchCaption metni eksik");
+}
 if (!content.includes('path: "/images/pfos/proje-fabrikasi-bar-plan-eskiz.png"')) {
   fail("home-slider-content.ts: bar plan eskiz yolu değişmiş");
 }

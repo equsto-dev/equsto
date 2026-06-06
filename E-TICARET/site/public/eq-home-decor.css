@@ -136,10 +136,16 @@ body.eq-home-decor.eq-home-mutbex .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero
 
 body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__slides {
   aspect-ratio: 1024 / 331;
-  /* PFOS eskiz oranı + split slaytlarda (IMT300) tam ürün görseli için alt sınır */
-  min-height: min(50vh, 500px);
+  min-height: 0;
   max-height: none;
   height: auto;
+}
+
+/* Split slaytlar (IMT300 · XP) daha yüksek kutu ister; PFOS panoramik oranı bozulmasın */
+body.eq-home-decor
+  .eq-mx-vitrin.eq-decor-slider-only
+  .eq-mx-hero__slides:has(.eq-mx-hero__slide--split.is-active) {
+  min-height: min(50vh, 500px);
 }
 
 body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__stage {
@@ -153,7 +159,10 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__stage {
 body.eq-home-decor
   .eq-mx-vitrin.eq-decor-slider-only
   .eq-mx-hero__slide--pfos.eq-mx-hero__slide--sketch-only {
-  display: block !important;
+  display: grid !important;
+  place-items: center;
+  height: 100%;
+  overflow: hidden;
   background-color: #e8dcc8;
 }
 
@@ -161,24 +170,75 @@ body.eq-home-decor
   .eq-mx-vitrin.eq-decor-slider-only
   .eq-mx-hero__slide--pfos.eq-mx-hero__slide--sketch-only
   .eq-mx-hero__slide-media {
-  display: block;
+  position: relative;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   width: 100%;
-  max-width: none;
-  min-width: 0;
   height: 100%;
-  flex: none;
+  min-width: 0;
+  margin: 0;
+  padding: clamp(6px, 1vw, 12px) clamp(44px, 5vw, 52px);
+  box-sizing: border-box;
+  overflow: hidden;
   background: #e8dcc8;
+  text-decoration: none;
+  color: inherit;
 }
 
 body.eq-home-decor
   .eq-mx-vitrin.eq-decor-slider-only
   .eq-mx-hero__slide--pfos.eq-mx-hero__slide--sketch-only
-  .eq-mx-hero__slide-bg {
-  display: block;
+  .eq-mx-hero__sketch-fit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: center center;
+  min-width: 0;
+  min-height: 0;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+body.eq-home-decor
+  .eq-mx-vitrin.eq-decor-slider-only
+  .eq-mx-hero__slide--pfos.eq-mx-hero__slide--sketch-only
+  .eq-mx-hero__slide-bg,
+body.eq-home-decor
+  .eq-mx-vitrin.eq-decor-slider-only
+  .eq-mx-hero__slide--pfos.eq-mx-hero__slide--sketch-only
+  .eq-mx-hero__slide-bg--sketch {
+  position: static !important;
+  inset: auto !important;
+  display: block !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  min-width: 0 !important;
+  margin: 0 auto !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  mix-blend-mode: normal !important;
+}
+
+body.eq-home-decor
+  .eq-mx-vitrin.eq-decor-slider-only
+  .eq-mx-hero__slide--pfos.eq-mx-hero__slide--sketch-only
+  .eq-mx-hero__sketch-caption {
+  position: absolute;
+  left: clamp(14px, 2.2vw, 22px);
+  bottom: clamp(10px, 1.6vw, 16px);
+  z-index: 3;
+  margin: 0;
+  max-width: min(78%, 440px);
+  font-size: 12pt;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.35;
+  color: #3d3428;
+  pointer-events: none;
 }
 
 /* Alt slider — kutu sabit, görseller kırpılmadan contain */
