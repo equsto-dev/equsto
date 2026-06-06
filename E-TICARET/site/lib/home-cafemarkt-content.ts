@@ -21,6 +21,8 @@ export type CafemarktPromoCard = {
   href: string;
   legacyGo?: string;
   image?: string;
+  /** Tek görsel konumu (varsayılan: sağ alt) */
+  imageAnchor?: "bottom-right" | "top-right";
   bg: string;
   textLight?: boolean;
 };
@@ -286,6 +288,10 @@ export type CafemarktBentoTile = {
   legacyGo?: string;
   dept?: string;
   image?: string;
+  /** Tek görsel konumu (varsayılan: sağ alt) */
+  imageAnchor?: "bottom-right" | "top-right";
+  /** cover = kutuyu tamamen doldur */
+  imageLayout?: "contain" | "cover";
   showcase?: readonly { tag: string; image: string }[];
   bg: string;
   badge?: string;
@@ -295,40 +301,17 @@ export type CafemarktBentoTile = {
 
 export const cafemarktBentoTiles: CafemarktBentoTile[] = [
   {
-    id: "atalay",
-    brand: "Atalay",
-    title: "Atalay pişirme serisi",
-    subtitle: "Izgara · fritöz · ocak — Seri 600",
+    id: "bar-vitrin",
+    title: "Bar & mutfak vitrini",
+    subtitle: "Pişirme · yıkama · servis ekipmanları",
     cta: "Keşfet",
-    href: "/shop/pisirme?marka=Atalay",
-    bg: "linear-gradient(135deg, #eef4fb 0%, #e3edf9 55%, #dce8f5 100%)",
-    variant: "sm",
-    showcase: [
-      {
-        tag: "Gazlı plaka",
-        image: "/images/catalog/atalay/cafemarkt/atalay-e-agi---1060.jpg",
-      },
-      {
-        tag: "Elektrikli ızgara",
-        image: "/images/catalog/atalay/cafemarkt/atalay-e-aei---660.jpg",
-      },
-      {
-        tag: "Fritöz",
-        image: "/images/catalog/atalay/cafemarkt/atalay-e-aef---660.jpg",
-      },
-    ],
-  },
-  {
-    id: "yikama",
-    title: "Liva ön yıkama sistemleri",
-    subtitle: "Hijyen hattı",
-    cta: "İncele",
-    href: "/shop/yikama",
-    dept: "yikama",
-    image: "/images/home/hero-yer-sofrasi-bufe.png",
-    bg: "#e3f2fd",
+    href: "/shop/pisirme",
+    image: "/images/home/hero-bar-vitrin.png",
+    imageLayout: "cover",
+    bg: "#4a1024",
     badge: "Aynı gün kargo",
     variant: "tall",
+    textLight: true,
   },
   {
     id: "yaz",
@@ -342,23 +325,18 @@ export const cafemarktBentoTiles: CafemarktBentoTile[] = [
     textLight: true,
   },
   {
-    id: "kahve-silo",
-    title: "Kahve siloları & öğütücüler",
-    cta: "Kahve",
+    id: "kafe-vitrin",
+    title: "Kafe & pastane vitrini",
+    subtitle: "Kahve · hazırlık · vitrin ekipmanları",
+    cta: "Keşfet",
     href: "/shop/kahve",
     dept: "kahve",
-    bg: "#efebe9",
-    variant: "sm",
-  },
-  {
-    id: "gtech",
-    title: "El blender modelleri",
-    cta: "Gtech",
-    href: "/shop/hazirlik?marka=Gtech",
-    image: "/images/pfos/proje-fabrikasi-mutfak-eskiz.png",
-    bg: "#eceff1",
+    image: "/images/home/hero-kafe-pastane-vitrin.png",
+    imageLayout: "cover",
+    bg: "#3e2723",
     badge: "Aynı gün kargo",
     variant: "tall",
+    textLight: true,
   },
   {
     id: "ozti-marka",
