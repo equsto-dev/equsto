@@ -29,6 +29,7 @@
     "catalog:robot-coupe:yuksel": "node scripts/update-robot-coupe-yuksel.mjs",
     "catalog:yuksel:yerli:extract": "python scripts/import-yuksel-yerli-pdf.py",
     "catalog:yuksel:yerli:images": "python scripts/extract-yuksel-yerli-pdf-images.py",
+    "catalog:yuksel:yerli:fix-bg": "python scripts/extract-yuksel-yerli-pdf-images.py --fix-bg",
     "catalog:yuksel:yerli:import": "node scripts/import-yuksel-yerli-to-site.mjs",
     "catalog:yuksel:yerli:patch-images": "node scripts/patch-yuksel-image-paths.mjs",
     "catalog:yuksel:yerli:full": "npm run catalog:yuksel:yerli:extract && npm run catalog:yuksel:yerli:images && npm run catalog:yuksel:yerli:import && npm run catalog:yuksel:yerli:patch-images",
