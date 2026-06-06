@@ -283,7 +283,7 @@ export type CafemarktBentoTile = {
   brand?: string;
   title: string;
   subtitle?: string;
-  cta: string;
+  cta?: string;
   href: string;
   legacyGo?: string;
   dept?: string;
@@ -295,6 +295,8 @@ export type CafemarktBentoTile = {
   showcase?: readonly { tag: string; image: string }[];
   bg: string;
   badge?: string;
+  /** Sağ tarafta eğik tagline (ör. ozti-marka) */
+  tagline?: string;
   variant: "sm" | "lg" | "tall" | "wide";
   textLight?: boolean;
 };
@@ -304,7 +306,6 @@ export const cafemarktBentoTiles: CafemarktBentoTile[] = [
     id: "bar-vitrin",
     title: "Bar & mutfak vitrini",
     subtitle: "Pişirme · yıkama · servis ekipmanları",
-    cta: "Keşfet",
     href: "/shop/pisirme",
     image: "/images/home/hero-bar-vitrin.png",
     imageLayout: "cover",
@@ -316,10 +317,10 @@ export const cafemarktBentoTiles: CafemarktBentoTile[] = [
     id: "yaz",
     title: "Yaz fırsatları",
     subtitle: "Pişirme · soğutma · kahve",
-    cta: "Hemen keşfet",
     href: "/shop/pisirme",
-    image: "/images/home/hero-sogutma-pisirme-combo.jpg",
-    bg: "linear-gradient(145deg, #ffd54f 0%, #ffb300 42%, #0d47a1 100%)",
+    image: "/images/home/hero-yaz-kafe-bar.jpg",
+    imageLayout: "cover",
+    bg: "#1a120e",
     variant: "lg",
     textLight: true,
   },
@@ -327,7 +328,6 @@ export const cafemarktBentoTiles: CafemarktBentoTile[] = [
     id: "kafe-vitrin",
     title: "Kafe & pastane vitrini",
     subtitle: "Kahve · hazırlık · vitrin ekipmanları",
-    cta: "Keşfet",
     href: "/shop/kahve",
     dept: "kahve",
     image: "/images/home/hero-kafe-pastane-vitrin.png",
@@ -340,7 +340,7 @@ export const cafemarktBentoTiles: CafemarktBentoTile[] = [
     id: "ozti-marka",
     title: "Equsto'da avantajlı fiyatlar",
     subtitle: "Su filtrasyon · markalar",
-    cta: "Keşfet",
+    tagline: "Sadece sana özel.... Hayal et.",
     href: "/shop/marka/oztiryakiler",
     bg: "#fff8e1",
     variant: "sm",
