@@ -122,21 +122,48 @@ function dedupe(variants) {
   });
 }
 
+/** PDF'de Length bloğu varsa genişlik listesi (model satırı olmasa bile). */
+export function parseProsoLengthBlock(text) {
+  const m = text.match(/Length\s*\/\s*Uzunluk[\s\S]{0,800}/i);
+  if (!m) return [];
+  const nums = [];
+  const seen = new Set();
+  for (const hit of m[0].matchAll(/\b(625|937|1037|1040|1050|1250|1350|1500|1875|2000|2500|2600|2812|3125|3750|3850)\b/g)) {
+    const n = Number(hit[1]);
+    if (seen.has(n)) continue;
+    seen.add(n);
+    nums.push(n);
+  }
+  return nums;
+}
+
 /**
  * @param {string} text PDF düz metin
  * @param {string} baslik Ürün adı (Falcon, Lion, …)
+ * @param {string} [modelKodOverride] slug map model kodu
  */
-export function extractProsoPdfVariants(text, baslik = "") {
+export function extractProsoPdfVariants(text, baslik = "", modelKodOverride = "") {
   const lengths = parseProsoLengths(text);
+  const lengthBlock = parseProsoLengthBlock(text);
+  const allLengths = [...new Set([...lengths, ...lengthBlock])].sort((a, b) => a - b);
+
   const lines = parseProsoModelLines(text, baslik);
   const base = [];
   for (const line of lines) {
     base.push(...expandProsoModelLine(line));
   }
+
+  if (!base.length && modelKodOverride && allLengths.length) {
+    for (const g of allLengths) {
+      base.push({ modelKod: modelKodOverride, genislik_mm: g, derinlik_mm: 0, yukseklik_mm: 0 });
+    }
+    return dedupe(base);
+  }
+
   if (!base.length) return [];
 
   const variants = [];
-  const lenList = lengths.length ? lengths : [0];
+  const lenList = allLengths.length ? allLengths : lengths.length ? lengths : [0];
   for (const g of lenList) {
     for (const b of base) {
       variants.push({

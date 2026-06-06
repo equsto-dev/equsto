@@ -133,12 +133,122 @@ export function excelFamilyCandidates(row) {
   m = kod.match(/^FALCON\s+DP\/(\d+)\/(\d+)$/i);
   if (m) add(`FALCON DP ${m[1]}/${m[2]}`);
 
+  m = kod.match(/^TIGER\s+800\s+(CG|FG|WFG|IFG)\/CB$/i);
+  if (m) add(`TIGER 800 ${m[1]}/CB - OF`);
+
+  m = kod.match(/^TIGER\s+800\s+DP\/OF$/i);
+  if (m) add("TIGER 800 DP/OF");
+
+  m = kod.match(/^WHALE\s+G50\/150$/i);
+  if (m) {
+    add("WHALE G50/150 DOUBLE");
+    add("WHALE G50/200 DOUBLE");
+  }
+
+  m = kod.match(/^CRAB\s+(\d+\/\d+)(?:\s+SLD)?$/i);
+  if (m) {
+    add(`CRAB ${m[1]}`);
+    if (/SLD/i.test(kod)) add(`CRAB ${m[1]} SLD`);
+  }
+
+  m = kod.match(/^SPIDER\s+(\d+\/\d+)(?:\s+SLD)?$/i);
+  if (m) {
+    add(`SPIDER ${m[1]}`);
+    if (/SLD/i.test(kod)) add(`SPIDER ${m[1]} SLD`);
+  }
+
+  m = kod.match(/^([A-Z]+)\s+DP\s+(\d+\/\d+)(?:\s+(SGD|DGD|LGD|PGD))?$/i);
+  if (m) {
+    const [, brand, dims, suffix] = m;
+    add(`${brand} DP ${dims}${suffix ? ` ${suffix}` : ""}`);
+  }
+
+  m = kod.match(/^PUMA\s+DP\s+(\d+\/\d+)(?:\s+(SGD|DGD))?$/i);
+  if (m) add(`PUMA DP ${m[1]}${m[2] ? ` ${m[2]}` : ""}`);
+
+  if (/^COBRA\s+TOWER/i.test(kod)) add("COBRA TOWER 800-900 FG/CB-OF UPRIGHT");
+  m = kod.match(/^COBRA\s+800\s+FG\/CB$/i);
+  if (m) add("COBRA 800-900 FG/CB-OF");
+
+  m = kod.match(/^RHINO\s+(\d+\/\d+)$/i);
+  if (m) add(`RHINO ${m[1]}`);
+
+  if (/^QUOKKA$/i.test(kod)) add("QUOKKA");
+
+  m = kod.match(/^KANGAROO\s+800\s+CG\/CB$/i);
+  if (m) add("KANGAROO 800 CG/CB");
+
+  m = kod.match(/^LEOPARD\s+800\s+FG\/CB$/i);
+  if (m) add("LEOPARD 800 FG/CB");
+
+  m = kod.match(/^OCTOPUS\s+110(?:\s+SLD)?$/i);
+  if (m) add(/SLD/i.test(kod) ? "OCTOPUS 110 SLD" : "OCTOPUS 110");
+
+  m = kod.match(/^SCORPION\s+(\d+\/\d+)/i);
+  if (m) {
+    for (const d of ["1D", "2D", "3D", "4D"]) add(`SCORPION ${m[1]} ${d} UPRIGHT`);
+  }
+
+  m = kod.match(/^PHOENIX\s+DP\s+(\d+)\/(\d+)$/i);
+  if (m) add(`PHOENIX DP 75-90/${m[2]}`);
+
+  m = kod.match(/^(DOLPHIN\s+(?:IS|WA)\s+G\d+\/\d+(?:\s+SINGLE)?)/i);
+  if (m) add(m[1].replace(/\s+SINGLE$/i, " SINGLE"));
+
+  m = kod.match(/^DRAGON\s+(\d+\/\d+)/i);
+  if (m) {
+    for (const d of ["2D", "3D", "4D", "5D"]) add(`DRAGON ${m[1]} ${d}`);
+  }
+
+  m = kod.match(/^FOX\s+(\d+\/\d+)/i);
+  if (m) add(`FOX ${m[1]} PI`);
+
+  m = kod.match(/^IGUANA\s+(\d+\/\d+)/i);
+  if (m) {
+    for (const d of ["2D", "3D", "4D"]) add(`IGUANA ${m[1]} ${d}`);
+  }
+
+  m = kod.match(/^RABBIT\s+PR\/PR\s+(\d+\/\d+)/i);
+  if (m) add(`RABBIT PR/PR ${m[1]}`);
+
+  m = kod.match(/^FIREFLY\s+(PR|PN|BR)\s+(\d+\/\d+)/i);
+  if (m) add(`FIREFLY ${m[1]} ${m[2]}`);
+
+  m = kod.match(/^BUTTERFLY\s+(PR|PN|BA|BM|BR|HP|SB|SP)\s+(\d+\/\d+)/i);
+  if (m) {
+    const [, t, dims] = m;
+    const suffix = {
+      BA: " BAIN-MARIE TYPE HEATED HOT MEAL",
+      BM: " BAIN-MARIE TYPE HEATED HOT MEAL",
+      BR: " NEUTRAL BREAD",
+      HP: " DRY HOT PLATE HEATED",
+    }[t.toUpperCase()];
+    add(`BUTTERFLY ${t} ${dims}${suffix || ""}`);
+  }
+
+  m = kod.match(/^BUTTERFLY\s+DP\/SS\s+(\d+\/\d+)/i);
+  if (m) add(`BUTTERFLY DP/SS ${m[1]}`);
+
+  m = kod.match(/^BUTTERFLY\s+MFT\s+PR\s+(\d+\/\d+)/i);
+  if (m) add(`BUTTERFLY MFT PR ${m[1]}`);
+
   if (sld && !kod.includes("SLD")) {
     const base = kod.replace(/^([A-Z]+)\s+/, "");
     if (base) add(`${kod.split(/\s+/)[0]} ${base} SLD`);
   }
 
+  const slugFam = row.prosoExcelFam;
+  if (Array.isArray(slugFam)) slugFam.forEach((f) => add(f));
+
   return [...out];
+}
+
+function rowWidth(row) {
+  const { w } = parseRowDims(row);
+  if (w) return w;
+  const dw = Number(row.prosoDefaultWidth);
+  if (Number.isFinite(dw) && dw > 0) return dw;
+  return 0;
 }
 
 function widthCandidates(w) {
@@ -154,7 +264,7 @@ function widthCandidates(w) {
 
 export function lookupProsoListPrice(index, row) {
   if (!row.prosoModelKod) return null;
-  const { w } = parseRowDims(row);
+  const w = rowWidth(row);
   if (!w) return null;
 
   const cands = excelFamilyCandidates(row);
