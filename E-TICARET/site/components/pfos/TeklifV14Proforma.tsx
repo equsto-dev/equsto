@@ -1,7 +1,7 @@
 "use client";
 
-import { DownloadOutlined, PrinterOutlined } from "@ant-design/icons";
-import { Button, Collapse, Typography } from "antd";
+import { DownloadOutlined, PrinterOutlined, SendOutlined } from "@ant-design/icons";
+import { Button, Collapse, Form, Input, Modal, Typography, message } from "antd";
 import { Fragment, useState, type CSSProperties } from "react";
 import type { TeklifModelV14 } from "@/lib/pfos/teklif/teklif-v14.types";
 import { groupTeklifV14Satirlar } from "@/lib/pfos/teklif/group-v14-bolumler";
@@ -31,6 +31,14 @@ const COLS = [
 
 export default function TeklifV14Proforma({ model }: Props) {
   const [exporting, setExporting] = useState(false);
+  const [sendOpen, setSendOpen] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [form] = Form.useForm<{
+    ad: string;
+    telefon: string;
+    eposta?: string;
+    not?: string;
+  }>();
   const { ust, ozet, meta } = model;
   const blocks = groupTeklifV14Satirlar(model.satirlar);
   const tarih = formatTarihTr(ust.tarih);
@@ -44,6 +52,91 @@ export default function TeklifV14Proforma({ model }: Props) {
       alert("Excel dosyası oluşturulamadı. Şablon yüklendi mi kontrol edin.");
     } finally {
       setExporting(false);
+    }
+  }
+
+  function openSendModal() {
+    form.setFieldsValue({
+      ad: ust.musteri?.trim() || "",
+      telefon: "",
+      eposta: "",
+      not: "",
+    });
+    setSendOpen(true);
+  }
+
+  async function handleSend(values: {
+    ad: string;
+    telefon: string;
+    eposta?: string;
+    not?: string;
+  }) {
+    setSending(true);
+    try {
+      const eurTry = ust.eurTry ?? 0;
+      const genelEur = ozet.genelToplam ?? 0;
+      const toplamTl =
+        eurTry > 0 && genelEur > 0
+          ? Math.round(genelEur * eurTry)
+          : Math.round(genelEur);
+
+      const res = await fetch("/api/teklifler", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          musteri: {
+            ad: values.ad.trim(),
+            telefon: values.telefon.trim(),
+            eposta: (values.eposta || "").trim(),
+          },
+          not: (values.not || "").trim(),
+          konsept: meta.konseptLabel || meta.konsept,
+          proje: {
+            konsept: meta.konsept,
+            alan_m2: meta.m2Toplam,
+            sehir: meta.sehir,
+          },
+          tahmini_toplam_tl: toplamTl,
+          kalemler: model.satirlar,
+          kaynak: "pfos-v14",
+          teklif_sayi: ust.sayi,
+        }),
+      });
+      const json = (await res.json()) as {
+        success?: boolean;
+        error?: string;
+        data?: { ref_no?: string; id?: string };
+      };
+      if (!res.ok || !json.success) {
+        throw new Error(json.error || "Teklif gönderilemedi");
+      }
+      const refNo = json.data?.ref_no || json.data?.id || "";
+      const w = window as Window & {
+        equstoTrackConversion?: (
+          type: string,
+          params?: Record<string, unknown>,
+        ) => void;
+      };
+      try {
+        w.equstoTrackConversion?.("quote", {
+          kaynak: "pfos-v14",
+          ref_no: refNo,
+          teklif: ust.sayi,
+        });
+      } catch {
+        /* analytics optional */
+      }
+      message.success(
+        refNo
+          ? `Teklifiniz alındı. Referans: ${refNo}`
+          : "Teklifiniz alındı. Ekibimiz en kısa sürede dönüş yapacak.",
+      );
+      setSendOpen(false);
+      form.resetFields();
+    } catch (e) {
+      message.error(e instanceof Error ? e.message : "Teklif gönderilemedi");
+    } finally {
+      setSending(false);
     }
   }
 
@@ -227,6 +320,12 @@ export default function TeklifV14Proforma({ model }: Props) {
       >
         <Button
           type="primary"
+          icon={<SendOutlined />}
+          onClick={openSendModal}
+        >
+          Teklifi Equsto&apos;ya gönder
+        </Button>
+        <Button
           icon={<DownloadOutlined />}
           loading={exporting}
           onClick={handleExport}
@@ -258,6 +357,43 @@ export default function TeklifV14Proforma({ model }: Props) {
           },
         ]}
       />
+
+      <Modal
+        title="Teklifi Equsto'ya gönder"
+        open={sendOpen}
+        onCancel={() => setSendOpen(false)}
+        footer={null}
+        destroyOnClose
+      >
+        <Typography.Paragraph type="secondary" style={{ marginBottom: 16 }}>
+          Bilgileriniz satış ekibimize iletilir; PFOS teklif listeniz kayda alınır.
+        </Typography.Paragraph>
+        <Form form={form} layout="vertical" onFinish={handleSend}>
+          <Form.Item
+            name="ad"
+            label="Ad Soyad"
+            rules={[{ required: true, message: "Ad gerekli" }]}
+          >
+            <Input autoComplete="name" />
+          </Form.Item>
+          <Form.Item
+            name="telefon"
+            label="Telefon"
+            rules={[{ required: true, message: "Telefon gerekli" }]}
+          >
+            <Input placeholder="0532…" autoComplete="tel" />
+          </Form.Item>
+          <Form.Item name="eposta" label="E-posta">
+            <Input type="email" autoComplete="email" />
+          </Form.Item>
+          <Form.Item name="not" label="Not (opsiyonel)">
+            <Input.TextArea rows={2} />
+          </Form.Item>
+          <Button type="primary" htmlType="submit" loading={sending} block>
+            Gönder
+          </Button>
+        </Form>
+      </Modal>
     </div>
   );
 }

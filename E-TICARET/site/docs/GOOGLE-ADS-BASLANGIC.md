@@ -1,7 +1,7 @@
 # Google reklam — sıfırdan başlangıç notu
 
 **Tarih:** 2026-06-02  
-**Durum:** Adım 1 tamamlandı (GA4). Adım 2 bekliyor (kodu siteye bağlama).  
+**Durum:** Adım 2 tamamlandı (GA4 canlı, Gerçek zamanlı doğrulandı). Sırada Adım 3 (Google Ads bağlantısı).  
 **Kullanıcı notu:** Bilgi sıfır — her adım tane tane, ekran ekran anlatılacak.
 
 ### Kayıtlar
@@ -103,7 +103,7 @@ Mağaza, Performance Max, Merchant Center → **çok sonra**; şimdilik düşün
 - Ekran görüntüsü / «şu butona tıkla» tarzı yönlendirme
 - Sen «tamam» demeden sonraki adıma geçmeyiz
 
-**Sıradaki adım:** Adım 2 — `G-MVRNFQC4PQ` kodunu Vercel'e yaz, deploy et, Analytics'te veri geldi mi kontrol et.
+**Sıradaki adım:** Adım 3 — Google Ads hesabını Analytics'e bağla, «teklif gönderildi» dönüşümünü tanımla (henüz para ekleme).
 
 ---
 
