@@ -28,7 +28,6 @@ export default function GeoLandingPage({ children, hasSsr }: Props) {
         </div>
       </VitrinShell>
       <Script src={`/eq-geo-landing.js?v=${v}`} strategy="afterInteractive" />
-      <Script src="/eq-analytics.js" strategy="lazyOnload" />
     </>
   );
 }

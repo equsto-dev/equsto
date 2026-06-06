@@ -397,11 +397,29 @@ function pfosCanLivePreview() {
   return false;
 }
 
+function pfosTeklifLoadingHtml(label) {
+  var txt = escHtml(String(label || 'Teklif hesaplanıyor…'));
+  return (
+    '<div class="pfos-teklif-loading" role="status" aria-live="polite">' +
+    '<div class="pfos-teklif-loading__graphic" aria-hidden="true">' +
+    '<span class="pfos-teklif-loading__hinge"><span class="pfos-teklif-loading__line"></span></span>' +
+    '<span class="pfos-teklif-loading__hinge pfos-teklif-loading__hinge--mid"><span class="pfos-teklif-loading__line"></span></span>' +
+    '<span class="pfos-teklif-loading__hinge pfos-teklif-loading__hinge--short"><span class="pfos-teklif-loading__line"></span></span>' +
+    '</div>' +
+    '<span class="pfos-teklif-loading__label">' + txt + '</span></div>'
+  );
+}
+
 function pfosSetLiveStatus(msg, busy) {
   const bar = document.getElementById('pfos-live-status');
   if (bar) {
-    bar.textContent = msg || '';
-    bar.classList.toggle('pfos-live-status--busy', !!busy);
+    if (busy) {
+      bar.innerHTML = pfosTeklifLoadingHtml(msg || 'Teklif hesaplanıyor…');
+      bar.classList.add('pfos-live-status--busy');
+    } else {
+      bar.textContent = msg || '';
+      bar.classList.remove('pfos-live-status--busy');
+    }
   }
 }
 
@@ -569,7 +587,11 @@ async function pfosRunLiveRecalc(){
     pfosAgentChatRender(chat, !!typing);
     if(text){
       document.getElementById('tablo-status').textContent= role==='user'?'Seçimleriniz alındı':String(text).replace(/\*\*/g,'');
-      pfosSetLiveStatus(String(text).replace(/\*\*/g,''), !!typing);
+      if (typing) {
+        pfosSetLiveStatus('Teklif hesaplanıyor…', true);
+      } else {
+        pfosSetLiveStatus(String(text).replace(/\*\*/g,''), false);
+      }
     }
     if(typing) await pfosYieldUi();
     return gen===__pfosLiveGen;
@@ -3070,6 +3092,11 @@ function teklifGonder(){
         return;
       }
       const no=(res.j.data && (res.j.data.ref_no||res.j.data.id))||'';
+      try {
+        if (typeof window.equstoTrackConversion === 'function') {
+          window.equstoTrackConversion('quote', { kaynak: 'pfos', ref_no: no });
+        }
+      } catch (_) {}
       pfModalAc('Teklifiniz alındı','Referans: '+(no||'-')+'. Ekibimiz en kısa sürede sizinle iletişime geçecek.',true);
     })
     .catch(function(e){

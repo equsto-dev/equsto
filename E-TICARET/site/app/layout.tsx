@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import GlobalSiteJsonLd from "@/components/seo/GlobalSiteJsonLd";
 import SiteDiscoveryFaqJsonLd from "@/components/seo/SiteDiscoveryFaqJsonLd";
+import AnalyticsScripts from "@/components/seo/AnalyticsScripts";
 import { SHOP_ASSET_V } from "@/lib/shop/assets";
 import "./globals.css";
 
@@ -45,6 +46,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
+        <AnalyticsScripts />
         {/* eslint-disable-next-line @next/next/no-css-tags */}
         <link rel="stylesheet" href={`/eq-mobile.css?v=${SHOP_ASSET_V}`} />
         <GlobalSiteJsonLd />

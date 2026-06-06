@@ -2083,6 +2083,15 @@
           return;
         }
         var no = (res.j.data && (res.j.data.siparis_no || res.j.data.id)) || '';
+        try {
+          if (typeof window.equstoTrackConversion === 'function') {
+            window.equstoTrackConversion('order', {
+              kaynak: 'web-sepet',
+              value: finalToplam,
+              currency: 'TRY',
+            });
+          }
+        } catch (_) {}
         toast(__cartT('cart.order_received', 'Sipariş alındı') + (no ? ' (' + no + ')' : ''));
         clearAll();
         dismissCartUi();
