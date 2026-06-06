@@ -1,4 +1,9 @@
 import type { Musteri, Siparis } from "@/lib/prisma";
+import {
+  sendWhatsAppText,
+  whatsAppNotifyTo,
+  whatsAppSendConfigured,
+} from "@/lib/whatsapp";
 
 function env(name: string): string {
   return process.env[name]?.trim() || "";
@@ -136,6 +141,18 @@ export async function sendInstantAlert(
     skipped.push("sms");
   }
 
+  if (whatsAppSendConfigured() && whatsAppNotifyTo()) {
+    try {
+      const wa = await sendWhatsAppText(whatsAppNotifyTo(), text.slice(0, 4096));
+      if (wa.ok) sent.push("whatsapp");
+      else errors.push(`whatsapp: ${wa.error || "send failed"}`);
+    } catch (e) {
+      errors.push(`whatsapp: ${e instanceof Error ? e.message : String(e)}`);
+    }
+  } else {
+    skipped.push("whatsapp");
+  }
+
   return { sent, skipped, errors };
 }
 
@@ -190,6 +207,7 @@ export function notifyChannelsConfigured(): string[] {
   ) {
     out.push("sms");
   }
+  if (whatsAppSendConfigured() && whatsAppNotifyTo()) out.push("whatsapp");
   return out;
 }
 
