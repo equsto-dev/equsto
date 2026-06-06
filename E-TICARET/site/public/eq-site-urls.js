@@ -831,7 +831,8 @@
     "7919.47NTV.T1": "7919.47NTV.24",
     "7919.37NTV.T1": "7919.37NTV.24",
     "9805.IM240D.NHC": "9805.IM240X.NHC",
-    "9805.00IMD.00": "9805.IM45N.EHC"
+    "9805.00IMD.00": "9805.IM45N.EHC",
+    "7890.12901.51": "7890.12901.55"
   };
 
   function oztiResolveAxKod(k) {
@@ -1224,6 +1225,15 @@
     );
   }
 
+  /** Robot Coupe PLP — yerel yol S3'te yok; witcdn dosya adı (-O.jpg büyük O). */
+  function robotCoupeCafemarktWitCdn(s) {
+    var t = String(s || "").trim().replace(/\\/g, "/");
+    var m = t.match(/\/robot-coupe\/cafemarkt\/([^/?#]+)$/i);
+    if (!m) return "";
+    var fname = m[1].replace(/-o\.jpg$/i, "-O.jpg");
+    return "https://witcdn.cafemarkt.com/" + fname;
+  }
+
   window.eqProductImgSrc = function (p) {
     if (p == null || p === "") return "";
     var s = String(p).trim().replace(/\\/g, "/");
@@ -1231,6 +1241,8 @@
     var istifFb = ozti8897PolipropilenFallbackRel(s);
     if (istifFb) s = istifFb;
     if (/^https?:\/\//i.test(s)) return s;
+    var rcWit = robotCoupeCafemarktWitCdn(s);
+    if (rcWit) return rcWit;
     if (/^images\/catalog\/ozti\/cafemarkt\//i.test(s)) {
       var axCafe = oztiAxFallbackFromRel(s);
       if (axCafe) return axCafe;

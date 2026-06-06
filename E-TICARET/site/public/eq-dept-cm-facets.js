@@ -177,6 +177,7 @@
     unox: 'Unox',
     rational: 'Rational',
     santos: 'SANTOS',
+    'robot coupe': 'Robot Coupe',
   };
   /** Kısa önekler yalnızca ad başında; uzun markalar ad içinde de aranır. */
   var OEM_WORD_BOUNDARY_MIN = 4;
@@ -224,7 +225,11 @@
   }
 
   function facetBrandKey(brand) {
-    return canonicalFacetBrand(brand) || String(brand || '').trim();
+    var b = canonicalFacetBrand(brand) || String(brand || '').trim();
+    if (!b) return '';
+    var canon = OEM_LABEL_CANON[lc(b)];
+    if (canon) return canon;
+    return b;
   }
 
   /** Tek marka seçiliyken kategori etiketinden marka önekini düşür (ör. «Proso Sütlükler» → «Sütlükler»). */
@@ -290,18 +295,21 @@
     return '';
   }
 
-  function resolveFacetBrand(brand, name, sku) {
+  function resolveFacetBrand(brand, name, sku, oemBrand) {
     var raw = String(brand || '').trim();
     if (!raw) return '';
     var n = String(name || '').trim();
     var kod = String(sku || '').trim();
-    if (OEM_RESELLER.test(lc(raw)) && (n || kod)) {
+    var oemField = String(oemBrand || '').trim();
+    if (OEM_RESELLER.test(lc(raw)) && (n || kod || oemField)) {
       if (/^9912\.|^9805\.(SDE|SV|SPN)/i.test(kod) && /\bSIMAG\b/i.test(n.toLocaleUpperCase('tr'))) return 'SIMAG';
       var oem = findOemBrandInName(n);
       if (oem) return facetBrandKey(oem);
+      if (oemField) return facetBrandKey(normalizeOemLabel(oemField));
       if (/^5RRX\./i.test(kod)) return 'Rational';
+      return facetBrandKey(raw);
     }
-    return facetBrandKey(raw);
+    return facetBrandKey(normalizeOemLabel(raw) || raw);
   }
 
   function productBrand(u) {
@@ -312,7 +320,8 @@
     var fb = String((u.fb || '')).trim();
     if (fb) return facetBrandKey(fb);
     var sku = u.raw && (u.raw.sku || u.raw.urun_kodu || u.raw.model);
-    return facetBrandKey(resolveFacetBrand(u.b, u.n, sku));
+    var oem = u.raw && u.raw.oem_brand;
+    return facetBrandKey(resolveFacetBrand(u.b, u.n, sku, oem));
   }
 
   function matchEnergy(u, energyId) {
