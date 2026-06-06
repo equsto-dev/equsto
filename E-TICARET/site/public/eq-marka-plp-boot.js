@@ -150,7 +150,15 @@
           catDesc: total ? total + " ürün" : "",
           plpMode: true,
           productPredicate: predicate,
-          productSorter: brandProductSorter,
+          productSorter: slug === "robot-coupe" ? null : brandProductSorter,
+          productSortList:
+            slug === "robot-coupe" &&
+            window.EqDeptTips &&
+            typeof window.EqDeptTips.sortRobotCoupeProducts === "function"
+              ? function (list) {
+                  return window.EqDeptTips.sortRobotCoupeProducts(list, "marka-robot-coupe");
+                }
+              : null,
           catalogLoader:
             window.EqustoShopCatalog && typeof window.EqustoShopCatalog.loadMergedCatalog === "function"
               ? window.EqustoShopCatalog.loadMergedCatalog.bind(window.EqustoShopCatalog)

@@ -97,6 +97,8 @@
     var tiles = plpMode ? [] : Array.isArray(opts.tiles) ? opts.tiles : [];
     var productSorter =
       typeof opts.productSorter === "function" ? opts.productSorter : null;
+    var productSortList =
+      typeof opts.productSortList === "function" ? opts.productSortList : null;
 
     var state = {
       active: plpMode ? "" : tiles.length ? String(tiles[0].slug || "") : "",
@@ -109,7 +111,8 @@
       if (!plpMode && state.active) {
         out = out.filter(function (x) { return String(x.category || "") === state.active; });
       }
-      if (productSorter) out.sort(productSorter);
+      if (productSortList) out = productSortList(out);
+      else if (productSorter) out.sort(productSorter);
       return out;
     }
 
