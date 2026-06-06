@@ -33,17 +33,15 @@ function PfosSketchSlideView({
   return (
     <div key={slide.id} className={`${activeClass} eq-mx-hero__slide--sketch-only`}>
       <a className="eq-mx-hero__slide-media" href={slide.href}>
-        <span className="eq-mx-hero__sketch-fit">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            className="eq-mx-hero__slide-bg eq-mx-hero__slide-bg--sketch"
-            src={publicAssetUrl(slide.image.path)}
-            alt="Proje Fabrikası — bar ve mutfak plan eskizi"
-            width={slide.image.width}
-            height={slide.image.height}
-            decoding="async"
-          />
-        </span>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          className="eq-mx-hero__slide-bg eq-mx-hero__slide-bg--sketch"
+          src={publicAssetUrl(slide.image.path)}
+          alt="Proje Fabrikası — bar ve mutfak plan eskizi"
+          width={slide.image.width}
+          height={slide.image.height}
+          decoding="async"
+        />
         {slide.sketchCaption ? (
           <p className="eq-mx-hero__sketch-caption">
             <span className="eq-mx-hero__sketch-caption-inner">

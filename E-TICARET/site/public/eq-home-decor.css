@@ -159,8 +159,8 @@ body.eq-home-decor .eq-mx-vitrin.eq-decor-slider-only .eq-mx-hero__stage {
 body.eq-home-decor
   .eq-mx-vitrin.eq-decor-slider-only
   .eq-mx-hero__slide--pfos.eq-mx-hero__slide--sketch-only {
-  display: grid !important;
-  place-items: center;
+  display: block !important;
+  width: 100%;
   height: 100%;
   overflow: hidden;
   background-color: #e8dcc8;
@@ -171,14 +171,13 @@ body.eq-home-decor
   .eq-mx-hero__slide--pfos.eq-mx-hero__slide--sketch-only
   .eq-mx-hero__slide-media {
   position: relative;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
+  display: block !important;
   width: 100%;
   height: 100%;
   min-width: 0;
+  min-height: 0;
   margin: 0;
-  padding: clamp(6px, 1vw, 12px) clamp(44px, 5vw, 52px);
+  padding: 0 !important;
   box-sizing: border-box;
   overflow: hidden;
   background: #e8dcc8;
@@ -189,16 +188,21 @@ body.eq-home-decor
 body.eq-home-decor
   .eq-mx-vitrin.eq-decor-slider-only
   .eq-mx-hero__slide--pfos.eq-mx-hero__slide--sketch-only
-  .eq-mx-hero__sketch-fit {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  min-width: 0;
-  min-height: 0;
-  max-width: 100%;
-  max-height: 100%;
+  .eq-mx-hero__slide-media::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 42%;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    to top,
+    rgba(232, 220, 200, 0.82) 0%,
+    rgba(232, 220, 200, 0.28) 52%,
+    transparent 100%
+  );
 }
 
 body.eq-home-decor
@@ -209,18 +213,19 @@ body.eq-home-decor
   .eq-mx-vitrin.eq-decor-slider-only
   .eq-mx-hero__slide--pfos.eq-mx-hero__slide--sketch-only
   .eq-mx-hero__slide-bg--sketch {
-  position: static !important;
-  inset: auto !important;
+  position: absolute !important;
+  inset: 0 !important;
   display: block !important;
-  width: auto !important;
-  height: auto !important;
-  max-width: 100% !important;
-  max-height: 100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
   min-width: 0 !important;
-  margin: 0 auto !important;
+  margin: 0 !important;
   object-fit: contain !important;
   object-position: center center !important;
   mix-blend-mode: normal !important;
+  z-index: 0;
 }
 
 body.eq-home-decor
@@ -228,11 +233,11 @@ body.eq-home-decor
   .eq-mx-hero__slide--pfos.eq-mx-hero__slide--sketch-only
   .eq-mx-hero__sketch-caption {
   position: absolute;
-  left: clamp(12px, 2vw, 20px);
-  bottom: clamp(8px, 1.4vw, 14px);
+  left: clamp(14px, 2.4vw, 24px);
+  bottom: clamp(10px, 1.8vw, 18px);
   z-index: 3;
   margin: 0;
-  max-width: min(82%, 480px);
+  max-width: min(88%, 520px);
   pointer-events: none;
 }
 
@@ -248,8 +253,8 @@ body.eq-home-decor
   border-radius: 10px;
   background: linear-gradient(
     135deg,
-    rgba(255, 252, 245, 0.94) 0%,
-    rgba(255, 246, 228, 0.9) 100%
+    rgba(255, 252, 245, 0.78) 0%,
+    rgba(255, 246, 228, 0.72) 100%
   );
   border: 1px solid rgba(122, 79, 30, 0.28);
   box-shadow:
