@@ -182,14 +182,27 @@ function fallbackSkus(sku) {
   out.add(ttNorm.replace(/-1D/, "-2D"));
   out.add(s.replace(/^TT[KCGMRXTS]+-/, "TT-"));
   out.add(s.replace(/^ASBH/, "SBH"));
+  out.add(s.replace(/^ASBHD/, "SBHD"));
+  out.add(s.replace(/^ASBHG/, "SBHG"));
+  out.add(s.replace(/^SBHDG/, "SBH"));
+  out.add(s.replace(/^SBHD/, "SBH"));
+  out.add(s.replace(/^ASBHDG/, "SBH"));
+  out.add(s.replace(/^ASBHD/, "SBH"));
+  out.add(s.replace(/^ASBHK/, "SBH"));
+  out.add(s.replace(/^ASBHKG-3N7$/, "SBH-3N70"));
+  out.add(s.replace(/^ASBHKG-3N7$/, "SBHKG-3N70"));
   out.add(s.replace(/^MSBH/, "SBH"));
+  out.add(s.replace(/^MSBHG/, "SBHG"));
   out.add(s.replace(/^SBTM/, "SBM"));
   out.add(s.replace(/^SBTP/, "SBT"));
   out.add(s.replace(/^SBHK/, "SBH"));
   out.add(s.replace(/^SBHKG/, "SBH"));
   out.add(s.replace(/^CAM-/, "CA-"));
   out.add(s.replace(/^DTT-2/, "DTT-1"));
-  if (/^SB[THM]G/.test(s)) out.add(s.replace(/^SB([THM])G/, "SB$1-"));
+  out.add(s.replace(/^SBHG/, "SBH"));
+  out.add(s.replace(/^ASBHG/, "SBH"));
+  out.add(s.replace(/^MSBHG/, "SBH"));
+  out.add(s.replace(/^ASBHKG/, "SBH"));
   if (/^DT\d+-/.test(s)) {
     out.add(s.replace(/^DT\d+-/, "DT-2").replace(/EKO.*$/i, ""));
     out.add("DT-2NGN");

@@ -1291,13 +1291,27 @@
     add(ttNorm.replace(/-1D/, "-2D"));
     add(s.replace(/^TT[KCGMRXTS]+-/, "TT-"));
     add(s.replace(/^ASBH/, "SBH"));
+    add(s.replace(/^ASBHD/, "SBHD"));
+    add(s.replace(/^ASBHG/, "SBHG"));
+    add(s.replace(/^SBHDG/, "SBH"));
+    add(s.replace(/^SBHD/, "SBH"));
+    add(s.replace(/^ASBHDG/, "SBH"));
+    add(s.replace(/^ASBHD/, "SBH"));
+    add(s.replace(/^ASBHK/, "SBH"));
+    add(s.replace(/^ASBHKG-3N7$/, "SBH-3N70"));
+    add(s.replace(/^ASBHKG-3N7$/, "SBHKG-3N70"));
     add(s.replace(/^MSBH/, "SBH"));
+    add(s.replace(/^MSBHG/, "SBHG"));
     add(s.replace(/^SBTM/, "SBM"));
     add(s.replace(/^SBTP/, "SBT"));
     add(s.replace(/^SBHK/, "SBH"));
     add(s.replace(/^SBHKG/, "SBH"));
     add(s.replace(/^CAM-/, "CA-"));
     add(s.replace(/^DTT-2/, "DTT-1"));
+    add(s.replace(/^SBHG/, "SBH"));
+    add(s.replace(/^ASBHG/, "SBH"));
+    add(s.replace(/^MSBHG/, "SBH"));
+    add(s.replace(/^ASBHKG/, "SBH"));
     if (/^SB[THM]G/.test(s)) add(s.replace(/^SB([THM])G/, "SB$1-"));
     if (/^DT\d+-/.test(s)) {
       add(s.replace(/^DT\d+-/, "DT-2").replace(/EKO.*$/i, ""));
