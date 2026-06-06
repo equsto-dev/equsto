@@ -9,6 +9,7 @@ import {
   isQuoteOnlyProduct,
   resolveMerchantPriceTry,
 } from "@/lib/google-merchant-feed";
+import { sortYikamaCatalogRows } from "@/lib/shop/yikama-plp-order";
 import { resolveShopDept } from "@/lib/shop/category-dept";
 import { SHOP_DEPTS, isShopDeptSlug, type ShopDeptSlug } from "@/lib/shop/depts";
 import type { Metadata } from "next";
@@ -188,8 +189,14 @@ export async function getDeptCrawlLinks(
   limit = 120,
 ): Promise<{ href: string; label: string }[]> {
   const fileDept = urlDeptToFileDept(dept);
-  const rows = await readJsonFile<CatalogRow[]>(dataRel("dept", `${fileDept}.json`));
+  let rows = await readJsonFile<CatalogRow[]>(dataRel("dept", `${fileDept}.json`));
   if (!Array.isArray(rows)) return [];
+
+  if (dept === "yikama") {
+    rows = sortYikamaCatalogRows(
+      rows.filter((row) => row && resolveShopDept(row) === dept),
+    );
+  }
 
   const out: { href: string; label: string }[] = [];
   const seen = new Set<string>();

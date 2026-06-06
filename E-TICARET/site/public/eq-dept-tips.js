@@ -75,7 +75,6 @@
       search: "kahve süt pot|kahve sut pot|8534|süt potu|sut potu",
     },
     { tip: "turk-kahve", dept: "kahve", label: "Türk Kahve Makineleri", search: "türk|turk|cezve" },
-    { tip: "bardak-yikama", dept: "yikama", label: "Bardak Yıkama Makineleri", search: "bardak yıkama|bardak yikama|oby 35|oby 40|073m|074m" },
     {
       tip: "bulasik-makineleri",
       dept: "yikama",
@@ -83,12 +82,23 @@
       search:
         "oky|ux10|fx10|amx|9710|071t|075t|076r|076l|072r|077r|07al|07ar|obm|oby 50|oby 500|otomatik yikama|hobart",
     },
-    { tip: "setalti-bulasik", dept: "yikama", label: "Setaltı Bulaşık Makineleri", search: "setaltı|set altı|tezgah altı|undercounter|075t|oby 50" },
-    { tip: "giyotin-bulasik", dept: "yikama", label: "Giyotin Tip Bulaşık Makineleri", search: "giyotin|hood type|071t|obm" },
+    {
+      tip: "setalti-bulasik",
+      dept: "yikama",
+      label: "Setaltı Bulaşık Makineleri (500 tabak/s)",
+      search: "setaltı|set altı|tezgah altı|undercounter|075t|oby 50|500 tabak|500 tb",
+    },
+    {
+      tip: "giyotin-bulasik",
+      dept: "yikama",
+      label: "Giyotin Tip Bulaşık Makineleri (1000 tabak/s)",
+      search: "giyotin|hood type|071t|obm|1080|1000 tabak|1000 tb",
+    },
+    { tip: "bardak-yikama", dept: "yikama", label: "Bardak Yıkama Makineleri", search: "bardak yıkama|bardak yikama|oby 35|oby 40|073m|074m" },
     { tip: "konveyorlu-bulasik", dept: "yikama", label: "Konveyörlü Bulaşık Makineleri", search: "konveyör|konveyor|tunnel|konveyörlü|076r|076l|072r|072l|077r|077l" },
     { tip: "flight-bulasik", dept: "yikama", label: "Flight Tip Bulaşık Makineleri", search: "flight tip|07al|07ar|07bl|07br|07cl|07cr|07el|07er|07fl|07fr" },
     { tip: "tirnakli-bulasik", dept: "yikama", label: "Tırnaklı Bulaşık Makineleri", search: "tırnaklı|tirnakli|rack" },
-    { tip: "kazan-yikama", dept: "yikama", label: "Kazan Yıkama Makineleri", search: "kazan yıkama|kettle|pot wash" },
+    { tip: "kazan-yikama", dept: "yikama", label: "Kazan Yıkama Makineleri", search: "kazan yıkama|kazan yikama|kettle|pot wash|7771|evyesi|evye" },
     {
       tip: "bulasik-makinesi-giris-ve-cikis-tezgahlari",
       dept: "yikama",
@@ -620,6 +630,13 @@
     "adr-seri-doner-robotu": true,
   };
 
+  /** Pişirme — JSON category slug → ?tip= */
+  var PISIRME_CAT_ALIASES = {
+    "rational-combi-master-plus": "kombi-firin",
+    "rational-self-cooking-center": "kombi-firin",
+    "rational-combi-pro": "kombi-firin",
+  };
+
   /** Öztiryakiler soğutma — Excel kategori slug → ?tip= (buz makinesi satırları) */
   var SOGUTMA_CAT_ALIASES = {
     "buz-makineleri": "buz-makinesi",
@@ -635,6 +652,7 @@
     "giyotin-bulasik": "giyotin-bulasik",
     "tirnakli-bulasik": "tirnakli-bulasik",
     "kazan-yikama": "kazan-yikama",
+    "izgara-tablali-kazan-yikama-evyesi": "kazan-yikama",
     "bulasik-makineleri": "bulasik-makineleri",
     "bardak-yikama": "bardak-yikama",
     "bulasik-makinesi-giris-ve-cikis-tezgahlari": "bulasik-makinesi-giris-ve-cikis-tezgahlari",
@@ -736,6 +754,7 @@
   function productCategorySlug(u) {
     var c = (u && u.c) || (u && u.category) || (u && u.raw && u.raw.category) || "";
     if (SOGUTMA_CAT_ALIASES[c]) return SOGUTMA_CAT_ALIASES[c];
+    if (PISIRME_CAT_ALIASES[c]) return PISIRME_CAT_ALIASES[c];
     if (YIKAMA_CAT_ALIASES[c]) return YIKAMA_CAT_ALIASES[c];
     if (SET_USTU_CAT_ALIASES[c]) return SET_USTU_CAT_ALIASES[c];
     return c;
@@ -825,6 +844,26 @@
     return /ocak|kuzine|wok|indüksiyon|induksiyon|set üstü ocak|setustu ocak|döner ocak|doner ocak/.test(hay);
   }
 
+  /** Kombi firin — konveksiyonlu kelimesi yuzunden yanlis tile'a dusmesin (iCombi vb.). */
+  function isKombiFirinProduct(u) {
+    var cat = productCategorySlug(u);
+    if (cat === "kombi-firin") return true;
+    if (/^rational-combi|^rational-self-cooking|^konveksiyonel-firin-kombi/i.test(cat)) return true;
+    var hay = productHaystack(u);
+    if (/kombi\s*f[ıi]r[ıi]n|kombili\s*f[ıi]r[ıi]n|kombili|icombi|\bcombi\b|combioven|self\s*cooking/i.test(hay)) return true;
+    var kod = String(
+      (u && u.raw && u.raw.urun_kodu) ||
+        (u && u.raw && u.raw.sku) ||
+        (u && u.sku) ||
+        (u && u.raw && u.raw.model) ||
+        ""
+    )
+      .replace(/\s+/g, "")
+      .toUpperCase();
+    if (/^9890\.IC(CLS|PRO)/i.test(kod)) return true;
+    return false;
+  }
+
   function tileMatchProduct(u, tile) {
     if (!tile) return false;
     if (tile.id === "ocak-vitrini") return isOcakVitriniProduct(u);
@@ -869,6 +908,8 @@
       return tile.id === cat;
     }
 
+    if (tile.id === "konveksiyonlu-firin" && isKombiFirinProduct(u)) return false;
+
     if (tile.id && cat === tile.id) return true;
     if (tile.slug === "doner-ocaklari-" && DONER_CAT_SLUGS[u.c]) return true;
     if (tile.slug && (cat === tile.slug || u.c === tile.slug || u.category === tile.slug)) return true;
@@ -890,6 +931,107 @@
       if (tileMatchProduct(u, tiles[i])) return i;
     }
     return 1e6;
+  }
+
+  /** PFOS bantları: 500 tb/s (setaltı) ve 1000 tb/s (giyotin) — yikama vitrininde önce */
+  function yikamaTabakSaatTier(u) {
+    if (!u) return 9;
+    var id = lc(u.raw && u.raw.id);
+    var sku = lc((u.raw && (u.raw.sku || u.raw.model || u.raw.urun_kodu)) || "");
+    var hay = productHaystack(u) + " " + id + " " + sku;
+    var cat = lc(u.c || (u.raw && u.raw.category) || "");
+
+    if (/075t\.|oby\s*50t|500\s*tb\b/.test(hay) || /075t-/.test(id)) return 0;
+    if (/071t\.|obm\s*1080|1000\s*tb\b/.test(hay) || /071t-/.test(id)) return 1;
+
+    var caps = hay.match(/(?:^|[^\d])(\d{3,4})\s*tabak\s*[\/]?\s*saat/g);
+    if (caps) {
+      for (var ci = 0; ci < caps.length; ci++) {
+        var capM = caps[ci].match(/(\d{3,4})\s*tabak/);
+        if (!capM) continue;
+        var capN = parseInt(capM[1], 10);
+        if (capN >= 500 && capN <= 599) return 0;
+        if (capN >= 950 && capN <= 1200) return 1;
+      }
+    }
+    var m = hay.match(/(\d{2,3})\s*basket\s*[\/]?\s*saat/);
+    if (m) {
+      var b = parseInt(m[1], 10);
+      if (b >= 55 && b <= 70) return 1;
+    }
+
+    if (cat === "setalti-bulasik") return 2;
+    if (cat === "giyotin-bulasik") return 3;
+    if (BULASIK_MAKINE_GROUP[cat]) return 4;
+    if (cat === "bardak-yikama") return 5;
+    return 6;
+  }
+
+  function productBrandKey(u) {
+    return lc((u && u.fb) || (u && u.b) || (u.raw && u.raw.brand) || "");
+  }
+
+  /** Aynı öncelik grubunda markaları sırayla (round-robin) karıştırır. */
+  function interleaveProductsByBrand(list) {
+    if (!list || list.length <= 1) return list ? list.slice() : [];
+    var byBrand = {};
+    var brandOrder = [];
+    var seenBrand = {};
+    list.forEach(function (u) {
+      var b = productBrandKey(u) || "—";
+      if (!byBrand[b]) byBrand[b] = [];
+      byBrand[b].push(u);
+      if (!seenBrand[b]) {
+        seenBrand[b] = true;
+        brandOrder.push(b);
+      }
+    });
+    brandOrder.forEach(function (b) {
+      byBrand[b].sort(function (a, b2) {
+        return String(a.n || "").localeCompare(String(b2.n || ""), "tr");
+      });
+    });
+    var out = [];
+    var round = 0;
+    while (true) {
+      var added = false;
+      for (var bi = 0; bi < brandOrder.length; bi++) {
+        var arr = byBrand[brandOrder[bi]];
+        if (arr.length > round) {
+          out.push(arr[round]);
+          added = true;
+        }
+      }
+      if (!added) break;
+      round++;
+    }
+    return out;
+  }
+
+  function yikamaSortGroupKey(u) {
+    var catB = lc(u.c) === "bulasik-makineleri" ? 0 : 1;
+    return yikamaTabakSaatTier(u) * 100000 + productRank("yikama", u) * 10 + catB;
+  }
+
+  function sortYikamaProducts(list) {
+    var groups = {};
+    var keys = [];
+    list.forEach(function (u) {
+      var k = yikamaSortGroupKey(u);
+      if (!groups[k]) {
+        groups[k] = [];
+        keys.push(k);
+      }
+      groups[k].push(u);
+    });
+    keys.sort(function (a, b) {
+      return a - b;
+    });
+    var out = [];
+    keys.forEach(function (k) {
+      out = out.concat(interleaveProductsByBrand(groups[k]));
+    });
+    return out;
   }
 
   function hashDeptSeed(str) {
@@ -923,18 +1065,16 @@
     return arr;
   }
 
-  /** Kahve: espresso → değirmen → filtre → türk; yıkama: bulaşık makineleri önce; diğerleri karışık. */
+  /** Kahve: espresso → değirmen → filtre → türk; yıkama: 500/1000 tb/s + marka karışımı. */
   function sortProductsDefault(dept, list) {
-    if (dept === "kahve" || dept === "yikama") {
+    if (dept === "yikama") {
+      return sortYikamaProducts(list);
+    }
+    if (dept === "kahve") {
       return list.slice().sort(function (a, b) {
         var ra = productRank(dept, a);
         var rb = productRank(dept, b);
         if (ra !== rb) return ra - rb;
-        if (dept === "yikama") {
-          var ba = lc(a.c) === "bulasik-makineleri" ? 0 : 1;
-          var bb = lc(b.c) === "bulasik-makineleri" ? 0 : 1;
-          if (ba !== bb) return ba - bb;
-        }
         return String(a.n || "").localeCompare(String(b.n || ""), "tr");
       });
     }
