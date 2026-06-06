@@ -62,17 +62,29 @@ function priceFromEuro(listEur) {
   };
 }
 
+function yukselHaystack(item) {
+  return String(item.name || item.alt_kategori || item.category || "")
+    .toLocaleLowerCase("tr")
+    .replace(/ı/g, "i")
+    .replace(/İ/g, "i")
+    .replace(/ğ/g, "g")
+    .replace(/ü/g, "u")
+    .replace(/ş/g, "s")
+    .replace(/ö/g, "o")
+    .replace(/ç/g, "c");
+}
+
 function isCoolingProduct(item) {
   const model = String(item.model || item.sku || "")
     .trim()
     .replace(/\s+/g, "");
-  const sub = String(item.alt_kategori || "").toLocaleLowerCase("tr");
-  const name = String(item.name || "").toLocaleLowerCase("tr");
-  const blob = `${sub} ${name} ${model}`.toLocaleLowerCase("tr");
+  const hay = yukselHaystack(item) + " " + model.toLowerCase();
+  const folder = String(item.equsto_folder || item.category || "").toLowerCase();
 
   if (item.dept === "sogutma") return true;
+  if (/^sogutma\//.test(folder) || /tezgah-alti|sogutma-ekipmanlari/.test(folder)) return true;
   if (
-    /^(PZA|PZAD|PZAC|PZAG|TTC|TTU|TTK|TTEV|TTG|TTR|TTM|ASB|SBB|SBTM|SBH|SBHD|SBHKG|MSBH|GN|SBM|ST|DT|BAR|MSB|SLM|CAU|CAK|SBT|BARIST)/i.test(
+    /^(PZA|PZAD|PZAC|PZAG|TTC|TTU|TTK|TTEV|TTG|TTR|TTM|ASB|SBB|SBTM|SBH|SBHD|SBHKG|MSBH|GN|SBM|ST|DT|BAR|MSB|SLM|CAU|CAK|SBT|BARIST|TTX|TTS|CA|CAM)/i.test(
       model,
     )
   ) {
@@ -80,10 +92,13 @@ function isCoolingProduct(item) {
   }
   if (/^TT[-./]?\d/i.test(model)) return true;
   if (
-    /buzdolab|soğut|sogut|refriger|freezer|portabianco|barista|pizza|tezgah tip|counter type|make up|undercounter|derin dondur|dört kapil|dort kapil|tek kapil|mix.*kap/i.test(
-      blob,
+    /her kapi.*raf bulunmakt|tezgah tip|tezgahalti|make[- ]?up|camli make|mermer tablali make|tezgah alti|counter type|undercounter|buzdolab|so?gut|refriger|freezer|portabianco|barista|pizza|derin dondur|tek kapi|iki kapi|uc kapi|dort kapi|mix.*kapi|slim.*buzdolab/.test(
+      hay,
     )
   ) {
+    return true;
+  }
+  if (/^\d{2,3}X\d{2}X\d{2,3}/i.test(model) && /her kapi|tezgah|portabianco|make|buzdolab/.test(hay)) {
     return true;
   }
   return false;
@@ -202,20 +217,8 @@ function isYukselYerli(row) {
 }
 
 /** Parça / aksesuar — vitrinde satılmaz (PERFORE dikme, EPOXY tabla vb.). */
-function yukselShopHaystack(item) {
-  return String(item.name || item.alt_kategori || "")
-    .toLocaleLowerCase("tr")
-    .replace(/ı/g, "i")
-    .replace(/İ/g, "i")
-    .replace(/ğ/g, "g")
-    .replace(/ü/g, "u")
-    .replace(/ş/g, "s")
-    .replace(/ö/g, "o")
-    .replace(/ç/g, "c");
-}
-
 function isYukselYerliShopExcluded(item) {
-  const hay = yukselShopHaystack(item);
+  const hay = yukselHaystack(item);
   if (/perfore\s*raf\s*boyali/.test(hay)) return true;
   if (/epoxy\s*\+\s*plastic|powder\s*coated/.test(hay)) return true;
   return false;
