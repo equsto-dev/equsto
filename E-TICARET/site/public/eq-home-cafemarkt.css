@@ -901,6 +901,23 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
   align-self: center;
 }
 
+.eq-cmkt-bento__footnote {
+  position: absolute;
+  left: 16px;
+  bottom: 14px;
+  z-index: 2;
+  margin: 0;
+  max-width: 62%;
+  font-size: 12pt;
+  font-weight: 400;
+  line-height: 1.35;
+  color: #5c4a32;
+}
+
+.eq-cmkt-bento__tile--ozti-marka .eq-cmkt-bento__copy {
+  padding-bottom: 28px;
+}
+
 .eq-cmkt-bento__tile--yaz .eq-cmkt-bento__img--cover {
   object-position: center 35%;
 }

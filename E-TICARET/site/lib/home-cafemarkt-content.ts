@@ -297,6 +297,8 @@ export type CafemarktBentoTile = {
   badge?: string;
   /** Sağ tarafta eğik tagline (ör. ozti-marka) */
   tagline?: string;
+  /** Sol alt köşe notu (ör. ozti-marka) */
+  footnote?: string;
   variant: "sm" | "lg" | "tall" | "wide";
   textLight?: boolean;
 };
@@ -341,6 +343,7 @@ export const cafemarktBentoTiles: CafemarktBentoTile[] = [
     title: "Equsto'da avantajlı fiyatlar",
     subtitle: "Su filtrasyon · markalar",
     tagline: "Sadece sana özel.... Hayal et.",
+    footnote: "Projeni/ listeni gönder fiyatlandıralım.",
     href: "/shop/marka/oztiryakiler",
     bg: "#fff8e1",
     variant: "sm",
