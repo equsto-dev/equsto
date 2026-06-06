@@ -174,6 +174,8 @@ function fallbackSkus(sku) {
   out.add(s.replace(/ND(\d)/g, "D$1"));
   out.add(s.replace(/-1N/, "-2N"));
   out.add(s.replace(/-1D/, "-2D"));
+  out.add(s.replace(/^DT-1F/, "DT-1N"));
+  out.add(s.replace(/-EKOP$/i, "").replace(/-EKO$/i, ""));
   const ttNorm = s.replace(/^TT[KCGMRXTS]+-/, "TT-");
   out.add(ttNorm);
   out.add(ttNorm.replace(/-1N/, "-2N"));
@@ -188,6 +190,26 @@ function fallbackSkus(sku) {
   out.add(s.replace(/^CAM-/, "CA-"));
   out.add(s.replace(/^DTT-2/, "DTT-1"));
   if (/^SB[THM]G/.test(s)) out.add(s.replace(/^SB([THM])G/, "SB$1-"));
+  if (/^DT\d+-/.test(s)) {
+    out.add(s.replace(/^DT\d+-/, "DT-2").replace(/EKO.*$/i, ""));
+    out.add("DT-2NGN");
+  }
+  const pzaDoor = s.match(/^PZA[DCK]?-(\d)[ND]/);
+  if (pzaDoor) out.add(`TT-${pzaDoor[1]}N70`);
+  if (/^PZA/.test(s)) {
+    out.add("TT-4N70");
+    out.add("TT-3N70");
+    out.add("TT-2N70");
+  }
+  if (/^SLM/.test(s)) {
+    out.add("DT-1NGN");
+    out.add("DT-2NGN");
+    out.add("TT-2N70");
+  }
+  if (/^BAR|^ST-/.test(s)) {
+    out.add("1280");
+    out.add("1280K");
+  }
   out.delete(s);
   return [...out];
 }
@@ -374,16 +396,26 @@ async function main() {
       const rel = `${IMG_SUB}/${fname}`;
       const abs = path.join(ROOT, "public", rel);
       const ok = await downloadImage(url, abs);
-      if (ok || dryRun) {
+      const isYukselBad = /\/catalog\/yuksel\//i.test(String((row.images || [])[0] || ""));
+      if (ok || dryRun || isYukselBad) {
         row.images = [rel.replace(/\\/g, "/")];
         row.cafemarkt_url = cm.url || row.cafemarkt_url;
-        row.cafemarkt_image_source = hit?.via?.includes("→") ? "cafemarkt-family" : "cafemarkt-exact";
+        row.cafemarkt_image_source = hit?.exact
+          ? "cafemarkt-exact"
+          : hit?.via?.includes("→")
+            ? "cafemarkt-family"
+            : "cafemarkt-family";
         stats.images++;
         for (const key of rowLookupKeys(sku)) {
           witMap[key] = url;
         }
         const yukselKey = normHay(`yuksel-${sku.toLowerCase().replace(/\./g, "-")}`);
         witMap[yukselKey] = url;
+        for (const fb of fallbackSkus(sku)) {
+          for (const key of rowLookupKeys(fb)) {
+            witMap[key] = url;
+          }
+        }
       }
     } else {
       stats.noCm++;
