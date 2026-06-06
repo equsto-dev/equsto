@@ -42,5 +42,10 @@ if (fs.existsSync(OUT) && !fs.existsSync(ARCHIVE)) {
   console.log("[rebuild-ekipmanlar] arşiv:", path.basename(ARCHIVE));
 }
 
-fs.writeFileSync(OUT, JSON.stringify(merged), "utf8");
+const tmp = `${OUT}.tmp-${process.pid}`;
+fs.writeFileSync(tmp, JSON.stringify(merged), "utf8");
+try {
+  if (fs.existsSync(OUT)) fs.unlinkSync(OUT);
+} catch (_) {}
+fs.renameSync(tmp, OUT);
 console.log("[rebuild-ekipmanlar] yazıldı:", merged.length, "ürün →", path.relative(ROOT, OUT));
