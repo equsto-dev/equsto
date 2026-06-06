@@ -45,21 +45,29 @@
   /** Kilit: public/whatsapp-cat-fab-KILIT.txt — npm run verify:whatsapp-cat-fab-kilit */
   var WA_FAB_IMG = "/equsto-bize-ulasin-isimlik.png";
   /** Modal şablonu değişince artırın (eski DOM'u zorla yeniler). */
-  var WA_MODAL_BUILD = 14;
+  var WA_MODAL_BUILD = 16;
 
   var waModalDigits = "";
+  var waModalLastSentText = "";
   var waModalResizeHandler = null;
 
   function syncWaModalNearFab() {
     var fab = document.querySelector(".equsto-contact-wa-fab");
     var modal = document.querySelector(".equsto-wa-modal");
-    if (!fab || !modal) return;
+    if (!modal) return;
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      modal.style.right = "";
+      modal.style.bottom = "";
+      modal.style.maxHeight = "";
+      return;
+    }
+    if (!fab) return;
     var gap = 10;
     var r = fab.getBoundingClientRect();
     modal.style.right = Math.max(8, Math.round(window.innerWidth - r.right)) + "px";
     modal.style.bottom = Math.max(8, Math.round(window.innerHeight - r.top + gap)) + "px";
     var spaceAbove = r.top - gap - 12;
-    var mh = Math.min(Math.round(window.innerHeight * 0.9), Math.max(306, spaceAbove));
+    var mh = Math.min(Math.round(window.innerHeight * 0.9), Math.max(420, spaceAbove));
     modal.style.maxHeight = mh + "px";
   }
 
@@ -264,6 +272,12 @@
     renderWaChat();
   }
 
+  var WA_TICK_SVG =
+    '<svg class="equsto-wa-bubble__tick-svg" viewBox="0 0 16 11" width="16" height="11" aria-hidden="true">' +
+    '<path fill="currentColor" d="M11.071.653a.457.457 0 0 0-.304-.102.493.493 0 0 0-.381.178l-6.19 7.636-2.405-2.272a.463.463 0 0 0-.336-.146.47.47 0 0 0-.343.15l-.522.538a.39.39 0 0 0-.08.399.416.416 0 0 0 .078.099l3.048 2.931a.646.646 0 0 0 .875.043l6.562-8.01a.395.395 0 0 0-.102-.607z"/>' +
+    '<path fill="currentColor" d="M14.757.653a.457.457 0 0 0-.304-.102.493.493 0 0 0-.381.178l-8.49 10.49-1.05-1.001a.463.463 0 0 0-.336-.146.47.47 0 0 0-.343.15l-.522.538a.39.39 0 0 0-.08.399.416.416 0 0 0 .078.099l1.693 1.628a.646.646 0 0 0 .875.043l9.048-11.016a.395.395 0 0 0-.102-.607z"/>' +
+    "</svg>";
+
   function renderWaChat() {
     var log = document.getElementById("equsto-wa-chat-log");
     if (!log) return;
@@ -273,14 +287,26 @@
       var isUser = m.role === "user";
       var bubble = document.createElement("div");
       bubble.className = "equsto-wa-bubble equsto-wa-bubble--" + (isUser ? "user" : "team");
-      var text = document.createElement("div");
+      var inner = document.createElement("div");
+      inner.className = "equsto-wa-bubble__inner";
+      var text = document.createElement("span");
       text.className = "equsto-wa-bubble__text";
       text.textContent = m.body;
-      var time = document.createElement("div");
+      var meta = document.createElement("span");
+      meta.className = "equsto-wa-bubble__meta";
+      var time = document.createElement("span");
       time.className = "equsto-wa-bubble__time";
       time.textContent = formatChatTime(m.ts);
-      bubble.appendChild(text);
-      bubble.appendChild(time);
+      meta.appendChild(time);
+      if (isUser) {
+        var tick = document.createElement("span");
+        tick.className = "equsto-wa-bubble__tick";
+        tick.innerHTML = WA_TICK_SVG;
+        meta.appendChild(tick);
+      }
+      inner.appendChild(text);
+      inner.appendChild(meta);
+      bubble.appendChild(inner);
       log.appendChild(bubble);
     });
     requestAnimationFrame(function () {
@@ -436,6 +462,7 @@
       applyWaModalView();
       syncWaModalNearFab();
       syncWaModalAuthBtn();
+      syncWaComposeSendMode();
       if (msgEl) {
         try {
           msgEl.focus();
@@ -473,15 +500,11 @@
     if (!msgEl) return;
     var text = String(msgEl.value || "").trim();
     if (!text) {
-      if (st) {
-        st.textContent = __waT("wa.write_msg", "Lütfen bir mesaj yazın.");
-        st.className = "equsto-wa-status equsto-wa-status--err";
-      }
       return;
     }
     if (go) {
       go.disabled = true;
-      go.textContent = __waT("wa.sending", "Gönderiliyor…");
+      go.classList.add("equsto-wa-bar-btn--loading");
     }
     if (st) {
       st.textContent = "";
@@ -495,7 +518,7 @@
 
     var payload = {
       mesaj: text,
-      kaynak: "whatsapp-handoff",
+      kaynak: "whatsapp-modal",
       sayfa: location.pathname || "",
       telefon: "",
     };
@@ -521,10 +544,7 @@
         });
       })
       .then(function (res) {
-        if (go) {
-          go.disabled = false;
-          go.textContent = __waT("wa.send", "Gönder");
-        }
+        if (go) resetWaSendBtn(go);
         if (!res.ok || !(res.j && res.j.success)) {
           var msg =
             (res.j && (res.j.error || res.j.message)) ||
@@ -536,50 +556,31 @@
           return;
         }
         msgEl.value = "";
-        var handoff = equstoHandoffToWhatsApp(waModalDigits, text);
+        syncWaComposeSendMode();
+        waModalLastSentText = text;
         appendChatMessage(
           "team",
-          handoff.ok
-            ? __waT(
-                "wa.handoff_opening",
-                "WhatsApp açılıyor — lütfen uygulamada «Gönder»e basın. Sohbet telefonumuzda devam eder; size Telegram ile de bildirim gider."
-              )
-            : handoff.reason === "blocked"
-              ? __waT(
-                  "wa.handoff_blocked",
-                  "Tarayıcı pencereyi engelledi. Aşağıdaki «WhatsApp'ta gönder» bağlantısına tıklayın."
-                )
-              : __waT(
-                  "wa.received",
-                  "Mesajınız kaydedildi. Equsto ekibi en kısa sürede size dönüş yapacak."
-                )
+          __waT(
+            "wa.received",
+            "Mesajınız alındı. Equsto ekibi en kısa sürede size dönüş yapacak — bu pencereden yazmaya devam edebilirsiniz."
+          )
         );
         renderWaHistoryList();
         if (st) {
-          if (handoff.reason === "blocked" && handoff.url) {
-            st.className = "equsto-wa-status equsto-wa-status--ok";
-            st.innerHTML =
-              '<a class="equsto-wa-handoff-link" href="' +
-              escWa(handoff.url) +
-              '" target="_blank" rel="noopener noreferrer">' +
-              escWa(__waT("wa.handoff_link", "WhatsApp'ta gönder")) +
-              "</a>";
-          } else {
-            st.textContent = "";
-            st.className = "equsto-wa-status equsto-wa-status--ok";
-          }
+          st.className = "equsto-wa-status equsto-wa-status--ok";
+          st.innerHTML =
+            '<button type="button" id="equsto-wa-handoff-btn" class="equsto-wa-handoff-link">' +
+            escWa(__waT("wa.handoff_optional", "İsterseniz WhatsApp'ta devam edin")) +
+            "</button>";
         }
-        if (handoff.ok && handoff.mode === "web") {
-          window.setTimeout(function () {
-            equstoHideWhatsAppModal();
-          }, 1200);
+        if (msgEl) {
+          try {
+            msgEl.focus();
+          } catch (e) {}
         }
       })
       .catch(function (err) {
-        if (go) {
-          go.disabled = false;
-          go.textContent = __waT("wa.send", "Gönder");
-        }
+        if (go) resetWaSendBtn(go);
         var em = err && err.message ? err.message : String(err);
         if (st) {
           st.textContent =
@@ -599,6 +600,29 @@
     applyWaModalView();
   }
 
+  function syncWaComposeSendMode() {
+    var msgEl = document.getElementById("equsto-wa-msg");
+    var go = document.getElementById("equsto-wa-go");
+    if (!msgEl || !go) return;
+    var hasText = String(msgEl.value || "").trim().length > 0;
+    go.classList.toggle("equsto-wa-bar-btn--has-text", hasText);
+    go.setAttribute(
+      "aria-label",
+      hasText ? __waT("wa.send", "Gönder") : __waT("wa.voice_msg", "Sesli mesaj")
+    );
+    try {
+      msgEl.style.height = "auto";
+      msgEl.style.height = Math.min(msgEl.scrollHeight, 100) + "px";
+    } catch (_) {}
+  }
+
+  function resetWaSendBtn(go) {
+    if (!go) return;
+    go.disabled = false;
+    go.classList.remove("equsto-wa-bar-btn--loading");
+    syncWaComposeSendMode();
+  }
+
   function equstoWaLoginClick(ev) {
     if (ev && ev.preventDefault) ev.preventDefault();
     equstoHideWhatsAppModal();
@@ -606,7 +630,7 @@
   }
 
   /**
-   * PFOS, sepet vb.: sayfa-içi kedi sohbet kartı; gönderimde wa.me handoff.
+   * PFOS, sepet vb.: sayfa-içi kedi sohbet (wa.me yalnızca isteğe bağlı).
    */
   window.equstoOpenWhatsAppWebWindow = function (phoneDigits, plainText) {
     var phone = digitsOnly(phoneDigits) || equstoResolveWhatsAppDigits();
@@ -654,6 +678,27 @@
       WA_FAB_IMG +
       '" alt="" width="40" height="40" decoding="async">';
 
+    var waSvgIco = function (d) {
+      return (
+        '<svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">' +
+        '<path fill="currentColor" d="' +
+        d +
+        '"/></svg>'
+      );
+    };
+    var waIcoVideo =
+      "M17 10.5V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3.5l4 4v-11l-4 4z";
+    var waIcoPhone =
+      "M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24 11.36 11.36 0 0 0 3.56.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.56 1 1 0 0 1-.25 1.01l-2.2 2.22z";
+    var waIcoMenu = "M12 7a2 2 0 1 0-.001-4.001A2 2 0 0 0 12 7zm0 2a2 2 0 1 0-.001 4.001A2 2 0 0 0 12 9zm0 6a2 2 0 1 0-.001 4.001A2 2 0 0 0 12 15z";
+    var waIcoEmoji =
+      "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 7.5c-.83 0-1.5-.67-1.5-1.5S9.17 6.5 10 6.5s1.5.67 1.5 1.5S10.83 9.5 10 9.5zm4 0c-.83 0-1.5-.67-1.5-1.5S13.17 6.5 14 6.5s1.5.67 1.5 1.5S14.83 9.5 14 9.5zm-4.5 6.5c1.93 0 3.57-1.04 4.5-2.58.93 1.54 2.57 2.58 4.5 2.58v1.5c-2.48 0-4.65-1.28-5.88-3.22C11.15 16.72 8.98 18 6.5 18v-1.5z";
+    var waIcoAttach =
+      "M16.5 6v11.5a4 4 0 1 1-8 0V5a2.5 2.5 0 0 1 5 0v10.5a1 1 0 1 1-2 0V6h-1.5v9.5a2.5 2.5 0 0 0 5 0V5a4 4 0 0 0-8 0v12.5a5.5 5.5 0 0 0 11 0V6H16.5z";
+    var waIcoMic =
+      "M12 14a3 3 0 0 0 3-3V5a3 3 0 1 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z";
+    var waIcoSend = "M2.01 21L23 12 2.01 3 2 10l15 2-15 2z";
+
     overlay.innerHTML =
       '<div class="equsto-wa-backdrop" tabindex="-1"></div>' +
       '<div class="equsto-wa-modal" role="dialog" aria-modal="true" aria-labelledby="equsto-wa-modal-title">' +
@@ -661,13 +706,32 @@
       '<button type="button" class="equsto-wa-back" aria-label="' +
       escWa(__waT("wa.close_aria", "Kapat")) +
       '" data-i18n-attr="aria-label:wa.close_aria">&#8249;</button>' +
+      '<div class="equsto-wa-head-profile">' +
       '<div class="equsto-wa-ico equsto-wa-ico--cat" aria-hidden="true">' +
       waHeadImg +
       "</div>" +
+      '<div class="equsto-wa-head-text">' +
       '<h2 class="equsto-wa-title" id="equsto-wa-modal-title" data-i18n="wa.modal_title">Mr. Equsto</h2>' +
-      '<button type="button" class="equsto-wa-close-x" id="equsto-wa-close-x" aria-label="' +
+      '<p class="equsto-wa-subtitle" data-i18n="wa.subtitle_online">çevrimiçi</p>' +
+      "</div>" +
+      "</div>" +
+      '<div class="equsto-wa-head-actions">' +
+      '<button type="button" class="equsto-wa-head-btn" aria-label="' +
+      escWa(__waT("wa.video_call", "Görüntülü arama")) +
+      '" tabindex="-1">' +
+      waSvgIco(waIcoVideo) +
+      "</button>" +
+      '<button type="button" class="equsto-wa-head-btn" aria-label="' +
+      escWa(__waT("wa.voice_call", "Sesli arama")) +
+      '" tabindex="-1">' +
+      waSvgIco(waIcoPhone) +
+      "</button>" +
+      '<button type="button" class="equsto-wa-head-btn equsto-wa-head-btn--menu" id="equsto-wa-close-x" aria-label="' +
       escWa(__waT("wa.close_aria", "Kapat")) +
-      '" data-i18n-attr="aria-label:wa.close_aria">&#10005;</button>' +
+      '" data-i18n-attr="aria-label:wa.close_aria">' +
+      waSvgIco(waIcoMenu) +
+      "</button>" +
+      "</div>" +
       "</div>" +
       '<div class="equsto-wa-modal-body">' +
       '<div class="equsto-wa-spinner-wrap" id="equsto-wa-spinner"><div class="equsto-wa-spinner" aria-hidden="true"></div></div>' +
@@ -678,7 +742,7 @@
       "</div>" +
       "</div>" +
       '<div class="equsto-wa-member" id="equsto-wa-member">' +
-      '<div class="equsto-wa-history-wrap">' +
+      '<div class="equsto-wa-history-wrap" hidden aria-hidden="true">' +
       '<div class="equsto-wa-history-head" data-i18n="wa.history_head">Geçmiş konuşmalar</div>' +
       '<ul class="equsto-wa-history" id="equsto-wa-history"></ul>' +
       '<p class="equsto-wa-history-empty" id="equsto-wa-history-empty" hidden data-i18n="wa.history_empty">Henüz konuşma yok.</p>' +
@@ -687,11 +751,34 @@
       '<div class="equsto-wa-chat-log" id="equsto-wa-chat-log" role="log" aria-live="polite"></div>' +
       "</div>" +
       '<div class="equsto-wa-compose equsto-wa-compose--chat">' +
-      '<textarea id="equsto-wa-msg" class="equsto-wa-msg equsto-wa-msg--chat" rows="3" maxlength="8000" placeholder="' +
-      escWa(__waT("wa.msg_ph", "Mesajınızı yazın…")) +
+      '<div class="equsto-wa-input-bar">' +
+      '<button type="button" class="equsto-wa-bar-btn equsto-wa-bar-btn--emoji" aria-label="' +
+      escWa(__waT("wa.emoji", "Emoji")) +
+      '" tabindex="-1">' +
+      waSvgIco(waIcoEmoji) +
+      "</button>" +
+      '<div class="equsto-wa-input-field">' +
+      '<textarea id="equsto-wa-msg" class="equsto-wa-msg equsto-wa-msg--chat" rows="1" maxlength="8000" placeholder="' +
+      escWa(__waT("wa.msg_ph", "Mesaj")) +
       '" data-i18n-attr="placeholder:wa.msg_ph"></textarea>' +
+      "</div>" +
+      '<button type="button" class="equsto-wa-bar-btn equsto-wa-bar-btn--attach" aria-label="' +
+      escWa(__waT("wa.attach", "Dosya ekle")) +
+      '" tabindex="-1">' +
+      waSvgIco(waIcoAttach) +
+      "</button>" +
+      '<button type="button" class="equsto-wa-bar-btn equsto-wa-bar-btn--send" id="equsto-wa-go" aria-label="' +
+      escWa(__waT("wa.voice_msg", "Sesli mesaj")) +
+      '">' +
+      '<span class="equsto-wa-bar-ico equsto-wa-bar-ico--mic">' +
+      waSvgIco(waIcoMic) +
+      "</span>" +
+      '<span class="equsto-wa-bar-ico equsto-wa-bar-ico--send">' +
+      waSvgIco(waIcoSend) +
+      "</span>" +
+      "</button>" +
+      "</div>" +
       '<p class="equsto-wa-status" id="equsto-wa-status" role="status" aria-live="polite"></p>' +
-      '<button type="button" class="equsto-wa-go" id="equsto-wa-go" data-i18n="wa.send">Gönder</button>' +
       '<a class="equsto-wa-login-secondary" id="equsto-wa-login-cta" href="/login.html" hidden data-i18n="wa.login_guest">Üye Girişi</a>' +
       "</div>" +
       "</div>" +
@@ -710,6 +797,25 @@
     overlay.querySelector(".equsto-wa-back").addEventListener("click", equstoHideWhatsAppModal);
     overlay.querySelector("#equsto-wa-close-x").addEventListener("click", equstoHideWhatsAppModal);
     overlay.querySelector("#equsto-wa-go").addEventListener("click", equstoWaSubmitFromModal);
+    overlay.addEventListener("click", function (ev) {
+      var btn =
+        ev.target && ev.target.closest
+          ? ev.target.closest("#equsto-wa-handoff-btn")
+          : null;
+      if (!btn) return;
+      ev.preventDefault();
+      var txt = waModalLastSentText || "";
+      var handoff = equstoHandoffToWhatsApp(waModalDigits, txt);
+      var st = document.getElementById("equsto-wa-status");
+      if (st && handoff.reason === "blocked" && handoff.url) {
+        st.innerHTML =
+          '<a class="equsto-wa-handoff-link" href="' +
+          escWa(handoff.url) +
+          '" target="_blank" rel="noopener noreferrer">' +
+          escWa(__waT("wa.handoff_link", "WhatsApp'ta gönder")) +
+          "</a>";
+      }
+    });
     var loginCtaEl = overlay.querySelector("#equsto-wa-login-cta");
     if (loginCtaEl) loginCtaEl.addEventListener("click", equstoWaLoginClick);
     var loginGuestEl = overlay.querySelector("#equsto-wa-login-cta-guest");
@@ -724,7 +830,9 @@
           equstoWaSubmitFromModal();
         }
       });
+      waMsgInput.addEventListener("input", syncWaComposeSendMode);
     }
+    syncWaComposeSendMode();
 
     overlay.querySelector(".equsto-wa-modal").addEventListener("click", function (ev) {
       ev.stopPropagation();
