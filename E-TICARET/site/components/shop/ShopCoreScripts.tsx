@@ -12,6 +12,7 @@ export default function ShopCoreScripts() {
     <>
       <Script src={`/theme.js?v=${v}`} strategy="beforeInteractive" />
       <AssetCdnConfigScript />
+      <Script src={`/portabianco-cafemarkt-img-map.js?v=${v}`} strategy="beforeInteractive" />
       <Script src={`/eq-site-urls.js?v=${v}`} strategy="beforeInteractive" />
       <Script
         src={`/eq-i18n.js?v=${v}`}
