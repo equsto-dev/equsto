@@ -1065,6 +1065,86 @@
     return arr;
   }
 
+  function robotCoupeItemFields(u) {
+    var raw = (u && u.raw) || u || {};
+    return {
+      c: lc((u && u.c) || raw.category || ""),
+      n: lc((u && u.n) || raw.name || ""),
+      sku: String(raw.sku || raw.model || raw.urun_kodu || ""),
+      oem: String(raw.oem_brand || ""),
+      brand: String((u && u.fb) || (u && u.b) || raw.brand || ""),
+    };
+  }
+
+  function isRobotCoupeItem(u) {
+    var f = robotCoupeItemFields(u);
+    if (/robot coupe/i.test(f.oem) || /robot coupe/i.test(f.brand)) return true;
+    if (/^RC\.|^9860\.(MP|CL|BLX|CMP|J)/i.test(f.sku)) return true;
+    return /robot coupe/i.test(f.n);
+  }
+
+  /** Düşük = önce (makineler); 30+ = bıçak/disk/aksesuar. */
+  function robotCoupeSortTier(u) {
+    var f = robotCoupeItemFields(u);
+    if (f.c === "robot-coupe-aksesuarlari") return 30;
+    if (
+      /bicak|bıçak|disk|aksesuar|yedek|temizleme|itme kafa|destek|firlatma|fırlatma|paslanmaz ayarlanabilir|kesme aleti|dilimleyici disk|rende|french fries/.test(
+        f.n
+      )
+    )
+      return 30;
+    if (f.c === "sebze-dograma-makineleri" || f.c === "robot-coupe") return 5;
+    if (/blixer|sebze dograma|cl50|cl55|cl60|cl 50|cl 55|cl 60|\br2\b|\br3\b|r301|j80|j100|meyve presi|sikac|narenciye/.test(f.n)) return 5;
+    if (f.c === "robot-coupe-el-mikserleri" || /el blender|el mikser|micromix|mp160|mp190|mp240|mp450|mp550|mp600|mp800|cmp/.test(f.n))
+      return 10;
+    return 15;
+  }
+
+  /** Makineler önde; bıçak/aksesuar seyrek (≈%8) serpiştirilir, kalan sonda. */
+  function mergeRobotCoupeMachineFirst(machines, accessories, dept) {
+    var shM = shuffleDeptList(dept || "hazirlik", machines, "rc-machines");
+    var shA = shuffleDeptList(dept || "hazirlik", accessories, "rc-acc");
+    var out = [];
+    var ai = 0;
+    var accSparse = Math.min(shA.length, Math.max(6, Math.ceil(shM.length * 0.08)));
+    var i;
+    for (i = 0; i < shM.length; i++) {
+      out.push(shM[i]);
+      if (ai < accSparse && (i + 1) % 10 === 0) {
+        out.push(shA[ai++]);
+      }
+    }
+    while (ai < shA.length) out.push(shA[ai++]);
+    return out;
+  }
+
+  function sortRobotCoupeProducts(list, dept) {
+    dept = dept || "hazirlik";
+    var rc = [];
+    var other = [];
+    list.forEach(function (u) {
+      if (isRobotCoupeItem(u)) rc.push(u);
+      else other.push(u);
+    });
+    if (!rc.length) return list.slice();
+
+    var machines = [];
+    var acc = [];
+    rc.forEach(function (u) {
+      if (robotCoupeSortTier(u) >= 30) acc.push(u);
+      else machines.push(u);
+    });
+    machines.sort(function (a, b) {
+      var d = robotCoupeSortTier(a) - robotCoupeSortTier(b);
+      if (d) return d;
+      return String(a.n || (a.raw && a.raw.name) || "").localeCompare(String(b.n || (b.raw && b.raw.name) || ""), "tr");
+    });
+
+    var mergedRc = mergeRobotCoupeMachineFirst(machines, acc, dept);
+    if (!other.length) return mergedRc;
+    return shuffleDeptList(dept, other, "other-brands").concat(mergedRc);
+  }
+
   /** Kahve: espresso → değirmen → filtre → türk; yıkama: 500/1000 tb/s + marka karışımı. */
   function sortProductsDefault(dept, list) {
     if (dept === "yikama") {
@@ -1077,6 +1157,15 @@
         if (ra !== rb) return ra - rb;
         return String(a.n || "").localeCompare(String(b.n || ""), "tr");
       });
+    }
+    if (dept === "hazirlik") {
+      var rcN = 0;
+      for (var ri = 0; ri < list.length; ri++) {
+        if (isRobotCoupeItem(list[ri])) rcN++;
+      }
+      if (rcN >= 10 && rcN >= list.length * 0.35) {
+        return sortRobotCoupeProducts(list, dept);
+      }
     }
     return shuffleDeptList(dept, list, "products");
   }
@@ -1284,6 +1373,9 @@
     tileMatchProduct: tileMatchProduct,
     productRank: productRank,
     sortProductsDefault: sortProductsDefault,
+    sortRobotCoupeProducts: sortRobotCoupeProducts,
+    robotCoupeSortTier: robotCoupeSortTier,
+    isRobotCoupeItem: isRobotCoupeItem,
     resolveTipId: resolveTipId,
     normalizeTipParam: normalizeTipParam,
     deptPageHref: deptPageHref,
