@@ -880,24 +880,37 @@ body.eq-home.eq-home-mutbex .eq-cmkt-inner {
   font-weight: 700;
 }
 
-.eq-cmkt-bento__tagline {
-  position: absolute;
-  right: 18px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
-  max-width: 44%;
-  margin: 0;
-  font-style: italic;
-  font-weight: 400;
-  font-size: clamp(13px, 1.35vw, 16px);
-  line-height: 1.4;
-  color: #6d5c45;
-  text-align: right;
+.eq-cmkt-bento__tile--ozti-marka {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  align-items: center;
+  column-gap: 10px;
 }
 
 .eq-cmkt-bento__tile--ozti-marka .eq-cmkt-bento__copy {
-  max-width: 50%;
+  max-width: none;
+  z-index: 2;
+}
+
+.eq-cmkt-bento__tagline {
+  position: relative;
+  right: auto;
+  top: auto;
+  transform: none;
+  z-index: 2;
+  max-width: none;
+  margin: 0;
+  padding: 0 6px 0 10px;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(15px, 1.65vw, 21px);
+  line-height: 1.35;
+  color: #5c4a32;
+  text-align: right;
+}
+
+.eq-cmkt-bento__tile--ozti-marka .eq-cmkt-bento__tagline {
+  align-self: center;
 }
 
 .eq-cmkt-bento__tile--yaz .eq-cmkt-bento__img--cover {
