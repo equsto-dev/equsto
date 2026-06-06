@@ -144,13 +144,25 @@ function BentoTile({ tile }: { tile: CafemarktBentoTile }) {
       style={{ background: tile.bg }}
       onClick={(e) => goLink(e, tile)}
     >
-      <div className="eq-cmkt-bento__copy">
-        {tile.brand ? <span className="eq-cmkt-bento__brand">{tile.brand}</span> : null}
-        <h3 className="eq-cmkt-bento__title">{tile.title}</h3>
-        {tile.subtitle ? <p className="eq-cmkt-bento__sub">{tile.subtitle}</p> : null}
-        {tile.badge ? <span className="eq-cmkt-bento__badge">{tile.badge}</span> : null}
-      </div>
-      {tile.tagline ? <p className="eq-cmkt-bento__tagline">{tile.tagline}</p> : null}
+      {(tile.brand || tile.title || tile.subtitle || tile.badge) ? (
+        <div className="eq-cmkt-bento__copy">
+          {tile.brand ? <span className="eq-cmkt-bento__brand">{tile.brand}</span> : null}
+          {tile.title ? <h3 className="eq-cmkt-bento__title">{tile.title}</h3> : null}
+          {tile.subtitle ? <p className="eq-cmkt-bento__sub">{tile.subtitle}</p> : null}
+          {tile.badge ? <span className="eq-cmkt-bento__badge">{tile.badge}</span> : null}
+        </div>
+      ) : null}
+      {tile.taglineLines?.length ? (
+        <p className="eq-cmkt-bento__tagline eq-cmkt-bento__tagline--stack">
+          {tile.taglineLines.map((line, i) => (
+            <span key={line} className={i === 1 ? "eq-cmkt-bento__tagline-line2" : undefined}>
+              {line}
+            </span>
+          ))}
+        </p>
+      ) : tile.tagline ? (
+        <p className="eq-cmkt-bento__tagline">{tile.tagline}</p>
+      ) : null}
       {tile.footnote ? <p className="eq-cmkt-bento__footnote">{tile.footnote}</p> : null}
       {tile.showcase?.length ? (
         <div className="eq-cmkt-bento__showcase" aria-hidden="true">
