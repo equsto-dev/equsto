@@ -46,7 +46,7 @@
   /** Kilit: public/whatsapp-cat-fab-KILIT.txt — npm run verify:whatsapp-cat-fab-kilit */
   var WA_FAB_IMG = "/equsto-bize-ulasin-isimlik.png";
   /** Modal şablonu değişince artırın (eski DOM'u zorla yeniler). */
-  var WA_MODAL_BUILD = 11;
+  var WA_MODAL_BUILD = 12;
 
   var waModalDigits = "";
   var waModalResizeHandler = null;
@@ -127,6 +127,7 @@
     window.location.href = url;
     return false;
   }
+  window.equstoOpenWhatsAppDirect = equstoOpenWhatsAppDirect;
 
   function equstoWhatsAppUrl() {
     var phone = equstoResolveWhatsAppDigits();
@@ -479,50 +480,16 @@
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
-    })
-      .then(function (r) {
-        return r.json().then(function (j) {
-          return { ok: r.ok, j: j };
-        });
-      })
-      .then(function (res) {
-        if (go) {
-          go.disabled = false;
-          go.textContent = __waT("wa.send", "Gönder");
-        }
-        if (!res.ok || !(res.j && res.j.success)) {
-          var msg = (res.j && (res.j.error || res.j.message)) || __waT("wa.send_failed", "Gönderilemedi");
-          if (st) {
-            st.textContent = msg;
-            st.className = "equsto-wa-status equsto-wa-status--err";
-          }
-          return;
-        }
-        msgEl.value = "";
-        appendChatMessage(
-          "team",
-          __waT(
-            "wa.received",
-            "Mesajınız alındı. Equsto ekibi en kısa sürede size dönüş yapacak."
-          )
-        );
-        renderWaHistoryList();
-        if (st) {
-          st.textContent = "";
-          st.className = "equsto-wa-status equsto-wa-status--ok";
-        }
-      })
-      .catch(function (err) {
-        if (go) {
-          go.disabled = false;
-          go.textContent = __waT("wa.send", "Gönder");
-        }
-        var em = err && err.message ? err.message : String(err);
-        if (st) {
-          st.textContent = __waT("wa.server_unreachable", "Sunucuya ulaşılamadı: ") + em;
-          st.className = "equsto-wa-status equsto-wa-status--err";
-        }
-      });
+    }).catch(function () {});
+
+    if (go) {
+      go.disabled = false;
+      go.textContent = __waT("wa.send", "Gönder");
+    }
+    msgEl.value = "";
+
+    /* Site içi kart CRM kaydı tutar; bildirim WhatsApp uygulamasından gelir. */
+    equstoWaOpenWithMessage(text);
   }
 
   function purgeWaModalLegacyLogout() {
@@ -577,19 +544,20 @@
     }
     var msg = window.EQUSTO_WHATSAPP_TEXT != null ? String(window.EQUSTO_WHATSAPP_TEXT) : defaultPrefill();
 
-    /* PC yüzen kedi: sayfa-içi sohbet kartı */
-    if (equstoWaClickFromPcCat(ev)) {
-      equstoShowWhatsAppModal(phone, msg);
-      return false;
-    }
-
-    /* Mobil alt şerit: doğrudan WhatsApp uygulaması */
+    /* Mobil / alt şerit: doğrudan WhatsApp uygulaması (wa.me) */
     if (
       equstoPreferDirectWhatsAppApp() ||
       (document.body && document.body.classList.contains("eq-has-bottom-tabbar"))
     ) {
       return equstoOpenWhatsAppDirect(phone, msg);
     }
+
+    /* PC yüzen kedi: sayfa-içi sohbet kartı → Gönder = WhatsApp Web */
+    if (equstoWaClickFromPcCat(ev)) {
+      equstoShowWhatsAppModal(phone, msg);
+      return false;
+    }
+
     window.equstoOpenWhatsAppWebWindow(phone, msg);
     return false;
   };
