@@ -36,6 +36,7 @@
     "catalog:yuksel:yerli:full": "npm run catalog:yuksel:yerli:extract && npm run catalog:yuksel:yerli:images && npm run catalog:yuksel:yerli:import && npm run catalog:yuksel:yerli:patch-images",
     "catalog:cafemarkt:robot-coupe": "node scripts/fetch-cafemarkt-robot-coupe.mjs && node scripts/apply-cafemarkt-robot-coupe-to-equsto.mjs",
     "catalog:cafemarkt:portabianco": "node scripts/fetch-cafemarkt-portabianco.mjs && node scripts/gen-portabianco-cafemarkt-img-map.mjs && node scripts/apply-cafemarkt-portabianco-images.mjs --upgrade-b --search-missing",
+    "catalog:portabianco:audit": "node scripts/audit-fix-portabianco-catalog.mjs",
     "catalog:ozti:merge": "python scripts/merge-ozti-fiyat-katalog.py",
     "catalog:ozti:images": "python scripts/extract-ozti-pdf-images.py",
     "catalog:ozti:web-images": "node scripts/fetch-ozti-web-images.mjs",
