@@ -69,6 +69,26 @@
     return '';
   }
 
+  function preferWaApp() {
+    try {
+      if (window.matchMedia('(max-width: 768px)').matches) return true;
+      if (window.matchMedia('(hover: none) and (pointer: coarse)').matches) return true;
+    } catch (e) {}
+    return /Android|iPhone|iPad|iPod|webOS|IEMobile|Opera Mini/i.test(navigator.userAgent || '');
+  }
+
+  try {
+    fetch('/api/magaza-ayarlar', { cache: 'no-store' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (j) {
+        var d = j && j.data ? j.data : null;
+        if (!d) return;
+        if (d.whatsapp_e164) window.EQUSTO_WHATSAPP_E164 = String(d.whatsapp_e164);
+        if (d.whatsapp_prefill) window.EQUSTO_WHATSAPP_TEXT = String(d.whatsapp_prefill);
+      })
+      .catch(function () {});
+  } catch (_) {}
+
   function lineId(it) {
     var c = String(it.c || '').trim();
     var b = String(it.b || '').trim();
@@ -1119,6 +1139,11 @@
       return;
     }
     var phone = resolveWaDigits();
+    if (window.equstoOpenWhatsAppDirect && phone && preferWaApp()) {
+      window.equstoOpenWhatsAppDirect(phone, text);
+      dismissCartUi();
+      return;
+    }
     if (window.equstoOpenWhatsAppWebWindow && phone) {
       window.equstoOpenWhatsAppWebWindow(phone, text);
       dismissCartUi();
@@ -1130,12 +1155,15 @@
       );
       return;
     }
-    window.location.assign(
-      'https://web.whatsapp.com/send?phone=' +
-        encodeURIComponent(phone) +
-        '&text=' +
-        encodeURIComponent(text)
-    );
+    var url =
+      (preferWaApp() ? 'https://wa.me/' : 'https://web.whatsapp.com/send?phone=') +
+      encodeURIComponent(phone);
+    if (preferWaApp()) {
+      url += '?text=' + encodeURIComponent(text);
+    } else {
+      url += '&text=' + encodeURIComponent(text);
+    }
+    window.location.assign(url);
     dismissCartUi();
   }
 
