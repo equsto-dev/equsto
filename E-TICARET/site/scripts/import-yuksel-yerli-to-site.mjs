@@ -165,9 +165,56 @@ function brandFor(item, category, deptFile) {
   return BRAND;
 }
 
+function isGenericSub(sub) {
+  return /her\s*kap[iı]da|tel\s*raf\s*dikme|olcu\s*\/\s*size|ozel\s*kalip\s*formlu|raf\s*sistemi/i.test(
+    String(sub || ""),
+  );
+}
+
+function inferCategoryFromModel(model) {
+  const m = String(model || "").toUpperCase().trim();
+  const doorM = m.match(/(?:^|[.-])([1-4])[ND]/);
+  const doors = doorM ? doorM[1] : "";
+  const doorTr = doors
+    ? { 1: "Tek Kapılı", 2: "İki Kapılı", 3: "Üç Kapılı", 4: "Dört Kapılı" }[doors] || ""
+    : "";
+
+  if (/^TT-?\d/.test(m) || /^TT[KCGMRXTS]/.test(m)) {
+    if (/ND/.test(m)) return `Tezgah Tip Mix ${doorTr}`.trim();
+    if (/^TTD|^TT-?\d+D/.test(m)) return `Tezgah Tip Derin Dondurucu ${doorTr}`.trim();
+    if (/^TTC/.test(m)) return `Tezgah Tip Cam Kapaklı ${doorTr}`.trim();
+    if (/^TTG/.test(m)) return `Tezgah Tip GN Tepsi ${doorTr}`.trim();
+    if (/^TTK/.test(m)) return `Tezgah Tip Mix ${doorTr}`.trim();
+    return `Tezgah Tip Buzdolabı ${doorTr}`.trim();
+  }
+  if (/^DTT/.test(m)) return "Dik Tip GN Tepsi Buzdolabı";
+  if (/^DT/.test(m)) {
+    if (/ND/.test(m)) return `Dik Tip Mix ${doorTr}`.trim();
+    if (/DGN/.test(m)) return `Dik Tip Derin Dondurucu ${doorTr}`.trim();
+    return `Dik Tip Buzdolabı ${doorTr}`.trim();
+  }
+  if (/^CA-?\d/.test(m) || /^CAM/.test(m)) {
+    if (/D/.test(m)) return `Cihaz Altı Derin Dondurucu ${doorTr}`.trim();
+    return `Cihaz Altı Buzdolabı ${doorTr}`.trim();
+  }
+  if (/^SBM/.test(m)) return `Make-Up Buzdolabı Mermer Tablalı ${doorTr}`.trim();
+  if (/^SBT/.test(m)) return `Make-Up Buzdolabı ${doorTr}`.trim();
+  if (/^SBH/.test(m)) return `GN Havuzlu Make-Up Buzdolabı ${doorTr}`.trim();
+  if (/^SBB/.test(m)) return `Yükseltilmiş Make-Up Buzdolabı ${doorTr}`.trim();
+  if (/^TTEV/.test(m)) return `Tezgah Tip Make-Up Evyeli ${doorTr}`.trim();
+  if (/^PZA/.test(m)) return `Pizza Buzdolabı ${doorTr}`.trim();
+  if (/^PZAD/.test(m)) return `Pizza Buzdolabı ${doorTr}`.trim();
+  if (/^PZAC/.test(m)) return `Pizza Hazırlık Dolabı ${doorTr}`.trim();
+  if (/^PZAG/.test(m)) return `Granit Pizza Dolabı ${doorTr}`.trim();
+  return "";
+}
+
 function buildName(item, brand) {
   const model = String(item.model || "").trim();
-  const sub = String(item.alt_kategori || "").split("·")[0].trim().slice(0, 80);
+  let sub = String(item.alt_kategori || "").split("·")[0].trim().slice(0, 80);
+  if (brand === BRAND_PORTABIANCO && isGenericSub(sub)) {
+    sub = inferCategoryFromModel(model) || sub;
+  }
   if (brand === BRAND_PORTABIANCO) {
     return `Portabianco ${sub} ${model}`.replace(/\s+/g, " ").trim();
   }
