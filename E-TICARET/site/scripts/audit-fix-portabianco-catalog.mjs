@@ -119,19 +119,24 @@ function inferCategoryFromModel(model) {
   if (/^PZAG/.test(m)) return `Granit Pizza Dolabı ${doorTr}`.trim();
   if (/^SLM/.test(m)) return "Slim Tip Buzdolabı";
   if (/^ST-/.test(m)) return "Bar Soğutucu";
-  if (/^BAR/.test(m)) return "Bar Blender";
+  if (/^BAR/.test(m)) return "Bar Şişe Soğutucu";
   return "";
 }
 
-function displayName(model, altSub, cmName) {
+function isBarCoolingSku(sku) {
+  const m = String(sku || "").trim().toUpperCase();
+  return /^BAR/.test(m) || /^ST-/.test(m);
+}
+
+function displayName(model, altSub, cmName, cmExact) {
   const sku = String(model || "").trim();
   let sub = inferCategoryFromModel(sku);
-  if (cmName) {
+  if (cmName && cmExact !== false) {
     const cleaned = String(cmName)
       .replace(/^Portabianco\s+/i, "")
       .replace(/,\s*\d+\s*Kapılı.*$/i, "")
       .trim();
-    if (cleaned.length > 8) sub = cleaned;
+    if (cleaned.length > 8 && !(isBarCoolingSku(sku) && /blender/i.test(cleaned))) sub = cleaned;
   } else if (!sub && !isGenericSub(altSub)) {
     sub = String(altSub || "").split("·")[0].trim();
   }
@@ -218,10 +223,6 @@ function fallbackSkus(sku) {
     out.add("DT-1NGN");
     out.add("DT-2NGN");
     out.add("TT-2N70");
-  }
-  if (/^BAR|^ST-/.test(s)) {
-    out.add("1280");
-    out.add("1280K");
   }
   out.delete(s);
   return [...out];
@@ -357,9 +358,10 @@ async function main() {
     const hit = findCm(sku, cmIndex);
     const cm = hit?.cm;
     const exactHit = findCmExact(sku, cmIndex);
+    const cmExact = Boolean(exactHit);
     if (hit?.via?.includes("→")) stats.imgFallback++;
 
-    const newName = displayName(sku, src?.alt_kategori, cm?.name);
+    const newName = displayName(sku, src?.alt_kategori, cm?.name, cmExact);
     if (newName !== row.name) {
       stats.names++;
       row.name = newName;
@@ -403,7 +405,7 @@ async function main() {
       }
     }
 
-    if (cm) {
+    if (cm && !(isBarCoolingSku(sku) && !cmExact)) {
       const url = witB(cm.image || cm.images?.[0]);
       const fname = slugFromUrl(url);
       const rel = `${IMG_SUB}/${fname}`;
