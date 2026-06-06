@@ -964,7 +964,7 @@
     );
   }
 
-  var EQ_CATALOG_IMG_V = "20260606portabianco-cm-price";
+  var EQ_CATALOG_IMG_V = "20260606portabianco-img-fix2";
   var EQ_OZTI_BAD_CAFE_STUB_MD5 = "6696b6d14fecffc05fb1dc0156c9f6b4";
   var EQ_OZTI_BAD_CAFE_STUB_BYTES = 10995;
 
@@ -1016,6 +1016,20 @@
           }
         });
         continue;
+      }
+      if (/^catalog\/portabianco\/cafemarkt\//i.test(file)) {
+        var pbCm = portabiancoCafemarktWitCdn("images/" + file);
+        if (pbCm && !seen[pbCm]) {
+          seen[pbCm] = 1;
+          list.unshift(pbCm);
+        }
+      }
+      if (/^catalog\/yuksel\/yuksel-/i.test(file)) {
+        var pbYw = portabiancoYukselRelToWit("images/" + file);
+        if (pbYw && !seen[pbYw]) {
+          seen[pbYw] = 1;
+          list.unshift(pbYw);
+        }
       }
       var chunk = [];
       var istifRel = ozti8897PolipropilenFallbackRel("images/" + file);
@@ -1248,14 +1262,86 @@
     return "https://witcdn.cafemarkt.com/" + fname;
   }
 
-  /** Yüksel PDF yolu → Cafemarkt witcdn (canlı JSON eski kalsa bile). */
-  function portabiancoYukselRelToWit(s) {
+  /** Yüksel PDF yolu → Cafemarkt witcdn (SKU + aile eşleşmesi). */
+  function portabiancoSkuFromYukselRel(s) {
     var m = String(s || "").match(/\/catalog\/yuksel\/yuksel-([a-z0-9-]+)_/i);
-    if (!m) return "";
+    return m ? m[1].toUpperCase() : "";
+  }
+
+  function portabiancoIsCoolingSku(sku) {
+    return /^(TT|DT|PZA|SB|CA|BAR|ST|SLM|TTEV|CAM|ASB|MSB|SBB)/.test(String(sku || "").toUpperCase());
+  }
+
+  function portabiancoFallbackSkuList(sku) {
+    var s = String(sku || "").trim().toUpperCase();
+    var out = [];
+    function add(x) {
+      if (x && x !== s && out.indexOf(x) < 0) out.push(x);
+    }
+    if (/E$/.test(s) && !/-E$/.test(s)) add(s.replace(/E$/, "-E"));
+    add(s.replace(/ND(\d)/g, "N$1"));
+    add(s.replace(/ND(\d)/g, "D$1"));
+    add(s.replace(/-1N/, "-2N"));
+    add(s.replace(/-1D/, "-2D"));
+    add(s.replace(/^DT-1F/, "DT-1N"));
+    add(s.replace(/-EKOP$/i, "").replace(/-EKO$/i, ""));
+    var ttNorm = s.replace(/^TT[KCGMRXTS]+-/, "TT-");
+    add(ttNorm);
+    add(ttNorm.replace(/-1N/, "-2N"));
+    add(ttNorm.replace(/-1D/, "-2D"));
+    add(s.replace(/^TT[KCGMRXTS]+-/, "TT-"));
+    add(s.replace(/^ASBH/, "SBH"));
+    add(s.replace(/^MSBH/, "SBH"));
+    add(s.replace(/^SBTM/, "SBM"));
+    add(s.replace(/^SBTP/, "SBT"));
+    add(s.replace(/^SBHK/, "SBH"));
+    add(s.replace(/^SBHKG/, "SBH"));
+    add(s.replace(/^CAM-/, "CA-"));
+    add(s.replace(/^DTT-2/, "DTT-1"));
+    if (/^SB[THM]G/.test(s)) add(s.replace(/^SB([THM])G/, "SB$1-"));
+    if (/^DT\d+-/.test(s)) {
+      add(s.replace(/^DT\d+-/, "DT-2").replace(/EKO.*$/i, ""));
+      add("DT-2NGN");
+    }
+    var pzaDoor = s.match(/^PZA[DCK]?-(\d)[ND]/);
+    if (pzaDoor) add("TT-" + pzaDoor[1] + "N70");
+    if (/^PZA/.test(s)) {
+      add("TT-4N70");
+      add("TT-3N70");
+      add("TT-2N70");
+    }
+    if (/^SLM/.test(s)) {
+      add("DT-1NGN");
+      add("DT-2NGN");
+      add("TT-2N70");
+    }
+    if (/^BAR|^ST-/.test(s)) {
+      add("1280");
+      add("1280K");
+    }
+    return out;
+  }
+
+  function portabiancoWitFromSkuHay(skuHay, map) {
+    if (!map || !skuHay) return "";
+    var key = String(skuHay).replace(/-/g, "").toUpperCase();
+    if (map[key]) return map[key];
+    return "";
+  }
+
+  function portabiancoYukselRelToWit(s) {
     var map = typeof window !== "undefined" && window.EQ_PB_CM_WITCDN;
     if (!map) return "";
-    var key = m[1].replace(/-/g, "").toUpperCase();
-    return map[key] || "";
+    var sku = portabiancoSkuFromYukselRel(s);
+    if (!sku || !portabiancoIsCoolingSku(sku)) return "";
+    var direct = portabiancoWitFromSkuHay(sku, map);
+    if (direct) return direct;
+    var fallbacks = portabiancoFallbackSkuList(sku);
+    for (var i = 0; i < fallbacks.length; i++) {
+      var hit = portabiancoWitFromSkuHay(fallbacks[i], map);
+      if (hit) return hit;
+    }
+    return map.TT4N70 || map["251TT4N70"] || "";
   }
 
   window.eqProductImgSrc = function (p) {
@@ -1274,6 +1360,10 @@
     if (pbWit) return pbWit;
     var pbYukselWit = portabiancoYukselRelToWit(s);
     if (pbYukselWit) return pbYukselWit;
+    if (/\/catalog\/yuksel\/yuksel-/i.test(s)) {
+      var ySku = portabiancoSkuFromYukselRel(s);
+      if (ySku && portabiancoIsCoolingSku(ySku)) return "";
+    }
     if (/^images\/catalog\/ozti\/cafemarkt\//i.test(s)) {
       var axCafe = oztiAxFallbackFromRel(s);
       if (axCafe) return axCafe;
