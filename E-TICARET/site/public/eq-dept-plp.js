@@ -408,10 +408,13 @@
       n = window.eqPolishDisplayText(n);
     }
     var fb = b;
-    if (x.oem_brand) {
+    if (window.EqDeptCmFacets && window.EqDeptCmFacets.resolveFacetBrand) {
+      fb =
+        window.EqDeptCmFacets.resolveFacetBrand(b, n, x.sku || x.urun_kodu || x.model) ||
+        (x.oem_brand ? String(x.oem_brand).trim() : '') ||
+        b;
+    } else if (x.oem_brand) {
       fb = String(x.oem_brand).trim();
-    } else if (window.EqDeptCmFacets && window.EqDeptCmFacets.resolveFacetBrand) {
-      fb = window.EqDeptCmFacets.resolveFacetBrand(b, n, x.sku || x.urun_kodu || x.model);
     }
     var row = x;
     if (

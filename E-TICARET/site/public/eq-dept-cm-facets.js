@@ -174,6 +174,8 @@
     lava: 'Lava',
     oba: 'OBA',
     fac: 'FAC',
+    unox: 'Unox',
+    rational: 'Rational',
     santos: 'SANTOS',
   };
   /** Kısa önekler yalnızca ad başında; uzun markalar ad içinde de aranır. */
@@ -278,6 +280,7 @@
     for (var ni = 0; ni < namesToTry.length; ni++) {
       var nl = lc(namesToTry[ni]);
       var nu = namesToTry[ni].toLocaleUpperCase('tr');
+      if (/\bUNOX\b/.test(nu)) return 'Unox';
       if (/\bRATIONAL\b/.test(nu)) return 'Rational';
       for (var pi = 0; pi < prefixes.length; pi++) {
         var p = prefixes[pi];
@@ -293,10 +296,10 @@
     var n = String(name || '').trim();
     var kod = String(sku || '').trim();
     if (OEM_RESELLER.test(lc(raw)) && (n || kod)) {
-      if (/^9890\.|^5RRX\./i.test(kod)) return 'Rational';
       if (/^9912\.|^9805\.(SDE|SV|SPN)/i.test(kod) && /\bSIMAG\b/i.test(n.toLocaleUpperCase('tr'))) return 'SIMAG';
       var oem = findOemBrandInName(n);
       if (oem) return facetBrandKey(oem);
+      if (/^5RRX\./i.test(kod)) return 'Rational';
     }
     return facetBrandKey(raw);
   }

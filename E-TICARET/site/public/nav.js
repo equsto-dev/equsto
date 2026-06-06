@@ -122,11 +122,11 @@
       href: "yikama.html",
       /* notlar/Sol Liste Sıralaması.docx — Bulaşık Yıkama Makineleri alt sırası */
       subs: [
-        { label: "Setaltı Bulaşık Yıkama Makineleri", tip: "setalti-bulasik", search: "setaltı|set altı|tezgah altı" },
-        { label: "Giyotin Tip Bulaşık Yıkama Makineleri", tip: "giyotin-bulasik", search: "giyotin" },
+        { label: "Setaltı Bulaşık Yıkama Makineleri (500 tabak/s)", tip: "setalti-bulasik", search: "setaltı|set altı|tezgah altı|075t|oby 50|500 tabak" },
+        { label: "Giyotin Tip Bulaşık Yıkama Makineleri (1000 tabak/s)", tip: "giyotin-bulasik", search: "giyotin|071t|obm|1080|1000 tabak" },
         { label: "Konveyörlü Bulaşık Yıkama Makineleri", tip: "konveyorlu-bulasik", search: "konveyör|konveyörlü" },
         { label: "Tırnaklı Bulaşık Yıkama Makineleri", tip: "tirnakli-bulasik", search: "tırnaklı" },
-        { label: "Kazan Yıkama Makineleri", tip: "kazan-yikama", search: "kazan yıkama" },
+        { label: "Kazan Yıkama Makineleri", tip: "kazan-yikama", search: "kazan yıkama|7771|evyesi" },
       ],
     },
     {

@@ -4,6 +4,20 @@ function env(name: string): string {
   return process.env[name]?.trim() || "";
 }
 
+/** BotFather token — getUpdates URL yapıştırılmışsa sadece token kısmını alır. */
+function telegramBotToken(): string {
+  const raw = env("TELEGRAM_BOT_TOKEN");
+  if (!raw) return "";
+  const fromUrl = raw.match(/\/bot([^/?#\s]+)/i);
+  if (fromUrl) return fromUrl[1];
+  if (/^https?:\/\//i.test(raw)) {
+    return raw
+      .replace(/^https?:\/\/api\.telegram\.org\/bot/i, "")
+      .replace(/\/.*$/, "");
+  }
+  return raw;
+}
+
 function siteUrl(): string {
   return env("NEXT_PUBLIC_SITE_URL") || "https://equsto.com";
 }
@@ -31,7 +45,7 @@ export async function sendInstantAlert(
   const errors: string[] = [];
   const text = `${title}\n\n${body}`.trim();
 
-  const tgToken = env("TELEGRAM_BOT_TOKEN");
+  const tgToken = telegramBotToken();
   const tgChat = env("TELEGRAM_CHAT_ID");
   if (tgToken && tgChat) {
     try {
@@ -166,7 +180,7 @@ export async function notifyNewSiparis(s: Siparis): Promise<NotifyResult> {
 
 export function notifyChannelsConfigured(): string[] {
   const out: string[] = [];
-  if (env("TELEGRAM_BOT_TOKEN") && env("TELEGRAM_CHAT_ID")) out.push("telegram");
+  if (telegramBotToken() && env("TELEGRAM_CHAT_ID")) out.push("telegram");
   if (env("RESEND_API_KEY") && env("EQUSTO_NOTIFY_EMAIL")) out.push("email");
   if (
     env("TWILIO_ACCOUNT_SID") &&
@@ -182,7 +196,7 @@ export function notifyChannelsConfigured(): string[] {
 /** Vercel tanılama — değerler loglanmaz, yalnızca dolu/boş */
 export function notifyEnvHints() {
   return {
-    TELEGRAM_BOT_TOKEN: env("TELEGRAM_BOT_TOKEN") ? "set" : "missing",
+    TELEGRAM_BOT_TOKEN: telegramBotToken() ? "set" : "missing",
     TELEGRAM_CHAT_ID: env("TELEGRAM_CHAT_ID") ? "set" : "missing",
     RESEND_API_KEY: env("RESEND_API_KEY") ? "set" : "missing",
     EQUSTO_NOTIFY_EMAIL: env("EQUSTO_NOTIFY_EMAIL") ? "set" : "missing",
