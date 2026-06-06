@@ -342,7 +342,7 @@ export const cafemarktBentoTiles: CafemarktBentoTile[] = [
   {
     id: "ozti-marka",
     taglineLines: ["Sadece sana özel...", "Hayal et."],
-    footnote: "Projeni/ listeni gönder fiyatlandıralım.",
+    footnote: "Projeni/ listeni gönder, fiyatlandıralım",
     href: "/pfos",
     bg: "#fff8e1",
     variant: "sm",

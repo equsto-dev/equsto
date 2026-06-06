@@ -145,7 +145,7 @@ function OztiMarkaTile({ tile }: { tile: CafemarktBentoTile }) {
       onClick={(e) => goLink(e, tile)}
     >
       <p className="eq-cmkt-bento__footnote">
-        {tile.footnote ?? "Projeni/ listeni gönder fiyatlandıralım."}
+        {tile.footnote ?? "Projeni/ listeni gönder, fiyatlandıralım"}
       </p>
       <p className="eq-cmkt-bento__tagline eq-cmkt-bento__tagline--stack">
         <span className="eq-cmkt-bento__tagline-line1">Sadece sana özel...</span>

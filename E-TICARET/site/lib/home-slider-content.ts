@@ -79,6 +79,8 @@ export type HomeMainSliderSlide =
       kind: "sketch";
       image: typeof homeMainSliderPfosImage;
       thumbSrc: string;
+      /** Sol alt köşe — proje/liste CTA */
+      sketchCaption?: string;
     }
   | {
       id: "electrolux-xp";
@@ -122,6 +124,7 @@ export const homeMainSliderSlides: HomeMainSliderSlide[] = [
     kind: "sketch",
     image: homeMainSliderPfosImage,
     thumbSrc: homeMainSliderPfosImage.path,
+    sketchCaption: "Projeni/ listeni gönder, fiyatlandıralım",
   },
   {
     id: "imt300",
