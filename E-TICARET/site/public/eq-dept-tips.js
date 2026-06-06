@@ -608,9 +608,18 @@
 
   function isYukselIstifPartProduct(u) {
     var f = istifItemFields(u);
-    if (!/yuksel-2025-yerli/.test(f.kaynak)) return false;
+    var isYuksel = /yuksel-2025-yerli|yuksel endustriyel|^yuksel/.test(
+      f.kaynak + " " + f.brand + " " + f.name
+    );
+    if (!isYuksel) return false;
     if (/katli\s*raflar|tier\s*shelving/.test(f.name)) return false;
-    if (/^\d{2}-x-\d+-x-\d+/i.test(String(f.model || "").replace(/\s+/g, ""))) return false;
+    var mod = String(f.model || "").replace(/\s+/g, "");
+    if (/^\d{2}-x-\d+-x-\d+/i.test(mod)) return false;
+    if (/tel\s*raf\s*dikme|tel\s*izgara|rail\s*basket|olcu\s*\/\s*size|perfore\s*raf|epoxy/.test(f.name)) {
+      return true;
+    }
+    if (/^m\d{6,}$/i.test(mod)) return true;
+    if (/^\d{2,3}x\d{2}x\d{2,3}$/i.test(mod)) return true;
     return true;
   }
 

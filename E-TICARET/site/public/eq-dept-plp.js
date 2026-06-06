@@ -32,7 +32,7 @@
   }
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260606yuksel-parts-rm3';
+  var CATALOG_V = '20260606yuksel-parts-rm4';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   /* Next.js URL slug → katalog dept id (data/dept/*.json) */
   if (DEPT === 'market-reyonlari') DEPT = 'market-reyon';
@@ -360,7 +360,22 @@
     return false;
   }
 
+  function isYukselIstifPartRow(item) {
+    if (!item) return false;
+    var raw = item.raw || item;
+    var nm = lc(item.n || raw.name || '');
+    var br = lc(item.b || raw.brand || '');
+    if (!/yuksel/.test(br + ' ' + nm + ' ' + lc(raw.kaynak_fiyat_listesi || raw.kaynak || ''))) {
+      return false;
+    }
+    if (/katli\s*raflar|tier\s*shelving/.test(nm)) return false;
+    var mod = String(raw.model || raw.sku || '').replace(/\s+/g, '');
+    if (/^\d{2}-x-\d+-x-\d+/i.test(mod)) return false;
+    return true;
+  }
+
   function skipItem(item) {
+    if (DEPT === 'istif' && isYukselIstifPartRow(item)) return true;
     if (DEPT === 'kuvetler') {
       if (!(item && item.raw && isOztiRow(item.raw))) return true;
       if (window.EqDeptTips && typeof window.EqDeptTips.isKuvetProduct === 'function') {
