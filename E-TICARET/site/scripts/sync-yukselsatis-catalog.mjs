@@ -369,7 +369,7 @@ function isYedekParca(p) {
 const WEB_DEPT_MAP = {
   "Soğutma ekipmanları": { dept: "sogutma", category: "sogutma-ekipmanlari" },
   "Yıkama ekipmanları": { dept: "yikama", category: "bulasik-makineleri" },
-  "Taşıma ekipmanları": { dept: "araba", category: "tasima-arabalari" },
+  "Taşıma ekipmanları": { dept: "tasima", category: "servis-arabalar" },
   "İstif / raf sistemleri": { dept: "istif", category: "istif-raflari" },
   Davlumbaz: { dept: "davlumbaz", category: "davlumbaz" },
   "Kahve / içecek (ithal)": { dept: "icecek", category: "bar-blender" },
@@ -388,8 +388,20 @@ function mapWebDept(p) {
     return { dept: "yikama", category: "bulasik-makineleri" };
   }
   if (/davlumbaz/.test(slugs)) return { dept: "davlumbaz", category: "davlumbaz" };
-  if (/servis-araba|tasima|tepsi|trolley|thermobox|camasir/.test(slugs)) {
-    return { dept: "araba", category: "tasima-arabalari" };
+  if (/servis-araba|tasima|tepsi|trolley|thermobox|camasir|avatherm-tepsi/.test(slugs)) {
+    if (/tepsi-tasima-araba/.test(slugs)) {
+      return { dept: "tasima", category: "servis-arabalar" };
+    }
+    if (/thermobox|tepsi-modelleri|pasta-tasima/.test(slugs)) {
+      return { dept: "tasima", category: "tasima-ekipmanlari-yemek-tasima-kaplari" };
+    }
+    return { dept: "tasima", category: "servis-arabalar" };
+  }
+  if (/avatherm/i.test(p.name || "") && /thermobox|tepsi|menu mobile|pasta ta/i.test(p.name || "")) {
+    if (/tepsi taşıma araba|tepsi tasima araba/i.test(p.name || "")) {
+      return { dept: "tasima", category: "servis-arabalar" };
+    }
+    return { dept: "tasima", category: "tasima-ekipmanlari-yemek-tasima-kaplari" };
   }
 
   const base = WEB_DEPT_MAP[p.dept_group] || { dept: "istif", category: "istif-raflari" };
