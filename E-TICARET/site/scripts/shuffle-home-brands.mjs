@@ -11,6 +11,7 @@ const brands = [
   { label: "Samixir", href: "/shop/hazirlik?marka=Samixir" },
   { label: "Gtech", href: "/shop/hazirlik?marka=Gtech" },
   { label: "Robot Coupe", href: "/shop/hazirlik?marka=Robot%20Coupe" },
+  { label: "Şenox", href: "/shop/sogutma?marka=Senox" },
 ];
 
 const seed = Number(process.argv[2] || Date.now()) & 0x7fffffff;
