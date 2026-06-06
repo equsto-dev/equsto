@@ -201,6 +201,26 @@ function isYukselYerli(row) {
   return String(row.kaynak_fiyat_listesi || "").includes("yuksel-2025-yerli");
 }
 
+/** Parça / aksesuar — vitrinde satılmaz (PERFORE dikme, EPOXY tabla vb.). */
+function yukselShopHaystack(item) {
+  return String(item.name || item.alt_kategori || "")
+    .toLocaleLowerCase("tr")
+    .replace(/ı/g, "i")
+    .replace(/İ/g, "i")
+    .replace(/ğ/g, "g")
+    .replace(/ü/g, "u")
+    .replace(/ş/g, "s")
+    .replace(/ö/g, "o")
+    .replace(/ç/g, "c");
+}
+
+function isYukselYerliShopExcluded(item) {
+  const hay = yukselShopHaystack(item);
+  if (/perfore\s*raf\s*boyali/.test(hay)) return true;
+  if (/epoxy\s*\+\s*plastic|powder\s*coated/.test(hay)) return true;
+  return false;
+}
+
 function buildRow(item, imgMap) {
   const listEur = Number(item.fiyat_euro);
   const { netEur, price, fiyat_tl } = priceFromEuro(listEur);
@@ -241,8 +261,13 @@ function main() {
   const imgMap = loadImageMap();
   const rows = [];
   let skipped = 0;
+  let excluded = 0;
 
   for (const item of yuksel) {
+    if (isYukselYerliShopExcluded(item)) {
+      excluded++;
+      continue;
+    }
     const listEur = Number(item.fiyat_euro);
     if (!listEur || listEur <= 0) {
       skipped++;
@@ -275,7 +300,7 @@ function main() {
   console.log(
     `[yuksel-yerli] İskonto %${Math.round(ISKONTO * 100)} → net çarpan ${NET_MULT}, EUR→TRY ${EUR_TRY}`,
   );
-  console.log(`[yuksel-yerli] ${mergedTotal} ürün, ${withImg} görsel, ${skipped} atlanan`);
+  console.log(`[yuksel-yerli] ${mergedTotal} ürün, ${withImg} görsel, ${skipped} atlanan, ${excluded} vitrin dışı`);
 
   execSync("node scripts/rebuild-ekipmanlar-from-dept.mjs", { cwd: ROOT, stdio: "inherit" });
   console.log("[yuksel-yerli] Bitti.");
