@@ -65,8 +65,8 @@ if (!pfosWizard.includes("renderMemberGate")) fail("PfosPublicWizard: memberGate
 if (!pfosWizard.includes("pfosLoginHref")) fail("PfosPublicWizard: pfosLoginHref yok");
 if (!pfosWizard.includes("pfosRegisterHref")) fail("PfosPublicWizard: pfosRegisterHref yok");
 if (!pfosWizard.includes("deliveryOnly")) fail("PfosPublicWizard: deliveryOnly proforma yok");
-if (!pfosWizard.includes("PFOS_PANEL_FADE_MS = 320")) {
-  fail("PfosPublicWizard: PFOS_PANEL_FADE_MS=320 kilidi yok");
+if (!pfosWizard.includes("PFOS_PANEL_FADE_MS = 580")) {
+  fail("PfosPublicWizard: PFOS_PANEL_FADE_MS=580 kilidi yok");
 }
 if (!/if \(!memberLoggedIn\)[\s\S]{0,80}renderMemberGate/.test(pfosWizard)) {
   fail("PfosPublicWizard: üye kapısı giriş kontrolünde — sihirbaz başında olmalı");

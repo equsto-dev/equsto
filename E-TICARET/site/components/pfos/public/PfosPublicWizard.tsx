@@ -76,9 +76,10 @@ type Props = {
 const M2_PRESETS = [40, 80, 120, 200, 350];
 
 /** Panel geçiş süreleri (CSS transition ile eşleşmeli) */
-const PFOS_PANEL_FADE_MS = 320;
-const PFOS_RESULT_FADE_MS = 320;
-const PFOS_RAIL_FADE_MS = 320;
+const PFOS_PANEL_FADE_MS = 580;
+const PFOS_PANEL_REVEAL_DELAY_MS = 120;
+const PFOS_RESULT_FADE_MS = 580;
+const PFOS_RAIL_FADE_MS = 580;
 
 function formatTry(n: number) {
   return new Intl.NumberFormat("tr-TR", {
@@ -205,17 +206,33 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
 
   const openPanelIndexRef = useRef(-1);
 
-  const scheduleReveal = useCallback((setReveal: (v: boolean) => void) => {
-    setReveal(false);
-    let raf2 = 0;
-    const raf1 = requestAnimationFrame(() => {
-      raf2 = requestAnimationFrame(() => setReveal(true));
-    });
-    return () => {
-      cancelAnimationFrame(raf1);
-      cancelAnimationFrame(raf2);
-    };
-  }, []);
+  const scheduleReveal = useCallback(
+    (setReveal: (v: boolean) => void, delayMs = PFOS_PANEL_REVEAL_DELAY_MS) => {
+      setReveal(false);
+      let raf2 = 0;
+      let delayTimer = 0;
+      const start = () => {
+        const raf1 = requestAnimationFrame(() => {
+          raf2 = requestAnimationFrame(() => setReveal(true));
+        });
+        return raf1;
+      };
+      let raf1 = 0;
+      if (delayMs > 0) {
+        delayTimer = window.setTimeout(() => {
+          raf1 = start();
+        }, delayMs);
+      } else {
+        raf1 = start();
+      }
+      return () => {
+        window.clearTimeout(delayTimer);
+        cancelAnimationFrame(raf1);
+        cancelAnimationFrame(raf2);
+      };
+    },
+    [],
+  );
 
   useLayoutEffect(() => {
     clearEnterTimer();
@@ -233,7 +250,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     enterTimerRef.current = window.setTimeout(() => {
       setAnimatingPanelId(null);
       setAnimatingPanelReveal(false);
-    }, PFOS_PANEL_FADE_MS + 80);
+    }, PFOS_PANEL_FADE_MS + PFOS_PANEL_REVEAL_DELAY_MS + 80);
 
     return clearEnterTimer;
   }, [openPanelIndex, panels, clearEnterTimer]);
@@ -709,6 +726,10 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
 
     const isDone = index < openPanelIndex;
     const isActive = index === openPanelIndex;
+    const panelAdvancing =
+      isActive && openPanelIndex > openPanelIndexRef.current;
+    const panelEntering = animatingPanelId === panel.id || panelAdvancing;
+    const panelRevealing = panelEntering && animatingPanelReveal;
     const showBody = isDone || isActive;
     const summary = panelAnswerSummary(panel, answers);
     const summaryDisplay = summary
@@ -722,7 +743,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
       <section
         key={panel.id}
         id={`pfos-sec-${panel.id}`}
-        className={`${styles.sec} ${styles.secVis}${isDone ? ` ${styles.secDone}` : ""}${isActive ? ` ${styles.secActive}` : ""}${isActive && adresListOpen && qs.some((q) => q.id === "q_lokasyon") ? ` ${styles.secAdresExpanded}` : ""}${animatingPanelId === panel.id ? ` ${styles.secPending}` : ""}${animatingPanelId === panel.id && animatingPanelReveal ? ` ${styles.secReveal}` : ""}`}
+        className={`${styles.sec} ${styles.secVis}${isDone ? ` ${styles.secDone}` : ""}${isActive ? ` ${styles.secActive}` : ""}${isActive && adresListOpen && qs.some((q) => q.id === "q_lokasyon") ? ` ${styles.secAdresExpanded}` : ""}${panelEntering ? ` ${styles.secPending}` : ""}${panelRevealing ? ` ${styles.secReveal}` : ""}`}
       >
         <button
           type="button"
