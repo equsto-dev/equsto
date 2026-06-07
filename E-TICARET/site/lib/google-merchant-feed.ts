@@ -3,6 +3,9 @@ import { loadEkipmanlarJson } from "@/lib/catalog-json";
 import { getSiteOrigin } from "@/lib/site-origin";
 import { resolveShopDept } from "@/lib/shop/category-dept";
 import { isShopDeptSlug } from "@/lib/shop/depts";
+import { absoluteAssetUrl } from "@/lib/asset-cdn";
+
+export { absoluteAssetUrl };
 
 export { getSiteOrigin };
 
@@ -107,8 +110,6 @@ function pickMerchantHeroImage(images: unknown[]): string {
   }
   return String(images[0] || "");
 }
-
-export { absoluteAssetUrl } from "@/lib/asset-cdn";
 
 export function cleanDescription(row: CatalogRow, maxLen = 5000): string {
   const parts = [
