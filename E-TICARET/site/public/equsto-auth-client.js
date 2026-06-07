@@ -161,6 +161,17 @@
     });
   };
 
+  function redirectAfterAuth() {
+    var next = new URLSearchParams(location.search).get('next') || '/';
+    setTimeout(function () {
+      if (typeof window.eqGo === 'function' && /^(?:\/(?:index\.html)?|index|home)(?:\?|$)/i.test(next)) {
+        window.eqGo('home');
+      } else {
+        location.href = next;
+      }
+    }, 400);
+  }
+
   window.equstoAuthGoogleCredential = function (credential) {
     return apiFetch('/google', {
       method: 'POST',
@@ -169,11 +180,7 @@
       if (j && j.success) {
         applySession(j);
         setMsg('');
-        var next = new URLSearchParams(location.search).get('next') || '/';
-        setTimeout(function () {
-          if (typeof window.eqGo === 'function') window.eqGo('home');
-          else location.href = next;
-        }, 400);
+        redirectAfterAuth();
       } else if (j && j.error) {
         setMsg(j.error, false);
       }
@@ -191,10 +198,7 @@
         if (j && j.success) {
           applySession(j);
           setMsg('');
-          setTimeout(function () {
-            if (typeof window.eqGo === 'function') window.eqGo('home');
-            else location.href = '/';
-          }, 400);
+          redirectAfterAuth();
         } else if (j && j.error) {
           setMsg(j.error, false);
         }
@@ -258,11 +262,7 @@
             mode === 'register' ? 'Kayıt tamamlandı. Yönlendiriliyorsunuz…' : 'Giriş başarılı. Yönlendiriliyorsunuz…',
             true,
           );
-          var next = new URLSearchParams(location.search).get('next') || '/';
-          setTimeout(function () {
-            if (typeof window.eqGo === 'function' && /index|home/i.test(next)) window.eqGo('home');
-            else location.href = next;
-          }, 500);
+          redirectAfterAuth();
         } else {
           setMsg((j && j.error) || 'İşlem başarısız', false);
         }
