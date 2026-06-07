@@ -129,7 +129,7 @@ body.eq-wa-in-tabbar:not(.admin-app) #equsto-contact-fab {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: rgba(11, 20, 26, 0.55);
+  background: transparent;
   cursor: pointer;
 }
 
@@ -749,10 +749,6 @@ body.eq-wa-in-tabbar:not(.admin-app) #equsto-contact-fab {
 }
 
 @media (max-width: 768px) {
-  .equsto-wa-overlay.equsto-wa-overlay--open .equsto-wa-backdrop {
-    display: none;
-  }
-
   .equsto-wa-modal {
     position: fixed;
     inset: 0;
