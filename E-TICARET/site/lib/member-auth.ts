@@ -282,6 +282,18 @@ export async function loginWithGoogle(
   return createSessionForMember(member.id);
 }
 
+export async function updateMemberProfilePhone(
+  memberId: string,
+  telefon: string,
+): Promise<MemberUser> {
+  const phone = requireValidTrMemberPhone(telefon);
+  const member = await db.shopMember.update({
+    where: { id: memberId },
+    data: { telefon: phone },
+  });
+  return memberToUser(member);
+}
+
 export async function updateMemberCart(
   memberId: string,
   items: ShopCartLine[],

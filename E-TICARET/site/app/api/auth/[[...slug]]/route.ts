@@ -11,6 +11,7 @@ import {
   revokeSession,
   sessionResponse,
   updateMemberCart,
+  updateMemberProfilePhone,
 } from "@/lib/member-auth";
 import { normalizeShopCartItems } from "@/lib/shop-cart";
 
@@ -118,6 +119,20 @@ async function action(req: NextRequest, ctx: Ctx): Promise<Response> {
       replace,
     );
     return json({ success: true, items });
+  }
+
+  if (path === "profile" && method === "PUT") {
+    const memberId = await getMemberIdByToken(token);
+    if (!memberId) return err("Oturum geçersiz", 401);
+    try {
+      const user = await updateMemberProfilePhone(
+        memberId,
+        String(body.telefon || body.phone || ""),
+      );
+      return json({ success: true, user });
+    } catch (e) {
+      return err(e instanceof Error ? e.message : "Profil güncellenemedi", 400);
+    }
   }
 
   if (path === "cart" && method === "GET") {

@@ -118,6 +118,110 @@
   word-break: break-word;
 }
 
+.phoneField {
+  grid-column: 1 / -1;
+}
+
+.phoneDisplay {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+}
+
+.phoneEditBtn {
+  padding: 4px 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #2563a8;
+  background: transparent;
+  border: 1px solid #b8c9de;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.phoneEditBtn:hover {
+  background: #eef3fb;
+  color: #001e50;
+}
+
+.phoneForm {
+  margin-top: 4px;
+}
+
+.phoneInput {
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  padding: 10px 12px;
+  font-size: 0.92rem;
+  border: 1px solid #b8c9de;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.phoneInput:focus {
+  outline: none;
+  border-color: #2563a8;
+  box-shadow: 0 0 0 2px rgba(37, 99, 168, 0.15);
+}
+
+.phoneActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.phoneSaveBtn {
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  background: #001e50;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.phoneSaveBtn:hover:not(:disabled) {
+  background: #002a6e;
+}
+
+.phoneSaveBtn:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.phoneCancelBtn {
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #001e50;
+  background: #eef3fb;
+  border: 1px solid #b8c9de;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.phoneCancelBtn:disabled {
+  opacity: 0.65;
+}
+
+.phoneHint {
+  margin: 8px 0 0;
+  font-size: 0.78rem;
+  color: #6b7280;
+  line-height: 1.45;
+}
+
+.phoneError {
+  margin: 8px 0 0;
+  font-size: 0.82rem;
+  color: #c0392b;
+  line-height: 1.45;
+}
+
 .logoutBtn {
   display: inline-block;
   padding: 10px 18px;
