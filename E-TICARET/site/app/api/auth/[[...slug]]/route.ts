@@ -12,6 +12,7 @@ import {
   sessionResponse,
   updateMemberCart,
   updateMemberProfilePhone,
+  updateMemberProfileAddress,
 } from "@/lib/member-auth";
 import { normalizeShopCartItems } from "@/lib/shop-cart";
 
@@ -124,11 +125,23 @@ async function action(req: NextRequest, ctx: Ctx): Promise<Response> {
   if (path === "profile" && method === "PUT") {
     const memberId = await getMemberIdByToken(token);
     if (!memberId) return err("Oturum geçersiz", 401);
+    const hasPhone = body.telefon !== undefined || body.phone !== undefined;
+    const hasAddress = body.teslimatAdres !== undefined;
+    if (!hasPhone && !hasAddress) {
+      return err("Güncellenecek profil alanı belirtilmedi", 400);
+    }
     try {
-      const user = await updateMemberProfilePhone(
-        memberId,
-        String(body.telefon || body.phone || ""),
-      );
+      let user: Awaited<ReturnType<typeof updateMemberProfilePhone>> | null = null;
+      if (hasPhone) {
+        user = await updateMemberProfilePhone(
+          memberId,
+          String(body.telefon || body.phone || ""),
+        );
+      }
+      if (hasAddress) {
+        user = await updateMemberProfileAddress(memberId, body.teslimatAdres);
+      }
+      if (!user) return err("Profil güncellenemedi", 400);
       return json({ success: true, user });
     } catch (e) {
       return err(e instanceof Error ? e.message : "Profil güncellenemedi", 400);

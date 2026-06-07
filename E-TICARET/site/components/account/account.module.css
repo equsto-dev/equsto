@@ -87,6 +87,7 @@
   background: #fff;
   border: 1px solid #d5dbe6;
   border-radius: 10px;
+  scroll-margin-top: calc(var(--eq-shop-chrome-h, 118px) + 16px);
 }
 
 .sectionTitle {
@@ -220,6 +221,55 @@
   font-size: 0.82rem;
   color: #c0392b;
   line-height: 1.45;
+}
+
+.addressForm {
+  margin-top: 16px;
+}
+
+.addressAdresPick {
+  margin-bottom: 14px;
+}
+
+.addressField {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.addressTextarea {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  margin-top: 6px;
+  padding: 10px 12px;
+  font-size: 0.92rem;
+  font-family: inherit;
+  line-height: 1.45;
+  border: 1px solid #b8c9de;
+  border-radius: 8px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.addressTextarea:focus {
+  outline: none;
+  border-color: #2563a8;
+  box-shadow: 0 0 0 2px rgba(37, 99, 168, 0.15);
+}
+
+.addressDisplay {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  margin-top: 12px;
+}
+
+.addressSummary {
+  margin: 0;
+  font-size: 0.92rem;
+  color: #1a1d2b;
+  line-height: 1.5;
 }
 
 .logoutBtn {

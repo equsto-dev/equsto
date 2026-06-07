@@ -9,6 +9,12 @@ import {
   shopCartItemsToJson,
   type ShopCartLine,
 } from "@/lib/shop-cart";
+import {
+  normalizeMemberTeslimatAdres,
+  requireValidMemberTeslimatAdres,
+  type MemberTeslimatAdres,
+} from "@/lib/account/member-teslimat-adres";
+
 const SESSION_DAYS = 90;
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -16,6 +22,7 @@ export type MemberUser = {
   email: string;
   name: string;
   telefon: string;
+  teslimatAdres: MemberTeslimatAdres;
   provider: string;
   picture: string;
 };
@@ -113,6 +120,7 @@ function memberToUser(m: {
   email: string;
   name: string;
   telefon?: string | null;
+  teslimatAdres?: unknown;
   provider: string;
   picture: string | null;
 }): MemberUser {
@@ -120,6 +128,7 @@ function memberToUser(m: {
     email: m.email,
     name: m.name || "",
     telefon: String(m.telefon || "").trim(),
+    teslimatAdres: normalizeMemberTeslimatAdres(m.teslimatAdres),
     provider: m.provider || "email",
     picture: m.picture || "",
   };
@@ -290,6 +299,18 @@ export async function updateMemberProfilePhone(
   const member = await db.shopMember.update({
     where: { id: memberId },
     data: { telefon: phone },
+  });
+  return memberToUser(member);
+}
+
+export async function updateMemberProfileAddress(
+  memberId: string,
+  teslimatAdres: unknown,
+): Promise<MemberUser> {
+  const adres = requireValidMemberTeslimatAdres(teslimatAdres);
+  const member = await db.shopMember.update({
+    where: { id: memberId },
+    data: { teslimatAdres: adres },
   });
   return memberToUser(member);
 }
