@@ -2,16 +2,52 @@
 
 (function () {
   var LOGO_V = "20260519wordmark3";
-  var LOGO_DARK = "/images/equsto-logo.png?v=" + LOGO_V;
-  var LOGO_LIGHT = "/images/equsto-logo-white.png?v=" + LOGO_V;
+  var LOGO_PATH_DARK = "/images/equsto-logo.png";
+  var LOGO_PATH_LIGHT = "/images/equsto-logo-white.png";
 
-  window.EQUSTO_LOGO_SRC = LOGO_DARK;
-  window.EQUSTO_LOGO_SRC_LIGHT = LOGO_LIGHT;
   window.EQUSTO_LOGO_V = LOGO_V;
   /** @deprecated SVG yerine PNG */
   window.EQUSTO_LOGO_SVG = "";
 
   var STYLE_PROPS = ["display", "visibility", "pointer-events", "width", "height", "overflow"];
+
+  function encodeRel(rel) {
+    return String(rel || "")
+      .split("/")
+      .map(function (seg) {
+        return seg ? encodeURIComponent(seg) : "";
+      })
+      .join("/");
+  }
+
+  function resolveLogoHref(publicPath) {
+    var rel = String(publicPath || "")
+      .replace(/^\//, "")
+      .split("?")[0];
+    var q = "?v=" + LOGO_V;
+    try {
+      if (typeof window.equstoCdnAssetHref === "function") {
+        var via = window.equstoCdnAssetHref(rel);
+        if (via) return via + q;
+      }
+      var base = String(window.__EQUSTO_ASSET_CDN || "")
+        .trim()
+        .replace(/\/$/, "");
+      if (base) return base + "/" + encodeRel(rel) + q;
+    } catch (_) {}
+    return publicPath + q;
+  }
+
+  function publishLogoGlobals() {
+    window.EQUSTO_LOGO_SRC = resolveLogoHref(LOGO_PATH_DARK);
+    window.EQUSTO_LOGO_SRC_LIGHT = resolveLogoHref(LOGO_PATH_LIGHT);
+    window.EQUSTO_LOGO_IMG_HTML =
+      '<img src="' +
+      window.EQUSTO_LOGO_SRC +
+      '" alt="EQUSTO" class="eq-logo-img eq-logo-wordmark" width="409" height="74" decoding="async" fetchpriority="high">';
+  }
+
+  publishLogoGlobals();
 
   function clearInlineHide(el) {
     if (!el) return;
@@ -31,7 +67,7 @@
   }
 
   function logoSrcFor(el) {
-    return wantsLightWordmark(el) ? LOGO_LIGHT : LOGO_DARK;
+    return resolveLogoHref(wantsLightWordmark(el) ? LOGO_PATH_LIGHT : LOGO_PATH_DARK);
   }
 
   function imgHtml(src) {
@@ -42,17 +78,22 @@
     );
   }
 
-  window.EQUSTO_LOGO_IMG_HTML = imgHtml(LOGO_DARK);
+  function logoBase(src) {
+    return String(src || "").split("?")[0].replace(/^https?:\/\/[^/]+/i, "");
+  }
 
   function isStaleImg(img, el) {
     if (!img) return true;
     var want = logoSrcFor(el);
     var src = img.getAttribute("src") || "";
-    if (src !== want) return true;
+    if (src === want) return false;
+    if (logoBase(src) !== logoBase(want)) return true;
     if (src.indexOf("20260520logo") >= 0) return true;
     if (img.getAttribute("width") === "284") return true;
     if (!img.getAttribute("alt")) return true;
-    return false;
+    /* Faz B: yerel /images/ kaldı, CDN hazır */
+    if (/^(\/)?images\/equsto-logo/i.test(logoBase(src)) && /^https:\/\//i.test(want)) return true;
+    return true;
   }
 
   function inject(el) {
@@ -72,6 +113,7 @@
   }
 
   function run() {
+    publishLogoGlobals();
     document.querySelectorAll("a.logo, a.bd-hdr-wordmark, button.auth-logo").forEach(inject);
     if (!window.matchMedia("(max-width: 768px)").matches) {
       document.querySelectorAll("header.hdr a.logo").forEach(clearInlineHide);
