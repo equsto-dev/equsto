@@ -114,7 +114,7 @@
       c: c,
       p: p,
       img: resolveCartItemImg(String(x.img || '').trim()),
-      q: quote ? 1 : Math.max(1, Math.round(Number(x.q) || 1)),
+      q: Math.max(1, Math.round(Number(x.q) || 1)),
       quote: quote,
     };
   }
@@ -126,7 +126,7 @@
       var it = normalizeCartItem(x);
       if (!it) return;
       if (map[it.id]) {
-        map[it.id].q = it.quote ? 1 : Math.max(map[it.id].q, it.q);
+        map[it.id].q = Math.max(map[it.id].q, it.q);
         if (it.p) map[it.id].p = it.p;
         if (it.img && !map[it.id].img) map[it.id].img = it.img;
         if (it.quote) map[it.id].quote = true;
@@ -911,9 +911,10 @@
     var qty = norm.q;
     for (var i = 0; i < arr.length; i++) {
       if (arr[i].id === id) {
-        if (norm.quote) return 'merged';
-        arr[i].q = (arr[i].q || 1) + qty;
+        arr[i].q = Math.min(99, (arr[i].q || 1) + qty);
+        if (norm.p) arr[i].p = norm.p;
         if (norm.img) arr[i].img = resolveCartItemImg(norm.img);
+        if (norm.quote) arr[i].quote = true;
         return 'merged';
       }
     }
@@ -1108,7 +1109,7 @@
     if (!arr.length) return '';
     var lines = [__cartT('cart.wa_intro', 'Merhaba, equsto.com sepetimden yazıyorum:'), '', __cartT('cart.wa_products', 'Ürünler:')];
     arr.forEach(function (x, i) {
-      var qty = x.q > 1 && !x.quote ? ' (x' + x.q + ')' : '';
+      var qty = x.q > 1 ? ' (x' + x.q + ')' : '';
       var price = String(x.p || '').trim();
       if (x.quote || isQuotePriceLabel(price)) {
         lines.push(i + 1 + '. ' + x.n + ' — ' + x.b + ' — ' + price + qty);
@@ -1255,31 +1256,19 @@
     var arr = load();
     for (var i = 0; i < arr.length; i++) {
       if (arr[i].id === id) {
-        if (arr[i].quote || isQuotePriceLabel(arr[i].p)) return;
         setLineQty(id, (arr[i].q || 1) + delta);
         return;
       }
     }
   }
 
-  function renderQtyControls(x, q, isQuote) {
+  function renderQtyControls(x, q) {
     var minus =
       '<button type="button" class="eq-cart-qty__btn equsto-cart-qty-minus" data-id="' +
       escAttr(x.id) +
       '" aria-label="' +
       escAttr(__cartT('cart.remove_line', 'Sepetten kaldır')) +
       '">−</button>';
-    if (isQuote) {
-      return (
-        '<div class="eq-cart-qty eq-cart-qty--quote" role="group" aria-label="' +
-        escAttr(__cartT('cart.qty_aria', 'Adet')) +
-        '">' +
-        minus +
-        '<span class="eq-cart-qty__val">' +
-        escHtml(String(q)) +
-        '</span></div>'
-      );
-    }
     return (
       '<div class="eq-cart-qty" role="group" aria-label="' +
       escAttr(__cartT('cart.qty_aria', 'Adet')) +
@@ -1525,17 +1514,17 @@
         ' alt="" loading="lazy" decoding="async" onerror="typeof __eqImgFail===\'function\'&&__eqImgFail(this)">'
       : '<span class="eq-cart-line__ph" aria-hidden="true">📦</span>';
     var unitLbl = isQuote
-      ? String(x.p || 'Teklif için iletişim')
+      ? ''
       : unit > 0
         ? '₺' + formatMoneyTL(unit) + ' / adet'
         : 'Fiyat için teklif';
     var totalLbl = isQuote ? '' : total > 0 ? '₺' + formatMoneyTL(total) : '';
     var totalBlock = isQuote
       ? '<div class="eq-cart-line__total eq-cart-line__total--quote">' +
-        escHtml(__cartT('cart.quote_badge', 'Teklif')) +
+        escHtml(__cartT('cart.quote_for_contact', 'Teklif için iletişim')) +
         '</div>'
       : '<div class="eq-cart-line__total">' + escHtml(totalLbl || '—') + '</div>';
-    var qtyHtml = renderQtyControls(x, q, isQuote);
+    var qtyHtml = renderQtyControls(x, q);
     return (
       '<article class="eq-cart-line' +
       (isQuote ? ' eq-cart-line--quote' : '') +
@@ -1556,10 +1545,12 @@
       escHtml(x.b) +
       (isQuote ? ' · ' + escHtml(__cartT('cart.quote_line_hint', 'Teklif kalemi')) : '') +
       '</div>' +
-      '<div class="eq-cart-line__row eq-cart-line__row--foot">' +
-      '<div class="eq-cart-line__unit">' +
-      escHtml(unitLbl) +
-      '</div>' +
+      '<div class="eq-cart-line__row eq-cart-line__row--foot' +
+      (isQuote ? ' eq-cart-line__row--quote-foot' : '') +
+      '">' +
+      (unitLbl
+        ? '<div class="eq-cart-line__unit">' + escHtml(unitLbl) + '</div>'
+        : '') +
       '<div class="eq-cart-line__actions">' +
       qtyHtml +
       '</div></div></div></article>'
@@ -1861,102 +1852,17 @@
       tel: String(tel).trim(),
       eposta: String(eposta).trim(),
       not: '',
+      kupon: '',
     };
   }
 
   function readCheckoutForm() {
-    var form = document.getElementById('equsto-cart-checkout-form');
-    if (!form) return memberCheckoutDefaults();
-    var ad = (form.elements.ad && form.elements.ad.value) || '';
-    var tel = (form.elements.telefon && form.elements.telefon.value) || '';
-    var eposta = (form.elements.eposta && form.elements.eposta.value) || '';
-    var not = (form.elements.not && form.elements.not.value) || '';
-    var kupon = (form.elements.kupon && form.elements.kupon.value) || '';
-    return {
-      ad: String(ad).trim(),
-      tel: String(tel).trim(),
-      eposta: String(eposta).trim(),
-      not: String(not).trim(),
-      kupon: String(kupon).trim().toUpperCase(),
-    };
+    return memberCheckoutDefaults();
   }
 
-  function showCheckoutForm() {
-    var form = document.getElementById('equsto-cart-checkout-form');
-    var memberBox = document.getElementById('eq-cart-checkout-member');
-    if (form) form.hidden = false;
-    if (memberBox) memberBox.hidden = true;
-    var telEl = form && form.elements.telefon;
-    if (telEl && !String(telEl.value || '').trim()) {
-      try {
-        telEl.focus();
-      } catch (e) {}
-    }
-  }
+  function bindCheckoutUi() {}
 
-  function updateCheckoutUi() {
-    var form = document.getElementById('equsto-cart-checkout-form');
-    var memberBox = document.getElementById('eq-cart-checkout-member');
-    var who = document.getElementById('eq-cart-checkout-who');
-    if (!form) return;
-    var d = readCheckoutForm();
-    if (!d.ad || !d.tel) {
-      var defs = memberCheckoutDefaults();
-      if (!d.ad && defs.ad && form.elements.ad) form.elements.ad.value = defs.ad;
-      if (!d.tel && defs.tel && form.elements.telefon) form.elements.telefon.value = defs.tel;
-      if (!d.eposta && defs.eposta && form.elements.eposta) form.elements.eposta.value = defs.eposta;
-      d = readCheckoutForm();
-    }
-    var logged = isLoggedIn();
-    var complete = !!(d.ad && d.tel);
-    if (logged && complete) {
-      form.hidden = true;
-      if (memberBox) memberBox.hidden = false;
-      if (who) {
-        who.textContent =
-          d.ad + (d.eposta ? ' · ' + d.eposta : '') + ' · ' + d.tel;
-      }
-    } else {
-      form.hidden = false;
-      if (memberBox) memberBox.hidden = true;
-    }
-  }
-
-  function prefillCheckoutForm() {
-    var form = document.getElementById('equsto-cart-checkout-form');
-    if (!form) return;
-    var d = memberCheckoutDefaults();
-    if (form.elements.ad && !form.elements.ad.value && d.ad) form.elements.ad.value = d.ad;
-    if (form.elements.eposta && !form.elements.eposta.value && d.eposta) form.elements.eposta.value = d.eposta;
-    if (form.elements.telefon && !form.elements.telefon.value && d.tel) form.elements.telefon.value = d.tel;
-    updateCheckoutUi();
-  }
-
-  function bindCheckoutUi() {
-    if (!isCartPage()) return;
-    var form = document.getElementById('equsto-cart-checkout-form');
-    var editBtn = document.getElementById('eq-cart-checkout-edit');
-    if (editBtn && editBtn.dataset.eqCartBound !== '1') {
-      editBtn.dataset.eqCartBound = '1';
-      editBtn.addEventListener('click', showCheckoutForm);
-    }
-    if (form && form.dataset.eqCartBound !== '1') {
-      form.dataset.eqCartBound = '1';
-      form.addEventListener('input', updateCheckoutUi);
-      form.addEventListener('change', updateCheckoutUi);
-      if (form.elements.kupon) {
-        form.elements.kupon.addEventListener('blur', function () {
-          previewKupon();
-        });
-      }
-    }
-    window.addEventListener('equsto-member-changed', function () {
-      prefillCheckoutForm();
-    });
-    document.addEventListener('equsto-member-session', function () {
-      prefillCheckoutForm();
-    });
-  }
+  function prefillCheckoutForm() {}
 
   function cartSubtotal(arr) {
     return arr.reduce(function (s, x) {
@@ -2014,25 +1920,33 @@
   function submitOrder() {
     var arr = load();
     if (!arr.length) { toast('Sepet boş.'); return; }
-    prefillCheckoutForm();
+    if (!isLoggedIn()) {
+      toast(__cartT('cart.login_required', 'Sipariş için üye girişi gerekli.'));
+      try {
+        var loginHref =
+          typeof window.equstoUrl === 'function'
+            ? window.equstoUrl('login') + '?next=' + encodeURIComponent('/sepet')
+            : '/login?next=' + encodeURIComponent('/sepet');
+        location.href = loginHref;
+      } catch (_) {}
+      return;
+    }
     var f = readCheckoutForm();
     var ad = f.ad;
     var tel = f.tel;
     var eposta = f.eposta;
-    var not = f.not;
+    var not = f.not || '';
     if (!ad || !tel) {
-      var defs = memberCheckoutDefaults();
-      if (!ad) ad = defs.ad;
-      if (!tel) tel = defs.tel;
-      if (!eposta) eposta = defs.eposta;
-    }
-    if (!ad || !tel) {
-      showCheckoutForm();
       toast(
-        !ad
-          ? __cartT('cart.name_required', 'Ad soyad gerekli.')
-          : __cartT('cart.phone_required', 'Telefon gerekli.')
+        !tel
+          ? __cartT('cart.phone_required_account', 'Telefon gerekli — Hesabım sayfasından ekleyin.')
+          : __cartT('cart.name_required', 'Ad soyad gerekli.')
       );
+      if (!tel) {
+        try {
+          location.href = '/hesabim#guvenlik';
+        } catch (_) {}
+      }
       return;
     }
     saveCheckoutStorage({ ad: ad, telefon: tel, eposta: eposta });
