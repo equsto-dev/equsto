@@ -17,6 +17,7 @@ import {
   type MusteriAdminRow,
   saveMusteri,
 } from "@/lib/pro-admin-client";
+import { useAdminTablePagination } from "@/lib/yonetim/table-pagination";
 
 export default function IsletmeMusterilerPanel() {
   const { message } = App.useApp();
@@ -24,6 +25,7 @@ export default function IsletmeMusterilerPanel() {
   const [rows, setRows] = useState<MusteriAdminRow[]>([]);
   const [editOpen, setEditOpen] = useState(false);
   const [editRow, setEditRow] = useState<MusteriAdminRow | null>(null);
+  const tablePagination = useAdminTablePagination();
   const [siparisCount, setSiparisCount] = useState<Record<string, number>>({});
   const [teklifCount, setTeklifCount] = useState<Record<string, number>>({});
 
@@ -81,7 +83,7 @@ export default function IsletmeMusterilerPanel() {
         loading={loading}
         search={{ labelWidth: "auto" }}
         options={false}
-        pagination={{ pageSize: 20 }}
+        pagination={tablePagination}
         dataSource={rows}
         columns={[
           { title: "Firma", dataIndex: "firma" },

@@ -8,6 +8,7 @@ import {
   type TeklifAdminRow,
   updateTeklifDurum,
 } from "@/lib/pro-admin-client";
+import { useAdminTablePagination } from "@/lib/yonetim/table-pagination";
 
 const DURUM_OPTIONS = [
   { value: "taslak", label: "Taslak" },
@@ -22,6 +23,7 @@ export default function IsletmeTekliflerPanel() {
   const { message } = App.useApp();
   const [loading, setLoading] = useState(true);
   const [rows, setRows] = useState<TeklifAdminRow[]>([]);
+  const tablePagination = useAdminTablePagination();
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -54,7 +56,7 @@ export default function IsletmeTekliflerPanel() {
       loading={loading}
       search={false}
       options={false}
-      pagination={{ pageSize: 20 }}
+      pagination={tablePagination}
       headerTitle="Teklifler (PFOS + admin)"
       toolBarRender={() => [
         <a key="reload" onClick={load}>
