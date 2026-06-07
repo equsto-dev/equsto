@@ -12,7 +12,7 @@ kayıt (telefon + şifre tekrar) ve Amazon tarzı /hesabim merkezini korur.
   • Üye girişi sihirbaz BAŞINDA (son adımda değil) — giriş sonrası akış sıfırlanmaz
   • Giriş/kayıt linkleri ?next= ile PFOS'a geri döner (pfosLoginHref / pfosRegisterHref)
   • «Üye Girişi» + «Kayıt ol» kapısı (memberGate)
-  • Panel geçişleri sakin: PFOS_PANEL_FADE_MS=320, secPending/secReveal (clip-path YOK)
+  • Panel geçişleri sakin: PFOS_PANEL_FADE_MS=580, secPending/secReveal (clip-path YOK)
   • Proforma: deliveryOnly — yalnızca e-posta / WhatsApp PDF; indirme yok
   • Girişli üye bilgi formu görmez; profil equsto_member_v1 / checkout'tan gelir
 
