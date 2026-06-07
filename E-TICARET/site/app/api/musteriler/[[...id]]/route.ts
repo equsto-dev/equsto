@@ -8,8 +8,8 @@ import {
   normalizeMusteriPayload,
   validatePublicMusteriPayload,
 } from "@/lib/musteri";
-import { notifyNewLead } from "@/lib/notify";
-import { requireMemberSession } from "@/lib/member-auth";
+import { notifyCustomerLeadAck, notifyNewLead } from "@/lib/notify";
+import { requireMemberSession, type MemberSessionPayload } from "@/lib/member-auth";
 
 export const dynamic = "force-dynamic";
 
@@ -60,11 +60,21 @@ export async function POST(req: NextRequest, ctx: Ctx) {
 
   const body = (await req.json().catch(() => ({}))) as Record<string, unknown>;
   const kaynak = String(body.kaynak ?? "").trim();
+  let memberSession: { session: MemberSessionPayload } | null = null;
   if (kaynak === "whatsapp-modal") {
-    const memberCheck = await requireMemberSession(req, body);
-    if (memberCheck instanceof Response) return memberCheck;
+    const check = await requireMemberSession(req, body);
+    if (check instanceof Response) return check;
+    memberSession = check;
   }
   const data = normalizeMusteriPayload(body);
+  if (memberSession) {
+    const u = memberSession.session.user;
+    if (!data.tel && u.telefon) data.tel = u.telefon.trim();
+    if (!data.mail && u.email) data.mail = u.email.trim();
+    if ((!data.yetkili || data.yetkili === "Ziyaretçi") && u.name) {
+      data.yetkili = u.name.trim();
+    }
+  }
   const err = validatePublicMusteriPayload(data);
   if (err) return adminErr(err, 400);
 
@@ -73,6 +83,11 @@ export async function POST(req: NextRequest, ctx: Ctx) {
     void notifyNewLead(row).catch((e) => {
       console.error("[notify] lead", e);
     });
+    if (kaynak === "whatsapp-modal") {
+      void notifyCustomerLeadAck(row).catch((e) => {
+        console.error("[notify] customer wa ack", e);
+      });
+    }
     return adminOk({ data: musteriToAdmin(row) }, 201);
   } catch (e) {
     const msg = e instanceof Error ? e.message : "Kayıt başarısız";

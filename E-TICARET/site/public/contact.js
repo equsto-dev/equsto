@@ -729,6 +729,7 @@
         if (prof) {
           if (prof.ad) payload.ad = prof.ad;
           if (prof.telefon) payload.telefon = prof.telefon;
+          if (!payload.telefon && prof.phone) payload.telefon = prof.phone;
           if (prof.eposta) payload.eposta = prof.eposta;
           if (!payload.eposta && prof.email) payload.eposta = prof.email;
         }
@@ -787,17 +788,36 @@
           "team",
           __waT(
             "wa.received",
-            "Mesajınız alındı. Equsto ekibi en kısa sürede size dönüş yapacak — bu pencereden yazmaya devam edebilirsiniz."
+            "Mesajınız alındı. WhatsApp uygulamanız açılıyor — orada Gönder'e basın. Equsto ekibi en kısa sürede dönüş yapacak."
           )
         );
         renderWaHistoryList();
-        if (st) {
-          st.className = "equsto-wa-status equsto-wa-status--ok";
-          st.innerHTML =
-            '<button type="button" id="equsto-wa-handoff-btn" class="equsto-wa-handoff-link">' +
-            escWa(__waT("wa.handoff_optional", "İsterseniz WhatsApp'ta devam edin")) +
-            "</button>";
-        }
+        setTimeout(function () {
+          var handoff = equstoHandoffToWhatsApp(waModalDigits, text);
+          if (st) {
+            if (handoff.ok) {
+              st.className = "equsto-wa-status equsto-wa-status--ok";
+              st.textContent = __waT(
+                "wa.handoff_sent",
+                "WhatsApp açıldı — mesajı orada gönderin."
+              );
+            } else {
+              st.className = "equsto-wa-status equsto-wa-status--ok";
+              st.innerHTML =
+                '<button type="button" id="equsto-wa-handoff-btn" class="equsto-wa-handoff-link">' +
+                escWa(__waT("wa.handoff_optional", "WhatsApp'ta devam edin")) +
+                "</button>";
+              if (handoff.reason === "blocked" && handoff.url) {
+                st.innerHTML +=
+                  ' <a class="equsto-wa-handoff-link" href="' +
+                  escWa(handoff.url) +
+                  '" target="_blank" rel="noopener noreferrer">' +
+                  escWa(__waT("wa.handoff_link", "WhatsApp'ta gönder")) +
+                  "</a>";
+              }
+            }
+          }
+        }, 600);
         if (msgEl) {
           try {
             msgEl.focus();
