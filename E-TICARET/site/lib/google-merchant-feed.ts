@@ -108,13 +108,7 @@ function pickMerchantHeroImage(images: unknown[]): string {
   return String(images[0] || "");
 }
 
-export function absoluteAssetUrl(pathOrUrl: string, origin: string): string {
-  const s = String(pathOrUrl || "").trim();
-  if (!s) return "";
-  if (s.startsWith("http://") || s.startsWith("https://")) return s;
-  const base = origin.replace(/\/$/, "");
-  return s.startsWith("/") ? `${base}${s}` : `${base}/${s}`;
-}
+export { absoluteAssetUrl } from "@/lib/asset-cdn";
 
 export function cleanDescription(row: CatalogRow, maxLen = 5000): string {
   const parts = [

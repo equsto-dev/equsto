@@ -43,15 +43,30 @@ body.eq-auth .auth-topbar {
 }
 
 button.auth-logo {
-  display: block;
-  width: 100%;
-  max-width: 200px;
-  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(220px, 100%);
+  max-width: 220px;
+  height: 48px;
   margin: 0 auto 20px;
   padding: 0;
   border: none;
-  background: transparent center / contain no-repeat;
+  background: transparent;
   cursor: pointer;
+}
+
+body.eq-auth button.auth-logo .eq-logo-img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 40px;
+  margin: 0 auto;
+  object-fit: contain;
+  object-position: center center;
+  transform: none !important;
+  transform-origin: center center !important;
 }
 
 .auth-title {
@@ -186,25 +201,32 @@ button.auth-logo {
 
 #google-btn-slot {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   width: 100%;
   max-width: 100%;
   min-height: 44px;
-  margin-bottom: 10px;
-  padding: 0 14px 0 0;
+  margin: 0 auto 10px;
+  padding: 0;
   overflow: hidden;
   box-sizing: border-box;
+  background: transparent;
 }
 
 #google-btn-slot > div {
-  flex: 0 1 auto;
-  max-width: calc(100% - 4px);
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 
 #google-btn-slot iframe {
+  display: block;
   max-width: 100% !important;
+  margin: 0 auto;
 }
 
 #google-btn-slot:empty + .auth-btn-google {

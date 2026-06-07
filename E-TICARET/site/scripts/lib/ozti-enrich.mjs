@@ -568,6 +568,10 @@ export function mapOztiPisirmeCategory(row) {
   if (isOztiDonerOcak(row)) return "doner-ocaklari-";
   if (/SALAMANDER/.test(String(row.urun_tanimi || row.name || row.kategori || "").toLocaleUpperCase("tr")))
     return "salamander";
+  const kod = normKod(row.urun_kodu || row.sku);
+  const hay = `${row.urun_tanimi || row.name || ""} ${row.kategori || ""}`.toLocaleUpperCase("tr");
+  if (/^9890\.IC(CLS|PRO)/i.test(kod) || /ICOMB|COMBI\s*MASTER|SELF\s*COOKING|KOMBI\s*FIRIN|KOMBİ\s*FIRIN/i.test(hay))
+    return "kombi-firin";
   return slugify(row.kategori) || "diger";
 }
 
@@ -652,15 +656,14 @@ export function detectOztiOemBrand(name, category, kod) {
   if (/^WMF\b/.test(up) || (/^9580\./.test(k) && /WMF/.test(fullUp))) return "WMF";
   if (/^NUOVA\s+SIMONELLI/.test(up) || /^NUOSI\b/.test(up)) return "Nuova Simonelli";
   if (/^BRAVILOR/.test(up) || /^9574\.B/.test(k)) return "Bravilor Bonamat";
-  /** Rational — Öztiryakiler bayi: 9890.* kombi fırın, 5RRX.* davlumbaz / mobil stand / aksesuar */
-  if (/^9890\./i.test(k) || /^5RRX\./i.test(k)) return "Rational";
+  if (/^UNOX\b/.test(up) || /\bUNOX\b/i.test(fullUp)) return "Unox";
   if (/^RATIONAL\b/i.test(up) || /\bRATIONAL\b/i.test(fullUp)) return "Rational";
+  if (/^5RRX\./i.test(k)) return "Rational";
   if (/^ROBOT\s+COUPE/.test(up)) return "Robot Coupe";
   /** Robot Coupe — bayi SKU: 5R1X.*, 9840.*, 9860.*, 0830.* */
   if (/^5R1X\.|^9840\.|^9860\.|^0830\./i.test(k) && /ROBOT\s*COUPE|CL\d|R\s*\d{3}/i.test(fullUp)) {
     return "Robot Coupe";
   }
-  if (/^UNOX\b/.test(up)) return "Unox";
   /** SIMAG buz makinesi — 9805.* SKU Hoshizaki ile paylaşılır; ad önce */
   if (/^SIMAG\b/i.test(up) || /\bSIMAG\b/i.test(fullUp)) return "SIMAG";
   if (/^9805\./i.test(k) || /^HOSHIZAKI\b/.test(up) || /\bHOSHIZAKI\b/i.test(fullUp)) return "Hoshizaki";
@@ -728,6 +731,8 @@ export function mapOztiDept(row, setUstuAllow) {
   const kod = String(row.urun_kodu || row.sku || "").trim();
   if (/^9710\./i.test(kod)) return "yikama";
   if (/^07[0-9][A-Z]\./i.test(kod)) return "yikama";
+  /** Izgara tablalı kazan yıkama evyesi (7771.*) — «IZGARA» pişirme kuralına düşmesin */
+  if (/^7771\./i.test(kod)) return "yikama";
   if (isOztiBuzKonteyner(row)) return "sogutma";
   if (isOztiSogukHazirlikUnitesi(row)) return "sogutma";
   if (isOztiSebzeDograma(row)) return "hazirlik";
@@ -759,7 +764,7 @@ export function mapOztiDept(row, setUstuAllow) {
     [/SOĞUK\s*ODA|DERİN\s*DONDURUCU\s*ODA|BUZ\s*MAKİN|BUZ\s*MAKIN|SOĞUTUCU|BUZDOLAB|DONDURMA\s*MAKİN/i, "sogutma"],
     [/EL\s*YIKAMA/i, "yikama"],
     [
-      /BARDAK\s*YIKAMA|FLIGHT\s*TİP\s*BULAŞIK|HOBART\s*BULAŞIK|SEBZE\s*YIKAMA|KAZAN\s*YIKAMA\s*MAK/i,
+      /BARDAK\s*YIKAMA|FLIGHT\s*TİP\s*BULAŞIK|HOBART\s*BULAŞIK|SEBZE\s*YIKAMA|KAZAN\s*YIKAMA\s*MAK|KAZAN\s*YIKAMA\s*EVYE/i,
       "yikama",
     ],
     [
@@ -1005,6 +1010,8 @@ export const OZTI_AX_PROXY = {
   "7919.37NTV.T1": "7919.37NTV.24",
   "9805.IM240D.NHC": "9805.IM240X.NHC",
   "9805.00IMD.00": "9805.IM45N.EHC",
+  /** OTKFGE 12090 — ax-images yok; G/E kardeş SKU fotoğrafı */
+  "7890.12901.51": "7890.12901.55",
 };
 
 export function oztiAxProxyKod(kod) {

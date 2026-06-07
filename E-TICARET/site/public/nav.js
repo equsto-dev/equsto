@@ -676,13 +676,7 @@
       '<button type="button" class="eq-mcat-search-cam" aria-label="' + __camAria + '">' +
       '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M3 7h3l2-3h8l2 3h3v13H3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="13" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>' +
       "</button>";
-    var camBtn = search.querySelector(".eq-mcat-search-cam");
-    if (camBtn) {
-      camBtn.addEventListener("click", function () {
-        var h = document.querySelector("header.hdr .eq-srch-photo-btn");
-        if (h) h.click();
-      });
-    }
+    /* Kamera: eq-photo-search.js — doğrudan dosya seçici (mobilde proxy click iOS'ta çalışmaz) */
 
     hdr.appendChild(bar);
     hdr.appendChild(search);
@@ -1566,6 +1560,10 @@
   function loadScriptSameDir(filename, flagName) {
     try {
       if (window[flagName]) return;
+      if (filename === "eq-photo-search.js" && typeof window.eqOpenPhotoSearch === "function") {
+        window[flagName] = true;
+        return;
+      }
       if (filename === "eq-footer.js" && typeof window.__eqMountMarketFooter === "function") {
         window[flagName] = true;
         return;

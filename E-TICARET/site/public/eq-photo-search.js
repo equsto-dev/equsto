@@ -6,6 +6,11 @@
 ;(function () {
   "use strict";
 
+  if (window.__eqPhotoSearchBooted) return;
+  window.__eqPhotoSearchBooted = true;
+
+  var globalFile = null;
+
   function bodyOk() {
     var b = document.body;
     return (
@@ -18,18 +23,24 @@
 
   function applySearchQuery(q) {
     var v = String(q == null ? "" : q).trim();
+    if (!v) return false;
     var inp = document.querySelector("header.hdr .srch input.srch-input, header .srch input.srch-input");
-    if (!inp) return false;
-    inp.value = v;
-    if (v && typeof window.eqCommitHeaderSearch === "function") {
+    var drawerInp = document.getElementById("eq-mcat-drawer-search");
+    if (inp) inp.value = v;
+    if (drawerInp) drawerInp.value = v;
+    if (typeof window.eqCommitHeaderSearch === "function") {
       window.eqCommitHeaderSearch();
       return true;
     }
-    inp.dispatchEvent(new Event("input", { bubbles: true }));
+    if (typeof window.eqNavigateArama === "function") {
+      window.eqNavigateArama(v);
+      return true;
+    }
+    if (inp) inp.dispatchEvent(new Event("input", { bubbles: true }));
     if (typeof window.searchFilter === "function") window.searchFilter(v);
     if (typeof window.__eqHomeSearch === "function") window.__eqHomeSearch(v);
     try {
-      inp.focus();
+      if (inp) inp.focus();
     } catch (e) {}
     return true;
   }
@@ -160,6 +171,43 @@
     });
   }
 
+  function onFileSelected() {
+    var f = globalFile && globalFile.files && globalFile.files[0];
+    try {
+      if (globalFile) globalFile.value = "";
+    } catch (e2) {}
+    if (!f || !f.type || f.type.indexOf("image/") !== 0) return;
+
+    tryBarcodeFromFile(f).then(function (code) {
+      if (code) {
+        applySearchQuery(code);
+        return;
+      }
+      var url = URL.createObjectURL(f);
+      openPhotoModal(url);
+    });
+  }
+
+  function ensureGlobalFileInput() {
+    if (globalFile && globalFile.isConnected) return globalFile;
+    globalFile = document.createElement("input");
+    globalFile.type = "file";
+    globalFile.accept = "image/*";
+    globalFile.setAttribute("aria-hidden", "true");
+    globalFile.tabIndex = -1;
+    globalFile.className = "eq-srch-photo-input";
+    globalFile.addEventListener("change", onFileSelected);
+    document.body.appendChild(globalFile);
+    return globalFile;
+  }
+
+  function openFilePicker() {
+    if (!bodyOk()) return;
+    ensureGlobalFileInput().click();
+  }
+
+  window.eqOpenPhotoSearch = openFilePicker;
+
   function wireSrch(root) {
     if (!root || root.querySelector(".eq-srch-photo-slot")) return;
     var btnSrch = root.querySelector(".srch-btn");
@@ -167,13 +215,6 @@
 
     var slot = document.createElement("span");
     slot.className = "eq-srch-photo-slot";
-
-    var file = document.createElement("input");
-    file.type = "file";
-    file.accept = "image/*";
-    file.setAttribute("aria-hidden", "true");
-    file.tabIndex = -1;
-    file.className = "eq-srch-photo-input";
 
     var btn = document.createElement("button");
     btn.type = "button";
@@ -183,39 +224,39 @@
     btn.innerHTML =
       '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>';
 
-    btn.addEventListener("click", function () {
-      file.click();
+    btn.addEventListener("click", function (ev) {
+      ev.preventDefault();
+      openFilePicker();
     });
 
-    file.addEventListener("change", function () {
-      var f = file.files && file.files[0];
-      try {
-        file.value = "";
-      } catch (e2) {}
-      if (!f || !f.type || f.type.indexOf("image/") !== 0) return;
-
-      tryBarcodeFromFile(f).then(function (code) {
-        if (code) {
-          applySearchQuery(code);
-          return;
-        }
-        var url = URL.createObjectURL(f);
-        openPhotoModal(url);
-      });
-    });
-
-    slot.appendChild(file);
     slot.appendChild(btn);
     root.insertBefore(slot, btnSrch);
   }
 
-  function init() {
-    if (!bodyOk()) return;
-    if (window.__eqPhotoSearchInit) return;
-    window.__eqPhotoSearchInit = true;
+  function wireHeaderButtons() {
     document.querySelectorAll("header.hdr .srch, header .srch").forEach(wireSrch);
   }
 
+  function init() {
+    if (!bodyOk()) return;
+    ensureGlobalFileInput();
+    wireHeaderButtons();
+  }
+
+  document.addEventListener(
+    "click",
+    function (ev) {
+      if (!bodyOk()) return;
+      var cam = ev.target && ev.target.closest && ev.target.closest(".eq-mcat-search-cam");
+      if (!cam) return;
+      ev.preventDefault();
+      openFilePicker();
+    },
+    true
+  );
+
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
   else init();
+
+  window.__eqPhotoSearchRefresh = wireHeaderButtons;
 })();

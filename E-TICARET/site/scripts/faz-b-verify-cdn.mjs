@@ -8,19 +8,14 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { listCdnMigrateFiles } from "./lib/cdn-migrate-paths.mjs";
+import { assetCdnBase } from "./lib/asset-cdn-base.mjs";
 
 const siteDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const publicDir = path.join(siteDir, "public");
 const sampleArg = process.argv.find((a) => a.startsWith("--sample="));
 const sampleN = sampleArg ? parseInt(sampleArg.split("=")[1], 10) : 8;
 
-const base = (
-  process.env.NEXT_PUBLIC_ASSET_CDN_URL ||
-  process.env.AWS_CLOUDFRONT_URL ||
-  ""
-)
-  .trim()
-  .replace(/\/$/, "");
+const base = assetCdnBase(siteDir);
 
 if (!base) {
   console.error("[verify-cdn] NEXT_PUBLIC_ASSET_CDN_URL boş — .env.local doldurun");
@@ -35,7 +30,12 @@ function encodeRel(rel) {
 }
 
 const files = listCdnMigrateFiles(publicDir);
+const logoPicks = [
+  { rel: "images/equsto-logo.png" },
+  { rel: "images/equsto-logo-white.png" },
+];
 const picks = [
+  ...logoPicks,
   ...files.filter((f) => f.rel.startsWith("images/catalog/electrolux/")).slice(0, 2),
   ...files.filter((f) => f.rel.startsWith("images/catalog/ozti/")).slice(0, 2),
   ...files.filter((f) => f.rel.startsWith("images/catalog/")).slice(0, 2),

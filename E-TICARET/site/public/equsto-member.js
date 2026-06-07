@@ -150,10 +150,10 @@
     var logged = equstoIsMemberLoggedIn();
     links.forEach(function (a) {
       var title = a.querySelector(".eq-hdr-account-title");
-      var sub = a.querySelector("span:first-of-type");
+      var sub = a.querySelector(".eq-hdr-account-sub") || a.querySelector("span:first-of-type");
       if (logged) {
-        var label = o.displayName || o.name || o.email || __memberT("member.my_account", "Hesabım");
-        if (title) title.textContent = label + " ▾";
+        var label = memberFirstName(o);
+        if (title) title.textContent = label + " \u203A";
         if (sub) sub.textContent = __memberT("member.my_account", "Hesabım");
         a.setAttribute("title", o.email || __memberT("member.my_account", "Hesabım"));
         a.href =
@@ -161,7 +161,7 @@
             ? window.equstoUrl("account")
             : "/hesabim";
       } else {
-        if (title) title.textContent = __memberT("common.account_projects", "Projeler ve Listeler ▾");
+        if (title) title.textContent = __memberT("member.sign_in", "Giriş yap") + " \u203A";
         if (sub) sub.textContent = __memberT("member.my_account", "Hesabım");
         a.setAttribute("title", __memberT("member.login_title", "Üye girişi"));
         a.href =
