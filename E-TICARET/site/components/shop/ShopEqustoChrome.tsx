@@ -153,64 +153,64 @@ export default function ShopEqustoChrome({
                 </svg>
               </button>
             </div>
-            <div className="hdr-right">
-              <LangSwitcherSlot />
-              <div className="theme-wrap">
-                <button
-                  type="button"
-                  className="theme-toggle"
-                  id="theme-toggle"
-                  onClick={() => (window as Window & { equstoCycleTheme?: () => void }).equstoCycleTheme?.()}
-                  title={h.theme_title}
-                  data-i18n-attr="title:common.theme_title"
-                >
-                  ◐
-                </button>
-                <span className="theme-legend" data-i18n="common.theme_label">
-                  {h.theme_label}
-                </span>
-              </div>
-              <a href="/login" className="eq-hdr-account" title={h.login_title} data-i18n-attr="title:common.login_title">
-                <span className="eq-hdr-account-lines">
-                  <span className="eq-hdr-account-sub" data-i18n="common.my_account">
-                    {h.my_account}
-                  </span>
-                  <span className="eq-hdr-account-title" data-i18n="common.account_projects">
-                    {h.account_projects}
-                  </span>
-                </span>
-                <svg
-                  className="eq-hdr-account-ico"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="26"
-                  height="26"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.35"
-                  aria-hidden="true"
-                >
-                  <circle cx="12" cy="8" r="3.75" />
-                  <path d="M5 20v-1a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v1" strokeLinecap="round" />
-                </svg>
-              </a>
-              <div className="eq-hdr-orders">
-                <span data-i18n="common.returns">{h.returns}</span>
-                <span data-i18n="common.and_orders">{h.and_orders}</span>
-              </div>
-              <div
-                id="equsto-hdr-cart"
-                className="equsto-hdr-cart"
-                title={h.cart_title}
-                role="button"
-                tabIndex={0}
-                data-i18n-attr="title:common.cart_aria_title"
+          </div>
+          <div className="hdr-right">
+            <LangSwitcherSlot />
+            <div className="theme-wrap">
+              <button
+                type="button"
+                className="theme-toggle"
+                id="theme-toggle"
+                onClick={() => (window as Window & { equstoCycleTheme?: () => void }).equstoCycleTheme?.()}
+                title={h.theme_title}
+                data-i18n-attr="title:common.theme_title"
               >
-                <span id="equsto-cart-count" aria-hidden="true">
-                  <span className="eq-hdr-cart-badge">0</span>
+                ◐
+              </button>
+              <span className="theme-legend" data-i18n="common.theme_label">
+                {h.theme_label}
+              </span>
+            </div>
+            <a href="/login" className="eq-hdr-account" title={h.login_title} data-i18n-attr="title:common.login_title">
+              <span className="eq-hdr-account-lines">
+                <span className="eq-hdr-account-sub" data-i18n="common.my_account">
+                  {h.my_account}
                 </span>
-                <span data-i18n="common.cart">{h.cart}</span>
-              </div>
+                <span className="eq-hdr-account-title" data-i18n="common.account_projects">
+                  {h.account_projects}
+                </span>
+              </span>
+              <svg
+                className="eq-hdr-account-ico"
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="26"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.35"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="8" r="3.75" />
+                <path d="M5 20v-1a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v1" strokeLinecap="round" />
+              </svg>
+            </a>
+            <div className="eq-hdr-orders">
+              <span data-i18n="common.returns">{h.returns}</span>
+              <span data-i18n="common.and_orders">{h.and_orders}</span>
+            </div>
+            <div
+              id="equsto-hdr-cart"
+              className="equsto-hdr-cart"
+              title={h.cart_title}
+              role="button"
+              tabIndex={0}
+              data-i18n-attr="title:common.cart_aria_title"
+            >
+              <span id="equsto-cart-count" aria-hidden="true">
+                <span className="eq-hdr-cart-badge">0</span>
+              </span>
+              <span data-i18n="common.cart">{h.cart}</span>
             </div>
           </div>
         </header>

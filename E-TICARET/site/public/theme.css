@@ -443,6 +443,12 @@ header.hdr .hdr-right {
   color: var(--eq-hdr-bar-text);
 }
 
+header.hdr > .hdr-right {
+  align-self: center;
+  padding-right: max(12px, env(safe-area-inset-right, 0px));
+  box-sizing: border-box;
+}
+
 header.hdr .hdr-right > div:not(.theme-wrap) span:first-of-type,
 header.hdr .hdr-right a.eq-hdr-account .eq-hdr-account-sub,
 header.hdr .hdr-right a.eq-hdr-account > span:first-of-type,
@@ -976,14 +982,20 @@ body.admin-app header.hdr > a.logo .eq-logo-img {
     min-width: 0;
   }
 
-  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right {
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right,
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr > .hdr-right {
     display: flex !important;
-    flex: 0 0 auto !important;
+    flex: 1 1 auto !important;
     align-items: center !important;
     gap: 10px !important;
     margin-left: auto !important;
-    order: 0 !important;
+    order: 2 !important;
     font-size: 11px !important;
+    min-height: 52px;
+    min-width: 0;
+    padding: 8px 0;
+    justify-content: flex-end;
+    align-self: center;
   }
 
   body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right .theme-wrap,
@@ -5180,21 +5192,59 @@ html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .e
   }
 
   body.eq-shop:not(.admin-app):not(.bd-page) header.hdr {
-    padding-top: env(safe-area-inset-top, 0px);
+    display: flex !important;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: flex-start;
+    row-gap: 10px;
+    column-gap: 8px;
+    padding-top: max(6px, env(safe-area-inset-top, 0px));
     padding-left: max(12px, env(safe-area-inset-left, 0px));
     padding-right: max(12px, env(safe-area-inset-right, 0px));
     padding-bottom: 10px;
-    display: grid !important;
-    grid-template-columns: minmax(0, auto) minmax(0, 1fr);
-    grid-template-rows: auto auto;
-    column-gap: 10px;
-    row-gap: 10px;
-    align-items: center;
   }
 
   body.eq-shop:not(.admin-app):not(.bd-page) header.hdr > .pg-inner {
     padding-right: 0 !important;
     padding-left: 0 !important;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr > a.logo {
+    order: 1 !important;
+    flex: 0 0 auto !important;
+    max-width: 44vw;
+    min-height: 52px;
+    padding: 10px 0;
+    margin: 0;
+    align-self: center;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr > .pg-inner,
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr > .pg-inner.hdr-pg-inner {
+    order: 3 !important;
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    gap: 0 !important;
+    flex-wrap: nowrap !important;
+    align-items: stretch !important;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr > .pg-inner .srch,
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr > .pg-inner.hdr-pg-inner .srch {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    order: unset !important;
+    margin: 0 !important;
+    min-height: 46px;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr > .hdr-right {
+    padding-right: 0 !important;
   }
 
   /* iOS: odakta otomatik yakınlaştırmayı önlemek için ≥16px (Amazon benzeri) */
@@ -5261,14 +5311,20 @@ html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .e
   }
 
   /* Üstte hesap/sepet/tema — alt şeritte; taşma ve üst üste binme önlenir */
-  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right {
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right,
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr > .hdr-right {
     display: flex !important;
-    flex: 0 0 auto !important;
+    flex: 1 1 auto !important;
     align-items: center !important;
     gap: 10px !important;
     margin-left: auto !important;
-    order: 0 !important;
+    order: 2 !important;
     font-size: 11px !important;
+    min-height: 52px;
+    min-width: 0;
+    padding: 8px 0;
+    justify-content: flex-end;
+    align-self: center;
   }
 
   body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right .theme-wrap,
@@ -5330,47 +5386,6 @@ html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .e
   body.eq-shop:not(.admin-app):not(.bd-page) header.hdr #equsto-hdr-cart .eq-hdr-cart-badge {
     font-size: 11px;
     font-weight: 700;
-  }
-
-  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr > a.logo {
-    grid-column: 1;
-    grid-row: 1;
-    order: unset;
-    flex: unset;
-    max-width: 42vw;
-    min-height: 52px;
-    padding: 10px 4px 10px 0;
-    align-self: center;
-    display: inline-flex;
-    align-items: center;
-  }
-
-  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr > .pg-inner,
-  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr > .pg-inner.hdr-pg-inner {
-    display: contents;
-  }
-
-  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right {
-    grid-column: 2;
-    grid-row: 1;
-    order: unset;
-    flex: unset !important;
-    margin-left: 0 !important;
-    justify-self: end;
-    align-self: center;
-    min-height: 52px;
-    padding: 6px 0;
-  }
-
-  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .srch {
-    grid-column: 1 / -1;
-    grid-row: 2;
-    width: 100% !important;
-    max-width: 100% !important;
-    flex: unset !important;
-    order: unset !important;
-    margin-top: 0;
-    min-height: 46px;
   }
 
   /* Departman şeridi: arama çubuğundaki «Tüm Kategoriler» yeterli */
@@ -6167,6 +6182,36 @@ html.eq-vitrin-white-lock body.bd-page {
   body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right {
     display: flex !important;
     visibility: visible !important;
+  }
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr > a.logo {
+    order: unset !important;
+    min-height: unset;
+    max-width: var(--eq-hdr-logo-link-max-w);
+    padding: 7px 10px 7px 14px;
+  }
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr > .hdr-right {
+    order: unset !important;
+    flex: 0 0 auto !important;
+    min-height: unset;
+    padding: 0;
+    padding-right: max(20px, env(safe-area-inset-right, 0px)) !important;
+  }
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr > .pg-inner,
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr > .pg-inner.hdr-pg-inner {
+    order: unset !important;
+    flex: 1 1 280px !important;
+    width: auto !important;
+    max-width: none !important;
+    padding: 10px 0 10px 0 !important;
+    gap: 10px !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+  }
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr > .pg-inner .srch {
+    flex: 1 1 auto !important;
+    width: auto !important;
+    max-width: none !important;
+    min-height: 44px;
   }
 }
 

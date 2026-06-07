@@ -87,71 +87,71 @@ export default function PfosEqustoChrome() {
               </svg>
             </button>
           </div>
-          <div className="hdr-right">
-            <LangSwitcherSlot />
-            <div className="theme-wrap">
-              <button
-                type="button"
-                className="theme-toggle"
-                id="theme-toggle"
-                suppressHydrationWarning
-                onClick={() =>
-                  (window as Window & { equstoCycleTheme?: () => void }).equstoCycleTheme?.()
-                }
-                title={h.theme_title}
-                aria-label={h.theme_title}
-                data-i18n-attr="title:common.theme_title"
-              >
-                ◐
-              </button>
-              <span className="theme-legend" data-i18n="common.theme_label">
-                {h.theme_label}
-              </span>
-            </div>
-            <a href="/login.html" className="eq-hdr-account" title={h.login_title} data-i18n-attr="title:common.login_title">
-              <span style={{ fontSize: 10, color: "var(--eq-text-muted)" }} data-i18n="common.my_account">
-                {h.my_account}
-              </span>
-              <span className="eq-hdr-account-title" style={{ fontSize: 12, fontWeight: 600 }} data-i18n="common.account_projects">
-                {h.account_projects}
-              </span>
-            </a>
-            <div className="eq-hdr-orders" style={{ display: "flex", flexDirection: "column", lineHeight: 1.4 }}>
-              <span style={{ fontSize: 10, color: "var(--eq-text-muted)" }} data-i18n="common.returns">
-                {h.returns}
-              </span>
-              <span style={{ fontSize: 12, fontWeight: 600, cursor: "pointer" }} data-i18n="common.and_orders">
-                {h.and_orders}
-              </span>
-            </div>
-            <div
-              id="equsto-hdr-cart"
-              className="equsto-hdr-cart"
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                lineHeight: 1.4,
-                cursor: "pointer",
-              }}
-              title={h.cart_title}
-              data-i18n-attr="title:common.cart_aria_title"
-              role="button"
-              tabIndex={0}
-              onClick={goEqCart}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") {
-                  e.preventDefault();
-                  goEqCart();
-                }
-              }}
+        </div>
+        <div className="hdr-right">
+          <LangSwitcherSlot />
+          <div className="theme-wrap">
+            <button
+              type="button"
+              className="theme-toggle"
+              id="theme-toggle"
+              suppressHydrationWarning
+              onClick={() =>
+                (window as Window & { equstoCycleTheme?: () => void }).equstoCycleTheme?.()
+              }
+              title={h.theme_title}
+              aria-label={h.theme_title}
+              data-i18n-attr="title:common.theme_title"
             >
-              <span id="equsto-cart-count" style={{ fontSize: 10, color: "var(--eq-text-muted)" }} aria-hidden="true">
-                <span className="eq-hdr-cart-badge">0</span>
-              </span>
-              <span style={{ fontSize: 12, fontWeight: 600 }} data-i18n="common.cart">
-                {h.cart}
-              </span>
-            </div>
+              ◐
+            </button>
+            <span className="theme-legend" data-i18n="common.theme_label">
+              {h.theme_label}
+            </span>
+          </div>
+          <a href="/login.html" className="eq-hdr-account" title={h.login_title} data-i18n-attr="title:common.login_title">
+            <span style={{ fontSize: 10, color: "var(--eq-text-muted)" }} data-i18n="common.my_account">
+              {h.my_account}
+            </span>
+            <span className="eq-hdr-account-title" style={{ fontSize: 12, fontWeight: 600 }} data-i18n="common.account_projects">
+              {h.account_projects}
+            </span>
+          </a>
+          <div className="eq-hdr-orders" style={{ display: "flex", flexDirection: "column", lineHeight: 1.4 }}>
+            <span style={{ fontSize: 10, color: "var(--eq-text-muted)" }} data-i18n="common.returns">
+              {h.returns}
+            </span>
+            <span style={{ fontSize: 12, fontWeight: 600, cursor: "pointer" }} data-i18n="common.and_orders">
+              {h.and_orders}
+            </span>
+          </div>
+          <div
+            id="equsto-hdr-cart"
+            className="equsto-hdr-cart"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              lineHeight: 1.4,
+              cursor: "pointer",
+            }}
+            title={h.cart_title}
+            data-i18n-attr="title:common.cart_aria_title"
+            role="button"
+            tabIndex={0}
+            onClick={goEqCart}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                goEqCart();
+              }
+            }}
+          >
+            <span id="equsto-cart-count" style={{ fontSize: 10, color: "var(--eq-text-muted)" }} aria-hidden="true">
+              <span className="eq-hdr-cart-badge">0</span>
+            </span>
+            <span style={{ fontSize: 12, fontWeight: 600 }} data-i18n="common.cart">
+              {h.cart}
+            </span>
           </div>
         </div>
       </header>
