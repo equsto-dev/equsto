@@ -252,7 +252,6 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
       }
 
       const refNo = json.data?.ref_no || json.data?.id || "";
-      const w = window as EqustoMemberWindow;
       try {
         w.equstoTrackConversion?.("quote", {
           kaynak: "pfos-v14",
