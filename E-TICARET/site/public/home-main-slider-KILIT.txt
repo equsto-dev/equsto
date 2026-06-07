@@ -9,7 +9,7 @@ AYRI bileşendir (HomeMainSlider). Değiştirmeden önce AÇIK ONAY alın.
 ── Beklenen görünüm ───────────────────────────────────────────────────────
   • 3 slayt, 3 thumb; otomatik geçiş (eq-home-mutbex.js initHero)
   • IMT300 · Electrolux XP: split — sol görsel 3/5, sağ promo panel 2/5
-  • PFOS: yalnız plan eskizi — tam genişlik, promo metin yok (parşömen zemin #e8dcc8, contain)
+  • PFOS: yalnız plan eskizi — tam genişlik; sol alt 12pt CTA (promo panel yok)
   • Zemin (split slaytlar): Electrolux mavisi #001e50; promo: kicker · başlık · lead · rozetler · maddeler · CTA
   • IMT300: berrak buz makinesi (imt300-2.png · lighten · contain · tam görünür · mavi zemin #001e50)
   • Electrolux XP: modüler pişirme hattı (contain)
@@ -18,7 +18,7 @@ AYRI bileşendir (HomeMainSlider). Değiştirmeden önce AÇIK ONAY alın.
 ── Kilitli slayt görselleri ───────────────────────────────────────────────
   PFOS (sketch, eq-mx-hero__slide--pfos eq-mx-hero__slide--sketch-only):
     /images/pfos/proje-fabrikasi-bar-plan-eskiz.png (1024×331)
-    Metin yok — yalnız eskiz; tıklanınca pfos.html
+    Sol alt: Projeni/ listeni gönder fiyatlandıralım. (12pt) — tıklanınca pfos.html
   IMT300 (hero-img, eq-mx-hero__slide--imt300):
     /images/imt300/imt300-2.png (3381×3007, siyah zemin · lighten · mavi zemin)
   Electrolux XP (hero-img, eq-mx-hero__slide--electrolux-xp):

@@ -444,6 +444,7 @@ header.hdr .hdr-right {
 }
 
 header.hdr .hdr-right > div:not(.theme-wrap) span:first-of-type,
+header.hdr .hdr-right a.eq-hdr-account .eq-hdr-account-sub,
 header.hdr .hdr-right a.eq-hdr-account > span:first-of-type,
 header.hdr #equsto-hdr-cart > span:first-of-type,
 header.hdr #equsto-cart-count {
@@ -825,6 +826,7 @@ body.eq-shop header.hdr .srch-btn {
   font-size: 12px !important;
   padding: 8px 12px !important;
 }
+body.eq-shop header.hdr a.eq-hdr-account .eq-hdr-account-sub,
 body.eq-shop header.hdr a.eq-hdr-account > span:first-of-type,
 body.eq-shop header.hdr #equsto-cart-count {
   font-size: 11px !important;
@@ -975,15 +977,82 @@ body.admin-app header.hdr > a.logo .eq-logo-img {
   }
 
   body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right {
+    display: flex !important;
+    flex: 0 0 auto !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin-left: auto !important;
+    order: 0 !important;
+    font-size: 11px !important;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right .theme-wrap,
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right .eq-lang-switch,
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right .eq-hdr-orders {
     display: none !important;
   }
 
-  body:not(.admin-app):not(.bd-page) header.hdr .hdr-right > div:not(.theme-wrap) {
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right a.eq-hdr-account,
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right #equsto-hdr-cart {
+    display: flex !important;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr a.eq-hdr-account {
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    max-width: 46vw;
+    text-align: right;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr a.eq-hdr-account .eq-hdr-account-lines {
+    align-items: flex-end;
+    min-width: 0;
+    flex-direction: column-reverse;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr a.eq-hdr-account .eq-hdr-account-title {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: var(--eq-hdr-bar-text, #fff) !important;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr a.eq-hdr-account .eq-hdr-account-sub {
+    font-size: 10px !important;
+    color: var(--eq-hdr-bar-muted, rgba(255, 255, 255, 0.78)) !important;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr a.eq-hdr-account .eq-hdr-account-ico {
+    display: block;
+    width: 26px;
+    height: 26px;
+    color: var(--eq-hdr-bar-text, #fff);
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr #equsto-hdr-cart > span:nth-of-type(2) {
     display: none !important;
   }
 
-  body:not(.admin-app):not(.bd-page) header.hdr .hdr-right a.eq-hdr-account,
-  body:not(.admin-app):not(.bd-page) header.hdr #equsto-hdr-cart {
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr #equsto-hdr-cart {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    min-height: 36px;
+    padding: 4px;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr #equsto-hdr-cart .eq-hdr-cart-badge {
+    font-size: 11px;
+    font-weight: 700;
+  }
+
+  body:not(.admin-app):not(.bd-page):not(.eq-shop) header.hdr .hdr-right > div:not(.theme-wrap) {
+    display: none !important;
+  }
+
+  body:not(.admin-app):not(.bd-page):not(.eq-shop) header.hdr .hdr-right a.eq-hdr-account,
+  body:not(.admin-app):not(.bd-page):not(.eq-shop) header.hdr #equsto-hdr-cart {
     display: none !important;
   }
 
@@ -3778,6 +3847,15 @@ a.eq-hdr-account {
   color: inherit;
   cursor: pointer;
 }
+a.eq-hdr-account .eq-hdr-account-lines {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+a.eq-hdr-account .eq-hdr-account-ico {
+  display: none;
+  flex-shrink: 0;
+}
 a.eq-hdr-account:hover .eq-hdr-account-title {
   text-decoration: underline;
 }
@@ -4966,12 +5044,14 @@ body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .eq-srch-photo-slot {
   flex-shrink: 0;
   align-items: stretch;
 }
-body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .eq-srch-photo-input {
+body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .eq-srch-photo-input,
+body.eq-shop:not(.admin-app):not(.bd-page) input.eq-srch-photo-input {
   position: absolute;
   width: 0;
   height: 0;
   opacity: 0;
   pointer-events: none;
+  overflow: hidden;
 }
 body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .eq-srch-photo-btn {
   display: flex;
@@ -5174,28 +5254,103 @@ html[data-theme="dark"] body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .e
 
   /* Üstte hesap/sepet/tema — alt şeritte; taşma ve üst üste binme önlenir */
   body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right {
+    display: flex !important;
+    flex: 0 0 auto !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin-left: auto !important;
+    order: 0 !important;
+    font-size: 11px !important;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right .theme-wrap,
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right .eq-lang-switch,
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right .eq-hdr-orders {
     display: none !important;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right a.eq-hdr-account,
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .hdr-right #equsto-hdr-cart {
+    display: flex !important;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr a.eq-hdr-account {
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    max-width: 46vw;
+    text-align: right;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr a.eq-hdr-account .eq-hdr-account-lines {
+    align-items: flex-end;
+    min-width: 0;
+    flex-direction: column-reverse;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr a.eq-hdr-account .eq-hdr-account-title {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: var(--eq-hdr-bar-text, #fff) !important;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr a.eq-hdr-account .eq-hdr-account-sub {
+    font-size: 10px !important;
+    color: var(--eq-hdr-bar-muted, rgba(255, 255, 255, 0.78)) !important;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr a.eq-hdr-account .eq-hdr-account-ico {
+    display: block;
+    width: 26px;
+    height: 26px;
+    color: var(--eq-hdr-bar-text, #fff);
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr #equsto-hdr-cart > span:nth-of-type(2) {
+    display: none !important;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr #equsto-hdr-cart {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    min-height: 36px;
+    padding: 4px;
+  }
+
+  body.eq-shop:not(.admin-app):not(.bd-page) header.hdr #equsto-hdr-cart .eq-hdr-cart-badge {
+    font-size: 11px;
+    font-weight: 700;
   }
 
   body.eq-shop:not(.admin-app):not(.bd-page) header.hdr > a.logo {
     order: 1;
     flex: 0 0 auto;
-    max-width: var(--eq-hdr-logo-link-max-w);
+    max-width: 38vw;
+    padding-right: 4px;
   }
 
   body.eq-shop:not(.admin-app):not(.bd-page) header.hdr > .pg-inner,
   body.eq-shop:not(.admin-app):not(.bd-page) header.hdr > .pg-inner.hdr-pg-inner {
     order: 2;
-    flex: 1 1 100% !important;
-    width: 100% !important;
-    max-width: 100% !important;
+    flex: 1 1 0 !important;
+    width: auto !important;
+    max-width: none !important;
     min-width: 0 !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    padding: 6px max(12px, env(safe-area-inset-right, 0px)) 0 0 !important;
+    gap: 6px !important;
   }
 
   body.eq-shop:not(.admin-app):not(.bd-page) header.hdr .srch {
     width: 100% !important;
     max-width: 100% !important;
-    flex: 1 1 auto !important;
+    flex: 1 1 100% !important;
+    order: 10 !important;
+    margin-top: 4px;
   }
 
   /* Departman şeridi: arama çubuğundaki «Tüm Kategoriler» yeterli */

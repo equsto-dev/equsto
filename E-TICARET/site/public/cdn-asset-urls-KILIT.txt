@@ -40,6 +40,7 @@ YASAK (onay olmadan):
   components/home/HomeCafemarktCategoriesSlider.tsx
   public/eq-dept-plp.js                 — PLP kart img: CDN önce, ax-images yedek
   lib/shop/assets.ts                    — SHOP_ASSET_V
+  docs/s3-upload-manifest.json          — cdnEnvHint
 
 ── Deploy / doğrulama ─────────────────────────────────────────────────────
   npm run verify:cdn-asset-urls-kilit

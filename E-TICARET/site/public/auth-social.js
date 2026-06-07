@@ -125,8 +125,8 @@
 
   function googleBtnPixelWidth() {
     var slot = document.getElementById("google-btn-slot");
-    var safety = 28;
-    var fallback = 264;
+    var safety = 2;
+    var fallback = 320;
     var w = 0;
     if (slot) {
       w = slot.getBoundingClientRect().width || slot.clientWidth;
@@ -141,7 +141,7 @@
       }
     }
     if (w > 0) {
-      return Math.max(200, Math.min(270, Math.floor(w - safety)));
+      return Math.max(200, Math.floor(w - safety));
     }
     return fallback;
   }
@@ -188,6 +188,7 @@
           width: googleBtnPixelWidth(),
           text: "continue_with",
           locale: document.documentElement.lang === "en" ? "en" : "tr",
+          shape: "rectangular",
         });
       } catch (e) {
         console.warn("[auth-social] Google button", e);

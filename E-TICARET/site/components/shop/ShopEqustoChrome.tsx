@@ -171,10 +171,28 @@ export default function ShopEqustoChrome({
                 </span>
               </div>
               <a href="/login" className="eq-hdr-account" title={h.login_title} data-i18n-attr="title:common.login_title">
-                <span data-i18n="common.my_account">{h.my_account}</span>
-                <span className="eq-hdr-account-title" data-i18n="common.account_projects">
-                  {h.account_projects}
+                <span className="eq-hdr-account-lines">
+                  <span className="eq-hdr-account-sub" data-i18n="common.my_account">
+                    {h.my_account}
+                  </span>
+                  <span className="eq-hdr-account-title" data-i18n="common.account_projects">
+                    {h.account_projects}
+                  </span>
                 </span>
+                <svg
+                  className="eq-hdr-account-ico"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="26"
+                  height="26"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.35"
+                  aria-hidden="true"
+                >
+                  <circle cx="12" cy="8" r="3.75" />
+                  <path d="M5 20v-1a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v1" strokeLinecap="round" />
+                </svg>
               </a>
               <div className="eq-hdr-orders">
                 <span data-i18n="common.returns">{h.returns}</span>
