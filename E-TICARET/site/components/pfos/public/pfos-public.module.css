@@ -492,6 +492,17 @@
   line-height: 1.5;
 }
 
+.memberGateRegisterLink {
+  color: #001e50;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.memberGateRegisterLink:hover {
+  text-decoration: underline;
+  color: #003080;
+}
+
 .pfProgress {
   margin-bottom: 1.1rem;
 }

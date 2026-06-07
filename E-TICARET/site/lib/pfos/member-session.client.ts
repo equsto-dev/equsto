@@ -32,3 +32,10 @@ export function pfosLoginHref(): string {
   const path = window.location.pathname + window.location.search;
   return `/login?next=${encodeURIComponent(path)}`;
 }
+
+/** Kayıt sonrası PFOS'a geri dönmek için login URL (kayıt sekmesi) */
+export function pfosRegisterHref(): string {
+  if (typeof window === "undefined") return "/login?mode=register";
+  const path = window.location.pathname + window.location.search;
+  return `/login?mode=register&next=${encodeURIComponent(path)}`;
+}
