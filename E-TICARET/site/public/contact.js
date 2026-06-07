@@ -788,36 +788,14 @@
           "team",
           __waT(
             "wa.received",
-            "Mesajınız alındı. WhatsApp uygulamanız açılıyor — orada Gönder'e basın. Equsto ekibi en kısa sürede dönüş yapacak."
+            "Mesajınız alındı. Equsto ekibi en kısa sürede size dönüş yapacak."
           )
         );
         renderWaHistoryList();
-        setTimeout(function () {
-          var handoff = equstoHandoffToWhatsApp(waModalDigits, text);
-          if (st) {
-            if (handoff.ok) {
-              st.className = "equsto-wa-status equsto-wa-status--ok";
-              st.textContent = __waT(
-                "wa.handoff_sent",
-                "WhatsApp açıldı — mesajı orada gönderin."
-              );
-            } else {
-              st.className = "equsto-wa-status equsto-wa-status--ok";
-              st.innerHTML =
-                '<button type="button" id="equsto-wa-handoff-btn" class="equsto-wa-handoff-link">' +
-                escWa(__waT("wa.handoff_optional", "WhatsApp'ta devam edin")) +
-                "</button>";
-              if (handoff.reason === "blocked" && handoff.url) {
-                st.innerHTML +=
-                  ' <a class="equsto-wa-handoff-link" href="' +
-                  escWa(handoff.url) +
-                  '" target="_blank" rel="noopener noreferrer">' +
-                  escWa(__waT("wa.handoff_link", "WhatsApp'ta gönder")) +
-                  "</a>";
-              }
-            }
-          }
-        }, 600);
+        if (st) {
+          st.textContent = "";
+          st.className = "equsto-wa-status";
+        }
         if (msgEl) {
           try {
             msgEl.focus();
@@ -1016,25 +994,6 @@
         window.location.href = equstoRegisterHref();
       });
     }
-    overlay.addEventListener("click", function (ev) {
-      var btn =
-        ev.target && ev.target.closest
-          ? ev.target.closest("#equsto-wa-handoff-btn")
-          : null;
-      if (!btn) return;
-      ev.preventDefault();
-      var txt = waModalLastSentText || "";
-      var handoff = equstoHandoffToWhatsApp(waModalDigits, txt);
-      var st = document.getElementById("equsto-wa-status");
-      if (st && handoff.reason === "blocked" && handoff.url) {
-        st.innerHTML =
-          '<a class="equsto-wa-handoff-link" href="' +
-          escWa(handoff.url) +
-          '" target="_blank" rel="noopener noreferrer">' +
-          escWa(__waT("wa.handoff_link", "WhatsApp'ta gönder")) +
-          "</a>";
-      }
-    });
     document.addEventListener("equsto-member-session", syncWaModalAuthBtn);
     document.addEventListener("equsto-member-changed", syncWaModalAuthBtn);
     var waMsgInput = overlay.querySelector("#equsto-wa-msg");
