@@ -45,7 +45,7 @@ export const ACCOUNT_CARDS: AccountCard[] = [
     title: "Teslimat adresi",
     description:
       "Proje teslimatı ve nakliye tahmini için şehir ve adres bilgilerinizi yönetin.",
-    href: "#teslimat",
+    href: "#adres-ekle",
     icon: "address",
   },
   {

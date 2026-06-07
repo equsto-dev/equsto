@@ -1,11 +1,16 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import MemberAddressSection from "@/components/account/MemberAddressSection";
 import AccountCardIcon from "@/components/account/AccountCardIcon";
 import {
   ACCOUNT_CARDS,
   ACCOUNT_LINK_COLUMNS,
 } from "@/lib/account/account-hub";
+import {
+  EMPTY_MEMBER_TESLIMAT_ADRES,
+  type MemberTeslimatAdres,
+} from "@/lib/account/member-teslimat-adres";
 import {
   memberLoggedInNow,
   pfosLoginHref,
@@ -16,6 +21,7 @@ type MemberProfile = {
   email: string;
   name: string;
   telefon: string;
+  teslimatAdres: MemberTeslimatAdres;
   provider: string;
   picture: string;
 };
@@ -25,7 +31,7 @@ type EqustoMemberWindow = Window & {
   equstoAuthLogout?: () => Promise<unknown>;
   equstoClearMemberSession?: () => void;
   equstoShowWhatsAppModal?: () => void;
-  equstoSetMemberActive?: (extra: Record<string, string>) => void;
+  equstoSetMemberActive?: (extra: Record<string, unknown>) => void;
 };
 
 function readLocalProfile(): Partial<MemberProfile> {
@@ -38,6 +44,9 @@ function readLocalProfile(): Partial<MemberProfile> {
       email: o.email || "",
       name: o.displayName || o.name || "",
       telefon: o.telefon || o.phone || "",
+      teslimatAdres:
+        (o.teslimatAdres as MemberTeslimatAdres | undefined) ||
+        EMPTY_MEMBER_TESLIMAT_ADRES,
       provider: o.provider || "",
       picture: o.picture || "",
     };
@@ -79,6 +88,7 @@ export default function MemberAccountHub() {
   const [phoneInput, setPhoneInput] = useState("");
   const [phoneSaving, setPhoneSaving] = useState(false);
   const [phoneError, setPhoneError] = useState("");
+  const [addressAutoEdit, setAddressAutoEdit] = useState(false);
 
   const load = useCallback(async () => {
     if (!memberLoggedInNow()) {
@@ -94,6 +104,7 @@ export default function MemberAccountHub() {
         email: local.email || "",
         name: local.name || "",
         telefon: local.telefon || "",
+        teslimatAdres: local.teslimatAdres || EMPTY_MEMBER_TESLIMAT_ADRES,
         provider: local.provider || "",
         picture: local.picture || "",
       });
@@ -114,6 +125,20 @@ export default function MemberAccountHub() {
       document.removeEventListener("equsto-member-changed", onSession);
     };
   }, [load]);
+
+  useEffect(() => {
+    if (!ready) return;
+    function focusAddressSection() {
+      const hash = window.location.hash.replace("#", "");
+      if (hash !== "adres-ekle" && hash !== "teslimat") return;
+      const el = document.getElementById("adres-ekle");
+      el?.scrollIntoView({ behavior: "smooth", block: "start" });
+      setAddressAutoEdit(true);
+    }
+    focusAddressSection();
+    window.addEventListener("hashchange", focusAddressSection);
+    return () => window.removeEventListener("hashchange", focusAddressSection);
+  }, [ready]);
 
   function onCardClick(
     e: React.MouseEvent<HTMLAnchorElement>,
@@ -306,17 +331,13 @@ export default function MemberAccountHub() {
         </button>
       </section>
 
-      <section className={styles.section} id="teslimat">
-        <h2 className={styles.sectionTitle}>Teslimat adresi</h2>
-        <p className={styles.hint}>
-          Proje teslimatı ve PFOS nakliye tahmini için adres bilgisi sihirbaz
-          içinde veya sepet/checkout adımında güncellenir. PFOS teklifi
-          oluştururken adres adımını doldurmanız yeterlidir.
-        </p>
-        <p className={styles.hint} style={{ marginTop: 12 }}>
-          <a href="/pfos">Proje Fabrikası&apos;na git →</a>
-        </p>
-      </section>
+      <MemberAddressSection
+        value={profile.teslimatAdres || EMPTY_MEMBER_TESLIMAT_ADRES}
+        autoEdit={addressAutoEdit}
+        onSaved={(teslimatAdres) =>
+          setProfile((prev) => (prev ? { ...prev, teslimatAdres } : prev))
+        }
+      />
 
       <div className={styles.linkColumns}>
         {ACCOUNT_LINK_COLUMNS.map((col) => (
