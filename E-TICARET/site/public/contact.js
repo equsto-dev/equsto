@@ -79,6 +79,41 @@
     return typeof window.equstoIsMemberLoggedIn === "function" && window.equstoIsMemberLoggedIn();
   }
 
+  function equstoMemberToken() {
+    return typeof window.equstoGetMemberToken === "function"
+      ? String(window.equstoGetMemberToken() || "")
+      : "";
+  }
+
+  /** WhatsApp modal API — geçerli sunucu oturumu (token) gerekir */
+  function equstoWaApiSessionOk() {
+    return equstoIsMember() && !!equstoMemberToken();
+  }
+
+  function ensureWaMemberSession(done) {
+    done = typeof done === "function" ? done : function () {};
+    if (equstoWaApiSessionOk()) {
+      done(true);
+      return;
+    }
+    if (!equstoIsMember()) {
+      done(false);
+      return;
+    }
+    if (typeof window.equstoAuthValidateSession === "function") {
+      window
+        .equstoAuthValidateSession()
+        .then(function (ok) {
+          done(!!ok || equstoWaApiSessionOk());
+        })
+        .catch(function () {
+          done(false);
+        });
+      return;
+    }
+    done(false);
+  }
+
   function equstoAuthReturnPath() {
     try {
       return location.pathname + location.search;
@@ -117,7 +152,7 @@
   function applyWaModalView() {
     var memberEl = document.getElementById("equsto-wa-member");
     var loginGate = document.getElementById("equsto-wa-login-gate");
-    var logged = equstoIsMember();
+    var logged = equstoWaApiSessionOk();
     if (logged) {
       if (loginGate) loginGate.hidden = true;
       if (memberEl) memberEl.style.display = "flex";
@@ -323,6 +358,17 @@
     renderWaChat();
   }
 
+  function popLastUserChatMessage(expectedBody) {
+    var arr = loadChat();
+    if (!arr.length) return;
+    var last = arr[arr.length - 1];
+    if (last.role !== "user") return;
+    if (expectedBody && String(last.body).trim() !== String(expectedBody).trim()) return;
+    arr.pop();
+    saveChat(arr);
+    renderWaChat();
+  }
+
   /**
    * PFOS teklif e-posta/WhatsApp gönderimi → Mr. Equsto modal geçmişine (yalnızca üye).
    * Gerçek PDF Green API / Resend ile gider; modal site içi kayıttır.
@@ -477,7 +523,7 @@
   }
 
   function refreshWaHistory() {
-    if (!equstoIsMember()) return;
+    if (!equstoWaApiSessionOk()) return;
     renderWaHistoryList();
     renderWaChat();
   }
@@ -542,15 +588,17 @@
     window.setTimeout(function () {
       spin.style.display = "none";
       pane.style.display = "flex";
-      applyWaModalView();
-      syncWaModalNearFab();
-      syncWaModalAuthBtn();
-      syncWaComposeSendMode();
-      if (msgEl) {
-        try {
-          msgEl.focus();
-        } catch (e) {}
-      }
+      ensureWaMemberSession(function () {
+        applyWaModalView();
+        syncWaModalNearFab();
+        syncWaModalAuthBtn();
+        syncWaComposeSendMode();
+        if (msgEl) {
+          try {
+            msgEl.focus();
+          } catch (e) {}
+        }
+      });
     }, 280);
   }
 
@@ -577,15 +625,33 @@
   }
 
   function equstoWaSubmitFromModal() {
-    if (!equstoIsMember()) return;
+    var msgEl = document.getElementById("equsto-wa-msg");
+    if (!msgEl) return;
+    var text = String(msgEl.value || "").trim();
+    if (!text) return;
+
+    ensureWaMemberSession(function (ok) {
+      if (!ok) {
+        applyWaModalView();
+        var stGate = document.getElementById("equsto-wa-status");
+        if (stGate) {
+          stGate.textContent = __waT(
+            "wa.login_required",
+            "Mesaj göndermek için üye girişi gerekli."
+          );
+          stGate.className = "equsto-wa-status equsto-wa-status--err";
+        }
+        return;
+      }
+      equstoWaSubmitFromModalCore(text);
+    });
+  }
+
+  function equstoWaSubmitFromModalCore(text) {
     var msgEl = document.getElementById("equsto-wa-msg");
     var st = document.getElementById("equsto-wa-status");
     var go = document.getElementById("equsto-wa-go");
     if (!msgEl) return;
-    var text = String(msgEl.value || "").trim();
-    if (!text) {
-      return;
-    }
     if (go) {
       go.disabled = true;
       go.classList.add("equsto-wa-bar-btn--loading");
@@ -600,12 +666,14 @@
       pushThread(waModalDigits, text);
     } catch (e) {}
 
+    var tok = equstoMemberToken();
     var payload = {
       mesaj: text,
       kaynak: "whatsapp-modal",
       sayfa: location.pathname || "",
       telefon: "",
     };
+    if (tok) payload.token = tok;
     if (equstoIsMember() && typeof window.equstoGetMemberProfile === "function") {
       try {
         var prof = window.equstoGetMemberProfile();
@@ -613,6 +681,7 @@
           if (prof.ad) payload.ad = prof.ad;
           if (prof.telefon) payload.telefon = prof.telefon;
           if (prof.eposta) payload.eposta = prof.eposta;
+          if (!payload.eposta && prof.email) payload.eposta = prof.email;
         }
       } catch (e2) {}
     }
@@ -621,10 +690,6 @@
       method: "POST",
       headers: (function () {
         var h = { "Content-Type": "application/json" };
-        var tok =
-          typeof window.equstoGetMemberToken === "function"
-            ? window.equstoGetMemberToken()
-            : "";
         if (tok) {
           h.Authorization = "Bearer " + tok;
           h["X-Equsto-Authorization"] = tok;
@@ -635,15 +700,26 @@
     })
       .then(function (r) {
         return r.json().then(function (j) {
-          return { ok: r.ok, j: j };
+          return { ok: r.ok, status: r.status, j: j };
         });
       })
       .then(function (res) {
         if (go) resetWaSendBtn(go);
         if (!res.ok || !(res.j && res.j.success)) {
+          popLastUserChatMessage(text);
           var msg =
             (res.j && (res.j.error || res.j.message)) ||
             __waT("wa.send_failed", "Gönderilemedi");
+          if (res.status === 401 || msg === "Üye girişi gerekli") {
+            if (typeof window.equstoClearMemberSession === "function") {
+              window.equstoClearMemberSession();
+            }
+            applyWaModalView();
+            msg = __waT(
+              "wa.session_expired",
+              "Oturum süresi doldu. Lütfen tekrar giriş yapın."
+            );
+          }
           if (st) {
             st.textContent = msg;
             st.className = "equsto-wa-status equsto-wa-status--err";
@@ -681,6 +757,7 @@
       })
       .catch(function (err) {
         if (go) resetWaSendBtn(go);
+        popLastUserChatMessage(text);
         var em = err && err.message ? err.message : String(err);
         if (st) {
           st.textContent =
