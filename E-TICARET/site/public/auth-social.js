@@ -19,6 +19,13 @@
     if (phoneWrap) phoneWrap.style.display = isReg ? "block" : "none";
     var phoneEl = document.getElementById("auth-phone");
     if (phoneEl) phoneEl.required = isReg;
+    var pass2Wrap = document.getElementById("auth-password2-wrap");
+    if (pass2Wrap) pass2Wrap.style.display = isReg ? "block" : "none";
+    var pass2El = document.getElementById("auth-password2");
+    if (pass2El) {
+      pass2El.required = isReg;
+      if (!isReg) pass2El.value = "";
+    }
     var submit = document.getElementById("auth-submit-btn");
     if (submit) {
       submit.textContent = isReg ? "Hesap oluştur" : "E-posta ile giriş yap";
@@ -37,6 +44,7 @@
     }
     var pass = document.getElementById("auth-password");
     if (pass) pass.autocomplete = isReg ? "new-password" : "current-password";
+    if (pass && isReg) pass.placeholder = "En az 8 karakter";
     try {
       if (typeof window.eqI18nApply === "function") {
         var card = document.querySelector(".auth-card");

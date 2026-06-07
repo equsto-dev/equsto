@@ -251,10 +251,12 @@
     if (ev) ev.preventDefault();
     var emailEl = document.getElementById('auth-email');
     var passEl = document.getElementById('auth-password');
+    var pass2El = document.getElementById('auth-password2');
     var nameEl = document.getElementById('auth-name');
     var phoneEl = document.getElementById('auth-phone');
     var email = emailEl ? emailEl.value.trim() : '';
     var password = passEl ? passEl.value : '';
+    var password2 = pass2El ? pass2El.value : '';
     var name = nameEl ? nameEl.value.trim() : '';
     var telefon = phoneEl ? phoneEl.value.trim() : '';
     var btn = document.getElementById('auth-submit-btn');
@@ -262,6 +264,16 @@
     setMsg('İşleniyor…', true);
     if (mode === 'register' && !telefon) {
       setMsg('Cep telefonu zorunludur.', false);
+      if (btn) btn.disabled = false;
+      return Promise.resolve({ success: false });
+    }
+    if (mode === 'register' && !password2) {
+      setMsg('Şifre tekrarı zorunludur.', false);
+      if (btn) btn.disabled = false;
+      return Promise.resolve({ success: false });
+    }
+    if (mode === 'register' && password !== password2) {
+      setMsg('Şifreler eşleşmiyor.', false);
       if (btn) btn.disabled = false;
       return Promise.resolve({ success: false });
     }
