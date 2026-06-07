@@ -33,6 +33,9 @@ export default function TeklifV14Proforma({ model }: Props) {
   const [exporting, setExporting] = useState(false);
   const [sendOpen, setSendOpen] = useState(false);
   const [sending, setSending] = useState(false);
+  const [sendResult, setSendResult] = useState<
+    { kind: "ok"; refNo: string } | { kind: "err"; message: string } | null
+  >(null);
   const [form] = Form.useForm<{
     ad: string;
     telefon: string;
@@ -117,13 +120,18 @@ export default function TeklifV14Proforma({ model }: Props) {
           teklif_sayi: ust.sayi,
         }),
       });
-      const json = (await res.json()) as {
+      let json: {
         success?: boolean;
         error?: string;
         data?: { ref_no?: string; id?: string };
       };
+      try {
+        json = (await res.json()) as typeof json;
+      } catch {
+        throw new Error(`Sunucu yanıtı okunamadı (HTTP ${res.status})`);
+      }
       if (!res.ok || !json.success) {
-        throw new Error(json.error || "Teklif gönderilemedi");
+        throw new Error(json.error || `Teklif gönderilemedi (HTTP ${res.status})`);
       }
       const refNo = json.data?.ref_no || json.data?.id || "";
       const w = window as Window & {
@@ -141,21 +149,12 @@ export default function TeklifV14Proforma({ model }: Props) {
       } catch {
         /* analytics optional */
       }
-      setSendOpen(false);
       form.resetFields();
-      Modal.success({
-        title: "Teklifiniz alındı",
-        content: refNo
-          ? `Referans: ${refNo}. Ekibimiz en kısa sürede sizinle iletişime geçecek.`
-          : "Ekibimiz en kısa sürede sizinle iletişime geçecek.",
-        okText: "Tamam",
-      });
+      setSendOpen(false);
+      setSendResult({ kind: "ok", refNo });
     } catch (e) {
-      Modal.error({
-        title: "Teklif gönderilemedi",
-        content: e instanceof Error ? e.message : "Lütfen tekrar deneyin.",
-        okText: "Tamam",
-      });
+      const msg = e instanceof Error ? e.message : "Teklif gönderilemedi";
+      setSendResult({ kind: "err", message: msg });
     } finally {
       setSending(false);
     }
@@ -382,9 +381,11 @@ export default function TeklifV14Proforma({ model }: Props) {
       <Modal
         title="Teklifi Equsto'ya gönder"
         open={sendOpen}
-        onCancel={() => setSendOpen(false)}
+        onCancel={() => !sending && setSendOpen(false)}
         footer={null}
         destroyOnClose
+        zIndex={13000}
+        getContainer={() => document.body}
       >
         <Typography.Paragraph type="secondary" style={{ marginBottom: 16 }}>
           Bilgileriniz satış ekibimize iletilir; PFOS teklif listeniz kayda alınır.
@@ -414,6 +415,39 @@ export default function TeklifV14Proforma({ model }: Props) {
             Gönder
           </Button>
         </Form>
+      </Modal>
+
+      <Modal
+        title={
+          sendResult?.kind === "ok"
+            ? "Teklifiniz alındı"
+            : "Teklif gönderilemedi"
+        }
+        open={sendResult != null}
+        onOk={() => setSendResult(null)}
+        onCancel={() => setSendResult(null)}
+        okText="Tamam"
+        cancelButtonProps={{ style: { display: "none" } }}
+        zIndex={14000}
+        getContainer={() => document.body}
+      >
+        {sendResult?.kind === "ok" ? (
+          <Typography.Paragraph style={{ marginBottom: 0 }}>
+            {sendResult.refNo ? (
+              <>
+                Referans: <strong>{sendResult.refNo}</strong>
+                <br />
+                Ekibimiz en kısa sürede sizinle iletişime geçecek.
+              </>
+            ) : (
+              "Ekibimiz en kısa sürede sizinle iletişime geçecek."
+            )}
+          </Typography.Paragraph>
+        ) : (
+          <Typography.Paragraph type="danger" style={{ marginBottom: 0 }}>
+            {sendResult?.message}
+          </Typography.Paragraph>
+        )}
       </Modal>
     </div>
   );
