@@ -56,6 +56,8 @@
       });
       if (!o.displayName && o.name) o.displayName = o.name;
       if (!o.displayName && o.email) o.displayName = String(o.email).split("@")[0];
+      if (o.telefon && !o.phone) o.phone = o.telefon;
+      if (o.phone && !o.telefon) o.telefon = o.phone;
       localStorage.setItem(MEMBER_KEY, JSON.stringify(o));
       window.equstoRefreshMemberHeader();
       try {

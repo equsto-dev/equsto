@@ -31,6 +31,8 @@
         email: data.user.email || '',
         name: data.user.name || '',
         displayName: data.user.name || data.user.email || '',
+        telefon: data.user.telefon || data.user.phone || '',
+        phone: data.user.telefon || data.user.phone || '',
         provider: data.user.provider || 'email',
         picture: data.user.picture || '',
         expiresAt: data.expiresAt || null,
@@ -151,10 +153,15 @@
     });
   };
 
-  window.equstoAuthEmailRegister = function (email, password, name) {
+  window.equstoAuthEmailRegister = function (email, password, name, telefon) {
     return apiFetch('/register', {
       method: 'POST',
-      json: withCartSync({ email: email, password: password, name: name || '' }),
+      json: withCartSync({
+        email: email,
+        password: password,
+        name: name || '',
+        telefon: telefon || '',
+      }),
     }).then(function (j) {
       if (j && j.success) applySession(j);
       return j;
@@ -245,15 +252,22 @@
     var emailEl = document.getElementById('auth-email');
     var passEl = document.getElementById('auth-password');
     var nameEl = document.getElementById('auth-name');
+    var phoneEl = document.getElementById('auth-phone');
     var email = emailEl ? emailEl.value.trim() : '';
     var password = passEl ? passEl.value : '';
     var name = nameEl ? nameEl.value.trim() : '';
+    var telefon = phoneEl ? phoneEl.value.trim() : '';
     var btn = document.getElementById('auth-submit-btn');
     if (btn) btn.disabled = true;
     setMsg('İşleniyor…', true);
+    if (mode === 'register' && !telefon) {
+      setMsg('Cep telefonu zorunludur.', false);
+      if (btn) btn.disabled = false;
+      return Promise.resolve({ success: false });
+    }
     var p =
       mode === 'register'
-        ? window.equstoAuthEmailRegister(email, password, name)
+        ? window.equstoAuthEmailRegister(email, password, name, telefon)
         : window.equstoAuthEmailLogin(email, password);
     return p
       .then(function (j) {

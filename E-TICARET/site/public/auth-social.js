@@ -15,6 +15,10 @@
     if (tabReg) tabReg.classList.toggle("auth-tab--active", isReg);
     var nameWrap = document.getElementById("auth-name-wrap");
     if (nameWrap) nameWrap.style.display = isReg ? "block" : "none";
+    var phoneWrap = document.getElementById("auth-phone-wrap");
+    if (phoneWrap) phoneWrap.style.display = isReg ? "block" : "none";
+    var phoneEl = document.getElementById("auth-phone");
+    if (phoneEl) phoneEl.required = isReg;
     var submit = document.getElementById("auth-submit-btn");
     if (submit) {
       submit.textContent = isReg ? "Hesap oluştur" : "E-posta ile giriş yap";
@@ -28,7 +32,7 @@
     if (title) title.textContent = isReg ? "Üye kaydı" : "Üye girişi";
     if (sub) {
       sub.textContent = isReg
-        ? "E-posta ile ücretsiz hesap oluşturun. Şifre en az 8 karakter olmalıdır."
+        ? "E-posta ile ücretsiz hesap oluşturun. Cep telefonu PFOS teklif ve WhatsApp gönderimi için kullanılır. Şifre en az 8 karakter olmalıdır."
         : "E-posta ve şifrenizle giriş yapın veya Google ile devam edin.";
     }
     var pass = document.getElementById("auth-password");
