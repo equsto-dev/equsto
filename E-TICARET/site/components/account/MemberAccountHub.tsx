@@ -9,6 +9,7 @@ import {
 } from "@/lib/account/account-hub";
 import {
   EMPTY_MEMBER_TESLIMAT_ADRES,
+  normalizeMemberTeslimatAdres,
   type MemberTeslimatAdres,
 } from "@/lib/account/member-teslimat-adres";
 import {
@@ -44,9 +45,7 @@ function readLocalProfile(): Partial<MemberProfile> {
       email: o.email || "",
       name: o.displayName || o.name || "",
       telefon: o.telefon || o.phone || "",
-      teslimatAdres:
-        (o.teslimatAdres as MemberTeslimatAdres | undefined) ||
-        EMPTY_MEMBER_TESLIMAT_ADRES,
+      teslimatAdres: normalizeMemberTeslimatAdres(o.teslimatAdres),
       provider: o.provider || "",
       picture: o.picture || "",
     };

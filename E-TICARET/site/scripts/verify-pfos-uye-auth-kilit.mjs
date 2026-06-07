@@ -7,7 +7,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const siteDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const SHOP_ASSET_V = "20260608hesabim-hub";
+const SHOP_ASSET_V = "20260608cart-fix";
 const WA_MODAL_BUILD = 23;
 let err = 0;
 
@@ -28,7 +28,7 @@ mustExist("public/pfos-uye-auth-KILIT.txt");
 
 const kilit = read("public/pfos-uye-auth-KILIT.txt");
 if (!kilit.includes("88a02ad9")) fail("pfos-uye-auth-KILIT.txt: onay commit referansı yok");
-if (!kilit.includes("20260608hesabim-hub")) fail("pfos-uye-auth-KILIT.txt: SHOP_ASSET_V kilidi yok");
+if (!kilit.includes(SHOP_ASSET_V)) fail("pfos-uye-auth-KILIT.txt: SHOP_ASSET_V kilidi yok");
 if (!kilit.includes("WA_MODAL_BUILD = 23")) fail("pfos-uye-auth-KILIT.txt: WA_MODAL_BUILD kilidi yok");
 
 [
