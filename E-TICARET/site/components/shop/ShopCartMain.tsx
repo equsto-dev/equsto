@@ -19,45 +19,6 @@ export default function ShopCartMain() {
             </p>
           </header>
           <div id="equsto-cart-scroll" className="eq-cart-page__list" aria-live="polite" />
-          <section className="eq-cart-checkout" id="eq-cart-checkout" aria-labelledby="eq-cart-checkout-title">
-            <h2 className="eq-cart-checkout__title" id="eq-cart-checkout-title" data-i18n="cart.checkout_title">
-              Teslimat ve iletişim
-            </h2>
-            <div id="eq-cart-checkout-member" className="eq-cart-checkout__member" hidden>
-              <p className="eq-cart-checkout__who" id="eq-cart-checkout-who" />
-              <button
-                type="button"
-                id="eq-cart-checkout-edit"
-                className="eq-cart-page__btn eq-cart-page__btn--outline eq-cart-checkout__edit"
-                data-i18n="cart.checkout_edit"
-              >
-                Düzenle
-              </button>
-            </div>
-            <form id="equsto-cart-checkout-form" className="eq-cart-checkout__form" noValidate>
-              <label className="eq-cart-checkout__field">
-                <span data-i18n="cart.checkout_name">Ad soyad</span>
-                <input type="text" name="ad" autoComplete="name" required />
-              </label>
-              <label className="eq-cart-checkout__field">
-                <span data-i18n="cart.checkout_phone">Telefon</span>
-                <input type="tel" name="telefon" autoComplete="tel" required />
-              </label>
-              <label className="eq-cart-checkout__field">
-                <span data-i18n="cart.checkout_email">E-posta</span>
-                <input type="email" name="eposta" autoComplete="email" />
-              </label>
-              <label className="eq-cart-checkout__field">
-                <span data-i18n="cart.checkout_coupon">Kupon kodu (opsiyonel)</span>
-                <input type="text" name="kupon" autoComplete="off" placeholder="EQUSTO20" />
-              </label>
-              <p id="eq-cart-kupon-msg" className="eq-cart-checkout__kupon-msg" hidden />
-              <label className="eq-cart-checkout__field eq-cart-checkout__field--full">
-                <span data-i18n="cart.checkout_note">Sipariş notu (opsiyonel)</span>
-                <textarea name="not" rows={2} />
-              </label>
-            </form>
-          </section>
           <div className="eq-cart-page__actions">
             <button
               type="button"
