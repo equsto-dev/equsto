@@ -59,8 +59,14 @@ export async function POST(req: NextRequest, ctx: Ctx) {
   const body = (await req.json().catch(() => ({}))) as Record<string, unknown>;
 
   try {
-    const row = await createTeklif(body);
-    return adminOk({ data: row }, 201);
+    const result = await createTeklif(body);
+    return adminOk(
+      {
+        data: result.teklif,
+        customer_email: result.customerEmail,
+      },
+      201,
+    );
   } catch (e) {
     const msg = e instanceof Error ? e.message : "Kayıt başarısız";
     return adminErr(msg, 400);

@@ -247,6 +247,36 @@ export async function notifyNewSiparis(s: Siparis): Promise<NotifyResult> {
   return sendInstantAlert("Equsto — yeni sipariş", siparisBody(s));
 }
 
+export async function notifyNewTeklif(t: {
+  ref_no: string;
+  musteri_ad: string;
+  musteri_tel: string;
+  musteri_mail: string;
+  konsept: string;
+  toplam_tl: number;
+  kaynak: string | null;
+}): Promise<NotifyResult> {
+  return sendInstantAlert(
+    "Equsto — yeni PFOS teklifi",
+    [
+      `Referans: ${t.ref_no}`,
+      `Müşteri: ${t.musteri_ad || "—"}`,
+      t.musteri_tel ? `Tel: ${t.musteri_tel}` : "",
+      t.musteri_mail ? `E-posta: ${t.musteri_mail}` : "",
+      t.konsept ? `Konsept: ${t.konsept}` : "",
+      `Tutar (TL tahmini): ₺${Number(t.toplam_tl).toLocaleString("tr-TR")}`,
+      t.kaynak ? `Kaynak: ${t.kaynak}` : "",
+      ...customerWhatsAppLines(
+        t.musteri_tel,
+        `PFOS teklif ${t.ref_no} hakkında yazıyorum.`,
+      ),
+      `Panel: ${siteUrl()}/yonetim/isletme`,
+    ]
+      .filter(Boolean)
+      .join("\n"),
+  );
+}
+
 export function notifyChannelsConfigured(): string[] {
   const out: string[] = [];
   if (telegramBotToken() && telegramChatId()) out.push("telegram");
