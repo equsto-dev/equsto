@@ -224,7 +224,12 @@
   function bootAuthPage() {
     bindTabs();
     bindLogout();
-    setAuthMode(window.__eqAuthMode || "login");
+    var modeParam = new URLSearchParams(location.search).get("mode");
+    if (modeParam === "register") {
+      setAuthMode("register");
+    } else {
+      setAuthMode(window.__eqAuthMode || "login");
+    }
     if (typeof window.equstoInitSocialAuth === "function") {
       window.equstoInitSocialAuth();
     }

@@ -44,6 +44,7 @@ import { usePfosLabel } from "@/lib/pfos/use-pfos-label";
 import {
   memberLoggedInNow,
   pfosLoginHref,
+  pfosRegisterHref,
 } from "@/lib/pfos/member-session.client";
 import styles from "./pfos-public.module.css";
 
@@ -119,6 +120,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   const [memberReady, setMemberReady] = useState(false);
   const [memberLoggedIn, setMemberLoggedIn] = useState(false);
   const [loginHref, setLoginHref] = useState("/login");
+  const [registerHref, setRegisterHref] = useState("/login?mode=register");
   const prevOpenPanelIdRef = useRef("s1");
   const enterTimerRef = useRef<number | null>(null);
 
@@ -126,6 +128,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     const syncMember = () => setMemberLoggedIn(memberLoggedInNow());
     syncMember();
     setLoginHref(pfosLoginHref());
+    setRegisterHref(pfosRegisterHref());
     setMemberReady(true);
     document.addEventListener("equsto-member-session", syncMember);
     document.addEventListener("equsto-member-changed", syncMember);
@@ -787,7 +790,10 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
               {t("Üye Girişi")}
             </a>
             <p className={styles.memberGateNote}>
-              {t("Hesabınız yok mu? Giriş sayfasından ücretsiz kayıt olabilirsiniz.")}
+              {t("Hesabınız yok mu?")}{" "}
+              <a href={registerHref} className={styles.memberGateRegisterLink}>
+                {t("Kayıt ol")}
+              </a>
             </p>
           </div>
         </div>
