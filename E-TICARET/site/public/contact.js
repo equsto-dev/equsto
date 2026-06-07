@@ -199,15 +199,18 @@
   function applyWaModalView() {
     var memberEl = document.getElementById("equsto-wa-member");
     var loginGate = document.getElementById("equsto-wa-login-gate");
+    var pane = document.getElementById("equsto-wa-pane");
     var logged = equstoIsMember();
     if (logged) {
       if (loginGate) loginGate.hidden = true;
+      if (pane) pane.style.display = "flex";
       if (memberEl) memberEl.style.display = "flex";
       renderWaHistoryList();
       renderWaChat();
     } else {
       if (memberEl) memberEl.style.display = "none";
       if (loginGate) loginGate.hidden = false;
+      if (pane) pane.style.display = "none";
       syncWaLoginGateLinks();
     }
   }
@@ -634,7 +637,6 @@
 
     window.setTimeout(function () {
       spin.style.display = "none";
-      pane.style.display = "flex";
       ensureWaMemberSession(function () {
         applyWaModalView();
         syncWaModalNearFab();
