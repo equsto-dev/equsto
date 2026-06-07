@@ -1,5 +1,10 @@
 import type { Prisma, Teklif, TeklifDurum } from "@/lib/prisma";
 import { db } from "@/lib/db";
+import { notifyNewTeklif } from "@/lib/notify";
+import {
+  sendTeklifCustomerEmail,
+  type TeklifCustomerEmailResult,
+} from "@/lib/teklif/customer-email";
 
 export type TeklifAdminRow = {
   id: string;
@@ -120,12 +125,23 @@ export function normalizeTeklifPayload(body: Record<string, unknown>): TeklifCre
   };
 }
 
-export function validateTeklifCreate(data: TeklifCreateInput): string | null {
+export function validateTeklifCreate(
+  data: TeklifCreateInput,
+  opts?: { requireEmail?: boolean },
+): string | null {
   if (!data.musteri_ad && !data.musteri?.ad) {
     return "Müşteri adı gerekli";
   }
+  if (opts?.requireEmail && !data.musteri?.eposta?.trim()) {
+    return "E-posta gerekli";
+  }
   return null;
 }
+
+export type CreateTeklifResult = {
+  teklif: TeklifAdminRow;
+  customerEmail: TeklifCustomerEmailResult;
+};
 
 async function linkMusteriId(tel: string, ad: string, mail: string): Promise<string | null> {
   const t = tel.trim();
@@ -150,9 +166,14 @@ async function linkMusteriId(tel: string, ad: string, mail: string): Promise<str
   return row.id;
 }
 
-export async function createTeklif(body: Record<string, unknown>) {
+export async function createTeklif(
+  body: Record<string, unknown>,
+): Promise<CreateTeklifResult> {
   const data = normalizeTeklifPayload(body);
-  const err = validateTeklifCreate(data);
+  const kaynak = String(body.kaynak ?? data.kaynak ?? "");
+  const err = validateTeklifCreate(data, {
+    requireEmail: kaynak.includes("pfos"),
+  });
   if (err) throw new Error(err);
 
   const musteriAd = data.musteri_ad || data.musteri?.ad || "";
@@ -192,5 +213,10 @@ export async function createTeklif(body: Record<string, unknown>) {
     },
   });
 
-  return teklifToAdmin(row);
+  const admin = teklifToAdmin(row);
+  void notifyNewTeklif(admin).catch((e) =>
+    console.error("[teklif] notify", e),
+  );
+  const customerEmail = await sendTeklifCustomerEmail(admin, body);
+  return { teklif: admin, customerEmail };
 }

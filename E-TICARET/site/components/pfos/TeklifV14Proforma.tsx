@@ -34,12 +34,14 @@ export default function TeklifV14Proforma({ model }: Props) {
   const [sendOpen, setSendOpen] = useState(false);
   const [sending, setSending] = useState(false);
   const [sendResult, setSendResult] = useState<
-    { kind: "ok"; refNo: string } | { kind: "err"; message: string } | null
+    | { kind: "ok"; refNo: string; emailSent: boolean; emailNote?: string }
+    | { kind: "err"; message: string }
+    | null
   >(null);
   const [form] = Form.useForm<{
     ad: string;
     telefon: string;
-    eposta?: string;
+    eposta: string;
     not?: string;
   }>();
   const { ust, ozet, meta } = model;
@@ -83,10 +85,17 @@ export default function TeklifV14Proforma({ model }: Props) {
     }));
   }
 
+  function slimTeklifV14ForApi(m: TeklifModelV14): TeklifModelV14 {
+    return {
+      ...m,
+      satirlar: m.satirlar.map(({ fotoUrl: _foto, ...rest }) => rest),
+    };
+  }
+
   async function handleSend(values: {
     ad: string;
     telefon: string;
-    eposta?: string;
+    eposta: string;
     not?: string;
   }) {
     setSending(true);
@@ -118,12 +127,18 @@ export default function TeklifV14Proforma({ model }: Props) {
           kalemler: slimKalemler(),
           kaynak: "pfos-v14",
           teklif_sayi: ust.sayi,
+          teklif_v14: slimTeklifV14ForApi(model),
         }),
       });
       let json: {
         success?: boolean;
         error?: string;
         data?: { ref_no?: string; id?: string };
+        customer_email?: {
+          attempted?: boolean;
+          sent?: boolean;
+          error?: string;
+        };
       };
       try {
         json = (await res.json()) as typeof json;
@@ -151,7 +166,20 @@ export default function TeklifV14Proforma({ model }: Props) {
       }
       form.resetFields();
       setSendOpen(false);
-      setSendResult({ kind: "ok", refNo });
+      const ce = json.customer_email;
+      const emailSent = ce?.sent === true;
+      let emailNote: string | undefined;
+      if (ce?.attempted && !ce.sent && ce.error) {
+        emailNote = ce.error;
+      } else if (ce?.attempted === false && !ce?.sent) {
+        emailNote = "E-posta servisi yapılandırılmamış";
+      }
+      setSendResult({
+        kind: "ok",
+        refNo,
+        emailSent,
+        emailNote,
+      });
     } catch (e) {
       const msg = e instanceof Error ? e.message : "Teklif gönderilemedi";
       setSendResult({ kind: "err", message: msg });
@@ -388,7 +416,8 @@ export default function TeklifV14Proforma({ model }: Props) {
         getContainer={() => document.body}
       >
         <Typography.Paragraph type="secondary" style={{ marginBottom: 16 }}>
-          Bilgileriniz satış ekibimize iletilir; PFOS teklif listeniz kayda alınır.
+          Bilgileriniz satış ekibimize iletilir; teklif listeniz kayda alınır ve
+          e-posta adresinize Excel dosyası gönderilir.
         </Typography.Paragraph>
         <Form form={form} layout="vertical" onFinish={handleSend}>
           <Form.Item
@@ -405,7 +434,14 @@ export default function TeklifV14Proforma({ model }: Props) {
           >
             <Input placeholder="0532…" autoComplete="tel" />
           </Form.Item>
-          <Form.Item name="eposta" label="E-posta">
+          <Form.Item
+            name="eposta"
+            label="E-posta"
+            rules={[
+              { required: true, message: "E-posta gerekli" },
+              { type: "email", message: "Geçerli bir e-posta girin" },
+            ]}
+          >
             <Input type="email" autoComplete="email" />
           </Form.Item>
           <Form.Item name="not" label="Not (opsiyonel)">
@@ -442,6 +478,21 @@ export default function TeklifV14Proforma({ model }: Props) {
             ) : (
               "Ekibimiz en kısa sürede sizinle iletişime geçecek."
             )}
+            {sendResult.emailSent ? (
+              <>
+                <br />
+                <br />
+                Teklif Excel dosyanız e-posta adresinize gönderildi.
+              </>
+            ) : sendResult.emailNote ? (
+              <>
+                <br />
+                <br />
+                <Typography.Text type="warning">
+                  E-posta gönderilemedi: {sendResult.emailNote}
+                </Typography.Text>
+              </>
+            ) : null}
           </Typography.Paragraph>
         ) : (
           <Typography.Paragraph type="danger" style={{ marginBottom: 0 }}>
