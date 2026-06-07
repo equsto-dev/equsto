@@ -19,6 +19,7 @@
     contact: "/contact",
     sss: "/sss",
     login: "/login.html",
+    account: "/hesabim",
     cart: "/sepet",
     pisirme: "/shop/pisirme",
     sogutma: "/shop/sogutma",
@@ -151,6 +152,7 @@
     if (curLang() !== "en") return path;
     if (path === "/") return "/en/";
     if (key === "cart") return "/en/cart";
+    if (key === "account") return "/en/account";
     return "/en" + path;
   }
   window.equstoUrl = function (key) {
