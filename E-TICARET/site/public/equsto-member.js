@@ -26,11 +26,25 @@
     }
   }
 
+  function memberTokenFrom(o) {
+    return o && o.token ? String(o.token).trim() : "";
+  }
+
+  function purgeStaleMemberSession() {
+    var o = readMember();
+    if (!o || o.active !== true) return;
+    if (memberTokenFrom(o)) return;
+    try {
+      delete o.active;
+      localStorage.setItem(MEMBER_KEY, JSON.stringify(o));
+    } catch (e) {}
+  }
+
   function equstoIsMemberLoggedIn() {
     var o = readMember();
-    /* Header / teslimat bandı ile aynı: active oturum yeterli (token API için ayrı) */
     if (!o || o.active !== true) return false;
     if (o.expiresAt && Number(o.expiresAt) < Date.now()) return false;
+    if (!memberTokenFrom(o)) return false;
     return true;
   }
 
@@ -50,10 +64,13 @@
   window.equstoSetMemberActive = function (extra) {
     try {
       var prev = readMember() || {};
-      var o = Object.assign({}, prev, extra && typeof extra === "object" ? extra : {}, {
-        active: true,
+      var patch = extra && typeof extra === "object" ? extra : {};
+      var token = memberTokenFrom(patch) || memberTokenFrom(prev);
+      var o = Object.assign({}, prev, patch, {
         at: Date.now(),
       });
+      o.active = !!token;
+      if (token) o.token = token;
       if (!o.displayName && o.name) o.displayName = o.name;
       if (!o.displayName && o.email) o.displayName = String(o.email).split("@")[0];
       if (o.telefon && !o.phone) o.phone = o.telefon;
@@ -89,7 +106,7 @@
   /** Üst bant: girişte «Alıcı Adem», misafirde «Teslimat Adresi» */
   function equstoRefreshDeliveryHeader() {
     var o = readMember();
-    var logged = !!(o && o.active);
+    var logged = equstoIsMemberLoggedIn();
     var name = memberFirstName(o);
     document.querySelectorAll(".hdr-alici").forEach(function (wrap) {
       var label =
@@ -121,7 +138,7 @@
     var links = document.querySelectorAll("a.eq-hdr-account");
     if (!links.length) return;
     var o = readMember();
-    var logged = !!(o && o.active);
+    var logged = equstoIsMemberLoggedIn();
     links.forEach(function (a) {
       var title = a.querySelector(".eq-hdr-account-title");
       var sub = a.querySelector("span:first-of-type");
@@ -149,6 +166,7 @@
   };
 
   function bootMemberUi() {
+    purgeStaleMemberSession();
     window.equstoRefreshMemberHeader();
     if (equstoIsMemberLoggedIn()) {
       try {
@@ -158,6 +176,10 @@
     if (typeof window.equstoAuthValidateSession === "function") {
       window.equstoAuthValidateSession().finally(function () {
         equstoRefreshDeliveryHeader();
+        equstoRefreshMemberHeader();
+        try {
+          document.dispatchEvent(new CustomEvent("equsto-member-changed"));
+        } catch (_) {}
       });
     }
     if (window.eqI18nReady && typeof window.eqI18nReady.then === "function") {
