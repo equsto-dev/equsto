@@ -101,7 +101,71 @@ Panel: https://equsto.com/yonetim/isletme
 
 ---
 
-## WhatsApp Business API
+## 4) PFOS teklif PDF — WhatsApp
 
-Gerçek WhatsApp **giden** mesajı (Meta şablon onayı) ayrı entegrasyon gerektirir.
-Bu dokümandaki kanallar **sizin telefonunuza uyarı** içindir; ziyaretçi yine site içi kedide konuşur.
+### Yol haritası (Equsto kararı)
+
+| Aşama | Sağlayıcı | Amaç |
+|--------|-----------|------|
+| **Test / şimdi** | **Green API** (`EQUSTO_WHATSAPP_MODE=green-api`) | Hızlı kurulum, QR ile PDF gönderimi |
+| **Temelli / canlı** | **Meta Cloud API** (`EQUSTO_WHATSAPP_MODE=meta`) | Resmi WhatsApp, şablon onayı, ölçeklenebilir |
+
+Kod her iki modu destekler; Vercel’de `EQUSTO_WHATSAPP_MODE` değiştirerek geçiş yapılır.
+
+---
+
+### Green API — test kurulumu
+
+PFOS’ta **WhatsApp'ıma gönder (PDF)** için sunucu tarafı gönderim gerekir. **Green API** ile QR kod tarayarak bağlanırsınız; Facebook hesabı gerekmez.
+
+### Adım 1 — Green API hesabı
+
+1. [green-api.com](https://green-api.com) → **Sign up** (ücretsiz deneme var)
+2. Giriş yapın → **Console** (kontrol paneli)
+
+### Adım 2 — Instance oluştur + QR tara
+
+1. **Create instance** (veya yeni örnek oluştur)
+2. Açılan **QR kodu**, teklif gönderecek **iş WhatsApp numaranızla** tarayın (telefon → WhatsApp → Bağlı cihazlar → Cihaz bağla)
+3. Durum **authorized** olmalı
+
+### Adım 3 — Kimlik bilgilerini kopyala
+
+Panelde instance satırında:
+
+| Alan | Vercel değişkeni |
+|------|------------------|
+| **idInstance** | `GREEN_API_INSTANCE_ID` |
+| **apiTokenInstance** | `GREEN_API_TOKEN` |
+
+### Adım 4 — Vercel ortam değişkenleri
+
+Vercel → proje → **Settings** → **Environment Variables** → **Production**:
+
+```
+EQUSTO_WHATSAPP_MODE=green-api
+GREEN_API_INSTANCE_ID=1101234567
+GREEN_API_TOKEN=abc123...
+```
+
+**Redeploy** (Deployments → son deploy → ⋮ → Redeploy).
+
+### Adım 5 — Test
+
+1. [equsto.com/pfos](https://equsto.com/pfos) → teklif oluştur
+2. Telefon alanına **WhatsApp’ınızın numarası** (ör. `0532…` veya `90532…`)
+3. **WhatsApp'ıma gönder (PDF)** → birkaç saniye içinde PDF gelmeli
+
+Hata: *«WhatsApp sunucu gönderimi yapılandırılmamış»* → `EQUSTO_WHATSAPP_MODE=green-api` veya Green API anahtarları eksik / redeploy yapılmamış.
+
+---
+
+## WhatsApp Business API (Meta) — hedef platform
+
+Meta Cloud API (Facebook Developer, şablon onayı) **canlı hedef** moddur: `EQUSTO_WHATSAPP_MODE=meta`.
+
+Geçişte Vercel’de:
+- `EQUSTO_WHATSAPP_MODE=meta`
+- `WHATSAPP_ACCESS_TOKEN`, `WHATSAPP_PHONE_NUMBER_ID`, … (Meta Developer panel)
+
+Green API test aşamasında kalır; Meta geçişi ayrı iş paketi (Business doğrulama + şablon onayı).

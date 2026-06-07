@@ -1,5 +1,6 @@
 import { createHash, randomBytes, scryptSync, timingSafeEqual } from "node:crypto";
 import { NextRequest } from "next/server";
+import { adminErr } from "@/lib/admin-response";
 import { db } from "@/lib/db";
 import {
   mergeShopCartItems,
@@ -161,6 +162,19 @@ export async function getSessionByToken(token: string): Promise<MemberSessionPay
     user: memberToUser(row.member),
     items,
   };
+}
+
+/** PFOS teklif / WhatsApp modal — oturum yoksa 401 */
+export async function requireMemberSession(
+  req: NextRequest,
+  body?: Record<string, unknown> | null,
+): Promise<{ session: MemberSessionPayload } | Response> {
+  const token = readBearerToken(req) || readTokenFromBody(body ?? null);
+  const session = await getSessionByToken(token);
+  if (!session) {
+    return adminErr("Üye girişi gerekli", 401);
+  }
+  return { session };
 }
 
 export async function getMemberIdByToken(token: string): Promise<string | null> {

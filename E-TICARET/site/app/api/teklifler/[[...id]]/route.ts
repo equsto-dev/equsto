@@ -2,6 +2,7 @@ import { NextRequest } from "next/server";
 import { assertAdminBearer } from "@/lib/auth";
 import { adminErr, adminOk } from "@/lib/admin-response";
 import { db } from "@/lib/db";
+import { requireMemberSession } from "@/lib/member-auth";
 import {
   createTeklif,
   isTeklifDurum,
@@ -58,6 +59,11 @@ export async function POST(req: NextRequest, ctx: Ctx) {
   if (segments.length > 0) return adminErr("POST yalnızca /api/teklifler", 400);
 
   const body = (await req.json().catch(() => ({}))) as Record<string, unknown>;
+
+  if (assertAdminBearer(req)) {
+    const memberCheck = await requireMemberSession(req, body);
+    if (memberCheck instanceof Response) return memberCheck;
+  }
 
   try {
     const result = await createTeklif(body);
