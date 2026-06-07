@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties } from "react";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import type { Konsept, PFOSResponse } from "@/lib/pfos/schemas/pfos.schema";
 import { KonseptEnum } from "@/lib/pfos/schemas/pfos.schema";
 import {
@@ -41,6 +41,10 @@ import {
   BULUT_KOMPAKT_M2_MAX,
 } from "@/lib/pfos/wizard/bulut-mutfak-kompakt";
 import { usePfosLabel } from "@/lib/pfos/use-pfos-label";
+import {
+  memberLoggedInNow,
+  pfosLoginHref,
+} from "@/lib/pfos/member-session.client";
 import styles from "./pfos-public.module.css";
 
 type ShopTypeRow = {
@@ -71,13 +75,9 @@ type Props = {
 const M2_PRESETS = [40, 80, 120, 200, 350];
 
 /** Panel geçiş süreleri (CSS transition ile eşleşmeli) */
-const PFOS_PANEL_FADE_MS = 500;
-const PFOS_RESULT_FADE_MS = 500;
-const PFOS_RAIL_FADE_MS = 500;
-
-function pfosStaggerStyle(index: number): CSSProperties {
-  return { ["--pfos-stagger" as string]: index };
-}
+const PFOS_PANEL_FADE_MS = 320;
+const PFOS_RESULT_FADE_MS = 320;
+const PFOS_RAIL_FADE_MS = 320;
 
 function formatTry(n: number) {
   return new Intl.NumberFormat("tr-TR", {
@@ -116,8 +116,24 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   const [referansOnizleme, setReferansOnizleme] =
     useState<ReferansOnizleme | null>(null);
   const [referansYukleniyor, setReferansYukleniyor] = useState(false);
+  const [memberReady, setMemberReady] = useState(false);
+  const [memberLoggedIn, setMemberLoggedIn] = useState(false);
+  const [loginHref, setLoginHref] = useState("/login");
   const prevOpenPanelIdRef = useRef("s1");
   const enterTimerRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    const syncMember = () => setMemberLoggedIn(memberLoggedInNow());
+    syncMember();
+    setLoginHref(pfosLoginHref());
+    setMemberReady(true);
+    document.addEventListener("equsto-member-session", syncMember);
+    document.addEventListener("equsto-member-changed", syncMember);
+    return () => {
+      document.removeEventListener("equsto-member-session", syncMember);
+      document.removeEventListener("equsto-member-changed", syncMember);
+    };
+  }, []);
 
   const clearEnterTimer = useCallback(() => {
     if (enterTimerRef.current != null) {
@@ -214,7 +230,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     enterTimerRef.current = window.setTimeout(() => {
       setAnimatingPanelId(null);
       setAnimatingPanelReveal(false);
-    }, PFOS_PANEL_FADE_MS + 200);
+    }, PFOS_PANEL_FADE_MS + 80);
 
     return clearEnterTimer;
   }, [openPanelIndex, panels, clearEnterTimer]);
@@ -236,7 +252,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     const t = window.setTimeout(() => {
       setResultEntering(false);
       setResultReveal(false);
-    }, PFOS_RESULT_FADE_MS + 200);
+    }, PFOS_RESULT_FADE_MS + 80);
     return () => {
       cleanup();
       window.clearTimeout(t);
@@ -255,7 +271,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     const t = window.setTimeout(() => {
       setRailEntering(false);
       setRailReveal(false);
-    }, PFOS_RAIL_FADE_MS + 200);
+    }, PFOS_RAIL_FADE_MS + 80);
     return () => {
       cleanup();
       window.clearTimeout(t);
@@ -514,12 +530,8 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     const bulutSeg =
       String(answers.q_ust_segment ?? "").trim() === "Bulut Mutfak";
     const minM2 = bulutSeg ? 8 : 20;
-    const isEntering = animatingPanelId === panel.id;
     return (
-      <div
-        className={styles.alanField}
-        style={isEntering ? pfosStaggerStyle(0) : undefined}
-      >
+      <div className={styles.alanField}>
         {bulutSeg ? (
           <p className={styles.alanHint} style={{ marginBottom: 10 }}>
             {t(
@@ -544,7 +556,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
               key={n}
               type="button"
               className={`${styles.presetBtn}${val === n ? ` ${styles.presetBtnActive}` : ""}`}
-              style={isEntering ? pfosStaggerStyle(i + 1) : undefined}
               onClick={() => setM2Value(String(n))}
             >
               {n} m²
@@ -562,7 +573,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
 
   function renderQuestion(q: WizardQuestion, panel: LegacyPanelDef) {
     const id = q.id as keyof SoruCevapHaritasi;
-    const isEntering = animatingPanelId === panel.id;
 
     if (q.id === "q_m2") return renderM2Field(panel);
 
@@ -576,7 +586,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
                 key={opt}
                 type="button"
                 className={`${styles.optionBtn}${val === opt ? ` ${styles.optionBtnSelected}` : ""}`}
-                style={isEntering ? pfosStaggerStyle(i) : undefined}
                 disabled={loading}
                 onClick={() => onKararSelect(opt)}
               >
@@ -617,7 +626,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
                 key={opt}
                 type="button"
                 className={`${styles.optionBtn}${val === opt ? ` ${styles.optionBtnSelected}` : ""}`}
-                style={isEntering ? pfosStaggerStyle(i) : undefined}
                 onClick={() => setAnswer(id, opt, panel)}
               >
                 {t(opt)}
@@ -639,7 +647,6 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
               <label
                 key={opt}
                 className={`${styles.multiLabel}${selected.includes(opt) ? ` ${styles.multiLabelSelected}` : ""}`}
-                style={isEntering ? pfosStaggerStyle(i) : undefined}
               >
                 <input
                   type="checkbox"
@@ -699,10 +706,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
 
     const isDone = index < openPanelIndex;
     const isActive = index === openPanelIndex;
-    const showBody =
-      isDone ||
-      (isActive &&
-        !(animatingPanelId === panel.id && !animatingPanelReveal));
+    const showBody = isDone || isActive;
     const summary = panelAnswerSummary(panel, answers);
     const summaryDisplay = summary
       ? summary
@@ -758,6 +762,45 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
         ) : null}
       </section>
     );
+  }
+
+  function renderMemberGate() {
+    return (
+      <div className={styles.layout}>
+        <div className={styles.leftCol}>
+          <p className={styles.mreGreeting}>
+            {t("Ben Gastronomi Mekan Tasarımcısı Mr. Equsto. Hoş geldin.")}
+          </p>
+          <p className={styles.mreMotto}>
+            {t("Beş dakikada yapılır, hemen teslim edilir.")}
+          </p>
+          <div className={styles.memberGate}>
+            <h2 className={styles.memberGateTitle}>
+              {t("Devam etmek için üye girişi")}
+            </h2>
+            <p className={styles.memberGateSub}>
+              {t(
+                "Teklif almak ve PDF'inizi e-posta veya WhatsApp ile almak için Equsto hesabınızla giriş yapın.",
+              )}
+            </p>
+            <a href={loginHref} className={styles.memberGateLink}>
+              {t("Üye Girişi")}
+            </a>
+            <p className={styles.memberGateNote}>
+              {t("Hesabınız yok mu? Giriş sayfasından ücretsiz kayıt olabilirsiniz.")}
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (!memberReady) {
+    return null;
+  }
+
+  if (!memberLoggedIn) {
+    return renderMemberGate();
   }
 
   if (finished && !sonuc && !loading) {

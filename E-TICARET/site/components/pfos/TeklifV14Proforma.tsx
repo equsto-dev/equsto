@@ -9,6 +9,7 @@ import { formatTarihTr, formatKwHucre } from "@/lib/pfos/teklif/format-v14";
 import { downloadTeklifV14Excel } from "@/lib/pfos/teklif/export-teklif-v14.client";
 import { printTeklifV14 } from "@/lib/pfos/teklif/print-teklif-v14.client";
 import { TEKLIF_V14_FORM_NO, TEKLIF_BOLUM_ROW_FILL } from "@/lib/pfos/teklif/constants";
+import { memberLoggedInNow } from "@/lib/pfos/member-session.client";
 
 type Props = {
   model: TeklifModelV14;
@@ -83,15 +84,9 @@ type EqustoMemberWindow = Window & {
   equstoTrackConversion?: (type: string, params?: Record<string, unknown>) => void;
 };
 
-function memberLoggedInNow(): boolean {
-  if (typeof window === "undefined") return false;
-  return Boolean((window as EqustoMemberWindow).equstoIsMemberLoggedIn?.());
-}
-
 export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props) {
   const [exporting, setExporting] = useState(false);
   const [sendingKanal, setSendingKanal] = useState<SendKanal | null>(null);
-  const [memberLoggedIn, setMemberLoggedIn] = useState(false);
   const [sendResult, setSendResult] = useState<
     DeliveryResult | { kind: "err"; message: string } | null
   >(null);
@@ -118,16 +113,13 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
 
   useEffect(() => {
     if (!deliveryOnly) return;
-    const syncMember = () => {
-      setMemberLoggedIn(memberLoggedInNow());
-      applySavedCustomerContact();
-    };
-    syncMember();
-    document.addEventListener("equsto-member-session", syncMember);
-    document.addEventListener("equsto-member-changed", syncMember);
+    applySavedCustomerContact();
+    const syncContact = () => applySavedCustomerContact();
+    document.addEventListener("equsto-member-session", syncContact);
+    document.addEventListener("equsto-member-changed", syncContact);
     return () => {
-      document.removeEventListener("equsto-member-session", syncMember);
-      document.removeEventListener("equsto-member-changed", syncMember);
+      document.removeEventListener("equsto-member-session", syncContact);
+      document.removeEventListener("equsto-member-changed", syncContact);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps -- form doldurma: mount + üye oturumu
   }, [deliveryOnly, ust.musteri]);
@@ -503,55 +495,37 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
             background: "#f6ffed",
           }}
         >
-          {!memberLoggedIn ? (
-            <div style={{ textAlign: "center", padding: "32px 16px" }}>
-              <a
-                href="/login"
-                style={{
-                  fontSize: 16,
-                  fontWeight: 600,
-                  color: "#008069",
-                  textDecoration: "none",
-                }}
+          <Typography.Title level={5} style={{ marginTop: 0, marginBottom: 8 }}>
+            Teklifinizi alın
+          </Typography.Title>
+          <Typography.Paragraph type="secondary" style={{ marginBottom: 16 }}>
+            PDF teklifiniz kayıtlı e-posta ve WhatsApp numaranıza gönderilir.
+          </Typography.Paragraph>
+          <Form form={form} layout="vertical">
+            <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+              <Button
+                type="primary"
+                icon={<MailOutlined />}
+                loading={sendingKanal === "email"}
+                disabled={sendingKanal === "whatsapp"}
+                onClick={() => void handleSend("email")}
               >
-                Üye Girişi
-              </a>
+                E-postama gönder (PDF)
+              </Button>
+              <Button
+                style={{
+                  background: "#25D366",
+                  borderColor: "#25D366",
+                  color: "#fff",
+                }}
+                loading={sendingKanal === "whatsapp"}
+                disabled={sendingKanal === "email"}
+                onClick={() => void handleSend("whatsapp")}
+              >
+                WhatsApp&apos;ıma gönder (PDF)
+              </Button>
             </div>
-          ) : (
-            <>
-              <Typography.Title level={5} style={{ marginTop: 0, marginBottom: 8 }}>
-                Teklifinizi alın
-              </Typography.Title>
-              <Typography.Paragraph type="secondary" style={{ marginBottom: 16 }}>
-                PDF teklifiniz kayıtlı e-posta ve WhatsApp numaranıza gönderilir.
-              </Typography.Paragraph>
-              <Form form={form} layout="vertical">
-                <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-                  <Button
-                    type="primary"
-                    icon={<MailOutlined />}
-                    loading={sendingKanal === "email"}
-                    disabled={sendingKanal === "whatsapp"}
-                    onClick={() => void handleSend("email")}
-                  >
-                    E-postama gönder (PDF)
-                  </Button>
-                  <Button
-                    style={{
-                      background: "#25D366",
-                      borderColor: "#25D366",
-                      color: "#fff",
-                    }}
-                    loading={sendingKanal === "whatsapp"}
-                    disabled={sendingKanal === "email"}
-                    onClick={() => void handleSend("whatsapp")}
-                  >
-                    WhatsApp&apos;ıma gönder (PDF)
-                  </Button>
-                </div>
-              </Form>
-            </>
-          )}
+          </Form>
         </div>
       ) : (
         <div

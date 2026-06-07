@@ -45,6 +45,13 @@
     if (typeof window.equstoIsMemberLoggedIn !== "function" || !window.equstoIsMemberLoggedIn()) {
       return;
     }
+    var next = new URLSearchParams(location.search).get("next");
+    if (next) {
+      setTimeout(function () {
+        location.href = next;
+      }, 300);
+      return;
+    }
     var m = typeof window.equstoGetMember === "function" ? window.equstoGetMember() : null;
     var forms = document.getElementById("auth-forms-wrap");
     if (forms) forms.style.display = "none";

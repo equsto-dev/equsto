@@ -299,16 +299,19 @@ body.eq-wa-in-tabbar:not(.admin-app) #equsto-contact-fab {
 
 .equsto-wa-login-gate {
   flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
   min-height: 200px;
   background: var(--wa-chat-bg, #efeae2);
 }
 
 .equsto-wa-login-gate__link {
-  font-size: 16px;
+  position: absolute;
+  left: 50%;
+  top: 66.67%;
+  transform: translate(-50%, -50%);
+  font-size: 22px;
   font-weight: 600;
+  line-height: 1.3;
   color: var(--wa-header, #008069);
   text-decoration: none;
 }
