@@ -86,6 +86,10 @@
       }
       var existing = document.getElementById("gsi-client");
       if (existing) {
+        if (window.google && window.google.accounts) {
+          resolve();
+          return;
+        }
         existing.addEventListener("load", function () {
           resolve();
         });
@@ -96,13 +100,27 @@
       s.id = "gsi-client";
       s.src = "https://accounts.google.com/gsi/client";
       s.async = true;
-      s.defer = true;
       s.onload = function () {
         resolve();
       };
       s.onerror = reject;
       document.head.appendChild(s);
     });
+  }
+
+  function prefetchGoogleAuth() {
+    try {
+      if (!document.querySelector('link[rel="preconnect"][href="https://accounts.google.com"]')) {
+        var pc = document.createElement("link");
+        pc.rel = "preconnect";
+        pc.href = "https://accounts.google.com";
+        document.head.appendChild(pc);
+      }
+    } catch (_) {}
+    loadGoogleScript().catch(function () {});
+    if (typeof window.equstoAuthFetchConfig === "function") {
+      window.equstoAuthFetchConfig().catch(function () {});
+    }
   }
 
   function googleBtnPixelWidth() {
@@ -176,9 +194,7 @@
       }
     }
 
-    requestAnimationFrame(function () {
-      requestAnimationFrame(paint);
-    });
+    requestAnimationFrame(paint);
   }
 
   function googleClientIdOrFetch(cb) {
@@ -303,22 +319,17 @@
   }
 
   function bootAfterApi() {
-    var ready = window.__eqAuthApiReady || Promise.resolve();
-    ready.then(function () {
-      var chain = Promise.resolve();
-      if (typeof window.equstoAuthBootstrap === "function") {
-        chain = window.equstoAuthBootstrap();
-      }
-      chain
-        .then(function (j) {
-          var el = document.getElementById("auth-social-msg");
-          if (j && j.success && el) {
-            el.innerHTML = "";
-            el.style.display = "none";
+    prefetchGoogleAuth();
+    bootAuthPage();
+    if (typeof window.equstoAuthFetchConfig === "function") {
+      window.equstoAuthFetchConfig()
+        .then(function () {
+          if (typeof window.equstoInitSocialAuth === "function") {
+            window.equstoInitSocialAuth();
           }
         })
-        .finally(bootAuthPage);
-    });
+        .catch(function () {});
+    }
   }
 
   if (document.readyState === "loading") {

@@ -16,7 +16,9 @@
 
   if (window.EQUSTO_AUTH.apiBase == null) window.EQUSTO_AUTH.apiBase = '';
 
-  window.__eqAuthApiReady = fetch('/auth-api-base.json', { cache: 'no-store' })
+  /* Giriş sayfasını bloklamayın — çoğu ortamda apiBase zaten aynı kök ("") */
+  window.__eqAuthApiReady = Promise.resolve();
+  fetch('/auth-api-base.json', { cache: 'force-cache' })
     .then(function (r) {
       return r.ok ? r.json() : {};
     })
