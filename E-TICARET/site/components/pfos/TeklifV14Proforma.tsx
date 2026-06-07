@@ -1,6 +1,6 @@
 "use client";
 
-import { DownloadOutlined, PrinterOutlined, SendOutlined } from "@ant-design/icons";
+import { DownloadOutlined, MailOutlined, PrinterOutlined } from "@ant-design/icons";
 import { Button, Collapse, Form, Input, Modal, Typography } from "antd";
 import { Fragment, useState, type CSSProperties } from "react";
 import type { TeklifModelV14 } from "@/lib/pfos/teklif/teklif-v14.types";
@@ -12,6 +12,18 @@ import { TEKLIF_V14_FORM_NO, TEKLIF_BOLUM_ROW_FILL } from "@/lib/pfos/teklif/con
 
 type Props = {
   model: TeklifModelV14;
+  /** Halk PFOS: yalnızca e-posta / WhatsApp ile PDF; indirme yok */
+  deliveryOnly?: boolean;
+};
+
+type SendKanal = "email" | "whatsapp";
+
+type DeliveryResult = {
+  kind: "ok";
+  refNo: string;
+  kanal: SendKanal;
+  sent: boolean;
+  note?: string;
 };
 
 const COLS = [
@@ -29,14 +41,11 @@ const COLS = [
   "Toplam",
 ] as const;
 
-export default function TeklifV14Proforma({ model }: Props) {
+export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props) {
   const [exporting, setExporting] = useState(false);
-  const [sendOpen, setSendOpen] = useState(false);
-  const [sending, setSending] = useState(false);
+  const [sendingKanal, setSendingKanal] = useState<SendKanal | null>(null);
   const [sendResult, setSendResult] = useState<
-    | { kind: "ok"; refNo: string; emailSent: boolean; emailNote?: string }
-    | { kind: "err"; message: string }
-    | null
+    DeliveryResult | { kind: "err"; message: string } | null
   >(null);
   const [form] = Form.useForm<{
     ad: string;
@@ -58,16 +67,6 @@ export default function TeklifV14Proforma({ model }: Props) {
     } finally {
       setExporting(false);
     }
-  }
-
-  function openSendModal() {
-    form.setFieldsValue({
-      ad: ust.musteri?.trim() || "",
-      telefon: "",
-      eposta: "",
-      not: "",
-    });
-    setSendOpen(true);
   }
 
   function slimKalemler() {
@@ -92,13 +91,29 @@ export default function TeklifV14Proforma({ model }: Props) {
     };
   }
 
-  async function handleSend(values: {
-    ad: string;
-    telefon: string;
-    eposta: string;
-    not?: string;
-  }) {
-    setSending(true);
+  async function handleSend(kanal: SendKanal) {
+    let values: {
+      ad: string;
+      telefon: string;
+      eposta: string;
+      not?: string;
+    };
+    try {
+      values = await form.validateFields();
+    } catch {
+      return;
+    }
+
+    if (kanal === "email" && !values.eposta?.trim()) {
+      form.setFields([{ name: "eposta", errors: ["E-posta gerekli"] }]);
+      return;
+    }
+    if (kanal === "whatsapp" && !values.telefon?.trim()) {
+      form.setFields([{ name: "telefon", errors: ["Telefon gerekli"] }]);
+      return;
+    }
+
+    setSendingKanal(kanal);
     try {
       const eurTry = ust.eurTry ?? 0;
       const genelEur = ozet.genelToplam ?? 0;
@@ -128,17 +143,16 @@ export default function TeklifV14Proforma({ model }: Props) {
           kaynak: "pfos-v14",
           teklif_sayi: ust.sayi,
           teklif_v14: slimTeklifV14ForApi(model),
+          gonderim_kanali: kanal,
         }),
       });
+
       let json: {
         success?: boolean;
         error?: string;
         data?: { ref_no?: string; id?: string };
-        customer_email?: {
-          attempted?: boolean;
-          sent?: boolean;
-          error?: string;
-        };
+        customer_email?: { attempted?: boolean; sent?: boolean; error?: string };
+        customer_whatsapp?: { attempted?: boolean; sent?: boolean; error?: string };
       };
       try {
         json = (await res.json()) as typeof json;
@@ -148,6 +162,7 @@ export default function TeklifV14Proforma({ model }: Props) {
       if (!res.ok || !json.success) {
         throw new Error(json.error || `Teklif gönderilemedi (HTTP ${res.status})`);
       }
+
       const refNo = json.data?.ref_no || json.data?.id || "";
       const w = window as Window & {
         equstoTrackConversion?: (
@@ -160,31 +175,31 @@ export default function TeklifV14Proforma({ model }: Props) {
           kaynak: "pfos-v14",
           ref_no: refNo,
           teklif: ust.sayi,
+          kanal,
         });
       } catch {
         /* analytics optional */
       }
-      form.resetFields();
-      setSendOpen(false);
-      const ce = json.customer_email;
-      const emailSent = ce?.sent === true;
-      let emailNote: string | undefined;
-      if (ce?.attempted && !ce.sent && ce.error) {
-        emailNote = ce.error;
-      } else if (ce?.attempted === false && !ce?.sent) {
-        emailNote = "E-posta servisi yapılandırılmamış";
+
+      const delivery =
+        kanal === "whatsapp" ? json.customer_whatsapp : json.customer_email;
+      const sent = delivery?.sent === true;
+      let note: string | undefined;
+      if (delivery?.attempted && !delivery.sent && delivery.error) {
+        note = delivery.error;
+      } else if (delivery?.attempted === false && !delivery?.sent) {
+        note =
+          kanal === "email"
+            ? "E-posta servisi yapılandırılmamış"
+            : "WhatsApp sunucu gönderimi yapılandırılmamış";
       }
-      setSendResult({
-        kind: "ok",
-        refNo,
-        emailSent,
-        emailNote,
-      });
+
+      setSendResult({ kind: "ok", refNo, kanal, sent, note });
     } catch (e) {
       const msg = e instanceof Error ? e.message : "Teklif gönderilemedi";
       setSendResult({ kind: "err", message: msg });
     } finally {
-      setSending(false);
+      setSendingKanal(null);
     }
   }
 
@@ -357,36 +372,110 @@ export default function TeklifV14Proforma({ model }: Props) {
         </table>
       </div>
 
-      <div
-        style={{
-          marginTop: 16,
-          display: "flex",
-          gap: 12,
-          flexWrap: "wrap",
-          alignItems: "center",
-        }}
-      >
-        <Button
-          type="primary"
-          icon={<SendOutlined />}
-          onClick={openSendModal}
+      {deliveryOnly ? (
+        <div
+          style={{
+            marginTop: 20,
+            padding: 16,
+            border: "1px solid #d9f7be",
+            borderRadius: 8,
+            background: "#f6ffed",
+          }}
         >
-          Teklifi Equsto&apos;ya gönder
-        </Button>
-        <Button
-          icon={<DownloadOutlined />}
-          loading={exporting}
-          onClick={handleExport}
+          <Typography.Title level={5} style={{ marginTop: 0, marginBottom: 8 }}>
+            Teklifinizi alın
+          </Typography.Title>
+          <Typography.Paragraph type="secondary" style={{ marginBottom: 16 }}>
+            PDF teklifiniz yalnızca e-posta veya WhatsApp ile gönderilir;
+            bilgisayarınıza indirme seçeneği sunulmaz.
+          </Typography.Paragraph>
+          <Form
+            form={form}
+            layout="vertical"
+            initialValues={{
+              ad: ust.musteri?.trim() || "",
+              telefon: "",
+              eposta: "",
+              not: "",
+            }}
+          >
+            <Form.Item
+              name="ad"
+              label="Ad Soyad"
+              rules={[{ required: true, message: "Ad gerekli" }]}
+            >
+              <Input autoComplete="name" />
+            </Form.Item>
+            <Form.Item
+              name="telefon"
+              label="Telefon (WhatsApp)"
+              rules={[{ required: true, message: "Telefon gerekli" }]}
+            >
+              <Input placeholder="0532…" autoComplete="tel" />
+            </Form.Item>
+            <Form.Item
+              name="eposta"
+              label="E-posta"
+              rules={[
+                { required: true, message: "E-posta gerekli" },
+                { type: "email", message: "Geçerli bir e-posta girin" },
+              ]}
+            >
+              <Input type="email" autoComplete="email" />
+            </Form.Item>
+            <Form.Item name="not" label="Not (opsiyonel)">
+              <Input.TextArea rows={2} />
+            </Form.Item>
+            <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+              <Button
+                type="primary"
+                icon={<MailOutlined />}
+                loading={sendingKanal === "email"}
+                disabled={sendingKanal === "whatsapp"}
+                onClick={() => void handleSend("email")}
+              >
+                E-postama gönder (PDF)
+              </Button>
+              <Button
+                style={{
+                  background: "#25D366",
+                  borderColor: "#25D366",
+                  color: "#fff",
+                }}
+                loading={sendingKanal === "whatsapp"}
+                disabled={sendingKanal === "email"}
+                onClick={() => void handleSend("whatsapp")}
+              >
+                WhatsApp&apos;ıma gönder (PDF)
+              </Button>
+            </div>
+          </Form>
+        </div>
+      ) : (
+        <div
+          style={{
+            marginTop: 16,
+            display: "flex",
+            gap: 12,
+            flexWrap: "wrap",
+            alignItems: "center",
+          }}
         >
-          Excel indir
-        </Button>
-        <Button icon={<PrinterOutlined />} onClick={() => printTeklifV14(model)}>
-          PDF / Yazdır
-        </Button>
-        <Typography.Text type="secondary" style={{ fontSize: 12 }}>
-          Form no: {TEKLIF_V14_FORM_NO}
-        </Typography.Text>
-      </div>
+          <Button
+            icon={<DownloadOutlined />}
+            loading={exporting}
+            onClick={handleExport}
+          >
+            Excel indir
+          </Button>
+          <Button icon={<PrinterOutlined />} onClick={() => printTeklifV14(model)}>
+            PDF / Yazdır
+          </Button>
+          <Typography.Text type="secondary" style={{ fontSize: 12 }}>
+            Form no: {TEKLIF_V14_FORM_NO}
+          </Typography.Text>
+        </div>
+      )}
 
       <Collapse
         style={{ marginTop: 16 }}
@@ -407,57 +496,12 @@ export default function TeklifV14Proforma({ model }: Props) {
       />
 
       <Modal
-        title="Teklifi Equsto'ya gönder"
-        open={sendOpen}
-        onCancel={() => !sending && setSendOpen(false)}
-        footer={null}
-        destroyOnClose
-        zIndex={13000}
-        getContainer={() => document.body}
-      >
-        <Typography.Paragraph type="secondary" style={{ marginBottom: 16 }}>
-          Bilgileriniz satış ekibimize iletilir; teklif listeniz kayda alınır ve
-          e-posta adresinize Excel dosyası gönderilir.
-        </Typography.Paragraph>
-        <Form form={form} layout="vertical" onFinish={handleSend}>
-          <Form.Item
-            name="ad"
-            label="Ad Soyad"
-            rules={[{ required: true, message: "Ad gerekli" }]}
-          >
-            <Input autoComplete="name" />
-          </Form.Item>
-          <Form.Item
-            name="telefon"
-            label="Telefon"
-            rules={[{ required: true, message: "Telefon gerekli" }]}
-          >
-            <Input placeholder="0532…" autoComplete="tel" />
-          </Form.Item>
-          <Form.Item
-            name="eposta"
-            label="E-posta"
-            rules={[
-              { required: true, message: "E-posta gerekli" },
-              { type: "email", message: "Geçerli bir e-posta girin" },
-            ]}
-          >
-            <Input type="email" autoComplete="email" />
-          </Form.Item>
-          <Form.Item name="not" label="Not (opsiyonel)">
-            <Input.TextArea rows={2} />
-          </Form.Item>
-          <Button type="primary" htmlType="submit" loading={sending} block>
-            Gönder
-          </Button>
-        </Form>
-      </Modal>
-
-      <Modal
         title={
           sendResult?.kind === "ok"
-            ? "Teklifiniz alındı"
-            : "Teklif gönderilemedi"
+            ? sendResult.kanal === "whatsapp"
+              ? "WhatsApp gönderildi"
+              : "E-posta gönderildi"
+            : "Gönderilemedi"
         }
         open={sendResult != null}
         onOk={() => setSendResult(null)}
@@ -473,26 +517,36 @@ export default function TeklifV14Proforma({ model }: Props) {
               <>
                 Referans: <strong>{sendResult.refNo}</strong>
                 <br />
-                Ekibimiz en kısa sürede sizinle iletişime geçecek.
-              </>
-            ) : (
-              "Ekibimiz en kısa sürede sizinle iletişime geçecek."
-            )}
-            {sendResult.emailSent ? (
-              <>
-                <br />
-                <br />
-                Teklif Excel dosyanız e-posta adresinize gönderildi.
-              </>
-            ) : sendResult.emailNote ? (
-              <>
-                <br />
-                <br />
-                <Typography.Text type="warning">
-                  E-posta gönderilemedi: {sendResult.emailNote}
-                </Typography.Text>
               </>
             ) : null}
+            {sendResult.sent ? (
+              sendResult.kanal === "whatsapp" ? (
+                <>
+                  PDF teklifiniz WhatsApp numaranıza gönderildi.
+                  <br />
+                  Ekibimiz en kısa sürede sizinle iletişime geçecek.
+                </>
+              ) : (
+                <>
+                  PDF teklifiniz e-posta adresinize gönderildi.
+                  <br />
+                  Ekibimiz en kısa sürede sizinle iletişime geçecek.
+                </>
+              )
+            ) : (
+              <>
+                Teklif kayda alındı.
+                {sendResult.note ? (
+                  <>
+                    <br />
+                    <br />
+                    <Typography.Text type="warning">
+                      PDF gönderilemedi: {sendResult.note}
+                    </Typography.Text>
+                  </>
+                ) : null}
+              </>
+            )}
           </Typography.Paragraph>
         ) : (
           <Typography.Paragraph type="danger" style={{ marginBottom: 0 }}>

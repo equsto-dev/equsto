@@ -9,6 +9,7 @@ import {
 } from "@/lib/teklif";
 
 export const dynamic = "force-dynamic";
+export const maxDuration = 60;
 
 type Ctx = { params: Promise<{ id?: string[] }> };
 
@@ -64,6 +65,8 @@ export async function POST(req: NextRequest, ctx: Ctx) {
       {
         data: result.teklif,
         customer_email: result.customerEmail,
+        customer_whatsapp: result.customerWhatsApp,
+        gonderim_kanali: String(body.gonderim_kanali ?? body.kanal ?? "email"),
       },
       201,
     );

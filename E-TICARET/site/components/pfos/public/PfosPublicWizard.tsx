@@ -29,6 +29,7 @@ import {
   loadTrAdres,
 } from "@/lib/pfos/adres/tr-adres";
 import PfosAdresAutocomplete from "./PfosAdresAutocomplete";
+import PfosTeklifLoading from "./PfosTeklifLoading";
 import {
   defaultPublicQuestions,
   dukkanSecenekleri,
@@ -482,12 +483,13 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
 
   function onKararSelect(opt: string) {
     setAnswers((prev) => ({ ...prev, q_karar: opt }));
-  setError(null);
+    setError(null);
     if (opt.includes("detaylandır")) {
       void finalize(opt);
       return;
     }
     if (opt.includes("Teklifi al") || opt.includes("PDF")) {
+      setLoading(true);
       void finalize(opt);
     }
   }
@@ -567,20 +569,25 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     if (q.id === "q_karar") {
       const val = String(answers[id] ?? "");
       return (
-        <div className={styles.options}>
-          {((q.options as string[]) ?? []).map((opt, i) => (
-            <button
-              key={opt}
-              type="button"
-              className={`${styles.optionBtn}${val === opt ? ` ${styles.optionBtnSelected}` : ""}`}
-              style={isEntering ? pfosStaggerStyle(i) : undefined}
-              disabled={loading}
-              onClick={() => onKararSelect(opt)}
-            >
-              {t(opt)}
-            </button>
-          ))}
-        </div>
+        <>
+          <div className={styles.options}>
+            {((q.options as string[]) ?? []).map((opt, i) => (
+              <button
+                key={opt}
+                type="button"
+                className={`${styles.optionBtn}${val === opt ? ` ${styles.optionBtnSelected}` : ""}`}
+                style={isEntering ? pfosStaggerStyle(i) : undefined}
+                disabled={loading}
+                onClick={() => onKararSelect(opt)}
+              >
+                {t(opt)}
+              </button>
+            ))}
+          </div>
+          {loading ? (
+            <PfosTeklifLoading label={t("Teklif hesaplanıyor…")} />
+          ) : null}
+        </>
       );
     }
 
@@ -841,13 +848,9 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
             <div
               className={`${styles.proformaWrap}${resultEntering ? ` ${styles.secPending}` : ""}${resultReveal ? ` ${styles.secReveal}` : ""}`}
             >
-              <TeklifV14Proforma model={teklifV14} />
+              <TeklifV14Proforma model={teklifV14} deliveryOnly />
             </div>
           </>
-        ) : null}
-
-        {loading ? (
-          <p className={styles.questionNote}>{t("Teklif hesaplanıyor…")}</p>
         ) : null}
       </div>
 

@@ -3,8 +3,9 @@ import { db } from "@/lib/db";
 import { notifyNewTeklif } from "@/lib/notify";
 import {
   sendTeklifCustomerEmail,
-  type TeklifCustomerEmailResult,
+  type TeklifDeliveryResult,
 } from "@/lib/teklif/customer-email";
+import { sendTeklifCustomerWhatsApp } from "@/lib/teklif/customer-whatsapp";
 
 export type TeklifAdminRow = {
   id: string;
@@ -127,7 +128,7 @@ export function normalizeTeklifPayload(body: Record<string, unknown>): TeklifCre
 
 export function validateTeklifCreate(
   data: TeklifCreateInput,
-  opts?: { requireEmail?: boolean },
+  opts?: { requireEmail?: boolean; requirePhone?: boolean },
 ): string | null {
   if (!data.musteri_ad && !data.musteri?.ad) {
     return "Müşteri adı gerekli";
@@ -135,12 +136,16 @@ export function validateTeklifCreate(
   if (opts?.requireEmail && !data.musteri?.eposta?.trim()) {
     return "E-posta gerekli";
   }
+  if (opts?.requirePhone && !data.musteri?.telefon?.trim()) {
+    return "Telefon gerekli";
+  }
   return null;
 }
 
 export type CreateTeklifResult = {
   teklif: TeklifAdminRow;
-  customerEmail: TeklifCustomerEmailResult;
+  customerEmail: TeklifDeliveryResult;
+  customerWhatsApp: TeklifDeliveryResult;
 };
 
 async function linkMusteriId(tel: string, ad: string, mail: string): Promise<string | null> {
@@ -171,8 +176,12 @@ export async function createTeklif(
 ): Promise<CreateTeklifResult> {
   const data = normalizeTeklifPayload(body);
   const kaynak = String(body.kaynak ?? data.kaynak ?? "");
+  const kanal = String(body.gonderim_kanali ?? body.kanal ?? "email")
+    .trim()
+    .toLowerCase();
   const err = validateTeklifCreate(data, {
-    requireEmail: kaynak.includes("pfos"),
+    requireEmail: kaynak.includes("pfos") && kanal === "email",
+    requirePhone: kaynak.includes("pfos") && kanal === "whatsapp",
   });
   if (err) throw new Error(err);
 
@@ -217,6 +226,15 @@ export async function createTeklif(
   void notifyNewTeklif(admin).catch((e) =>
     console.error("[teklif] notify", e),
   );
-  const customerEmail = await sendTeklifCustomerEmail(admin, body);
-  return { teklif: admin, customerEmail };
+
+  let customerEmail: TeklifDeliveryResult = { attempted: false, sent: false };
+  let customerWhatsApp: TeklifDeliveryResult = { attempted: false, sent: false };
+
+  if (kanal === "whatsapp") {
+    customerWhatsApp = await sendTeklifCustomerWhatsApp(admin, body);
+  } else {
+    customerEmail = await sendTeklifCustomerEmail(admin, body);
+  }
+
+  return { teklif: admin, customerEmail, customerWhatsApp };
 }

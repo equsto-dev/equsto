@@ -102,3 +102,71 @@ export async function markWhatsAppRead(messageId: string): Promise<void> {
     message_id: messageId,
   }).catch(() => {});
 }
+
+async function uploadWhatsAppMedia(
+  file: Buffer,
+  mimeType: string,
+  filename: string,
+): Promise<{ ok: true; id: string } | { ok: false; error: string }> {
+  if (!whatsAppMetaConfigured()) {
+    return { ok: false, error: "WhatsApp Cloud API yapılandırılmamış" };
+  }
+
+  const token = whatsAppAccessToken();
+  const form = new FormData();
+  form.append("messaging_product", "whatsapp");
+  form.append("type", mimeType);
+  form.append("file", new Blob([new Uint8Array(file)], { type: mimeType }), filename.slice(0, 120));
+
+  const r = await fetch(`${GRAPH}/${whatsAppPhoneNumberId()}/media`, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${token}` },
+    body: form,
+  });
+
+  const json = (await r.json().catch(() => ({}))) as {
+    id?: string;
+    error?: { message?: string; error_user_msg?: string };
+  };
+
+  if (!r.ok || !json.id) {
+    const msg =
+      json.error?.error_user_msg ||
+      json.error?.message ||
+      (await r.text().catch(() => "")).slice(0, 240) ||
+      `HTTP ${r.status}`;
+    return { ok: false, error: msg };
+  }
+
+  return { ok: true, id: json.id };
+}
+
+/** PDF / belge gönder (Meta Cloud API) */
+export async function sendWhatsAppDocument(
+  to: string,
+  file: Buffer,
+  filename: string,
+  caption?: string,
+): Promise<WaSendResult> {
+  const recipient = normalizeWaRecipient(to);
+  if (!recipient) return { ok: false, error: "Geçersiz alıcı numarası" };
+
+  const uploaded = await uploadWhatsAppMedia(
+    file,
+    "application/pdf",
+    filename || "equsto-teklif.pdf",
+  );
+  if (!uploaded.ok) return { ok: false, error: uploaded.error };
+
+  return graphPost(`${whatsAppPhoneNumberId()}/messages`, {
+    messaging_product: "whatsapp",
+    recipient_type: "individual",
+    to: recipient,
+    type: "document",
+    document: {
+      id: uploaded.id,
+      filename: filename.slice(0, 120) || "equsto-teklif.pdf",
+      ...(caption?.trim() ? { caption: caption.trim().slice(0, 1024) } : {}),
+    },
+  });
+}

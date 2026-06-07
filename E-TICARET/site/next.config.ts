@@ -125,7 +125,13 @@ const cdnBase = assetCdnBaseForRewrites();
 const nextConfig: NextConfig = {
   /** Monorepo (git kok = path0); Vercel paketleme icin */
   outputFileTracingRoot: tracingRoot,
-  serverExternalPackages: ["@prisma/client", "prisma", "meilisearch"],
+  serverExternalPackages: [
+    "@prisma/client",
+    "prisma",
+    "meilisearch",
+    "puppeteer-core",
+    "@sparticuz/chromium",
+  ],
   outputFileTracingExcludes: {
     "/**": apiTraceExcludes,
     "/api/**": apiTraceExcludes,

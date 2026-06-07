@@ -62,6 +62,57 @@ export async function sendGreenApiText(
   return { ok: true, messageId: json.idMessage, status: r.status };
 }
 
+/** Green API — dosya (PDF vb.) gönder */
+export async function sendGreenApiFile(
+  to: string,
+  file: Buffer,
+  fileName: string,
+  caption?: string,
+): Promise<WaSendResult> {
+  if (!greenApiConfigured()) {
+    return { ok: false, error: "Green API yapılandırılmamış" };
+  }
+
+  const chatId = chatIdFromE164(to);
+  if (!chatId) return { ok: false, error: "Geçersiz alıcı numarası" };
+
+  const id = greenApiInstanceId();
+  const token = greenApiToken();
+  const form = new FormData();
+  form.append("chatId", chatId);
+  form.append(
+    "file",
+    new Blob([new Uint8Array(file)], { type: "application/pdf" }),
+    fileName.slice(0, 120),
+  );
+  if (caption?.trim()) {
+    form.append("caption", caption.trim().slice(0, 1024));
+  }
+
+  const r = await fetch(
+    `https://api.green-api.com/waInstance${id}/sendFileByUpload/${token}`,
+    { method: "POST", body: form },
+  );
+
+  const json = (await r.json().catch(() => ({}))) as {
+    idMessage?: string;
+    message?: string;
+  };
+
+  if (!r.ok) {
+    return {
+      ok: false,
+      error:
+        json.message ||
+        (await r.text().catch(() => "")).slice(0, 240) ||
+        `HTTP ${r.status}`,
+      status: r.status,
+    };
+  }
+
+  return { ok: true, messageId: json.idMessage, status: r.status };
+}
+
 export type GreenApiInboundMessage = {
   from: string;
   messageId: string;
