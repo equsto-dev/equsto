@@ -14,24 +14,9 @@ body.eq-auth {
   -webkit-font-smoothing: antialiased;
 }
 
-body.eq-auth #eq-shop-chrome-root,
-body.eq-auth .drawer-overlay,
-body.eq-auth .cat-drawer {
-  display: none !important;
-}
-
-.eq-auth .eq-shop-chrome,
-.eq-auth nav.topnav,
-.eq-auth header.hdr {
-  display: none !important;
-}
-
-.auth-topbar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  padding: max(12px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) 12px 16px;
-  z-index: 20;
+/* Köşedeki tema düğmesi — üst bantta zaten var */
+body.eq-auth .auth-topbar {
+  display: none;
 }
 
 .auth-page {
@@ -40,8 +25,9 @@ body.eq-auth .cat-drawer {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: max(72px, calc(env(safe-area-inset-top, 0px) + 56px)) max(16px, env(safe-area-inset-right, 0px))
+  padding: max(24px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-right, 0px))
     max(32px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
+  padding-top: max(24px, calc(var(--eq-shop-chrome-h, 118px) + 20px));
   box-sizing: border-box;
 }
 
@@ -267,6 +253,6 @@ button.auth-logo {
 
   .auth-page {
     align-items: flex-start;
-    padding-top: max(64px, calc(env(safe-area-inset-top, 0px) + 48px));
+    padding-top: max(16px, calc(var(--eq-shop-chrome-h, 108px) + 12px));
   }
 }
