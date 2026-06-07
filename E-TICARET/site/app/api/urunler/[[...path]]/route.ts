@@ -50,30 +50,36 @@ export async function GET(req: NextRequest, ctx: Ctx) {
   const kategori = sp.get("kategori")?.trim() || "";
   const q = sp.get("q")?.trim() || "";
 
+  const where = {
+    ...(marka ? { brand: { slug: marka } } : {}),
+    ...(kategori ? { category: { slug: kategori } } : {}),
+    ...(q
+      ? {
+          OR: [
+            { name: { contains: q, mode: "insensitive" as const } },
+            { sku: { contains: q, mode: "insensitive" as const } },
+            { modelCode: { contains: q, mode: "insensitive" as const } },
+          ],
+        }
+      : {}),
+  };
+
   try {
-    const products = await db.product.findMany({
-      where: {
-        ...(marka ? { brand: { slug: marka } } : {}),
-        ...(kategori ? { category: { slug: kategori } } : {}),
-        ...(q
-          ? {
-              OR: [
-                { name: { contains: q, mode: "insensitive" } },
-                { sku: { contains: q, mode: "insensitive" } },
-                { modelCode: { contains: q, mode: "insensitive" } },
-              ],
-            }
-          : {}),
-      },
-      include: { brand: true, category: true, images: true },
-      orderBy: { updatedAt: "desc" },
-      take: 5000,
-    });
+    const [total, products] = await Promise.all([
+      db.product.count({ where }),
+      db.product.findMany({
+        where,
+        include: { brand: true, category: true, images: true },
+        orderBy: { updatedAt: "desc" },
+        take: 15000,
+      }),
+    ]);
     if (products.length > 0) {
       const { prismaToAdminUrun } = await import("@/lib/admin-urun");
       return adminOk({
         data: products.map(prismaToAdminUrun),
-        count: products.length,
+        count: total,
+        returned: products.length,
         source: "db",
       });
     }
