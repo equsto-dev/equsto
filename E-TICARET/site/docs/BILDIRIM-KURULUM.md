@@ -31,16 +31,40 @@ TELEGRAM_CHAT_ID=123456789
 
 ## 2) E-posta (Resend)
 
+Hesap: **jurnaldang@gmail.com** (Resend kayıt e-postası)
+
 1. [resend.com](https://resend.com) → API Key
-2. Vercel:
+2. Vercel (Production):
 
 ```
 RESEND_API_KEY=re_...
-EQUSTO_NOTIFY_EMAIL=sizin@gmail.com
+RESEND_FROM=Equsto <onboarding@resend.dev>
+RESEND_ACCOUNT_EMAIL=jurnaldang@gmail.com
+EQUSTO_NOTIFY_EMAIL=jurnaldang@gmail.com
+```
+
+### PFOS teklif PDF — önemli kural
+
+| Aşama | `RESEND_FROM` | Kime gider? |
+|--------|----------------|-------------|
+| **Test (şimdi)** | `Equsto <onboarding@resend.dev>` | Yalnızca **jurnaldang@gmail.com** |
+| **Canlı (müşteri)** | `Equsto <notify@equsto.com>` | Herhangi bir müşteri e-postası |
+
+`onboarding@resend.dev` ile **ademakpinar@outlook.com** veya başka adreslere mail **gitmez** (Resend sandbox kuralı). Test için PFOS formunda e-posta alanına **jurnaldang@gmail.com** yazın.
+
+### Kalıcı çözüm — equsto.com domain (Adım 1)
+
+1. [resend.com/domains](https://resend.com/domains) → **Add Domain** → `equsto.com`
+2. Resend’in verdiği **DNS kayıtlarını** (SPF, DKIM) domain sağlayıcınıza ekleyin (Vercel DNS veya domain paneli)
+3. Resend’de domain **Verified** olunca Vercel’de güncelleyin:
+
+```
 RESEND_FROM=Equsto <notify@equsto.com>
 ```
 
-(`RESEND_FROM` domain doğrulanana kadar `onboarding@resend.dev` kullanılabilir.)
+4. **Redeploy**
+
+Bundan sonra PFOS’tan her müşteri e-postasına PDF gider.
 
 ---
 

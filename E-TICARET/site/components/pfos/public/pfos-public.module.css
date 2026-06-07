@@ -125,6 +125,127 @@
   line-height: 1.45;
 }
 
+/* Teklif hesaplanıyor — üç çizgi (sol menteşe + eksen dönüşü) */
+.teklifLoading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0.75rem 0 1.25rem;
+  min-height: 2.75rem;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #c5d9ff;
+  background: linear-gradient(180deg, #f4f8ff 0%, #eef4ff 100%);
+}
+
+.teklifLoadingGraphic {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  flex-shrink: 0;
+  width: 34px;
+  padding: 2px 0;
+  transform-origin: left center;
+  animation: pfosTeklifGraphicSwing 1.35s ease-in-out infinite;
+}
+
+.teklifLoadingHinge {
+  display: block;
+  width: 32px;
+  height: 3px;
+  transform-origin: left center;
+  animation: pfosTeklifHinge 0.95s ease-in-out infinite;
+}
+
+.teklifLoadingHingeMid {
+  width: 26px;
+  animation-delay: 0.12s;
+  opacity: 0.88;
+}
+
+.teklifLoadingHingeShort {
+  width: 20px;
+  animation-delay: 0.24s;
+  opacity: 0.72;
+}
+
+.teklifLoadingLine {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #001e50 0%, #2a5a9e 45%, #5a8fd4 100%);
+  transform-origin: center center;
+  animation: pfosTeklifAxis 1.1s linear infinite;
+  box-shadow: 0 0 0 0.5px rgba(0, 30, 80, 0.12);
+}
+
+.teklifLoadingHingeMid .teklifLoadingLine {
+  animation-duration: 0.92s;
+  animation-direction: reverse;
+}
+
+.teklifLoadingHingeShort .teklifLoadingLine {
+  animation-duration: 0.78s;
+}
+
+.teklifLoadingLabel {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #001e50;
+  line-height: 1.45;
+}
+
+@keyframes pfosTeklifGraphicSwing {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  35% {
+    transform: rotate(8deg);
+  }
+  70% {
+    transform: rotate(-6deg);
+  }
+}
+
+@keyframes pfosTeklifHinge {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(34deg);
+  }
+  65% {
+    transform: rotate(-26deg);
+  }
+}
+
+@keyframes pfosTeklifAxis {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .teklifLoadingGraphic,
+  .teklifLoadingHinge,
+  .teklifLoadingLine {
+    animation: none;
+  }
+
+  .teklifLoadingHingeMid,
+  .teklifLoadingHingeShort {
+    opacity: 1;
+  }
+}
+
 .options {
   display: grid;
   gap: 0.55rem;
