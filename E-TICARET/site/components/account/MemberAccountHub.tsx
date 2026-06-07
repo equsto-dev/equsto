@@ -73,6 +73,13 @@ async function fetchMemberProfile(): Promise<MemberProfile | null> {
   };
 }
 
+function hasValidTrPhone(t: string) {
+  let d = String(t || "").replace(/\D/g, "");
+  if (d.length === 11 && d.startsWith("0")) d = d.slice(1);
+  if (d.length === 12 && d.startsWith("90")) d = d.slice(2);
+  return d.length === 10 && d.startsWith("5");
+}
+
 function formatPhone(t: string) {
   const d = String(t || "").replace(/\D/g, "");
   if (d.length === 10) {
@@ -152,6 +159,16 @@ export default function MemberAccountHub() {
     return () => window.removeEventListener("hashchange", focusAddressSection);
   }, [ready]);
 
+  useEffect(() => {
+    if (!ready || !profile) return;
+    if (!hasValidTrPhone(profile.telefon)) {
+      setPhoneInput(profile.telefon || "");
+      setPhoneEditing(true);
+      const el = document.getElementById("guvenlik");
+      el?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [ready, profile]);
+
   function onCardClick(
     e: React.MouseEvent<HTMLAnchorElement>,
     action?: "whatsapp",
@@ -214,12 +231,31 @@ export default function MemberAccountHub() {
 
   const displayName =
     profile.name?.trim() || profile.email.split("@")[0] || "Üye";
+  const phoneMissing = !hasValidTrPhone(profile.telefon);
 
   return (
     <main className={styles.page}>
       <header className={styles.head}>
-        <h1 className={styles.title}>Hesabım</h1>
-        <p className={styles.greeting}>Merhaba, {displayName}</p>
+        <div className={styles.headRow}>
+          <div>
+            <h1 className={styles.title}>Hesabım</h1>
+            <p className={styles.greeting}>Merhaba, {displayName}</p>
+          </div>
+          <button
+            type="button"
+            className={styles.headLogoutBtn}
+            onClick={() => void onLogout()}
+          >
+            Çıkış yap
+          </button>
+        </div>
+        {phoneMissing ? (
+          <div className={styles.phoneRequiredBanner} role="alert">
+            <strong>Cep telefonu gerekli.</strong> WhatsApp mesajları ve teklif
+            gönderimi için lütfen aşağıdaki alana geçerli bir numara girin (5xx xxx
+            xx xx).
+          </div>
+        ) : null}
       </header>
 
       <div className={styles.grid}>
@@ -288,7 +324,8 @@ export default function MemberAccountHub() {
                   <p className={styles.phoneError}>{phoneError}</p>
                 ) : (
                   <p className={styles.phoneHint}>
-                    PFOS teklif PDF&apos;i ve WhatsApp gönderimi için kullanılır.
+                    WhatsApp mesajları, PFOS teklif PDF&apos;i ve Equsto ekibinin
+                    size dönüş yapması için zorunludur.
                   </p>
                 )}
               </div>
@@ -338,7 +375,17 @@ export default function MemberAccountHub() {
             <ul className={styles.colLinks}>
               {col.links.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href}>{link.label}</a>
+                  {link.action === "logout" ? (
+                    <button
+                      type="button"
+                      className={styles.colLogout}
+                      onClick={() => void onLogout()}
+                    >
+                      {link.label}
+                    </button>
+                  ) : (
+                    <a href={link.href}>{link.label}</a>
+                  )}
                 </li>
               ))}
             </ul>

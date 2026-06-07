@@ -45,7 +45,7 @@
   /** Kilit: public/whatsapp-cat-fab-KILIT.txt — npm run verify:whatsapp-cat-fab-kilit */
   var WA_FAB_IMG = "/equsto-bize-ulasin-isimlik.png";
   /** Modal şablonu değişince artırın (eski DOM'u zorla yeniler). */
-  var WA_MODAL_BUILD = 23;
+  var WA_MODAL_BUILD = 24;
 
   var waModalDigits = "";
   var waModalLastSentText = "";
@@ -195,14 +195,52 @@
     if (regBtn) regBtn.setAttribute("href", regHref);
   }
 
+  function equstoMemberPhoneOk() {
+    try {
+      if (typeof window.equstoMemberHasPhone === "function") {
+        return !!window.equstoMemberHasPhone();
+      }
+      if (typeof window.equstoGetMemberProfile !== "function") return false;
+      var p = window.equstoGetMemberProfile();
+      var d = digitsOnly(p && (p.telefon || p.phone || ""));
+      if (d.length === 11 && d.charAt(0) === "0") d = d.slice(1);
+      if (d.length === 12 && d.indexOf("90") === 0) d = d.slice(2);
+      return d.length === 10 && d.charAt(0) === "5";
+    } catch (e) {}
+    return false;
+  }
+
+  function equstoHesabimPhoneHref() {
+    try {
+      if (typeof window.equstoUrl === "function") {
+        return window.equstoUrl("account") + "#guvenlik";
+      }
+    } catch (e) {}
+    return "/hesabim#guvenlik";
+  }
+
+  function syncWaPhoneGateLink() {
+    var btn = document.getElementById("equsto-wa-phone-gate-btn");
+    if (btn) btn.setAttribute("href", equstoHesabimPhoneHref());
+  }
+
   /** PFOS teklif ve Mr. Equsto WhatsApp — üye oturumu */
   function applyWaModalView() {
     var memberEl = document.getElementById("equsto-wa-member");
     var loginGate = document.getElementById("equsto-wa-login-gate");
+    var phoneGate = document.getElementById("equsto-wa-phone-gate");
     var pane = document.getElementById("equsto-wa-pane");
     var logged = equstoIsMember();
     if (logged) {
       if (loginGate) loginGate.hidden = true;
+      if (!equstoMemberPhoneOk()) {
+        if (phoneGate) phoneGate.hidden = false;
+        if (pane) pane.style.display = "none";
+        if (memberEl) memberEl.style.display = "none";
+        syncWaPhoneGateLink();
+        return;
+      }
+      if (phoneGate) phoneGate.hidden = true;
       if (pane) pane.style.display = "flex";
       if (memberEl) memberEl.style.display = "flex";
       renderWaHistoryList();
@@ -210,6 +248,7 @@
     } else {
       if (memberEl) memberEl.style.display = "none";
       if (loginGate) loginGate.hidden = false;
+      if (phoneGate) phoneGate.hidden = true;
       if (pane) pane.style.display = "none";
       syncWaLoginGateLinks();
     }
@@ -692,6 +731,18 @@
         }
         return;
       }
+      if (!equstoMemberPhoneOk()) {
+        applyWaModalView();
+        var stPhone = document.getElementById("equsto-wa-status");
+        if (stPhone) {
+          stPhone.textContent = __waT(
+            "wa.phone_required",
+            "Mesaj göndermek için Hesabım sayfasından cep telefonu ekleyin."
+          );
+          stPhone.className = "equsto-wa-status equsto-wa-status--err";
+        }
+        return;
+      }
       equstoWaSubmitFromModalCore(text);
     });
   }
@@ -936,6 +987,11 @@
       '<a class="equsto-wa-login-gate__btn" id="equsto-wa-login-gate-btn" href="/login">Üye Girişi</a>' +
       '<p class="equsto-wa-login-gate__note">Hesabınız yok mu? ' +
       '<a class="equsto-wa-login-gate__register" id="equsto-wa-register-gate-btn" href="/login?mode=register">Kayıt ol</a></p>' +
+      "</div></div>" +
+      '<div class="equsto-wa-login-gate equsto-wa-phone-gate" id="equsto-wa-phone-gate" hidden>' +
+      '<div class="equsto-wa-login-gate__panel">' +
+      '<p class="equsto-wa-login-gate__note equsto-wa-phone-gate__note">Mesaj gönderebilmek için cep telefonunuzu Hesabım sayfasına ekleyin.</p>' +
+      '<a class="equsto-wa-login-gate__btn" id="equsto-wa-phone-gate-btn" href="/hesabim#guvenlik">Telefonu ekle</a>' +
       "</div></div>" +
       '<div class="equsto-wa-spinner-wrap" id="equsto-wa-spinner"><div class="equsto-wa-spinner" aria-hidden="true"></div></div>' +
       '<div class="equsto-wa-pane" id="equsto-wa-pane">' +

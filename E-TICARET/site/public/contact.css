@@ -356,6 +356,11 @@ body.eq-wa-in-tabbar:not(.admin-app) #equsto-contact-fab {
   color: #003080;
 }
 
+.equsto-wa-phone-gate__note {
+  margin: 0 0 14px;
+  text-align: center;
+}
+
 .equsto-wa-modal-body {
   flex: 1;
   min-height: 0;

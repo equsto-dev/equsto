@@ -56,6 +56,15 @@
     return readMember();
   };
 
+  window.equstoMemberHasPhone = function () {
+    var o = readMember();
+    if (!o) return false;
+    var d = String(o.telefon || o.phone || "").replace(/\D/g, "");
+    if (d.length === 11 && d.charAt(0) === "0") d = d.slice(1);
+    if (d.length === 12 && d.indexOf("90") === 0) d = d.slice(2);
+    return d.length === 10 && d.charAt(0) === "5";
+  };
+
   window.equstoGetMemberToken = function () {
     var o = readMember();
     return o && o.token ? String(o.token) : "";
