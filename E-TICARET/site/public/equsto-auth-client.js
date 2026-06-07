@@ -228,7 +228,18 @@
   window.equstoAuthValidateSession = function () {
     var token =
       (typeof window.equstoGetMemberToken === 'function' && window.equstoGetMemberToken()) || '';
-    if (!token) return Promise.resolve(false);
+    if (!token) {
+      try {
+        var raw = localStorage.getItem('equsto_member_v1');
+        if (raw) {
+          var o = JSON.parse(raw);
+          if (o && o.active === true && typeof window.equstoClearMemberSession === 'function') {
+            window.equstoClearMemberSession();
+          }
+        }
+      } catch (e) {}
+      return Promise.resolve(false);
+    }
     return apiFetch('/me').then(function (j) {
       if (j && j.success && j.user) {
         applySession(j);

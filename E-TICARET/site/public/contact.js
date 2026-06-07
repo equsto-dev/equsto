@@ -76,13 +76,29 @@
   }
 
   function equstoIsMember() {
-    return typeof window.equstoIsMemberLoggedIn === "function" && window.equstoIsMemberLoggedIn();
+    if (typeof window.equstoIsMemberLoggedIn === "function") {
+      return window.equstoIsMemberLoggedIn();
+    }
+    try {
+      var o = JSON.parse(localStorage.getItem("equsto_member_v1") || "null");
+      if (!o || o.active !== true) return false;
+      if (o.expiresAt && Number(o.expiresAt) < Date.now()) return false;
+      return !!String(o.token || "").trim();
+    } catch (e) {
+      return false;
+    }
   }
 
   function equstoMemberToken() {
-    return typeof window.equstoGetMemberToken === "function"
-      ? String(window.equstoGetMemberToken() || "")
-      : "";
+    if (typeof window.equstoGetMemberToken === "function") {
+      var t = window.equstoGetMemberToken();
+      if (t) return String(t);
+    }
+    try {
+      var o = JSON.parse(localStorage.getItem("equsto_member_v1") || "null");
+      return o && o.token ? String(o.token).trim() : "";
+    } catch (e) {}
+    return "";
   }
 
   /** WhatsApp modal API — geçerli sunucu oturumu (token) gerekir */
@@ -90,28 +106,59 @@
     return equstoIsMember() && !!equstoMemberToken();
   }
 
+  function waitForMemberScripts(done, tries) {
+    tries = tries || 0;
+    if (typeof window.equstoIsMemberLoggedIn === "function" || tries >= 80) {
+      done();
+      return;
+    }
+    setTimeout(function () {
+      waitForMemberScripts(done, tries + 1);
+    }, 40);
+  }
+
   function ensureWaMemberSession(done) {
     done = typeof done === "function" ? done : function () {};
-    if (equstoWaApiSessionOk()) {
-      done(true);
-      return;
-    }
-    if (!equstoIsMember()) {
-      done(false);
-      return;
-    }
-    if (typeof window.equstoAuthValidateSession === "function") {
-      window
-        .equstoAuthValidateSession()
-        .then(function (ok) {
-          done(!!ok || equstoWaApiSessionOk());
-        })
-        .catch(function () {
-          done(false);
-        });
-      return;
-    }
-    done(false);
+    waitForMemberScripts(function () {
+      if (equstoWaApiSessionOk()) {
+        done(true);
+        return;
+      }
+      if (!equstoIsMember()) {
+        done(false);
+        return;
+      }
+      function runValidate() {
+        if (typeof window.equstoAuthValidateSession !== "function") {
+          done(equstoWaApiSessionOk());
+          return;
+        }
+        window
+          .equstoAuthValidateSession()
+          .then(function (ok) {
+            done(!!ok || equstoWaApiSessionOk());
+          })
+          .catch(function () {
+            done(equstoWaApiSessionOk());
+          });
+      }
+      if (typeof window.equstoAuthValidateSession === "function") {
+        runValidate();
+        return;
+      }
+      var authTries = 0;
+      (function waitAuth() {
+        if (typeof window.equstoAuthValidateSession === "function") {
+          runValidate();
+          return;
+        }
+        if (authTries++ >= 80) {
+          done(equstoWaApiSessionOk());
+          return;
+        }
+        setTimeout(waitAuth, 40);
+      })();
+    });
   }
 
   function equstoAuthReturnPath() {
@@ -152,7 +199,7 @@
   function applyWaModalView() {
     var memberEl = document.getElementById("equsto-wa-member");
     var loginGate = document.getElementById("equsto-wa-login-gate");
-    var logged = equstoWaApiSessionOk();
+    var logged = equstoIsMember();
     if (logged) {
       if (loginGate) loginGate.hidden = true;
       if (memberEl) memberEl.style.display = "flex";
@@ -523,7 +570,7 @@
   }
 
   function refreshWaHistory() {
-    if (!equstoWaApiSessionOk()) return;
+    if (!equstoIsMember()) return;
     renderWaHistoryList();
     renderWaChat();
   }
