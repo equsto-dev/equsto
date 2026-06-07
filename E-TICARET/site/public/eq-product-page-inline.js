@@ -2069,10 +2069,6 @@ window.searchFilter = window.searchFilter || function () {};
       };
     }
 
-    function getElectroluxTechnicalDocs(x) {
-      return getElectroluxCadDocs(x);
-    }
-
     function getElectroluxDatasheetDoc(x) {
       var docs = getElectroluxDocuments(x);
       var ds = docs.filter(isElectroluxDatasheet);
@@ -2721,51 +2717,25 @@ window.searchFilter = window.searchFilter || function () {};
 
     function renderEpdpDrawings(x) {
       var tek = getEpdpDrawingImgs(x);
-      var cad = isElectroluxProfessional(x) ? getElectroluxTechnicalDocs(x) : [];
-      if (!tek.length && !cad.length) return "";
+      if (!tek.length) return "";
       var html =
         '<section class="eq-epdp-drawings eq-caglayan-drawings" id="eq-epdp-drawings">' +
         "<h2>" +
         esc(__pdpT("pdp.drawings_heading", "Teknik çizimler")) +
-        "</h2>";
-      if (tek.length) {
-        html +=
-          '<div class="eq-epdp-drawings-grid eq-caglayan-drawings-grid">' +
-          tek
-            .map(function (item) {
-              return (
-                '<img src="' +
-                esc(item.src) +
-                '" alt="' +
-                esc(item.label || __pdpT("pdp.technical_drawing", "Teknik çizim")) +
-                '" loading="lazy" decoding="async">'
-              );
-            })
-            .join("") +
-          "</div>";
-      }
-      if (cad.length) {
-        html +=
-          '<ul class="eq-epdp-cad-list">' +
-          cad
-            .map(function (doc) {
-              var href = electroluxDocHref(doc);
-              if (!href) return "";
-              return (
-                "<li><a href=\"" +
-                esc(href) +
-                '" target="_blank" rel="noopener">' +
-                esc(electroluxDocDisplayName(doc)) +
-                " (" +
-                esc(String(doc.type || "CAD")) +
-                ")</a></li>"
-              );
-            })
-            .filter(Boolean)
-            .join("") +
-          "</ul>";
-      }
-      html += "</section>";
+        "</h2>" +
+        '<div class="eq-epdp-drawings-grid eq-caglayan-drawings-grid">' +
+        tek
+          .map(function (item) {
+            return (
+              '<img src="' +
+              esc(item.src) +
+              '" alt="' +
+              esc(item.label || __pdpT("pdp.technical_drawing", "Teknik çizim")) +
+              '" loading="lazy" decoding="async">'
+            );
+          })
+          .join("") +
+        "</div></section>";
       return html;
     }
 

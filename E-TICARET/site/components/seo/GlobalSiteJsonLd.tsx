@@ -1,4 +1,5 @@
 import JsonLdScript from "@/components/seo/JsonLdScript";
+import { publicAssetUrl } from "@/lib/public-asset-url";
 import { getSiteOrigin } from "@/lib/site-origin";
 
 export default function GlobalSiteJsonLd() {
@@ -13,7 +14,7 @@ export default function GlobalSiteJsonLd() {
         name: "Equsto Teknoloji Limited",
         alternateName: ["Equsto", "Equsto Endüstriyel Mutfak"],
         url: origin,
-        logo: `${origin}/images/equsto-logo.png`,
+        logo: publicAssetUrl("/images/equsto-logo.png"),
         foundingDate: "2026",
         description:
           "Equsto; restoran, otel, kafe ve bulut mutfak projeleri için endüstriyel mutfak ekipmanı ve proje planlama platformudur. Öztiryakiler yetkili bayii.",
