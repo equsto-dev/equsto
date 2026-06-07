@@ -1,7 +1,7 @@
 "use client";
 
 import { DownloadOutlined, MailOutlined, PrinterOutlined } from "@ant-design/icons";
-import { Button, Collapse, Form, Input, Modal, Typography } from "antd";
+import { Button, Collapse, Form, Modal, Typography } from "antd";
 import { Fragment, useEffect, useState, type CSSProperties } from "react";
 import type { TeklifModelV14 } from "@/lib/pfos/teklif/teklif-v14.types";
 import { groupTeklifV14Satirlar } from "@/lib/pfos/teklif/group-v14-bolumler";
@@ -178,12 +178,30 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
       eposta: string;
       not?: string;
     };
-    try {
-      values = await form.validateFields();
-    } catch {
-      return;
+
+    if (deliveryOnly && memberLoggedInNow()) {
+      const saved = readSavedCustomerContact();
+      values = {
+        ad: saved.ad,
+        telefon: saved.telefon,
+        eposta: saved.eposta,
+        not: "",
+      };
+    } else {
+      try {
+        values = await form.validateFields();
+      } catch {
+        return;
+      }
     }
 
+    if (!values.ad?.trim()) {
+      setSendResult({
+        kind: "err",
+        message: "Profilinizde ad bilgisi yok — hesabınızı güncelleyin",
+      });
+      return;
+    }
     if (kanal === "email" && !values.eposta?.trim()) {
       form.setFields([{ name: "eposta", errors: ["E-posta gerekli"] }]);
       return;
@@ -505,46 +523,9 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
                 Teklifinizi alın
               </Typography.Title>
               <Typography.Paragraph type="secondary" style={{ marginBottom: 16 }}>
-                PDF teklifiniz yalnızca e-posta veya WhatsApp ile gönderilir;
-                bilgisayarınıza indirme seçeneği sunulmaz.
+                PDF teklifiniz kayıtlı e-posta ve WhatsApp numaranıza gönderilir.
               </Typography.Paragraph>
-              <Form
-                form={form}
-                layout="vertical"
-                initialValues={{
-                  ad: ust.musteri?.trim() || "",
-                  telefon: "",
-                  eposta: "",
-                  not: "",
-                }}
-              >
-                <Form.Item
-                  name="ad"
-                  label="Ad Soyad"
-                  rules={[{ required: true, message: "Ad gerekli" }]}
-                >
-                  <Input autoComplete="name" />
-                </Form.Item>
-                <Form.Item
-                  name="telefon"
-                  label="Telefon (WhatsApp)"
-                  rules={[{ required: true, message: "Telefon gerekli" }]}
-                >
-                  <Input placeholder="0532…" autoComplete="tel" />
-                </Form.Item>
-                <Form.Item
-                  name="eposta"
-                  label="E-posta"
-                  rules={[
-                    { required: true, message: "E-posta gerekli" },
-                    { type: "email", message: "Geçerli bir e-posta girin" },
-                  ]}
-                >
-                  <Input type="email" autoComplete="email" />
-                </Form.Item>
-                <Form.Item name="not" label="Not (opsiyonel)">
-                  <Input.TextArea rows={2} />
-                </Form.Item>
+              <Form form={form} layout="vertical">
                 <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
                   <Button
                     type="primary"
