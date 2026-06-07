@@ -78,19 +78,22 @@ export async function sendGreenApiFile(
 
   const id = greenApiInstanceId();
   const token = greenApiToken();
+  const safeName = fileName.slice(0, 120) || "teklif.pdf";
   const form = new FormData();
   form.append("chatId", chatId);
+  form.append("fileName", safeName);
   form.append(
     "file",
     new Blob([new Uint8Array(file)], { type: "application/pdf" }),
-    fileName.slice(0, 120),
+    safeName,
   );
   if (caption?.trim()) {
     form.append("caption", caption.trim().slice(0, 1024));
   }
 
+  // Dosya yükleme için Green API media host kullanılır (api host değil)
   const r = await fetch(
-    `https://api.green-api.com/waInstance${id}/sendFileByUpload/${token}`,
+    `https://media.green-api.com/waInstance${id}/sendFileByUpload/${token}`,
     { method: "POST", body: form },
   );
 

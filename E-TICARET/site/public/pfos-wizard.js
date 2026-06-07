@@ -400,11 +400,11 @@ function pfosCanLivePreview() {
 function pfosTeklifLoadingHtml(label) {
   var txt = escHtml(String(label || 'Teklif hesaplanıyor…'));
   return (
-    '<div class="pfos-teklif-loading" role="status" aria-live="polite">' +
+    '<div class="pfos-teklif-loading pfos-teklif-loading--card" role="status" aria-live="polite">' +
     '<div class="pfos-teklif-loading__graphic" aria-hidden="true">' +
-    '<span class="pfos-teklif-loading__hinge"><span class="pfos-teklif-loading__line"></span></span>' +
-    '<span class="pfos-teklif-loading__hinge pfos-teklif-loading__hinge--mid"><span class="pfos-teklif-loading__line"></span></span>' +
-    '<span class="pfos-teklif-loading__hinge pfos-teklif-loading__hinge--short"><span class="pfos-teklif-loading__line"></span></span>' +
+    '<span class="pfos-teklif-loading__bar"></span>' +
+    '<span class="pfos-teklif-loading__bar pfos-teklif-loading__bar--mid"></span>' +
+    '<span class="pfos-teklif-loading__bar pfos-teklif-loading__bar--short"></span>' +
     '</div>' +
     '<span class="pfos-teklif-loading__label">' + txt + '</span></div>'
   );
@@ -3034,6 +3034,12 @@ function __pfApiBase(){
   return '/api';
 }
 function teklifGonder(){
+  if(typeof window.equstoIsMemberLoggedIn!=='function'||!window.equstoIsMemberLoggedIn()){
+    pfModalAc('Üye girişi gerekli','Teklif göndermek için giriş yapın.',true);
+    var lh=typeof window.equstoUrl==='function'?window.equstoUrl('login'):'/login';
+    if(window.confirm('Giriş sayfasına gitmek ister misiniz?')){ location.href=lh; }
+    return;
+  }
   const ad=(window.prompt('Ad Soyad:')||'').trim();
   if (!ad){ pfModalAc('Teklif iptal','Ad gerekli.',true); return; }
   const tel=(window.prompt('Telefon (ör. 0532…):')||'').trim();
@@ -3080,7 +3086,15 @@ function teklifGonder(){
   };
   fetch(__pfApiBase()+'/teklifler',{
     method:'POST',
-    headers:{'Content-Type':'application/json'},
+    headers:(function(){
+      var h={'Content-Type':'application/json'};
+      var tok=typeof window.equstoGetMemberToken==='function'?window.equstoGetMemberToken():'';
+      if(tok){
+        h.Authorization='Bearer '+tok;
+        h['X-Equsto-Authorization']=tok;
+      }
+      return h;
+    })(),
     body:JSON.stringify(payload)
   }).then(function(r){ return r.json().then(function(j){ return {ok:r.ok,j:j}; }); })
     .then(function(res){

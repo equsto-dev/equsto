@@ -9,6 +9,7 @@ import {
   validatePublicMusteriPayload,
 } from "@/lib/musteri";
 import { notifyNewLead } from "@/lib/notify";
+import { requireMemberSession } from "@/lib/member-auth";
 
 export const dynamic = "force-dynamic";
 
@@ -58,6 +59,11 @@ export async function POST(req: NextRequest, ctx: Ctx) {
   if (segment) return adminErr("POST yalnızca /api/musteriler", 400);
 
   const body = (await req.json().catch(() => ({}))) as Record<string, unknown>;
+  const kaynak = String(body.kaynak ?? "").trim();
+  if (kaynak === "whatsapp-modal") {
+    const memberCheck = await requireMemberSession(req, body);
+    if (memberCheck instanceof Response) return memberCheck;
+  }
   const data = normalizeMusteriPayload(body);
   const err = validatePublicMusteriPayload(data);
   if (err) return adminErr(err, 400);

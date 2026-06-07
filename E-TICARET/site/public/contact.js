@@ -45,7 +45,7 @@
   /** Kilit: public/whatsapp-cat-fab-KILIT.txt — npm run verify:whatsapp-cat-fab-kilit */
   var WA_FAB_IMG = "/equsto-bize-ulasin-isimlik.png";
   /** Modal şablonu değişince artırın (eski DOM'u zorla yeniler). */
-  var WA_MODAL_BUILD = 18;
+  var WA_MODAL_BUILD = 20;
 
   var waModalDigits = "";
   var waModalLastSentText = "";
@@ -77,6 +77,32 @@
 
   function equstoIsMember() {
     return typeof window.equstoIsMemberLoggedIn === "function" && window.equstoIsMemberLoggedIn();
+  }
+
+  function equstoLoginHref() {
+    try {
+      if (typeof window.equstoUrl === "function") return window.equstoUrl("login");
+      if (typeof window.equstoResolveNavHref === "function") {
+        return window.equstoResolveNavHref("login.html");
+      }
+    } catch (e) {}
+    return "/login";
+  }
+
+  /** PFOS teklif ve Mr. Equsto WhatsApp — üye oturumu */
+  function applyWaModalView() {
+    var memberEl = document.getElementById("equsto-wa-member");
+    var loginGate = document.getElementById("equsto-wa-login-gate");
+    var logged = equstoIsMember();
+    if (logged) {
+      if (loginGate) loginGate.hidden = true;
+      if (memberEl) memberEl.style.display = "flex";
+      renderWaHistoryList();
+      renderWaChat();
+    } else {
+      if (memberEl) memberEl.style.display = "none";
+      if (loginGate) loginGate.hidden = false;
+    }
   }
 
   function equstoResolveWhatsAppDigits() {
@@ -272,6 +298,65 @@
     renderWaChat();
   }
 
+  /**
+   * PFOS teklif e-posta/WhatsApp gönderimi → Mr. Equsto modal geçmişine (yalnızca üye).
+   * Gerçek PDF Green API / Resend ile gider; modal site içi kayıttır.
+   */
+  window.equstoWaRecordDelivery = function (opts) {
+    if (!opts || typeof opts !== "object") return;
+    if (!equstoIsMember()) return;
+
+    var kanal = opts.kanal === "email" ? "email" : "whatsapp";
+    var refNo = String(opts.refNo || "").trim();
+    var telefon = String(opts.telefon || "").trim();
+    var eposta = String(opts.eposta || "").trim();
+    var teklifSayi = String(opts.teklifSayi || "").trim();
+    var sent = opts.sent === true;
+    var errNote = String(opts.error || "").trim();
+
+    var userLine =
+      kanal === "whatsapp"
+        ? "PFOS teklifimi WhatsApp numarama gönder"
+        : "PFOS teklifimi e-postama gönder";
+    if (teklifSayi) userLine += " — " + teklifSayi;
+    if (refNo) userLine += " (" + refNo + ")";
+
+    appendChatMessage("user", userLine);
+    try {
+      pushThread(waModalDigits || equstoResolveWhatsAppDigits(), userLine);
+    } catch (e) {}
+
+    var teamLine;
+    if (sent) {
+      if (kanal === "whatsapp") {
+        teamLine =
+          "PDF teklifiniz WhatsApp numaranıza gönderildi" +
+          (telefon ? " (" + telefon + ")" : "") +
+          (refNo ? ". Referans: " + refNo : ".");
+      } else {
+        teamLine =
+          "PDF teklifiniz e-posta adresinize gönderildi" +
+          (eposta ? " (" + eposta + ")" : "") +
+          (refNo ? ". Referans: " + refNo : ".");
+      }
+    } else {
+      teamLine =
+        (kanal === "whatsapp"
+          ? "WhatsApp gönderimi tamamlanamadı"
+          : "E-posta gönderimi tamamlanamadı") +
+        (errNote ? ": " + errNote : ".") +
+        (refNo ? " Referans: " + refNo : "");
+    }
+    appendChatMessage("team", teamLine);
+    renderWaHistoryList();
+
+    try {
+      document.dispatchEvent(
+        new CustomEvent("equsto-wa-pfos-delivery", { detail: opts })
+      );
+    } catch (e2) {}
+  };
+
   var WA_TICK_SVG =
     '<svg class="equsto-wa-bubble__tick-svg" viewBox="0 0 16 11" width="16" height="11" aria-hidden="true">' +
     '<path fill="currentColor" d="M11.071.653a.457.457 0 0 0-.304-.102.493.493 0 0 0-.381.178l-6.19 7.636-2.405-2.272a.463.463 0 0 0-.336-.146.47.47 0 0 0-.343.15l-.522.538a.39.39 0 0 0-.08.399.416.416 0 0 0 .078.099l3.048 2.931a.646.646 0 0 0 .875.043l6.562-8.01a.395.395 0 0 0-.102-.607z"/>' +
@@ -366,22 +451,6 @@
     renderWaChat();
   }
 
-  function applyWaModalView() {
-    var guest = document.getElementById("equsto-wa-guest");
-    var member = document.getElementById("equsto-wa-member");
-    var loginGuest = document.getElementById("equsto-wa-login-cta-guest");
-    var loginSecondary = document.getElementById("equsto-wa-login-cta");
-
-    /* Ziyaretçi + üye: aynı kedi sohbet kartı (giriş zorunlu değil) */
-    if (guest) guest.style.display = "none";
-    if (member) member.style.display = "flex";
-    if (loginGuest) loginGuest.href = equstoLoginHref();
-    if (loginSecondary) loginSecondary.hidden = !equstoIsMember();
-
-    renderWaHistoryList();
-    renderWaChat();
-  }
-
   function refreshWaHistory() {
     if (!equstoIsMember()) return;
     renderWaHistoryList();
@@ -414,15 +483,6 @@
     }
   }
 
-  function equstoLoginHref() {
-    try {
-      if (typeof window.equstoResolveNavHref === "function") {
-        return window.equstoResolveNavHref("login.html");
-      }
-    } catch (_) {}
-    return "/login.html";
-  }
-
   function equstoShowWhatsAppModal(phoneDigits, plainText) {
     mountWaModal();
     purgeWaModalLegacyLogout();
@@ -430,7 +490,6 @@
     var msgEl = document.getElementById("equsto-wa-msg");
     var spin = document.getElementById("equsto-wa-spinner");
     var pane = document.getElementById("equsto-wa-pane");
-    var guest = document.getElementById("equsto-wa-guest");
     var member = document.getElementById("equsto-wa-member");
     var titleEl = document.getElementById("equsto-wa-modal-title");
     if (!overlay || !spin || !pane || !member) return;
@@ -440,7 +499,6 @@
 
     spin.style.display = "flex";
     pane.style.display = "none";
-    if (guest) guest.style.display = "none";
     member.style.display = "none";
 
     overlay.classList.add("equsto-wa-overlay--open");
@@ -494,6 +552,7 @@
   }
 
   function equstoWaSubmitFromModal() {
+    if (!equstoIsMember()) return;
     var msgEl = document.getElementById("equsto-wa-msg");
     var st = document.getElementById("equsto-wa-status");
     var go = document.getElementById("equsto-wa-go");
@@ -535,7 +594,18 @@
 
     fetch(eqMsgApiBase() + "/musteriler", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: (function () {
+        var h = { "Content-Type": "application/json" };
+        var tok =
+          typeof window.equstoGetMemberToken === "function"
+            ? window.equstoGetMemberToken()
+            : "";
+        if (tok) {
+          h.Authorization = "Bearer " + tok;
+          h["X-Equsto-Authorization"] = tok;
+        }
+        return h;
+      })(),
       body: JSON.stringify(payload),
     })
       .then(function (r) {
@@ -627,12 +697,6 @@
     syncWaComposeSendMode();
   }
 
-  function equstoWaLoginClick(ev) {
-    if (ev && ev.preventDefault) ev.preventDefault();
-    equstoHideWhatsAppModal();
-    window.location.href = equstoLoginHref();
-  }
-
   /**
    * PFOS, sepet vb.: sayfa-içi kedi sohbet (wa.me yalnızca isteğe bağlı).
    */
@@ -718,13 +782,11 @@
       "</div>" +
       "</div>" +
       '<div class="equsto-wa-modal-body">' +
+      '<div class="equsto-wa-login-gate" id="equsto-wa-login-gate" hidden>' +
+      '<a class="equsto-wa-login-gate__link" id="equsto-wa-login-gate-btn" href="/login">Üye Girişi</a>' +
+      "</div>" +
       '<div class="equsto-wa-spinner-wrap" id="equsto-wa-spinner"><div class="equsto-wa-spinner" aria-hidden="true"></div></div>' +
       '<div class="equsto-wa-pane" id="equsto-wa-pane">' +
-      '<div class="equsto-wa-guest" id="equsto-wa-guest">' +
-      '<div class="equsto-wa-guest-login-wrap">' +
-      '<a class="equsto-wa-login-only" id="equsto-wa-login-cta-guest" href="/login.html" data-i18n="wa.login_guest">Üye Girişi</a>' +
-      "</div>" +
-      "</div>" +
       '<div class="equsto-wa-member" id="equsto-wa-member">' +
       '<div class="equsto-wa-history-wrap" hidden aria-hidden="true">' +
       '<div class="equsto-wa-history-head" data-i18n="wa.history_head">Geçmiş konuşmalar</div>' +
@@ -748,7 +810,6 @@
       "</button>" +
       "</div>" +
       '<p class="equsto-wa-status" id="equsto-wa-status" role="status" aria-live="polite"></p>' +
-      '<a class="equsto-wa-login-secondary" id="equsto-wa-login-cta" href="/login.html" hidden data-i18n="wa.login_guest">Üye Girişi</a>' +
       "</div>" +
       "</div>" +
       "</div>" +
@@ -766,6 +827,14 @@
     overlay.querySelector(".equsto-wa-back").addEventListener("click", equstoHideWhatsAppModal);
     overlay.querySelector("#equsto-wa-close-x").addEventListener("click", equstoHideWhatsAppModal);
     overlay.querySelector("#equsto-wa-go").addEventListener("click", equstoWaSubmitFromModal);
+    var loginGateBtn = overlay.querySelector("#equsto-wa-login-gate-btn");
+    if (loginGateBtn) {
+      loginGateBtn.setAttribute("href", equstoLoginHref());
+      loginGateBtn.addEventListener("click", function (ev) {
+        ev.preventDefault();
+        window.location.href = equstoLoginHref();
+      });
+    }
     overlay.addEventListener("click", function (ev) {
       var btn =
         ev.target && ev.target.closest
@@ -785,10 +854,6 @@
           "</a>";
       }
     });
-    var loginCtaEl = overlay.querySelector("#equsto-wa-login-cta");
-    if (loginCtaEl) loginCtaEl.addEventListener("click", equstoWaLoginClick);
-    var loginGuestEl = overlay.querySelector("#equsto-wa-login-cta-guest");
-    if (loginGuestEl) loginGuestEl.addEventListener("click", equstoWaLoginClick);
     document.addEventListener("equsto-member-session", syncWaModalAuthBtn);
     document.addEventListener("equsto-member-changed", syncWaModalAuthBtn);
     var waMsgInput = overlay.querySelector("#equsto-wa-msg");

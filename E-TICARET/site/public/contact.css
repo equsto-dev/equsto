@@ -155,6 +155,7 @@ body.eq-wa-in-tabbar:not(.admin-app) #equsto-contact-fab {
   min-height: 480px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   background: var(--wa-chat-bg);
   border-radius: 3px;
   overflow: hidden;
@@ -294,6 +295,26 @@ body.eq-wa-in-tabbar:not(.admin-app) #equsto-contact-fab {
 .equsto-wa-close-x,
 .equsto-wa-head-btn--menu {
   /* menü = kapat */
+}
+
+.equsto-wa-login-gate {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  background: var(--wa-chat-bg, #efeae2);
+}
+
+.equsto-wa-login-gate__link {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--wa-header, #008069);
+  text-decoration: none;
+}
+
+.equsto-wa-login-gate__link:hover {
+  text-decoration: underline;
 }
 
 .equsto-wa-modal-body {
@@ -542,7 +563,7 @@ body.eq-wa-in-tabbar:not(.admin-app) #equsto-contact-fab {
 
 .equsto-wa-compose--chat {
   flex-shrink: 0;
-  padding: 5px 8px calc(5px + env(safe-area-inset-bottom, 0px));
+  padding: 4px 8px calc(4px + env(safe-area-inset-bottom, 0px));
   margin: 0;
   background: var(--wa-input-bar);
   border-top: none;
@@ -550,14 +571,17 @@ body.eq-wa-in-tabbar:not(.admin-app) #equsto-contact-fab {
 
 .equsto-wa-input-bar {
   display: flex;
-  align-items: flex-end;
-  gap: 4px;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .equsto-wa-bar-btn {
   flex-shrink: 0;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   margin: 0;
   padding: 0;
   border: none;
@@ -577,28 +601,22 @@ body.eq-wa-in-tabbar:not(.admin-app) #equsto-contact-fab {
 }
 
 .equsto-wa-bar-btn--send {
-  color: #54656f;
-  transition: background 0.15s ease, color 0.15s ease;
+  color: #8696a0;
+  transition: background 0.15s ease, color 0.15s ease, opacity 0.15s ease;
+}
+
+.equsto-wa-bar-btn--send:disabled {
+  opacity: 0.45;
+  cursor: default;
 }
 
 .equsto-wa-bar-btn--send.equsto-wa-bar-btn--has-text {
   background: var(--wa-header);
   color: #ffffff;
+  opacity: 1;
 }
 
-.equsto-wa-bar-btn--send .equsto-wa-bar-ico--send {
-  display: none;
-}
-
-.equsto-wa-bar-btn--send.equsto-wa-bar-btn--has-text .equsto-wa-bar-ico--mic {
-  display: none;
-}
-
-.equsto-wa-bar-btn--send.equsto-wa-bar-btn--has-text .equsto-wa-bar-ico--send {
-  display: flex;
-}
-
-.equsto-wa-bar-btn--send.equsto-wa-bar-btn--has-text .equsto-wa-bar-ico--send svg {
+.equsto-wa-bar-btn--send.equsto-wa-bar-btn--has-text svg {
   width: 20px;
   height: 20px;
 }
@@ -612,20 +630,20 @@ body.eq-wa-in-tabbar:not(.admin-app) #equsto-contact-fab {
   flex: 1;
   min-width: 0;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .equsto-wa-msg--chat {
   width: 100%;
   box-sizing: border-box;
-  min-height: 42px;
-  max-height: 100px;
-  padding: 9px 12px 11px;
-  font-size: 15px;
-  line-height: 20px;
+  min-height: 34px;
+  max-height: 72px;
+  padding: 7px 12px;
+  font-size: 14px;
+  line-height: 18px;
   font-family: inherit;
   border: none;
-  border-radius: 21px;
+  border-radius: 18px;
   resize: none;
   background: var(--wa-compose-field);
   color: #111b21;

@@ -2,7 +2,7 @@
 
 import { DownloadOutlined, MailOutlined, PrinterOutlined } from "@ant-design/icons";
 import { Button, Collapse, Form, Input, Modal, Typography } from "antd";
-import { Fragment, useState, type CSSProperties } from "react";
+import { Fragment, useEffect, useState, type CSSProperties } from "react";
 import type { TeklifModelV14 } from "@/lib/pfos/teklif/teklif-v14.types";
 import { groupTeklifV14Satirlar } from "@/lib/pfos/teklif/group-v14-bolumler";
 import { formatTarihTr, formatKwHucre } from "@/lib/pfos/teklif/format-v14";
@@ -41,9 +41,57 @@ const COLS = [
   "Toplam",
 ] as const;
 
+/** Üye oturumu / sepet checkout — Mr. Equsto modal ile paylaşılan telefon */
+function readSavedCustomerContact(): {
+  ad: string;
+  telefon: string;
+  eposta: string;
+} {
+  if (typeof window === "undefined") {
+    return { ad: "", telefon: "", eposta: "" };
+  }
+  try {
+    const m = JSON.parse(
+      localStorage.getItem("equsto_member_v1") || "null",
+    ) as Record<string, string> | null;
+    const c = JSON.parse(
+      localStorage.getItem("equsto_checkout_v1") || "null",
+    ) as Record<string, string> | null;
+    return {
+      ad: String(m?.ad || m?.displayName || m?.name || c?.ad || "").trim(),
+      telefon: String(m?.telefon || m?.phone || c?.telefon || c?.tel || "").trim(),
+      eposta: String(m?.email || m?.eposta || c?.eposta || "").trim(),
+    };
+  } catch {
+    return { ad: "", telefon: "", eposta: "" };
+  }
+}
+
+type EqustoMemberWindow = Window & {
+  equstoIsMemberLoggedIn?: () => boolean;
+  equstoGetMemberToken?: () => string;
+  equstoSetMemberActive?: (extra: Record<string, string>) => void;
+  equstoWaRecordDelivery?: (opts: {
+    kanal: SendKanal;
+    refNo: string;
+    telefon: string;
+    eposta: string;
+    teklifSayi: string;
+    sent: boolean;
+    error?: string;
+  }) => void;
+  equstoTrackConversion?: (type: string, params?: Record<string, unknown>) => void;
+};
+
+function memberLoggedInNow(): boolean {
+  if (typeof window === "undefined") return false;
+  return Boolean((window as EqustoMemberWindow).equstoIsMemberLoggedIn?.());
+}
+
 export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props) {
   const [exporting, setExporting] = useState(false);
   const [sendingKanal, setSendingKanal] = useState<SendKanal | null>(null);
+  const [memberLoggedIn, setMemberLoggedIn] = useState(false);
   const [sendResult, setSendResult] = useState<
     DeliveryResult | { kind: "err"; message: string } | null
   >(null);
@@ -56,6 +104,33 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
   const { ust, ozet, meta } = model;
   const blocks = groupTeklifV14Satirlar(model.satirlar);
   const tarih = formatTarihTr(ust.tarih);
+
+  function applySavedCustomerContact() {
+    if (!deliveryOnly) return;
+    const saved = readSavedCustomerContact();
+    const current = form.getFieldsValue();
+    form.setFieldsValue({
+      ad: current.ad?.trim() || saved.ad || ust.musteri?.trim() || "",
+      telefon: current.telefon?.trim() || saved.telefon || "",
+      eposta: current.eposta?.trim() || saved.eposta || "",
+    });
+  }
+
+  useEffect(() => {
+    if (!deliveryOnly) return;
+    const syncMember = () => {
+      setMemberLoggedIn(memberLoggedInNow());
+      applySavedCustomerContact();
+    };
+    syncMember();
+    document.addEventListener("equsto-member-session", syncMember);
+    document.addEventListener("equsto-member-changed", syncMember);
+    return () => {
+      document.removeEventListener("equsto-member-session", syncMember);
+      document.removeEventListener("equsto-member-changed", syncMember);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- form doldurma: mount + üye oturumu
+  }, [deliveryOnly, ust.musteri]);
 
   async function handleExport() {
     setExporting(true);
@@ -92,6 +167,11 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
   }
 
   async function handleSend(kanal: SendKanal) {
+    if (deliveryOnly && !memberLoggedInNow()) {
+      setSendResult({ kind: "err", message: "Üye girişi gerekli" });
+      return;
+    }
+
     let values: {
       ad: string;
       telefon: string;
@@ -122,9 +202,17 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
           ? Math.round(genelEur * eurTry)
           : Math.round(genelEur);
 
+      const w = window as EqustoMemberWindow;
+      const headers: Record<string, string> = { "Content-Type": "application/json" };
+      const token = w.equstoGetMemberToken?.() || "";
+      if (token) {
+        headers.Authorization = `Bearer ${token}`;
+        headers["X-Equsto-Authorization"] = token;
+      }
+
       const res = await fetch("/api/teklifler", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers,
         body: JSON.stringify({
           musteri: {
             ad: values.ad.trim(),
@@ -164,12 +252,7 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
       }
 
       const refNo = json.data?.ref_no || json.data?.id || "";
-      const w = window as Window & {
-        equstoTrackConversion?: (
-          type: string,
-          params?: Record<string, unknown>,
-        ) => void;
-      };
+      const w = window as EqustoMemberWindow;
       try {
         w.equstoTrackConversion?.("quote", {
           kaynak: "pfos-v14",
@@ -195,6 +278,27 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
       }
 
       setSendResult({ kind: "ok", refNo, kanal, sent, note });
+
+      try {
+        if (w.equstoIsMemberLoggedIn?.()) {
+          w.equstoSetMemberActive?.({
+            ad: values.ad.trim(),
+            telefon: values.telefon.trim(),
+            eposta: (values.eposta || "").trim(),
+          });
+          w.equstoWaRecordDelivery?.({
+            kanal,
+            refNo,
+            telefon: values.telefon.trim(),
+            eposta: (values.eposta || "").trim(),
+            teklifSayi: ust.sayi,
+            sent,
+            error: note,
+          });
+        }
+      } catch {
+        /* modal kaydı isteğe bağlı */
+      }
     } catch (e) {
       const msg = e instanceof Error ? e.message : "Teklif gönderilemedi";
       setSendResult({ kind: "err", message: msg });
@@ -382,74 +486,92 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
             background: "#f6ffed",
           }}
         >
-          <Typography.Title level={5} style={{ marginTop: 0, marginBottom: 8 }}>
-            Teklifinizi alın
-          </Typography.Title>
-          <Typography.Paragraph type="secondary" style={{ marginBottom: 16 }}>
-            PDF teklifiniz yalnızca e-posta veya WhatsApp ile gönderilir;
-            bilgisayarınıza indirme seçeneği sunulmaz.
-          </Typography.Paragraph>
-          <Form
-            form={form}
-            layout="vertical"
-            initialValues={{
-              ad: ust.musteri?.trim() || "",
-              telefon: "",
-              eposta: "",
-              not: "",
-            }}
-          >
-            <Form.Item
-              name="ad"
-              label="Ad Soyad"
-              rules={[{ required: true, message: "Ad gerekli" }]}
-            >
-              <Input autoComplete="name" />
-            </Form.Item>
-            <Form.Item
-              name="telefon"
-              label="Telefon (WhatsApp)"
-              rules={[{ required: true, message: "Telefon gerekli" }]}
-            >
-              <Input placeholder="0532…" autoComplete="tel" />
-            </Form.Item>
-            <Form.Item
-              name="eposta"
-              label="E-posta"
-              rules={[
-                { required: true, message: "E-posta gerekli" },
-                { type: "email", message: "Geçerli bir e-posta girin" },
-              ]}
-            >
-              <Input type="email" autoComplete="email" />
-            </Form.Item>
-            <Form.Item name="not" label="Not (opsiyonel)">
-              <Input.TextArea rows={2} />
-            </Form.Item>
-            <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-              <Button
-                type="primary"
-                icon={<MailOutlined />}
-                loading={sendingKanal === "email"}
-                disabled={sendingKanal === "whatsapp"}
-                onClick={() => void handleSend("email")}
-              >
-                E-postama gönder (PDF)
-              </Button>
-              <Button
+          {!memberLoggedIn ? (
+            <div style={{ textAlign: "center", padding: "32px 16px" }}>
+              <a
+                href="/login"
                 style={{
-                  background: "#25D366",
-                  borderColor: "#25D366",
-                  color: "#fff",
+                  fontSize: 16,
+                  fontWeight: 600,
+                  color: "#008069",
+                  textDecoration: "none",
                 }}
-                loading={sendingKanal === "whatsapp"}
-                disabled={sendingKanal === "email"}
-                onClick={() => void handleSend("whatsapp")}
               >
-                WhatsApp&apos;ıma gönder (PDF)
-              </Button>
+                Üye Girişi
+              </a>
             </div>
-          </Form>
+          ) : (
+            <>
+              <Typography.Title level={5} style={{ marginTop: 0, marginBottom: 8 }}>
+                Teklifinizi alın
+              </Typography.Title>
+              <Typography.Paragraph type="secondary" style={{ marginBottom: 16 }}>
+                PDF teklifiniz yalnızca e-posta veya WhatsApp ile gönderilir;
+                bilgisayarınıza indirme seçeneği sunulmaz.
+              </Typography.Paragraph>
+              <Form
+                form={form}
+                layout="vertical"
+                initialValues={{
+                  ad: ust.musteri?.trim() || "",
+                  telefon: "",
+                  eposta: "",
+                  not: "",
+                }}
+              >
+                <Form.Item
+                  name="ad"
+                  label="Ad Soyad"
+                  rules={[{ required: true, message: "Ad gerekli" }]}
+                >
+                  <Input autoComplete="name" />
+                </Form.Item>
+                <Form.Item
+                  name="telefon"
+                  label="Telefon (WhatsApp)"
+                  rules={[{ required: true, message: "Telefon gerekli" }]}
+                >
+                  <Input placeholder="0532…" autoComplete="tel" />
+                </Form.Item>
+                <Form.Item
+                  name="eposta"
+                  label="E-posta"
+                  rules={[
+                    { required: true, message: "E-posta gerekli" },
+                    { type: "email", message: "Geçerli bir e-posta girin" },
+                  ]}
+                >
+                  <Input type="email" autoComplete="email" />
+                </Form.Item>
+                <Form.Item name="not" label="Not (opsiyonel)">
+                  <Input.TextArea rows={2} />
+                </Form.Item>
+                <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+                  <Button
+                    type="primary"
+                    icon={<MailOutlined />}
+                    loading={sendingKanal === "email"}
+                    disabled={sendingKanal === "whatsapp"}
+                    onClick={() => void handleSend("email")}
+                  >
+                    E-postama gönder (PDF)
+                  </Button>
+                  <Button
+                    style={{
+                      background: "#25D366",
+                      borderColor: "#25D366",
+                      color: "#fff",
+                    }}
+                    loading={sendingKanal === "whatsapp"}
+                    disabled={sendingKanal === "email"}
+                    onClick={() => void handleSend("whatsapp")}
+                  >
+                    WhatsApp&apos;ıma gönder (PDF)
+                  </Button>
+                </div>
+              </Form>
+            </>
+          )}
         </div>
       ) : (
         <div
