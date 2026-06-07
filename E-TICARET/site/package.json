@@ -200,10 +200,12 @@
     "@ant-design/pro-components": "^2.8.10",
     "@ant-design/pro-layout": "^7.22.7",
     "@prisma/client": "^6.19.2",
+    "@sparticuz/chromium": "^149.0.0",
     "antd": "^5.29.3",
     "exceljs": "^4.4.0",
     "meilisearch": "^0.58.0",
     "next": "16.2.6",
+    "puppeteer-core": "^25.1.0",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "zod": "^4.4.3"

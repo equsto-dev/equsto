@@ -1,6 +1,7 @@
 import { greenApiConfigured, whatsAppMode } from "./config";
-import { sendGreenApiText } from "./green-api";
+import { sendGreenApiFile, sendGreenApiText } from "./green-api";
 import {
+  sendWhatsAppDocument as sendMetaDocument,
   sendWhatsAppTemplate as sendMetaTemplate,
   sendWhatsAppText as sendMetaText,
   whatsAppMetaConfigured,
@@ -45,5 +46,26 @@ export async function sendWhatsAppTemplate(
   return {
     ok: false,
     error: "Şablon mesajları yalnızca Meta Cloud API modunda desteklenir",
+  };
+}
+
+/** PDF / belge gönder (Green API veya Meta) */
+export async function sendWhatsAppDocument(
+  to: string,
+  file: Buffer,
+  filename: string,
+  caption?: string,
+): Promise<WaSendResult> {
+  const mode = whatsAppMode();
+  if (mode === "green-api") {
+    return sendGreenApiFile(to, file, filename, caption);
+  }
+  if (mode === "meta") {
+    return sendMetaDocument(to, file, filename, caption);
+  }
+  return {
+    ok: false,
+    error:
+      "Sunucu tarafı WhatsApp kapalı (EQUSTO_WHATSAPP_MODE=link). Green API veya Meta yapılandırın.",
   };
 }
