@@ -958,6 +958,8 @@ export type MusteriAdminRow = {
   tip: string;
   not: string;
   kaynak: string | null;
+  sayfa: string | null;
+  mesaj: string | null;
   created_at: string;
 };
 

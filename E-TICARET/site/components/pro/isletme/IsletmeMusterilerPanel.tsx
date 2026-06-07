@@ -69,6 +69,25 @@ export default function IsletmeMusterilerPanel() {
     return `https://wa.me/${e164}`;
   }
 
+  function formatTrDate(iso: string) {
+    if (!iso) return "—";
+    try {
+      return new Date(iso).toLocaleString("tr-TR", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+    } catch {
+      return iso;
+    }
+  }
+
+  const sortedRows = [...rows].sort(
+    (a, b) => new Date(b.created_at || 0).getTime() - new Date(a.created_at || 0).getTime(),
+  );
+
   return (
     <>
       <Space style={{ marginBottom: 16 }}>
@@ -84,8 +103,14 @@ export default function IsletmeMusterilerPanel() {
         search={{ labelWidth: "auto" }}
         options={false}
         pagination={tablePagination}
-        dataSource={rows}
+        dataSource={sortedRows}
         columns={[
+          {
+            title: "Tarih",
+            dataIndex: "created_at",
+            width: 150,
+            render: (_, r) => formatTrDate(r.created_at),
+          },
           { title: "Firma", dataIndex: "firma" },
           { title: "Yetkili", dataIndex: "yetkili" },
           {
@@ -104,6 +129,18 @@ export default function IsletmeMusterilerPanel() {
           },
           { title: "E-posta", dataIndex: "mail", ellipsis: true },
           { title: "Şehir", dataIndex: "sehir" },
+          {
+            title: "Kaynak",
+            dataIndex: "kaynak",
+            width: 120,
+            render: (v) => (v ? <Tag>{String(v)}</Tag> : "—"),
+          },
+          {
+            title: "Mesaj",
+            dataIndex: "mesaj",
+            ellipsis: true,
+            render: (_, r) => String(r.mesaj || r.not || "").trim() || "—",
+          },
           {
             title: "Tip",
             dataIndex: "tip",
@@ -183,6 +220,7 @@ export default function IsletmeMusterilerPanel() {
           ]}
         />
         <ProFormTextArea name="not" label="Not" />
+        <ProFormTextArea name="mesaj" label="Mesaj" fieldProps={{ readOnly: !!editRow }} />
       </ModalForm>
     </>
   );
