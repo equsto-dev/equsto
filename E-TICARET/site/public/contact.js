@@ -45,7 +45,7 @@
   /** Kilit: public/whatsapp-cat-fab-KILIT.txt — npm run verify:whatsapp-cat-fab-kilit */
   var WA_FAB_IMG = "/equsto-bize-ulasin-isimlik.png";
   /** Modal şablonu değişince artırın (eski DOM'u zorla yeniler). */
-  var WA_MODAL_BUILD = 22;
+  var WA_MODAL_BUILD = 23;
 
   var waModalDigits = "";
   var waModalLastSentText = "";
@@ -79,14 +79,38 @@
     return typeof window.equstoIsMemberLoggedIn === "function" && window.equstoIsMemberLoggedIn();
   }
 
-  function equstoLoginHref() {
+  function equstoAuthReturnPath() {
     try {
-      if (typeof window.equstoUrl === "function") return window.equstoUrl("login");
+      return location.pathname + location.search;
+    } catch (e) {}
+    return "/";
+  }
+
+  function equstoLoginHref() {
+    var next = encodeURIComponent(equstoAuthReturnPath());
+    try {
+      if (typeof window.equstoUrl === "function") {
+        return window.equstoUrl("login") + "?next=" + next;
+      }
       if (typeof window.equstoResolveNavHref === "function") {
-        return window.equstoResolveNavHref("login.html");
+        return window.equstoResolveNavHref("login.html") + "?next=" + next;
       }
     } catch (e) {}
-    return "/login";
+    return "/login?next=" + next;
+  }
+
+  function equstoRegisterHref() {
+    var next = encodeURIComponent(equstoAuthReturnPath());
+    return "/login?mode=register&next=" + next;
+  }
+
+  function syncWaLoginGateLinks() {
+    var loginBtn = document.getElementById("equsto-wa-login-gate-btn");
+    var regBtn = document.getElementById("equsto-wa-register-gate-btn");
+    var loginHref = equstoLoginHref();
+    var regHref = equstoRegisterHref();
+    if (loginBtn) loginBtn.setAttribute("href", loginHref);
+    if (regBtn) regBtn.setAttribute("href", regHref);
   }
 
   /** PFOS teklif ve Mr. Equsto WhatsApp — üye oturumu */
@@ -102,6 +126,7 @@
     } else {
       if (memberEl) memberEl.style.display = "none";
       if (loginGate) loginGate.hidden = false;
+      syncWaLoginGateLinks();
     }
   }
 
@@ -783,8 +808,11 @@
       "</div>" +
       '<div class="equsto-wa-modal-body">' +
       '<div class="equsto-wa-login-gate" id="equsto-wa-login-gate" hidden>' +
-      '<a class="equsto-wa-login-gate__link" id="equsto-wa-login-gate-btn" href="/login">Üye Girişi</a>' +
-      "</div>" +
+      '<div class="equsto-wa-login-gate__panel">' +
+      '<a class="equsto-wa-login-gate__btn" id="equsto-wa-login-gate-btn" href="/login">Üye Girişi</a>' +
+      '<p class="equsto-wa-login-gate__note">Hesabınız yok mu? ' +
+      '<a class="equsto-wa-login-gate__register" id="equsto-wa-register-gate-btn" href="/login?mode=register">Kayıt ol</a></p>' +
+      "</div></div>" +
       '<div class="equsto-wa-spinner-wrap" id="equsto-wa-spinner"><div class="equsto-wa-spinner" aria-hidden="true"></div></div>' +
       '<div class="equsto-wa-pane" id="equsto-wa-pane">' +
       '<div class="equsto-wa-member" id="equsto-wa-member">' +
@@ -828,11 +856,18 @@
     overlay.querySelector("#equsto-wa-close-x").addEventListener("click", equstoHideWhatsAppModal);
     overlay.querySelector("#equsto-wa-go").addEventListener("click", equstoWaSubmitFromModal);
     var loginGateBtn = overlay.querySelector("#equsto-wa-login-gate-btn");
+    var registerGateBtn = overlay.querySelector("#equsto-wa-register-gate-btn");
+    syncWaLoginGateLinks();
     if (loginGateBtn) {
-      loginGateBtn.setAttribute("href", equstoLoginHref());
       loginGateBtn.addEventListener("click", function (ev) {
         ev.preventDefault();
         window.location.href = equstoLoginHref();
+      });
+    }
+    if (registerGateBtn) {
+      registerGateBtn.addEventListener("click", function (ev) {
+        ev.preventDefault();
+        window.location.href = equstoRegisterHref();
       });
     }
     overlay.addEventListener("click", function (ev) {
