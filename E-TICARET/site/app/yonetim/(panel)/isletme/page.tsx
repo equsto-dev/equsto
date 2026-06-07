@@ -3,6 +3,7 @@
 import {
   BarChartOutlined,
   FileTextOutlined,
+  MessageOutlined,
   SettingOutlined,
   ShoppingOutlined,
   TagOutlined,
@@ -26,6 +27,10 @@ const IsletmeMusterilerPanel = dynamic(
   () => import("@/components/pro/isletme/IsletmeMusterilerPanel"),
   { loading: () => null },
 );
+const IsletmeMesajlarPanel = dynamic(
+  () => import("@/components/pro/isletme/IsletmeMesajlarPanel"),
+  { loading: () => null },
+);
 const IsletmeRaporlarPanel = dynamic(
   () => import("@/components/pro/isletme/IsletmeRaporlarPanel"),
   { loading: () => null },
@@ -42,6 +47,7 @@ const IsletmePazarlamaPanel = dynamic(
 const TAB_KEYS = [
   "siparisler",
   "teklifler",
+  "mesajlar",
   "musteriler",
   "raporlar",
   "ayarlar",
@@ -60,6 +66,8 @@ function tabPanel(key: TabKey) {
       return <IsletmeSiparislerPanel />;
     case "teklifler":
       return <IsletmeTekliflerPanel />;
+    case "mesajlar":
+      return <IsletmeMesajlarPanel />;
     case "musteriler":
       return <IsletmeMusterilerPanel />;
     case "raporlar":
@@ -87,7 +95,7 @@ function IsletmePageInner() {
   return (
     <PageContainer
       title="İşletme"
-      subTitle="Sipariş, teklif, müşteri, rapor, ayarlar ve pazarlama"
+      subTitle="Sipariş, teklif, mesaj, müşteri, rapor, ayarlar ve pazarlama"
     >
       <Tabs
         activeKey={activeTab}
@@ -111,6 +119,15 @@ function IsletmePageInner() {
               </>
             ),
             children: tabPanel("teklifler"),
+          },
+          {
+            key: "mesajlar",
+            label: (
+              <>
+                <MessageOutlined /> Mesajlar
+              </>
+            ),
+            children: tabPanel("mesajlar"),
           },
           {
             key: "musteriler",
