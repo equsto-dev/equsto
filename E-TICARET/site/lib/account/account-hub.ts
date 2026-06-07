@@ -12,7 +12,7 @@ export type AccountCard = {
 
 export type AccountLinkColumn = {
   title: string;
-  links: { label: string; href: string }[];
+  links: { label: string; href: string; action?: "logout" }[];
 };
 
 export const ACCOUNT_CARDS: AccountCard[] = [
@@ -104,6 +104,7 @@ export const ACCOUNT_LINK_COLUMNS: AccountLinkColumn[] = [
     links: [
       { label: "Giriş ve güvenlik", href: "#guvenlik" },
       { label: "Hesabım", href: "/hesabim" },
+      { label: "Çıkış yap", href: "#", action: "logout" },
       { label: "Üye girişi", href: "/login" },
       { label: "Kayıt ol", href: "/login?mode=register" },
     ],

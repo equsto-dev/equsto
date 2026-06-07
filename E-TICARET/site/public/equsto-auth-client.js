@@ -170,6 +170,19 @@
 
   function redirectAfterAuth() {
     var next = new URLSearchParams(location.search).get('next') || '/';
+    var phoneOk =
+      typeof window.equstoMemberHasPhone === 'function' && window.equstoMemberHasPhone();
+    if (!phoneOk) {
+      var accNext = '/hesabim#guvenlik';
+      try {
+        if (typeof window.equstoUrl === 'function') {
+          accNext = window.equstoUrl('account') + '#guvenlik';
+        }
+      } catch (e) {}
+      if (!/\/hesabim(?:[#?]|$)/i.test(next) && !/\/account(?:[#?]|$)/i.test(next)) {
+        next = accNext;
+      }
+    }
     setTimeout(function () {
       if (typeof window.eqGo === 'function' && /^(?:\/(?:index\.html)?|index|home)(?:\?|$)/i.test(next)) {
         window.eqGo('home');
