@@ -186,9 +186,19 @@ button.auth-logo {
 
 #google-btn-slot {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
   min-height: 44px;
   margin-bottom: 10px;
+  padding: 0 10px 0 2px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+#google-btn-slot > div {
+  max-width: 100%;
 }
 
 #google-btn-slot:empty + .auth-btn-google {
