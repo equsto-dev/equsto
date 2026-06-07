@@ -107,23 +107,48 @@
 
   function googleBtnPixelWidth() {
     var slot = document.getElementById("google-btn-slot");
-    var card = document.querySelector(".auth-card");
-    var inset = 36;
-    var base = 300;
-    if (card && card.clientWidth > 0) {
-      var styles = window.getComputedStyle(card);
-      var padL = parseFloat(styles.paddingLeft) || 22;
-      var padR = parseFloat(styles.paddingRight) || 22;
-      base = card.clientWidth - padL - padR - inset;
-    } else if (slot && slot.clientWidth > 0) {
-      base = slot.clientWidth - inset;
+    var safety = 28;
+    var fallback = 264;
+    var w = 0;
+    if (slot) {
+      w = slot.getBoundingClientRect().width || slot.clientWidth;
     }
-    return Math.max(240, Math.min(304, Math.floor(base)));
+    if (!(w > 0)) {
+      var card = document.querySelector(".auth-card");
+      if (card) {
+        var styles = window.getComputedStyle(card);
+        var padL = parseFloat(styles.paddingLeft) || 22;
+        var padR = parseFloat(styles.paddingRight) || 22;
+        w = card.clientWidth - padL - padR;
+      }
+    }
+    if (w > 0) {
+      return Math.max(200, Math.min(270, Math.floor(w - safety)));
+    }
+    return fallback;
+  }
+
+  var googleBtnResizeTimer = null;
+  var googleBtnClientId = "";
+
+  function scheduleGoogleButtonResize(clientId) {
+    if (!clientId) return;
+    googleBtnClientId = clientId;
+    if (window.__eqGoogleBtnResizeBound) return;
+    window.__eqGoogleBtnResizeBound = true;
+    window.addEventListener("resize", function () {
+      if (!googleBtnClientId) return;
+      clearTimeout(googleBtnResizeTimer);
+      googleBtnResizeTimer = setTimeout(function () {
+        renderGoogleButton(googleBtnClientId);
+      }, 120);
+    });
   }
 
   function renderGoogleButton(clientId) {
     var slot = document.getElementById("google-btn-slot");
     if (!slot || !clientId || !window.google || !window.google.accounts) return;
+    scheduleGoogleButtonResize(clientId);
 
     function paint() {
       slot.innerHTML = "";
