@@ -13,6 +13,12 @@ import {
   type MemberTeslimatAdres,
 } from "@/lib/account/member-teslimat-adres";
 import {
+  ensureMemberToken,
+  fetchMemberProfileRemote,
+  putMemberProfile,
+  waitForMemberApi,
+} from "@/lib/account/member-profile.client";
+import {
   memberLoggedInNow,
   pfosLoginHref,
 } from "@/lib/pfos/member-session.client";
@@ -55,21 +61,16 @@ function readLocalProfile(): Partial<MemberProfile> {
 }
 
 async function fetchMemberProfile(): Promise<MemberProfile | null> {
-  const w = window as EqustoMemberWindow;
-  const token = w.equstoGetMemberToken?.() || "";
-  if (!token) return null;
-
-  const res = await fetch("/api/auth/me", {
-    headers: { Authorization: `Bearer ${token}` },
-    cache: "no-store",
-  });
-  if (!res.ok) return null;
-  const data = (await res.json()) as {
-    success?: boolean;
-    user?: MemberProfile;
+  const user = await fetchMemberProfileRemote();
+  if (!user) return null;
+  return {
+    email: user.email,
+    name: user.name,
+    telefon: user.telefon,
+    teslimatAdres: normalizeMemberTeslimatAdres(user.teslimatAdres),
+    provider: user.provider,
+    picture: user.picture,
   };
-  if (!data.success || !data.user) return null;
-  return data.user;
 }
 
 function formatPhone(t: string) {
@@ -90,7 +91,17 @@ export default function MemberAccountHub() {
   const [addressAutoEdit, setAddressAutoEdit] = useState(false);
 
   const load = useCallback(async () => {
+    await waitForMemberApi();
     if (!memberLoggedInNow()) {
+      window.location.href = pfosLoginHref();
+      return;
+    }
+    const token = await ensureMemberToken();
+    if (!token) {
+      const w = window as EqustoMemberWindow;
+      if (memberLoggedInNow()) {
+        w.equstoClearMemberSession?.();
+      }
       window.location.href = pfosLoginHref();
       return;
     }
@@ -116,14 +127,16 @@ export default function MemberAccountHub() {
 
   useEffect(() => {
     void load();
-    const onSession = () => void load();
+    const onSession = () => {
+      if (!ready) void load();
+    };
     document.addEventListener("equsto-member-session", onSession);
     document.addEventListener("equsto-member-changed", onSession);
     return () => {
       document.removeEventListener("equsto-member-session", onSession);
       document.removeEventListener("equsto-member-changed", onSession);
     };
-  }, [load]);
+  }, [load, ready]);
 
   useEffect(() => {
     if (!ready) return;
@@ -176,37 +189,17 @@ export default function MemberAccountHub() {
   }
 
   async function savePhone() {
-    const w = window as EqustoMemberWindow;
-    const token = w.equstoGetMemberToken?.() || "";
-    if (!token) {
-      window.location.href = pfosLoginHref();
-      return;
-    }
     setPhoneSaving(true);
     setPhoneError("");
     try {
-      const res = await fetch("/api/auth/profile", {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({ telefon: phoneInput.trim() }),
-      });
-      const data = (await res.json()) as {
-        success?: boolean;
-        error?: string;
-        user?: MemberProfile;
-      };
-      if (!res.ok || !data.success || !data.user) {
-        setPhoneError(data.error || "Telefon kaydedilemedi.");
+      const result = await putMemberProfile({ telefon: phoneInput.trim() });
+      if (!result.success || !result.user) {
+        setPhoneError(result.error || "Telefon kaydedilemedi.");
         return;
       }
-      setProfile((prev) => (prev ? { ...prev, telefon: data.user!.telefon } : prev));
-      w.equstoSetMemberActive?.({
-        telefon: data.user.telefon,
-        phone: data.user.telefon,
-      });
+      setProfile((prev) =>
+        prev ? { ...prev, telefon: result.user!.telefon } : prev,
+      );
       setPhoneEditing(false);
     } catch {
       setPhoneError("Bağlantı hatası. Lütfen tekrar deneyin.");

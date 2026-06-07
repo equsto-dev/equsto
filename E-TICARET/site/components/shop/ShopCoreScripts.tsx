@@ -26,8 +26,8 @@ export default function ShopCoreScripts() {
       <Script src={`/equsto-logo.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/nav.js?v=${v}`} strategy="afterInteractive" />
       <Script src="/eq-auth-api.js" strategy="afterInteractive" />
-      <Script src={`/equsto-member.js?v=${v}`} strategy="lazyOnload" />
-      <Script src={`/equsto-auth-client.js?v=${v}`} strategy="lazyOnload" />
+      <Script src={`/equsto-member.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/equsto-auth-client.js?v=${v}`} strategy="afterInteractive" />
       <Script
         src={`/ecom-cart.js?v=${v}`}
         strategy="afterInteractive"

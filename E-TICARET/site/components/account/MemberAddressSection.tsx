@@ -6,10 +6,11 @@ import {
   EMPTY_MEMBER_TESLIMAT_ADRES,
   formatMemberTeslimatAdres,
   isMemberTeslimatAdresComplete,
+  normalizeMemberTeslimatAdres,
   type MemberTeslimatAdres,
 } from "@/lib/account/member-teslimat-adres";
+import { putMemberProfile } from "@/lib/account/member-profile.client";
 import type { PfosAdresFormValue } from "@/lib/pfos/adres/tr-adres";
-import { pfosLoginHref } from "@/lib/pfos/member-session.client";
 import styles from "./account.module.css";
 
 type Props = {
@@ -66,12 +67,6 @@ export default function MemberAddressSection({
   }, []);
 
   async function save() {
-    const w = window as Window & { equstoGetMemberToken?: () => string; equstoSetMemberActive?: (extra: Record<string, unknown>) => void };
-    const token = w.equstoGetMemberToken?.() || "";
-    if (!token) {
-      window.location.href = pfosLoginHref();
-      return;
-    }
     const next = fromFormValue(form, acikAdres);
     if (!next.il || !next.ilce) {
       setError("İl ve ilçe zorunludur.");
@@ -80,25 +75,12 @@ export default function MemberAddressSection({
     setSaving(true);
     setError("");
     try {
-      const res = await fetch("/api/auth/profile", {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({ teslimatAdres: next }),
-      });
-      const data = (await res.json()) as {
-        success?: boolean;
-        error?: string;
-        user?: { teslimatAdres?: MemberTeslimatAdres };
-      };
-      if (!res.ok || !data.success || !data.user?.teslimatAdres) {
-        setError(data.error || "Adres kaydedilemedi.");
+      const result = await putMemberProfile({ teslimatAdres: next });
+      if (!result.success || !result.user?.teslimatAdres) {
+        setError(result.error || "Adres kaydedilemedi.");
         return;
       }
-      onSaved(data.user.teslimatAdres);
-      w.equstoSetMemberActive?.({ teslimatAdres: data.user.teslimatAdres });
+      onSaved(normalizeMemberTeslimatAdres(result.user.teslimatAdres));
       setEditing(false);
     } catch {
       setError("Bağlantı hatası. Lütfen tekrar deneyin.");
