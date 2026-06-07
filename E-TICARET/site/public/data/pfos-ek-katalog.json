@@ -17,7 +17,9 @@
       "kaynak_fiyat_listesi": "pfos-brema-oem-2026",
       "dept": "sogutma",
       "specs": "Brema CB416 HC B-QUBE küp buz makinesi\nGünlük kapasite: 44 kg/gün\nDepo: ~16 kg\nKaynak: Brema OEM — Equsto satış ~1300 EUR\nÜrün kodu: 9805.CB416.HC",
-      "images": []
+      "images": [
+        "images/catalog/brema/ozti-9805-cb416-hc.jpg"
+      ]
     },
     {
       "category": "buz-makineleri",
@@ -34,7 +36,9 @@
       "kaynak_fiyat_listesi": "pfos-brema-oem-2026",
       "dept": "sogutma",
       "specs": "Brema CB425 HC B-QUBE küp buz makinesi\nGünlük kapasite: 48 kg/gün\nDepo: ~25 kg\nKaynak: Brema OEM — Equsto satış ~1350 EUR\nÜrün kodu: 9805.CB425.HC",
-      "images": []
+      "images": [
+        "images/catalog/brema/ozti-9805-cb425-hc.jpg"
+      ]
     },
     {
       "category": "sinek-ld-r-c-cihazlar",
@@ -51,7 +55,9 @@
       "kaynak_fiyat_listesi": "ozti-2025-set-ustu-mutfak",
       "dept": "set-ustu-mutfak",
       "specs": "SINEK OLDURUCU CIHAZ 40 M2 KP40\nTesir alanı: 35-40 m²\nÜrün kodu: 8799.70240.00\nKaynak: Öztiryakiler Fiyat Listesi 2025",
-      "images": []
+      "images": [
+        "images/catalog/ozti/web/ozti-8799-70240-00.jpg"
+      ]
     }
   ]
 }
