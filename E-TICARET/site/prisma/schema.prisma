@@ -223,6 +223,7 @@ model ShopMember {
   email        String   @unique
   passwordHash String?
   name         String   @default("")
+  telefon      String   @default("")
   provider     String   @default("email")
   picture      String?
   cartItems    Json     @default("[]")

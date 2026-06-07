@@ -67,6 +67,8 @@ async function action(req: NextRequest, ctx: Ctx): Promise<Response> {
         String(body.email || ""),
         String(body.password || ""),
         String(body.name || ""),
+        String(body.telefon || body.phone || ""),
+        typeof body.syncToken === "string" ? body.syncToken : null,
       );
       return json(sessionResponse(session));
     } catch (e) {

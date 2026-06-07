@@ -15,6 +15,7 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 export type MemberUser = {
   email: string;
   name: string;
+  telefon: string;
   provider: string;
   picture: string;
 };
@@ -111,15 +112,33 @@ export async function verifyGoogleIdToken(idToken: string): Promise<{
 function memberToUser(m: {
   email: string;
   name: string;
+  telefon?: string | null;
   provider: string;
   picture: string | null;
 }): MemberUser {
   return {
     email: m.email,
     name: m.name || "",
+    telefon: String(m.telefon || "").trim(),
     provider: m.provider || "email",
     picture: m.picture || "",
   };
+}
+
+/** TR cep — 10 hane, 5 ile başlar (90/0 önekleri soyulur) */
+export function normalizeTrMemberPhone(raw: string): string {
+  let d = String(raw || "").replace(/\D/g, "");
+  if (d.length === 11 && d.startsWith("0")) d = d.slice(1);
+  if (d.length === 12 && d.startsWith("90")) d = d.slice(2);
+  return d;
+}
+
+export function requireValidTrMemberPhone(raw: string): string {
+  const n = normalizeTrMemberPhone(raw);
+  if (n.length !== 10 || !n.startsWith("5")) {
+    throw new Error("Geçerli bir cep telefonu girin (5xx xxx xx xx)");
+  }
+  return n;
 }
 
 export async function createSessionForMember(memberId: string): Promise<MemberSessionPayload> {
@@ -210,11 +229,13 @@ export async function registerWithEmail(
   email: string,
   password: string,
   name: string,
+  telefon: string,
   syncToken?: string | null,
 ): Promise<MemberSessionPayload> {
   const norm = normalizeEmail(email);
   if (!EMAIL_RE.test(norm)) throw new Error("Geçerli e-posta girin");
   if (String(password || "").length < 8) throw new Error("Şifre en az 8 karakter olmalı");
+  const phone = requireValidTrMemberPhone(telefon);
   const existing = await db.shopMember.findUnique({ where: { email: norm } });
   if (existing) throw new Error("Bu e-posta ile kayıt zaten var");
   const member = await db.shopMember.create({
@@ -222,6 +243,7 @@ export async function registerWithEmail(
       email: norm,
       passwordHash: hashPassword(password),
       name: String(name || "").trim() || norm.split("@")[0] || "",
+      telefon: phone,
       provider: "email",
     },
   });
