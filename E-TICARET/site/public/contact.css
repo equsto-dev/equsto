@@ -300,25 +300,18 @@ body.eq-wa-in-tabbar:not(.admin-app) #equsto-contact-fab {
 .equsto-wa-login-gate {
   flex: 1;
   display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-end;
-  min-height: 0;
-  padding: 0;
-  background-color: var(--wa-chat-bg, #efeae2);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Cg fill='%23d1c7bc' fill-opacity='0.22'%3E%3Ccircle cx='40' cy='40' r='8'/%3E%3Ccircle cx='140' cy='90' r='6'/%3E%3Ccircle cx='240' cy='50' r='7'/%3E%3Ccircle cx='80' cy='180' r='5'/%3E%3Ccircle cx='200' cy='200' r='8'/%3E%3Ccircle cx='260' cy='260' r='6'/%3E%3Cpath d='M20 120h16v16H20zM170 20h12v12h-12zM110 240h14v14h-14z'/%3E%3C/g%3E%3C/svg%3E");
-  background-size: 412px 412px;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 20px 18%;
+  min-height: 200px;
+  background: var(--wa-chat-bg, #efeae2);
   box-sizing: border-box;
 }
 
 .equsto-wa-login-gate__panel {
   width: 100%;
-  max-width: none;
+  max-width: 280px;
   text-align: center;
-  flex-shrink: 0;
-  padding: 12px 16px calc(12px + env(safe-area-inset-bottom, 0px));
-  background: var(--wa-input-bar);
-  box-sizing: border-box;
 }
 
 .equsto-wa-login-gate__btn {
