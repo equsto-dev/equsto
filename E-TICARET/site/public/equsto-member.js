@@ -132,10 +132,8 @@
         a.setAttribute("title", o.email || __memberT("member.my_account", "Hesabım"));
         a.href =
           typeof window.equstoUrl === "function"
-            ? window.equstoUrl("login")
-            : typeof window.equstoResolveNavHref === "function"
-              ? window.equstoResolveNavHref("login.html")
-              : "/login.html";
+            ? window.equstoUrl("account")
+            : "/hesabim";
       } else {
         if (title) title.textContent = __memberT("common.account_projects", "Projeler ve Listeler ▾");
         if (sub) sub.textContent = __memberT("member.my_account", "Hesabım");
