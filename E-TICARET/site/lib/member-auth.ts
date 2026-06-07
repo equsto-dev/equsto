@@ -96,7 +96,7 @@ export async function verifyGoogleIdToken(idToken: string): Promise<{
 }> {
   const res = await fetch(
     `https://oauth2.googleapis.com/tokeninfo?id_token=${encodeURIComponent(idToken)}`,
-    { cache: "no-store" },
+    { cache: "no-store", signal: AbortSignal.timeout(8000) },
   );
   if (!res.ok) throw new Error("Google token geçersiz");
   const data = (await res.json()) as Record<string, string>;
@@ -150,8 +150,20 @@ export function requireValidTrMemberPhone(raw: string): string {
   return n;
 }
 
-export async function createSessionForMember(memberId: string): Promise<MemberSessionPayload> {
-  const member = await db.shopMember.findUnique({ where: { id: memberId } });
+export async function createSessionForMember(
+  memberId: string,
+  preloaded?: {
+    id: string;
+    email: string;
+    name: string;
+    telefon?: string | null;
+    teslimatAdres?: unknown;
+    provider: string;
+    picture: string | null;
+  } | null,
+): Promise<MemberSessionPayload> {
+  const member =
+    preloaded ?? (await db.shopMember.findUnique({ where: { id: memberId } }));
   if (!member) throw new Error("Üye bulunamadı");
   const token = newSessionToken();
   const expiresAt = sessionExpiry();
@@ -277,18 +289,20 @@ export async function loginWithGoogle(
       },
     });
   } else {
-    member = await db.shopMember.update({
-      where: { id: member.id },
-      data: {
-        name: member.name || g.name,
-        provider: "google",
-        picture: g.picture || member.picture,
-      },
-    });
+    const patch: { name?: string; provider?: string; picture?: string } = {};
+    if (!member.name && g.name) patch.name = g.name;
+    if (member.provider !== "google") patch.provider = "google";
+    if (g.picture && !member.picture) patch.picture = g.picture;
+    if (Object.keys(patch).length) {
+      member = await db.shopMember.update({
+        where: { id: member.id },
+        data: patch,
+      });
+    }
   }
   await mergeGuestShopCartIntoMember(syncToken, g.email);
   await syncMemberCartFromShopEmail(member.id, g.email);
-  return createSessionForMember(member.id);
+  return createSessionForMember(member.id, member);
 }
 
 export async function updateMemberProfilePhone(

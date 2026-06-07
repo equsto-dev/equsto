@@ -189,11 +189,12 @@
       } else {
         location.href = next;
       }
-    }, 400);
+    }, 150);
   }
 
   window.equstoAuthGoogleCredential = function (credential) {
-    return apiFetch('/google', {
+    setMsg("Google ile giriş yapılıyor…", true);
+    return apiFetch("/google", {
       method: 'POST',
       json: withCartSync({ credential: credential }),
     }).then(function (j) {
