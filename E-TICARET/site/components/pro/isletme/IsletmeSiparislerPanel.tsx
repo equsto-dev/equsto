@@ -9,6 +9,7 @@ import {
   type SiparisAdminRow,
   updateSiparisDurum,
 } from "@/lib/pro-admin-client";
+import { useAdminTablePagination } from "@/lib/yonetim/table-pagination";
 
 const DURUM_OPTIONS = [
   { value: "beklemede", label: "Beklemede", color: "default" },
@@ -28,6 +29,7 @@ export default function IsletmeSiparislerPanel() {
   const [loading, setLoading] = useState(true);
   const [rows, setRows] = useState<SiparisAdminRow[]>([]);
   const [detail, setDetail] = useState<SiparisAdminRow | null>(null);
+  const tablePagination = useAdminTablePagination();
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -70,7 +72,7 @@ export default function IsletmeSiparislerPanel() {
         loading={loading}
         search={false}
         options={false}
-        pagination={{ pageSize: 20 }}
+        pagination={tablePagination}
         headerTitle="Siparişler"
         toolBarRender={() => [
           <a key="reload" onClick={load}>

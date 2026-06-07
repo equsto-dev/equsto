@@ -24,6 +24,7 @@ import {
   resolveEkipmanPriceKeys,
   saveFiyatlarMap,
 } from "@/lib/pro-admin-client";
+import { useAdminTablePagination } from "@/lib/yonetim/table-pagination";
 
 type FiyatRow = {
   key: string;
@@ -43,6 +44,7 @@ export default function EticaretFiyatPanel() {
   const [fiyatMap, setFiyatMap] = useState<Record<string, number>>({});
   const [catalog, setCatalog] = useState<EkipmanRow[]>([]);
   const [filter, setFilter] = useState<"eksik" | "tumu">("eksik");
+  const tablePagination = useAdminTablePagination(20, filter);
   const [editOpen, setEditOpen] = useState(false);
   const [editKey, setEditKey] = useState("");
   const [editValue, setEditValue] = useState<number | null>(null);
@@ -199,7 +201,7 @@ export default function EticaretFiyatPanel() {
         loading={loading}
         dataSource={filtered}
         search={false}
-        pagination={{ pageSize: 20, showSizeChanger: true }}
+        pagination={tablePagination}
         headerTitle="Katalog fiyat sağlığı"
         toolbar={{
           menu: {

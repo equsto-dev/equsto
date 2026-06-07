@@ -11,11 +11,13 @@ import type {
   PfosProjelerResponse,
 } from "@/lib/pfos/projects/types";
 import { zoneLabel } from "@/lib/pfos/wizard/zone-labels";
+import { useAdminTablePagination } from "@/lib/yonetim/table-pagination";
 
 export default function PfosProjeList() {
   const [bundle, setBundle] = useState<PfosProjelerResponse | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const tablePagination = useAdminTablePagination(20, bundle?.projects.length);
 
   useEffect(() => {
     fetch("/api/pfos/projects", { cache: "no-store" })
@@ -263,7 +265,7 @@ export default function PfosProjeList() {
         loading={loading}
         columns={columns}
         scroll={{ x: 1200 }}
-        pagination={{ pageSize: 20, showSizeChanger: true }}
+        pagination={tablePagination}
         options={{ density: true, reload: false }}
         search={{ labelWidth: "auto", defaultCollapsed: false }}
         request={async (params) =>

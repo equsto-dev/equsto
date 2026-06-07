@@ -11,6 +11,7 @@ import {
   fetchEkipmanlarCatalog,
   rowHasImage,
 } from "@/lib/pro-admin-client";
+import { useAdminTablePagination } from "@/lib/yonetim/table-pagination";
 
 type TableRow = EkipmanRow & { key: string; hasImage: boolean };
 
@@ -19,6 +20,7 @@ export default function KatalogPanel() {
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState<"all" | "noImage" | "hasImage">("all");
   const [brandFilter, setBrandFilter] = useState<"all" | "ozti">("ozti");
+  const tablePagination = useAdminTablePagination(20, `${filter}|${brandFilter}`);
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -176,7 +178,7 @@ export default function KatalogPanel() {
         columns={columns}
         dataSource={filtered}
         search={{ labelWidth: "auto" }}
-        pagination={{ pageSize: 20, showSizeChanger: true }}
+        pagination={tablePagination}
         headerTitle="Vitrin kataloğu (ekipmanlar.json)"
         toolbar={{
           menu: {

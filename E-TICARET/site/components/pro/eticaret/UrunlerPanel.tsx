@@ -39,6 +39,7 @@ import {
   type BulkUrunRow,
   type UrunQuickFilter,
 } from "@/lib/pro/urun-health";
+import { useAdminTablePagination } from "@/lib/yonetim/table-pagination";
 
 type FormValues = {
   ad: string;
@@ -77,6 +78,10 @@ export default function UrunlerPanel() {
   const [bulkRows, setBulkRows] = useState<BulkUrunRow[]>([]);
   const [bulkErrors, setBulkErrors] = useState<string[]>([]);
   const [bulkImporting, setBulkImporting] = useState(false);
+  const tablePagination = useAdminTablePagination(
+    20,
+    `${quickFilter}|${filterMarka ?? ""}|${filterKategori ?? ""}`,
+  );
 
   const loadMeta = useCallback(async () => {
     const meta = await fetchUrunlerMeta();
@@ -313,7 +318,7 @@ export default function UrunlerPanel() {
           }
           return { data, success: true, total: data.length };
         }}
-        pagination={{ pageSize: 20, showSizeChanger: true }}
+        pagination={tablePagination}
         search={{ labelWidth: "auto" }}
         headerTitle="Ürün listesi"
         toolBarRender={() => [
