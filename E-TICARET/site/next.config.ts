@@ -130,7 +130,7 @@ const nextConfig: NextConfig = {
     "prisma",
     "meilisearch",
     "puppeteer-core",
-    "@sparticuz/chromium",
+    "@sparticuz/chromium-min",
   ],
   outputFileTracingExcludes: {
     "/**": apiTraceExcludes,
