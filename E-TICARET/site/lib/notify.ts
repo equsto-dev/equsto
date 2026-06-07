@@ -224,6 +224,25 @@ export async function notifyNewLead(m: Musteri): Promise<NotifyResult> {
   return sendInstantAlert("Equsto — yeni mesaj (kedi sohbet)", leadBody(m));
 }
 
+/** Müşteriye WhatsApp onayı (Green API / Meta — telefon profilde kayıtlı olmalı) */
+export async function notifyCustomerLeadAck(m: Musteri): Promise<void> {
+  if (!whatsAppSendConfigured()) return;
+  const to = normalizeWaRecipient(m.tel);
+  if (!to) return;
+  const preview = String(m.mesaj || "").trim().slice(0, 240);
+  const text = [
+    "Equsto — mesajınız alındı.",
+    preview ? `"${preview}"` : "",
+    "En kısa sürede size dönüş yapacağız.",
+  ]
+    .filter(Boolean)
+    .join("\n\n");
+  const wa = await sendWhatsAppText(to, text);
+  if (!wa.ok) {
+    console.error("[notify] customer wa ack", wa.error);
+  }
+}
+
 function siparisBody(s: Siparis): string {
   return [
     `Sipariş: ${s.siparisNo}`,
