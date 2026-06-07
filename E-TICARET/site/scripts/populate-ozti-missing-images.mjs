@@ -44,6 +44,30 @@ const PROXY = {
   "2919.0B390.AD01.00": "ozti-7506-0b390-00.jpg",
   /** WMF şebeke kiti — ax-images yok; 1100S/1300S makine görseli (Cafemarkt). */
   "9868.11986.6001": { kod: "9580.1100S.00" },
+  /** İki katlı OTKFGE 12090 elektrik — ax-images yok; G/E kardeş SKU */
+  "7890.12901.51": { kod: "7890.12901.55" },
+  /** ATS çay kazanları — ax-images 404; aynı seri kardeş model */
+  "8573.CDE3S": { kod: "8573.CDE2S" },
+  "8573.CDE4S": { kod: "8573.CDE2S" },
+  "8573.CDE5S": { kod: "8573.CDE2S" },
+  "8573.CDGE4S": { kod: "8573.CDGE3S" },
+  "8573.CDGE5": { kod: "8573.CDGE3S" },
+  "8573.CDGE6S": { kod: "8573.CDGE3S" },
+  "8573.CSGE4S": { kod: "8573.CDGE3S" },
+  "8573.CSGE5S": { kod: "8573.CDGE3S" },
+  "8573.EDE3S": { kod: "8573.EDE2S" },
+  "8573.ESE2S": { kod: "8573.EDE2S" },
+  "8573.ESE3S": { kod: "8573.ESE3R.00" },
+  /** Gurmeaid mikser — renk varyantları */
+  "9810.EF705.H0": { kod: "9810.EF708.B0" },
+  "9810.EF708.G0": { kod: "9810.EF708.B0" },
+  "9810.EF708.S0": { kod: "9810.EF708.B0" },
+  /** Sebze doğrama USD-01 + diskler — ax-images yok */
+  "8840.USD01.00": { kod: "8840.USD02.00" },
+  "8841.SDC10.00": { kod: "8840.USD02.00" },
+  "8841.SDC20.00": { kod: "8840.USD02.00" },
+  "8841.SDK10.00": { kod: "8840.USD02.00" },
+  "8841.SDP10.00": { kod: "8840.USD02.00" },
 };
 
 function normKod(k) {
