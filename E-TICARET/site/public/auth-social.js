@@ -105,32 +105,54 @@
     });
   }
 
+  function googleBtnPixelWidth() {
+    var slot = document.getElementById("google-btn-slot");
+    var card = document.querySelector(".auth-card");
+    var base = 320;
+    if (card && card.clientWidth > 0) {
+      var styles = window.getComputedStyle(card);
+      var padL = parseFloat(styles.paddingLeft) || 22;
+      var padR = parseFloat(styles.paddingRight) || 22;
+      base = card.clientWidth - padL - padR - 20;
+    } else if (slot && slot.clientWidth > 0) {
+      base = slot.clientWidth - 20;
+    }
+    return Math.max(240, Math.min(332, Math.floor(base)));
+  }
+
   function renderGoogleButton(clientId) {
     var slot = document.getElementById("google-btn-slot");
     if (!slot || !clientId || !window.google || !window.google.accounts) return;
-    slot.innerHTML = "";
-    try {
-      window.google.accounts.id.initialize({
-        client_id: clientId,
-        callback: function (res) {
-          if (!res || !res.credential) return;
-          if (typeof window.equstoAuthGoogleCredential === "function") {
-            window.equstoAuthGoogleCredential(res.credential);
-          }
-        },
-        auto_select: false,
-      });
-      window.google.accounts.id.renderButton(slot, {
-        type: "standard",
-        theme: "outline",
-        size: "large",
-        width: Math.min(360, slot.offsetWidth || 320),
-        text: "continue_with",
-        locale: document.documentElement.lang === "en" ? "en" : "tr",
-      });
-    } catch (e) {
-      console.warn("[auth-social] Google button", e);
+
+    function paint() {
+      slot.innerHTML = "";
+      try {
+        window.google.accounts.id.initialize({
+          client_id: clientId,
+          callback: function (res) {
+            if (!res || !res.credential) return;
+            if (typeof window.equstoAuthGoogleCredential === "function") {
+              window.equstoAuthGoogleCredential(res.credential);
+            }
+          },
+          auto_select: false,
+        });
+        window.google.accounts.id.renderButton(slot, {
+          type: "standard",
+          theme: "outline",
+          size: "large",
+          width: googleBtnPixelWidth(),
+          text: "continue_with",
+          locale: document.documentElement.lang === "en" ? "en" : "tr",
+        });
+      } catch (e) {
+        console.warn("[auth-social] Google button", e);
+      }
     }
+
+    requestAnimationFrame(function () {
+      requestAnimationFrame(paint);
+    });
   }
 
   function googleClientIdOrFetch(cb) {
