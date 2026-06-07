@@ -108,16 +108,17 @@
   function googleBtnPixelWidth() {
     var slot = document.getElementById("google-btn-slot");
     var card = document.querySelector(".auth-card");
-    var base = 320;
+    var inset = 36;
+    var base = 300;
     if (card && card.clientWidth > 0) {
       var styles = window.getComputedStyle(card);
       var padL = parseFloat(styles.paddingLeft) || 22;
       var padR = parseFloat(styles.paddingRight) || 22;
-      base = card.clientWidth - padL - padR - 20;
+      base = card.clientWidth - padL - padR - inset;
     } else if (slot && slot.clientWidth > 0) {
-      base = slot.clientWidth - 20;
+      base = slot.clientWidth - inset;
     }
-    return Math.max(240, Math.min(332, Math.floor(base)));
+    return Math.max(240, Math.min(304, Math.floor(base)));
   }
 
   function renderGoogleButton(clientId) {
