@@ -36,7 +36,7 @@ export const ACCOUNT_CARDS: AccountCard[] = [
     id: "security",
     title: "Giriş ve güvenlik",
     description:
-      "E-posta, telefon ve oturum bilgilerinizi görüntüleyin; güvenli çıkış yapın.",
+      "E-posta, telefon ve oturum bilgilerinizi görüntüleyin; cep telefonunuzu ekleyin veya güncelleyin.",
     href: "#guvenlik",
     icon: "security",
   },

@@ -1,0 +1,81 @@
+═══════════════════════════════════════════════════════════════════════════
+KİLİT — PFOS halk teklifi · üye oturumu · giriş/kayıt · Hesabım merkezi
+Onay: 2026-06-08 · Commit referans: 88a02ad9 (Hesabım hub)
+İlgili commitler: 808f3392 · eec1fcb5 · 4954f86c · 252d5122 · cd06dcef · 6167d824
+═══════════════════════════════════════════════════════════════════════════
+
+Bu kilitleme oturum boyunca onaylanan PFOS halk akışı, üye zorunluluğu,
+teklif PDF teslimi, WhatsApp modal üye kapısı, giriş sayfası vitrin bandı,
+kayıt (telefon + şifre tekrar) ve Amazon tarzı /hesabim merkezini korur.
+
+── 1. PFOS halk sihirbazı ─────────────────────────────────────────────────
+  • Üye girişi sihirbaz BAŞINDA (son adımda değil) — giriş sonrası akış sıfırlanmaz
+  • Giriş/kayıt linkleri ?next= ile PFOS'a geri döner (pfosLoginHref / pfosRegisterHref)
+  • «Üye Girişi» + «Kayıt ol» kapısı (memberGate)
+  • Panel geçişleri sakin: PFOS_PANEL_FADE_MS=320, secPending/secReveal (clip-path YOK)
+  • Proforma: deliveryOnly — yalnızca e-posta / WhatsApp PDF; indirme yok
+  • Girişli üye bilgi formu görmez; profil equsto_member_v1 / checkout'tan gelir
+
+── 2. Teklif API ve teslim ─────────────────────────────────────────────────
+  • POST /api/teklifler ve /api/musteriler → requireMemberSession zorunlu
+  • PDF: Resend e-posta + Green API WhatsApp (EQUSTO_WHATSAPP_MODE=green-api)
+  • İndirme butonu halk PFOS'ta kapalı (deliveryOnly)
+
+── 3. WhatsApp modal (Mr. Equsto) ──────────────────────────────────────────
+  • Sohbet öncesi üye kapısı — PFOS ile aynı «Üye Girişi» + «Kayıt ol»
+  • WA_MODAL_BUILD = 23 (DOM yenileme kilidi)
+  • equstoLoginHref / equstoRegisterHref ile ?next= geri dönüş
+  • Stil: .equsto-wa-login-gate__btn (lacivert), __register linki
+
+── 4. Giriş / kayıt sayfası ──────────────────────────────────────────────
+  • AuthVitrinChrome: vitrin üst bant + kategori çekmecesi (header/topnav)
+  • auth.css: köşe auth-topbar gizli (--eq-shop-chrome-h padding)
+  • E-posta kayıt: cep telefonu ZORUNLU (auth-phone, ShopMember.telefon)
+  • Kayıt: şifre tekrar alanı (auth-password2) — eşleşme kontrolü
+  • redirectAfterAuth: ?next= (Google/Apple dahil)
+
+── 5. Hesabım merkezi ────────────────────────────────────────────────────
+  • /hesabim — Amazon tarzı kart + link sütunları (MemberAccountHub)
+  • eq-site-urls.js: account → /hesabim (EN: /en/account)
+  • equsto-member.js: girişli header → equstoUrl("account")
+  • next.config: hesabim.html → /hesabim yönlendirmesi
+  • SHOP_ASSET_V = 20260608hesabim-hub
+
+── Kilitli dosyalar ───────────────────────────────────────────────────────
+  components/pfos/public/PfosPublicWizard.tsx
+  components/pfos/public/pfos-public.module.css
+  components/pfos/TeklifV14Proforma.tsx
+  lib/pfos/member-session.client.ts
+  lib/member-auth.ts
+  lib/vitrin/bodies/login.ts
+  lib/account/account-hub.ts
+  components/account/MemberAccountHub.tsx
+  components/auth/AuthVitrinChrome.tsx
+  app/(auth)/layout.tsx
+  app/(vitrin)/hesabim/page.tsx
+  app/api/teklifler/[[...id]]/route.ts
+  app/api/musteriler/[[...id]]/route.ts
+  public/contact.js · public/contact.css
+  public/equsto-auth-client.js · public/auth-social.js · public/auth.css
+  public/equsto-member.js · public/eq-site-urls.js
+  public/eq-pfos-wizard.css
+  lib/shop/assets.ts
+  next.config.ts
+  prisma/schema.prisma
+  prisma/migrations/20260608150000_shop_member_telefon/
+
+YASAK (onay olmadan):
+  • PFOS üye kapısını sihirbaz sonuna taşımak veya kaldırmak
+  • Halk PFOS'ta PDF indirme butonunu geri getirmek
+  • Teklif/müşteri API'lerinden requireMemberSession kaldırmak
+  • Kayıtta telefon veya şifre tekrar zorunluluğunu kaldırmak
+  • Auth layout'tan AuthVitrinChrome / vitrin üst bandını çıkarmak
+  • /hesabim hub'unu kaldırmak veya header hesap linkini login'e sabitlemek
+  • WA modal üye kapısını kaldırmak veya WA_MODAL_BUILD'i düşürmek
+  • PFOS panel clip-path sıçrama animasyonlarına geri dönmek
+
+── Doğrulama ─────────────────────────────────────────────────────────────
+  npm run verify:pfos-uye-auth-kilit
+  Vercel prebuild: zorunlu
+
+═══════════════════════════════════════════════════════════════════════════

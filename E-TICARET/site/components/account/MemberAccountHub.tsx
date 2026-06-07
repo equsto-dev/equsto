@@ -25,6 +25,7 @@ type EqustoMemberWindow = Window & {
   equstoAuthLogout?: () => Promise<unknown>;
   equstoClearMemberSession?: () => void;
   equstoShowWhatsAppModal?: () => void;
+  equstoSetMemberActive?: (extra: Record<string, string>) => void;
 };
 
 function readLocalProfile(): Partial<MemberProfile> {
@@ -74,6 +75,10 @@ function formatPhone(t: string) {
 export default function MemberAccountHub() {
   const [profile, setProfile] = useState<MemberProfile | null>(null);
   const [ready, setReady] = useState(false);
+  const [phoneEditing, setPhoneEditing] = useState(false);
+  const [phoneInput, setPhoneInput] = useState("");
+  const [phoneSaving, setPhoneSaving] = useState(false);
+  const [phoneError, setPhoneError] = useState("");
 
   const load = useCallback(async () => {
     if (!memberLoggedInNow()) {
@@ -135,6 +140,57 @@ export default function MemberAccountHub() {
     window.location.href = "/login";
   }
 
+  function startPhoneEdit() {
+    setPhoneInput(profile?.telefon || "");
+    setPhoneError("");
+    setPhoneEditing(true);
+  }
+
+  function cancelPhoneEdit() {
+    setPhoneEditing(false);
+    setPhoneError("");
+  }
+
+  async function savePhone() {
+    const w = window as EqustoMemberWindow;
+    const token = w.equstoGetMemberToken?.() || "";
+    if (!token) {
+      window.location.href = pfosLoginHref();
+      return;
+    }
+    setPhoneSaving(true);
+    setPhoneError("");
+    try {
+      const res = await fetch("/api/auth/profile", {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({ telefon: phoneInput.trim() }),
+      });
+      const data = (await res.json()) as {
+        success?: boolean;
+        error?: string;
+        user?: MemberProfile;
+      };
+      if (!res.ok || !data.success || !data.user) {
+        setPhoneError(data.error || "Telefon kaydedilemedi.");
+        return;
+      }
+      setProfile((prev) => (prev ? { ...prev, telefon: data.user!.telefon } : prev));
+      w.equstoSetMemberActive?.({
+        telefon: data.user.telefon,
+        phone: data.user.telefon,
+      });
+      setPhoneEditing(false);
+    } catch {
+      setPhoneError("Bağlantı hatası. Lütfen tekrar deneyin.");
+    } finally {
+      setPhoneSaving(false);
+    }
+  }
+
   if (!ready || !profile) {
     return <div className={styles.loading}>Hesabınız yükleniyor…</div>;
   }
@@ -179,11 +235,60 @@ export default function MemberAccountHub() {
             <span className={styles.profileLabel}>E-posta</span>
             <span className={styles.profileValue}>{profile.email}</span>
           </div>
-          <div>
+          <div className={styles.phoneField}>
             <span className={styles.profileLabel}>Cep telefonu</span>
-            <span className={styles.profileValue}>
-              {formatPhone(profile.telefon)}
-            </span>
+            {phoneEditing ? (
+              <div className={styles.phoneForm}>
+                <input
+                  type="tel"
+                  className={styles.phoneInput}
+                  value={phoneInput}
+                  onChange={(e) => setPhoneInput(e.target.value)}
+                  placeholder="5xx xxx xx xx"
+                  autoComplete="tel"
+                  inputMode="tel"
+                  disabled={phoneSaving}
+                />
+                <div className={styles.phoneActions}>
+                  <button
+                    type="button"
+                    className={styles.phoneSaveBtn}
+                    onClick={() => void savePhone()}
+                    disabled={phoneSaving}
+                  >
+                    {phoneSaving ? "Kaydediliyor…" : "Kaydet"}
+                  </button>
+                  <button
+                    type="button"
+                    className={styles.phoneCancelBtn}
+                    onClick={cancelPhoneEdit}
+                    disabled={phoneSaving}
+                  >
+                    İptal
+                  </button>
+                </div>
+                {phoneError ? (
+                  <p className={styles.phoneError}>{phoneError}</p>
+                ) : (
+                  <p className={styles.phoneHint}>
+                    PFOS teklif PDF&apos;i ve WhatsApp gönderimi için kullanılır.
+                  </p>
+                )}
+              </div>
+            ) : (
+              <div className={styles.phoneDisplay}>
+                <span className={styles.profileValue}>
+                  {formatPhone(profile.telefon)}
+                </span>
+                <button
+                  type="button"
+                  className={styles.phoneEditBtn}
+                  onClick={startPhoneEdit}
+                >
+                  {profile.telefon ? "Düzenle" : "Ekle"}
+                </button>
+              </div>
+            )}
           </div>
           <div>
             <span className={styles.profileLabel}>Giriş yöntemi</span>
