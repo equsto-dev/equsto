@@ -1,4 +1,5 @@
 import { sendResendEmail } from "@/lib/email/resend-send";
+import { generateTeklifV14ExcelBuffer } from "@/lib/pfos/teklif/export-teklif-v14.server";
 import { generateTeklifV14PdfBuffer } from "@/lib/pfos/teklif/export-teklif-v14-pdf.server";
 import type { TeklifAdminRow } from "@/lib/teklif";
 import {
@@ -32,19 +33,30 @@ export async function sendTeklifCustomerEmail(
     return { attempted: true, sent: false, error: "Teklif modeli eksik" };
   }
 
-  const filename = teklifPdfFilename(model, teklif.ref_no);
+  const pdfFilename = teklifPdfFilename(model, teklif.ref_no);
   const genel = teklifGenelToplamLabel(model);
 
   let attachment: Buffer;
+  let filename = pdfFilename;
+  let attachmentKind: "pdf" | "xlsx" = "pdf";
   try {
     attachment = await generateTeklifV14PdfBuffer(model);
-  } catch (e) {
-    return {
-      attempted: true,
-      sent: false,
-      error: e instanceof Error ? e.message : "PDF oluşturulamadı",
-    };
+  } catch (pdfErr) {
+    console.error("[teklif] PDF oluşturulamadı, Excel yedek:", pdfErr);
+    try {
+      attachment = await generateTeklifV14ExcelBuffer(model);
+      filename = pdfFilename.replace(/\.pdf$/i, ".xlsx");
+      attachmentKind = "xlsx";
+    } catch (e) {
+      return {
+        attempted: true,
+        sent: false,
+        error: e instanceof Error ? e.message : "PDF oluşturulamadı",
+      };
+    }
   }
+
+  const attachmentLabel = attachmentKind === "pdf" ? "PDF" : "Excel";
 
   const subject = `Equsto teklifiniz — ${teklif.ref_no}`;
   const text = [
@@ -57,7 +69,7 @@ export async function sendTeklifCustomerEmail(
     `Konsept: ${teklif.konsept || model.meta?.konseptLabel || "—"}`,
     `Tahmini toplam: ${genel} (KDV hariç)`,
     "",
-    "Ekte PDF proforma dosyanız bulunmaktadır.",
+    `Ekte ${attachmentLabel} proforma dosyanız bulunmaktadır.`,
     "Satış ekibimiz en kısa sürede sizinle iletişime geçecektir.",
     "",
     `Equsto — ${siteUrl()}`,
@@ -72,7 +84,7 @@ export async function sendTeklifCustomerEmail(
       <li><strong>Konsept:</strong> ${teklif.konsept || model.meta?.konseptLabel || "—"}</li>
       <li><strong>Tahmini toplam:</strong> ${genel} (KDV hariç)</li>
     </ul>
-    <p>Ekte PDF proforma dosyanız vardır.</p>
+    <p>Ekte ${attachmentLabel} proforma dosyanız vardır.</p>
     <p><a href="${siteUrl()}/contact">İletişim</a> · <a href="${siteUrl()}/pfos">PFOS</a></p>
   `.trim();
 
