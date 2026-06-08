@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
- * İnoksan Gastroline + Klasik Seri servis hatları → Equsto / standart-servis-hatti
- * Kaynak: tezgah.json (INO-*), görseller inoksan-web-index + public/images/catalog/inoksan/web
+ * İnoksan Gastroline + Klasik Seri servis hatları → Equsto / market-reyon self-servis-hatti
+ * Kaynak: tezgah veya market-reyon (INO-* / mevcut Equsto), görseller inoksan-web-index
  *
  *   node scripts/import-equsto-servis-hatti.mjs
  *   node scripts/import-equsto-servis-hatti.mjs --dry-run
@@ -13,7 +13,8 @@ import { fileURLToPath } from "node:url";
 import { foldTr, slugify } from "./lib/ozti-enrich.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
-const DEPT_FILE = path.join(ROOT, "public/data/dept/tezgah.json");
+const TEZGAH_FILE = path.join(ROOT, "public/data/dept/tezgah.json");
+const MARKET_FILE = path.join(ROOT, "public/data/dept/market-reyon.json");
 const WEB_INDEX = path.join(ROOT, "scripts/data/inoksan-web-index.json");
 const INO_IMG_DIR = path.join(ROOT, "public/images/catalog/inoksan/web");
 const OUT_IMG_DIR = path.join(ROOT, "public/images/catalog/equsto/servis-hatti");
@@ -21,8 +22,10 @@ const OUT_IMG_SUB = "images/catalog/equsto/servis-hatti";
 
 const BRAND = "Equsto";
 const BRAND_ID = "equsto";
-const CATEGORY = "standart-servis-hatti";
-const CATEGORY_LABEL = "Standart Servis Hattı";
+const CATEGORY = "self-servis-hatti";
+const CATEGORY_LABEL = "Self-Servis Hattı";
+const TILE_ID = "self-servis";
+const DEPT = "market-reyon";
 const KAYNAK = "equsto-inoksan-servis-hatti";
 const CAT_URLS = [
   "gastroline-standart-servis-hatti",
@@ -208,7 +211,7 @@ function toEqustoRow(row, webByFamily) {
   ];
   const out = {
     id: `${BRAND_ID}__${slug}`,
-    dept: "tezgah",
+    dept: DEPT,
     category: CATEGORY,
     brand: BRAND,
     oem_brand: "İnoksan",
@@ -217,13 +220,16 @@ function toEqustoRow(row, webByFamily) {
     model: sku,
     urun_kodu: sku,
     stok_no: sku,
-    tileId: CATEGORY,
+    tileId: TILE_ID,
     keywords: [
       BRAND,
       sku,
       inoCode(oldSku),
       CATEGORY,
       CATEGORY_LABEL,
+      "Servis & Teşhir",
+      "self-servis",
+      "self servis",
       "servis hattı",
       "servis hatti",
       "standart servis",
@@ -246,7 +252,11 @@ function toEqustoRow(row, webByFamily) {
 }
 
 function isTargetRow(row, bases) {
-  if (row?.category === CATEGORY && row?.brand === BRAND && row?.inoksan_kaynak_sku) {
+  if (
+    row?.brand === BRAND &&
+    row?.inoksan_kaynak_sku &&
+    (row?.kaynak === KAYNAK || row?.category === CATEGORY || row?.category === "standart-servis-hatti")
+  ) {
     return bases.has(skuFamily(row.inoksan_kaynak_sku));
   }
   if (row?.brand !== "İnoksan") return false;
@@ -259,8 +269,8 @@ function sourceInoSku(row) {
 }
 
 function main() {
-  if (!fs.existsSync(DEPT_FILE)) {
-    console.error("tezgah.json yok");
+  if (!fs.existsSync(TEZGAH_FILE) && !fs.existsSync(MARKET_FILE)) {
+    console.error("dept json yok");
     process.exit(1);
   }
   if (!fs.existsSync(WEB_INDEX)) {
@@ -273,8 +283,14 @@ function main() {
   const bases = loadTargetBases(webProducts);
   const webByFamily = buildWebByFamily(webProducts);
 
-  const tezgah = JSON.parse(fs.readFileSync(DEPT_FILE, "utf8"));
-  const targets = tezgah.filter((r) => isTargetRow(r, bases));
+  const tezgah = fs.existsSync(TEZGAH_FILE)
+    ? JSON.parse(fs.readFileSync(TEZGAH_FILE, "utf8"))
+    : [];
+  const market = fs.existsSync(MARKET_FILE)
+    ? JSON.parse(fs.readFileSync(MARKET_FILE, "utf8"))
+    : [];
+  const catalog = [...tezgah, ...market];
+  const targets = catalog.filter((r) => isTargetRow(r, bases));
   if (!targets.length) {
     console.error("[equsto-servis-hatti] eşleşen satır yok");
     process.exit(1);
@@ -284,19 +300,22 @@ function main() {
   const equstoSkus = new Set(equstoRows.map((r) => r.sku));
   const removedSkus = new Set(targets.map((r) => r.sku));
 
-  const merged = tezgah
-    .filter((r) => !removedSkus.has(r.sku) && !equstoSkus.has(r.sku))
-    .concat(equstoRows);
+  const newTezgah = tezgah.filter((r) => !removedSkus.has(r.sku) && !equstoSkus.has(r.sku));
+  const newMarket = [
+    ...market.filter((r) => !removedSkus.has(r.sku) && !equstoSkus.has(r.sku)),
+    ...equstoRows,
+  ];
 
   const imgOk = equstoRows.filter((r) => r.images?.length).length;
   console.log(
     `[equsto-servis-hatti] ${dryRun ? "DRY-RUN" : "OK"} | ${equstoRows.length} ürün | görsel: ${imgOk}/${equstoRows.length}`,
   );
-  console.log(`  kategori: ${CATEGORY} (${CATEGORY_LABEL})`);
-  console.log(`  web aile: ${bases.size} | kalan İnoksan tezgah: ${merged.filter((r) => r.brand === "İnoksan").length}`);
+  console.log(`  dept: ${DEPT} | kategori: ${CATEGORY} (${CATEGORY_LABEL})`);
+  console.log(`  tezgah: ${tezgah.length} → ${newTezgah.length} | market-reyon: ${market.length} → ${newMarket.length}`);
 
   if (!dryRun) {
-    fs.writeFileSync(DEPT_FILE, JSON.stringify(merged), "utf8");
+    fs.writeFileSync(TEZGAH_FILE, JSON.stringify(newTezgah), "utf8");
+    fs.writeFileSync(MARKET_FILE, JSON.stringify(newMarket), "utf8");
     execFileSync(process.execPath, ["scripts/rebuild-ekipmanlar-from-dept.mjs"], {
       cwd: ROOT,
       stdio: "inherit",
