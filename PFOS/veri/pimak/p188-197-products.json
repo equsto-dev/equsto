@@ -7,16 +7,16 @@
     "aile_slug": "alt-tablasiz-calisma-tezgahi",
     "category": "calisma-tezgahi",
     "pdf_page": 188,
-    "liste_fiyati_eur": 340.0,
+    "liste_fiyati_eur": 270.0,
     "ebat_mm": "600x600x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg",
     "olcu_etiket": "600×600×850 mm",
     "olculer": {
       "genislik_mm": 600,
       "derinlik_mm": 600,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.09060.00",
@@ -26,16 +26,16 @@
     "aile_slug": "alt-tablasiz-calisma-tezgahi",
     "category": "calisma-tezgahi",
     "pdf_page": 188,
-    "liste_fiyati_eur": 380.0,
+    "liste_fiyati_eur": 300.0,
     "ebat_mm": "900x600x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg",
     "olcu_etiket": "900×600×850 mm",
     "olculer": {
       "genislik_mm": 900,
       "derinlik_mm": 600,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.10060.00",
@@ -45,16 +45,16 @@
     "aile_slug": "alt-tablasiz-calisma-tezgahi",
     "category": "calisma-tezgahi",
     "pdf_page": 188,
-    "liste_fiyati_eur": 400.0,
+    "liste_fiyati_eur": 310.0,
     "ebat_mm": "1000x600x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg",
     "olcu_etiket": "1000×600×850 mm",
     "olculer": {
       "genislik_mm": 1000,
       "derinlik_mm": 600,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.12060.00",
@@ -64,16 +64,16 @@
     "aile_slug": "alt-tablasiz-calisma-tezgahi",
     "category": "calisma-tezgahi",
     "pdf_page": 188,
-    "liste_fiyati_eur": 420.0,
+    "liste_fiyati_eur": 330.0,
     "ebat_mm": "1200x600x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg",
     "olcu_etiket": "1200×600×850 mm",
     "olculer": {
       "genislik_mm": 1200,
       "derinlik_mm": 600,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.14060.00",
@@ -83,16 +83,16 @@
     "aile_slug": "alt-tablasiz-calisma-tezgahi",
     "category": "calisma-tezgahi",
     "pdf_page": 188,
-    "liste_fiyati_eur": 460.0,
+    "liste_fiyati_eur": 350.0,
     "ebat_mm": "1400x600x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg",
     "olcu_etiket": "1400×600×850 mm",
     "olculer": {
       "genislik_mm": 1400,
       "derinlik_mm": 600,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.16060.00",
@@ -102,16 +102,16 @@
     "aile_slug": "alt-tablasiz-calisma-tezgahi",
     "category": "calisma-tezgahi",
     "pdf_page": 188,
-    "liste_fiyati_eur": 500.0,
+    "liste_fiyati_eur": 370.0,
     "ebat_mm": "1600x600x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg",
     "olcu_etiket": "1600×600×850 mm",
     "olculer": {
       "genislik_mm": 1600,
       "derinlik_mm": 600,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.19060.00",
@@ -121,16 +121,16 @@
     "aile_slug": "alt-tablasiz-calisma-tezgahi",
     "category": "calisma-tezgahi",
     "pdf_page": 188,
-    "liste_fiyati_eur": 570.0,
+    "liste_fiyati_eur": 400.0,
     "ebat_mm": "1900x600x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg",
     "olcu_etiket": "1900×600×850 mm",
     "olculer": {
       "genislik_mm": 1900,
       "derinlik_mm": 600,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.06070.00",
@@ -140,16 +140,16 @@
     "aile_slug": "alt-tablasiz-calisma-tezgahi",
     "category": "calisma-tezgahi",
     "pdf_page": 188,
-    "liste_fiyati_eur": 360.0,
+    "liste_fiyati_eur": 280.0,
     "ebat_mm": "600x700x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg",
     "olcu_etiket": "600×700×850 mm",
     "olculer": {
       "genislik_mm": 600,
       "derinlik_mm": 700,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.09070.00",
@@ -159,16 +159,16 @@
     "aile_slug": "alt-tablasiz-calisma-tezgahi",
     "category": "calisma-tezgahi",
     "pdf_page": 188,
-    "liste_fiyati_eur": 400.0,
+    "liste_fiyati_eur": 310.0,
     "ebat_mm": "900x700x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg",
     "olcu_etiket": "900×700×850 mm",
     "olculer": {
       "genislik_mm": 900,
       "derinlik_mm": 700,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.10070.00",
@@ -178,16 +178,16 @@
     "aile_slug": "alt-tablasiz-calisma-tezgahi",
     "category": "calisma-tezgahi",
     "pdf_page": 188,
-    "liste_fiyati_eur": 420.0,
+    "liste_fiyati_eur": 330.0,
     "ebat_mm": "1000x700x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg",
     "olcu_etiket": "1000×700×850 mm",
     "olculer": {
       "genislik_mm": 1000,
       "derinlik_mm": 700,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.12070.00",
@@ -197,16 +197,16 @@
     "aile_slug": "alt-tablasiz-calisma-tezgahi",
     "category": "calisma-tezgahi",
     "pdf_page": 188,
-    "liste_fiyati_eur": 450.0,
+    "liste_fiyati_eur": 350.0,
     "ebat_mm": "1200x700x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg",
     "olcu_etiket": "1200×700×850 mm",
     "olculer": {
       "genislik_mm": 1200,
       "derinlik_mm": 700,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.14070.00",
@@ -216,16 +216,16 @@
     "aile_slug": "alt-tablasiz-calisma-tezgahi",
     "category": "calisma-tezgahi",
     "pdf_page": 188,
-    "liste_fiyati_eur": 490.0,
+    "liste_fiyati_eur": 370.0,
     "ebat_mm": "1400x700x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg",
     "olcu_etiket": "1400×700×850 mm",
     "olculer": {
       "genislik_mm": 1400,
       "derinlik_mm": 700,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.16070.00",
@@ -235,16 +235,16 @@
     "aile_slug": "alt-tablasiz-calisma-tezgahi",
     "category": "calisma-tezgahi",
     "pdf_page": 188,
-    "liste_fiyati_eur": 540.0,
+    "liste_fiyati_eur": 400.0,
     "ebat_mm": "1600x700x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg",
     "olcu_etiket": "1600×700×850 mm",
     "olculer": {
       "genislik_mm": 1600,
       "derinlik_mm": 700,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.19070.00",
@@ -254,16 +254,16 @@
     "aile_slug": "alt-tablasiz-calisma-tezgahi",
     "category": "calisma-tezgahi",
     "pdf_page": 188,
-    "liste_fiyati_eur": 590.0,
+    "liste_fiyati_eur": 430.0,
     "ebat_mm": "1900x700x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg",
     "olcu_etiket": "1900×700×850 mm",
     "olculer": {
       "genislik_mm": 1900,
       "derinlik_mm": 700,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.06060.08",
@@ -273,16 +273,16 @@
     "aile_slug": "taban-rafli-calisma-tezgahi",
     "category": "depolama-raflari",
     "pdf_page": 188,
-    "liste_fiyati_eur": 370.0,
+    "liste_fiyati_eur": 340.0,
     "ebat_mm": "600x600x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg",
     "olcu_etiket": "600×600×850 mm",
     "olculer": {
       "genislik_mm": 600,
       "derinlik_mm": 600,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.09060.08",
@@ -292,16 +292,16 @@
     "aile_slug": "taban-rafli-calisma-tezgahi",
     "category": "depolama-raflari",
     "pdf_page": 188,
-    "liste_fiyati_eur": 430.0,
+    "liste_fiyati_eur": 380.0,
     "ebat_mm": "900x600x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg",
     "olcu_etiket": "900×600×850 mm",
     "olculer": {
       "genislik_mm": 900,
       "derinlik_mm": 600,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.10060.08",
@@ -311,16 +311,16 @@
     "aile_slug": "taban-rafli-calisma-tezgahi",
     "category": "depolama-raflari",
     "pdf_page": 188,
-    "liste_fiyati_eur": 450.0,
+    "liste_fiyati_eur": 400.0,
     "ebat_mm": "1000x600x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg",
     "olcu_etiket": "1000×600×850 mm",
     "olculer": {
       "genislik_mm": 1000,
       "derinlik_mm": 600,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.12060.08",
@@ -330,16 +330,16 @@
     "aile_slug": "taban-rafli-calisma-tezgahi",
     "category": "depolama-raflari",
     "pdf_page": 188,
-    "liste_fiyati_eur": 470.0,
+    "liste_fiyati_eur": 420.0,
     "ebat_mm": "1200x600x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg",
     "olcu_etiket": "1200×600×850 mm",
     "olculer": {
       "genislik_mm": 1200,
       "derinlik_mm": 600,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.14060.08",
@@ -349,16 +349,16 @@
     "aile_slug": "taban-rafli-calisma-tezgahi",
     "category": "depolama-raflari",
     "pdf_page": 188,
-    "liste_fiyati_eur": 520.0,
+    "liste_fiyati_eur": 460.0,
     "ebat_mm": "1400x600x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg",
     "olcu_etiket": "1400×600×850 mm",
     "olculer": {
       "genislik_mm": 1400,
       "derinlik_mm": 600,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.16060.08",
@@ -368,16 +368,16 @@
     "aile_slug": "taban-rafli-calisma-tezgahi",
     "category": "depolama-raflari",
     "pdf_page": 188,
-    "liste_fiyati_eur": 580.0,
+    "liste_fiyati_eur": 500.0,
     "ebat_mm": "1600x600x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg",
     "olcu_etiket": "1600×600×850 mm",
     "olculer": {
       "genislik_mm": 1600,
       "derinlik_mm": 600,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.19060.08",
@@ -387,16 +387,16 @@
     "aile_slug": "taban-rafli-calisma-tezgahi",
     "category": "depolama-raflari",
     "pdf_page": 188,
-    "liste_fiyati_eur": 660.0,
+    "liste_fiyati_eur": 570.0,
     "ebat_mm": "1900x600x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg",
     "olcu_etiket": "1900×600×850 mm",
     "olculer": {
       "genislik_mm": 1900,
       "derinlik_mm": 600,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.06070.08",
@@ -406,16 +406,16 @@
     "aile_slug": "taban-rafli-calisma-tezgahi",
     "category": "depolama-raflari",
     "pdf_page": 188,
-    "liste_fiyati_eur": 400.0,
+    "liste_fiyati_eur": 360.0,
     "ebat_mm": "600x700x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg",
     "olcu_etiket": "600×700×850 mm",
     "olculer": {
       "genislik_mm": 600,
       "derinlik_mm": 700,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.09070.08",
@@ -425,16 +425,16 @@
     "aile_slug": "taban-rafli-calisma-tezgahi",
     "category": "depolama-raflari",
     "pdf_page": 188,
-    "liste_fiyati_eur": 455.0,
+    "liste_fiyati_eur": 400.0,
     "ebat_mm": "900x700x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg",
     "olcu_etiket": "900×700×850 mm",
     "olculer": {
       "genislik_mm": 900,
       "derinlik_mm": 700,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.10070.08",
@@ -444,16 +444,16 @@
     "aile_slug": "taban-rafli-calisma-tezgahi",
     "category": "depolama-raflari",
     "pdf_page": 188,
-    "liste_fiyati_eur": 470.0,
+    "liste_fiyati_eur": 420.0,
     "ebat_mm": "1000x700x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg",
     "olcu_etiket": "1000×700×850 mm",
     "olculer": {
       "genislik_mm": 1000,
       "derinlik_mm": 700,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.12070.08",
@@ -463,16 +463,16 @@
     "aile_slug": "taban-rafli-calisma-tezgahi",
     "category": "depolama-raflari",
     "pdf_page": 188,
-    "liste_fiyati_eur": 510.0,
+    "liste_fiyati_eur": 450.0,
     "ebat_mm": "1200x700x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg",
     "olcu_etiket": "1200×700×850 mm",
     "olculer": {
       "genislik_mm": 1200,
       "derinlik_mm": 700,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.14070.08",
@@ -482,16 +482,16 @@
     "aile_slug": "taban-rafli-calisma-tezgahi",
     "category": "depolama-raflari",
     "pdf_page": 188,
-    "liste_fiyati_eur": 560.0,
+    "liste_fiyati_eur": 490.0,
     "ebat_mm": "1400x700x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg",
     "olcu_etiket": "1400×700×850 mm",
     "olculer": {
       "genislik_mm": 1400,
       "derinlik_mm": 700,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.16070.08",
@@ -501,16 +501,16 @@
     "aile_slug": "taban-rafli-calisma-tezgahi",
     "category": "depolama-raflari",
     "pdf_page": 188,
-    "liste_fiyati_eur": 630.0,
+    "liste_fiyati_eur": 540.0,
     "ebat_mm": "1600x700x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg",
     "olcu_etiket": "1600×700×850 mm",
     "olculer": {
       "genislik_mm": 1600,
       "derinlik_mm": 700,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.19070.08",
@@ -520,16 +520,16 @@
     "aile_slug": "taban-rafli-calisma-tezgahi",
     "category": "depolama-raflari",
     "pdf_page": 188,
-    "liste_fiyati_eur": 720.0,
+    "liste_fiyati_eur": 590.0,
     "ebat_mm": "1900x700x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg",
     "olcu_etiket": "1900×700×850 mm",
     "olculer": {
       "genislik_mm": 1900,
       "derinlik_mm": 700,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.06060.04",
@@ -539,16 +539,16 @@
     "aile_slug": "taban-ve-ara-rafli-calisma-tezgahi",
     "category": "depolama-raflari",
     "pdf_page": 188,
-    "liste_fiyati_eur": 270.0,
+    "liste_fiyati_eur": 370.0,
     "ebat_mm": "600x600x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg",
     "olcu_etiket": "600×600×850 mm",
     "olculer": {
       "genislik_mm": 600,
       "derinlik_mm": 600,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.09060.04",
@@ -558,16 +558,16 @@
     "aile_slug": "taban-ve-ara-rafli-calisma-tezgahi",
     "category": "depolama-raflari",
     "pdf_page": 188,
-    "liste_fiyati_eur": 300.0,
+    "liste_fiyati_eur": 430.0,
     "ebat_mm": "900x600x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg",
     "olcu_etiket": "900×600×850 mm",
     "olculer": {
       "genislik_mm": 900,
       "derinlik_mm": 600,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.10060.04",
@@ -577,16 +577,16 @@
     "aile_slug": "taban-ve-ara-rafli-calisma-tezgahi",
     "category": "depolama-raflari",
     "pdf_page": 188,
-    "liste_fiyati_eur": 310.0,
+    "liste_fiyati_eur": 450.0,
     "ebat_mm": "1000x600x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg",
     "olcu_etiket": "1000×600×850 mm",
     "olculer": {
       "genislik_mm": 1000,
       "derinlik_mm": 600,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.12060.04",
@@ -596,16 +596,16 @@
     "aile_slug": "taban-ve-ara-rafli-calisma-tezgahi",
     "category": "depolama-raflari",
     "pdf_page": 188,
-    "liste_fiyati_eur": 330.0,
+    "liste_fiyati_eur": 470.0,
     "ebat_mm": "1200x600x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg",
     "olcu_etiket": "1200×600×850 mm",
     "olculer": {
       "genislik_mm": 1200,
       "derinlik_mm": 600,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.14060.04",
@@ -615,16 +615,16 @@
     "aile_slug": "taban-ve-ara-rafli-calisma-tezgahi",
     "category": "depolama-raflari",
     "pdf_page": 188,
-    "liste_fiyati_eur": 350.0,
+    "liste_fiyati_eur": 520.0,
     "ebat_mm": "1400x600x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg",
     "olcu_etiket": "1400×600×850 mm",
     "olculer": {
       "genislik_mm": 1400,
       "derinlik_mm": 600,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.16060.04",
@@ -634,16 +634,16 @@
     "aile_slug": "taban-ve-ara-rafli-calisma-tezgahi",
     "category": "depolama-raflari",
     "pdf_page": 188,
-    "liste_fiyati_eur": 370.0,
+    "liste_fiyati_eur": 580.0,
     "ebat_mm": "1600x600x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg",
     "olcu_etiket": "1600×600×850 mm",
     "olculer": {
       "genislik_mm": 1600,
       "derinlik_mm": 600,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.19060.04",
@@ -653,16 +653,16 @@
     "aile_slug": "taban-ve-ara-rafli-calisma-tezgahi",
     "category": "depolama-raflari",
     "pdf_page": 188,
-    "liste_fiyati_eur": 400.0,
+    "liste_fiyati_eur": 660.0,
     "ebat_mm": "1900x600x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg",
     "olcu_etiket": "1900×600×850 mm",
     "olculer": {
       "genislik_mm": 1900,
       "derinlik_mm": 600,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.06070.04",
@@ -672,16 +672,16 @@
     "aile_slug": "taban-ve-ara-rafli-calisma-tezgahi",
     "category": "depolama-raflari",
     "pdf_page": 188,
-    "liste_fiyati_eur": 280.0,
+    "liste_fiyati_eur": 400.0,
     "ebat_mm": "600x700x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg",
     "olcu_etiket": "600×700×850 mm",
     "olculer": {
       "genislik_mm": 600,
       "derinlik_mm": 700,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.09070.04",
@@ -691,16 +691,16 @@
     "aile_slug": "taban-ve-ara-rafli-calisma-tezgahi",
     "category": "depolama-raflari",
     "pdf_page": 188,
-    "liste_fiyati_eur": 310.0,
+    "liste_fiyati_eur": 455.0,
     "ebat_mm": "900x700x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg",
     "olcu_etiket": "900×700×850 mm",
     "olculer": {
       "genislik_mm": 900,
       "derinlik_mm": 700,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.10070.04",
@@ -710,16 +710,16 @@
     "aile_slug": "taban-ve-ara-rafli-calisma-tezgahi",
     "category": "depolama-raflari",
     "pdf_page": 188,
-    "liste_fiyati_eur": 330.0,
+    "liste_fiyati_eur": 470.0,
     "ebat_mm": "1000x700x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg",
     "olcu_etiket": "1000×700×850 mm",
     "olculer": {
       "genislik_mm": 1000,
       "derinlik_mm": 700,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.12070.04",
@@ -729,16 +729,16 @@
     "aile_slug": "taban-ve-ara-rafli-calisma-tezgahi",
     "category": "depolama-raflari",
     "pdf_page": 188,
-    "liste_fiyati_eur": 350.0,
+    "liste_fiyati_eur": 510.0,
     "ebat_mm": "1200x700x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg",
     "olcu_etiket": "1200×700×850 mm",
     "olculer": {
       "genislik_mm": 1200,
       "derinlik_mm": 700,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.14070.04",
@@ -748,16 +748,16 @@
     "aile_slug": "taban-ve-ara-rafli-calisma-tezgahi",
     "category": "depolama-raflari",
     "pdf_page": 188,
-    "liste_fiyati_eur": 370.0,
+    "liste_fiyati_eur": 560.0,
     "ebat_mm": "1400x700x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg",
     "olcu_etiket": "1400×700×850 mm",
     "olculer": {
       "genislik_mm": 1400,
       "derinlik_mm": 700,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.16070.04",
@@ -767,16 +767,16 @@
     "aile_slug": "taban-ve-ara-rafli-calisma-tezgahi",
     "category": "depolama-raflari",
     "pdf_page": 188,
-    "liste_fiyati_eur": 400.0,
+    "liste_fiyati_eur": 630.0,
     "ebat_mm": "1600x700x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg",
     "olcu_etiket": "1600×700×850 mm",
     "olculer": {
       "genislik_mm": 1600,
       "derinlik_mm": 700,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.19070.04",
@@ -786,16 +786,16 @@
     "aile_slug": "taban-ve-ara-rafli-calisma-tezgahi",
     "category": "depolama-raflari",
     "pdf_page": 188,
-    "liste_fiyati_eur": 430.0,
+    "liste_fiyati_eur": 720.0,
     "ebat_mm": "1900x700x850",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg",
     "olcu_etiket": "1900×700×850 mm",
     "olculer": {
       "genislik_mm": 1900,
       "derinlik_mm": 700,
       "yukseklik_mm": 850
-    },
-    "temel_ozellikler": [],
-    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg"
+    }
   },
   {
     "urun_kodu": "PIMAK.10060.13",
