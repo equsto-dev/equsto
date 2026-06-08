@@ -6,7 +6,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260608fix3-plp-gorsel-fiyat";
+  var CATALOG_V = "20260608pimak-dinlendirme-pisirme";
   var __fullMem = null;
   var __fullInflight = null;
   var __deptMem = Object.create(null);
