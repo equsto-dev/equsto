@@ -105,6 +105,7 @@
       loadedCount: MARKA_PAGE_SIZE,
       sorted: [],
     };
+    var catalogAll = [];
 
     function filtered(list) {
       var out = list.filter(function (x) { return x && predicate(x); });
@@ -190,13 +191,14 @@
       if (btn) {
         btn.onclick = function () {
           state.loadedCount = Math.min(state.loadedCount + MARKA_PAGE_SIZE, list.length);
-          render(all);
+          render(catalogAll);
         };
       }
     }
 
     function render(all) {
-      var list = filtered(all || []);
+      if (Array.isArray(all)) catalogAll = all;
+      var list = filtered(catalogAll);
       state.sorted = list;
       var total = list.length;
       var shown = plpMode ? Math.min(state.loadedCount, total) : total;

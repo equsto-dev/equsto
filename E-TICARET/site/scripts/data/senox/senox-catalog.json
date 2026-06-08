@@ -1,0 +1,3511 @@
+{
+  "source": "https://senox.com.tr/tr",
+  "scrapedAt": "2026-06-08T21:08:07.736Z",
+  "categoryCount": 10,
+  "productCount": 63,
+  "products": [
+    {
+      "url": "https://senox.com.tr/tr/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah",
+      "slug": "senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah",
+      "listTitle": "SENOX 7301 NF A+Fanlı 7 Çekmeceli Derin ..",
+      "listImage": "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+      "listSummary": "Ayarlanabilir termostat Şebeke uyarı lambası Sıcaklık uyarı lambası Kapak kilidi Gofrajlı alüminyum iç gövde Elektrostatk toz boyalı dış gövde sacı Çevre dostu soğutucu akışkan Temperli cam",
+      "category": "Derin Dondurucular",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "derin-dondurucular",
+      "title": "SENOX 7301 NF A+Fanlı 7 Çekmeceli Derin Dondurucu Siyah",
+      "modelNo": "7301",
+      "summary": "Ayarlanabilir termostat Şebeke uyarı lambası Sıcaklık uyarı lambası Kapak kilidi Gofrajlı alüminyum iç gövde Elektrostatk toz boyalı dış gövde sacı Çevre dostu soğutucu akışkan Temperli cam",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [],
+        "rows": [],
+        "specs": {}
+      },
+      "olculer": null,
+      "ebatRaw": null,
+      "scrapedAt": "2026-06-08T21:07:28.157Z",
+      "localImage": "images/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-smr-5120-st-dondurucu",
+      "slug": "senox-smr-5120-st-dondurucu",
+      "listTitle": "Senox-SMR-5120 ST Dondurucu",
+      "listImage": "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+      "listSummary": "Enerj verimlilik sınıfı : A++ Soğutma sınıfı:SN-T 365 günde enerj tüketimi: 135 khw 24 saatte dondurma miktarı:16kg Arıza sırasında soğuk tutma:30 saat Dondurucu kapastesi Brüt/net:106/104L Gövde:Krom Çekmece sayısı:2",
+      "category": "Derin Dondurucular",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "derin-dondurucular",
+      "title": "Senox-SMR-5120 ST Dondurucu",
+      "modelNo": "SMR-5120",
+      "summary": "Enerj verimlilik sınıfı : A++ Soğutma sınıfı:SN-T 365 günde enerj tüketimi: 135 khw 24 saatte dondurma miktarı:16kg Arıza sırasında soğuk tutma:30 saat Dondurucu kapastesi Brüt/net:106/104L Gövde:Krom Çekmece sayısı:2",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Soğutucu Gaz",
+          "Voltaj",
+          "Elektrik Gücü",
+          "Ebatlar (mm)",
+          "Ağırlık"
+        ],
+        "rows": [
+          [
+            "R600a",
+            "220 V ~ 50Hz",
+            "",
+            "540 x 510x 800",
+            "47 kg"
+          ]
+        ],
+        "specs": {
+          "Soğutucu Gaz": "R600a",
+          "Voltaj": "220 V ~ 50Hz",
+          "Ebatlar (mm)": "540 x 510x 800",
+          "Ağırlık": "47 kg"
+        }
+      },
+      "olculer": {
+        "raw": "540 x 510x 800",
+        "genislik_mm": 540,
+        "derinlik_mm": 510,
+        "yukseklik_mm": 800
+      },
+      "ebatRaw": "540 x 510x 800",
+      "scrapedAt": "2026-06-08T21:07:29.078Z",
+      "localImage": "images/senox-smr-5120-st-dondurucu.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-blok-kapili-derin-dondurucu-nox",
+      "slug": "senox-blok-kapili-derin-dondurucu-nox",
+      "listTitle": "SENOX Blok Kapılı Derin Dondurucu Inox",
+      "listImage": "https://senox.com.tr/uploads/product/senox-blok-kapili-derin-dondurucu-nox-9463.png",
+      "listSummary": "Mekanik termostat Soğutucu ve dondurucu modu, çift fonksiyon Alüminyum tutamak Buz kazıyıcı Kilit Led ampul iç aydınlatma PVC kaplı kapı sacı R600a soğutucu gaz Strafor ve sihrink le paketleme Seperatör Su Tahlye sstem Tel sepet (1 adet)",
+      "category": "Derin Dondurucular",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "derin-dondurucular",
+      "title": "SENOX Blok Kapılı Derin Dondurucu Inox",
+      "modelNo": "Blok Kapılı Derin",
+      "summary": "Mekanik termostat Soğutucu ve dondurucu modu, çift fonksiyon Alüminyum tutamak Buz kazıyıcı Kilit Led ampul iç aydınlatma PVC kaplı kapı sacı R600a soğutucu gaz Strafor ve sihrink le paketleme Seperatör Su Tahlye sstem Tel sepet (1 adet)",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-blok-kapili-derin-dondurucu-nox-9463.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Ürün Kodu",
+          "Soğutucu Gaz",
+          "Voltaj",
+          "Isı Aralığı",
+          "Ebatlar (mm)"
+        ],
+        "rows": [
+          [
+            "CF-2220",
+            "R600a",
+            "220 V ~ 50Hz",
+            "-18 - / -25&deg;C",
+            "765x743x840"
+          ],
+          [
+            "CF-3320",
+            "R600a",
+            "220 V ~ 50Hz",
+            "-18 - / -25&deg;C",
+            "1040x743x840"
+          ],
+          [
+            "CF-4420",
+            "R600a",
+            "220 V ~ 50Hz",
+            "-18 - / -25&deg;C",
+            "1316x743x840"
+          ],
+          [
+            "CF-5500",
+            "R600a",
+            "220 V ~ 50Hz",
+            "-18 - / -25&deg;C",
+            "1492x743x840"
+          ],
+          [
+            "CF-6600",
+            "R600a",
+            "220 V ~ 50Hz",
+            "-18 - / -25&deg;C",
+            "1775x743x840"
+          ],
+          [
+            "CF-6650",
+            "R600a",
+            "220 V ~ 50Hz",
+            "-18 - / -25&deg;C",
+            "1904x743x840"
+          ],
+          [
+            "CF5500Krom",
+            "R600a",
+            "220 V ~ 50Hz",
+            "-18 - / -25&deg;C",
+            "1492x743x840"
+          ],
+          [
+            "CF6600Krom",
+            "R600a",
+            "220 V ~ 50Hz",
+            "-18 - / -25&deg;C",
+            "1775x743x840"
+          ],
+          [
+            "CF6650Krom",
+            "R600a",
+            "220 V ~ 50Hz",
+            "-18 - / -25&deg;C",
+            "1906x743x840"
+          ]
+        ],
+        "specs": {
+          "Ürün Kodu": "CF6650Krom",
+          "Soğutucu Gaz": "R600a",
+          "Voltaj": "220 V ~ 50Hz",
+          "Isı Aralığı": "-18 - / -25&deg;C",
+          "Ebatlar (mm)": "1906x743x840"
+        }
+      },
+      "olculer": {
+        "raw": "1906x743x840",
+        "genislik_mm": 1906,
+        "derinlik_mm": 743,
+        "yukseklik_mm": 840
+      },
+      "ebatRaw": "1906x743x840",
+      "scrapedAt": "2026-06-08T21:07:29.723Z",
+      "localImage": "images/senox-blok-kapili-derin-dondurucu-nox.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-7300a-statik-7-cekmeceli-derin-dondurucu",
+      "slug": "senox-7300a-statik-7-cekmeceli-derin-dondurucu",
+      "listTitle": "SENOX 7300A + Statik 7 Çekmeceli Derin D..",
+      "listImage": "https://senox.com.tr/uploads/product/senox-7300a-statik-7-cekmeceli-derin-dondurucu-1364.png",
+      "listSummary": "Ayarlanabilir termostat Şebeke uyarı lambası Sıcaklık uyarı lambası Kapak kilidi Gofrajlı alüminyum iç gövde Elektrostatik toz boyalı dış gövde sacı Çevre dostu soğutucu akışkan Temperli cam",
+      "category": "Derin Dondurucular",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "derin-dondurucular",
+      "title": "SENOX 7300A + Statik 7 Çekmeceli Derin Dondurucu",
+      "modelNo": "7300A",
+      "summary": "Ayarlanabilir termostat Şebeke uyarı lambası Sıcaklık uyarı lambası Kapak kilidi Gofrajlı alüminyum iç gövde Elektrostatik toz boyalı dış gövde sacı Çevre dostu soğutucu akışkan Temperli cam",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-7300a-statik-7-cekmeceli-derin-dondurucu-1364.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Soğutucu Gaz",
+          "Voltaj",
+          "Isı Aralığı",
+          "Ebatlar (mm)",
+          "Ağırlık"
+        ],
+        "rows": [
+          [
+            "R134a",
+            "220 V ~ 50Hz",
+            "-18 - +34&deg;C",
+            "600 x690x176,5",
+            "92 kg"
+          ],
+          [
+            "R134a",
+            "220 V ~ 50Hz",
+            "-18 - +34&deg;C",
+            "600 x690x176,5",
+            "100 kg"
+          ]
+        ],
+        "specs": {
+          "Soğutucu Gaz": "R134a",
+          "Voltaj": "220 V ~ 50Hz",
+          "Isı Aralığı": "-18 - +34&deg;C",
+          "Ebatlar (mm)": "600 x690x176,5",
+          "Ağırlık": "100 kg"
+        }
+      },
+      "olculer": {
+        "raw": "600 x690x176",
+        "genislik_mm": 600,
+        "derinlik_mm": 690,
+        "yukseklik_mm": 176
+      },
+      "ebatRaw": "600 x690x176,5",
+      "scrapedAt": "2026-06-08T21:07:30.258Z",
+      "localImage": "images/senox-7300a-statik-7-cekmeceli-derin-dondurucu.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-blok-kapili-derin-dondurucu-beyaz",
+      "slug": "senox-blok-kapili-derin-dondurucu-beyaz",
+      "listTitle": "SENOX Blok Kapılı Derin Dondurucu Beyaz..",
+      "listImage": "https://senox.com.tr/uploads/product/senox-blok-kapili-derin-dondurucu-beyaz-4929.png",
+      "listSummary": "Mekanik termostat Soğutucu ve dondurucu modu, çift fonkisyon Alüminyum tutamak Buz kazıyıcı Kilit Led ampul iç aydınlatma PVC kaplı kapı sacı R600a soğutucu gaz Strafor ve sihrink le paketleme Seperatör Su Tahliye sistem Tel sepet (1 adet)",
+      "category": "Derin Dondurucular",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "derin-dondurucular",
+      "title": "SENOX Blok Kapılı Derin Dondurucu Beyaz",
+      "modelNo": "Blok Kapılı Derin",
+      "summary": "Mekanik termostat Soğutucu ve dondurucu modu, çift fonkisyon Alüminyum tutamak Buz kazıyıcı Kilit Led ampul iç aydınlatma PVC kaplı kapı sacı R600a soğutucu gaz Strafor ve sihrink le paketleme Seperatör Su Tahliye sistem Tel sepet (1 adet)",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-blok-kapili-derin-dondurucu-beyaz-4929.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Ürün Kodu",
+          "Soğutucu Gaz",
+          "Voltaj",
+          "Isı Aralığı",
+          "Ebatlar (mm)"
+        ],
+        "rows": [
+          [
+            "CF-2220-BYZ",
+            "R600a",
+            "220 V ~ 50Hz",
+            "-18 - / -25&deg;C",
+            "765x743x840"
+          ],
+          [
+            "CF-3320-BYZ",
+            "R600a",
+            "220 V ~ 50Hz",
+            "-18 - / -25&deg;C",
+            "1040x743x840"
+          ],
+          [
+            "CF-4420-BYZ",
+            "R600a",
+            "220 V ~ 50Hz",
+            "-18 - / -25&deg;C",
+            "1316x743x840"
+          ],
+          [
+            "CF-5500-BYZ",
+            "R600a",
+            "220 V ~ 50Hz",
+            "-18 - / -25&deg;C",
+            "1492x743x840"
+          ],
+          [
+            "CF-6600-BYZ",
+            "R600a",
+            "220 V ~ 50Hz",
+            "-18 - / -25&deg;C",
+            "1775x743x840"
+          ],
+          [
+            "CF-6550-BYZ",
+            "R600a",
+            "220 V ~ 50Hz",
+            "-18 - / -25&deg;C",
+            "1904x743x840"
+          ],
+          [
+            "CF5500Krom",
+            "R600a",
+            "220 V ~ 50Hz",
+            "-18 - / -25&deg;C",
+            "1492x743x840"
+          ],
+          [
+            "CF6000Krom",
+            "R600a",
+            "220 V ~ 50Hz",
+            "-18 - / -25&deg;C",
+            "1775x743x840"
+          ],
+          [
+            "CF6650Krom",
+            "R600a",
+            "220 V ~ 50Hz",
+            "-18 - / -25&deg;C",
+            "1906x743x840"
+          ]
+        ],
+        "specs": {
+          "Ürün Kodu": "CF6650Krom",
+          "Soğutucu Gaz": "R600a",
+          "Voltaj": "220 V ~ 50Hz",
+          "Isı Aralığı": "-18 - / -25&deg;C",
+          "Ebatlar (mm)": "1906x743x840"
+        }
+      },
+      "olculer": {
+        "raw": "1906x743x840",
+        "genislik_mm": 1906,
+        "derinlik_mm": 743,
+        "yukseklik_mm": 840
+      },
+      "ebatRaw": "1906x743x840",
+      "scrapedAt": "2026-06-08T21:07:30.811Z",
+      "localImage": "images/senox-blok-kapili-derin-dondurucu-beyaz.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/surgu-cam-kapili-derin-dondurucu",
+      "slug": "surgu-cam-kapili-derin-dondurucu",
+      "listTitle": "Sürgü Cam Kapılı Derin Dondurucu",
+      "listImage": "https://senox.com.tr/uploads/product/surgu-cam-kapili-derin-dondurucu-8715.png",
+      "listSummary": "Aydınlatma Var Ayarlanabilir Mekanik Termostat Donma Kapastesi 7,5 Elektrik Kesintisinde Ürün Muhafaza Süresi/Saat24 Az yer kaplayan tasarım Sıcaklık Uyarı Lambası Gömme kapak tutnağı",
+      "category": "Derin Dondurucular",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "derin-dondurucular",
+      "title": "Sürgü Cam Kapılı Derin Dondurucu",
+      "modelNo": "Sürgü Cam Kapılı",
+      "summary": "Aydınlatma Var Ayarlanabilir Mekanik Termostat Donma Kapastesi 7,5 Elektrik Kesintisinde Ürün Muhafaza Süresi/Saat24 Az yer kaplayan tasarım Sıcaklık Uyarı Lambası Gömme kapak tutnağı",
+      "images": [
+        "https://senox.com.tr/uploads/product/surgu-cam-kapili-derin-dondurucu-8715.png",
+        "https://senox.com.tr/uploads/product/surgu-cam-kapili-derin-dondurucu-4368.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Ürün Kodu",
+          "Soğutucu Gaz",
+          "Voltaj",
+          "Isı Aralığı",
+          "Ebatlar (mm)"
+        ],
+        "rows": [
+          [
+            "SYS-160MD DC SYS-160MD DC SYS-210MD DC",
+            "R290a R290a R290a",
+            "220 V ~ 50Hz 220 V ~ 50Hz 220 V ~ 50Hz",
+            "+4 - / +8&deg;C -18 - / -25&deg;C -18 - / -25&deg;C",
+            "573x573x879 573x573x879 765x743x840"
+          ],
+          [
+            "SYS-310MD DC",
+            "R290a",
+            "220 V ~ 50Hz",
+            "-18 - / -25&deg;C",
+            "1040x743x840"
+          ],
+          [
+            "SYS-410MD DC",
+            "R290a",
+            "220 V ~ 50Hz",
+            "-18 - / -25&deg;C",
+            "1316x743x840"
+          ],
+          [
+            "SYS-510MD DC",
+            "R290a",
+            "220 V ~ 50Hz",
+            "-18 - / -25&deg;C",
+            "1492x743x840"
+          ],
+          [
+            "SYS-610MD DC",
+            "R290a",
+            "220 V ~ 50Hz",
+            "-18 - / -25&deg;C",
+            "1775x743x840"
+          ],
+          [
+            "SYS-650MD DC",
+            "R290a",
+            "220 V ~ 50Hz",
+            "-18 - / -25&deg;C",
+            "1904x743x840"
+          ]
+        ],
+        "specs": {
+          "Ürün Kodu": "SYS-650MD DC",
+          "Soğutucu Gaz": "R290a",
+          "Voltaj": "220 V ~ 50Hz",
+          "Isı Aralığı": "-18 - / -25&deg;C",
+          "Ebatlar (mm)": "1904x743x840"
+        }
+      },
+      "olculer": {
+        "raw": "1904x743x840",
+        "genislik_mm": 1904,
+        "derinlik_mm": 743,
+        "yukseklik_mm": 840
+      },
+      "ebatRaw": "1904x743x840",
+      "scrapedAt": "2026-06-08T21:07:31.357Z",
+      "localImage": "images/surgu-cam-kapili-derin-dondurucu.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-surgu-cam-kapili-derin-dondurucu",
+      "slug": "senox-surgu-cam-kapili-derin-dondurucu",
+      "listTitle": "SENOX Sürgü Cam Kapılı Derin Dondurucu..",
+      "listImage": "https://senox.com.tr/uploads/product/senox-surgu-cam-kapili-derin-dondurucu-8840.png",
+      "listSummary": "Aydınlatma Var Ayarlanabilir Mekanik Termostat Donma Kapastesi 7,5 Elektrik Kesintisinde Ürün Muhafaza Süresi/Saat 24 Az yer kaplayan tasarım Sıcaklık Uyarı Lambası Gömme kapak tutnağı",
+      "category": "Derin Dondurucular",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "derin-dondurucular",
+      "title": "SENOX Sürgü Cam Kapılı Derin Dondurucu",
+      "modelNo": "Sürgü Cam Kapılı",
+      "summary": "Aydınlatma Var Ayarlanabilir Mekanik Termostat Donma Kapastesi 7,5 Elektrik Kesintisinde Ürün Muhafaza Süresi/Saat 24 Az yer kaplayan tasarım Sıcaklık Uyarı Lambası Gömme kapak tutnağı",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-surgu-cam-kapili-derin-dondurucu-8840.png",
+        "https://senox.com.tr/uploads/product/senox-surgu-cam-kapili-derin-dondurucu-1936.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Voltaj",
+          "Kapasite",
+          "Ebatlar (mm)",
+          "Ağırlık"
+        ],
+        "rows": [
+          [
+            "230 V ~ 1N",
+            "35 kg",
+            "715 x 595 x 1044",
+            "74 kg"
+          ]
+        ],
+        "specs": {
+          "Voltaj": "230 V ~ 1N",
+          "Kapasite": "35 kg",
+          "Ebatlar (mm)": "715 x 595 x 1044",
+          "Ağırlık": "74 kg"
+        }
+      },
+      "olculer": {
+        "raw": "715 x 595 x 1044",
+        "genislik_mm": 715,
+        "derinlik_mm": 595,
+        "yukseklik_mm": 1044
+      },
+      "ebatRaw": "715 x 595 x 1044",
+      "scrapedAt": "2026-06-08T21:07:31.901Z",
+      "localImage": "images/senox-surgu-cam-kapili-derin-dondurucu.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-80-lk",
+      "slug": "senox-80-lk",
+      "listTitle": "SENOX - 80 LK",
+      "listImage": "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+      "listSummary": "430 paslanmaz krom dış yuzey bulunmaktadır. İç haznesi paslanmaz 304 krom meteryalden mono blok olarak üretilmiştir. Yalıtımda kullanılan enjeksiyon polüretan ile ısı kaybı minimum seviyededir. Şebekeye bağlanablen şamandıralı sistemlerdir. Manuel termostat sayesinde su sıcaklığı kolaylıkla kontrol edilir. Uzun ömürlü çevirmeli musluk sistem bulunmaktadır. Şebeke su ile yada opsiyonel olarak damacana kapak ilavesyle, damacanalı sistem olarakta kullanılabilmektedir.",
+      "category": "Su Sebilleri",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "su-sebilleri",
+      "title": "SENOX - 80 LK",
+      "modelNo": "80-LK",
+      "summary": "430 paslanmaz krom dış yuzey bulunmaktadır. İç haznesi paslanmaz 304 krom meteryalden mono blok olarak üretilmiştir. Yalıtımda kullanılan enjeksiyon polüretan ile ısı kaybı minimum seviyededir. Şebekeye bağlanablen şamandıralı sistemlerdir. Manuel termostat sayesinde su sıcaklığı kolaylıkla kontrol edilir. Uzun ömürlü çevirmeli musluk sistem bulunmaktadır. Şebeke su ile yada opsiyonel olarak damacana kapak ilavesyle, damacanalı sistem olarakta kullanılabilmektedir.",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Soğutucu Gaz",
+          "Voltaj",
+          "Elektrik Gücü",
+          "Ebatlar (mm)",
+          "Ağırlık"
+        ],
+        "rows": [
+          [
+            "R134a",
+            "220 V ~ 50Hz",
+            "250 W",
+            "610 x 430x 1550",
+            "63 kg"
+          ]
+        ],
+        "specs": {
+          "Soğutucu Gaz": "R134a",
+          "Voltaj": "220 V ~ 50Hz",
+          "Elektrik Gücü": "250 W",
+          "Ebatlar (mm)": "610 x 430x 1550",
+          "Ağırlık": "63 kg"
+        }
+      },
+      "olculer": {
+        "raw": "610 x 430x 1550",
+        "genislik_mm": 610,
+        "derinlik_mm": 430,
+        "yukseklik_mm": 1550
+      },
+      "ebatRaw": "610 x 430x 1550",
+      "scrapedAt": "2026-06-08T21:07:32.449Z",
+      "localImage": "images/senox-80-lk.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/narte-senox-ds-03-sicak-soguk-su-sebil-gizli-damacanali",
+      "slug": "narte-senox-ds-03-sicak-soguk-su-sebil-gizli-damacanali",
+      "listTitle": "NARTE/SENOX - DS-03 Sıcak Soğuk Su Sebil..",
+      "listImage": "https://senox.com.tr/uploads/product/narte-senox-ds-03-sicak-soguk-su-sebil-gizli-damacanali-5416.png",
+      "listSummary": "Yüksek kalite siyah plastik gövde Kaliteli metal yan gövde Inox alın kaplama Üstten ankastre tuş yapısı Sıcak tuş çocuk kilidi Paslanmaz çelik su tankları 3,3L soğuk su tankı 1,1L sıcak su tankı",
+      "category": "Su Sebilleri",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "su-sebilleri",
+      "title": "NARTE/SENOX - DS-03 Sıcak Soğuk Su Sebil Gizli Damacanalı",
+      "modelNo": "NARTE/SENOX - DS-03",
+      "summary": "Yüksek kalite siyah plastik gövde Kaliteli metal yan gövde Inox alın kaplama Üstten ankastre tuş yapısı Sıcak tuş çocuk kilidi Paslanmaz çelik su tankları 3,3L soğuk su tankı 1,1L sıcak su tankı",
+      "images": [
+        "https://senox.com.tr/uploads/product/narte-senox-ds-03-sicak-soguk-su-sebil-gizli-damacanali-5416.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Soğutucu Gaz",
+          "Voltaj",
+          "Elektrik Gücü",
+          "Ebatlar (mm)",
+          "Ağırlık"
+        ],
+        "rows": [
+          [
+            "R134a",
+            "220 V ~ 50Hz",
+            "500W / 85 W",
+            "310 x 340x 1036",
+            "25 kg"
+          ]
+        ],
+        "specs": {
+          "Soğutucu Gaz": "R134a",
+          "Voltaj": "220 V ~ 50Hz",
+          "Elektrik Gücü": "500W / 85 W",
+          "Ebatlar (mm)": "310 x 340x 1036",
+          "Ağırlık": "25 kg"
+        }
+      },
+      "olculer": {
+        "raw": "310 x 340x 1036",
+        "genislik_mm": 310,
+        "derinlik_mm": 340,
+        "yukseklik_mm": 1036
+      },
+      "ebatRaw": "310 x 340x 1036",
+      "scrapedAt": "2026-06-08T21:07:32.981Z",
+      "localImage": "images/narte-senox-ds-03-sicak-soguk-su-sebil-gizli-damacanali.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-80-lk-as",
+      "slug": "senox-80-lk-as",
+      "listTitle": "SENOX - 80 LK-AS",
+      "listImage": "https://senox.com.tr/uploads/product/senox-80-lk-as-4452.png",
+      "listSummary": "430 paslanmaz krom dış yuzey bulunmaktadır. İç haznesi paslanmaz 304 krom meteryalden mono blok olarak üretilmşitir. Yalıtımda kullanılan enjeksiyon polüretan ile ısı kaybı minimum sevyededir. Şebekeye bağlanablen şamandıralı sistemlerdir. Manuel termostat sayesinde su sıcaklığı kolaylıkla kontrol edilir. Uzun ömürlü çevrmeli musluk sistem bulunmaktadır. Şebeke su ile yada opsiyonel olarak damacana kapak ilavesyle, damacanalı sistem olarakta kullanılabilmektedir.",
+      "category": "Su Sebilleri",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "su-sebilleri",
+      "title": "SENOX - 80 LK-AS",
+      "modelNo": "80-LK-AS",
+      "summary": "430 paslanmaz krom dış yuzey bulunmaktadır. İç haznesi paslanmaz 304 krom meteryalden mono blok olarak üretilmşitir. Yalıtımda kullanılan enjeksiyon polüretan ile ısı kaybı minimum sevyededir. Şebekeye bağlanablen şamandıralı sistemlerdir. Manuel termostat sayesinde su sıcaklığı kolaylıkla kontrol edilir. Uzun ömürlü çevrmeli musluk sistem bulunmaktadır. Şebeke su ile yada opsiyonel olarak damacana kapak ilavesyle, damacanalı sistem olarakta kullanılabilmektedir.",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-80-lk-as-4452.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Soğutucu Gaz",
+          "Voltaj",
+          "Elektrik Gücü",
+          "Ebatlar (mm)",
+          "Ağırlık"
+        ],
+        "rows": [
+          [
+            "R134a",
+            "220 V ~ 50Hz",
+            "250 W",
+            "610 x 430x 1550",
+            "63 kg"
+          ]
+        ],
+        "specs": {
+          "Soğutucu Gaz": "R134a",
+          "Voltaj": "220 V ~ 50Hz",
+          "Elektrik Gücü": "250 W",
+          "Ebatlar (mm)": "610 x 430x 1550",
+          "Ağırlık": "63 kg"
+        }
+      },
+      "olculer": {
+        "raw": "610 x 430x 1550",
+        "genislik_mm": 610,
+        "derinlik_mm": 430,
+        "yukseklik_mm": 1550
+      },
+      "ebatRaw": "610 x 430x 1550",
+      "scrapedAt": "2026-06-08T21:07:33.507Z",
+      "localImage": "images/senox-80-lk-as.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/narte-ds-02-lik-soguk-su-sebil-gizli-damacanali",
+      "slug": "narte-ds-02-lik-soguk-su-sebil-gizli-damacanali",
+      "listTitle": "NARTE/DS-02 Ilık Soğuk Su Sebil Gizli Da..",
+      "listImage": "https://senox.com.tr/uploads/product/ds-02-lik-soguk-su-sebil-gizli-damacanali-6740.png",
+      "listSummary": "Yüksek kalite siyah plastik gövde Kaliteli metal yan gövde Inox alın kaplama Sıcak tuş çocuk kilidi Paslanmaz çelik su tankları 3,3L soğuk su tankı",
+      "category": "Su Sebilleri",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "su-sebilleri",
+      "title": "NARTE/DS-02 Ilık Soğuk Su Sebil Gizli Damacanalı",
+      "modelNo": "NARTE-DS-02",
+      "summary": "Yüksek kalite siyah plastik gövde Kaliteli metal yan gövde Inox alın kaplama Sıcak tuş çocuk kilidi Paslanmaz çelik su tankları 3,3L soğuk su tankı",
+      "images": [
+        "https://senox.com.tr/uploads/product/ds-02-lik-soguk-su-sebil-gizli-damacanali-6740.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Soğutucu Gaz",
+          "Voltaj",
+          "Elektrik Gücü",
+          "Ebatlar (mm)",
+          "Ağırlık"
+        ],
+        "rows": [
+          [
+            "R134a",
+            "220 V ~ 50Hz",
+            "110 W",
+            "310 x 340x 1035",
+            "22 kg"
+          ]
+        ],
+        "specs": {
+          "Soğutucu Gaz": "R134a",
+          "Voltaj": "220 V ~ 50Hz",
+          "Elektrik Gücü": "110 W",
+          "Ebatlar (mm)": "310 x 340x 1035",
+          "Ağırlık": "22 kg"
+        }
+      },
+      "olculer": {
+        "raw": "310 x 340x 1035",
+        "genislik_mm": 310,
+        "derinlik_mm": 340,
+        "yukseklik_mm": 1035
+      },
+      "ebatRaw": "310 x 340x 1035",
+      "scrapedAt": "2026-06-08T21:07:34.057Z",
+      "localImage": "images/narte-ds-02-lik-soguk-su-sebil-gizli-damacanali.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/ds-01-sicak-soguk-su-sebil-ustten-damacanali",
+      "slug": "ds-01-sicak-soguk-su-sebil-ustten-damacanali",
+      "listTitle": "DS-01 Sıcak Soğuk Su Sebil Üstten Damaca..",
+      "listImage": "https://senox.com.tr/uploads/product/ds-01-sicak-soguk-su-sebil-ustten-damacanali-9500.png",
+      "listSummary": "Ürün Rengi Inox Elektrik Tüketimi 110W Soğuk Su Tank Kapasitesi 3.2 Ltre Soğuk Su Tank Malzemesi 304 Kalite Paslanmaz Çelik, Kaynaksız, Tek Parçadır. Soğuk Su Derecesi Aralığı 6-8 C Soğutma Kapasitesi ( lt / saat ) 2.0 Litre / Saat",
+      "category": "Su Sebilleri",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "su-sebilleri",
+      "title": "DS-01 Sıcak Soğuk Su Sebil Üstten Damacanalı",
+      "modelNo": "DS-01-SICAK",
+      "summary": "Ürün Rengi Inox Elektrik Tüketimi 110W Soğuk Su Tank Kapasitesi 3.2 Ltre Soğuk Su Tank Malzemesi 304 Kalite Paslanmaz Çelik, Kaynaksız, Tek Parçadır. Soğuk Su Derecesi Aralığı 6-8 C Soğutma Kapasitesi ( lt / saat ) 2.0 Litre / Saat",
+      "images": [
+        "https://senox.com.tr/uploads/product/ds-01-sicak-soguk-su-sebil-ustten-damacanali-9500.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Soğutucu Gaz",
+          "Voltaj",
+          "Elektrik Gücü",
+          "Ebatlar (mm)",
+          "Ağırlık"
+        ],
+        "rows": [
+          [
+            "R134a",
+            "220 V ~ 50Hz",
+            "110 W",
+            "300 x 292x 856",
+            "15 kg"
+          ]
+        ],
+        "specs": {
+          "Soğutucu Gaz": "R134a",
+          "Voltaj": "220 V ~ 50Hz",
+          "Elektrik Gücü": "110 W",
+          "Ebatlar (mm)": "300 x 292x 856",
+          "Ağırlık": "15 kg"
+        }
+      },
+      "olculer": {
+        "raw": "300 x 292x 856",
+        "genislik_mm": 300,
+        "derinlik_mm": 292,
+        "yukseklik_mm": 856
+      },
+      "ebatRaw": "300 x 292x 856",
+      "scrapedAt": "2026-06-08T21:07:34.816Z",
+      "localImage": "images/ds-01-sicak-soguk-su-sebil-ustten-damacanali.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-160-300-400-500-lk",
+      "slug": "senox-160-300-400-500-lk",
+      "listTitle": "SENOX - 160 / 300 / 400 / 500 LK",
+      "listImage": "https://senox.com.tr/uploads/product/senox-160-300-400-500-lk-4717.png",
+      "listSummary": "430 paslanmaz krom dış yuzey bulunmaktadır. İç haznes paslanmaz 304 krom meteryalden mono blok olarak üretlmştr. Yalıtımda kullanılan enjeksyon polüretan le ısı kaybı mnmum sevyededr. Şebekeye bağlanablen şamandıralı sstemlerdr. Manuel termostat sayesnde su sıcaklığı kolaylıkla kontrol edlr. Uzun ömürlü çevrmel musluk sstem bulunmaktadır. Şebeke su le yada opsyonel olarak damacana kapak lavesyle, damacanalı sstem olarakta kullanılablmektedr",
+      "category": "Su Sebilleri",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "su-sebilleri",
+      "title": "SENOX - 160 / 300 / 400 / 500 LK",
+      "modelNo": "160-300-400",
+      "summary": "430 paslanmaz krom dış yuzey bulunmaktadır. İç haznes paslanmaz 304 krom meteryalden mono blok olarak üretlmştr. Yalıtımda kullanılan enjeksyon polüretan le ısı kaybı mnmum sevyededr. Şebekeye bağlanablen şamandıralı sstemlerdr. Manuel termostat sayesnde su sıcaklığı kolaylıkla kontrol edlr. Uzun ömürlü çevrmel musluk sstem bulunmaktadır. Şebeke su le yada opsyonel olarak damacana kapak lavesyle, damacanalı sstem olarakta kullanılablmektedr",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-160-300-400-500-lk-4717.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Model",
+          "Voltaj",
+          "Elektrik Gücü",
+          "Ebatlar (mm)"
+        ],
+        "rows": [
+          [
+            "160LK",
+            "220 V ~ 50Hz",
+            "",
+            "955 x 605x 1755"
+          ],
+          [
+            "300LK",
+            "220 V ~ 50Hz",
+            "",
+            "1225 x 605x 1755"
+          ],
+          [
+            "400LK",
+            "220 V ~ 50Hz",
+            "",
+            "1505 x 605 x 1755"
+          ],
+          [
+            "500LK",
+            "220 V ~ 50Hz",
+            "",
+            "1400 x 660 x 2400"
+          ]
+        ],
+        "specs": {
+          "Model": "500LK",
+          "Voltaj": "220 V ~ 50Hz",
+          "Ebatlar (mm)": "1400 x 660 x 2400"
+        }
+      },
+      "olculer": {
+        "raw": "1400 x 660 x 2400",
+        "genislik_mm": 1400,
+        "derinlik_mm": 660,
+        "yukseklik_mm": 2400
+      },
+      "ebatRaw": "1400 x 660 x 2400",
+      "scrapedAt": "2026-06-08T21:07:35.810Z",
+      "localImage": "images/senox-160-300-400-500-lk.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-snx12r-12-gozlu-dondurma-reyonu",
+      "slug": "senox-snx12r-12-gozlu-dondurma-reyonu",
+      "listTitle": "SENOX - SNX12R 12 Gözlü Dondurma Reyonu..",
+      "listImage": "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+      "listSummary": "Ayarlanabilir termostat Şebeke uyarı lambası Sıcaklık uyarı lambası Kapak kilidi Gofrajlı alümniyum iç gövde Elektrostatik toz boyalı dış gövde sacı Çevre dostu soğutucu akışkan Temperli cam",
+      "category": "Teşhir Dolapları",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "teshir-dolaplari",
+      "title": "SENOX - SNX12R 12 Gözlü Dondurma Reyonu",
+      "modelNo": "SNX12R",
+      "summary": "Ayarlanabilir termostat Şebeke uyarı lambası Sıcaklık uyarı lambası Kapak kilidi Gofrajlı alümniyum iç gövde Elektrostatik toz boyalı dış gövde sacı Çevre dostu soğutucu akışkan Temperli cam",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-1734.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-1349.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Soğutucu Gaz",
+          "Voltaj",
+          "Isı Aralığı",
+          "Ebatlar (mm)",
+          "Ağırlık"
+        ],
+        "rows": [
+          [
+            "R134a",
+            "220 V ~ 50Hz",
+            "-18 - +34&deg;C",
+            "1152 x 903x 1267",
+            "92 kg"
+          ]
+        ],
+        "specs": {
+          "Soğutucu Gaz": "R134a",
+          "Voltaj": "220 V ~ 50Hz",
+          "Isı Aralığı": "-18 - +34&deg;C",
+          "Ebatlar (mm)": "1152 x 903x 1267",
+          "Ağırlık": "92 kg"
+        }
+      },
+      "olculer": {
+        "raw": "1152 x 903x 1267",
+        "genislik_mm": 1152,
+        "derinlik_mm": 903,
+        "yukseklik_mm": 1267
+      },
+      "ebatRaw": "1152 x 903x 1267",
+      "scrapedAt": "2026-06-08T21:07:36.391Z",
+      "localImage": "images/senox-snx12r-12-gozlu-dondurma-reyonu.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-blk01",
+      "slug": "senox-blk01",
+      "listTitle": "SENOX BLK01",
+      "listImage": "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+      "listSummary": "Aydınlatma 80 watt Voltaj 220V / 820Hz Soğutma Sistemi Fan Yardımlı Soğutma Kapasitesi -2°C + 8°C Ebatlar mm 1100x800x800 Soğutucu Gaz R134a",
+      "category": "Teşhir Dolapları",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "teshir-dolaplari",
+      "title": "SENOX BLK01",
+      "modelNo": "BLK01",
+      "summary": "Aydınlatma 80 watt Voltaj 220V / 820Hz Soğutma Sistemi Fan Yardımlı Soğutma Kapasitesi -2°C + 8°C Ebatlar mm 1100x800x800 Soğutucu Gaz R134a",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [],
+        "rows": [],
+        "specs": {}
+      },
+      "olculer": {
+        "raw": "1100x800x800 ",
+        "genislik_mm": 1100,
+        "derinlik_mm": 800,
+        "yukseklik_mm": 800
+      },
+      "ebatRaw": "1100x800x800 ",
+      "scrapedAt": "2026-06-08T21:07:36.957Z",
+      "localImage": "images/senox-blk01.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/saladbar",
+      "slug": "saladbar",
+      "listTitle": "Saladbar",
+      "listImage": "https://senox.com.tr/uploads/product/saladbar-5428.png",
+      "listSummary": "Üst tabla ve iç havuz paslanmaz çelktr. İç havuz tek parça pres baskılıdır. Soğutucu gaz R 134 A / 250 gr.'dır. Küvetler harçtr. Etrafı komple ahflap kaplamadır. Çift tarafta borulu kaydırma standı vardır. Aydınlatma mevcuttur. 2 adet frenl, 2 adet frensz tekerleklidir",
+      "category": "Teşhir Dolapları",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "teshir-dolaplari",
+      "title": "Saladbar",
+      "modelNo": "Saladbar",
+      "summary": "Üst tabla ve iç havuz paslanmaz çelktr. İç havuz tek parça pres baskılıdır. Soğutucu gaz R 134 A / 250 gr.'dır. Küvetler harçtr. Etrafı komple ahflap kaplamadır. Çift tarafta borulu kaydırma standı vardır. Aydınlatma mevcuttur. 2 adet frenl, 2 adet frensz tekerleklidir",
+      "images": [
+        "https://senox.com.tr/uploads/product/saladbar-5428.png",
+        "https://senox.com.tr/uploads/product/saladbar-5721.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Ürün Kodu SLD-03 SLD-04",
+          "Açıklama GN 1/1 3 AD GN 1/1 4AD",
+          "Soğutucu Gaz R134a R134a",
+          "Isı Aralığı +4 - +6&deg;C +4 - +6&deg;C",
+          "Ebatlar (mm) 1150x700x1400 1500x700x1400"
+        ],
+        "rows": [],
+        "specs": {}
+      },
+      "olculer": null,
+      "ebatRaw": null,
+      "scrapedAt": "2026-06-08T21:07:37.568Z",
+      "localImage": "images/saladbar.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-set-ustu-sicak-pizza-teshir-dolabi-duz-cam-",
+      "slug": "senox-set-ustu-sicak-pizza-teshir-dolabi-duz-cam-",
+      "listTitle": "SENOX - Set Üstü Sıcak- Pizza Teşhir Dol..",
+      "listImage": "https://senox.com.tr/uploads/product/senox-set-ustu-sicak-pizza-teshir-dolabi-duz-cam--4655.png",
+      "listSummary": "Kapasite 90 Litre ve 120 Litre Çft Fanlı Sstem Embraco Motor Temperli Isı cam Kapılar sürgü camlı ve rezistanslı Ürün standartı siyah ve paslanmaz kromdur. Renk değiştiren led kullanıldığı takdirde fiyat farkı var İstenildiği takdirde Gold krom yada farklı br renk yapılabilir fiyat farkı var",
+      "category": "Teşhir Dolapları",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "teshir-dolaplari",
+      "title": "SENOX - Set Üstü Sıcak- Pizza Teşhir Dolabı ( Düz Cam)",
+      "modelNo": "Set Üstü Sıcak-",
+      "summary": "Kapasite 90 Litre ve 120 Litre Çft Fanlı Sstem Embraco Motor Temperli Isı cam Kapılar sürgü camlı ve rezistanslı Ürün standartı siyah ve paslanmaz kromdur. Renk değiştiren led kullanıldığı takdirde fiyat farkı var İstenildiği takdirde Gold krom yada farklı br renk yapılabilir fiyat farkı var",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-set-ustu-sicak-pizza-teshir-dolabi-duz-cam--4655.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Açıklama",
+          "Voltaj",
+          "Isı Aralığı",
+          "Ebatlar (mm)"
+        ],
+        "rows": [
+          [
+            "Sıcak Teşhir",
+            "220-240 / 50-60 Hz",
+            "+35 - +75&deg;C",
+            "1000x600x870"
+          ]
+        ],
+        "specs": {
+          "Açıklama": "Sıcak Teşhir",
+          "Voltaj": "220-240 / 50-60 Hz",
+          "Isı Aralığı": "+35 - +75&deg;C",
+          "Ebatlar (mm)": "1000x600x870"
+        }
+      },
+      "olculer": {
+        "raw": "1000x600x870",
+        "genislik_mm": 1000,
+        "derinlik_mm": 600,
+        "yukseklik_mm": 870
+      },
+      "ebatRaw": "1000x600x870",
+      "scrapedAt": "2026-06-08T21:07:38.123Z",
+      "localImage": "images/senox-set-ustu-sicak-pizza-teshir-dolabi-duz-cam-.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-set-ustu-soguk-pasta-teshir-dolabi-panaromik-cam-",
+      "slug": "senox-set-ustu-soguk-pasta-teshir-dolabi-panaromik-cam-",
+      "listTitle": "SENOX - Set Üstü Soğuk Pasta Teşhir Dola..",
+      "listImage": "https://senox.com.tr/uploads/product/senox-set-ustu-soguk-pasta-teshir-dolabi-panaromik-cam--8946.png",
+      "listSummary": "Kapasite 90 Litre ve 120 Litre Çift Fanlı Sistem Embraco Motor Temperli Isı cam Kapılar sürgü camlı ve rezistanslı Ürün standardı siyah ve paslanmaz kromdur. Renk değiştiren led kullanıldığı takdirde fiyat farkı var İstenildiği takdirde Gold krom yada farklı bir renk yapılabilir fiyat farkı var Cam raf istenlidiği takdirde fiyat farkı var",
+      "category": "Teşhir Dolapları",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "teshir-dolaplari",
+      "title": "SENOX - Set Üstü Soğuk Pasta Teşhir Dolabı (Panaromik Cam)",
+      "modelNo": "Set Üstü Soğuk",
+      "summary": "Kapasite 90 Litre ve 120 Litre Çift Fanlı Sistem Embraco Motor Temperli Isı cam Kapılar sürgü camlı ve rezistanslı Ürün standardı siyah ve paslanmaz kromdur. Renk değiştiren led kullanıldığı takdirde fiyat farkı var İstenildiği takdirde Gold krom yada farklı bir renk yapılabilir fiyat farkı var Cam raf istenlidiği takdirde fiyat farkı var",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-set-ustu-soguk-pasta-teshir-dolabi-panaromik-cam--9328.png",
+        "https://senox.com.tr/uploads/product/senox-set-ustu-soguk-pasta-teshir-dolabi-panaromik-cam--8946.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Ürün Kodu",
+          "Açıklama",
+          "Soğutucu Gaz",
+          "Isı Aralığı",
+          "Ebatlar (mm)"
+        ],
+        "rows": [
+          [
+            "SET (P)-75S",
+            "Soğuk Teşhir",
+            "R600a",
+            "+4 - +6&deg;C",
+            "750x600x700"
+          ],
+          [
+            "SET (P)-90S",
+            "Soğuk Teşhir",
+            "R600a",
+            "+4 - +6&deg;C",
+            "900x600x700"
+          ],
+          [
+            "SET (P)-75C",
+            "Sıcak Teşhir",
+            "",
+            "+35 - +75&deg;C",
+            "750x600x700"
+          ],
+          [
+            "SET (90)-90C",
+            "Sıcak Teşhir",
+            "",
+            "+35 - +75&deg;C",
+            "900x600x700"
+          ]
+        ],
+        "specs": {
+          "Ürün Kodu": "SET (90)-90C",
+          "Açıklama": "Sıcak Teşhir",
+          "Soğutucu Gaz": "R600a",
+          "Isı Aralığı": "+35 - +75&deg;C",
+          "Ebatlar (mm)": "900x600x700"
+        }
+      },
+      "olculer": {
+        "raw": "900x600x700",
+        "genislik_mm": 900,
+        "derinlik_mm": 600,
+        "yukseklik_mm": 700
+      },
+      "ebatRaw": "900x600x700",
+      "scrapedAt": "2026-06-08T21:07:38.667Z",
+      "localImage": "images/senox-set-ustu-soguk-pasta-teshir-dolabi-panaromik-cam-.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-smfer-syd-310-5-gozlu-dondurma-reyonu",
+      "slug": "senox-smfer-syd-310-5-gozlu-dondurma-reyonu",
+      "listTitle": "Senox / Smfer - SYD-310 5 Gözlü Dondurma..",
+      "listImage": "https://senox.com.tr/uploads/product/senox-smfer-syd-310-5-gozlu-dondurma-reyonu-4679.png",
+      "listSummary": "Ayarlanabilir termostat Şebeke uyarı lambası Sıcaklık uyarı lambası Kapak kilidi Gofrajlı alümniyum iç gövde Elektrostatik toz boyalı dış gövde sacı Çevre dostu soğutucu akışkan Temperli cam",
+      "category": "Teşhir Dolapları",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "teshir-dolaplari",
+      "title": "Senox / Smfer - SYD-310 5 Gözlü Dondurma Reyonu",
+      "modelNo": "SMFER-SYD-310",
+      "summary": "Ayarlanabilir termostat Şebeke uyarı lambası Sıcaklık uyarı lambası Kapak kilidi Gofrajlı alümniyum iç gövde Elektrostatik toz boyalı dış gövde sacı Çevre dostu soğutucu akışkan Temperli cam",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-smfer-syd-310-5-gozlu-dondurma-reyonu-4679.png",
+        "https://senox.com.tr/uploads/product/senox-smfer-syd-310-5-gozlu-dondurma-reyonu-5649.png",
+        "https://senox.com.tr/uploads/product/senox-smfer-syd-310-5-gozlu-dondurma-reyonu-8342.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Soğutucu Gaz",
+          "Voltaj",
+          "Isı Aralığı",
+          "Ebatlar (mm)",
+          "Kapasite"
+        ],
+        "rows": [
+          [
+            "R290a",
+            "220 V ~ 50Hz",
+            "-18 - +34&deg;C",
+            "1036 x 650x 850",
+            "210 L"
+          ],
+          [
+            "R290a",
+            "220 V ~ 50Hz",
+            "-18 - +34&deg;C",
+            "1311 x 650x 850",
+            "283 L"
+          ],
+          [
+            "R290a",
+            "220 V ~ 50Hz",
+            "-18 - +34&deg;C",
+            "1514 x 650x 850",
+            "300 L"
+          ]
+        ],
+        "specs": {
+          "Soğutucu Gaz": "R290a",
+          "Voltaj": "220 V ~ 50Hz",
+          "Isı Aralığı": "-18 - +34&deg;C",
+          "Ebatlar (mm)": "1514 x 650x 850",
+          "Kapasite": "300 L"
+        }
+      },
+      "olculer": {
+        "raw": "1514 x 650x 850",
+        "genislik_mm": 1514,
+        "derinlik_mm": 650,
+        "yukseklik_mm": 850
+      },
+      "ebatRaw": "1514 x 650x 850",
+      "scrapedAt": "2026-06-08T21:07:39.209Z",
+      "localImage": "images/senox-smfer-syd-310-5-gozlu-dondurma-reyonu.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-bbc-350-bbcs-350",
+      "slug": "senox-bbc-350-bbcs-350",
+      "listTitle": "SENOX - BBC-350 / BBCS-350",
+      "listImage": "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+      "listSummary": "PVC kaplı sac iç ve dış gövde. CFC içermeyen, yüksek basınçla enjekte edilmiş, 40 mm kalınlığında polüretan izolasyon. Özel tasarım rolbond evaporatör. Kiltli cam kapılar. Led aydınlatmalı iç kabin. Ayarlanabilir iç raflar. İç ısı dağılımını sağlayan fanlı sistem.",
+      "category": "Şişe Soğutucular",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "sise-sogutucular",
+      "title": "SENOX - BBC-350 / BBCS-350",
+      "modelNo": "BBC-350",
+      "summary": "PVC kaplı sac iç ve dış gövde. CFC içermeyen, yüksek basınçla enjekte edilmiş, 40 mm kalınlığında polüretan izolasyon. Özel tasarım rolbond evaporatör. Kiltli cam kapılar. Led aydınlatmalı iç kabin. Ayarlanabilir iç raflar. İç ısı dağılımını sağlayan fanlı sistem.",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Soğutucu Gaz",
+          "Voltaj",
+          "Elektrik Gücü",
+          "Ebatlar (mm)",
+          "Ağırlık"
+        ],
+        "rows": [
+          [
+            "R600a",
+            "220 V ~ 50Hz",
+            "",
+            "900 x 505 x 850",
+            "55 kg"
+          ]
+        ],
+        "specs": {
+          "Soğutucu Gaz": "R600a",
+          "Voltaj": "220 V ~ 50Hz",
+          "Ebatlar (mm)": "900 x 505 x 850",
+          "Ağırlık": "55 kg"
+        }
+      },
+      "olculer": {
+        "raw": "900 x 505 x 850",
+        "genislik_mm": 900,
+        "derinlik_mm": 505,
+        "yukseklik_mm": 850
+      },
+      "ebatRaw": "900 x 505 x 850",
+      "scrapedAt": "2026-06-08T21:07:39.750Z",
+      "localImage": "images/senox-bbc-350-bbcs-350.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz",
+      "slug": "senox-sds-710-dc-dik-tip-sogutucu-kanopisiz",
+      "listTitle": "SENOX - SDS-710 DC Dik Tip Soğutucu Kano..",
+      "listImage": "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+      "listSummary": "Hacim Brüt/Net (lt) - 728/678 Çalışma Sıcaklığı -18 Enerji Sınıfı/Tüketimi B/1,24 Raf Sayısı 5 Aydınlatmalı kanopi PVC kaplı tel raf Ayarlanabilir ön ayak ve hareketli roller teker Raf sayısı 4 adet",
+      "category": "Şişe Soğutucular",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "sise-sogutucular",
+      "title": "SENOX - SDS-710 DC Dik Tip Soğutucu Kanopisiz",
+      "modelNo": "SDS-710",
+      "summary": "Hacim Brüt/Net (lt) - 728/678 Çalışma Sıcaklığı -18 Enerji Sınıfı/Tüketimi B/1,24 Raf Sayısı 5 Aydınlatmalı kanopi PVC kaplı tel raf Ayarlanabilir ön ayak ve hareketli roller teker Raf sayısı 4 adet SENOX - SDD-510 DC YF Dk Tp Derin Dondurucu Kanopsiz Soğutucu Gaz 0 - /+10°C 136 kg 2 Hacim Brüt/Net (lt) - 728/678 Çalışma Sıcaklığı +1 - +9 Enerj Sınıfı/Tüketimi B/1,24 Raf Sayısı 5",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Soğutucu Gaz",
+          "Voltaj",
+          "Isı Aralığı",
+          "Ebatlar (mm)",
+          "Ağırlık"
+        ],
+        "rows": [
+          [
+            "R290a",
+            "220 V ~ 50Hz",
+            "0 - /+10°C",
+            "800x700x2130",
+            "136 kg"
+          ],
+          [
+            "R290a",
+            "220 V ~ 50Hz",
+            "0 /-18°C",
+            "980x740x2145",
+            "157 kg"
+          ]
+        ],
+        "specs": {
+          "Soğutucu Gaz": "R290a",
+          "Voltaj": "220 V ~ 50Hz",
+          "Isı Aralığı": "0 /-18°C",
+          "Ebatlar (mm)": "980x740x2145",
+          "Ağırlık": "157 kg"
+        }
+      },
+      "olculer": {
+        "raw": "980x740x2145",
+        "genislik_mm": 980,
+        "derinlik_mm": 740,
+        "yukseklik_mm": 2145
+      },
+      "ebatRaw": "980x740x2145",
+      "scrapedAt": "2026-06-08T21:07:40.295Z",
+      "localImage": "images/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-sds-265-dc-1cf-slim-tip-sogutucu",
+      "slug": "senox-sds-265-dc-1cf-slim-tip-sogutucu",
+      "listTitle": "SENOX - SDS-265 DC 1CF Slim Tip Soğutuc..",
+      "listImage": "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+      "listSummary": "Aydınlatmalı kanopi PVC kaplı tel raf Ayarlanabilir ön ayak ve hareketli roller teker Raf sayısı 4 adet",
+      "category": "Şişe Soğutucular",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "sise-sogutucular",
+      "title": "SENOX - SDS-265 DC 1CF Slim Tip Soğutucu",
+      "modelNo": "SDS-265",
+      "summary": "Aydınlatmalı kanopi PVC kaplı tel raf Ayarlanabilir ön ayak ve hareketli roller teker Raf sayısı 4 adet",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-4849.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Soğutucu Gaz",
+          "Voltaj",
+          "Isı Aralığı",
+          "Ebatlar (mm)",
+          "Ağırlık"
+        ],
+        "rows": [
+          [
+            "R600a",
+            "220 V ~ 50Hz",
+            "+1 / +9&deg;C",
+            "450x595x2007",
+            "74 kg"
+          ],
+          [
+            "R600a",
+            "220 V ~ 50Hz",
+            "+1 / +9&deg;C",
+            "450x595x2075",
+            "77 kg"
+          ]
+        ],
+        "specs": {
+          "Soğutucu Gaz": "R600a",
+          "Voltaj": "220 V ~ 50Hz",
+          "Isı Aralığı": "+1 / +9&deg;C",
+          "Ebatlar (mm)": "450x595x2075",
+          "Ağırlık": "77 kg"
+        }
+      },
+      "olculer": {
+        "raw": "450x595x2075",
+        "genislik_mm": 450,
+        "derinlik_mm": 595,
+        "yukseklik_mm": 2075
+      },
+      "ebatRaw": "450x595x2075",
+      "scrapedAt": "2026-06-08T21:07:40.847Z",
+      "localImage": "images/senox-sds-265-dc-1cf-slim-tip-sogutucu.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-sds-385-dc-1-cf",
+      "slug": "senox-sds-385-dc-1-cf",
+      "listTitle": "SENOX - SDS-385 DC 1 CF",
+      "listImage": "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-cf-9853.png",
+      "listSummary": "Net Hacim 345 Raf sayısı 5 500ml şişe yükleme kapastesi 80 adet İzolasyon Kalınlığı 50 İklim Sınıfı B/C Dijital Termostat Led aydınlatma Ip24 su geçrmezlik",
+      "category": "Şişe Soğutucular",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "sise-sogutucular",
+      "title": "SENOX - SDS-385 DC 1 CF",
+      "modelNo": "SDS-385",
+      "summary": "Net Hacim 345 Raf sayısı 5 500ml şişe yükleme kapastesi 80 adet İzolasyon Kalınlığı 50 İklim Sınıfı B/C Dijital Termostat Led aydınlatma Ip24 su geçrmezlik",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-cf-9853.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Soğutucu Gaz",
+          "Voltaj",
+          "Isı Aralığı",
+          "Ebatlar (mm)",
+          "Ağırlık"
+        ],
+        "rows": [
+          [
+            "R134a",
+            "220 V ~ 50Hz",
+            "0 - +10&deg;C",
+            "595 x 605x 1994",
+            "80 kg"
+          ]
+        ],
+        "specs": {
+          "Soğutucu Gaz": "R134a",
+          "Voltaj": "220 V ~ 50Hz",
+          "Isı Aralığı": "0 - +10&deg;C",
+          "Ebatlar (mm)": "595 x 605x 1994",
+          "Ağırlık": "80 kg"
+        }
+      },
+      "olculer": {
+        "raw": "595 x 605x 1994",
+        "genislik_mm": 595,
+        "derinlik_mm": 605,
+        "yukseklik_mm": 1994
+      },
+      "ebatRaw": "595 x 605x 1994",
+      "scrapedAt": "2026-06-08T21:07:41.559Z",
+      "localImage": "images/senox-sds-385-dc-1-cf.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-wf-1010-kanopili-carpma-kapi-siyah",
+      "slug": "senox-wf-1010-kanopili-carpma-kapi-siyah",
+      "listTitle": "SENOX - WF-1010 Kanopili Çarpma Kapı Siy..",
+      "listImage": "https://senox.com.tr/uploads/product/senox-wf-1010-kanopili-carpma-kapi-siyah-113.png",
+      "listSummary": "Net Hacim 903/816 Raf sayısı 4 500ml şişe yükleme kapasitesi 200 adet İzolasyon Kalınlığı 50 İklim Sınıfı B/C Dijtal Termostat Led aydınlatma Ip24 su geçirmezlik",
+      "category": "Şişe Soğutucular",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "sise-sogutucular",
+      "title": "SENOX - WF-1010 Kanopili Çarpma Kapı Siyah",
+      "modelNo": "1010",
+      "summary": "Net Hacim 903/816 Raf sayısı 4 500ml şişe yükleme kapasitesi 200 adet İzolasyon Kalınlığı 50 İklim Sınıfı B/C Dijtal Termostat Led aydınlatma Ip24 su geçirmezlik",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-wf-1010-kanopili-carpma-kapi-siyah-113.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Soğutucu Gaz",
+          "Voltaj",
+          "Isı Aralığı",
+          "Ebatlar (mm)",
+          "Ağırlık"
+        ],
+        "rows": [
+          [
+            "R290a",
+            "220 V ~ 50Hz",
+            "0 - +10°C",
+            "980x740x2145",
+            "158 kg"
+          ]
+        ],
+        "specs": {
+          "Soğutucu Gaz": "R290a",
+          "Voltaj": "220 V ~ 50Hz",
+          "Isı Aralığı": "0 - +10°C",
+          "Ebatlar (mm)": "980x740x2145",
+          "Ağırlık": "158 kg"
+        }
+      },
+      "olculer": {
+        "raw": "980x740x2145",
+        "genislik_mm": 980,
+        "derinlik_mm": 740,
+        "yukseklik_mm": 2145
+      },
+      "ebatRaw": "980x740x2145",
+      "scrapedAt": "2026-06-08T21:07:42.092Z",
+      "localImage": "images/senox-wf-1010-kanopili-carpma-kapi-siyah.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-sbc250-sbcs250",
+      "slug": "senox-sbc250-sbcs250",
+      "listTitle": "SENOX - SBC250 / SBCS250",
+      "listImage": "https://senox.com.tr/uploads/product/senox-sbc250-sbcs250-4116.png",
+      "listSummary": "PVC kaplı sac iç ve dış gövde. CFC içermeyen, yüksek basınçla enjekte edilmiş, 40 mm kalınlığında polüretan izolasyon. Özel tasarım rolbond evaporatör. Kiltli cam kapılar. Led aydınlatmalı iç kabin. Ayarlanabilir iç raflar. İç ısı dağılımını sağlayan fanlı sistem.",
+      "category": "Şişe Soğutucular",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "sise-sogutucular",
+      "title": "SENOX - SBC250 / SBCS250",
+      "modelNo": "SBC250-SBCS250",
+      "summary": "PVC kaplı sac iç ve dış gövde. CFC içermeyen, yüksek basınçla enjekte edilmiş, 40 mm kalınlığında polüretan izolasyon. Özel tasarım rolbond evaporatör. Kiltli cam kapılar. Led aydınlatmalı iç kabin. Ayarlanabilir iç raflar. İç ısı dağılımını sağlayan fanlı sistem.",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-sbc250-sbcs250-4116.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Soğutucu Gaz",
+          "Voltaj",
+          "Elektrik Gücü",
+          "Ebatlar (mm)",
+          "Ağırlık"
+        ],
+        "rows": [
+          [
+            "R600a",
+            "220 V ~ 50Hz",
+            "",
+            "900 x 505x 850",
+            "60 kg"
+          ]
+        ],
+        "specs": {
+          "Soğutucu Gaz": "R600a",
+          "Voltaj": "220 V ~ 50Hz",
+          "Ebatlar (mm)": "900 x 505x 850",
+          "Ağırlık": "60 kg"
+        }
+      },
+      "olculer": {
+        "raw": "900 x 505x 850",
+        "genislik_mm": 900,
+        "derinlik_mm": 505,
+        "yukseklik_mm": 850
+      },
+      "ebatRaw": "900 x 505x 850",
+      "scrapedAt": "2026-06-08T21:07:42.639Z",
+      "localImage": "images/senox-sbc250-sbcs250.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-bbc-250-bbcs-250",
+      "slug": "senox-bbc-250-bbcs-250",
+      "listTitle": "SENOX - BBC-250 / BBCS-250",
+      "listImage": "https://senox.com.tr/uploads/product/senox-bbc-250-bbcs-250-7732.png",
+      "listSummary": "PVC kaplı sac iç ve dış gövde. CFC içermeyen, yüksek basınçla enjekte edilmiş, 40 mm kalınlığında polüretan izolasyon. Özel tasarım rolbond evaporatör. Kiltli cam kapılar. Led aydınlatmalı iç kabin. Ayarlanabilir iç raflar. İç ısı dağılımını sağlayan fanlı sistem.",
+      "category": "Şişe Soğutucular",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "sise-sogutucular",
+      "title": "SENOX - BBC-250 / BBCS-250",
+      "modelNo": "BBC-250",
+      "summary": "PVC kaplı sac iç ve dış gövde. CFC içermeyen, yüksek basınçla enjekte edilmiş, 40 mm kalınlığında polüretan izolasyon. Özel tasarım rolbond evaporatör. Kiltli cam kapılar. Led aydınlatmalı iç kabin. Ayarlanabilir iç raflar. İç ısı dağılımını sağlayan fanlı sistem.",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-bbc-250-bbcs-250-7732.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Soğutucu Gaz",
+          "Voltaj",
+          "Elektrik Gücü",
+          "Ebatlar (mm)",
+          "Ağırlık"
+        ],
+        "rows": [
+          [
+            "R600a",
+            "220 V ~ 50Hz",
+            "",
+            "900 x 505 x 850",
+            "55 kg"
+          ]
+        ],
+        "specs": {
+          "Soğutucu Gaz": "R600a",
+          "Voltaj": "220 V ~ 50Hz",
+          "Ebatlar (mm)": "900 x 505 x 850",
+          "Ağırlık": "55 kg"
+        }
+      },
+      "olculer": {
+        "raw": "900 x 505 x 850",
+        "genislik_mm": 900,
+        "derinlik_mm": 505,
+        "yukseklik_mm": 850
+      },
+      "ebatRaw": "900 x 505 x 850",
+      "scrapedAt": "2026-06-08T21:07:43.191Z",
+      "localImage": "images/senox-bbc-250-bbcs-250.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-snx-35sc-cam-kapili-minibar",
+      "slug": "senox-snx-35sc-cam-kapili-minibar",
+      "listTitle": "SENOX - SNX-35SC Cam Kapılı Minibar",
+      "listImage": "https://senox.com.tr/uploads/product/senox-snx-35sc-cam-kapili-minibar-9817.png",
+      "listSummary": "35 LİTRE BRÜT KAPASİTELİ PELTİER SİSTEMLİ UZUN ÖMÜRLÜ SOĞUTMA SİSTEMİ GAZ KAÇAĞI RİSKİ OLMAYAN, GAZSIZ, KİMYA İLE MÜHENDİSLİĞİN BİRLEŞTİĞİ YENİ NESİL TEKNOLOJİ ENERJİ TÜKETİMİ DİĞER SİSTEMLERİN 1/10'U KADAR CAMLI ŞIK TASARIM 3MM PLASTİK KAPLI DAYANIKLI RAF TELİ ELEKTROSTATİK TOZ BOYALI DİĞER SİSTEMLERE GÖRE %50 DAHA FAZLA ISI İZOLASYONU. SES DÜZEYİ 10 DESİBEL ALTINDA TİTREŞİMSİZ ÇALIŞMA FİŞE TAKILDIKTAN SONRA 4 DAKİKA İÇERİSİNDE SOĞUTMA",
+      "category": "Şişe Soğutucular",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "sise-sogutucular",
+      "title": "SENOX - SNX-35SC Cam Kapılı Minibar",
+      "modelNo": "SNX-35SC-CAM",
+      "summary": "35 LİTRE BRÜT KAPASİTELİ PELTİER SİSTEMLİ UZUN ÖMÜRLÜ SOĞUTMA SİSTEMİ GAZ KAÇAĞI RİSKİ OLMAYAN, GAZSIZ, KİMYA İLE MÜHENDİSLİĞİN BİRLEŞTİĞİ YENİ NESİL TEKNOLOJİ ENERJİ TÜKETİMİ DİĞER SİSTEMLERİN 1/10'U KADAR CAMLI ŞIK TASARIM 3MM PLASTİK KAPLI DAYANIKLI RAF TELİ ELEKTROSTATİK TOZ BOYALI DİĞER SİSTEMLERE GÖRE %50 DAHA FAZLA ISI İZOLASYONU. SES DÜZEYİ 10 DESİBEL ALTINDA TİTREŞİMSİZ ÇALIŞMA FİŞE TAKILDIKTAN SONRA 4 DAKİKA İÇERİSİNDE SOĞUTMA",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-snx-35sc-cam-kapili-minibar-9817.png",
+        "https://senox.com.tr/uploads/product/senox-snx-35sc-cam-kapili-minibar-6685.png",
+        "https://senox.com.tr/uploads/product/senox-snx-35sc-cam-kapili-minibar-6067.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [],
+        "rows": [],
+        "specs": {}
+      },
+      "olculer": null,
+      "ebatRaw": null,
+      "scrapedAt": "2026-06-08T21:07:43.740Z",
+      "localImage": "images/senox-snx-35sc-cam-kapili-minibar.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-wn-150",
+      "slug": "senox-wn-150",
+      "listTitle": "SENOX - WN-150",
+      "listImage": "https://senox.com.tr/uploads/product/senox-wn-150-7004.png",
+      "listSummary": "PVC kaplı sac iç ve dış gövde. CFC içermeyen, yüksek basınçla enjekte edilmş, 40 mm kalınlığında polüretan izolasyon. Özel tasarım rolbond evaporatör. Kiltil cam kapılar. Led aydınlatmalı iç kabin. Ayarlanablr ç raflar. İç ısı dağılımını sağlayan fanlı sistem. Üç ahşap raflıdır.",
+      "category": "Şişe Soğutucular",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "sise-sogutucular",
+      "title": "SENOX - WN-150",
+      "modelNo": "WN-150",
+      "summary": "PVC kaplı sac iç ve dış gövde. CFC içermeyen, yüksek basınçla enjekte edilmş, 40 mm kalınlığında polüretan izolasyon. Özel tasarım rolbond evaporatör. Kiltil cam kapılar. Led aydınlatmalı iç kabin. Ayarlanablr ç raflar. İç ısı dağılımını sağlayan fanlı sistem. Üç ahşap raflıdır.",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-wn-150-7004.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Soğutucu Gaz",
+          "Voltaj",
+          "Isı Aralığı",
+          "Ebatlar (mm)",
+          "Ağırlık"
+        ],
+        "rows": [
+          [
+            "R600a",
+            "220 V ~ 50Hz",
+            "+10 - +14°C",
+            "600x550x830",
+            "41 kg"
+          ]
+        ],
+        "specs": {
+          "Soğutucu Gaz": "R600a",
+          "Voltaj": "220 V ~ 50Hz",
+          "Isı Aralığı": "+10 - +14°C",
+          "Ebatlar (mm)": "600x550x830",
+          "Ağırlık": "41 kg"
+        }
+      },
+      "olculer": {
+        "raw": "600x550x830",
+        "genislik_mm": 600,
+        "derinlik_mm": 550,
+        "yukseklik_mm": 830
+      },
+      "ebatRaw": "600x550x830",
+      "scrapedAt": "2026-06-08T21:07:44.284Z",
+      "localImage": "images/senox-wn-150.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-wn-250-wn-350",
+      "slug": "senox-wn-250-wn-350",
+      "listTitle": "SENOX - WN-250 / WN-350",
+      "listImage": "https://senox.com.tr/uploads/product/senox-wn-250-wn-350-3384.png",
+      "listSummary": "PVC kaplı sac iç ve dış gövde. CFC içermeyen, yüksek basınçla enjekte edilmş, 40 mm kalınlığında polüretan izolasyon. Özel tasarım rolbond evaporatör. Kiltil cam kapılar. Led aydınlatmalı iç kabin. Ayarlanablr ç raflar. İç ısı dağılımını sağlayan fanlı sistem. Üç ahşap raflıdır.",
+      "category": "Şişe Soğutucular",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "sise-sogutucular",
+      "title": "SENOX - WN-250 / WN-350",
+      "modelNo": "WN-250-WN",
+      "summary": "PVC kaplı sac iç ve dış gövde. CFC içermeyen, yüksek basınçla enjekte edilmş, 40 mm kalınlığında polüretan izolasyon. Özel tasarım rolbond evaporatör. Kiltil cam kapılar. Led aydınlatmalı iç kabin. Ayarlanablr ç raflar. İç ısı dağılımını sağlayan fanlı sistem. Üç ahşap raflıdır.",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-wn-250-wn-350-3384.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Soğutucu Gaz",
+          "Voltaj",
+          "Isı Aralığı",
+          "Ebatlar (mm)",
+          "Ağırlık"
+        ],
+        "rows": [
+          [
+            "R600a R600a",
+            "220 V ~ 50Hz 220 V ~ 50Hz",
+            "+10 - +14°C +10 - +14°C",
+            "905x505x850 1350 x 505x 850",
+            "41 kg 75 kg"
+          ]
+        ],
+        "specs": {
+          "Soğutucu Gaz": "R600a R600a",
+          "Voltaj": "220 V ~ 50Hz 220 V ~ 50Hz",
+          "Isı Aralığı": "+10 - +14°C +10 - +14°C",
+          "Ebatlar (mm)": "905x505x850 1350 x 505x 850",
+          "Ağırlık": "41 kg 75 kg"
+        }
+      },
+      "olculer": {
+        "raw": "905x505x850 ",
+        "genislik_mm": 905,
+        "derinlik_mm": 505,
+        "yukseklik_mm": 850
+      },
+      "ebatRaw": "905x505x850 1350 x 505x 850",
+      "scrapedAt": "2026-06-08T21:07:44.818Z",
+      "localImage": "images/senox-wn-250-wn-350.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-sds-1010-dc-2-cf-kanopili-carpma-kapi-siyah",
+      "slug": "senox-sds-1010-dc-2-cf-kanopili-carpma-kapi-siyah",
+      "listTitle": "SENOX - SDS-1010 DC 2 CF Kanopili Çarpma..",
+      "listImage": "https://senox.com.tr/uploads/product/senox-sds-1010-dc-2-cf-kanopili-carpma-kapi-siyah-7236.png",
+      "listSummary": "Net Hacim 903/816 Raf sayısı 4 500ml şşe yükleme kapasitesi 200 adet İzolasyon Kalınlığı 50 İklim Sınıfı B/C Djital Termostat Led aydınlatma Ip24 su geçirmezlik",
+      "category": "Şişe Soğutucular",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "sise-sogutucular",
+      "title": "SENOX - SDS-1010 DC 2 CF Kanopili Çarpma Kapı Siyah",
+      "modelNo": "SDS-1010",
+      "summary": "Net Hacim 903/816 Raf sayısı 4 500ml şşe yükleme kapasitesi 200 adet İzolasyon Kalınlığı 50 İklim Sınıfı B/C Djital Termostat Led aydınlatma Ip24 su geçirmezlik",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-sds-1010-dc-2-cf-kanopili-carpma-kapi-siyah-7236.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Soğutucu Gaz",
+          "Voltaj",
+          "Isı Aralığı",
+          "Ebatlar (mm)",
+          "Ağırlık"
+        ],
+        "rows": [
+          [
+            "R290a",
+            "220 V ~ 50Hz",
+            "0 - +10&deg;C",
+            "980x740x2145",
+            "158 kg"
+          ]
+        ],
+        "specs": {
+          "Soğutucu Gaz": "R290a",
+          "Voltaj": "220 V ~ 50Hz",
+          "Isı Aralığı": "0 - +10&deg;C",
+          "Ebatlar (mm)": "980x740x2145",
+          "Ağırlık": "158 kg"
+        }
+      },
+      "olculer": {
+        "raw": "980x740x2145",
+        "genislik_mm": 980,
+        "derinlik_mm": 740,
+        "yukseklik_mm": 2145
+      },
+      "ebatRaw": "980x740x2145",
+      "scrapedAt": "2026-06-08T21:07:45.357Z",
+      "localImage": "images/senox-sds-1010-dc-2-cf-kanopili-carpma-kapi-siyah.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-wn180",
+      "slug": "senox-wn180",
+      "listTitle": "SENOX - Wn180",
+      "listImage": "https://senox.com.tr/uploads/product/senox-wn180-1983.png",
+      "listSummary": "PVC kaplı sac iç ve dış gövde. CFC içermeyen, yüksek basınçla enjekte edilmş, 40 mm kalınlığında polüretan izolasyon. Özel tasarım rolbond evaporatör. Kiltil cam kapılar. Led aydınlatmalı iç kabin. Ayarlanablr ç raflar. İç ısı dağılımını sağlayan fanlı sistem. Üç ahşap raflıdır.",
+      "category": "Şişe Soğutucular",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "sise-sogutucular",
+      "title": "SENOX - Wn180",
+      "modelNo": "Wn180",
+      "summary": "PVC kaplı sac iç ve dış gövde. CFC içermeyen, yüksek basınçla enjekte edilmş, 40 mm kalınlığında polüretan izolasyon. Özel tasarım rolbond evaporatör. Kiltil cam kapılar. Led aydınlatmalı iç kabin. Ayarlanablr ç raflar. İç ısı dağılımını sağlayan fanlı sistem. Üç ahşap raflıdır.",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-wn180-1983.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Soğutucu Gaz",
+          "Voltaj",
+          "Isı Aralığı",
+          "Ebatlar (mm)",
+          "Ağırlık"
+        ],
+        "rows": [
+          [
+            "R134a",
+            "220 V ~ 50Hz",
+            "+10 - +14°C",
+            "470 x 545x 1265",
+            "56 kg"
+          ]
+        ],
+        "specs": {
+          "Soğutucu Gaz": "R134a",
+          "Voltaj": "220 V ~ 50Hz",
+          "Isı Aralığı": "+10 - +14°C",
+          "Ebatlar (mm)": "470 x 545x 1265",
+          "Ağırlık": "56 kg"
+        }
+      },
+      "olculer": {
+        "raw": "470 x 545x 1265",
+        "genislik_mm": 470,
+        "derinlik_mm": 545,
+        "yukseklik_mm": 1265
+      },
+      "ebatRaw": "470 x 545x 1265",
+      "scrapedAt": "2026-06-08T21:07:45.907Z",
+      "localImage": "images/senox-wn180.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-sds-770-dc-2-df-siyah-kanopisiz",
+      "slug": "senox-sds-770-dc-2-df-siyah-kanopisiz",
+      "listTitle": "SENOX - SDS-770 DC 2 DF SİYAH Kanopisiz",
+      "listImage": "https://senox.com.tr/uploads/product/senox-sds-770-dc-2-df-siyah-kanopisiz-5083.png",
+      "listSummary": "Net Hacim 745/717 Raf sayısı 5+5 500ml şişe yükleme kapasitesi 620 adet İzolasyon Kalınlığı 50 İklim Sınıfı B/C Dijital Termostat Led aydınlatma Ip24 su geçirmezlik",
+      "category": "Şişe Soğutucular",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "sise-sogutucular",
+      "title": "SENOX - SDS-770 DC 2 DF SİYAH Kanopisiz",
+      "modelNo": "SDS-770",
+      "summary": "Net Hacim 745/717 Raf sayısı 5+5 500ml şişe yükleme kapasitesi 620 adet İzolasyon Kalınlığı 50 İklim Sınıfı B/C Dijital Termostat Led aydınlatma Ip24 su geçirmezlik",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-sds-770-dc-2-df-siyah-kanopisiz-5083.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Açıklama",
+          "Voltaj",
+          "Isı Aralığı",
+          "Ebatlar (mm)",
+          "Ağırlık"
+        ],
+        "rows": [
+          [
+            "Kanopili",
+            "220 V ~ 50Hz",
+            "0 -10 &deg;C",
+            "1200 x 605x 1810",
+            "160"
+          ],
+          [
+            "Kanopisiz",
+            "220 V ~ 50Hz",
+            "0 -10 &deg;C",
+            "1200 x 605x 1994",
+            "160"
+          ]
+        ],
+        "specs": {
+          "Açıklama": "Kanopisiz",
+          "Voltaj": "220 V ~ 50Hz",
+          "Isı Aralığı": "0 -10 &deg;C",
+          "Ebatlar (mm)": "1200 x 605x 1994",
+          "Ağırlık": "160"
+        }
+      },
+      "olculer": {
+        "raw": "1200 x 605x 1994",
+        "genislik_mm": 1200,
+        "derinlik_mm": 605,
+        "yukseklik_mm": 1994
+      },
+      "ebatRaw": "1200 x 605x 1994",
+      "scrapedAt": "2026-06-08T21:07:46.460Z",
+      "localImage": "images/senox-sds-770-dc-2-df-siyah-kanopisiz.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-wn-770-kanopili-kanopisiz",
+      "slug": "senox-wn-770-kanopili-kanopisiz",
+      "listTitle": "SENOX - WN-770 Kanopili / Kanopisiz",
+      "listImage": "https://senox.com.tr/uploads/product/senox-wn-770-kanopili-kanopisiz-3358.png",
+      "listSummary": "PVC kaplı sac iç ve dış gövde. Özel tasarım rolbond evaporatör. Kiltli cam kapılar. Led aydınlatmalı iç kabin. Ayarlanabilir 5 ahşap raflar. İç ısı dağılımını sağlayan fanlı sistem. Ürün çift motorlu olup iki bağımsız bölümden oluşmaktadır. Birinci bölüm 10-12°C Beyaz şaraba uygundur. İknci bölüm 12-14°C Kırmızı şaraba uygundur.",
+      "category": "Şişe Soğutucular",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "sise-sogutucular",
+      "title": "SENOX - WN-770 Kanopili / Kanopisiz",
+      "modelNo": "WN-770-KANOPILI",
+      "summary": "PVC kaplı sac iç ve dış gövde. Özel tasarım rolbond evaporatör. Kiltli cam kapılar. Led aydınlatmalı iç kabin. Ayarlanabilir 5 ahşap raflar. İç ısı dağılımını sağlayan fanlı sistem. Ürün çift motorlu olup iki bağımsız bölümden oluşmaktadır. Birinci bölüm 10-12°C Beyaz şaraba uygundur. İknci bölüm 12-14°C Kırmızı şaraba uygundur.",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-wn-770-kanopili-kanopisiz-3358.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Soğutucu Gaz",
+          "Voltaj",
+          "Isı Aralığı",
+          "Ebatlar (mm)",
+          "Ağırlık"
+        ],
+        "rows": [
+          [
+            "R600a",
+            "220 V ~ 50Hz",
+            "+10 - +14°C",
+            "1200x605x1994",
+            "150 kg"
+          ]
+        ],
+        "specs": {
+          "Soğutucu Gaz": "R600a",
+          "Voltaj": "220 V ~ 50Hz",
+          "Isı Aralığı": "+10 - +14°C",
+          "Ebatlar (mm)": "1200x605x1994",
+          "Ağırlık": "150 kg"
+        }
+      },
+      "olculer": {
+        "raw": "1200x605x1994",
+        "genislik_mm": 1200,
+        "derinlik_mm": 605,
+        "yukseklik_mm": 1994
+      },
+      "ebatRaw": "1200x605x1994",
+      "scrapedAt": "2026-06-08T21:07:46.999Z",
+      "localImage": "images/senox-wn-770-kanopili-kanopisiz.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-sds-1010-dc-2-yf-kanopisiz-carpma-kapi-siyah",
+      "slug": "senox-sds-1010-dc-2-yf-kanopisiz-carpma-kapi-siyah",
+      "listTitle": "SENOX - SDS-1010 DC 2 YF Kanopisiz Çarpm..",
+      "listImage": "https://senox.com.tr/uploads/product/senox-sds-1010-dc-2-yf-kanopisiz-carpma-kapi-siyah-5723.png",
+      "listSummary": "Net Hacim 903/816 Raf sayısı 4 500ml şişe yükleme kapasitesi 200 adet İzolasyon Kalınlığı 50 İklim Sınıfı B/C Djital Termostat Led aydınlatma Ip24 su geçirmezlik",
+      "category": "Şişe Soğutucular",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "sise-sogutucular",
+      "title": "SENOX - SDS-1010 DC 2 YF Kanopisiz Çarpma Kapı Siyah",
+      "modelNo": "SDS-1010",
+      "summary": "Net Hacim 903/816 Raf sayısı 4 500ml şişe yükleme kapasitesi 200 adet İzolasyon Kalınlığı 50 İklim Sınıfı B/C Djital Termostat Led aydınlatma Ip24 su geçirmezlik",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-sds-1010-dc-2-yf-kanopisiz-carpma-kapi-siyah-5723.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Soğutucu Gaz",
+          "Voltaj",
+          "Isı Aralığı",
+          "Ebatlar (mm)",
+          "Ağırlık"
+        ],
+        "rows": [
+          [
+            "R290a",
+            "220 V ~ 50Hz",
+            "0 - +10&deg;C",
+            "980x740x2145",
+            "157 kg"
+          ]
+        ],
+        "specs": {
+          "Soğutucu Gaz": "R290a",
+          "Voltaj": "220 V ~ 50Hz",
+          "Isı Aralığı": "0 - +10&deg;C",
+          "Ebatlar (mm)": "980x740x2145",
+          "Ağırlık": "157 kg"
+        }
+      },
+      "olculer": {
+        "raw": "980x740x2145",
+        "genislik_mm": 980,
+        "derinlik_mm": 740,
+        "yukseklik_mm": 2145
+      },
+      "ebatRaw": "980x740x2145",
+      "scrapedAt": "2026-06-08T21:07:47.586Z",
+      "localImage": "images/senox-sds-1010-dc-2-yf-kanopisiz-carpma-kapi-siyah.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-smr-5120-st-sogutucu",
+      "slug": "senox-smr-5120-st-sogutucu",
+      "listTitle": "Senox-SMR-5120 ST Soğutucu",
+      "listImage": "https://senox.com.tr/uploads/product/senox-smr-5120-st-sogutucu-2064.png",
+      "listSummary": "Enerj Sınıfı : A++ Toplam Brüt Hacim : 118 lt Soğutucu Bölme Net Hacm : 113 lt Kontrol Panel : Mekank Ses Sevyesi : 39 dB Kullanım Şekli : Solo Dondurucu Özellği : Statik Yıllık Enerji Tüketim : 93 kwh Ürün Rengi : Inox",
+      "category": "Şişe Soğutucular",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "sise-sogutucular",
+      "title": "Senox-SMR-5120 ST Soğutucu",
+      "modelNo": "SMR-5120",
+      "summary": "Enerj Sınıfı : A++ Toplam Brüt Hacim : 118 lt Soğutucu Bölme Net Hacm : 113 lt Kontrol Panel : Mekank Ses Sevyesi : 39 dB Kullanım Şekli : Solo Dondurucu Özellği : Statik Yıllık Enerji Tüketim : 93 kwh Ürün Rengi : Inox",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-sogutucu-2064.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Soğutucu Gaz",
+          "Voltaj",
+          "Elektrik Gücü",
+          "Ebatlar (mm)",
+          "Ağırlık"
+        ],
+        "rows": [
+          [
+            "R290a",
+            "220 V ~ 50Hz",
+            "",
+            "540 x 510x 800",
+            "47 kg"
+          ]
+        ],
+        "specs": {
+          "Soğutucu Gaz": "R290a",
+          "Voltaj": "220 V ~ 50Hz",
+          "Ebatlar (mm)": "540 x 510x 800",
+          "Ağırlık": "47 kg"
+        }
+      },
+      "olculer": {
+        "raw": "540 x 510x 800",
+        "genislik_mm": 540,
+        "derinlik_mm": 510,
+        "yukseklik_mm": 800
+      },
+      "ebatRaw": "540 x 510x 800",
+      "scrapedAt": "2026-06-08T21:07:48.131Z",
+      "localImage": "images/senox-smr-5120-st-sogutucu.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-sbc150",
+      "slug": "senox-sbc150",
+      "listTitle": "SENOX - SBC150",
+      "listImage": "https://senox.com.tr/uploads/product/senox-sbc150-3181.png",
+      "listSummary": "PVC kaplı sac iç ve dış gövde. CFC içermeyen, yüksek basınçla enjekte edilmiş, 40 mm kalınlığında polüretan izolasyon. Özel tasarım rolbond evaporatör. Kiltli cam kapılar. Led aydınlatmalı iç kabin. Ayarlanabilir iç raflar. İç ısı dağılımını sağlayan fanlı sistem.",
+      "category": "Şişe Soğutucular",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "sise-sogutucular",
+      "title": "SENOX - SBC150",
+      "modelNo": "SBC150",
+      "summary": "PVC kaplı sac iç ve dış gövde. CFC içermeyen, yüksek basınçla enjekte edilmiş, 40 mm kalınlığında polüretan izolasyon. Özel tasarım rolbond evaporatör. Kiltli cam kapılar. Led aydınlatmalı iç kabin. Ayarlanabilir iç raflar. İç ısı dağılımını sağlayan fanlı sistem.",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-sbc150-3181.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Soğutucu Gaz",
+          "Voltaj",
+          "Elektrik Gücü",
+          "Ebatlar (mm)",
+          "Ağırlık"
+        ],
+        "rows": [
+          [
+            "R600a",
+            "220 V ~ 50Hz",
+            "",
+            "1350 x 505 x 850",
+            "75 kg"
+          ]
+        ],
+        "specs": {
+          "Soğutucu Gaz": "R600a",
+          "Voltaj": "220 V ~ 50Hz",
+          "Ebatlar (mm)": "1350 x 505 x 850",
+          "Ağırlık": "75 kg"
+        }
+      },
+      "olculer": {
+        "raw": "1350 x 505 x 850",
+        "genislik_mm": 1350,
+        "derinlik_mm": 505,
+        "yukseklik_mm": 850
+      },
+      "ebatRaw": "1350 x 505 x 850",
+      "scrapedAt": "2026-06-08T21:07:48.667Z",
+      "localImage": "images/senox-sbc150.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-sds-385-dc1-cf-s-lver",
+      "slug": "senox-sds-385-dc1-cf-s-lver",
+      "listTitle": "SENOX - SDS-385 Dc1 CF SILVER",
+      "listImage": "https://senox.com.tr/uploads/product/senox-sds-385-dc1-cf-s-lver-1398.png",
+      "listSummary": "Net Hacim 345 Raf sayısı 5 500ml şişe yükleme kapasitesi 80 adet İzolasyon Kalınlığı 50 İklim Sınıfı B/C Dijital Termostat Led aydınlatma Ip24 su geçirmezlik",
+      "category": "Şişe Soğutucular",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "sise-sogutucular",
+      "title": "SENOX - SDS-385 Dc1 CF SILVER",
+      "modelNo": "SDS-385",
+      "summary": "Net Hacim 345 Raf sayısı 5 500ml şişe yükleme kapasitesi 80 adet İzolasyon Kalınlığı 50 İklim Sınıfı B/C Dijital Termostat Led aydınlatma Ip24 su geçirmezlik",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc1-cf-s-lver-1398.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Soğutucu Gaz",
+          "Voltaj",
+          "Isı Aralığı",
+          "Ebatlar (mm)",
+          "Ağırlık"
+        ],
+        "rows": [
+          [
+            "R134a",
+            "220 V ~ 50Hz",
+            "0 - +10&deg;C",
+            "595 x 605x 1810",
+            "70 kg"
+          ]
+        ],
+        "specs": {
+          "Soğutucu Gaz": "R134a",
+          "Voltaj": "220 V ~ 50Hz",
+          "Isı Aralığı": "0 - +10&deg;C",
+          "Ebatlar (mm)": "595 x 605x 1810",
+          "Ağırlık": "70 kg"
+        }
+      },
+      "olculer": {
+        "raw": "595 x 605x 1810",
+        "genislik_mm": 595,
+        "derinlik_mm": 605,
+        "yukseklik_mm": 1810
+      },
+      "ebatRaw": "595 x 605x 1810",
+      "scrapedAt": "2026-06-08T21:07:49.214Z",
+      "localImage": "images/senox-sds-385-dc1-cf-s-lver.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-sbc350-sbcs350",
+      "slug": "senox-sbc350-sbcs350",
+      "listTitle": "SENOX - SBC350 / SBCS350",
+      "listImage": "https://senox.com.tr/uploads/product/senox-sbc350-sbcs350-8838.png",
+      "listSummary": "PVC kaplı sac iç ve dış gövde. CFC içermeyen, yüksek basınçla enjekte edilmiş, 40 mm kalınlığında polüretan izolasyon. Özel tasarım rolbond evaporatör. Kiltli cam kapılar. Led aydınlatmalı iç kabin. Ayarlanabilir iç raflar. İç ısı dağılımını sağlayan fanlı sistem.",
+      "category": "Şişe Soğutucular",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "sise-sogutucular",
+      "title": "SENOX - SBC350 / SBCS350",
+      "modelNo": "SBC350-SBCS350",
+      "summary": "PVC kaplı sac iç ve dış gövde. CFC içermeyen, yüksek basınçla enjekte edilmiş, 40 mm kalınlığında polüretan izolasyon. Özel tasarım rolbond evaporatör. Kiltli cam kapılar. Led aydınlatmalı iç kabin. Ayarlanabilir iç raflar. İç ısı dağılımını sağlayan fanlı sistem.",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-sbc350-sbcs350-8838.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Soğutucu Gaz",
+          "Voltaj",
+          "Elektrik Gücü",
+          "Ebatlar (mm)",
+          "Ağırlık"
+        ],
+        "rows": [
+          [
+            "R600a",
+            "220 V ~ 50Hz",
+            "",
+            "1350 x 505x 850",
+            "80 kg"
+          ]
+        ],
+        "specs": {
+          "Soğutucu Gaz": "R600a",
+          "Voltaj": "220 V ~ 50Hz",
+          "Ebatlar (mm)": "1350 x 505x 850",
+          "Ağırlık": "80 kg"
+        }
+      },
+      "olculer": {
+        "raw": "1350 x 505x 850",
+        "genislik_mm": 1350,
+        "derinlik_mm": 505,
+        "yukseklik_mm": 850
+      },
+      "ebatRaw": "1350 x 505x 850",
+      "scrapedAt": "2026-06-08T21:07:49.750Z",
+      "localImage": "images/senox-sbc350-sbcs350.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-sds385-dc-pf-kanopisiz-s-yah",
+      "slug": "senox-sds385-dc-pf-kanopisiz-s-yah",
+      "listTitle": "SENOX- SDS385-DC PF KANOPİSİZ SIYAH",
+      "listImage": "https://senox.com.tr/uploads/product/senox-sds385-dc-pf-kanopisiz-s-yah-7764.png",
+      "listSummary": "Net Hacim 345 Raf sayısı 5 500ml şişe yükleme kapasitesi 80 adet İzolasyon Kalınlığı 50 İklim Sınıfı B/C Djital Termostat Led aydınlatma Ip24 su geçirmezlik",
+      "category": "Şişe Soğutucular",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "sise-sogutucular",
+      "title": "SENOX- SDS385-DC PF KANOPİSİZ SIYAH",
+      "modelNo": "SDS385-DC",
+      "summary": "Net Hacim 345 Raf sayısı 5 500ml şişe yükleme kapasitesi 80 adet İzolasyon Kalınlığı 50 İklim Sınıfı B/C Djital Termostat Led aydınlatma Ip24 su geçirmezlik",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-sds385-dc-pf-kanopisiz-s-yah-7764.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Model",
+          "Voltaj",
+          "Isı Aralığı",
+          "Ebatlar (mm)",
+          "Ağırlık"
+        ],
+        "rows": [
+          [
+            "SSC-390",
+            "220 V ~ 50Hz",
+            "0 - +10&deg;C",
+            "595 x 605x 1832",
+            "70 kg"
+          ]
+        ],
+        "specs": {
+          "Model": "SSC-390",
+          "Voltaj": "220 V ~ 50Hz",
+          "Isı Aralığı": "0 - +10&deg;C",
+          "Ebatlar (mm)": "595 x 605x 1832",
+          "Ağırlık": "70 kg"
+        }
+      },
+      "olculer": {
+        "raw": "595 x 605x 1832",
+        "genislik_mm": 595,
+        "derinlik_mm": 605,
+        "yukseklik_mm": 1832
+      },
+      "ebatRaw": "595 x 605x 1832",
+      "scrapedAt": "2026-06-08T21:07:50.298Z",
+      "localImage": "images/senox-sds385-dc-pf-kanopisiz-s-yah.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-bbc-150",
+      "slug": "senox-bbc-150",
+      "listTitle": "SENOX - BBC-150",
+      "listImage": "https://senox.com.tr/uploads/product/senox-bbc-150-4752.png",
+      "listSummary": "PVC kaplı sac iç ve dış gövde. CFC içermeyen, yüksek basınçla enjekte edilmiş, 40 mm kalınlığında polüretan izolasyon. Özel tasarım rolbond evaporatör. Kiltli cam kapılar. Led aydınlatmalı iç kabin. Ayarlanabilir iç raflar. İç ısı dağılımını sağlayan fanlı sistem. Analog Termostat",
+      "category": "Şişe Soğutucular",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "sise-sogutucular",
+      "title": "SENOX - BBC-150",
+      "modelNo": "BBC-150",
+      "summary": "PVC kaplı sac iç ve dış gövde. CFC içermeyen, yüksek basınçla enjekte edilmiş, 40 mm kalınlığında polüretan izolasyon. Özel tasarım rolbond evaporatör. Kiltli cam kapılar. Led aydınlatmalı iç kabin. Ayarlanabilir iç raflar. İç ısı dağılımını sağlayan fanlı sistem. Analog Termostat",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-bbc-150-4752.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Soğutucu Gaz",
+          "Voltaj",
+          "Elektrik Gücü",
+          "Ebatlar (mm)",
+          "Ağırlık"
+        ],
+        "rows": [
+          [
+            "R600a",
+            "220 V ~ 50Hz",
+            "",
+            "600 x 505 x 850",
+            "41 kg"
+          ]
+        ],
+        "specs": {
+          "Soğutucu Gaz": "R600a",
+          "Voltaj": "220 V ~ 50Hz",
+          "Ebatlar (mm)": "600 x 505 x 850",
+          "Ağırlık": "41 kg"
+        }
+      },
+      "olculer": {
+        "raw": "600 x 505 x 850",
+        "genislik_mm": 600,
+        "derinlik_mm": 505,
+        "yukseklik_mm": 850
+      },
+      "ebatRaw": "600 x 505 x 850",
+      "scrapedAt": "2026-06-08T21:07:50.837Z",
+      "localImage": "images/senox-bbc-150.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-sds-1510-dc-3-yf-kanopisiz",
+      "slug": "senox-sds-1510-dc-3-yf-kanopisiz",
+      "listTitle": "SENOX - SDS-1510 DC 3 YF Kanopisiz",
+      "listImage": "https://senox.com.tr/uploads/product/senox-sds-1510-dc-3-yf-kanopisiz-8565.png",
+      "listSummary": "Net Hacm 1491/1215 Raf sayısı 4+4+4 500ml şşe yükleme kapastes 620 adet İzolasyon Kalınlığı 50 İklm Sınıfı B/C Djtal Termostat Led aydınlatma Ip24 su geçrmezlk",
+      "category": "Şişe Soğutucular",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "sise-sogutucular",
+      "title": "SENOX - SDS-1510 DC 3 YF Kanopisiz",
+      "modelNo": "SDS-1510",
+      "summary": "Net Hacm 1491/1215 Raf sayısı 4+4+4 500ml şşe yükleme kapastes 620 adet İzolasyon Kalınlığı 50 İklm Sınıfı B/C Djtal Termostat Led aydınlatma Ip24 su geçrmezlk",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-sds-1510-dc-3-yf-kanopisiz-8565.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Soğutucu Gaz",
+          "Voltaj",
+          "Isı Aralığı",
+          "Ebatlar (mm)",
+          "Ağırlık"
+        ],
+        "rows": [
+          [
+            "R290a",
+            "220 V ~ 50Hz",
+            "0 -10 &deg;C",
+            "1500 x 690x 2075",
+            "213"
+          ]
+        ],
+        "specs": {
+          "Soğutucu Gaz": "R290a",
+          "Voltaj": "220 V ~ 50Hz",
+          "Isı Aralığı": "0 -10 &deg;C",
+          "Ebatlar (mm)": "1500 x 690x 2075",
+          "Ağırlık": "213"
+        }
+      },
+      "olculer": {
+        "raw": "1500 x 690x 2075",
+        "genislik_mm": 1500,
+        "derinlik_mm": 690,
+        "yukseklik_mm": 2075
+      },
+      "ebatRaw": "1500 x 690x 2075",
+      "scrapedAt": "2026-06-08T21:07:51.383Z",
+      "localImage": "images/senox-sds-1510-dc-3-yf-kanopisiz.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/buz-makineleri",
+      "slug": "buz-makineleri",
+      "listTitle": "BUZ MAKİNELERİ",
+      "listImage": "https://senox.com.tr/uploads/product/buz-makineleri-5266.png",
+      "listSummary": "Günlük 22 kg- 450 kg buz kapastesi Ekran üzerinden ayarlanabilir buz kalınlığı Hazne kapastesi 22 kg -450 kg 400W-2500W / 220V Sessiz çalışma Düşük enerj tüketimi",
+      "category": "Buz Makinaları",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "buz-makinalari",
+      "title": "BUZ MAKİNELERİ",
+      "modelNo": "BUZ MAKİNELERİ",
+      "summary": "Günlük 22 kg- 450 kg buz kapastesi Ekran üzerinden ayarlanabilir buz kalınlığı Hazne kapastesi 22 kg -450 kg 400W-2500W / 220V Sessiz çalışma Düşük enerj tüketimi",
+      "images": [
+        "https://senox.com.tr/uploads/product/buz-makineleri-5266.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Model",
+          "Kapasite",
+          "Elektrik Gücü",
+          "Ebatlar (mm)",
+          "Ağırlık"
+        ],
+        "rows": [
+          [
+            "FR-25 FR-30",
+            "22 kg / Gün 27 kg / Gün",
+            "400W 500W",
+            "355x435x590 450x575x710",
+            "26 32"
+          ],
+          [
+            "FR-35",
+            "32 kg / Gün",
+            "500W",
+            "500x580x690",
+            "38"
+          ],
+          [
+            "FR-40 FR-50",
+            "40 kg / Gün 47 kg / Gün",
+            "500W 600W",
+            "450x575x710 500x580x800",
+            "40 45"
+          ],
+          [
+            "FR-60",
+            "67 kg / Gün",
+            "800W",
+            "500x580x800",
+            "72"
+          ],
+          [
+            "FR-70 FR-90",
+            "67 kg / Gün 85kg / Gün",
+            "800W 1100W",
+            "738x600x822 738x600x822",
+            "75 85"
+          ],
+          [
+            "FR-250",
+            "230 kg / Gün",
+            "1200W",
+            "761x622x576",
+            "72"
+          ],
+          [
+            "FR-500",
+            "450 kg / Gün",
+            "2500W",
+            "761x622x726",
+            "103"
+          ],
+          [
+            "SB-200",
+            "175 kg",
+            "1200W",
+            "765x842x1002",
+            "42"
+          ],
+          [
+            "SB-400",
+            "210 kg",
+            "2500W",
+            "765x842x1150",
+            "103"
+          ]
+        ],
+        "specs": {
+          "Model": "SB-400",
+          "Kapasite": "210 kg",
+          "Elektrik Gücü": "2500W",
+          "Ebatlar (mm)": "765x842x1150",
+          "Ağırlık": "103"
+        }
+      },
+      "olculer": {
+        "raw": "765x842x1150",
+        "genislik_mm": 765,
+        "derinlik_mm": 842,
+        "yukseklik_mm": 1150
+      },
+      "ebatRaw": "765x842x1150",
+      "scrapedAt": "2026-06-08T21:07:51.958Z",
+      "localImage": "images/buz-makineleri.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-bz12-arac-karavan-hazneli-kup-buz-maknesi-12-kg-gun-kapasteli",
+      "slug": "senox-bz12-arac-karavan-hazneli-kup-buz-maknesi-12-kg-gun-kapasteli",
+      "listTitle": "Senox BZ12 Araç & Karavan Hazneli Küp Bu..",
+      "listImage": "https://senox.com.tr/uploads/product/senox-bz12-arac-karavan-hazneli-kup-buz-maknesi-12-kg-gun-kapasteli-1626.png",
+      "listSummary": "2 Farklı tip buz seçeneği (kalın - ince) Çıkarılabilir buz sepeti Ergonomik kullanım ve uzun yıllar performans Güçlü kompresör, hızlı soğutma Hediye buz küreği Buz tipi mermi (parmak) Döngü süresi 6-12 dk Ultra sessiz ev ve endüstriyel kullanıma uygundur Buz küpü ağırlığı 7-9 g 12 kg kapasiteli Ölçüleri: 297*367*378 mm",
+      "category": "Buz Makinaları",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "buz-makinalari",
+      "title": "Senox BZ12 Araç & Karavan Hazneli Küp Buz Maknesi, 12 kg/gün Kapasteli",
+      "modelNo": "BZ12-ARAC-KARAVAN",
+      "summary": "2 Farklı tip buz seçeneği (kalın - ince) Çıkarılabilir buz sepeti Ergonomik kullanım ve uzun yıllar performans Güçlü kompresör, hızlı soğutma Hediye buz küreği Buz tipi mermi (parmak) Döngü süresi 6-12 dk Ultra sessiz ev ve endüstriyel kullanıma uygundur Buz küpü ağırlığı 7-9 g 12 kg kapasiteli Ölçüleri: 297*367*378 mm",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-bz12-arac-karavan-hazneli-kup-buz-maknesi-12-kg-gun-kapasteli-1626.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Voltaj",
+          "Elektrik Gücü",
+          "Ebatlar (mm)",
+          "Ağırlık"
+        ],
+        "rows": [
+          [
+            "220 V - 1N",
+            "340 W",
+            "430x380x440",
+            "27 kg"
+          ]
+        ],
+        "specs": {
+          "Voltaj": "220 V - 1N",
+          "Elektrik Gücü": "340 W",
+          "Ebatlar (mm)": "430x380x440",
+          "Ağırlık": "27 kg"
+        }
+      },
+      "olculer": {
+        "raw": "430x380x440",
+        "genislik_mm": 430,
+        "derinlik_mm": 380,
+        "yukseklik_mm": 440
+      },
+      "ebatRaw": "430x380x440",
+      "scrapedAt": "2026-06-08T21:07:52.698Z",
+      "localImage": "images/senox-bz12-arac-karavan-hazneli-kup-buz-maknesi-12-kg-gun-kapasteli.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-bz20-buz-makinesi-15-kg-gun-kapasiteli",
+      "slug": "senox-bz20-buz-makinesi-15-kg-gun-kapasiteli",
+      "listTitle": "Senox- Bz20 Buz Makinesi 15 kg/gün kapas..",
+      "listImage": "https://senox.com.tr/uploads/product/senox-bz20-buz-makinesi-15-kg-gun-kapasiteli-6378.png",
+      "listSummary": "Üç farklı boyutta buz yapma imkanı Evlere, küçük işletmelere ve teknelerde kullanıma uygun Silver Şebekeye gerek duymadan çalıştırma Su bittiğinde uyarı sistemi Buz depolama kapasitesi 1,2 kg Buz yapma kapasitesi 15 kg Su haznesi : 3800 ml 10.80 kWh/24h enerji tüketimi Voltaj :220V - 1N Elektirik Gücü: 340 W Ebatlar : 430x 380x440 27 Kg ağırlığında",
+      "category": "Buz Makinaları",
+      "categoryGroup": "Soğutma",
+      "categorySlug": "buz-makinalari",
+      "title": "Senox- Bz20 Buz Makinesi 15 kg/gün kapasiteli",
+      "modelNo": "BZ20-BUZ-MAKINESI",
+      "summary": "Üç farklı boyutta buz yapma imkanı Evlere, küçük işletmelere ve teknelerde kullanıma uygun Silver Şebekeye gerek duymadan çalıştırma Su bittiğinde uyarı sistemi Buz depolama kapasitesi 1,2 kg Buz yapma kapasitesi 15 kg Su haznesi : 3800 ml 10.80 kWh/24h enerji tüketimi Voltaj :220V - 1N Elektirik Gücü: 340 W Ebatlar : 430x 380x440 27 Kg ağırlığında",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-bz20-buz-makinesi-15-kg-gun-kapasiteli-3791.png",
+        "https://senox.com.tr/uploads/product/senox-bz20-buz-makinesi-15-kg-gun-kapasiteli-6378.png",
+        "https://senox.com.tr/uploads/product/senox-bz20-buz-makinesi-15-kg-gun-kapasiteli-8941.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [],
+        "rows": [],
+        "specs": {}
+      },
+      "olculer": {
+        "raw": "430x 380x440 ",
+        "genislik_mm": 430,
+        "derinlik_mm": 380,
+        "yukseklik_mm": 440
+      },
+      "ebatRaw": "430x 380x440 ",
+      "scrapedAt": "2026-06-08T21:07:53.598Z",
+      "localImage": "images/senox-bz20-buz-makinesi-15-kg-gun-kapasiteli.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/snx-25",
+      "slug": "snx-25",
+      "listTitle": "SNX-25",
+      "listImage": "https://senox.com.tr/uploads/product/snx-25-54.png",
+      "listSummary": "304L EN 1.4307 paslanmaz çelik gövde Askı tip asansörlü Isıtıcı Lamba Ayarlanabilir spiral kablolu (800-1600 mm) 1x150 Watt infrared ısıtıcı Lamba Açma Kapama anahtarlı 220/230 V t",
+      "category": "Isıtıcı Lambalar",
+      "categoryGroup": "Kahve Ekipmanları",
+      "categorySlug": "-sitici-lambalar",
+      "title": "SNX-25",
+      "modelNo": "SNX-25",
+      "summary": "304L EN 1.4307 paslanmaz çelik gövde Askı tip asansörlü Isıtıcı Lamba Ayarlanabilir spiral kablolu (800-1600 mm) 1x150 Watt infrared ısıtıcı Lamba Açma Kapama anahtarlı 220/230 V t",
+      "images": [
+        "https://senox.com.tr/uploads/product/snx-25-54.png",
+        "https://senox.com.tr/uploads/product/snx-25-8594.png",
+        "https://senox.com.tr/uploads/product/snx-25-8524.png",
+        "https://senox.com.tr/uploads/product/snx-25-3348.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [],
+        "rows": [],
+        "specs": {}
+      },
+      "olculer": null,
+      "ebatRaw": null,
+      "scrapedAt": "2026-06-08T21:07:54.409Z",
+      "localImage": "images/snx-25.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/snx-8060-mcc",
+      "slug": "snx-8060-mcc",
+      "listTitle": "SNX-8060-MCC",
+      "listImage": "https://senox.com.tr/uploads/product/snx-8060-mcc-4651.png",
+      "listSummary": "Set Üstü Sıcak Servis Ünitesi Masif Ahşap Gövde 800x600x120/750 mm GN 2/1 30-90 C&deg; arası dijital ayarlanabilir cam yüzey ısıtma Ayarlanabilir spiral ayaklı, 2x150 Watt infrared ısıtıcı Lamba 220/230 V ; 1300 Watt",
+      "category": "Isıtıcı Lambalar",
+      "categoryGroup": "Kahve Ekipmanları",
+      "categorySlug": "-sitici-lambalar",
+      "title": "SNX-8060-MCC",
+      "modelNo": "8060",
+      "summary": "Set Üstü Sıcak Servis Ünitesi Masif Ahşap Gövde 800x600x120/750 mm GN 2/1 30-90 C&deg; arası dijital ayarlanabilir cam yüzey ısıtma Ayarlanabilir spiral ayaklı, 2x150 Watt infrared ısıtıcı Lamba 220/230 V ; 1300 Watt",
+      "images": [
+        "https://senox.com.tr/uploads/product/snx-8060-mcc-4651.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [],
+        "rows": [],
+        "specs": {}
+      },
+      "olculer": {
+        "raw": "800x600x120",
+        "genislik_mm": 800,
+        "derinlik_mm": 600,
+        "yukseklik_mm": 120
+      },
+      "ebatRaw": "800x600x120",
+      "scrapedAt": "2026-06-08T21:07:55.268Z",
+      "localImage": "images/snx-8060-mcc.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/snx-8060-ppnc",
+      "slug": "snx-8060-ppnc",
+      "listTitle": "SNX-8060-PPNC",
+      "listImage": "https://senox.com.tr/uploads/product/snx-8060-ppnc-5848.png",
+      "listSummary": "Set Üstü Sıcak Servis Ünitesi 18/10 Cr-Ni Paslanmaz (1,5 mm) tabla 800x600x120/750 mm GN 2/1 30-90 C&deg; arası dijital ayarlanabilir ısıtma Ayarlanabilir spiral ayaklı, 2x150 Watt infrared ısıtıcı Lamba Demonte nefeslik 2 20/230 V ; 1300 Watt",
+      "category": "Isıtıcı Lambalar",
+      "categoryGroup": "Kahve Ekipmanları",
+      "categorySlug": "-sitici-lambalar",
+      "title": "SNX-8060-PPNC",
+      "modelNo": "8060",
+      "summary": "Set Üstü Sıcak Servis Ünitesi 18/10 Cr-Ni Paslanmaz (1,5 mm) tabla 800x600x120/750 mm GN 2/1 30-90 C&deg; arası dijital ayarlanabilir ısıtma Ayarlanabilir spiral ayaklı, 2x150 Watt infrared ısıtıcı Lamba Demonte nefeslik 2 20/230 V ; 1300 Watt",
+      "images": [
+        "https://senox.com.tr/uploads/product/snx-8060-ppnc-5848.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [],
+        "rows": [],
+        "specs": {}
+      },
+      "olculer": {
+        "raw": "800x600x120",
+        "genislik_mm": 800,
+        "derinlik_mm": 600,
+        "yukseklik_mm": 120
+      },
+      "ebatRaw": "800x600x120",
+      "scrapedAt": "2026-06-08T21:07:56.127Z",
+      "localImage": "images/snx-8060-ppnc.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/snx-17",
+      "slug": "snx-17",
+      "listTitle": "SNX-17",
+      "listImage": "https://senox.com.tr/uploads/product/snx-17-4628.png",
+      "listSummary": "Askı tip asansörlü Isıtıcı Lamba Ayarlanabilir spiral kablolu (800-1600 mm) 1x150 Watt infrared ısıtıcı Lamba Açma Kapama anahtarlı 220/230 V",
+      "category": "Isıtıcı Lambalar",
+      "categoryGroup": "Kahve Ekipmanları",
+      "categorySlug": "-sitici-lambalar",
+      "title": "SNX-17",
+      "modelNo": "SNX-17",
+      "summary": "Askı tip asansörlü Isıtıcı Lamba Ayarlanabilir spiral kablolu (800-1600 mm) 1x150 Watt infrared ısıtıcı Lamba Açma Kapama anahtarlı 220/230 V",
+      "images": [
+        "https://senox.com.tr/uploads/product/snx-17-4628.png",
+        "https://senox.com.tr/uploads/product/snx-17-898.png",
+        "https://senox.com.tr/uploads/product/snx-17-9156.png",
+        "https://senox.com.tr/uploads/product/snx-17-5058.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [],
+        "rows": [],
+        "specs": {}
+      },
+      "olculer": null,
+      "ebatRaw": null,
+      "scrapedAt": "2026-06-08T21:07:56.827Z",
+      "localImage": "images/snx-17.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-coffeedo-filtre-maknesi",
+      "slug": "senox-coffeedo-filtre-maknesi",
+      "listTitle": "Senox - Coffeedo Filtre Maknesi",
+      "listImage": "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+      "listSummary": "Birbirinden bağımsız kullanılabilen ısıtıcılar Susuz kaynama koruması Hızlı demleme süresi (6 dakka) Mekan ve zevkinize uygun kişiselleştirme imkanı Kapasite: 144 fincan/saat 1.8 lt. cam pot kapastesi Opsiyonel olarak 1 veya 2 ısıtıcılı ve potlu",
+      "category": "Filtre Kahve Makinaları",
+      "categoryGroup": "Kahve Ekipmanları",
+      "categorySlug": "filtre-kahve-makinalari",
+      "title": "Senox - Coffeedo Filtre Maknesi",
+      "modelNo": "COFFEEDO",
+      "summary": "Birbirinden bağımsız kullanılabilen ısıtıcılar Susuz kaynama koruması Hızlı demleme süresi (6 dakka) Mekan ve zevkinize uygun kişiselleştirme imkanı Kapasite: 144 fincan/saat 1.8 lt. cam pot kapastesi Opsiyonel olarak 1 veya 2 ısıtıcılı ve potlu",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [
+          "Voltaj",
+          "Elektrik Gücü",
+          "Ebatlar (mm)",
+          "Ağırlık"
+        ],
+        "rows": [
+          [
+            "220 V - 1N",
+            "2,4 kW",
+            "190&times;370&times;440",
+            "5,2 kg"
+          ]
+        ],
+        "specs": {
+          "Voltaj": "220 V - 1N",
+          "Elektrik Gücü": "2,4 kW",
+          "Ebatlar (mm)": "190&times;370&times;440",
+          "Ağırlık": "5,2 kg"
+        }
+      },
+      "olculer": null,
+      "ebatRaw": "190&times;370&times;440",
+      "scrapedAt": "2026-06-08T21:07:57.527Z",
+      "localImage": "images/senox-coffeedo-filtre-maknesi.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-snx-35sc-sut-sogutucu",
+      "slug": "senox-snx-35sc-sut-sogutucu",
+      "listTitle": "SENOX - SNX-35SC SÜT SOĞUTUCU",
+      "listImage": "https://senox.com.tr/uploads/product/senox-snx-35sc-sut-sogutucu-3276.png",
+      "listSummary": "35 LİTRE BRÜT KAPASİTELİ PELTİER SİSTEMLİ UZUN ÖMÜRLÜ SOĞUTMA SİSTEMİ GAZ KAÇAĞI RİSKİ OLMAYAN, GAZSIZ, KİMYA İLE MÜHENDİSLİĞİN BİRLEŞTİĞİ YENİ NESİL TEKNOLOJİ ENERJİ TÜKETİMİ DİĞER SİSTEMLERİN 1/10'U KADAR CAMLI ŞIK TASARIM 3MM PLASTİK KAPLI DAYANIKLI RAF TELİ ELEKTROSTATİK TOZ BOYALI DİĞER SİSTEMLERE GÖRE %50 DAHA FAZLA ISI İZOLASYONU. SES DÜZEYİ 10 DESİBEL ALTINDA TİTREŞİMSİZ ÇALIŞMA FİŞE TAKILDIKTAN SONRA 4 DAKİKA İÇERİSİNDE SOĞUTMA",
+      "category": "Süt Soğutucular",
+      "categoryGroup": "Kahve Ekipmanları",
+      "categorySlug": "sut-sogutucular",
+      "title": "SENOX - SNX-35SC SÜT SOĞUTUCU",
+      "modelNo": "SNX-35SC-SUT",
+      "summary": "35 LİTRE BRÜT KAPASİTELİ PELTİER SİSTEMLİ UZUN ÖMÜRLÜ SOĞUTMA SİSTEMİ GAZ KAÇAĞI RİSKİ OLMAYAN, GAZSIZ, KİMYA İLE MÜHENDİSLİĞİN BİRLEŞTİĞİ YENİ NESİL TEKNOLOJİ ENERJİ TÜKETİMİ DİĞER SİSTEMLERİN 1/10'U KADAR CAMLI ŞIK TASARIM 3MM PLASTİK KAPLI DAYANIKLI RAF TELİ ELEKTROSTATİK TOZ BOYALI DİĞER SİSTEMLERE GÖRE %50 DAHA FAZLA ISI İZOLASYONU. SES DÜZEYİ 10 DESİBEL ALTINDA TİTREŞİMSİZ ÇALIŞMA FİŞE TAKILDIKTAN SONRA 4 DAKİKA İÇERİSİNDE SOĞUTMA",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-snx-35sc-sut-sogutucu-3276.png",
+        "https://senox.com.tr/uploads/product/senox-snx-35sc-sut-sogutucu-1516.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [],
+        "rows": [],
+        "specs": {}
+      },
+      "olculer": null,
+      "ebatRaw": null,
+      "scrapedAt": "2026-06-08T21:07:58.066Z",
+      "localImage": "images/senox-snx-35sc-sut-sogutucu.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/el-blenderlar-1",
+      "slug": "el-blenderlar-1",
+      "listTitle": "EL BLENDERLARI-1",
+      "listImage": "https://senox.com.tr/uploads/product/el-blenderlar-1-3221.png",
+      "listSummary": "Sabit hız ve paslanmaz çelik bıçak Constant speed and stanless steel blade Parçalayıcı (300 mm) Mixer arm 300 mm Çırpıcı Aparat (360 mm-Combi modeller için) Whisk (360 mm-Combi models only) Easy lock sistemi ile kolay kullanım Easy to use wth Easy lock system Devir hızı: 13000 rpm Revoluton: 13000 rpm",
+      "category": "El Blenderleri",
+      "categoryGroup": "Hazırlık Ekipmanları",
+      "categorySlug": "el-blenderleri",
+      "title": "EL BLENDERLARI-1",
+      "modelNo": "EL-BLENDERLAR-1",
+      "summary": "Sabit hız ve paslanmaz çelik bıçak Constant speed and stanless steel blade Parçalayıcı (300 mm) Mixer arm 300 mm Çırpıcı Aparat (360 mm-Combi modeller için) Whisk (360 mm-Combi models only) Easy lock sistemi ile kolay kullanım Easy to use wth Easy lock system Devir hızı: 13000 rpm Revoluton: 13000 rpm",
+      "images": [
+        "https://senox.com.tr/uploads/product/el-blenderlar-1-3221.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [],
+        "rows": [],
+        "specs": {}
+      },
+      "olculer": null,
+      "ebatRaw": null,
+      "scrapedAt": "2026-06-08T21:07:58.792Z",
+      "localImage": "images/el-blenderlar-1.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/el-blenderlar-2",
+      "slug": "el-blenderlar-2",
+      "listTitle": "EL BLENDERLARI-2",
+      "listImage": "https://senox.com.tr/uploads/product/el-blenderlar-2-3682.png",
+      "listSummary": "Sabit hız ve paslanmaz çelik bıçak Constant speed and stanless steel blade Parçalayıcı (300 mm) Mixer arm 300 mm Çırpıcı Aparat (360 mm-Combi modeller için) Whisk (360 mm-Combi models only) Easy lock sistemi ile kolay kullanım Easy to use wth Easy lock system Devir hızı: 13000 rpm Revoluton: 13000 rpm",
+      "category": "El Blenderleri",
+      "categoryGroup": "Hazırlık Ekipmanları",
+      "categorySlug": "el-blenderleri",
+      "title": "EL BLENDERLARI-2",
+      "modelNo": "EL-BLENDERLAR-2",
+      "summary": "Sabit hız ve paslanmaz çelik bıçak Constant speed and stanless steel blade Parçalayıcı (300 mm) Mixer arm 300 mm Çırpıcı Aparat (360 mm-Combi modeller için) Whisk (360 mm-Combi models only) Easy lock sistemi ile kolay kullanım Easy to use wth Easy lock system Devir hızı: 13000 rpm Revoluton: 13000 rpm",
+      "images": [
+        "https://senox.com.tr/uploads/product/el-blenderlar-2-3682.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [],
+        "rows": [],
+        "specs": {}
+      },
+      "olculer": null,
+      "ebatRaw": null,
+      "scrapedAt": "2026-06-08T21:07:59.485Z",
+      "localImage": "images/el-blenderlar-2.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/el-blenderlar-3",
+      "slug": "el-blenderlar-3",
+      "listTitle": "EL BLENDERLARI-3",
+      "listImage": "https://senox.com.tr/uploads/product/el-blenderlar-3-2370.png",
+      "listSummary": "Sabit hız ve paslanmaz çelik bıçak Constant speed and stanless steel blade Parçalayıcı (350 mm) Mixer arm 350 mm Easy lock sistemi ile kolay kullanım Easy to use wth Easy lock system Devir hızı: 13000 rpm Revoluton: 13000 rpm",
+      "category": "El Blenderleri",
+      "categoryGroup": "Hazırlık Ekipmanları",
+      "categorySlug": "el-blenderleri",
+      "title": "EL BLENDERLARI-3",
+      "modelNo": "EL-BLENDERLAR-3",
+      "summary": "Sabit hız ve paslanmaz çelik bıçak Constant speed and stanless steel blade Parçalayıcı (350 mm) Mixer arm 350 mm Easy lock sistemi ile kolay kullanım Easy to use wth Easy lock system Devir hızı: 13000 rpm Revoluton: 13000 rpm",
+      "images": [
+        "https://senox.com.tr/uploads/product/el-blenderlar-3-2370.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [],
+        "rows": [],
+        "specs": {}
+      },
+      "olculer": null,
+      "ebatRaw": null,
+      "scrapedAt": "2026-06-08T21:08:00.207Z",
+      "localImage": "images/el-blenderlar-3.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/el-blenderlar-4",
+      "slug": "el-blenderlar-4",
+      "listTitle": "EL BLENDERLARI-4",
+      "listImage": "https://senox.com.tr/uploads/product/el-blenderlar-4-8457.png",
+      "listSummary": "Sabit hız ve paslanmaz çelik bıçak Constant speed and stanless steel blade Parçalayıcı (300 mm) Mixer arm 300 mm Easy lock sistemi ile kolay kullanım Easy to use wth Easy lock system Devir hızı: 13000 rpm Revoluton: 13000 rpm",
+      "category": "El Blenderleri",
+      "categoryGroup": "Hazırlık Ekipmanları",
+      "categorySlug": "el-blenderleri",
+      "title": "EL BLENDERLARI-4",
+      "modelNo": "EL-BLENDERLAR-4",
+      "summary": "Sabit hız ve paslanmaz çelik bıçak Constant speed and stanless steel blade Parçalayıcı (300 mm) Mixer arm 300 mm Easy lock sistemi ile kolay kullanım Easy to use wth Easy lock system Devir hızı: 13000 rpm Revoluton: 13000 rpm",
+      "images": [
+        "https://senox.com.tr/uploads/product/el-blenderlar-4-8457.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [],
+        "rows": [],
+        "specs": {}
+      },
+      "olculer": null,
+      "ebatRaw": null,
+      "scrapedAt": "2026-06-08T21:08:00.889Z",
+      "localImage": "images/el-blenderlar-4.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/el-blenderlar-5",
+      "slug": "el-blenderlar-5",
+      "listTitle": "EL BLENDERLARI-5",
+      "listImage": "https://senox.com.tr/uploads/product/el-blenderlar-5-7273.png",
+      "listSummary": "Sabit hız ve paslanmaz çelik bıçak Constant speed and stanless steel blade Parçalayıcı (400 mm) Mixer arm 400 mm Çırpıcı Aparat (360 mm-Combi modeller için) Whisk (360 mm-Combi models only) Easy lock sistemi ile kolay kullanım Easy to use wth Easy lock system Devir hızı: 11000 rpm Revoluton: 11000 rpm",
+      "category": "El Blenderleri",
+      "categoryGroup": "Hazırlık Ekipmanları",
+      "categorySlug": "el-blenderleri",
+      "title": "EL BLENDERLARI-5",
+      "modelNo": "EL-BLENDERLAR-5",
+      "summary": "Sabit hız ve paslanmaz çelik bıçak Constant speed and stanless steel blade Parçalayıcı (400 mm) Mixer arm 400 mm Çırpıcı Aparat (360 mm-Combi modeller için) Whisk (360 mm-Combi models only) Easy lock sistemi ile kolay kullanım Easy to use wth Easy lock system Devir hızı: 11000 rpm Revoluton: 11000 rpm",
+      "images": [
+        "https://senox.com.tr/uploads/product/el-blenderlar-5-7273.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [],
+        "rows": [],
+        "specs": {}
+      },
+      "olculer": null,
+      "ebatRaw": null,
+      "scrapedAt": "2026-06-08T21:08:01.598Z",
+      "localImage": "images/el-blenderlar-5.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/el-blenderlar-6",
+      "slug": "el-blenderlar-6",
+      "listTitle": "EL BLENDERLARI-6",
+      "listImage": "https://senox.com.tr/uploads/product/el-blenderlar-6-3000.png",
+      "listSummary": "Sabit hız ve paslanmaz çelik bıçak Constant speed and stanless steel blade Parçalayıcı (400 mm) Mixer arm 400 mm Çırpıcı Aparat (360 mm-Combi modeller için) Whisk (360 mm-Combi models only) Easy lock sistemi ile kolay kullanım Easy to use wth Easy lock system Devir hızı: 11000 rpm Revoluton: 11000 rpm",
+      "category": "El Blenderleri",
+      "categoryGroup": "Hazırlık Ekipmanları",
+      "categorySlug": "el-blenderleri",
+      "title": "EL BLENDERLARI-6",
+      "modelNo": "EL-BLENDERLAR-6",
+      "summary": "Sabit hız ve paslanmaz çelik bıçak Constant speed and stanless steel blade Parçalayıcı (400 mm) Mixer arm 400 mm Çırpıcı Aparat (360 mm-Combi modeller için) Whisk (360 mm-Combi models only) Easy lock sistemi ile kolay kullanım Easy to use wth Easy lock system Devir hızı: 11000 rpm Revoluton: 11000 rpm",
+      "images": [
+        "https://senox.com.tr/uploads/product/el-blenderlar-6-3000.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [],
+        "rows": [],
+        "specs": {}
+      },
+      "olculer": null,
+      "ebatRaw": null,
+      "scrapedAt": "2026-06-08T21:08:02.295Z",
+      "localImage": "images/el-blenderlar-6.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/el-blenderlar-7",
+      "slug": "el-blenderlar-7",
+      "listTitle": "EL BLENDERLARI-7",
+      "listImage": "https://senox.com.tr/uploads/product/el-blenderlar-7-8729.png",
+      "listSummary": "Sabit hız ve paslanmaz çelik bıçak Constant speed and stanless steel blade Parçalayıcı (500 mm) Mixer arm 500 mm Easy lock sistemi ile kolay kullanım Easy to use wth Easy lock system Devir hızı: 11000 rpm Revoluton: 11000 rpm",
+      "category": "El Blenderleri",
+      "categoryGroup": "Hazırlık Ekipmanları",
+      "categorySlug": "el-blenderleri",
+      "title": "EL BLENDERLARI-7",
+      "modelNo": "EL-BLENDERLAR-7",
+      "summary": "Sabit hız ve paslanmaz çelik bıçak Constant speed and stanless steel blade Parçalayıcı (500 mm) Mixer arm 500 mm Easy lock sistemi ile kolay kullanım Easy to use wth Easy lock system Devir hızı: 11000 rpm Revoluton: 11000 rpm",
+      "images": [
+        "https://senox.com.tr/uploads/product/el-blenderlar-7-8729.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [],
+        "rows": [],
+        "specs": {}
+      },
+      "olculer": null,
+      "ebatRaw": null,
+      "scrapedAt": "2026-06-08T21:08:02.993Z",
+      "localImage": "images/el-blenderlar-7.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/el-blenderlar-8",
+      "slug": "el-blenderlar-8",
+      "listTitle": "EL BLENDERLARI-8",
+      "listImage": "https://senox.com.tr/uploads/product/el-blenderlar-8-2215.png",
+      "listSummary": "Sabit hız ve paslanmaz çelik bıçak Constant speed and stanless steel blade Parçalayıcı (500 mm) Mixer arm 500 mm Çırpıcı Aparat (360 mm-Combi modeller için) Whisk (360 mm-Combi models only) Easy lock sistemi ile kolay kullanım Easy to use wth Easy lock system Devir hızı: 11000 rpm Revoluton: 11000 rpm",
+      "category": "El Blenderleri",
+      "categoryGroup": "Hazırlık Ekipmanları",
+      "categorySlug": "el-blenderleri",
+      "title": "EL BLENDERLARI-8",
+      "modelNo": "EL-BLENDERLAR-8",
+      "summary": "Sabit hız ve paslanmaz çelik bıçak Constant speed and stanless steel blade Parçalayıcı (500 mm) Mixer arm 500 mm Çırpıcı Aparat (360 mm-Combi modeller için) Whisk (360 mm-Combi models only) Easy lock sistemi ile kolay kullanım Easy to use wth Easy lock system Devir hızı: 11000 rpm Revoluton: 11000 rpm",
+      "images": [
+        "https://senox.com.tr/uploads/product/el-blenderlar-8-2215.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [],
+        "rows": [],
+        "specs": {}
+      },
+      "olculer": null,
+      "ebatRaw": null,
+      "scrapedAt": "2026-06-08T21:08:03.684Z",
+      "localImage": "images/el-blenderlar-8.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/el-blenderlar-9",
+      "slug": "el-blenderlar-9",
+      "listTitle": "EL BLENDERLARI-9",
+      "listImage": "https://senox.com.tr/uploads/product/el-blenderlar-9-2065.png",
+      "listSummary": "Sabit hız ve paslanmaz çelik bıçak Constant speed and stanless steel blade Parçalayıcı (600 mm) Mixer arm 600 mm Çırpıcı Aparat (360 mm-Combi modeller için) Whisk (360 mm-Combi models only) Easy lock sistemi ile kolay kullanım Easy to use wth Easy lock system Devir hızı: 11000 rpm Revoluton: 11000 rpm",
+      "category": "El Blenderleri",
+      "categoryGroup": "Hazırlık Ekipmanları",
+      "categorySlug": "el-blenderleri",
+      "title": "EL BLENDERLARI-9",
+      "modelNo": "EL-BLENDERLAR-9",
+      "summary": "Sabit hız ve paslanmaz çelik bıçak Constant speed and stanless steel blade Parçalayıcı (600 mm) Mixer arm 600 mm Çırpıcı Aparat (360 mm-Combi modeller için) Whisk (360 mm-Combi models only) Easy lock sistemi ile kolay kullanım Easy to use wth Easy lock system Devir hızı: 11000 rpm Revoluton: 11000 rpm",
+      "images": [
+        "https://senox.com.tr/uploads/product/el-blenderlar-9-2065.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [],
+        "rows": [],
+        "specs": {}
+      },
+      "olculer": null,
+      "ebatRaw": null,
+      "scrapedAt": "2026-06-08T21:08:04.358Z",
+      "localImage": "images/el-blenderlar-9.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/el-blenderlar-10",
+      "slug": "el-blenderlar-10",
+      "listTitle": "EL BLENDERLARI-10",
+      "listImage": "https://senox.com.tr/uploads/product/el-blenderlar-10-5089.png",
+      "listSummary": "Sabit hız ve paslanmaz çelik bıçak Constant speed and stanless steel blade Parçalayıcı (600 mm) Mixer arm 600 mm Çırpıcı Aparat (360 mm-Combi modeller için) Whisk (360 mm-Combi models only) Easy lock sistemi ile kolay kullanım Easy to use wth Easy lock system Devir hızı: 11000 rpm Revoluton: 11000 rpm",
+      "category": "El Blenderleri",
+      "categoryGroup": "Hazırlık Ekipmanları",
+      "categorySlug": "el-blenderleri",
+      "title": "EL BLENDERLARI-10",
+      "modelNo": "EL-BLENDERLAR-10",
+      "summary": "Sabit hız ve paslanmaz çelik bıçak Constant speed and stanless steel blade Parçalayıcı (600 mm) Mixer arm 600 mm Çırpıcı Aparat (360 mm-Combi modeller için) Whisk (360 mm-Combi models only) Easy lock sistemi ile kolay kullanım Easy to use wth Easy lock system Devir hızı: 11000 rpm Revoluton: 11000 rpm",
+      "images": [
+        "https://senox.com.tr/uploads/product/el-blenderlar-10-5089.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [],
+        "rows": [],
+        "specs": {}
+      },
+      "olculer": null,
+      "ebatRaw": null,
+      "scrapedAt": "2026-06-08T21:08:05.037Z",
+      "localImage": "images/el-blenderlar-10.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/super-mikser-ogutucu-makinesi-nox-devirmeli-sm-108",
+      "slug": "super-mikser-ogutucu-makinesi-nox-devirmeli-sm-108",
+      "listTitle": "Süper Mikser Öğütücü Makinesi Inox Devi..",
+      "listImage": "https://senox.com.tr/uploads/product/super-mikser-ogutucu-makinesi-nox-devirmeli-sm-108-7254.png",
+      "listSummary": "Motor Gücü: 585 Watt Hazne (Tank): 260x140 mm. / 5 Lt Ağrlık (Weght): 13,5 Kg Kol Ebatları: 300x550x340 mm. Gövde Paslanmaz Çelk Bıçaklar Yaylı Paslanmaz Çelik",
+      "category": "El Blenderleri",
+      "categoryGroup": "Hazırlık Ekipmanları",
+      "categorySlug": "el-blenderleri",
+      "title": "Süper Mikser Öğütücü Makinesi Inox Devirmeli SM 108",
+      "modelNo": "Süper Mikser Öğütücü",
+      "summary": "Motor Gücü: 585 Watt Hazne (Tank): 260x140 mm. / 5 Lt Ağrlık (Weght): 13,5 Kg Kol Ebatları: 300x550x340 mm. Gövde Paslanmaz Çelk Bıçaklar Yaylı Paslanmaz Çelik",
+      "images": [
+        "https://senox.com.tr/uploads/product/super-mikser-ogutucu-makinesi-nox-devirmeli-sm-108-7254.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [],
+        "rows": [],
+        "specs": {}
+      },
+      "olculer": {
+        "raw": "300x550x340 mm",
+        "genislik_mm": 300,
+        "derinlik_mm": 550,
+        "yukseklik_mm": 340
+      },
+      "ebatRaw": "300x550x340 mm",
+      "scrapedAt": "2026-06-08T21:08:05.729Z",
+      "localImage": "images/super-mikser-ogutucu-makinesi-nox-devirmeli-sm-108.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-ms07",
+      "slug": "senox-ms07",
+      "listTitle": "SENOX Ms07",
+      "listImage": "https://senox.com.tr/uploads/product/senox-ms07-1451.png",
+      "listSummary": "Komple Çelik 900 Watt Çırpıcı Aparat Karıştırma Aparatı Yoğurma Aparatı Devir Ayar Düğmeli",
+      "category": "Mutfak Şefi",
+      "categoryGroup": "Hazırlık Ekipmanları",
+      "categorySlug": "mutfak-sefi",
+      "title": "SENOX Ms07",
+      "modelNo": "MS07",
+      "summary": "Komple Çelik 900 Watt Çırpıcı Aparat Karıştırma Aparatı Yoğurma Aparatı Devir Ayar Düğmeli",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-ms07-1451.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [],
+        "rows": [],
+        "specs": {}
+      },
+      "olculer": null,
+      "ebatRaw": null,
+      "scrapedAt": "2026-06-08T21:08:06.410Z",
+      "localImage": "images/senox-ms07.png"
+    },
+    {
+      "url": "https://senox.com.tr/tr/senox-ms10",
+      "slug": "senox-ms10",
+      "listTitle": "SENOX Ms10",
+      "listImage": "https://senox.com.tr/uploads/product/senox-ms10-8559.png",
+      "listSummary": "Komple Çelik 1000 Watt Çırpıcı Aparat Karıştırma Aparatı Yoğurma Aparatı Devir Ayar Düğmeli",
+      "category": "Mutfak Şefi",
+      "categoryGroup": "Hazırlık Ekipmanları",
+      "categorySlug": "mutfak-sefi",
+      "title": "SENOX Ms10",
+      "modelNo": "MS10",
+      "summary": "Komple Çelik 1000 Watt Çırpıcı Aparat Karıştırma Aparatı Yoğurma Aparatı Devir Ayar Düğmeli",
+      "images": [
+        "https://senox.com.tr/uploads/product/senox-ms10-8559.png",
+        "https://senox.com.tr/uploads/product/senox-ms10-1198.png",
+        "https://senox.com.tr/uploads/product/senox-80-lk-179.png",
+        "https://senox.com.tr/uploads/product/senox-snx12r-12-gozlu-dondurma-reyonu-2774.png",
+        "https://senox.com.tr/uploads/product/senox-7301-nf-a-fanli-7-cekmeceli-derin-dondurucu-siyah-7320.png",
+        "https://senox.com.tr/uploads/product/senox-bbc-350-bbcs-350-1809.png",
+        "https://senox.com.tr/uploads/product/senox-sds-710-dc-dik-tip-sogutucu-kanopisiz-8694.png",
+        "https://senox.com.tr/uploads/product/senox-blk01-7450.png",
+        "https://senox.com.tr/uploads/product/senox-smr-5120-st-dondurucu-9963.png",
+        "https://senox.com.tr/uploads/product/senox-sds-265-dc-1cf-slim-tip-sogutucu-2722.png",
+        "https://senox.com.tr/uploads/product/senox-coffeedo-filtre-maknesi-6228.png",
+        "https://senox.com.tr/uploads/product/senox-sds-385-dc-1-yw-p-9099.png"
+      ],
+      "teknikTablo": {
+        "headers": [],
+        "rows": [],
+        "specs": {}
+      },
+      "olculer": null,
+      "ebatRaw": null,
+      "scrapedAt": "2026-06-08T21:08:07.126Z",
+      "localImage": "images/senox-ms10.png"
+    }
+  ]
+}
