@@ -62,6 +62,18 @@ function patchFile(file, pdfByKod, stats) {
     const hasDims = Boolean(enriched.olculer?.genislik_mm);
     if (!hasDims && hadDims) continue;
 
+    if (row.fiyat_kaynagi === "hoshizaki-fiyat-listesi-net-satis") {
+      row.aciklama = enriched.aciklama || row.aciklama;
+      row.teknik_ozellikler = enriched.teknik_ozellikler;
+      row.olculer = enriched.olculer;
+      row.keywords = enriched.keywords;
+      if (enriched.teknik_ozellikler?.length && !String(row.specs || "").includes("Teknik Özellikler")) {
+        row.specs = `${row.specs}\n\nTeknik Özellikler\n${enriched.teknik_ozellikler.join("\n")}`;
+      }
+      changed++;
+      continue;
+    }
+
     row.specs = enriched.specs;
     row.aciklama = enriched.aciklama;
     row.teknik_ozellikler = enriched.teknik_ozellikler;
