@@ -1,5 +1,5 @@
 /** Cache bust — shop App Router sayfaları */
-export const SHOP_ASSET_V = "20260608davlumbaz-orta-filtreli-v2";
+export const SHOP_ASSET_V = "20260608tezgah-olcu-plp";
 
 /** Dept / ekipmanlar JSON — legacy static JS */
 export const CATALOG_DATA_V = SHOP_ASSET_V;

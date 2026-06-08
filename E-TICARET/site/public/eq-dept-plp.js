@@ -32,7 +32,7 @@
   }
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260608davlumbaz-orta-filtreli-v2';
+  var CATALOG_V = '20260608tezgah-olcu-plp';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   /* Next.js URL slug → katalog dept id (data/dept/*.json) */
   if (DEPT === 'market-reyonlari') DEPT = 'market-reyon';
@@ -175,6 +175,117 @@
     return g + '×' + d + '×' + y + ' mm';
   }
 
+  /** Tezgah PLP — genişlik cm cinsinden okunur (140×60×85 cm). */
+  function dimLabelTezgahFromMm(g, d, y) {
+    if (!g || !d || !y) return '';
+    return Math.round(g / 10) + '×' + Math.round(d / 10) + '×' + Math.round(y / 10) + ' cm';
+  }
+
+  function parseLenToMm(raw) {
+    var s = String(raw || '')
+      .trim()
+      .split('+')[0]
+      .trim();
+    var m = s.match(/([\d.,]+)\s*(mm|cm|m)?/i);
+    if (!m) return 0;
+    var v = parseFloat(String(m[1]).replace(',', '.'));
+    if (!v) return 0;
+    var u = String(m[2] || '').toLowerCase();
+    if (u === 'cm') return Math.round(v * 10);
+    if (u === 'm') return Math.round(v * 1000);
+    if (u === 'mm') return Math.round(v);
+    return v >= 300 ? Math.round(v) : Math.round(v * 10);
+  }
+
+  function parseDimsFromTeknik(raw) {
+    var lines = [];
+    if (raw && raw.teknik_ozellikler && raw.teknik_ozellikler.length) {
+      lines = raw.teknik_ozellikler;
+    } else if (raw && raw.specs) {
+      lines = String(raw.specs).split('\n');
+    }
+    var g = 0;
+    var d = 0;
+    var y = 0;
+    for (var i = 0; i < lines.length; i++) {
+      var t = String(lines[i] || '');
+      var mg = t.match(/Genişlik:\s*([^,\n]+)/i);
+      var md = t.match(/Derinlik:\s*([^,\n]+)/i);
+      var my = t.match(/Yükseklik:\s*([^,\n]+)/i);
+      if (mg) g = parseLenToMm(mg[1]) || g;
+      if (md) d = parseLenToMm(md[1]) || d;
+      if (my) y = parseLenToMm(my[1]) || y;
+    }
+    if (g && d && y) return dimLabelTezgahFromMm(g, d, y);
+    if (g && d) return dimLabelTezgahFromMm(g, d, y || 850);
+    if (g) return dimLabelTezgahFromMm(g, d || 700, y || 850);
+    return '';
+  }
+
+  function parseOztiSkuDims(sku) {
+    var k = String(sku || '')
+      .trim()
+      .toUpperCase();
+    var m = k.match(/\.N\d\.(\d{5})\.\d{2}$/);
+    if (m) {
+      var code = m[1];
+      var g = Number(code.slice(0, 2)) * 100;
+      var d = Number(code.slice(2, 4)) * 100;
+      var y = Number(code.slice(4, 5)) * 100;
+      if (g >= 400 && d >= 300 && y >= 100) {
+        return dimLabelTezgahFromMm(g, d, y);
+      }
+    }
+    return '';
+  }
+
+  function parseTezgahDimsFromName(name) {
+    var s = String(name || '');
+    var mStar3 = s.match(/(\d{2,4})\*(\d{2,3})\*(\d{2,4})/);
+    if (mStar3) {
+      return dimLabelTezgahFromMm(+mStar3[1] * 10, +mStar3[2] * 10, +mStar3[3] * 10);
+    }
+    var mCm = s.match(/(\d{2,4})\s*[xX×]\s*(\d{2,4})\s*[xX×]\s*(\d{2,4})\s*cm\b/i);
+    if (mCm) {
+      return dimLabelTezgahFromMm(+mCm[1] * 10, +mCm[2] * 10, +mCm[3] * 10);
+    }
+    var mMm = s.match(/(\d{2,4})\s*[xX×]\s*(\d{2,4})\s*[xX×]\s*(\d{2,4})\s*mm\.?/i);
+    if (mMm) {
+      return dimLabelTezgahFromMm(+mMm[1], +mMm[2], +mMm[3]);
+    }
+    var pairs = [];
+    var re2 = /(\d{2,4})\*(\d{2,3})(?!\*\d)/g;
+    var m2;
+    while ((m2 = re2.exec(s))) {
+      pairs.push([+m2[1], +m2[2]]);
+    }
+    if (pairs.length) {
+      pairs.sort(function (a, b) {
+        return b[0] - a[0] || b[1] - a[1];
+      });
+      var p = pairs[0];
+      return dimLabelTezgahFromMm(p[0] * 10, p[1] * 10, 850);
+    }
+    var mLen = s.match(/(?:^|[^\d.])(\d{3,4})\s*mm\b/i);
+    if (mLen) {
+      return dimLabelTezgahFromMm(+mLen[1], 700, 900);
+    }
+    var m2x = s.match(/(\d{2,4})\s*[xX×]\s*(\d{2,4})(?:\s*cm|\b)/i);
+    if (m2x) {
+      return dimLabelTezgahFromMm(+m2x[1] * 10, +m2x[2] * 10, 850);
+    }
+    return '';
+  }
+
+  function parseTezgahLikWidth(name) {
+    var s = String(name || '');
+    var mLik = s.match(/(?:^|\s)(\d{2,3})\s*L[IİI]K(?:\s|$)/i);
+    if (!mLik) return '';
+    var w = Number(mLik[1]) * 10;
+    var dep = /700\s*SER/i.test(s) ? 700 : 600;
+    return dimLabelTezgahFromMm(w, dep, 850);
+  }
+
   /** Öztiryakiler soğuk/derin dondurucu oda (7919.CR / 7919.DF) — PDF ölçü istisnaları. */
   var OZTI_PANEL_DIMS_MM = {
     '7919.CR1517.00': [1500, 1750, 2400],
@@ -221,16 +332,32 @@
   function formatOlculerLine(raw) {
     if (!raw) return '';
     if (raw.olcu_etiket) return String(raw.olcu_etiket);
+
+    if (DEPT === 'tezgah') {
+      var tezgahName = parseTezgahDimsFromName(raw.name);
+      if (tezgahName) return tezgahName;
+      var tezgahSku = parseOztiSkuDims(raw.sku || raw.model || raw.urun_kodu);
+      if (tezgahSku) return tezgahSku;
+      var tezgahLik = parseTezgahLikWidth(raw.name);
+      if (tezgahLik) return tezgahLik;
+      var tezgahTeknik = parseDimsFromTeknik(raw);
+      if (tezgahTeknik) return tezgahTeknik;
+    }
+
     var o = raw.olculer;
     if (o) {
       var g = Number(o.genislik_mm);
       var d = Number(o.derinlik_mm);
       var y = Number(o.yukseklik_mm);
       if (g && d && y) {
-        var nameHasDim = /[xX×]\s*\d/.test(String(raw.name || ''));
-        if (!nameHasDim) return dimLabelFromMm(g, d, y);
+        var nameHasDim = /[xX×*]\s*\d/.test(String(raw.name || ''));
+        var looksLikeSink = DEPT === 'tezgah' && g < 800;
+        if (!nameHasDim && !looksLikeSink) {
+          return DEPT === 'tezgah' ? dimLabelTezgahFromMm(g, d, y) : dimLabelFromMm(g, d, y);
+        }
       }
     }
+
     var fromName = parseDimsFromName(raw.name);
     if (fromName) return fromName;
     var panel = oztiPanelDimsFromSku(raw.sku || raw.model || raw.urun_kodu);
@@ -947,7 +1074,7 @@
     render();
   }
 
-  var MARKET_REYON_JSON_V = '20260608davlumbaz-orta-filtreli-v2';
+  var MARKET_REYON_JSON_V = '20260608tezgah-olcu-plp';
 
   function fetchMarketReyonDeptJson() {
     return fetch('/data/dept/market-reyon.json?v=' + MARKET_REYON_JSON_V, {
