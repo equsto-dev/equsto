@@ -32,7 +32,7 @@
   }
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260608pimak-fiyat';
+  var CATALOG_V = '20260608pimak-servis-teshir';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   /* Next.js URL slug → katalog dept id (data/dept/*.json) */
   if (DEPT === 'market-reyonlari') DEPT = 'market-reyon';
@@ -943,7 +943,7 @@
     render();
   }
 
-  var MARKET_REYON_JSON_V = '20260528caglayan-pdp-fix';
+  var MARKET_REYON_JSON_V = '20260608pimak-servis-teshir';
 
   function fetchMarketReyonDeptJson() {
     return fetch('/data/dept/market-reyon.json?v=' + MARKET_REYON_JSON_V, {

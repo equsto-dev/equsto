@@ -305,7 +305,7 @@ def main() -> None:
             "para_birimi": "EUR",
             "iskonto_yuzde": 47,
             "odeme_carpani": 0.53,
-            "kar_yuzde": 8,
+            "kar_yuzde": 5,
             "toplam_pdf_satir": len(prices),
             "katalog_eslesen": matched,
         },
