@@ -16,6 +16,18 @@ import {
 import { matchCatalogByIsimOlcu } from "../referans/referans-eslestirme";
 import { isBulasikPfosKalem } from "./bulasik-marka";
 import { matchBulasikByReferans } from "../referans/bulasik-match";
+import { isPortashelfPfosKalem, isCopArabasiPfosKalem } from "./portashelf-marka";
+import { matchIstifRafiByReferans } from "../referans/istif-raf-match";
+import { matchCopArabasiByReferans } from "../referans/cop-arabasi-match";
+import { isCalismaTezgahiPfosKalem } from "./calisma-tezgah";
+import { matchCalismaTezgahiByReferans } from "../referans/calisma-tezgah-match";
+import { isDavlumbazReferans, matchDavlumbazByReferans } from "../referans/davlumbaz-match";
+import { isBuzdolabiPfosKalem } from "./portabianco-marka";
+import { matchBuzdolabiByReferans } from "../referans/buzdolabi-match";
+import { isCaglayanTeshirPfosKalem } from "./caglayan-marka";
+import { matchTeshirReyonByReferans } from "../referans/teshir-reyon-match";
+import { isAtalayPisirmePfosKalem } from "./atalay-marka";
+import { matchPisirmeByReferans } from "../referans/pisirme-match";
 
 export { URUN_TIPI_ALIASES, normalizeTipKodu, resolveTipKodu };
 
@@ -123,6 +135,127 @@ export async function matchCatalogFallback(
     if (bulasik) return bulasik;
   }
 
+  if (
+    isPortashelfPfosKalem({ isim: sablonIsim, urunTipi }) &&
+    sablonIsim?.trim()
+  ) {
+    const olcu =
+      notlar?.match(/(\d+\s*[*xX×]\s*\d+\s*[*xX×]\s*\d+)/)?.[1] ??
+      notlar?.match(/(\d+\s*[*xX×]\s*\d+)/)?.[1] ??
+      "";
+    const istif = await matchIstifRafiByReferans(
+      sablonIsim,
+      olcu,
+      notlar,
+      fiyatStratejisi,
+    );
+    if (istif) return istif;
+  }
+
+  if (
+    isCopArabasiPfosKalem({ isim: sablonIsim, urunTipi }) &&
+    sablonIsim?.trim()
+  ) {
+    const olcu =
+      notlar?.match(/(\d+\s*[*xX×Øø]\s*\d+)/)?.[1] ??
+      notlar?.match(/(\d+\s*[*xX×]\s*\d+\s*[*xX×]\s*\d+)/)?.[1] ??
+      "";
+    const cop = await matchCopArabasiByReferans(
+      sablonIsim,
+      olcu,
+      notlar,
+      fiyatStratejisi,
+    );
+    if (cop) return cop;
+  }
+
+  if (
+    isCalismaTezgahiPfosKalem({ isim: sablonIsim, urunTipi, notlar }) &&
+    sablonIsim?.trim()
+  ) {
+    const olcu =
+      notlar?.match(/(\d+\s*[*xX×]\s*\d+\s*[*xX×]\s*\d+)/)?.[1] ??
+      notlar?.match(/(\d+\s*[*xX×]\s*\d+)/)?.[1] ??
+      "";
+    const tezgah = await matchCalismaTezgahiByReferans(
+      sablonIsim,
+      olcu,
+      notlar,
+      urunTipi,
+      fiyatStratejisi,
+    );
+    if (tezgah) return tezgah;
+  }
+
+  if (isDavlumbazReferans(sablonIsim ?? "") && sablonIsim?.trim()) {
+    const olcu =
+      notlar?.match(/(\d+\s*[*xX×]\s*\d+\s*[*xX×]\s*\d+)/)?.[1] ??
+      notlar?.match(/(\d+\s*[*xX×]\s*\d+)/)?.[1] ??
+      "";
+    const dav = await matchDavlumbazByReferans(
+      sablonIsim,
+      olcu,
+      notlar,
+      urunTipi,
+      fiyatStratejisi,
+    );
+    if (dav) return dav;
+  }
+
+  if (
+    isBuzdolabiPfosKalem({ isim: sablonIsim, urunTipi }) &&
+    sablonIsim?.trim()
+  ) {
+    const olcu =
+      notlar?.match(/(\d+\s*[*xX×]\s*\d+\s*[*xX×]\s*\d+)/)?.[1] ??
+      notlar?.match(/(\d+\s*[*xX×]\s*\d+)/)?.[1] ??
+      "";
+    const buz = await matchBuzdolabiByReferans(
+      sablonIsim,
+      olcu,
+      notlar,
+      urunTipi,
+      fiyatStratejisi,
+    );
+    if (buz) return buz;
+  }
+
+  if (
+    isCaglayanTeshirPfosKalem({ isim: sablonIsim, urunTipi }) &&
+    sablonIsim?.trim()
+  ) {
+    const olcu =
+      notlar?.match(/(\d+\s*[*xX×]\s*\d+\s*[*xX×]\s*\d+)/)?.[1] ??
+      notlar?.match(/(\d+\s*[*xX×]\s*\d+)/)?.[1] ??
+      "";
+    const teshir = await matchTeshirReyonByReferans(
+      sablonIsim,
+      olcu,
+      notlar,
+      urunTipi,
+      fiyatStratejisi,
+    );
+    if (teshir) return teshir;
+  }
+
+  if (
+    isAtalayPisirmePfosKalem({ isim: sablonIsim, urunTipi }) &&
+    sablonIsim?.trim()
+  ) {
+    const olcu =
+      notlar?.match(/(\d+\s*[*xX×]\s*\d+\s*[*xX×]\s*\d+)/)?.[1] ??
+      notlar?.match(/(\d+\s*[*xX×]\s*\d+)/)?.[1] ??
+      "";
+    const pisirme = await matchPisirmeByReferans(
+      sablonIsim,
+      olcu,
+      notlar,
+      urunTipi,
+      fiyatStratejisi,
+    );
+    if (pisirme) return pisirme;
+  }
+
   const shop = await matchShopCatalog(urunTipi, fiyatStratejisi);
   if (shop) return shop;
   if (sablonIsim?.trim()) {
@@ -144,6 +277,84 @@ export async function matchOzelImalatForSablon(
   urunTipi: string,
   notlar?: string | null,
 ): Promise<EslesmisUrun> {
+  if (
+    isCalismaTezgahiPfosKalem({ isim, urunTipi, notlar }) &&
+    isim.trim()
+  ) {
+    const olcu =
+      notlar?.match(/(\d+\s*[*xX×]\s*\d+\s*[*xX×]\s*\d+)/)?.[1] ??
+      notlar?.match(/(\d+\s*[*xX×]\s*\d+)/)?.[1] ??
+      "";
+    const tezgah = await matchCalismaTezgahiByReferans(
+      isim,
+      olcu,
+      notlar,
+      urunTipi,
+      "ekonomik",
+    );
+    if (tezgah) return tezgah;
+  }
+
+  if (isDavlumbazReferans(isim) && isim.trim()) {
+    const olcu =
+      notlar?.match(/(\d+\s*[*xX×]\s*\d+\s*[*xX×]\s*\d+)/)?.[1] ??
+      notlar?.match(/(\d+\s*[*xX×]\s*\d+)/)?.[1] ??
+      "";
+    const dav = await matchDavlumbazByReferans(
+      isim,
+      olcu,
+      notlar,
+      urunTipi,
+      "ekonomik",
+    );
+    if (dav) return dav;
+  }
+
+  if (isBuzdolabiPfosKalem({ isim, urunTipi }) && isim.trim()) {
+    const olcu =
+      notlar?.match(/(\d+\s*[*xX×]\s*\d+\s*[*xX×]\s*\d+)/)?.[1] ??
+      notlar?.match(/(\d+\s*[*xX×]\s*\d+)/)?.[1] ??
+      "";
+    const buz = await matchBuzdolabiByReferans(
+      isim,
+      olcu,
+      notlar,
+      urunTipi,
+      "ekonomik",
+    );
+    if (buz) return buz;
+  }
+
+  if (isCaglayanTeshirPfosKalem({ isim, urunTipi }) && isim.trim()) {
+    const olcu =
+      notlar?.match(/(\d+\s*[*xX×]\s*\d+\s*[*xX×]\s*\d+)/)?.[1] ??
+      notlar?.match(/(\d+\s*[*xX×]\s*\d+)/)?.[1] ??
+      "";
+    const teshir = await matchTeshirReyonByReferans(
+      isim,
+      olcu,
+      notlar,
+      urunTipi,
+      "ekonomik",
+    );
+    if (teshir) return teshir;
+  }
+
+  if (isAtalayPisirmePfosKalem({ isim, urunTipi }) && isim.trim()) {
+    const olcu =
+      notlar?.match(/(\d+\s*[*xX×]\s*\d+\s*[*xX×]\s*\d+)/)?.[1] ??
+      notlar?.match(/(\d+\s*[*xX×]\s*\d+)/)?.[1] ??
+      "";
+    const pisirme = await matchPisirmeByReferans(
+      isim,
+      olcu,
+      notlar,
+      urunTipi,
+      "ekonomik",
+    );
+    if (pisirme) return pisirme;
+  }
+
   const shop = await matchShopCatalog(urunTipi, "ekonomik");
   if (shop) return shop;
 

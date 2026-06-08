@@ -12,6 +12,37 @@ import {
   BULASIK_MARKA,
 } from "./bulasik-marka";
 import {
+  isIstifRafiTipKodu,
+  isCopArabasiTipKodu,
+  PORTASHELF_MARKA,
+} from "./portashelf-marka";
+import {
+  isCalismaTezgahiTipKodu,
+  isEqustoTezgahRow,
+  isSetUstuAraTezgahKatalog,
+  CALISMA_TEZGAH_MARKA,
+} from "./calisma-tezgah";
+import {
+  isEqustoDavlumbazRow,
+  isOztiDavlumbazSku,
+} from "./davlumbaz-marka";
+import {
+  isBuzdolabiTipKodu,
+  isPortabiancoBuzdolabiRow,
+  isBuzdolabiDisMarka,
+} from "./portabianco-marka";
+import {
+  isTeshirVitrinTipKodu,
+  isCaglayanTeshirRow,
+  isOztiTeshirSku,
+} from "./caglayan-marka";
+import {
+  isPisirmeTipKodu,
+  isAtalayPisirmeRow,
+  isOztiPisirmeSku,
+  ATALAY_MARKA,
+} from "./atalay-marka";
+import {
   isHazirlikTipKodu,
   HAZIRLIK_MARKA,
   isHazirlikKatalogMarka,
@@ -102,7 +133,11 @@ const TIP_MATCH_RULES: Record<string, (name: string) => boolean> = {
     name.includes("giyotin") &&
     (name.includes("bulasik") || name.includes("bulaşık") || name.includes("tabak")),
   calisma_tezgahi: (name) =>
-    name.includes("tezgah") && !name.includes("buzdolab") && !name.includes("evye"),
+    name.includes("tezgah") &&
+    !name.includes("buzdolab") &&
+    !name.includes("set ust") &&
+    !name.includes("setust") &&
+    !name.includes("ara tezgah"),
   davlumbaz_duvar: (name) => {
     if (isUnoxCheftopHoodName(name)) return false;
     if (name.includes("ultravent") || name.includes("yogusturma")) return false;
@@ -369,6 +404,92 @@ function scoreCandidate(
     if (name.includes("senox") || name.includes("şenox")) score += 300;
   }
 
+  if (isIstifRafiTipKodu(tip)) {
+    if (isOztiKatalogMarka(row.marka_ad)) return -9999;
+    const marka = normName(row.marka_ad);
+    const sku = normName(row.sku ?? "");
+    if (marka.includes("portashelf") || marka.includes("yuksel") || /\d+-x-\d+-x-\d+/.test(sku)) {
+      score += 280;
+    } else if (/8897\.|7897\./.test(sku)) {
+      score -= 2500;
+    }
+  }
+
+  if (isCopArabasiTipKodu(tip)) {
+    if (isOztiKatalogMarka(row.marka_ad)) return -9999;
+    const marka = normName(row.marka_ad);
+    const sku = normName(row.sku ?? "");
+    if (marka.includes("portashelf") || marka.includes("yuksel") || sku === "mb126x") {
+      score += 320;
+    } else if (/8893\.|plastik|kova/.test(sku) || /plastik|kova/.test(name)) {
+      score -= 2500;
+    }
+  }
+
+  if (isCalismaTezgahiTipKodu(tip)) {
+    if (isSetUstuAraTezgahKatalog(row.ad, row.sku)) return -9999;
+    const skuN = normName(row.sku ?? "");
+    if (/electrolux|^132\d{3,6}$|371\d|^7711\.|^7897\.|^7911\./.test(skuN) || /electrolux/.test(normName(row.marka_ad))) {
+      return -9999;
+    }
+    if (isEqustoTezgahRow(row.sku)) score += 350;
+    if (isOztiKatalogMarka(row.marka_ad) && /7911\.n1\./.test(skuN)) {
+      return -9999;
+    }
+  }
+
+  if (
+    isCalismaTezgahiTipKodu(tip) === false &&
+    /calisma|çalışma|evyeli\s*tezgah|taban\s*rafl/i.test(name) &&
+    isOztiKatalogMarka(row.marka_ad) &&
+    /7911\.n1\./.test(normName(row.sku ?? ""))
+  ) {
+    return -9999;
+  }
+
+  if (tip === "davlumbaz_duvar" || /^davlumbaz/.test(tip.replace(/_/g, "-"))) {
+    if (isOztiDavlumbazSku(row.sku) || (isOztiKatalogMarka(row.marka_ad) && /7885\./.test(normName(row.sku ?? "")))) {
+      return -9999;
+    }
+    if (isEqustoDavlumbazRow(row.sku)) score += 350;
+  }
+
+  if (isBuzdolabiTipKodu(tip)) {
+    const sku = normName(row.sku ?? "");
+    if (
+      (isOztiKatalogMarka(row.marka_ad) || isBuzdolabiDisMarka(row.marka_ad)) &&
+      !isPortabiancoBuzdolabiRow(row)
+    ) {
+      return -9999;
+    }
+    if (/^7919\.|^8919\.|^79e4\.|^371\d/.test(sku) && !isPortabiancoBuzdolabiRow(row)) {
+      return -9999;
+    }
+    if (isPortabiancoBuzdolabiRow(row)) score += 350;
+  }
+
+  if (isTeshirVitrinTipKodu(tip)) {
+    const sku = normName(row.sku ?? "");
+    if (isOztiTeshirSku(row.sku) || (isOztiKatalogMarka(row.marka_ad) && /8919\.ts/.test(sku))) {
+      return -9999;
+    }
+    if (isCaglayanTeshirRow(row)) score += 350;
+  }
+
+  if (isPisirmeTipKodu(tip)) {
+    const sku = normName(row.sku ?? "");
+    if (
+      (isOztiKatalogMarka(row.marka_ad) || isOztiPisirmeSku(row.sku)) &&
+      !isAtalayPisirmeRow(row)
+    ) {
+      return -9999;
+    }
+    if (/^9890\.|^7864\.|^7831\.|^7850\./.test(sku) && !isAtalayPisirmeRow(row)) {
+      return -9999;
+    }
+    if (isAtalayPisirmeRow(row)) score += 350;
+  }
+
   const wantDept = tipDeptHint(tip);
   const gotDept = deptForRow(row);
   if (wantDept && gotDept && wantDept !== gotDept) score -= 520;
@@ -453,6 +574,78 @@ export async function matchShopCatalog(
     return adminRowToEslesmis(pseudoRowFromLink(bulLink, tip), {
       ...ctx,
       link: bulLink,
+    });
+  }
+
+  /** Yerden çalışma tezgahı — EQUSTO eşlemesi; set üstü ara tezgah SKU kullanılmaz */
+  if (isCalismaTezgahiTipKodu(tip) && link?.marka) {
+    return null;
+  }
+
+  /** Davlumbaz — EQUSTO ölçü/tip eşlemesi; Öztiryakiler 7885.* kullanılmaz */
+  if ((tip === "davlumbaz_duvar" || /^davlumbaz/.test(tip.replace(/_/g, "-"))) && link?.marka) {
+    return null;
+  }
+
+  /** Buzdolabı — Portabianco ölçü/tip eşlemesi; Öztiryakiler / Electrolux kullanılmaz */
+  if (isBuzdolabiTipKodu(tip) && link?.marka) {
+    return null;
+  }
+
+  /** Teşhir reyonu — Çağlayan Soğutma ölçü eşlemesi; Öztiryakiler TSV kullanılmaz */
+  if (isTeshirVitrinTipKodu(tip) && link?.marka) {
+    return null;
+  }
+
+  /** Pişirme — Atalay ölçü/tip eşlemesi; Öztiryakiler 78xx kullanılmaz */
+  if (isPisirmeTipKodu(tip) && (link?.marka || link?.sku)) {
+    if (link.sku && isAtalayPisirmeRow({ sku: link.sku, marka_ad: link.brand ?? link.marka })) {
+      const bySku = pool.find(
+        (r) => r.sku && normName(r.sku) === normName(link.sku!),
+      );
+      if (bySku) {
+        return adminRowToEslesmis(bySku, {
+          ...ctx,
+          link: { ...link, marka: ATALAY_MARKA },
+        });
+      }
+    }
+    if (!link.sku || isOztiPisirmeSku(link.sku)) return null;
+  }
+
+  /** Çöp arabası — Portashelf (Yüksel); Öztiryakiler plastik kova kullanılmaz */
+  if (isCopArabasiTipKodu(tip) && link && (link.marka || link.name || link.sku)) {
+    const psLink: TipShopLink = {
+      marka: link.marka ?? PORTASHELF_MARKA,
+      ...link,
+    };
+    if (psLink.sku) {
+      const bySku = pool.find(
+        (r) => r.sku && normName(r.sku) === normName(psLink.sku!),
+      );
+      if (bySku) return adminRowToEslesmis(bySku, { ...ctx, link: psLink });
+    }
+    return adminRowToEslesmis(pseudoRowFromLink(psLink, tip), {
+      ...ctx,
+      link: psLink,
+    });
+  }
+
+  /** İstif rafları — Portashelf; Öztiryakiler havuzundan seçilmesin */
+  if (isIstifRafiTipKodu(tip) && link && (link.marka || link.name || link.sku)) {
+    const psLink: TipShopLink = {
+      marka: link.marka ?? PORTASHELF_MARKA,
+      ...link,
+    };
+    if (psLink.sku) {
+      const bySku = pool.find(
+        (r) => r.sku && normName(r.sku) === normName(psLink.sku!),
+      );
+      if (bySku) return adminRowToEslesmis(bySku, { ...ctx, link: psLink });
+    }
+    return adminRowToEslesmis(pseudoRowFromLink(psLink, tip), {
+      ...ctx,
+      link: psLink,
     });
   }
 

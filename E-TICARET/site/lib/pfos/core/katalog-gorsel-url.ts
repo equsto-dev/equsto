@@ -32,11 +32,11 @@ export function oztiWebImageRelFromSku(sku: string): string | null {
   return `images/catalog/ozti/web/${slug}.jpg`;
 }
 
-/** Equsto SKU → `images/catalog/equsto/equsto-…/` veya flat görsel */
+/** Equsto SKU → `images/catalog/equsto/equsto-12070-08/` */
 export function equstoGorselRelFromSku(sku: string): string | null {
   const k = normSku(sku);
-  const m = /^EQUSTO\.(\d{2})(\d{2})(\d{2})\.(\d{2})$/i.exec(k);
+  const m = /^EQUSTO\.(\d{4,5})\.(\d{2})$/i.exec(k);
   if (!m) return null;
-  const slug = `equsto-${m[1]}${m[2]}${m[3]}-${m[4]}`.toLowerCase();
+  const slug = `equsto-${m[1]}-${m[2]}`.toLowerCase();
   return `images/catalog/equsto/${slug}`;
 }

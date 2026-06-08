@@ -5,9 +5,16 @@ import {
 } from "@/lib/legacy-catalog";
 import { katalogRowToEslesmis } from "../core/katalog-row-eslesmis";
 import {
-  displayIsimFromSablon,
-  OZEL_IMALAT_MARKA,
-} from "../core/ozel-imalat";
+  DAVLUMBAZ_MARKA,
+  dimsCmFromOlcu,
+  dimsCmFromProductName,
+  generateEqustoDavlumbazSku,
+  inferEqustoDavlumbazSuffix,
+  isEqustoDavlumbazRow,
+  parseDavlumbazForm,
+  snapDavlumbazDepthCm,
+} from "../core/davlumbaz-marka";
+import { displayIsimFromSablon } from "../core/ozel-imalat";
 import { sanitizeDavlumbazOlcu } from "../teklif/davlumbaz-olcu";
 import { toOlcuMmDisplay } from "../teklif/olcu-mm";
 import { extractOlcuFromNotlar } from "./yer-izgara-match";
@@ -26,8 +33,17 @@ export function isDavlumbazReferans(isim: string): boolean {
   return /davlumbaz/i.test(String(isim ?? ""));
 }
 
+function isUnoxCheftopHood(name: string): boolean {
+  const n = norm(name);
+  return (
+    n.includes("eech") ||
+    n.includes("cheftop") ||
+    (n.includes("unox") && n.includes("davlumbaz"))
+  );
+}
+
 type DavlumbazTip = {
-  form: "orta" | "duvar" | null;
+  form: ReturnType<typeof parseDavlumbazForm>;
   filtrel: boolean | null;
   kutuCiftCidar: boolean;
   dekoratif: boolean;
@@ -35,9 +51,7 @@ type DavlumbazTip = {
 
 function parseDavlumbazTip(isim: string): DavlumbazTip {
   const n = norm(isim);
-  let form: DavlumbazTip["form"] = null;
-  if (/orta\s*tip/.test(n)) form = "orta";
-  else if (/duvar\s*tip/.test(n)) form = "duvar";
+  const form = parseDavlumbazForm(isim);
 
   let filtrel: boolean | null = null;
   if (/filtresiz/.test(n)) filtrel = false;
@@ -51,35 +65,19 @@ function parseDavlumbazTip(isim: string): DavlumbazTip {
   };
 }
 
-function isUnoxCheftopHood(name: string): boolean {
-  const n = norm(name);
-  return (
-    n.includes("eech") ||
-    n.includes("cheftop") ||
-    (n.includes("unox") && n.includes("davlumbaz"))
-  );
-}
-
-function dimsFromText(text: string): [number, number] | null {
-  const s = norm(text).replace(/[×x]/g, "*");
-  const m = s.match(/(\d+(?:[.,]\d+)?)\s*\*\s*(\d+(?:[.,]\d+)?)/);
-  if (!m) return null;
-  const a = Number(m[1].replace(",", "."));
-  const b = Number(m[2].replace(",", "."));
-  if (!Number.isFinite(a) || !Number.isFinite(b)) return null;
-  return [a, b];
-}
-
 function olcuDistance(
   target: [number, number],
   catalog: [number, number],
 ): number {
-  return Math.abs(target[0] - catalog[0]) + Math.abs(target[1] - catalog[1]);
+  return (
+    Math.abs(target[0] - catalog[0]) + Math.abs(target[1] - catalog[1])
+  );
 }
 
 function rowMatchesTip(row: AdminUrunRow, tip: DavlumbazTip): boolean {
   const k = norm(row.ad);
   if (!k.includes("davlumbaz") || isUnoxCheftopHood(k)) return false;
+  if (!isEqustoDavlumbazRow(row.sku)) return false;
 
   if (tip.form === "orta" && !/orta\s*tip/.test(k)) return false;
   if (tip.form === "duvar" && !/duvar\s*tip/.test(k)) return false;
@@ -98,14 +96,17 @@ function rowMatchesTip(row: AdminUrunRow, tip: DavlumbazTip): boolean {
   return true;
 }
 
-function scoreDavlumbazRow(
+function scoreEqustoDavlumbazRow(
   row: AdminUrunRow,
   tip: DavlumbazTip,
   target: [number, number] | null,
+  targetSku?: string | null,
 ): number {
   if (!rowMatchesTip(row, tip)) return -9999;
-  const catDims = dimsFromText(row.ad);
-  if (!catDims || !target) return 50;
+  if (targetSku && norm(row.sku ?? "") === norm(targetSku)) return 9999;
+
+  const catDims = dimsCmFromProductName(row.ad);
+  if (!catDims || !target) return 80;
 
   const dist = olcuDistance(target, catDims);
   let score = 1000 - dist;
@@ -114,8 +115,19 @@ function scoreDavlumbazRow(
   return score;
 }
 
+async function findEqustoRowBySku(sku: string): Promise<AdminUrunRow | null> {
+  const needle = norm(sku).replace(/\s+/g, "");
+  if (!needle) return null;
+  const rows = (await loadLegacyCatalogRows()).filter(
+    (r) => r.durum === "aktif" && isEqustoDavlumbazRow(r.sku),
+  );
+  return (
+    rows.find((r) => norm(r.sku ?? "").replace(/\s+/g, "") === needle) ?? null
+  );
+}
+
 /**
- * Davlumbaz — referans tip + ölçüye en yakın katalog satırı; fiyat ekipmanlar.json'dan.
+ * Davlumbaz — EQUSTO katalog (ölçü + tip); Öztiryakiler 7885.* kullanılmaz.
  */
 export async function matchDavlumbazByReferans(
   isim: string,
@@ -136,28 +148,80 @@ export async function matchDavlumbazByReferans(
     ) ?? (olcuRaw || null);
 
   const tip = parseDavlumbazTip(isim);
-  const target = dimsFromText(olcuRaw);
-
-  const rows = (await loadLegacyCatalogRows()).filter(
-    (r) => r.durum === "aktif" && r.fiyat_tl > 0,
+  const target = dimsCmFromOlcu(
+    sanitizeDavlumbazOlcu(isim, olcuRaw, urunTipi) ?? olcuRaw,
   );
 
+  if (target) {
+    const generatedSku = generateEqustoDavlumbazSku(isim, target[0], target[1]);
+    const exact = await findEqustoRowBySku(generatedSku);
+    if (exact) {
+      const matched = katalogRowToEslesmis(exact, {
+        linkMarka: DAVLUMBAZ_MARKA,
+        sablonIsim: isim,
+        urunTipi: urunTipi ?? undefined,
+      });
+      return {
+        ...matched,
+        ad: displayIsimFromSablon(isim),
+        marka: DAVLUMBAZ_MARKA,
+        olcu: olcuDisplay,
+      };
+    }
+  }
+
+  const rows = (await loadLegacyCatalogRows()).filter(
+    (r) =>
+      r.durum === "aktif" &&
+      r.fiyat_tl > 0 &&
+      isEqustoDavlumbazRow(r.sku),
+  );
+
+  const generatedSku = target
+    ? generateEqustoDavlumbazSku(isim, target[0], target[1])
+    : null;
+
   const scored = rows
-    .map((row) => ({ row, score: scoreDavlumbazRow(row, tip, target) }))
+    .map((row) => ({
+      row,
+      score: scoreEqustoDavlumbazRow(row, tip, target, generatedSku),
+    }))
     .filter((x) => x.score > 0)
     .sort((a, b) => b.score - a.score);
 
-  if (!scored.length) return null;
+  if (scored.length > 0) {
+    const matched = katalogRowToEslesmis(scored[0].row, {
+      linkMarka: DAVLUMBAZ_MARKA,
+      sablonIsim: isim,
+      urunTipi: urunTipi ?? undefined,
+    });
+    return {
+      ...matched,
+      ad: displayIsimFromSablon(isim),
+      marka: DAVLUMBAZ_MARKA,
+      olcu: olcuDisplay,
+    };
+  }
 
-  const matched = katalogRowToEslesmis(scored[0].row, {
-    sablonIsim: isim,
-    urunTipi: urunTipi ?? undefined,
-  });
+  if (target && isDavlumbazReferans(isim)) {
+    const sku =
+      generatedSku ??
+      `EQUSTO.${String(target[0]).padStart(3, "0")}${String(snapDavlumbazDepthCm(target[1])).padStart(2, "0")}.${inferEqustoDavlumbazSuffix(isim, tip.form)}`;
+    return {
+      id: `equsto-davlumbaz-${sku.toLowerCase()}`,
+      sku,
+      ad: displayIsimFromSablon(isim),
+      marka: DAVLUMBAZ_MARKA,
+      model: sku,
+      olcu: olcuDisplay,
+      elektrikGucuKw: null,
+      gazGucuKw: null,
+      fiyat: 0,
+      fiyatEur: null,
+      doviz: "TRY",
+      gorselUrl: null,
+    };
+  }
 
-  return {
-    ...matched,
-    ad: displayIsimFromSablon(isim),
-    marka: OZEL_IMALAT_MARKA,
-    olcu: olcuDisplay,
-  };
+  return null;
 }
