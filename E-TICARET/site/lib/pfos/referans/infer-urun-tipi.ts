@@ -147,9 +147,7 @@ const TIP_RULES: TipRule[] = [
   },
   {
     tip: "calisma-tezgahi-dolapli",
-    test: (n) =>
-      n.includes("calisma tezgah") &&
-      (n.includes("dolap") || n.includes("evyeli") || n.includes("evye")),
+    test: (n) => n.includes("calisma tezgah") && n.includes("dolap"),
   },
   {
     tip: "calisma-tezgahi-taban-ara",
@@ -157,11 +155,26 @@ const TIP_RULES: TipRule[] = [
   },
   {
     tip: "calisma-tezgahi",
+    test: (n) =>
+      (n.includes("evyeli") || n.includes("evye")) &&
+      n.includes("tezgah") &&
+      (n.includes("giris") ||
+        n.includes("calisma tezgah") ||
+        n.includes("çalışma tezgah")),
+  },
+  {
+    tip: "calisma-tezgahi",
     test: (n) => n.includes("calisma tezgah") || n.includes("çalışma tezgah"),
   },
   {
     tip: "evye-tezgahi-dolapli",
-    test: (n) => n.includes("evye tezgah") || (n.includes("evyeli") && n.includes("tezgah")),
+    test: (n) =>
+      n.includes("evye tezgah") ||
+      (n.includes("evyeli") &&
+        n.includes("tezgah") &&
+        !n.includes("giris") &&
+        !n.includes("calisma tezgah") &&
+        !n.includes("çalışma tezgah")),
   },
   {
     tip: "cop-tezgahi",

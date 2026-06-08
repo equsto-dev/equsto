@@ -50,9 +50,26 @@ import {
   matchKomurluIzgaraByReferans,
 } from "./komurlu-izgara-match";
 import {
+  isBuzdolabiPfosKalem,
+  isBuzdolabiReferansIsim,
+} from "../core/portabianco-marka";
+import {
+  matchBuzdolabiByReferans,
+} from "./buzdolabi-match";
+import {
   isDavlumbazReferans,
   matchDavlumbazByReferans,
 } from "./davlumbaz-match";
+import {
+  isCaglayanTeshirPfosKalem,
+  isTeshirReyonReferansIsim,
+} from "../core/caglayan-marka";
+import { matchTeshirReyonByReferans } from "./teshir-reyon-match";
+import {
+  isAtalayPisirmePfosKalem,
+  isPisirmeReferansIsim,
+} from "../core/atalay-marka";
+import { matchPisirmeByReferans } from "./pisirme-match";
 import { matchSenoxVakumByReferans } from "./senox-vakum-match";
 import { isSenoxVakumPfosKalem } from "../core/senox-marka";
 import { isMakeUpReferans, matchMakeUpByReferans } from "./make-up-match";
@@ -69,6 +86,34 @@ import {
   isBulasikMakinesiReferans,
   matchBulasikByReferans,
 } from "./bulasik-match";
+import {
+  isIstifRafiReferans,
+  matchIstifRafiByReferans,
+} from "./istif-raf-match";
+import {
+  isIstifRafiReferansIsim,
+  isIstifRafiDisMarka,
+  isIstifRafiTipKodu,
+  isCopArabasiPfosKalem,
+  isCopArabasiReferansIsim,
+  isCopArabasiTipKodu,
+  isPortashelfKatalogMarka,
+  isPortashelfPfosKalem,
+} from "../core/portashelf-marka";
+import {
+  isCopArabasiReferans,
+  matchCopArabasiByReferans,
+} from "./cop-arabasi-match";
+import {
+  isCalismaTezgahiPfosKalem,
+  isCalismaTezgahiReferansIsim,
+  isEqustoTezgahRow,
+  isSetUstuAraTezgahKatalog,
+} from "../core/calisma-tezgah";
+import {
+  isCalismaTezgahiReferans,
+  matchCalismaTezgahiByReferans,
+} from "./calisma-tezgah-match";
 import {
   referansKatalogCeliski,
   tipShopLinkUygun,
@@ -162,10 +207,11 @@ export function referansKatalogUyumsuz(
   sablonIsim: string,
   katalogAd: string,
   notlar?: string | null,
+  katalogSku?: string | null,
 ): boolean {
   if (referansKatalogCeliski(sablonIsim, katalogAd, notlar)) return true;
   const s = norm(sablonIsim);
-  const k = norm(katalogAd);
+  const k = norm(`${katalogAd} ${katalogSku ?? ""}`);
   if (!s || !k) return false;
   if (s.includes("karbuz") && k.includes("buz mak") && !k.includes("karbuz")) {
     return true;
@@ -221,6 +267,70 @@ export function referansKatalogUyumsuz(
     isBulasikReferansIsim(sablonIsim) &&
     /electrolux|rational|fagor|hobart|winterhalter/.test(k) &&
     !/inoksan|ino-bym|ino-byk/.test(k)
+  ) {
+    return true;
+  }
+  if (
+    isIstifRafiReferansIsim(sablonIsim) &&
+    isIstifRafiDisMarka(katalogAd) &&
+    !isPortashelfKatalogMarka(katalogAd)
+  ) {
+    return true;
+  }
+  if (
+    isIstifRafiReferansIsim(sablonIsim) &&
+    /8897\.|7897\.|oztiryakiler|\bozti\b/.test(k) &&
+    !/portashelf|yuksel/.test(k)
+  ) {
+    return true;
+  }
+  if (
+    isCalismaTezgahiReferansIsim(sablonIsim, notlar) &&
+    !isEqustoTezgahRow(katalogSku) &&
+    (/7911\.n1\.|7711\.|7897\.|oztiryakiler|\bozti\b|electrolux|^132\d{3,6}\b|371\d/.test(k) ||
+      isSetUstuAraTezgahKatalog(katalogAd, katalogSku))
+  ) {
+    return true;
+  }
+  if (
+    /davlumbaz/.test(s) &&
+    (/7885\.|oztiryakiler|\bozti\b/.test(k) && !/^equsto\./i.test(k))
+  ) {
+    return true;
+  }
+  if (
+    isBuzdolabiReferansIsim(sablonIsim) &&
+    !/portabianco/.test(k) &&
+    (/7919\.|8919\.|79e4\.|7885\.|371\d|electrolux|oztiryakiler|\bozti\b|equsto/.test(k))
+  ) {
+    return true;
+  }
+  if (
+    isTeshirReyonReferansIsim(sablonIsim) &&
+    !/caglayan|çağlayan/.test(k) &&
+    (/8919\.tsv|8919\.ts|oztiryakiler|\bozti\b|electrolux|equsto/.test(k) && !/^eq-/i.test(k))
+  ) {
+    return true;
+  }
+  if (
+    isPisirmeReferansIsim(sablonIsim) &&
+    !/atalay/.test(k) &&
+    (/^78[0-9]{2}\.|7864\.|7831\.|7850\.|9890\.|oztiryakiler|\bozti\b|electrolux|rational|unox/.test(k))
+  ) {
+    return true;
+  }
+  if (
+    isCopArabasiReferansIsim(sablonIsim) &&
+    /8893\.|oztiryakiler|\bozti\b|plastik|kova|8893\.00120/.test(k) &&
+    !/portashelf|yuksel|mb126/.test(k)
+  ) {
+    return true;
+  }
+  if (
+    isCopArabasiReferansIsim(sablonIsim) &&
+    isIstifRafiDisMarka(katalogAd) &&
+    !isPortashelfKatalogMarka(katalogAd) &&
+    !/mb126|yuksel|portashelf/.test(k)
   ) {
     return true;
   }
@@ -341,9 +451,24 @@ async function matchByTipShopLink(
 
   const tip = resolveTipKodu(inferredHazirlik ?? referansTipKodu(input));
   if (
-    (tip === "calisma_tezgahi" || tip === "calisma_tezgahi_dolap") &&
-    /tek\s*evyeli|mermer\s*tabla|\(imalat\)/i.test(input.isim)
+    isCalismaTezgahiPfosKalem({
+      isim: input.isim,
+      urunTipi: input.urunTipi ?? tip,
+      notlar: input.notlar,
+    })
   ) {
+    return null;
+  }
+  if (isDavlumbazReferans(input.isim)) {
+    return null;
+  }
+  if (isBuzdolabiPfosKalem({ isim: input.isim, urunTipi: input.urunTipi })) {
+    return null;
+  }
+  if (isCaglayanTeshirPfosKalem({ isim: input.isim, urunTipi: input.urunTipi })) {
+    return null;
+  }
+  if (isAtalayPisirmePfosKalem({ isim: input.isim, urunTipi: input.urunTipi })) {
     return null;
   }
   if (tip === "buz_makinesi" && isBuzMakinesiReferans(input.isim)) {
@@ -352,6 +477,18 @@ async function matchByTipShopLink(
   if (
     isBulasikMakinesiTipKodu(tip) &&
     isBulasikPfosKalem({ isim: input.isim, urunTipi: input.urunTipi })
+  ) {
+    return null;
+  }
+  if (
+    isIstifRafiTipKodu(tip) &&
+    isPortashelfPfosKalem({ isim: input.isim, urunTipi: input.urunTipi })
+  ) {
+    return null;
+  }
+  if (
+    isCopArabasiTipKodu(tip) &&
+    isCopArabasiPfosKalem({ isim: input.isim, urunTipi: input.urunTipi })
   ) {
     return null;
   }
@@ -378,7 +515,10 @@ async function matchByTipShopLink(
 
   if (link.sku) {
     const byRow = await findAdminRowBySku(link.sku);
-    if (byRow && !referansKatalogUyumsuz(input.isim, byRow.ad, input.notlar)) {
+    if (
+      byRow &&
+      !referansKatalogUyumsuz(input.isim, byRow.ad, input.notlar, byRow.sku)
+    ) {
       return katalogRowToEslesmis(byRow, {
         linkMarka,
         sablonIsim: input.isim,
@@ -513,6 +653,31 @@ async function matchByFamilyRules(
       input.fiyatStratejisi,
     );
   }
+  if (isIstifRafiReferans(input.isim)) {
+    return matchIstifRafiByReferans(
+      input.isim,
+      olcu,
+      input.notlar,
+      input.fiyatStratejisi,
+    );
+  }
+  if (isCopArabasiReferans(input.isim)) {
+    return matchCopArabasiByReferans(
+      input.isim,
+      olcu,
+      input.notlar,
+      input.fiyatStratejisi,
+    );
+  }
+  if (isCalismaTezgahiReferans(input.isim)) {
+    return matchCalismaTezgahiByReferans(
+      input.isim,
+      olcu,
+      input.notlar,
+      input.urunTipi,
+      input.fiyatStratejisi,
+    );
+  }
   if (
     isTasFirinReferans(input.isim) ||
     input.urunTipi === "tas-firin" ||
@@ -549,7 +714,7 @@ async function matchStrictCatalog(
 
   const scored = rows
     .map((row) => {
-      if (referansKatalogUyumsuz(input.isim, row.ad, input.notlar)) {
+      if (referansKatalogUyumsuz(input.isim, row.ad, input.notlar, row.sku)) {
         return { row, score: -9999 };
       }
       if (
@@ -569,6 +734,30 @@ async function matchStrictCatalog(
         !isInoksanKatalogMarka(row.marka_ad) &&
         !norm(`${row.ad} ${row.sku ?? ""}`).includes("ino-bym") &&
         !norm(`${row.ad} ${row.sku ?? ""}`).includes("ino-byk")
+      ) {
+        return { row, score: -9999 };
+      }
+      if (
+        isPortashelfPfosKalem({ isim: input.isim, urunTipi: familyTip }) &&
+        !isPortashelfKatalogMarka(row.marka_ad) &&
+        !/portashelf|yuksel|\d+-x-\d+-x-\d+/i.test(`${row.ad} ${row.sku ?? ""}`)
+      ) {
+        return { row, score: -9999 };
+      }
+      if (
+        isCopArabasiPfosKalem({ isim: input.isim, urunTipi: familyTip }) &&
+        !isPortashelfKatalogMarka(row.marka_ad) &&
+        !/portashelf|yuksel|mb126/i.test(`${row.ad} ${row.sku ?? ""} ${row.marka_ad}`)
+      ) {
+        return { row, score: -9999 };
+      }
+      if (
+        isCalismaTezgahiPfosKalem({
+          isim: input.isim,
+          urunTipi: familyTip,
+          notlar: input.notlar,
+        }) &&
+        !isEqustoTezgahRow(row.sku)
       ) {
         return { row, score: -9999 };
       }
@@ -637,6 +826,17 @@ export async function matchReferansKalem(
   const verified = await matchByVerifiedLink(input);
   if (verified) return verified;
 
+  if (isCalismaTezgahiPfosKalem({ isim: input.isim, urunTipi: input.urunTipi, notlar: input.notlar })) {
+    const tezgah = await matchCalismaTezgahiByReferans(
+      input.isim,
+      olcu,
+      input.notlar,
+      input.urunTipi,
+      input.fiyatStratejisi,
+    );
+    if (tezgah) return tezgah;
+  }
+
   if (isSenoxVakumPfosKalem({ isim: input.isim, urunTipi: input.urunTipi })) {
     const senox = await matchSenoxVakumByReferans(input.isim);
     if (senox) return senox;
@@ -651,6 +851,70 @@ export async function matchReferansKalem(
     if (bulasik) return bulasik;
   }
 
+  if (isBuzdolabiPfosKalem({ isim: input.isim, urunTipi: input.urunTipi })) {
+    const buz = await matchBuzdolabiByReferans(
+      input.isim,
+      olcu,
+      input.notlar,
+      input.urunTipi,
+      input.fiyatStratejisi,
+    );
+    if (buz) return buz;
+  }
+
+  if (isCaglayanTeshirPfosKalem({ isim: input.isim, urunTipi: input.urunTipi })) {
+    const teshir = await matchTeshirReyonByReferans(
+      input.isim,
+      olcu,
+      input.notlar,
+      input.urunTipi,
+      input.fiyatStratejisi,
+    );
+    if (teshir) return teshir;
+  }
+
+  if (isAtalayPisirmePfosKalem({ isim: input.isim, urunTipi: input.urunTipi })) {
+    const pisirme = await matchPisirmeByReferans(
+      input.isim,
+      olcu,
+      input.notlar,
+      input.urunTipi,
+      input.fiyatStratejisi,
+    );
+    if (pisirme) return pisirme;
+  }
+
+  if (isPortashelfPfosKalem({ isim: input.isim, urunTipi: input.urunTipi })) {
+    const istif = await matchIstifRafiByReferans(
+      input.isim,
+      olcu,
+      input.notlar,
+      input.fiyatStratejisi,
+    );
+    if (istif) return istif;
+  }
+
+  if (isCopArabasiPfosKalem({ isim: input.isim, urunTipi: input.urunTipi })) {
+    const cop = await matchCopArabasiByReferans(
+      input.isim,
+      olcu,
+      input.notlar,
+      input.fiyatStratejisi,
+    );
+    if (cop) return cop;
+  }
+
+  if (isDavlumbazReferans(input.isim)) {
+    const dav = await matchDavlumbazByReferans(
+      input.isim,
+      olcu,
+      input.notlar,
+      input.urunTipi,
+      input.fiyatStratejisi,
+    );
+    if (dav) return dav;
+  }
+
   const hazirlikTip = inferHazirlikTipFromIsim(input.isim);
   if (hazirlikTip) {
     const shop = await matchShopCatalog(hazirlikTip, input.fiyatStratejisi);
@@ -658,14 +922,14 @@ export async function matchReferansKalem(
   }
 
   const family = await matchByFamilyRules(input, olcu);
-  if (family && !referansKatalogUyumsuz(input.isim, family.ad, input.notlar)) {
+  if (family && !referansKatalogUyumsuz(input.isim, family.ad, input.notlar, family.sku)) {
     return family;
   }
 
   const tipLinked = await matchByTipShopLink(input);
   if (
     tipLinked &&
-    !referansKatalogUyumsuz(input.isim, tipLinked.ad, input.notlar)
+    !referansKatalogUyumsuz(input.isim, tipLinked.ad, input.notlar, tipLinked.sku)
   ) {
     return tipLinked;
   }
@@ -677,6 +941,16 @@ export async function matchReferansKalem(
     isOzelImalatMotor({ sablonIsim: input.isim, urunTipi: input.urunTipi }) ||
     isOzelImalatMotor({ sablonIsim: input.isim })
   ) {
+    if (isCalismaTezgahiPfosKalem({ isim: input.isim, urunTipi: input.urunTipi, notlar: input.notlar })) {
+      const tezgah = await matchCalismaTezgahiByReferans(
+        input.isim,
+        olcu,
+        input.notlar,
+        input.urunTipi,
+        input.fiyatStratejisi,
+      );
+      if (tezgah) return tezgah;
+    }
     if (isDavlumbazReferans(input.isim)) {
       const dav = await matchDavlumbazByReferans(
         input.isim,
@@ -686,6 +960,36 @@ export async function matchReferansKalem(
         input.fiyatStratejisi,
       );
       if (dav) return dav;
+    }
+    if (isBuzdolabiPfosKalem({ isim: input.isim, urunTipi: input.urunTipi })) {
+      const buz = await matchBuzdolabiByReferans(
+        input.isim,
+        olcu,
+        input.notlar,
+        input.urunTipi,
+        input.fiyatStratejisi,
+      );
+      if (buz) return buz;
+    }
+    if (isCaglayanTeshirPfosKalem({ isim: input.isim, urunTipi: input.urunTipi })) {
+      const teshir = await matchTeshirReyonByReferans(
+        input.isim,
+        olcu,
+        input.notlar,
+        input.urunTipi,
+        input.fiyatStratejisi,
+      );
+      if (teshir) return teshir;
+    }
+    if (isAtalayPisirmePfosKalem({ isim: input.isim, urunTipi: input.urunTipi })) {
+      const pisirme = await matchPisirmeByReferans(
+        input.isim,
+        olcu,
+        input.notlar,
+        input.urunTipi,
+        input.fiyatStratejisi,
+      );
+      if (pisirme) return pisirme;
     }
     return buildOzelImalatEslesmis({
       isim: input.isim,

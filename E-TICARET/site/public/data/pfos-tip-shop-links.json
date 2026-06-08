@@ -3,20 +3,25 @@
   "note": "PFOS tip_kodu → Equsto katalog SKU (manuel / doğrulanmış eşleşmeler)",
   "links": {
     "kombi_firin_6t": {
-      "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "9890.ICCLS61.E0",
-      "marka": "Rational",
-      "name": "RATIONAL BUHAR KONVEKSİYONLU ELEKTRİKLİ FIRIN 6*1/1 GN İcombi Classic"
+      "marka": "Atalay",
+      "name": "KOMBİ / KONVEKSİYONLU FIRIN — Atalay katalog eşlemesi"
     },
     "davlumbaz_duvar": {
-      "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "7885.20125.11",
-      "name": "DAVLUMBAZ DUVAR TİPİ FİLTRELİ 200*120"
+      "marka": "Equsto",
+      "name": "DAVLUMBAZ — EQUSTO ölçü/tip eşlemesi"
+    },
+    "tezgah_tip_buzdolabi": {
+      "marka": "Portabianco",
+      "name": "TEZGAH TİPİ BUZDOLABI — Portabianco ölçü/kapı eşlemesi"
+    },
+    "sogutma_tezgah": {
+      "marka": "Portabianco",
+      "name": "SOĞUTMALI TEZGAH / HAZIRLIK BUZDOLABI — Portabianco"
     },
     "cop_arabasi": {
-      "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "8893.00120.00",
-      "fiyat_try": 8500
+      "marka": "Portashelf",
+      "sku": "MB126X",
+      "name": "PASLANMAZ ÇÖP ARABASI"
     },
     "mikrodalga_firin": {
       "brand": "Öztiryakiler Endüstriyel Mutfak",
@@ -27,16 +32,17 @@
       "sku": "0913.00507.01"
     },
     "char_broil": {
-      "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "7864.N1.40903.04"
+      "marka": "Atalay",
+      "name": "PLATE / SETÜSTÜ IZGARA — Atalay ölçü eşlemesi"
     },
     "salamander": {
-      "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "7850.58575.70"
+      "marka": "Atalay",
+      "name": "SALAMANDER — Atalay katalog eşlemesi"
     },
     "tezgah_duz": {
       "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "7911.N1.60603.00"
+      "sku": "7911.N1.40603.00",
+      "name": "600 SERİ ARA TEZGAH SET ÜSTÜ 40*60*26"
     },
     "fritoz_tek": {
       "brand": "Atalay Endüstriyel Mutfak Ekipmanları",
@@ -103,6 +109,11 @@
       "sku": "INO-BYM052S",
       "name": "BYM052S – Set altı 500 Tabak Ekonomik Bulaşık Yıkama Makinesi"
     },
+    "istif_rafi": {
+      "marka": "Portashelf",
+      "sku": "46-X-152-X-183",
+      "name": "KATLI RAFLAR · TIER SHELVING · 46-X-152-X-183"
+    },
     "derin_dondurucu_dik": {
       "brand": "Öztiryakiler Endüstriyel Mutfak",
       "sku": "7919.06LMV.00",
@@ -114,25 +125,16 @@
       "name": "YER IZGARASI TAVALI KENARDAN SİFONLU ALTTAN CIKISLI Q50 PVC 940*290"
     },
     "bar_buzdolabi": {
-      "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "8919.BBC35.00",
-      "marka": "Öztiryakiler",
-      "name": "ŞİŞE SOĞUTUCU BBC35 3 KAPILI",
-      "fiyat_try": 65000
+      "marka": "Portabianco",
+      "name": "BAR ŞİŞE SOĞUTUCU — Portabianco kapı sayısına göre"
     },
     "sise_sogutucu_3k": {
-      "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "8919.BBC35.00",
-      "marka": "Öztiryakiler",
-      "name": "ŞİŞE SOĞUTUCU BBC35 3 KAPILI",
-      "fiyat_try": 65000
+      "marka": "Portabianco",
+      "name": "BAR ŞİŞE SOĞUTUCU 3 KAPILI — Portabianco"
     },
     "sise_sogutucu_2k": {
-      "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "8919.BBC25.00",
-      "marka": "Öztiryakiler",
-      "name": "ŞİŞE SOĞUTUCU BBC25 2 KAPILI",
-      "fiyat_try": 48000
+      "marka": "Portabianco",
+      "name": "BAR ŞİŞE SOĞUTUCU 2 KAPILI — Portabianco"
     },
     "montaj_nakliye": {
       "brand": "Equsto Proje Fabrikası",
@@ -140,38 +142,36 @@
       "name": "Montaj ve nakliye hizmeti"
     },
     "teshir_vitrin": {
-      "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "8919.TSV250.00",
-      "name": "SOĞUK TEŞHİR DOLABI",
-      "fiyat_try": 185000
+      "marka": "Çağlayan Soğutma",
+      "name": "TEŞHİR REYONU — Çağlayan ölçü eşlemesi"
     },
     "calisma_tezgahi": {
-      "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "7911.N1.60603.00",
-      "name": "ÇALIŞMA TEZGAHI",
-      "fiyat_try": 42000
+      "marka": "Equsto",
+      "name": "ÇALIŞMA TEZGAHI — EQUSTO ölçü/evye eşlemesi; sabit SKU yok"
     },
     "calisma_tezgahi_dolap": {
-      "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "7911.N1.60603.00",
-      "name": "ÇALIŞMA TEZGAHI DOLAPLI",
-      "fiyat_try": 52000
+      "marka": "Equsto",
+      "name": "ÇALIŞMA TEZGAHI DOLAPLI — EQUSTO ölçü eşlemesi"
+    },
+    "tezgah_evyeli": {
+      "marka": "Equsto",
+      "name": "EVYELİ ÇALIŞMA TEZGAHI — EQUSTO ölçü/evye eşlemesi; sabit SKU yok"
+    },
+    "evye_tezgah_dolap": {
+      "marka": "Equsto",
+      "name": "EVYELİ TEZGAH — EQUSTO ölçü eşlemesi; Öztiryakiler 7711.* kullanılmaz"
     },
     "cop_tezgahi": {
-      "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "7911.N1.60603.00",
-      "name": "ÇÖP TEZGAHI",
-      "fiyat_try": 28000
+      "marka": "Equsto",
+      "name": "ÇÖP TEZGAHI — EQUSTO / özel imalat"
     },
     "raf_firin": {
-      "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "9890.XBC10.E1",
-      "name": "UNOX BAKERTOP 10 TEPSI KOMBI FIRIN ELEKTRIKLI"
+      "marka": "Atalay",
+      "name": "KONVEKSİYONLU / RAFLI FIRIN — Atalay"
     },
     "tas_tabanli_firin": {
-      "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "9890.XBC01.EU",
-      "name": "UNOX TAŞ TABANLI FIRIN 1 TEPSİ 40X60"
+      "marka": "Atalay",
+      "name": "TAŞ TABANLI / PİZZA FIRINI — Atalay"
     },
     "bar_blender": {
       "brand": "Öztiryakiler Endüstriyel Mutfak",
@@ -197,20 +197,16 @@
       "fiyat_try": 15000
     },
     "setalti_buzdolabi": {
-      "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "79E4.27NMV.00",
-      "name": "TAG 270 NMV YATAY TİP BUZDOLABI (setaltı, 60×60 modül)"
+      "marka": "Portabianco",
+      "name": "CİHAZ ALTI BUZDOLABI — Portabianco ölçü/kapı eşlemesi"
     },
     "setalti_derin_dondurucu": {
-      "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "7919.06LMV.00",
-      "name": "GN 600 LMV TEK KAPI SETALTI DERİN DONDURUCU"
+      "marka": "Portabianco",
+      "name": "CİHAZ ALTI DERİN DONDURUCU — Portabianco"
     },
     "dik_tip_buzdolabi": {
-      "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "7919.06LMV.00",
-      "name": "DEPO TİPİ BUZDOLABI",
-      "fiyat_try": 68000
+      "marka": "Portabianco",
+      "name": "DEPO TİPİ BUZDOLABI — Portabianco kapı sayısına göre"
     },
     "kiyma_makinesi": {
       "marka": "Boğaziçi",

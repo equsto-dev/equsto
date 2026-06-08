@@ -4,7 +4,11 @@ import {
   type AdminUrunRow,
 } from "@/lib/legacy-catalog";
 import { katalogRowToEslesmis } from "../core/katalog-row-eslesmis";
-import { OZEL_IMALAT_MARKA } from "../core/ozel-imalat";
+import {
+  ATALAY_MARKA,
+  isAtalayKatalogMarka,
+  isAtalayPisirmeRow,
+} from "../core/atalay-marka";
 import { extractOlcuFromNotlar } from "./yer-izgara-match";
 
 function norm(s: string): string {
@@ -49,7 +53,9 @@ function olcuEslesir(olcu: string, urunAd: string): boolean {
 
 function isKomurluIzgaraRow(row: AdminUrunRow): boolean {
   const n = norm(row.ad);
-  return /komurlu.*izgar|kömürlü.*izgar/.test(n) && !/7960\./.test(row.sku ?? "");
+  if (!/komurlu.*izgar|kömürlü.*izgar/.test(n)) return false;
+  if (/7960\./.test(row.sku ?? "")) return false;
+  return isAtalayPisirmeRow(row);
 }
 
 function scoreKomurluRow(row: AdminUrunRow, olcu: string): number {
@@ -72,7 +78,7 @@ export async function matchKomurluIzgaraByReferans(
 ): Promise<EslesmisUrun | null> {
   const olcuText = olcu.trim() || extractOlcuFromNotlar(notlar);
   const rows = (await loadLegacyCatalogRows()).filter(
-    (r) => r.durum === "aktif" && r.fiyat_tl > 0,
+    (r) => r.durum === "aktif" && (r.fiyat_tl > 0 || isAtalayKatalogMarka(r.marka_ad)),
   );
 
   if (olcuText) {
@@ -81,7 +87,11 @@ export async function matchKomurluIzgaraByReferans(
       .filter((x) => x.score >= 280)
       .sort((a, b) => b.score - a.score);
     if (scored.length > 0) {
-      return katalogRowToEslesmis(scored[0].row, { sablonIsim: isim });
+      const matched = katalogRowToEslesmis(scored[0].row, {
+        linkMarka: ATALAY_MARKA,
+        sablonIsim: isim,
+      });
+      return { ...matched, marka: ATALAY_MARKA };
     }
   }
 
@@ -89,7 +99,7 @@ export async function matchKomurluIzgaraByReferans(
     id: "pfos-komurlu-izgara-bos",
     sku: "",
     ad: isim.trim(),
-    marka: OZEL_IMALAT_MARKA,
+    marka: ATALAY_MARKA,
     model: null,
     olcu: olcuText || null,
     elektrikGucuKw: null,

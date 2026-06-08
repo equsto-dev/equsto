@@ -17,6 +17,26 @@ import {
   BULASIK_MARKA,
   isBulasikPfosKalem,
 } from "./bulasik-marka";
+import {
+  PORTASHELF_MARKA,
+  isPortashelfMarkaKalem,
+} from "./portashelf-marka";
+import {
+  PORTABIANCO_MARKA,
+  isBuzdolabiPfosKalem,
+} from "./portabianco-marka";
+import {
+  CAGLAYAN_MARKA,
+  isCaglayanTeshirPfosKalem,
+} from "./caglayan-marka";
+import {
+  ATALAY_MARKA,
+  isAtalayPisirmePfosKalem,
+} from "./atalay-marka";
+import {
+  CALISMA_TEZGAH_MARKA,
+  isCalismaTezgahiPfosKalem,
+} from "./calisma-tezgah";
 
 /** Tanınan imalat markaları — uzun eşleşme önce */
 const IMALAT_MARKALAR = [
@@ -175,6 +195,51 @@ export function resolveTeklifMarka(opts: {
     })
   ) {
     return BULASIK_MARKA;
+  }
+
+  if (
+    isPortashelfMarkaKalem({
+      isim: opts.sablonIsim ?? opts.urunAd,
+      urunTipi: opts.urunTipi,
+    })
+  ) {
+    return PORTASHELF_MARKA;
+  }
+
+  if (
+    isBuzdolabiPfosKalem({
+      isim: opts.sablonIsim ?? opts.urunAd,
+      urunTipi: opts.urunTipi,
+    })
+  ) {
+    return PORTABIANCO_MARKA;
+  }
+
+  if (
+    isCaglayanTeshirPfosKalem({
+      isim: opts.sablonIsim ?? opts.urunAd,
+      urunTipi: opts.urunTipi,
+    })
+  ) {
+    return CAGLAYAN_MARKA;
+  }
+
+  if (
+    isAtalayPisirmePfosKalem({
+      isim: opts.sablonIsim ?? opts.urunAd,
+      urunTipi: opts.urunTipi,
+    })
+  ) {
+    return ATALAY_MARKA;
+  }
+
+  if (
+    isCalismaTezgahiPfosKalem({
+      isim: opts.sablonIsim ?? opts.urunAd,
+      urunTipi: opts.urunTipi,
+    })
+  ) {
+    return CALISMA_TEZGAH_MARKA;
   }
 
   if (
