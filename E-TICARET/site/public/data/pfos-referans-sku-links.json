@@ -59,12 +59,14 @@
       "name": "SOĞUK ODA PANEL-SPLİT TİP, 0/+5 C 250X150X240 CM"
     },
     "tavukcu-80-150|B2": {
-      "sku": "8897.14IP4.07",
-      "name": "ISTIF RAFI IZGARA TABLA 46*137*183 PASLANMAZ 4 KATLI"
+      "sku": "46-X-137-X-183",
+      "marka": "Portashelf",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×137×183 cm"
     },
     "tavukcu-80-150|B3": {
-      "sku": "8897.13IP4.07",
-      "name": "ISTIF RAFI IZGARA TABLA 46*122*183 PASLANMAZ 4 KATLI"
+      "sku": "46-X-122-X-183",
+      "marka": "Portashelf",
+      "name": "Portashelf 4 Katlı Raf INOX 201 LIGHT 46×122×183 cm"
     },
     "tavukcu-80-150|C4": {
       "sku": "9805.CB416.HC",

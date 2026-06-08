@@ -99,6 +99,8 @@ import {
   isCopArabasiTipKodu,
   isPortashelfKatalogMarka,
   isPortashelfPfosKalem,
+  isOztiIstifSku,
+  isPortashelfSku,
 } from "../core/portashelf-marka";
 import {
   isCopArabasiReferans,
@@ -279,8 +281,9 @@ export function referansKatalogUyumsuz(
   }
   if (
     isIstifRafiReferansIsim(sablonIsim) &&
-    /8897\.|7897\.|oztiryakiler|\bozti\b/.test(k) &&
-    !/portashelf|yuksel/.test(k)
+    (/8897\.|7897\.|oztiryakiler|\bozti\b/.test(k) ||
+      isOztiIstifSku(katalogSku) ||
+      (katalogSku && !isPortashelfSku(katalogSku)))
   ) {
     return true;
   }
@@ -578,6 +581,12 @@ async function matchByVerifiedLink(
 
   const bySku = await matchByExplicitSku(link.sku);
   if (bySku) {
+    if (
+      isIstifRafiReferansIsim(input.isim) &&
+      isOztiIstifSku(bySku.sku ?? link.sku)
+    ) {
+      return null;
+    }
     return {
       ...bySku,
       ad: link.name ?? bySku.ad,
@@ -739,8 +748,8 @@ async function matchStrictCatalog(
       }
       if (
         isPortashelfPfosKalem({ isim: input.isim, urunTipi: familyTip }) &&
-        !isPortashelfKatalogMarka(row.marka_ad) &&
-        !/portashelf|yuksel|\d+-x-\d+-x-\d+/i.test(`${row.ad} ${row.sku ?? ""}`)
+        (isOztiIstifSku(row.sku) ||
+          (!isPortashelfSku(row.sku) && !isPortashelfKatalogMarka(row.marka_ad)))
       ) {
         return { row, score: -9999 };
       }

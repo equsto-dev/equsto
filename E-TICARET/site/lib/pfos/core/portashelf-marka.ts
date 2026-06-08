@@ -101,3 +101,5 @@ export function isIstifRafiDisMarka(marka: string | null | undefined): boolean {
     n.includes("electrolux")
   );
 }
+
+export { isOztiIstifSku, isPortashelfSku } from "./portashelf-fiyat";
