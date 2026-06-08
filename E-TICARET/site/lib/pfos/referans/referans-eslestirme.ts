@@ -5,7 +5,7 @@
  * 2) pfos-tip-shop-links.json (urunTipi → SKU) — doğrulanmış tip eşlemesi
  * 3) Aile kuralları (yer ızgarası, make-up, fırın, vb.)
  * 4) İsim + ölçü ile sıkı katalog araması
- * 5) Özel imalat (Equsto) — yanlış SKU asla dönmez
+ * 5) Özel imalat (Equsto) — katalogda fiyat yoksa boş; formül/tahmin yok
  */
 import { readJsonFile } from "@/lib/legacy-data";
 import type { EslesmisUrun, FiyatStratejisi } from "../schemas/pfos.schema";
@@ -13,8 +13,26 @@ import {
   loadLegacyCatalogRows,
   type AdminUrunRow,
 } from "@/lib/legacy-catalog";
-import { enrichEslesmisFromKatalogRow } from "../core/catalog-enrich";
-import { productMatchesTipKodu } from "../core/shop-catalog-match";
+import { katalogRowToEslesmis } from "../core/katalog-row-eslesmis";
+import {
+  BULASIK_MARKA,
+  isBulasikMakinesiTipKodu,
+  isBulasikPfosKalem,
+  isBulasikDisMarka,
+  isBulasikReferansIsim,
+  isInoksanKatalogMarka,
+} from "../core/bulasik-marka";
+import {
+  HAZIRLIK_MARKA,
+  inferHazirlikTipFromIsim,
+  isHazirlikPfosKalem,
+  isHazirlikTipKodu,
+  isOztiKatalogMarka,
+} from "../core/hazirlik-marka";
+import {
+  matchShopCatalog,
+  productMatchesTipKodu,
+} from "../core/shop-catalog-match";
 import { resolveTipKodu } from "../core/tip-kodu";
 import { buildOzelImalatEslesmis } from "../core/ozel-imalat-build";
 import {
@@ -27,6 +45,16 @@ import {
   isYerIzgarasiReferans,
   matchYerIzgarasiByOlcu,
 } from "./yer-izgara-match";
+import {
+  isKomurluIzgaraReferans,
+  matchKomurluIzgaraByReferans,
+} from "./komurlu-izgara-match";
+import {
+  isDavlumbazReferans,
+  matchDavlumbazByReferans,
+} from "./davlumbaz-match";
+import { matchSenoxVakumByReferans } from "./senox-vakum-match";
+import { isSenoxVakumPfosKalem } from "../core/senox-marka";
 import { isMakeUpReferans, matchMakeUpByReferans } from "./make-up-match";
 import {
   isTasFirinReferans,
@@ -89,7 +117,10 @@ async function loadReferansSkuLinks(): Promise<
 }
 
 type TipShopLinksFile = {
-  links?: Record<string, { sku?: string; name?: string; brand?: string; fiyat_try?: number }>;
+  links?: Record<
+    string,
+    { sku?: string; name?: string; brand?: string; marka?: string; fiyat_try?: number }
+  >;
 };
 
 let tipShopLinksCache: NonNullable<TipShopLinksFile["links"]> | null = null;
@@ -123,21 +154,7 @@ function referansLinkKey(listeKey: string, poz: string): string {
 }
 
 function rowToEslesmis(row: AdminUrunRow): EslesmisUrun {
-  const enriched = enrichEslesmisFromKatalogRow(row, {});
-  return {
-    id: row.id,
-    slug: row.id.replace(/^ecom_/, ""),
-    sku: row.sku,
-    ad: row.ad,
-    marka: enriched.marka,
-    model: enriched.model,
-    olcu: enriched.olcu,
-    elektrikGucuKw: row.el_guc,
-    gazGucuKw: row.gaz_guc,
-    fiyat: row.fiyat_tl,
-    doviz: "TRY",
-    gorselUrl: row.gorsel_url,
-  };
+  return katalogRowToEslesmis(row);
 }
 
 /** Referans satırı ile katalog adı çelişiyorsa reddet */
@@ -169,6 +186,44 @@ export function referansKatalogUyumsuz(
   ) {
     return true;
   }
+  if (
+    (s.includes("servis banko") || s.includes("dekoratif servis")) &&
+    /davlumbaz/.test(k)
+  ) {
+    return true;
+  }
+  if (s.includes("banko") && /davlumbaz/.test(k) && !s.includes("davlumbaz")) {
+    return true;
+  }
+  if (
+    (s.includes("komurlu") || s.includes("kömürlü")) &&
+    s.includes("izgar") &&
+    (/yer\s*izgar|7960\.|pvc|sifon|tavali/.test(k) ||
+      !/komurlu|kömürlü/.test(k))
+  ) {
+    return true;
+  }
+  if (
+    (s.includes("vakum") || s.includes("vakuum")) &&
+    s.includes("makin") &&
+    /oztiryakiler|\bozti\b|8916\./.test(k)
+  ) {
+    return true;
+  }
+  if (
+    isBulasikReferansIsim(sablonIsim) &&
+    isBulasikDisMarka(katalogAd) &&
+    !isInoksanKatalogMarka(katalogAd)
+  ) {
+    return true;
+  }
+  if (
+    isBulasikReferansIsim(sablonIsim) &&
+    /electrolux|rational|fagor|hobart|winterhalter/.test(k) &&
+    !/inoksan|ino-bym|ino-byk/.test(k)
+  ) {
+    return true;
+  }
   return false;
 }
 
@@ -182,7 +237,7 @@ function olcuSayilari(olcu: string): number[] {
 function olcuEslesmeSkoru(olcu: string, urunAd: string): number {
   const nums = olcuSayilari(olcu);
   if (!nums.length) return 0;
-  const ad = norm(urunAd);
+  const ad = norm(urunAd).replace(/[×x]/g, "*");
   let score = 0;
 
   if (nums.length >= 3) {
@@ -271,10 +326,15 @@ async function matchByExplicitSku(
 async function matchByTipShopLink(
   input: ReferansMatchInput,
 ): Promise<EslesmisUrun | null> {
-  const urunTipi = String(input.urunTipi ?? "").trim();
+  const inferredHazirlik = inferHazirlikTipFromIsim(input.isim);
+  const urunTipiRaw = String(input.urunTipi ?? "").trim();
+  const urunTipi =
+    urunTipiRaw && !urunTipiRaw.startsWith("pfos_")
+      ? urunTipiRaw
+      : inferredHazirlik ?? urunTipiRaw;
   if (!urunTipi || urunTipi.startsWith("pfos_")) return null;
 
-  const tip = referansTipKodu(input);
+  const tip = resolveTipKodu(inferredHazirlik ?? referansTipKodu(input));
   if (
     (tip === "calisma_tezgahi" || tip === "calisma_tezgahi_dolap") &&
     /tek\s*evyeli|mermer\s*tabla|\(imalat\)/i.test(input.isim)
@@ -285,35 +345,55 @@ async function matchByTipShopLink(
     return null;
   }
   if (
-    (tip === "bulasik_giyotin_1000" || tip === "bardak_yikama") &&
-    isBulasikMakinesiReferans(input.isim)
+    isBulasikMakinesiTipKodu(tip) &&
+    isBulasikPfosKalem({ isim: input.isim, urunTipi: input.urunTipi })
   ) {
+    return null;
+  }
+  if (
+    tip === "yer_izgara" &&
+    !isYerIzgarasiReferans(input.isim) &&
+    !/^yer-izgara-\d+$/i.test(urunTipi)
+  ) {
+    return null;
+  }
+  if (tip === "vakum_makinesi") {
     return null;
   }
 
   const links = await loadTipShopLinks();
   const link = links[tip];
-  if (!link?.sku) return null;
+  if (!link?.sku && !(link?.name || link?.marka)) return null;
   if (!tipShopLinkUygun(input.isim, input.notlar, link.name ?? link.sku)) {
     return null;
   }
 
-  const bySku = await matchByExplicitSku(link.sku);
-  if (bySku && !referansKatalogUyumsuz(input.isim, bySku.ad, input.notlar)) {
-    return bySku;
+  const hazirlik = isHazirlikTipKodu(tip);
+  const linkMarka = link.marka ?? (hazirlik ? HAZIRLIK_MARKA : undefined);
+
+  if (link.sku) {
+    const bySku = await matchByExplicitSku(link.sku);
+    if (bySku && !referansKatalogUyumsuz(input.isim, bySku.ad, input.notlar)) {
+      return katalogRowToEslesmis(bySku, {
+        linkMarka,
+        sablonIsim: input.isim,
+        urunTipi: tip,
+      });
+    }
   }
 
   if (link.fiyat_try && link.fiyat_try > 0) {
     return {
       id: `tip-link-${tip}`,
-      sku: link.sku,
+      sku: link.sku ?? "",
       ad: link.name ?? input.isim,
-      marka: link.brand ?? "Öztiryakiler",
+      marka: linkMarka ?? link.brand ?? (hazirlik ? HAZIRLIK_MARKA : BULASIK_MARKA),
       model: link.sku,
       olcu: extractOlcuFromNotlar(input.notlar) || null,
       elektrikGucuKw: null,
       gazGucuKw: null,
       fiyat: Math.round(link.fiyat_try),
+      fiyatEur: null,
       doviz: "TRY",
       gorselUrl: null,
     };
@@ -370,6 +450,7 @@ async function matchByVerifiedLink(
       elektrikGucuKw: null,
       gazGucuKw: null,
       fiyat: Math.round(link.fiyat_try),
+      fiyatEur: null,
       doviz: "TRY",
       gorselUrl: null,
     };
@@ -383,6 +464,27 @@ async function matchByFamilyRules(
 ): Promise<EslesmisUrun | null> {
   if (isYerIzgarasiReferans(input.isim) || /^yer-izgara-\d+$/.test(input.urunTipi)) {
     return matchYerIzgarasiByOlcu(olcu, input.notlar, input.fiyatStratejisi);
+  }
+  if (isDavlumbazReferans(input.isim)) {
+    return matchDavlumbazByReferans(
+      input.isim,
+      olcu,
+      input.notlar,
+      input.urunTipi,
+      input.fiyatStratejisi,
+    );
+  }
+  if (
+    isKomurluIzgaraReferans(input.isim) ||
+    input.urunTipi === "komurlu-izgara" ||
+    referansTipKodu(input) === "komurlu_izgara"
+  ) {
+    return matchKomurluIzgaraByReferans(
+      input.isim,
+      olcu,
+      input.notlar,
+      input.fiyatStratejisi,
+    );
   }
   if (isMakeUpReferans(input.isim)) {
     return matchMakeUpByReferans(
@@ -427,6 +529,8 @@ async function matchByFamilyRules(
 }
 
 const MIN_STRICT_SCORE = 95;
+/** Sadece ölçü eşleşmesiyle yanlış ürün tipi seçilmesin */
+const MIN_STRICT_ISIM_SCORE = 30;
 
 /** İsim + ölçü — pfos-tip-shop-links tek-SKU kısayolu kullanılmaz */
 async function matchStrictCatalog(
@@ -443,7 +547,31 @@ async function matchStrictCatalog(
       if (referansKatalogUyumsuz(input.isim, row.ad, input.notlar)) {
         return { row, score: -9999 };
       }
-      let score = isimEslesmeSkoru(input.isim, row.ad);
+      if (
+        isHazirlikPfosKalem({ isim: input.isim, urunTipi: familyTip }) &&
+        isOztiKatalogMarka(row.marka_ad)
+      ) {
+        return { row, score: -9999 };
+      }
+      if (
+        isSenoxVakumPfosKalem({ isim: input.isim, urunTipi: familyTip }) &&
+        isOztiKatalogMarka(row.marka_ad)
+      ) {
+        return { row, score: -9999 };
+      }
+      if (
+        isBulasikPfosKalem({ isim: input.isim, urunTipi: familyTip }) &&
+        !isInoksanKatalogMarka(row.marka_ad) &&
+        !norm(`${row.ad} ${row.sku ?? ""}`).includes("ino-bym") &&
+        !norm(`${row.ad} ${row.sku ?? ""}`).includes("ino-byk")
+      ) {
+        return { row, score: -9999 };
+      }
+      const isimScore = isimEslesmeSkoru(input.isim, row.ad);
+      if (isimScore < MIN_STRICT_ISIM_SCORE) {
+        return { row, score: -9999 };
+      }
+      let score = isimScore;
       if (olcu) score += olcuEslesmeSkoru(olcu, row.ad);
       if (familyTip && !familyTip.startsWith("pfos_")) {
         if (productMatchesTipKodu(row, familyTip)) score += 40;
@@ -456,7 +584,10 @@ async function matchStrictCatalog(
     .sort((a, b) => b.score - a.score);
 
   if (!scored.length) return null;
-  return rowToEslesmis(scored[0].row);
+  return katalogRowToEslesmis(scored[0].row, {
+    sablonIsim: input.isim,
+    urunTipi: familyTip,
+  });
 }
 
 async function fallbackOzelImalat(input: ReferansMatchInput): Promise<EslesmisUrun> {
@@ -465,7 +596,29 @@ async function fallbackOzelImalat(input: ReferansMatchInput): Promise<EslesmisUr
     urunTipi: input.urunTipi,
     notlar: input.notlar,
     fiyatTry: 0,
+    fiyatEur: null,
   });
+}
+
+/** İsim + ölçü ile sıkı katalog araması (özel imalat / zone fallback için) */
+export async function matchCatalogByIsimOlcu(
+  isim: string,
+  notlar: string | null | undefined,
+  urunTipi = "",
+  fiyatStratejisi: FiyatStratejisi = "ekonomik",
+): Promise<EslesmisUrun | null> {
+  const olcu =
+    extractOlcuFromNotlar(notlar) ||
+    (notlar?.match(/(\d+\s*[*xX×]\s*\d+)/)?.[1] ?? "");
+  return matchStrictCatalog(
+    {
+      isim,
+      urunTipi,
+      notlar,
+      fiyatStratejisi,
+    },
+    olcu,
+  );
 }
 
 /** Referans satırı için güvenli katalog eşlemesi */
@@ -479,17 +632,29 @@ export async function matchReferansKalem(
   const verified = await matchByVerifiedLink(input);
   if (verified) return verified;
 
+  if (isSenoxVakumPfosKalem({ isim: input.isim, urunTipi: input.urunTipi })) {
+    const senox = await matchSenoxVakumByReferans(input.isim);
+    if (senox) return senox;
+  }
+
+  if (isBulasikPfosKalem({ isim: input.isim, urunTipi: input.urunTipi })) {
+    const bulasik = await matchBulasikByReferans(
+      input.isim,
+      input.notlar,
+      input.fiyatStratejisi,
+    );
+    if (bulasik) return bulasik;
+  }
+
+  const hazirlikTip = inferHazirlikTipFromIsim(input.isim);
+  if (hazirlikTip) {
+    const shop = await matchShopCatalog(hazirlikTip, input.fiyatStratejisi);
+    if (shop) return { ...shop, marka: HAZIRLIK_MARKA };
+  }
+
   const family = await matchByFamilyRules(input, olcu);
   if (family && !referansKatalogUyumsuz(input.isim, family.ad, input.notlar)) {
     return family;
-  }
-
-  if (isOzelImalatMotor({ sablonIsim: input.isim, urunTipi: input.urunTipi })) {
-    return await buildOzelImalatEslesmis({
-      isim: input.isim,
-      urunTipi: input.urunTipi,
-      notlar: input.notlar,
-    });
   }
 
   const tipLinked = await matchByTipShopLink(input);
@@ -503,11 +668,26 @@ export async function matchReferansKalem(
   const strict = await matchStrictCatalog(input, olcu);
   if (strict) return strict;
 
-  if (isOzelImalatMotor({ sablonIsim: input.isim })) {
-    return await buildOzelImalatEslesmis({
+  if (
+    isOzelImalatMotor({ sablonIsim: input.isim, urunTipi: input.urunTipi }) ||
+    isOzelImalatMotor({ sablonIsim: input.isim })
+  ) {
+    if (isDavlumbazReferans(input.isim)) {
+      const dav = await matchDavlumbazByReferans(
+        input.isim,
+        olcu,
+        input.notlar,
+        input.urunTipi,
+        input.fiyatStratejisi,
+      );
+      if (dav) return dav;
+    }
+    return buildOzelImalatEslesmis({
       isim: input.isim,
       urunTipi: input.urunTipi,
       notlar: input.notlar,
+      fiyatTry: 0,
+      fiyatEur: null,
     });
   }
 

@@ -4,6 +4,7 @@ import type { PfosKategoriKodu } from "@/lib/pfos/core/engine-types";
 import type { ReferansKalem, ReferansProfil } from "./referans-types";
 import { inferUrunTipiFromReferansSatir } from "./infer-urun-tipi";
 import { repairPfosDisplayText } from "@/lib/utf8/repair-turkish-fffd";
+import { sanitizeDavlumbazOlcu } from "../teklif/davlumbaz-olcu";
 import {
   displayBolumBaslik,
   kategoriFromBolumAd,
@@ -145,17 +146,20 @@ export function ekipmanToReferansKalemler(
     const key = referansBolumKeyFromSatir(s);
     if (!bolumOrder.has(key)) bolumOrder.set(key, nextBolum++);
 
+    const urunTipi = urunTipiFromSatir(s);
+    const olcu =
+      s.olcu && s.olcu !== "—"
+        ? sanitizeDavlumbazOlcu(s.ad, s.olcu, urunTipi) ?? s.olcu
+        : null;
+
     return {
       referansPoz: s.poz,
       isim: repairPfosDisplayText(s.ad),
-      urunTipi: urunTipiFromSatir(s),
+      urunTipi,
       kategoriKodu: kategoriFromReferansSatir(s),
       adet: adetSayi(s.adet),
       tip: "zorunlu" as const,
-      notlar:
-        s.olcu && s.olcu !== "—"
-          ? repairPfosDisplayText(`Ölçü: ${s.olcu}`)
-          : undefined,
+      notlar: olcu ? repairPfosDisplayText(`Ölçü: ${olcu}`) : undefined,
       altKategori: altKategoriFromSatir(s),
       referansBolumKey: key,
       referansBolumSira: bolumOrder.get(key)!,

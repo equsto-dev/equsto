@@ -12,8 +12,10 @@ import {
 import {
   displayIsimFromSablon,
   isOzelImalatMotor,
-  OZEL_IMALAT_KAR_ORAN,
 } from "./ozel-imalat";
+import { matchCatalogByIsimOlcu } from "../referans/referans-eslestirme";
+import { isBulasikPfosKalem } from "./bulasik-marka";
+import { matchBulasikByReferans } from "../referans/bulasik-match";
 
 export { URUN_TIPI_ALIASES, normalizeTipKodu, resolveTipKodu };
 
@@ -75,6 +77,7 @@ function catalogProductToEslesmis(p: ZoneCatalogProduct): EslesmisUrun {
         ? Number(p.gaz_kw)
         : null,
     fiyat: Math.round(Number(p.unit_price_try) || 0),
+    fiyatEur: null,
     doviz: "TRY",
     gorselUrl: null,
   };
@@ -106,31 +109,52 @@ export async function matchCatalogFallback(
   urunTipi: string,
   fiyatStratejisi: "ekonomik" | "orta" | "premium" = "ekonomik",
   sablonIsim?: string | null,
+  notlar?: string | null,
 ): Promise<EslesmisUrun | null> {
-  if (isOzelImalatMotor({ sablonIsim, urunTipi })) return null;
+  if (
+    isBulasikPfosKalem({ isim: sablonIsim, urunTipi }) &&
+    sablonIsim?.trim()
+  ) {
+    const bulasik = await matchBulasikByReferans(
+      sablonIsim,
+      notlar,
+      fiyatStratejisi,
+    );
+    if (bulasik) return bulasik;
+  }
+
   const shop = await matchShopCatalog(urunTipi, fiyatStratejisi);
   if (shop) return shop;
+  if (sablonIsim?.trim()) {
+    const bySablon = await matchCatalogByIsimOlcu(
+      sablonIsim,
+      notlar,
+      urunTipi,
+      fiyatStratejisi,
+    );
+    if (bySablon) return bySablon;
+  }
+  if (isOzelImalatMotor({ sablonIsim, urunTipi })) return null;
   return matchZoneCatalog(urunTipi);
 }
 
-/** Portashelf / özel imalat — katalog SKU yok; zone medyan fiyat + Equsto marka */
+/** Portashelf / özel imalat — önce sitedeki katalog fiyatı, yoksa boş */
 export async function matchOzelImalatForSablon(
   isim: string,
   urunTipi: string,
   notlar?: string | null,
 ): Promise<EslesmisUrun> {
-  const zone = await matchZoneCatalog(urunTipi);
-  const zoneTry = Math.round(Number(zone?.fiyat) || 0);
-  const fiyatTry =
-    zoneTry > 0
-      ? Math.round(zoneTry * (1 + OZEL_IMALAT_KAR_ORAN))
-      : 0;
-  return await buildOzelImalatEslesmis({
+  const shop = await matchShopCatalog(urunTipi, "ekonomik");
+  if (shop) return shop;
+
+  const bySablon = await matchCatalogByIsimOlcu(isim, notlar, urunTipi, "ekonomik");
+  if (bySablon) return bySablon;
+
+  return buildOzelImalatEslesmis({
     isim: displayIsimFromSablon(isim) || isim,
     urunTipi,
     notlar,
-    fiyatTry,
-    elektrikGucuKw: zone?.elektrikGucuKw ?? null,
-    gazGucuKw: zone?.gazGucuKw ?? null,
+    fiyatTry: 0,
+    fiyatEur: null,
   });
 }

@@ -213,6 +213,7 @@
     { tip: "caglayan-krizantem", dept: "market-reyon", label: "Krizantem", search: "krizantem" },
     { tip: "soguk-teshir", dept: "market-reyon", label: "Soğuk Teşhir", search: "soguk-teshir|saladbar|salad bar|soğuk büfe|soguk bufe|büfe" },
     { tip: "dondurma-reyon", dept: "market-reyon", label: "Dondurma Reyonu", search: "dondurma-reyon|dondurma|freezer|frozen" },
+    { tip: "balik-sarkuteri", dept: "market-reyon", label: "Balık & Şarküteri", search: "balik-sarkuteri|balık|balik|şarküteri|sarkuteri|sardunya|et|fish" },
     { tip: "camli-dolap", dept: "market-reyon", label: "Camlı Teşhir", search: "camli-dolap|camlı|camli|vitrin|teşhir buzdolab" },
     { tip: "set-ustu", dept: "market-reyon", label: "Set Üstü", search: "set-ustu|set üstü" },
     {
@@ -220,7 +221,7 @@
       dept: "market-reyon",
       label: "Self Servis",
       search:
-        "self-servis|self servis|self-servis-hatti|equsto\\.k|equsto\\.g|ino-|inoksan|i̇noksan|standart servis|gastroline|klasik seri|drop.?in|drop-in|tepsi stand|servis raf|servis tezgah|garson bankosu|kuver|salata bar|e-ss37|be/m037|be1/m037|m037-|mx037|pvk|benmari|bain marie|nötr tezgah|notr tezgah|soğuk servis ünitesi|soguk servis unitesi|soğutmalı teşhir ünitesi|sogutmali teshir unitesi|servis hatlari|servis-hatlari",
+        "self-servis|self servis|self-servis-hatti|equsto\\.k|equsto\\.g|standart servis|gastroline|servis raf|servis tezgah|garson bankosu|kuver|salata bar|e-ss37|be/m037|be1/m037|m037-|mx037|pvk|benmari|bain marie|nötr tezgah|notr tezgah|soğuk servis ünitesi|soguk servis unitesi|soğutmalı teşhir ünitesi|sogutmali teshir unitesi|servis hatlari|servis-hatlari",
     },
     { tip: "icecek-vitrin", dept: "market-reyon", label: "İçecek & Süt", search: "icecek-vitrin|içecek|icecek|süt|sut|drink|milk" },
     { tip: "servis-gerecleri", dept: "set-ustu-mutfak", label: "Servis Gereçleri", search: "servis gereç" },
@@ -268,7 +269,7 @@
   var labelIndex = {};
 
   /** Market reyon PLP — soğutmalı reyonlarda «Sıcak Teşhir» filtresi yok (eski geniş eşleşme SICAKLIK vb.). */
-  var MARKET_REYON_HIDDEN_TIPS = { "sicak-teshir": true, "balik-sarkuteri": true };
+  var MARKET_REYON_HIDDEN_TIPS = { "sicak-teshir": true };
 
   function filterMarketReyonTiles(tiles) {
     return (tiles || []).filter(function (t) {
@@ -522,6 +523,15 @@
     return false;
   }
 
+  /** Öztiryakiler markası — /shop/tezgah vitrini kapalı (Equsto + Electrolux kalır). */
+  function isOztiBrandProduct(u) {
+    if (!u) return false;
+    var id = String((u.raw && u.raw.id) || u.id || "");
+    if (/^oztiryakiler-endustriyel-mutfak__/i.test(id)) return true;
+    var b = String((u.raw && u.raw.brand) || u.b || u.brand || "");
+    return /öztiryak|oztiryak/i.test(b);
+  }
+
   /** Servis rafı aksesuarı — Excel «TEZGAH TİPİ SOĞUTUCULAR» altında yanlış sınıflanmış */
   function isOztiServisRafiProduct(u) {
     var name = productName(u);
@@ -651,6 +661,7 @@
   }
 
   function excludeFromDeptView(dept, u) {
+    if (dept === "tezgah" && isOztiBrandProduct(u)) return true;
     if (dept === "istif" && isYukselIstifPartProduct(u)) return true;
     if (dept === "kahve" && isOztiCayNotKahveProduct(u)) return true;
     if (dept === "sogutma" && isEtKiymaProduct(u)) return true;

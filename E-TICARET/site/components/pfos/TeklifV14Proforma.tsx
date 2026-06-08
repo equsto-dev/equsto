@@ -400,7 +400,14 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
                     {block.bolumBaslik}
                   </td>
                 </tr>
-                {block.satirlar.map((row, i) => (
+                {block.satirlar.map((row, i) => {
+                  const hasKnownProduct =
+                    Boolean(row.stokNo?.trim()) && row.birimSatis != null;
+                  const showSpecRow =
+                    Boolean(row.aciklama) ||
+                    Boolean(row.fotoUrl) ||
+                    hasKnownProduct;
+                  return (
                   <Fragment key={`${row.poz}-${i}`}>
                     <tr>
                       <td style={td}>{row.bolumNo}</td>
@@ -428,7 +435,7 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
                           : "—"}
                       </td>
                     </tr>
-                    {(row.fotoUrl || row.fotoNot || row.aciklama) && (
+                    {showSpecRow && (
                       <tr>
                         <td colSpan={7} style={specTdFoto}>
                           {row.fotoUrl ? (
@@ -444,9 +451,9 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
                                 margin: "0 auto",
                               }}
                             />
-                          ) : (
+                          ) : hasKnownProduct ? (
                             row.fotoNot ?? "📷 Fotoğraf"
-                          )}
+                          ) : null}
                         </td>
                         <td colSpan={5} style={specTd}>
                           <pre style={{ margin: 0, whiteSpace: "pre-wrap" }}>
@@ -456,7 +463,8 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
                       </tr>
                     )}
                   </Fragment>
-                ))}
+                  );
+                })}
               </Fragment>
             ))}
             <tr>

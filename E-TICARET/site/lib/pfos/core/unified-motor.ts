@@ -18,6 +18,7 @@ import type {
 import { KONSEPT_LABELS, type Konsept } from "../schemas/pfos.schema";
 import { finalizeKalemlerForTeklif } from "../teklif/assign-poz";
 import { applyNakliyeMontajToKalemler } from "../teklif/nakliye-montaj";
+import { enrichPfosKalemlerGorsel } from "./katalog-gorsel";
 import type { KategoriKodu } from "../schemas/pfos.schema";
 import { isDynamicKonsept } from "./templates";
 import { matchProductForReferansKalem } from "../referans/match-referans-kalem";
@@ -257,22 +258,24 @@ export async function calculateUnifiedQuote(
     sehir: sehir ?? null,
   });
 
-  const zorunluKalemler = kalemler.filter((k) => k.tip === "zorunlu");
-  const eslesmisZorunlu = zorunluKalemler.filter((k) => k.urun !== null);
-  const eslesmeToplam = kalemler.filter((k) => k.urun !== null).length;
+  const kalemlerWithGorsel = await enrichPfosKalemlerGorsel(kalemler);
 
-  const toplamElektrikKw = kalemler.reduce((sum, k) => {
+  const zorunluKalemler = kalemlerWithGorsel.filter((k) => k.tip === "zorunlu");
+  const eslesmisZorunlu = zorunluKalemler.filter((k) => k.urun !== null);
+  const eslesmeToplam = kalemlerWithGorsel.filter((k) => k.urun !== null).length;
+
+  const toplamElektrikKw = kalemlerWithGorsel.reduce((sum, k) => {
     const kw = k.urun?.elektrikGucuKw ?? k.elektrikGucuKwHint ?? 0;
     return sum + kw * k.adet;
   }, 0);
 
-  const toplamGazKw = kalemler.reduce((sum, k) => {
+  const toplamGazKw = kalemlerWithGorsel.reduce((sum, k) => {
     const kw = k.urun?.gazGucuKw ?? k.gazGucuKwHint ?? 0;
     return sum + kw * k.adet;
   }, 0);
 
   const eksikZorunlu = zorunluKalemler.filter((k) => k.urun === null);
-  const toplamFiyatEslesen = kalemler.reduce((sum, k) => {
+  const toplamFiyatEslesen = kalemlerWithGorsel.reduce((sum, k) => {
     if (!k.urun) return sum;
     return sum + k.urun.fiyat * k.adet;
   }, 0);
@@ -291,7 +294,7 @@ export async function calculateUnifiedQuote(
     uyarilar.push(
       "Ekipman listesi yalnızca kayıtlı referans dosyasından alındı (proje-akis shopTypes / m² bandı).",
     );
-    const fiyatsiz = kalemler.filter(
+    const fiyatsiz = kalemlerWithGorsel.filter(
       (k) => k.tip === "zorunlu" && (!k.urun || k.urun.fiyat <= 0),
     );
     if (fiyatsiz.length > 0) {
@@ -337,7 +340,7 @@ export async function calculateUnifiedQuote(
     m2: req.m2,
     sehir,
     guvenSkoru,
-    kalemler,
+    kalemler: kalemlerWithGorsel,
     bolumM2: bolumM2Effective,
     zonesUsed: zoneKeys,
     teklifLayout:

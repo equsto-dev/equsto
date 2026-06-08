@@ -2,7 +2,7 @@ import {
   loadLegacyCatalogRows,
   type AdminUrunRow,
 } from "@/lib/legacy-catalog";
-import { enrichEslesmisFromKatalogRow } from "../core/catalog-enrich";
+import { katalogRowToEslesmis } from "../core/katalog-row-eslesmis";
 import type { EslesmisUrun, FiyatStratejisi } from "../schemas/pfos.schema";
 
 function norm(s: string): string {
@@ -26,21 +26,7 @@ export function isTasFirinReferans(isim: string): boolean {
 }
 
 function rowToEslesmis(row: AdminUrunRow): EslesmisUrun {
-  const enriched = enrichEslesmisFromKatalogRow(row, {});
-  return {
-    id: row.id,
-    slug: row.id.replace(/^ecom_/, ""),
-    sku: row.sku,
-    ad: row.ad,
-    marka: enriched.marka,
-    model: enriched.model,
-    olcu: enriched.olcu,
-    elektrikGucuKw: row.el_guc,
-    gazGucuKw: row.gaz_guc,
-    fiyat: row.fiyat_tl,
-    doviz: "TRY",
-    gorselUrl: row.gorsel_url,
-  };
+  return katalogRowToEslesmis(row);
 }
 
 /** Taş fırın → UNOX taş tabanlı kombi (1 veya 2 tepsi) */

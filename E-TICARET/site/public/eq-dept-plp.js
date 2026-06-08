@@ -175,18 +175,6 @@
     return g + '×' + d + '×' + y + ' mm';
   }
 
-  /** olculer — genislik×derinlik×yükseklik veya uzunluk×genislik×yükseklik (İnoksan vb.). */
-  function olculerToGdy(o) {
-    if (!o || typeof o !== 'object') return null;
-    var u = Number(o.uzunluk_mm);
-    var g = Number(o.genislik_mm);
-    var d = Number(o.derinlik_mm);
-    var y = Number(o.yukseklik_mm);
-    if (u && g && y) return { g: u, d: g, y: y };
-    if (g && d && y) return { g: g, d: d, y: y };
-    return null;
-  }
-
   /** Tezgah PLP — genişlik cm cinsinden okunur (140×60×85 cm). */
   function dimLabelTezgahFromMm(g, d, y) {
     if (!g || !d || !y) return '';
@@ -356,19 +344,16 @@
       if (tezgahTeknik) return tezgahTeknik;
     }
 
-    var gdy = olculerToGdy(raw.olculer);
-    if (gdy) {
-      var g = gdy.g;
-      var d = gdy.d;
-      var y = gdy.y;
+    var o = raw.olculer;
+    if (o) {
+      var g = Number(o.genislik_mm);
+      var d = Number(o.derinlik_mm);
+      var y = Number(o.yukseklik_mm);
       if (g && d && y) {
         var nameHasDim = /[xX×*]\s*\d/.test(String(raw.name || ''));
         var looksLikeSink = DEPT === 'tezgah' && g < 800;
         if (!nameHasDim && !looksLikeSink) {
-          if (DEPT === 'tezgah' || (raw.olculer && raw.olculer.uzunluk_mm)) {
-            return dimLabelTezgahFromMm(g, d, y);
-          }
-          return dimLabelFromMm(g, d, y);
+          return DEPT === 'tezgah' ? dimLabelTezgahFromMm(g, d, y) : dimLabelFromMm(g, d, y);
         }
       }
     }
