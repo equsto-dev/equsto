@@ -116,6 +116,7 @@
     "catalog:inoksan:sync": "python scripts/sync-inoksan-fiyat-2026.py",
     "catalog:inoksan:web": "node scripts/fetch-inoksan-catalog.mjs",
     "catalog:inoksan:self-servis-images": "node scripts/sync-inoksan-self-servis-images.mjs",
+    "catalog:ozti:tezgah-exclude": "node scripts/exclude-ozti-tezgah.mjs && node scripts/rebuild-ekipmanlar-from-dept.mjs",
     "catalog:inoksan:full": "npm run catalog:inoksan:sync && npm run catalog:inoksan:web",
     "catalog:electrolux:untrack-docs": "node scripts/untrack-electrolux-docs.mjs",
     "catalog:proso:import": "node scripts/import-prosogutma-market-reyon.mjs",

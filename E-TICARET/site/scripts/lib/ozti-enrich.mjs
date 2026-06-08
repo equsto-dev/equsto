@@ -726,6 +726,17 @@ export function detectOztiOemBrand(name, category, kod) {
   return "Öztiryakiler";
 }
 
+/**
+ * Öztiryakiler paslanmaz tezgah vitrini kapalı (/shop/tezgah).
+ * Dolap/set altı → dolap; ara tezgah modülü → set-ustu-mutfak; evye/çalışma hattı → vitrin dışı.
+ */
+export function mapOztiTezgahExcludedDept(hay) {
+  const H = String(hay || "").toLocaleUpperCase("tr");
+  if (/DOLAP|SET\s*ALTI/i.test(H)) return "dolap";
+  if (/ARA\s*TEZGAH|ARATEZGAH/i.test(H)) return "set-ustu-mutfak";
+  return null;
+}
+
 /** Excel kategori → mağaza dept */
 export function mapOztiDept(row, setUstuAllow) {
   const kod = String(row.urun_kodu || row.sku || "").trim();
@@ -778,7 +789,6 @@ export function mapOztiDept(row, setUstuAllow) {
     ],
     [/İSTİF\s*RAF/i, "istif"],
     [/KUZİNE|OCAK|IZGARA|FRİTÖZ|FRITOZ|FIRIN|KAYNATMA|BENMARİ|BENMARI|WOK|İNDÜKSİYON|INDUKSIYON|900\s*SERİ|OPTIMUM|LAVATAŞ|D[OÖ]NER\s*OCA[GĞ]|DONER\s*OCAG|PİŞİRİCİ|PISIRICI/i, "pisirme"],
-    [/TEZGAH|EVYE|EVYELİ|ÇALIŞMA\s*TEZGAH/i, "tezgah"],
     [/ARABA(?!LI)|TAŞIMA|BANKET|SERVİS\s*ÜNİT/i, "tasima"],
     [/DOLAP|RAF(?!.*İSTİF)/i, "dolap"],
     [/HAZIRLIK|KESME\s*TAHTA|MİKSER|DOĞRAYICI|DO[GĞ]RAMA|HAMUR/i, "hazirlik"],
@@ -789,6 +799,9 @@ export function mapOztiDept(row, setUstuAllow) {
 
   for (const [re, dept] of rules) {
     if (re.test(hay)) return dept;
+  }
+  if (/TEZGAH|EVYE|EVYELİ|ÇALIŞMA\s*TEZGAH/i.test(hay)) {
+    return mapOztiTezgahExcludedDept(hay);
   }
   return "set-ustu-mutfak";
 }

@@ -113,6 +113,7 @@ async function main() {
       continue;
     }
     const dept = mapOztiDept(row, allow);
+    if (!dept) continue;
     const kod = row.urun_kodu;
     const cat =
       dept === "kahve"
