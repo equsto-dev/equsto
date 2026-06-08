@@ -326,38 +326,64 @@
   window.__eqProductSlug = window.eqProductSlug;
 
   /** Eski arama / Meilisearch slug → katalog satırı (PDP findRaw). */
+  function eqPdpSlugAliases(pathSlug) {
+    var base = String(pathSlug || "")
+      .toLowerCase()
+      .replace(/_/g, "-")
+      .replace(/-+/g, "-")
+      .replace(/^-+|-+$/g, "");
+    if (!base) return [];
+    var out = [base];
+    function add(s) {
+      var n = String(s || "")
+        .toLowerCase()
+        .replace(/_/g, "-")
+        .replace(/-+/g, "-")
+        .replace(/^-+|-+$/g, "");
+      if (n && out.indexOf(n) < 0) out.push(n);
+    }
+    add(base.replace(/^pimak-/, "equsto-"));
+    add(base.replace(/^equsto-pimak-/, "equsto-"));
+    add(base.replace(/^equsto__equsto-pimak-/, "equsto-"));
+    add(base.replace(/^equsto__equsto-/, "equsto-"));
+    return out;
+  }
+
   window.eqFindCatalogRowByPathSlug = function (all, pathSlug) {
     if (!all || !all.length || !pathSlug) return null;
-      var ps = String(pathSlug).toLowerCase().replace(/_/g, "-");
-    for (var i = 0; i < all.length; i++) {
-      var row = all[i];
-      if (!row) continue;
-      var sku = String(row.sku || row.model || row.urun_kodu || row.stok_no || "").trim();
-      if (sku) {
-        var skuSl = eqFoldTrSlug(sku)
-          .replace(/\./g, "-")
-          .replace(/[^a-z0-9+\-]+/g, "-")
-          .replace(/-+/g, "-")
-          .replace(/^-+|-+$/g, "");
-        if (skuSl && skuSl === ps) return row;
-      }
-      var id = String(row.id || "").trim().toLowerCase();
-      if (id && id === ps) return row;
-      if (id) {
-        var idDash = id.replace(/__/g, "-");
-        if (idDash === ps || ps.endsWith("-" + idDash) || ps.endsWith(idDash)) return row;
-        var tail = id.indexOf("__") >= 0 ? id.split("__").pop() : "";
-        if (tail && (ps.endsWith(tail) || ps.endsWith(tail.replace(/__/g, "-")))) return row;
-      }
-      if (typeof window.eqProductSlug === "function" && window.eqProductSlug(row) === ps) return row;
-      if (
-        typeof window.eqProductSlugTransliterated === "function" &&
-        window.eqProductSlugTransliterated(row) === ps
-      ) {
-        return row;
-      }
-      if (typeof window.eqLegacyMeiliPathSlug === "function" && window.eqLegacyMeiliPathSlug(row) === ps) {
-        return row;
+    var aliases = eqPdpSlugAliases(pathSlug);
+    for (var ai = 0; ai < aliases.length; ai++) {
+      var ps = aliases[ai];
+      for (var i = 0; i < all.length; i++) {
+        var row = all[i];
+        if (!row) continue;
+        var sku = String(row.sku || row.model || row.urun_kodu || row.stok_no || "").trim();
+        if (sku) {
+          var skuSl = eqFoldTrSlug(sku)
+            .replace(/\./g, "-")
+            .replace(/[^a-z0-9+\-]+/g, "-")
+            .replace(/-+/g, "-")
+            .replace(/^-+|-+$/g, "");
+          if (skuSl && skuSl === ps) return row;
+        }
+        var id = String(row.id || "").trim().toLowerCase();
+        if (id && id === ps) return row;
+        if (id) {
+          var idDash = id.replace(/__/g, "-");
+          if (idDash === ps || ps.endsWith("-" + idDash) || ps.endsWith(idDash)) return row;
+          var tail = id.indexOf("__") >= 0 ? id.split("__").pop() : "";
+          if (tail && (ps.endsWith(tail) || ps.endsWith(tail.replace(/__/g, "-")))) return row;
+        }
+        if (typeof window.eqProductSlug === "function" && window.eqProductSlug(row) === ps) return row;
+        if (
+          typeof window.eqProductSlugTransliterated === "function" &&
+          window.eqProductSlugTransliterated(row) === ps
+        ) {
+          return row;
+        }
+        if (typeof window.eqLegacyMeiliPathSlug === "function" && window.eqLegacyMeiliPathSlug(row) === ps) {
+          return row;
+        }
       }
     }
     return null;
@@ -966,7 +992,7 @@
     );
   }
 
-  var EQ_CATALOG_IMG_V = "20260606portabianco-img-fix2";
+  var EQ_CATALOG_IMG_V = "20260608davlumbaz-orta-filtreli-v2";
   var EQ_OZTI_BAD_CAFE_STUB_MD5 = "6696b6d14fecffc05fb1dc0156c9f6b4";
   var EQ_OZTI_BAD_CAFE_STUB_BYTES = 10995;
 

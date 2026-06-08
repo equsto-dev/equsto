@@ -1,4 +1,8 @@
-import { catalogUrlSlug, matchCatalogRowByPathSlug } from "@/lib/catalog-product-slug";
+import {
+  catalogUrlSlug,
+  matchCatalogRowByPathSlug,
+  pdpSlugAliases,
+} from "@/lib/catalog-product-slug";
 import { loadEkipmanlarJson } from "@/lib/catalog-json";
 import { readJsonFile, dataRel } from "@/lib/legacy-data";
 import {
@@ -51,32 +55,34 @@ export async function findProductForPdp(
   pathSlug: string,
 ): Promise<{ row: CatalogRow; dept: ShopDeptSlug } | null> {
   if (!isShopDeptSlug(urlDept) || !pathSlug?.trim()) return null;
-  const slug = decodeURIComponent(pathSlug).toLowerCase();
+  const slugCandidates = pdpSlugAliases(pathSlug);
 
   const fileDept = urlDeptToFileDept(urlDept);
   const deptRows = await readJsonFile<CatalogRow[]>(dataRel("dept", `${fileDept}.json`));
-  if (Array.isArray(deptRows)) {
-    for (const row of deptRows) {
-      if (!row) continue;
-      if (resolveShopDept(row) !== urlDept) continue;
-      if (matchCatalogRowByPathSlug(row, slug)) return { row, dept: urlDept };
-    }
-  }
-
-  try {
-    const raw = await loadEkipmanlarJson();
-    const rows = Array.isArray(raw) ? (raw as CatalogRow[]) : [];
-    for (const row of rows) {
-      if (!row || resolveShopDept(row) !== urlDept) continue;
-      const cid = String(row.id || "").trim().toLowerCase();
-      if (cid && (cid === slug || cid.replace(/__/g, "-") === slug)) {
-        return { row, dept: urlDept };
+  for (const slug of slugCandidates) {
+    if (Array.isArray(deptRows)) {
+      for (const row of deptRows) {
+        if (!row) continue;
+        if (resolveShopDept(row) !== urlDept) continue;
+        if (matchCatalogRowByPathSlug(row, slug)) return { row, dept: urlDept };
       }
-      if (catalogUrlSlug(row).toLowerCase() === slug) return { row, dept: urlDept };
-      if (matchCatalogRowByPathSlug(row, slug)) return { row, dept: urlDept };
     }
-  } catch {
-    /* ekipmanlar.json yoksa dept dosyası yeterli */
+
+    try {
+      const raw = await loadEkipmanlarJson();
+      const rows = Array.isArray(raw) ? (raw as CatalogRow[]) : [];
+      for (const row of rows) {
+        if (!row || resolveShopDept(row) !== urlDept) continue;
+        const cid = String(row.id || "").trim().toLowerCase();
+        if (cid && (cid === slug || cid.replace(/__/g, "-") === slug)) {
+          return { row, dept: urlDept };
+        }
+        if (catalogUrlSlug(row).toLowerCase() === slug) return { row, dept: urlDept };
+        if (matchCatalogRowByPathSlug(row, slug)) return { row, dept: urlDept };
+      }
+    } catch {
+      /* ekipmanlar.json yoksa dept dosyası yeterli */
+    }
   }
 
   return null;

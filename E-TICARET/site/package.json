@@ -107,6 +107,7 @@
     "catalog:electrolux:import": "node scripts/import-electrolux-professional.mjs",
     "catalog:pimak:fiyat": "python scripts/sync-pimak-fiyat-pdf.py",
     "catalog:pimak:import": "node scripts/import-pimak.mjs",
+    "catalog:equsto:p188-197": "node scripts/import-equsto-p188-197.mjs",
     "catalog:electrolux:fiyat": "python scripts/sync-electrolux-fiyat-2026.py",
     "catalog:inoksan:sync": "python scripts/sync-inoksan-fiyat-2026.py",
     "catalog:inoksan:web": "node scripts/fetch-inoksan-catalog.mjs",

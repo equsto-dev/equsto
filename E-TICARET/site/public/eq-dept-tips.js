@@ -158,6 +158,30 @@
     { tip: "taban-rafli", dept: "tezgah", label: "Taban Raflı", search: "taban raf|taban-raf" },
     { tip: "taban-ve-ara-rafli", dept: "tezgah", label: "Taban ve Ara Raflı", search: "taban raf|ara raf" },
     { tip: "dolapli-tezgah", dept: "tezgah", label: "Dolaplı", search: "dolapli|dolaplı|setalti dolap" },
+    {
+      tip: "orta-tip-filtreli-davlumbaz",
+      dept: "davlumbaz",
+      label: "Orta Tip Filtreli Davlumbaz",
+      search: "orta tip filtreli|orta-tip-filtreli|orta tipi filtreli",
+    },
+    {
+      tip: "orta-tip-filtresiz-davlumbaz",
+      dept: "davlumbaz",
+      label: "Orta Tip Filtresiz Davlumbaz",
+      search: "orta tip filtresiz|orta-tip-filtresiz|orta tipi filtresiz",
+    },
+    {
+      tip: "duvar-tipi-filtreli-davlumbaz",
+      dept: "davlumbaz",
+      label: "Duvar Tipi Filtreli Davlumbaz",
+      search: "duvar tip filtreli|duvar-tipi-filtreli|duvar tipi filtreli",
+    },
+    {
+      tip: "duvar-tipi-filtresiz-davlumbaz",
+      dept: "davlumbaz",
+      label: "Duvar Tipi Filtresiz Davlumbaz",
+      search: "duvar tip filtresiz|duvar-tipi-filtresiz|duvar tipi filtresiz",
+    },
     { tip: "proso-tumu", dept: "market-reyon", label: "Proso", search: "proso profesyonel|prosogutma" },
     { tip: "proso-sutluk", dept: "market-reyon", label: "Proso Sütlükler", search: "proso-sutluk|sütlük|sutluk|lion|rhino|falcon|puma|panther" },
     { tip: "proso-kisa-sutluk", dept: "market-reyon", label: "Proso Kısa Sütlük", search: "proso-kisa|kısa sütlük|kisa sutluk" },
@@ -673,6 +697,15 @@
   };
 
   /** Eski build: Türkçe slugify bozuk category → kanonik ?tip= */
+  /** Davlumbaz — Öztiryakiler / Equsto kategori slug → vitrin ?tip= */
+  var DAVLUMBAZ_CAT_ALIASES = {
+    "davlumbazlar-orta-tip-alev-savar-filtreli-davlumbaz": "orta-tip-filtreli-davlumbaz",
+    "davlumbazlar-orta-tip-temiz-hava-uflemeli-filtreli-davlumbaz": "orta-tip-filtreli-davlumbaz",
+    "davlumbazlar-duvar-tip-alev-savar-tip-filtreli-davlumbaz": "duvar-tipi-filtreli-davlumbaz",
+    "davlumbazlar-duvar-tip-temiz-hava-uflemeli-filtreli-davlumbaz": "duvar-tipi-filtreli-davlumbaz",
+    "davlumbazlar-duvar-tip-filtresiz-davlumbaz": "duvar-tipi-filtresiz-davlumbaz",
+  };
+
   /** Öztiryakiler yıkama — Excel kategori slug → ?tip= (makine satırları) */
   var YIKAMA_CAT_ALIASES = {
     "setalti-bulasik": "setalti-bulasik",
@@ -784,6 +817,7 @@
     if (SOGUTMA_CAT_ALIASES[c]) return SOGUTMA_CAT_ALIASES[c];
     if (PISIRME_CAT_ALIASES[c]) return PISIRME_CAT_ALIASES[c];
     if (YIKAMA_CAT_ALIASES[c]) return YIKAMA_CAT_ALIASES[c];
+    if (DAVLUMBAZ_CAT_ALIASES[c]) return DAVLUMBAZ_CAT_ALIASES[c];
     if (SET_USTU_CAT_ALIASES[c]) return SET_USTU_CAT_ALIASES[c];
     return c;
   }
@@ -1287,7 +1321,7 @@
         seen[t.id] = true;
       }
     });
-    if (dept === "kahve" || dept === "yikama" || dept === "tezgah") return out;
+    if (dept === "kahve" || dept === "yikama" || dept === "tezgah" || dept === "davlumbaz") return out;
     if (dept === "market-reyon") return filterMarketReyonTiles(shuffleDeptList(dept, out, "tiles-merge"));
     return shuffleDeptList(dept, out, "tiles-merge");
   }
@@ -1298,7 +1332,7 @@
 
   function tilesFor(dept) {
     var tiles = byDept[dept] || [];
-    if (dept === "kahve" || dept === "yikama" || dept === "tezgah") return tiles.slice();
+    if (dept === "kahve" || dept === "yikama" || dept === "tezgah" || dept === "davlumbaz") return tiles.slice();
     if (dept === "market-reyon") return filterMarketReyonTiles(shuffleDeptList(dept, tiles, "tiles"));
     return shuffleDeptList(dept, tiles, "tiles");
   }
@@ -1354,6 +1388,14 @@
     if (lk.indexOf("kuzine") >= 0) return "kuzineler";
     if (lk.indexOf("piliç") >= 0 || lk.indexOf("pilic") >= 0) return "pilic-cevirme-makineleri";
     if (lk.indexOf("buzdolab") >= 0 && lk.indexOf("tezgah") >= 0) return "tezgah-tipi-buzdolabi";
+    if (lk.indexOf("orta tip") >= 0 || lk.indexOf("orta-tip") >= 0 || lk.indexOf("orta tipi") >= 0) {
+      if (lk.indexOf("filtresiz") >= 0) return "orta-tip-filtresiz-davlumbaz";
+      return "orta-tip-filtreli-davlumbaz";
+    }
+    if (lk.indexOf("duvar tip") >= 0 || lk.indexOf("duvar-tip") >= 0 || lk.indexOf("duvar tipi") >= 0) {
+      if (lk.indexOf("filtresiz") >= 0) return "duvar-tipi-filtresiz-davlumbaz";
+      return "duvar-tipi-filtreli-davlumbaz";
+    }
     if (lk.indexOf("bulaşık") >= 0 || lk.indexOf("bulasik") >= 0) return "bulasik-makineleri";
     if (lk.indexOf("espresso") >= 0) return "espresso-makinesi";
     if (lk.indexOf("filtre kahve") >= 0 || lk.indexOf("fm250") >= 0 || lk.indexOf("ftl") >= 0 || lk.indexOf("bravilor") >= 0)

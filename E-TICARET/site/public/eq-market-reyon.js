@@ -4,7 +4,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260608pimak-dinlendirme-pisirme";
+  var CATALOG_V = "20260608davlumbaz-orta-filtreli-v2";
 
   window.EqMarketReyon = {
     loadCatalog: function () {
