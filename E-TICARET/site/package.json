@@ -65,6 +65,7 @@
     "verify:cdn-asset-urls-kilit": "node scripts/verify-cdn-asset-urls-kilit.mjs",
     "verify:whatsapp-cat-fab-kilit": "node scripts/verify-whatsapp-cat-fab-kilit.mjs",
     "verify:pfos-uye-auth-kilit": "node scripts/verify-pfos-uye-auth-kilit.mjs",
+    "verify:pimak-fiyat-kilit": "node scripts/verify-pimak-fiyat-kilit.mjs",
     "sitemap:build": "node scripts/build-sitemap.mjs",
     "seo:audit": "node scripts/audit-seo-geo.mjs",
     "seo:sitemap": "node scripts/build-sitemap.mjs && node scripts/audit-seo-geo.mjs",

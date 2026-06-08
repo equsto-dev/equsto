@@ -1,0 +1,61 @@
+═══════════════════════════════════════════════════════════════════════════
+KİLİT — Pimak PDF fiyat listesi · Equsto s.188–197 · Pimak marka import
+Onay: 2026-06-08 · Commit referans: c96cd6bd
+PDF: pimak 27-27-030426.pdf (218 sayfa)
+═══════════════════════════════════════════════════════════════════════════
+
+Bu kilitleme, PDF blok parse ile doğrulanmış liste fiyatlarının siteye
+yanlış aktarılmasını engeller. Değiştirmeden önce kullanıcıdan AÇIK ONAY alın.
+
+── Sağlama özeti (onay anı) ───────────────────────────────────────────────
+  • PDF blok parse SKU: 815
+  • pimak-fiyat.json: 1020 satır
+  • Site PDF eşleşen (Equsto + Pimak): 558 ürün
+  • Site ↔ PDF fiyat hatası: 0
+  • sync ↔ PDF fiyat hatası: 0
+
+── Referans fiyatlar (spot-check) ─────────────────────────────────────────
+  PIMAK.16070.04 / EQUSTO.16070.04 → 630 €
+  PIMAK.10070.70 / EQUSTO.10070.70 → 470 €
+  BPD → 1250 € · BPD.A → 1350 €
+  DR04-503030.00 → 80 € · TB04-503030.00 → 160 €
+  BPKM.32S → 3100 € · BPKM.32SCK → 3300 €
+
+── Parser (ZORUNLU — generic kolon birleştirme YASAK) ─────────────────────
+  PFOS/veri/pimak/pimak_pdf_blocks.py     — pair_codes_prices_block
+  PFOS/veri/pimak/parse-pdf-p188-197.py   — parse_page_blocks, BLOCK_PAGES
+  E-TICARET/site/scripts/sync-pimak-fiyat-pdf.py — blok birincil, inline yedek
+
+YASAK (onay olmadan):
+  • s.188–197 / çoklu tablo sayfalarında yalnızca extract_pairs_from_page
+  • import-pimak.mjs içinde manuel liste_fiyati_eur'ün PDF haritasından önce gelmesi
+  • SHOP_ASSET_V bump olmadan dept/ekipmanlar deploy
+
+── Import ─────────────────────────────────────────────────────────────────
+  node scripts/sync-pimak-fiyat-pdf.py --pdf "…\pimak 27-27-030426.pdf"
+  python PFOS/veri/pimak/parse-pdf-p188-197.py
+  node scripts/import-equsto-p188-197.mjs
+  node scripts/import-pimak.mjs   — lookupListe(priceMap) ÖNCE
+
+── Kilitli dosyalar ───────────────────────────────────────────────────────
+  lib/shop/assets.ts                      — SHOP_ASSET_V
+  scripts/data/pimak-fiyat.json
+  scripts/import-pimak.mjs
+  scripts/import-equsto-p188-197.mjs
+  public/data/dept/tezgah.json            — Equsto equsto-katalog-pdf
+  public/data/dept/davlumbaz.json
+  PFOS/veri/pimak/p188-197-products.json
+  PFOS/veri/pimak/pimak-full-pdf-audit.json
+
+── Doğrulama ──────────────────────────────────────────────────────────────
+  npm run verify:pimak-fiyat-kilit
+  cd PFOS/veri/pimak && python audit-pimak-full-pdf.py
+  cd PFOS/veri/pimak && python verify-spot-check.py
+
+── Cache bust ─────────────────────────────────────────────────────────────
+  • SHOP_ASSET_V = 20260608pimak-full-pdf-fiyat
+
+── Cursor ─────────────────────────────────────────────────────────────────
+  .cursor/rules/pimak-fiyat-pdf-kilit.mdc
+
+═══════════════════════════════════════════════════════════════════════════
