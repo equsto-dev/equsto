@@ -1,49 +1,26 @@
+import "server-only";
+
 import fs from "node:fs";
 import path from "node:path";
 import { loadLegacyCatalogRows } from "@/lib/legacy-catalog";
 import type { EslesmisUrun, PFOSKalemi } from "../schemas/pfos.schema";
+import {
+  equstoGorselRelFromSku,
+  normalizePfosGorselUrl,
+  oztiWebImageRelFromSku,
+} from "./katalog-gorsel-url";
+
+export {
+  equstoGorselRelFromSku,
+  normalizePfosGorselUrl,
+  oztiWebImageRelFromSku,
+} from "./katalog-gorsel-url";
 
 function normSku(s: string | null | undefined): string {
   return String(s ?? "")
     .replace(/\s+/g, "")
     .trim()
     .toUpperCase();
-}
-
-/** PFOS teklif / UI — katalog görsel yolu → tarayıcı URL */
-export function normalizePfosGorselUrl(
-  url: string | null | undefined,
-): string | null {
-  const raw = String(url ?? "").trim();
-  if (!raw) return null;
-  if (/^https?:\/\//i.test(raw)) return raw;
-
-  let rel = raw.replace(/^\.\//, "").replace(/^\/+/, "");
-  if (rel.startsWith("data/")) return `/${rel}`;
-  if (rel.startsWith("images/")) return `/data/${rel}`;
-  return raw.startsWith("/") ? raw : `/${raw}`;
-}
-
-/** Öztiryakiler SKU → `images/catalog/ozti/web/ozti-….jpg` (ozti-enrich ile hizalı) */
-export function oztiWebImageRelFromSku(sku: string): string | null {
-  const k = normSku(sku);
-  if (!/^[0-9]{2,4}[A-Z0-9]*\.[A-Z0-9.\-]{2,}$/i.test(k)) return null;
-  const slug =
-    "ozti-" +
-    k
-      .toLowerCase()
-      .replace(/\./g, "-")
-      .replace(/[^a-z0-9-]/g, "");
-  return `images/catalog/ozti/web/${slug}.jpg`;
-}
-
-/** Equsto SKU → `images/catalog/equsto/equsto-…/` veya flat görsel */
-export function equstoGorselRelFromSku(sku: string): string | null {
-  const k = normSku(sku);
-  const m = /^EQUSTO\.(\d{2})(\d{2})(\d{2})\.(\d{2})$/i.exec(k);
-  if (!m) return null;
-  const slug = `equsto-${m[1]}${m[2]}${m[3]}-${m[4]}`.toLowerCase();
-  return `images/catalog/equsto/${slug}`;
 }
 
 let skuGorselIndex: Map<string, string> | null = null;

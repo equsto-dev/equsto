@@ -1,7 +1,7 @@
 import type { AdminUrunRow } from "@/lib/legacy-catalog";
 import type { EslesmisUrun } from "../schemas/pfos.schema";
 import { enrichEslesmisFromKatalogRow } from "./catalog-enrich";
-import { normalizePfosGorselUrl } from "./katalog-gorsel";
+import { normalizePfosGorselUrl } from "./katalog-gorsel-url";
 import { equstoSatisEurFromRow } from "./shop-catalog-match";
 
 type EnrichOpts = Parameters<typeof enrichEslesmisFromKatalogRow>[1];

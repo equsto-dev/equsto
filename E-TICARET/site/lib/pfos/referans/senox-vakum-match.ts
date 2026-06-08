@@ -6,7 +6,7 @@ import {
 import type { EslesmisUrun } from "../schemas/pfos.schema";
 import { katalogRowToEslesmis } from "../core/katalog-row-eslesmis";
 import { equstoSatisEurFromRow } from "../core/shop-catalog-match";
-import { normalizePfosGorselUrl } from "../core/katalog-gorsel";
+import { normalizePfosGorselUrl } from "../core/katalog-gorsel-url";
 import {
   SENOX_CATALOG_REL,
   SENOX_MARKA,

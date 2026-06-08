@@ -4,6 +4,7 @@ import {
   type AdminUrunRow,
 } from "@/lib/legacy-catalog";
 import { katalogRowToEslesmis } from "../core/katalog-row-eslesmis";
+import { OZEL_IMALAT_MARKA } from "../core/ozel-imalat";
 import { extractOlcuFromNotlar } from "./yer-izgara-match";
 
 function norm(s: string): string {
@@ -88,7 +89,7 @@ export async function matchKomurluIzgaraByReferans(
     id: "pfos-komurlu-izgara-bos",
     sku: "",
     ad: isim.trim(),
-    marka: null,
+    marka: OZEL_IMALAT_MARKA,
     model: null,
     olcu: olcuText || null,
     elektrikGucuKw: null,
