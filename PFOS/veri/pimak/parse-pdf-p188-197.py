@@ -46,6 +46,18 @@ def is_code(line: str) -> bool:
     return _orig_is_code(line)
 
 
+_PLACEHOLDER_CODE = re.compile(r"^M0\d{2}T?$", re.I)
+
+
+def is_product_code(line: str) -> bool:
+    s = norm_kod(line)
+    if _PLACEHOLDER_CODE.match(s):
+        return False
+    if s in {"KOD", "CODE"}:
+        return False
+    return is_code(line)
+
+
 mod.is_code = is_code
 
 
@@ -314,16 +326,60 @@ def parse_page_195(body: str, manifest: dict) -> list[dict]:
     return products
 
 
-def parse_page_188(body: str, manifest: dict, families_seen: dict) -> list[dict]:
-    """s.188 — üç tablo ( .00 / .08 / .04 ); fiyat kolonu kod bloğundan önce gelir."""
+BLOCK_PAGES = frozenset(range(188, 195)) | {197}
+
+
+def _dims_from_block(lines: list[str], fiyat_idx: int) -> list[tuple[int, int, int]]:
+    dims: list[tuple[int, int, int]] = []
+    k = fiyat_idx - 1
+    while k >= 0:
+        if lines[k] in {"Dimensions (mm)", "Ebat (mm)", "Dim. (mm)"}:
+            break
+        s = lines[k].replace(" ", "").replace("*", "x")
+        m = DIM_LINE.match(s)
+        if m:
+            dims.insert(0, (int(m.group(1)), int(m.group(2)), int(m.group(3))))
+        k -= 1
+    return dims
+
+
+def _decode_pimak_compact(code: str, dims: list[tuple[int, int, int]], idx: int) -> tuple[str, dict | None]:
+    """PIMAK.2810060 gibi noktasız kodlar veya blok ebat listesi."""
+    dim, olcu = decode_dims_from_code(code)
+    if dim:
+        return dim, olcu
+    m = re.match(r"^PIMAK\.(\d{7})$", code, re.I)
+    if m:
+        mid = m.group(1)
+        w, d, h = int(mid[0:2]) * 100, int(mid[2:4]) * 100, int(mid[4:7])
+        dim = f"{w}x{d}x{h}"
+        return dim, {
+            "olcu_etiket": f"{w}×{d}×{h} mm",
+            "olculer": {"genislik_mm": w, "derinlik_mm": d, "yukseklik_mm": h},
+        }
+    if idx < len(dims):
+        w, d, h = dims[idx]
+        dim = f"{w}x{d}x{h}"
+        return dim, {
+            "olcu_etiket": f"{w}×{d}×{h} mm",
+            "olculer": {"genislik_mm": w, "derinlik_mm": d, "yukseklik_mm": h},
+        }
+    return "", None
+
+
+def parse_page_blocks(
+    page: int, body: str, manifest: dict, families_seen: dict
+) -> list[dict]:
+    """Çoklu tablo sayfaları — her Ürün Kodu bloğu kendi Fiyat kolonu ile eşleşir."""
     lines = [ln.strip() for ln in body.splitlines() if ln.strip()]
+    features = collect_features(lines)
     anchors = [i for i, ln in enumerate(lines) if ln in {"Ürün Kodu", "Product Code"}]
     products: list[dict] = []
 
     for anchor in anchors:
         codes: list[str] = []
         j = anchor - 1
-        while j >= 0 and is_code(lines[j]):
+        while j >= 0 and is_product_code(lines[j]):
             codes.insert(0, norm_kod(lines[j]))
             j -= 1
         if not codes:
@@ -339,23 +395,28 @@ def parse_page_188(body: str, manifest: dict, families_seen: dict) -> list[dict]
 
         prices: list[float] = []
         k = fiyat_idx - 1
-        dim_stop = None
         while k >= 0:
-            if lines[k] in {"Dimensions (mm)", "Ebat (mm)"}:
-                dim_stop = k
+            if lines[k] in {"Dimensions (mm)", "Ebat (mm)", "Dim. (mm)"}:
+                break
+            if lines[k] in {"Fiyat", "Price"}:
                 break
             pm = PRICE_LINE.match(lines[k])
             if pm:
                 prices.insert(0, mod.parse_eur(pm.group(1)))
             k -= 1
 
+        if not prices:
+            continue
+
         if len(prices) != len(codes):
             print(
-                f"[warn] p188 blok: kod={len(codes)} fiyat={len(prices)} "
+                f"[warn] p{page} blok: kod={len(codes)} fiyat={len(prices)} "
                 f"({codes[0]}…{codes[-1]})"
             )
             n = min(len(codes), len(prices))
             codes, prices = codes[:n], prices[:n]
+
+        block_dims = _dims_from_block(lines, fiyat_idx)
 
         family = "Çalışma Tezgahı"
         k = fiyat_idx - 1
@@ -364,11 +425,11 @@ def parse_page_188(body: str, manifest: dict, families_seen: dict) -> list[dict]
             if pm:
                 k -= 1
                 continue
-            if lines[k] in {"Dimensions (mm)", "Ebat (mm)", "Fiyat", "Price"}:
+            if lines[k] in {"Dimensions (mm)", "Ebat (mm)", "Dim. (mm)", "Fiyat", "Price"}:
                 k -= 1
                 continue
             s = normalize_ligatures(lines[k])
-            if "|" in s and re.search(r"[ğüşıöçĞÜŞİÖÇ]", s):
+            if "|" in s and re.search(r"[ğüşıöçĞÜŞİÖÇa-zA-Z]", s):
                 family = s.split("|")[0].strip()
                 break
             if FAMILY_HINT.search(s) and len(s) > 12 and re.search(r"[ğüşıöçĞÜŞİÖÇ]", s):
@@ -376,30 +437,55 @@ def parse_page_188(body: str, manifest: dict, families_seen: dict) -> list[dict]
                 break
             k -= 1
 
-        fam_key = (188, family[:40])
+        fam_key = (page, family[:40])
         if fam_key not in families_seen:
             families_seen[fam_key] = len(families_seen)
         fidx = families_seen[fam_key]
 
-        for code, price in zip(codes, prices):
+        for i, (code, price) in enumerate(zip(codes, prices)):
             code_n = norm_kod(code)
-            fam = family_for_code(188, code_n, family)
-            dim, olcu = decode_dims_from_code(code_n)
-            name = fam
+            fam = family_for_code(page, code_n, family)
+            dim, olcu = _decode_pimak_compact(code_n, block_dims, i)
+            if not dim:
+                for ln in lines[max(0, anchor - 40) : anchor + 5]:
+                    s = ln.replace(" ", "").replace("*", "x")
+                    m = DIM_LINE.match(s)
+                    if m:
+                        w, d, h = int(m.group(1)), int(m.group(2)), int(m.group(3))
+                        dim = f"{w}x{d}x{h}"
+                        olcu = {
+                            "olcu_etiket": f"{w}×{d}×{h} mm",
+                            "olculer": {
+                                "genislik_mm": w,
+                                "derinlik_mm": d,
+                                "yukseklik_mm": h,
+                            },
+                        }
+                        break
+            if page == 196 and dim:
+                parts = dim.split("x")
+                if len(parts) == 3:
+                    w, d = int(parts[0]), int(parts[1])
+                    dim = f"{w}x{d}x500"
+                    olcu = {
+                        "olcu_etiket": f"{w}×{d}×500 mm",
+                        "olculer": {"genislik_mm": w, "derinlik_mm": d, "yukseklik_mm": 500},
+                    }
+            name = normalize_ligatures(fam.split("|")[0].strip())
             if dim:
-                name = f"{fam} {dim.replace('x', '×')} mm"
+                name = f"{name} {dim.replace('x', '×')} mm"
             row = {
-                "urun_kodu": f"PIMAK.{code_n.split('.', 1)[1]}" if "." in code_n else code_n,
+                "urun_kodu": code_n,
                 "slug": slugify(f"equsto-{code_n}"),
                 "baslik": name,
                 "aile": fam,
                 "aile_slug": slugify(fam),
                 "category": map_category(fam, code_n),
-                "pdf_page": 188,
+                "pdf_page": page,
                 "liste_fiyati_eur": price,
                 "ebat_mm": dim or "",
-                "temel_ozellikler": [],
-                "gorsel_yerel": pick_image(188, fam, fidx, manifest),
+                "temel_ozellikler": features,
+                "gorsel_yerel": pick_image(page, fam, fidx, manifest),
             }
             if olcu:
                 row.update(olcu)
@@ -527,8 +613,8 @@ def main():
             continue
         if page == 195:
             parsed = parse_page_195(body, manifest)
-        elif page == 188:
-            parsed = parse_page_188(body, manifest, families_seen)
+        elif page in BLOCK_PAGES:
+            parsed = parse_page_blocks(page, body, manifest, families_seen)
         else:
             parsed = parse_page(page, body, families_seen, manifest)
         for p in parsed:

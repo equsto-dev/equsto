@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-06-08T11:59:10.242Z",
+  "updatedAt": "2026-06-08T18:09:33.403Z",
   "bucket": "equsto-assets",
   "region": "eu-central-1",
-  "totalFiles": 19032,
-  "totalMb": 6960.1,
+  "totalFiles": 20076,
+  "totalMb": 7001.5,
   "dirs": [
     {
       "prefix": "images/",
