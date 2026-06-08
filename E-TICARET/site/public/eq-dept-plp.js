@@ -32,7 +32,7 @@
   }
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260608fix3-plp-gorsel-fiyat';
+  var CATALOG_V = '20260608pimak-dinlendirme-pisirme';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   /* Next.js URL slug → katalog dept id (data/dept/*.json) */
   if (DEPT === 'market-reyonlari') DEPT = 'market-reyon';
@@ -947,7 +947,7 @@
     render();
   }
 
-  var MARKET_REYON_JSON_V = '20260608pimak-hazirlik-p100-130';
+  var MARKET_REYON_JSON_V = '20260608pimak-dinlendirme-pisirme';
 
   function fetchMarketReyonDeptJson() {
     return fetch('/data/dept/market-reyon.json?v=' + MARKET_REYON_JSON_V, {

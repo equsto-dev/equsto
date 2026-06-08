@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-08T11:45:55.092Z",
+  "generated": "2026-06-08T12:09:11.305Z",
   "brand": "Pimak",
   "dryRun": false,
   "kur_eur_try": 53.5921,
@@ -8,12 +8,12 @@
   "odeme_carpani": 0.53,
   "equsto_kar_oran": 0.05,
   "buckets": {
-    "hazirlik": 107,
-    "pisirme": 27,
+    "pisirme": 33,
+    "hazirlik": 103,
     "selfservis": 24,
     "tepsi": 30,
     "kafeterya": 20,
-    "pilic": 44,
+    "pilic": 42,
     "unseker": 4
   },
   "imported": 256,
@@ -25,8 +25,8 @@
   "skipped_no_detail": 0,
   "manuel": 16,
   "depts": {
-    "hazirlik": 107,
-    "pisirme": 71,
+    "pisirme": 75,
+    "hazirlik": 103,
     "market-reyon": 24,
     "araba": 34,
     "set-ustu-mutfak": 20

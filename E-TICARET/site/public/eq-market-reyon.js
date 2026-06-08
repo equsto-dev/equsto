@@ -4,7 +4,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260608pimak-hazirlik-p100-130";
+  var CATALOG_V = "20260608pimak-dinlendirme-pisirme";
 
   window.EqMarketReyon = {
     loadCatalog: function () {

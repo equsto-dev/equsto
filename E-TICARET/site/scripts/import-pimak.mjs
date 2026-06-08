@@ -197,15 +197,30 @@ function isServisTeshirLine(d) {
   return false;
 }
 
+function isPatatesDinlendirme(d) {
+  const hay = foldTr([d.baslik, d.slug, d.urunKodu, d.metaAciklama].join(" "));
+  if (/patates\s*dinlendir|dinlendirme\s*unitesi|dinlendirme\s*ünitesi/i.test(hay)) return true;
+  if (/dinlendirme-unitesi|patates-dinlendirme/i.test(String(d.slug || ""))) return true;
+  const kod = normKod(d.urunKodu || "");
+  if (/^M0168$|^70S-M173$|^70SD-M173$|^90SD-M168E$/i.test(kod)) return true;
+  return false;
+}
+
 function isHazirlikEquipment(d) {
+  if (isPatatesDinlendirme(d)) return false;
   const kod = normKod(d.urunKodu || "");
   const ascii = asciiKod(d.urunKodu || "");
   for (const re of HAZIRLIK_KOD_RE) {
     if (re.test(kod) || re.test(ascii)) return true;
   }
   const hay = foldTr([d.baslik, d.slug, d.metaAciklama].join(" "));
-  if (/kiyma|kıyma|humus|humus|hamur|kofte|köfte|kemik test|sebze dog|patates|soğan|sogan|ekmek dilim/i.test(hay))
+  if (
+    /kiyma|kıyma|humus|humus|hamur|kofte|köfte|kemik test|sebze dog|patates\s*dog|patates\s*soy|soğan|sogan|ekmek dilim/i.test(
+      hay,
+    )
+  )
     return true;
+  if (/patates/i.test(hay) && !/dinlendir/i.test(hay)) return true;
   return false;
 }
 
@@ -230,6 +245,8 @@ function classifyBucket(d) {
   const kod = String(d.urunKodu || "");
 
   if (isServisTeshirLine(d)) return "selfservis";
+
+  if (isPatatesDinlendirme(d)) return "pisirme";
 
   if (PILIC_KAT.has(kat) || (/pilic|pilic/.test(hay) && !/pizza|lahmacun/.test(hay)))
     return "pilic";
@@ -268,6 +285,7 @@ function mapCategory(d, bucket) {
   if (bucket === "pisirme") {
     const hay = foldTr([d.baslik, d.slug, d.urunKodu].join(" "));
     const kod = normKod(d.urunKodu || "");
+    if (isPatatesDinlendirme(d)) return "patates-dinlendirmeler";
     if (/makarna\s*ha[sş]lama|makarna\s*pis/i.test(hay) || kod === "M066" || /M184/i.test(kod))
       return "makarna-haslama-makinesi";
     if (/konveksiyon/i.test(hay) || /^DKFE/i.test(kod)) return "konveksiyonlu-firin";
