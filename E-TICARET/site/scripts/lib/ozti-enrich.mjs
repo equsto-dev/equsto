@@ -1012,6 +1012,8 @@ export const OZTI_AX_PROXY = {
   "9805.00IMD.00": "9805.IM45N.EHC",
   /** OTKFGE 12090 — ax-images yok; G/E kardeş SKU fotoğrafı */
   "7890.12901.51": "7890.12901.55",
+  "7890.12908.52": "7890.12908.54",
+  "7865.N1.12708.12L": "7865.N1.12908.10",
 };
 
 export function oztiAxProxyKod(kod) {

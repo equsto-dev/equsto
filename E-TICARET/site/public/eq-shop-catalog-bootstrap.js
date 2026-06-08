@@ -6,7 +6,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260608pimak-hazirlik-p100-130";
+  var CATALOG_V = "20260608fix3-plp-gorsel-fiyat";
   var __fullMem = null;
   var __fullInflight = null;
   var __deptMem = Object.create(null);

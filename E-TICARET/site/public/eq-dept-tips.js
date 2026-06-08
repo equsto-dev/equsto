@@ -6,9 +6,7 @@
   "use strict";
 
   var RAW = [
-    { tip: "firinlar", dept: "pisirme", label: "Fırınlar", search: "fırın|firin|konveksiyon|kombi|kombili|combi|pizza|mayalama|mikrodalga|microwave|pastane fırın" },
-    { tip: "kombi-firin", dept: "pisirme", label: "Kombi Fırınlar", search: "kombi|kombili|icombi|combi" },
-    { tip: "konveksiyonlu-firin", dept: "pisirme", label: "Konveksiyonlu Fırınlar", search: "konveksiyon|konveksiyonel" },
+    { tip: "firinlar", dept: "pisirme", label: "Fırınlar", search: "fırın|firin|konveksiyon|konveksiyonel|kombi|kombili|icombi|combi|pizza|mayalama|mikrodalga|microwave|pastane fırın" },
     { tip: "jet-mikrodalga-firin", dept: "pisirme", label: "Jet ve Mikrodalga Fırınlar", search: "mikrodalga|jet|microwave" },
     { tip: "komurlu-firin", dept: "pisirme", label: "Kömürlü Fırınlar", search: "kömür|komur|taş fırın|tas firin|lahmacun|pide" },
     { tip: "pizza-firinlari", dept: "pisirme", label: "Pizza Fırınları", search: "pizza|kubbe|taş taban" },
@@ -655,9 +653,16 @@
 
   /** Pişirme — JSON category slug → ?tip= */
   var PISIRME_CAT_ALIASES = {
-    "rational-combi-master-plus": "kombi-firin",
-    "rational-self-cooking-center": "kombi-firin",
-    "rational-combi-pro": "kombi-firin",
+    "rational-combi-master-plus": "firinlar",
+    "rational-self-cooking-center": "firinlar",
+    "rational-combi-pro": "firinlar",
+    "kombi-firin": "firinlar",
+    "kombi-firinlar": "firinlar",
+    "konveksiyonlu-firin": "firinlar",
+    "konveksiyonel-firinlar": "firinlar",
+    "gazli-firinli-kuzine": "kuzineler",
+    "gazli-firinli-kuziler": "kuzineler",
+    "gazli-firinli-ve-setustu-gazli-ocaklar": "kuzineler",
   };
 
   /** Öztiryakiler soğutma — Excel kategori slug → ?tip= (buz makinesi satırları) */
@@ -867,6 +872,20 @@
     return /ocak|kuzine|wok|indüksiyon|induksiyon|set üstü ocak|setustu ocak|döner ocak|doner ocak/.test(hay);
   }
 
+  /** Fırınlı kuzine — Fırınlar filtresinde değil, Kuzineler altında. */
+  function isFirinliKuzineProduct(u) {
+    var rawCat = (u && u.c) || (u && u.category) || (u && u.raw && u.raw.category) || "";
+    if (
+      rawCat === "gazli-firinli-kuzine" ||
+      rawCat === "gazli-firinli-kuziler" ||
+      rawCat === "gazli-firinli-ve-setustu-gazli-ocaklar"
+    ) {
+      return true;
+    }
+    var hay = productHaystack(u);
+    return /fırınlı\s*kuzine|firinli\s*kuzine|kuzine\s*fırınlı|kuzine\s*firinli/i.test(hay);
+  }
+
   /** Kombi firin — konveksiyonlu kelimesi yuzunden yanlis tile'a dusmesin (iCombi vb.). */
   function isKombiFirinProduct(u) {
     var cat = productCategorySlug(u);
@@ -931,7 +950,7 @@
       return tile.id === cat;
     }
 
-    if (tile.id === "konveksiyonlu-firin" && isKombiFirinProduct(u)) return false;
+    if (tile.id === "firinlar" && isFirinliKuzineProduct(u)) return false;
 
     if (tile.id && cat === tile.id) return true;
     if (tile.id === "self-servis" && cat === "self-servis-hatti") return true;
@@ -1328,6 +1347,7 @@
       if (!/\b(aei|agi|ali|aaie|aaig|agl|aegl)\b/.test(lk)) return "";
       return "sanayi-tipi-izgaralar";
     }
+    if (/fırınlı\s*kuzine|firinli\s*kuzine|kuzine\s*fırınlı|kuzine\s*firinli/.test(lk)) return "kuzineler";
     if (lk.indexOf("fırın") >= 0 || lk.indexOf("firin") >= 0) return "firinlar";
     if (lk.indexOf("ocak") >= 0 && lk.indexOf("döner") < 0 && lk.indexOf("doner") < 0) return "sanayi-ocaklari";
     if (lk.indexOf("fritöz") >= 0 || lk.indexOf("fritoz") >= 0) return "fritozler";
@@ -1424,6 +1444,10 @@
   var TIP_PARAM_ALIASES = {
     "set-ustu-mutfak": {
       "servis-gere-leri": "servis-gerecleri",
+    },
+    pisirme: {
+      "kombi-firin": "firinlar",
+      "konveksiyonlu-firin": "firinlar",
     },
     sogutma: {
       tezgah_tipi_buzdolabi: "tezgah-tipi-buzdolabi",
