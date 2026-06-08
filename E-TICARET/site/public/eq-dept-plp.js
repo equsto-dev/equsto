@@ -670,6 +670,17 @@
     renderSelectedChips();
   }
 
+  function plpCardBrand(u) {
+    if (window.EqDeptCmFacets && typeof window.EqDeptCmFacets.plpCardBrandLabel === 'function') {
+      return window.EqDeptCmFacets.plpCardBrandLabel(u);
+    }
+    var raw = u && u.raw;
+    var b = String((u && u.b) || (raw && raw.brand) || '').trim();
+    var oem = raw && String(raw.oem_brand || '').trim();
+    if (oem && /öztiryakiler|oztiryakiler/i.test(b)) return '';
+    return b;
+  }
+
   function renderProductCard(u) {
     var href = productUrl(u);
     var catalogRel =
@@ -708,6 +719,12 @@
       '">' +
       esc(displayProductName(u)) +
       '</a>' +
+      (function () {
+        var brandLab = plpCardBrand(u);
+        return brandLab
+          ? '<div class="eq-dept-plp-card__brand">' + esc(brandLab) + '</div>'
+          : '';
+      })() +
       (function () {
         var dim = formatOlculerLine(u.raw);
         return dim ? '<div class="eq-dept-plp-card__dims">' + esc(dim) + '</div>' : '';

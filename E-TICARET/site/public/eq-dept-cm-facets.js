@@ -324,6 +324,26 @@
     return facetBrandKey(resolveFacetBrand(u.b, u.n, sku, oem));
   }
 
+  /** PLP kart marka satırı — bayi adını (Öztiryakiler Endüstriyel Mutfak) OEM ürünlerde gösterme. */
+  function plpCardBrandLabel(u) {
+    if (!u) return '';
+    var raw = u.raw || u;
+    var b = String(u.b || u.brand || raw.brand || '').trim();
+    var n = String(u.n || u.name || raw.name || '').trim();
+    var sku = String(raw.sku || raw.urun_kodu || raw.model || u.sku || '').trim();
+    var oem = String(raw.oem_brand || u.oem_brand || '').trim();
+    var fb = String(u.fb || '').trim();
+    if (!b && !oem && !fb) return '';
+
+    if (OEM_RESELLER.test(lc(b))) {
+      if (oem) return '';
+      var resolved = fb || resolveFacetBrand(b, n, sku, oem);
+      if (resolved && facetBrandKey(resolved) !== 'Öztiryakiler') return '';
+      return 'Öztiryakiler';
+    }
+    return canonicalFacetBrand(b) || b;
+  }
+
   function matchEnergy(u, energyId) {
     var row = null;
     for (var i = 0; i < ENERGY_TYPES.length; i++) {
@@ -738,5 +758,6 @@
     facetTileDisplayLabel: facetTileDisplayLabel,
     canonicalFacetBrand: canonicalFacetBrand,
     productBrand: productBrand,
+    plpCardBrandLabel: plpCardBrandLabel,
   };
 })(typeof window !== 'undefined' ? window : global);

@@ -202,9 +202,15 @@
         '<span class="eq-srch-panel__name">' +
         esc(h.name || "") +
         "</span>" +
-        (h.brand
-          ? '<span class="eq-srch-panel__brand">' + esc(h.brand) + "</span>"
-          : "") +
+        (function () {
+          var brandLab =
+            window.EqDeptCmFacets && typeof window.EqDeptCmFacets.plpCardBrandLabel === "function"
+              ? window.EqDeptCmFacets.plpCardBrandLabel({ brand: h.brand, b: h.brand, name: h.name, n: h.name, raw: h })
+              : String(h.brand || "").trim();
+          return brandLab
+            ? '<span class="eq-srch-panel__brand">' + esc(brandLab) + "</span>"
+            : "";
+        })() +
         "</span></a>";
     }
     var n = total != null ? total : hits.length;
