@@ -80,6 +80,7 @@ function writeProductChunks(prefix, productUrls, indexFiles) {
     chunks.push(productUrls.slice(i, i + PRODUCT_CHUNK));
   }
   if (!chunks.length) chunks.push([]);
+  removeStaleProductChunks(prefix, chunks.length);
   chunks.forEach((chunk, i) => {
     const name = `${prefix}-${String(i + 1).padStart(2, "0")}.xml`;
     writeUrlset(path.join(PUBLIC, name), chunk);
@@ -236,9 +237,12 @@ function patchSitemapPages() {
   fs.writeFileSync(pagesPath, xml, "utf8");
 }
 
-function removeLegacyProductSitemaps() {
+function removeStaleProductChunks(prefix, chunkCount) {
   for (const f of fs.readdirSync(PUBLIC)) {
-    if (/^sitemap-products-\d+\.xml$/i.test(f)) {
+    const m = new RegExp(`^${prefix}-(\\d{2})\\.xml$`).exec(f);
+    if (!m) continue;
+    const idx = Number(m[1]);
+    if (idx > chunkCount) {
       fs.unlinkSync(path.join(PUBLIC, f));
     }
   }
@@ -266,7 +270,11 @@ function main() {
   writeUrlset(path.join(PUBLIC, "sitemap-besos.xml"), buildBesos());
   indexFiles.push("sitemap-besos.xml");
 
-  removeLegacyProductSitemaps();
+  for (const f of fs.readdirSync(PUBLIC)) {
+    if (/^sitemap-products-\d+\.xml$/i.test(f)) {
+      fs.unlinkSync(path.join(PUBLIC, f));
+    }
+  }
 
   const productUrlsTr = buildProducts(rows, "");
   const productCountTr = writeProductChunks("sitemap-shop-products", productUrlsTr, indexFiles);
