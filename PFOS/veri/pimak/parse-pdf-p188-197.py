@@ -314,6 +314,100 @@ def parse_page_195(body: str, manifest: dict) -> list[dict]:
     return products
 
 
+def parse_page_188(body: str, manifest: dict, families_seen: dict) -> list[dict]:
+    """s.188 — üç tablo ( .00 / .08 / .04 ); fiyat kolonu kod bloğundan önce gelir."""
+    lines = [ln.strip() for ln in body.splitlines() if ln.strip()]
+    anchors = [i for i, ln in enumerate(lines) if ln in {"Ürün Kodu", "Product Code"}]
+    products: list[dict] = []
+
+    for anchor in anchors:
+        codes: list[str] = []
+        j = anchor - 1
+        while j >= 0 and is_code(lines[j]):
+            codes.insert(0, norm_kod(lines[j]))
+            j -= 1
+        if not codes:
+            continue
+
+        fiyat_idx = None
+        for k in range(anchor - 1, -1, -1):
+            if lines[k] == "Fiyat":
+                fiyat_idx = k
+                break
+        if fiyat_idx is None:
+            continue
+
+        prices: list[float] = []
+        k = fiyat_idx - 1
+        dim_stop = None
+        while k >= 0:
+            if lines[k] in {"Dimensions (mm)", "Ebat (mm)"}:
+                dim_stop = k
+                break
+            pm = PRICE_LINE.match(lines[k])
+            if pm:
+                prices.insert(0, mod.parse_eur(pm.group(1)))
+            k -= 1
+
+        if len(prices) != len(codes):
+            print(
+                f"[warn] p188 blok: kod={len(codes)} fiyat={len(prices)} "
+                f"({codes[0]}…{codes[-1]})"
+            )
+            n = min(len(codes), len(prices))
+            codes, prices = codes[:n], prices[:n]
+
+        family = "Çalışma Tezgahı"
+        k = fiyat_idx - 1
+        while k >= 0:
+            pm = PRICE_LINE.match(lines[k])
+            if pm:
+                k -= 1
+                continue
+            if lines[k] in {"Dimensions (mm)", "Ebat (mm)", "Fiyat", "Price"}:
+                k -= 1
+                continue
+            s = normalize_ligatures(lines[k])
+            if "|" in s and re.search(r"[ğüşıöçĞÜŞİÖÇ]", s):
+                family = s.split("|")[0].strip()
+                break
+            if FAMILY_HINT.search(s) and len(s) > 12 and re.search(r"[ğüşıöçĞÜŞİÖÇ]", s):
+                family = s
+                break
+            k -= 1
+
+        fam_key = (188, family[:40])
+        if fam_key not in families_seen:
+            families_seen[fam_key] = len(families_seen)
+        fidx = families_seen[fam_key]
+
+        for code, price in zip(codes, prices):
+            code_n = norm_kod(code)
+            fam = family_for_code(188, code_n, family)
+            dim, olcu = decode_dims_from_code(code_n)
+            name = fam
+            if dim:
+                name = f"{fam} {dim.replace('x', '×')} mm"
+            row = {
+                "urun_kodu": f"PIMAK.{code_n.split('.', 1)[1]}" if "." in code_n else code_n,
+                "slug": slugify(f"equsto-{code_n}"),
+                "baslik": name,
+                "aile": fam,
+                "aile_slug": slugify(fam),
+                "category": map_category(fam, code_n),
+                "pdf_page": 188,
+                "liste_fiyati_eur": price,
+                "ebat_mm": dim or "",
+                "temel_ozellikler": [],
+                "gorsel_yerel": pick_image(188, fam, fidx, manifest),
+            }
+            if olcu:
+                row.update(olcu)
+            products.append(row)
+
+    return products
+
+
 def parse_page(page: int, body: str, families_seen: dict, manifest: dict) -> list[dict]:
     lines = [ln.rstrip() for ln in body.splitlines()]
     features = collect_features(lines)
@@ -433,6 +527,8 @@ def main():
             continue
         if page == 195:
             parsed = parse_page_195(body, manifest)
+        elif page == 188:
+            parsed = parse_page_188(body, manifest, families_seen)
         else:
             parsed = parse_page(page, body, families_seen, manifest)
         for p in parsed:
