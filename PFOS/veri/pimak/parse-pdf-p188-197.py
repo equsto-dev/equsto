@@ -10,6 +10,8 @@ ROOT = Path(__file__).resolve().parent
 SITE = ROOT.parent.parent.parent / "E-TICARET" / "site"
 import importlib.util
 
+from pimak_pdf_blocks import pair_codes_prices_block, collect_codes_before_anchor
+
 spec = importlib.util.spec_from_file_location(
     "sync_pimak_fiyat_pdf", SITE / "scripts" / "sync-pimak-fiyat-pdf.py"
 )
@@ -377,35 +379,12 @@ def parse_page_blocks(
     products: list[dict] = []
 
     for anchor in anchors:
-        codes: list[str] = []
-        j = anchor - 1
-        while j >= 0 and is_product_code(lines[j]):
-            codes.insert(0, norm_kod(lines[j]))
-            j -= 1
+        codes = collect_codes_before_anchor(lines, anchor, is_product_code, norm_kod)
         if not codes:
             continue
 
-        fiyat_idx = None
-        for k in range(anchor - 1, -1, -1):
-            if lines[k] == "Fiyat":
-                fiyat_idx = k
-                break
-        if fiyat_idx is None:
-            continue
-
-        prices: list[float] = []
-        k = fiyat_idx - 1
-        while k >= 0:
-            if lines[k] in {"Dimensions (mm)", "Ebat (mm)", "Dim. (mm)"}:
-                break
-            if lines[k] in {"Fiyat", "Price"}:
-                break
-            pm = PRICE_LINE.match(lines[k])
-            if pm:
-                prices.insert(0, mod.parse_eur(pm.group(1)))
-            k -= 1
-
-        if not prices:
+        fiyat_idx, prices = pair_codes_prices_block(lines, anchor, codes, PRICE_LINE, mod.parse_eur)
+        if fiyat_idx is None or not prices:
             continue
 
         if len(prices) != len(codes):

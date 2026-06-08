@@ -436,8 +436,8 @@ function toRow(d, bucket, priceMap, kur) {
   const images = copyImage(d, slug);
 
   let liste =
-    Number(d.liste_fiyati_eur) ||
     lookupListe(priceMap, d.urunKodu || kod) ||
+    Number(d.liste_fiyati_eur) ||
     parseListeFromTable(d);
   let px = null;
   let price = "Teklif için iletişim";

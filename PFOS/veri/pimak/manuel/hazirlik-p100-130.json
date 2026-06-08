@@ -60,7 +60,7 @@
       "baslik": "BPKM.32SCK Paslanmaz Soğutuculu Çıkma Kafa Kıyma Makinesi",
       "url": "https://www.pimak.com/bpkm-32s-paslanmaz-sogutuculu-kiyma-makinesi",
       "kategori": { "slug": "endustriyel-kiyma-makinesi", "label": "Endüstriyel Kıyma Makinesi" },
-      "liste_fiyati_eur": 3100,
+      "liste_fiyati_eur": 3300,
       "gorsel": "https://www.pimak.com/assets/images/urunler/9836BPKM.32S.jpg",
       "gorselYerel": { "fileName": "bpkm-32s-paslanmaz-sogutuculu-kiyma-makinesi.jpg" },
       "temelOzellikler": [
@@ -115,7 +115,7 @@
       "baslik": "BKT.1840 Kemik Testeresi",
       "url": "https://www.pimak.com/bkt-paslanmaz-kemik-testeresi",
       "kategori": { "slug": "et-ve-kemik-testeresi", "label": "Et ve Kemik Testeresi" },
-      "liste_fiyati_eur": 2200,
+      "liste_fiyati_eur": 1500,
       "gorsel": "https://www.pimak.com/assets/images/urunler/29799BKT.jpg",
       "gorselYerel": { "fileName": "bkt-paslanmaz-kemik-testeresi.jpg" },
       "temelOzellikler": [
@@ -142,7 +142,7 @@
       "baslik": "BKTA.1840 Kemik Testeresi",
       "url": "https://www.pimak.com/bkt-paslanmaz-kemik-testeresi",
       "kategori": { "slug": "et-ve-kemik-testeresi", "label": "Et ve Kemik Testeresi" },
-      "liste_fiyati_eur": 2700,
+      "liste_fiyati_eur": 2200,
       "gorsel": "https://www.pimak.com/assets/images/urunler/29799BKT.jpg",
       "gorselYerel": { "fileName": "bkt-paslanmaz-kemik-testeresi.jpg" },
       "temelOzellikler": [

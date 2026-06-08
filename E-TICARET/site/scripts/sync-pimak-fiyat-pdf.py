@@ -245,15 +245,49 @@ def extract_pairs_from_page(text: str) -> list[tuple[str, float]]:
 
 
 def parse_pdf(pdf_path: Path) -> dict[str, dict]:
+    """Blok parse (birincil) + satır içi tarama (yedek)."""
+    import importlib.util
+    import sys
+
+    pimak_root = Path(__file__).resolve().parent.parent.parent.parent / "PFOS" / "veri" / "pimak"
+    if str(pimak_root) not in sys.path:
+        sys.path.insert(0, str(pimak_root))
+    spec = importlib.util.spec_from_file_location("parse_p188", pimak_root / "parse-pdf-p188-197.py")
+    parse_mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(parse_mod)
+
+    from pimak_pdf_blocks import extract_block_pairs_from_page
+
     doc = fitz.open(pdf_path)
     raw: dict[str, dict] = {}
-    for page in doc:
+
+    def put(code: str, price: float, page: int) -> None:
+        key = norm_kod(code)
+        raw[key] = {"urun_kodu": code, "liste_fiyati_eur": price, "pdf_page": page}
+
+    for i, page in enumerate(doc, start=1):
+        body = page.get_text("text")
+        if "Orta Tip Filtreli" in body and re.search(r"P[Iİi]MAK\.", body, re.I):
+            for row in parse_mod.parse_page_195(body, {}):
+                put(row["urun_kodu"], row["liste_fiyati_eur"], i)
+            continue
+        for row in extract_block_pairs_from_page(
+            body,
+            i,
+            is_product_code=parse_mod.is_product_code,
+            norm_kod=parse_mod.norm_kod,
+            price_line=PRICE_LINE,
+            parse_eur=parse_eur,
+        ):
+            put(row["urun_kodu"], row["liste_fiyati_eur"], i)
+
+    # Yedek: blokta yakalanmayan kodlar için eski satır içi tarama
+    for i, page in enumerate(doc, start=1):
         for code, price in extract_pairs_from_page(page.get_text("text")):
             key = norm_kod(code)
-            raw[key] = {
-                "urun_kodu": code,
-                "liste_fiyati_eur": price,
-            }
+            if key not in raw:
+                raw[key] = {"urun_kodu": code, "liste_fiyati_eur": price, "pdf_page": i}
+
     return raw
 
 
