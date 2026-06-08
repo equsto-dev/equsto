@@ -534,7 +534,10 @@
 
   function poweredByHtml() {
     var prefix = t("footer.powered_by_prefix", "Powered By");
-    return esc(prefix) + ' <span class="eq-mfoot-vitrum-name">Vitrum</span>';
+    return (
+      esc(prefix) +
+      ' <a class="eq-mfoot-vitrum-name" href="https://www.vitrumgroup.org/" target="_blank" rel="noopener noreferrer">Vitrum</a>'
+    );
   }
 
   function isBesosPage() {
