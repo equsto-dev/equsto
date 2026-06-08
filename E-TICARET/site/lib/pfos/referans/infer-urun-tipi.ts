@@ -96,6 +96,50 @@ const TIP_RULES: TipRule[] = [
     test: (n) => n.includes("bardak yik") || n.includes("bardak yık"),
   },
   {
+    tip: "kiyma-makinasi-no32",
+    test: (n) =>
+      /(?:^|\s)(?:et\s*)?(?:kiyma|kıyma)(?:\s*makin|\s*makine|\s*mincer|\s*grinder|$)/.test(
+        n,
+      ),
+  },
+  {
+    tip: "kemik-testere",
+    test: (n) => n.includes("kemik") && n.includes("testere"),
+  },
+  {
+    tip: "dilimleme-makinesi",
+    test: (n) =>
+      n.includes("dilimleme") ||
+      n.includes("gida dilim") ||
+      n.includes("gıda dilim") ||
+      n.includes("ekmek dilim"),
+  },
+  {
+    tip: "vakum-makinesi",
+    test: (n) => n.includes("vakum") && n.includes("makin"),
+  },
+  {
+    tip: "spiral-mikser-hamur",
+    test: (n) =>
+      (n.includes("hamur") &&
+        (n.includes("yogur") || n.includes("spiral") || n.includes("planet"))) ||
+      n.includes("hamur yogurma"),
+  },
+  {
+    tip: "hamur-acma",
+    test: (n) => n.includes("hamur") && (n.includes("acma") || n.includes("açma")),
+  },
+  {
+    tip: "patates-soyma",
+    test: (n) => n.includes("patates") && n.includes("soy"),
+  },
+  {
+    tip: "kati-meyve-sikacagi",
+    test: (n) =>
+      n.includes("meyve") &&
+      (n.includes("sik") || n.includes("sık") || n.includes("portakal")),
+  },
+  {
     tip: "calisma-tezgahi-kasa-kahve",
     test: (n) =>
       n.includes("calisma tezgah") &&
@@ -270,8 +314,21 @@ const TIP_RULES: TipRule[] = [
     test: (n) => n.includes("fritoz") || n.includes("fritöz"),
   },
   {
+    tip: "komurlu-izgara",
+    test: (n) =>
+      (n.includes("komurlu") || n.includes("kömürlü")) && n.includes("izgar"),
+  },
+  {
     tip: "yer-izgara",
-    test: (n) => n.includes("izgara") && !n.includes("yer izgar"),
+    test: (n) => n.includes("yer izgar") || n.includes("yer ızgar"),
+  },
+  {
+    tip: "izgara-gazli",
+    test: (n) =>
+      n.includes("izgara") &&
+      !n.includes("istif") &&
+      !n.includes("davlumbaz") &&
+      !n.includes("tabla"),
   },
 ];
 

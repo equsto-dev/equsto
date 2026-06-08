@@ -6,11 +6,21 @@ import {
 } from "@/lib/legacy-catalog";
 import type { EslesmisUrun, FiyatStratejisi } from "../schemas/pfos.schema";
 import { enrichEslesmisFromKatalogRow } from "./catalog-enrich";
+import { invalidateKatalogGorselCache } from "./katalog-gorsel";
+import {
+  isBulasikMakinesiTipKodu,
+  BULASIK_MARKA,
+} from "./bulasik-marka";
+import {
+  isHazirlikTipKodu,
+  HAZIRLIK_MARKA,
+  isHazirlikKatalogMarka,
+  isOztiKatalogMarka,
+} from "./hazirlik-marka";
+import { isSenoxVakumTipKodu } from "./senox-marka";
 import {
   loadZoneCatalog,
 } from "./zone-catalog-loader";
-import fs from "node:fs";
-import path from "node:path";
 import {
   normalizeTipKodu,
   resolveTipKodu,
@@ -18,25 +28,10 @@ import {
   TIP_SHOP_CATS,
 } from "./tip-kodu";
 
-/** Katalog Equsto satış EUR — Excel net alış × 1,08 (satis_fiyati_* alanları) */
-function equstoSatisEurFromRow(row: AdminUrunRow): number | null {
+/** Katalog Equsto satış EUR — yalnızca ekipmanlar.json satis_fiyat_eur alanı */
+export function equstoSatisEurFromRow(row: AdminUrunRow): number | null {
   const eur = Number(row.satis_fiyat_eur);
   if (eur > 0) return Math.round(eur * 100) / 100;
-  const tl = Number(row.satis_fiyati_tl);
-  if (tl > 0) {
-    let kur = 53.2979;
-    try {
-      const snap = path.join(
-        process.cwd(),
-        "scripts/data/tcmb-kur-snapshot.json",
-      );
-      const j = JSON.parse(fs.readFileSync(snap, "utf8")) as { rate?: number };
-      if (j.rate && j.rate > 0) kur = j.rate;
-    } catch {
-      /* */
-    }
-    return Math.round((tl / kur) * 100) / 100;
-  }
   return null;
 }
 
@@ -215,6 +210,7 @@ export function productMatchesTipKodu(row: AdminUrunRow, tipKodu: string): boole
 }
 
 function tipDeptHint(tip: string): string {
+  if (isHazirlikTipKodu(tip)) return "hazirlik";
   if (/buzdolab|sogut|dondurucu|tezgah_tip_buz|dik_tip_buz/.test(tip)) return "sogutma";
   if (/bulasik|yikama|bym_|cop_siyirma/.test(tip)) return "yikama";
   if (/espresso|kahve|filter|turk_kahve/.test(tip)) return "kahve";
@@ -276,15 +272,31 @@ async function loadShopPool(): Promise<AdminUrunRow[]> {
 
 function pseudoRowFromLink(link: TipShopLink, tip: string): AdminUrunRow {
   const fiyat = Math.round(Number(link.fiyat_try) || 0);
+  const hazirlik = isHazirlikTipKodu(tip);
+  const bulasik = isBulasikMakinesiTipKodu(tip);
   return {
     id: `pfos-link-${tip}`,
     ad: link.name ?? link.sku ?? tip,
     sku: link.sku ?? null,
     tip_kodu: tip,
-    kategori: "sogutma-ekipmanlari",
-    kategori_ad: "Soğutma Ekipmanları",
+    kategori: hazirlik
+      ? "et-hazirlik-makineleri"
+      : bulasik
+        ? "bulasik-yikama-makineleri"
+        : "sogutma-ekipmanlari",
+    kategori_ad: hazirlik
+      ? "Et Hazırlık Makineleri"
+      : bulasik
+        ? "Bulaşık Yıkama Makineleri"
+        : "Soğutma Ekipmanları",
     marka_id: null,
-    marka_ad: link.brand ?? "Öztiryakiler Endüstriyel Mutfak",
+    marka_ad:
+      link.brand ??
+      (hazirlik
+        ? "Boğaziçi Makine"
+        : bulasik
+          ? "Inoksan"
+          : "Öztiryakiler Endüstriyel Mutfak"),
     model: link.model ?? null,
     stok: 0,
     fiyat_tl: fiyat,
@@ -339,6 +351,23 @@ function scoreCandidate(
   const name = normName(row.ad);
   if (!name) return -9999;
   if (isExcludedForTip(name, tip)) return -9999;
+
+  if (isBulasikMakinesiTipKodu(tip)) {
+    const marka = normName(row.marka_ad);
+    const sku = normName(row.sku ?? "");
+    if (!marka.includes("inoksan") && !sku.startsWith("ino-")) score -= 2500;
+  }
+
+  if (isHazirlikTipKodu(tip)) {
+    if (isOztiKatalogMarka(row.marka_ad)) return -9999;
+    if (isHazirlikKatalogMarka(row.marka_ad)) score += 220;
+    if (name.includes("bogazici") || name.includes("boğaziçi")) score += 120;
+  }
+
+  if (isSenoxVakumTipKodu(tip)) {
+    if (isOztiKatalogMarka(row.marka_ad)) return -9999;
+    if (name.includes("senox") || name.includes("şenox")) score += 300;
+  }
 
   const wantDept = tipDeptHint(tip);
   const gotDept = deptForRow(row);
@@ -409,6 +438,42 @@ export async function matchShopCatalog(
   const zoneMeta = zoneMetaMap.get(normalizeTipKodu(tip)) ?? null;
   const ctx = { tip, link, zoneMeta };
 
+  /** Bulaşık yıkama makineleri — İnoksan referans; Electrolux/Öztiryakiler havuzundan seçilmesin */
+  if (isBulasikMakinesiTipKodu(tip) && link && (link.marka || link.name || link.sku)) {
+    const bulLink: TipShopLink = {
+      marka: link.marka ?? BULASIK_MARKA,
+      ...link,
+    };
+    if (bulLink.sku) {
+      const bySku = pool.find(
+        (r) => r.sku && normName(r.sku) === normName(bulLink.sku!),
+      );
+      if (bySku) return adminRowToEslesmis(bySku, { ...ctx, link: bulLink });
+    }
+    return adminRowToEslesmis(pseudoRowFromLink(bulLink, tip), {
+      ...ctx,
+      link: bulLink,
+    });
+  }
+
+  /** Hazırlık makineleri — Boğaziçi referans; katalog havuzundan Öztiryakiler seçilmesin */
+  if (isHazirlikTipKodu(tip) && link && (link.marka || link.name || link.sku)) {
+    const hazLink: TipShopLink = {
+      marka: link.marka ?? HAZIRLIK_MARKA,
+      ...link,
+    };
+    if (hazLink.sku) {
+      const bySku = pool.find(
+        (r) => r.sku && normName(r.sku) === normName(hazLink.sku!),
+      );
+      if (bySku) return adminRowToEslesmis(bySku, { ...ctx, link: hazLink });
+    }
+    return adminRowToEslesmis(pseudoRowFromLink(hazLink, tip), {
+      ...ctx,
+      link: hazLink,
+    });
+  }
+
   if (link?.sku) {
     const bySku = pool.find(
       (r) => r.sku && normName(r.sku) === normName(link.sku!),
@@ -449,4 +514,5 @@ export function clearShopCatalogCache(): void {
   tipLinksCache = null;
   zoneTipMetaCache = null;
   invalidateLegacyCatalogCache();
+  invalidateKatalogGorselCache();
 }

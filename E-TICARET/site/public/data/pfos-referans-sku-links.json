@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "note": "Doğrulanmış referans poz → katalog SKU. Anahtar: {listeKey}|{poz}. Equsto tezgahları SKU'suz — fiyat pfos-ozel-imalat-fiyatlari.json.",
+  "note": "Doğrulanmış referans poz → katalog SKU. Anahtar: {listeKey}|{poz}. Fiyat ekipmanlar.json satis_fiyat_eur alanından; yoksa boş.",
   "links": {
     "balikci-150-250|Y1": {
       "sku": "7960.02929.5O1",

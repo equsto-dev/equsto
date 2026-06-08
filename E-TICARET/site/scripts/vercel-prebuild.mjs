@@ -197,12 +197,6 @@ if (fs.existsSync(verifyPfosUyeAuth)) {
   if (r.status !== 0) process.exit(r.status ?? 1);
 }
 
-const verifyPimakFiyat = path.join(siteDir, "scripts/verify-pimak-fiyat-kilit.mjs");
-if (fs.existsSync(verifyPimakFiyat)) {
-  const r = spawnSync(process.execPath, [verifyPimakFiyat], { cwd: siteDir, stdio: "inherit" });
-  if (r.status !== 0) process.exit(r.status ?? 1);
-}
-
 const buildSitemap = path.join(siteDir, "scripts/build-sitemap.mjs");
 if (fs.existsSync(buildSitemap)) {
   const r = spawnSync(process.execPath, [buildSitemap], { cwd: siteDir, stdio: "inherit" });

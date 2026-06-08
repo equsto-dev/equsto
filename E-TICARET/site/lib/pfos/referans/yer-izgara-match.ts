@@ -7,7 +7,7 @@ import {
   loadLegacyCatalogRows,
   type AdminUrunRow,
 } from "@/lib/legacy-catalog";
-import { enrichEslesmisFromKatalogRow } from "../core/catalog-enrich";
+import { katalogRowToEslesmis } from "../core/katalog-row-eslesmis";
 
 /** Öztiryakiler yer ızgarası — katalog uzunlukları (mm) */
 const CATALOG_LEN_MM = [290, 490, 740, 940, 1180, 1620, 2060] as const;
@@ -59,21 +59,7 @@ export function extractOlcuFromNotlar(notlar?: string | null): string {
 }
 
 function rowToEslesmis(row: AdminUrunRow): EslesmisUrun {
-  const enriched = enrichEslesmisFromKatalogRow(row, {});
-  return {
-    id: row.id,
-    slug: row.id.replace(/^ecom_/, ""),
-    sku: row.sku,
-    ad: row.ad,
-    marka: enriched.marka,
-    model: enriched.model,
-    olcu: enriched.olcu,
-    elektrikGucuKw: row.el_guc,
-    gazGucuKw: row.gaz_guc,
-    fiyat: row.fiyat_tl,
-    doviz: "TRY",
-    gorselUrl: row.gorsel_url,
-  };
+  return katalogRowToEslesmis(row);
 }
 
 function scoreYerIzgarasiRow(row: AdminUrunRow, lenMm: number): number {

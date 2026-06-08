@@ -2,7 +2,7 @@ import {
   loadLegacyCatalogRows,
   type AdminUrunRow,
 } from "@/lib/legacy-catalog";
-import { enrichEslesmisFromKatalogRow } from "../core/catalog-enrich";
+import { katalogRowToEslesmis } from "../core/katalog-row-eslesmis";
 import type { EslesmisUrun, FiyatStratejisi } from "../schemas/pfos.schema";
 import { extractOlcuFromNotlar } from "./yer-izgara-match";
 
@@ -46,52 +46,66 @@ function kapiSayisiFromUrunAd(ad: string): number | null {
   return d ? Number(d[1]) : null;
 }
 
-function genislikFromUrunAd(ad: string): number | null {
-  const m = norm(ad).match(/(\d{3,4})\s*[*xX×]\s*(\d{2,3})/);
+function tagGenislikCmFromSku(sku: string | null | undefined): number | null {
+  const m = String(sku ?? "").match(/7919\.(\d{2})NTV/i);
   if (!m) return null;
-  return Number(m[1]);
+  const seri = Number(m[1]);
+  if (seri === 27) return 142;
+  if (seri === 37) return 188;
+  if (seri === 47) return 240;
+  if (seri === 48) return 240;
+  return null;
+}
+
+function genislikFromUrunAd(ad: string): number | null {
+  const fromSku = tagGenislikCmFromSku(ad);
+  const m = norm(ad).replace(/[×x]/g, "*").match(/(\d{3,4})\s*\*\s*(\d{2,3})/);
+  if (m) return Number(m[1]);
+  return fromSku;
+}
+
+function isPizzaMakeUpRow(ad: string, sku: string | null | undefined): boolean {
+  const n = norm(ad);
+  return /\.pj\b/i.test(String(sku ?? "")) || /pizza\s*hazirlik|ozel\s*pizza/.test(n);
 }
 
 function rowToEslesmis(row: AdminUrunRow): EslesmisUrun {
-  const enriched = enrichEslesmisFromKatalogRow(row, {});
-  return {
-    id: row.id,
-    slug: row.id.replace(/^ecom_/, ""),
-    sku: row.sku,
-    ad: row.ad,
-    marka: enriched.marka,
-    model: enriched.model,
-    olcu: enriched.olcu,
-    elektrikGucuKw: row.el_guc,
-    gazGucuKw: row.gaz_guc,
-    fiyat: row.fiyat_tl,
-    doviz: "TRY",
-    gorselUrl: row.gorsel_url,
-  };
+  return katalogRowToEslesmis(row);
 }
 
 function scoreMakeUpRow(
   row: AdminUrunRow,
   wantKapi: number | null,
   wantGenislikCm: number | null,
+  referansIsim: string,
 ): number {
   const ad = norm(row.ad);
-  if (!/make.?up|makeup|ntv/.test(ad)) return -9999;
+  if (!/make.?up|makeup|ntv|tag\s*\d{3}/.test(ad)) return -9999;
+
+  const refN = norm(referansIsim);
+  const pizzaRef = /pizza/.test(refN);
+  if (isPizzaMakeUpRow(row.ad, row.sku) && !pizzaRef) return -9999;
 
   let score = 40;
-  if (/make.?up|makeup/.test(ad)) score += 50;
+  if (/servis\s*banko|soguk\s*servis/.test(ad) && !/servis\s*banko/.test(refN)) {
+    score -= 80;
+  }
+  if (/evyeli|evye/.test(ad) && !/evye|evyeli/.test(refN)) score -= 15;
+  if (/make.?up|makeup/.test(ad)) score += 40;
+  if (/tag\s*\d{3}\s*ntv/.test(ad)) score += 55;
   if (/ntv/.test(ad) && /kap/.test(ad)) score += 30;
 
   const rowKapi = kapiSayisiFromUrunAd(row.ad);
   if (wantKapi != null) {
-    if (rowKapi === wantKapi) score += 80;
-    else if (rowKapi != null) score -= 120;
+    if (rowKapi === wantKapi) score += 120;
+    else if (rowKapi != null) score -= 200;
   }
 
-  const rowGen = genislikFromUrunAd(row.ad);
+  const rowGen =
+    genislikFromUrunAd(row.ad) ?? tagGenislikCmFromSku(row.sku);
   if (wantGenislikCm != null && rowGen != null) {
     const diff = Math.abs(rowGen - wantGenislikCm);
-    score += Math.max(0, 100 - diff * 3);
+    score += Math.max(0, 120 - diff * 2);
   }
 
   if (row.gorsel_url) score += 5;
@@ -116,7 +130,7 @@ export async function matchMakeUpByReferans(
   const scored = rows
     .map((row) => ({
       row,
-      score: scoreMakeUpRow(row, wantKapi, wantGen),
+      score: scoreMakeUpRow(row, wantKapi, wantGen, isim),
     }))
     .filter((x) => x.score >= 90)
     .sort((a, b) => b.score - a.score);

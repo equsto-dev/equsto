@@ -585,23 +585,13 @@ window.searchFilter = window.searchFilter || function () {};
     function formatOlculerLinePdp(raw) {
       if (!raw || !raw.olculer) return "";
       var o = raw.olculer;
-      var u = Number(o.uzunluk_mm);
-      var gen = Number(o.genislik_mm);
-      var dep = Number(o.derinlik_mm);
+      var g = Number(o.genislik_mm);
+      var d = Number(o.derinlik_mm);
       var y = Number(o.yukseklik_mm);
-      var g;
-      var d;
-      if (u && gen && y) {
-        g = u;
-        d = gen;
-      } else if (gen && dep && y) {
-        g = gen;
-        d = dep;
-      } else return "";
       if (!g || !d || !y) return "";
       var name = String(raw.name || "");
       if (/×\d/.test(name)) return "";
-      if (Number(o.uzunluk_mm) || (g >= 1000 && d >= 1000)) {
+      if (g >= 1000 && d >= 1000) {
         return Math.round(g / 10) + "×" + Math.round(d / 10) + "×" + Math.round(y / 10) + " cm";
       }
       return g + "×" + d + "×" + y + " mm";

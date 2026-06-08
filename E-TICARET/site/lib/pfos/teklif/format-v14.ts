@@ -40,7 +40,7 @@ export function tlKdvDahilToEurNet(
   return Math.round((netTl / eurTry) * 100) / 100;
 }
 
-/** PFOS proforma birim EUR — önce katalog satış EUR, yoksa KDV hariç TL/kur */
+/** PFOS proforma birim EUR — yalnızca katalog satış EUR (satis_fiyat_eur); yoksa boş */
 export function birimEurFromEslesmis(
   u: {
     fiyat?: number | null;
@@ -48,22 +48,15 @@ export function birimEurFromEslesmis(
     doviz?: string | null;
   } | null
   | undefined,
-  eurTry: number | null | undefined,
-  kdvOran = 20,
+  _eurTry?: number | null,
+  _kdvOran = 20,
 ): number | null {
   if (!u) return null;
   const eur = Number(u.fiyatEur);
   if (Number.isFinite(eur) && eur > 0) {
     return Math.round(eur * 100) / 100;
   }
-  const satisTl = Number((u as { satis_fiyati_tl?: number }).satis_fiyati_tl);
-  if (satisTl > 0 && eurTry != null && eurTry > 0) {
-    return Math.round((satisTl / eurTry) * 100) / 100;
-  }
-  if (u.doviz === "EUR" && Number(u.fiyat) > 0) {
-    return Math.round(Number(u.fiyat) * 100) / 100;
-  }
-  return tlKdvDahilToEurNet(u.fiyat, eurTry, kdvOran);
+  return null;
 }
 
 /** W×D×H, 120*70*85, 90 kg/gün gibi fiziksel ölçü / kapasite metni */

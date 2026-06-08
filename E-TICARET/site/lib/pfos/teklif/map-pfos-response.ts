@@ -16,15 +16,13 @@ import {
   yeniTeklifSayisi,
 } from "./format-v14";
 import { resolveTeklifMarka } from "../core/catalog-enrich";
+import {
+  normalizePfosGorselUrl,
+  oztiWebImageRelFromSku,
+} from "../core/katalog-gorsel";
 import { displayIsimFromSablon } from "../core/ozel-imalat";
+import { sanitizeDavlumbazOlcu } from "./davlumbaz-olcu";
 import { repairPfosDisplayText } from "@/lib/utf8/repair-turkish-fffd";
-
-function normalizeGorselUrl(url: string | null | undefined): string | undefined {
-  const u = String(url ?? "").trim();
-  if (!u) return undefined;
-  if (/^https?:\/\//i.test(u)) return u;
-  return u.startsWith("/") ? u : `/${u}`;
-}
 
 function specAciklama(
   k: PFOSResponse["kalemler"][number],
@@ -47,6 +45,7 @@ function specAciklama(
     katalogMarka: u?.marka,
     urunAd: u?.ad,
     sablonIsim: k.isim,
+    urunTipi: k.urunTipi,
   });
   if (marka && marka !== "—") lines.push(`•  Marka: ${marka}`);
   const elk = u?.elektrikGucuKw ?? k.elektrikGucuKwHint;
@@ -84,6 +83,14 @@ export function pfosResponseToTeklifV14(
     const adet = k.adet;
     const birimEur = birimEurFromEslesmis(u, eurTry);
     const { bolumNo, bolumBaslik } = bolumForKalem(k, res.teklifLayout);
+    const stokNo = u?.sku?.trim() ?? "";
+    const hasKnownProduct =
+      Boolean(stokNo) &&
+      (birimEur != null || (u?.fiyat != null && Number(u.fiyat) > 0));
+    const gorselFallback = normalizePfosGorselUrl(
+      u?.gorselUrl ??
+        (hasKnownProduct && stokNo ? oztiWebImageRelFromSku(stokNo) : null),
+    );
 
     return {
       bolumNo,
@@ -96,15 +103,21 @@ export function pfosResponseToTeklifV14(
         katalogMarka: u?.marka,
         urunAd: u?.ad,
         sablonIsim: k.isim,
+        urunTipi: k.urunTipi,
       }),
-      olcu: olcuForTeklifUrun(u, k.notlar),
+      olcu:
+        sanitizeDavlumbazOlcu(
+          displayIsimFromSablon(k.isim),
+          olcuForTeklifUrun(u, k.notlar),
+          k.urunTipi,
+        ) ?? olcuForTeklifUrun(u, k.notlar),
       elkKw: u?.elektrikGucuKw ?? k.elektrikGucuKwHint ?? null,
       gazKw: u?.gazGucuKw ?? k.gazGucuKwHint ?? null,
       adet,
       birimSatis: birimEur,
       toplamSatis: birimEur != null ? birimEur * adet : null,
       doviz,
-      fotoUrl: normalizeGorselUrl(u?.gorselUrl),
+      fotoUrl: gorselFallback ?? undefined,
       aciklama: specAciklama(k, referansListe) || undefined,
     };
   });

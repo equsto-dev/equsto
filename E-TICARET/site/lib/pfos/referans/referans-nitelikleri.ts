@@ -172,6 +172,28 @@ export function referansKatalogCeliski(
     return true;
   }
 
+  const refN = norm(isim);
+  if (/servis\s*banko|dekoratif\s*servis/.test(refN)) {
+    if (
+      /davlumbaz|aspirator|buzdolab|derin donduruc|firin|fritoz|izgara|ocak|kuzine/.test(k) &&
+      !/banko|servis.*unite|serv\.banko/.test(k)
+    ) {
+      return true;
+    }
+  }
+  if (/davlumbaz/.test(refN) && /servis\s*banko|kasa\s*banko/.test(k)) {
+    return true;
+  }
+
+  if (/komurlu.*izgar|kömürlü.*izgar/.test(refN)) {
+    if (/yer\s*izgar|7960\.|pvc|sifon|tavali|ya[gğ]\s*tutucu/.test(k)) {
+      return true;
+    }
+  }
+  if (/yer\s*izgar/.test(refN) && /komurlu|kömürlü|plate\s*izgar|set\s*ustu/.test(k)) {
+    return true;
+  }
+
   return false;
 }
 

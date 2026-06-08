@@ -78,24 +78,35 @@
       "name": "BREMA KÜP BUZ MAKİNESİ CB425 48 KG/GÜN B-QUBE"
     },
     "bulasik_setalti": {
-      "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "075T.11110.AD",
-      "name": "TEZGAHALTI BULASIK YIKAMA MAK. TOUCH OBY 50T PDRT"
+      "marka": "Inoksan",
+      "sku": "INO-BYM052ST",
+      "name": "İNOKSAN BULAŞIK YIKAMA MAKINASI 500 TB/H BYM052ST"
     },
     "bulasik_giyotin_1000": {
-      "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "071T.11110.BB",
-      "name": "GIYOTIN TIP BULASIK YIKAMA MAK. TOUCH OBM 1080T PDRT"
+      "marka": "Inoksan",
+      "sku": "INO-BYM102S",
+      "name": "BYM102S - Giyotin Tip 1000 Tabak Ekonomik Bulaşık Yıkama Makinesi"
+    },
+    "bardak_yikama": {
+      "marka": "Inoksan",
+      "sku": "INO-BYM042S",
+      "name": "BYM042S - Set Altı Ekonomik Bardak Yıkama Makinesi"
+    },
+    "bulasik_tunel": {
+      "marka": "Inoksan",
+      "sku": "INO-BYK270R-K70D",
+      "name": "İNOKSAN BUL YIK MAK, KONVEYÖRLÜ, KÖŞE KURUTMALI",
+      "fiyat_try": 705676
+    },
+    "bulasik_sepet": {
+      "marka": "Inoksan",
+      "sku": "INO-BYM052S",
+      "name": "BYM052S – Set altı 500 Tabak Ekonomik Bulaşık Yıkama Makinesi"
     },
     "derin_dondurucu_dik": {
       "brand": "Öztiryakiler Endüstriyel Mutfak",
       "sku": "7919.06LMV.00",
       "name": "GN 600 LMV TEK INOX KAPI DIK TIP DERIN DONDURUCU"
-    },
-    "bardak_yikama": {
-      "brand": "Öztiryakiler Endüstriyel Mutfak",
-      "sku": "073M.11010.AD",
-      "name": "BARDAK YIKAMA MAKİNASI OBY 500 B Plus (35x35) PDT — 500 bardak/saat"
     },
     "yer_izgara": {
       "brand": "Öztiryakiler Endüstriyel Mutfak",
@@ -200,6 +211,45 @@
       "sku": "7919.06LMV.00",
       "name": "DEPO TİPİ BUZDOLABI",
       "fiyat_try": 68000
+    },
+    "kiyma_makinesi": {
+      "marka": "Boğaziçi",
+      "sku": "BPKM.32S",
+      "name": "Boğaziçi 32 No Komple Krom Paslanmaz Soğutmalı Kıyma Makinesi BPKM.32S",
+      "fiyat_try": 48500
+    },
+    "kemik_testere": {
+      "marka": "Boğaziçi",
+      "sku": "BKT.1840",
+      "name": "Boğaziçi Et Kemik Testeresi BKT.1840",
+      "fiyat_try": 62000
+    },
+    "dilimleme_makinesi": {
+      "marka": "Boğaziçi",
+      "name": "Boğaziçi Gıda Dilimleme Makinesi Ø30 cm",
+      "fiyat_try": 23246
+    },
+    "vakum_makinesi": {
+      "marka": "Şenox",
+      "sku": "WM-2-TEK-ENEVAKUM-MAK-NES",
+      "name": "Senox WM-2 TEK ÇENEVAKUM MAKİNESİ"
+    },
+    "spiral_hamur": {
+      "marka": "Boğaziçi",
+      "sku": "BSH.35",
+      "name": "Boğaziçi 35 Kg Spiral Hamur Yoğurma Makinesi BSH.35",
+      "fiyat_try": 95000
+    },
+    "hamur_acma": {
+      "marka": "Boğaziçi",
+      "sku": "BHA.30",
+      "name": "Boğaziçi Hamur Açma Makinası Pide Lavaş Lahmacun Açma Makinesi 30 Luk BHA.30",
+      "fiyat_try": 55000
+    },
+    "patates_soyma": {
+      "marka": "Boğaziçi",
+      "name": "Boğaziçi Patates Soyma Makinesi 15 kg",
+      "fiyat_try": 28500
     }
   }
 }

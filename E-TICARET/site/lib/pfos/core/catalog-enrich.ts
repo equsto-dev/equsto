@@ -5,6 +5,18 @@ import {
   isOzelImalatSablon,
   OZEL_IMALAT_MARKA,
 } from "./ozel-imalat";
+import {
+  HAZIRLIK_MARKA,
+  isHazirlikPfosKalem,
+} from "./hazirlik-marka";
+import {
+  isSenoxVakumPfosKalem,
+  SENOX_MARKA,
+} from "./senox-marka";
+import {
+  BULASIK_MARKA,
+  isBulasikPfosKalem,
+} from "./bulasik-marka";
 
 /** Tanınan imalat markaları — uzun eşleşme önce */
 const IMALAT_MARKALAR = [
@@ -24,6 +36,7 @@ const IMALAT_MARKALAR = [
   "Brema",
   "Santos",
   "Atalay",
+  "Boğaziçi",
   "Öztiryakiler",
   "WMF",
   "Empero",
@@ -141,9 +154,37 @@ export function resolveTeklifMarka(opts: {
   sablonIsim?: string | null;
   linkMarka?: string | null;
   zoneMarka?: string | null;
+  urunTipi?: string | null;
 }): string {
   if (isOzelImalatMotor({ sablonIsim: opts.sablonIsim })) return OZEL_IMALAT_MARKA;
   if (isOzelImalatSablon(opts.sablonIsim)) return OZEL_IMALAT_MARKA;
+
+  if (
+    isSenoxVakumPfosKalem({
+      isim: opts.sablonIsim ?? opts.urunAd,
+      urunTipi: opts.urunTipi,
+    })
+  ) {
+    return SENOX_MARKA;
+  }
+
+  if (
+    isBulasikPfosKalem({
+      isim: opts.sablonIsim ?? opts.urunAd,
+      urunTipi: opts.urunTipi,
+    })
+  ) {
+    return BULASIK_MARKA;
+  }
+
+  if (
+    isHazirlikPfosKalem({
+      isim: opts.sablonIsim ?? opts.urunAd,
+      urunTipi: opts.urunTipi,
+    })
+  ) {
+    return HAZIRLIK_MARKA;
+  }
 
   if (opts.linkMarka?.trim()) return markaCanonLabel(opts.linkMarka);
 
@@ -239,6 +280,7 @@ export function enrichEslesmisFromKatalogRow(
     zoneMarka?: string | null;
     zoneOlcu?: string | null;
     sablonIsim?: string | null;
+    urunTipi?: string | null;
   },
 ): {
   marka: string;
@@ -253,6 +295,7 @@ export function enrichEslesmisFromKatalogRow(
       sablonIsim: ctx?.sablonIsim,
       linkMarka: ctx?.linkMarka,
       zoneMarka: ctx?.zoneMarka,
+      urunTipi: ctx?.urunTipi,
     }),
     model: resolveKatalogModel(row),
     olcu: formatKatalogOlcu(row, ctx?.zoneOlcu),

@@ -76,8 +76,9 @@ async function fallbackMatch(
   urunTipi: string,
   fiyatStratejisi: FiyatStratejisi,
   sablonIsim?: string | null,
+  notlar?: string | null,
 ): Promise<EslesmisUrun | null> {
-  return matchCatalogFallback(urunTipi, fiyatStratejisi, sablonIsim);
+  return matchCatalogFallback(urunTipi, fiyatStratejisi, sablonIsim, notlar);
 }
 
 export async function matchProductForMotor(
@@ -87,7 +88,7 @@ export async function matchProductForMotor(
   sablonIsim?: string | null,
   notlar?: string | null,
 ): Promise<EslesmisUrun | null> {
-  const key = `${cacheKey(urunTipi, kategoriKodu, fiyatStratejisi)}|${String(sablonIsim ?? "")}`;
+  const key = `${cacheKey(urunTipi, kategoriKodu, fiyatStratejisi)}|${String(sablonIsim ?? "")}|${String(notlar ?? "")}`;
   if (matchCache.has(key)) return matchCache.get(key)!;
 
   if (isOzelImalatMotor({ sablonIsim, urunTipi })) {
@@ -101,7 +102,12 @@ export async function matchProductForMotor(
   }
 
   if (!(await dbHasPfosProducts())) {
-    const catalog = await fallbackMatch(urunTipi, fiyatStratejisi, sablonIsim);
+    const catalog = await fallbackMatch(
+      urunTipi,
+      fiyatStratejisi,
+      sablonIsim,
+      notlar,
+    );
     matchCache.set(key, catalog);
     return catalog;
   }
@@ -141,7 +147,12 @@ export async function matchProductForMotor(
       orderBy,
     });
     if (!loose) {
-      const catalog = await fallbackMatch(urunTipi, fiyatStratejisi, sablonIsim);
+      const catalog = await fallbackMatch(
+        urunTipi,
+        fiyatStratejisi,
+        sablonIsim,
+        notlar,
+      );
       matchCache.set(key, catalog);
       return catalog;
     }

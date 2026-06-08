@@ -2,9 +2,6 @@ import { repairPfosDisplayText } from "@/lib/utf8/repair-turkish-fffd";
 
 /** Özel imalat / atölye — katalog markası yok; teklifte Equsto */
 export const OZEL_IMALAT_MARKA = "Equsto";
-/** Zone/referans TL fiyatına uygulanan Equsto kar (katalog Öztiryakiler ile aynı) */
-export const OZEL_IMALAT_KAR_ORAN = 0.08;
-
 /** Referans şablonunda Portashelf etiketi (ürün henüz katalogda yok) */
 export function isPortashelfSablon(isim: string | null | undefined): boolean {
   return /portashelf/i.test(String(isim ?? ""));
@@ -21,6 +18,8 @@ const OZEL_IMALAT_AD_KALIP = [
   /\bduvar\s*dolab/i,
   /\bkokteyl\s*tezgah/i,
   /\bservis\s*tezgah/i,
+  /\bservis\s*banko/i,
+  /\bdekoratif\s*servis\s*banko/i,
   /\bbulaşık\s*alma\s*tezgah/i,
   /\bpolietilen\s*tablal/i,
   /\bmermer\s*tablal/i,
@@ -52,7 +51,7 @@ export function isOzelImalatMotor(opts: {
   if (!tip) return false;
   if (/^davlumbaz/.test(tip)) return true;
   if (
-    /^(cop-siyirma|bym-cikis|bulasik-cikis|yag-tutucu|bulasik-makinesi-setalt|on-yikama|polietilen-tabla|mermer-tabla|kokteyl-tezgah|servis-tezgah|pasta-dolab|sarap-dolab)/.test(
+    /^(cop-siyirma|bym-cikis|bulasik-cikis|yag-tutucu|bulasik-makinesi-setalt|on-yikama|polietilen-tabla|mermer-tabla|kokteyl-tezgah|servis-tezgah|servis-banko|kasa-banko|pasta-dolab|sarap-dolab)/.test(
       tip,
     )
   ) {
@@ -71,4 +70,4 @@ export function displayIsimFromSablon(isim: string | null | undefined): string {
       .trim(),
   );
 }
-
+
