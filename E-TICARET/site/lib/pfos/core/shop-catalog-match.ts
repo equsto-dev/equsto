@@ -59,7 +59,7 @@ import {
   TIP_SHOP_CATS,
 } from "./tip-kodu";
 
-/** Katalog Equsto satış EUR — yalnızca ekipmanlar.json satis_fiyat_eur alanı */
+/** Katalog Equsto satış EUR — ekipmanlar.json satis_fiyat_eur / satis_eur_indirimli */
 export function equstoSatisEurFromRow(row: AdminUrunRow): number | null {
   const eur = Number(row.satis_fiyat_eur);
   if (eur > 0) return Math.round(eur * 100) / 100;
@@ -405,13 +405,14 @@ function scoreCandidate(
   }
 
   if (isIstifRafiTipKodu(tip)) {
-    if (isOztiKatalogMarka(row.marka_ad)) return -9999;
-    const marka = normName(row.marka_ad);
     const sku = normName(row.sku ?? "");
-    if (marka.includes("portashelf") || marka.includes("yuksel") || /\d+-x-\d+-x-\d+/.test(sku)) {
-      score += 280;
-    } else if (/8897\.|7897\./.test(sku)) {
-      score -= 2500;
+    if (/8897\.|7897\./.test(sku)) return -9999;
+    if (isOztiKatalogMarka(row.marka_ad) && !/^\d+-x-\d+-x-\d+/.test(sku)) {
+      return -9999;
+    }
+    const marka = normName(row.marka_ad);
+    if (marka.includes("portashelf") || /^\d+-x-\d+-x-\d+/.test(sku)) {
+      score += 320;
     }
   }
 

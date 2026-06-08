@@ -1,0 +1,660 @@
+[
+  {
+    "page": 7,
+    "subcat": "KATLI RAFLAR · TIER SHELVING · GRİ BOYALI · COATED PLAS.",
+    "dept": "istif",
+    "folder": "portashelf",
+    "count": 17
+  },
+  {
+    "page": 8,
+    "subcat": "KATLI RAFLAR · TIER SHELVING · ANTIBACTERIAL · COATED SOLID",
+    "dept": "istif",
+    "folder": "portashelf",
+    "count": 2
+  },
+  {
+    "page": 11,
+    "subcat": "STANDART TEL RAF BOYALI · EPOXY POWDER COATED · ÖLÇÜ / SIZE",
+    "dept": "istif",
+    "folder": "portashelf",
+    "count": 24
+  },
+  {
+    "page": 12,
+    "subcat": "ÖLÇÜ / SIZE",
+    "dept": "diger",
+    "folder": "olcu-size",
+    "count": 24
+  },
+  {
+    "page": 13,
+    "subcat": "ÖLÇÜ / SIZE",
+    "dept": "diger",
+    "folder": "olcu-size",
+    "count": 24
+  },
+  {
+    "page": 14,
+    "subcat": "EPOXY + PLASTIC / POWDER COATED · ÖLÇÜ / SIZE · POWDER COATED",
+    "dept": "diger",
+    "folder": "epoxy-plastic-powder-coated-olcu-size-powder-coated",
+    "count": 12
+  },
+  {
+    "page": 21,
+    "subcat": "PERFORE RAF  BOYALI · EPOXY POWDER COTED PERFORTED SHELF · ÖLÇÜ / SIZE",
+    "dept": "istif",
+    "folder": "portashelf",
+    "count": 27
+  },
+  {
+    "page": 22,
+    "subcat": "ACCESSORIES · TİP / TYPE",
+    "dept": "diger",
+    "folder": "accessories-ti-p-type",
+    "count": 1
+  },
+  {
+    "page": 26,
+    "subcat": "RAIL BASKET",
+    "dept": "diger",
+    "folder": "rail-basket",
+    "count": 2
+  },
+  {
+    "page": 27,
+    "subcat": "FRUIT & VEGETABLE CONTAINER",
+    "dept": "diger",
+    "folder": "fruit-vegetable-container",
+    "count": 1
+  },
+  {
+    "page": 30,
+    "subcat": "TEZGAH TİP TEK KAPILI · Portabianco · TYPE SINGLE DOOR · Her kapıda 1 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 8
+  },
+  {
+    "page": 31,
+    "subcat": "TEZGAH TİP İKİ KAPILI · Portabianco · TYPE 2 DOORS · Her kapıda 1 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 8
+  },
+  {
+    "page": 32,
+    "subcat": "TEZGAH TİP ÜÇ KAPILI · Portabianco · COUNTER TYPE 3 DOORS · Her kapıda 1 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 8
+  },
+  {
+    "page": 33,
+    "subcat": "TEZGAH TİP DÖRT KAPILI · Portabianco · TYPE 4 DOORS · Her kapıda 1 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 8
+  },
+  {
+    "page": 34,
+    "subcat": "TEZGAH TİP MİX İKİ KAPILI · Portabianco · COUNTER TYPE MIX · Her kapıda 1 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 4
+  },
+  {
+    "page": 35,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 4
+  },
+  {
+    "page": 36,
+    "subcat": "TEZGAH TİP MİX DÖRT KAPILI · Portabianco · COUNTER TYPE MIX · Tel Raf Dikmeler",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 4
+  },
+  {
+    "page": 37,
+    "subcat": "TEZGAH TİP MİX DÖRT KAPILI · Portabianco · COUNTER TYPE MIX · Tel Raf Dikmeler",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 2
+  },
+  {
+    "page": 38,
+    "subcat": "TEZGAH TİP MİX DÖRT KAPILI · Portabianco · COUNTER TYPE MIX · Tel Raf Dikmeler",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 2
+  },
+  {
+    "page": 39,
+    "subcat": "TEZGAH TİP MİX DÖRT KAPILI · Portabianco · COUNTER TYPE MIX · Tel Raf Dikmeler",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 2
+  },
+  {
+    "page": 40,
+    "subcat": "TEZGAH TİP MİX DÖRT KAPILI · Portabianco · COUNTER TYPE MIX · Tel Raf Dikmeler",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 2
+  },
+  {
+    "page": 41,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır · Tel Raf Dikmeler",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 2
+  },
+  {
+    "page": 42,
+    "subcat": "Portabianco · Her kapıda 1 adet raf bulunmaktadır · Tel Raf Dikmeler",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 2
+  },
+  {
+    "page": 43,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır · Tel Raf Dikmeler",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 2
+  },
+  {
+    "page": 44,
+    "subcat": "Portabianco · Her kapıda 1 adet raf bulunmaktadır · Tel Raf Dikmeler",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 2
+  },
+  {
+    "page": 45,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 2
+  },
+  {
+    "page": 46,
+    "subcat": "R290 PROPANE · Her kapıda 1 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 2
+  },
+  {
+    "page": 47,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 3
+  },
+  {
+    "page": 48,
+    "subcat": "Portabianco · TEZGAH TİP BUZDOLABI / BAR MODELİ · COUNTER  TYPE / BAR MODEL",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 6
+  },
+  {
+    "page": 49,
+    "subcat": "Özel kalıp formlu raf sistemi · Her kapıda 3 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 2
+  },
+  {
+    "page": 50,
+    "subcat": "Özel kalıp formlu raf sistemi · Her kapıda 3 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 2
+  },
+  {
+    "page": 51,
+    "subcat": "Özel kalıp formlu raf sistemi · Her kapıda 3 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 3
+  },
+  {
+    "page": 52,
+    "subcat": "Özel kalıp formlu raf sistemi · Her kapıda 3 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 3
+  },
+  {
+    "page": 53,
+    "subcat": "Özel kalıp formlu raf sistemi · Her kapıda 3 adet raf bulunmaktadır · Buzdolabı iç gövde Poliproplen (PP\\C) hammaddeden üretilmiştir.",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 1
+  },
+  {
+    "page": 54,
+    "subcat": "Özel kalıp formlu raf sistemi · Her kapıda 3 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 4
+  },
+  {
+    "page": 55,
+    "subcat": "Özel kalıp formlu raf sistemi · Her kapıda 3 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 4
+  },
+  {
+    "page": 56,
+    "subcat": "Özel kalıp formlu raf sistemi · Her kapıda 3 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 2
+  },
+  {
+    "page": 57,
+    "subcat": "Özel kalıp formlu raf sistemi",
+    "dept": "istif",
+    "folder": "portashelf",
+    "count": 4
+  },
+  {
+    "page": 58,
+    "subcat": "Özel kalıp formlu raf sistemi",
+    "dept": "istif",
+    "folder": "portashelf",
+    "count": 4
+  },
+  {
+    "page": 59,
+    "subcat": "VERTICAL TYPE DOOR - 30 · Özel kalıp formlu raf sistemi · Her kapıda 3 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 2
+  },
+  {
+    "page": 60,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır · Tel Raf Dikmeler",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 4
+  },
+  {
+    "page": 61,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır · Tel Raf Dikmeler",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 4
+  },
+  {
+    "page": 62,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır · Tel Raf Dikmeler",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 4
+  },
+  {
+    "page": 63,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır · Tel Raf Dikmeler",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 4
+  },
+  {
+    "page": 64,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır · Tel Raf Dikmeler",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 4
+  },
+  {
+    "page": 65,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır · Tel Raf Dikmeler",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 4
+  },
+  {
+    "page": 66,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır · Tel Raf Dikmeler",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 4
+  },
+  {
+    "page": 67,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır · Tel Raf Dikmeler",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 4
+  },
+  {
+    "page": 68,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır · Tel Raf Dikmeler",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 2
+  },
+  {
+    "page": 69,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır · Tel Raf Dikmeler",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 2
+  },
+  {
+    "page": 70,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır · Tel Raf Dikmeler",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 2
+  },
+  {
+    "page": 71,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır · Tel Raf Dikmeler",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 2
+  },
+  {
+    "page": 72,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 2
+  },
+  {
+    "page": 73,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 2
+  },
+  {
+    "page": 74,
+    "subcat": "MAKE-UP YÜKSEK BORULU · Portabianco · HIGH MAKE-UP · Her kapıda 1 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 6
+  },
+  {
+    "page": 75,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 6
+  },
+  {
+    "page": 76,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 6
+  },
+  {
+    "page": 77,
+    "subcat": "CAMLI MAKE-UP · Portabianco · GLAZED  MAKE-UP · Her kapıda 1 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 4
+  },
+  {
+    "page": 78,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 6
+  },
+  {
+    "page": 79,
+    "subcat": "MERMER TABLALI MAKE-UP · Portabianco · MARBLE TOP · Her kapıda 1 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 4
+  },
+  {
+    "page": 80,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır · Tel Raf Dikmeler",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 6
+  },
+  {
+    "page": 82,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 6
+  },
+  {
+    "page": 83,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 6
+  },
+  {
+    "page": 84,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 3
+  },
+  {
+    "page": 85,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 6
+  },
+  {
+    "page": 86,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 6
+  },
+  {
+    "page": 87,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 6
+  },
+  {
+    "page": 88,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 3
+  },
+  {
+    "page": 89,
+    "subcat": "Portabianco · Her kapıda 1 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 6
+  },
+  {
+    "page": 90,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 6
+  },
+  {
+    "page": 91,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 6
+  },
+  {
+    "page": 92,
+    "subcat": "Portabianco · Her kapıda 1 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 6
+  },
+  {
+    "page": 93,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 6
+  },
+  {
+    "page": 94,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 6
+  },
+  {
+    "page": 95,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 6
+  },
+  {
+    "page": 96,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 6
+  },
+  {
+    "page": 97,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır · Tel Raf Dikmeler",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 6
+  },
+  {
+    "page": 98,
+    "subcat": "Her kapıda 1 adet raf bulunmaktadır",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 4
+  },
+  {
+    "page": 99,
+    "subcat": "BAR TİPİ ŞİŞE SOĞUTUCU · Portabianco · BAR REFRIGERATORS",
+    "dept": "sogutma",
+    "folder": "sogutma-ekipmanlari",
+    "count": 3
+  },
+  {
+    "page": 100,
+    "subcat": "Tel Raf Dikmeler",
+    "dept": "istif",
+    "folder": "portashelf",
+    "count": 6
+  },
+  {
+    "page": 101,
+    "subcat": "TEZGAHALTI  SLIM BUZDOLAPLARI · SLIM  REFRIGERATORS · Tel Raf Dikmeler · PASLANMAZ RAF",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 2
+  },
+  {
+    "page": 102,
+    "subcat": "SLIM  REFRIGERATORS · Tel Raf Dikmeler · PASLANMAZ RAF · STAINLESS STEEL SHELF",
+    "dept": "istif",
+    "folder": "portashelf",
+    "count": 3
+  },
+  {
+    "page": 103,
+    "subcat": "TEZGAHALTI  SLIM 2 KAPI BUZDOLABI · SLIM 2 DOORS REFRIGERATOR · Tel Raf Dikmeler · PASLANMAZ RAF",
+    "dept": "sogutma",
+    "folder": "tezgah-alti-sogutma",
+    "count": 2
+  },
+  {
+    "page": 104,
+    "subcat": "PASLANMAZ RAF · STAINLESS STEEL SHELF · GLASS DOOR · SLIM 2 DOORS  REFRIGERATORS",
+    "dept": "istif",
+    "folder": "portashelf",
+    "count": 2
+  },
+  {
+    "page": 105,
+    "subcat": "PASLANMAZ RAF · STAINLESS STEEL SHELF · GLASS DOOR · SLIM 2 DOORS  REFRIGERATORS",
+    "dept": "istif",
+    "folder": "portashelf",
+    "count": 6
+  },
+  {
+    "page": 106,
+    "subcat": "İKİ KAPILI PİZZA BUZDOLABI · Portabianco · 2 DOORS PIZZA REFRIGERATOR",
+    "dept": "sogutma",
+    "folder": "sogutma-ekipmanlari",
+    "count": 4
+  },
+  {
+    "page": 107,
+    "subcat": "Tel Raf Dikmeler",
+    "dept": "istif",
+    "folder": "portashelf",
+    "count": 6
+  },
+  {
+    "page": 108,
+    "subcat": "DÖRT KAPILI PİZZA BUZDOLABI · Portabianco · 4 DOORS PIZZA REFRIGERATOR",
+    "dept": "sogutma",
+    "folder": "sogutma-ekipmanlari",
+    "count": 4
+  },
+  {
+    "page": 109,
+    "subcat": "DÖRT KAPILI PİZZA BUZDOLABI · Portabianco · 4 DOORS PIZZA REFRIGERATOR",
+    "dept": "sogutma",
+    "folder": "sogutma-ekipmanlari",
+    "count": 4
+  },
+  {
+    "page": 110,
+    "subcat": "Tel Raf Dikmeler",
+    "dept": "istif",
+    "folder": "portashelf",
+    "count": 8
+  },
+  {
+    "page": 111,
+    "subcat": "GRANITE PIZZA · REFRIGERATORS",
+    "dept": "sogutma",
+    "folder": "sogutma-ekipmanlari",
+    "count": 8
+  },
+  {
+    "page": 112,
+    "subcat": "GRANITE PIZZA · REFRIGERATORS",
+    "dept": "sogutma",
+    "folder": "sogutma-ekipmanlari",
+    "count": 7
+  },
+  {
+    "page": 190,
+    "subcat": "DAVLUMBAZ FİLTRELERİ · YARDIMCI EKİPMANLAR · HOOD FILTERS",
+    "dept": "istif",
+    "folder": "portashelf",
+    "count": 3
+  },
+  {
+    "page": 191,
+    "subcat": "TEL IZGARALAR · YARDIMCI EKİPMANLAR · WIRE GRIDS",
+    "dept": "istif",
+    "folder": "portashelf",
+    "count": 3
+  }
+]
