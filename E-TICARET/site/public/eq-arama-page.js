@@ -95,6 +95,19 @@
     return String((h && h.brand) || "").trim();
   }
 
+  function plpBrandForHit(h) {
+    if (window.EqDeptCmFacets && typeof window.EqDeptCmFacets.plpCardBrandLabel === "function") {
+      return window.EqDeptCmFacets.plpCardBrandLabel({
+        brand: h.brand,
+        b: h.brand,
+        name: h.name,
+        n: h.name,
+        raw: h,
+      });
+    }
+    return String((h && h.brand) || "").trim();
+  }
+
   function parsePriceFromHit(h) {
     if (!h) return 0;
     if (h.satis_eur_indirimli != null && Number(h.satis_eur_indirimli) > 0) {
@@ -773,9 +786,12 @@
           '">' +
           esc(h.name || "") +
           "</a>" +
-          (h.brand
-            ? '<div class="eq-dept-plp-card__brand">' + esc(h.brand) + "</div>"
-            : "") +
+          (function () {
+            var brandLab = plpBrandForHit(h);
+            return brandLab
+              ? '<div class="eq-dept-plp-card__brand">' + esc(brandLab) + "</div>"
+              : "";
+          })() +
           (h.price || h.satis_eur_indirimli
             ? '<div class="eq-dept-plp-card__price">' + esc(formatPrice(h)) + "</div>"
             : "") +
