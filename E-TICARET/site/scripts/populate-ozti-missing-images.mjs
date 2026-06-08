@@ -46,6 +46,10 @@ const PROXY = {
   "9868.11986.6001": { kod: "9580.1100S.00" },
   /** İki katlı OTKFGE 12090 elektrik — ax-images yok; G/E kardeş SKU */
   "7890.12901.51": { kod: "7890.12901.55" },
+  /** Tek katlı OTKFGE 12090 elektrik — ax-images yok; G/E kardeş SKU */
+  "7890.12908.52": { kod: "7890.12908.54" },
+  /** 700 seri kuzine 12708.12L — ax-images yok; 12908.10 aynı seri */
+  "7865.N1.12708.12L": { kod: "7865.N1.12908.10" },
   /** ATS çay kazanları — ax-images 404; aynı seri kardeş model */
   "8573.CDE3S": { kod: "8573.CDE2S" },
   "8573.CDE4S": { kod: "8573.CDE2S" },
