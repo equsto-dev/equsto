@@ -221,7 +221,7 @@
       dept: "market-reyon",
       label: "Self Servis",
       search:
-        "self-servis|self servis|self-servis-hatti|equsto\\.k|equsto\\.g|standart servis|gastroline|servis raf|servis tezgah|garson bankosu|kuver|salata bar|e-ss37|be/m037|be1/m037|m037-|mx037|pvk|benmari|bain marie|nötr tezgah|notr tezgah|soğuk servis ünitesi|soguk servis unitesi|soğutmalı teşhir ünitesi|sogutmali teshir unitesi|servis hatlari|servis-hatlari",
+        "self-servis|self servis|self-servis-hatti|equsto\\.k|equsto\\.g|ino-|inoksan|i̇noksan|standart servis|gastroline|klasik seri|drop.?in|drop-in|tepsi stand|servis raf|servis tezgah|garson bankosu|kuver|salata bar|e-ss37|be/m037|be1/m037|m037-|mx037|pvk|benmari|bain marie|nötr tezgah|notr tezgah|soğuk servis ünitesi|soguk servis unitesi|soğutmalı teşhir ünitesi|sogutmali teshir unitesi|servis hatlari|servis-hatlari",
     },
     { tip: "icecek-vitrin", dept: "market-reyon", label: "İçecek & Süt", search: "icecek-vitrin|içecek|icecek|süt|sut|drink|milk" },
     { tip: "servis-gerecleri", dept: "set-ustu-mutfak", label: "Servis Gereçleri", search: "servis gereç" },
