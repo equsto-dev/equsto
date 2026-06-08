@@ -27,8 +27,7 @@ const DEPT_DIR = path.join(ROOT, "public/data/dept");
 const OUT_IMG = path.join(ROOT, "public/images/catalog/pimak");
 const MANIFEST = path.join(ROOT, "public/data/pimak/manifest.json");
 
-const BRAND = "Pimak Profesyonel Mutfak";
-const OEM_BRAND = "Pimak";
+const BRAND = "Pimak";
 const BRAND_ID = "pimak";
 const KAYNAK = "pimak";
 const BAYI_ISKONTO = 0.47;
@@ -260,7 +259,6 @@ function toRow(d, bucket, priceMap, kur) {
     dept,
     category,
     brand: BRAND,
-    oem_brand: OEM_BRAND,
     name: d.baslik || `Pimak ${kod}`,
     price,
     fiyat_bekleniyor,
@@ -284,7 +282,10 @@ function toRow(d, bucket, priceMap, kur) {
 }
 
 function isPimakRow(r) {
-  return r && (r.kaynak === KAYNAK || r.brand === BRAND);
+  return (
+    r &&
+    (r.kaynak === KAYNAK || r.brand === BRAND || r.brand === "Pimak Profesyonel Mutfak")
+  );
 }
 
 async function main() {

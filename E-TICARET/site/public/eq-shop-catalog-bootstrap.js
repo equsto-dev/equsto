@@ -6,7 +6,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260608pimak-import";
+  var CATALOG_V = "20260608pimak-brand";
   var __fullMem = null;
   var __fullInflight = null;
   var __deptMem = Object.create(null);
