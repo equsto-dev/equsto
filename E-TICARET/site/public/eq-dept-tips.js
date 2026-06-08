@@ -159,6 +159,13 @@
     { tip: "taban-ve-ara-rafli", dept: "tezgah", label: "Taban ve Ara Raflı", search: "taban raf|ara raf" },
     { tip: "dolapli-tezgah", dept: "tezgah", label: "Dolaplı", search: "dolapli|dolaplı|setalti dolap" },
     {
+      tip: "standart-servis-hatti",
+      dept: "tezgah",
+      label: "Standart Servis Hattı",
+      search:
+        "standart servis|servis hattı|servis hatti|gastroline|klasik seri|garson bankosu|servis raf|servis tezgah|salata bar|kuver|teşhir|teshir|servis buzdolab",
+    },
+    {
       tip: "orta-tip-filtreli-davlumbaz",
       dept: "davlumbaz",
       label: "Orta Tip Filtreli Davlumbaz",
