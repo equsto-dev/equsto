@@ -105,7 +105,7 @@
     "catalog:electrolux:discover": "node scripts/scrape-electrolux-professional.mjs --discover-only",
     "catalog:electrolux:cek": "node scripts/scrape-electrolux-professional.mjs --resume",
     "catalog:electrolux:import": "node scripts/import-electrolux-professional.mjs",
-    "catalog:pimak:import": "node scripts/import-pimak.mjs",
+    "catalog:pimak:fiyat": "python scripts/sync-pimak-fiyat-pdf.py",
     "catalog:pimak:import": "node scripts/import-pimak.mjs",
     "catalog:electrolux:fiyat": "python scripts/sync-electrolux-fiyat-2026.py",
     "catalog:electrolux:untrack-docs": "node scripts/untrack-electrolux-docs.mjs",

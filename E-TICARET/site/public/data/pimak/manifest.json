@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-08T10:17:32.019Z",
+  "generated": "2026-06-08T10:32:52.894Z",
   "brand": "Pimak",
   "dryRun": false,
   "kur_eur_try": 53.5921,
@@ -17,10 +17,10 @@
   },
   "imported": 147,
   "with_image": 147,
-  "with_price": 4,
-  "without_price": 143,
-  "price_file": null,
-  "price_map_entries": 0,
+  "with_price": 141,
+  "without_price": 6,
+  "price_file": "scripts\\data\\pimak-fiyat.json",
+  "price_map_entries": 705,
   "skipped_no_detail": 0,
   "manuel": 4,
   "depts": {
