@@ -238,6 +238,24 @@ function pricingFromListe(listeEur, kur) {
   };
 }
 
+function parsePimakOlculer(d, kod) {
+  const rows = d.teknikDetaylar?.satirlar || [];
+  let row = rows.find((r) => normKod(r["Ürün Kodu"] || "") === normKod(kod));
+  if (!row && rows.length === 1) row = rows[0];
+  const ebat = String(row?.["Ebat (cm)"] || row?.Ebat || "").trim();
+  if (!ebat) return null;
+  const m = ebat.match(/(\d{2,4})\s*[xX×]\s*(\d{2,4})\s*[xX×]\s*(\d{2,4})/);
+  if (!m) return null;
+  const w = Number(m[1]);
+  const dep = Number(m[2]);
+  const h = Number(m[3]);
+  if (!w || !dep || !h) return null;
+  return {
+    olcu_etiket: `${w}×${dep}×${h} cm`,
+    olculer: { genislik_mm: w * 10, derinlik_mm: dep * 10, yukseklik_mm: h * 10 },
+  };
+}
+
 function teknikLines(d) {
   const out = [];
   for (const t of d.temelOzellikler || []) {
@@ -320,6 +338,9 @@ function toRow(d, bucket, priceMap, kur) {
     fiyat_bekleniyor = false;
   }
 
+  const olcu = parsePimakOlculer(d, kod);
+  const pimakGorsel = String(d.gorsel || "").trim();
+
   const id = `${BRAND_ID}__${slug}`;
   const row = {
     id,
@@ -332,6 +353,8 @@ function toRow(d, bucket, priceMap, kur) {
     specs: formatSpecs(d, px, kod),
     aciklama: d.temelOzelliklerMetin || d.metaAciklama || "",
     teknik_ozellikler: teknikLines(d),
+    ...(olcu || {}),
+    pimak_gorsel: /^https?:\/\//i.test(pimakGorsel) ? pimakGorsel : undefined,
     images: images.length ? images : undefined,
     sku: d.urunKodu || kod,
     model: d.urunKodu || kod,
