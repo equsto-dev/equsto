@@ -135,9 +135,20 @@ function resolveImage(inoSku, webByFamily, existingRel) {
   if (web?.imgs?.[0] && !fs.existsSync(cacheDest) && curlBin(web.imgs[0], cacheDest)) {
     return publishImage(cacheDest, inoSku);
   }
-  if (web?.imgs?.[0]) {
+  if (web?.imgs?.[0] && !web.imgs[0].endsWith("/products/")) {
     const tmp = path.join(OUT_IMG_DIR, `.tmp-${equstoSlug(inoSku)}.jpg`);
     if (curlBin(web.imgs[0], tmp)) {
+      const rel = publishImage(tmp, inoSku);
+      if (!dryRun && fs.existsSync(tmp)) fs.unlinkSync(tmp);
+      return rel;
+    }
+  }
+
+  // KBT vb. — aynı aile görseli (servis buzdolabı)
+  const sibling = webByFamily.get("KBH") || webByFamily.get("KBK");
+  if (sibling?.imgs?.[0]) {
+    const tmp = path.join(OUT_IMG_DIR, `.tmp-${equstoSlug(inoSku)}.jpg`);
+    if (curlBin(sibling.imgs[0], tmp)) {
       const rel = publishImage(tmp, inoSku);
       if (!dryRun && fs.existsSync(tmp)) fs.unlinkSync(tmp);
       return rel;
@@ -150,11 +161,11 @@ function resolveImage(inoSku, webByFamily, existingRel) {
 function rewriteSpecs(specs, oldSku, newSku) {
   let s = String(specs || "");
   s = s.replaceAll(oldSku, newSku);
-  s = s.replace(/Kaynak: İnoksan 2026 Yurtiçi Bayi Fiyatları R1/g, `Kaynak: Equsto katalog — ${CATEGORY_LABEL}`);
+  s = s.replace(/Kaynak: İnoksan[^\n]*/gi, `Kaynak: Equsto katalog — ${CATEGORY_LABEL}`);
+  s = s.replace(/Kategori: [^\n]+/g, `Kategori: ${CATEGORY_LABEL}`);
+  s = s.replace(/Teknik Özellikler \(inoksan\.com\)/gi, "Teknik Özellikler");
+  s = s.replace(/\nMarka: Equsto/g, "");
   if (!s.includes("Marka: Equsto")) s += "\nMarka: Equsto";
-  if (!s.includes(CATEGORY_LABEL)) {
-    s = s.replace(/Kategori: [^\n]+/g, `Kategori: ${CATEGORY_LABEL}`);
-  }
   return s;
 }
 
@@ -171,42 +182,67 @@ function toEqustoRow(row, webByFamily) {
       : baseName,
   );
 
-  return {
-    ...row,
+  const keep = [
+    "price",
+    "teknik_ozellikler",
+    "olculer",
+    "olcu_etiket",
+    "liste_fiyati",
+    "liste_fiyati_eur",
+    "alis_fiyati",
+    "alis_fiyati_eur",
+    "satis_fiyati_eur",
+    "satis_eur_indirimli",
+    "iskontolu_fiyat",
+    "bayi_iskonto",
+    "equsto_kar_oran",
+    "para_birimi",
+    "fiyat_kaynagi",
+    "kaynak_fiyat_listesi",
+    "kur_eur_try",
+    "fiyat_tl_net",
+    "fiyat_tl",
+    "kdv_oran",
+    "fiyat_bekleniyor",
+    "vitrin_arka_plan",
+  ];
+  const out = {
     id: `${BRAND_ID}__${slug}`,
+    dept: "tezgah",
+    category: CATEGORY,
     brand: BRAND,
     oem_brand: "İnoksan",
-    category: CATEGORY,
     name,
     sku,
     model: sku,
     urun_kodu: sku,
     stok_no: sku,
-    dept: "tezgah",
     tileId: CATEGORY,
     keywords: [
-      ...new Set([
-        BRAND,
-        sku,
-        inoCode(oldSku),
-        CATEGORY,
-        CATEGORY_LABEL,
-        "servis hattı",
-        "servis hatti",
-        "standart servis",
-        "gastroline",
-        "klasik seri",
-        ...(row.keywords || []).filter((k) => k && k !== "İnoksan"),
-      ]),
+      BRAND,
+      sku,
+      inoCode(oldSku),
+      CATEGORY,
+      CATEGORY_LABEL,
+      "servis hattı",
+      "servis hatti",
+      "standart servis",
+      "gastroline",
+      "klasik seri",
     ],
     specs: rewriteSpecs(row.specs, oldSku, sku),
     aciklama: `${name}\n\nKategori: ${CATEGORY_LABEL}`,
-    images: imgRel ? [imgRel] : row.images || [],
+    images: imgRel ? [imgRel] : [],
     kaynak: KAYNAK,
     inoksan_kaynak_sku: oldSku,
     inoksan_web_id: web?.id || row.inoksan_web_id,
     inoksan_slug: web?.slug || row.inoksan_slug,
   };
+  for (const k of keep) {
+    if (row[k] !== undefined) out[k] = row[k];
+  }
+  out.specs = rewriteSpecs(out.specs, oldSku, sku);
+  return out;
 }
 
 function isTargetRow(row, bases) {

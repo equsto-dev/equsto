@@ -385,6 +385,18 @@
     <priority>0.78</priority>
   </url>
   <url>
+    <loc>https://equsto.com/shop/marka/equsto</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://equsto.com/en/shop/marka/equsto</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+  </url>
+  <url>
     <loc>https://equsto.com/shop/marka/pimak</loc>
     <lastmod>2026-06-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -404,18 +416,6 @@
   </url>
   <url>
     <loc>https://equsto.com/en/shop/marka/portabianco</loc>
-    <lastmod>2026-06-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.78</priority>
-  </url>
-  <url>
-    <loc>https://equsto.com/shop/marka/equsto</loc>
-    <lastmod>2026-06-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://equsto.com/en/shop/marka/equsto</loc>
     <lastmod>2026-06-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.78</priority>
