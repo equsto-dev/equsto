@@ -1,0 +1,447 @@
+{
+  "BKM.12": {
+    "urun_kodu": "BKM.12",
+    "liste_fiyati_eur": 800.0,
+    "pdf_page": 104
+  },
+  "BKM.22": {
+    "urun_kodu": "BKM.22",
+    "liste_fiyati_eur": 1250.0,
+    "pdf_page": 104
+  },
+  "BKM.32": {
+    "urun_kodu": "BKM.32",
+    "liste_fiyati_eur": 1700.0,
+    "pdf_page": 104
+  },
+  "BKM.22S": {
+    "urun_kodu": "BKM.22S",
+    "liste_fiyati_eur": 1800.0,
+    "pdf_page": 105
+  },
+  "BKM.32S": {
+    "urun_kodu": "BKM.32S",
+    "liste_fiyati_eur": 2200.0,
+    "pdf_page": 105
+  },
+  "BPKM.12": {
+    "urun_kodu": "BPKM.12",
+    "liste_fiyati_eur": 1000.0,
+    "pdf_page": 106
+  },
+  "BPKM.12CK": {
+    "urun_kodu": "BPKM.12CK",
+    "liste_fiyati_eur": 1200.0,
+    "pdf_page": 106
+  },
+  "BPKM.22": {
+    "urun_kodu": "BPKM.22",
+    "liste_fiyati_eur": 1800.0,
+    "pdf_page": 106
+  },
+  "BPKM.32": {
+    "urun_kodu": "BPKM.32",
+    "liste_fiyati_eur": 2600.0,
+    "pdf_page": 106
+  },
+  "BPKM.32CK": {
+    "urun_kodu": "BPKM.32CK",
+    "liste_fiyati_eur": 2800.0,
+    "pdf_page": 106
+  },
+  "BPKM.32C": {
+    "urun_kodu": "BPKM.32C",
+    "liste_fiyati_eur": 1700.0,
+    "pdf_page": 106
+  },
+  "BPKM.22S": {
+    "urun_kodu": "BPKM.22S",
+    "liste_fiyati_eur": 2350.0,
+    "pdf_page": 107
+  },
+  "BPKM.32S": {
+    "urun_kodu": "BPKM.32S",
+    "liste_fiyati_eur": 3300.0,
+    "pdf_page": 107
+  },
+  "BPKM.32SCK": {
+    "urun_kodu": "BPKM.32SCK",
+    "liste_fiyati_eur": 3100.0,
+    "pdf_page": 107
+  },
+  "BPKM.42": {
+    "urun_kodu": "BPKM.42",
+    "liste_fiyati_eur": 5300.0,
+    "pdf_page": 108
+  },
+  "BPKM.42A": {
+    "urun_kodu": "BPKM.42A",
+    "liste_fiyati_eur": 5700.0,
+    "pdf_page": 108
+  },
+  "BPKM.130": {
+    "urun_kodu": "BPKM.130",
+    "liste_fiyati_eur": 17000.0,
+    "pdf_page": 108
+  },
+  "BPKM.42S": {
+    "urun_kodu": "BPKM.42S",
+    "liste_fiyati_eur": 5700.0,
+    "pdf_page": 109
+  },
+  "BPKM.42SA": {
+    "urun_kodu": "BPKM.42SA",
+    "liste_fiyati_eur": 6100.0,
+    "pdf_page": 109
+  },
+  "BPKM.130S": {
+    "urun_kodu": "BPKM.130S",
+    "liste_fiyati_eur": 18500.0,
+    "pdf_page": 109
+  },
+  "BDH.30": {
+    "urun_kodu": "BDH.30",
+    "liste_fiyati_eur": 3800.0,
+    "pdf_page": 110
+  },
+  "BDH.50": {
+    "urun_kodu": "BDH.50",
+    "liste_fiyati_eur": 4000.0,
+    "pdf_page": 110
+  },
+  "BDH.45S": {
+    "urun_kodu": "BDH.45S",
+    "liste_fiyati_eur": 4800.0,
+    "pdf_page": 110
+  },
+  "BSZK.2": {
+    "urun_kodu": "BSZK.2",
+    "liste_fiyati_eur": 900.0,
+    "pdf_page": 111
+  },
+  "BSZK.8": {
+    "urun_kodu": "BSZK.8",
+    "liste_fiyati_eur": 2150.0,
+    "pdf_page": 111
+  },
+  "BZK": {
+    "urun_kodu": "BZK",
+    "liste_fiyati_eur": 2150.0,
+    "pdf_page": 111
+  },
+  "BKD.100": {
+    "urun_kodu": "BKD.100",
+    "liste_fiyati_eur": 20000.0,
+    "pdf_page": 112
+  },
+  "BKT.1840": {
+    "urun_kodu": "BKT.1840",
+    "liste_fiyati_eur": 2200.0,
+    "pdf_page": 113
+  },
+  "BKTA.1840": {
+    "urun_kodu": "BKTA.1840",
+    "liste_fiyati_eur": 2700.0,
+    "pdf_page": 113
+  },
+  "BKTA.2500": {
+    "urun_kodu": "BKTA.2500",
+    "liste_fiyati_eur": 5800.0,
+    "pdf_page": 113
+  },
+  "BKTA.3100": {
+    "urun_kodu": "BKTA.3100",
+    "liste_fiyati_eur": 9000.0,
+    "pdf_page": 113
+  },
+  "BTM.100": {
+    "urun_kodu": "BTM.100",
+    "liste_fiyati_eur": 12000.0,
+    "pdf_page": 114
+  },
+  "BTM.200": {
+    "urun_kodu": "BTM.200",
+    "liste_fiyati_eur": 16000.0,
+    "pdf_page": 114
+  },
+  "BTM.400": {
+    "urun_kodu": "BTM.400",
+    "liste_fiyati_eur": 27000.0,
+    "pdf_page": 114
+  },
+  "BTM.400S": {
+    "urun_kodu": "BTM.400S",
+    "liste_fiyati_eur": 34000.0,
+    "pdf_page": 114
+  },
+  "PMK-ST32": {
+    "urun_kodu": "PMK-ST32",
+    "liste_fiyati_eur": 10500.0,
+    "pdf_page": 115
+  },
+  "PMK-ET45": {
+    "urun_kodu": "PMK-ET45",
+    "liste_fiyati_eur": 14500.0,
+    "pdf_page": 115
+  },
+  "BKS.100": {
+    "urun_kodu": "BKS.100",
+    "liste_fiyati_eur": 800.0,
+    "pdf_page": 116
+  },
+  "BKS.150": {
+    "urun_kodu": "BKS.150",
+    "liste_fiyati_eur": 700.0,
+    "pdf_page": 116
+  },
+  "BKB": {
+    "urun_kodu": "BKB",
+    "liste_fiyati_eur": 700.0,
+    "pdf_page": 116
+  },
+  "BKK.50": {
+    "urun_kodu": "BKK.50",
+    "liste_fiyati_eur": 4800.0,
+    "pdf_page": 117
+  },
+  "BKK.100": {
+    "urun_kodu": "BKK.100",
+    "liste_fiyati_eur": 7400.0,
+    "pdf_page": 117
+  },
+  "BKK.150": {
+    "urun_kodu": "BKK.150",
+    "liste_fiyati_eur": 9400.0,
+    "pdf_page": 117
+  },
+  "BHY.5": {
+    "urun_kodu": "BHY.5",
+    "liste_fiyati_eur": 600.0,
+    "pdf_page": 120
+  },
+  "BHY.10": {
+    "urun_kodu": "BHY.10",
+    "liste_fiyati_eur": 840.0,
+    "pdf_page": 120
+  },
+  "BHY.25": {
+    "urun_kodu": "BHY.25",
+    "liste_fiyati_eur": 980.0,
+    "pdf_page": 120
+  },
+  "BHY.35": {
+    "urun_kodu": "BHY.35",
+    "liste_fiyati_eur": 1150.0,
+    "pdf_page": 120
+  },
+  "BHY.50": {
+    "urun_kodu": "BHY.50",
+    "liste_fiyati_eur": 1300.0,
+    "pdf_page": 120
+  },
+  "BHY.75": {
+    "urun_kodu": "BHY.75",
+    "liste_fiyati_eur": 2200.0,
+    "pdf_page": 120
+  },
+  "BHY.100": {
+    "urun_kodu": "BHY.100",
+    "liste_fiyati_eur": 2900.0,
+    "pdf_page": 120
+  },
+  "BHY.135": {
+    "urun_kodu": "BHY.135",
+    "liste_fiyati_eur": 3400.0,
+    "pdf_page": 120
+  },
+  "BHY.235": {
+    "urun_kodu": "BHY.235",
+    "liste_fiyati_eur": 8800.0,
+    "pdf_page": 120
+  },
+  "BHY.10K": {
+    "urun_kodu": "BHY.10K",
+    "liste_fiyati_eur": 990.0,
+    "pdf_page": 121
+  },
+  "BHY.25K": {
+    "urun_kodu": "BHY.25K",
+    "liste_fiyati_eur": 1200.0,
+    "pdf_page": 121
+  },
+  "BHY.35K": {
+    "urun_kodu": "BHY.35K",
+    "liste_fiyati_eur": 1350.0,
+    "pdf_page": 121
+  },
+  "BHY.50K": {
+    "urun_kodu": "BHY.50K",
+    "liste_fiyati_eur": 1550.0,
+    "pdf_page": 121
+  },
+  "BHY.75K": {
+    "urun_kodu": "BHY.75K",
+    "liste_fiyati_eur": 2400.0,
+    "pdf_page": 121
+  },
+  "BHY.100K": {
+    "urun_kodu": "BHY.100K",
+    "liste_fiyati_eur": 3150.0,
+    "pdf_page": 121
+  },
+  "BHY.135K": {
+    "urun_kodu": "BHY.135K",
+    "liste_fiyati_eur": 3650.0,
+    "pdf_page": 121
+  },
+  "BHY.235K": {
+    "urun_kodu": "BHY.235K",
+    "liste_fiyati_eur": 9200.0,
+    "pdf_page": 121
+  },
+  "BSH.35": {
+    "urun_kodu": "BSH.35",
+    "liste_fiyati_eur": 5400.0,
+    "pdf_page": 122
+  },
+  "BSH.50": {
+    "urun_kodu": "BSH.50",
+    "liste_fiyati_eur": 5900.0,
+    "pdf_page": 122
+  },
+  "BSH.75": {
+    "urun_kodu": "BSH.75",
+    "liste_fiyati_eur": 9200.0,
+    "pdf_page": 122
+  },
+  "BSH.135": {
+    "urun_kodu": "BSH.135",
+    "liste_fiyati_eur": 15000.0,
+    "pdf_page": 122
+  },
+  "BSH.235": {
+    "urun_kodu": "BSH.235",
+    "liste_fiyati_eur": 18000.0,
+    "pdf_page": 122
+  },
+  "BM.10S": {
+    "urun_kodu": "BM.10S",
+    "liste_fiyati_eur": 1900.0,
+    "pdf_page": 123
+  },
+  "BM.20S": {
+    "urun_kodu": "BM.20S",
+    "liste_fiyati_eur": 2350.0,
+    "pdf_page": 123
+  },
+  "BM.40S": {
+    "urun_kodu": "BM.40S",
+    "liste_fiyati_eur": 4000.0,
+    "pdf_page": 123
+  },
+  "BM.60S": {
+    "urun_kodu": "BM.60S",
+    "liste_fiyati_eur": 4500.0,
+    "pdf_page": 123
+  },
+  "BM.60": {
+    "urun_kodu": "BM.60",
+    "liste_fiyati_eur": 5700.0,
+    "pdf_page": 123
+  },
+  "BM.40S.3D": {
+    "urun_kodu": "BM.40S.3D",
+    "liste_fiyati_eur": 4350.0,
+    "pdf_page": 123
+  },
+  "BM.60S.3D": {
+    "urun_kodu": "BM.60S.3D",
+    "liste_fiyati_eur": 4850.0,
+    "pdf_page": 123
+  },
+  "BHKT.200": {
+    "urun_kodu": "BHKT.200",
+    "liste_fiyati_eur": 4300.0,
+    "pdf_page": 124
+  },
+  "BHKT.200A": {
+    "urun_kodu": "BHKT.200A",
+    "liste_fiyati_eur": 4700.0,
+    "pdf_page": 124
+  },
+  "BHA.30T": {
+    "urun_kodu": "BHA.30T",
+    "liste_fiyati_eur": 1000.0,
+    "pdf_page": 125
+  },
+  "BHA.40T": {
+    "urun_kodu": "BHA.40T",
+    "liste_fiyati_eur": 1100.0,
+    "pdf_page": 125
+  },
+  "BHA.30": {
+    "urun_kodu": "BHA.30",
+    "liste_fiyati_eur": 1200.0,
+    "pdf_page": 125
+  },
+  "BHA.40": {
+    "urun_kodu": "BHA.40",
+    "liste_fiyati_eur": 1300.0,
+    "pdf_page": 125
+  },
+  "BPS.10": {
+    "urun_kodu": "BPS.10",
+    "liste_fiyati_eur": 2300.0,
+    "pdf_page": 126
+  },
+  "BPS.25": {
+    "urun_kodu": "BPS.25",
+    "liste_fiyati_eur": 2600.0,
+    "pdf_page": 126
+  },
+  "BPS.35": {
+    "urun_kodu": "BPS.35",
+    "liste_fiyati_eur": 2800.0,
+    "pdf_page": 126
+  },
+  "BPS.50": {
+    "urun_kodu": "BPS.50",
+    "liste_fiyati_eur": 4900.0,
+    "pdf_page": 126
+  },
+  "BSU": {
+    "urun_kodu": "BSU",
+    "liste_fiyati_eur": 1250.0,
+    "pdf_page": 127
+  },
+  "BSA": {
+    "urun_kodu": "BSA",
+    "liste_fiyati_eur": 1350.0,
+    "pdf_page": 127
+  },
+  "BPD": {
+    "urun_kodu": "BPD",
+    "liste_fiyati_eur": 1250.0,
+    "pdf_page": 127
+  },
+  "BPD.A": {
+    "urun_kodu": "BPD.A",
+    "liste_fiyati_eur": 1350.0,
+    "pdf_page": 127
+  },
+  "BSD": {
+    "urun_kodu": "BSD",
+    "liste_fiyati_eur": 420.0,
+    "pdf_page": 128
+  },
+  "BED": {
+    "urun_kodu": "BED",
+    "liste_fiyati_eur": 2200.0,
+    "pdf_page": 129
+  },
+  "BED.T": {
+    "urun_kodu": "BED.T",
+    "liste_fiyati_eur": 2300.0,
+    "pdf_page": 129
+  }
+}

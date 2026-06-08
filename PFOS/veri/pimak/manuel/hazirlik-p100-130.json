@@ -1,0 +1,326 @@
+{
+  "_aciklama": "Pimak katalog 2026 s.100–130 — sitede ayrı ürün sayfası olmayan hazırlık modelleri; teknik özellikler PDF, görseller aile ürününden.",
+  "products": [
+    {
+      "slug": "bpkm-12-paslanmaz-kiyma-makinesi",
+      "urunKodu": "BPKM.12",
+      "baslik": "BPKM.12 Paslanmaz Kıyma Makinesi",
+      "url": "https://www.pimak.com/urunler/endustriyel-kiyma-makinesi",
+      "kategori": { "slug": "endustriyel-kiyma-makinesi", "label": "Endüstriyel Kıyma Makinesi" },
+      "liste_fiyati_eur": 1000,
+      "gorsel": "https://www.pimak.com/assets/images/urunler/20968BPKM.12M.jpg",
+      "gorselYerel": { "fileName": "bpkm-22-paslanmaz-kiyma-makinesi.jpg" },
+      "temelOzellikler": [
+        "Tamamen paslanmaz çelik",
+        "Kolay temizlenebilir tasarım",
+        "Sökülebilir bilezik, ayna, bıçak ve helezon"
+      ],
+      "teknikDetaylar": {
+        "satirlar": [{
+          "Ürün Kodu": "BPKM.12",
+          "Kapasite (Kg/Saat)": "100",
+          "Voltaj (Volt/Hz)": "220 / 50-60",
+          "Güç (kW/hp)": "0,55 / 0,7",
+          "Ağırlık (Kg.)": "29",
+          "Ebat (mm)": "590x270x320"
+        }]
+      },
+      "kaynak_notu": "Pimak katalog 2026 s.106; web sitesinde BPKM.12M/12CK ayrı listeleniyor."
+    },
+    {
+      "slug": "bpkm-12ck-paslanmaz-cikma-kafa-kiyma-makinesi",
+      "urunKodu": "BPKM.12CK",
+      "baslik": "BPKM.12CK Paslanmaz Çıkma Kafa Kıyma Makinesi",
+      "url": "https://www.pimak.com/bpkm-12m-paslanmaz-cikma-kafa-kiyma-makinesi",
+      "kategori": { "slug": "endustriyel-kiyma-makinesi", "label": "Endüstriyel Kıyma Makinesi" },
+      "liste_fiyati_eur": 1200,
+      "gorsel": "https://www.pimak.com/assets/images/urunler/20968BPKM.12M.jpg",
+      "gorselYerel": { "fileName": "bpkm-12m-paslanmaz-cikma-kafa-kiyma-makinesi.jpg" },
+      "temelOzellikler": [
+        "Tamamen paslanmaz çelik",
+        "Kolay temizlenebilir tasarım",
+        "Sökülebilir bilezik, ayna, bıçak ve helezon",
+        "Çıkma kafa ünitesi"
+      ],
+      "teknikDetaylar": {
+        "satirlar": [{
+          "Ürün Kodu": "BPKM.12CK",
+          "Kapasite (Kg/Saat)": "100",
+          "Voltaj (Volt/Hz)": "220 / 50-60",
+          "Güç (kW/hp)": "0,55 / 0,7",
+          "Ağırlık (Kg.)": "29",
+          "Ebat (mm)": "590x270x320"
+        }]
+      },
+      "kaynak_notu": "Pimak katalog 2026 s.106; fiyat listesi kodu BPKM.12CK."
+    },
+    {
+      "slug": "bpkm-32sck-paslanmaz-sogutuculu-cikma-kafa-kiyma-makinesi",
+      "urunKodu": "BPKM.32SCK",
+      "baslik": "BPKM.32SCK Paslanmaz Soğutuculu Çıkma Kafa Kıyma Makinesi",
+      "url": "https://www.pimak.com/bpkm-32s-paslanmaz-sogutuculu-kiyma-makinesi",
+      "kategori": { "slug": "endustriyel-kiyma-makinesi", "label": "Endüstriyel Kıyma Makinesi" },
+      "liste_fiyati_eur": 3100,
+      "gorsel": "https://www.pimak.com/assets/images/urunler/9836BPKM.32S.jpg",
+      "gorselYerel": { "fileName": "bpkm-32s-paslanmaz-sogutuculu-kiyma-makinesi.jpg" },
+      "temelOzellikler": [
+        "Tamamen paslanmaz çelik",
+        "Dijital göstergeli soğutma sistemi",
+        "Çıkma kafa ünitesi",
+        "Sökülebilir bilezik, ayna, bıçak ve helezon"
+      ],
+      "teknikDetaylar": {
+        "satirlar": [{
+          "Ürün Kodu": "BPKM.32SCK",
+          "Kapasite (Kg/Saat)": "600",
+          "Voltaj (Volt/Hz)": "220-380 / 50-60",
+          "Güç (kW/hp)": "2,2-3 / 3-4",
+          "Ağırlık (Kg.)": "87",
+          "Ebat (mm)": "860x380x510"
+        }]
+      },
+      "kaynak_notu": "Pimak katalog 2026 s.107; fiyat listesi kodu BPKM.32SCK."
+    },
+    {
+      "slug": "bdh-45s-devrilir-humus-makinesi",
+      "urunKodu": "BDH.45S",
+      "baslik": "BDH.45S Devrilir Humus Makinesi (Hız Ayarlı)",
+      "url": "https://www.pimak.com/bdh-50-devrilir-humus-makinesi",
+      "kategori": { "slug": "humus-makinesi", "label": "Humus Makinesi" },
+      "liste_fiyati_eur": 4800,
+      "gorsel": "https://www.pimak.com/assets/images/urunler/29799BDH.50.jpg",
+      "gorselYerel": { "fileName": "bdh-50-devrilir-humus-makinesi.jpg" },
+      "temelOzellikler": [
+        "Tamamen paslanmaz çelik",
+        "Kolay ürün boşaltma",
+        "Ayarlanabilir hız kontrol sistemi",
+        "600–3000 RPM devir aralığı"
+      ],
+      "teknikDetaylar": {
+        "satirlar": [{
+          "Ürün Kodu": "BDH.45S",
+          "Kapasite (Lt)": "Max 45",
+          "Devir": "600-3000 RPM",
+          "Voltaj (Volt/Hz)": "380 / 50-60",
+          "Güç (kW/hp)": "7,5 / 10",
+          "Ağırlık (Kg.)": "100",
+          "Ebat (mm)": "700x550x1200"
+        }]
+      },
+      "kaynak_notu": "Pimak katalog 2026 s.110; hız ayarlı BDH.45S — sitede ayrı sayfa yok."
+    },
+    {
+      "slug": "bkt-1840-kemik-testeresi",
+      "urunKodu": "BKT.1840",
+      "baslik": "BKT.1840 Kemik Testeresi",
+      "url": "https://www.pimak.com/bkt-paslanmaz-kemik-testeresi",
+      "kategori": { "slug": "et-ve-kemik-testeresi", "label": "Et ve Kemik Testeresi" },
+      "liste_fiyati_eur": 2200,
+      "gorsel": "https://www.pimak.com/assets/images/urunler/29799BKT.jpg",
+      "gorselYerel": { "fileName": "bkt-paslanmaz-kemik-testeresi.jpg" },
+      "temelOzellikler": [
+        "Kolay temizlenebilir tasarım",
+        "Ayarlanabilir şerit gerginliği",
+        "Frenli motor seçeneği",
+        "Acil durdurma düğmesi"
+      ],
+      "teknikDetaylar": {
+        "satirlar": [{
+          "Ürün Kodu": "BKT.1840",
+          "Max. Kesme Yüksekliği": "300 mm",
+          "Voltaj (Volt/Hz)": "220-380 / 50-60",
+          "Güç (kW/hp)": "1,5 / 2",
+          "Ağırlık (Kg.)": "70",
+          "Ebat (mm)": "660x560x1040"
+        }]
+      },
+      "kaynak_notu": "Pimak katalog 2026 s.113; sitede yalnızca genel BKT sayfası var."
+    },
+    {
+      "slug": "bkta-1840-kemik-testeresi",
+      "urunKodu": "BKTA.1840",
+      "baslik": "BKTA.1840 Kemik Testeresi",
+      "url": "https://www.pimak.com/bkt-paslanmaz-kemik-testeresi",
+      "kategori": { "slug": "et-ve-kemik-testeresi", "label": "Et ve Kemik Testeresi" },
+      "liste_fiyati_eur": 2700,
+      "gorsel": "https://www.pimak.com/assets/images/urunler/29799BKT.jpg",
+      "gorselYerel": { "fileName": "bkt-paslanmaz-kemik-testeresi.jpg" },
+      "temelOzellikler": [
+        "Kolay temizlenebilir tasarım",
+        "Ayarlanabilir şerit gerginliği",
+        "Frenli ve frensiz motor seçeneği",
+        "Acil durdurma düğmesi"
+      ],
+      "teknikDetaylar": {
+        "satirlar": [{
+          "Ürün Kodu": "BKTA.1840",
+          "Max. Kesme Yüksekliği": "300 mm",
+          "Voltaj (Volt/Hz)": "220-380 / 50-60",
+          "Güç (kW/hp)": "1,5 / 2",
+          "Ağırlık (Kg.)": "80",
+          "Ebat (mm)": "660x700x1600"
+        }]
+      },
+      "kaynak_notu": "Pimak katalog 2026 s.113."
+    },
+    {
+      "slug": "bks-150-kofte-basma-makinesi",
+      "urunKodu": "BKS.150",
+      "baslik": "BKS.150 Köfte Basma Makinesi",
+      "url": "https://www.pimak.com/bks-100-adana-kebap-makinasi",
+      "kategori": { "slug": "set-ustu-mutfak-ekipmanlari", "label": "Set Üstü Mutfak Ekipmanları" },
+      "liste_fiyati_eur": 900,
+      "gorsel": "https://www.pimak.com/assets/images/urunler/302689.jpg",
+      "gorselYerel": { "fileName": "bks-100-adana-kebap-makinasi.jpg" },
+      "temelOzellikler": [
+        "Paslanmaz çelik",
+        "Kolay temizlenebilir tasarım",
+        "Manuel itme kolu",
+        "Hamburger veya kasap köftesi basımına uygun kalıplar"
+      ],
+      "teknikDetaylar": {
+        "satirlar": [{
+          "Ürün Kodu": "BKS.150",
+          "Kapasite (Gr)": "80 - 150",
+          "Voltaj (Volt/Watt)": "220 / 40",
+          "Ağırlık (Kg.)": "15",
+          "Ebat (mm)": "210x590x450"
+        }]
+      },
+      "kaynak_notu": "Pimak katalog 2026 s.116."
+    },
+    {
+      "slug": "bkb-adana-kebap-makinesi",
+      "urunKodu": "BKB",
+      "baslik": "BKB Adana Kebap Makinesi",
+      "url": "https://www.pimak.com/bks-100-adana-kebap-makinasi",
+      "kategori": { "slug": "set-ustu-mutfak-ekipmanlari", "label": "Set Üstü Mutfak Ekipmanları" },
+      "liste_fiyati_eur": 700,
+      "gorsel": "https://www.pimak.com/assets/images/urunler/302689.jpg",
+      "gorselYerel": { "fileName": "bks-100-adana-kebap-makinasi.jpg" },
+      "temelOzellikler": [
+        "Paslanmaz çelik",
+        "Manuel itme kolu",
+        "Isıtmalı kalıp",
+        "3×30 köfte veya 100/180 g hamburger basımı"
+      ],
+      "teknikDetaylar": {
+        "satirlar": [{
+          "Ürün Kodu": "BKB",
+          "Kapasite (Kg/Hazne)": "2",
+          "Gramaj Aralığı (Gr)": "100 / 180 Hamburger, 3 x 30 Köfte",
+          "Çap (mm)": "100 / 110",
+          "Kalınlık (Mm)": "15/20",
+          "Ağırlık (Kg.)": "15",
+          "Ebat (mm)": "200x530x470"
+        }]
+      },
+      "kaynak_notu": "Pimak katalog 2026 s.116."
+    },
+    {
+      "slug": "bha-30t-paslanmaz-hamur-acma-makinesi",
+      "urunKodu": "BHA.30T",
+      "baslik": "BHA.30T Paslanmaz Hamur Açma Makinesi (Tekli)",
+      "url": "https://www.pimak.com/urunler/hamur-yogurma-makinesi",
+      "kategori": { "slug": "hamur-yogurma-makinesi", "label": "Hamur Yoğurma Makinesi" },
+      "liste_fiyati_eur": 1000,
+      "gorselYerel": { "fileName": "bhy-10-hamur-yogurma-makinesi.jpg" },
+      "temelOzellikler": [
+        "Tamamen paslanmaz çelik",
+        "Merdane kalınlık ayarı",
+        "Kolay temizlenebilir tasarım",
+        "Tekli merdane — 30 cm kapasite"
+      ],
+      "teknikDetaylar": {
+        "satirlar": [{
+          "Ürün Kodu": "BHA.30T",
+          "Kapasite (Cm)": "30",
+          "Merdane": "Tekli - Single",
+          "Voltaj (Volt/Hz)": "220 / 50-60",
+          "Güç (kW/hp)": "0,37 / 0,5",
+          "Ağırlık (Kg.)": "28",
+          "Ebat (mm)": "430x420x400"
+        }]
+      },
+      "kaynak_notu": "Pimak katalog 2026 s.125; hamur açma serisi sitede yok."
+    },
+    {
+      "slug": "bha-40t-paslanmaz-hamur-acma-makinesi",
+      "urunKodu": "BHA.40T",
+      "baslik": "BHA.40T Paslanmaz Hamur Açma Makinesi (Tekli)",
+      "url": "https://www.pimak.com/urunler/hamur-yogurma-makinesi",
+      "kategori": { "slug": "hamur-yogurma-makinesi", "label": "Hamur Yoğurma Makinesi" },
+      "liste_fiyati_eur": 1100,
+      "gorselYerel": { "fileName": "bhy-10-hamur-yogurma-makinesi.jpg" },
+      "temelOzellikler": [
+        "Tamamen paslanmaz çelik",
+        "Merdane kalınlık ayarı",
+        "Tekli merdane — 40 cm kapasite"
+      ],
+      "teknikDetaylar": {
+        "satirlar": [{
+          "Ürün Kodu": "BHA.40T",
+          "Kapasite (Cm)": "40",
+          "Merdane": "Tekli - Single",
+          "Voltaj (Volt/Hz)": "220 / 50-60",
+          "Güç (kW/hp)": "0,37 / 0,5",
+          "Ağırlık (Kg.)": "30",
+          "Ebat (mm)": "520x430x400"
+        }]
+      },
+      "kaynak_notu": "Pimak katalog 2026 s.125."
+    },
+    {
+      "slug": "bha-30-paslanmaz-hamur-acma-makinesi",
+      "urunKodu": "BHA.30",
+      "baslik": "BHA.30 Paslanmaz Hamur Açma Makinesi (Çiftli)",
+      "url": "https://www.pimak.com/urunler/hamur-yogurma-makinesi",
+      "kategori": { "slug": "hamur-yogurma-makinesi", "label": "Hamur Yoğurma Makinesi" },
+      "liste_fiyati_eur": 1200,
+      "gorselYerel": { "fileName": "bhy-10-hamur-yogurma-makinesi.jpg" },
+      "temelOzellikler": [
+        "Tamamen paslanmaz çelik",
+        "Merdane kalınlık ayarı",
+        "Çiftli merdane — 30 cm kapasite"
+      ],
+      "teknikDetaylar": {
+        "satirlar": [{
+          "Ürün Kodu": "BHA.30",
+          "Kapasite (Cm)": "30",
+          "Merdane": "Çiftli - Double",
+          "Voltaj (Volt/Hz)": "220 / 50-60",
+          "Güç (kW/hp)": "0,37 / 0,5",
+          "Ağırlık (Kg.)": "40",
+          "Ebat (mm)": "450x420x580"
+        }]
+      },
+      "kaynak_notu": "Pimak katalog 2026 s.125."
+    },
+    {
+      "slug": "bha-40-paslanmaz-hamur-acma-makinesi",
+      "urunKodu": "BHA.40",
+      "baslik": "BHA.40 Paslanmaz Hamur Açma Makinesi (Çiftli)",
+      "url": "https://www.pimak.com/urunler/hamur-yogurma-makinesi",
+      "kategori": { "slug": "hamur-yogurma-makinesi", "label": "Hamur Yoğurma Makinesi" },
+      "liste_fiyati_eur": 1300,
+      "gorselYerel": { "fileName": "bhy-10-hamur-yogurma-makinesi.jpg" },
+      "temelOzellikler": [
+        "Tamamen paslanmaz çelik",
+        "Merdane kalınlık ayarı",
+        "Çiftli merdane — 40 cm kapasite"
+      ],
+      "teknikDetaylar": {
+        "satirlar": [{
+          "Ürün Kodu": "BHA.40",
+          "Kapasite (Cm)": "40",
+          "Merdane": "Çiftli - Double",
+          "Voltaj (Volt/Hz)": "220 / 50-60",
+          "Güç (kW/hp)": "0,37 / 0,5",
+          "Ağırlık (Kg.)": "45",
+          "Ebat (mm)": "540x450x640"
+        }]
+      },
+      "kaynak_notu": "Pimak katalog 2026 s.125."
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+[
+  {
+    "k": "BPKM.12",
+    "code": "BPKM.12",
+    "page": 106,
+    "price": 1000
+  },
+  {
+    "k": "BPKM.12CK",
+    "code": "BPKM.12CK",
+    "page": 106,
+    "price": 1200
+  },
+  {
+    "k": "BPKM.32CK",
+    "code": "BPKM.32CK",
+    "page": 106,
+    "price": 2800
+  },
+  {
+    "k": "BPKM.32SCK",
+    "code": "BPKM.32SCK",
+    "page": 107,
+    "price": 3100
+  },
+  {
+    "k": "BPKM.42SA",
+    "code": "BPKM.42SA",
+    "page": 109,
+    "price": 6100
+  },
+  {
+    "k": "BDH.45S",
+    "code": "BDH.45S",
+    "page": 110,
+    "price": 4800
+  },
+  {
+    "k": "BKT.1840",
+    "code": "BKT.1840",
+    "page": 113,
+    "price": 2200
+  },
+  {
+    "k": "BKTA.1840",
+    "code": "BKTA.1840",
+    "page": 113,
+    "price": 2700
+  },
+  {
+    "k": "BKS.150",
+    "code": "BKS.150",
+    "page": 116,
+    "price": 700
+  },
+  {
+    "k": "BKB",
+    "code": "BKB",
+    "page": 116,
+    "price": 700
+  },
+  {
+    "k": "BHA.30T",
+    "code": "BHA.30T",
+    "page": 125,
+    "price": 1000
+  },
+  {
+    "k": "BHA.40T",
+    "code": "BHA.40T",
+    "page": 125,
+    "price": 1100
+  },
+  {
+    "k": "BHA.30",
+    "code": "BHA.30",
+    "page": 125,
+    "price": 1200
+  },
+  {
+    "k": "BHA.40",
+    "code": "BHA.40",
+    "page": 125,
+    "price": 1300
+  }
+]
