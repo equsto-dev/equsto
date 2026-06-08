@@ -1,8 +1,8 @@
 {
-  "generated": "2026-06-08T12:09:11.305Z",
+  "generated": "2026-06-08T19:07:56.738Z",
   "brand": "Pimak",
   "dryRun": false,
-  "kur_eur_try": 53.5921,
+  "kur_eur_try": 53.1796,
   "tcmb_fallback": false,
   "bayi_iskonto": 0.47,
   "odeme_carpani": 0.53,
@@ -21,7 +21,7 @@
   "with_price": 231,
   "without_price": 25,
   "price_file": "scripts\\data\\pimak-fiyat.json",
-  "price_map_entries": 705,
+  "price_map_entries": 1020,
   "skipped_no_detail": 0,
   "manuel": 16,
   "depts": {

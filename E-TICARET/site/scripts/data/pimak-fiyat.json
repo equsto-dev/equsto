@@ -6,2828 +6,5107 @@
     "iskonto_yuzde": 47,
     "odeme_carpani": 0.53,
     "kar_yuzde": 5,
-    "toplam_pdf_satir": 705,
-    "katalog_eslesen": 477
+    "toplam_pdf_satir": 1020,
+    "katalog_eslesen": 484
   },
   "134A": {
     "urun_kodu": "134a",
-    "liste_fiyati_eur": 5600
+    "liste_fiyati_eur": 2200.0,
+    "pdf_page": 180
   },
   "150X90X85/130": {
     "urun_kodu": "150x90x85/130",
-    "liste_fiyati_eur": 2800
+    "liste_fiyati_eur": 2600.0,
+    "pdf_page": 149
   },
   "155X105X90/70": {
     "urun_kodu": "155x105x90/70",
-    "liste_fiyati_eur": 3700
+    "liste_fiyati_eur": 3700.0,
+    "pdf_page": 81
   },
   "170MM": {
     "urun_kodu": "170mm",
-    "liste_fiyati_eur": 256
+    "liste_fiyati_eur": 256.0,
+    "pdf_page": 201
   },
   "217X105X90/70": {
     "urun_kodu": "217x105x90/70",
-    "liste_fiyati_eur": 5800
+    "liste_fiyati_eur": 5800.0,
+    "pdf_page": 81
   },
   "220X100/12": {
     "urun_kodu": "220x100/12",
-    "liste_fiyati_eur": 66
+    "liste_fiyati_eur": 60.0,
+    "pdf_page": 202
   },
   "22B001/1S-GN": {
     "urun_kodu": "22B001/1S-GN",
-    "liste_fiyati_eur": 1600
+    "liste_fiyati_eur": 1600.0,
+    "pdf_page": 143
+  },
+  "22B001/1S-GN(1/1GN)": {
+    "urun_kodu": "22B001/1S-GN(1/1GN)",
+    "liste_fiyati_eur": 1600.0,
+    "pdf_page": 143
   },
   "22B001/1S-GN/MN": {
     "urun_kodu": "22B001/1S-GN/MN",
-    "liste_fiyati_eur": 1500
+    "liste_fiyati_eur": 1500.0,
+    "pdf_page": 143
+  },
+  "22B001/1S-GN/MN(1/1GN)": {
+    "urun_kodu": "22B001/1S-GN/MN(1/1GN)",
+    "liste_fiyati_eur": 1500.0,
+    "pdf_page": 143
   },
   "22B001S-GN": {
     "urun_kodu": "22B001S-GN",
-    "liste_fiyati_eur": 1700
+    "liste_fiyati_eur": 1700.0,
+    "pdf_page": 143
+  },
+  "22B001S-GN(2/1GN)": {
+    "urun_kodu": "22B001S-GN(2/1GN)",
+    "liste_fiyati_eur": 1700.0,
+    "pdf_page": 143
   },
   "22B001SO-GN": {
     "urun_kodu": "22B001SO-GN",
-    "liste_fiyati_eur": 2100
+    "liste_fiyati_eur": 2100.0,
+    "pdf_page": 143
+  },
+  "22B001SO-GN(2/1GN)": {
+    "urun_kodu": "22B001SO-GN(2/1GN)",
+    "liste_fiyati_eur": 2100.0,
+    "pdf_page": 143
   },
   "22B002S-GN": {
     "urun_kodu": "22B002S-GN",
-    "liste_fiyati_eur": 2800
+    "liste_fiyati_eur": 2800.0,
+    "pdf_page": 143
+  },
+  "22B002S-GN(2/1GN)": {
+    "urun_kodu": "22B002S-GN(2/1GN)",
+    "liste_fiyati_eur": 2800.0,
+    "pdf_page": 143
   },
   "22B002SO-GN": {
     "urun_kodu": "22B002SO-GN",
-    "liste_fiyati_eur": 3900
+    "liste_fiyati_eur": 3900.0,
+    "pdf_page": 143
+  },
+  "22B002SO-GN(2/1GN)": {
+    "urun_kodu": "22B002SO-GN(2/1GN)",
+    "liste_fiyati_eur": 3900.0,
+    "pdf_page": 143
   },
   "22CBF0S-60.4C": {
     "urun_kodu": "22CBF0S-60.4C",
-    "liste_fiyati_eur": 2950
+    "liste_fiyati_eur": 2950.0,
+    "pdf_page": 139
   },
   "22CBF0S-60.6C": {
     "urun_kodu": "22CBF0S-60.6C",
-    "liste_fiyati_eur": 3550
+    "liste_fiyati_eur": 3550.0,
+    "pdf_page": 139
   },
   "22CBF0S-70.4C": {
     "urun_kodu": "22CBF0S-70.4C",
-    "liste_fiyati_eur": 3150
+    "liste_fiyati_eur": 3150.0,
+    "pdf_page": 139
   },
   "22CBF0S-70.6C": {
     "urun_kodu": "22CBF0S-70.6C",
-    "liste_fiyati_eur": 4000
+    "liste_fiyati_eur": 4000.0,
+    "pdf_page": 139
   },
   "22CKS1S-75": {
     "urun_kodu": "22CKS1S-75",
-    "liste_fiyati_eur": 4000
+    "liste_fiyati_eur": 4000.0,
+    "pdf_page": 147
   },
   "22CKS2S-75": {
     "urun_kodu": "22CKS2S-75",
-    "liste_fiyati_eur": 4600
+    "liste_fiyati_eur": 4600.0,
+    "pdf_page": 147
   },
   "22CKS3S-75": {
     "urun_kodu": "22CKS3S-75",
-    "liste_fiyati_eur": 5200
+    "liste_fiyati_eur": 5200.0,
+    "pdf_page": 147
   },
   "22DBF1C-GN": {
     "urun_kodu": "22DBF1C-GN",
-    "liste_fiyati_eur": 2200
+    "liste_fiyati_eur": 2200.0,
+    "pdf_page": 132
   },
   "22DBF1S-GN": {
     "urun_kodu": "22DBF1S-GN",
-    "liste_fiyati_eur": 1900
+    "liste_fiyati_eur": 1900.0,
+    "pdf_page": 132
   },
   "22DBF1S/1S-GN": {
     "urun_kodu": "22DBF1S/1S-GN",
-    "liste_fiyati_eur": 1800
+    "liste_fiyati_eur": 1800.0,
+    "pdf_page": 132
   },
   "22DBF2C-GN": {
     "urun_kodu": "22DBF2C-GN",
-    "liste_fiyati_eur": 3250
+    "liste_fiyati_eur": 3250.0,
+    "pdf_page": 133
   },
   "22DBF2S-GN": {
     "urun_kodu": "22DBF2S-GN",
-    "liste_fiyati_eur": 2750
+    "liste_fiyati_eur": 2750.0,
+    "pdf_page": 133
   },
   "22DBS1C-DRY": {
     "urun_kodu": "22DBS1C-DRY",
-    "liste_fiyati_eur": 5000
+    "liste_fiyati_eur": 5000.0,
+    "pdf_page": 135
   },
   "22DBS1C-GN.35": {
     "urun_kodu": "22DBS1C-GN.35",
-    "liste_fiyati_eur": 2650
+    "liste_fiyati_eur": 2650.0,
+    "pdf_page": 134
   },
   "22DBS1C-GN.45": {
     "urun_kodu": "22DBS1C-GN.45",
-    "liste_fiyati_eur": 3300
+    "liste_fiyati_eur": 3300.0,
+    "pdf_page": 134
   },
   "22DBS1S-GN": {
     "urun_kodu": "22DBS1S-GN",
-    "liste_fiyati_eur": 2350
+    "liste_fiyati_eur": 2350.0,
+    "pdf_page": 132
   },
   "22DBS2C-DRY": {
     "urun_kodu": "22DBS2C-DRY",
-    "liste_fiyati_eur": 6800
+    "liste_fiyati_eur": 6800.0,
+    "pdf_page": 135
   },
   "22DBS2C-GN.35": {
     "urun_kodu": "22DBS2C-GN.35",
-    "liste_fiyati_eur": 3650
+    "liste_fiyati_eur": 3650.0,
+    "pdf_page": 134
   },
   "22DBS2C-GN.45": {
     "urun_kodu": "22DBS2C-GN.45",
-    "liste_fiyati_eur": 3950
+    "liste_fiyati_eur": 3950.0,
+    "pdf_page": 134
   },
   "22DBS2S-GN": {
     "urun_kodu": "22DBS2S-GN",
-    "liste_fiyati_eur": 3450
+    "liste_fiyati_eur": 3450.0,
+    "pdf_page": 133
   },
   "22DDF1S-GN": {
     "urun_kodu": "22DDF1S-GN",
-    "liste_fiyati_eur": 2250
+    "liste_fiyati_eur": 2250.0,
+    "pdf_page": 132
   },
   "22DDF2S-GN": {
     "urun_kodu": "22DDF2S-GN",
-    "liste_fiyati_eur": 3400
+    "liste_fiyati_eur": 3400.0,
+    "pdf_page": 133
   },
   "22DSI-120": {
     "urun_kodu": "22DSI-120",
-    "liste_fiyati_eur": 1600
+    "liste_fiyati_eur": 1600.0,
+    "pdf_page": 145
   },
   "22DSI-50": {
     "urun_kodu": "22DSI-50",
-    "liste_fiyati_eur": 1350
+    "liste_fiyati_eur": 1350.0,
+    "pdf_page": 145
   },
   "22DSI-80": {
     "urun_kodu": "22DSI-80",
-    "liste_fiyati_eur": 1450
+    "liste_fiyati_eur": 1450.0,
+    "pdf_page": 145
   },
   "22DSS-120": {
     "urun_kodu": "22DSS-120",
-    "liste_fiyati_eur": 2100
+    "liste_fiyati_eur": 2100.0,
+    "pdf_page": 145
   },
   "22DSS-50": {
     "urun_kodu": "22DSS-50",
-    "liste_fiyati_eur": 1650
+    "liste_fiyati_eur": 1650.0,
+    "pdf_page": 145
   },
   "22DSS-80": {
     "urun_kodu": "22DSS-80",
-    "liste_fiyati_eur": 1850
+    "liste_fiyati_eur": 1850.0,
+    "pdf_page": 145
   },
   "22KTS-40": {
     "urun_kodu": "22KTS-40",
-    "liste_fiyati_eur": 720
+    "liste_fiyati_eur": 720.0,
+    "pdf_page": 145
   },
   "22P0F0B-SC": {
     "urun_kodu": "22P0F0B-SC",
-    "liste_fiyati_eur": 1950
+    "liste_fiyati_eur": 1950.0,
+    "pdf_page": 146
   },
   "22P0F0B-SO": {
     "urun_kodu": "22P0F0B-SO",
-    "liste_fiyati_eur": 2600
+    "liste_fiyati_eur": 2600.0,
+    "pdf_page": 146
   },
   "22P0F0D-SC": {
     "urun_kodu": "22P0F0D-SC",
-    "liste_fiyati_eur": 1950
+    "liste_fiyati_eur": 1950.0,
+    "pdf_page": 146
   },
   "22P0F0D-SO": {
     "urun_kodu": "22P0F0D-SO",
-    "liste_fiyati_eur": 2600
+    "liste_fiyati_eur": 2600.0,
+    "pdf_page": 146
   },
   "22P0F3B-SC": {
     "urun_kodu": "22P0F3B-SC",
-    "liste_fiyati_eur": 2350
+    "liste_fiyati_eur": 2350.0,
+    "pdf_page": 146
   },
   "22P0F3B-SO": {
     "urun_kodu": "22P0F3B-SO",
-    "liste_fiyati_eur": 2950
+    "liste_fiyati_eur": 2950.0,
+    "pdf_page": 146
   },
   "22P0F3D-SC": {
     "urun_kodu": "22P0F3D-SC",
-    "liste_fiyati_eur": 2350
+    "liste_fiyati_eur": 2350.0,
+    "pdf_page": 146
   },
   "22P0F3D-SO": {
     "urun_kodu": "22P0F3D-SO",
-    "liste_fiyati_eur": 2950
+    "liste_fiyati_eur": 2950.0,
+    "pdf_page": 146
   },
   "22P0F6B-SC": {
     "urun_kodu": "22P0F6B-SC",
-    "liste_fiyati_eur": 2700
+    "liste_fiyati_eur": 2700.0,
+    "pdf_page": 146
   },
   "22P0F6B-SO": {
     "urun_kodu": "22P0F6B-SO",
-    "liste_fiyati_eur": 3400
+    "liste_fiyati_eur": 3400.0,
+    "pdf_page": 146
   },
   "22P0F6D-SC": {
     "urun_kodu": "22P0F6D-SC",
-    "liste_fiyati_eur": 2700
+    "liste_fiyati_eur": 2700.0,
+    "pdf_page": 146
   },
   "22P0F6D-SO": {
     "urun_kodu": "22P0F6D-SO",
-    "liste_fiyati_eur": 3400
+    "liste_fiyati_eur": 3400.0,
+    "pdf_page": 146
   },
   "22SBS05-12": {
     "urun_kodu": "22SBS05-12",
-    "liste_fiyati_eur": 950
+    "liste_fiyati_eur": 950.0,
+    "pdf_page": 144
   },
   "22SBS07-15": {
     "urun_kodu": "22SBS07-15",
-    "liste_fiyati_eur": 1000
+    "liste_fiyati_eur": 1000.0,
+    "pdf_page": 144
   },
   "22SBS09-18": {
     "urun_kodu": "22SBS09-18",
-    "liste_fiyati_eur": 1050
+    "liste_fiyati_eur": 1050.0,
+    "pdf_page": 144
   },
   "22SBS10-20": {
     "urun_kodu": "22SBS10-20",
-    "liste_fiyati_eur": 1150
+    "liste_fiyati_eur": 1150.0,
+    "pdf_page": 144
   },
   "22TBF0S-60.4C": {
     "urun_kodu": "22TBF0S-60.4C",
-    "liste_fiyati_eur": 3250
+    "liste_fiyati_eur": 3250.0,
+    "pdf_page": 138
   },
   "22TBF0S-60.6C": {
     "urun_kodu": "22TBF0S-60.6C",
-    "liste_fiyati_eur": 3700
+    "liste_fiyati_eur": 3700.0,
+    "pdf_page": 138
   },
   "22TBF0S-70.4C": {
     "urun_kodu": "22TBF0S-70.4C",
-    "liste_fiyati_eur": 3400
+    "liste_fiyati_eur": 3400.0,
+    "pdf_page": 138
   },
   "22TBF0S-70.6C": {
     "urun_kodu": "22TBF0S-70.6C",
-    "liste_fiyati_eur": 4100
+    "liste_fiyati_eur": 4100.0,
+    "pdf_page": 138
   },
   "22TBF1S-70": {
     "urun_kodu": "22TBF1S-70",
-    "liste_fiyati_eur": 1850
+    "liste_fiyati_eur": 1850.0,
+    "pdf_page": 136
   },
   "22TBF1S-70-GR": {
     "urun_kodu": "22TBF1S-70-GR",
-    "liste_fiyati_eur": 2250
+    "liste_fiyati_eur": 2250.0,
+    "pdf_page": 142
   },
   "22TBF1S-PA70": {
     "urun_kodu": "22TBF1S-PA70",
-    "liste_fiyati_eur": 2300
+    "liste_fiyati_eur": 2300.0,
+    "pdf_page": 140
   },
   "22TBF1S-PY70": {
     "urun_kodu": "22TBF1S-PY70",
-    "liste_fiyati_eur": 2500
+    "liste_fiyati_eur": 2500.0,
+    "pdf_page": 141
   },
   "22TBF1S-PY70-GR": {
     "urun_kodu": "22TBF1S-PY70-GR",
-    "liste_fiyati_eur": 2950
+    "liste_fiyati_eur": 2950.0,
+    "pdf_page": 142
   },
   "22TBF1S-SBAR": {
     "urun_kodu": "22TBF1S-SBAR",
-    "liste_fiyati_eur": 2700
+    "liste_fiyati_eur": 2700.0,
+    "pdf_page": 148
   },
   "22TBF2C-70": {
     "urun_kodu": "22TBF2C-70",
-    "liste_fiyati_eur": 2350
+    "liste_fiyati_eur": 2350.0,
+    "pdf_page": 136
   },
   "22TBF2S-60": {
     "urun_kodu": "22TBF2S-60",
-    "liste_fiyati_eur": 2000
+    "liste_fiyati_eur": 2000.0,
+    "pdf_page": 136
   },
   "22TBF2S-70": {
     "urun_kodu": "22TBF2S-70",
-    "liste_fiyati_eur": 2100
+    "liste_fiyati_eur": 2100.0,
+    "pdf_page": 136
   },
   "22TBF2S-70-GR": {
     "urun_kodu": "22TBF2S-70-GR",
-    "liste_fiyati_eur": 2750
+    "liste_fiyati_eur": 2750.0,
+    "pdf_page": 142
   },
   "22TBF2S-PA70": {
     "urun_kodu": "22TBF2S-PA70",
-    "liste_fiyati_eur": 2700
+    "liste_fiyati_eur": 2700.0,
+    "pdf_page": 140
   },
   "22TBF2S-PY70": {
     "urun_kodu": "22TBF2S-PY70",
-    "liste_fiyati_eur": 2750
+    "liste_fiyati_eur": 2750.0,
+    "pdf_page": 141
   },
   "22TBF2S-PY70-GR": {
     "urun_kodu": "22TBF2S-PY70-GR",
-    "liste_fiyati_eur": 3600
+    "liste_fiyati_eur": 3600.0,
+    "pdf_page": 142
   },
   "22TBF2S-SBAR": {
     "urun_kodu": "22TBF2S-SBAR",
-    "liste_fiyati_eur": 3100
+    "liste_fiyati_eur": 3100.0,
+    "pdf_page": 148
   },
   "22TBF3C-70": {
     "urun_kodu": "22TBF3C-70",
-    "liste_fiyati_eur": 2600
+    "liste_fiyati_eur": 2600.0,
+    "pdf_page": 137
   },
   "22TBF3S-60": {
     "urun_kodu": "22TBF3S-60",
-    "liste_fiyati_eur": 2350
+    "liste_fiyati_eur": 2350.0,
+    "pdf_page": 137
   },
   "22TBF3S-70": {
     "urun_kodu": "22TBF3S-70",
-    "liste_fiyati_eur": 2450
+    "liste_fiyati_eur": 2450.0,
+    "pdf_page": 137
   },
   "22TBF3S-70-GR": {
     "urun_kodu": "22TBF3S-70-GR",
-    "liste_fiyati_eur": 3400
+    "liste_fiyati_eur": 3400.0,
+    "pdf_page": 142
   },
   "22TBF3S-PA70": {
     "urun_kodu": "22TBF3S-PA70",
-    "liste_fiyati_eur": 3000
+    "liste_fiyati_eur": 3000.0,
+    "pdf_page": 140
   },
   "22TBF3S-PY70": {
     "urun_kodu": "22TBF3S-PY70",
-    "liste_fiyati_eur": 3100
+    "liste_fiyati_eur": 3100.0,
+    "pdf_page": 141
   },
   "22TBF3S-PY70-GR": {
     "urun_kodu": "22TBF3S-PY70-GR",
-    "liste_fiyati_eur": 4450
+    "liste_fiyati_eur": 4450.0,
+    "pdf_page": 142
   },
   "22TBF3S-SBAR": {
     "urun_kodu": "22TBF3S-SBAR",
-    "liste_fiyati_eur": 3800
+    "liste_fiyati_eur": 3800.0,
+    "pdf_page": 148
   },
   "22TDF2S-60": {
     "urun_kodu": "22TDF2S-60",
-    "liste_fiyati_eur": 2250
+    "liste_fiyati_eur": 2250.0,
+    "pdf_page": 136
   },
   "22TDF2S-70": {
     "urun_kodu": "22TDF2S-70",
-    "liste_fiyati_eur": 2350
+    "liste_fiyati_eur": 2350.0,
+    "pdf_page": 136
   },
   "22TDF3S-60": {
     "urun_kodu": "22TDF3S-60",
-    "liste_fiyati_eur": 2450
+    "liste_fiyati_eur": 2450.0,
+    "pdf_page": 137
   },
   "22TDF3S-70": {
     "urun_kodu": "22TDF3S-70",
-    "liste_fiyati_eur": 2650
+    "liste_fiyati_eur": 2650.0,
+    "pdf_page": 137
   },
   "240X100/14": {
     "urun_kodu": "240x100/14",
-    "liste_fiyati_eur": 80
+    "liste_fiyati_eur": 74.0,
+    "pdf_page": 202
   },
   "250MM": {
     "urun_kodu": "250mm",
-    "liste_fiyati_eur": 262
+    "liste_fiyati_eur": 262.0,
+    "pdf_page": 201
   },
   "260X100/14": {
     "urun_kodu": "260x100/14",
-    "liste_fiyati_eur": 128
+    "liste_fiyati_eur": 86.0,
+    "pdf_page": 202
   },
   "280MM": {
     "urun_kodu": "280mm",
-    "liste_fiyati_eur": 136
+    "liste_fiyati_eur": 190.0,
+    "pdf_page": 201
   },
   "280X105X90/70": {
     "urun_kodu": "280x105x90/70",
-    "liste_fiyati_eur": 7000
+    "liste_fiyati_eur": 7000.0,
+    "pdf_page": 81
   },
   "295LT": {
     "urun_kodu": "295Lt",
-    "liste_fiyati_eur": 450
+    "liste_fiyati_eur": 450.0,
+    "pdf_page": 136
   },
   "30X30CM": {
     "urun_kodu": "30x30cm",
-    "liste_fiyati_eur": 2100
+    "liste_fiyati_eur": 1650.0,
+    "pdf_page": 28
   },
   "310MM": {
     "urun_kodu": "310mm",
-    "liste_fiyati_eur": 300
+    "liste_fiyati_eur": 300.0,
+    "pdf_page": 201
   },
   "320MM": {
     "urun_kodu": "320mm",
-    "liste_fiyati_eur": 150
+    "liste_fiyati_eur": 200.0,
+    "pdf_page": 201
   },
   "350MM": {
     "urun_kodu": "350mm",
-    "liste_fiyati_eur": 200
+    "liste_fiyati_eur": 260.0,
+    "pdf_page": 201
   },
   "400MM": {
     "urun_kodu": "400mm",
-    "liste_fiyati_eur": 230
+    "liste_fiyati_eur": 300.0,
+    "pdf_page": 201
   },
   "403LT": {
     "urun_kodu": "403Lt",
-    "liste_fiyati_eur": 21300
+    "liste_fiyati_eur": 21300.0,
+    "pdf_page": 173
   },
   "40MM": {
     "urun_kodu": "40mm",
-    "liste_fiyati_eur": 735
+    "liste_fiyati_eur": 530.0,
+    "pdf_page": 191
   },
   "450MM": {
     "urun_kodu": "450mm",
-    "liste_fiyati_eur": 300
+    "liste_fiyati_eur": 406.0,
+    "pdf_page": 201
   },
   "500MM": {
     "urun_kodu": "500mm",
-    "liste_fiyati_eur": 400
+    "liste_fiyati_eur": 512.0,
+    "pdf_page": 201
   },
   "60S-M068-1": {
     "urun_kodu": "60S-M068-1",
-    "liste_fiyati_eur": 1000
+    "liste_fiyati_eur": 800.0,
+    "pdf_page": 11
   },
   "60S-M068E": {
     "urun_kodu": "60S-M068E",
-    "liste_fiyati_eur": 1000
+    "liste_fiyati_eur": 500.0,
+    "pdf_page": 11
   },
   "60X60X85/151": {
     "urun_kodu": "60x60x85/151",
-    "liste_fiyati_eur": 1650
+    "liste_fiyati_eur": 1650.0,
+    "pdf_page": 149
   },
   "70DE-M175": {
     "urun_kodu": "70DE-M175",
-    "liste_fiyati_eur": 1050
+    "liste_fiyati_eur": 1050.0,
+    "pdf_page": 21
   },
   "70DE-M179": {
     "urun_kodu": "70DE-M179",
-    "liste_fiyati_eur": 1450
+    "liste_fiyati_eur": 1450.0,
+    "pdf_page": 21
   },
   "70MX-2W": {
     "urun_kodu": "70MX-2W",
-    "liste_fiyati_eur": 1700
+    "liste_fiyati_eur": 1700.0,
+    "pdf_page": 18
   },
   "70MX-W": {
     "urun_kodu": "70MX-W",
-    "liste_fiyati_eur": 1050
+    "liste_fiyati_eur": 1050.0,
+    "pdf_page": 18
   },
   "70S-M015-4F": {
     "urun_kodu": "70S-M015-4F",
-    "liste_fiyati_eur": 2200
+    "liste_fiyati_eur": 2200.0,
+    "pdf_page": 19
   },
   "70S-M015-6F": {
     "urun_kodu": "70S-M015-6F",
-    "liste_fiyati_eur": 2850
+    "liste_fiyati_eur": 2850.0,
+    "pdf_page": 19
   },
   "70S-M067": {
     "urun_kodu": "70S-M067",
-    "liste_fiyati_eur": 280
+    "liste_fiyati_eur": 280.0,
+    "pdf_page": 25
   },
   "70S-M173": {
     "urun_kodu": "70S-M173",
-    "liste_fiyati_eur": 520
+    "liste_fiyati_eur": 520.0,
+    "pdf_page": 25
   },
   "70S-M180": {
     "urun_kodu": "70S-M180",
-    "liste_fiyati_eur": 1050
+    "liste_fiyati_eur": 1050.0,
+    "pdf_page": 24
   },
   "70S-M180-1": {
     "urun_kodu": "70S-M180-1",
-    "liste_fiyati_eur": 750
+    "liste_fiyati_eur": 750.0,
+    "pdf_page": 24
   },
   "70S-M182-2SE": {
     "urun_kodu": "70S-M182-2SE",
-    "liste_fiyati_eur": 600
+    "liste_fiyati_eur": 600.0,
+    "pdf_page": 17
   },
   "70S-M182-4SE": {
     "urun_kodu": "70S-M182-4SE",
-    "liste_fiyati_eur": 1000
+    "liste_fiyati_eur": 1000.0,
+    "pdf_page": 17
   },
   "70S-M184": {
     "urun_kodu": "70S-M184",
-    "liste_fiyati_eur": 1050
+    "liste_fiyati_eur": 1050.0,
+    "pdf_page": 23
   },
   "70S-M190-90": {
     "urun_kodu": "70S-M190-90",
-    "liste_fiyati_eur": 1450
+    "liste_fiyati_eur": 1450.0,
+    "pdf_page": 20
   },
   "70SD-M067": {
     "urun_kodu": "70SD-M067",
-    "liste_fiyati_eur": 580
+    "liste_fiyati_eur": 580.0,
+    "pdf_page": 25
   },
   "70SD-M173": {
     "urun_kodu": "70SD-M173",
-    "liste_fiyati_eur": 780
+    "liste_fiyati_eur": 780.0,
+    "pdf_page": 25
   },
   "70SD-M180": {
     "urun_kodu": "70SD-M180",
-    "liste_fiyati_eur": 1400
+    "liste_fiyati_eur": 1400.0,
+    "pdf_page": 24
   },
   "70SD-M180-1": {
     "urun_kodu": "70SD-M180-1",
-    "liste_fiyati_eur": 1050
+    "liste_fiyati_eur": 1050.0,
+    "pdf_page": 24
   },
   "70SD-M184": {
     "urun_kodu": "70SD-M184",
-    "liste_fiyati_eur": 1450
+    "liste_fiyati_eur": 1450.0,
+    "pdf_page": 23
   },
   "70SDE-M073": {
     "urun_kodu": "70SDE-M073",
-    "liste_fiyati_eur": 1600
+    "liste_fiyati_eur": 1600.0,
+    "pdf_page": 22
   },
   "70SDE-M073-1": {
     "urun_kodu": "70SDE-M073-1",
-    "liste_fiyati_eur": 2500
+    "liste_fiyati_eur": 2500.0,
+    "pdf_page": 22
   },
   "70SDE-M182": {
     "urun_kodu": "70SDE-M182",
-    "liste_fiyati_eur": 850
+    "liste_fiyati_eur": 850.0,
+    "pdf_page": 17
   },
   "70SDE-M182-1": {
     "urun_kodu": "70SDE-M182-1",
-    "liste_fiyati_eur": 1450
+    "liste_fiyati_eur": 1450.0,
+    "pdf_page": 17
   },
   "70SE-M073": {
     "urun_kodu": "70SE-M073",
-    "liste_fiyati_eur": 1100
+    "liste_fiyati_eur": 1100.0,
+    "pdf_page": 22
   },
   "70SE-M073-1": {
     "urun_kodu": "70SE-M073-1",
-    "liste_fiyati_eur": 1900
+    "liste_fiyati_eur": 1900.0,
+    "pdf_page": 22
   },
   "70SE-M175": {
     "urun_kodu": "70SE-M175",
-    "liste_fiyati_eur": 680
+    "liste_fiyati_eur": 680.0,
+    "pdf_page": 21
   },
   "70SE-M179": {
     "urun_kodu": "70SE-M179",
-    "liste_fiyati_eur": 1100
+    "liste_fiyati_eur": 1100.0,
+    "pdf_page": 21
   },
   "70SFE-M182-2": {
     "urun_kodu": "70SFE-M182-2",
-    "liste_fiyati_eur": 2200
+    "liste_fiyati_eur": 1850.0,
+    "pdf_page": 19
   },
   "70SFE-M182-3": {
     "urun_kodu": "70SFE-M182-3",
-    "liste_fiyati_eur": 2850
+    "liste_fiyati_eur": 2400.0,
+    "pdf_page": 19
   },
   "70SMX-2W": {
     "urun_kodu": "70SMX-2W",
-    "liste_fiyati_eur": 1400
+    "liste_fiyati_eur": 1400.0,
+    "pdf_page": 18
   },
   "70SMX-W": {
     "urun_kodu": "70SMX-W",
-    "liste_fiyati_eur": 800
+    "liste_fiyati_eur": 800.0,
+    "pdf_page": 18
   },
   "90MX-2W": {
     "urun_kodu": "90MX-2W",
-    "liste_fiyati_eur": 1640
+    "liste_fiyati_eur": 1640.0,
+    "pdf_page": 28
   },
   "90MX-W": {
     "urun_kodu": "90MX-W",
-    "liste_fiyati_eur": 1000
+    "liste_fiyati_eur": 1000.0,
+    "pdf_page": 28
   },
   "90S-DTE-120": {
     "urun_kodu": "90S-DTE-120",
-    "liste_fiyati_eur": 5400
+    "liste_fiyati_eur": 5400.0,
+    "pdf_page": 38
   },
   "90S-DTE-80": {
     "urun_kodu": "90S-DTE-80",
-    "liste_fiyati_eur": 3900
+    "liste_fiyati_eur": 3900.0,
+    "pdf_page": 38
   },
   "90S-DTG-120": {
     "urun_kodu": "90S-DTG-120",
-    "liste_fiyati_eur": 5400
+    "liste_fiyati_eur": 5400.0,
+    "pdf_page": 38
   },
   "90S-DTG-80": {
     "urun_kodu": "90S-DTG-80",
-    "liste_fiyati_eur": 3900
+    "liste_fiyati_eur": 3900.0,
+    "pdf_page": 38
   },
   "90S-KKE-100": {
     "urun_kodu": "90S-KKE-100",
-    "liste_fiyati_eur": 7100
+    "liste_fiyati_eur": 4600.0,
+    "pdf_page": 38
   },
   "90S-KKE-150": {
     "urun_kodu": "90S-KKE-150",
-    "liste_fiyati_eur": 7300
+    "liste_fiyati_eur": 4900.0,
+    "pdf_page": 38
   },
   "90S-KKE-250": {
     "urun_kodu": "90S-KKE-250",
-    "liste_fiyati_eur": 9000
+    "liste_fiyati_eur": 8800.0,
+    "pdf_page": 38
   },
   "90S-KKE-80": {
     "urun_kodu": "90S-KKE-80",
-    "liste_fiyati_eur": 5400
+    "liste_fiyati_eur": 4300.0,
+    "pdf_page": 38
   },
   "90S-KKG-100": {
     "urun_kodu": "90S-KKG-100",
-    "liste_fiyati_eur": 7100
+    "liste_fiyati_eur": 7100.0,
+    "pdf_page": 38
   },
   "90S-KKG-150": {
     "urun_kodu": "90S-KKG-150",
-    "liste_fiyati_eur": 7300
+    "liste_fiyati_eur": 7300.0,
+    "pdf_page": 38
   },
   "90S-KKG-250": {
     "urun_kodu": "90S-KKG-250",
-    "liste_fiyati_eur": 9000
+    "liste_fiyati_eur": 9000.0,
+    "pdf_page": 38
   },
   "90S-KKG-80": {
     "urun_kodu": "90S-KKG-80",
-    "liste_fiyati_eur": 6800
+    "liste_fiyati_eur": 6800.0,
+    "pdf_page": 38
   },
   "90S-M015-4F": {
     "urun_kodu": "90S-M015-4F",
-    "liste_fiyati_eur": 2750
+    "liste_fiyati_eur": 2750.0,
+    "pdf_page": 29
   },
   "90S-M015-6F": {
     "urun_kodu": "90S-M015-6F",
-    "liste_fiyati_eur": 3450
+    "liste_fiyati_eur": 3450.0,
+    "pdf_page": 29
   },
   "90S-M061E": {
     "urun_kodu": "90S-M061E",
-    "liste_fiyati_eur": 2100
+    "liste_fiyati_eur": 1800.0,
+    "pdf_page": 32
   },
   "90S-M061G": {
     "urun_kodu": "90S-M061G",
-    "liste_fiyati_eur": 2100
+    "liste_fiyati_eur": 2100.0,
+    "pdf_page": 32
   },
   "90S-M062E": {
     "urun_kodu": "90S-M062E",
-    "liste_fiyati_eur": 3600
+    "liste_fiyati_eur": 3250.0,
+    "pdf_page": 32
   },
   "90S-M062G": {
     "urun_kodu": "90S-M062G",
-    "liste_fiyati_eur": 3600
+    "liste_fiyati_eur": 3600.0,
+    "pdf_page": 32
   },
   "90S-M067E": {
     "urun_kodu": "90S-M067E",
-    "liste_fiyati_eur": 1650
+    "liste_fiyati_eur": 1650.0,
+    "pdf_page": 28
   },
   "90SD-M064E": {
     "urun_kodu": "90SD-M064E",
-    "liste_fiyati_eur": 1150
+    "liste_fiyati_eur": 1150.0,
+    "pdf_page": 33
   },
   "90SD-M065E": {
     "urun_kodu": "90SD-M065E",
-    "liste_fiyati_eur": 1800
+    "liste_fiyati_eur": 1800.0,
+    "pdf_page": 33
   },
   "90SD-M067": {
     "urun_kodu": "90SD-M067",
-    "liste_fiyati_eur": 900
+    "liste_fiyati_eur": 600.0,
+    "pdf_page": 37
   },
   "90SD-M068": {
     "urun_kodu": "90SD-M068",
-    "liste_fiyati_eur": 2100
+    "liste_fiyati_eur": 2100.0,
+    "pdf_page": 28
   },
   "90SD-M069E": {
     "urun_kodu": "90SD-M069E",
-    "liste_fiyati_eur": 950
+    "liste_fiyati_eur": 950.0,
+    "pdf_page": 36
   },
   "90SD-M070E": {
     "urun_kodu": "90SD-M070E",
-    "liste_fiyati_eur": 1600
+    "liste_fiyati_eur": 1600.0,
+    "pdf_page": 36
   },
   "90SD-M168E": {
     "urun_kodu": "90SD-M168E",
-    "liste_fiyati_eur": 600
+    "liste_fiyati_eur": 900.0,
+    "pdf_page": 37
   },
   "90SD-M184E": {
     "urun_kodu": "90SD-M184E",
-    "liste_fiyati_eur": 1750
+    "liste_fiyati_eur": 1750.0,
+    "pdf_page": 36
   },
   "90SF-M068": {
     "urun_kodu": "90SF-M068",
-    "liste_fiyati_eur": 3450
+    "liste_fiyati_eur": 2900.0,
+    "pdf_page": 29
   },
   "90SF-M068-6": {
     "urun_kodu": "90SF-M068-6",
-    "liste_fiyati_eur": 3450
+    "liste_fiyati_eur": 3600.0,
+    "pdf_page": 29
   },
   "AYRMKN-50": {
     "urun_kodu": "AYRMKN-50",
-    "liste_fiyati_eur": 1650
+    "liste_fiyati_eur": 1650.0,
+    "pdf_page": 149
   },
   "BDH.30": {
     "urun_kodu": "BDH.30",
-    "liste_fiyati_eur": 3800
+    "liste_fiyati_eur": 2800.0,
+    "pdf_page": 110
   },
   "BDH.45S": {
     "urun_kodu": "BDH.45S",
-    "liste_fiyati_eur": 4800
+    "liste_fiyati_eur": 4800.0,
+    "pdf_page": 110
   },
   "BDH.50": {
     "urun_kodu": "BDH.50",
-    "liste_fiyati_eur": 4000
+    "liste_fiyati_eur": 3000.0,
+    "pdf_page": 110
   },
   "BE/M037-3K": {
     "urun_kodu": "BE/M037-3K",
-    "liste_fiyati_eur": 2200
+    "liste_fiyati_eur": 2200.0,
+    "pdf_page": 183
   },
   "BE/M037-3S": {
     "urun_kodu": "BE/M037-3S",
-    "liste_fiyati_eur": 1900
+    "liste_fiyati_eur": 1900.0,
+    "pdf_page": 181
   },
   "BE/M037-4K": {
     "urun_kodu": "BE/M037-4K",
-    "liste_fiyati_eur": 2310
+    "liste_fiyati_eur": 2310.0,
+    "pdf_page": 183
   },
   "BE/M037-4S": {
     "urun_kodu": "BE/M037-4S",
-    "liste_fiyati_eur": 2000
+    "liste_fiyati_eur": 2000.0,
+    "pdf_page": 181
   },
   "BE1/M037-5K": {
     "urun_kodu": "BE1/M037-5K",
-    "liste_fiyati_eur": 2650
+    "liste_fiyati_eur": 2650.0,
+    "pdf_page": 183
   },
   "BE1/M037-5S": {
     "urun_kodu": "BE1/M037-5S",
-    "liste_fiyati_eur": 2400
+    "liste_fiyati_eur": 2400.0,
+    "pdf_page": 181
   },
   "BE1/M037-6K": {
     "urun_kodu": "BE1/M037-6K",
-    "liste_fiyati_eur": 3300
+    "liste_fiyati_eur": 3300.0,
+    "pdf_page": 183
   },
   "BE1/M037-6S": {
     "urun_kodu": "BE1/M037-6S",
-    "liste_fiyati_eur": 3000
+    "liste_fiyati_eur": 3000.0,
+    "pdf_page": 181
   },
   "BED": {
     "urun_kodu": "BED",
-    "liste_fiyati_eur": 2200
+    "liste_fiyati_eur": 2200.0,
+    "pdf_page": 129
   },
   "BED.T": {
     "urun_kodu": "BED.T",
-    "liste_fiyati_eur": 2300
+    "liste_fiyati_eur": 2300.0,
+    "pdf_page": 129
   },
   "BHA.30": {
     "urun_kodu": "BHA.30",
-    "liste_fiyati_eur": 1200
+    "liste_fiyati_eur": 1200.0,
+    "pdf_page": 125
   },
   "BHA.30T": {
     "urun_kodu": "BHA.30T",
-    "liste_fiyati_eur": 1000
+    "liste_fiyati_eur": 1000.0,
+    "pdf_page": 125
   },
   "BHA.40": {
     "urun_kodu": "BHA.40",
-    "liste_fiyati_eur": 1300
+    "liste_fiyati_eur": 1300.0,
+    "pdf_page": 125
   },
   "BHA.40T": {
     "urun_kodu": "BHA.40T",
-    "liste_fiyati_eur": 1100
+    "liste_fiyati_eur": 1100.0,
+    "pdf_page": 125
   },
   "BHKT.200": {
     "urun_kodu": "BHKT.200",
-    "liste_fiyati_eur": 4300
+    "liste_fiyati_eur": 4300.0,
+    "pdf_page": 124
   },
   "BHKT.200A": {
     "urun_kodu": "BHKT.200A",
-    "liste_fiyati_eur": 4700
+    "liste_fiyati_eur": 4700.0,
+    "pdf_page": 124
   },
   "BHY.10": {
     "urun_kodu": "BHY.10",
-    "liste_fiyati_eur": 840
+    "liste_fiyati_eur": 840.0,
+    "pdf_page": 120
   },
   "BHY.100": {
     "urun_kodu": "BHY.100",
-    "liste_fiyati_eur": 2900
+    "liste_fiyati_eur": 2900.0,
+    "pdf_page": 120
   },
   "BHY.100K": {
     "urun_kodu": "BHY.100K",
-    "liste_fiyati_eur": 3150
+    "liste_fiyati_eur": 3150.0,
+    "pdf_page": 121
   },
   "BHY.10K": {
     "urun_kodu": "BHY.10K",
-    "liste_fiyati_eur": 990
+    "liste_fiyati_eur": 990.0,
+    "pdf_page": 121
   },
   "BHY.135": {
     "urun_kodu": "BHY.135",
-    "liste_fiyati_eur": 3400
+    "liste_fiyati_eur": 3400.0,
+    "pdf_page": 120
   },
   "BHY.135K": {
     "urun_kodu": "BHY.135K",
-    "liste_fiyati_eur": 3650
+    "liste_fiyati_eur": 3650.0,
+    "pdf_page": 121
   },
   "BHY.235": {
     "urun_kodu": "BHY.235",
-    "liste_fiyati_eur": 8800
+    "liste_fiyati_eur": 8800.0,
+    "pdf_page": 120
   },
   "BHY.235K": {
     "urun_kodu": "BHY.235K",
-    "liste_fiyati_eur": 9200
+    "liste_fiyati_eur": 9200.0,
+    "pdf_page": 121
   },
   "BHY.25": {
     "urun_kodu": "BHY.25",
-    "liste_fiyati_eur": 980
+    "liste_fiyati_eur": 980.0,
+    "pdf_page": 120
   },
   "BHY.25K": {
     "urun_kodu": "BHY.25K",
-    "liste_fiyati_eur": 1200
+    "liste_fiyati_eur": 1200.0,
+    "pdf_page": 121
   },
   "BHY.35": {
     "urun_kodu": "BHY.35",
-    "liste_fiyati_eur": 1150
+    "liste_fiyati_eur": 1150.0,
+    "pdf_page": 120
   },
   "BHY.35K": {
     "urun_kodu": "BHY.35K",
-    "liste_fiyati_eur": 1350
+    "liste_fiyati_eur": 1350.0,
+    "pdf_page": 121
   },
   "BHY.5": {
     "urun_kodu": "BHY.5",
-    "liste_fiyati_eur": 600
+    "liste_fiyati_eur": 600.0,
+    "pdf_page": 120
   },
   "BHY.50": {
     "urun_kodu": "BHY.50",
-    "liste_fiyati_eur": 1300
+    "liste_fiyati_eur": 1300.0,
+    "pdf_page": 120
   },
   "BHY.50K": {
     "urun_kodu": "BHY.50K",
-    "liste_fiyati_eur": 1550
+    "liste_fiyati_eur": 1550.0,
+    "pdf_page": 121
   },
   "BHY.75": {
     "urun_kodu": "BHY.75",
-    "liste_fiyati_eur": 2200
+    "liste_fiyati_eur": 2200.0,
+    "pdf_page": 120
   },
   "BHY.75K": {
     "urun_kodu": "BHY.75K",
-    "liste_fiyati_eur": 2400
+    "liste_fiyati_eur": 2400.0,
+    "pdf_page": 121
   },
   "BKB": {
     "urun_kodu": "BKB",
-    "liste_fiyati_eur": 700
+    "liste_fiyati_eur": 700.0,
+    "pdf_page": 116
   },
   "BKD.100": {
     "urun_kodu": "BKD.100",
-    "liste_fiyati_eur": 20000
+    "liste_fiyati_eur": 1050.0,
+    "pdf_page": 112
   },
   "BKK.100": {
     "urun_kodu": "BKK.100",
-    "liste_fiyati_eur": 7400
+    "liste_fiyati_eur": 7400.0,
+    "pdf_page": 117
   },
   "BKK.150": {
     "urun_kodu": "BKK.150",
-    "liste_fiyati_eur": 9400
+    "liste_fiyati_eur": 9400.0,
+    "pdf_page": 117
   },
   "BKK.50": {
     "urun_kodu": "BKK.50",
-    "liste_fiyati_eur": 4800
+    "liste_fiyati_eur": 4800.0,
+    "pdf_page": 117
   },
   "BKM.12": {
     "urun_kodu": "BKM.12",
-    "liste_fiyati_eur": 800
+    "liste_fiyati_eur": 800.0,
+    "pdf_page": 104
   },
   "BKM.22": {
     "urun_kodu": "BKM.22",
-    "liste_fiyati_eur": 1250
+    "liste_fiyati_eur": 1250.0,
+    "pdf_page": 104
   },
   "BKM.22S": {
     "urun_kodu": "BKM.22S",
-    "liste_fiyati_eur": 1800
+    "liste_fiyati_eur": 1800.0,
+    "pdf_page": 105
   },
   "BKM.32": {
     "urun_kodu": "BKM.32",
-    "liste_fiyati_eur": 1700
+    "liste_fiyati_eur": 1700.0,
+    "pdf_page": 104
   },
   "BKM.32S": {
     "urun_kodu": "BKM.32S",
-    "liste_fiyati_eur": 2200
+    "liste_fiyati_eur": 2200.0,
+    "pdf_page": 105
   },
   "BKS.100": {
     "urun_kodu": "BKS.100",
-    "liste_fiyati_eur": 800
+    "liste_fiyati_eur": 800.0,
+    "pdf_page": 116
   },
   "BKS.150": {
     "urun_kodu": "BKS.150",
-    "liste_fiyati_eur": 700
+    "liste_fiyati_eur": 900.0,
+    "pdf_page": 116
   },
   "BKT.1840": {
     "urun_kodu": "BKT.1840",
-    "liste_fiyati_eur": 2200
+    "liste_fiyati_eur": 1500.0,
+    "pdf_page": 113
   },
   "BKTA.1840": {
     "urun_kodu": "BKTA.1840",
-    "liste_fiyati_eur": 2700
+    "liste_fiyati_eur": 2200.0,
+    "pdf_page": 113
   },
   "BKTA.2500": {
     "urun_kodu": "BKTA.2500",
-    "liste_fiyati_eur": 5800
+    "liste_fiyati_eur": 2700.0,
+    "pdf_page": 113
   },
   "BKTA.3100": {
     "urun_kodu": "BKTA.3100",
-    "liste_fiyati_eur": 9000
+    "liste_fiyati_eur": 5800.0,
+    "pdf_page": 113
   },
   "BL25": {
     "urun_kodu": "BL25",
-    "liste_fiyati_eur": 350
+    "liste_fiyati_eur": 350.0,
+    "pdf_page": 98
   },
   "BL40-C": {
     "urun_kodu": "BL40-C",
-    "liste_fiyati_eur": 700
+    "liste_fiyati_eur": 700.0,
+    "pdf_page": 98
   },
   "BM.10S": {
     "urun_kodu": "BM.10S",
-    "liste_fiyati_eur": 1900
+    "liste_fiyati_eur": 1900.0,
+    "pdf_page": 123
   },
   "BM.20S": {
     "urun_kodu": "BM.20S",
-    "liste_fiyati_eur": 2350
+    "liste_fiyati_eur": 2350.0,
+    "pdf_page": 123
   },
   "BM.40S": {
     "urun_kodu": "BM.40S",
-    "liste_fiyati_eur": 4000
+    "liste_fiyati_eur": 4000.0,
+    "pdf_page": 123
   },
   "BM.40S.3D": {
     "urun_kodu": "BM.40S.3D",
-    "liste_fiyati_eur": 4350
+    "liste_fiyati_eur": 4350.0,
+    "pdf_page": 123
   },
   "BM.60": {
     "urun_kodu": "BM.60",
-    "liste_fiyati_eur": 5700
+    "liste_fiyati_eur": 5700.0,
+    "pdf_page": 123
   },
   "BM.60S": {
     "urun_kodu": "BM.60S",
-    "liste_fiyati_eur": 4500
+    "liste_fiyati_eur": 4500.0,
+    "pdf_page": 123
   },
   "BM.60S.3D": {
     "urun_kodu": "BM.60S.3D",
-    "liste_fiyati_eur": 4850
+    "liste_fiyati_eur": 4850.0,
+    "pdf_page": 123
   },
   "BPD": {
     "urun_kodu": "BPD",
-    "liste_fiyati_eur": 1250
+    "liste_fiyati_eur": 1250.0,
+    "pdf_page": 127
   },
   "BPD.A": {
     "urun_kodu": "BPD.A",
-    "liste_fiyati_eur": 1350
+    "liste_fiyati_eur": 1350.0,
+    "pdf_page": 127
   },
   "BPKM.12": {
     "urun_kodu": "BPKM.12",
-    "liste_fiyati_eur": 1000
+    "liste_fiyati_eur": 1000.0,
+    "pdf_page": 106
   },
   "BPKM.12CK": {
     "urun_kodu": "BPKM.12CK",
-    "liste_fiyati_eur": 1200
+    "liste_fiyati_eur": 1200.0,
+    "pdf_page": 106
   },
   "BPKM.130": {
     "urun_kodu": "BPKM.130",
-    "liste_fiyati_eur": 17000
+    "liste_fiyati_eur": 17000.0,
+    "pdf_page": 108
   },
   "BPKM.130S": {
     "urun_kodu": "BPKM.130S",
-    "liste_fiyati_eur": 18500
+    "liste_fiyati_eur": 18500.0,
+    "pdf_page": 109
   },
   "BPKM.22": {
     "urun_kodu": "BPKM.22",
-    "liste_fiyati_eur": 1800
+    "liste_fiyati_eur": 1800.0,
+    "pdf_page": 106
   },
   "BPKM.22S": {
     "urun_kodu": "BPKM.22S",
-    "liste_fiyati_eur": 2350
+    "liste_fiyati_eur": 2350.0,
+    "pdf_page": 107
   },
   "BPKM.32": {
     "urun_kodu": "BPKM.32",
-    "liste_fiyati_eur": 2600
+    "liste_fiyati_eur": 2600.0,
+    "pdf_page": 106
   },
   "BPKM.32C": {
     "urun_kodu": "BPKM.32C",
-    "liste_fiyati_eur": 1700
+    "liste_fiyati_eur": 1700.0,
+    "pdf_page": 106
   },
   "BPKM.32CK": {
     "urun_kodu": "BPKM.32CK",
-    "liste_fiyati_eur": 2800
+    "liste_fiyati_eur": 2800.0,
+    "pdf_page": 106
   },
   "BPKM.32S": {
     "urun_kodu": "BPKM.32S",
-    "liste_fiyati_eur": 3300
+    "liste_fiyati_eur": 3100.0,
+    "pdf_page": 107
   },
   "BPKM.32SCK": {
     "urun_kodu": "BPKM.32SCK",
-    "liste_fiyati_eur": 3100
+    "liste_fiyati_eur": 3300.0,
+    "pdf_page": 107
   },
   "BPKM.42": {
     "urun_kodu": "BPKM.42",
-    "liste_fiyati_eur": 5300
+    "liste_fiyati_eur": 5300.0,
+    "pdf_page": 108
   },
   "BPKM.42A": {
     "urun_kodu": "BPKM.42A",
-    "liste_fiyati_eur": 5700
+    "liste_fiyati_eur": 5700.0,
+    "pdf_page": 108
   },
   "BPKM.42S": {
     "urun_kodu": "BPKM.42S",
-    "liste_fiyati_eur": 5700
+    "liste_fiyati_eur": 5700.0,
+    "pdf_page": 109
   },
   "BPKM.42SA": {
     "urun_kodu": "BPKM.42SA",
-    "liste_fiyati_eur": 6100
+    "liste_fiyati_eur": 6100.0,
+    "pdf_page": 109
   },
   "BPS.10": {
     "urun_kodu": "BPS.10",
-    "liste_fiyati_eur": 2300
+    "liste_fiyati_eur": 2300.0,
+    "pdf_page": 126
   },
   "BPS.25": {
     "urun_kodu": "BPS.25",
-    "liste_fiyati_eur": 2600
+    "liste_fiyati_eur": 2600.0,
+    "pdf_page": 126
   },
   "BPS.35": {
     "urun_kodu": "BPS.35",
-    "liste_fiyati_eur": 2800
+    "liste_fiyati_eur": 2800.0,
+    "pdf_page": 126
   },
   "BPS.50": {
     "urun_kodu": "BPS.50",
-    "liste_fiyati_eur": 4900
+    "liste_fiyati_eur": 4900.0,
+    "pdf_page": 126
   },
   "BRV2G": {
     "urun_kodu": "BRV2G",
-    "liste_fiyati_eur": 7250
+    "liste_fiyati_eur": 7250.0,
+    "pdf_page": 96
   },
   "BRV3G": {
     "urun_kodu": "BRV3G",
-    "liste_fiyati_eur": 10600
+    "liste_fiyati_eur": 10600.0,
+    "pdf_page": 96
   },
   "BSA": {
     "urun_kodu": "BSA",
-    "liste_fiyati_eur": 1350
+    "liste_fiyati_eur": 1350.0,
+    "pdf_page": 127
   },
   "BSD": {
     "urun_kodu": "BSD",
-    "liste_fiyati_eur": 420
+    "liste_fiyati_eur": 420.0,
+    "pdf_page": 128
   },
   "BSH.135": {
     "urun_kodu": "BSH.135",
-    "liste_fiyati_eur": 15000
+    "liste_fiyati_eur": 9200.0,
+    "pdf_page": 122
   },
   "BSH.235": {
     "urun_kodu": "BSH.235",
-    "liste_fiyati_eur": 18000
+    "liste_fiyati_eur": 15000.0,
+    "pdf_page": 122
   },
   "BSH.35": {
     "urun_kodu": "BSH.35",
-    "liste_fiyati_eur": 5400
+    "liste_fiyati_eur": 2450.0,
+    "pdf_page": 122
   },
   "BSH.50": {
     "urun_kodu": "BSH.50",
-    "liste_fiyati_eur": 5900
+    "liste_fiyati_eur": 5400.0,
+    "pdf_page": 122
   },
   "BSH.75": {
     "urun_kodu": "BSH.75",
-    "liste_fiyati_eur": 9200
+    "liste_fiyati_eur": 5900.0,
+    "pdf_page": 122
   },
   "BSU": {
     "urun_kodu": "BSU",
-    "liste_fiyati_eur": 1250
+    "liste_fiyati_eur": 1250.0,
+    "pdf_page": 127
   },
   "BSZK.2": {
     "urun_kodu": "BSZK.2",
-    "liste_fiyati_eur": 900
+    "liste_fiyati_eur": 900.0,
+    "pdf_page": 111
   },
   "BSZK.8": {
     "urun_kodu": "BSZK.8",
-    "liste_fiyati_eur": 2150
+    "liste_fiyati_eur": 2150.0,
+    "pdf_page": 111
   },
   "BTM.100": {
     "urun_kodu": "BTM.100",
-    "liste_fiyati_eur": 12000
+    "liste_fiyati_eur": 12000.0,
+    "pdf_page": 114
   },
   "BTM.200": {
     "urun_kodu": "BTM.200",
-    "liste_fiyati_eur": 16000
+    "liste_fiyati_eur": 16000.0,
+    "pdf_page": 114
   },
   "BTM.400": {
     "urun_kodu": "BTM.400",
-    "liste_fiyati_eur": 27000
+    "liste_fiyati_eur": 27000.0,
+    "pdf_page": 114
   },
   "BTM.400S": {
     "urun_kodu": "BTM.400S",
-    "liste_fiyati_eur": 34000
+    "liste_fiyati_eur": 34000.0,
+    "pdf_page": 114
   },
   "BZK": {
     "urun_kodu": "BZK",
-    "liste_fiyati_eur": 2150
+    "liste_fiyati_eur": 2150.0,
+    "pdf_page": 111
   },
   "DFKE06": {
     "urun_kodu": "DFKE06",
-    "liste_fiyati_eur": 3100
+    "liste_fiyati_eur": 3100.0,
+    "pdf_page": 41
   },
   "DFKE10": {
     "urun_kodu": "DFKE10",
-    "liste_fiyati_eur": 3900
+    "liste_fiyati_eur": 3900.0,
+    "pdf_page": 41
   },
   "DFKE20": {
     "urun_kodu": "DFKE20",
-    "liste_fiyati_eur": 4400
+    "liste_fiyati_eur": 4400.0,
+    "pdf_page": 41
   },
   "DFKE20-DIGITAL": {
     "urun_kodu": "DFKE20-DIGITAL",
-    "liste_fiyati_eur": 5250
+    "liste_fiyati_eur": 5250.0,
+    "pdf_page": 41
   },
   "DFKE40": {
     "urun_kodu": "DFKE40",
-    "liste_fiyati_eur": 6700
+    "liste_fiyati_eur": 6700.0,
+    "pdf_page": 41
   },
   "DFKE40-DIGITAL": {
     "urun_kodu": "DFKE40-DIGITAL",
-    "liste_fiyati_eur": 7550
+    "liste_fiyati_eur": 7550.0,
+    "pdf_page": 41
   },
   "DFKG10": {
     "urun_kodu": "DFKG10",
-    "liste_fiyati_eur": 4300
+    "liste_fiyati_eur": 4300.0,
+    "pdf_page": 41
   },
   "DFKG20": {
     "urun_kodu": "DFKG20",
-    "liste_fiyati_eur": 4600
+    "liste_fiyati_eur": 4600.0,
+    "pdf_page": 41
   },
   "DFKG40": {
     "urun_kodu": "DFKG40",
-    "liste_fiyati_eur": 6800
+    "liste_fiyati_eur": 6800.0,
+    "pdf_page": 41
   },
   "DFKG40-DIGITAL": {
     "urun_kodu": "DFKG40-DIGITAL",
-    "liste_fiyati_eur": 7800
+    "liste_fiyati_eur": 7800.0,
+    "pdf_page": 41
+  },
+  "DKON": {
+    "urun_kodu": "DKON",
+    "liste_fiyati_eur": 4400.0,
+    "pdf_page": 68
   },
   "DO1/M077-4V": {
     "urun_kodu": "DO1/M077-4V",
-    "liste_fiyati_eur": 2000
+    "liste_fiyati_eur": 2000.0,
+    "pdf_page": 62
   },
   "DO1/M077-X4+4": {
     "urun_kodu": "DO1/M077-X4+4",
-    "liste_fiyati_eur": 5000
+    "liste_fiyati_eur": 5000.0,
+    "pdf_page": 63
+  },
+  "DO1/M077-X4+4(ARABALI)": {
+    "urun_kodu": "DO1/M077-X4+4(ARABALI)",
+    "liste_fiyati_eur": 5000.0,
+    "pdf_page": 63
   },
   "DO1/M77-4+4": {
     "urun_kodu": "DO1/M77-4+4",
-    "liste_fiyati_eur": 2350
+    "liste_fiyati_eur": 2350.0,
+    "pdf_page": 62
   },
   "DO2/M077-5V": {
     "urun_kodu": "DO2/M077-5V",
-    "liste_fiyati_eur": 2200
+    "liste_fiyati_eur": 2200.0,
+    "pdf_page": 62
   },
   "DO2/M077-X5+5": {
     "urun_kodu": "DO2/M077-X5+5",
-    "liste_fiyati_eur": 5200
+    "liste_fiyati_eur": 5200.0,
+    "pdf_page": 63
+  },
+  "DO2/M077-X5+5(ARABALI)": {
+    "urun_kodu": "DO2/M077-X5+5(ARABALI)",
+    "liste_fiyati_eur": 5200.0,
+    "pdf_page": 63
   },
   "DO2/M77-5+5": {
     "urun_kodu": "DO2/M77-5+5",
-    "liste_fiyati_eur": 2600
+    "liste_fiyati_eur": 2600.0,
+    "pdf_page": 62
   },
   "DO5/M73": {
     "urun_kodu": "DO5/M73",
-    "liste_fiyati_eur": 380
+    "liste_fiyati_eur": 380.0,
+    "pdf_page": 58
   },
   "DO6/M75": {
     "urun_kodu": "DO6/M75",
-    "liste_fiyati_eur": 450
+    "liste_fiyati_eur": 450.0,
+    "pdf_page": 58
   },
   "DO6/M77-": {
     "urun_kodu": "DO6/M77-",
-    "liste_fiyati_eur": 980
+    "liste_fiyati_eur": 980.0,
+    "pdf_page": 59
+  },
+  "DO6/M77-(3A)": {
+    "urun_kodu": "DO6/M77-(3A)",
+    "liste_fiyati_eur": 980.0,
+    "pdf_page": 59
   },
   "DO7/M077-X4": {
     "urun_kodu": "DO7/M077-X4",
-    "liste_fiyati_eur": 3600
+    "liste_fiyati_eur": 3600.0,
+    "pdf_page": 63
+  },
+  "DO7/M077-X4(ARABALI)": {
+    "urun_kodu": "DO7/M077-X4(ARABALI)",
+    "liste_fiyati_eur": 3600.0,
+    "pdf_page": 63
   },
   "DO7/M76": {
     "urun_kodu": "DO7/M76",
-    "liste_fiyati_eur": 580
+    "liste_fiyati_eur": 580.0,
+    "pdf_page": 58
   },
   "DO7/M77-": {
     "urun_kodu": "DO7/M77-",
-    "liste_fiyati_eur": 1100
+    "liste_fiyati_eur": 1100.0,
+    "pdf_page": 59
+  },
+  "DO7/M77-(4A)": {
+    "urun_kodu": "DO7/M77-(4A)",
+    "liste_fiyati_eur": 1100.0,
+    "pdf_page": 59
   },
   "DO7/M77-1": {
     "urun_kodu": "DO7/M77-1",
-    "liste_fiyati_eur": 900
+    "liste_fiyati_eur": 900.0,
+    "pdf_page": 59
+  },
+  "DO7/M77-1(4P)": {
+    "urun_kodu": "DO7/M77-1(4P)",
+    "liste_fiyati_eur": 900.0,
+    "pdf_page": 59
   },
   "DO8/M077-X5": {
     "urun_kodu": "DO8/M077-X5",
-    "liste_fiyati_eur": 3800
+    "liste_fiyati_eur": 3800.0,
+    "pdf_page": 63
+  },
+  "DO8/M077-X5(ARABALI)": {
+    "urun_kodu": "DO8/M077-X5(ARABALI)",
+    "liste_fiyati_eur": 3800.0,
+    "pdf_page": 63
   },
   "DO8/M77-": {
     "urun_kodu": "DO8/M77-",
-    "liste_fiyati_eur": 1250
+    "liste_fiyati_eur": 1250.0,
+    "pdf_page": 59
+  },
+  "DO8/M77-(5A)": {
+    "urun_kodu": "DO8/M77-(5A)",
+    "liste_fiyati_eur": 1250.0,
+    "pdf_page": 59
   },
   "DO8/M77-1": {
     "urun_kodu": "DO8/M77-1",
-    "liste_fiyati_eur": 1050
+    "liste_fiyati_eur": 1050.0,
+    "pdf_page": 59
+  },
+  "DO8/M77-1(5P)": {
+    "urun_kodu": "DO8/M77-1(5P)",
+    "liste_fiyati_eur": 1050.0,
+    "pdf_page": 59
   },
   "DO8/M78": {
     "urun_kodu": "DO8/M78",
-    "liste_fiyati_eur": 650
+    "liste_fiyati_eur": 650.0,
+    "pdf_page": 58
   },
   "DR04-1203030.00": {
     "urun_kodu": "DR04-1203030.00",
-    "liste_fiyati_eur": 190
+    "liste_fiyati_eur": 130.0,
+    "pdf_page": 197
   },
   "DR04-1403030.00": {
     "urun_kodu": "DR04-1403030.00",
-    "liste_fiyati_eur": 200
+    "liste_fiyati_eur": 145.0,
+    "pdf_page": 197
   },
   "DR04-1603030.00": {
     "urun_kodu": "DR04-1603030.00",
-    "liste_fiyati_eur": 210
+    "liste_fiyati_eur": 160.0,
+    "pdf_page": 197
   },
   "DR04-1803030.00": {
     "urun_kodu": "DR04-1803030.00",
-    "liste_fiyati_eur": 220
+    "liste_fiyati_eur": 175.0,
+    "pdf_page": 197
   },
   "DR04-2003030.00": {
     "urun_kodu": "DR04-2003030.00",
-    "liste_fiyati_eur": 230
+    "liste_fiyati_eur": 190.0,
+    "pdf_page": 197
   },
   "DR04-503030.00": {
     "urun_kodu": "DR04-503030.00",
-    "liste_fiyati_eur": 160
+    "liste_fiyati_eur": 80.0,
+    "pdf_page": 197
   },
   "DR04-703030.00": {
     "urun_kodu": "DR04-703030.00",
-    "liste_fiyati_eur": 170
+    "liste_fiyati_eur": 100.0,
+    "pdf_page": 197
   },
   "DR04-903030.00": {
     "urun_kodu": "DR04-903030.00",
-    "liste_fiyati_eur": 180
+    "liste_fiyati_eur": 110.0,
+    "pdf_page": 197
+  },
+  "DRTT": {
+    "urun_kodu": "DRTT",
+    "liste_fiyati_eur": 940.0,
+    "pdf_page": 68
   },
   "E-SS37-10": {
     "urun_kodu": "E-SS37-10",
-    "liste_fiyati_eur": 2600
+    "liste_fiyati_eur": 2600.0,
+    "pdf_page": 180
   },
   "E-SS37-3": {
     "urun_kodu": "E-SS37-3",
-    "liste_fiyati_eur": 4000
+    "liste_fiyati_eur": 4000.0,
+    "pdf_page": 180
   },
   "E-SS37-4": {
     "urun_kodu": "E-SS37-4",
-    "liste_fiyati_eur": 5600
+    "liste_fiyati_eur": 5600.0,
+    "pdf_page": 180
   },
   "E-SS37-6": {
     "urun_kodu": "E-SS37-6",
-    "liste_fiyati_eur": 2200
+    "liste_fiyati_eur": 2200.0,
+    "pdf_page": 180
   },
   "E-SS37-8": {
     "urun_kodu": "E-SS37-8",
-    "liste_fiyati_eur": 2400
+    "liste_fiyati_eur": 2400.0,
+    "pdf_page": 180
   },
   "FC-100": {
     "urun_kodu": "FC-100",
-    "liste_fiyati_eur": 70
+    "liste_fiyati_eur": 70.0,
+    "pdf_page": 170
   },
   "FLT120": {
     "urun_kodu": "FLT120",
-    "liste_fiyati_eur": 510
+    "liste_fiyati_eur": 510.0,
+    "pdf_page": 96
   },
   "FR/70SD-M073": {
     "urun_kodu": "FR/70SD-M073",
-    "liste_fiyati_eur": 1850
+    "liste_fiyati_eur": 1850.0,
+    "pdf_page": 22
   },
   "FR1/70SD-M073-1": {
     "urun_kodu": "FR1/70SD-M073-1",
-    "liste_fiyati_eur": 3300
+    "liste_fiyati_eur": 3300.0,
+    "pdf_page": 22
   },
   "FRN-SMK.G": {
     "urun_kodu": "FRN-SMK.G",
-    "liste_fiyati_eur": 3100
+    "liste_fiyati_eur": 3100.0,
+    "pdf_page": 49
   },
   "FRN-SMK.K": {
     "urun_kodu": "FRN-SMK.K",
-    "liste_fiyati_eur": 2950
+    "liste_fiyati_eur": 2950.0,
+    "pdf_page": 49
   },
   "G.BQ.100.GN": {
     "urun_kodu": "G.BQ.100.GN",
-    "liste_fiyati_eur": 1520
+    "liste_fiyati_eur": 1520.0,
+    "pdf_page": 165
   },
   "G.BQ.125.GN": {
     "urun_kodu": "G.BQ.125.GN",
-    "liste_fiyati_eur": 1750
+    "liste_fiyati_eur": 1750.0,
+    "pdf_page": 165
   },
   "G.BQ.75.GN": {
     "urun_kodu": "G.BQ.75.GN",
-    "liste_fiyati_eur": 1350
+    "liste_fiyati_eur": 1350.0,
+    "pdf_page": 165
   },
   "G.CQ.100.GN": {
     "urun_kodu": "G.CQ.100.GN",
-    "liste_fiyati_eur": 2000
+    "liste_fiyati_eur": 2000.0,
+    "pdf_page": 165
   },
   "G.GN.150.D.1": {
     "urun_kodu": "G.GN.150.D.1",
-    "liste_fiyati_eur": 720
+    "liste_fiyati_eur": 720.0,
+    "pdf_page": 160
   },
   "G.GN.150.D.2": {
     "urun_kodu": "G.GN.150.D.2",
-    "liste_fiyati_eur": 810
+    "liste_fiyati_eur": 810.0,
+    "pdf_page": 161
   },
   "G.GN.150.D.3": {
     "urun_kodu": "G.GN.150.D.3",
-    "liste_fiyati_eur": 950
+    "liste_fiyati_eur": 950.0,
+    "pdf_page": 162
   },
   "G.GN.150.D.4": {
     "urun_kodu": "G.GN.150.D.4",
-    "liste_fiyati_eur": 1500
+    "liste_fiyati_eur": 1500.0,
+    "pdf_page": 163
   },
   "G.GN.150.S.1": {
     "urun_kodu": "G.GN.150.S.1",
-    "liste_fiyati_eur": 450
+    "liste_fiyati_eur": 450.0,
+    "pdf_page": 160
   },
   "G.GN.150.S.2": {
     "urun_kodu": "G.GN.150.S.2",
-    "liste_fiyati_eur": 500
+    "liste_fiyati_eur": 500.0,
+    "pdf_page": 161
   },
   "G.GN.150.S.3": {
     "urun_kodu": "G.GN.150.S.3",
-    "liste_fiyati_eur": 590
+    "liste_fiyati_eur": 590.0,
+    "pdf_page": 162
   },
   "G.GN.150.S.4": {
     "urun_kodu": "G.GN.150.S.4",
-    "liste_fiyati_eur": 740
+    "liste_fiyati_eur": 740.0,
+    "pdf_page": 163
   },
   "G.GN.75.D.1": {
     "urun_kodu": "G.GN.75.D.1",
-    "liste_fiyati_eur": 540
+    "liste_fiyati_eur": 540.0,
+    "pdf_page": 160
   },
   "G.GN.75.D.2": {
     "urun_kodu": "G.GN.75.D.2",
-    "liste_fiyati_eur": 580
+    "liste_fiyati_eur": 580.0,
+    "pdf_page": 161
   },
   "G.GN.75.D.3": {
     "urun_kodu": "G.GN.75.D.3",
-    "liste_fiyati_eur": 630
+    "liste_fiyati_eur": 630.0,
+    "pdf_page": 162
   },
   "G.GN.75.D.4": {
     "urun_kodu": "G.GN.75.D.4",
-    "liste_fiyati_eur": 820
+    "liste_fiyati_eur": 820.0,
+    "pdf_page": 163
   },
   "G.GN.75.S.1": {
     "urun_kodu": "G.GN.75.S.1",
-    "liste_fiyati_eur": 350
+    "liste_fiyati_eur": 350.0,
+    "pdf_page": 160
   },
   "G.GN.75.S.2": {
     "urun_kodu": "G.GN.75.S.2",
-    "liste_fiyati_eur": 380
+    "liste_fiyati_eur": 380.0,
+    "pdf_page": 161
   },
   "G.GN.75.S.3": {
     "urun_kodu": "G.GN.75.S.3",
-    "liste_fiyati_eur": 415
+    "liste_fiyati_eur": 415.0,
+    "pdf_page": 162
   },
   "G.GN.75.S.4": {
     "urun_kodu": "G.GN.75.S.4",
-    "liste_fiyati_eur": 490
+    "liste_fiyati_eur": 490.0,
+    "pdf_page": 163
   },
   "G.HSL.11": {
     "urun_kodu": "G.HSL.11",
-    "liste_fiyati_eur": 22
+    "liste_fiyati_eur": 22.0,
+    "pdf_page": 168
   },
   "G.MD-CQ.100.25.D": {
     "urun_kodu": "G.MD-CQ.100.25.D",
-    "liste_fiyati_eur": 3700
+    "liste_fiyati_eur": 3700.0,
+    "pdf_page": 164
   },
   "G.MD.100.25.D": {
     "urun_kodu": "G.MD.100.25.D",
-    "liste_fiyati_eur": 3200
+    "liste_fiyati_eur": 3200.0,
+    "pdf_page": 164
   },
   "G.MD.100.25.S": {
     "urun_kodu": "G.MD.100.25.S",
-    "liste_fiyati_eur": 2200
+    "liste_fiyati_eur": 2200.0,
+    "pdf_page": 164
   },
   "G.PCS.01": {
     "urun_kodu": "G.PCS.01",
-    "liste_fiyati_eur": 6
+    "liste_fiyati_eur": 6.0,
+    "pdf_page": 168
   },
   "G.SS.150.D.1": {
     "urun_kodu": "G.SS.150.D.1",
-    "liste_fiyati_eur": 750
+    "liste_fiyati_eur": 750.0,
+    "pdf_page": 168
   },
   "G.SS.150.D.2": {
     "urun_kodu": "G.SS.150.D.2",
-    "liste_fiyati_eur": 800
+    "liste_fiyati_eur": 800.0,
+    "pdf_page": 168
   },
   "G.SS.150.S.1": {
     "urun_kodu": "G.SS.150.S.1",
-    "liste_fiyati_eur": 460
+    "liste_fiyati_eur": 460.0,
+    "pdf_page": 168
   },
   "G.SS.150.S.2": {
     "urun_kodu": "G.SS.150.S.2",
-    "liste_fiyati_eur": 500
+    "liste_fiyati_eur": 500.0,
+    "pdf_page": 168
   },
   "G.ST.150.D.1": {
     "urun_kodu": "G.ST.150.D.1",
-    "liste_fiyati_eur": 800
+    "liste_fiyati_eur": 800.0,
+    "pdf_page": 156
   },
   "G.ST.150.D.2": {
     "urun_kodu": "G.ST.150.D.2",
-    "liste_fiyati_eur": 900
+    "liste_fiyati_eur": 900.0,
+    "pdf_page": 157
   },
   "G.ST.150.D.3": {
     "urun_kodu": "G.ST.150.D.3",
-    "liste_fiyati_eur": 980
+    "liste_fiyati_eur": 980.0,
+    "pdf_page": 158
   },
   "G.ST.150.D.4": {
     "urun_kodu": "G.ST.150.D.4",
-    "liste_fiyati_eur": 1400
+    "liste_fiyati_eur": 1250.0,
+    "pdf_page": 159
   },
   "G.ST.150.S.1": {
     "urun_kodu": "G.ST.150.S.1",
-    "liste_fiyati_eur": 460
+    "liste_fiyati_eur": 460.0,
+    "pdf_page": 156
   },
   "G.ST.150.S.2": {
     "urun_kodu": "G.ST.150.S.2",
-    "liste_fiyati_eur": 530
+    "liste_fiyati_eur": 530.0,
+    "pdf_page": 157
   },
   "G.ST.150.S.3": {
     "urun_kodu": "G.ST.150.S.3",
-    "liste_fiyati_eur": 620
+    "liste_fiyati_eur": 620.0,
+    "pdf_page": 158
   },
   "G.ST.150.S.4": {
     "urun_kodu": "G.ST.150.S.4",
-    "liste_fiyati_eur": 790
+    "liste_fiyati_eur": 710.0,
+    "pdf_page": 159
   },
   "G.ST.3753": {
     "urun_kodu": "G.ST.3753",
-    "liste_fiyati_eur": 8
+    "liste_fiyati_eur": 8.0,
+    "pdf_page": 168
   },
   "G.ST.75.D.1": {
     "urun_kodu": "G.ST.75.D.1",
-    "liste_fiyati_eur": 560
+    "liste_fiyati_eur": 560.0,
+    "pdf_page": 156
   },
   "G.ST.75.D.2": {
     "urun_kodu": "G.ST.75.D.2",
-    "liste_fiyati_eur": 600
+    "liste_fiyati_eur": 600.0,
+    "pdf_page": 157
   },
   "G.ST.75.D.3": {
     "urun_kodu": "G.ST.75.D.3",
-    "liste_fiyati_eur": 640
+    "liste_fiyati_eur": 640.0,
+    "pdf_page": 158
   },
   "G.ST.75.D.4": {
     "urun_kodu": "G.ST.75.D.4",
-    "liste_fiyati_eur": 820
+    "liste_fiyati_eur": 740.0,
+    "pdf_page": 159
   },
   "G.ST.75.S.1": {
     "urun_kodu": "G.ST.75.S.1",
-    "liste_fiyati_eur": 340
+    "liste_fiyati_eur": 340.0,
+    "pdf_page": 156
   },
   "G.ST.75.S.2": {
     "urun_kodu": "G.ST.75.S.2",
-    "liste_fiyati_eur": 370
+    "liste_fiyati_eur": 370.0,
+    "pdf_page": 157
   },
   "G.ST.75.S.3": {
     "urun_kodu": "G.ST.75.S.3",
-    "liste_fiyati_eur": 390
+    "liste_fiyati_eur": 390.0,
+    "pdf_page": 158
   },
   "G.ST.75.S.4": {
     "urun_kodu": "G.ST.75.S.4",
-    "liste_fiyati_eur": 490
+    "liste_fiyati_eur": 460.0,
+    "pdf_page": 159
   },
   "G.STP.3753": {
     "urun_kodu": "G.STP.3753",
-    "liste_fiyati_eur": 8
+    "liste_fiyati_eur": 8.0,
+    "pdf_page": 168
   },
   "G.TC.100.GN": {
     "urun_kodu": "G.TC.100.GN",
-    "liste_fiyati_eur": 700
+    "liste_fiyati_eur": 700.0,
+    "pdf_page": 166
   },
   "G.TC.125.GN": {
     "urun_kodu": "G.TC.125.GN",
-    "liste_fiyati_eur": 800
+    "liste_fiyati_eur": 800.0,
+    "pdf_page": 166
   },
   "G.TC.75.GN": {
     "urun_kodu": "G.TC.75.GN",
-    "liste_fiyati_eur": 600
+    "liste_fiyati_eur": 600.0,
+    "pdf_page": 166
   },
   "G.TT.09.S.1": {
     "urun_kodu": "G.TT.09.S.1",
-    "liste_fiyati_eur": 370
+    "liste_fiyati_eur": 370.0,
+    "pdf_page": 167
   },
   "G.TT.09.S.2": {
     "urun_kodu": "G.TT.09.S.2",
-    "liste_fiyati_eur": 440
+    "liste_fiyati_eur": 440.0,
+    "pdf_page": 167
   },
   "G.TT.09.S.3": {
     "urun_kodu": "G.TT.09.S.3",
-    "liste_fiyati_eur": 470
+    "liste_fiyati_eur": 470.0,
+    "pdf_page": 167
   },
   "G.TT.09.S.4": {
     "urun_kodu": "G.TT.09.S.4",
-    "liste_fiyati_eur": 600
+    "liste_fiyati_eur": 600.0,
+    "pdf_page": 167
   },
   "G.TT.18.D.1": {
     "urun_kodu": "G.TT.18.D.1",
-    "liste_fiyati_eur": 590
+    "liste_fiyati_eur": 590.0,
+    "pdf_page": 167
   },
   "G.TT.18.D.2": {
     "urun_kodu": "G.TT.18.D.2",
-    "liste_fiyati_eur": 680
+    "liste_fiyati_eur": 680.0,
+    "pdf_page": 167
   },
   "G.TT.18.D.3": {
     "urun_kodu": "G.TT.18.D.3",
-    "liste_fiyati_eur": 720
+    "liste_fiyati_eur": 720.0,
+    "pdf_page": 167
   },
   "G.TT.18.D.4": {
     "urun_kodu": "G.TT.18.D.4",
-    "liste_fiyati_eur": 950
+    "liste_fiyati_eur": 950.0,
+    "pdf_page": 167
   },
   "GDM25": {
     "urun_kodu": "GDM25",
-    "liste_fiyati_eur": 900
+    "liste_fiyati_eur": 900.0,
+    "pdf_page": 98
   },
   "GDM27": {
     "urun_kodu": "GDM27",
-    "liste_fiyati_eur": 1300
+    "liste_fiyati_eur": 1300.0,
+    "pdf_page": 98
   },
   "GDM30": {
     "urun_kodu": "GDM30",
-    "liste_fiyati_eur": 1500
+    "liste_fiyati_eur": 1500.0,
+    "pdf_page": 98
   },
   "IZ/70S-M171": {
     "urun_kodu": "IZ/70S-M171",
-    "liste_fiyati_eur": 770
+    "liste_fiyati_eur": 680.0,
+    "pdf_page": 21
   },
   "IZ/70SD-M171": {
     "urun_kodu": "IZ/70SD-M171",
-    "liste_fiyati_eur": 1050
+    "liste_fiyati_eur": 1050.0,
+    "pdf_page": 21
   },
   "IZ1/70S-M171-2": {
     "urun_kodu": "IZ1/70S-M171-2",
-    "liste_fiyati_eur": 1100
+    "liste_fiyati_eur": 1100.0,
+    "pdf_page": 21
   },
   "IZ1/70S-M190-60": {
     "urun_kodu": "IZ1/70S-M190-60",
-    "liste_fiyati_eur": 1250
+    "liste_fiyati_eur": 1250.0,
+    "pdf_page": 20
   },
   "IZ1/70SD-M171-2": {
     "urun_kodu": "IZ1/70SD-M171-2",
-    "liste_fiyati_eur": 1500
+    "liste_fiyati_eur": 1450.0,
+    "pdf_page": 21
   },
   "IZ2/90SD-M171": {
     "urun_kodu": "IZ2/90SD-M171",
-    "liste_fiyati_eur": 1150
+    "liste_fiyati_eur": 1150.0,
+    "pdf_page": 34
   },
   "IZ3/90SD-M171-1": {
     "urun_kodu": "IZ3/90SD-M171-1",
-    "liste_fiyati_eur": 1700
+    "liste_fiyati_eur": 1700.0,
+    "pdf_page": 34
   },
   "IZ4/M171-40": {
     "urun_kodu": "IZ4/M171-40",
-    "liste_fiyati_eur": 720
+    "liste_fiyati_eur": 620.0,
+    "pdf_page": 9
   },
   "IZ4/M171-60": {
     "urun_kodu": "IZ4/M171-60",
-    "liste_fiyati_eur": 740
+    "liste_fiyati_eur": 750.0,
+    "pdf_page": 9
   },
   "IZ5/M171-70": {
     "urun_kodu": "IZ5/M171-70",
-    "liste_fiyati_eur": 850
+    "liste_fiyati_eur": 850.0,
+    "pdf_page": 9
   },
   "KC-M005": {
     "urun_kodu": "KC-M005",
-    "liste_fiyati_eur": 2800
+    "liste_fiyati_eur": 2800.0,
+    "pdf_page": 81
   },
   "KC-M006": {
     "urun_kodu": "KC-M006",
-    "liste_fiyati_eur": 3600
+    "liste_fiyati_eur": 3600.0,
+    "pdf_page": 81
   },
   "KC-M007": {
     "urun_kodu": "KC-M007",
-    "liste_fiyati_eur": 4200
+    "liste_fiyati_eur": 4200.0,
+    "pdf_page": 81
   },
   "KF-M079-2G": {
     "urun_kodu": "KF-M079-2G",
-    "liste_fiyati_eur": 1200
+    "liste_fiyati_eur": 1200.0,
+    "pdf_page": 54
   },
   "KF-M079-3G": {
     "urun_kodu": "KF-M079-3G",
-    "liste_fiyati_eur": 1300
+    "liste_fiyati_eur": 1300.0,
+    "pdf_page": 54
   },
   "KF-M079-4G": {
     "urun_kodu": "KF-M079-4G",
-    "liste_fiyati_eur": 1400
+    "liste_fiyati_eur": 1400.0,
+    "pdf_page": 54
   },
   "KM012-4": {
     "urun_kodu": "KM012-4",
-    "liste_fiyati_eur": 3700
+    "liste_fiyati_eur": 3700.0,
+    "pdf_page": 81
   },
   "KM012-6": {
     "urun_kodu": "KM012-6",
-    "liste_fiyati_eur": 5800
+    "liste_fiyati_eur": 5800.0,
+    "pdf_page": 81
   },
   "KM012-8": {
     "urun_kodu": "KM012-8",
-    "liste_fiyati_eur": 7000
+    "liste_fiyati_eur": 7000.0,
+    "pdf_page": 81
   },
   "KM012X-5S": {
     "urun_kodu": "KM012X-5S",
-    "liste_fiyati_eur": 3200
+    "liste_fiyati_eur": 3200.0,
+    "pdf_page": 80
   },
   "KM012X-6S": {
     "urun_kodu": "KM012X-6S",
-    "liste_fiyati_eur": 3800
+    "liste_fiyati_eur": 3800.0,
+    "pdf_page": 80
   },
   "KMR-IZGR.SI": {
     "urun_kodu": "KMR-IZGR.SI",
-    "liste_fiyati_eur": 4400
+    "liste_fiyati_eur": 4400.0,
+    "pdf_page": 50
   },
   "KT-M096": {
     "urun_kodu": "KT-M096",
-    "liste_fiyati_eur": 18000
+    "liste_fiyati_eur": 18000.0,
+    "pdf_page": 80
   },
   "KTTB": {
     "urun_kodu": "KTTB",
-    "liste_fiyati_eur": 440
+    "liste_fiyati_eur": 440.0,
+    "pdf_page": 67
   },
   "KU-M015-2.6": {
     "urun_kodu": "KU-M015-2.6",
-    "liste_fiyati_eur": 4600
+    "liste_fiyati_eur": 4600.0,
+    "pdf_page": 31
   },
   "LTI/70S-M170-1": {
     "urun_kodu": "LTI/70S-M170-1",
-    "liste_fiyati_eur": 1100
+    "liste_fiyati_eur": 1100.0,
+    "pdf_page": 20
   },
   "LTI/70S-M170-2": {
     "urun_kodu": "LTI/70S-M170-2",
-    "liste_fiyati_eur": 1200
+    "liste_fiyati_eur": 1200.0,
+    "pdf_page": 20
   },
   "LTI/70SD-M170-1": {
     "urun_kodu": "LTI/70SD-M170-1",
-    "liste_fiyati_eur": 1400
+    "liste_fiyati_eur": 1400.0,
+    "pdf_page": 20
   },
   "LTI/70SD-M170-2": {
     "urun_kodu": "LTI/70SD-M170-2",
-    "liste_fiyati_eur": 1550
+    "liste_fiyati_eur": 1550.0,
+    "pdf_page": 20
   },
   "LTI1/70S-M170-3": {
     "urun_kodu": "LTI1/70S-M170-3",
-    "liste_fiyati_eur": 1400
+    "liste_fiyati_eur": 1400.0,
+    "pdf_page": 20
   },
   "LTI1/70SD-M170-3": {
     "urun_kodu": "LTI1/70SD-M170-3",
-    "liste_fiyati_eur": 1700
+    "liste_fiyati_eur": 1700.0,
+    "pdf_page": 20
   },
   "LTI2/90SD-M170-1": {
     "urun_kodu": "LTI2/90SD-M170-1",
-    "liste_fiyati_eur": 1450
+    "liste_fiyati_eur": 1450.0,
+    "pdf_page": 35
   },
   "LTI3/90SD-M170-3": {
     "urun_kodu": "LTI3/90SD-M170-3",
-    "liste_fiyati_eur": 1950
+    "liste_fiyati_eur": 1950.0,
+    "pdf_page": 35
   },
   "LTI4/M170-1": {
     "urun_kodu": "LTI4/M170-1",
-    "liste_fiyati_eur": 720
+    "liste_fiyati_eur": 720.0,
+    "pdf_page": 10
   },
   "LTI5/M170-2": {
     "urun_kodu": "LTI5/M170-2",
-    "liste_fiyati_eur": 850
+    "liste_fiyati_eur": 850.0,
+    "pdf_page": 10
   },
   "LTI6/M170-3": {
     "urun_kodu": "LTI6/M170-3",
-    "liste_fiyati_eur": 1100
+    "liste_fiyati_eur": 1100.0,
+    "pdf_page": 10
   },
   "M00-T.1": {
     "urun_kodu": "M00-T.1",
-    "liste_fiyati_eur": 1900
+    "liste_fiyati_eur": 1900.0,
+    "pdf_page": 87
   },
   "M00-T.2": {
     "urun_kodu": "M00-T.2",
-    "liste_fiyati_eur": 1500
+    "liste_fiyati_eur": 1500.0,
+    "pdf_page": 87
   },
   "M00-T.3": {
     "urun_kodu": "M00-T.3",
-    "liste_fiyati_eur": 2300
+    "liste_fiyati_eur": 2300.0,
+    "pdf_page": 87
   },
   "M00-T.4": {
     "urun_kodu": "M00-T.4",
-    "liste_fiyati_eur": 1700
+    "liste_fiyati_eur": 1700.0,
+    "pdf_page": 87
   },
   "M00-T.5": {
     "urun_kodu": "M00-T.5",
-    "liste_fiyati_eur": 3800
+    "liste_fiyati_eur": 3800.0,
+    "pdf_page": 87
   },
   "M001-E": {
     "urun_kodu": "M001-E",
-    "liste_fiyati_eur": 980
+    "liste_fiyati_eur": 980.0,
+    "pdf_page": 72
   },
   "M002-E": {
     "urun_kodu": "M002-E",
-    "liste_fiyati_eur": 1100
+    "liste_fiyati_eur": 1100.0,
+    "pdf_page": 72
   },
   "M003": {
     "urun_kodu": "M003",
-    "liste_fiyati_eur": 1150
+    "liste_fiyati_eur": 1150.0,
+    "pdf_page": 72
   },
   "M003-DE": {
     "urun_kodu": "M003-DE",
-    "liste_fiyati_eur": 1300
+    "liste_fiyati_eur": 1300.0,
+    "pdf_page": 78
   },
   "M003-E": {
     "urun_kodu": "M003-E",
-    "liste_fiyati_eur": 1150
+    "liste_fiyati_eur": 1150.0,
+    "pdf_page": 72
   },
   "M003R": {
     "urun_kodu": "M003R",
-    "liste_fiyati_eur": 2100
+    "liste_fiyati_eur": 2100.0,
+    "pdf_page": 73
   },
   "M004": {
     "urun_kodu": "M004",
-    "liste_fiyati_eur": 1300
+    "liste_fiyati_eur": 1300.0,
+    "pdf_page": 72
   },
   "M004-DE": {
     "urun_kodu": "M004-DE",
-    "liste_fiyati_eur": 1400
+    "liste_fiyati_eur": 1400.0,
+    "pdf_page": 78
   },
   "M004-E": {
     "urun_kodu": "M004-E",
-    "liste_fiyati_eur": 1300
+    "liste_fiyati_eur": 1300.0,
+    "pdf_page": 72
   },
   "M004R": {
     "urun_kodu": "M004R",
-    "liste_fiyati_eur": 2500
+    "liste_fiyati_eur": 2500.0,
+    "pdf_page": 73
   },
   "M005-E": {
     "urun_kodu": "M005-E",
-    "liste_fiyati_eur": 2000
+    "liste_fiyati_eur": 2000.0,
+    "pdf_page": 74
   },
   "M005R": {
     "urun_kodu": "M005R",
-    "liste_fiyati_eur": 2800
+    "liste_fiyati_eur": 2800.0,
+    "pdf_page": 73
   },
   "M006-E": {
     "urun_kodu": "M006-E",
-    "liste_fiyati_eur": 2200
+    "liste_fiyati_eur": 2200.0,
+    "pdf_page": 74
   },
   "M006R": {
     "urun_kodu": "M006R",
-    "liste_fiyati_eur": 3300
+    "liste_fiyati_eur": 3300.0,
+    "pdf_page": 73
   },
   "M007-E": {
     "urun_kodu": "M007-E",
-    "liste_fiyati_eur": 3200
+    "liste_fiyati_eur": 3200.0,
+    "pdf_page": 75
   },
   "M008-E": {
     "urun_kodu": "M008-E",
-    "liste_fiyati_eur": 3400
+    "liste_fiyati_eur": 3400.0,
+    "pdf_page": 75
   },
   "M009-E": {
     "urun_kodu": "M009-E",
-    "liste_fiyati_eur": 3600
+    "liste_fiyati_eur": 3600.0,
+    "pdf_page": 75
   },
   "M009B-E": {
     "urun_kodu": "M009B-E",
-    "liste_fiyati_eur": 3800
+    "liste_fiyati_eur": 3800.0,
+    "pdf_page": 75
   },
   "M010-DE": {
     "urun_kodu": "M010-DE",
-    "liste_fiyati_eur": 3100
+    "liste_fiyati_eur": 3100.0,
+    "pdf_page": 78
   },
   "M011-DE": {
     "urun_kodu": "M011-DE",
-    "liste_fiyati_eur": 3300
+    "liste_fiyati_eur": 3300.0,
+    "pdf_page": 78
   },
   "M012-4": {
     "urun_kodu": "M012-4",
-    "liste_fiyati_eur": 1300
+    "liste_fiyati_eur": 1300.0,
+    "pdf_page": 48
   },
   "M012-6": {
     "urun_kodu": "M012-6",
-    "liste_fiyati_eur": 1500
+    "liste_fiyati_eur": 1500.0,
+    "pdf_page": 48
   },
   "M013-4G": {
     "urun_kodu": "M013-4G",
-    "liste_fiyati_eur": 2000
+    "liste_fiyati_eur": 2000.0,
+    "pdf_page": 48
   },
   "M013-6G": {
     "urun_kodu": "M013-6G",
-    "liste_fiyati_eur": 2300
+    "liste_fiyati_eur": 2300.0,
+    "pdf_page": 48
   },
   "M014-4": {
     "urun_kodu": "M014-4",
-    "liste_fiyati_eur": 2000
+    "liste_fiyati_eur": 2000.0,
+    "pdf_page": 48
   },
   "M014-6": {
     "urun_kodu": "M014-6",
-    "liste_fiyati_eur": 2500
+    "liste_fiyati_eur": 2500.0,
+    "pdf_page": 48
   },
   "M015-2": {
     "urun_kodu": "M015-2",
-    "liste_fiyati_eur": 1900
+    "liste_fiyati_eur": 1900.0,
+    "pdf_page": 31
   },
   "M015-3": {
     "urun_kodu": "M015-3",
-    "liste_fiyati_eur": 2300
+    "liste_fiyati_eur": 2300.0,
+    "pdf_page": 31
   },
   "M015-4": {
     "urun_kodu": "M015-4",
-    "liste_fiyati_eur": 2250
+    "liste_fiyati_eur": 2250.0,
+    "pdf_page": 31
   },
   "M015-6": {
     "urun_kodu": "M015-6",
-    "liste_fiyati_eur": 2900
+    "liste_fiyati_eur": 2900.0,
+    "pdf_page": 31
   },
   "M016": {
     "urun_kodu": "M016",
-    "liste_fiyati_eur": 1700
+    "liste_fiyati_eur": 1400.0,
+    "pdf_page": 52
   },
   "M016-4": {
     "urun_kodu": "M016-4",
-    "liste_fiyati_eur": 3000
+    "liste_fiyati_eur": 3000.0,
+    "pdf_page": 48
   },
   "M016-6": {
     "urun_kodu": "M016-6",
-    "liste_fiyati_eur": 4200
+    "liste_fiyati_eur": 4200.0,
+    "pdf_page": 48
   },
   "M0168": {
     "urun_kodu": "M0168",
-    "liste_fiyati_eur": 420
+    "liste_fiyati_eur": 320.0,
+    "pdf_page": 13
   },
   "M016E": {
     "urun_kodu": "M016E",
-    "liste_fiyati_eur": 1700
+    "liste_fiyati_eur": 2600.0,
+    "pdf_page": 52
   },
   "M018": {
     "urun_kodu": "M018",
-    "liste_fiyati_eur": 400
+    "liste_fiyati_eur": 400.0,
+    "pdf_page": 14
   },
   "M018-1": {
     "urun_kodu": "M018-1",
-    "liste_fiyati_eur": 700
+    "liste_fiyati_eur": 400.0,
+    "pdf_page": 14
   },
   "M018-2": {
     "urun_kodu": "M018-2",
-    "liste_fiyati_eur": 950
+    "liste_fiyati_eur": 700.0,
+    "pdf_page": 14
   },
   "M018E-1.3": {
     "urun_kodu": "M018E-1.3",
-    "liste_fiyati_eur": 650
+    "liste_fiyati_eur": 650.0,
+    "pdf_page": 14
   },
   "M018E-1.4": {
     "urun_kodu": "M018E-1.4",
-    "liste_fiyati_eur": 820
+    "liste_fiyati_eur": 820.0,
+    "pdf_page": 14
   },
   "M020": {
     "urun_kodu": "M020",
-    "liste_fiyati_eur": 800
+    "liste_fiyati_eur": 800.0,
+    "pdf_page": 84
   },
   "M020-1": {
     "urun_kodu": "M020-1",
-    "liste_fiyati_eur": 1000
+    "liste_fiyati_eur": 800.0,
+    "pdf_page": 84
   },
   "M022-1": {
     "urun_kodu": "M022-1",
-    "liste_fiyati_eur": 650
+    "liste_fiyati_eur": 650.0,
+    "pdf_page": 94
+  },
+  "M022-1(EKONOMIK)": {
+    "urun_kodu": "M022-1(EKONOMIK)",
+    "liste_fiyati_eur": 650.0,
+    "pdf_page": 94
   },
   "M022-2": {
     "urun_kodu": "M022-2",
-    "liste_fiyati_eur": 700
+    "liste_fiyati_eur": 700.0,
+    "pdf_page": 94
+  },
+  "M022-2(EKONOMIK)": {
+    "urun_kodu": "M022-2(EKONOMIK)",
+    "liste_fiyati_eur": 700.0,
+    "pdf_page": 94
   },
   "M022-3": {
     "urun_kodu": "M022-3",
-    "liste_fiyati_eur": 950
+    "liste_fiyati_eur": 950.0,
+    "pdf_page": 94
+  },
+  "M022-3(EKONOMIK)": {
+    "urun_kodu": "M022-3(EKONOMIK)",
+    "liste_fiyati_eur": 950.0,
+    "pdf_page": 94
   },
   "M022-L2": {
     "urun_kodu": "M022-L2",
-    "liste_fiyati_eur": 720
+    "liste_fiyati_eur": 720.0,
+    "pdf_page": 94
+  },
+  "M022-L2(LÜKS)": {
+    "urun_kodu": "M022-L2(LÜKS)",
+    "liste_fiyati_eur": 720.0,
+    "pdf_page": 94
   },
   "M022-L3": {
     "urun_kodu": "M022-L3",
-    "liste_fiyati_eur": 830
+    "liste_fiyati_eur": 830.0,
+    "pdf_page": 94
+  },
+  "M022-L3(LÜKS)": {
+    "urun_kodu": "M022-L3(LÜKS)",
+    "liste_fiyati_eur": 830.0,
+    "pdf_page": 94
   },
   "M022-L4": {
     "urun_kodu": "M022-L4",
-    "liste_fiyati_eur": 1000
+    "liste_fiyati_eur": 1000.0,
+    "pdf_page": 94
+  },
+  "M022-L4(LÜKS)": {
+    "urun_kodu": "M022-L4(LÜKS)",
+    "liste_fiyati_eur": 1000.0,
+    "pdf_page": 94
   },
   "M026-120": {
     "urun_kodu": "M026-120",
-    "liste_fiyati_eur": 170
+    "liste_fiyati_eur": 170.0,
+    "pdf_page": 95
   },
   "M026-160": {
     "urun_kodu": "M026-160",
-    "liste_fiyati_eur": 180
+    "liste_fiyati_eur": 180.0,
+    "pdf_page": 95
   },
   "M026-250": {
     "urun_kodu": "M026-250",
-    "liste_fiyati_eur": 200
+    "liste_fiyati_eur": 200.0,
+    "pdf_page": 95
   },
   "M026-350": {
     "urun_kodu": "M026-350",
-    "liste_fiyati_eur": 300
+    "liste_fiyati_eur": 300.0,
+    "pdf_page": 95
   },
   "M026-50": {
     "urun_kodu": "M026-50",
-    "liste_fiyati_eur": 140
+    "liste_fiyati_eur": 140.0,
+    "pdf_page": 95
   },
   "M026-500": {
     "urun_kodu": "M026-500",
-    "liste_fiyati_eur": 350
+    "liste_fiyati_eur": 350.0,
+    "pdf_page": 95
   },
   "M026-80": {
     "urun_kodu": "M026-80",
-    "liste_fiyati_eur": 150
+    "liste_fiyati_eur": 150.0,
+    "pdf_page": 95
   },
   "M026-B2": {
     "urun_kodu": "M026-B2",
-    "liste_fiyati_eur": 870
+    "liste_fiyati_eur": 870.0,
+    "pdf_page": 94
+  },
+  "M026-B2(BAKIR)": {
+    "urun_kodu": "M026-B2(BAKIR)",
+    "liste_fiyati_eur": 870.0,
+    "pdf_page": 94
   },
   "M026-B3": {
     "urun_kodu": "M026-B3",
-    "liste_fiyati_eur": 1010
+    "liste_fiyati_eur": 1010.0,
+    "pdf_page": 94
+  },
+  "M026-B3(BAKIR)": {
+    "urun_kodu": "M026-B3(BAKIR)",
+    "liste_fiyati_eur": 1010.0,
+    "pdf_page": 94
   },
   "M027": {
     "urun_kodu": "M027",
-    "liste_fiyati_eur": 470
+    "liste_fiyati_eur": 280.0,
+    "pdf_page": 91
   },
   "M036-1": {
     "urun_kodu": "M036-1",
-    "liste_fiyati_eur": 3600
+    "liste_fiyati_eur": 3600.0,
+    "pdf_page": 177
   },
   "M036-B": {
     "urun_kodu": "M036-B",
-    "liste_fiyati_eur": 2200
+    "liste_fiyati_eur": 2200.0,
+    "pdf_page": 176
   },
   "M036-DS": {
     "urun_kodu": "M036-DS",
-    "liste_fiyati_eur": 220
+    "liste_fiyati_eur": 220.0,
+    "pdf_page": 176
   },
   "M036-T1": {
     "urun_kodu": "M036-T1",
-    "liste_fiyati_eur": 17600
+    "liste_fiyati_eur": 17600.0,
+    "pdf_page": 178
   },
   "M037-3SE": {
     "urun_kodu": "M037-3SE",
-    "liste_fiyati_eur": 1900
+    "liste_fiyati_eur": 1900.0,
+    "pdf_page": 182
   },
   "M037-4SE": {
     "urun_kodu": "M037-4SE",
-    "liste_fiyati_eur": 2000
+    "liste_fiyati_eur": 2000.0,
+    "pdf_page": 182
   },
   "M037-5SE": {
     "urun_kodu": "M037-5SE",
-    "liste_fiyati_eur": 2400
+    "liste_fiyati_eur": 2400.0,
+    "pdf_page": 182
   },
   "M037-6SE": {
     "urun_kodu": "M037-6SE",
-    "liste_fiyati_eur": 3000
+    "liste_fiyati_eur": 3000.0,
+    "pdf_page": 182
   },
   "M038-1": {
     "urun_kodu": "M038-1",
-    "liste_fiyati_eur": 2100
+    "liste_fiyati_eur": 2100.0,
+    "pdf_page": 176
   },
   "M044": {
     "urun_kodu": "M044",
-    "liste_fiyati_eur": 2600
+    "liste_fiyati_eur": 2600.0,
+    "pdf_page": 149
+  },
+  "M044(AÇIK)": {
+    "urun_kodu": "M044(AÇIK)",
+    "liste_fiyati_eur": 2600.0,
+    "pdf_page": 149
   },
   "M044-1": {
     "urun_kodu": "M044-1",
-    "liste_fiyati_eur": 2800
+    "liste_fiyati_eur": 2800.0,
+    "pdf_page": 149
   },
   "M056": {
     "urun_kodu": "M056",
-    "liste_fiyati_eur": 260
+    "liste_fiyati_eur": 260.0,
+    "pdf_page": 85
   },
   "M057": {
     "urun_kodu": "M057",
-    "liste_fiyati_eur": 270
+    "liste_fiyati_eur": 270.0,
+    "pdf_page": 85
   },
   "M058": {
     "urun_kodu": "M058",
-    "liste_fiyati_eur": 345
+    "liste_fiyati_eur": 345.0,
+    "pdf_page": 85
   },
   "M059": {
     "urun_kodu": "M059",
-    "liste_fiyati_eur": 410
+    "liste_fiyati_eur": 410.0,
+    "pdf_page": 85
   },
   "M060": {
     "urun_kodu": "M060",
-    "liste_fiyati_eur": 320
+    "liste_fiyati_eur": 320.0,
+    "pdf_page": 85
   },
   "M060-1": {
     "urun_kodu": "M060-1",
-    "liste_fiyati_eur": 520
+    "liste_fiyati_eur": 260.0,
+    "pdf_page": 85
   },
   "M062": {
     "urun_kodu": "M062",
-    "liste_fiyati_eur": 890
+    "liste_fiyati_eur": 890.0,
+    "pdf_page": 8
   },
   "M062-1": {
     "urun_kodu": "M062-1",
-    "liste_fiyati_eur": 1550
+    "liste_fiyati_eur": 1550.0,
+    "pdf_page": 8
   },
   "M064-40": {
     "urun_kodu": "M064-40",
-    "liste_fiyati_eur": 620
+    "liste_fiyati_eur": 620.0,
+    "pdf_page": 9
   },
   "M064-60": {
     "urun_kodu": "M064-60",
-    "liste_fiyati_eur": 750
+    "liste_fiyati_eur": 750.0,
+    "pdf_page": 9
   },
   "M064-70": {
     "urun_kodu": "M064-70",
-    "liste_fiyati_eur": 850
+    "liste_fiyati_eur": 850.0,
+    "pdf_page": 9
   },
   "M066": {
     "urun_kodu": "M066",
-    "liste_fiyati_eur": 900
+    "liste_fiyati_eur": 900.0,
+    "pdf_page": 12
   },
   "M067": {
     "urun_kodu": "M067",
-    "liste_fiyati_eur": 240
+    "liste_fiyati_eur": 240.0,
+    "pdf_page": 13
   },
   "M067-1": {
     "urun_kodu": "M067-1",
-    "liste_fiyati_eur": 320
+    "liste_fiyati_eur": 240.0,
+    "pdf_page": 13
   },
   "M070": {
     "urun_kodu": "M070",
-    "liste_fiyati_eur": 400
+    "liste_fiyati_eur": 400.0,
+    "pdf_page": 84
   },
   "M071": {
     "urun_kodu": "M071",
-    "liste_fiyati_eur": 1500
+    "liste_fiyati_eur": 1500.0,
+    "pdf_page": 79
   },
   "M071-1": {
     "urun_kodu": "M071-1",
-    "liste_fiyati_eur": 440
+    "liste_fiyati_eur": 440.0,
+    "pdf_page": 84
+  },
+  "M071-1(BLOKKAPAK)": {
+    "urun_kodu": "M071-1(BLOKKAPAK)",
+    "liste_fiyati_eur": 800.0,
+    "pdf_page": 84
   },
   "M071-2": {
     "urun_kodu": "M071-2",
-    "liste_fiyati_eur": 480
+    "liste_fiyati_eur": 480.0,
+    "pdf_page": 84
+  },
+  "M071-2(ÇIFTKAPAK)": {
+    "urun_kodu": "M071-2(ÇIFTKAPAK)",
+    "liste_fiyati_eur": 1000.0,
+    "pdf_page": 84
   },
   "M077-3C": {
     "urun_kodu": "M077-3C",
-    "liste_fiyati_eur": 1100
+    "liste_fiyati_eur": 1100.0,
+    "pdf_page": 60
   },
   "M077-3D": {
     "urun_kodu": "M077-3D",
-    "liste_fiyati_eur": 1150
+    "liste_fiyati_eur": 1150.0,
+    "pdf_page": 60
   },
   "M077-3E": {
     "urun_kodu": "M077-3E",
-    "liste_fiyati_eur": 1300
+    "liste_fiyati_eur": 1300.0,
+    "pdf_page": 60
   },
   "M077-4AK": {
     "urun_kodu": "M077-4AK",
-    "liste_fiyati_eur": 1450
+    "liste_fiyati_eur": 1450.0,
+    "pdf_page": 65
   },
   "M077-4C": {
     "urun_kodu": "M077-4C",
-    "liste_fiyati_eur": 1300
+    "liste_fiyati_eur": 1300.0,
+    "pdf_page": 60
   },
   "M077-4D": {
     "urun_kodu": "M077-4D",
-    "liste_fiyati_eur": 1300
+    "liste_fiyati_eur": 1300.0,
+    "pdf_page": 60
   },
   "M077-4E": {
     "urun_kodu": "M077-4E",
-    "liste_fiyati_eur": 1450
+    "liste_fiyati_eur": 1450.0,
+    "pdf_page": 60
   },
   "M077-K3": {
     "urun_kodu": "M077-K3",
-    "liste_fiyati_eur": 1100
+    "liste_fiyati_eur": 1100.0,
+    "pdf_page": 61
   },
   "M077-K4": {
     "urun_kodu": "M077-K4",
-    "liste_fiyati_eur": 1300
+    "liste_fiyati_eur": 1300.0,
+    "pdf_page": 61
   },
   "M077-L3": {
     "urun_kodu": "M077-L3",
-    "liste_fiyati_eur": 1700
+    "liste_fiyati_eur": 1700.0,
+    "pdf_page": 61
   },
   "M077-L4": {
     "urun_kodu": "M077-L4",
-    "liste_fiyati_eur": 1800
+    "liste_fiyati_eur": 1800.0,
+    "pdf_page": 61
   },
   "M079-2E": {
     "urun_kodu": "M079-2E",
-    "liste_fiyati_eur": 1200
+    "liste_fiyati_eur": 1200.0,
+    "pdf_page": 54
   },
   "M079-3E": {
     "urun_kodu": "M079-3E",
-    "liste_fiyati_eur": 1300
+    "liste_fiyati_eur": 1300.0,
+    "pdf_page": 54
   },
   "M079-4E": {
     "urun_kodu": "M079-4E",
-    "liste_fiyati_eur": 1400
+    "liste_fiyati_eur": 1400.0,
+    "pdf_page": 54
   },
   "M08220": {
     "urun_kodu": "M08220",
-    "liste_fiyati_eur": 270
+    "liste_fiyati_eur": 310.0,
+    "pdf_page": 207
   },
   "M08221": {
     "urun_kodu": "M08221",
-    "liste_fiyati_eur": 370
+    "liste_fiyati_eur": 490.0,
+    "pdf_page": 207
   },
   "M084": {
     "urun_kodu": "M084",
-    "liste_fiyati_eur": 280
+    "liste_fiyati_eur": 470.0,
+    "pdf_page": 91
   },
   "M085-1": {
     "urun_kodu": "M085-1",
-    "liste_fiyati_eur": 1000
+    "liste_fiyati_eur": 1000.0,
+    "pdf_page": 92
   },
   "M085-2": {
     "urun_kodu": "M085-2",
-    "liste_fiyati_eur": 1700
+    "liste_fiyati_eur": 1700.0,
+    "pdf_page": 92
   },
   "M085-3": {
     "urun_kodu": "M085-3",
-    "liste_fiyati_eur": 2300
+    "liste_fiyati_eur": 2300.0,
+    "pdf_page": 92
   },
   "M086": {
     "urun_kodu": "M086",
-    "liste_fiyati_eur": 3700
+    "liste_fiyati_eur": 3700.0,
+    "pdf_page": 92
   },
   "M087": {
     "urun_kodu": "M087",
-    "liste_fiyati_eur": 3500
+    "liste_fiyati_eur": 130.0,
+    "pdf_page": 93
+  },
+  "M087(KOLLU)": {
+    "urun_kodu": "M087(KOLLU)",
+    "liste_fiyati_eur": 130.0,
+    "pdf_page": 93
   },
   "M087-E": {
     "urun_kodu": "M087-E",
-    "liste_fiyati_eur": 4800
+    "liste_fiyati_eur": 4800.0,
+    "pdf_page": 92
   },
   "M088": {
     "urun_kodu": "M088",
-    "liste_fiyati_eur": 130
+    "liste_fiyati_eur": 560.0,
+    "pdf_page": 93
+  },
+  "M088(KATIMEYVE)": {
+    "urun_kodu": "M088(KATIMEYVE)",
+    "liste_fiyati_eur": 560.0,
+    "pdf_page": 93
   },
   "M089": {
     "urun_kodu": "M089",
-    "liste_fiyati_eur": 560
+    "liste_fiyati_eur": 390.0,
+    "pdf_page": 93
+  },
+  "M089(NARENCIYESIKACAĞI)": {
+    "urun_kodu": "M089(NARENCIYESIKACAĞI)",
+    "liste_fiyati_eur": 390.0,
+    "pdf_page": 93
   },
   "M090": {
     "urun_kodu": "M090",
-    "liste_fiyati_eur": 390
+    "liste_fiyati_eur": 3500.0,
+    "pdf_page": 93
+  },
+  "M090(PORTAKALSIKACAĞI)": {
+    "urun_kodu": "M090(PORTAKALSIKACAĞI)",
+    "liste_fiyati_eur": 3500.0,
+    "pdf_page": 93
   },
   "M097": {
     "urun_kodu": "M097",
-    "liste_fiyati_eur": 400
+    "liste_fiyati_eur": 400.0,
+    "pdf_page": 86
   },
   "M097-G": {
     "urun_kodu": "M097-G",
-    "liste_fiyati_eur": 400
+    "liste_fiyati_eur": 400.0,
+    "pdf_page": 86
   },
   "M098": {
     "urun_kodu": "M098",
-    "liste_fiyati_eur": 800
+    "liste_fiyati_eur": 800.0,
+    "pdf_page": 86
   },
   "M098-G": {
     "urun_kodu": "M098-G",
-    "liste_fiyati_eur": 800
+    "liste_fiyati_eur": 800.0,
+    "pdf_page": 86
   },
   "M166": {
     "urun_kodu": "M166",
-    "liste_fiyati_eur": 680
+    "liste_fiyati_eur": 680.0,
+    "pdf_page": 12
   },
   "M166-X.2": {
     "urun_kodu": "M166-X.2",
-    "liste_fiyati_eur": 840
+    "liste_fiyati_eur": 500.0,
+    "pdf_page": 88
   },
   "M166-X.4": {
     "urun_kodu": "M166-X.4",
-    "liste_fiyati_eur": 670
+    "liste_fiyati_eur": 670.0,
+    "pdf_page": 88
   },
   "M166-X.6": {
     "urun_kodu": "M166-X.6",
-    "liste_fiyati_eur": 500
+    "liste_fiyati_eur": 840.0,
+    "pdf_page": 88
   },
   "M167": {
     "urun_kodu": "M167",
-    "liste_fiyati_eur": 720
+    "liste_fiyati_eur": 720.0,
+    "pdf_page": 12
   },
   "M169": {
     "urun_kodu": "M169",
-    "liste_fiyati_eur": 500
+    "liste_fiyati_eur": 500.0,
+    "pdf_page": 8
   },
   "M169-1": {
     "urun_kodu": "M169-1",
-    "liste_fiyati_eur": 740
+    "liste_fiyati_eur": 740.0,
+    "pdf_page": 8
   },
   "M77-": {
     "urun_kodu": "M77-",
-    "liste_fiyati_eur": 2250
+    "liste_fiyati_eur": 1550.0,
+    "pdf_page": 61
+  },
+  "M77-(3K)": {
+    "urun_kodu": "M77-(3K)",
+    "liste_fiyati_eur": 1550.0,
+    "pdf_page": 61
+  },
+  "M77-(3L)": {
+    "urun_kodu": "M77-(3L)",
+    "liste_fiyati_eur": 1950.0,
+    "pdf_page": 61
+  },
+  "M77-(4K)": {
+    "urun_kodu": "M77-(4K)",
+    "liste_fiyati_eur": 1750.0,
+    "pdf_page": 61
+  },
+  "M77-(4L)": {
+    "urun_kodu": "M77-(4L)",
+    "liste_fiyati_eur": 2250.0,
+    "pdf_page": 61
   },
   "MB-120X": {
     "urun_kodu": "MB-120X",
-    "liste_fiyati_eur": 480
+    "liste_fiyati_eur": 480.0,
+    "pdf_page": 199
   },
   "MB-134X": {
     "urun_kodu": "MB-134X",
-    "liste_fiyati_eur": 300
+    "liste_fiyati_eur": 300.0,
+    "pdf_page": 199
   },
   "MB-136X": {
     "urun_kodu": "MB-136X",
-    "liste_fiyati_eur": 400
+    "liste_fiyati_eur": 400.0,
+    "pdf_page": 199
   },
   "MB-152C": {
     "urun_kodu": "MB-152C",
-    "liste_fiyati_eur": 600
+    "liste_fiyati_eur": 600.0,
+    "pdf_page": 199
   },
   "MB-152C1": {
     "urun_kodu": "MB-152C1",
-    "liste_fiyati_eur": 600
+    "liste_fiyati_eur": 600.0,
+    "pdf_page": 199
   },
   "MB-152T": {
     "urun_kodu": "MB-152T",
-    "liste_fiyati_eur": 480
+    "liste_fiyati_eur": 480.0,
+    "pdf_page": 199
   },
   "MB-152T1": {
     "urun_kodu": "MB-152T1",
-    "liste_fiyati_eur": 500
+    "liste_fiyati_eur": 500.0,
+    "pdf_page": 199
   },
   "MB-172X": {
     "urun_kodu": "MB-172X",
-    "liste_fiyati_eur": 300
+    "liste_fiyati_eur": 300.0,
+    "pdf_page": 199
   },
   "MB17-1": {
     "urun_kodu": "MB17-1",
-    "liste_fiyati_eur": 1000
+    "liste_fiyati_eur": 1000.0,
+    "pdf_page": 89
+  },
+  "MB17-1(PASLANMAZ)": {
+    "urun_kodu": "MB17-1(PASLANMAZ)",
+    "liste_fiyati_eur": 1000.0,
+    "pdf_page": 89
   },
   "MB17-2": {
     "urun_kodu": "MB17-2",
-    "liste_fiyati_eur": 1250
+    "liste_fiyati_eur": 1250.0,
+    "pdf_page": 89
+  },
+  "MB17-2(PASLANMAZ)": {
+    "urun_kodu": "MB17-2(PASLANMAZ)",
+    "liste_fiyati_eur": 1250.0,
+    "pdf_page": 89
   },
   "MB17-A": {
     "urun_kodu": "MB17-A",
-    "liste_fiyati_eur": 1410
+    "liste_fiyati_eur": 1410.0,
+    "pdf_page": 89
+  },
+  "MB17-A(AÇIK)": {
+    "urun_kodu": "MB17-A(AÇIK)",
+    "liste_fiyati_eur": 1410.0,
+    "pdf_page": 89
   },
   "MB17-K": {
     "urun_kodu": "MB17-K",
-    "liste_fiyati_eur": 1660
+    "liste_fiyati_eur": 1660.0,
+    "pdf_page": 89
+  },
+  "MB17-K(KAPALI)": {
+    "urun_kodu": "MB17-K(KAPALI)",
+    "liste_fiyati_eur": 1660.0,
+    "pdf_page": 89
   },
   "MB18-A": {
     "urun_kodu": "MB18-A",
-    "liste_fiyati_eur": 1550
+    "liste_fiyati_eur": 1550.0,
+    "pdf_page": 89
+  },
+  "MB18-A(AÇIK)": {
+    "urun_kodu": "MB18-A(AÇIK)",
+    "liste_fiyati_eur": 1550.0,
+    "pdf_page": 89
   },
   "MD/1200/2": {
     "urun_kodu": "MD/1200/2",
-    "liste_fiyati_eur": 16600
+    "liste_fiyati_eur": 16600.0,
+    "pdf_page": 45
   },
   "ME/1200": {
     "urun_kodu": "ME/1200",
-    "liste_fiyati_eur": 6200
+    "liste_fiyati_eur": 6200.0,
+    "pdf_page": 45
   },
   "MK/1200/D": {
     "urun_kodu": "MK/1200/D",
-    "liste_fiyati_eur": 3500
+    "liste_fiyati_eur": 3500.0,
+    "pdf_page": 45
   },
   "MR38-1.1204060.10": {
     "urun_kodu": "MR38-1.1204060.10",
-    "liste_fiyati_eur": 620
+    "liste_fiyati_eur": 620.0,
+    "pdf_page": 197
   },
   "MR38-1.1404060.10": {
     "urun_kodu": "MR38-1.1404060.10",
-    "liste_fiyati_eur": 660
+    "liste_fiyati_eur": 660.0,
+    "pdf_page": 197
   },
   "MR38-1.1604060.10": {
     "urun_kodu": "MR38-1.1604060.10",
-    "liste_fiyati_eur": 700
+    "liste_fiyati_eur": 700.0,
+    "pdf_page": 197
   },
   "MR38-1.1804060.10": {
     "urun_kodu": "MR38-1.1804060.10",
-    "liste_fiyati_eur": 740
+    "liste_fiyati_eur": 740.0,
+    "pdf_page": 197
   },
   "MR38-1.2004060.10": {
     "urun_kodu": "MR38-1.2004060.10",
-    "liste_fiyati_eur": 780
+    "liste_fiyati_eur": 780.0,
+    "pdf_page": 197
   },
   "MR38-1.904060.10": {
     "urun_kodu": "MR38-1.904060.10",
-    "liste_fiyati_eur": 560
+    "liste_fiyati_eur": 560.0,
+    "pdf_page": 197
   },
   "MR38-1204060.00": {
     "urun_kodu": "MR38-1204060.00",
-    "liste_fiyati_eur": 570
+    "liste_fiyati_eur": 570.0,
+    "pdf_page": 197
   },
   "MR38-1404060.00": {
     "urun_kodu": "MR38-1404060.00",
-    "liste_fiyati_eur": 610
+    "liste_fiyati_eur": 610.0,
+    "pdf_page": 197
   },
   "MR38-1604060.00": {
     "urun_kodu": "MR38-1604060.00",
-    "liste_fiyati_eur": 660
+    "liste_fiyati_eur": 660.0,
+    "pdf_page": 197
   },
   "MR38-1804060.00": {
     "urun_kodu": "MR38-1804060.00",
-    "liste_fiyati_eur": 700
+    "liste_fiyati_eur": 700.0,
+    "pdf_page": 197
   },
   "MR38-2004060.00": {
     "urun_kodu": "MR38-2004060.00",
-    "liste_fiyati_eur": 740
+    "liste_fiyati_eur": 740.0,
+    "pdf_page": 197
   },
   "MR38-904060.00": {
     "urun_kodu": "MR38-904060.00",
-    "liste_fiyati_eur": 510
+    "liste_fiyati_eur": 510.0,
+    "pdf_page": 197
   },
   "MS-122X": {
     "urun_kodu": "MS-122X",
-    "liste_fiyati_eur": 460
+    "liste_fiyati_eur": 460.0,
+    "pdf_page": 199
   },
   "MS-123X": {
     "urun_kodu": "MS-123X",
-    "liste_fiyati_eur": 520
+    "liste_fiyati_eur": 520.0,
+    "pdf_page": 199
   },
   "MT-152X": {
     "urun_kodu": "MT-152X",
-    "liste_fiyati_eur": 500
+    "liste_fiyati_eur": 500.0,
+    "pdf_page": 199
   },
   "MT-162X": {
     "urun_kodu": "MT-162X",
-    "liste_fiyati_eur": 600
+    "liste_fiyati_eur": 600.0,
+    "pdf_page": 199
   },
   "MT-170X": {
     "urun_kodu": "MT-170X",
-    "liste_fiyati_eur": 220
+    "liste_fiyati_eur": 220.0,
+    "pdf_page": 199
   },
   "MT/1200/3": {
     "urun_kodu": "MT/1200/3",
-    "liste_fiyati_eur": 22000
+    "liste_fiyati_eur": 22000.0,
+    "pdf_page": 45
   },
   "MTB": {
     "urun_kodu": "MTB",
-    "liste_fiyati_eur": 800
+    "liste_fiyati_eur": 800.0,
+    "pdf_page": 69
   },
   "MX-2A": {
     "urun_kodu": "MX-2A",
-    "liste_fiyati_eur": 900
+    "liste_fiyati_eur": 900.0,
+    "pdf_page": 30
   },
   "MX-3A": {
     "urun_kodu": "MX-3A",
-    "liste_fiyati_eur": 1100
+    "liste_fiyati_eur": 1100.0,
+    "pdf_page": 30
   },
   "MX-4A": {
     "urun_kodu": "MX-4A",
-    "liste_fiyati_eur": 1300
+    "liste_fiyati_eur": 1300.0,
+    "pdf_page": 30
   },
   "MX-6A": {
     "urun_kodu": "MX-6A",
-    "liste_fiyati_eur": 1600
+    "liste_fiyati_eur": 1600.0,
+    "pdf_page": 30
   },
   "MX037-1": {
     "urun_kodu": "MX037-1",
-    "liste_fiyati_eur": 1000
+    "liste_fiyati_eur": 1000.0,
+    "pdf_page": 184
   },
   "MX037-2": {
     "urun_kodu": "MX037-2",
-    "liste_fiyati_eur": 1200
+    "liste_fiyati_eur": 1200.0,
+    "pdf_page": 184
   },
   "MX037-3": {
     "urun_kodu": "MX037-3",
-    "liste_fiyati_eur": 1400
+    "liste_fiyati_eur": 1400.0,
+    "pdf_page": 184
   },
   "MX037-4": {
     "urun_kodu": "MX037-4",
-    "liste_fiyati_eur": 1750
+    "liste_fiyati_eur": 1750.0,
+    "pdf_page": 184
   },
   "MX26-4": {
     "urun_kodu": "MX26-4",
-    "liste_fiyati_eur": 2600
+    "liste_fiyati_eur": 2600.0,
+    "pdf_page": 31
   },
   "MX26-6": {
     "urun_kodu": "MX26-6",
-    "liste_fiyati_eur": 3400
+    "liste_fiyati_eur": 3400.0,
+    "pdf_page": 31
   },
   "MX27-3": {
     "urun_kodu": "MX27-3",
-    "liste_fiyati_eur": 900
+    "liste_fiyati_eur": 1300.0,
+    "pdf_page": 30
   },
   "MX27-4": {
     "urun_kodu": "MX27-4",
-    "liste_fiyati_eur": 1100
+    "liste_fiyati_eur": 1500.0,
+    "pdf_page": 30
   },
   "MX27-6": {
     "urun_kodu": "MX27-6",
-    "liste_fiyati_eur": 1300
+    "liste_fiyati_eur": 1900.0,
+    "pdf_page": 30
   },
   "MX27-8": {
     "urun_kodu": "MX27-8",
-    "liste_fiyati_eur": 1600
+    "liste_fiyati_eur": 2600.0,
+    "pdf_page": 30
   },
   "MYK1": {
     "urun_kodu": "MYK1",
-    "liste_fiyati_eur": 1700
+    "liste_fiyati_eur": 1400.0,
+    "pdf_page": 52
   },
   "MYK2": {
     "urun_kodu": "MYK2",
-    "liste_fiyati_eur": 1700
+    "liste_fiyati_eur": 1700.0,
+    "pdf_page": 52
   },
   "OC/60MX-2S": {
     "urun_kodu": "OC/60MX-2S",
-    "liste_fiyati_eur": 600
+    "liste_fiyati_eur": 600.0,
+    "pdf_page": 11
   },
   "OC1/60MX-4S": {
     "urun_kodu": "OC1/60MX-4S",
-    "liste_fiyati_eur": 1000
+    "liste_fiyati_eur": 1000.0,
+    "pdf_page": 11
   },
   "OC2/70MX-2D": {
     "urun_kodu": "OC2/70MX-2D",
-    "liste_fiyati_eur": 1050
+    "liste_fiyati_eur": 1050.0,
+    "pdf_page": 16
   },
   "OC2/70MX-2S": {
     "urun_kodu": "OC2/70MX-2S",
-    "liste_fiyati_eur": 750
+    "liste_fiyati_eur": 750.0,
+    "pdf_page": 16
   },
   "OC3/70MX-4D": {
     "urun_kodu": "OC3/70MX-4D",
-    "liste_fiyati_eur": 1650
+    "liste_fiyati_eur": 1650.0,
+    "pdf_page": 16
   },
   "OC3/70MX-4S": {
     "urun_kodu": "OC3/70MX-4S",
-    "liste_fiyati_eur": 1250
+    "liste_fiyati_eur": 1250.0,
+    "pdf_page": 16
   },
   "OC4/70MX-6D": {
     "urun_kodu": "OC4/70MX-6D",
-    "liste_fiyati_eur": 2450
+    "liste_fiyati_eur": 2450.0,
+    "pdf_page": 16
   },
   "OC4/70MX-6S": {
     "urun_kodu": "OC4/70MX-6S",
-    "liste_fiyati_eur": 1850
+    "liste_fiyati_eur": 1850.0,
+    "pdf_page": 16
   },
   "OC5/90SMX-2D": {
     "urun_kodu": "OC5/90SMX-2D",
-    "liste_fiyati_eur": 1150
+    "liste_fiyati_eur": 1150.0,
+    "pdf_page": 28
   },
   "OC6/90SMX-4D": {
     "urun_kodu": "OC6/90SMX-4D",
-    "liste_fiyati_eur": 1750
+    "liste_fiyati_eur": 1750.0,
+    "pdf_page": 28
   },
   "PDB-100": {
     "urun_kodu": "PDB-100",
-    "liste_fiyati_eur": 7
+    "liste_fiyati_eur": 7.0,
+    "pdf_page": 170
   },
   "PDB-75": {
     "urun_kodu": "PDB-75",
-    "liste_fiyati_eur": 8
+    "liste_fiyati_eur": 8.0,
+    "pdf_page": 170
   },
   "PDB-L": {
     "urun_kodu": "PDB-L",
-    "liste_fiyati_eur": 6
+    "liste_fiyati_eur": 6.0,
+    "pdf_page": 170
   },
   "PDM": {
     "urun_kodu": "PDM",
-    "liste_fiyati_eur": 300
+    "liste_fiyati_eur": 300.0,
+    "pdf_page": 99
   },
   "PDR100-E": {
     "urun_kodu": "PDR100-E",
-    "liste_fiyati_eur": 14400
+    "liste_fiyati_eur": 14400.0,
+    "pdf_page": 56
   },
   "PDR100-G": {
     "urun_kodu": "PDR100-G",
-    "liste_fiyati_eur": 14200
+    "liste_fiyati_eur": 14200.0,
+    "pdf_page": 56
   },
   "PDR120-E": {
     "urun_kodu": "PDR120-E",
-    "liste_fiyati_eur": 15200
+    "liste_fiyati_eur": 15200.0,
+    "pdf_page": 56
   },
   "PDR120-G": {
     "urun_kodu": "PDR120-G",
-    "liste_fiyati_eur": 15000
+    "liste_fiyati_eur": 15000.0,
+    "pdf_page": 56
   },
   "PDR150-E": {
     "urun_kodu": "PDR150-E",
-    "liste_fiyati_eur": 16000
+    "liste_fiyati_eur": 16000.0,
+    "pdf_page": 56
   },
   "PDR150-G": {
     "urun_kodu": "PDR150-G",
-    "liste_fiyati_eur": 15800
+    "liste_fiyati_eur": 15800.0,
+    "pdf_page": 56
   },
   "PDR350-G": {
     "urun_kodu": "PDR350-G",
-    "liste_fiyati_eur": 32000
+    "liste_fiyati_eur": 32000.0,
+    "pdf_page": 57
   },
   "PDR500-G": {
     "urun_kodu": "PDR500-G",
-    "liste_fiyati_eur": 50000
+    "liste_fiyati_eur": 50000.0,
+    "pdf_page": 57
   },
   "PDR650-G": {
     "urun_kodu": "PDR650-G",
-    "liste_fiyati_eur": 54000
+    "liste_fiyati_eur": 54000.0,
+    "pdf_page": 57
   },
   "PDR80-E": {
     "urun_kodu": "PDR80-E",
-    "liste_fiyati_eur": 13600
+    "liste_fiyati_eur": 13600.0,
+    "pdf_page": 56
   },
   "PDR80-G": {
     "urun_kodu": "PDR80-G",
-    "liste_fiyati_eur": 13400
+    "liste_fiyati_eur": 13400.0,
+    "pdf_page": 56
   },
   "PDRP": {
     "urun_kodu": "PDRP",
-    "liste_fiyati_eur": 24500
+    "liste_fiyati_eur": 24500.0,
+    "pdf_page": 67
   },
   "PI/M001": {
     "urun_kodu": "PI/M001",
-    "liste_fiyati_eur": 980
+    "liste_fiyati_eur": 980.0,
+    "pdf_page": 72
   },
   "PI/M002": {
     "urun_kodu": "PI/M002",
-    "liste_fiyati_eur": 1100
+    "liste_fiyati_eur": 1100.0,
+    "pdf_page": 72
   },
   "PI1/M003-DG": {
     "urun_kodu": "PI1/M003-DG",
-    "liste_fiyati_eur": 1300
+    "liste_fiyati_eur": 1300.0,
+    "pdf_page": 78
   },
   "PI1/M005": {
     "urun_kodu": "PI1/M005",
-    "liste_fiyati_eur": 2000
+    "liste_fiyati_eur": 2000.0,
+    "pdf_page": 74
   },
   "PI1/M007B": {
     "urun_kodu": "PI1/M007B",
-    "liste_fiyati_eur": 3200
+    "liste_fiyati_eur": 3200.0,
+    "pdf_page": 75
   },
   "PI2/M004-DG": {
     "urun_kodu": "PI2/M004-DG",
-    "liste_fiyati_eur": 1400
+    "liste_fiyati_eur": 1400.0,
+    "pdf_page": 78
   },
   "PI2/M006": {
     "urun_kodu": "PI2/M006",
-    "liste_fiyati_eur": 2200
+    "liste_fiyati_eur": 2200.0,
+    "pdf_page": 74
   },
   "PI2/M008B": {
     "urun_kodu": "PI2/M008B",
-    "liste_fiyati_eur": 3400
+    "liste_fiyati_eur": 3400.0,
+    "pdf_page": 75
   },
   "PI2/M014B": {
     "urun_kodu": "PI2/M014B",
-    "liste_fiyati_eur": 4400
+    "liste_fiyati_eur": 4400.0,
+    "pdf_page": 77
   },
   "PI3/M009": {
     "urun_kodu": "PI3/M009",
-    "liste_fiyati_eur": 3600
+    "liste_fiyati_eur": 3600.0,
+    "pdf_page": 75
   },
   "PI3/M010B": {
     "urun_kodu": "PI3/M010B",
-    "liste_fiyati_eur": 3900
+    "liste_fiyati_eur": 3900.0,
+    "pdf_page": 76
   },
   "PI3/M012B": {
     "urun_kodu": "PI3/M012B",
-    "liste_fiyati_eur": 3100
+    "liste_fiyati_eur": 3100.0,
+    "pdf_page": 78
   },
   "PI4/M009B": {
     "urun_kodu": "PI4/M009B",
-    "liste_fiyati_eur": 3800
+    "liste_fiyati_eur": 3800.0,
+    "pdf_page": 75
   },
   "PI4/M011B": {
     "urun_kodu": "PI4/M011B",
-    "liste_fiyati_eur": 4200
+    "liste_fiyati_eur": 4200.0,
+    "pdf_page": 76
   },
   "PI4/M013B": {
     "urun_kodu": "PI4/M013B",
-    "liste_fiyati_eur": 3300
+    "liste_fiyati_eur": 3300.0,
+    "pdf_page": 78
   },
   "PI4/M015.DNL": {
     "urun_kodu": "PI4/M015.DNL",
-    "liste_fiyati_eur": 11000
+    "liste_fiyati_eur": 11000.0,
+    "pdf_page": 79
   },
   "PI5/M004-K": {
     "urun_kodu": "PI5/M004-K",
-    "liste_fiyati_eur": 1950
+    "liste_fiyati_eur": 1950.0,
+    "pdf_page": 73
   },
   "PI5/M015B": {
     "urun_kodu": "PI5/M015B",
-    "liste_fiyati_eur": 5000
+    "liste_fiyati_eur": 5000.0,
+    "pdf_page": 77
   },
   "PI6/M005-K": {
     "urun_kodu": "PI6/M005-K",
-    "liste_fiyati_eur": 2300
+    "liste_fiyati_eur": 2300.0,
+    "pdf_page": 73
   },
   "PI6/M013L": {
     "urun_kodu": "PI6/M013L",
-    "liste_fiyati_eur": 4100
+    "liste_fiyati_eur": 4100.0,
+    "pdf_page": 76
   },
   "PI6/M16KB": {
     "urun_kodu": "PI6/M16KB",
-    "liste_fiyati_eur": 3400
+    "liste_fiyati_eur": 3400.0,
+    "pdf_page": 73
   },
   "PI6/M17KB": {
     "urun_kodu": "PI6/M17KB",
-    "liste_fiyati_eur": 3800
+    "liste_fiyati_eur": 3800.0,
+    "pdf_page": 73
   },
   "PI7/M014L": {
     "urun_kodu": "PI7/M014L",
-    "liste_fiyati_eur": 4800
+    "liste_fiyati_eur": 4800.0,
+    "pdf_page": 76
+  },
+  "PIMAK.05050.91": {
+    "urun_kodu": "PIMAK.05050.91",
+    "liste_fiyati_eur": 460.0,
+    "pdf_page": 192
+  },
+  "PIMAK.06060.00": {
+    "urun_kodu": "PIMAK.06060.00",
+    "liste_fiyati_eur": 270.0,
+    "pdf_page": 188
+  },
+  "PIMAK.06060.04": {
+    "urun_kodu": "PIMAK.06060.04",
+    "liste_fiyati_eur": 370.0,
+    "pdf_page": 188
+  },
+  "PIMAK.06060.08": {
+    "urun_kodu": "PIMAK.06060.08",
+    "liste_fiyati_eur": 340.0,
+    "pdf_page": 188
+  },
+  "PIMAK.06060.11": {
+    "urun_kodu": "PIMAK.06060.11",
+    "liste_fiyati_eur": 490.0,
+    "pdf_page": 193
+  },
+  "PIMAK.06060.91": {
+    "urun_kodu": "PIMAK.06060.91",
+    "liste_fiyati_eur": 500.0,
+    "pdf_page": 192
+  },
+  "PIMAK.06070.00": {
+    "urun_kodu": "PIMAK.06070.00",
+    "liste_fiyati_eur": 280.0,
+    "pdf_page": 188
+  },
+  "PIMAK.06070.04": {
+    "urun_kodu": "PIMAK.06070.04",
+    "liste_fiyati_eur": 400.0,
+    "pdf_page": 188
+  },
+  "PIMAK.06070.08": {
+    "urun_kodu": "PIMAK.06070.08",
+    "liste_fiyati_eur": 360.0,
+    "pdf_page": 188
+  },
+  "PIMAK.06070.11": {
+    "urun_kodu": "PIMAK.06070.11",
+    "liste_fiyati_eur": 505.0,
+    "pdf_page": 193
+  },
+  "PIMAK.06070.91": {
+    "urun_kodu": "PIMAK.06070.91",
+    "liste_fiyati_eur": 550.0,
+    "pdf_page": 192
+  },
+  "PIMAK.07060.11": {
+    "urun_kodu": "PIMAK.07060.11",
+    "liste_fiyati_eur": 505.0,
+    "pdf_page": 193
+  },
+  "PIMAK.07070.11": {
+    "urun_kodu": "PIMAK.07070.11",
+    "liste_fiyati_eur": 530.0,
+    "pdf_page": 193
+  },
+  "PIMAK.07070.91": {
+    "urun_kodu": "PIMAK.07070.91",
+    "liste_fiyati_eur": 610.0,
+    "pdf_page": 192
+  },
+  "PIMAK.08060.11": {
+    "urun_kodu": "PIMAK.08060.11",
+    "liste_fiyati_eur": 530.0,
+    "pdf_page": 193
+  },
+  "PIMAK.08070.11": {
+    "urun_kodu": "PIMAK.08070.11",
+    "liste_fiyati_eur": 545.0,
+    "pdf_page": 193
+  },
+  "PIMAK.09060.00": {
+    "urun_kodu": "PIMAK.09060.00",
+    "liste_fiyati_eur": 300.0,
+    "pdf_page": 188
+  },
+  "PIMAK.09060.04": {
+    "urun_kodu": "PIMAK.09060.04",
+    "liste_fiyati_eur": 430.0,
+    "pdf_page": 188
+  },
+  "PIMAK.09060.08": {
+    "urun_kodu": "PIMAK.09060.08",
+    "liste_fiyati_eur": 380.0,
+    "pdf_page": 188
+  },
+  "PIMAK.09070.00": {
+    "urun_kodu": "PIMAK.09070.00",
+    "liste_fiyati_eur": 310.0,
+    "pdf_page": 188
+  },
+  "PIMAK.09070.04": {
+    "urun_kodu": "PIMAK.09070.04",
+    "liste_fiyati_eur": 455.0,
+    "pdf_page": 188
+  },
+  "PIMAK.09070.08": {
+    "urun_kodu": "PIMAK.09070.08",
+    "liste_fiyati_eur": 400.0,
+    "pdf_page": 188
+  },
+  "PIMAK.10060.00": {
+    "urun_kodu": "PIMAK.10060.00",
+    "liste_fiyati_eur": 310.0,
+    "pdf_page": 188
+  },
+  "PIMAK.10060.04": {
+    "urun_kodu": "PIMAK.10060.04",
+    "liste_fiyati_eur": 450.0,
+    "pdf_page": 188
+  },
+  "PIMAK.10060.08": {
+    "urun_kodu": "PIMAK.10060.08",
+    "liste_fiyati_eur": 400.0,
+    "pdf_page": 188
+  },
+  "PIMAK.10060.11": {
+    "urun_kodu": "PIMAK.10060.11",
+    "liste_fiyati_eur": 550.0,
+    "pdf_page": 193
+  },
+  "PIMAK.10060.13": {
+    "urun_kodu": "PIMAK.10060.13",
+    "liste_fiyati_eur": 760.0,
+    "pdf_page": 189
+  },
+  "PIMAK.10060.15": {
+    "urun_kodu": "PIMAK.10060.15",
+    "liste_fiyati_eur": 500.0,
+    "pdf_page": 190
+  },
+  "PIMAK.10060.70": {
+    "urun_kodu": "PIMAK.10060.70",
+    "liste_fiyati_eur": 450.0,
+    "pdf_page": 190
+  },
+  "PIMAK.10070.00": {
+    "urun_kodu": "PIMAK.10070.00",
+    "liste_fiyati_eur": 330.0,
+    "pdf_page": 188
+  },
+  "PIMAK.10070.04": {
+    "urun_kodu": "PIMAK.10070.04",
+    "liste_fiyati_eur": 470.0,
+    "pdf_page": 188
+  },
+  "PIMAK.10070.08": {
+    "urun_kodu": "PIMAK.10070.08",
+    "liste_fiyati_eur": 420.0,
+    "pdf_page": 188
+  },
+  "PIMAK.10070.11": {
+    "urun_kodu": "PIMAK.10070.11",
+    "liste_fiyati_eur": 570.0,
+    "pdf_page": 193
+  },
+  "PIMAK.10070.13": {
+    "urun_kodu": "PIMAK.10070.13",
+    "liste_fiyati_eur": 800.0,
+    "pdf_page": 189
+  },
+  "PIMAK.10070.15": {
+    "urun_kodu": "PIMAK.10070.15",
+    "liste_fiyati_eur": 520.0,
+    "pdf_page": 190
+  },
+  "PIMAK.10070.70": {
+    "urun_kodu": "PIMAK.10070.70",
+    "liste_fiyati_eur": 470.0,
+    "pdf_page": 190
+  },
+  "PIMAK.10105.01": {
+    "urun_kodu": "PIMAK.10105.01",
+    "liste_fiyati_eur": 655.0,
+    "pdf_page": 196
+  },
+  "PIMAK.10608.23": {
+    "urun_kodu": "PIMAK.10608.23",
+    "liste_fiyati_eur": 950.0,
+    "pdf_page": 190
+  },
+  "PIMAK.10708.23": {
+    "urun_kodu": "PIMAK.10708.23",
+    "liste_fiyati_eur": 1470.0,
+    "pdf_page": 190
+  },
+  "PIMAK.12060.00": {
+    "urun_kodu": "PIMAK.12060.00",
+    "liste_fiyati_eur": 330.0,
+    "pdf_page": 188
+  },
+  "PIMAK.12060.04": {
+    "urun_kodu": "PIMAK.12060.04",
+    "liste_fiyati_eur": 470.0,
+    "pdf_page": 188
+  },
+  "PIMAK.12060.08": {
+    "urun_kodu": "PIMAK.12060.08",
+    "liste_fiyati_eur": 420.0,
+    "pdf_page": 188
+  },
+  "PIMAK.12060.11": {
+    "urun_kodu": "PIMAK.12060.11",
+    "liste_fiyati_eur": 570.0,
+    "pdf_page": 193
+  },
+  "PIMAK.12060.13": {
+    "urun_kodu": "PIMAK.12060.13",
+    "liste_fiyati_eur": 880.0,
+    "pdf_page": 189
+  },
+  "PIMAK.12060.15": {
+    "urun_kodu": "PIMAK.12060.15",
+    "liste_fiyati_eur": 520.0,
+    "pdf_page": 190
+  },
+  "PIMAK.12060.17": {
+    "urun_kodu": "PIMAK.12060.17",
+    "liste_fiyati_eur": 710.0,
+    "pdf_page": 194
+  },
+  "PIMAK.12060.31": {
+    "urun_kodu": "PIMAK.12060.31",
+    "liste_fiyati_eur": 520.0,
+    "pdf_page": 191
+  },
+  "PIMAK.12060.46": {
+    "urun_kodu": "PIMAK.12060.46",
+    "liste_fiyati_eur": 620.0,
+    "pdf_page": 191
+  },
+  "PIMAK.12060.50": {
+    "urun_kodu": "PIMAK.12060.50",
+    "liste_fiyati_eur": 530.0,
+    "pdf_page": 191
+  },
+  "PIMAK.12060.51": {
+    "urun_kodu": "PIMAK.12060.51",
+    "liste_fiyati_eur": 610.0,
+    "pdf_page": 192
+  },
+  "PIMAK.12060.52": {
+    "urun_kodu": "PIMAK.12060.52",
+    "liste_fiyati_eur": 740.0,
+    "pdf_page": 190
+  },
+  "PIMAK.12060.56": {
+    "urun_kodu": "PIMAK.12060.56",
+    "liste_fiyati_eur": 1240.0,
+    "pdf_page": 189
+  },
+  "PIMAK.12060.70": {
+    "urun_kodu": "PIMAK.12060.70",
+    "liste_fiyati_eur": 470.0,
+    "pdf_page": 190
+  },
+  "PIMAK.12070.00": {
+    "urun_kodu": "PIMAK.12070.00",
+    "liste_fiyati_eur": 350.0,
+    "pdf_page": 188
+  },
+  "PIMAK.12070.04": {
+    "urun_kodu": "PIMAK.12070.04",
+    "liste_fiyati_eur": 510.0,
+    "pdf_page": 188
+  },
+  "PIMAK.12070.08": {
+    "urun_kodu": "PIMAK.12070.08",
+    "liste_fiyati_eur": 450.0,
+    "pdf_page": 188
+  },
+  "PIMAK.12070.11": {
+    "urun_kodu": "PIMAK.12070.11",
+    "liste_fiyati_eur": 600.0,
+    "pdf_page": 193
+  },
+  "PIMAK.12070.13": {
+    "urun_kodu": "PIMAK.12070.13",
+    "liste_fiyati_eur": 920.0,
+    "pdf_page": 189
+  },
+  "PIMAK.12070.15": {
+    "urun_kodu": "PIMAK.12070.15",
+    "liste_fiyati_eur": 540.0,
+    "pdf_page": 190
+  },
+  "PIMAK.12070.17": {
+    "urun_kodu": "PIMAK.12070.17",
+    "liste_fiyati_eur": 740.0,
+    "pdf_page": 194
+  },
+  "PIMAK.12070.31": {
+    "urun_kodu": "PIMAK.12070.31",
+    "liste_fiyati_eur": 740.0,
+    "pdf_page": 192
+  },
+  "PIMAK.12070.46": {
+    "urun_kodu": "PIMAK.12070.46",
+    "liste_fiyati_eur": 650.0,
+    "pdf_page": 191
+  },
+  "PIMAK.12070.50": {
+    "urun_kodu": "PIMAK.12070.50",
+    "liste_fiyati_eur": 550.0,
+    "pdf_page": 191
+  },
+  "PIMAK.12070.51": {
+    "urun_kodu": "PIMAK.12070.51",
+    "liste_fiyati_eur": 670.0,
+    "pdf_page": 192
+  },
+  "PIMAK.12070.52": {
+    "urun_kodu": "PIMAK.12070.52",
+    "liste_fiyati_eur": 780.0,
+    "pdf_page": 190
+  },
+  "PIMAK.12070.56": {
+    "urun_kodu": "PIMAK.12070.56",
+    "liste_fiyati_eur": 1280.0,
+    "pdf_page": 189
+  },
+  "PIMAK.12070.57": {
+    "urun_kodu": "PIMAK.12070.57",
+    "liste_fiyati_eur": 690.0,
+    "pdf_page": 191
+  },
+  "PIMAK.12070.70": {
+    "urun_kodu": "PIMAK.12070.70",
+    "liste_fiyati_eur": 500.0,
+    "pdf_page": 190
+  },
+  "PIMAK.12080.57": {
+    "urun_kodu": "PIMAK.12080.57",
+    "liste_fiyati_eur": 480.0,
+    "pdf_page": 191
+  },
+  "PIMAK.12125.01": {
+    "urun_kodu": "PIMAK.12125.01",
+    "liste_fiyati_eur": 690.0,
+    "pdf_page": 196
+  },
+  "PIMAK.12125.11": {
+    "urun_kodu": "PIMAK.12125.11",
+    "liste_fiyati_eur": 780.0,
+    "pdf_page": 196
+  },
+  "PIMAK.12608.23": {
+    "urun_kodu": "PIMAK.12608.23",
+    "liste_fiyati_eur": 1090.0,
+    "pdf_page": 190
+  },
+  "PIMAK.12708.23": {
+    "urun_kodu": "PIMAK.12708.23",
+    "liste_fiyati_eur": 990.0,
+    "pdf_page": 190
+  },
+  "PIMAK.14060.00": {
+    "urun_kodu": "PIMAK.14060.00",
+    "liste_fiyati_eur": 350.0,
+    "pdf_page": 188
+  },
+  "PIMAK.14060.04": {
+    "urun_kodu": "PIMAK.14060.04",
+    "liste_fiyati_eur": 520.0,
+    "pdf_page": 188
+  },
+  "PIMAK.14060.08": {
+    "urun_kodu": "PIMAK.14060.08",
+    "liste_fiyati_eur": 460.0,
+    "pdf_page": 188
+  },
+  "PIMAK.14060.11": {
+    "urun_kodu": "PIMAK.14060.11",
+    "liste_fiyati_eur": 610.0,
+    "pdf_page": 193
+  },
+  "PIMAK.14060.13": {
+    "urun_kodu": "PIMAK.14060.13",
+    "liste_fiyati_eur": 950.0,
+    "pdf_page": 189
+  },
+  "PIMAK.14060.15": {
+    "urun_kodu": "PIMAK.14060.15",
+    "liste_fiyati_eur": 570.0,
+    "pdf_page": 190
+  },
+  "PIMAK.14060.17": {
+    "urun_kodu": "PIMAK.14060.17",
+    "liste_fiyati_eur": 750.0,
+    "pdf_page": 194
+  },
+  "PIMAK.14060.31": {
+    "urun_kodu": "PIMAK.14060.31",
+    "liste_fiyati_eur": 575.0,
+    "pdf_page": 191
+  },
+  "PIMAK.14060.46": {
+    "urun_kodu": "PIMAK.14060.46",
+    "liste_fiyati_eur": 660.0,
+    "pdf_page": 191
+  },
+  "PIMAK.14060.50": {
+    "urun_kodu": "PIMAK.14060.50",
+    "liste_fiyati_eur": 550.0,
+    "pdf_page": 191
+  },
+  "PIMAK.14060.51": {
+    "urun_kodu": "PIMAK.14060.51",
+    "liste_fiyati_eur": 690.0,
+    "pdf_page": 192
+  },
+  "PIMAK.14060.52": {
+    "urun_kodu": "PIMAK.14060.52",
+    "liste_fiyati_eur": 780.0,
+    "pdf_page": 190
+  },
+  "PIMAK.14060.56": {
+    "urun_kodu": "PIMAK.14060.56",
+    "liste_fiyati_eur": 1300.0,
+    "pdf_page": 189
+  },
+  "PIMAK.14060.70": {
+    "urun_kodu": "PIMAK.14060.70",
+    "liste_fiyati_eur": 510.0,
+    "pdf_page": 190
+  },
+  "PIMAK.14070.00": {
+    "urun_kodu": "PIMAK.14070.00",
+    "liste_fiyati_eur": 370.0,
+    "pdf_page": 188
+  },
+  "PIMAK.14070.04": {
+    "urun_kodu": "PIMAK.14070.04",
+    "liste_fiyati_eur": 560.0,
+    "pdf_page": 188
+  },
+  "PIMAK.14070.08": {
+    "urun_kodu": "PIMAK.14070.08",
+    "liste_fiyati_eur": 490.0,
+    "pdf_page": 188
+  },
+  "PIMAK.14070.11": {
+    "urun_kodu": "PIMAK.14070.11",
+    "liste_fiyati_eur": 640.0,
+    "pdf_page": 193
+  },
+  "PIMAK.14070.13": {
+    "urun_kodu": "PIMAK.14070.13",
+    "liste_fiyati_eur": 990.0,
+    "pdf_page": 189
+  },
+  "PIMAK.14070.15": {
+    "urun_kodu": "PIMAK.14070.15",
+    "liste_fiyati_eur": 570.0,
+    "pdf_page": 190
+  },
+  "PIMAK.14070.17": {
+    "urun_kodu": "PIMAK.14070.17",
+    "liste_fiyati_eur": 780.0,
+    "pdf_page": 194
+  },
+  "PIMAK.14070.25": {
+    "urun_kodu": "PIMAK.14070.25",
+    "liste_fiyati_eur": 1010.0,
+    "pdf_page": 192
+  },
+  "PIMAK.14070.31": {
+    "urun_kodu": "PIMAK.14070.31",
+    "liste_fiyati_eur": 840.0,
+    "pdf_page": 192
+  },
+  "PIMAK.14070.46": {
+    "urun_kodu": "PIMAK.14070.46",
+    "liste_fiyati_eur": 720.0,
+    "pdf_page": 191
+  },
+  "PIMAK.14070.50": {
+    "urun_kodu": "PIMAK.14070.50",
+    "liste_fiyati_eur": 600.0,
+    "pdf_page": 191
+  },
+  "PIMAK.14070.51": {
+    "urun_kodu": "PIMAK.14070.51",
+    "liste_fiyati_eur": 760.0,
+    "pdf_page": 192
+  },
+  "PIMAK.14070.52": {
+    "urun_kodu": "PIMAK.14070.52",
+    "liste_fiyati_eur": 840.0,
+    "pdf_page": 190
+  },
+  "PIMAK.14070.56": {
+    "urun_kodu": "PIMAK.14070.56",
+    "liste_fiyati_eur": 1340.0,
+    "pdf_page": 189
+  },
+  "PIMAK.14070.57": {
+    "urun_kodu": "PIMAK.14070.57",
+    "liste_fiyati_eur": 710.0,
+    "pdf_page": 191
+  },
+  "PIMAK.14070.70": {
+    "urun_kodu": "PIMAK.14070.70",
+    "liste_fiyati_eur": 540.0,
+    "pdf_page": 190
+  },
+  "PIMAK.14080.57": {
+    "urun_kodu": "PIMAK.14080.57",
+    "liste_fiyati_eur": 530.0,
+    "pdf_page": 191
+  },
+  "PIMAK.14608.23": {
+    "urun_kodu": "PIMAK.14608.23",
+    "liste_fiyati_eur": 1130.0,
+    "pdf_page": 190
+  },
+  "PIMAK.14708.23": {
+    "urun_kodu": "PIMAK.14708.23",
+    "liste_fiyati_eur": 1140.0,
+    "pdf_page": 190
+  },
+  "PIMAK.15105.01": {
+    "urun_kodu": "PIMAK.15105.01",
+    "liste_fiyati_eur": 735.0,
+    "pdf_page": 196
+  },
+  "PIMAK.15105.11": {
+    "urun_kodu": "PIMAK.15105.11",
+    "liste_fiyati_eur": 750.0,
+    "pdf_page": 196
+  },
+  "PIMAK.15125.01": {
+    "urun_kodu": "PIMAK.15125.01",
+    "liste_fiyati_eur": 780.0,
+    "pdf_page": 196
+  },
+  "PIMAK.15125.11": {
+    "urun_kodu": "PIMAK.15125.11",
+    "liste_fiyati_eur": 810.0,
+    "pdf_page": 196
+  },
+  "PIMAK.15155.01": {
+    "urun_kodu": "PIMAK.15155.01",
+    "liste_fiyati_eur": 780.0,
+    "pdf_page": 196
+  },
+  "PIMAK.15155.10": {
+    "urun_kodu": "PIMAK.15155.10",
+    "liste_fiyati_eur": 960.0,
+    "pdf_page": 195
+  },
+  "PIMAK.15155.11": {
+    "urun_kodu": "PIMAK.15155.11",
+    "liste_fiyati_eur": 810.0,
+    "pdf_page": 196
+  },
+  "PIMAK.16060.00": {
+    "urun_kodu": "PIMAK.16060.00",
+    "liste_fiyati_eur": 370.0,
+    "pdf_page": 188
+  },
+  "PIMAK.16060.04": {
+    "urun_kodu": "PIMAK.16060.04",
+    "liste_fiyati_eur": 580.0,
+    "pdf_page": 188
+  },
+  "PIMAK.16060.08": {
+    "urun_kodu": "PIMAK.16060.08",
+    "liste_fiyati_eur": 500.0,
+    "pdf_page": 188
+  },
+  "PIMAK.16060.11": {
+    "urun_kodu": "PIMAK.16060.11",
+    "liste_fiyati_eur": 650.0,
+    "pdf_page": 193
+  },
+  "PIMAK.16060.13": {
+    "urun_kodu": "PIMAK.16060.13",
+    "liste_fiyati_eur": 1010.0,
+    "pdf_page": 189
+  },
+  "PIMAK.16060.15": {
+    "urun_kodu": "PIMAK.16060.15",
+    "liste_fiyati_eur": 630.0,
+    "pdf_page": 190
+  },
+  "PIMAK.16060.17": {
+    "urun_kodu": "PIMAK.16060.17",
+    "liste_fiyati_eur": 790.0,
+    "pdf_page": 194
+  },
+  "PIMAK.16060.31": {
+    "urun_kodu": "PIMAK.16060.31",
+    "liste_fiyati_eur": 625.0,
+    "pdf_page": 191
+  },
+  "PIMAK.16060.46": {
+    "urun_kodu": "PIMAK.16060.46",
+    "liste_fiyati_eur": 730.0,
+    "pdf_page": 191
+  },
+  "PIMAK.16060.50": {
+    "urun_kodu": "PIMAK.16060.50",
+    "liste_fiyati_eur": 600.0,
+    "pdf_page": 191
+  },
+  "PIMAK.16060.51": {
+    "urun_kodu": "PIMAK.16060.51",
+    "liste_fiyati_eur": 760.0,
+    "pdf_page": 192
+  },
+  "PIMAK.16060.52": {
+    "urun_kodu": "PIMAK.16060.52",
+    "liste_fiyati_eur": 840.0,
+    "pdf_page": 190
+  },
+  "PIMAK.16060.56": {
+    "urun_kodu": "PIMAK.16060.56",
+    "liste_fiyati_eur": 1370.0,
+    "pdf_page": 189
+  },
+  "PIMAK.16060.70": {
+    "urun_kodu": "PIMAK.16060.70",
+    "liste_fiyati_eur": 550.0,
+    "pdf_page": 190
+  },
+  "PIMAK.16070.00": {
+    "urun_kodu": "PIMAK.16070.00",
+    "liste_fiyati_eur": 400.0,
+    "pdf_page": 188
+  },
+  "PIMAK.16070.04": {
+    "urun_kodu": "PIMAK.16070.04",
+    "liste_fiyati_eur": 630.0,
+    "pdf_page": 188
+  },
+  "PIMAK.16070.08": {
+    "urun_kodu": "PIMAK.16070.08",
+    "liste_fiyati_eur": 540.0,
+    "pdf_page": 188
+  },
+  "PIMAK.16070.11": {
+    "urun_kodu": "PIMAK.16070.11",
+    "liste_fiyati_eur": 700.0,
+    "pdf_page": 193
+  },
+  "PIMAK.16070.13": {
+    "urun_kodu": "PIMAK.16070.13",
+    "liste_fiyati_eur": 1050.0,
+    "pdf_page": 189
+  },
+  "PIMAK.16070.15": {
+    "urun_kodu": "PIMAK.16070.15",
+    "liste_fiyati_eur": 630.0,
+    "pdf_page": 190
+  },
+  "PIMAK.16070.17": {
+    "urun_kodu": "PIMAK.16070.17",
+    "liste_fiyati_eur": 840.0,
+    "pdf_page": 194
+  },
+  "PIMAK.16070.25": {
+    "urun_kodu": "PIMAK.16070.25",
+    "liste_fiyati_eur": 1050.0,
+    "pdf_page": 192
+  },
+  "PIMAK.16070.31": {
+    "urun_kodu": "PIMAK.16070.31",
+    "liste_fiyati_eur": 920.0,
+    "pdf_page": 192
+  },
+  "PIMAK.16070.46": {
+    "urun_kodu": "PIMAK.16070.46",
+    "liste_fiyati_eur": 820.0,
+    "pdf_page": 191
+  },
+  "PIMAK.16070.50": {
+    "urun_kodu": "PIMAK.16070.50",
+    "liste_fiyati_eur": 675.0,
+    "pdf_page": 191
+  },
+  "PIMAK.16070.51": {
+    "urun_kodu": "PIMAK.16070.51",
+    "liste_fiyati_eur": 860.0,
+    "pdf_page": 192
+  },
+  "PIMAK.16070.52": {
+    "urun_kodu": "PIMAK.16070.52",
+    "liste_fiyati_eur": 900.0,
+    "pdf_page": 190
+  },
+  "PIMAK.16070.56": {
+    "urun_kodu": "PIMAK.16070.56",
+    "liste_fiyati_eur": 1420.0,
+    "pdf_page": 189
+  },
+  "PIMAK.16070.57": {
+    "urun_kodu": "PIMAK.16070.57",
+    "liste_fiyati_eur": 740.0,
+    "pdf_page": 191
+  },
+  "PIMAK.16070.70": {
+    "urun_kodu": "PIMAK.16070.70",
+    "liste_fiyati_eur": 590.0,
+    "pdf_page": 190
+  },
+  "PIMAK.16080.57": {
+    "urun_kodu": "PIMAK.16080.57",
+    "liste_fiyati_eur": 560.0,
+    "pdf_page": 191
+  },
+  "PIMAK.16608.23": {
+    "urun_kodu": "PIMAK.16608.23",
+    "liste_fiyati_eur": 1200.0,
+    "pdf_page": 190
+  },
+  "PIMAK.16708.23": {
+    "urun_kodu": "PIMAK.16708.23",
+    "liste_fiyati_eur": 1190.0,
+    "pdf_page": 190
+  },
+  "PIMAK.18060.11": {
+    "urun_kodu": "PIMAK.18060.11",
+    "liste_fiyati_eur": 680.0,
+    "pdf_page": 193
+  },
+  "PIMAK.18060.17": {
+    "urun_kodu": "PIMAK.18060.17",
+    "liste_fiyati_eur": 820.0,
+    "pdf_page": 194
+  },
+  "PIMAK.18070.11": {
+    "urun_kodu": "PIMAK.18070.11",
+    "liste_fiyati_eur": 750.0,
+    "pdf_page": 193
+  },
+  "PIMAK.18070.17": {
+    "urun_kodu": "PIMAK.18070.17",
+    "liste_fiyati_eur": 890.0,
+    "pdf_page": 194
+  },
+  "PIMAK.18070.25": {
+    "urun_kodu": "PIMAK.18070.25",
+    "liste_fiyati_eur": 1090.0,
+    "pdf_page": 192
+  },
+  "PIMAK.19060.00": {
+    "urun_kodu": "PIMAK.19060.00",
+    "liste_fiyati_eur": 400.0,
+    "pdf_page": 188
+  },
+  "PIMAK.19060.04": {
+    "urun_kodu": "PIMAK.19060.04",
+    "liste_fiyati_eur": 660.0,
+    "pdf_page": 188
+  },
+  "PIMAK.19060.08": {
+    "urun_kodu": "PIMAK.19060.08",
+    "liste_fiyati_eur": 570.0,
+    "pdf_page": 188
+  },
+  "PIMAK.19060.13": {
+    "urun_kodu": "PIMAK.19060.13",
+    "liste_fiyati_eur": 1130.0,
+    "pdf_page": 189
+  },
+  "PIMAK.19060.15": {
+    "urun_kodu": "PIMAK.19060.15",
+    "liste_fiyati_eur": 690.0,
+    "pdf_page": 190
+  },
+  "PIMAK.19060.31": {
+    "urun_kodu": "PIMAK.19060.31",
+    "liste_fiyati_eur": 700.0,
+    "pdf_page": 191
+  },
+  "PIMAK.19060.46": {
+    "urun_kodu": "PIMAK.19060.46",
+    "liste_fiyati_eur": 850.0,
+    "pdf_page": 191
+  },
+  "PIMAK.19060.50": {
+    "urun_kodu": "PIMAK.19060.50",
+    "liste_fiyati_eur": 675.0,
+    "pdf_page": 191
+  },
+  "PIMAK.19060.51": {
+    "urun_kodu": "PIMAK.19060.51",
+    "liste_fiyati_eur": 900.0,
+    "pdf_page": 192
+  },
+  "PIMAK.19060.52": {
+    "urun_kodu": "PIMAK.19060.52",
+    "liste_fiyati_eur": 900.0,
+    "pdf_page": 190
+  },
+  "PIMAK.19060.56": {
+    "urun_kodu": "PIMAK.19060.56",
+    "liste_fiyati_eur": 1450.0,
+    "pdf_page": 189
+  },
+  "PIMAK.19060.70": {
+    "urun_kodu": "PIMAK.19060.70",
+    "liste_fiyati_eur": 620.0,
+    "pdf_page": 190
+  },
+  "PIMAK.19070.00": {
+    "urun_kodu": "PIMAK.19070.00",
+    "liste_fiyati_eur": 430.0,
+    "pdf_page": 188
+  },
+  "PIMAK.19070.04": {
+    "urun_kodu": "PIMAK.19070.04",
+    "liste_fiyati_eur": 720.0,
+    "pdf_page": 188
+  },
+  "PIMAK.19070.08": {
+    "urun_kodu": "PIMAK.19070.08",
+    "liste_fiyati_eur": 590.0,
+    "pdf_page": 188
+  },
+  "PIMAK.19070.13": {
+    "urun_kodu": "PIMAK.19070.13",
+    "liste_fiyati_eur": 1200.0,
+    "pdf_page": 189
+  },
+  "PIMAK.19070.15": {
+    "urun_kodu": "PIMAK.19070.15",
+    "liste_fiyati_eur": 690.0,
+    "pdf_page": 190
+  },
+  "PIMAK.19070.25": {
+    "urun_kodu": "PIMAK.19070.25",
+    "liste_fiyati_eur": 1130.0,
+    "pdf_page": 192
+  },
+  "PIMAK.19070.31": {
+    "urun_kodu": "PIMAK.19070.31",
+    "liste_fiyati_eur": 1010.0,
+    "pdf_page": 192
+  },
+  "PIMAK.19070.46": {
+    "urun_kodu": "PIMAK.19070.46",
+    "liste_fiyati_eur": 990.0,
+    "pdf_page": 191
+  },
+  "PIMAK.19070.50": {
+    "urun_kodu": "PIMAK.19070.50",
+    "liste_fiyati_eur": 735.0,
+    "pdf_page": 191
+  },
+  "PIMAK.19070.51": {
+    "urun_kodu": "PIMAK.19070.51",
+    "liste_fiyati_eur": 1010.0,
+    "pdf_page": 192
+  },
+  "PIMAK.19070.52": {
+    "urun_kodu": "PIMAK.19070.52",
+    "liste_fiyati_eur": 980.0,
+    "pdf_page": 190
+  },
+  "PIMAK.19070.56": {
+    "urun_kodu": "PIMAK.19070.56",
+    "liste_fiyati_eur": 1500.0,
+    "pdf_page": 189
+  },
+  "PIMAK.19070.70": {
+    "urun_kodu": "PIMAK.19070.70",
+    "liste_fiyati_eur": 640.0,
+    "pdf_page": 190
+  },
+  "PIMAK.19608.23": {
+    "urun_kodu": "PIMAK.19608.23",
+    "liste_fiyati_eur": 1340.0,
+    "pdf_page": 190
+  },
+  "PIMAK.19708.23": {
+    "urun_kodu": "PIMAK.19708.23",
+    "liste_fiyati_eur": 1250.0,
+    "pdf_page": 190
+  },
+  "PIMAK.20060.11": {
+    "urun_kodu": "PIMAK.20060.11",
+    "liste_fiyati_eur": 720.0,
+    "pdf_page": 193
+  },
+  "PIMAK.20060.17": {
+    "urun_kodu": "PIMAK.20060.17",
+    "liste_fiyati_eur": 860.0,
+    "pdf_page": 194
+  },
+  "PIMAK.20070.11": {
+    "urun_kodu": "PIMAK.20070.11",
+    "liste_fiyati_eur": 790.0,
+    "pdf_page": 193
+  },
+  "PIMAK.20070.17": {
+    "urun_kodu": "PIMAK.20070.17",
+    "liste_fiyati_eur": 930.0,
+    "pdf_page": 194
+  },
+  "PIMAK.20105.01": {
+    "urun_kodu": "PIMAK.20105.01",
+    "liste_fiyati_eur": 780.0,
+    "pdf_page": 196
+  },
+  "PIMAK.20105.11": {
+    "urun_kodu": "PIMAK.20105.11",
+    "liste_fiyati_eur": 810.0,
+    "pdf_page": 196
+  },
+  "PIMAK.20125.01": {
+    "urun_kodu": "PIMAK.20125.01",
+    "liste_fiyati_eur": 825.0,
+    "pdf_page": 196
+  },
+  "PIMAK.20125.11": {
+    "urun_kodu": "PIMAK.20125.11",
+    "liste_fiyati_eur": 865.0,
+    "pdf_page": 196
+  },
+  "PIMAK.20155.00": {
+    "urun_kodu": "PIMAK.20155.00",
+    "liste_fiyati_eur": 900.0,
+    "pdf_page": 195
+  },
+  "PIMAK.20155.01": {
+    "urun_kodu": "PIMAK.20155.01",
+    "liste_fiyati_eur": 950.0,
+    "pdf_page": 196
+  },
+  "PIMAK.20155.10": {
+    "urun_kodu": "PIMAK.20155.10",
+    "liste_fiyati_eur": 1100.0,
+    "pdf_page": 195
+  },
+  "PIMAK.20155.11": {
+    "urun_kodu": "PIMAK.20155.11",
+    "liste_fiyati_eur": 1010.0,
+    "pdf_page": 196
+  },
+  "PIMAK.20205.00": {
+    "urun_kodu": "PIMAK.20205.00",
+    "liste_fiyati_eur": 1050.0,
+    "pdf_page": 195
+  },
+  "PIMAK.21070.25": {
+    "urun_kodu": "PIMAK.21070.25",
+    "liste_fiyati_eur": 1290.0,
+    "pdf_page": 192
+  },
+  "PIMAK.22060.13": {
+    "urun_kodu": "PIMAK.22060.13",
+    "liste_fiyati_eur": 1220.0,
+    "pdf_page": 189
+  },
+  "PIMAK.22070.13": {
+    "urun_kodu": "PIMAK.22070.13",
+    "liste_fiyati_eur": 1280.0,
+    "pdf_page": 189
+  },
+  "PIMAK.24060.56": {
+    "urun_kodu": "PIMAK.24060.56",
+    "liste_fiyati_eur": 1720.0,
+    "pdf_page": 189
+  },
+  "PIMAK.24070.25": {
+    "urun_kodu": "PIMAK.24070.25",
+    "liste_fiyati_eur": 1470.0,
+    "pdf_page": 192
+  },
+  "PIMAK.24070.56": {
+    "urun_kodu": "PIMAK.24070.56",
+    "liste_fiyati_eur": 1790.0,
+    "pdf_page": 189
+  },
+  "PIMAK.25105.01": {
+    "urun_kodu": "PIMAK.25105.01",
+    "liste_fiyati_eur": 825.0,
+    "pdf_page": 196
+  },
+  "PIMAK.25105.11": {
+    "urun_kodu": "PIMAK.25105.11",
+    "liste_fiyati_eur": 865.0,
+    "pdf_page": 196
+  },
+  "PIMAK.25125.01": {
+    "urun_kodu": "PIMAK.25125.01",
+    "liste_fiyati_eur": 950.0,
+    "pdf_page": 196
+  },
+  "PIMAK.25125.11": {
+    "urun_kodu": "PIMAK.25125.11",
+    "liste_fiyati_eur": 1010.0,
+    "pdf_page": 196
+  },
+  "PIMAK.25155.00": {
+    "urun_kodu": "PIMAK.25155.00",
+    "liste_fiyati_eur": 1000.0,
+    "pdf_page": 195
+  },
+  "PIMAK.25155.01": {
+    "urun_kodu": "PIMAK.25155.01",
+    "liste_fiyati_eur": 1080.0,
+    "pdf_page": 196
+  },
+  "PIMAK.25155.10": {
+    "urun_kodu": "PIMAK.25155.10",
+    "liste_fiyati_eur": 1250.0,
+    "pdf_page": 195
+  },
+  "PIMAK.25155.11": {
+    "urun_kodu": "PIMAK.25155.11",
+    "liste_fiyati_eur": 1140.0,
+    "pdf_page": 196
+  },
+  "PIMAK.25205.00": {
+    "urun_kodu": "PIMAK.25205.00",
+    "liste_fiyati_eur": 1200.0,
+    "pdf_page": 195
+  },
+  "PIMAK.25205.10": {
+    "urun_kodu": "PIMAK.25205.10",
+    "liste_fiyati_eur": 1400.0,
+    "pdf_page": 195
+  },
+  "PIMAK.25255.10": {
+    "urun_kodu": "PIMAK.25255.10",
+    "liste_fiyati_eur": 1630.0,
+    "pdf_page": 195
+  },
+  "PIMAK.2809070": {
+    "urun_kodu": "PIMAK.2809070",
+    "liste_fiyati_eur": 790.0,
+    "pdf_page": 197
+  },
+  "PIMAK.2810070": {
+    "urun_kodu": "PIMAK.2810070",
+    "liste_fiyati_eur": 800.0,
+    "pdf_page": 197
+  },
+  "PIMAK.2812070": {
+    "urun_kodu": "PIMAK.2812070",
+    "liste_fiyati_eur": 980.0,
+    "pdf_page": 197
+  },
+  "PIMAK.2814070": {
+    "urun_kodu": "PIMAK.2814070",
+    "liste_fiyati_eur": 1100.0,
+    "pdf_page": 197
+  },
+  "PIMAK.2816070": {
+    "urun_kodu": "PIMAK.2816070",
+    "liste_fiyati_eur": 1350.0,
+    "pdf_page": 197
+  },
+  "PIMAK.30105.01": {
+    "urun_kodu": "PIMAK.30105.01",
+    "liste_fiyati_eur": 950.0,
+    "pdf_page": 196
+  },
+  "PIMAK.30105.11": {
+    "urun_kodu": "PIMAK.30105.11",
+    "liste_fiyati_eur": 1010.0,
+    "pdf_page": 196
+  },
+  "PIMAK.30125.01": {
+    "urun_kodu": "PIMAK.30125.01",
+    "liste_fiyati_eur": 1080.0,
+    "pdf_page": 196
+  },
+  "PIMAK.30125.11": {
+    "urun_kodu": "PIMAK.30125.11",
+    "liste_fiyati_eur": 1140.0,
+    "pdf_page": 196
+  },
+  "PIMAK.30155.00": {
+    "urun_kodu": "PIMAK.30155.00",
+    "liste_fiyati_eur": 1150.0,
+    "pdf_page": 195
+  },
+  "PIMAK.30155.01": {
+    "urun_kodu": "PIMAK.30155.01",
+    "liste_fiyati_eur": 1250.0,
+    "pdf_page": 196
+  },
+  "PIMAK.30155.10": {
+    "urun_kodu": "PIMAK.30155.10",
+    "liste_fiyati_eur": 1400.0,
+    "pdf_page": 195
+  },
+  "PIMAK.30155.11": {
+    "urun_kodu": "PIMAK.30155.11",
+    "liste_fiyati_eur": 1450.0,
+    "pdf_page": 196
+  },
+  "PIMAK.30205.00": {
+    "urun_kodu": "PIMAK.30205.00",
+    "liste_fiyati_eur": 1350.0,
+    "pdf_page": 195
+  },
+  "PIMAK.30205.10": {
+    "urun_kodu": "PIMAK.30205.10",
+    "liste_fiyati_eur": 1630.0,
+    "pdf_page": 195
+  },
+  "PIMAK.30255.10": {
+    "urun_kodu": "PIMAK.30255.10",
+    "liste_fiyati_eur": 1800.0,
+    "pdf_page": 195
+  },
+  "PIMAK.35105.01": {
+    "urun_kodu": "PIMAK.35105.01",
+    "liste_fiyati_eur": 1080.0,
+    "pdf_page": 196
+  },
+  "PIMAK.35105.11": {
+    "urun_kodu": "PIMAK.35105.11",
+    "liste_fiyati_eur": 1140.0,
+    "pdf_page": 196
+  },
+  "PIMAK.35125.01": {
+    "urun_kodu": "PIMAK.35125.01",
+    "liste_fiyati_eur": 1250.0,
+    "pdf_page": 196
+  },
+  "PIMAK.35125.11": {
+    "urun_kodu": "PIMAK.35125.11",
+    "liste_fiyati_eur": 1450.0,
+    "pdf_page": 196
+  },
+  "PIMAK.35155.00": {
+    "urun_kodu": "PIMAK.35155.00",
+    "liste_fiyati_eur": 1300.0,
+    "pdf_page": 195
+  },
+  "PIMAK.35155.01": {
+    "urun_kodu": "PIMAK.35155.01",
+    "liste_fiyati_eur": 1750.0,
+    "pdf_page": 196
+  },
+  "PIMAK.35155.10": {
+    "urun_kodu": "PIMAK.35155.10",
+    "liste_fiyati_eur": 1630.0,
+    "pdf_page": 195
+  },
+  "PIMAK.35155.11": {
+    "urun_kodu": "PIMAK.35155.11",
+    "liste_fiyati_eur": 1830.0,
+    "pdf_page": 196
+  },
+  "PIMAK.35205.00": {
+    "urun_kodu": "PIMAK.35205.00",
+    "liste_fiyati_eur": 1700.0,
+    "pdf_page": 195
+  },
+  "PIMAK.35205.10": {
+    "urun_kodu": "PIMAK.35205.10",
+    "liste_fiyati_eur": 1800.0,
+    "pdf_page": 195
+  },
+  "PIMAK.35255.10": {
+    "urun_kodu": "PIMAK.35255.10",
+    "liste_fiyati_eur": 2100.0,
+    "pdf_page": 195
+  },
+  "PIMAK.40105.01": {
+    "urun_kodu": "PIMAK.40105.01",
+    "liste_fiyati_eur": 1230.0,
+    "pdf_page": 196
+  },
+  "PIMAK.40105.11": {
+    "urun_kodu": "PIMAK.40105.11",
+    "liste_fiyati_eur": 1300.0,
+    "pdf_page": 196
+  },
+  "PIMAK.40125.01": {
+    "urun_kodu": "PIMAK.40125.01",
+    "liste_fiyati_eur": 1750.0,
+    "pdf_page": 196
+  },
+  "PIMAK.40125.11": {
+    "urun_kodu": "PIMAK.40125.11",
+    "liste_fiyati_eur": 1830.0,
+    "pdf_page": 196
+  },
+  "PIMAK.40155.00": {
+    "urun_kodu": "PIMAK.40155.00",
+    "liste_fiyati_eur": 1550.0,
+    "pdf_page": 195
+  },
+  "PIMAK.40155.01": {
+    "urun_kodu": "PIMAK.40155.01",
+    "liste_fiyati_eur": 1920.0,
+    "pdf_page": 196
+  },
+  "PIMAK.40155.10": {
+    "urun_kodu": "PIMAK.40155.10",
+    "liste_fiyati_eur": 1800.0,
+    "pdf_page": 195
+  },
+  "PIMAK.40155.11": {
+    "urun_kodu": "PIMAK.40155.11",
+    "liste_fiyati_eur": 1980.0,
+    "pdf_page": 196
+  },
+  "PIMAK.40205.00": {
+    "urun_kodu": "PIMAK.40205.00",
+    "liste_fiyati_eur": 1800.0,
+    "pdf_page": 195
+  },
+  "PIMAK.40205.10": {
+    "urun_kodu": "PIMAK.40205.10",
+    "liste_fiyati_eur": 2100.0,
+    "pdf_page": 195
+  },
+  "PIMAK.40255.10": {
+    "urun_kodu": "PIMAK.40255.10",
+    "liste_fiyati_eur": 2350.0,
+    "pdf_page": 195
+  },
+  "PIMAK.45155.00": {
+    "urun_kodu": "PIMAK.45155.00",
+    "liste_fiyati_eur": 1700.0,
+    "pdf_page": 195
+  },
+  "PIMAK.45155.01": {
+    "urun_kodu": "PIMAK.45155.01",
+    "liste_fiyati_eur": 2100.0,
+    "pdf_page": 196
+  },
+  "PIMAK.45155.10": {
+    "urun_kodu": "PIMAK.45155.10",
+    "liste_fiyati_eur": 2100.0,
+    "pdf_page": 195
+  },
+  "PIMAK.45155.11": {
+    "urun_kodu": "PIMAK.45155.11",
+    "liste_fiyati_eur": 2180.0,
+    "pdf_page": 196
+  },
+  "PIMAK.45205.00": {
+    "urun_kodu": "PIMAK.45205.00",
+    "liste_fiyati_eur": 2000.0,
+    "pdf_page": 195
+  },
+  "PIMAK.45205.10": {
+    "urun_kodu": "PIMAK.45205.10",
+    "liste_fiyati_eur": 2350.0,
+    "pdf_page": 195
+  },
+  "PIMAK.45255.10": {
+    "urun_kodu": "PIMAK.45255.10",
+    "liste_fiyati_eur": 2620.0,
+    "pdf_page": 195
+  },
+  "PIMAK.50155.00": {
+    "urun_kodu": "PIMAK.50155.00",
+    "liste_fiyati_eur": 1800.0,
+    "pdf_page": 195
+  },
+  "PIMAK.50155.01": {
+    "urun_kodu": "PIMAK.50155.01",
+    "liste_fiyati_eur": 2280.0,
+    "pdf_page": 196
+  },
+  "PIMAK.50155.10": {
+    "urun_kodu": "PIMAK.50155.10",
+    "liste_fiyati_eur": 2350.0,
+    "pdf_page": 195
+  },
+  "PIMAK.50155.11": {
+    "urun_kodu": "PIMAK.50155.11",
+    "liste_fiyati_eur": 2370.0,
+    "pdf_page": 196
+  },
+  "PIMAK.50205.00": {
+    "urun_kodu": "PIMAK.50205.00",
+    "liste_fiyati_eur": 2250.0,
+    "pdf_page": 195
+  },
+  "PIMAK.50205.10": {
+    "urun_kodu": "PIMAK.50205.10",
+    "liste_fiyati_eur": 2620.0,
+    "pdf_page": 195
+  },
+  "PIMAK.50255.10": {
+    "urun_kodu": "PIMAK.50255.10",
+    "liste_fiyati_eur": 2940.0,
+    "pdf_page": 195
+  },
+  "PIMAK.55155.00": {
+    "urun_kodu": "PIMAK.55155.00",
+    "liste_fiyati_eur": 2000.0,
+    "pdf_page": 195
+  },
+  "PIMAK.55155.01": {
+    "urun_kodu": "PIMAK.55155.01",
+    "liste_fiyati_eur": 2460.0,
+    "pdf_page": 196
+  },
+  "PIMAK.55155.10": {
+    "urun_kodu": "PIMAK.55155.10",
+    "liste_fiyati_eur": 2620.0,
+    "pdf_page": 195
+  },
+  "PIMAK.55155.11": {
+    "urun_kodu": "PIMAK.55155.11",
+    "liste_fiyati_eur": 2560.0,
+    "pdf_page": 196
+  },
+  "PIMAK.55205.00": {
+    "urun_kodu": "PIMAK.55205.00",
+    "liste_fiyati_eur": 2400.0,
+    "pdf_page": 195
+  },
+  "PIMAK.55205.10": {
+    "urun_kodu": "PIMAK.55205.10",
+    "liste_fiyati_eur": 2940.0,
+    "pdf_page": 195
+  },
+  "PIMAK.55255.10": {
+    "urun_kodu": "PIMAK.55255.10",
+    "liste_fiyati_eur": 3200.0,
+    "pdf_page": 195
+  },
+  "PIMAK.60155.00": {
+    "urun_kodu": "PIMAK.60155.00",
+    "liste_fiyati_eur": 2200.0,
+    "pdf_page": 195
+  },
+  "PIMAK.60155.01": {
+    "urun_kodu": "PIMAK.60155.01",
+    "liste_fiyati_eur": 2640.0,
+    "pdf_page": 196
+  },
+  "PIMAK.60155.10": {
+    "urun_kodu": "PIMAK.60155.10",
+    "liste_fiyati_eur": 2940.0,
+    "pdf_page": 195
+  },
+  "PIMAK.60155.11": {
+    "urun_kodu": "PIMAK.60155.11",
+    "liste_fiyati_eur": 2790.0,
+    "pdf_page": 196
+  },
+  "PIMAK.60205.00": {
+    "urun_kodu": "PIMAK.60205.00",
+    "liste_fiyati_eur": 2600.0,
+    "pdf_page": 195
+  },
+  "PIMAK.60205.10": {
+    "urun_kodu": "PIMAK.60205.10",
+    "liste_fiyati_eur": 3200.0,
+    "pdf_page": 195
+  },
+  "PIMAK.60255.10": {
+    "urun_kodu": "PIMAK.60255.10",
+    "liste_fiyati_eur": 3450.0,
+    "pdf_page": 195
   },
   "PMK-CKM": {
     "urun_kodu": "PMK-CKM",
-    "liste_fiyati_eur": 3800
+    "liste_fiyati_eur": 3800.0,
+    "pdf_page": 64
   },
   "PMK-ET45": {
     "urun_kodu": "PMK-ET45",
-    "liste_fiyati_eur": 14500
+    "liste_fiyati_eur": 14500.0,
+    "pdf_page": 115
   },
   "PMK-HY110": {
     "urun_kodu": "PMK-HY110",
-    "liste_fiyati_eur": 12000
+    "liste_fiyati_eur": 12000.0,
+    "pdf_page": 46
   },
   "PMK-HY130": {
     "urun_kodu": "PMK-HY130",
-    "liste_fiyati_eur": 12000
+    "liste_fiyati_eur": 12000.0,
+    "pdf_page": 46
   },
   "PMK-HY70": {
     "urun_kodu": "PMK-HY70",
-    "liste_fiyati_eur": 12000
+    "liste_fiyati_eur": 12000.0,
+    "pdf_page": 46
   },
   "PMK-HY90": {
     "urun_kodu": "PMK-HY90",
-    "liste_fiyati_eur": 12000
+    "liste_fiyati_eur": 12000.0,
+    "pdf_page": 46
   },
   "PMK-KBM.20-DC": {
     "urun_kodu": "PMK-KBM.20-DC",
-    "liste_fiyati_eur": 3800
+    "liste_fiyati_eur": 3800.0,
+    "pdf_page": 65
   },
   "PMK-KY120": {
     "urun_kodu": "PMK-KY120",
-    "liste_fiyati_eur": 6500
+    "liste_fiyati_eur": 6500.0,
+    "pdf_page": 46
   },
   "PMK-KY240": {
     "urun_kodu": "PMK-KY240",
-    "liste_fiyati_eur": 6500
+    "liste_fiyati_eur": 12000.0,
+    "pdf_page": 46
   },
   "PMK-RD135": {
     "urun_kodu": "PMK-RD135",
-    "liste_fiyati_eur": 4900
+    "liste_fiyati_eur": 4900.0,
+    "pdf_page": 151
   },
   "PMK-RD197": {
     "urun_kodu": "PMK-RD197",
-    "liste_fiyati_eur": 6600
+    "liste_fiyati_eur": 6600.0,
+    "pdf_page": 151
   },
   "PMK-RD260": {
     "urun_kodu": "PMK-RD260",
-    "liste_fiyati_eur": 7200
+    "liste_fiyati_eur": 7200.0,
+    "pdf_page": 151
   },
   "PMK-RD291": {
     "urun_kodu": "PMK-RD291",
-    "liste_fiyati_eur": 8400
+    "liste_fiyati_eur": 8400.0,
+    "pdf_page": 151
   },
   "PMK-RD385": {
     "urun_kodu": "PMK-RD385",
-    "liste_fiyati_eur": 9500
+    "liste_fiyati_eur": 9500.0,
+    "pdf_page": 151
   },
   "PMK-SD166": {
     "urun_kodu": "PMK-SD166",
-    "liste_fiyati_eur": 5000
+    "liste_fiyati_eur": 5000.0,
+    "pdf_page": 152
   },
   "PMK-SD244": {
     "urun_kodu": "PMK-SD244",
-    "liste_fiyati_eur": 7000
+    "liste_fiyati_eur": 7000.0,
+    "pdf_page": 152
   },
   "PMK-SD322": {
     "urun_kodu": "PMK-SD322",
-    "liste_fiyati_eur": 8700
+    "liste_fiyati_eur": 8700.0,
+    "pdf_page": 152
   },
   "PMK-ST32": {
     "urun_kodu": "PMK-ST32",
-    "liste_fiyati_eur": 10500
+    "liste_fiyati_eur": 10500.0,
+    "pdf_page": 115
   },
   "PMK-USV200": {
     "urun_kodu": "PMK-USV200",
-    "liste_fiyati_eur": 6700
+    "liste_fiyati_eur": 6700.0,
+    "pdf_page": 47
   },
   "PMK.TB.01": {
     "urun_kodu": "PMK.TB.01",
-    "liste_fiyati_eur": 25
+    "liste_fiyati_eur": 25.0,
+    "pdf_page": 177
   },
   "PMK.TB.02": {
     "urun_kodu": "PMK.TB.02",
-    "liste_fiyati_eur": 20
+    "liste_fiyati_eur": 20.0,
+    "pdf_page": 177
   },
   "PMK.TB.03": {
     "urun_kodu": "PMK.TB.03",
-    "liste_fiyati_eur": 22
+    "liste_fiyati_eur": 22.0,
+    "pdf_page": 177
   },
   "PST01": {
     "urun_kodu": "PST01",
-    "liste_fiyati_eur": 20
+    "liste_fiyati_eur": 26.0,
+    "pdf_page": 209
   },
   "PST02": {
     "urun_kodu": "PST02",
-    "liste_fiyati_eur": 28
+    "liste_fiyati_eur": 38.0,
+    "pdf_page": 209
   },
   "PST03": {
     "urun_kodu": "PST03",
-    "liste_fiyati_eur": 30
+    "liste_fiyati_eur": 46.0,
+    "pdf_page": 209
   },
   "PST04": {
     "urun_kodu": "PST04",
-    "liste_fiyati_eur": 34
+    "liste_fiyati_eur": 58.0,
+    "pdf_page": 209
   },
   "PST05": {
     "urun_kodu": "PST05",
-    "liste_fiyati_eur": 38
+    "liste_fiyati_eur": 12.0,
+    "pdf_page": 209
   },
   "PST06": {
     "urun_kodu": "PST06",
-    "liste_fiyati_eur": 52
+    "liste_fiyati_eur": 22.0,
+    "pdf_page": 209
   },
   "PST07": {
     "urun_kodu": "PST07",
-    "liste_fiyati_eur": 64
+    "liste_fiyati_eur": 18.0,
+    "pdf_page": 209
   },
   "PST08": {
     "urun_kodu": "PST08",
-    "liste_fiyati_eur": 84
+    "liste_fiyati_eur": 30.0,
+    "pdf_page": 209
   },
   "PT/1400/E": {
     "urun_kodu": "PT/1400/E",
-    "liste_fiyati_eur": 2700
+    "liste_fiyati_eur": 2700.0,
+    "pdf_page": 45
   },
   "PTS04-DIGITAL": {
     "urun_kodu": "PTS04-DIGITAL",
-    "liste_fiyati_eur": 2200
+    "liste_fiyati_eur": 2200.0,
+    "pdf_page": 40
   },
   "PTS04-MANUEL": {
     "urun_kodu": "PTS04-MANUEL",
-    "liste_fiyati_eur": 2000
+    "liste_fiyati_eur": 2000.0,
+    "pdf_page": 40
   },
   "PTS06-DIGITAL": {
     "urun_kodu": "PTS06-DIGITAL",
-    "liste_fiyati_eur": 2700
+    "liste_fiyati_eur": 2700.0,
+    "pdf_page": 40
   },
   "PTS06-MANUEL": {
     "urun_kodu": "PTS06-MANUEL",
-    "liste_fiyati_eur": 2500
+    "liste_fiyati_eur": 2500.0,
+    "pdf_page": 40
   },
   "PTS09-DIGITAL": {
     "urun_kodu": "PTS09-DIGITAL",
-    "liste_fiyati_eur": 4200
+    "liste_fiyati_eur": 4200.0,
+    "pdf_page": 40
   },
   "PTS09-MANUEL": {
     "urun_kodu": "PTS09-MANUEL",
-    "liste_fiyati_eur": 4000
+    "liste_fiyati_eur": 4000.0,
+    "pdf_page": 40
   },
   "PVK100": {
     "urun_kodu": "PVK100",
-    "liste_fiyati_eur": 1400
+    "liste_fiyati_eur": 1400.0,
+    "pdf_page": 185
   },
   "PVK60": {
     "urun_kodu": "PVK60",
-    "liste_fiyati_eur": 1200
+    "liste_fiyati_eur": 1200.0,
+    "pdf_page": 185
   },
   "PVK80": {
     "urun_kodu": "PVK80",
-    "liste_fiyati_eur": 1300
+    "liste_fiyati_eur": 1300.0,
+    "pdf_page": 185
   },
   "R-TK.M77-": {
     "urun_kodu": "R-TK.M77-",
-    "liste_fiyati_eur": 500
+    "liste_fiyati_eur": 500.0,
+    "pdf_page": 62
   },
   "R1": {
     "urun_kodu": "R1",
-    "liste_fiyati_eur": 610
+    "liste_fiyati_eur": 610.0,
+    "pdf_page": 90
   },
   "R1-1": {
     "urun_kodu": "R1-1",
-    "liste_fiyati_eur": 500
+    "liste_fiyati_eur": 500.0,
+    "pdf_page": 90
   },
   "R134A": {
     "urun_kodu": "R134a",
-    "liste_fiyati_eur": 4300
+    "liste_fiyati_eur": 2400.0,
+    "pdf_page": 150
   },
   "R2": {
     "urun_kodu": "R2",
-    "liste_fiyati_eur": 580
+    "liste_fiyati_eur": 580.0,
+    "pdf_page": 90
   },
   "R2-2": {
     "urun_kodu": "R2-2",
-    "liste_fiyati_eur": 480
+    "liste_fiyati_eur": 480.0,
+    "pdf_page": 90
   },
   "SKA": {
     "urun_kodu": "SKA",
-    "liste_fiyati_eur": 250
+    "liste_fiyati_eur": 250.0,
+    "pdf_page": 99
   },
   "TB04-1203030.00": {
     "urun_kodu": "TB04-1203030.00",
-    "liste_fiyati_eur": 130
+    "liste_fiyati_eur": 190.0,
+    "pdf_page": 197
   },
   "TB04-1403030.00": {
     "urun_kodu": "TB04-1403030.00",
-    "liste_fiyati_eur": 145
+    "liste_fiyati_eur": 200.0,
+    "pdf_page": 197
   },
   "TB04-1603030.00": {
     "urun_kodu": "TB04-1603030.00",
-    "liste_fiyati_eur": 160
+    "liste_fiyati_eur": 210.0,
+    "pdf_page": 197
   },
   "TB04-1803030.00": {
     "urun_kodu": "TB04-1803030.00",
-    "liste_fiyati_eur": 175
+    "liste_fiyati_eur": 220.0,
+    "pdf_page": 197
   },
   "TB04-2003030.00": {
     "urun_kodu": "TB04-2003030.00",
-    "liste_fiyati_eur": 190
+    "liste_fiyati_eur": 230.0,
+    "pdf_page": 197
   },
   "TB04-503030.00": {
     "urun_kodu": "TB04-503030.00",
-    "liste_fiyati_eur": 80
+    "liste_fiyati_eur": 160.0,
+    "pdf_page": 197
   },
   "TB04-703030.00": {
     "urun_kodu": "TB04-703030.00",
-    "liste_fiyati_eur": 100
+    "liste_fiyati_eur": 170.0,
+    "pdf_page": 197
   },
   "TB04-903030.00": {
     "urun_kodu": "TB04-903030.00",
-    "liste_fiyati_eur": 110
+    "liste_fiyati_eur": 180.0,
+    "pdf_page": 197
   },
   "TBF100": {
     "urun_kodu": "TBF100",
-    "liste_fiyati_eur": 380
+    "liste_fiyati_eur": 305.0,
+    "pdf_page": 208
   },
   "TBF600": {
     "urun_kodu": "TBF600",
-    "liste_fiyati_eur": 305
+    "liste_fiyati_eur": 380.0,
+    "pdf_page": 208
   },
   "TTFG-100": {
     "urun_kodu": "TTFG-100",
-    "liste_fiyati_eur": 3800
+    "liste_fiyati_eur": 3800.0,
+    "pdf_page": 51
   },
   "TTFG-127": {
     "urun_kodu": "TTFG-127",
-    "liste_fiyati_eur": 4600
+    "liste_fiyati_eur": 4600.0,
+    "pdf_page": 51
   },
   "TTFG-85": {
     "urun_kodu": "TTFG-85",
-    "liste_fiyati_eur": 950
+    "liste_fiyati_eur": 950.0,
+    "pdf_page": 51
   },
   "YK-KON": {
     "urun_kodu": "YK-KON",
-    "liste_fiyati_eur": 2100
+    "liste_fiyati_eur": 2100.0,
+    "pdf_page": 67
   },
   "YK-KTTB": {
     "urun_kodu": "YK-KTTB",
-    "liste_fiyati_eur": 2150
+    "liste_fiyati_eur": 2150.0,
+    "pdf_page": 67
   },
   "YK-SARB": {
     "urun_kodu": "YK-SARB",
-    "liste_fiyati_eur": 2800
+    "liste_fiyati_eur": 2800.0,
+    "pdf_page": 67
   },
   "ZZ-M085.2": {
     "urun_kodu": "ZZ-M085.2",
-    "liste_fiyati_eur": 490
+    "liste_fiyati_eur": 370.0,
+    "pdf_page": 207
   },
   "ZZ-M085.9": {
     "urun_kodu": "ZZ-M085.9",
-    "liste_fiyati_eur": 310
-  },
-  "_p100_130_merge": "2026-06-08T11:45:45.867Z"
+    "liste_fiyati_eur": 270.0,
+    "pdf_page": 207
+  }
 }
