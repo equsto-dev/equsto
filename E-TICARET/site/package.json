@@ -105,6 +105,7 @@
     "catalog:electrolux:discover": "node scripts/scrape-electrolux-professional.mjs --discover-only",
     "catalog:electrolux:cek": "node scripts/scrape-electrolux-professional.mjs --resume",
     "catalog:electrolux:import": "node scripts/import-electrolux-professional.mjs",
+    "catalog:electrolux:fiyat": "python scripts/sync-electrolux-fiyat-2026.py",
     "catalog:electrolux:untrack-docs": "node scripts/untrack-electrolux-docs.mjs",
     "catalog:proso:import": "node scripts/import-prosogutma-market-reyon.mjs",
     "catalog:proso:price": "node scripts/update-proso-display-price-list.mjs",
