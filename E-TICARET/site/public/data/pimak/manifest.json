@@ -1,0 +1,34 @@
+{
+  "generated": "2026-06-08T10:05:32.952Z",
+  "brand": "Pimak Profesyonel Mutfak",
+  "dryRun": false,
+  "kur_eur_try": 53.5921,
+  "tcmb_fallback": false,
+  "bayi_iskonto": 0.47,
+  "odeme_carpani": 0.53,
+  "equsto_kar_oran": 0.08,
+  "buckets": {
+    "hazirlik": 40,
+    "servis": 9,
+    "tepsi": 30,
+    "kafeterya": 20,
+    "pilic": 44,
+    "unseker": 4
+  },
+  "imported": 147,
+  "with_image": 147,
+  "with_price": 4,
+  "without_price": 143,
+  "price_file": null,
+  "price_map_entries": 0,
+  "skipped_no_detail": 0,
+  "manuel": 4,
+  "depts": {
+    "hazirlik": 40,
+    "servis": 9,
+    "araba": 34,
+    "set-ustu-mutfak": 20,
+    "pisirme": 44
+  },
+  "note": "Pimak web sitesi ve 2026 fiyatsız katalogda liste fiyatı yok; fiyat için scripts/data/pimak-fiyat.json ekleyin."
+}
