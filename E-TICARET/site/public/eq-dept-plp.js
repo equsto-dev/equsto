@@ -32,7 +32,7 @@
   }
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260608pimak-dinlendirme-pisirme';
+  var CATALOG_V = '20260608davlumbaz-orta-filtreli-v2';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   /* Next.js URL slug → katalog dept id (data/dept/*.json) */
   if (DEPT === 'market-reyonlari') DEPT = 'market-reyon';
@@ -418,7 +418,7 @@
     var b = (x.brand || '').trim();
     var n = x.name || '';
     if (typeof window.eqSimplifyTezgahDavlumbazName === 'function') {
-      n = window.eqSimplifyTezgahDavlumbazName(n, { dept: DEPT });
+      n = window.eqSimplifyTezgahDavlumbazName(n, { dept: DEPT, category: x.category || '' });
     }
     if (typeof window.eqPolishDisplayText === 'function') {
       n = window.eqPolishDisplayText(n);
@@ -947,7 +947,7 @@
     render();
   }
 
-  var MARKET_REYON_JSON_V = '20260608pimak-dinlendirme-pisirme';
+  var MARKET_REYON_JSON_V = '20260608davlumbaz-orta-filtreli-v2';
 
   function fetchMarketReyonDeptJson() {
     return fetch('/data/dept/market-reyon.json?v=' + MARKET_REYON_JSON_V, {

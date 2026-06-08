@@ -11,7 +11,25 @@
     'sanayi-tipi-izgaralar': 'Endüstriyel Izgaralar'
   };
 
-  /** Markalı tezgah/davlumbaz adı → «Çalışma Tezgahı …» / «Davlumbaz …» (ölçü/model korunur). */
+  function davlumbazHasTipoChunk(s) {
+    return /orta\s*tip|duvar\s*tipi/.test(String(s || '').toLocaleLowerCase('tr'));
+  }
+
+  /** Kategori slug → «Orta Tip Filtreli» / «Duvar Tipi Filtresiz» (Equsto + Öztiryakiler). */
+  function davlumbazTipoFromCategory(cat) {
+    var c = String(cat || '')
+      .toLocaleLowerCase('tr')
+      .replace(/_/g, '-');
+    if (!c || c === 'davlumbaz') return '';
+    var parts = [];
+    if (/orta-tip|orta-tipi/.test(c)) parts.push('Orta Tip');
+    else if (/duvar-tip|duvar-tipi/.test(c)) parts.push('Duvar Tipi');
+    if (/filtresiz/.test(c)) parts.push('Filtresiz');
+    else if (/filtreli/.test(c)) parts.push('Filtreli');
+    return parts.join(' ');
+  }
+
+  /** Markalı tezgah/davlumbaz adı → «Çalışma Tezgahı …» / «Davlumbaz …» (tip + ölçü korunur). */
   function eqSimplifyTezgahDavlumbazName(name, opts) {
     opts = opts || {};
     var dept = String(opts.dept || '').trim();
@@ -24,8 +42,19 @@
     if (allowDav && !/davlumbazlı|davlumbazli/i.test(n)) {
       var dm = n.match(/\bdavlumbaz\b/i);
       if (dm && dm.index != null) {
+        var prefix = n.slice(0, dm.index).trim();
         var dtail = n.slice(dm.index + dm[0].length).trim();
-        return ('Davlumbaz' + (dtail ? ' ' + dtail : '')).replace(/\s+/g, ' ').trim();
+        if (!prefix && dtail && davlumbazHasTipoChunk(dtail)) {
+          return ('Davlumbaz ' + dtail).replace(/\s+/g, ' ').trim();
+        }
+        var tipo = prefix || davlumbazTipoFromCategory(opts.category);
+        return ('Davlumbaz' + (tipo ? ' ' + tipo : '') + (dtail ? ' ' + dtail : ''))
+          .replace(/\s+/g, ' ')
+          .trim();
+      }
+      var tipoOnly = davlumbazTipoFromCategory(opts.category);
+      if (tipoOnly) {
+        return ('Davlumbaz ' + tipoOnly + (n ? ' ' + n : '')).replace(/\s+/g, ' ').trim();
       }
     }
 
@@ -189,7 +218,7 @@
       window.eqSanitizeVendorProduct(x);
     }
     if (x.name) {
-      x.name = eqSimplifyTezgahDavlumbazName(x.name, { dept: x.dept || '' });
+      x.name = eqSimplifyTezgahDavlumbazName(x.name, { dept: x.dept || '', category: x.category || '' });
       x.name = eqPolishDisplayText(x.name);
     }
     if (x.specs) x.specs = eqPolishDisplayText(x.specs);
@@ -211,7 +240,10 @@
     }
     if (u.n) {
       var dept = (u.raw && u.raw.dept) || u.dept || '';
-      u.n = eqSimplifyTezgahDavlumbazName(u.n, { dept: dept });
+      u.n = eqSimplifyTezgahDavlumbazName(u.n, {
+        dept: dept,
+        category: (u.raw && u.raw.category) || u.c || u.category || '',
+      });
       u.n = eqPolishDisplayText(u.n);
     }
     if (u.specs) u.specs = eqPolishDisplayText(u.specs);

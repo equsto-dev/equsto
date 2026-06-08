@@ -1,0 +1,147 @@
+{
+  "40MM": {
+    "urun_kodu": "40mm",
+    "liste_fiyati_eur": 735.0,
+    "pdf_page": 191
+  },
+  "DR04-503030.00": {
+    "urun_kodu": "DR04-503030.00",
+    "liste_fiyati_eur": 160.0,
+    "pdf_page": 197
+  },
+  "DR04-703030.00": {
+    "urun_kodu": "DR04-703030.00",
+    "liste_fiyati_eur": 170.0,
+    "pdf_page": 197
+  },
+  "DR04-903030.00": {
+    "urun_kodu": "DR04-903030.00",
+    "liste_fiyati_eur": 180.0,
+    "pdf_page": 197
+  },
+  "DR04-1203030.00": {
+    "urun_kodu": "DR04-1203030.00",
+    "liste_fiyati_eur": 190.0,
+    "pdf_page": 197
+  },
+  "DR04-1403030.00": {
+    "urun_kodu": "DR04-1403030.00",
+    "liste_fiyati_eur": 200.0,
+    "pdf_page": 197
+  },
+  "DR04-1603030.00": {
+    "urun_kodu": "DR04-1603030.00",
+    "liste_fiyati_eur": 210.0,
+    "pdf_page": 197
+  },
+  "DR04-1803030.00": {
+    "urun_kodu": "DR04-1803030.00",
+    "liste_fiyati_eur": 220.0,
+    "pdf_page": 197
+  },
+  "DR04-2003030.00": {
+    "urun_kodu": "DR04-2003030.00",
+    "liste_fiyati_eur": 230.0,
+    "pdf_page": 197
+  },
+  "TB04-503030.00": {
+    "urun_kodu": "TB04-503030.00",
+    "liste_fiyati_eur": 80.0,
+    "pdf_page": 197
+  },
+  "TB04-703030.00": {
+    "urun_kodu": "TB04-703030.00",
+    "liste_fiyati_eur": 100.0,
+    "pdf_page": 197
+  },
+  "TB04-903030.00": {
+    "urun_kodu": "TB04-903030.00",
+    "liste_fiyati_eur": 110.0,
+    "pdf_page": 197
+  },
+  "TB04-1203030.00": {
+    "urun_kodu": "TB04-1203030.00",
+    "liste_fiyati_eur": 130.0,
+    "pdf_page": 197
+  },
+  "TB04-1403030.00": {
+    "urun_kodu": "TB04-1403030.00",
+    "liste_fiyati_eur": 145.0,
+    "pdf_page": 197
+  },
+  "TB04-1603030.00": {
+    "urun_kodu": "TB04-1603030.00",
+    "liste_fiyati_eur": 160.0,
+    "pdf_page": 197
+  },
+  "TB04-1803030.00": {
+    "urun_kodu": "TB04-1803030.00",
+    "liste_fiyati_eur": 175.0,
+    "pdf_page": 197
+  },
+  "TB04-2003030.00": {
+    "urun_kodu": "TB04-2003030.00",
+    "liste_fiyati_eur": 190.0,
+    "pdf_page": 197
+  },
+  "MR38-904060.00": {
+    "urun_kodu": "MR38-904060.00",
+    "liste_fiyati_eur": 510.0,
+    "pdf_page": 197
+  },
+  "MR38-1204060.00": {
+    "urun_kodu": "MR38-1204060.00",
+    "liste_fiyati_eur": 570.0,
+    "pdf_page": 197
+  },
+  "MR38-1404060.00": {
+    "urun_kodu": "MR38-1404060.00",
+    "liste_fiyati_eur": 610.0,
+    "pdf_page": 197
+  },
+  "MR38-1604060.00": {
+    "urun_kodu": "MR38-1604060.00",
+    "liste_fiyati_eur": 660.0,
+    "pdf_page": 197
+  },
+  "MR38-1804060.00": {
+    "urun_kodu": "MR38-1804060.00",
+    "liste_fiyati_eur": 700.0,
+    "pdf_page": 197
+  },
+  "MR38-2004060.00": {
+    "urun_kodu": "MR38-2004060.00",
+    "liste_fiyati_eur": 740.0,
+    "pdf_page": 197
+  },
+  "MR38-1.904060.10": {
+    "urun_kodu": "MR38-1.904060.10",
+    "liste_fiyati_eur": 560.0,
+    "pdf_page": 197
+  },
+  "MR38-1.1204060.10": {
+    "urun_kodu": "MR38-1.1204060.10",
+    "liste_fiyati_eur": 620.0,
+    "pdf_page": 197
+  },
+  "MR38-1.1404060.10": {
+    "urun_kodu": "MR38-1.1404060.10",
+    "liste_fiyati_eur": 660.0,
+    "pdf_page": 197
+  },
+  "MR38-1.1604060.10": {
+    "urun_kodu": "MR38-1.1604060.10",
+    "liste_fiyati_eur": 700.0,
+    "pdf_page": 197
+  },
+  "MR38-1.1804060.10": {
+    "urun_kodu": "MR38-1.1804060.10",
+    "liste_fiyati_eur": 740.0,
+    "pdf_page": 197
+  },
+  "MR38-1.2004060.10": {
+    "urun_kodu": "MR38-1.2004060.10",
+    "liste_fiyati_eur": 780.0,
+    "pdf_page": 197
+  }
+}

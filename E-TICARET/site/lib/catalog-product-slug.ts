@@ -65,6 +65,24 @@ function normPathSlug(s: string): string {
     .replace(/^-+|-+$/g, "");
 }
 
+/** Eski Equsto/Pimak slug → güncel vitrin slug adayları. */
+export function pdpSlugAliases(pathSlug: string): string[] {
+  const base = normPathSlug(decodeURIComponent(String(pathSlug || "")));
+  if (!base) return [];
+  const out = new Set<string>([base]);
+  const rules: Array<(s: string) => string> = [
+    (s) => s.replace(/^pimak-/, "equsto-"),
+    (s) => s.replace(/^equsto-pimak-/, "equsto-"),
+    (s) => s.replace(/^equsto__equsto-pimak-/, "equsto-"),
+    (s) => s.replace(/^equsto__equsto-/, "equsto-"),
+  ];
+  for (const rule of rules) {
+    const next = normPathSlug(rule(base));
+    if (next) out.add(next);
+  }
+  return [...out];
+}
+
 /** Vitrin PDP slug — stok kodu öncelikli (marka öneki yok). */
 export function catalogUrlSlug(row: Record<string, unknown>): string {
   const sku = String(row.sku || row.model || row.urun_kodu || row.stok_no || "").trim();
@@ -93,6 +111,16 @@ export function extractProductCodeTail(text: string): string {
 }
 
 export function matchCatalogRowByPathSlug(
+  row: Record<string, unknown>,
+  pathSlug: string,
+): boolean {
+  for (const ps of pdpSlugAliases(pathSlug)) {
+    if (matchCatalogRowByPathSlugOne(row, ps)) return true;
+  }
+  return false;
+}
+
+function matchCatalogRowByPathSlugOne(
   row: Record<string, unknown>,
   pathSlug: string,
 ): boolean {

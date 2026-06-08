@@ -1,0 +1,454 @@
+{
+  "188": {
+    "images": [
+      {
+        "file": "p188-prod00.jpeg",
+        "path": "media/pdf-p188-197/p188-prod00.jpeg",
+        "y": 157.15191650390625,
+        "x": 381.20001220703125,
+        "w": 393,
+        "h": 324
+      },
+      {
+        "file": "p188-prod01.jpeg",
+        "path": "media/pdf-p188-197/p188-prod01.jpeg",
+        "y": 391.10791015625,
+        "x": 396.9580078125,
+        "w": 362,
+        "h": 339
+      },
+      {
+        "file": "p188-prod02.jpeg",
+        "path": "media/pdf-p188-197/p188-prod02.jpeg",
+        "y": 627.5510864257812,
+        "x": 366.27801513671875,
+        "w": 467,
+        "h": 344
+      }
+    ],
+    "families": [
+      {
+        "y": 103.84691619873047,
+        "name": "Alt Tablasız Çalışma Tezgahı"
+      },
+      {
+        "y": 344.6048889160156,
+        "name": "Taban Raflı Çalışma Tezgahı"
+      },
+      {
+        "y": 581.9619140625,
+        "name": "Taban ve Ara Raflı Çalışma Tezgahı"
+      }
+    ]
+  },
+  "189": {
+    "images": [
+      {
+        "file": "p189-prod00.jpeg",
+        "path": "media/pdf-p188-197/p189-prod00.jpeg",
+        "y": 159.38690185546875,
+        "x": 11.136500358581543,
+        "w": 524,
+        "h": 385
+      },
+      {
+        "file": "p189-prod02.jpeg",
+        "path": "media/pdf-p188-197/p189-prod02.jpeg",
+        "y": 436.96087646484375,
+        "x": 31.46919822692871,
+        "w": 438,
+        "h": 323
+      },
+      {
+        "file": "p189-prod01.jpeg",
+        "path": "media/pdf-p188-197/p189-prod01.jpeg",
+        "y": 657.9837646484375,
+        "x": 49.60799789428711,
+        "w": 412,
+        "h": 319
+      }
+    ],
+    "families": [
+      {
+        "y": 98.17687225341797,
+        "name": "Dolaplı Çalışma Tezgahları"
+      },
+      {
+        "y": 394.29290771484375,
+        "name": "Dolaplı Çalışma Tezgahı – Ara Raflı"
+      },
+      {
+        "y": 635.2288818359375,
+        "name": "Dolaplı Çalışma Tezgahı – Ara Raflı Blok Çekmeceli"
+      }
+    ]
+  },
+  "190": {
+    "images": [
+      {
+        "file": "p190-prod00.jpeg",
+        "path": "media/pdf-p188-197/p190-prod00.jpeg",
+        "y": 124.77685546875,
+        "x": 377.08001708984375,
+        "w": 414,
+        "h": 308
+      },
+      {
+        "file": "p190-prod03.jpeg",
+        "path": "media/pdf-p188-197/p190-prod03.jpeg",
+        "y": 318.64892578125,
+        "x": 404.51300048828125,
+        "w": 331,
+        "h": 225
+      },
+      {
+        "file": "p190-prod01.jpeg",
+        "path": "media/pdf-p188-197/p190-prod01.jpeg",
+        "y": 475.75189208984375,
+        "x": 407.84600830078125,
+        "w": 341,
+        "h": 307
+      },
+      {
+        "file": "p190-prod02.jpeg",
+        "path": "media/pdf-p188-197/p190-prod02.jpeg",
+        "y": 668.35205078125,
+        "x": 412.2850036621094,
+        "w": 339,
+        "h": 305
+      }
+    ],
+    "families": [
+      {
+        "y": 103.84691619873047,
+        "name": "Tabak Isıtma Dolabı"
+      },
+      {
+        "y": 290.2078857421875,
+        "name": "Set Altı Dolaplı Çalışma Tezgahı"
+      },
+      {
+        "y": 449.1018981933594,
+        "name": "Hareketli Tezgah – Taban ve Ara Raflı"
+      },
+      {
+        "y": 635.5369262695312,
+        "name": "Hareketli Tezgah – Taban Raflı"
+      }
+    ]
+  },
+  "191": {
+    "images": [
+      {
+        "file": "p191-prod00.jpeg",
+        "path": "media/pdf-p188-197/p191-prod00.jpeg",
+        "y": 133.3328857421875,
+        "x": 64.0573959350586,
+        "w": 342,
+        "h": 275
+      },
+      {
+        "file": "p191-prod01.jpeg",
+        "path": "media/pdf-p188-197/p191-prod01.jpeg",
+        "y": 325.8638916015625,
+        "x": 75.42400360107422,
+        "w": 290,
+        "h": 239
+      },
+      {
+        "file": "p191-prod04.jpeg",
+        "path": "media/pdf-p188-197/p191-prod04.jpeg",
+        "y": 486.8149108886719,
+        "x": 157.87400817871094,
+        "w": 234,
+        "h": 247
+      },
+      {
+        "file": "p191-prod03.jpeg",
+        "path": "media/pdf-p188-197/p191-prod03.jpeg",
+        "y": 487.37689208984375,
+        "x": 31.36960220336914,
+        "w": 260,
+        "h": 247
+      },
+      {
+        "file": "p191-prod02.jpeg",
+        "path": "media/pdf-p188-197/p191-prod02.jpeg",
+        "y": 675.8529052734375,
+        "x": 70.87419891357422,
+        "w": 299,
+        "h": 242
+      }
+    ],
+    "families": [
+      {
+        "y": 103.84691619873047,
+        "name": "Mermer Tablalı Tezgah"
+      },
+      {
+        "y": 288.52288818359375,
+        "name": "Mermer Tablalı Tezgah - Taban Raflı"
+      },
+      {
+        "y": 473.17889404296875,
+        "name": "Bulaşık Makinesi Giriş-Çıkış Tezgahı"
+      },
+      {
+        "y": 631.7039184570312,
+        "name": "Polietilen Tablalı Tezgah"
+      }
+    ]
+  },
+  "192": {
+    "images": [
+      {
+        "file": "p192-prod00.jpeg",
+        "path": "media/pdf-p188-197/p192-prod00.jpeg",
+        "y": 129.4798583984375,
+        "x": 409.7380065917969,
+        "w": 315,
+        "h": 269
+      },
+      {
+        "file": "p192-prod01.jpeg",
+        "path": "media/pdf-p188-197/p192-prod01.jpeg",
+        "y": 483.98388671875,
+        "x": 413.8100280761719,
+        "w": 342,
+        "h": 285
+      },
+      {
+        "file": "p192-prod02.png",
+        "path": "media/pdf-p188-197/p192-prod02.png",
+        "y": 673.4494018554688,
+        "x": 418.5589904785156,
+        "w": 370,
+        "h": 297
+      }
+    ],
+    "families": [
+      {
+        "y": 103.84691619873047,
+        "name": "Polietilen Tablalı Tezgah – Taban Raflı"
+      },
+      {
+        "y": 289.48687744140625,
+        "name": "Et Kütüğü Polietilen Tablalı"
+      },
+      {
+        "y": 463.910888671875,
+        "name": "Süzme Havuzlu Tezgah"
+      },
+      {
+        "y": 636.7158813476562,
+        "name": "Balık Hazırlama Tezgahı"
+      }
+    ]
+  },
+  "193": {
+    "images": [
+      {
+        "file": "p193-prod00.jpeg",
+        "path": "media/pdf-p188-197/p193-prod00.jpeg",
+        "y": 163.05389404296875,
+        "x": 67.02930450439453,
+        "w": 383,
+        "h": 398
+      },
+      {
+        "file": "p193-prod01.jpeg",
+        "path": "media/pdf-p188-197/p193-prod01.jpeg",
+        "y": 496.20989990234375,
+        "x": 70.81909942626953,
+        "w": 369,
+        "h": 370
+      }
+    ],
+    "families": [
+      {
+        "y": 103.84691619873047,
+        "name": "Tek Evyeli Taban Rafsız Tezgah"
+      },
+      {
+        "y": 464.4798889160156,
+        "name": "Tek Evyeli Taban Raflı Tezgah"
+      }
+    ]
+  },
+  "194": {
+    "images": [
+      {
+        "file": "p194-prod01.jpeg",
+        "path": "media/pdf-p188-197/p194-prod01.jpeg",
+        "y": 131.91290283203125,
+        "x": 402.8219909667969,
+        "w": 334,
+        "h": 302
+      },
+      {
+        "file": "p194-prod03.jpeg",
+        "path": "media/pdf-p188-197/p194-prod03.jpeg",
+        "y": 313.7088623046875,
+        "x": 403.0790100097656,
+        "w": 333,
+        "h": 321
+      },
+      {
+        "file": "p194-prod02.jpeg",
+        "path": "media/pdf-p188-197/p194-prod02.jpeg",
+        "y": 500.2618713378906,
+        "x": 411.6650085449219,
+        "w": 297,
+        "h": 248
+      },
+      {
+        "file": "p194-prod00.jpeg",
+        "path": "media/pdf-p188-197/p194-prod00.jpeg",
+        "y": 669.5090942382812,
+        "x": 403.03900146484375,
+        "w": 342,
+        "h": 290
+      }
+    ],
+    "families": [
+      {
+        "y": 101.01189422607422,
+        "name": "Çift Evyeli Taban Rafsız Tezgah"
+      },
+      {
+        "y": 291.6439208984375,
+        "name": "Çift Evyeli Taban Raflı Tezgah"
+      },
+      {
+        "y": 482.0869140625,
+        "name": "Üç Evyeli Taban Rafsız Tezgah"
+      },
+      {
+        "y": 633.6688842773438,
+        "name": "Bulaşık Sıyırma Tezgahı"
+      }
+    ]
+  },
+  "195": {
+    "images": [
+      {
+        "file": "p195-prod01.jpeg",
+        "path": "media/pdf-p188-197/p195-prod01.jpeg",
+        "y": 184.65789794921875,
+        "x": 39.76070022583008,
+        "w": 460,
+        "h": 303
+      },
+      {
+        "file": "p195-prod00.jpeg",
+        "path": "media/pdf-p188-197/p195-prod00.jpeg",
+        "y": 532.0048828125,
+        "x": 36.024200439453125,
+        "w": 476,
+        "h": 317
+      }
+    ],
+    "families": [
+      {
+        "y": 101.01189422607422,
+        "name": "Orta Tip Filtresiz Davlumbaz"
+      },
+      {
+        "y": 419.2738952636719,
+        "name": "Orta Tip Filtreli Davlumbazlar"
+      }
+    ]
+  },
+  "196": {
+    "images": [
+      {
+        "file": "p196-prod01.jpeg",
+        "path": "media/pdf-p188-197/p196-prod01.jpeg",
+        "y": 229.93389892578125,
+        "x": 364.55401611328125,
+        "w": 464,
+        "h": 211
+      },
+      {
+        "file": "p196-prod00.jpeg",
+        "path": "media/pdf-p188-197/p196-prod00.jpeg",
+        "y": 584.5919189453125,
+        "x": 367.2350158691406,
+        "w": 464,
+        "h": 211
+      }
+    ],
+    "families": [
+      {
+        "y": 101.01189422607422,
+        "name": "Duvar Tipi Filtresiz Davlumbaz"
+      },
+      {
+        "y": 458.0259094238281,
+        "name": "Duvar Tipi Filtreli Davlumbaz"
+      }
+    ]
+  },
+  "197": {
+    "images": [
+      {
+        "file": "p197-prod01.jpeg",
+        "path": "media/pdf-p188-197/p197-prod01.jpeg",
+        "y": 138.37689208984375,
+        "x": 47.06990051269531,
+        "w": 424,
+        "h": 208
+      },
+      {
+        "file": "p197-prod00.jpeg",
+        "path": "media/pdf-p188-197/p197-prod00.jpeg",
+        "y": 312.326904296875,
+        "x": 46.144100189208984,
+        "w": 411,
+        "h": 180
+      },
+      {
+        "file": "p197-prod04.jpeg",
+        "path": "media/pdf-p188-197/p197-prod04.jpeg",
+        "y": 459.21588134765625,
+        "x": 68.39340209960938,
+        "w": 320,
+        "h": 238
+      },
+      {
+        "file": "p197-prod02.jpeg",
+        "path": "media/pdf-p188-197/p197-prod02.jpeg",
+        "y": 623.0946044921875,
+        "x": 79.44730377197266,
+        "w": 306,
+        "h": 207
+      },
+      {
+        "file": "p197-prod03.jpeg",
+        "path": "media/pdf-p188-197/p197-prod03.jpeg",
+        "y": 710.27587890625,
+        "x": 73.98360443115234,
+        "w": 329,
+        "h": 196
+      }
+    ],
+    "families": [
+      {
+        "y": 103.84691619873047,
+        "name": "Süzme Duvar Rafı"
+      },
+      {
+        "y": 272.05987548828125,
+        "name": "Duvar Rafı"
+      },
+      {
+        "y": 439.0309143066406,
+        "name": "Kazan ve Tencere Yıkama Tezgahı"
+      },
+      {
+        "y": 597.7938842773438,
+        "name": "Duvar Dolapları"
+      }
+    ]
+  }
+}

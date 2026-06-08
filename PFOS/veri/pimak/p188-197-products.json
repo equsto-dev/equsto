@@ -1,0 +1,5214 @@
+[
+  {
+    "urun_kodu": "PIMAK.06060.00",
+    "slug": "equsto-pimak-06060-00",
+    "baslik": "Alt Tablasız Çalışma Tezgahı 600×600×850 mm",
+    "aile": "Alt Tablasız Çalışma Tezgahı",
+    "aile_slug": "alt-tablasiz-calisma-tezgahi",
+    "category": "calisma-tezgahi",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 340.0,
+    "ebat_mm": "600x600x850",
+    "olcu_etiket": "600×600×850 mm",
+    "olculer": {
+      "genislik_mm": 600,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.09060.00",
+    "slug": "equsto-pimak-09060-00",
+    "baslik": "Alt Tablasız Çalışma Tezgahı 900×600×850 mm",
+    "aile": "Alt Tablasız Çalışma Tezgahı",
+    "aile_slug": "alt-tablasiz-calisma-tezgahi",
+    "category": "calisma-tezgahi",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 380.0,
+    "ebat_mm": "900x600x850",
+    "olcu_etiket": "900×600×850 mm",
+    "olculer": {
+      "genislik_mm": 900,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.10060.00",
+    "slug": "equsto-pimak-10060-00",
+    "baslik": "Alt Tablasız Çalışma Tezgahı 1000×600×850 mm",
+    "aile": "Alt Tablasız Çalışma Tezgahı",
+    "aile_slug": "alt-tablasiz-calisma-tezgahi",
+    "category": "calisma-tezgahi",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 400.0,
+    "ebat_mm": "1000x600x850",
+    "olcu_etiket": "1000×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1000,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.12060.00",
+    "slug": "equsto-pimak-12060-00",
+    "baslik": "Alt Tablasız Çalışma Tezgahı 1200×600×850 mm",
+    "aile": "Alt Tablasız Çalışma Tezgahı",
+    "aile_slug": "alt-tablasiz-calisma-tezgahi",
+    "category": "calisma-tezgahi",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 420.0,
+    "ebat_mm": "1200x600x850",
+    "olcu_etiket": "1200×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.14060.00",
+    "slug": "equsto-pimak-14060-00",
+    "baslik": "Alt Tablasız Çalışma Tezgahı 1400×600×850 mm",
+    "aile": "Alt Tablasız Çalışma Tezgahı",
+    "aile_slug": "alt-tablasiz-calisma-tezgahi",
+    "category": "calisma-tezgahi",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 460.0,
+    "ebat_mm": "1400x600x850",
+    "olcu_etiket": "1400×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.16060.00",
+    "slug": "equsto-pimak-16060-00",
+    "baslik": "Alt Tablasız Çalışma Tezgahı 1600×600×850 mm",
+    "aile": "Alt Tablasız Çalışma Tezgahı",
+    "aile_slug": "alt-tablasiz-calisma-tezgahi",
+    "category": "calisma-tezgahi",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 500.0,
+    "ebat_mm": "1600x600x850",
+    "olcu_etiket": "1600×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.19060.00",
+    "slug": "equsto-pimak-19060-00",
+    "baslik": "Alt Tablasız Çalışma Tezgahı 1900×600×850 mm",
+    "aile": "Alt Tablasız Çalışma Tezgahı",
+    "aile_slug": "alt-tablasiz-calisma-tezgahi",
+    "category": "calisma-tezgahi",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 570.0,
+    "ebat_mm": "1900x600x850",
+    "olcu_etiket": "1900×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1900,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.06070.00",
+    "slug": "equsto-pimak-06070-00",
+    "baslik": "Alt Tablasız Çalışma Tezgahı 600×700×850 mm",
+    "aile": "Alt Tablasız Çalışma Tezgahı",
+    "aile_slug": "alt-tablasiz-calisma-tezgahi",
+    "category": "calisma-tezgahi",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 360.0,
+    "ebat_mm": "600x700x850",
+    "olcu_etiket": "600×700×850 mm",
+    "olculer": {
+      "genislik_mm": 600,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.09070.00",
+    "slug": "equsto-pimak-09070-00",
+    "baslik": "Alt Tablasız Çalışma Tezgahı 900×700×850 mm",
+    "aile": "Alt Tablasız Çalışma Tezgahı",
+    "aile_slug": "alt-tablasiz-calisma-tezgahi",
+    "category": "calisma-tezgahi",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 400.0,
+    "ebat_mm": "900x700x850",
+    "olcu_etiket": "900×700×850 mm",
+    "olculer": {
+      "genislik_mm": 900,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.10070.00",
+    "slug": "equsto-pimak-10070-00",
+    "baslik": "Alt Tablasız Çalışma Tezgahı 1000×700×850 mm",
+    "aile": "Alt Tablasız Çalışma Tezgahı",
+    "aile_slug": "alt-tablasiz-calisma-tezgahi",
+    "category": "calisma-tezgahi",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 420.0,
+    "ebat_mm": "1000x700x850",
+    "olcu_etiket": "1000×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1000,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.12070.00",
+    "slug": "equsto-pimak-12070-00",
+    "baslik": "Alt Tablasız Çalışma Tezgahı 1200×700×850 mm",
+    "aile": "Alt Tablasız Çalışma Tezgahı",
+    "aile_slug": "alt-tablasiz-calisma-tezgahi",
+    "category": "calisma-tezgahi",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 450.0,
+    "ebat_mm": "1200x700x850",
+    "olcu_etiket": "1200×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.14070.00",
+    "slug": "equsto-pimak-14070-00",
+    "baslik": "Alt Tablasız Çalışma Tezgahı 1400×700×850 mm",
+    "aile": "Alt Tablasız Çalışma Tezgahı",
+    "aile_slug": "alt-tablasiz-calisma-tezgahi",
+    "category": "calisma-tezgahi",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 490.0,
+    "ebat_mm": "1400x700x850",
+    "olcu_etiket": "1400×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.16070.00",
+    "slug": "equsto-pimak-16070-00",
+    "baslik": "Alt Tablasız Çalışma Tezgahı 1600×700×850 mm",
+    "aile": "Alt Tablasız Çalışma Tezgahı",
+    "aile_slug": "alt-tablasiz-calisma-tezgahi",
+    "category": "calisma-tezgahi",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 540.0,
+    "ebat_mm": "1600x700x850",
+    "olcu_etiket": "1600×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.19070.00",
+    "slug": "equsto-pimak-19070-00",
+    "baslik": "Alt Tablasız Çalışma Tezgahı 1900×700×850 mm",
+    "aile": "Alt Tablasız Çalışma Tezgahı",
+    "aile_slug": "alt-tablasiz-calisma-tezgahi",
+    "category": "calisma-tezgahi",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 590.0,
+    "ebat_mm": "1900x700x850",
+    "olcu_etiket": "1900×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1900,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.06060.08",
+    "slug": "equsto-pimak-06060-08",
+    "baslik": "Taban Raflı Çalışma Tezgahı 600×600×850 mm",
+    "aile": "Taban Raflı Çalışma Tezgahı",
+    "aile_slug": "taban-rafli-calisma-tezgahi",
+    "category": "depolama-raflari",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 370.0,
+    "ebat_mm": "600x600x850",
+    "olcu_etiket": "600×600×850 mm",
+    "olculer": {
+      "genislik_mm": 600,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.09060.08",
+    "slug": "equsto-pimak-09060-08",
+    "baslik": "Taban Raflı Çalışma Tezgahı 900×600×850 mm",
+    "aile": "Taban Raflı Çalışma Tezgahı",
+    "aile_slug": "taban-rafli-calisma-tezgahi",
+    "category": "depolama-raflari",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 430.0,
+    "ebat_mm": "900x600x850",
+    "olcu_etiket": "900×600×850 mm",
+    "olculer": {
+      "genislik_mm": 900,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.10060.08",
+    "slug": "equsto-pimak-10060-08",
+    "baslik": "Taban Raflı Çalışma Tezgahı 1000×600×850 mm",
+    "aile": "Taban Raflı Çalışma Tezgahı",
+    "aile_slug": "taban-rafli-calisma-tezgahi",
+    "category": "depolama-raflari",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 450.0,
+    "ebat_mm": "1000x600x850",
+    "olcu_etiket": "1000×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1000,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.12060.08",
+    "slug": "equsto-pimak-12060-08",
+    "baslik": "Taban Raflı Çalışma Tezgahı 1200×600×850 mm",
+    "aile": "Taban Raflı Çalışma Tezgahı",
+    "aile_slug": "taban-rafli-calisma-tezgahi",
+    "category": "depolama-raflari",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 470.0,
+    "ebat_mm": "1200x600x850",
+    "olcu_etiket": "1200×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.14060.08",
+    "slug": "equsto-pimak-14060-08",
+    "baslik": "Taban Raflı Çalışma Tezgahı 1400×600×850 mm",
+    "aile": "Taban Raflı Çalışma Tezgahı",
+    "aile_slug": "taban-rafli-calisma-tezgahi",
+    "category": "depolama-raflari",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 520.0,
+    "ebat_mm": "1400x600x850",
+    "olcu_etiket": "1400×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.16060.08",
+    "slug": "equsto-pimak-16060-08",
+    "baslik": "Taban Raflı Çalışma Tezgahı 1600×600×850 mm",
+    "aile": "Taban Raflı Çalışma Tezgahı",
+    "aile_slug": "taban-rafli-calisma-tezgahi",
+    "category": "depolama-raflari",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 580.0,
+    "ebat_mm": "1600x600x850",
+    "olcu_etiket": "1600×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.19060.08",
+    "slug": "equsto-pimak-19060-08",
+    "baslik": "Taban Raflı Çalışma Tezgahı 1900×600×850 mm",
+    "aile": "Taban Raflı Çalışma Tezgahı",
+    "aile_slug": "taban-rafli-calisma-tezgahi",
+    "category": "depolama-raflari",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 660.0,
+    "ebat_mm": "1900x600x850",
+    "olcu_etiket": "1900×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1900,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.06070.08",
+    "slug": "equsto-pimak-06070-08",
+    "baslik": "Taban Raflı Çalışma Tezgahı 600×700×850 mm",
+    "aile": "Taban Raflı Çalışma Tezgahı",
+    "aile_slug": "taban-rafli-calisma-tezgahi",
+    "category": "depolama-raflari",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 400.0,
+    "ebat_mm": "600x700x850",
+    "olcu_etiket": "600×700×850 mm",
+    "olculer": {
+      "genislik_mm": 600,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.09070.08",
+    "slug": "equsto-pimak-09070-08",
+    "baslik": "Taban Raflı Çalışma Tezgahı 900×700×850 mm",
+    "aile": "Taban Raflı Çalışma Tezgahı",
+    "aile_slug": "taban-rafli-calisma-tezgahi",
+    "category": "depolama-raflari",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 455.0,
+    "ebat_mm": "900x700x850",
+    "olcu_etiket": "900×700×850 mm",
+    "olculer": {
+      "genislik_mm": 900,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.10070.08",
+    "slug": "equsto-pimak-10070-08",
+    "baslik": "Taban Raflı Çalışma Tezgahı 1000×700×850 mm",
+    "aile": "Taban Raflı Çalışma Tezgahı",
+    "aile_slug": "taban-rafli-calisma-tezgahi",
+    "category": "depolama-raflari",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 470.0,
+    "ebat_mm": "1000x700x850",
+    "olcu_etiket": "1000×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1000,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.12070.08",
+    "slug": "equsto-pimak-12070-08",
+    "baslik": "Taban Raflı Çalışma Tezgahı 1200×700×850 mm",
+    "aile": "Taban Raflı Çalışma Tezgahı",
+    "aile_slug": "taban-rafli-calisma-tezgahi",
+    "category": "depolama-raflari",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 510.0,
+    "ebat_mm": "1200x700x850",
+    "olcu_etiket": "1200×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.14070.08",
+    "slug": "equsto-pimak-14070-08",
+    "baslik": "Taban Raflı Çalışma Tezgahı 1400×700×850 mm",
+    "aile": "Taban Raflı Çalışma Tezgahı",
+    "aile_slug": "taban-rafli-calisma-tezgahi",
+    "category": "depolama-raflari",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 560.0,
+    "ebat_mm": "1400x700x850",
+    "olcu_etiket": "1400×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.16070.08",
+    "slug": "equsto-pimak-16070-08",
+    "baslik": "Taban Raflı Çalışma Tezgahı 1600×700×850 mm",
+    "aile": "Taban Raflı Çalışma Tezgahı",
+    "aile_slug": "taban-rafli-calisma-tezgahi",
+    "category": "depolama-raflari",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 630.0,
+    "ebat_mm": "1600x700x850",
+    "olcu_etiket": "1600×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.19070.08",
+    "slug": "equsto-pimak-19070-08",
+    "baslik": "Taban Raflı Çalışma Tezgahı 1900×700×850 mm",
+    "aile": "Taban Raflı Çalışma Tezgahı",
+    "aile_slug": "taban-rafli-calisma-tezgahi",
+    "category": "depolama-raflari",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 720.0,
+    "ebat_mm": "1900x700x850",
+    "olcu_etiket": "1900×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1900,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.06060.04",
+    "slug": "equsto-pimak-06060-04",
+    "baslik": "Taban ve Ara Raflı Çalışma Tezgahı 600×600×850 mm",
+    "aile": "Taban ve Ara Raflı Çalışma Tezgahı",
+    "aile_slug": "taban-ve-ara-rafli-calisma-tezgahi",
+    "category": "depolama-raflari",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 270.0,
+    "ebat_mm": "600x600x850",
+    "olcu_etiket": "600×600×850 mm",
+    "olculer": {
+      "genislik_mm": 600,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.09060.04",
+    "slug": "equsto-pimak-09060-04",
+    "baslik": "Taban ve Ara Raflı Çalışma Tezgahı 900×600×850 mm",
+    "aile": "Taban ve Ara Raflı Çalışma Tezgahı",
+    "aile_slug": "taban-ve-ara-rafli-calisma-tezgahi",
+    "category": "depolama-raflari",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 300.0,
+    "ebat_mm": "900x600x850",
+    "olcu_etiket": "900×600×850 mm",
+    "olculer": {
+      "genislik_mm": 900,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.10060.04",
+    "slug": "equsto-pimak-10060-04",
+    "baslik": "Taban ve Ara Raflı Çalışma Tezgahı 1000×600×850 mm",
+    "aile": "Taban ve Ara Raflı Çalışma Tezgahı",
+    "aile_slug": "taban-ve-ara-rafli-calisma-tezgahi",
+    "category": "depolama-raflari",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 310.0,
+    "ebat_mm": "1000x600x850",
+    "olcu_etiket": "1000×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1000,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.12060.04",
+    "slug": "equsto-pimak-12060-04",
+    "baslik": "Taban ve Ara Raflı Çalışma Tezgahı 1200×600×850 mm",
+    "aile": "Taban ve Ara Raflı Çalışma Tezgahı",
+    "aile_slug": "taban-ve-ara-rafli-calisma-tezgahi",
+    "category": "depolama-raflari",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 330.0,
+    "ebat_mm": "1200x600x850",
+    "olcu_etiket": "1200×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.14060.04",
+    "slug": "equsto-pimak-14060-04",
+    "baslik": "Taban ve Ara Raflı Çalışma Tezgahı 1400×600×850 mm",
+    "aile": "Taban ve Ara Raflı Çalışma Tezgahı",
+    "aile_slug": "taban-ve-ara-rafli-calisma-tezgahi",
+    "category": "depolama-raflari",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 350.0,
+    "ebat_mm": "1400x600x850",
+    "olcu_etiket": "1400×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.16060.04",
+    "slug": "equsto-pimak-16060-04",
+    "baslik": "Taban ve Ara Raflı Çalışma Tezgahı 1600×600×850 mm",
+    "aile": "Taban ve Ara Raflı Çalışma Tezgahı",
+    "aile_slug": "taban-ve-ara-rafli-calisma-tezgahi",
+    "category": "depolama-raflari",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 370.0,
+    "ebat_mm": "1600x600x850",
+    "olcu_etiket": "1600×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.19060.04",
+    "slug": "equsto-pimak-19060-04",
+    "baslik": "Taban ve Ara Raflı Çalışma Tezgahı 1900×600×850 mm",
+    "aile": "Taban ve Ara Raflı Çalışma Tezgahı",
+    "aile_slug": "taban-ve-ara-rafli-calisma-tezgahi",
+    "category": "depolama-raflari",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 400.0,
+    "ebat_mm": "1900x600x850",
+    "olcu_etiket": "1900×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1900,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.06070.04",
+    "slug": "equsto-pimak-06070-04",
+    "baslik": "Taban ve Ara Raflı Çalışma Tezgahı 600×700×850 mm",
+    "aile": "Taban ve Ara Raflı Çalışma Tezgahı",
+    "aile_slug": "taban-ve-ara-rafli-calisma-tezgahi",
+    "category": "depolama-raflari",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 280.0,
+    "ebat_mm": "600x700x850",
+    "olcu_etiket": "600×700×850 mm",
+    "olculer": {
+      "genislik_mm": 600,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.09070.04",
+    "slug": "equsto-pimak-09070-04",
+    "baslik": "Taban ve Ara Raflı Çalışma Tezgahı 900×700×850 mm",
+    "aile": "Taban ve Ara Raflı Çalışma Tezgahı",
+    "aile_slug": "taban-ve-ara-rafli-calisma-tezgahi",
+    "category": "depolama-raflari",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 310.0,
+    "ebat_mm": "900x700x850",
+    "olcu_etiket": "900×700×850 mm",
+    "olculer": {
+      "genislik_mm": 900,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.10070.04",
+    "slug": "equsto-pimak-10070-04",
+    "baslik": "Taban ve Ara Raflı Çalışma Tezgahı 1000×700×850 mm",
+    "aile": "Taban ve Ara Raflı Çalışma Tezgahı",
+    "aile_slug": "taban-ve-ara-rafli-calisma-tezgahi",
+    "category": "depolama-raflari",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 330.0,
+    "ebat_mm": "1000x700x850",
+    "olcu_etiket": "1000×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1000,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.12070.04",
+    "slug": "equsto-pimak-12070-04",
+    "baslik": "Taban ve Ara Raflı Çalışma Tezgahı 1200×700×850 mm",
+    "aile": "Taban ve Ara Raflı Çalışma Tezgahı",
+    "aile_slug": "taban-ve-ara-rafli-calisma-tezgahi",
+    "category": "depolama-raflari",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 350.0,
+    "ebat_mm": "1200x700x850",
+    "olcu_etiket": "1200×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.14070.04",
+    "slug": "equsto-pimak-14070-04",
+    "baslik": "Taban ve Ara Raflı Çalışma Tezgahı 1400×700×850 mm",
+    "aile": "Taban ve Ara Raflı Çalışma Tezgahı",
+    "aile_slug": "taban-ve-ara-rafli-calisma-tezgahi",
+    "category": "depolama-raflari",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 370.0,
+    "ebat_mm": "1400x700x850",
+    "olcu_etiket": "1400×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.16070.04",
+    "slug": "equsto-pimak-16070-04",
+    "baslik": "Taban ve Ara Raflı Çalışma Tezgahı 1600×700×850 mm",
+    "aile": "Taban ve Ara Raflı Çalışma Tezgahı",
+    "aile_slug": "taban-ve-ara-rafli-calisma-tezgahi",
+    "category": "depolama-raflari",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 400.0,
+    "ebat_mm": "1600x700x850",
+    "olcu_etiket": "1600×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.19070.04",
+    "slug": "equsto-pimak-19070-04",
+    "baslik": "Taban ve Ara Raflı Çalışma Tezgahı 1900×700×850 mm",
+    "aile": "Taban ve Ara Raflı Çalışma Tezgahı",
+    "aile_slug": "taban-ve-ara-rafli-calisma-tezgahi",
+    "category": "depolama-raflari",
+    "pdf_page": 188,
+    "liste_fiyati_eur": 430.0,
+    "ebat_mm": "1900x700x850",
+    "olcu_etiket": "1900×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1900,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p188-prod02.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.10060.13",
+    "slug": "equsto-pimak-10060-13",
+    "baslik": "Dolaplı Çalışma Tezgahları 1000×600×850 mm",
+    "aile": "Dolaplı Çalışma Tezgahları",
+    "aile_slug": "dolapli-calisma-tezgahlari",
+    "category": "dolapli-calisma-tezgahi",
+    "pdf_page": 189,
+    "liste_fiyati_eur": 760.0,
+    "ebat_mm": "1000x600x850",
+    "olcu_etiket": "1000×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1000,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p189-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.12060.13",
+    "slug": "equsto-pimak-12060-13",
+    "baslik": "Dolaplı Çalışma Tezgahları 1200×600×850 mm",
+    "aile": "Dolaplı Çalışma Tezgahları",
+    "aile_slug": "dolapli-calisma-tezgahlari",
+    "category": "dolapli-calisma-tezgahi",
+    "pdf_page": 189,
+    "liste_fiyati_eur": 880.0,
+    "ebat_mm": "1200x600x850",
+    "olcu_etiket": "1200×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p189-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.14060.13",
+    "slug": "equsto-pimak-14060-13",
+    "baslik": "Dolaplı Çalışma Tezgahları 1400×600×850 mm",
+    "aile": "Dolaplı Çalışma Tezgahları",
+    "aile_slug": "dolapli-calisma-tezgahlari",
+    "category": "dolapli-calisma-tezgahi",
+    "pdf_page": 189,
+    "liste_fiyati_eur": 950.0,
+    "ebat_mm": "1400x600x850",
+    "olcu_etiket": "1400×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p189-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.16060.13",
+    "slug": "equsto-pimak-16060-13",
+    "baslik": "Dolaplı Çalışma Tezgahları 1600×600×850 mm",
+    "aile": "Dolaplı Çalışma Tezgahları",
+    "aile_slug": "dolapli-calisma-tezgahlari",
+    "category": "dolapli-calisma-tezgahi",
+    "pdf_page": 189,
+    "liste_fiyati_eur": 1010.0,
+    "ebat_mm": "1600x600x850",
+    "olcu_etiket": "1600×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p189-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.19060.13",
+    "slug": "equsto-pimak-19060-13",
+    "baslik": "Dolaplı Çalışma Tezgahları 1900×600×850 mm",
+    "aile": "Dolaplı Çalışma Tezgahları",
+    "aile_slug": "dolapli-calisma-tezgahlari",
+    "category": "dolapli-calisma-tezgahi",
+    "pdf_page": 189,
+    "liste_fiyati_eur": 1130.0,
+    "ebat_mm": "1900x600x850",
+    "olcu_etiket": "1900×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1900,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p189-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.22060.13",
+    "slug": "equsto-pimak-22060-13",
+    "baslik": "Dolaplı Çalışma Tezgahları 2200×600×850 mm",
+    "aile": "Dolaplı Çalışma Tezgahları",
+    "aile_slug": "dolapli-calisma-tezgahlari",
+    "category": "dolapli-calisma-tezgahi",
+    "pdf_page": 189,
+    "liste_fiyati_eur": 1220.0,
+    "ebat_mm": "2200x600x850",
+    "olcu_etiket": "2200×600×850 mm",
+    "olculer": {
+      "genislik_mm": 2200,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p189-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.10070.13",
+    "slug": "equsto-pimak-10070-13",
+    "baslik": "Dolaplı Çalışma Tezgahları 1000×700×850 mm",
+    "aile": "Dolaplı Çalışma Tezgahları",
+    "aile_slug": "dolapli-calisma-tezgahlari",
+    "category": "dolapli-calisma-tezgahi",
+    "pdf_page": 189,
+    "liste_fiyati_eur": 800.0,
+    "ebat_mm": "1000x700x850",
+    "olcu_etiket": "1000×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1000,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p189-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.12070.13",
+    "slug": "equsto-pimak-12070-13",
+    "baslik": "Dolaplı Çalışma Tezgahları 1200×700×850 mm",
+    "aile": "Dolaplı Çalışma Tezgahları",
+    "aile_slug": "dolapli-calisma-tezgahlari",
+    "category": "dolapli-calisma-tezgahi",
+    "pdf_page": 189,
+    "liste_fiyati_eur": 920.0,
+    "ebat_mm": "1200x700x850",
+    "olcu_etiket": "1200×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p189-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.14070.13",
+    "slug": "equsto-pimak-14070-13",
+    "baslik": "Dolaplı Çalışma Tezgahları 1400×700×850 mm",
+    "aile": "Dolaplı Çalışma Tezgahları",
+    "aile_slug": "dolapli-calisma-tezgahlari",
+    "category": "dolapli-calisma-tezgahi",
+    "pdf_page": 189,
+    "liste_fiyati_eur": 990.0,
+    "ebat_mm": "1400x700x850",
+    "olcu_etiket": "1400×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p189-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.16070.13",
+    "slug": "equsto-pimak-16070-13",
+    "baslik": "Dolaplı Çalışma Tezgahları 1600×700×850 mm",
+    "aile": "Dolaplı Çalışma Tezgahları",
+    "aile_slug": "dolapli-calisma-tezgahlari",
+    "category": "dolapli-calisma-tezgahi",
+    "pdf_page": 189,
+    "liste_fiyati_eur": 1050.0,
+    "ebat_mm": "1600x700x850",
+    "olcu_etiket": "1600×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p189-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.19070.13",
+    "slug": "equsto-pimak-19070-13",
+    "baslik": "Dolaplı Çalışma Tezgahları 1900×700×850 mm",
+    "aile": "Dolaplı Çalışma Tezgahları",
+    "aile_slug": "dolapli-calisma-tezgahlari",
+    "category": "dolapli-calisma-tezgahi",
+    "pdf_page": 189,
+    "liste_fiyati_eur": 1200.0,
+    "ebat_mm": "1900x700x850",
+    "olcu_etiket": "1900×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1900,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p189-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.22070.13",
+    "slug": "equsto-pimak-22070-13",
+    "baslik": "Dolaplı Çalışma Tezgahları 2200×700×850 mm",
+    "aile": "Dolaplı Çalışma Tezgahları",
+    "aile_slug": "dolapli-calisma-tezgahlari",
+    "category": "dolapli-calisma-tezgahi",
+    "pdf_page": 189,
+    "liste_fiyati_eur": 1280.0,
+    "ebat_mm": "2200x700x850",
+    "olcu_etiket": "2200×700×850 mm",
+    "olculer": {
+      "genislik_mm": 2200,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p189-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.12060.56",
+    "slug": "equsto-pimak-12060-56",
+    "baslik": "Dolaplı Çalışma Tezgahı – Ara Raflı Blok Çekmeceli 1200×600×850 mm",
+    "aile": "Dolaplı Çalışma Tezgahı – Ara Raflı Blok Çekmeceli",
+    "aile_slug": "dolapli-calisma-tezgahi-ara-rafli-blok-cekmeceli",
+    "category": "depolama-raflari",
+    "pdf_page": 189,
+    "liste_fiyati_eur": 1240.0,
+    "ebat_mm": "1200x600x850",
+    "olcu_etiket": "1200×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p189-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.14060.56",
+    "slug": "equsto-pimak-14060-56",
+    "baslik": "Dolaplı Çalışma Tezgahı – Ara Raflı Blok Çekmeceli 1400×600×850 mm",
+    "aile": "Dolaplı Çalışma Tezgahı – Ara Raflı Blok Çekmeceli",
+    "aile_slug": "dolapli-calisma-tezgahi-ara-rafli-blok-cekmeceli",
+    "category": "depolama-raflari",
+    "pdf_page": 189,
+    "liste_fiyati_eur": 1300.0,
+    "ebat_mm": "1400x600x850",
+    "olcu_etiket": "1400×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p189-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.16060.56",
+    "slug": "equsto-pimak-16060-56",
+    "baslik": "Dolaplı Çalışma Tezgahı – Ara Raflı Blok Çekmeceli 1600×600×850 mm",
+    "aile": "Dolaplı Çalışma Tezgahı – Ara Raflı Blok Çekmeceli",
+    "aile_slug": "dolapli-calisma-tezgahi-ara-rafli-blok-cekmeceli",
+    "category": "depolama-raflari",
+    "pdf_page": 189,
+    "liste_fiyati_eur": 1370.0,
+    "ebat_mm": "1600x600x850",
+    "olcu_etiket": "1600×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p189-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.19060.56",
+    "slug": "equsto-pimak-19060-56",
+    "baslik": "Dolaplı Çalışma Tezgahı – Ara Raflı Blok Çekmeceli 1900×600×850 mm",
+    "aile": "Dolaplı Çalışma Tezgahı – Ara Raflı Blok Çekmeceli",
+    "aile_slug": "dolapli-calisma-tezgahi-ara-rafli-blok-cekmeceli",
+    "category": "depolama-raflari",
+    "pdf_page": 189,
+    "liste_fiyati_eur": 1450.0,
+    "ebat_mm": "1900x600x850",
+    "olcu_etiket": "1900×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1900,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p189-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.24060.56",
+    "slug": "equsto-pimak-24060-56",
+    "baslik": "Dolaplı Çalışma Tezgahı – Ara Raflı Blok Çekmeceli 2400×600×850 mm",
+    "aile": "Dolaplı Çalışma Tezgahı – Ara Raflı Blok Çekmeceli",
+    "aile_slug": "dolapli-calisma-tezgahi-ara-rafli-blok-cekmeceli",
+    "category": "depolama-raflari",
+    "pdf_page": 189,
+    "liste_fiyati_eur": 1720.0,
+    "ebat_mm": "2400x600x850",
+    "olcu_etiket": "2400×600×850 mm",
+    "olculer": {
+      "genislik_mm": 2400,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p189-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.12070.56",
+    "slug": "equsto-pimak-12070-56",
+    "baslik": "Dolaplı Çalışma Tezgahı – Ara Raflı Blok Çekmeceli 1200×700×850 mm",
+    "aile": "Dolaplı Çalışma Tezgahı – Ara Raflı Blok Çekmeceli",
+    "aile_slug": "dolapli-calisma-tezgahi-ara-rafli-blok-cekmeceli",
+    "category": "depolama-raflari",
+    "pdf_page": 189,
+    "liste_fiyati_eur": 1280.0,
+    "ebat_mm": "1200x700x850",
+    "olcu_etiket": "1200×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p189-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.14070.56",
+    "slug": "equsto-pimak-14070-56",
+    "baslik": "Dolaplı Çalışma Tezgahı – Ara Raflı Blok Çekmeceli 1400×700×850 mm",
+    "aile": "Dolaplı Çalışma Tezgahı – Ara Raflı Blok Çekmeceli",
+    "aile_slug": "dolapli-calisma-tezgahi-ara-rafli-blok-cekmeceli",
+    "category": "depolama-raflari",
+    "pdf_page": 189,
+    "liste_fiyati_eur": 1340.0,
+    "ebat_mm": "1400x700x850",
+    "olcu_etiket": "1400×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p189-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.16070.56",
+    "slug": "equsto-pimak-16070-56",
+    "baslik": "Dolaplı Çalışma Tezgahı – Ara Raflı Blok Çekmeceli 1600×700×850 mm",
+    "aile": "Dolaplı Çalışma Tezgahı – Ara Raflı Blok Çekmeceli",
+    "aile_slug": "dolapli-calisma-tezgahi-ara-rafli-blok-cekmeceli",
+    "category": "depolama-raflari",
+    "pdf_page": 189,
+    "liste_fiyati_eur": 1420.0,
+    "ebat_mm": "1600x700x850",
+    "olcu_etiket": "1600×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p189-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.19070.56",
+    "slug": "equsto-pimak-19070-56",
+    "baslik": "Dolaplı Çalışma Tezgahı – Ara Raflı Blok Çekmeceli 1900×700×850 mm",
+    "aile": "Dolaplı Çalışma Tezgahı – Ara Raflı Blok Çekmeceli",
+    "aile_slug": "dolapli-calisma-tezgahi-ara-rafli-blok-cekmeceli",
+    "category": "depolama-raflari",
+    "pdf_page": 189,
+    "liste_fiyati_eur": 1500.0,
+    "ebat_mm": "1900x700x850",
+    "olcu_etiket": "1900×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1900,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p189-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.24070.56",
+    "slug": "equsto-pimak-24070-56",
+    "baslik": "Dolaplı Çalışma Tezgahı – Ara Raflı Blok Çekmeceli 2400×700×850 mm",
+    "aile": "Dolaplı Çalışma Tezgahı – Ara Raflı Blok Çekmeceli",
+    "aile_slug": "dolapli-calisma-tezgahi-ara-rafli-blok-cekmeceli",
+    "category": "depolama-raflari",
+    "pdf_page": 189,
+    "liste_fiyati_eur": 1790.0,
+    "ebat_mm": "2400x700x850",
+    "olcu_etiket": "2400×700×850 mm",
+    "olculer": {
+      "genislik_mm": 2400,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p189-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.10608.23",
+    "slug": "equsto-pimak-10608-23",
+    "baslik": "Tabak Isıtma Dolabı 1000×6000×500 mm",
+    "aile": "Tabak Isıtma Dolabı",
+    "aile_slug": "tabak-isitma-dolabi",
+    "category": "calisma-tezgahi",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 950.0,
+    "ebat_mm": "1000x6000x500",
+    "olcu_etiket": "1000×6000×500 mm",
+    "olculer": {
+      "genislik_mm": 1000,
+      "derinlik_mm": 6000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.12608.23",
+    "slug": "equsto-pimak-12608-23",
+    "baslik": "Tabak Isıtma Dolabı 1200×6000×500 mm",
+    "aile": "Tabak Isıtma Dolabı",
+    "aile_slug": "tabak-isitma-dolabi",
+    "category": "calisma-tezgahi",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 1090.0,
+    "ebat_mm": "1200x6000x500",
+    "olcu_etiket": "1200×6000×500 mm",
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 6000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.14608.23",
+    "slug": "equsto-pimak-14608-23",
+    "baslik": "Tabak Isıtma Dolabı 1400×6000×500 mm",
+    "aile": "Tabak Isıtma Dolabı",
+    "aile_slug": "tabak-isitma-dolabi",
+    "category": "calisma-tezgahi",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 1130.0,
+    "ebat_mm": "1400x6000x500",
+    "olcu_etiket": "1400×6000×500 mm",
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 6000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.16608.23",
+    "slug": "equsto-pimak-16608-23",
+    "baslik": "Tabak Isıtma Dolabı 1600×6000×500 mm",
+    "aile": "Tabak Isıtma Dolabı",
+    "aile_slug": "tabak-isitma-dolabi",
+    "category": "calisma-tezgahi",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 1200.0,
+    "ebat_mm": "1600x6000x500",
+    "olcu_etiket": "1600×6000×500 mm",
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 6000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.19608.23",
+    "slug": "equsto-pimak-19608-23",
+    "baslik": "Tabak Isıtma Dolabı 1900×6000×500 mm",
+    "aile": "Tabak Isıtma Dolabı",
+    "aile_slug": "tabak-isitma-dolabi",
+    "category": "calisma-tezgahi",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 1340.0,
+    "ebat_mm": "1900x6000x500",
+    "olcu_etiket": "1900×6000×500 mm",
+    "olculer": {
+      "genislik_mm": 1900,
+      "derinlik_mm": 6000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.10708.23",
+    "slug": "equsto-pimak-10708-23",
+    "baslik": "Tabak Isıtma Dolabı 1000×7000×500 mm",
+    "aile": "Tabak Isıtma Dolabı",
+    "aile_slug": "tabak-isitma-dolabi",
+    "category": "calisma-tezgahi",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 1470.0,
+    "ebat_mm": "1000x7000x500",
+    "olcu_etiket": "1000×7000×500 mm",
+    "olculer": {
+      "genislik_mm": 1000,
+      "derinlik_mm": 7000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.12708.23",
+    "slug": "equsto-pimak-12708-23",
+    "baslik": "Tabak Isıtma Dolabı 1200×7000×500 mm",
+    "aile": "Tabak Isıtma Dolabı",
+    "aile_slug": "tabak-isitma-dolabi",
+    "category": "calisma-tezgahi",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 990.0,
+    "ebat_mm": "1200x7000x500",
+    "olcu_etiket": "1200×7000×500 mm",
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 7000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.14708.23",
+    "slug": "equsto-pimak-14708-23",
+    "baslik": "Tabak Isıtma Dolabı 1400×7000×500 mm",
+    "aile": "Tabak Isıtma Dolabı",
+    "aile_slug": "tabak-isitma-dolabi",
+    "category": "calisma-tezgahi",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 1140.0,
+    "ebat_mm": "1400x7000x500",
+    "olcu_etiket": "1400×7000×500 mm",
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 7000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.16708.23",
+    "slug": "equsto-pimak-16708-23",
+    "baslik": "Tabak Isıtma Dolabı 1600×7000×500 mm",
+    "aile": "Tabak Isıtma Dolabı",
+    "aile_slug": "tabak-isitma-dolabi",
+    "category": "calisma-tezgahi",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 1190.0,
+    "ebat_mm": "1600x7000x500",
+    "olcu_etiket": "1600×7000×500 mm",
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 7000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.19708.23",
+    "slug": "equsto-pimak-19708-23",
+    "baslik": "Tabak Isıtma Dolabı 1900×7000×500 mm",
+    "aile": "Tabak Isıtma Dolabı",
+    "aile_slug": "tabak-isitma-dolabi",
+    "category": "calisma-tezgahi",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 1250.0,
+    "ebat_mm": "1900x7000x500",
+    "olcu_etiket": "1900×7000×500 mm",
+    "olculer": {
+      "genislik_mm": 1900,
+      "derinlik_mm": 7000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.12060.52",
+    "slug": "equsto-pimak-12060-52",
+    "baslik": "Set Altı Dolaplı Çalışma Tezgahı 1200×600×550 mm",
+    "aile": "Set Altı Dolaplı Çalışma Tezgahı",
+    "aile_slug": "set-alti-dolapli-calisma-tezgahi",
+    "category": "dolapli-calisma-tezgahi",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 740.0,
+    "ebat_mm": "1200x600x550",
+    "olcu_etiket": "1200×600×550 mm",
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 550
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod03.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.14060.52",
+    "slug": "equsto-pimak-14060-52",
+    "baslik": "Set Altı Dolaplı Çalışma Tezgahı 1400×600×550 mm",
+    "aile": "Set Altı Dolaplı Çalışma Tezgahı",
+    "aile_slug": "set-alti-dolapli-calisma-tezgahi",
+    "category": "dolapli-calisma-tezgahi",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 780.0,
+    "ebat_mm": "1400x600x550",
+    "olcu_etiket": "1400×600×550 mm",
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 550
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod03.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.16060.52",
+    "slug": "equsto-pimak-16060-52",
+    "baslik": "Set Altı Dolaplı Çalışma Tezgahı 1600×600×550 mm",
+    "aile": "Set Altı Dolaplı Çalışma Tezgahı",
+    "aile_slug": "set-alti-dolapli-calisma-tezgahi",
+    "category": "dolapli-calisma-tezgahi",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 840.0,
+    "ebat_mm": "1600x600x550",
+    "olcu_etiket": "1600×600×550 mm",
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 550
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod03.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.19060.52",
+    "slug": "equsto-pimak-19060-52",
+    "baslik": "Set Altı Dolaplı Çalışma Tezgahı 1900×600×550 mm",
+    "aile": "Set Altı Dolaplı Çalışma Tezgahı",
+    "aile_slug": "set-alti-dolapli-calisma-tezgahi",
+    "category": "dolapli-calisma-tezgahi",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 900.0,
+    "ebat_mm": "1900x600x550",
+    "olcu_etiket": "1900×600×550 mm",
+    "olculer": {
+      "genislik_mm": 1900,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 550
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod03.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.12070.52",
+    "slug": "equsto-pimak-12070-52",
+    "baslik": "Set Altı Dolaplı Çalışma Tezgahı 1200×700×550 mm",
+    "aile": "Set Altı Dolaplı Çalışma Tezgahı",
+    "aile_slug": "set-alti-dolapli-calisma-tezgahi",
+    "category": "dolapli-calisma-tezgahi",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 780.0,
+    "ebat_mm": "1200x700x550",
+    "olcu_etiket": "1200×700×550 mm",
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 550
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod03.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.14070.52",
+    "slug": "equsto-pimak-14070-52",
+    "baslik": "Set Altı Dolaplı Çalışma Tezgahı 1400×700×550 mm",
+    "aile": "Set Altı Dolaplı Çalışma Tezgahı",
+    "aile_slug": "set-alti-dolapli-calisma-tezgahi",
+    "category": "dolapli-calisma-tezgahi",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 840.0,
+    "ebat_mm": "1400x700x550",
+    "olcu_etiket": "1400×700×550 mm",
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 550
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod03.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.16070.52",
+    "slug": "equsto-pimak-16070-52",
+    "baslik": "Set Altı Dolaplı Çalışma Tezgahı 1600×700×550 mm",
+    "aile": "Set Altı Dolaplı Çalışma Tezgahı",
+    "aile_slug": "set-alti-dolapli-calisma-tezgahi",
+    "category": "dolapli-calisma-tezgahi",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 900.0,
+    "ebat_mm": "1600x700x550",
+    "olcu_etiket": "1600×700×550 mm",
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 550
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod03.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.19070.52",
+    "slug": "equsto-pimak-19070-52",
+    "baslik": "Set Altı Dolaplı Çalışma Tezgahı 1900×700×550 mm",
+    "aile": "Set Altı Dolaplı Çalışma Tezgahı",
+    "aile_slug": "set-alti-dolapli-calisma-tezgahi",
+    "category": "dolapli-calisma-tezgahi",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 980.0,
+    "ebat_mm": "1900x700x550",
+    "olcu_etiket": "1900×700×550 mm",
+    "olculer": {
+      "genislik_mm": 1900,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 550
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod03.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.10060.15",
+    "slug": "equsto-pimak-10060-15",
+    "baslik": "Hareketli Tezgah – Taban ve Ara Raflı 1000×600×850 mm",
+    "aile": "Hareketli Tezgah – Taban ve Ara Raflı",
+    "aile_slug": "hareketli-tezgah-taban-ve-ara-rafli",
+    "category": "depolama-raflari",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 450.0,
+    "ebat_mm": "1000x600x850",
+    "olcu_etiket": "1000×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1000,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.12060.15",
+    "slug": "equsto-pimak-12060-15",
+    "baslik": "Hareketli Tezgah – Taban ve Ara Raflı 1200×600×850 mm",
+    "aile": "Hareketli Tezgah – Taban ve Ara Raflı",
+    "aile_slug": "hareketli-tezgah-taban-ve-ara-rafli",
+    "category": "depolama-raflari",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 470.0,
+    "ebat_mm": "1200x600x850",
+    "olcu_etiket": "1200×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.14060.15",
+    "slug": "equsto-pimak-14060-15",
+    "baslik": "Hareketli Tezgah – Taban ve Ara Raflı 1400×600×850 mm",
+    "aile": "Hareketli Tezgah – Taban ve Ara Raflı",
+    "aile_slug": "hareketli-tezgah-taban-ve-ara-rafli",
+    "category": "depolama-raflari",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 510.0,
+    "ebat_mm": "1400x600x850",
+    "olcu_etiket": "1400×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.16060.15",
+    "slug": "equsto-pimak-16060-15",
+    "baslik": "Hareketli Tezgah – Taban ve Ara Raflı 1600×600×850 mm",
+    "aile": "Hareketli Tezgah – Taban ve Ara Raflı",
+    "aile_slug": "hareketli-tezgah-taban-ve-ara-rafli",
+    "category": "depolama-raflari",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 550.0,
+    "ebat_mm": "1600x600x850",
+    "olcu_etiket": "1600×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.19060.15",
+    "slug": "equsto-pimak-19060-15",
+    "baslik": "Hareketli Tezgah – Taban ve Ara Raflı 1900×600×850 mm",
+    "aile": "Hareketli Tezgah – Taban ve Ara Raflı",
+    "aile_slug": "hareketli-tezgah-taban-ve-ara-rafli",
+    "category": "depolama-raflari",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 620.0,
+    "ebat_mm": "1900x600x850",
+    "olcu_etiket": "1900×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1900,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.10070.15",
+    "slug": "equsto-pimak-10070-15",
+    "baslik": "Hareketli Tezgah – Taban ve Ara Raflı 1000×700×850 mm",
+    "aile": "Hareketli Tezgah – Taban ve Ara Raflı",
+    "aile_slug": "hareketli-tezgah-taban-ve-ara-rafli",
+    "category": "depolama-raflari",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 470.0,
+    "ebat_mm": "1000x700x850",
+    "olcu_etiket": "1000×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1000,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.12070.15",
+    "slug": "equsto-pimak-12070-15",
+    "baslik": "Hareketli Tezgah – Taban ve Ara Raflı 1200×700×850 mm",
+    "aile": "Hareketli Tezgah – Taban ve Ara Raflı",
+    "aile_slug": "hareketli-tezgah-taban-ve-ara-rafli",
+    "category": "depolama-raflari",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 500.0,
+    "ebat_mm": "1200x700x850",
+    "olcu_etiket": "1200×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.14070.15",
+    "slug": "equsto-pimak-14070-15",
+    "baslik": "Hareketli Tezgah – Taban ve Ara Raflı 1400×700×850 mm",
+    "aile": "Hareketli Tezgah – Taban ve Ara Raflı",
+    "aile_slug": "hareketli-tezgah-taban-ve-ara-rafli",
+    "category": "depolama-raflari",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 540.0,
+    "ebat_mm": "1400x700x850",
+    "olcu_etiket": "1400×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.16070.15",
+    "slug": "equsto-pimak-16070-15",
+    "baslik": "Hareketli Tezgah – Taban ve Ara Raflı 1600×700×850 mm",
+    "aile": "Hareketli Tezgah – Taban ve Ara Raflı",
+    "aile_slug": "hareketli-tezgah-taban-ve-ara-rafli",
+    "category": "depolama-raflari",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 590.0,
+    "ebat_mm": "1600x700x850",
+    "olcu_etiket": "1600×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.19070.15",
+    "slug": "equsto-pimak-19070-15",
+    "baslik": "Hareketli Tezgah – Taban ve Ara Raflı 1900×700×850 mm",
+    "aile": "Hareketli Tezgah – Taban ve Ara Raflı",
+    "aile_slug": "hareketli-tezgah-taban-ve-ara-rafli",
+    "category": "depolama-raflari",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 640.0,
+    "ebat_mm": "1900x700x850",
+    "olcu_etiket": "1900×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1900,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.10060.70",
+    "slug": "equsto-pimak-10060-70",
+    "baslik": "Hareketli Tezgah – Taban Raflı 1000×600×850 mm",
+    "aile": "Hareketli Tezgah – Taban Raflı",
+    "aile_slug": "hareketli-tezgah-taban-rafli",
+    "category": "depolama-raflari",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 950.0,
+    "ebat_mm": "1000x600x850",
+    "olcu_etiket": "1000×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1000,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.12060.70",
+    "slug": "equsto-pimak-12060-70",
+    "baslik": "Hareketli Tezgah – Taban Raflı 1200×600×850 mm",
+    "aile": "Hareketli Tezgah – Taban Raflı",
+    "aile_slug": "hareketli-tezgah-taban-rafli",
+    "category": "depolama-raflari",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 1090.0,
+    "ebat_mm": "1200x600x850",
+    "olcu_etiket": "1200×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.14060.70",
+    "slug": "equsto-pimak-14060-70",
+    "baslik": "Hareketli Tezgah – Taban Raflı 1400×600×850 mm",
+    "aile": "Hareketli Tezgah – Taban Raflı",
+    "aile_slug": "hareketli-tezgah-taban-rafli",
+    "category": "depolama-raflari",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 1130.0,
+    "ebat_mm": "1400x600x850",
+    "olcu_etiket": "1400×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.16060.70",
+    "slug": "equsto-pimak-16060-70",
+    "baslik": "Hareketli Tezgah – Taban Raflı 1600×600×850 mm",
+    "aile": "Hareketli Tezgah – Taban Raflı",
+    "aile_slug": "hareketli-tezgah-taban-rafli",
+    "category": "depolama-raflari",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 1200.0,
+    "ebat_mm": "1600x600x850",
+    "olcu_etiket": "1600×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.19060.70",
+    "slug": "equsto-pimak-19060-70",
+    "baslik": "Hareketli Tezgah – Taban Raflı 1900×600×850 mm",
+    "aile": "Hareketli Tezgah – Taban Raflı",
+    "aile_slug": "hareketli-tezgah-taban-rafli",
+    "category": "depolama-raflari",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 1340.0,
+    "ebat_mm": "1900x600x850",
+    "olcu_etiket": "1900×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1900,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.10070.70",
+    "slug": "equsto-pimak-10070-70",
+    "baslik": "Hareketli Tezgah – Taban Raflı 1000×700×850 mm",
+    "aile": "Hareketli Tezgah – Taban Raflı",
+    "aile_slug": "hareketli-tezgah-taban-rafli",
+    "category": "depolama-raflari",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 1470.0,
+    "ebat_mm": "1000x700x850",
+    "olcu_etiket": "1000×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1000,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.12070.70",
+    "slug": "equsto-pimak-12070-70",
+    "baslik": "Hareketli Tezgah – Taban Raflı 1200×700×850 mm",
+    "aile": "Hareketli Tezgah – Taban Raflı",
+    "aile_slug": "hareketli-tezgah-taban-rafli",
+    "category": "depolama-raflari",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 990.0,
+    "ebat_mm": "1200x700x850",
+    "olcu_etiket": "1200×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.14070.70",
+    "slug": "equsto-pimak-14070-70",
+    "baslik": "Hareketli Tezgah – Taban Raflı 1400×700×850 mm",
+    "aile": "Hareketli Tezgah – Taban Raflı",
+    "aile_slug": "hareketli-tezgah-taban-rafli",
+    "category": "depolama-raflari",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 1140.0,
+    "ebat_mm": "1400x700x850",
+    "olcu_etiket": "1400×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.16070.70",
+    "slug": "equsto-pimak-16070-70",
+    "baslik": "Hareketli Tezgah – Taban Raflı 1600×700×850 mm",
+    "aile": "Hareketli Tezgah – Taban Raflı",
+    "aile_slug": "hareketli-tezgah-taban-rafli",
+    "category": "depolama-raflari",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 1190.0,
+    "ebat_mm": "1600x700x850",
+    "olcu_etiket": "1600×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.19070.70",
+    "slug": "equsto-pimak-19070-70",
+    "baslik": "Hareketli Tezgah – Taban Raflı 1900×700×850 mm",
+    "aile": "Hareketli Tezgah – Taban Raflı",
+    "aile_slug": "hareketli-tezgah-taban-rafli",
+    "category": "depolama-raflari",
+    "pdf_page": 190,
+    "liste_fiyati_eur": 1250.0,
+    "ebat_mm": "1900x700x850",
+    "olcu_etiket": "1900×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1900,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p190-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.12060.50",
+    "slug": "equsto-pimak-12060-50",
+    "baslik": "Mermer Tablalı Tezgah 1200×600×850 mm",
+    "aile": "Mermer Tablalı Tezgah",
+    "aile_slug": "mermer-tablali-tezgah",
+    "category": "mermer-tabla-tezgah",
+    "pdf_page": 191,
+    "liste_fiyati_eur": 620.0,
+    "ebat_mm": "1200x600x850",
+    "olcu_etiket": "1200×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p191-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.14060.50",
+    "slug": "equsto-pimak-14060-50",
+    "baslik": "Mermer Tablalı Tezgah 1400×600×850 mm",
+    "aile": "Mermer Tablalı Tezgah",
+    "aile_slug": "mermer-tablali-tezgah",
+    "category": "mermer-tabla-tezgah",
+    "pdf_page": 191,
+    "liste_fiyati_eur": 660.0,
+    "ebat_mm": "1400x600x850",
+    "olcu_etiket": "1400×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p191-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.16060.50",
+    "slug": "equsto-pimak-16060-50",
+    "baslik": "Mermer Tablalı Tezgah 1600×600×850 mm",
+    "aile": "Mermer Tablalı Tezgah",
+    "aile_slug": "mermer-tablali-tezgah",
+    "category": "mermer-tabla-tezgah",
+    "pdf_page": 191,
+    "liste_fiyati_eur": 730.0,
+    "ebat_mm": "1600x600x850",
+    "olcu_etiket": "1600×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p191-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.19060.50",
+    "slug": "equsto-pimak-19060-50",
+    "baslik": "Mermer Tablalı Tezgah 1900×600×850 mm",
+    "aile": "Mermer Tablalı Tezgah",
+    "aile_slug": "mermer-tablali-tezgah",
+    "category": "mermer-tabla-tezgah",
+    "pdf_page": 191,
+    "liste_fiyati_eur": 850.0,
+    "ebat_mm": "1900x600x850",
+    "olcu_etiket": "1900×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1900,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p191-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.12070.50",
+    "slug": "equsto-pimak-12070-50",
+    "baslik": "Mermer Tablalı Tezgah 1200×700×850 mm",
+    "aile": "Mermer Tablalı Tezgah",
+    "aile_slug": "mermer-tablali-tezgah",
+    "category": "mermer-tabla-tezgah",
+    "pdf_page": 191,
+    "liste_fiyati_eur": 650.0,
+    "ebat_mm": "1200x700x850",
+    "olcu_etiket": "1200×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p191-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.14070.50",
+    "slug": "equsto-pimak-14070-50",
+    "baslik": "Mermer Tablalı Tezgah 1400×700×850 mm",
+    "aile": "Mermer Tablalı Tezgah",
+    "aile_slug": "mermer-tablali-tezgah",
+    "category": "mermer-tabla-tezgah",
+    "pdf_page": 191,
+    "liste_fiyati_eur": 720.0,
+    "ebat_mm": "1400x700x850",
+    "olcu_etiket": "1400×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p191-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.16070.50",
+    "slug": "equsto-pimak-16070-50",
+    "baslik": "Mermer Tablalı Tezgah 1600×700×850 mm",
+    "aile": "Mermer Tablalı Tezgah",
+    "aile_slug": "mermer-tablali-tezgah",
+    "category": "mermer-tabla-tezgah",
+    "pdf_page": 191,
+    "liste_fiyati_eur": 820.0,
+    "ebat_mm": "1600x700x850",
+    "olcu_etiket": "1600×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p191-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.19070.50",
+    "slug": "equsto-pimak-19070-50",
+    "baslik": "Mermer Tablalı Tezgah 1900×700×850 mm",
+    "aile": "Mermer Tablalı Tezgah",
+    "aile_slug": "mermer-tablali-tezgah",
+    "category": "mermer-tabla-tezgah",
+    "pdf_page": 191,
+    "liste_fiyati_eur": 990.0,
+    "ebat_mm": "1900x700x850",
+    "olcu_etiket": "1900×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1900,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p191-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.12060.46",
+    "slug": "equsto-pimak-12060-46",
+    "baslik": "Mermer Tablalı Tezgah - Taban Raflı 1200×600×850 mm",
+    "aile": "Mermer Tablalı Tezgah - Taban Raflı",
+    "aile_slug": "mermer-tablali-tezgah-taban-rafli",
+    "category": "depolama-raflari",
+    "pdf_page": 191,
+    "liste_fiyati_eur": 530.0,
+    "ebat_mm": "1200x600x850",
+    "olcu_etiket": "1200×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p191-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.14060.46",
+    "slug": "equsto-pimak-14060-46",
+    "baslik": "Mermer Tablalı Tezgah - Taban Raflı 1400×600×850 mm",
+    "aile": "Mermer Tablalı Tezgah - Taban Raflı",
+    "aile_slug": "mermer-tablali-tezgah-taban-rafli",
+    "category": "depolama-raflari",
+    "pdf_page": 191,
+    "liste_fiyati_eur": 550.0,
+    "ebat_mm": "1400x600x850",
+    "olcu_etiket": "1400×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p191-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.16060.46",
+    "slug": "equsto-pimak-16060-46",
+    "baslik": "Mermer Tablalı Tezgah - Taban Raflı 1600×600×850 mm",
+    "aile": "Mermer Tablalı Tezgah - Taban Raflı",
+    "aile_slug": "mermer-tablali-tezgah-taban-rafli",
+    "category": "depolama-raflari",
+    "pdf_page": 191,
+    "liste_fiyati_eur": 600.0,
+    "ebat_mm": "1600x600x850",
+    "olcu_etiket": "1600×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p191-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.19060.46",
+    "slug": "equsto-pimak-19060-46",
+    "baslik": "Mermer Tablalı Tezgah - Taban Raflı 1900×600×850 mm",
+    "aile": "Mermer Tablalı Tezgah - Taban Raflı",
+    "aile_slug": "mermer-tablali-tezgah-taban-rafli",
+    "category": "depolama-raflari",
+    "pdf_page": 191,
+    "liste_fiyati_eur": 675.0,
+    "ebat_mm": "1900x600x850",
+    "olcu_etiket": "1900×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1900,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p191-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.12070.46",
+    "slug": "equsto-pimak-12070-46",
+    "baslik": "Mermer Tablalı Tezgah - Taban Raflı 1200×700×850 mm",
+    "aile": "Mermer Tablalı Tezgah - Taban Raflı",
+    "aile_slug": "mermer-tablali-tezgah-taban-rafli",
+    "category": "depolama-raflari",
+    "pdf_page": 191,
+    "liste_fiyati_eur": 550.0,
+    "ebat_mm": "1200x700x850",
+    "olcu_etiket": "1200×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p191-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.14070.46",
+    "slug": "equsto-pimak-14070-46",
+    "baslik": "Mermer Tablalı Tezgah - Taban Raflı 1400×700×850 mm",
+    "aile": "Mermer Tablalı Tezgah - Taban Raflı",
+    "aile_slug": "mermer-tablali-tezgah-taban-rafli",
+    "category": "depolama-raflari",
+    "pdf_page": 191,
+    "liste_fiyati_eur": 600.0,
+    "ebat_mm": "1400x700x850",
+    "olcu_etiket": "1400×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p191-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.16070.46",
+    "slug": "equsto-pimak-16070-46",
+    "baslik": "Mermer Tablalı Tezgah - Taban Raflı 1600×700×850 mm",
+    "aile": "Mermer Tablalı Tezgah - Taban Raflı",
+    "aile_slug": "mermer-tablali-tezgah-taban-rafli",
+    "category": "depolama-raflari",
+    "pdf_page": 191,
+    "liste_fiyati_eur": 675.0,
+    "ebat_mm": "1600x700x850",
+    "olcu_etiket": "1600×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p191-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.19070.46",
+    "slug": "equsto-pimak-19070-46",
+    "baslik": "Mermer Tablalı Tezgah - Taban Raflı 1900×700×850 mm",
+    "aile": "Mermer Tablalı Tezgah - Taban Raflı",
+    "aile_slug": "mermer-tablali-tezgah-taban-rafli",
+    "category": "depolama-raflari",
+    "pdf_page": 191,
+    "liste_fiyati_eur": 735.0,
+    "ebat_mm": "1900x700x850",
+    "olcu_etiket": "1900×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1900,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p191-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.12070.57",
+    "slug": "equsto-pimak-12070-57",
+    "baslik": "Bulaşık Makinesi Giriş-Çıkış Tezgahı 1200×700×850 mm",
+    "aile": "Bulaşık Makinesi Giriş-Çıkış Tezgahı",
+    "aile_slug": "bulasik-makinesi-giris-cikis-tezgahi",
+    "category": "bulasik-alma-unitesi",
+    "pdf_page": 191,
+    "liste_fiyati_eur": 690.0,
+    "ebat_mm": "1200x700x850",
+    "olcu_etiket": "1200×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p191-prod04.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.14070.57",
+    "slug": "equsto-pimak-14070-57",
+    "baslik": "Bulaşık Makinesi Giriş-Çıkış Tezgahı 1400×700×850 mm",
+    "aile": "Bulaşık Makinesi Giriş-Çıkış Tezgahı",
+    "aile_slug": "bulasik-makinesi-giris-cikis-tezgahi",
+    "category": "bulasik-alma-unitesi",
+    "pdf_page": 191,
+    "liste_fiyati_eur": 710.0,
+    "ebat_mm": "1400x700x850",
+    "olcu_etiket": "1400×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p191-prod04.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.16070.57",
+    "slug": "equsto-pimak-16070-57",
+    "baslik": "Bulaşık Makinesi Giriş-Çıkış Tezgahı 1600×700×850 mm",
+    "aile": "Bulaşık Makinesi Giriş-Çıkış Tezgahı",
+    "aile_slug": "bulasik-makinesi-giris-cikis-tezgahi",
+    "category": "bulasik-alma-unitesi",
+    "pdf_page": 191,
+    "liste_fiyati_eur": 740.0,
+    "ebat_mm": "1600x700x850",
+    "olcu_etiket": "1600×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p191-prod04.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.12080.57",
+    "slug": "equsto-pimak-12080-57",
+    "baslik": "Bulaşık Makinesi Giriş-Çıkış Tezgahı 1200×800×850 mm",
+    "aile": "Bulaşık Makinesi Giriş-Çıkış Tezgahı",
+    "aile_slug": "bulasik-makinesi-giris-cikis-tezgahi",
+    "category": "bulasik-alma-unitesi",
+    "pdf_page": 191,
+    "liste_fiyati_eur": 480.0,
+    "ebat_mm": "1200x800x850",
+    "olcu_etiket": "1200×800×850 mm",
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 800,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p191-prod04.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.14080.57",
+    "slug": "equsto-pimak-14080-57",
+    "baslik": "Bulaşık Makinesi Giriş-Çıkış Tezgahı 1400×800×850 mm",
+    "aile": "Bulaşık Makinesi Giriş-Çıkış Tezgahı",
+    "aile_slug": "bulasik-makinesi-giris-cikis-tezgahi",
+    "category": "bulasik-alma-unitesi",
+    "pdf_page": 191,
+    "liste_fiyati_eur": 530.0,
+    "ebat_mm": "1400x800x850",
+    "olcu_etiket": "1400×800×850 mm",
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 800,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p191-prod04.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.16080.57",
+    "slug": "equsto-pimak-16080-57",
+    "baslik": "Bulaşık Makinesi Giriş-Çıkış Tezgahı 1600×800×850 mm",
+    "aile": "Bulaşık Makinesi Giriş-Çıkış Tezgahı",
+    "aile_slug": "bulasik-makinesi-giris-cikis-tezgahi",
+    "category": "bulasik-alma-unitesi",
+    "pdf_page": 191,
+    "liste_fiyati_eur": 560.0,
+    "ebat_mm": "1600x800x850",
+    "olcu_etiket": "1600×800×850 mm",
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 800,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p191-prod04.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.12060.31",
+    "slug": "equsto-pimak-12060-31",
+    "baslik": "Polietilen Tablalı Tezgah 1200×600×850 mm",
+    "aile": "Polietilen Tablalı Tezgah",
+    "aile_slug": "polietilen-tablali-tezgah",
+    "category": "calisma-tezgahi",
+    "pdf_page": 191,
+    "liste_fiyati_eur": 530.0,
+    "ebat_mm": "1200x600x850",
+    "olcu_etiket": "1200×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p191-prod02.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.14060.31",
+    "slug": "equsto-pimak-14060-31",
+    "baslik": "Polietilen Tablalı Tezgah 1400×600×850 mm",
+    "aile": "Polietilen Tablalı Tezgah",
+    "aile_slug": "polietilen-tablali-tezgah",
+    "category": "calisma-tezgahi",
+    "pdf_page": 191,
+    "liste_fiyati_eur": 550.0,
+    "ebat_mm": "1400x600x850",
+    "olcu_etiket": "1400×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p191-prod02.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.16060.31",
+    "slug": "equsto-pimak-16060-31",
+    "baslik": "Polietilen Tablalı Tezgah 1600×600×850 mm",
+    "aile": "Polietilen Tablalı Tezgah",
+    "aile_slug": "polietilen-tablali-tezgah",
+    "category": "calisma-tezgahi",
+    "pdf_page": 191,
+    "liste_fiyati_eur": 600.0,
+    "ebat_mm": "1600x600x850",
+    "olcu_etiket": "1600×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p191-prod02.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.19060.31",
+    "slug": "equsto-pimak-19060-31",
+    "baslik": "Polietilen Tablalı Tezgah 1900×600×850 mm",
+    "aile": "Polietilen Tablalı Tezgah",
+    "aile_slug": "polietilen-tablali-tezgah",
+    "category": "calisma-tezgahi",
+    "pdf_page": 191,
+    "liste_fiyati_eur": 675.0,
+    "ebat_mm": "1900x600x850",
+    "olcu_etiket": "1900×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1900,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p191-prod02.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.12070.31",
+    "slug": "equsto-pimak-12070-31",
+    "baslik": "Süzme Havuzlu Tezgah 1200×700×850 mm",
+    "aile": "Süzme Havuzlu Tezgah",
+    "aile_slug": "suzme-havuzlu-tezgah",
+    "category": "calisma-tezgahi",
+    "pdf_page": 192,
+    "liste_fiyati_eur": 460.0,
+    "ebat_mm": "1200x700x850",
+    "olcu_etiket": "1200×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p192-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.14070.31",
+    "slug": "equsto-pimak-14070-31",
+    "baslik": "Süzme Havuzlu Tezgah 1400×700×850 mm",
+    "aile": "Süzme Havuzlu Tezgah",
+    "aile_slug": "suzme-havuzlu-tezgah",
+    "category": "calisma-tezgahi",
+    "pdf_page": 192,
+    "liste_fiyati_eur": 500.0,
+    "ebat_mm": "1400x700x850",
+    "olcu_etiket": "1400×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p192-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.16070.31",
+    "slug": "equsto-pimak-16070-31",
+    "baslik": "Süzme Havuzlu Tezgah 1600×700×850 mm",
+    "aile": "Süzme Havuzlu Tezgah",
+    "aile_slug": "suzme-havuzlu-tezgah",
+    "category": "calisma-tezgahi",
+    "pdf_page": 192,
+    "liste_fiyati_eur": 550.0,
+    "ebat_mm": "1600x700x850",
+    "olcu_etiket": "1600×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p192-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.19070.31",
+    "slug": "equsto-pimak-19070-31",
+    "baslik": "Süzme Havuzlu Tezgah 1900×700×850 mm",
+    "aile": "Süzme Havuzlu Tezgah",
+    "aile_slug": "suzme-havuzlu-tezgah",
+    "category": "calisma-tezgahi",
+    "pdf_page": 192,
+    "liste_fiyati_eur": 610.0,
+    "ebat_mm": "1900x700x850",
+    "olcu_etiket": "1900×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1900,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p192-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "40MM",
+    "slug": "equsto-40mm",
+    "baslik": "Polietilen Tablalı Tezgah",
+    "aile": "Polietilen Tablalı Tezgah",
+    "aile_slug": "polietilen-tablali-tezgah",
+    "category": "calisma-tezgahi",
+    "pdf_page": 191,
+    "liste_fiyati_eur": 735.0,
+    "ebat_mm": "",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p191-prod02.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.12060.51",
+    "slug": "equsto-pimak-12060-51",
+    "baslik": "Polietilen Tablalı Tezgah – Taban Raflı 1200×600×850 mm",
+    "aile": "Polietilen Tablalı Tezgah – Taban Raflı",
+    "aile_slug": "polietilen-tablali-tezgah-taban-rafli",
+    "category": "depolama-raflari",
+    "pdf_page": 192,
+    "liste_fiyati_eur": 610.0,
+    "ebat_mm": "1200x600x850",
+    "olcu_etiket": "1200×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p192-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.14060.51",
+    "slug": "equsto-pimak-14060-51",
+    "baslik": "Polietilen Tablalı Tezgah – Taban Raflı 1400×600×850 mm",
+    "aile": "Polietilen Tablalı Tezgah – Taban Raflı",
+    "aile_slug": "polietilen-tablali-tezgah-taban-rafli",
+    "category": "depolama-raflari",
+    "pdf_page": 192,
+    "liste_fiyati_eur": 690.0,
+    "ebat_mm": "1400x600x850",
+    "olcu_etiket": "1400×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p192-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.16060.51",
+    "slug": "equsto-pimak-16060-51",
+    "baslik": "Polietilen Tablalı Tezgah – Taban Raflı 1600×600×850 mm",
+    "aile": "Polietilen Tablalı Tezgah – Taban Raflı",
+    "aile_slug": "polietilen-tablali-tezgah-taban-rafli",
+    "category": "depolama-raflari",
+    "pdf_page": 192,
+    "liste_fiyati_eur": 760.0,
+    "ebat_mm": "1600x600x850",
+    "olcu_etiket": "1600×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p192-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.19060.51",
+    "slug": "equsto-pimak-19060-51",
+    "baslik": "Polietilen Tablalı Tezgah – Taban Raflı 1900×600×850 mm",
+    "aile": "Polietilen Tablalı Tezgah – Taban Raflı",
+    "aile_slug": "polietilen-tablali-tezgah-taban-rafli",
+    "category": "depolama-raflari",
+    "pdf_page": 192,
+    "liste_fiyati_eur": 900.0,
+    "ebat_mm": "1900x600x850",
+    "olcu_etiket": "1900×600×850 mm",
+    "olculer": {
+      "genislik_mm": 1900,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p192-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.12070.51",
+    "slug": "equsto-pimak-12070-51",
+    "baslik": "Polietilen Tablalı Tezgah – Taban Raflı 1200×700×850 mm",
+    "aile": "Polietilen Tablalı Tezgah – Taban Raflı",
+    "aile_slug": "polietilen-tablali-tezgah-taban-rafli",
+    "category": "depolama-raflari",
+    "pdf_page": 192,
+    "liste_fiyati_eur": 670.0,
+    "ebat_mm": "1200x700x850",
+    "olcu_etiket": "1200×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p192-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.14070.51",
+    "slug": "equsto-pimak-14070-51",
+    "baslik": "Polietilen Tablalı Tezgah – Taban Raflı 1400×700×850 mm",
+    "aile": "Polietilen Tablalı Tezgah – Taban Raflı",
+    "aile_slug": "polietilen-tablali-tezgah-taban-rafli",
+    "category": "depolama-raflari",
+    "pdf_page": 192,
+    "liste_fiyati_eur": 760.0,
+    "ebat_mm": "1400x700x850",
+    "olcu_etiket": "1400×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p192-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.16070.51",
+    "slug": "equsto-pimak-16070-51",
+    "baslik": "Polietilen Tablalı Tezgah – Taban Raflı 1600×700×850 mm",
+    "aile": "Polietilen Tablalı Tezgah – Taban Raflı",
+    "aile_slug": "polietilen-tablali-tezgah-taban-rafli",
+    "category": "depolama-raflari",
+    "pdf_page": 192,
+    "liste_fiyati_eur": 860.0,
+    "ebat_mm": "1600x700x850",
+    "olcu_etiket": "1600×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p192-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.19070.51",
+    "slug": "equsto-pimak-19070-51",
+    "baslik": "Polietilen Tablalı Tezgah – Taban Raflı 1900×700×850 mm",
+    "aile": "Polietilen Tablalı Tezgah – Taban Raflı",
+    "aile_slug": "polietilen-tablali-tezgah-taban-rafli",
+    "category": "depolama-raflari",
+    "pdf_page": 192,
+    "liste_fiyati_eur": 1010.0,
+    "ebat_mm": "1900x700x850",
+    "olcu_etiket": "1900×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1900,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p192-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.05050.91",
+    "slug": "equsto-pimak-05050-91",
+    "baslik": "Et Kütüğü Polietilen Tablalı 500×500×850 mm",
+    "aile": "Et Kütüğü Polietilen Tablalı",
+    "aile_slug": "et-kutugu-polietilen-tablali",
+    "category": "calisma-tezgahi",
+    "pdf_page": 192,
+    "liste_fiyati_eur": 740.0,
+    "ebat_mm": "500x500x850",
+    "olcu_etiket": "500×500×850 mm",
+    "olculer": {
+      "genislik_mm": 500,
+      "derinlik_mm": 500,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p192-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.06060.91",
+    "slug": "equsto-pimak-06060-91",
+    "baslik": "Et Kütüğü Polietilen Tablalı 600×600×850 mm",
+    "aile": "Et Kütüğü Polietilen Tablalı",
+    "aile_slug": "et-kutugu-polietilen-tablali",
+    "category": "calisma-tezgahi",
+    "pdf_page": 192,
+    "liste_fiyati_eur": 840.0,
+    "ebat_mm": "600x600x850",
+    "olcu_etiket": "600×600×850 mm",
+    "olculer": {
+      "genislik_mm": 600,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p192-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.06070.91",
+    "slug": "equsto-pimak-06070-91",
+    "baslik": "Et Kütüğü Polietilen Tablalı 600×700×850 mm",
+    "aile": "Et Kütüğü Polietilen Tablalı",
+    "aile_slug": "et-kutugu-polietilen-tablali",
+    "category": "calisma-tezgahi",
+    "pdf_page": 192,
+    "liste_fiyati_eur": 920.0,
+    "ebat_mm": "600x700x850",
+    "olcu_etiket": "600×700×850 mm",
+    "olculer": {
+      "genislik_mm": 600,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p192-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.07070.91",
+    "slug": "equsto-pimak-07070-91",
+    "baslik": "Et Kütüğü Polietilen Tablalı 700×700×850 mm",
+    "aile": "Et Kütüğü Polietilen Tablalı",
+    "aile_slug": "et-kutugu-polietilen-tablali",
+    "category": "calisma-tezgahi",
+    "pdf_page": 192,
+    "liste_fiyati_eur": 1010.0,
+    "ebat_mm": "700x700x850",
+    "olcu_etiket": "700×700×850 mm",
+    "olculer": {
+      "genislik_mm": 700,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p192-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.14070.25",
+    "slug": "equsto-pimak-14070-25",
+    "baslik": "Balık Hazırlama Tezgahı 1400×700×850 mm",
+    "aile": "Balık Hazırlama Tezgahı",
+    "aile_slug": "balik-hazirlama-tezgahi",
+    "category": "calisma-tezgahi",
+    "pdf_page": 192,
+    "liste_fiyati_eur": 1010.0,
+    "ebat_mm": "1400x700x850",
+    "olcu_etiket": "1400×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p192-prod02.png"
+  },
+  {
+    "urun_kodu": "PIMAK.16070.25",
+    "slug": "equsto-pimak-16070-25",
+    "baslik": "Balık Hazırlama Tezgahı 1600×700×850 mm",
+    "aile": "Balık Hazırlama Tezgahı",
+    "aile_slug": "balik-hazirlama-tezgahi",
+    "category": "calisma-tezgahi",
+    "pdf_page": 192,
+    "liste_fiyati_eur": 1050.0,
+    "ebat_mm": "1600x700x850",
+    "olcu_etiket": "1600×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p192-prod02.png"
+  },
+  {
+    "urun_kodu": "PIMAK.18070.25",
+    "slug": "equsto-pimak-18070-25",
+    "baslik": "Balık Hazırlama Tezgahı 1800×700×850 mm",
+    "aile": "Balık Hazırlama Tezgahı",
+    "aile_slug": "balik-hazirlama-tezgahi",
+    "category": "calisma-tezgahi",
+    "pdf_page": 192,
+    "liste_fiyati_eur": 1090.0,
+    "ebat_mm": "1800x700x850",
+    "olcu_etiket": "1800×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1800,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p192-prod02.png"
+  },
+  {
+    "urun_kodu": "PIMAK.19070.25",
+    "slug": "equsto-pimak-19070-25",
+    "baslik": "Balık Hazırlama Tezgahı 1900×700×850 mm",
+    "aile": "Balık Hazırlama Tezgahı",
+    "aile_slug": "balik-hazirlama-tezgahi",
+    "category": "calisma-tezgahi",
+    "pdf_page": 192,
+    "liste_fiyati_eur": 1130.0,
+    "ebat_mm": "1900x700x850",
+    "olcu_etiket": "1900×700×850 mm",
+    "olculer": {
+      "genislik_mm": 1900,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p192-prod02.png"
+  },
+  {
+    "urun_kodu": "PIMAK.21070.25",
+    "slug": "equsto-pimak-21070-25",
+    "baslik": "Balık Hazırlama Tezgahı 2100×700×850 mm",
+    "aile": "Balık Hazırlama Tezgahı",
+    "aile_slug": "balik-hazirlama-tezgahi",
+    "category": "calisma-tezgahi",
+    "pdf_page": 192,
+    "liste_fiyati_eur": 1290.0,
+    "ebat_mm": "2100x700x850",
+    "olcu_etiket": "2100×700×850 mm",
+    "olculer": {
+      "genislik_mm": 2100,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p192-prod02.png"
+  },
+  {
+    "urun_kodu": "PIMAK.24070.25",
+    "slug": "equsto-pimak-24070-25",
+    "baslik": "Balık Hazırlama Tezgahı 2400×700×850 mm",
+    "aile": "Balık Hazırlama Tezgahı",
+    "aile_slug": "balik-hazirlama-tezgahi",
+    "category": "calisma-tezgahi",
+    "pdf_page": 192,
+    "liste_fiyati_eur": 1470.0,
+    "ebat_mm": "2400x700x850",
+    "olcu_etiket": "2400×700×850 mm",
+    "olculer": {
+      "genislik_mm": 2400,
+      "derinlik_mm": 700,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p192-prod02.png"
+  },
+  {
+    "urun_kodu": "PIMAK.2809060",
+    "slug": "equsto-pimak-2809060",
+    "baslik": "Bulaşık Sıyırma Tezgahı 900×600×850 mm",
+    "aile": "Bulaşık Sıyırma Tezgahı",
+    "aile_slug": "bulasik-siyirma-tezgahi",
+    "category": "bulasik-alma-unitesi",
+    "pdf_page": 194,
+    "liste_fiyati_eur": 310.0,
+    "ebat_mm": "900x600x850",
+    "olcu_etiket": "900×600×850 mm",
+    "olculer": {
+      "genislik_mm": 900,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p194-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.2810060",
+    "slug": "equsto-pimak-2810060",
+    "baslik": "Bulaşık Sıyırma Tezgahı 900×600×850 mm",
+    "aile": "Bulaşık Sıyırma Tezgahı",
+    "aile_slug": "bulasik-siyirma-tezgahi",
+    "category": "bulasik-alma-unitesi",
+    "pdf_page": 194,
+    "liste_fiyati_eur": 320.0,
+    "ebat_mm": "900x600x850",
+    "olcu_etiket": "900×600×850 mm",
+    "olculer": {
+      "genislik_mm": 900,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p194-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.2812060",
+    "slug": "equsto-pimak-2812060",
+    "baslik": "Bulaşık Sıyırma Tezgahı 900×600×850 mm",
+    "aile": "Bulaşık Sıyırma Tezgahı",
+    "aile_slug": "bulasik-siyirma-tezgahi",
+    "category": "bulasik-alma-unitesi",
+    "pdf_page": 194,
+    "liste_fiyati_eur": 340.0,
+    "ebat_mm": "900x600x850",
+    "olcu_etiket": "900×600×850 mm",
+    "olculer": {
+      "genislik_mm": 900,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p194-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.2814060",
+    "slug": "equsto-pimak-2814060",
+    "baslik": "Bulaşık Sıyırma Tezgahı 900×600×850 mm",
+    "aile": "Bulaşık Sıyırma Tezgahı",
+    "aile_slug": "bulasik-siyirma-tezgahi",
+    "category": "bulasik-alma-unitesi",
+    "pdf_page": 194,
+    "liste_fiyati_eur": 360.0,
+    "ebat_mm": "900x600x850",
+    "olcu_etiket": "900×600×850 mm",
+    "olculer": {
+      "genislik_mm": 900,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p194-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.2816060",
+    "slug": "equsto-pimak-2816060",
+    "baslik": "Bulaşık Sıyırma Tezgahı 900×600×850 mm",
+    "aile": "Bulaşık Sıyırma Tezgahı",
+    "aile_slug": "bulasik-siyirma-tezgahi",
+    "category": "bulasik-alma-unitesi",
+    "pdf_page": 194,
+    "liste_fiyati_eur": 380.0,
+    "ebat_mm": "900x600x850",
+    "olcu_etiket": "900×600×850 mm",
+    "olculer": {
+      "genislik_mm": 900,
+      "derinlik_mm": 600,
+      "yukseklik_mm": 850
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p194-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.2809070",
+    "slug": "equsto-pimak-2809070",
+    "baslik": "Kazan ve Tencere Yıkama Tezgahı",
+    "aile": "Kazan ve Tencere Yıkama Tezgahı",
+    "aile_slug": "kazan-ve-tencere-yikama-tezgahi",
+    "category": "calisma-tezgahi",
+    "pdf_page": 197,
+    "liste_fiyati_eur": 790.0,
+    "ebat_mm": "",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p197-prod04.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.2810070",
+    "slug": "equsto-pimak-2810070",
+    "baslik": "Kazan ve Tencere Yıkama Tezgahı",
+    "aile": "Kazan ve Tencere Yıkama Tezgahı",
+    "aile_slug": "kazan-ve-tencere-yikama-tezgahi",
+    "category": "calisma-tezgahi",
+    "pdf_page": 197,
+    "liste_fiyati_eur": 800.0,
+    "ebat_mm": "",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p197-prod04.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.2812070",
+    "slug": "equsto-pimak-2812070",
+    "baslik": "Kazan ve Tencere Yıkama Tezgahı",
+    "aile": "Kazan ve Tencere Yıkama Tezgahı",
+    "aile_slug": "kazan-ve-tencere-yikama-tezgahi",
+    "category": "calisma-tezgahi",
+    "pdf_page": 197,
+    "liste_fiyati_eur": 980.0,
+    "ebat_mm": "",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p197-prod04.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.2814070",
+    "slug": "equsto-pimak-2814070",
+    "baslik": "Kazan ve Tencere Yıkama Tezgahı",
+    "aile": "Kazan ve Tencere Yıkama Tezgahı",
+    "aile_slug": "kazan-ve-tencere-yikama-tezgahi",
+    "category": "calisma-tezgahi",
+    "pdf_page": 197,
+    "liste_fiyati_eur": 1100.0,
+    "ebat_mm": "",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p197-prod04.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.2816070",
+    "slug": "equsto-pimak-2816070",
+    "baslik": "Kazan ve Tencere Yıkama Tezgahı",
+    "aile": "Kazan ve Tencere Yıkama Tezgahı",
+    "aile_slug": "kazan-ve-tencere-yikama-tezgahi",
+    "category": "calisma-tezgahi",
+    "pdf_page": 197,
+    "liste_fiyati_eur": 1350.0,
+    "ebat_mm": "",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p197-prod04.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.15155.10",
+    "slug": "equsto-pimak-15155-10",
+    "baslik": "Orta Tip Filtreli Davlumbaz 1500×1500×500 mm",
+    "aile": "Orta Tip Filtreli Davlumbaz",
+    "aile_slug": "orta-tip-filtreli-davlumbaz",
+    "category": "orta-tip-filtreli-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 960.0,
+    "ebat_mm": "1500x1500x500",
+    "olcu_etiket": "1500×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 1500,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.20155.10",
+    "slug": "equsto-pimak-20155-10",
+    "baslik": "Orta Tip Filtreli Davlumbaz 2000×1500×500 mm",
+    "aile": "Orta Tip Filtreli Davlumbaz",
+    "aile_slug": "orta-tip-filtreli-davlumbaz",
+    "category": "orta-tip-filtreli-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 1100.0,
+    "ebat_mm": "2000x1500x500",
+    "olcu_etiket": "2000×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 2000,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.25155.10",
+    "slug": "equsto-pimak-25155-10",
+    "baslik": "Orta Tip Filtreli Davlumbaz 2500×1500×500 mm",
+    "aile": "Orta Tip Filtreli Davlumbaz",
+    "aile_slug": "orta-tip-filtreli-davlumbaz",
+    "category": "orta-tip-filtreli-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 1250.0,
+    "ebat_mm": "2500x1500x500",
+    "olcu_etiket": "2500×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 2500,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.30155.10",
+    "slug": "equsto-pimak-30155-10",
+    "baslik": "Orta Tip Filtreli Davlumbaz 3000×1500×500 mm",
+    "aile": "Orta Tip Filtreli Davlumbaz",
+    "aile_slug": "orta-tip-filtreli-davlumbaz",
+    "category": "orta-tip-filtreli-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 1400.0,
+    "ebat_mm": "3000x1500x500",
+    "olcu_etiket": "3000×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 3000,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.35155.10",
+    "slug": "equsto-pimak-35155-10",
+    "baslik": "Orta Tip Filtreli Davlumbaz 3500×1500×500 mm",
+    "aile": "Orta Tip Filtreli Davlumbaz",
+    "aile_slug": "orta-tip-filtreli-davlumbaz",
+    "category": "orta-tip-filtreli-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 1630.0,
+    "ebat_mm": "3500x1500x500",
+    "olcu_etiket": "3500×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 3500,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.40155.10",
+    "slug": "equsto-pimak-40155-10",
+    "baslik": "Orta Tip Filtreli Davlumbaz 4000×1500×500 mm",
+    "aile": "Orta Tip Filtreli Davlumbaz",
+    "aile_slug": "orta-tip-filtreli-davlumbaz",
+    "category": "orta-tip-filtreli-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 1800.0,
+    "ebat_mm": "4000x1500x500",
+    "olcu_etiket": "4000×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 4000,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.45155.10",
+    "slug": "equsto-pimak-45155-10",
+    "baslik": "Orta Tip Filtreli Davlumbaz 4500×1500×500 mm",
+    "aile": "Orta Tip Filtreli Davlumbaz",
+    "aile_slug": "orta-tip-filtreli-davlumbaz",
+    "category": "orta-tip-filtreli-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 2100.0,
+    "ebat_mm": "4500x1500x500",
+    "olcu_etiket": "4500×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 4500,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.50155.10",
+    "slug": "equsto-pimak-50155-10",
+    "baslik": "Orta Tip Filtreli Davlumbaz 5000×1500×500 mm",
+    "aile": "Orta Tip Filtreli Davlumbaz",
+    "aile_slug": "orta-tip-filtreli-davlumbaz",
+    "category": "orta-tip-filtreli-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 2350.0,
+    "ebat_mm": "5000x1500x500",
+    "olcu_etiket": "5000×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 5000,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.55155.10",
+    "slug": "equsto-pimak-55155-10",
+    "baslik": "Orta Tip Filtreli Davlumbaz 5500×1500×500 mm",
+    "aile": "Orta Tip Filtreli Davlumbaz",
+    "aile_slug": "orta-tip-filtreli-davlumbaz",
+    "category": "orta-tip-filtreli-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 2620.0,
+    "ebat_mm": "5500x1500x500",
+    "olcu_etiket": "5500×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 5500,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.60155.10",
+    "slug": "equsto-pimak-60155-10",
+    "baslik": "Orta Tip Filtreli Davlumbaz 6000×1500×500 mm",
+    "aile": "Orta Tip Filtreli Davlumbaz",
+    "aile_slug": "orta-tip-filtreli-davlumbaz",
+    "category": "orta-tip-filtreli-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 2940.0,
+    "ebat_mm": "6000x1500x500",
+    "olcu_etiket": "6000×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 6000,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.25205.10",
+    "slug": "equsto-pimak-25205-10",
+    "baslik": "Orta Tip Filtreli Davlumbaz 2500×2000×500 mm",
+    "aile": "Orta Tip Filtreli Davlumbaz",
+    "aile_slug": "orta-tip-filtreli-davlumbaz",
+    "category": "orta-tip-filtreli-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 1400.0,
+    "ebat_mm": "2500x2000x500",
+    "olcu_etiket": "2500×2000×500 mm",
+    "olculer": {
+      "genislik_mm": 2500,
+      "derinlik_mm": 2000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.30205.10",
+    "slug": "equsto-pimak-30205-10",
+    "baslik": "Orta Tip Filtreli Davlumbaz 3000×2000×500 mm",
+    "aile": "Orta Tip Filtreli Davlumbaz",
+    "aile_slug": "orta-tip-filtreli-davlumbaz",
+    "category": "orta-tip-filtreli-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 1630.0,
+    "ebat_mm": "3000x2000x500",
+    "olcu_etiket": "3000×2000×500 mm",
+    "olculer": {
+      "genislik_mm": 3000,
+      "derinlik_mm": 2000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.35205.10",
+    "slug": "equsto-pimak-35205-10",
+    "baslik": "Orta Tip Filtreli Davlumbaz 3500×2000×500 mm",
+    "aile": "Orta Tip Filtreli Davlumbaz",
+    "aile_slug": "orta-tip-filtreli-davlumbaz",
+    "category": "orta-tip-filtreli-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 1800.0,
+    "ebat_mm": "3500x2000x500",
+    "olcu_etiket": "3500×2000×500 mm",
+    "olculer": {
+      "genislik_mm": 3500,
+      "derinlik_mm": 2000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.40205.10",
+    "slug": "equsto-pimak-40205-10",
+    "baslik": "Orta Tip Filtreli Davlumbaz 4000×2000×500 mm",
+    "aile": "Orta Tip Filtreli Davlumbaz",
+    "aile_slug": "orta-tip-filtreli-davlumbaz",
+    "category": "orta-tip-filtreli-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 2100.0,
+    "ebat_mm": "4000x2000x500",
+    "olcu_etiket": "4000×2000×500 mm",
+    "olculer": {
+      "genislik_mm": 4000,
+      "derinlik_mm": 2000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.45205.10",
+    "slug": "equsto-pimak-45205-10",
+    "baslik": "Orta Tip Filtreli Davlumbaz 4500×2000×500 mm",
+    "aile": "Orta Tip Filtreli Davlumbaz",
+    "aile_slug": "orta-tip-filtreli-davlumbaz",
+    "category": "orta-tip-filtreli-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 2350.0,
+    "ebat_mm": "4500x2000x500",
+    "olcu_etiket": "4500×2000×500 mm",
+    "olculer": {
+      "genislik_mm": 4500,
+      "derinlik_mm": 2000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.50205.10",
+    "slug": "equsto-pimak-50205-10",
+    "baslik": "Orta Tip Filtreli Davlumbaz 5000×2000×500 mm",
+    "aile": "Orta Tip Filtreli Davlumbaz",
+    "aile_slug": "orta-tip-filtreli-davlumbaz",
+    "category": "orta-tip-filtreli-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 2620.0,
+    "ebat_mm": "5000x2000x500",
+    "olcu_etiket": "5000×2000×500 mm",
+    "olculer": {
+      "genislik_mm": 5000,
+      "derinlik_mm": 2000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.55205.10",
+    "slug": "equsto-pimak-55205-10",
+    "baslik": "Orta Tip Filtreli Davlumbaz 5500×2000×500 mm",
+    "aile": "Orta Tip Filtreli Davlumbaz",
+    "aile_slug": "orta-tip-filtreli-davlumbaz",
+    "category": "orta-tip-filtreli-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 2940.0,
+    "ebat_mm": "5500x2000x500",
+    "olcu_etiket": "5500×2000×500 mm",
+    "olculer": {
+      "genislik_mm": 5500,
+      "derinlik_mm": 2000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.60205.10",
+    "slug": "equsto-pimak-60205-10",
+    "baslik": "Orta Tip Filtreli Davlumbaz 6000×2000×500 mm",
+    "aile": "Orta Tip Filtreli Davlumbaz",
+    "aile_slug": "orta-tip-filtreli-davlumbaz",
+    "category": "orta-tip-filtreli-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 3200.0,
+    "ebat_mm": "6000x2000x500",
+    "olcu_etiket": "6000×2000×500 mm",
+    "olculer": {
+      "genislik_mm": 6000,
+      "derinlik_mm": 2000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.25255.10",
+    "slug": "equsto-pimak-25255-10",
+    "baslik": "Orta Tip Filtreli Davlumbaz 2500×2500×500 mm",
+    "aile": "Orta Tip Filtreli Davlumbaz",
+    "aile_slug": "orta-tip-filtreli-davlumbaz",
+    "category": "orta-tip-filtreli-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 1630.0,
+    "ebat_mm": "2500x2500x500",
+    "olcu_etiket": "2500×2500×500 mm",
+    "olculer": {
+      "genislik_mm": 2500,
+      "derinlik_mm": 2500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.30255.10",
+    "slug": "equsto-pimak-30255-10",
+    "baslik": "Orta Tip Filtreli Davlumbaz 3000×2500×500 mm",
+    "aile": "Orta Tip Filtreli Davlumbaz",
+    "aile_slug": "orta-tip-filtreli-davlumbaz",
+    "category": "orta-tip-filtreli-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 1800.0,
+    "ebat_mm": "3000x2500x500",
+    "olcu_etiket": "3000×2500×500 mm",
+    "olculer": {
+      "genislik_mm": 3000,
+      "derinlik_mm": 2500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.35255.10",
+    "slug": "equsto-pimak-35255-10",
+    "baslik": "Orta Tip Filtreli Davlumbaz 3500×2500×500 mm",
+    "aile": "Orta Tip Filtreli Davlumbaz",
+    "aile_slug": "orta-tip-filtreli-davlumbaz",
+    "category": "orta-tip-filtreli-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 2100.0,
+    "ebat_mm": "3500x2500x500",
+    "olcu_etiket": "3500×2500×500 mm",
+    "olculer": {
+      "genislik_mm": 3500,
+      "derinlik_mm": 2500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.40255.10",
+    "slug": "equsto-pimak-40255-10",
+    "baslik": "Orta Tip Filtreli Davlumbaz 4000×2500×500 mm",
+    "aile": "Orta Tip Filtreli Davlumbaz",
+    "aile_slug": "orta-tip-filtreli-davlumbaz",
+    "category": "orta-tip-filtreli-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 2350.0,
+    "ebat_mm": "4000x2500x500",
+    "olcu_etiket": "4000×2500×500 mm",
+    "olculer": {
+      "genislik_mm": 4000,
+      "derinlik_mm": 2500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.45255.10",
+    "slug": "equsto-pimak-45255-10",
+    "baslik": "Orta Tip Filtreli Davlumbaz 4500×2500×500 mm",
+    "aile": "Orta Tip Filtreli Davlumbaz",
+    "aile_slug": "orta-tip-filtreli-davlumbaz",
+    "category": "orta-tip-filtreli-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 2620.0,
+    "ebat_mm": "4500x2500x500",
+    "olcu_etiket": "4500×2500×500 mm",
+    "olculer": {
+      "genislik_mm": 4500,
+      "derinlik_mm": 2500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.50255.10",
+    "slug": "equsto-pimak-50255-10",
+    "baslik": "Orta Tip Filtreli Davlumbaz 5000×2500×500 mm",
+    "aile": "Orta Tip Filtreli Davlumbaz",
+    "aile_slug": "orta-tip-filtreli-davlumbaz",
+    "category": "orta-tip-filtreli-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 2940.0,
+    "ebat_mm": "5000x2500x500",
+    "olcu_etiket": "5000×2500×500 mm",
+    "olculer": {
+      "genislik_mm": 5000,
+      "derinlik_mm": 2500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.55255.10",
+    "slug": "equsto-pimak-55255-10",
+    "baslik": "Orta Tip Filtreli Davlumbaz 5500×2500×500 mm",
+    "aile": "Orta Tip Filtreli Davlumbaz",
+    "aile_slug": "orta-tip-filtreli-davlumbaz",
+    "category": "orta-tip-filtreli-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 3200.0,
+    "ebat_mm": "5500x2500x500",
+    "olcu_etiket": "5500×2500×500 mm",
+    "olculer": {
+      "genislik_mm": 5500,
+      "derinlik_mm": 2500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.60255.10",
+    "slug": "equsto-pimak-60255-10",
+    "baslik": "Orta Tip Filtreli Davlumbaz 6000×2500×500 mm",
+    "aile": "Orta Tip Filtreli Davlumbaz",
+    "aile_slug": "orta-tip-filtreli-davlumbaz",
+    "category": "orta-tip-filtreli-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 3450.0,
+    "ebat_mm": "6000x2500x500",
+    "olcu_etiket": "6000×2500×500 mm",
+    "olculer": {
+      "genislik_mm": 6000,
+      "derinlik_mm": 2500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.20155.00",
+    "slug": "equsto-pimak-20155-00",
+    "baslik": "Orta Tip Filtresiz Davlumbaz 2000×1500×500 mm",
+    "aile": "Orta Tip Filtresiz Davlumbaz",
+    "aile_slug": "orta-tip-filtresiz-davlumbaz",
+    "category": "orta-tip-filtresiz-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 900.0,
+    "ebat_mm": "2000x1500x500",
+    "olcu_etiket": "2000×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 2000,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.25155.00",
+    "slug": "equsto-pimak-25155-00",
+    "baslik": "Orta Tip Filtresiz Davlumbaz 2500×1500×500 mm",
+    "aile": "Orta Tip Filtresiz Davlumbaz",
+    "aile_slug": "orta-tip-filtresiz-davlumbaz",
+    "category": "orta-tip-filtresiz-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 1000.0,
+    "ebat_mm": "2500x1500x500",
+    "olcu_etiket": "2500×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 2500,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.30155.00",
+    "slug": "equsto-pimak-30155-00",
+    "baslik": "Orta Tip Filtresiz Davlumbaz 3000×1500×500 mm",
+    "aile": "Orta Tip Filtresiz Davlumbaz",
+    "aile_slug": "orta-tip-filtresiz-davlumbaz",
+    "category": "orta-tip-filtresiz-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 1150.0,
+    "ebat_mm": "3000x1500x500",
+    "olcu_etiket": "3000×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 3000,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.35155.00",
+    "slug": "equsto-pimak-35155-00",
+    "baslik": "Orta Tip Filtresiz Davlumbaz 3500×1500×500 mm",
+    "aile": "Orta Tip Filtresiz Davlumbaz",
+    "aile_slug": "orta-tip-filtresiz-davlumbaz",
+    "category": "orta-tip-filtresiz-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 1300.0,
+    "ebat_mm": "3500x1500x500",
+    "olcu_etiket": "3500×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 3500,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.40155.00",
+    "slug": "equsto-pimak-40155-00",
+    "baslik": "Orta Tip Filtresiz Davlumbaz 4000×1500×500 mm",
+    "aile": "Orta Tip Filtresiz Davlumbaz",
+    "aile_slug": "orta-tip-filtresiz-davlumbaz",
+    "category": "orta-tip-filtresiz-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 1550.0,
+    "ebat_mm": "4000x1500x500",
+    "olcu_etiket": "4000×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 4000,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.45155.00",
+    "slug": "equsto-pimak-45155-00",
+    "baslik": "Orta Tip Filtresiz Davlumbaz 4500×1500×500 mm",
+    "aile": "Orta Tip Filtresiz Davlumbaz",
+    "aile_slug": "orta-tip-filtresiz-davlumbaz",
+    "category": "orta-tip-filtresiz-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 1700.0,
+    "ebat_mm": "4500x1500x500",
+    "olcu_etiket": "4500×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 4500,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.50155.00",
+    "slug": "equsto-pimak-50155-00",
+    "baslik": "Orta Tip Filtresiz Davlumbaz 5000×1500×500 mm",
+    "aile": "Orta Tip Filtresiz Davlumbaz",
+    "aile_slug": "orta-tip-filtresiz-davlumbaz",
+    "category": "orta-tip-filtresiz-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 1800.0,
+    "ebat_mm": "5000x1500x500",
+    "olcu_etiket": "5000×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 5000,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.55155.00",
+    "slug": "equsto-pimak-55155-00",
+    "baslik": "Orta Tip Filtresiz Davlumbaz 5500×1500×500 mm",
+    "aile": "Orta Tip Filtresiz Davlumbaz",
+    "aile_slug": "orta-tip-filtresiz-davlumbaz",
+    "category": "orta-tip-filtresiz-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 2000.0,
+    "ebat_mm": "5500x1500x500",
+    "olcu_etiket": "5500×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 5500,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.60155.00",
+    "slug": "equsto-pimak-60155-00",
+    "baslik": "Orta Tip Filtresiz Davlumbaz 6000×1500×500 mm",
+    "aile": "Orta Tip Filtresiz Davlumbaz",
+    "aile_slug": "orta-tip-filtresiz-davlumbaz",
+    "category": "orta-tip-filtresiz-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 2200.0,
+    "ebat_mm": "6000x1500x500",
+    "olcu_etiket": "6000×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 6000,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.20205.00",
+    "slug": "equsto-pimak-20205-00",
+    "baslik": "Orta Tip Filtresiz Davlumbaz 2000×2000×500 mm",
+    "aile": "Orta Tip Filtresiz Davlumbaz",
+    "aile_slug": "orta-tip-filtresiz-davlumbaz",
+    "category": "orta-tip-filtresiz-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 1050.0,
+    "ebat_mm": "2000x2000x500",
+    "olcu_etiket": "2000×2000×500 mm",
+    "olculer": {
+      "genislik_mm": 2000,
+      "derinlik_mm": 2000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.25205.00",
+    "slug": "equsto-pimak-25205-00",
+    "baslik": "Orta Tip Filtresiz Davlumbaz 2500×2000×500 mm",
+    "aile": "Orta Tip Filtresiz Davlumbaz",
+    "aile_slug": "orta-tip-filtresiz-davlumbaz",
+    "category": "orta-tip-filtresiz-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 1200.0,
+    "ebat_mm": "2500x2000x500",
+    "olcu_etiket": "2500×2000×500 mm",
+    "olculer": {
+      "genislik_mm": 2500,
+      "derinlik_mm": 2000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.30205.00",
+    "slug": "equsto-pimak-30205-00",
+    "baslik": "Orta Tip Filtresiz Davlumbaz 3000×2000×500 mm",
+    "aile": "Orta Tip Filtresiz Davlumbaz",
+    "aile_slug": "orta-tip-filtresiz-davlumbaz",
+    "category": "orta-tip-filtresiz-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 1350.0,
+    "ebat_mm": "3000x2000x500",
+    "olcu_etiket": "3000×2000×500 mm",
+    "olculer": {
+      "genislik_mm": 3000,
+      "derinlik_mm": 2000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.35205.00",
+    "slug": "equsto-pimak-35205-00",
+    "baslik": "Orta Tip Filtresiz Davlumbaz 3500×2000×500 mm",
+    "aile": "Orta Tip Filtresiz Davlumbaz",
+    "aile_slug": "orta-tip-filtresiz-davlumbaz",
+    "category": "orta-tip-filtresiz-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 1700.0,
+    "ebat_mm": "3500x2000x500",
+    "olcu_etiket": "3500×2000×500 mm",
+    "olculer": {
+      "genislik_mm": 3500,
+      "derinlik_mm": 2000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.40205.00",
+    "slug": "equsto-pimak-40205-00",
+    "baslik": "Orta Tip Filtresiz Davlumbaz 4000×2000×500 mm",
+    "aile": "Orta Tip Filtresiz Davlumbaz",
+    "aile_slug": "orta-tip-filtresiz-davlumbaz",
+    "category": "orta-tip-filtresiz-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 1800.0,
+    "ebat_mm": "4000x2000x500",
+    "olcu_etiket": "4000×2000×500 mm",
+    "olculer": {
+      "genislik_mm": 4000,
+      "derinlik_mm": 2000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.45205.00",
+    "slug": "equsto-pimak-45205-00",
+    "baslik": "Orta Tip Filtresiz Davlumbaz 4500×2000×500 mm",
+    "aile": "Orta Tip Filtresiz Davlumbaz",
+    "aile_slug": "orta-tip-filtresiz-davlumbaz",
+    "category": "orta-tip-filtresiz-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 2000.0,
+    "ebat_mm": "4500x2000x500",
+    "olcu_etiket": "4500×2000×500 mm",
+    "olculer": {
+      "genislik_mm": 4500,
+      "derinlik_mm": 2000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.50205.00",
+    "slug": "equsto-pimak-50205-00",
+    "baslik": "Orta Tip Filtresiz Davlumbaz 5000×2000×500 mm",
+    "aile": "Orta Tip Filtresiz Davlumbaz",
+    "aile_slug": "orta-tip-filtresiz-davlumbaz",
+    "category": "orta-tip-filtresiz-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 2250.0,
+    "ebat_mm": "5000x2000x500",
+    "olcu_etiket": "5000×2000×500 mm",
+    "olculer": {
+      "genislik_mm": 5000,
+      "derinlik_mm": 2000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.55205.00",
+    "slug": "equsto-pimak-55205-00",
+    "baslik": "Orta Tip Filtresiz Davlumbaz 5500×2000×500 mm",
+    "aile": "Orta Tip Filtresiz Davlumbaz",
+    "aile_slug": "orta-tip-filtresiz-davlumbaz",
+    "category": "orta-tip-filtresiz-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 2400.0,
+    "ebat_mm": "5500x2000x500",
+    "olcu_etiket": "5500×2000×500 mm",
+    "olculer": {
+      "genislik_mm": 5500,
+      "derinlik_mm": 2000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.60205.00",
+    "slug": "equsto-pimak-60205-00",
+    "baslik": "Orta Tip Filtresiz Davlumbaz 6000×2000×500 mm",
+    "aile": "Orta Tip Filtresiz Davlumbaz",
+    "aile_slug": "orta-tip-filtresiz-davlumbaz",
+    "category": "orta-tip-filtresiz-davlumbaz",
+    "pdf_page": 195,
+    "liste_fiyati_eur": 2600.0,
+    "ebat_mm": "6000x2000x500",
+    "olcu_etiket": "6000×2000×500 mm",
+    "olculer": {
+      "genislik_mm": 6000,
+      "derinlik_mm": 2000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p195-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.15105.11",
+    "slug": "equsto-pimak-15105-11",
+    "baslik": "Duvar Tipi Filtresiz Davlumbaz 1500×1000×500 mm",
+    "aile": "Duvar Tipi Filtresiz Davlumbaz",
+    "aile_slug": "duvar-tipi-filtresiz-davlumbaz",
+    "category": "duvar-tipi-filtresiz-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 750.0,
+    "ebat_mm": "1500x1000x500",
+    "olcu_etiket": "1500×1000×500 mm",
+    "olculer": {
+      "genislik_mm": 1500,
+      "derinlik_mm": 1000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.20105.11",
+    "slug": "equsto-pimak-20105-11",
+    "baslik": "Duvar Tipi Filtresiz Davlumbaz 2000×1000×500 mm",
+    "aile": "Duvar Tipi Filtresiz Davlumbaz",
+    "aile_slug": "duvar-tipi-filtresiz-davlumbaz",
+    "category": "duvar-tipi-filtresiz-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 810.0,
+    "ebat_mm": "2000x1000x500",
+    "olcu_etiket": "2000×1000×500 mm",
+    "olculer": {
+      "genislik_mm": 2000,
+      "derinlik_mm": 1000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.25105.11",
+    "slug": "equsto-pimak-25105-11",
+    "baslik": "Duvar Tipi Filtresiz Davlumbaz 2500×1000×500 mm",
+    "aile": "Duvar Tipi Filtresiz Davlumbaz",
+    "aile_slug": "duvar-tipi-filtresiz-davlumbaz",
+    "category": "duvar-tipi-filtresiz-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 865.0,
+    "ebat_mm": "2500x1000x500",
+    "olcu_etiket": "2500×1000×500 mm",
+    "olculer": {
+      "genislik_mm": 2500,
+      "derinlik_mm": 1000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.30105.11",
+    "slug": "equsto-pimak-30105-11",
+    "baslik": "Duvar Tipi Filtresiz Davlumbaz 3000×1000×500 mm",
+    "aile": "Duvar Tipi Filtresiz Davlumbaz",
+    "aile_slug": "duvar-tipi-filtresiz-davlumbaz",
+    "category": "duvar-tipi-filtresiz-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 1010.0,
+    "ebat_mm": "3000x1000x500",
+    "olcu_etiket": "3000×1000×500 mm",
+    "olculer": {
+      "genislik_mm": 3000,
+      "derinlik_mm": 1000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.35105.11",
+    "slug": "equsto-pimak-35105-11",
+    "baslik": "Duvar Tipi Filtresiz Davlumbaz 3500×1000×500 mm",
+    "aile": "Duvar Tipi Filtresiz Davlumbaz",
+    "aile_slug": "duvar-tipi-filtresiz-davlumbaz",
+    "category": "duvar-tipi-filtresiz-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 1140.0,
+    "ebat_mm": "3500x1000x500",
+    "olcu_etiket": "3500×1000×500 mm",
+    "olculer": {
+      "genislik_mm": 3500,
+      "derinlik_mm": 1000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.40105.11",
+    "slug": "equsto-pimak-40105-11",
+    "baslik": "Duvar Tipi Filtresiz Davlumbaz 4000×1000×500 mm",
+    "aile": "Duvar Tipi Filtresiz Davlumbaz",
+    "aile_slug": "duvar-tipi-filtresiz-davlumbaz",
+    "category": "duvar-tipi-filtresiz-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 1300.0,
+    "ebat_mm": "4000x1000x500",
+    "olcu_etiket": "4000×1000×500 mm",
+    "olculer": {
+      "genislik_mm": 4000,
+      "derinlik_mm": 1000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.12125.11",
+    "slug": "equsto-pimak-12125-11",
+    "baslik": "Duvar Tipi Filtresiz Davlumbaz 1200×1200×500 mm",
+    "aile": "Duvar Tipi Filtresiz Davlumbaz",
+    "aile_slug": "duvar-tipi-filtresiz-davlumbaz",
+    "category": "duvar-tipi-filtresiz-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 780.0,
+    "ebat_mm": "1200x1200x500",
+    "olcu_etiket": "1200×1200×500 mm",
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 1200,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.15125.11",
+    "slug": "equsto-pimak-15125-11",
+    "baslik": "Duvar Tipi Filtresiz Davlumbaz 1500×1200×500 mm",
+    "aile": "Duvar Tipi Filtresiz Davlumbaz",
+    "aile_slug": "duvar-tipi-filtresiz-davlumbaz",
+    "category": "duvar-tipi-filtresiz-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 810.0,
+    "ebat_mm": "1500x1200x500",
+    "olcu_etiket": "1500×1200×500 mm",
+    "olculer": {
+      "genislik_mm": 1500,
+      "derinlik_mm": 1200,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.20125.11",
+    "slug": "equsto-pimak-20125-11",
+    "baslik": "Duvar Tipi Filtresiz Davlumbaz 2000×1200×500 mm",
+    "aile": "Duvar Tipi Filtresiz Davlumbaz",
+    "aile_slug": "duvar-tipi-filtresiz-davlumbaz",
+    "category": "duvar-tipi-filtresiz-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 865.0,
+    "ebat_mm": "2000x1200x500",
+    "olcu_etiket": "2000×1200×500 mm",
+    "olculer": {
+      "genislik_mm": 2000,
+      "derinlik_mm": 1200,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.25125.11",
+    "slug": "equsto-pimak-25125-11",
+    "baslik": "Duvar Tipi Filtresiz Davlumbaz 2500×1200×500 mm",
+    "aile": "Duvar Tipi Filtresiz Davlumbaz",
+    "aile_slug": "duvar-tipi-filtresiz-davlumbaz",
+    "category": "duvar-tipi-filtresiz-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 1010.0,
+    "ebat_mm": "2500x1200x500",
+    "olcu_etiket": "2500×1200×500 mm",
+    "olculer": {
+      "genislik_mm": 2500,
+      "derinlik_mm": 1200,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.30125.11",
+    "slug": "equsto-pimak-30125-11",
+    "baslik": "Duvar Tipi Filtresiz Davlumbaz 3000×1200×500 mm",
+    "aile": "Duvar Tipi Filtresiz Davlumbaz",
+    "aile_slug": "duvar-tipi-filtresiz-davlumbaz",
+    "category": "duvar-tipi-filtresiz-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 1140.0,
+    "ebat_mm": "3000x1200x500",
+    "olcu_etiket": "3000×1200×500 mm",
+    "olculer": {
+      "genislik_mm": 3000,
+      "derinlik_mm": 1200,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.35125.11",
+    "slug": "equsto-pimak-35125-11",
+    "baslik": "Duvar Tipi Filtresiz Davlumbaz 3500×1200×500 mm",
+    "aile": "Duvar Tipi Filtresiz Davlumbaz",
+    "aile_slug": "duvar-tipi-filtresiz-davlumbaz",
+    "category": "duvar-tipi-filtresiz-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 1450.0,
+    "ebat_mm": "3500x1200x500",
+    "olcu_etiket": "3500×1200×500 mm",
+    "olculer": {
+      "genislik_mm": 3500,
+      "derinlik_mm": 1200,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.40125.11",
+    "slug": "equsto-pimak-40125-11",
+    "baslik": "Duvar Tipi Filtresiz Davlumbaz 4000×1200×500 mm",
+    "aile": "Duvar Tipi Filtresiz Davlumbaz",
+    "aile_slug": "duvar-tipi-filtresiz-davlumbaz",
+    "category": "duvar-tipi-filtresiz-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 1830.0,
+    "ebat_mm": "4000x1200x500",
+    "olcu_etiket": "4000×1200×500 mm",
+    "olculer": {
+      "genislik_mm": 4000,
+      "derinlik_mm": 1200,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.15155.11",
+    "slug": "equsto-pimak-15155-11",
+    "baslik": "Duvar Tipi Filtresiz Davlumbaz 1500×1500×500 mm",
+    "aile": "Duvar Tipi Filtresiz Davlumbaz",
+    "aile_slug": "duvar-tipi-filtresiz-davlumbaz",
+    "category": "duvar-tipi-filtresiz-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 810.0,
+    "ebat_mm": "1500x1500x500",
+    "olcu_etiket": "1500×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 1500,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.20155.11",
+    "slug": "equsto-pimak-20155-11",
+    "baslik": "Duvar Tipi Filtresiz Davlumbaz 2000×1500×500 mm",
+    "aile": "Duvar Tipi Filtresiz Davlumbaz",
+    "aile_slug": "duvar-tipi-filtresiz-davlumbaz",
+    "category": "duvar-tipi-filtresiz-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 1010.0,
+    "ebat_mm": "2000x1500x500",
+    "olcu_etiket": "2000×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 2000,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.25155.11",
+    "slug": "equsto-pimak-25155-11",
+    "baslik": "Duvar Tipi Filtresiz Davlumbaz 2500×1500×500 mm",
+    "aile": "Duvar Tipi Filtresiz Davlumbaz",
+    "aile_slug": "duvar-tipi-filtresiz-davlumbaz",
+    "category": "duvar-tipi-filtresiz-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 1140.0,
+    "ebat_mm": "2500x1500x500",
+    "olcu_etiket": "2500×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 2500,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.30155.11",
+    "slug": "equsto-pimak-30155-11",
+    "baslik": "Duvar Tipi Filtresiz Davlumbaz 3000×1500×500 mm",
+    "aile": "Duvar Tipi Filtresiz Davlumbaz",
+    "aile_slug": "duvar-tipi-filtresiz-davlumbaz",
+    "category": "duvar-tipi-filtresiz-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 1450.0,
+    "ebat_mm": "3000x1500x500",
+    "olcu_etiket": "3000×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 3000,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.35155.11",
+    "slug": "equsto-pimak-35155-11",
+    "baslik": "Duvar Tipi Filtresiz Davlumbaz 3500×1500×500 mm",
+    "aile": "Duvar Tipi Filtresiz Davlumbaz",
+    "aile_slug": "duvar-tipi-filtresiz-davlumbaz",
+    "category": "duvar-tipi-filtresiz-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 1830.0,
+    "ebat_mm": "3500x1500x500",
+    "olcu_etiket": "3500×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 3500,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.40155.11",
+    "slug": "equsto-pimak-40155-11",
+    "baslik": "Duvar Tipi Filtresiz Davlumbaz 4000×1500×500 mm",
+    "aile": "Duvar Tipi Filtresiz Davlumbaz",
+    "aile_slug": "duvar-tipi-filtresiz-davlumbaz",
+    "category": "duvar-tipi-filtresiz-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 1980.0,
+    "ebat_mm": "4000x1500x500",
+    "olcu_etiket": "4000×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 4000,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.45155.11",
+    "slug": "equsto-pimak-45155-11",
+    "baslik": "Duvar Tipi Filtresiz Davlumbaz 4500×1500×500 mm",
+    "aile": "Duvar Tipi Filtresiz Davlumbaz",
+    "aile_slug": "duvar-tipi-filtresiz-davlumbaz",
+    "category": "duvar-tipi-filtresiz-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 2180.0,
+    "ebat_mm": "4500x1500x500",
+    "olcu_etiket": "4500×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 4500,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.50155.11",
+    "slug": "equsto-pimak-50155-11",
+    "baslik": "Duvar Tipi Filtresiz Davlumbaz 5000×1500×500 mm",
+    "aile": "Duvar Tipi Filtresiz Davlumbaz",
+    "aile_slug": "duvar-tipi-filtresiz-davlumbaz",
+    "category": "duvar-tipi-filtresiz-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 2370.0,
+    "ebat_mm": "5000x1500x500",
+    "olcu_etiket": "5000×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 5000,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.55155.11",
+    "slug": "equsto-pimak-55155-11",
+    "baslik": "Duvar Tipi Filtresiz Davlumbaz 5500×1500×500 mm",
+    "aile": "Duvar Tipi Filtresiz Davlumbaz",
+    "aile_slug": "duvar-tipi-filtresiz-davlumbaz",
+    "category": "duvar-tipi-filtresiz-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 2560.0,
+    "ebat_mm": "5500x1500x500",
+    "olcu_etiket": "5500×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 5500,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.60155.11",
+    "slug": "equsto-pimak-60155-11",
+    "baslik": "Duvar Tipi Filtresiz Davlumbaz 6000×1500×500 mm",
+    "aile": "Duvar Tipi Filtresiz Davlumbaz",
+    "aile_slug": "duvar-tipi-filtresiz-davlumbaz",
+    "category": "duvar-tipi-filtresiz-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 2790.0,
+    "ebat_mm": "6000x1500x500",
+    "olcu_etiket": "6000×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 6000,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.10105.01",
+    "slug": "equsto-pimak-10105-01",
+    "baslik": "Duvar Tipi Filtreli Davlumbaz 1000×1000×500 mm",
+    "aile": "Duvar Tipi Filtreli Davlumbaz",
+    "aile_slug": "duvar-tipi-filtreli-davlumbaz",
+    "category": "duvar-tipi-filtreli-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 655.0,
+    "ebat_mm": "1000x1000x500",
+    "olcu_etiket": "1000×1000×500 mm",
+    "olculer": {
+      "genislik_mm": 1000,
+      "derinlik_mm": 1000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.15105.01",
+    "slug": "equsto-pimak-15105-01",
+    "baslik": "Duvar Tipi Filtreli Davlumbaz 1500×1000×500 mm",
+    "aile": "Duvar Tipi Filtreli Davlumbaz",
+    "aile_slug": "duvar-tipi-filtreli-davlumbaz",
+    "category": "duvar-tipi-filtreli-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 735.0,
+    "ebat_mm": "1500x1000x500",
+    "olcu_etiket": "1500×1000×500 mm",
+    "olculer": {
+      "genislik_mm": 1500,
+      "derinlik_mm": 1000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.20105.01",
+    "slug": "equsto-pimak-20105-01",
+    "baslik": "Duvar Tipi Filtreli Davlumbaz 2000×1000×500 mm",
+    "aile": "Duvar Tipi Filtreli Davlumbaz",
+    "aile_slug": "duvar-tipi-filtreli-davlumbaz",
+    "category": "duvar-tipi-filtreli-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 780.0,
+    "ebat_mm": "2000x1000x500",
+    "olcu_etiket": "2000×1000×500 mm",
+    "olculer": {
+      "genislik_mm": 2000,
+      "derinlik_mm": 1000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.25105.01",
+    "slug": "equsto-pimak-25105-01",
+    "baslik": "Duvar Tipi Filtreli Davlumbaz 2500×1000×500 mm",
+    "aile": "Duvar Tipi Filtreli Davlumbaz",
+    "aile_slug": "duvar-tipi-filtreli-davlumbaz",
+    "category": "duvar-tipi-filtreli-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 825.0,
+    "ebat_mm": "2500x1000x500",
+    "olcu_etiket": "2500×1000×500 mm",
+    "olculer": {
+      "genislik_mm": 2500,
+      "derinlik_mm": 1000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.30105.01",
+    "slug": "equsto-pimak-30105-01",
+    "baslik": "Duvar Tipi Filtreli Davlumbaz 3000×1000×500 mm",
+    "aile": "Duvar Tipi Filtreli Davlumbaz",
+    "aile_slug": "duvar-tipi-filtreli-davlumbaz",
+    "category": "duvar-tipi-filtreli-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 950.0,
+    "ebat_mm": "3000x1000x500",
+    "olcu_etiket": "3000×1000×500 mm",
+    "olculer": {
+      "genislik_mm": 3000,
+      "derinlik_mm": 1000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.35105.01",
+    "slug": "equsto-pimak-35105-01",
+    "baslik": "Duvar Tipi Filtreli Davlumbaz 3500×1000×500 mm",
+    "aile": "Duvar Tipi Filtreli Davlumbaz",
+    "aile_slug": "duvar-tipi-filtreli-davlumbaz",
+    "category": "duvar-tipi-filtreli-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 1080.0,
+    "ebat_mm": "3500x1000x500",
+    "olcu_etiket": "3500×1000×500 mm",
+    "olculer": {
+      "genislik_mm": 3500,
+      "derinlik_mm": 1000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.40105.01",
+    "slug": "equsto-pimak-40105-01",
+    "baslik": "Duvar Tipi Filtreli Davlumbaz 4000×1000×500 mm",
+    "aile": "Duvar Tipi Filtreli Davlumbaz",
+    "aile_slug": "duvar-tipi-filtreli-davlumbaz",
+    "category": "duvar-tipi-filtreli-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 1230.0,
+    "ebat_mm": "4000x1000x500",
+    "olcu_etiket": "4000×1000×500 mm",
+    "olculer": {
+      "genislik_mm": 4000,
+      "derinlik_mm": 1000,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.12125.01",
+    "slug": "equsto-pimak-12125-01",
+    "baslik": "Duvar Tipi Filtreli Davlumbaz 1200×1200×500 mm",
+    "aile": "Duvar Tipi Filtreli Davlumbaz",
+    "aile_slug": "duvar-tipi-filtreli-davlumbaz",
+    "category": "duvar-tipi-filtreli-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 690.0,
+    "ebat_mm": "1200x1200x500",
+    "olcu_etiket": "1200×1200×500 mm",
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 1200,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.15125.01",
+    "slug": "equsto-pimak-15125-01",
+    "baslik": "Duvar Tipi Filtreli Davlumbaz 1500×1200×500 mm",
+    "aile": "Duvar Tipi Filtreli Davlumbaz",
+    "aile_slug": "duvar-tipi-filtreli-davlumbaz",
+    "category": "duvar-tipi-filtreli-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 780.0,
+    "ebat_mm": "1500x1200x500",
+    "olcu_etiket": "1500×1200×500 mm",
+    "olculer": {
+      "genislik_mm": 1500,
+      "derinlik_mm": 1200,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.20125.01",
+    "slug": "equsto-pimak-20125-01",
+    "baslik": "Duvar Tipi Filtreli Davlumbaz 2000×1200×500 mm",
+    "aile": "Duvar Tipi Filtreli Davlumbaz",
+    "aile_slug": "duvar-tipi-filtreli-davlumbaz",
+    "category": "duvar-tipi-filtreli-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 825.0,
+    "ebat_mm": "2000x1200x500",
+    "olcu_etiket": "2000×1200×500 mm",
+    "olculer": {
+      "genislik_mm": 2000,
+      "derinlik_mm": 1200,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.25125.01",
+    "slug": "equsto-pimak-25125-01",
+    "baslik": "Duvar Tipi Filtreli Davlumbaz 2500×1200×500 mm",
+    "aile": "Duvar Tipi Filtreli Davlumbaz",
+    "aile_slug": "duvar-tipi-filtreli-davlumbaz",
+    "category": "duvar-tipi-filtreli-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 950.0,
+    "ebat_mm": "2500x1200x500",
+    "olcu_etiket": "2500×1200×500 mm",
+    "olculer": {
+      "genislik_mm": 2500,
+      "derinlik_mm": 1200,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.30125.01",
+    "slug": "equsto-pimak-30125-01",
+    "baslik": "Duvar Tipi Filtreli Davlumbaz 3000×1200×500 mm",
+    "aile": "Duvar Tipi Filtreli Davlumbaz",
+    "aile_slug": "duvar-tipi-filtreli-davlumbaz",
+    "category": "duvar-tipi-filtreli-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 1080.0,
+    "ebat_mm": "3000x1200x500",
+    "olcu_etiket": "3000×1200×500 mm",
+    "olculer": {
+      "genislik_mm": 3000,
+      "derinlik_mm": 1200,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.35125.01",
+    "slug": "equsto-pimak-35125-01",
+    "baslik": "Duvar Tipi Filtreli Davlumbaz 3500×1200×500 mm",
+    "aile": "Duvar Tipi Filtreli Davlumbaz",
+    "aile_slug": "duvar-tipi-filtreli-davlumbaz",
+    "category": "duvar-tipi-filtreli-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 1250.0,
+    "ebat_mm": "3500x1200x500",
+    "olcu_etiket": "3500×1200×500 mm",
+    "olculer": {
+      "genislik_mm": 3500,
+      "derinlik_mm": 1200,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.40125.01",
+    "slug": "equsto-pimak-40125-01",
+    "baslik": "Duvar Tipi Filtreli Davlumbaz 4000×1200×500 mm",
+    "aile": "Duvar Tipi Filtreli Davlumbaz",
+    "aile_slug": "duvar-tipi-filtreli-davlumbaz",
+    "category": "duvar-tipi-filtreli-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 1750.0,
+    "ebat_mm": "4000x1200x500",
+    "olcu_etiket": "4000×1200×500 mm",
+    "olculer": {
+      "genislik_mm": 4000,
+      "derinlik_mm": 1200,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.15155.01",
+    "slug": "equsto-pimak-15155-01",
+    "baslik": "Duvar Tipi Filtreli Davlumbaz 1500×1500×500 mm",
+    "aile": "Duvar Tipi Filtreli Davlumbaz",
+    "aile_slug": "duvar-tipi-filtreli-davlumbaz",
+    "category": "duvar-tipi-filtreli-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 780.0,
+    "ebat_mm": "1500x1500x500",
+    "olcu_etiket": "1500×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 1500,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.20155.01",
+    "slug": "equsto-pimak-20155-01",
+    "baslik": "Duvar Tipi Filtreli Davlumbaz 2000×1500×500 mm",
+    "aile": "Duvar Tipi Filtreli Davlumbaz",
+    "aile_slug": "duvar-tipi-filtreli-davlumbaz",
+    "category": "duvar-tipi-filtreli-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 950.0,
+    "ebat_mm": "2000x1500x500",
+    "olcu_etiket": "2000×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 2000,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.25155.01",
+    "slug": "equsto-pimak-25155-01",
+    "baslik": "Duvar Tipi Filtreli Davlumbaz 2500×1500×500 mm",
+    "aile": "Duvar Tipi Filtreli Davlumbaz",
+    "aile_slug": "duvar-tipi-filtreli-davlumbaz",
+    "category": "duvar-tipi-filtreli-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 1080.0,
+    "ebat_mm": "2500x1500x500",
+    "olcu_etiket": "2500×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 2500,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.30155.01",
+    "slug": "equsto-pimak-30155-01",
+    "baslik": "Duvar Tipi Filtreli Davlumbaz 3000×1500×500 mm",
+    "aile": "Duvar Tipi Filtreli Davlumbaz",
+    "aile_slug": "duvar-tipi-filtreli-davlumbaz",
+    "category": "duvar-tipi-filtreli-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 1250.0,
+    "ebat_mm": "3000x1500x500",
+    "olcu_etiket": "3000×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 3000,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.35155.01",
+    "slug": "equsto-pimak-35155-01",
+    "baslik": "Duvar Tipi Filtreli Davlumbaz 3500×1500×500 mm",
+    "aile": "Duvar Tipi Filtreli Davlumbaz",
+    "aile_slug": "duvar-tipi-filtreli-davlumbaz",
+    "category": "duvar-tipi-filtreli-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 1750.0,
+    "ebat_mm": "3500x1500x500",
+    "olcu_etiket": "3500×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 3500,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.40155.01",
+    "slug": "equsto-pimak-40155-01",
+    "baslik": "Duvar Tipi Filtreli Davlumbaz 4000×1500×500 mm",
+    "aile": "Duvar Tipi Filtreli Davlumbaz",
+    "aile_slug": "duvar-tipi-filtreli-davlumbaz",
+    "category": "duvar-tipi-filtreli-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 1920.0,
+    "ebat_mm": "4000x1500x500",
+    "olcu_etiket": "4000×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 4000,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.45155.01",
+    "slug": "equsto-pimak-45155-01",
+    "baslik": "Duvar Tipi Filtreli Davlumbaz 4500×1500×500 mm",
+    "aile": "Duvar Tipi Filtreli Davlumbaz",
+    "aile_slug": "duvar-tipi-filtreli-davlumbaz",
+    "category": "duvar-tipi-filtreli-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 2100.0,
+    "ebat_mm": "4500x1500x500",
+    "olcu_etiket": "4500×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 4500,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.50155.01",
+    "slug": "equsto-pimak-50155-01",
+    "baslik": "Duvar Tipi Filtreli Davlumbaz 5000×1500×500 mm",
+    "aile": "Duvar Tipi Filtreli Davlumbaz",
+    "aile_slug": "duvar-tipi-filtreli-davlumbaz",
+    "category": "duvar-tipi-filtreli-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 2280.0,
+    "ebat_mm": "5000x1500x500",
+    "olcu_etiket": "5000×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 5000,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.55155.01",
+    "slug": "equsto-pimak-55155-01",
+    "baslik": "Duvar Tipi Filtreli Davlumbaz 5500×1500×500 mm",
+    "aile": "Duvar Tipi Filtreli Davlumbaz",
+    "aile_slug": "duvar-tipi-filtreli-davlumbaz",
+    "category": "duvar-tipi-filtreli-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 2460.0,
+    "ebat_mm": "5500x1500x500",
+    "olcu_etiket": "5500×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 5500,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "PIMAK.60155.01",
+    "slug": "equsto-pimak-60155-01",
+    "baslik": "Duvar Tipi Filtreli Davlumbaz 6000×1500×500 mm",
+    "aile": "Duvar Tipi Filtreli Davlumbaz",
+    "aile_slug": "duvar-tipi-filtreli-davlumbaz",
+    "category": "duvar-tipi-filtreli-davlumbaz",
+    "pdf_page": 196,
+    "liste_fiyati_eur": 2640.0,
+    "ebat_mm": "6000x1500x500",
+    "olcu_etiket": "6000×1500×500 mm",
+    "olculer": {
+      "genislik_mm": 6000,
+      "derinlik_mm": 1500,
+      "yukseklik_mm": 500
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p196-prod00.jpeg"
+  },
+  {
+    "urun_kodu": "DR04-503030.00",
+    "slug": "equsto-dr04-503030-00",
+    "baslik": "Duvar Rafı 500×300×300 mm",
+    "aile": "Duvar Rafı",
+    "aile_slug": "duvar-rafi",
+    "category": "depolama-raflari",
+    "pdf_page": 197,
+    "liste_fiyati_eur": 160.0,
+    "ebat_mm": "500x300x300",
+    "olcu_etiket": "500×300×300 mm",
+    "olculer": {
+      "genislik_mm": 500,
+      "derinlik_mm": 300,
+      "yukseklik_mm": 300
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p197-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "DR04-703030.00",
+    "slug": "equsto-dr04-703030-00",
+    "baslik": "Duvar Rafı 700×300×300 mm",
+    "aile": "Duvar Rafı",
+    "aile_slug": "duvar-rafi",
+    "category": "depolama-raflari",
+    "pdf_page": 197,
+    "liste_fiyati_eur": 170.0,
+    "ebat_mm": "700x300x300",
+    "olcu_etiket": "700×300×300 mm",
+    "olculer": {
+      "genislik_mm": 700,
+      "derinlik_mm": 300,
+      "yukseklik_mm": 300
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p197-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "DR04-903030.00",
+    "slug": "equsto-dr04-903030-00",
+    "baslik": "Duvar Rafı 900×300×300 mm",
+    "aile": "Duvar Rafı",
+    "aile_slug": "duvar-rafi",
+    "category": "depolama-raflari",
+    "pdf_page": 197,
+    "liste_fiyati_eur": 180.0,
+    "ebat_mm": "900x300x300",
+    "olcu_etiket": "900×300×300 mm",
+    "olculer": {
+      "genislik_mm": 900,
+      "derinlik_mm": 300,
+      "yukseklik_mm": 300
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p197-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "DR04-1203030.00",
+    "slug": "equsto-dr04-1203030-00",
+    "baslik": "Duvar Rafı 1200×300×300 mm",
+    "aile": "Duvar Rafı",
+    "aile_slug": "duvar-rafi",
+    "category": "depolama-raflari",
+    "pdf_page": 197,
+    "liste_fiyati_eur": 190.0,
+    "ebat_mm": "1200x300x300",
+    "olcu_etiket": "1200×300×300 mm",
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 300,
+      "yukseklik_mm": 300
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p197-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "DR04-1403030.00",
+    "slug": "equsto-dr04-1403030-00",
+    "baslik": "Duvar Rafı 1400×300×300 mm",
+    "aile": "Duvar Rafı",
+    "aile_slug": "duvar-rafi",
+    "category": "depolama-raflari",
+    "pdf_page": 197,
+    "liste_fiyati_eur": 200.0,
+    "ebat_mm": "1400x300x300",
+    "olcu_etiket": "1400×300×300 mm",
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 300,
+      "yukseklik_mm": 300
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p197-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "DR04-1603030.00",
+    "slug": "equsto-dr04-1603030-00",
+    "baslik": "Duvar Rafı 1600×300×300 mm",
+    "aile": "Duvar Rafı",
+    "aile_slug": "duvar-rafi",
+    "category": "depolama-raflari",
+    "pdf_page": 197,
+    "liste_fiyati_eur": 210.0,
+    "ebat_mm": "1600x300x300",
+    "olcu_etiket": "1600×300×300 mm",
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 300,
+      "yukseklik_mm": 300
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p197-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "DR04-1803030.00",
+    "slug": "equsto-dr04-1803030-00",
+    "baslik": "Duvar Rafı 1800×300×300 mm",
+    "aile": "Duvar Rafı",
+    "aile_slug": "duvar-rafi",
+    "category": "depolama-raflari",
+    "pdf_page": 197,
+    "liste_fiyati_eur": 220.0,
+    "ebat_mm": "1800x300x300",
+    "olcu_etiket": "1800×300×300 mm",
+    "olculer": {
+      "genislik_mm": 1800,
+      "derinlik_mm": 300,
+      "yukseklik_mm": 300
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p197-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "DR04-2003030.00",
+    "slug": "equsto-dr04-2003030-00",
+    "baslik": "Duvar Rafı 2000×300×300 mm",
+    "aile": "Duvar Rafı",
+    "aile_slug": "duvar-rafi",
+    "category": "depolama-raflari",
+    "pdf_page": 197,
+    "liste_fiyati_eur": 230.0,
+    "ebat_mm": "2000x300x300",
+    "olcu_etiket": "2000×300×300 mm",
+    "olculer": {
+      "genislik_mm": 2000,
+      "derinlik_mm": 300,
+      "yukseklik_mm": 300
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p197-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "TB04-503030.00",
+    "slug": "equsto-tb04-503030-00",
+    "baslik": "Süzme Duvar Rafı 500×300×300 mm",
+    "aile": "Süzme Duvar Rafı",
+    "aile_slug": "suzme-duvar-rafi",
+    "category": "depolama-raflari",
+    "pdf_page": 197,
+    "liste_fiyati_eur": 80.0,
+    "ebat_mm": "500x300x300",
+    "olcu_etiket": "500×300×300 mm",
+    "olculer": {
+      "genislik_mm": 500,
+      "derinlik_mm": 300,
+      "yukseklik_mm": 300
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p197-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "TB04-703030.00",
+    "slug": "equsto-tb04-703030-00",
+    "baslik": "Süzme Duvar Rafı 700×300×300 mm",
+    "aile": "Süzme Duvar Rafı",
+    "aile_slug": "suzme-duvar-rafi",
+    "category": "depolama-raflari",
+    "pdf_page": 197,
+    "liste_fiyati_eur": 100.0,
+    "ebat_mm": "700x300x300",
+    "olcu_etiket": "700×300×300 mm",
+    "olculer": {
+      "genislik_mm": 700,
+      "derinlik_mm": 300,
+      "yukseklik_mm": 300
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p197-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "TB04-903030.00",
+    "slug": "equsto-tb04-903030-00",
+    "baslik": "Süzme Duvar Rafı 900×300×300 mm",
+    "aile": "Süzme Duvar Rafı",
+    "aile_slug": "suzme-duvar-rafi",
+    "category": "depolama-raflari",
+    "pdf_page": 197,
+    "liste_fiyati_eur": 110.0,
+    "ebat_mm": "900x300x300",
+    "olcu_etiket": "900×300×300 mm",
+    "olculer": {
+      "genislik_mm": 900,
+      "derinlik_mm": 300,
+      "yukseklik_mm": 300
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p197-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "TB04-1203030.00",
+    "slug": "equsto-tb04-1203030-00",
+    "baslik": "Süzme Duvar Rafı 1200×300×300 mm",
+    "aile": "Süzme Duvar Rafı",
+    "aile_slug": "suzme-duvar-rafi",
+    "category": "depolama-raflari",
+    "pdf_page": 197,
+    "liste_fiyati_eur": 130.0,
+    "ebat_mm": "1200x300x300",
+    "olcu_etiket": "1200×300×300 mm",
+    "olculer": {
+      "genislik_mm": 1200,
+      "derinlik_mm": 300,
+      "yukseklik_mm": 300
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p197-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "TB04-1403030.00",
+    "slug": "equsto-tb04-1403030-00",
+    "baslik": "Süzme Duvar Rafı 1400×300×300 mm",
+    "aile": "Süzme Duvar Rafı",
+    "aile_slug": "suzme-duvar-rafi",
+    "category": "depolama-raflari",
+    "pdf_page": 197,
+    "liste_fiyati_eur": 145.0,
+    "ebat_mm": "1400x300x300",
+    "olcu_etiket": "1400×300×300 mm",
+    "olculer": {
+      "genislik_mm": 1400,
+      "derinlik_mm": 300,
+      "yukseklik_mm": 300
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p197-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "TB04-1603030.00",
+    "slug": "equsto-tb04-1603030-00",
+    "baslik": "Süzme Duvar Rafı 1600×300×300 mm",
+    "aile": "Süzme Duvar Rafı",
+    "aile_slug": "suzme-duvar-rafi",
+    "category": "depolama-raflari",
+    "pdf_page": 197,
+    "liste_fiyati_eur": 160.0,
+    "ebat_mm": "1600x300x300",
+    "olcu_etiket": "1600×300×300 mm",
+    "olculer": {
+      "genislik_mm": 1600,
+      "derinlik_mm": 300,
+      "yukseklik_mm": 300
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p197-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "TB04-1803030.00",
+    "slug": "equsto-tb04-1803030-00",
+    "baslik": "Süzme Duvar Rafı 1800×300×300 mm",
+    "aile": "Süzme Duvar Rafı",
+    "aile_slug": "suzme-duvar-rafi",
+    "category": "depolama-raflari",
+    "pdf_page": 197,
+    "liste_fiyati_eur": 175.0,
+    "ebat_mm": "1800x300x300",
+    "olcu_etiket": "1800×300×300 mm",
+    "olculer": {
+      "genislik_mm": 1800,
+      "derinlik_mm": 300,
+      "yukseklik_mm": 300
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p197-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "TB04-2003030.00",
+    "slug": "equsto-tb04-2003030-00",
+    "baslik": "Süzme Duvar Rafı 2000×300×300 mm",
+    "aile": "Süzme Duvar Rafı",
+    "aile_slug": "suzme-duvar-rafi",
+    "category": "depolama-raflari",
+    "pdf_page": 197,
+    "liste_fiyati_eur": 190.0,
+    "ebat_mm": "2000x300x300",
+    "olcu_etiket": "2000×300×300 mm",
+    "olculer": {
+      "genislik_mm": 2000,
+      "derinlik_mm": 300,
+      "yukseklik_mm": 300
+    },
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p197-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "MR38-904060.00",
+    "slug": "equsto-mr38-904060-00",
+    "baslik": "Süzme Duvar Rafı",
+    "aile": "Süzme Duvar Rafı",
+    "aile_slug": "suzme-duvar-rafi",
+    "category": "depolama-raflari",
+    "pdf_page": 197,
+    "liste_fiyati_eur": 510.0,
+    "ebat_mm": "",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p197-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "MR38-1204060.00",
+    "slug": "equsto-mr38-1204060-00",
+    "baslik": "Süzme Duvar Rafı",
+    "aile": "Süzme Duvar Rafı",
+    "aile_slug": "suzme-duvar-rafi",
+    "category": "depolama-raflari",
+    "pdf_page": 197,
+    "liste_fiyati_eur": 570.0,
+    "ebat_mm": "",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p197-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "MR38-1404060.00",
+    "slug": "equsto-mr38-1404060-00",
+    "baslik": "Süzme Duvar Rafı",
+    "aile": "Süzme Duvar Rafı",
+    "aile_slug": "suzme-duvar-rafi",
+    "category": "depolama-raflari",
+    "pdf_page": 197,
+    "liste_fiyati_eur": 610.0,
+    "ebat_mm": "",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p197-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "MR38-1604060.00",
+    "slug": "equsto-mr38-1604060-00",
+    "baslik": "Süzme Duvar Rafı",
+    "aile": "Süzme Duvar Rafı",
+    "aile_slug": "suzme-duvar-rafi",
+    "category": "depolama-raflari",
+    "pdf_page": 197,
+    "liste_fiyati_eur": 660.0,
+    "ebat_mm": "",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p197-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "MR38-1804060.00",
+    "slug": "equsto-mr38-1804060-00",
+    "baslik": "Süzme Duvar Rafı",
+    "aile": "Süzme Duvar Rafı",
+    "aile_slug": "suzme-duvar-rafi",
+    "category": "depolama-raflari",
+    "pdf_page": 197,
+    "liste_fiyati_eur": 700.0,
+    "ebat_mm": "",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p197-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "MR38-2004060.00",
+    "slug": "equsto-mr38-2004060-00",
+    "baslik": "Süzme Duvar Rafı",
+    "aile": "Süzme Duvar Rafı",
+    "aile_slug": "suzme-duvar-rafi",
+    "category": "depolama-raflari",
+    "pdf_page": 197,
+    "liste_fiyati_eur": 740.0,
+    "ebat_mm": "",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p197-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "MR38-1.904060.10",
+    "slug": "equsto-mr38-1-904060-10",
+    "baslik": "Süzme Duvar Rafı",
+    "aile": "Süzme Duvar Rafı",
+    "aile_slug": "suzme-duvar-rafi",
+    "category": "depolama-raflari",
+    "pdf_page": 197,
+    "liste_fiyati_eur": 560.0,
+    "ebat_mm": "",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p197-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "MR38-1.1204060.10",
+    "slug": "equsto-mr38-1-1204060-10",
+    "baslik": "Süzme Duvar Rafı",
+    "aile": "Süzme Duvar Rafı",
+    "aile_slug": "suzme-duvar-rafi",
+    "category": "depolama-raflari",
+    "pdf_page": 197,
+    "liste_fiyati_eur": 620.0,
+    "ebat_mm": "",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p197-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "MR38-1.1404060.10",
+    "slug": "equsto-mr38-1-1404060-10",
+    "baslik": "Süzme Duvar Rafı",
+    "aile": "Süzme Duvar Rafı",
+    "aile_slug": "suzme-duvar-rafi",
+    "category": "depolama-raflari",
+    "pdf_page": 197,
+    "liste_fiyati_eur": 660.0,
+    "ebat_mm": "",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p197-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "MR38-1.1604060.10",
+    "slug": "equsto-mr38-1-1604060-10",
+    "baslik": "Süzme Duvar Rafı",
+    "aile": "Süzme Duvar Rafı",
+    "aile_slug": "suzme-duvar-rafi",
+    "category": "depolama-raflari",
+    "pdf_page": 197,
+    "liste_fiyati_eur": 700.0,
+    "ebat_mm": "",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p197-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "MR38-1.1804060.10",
+    "slug": "equsto-mr38-1-1804060-10",
+    "baslik": "Süzme Duvar Rafı",
+    "aile": "Süzme Duvar Rafı",
+    "aile_slug": "suzme-duvar-rafi",
+    "category": "depolama-raflari",
+    "pdf_page": 197,
+    "liste_fiyati_eur": 740.0,
+    "ebat_mm": "",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p197-prod01.jpeg"
+  },
+  {
+    "urun_kodu": "MR38-1.2004060.10",
+    "slug": "equsto-mr38-1-2004060-10",
+    "baslik": "Süzme Duvar Rafı",
+    "aile": "Süzme Duvar Rafı",
+    "aile_slug": "suzme-duvar-rafi",
+    "category": "depolama-raflari",
+    "pdf_page": 197,
+    "liste_fiyati_eur": 780.0,
+    "ebat_mm": "",
+    "temel_ozellikler": [],
+    "gorsel_yerel": "media/pdf-p188-197/p197-prod01.jpeg"
+  }
+]
