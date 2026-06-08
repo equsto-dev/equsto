@@ -1617,6 +1617,11 @@ body.bd-page.besos.eq-shop .eq-mfoot-powered {
 body.bd-page.besos.eq-shop .eq-mfoot-vitrum-name {
   color: #c5a046;
   font-weight: 600;
+  text-decoration: none;
+}
+body.bd-page.besos.eq-shop .eq-mfoot-vitrum-name:hover {
+  color: #d4b55a;
+  text-decoration: underline;
 }
 body.bd-page.besos.eq-shop .eq-mfoot-logo {
   display: inline-flex;

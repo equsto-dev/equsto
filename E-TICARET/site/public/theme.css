@@ -4736,6 +4736,11 @@ body.bd-page.besos.eq-shop .eq-mfoot-powered {
 body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-vitrum-name {
   color: #c5a046;
   font-weight: 600;
+  text-decoration: none;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-vitrum-name:hover {
+  color: #d4b55a;
+  text-decoration: underline;
 }
 body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-legal {
   background: #011e41;
