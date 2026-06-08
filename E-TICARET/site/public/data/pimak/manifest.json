@@ -1,23 +1,23 @@
 {
-  "generated": "2026-06-08T10:32:52.894Z",
+  "generated": "2026-06-08T11:16:13.463Z",
   "brand": "Pimak",
   "dryRun": false,
   "kur_eur_try": 53.5921,
   "tcmb_fallback": false,
   "bayi_iskonto": 0.47,
   "odeme_carpani": 0.53,
-  "equsto_kar_oran": 0.08,
+  "equsto_kar_oran": 0.05,
   "buckets": {
     "hazirlik": 40,
-    "servis": 9,
+    "selfservis": 24,
     "tepsi": 30,
     "kafeterya": 20,
     "pilic": 44,
     "unseker": 4
   },
-  "imported": 147,
-  "with_image": 147,
-  "with_price": 141,
+  "imported": 162,
+  "with_image": 162,
+  "with_price": 156,
   "without_price": 6,
   "price_file": "scripts\\data\\pimak-fiyat.json",
   "price_map_entries": 705,
@@ -25,7 +25,7 @@
   "manuel": 4,
   "depts": {
     "hazirlik": 40,
-    "servis": 9,
+    "market-reyon": 24,
     "araba": 34,
     "set-ustu-mutfak": 20,
     "pisirme": 44

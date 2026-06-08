@@ -194,7 +194,13 @@
     { tip: "balik-sarkuteri", dept: "market-reyon", label: "Balık & Şarküteri", search: "balik-sarkuteri|balık|balik|şarküteri|sarkuteri|sardunya|et|fish" },
     { tip: "camli-dolap", dept: "market-reyon", label: "Camlı Teşhir", search: "camli-dolap|camlı|camli|vitrin|teşhir buzdolab" },
     { tip: "set-ustu", dept: "market-reyon", label: "Set Üstü", search: "set-ustu|set üstü" },
-    { tip: "self-servis", dept: "market-reyon", label: "Self Servis", search: "self-servis|self servis" },
+    {
+      tip: "self-servis",
+      dept: "market-reyon",
+      label: "Self Servis",
+      search:
+        "self-servis|self servis|self-servis-hatti|e-ss37|be/m037|be1/m037|m037-|mx037|pvk|benmari|bain marie|kuver|nötr tezgah|notr tezgah|soğuk servis ünitesi|soguk servis unitesi|soğutmalı teşhir ünitesi|sogutmali teshir unitesi|servis hatlari|servis-hatlari",
+    },
     { tip: "icecek-vitrin", dept: "market-reyon", label: "İçecek & Süt", search: "icecek-vitrin|içecek|icecek|süt|sut|drink|milk" },
     { tip: "servis-gerecleri", dept: "set-ustu-mutfak", label: "Servis Gereçleri", search: "servis gereç" },
     { tip: "chafing-dish", dept: "set-ustu-mutfak", label: "Chafing Dishler", search: "chafing" },
@@ -928,6 +934,7 @@
     if (tile.id === "konveksiyonlu-firin" && isKombiFirinProduct(u)) return false;
 
     if (tile.id && cat === tile.id) return true;
+    if (tile.id === "self-servis" && cat === "self-servis-hatti") return true;
     if (tile.slug === "doner-ocaklari-" && DONER_CAT_SLUGS[u.c]) return true;
     if (tile.slug && (cat === tile.slug || u.c === tile.slug || u.category === tile.slug)) return true;
     if (tile.keys && tile.keys.length) {

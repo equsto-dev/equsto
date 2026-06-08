@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * PFOS/veri/pimak → public/data/dept/*.json + görseller
- * Fiyat: liste × 0,53 (bayi %47 iskonto) × 1,08 (%8 kar) → EUR; TCMB ile TL
+ * Fiyat: liste × 0,53 (bayi %47 iskonto) × 1,05 (%5 kar) → EUR; TCMB ile TL
  * Liste fiyatı yoksa fiyat_bekleniyor (Pimak sitesi "İletişim" döner).
  *
  *   node scripts/import-pimak.mjs
@@ -32,7 +32,7 @@ const BRAND_ID = "pimak";
 const KAYNAK = "pimak";
 const BAYI_ISKONTO = 0.47;
 const ODEME_CARPANI = 0.53;
-const KAR_ORAN = 0.08;
+const KAR_ORAN = 0.05;
 const KDV = Number(process.env.EQUSTO_KDV_ORAN || "20");
 const dryRun = process.argv.includes("--dry-run");
 
@@ -52,6 +52,15 @@ const HAZIRLIK_KAT = new Set([
 ]);
 const PILIC_KAT = new Set(["pilic-cevirme", "pilic-cevirme-makinesi"]);
 const SERVIS_KAT = new Set(["servis-hatlari"]);
+/** Pimak katalog s.180–185: Servis Hatları + Self Servis Üniteleri → Servis & Teşhir */
+const SERVIS_TESHIR_KOD_RE = [
+  /^E-SS37/i,
+  /^BE\/?M037-/i,
+  /^BE1\/M037-/i,
+  /^M037-\dSE$/i,
+  /^MX037-\d/i,
+  /^PVK\d+/i,
+];
 const TEPSI_KAT = new Set(["tepsi-tasima-arabalari"]);
 const UNSEKER_KAT = new Set(["un-ve-seker-arabalari"]);
 
@@ -121,6 +130,8 @@ function priceAliases(k) {
   if (/FRN-SMK/i.test(raw) || n.startsWith("FRN-SMK") || a.startsWith("FRN-SMK")) {
     out.push("FRN-SMK.G", "FRN-SMK.K");
   }
+  const mx = n.match(/^(MX037-\d+)/i);
+  if (mx) out.push(mx[1].toUpperCase());
   return [...new Set(out.filter(Boolean))];
 }
 
@@ -132,10 +143,21 @@ function lookupListe(priceMap, urunKodu) {
   return 0;
 }
 
+function isServisTeshirLine(d) {
+  const kod = normKod(d.urunKodu || "");
+  const ascii = asciiKod(d.urunKodu || "");
+  for (const re of SERVIS_TESHIR_KOD_RE) {
+    if (re.test(kod) || re.test(ascii)) return true;
+  }
+  return false;
+}
+
 function classifyBucket(d) {
   const kat = d.kategori?.slug || "";
   const hay = foldTr([d.baslik, d.slug, d.urunKodu, d.metaAciklama].join(" "));
   const kod = String(d.urunKodu || "");
+
+  if (isServisTeshirLine(d)) return "selfservis";
 
   if (PILIC_KAT.has(kat) || (/pilic|pilic/.test(hay) && !/pizza|lahmacun/.test(hay)))
     return "pilic";
@@ -162,12 +184,14 @@ function mapDept(bucket) {
   if (bucket === "pilic") return "pisirme";
   if (bucket === "kafeterya") return "set-ustu-mutfak";
   if (bucket === "hazirlik") return "hazirlik";
+  if (bucket === "selfservis") return "market-reyon";
   if (bucket === "servis") return "servis";
   if (bucket === "tepsi" || bucket === "unseker") return "araba";
   return "pisirme";
 }
 
 function mapCategory(d, bucket) {
+  if (bucket === "selfservis") return "self-servis-hatti";
   const kat = d.kategori?.slug;
   if (kat) return kat.slice(0, 72);
   return `${bucket}-${slugify(d.baslik || d.slug || "pimak")}`.slice(0, 72);
@@ -297,7 +321,7 @@ function toRow(d, bucket, priceMap, kur) {
   }
 
   const id = `${BRAND_ID}__${slug}`;
-  return {
+  const row = {
     id,
     dept,
     category,
@@ -322,6 +346,11 @@ function toRow(d, bucket, priceMap, kur) {
     kaynak_fiyat_listesi: px ? (d.liste_fiyati_eur ? "pimak-katalog" : "pimak-fiyat") : undefined,
     pimak_manuel: Boolean(d.kaynak_notu),
   };
+  if (bucket === "selfservis") {
+    row.tileId = "self-servis";
+    row.keywords = [BRAND, kod, "self-servis", "self servis", "Servis & Teşhir", category].filter(Boolean);
+  }
+  return row;
 }
 
 function isPimakRow(r) {
@@ -375,6 +404,7 @@ async function main() {
   for (const d of loadManualProducts()) ingest(d);
 
   const stats = {};
+  const touchedDepts = new Set();
   for (const [dept, rows] of byDept) {
     const file = path.join(DEPT_DIR, `${dept}.json`);
     let kept = [];
@@ -386,7 +416,25 @@ async function main() {
       fs.mkdirSync(DEPT_DIR, { recursive: true });
       fs.writeFileSync(file, JSON.stringify(merged), "utf8");
     }
+    touchedDepts.add(dept);
     stats[dept] = { added: rows.length, kept: kept.length, total: merged.length };
+  }
+
+  for (const file of fs.readdirSync(DEPT_DIR)) {
+    if (!file.endsWith(".json")) continue;
+    const dept = file.replace(/\.json$/, "");
+    if (touchedDepts.has(dept)) continue;
+    const fp = path.join(DEPT_DIR, file);
+    const arr = JSON.parse(fs.readFileSync(fp, "utf8"));
+    if (!arr.some(isPimakRow)) continue;
+    const cleaned = arr.filter((r) => !isPimakRow(r));
+    if (!dryRun) fs.writeFileSync(fp, JSON.stringify(cleaned), "utf8");
+    stats[dept] = {
+      added: 0,
+      kept: cleaned.length,
+      total: cleaned.length,
+      pimak_removed: arr.length - cleaned.length,
+    };
   }
 
   const report = {
