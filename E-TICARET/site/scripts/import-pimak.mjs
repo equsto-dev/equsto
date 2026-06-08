@@ -88,6 +88,50 @@ function loadPriceMap() {
   return map;
 }
 
+function asciiKod(k) {
+  return normKod(
+    foldTr(String(k || ""))
+      .replace(/İ/g, "I")
+      .replace(/ı/g, "I"),
+  );
+}
+
+function priceAliases(k) {
+  const raw = String(k || "");
+  const n = normKod(raw);
+  const a = asciiKod(raw);
+  const out = [n, a];
+  if (n.startsWith("PI/")) out.push(n.slice(3));
+  out.push(
+    n.replace(/\//g, "-"),
+    n.replace(/\./g, "-"),
+    n.replace(/\./g, ""),
+    n.replace(/\//g, ""),
+    n.replace(/-/g, "."),
+    a.replace(/\//g, "-"),
+    a.replace(/\./g, "-"),
+    a.replace(/-/g, "."),
+  );
+  const m = n.match(/^([A-Z]+\d+[A-Z0-9./+\-]*?)(?:[-/]([EGR]))$/i);
+  if (m) out.push(normKod(m[1]), normKod(`${m[1]}-${m[2]}`));
+  if (/^PTS\d{2}-D[Iİ]J[Iİ]TAL$/i.test(n) || /^PTS\d{2}-D[Iİ]J[Iİ]TAL$/i.test(a)) {
+    const pts = (a || n).replace(/D[Iİ]J[Iİ]TAL/i, "DIGITAL");
+    out.push(pts);
+  }
+  if (/FRN-SMK/i.test(raw) || n.startsWith("FRN-SMK") || a.startsWith("FRN-SMK")) {
+    out.push("FRN-SMK.G", "FRN-SMK.K");
+  }
+  return [...new Set(out.filter(Boolean))];
+}
+
+function lookupListe(priceMap, urunKodu) {
+  for (const a of priceAliases(urunKodu)) {
+    const v = priceMap.get(a);
+    if (v > 0) return v;
+  }
+  return 0;
+}
+
 function classifyBucket(d) {
   const kat = d.kategori?.slug || "";
   const hay = foldTr([d.baslik, d.slug, d.urunKodu, d.metaAciklama].join(" "));
@@ -241,8 +285,7 @@ function toRow(d, bucket, priceMap, kur) {
 
   let liste =
     Number(d.liste_fiyati_eur) ||
-    priceMap.get(kod) ||
-    priceMap.get(normKod(d.urunKodu?.split("/")[0])) ||
+    lookupListe(priceMap, d.urunKodu || kod) ||
     parseListeFromTable(d);
   let px = null;
   let price = "Teklif için iletişim";
