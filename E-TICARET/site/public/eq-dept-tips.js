@@ -213,7 +213,6 @@
     { tip: "caglayan-krizantem", dept: "market-reyon", label: "Krizantem", search: "krizantem" },
     { tip: "soguk-teshir", dept: "market-reyon", label: "Soğuk Teşhir", search: "soguk-teshir|saladbar|salad bar|soğuk büfe|soguk bufe|büfe" },
     { tip: "dondurma-reyon", dept: "market-reyon", label: "Dondurma Reyonu", search: "dondurma-reyon|dondurma|freezer|frozen" },
-    { tip: "balik-sarkuteri", dept: "market-reyon", label: "Balık & Şarküteri", search: "balik-sarkuteri|balık|balik|şarküteri|sarkuteri|sardunya|et|fish" },
     { tip: "camli-dolap", dept: "market-reyon", label: "Camlı Teşhir", search: "camli-dolap|camlı|camli|vitrin|teşhir buzdolab" },
     { tip: "set-ustu", dept: "market-reyon", label: "Set Üstü", search: "set-ustu|set üstü" },
     {
@@ -269,7 +268,7 @@
   var labelIndex = {};
 
   /** Market reyon PLP — soğutmalı reyonlarda «Sıcak Teşhir» filtresi yok (eski geniş eşleşme SICAKLIK vb.). */
-  var MARKET_REYON_HIDDEN_TIPS = { "sicak-teshir": true };
+  var MARKET_REYON_HIDDEN_TIPS = { "sicak-teshir": true, "balik-sarkuteri": true };
 
   function filterMarketReyonTiles(tiles) {
     return (tiles || []).filter(function (t) {
