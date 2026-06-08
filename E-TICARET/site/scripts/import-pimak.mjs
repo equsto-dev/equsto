@@ -64,6 +64,14 @@ const SERVIS_TESHIR_KOD_RE = [
   /^MX037-\d/i,
   /^PVK\d+/i,
 ];
+/** Pimak PDF s.180 — web sitesi E-SS37-10 için 200 cm yazar; liste tablosu 180 cm */
+const PDF_OLCU_CM = {
+  "E-SS37-6": [120, 70, 85],
+  "E-SS37-8": [150, 70, 85],
+  "E-SS37-10": [180, 70, 85],
+  "E-SS37-3": [100, 70, 160],
+  "E-SS37-4": [150, 70, 160],
+};
 /** Pimak katalog s.100–130 hazırlık ekipmanları — kategori alanı olmayan ürün sayfaları */
 const HAZIRLIK_KOD_RE = [
   /^BKM/i,
@@ -341,6 +349,14 @@ function pricingFromListe(listeEur, kur) {
 }
 
 function parsePimakOlculer(d, kod) {
+  const pdfCm = PDF_OLCU_CM[String(kod || "").toUpperCase()];
+  if (pdfCm) {
+    const [w, dep, h] = pdfCm;
+    return {
+      olcu_etiket: `${w}×${dep}×${h} cm`,
+      olculer: { genislik_mm: w * 10, derinlik_mm: dep * 10, yukseklik_mm: h * 10 },
+    };
+  }
   const rows = d.teknikDetaylar?.satirlar || [];
   let row = rows.find((r) => normKod(r["Ürün Kodu"] || "") === normKod(kod));
   if (!row && rows.length === 1) row = rows[0];
