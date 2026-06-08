@@ -39,16 +39,19 @@ const dryRun = process.argv.includes("--dry-run");
 const KAFETERYA_KAT = new Set(["kafeterya-ekipmanlari", "kumpir-firini"]);
 const HAZIRLIK_KAT = new Set([
   "endustriyel-kiyma-makinesi",
-  "makarna-haslama-makinesi",
   "hamur-yogurma-makinesi",
   "patates-dograma-makinesi",
   "endustriyel-mikser",
   "set-ustu-mutfak-ekipmanlari",
-  "pastane-ekipmanlari",
   "humus-makinesi",
   "et-ve-kemik-testeresi",
   "doner-eti-acma-makinesi",
+]);
+/** Fırın + pişirici — hazırlık değil, pişirme dept */
+const PISIRME_KAT = new Set([
+  "makarna-haslama-makinesi",
   "pisirme-ekipmanlari",
+  "pastane-ekipmanlari",
 ]);
 const PILIC_KAT = new Set(["pilic-cevirme", "pilic-cevirme-makinesi"]);
 const SERVIS_KAT = new Set(["servis-hatlari"]);
@@ -60,6 +63,33 @@ const SERVIS_TESHIR_KOD_RE = [
   /^M037-\dSE$/i,
   /^MX037-\d/i,
   /^PVK\d+/i,
+];
+/** Pimak katalog s.100–130 hazırlık ekipmanları — kategori alanı olmayan ürün sayfaları */
+const HAZIRLIK_KOD_RE = [
+  /^BKM/i,
+  /^BPKM/i,
+  /^BDH/i,
+  /^BSZK/i,
+  /^BZK$/i,
+  /^BKD/i,
+  /^BKT/i,
+  /^BKTA/i,
+  /^BTM/i,
+  /^PMK-(ET|ST)/i,
+  /^BKS/i,
+  /^BKB$/i,
+  /^BKK/i,
+  /^BHY/i,
+  /^BSH/i,
+  /^BM\./i,
+  /^BHKT/i,
+  /^BHA/i,
+  /^BPS/i,
+  /^BSU$/i,
+  /^BSA$/i,
+  /^BPD/i,
+  /^BSD$/i,
+  /^BED/i,
 ];
 const TEPSI_KAT = new Set(["tepsi-tasima-arabalari"]);
 const UNSEKER_KAT = new Set(["un-ve-seker-arabalari"]);
@@ -132,6 +162,10 @@ function priceAliases(k) {
   }
   const mx = n.match(/^(MX037-\d+)/i);
   if (mx) out.push(mx[1].toUpperCase());
+  if (n === "BPKM.42SA") out.push("BPKM.42S.A", "BPKM.42S-A");
+  if (n === "BPKM.42S.A" || n === "BPKM.42S-A") out.push("BPKM.42SA");
+  if (n === "BPKM.32CK") out.push("BPKM.32C");
+  if (n === "BPKM.32C") out.push("BPKM.32CK");
   return [...new Set(out.filter(Boolean))];
 }
 
@@ -143,6 +177,17 @@ function lookupListe(priceMap, urunKodu) {
   return 0;
 }
 
+function isPisirmeCookerOrOven(d) {
+  const hay = foldTr([d.baslik, d.slug, d.urunKodu, d.metaAciklama].join(" "));
+  const kod = normKod(d.urunKodu || "");
+  if (/konveksiyon|patisserie|tutsuleme|tütsüleme/i.test(hay)) return true;
+  if (/\bfirin\b|\bfırın\b/i.test(hay)) return true;
+  if (/makarna\s*ha[sş]lama|makarna\s*pis/i.test(hay)) return true;
+  if (/^PTS|^DKFE|^FRN-SMK/i.test(kod)) return true;
+  if (kod === "M066" || /M184/i.test(kod)) return true;
+  return false;
+}
+
 function isServisTeshirLine(d) {
   const kod = normKod(d.urunKodu || "");
   const ascii = asciiKod(d.urunKodu || "");
@@ -150,6 +195,33 @@ function isServisTeshirLine(d) {
     if (re.test(kod) || re.test(ascii)) return true;
   }
   return false;
+}
+
+function isHazirlikEquipment(d) {
+  const kod = normKod(d.urunKodu || "");
+  const ascii = asciiKod(d.urunKodu || "");
+  for (const re of HAZIRLIK_KOD_RE) {
+    if (re.test(kod) || re.test(ascii)) return true;
+  }
+  const hay = foldTr([d.baslik, d.slug, d.metaAciklama].join(" "));
+  if (/kiyma|kıyma|humus|humus|hamur|kofte|köfte|kemik test|sebze dog|patates|soğan|sogan|ekmek dilim/i.test(hay))
+    return true;
+  return false;
+}
+
+function mapHazirlikCategory(d) {
+  const kod = normKod(d.urunKodu || "");
+  if (/^BKM|^BPKM/i.test(kod)) return "endustriyel-kiyma-makinesi";
+  if (/^BDH/i.test(kod)) return "humus-makinesi";
+  if (/^BKT|^BKTA/i.test(kod)) return "et-ve-kemik-testeresi";
+  if (/^PMK/i.test(kod)) return "doner-eti-acma-makinesi";
+  if (/^BHY|^BSH|^BHA|^BHKT/i.test(kod)) return "hamur-yogurma-makinesi";
+  if (/^BM\./i.test(kod)) return "endustriyel-mikser";
+  if (/^BPS|^BSU|^BSA|^BPD|^BSD|^BED/i.test(kod)) return "patates-dograma-makinesi";
+  if (/^BKS|^BKB|^BKK|^BTM|^BKD|^BSZK|^BZK/i.test(kod)) return "set-ustu-mutfak-ekipmanlari";
+  const kat = d.kategori?.slug || "";
+  if (HAZIRLIK_KAT.has(kat)) return kat;
+  return "set-ustu-mutfak-ekipmanlari";
 }
 
 function classifyBucket(d) {
@@ -163,7 +235,8 @@ function classifyBucket(d) {
     return "pilic";
   if (KAFETERYA_KAT.has(kat) || /\b(tost|kumpir|krep|waffle|portatif-mini-firin)\b/.test(hay))
     return "kafeterya";
-  if (HAZIRLIK_KAT.has(kat)) return "hazirlik";
+  if (PISIRME_KAT.has(kat) || isPisirmeCookerOrOven(d)) return "pisirme";
+  if (HAZIRLIK_KAT.has(kat) || isHazirlikEquipment(d)) return "hazirlik";
   if (SERVIS_KAT.has(kat)) return "servis";
   if (
     TEPSI_KAT.has(kat) ||
@@ -181,7 +254,7 @@ function classifyBucket(d) {
 }
 
 function mapDept(bucket) {
-  if (bucket === "pilic") return "pisirme";
+  if (bucket === "pilic" || bucket === "pisirme") return "pisirme";
   if (bucket === "kafeterya") return "set-ustu-mutfak";
   if (bucket === "hazirlik") return "hazirlik";
   if (bucket === "selfservis") return "market-reyon";
@@ -192,6 +265,17 @@ function mapDept(bucket) {
 
 function mapCategory(d, bucket) {
   if (bucket === "selfservis") return "self-servis-hatti";
+  if (bucket === "pisirme") {
+    const hay = foldTr([d.baslik, d.slug, d.urunKodu].join(" "));
+    const kod = normKod(d.urunKodu || "");
+    if (/makarna\s*ha[sş]lama|makarna\s*pis/i.test(hay) || kod === "M066" || /M184/i.test(kod))
+      return "makarna-haslama-makinesi";
+    if (/konveksiyon/i.test(hay) || /^DKFE/i.test(kod)) return "konveksiyonlu-firin";
+    if (/tutsuleme|tütsüleme|komur|kömür/i.test(hay) || /^FRN/i.test(kod)) return "komurlu-firin";
+    if (/patisserie|pastane/i.test(hay) || /^PTS/i.test(kod)) return "firinlar";
+    if (/\bfirin\b|\bfırın\b/i.test(hay)) return "firinlar";
+  }
+  if (bucket === "hazirlik") return mapHazirlikCategory(d).slice(0, 72);
   const kat = d.kategori?.slug;
   if (kat) return kat.slice(0, 72);
   return `${bucket}-${slugify(d.baslik || d.slug || "pimak")}`.slice(0, 72);
@@ -242,7 +326,9 @@ function parsePimakOlculer(d, kod) {
   const rows = d.teknikDetaylar?.satirlar || [];
   let row = rows.find((r) => normKod(r["Ürün Kodu"] || "") === normKod(kod));
   if (!row && rows.length === 1) row = rows[0];
-  const ebat = String(row?.["Ebat (cm)"] || row?.Ebat || "").trim();
+  const ebatMm = String(row?.["Ebat (mm)"] || "").trim();
+  const ebatCm = String(row?.["Ebat (cm)"] || row?.Ebat || "").trim();
+  const ebat = ebatMm || ebatCm;
   if (!ebat) return null;
   const m = ebat.match(/(\d{2,4})\s*[xX×]\s*(\d{2,4})\s*[xX×]\s*(\d{2,4})/);
   if (!m) return null;
@@ -250,6 +336,12 @@ function parsePimakOlculer(d, kod) {
   const dep = Number(m[2]);
   const h = Number(m[3]);
   if (!w || !dep || !h) return null;
+  if (ebatMm) {
+    return {
+      olcu_etiket: `${w}×${dep}×${h} mm`,
+      olculer: { genislik_mm: w, derinlik_mm: dep, yukseklik_mm: h },
+    };
+  }
   return {
     olcu_etiket: `${w}×${dep}×${h} cm`,
     olculer: { genislik_mm: w * 10, derinlik_mm: dep * 10, yukseklik_mm: h * 10 },
