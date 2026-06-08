@@ -53,7 +53,7 @@ YASAK (onay olmadan):
   cd PFOS/veri/pimak && python verify-spot-check.py
 
 ── Cache bust ─────────────────────────────────────────────────────────────
-  • SHOP_ASSET_V = 20260608pimak-full-pdf-fiyat
+  • SHOP_ASSET_V = 20260608inoksan-tezgah-self-servis
 
 ── Cursor ─────────────────────────────────────────────────────────────────
   .cursor/rules/pimak-fiyat-pdf-kilit.mdc
