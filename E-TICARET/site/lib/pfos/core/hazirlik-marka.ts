@@ -14,7 +14,7 @@ export const HAZIRLIK_TIP_KODLARI = new Set([
   "meyve_sikacagi",
 ]);
 
-function norm(s: string): string {
+function norm(s: string | null | undefined): string {
   return String(s ?? "")
     .toLocaleLowerCase("tr")
     .normalize("NFD")

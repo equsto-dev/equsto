@@ -19,7 +19,7 @@ import { resolveTeklifMarka } from "../core/catalog-enrich";
 import {
   normalizePfosGorselUrl,
   oztiWebImageRelFromSku,
-} from "../core/katalog-gorsel";
+} from "../core/katalog-gorsel-url";
 import { displayIsimFromSablon } from "../core/ozel-imalat";
 import { sanitizeDavlumbazOlcu } from "./davlumbaz-olcu";
 import { repairPfosDisplayText } from "@/lib/utf8/repair-turkish-fffd";

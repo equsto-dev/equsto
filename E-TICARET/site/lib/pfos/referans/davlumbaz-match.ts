@@ -133,9 +133,7 @@ export async function matchDavlumbazByReferans(
   const olcuDisplay =
     toOlcuMmDisplay(
       sanitizeDavlumbazOlcu(isim, olcuRaw, urunTipi) ?? olcuRaw,
-    ) ??
-    olcuRaw ||
-    null;
+    ) ?? (olcuRaw || null);
 
   const tip = parseDavlumbazTip(isim);
   const target = dimsFromText(olcuRaw);

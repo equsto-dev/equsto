@@ -8,7 +8,7 @@ export const SENOX_VAKUM_TIP_KODU = "vakum_makinesi";
 /** Şenox fiyat listesi (ekipmanlar.json yüklenene kadar) */
 export const SENOX_CATALOG_REL = "fiyat-listeleri/senox/2026-1/catalog.json";
 
-function norm(s: string): string {
+function norm(s: string | null | undefined): string {
   return String(s ?? "")
     .toLocaleLowerCase("tr")
     .normalize("NFD")

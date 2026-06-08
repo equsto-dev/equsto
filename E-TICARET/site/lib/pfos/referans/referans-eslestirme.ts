@@ -300,26 +300,31 @@ function inferFamilyTip(isim: string, poz: string): string {
   return inferUrunTipiFromReferansSatir(satir);
 }
 
-async function matchByExplicitSku(
-  sku: string,
-): Promise<EslesmisUrun | null> {
+async function findAdminRowBySku(sku: string): Promise<AdminUrunRow | null> {
   const needle = norm(sku);
   if (!needle) return null;
   const rows = (await loadLegacyCatalogRows()).filter(
     (r) => r.durum === "aktif" && r.fiyat_tl > 0,
   );
   const exact = rows.find((r) => norm(r.sku ?? "") === needle);
-  if (exact) return rowToEslesmis(exact);
+  if (exact) return exact;
 
   const prefixHits = rows.filter((r) => norm(r.sku ?? "").startsWith(needle));
-  if (prefixHits.length === 1) return rowToEslesmis(prefixHits[0]);
+  if (prefixHits.length === 1) return prefixHits[0];
   if (prefixHits.length > 1) {
     prefixHits.sort(
       (a, b) => norm(a.sku ?? "").length - norm(b.sku ?? "").length,
     );
-    return rowToEslesmis(prefixHits[0]);
+    return prefixHits[0];
   }
   return null;
+}
+
+async function matchByExplicitSku(
+  sku: string,
+): Promise<EslesmisUrun | null> {
+  const row = await findAdminRowBySku(sku);
+  return row ? rowToEslesmis(row) : null;
 }
 
 /** Doğrulanmış tip_kodu → SKU (pfos-tip-shop-links) — yalnızca referans urunTipi ile */
@@ -372,9 +377,9 @@ async function matchByTipShopLink(
   const linkMarka = link.marka ?? (hazirlik ? HAZIRLIK_MARKA : undefined);
 
   if (link.sku) {
-    const bySku = await matchByExplicitSku(link.sku);
-    if (bySku && !referansKatalogUyumsuz(input.isim, bySku.ad, input.notlar)) {
-      return katalogRowToEslesmis(bySku, {
+    const byRow = await findAdminRowBySku(link.sku);
+    if (byRow && !referansKatalogUyumsuz(input.isim, byRow.ad, input.notlar)) {
+      return katalogRowToEslesmis(byRow, {
         linkMarka,
         sablonIsim: input.isim,
         urunTipi: tip,
@@ -388,7 +393,7 @@ async function matchByTipShopLink(
       sku: link.sku ?? "",
       ad: link.name ?? input.isim,
       marka: linkMarka ?? link.brand ?? (hazirlik ? HAZIRLIK_MARKA : BULASIK_MARKA),
-      model: link.sku,
+      model: link.sku ?? null,
       olcu: extractOlcuFromNotlar(input.notlar) || null,
       elektrikGucuKw: null,
       gazGucuKw: null,
@@ -402,10 +407,10 @@ async function matchByTipShopLink(
   if (tip === "montaj_nakliye") {
     return {
       id: `tip-link-${tip}`,
-      sku: link.sku,
+      sku: link.sku ?? null,
       ad: link.name ?? input.isim,
       marka: link.brand ?? "Equsto Proje Fabrikası",
-      model: link.sku,
+      model: link.sku ?? null,
       olcu: null,
       elektrikGucuKw: null,
       gazGucuKw: null,
@@ -442,10 +447,10 @@ async function matchByVerifiedLink(
   if (link.fiyat_try && link.fiyat_try > 0) {
     return {
       id: `ref-link-${liste}-${poz}`,
-      sku: link.sku,
+      sku: link.sku ?? null,
       ad: link.name ?? input.isim,
       marka: link.marka ?? "Öztiryakiler",
-      model: link.sku,
+      model: link.sku ?? null,
       olcu: extractOlcuFromNotlar(input.notlar) || null,
       elektrikGucuKw: null,
       gazGucuKw: null,
