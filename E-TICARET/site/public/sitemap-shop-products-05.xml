@@ -1789,12 +1789,6 @@
     <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://equsto.com/shop/tezgah/equsto__equsto-40mm</loc>
-    <lastmod>2026-06-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.72</priority>
-  </url>
-  <url>
     <loc>https://equsto.com/shop/tezgah/equsto__equsto-12060-51</loc>
     <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -1903,61 +1897,169 @@
     <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://equsto.com/shop/tezgah/equsto__equsto-2809060</loc>
+    <loc>https://equsto.com/shop/tezgah/equsto__equsto-06060-11</loc>
     <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://equsto.com/shop/tezgah/equsto__equsto-2810060</loc>
+    <loc>https://equsto.com/shop/tezgah/equsto__equsto-07060-11</loc>
     <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://equsto.com/shop/tezgah/equsto__equsto-2812060</loc>
+    <loc>https://equsto.com/shop/tezgah/equsto__equsto-08060-11</loc>
     <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://equsto.com/shop/tezgah/equsto__equsto-2814060</loc>
+    <loc>https://equsto.com/shop/tezgah/equsto__equsto-10060-11</loc>
     <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://equsto.com/shop/tezgah/equsto__equsto-2816060</loc>
+    <loc>https://equsto.com/shop/tezgah/equsto__equsto-12060-11</loc>
     <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://equsto.com/shop/tezgah/equsto__equsto-2809070</loc>
+    <loc>https://equsto.com/shop/tezgah/equsto__equsto-14060-11</loc>
     <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://equsto.com/shop/tezgah/equsto__equsto-2810070</loc>
+    <loc>https://equsto.com/shop/tezgah/equsto__equsto-16060-11</loc>
     <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://equsto.com/shop/tezgah/equsto__equsto-2812070</loc>
+    <loc>https://equsto.com/shop/tezgah/equsto__equsto-18060-11</loc>
     <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://equsto.com/shop/tezgah/equsto__equsto-2814070</loc>
+    <loc>https://equsto.com/shop/tezgah/equsto__equsto-20060-11</loc>
     <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://equsto.com/shop/tezgah/equsto__equsto-2816070</loc>
+    <loc>https://equsto.com/shop/tezgah/equsto__equsto-06070-11</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://equsto.com/shop/tezgah/equsto__equsto-07070-11</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://equsto.com/shop/tezgah/equsto__equsto-08070-11</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://equsto.com/shop/tezgah/equsto__equsto-10070-11</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://equsto.com/shop/tezgah/equsto__equsto-12070-11</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://equsto.com/shop/tezgah/equsto__equsto-14070-11</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://equsto.com/shop/tezgah/equsto__equsto-16070-11</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://equsto.com/shop/tezgah/equsto__equsto-18070-11</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://equsto.com/shop/tezgah/equsto__equsto-20070-11</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://equsto.com/shop/tezgah/equsto__equsto-12060-17</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://equsto.com/shop/tezgah/equsto__equsto-14060-17</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://equsto.com/shop/tezgah/equsto__equsto-16060-17</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://equsto.com/shop/tezgah/equsto__equsto-18060-17</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://equsto.com/shop/tezgah/equsto__equsto-20060-17</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://equsto.com/shop/tezgah/equsto__equsto-12070-17</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://equsto.com/shop/tezgah/equsto__equsto-14070-17</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://equsto.com/shop/tezgah/equsto__equsto-16070-17</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://equsto.com/shop/tezgah/equsto__equsto-18070-17</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://equsto.com/shop/tezgah/equsto__equsto-20070-17</loc>
     <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.72</priority>
@@ -2126,6 +2228,36 @@
   </url>
   <url>
     <loc>https://equsto.com/shop/tezgah/equsto__equsto-mr38-1-2004060-10</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://equsto.com/shop/tezgah/equsto__equsto-2809070</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://equsto.com/shop/tezgah/equsto__equsto-2810070</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://equsto.com/shop/tezgah/equsto__equsto-2812070</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://equsto.com/shop/tezgah/equsto__equsto-2814070</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://equsto.com/shop/tezgah/equsto__equsto-2816070</loc>
     <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.72</priority>
