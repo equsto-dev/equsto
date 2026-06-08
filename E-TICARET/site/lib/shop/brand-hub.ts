@@ -197,6 +197,13 @@ export const BRAND_HUB_META: Record<string, BrandHubMeta> = {
     facet: "Electrolux",
     sameAs: ["https://www.electroluxprofessional.com/tr/"],
   },
+  senox: {
+    displayName: "Şenox",
+    description:
+      "Şenox soğutma, teşhir, hazırlık ve içecek ekipmanları Equsto vitrininde. Mutbex katalog verisi ile kademeli güncellenen ürün listesi, canlı fiyat ve PFOS proje teklifi.",
+    facet: "Şenox",
+    sameAs: ["https://www.senox.com.tr"],
+  },
 };
 
 export function getBrandHubMeta(slug: string): BrandHubMeta | null {
