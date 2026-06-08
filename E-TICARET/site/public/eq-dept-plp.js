@@ -32,7 +32,7 @@
   }
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260608pimak-servis-teshir';
+  var CATALOG_V = '20260608pimak-plp-olcu';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   /* Next.js URL slug → katalog dept id (data/dept/*.json) */
   if (DEPT === 'market-reyonlari') DEPT = 'market-reyon';
@@ -220,6 +220,7 @@
   /** PLP kart alt satırı — olculer, ürün adı veya Öztiryakiler oda kodu. */
   function formatOlculerLine(raw) {
     if (!raw) return '';
+    if (raw.olcu_etiket) return String(raw.olcu_etiket);
     var o = raw.olculer;
     if (o) {
       var g = Number(o.genislik_mm);
@@ -693,12 +694,15 @@
     }
     var oztiKod =
       u.raw && isOztiRow(u.raw) ? String(u.raw.sku || u.raw.model || u.raw.urun_kodu || '') : '';
+    var pimakGorsel =
+      u.raw && u.raw.pimak_gorsel ? String(u.raw.pimak_gorsel).trim() : '';
     var img = u.img
       ? '<img src="' +
         esc(u.img) +
         '"' +
         (rawImg ? ' data-eq-img-raw="' + esc(rawImg) + '" data-eq-img-step="0"' : '') +
         (oztiKod ? ' data-eq-ozti-kod="' + esc(oztiKod) + '"' : '') +
+        (pimakGorsel ? ' data-eq-pimak-gorsel="' + esc(pimakGorsel) + '"' : '') +
         ' alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="typeof __eqImgFail===\'function\'&&__eqImgFail(this)">'
       : '';
     var cartBtn =
@@ -943,7 +947,7 @@
     render();
   }
 
-  var MARKET_REYON_JSON_V = '20260608pimak-servis-teshir';
+  var MARKET_REYON_JSON_V = '20260608pimak-plp-olcu';
 
   function fetchMarketReyonDeptJson() {
     return fetch('/data/dept/market-reyon.json?v=' + MARKET_REYON_JSON_V, {

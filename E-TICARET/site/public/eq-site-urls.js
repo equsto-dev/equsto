@@ -1552,6 +1552,15 @@
         }
       }
     }
+    var pimakGorsel = img.getAttribute("data-eq-pimak-gorsel") || "";
+    if (pimakGorsel && !img.dataset.eqPimakRemote) {
+      img.dataset.eqPimakRemote = "1";
+      img.onerror = function () {
+        window.__eqImgFail(img);
+      };
+      img.src = pimakGorsel;
+      return;
+    }
     var oztiKod = img.getAttribute("data-eq-ozti-kod") || "";
     if (oztiKod && !/7919\.CR/i.test(oztiKod) && typeof window.eqOztiAxImageFromSku === "function") {
       var axTry = window.eqOztiAxImageFromSku(oztiKod);

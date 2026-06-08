@@ -4,7 +4,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260608pimak-servis-teshir";
+  var CATALOG_V = "20260608pimak-plp-olcu";
 
   window.EqMarketReyon = {
     loadCatalog: function () {
