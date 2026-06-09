@@ -22,6 +22,21 @@ function norm(s: string): string {
 /** Referans satır adı → shop/zone tip_kodu (URUN_TIPI_ALIASES ile uyumlu) */
 const TIP_RULES: TipRule[] = [
   {
+    tip: "panel-derin-dondurucu-oda",
+    test: (n, poz) =>
+      /panel tip derin dondurucu|panel tipi derin dondurucu|panel tip dondurucu oda/.test(
+        n,
+      ) ||
+      (poz.startsWith("F") &&
+        /derin dondurucu|dondurucu oda|deep freeze/.test(n)),
+  },
+  {
+    tip: "panel-soguk-oda",
+    test: (n, poz) =>
+      /panel tip soguk oda|panel tipi soguk oda/.test(n) ||
+      (poz.startsWith("C") && /soguk oda|soğuk oda|cold room/.test(n)),
+  },
+  {
     tip: "montaj-nakliye",
     test: (n) => n.includes("nakliye") || n.includes("montaj"),
   },

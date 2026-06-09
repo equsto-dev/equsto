@@ -56,6 +56,10 @@ import {
   isPortabiancoBuzdolabiRow,
 } from "../core/portabianco-marka";
 import {
+  isPanelSogukOdaPfosKalemAny,
+  matchSogukOdaByReferans,
+} from "./soguk-oda-match";
+import {
   matchBuzdolabiByReferans,
 } from "./buzdolabi-match";
 import {
@@ -904,6 +908,23 @@ export async function matchReferansKalem(
   if (isSenoxPfosKalem({ isim: input.isim, urunTipi: input.urunTipi })) {
     const senox = await matchSenoxByReferans(input.isim, input.urunTipi);
     if (senox) return senox;
+  }
+
+  if (
+    isPanelSogukOdaPfosKalemAny({
+      isim: input.isim,
+      urunTipi: input.urunTipi,
+      notlar: input.notlar,
+    })
+  ) {
+    const panelOda = await matchSogukOdaByReferans(
+      input.isim,
+      olcu,
+      input.notlar,
+      input.urunTipi,
+      input.fiyatStratejisi,
+    );
+    if (panelOda) return panelOda;
   }
 
   if (isBulasikPfosKalem({ isim: input.isim, urunTipi: input.urunTipi })) {

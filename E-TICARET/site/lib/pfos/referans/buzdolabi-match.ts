@@ -27,6 +27,13 @@ function norm(s: string): string {
 export function isBuzdolabiReferans(isim: string): boolean {
   const n = norm(isim);
   if (/buz\s*makin|ice\s*maker/.test(n)) return false;
+  if (
+    /panel tip soguk oda|panel tipi soguk oda|panel tip derin dondurucu|panel tipi derin dondurucu|panel tip dondurucu oda/.test(
+      n,
+    )
+  ) {
+    return false;
+  }
   return /buzdolab|donduruc|sogutuc|soğutuc|sishe\s*sogut|şişe\s*soğut|saladette|sogutmali\s*tezgah|soğutmali\s*tezgah/.test(
     n,
   );

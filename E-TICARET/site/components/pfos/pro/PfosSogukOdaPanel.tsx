@@ -10,6 +10,7 @@ import {
   Form,
   InputNumber,
   Row,
+  Segmented,
   Select,
   Space,
   Typography,
@@ -17,19 +18,22 @@ import {
 } from "antd";
 import { useMemo, useState } from "react";
 import {
-  SO_PARAMETRELER,
+  TIP_DERIN_DONDURUCU_ODA,
+  TIP_SOGUK_ODA,
   fmtTr,
   hesaplaSogukOda,
-  type SoTipKey,
+  hesaplaSogukOdaFiyat,
   type SogukOdaInput,
   type SogukOdaSonuc,
 } from "@/lib/pfos/soguk-oda-calc";
+
+type OdaCinsi = "soguk" | "derin";
 
 const DEFAULT_INPUT: SogukOdaInput = {
   en: 3,
   boy: 4,
   yuk: 2.4,
-  tip: "soguk_m5",
+  tip: TIP_SOGUK_ODA,
   zemin: "plywood",
   kapiTip: "menteseli_ithal",
   kapiOlcu: "90x190",
@@ -54,6 +58,7 @@ function printSonuc(s: SogukOdaSonuc) {
 }
 
 export default function PfosSogukOdaPanel() {
+  const [odaCinsi, setOdaCinsi] = useState<OdaCinsi>("soguk");
   const [input, setInput] = useState<SogukOdaInput>(DEFAULT_INPUT);
   const [extras, setExtras] = useState({
     ilaveKapi: false,
@@ -65,9 +70,20 @@ export default function PfosSogukOdaPanel() {
   });
 
   const sonuc = useMemo(() => hesaplaSogukOda(input), [input]);
+  const fiyat = useMemo(
+    () => (sonuc ? hesaplaSogukOdaFiyat(input, sonuc) : null),
+    [input, sonuc],
+  );
 
   const patch = (p: Partial<SogukOdaInput>) =>
     setInput((prev) => ({ ...prev, ...p }));
+
+  const setOdaCinsiAndTip = (cinsi: OdaCinsi) => {
+    setOdaCinsi(cinsi);
+    patch({
+      tip: cinsi === "derin" ? TIP_DERIN_DONDURUCU_ODA : TIP_SOGUK_ODA,
+    });
+  };
 
   return (
     <Row gutter={[16, 16]}>
@@ -113,19 +129,19 @@ export default function PfosSogukOdaPanel() {
               </Col>
             </Row>
 
+            <Form.Item label="Oda cinsi">
+              <Segmented
+                block
+                value={odaCinsi}
+                onChange={(v) => setOdaCinsiAndTip(v as OdaCinsi)}
+                options={[
+                  { value: "soguk", label: "Soğuk oda (+5°C)" },
+                  { value: "derin", label: "Derin dondurucu oda (-18°C)" },
+                ]}
+              />
+            </Form.Item>
+
             <Row gutter={8}>
-              <Col span={12}>
-                <Form.Item label="Oda türü">
-                  <Select
-                    value={input.tip}
-                    onChange={(v: SoTipKey) => patch({ tip: v })}
-                    options={Object.entries(SO_PARAMETRELER).map(([k, p]) => ({
-                      value: k,
-                      label: p.label,
-                    }))}
-                  />
-                </Form.Item>
-              </Col>
               <Col span={12}>
                 <Form.Item label="Zemin">
                   <Select
@@ -329,6 +345,29 @@ export default function PfosSogukOdaPanel() {
                 </Descriptions.Item>
               </Descriptions>
 
+              {fiyat ? (
+                <Descriptions
+                  column={1}
+                  size="small"
+                  bordered
+                  title="Fiyat tahmini (KDV dahil)"
+                  style={{ marginBottom: 16 }}
+                >
+                  <Descriptions.Item label="Panel + cihaz">
+                    <Typography.Text strong style={{ fontSize: 16 }}>
+                      ₺{fiyat.fiyatTl.toLocaleString("tr-TR")}
+                    </Typography.Text>
+                  </Descriptions.Item>
+                  <Descriptions.Item label="Panel alanı">
+                    {fmtTr(sonuc.toplamPanel)} m² × ₺
+                    {fiyat.birimTlM2.toLocaleString("tr-TR")}/m²
+                  </Descriptions.Item>
+                  <Descriptions.Item label="Ölçü">
+                    {fmtTr(sonuc.en, 1)}×{fmtTr(sonuc.boy, 1)}×{fmtTr(sonuc.yuk, 1)} m
+                  </Descriptions.Item>
+                </Descriptions>
+              ) : null}
+
               {sonuc.cihazTip !== "yok" && sonuc.cihaz ? (
                 <Descriptions
                   column={1}
@@ -368,8 +407,11 @@ export default function PfosSogukOdaPanel() {
                 <Button
                   type="primary"
                   onClick={() => {
+                    const fiyatSatir = fiyat
+                      ? `\nFiyat: ₺${fiyat.fiyatTl.toLocaleString("tr-TR")} (KDV dahil)`
+                      : "";
                     message.info(
-                      `${sonuc.en}×${sonuc.boy}×${sonuc.yuk} m — ${sonuc.tipLabel}\nPanel: ${sonuc.panelKalin} cm, ${fmtTr(sonuc.toplamPanel)} m²\nCihaz: ${sonuc.cihazAdet}× ${sonuc.cihaz?.model ?? "—"}`,
+                      `${sonuc.en}×${sonuc.boy}×${sonuc.yuk} m — ${sonuc.tipLabel}\nPanel: ${sonuc.panelKalin} cm, ${fmtTr(sonuc.toplamPanel)} m²\nCihaz: ${sonuc.cihazAdet}× ${sonuc.cihaz?.model ?? "—"}${fiyatSatir}`,
                       6,
                     );
                   }}
