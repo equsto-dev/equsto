@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-09T18:45:37.029Z",
+  "fetched_at": "2026-06-09T20:04:46.871Z",
   "source": "https://www.samixir.com/tr/urunler",
   "count": 25,
   "products": [
@@ -27,15 +27,13 @@
         "derinlik_mm": 360,
         "yukseklik_mm": 700
       },
+      "listImage": "https://www.samixir.com/uploads/urunler/hot-gold-sc06-96150.jpg",
+      "heroImage": "https://www.samixir.com/uploads/urunler/hot-gold-sc06-96150.jpg",
       "images": [
-        "https://www.samixir.com/uploads/urunler/hot-gold-sc05-39352.jpg",
-        "https://www.samixir.com/uploads/urunler/hot-gold-sc05-393521.jpg",
-        "https://www.samixir.com/uploads/urunler/hot-gold-sc10-34788.jpg",
-        "https://www.samixir.com/uploads/urunler/hot-sc10-29685.png",
-        "https://www.samixir.com/uploads/urunler/hot-sc06-33121.jpg"
+        "https://www.samixir.com/uploads/urunler/hot-gold-sc06-96150.jpg"
       ],
       "localImage": "images/hot-gold-sc06.jpg",
-      "gallery_count": 5
+      "gallery_count": 1
     },
     {
       "slug": "hot-gold-sc10",
@@ -61,14 +59,15 @@
         "derinlik_mm": 360,
         "yukseklik_mm": 805
       },
+      "listImage": "https://www.samixir.com/uploads/urunler/hot-gold-sc10-34788.jpg",
+      "heroImage": "https://www.samixir.com/uploads/urunler/hot-gold-sc10-34788.jpg",
       "images": [
+        "https://www.samixir.com/uploads/urunler/hot-gold-sc10-34788.jpg",
         "https://www.samixir.com/uploads/urunler/hot-gold-sc10-38962.jpg",
-        "https://www.samixir.com/uploads/urunler/hot-gold-sc10-389621.jpg",
-        "https://www.samixir.com/uploads/urunler/hot-sc10-29685.png",
-        "https://www.samixir.com/uploads/urunler/hot-sc06-33121.jpg"
+        "https://www.samixir.com/uploads/urunler/hot-gold-sc10-389621.jpg"
       ],
       "localImage": "images/hot-gold-sc10.jpg",
-      "gallery_count": 4
+      "gallery_count": 3
     },
     {
       "slug": "hot-inox-10",
@@ -93,18 +92,16 @@
         "derinlik_mm": 360,
         "yukseklik_mm": 700
       },
+      "listImage": "https://www.samixir.com/uploads/urunler/hot-inox-10-88356.jpg",
+      "heroImage": "https://www.samixir.com/uploads/urunler/hot-inox-10-88356.jpg",
       "images": [
+        "https://www.samixir.com/uploads/urunler/hot-inox-10-88356.jpg",
         "https://www.samixir.com/uploads/urunler/hot-inox-10-89045.png",
-        "https://www.samixir.com/uploads/urunler/4e4d761b407d1b0981d1071074c7989f.jpg",
         "https://www.samixir.com/uploads/urunler/hot-inox-10-04516.jpg",
-        "https://www.samixir.com/uploads/urunler/hot-inox-10-045161.jpg",
-        "https://www.samixir.com/uploads/urunler/hot-gold-sc10-34788.jpg",
-        "https://www.samixir.com/uploads/urunler/hot-sc10-29685.png",
-        "https://www.samixir.com/uploads/urunler/hot-sc06-33121.jpg",
-        "https://www.samixir.com/uploads/urunler/hot-neo-10-15540.jpg"
+        "https://www.samixir.com/uploads/urunler/hot-inox-10-045161.jpg"
       ],
-      "localImage": "images/hot-inox-10.png",
-      "gallery_count": 8
+      "localImage": "images/hot-inox-10.jpg",
+      "gallery_count": 4
     },
     {
       "slug": "hot-neo-10",
@@ -128,18 +125,16 @@
         "derinlik_mm": 372,
         "yukseklik_mm": 541
       },
+      "listImage": "https://www.samixir.com/uploads/urunler/hot-neo-10-15540.jpg",
+      "heroImage": "https://www.samixir.com/uploads/urunler/hot-neo-10-15540.jpg",
       "images": [
+        "https://www.samixir.com/uploads/urunler/hot-neo-10-15540.jpg",
         "https://www.samixir.com/uploads/urunler/hot-neo-10-42399.png",
-        "https://www.samixir.com/uploads/urunler/b0717cd9992b37c837c21b78d0563636.jpg",
         "https://www.samixir.com/uploads/urunler/hot-neo-10-31087.jpg",
-        "https://www.samixir.com/uploads/urunler/hot-neo-10-23504.jpg",
-        "https://www.samixir.com/uploads/urunler/hot-gold-sc06-96150.jpg",
-        "https://www.samixir.com/uploads/urunler/hot-gold-sc10-34788.jpg",
-        "https://www.samixir.com/uploads/urunler/hot-sc10-29685.png",
-        "https://www.samixir.com/uploads/urunler/hot-sc06-33121.jpg"
+        "https://www.samixir.com/uploads/urunler/hot-neo-10-23504.jpg"
       ],
-      "localImage": "images/hot-neo-10.png",
-      "gallery_count": 8
+      "localImage": "images/hot-neo-10.jpg",
+      "gallery_count": 4
     },
     {
       "slug": "hot-sc06",
@@ -165,14 +160,13 @@
         "derinlik_mm": 360,
         "yukseklik_mm": 490
       },
+      "listImage": "https://www.samixir.com/uploads/urunler/hot-sc06-33121.jpg",
+      "heroImage": "https://www.samixir.com/uploads/urunler/hot-sc06-33121.jpg",
       "images": [
-        "https://www.samixir.com/uploads/urunler/5216904a56645e424e92bcbb45fd345d.jpg",
-        "https://www.samixir.com/uploads/urunler/f83eeef527ead7342ab6b7eb7bd15b08.jpg",
-        "https://www.samixir.com/uploads/urunler/hot-sc05-69793.jpg",
-        "https://www.samixir.com/uploads/urunler/hot-sc05-697931.jpg"
+        "https://www.samixir.com/uploads/urunler/hot-sc06-33121.jpg"
       ],
       "localImage": "images/hot-sc06.jpg",
-      "gallery_count": 4
+      "gallery_count": 1
     },
     {
       "slug": "hot-sc10",
@@ -198,17 +192,15 @@
         "derinlik_mm": 360,
         "yukseklik_mm": 700
       },
+      "listImage": "https://www.samixir.com/uploads/urunler/hot-sc10-29685.png",
+      "heroImage": "https://www.samixir.com/uploads/urunler/hot-sc10-29685.png",
       "images": [
-        "https://www.samixir.com/uploads/urunler/9223efccd47cd1ad7a6aa43f3010aadc.jpg",
-        "https://www.samixir.com/uploads/urunler/73a57079c154789731689aaf83c75f02.jpg",
+        "https://www.samixir.com/uploads/urunler/hot-sc10-29685.png",
         "https://www.samixir.com/uploads/urunler/hot-sc10-44502.jpg",
-        "https://www.samixir.com/uploads/urunler/hot-sc10-445021.jpg",
-        "https://www.samixir.com/uploads/urunler/hot-gold-sc06-96150.jpg",
-        "https://www.samixir.com/uploads/urunler/hot-gold-sc10-34788.jpg",
-        "https://www.samixir.com/uploads/urunler/hot-sc06-33121.jpg"
+        "https://www.samixir.com/uploads/urunler/hot-sc10-445021.jpg"
       ],
-      "localImage": "images/hot-sc10.jpg",
-      "gallery_count": 7
+      "localImage": "images/hot-sc10.png",
+      "gallery_count": 3
     },
     {
       "slug": "kam22",
@@ -235,19 +227,16 @@
         "derinlik_mm": 405,
         "yukseklik_mm": 825
       },
+      "listImage": "https://www.samixir.com/uploads/urunler/kam22-86991.png",
+      "heroImage": "https://www.samixir.com/uploads/urunler/kam22-86991.png",
       "images": [
+        "https://www.samixir.com/uploads/urunler/kam22-86991.png",
         "https://www.samixir.com/uploads/urunler/kam22-28847.jpg",
-        "https://www.samixir.com/uploads/urunler/db423445e184fc5ee75a30e530251fcf.jpg",
-        "https://www.samixir.com/uploads/urunler/d7760a11cef7700d6d8a367dce4a8ef6.jpg",
         "https://www.samixir.com/uploads/urunler/kam22-01996.jpg",
-        "https://www.samixir.com/uploads/urunler/kam22-019961.jpg",
-        "https://www.samixir.com/uploads/urunler/panoramik-10-twin-35798.png",
-        "https://www.samixir.com/uploads/urunler/panoramik-10-triple-20540.png",
-        "https://www.samixir.com/uploads/urunler/panoramik-m22-96253.png",
-        "https://www.samixir.com/uploads/urunler/panoramik-m40-33188.png"
+        "https://www.samixir.com/uploads/urunler/kam22-019961.jpg"
       ],
-      "localImage": "images/kam22.jpg",
-      "gallery_count": 9
+      "localImage": "images/kam22.png",
+      "gallery_count": 4
     },
     {
       "slug": "kam40",
@@ -274,19 +263,16 @@
         "derinlik_mm": 450,
         "yukseklik_mm": 890
       },
+      "listImage": "https://www.samixir.com/uploads/urunler/kam40-58093.png",
+      "heroImage": "https://www.samixir.com/uploads/urunler/kam40-58093.png",
       "images": [
+        "https://www.samixir.com/uploads/urunler/kam40-58093.png",
         "https://www.samixir.com/uploads/urunler/kam40-72319.jpg",
-        "https://www.samixir.com/uploads/urunler/2247d1c001787486b51878af9b75f2aa.jpg",
-        "https://www.samixir.com/uploads/urunler/f90513f056bda6325d5f3adc715ac9ea.jpg",
         "https://www.samixir.com/uploads/urunler/kam40-12699.jpg",
-        "https://www.samixir.com/uploads/urunler/kam40-126991.jpg",
-        "https://www.samixir.com/uploads/urunler/panoramik-10-twin-35798.png",
-        "https://www.samixir.com/uploads/urunler/panoramik-m40-33188.png",
-        "https://www.samixir.com/uploads/urunler/kam22-86991.png",
-        "https://www.samixir.com/uploads/urunler/panoramik-m10-40315.png"
+        "https://www.samixir.com/uploads/urunler/kam40-126991.jpg"
       ],
-      "localImage": "images/kam40.jpg",
-      "gallery_count": 9
+      "localImage": "images/kam40.png",
+      "gallery_count": 4
     },
     {
       "slug": "klasik-mono",
@@ -313,23 +299,16 @@
         "derinlik_mm": 525,
         "yukseklik_mm": 665
       },
+      "listImage": "https://www.samixir.com/uploads/urunler/klasik-mono-17336.png",
+      "heroImage": "https://www.samixir.com/uploads/urunler/klasik-mono-17336.png",
       "images": [
+        "https://www.samixir.com/uploads/urunler/klasik-mono-17336.png",
         "https://www.samixir.com/uploads/urunler/klasik-mono-23120.jpg",
-        "https://www.samixir.com/uploads/urunler/27de3f4f46d90e313b6bc2d319b2a85e.jpg",
-        "https://www.samixir.com/uploads/urunler/9c28581d84aff30477c16d54a7b1d2fb.jpg",
-        "https://www.samixir.com/uploads/urunler/3fe449bd660e27c59d50f4713307224b.jpg",
-        "https://www.samixir.com/uploads/urunler/16403126cd8b6dba9ff0df12014ac3b1.jpg",
-        "https://www.samixir.com/uploads/urunler/1a46e5894bbda3a7a65bf1a761d3fece.jpg",
-        "https://www.samixir.com/uploads/urunler/5473c6fa173e6375c70c4499c5fe8658.jpg",
         "https://www.samixir.com/uploads/urunler/klasik-mono-30034.png",
-        "https://www.samixir.com/uploads/urunler/klasik-mono-30034.jpg",
-        "https://www.samixir.com/uploads/urunler/panoramik-m22-96253.png",
-        "https://www.samixir.com/uploads/urunler/panoramik-m40-33188.png",
-        "https://www.samixir.com/uploads/urunler/panoramik-s22-28245.png",
-        "https://www.samixir.com/uploads/urunler/panoramik-s40-27470.png"
+        "https://www.samixir.com/uploads/urunler/klasik-mono-30034.jpg"
       ],
-      "localImage": "images/klasik-mono.jpg",
-      "gallery_count": 13
+      "localImage": "images/klasik-mono.png",
+      "gallery_count": 4
     },
     {
       "slug": "klasik-triple",
@@ -356,26 +335,16 @@
         "derinlik_mm": 525,
         "yukseklik_mm": 665
       },
+      "listImage": "https://www.samixir.com/uploads/urunler/klasik-triple-19585.png",
+      "heroImage": "https://www.samixir.com/uploads/urunler/klasik-triple-19585.png",
       "images": [
+        "https://www.samixir.com/uploads/urunler/klasik-triple-19585.png",
         "https://www.samixir.com/uploads/urunler/klasik-triple-12644.jpg",
-        "https://www.samixir.com/uploads/urunler/c454a9d80f99e2cc8f69dbc733b2a92c.jpg",
-        "https://www.samixir.com/uploads/urunler/bb52e1b8be9e71ada0b29e2e01af5742.jpg",
-        "https://www.samixir.com/uploads/urunler/62fd80802b59ab992631c07b73864438.jpg",
-        "https://www.samixir.com/uploads/urunler/fb0df8c59821818eb295ea9e042c48ef.jpg",
-        "https://www.samixir.com/uploads/urunler/2064dcce1e128052297b871ae91b29f8.jpg",
-        "https://www.samixir.com/uploads/urunler/be483cb71c730e505e2605cd472c2fbb.jpg",
-        "https://www.samixir.com/uploads/urunler/47dd27f8cbd8be23a83d7dae6fb90a48.jpg",
-        "https://www.samixir.com/uploads/urunler/5728a48b9c78e48e635b724483c27c77.jpg",
-        "https://www.samixir.com/uploads/urunler/3f527b359acb142885b4dc1fd7bb6cdd.jpg",
         "https://www.samixir.com/uploads/urunler/klasik-triple-79245.jpg",
-        "https://www.samixir.com/uploads/urunler/klasik-triple-792451.jpg",
-        "https://www.samixir.com/uploads/urunler/slush-triple-04395.png",
-        "https://www.samixir.com/uploads/urunler/panoramik-m40-33188.png",
-        "https://www.samixir.com/uploads/urunler/klasik-twin-99404.png",
-        "https://www.samixir.com/uploads/urunler/klasik-mono-17336.png"
+        "https://www.samixir.com/uploads/urunler/klasik-triple-792451.jpg"
       ],
-      "localImage": "images/klasik-triple.jpg",
-      "gallery_count": 16
+      "localImage": "images/klasik-triple.png",
+      "gallery_count": 4
     },
     {
       "slug": "klasik-twin",
@@ -402,26 +371,16 @@
         "derinlik_mm": 525,
         "yukseklik_mm": 665
       },
+      "listImage": "https://www.samixir.com/uploads/urunler/klasik-twin-99404.png",
+      "heroImage": "https://www.samixir.com/uploads/urunler/klasik-twin-99404.png",
       "images": [
+        "https://www.samixir.com/uploads/urunler/klasik-twin-99404.png",
         "https://www.samixir.com/uploads/urunler/klasik-twin-69389.jpg",
-        "https://www.samixir.com/uploads/urunler/09b5653a627295f1d1bd834fb5cc010e.jpg",
-        "https://www.samixir.com/uploads/urunler/6b5a4111d455f153c17e482b302c3abd.jpg",
-        "https://www.samixir.com/uploads/urunler/e0e692132be5c8ec5c3df0c9bf07d568.jpg",
-        "https://www.samixir.com/uploads/urunler/2fdd17e247ed426ffdc935e97738523a.jpg",
-        "https://www.samixir.com/uploads/urunler/f9ccc31da3b383b8c2e7f0320664a187.jpg",
-        "https://www.samixir.com/uploads/urunler/512de508aac02e05206264bf8ae790b1.jpg",
-        "https://www.samixir.com/uploads/urunler/c4ca89271c1688882ea5fc36aab91cb8.jpg",
-        "https://www.samixir.com/uploads/urunler/3d65d680f1961e844a69aab15be434ec.jpg",
-        "https://www.samixir.com/uploads/urunler/d64ee62966ee9e296644e0c5cf13851d.jpg",
         "https://www.samixir.com/uploads/urunler/klasik-twin-40158.jpg",
-        "https://www.samixir.com/uploads/urunler/klasik-twin-401581.jpg",
-        "https://www.samixir.com/uploads/urunler/panoramik-m40-33188.png",
-        "https://www.samixir.com/uploads/urunler/panoramik-s22-28245.png",
-        "https://www.samixir.com/uploads/urunler/panoramik-s40-27470.png",
-        "https://www.samixir.com/uploads/urunler/klasik-mono-17336.png"
+        "https://www.samixir.com/uploads/urunler/klasik-twin-401581.jpg"
       ],
-      "localImage": "images/klasik-twin.jpg",
-      "gallery_count": 16
+      "localImage": "images/klasik-twin.png",
+      "gallery_count": 4
     },
     {
       "slug": "panoramik-10-triple",
@@ -448,17 +407,16 @@
         "derinlik_mm": 390,
         "yukseklik_mm": 700
       },
+      "listImage": "https://www.samixir.com/uploads/urunler/panoramik-10-triple-20540.png",
+      "heroImage": "https://www.samixir.com/uploads/urunler/panoramik-10-triple-20540.png",
       "images": [
+        "https://www.samixir.com/uploads/urunler/panoramik-10-triple-20540.png",
         "https://www.samixir.com/uploads/urunler/panoramik-10-triple-93146.png",
-        "https://www.samixir.com/uploads/urunler/3c88f1ebbbdc15a0d6c4fd3f167f3451.jpg",
-        "https://www.samixir.com/uploads/urunler/037773298e03d0bd7f55cb79f48ca441.jpg",
         "https://www.samixir.com/uploads/urunler/panoramik-10-triple-92690.jpg",
-        "https://www.samixir.com/uploads/urunler/panoramik-10-triple-926901.jpg",
-        "https://www.samixir.com/uploads/urunler/panoramik-10-twin-35798.png",
-        "https://www.samixir.com/uploads/urunler/panoramik-m10-40315.png"
+        "https://www.samixir.com/uploads/urunler/panoramik-10-triple-926901.jpg"
       ],
       "localImage": "images/panoramik-10-triple.png",
-      "gallery_count": 7
+      "gallery_count": 4
     },
     {
       "slug": "panoramik-10-twin",
@@ -485,16 +443,16 @@
         "derinlik_mm": 390,
         "yukseklik_mm": 700
       },
+      "listImage": "https://www.samixir.com/uploads/urunler/panoramik-10-twin-35798.png",
+      "heroImage": "https://www.samixir.com/uploads/urunler/panoramik-10-twin-35798.png",
       "images": [
+        "https://www.samixir.com/uploads/urunler/panoramik-10-twin-35798.png",
         "https://www.samixir.com/uploads/urunler/panoramik-10-twin-03958.jpg",
-        "https://www.samixir.com/uploads/urunler/2dbe144a13412705c1528bea8158aec1.jpg",
-        "https://www.samixir.com/uploads/urunler/370c3dde7bff2cfa73cc4c2e57d00001.jpg",
         "https://www.samixir.com/uploads/urunler/panoramik-10-twin-27279.jpg",
-        "https://www.samixir.com/uploads/urunler/panoramik-10-twin-272791.jpg",
-        "https://www.samixir.com/uploads/urunler/panoramik-m10-40315.png"
+        "https://www.samixir.com/uploads/urunler/panoramik-10-twin-272791.jpg"
       ],
-      "localImage": "images/panoramik-10-twin.jpg",
-      "gallery_count": 6
+      "localImage": "images/panoramik-10-twin.png",
+      "gallery_count": 4
     },
     {
       "slug": "panoramik-22-twin",
@@ -521,23 +479,16 @@
         "derinlik_mm": 405,
         "yukseklik_mm": 755
       },
+      "listImage": "https://www.samixir.com/uploads/urunler/panoramik-22-twin-92471.png",
+      "heroImage": "https://www.samixir.com/uploads/urunler/panoramik-22-twin-92471.png",
       "images": [
+        "https://www.samixir.com/uploads/urunler/panoramik-22-twin-92471.png",
         "https://www.samixir.com/uploads/urunler/panoramik-22-twin-62877.jpg",
-        "https://www.samixir.com/uploads/urunler/265355237d5588c5c74738e24fe68899.jpg",
-        "https://www.samixir.com/uploads/urunler/e7b63c5e766557690dd2414c46bbcfca.jpg",
-        "https://www.samixir.com/uploads/urunler/564fcb7776638f3cc24527c5c8f48f01.jpg",
-        "https://www.samixir.com/uploads/urunler/191e83bc1560f42e000e7c59b16f5575.jpg",
-        "https://www.samixir.com/uploads/urunler/cd15d7fc881c6d5f2d88883abc320bf1.jpg",
-        "https://www.samixir.com/uploads/urunler/829ad3209579c2dcd02eccb51a852286.jpg",
         "https://www.samixir.com/uploads/urunler/panoramik-22-twin-84362.jpg",
-        "https://www.samixir.com/uploads/urunler/panoramik-22-twin-843621.jpg",
-        "https://www.samixir.com/uploads/urunler/panoramik-m22-96253.png",
-        "https://www.samixir.com/uploads/urunler/panoramik-m40-33188.png",
-        "https://www.samixir.com/uploads/urunler/panoramik-s22-28245.png",
-        "https://www.samixir.com/uploads/urunler/panoramik-s40-27470.png"
+        "https://www.samixir.com/uploads/urunler/panoramik-22-twin-843621.jpg"
       ],
-      "localImage": "images/panoramik-22-twin.jpg",
-      "gallery_count": 13
+      "localImage": "images/panoramik-22-twin.png",
+      "gallery_count": 4
     },
     {
       "slug": "panoramik-m10",
@@ -564,21 +515,16 @@
         "derinlik_mm": 390,
         "yukseklik_mm": 700
       },
+      "listImage": "https://www.samixir.com/uploads/urunler/panoramik-m10-40315.png",
+      "heroImage": "https://www.samixir.com/uploads/urunler/panoramik-m10-40315.png",
       "images": [
+        "https://www.samixir.com/uploads/urunler/panoramik-m10-40315.png",
         "https://www.samixir.com/uploads/urunler/panoramik-m10-51097.png",
-        "https://www.samixir.com/uploads/images/25121-05060.jpg",
-        "https://www.samixir.com/uploads/urunler/9c8948b342b3737536497c9f393867dc.jpg",
-        "https://www.samixir.com/uploads/urunler/73e92d64110f6dde424fbf793df1c92e.jpg",
-        "https://www.samixir.com/uploads/urunler/04a5f5794b4de840ed85020eb86a4ef4.jpg",
         "https://www.samixir.com/uploads/urunler/panoramik-m10-50931.jpg",
-        "https://www.samixir.com/uploads/urunler/panoramik-m10-509311.jpg",
-        "https://www.samixir.com/uploads/urunler/panoramik-10-twin-35798.png",
-        "https://www.samixir.com/uploads/urunler/panoramik-10-triple-20540.png",
-        "https://www.samixir.com/uploads/urunler/panoramik-m22-96253.png",
-        "https://www.samixir.com/uploads/urunler/panoramik-m40-33188.png"
+        "https://www.samixir.com/uploads/urunler/panoramik-m10-509311.jpg"
       ],
       "localImage": "images/panoramik-m10.png",
-      "gallery_count": 11
+      "gallery_count": 4
     },
     {
       "slug": "panoramik-m22",
@@ -606,21 +552,16 @@
         "derinlik_mm": 405,
         "yukseklik_mm": 755
       },
+      "listImage": "https://www.samixir.com/uploads/urunler/panoramik-m22-96253.png",
+      "heroImage": "https://www.samixir.com/uploads/urunler/panoramik-m22-96253.png",
       "images": [
+        "https://www.samixir.com/uploads/urunler/panoramik-m22-96253.png",
         "https://www.samixir.com/uploads/urunler/panoramik-m22-96253.jpg",
-        "https://www.samixir.com/uploads/images/78221-43741.jpg",
-        "https://www.samixir.com/uploads/images/45146-64492.jpg",
-        "https://www.samixir.com/uploads/urunler/988eb7f9c3dda26c210237e1dc840dac.jpg",
-        "https://www.samixir.com/uploads/urunler/9dd86269d53183589ea74cb30938e61e.jpg",
-        "https://www.samixir.com/uploads/urunler/bf7df7ee0e8cbceee26f0033f6c549e4.jpg",
-        "https://www.samixir.com/uploads/urunler/c61ca16aa9e3cbccea1c61fc51daacb9.jpg",
-        "https://www.samixir.com/uploads/urunler/4b39b586afa27745e22e2b44af9bccd1.jpg",
-        "https://www.samixir.com/uploads/urunler/59aa3304ba94c75f639b1715d5145756.jpg",
         "https://www.samixir.com/uploads/urunler/panoramik-m22-39231.png",
         "https://www.samixir.com/uploads/urunler/panoramik-m22-39231.jpg"
       ],
-      "localImage": "images/panoramik-m22.jpg",
-      "gallery_count": 11
+      "localImage": "images/panoramik-m22.png",
+      "gallery_count": 4
     },
     {
       "slug": "panoramik-m40",
@@ -648,22 +589,16 @@
         "derinlik_mm": 450,
         "yukseklik_mm": 825
       },
+      "listImage": "https://www.samixir.com/uploads/urunler/panoramik-m40-33188.png",
+      "heroImage": "https://www.samixir.com/uploads/urunler/panoramik-m40-33188.png",
       "images": [
+        "https://www.samixir.com/uploads/urunler/panoramik-m40-33188.png",
         "https://www.samixir.com/uploads/urunler/panoramik-m40-89943.jpg",
-        "https://www.samixir.com/uploads/images/27859-55881.jpg",
-        "https://www.samixir.com/uploads/images/65902-36423.jpg",
-        "https://www.samixir.com/uploads/urunler/4dc904dcb32b84ab1aec4063a3b72758.jpg",
-        "https://www.samixir.com/uploads/urunler/f05e27af98332b5e621bc13d0b32c520.jpg",
-        "https://www.samixir.com/uploads/urunler/778b13684772f62224616fd9519c09fe.jpg",
         "https://www.samixir.com/uploads/urunler/panoramik-m40-10181.png",
-        "https://www.samixir.com/uploads/urunler/panoramik-m40-10181.jpg",
-        "https://www.samixir.com/uploads/urunler/panoramik-m22-96253.png",
-        "https://www.samixir.com/uploads/urunler/panoramik-s22-28245.png",
-        "https://www.samixir.com/uploads/urunler/panoramik-22-twin-92471.png",
-        "https://www.samixir.com/uploads/urunler/klasik-twin-99404.png"
+        "https://www.samixir.com/uploads/urunler/panoramik-m40-10181.jpg"
       ],
-      "localImage": "images/panoramik-m40.jpg",
-      "gallery_count": 12
+      "localImage": "images/panoramik-m40.png",
+      "gallery_count": 4
     },
     {
       "slug": "panoramik-s22",
@@ -690,23 +625,16 @@
         "derinlik_mm": 405,
         "yukseklik_mm": 760
       },
+      "listImage": "https://www.samixir.com/uploads/urunler/panoramik-s22-28245.png",
+      "heroImage": "https://www.samixir.com/uploads/urunler/panoramik-s22-28245.png",
       "images": [
+        "https://www.samixir.com/uploads/urunler/panoramik-s22-28245.png",
         "https://www.samixir.com/uploads/urunler/panoramik-s22-54714.jpg",
-        "https://www.samixir.com/uploads/urunler/c8d897a8edd94bb36e39809a98bc73b5.jpg",
-        "https://www.samixir.com/uploads/urunler/4707642499d12a2d2097a32089dbde92.jpg",
-        "https://www.samixir.com/uploads/urunler/2eb608d5546749f9c45a449465d097f0.jpg",
-        "https://www.samixir.com/uploads/urunler/582909856c8ffe1d54ad63ff4dc1aa7c.jpg",
-        "https://www.samixir.com/uploads/urunler/0a0416210beb305d4d65b20fbca206db.jpg",
-        "https://www.samixir.com/uploads/urunler/0e767ff740cc042aabad613b6c95ef33.jpg",
         "https://www.samixir.com/uploads/urunler/panoramik-s22-82641.png",
-        "https://www.samixir.com/uploads/urunler/panoramik-s22-82641.jpg",
-        "https://www.samixir.com/uploads/urunler/panoramik-10-twin-35798.png",
-        "https://www.samixir.com/uploads/urunler/panoramik-10-triple-20540.png",
-        "https://www.samixir.com/uploads/urunler/panoramik-m22-96253.png",
-        "https://www.samixir.com/uploads/urunler/panoramik-m40-33188.png"
+        "https://www.samixir.com/uploads/urunler/panoramik-s22-82641.jpg"
       ],
-      "localImage": "images/panoramik-s22.jpg",
-      "gallery_count": 13
+      "localImage": "images/panoramik-s22.png",
+      "gallery_count": 4
     },
     {
       "slug": "panoramik-s40",
@@ -733,20 +661,16 @@
         "derinlik_mm": 450,
         "yukseklik_mm": 830
       },
+      "listImage": "https://www.samixir.com/uploads/urunler/panoramik-s40-27470.png",
+      "heroImage": "https://www.samixir.com/uploads/urunler/panoramik-s40-27470.png",
       "images": [
+        "https://www.samixir.com/uploads/urunler/panoramik-s40-27470.png",
         "https://www.samixir.com/uploads/urunler/panoramik-s40-36551.jpg",
-        "https://www.samixir.com/uploads/urunler/ac9fbf718f6f8f188540821c41c151bb.jpg",
-        "https://www.samixir.com/uploads/urunler/2b5ac0e94ca269348d822bb11e7c2857.jpg",
-        "https://www.samixir.com/uploads/urunler/30ed124572613246ac6ef0359145ef9c.jpg",
         "https://www.samixir.com/uploads/urunler/panoramik-s40-36888.png",
-        "https://www.samixir.com/uploads/urunler/panoramik-s40-36888.jpg",
-        "https://www.samixir.com/uploads/urunler/panoramik-10-triple-20540.png",
-        "https://www.samixir.com/uploads/urunler/panoramik-m22-96253.png",
-        "https://www.samixir.com/uploads/urunler/panoramik-m40-33188.png",
-        "https://www.samixir.com/uploads/urunler/panoramik-s22-28245.png"
+        "https://www.samixir.com/uploads/urunler/panoramik-s40-36888.jpg"
       ],
-      "localImage": "images/panoramik-s40.jpg",
-      "gallery_count": 10
+      "localImage": "images/panoramik-s40.png",
+      "gallery_count": 4
     },
     {
       "slug": "slush-mono",
@@ -772,22 +696,17 @@
         "derinlik_mm": 530,
         "yukseklik_mm": 770
       },
+      "listImage": "https://www.samixir.com/uploads/urunler/slush-mono-99767.png",
+      "heroImage": "https://www.samixir.com/uploads/urunler/slush-mono-99767.png",
       "images": [
+        "https://www.samixir.com/uploads/urunler/slush-mono-99767.png",
         "https://www.samixir.com/uploads/urunler/slush-mono-60579.jpg",
-        "https://www.samixir.com/uploads/images/24203-65936.jpg",
-        "https://www.samixir.com/uploads/images/64606-15668.jpg",
-        "https://www.samixir.com/uploads/urunler/d920dfd552e2be4aab0876218081379a.jpg",
-        "https://www.samixir.com/uploads/urunler/3f9c1b3b1988f8137c9b3b229b9a4b2a.jpg",
-        "https://www.samixir.com/uploads/urunler/cad4f232b6762b9a58af152c842b5a0f.jpg",
         "https://www.samixir.com/uploads/urunler/slush-mono-87618.jpg",
         "https://www.samixir.com/uploads/urunler/slush-mono-876181.jpg",
-        "https://www.samixir.com/uploads/urunler/slush-twin-allure-63199.png",
-        "https://www.samixir.com/uploads/urunler/slush-triple-allure-50454.png",
-        "https://www.samixir.com/uploads/urunler/slush-triple-04395.png",
         "https://www.samixir.com/uploads/urunler/slush-mono-allure-90673.png"
       ],
-      "localImage": "images/slush-mono.jpg",
-      "gallery_count": 12
+      "localImage": "images/slush-mono.png",
+      "gallery_count": 5
     },
     {
       "slug": "slush-mono-allure",
@@ -813,18 +732,16 @@
         "derinlik_mm": 530,
         "yukseklik_mm": 770
       },
+      "listImage": "https://www.samixir.com/uploads/urunler/slush-mono-allure-90673.png",
+      "heroImage": "https://www.samixir.com/uploads/urunler/slush-mono-allure-90673.png",
       "images": [
+        "https://www.samixir.com/uploads/urunler/slush-mono-allure-90673.png",
         "https://www.samixir.com/uploads/urunler/slush-mono-allure-572611.jpg",
-        "https://www.samixir.com/uploads/images/38719-03643.jpg",
-        "https://www.samixir.com/uploads/images/03933-45931.jpg",
-        "https://www.samixir.com/uploads/urunler/940e278fb4f74d10920481d08b7f95d1.jpg",
-        "https://www.samixir.com/uploads/urunler/4b6d53b67d8f67c23abdbe241f436905.jpg",
-        "https://www.samixir.com/uploads/urunler/0372c7e68ad28b2b878ca6b3ce0a7d79.jpg",
         "https://www.samixir.com/uploads/urunler/slush-mono-allure-15010.jpg",
         "https://www.samixir.com/uploads/urunler/slush-mono-allure-150101.jpg"
       ],
-      "localImage": "images/slush-mono-allure.jpg",
-      "gallery_count": 8
+      "localImage": "images/slush-mono-allure.png",
+      "gallery_count": 4
     },
     {
       "slug": "slush-triple",
@@ -850,22 +767,17 @@
         "derinlik_mm": 530,
         "yukseklik_mm": 770
       },
+      "listImage": "https://www.samixir.com/uploads/urunler/slush-triple-04395.png",
+      "heroImage": "https://www.samixir.com/uploads/urunler/slush-triple-04395.png",
       "images": [
+        "https://www.samixir.com/uploads/urunler/slush-triple-04395.png",
         "https://www.samixir.com/uploads/urunler/slush-triple-33018.jpg",
-        "https://www.samixir.com/uploads/images/34380-47537.jpg",
-        "https://www.samixir.com/uploads/images/10360-41834.jpg",
-        "https://www.samixir.com/uploads/images/75816-91751.jpg",
-        "https://www.samixir.com/uploads/urunler/dbc551320c9652f2cdd25893580110b3.jpg",
-        "https://www.samixir.com/uploads/urunler/66c8219d2bc70aaf7d0391a7b964cc1d.jpg",
-        "https://www.samixir.com/uploads/urunler/c4f2cd9faf6d7e1fb8c5b3c745ab9378.jpg",
         "https://www.samixir.com/uploads/urunler/slush-triple-40881.jpg",
         "https://www.samixir.com/uploads/urunler/slush-triple-408811.jpg",
-        "https://www.samixir.com/uploads/urunler/slush-twin-allure-63199.png",
-        "https://www.samixir.com/uploads/urunler/slush-triple-allure-50454.png",
-        "https://www.samixir.com/uploads/urunler/slush-twin-67857.png"
+        "https://www.samixir.com/uploads/urunler/slush-triple-allure-50454.png"
       ],
-      "localImage": "images/slush-triple.jpg",
-      "gallery_count": 12
+      "localImage": "images/slush-triple.png",
+      "gallery_count": 5
     },
     {
       "slug": "slush-triple-allure",
@@ -892,22 +804,16 @@
         "derinlik_mm": 530,
         "yukseklik_mm": 770
       },
+      "listImage": "https://www.samixir.com/uploads/urunler/slush-triple-allure-50454.png",
+      "heroImage": "https://www.samixir.com/uploads/urunler/slush-triple-allure-50454.png",
       "images": [
+        "https://www.samixir.com/uploads/urunler/slush-triple-allure-50454.png",
         "https://www.samixir.com/uploads/urunler/slush-triple-allure-93905.jpg",
-        "https://www.samixir.com/uploads/images/69961-57719.jpg",
-        "https://www.samixir.com/uploads/images/14356-70731.jpg",
-        "https://www.samixir.com/uploads/images/82231-43873.jpg",
-        "https://www.samixir.com/uploads/urunler/527a20eb0252dd6cfee827ab794de1e2.jpg",
-        "https://www.samixir.com/uploads/urunler/f39ca0b1f5b419353361cae1b2381073.jpg",
-        "https://www.samixir.com/uploads/urunler/0ece0ffb742ec8a7325e1d68c22ccdb9.jpg",
         "https://www.samixir.com/uploads/urunler/slush-triple-allure-10703.jpg",
-        "https://www.samixir.com/uploads/urunler/slush-triple-allure-107031.jpg",
-        "https://www.samixir.com/uploads/urunler/slush-twin-allure-63199.png",
-        "https://www.samixir.com/uploads/urunler/slush-twin-67857.png",
-        "https://www.samixir.com/uploads/urunler/slush-mono-allure-90673.png"
+        "https://www.samixir.com/uploads/urunler/slush-triple-allure-107031.jpg"
       ],
-      "localImage": "images/slush-triple-allure.jpg",
-      "gallery_count": 12
+      "localImage": "images/slush-triple-allure.png",
+      "gallery_count": 4
     },
     {
       "slug": "slush-twin",
@@ -933,22 +839,17 @@
         "derinlik_mm": 530,
         "yukseklik_mm": 770
       },
+      "listImage": "https://www.samixir.com/uploads/urunler/slush-twin-67857.png",
+      "heroImage": "https://www.samixir.com/uploads/urunler/slush-twin-67857.png",
       "images": [
+        "https://www.samixir.com/uploads/urunler/slush-twin-67857.png",
         "https://www.samixir.com/uploads/urunler/slush-twin-04826.jpg",
-        "https://www.samixir.com/uploads/images/72584-62580.jpg",
-        "https://www.samixir.com/uploads/images/30575-57619.jpg",
-        "https://www.samixir.com/uploads/images/63932-07357.jpg",
-        "https://www.samixir.com/uploads/urunler/84b4a3fb308bf2818595739ed6bded0e.jpg",
-        "https://www.samixir.com/uploads/urunler/7180ce7532668b5c5e14f8cf08bef94a.jpg",
-        "https://www.samixir.com/uploads/urunler/b3c521876c9ef4894b2b69321641cb0e.jpg",
         "https://www.samixir.com/uploads/urunler/slush-twin-14565.jpg",
         "https://www.samixir.com/uploads/urunler/slush-twin-145651.jpg",
-        "https://www.samixir.com/uploads/urunler/slush-twin-allure-63199.png",
-        "https://www.samixir.com/uploads/urunler/slush-mono-99767.png",
-        "https://www.samixir.com/uploads/urunler/slush-mono-allure-90673.png"
+        "https://www.samixir.com/uploads/urunler/slush-twin-allure-63199.png"
       ],
-      "localImage": "images/slush-twin.jpg",
-      "gallery_count": 12
+      "localImage": "images/slush-twin.png",
+      "gallery_count": 5
     },
     {
       "slug": "slush-twin-allure",
@@ -974,22 +875,16 @@
         "derinlik_mm": 530,
         "yukseklik_mm": 770
       },
+      "listImage": "https://www.samixir.com/uploads/urunler/slush-twin-allure-63199.png",
+      "heroImage": "https://www.samixir.com/uploads/urunler/slush-twin-allure-63199.png",
       "images": [
+        "https://www.samixir.com/uploads/urunler/slush-twin-allure-63199.png",
         "https://www.samixir.com/uploads/urunler/slush-twin-allure-46210.jpg",
-        "https://www.samixir.com/uploads/images/53362-90299.jpg",
-        "https://www.samixir.com/uploads/images/87872-67190.jpg",
-        "https://www.samixir.com/uploads/images/67695-26285.jpg",
-        "https://www.samixir.com/uploads/urunler/9a372f428fdc0caf4b411d5d1a9e2eb3.jpg",
-        "https://www.samixir.com/uploads/urunler/42d15824a762b8a8d46846abb0d1769c.jpg",
-        "https://www.samixir.com/uploads/urunler/787c0142029e1810b910c38b21656004.jpg",
         "https://www.samixir.com/uploads/urunler/slush-twin-allure-54933.jpg",
-        "https://www.samixir.com/uploads/urunler/slush-twin-allure-89840.jpg",
-        "https://www.samixir.com/uploads/urunler/slush-triple-allure-50454.png",
-        "https://www.samixir.com/uploads/urunler/slush-twin-67857.png",
-        "https://www.samixir.com/uploads/urunler/slush-mono-allure-90673.png"
+        "https://www.samixir.com/uploads/urunler/slush-twin-allure-89840.jpg"
       ],
-      "localImage": "images/slush-twin-allure.jpg",
-      "gallery_count": 12
+      "localImage": "images/slush-twin-allure.png",
+      "gallery_count": 4
     }
   ]
 }

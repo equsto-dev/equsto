@@ -1,6 +1,6 @@
 # Samixir web katalog scrape
 
-Tarih: 2026-06-09T18:45:37
+Tarih: 2026-06-09T20:04:46
 Ürün: **25**
 
 | Slug | Başlık | Görsel | Ölçü |

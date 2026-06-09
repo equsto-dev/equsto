@@ -129,15 +129,56 @@ function parseCategory(html, slug) {
   return "Samixir";
 }
 
-function parseImages(html) {
+/** urunler sayfasındaki vitrin fotoğrafları (pimage) — slug → URL */
+function parseListImages(html) {
+  const map = {};
+  for (const m of html.matchAll(
+    /<a href="https:\/\/www\.samixir\.com\/tr\/urun\/([a-z0-9-]+)"[^>]*>\s*<img src="([^"]+)" class="img-responsive w-100 pimage"/gi,
+  )) {
+    map[m[1]] = m[2].startsWith("http") ? m[2] : BASE + m[2];
+  }
+  return map;
+}
+
+function absUrl(u) {
+  return u.startsWith("http") ? u : BASE + u;
+}
+
+function slugInFilename(slug, url) {
+  const base = path.basename(new URL(url).pathname).toLowerCase();
+  const compact = slug.toLowerCase().replace(/-/g, "");
+  return base.includes(slug.toLowerCase()) || base.includes(compact);
+}
+
+/** Ürün sayfası galerisi — sadece uploads/urunler, infografik uploads/images hariç */
+function parseGalleryImages(html, slug) {
   return [
     ...new Set(
-      [...html.matchAll(/<img[^>]+src="([^"]+)"/gi)]
-        .map((m) => m[1])
-        .filter((u) => /uploads\/(urunler|images)\//.test(u) && !/no-photo|pdf\.png/i.test(u))
-        .map((u) => (u.startsWith("http") ? u : BASE + u)),
+      [...html.matchAll(/src="([^"]+)"/gi)]
+        .map((m) => absUrl(m[1]))
+        .filter((u) => /uploads\/urunler\//.test(u) && !/pdf\.png|no-photo/i.test(u))
+        .filter((u) => slugInFilename(slug, u)),
     ),
   ];
+}
+
+/** Vitrin fotoğrafı: önce urunler listesi, sonra ürün sayfası hero */
+function pickHeroImage(html, slug, listImage) {
+  if (listImage) return absUrl(listImage);
+
+  const header = html.match(
+    /col-2 mt-1[\s\S]{0,220}?src="([^"]+uploads\/urunler\/[^"]+)"/i,
+  )?.[1];
+  if (header) return absUrl(header);
+
+  for (const m of html.matchAll(
+    /src="([^"]*uploads\/urunler\/[^"]+)"[^>]*style="max-height:\s*250px"/gi,
+  )) {
+    const u = absUrl(m[1]);
+    if (slugInFilename(slug, u)) return u;
+  }
+
+  return parseGalleryImages(html, slug)[0] || null;
 }
 
 function parseDescription(html) {
@@ -159,7 +200,7 @@ async function downloadImage(url, dest) {
   }
 }
 
-async function scrapeProduct(slug) {
+async function scrapeProduct(slug, listImages) {
   const url = `${BASE}/tr/urun/${slug}`;
   const html = await fetchText(url);
   const title =
@@ -167,13 +208,16 @@ async function scrapeProduct(slug) {
     slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
   const teknik_ozellikler = parseSpecBlock(html);
   const olculer = parseDimensions(teknik_ozellikler, html);
-  const images = parseImages(html);
+  const listImage = listImages[slug] || null;
+  const heroImage = pickHeroImage(html, slug, listImage);
+  const gallery = parseGalleryImages(html, slug);
+  const images = heroImage ? [heroImage, ...gallery.filter((u) => u !== heroImage)] : gallery;
   let localImage = null;
-  if (!skipMedia && images[0]) {
-    const ext = path.extname(new URL(images[0]).pathname) || ".jpg";
+  if (!skipMedia && heroImage) {
+    const ext = path.extname(new URL(heroImage).pathname) || ".jpg";
     const safe = `${slug}${ext}`;
     const dest = path.join(OUT_MEDIA, safe);
-    if (await downloadImage(images[0], dest)) localImage = `images/${safe}`;
+    if (await downloadImage(heroImage, dest)) localImage = `images/${safe}`;
   }
 
   return {
@@ -184,6 +228,8 @@ async function scrapeProduct(slug) {
     description: parseDescription(html),
     teknik_ozellikler,
     olculer,
+    listImage,
+    heroImage,
     images,
     localImage,
     gallery_count: images.length,
@@ -196,11 +242,16 @@ async function main() {
   if (limitArg > 0) slugs = slugs.slice(0, limitArg);
   console.log(`[samixir] ${slugs.length} ürün`);
 
+  console.log("[samixir] urunler vitrin görselleri…");
+  const listHtml = await fetchText(LIST_URL);
+  const listImages = parseListImages(listHtml);
+  console.log(`[samixir] ${Object.keys(listImages).length} liste görseli`);
+
   const products = [];
   for (let i = 0; i < slugs.length; i++) {
     const slug = slugs[i];
     console.log(`[samixir] ${i + 1}/${slugs.length} ${slug}`);
-    products.push(await scrapeProduct(slug));
+    products.push(await scrapeProduct(slug, listImages));
     if (i < slugs.length - 1) await sleep(400);
   }
 
