@@ -26,7 +26,7 @@ import {
   cafeImageExt,
   downloadCafeImage,
   ensureCafeCache,
-  matchSamixirCafeProduct,
+  resolveSamixirImage,
 } from "./lib/samixir-cafemarkt-images.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -87,16 +87,24 @@ const UA = "EqustoImport/1.0 (+https://equsto.com; samixir-catalog)";
 async function copyImage(p, pdfCatalog, cafeItems) {
   if (!useSamixirImages) {
     const pdfCode = pdfCodeForSlug(p.slug, pdfCatalog);
-    const cafe = matchSamixirCafeProduct(p.slug, pdfCode, cafeItems);
-    if (cafe?.image) {
-      const ext = cafeImageExt(cafe.image);
+    const hit = resolveSamixirImage(p.slug, pdfCode, cafeItems);
+    if (hit?.url) {
+      const ext = cafeImageExt(hit.url);
       const safe = `${p.slug}${ext}`;
       const dest = path.join(OUT_IMG, safe);
-      if (!dryRun && (await downloadCafeImage(cafe.image, dest))) {
-        return { images: [`images/catalog/samixir/${safe}`], source: "cafemarkt", cafe_code: cafe.code };
+      if (!dryRun && (await downloadCafeImage(hit.url, dest))) {
+        return {
+          images: [`images/catalog/samixir/${safe}`],
+          source: hit.source,
+          cafe_code: hit.cafe_code || undefined,
+        };
       }
       if (dryRun) {
-        return { images: [`images/catalog/samixir/${safe}`], source: "cafemarkt", cafe_code: cafe.code };
+        return {
+          images: [`images/catalog/samixir/${safe}`],
+          source: hit.source,
+          cafe_code: hit.cafe_code || undefined,
+        };
       }
     }
   }

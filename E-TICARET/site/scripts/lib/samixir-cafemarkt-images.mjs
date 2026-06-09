@@ -19,6 +19,14 @@ export const CAFE_CODE_BY_SLUG = {
   "hot-inox-10": "SC10.AI.SSPB",
 };
 
+/** Cafemarkt vitrin/banner yerine temiz ürün fotoğrafı (samixir.com detay veya cafe galeri) */
+export const IMAGE_URL_BY_SLUG = {
+  "hot-gold-sc06": "https://www.samixir.com/uploads/urunler/hot-gold-sc05-39352.jpg",
+  "hot-gold-sc10": "https://www.samixir.com/uploads/urunler/hot-gold-sc10-389621.jpg",
+  "hot-sc06": "https://www.samixir.com/uploads/urunler/hot-sc05-69793.jpg",
+  "hot-neo-10": "https://www.samixir.com/uploads/urunler/hot-neo-10-31087.jpg",
+};
+
 function cafeProductCode(raw) {
   return String(raw || "")
     .replace(/^023\./i, "")
@@ -52,6 +60,19 @@ export function cafeImageExt(url) {
   const ext = path.extname(new URL(url).pathname).toLowerCase();
   if (/^\.(jpe?g|png|webp)$/.test(ext)) return ext;
   return ".jpg";
+}
+
+/** Öncelik: manuel override → Cafemarkt liste görseli */
+export function resolveSamixirImage(slug, pdfCode, items) {
+  const override = IMAGE_URL_BY_SLUG[slug];
+  if (override) {
+    return { url: override, source: "samixir-detail", cafe_code: null };
+  }
+  const cafe = matchSamixirCafeProduct(slug, pdfCode, items);
+  if (cafe?.image) {
+    return { url: cafe.image, source: "cafemarkt", cafe_code: cafe.code };
+  }
+  return null;
 }
 
 export async function ensureCafeCache({ refresh = false } = {}) {
