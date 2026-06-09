@@ -14,7 +14,7 @@
 
 
 
-  var FOOTER_JSON = "/data/footer-vitrin.json?v=20260609iletisim-cafemarkt";
+  var FOOTER_JSON = "/data/footer-vitrin.json?v=20260609footer-about-trim";
 
   var SSS_LINK = { key: "footer.link_sss", label: "SSS", href: "/sss" };
 
@@ -411,18 +411,6 @@
 
           title: "Hakkımızda",
 
-          contact: {
-
-            email: "info@equsto.com",
-
-            phoneDisplay: "+90 532 684 01 52",
-
-            phoneTel: "+905326840152",
-
-            whatsapp: "905326840152",
-
-          },
-
           links: [
 
             { key: "footer.link_about", label: "Hakkımızda", href: "/hakkimizda.html" },
@@ -435,11 +423,7 @@
 
             { key: "footer.link_contact", label: "İletişim", href: "/iletisim" },
 
-            { key: "footer.link_corporate", label: "Kurumsal Sitemiz", href: "#" },
-
             { key: "footer.link_blog", label: "Blog", href: "/blog" },
-
-            { key: "footer.link_uk", label: "UK", href: "#" },
 
           ],
 

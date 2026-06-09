@@ -1,5 +1,5 @@
 {
-  "version": 16,
+  "version": 17,
   "source": "equsto.com sitemap + llms.txt + index eq-footer-seo + llms Hakkımızda",
   "faq": {
     "title": "SSS",
@@ -118,21 +118,13 @@
     {
       "titleKey": "footer.col_about",
       "title": "Hakkımızda",
-      "contact": {
-        "email": "info@equsto.com",
-        "phoneDisplay": "+90 532 684 01 52",
-        "phoneTel": "+905326840152",
-        "whatsapp": "905326840152"
-      },
       "links": [
         { "key": "footer.link_about", "label": "Hakkımızda", "href": "/hakkimizda.html" },
         { "key": "footer.link_bank", "label": "Banka Bilgilerimiz", "href": "#" },
         { "key": "footer.link_export", "label": "Export", "href": "#" },
         { "key": "footer.link_career", "label": "Kariyer", "href": "#" },
         { "key": "footer.link_contact", "label": "İletişim", "href": "/iletisim" },
-        { "key": "footer.link_corporate", "label": "Kurumsal Sitemiz", "href": "#" },
-        { "key": "footer.link_blog", "label": "Blog", "href": "/blog" },
-        { "key": "footer.link_uk", "label": "UK", "href": "#" }
+        { "key": "footer.link_blog", "label": "Blog", "href": "/blog" }
       ]
     }
   ]
