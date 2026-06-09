@@ -187,7 +187,7 @@ def load_excel_rows() -> list[dict]:
             "brand": BRAND,
             "name": name,
             "sku": sku,
-            "model": sku,
+            "model": sku.replace("INO-", "", 1) if sku.upper().startswith("INO-") else sku,
             "urun_kodu": sku,
             "stok_no": sku,
             "dept": dept,

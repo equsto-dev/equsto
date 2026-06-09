@@ -405,12 +405,44 @@ export function downloadInoksanImage(sku, web, imgDir, imgSub, opts = {}) {
   return null;
 }
 
+function foldCmp(s) {
+  return foldTr(s).replace(/\s+/g, "");
+}
+
+/** Vitrin başlığı: model kodu + inoksan.com veya Excel açıklaması */
+export function inoksanDisplayName(row, web, match) {
+  const model = skuCore(row?.sku || "");
+  const excel = String(row?.name || "")
+    .replace(/^İNOKSAN\s+/i, "")
+    .replace(/^INOKSAN\s+/i, "")
+    .trim();
+
+  const trusted =
+    web?.title &&
+    match &&
+    (match.via === "code-index" ||
+      match.via === "bundle-module" ||
+      (match.via === "family-alias" && match.score >= 85));
+
+  if (trusted) {
+    const wt = String(web.title).trim();
+    if (foldCmp(wt).includes(foldCmp(model))) return wt;
+    return `${model} – ${wt}`;
+  }
+
+  if (excel && foldCmp(excel).includes(foldCmp(model))) return excel;
+  if (excel) return `${model} – ${excel}`;
+  return model || String(row?.sku || "");
+}
+
 export function enrichInoksanRow(row, match, imgResult) {
   const web = match?.product;
   let changed = false;
 
+  row.model = skuCore(row.sku || "");
+  row.name = inoksanDisplayName(row, web, match);
+
   if (web) {
-    // Vitrin adı Excel kısa metninden kalır; web başlığı ayrı alanda.
     row.inoksan_web_title = web.title || "";
     row.inoksan_web_id = web.id;
     row.inoksan_slug = web.slug;
