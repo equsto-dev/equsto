@@ -107,6 +107,9 @@ def pair_trailing_prices(lines: list[str]) -> None:
     """Ardışık fiyat satırları + ardışık kod satırları → eşleştir."""
     i = 0
     while i < len(lines):
+        if not (PRICE_USD_RE.search(lines[i]) or PRICE_EUR_RE.search(lines[i])):
+            i += 1
+            continue
         prices: list[tuple[str, float]] = []
         j = i
         while j < len(lines) and j < i + 6:
@@ -133,15 +136,64 @@ def pair_trailing_prices(lines: list[str]) -> None:
             else:
                 k += 1
         if codes and len(prices) >= 1:
+            if len(prices) > 1 and len(codes) < len(prices):
+                i = max(i + 1, k)
+                continue
             for ci, code in enumerate(codes):
                 pi = min(ci, len(prices) - 1)
                 kind, val = prices[pi]
                 # stored via global merge in extract_all
-                _pending_pairs.append((code, kind, val))
+                _pending_pairs.append(("trail", code, kind, val))
         i = max(i + 1, k)
 
 
-_pending_pairs: list[tuple[str, str, float]] = []
+def pair_leading_codes_trailing_prices(lines: list[str]) -> None:
+    """Aynı bloktaki kodlar (arada açıklama satırı olabilir) + sonraki fiyatlar."""
+    i = 0
+    while i < len(lines):
+        if not CODE_RE.match(lines[i]):
+            i += 1
+            continue
+
+        codes: list[str] = [lines[i].upper().replace(" ", "")]
+        j = i + 1
+        while j < len(lines) and j < i + 28:
+            if CODE_RE.match(lines[j]):
+                codes.append(lines[j].upper().replace(" ", ""))
+                j += 1
+                continue
+            if PRICE_USD_RE.search(lines[j]) or PRICE_EUR_RE.search(lines[j]):
+                break
+            j += 1
+
+        if len(codes) < 2:
+            i += 1
+            continue
+
+        prices: list[tuple[str, float]] = []
+        k = j
+        while k < len(lines) and k < j + 8:
+            um = PRICE_USD_RE.search(lines[k])
+            em = PRICE_EUR_RE.search(lines[k])
+            if um:
+                prices.append(("usd", float(um.group(1).replace(",", ""))))
+            elif em:
+                prices.append(("eur", float(em.group(1).replace(",", ""))))
+            elif prices:
+                break
+            k += 1
+
+        if len(prices) >= 1:
+            for ci, code in enumerate(codes):
+                pi = min(ci, len(prices) - 1)
+                kind, val = prices[pi]
+                _pending_pairs.append(("lead", code, kind, val))
+            i = j
+            continue
+        i += 1
+
+
+_pending_pairs: list[tuple[str, str, str, float]] = []
 
 
 def extract_all(doc: fitz.Document) -> dict[str, dict]:
@@ -158,6 +210,7 @@ def extract_all(doc: fitz.Document) -> dict[str, dict]:
 
     lines, line_pages = expand_code_lines(lines, line_pages)
     pair_trailing_prices(lines)
+    pair_leading_codes_trailing_prices(lines)
 
     products: dict[str, dict] = {}
     category = ""
@@ -218,7 +271,7 @@ def extract_all(doc: fitz.Document) -> dict[str, dict]:
                 entry["specs"]["liste_eur"] = prev["specs"].get("liste_eur")
         products[nk] = entry
 
-    for code, kind, val in _pending_pairs:
+    for src, code, kind, val in _pending_pairs:
         nk = norm_code(code)
         p = products.get(nk) or {
             "model": code,
@@ -228,9 +281,12 @@ def extract_all(doc: fitz.Document) -> dict[str, dict]:
             "page": 0,
             "specs": {},
         }
-        if kind == "usd" and not p["specs"].get("liste_usd"):
+        has = p["specs"].get("liste_usd") or p["specs"].get("liste_eur")
+        if src == "trail" and has:
+            continue
+        if kind == "usd":
             p["specs"]["liste_usd"] = val
-        if kind == "eur" and not p["specs"].get("liste_eur"):
+        if kind == "eur":
             p["specs"]["liste_eur"] = val
         products[nk] = p
 

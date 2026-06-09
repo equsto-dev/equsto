@@ -122,16 +122,6 @@ export function findPdfListPrice(p, index, products = []) {
   }
 
   for (const k of keys) {
-    if (k.length < 4) continue;
-    for (const [ik, prices] of index) {
-      if (ik.length < 4) continue;
-      if (ik.startsWith(k) || k.startsWith(ik)) {
-        return { ...prices, matchKey: ik, fuzzy: true };
-      }
-    }
-  }
-
-  for (const k of keys) {
     const direct = VOSCO_DIRECT_LISTE_USD[k];
     if (direct > 0) {
       return { listeUsd: direct, listeEur: 0, matchKey: k, direct: true };

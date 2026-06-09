@@ -89,6 +89,11 @@ export const VOSCO_CODE_ALIASES = {
   VSC600B: "VSC6",
   VSC700B: "VSC7",
   VSC900B: "VSC6",
+
+  // Buz makinesi — web ayrı kodlar, PDF VSC-100T/C ortak liste
+  VSC100B: "VSC100TC",
+  VSC100C: "VSC100TC",
+  VSC100T: "VSC100TC",
 };
 
 /** PDF'te kodu olmayan; doğrudan USD liste (katalog sayfası) */
