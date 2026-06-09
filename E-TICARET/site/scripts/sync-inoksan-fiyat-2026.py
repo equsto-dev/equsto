@@ -205,13 +205,8 @@ def is_inoksan_row(row: dict) -> bool:
 
 
 def yikama_vitrin_ok(row: dict) -> bool:
-    """Yıkama vitrin: yalnızca makine satırları (tezgah/ZCO-ZMD paketleri hariç)."""
-    if row.get("dept") != "yikama":
-        return True
-    if row.get("inoksan_h2") == "Ekipmanlar":
-        return False
-    sku = str(row.get("sku") or "")
-    if "-ZCO-" in sku or "-ZMD-" in sku:
+    """Bulaşık yıkama (yikama dept) sitede yok — hiçbir İnoksan yıkama satırı import edilmez."""
+    if row.get("dept") == "yikama":
         return False
     return True
 
