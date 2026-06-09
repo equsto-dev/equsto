@@ -18,6 +18,7 @@ import {
   enrichInoksanRow,
   isValidImageFile,
   matchInoksanWeb,
+  skuCore,
 } from "./lib/inoksan-enrich.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -181,7 +182,9 @@ async function main() {
       !force &&
       row.inoksan_web_id &&
       row.images?.length &&
-      isValidImageFile(path.join(ROOT, "public", row.images[0]))
+      isValidImageFile(path.join(ROOT, "public", row.images[0])) &&
+      row.model === skuCore(row.sku) &&
+      !String(row.name || "").includes("L/R")
     ) {
       if (row.inoksan_web_id) webMatched++;
       if (row.images?.length) imged++;
