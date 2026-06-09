@@ -201,6 +201,7 @@ def load_excel_rows() -> list[dict]:
             "inoksan_h1": h1,
             "inoksan_h2": h2,
             "inoksan_h3": h3,
+            "inoksan_excel_name": name,
         }
         row_obj.update(px)
         out.append(row_obj)
@@ -229,6 +230,7 @@ def yikama_vitrin_ok(row: dict) -> bool:
 
 
 PRESERVE_KEYS = (
+    "inoksan_excel_name",
     "images",
     "inoksan_web_id",
     "inoksan_web_title",

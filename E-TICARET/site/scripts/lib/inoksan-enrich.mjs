@@ -418,13 +418,24 @@ function webTitleMatchesSku(model, title) {
   return wt.includes(m);
 }
 
+function excelLabel(row) {
+  const raw =
+    row?.inoksan_excel_name ||
+    String(row?.specs || "").split("\n")[0] ||
+    row?.name ||
+    "";
+  const model = skuCore(row?.sku || "");
+  return String(raw)
+    .replace(/^İNOKSAN\s+/i, "")
+    .replace(/^INOKSAN\s+/i, "")
+    .replace(new RegExp(`^${model}\\s*[-–]\\s*`, "i"), "")
+    .trim();
+}
+
 /** Vitrin başlığı: model kodu + Excel; web yalnızca birebir eşleşmede */
 export function inoksanDisplayName(row, web, match) {
   const model = skuCore(row?.sku || "");
-  const excel = String(row?.name || "")
-    .replace(/^İNOKSAN\s+/i, "")
-    .replace(/^INOKSAN\s+/i, "")
-    .trim();
+  const excel = excelLabel(row);
 
   const wt = web?.title ? String(web.title).trim() : "";
   if (wt && webTitleMatchesSku(model, wt)) return wt;
