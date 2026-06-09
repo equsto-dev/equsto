@@ -86,7 +86,7 @@ function mapAnalizRows(raw: unknown): ImportAnalizRow[] {
     const row = x as Record<string, unknown>;
     const ham_isim = String(row.ham_isim ?? row.name ?? "").trim();
     const tip_kodu = String(row.tip_kodu ?? row.tip ?? "").trim();
-    if (!ham_isim || !tip_kodu) continue;
+    if (!ham_isim) continue;
     const adetRaw = row.adet;
     const adet =
       typeof adetRaw === "number" && adetRaw > 0

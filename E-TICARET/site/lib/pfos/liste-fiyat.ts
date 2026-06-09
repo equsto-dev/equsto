@@ -8,6 +8,8 @@ import { ekipmanToReferansKalemler } from "@/lib/pfos/referans/pfos-referans-loa
 import type { ReferansKalem } from "@/lib/pfos/referans/referans-types";
 import { referansKalemlerToTemplateItems } from "@/lib/pfos/referans/build-template-items";
 import type { ListePdfKalem } from "@/lib/pfos/liste-pdf-analiz";
+import type { PfosEkipmanSatir } from "@/lib/pfos/kategoriler/types";
+import { ekipmanToReferansKalemler } from "@/lib/pfos/referans/pfos-referans-loader";
 import type { PfosKategoriKodu } from "@/lib/pfos/core/engine-types";
 import { repairPfosDisplayText } from "@/lib/utf8/repair-turkish-fffd";
 import { matchProductForReferansKalem } from "@/lib/pfos/referans/match-referans-kalem";
@@ -35,20 +37,6 @@ export type ListeFiyatInput = {
   fiyatStratejisi?: FiyatStratejisi;
 };
 
-const IMPORT_KAT: Record<string, PfosKategoriKodu> = {
-  pisirme: "B",
-  icecek: "A",
-  sogutma: "G",
-  yikama: "H",
-  hazirlik: "C",
-  tezgah_davlumbaz: "B",
-  depolama: "G",
-  araba: "G",
-  yardimci: "G",
-  sunum: "A",
-  diger: "G",
-};
-
 function tahminiM2FromAdet(totalAdet: number): number {
   return Math.round(Math.max(50, Math.min(500, totalAdet * 2)));
 }
@@ -61,33 +49,23 @@ export function importKalemlerToReferansKalemler(
   items: ListePdfKalem[],
   listeKey: string,
 ): ReferansKalem[] {
-  const bolumOrder = new Map<string, number>();
-  let nextBolum = 0;
-
-  return items.map((item, index) => {
-    const kat = IMPORT_KAT[item.kategori] ?? "G";
-    if (!bolumOrder.has(kat)) bolumOrder.set(kat, nextBolum++);
-
+  const satirlar: PfosEkipmanSatir[] = items.map((item, index) => {
     const poz = item.poz?.trim() || String(index + 1);
     const olcu = item.olcu?.trim();
-
+    const bolumAd = item.kategori?.trim() || "";
     return {
-      referansPoz: poz,
-      isim: repairPfosDisplayText(item.ham_isim),
-      urunTipi: item.tip_kodu.trim(),
-      kategoriKodu: kat,
+      bolum: poz.charAt(0).toUpperCase(),
+      bolumAd,
+      poz,
+      ad: repairPfosDisplayText(item.ham_isim),
+      olcu: olcu || "—",
       adet:
         typeof item.adet === "number" && item.adet > 0
           ? Math.round(item.adet)
           : 1,
-      tip: "zorunlu" as const,
-      notlar: olcu ? repairPfosDisplayText(`Ölçü: ${olcu}`) : undefined,
-      altKategori: "",
-      referansBolumKey: kat,
-      referansBolumSira: bolumOrder.get(kat)!,
-      referansListeKey: listeKey,
     };
   });
+  return ekipmanToReferansKalemler(satirlar, listeKey);
 }
 
 export async function calculateListeQuote(

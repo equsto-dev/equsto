@@ -3,6 +3,7 @@
  */
 
 import { runImportDocumentAnaliz } from "@/lib/claude/import-analiz.server";
+import { parseProformaPdfBuffer } from "@/lib/pfos/liste-proforma-pdf";
 import { loadTipSozluguEntries } from "@/lib/tip-sozlugu/store";
 import type { TipSozlukEntry } from "@/lib/tip-sozlugu/types";
 
@@ -20,29 +21,27 @@ function buildSystemPrompt(entries: TipSozlukEntry[]): string {
     .map((t) => `${t.tip_kodu} → ${t.aciklama} (${t.kategori})`)
     .join("\n");
 
-  return `Sen bir endüstriyel mutfak ekipmanı uzmanısın.
-Kullanıcı sana bir PDF veya Excel teklif / proforma / ekipman listesi yükleyecek.
-Bu dosyadan ekipman kalemlerini çıkar ve aşağıdaki tip_sozlugu ile eşleştir.
+  return `Sen bir endüstriyel mutfak ekipman listesi çıkarıcısısın.
+PDF veya Excel proforma/teklif dosyasındaki satırları BİREBİR kopyala — yorumlama veya stok kodu ekleme.
 
-TİP SÖZLÜĞÜ (mevcut):
-${tipListesi}
-
-GÖREV:
-1. Dosyadaki her ekipman kalemini tespit et (adet ve ölçü varsa al)
-2. Mevcut tip_sozlugu'ndan en uygun tip_kodu'nu bul
-3. Uygun yoksa yeni bir tip_kodu öner (snake_case, Türkçe karaktersiz)
-4. Her kalem için kategori: pisirme / icecek / sogutma / yikama / hazirlik / tezgah_davlumbaz / depolama / diger
+KURALLAR:
+1. Yalnızca dosyada görünen Poz satırlarını al (A1, D7, K2 vb.). Dosyada olmayan kalem UYDURMA.
+2. ham_isim = ürün tanımı (marka ve fiyat hariç), dosyadaki Türkçe metin aynen.
+3. poz = dosyadaki poz numarası (A25A gibi).
+4. olcu = varsa 140*70*85 formatında; yoksa null.
+5. adet = dosyadaki adet sütunu.
+6. kategori = dosyadaki bölüm başlığı (sıcak mutfak, bulaşık yıkama vb.) veya poz harfine göre tahmin.
+7. tip_kodu alanını boş string bırak ("").
 
 SADECE JSON dizi döndür:
 [
   {
-    "ham_isim": "dosyadan gelen orijinal metin",
-    "tip_kodu": "mevcut_veya_yeni_kod",
-    "kategori": "kategori_adi",
+    "ham_isim": "MAKE-UP DOLABI, 3*2 ÇEKMECELİ, YÜKSEK BORULU",
+    "tip_kodu": "",
+    "kategori": "sıcak mutfak",
     "adet": 1,
-    "poz": "A1 veya satır no",
-    "olcu": "152*46*160 veya null",
-    "durum": "eslesti" | "yeni" | "belirsiz"
+    "poz": "A1",
+    "olcu": "140*70*85/142"
   }
 ]`;
 }
@@ -76,6 +75,8 @@ export async function analyzePdfForListe(
   pdfBuffer: ArrayBuffer,
   opts?: { notlar?: string },
 ): Promise<ListePdfKalem[]> {
+  const structured = await parseProformaPdfBuffer(pdfBuffer);
+  if (structured?.length) return structured;
   return analyzeDocumentForListe(pdfBuffer, "application/pdf", opts);
 }
 
