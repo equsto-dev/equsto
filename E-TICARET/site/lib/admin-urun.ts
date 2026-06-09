@@ -55,6 +55,7 @@ type EcomRow = {
   satis_fiyati_eur?: number;
   satis_fiyati_tl?: number;
   satis_eur_indirimli?: number;
+  satis_eur_net?: number;
   para_birimi?: string;
   kdv_oran?: number;
   tip_kodu?: string;
@@ -97,8 +98,8 @@ export function ecomRowToAdminUrun(u: EcomRow, index: number): AdminUrunRow {
       ? Number(u.fiyat_tl)
       : parseFirstTl(u?.price);
   const satisEur =
-    Number(u?.satis_fiyati_eur ?? u?.satis_eur_indirimli) > 0
-      ? Number(u?.satis_fiyati_eur ?? u?.satis_eur_indirimli)
+    Number(u?.satis_fiyati_eur ?? u?.satis_eur_indirimli ?? u?.satis_eur_net) > 0
+      ? Number(u?.satis_fiyati_eur ?? u?.satis_eur_indirimli ?? u?.satis_eur_net)
       : null;
   const alisEur = Number(u?.alis_fiyati_eur) > 0 ? Number(u.alis_fiyati_eur) : null;
   const alisTl = Number(u?.alis_fiyati_tl) > 0 ? Number(u.alis_fiyati_tl) : null;

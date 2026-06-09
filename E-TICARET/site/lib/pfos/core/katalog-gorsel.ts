@@ -8,6 +8,7 @@ import {
   equstoGorselRelFromSku,
   normalizePfosGorselUrl,
   oztiWebImageRelFromSku,
+  portashelfGorselRelFromSku,
 } from "./katalog-gorsel-url";
 
 export {
@@ -46,8 +47,14 @@ function localPublicFileExists(rel: string): boolean {
       .replace(/^\/data\//, "")
       .replace(/^data\//, "")
       .replace(/^\/+/, "");
-    const abs = path.join(process.cwd(), "public", clean.replace(/\//g, path.sep));
-    return fs.existsSync(abs) && fs.statSync(abs).size > 512;
+    const relPath = clean.replace(/\//g, path.sep);
+    const bases = [
+      path.join(process.cwd(), "public", "data", relPath),
+      path.join(process.cwd(), "public", relPath),
+    ];
+    return bases.some(
+      (abs) => fs.existsSync(abs) && fs.statSync(abs).size > 512,
+    );
   } catch {
     return false;
   }
@@ -84,6 +91,7 @@ export async function resolveGorselUrlBySku(
   const fromCatalog = index.get(key);
 
   const ozti = oztiWebImageRelFromSku(key);
+  const portashelf = portashelfGorselRelFromSku(key);
   const equstoDir = equstoGorselRelFromSku(key);
   const equstoCandidates = equstoDir
     ? [
@@ -95,6 +103,7 @@ export async function resolveGorselUrlBySku(
 
   const hit = firstExistingImageRel([
     existing,
+    portashelf,
     fromCatalog,
     ozti,
     ...equstoCandidates,

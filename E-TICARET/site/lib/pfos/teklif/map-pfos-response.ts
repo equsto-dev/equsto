@@ -40,12 +40,12 @@ function specAciklama(
   if (k.notlar && !isOlcuMetni(k.notlar))
     lines.push(`•  ${repairPfosDisplayText(k.notlar)}`);
   if (u?.sku?.trim()) lines.push(`•  Stok: ${u.sku}`);
-  if (u?.model && u.model !== u.sku) lines.push(`•  Model: ${u.model}`);
   const marka = resolveTeklifMarka({
     katalogMarka: u?.marka,
     urunAd: u?.ad,
     sablonIsim: k.isim,
     urunTipi: k.urunTipi,
+    sku: u?.sku,
   });
   if (marka && marka !== "—") lines.push(`•  Marka: ${marka}`);
   const elk = u?.elektrikGucuKw ?? k.elektrikGucuKwHint;
@@ -104,6 +104,7 @@ export function pfosResponseToTeklifV14(
         urunAd: u?.ad,
         sablonIsim: k.isim,
         urunTipi: k.urunTipi,
+        sku: u?.sku,
       }),
       olcu:
         sanitizeDavlumbazOlcu(

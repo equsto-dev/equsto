@@ -11,7 +11,12 @@ import {
 import { displayIsimFromSablon } from "../core/ozel-imalat";
 import type { EslesmisUrun, FiyatStratejisi } from "../schemas/pfos.schema";
 import { toOlcuMmDisplay } from "../teklif/olcu-mm";
+import { isKombiKonveksiyonReferans } from "./firin-match";
 import { extractOlcuFromNotlar } from "./yer-izgara-match";
+import {
+  preferredOcakSkus,
+  scoreOcakRow,
+} from "../core/atalay-ocak-spec";
 
 function norm(s: string): string {
   return String(s ?? "")
@@ -137,13 +142,22 @@ function rowMatchesFamily(row: AdminUrunRow, family: PisirmeFamily): boolean {
         !/patates\s*dinlendir|fritoz|fritöz/.test(ad)
       );
     case "ocak":
-      return cat.includes("ocak") && !cat.includes("doner") && /ocak/.test(ad);
+      return (
+        cat.includes("ocak") &&
+        !cat.includes("doner") &&
+        /ocak/.test(ad) &&
+        !/wok|konveyorlu|konveyörlü|krep|tost|makarna/.test(ad)
+      );
     case "kuzine":
       return cat.includes("kuzine") || /kuzine/.test(ad);
     case "salamander":
       return /salamander/.test(ad);
     case "firin":
-      return (cat.includes("firin") || /firin|fırın|konveksiyon/.test(ad)) && !/mikrodalga|pizza/.test(ad);
+      return (
+        (cat.includes("firin") || /firin|fırın|konveksiyon/.test(ad)) &&
+        !/mikrodalga|pizza|setalt|set alt|tezgah alt/.test(ad) &&
+        !/^(easfe|easfg|asfe|asfg)-/.test(String(row.sku ?? ""))
+      );
     case "pizza_firin":
       return cat.includes("pizza") || /pizza\s*firin|pizza\s*fırın/.test(ad);
     case "wok":
@@ -159,10 +173,18 @@ function rowMatchesFamily(row: AdminUrunRow, family: PisirmeFamily): boolean {
   }
 }
 
-function preferredSkus(family: PisirmeFamily, olcu: string): string[] {
+function preferredSkus(
+  family: PisirmeFamily,
+  olcu: string,
+  referansIsim = "",
+  notlar?: string | null,
+): string[] {
   const nums = olcuParts(olcu);
   const w = nums[0] ?? 0;
   const d = nums[1] ?? 0;
+  if (family === "ocak") {
+    return preferredOcakSkus(referansIsim, olcu, notlar);
+  }
   if (family === "fritoz") {
     if (w >= 75 || d >= 75) return ["AEF-870", "EAEF-870"];
     if (w >= 55) return ["EAEF-460", "AEF-460", "EAEF-360"];
@@ -186,6 +208,7 @@ function scoreAtalayRow(
   olcu: string,
   referansIsim: string,
   preferred: string[],
+  notlar?: string | null,
 ): number {
   if (!isAtalayPisirmeRow(row)) return -9999;
   if (family && !rowMatchesFamily(row, family)) return -9999;
@@ -215,6 +238,11 @@ function scoreAtalayRow(
     score += 30;
   }
   if (family === "izgara" && /gaz|gazli|gazlı/.test(refN) && /e agi|gaz/.test(ad)) score += 30;
+  if (family === "ocak") {
+    const ocakScore = scoreOcakRow(row, referansIsim, olcu, notlar, preferred);
+    if (ocakScore < 0) return ocakScore;
+    score += ocakScore;
+  }
   if (row.gorsel_url) score += 5;
   if (row.fiyat_tl > 0) score += 5;
   return score;
@@ -228,6 +256,8 @@ export async function matchPisirmeByReferans(
   urunTipi?: string | null,
   _fiyatStratejisi: FiyatStratejisi = "ekonomik",
 ): Promise<EslesmisUrun | null> {
+  if (isKombiKonveksiyonReferans(isim, urunTipi)) return null;
+
   const olcu =
     olcuRaw.trim() ||
     extractOlcuFromNotlar(notlar) ||
@@ -236,7 +266,7 @@ export async function matchPisirmeByReferans(
       .trim();
   const olcuDisplay = toOlcuMmDisplay(olcu) ?? (olcu || null);
   const family = parsePisirmeFamily(isim, urunTipi);
-  const preferred = preferredSkus(family, olcu);
+  const preferred = preferredSkus(family, olcu, isim, notlar);
 
   for (const sku of preferred) {
     const rows = await loadLegacyCatalogRows();
@@ -268,7 +298,7 @@ export async function matchPisirmeByReferans(
   const scored = rows
     .map((row) => ({
       row,
-      score: scoreAtalayRow(row, family, olcu, isim, preferred),
+      score: scoreAtalayRow(row, family, olcu, isim, preferred, notlar),
     }))
     .filter((x) => x.score >= 100)
     .sort((a, b) => b.score - a.score);

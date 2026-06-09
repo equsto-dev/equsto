@@ -3,6 +3,7 @@ import {
   type AdminUrunRow,
 } from "@/lib/legacy-catalog";
 import { katalogRowToEslesmis } from "../core/katalog-row-eslesmis";
+import { equstoSatisEurFromRow } from "../core/shop-catalog-match";
 import {
   PORTABIANCO_MARKA,
   isPortabiancoBuzdolabiRow,
@@ -104,18 +105,34 @@ function modelFromRow(row: AdminUrunRow): string | null {
   return m ? m[0].toUpperCase() : null;
 }
 
+function isCamKapiliReferans(isim: string): boolean {
+  return /cam\s*kapili|cam\s*kapı|camlı\s*kap/i.test(norm(isim));
+}
+
 function preferredSkus(
   family: BuzFamily,
   kapi: number,
   depth: 60 | 70,
   freezer: boolean,
+  referansIsim: string,
 ): string[] {
   const cool = freezer ? "D" : "N";
+  const camKapili = isCamKapiliReferans(referansIsim);
   if (family === "tezgah") {
     if (kapi === 1) return [`TT-1${cool}${depth}`];
-    if (kapi === 2) return [`TTK-2${cool}${depth}`, `TTR-2${cool}${depth}`, `TTC-2${cool}${depth}`];
+    if (kapi === 2) {
+      if (camKapili) {
+        return [`TTR-2${cool}${depth}`, `TTC-2${cool}${depth}`, `TTK-2${cool}${depth}`];
+      }
+      return [`TTK-2${cool}${depth}`, `TTR-2${cool}${depth}`, `TTC-2${cool}${depth}`];
+    }
     if (kapi === 3) return [`TT-3${cool}${depth}`];
-    if (kapi === 4) return [`TT-4ND${depth}`, `TTK-4${cool}${depth}`, `TTR-4${cool}${depth}`];
+    if (kapi === 4) {
+      if (camKapili) {
+        return [`TTR-4${cool}${depth}`, `TTK-4${cool}${depth}`, `TT-4ND${depth}`];
+      }
+      return [`TT-4ND${depth}`, `TTK-4${cool}${depth}`, `TTR-4${cool}${depth}`];
+    }
   }
   if (family === "cihazalti") {
     if (kapi === 1) return [`CA-1${cool}${depth}`];
@@ -146,6 +163,7 @@ function scorePortabiancoRow(
   targetSkus: string[],
   referansIsim: string,
   freezer: boolean,
+  camKapili: boolean,
 ): number {
   if (!isPortabiancoBuzdolabiRow(row)) return -9999;
   const ad = norm(row.ad);
@@ -180,7 +198,11 @@ function scorePortabiancoRow(
   if (family === "bar" && /bar.*sise|bar.*şişe/.test(ad)) score += 80;
 
   if (/^TT-\d+N\d+$/.test(sku) || /^TT-\d+ND\d+$/.test(sku)) score += 30;
-  if (/^TTK-|^TTR-|^PZA-|^PZAC-/.test(sku)) score -= 5;
+  if (/^TTR-/.test(sku)) {
+    score += camKapili ? 40 : -5;
+  } else if (/^TTK-|^PZA-|^PZAC-/.test(sku)) {
+    score += camKapili ? -15 : -5;
+  }
   if (/-E$/.test(sku) && !/eko|ekop|ekon/.test(norm(referansIsim))) score -= 8;
 
   if (row.gorsel_url) score += 5;
@@ -191,13 +213,41 @@ function scorePortabiancoRow(
 async function findRowBySku(sku: string): Promise<AdminUrunRow | null> {
   const needle = norm(sku).replace(/\s+/g, "").toUpperCase();
   if (!needle) return null;
-  const rows = (await loadLegacyCatalogRows()).filter(
-    (r) => r.durum === "aktif" && isPortabiancoBuzdolabiRow(r),
-  );
+  const rows = (await loadLegacyCatalogRows()).filter((r) => r.durum === "aktif");
   return (
-    rows.find((r) => norm(r.sku ?? "").replace(/\s+/g, "").toUpperCase() === needle) ??
+    rows.find(
+      (r) =>
+        isPortabiancoBuzdolabiRow(r) &&
+        norm(r.sku ?? "").replace(/\s+/g, "").toUpperCase() === needle,
+    ) ??
+    rows.find(
+      (r) =>
+        norm(r.sku ?? "").replace(/\s+/g, "").toUpperCase() === needle &&
+        (r.fiyat_tl > 0 || equstoSatisEurFromRow(r)),
+    ) ??
     null
   );
+}
+
+async function hydrateBuzdolabiFromSku(
+  sku: string,
+  isim: string,
+  olcuDisplay: string | null,
+  urunTipi?: string | null,
+): Promise<EslesmisUrun | null> {
+  const row = await findRowBySku(sku);
+  if (!row || !(row.fiyat_tl > 0 || equstoSatisEurFromRow(row))) return null;
+  const matched = katalogRowToEslesmis(row, {
+    linkMarka: PORTABIANCO_MARKA,
+    sablonIsim: isim,
+    urunTipi: urunTipi ?? undefined,
+  });
+  return {
+    ...matched,
+    ad: displayIsimFromSablon(isim),
+    marka: PORTABIANCO_MARKA,
+    olcu: olcuDisplay,
+  };
 }
 
 /** Buzdolabı / derin dondurucu — Portabianco katalog; Öztiryakiler / Electrolux kullanılmaz */
@@ -225,14 +275,17 @@ export async function matchBuzdolabiByReferans(
   if (kapi == null && family === "dik") kapi = 1;
   if (kapi == null && family === "bar") kapi = 3;
 
+  const camKapili = isCamKapiliReferans(isim);
   const models =
     family && kapi != null
-      ? preferredSkus(family, kapi, depth, freezer).map((s) =>
+      ? preferredSkus(family, kapi, depth, freezer, isim).map((s) =>
           s.replace(/-EKO$/, "").replace(/^TTK-2N(\d+)$/, "TT-2N$1"),
         )
       : [];
   const skus =
-    family && kapi != null ? preferredSkus(family, kapi, depth, freezer) : [];
+    family && kapi != null
+      ? preferredSkus(family, kapi, depth, freezer, isim)
+      : [];
 
   for (const sku of skus) {
     const exact = await findRowBySku(sku);
@@ -258,7 +311,15 @@ export async function matchBuzdolabiByReferans(
   const scored = rows
     .map((row) => ({
       row,
-      score: scorePortabiancoRow(row, family, models, skus, isim, freezer),
+      score: scorePortabiancoRow(
+        row,
+        family,
+        models,
+        skus,
+        isim,
+        freezer,
+        camKapili,
+      ),
     }))
     .filter((x) => x.score >= 120)
     .sort((a, b) => b.score - a.score);
@@ -277,13 +338,24 @@ export async function matchBuzdolabiByReferans(
     };
   }
 
-  if (isBuzdolabiReferans(isim) && models[0]) {
+  if (isBuzdolabiReferans(isim) && (skus[0] || models[0])) {
+    for (const sku of skus.length ? skus : models) {
+      const hydrated = await hydrateBuzdolabiFromSku(
+        sku,
+        isim,
+        olcuDisplay,
+        urunTipi,
+      );
+      if (hydrated) return hydrated;
+    }
+
+    const sku = skus[0] ?? models[0];
     return {
-      id: `portabianco-buz-${models[0].toLowerCase()}`,
-      sku: skus[0] ?? models[0],
+      id: `portabianco-buz-${sku.toLowerCase()}`,
+      sku,
       ad: displayIsimFromSablon(isim),
       marka: PORTABIANCO_MARKA,
-      model: models[0],
+      model: sku,
       olcu: olcuDisplay,
       elektrikGucuKw: null,
       gazGucuKw: null,

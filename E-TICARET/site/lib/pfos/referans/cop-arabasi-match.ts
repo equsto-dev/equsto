@@ -13,6 +13,11 @@ import {
   isCopArabasiReferansIsim,
   isPortashelfKatalogMarka,
 } from "../core/portashelf-marka";
+import {
+  PORTASHELF_COP_ARABASI_SKU,
+  isPortashelfCopArabasiSku,
+  portashelfCopArabasiSatisEur,
+} from "../core/portashelf-fiyat";
 
 type YukselSatisProduct = {
   slug?: string;
@@ -62,6 +67,15 @@ function yukselImageToLocalRel(imageUrl: string | undefined): string | null {
   return `images/catalog/yuksel/web/yuksel-${slug}_1.jpg`;
 }
 
+function satisEurFromRow(row: AdminUrunRow): number | null {
+  const fromRow = equstoSatisEurFromRow(row);
+  if (fromRow != null) return fromRow;
+  if (isPortashelfCopArabasiSku(row.sku)) {
+    return portashelfCopArabasiSatisEur();
+  }
+  return null;
+}
+
 function copArabasiProductToEslesmis(
   p: YukselSatisProduct,
   isim: string,
@@ -73,14 +87,20 @@ function copArabasiProductToEslesmis(
       sablonIsim: isim,
       urunTipi: "cop_arabasi",
     });
+    const eur = satisEurFromRow(row);
     return {
       ...matched,
+      sku: row.sku ?? PORTASHELF_COP_ARABASI_SKU,
       marka: PORTASHELF_MARKA,
-      fiyatEur: equstoSatisEurFromRow(row),
+      model: null,
+      fiyatEur: eur,
+      fiyat: row.fiyat_tl > 0 ? row.fiyat_tl : 0,
     };
   }
 
-  const sku = String(p.catalog_sku ?? p.sku_web ?? p.model_keys?.[0] ?? "").trim();
+  const sku = String(
+    p.catalog_sku ?? p.sku_web ?? p.model_keys?.[0] ?? PORTASHELF_COP_ARABASI_SKU,
+  ).trim();
   const localImg = yukselImageToLocalRel(p.image_url);
 
   return {
@@ -88,13 +108,13 @@ function copArabasiProductToEslesmis(
     sku,
     ad: String(p.name ?? isim).trim(),
     marka: PORTASHELF_MARKA,
-    model: sku || null,
+    model: null,
     olcu: null,
     elektrikGucuKw: null,
     gazGucuKw: null,
     fiyat: 0,
-    fiyatEur: null,
-    doviz: "TRY",
+    fiyatEur: portashelfCopArabasiSatisEur(),
+    doviz: "EUR",
     gorselUrl: normalizePfosGorselUrl(localImg),
   };
 }
@@ -120,13 +140,17 @@ async function matchFromEkipmanlar(isim: string): Promise<EslesmisUrun | null> {
   const rows = (await loadLegacyCatalogRows()).filter(
     (r) =>
       r.durum === "aktif" &&
-      r.fiyat_tl > 0 &&
+      (r.fiyat_tl > 0 || isPortashelfCopArabasiSku(r.sku)) &&
       (isPortashelfKatalogMarka(r.marka_ad) ||
         /yuksel|portashelf|mb126/i.test(`${r.marka_ad} ${r.ad} ${r.sku ?? ""}`)) &&
-      /cop\s*arab|çöp\s*arab|mb126/i.test(norm(`${r.ad} ${r.sku ?? ""}`)),
+      (/cop\s*arab|çöp\s*arab|mb126/i.test(norm(`${r.ad} ${r.sku ?? ""}`)) ||
+        isPortashelfCopArabasiSku(r.sku)),
   );
   if (!rows.length) return null;
-  const row = rows.find((r) => norm(r.sku ?? "") === "mb126x") ?? rows[0];
+  const row =
+    rows.find((r) => norm(r.sku ?? "") === "mb126x") ??
+    rows.find((r) => isPortashelfCopArabasiSku(r.sku)) ??
+    rows[0];
   return copArabasiProductToEslesmis({}, isim, row);
 }
 

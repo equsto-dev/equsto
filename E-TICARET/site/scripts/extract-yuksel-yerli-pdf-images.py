@@ -34,12 +34,20 @@ except ImportError:
 
 ROOT = Path(__file__).resolve().parents[1]
 PDF = Path(r"C:\D Disk\FİYAT LİSTELERİ\YÜKSEL YERLİ - 2025.pdf")
-EMBED_DIR = ROOT / "public" / "images" / "catalog" / "yuksel" / "embed"
-MODEL_DIR = ROOT / "public" / "images" / "catalog" / "yuksel"
+EMBED_DIR = ROOT / "public" / "data" / "images" / "catalog" / "yuksel" / "embed"
+MODEL_DIR = ROOT / "public" / "data" / "images" / "catalog" / "yuksel"
 DEPT_DIR = ROOT / "public" / "data" / "dept"
 EKIPMANLAR = ROOT / "public" / "data" / "ekipmanlar.json"
 CATALOG_JSON = ROOT / "public" / "data" / "fiyat-listeleri" / "yuksel" / "2025-yerli" / "tum-urunler.json"
 MAP_JSON = ROOT / "public" / "data" / "fiyat-listeleri" / "yuksel" / "2025-yerli" / "_pdf-images-map.json"
+
+
+def public_data_file(rel: str) -> Path:
+    """images/... → public/data/images/..."""
+    rel = rel.lstrip("/").replace("\\", "/")
+    if rel.startswith("data/"):
+        rel = rel[5:]
+    return ROOT / "public" / "data" / Path(*rel.split("/"))
 
 MIN_IMG_W = 80
 MIN_IMG_H = 80
@@ -474,7 +482,7 @@ def main() -> None:
                     if dry:
                         rel = model_rel_path(model, "jpg")
                     else:
-                        embed_file = ROOT / "public" / Path(*embed_rel.split("/"))
+                        embed_file = public_data_file(embed_rel)
                         rel = write_model_alias(embed_file, model)
                     model_map[key] = rel
                     matched += 1
@@ -489,7 +497,7 @@ def main() -> None:
                 if dry:
                     rel = model_rel_path(model, "jpg")
                 else:
-                    embed_file = ROOT / "public" / Path(*embed_rel.split("/"))
+                    embed_file = public_data_file(embed_rel)
                     rel = write_model_alias(embed_file, model)
                 key = norm_model(model)
                 model_map[key] = rel
@@ -524,7 +532,7 @@ def main() -> None:
         if dry:
             rel = model_rel_path(model, "jpg")
         else:
-            embed_file = ROOT / "public" / Path(*embed_rel.split("/"))
+            embed_file = public_data_file(embed_rel)
             rel = write_model_alias(embed_file, model)
         model_map[key] = rel
 

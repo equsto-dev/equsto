@@ -26,6 +26,20 @@ function norm(s: string | null | undefined): string {
     .trim();
 }
 
+/** Referans adı — make-up / makyaj ünitesi */
+export function isMakeUpReferansIsim(isim: string | null | undefined): boolean {
+  return /make.?up|makeup|makyaj/.test(norm(String(isim ?? "")));
+}
+
+export function isMakeUpPfosKalem(opts: {
+  isim?: string | null;
+  urunTipi?: string | null;
+}): boolean {
+  if (isMakeUpReferansIsim(opts.isim)) return true;
+  const tip = resolveTipKodu(String(opts.urunTipi ?? "").trim());
+  return /^makeup|make_up|makyaj/.test(tip);
+}
+
 /** Referans adı — buzdolabı / derin dondurucu / bar soğutucu (buz makinesi vb. hariç) */
 export function isBuzdolabiReferansIsim(isim: string | null | undefined): boolean {
   const n = norm(String(isim ?? ""));
@@ -56,6 +70,13 @@ export function isBuzdolabiPfosKalem(opts: {
 
 export function isPortabiancoKatalogMarka(marka: string | null | undefined): boolean {
   return norm(String(marka ?? "")).includes("portabianco");
+}
+
+/** Portabianco buzdolabı stok kodu (TT/TTK/TTR/CA/DT/BAR…) */
+export function isPortabiancoBuzdolabiSku(sku: string | null | undefined): boolean {
+  return /^TT-|^TTK-|^TTR-|^TTC-|^TTG-|^TTS-|^TTM-|^TTX-|^CA-|^DT-|^BAR-|^PZA-|^PZAC-/i.test(
+    String(sku ?? "").trim(),
+  );
 }
 
 export function isPortabiancoBuzdolabiRow(row: {

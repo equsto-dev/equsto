@@ -2615,8 +2615,8 @@
       "categoryGroup": "Hazırlık Ekipmanları",
       "category": "Gıda Dilimleme / Sinek Öldürücü",
       "specs": {
-        "fiyat_eur": "650",
-        "fiyat_eur_source": "page-order"
+        "fiyat_eur": "200",
+        "fiyat_eur_source": "manual-override"
       },
       "image": "/data/senox/images/senox-yso-100-yap-kanl-sinek-ld-r-c-100-m2_1.jpg",
       "imageMethod": "bbox-render-v4"

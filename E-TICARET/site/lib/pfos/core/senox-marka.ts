@@ -3,10 +3,16 @@ import { resolveTipKodu } from "./tip-kodu";
 /** PFOS vakum makinesi — teklif markası Şenox */
 export const SENOX_MARKA = "Şenox";
 
+/** Şenox katalog liste fiyatından Equsto satış iskontosu */
+export const SENOX_SATIS_ORAN = 0.5;
+
 export const SENOX_VAKUM_TIP_KODU = "vakum_makinesi";
 
 /** Şenox fiyat listesi (ekipmanlar.json yüklenene kadar) */
 export const SENOX_CATALOG_REL = "fiyat-listeleri/senox/2026-1/catalog.json";
+/** Mutbex Senox katalog — HT / DM fiyat yedeklemesi */
+export const SENOX_MUTBEX_CATALOG_REL =
+  "fiyat-listeleri/senox/mutbex/catalog.json";
 
 function norm(s: string | null | undefined): string {
   return String(s ?? "")
@@ -23,6 +29,49 @@ export function isSenoxVakumReferansIsim(isim: string | null | undefined): boole
   return /vakum\s*mak|vakuum\s*mak/.test(n);
 }
 
+/** Dizden kumandalı / mekanizmali el yıkama lavabosu — Şenox DBE serisi */
+export function isSenoxElYikamaReferansIsim(
+  isim: string | null | undefined,
+): boolean {
+  const n = norm(isim);
+  if (!n) return false;
+  if (/bulasik|bulaşık|bardak yik|paspas yik|cop siyir|çöp sıyır/.test(n)) {
+    return false;
+  }
+  return /el yik|el yık|lavabo|dizden kumand|dizden basm|hygiene sink|hand wash/.test(
+    n,
+  );
+}
+
+/** Yapışkanlı / UV sinek öldürücü — Şenox YSO serisi */
+export function isSenoxSinekReferansIsim(isim: string | null | undefined): boolean {
+  const n = norm(isim);
+  if (!n) return false;
+  return /sinek|fly kill|yapiskanli sinek|yapışkanlı sinek|insect trap|hasere/.test(
+    n,
+  );
+}
+
+/** Geri toplamalı ön yıkama duşu — Şenox HT serisi (8760.0CCGT yerine) */
+export function isSenoxOnYikamaDusuReferansIsim(
+  isim: string | null | undefined,
+): boolean {
+  const n = norm(isim);
+  if (!n) return false;
+  if (/bulasik|bulaşık|tezgah.*on yik|on yikama tezgah|on-yikama-tezgah/.test(n)) {
+    return false;
+  }
+  if (/geri toplam|geri top/.test(n) && /on yik|ön yik|duş|dus/.test(n)) {
+    return true;
+  }
+  if (/on yikama dus|ön yikama duş|on yikama dusu|ön yikama duşu/.test(n)) {
+    return true;
+  }
+  if (/on yik.*du[sş]|ön yik.*du[sş]/.test(n)) return true;
+  if (/pre.?rinse/.test(n)) return true;
+  return false;
+}
+
 export function isSenoxVakumTipKodu(tip: string | null | undefined): boolean {
   return resolveTipKodu(String(tip ?? "").trim()) === SENOX_VAKUM_TIP_KODU;
 }
@@ -33,6 +82,18 @@ export function isSenoxVakumPfosKalem(opts: {
 }): boolean {
   if (isSenoxVakumTipKodu(opts.urunTipi)) return true;
   return isSenoxVakumReferansIsim(opts.isim);
+}
+
+/** Şenox katalog ürünü — vakum, el yıkama, sinek öldürücü vb. */
+export function isSenoxPfosKalem(opts: {
+  isim?: string | null;
+  urunTipi?: string | null;
+}): boolean {
+  if (isSenoxVakumPfosKalem(opts)) return true;
+  if (isSenoxElYikamaReferansIsim(opts.isim)) return true;
+  if (isSenoxSinekReferansIsim(opts.isim)) return true;
+  if (isSenoxOnYikamaDusuReferansIsim(opts.isim)) return true;
+  return false;
 }
 
 export function isSenoxKatalogMarka(marka: string | null | undefined): boolean {

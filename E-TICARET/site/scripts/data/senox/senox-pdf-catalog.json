@@ -2812,8 +2812,8 @@
       "anchorX": 712.6,
       "description": "Hazırlık Ekipmanları\nYSO-200 Yapışkanlı Sinek Öldürücü 200 m2\nYSO-100 Yapışkanlı Sinek Öldürücü 100 m2\nİnoksan - GD-250 Gıda Dilimleme\nAlüminyum gövde.\nPaslanmaz çelik bıçak.\nKendinden bileylemeli.\n15 Farklı dilimleme aralığ\nVoltaj : 230V - 1N\nElektrik Gücü\nEbatlar (mm)\nBıçak Çapı\nElektrik Gücü\nEbatlar (mm)",
       "specs": {
-        "fiyat_eur": "650",
-        "fiyat_eur_source": "page-order"
+        "fiyat_eur": "200",
+        "fiyat_eur_source": "manual-override"
       },
       "parseSource": "distributor"
     },

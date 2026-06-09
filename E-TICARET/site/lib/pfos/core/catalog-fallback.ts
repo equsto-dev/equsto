@@ -28,6 +28,10 @@ import { isCaglayanTeshirPfosKalem } from "./caglayan-marka";
 import { matchTeshirReyonByReferans } from "../referans/teshir-reyon-match";
 import { isAtalayPisirmePfosKalem } from "./atalay-marka";
 import { matchPisirmeByReferans } from "../referans/pisirme-match";
+import {
+  isKombiKonveksiyonReferans,
+  matchKombiFirinByReferans,
+} from "../referans/firin-match";
 
 export { URUN_TIPI_ALIASES, normalizeTipKodu, resolveTipKodu };
 
@@ -239,6 +243,24 @@ export async function matchCatalogFallback(
   }
 
   if (
+    isKombiKonveksiyonReferans(sablonIsim, urunTipi) &&
+    sablonIsim?.trim()
+  ) {
+    const olcu =
+      notlar?.match(/(\d+\s*[*xX×]\s*\d+\s*[*xX×]\s*\d+)/)?.[1] ??
+      notlar?.match(/(\d+\s*[*xX×]\s*\d+)/)?.[1] ??
+      "";
+    const kombi = await matchKombiFirinByReferans(
+      sablonIsim,
+      olcu,
+      notlar,
+      urunTipi,
+      fiyatStratejisi,
+    );
+    if (kombi) return kombi;
+  }
+
+  if (
     isAtalayPisirmePfosKalem({ isim: sablonIsim, urunTipi }) &&
     sablonIsim?.trim()
   ) {
@@ -338,6 +360,21 @@ export async function matchOzelImalatForSablon(
       "ekonomik",
     );
     if (teshir) return teshir;
+  }
+
+  if (isKombiKonveksiyonReferans(isim, urunTipi) && isim.trim()) {
+    const olcu =
+      notlar?.match(/(\d+\s*[*xX×]\s*\d+\s*[*xX×]\s*\d+)/)?.[1] ??
+      notlar?.match(/(\d+\s*[*xX×]\s*\d+)/)?.[1] ??
+      "";
+    const kombi = await matchKombiFirinByReferans(
+      isim,
+      olcu,
+      notlar,
+      urunTipi,
+      "ekonomik",
+    );
+    if (kombi) return kombi;
   }
 
   if (isAtalayPisirmePfosKalem({ isim, urunTipi }) && isim.trim()) {

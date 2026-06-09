@@ -46,6 +46,7 @@ export const URUN_TIPI_ALIASES: Record<string, string> = {
   "calisma-tezgahi-cekmeceli": "calisma_tezgahi",
   "bar-sogutucu-setaltı": "bar_buzdolabi",
   "tezgah-buzdolabi-3-kapili": "tezgah_tip_buzdolabi",
+  "tezgah-tip-buzdolabi": "tezgah_tip_buzdolabi",
   "cihazalti-buzdolabi-cekme": "tezgah_alti_buz_cek",
   "hazirlik-buzdolabi": "tezgah_tip_buzdolabi",
   "soguk-hazirlik-tezgahi": "sogutma_tezgah",

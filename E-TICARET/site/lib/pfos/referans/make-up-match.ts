@@ -3,7 +3,14 @@ import {
   type AdminUrunRow,
 } from "@/lib/legacy-catalog";
 import { katalogRowToEslesmis } from "../core/katalog-row-eslesmis";
+import { displayIsimFromSablon } from "../core/ozel-imalat";
+import {
+  PORTABIANCO_MARKA,
+  isPortabiancoBuzdolabiRow,
+  isPortabiancoKatalogMarka,
+} from "../core/portabianco-marka";
 import type { EslesmisUrun, FiyatStratejisi } from "../schemas/pfos.schema";
+import { toOlcuMmDisplay } from "../teklif/olcu-mm";
 import { extractOlcuFromNotlar } from "./yer-izgara-match";
 
 function norm(s: string): string {
@@ -20,6 +27,17 @@ export function isMakeUpReferans(isim: string): boolean {
   return /make.?up|makeup|makyaj/.test(norm(isim));
 }
 
+type MakeUpVariant = "standart" | "yuksek" | "camli" | "mermer" | "pizza";
+
+function makeUpVariantFromIsim(isim: string): MakeUpVariant {
+  const n = norm(isim);
+  if (/pizza/.test(n)) return "pizza";
+  if (/mermer/.test(n)) return "mermer";
+  if (/camli|cam\s*kap|camlı/.test(n)) return "camli";
+  if (/yuksek\s*borul|yüksek\s*borul|high\s*make/.test(n)) return "yuksek";
+  return "standart";
+}
+
 function kapiSayisiFromIsim(isim: string): number | null {
   const n = norm(isim);
   const digit = n.match(/(\d)\s*kapili/);
@@ -30,47 +48,76 @@ function kapiSayisiFromIsim(isim: string): number | null {
   return null;
 }
 
-function genislikCm(olcu: string): number | null {
-  const m = String(olcu).match(/(\d+(?:[.,]\d+)?)\s*[*xX×]/);
-  if (!m) return null;
-  const n = Number(m[1].replace(",", "."));
-  return Number.isFinite(n) ? n : null;
+function olcuParts(olcu: string): [number, number, number] | null {
+  const nums = [...String(olcu).matchAll(/(\d+(?:[.,]\d+)?)/g)]
+    .map((m) => Number(m[1].replace(",", ".")))
+    .filter((n) => Number.isFinite(n) && n >= 8);
+  if (nums.length < 2) return null;
+  return [nums[0], nums[1], nums[2] ?? 0];
+}
+
+function snapDepthCm(depth: number): 60 | 70 {
+  return Math.abs(depth - 60) <= Math.abs(depth - 70) ? 60 : 70;
+}
+
+function kapiSayisiFromSku(sku: string): number | null {
+  const m = String(sku).match(/(\d)N\d{2}/i);
+  return m ? Number(m[1]) : null;
+}
+
+function isPortabiancoMakeUpRow(row: AdminUrunRow): boolean {
+  if (!isPortabiancoBuzdolabiRow(row)) return false;
+  const blob = norm(`${row.ad ?? ""} ${row.sku ?? ""}`);
+  if (!/make.?up|makeup|makyaj/.test(blob)) return false;
+  if (/^7919\.|^8919\./.test(String(row.sku ?? ""))) return false;
+  return /^SB[A-Z]+-\dN\d+/i.test(String(row.sku ?? "")) || isPortabiancoKatalogMarka(row.marka_ad);
+}
+
+function isOztiPizzaMakeUpRow(row: AdminUrunRow): boolean {
+  const blob = norm(`${row.ad ?? ""} ${row.sku ?? ""}`);
+  return (
+    /^7919\./.test(String(row.sku ?? "")) &&
+    (/pizza\s*hazirlik|\.pj\b|make\s*up/.test(blob) || /ntv/.test(blob))
+  );
+}
+
+function preferredMakeUpSkus(
+  variant: MakeUpVariant,
+  kapi: number,
+  depth: 60 | 70,
+): string[] {
+  const n = `${kapi}N${depth}`;
+  switch (variant) {
+    case "yuksek":
+      return [`SBB-${n}`, `SBB-${n}E`];
+    case "camli":
+      return [`SBTG-${n}`, `SBTG-${n}E`];
+    case "mermer":
+      return [`SBM-${n}`, `SBTM-${n}`, `SBM-${n}E`, `SBTM-${n}E`];
+    case "pizza":
+      return [`7919.37NTV.S0`, `7919.38NTV.PJ`, `7919.48NTV.PJ`];
+    default:
+      return [`SBT-${n}`, `SBTP-${n}`, `SBT-${n}E`, `SBTP-${n}E`];
+  }
 }
 
 function kapiSayisiFromUrunAd(ad: string): number | null {
   const n = norm(ad);
-  if (/dort inox|4 inox|4 kap/.test(n)) return 4;
-  if (/uc inox|3 inox|3 kap|üç/.test(n)) return 3;
+  if (/dort inox|4 inox|4 kap|dört kap|dort kap/.test(n)) return 4;
+  if (/uc inox|3 inox|3 kap|üç kap|uc kap/.test(n)) return 3;
   if (/iki inox|2 inox|2 kap|İki/i.test(ad)) return 2;
   const d = n.match(/(\d)\s*kap/);
   return d ? Number(d[1]) : null;
 }
 
-function tagGenislikCmFromSku(sku: string | null | undefined): number | null {
-  const m = String(sku ?? "").match(/7919\.(\d{2})NTV/i);
-  if (!m) return null;
-  const seri = Number(m[1]);
-  if (seri === 27) return 142;
-  if (seri === 37) return 188;
-  if (seri === 47) return 240;
-  if (seri === 48) return 240;
+function genislikCmFromRow(row: AdminUrunRow): number | null {
+  const o = row.olculer;
+  if (o?.genislik_mm) return Math.round(o.genislik_mm / 10);
+  const m = norm(row.ad ?? "")
+    .replace(/[×x]/g, "*")
+    .match(/(\d{2,3}(?:[.,]\d+)?)\s*[x*]\s*(\d{2,3})/);
+  if (m) return Number(m[1].replace(",", "."));
   return null;
-}
-
-function genislikFromUrunAd(ad: string): number | null {
-  const fromSku = tagGenislikCmFromSku(ad);
-  const m = norm(ad).replace(/[×x]/g, "*").match(/(\d{3,4})\s*\*\s*(\d{2,3})/);
-  if (m) return Number(m[1]);
-  return fromSku;
-}
-
-function isPizzaMakeUpRow(ad: string, sku: string | null | undefined): boolean {
-  const n = norm(ad);
-  return /\.pj\b/i.test(String(sku ?? "")) || /pizza\s*hazirlik|ozel\s*pizza/.test(n);
-}
-
-function rowToEslesmis(row: AdminUrunRow): EslesmisUrun {
-  return katalogRowToEslesmis(row);
 }
 
 function scoreMakeUpRow(
@@ -78,63 +125,129 @@ function scoreMakeUpRow(
   wantKapi: number | null,
   wantGenislikCm: number | null,
   referansIsim: string,
+  variant: MakeUpVariant,
+  targetSkus: string[],
 ): number {
-  const ad = norm(row.ad);
-  if (!/make.?up|makeup|ntv|tag\s*\d{3}/.test(ad)) return -9999;
-
   const refN = norm(referansIsim);
-  const pizzaRef = /pizza/.test(refN);
-  if (isPizzaMakeUpRow(row.ad, row.sku) && !pizzaRef) return -9999;
+  const pizzaRef = variant === "pizza";
 
-  let score = 40;
-  if (/servis\s*banko|soguk\s*servis/.test(ad) && !/servis\s*banko/.test(refN)) {
-    score -= 80;
+  if (pizzaRef) {
+    if (!isOztiPizzaMakeUpRow(row)) return -9999;
+  } else if (!isPortabiancoMakeUpRow(row)) {
+    return -9999;
   }
-  if (/evyeli|evye/.test(ad) && !/evye|evyeli/.test(refN)) score -= 15;
-  if (/make.?up|makeup/.test(ad)) score += 40;
-  if (/tag\s*\d{3}\s*ntv/.test(ad)) score += 55;
-  if (/ntv/.test(ad) && /kap/.test(ad)) score += 30;
 
-  const rowKapi = kapiSayisiFromUrunAd(row.ad);
+  const ad = norm(row.ad);
+  const sku = String(row.sku ?? "").toUpperCase();
+  let score = 50;
+
+  if (/make.?up|makeup/.test(ad)) score += 40;
+  if (targetSkus.some((s) => sku === s.toUpperCase())) score += 200;
+
+  if (variant === "yuksek" && /yuksek|yüksek|sbb-/.test(ad)) score += 60;
+  if (variant === "camli" && /camli|camlı|sbtg-/.test(ad)) score += 60;
+  if (variant === "mermer" && /mermer|sbm-|sbtm-/.test(ad)) score += 60;
+  if (variant === "standart" && /^sbt-|^sbtp-/.test(ad)) score += 40;
+  if (variant === "standart" && /yuksek|mermer|camli|camlı/.test(ad)) score -= 40;
+
+  const rowKapi = kapiSayisiFromUrunAd(row.ad) ?? kapiSayisiFromSku(sku);
   if (wantKapi != null) {
     if (rowKapi === wantKapi) score += 120;
     else if (rowKapi != null) score -= 200;
   }
 
-  const rowGen =
-    genislikFromUrunAd(row.ad) ?? tagGenislikCmFromSku(row.sku);
+  const rowGen = genislikCmFromRow(row);
   if (wantGenislikCm != null && rowGen != null) {
-    const diff = Math.abs(rowGen - wantGenislikCm);
-    score += Math.max(0, 120 - diff * 2);
+    score += Math.max(0, 120 - Math.abs(rowGen - wantGenislikCm) * 2);
   }
 
+  if (/evyeli|evye/.test(ad) && !/evye|evyeli/.test(refN)) score -= 20;
   if (row.gorsel_url) score += 5;
+  if (row.fiyat_tl > 0) score += 5;
   return score;
 }
 
-/** Make-up ünitesi / buzdolabı — kapı sayısı + ölçü genişliğine göre NTV katalog */
+function toEslesmis(
+  row: AdminUrunRow,
+  isim: string,
+  olcuDisplay: string | null,
+  urunTipi?: string | null,
+  marka = PORTABIANCO_MARKA,
+): EslesmisUrun {
+  const matched = katalogRowToEslesmis(row, {
+    linkMarka: marka,
+    sablonIsim: isim,
+    urunTipi: urunTipi ?? undefined,
+  });
+  return {
+    ...matched,
+    ad: displayIsimFromSablon(isim),
+    marka,
+    olcu: olcuDisplay,
+  };
+}
+
+/** Make-up ünitesi — Portabianco (Yüksel); pizza hazırlık hariç Öztiryakiler NTV kullanılmaz */
 export async function matchMakeUpByReferans(
   isim: string,
   olcuRaw: string,
   notlar: string | null | undefined,
   _fiyatStratejisi: FiyatStratejisi,
+  urunTipi?: string | null,
 ): Promise<EslesmisUrun | null> {
-  const olcu = olcuRaw.trim() || extractOlcuFromNotlar(notlar);
-  const wantKapi = kapiSayisiFromIsim(isim);
-  const wantGen = genislikCm(olcu);
+  const olcu =
+    olcuRaw.trim() ||
+    extractOlcuFromNotlar(notlar) ||
+    String(notlar ?? "")
+      .replace(/^ölçü:\s*/i, "")
+      .trim();
+  const olcuDisplay = toOlcuMmDisplay(olcu) ?? (olcu || null);
+  const variant = makeUpVariantFromIsim(isim);
+  const parts = olcuParts(olcu);
+  const depth = parts ? snapDepthCm(parts[1]) : 70;
+  let wantKapi = kapiSayisiFromIsim(isim);
+  if (wantKapi == null && parts && parts[0] >= 220) wantKapi = 4;
+  if (wantKapi == null && parts && parts[0] >= 165) wantKapi = 3;
+  if (wantKapi == null && parts && parts[0] >= 105) wantKapi = 2;
+  const wantGen = parts?.[0] ?? null;
+
+  const targetSkus =
+    wantKapi != null ? preferredMakeUpSkus(variant, wantKapi, depth) : [];
 
   const rows = (await loadLegacyCatalogRows()).filter(
     (r) => r.durum === "aktif" && r.fiyat_tl > 0,
   );
 
+  for (const sku of targetSkus) {
+    const exact = rows.find(
+      (r) => String(r.sku ?? "").toUpperCase() === sku.toUpperCase(),
+    );
+    if (exact) {
+      const marka = variant === "pizza" ? exact.marka_ad : PORTABIANCO_MARKA;
+      return toEslesmis(exact, isim, olcuDisplay, urunTipi, marka);
+    }
+  }
+
   const scored = rows
     .map((row) => ({
       row,
-      score: scoreMakeUpRow(row, wantKapi, wantGen, isim),
+      score: scoreMakeUpRow(
+        row,
+        wantKapi,
+        wantGen,
+        isim,
+        variant,
+        targetSkus,
+      ),
     }))
-    .filter((x) => x.score >= 90)
+    .filter((x) => x.score >= 120)
     .sort((a, b) => b.score - a.score);
 
   if (!scored.length) return null;
-  return rowToEslesmis(scored[0].row);
+  const pick = scored[0].row;
+  const marka =
+    variant === "pizza" && !isPortabiancoMakeUpRow(pick)
+      ? pick.marka_ad
+      : PORTABIANCO_MARKA;
+  return toEslesmis(pick, isim, olcuDisplay, urunTipi, marka);
 }
