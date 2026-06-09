@@ -15,12 +15,19 @@ import { fetchTcmbEurUsdRates } from "./fetch-tcmb-kur.mjs";
 import {
   listeEurForSlug,
   loadSamixirPdfCatalog,
+  pdfCodeForSlug,
   samixirPricingFields,
   samixirPricingLines,
   samixirStockCode,
   SAMIXIR_KAYNAK,
   SAMIXIR_SATIS_ORAN,
 } from "./lib/samixir-pdf-prices.mjs";
+import {
+  cafeImageExt,
+  downloadCafeImage,
+  ensureCafeCache,
+  matchSamixirCafeProduct,
+} from "./lib/samixir-cafemarkt-images.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SRC_JSON = path.join(ROOT, "scripts/data/samixir/samixir-web-catalog.json");
@@ -32,6 +39,8 @@ const BRAND_ID = "samixir";
 const KAYNAK = "samixir-web";
 const KDV = Number(process.env.EQUSTO_KDV_ORAN || "20");
 const dryRun = process.argv.includes("--dry-run");
+const skipCafeFetch = process.argv.includes("--skip-cafe-fetch");
+const useSamixirImages = process.argv.includes("--samixir-images");
 
 const CAT_MAP = {
   "Slush/Milkshake": { dept: "icecek", category: "granita-slush" },
@@ -75,7 +84,23 @@ function formatSpecs(p, px, pdfHit) {
 
 const UA = "EqustoImport/1.0 (+https://equsto.com; samixir-catalog)";
 
-async function copyImage(p) {
+async function copyImage(p, pdfCatalog, cafeItems) {
+  if (!useSamixirImages) {
+    const pdfCode = pdfCodeForSlug(p.slug, pdfCatalog);
+    const cafe = matchSamixirCafeProduct(p.slug, pdfCode, cafeItems);
+    if (cafe?.image) {
+      const ext = cafeImageExt(cafe.image);
+      const safe = `${p.slug}${ext}`;
+      const dest = path.join(OUT_IMG, safe);
+      if (!dryRun && (await downloadCafeImage(cafe.image, dest))) {
+        return { images: [`images/catalog/samixir/${safe}`], source: "cafemarkt", cafe_code: cafe.code };
+      }
+      if (dryRun) {
+        return { images: [`images/catalog/samixir/${safe}`], source: "cafemarkt", cafe_code: cafe.code };
+      }
+    }
+  }
+
   if (p.localImage) {
     const src = path.join(ROOT, "scripts/data/samixir", p.localImage);
     if (fs.existsSync(src)) {
@@ -85,11 +110,11 @@ async function copyImage(p) {
         fs.mkdirSync(OUT_IMG, { recursive: true });
         fs.copyFileSync(src, dest);
       }
-      return [`images/catalog/samixir/${fname}`];
+      return { images: [`images/catalog/samixir/${fname}`], source: "samixir.com" };
     }
   }
   const imgUrl = p.heroImage || p.images?.[0];
-  if (!imgUrl) return [];
+  if (!imgUrl) return { images: [], source: null };
   let ext = path.extname(new URL(imgUrl).pathname) || ".jpg";
   if (!/^\.(jpe?g|png|webp|gif)$/i.test(ext)) ext = ".jpg";
   const safe = `${p.slug}${ext}`;
@@ -97,21 +122,21 @@ async function copyImage(p) {
   if (!dryRun) {
     try {
       const res = await fetch(imgUrl, { headers: { "User-Agent": UA } });
-      if (!res.ok) return [];
+      if (!res.ok) return { images: [], source: null };
       await fsp.mkdir(OUT_IMG, { recursive: true });
       await fsp.writeFile(dest, Buffer.from(await res.arrayBuffer()));
     } catch {
-      return [];
+      return { images: [], source: null };
     }
   }
-  return [`images/catalog/samixir/${safe}`];
+  return { images: [`images/catalog/samixir/${safe}`], source: "samixir.com" };
 }
 
-async function toRow(p, eurTry, pdfCatalog) {
+async function toRow(p, eurTry, pdfCatalog, cafeItems) {
   const mapped = mapDeptCategory(p);
   const pdfHit = listeEurForSlug(p.slug, pdfCatalog);
   const px = pdfHit?.liste_eur > 0 ? samixirPricingFields(pdfHit.liste_eur, eurTry) : null;
-  const images = await copyImage(p);
+  const images = await copyImage(p, pdfCatalog, cafeItems);
   const stockCode = samixirStockCode(p.slug, pdfHit?.pdf_code);
   const teknikList = Object.entries(p.teknik_ozellikler || {}).map(([k, v]) => `${k}: ${v}`);
 
@@ -130,7 +155,9 @@ async function toRow(p, eurTry, pdfCatalog) {
       ? { olcu_etiket: p.olculer.raw, olculer: p.olculer }
       : {},
     keywords: [BRAND, stockCode, mapped.category, p.category, p.slug].filter(Boolean),
-    images: images.length ? images : undefined,
+    images: images.images.length ? images.images : undefined,
+    image_kaynak: images.source || undefined,
+    cafe_code: images.cafe_code || undefined,
     sku: stockCode,
     model: stockCode,
     urun_kodu: stockCode,
@@ -171,11 +198,17 @@ async function main() {
   const { eurTry } = await fetchTcmbEurUsdRates();
   console.log(`[kur] 1 EUR = ${eurTry} TRY`);
 
+  const cafeItems = useSamixirImages ? [] : await ensureCafeCache({ refresh: !skipCafeFetch });
+
   const rows = [];
   let priced = 0;
+  let cafeImages = 0;
+  let samixirImages = 0;
   for (const p of products) {
-    const row = await toRow(p, eurTry, pdfCatalog);
+    const row = await toRow(p, eurTry, pdfCatalog, cafeItems);
     if (!row.fiyat_bekleniyor) priced++;
+    if (row.image_kaynak === "cafemarkt") cafeImages++;
+    if (row.image_kaynak === "samixir.com") samixirImages++;
     rows.push(row);
   }
 
@@ -198,6 +231,9 @@ async function main() {
         imported: rows.length,
         priced,
         unpriced: rows.length - priced,
+        cafe_images: cafeImages,
+        samixir_fallback_images: samixirImages,
+        image_source: useSamixirImages ? "samixir.com" : "cafemarkt",
         dept: DEPT_FILE,
         satis_oran: SAMIXIR_SATIS_ORAN,
       },
