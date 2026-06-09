@@ -115,6 +115,8 @@ function pickMerchantHeroImage(images: unknown[]): string {
 /** XML 1.0: yalnızca tab, LF, CR kontrol karakterleri geçerlidir. */
 export function sanitizeXmlText(text: string): string {
   return String(text || "")
+    // Electrolux PDF: "%100" bazen 0x10 + "0" olarak gelir
+    .replace(/\x100(?=\s*çevresel)/gi, "%100")
     .replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g, "")
     .replace(/\uFFFE|\uFFFF/g, "");
 }
