@@ -18,6 +18,7 @@ import {
 import {
   findPortashelfInox201ByOlcu,
   portashelfDisplayName,
+  portashelfGorselRelFromSku,
   portashelfInox201BySku,
   portashelfSatisEurFromListe,
   type PortashelfInox201Row,
@@ -61,9 +62,7 @@ async function loadPortashelfCatalog(): Promise<PortashelfProduct[]> {
 }
 
 function portashelfImageRel(sku: string): string | null {
-  const m = /^(\d+)-x-(\d+)-x-(\d+)$/i.exec(String(sku ?? "").trim());
-  if (m) return `images/yuksel-${m[1]}x${m[2]}x${m[3]}_1.jpg`;
-  return null;
+  return portashelfGorselRelFromSku(sku);
 }
 
 function inoxRowFromProduct(
@@ -119,6 +118,7 @@ function portashelfToEslesmis(
       ...matched,
       sku,
       marka: PORTASHELF_MARKA,
+      model: null,
       fiyatEur: eur,
       fiyat: row.fiyat_tl > 0 ? row.fiyat_tl : 0,
     };
@@ -134,7 +134,7 @@ function portashelfToEslesmis(
     sku,
     ad,
     marka: PORTASHELF_MARKA,
-    model: sku,
+    model: null,
     olcu: olcu ?? null,
     elektrikGucuKw: null,
     gazGucuKw: null,

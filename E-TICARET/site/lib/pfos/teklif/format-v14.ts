@@ -40,7 +40,7 @@ export function tlKdvDahilToEurNet(
   return Math.round((netTl / eurTry) * 100) / 100;
 }
 
-/** PFOS proforma birim EUR — yalnızca katalog satış EUR (satis_fiyat_eur); yoksa boş */
+/** PFOS proforma birim EUR — önce katalog satış EUR; yoksa KDV hariç TL ÷ kur */
 export function birimEurFromEslesmis(
   u: {
     fiyat?: number | null;
@@ -48,13 +48,17 @@ export function birimEurFromEslesmis(
     doviz?: string | null;
   } | null
   | undefined,
-  _eurTry?: number | null,
+  eurTry?: number | null,
   _kdvOran = 20,
 ): number | null {
   if (!u) return null;
   const eur = Number(u.fiyatEur);
   if (Number.isFinite(eur) && eur > 0) {
     return Math.round(eur * 100) / 100;
+  }
+  const tl = Number(u.fiyat);
+  if (Number.isFinite(tl) && tl > 0) {
+    return tlToEur(tl, eurTry);
   }
   return null;
 }

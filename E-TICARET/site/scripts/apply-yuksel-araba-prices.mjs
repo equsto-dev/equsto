@@ -123,8 +123,12 @@ function applyPrice(row, hit) {
   row.fiyat_tl = fiyat_tl;
   row.liste_fiyati_eur = hit.listEur;
   row.satis_eur_net = netEur;
+  row.satis_eur_indirimli = netEur;
   row.iskonto_oran = Math.round(ISKONTO * 100);
   row.kaynak_fiyat_listesi = KAYNAK;
+  if (hit.model === "MB126X" || /COP ARABASI|ÇÖP ARABASI/i.test(String(row.name || ""))) {
+    row.brand = "Portashelf";
+  }
   delete row.fiyat_bekleniyor;
   if (!row.model || row.model === row.sku) row.model = hit.model;
   if (!row.sku || row.sku.includes("-")) row.sku = hit.model;
@@ -159,11 +163,17 @@ function main() {
 
   for (const row of rows) {
     if (!isYukselArabaRow(row)) continue;
-    if (row.fiyat_tl > 0 && row.kaynak_fiyat_listesi === KAYNAK) continue;
     const hit = resolvePdfModel(row, pdf);
     if (!hit) {
       skipped++;
       missed.push(row.name);
+      continue;
+    }
+    const needsRefresh =
+      !row.satis_eur_indirimli ||
+      row.kaynak_fiyat_listesi !== KAYNAK ||
+      hit.model === "MB126X";
+    if (row.fiyat_tl > 0 && row.kaynak_fiyat_listesi === KAYNAK && !needsRefresh) {
       continue;
     }
     applyPrice(row, hit);

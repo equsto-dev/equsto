@@ -53,12 +53,38 @@ export function portashelfSatisEurFromListe(listeEur: number): number {
   return Math.round(listeEur * PORTASHELF_SATIS_ORAN * 100) / 100;
 }
 
+/** Portashelf paslanmaz çöp arabası — Yüksel MB126X */
+export const PORTASHELF_COP_ARABASI_SKU = "MB126X";
+export const PORTASHELF_COP_ARABASI_LISTE_EUR = 358;
+
+export function portashelfCopArabasiSatisEur(): number {
+  return portashelfSatisEurFromListe(PORTASHELF_COP_ARABASI_LISTE_EUR);
+}
+
+export function isPortashelfCopArabasiSku(sku: string | null | undefined): boolean {
+  return normSku(String(sku ?? "").trim()) === "MB126X";
+}
+
+function normSku(s: string): string {
+  return s.replace(/\s+/g, "").toUpperCase();
+}
+
+/** Müşteri / teklif adı — malzeme kodu (INOX 201 vb.) yazılmaz */
 export function portashelfDisplayName(
   depthCm: number,
   widthCm: number,
   heightCm: number,
 ): string {
-  return `Portashelf 4 Katlı Raf INOX 201 LIGHT ${depthCm}×${widthCm}×${heightCm} cm`;
+  return `Portashelf 4 Katlı Raf ${depthCm}×${widthCm}×${heightCm} cm`;
+}
+
+/** PDF gömülü görsel — INOX 201 LIGHT sütunu (yuksel-46-x-152-x-183_1.jpg) */
+export function portashelfGorselRelFromSku(
+  sku: string | null | undefined,
+): string | null {
+  const m = /^(\d+)-x-(\d+)-x-(\d+)$/i.exec(String(sku ?? "").trim());
+  if (!m) return null;
+  return `images/catalog/yuksel/yuksel-${m[1]}-x-${m[2]}-x-${m[3]}_1.jpg`;
 }
 
 function olcuNums(olcu: string): number[] {

@@ -63,6 +63,13 @@ import {
 export function equstoSatisEurFromRow(row: AdminUrunRow): number | null {
   const eur = Number(row.satis_fiyat_eur);
   if (eur > 0) return Math.round(eur * 100) / 100;
+  const fromSpecs = String(row.aciklama ?? "").match(
+    /Equsto\s+net\s*\([^)]*\)\s*:\s*([\d.,]+)/i,
+  );
+  if (fromSpecs) {
+    const parsed = Number(fromSpecs[1].replace(",", "."));
+    if (parsed > 0) return Math.round(parsed * 100) / 100;
+  }
   return null;
 }
 

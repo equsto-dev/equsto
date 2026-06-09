@@ -10,7 +10,7 @@ import {
   isHazirlikPfosKalem,
 } from "./hazirlik-marka";
 import {
-  isSenoxVakumPfosKalem,
+  isSenoxPfosKalem,
   SENOX_MARKA,
 } from "./senox-marka";
 import {
@@ -22,8 +22,11 @@ import {
   isPortashelfMarkaKalem,
 } from "./portashelf-marka";
 import {
-  PORTABIANCO_MARKA,
   isBuzdolabiPfosKalem,
+  isMakeUpPfosKalem,
+  isPortabiancoBuzdolabiSku,
+  isPortabiancoKatalogMarka,
+  PORTABIANCO_MARKA,
 } from "./portabianco-marka";
 import {
   CAGLAYAN_MARKA,
@@ -175,18 +178,44 @@ export function resolveTeklifMarka(opts: {
   linkMarka?: string | null;
   zoneMarka?: string | null;
   urunTipi?: string | null;
+  sku?: string | null;
 }): string {
-  if (isOzelImalatMotor({ sablonIsim: opts.sablonIsim })) return OZEL_IMALAT_MARKA;
-  if (isOzelImalatSablon(opts.sablonIsim)) return OZEL_IMALAT_MARKA;
+  if (
+    isPortabiancoBuzdolabiSku(opts.sku) ||
+    isPortabiancoKatalogMarka(opts.katalogMarka)
+  ) {
+    return PORTABIANCO_MARKA;
+  }
 
   if (
-    isSenoxVakumPfosKalem({
+    isMakeUpPfosKalem({
+      isim: opts.sablonIsim ?? opts.urunAd,
+      urunTipi: opts.urunTipi,
+    })
+  ) {
+    return PORTABIANCO_MARKA;
+  }
+
+  if (
+    isBuzdolabiPfosKalem({
+      isim: opts.sablonIsim ?? opts.urunAd,
+      urunTipi: opts.urunTipi,
+    })
+  ) {
+    return PORTABIANCO_MARKA;
+  }
+
+  if (
+    isSenoxPfosKalem({
       isim: opts.sablonIsim ?? opts.urunAd,
       urunTipi: opts.urunTipi,
     })
   ) {
     return SENOX_MARKA;
   }
+
+  if (isOzelImalatMotor({ sablonIsim: opts.sablonIsim })) return OZEL_IMALAT_MARKA;
+  if (isOzelImalatSablon(opts.sablonIsim)) return OZEL_IMALAT_MARKA;
 
   if (
     isBulasikPfosKalem({
@@ -204,15 +233,6 @@ export function resolveTeklifMarka(opts: {
     })
   ) {
     return PORTASHELF_MARKA;
-  }
-
-  if (
-    isBuzdolabiPfosKalem({
-      isim: opts.sablonIsim ?? opts.urunAd,
-      urunTipi: opts.urunTipi,
-    })
-  ) {
-    return PORTABIANCO_MARKA;
   }
 
   if (
@@ -327,6 +347,7 @@ export function formatKatalogOlcu(
 /** Katalog model kodu — SKU ile aynıysa specs/ad içinden çıkar */
 export function resolveKatalogModel(row: AdminUrunRow): string | null {
   const sku = normKod(row.sku);
+  if (/^\d+-X-\d+-X-\d+$/i.test(String(row.sku ?? "").trim())) return null;
   const model = String(row.model ?? "").trim();
   if (model && normKod(model) !== sku) return model;
 

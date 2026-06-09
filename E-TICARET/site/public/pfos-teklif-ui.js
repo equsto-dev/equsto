@@ -269,6 +269,9 @@
         .filter(function (s) {
           if (!s || s.length < 4) return false;
           if (/^f[iı]yat\s+al/i.test(s)) return false;
+          if (/^model\s*[:/]/i.test(s)) return false;
+          if (/^model\s*\/\s*kod/i.test(s)) return false;
+          if (/inox\s*201|aisi\s*201/i.test(s)) return false;
           return true;
         });
       var name = String((r.pfN || r.ad) || '').trim();
@@ -298,7 +301,6 @@
     var chips = [
       ['Stok', String(r.tip_kodu || r.kod || '').trim()],
       ['Marka', String(r.pfB || r.marka || '').trim()],
-      ['Model', modelFromRow(r)],
       ['\u00d6l\u00e7\u00fc', pfosDimMmPlain(r)],
       ['Elk.', pfosFmtKwElk(r)],
       ['Gaz', pfosFmtKwGaz(r)],

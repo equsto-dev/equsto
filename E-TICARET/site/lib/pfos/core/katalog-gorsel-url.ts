@@ -32,6 +32,13 @@ export function oztiWebImageRelFromSku(sku: string): string | null {
   return `images/catalog/ozti/web/${slug}.jpg`;
 }
 
+/** Portashelf ölçü SKU → yuksel PDF INOX LIGHT görseli */
+export function portashelfGorselRelFromSku(sku: string): string | null {
+  const m = /^(\d+)-x-(\d+)-x-(\d+)$/i.exec(String(sku ?? "").trim());
+  if (!m) return null;
+  return `images/catalog/yuksel/yuksel-${m[1]}-x-${m[2]}-x-${m[3]}_1.jpg`;
+}
+
 /** Equsto SKU → `images/catalog/equsto/equsto-12070-08/` */
 export function equstoGorselRelFromSku(sku: string): string | null {
   const k = normSku(sku);

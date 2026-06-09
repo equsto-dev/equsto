@@ -11,6 +11,12 @@ export const SENOX_PDF_CATALOG = path.join(
   "scripts/data/senox/senox-pdf-catalog.json",
 );
 
+/** PDF sayfa OCR / yanlış fiyat eşlemesi — doğrulanmış Şenox liste EUR */
+export const SENOX_LISTE_OVERRIDES = new Map([
+  ["YSO100", 200],
+  ["YSO200", 250],
+]);
+
 export function normSenoxKey(s) {
   return String(s || "")
     .toUpperCase()
@@ -73,10 +79,19 @@ export function buildSenoxPdfPriceIndex(products) {
   const map = new Map();
 
   for (const p of products || []) {
-    const main = parseEurNum(p.specs?.fiyat_eur);
+    const overrideKey = normSenoxKey(
+      String(p.title || "").match(/\b(YSO-\d+)\b/i)?.[1] ?? "",
+    );
+    const main =
+      (overrideKey && SENOX_LISTE_OVERRIDES.has(overrideKey)
+        ? SENOX_LISTE_OVERRIDES.get(overrideKey)
+        : 0) || parseEurNum(p.specs?.fiyat_eur);
+
     if (main > 0) {
       addPrice(map, p.model, main);
       addPrice(map, p.title, main);
+      const short = String(p.title || "").match(/\b([A-Z]{2,4}-\d+[A-Z]?)\b/i);
+      if (short) addPrice(map, short[1], main);
     }
 
     for (const [k, v] of parseDescriptionPrices(p.description)) {
@@ -86,6 +101,10 @@ export function buildSenoxPdfPriceIndex(products) {
     for (const m of String(p.title || "").matchAll(/\b([A-Z]{2,}\s?\d[\w\s\-./]{0,20})\b/g)) {
       if (main > 0) addPrice(map, m[1], main);
     }
+  }
+
+  for (const [k, v] of SENOX_LISTE_OVERRIDES) {
+    if (!map.has(k)) map.set(k, v);
   }
 
   return map;
@@ -121,6 +140,15 @@ function priceFromProduct(pp) {
 
 export function findPdfListPrice(p, index, products = []) {
   const keys = candidateKeys(p);
+  for (const k of keys) {
+    if (SENOX_LISTE_OVERRIDES.has(k)) {
+      return {
+        listeEur: SENOX_LISTE_OVERRIDES.get(k),
+        matchKey: k,
+        source: "override",
+      };
+    }
+  }
   for (const k of keys) {
     if (index.has(k)) return { listeEur: index.get(k), matchKey: k };
   }

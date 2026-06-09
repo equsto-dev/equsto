@@ -1,4 +1,5 @@
 import { repairPfosDisplayText } from "@/lib/utf8/repair-turkish-fffd";
+import { isBuzdolabiPfosKalem } from "./portabianco-marka";
 
 /** Özel imalat / atölye — katalog markası yok; teklifte Equsto */
 export const OZEL_IMALAT_MARKA = "Equsto";
@@ -30,11 +31,20 @@ const OZEL_IMALAT_AD_KALIP = [
   /\bkasa\s*banko/i,
 ];
 
+/** Tezgah tipi buzdolabı / soğutma — katalog ürünü; özel imalat değil */
+function isSogutmaTezgahSablon(isim: string): boolean {
+  const n = isim.toLocaleLowerCase("tr");
+  return /buzdolab|donduruc|derin\s*dondur|sogutuc|soğutuc|sogutmali\s*tezgah|soğutmali\s*tezgah|saladette|sishe\s*sogut|şişe\s*soğut|icecek\s*sogut|içecek\s*soğut|bar\s*sogut|hazirlik\s*buzdolab|hazırlık\s*buzdolab|pizza\s*prep/.test(
+    n,
+  );
+}
+
 export function isOzelImalatSablon(isim: string | null | undefined): boolean {
   const s = String(isim ?? "").trim();
   if (!s) return false;
   if (isPortashelfSablon(s)) return true;
   const n = s.toLocaleLowerCase("tr");
+  if (isSogutmaTezgahSablon(s)) return false;
   if (/\(equsto\)/i.test(s)) return true;
   return OZEL_IMALAT_AD_KALIP.some((re) => re.test(n));
 }
@@ -44,6 +54,16 @@ export function isOzelImalatMotor(opts: {
   sablonIsim?: string | null;
   urunTipi?: string | null;
 }): boolean {
+  if (
+    isBuzdolabiPfosKalem({
+      isim: opts.sablonIsim,
+      urunTipi: opts.urunTipi,
+    })
+  ) {
+    return false;
+  }
+  const sablon = String(opts.sablonIsim ?? "").trim();
+  if (sablon && isSogutmaTezgahSablon(sablon)) return false;
   if (isOzelImalatSablon(opts.sablonIsim)) return true;
   const tip = String(opts.urunTipi ?? "")
     .toLowerCase()

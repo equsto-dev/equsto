@@ -10,7 +10,8 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SATIS_ORAN = 0.45;
-const ALT_KAT = "KATLI RAFLAR · TIER SHELVING · INOX 201 LIGHT";
+const ALT_KAT_DISPLAY = "KATLI RAFLAR · TIER SHELVING";
+const ALT_KAT_INTERNAL = "KATLI RAFLAR · TIER SHELVING · INOX 201 LIGHT";
 const KUR_EUR_TRY = 53.5921;
 const KDV = 1.2;
 
@@ -40,7 +41,11 @@ function sku(d, w, h) {
 }
 
 function displayName(d, w, h) {
-  return `Portashelf 4 Katlı Raf INOX 201 LIGHT ${d}×${w}×${h} cm`;
+  return `Portashelf 4 Katlı Raf ${d}×${w}×${h} cm`;
+}
+
+function portashelfImageRel(d, w, h) {
+  return `images/catalog/yuksel/yuksel-${d}-x-${w}-x-${h}_1.jpg`;
 }
 
 function buildRow(d, w, h, listeEur) {
@@ -48,7 +53,9 @@ function buildRow(d, w, h, listeEur) {
   const satisEur = Math.round(listeEur * SATIS_ORAN * 100) / 100;
   const fiyatTl = Math.round(satisEur * KUR_EUR_TRY);
   const fiyatTlKdv = Math.round(fiyatTl * KDV);
-  const img = `images/catalog/yuksel/yuksel-${d}-x-${w}-x-${h}_1.jpg`;
+  const img = portashelfImageRel(d, w, h);
+  const imgAbs = path.join(ROOT, "public/data", img);
+  const fallback = `images/yuksel-${d}x${w}x${h}_1.jpg`;
   const olcuMm = `${d}X${w}X${h}`;
   const olcuCm = `${d} X ${w} X ${h}`;
 
@@ -60,14 +67,14 @@ function buildRow(d, w, h, listeEur) {
     specs: [
       displayName(d, w, h),
       "Kaynak: YÜKSEL YERLİ - 2025 · Portashelf",
-      `Kategori: ${ALT_KAT}`,
-      `Model / kod: ${code}`,
+      `Kategori: ${ALT_KAT_DISPLAY}`,
+      `Kod: ${code}`,
       `Ölçü (cm): ${olcuCm}`,
       `Liste fiyatı (EUR): ${listeEur}`,
       `Equsto satış (%45 liste EUR): ${satisEur.toFixed(2)}`,
       `Kur: 1 EUR = ${KUR_EUR_TRY} TRY (KDV %20)`,
     ].join("\n"),
-    images: [fs.existsSync(path.join(ROOT, "public/data", img)) ? img : `images/yuksel-${d}x${w}x${h}_1.jpg`],
+    images: [fs.existsSync(imgAbs) ? img : fallback],
     sku: code,
     model: code,
     tip_kodu: code.toLowerCase(),
@@ -75,8 +82,8 @@ function buildRow(d, w, h, listeEur) {
     kaynak: "yuksel-2025-yerli-pdf",
     kaynak_fiyat_listesi: "yuksel-2025-yerli-pdf",
     dept: "istif",
-    alt_kategori: ALT_KAT,
-    seri: "INOX 201 LIGHT",
+    alt_kategori: ALT_KAT_INTERNAL,
+    seri: "4 KATLI RAF",
     fiyat_euro: listeEur,
     liste_fiyati_eur: listeEur,
     satis_eur_indirimli: satisEur,
@@ -146,6 +153,43 @@ const ekipPath = path.join(ROOT, "public/data/ekipmanlar.json");
 const ekip = JSON.parse(fs.readFileSync(ekipPath, "utf8"));
 const mergedEkip = mergePortashelfIntoArray(ekip, "ekipmanlar.json");
 fs.writeFileSync(ekipPath, JSON.stringify(mergedEkip), "utf8");
+
+const ARABA_LISTE_EUR = 358;
+const copSatisEur = Math.round(ARABA_LISTE_EUR * SATIS_ORAN * 100) / 100;
+const copFiyatTl = Math.round(copSatisEur * KUR_EUR_TRY);
+const copImg = "images/catalog/yuksel/web/yuksel-yuvarlak-cop-arabasi_1.jpg";
+const copImgAbs = path.join(ROOT, "public/data", copImg);
+
+function patchCopArabasiRow(row) {
+  if (String(row.sku ?? "").toUpperCase() !== "MB126X") return row;
+  const fiyatTlKdv = Math.round(copFiyatTl * KDV);
+  return {
+    ...row,
+    brand: "Portashelf",
+    name: "Portashelf Paslanmaz Çöp Arabası MB126X",
+    liste_fiyati_eur: ARABA_LISTE_EUR,
+    satis_eur_indirimli: copSatisEur,
+    satis_eur_net: copSatisEur,
+    fiyat_tl: copFiyatTl,
+    price: `₺${copFiyatTl.toLocaleString("tr-TR")},00 + KDV\nKDV Dahil ₺${fiyatTlKdv.toLocaleString("tr-TR")},00`,
+    kaynak_fiyat_listesi: "yuksel-2025-yerli-pdf",
+    images: fs.existsSync(copImgAbs)
+      ? [copImg]
+      : row.images?.length
+        ? row.images
+        : ["images/catalog/yuksel/web/yuksel-yuvarlak-cop-arabasi_1.jpg"],
+  };
+}
+
+const arabaPath = path.join(ROOT, "public/data/dept/araba.json");
+if (fs.existsSync(arabaPath)) {
+  const araba = JSON.parse(fs.readFileSync(arabaPath, "utf8"));
+  const patchedAraba = araba.map(patchCopArabasiRow);
+  fs.writeFileSync(arabaPath, JSON.stringify(patchedAraba), "utf8");
+}
+const patchedEkip = mergedEkip.map(patchCopArabasiRow);
+fs.writeFileSync(ekipPath, JSON.stringify(patchedEkip), "utf8");
+console.log("[portashelf] MB126X çöp arabası satış EUR:", copSatisEur);
 
 console.log("\n[sync-portashelf-inox201] tamam — örnek 46-X-152-X-183 satış EUR:",
   bySku.get("46-x-152-x-183")?.satis_eur_indirimli);

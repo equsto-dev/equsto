@@ -146,8 +146,10 @@ async function main() {
   let imged = 0;
   const missingWeb = [];
   const missingImg = [];
+  const total = entries.length;
 
-  for (const entry of entries) {
+  for (let i = 0; i < entries.length; i++) {
+    const entry = entries[i];
     const { row } = entry;
     const shortName = row.aciklama || row.name || "";
     const match = matchInoksanWeb(row.sku, shortName, index.products, codeIndex);
@@ -160,9 +162,12 @@ async function main() {
     else missingImg.push(row.sku);
 
     enrichInoksanRow(row, match, imgResult);
+
+    if ((i + 1) % 50 === 0 || i === entries.length - 1) {
+      console.log(`[inoksan-web] ${i + 1}/${total} web:${webMatched} img:${imged}`);
+    }
   }
 
-  const total = entries.length;
   const report = {
     at: new Date().toISOString(),
     total,
