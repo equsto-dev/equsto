@@ -20,7 +20,8 @@ export type MerchantFeedItem = {
   priceTry: number;
   brand: string;
   mpn: string;
-  availability: "in_stock" | "out_of_stock";
+  /** Google RSS: `in stock` / `out of stock` (alt çizgi değil) */
+  availability: "in stock" | "out of stock";
   productType: string;
 };
 
@@ -178,7 +179,7 @@ export function rowToMerchantItem(
     priceTry,
     brand,
     mpn,
-    availability: "in_stock",
+    availability: "in stock",
     productType: String(row.category || dept).slice(0, 100),
   };
 }
