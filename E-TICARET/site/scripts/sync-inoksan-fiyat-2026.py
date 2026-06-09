@@ -217,6 +217,9 @@ def is_inoksan_row(row: dict) -> bool:
     )
 
 
+YIKAMA_EXCLUDED_SKUS = frozenset({"INO-BYF450R"})
+
+
 def yikama_vitrin_ok(row: dict) -> bool:
     """Yıkama: yalnızca makine satırları (tezgah / ZCO-ZMD / ekipman hariç)."""
     if row.get("dept") != "yikama":
@@ -224,6 +227,8 @@ def yikama_vitrin_ok(row: dict) -> bool:
     if row.get("inoksan_h2") == "Ekipmanlar":
         return False
     sku = str(row.get("sku") or "")
+    if sku in YIKAMA_EXCLUDED_SKUS:
+        return False
     if "-ZCO-" in sku or "-ZMD-" in sku:
         return False
     return True
