@@ -1,0 +1,1093 @@
+{
+  "generatedAt": "2026-06-08T23:47:36.073Z",
+  "senoxCount": 212,
+  "voscoCount": 164,
+  "overlapCount": 57,
+  "highConfidence": 35,
+  "mediumConfidence": 8,
+  "pairs": [
+    {
+      "score": 0.8909090909090909,
+      "senox": {
+        "code": "118.KSC.293",
+        "model": "KSC-293",
+        "title": "Senox Dik Tip Şişe Soğutucu Dolap, 293 L, KSC 293",
+        "category": "Şişe Soğutucular",
+        "url": "https://www.mutbex.com/senox-dik-tip-sise-sogutucu-dolap-293-l-ksc-293"
+      },
+      "vosco": {
+        "code": "VBBC-350S",
+        "title": "Vosco Bar Altı Şişe Soğutucusu Üç Kapak Siyah",
+        "category": "Soğutucu Dolaplar",
+        "url": "https://vosco.com.tr/vosco-bar-alti-sise-sogutucusu-uc-kapak-siyah",
+        "pdfUsd": null
+      },
+      "family": "teshir-sogutma",
+      "titleSimilarity": 9
+    },
+    {
+      "score": 0.8909090909090909,
+      "senox": {
+        "code": "118.KSC.293",
+        "model": "KSC-293",
+        "title": "Senox Dik Tip Şişe Soğutucu Dolap, 293 L, KSC 293",
+        "category": "Şişe Soğutucular",
+        "url": "https://www.mutbex.com/senox-dik-tip-sise-sogutucu-dolap-293-l-ksc-293"
+      },
+      "vosco": {
+        "code": "VGBC-350G",
+        "title": "Vosco Bar Altı Şişe Soğutucusu Üç Kapak (Gri)",
+        "category": "Soğutucu Dolaplar",
+        "url": "https://vosco.com.tr/vosco-bar-alti-sise-sogutucusu-uc-kapak-gri",
+        "pdfUsd": null
+      },
+      "family": "teshir-sogutma",
+      "titleSimilarity": 9
+    },
+    {
+      "score": 0.65,
+      "senox": {
+        "code": "118.BBCS.250",
+        "model": "BBCS-250",
+        "title": "Senox 2 Sürgülü Kapılı Bar Altı Şişe Soğutucu , Siyah, 90x50,5x85 cm",
+        "category": "Şişe Soğutucular",
+        "url": "https://www.mutbex.com/senox-2-surgulu-kapili-bar-alti-sise-sogutucu-siyah-90x505x85-cm"
+      },
+      "vosco": {
+        "code": "VBBC-250S",
+        "title": "VOSCO BAR ALTI ŞİŞE SOĞUTUCUSU İKİ KAPAK (SİYAH)",
+        "category": "Soğutucu Dolaplar",
+        "url": "https://vosco.com.tr/vosco-bar-alti-sise-sogutucusu-iki-kapak-siyah",
+        "pdfUsd": null
+      },
+      "family": "teshir-sogutma",
+      "titleSimilarity": 33
+    },
+    {
+      "score": 0.6124999999999999,
+      "senox": {
+        "code": "118.BZ12",
+        "model": "BZ-12",
+        "title": "Senox BZ12 Buz Makinesi, 12 kg/gün Kapasiteli",
+        "category": "Küp Buz Makineleri",
+        "url": "https://www.mutbex.com/senox-bz12-buz-makinesi-12-kg-gun-kapasiteli"
+      },
+      "vosco": {
+        "code": "VHZB-12CG",
+        "title": "Vosco Set Üstü Buz Makinesi 12 Kg Gri",
+        "category": "Buz Makineleri",
+        "url": "https://vosco.com.tr/vosco-set-ustu-buz-makinesi-12-kg-gri",
+        "pdfUsd": 550
+      },
+      "family": "buz",
+      "titleSimilarity": 25
+    },
+    {
+      "score": 0.6124999999999999,
+      "senox": {
+        "code": "118.BZ12",
+        "model": "BZ-12",
+        "title": "Senox BZ12 Buz Makinesi, 12 kg/gün Kapasiteli",
+        "category": "Küp Buz Makineleri",
+        "url": "https://www.mutbex.com/senox-bz12-buz-makinesi-12-kg-gun-kapasiteli"
+      },
+      "vosco": {
+        "code": "VHZB-12CK",
+        "title": "Vosco Set Üstü Buz Makinesi 12 Kg Kırmızı Buz Makinesi",
+        "category": "Buz Makineleri",
+        "url": "https://vosco.com.tr/vosco-set-ustu-buz-makinesi-12-kg-kirmizi",
+        "pdfUsd": 550
+      },
+      "family": "buz",
+      "titleSimilarity": 25
+    },
+    {
+      "score": 0.6124999999999999,
+      "senox": {
+        "code": "118.BZ12",
+        "model": "BZ-12",
+        "title": "Senox BZ12 Buz Makinesi, 12 kg/gün Kapasiteli",
+        "category": "Küp Buz Makineleri",
+        "url": "https://www.mutbex.com/senox-bz12-buz-makinesi-12-kg-gun-kapasiteli"
+      },
+      "vosco": {
+        "code": "VHZB-12CS",
+        "title": "Vosco Set Üstü Buz Makinesi 12 Kg Siyah",
+        "category": "Buz Makineleri",
+        "url": "https://vosco.com.tr/vosco-set-ustu-buz-makinesi-12-kg-siyah",
+        "pdfUsd": 550
+      },
+      "family": "buz",
+      "titleSimilarity": 25
+    },
+    {
+      "score": 0.6038461538461538,
+      "senox": {
+        "code": "118.BBCS.250",
+        "model": "BBCS-250",
+        "title": "Senox 2 Sürgülü Kapılı Bar Altı Şişe Soğutucu , Siyah, 90x50,5x85 cm",
+        "category": "Şişe Soğutucular",
+        "url": "https://www.mutbex.com/senox-2-surgulu-kapili-bar-alti-sise-sogutucu-siyah-90x505x85-cm"
+      },
+      "vosco": {
+        "code": "VGBC-250G",
+        "title": "Vosco Bar Altı Şişe Soğutucusu Çift Kapak (Gri)",
+        "category": "Soğutucu Dolaplar",
+        "url": "https://vosco.com.tr/vosco-bar-alti-sise-sogutucusu-iki-kapak-gri",
+        "pdfUsd": null
+      },
+      "family": "teshir-sogutma",
+      "titleSimilarity": 23
+    },
+    {
+      "score": 0.6,
+      "senox": {
+        "code": "118.BZ12",
+        "model": "BZ-12",
+        "title": "Senox BZ12 Buz Makinesi, 12 kg/gün Kapasiteli",
+        "category": "Küp Buz Makineleri",
+        "url": "https://www.mutbex.com/senox-bz12-buz-makinesi-12-kg-gun-kapasiteli"
+      },
+      "vosco": {
+        "code": "VHZB-12HB",
+        "title": "Vosco Eko Set Üstü Buz Makinesi 12 Kg Beyaz",
+        "category": "Buz Makineleri",
+        "url": "https://vosco.com.tr/vosco-eko-set-ustu-buz-makinesi-12-kg-beyaz",
+        "pdfUsd": 500
+      },
+      "family": "buz",
+      "titleSimilarity": 22
+    },
+    {
+      "score": 0.6,
+      "senox": {
+        "code": "118.BZ12",
+        "model": "BZ-12",
+        "title": "Senox BZ12 Buz Makinesi, 12 kg/gün Kapasiteli",
+        "category": "Küp Buz Makineleri",
+        "url": "https://www.mutbex.com/senox-bz12-buz-makinesi-12-kg-gun-kapasiteli"
+      },
+      "vosco": {
+        "code": "VHZB-12HK",
+        "title": "Vosco Eko Set Üstü Buz Makinesi 12 Kg Kırmızı",
+        "category": "Buz Makineleri",
+        "url": "https://vosco.com.tr/vosco-eko-set-ustu-buz-makinesi-12-kg-kirmizi",
+        "pdfUsd": 500
+      },
+      "family": "buz",
+      "titleSimilarity": 22
+    },
+    {
+      "score": 0.6,
+      "senox": {
+        "code": "118.BZ12",
+        "model": "BZ-12",
+        "title": "Senox BZ12 Buz Makinesi, 12 kg/gün Kapasiteli",
+        "category": "Küp Buz Makineleri",
+        "url": "https://www.mutbex.com/senox-bz12-buz-makinesi-12-kg-gun-kapasiteli"
+      },
+      "vosco": {
+        "code": "VHZB-12HS",
+        "title": "Vosco Eko Set Üstü Buz Makinesi 12 Kg Siyah",
+        "category": "Buz Makineleri",
+        "url": "https://vosco.com.tr/vosco-eko-set-ustu-buz-makinesi-12-kg-siyah",
+        "pdfUsd": 500
+      },
+      "family": "buz",
+      "titleSimilarity": 22
+    },
+    {
+      "score": 0.575,
+      "senox": {
+        "code": "118.DY.01",
+        "model": "DY-01",
+        "title": "Senox DY 01 Tek Hazneli Dondurma Yapıcı, 15 lt/saat Kapasiteli",
+        "category": "Dondurma Makineleri",
+        "url": "https://www.mutbex.com/senox-dy-01-tek-hazneli-dondurma-yapici-15-lt-saat-kapasiteli"
+      },
+      "vosco": {
+        "code": "VST-16EB",
+        "title": "Vosco Dondurma Makinesi Tek Kollu (Soft) Set Üstü (Beyaz)",
+        "category": "Dondurma Makineleri",
+        "url": "https://vosco.com.tr/vosco-dondurma-makinesi-tek-kollu-soft-set-ustu-beyaz",
+        "pdfUsd": null
+      },
+      "family": "dondurma",
+      "titleSimilarity": 17
+    },
+    {
+      "score": 0.575,
+      "senox": {
+        "code": "118.DY.01",
+        "model": "DY-01",
+        "title": "Senox DY 01 Tek Hazneli Dondurma Yapıcı, 15 lt/saat Kapasiteli",
+        "category": "Dondurma Makineleri",
+        "url": "https://www.mutbex.com/senox-dy-01-tek-hazneli-dondurma-yapici-15-lt-saat-kapasiteli"
+      },
+      "vosco": {
+        "code": "VST-16EM",
+        "title": "Vosco Dondurma Makinesi Tek Kollu (Soft) Set Üstü (Mavi)",
+        "category": "Dondurma Makineleri",
+        "url": "https://vosco.com.tr/vosco-dondurma-makinesi-tek-kollu-soft-set-ustu-mavi",
+        "pdfUsd": null
+      },
+      "family": "dondurma",
+      "titleSimilarity": 17
+    },
+    {
+      "score": 0.575,
+      "senox": {
+        "code": "118.DY.01",
+        "model": "DY-01",
+        "title": "Senox DY 01 Tek Hazneli Dondurma Yapıcı, 15 lt/saat Kapasiteli",
+        "category": "Dondurma Makineleri",
+        "url": "https://www.mutbex.com/senox-dy-01-tek-hazneli-dondurma-yapici-15-lt-saat-kapasiteli"
+      },
+      "vosco": {
+        "code": "VST-16ES",
+        "title": "Vosco Dondurma Makinesi Tek Kollu (Soft) Set Üstü (Sarı)",
+        "category": "Dondurma Makineleri",
+        "url": "https://vosco.com.tr/vosco-dondurma-makinesi-tek-kollu-soft-set-ustu-sari",
+        "pdfUsd": null
+      },
+      "family": "dondurma",
+      "titleSimilarity": 17
+    },
+    {
+      "score": 0.5692307692307692,
+      "senox": {
+        "code": "118.SMF.5120.ST",
+        "model": "SMF-5120-ST",
+        "title": "Senox SMF-5120 ST Tezgah Altı Derin Dondurucu, Tek Kapılı",
+        "category": "Yatay Tip Derin Dondurucular",
+        "url": "https://www.mutbex.com/senox-smf-5120-st-tezgah-alti-derin-dondurucu-tek-kapili"
+      },
+      "vosco": {
+        "code": "VBBC-150S",
+        "title": "Vosco Bar Altı Şişe Soğutucusu Tek Kapak (Siyah)",
+        "category": "Soğutucu Dolaplar",
+        "url": "https://vosco.com.tr/vosco-bar-alti-sise-sogutucusu-tek-kapak-siyah",
+        "pdfUsd": null
+      },
+      "family": "teshir-sogutma",
+      "titleSimilarity": 15
+    },
+    {
+      "score": 0.5692307692307692,
+      "senox": {
+        "code": "118.SMF.5120.ST",
+        "model": "SMF-5120-ST",
+        "title": "Senox SMF-5120 ST Tezgah Altı Derin Dondurucu, Tek Kapılı",
+        "category": "Yatay Tip Derin Dondurucular",
+        "url": "https://www.mutbex.com/senox-smf-5120-st-tezgah-alti-derin-dondurucu-tek-kapili"
+      },
+      "vosco": {
+        "code": "VGBC-150G",
+        "title": "Vosco Bar Altı Şişe Soğutucusu Tek Kapak (Gri)",
+        "category": "Soğutucu Dolaplar",
+        "url": "https://vosco.com.tr/vosco-bar-alti-sise-sogutucusu-tek-kapak-gri",
+        "pdfUsd": null
+      },
+      "family": "teshir-sogutma",
+      "titleSimilarity": 15
+    },
+    {
+      "score": 0.5449999999999999,
+      "senox": {
+        "code": "118.DY.02",
+        "model": "DY-02",
+        "title": "Senox DY 02 Çift Hazneli Dondurma Yapıcı, Çift Hazneli, 30 lt/saat Kapasiteli",
+        "category": "Dondurma Makineleri",
+        "url": "https://www.mutbex.com/senox-dy-02-cift-hazneli-dondurma-yapici-cift-hazneli-30-lt-saat-kapasiteli"
+      },
+      "vosco": {
+        "code": "VSC-32F",
+        "title": "Vosco Pro Soft Dondurma Makinesi (Üç Kollu)",
+        "category": "Dondurma Makineleri",
+        "url": "https://vosco.com.tr/vosco-pro-soft-dondurma-makinesi-uc-kollu",
+        "pdfUsd": 35
+      },
+      "family": "dondurma",
+      "titleSimilarity": 10
+    },
+    {
+      "score": 0.5449999999999999,
+      "senox": {
+        "code": "118.COFFEDIO",
+        "model": "COFFEDIO",
+        "title": "Senox Coffeedio Filtre Kahve Makinesi, 1,8 lt Cam Potlu",
+        "category": "Filtre Kahve Makineleri",
+        "url": "https://www.mutbex.com/senox-coffeedio-filtre-kahve-makinesi-18-lt-cam-potlu"
+      },
+      "vosco": {
+        "code": "VA-80SR",
+        "title": "Vosco Kahve Değirmeni ve Öğütücü 420W 1.7 Lt Sarı",
+        "category": "Kahve Değirmenleri",
+        "url": "https://vosco.com.tr/vosco-kahve-degirmeni-ve-ogutucu-420w-1.7-lt-sari",
+        "pdfUsd": null
+      },
+      "family": "kahve-degirmen",
+      "titleSimilarity": 10
+    },
+    {
+      "score": 0.5449999999999999,
+      "senox": {
+        "code": "118.COFFEDIO",
+        "model": "COFFEDIO",
+        "title": "Senox Coffeedio Filtre Kahve Makinesi, 1,8 lt Cam Potlu",
+        "category": "Filtre Kahve Makineleri",
+        "url": "https://www.mutbex.com/senox-coffeedio-filtre-kahve-makinesi-18-lt-cam-potlu"
+      },
+      "vosco": {
+        "code": "VA-80S",
+        "title": "Vosco Kahve Değirmeni ve Öğütücü 420W 1.7 Lt Siyah",
+        "category": "Kahve Değirmenleri",
+        "url": "https://vosco.com.tr/vosco-kahve-degirmeni-ve-ogutucu-420w-1.7-lt-siyah",
+        "pdfUsd": null
+      },
+      "family": "kahve-degirmen",
+      "titleSimilarity": 10
+    },
+    {
+      "score": 0.5449999999999999,
+      "senox": {
+        "code": "118.COFFEDIO",
+        "model": "COFFEDIO",
+        "title": "Senox Coffeedio Filtre Kahve Makinesi, 1,8 lt Cam Potlu",
+        "category": "Filtre Kahve Makineleri",
+        "url": "https://www.mutbex.com/senox-coffeedio-filtre-kahve-makinesi-18-lt-cam-potlu"
+      },
+      "vosco": {
+        "code": "VA-80M",
+        "title": "Vosco Kahve Değirmeni ve Öğütücü 420W 1.7 Lt Mavi",
+        "category": "Kahve Değirmenleri",
+        "url": "https://vosco.com.tr/vosco-kahve-degirmeni-ve-ogutucu-420w-1.7-lt-mavi",
+        "pdfUsd": null
+      },
+      "family": "kahve-degirmen",
+      "titleSimilarity": 10
+    },
+    {
+      "score": 0.5449999999999999,
+      "senox": {
+        "code": "118.COFFEDIO",
+        "model": "COFFEDIO",
+        "title": "Senox Coffeedio Filtre Kahve Makinesi, 1,8 lt Cam Potlu",
+        "category": "Filtre Kahve Makineleri",
+        "url": "https://www.mutbex.com/senox-coffeedio-filtre-kahve-makinesi-18-lt-cam-potlu"
+      },
+      "vosco": {
+        "code": "VA-80K",
+        "title": "Vosco Kahve Değirmeni ve Öğütücü 420W 1.7 Lt Kırmızı",
+        "category": "Kahve Değirmenleri",
+        "url": "https://vosco.com.tr/vosco-kahve-degirmeni-ve-ogutucu-420w-1.7-lt-kirmizi",
+        "pdfUsd": null
+      },
+      "family": "kahve-degirmen",
+      "titleSimilarity": 10
+    },
+    {
+      "score": 0.5449999999999999,
+      "senox": {
+        "code": "118.COFFEDIO",
+        "model": "COFFEDIO",
+        "title": "Senox Coffeedio Filtre Kahve Makinesi, 1,8 lt Cam Potlu",
+        "category": "Filtre Kahve Makineleri",
+        "url": "https://www.mutbex.com/senox-coffeedio-filtre-kahve-makinesi-18-lt-cam-potlu"
+      },
+      "vosco": {
+        "code": "VA-80B",
+        "title": "Vosco Kahve Değirmeni ve Öğütücü 420W 1.7 Lt Beyaz",
+        "category": "Kahve Değirmenleri",
+        "url": "https://vosco.com.tr/vosco-kahve-degirmeni-ve-ogutucu-420w-1.7-lt-beyaz",
+        "pdfUsd": null
+      },
+      "family": "kahve-degirmen",
+      "titleSimilarity": 10
+    },
+    {
+      "score": 0.5375,
+      "senox": {
+        "code": "118.COFFEDIO",
+        "model": "COFFEDIO",
+        "title": "Senox Coffeedio Filtre Kahve Makinesi, 1,8 lt Cam Potlu",
+        "category": "Filtre Kahve Makineleri",
+        "url": "https://www.mutbex.com/senox-coffeedio-filtre-kahve-makinesi-18-lt-cam-potlu"
+      },
+      "vosco": {
+        "code": "VKD-25K",
+        "title": "Vosco KD-25 Dozaj Ayarlı Tam Otomatik Kahve Değirmeni (Kırmızı)",
+        "category": "Kahve Değirmenleri",
+        "url": "https://vosco.com.tr/vosco-kd-25-dozaj-ayarli-yari-otomatik-kahve-degirmeni-kirmizi",
+        "pdfUsd": 480
+      },
+      "family": "kahve-degirmen",
+      "titleSimilarity": 8
+    },
+    {
+      "score": 0.5375,
+      "senox": {
+        "code": "118.COFFEDIO",
+        "model": "COFFEDIO",
+        "title": "Senox Coffeedio Filtre Kahve Makinesi, 1,8 lt Cam Potlu",
+        "category": "Filtre Kahve Makineleri",
+        "url": "https://www.mutbex.com/senox-coffeedio-filtre-kahve-makinesi-18-lt-cam-potlu"
+      },
+      "vosco": {
+        "code": "VKD-25S",
+        "title": "Vosco KD-25 Dozaj Ayarlı Tam Otomatik Kahve Değirmeni (Siyah)",
+        "category": "Kahve Değirmenleri",
+        "url": "https://vosco.com.tr/vosco-kd-25-dozaj-ayarli-yari-otomatik-kahve-degirmeni-siyah",
+        "pdfUsd": 480
+      },
+      "family": "kahve-degirmen",
+      "titleSimilarity": 8
+    },
+    {
+      "score": 0.5375,
+      "senox": {
+        "code": "118.DY.02",
+        "model": "DY-02",
+        "title": "Senox DY 02 Çift Hazneli Dondurma Yapıcı, Çift Hazneli, 30 lt/saat Kapasiteli",
+        "category": "Dondurma Makineleri",
+        "url": "https://www.mutbex.com/senox-dy-02-cift-hazneli-dondurma-yapici-cift-hazneli-30-lt-saat-kapasiteli"
+      },
+      "vosco": {
+        "code": "VSC-32T",
+        "title": "Vosco Pro Soft Dondurma Makinesi Set Üstü (Üç Kollu)",
+        "category": "Dondurma Makineleri",
+        "url": "https://vosco.com.tr/vosco-pro-soft-dondurma-makinesi-set-ustu-uc-kollu",
+        "pdfUsd": 35
+      },
+      "family": "dondurma",
+      "titleSimilarity": 8
+    },
+    {
+      "score": 0.5375,
+      "senox": {
+        "code": "118.COFFEDIO",
+        "model": "COFFEDIO",
+        "title": "Senox Coffeedio Filtre Kahve Makinesi, 1,8 lt Cam Potlu",
+        "category": "Filtre Kahve Makineleri",
+        "url": "https://www.mutbex.com/senox-coffeedio-filtre-kahve-makinesi-18-lt-cam-potlu"
+      },
+      "vosco": {
+        "code": "VKD-25G",
+        "title": "Vosco KD-25 Dozaj Ayarlı Tam Otomatik Kahve Değirmeni (Gri)",
+        "category": "Kahve Değirmenleri",
+        "url": "https://vosco.com.tr/vosco-kd-25-dozaj-ayarli-yari-otomatik-kahve-degirmeni-gri",
+        "pdfUsd": 480
+      },
+      "family": "kahve-degirmen",
+      "titleSimilarity": 8
+    },
+    {
+      "score": 0.5346153846153846,
+      "senox": {
+        "code": "118.DY.02",
+        "model": "DY-02",
+        "title": "Senox DY 02 Çift Hazneli Dondurma Yapıcı, Çift Hazneli, 30 lt/saat Kapasiteli",
+        "category": "Dondurma Makineleri",
+        "url": "https://www.mutbex.com/senox-dy-02-cift-hazneli-dondurma-yapici-cift-hazneli-30-lt-saat-kapasiteli"
+      },
+      "vosco": {
+        "code": "VXY-PT965S",
+        "title": "Vosco Pro Silver Soft Dondurma Makinesi Set Üstü (Üç Kollu)",
+        "category": "Dondurma Makineleri",
+        "url": "https://vosco.com.tr/vosco-pro-silver-soft-dondurma-makinesi-set-ustu-uc-kollu",
+        "pdfUsd": null
+      },
+      "family": "dondurma",
+      "titleSimilarity": 8
+    },
+    {
+      "score": 0.5,
+      "senox": {
+        "code": "118.COFFEDIO",
+        "model": "COFFEDIO",
+        "title": "Senox Coffeedio Filtre Kahve Makinesi, 1,8 lt Cam Potlu",
+        "category": "Filtre Kahve Makineleri",
+        "url": "https://www.mutbex.com/senox-coffeedio-filtre-kahve-makinesi-18-lt-cam-potlu"
+      },
+      "vosco": {
+        "code": "VST-520ECB",
+        "title": "Vosco Tek Kazanlı Öğütücü ve Espresso 2 Lt (Beyaz)",
+        "category": "Kahve Makineleri",
+        "url": "https://vosco.com.tr/vosco-tek-kazanli-ogutucu-ve-espresso-2-lt-beyaz",
+        "pdfUsd": null
+      },
+      "family": "kahve-degirmen",
+      "titleSimilarity": 0
+    },
+    {
+      "score": 0.5,
+      "senox": {
+        "code": "118.COFFEDIO",
+        "model": "COFFEDIO",
+        "title": "Senox Coffeedio Filtre Kahve Makinesi, 1,8 lt Cam Potlu",
+        "category": "Filtre Kahve Makineleri",
+        "url": "https://www.mutbex.com/senox-coffeedio-filtre-kahve-makinesi-18-lt-cam-potlu"
+      },
+      "vosco": {
+        "code": "VST-520ECS",
+        "title": "Vosco Tek Kazanlı Öğütücü ve Espresso 2 Lt (Siyah)",
+        "category": "Kahve Makineleri",
+        "url": "https://vosco.com.tr/vosco-tek-kazanli-ogutucu-ve-espresso-2-lt-siyah",
+        "pdfUsd": null
+      },
+      "family": "kahve-degirmen",
+      "titleSimilarity": 0
+    },
+    {
+      "score": 0.5,
+      "senox": {
+        "code": "118.SMF.5120.ST",
+        "model": "SMF-5120-ST",
+        "title": "Senox SMF-5120 ST Tezgah Altı Derin Dondurucu, Tek Kapılı",
+        "category": "Yatay Tip Derin Dondurucular",
+        "url": "https://www.mutbex.com/senox-smf-5120-st-tezgah-alti-derin-dondurucu-tek-kapili"
+      },
+      "vosco": {
+        "code": "FT-100R-1",
+        "title": "Vosco Dikey Pasta Teşhir Dolabı (Cam Raf)",
+        "category": "Teşhir Dolapları",
+        "url": "https://vosco.com.tr/vosco-dikey-pasta-teshir-dolabi-cam-raf",
+        "pdfUsd": null
+      },
+      "family": "teshir-sogutma",
+      "titleSimilarity": 0
+    },
+    {
+      "score": 0.5,
+      "senox": {
+        "code": "118.SYD310",
+        "model": "SYD-310",
+        "title": "Senox 5 Gözlü Dondurma Reyonu, 210 lt, 103,6x65x85 cm",
+        "category": "Soğutma Ekipmanları",
+        "url": "https://www.mutbex.com/senox-5-gozlu-dondurma-reyonu-210-lt-1036x65x85-cm"
+      },
+      "vosco": {
+        "code": "FT-235LB",
+        "title": "Vosco 235L Dikey Soğutmalı Teşhir Dolabı (Beyaz)",
+        "category": "Teşhir Dolapları",
+        "url": "https://vosco.com.tr/vosco-235l-dikey-sogutmali-teshir-dolabi-beyaz",
+        "pdfUsd": null
+      },
+      "family": "teshir-sogutma",
+      "titleSimilarity": 0
+    },
+    {
+      "score": 0.5,
+      "senox": {
+        "code": "118.SYD310",
+        "model": "SYD-310",
+        "title": "Senox 5 Gözlü Dondurma Reyonu, 210 lt, 103,6x65x85 cm",
+        "category": "Soğutma Ekipmanları",
+        "url": "https://www.mutbex.com/senox-5-gozlu-dondurma-reyonu-210-lt-1036x65x85-cm"
+      },
+      "vosco": {
+        "code": "FT-235LS",
+        "title": "Vosco 235L Dikey Soğutmalı Teşhir Dolabı (Siyah)",
+        "category": "Teşhir Dolapları",
+        "url": "https://vosco.com.tr/vosco-235l-dikey-sogutmali-teshir-dolabi-siyah",
+        "pdfUsd": null
+      },
+      "family": "teshir-sogutma",
+      "titleSimilarity": 0
+    },
+    {
+      "score": 0.5,
+      "senox": {
+        "code": "118.300.COMBİ",
+        "model": "300-COMBİ",
+        "title": "Senox 300 Combi Bar Tipi Soğutucu Dolap, 145 L,",
+        "category": "Şişe Soğutucular",
+        "url": "https://www.mutbex.com/senox-300-combi-bar-tipi-sogutucu-dolap-145-l"
+      },
+      "vosco": {
+        "code": "VFTW-160L",
+        "title": "Vosco 160L Tezgah Üstü Soğutmalı Vitrin Dolabı",
+        "category": "Teşhir Dolapları",
+        "url": "https://vosco.com.tr/vosco-160l-tezgah-ustu-sogutmali-vitrin-dolabi",
+        "pdfUsd": 1850
+      },
+      "family": "teshir-sogutma",
+      "titleSimilarity": 0
+    },
+    {
+      "score": 0.5,
+      "senox": {
+        "code": "118.SYD410",
+        "model": "SYD-410",
+        "title": "Senox 7 Gözlü Dondurma Reyonu, 283 lt, 131,1x65x85 cm",
+        "category": "Soğutma Ekipmanları",
+        "url": "https://www.mutbex.com/senox-7-gozlu-dondurma-reyonu-283-lt-1311x65x85-cm"
+      },
+      "vosco": {
+        "code": "FT-280LB",
+        "title": "Vosco 280L Dikey Soğutmalı Teşhir Dolabı (Beyaz)",
+        "category": "Teşhir Dolapları",
+        "url": "https://vosco.com.tr/vosco-280l-dikey-sogutmali-teshir-dolabi-beyaz",
+        "pdfUsd": null
+      },
+      "family": "teshir-sogutma",
+      "titleSimilarity": 0
+    },
+    {
+      "score": 0.5,
+      "senox": {
+        "code": "118.SYD410",
+        "model": "SYD-410",
+        "title": "Senox 7 Gözlü Dondurma Reyonu, 283 lt, 131,1x65x85 cm",
+        "category": "Soğutma Ekipmanları",
+        "url": "https://www.mutbex.com/senox-7-gozlu-dondurma-reyonu-283-lt-1311x65x85-cm"
+      },
+      "vosco": {
+        "code": "FT-280LS",
+        "title": "Vosco 280L Dikey Soğutmalı Teşhir Dolabı (Siyah)",
+        "category": "Teşhir Dolapları",
+        "url": "https://vosco.com.tr/vosco-280l-dikey-sogutmali-teshir-dolabi-siyah",
+        "pdfUsd": null
+      },
+      "family": "teshir-sogutma",
+      "titleSimilarity": 0
+    },
+    {
+      "score": 0.5,
+      "senox": {
+        "code": "118.300.COMBİ",
+        "model": "300-COMBİ",
+        "title": "Senox 300 Combi Bar Tipi Soğutucu Dolap, 145 L,",
+        "category": "Şişe Soğutucular",
+        "url": "https://www.mutbex.com/senox-300-combi-bar-tipi-sogutucu-dolap-145-l"
+      },
+      "vosco": {
+        "code": "VFTW-160LYP",
+        "title": "Vosco 160L Tezgah Üstü Soğutmalı Vitrin Dolabı - Panoramik Camlı ",
+        "category": "Teşhir Dolapları",
+        "url": "https://vosco.com.tr/vosco-160l-tezgah-ustu-sogutmali-vitrin-dolabi-panoramik-camli-",
+        "pdfUsd": 1850
+      },
+      "family": "teshir-sogutma",
+      "titleSimilarity": 0
+    },
+    {
+      "score": 0.485,
+      "senox": {
+        "code": "118.SFT.03.Pro",
+        "model": "SFT-03-PRO",
+        "title": "Senox SFT 03 Pro Soft Dondurma Makinesi, 5,5x2 lt Hazneli",
+        "category": "Dondurma Makineleri",
+        "url": "https://www.mutbex.com/senox-sft-03-pro-soft-dondurma-makinesi-55x2-lt-hazneli"
+      },
+      "vosco": {
+        "code": "VSC-28T",
+        "title": "Vosco Dondurma Makinesi 3 Kollu (Soft) Set Üstü",
+        "category": "Dondurma Makineleri",
+        "url": "https://vosco.com.tr/vosco-dondurma-makinesi-3-kollu-soft-set-ustu",
+        "pdfUsd": null
+      },
+      "family": "dondurma",
+      "titleSimilarity": 30
+    },
+    {
+      "score": 0.44,
+      "senox": {
+        "code": "118.SFT.02.Pro",
+        "model": "SFT-02-PRO",
+        "title": "Senox SFT 02 Pro Soft Dondurma Makinesi, 6x2 lt Hazneli",
+        "category": "Dondurma Makineleri",
+        "url": "https://www.mutbex.com/senox-sft-02-pro-soft-dondurma-makinesi-6x2-lt-hazneli"
+      },
+      "vosco": {
+        "code": "VICM-15A",
+        "title": "Vosco Dondurma Makinesi (Sert) Set Üstü",
+        "category": "Dondurma Makineleri",
+        "url": "https://vosco.com.tr/vosco-dondurma-makinesi-sert-set-ustu",
+        "pdfUsd": null
+      },
+      "family": "dondurma",
+      "titleSimilarity": 20
+    },
+    {
+      "score": 0.3821428571428571,
+      "senox": {
+        "code": "118.SEMG.16K",
+        "model": "SEMG-16K",
+        "title": "Senox Soft Dondurma Makinesi, 16 L, Tek Grupla, SEMG 16K",
+        "category": "Dondurma Makineleri",
+        "url": "https://www.mutbex.com/senox-soft-dondurma-makinesi-16-l-tek-grupla-semg-16k"
+      },
+      "vosco": {
+        "code": "VSC-616DE",
+        "title": "Vosco Profesyonel Stand Mikser 16 Lt - 2800W Endüstriyel Hamur Yoğurma Makinesi",
+        "category": "Mikserler",
+        "url": "https://vosco.com.tr/vosco-profesyonel-stand-mikser-16-lt-2800w-endustriyel-hamur-yogurma-makinesi",
+        "pdfUsd": 950
+      },
+      "family": "blender-bar",
+      "titleSimilarity": 7
+    },
+    {
+      "score": 0.375,
+      "senox": {
+        "code": "118.BZ12",
+        "model": "BZ-12",
+        "title": "Senox BZ12 Buz Makinesi, 12 kg/gün Kapasiteli",
+        "category": "Küp Buz Makineleri",
+        "url": "https://www.mutbex.com/senox-bz12-buz-makinesi-12-kg-gun-kapasiteli"
+      },
+      "vosco": {
+        "code": "VSC-25C",
+        "title": "Vosco Buz Makinesi 25 Kg/Gün Küp",
+        "category": "Buz Makineleri",
+        "url": "https://vosco.com.tr/vosco-buz-makinesi-25-kggun-kup",
+        "pdfUsd": 1400
+      },
+      "family": "buz",
+      "titleSimilarity": 50
+    },
+    {
+      "score": 0.375,
+      "senox": {
+        "code": "118.BZ12",
+        "model": "BZ-12",
+        "title": "Senox BZ12 Buz Makinesi, 12 kg/gün Kapasiteli",
+        "category": "Küp Buz Makineleri",
+        "url": "https://www.mutbex.com/senox-bz12-buz-makinesi-12-kg-gun-kapasiteli"
+      },
+      "vosco": {
+        "code": "VSC-40C",
+        "title": "Vosco Buz Makinesi 40 Kg/Gün Küp",
+        "category": "Buz Makineleri",
+        "url": "https://vosco.com.tr/vosco-buz-makinesi-40-kggun-kup",
+        "pdfUsd": 1800
+      },
+      "family": "buz",
+      "titleSimilarity": 50
+    },
+    {
+      "score": 0.375,
+      "senox": {
+        "code": "118.BZ12",
+        "model": "BZ-12",
+        "title": "Senox BZ12 Buz Makinesi, 12 kg/gün Kapasiteli",
+        "category": "Küp Buz Makineleri",
+        "url": "https://www.mutbex.com/senox-bz12-buz-makinesi-12-kg-gun-kapasiteli"
+      },
+      "vosco": {
+        "code": "VSC-70C",
+        "title": "Vosco Buz Makinesi 70 Kg/Gün Küp",
+        "category": "Buz Makineleri",
+        "url": "https://vosco.com.tr/vosco-buz-makinesi-70-kggun-kup",
+        "pdfUsd": 50
+      },
+      "family": "buz",
+      "titleSimilarity": 50
+    },
+    {
+      "score": 0.375,
+      "senox": {
+        "code": "118.BZ12",
+        "model": "BZ-12",
+        "title": "Senox BZ12 Buz Makinesi, 12 kg/gün Kapasiteli",
+        "category": "Küp Buz Makineleri",
+        "url": "https://www.mutbex.com/senox-bz12-buz-makinesi-12-kg-gun-kapasiteli"
+      },
+      "vosco": {
+        "code": "VSC-45/S",
+        "title": "Vosco Buz Makinesi 45 Kg/Gün Küp Buz",
+        "category": "Buz Makineleri",
+        "url": "https://vosco.com.tr/vosco-buz-makinesi-45-kggun-kup-buz",
+        "pdfUsd": null
+      },
+      "family": "buz",
+      "titleSimilarity": 50
+    },
+    {
+      "score": 0.375,
+      "senox": {
+        "code": "118.BZ12",
+        "model": "BZ-12",
+        "title": "Senox BZ12 Buz Makinesi, 12 kg/gün Kapasiteli",
+        "category": "Küp Buz Makineleri",
+        "url": "https://www.mutbex.com/senox-bz12-buz-makinesi-12-kg-gun-kapasiteli"
+      },
+      "vosco": {
+        "code": "VSC-65/S",
+        "title": "Vosco Buz Makinesi 65 Kg/Gün Küp Buz",
+        "category": "Buz Makineleri",
+        "url": "https://vosco.com.tr/vosco-buz-makinesi-65-kggun-kup-buz",
+        "pdfUsd": 1900
+      },
+      "family": "buz",
+      "titleSimilarity": 50
+    },
+    {
+      "score": 0.34285714285714286,
+      "senox": {
+        "code": "118.BZ12",
+        "model": "BZ-12",
+        "title": "Senox BZ12 Buz Makinesi, 12 kg/gün Kapasiteli",
+        "category": "Küp Buz Makineleri",
+        "url": "https://www.mutbex.com/senox-bz12-buz-makinesi-12-kg-gun-kapasiteli"
+      },
+      "vosco": {
+        "code": "VSC-100B",
+        "title": "Vosco Buz Makinesi 100 Kg/Gün Parmak",
+        "category": "Buz Makineleri",
+        "url": "https://vosco.com.tr/vosco-buz-makinesi-100-kggun-parmak",
+        "pdfUsd": 25
+      },
+      "family": "buz",
+      "titleSimilarity": 43
+    },
+    {
+      "score": 0.34285714285714286,
+      "senox": {
+        "code": "118.BZ12",
+        "model": "BZ-12",
+        "title": "Senox BZ12 Buz Makinesi, 12 kg/gün Kapasiteli",
+        "category": "Küp Buz Makineleri",
+        "url": "https://www.mutbex.com/senox-bz12-buz-makinesi-12-kg-gun-kapasiteli"
+      },
+      "vosco": {
+        "code": "VSC-100C",
+        "title": "Vosco Buz Makinesi 100 Kg/Gün Küp",
+        "category": "Buz Makineleri",
+        "url": "https://vosco.com.tr/vosco-buz-makinesi-100-kggun-kup",
+        "pdfUsd": 25
+      },
+      "family": "buz",
+      "titleSimilarity": 43
+    },
+    {
+      "score": 0.34285714285714286,
+      "senox": {
+        "code": "118.BZ12",
+        "model": "BZ-12",
+        "title": "Senox BZ12 Buz Makinesi, 12 kg/gün Kapasiteli",
+        "category": "Küp Buz Makineleri",
+        "url": "https://www.mutbex.com/senox-bz12-buz-makinesi-12-kg-gun-kapasiteli"
+      },
+      "vosco": {
+        "code": "VSC-100T",
+        "title": "Vosco Buz Makinesi 100 Kg/Gün Gurme",
+        "category": "Buz Makineleri",
+        "url": "https://vosco.com.tr/vosco-buz-makinesi-100-kg-gurme",
+        "pdfUsd": 25
+      },
+      "family": "buz",
+      "titleSimilarity": 43
+    },
+    {
+      "score": 0.34285714285714286,
+      "senox": {
+        "code": "118.BZ12",
+        "model": "BZ-12",
+        "title": "Senox BZ12 Buz Makinesi, 12 kg/gün Kapasiteli",
+        "category": "Küp Buz Makineleri",
+        "url": "https://www.mutbex.com/senox-bz12-buz-makinesi-12-kg-gun-kapasiteli"
+      },
+      "vosco": {
+        "code": "VSC-120C",
+        "title": "Vosco Buz Makinesi 120 Kg/Gün Küp",
+        "category": "Buz Makineleri",
+        "url": "https://vosco.com.tr/vosco-buz-makinesi-120-kggun-kup",
+        "pdfUsd": 25
+      },
+      "family": "buz",
+      "titleSimilarity": 43
+    },
+    {
+      "score": 0.34285714285714286,
+      "senox": {
+        "code": "118.BZ12",
+        "model": "BZ-12",
+        "title": "Senox BZ12 Buz Makinesi, 12 kg/gün Kapasiteli",
+        "category": "Küp Buz Makineleri",
+        "url": "https://www.mutbex.com/senox-bz12-buz-makinesi-12-kg-gun-kapasiteli"
+      },
+      "vosco": {
+        "code": "VSC-23CG",
+        "title": "Vosco Buz Makinesi 23 Kg/Gün Küp Buz Gold",
+        "category": "Buz Makineleri",
+        "url": "https://vosco.com.tr/vosco-buz-makinesi-23-kggun-kup-gold",
+        "pdfUsd": 1100
+      },
+      "family": "buz",
+      "titleSimilarity": 43
+    },
+    {
+      "score": 0.34285714285714286,
+      "senox": {
+        "code": "118.BZ12",
+        "model": "BZ-12",
+        "title": "Senox BZ12 Buz Makinesi, 12 kg/gün Kapasiteli",
+        "category": "Küp Buz Makineleri",
+        "url": "https://www.mutbex.com/senox-bz12-buz-makinesi-12-kg-gun-kapasiteli"
+      },
+      "vosco": {
+        "code": "VSC-23CS",
+        "title": "Vosco Buz Makinesi 23 Kg/Gün Küp Buz Siyah",
+        "category": "Buz Makineleri",
+        "url": "https://vosco.com.tr/vosco-buz-makinesi-23-kggun-kup-siyah",
+        "pdfUsd": 1100
+      },
+      "family": "buz",
+      "titleSimilarity": 43
+    },
+    {
+      "score": 0.34285714285714286,
+      "senox": {
+        "code": "118.BZ12",
+        "model": "BZ-12",
+        "title": "Senox BZ12 Buz Makinesi, 12 kg/gün Kapasiteli",
+        "category": "Küp Buz Makineleri",
+        "url": "https://www.mutbex.com/senox-bz12-buz-makinesi-12-kg-gun-kapasiteli"
+      },
+      "vosco": {
+        "code": "VSC-500C",
+        "title": "Vosco Buz Makinesi 500 Kg/Gün Küp",
+        "category": "Buz Makineleri",
+        "url": "https://vosco.com.tr/vosco-buz-makinesi-500-kggun-kup",
+        "pdfUsd": 9000
+      },
+      "family": "buz",
+      "titleSimilarity": 43
+    },
+    {
+      "score": 0.33,
+      "senox": {
+        "code": "118.KMP.01",
+        "model": "KMP-01",
+        "title": "Senox KMP 01 Katı Meyve Sıkacağı",
+        "category": "Meyve Sıkma Makineleri",
+        "url": "https://www.mutbex.com/senox-kmp-01-kati-meyve-sikacagi"
+      },
+      "vosco": {
+        "code": "VHS-JE2106A",
+        "title": "Vosco Meyve Sıkacağı 1.2L 1200W",
+        "category": "Meyve Sıkacağı",
+        "url": "https://vosco.com.tr/vosco-meyve-sikacagi-1200w-1.2l",
+        "pdfUsd": 250
+      },
+      "family": "meyve-sikma",
+      "titleSimilarity": 40
+    },
+    {
+      "score": 0.3,
+      "senox": {
+        "code": "118.HC.600",
+        "model": "HC-600",
+        "title": "Senox Titan Kahve Değirmeni, HC 600",
+        "category": "Otomatik Kahve Değirmenleri",
+        "url": "https://www.mutbex.com/senox-titan-kahve-degirmeni-hc-600"
+      },
+      "vosco": {
+        "code": "VBD-CG018",
+        "title": "Vosco Dijital Espresso Kahve Değirmeni",
+        "category": "Kahve Değirmenleri",
+        "url": "https://vosco.com.tr/vosco-dijital-espresso-kahve-degirmeni-ve-ogutucu",
+        "pdfUsd": 270
+      },
+      "family": "kahve-degirmen",
+      "titleSimilarity": 33
+    },
+    {
+      "score": 0.3,
+      "senox": {
+        "code": "118.HC.600",
+        "model": "HC-600",
+        "title": "Senox Titan Kahve Değirmeni, HC 600",
+        "category": "Otomatik Kahve Değirmenleri",
+        "url": "https://www.mutbex.com/senox-titan-kahve-degirmeni-hc-600"
+      },
+      "vosco": {
+        "code": "VCG-835B",
+        "title": "Vosco Dozaj Ayarlı Kahve Değirmeni",
+        "category": "Kahve Değirmenleri",
+        "url": "https://vosco.com.tr/vosco-dozaj-ayarli-kahve-degirmeni",
+        "pdfUsd": null
+      },
+      "family": "kahve-degirmen",
+      "titleSimilarity": 33
+    },
+    {
+      "score": 0.3,
+      "senox": {
+        "code": "118.BZ12",
+        "model": "BZ-12",
+        "title": "Senox BZ12 Buz Makinesi, 12 kg/gün Kapasiteli",
+        "category": "Küp Buz Makineleri",
+        "url": "https://www.mutbex.com/senox-bz12-buz-makinesi-12-kg-gun-kapasiteli"
+      },
+      "vosco": {
+        "code": "VSC-150C",
+        "title": "Vosco Buz Makinesi 150 Kg/Gün Küp (Hazne Dahil)",
+        "category": "Buz Makineleri",
+        "url": "https://vosco.com.tr/vosco-buz-makinesi-150-kggun-kup-hazne-dahil",
+        "pdfUsd": 3600
+      },
+      "family": "buz",
+      "titleSimilarity": 33
+    },
+    {
+      "score": 0.3,
+      "senox": {
+        "code": "118.BZ12",
+        "model": "BZ-12",
+        "title": "Senox BZ12 Buz Makinesi, 12 kg/gün Kapasiteli",
+        "category": "Küp Buz Makineleri",
+        "url": "https://www.mutbex.com/senox-bz12-buz-makinesi-12-kg-gun-kapasiteli"
+      },
+      "vosco": {
+        "code": "VSC-200C",
+        "title": "Vosco Buz Makinesi 200 Kg/Gün Küp (Hazne Dahil)",
+        "category": "Buz Makineleri",
+        "url": "https://vosco.com.tr/vosco-buz-makinesi-200-kggun-kup-hazne-dahil",
+        "pdfUsd": 7000
+      },
+      "family": "buz",
+      "titleSimilarity": 33
+    },
+    {
+      "score": 0.3,
+      "senox": {
+        "code": "118.BZ12",
+        "model": "BZ-12",
+        "title": "Senox BZ12 Buz Makinesi, 12 kg/gün Kapasiteli",
+        "category": "Küp Buz Makineleri",
+        "url": "https://www.mutbex.com/senox-bz12-buz-makinesi-12-kg-gun-kapasiteli"
+      },
+      "vosco": {
+        "code": "VSC-250C",
+        "title": "Vosco Buz Makinesi 250 Kg/Gün Küp (Hazne Dahil)",
+        "category": "Buz Makineleri",
+        "url": "https://vosco.com.tr/vosco-buz-makinesi-250-kggun-kup-hazne-dahil",
+        "pdfUsd": null
+      },
+      "family": "buz",
+      "titleSimilarity": 33
+    },
+    {
+      "score": 0.28500000000000003,
+      "senox": {
+        "code": "118.SET.67P",
+        "model": "SET-67P",
+        "title": "Senox SET 67P Set Üstü Sıcak Teşhir Dolabı, 67,8×56,8×68,6 cm",
+        "category": "Sıcak Teşhir Dolapları ve Tezgahları",
+        "url": "https://www.mutbex.com/senox-set-67p-set-ustu-sicak-teshir-dolabi-678568686-cm"
+      },
+      "vosco": {
+        "code": "VFTR-50L",
+        "title": "Vosco Sıcak Teşhir Dolabı 50L - VFTR-50L Endüstriyel Isıtıcı",
+        "category": "Teşhir Dolapları",
+        "url": "https://vosco.com.tr/vosco-sicak-teshir-dolabi-50l",
+        "pdfUsd": null
+      },
+      "family": "teshir-sogutma",
+      "titleSimilarity": 30
+    }
+  ]
+}

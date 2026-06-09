@@ -443,6 +443,7 @@
     blanco: "Blanco",
     simag: "SIMAG",
     senox: "Şenox",
+    vosco: "Vosco",
   };
 
   /**
@@ -482,6 +483,7 @@
     simag: { markaHub: true, facet: "SIMAG" },
     electrolux: { markaHub: true, facet: "Electrolux" },
     senox: { markaHub: true, facet: "Şenox" },
+    vosco: { markaHub: true, facet: "Vosco" },
     inoksan: { dept: "sogutma", facet: "İnoksan" },
     "la-cimbali": { dept: "kahve", facet: "La Cimbali" },
     faema: { dept: "kahve", facet: "Faema" },
