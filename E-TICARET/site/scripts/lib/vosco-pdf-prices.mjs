@@ -158,7 +158,7 @@ function fmtTry(n) {
   return `${int},${parts[1]}`;
 }
 
-export function pricingFromManualKdvDahilTry(kdvDahilTry, kdv = 20) {
+export function pricingFromManualKdvDahilTry(kdvDahilTry, kdv = 20, meta = {}) {
   const kdvDahil = Math.round(Number(kdvDahilTry));
   const netTry = kdvDahil / (1 + kdv / 100);
   return {
@@ -166,7 +166,9 @@ export function pricingFromManualKdvDahilTry(kdvDahilTry, kdv = 20) {
     fiyat_tl_net: Math.round(netTry),
     price: `₺${fmtTry(netTry)} + KDV\nKDV Dahil ₺${fmtTry(kdvDahil)}`,
     fiyat_bekleniyor: false,
-    fiyat_kaynak: "vosco-manual-tl",
+    fiyat_kaynak: meta.fiyat_kaynak || "vosco-manual-tl",
+    site_fiyat_kdv_dahil: meta.site_fiyat_kdv_dahil,
+    site_fiyat_str: meta.site_fiyat_str,
   };
 }
 
@@ -174,6 +176,19 @@ export function findManualVoscoPrice(p) {
   const k = normVoscoKey(p?.stockCode || p?.model || "");
   const kdvDahil = VOSCO_MANUAL_KDV_DAHIL_TL[k];
   return kdvDahil > 0 ? pricingFromManualKdvDahilTry(kdvDahil) : null;
+}
+
+/** vosco.com.tr productPriceKDVIncluded — PDF/manuel yoksa */
+const MIN_SITE_PRICE_TRY = 100;
+
+export function findVoscoSitePrice(p, kdv = 20) {
+  const kdvDahil = Number(p?.sitePriceTry);
+  if (!(kdvDahil >= MIN_SITE_PRICE_TRY)) return null;
+  return pricingFromManualKdvDahilTry(kdvDahil, kdv, {
+    fiyat_kaynak: "vosco-site-tl",
+    site_fiyat_kdv_dahil: Math.round(kdvDahil),
+    site_fiyat_str: p?.sitePriceStr || null,
+  });
 }
 
 export function pricingFromVoscoListeEur(listeEur, eurTry, kdv = 20, satisOran = 0.55, meta = {}) {

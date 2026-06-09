@@ -15,6 +15,7 @@ import { fetchTcmbEurUsdRates } from "./fetch-tcmb-kur.mjs";
 import {
   findManualVoscoPrice,
   findPdfListPrice,
+  findVoscoSitePrice,
   loadVoscoPdfCatalog,
   pricingFromVoscoListeEur,
   resolveListeEur,
@@ -92,8 +93,13 @@ function formatSpecs(p, px, pdfMatch) {
   if (p.olculer?.raw) lines.push(`Ölçü: ${p.olculer.raw}`);
   if (px) {
     lines.push("");
-    if (px.fiyat_kaynak === "vosco-manual-tl") {
-      lines.push(`Equsto satış (KDV dahil): ₺${px.fiyat_tl.toLocaleString("tr-TR")}`, `KDV %${KDV}`);
+    if (px.fiyat_kaynak === "vosco-manual-tl" || px.fiyat_kaynak === "vosco-site-tl") {
+      const label =
+        px.fiyat_kaynak === "vosco-site-tl"
+          ? "vosco.com.tr satış fiyatı (KDV dahil)"
+          : "Equsto manuel fiyat (KDV dahil)";
+      lines.push(`${label}: ₺${px.fiyat_tl.toLocaleString("tr-TR")}`, `KDV %${KDV}`);
+      if (px.site_fiyat_str) lines.push(`Site: ${px.site_fiyat_str}`);
     } else {
       lines.push(
         px.liste_fiyati_eur_pdf
@@ -107,7 +113,7 @@ function formatSpecs(p, px, pdfMatch) {
       if (pdfMatch?.matchKey) lines.push(`PDF eşleşme: ${pdfMatch.matchKey}${pdfMatch.fuzzy ? " (yakın)" : ""}`);
     }
   }
-  lines.push("", `Kaynak fiyat: ${px?.fiyat_kaynak === "vosco-manual-tl" ? "Equsto manuel fiyat" : "Vosco Katalog 2026 PDF"}`, `Kaynak ürün: vosco.com.tr — ${p.url}`, `Marka: ${BRAND}`);
+  lines.push("", `Kaynak fiyat: ${px?.fiyat_kaynak === "vosco-site-tl" ? "vosco.com.tr" : px?.fiyat_kaynak === "vosco-manual-tl" ? "Equsto manuel fiyat" : "Vosco Katalog 2026 PDF"}`, `Kaynak ürün: vosco.com.tr — ${p.url}`, `Marka: ${BRAND}`);
   return lines.filter((l, i, arr) => !(l === "" && arr[i + 1] === "")).join("\n");
 }
 
@@ -129,6 +135,7 @@ function toRow(p, eurTry, usdTry, pdfIndex, pdfProducts) {
   const manualPx = findManualVoscoPrice(p);
   const pdfMatch = manualPx ? null : findPdfListPrice(p, pdfIndex, pdfProducts);
   const listeEur = manualPx ? 0 : resolveListeEur(pdfMatch, usdTry, eurTry);
+  const sitePx = manualPx || listeEur > 0 ? null : findVoscoSitePrice(p, KDV);
   const px =
     manualPx ||
     (listeEur > 0
@@ -138,7 +145,7 @@ function toRow(p, eurTry, usdTry, pdfIndex, pdfProducts) {
           usdTry,
           kurUsdEur: usdToEurRate(usdTry, eurTry),
         })
-      : null);
+      : sitePx);
   const images = copyImage(p);
   const teknikList = Object.entries(p.teknik_ozellikler || {}).map(([k, v]) => `${k}: ${v}`);
   return {
@@ -212,9 +219,10 @@ async function main() {
   console.log(`[vosco-import] kur: 1 EUR = ${eurTry} TRY, 1 USD = ${usdTry} TRY, 1 USD = ${usdEur.toFixed(4)} EUR`);
 
   const rows = products.map((p) => toRow(p, eurTry, usdTry, pdfCatalog.index, pdfCatalog.products));
-  const unmatched = products.filter(
-    (p) => !findManualVoscoPrice(p) && !findPdfListPrice(p, pdfCatalog.index, pdfCatalog.products),
-  );
+  const unmatched = products.filter((p) => {
+    if (findManualVoscoPrice(p) || findVoscoSitePrice(p)) return false;
+    return !findPdfListPrice(p, pdfCatalog.index, pdfCatalog.products);
+  });
 
   const byDept = rows.reduce((acc, r) => {
     (acc[r.dept] ||= []).push(r);
