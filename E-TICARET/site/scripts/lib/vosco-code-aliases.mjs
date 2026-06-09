@@ -111,4 +111,6 @@ export const VOSCO_MANUAL_KDV_DAHIL_TL = {
   VFTR50L: 21000,
   VST520ECB: 42375,
   VST520ECS: 42375,
+  /** vosco.com.tr — PDF'te yok */
+  VLJH12: 26275.46,
 };
