@@ -55,30 +55,30 @@ SADECE JSON dizi döndür:
 
 function parseProxyItems(raw: unknown): ListePdfKalem[] {
   if (!Array.isArray(raw)) return [];
-  return raw
-    .map((x) => {
-      const row = x as Record<string, unknown>;
-      const ham_isim = String(row.ham_isim ?? row.name ?? "").trim();
-      const tip_kodu = String(row.tip_kodu ?? row.tip ?? "").trim();
-      if (!ham_isim || !tip_kodu) return null;
-      const adetRaw = row.adet;
-      const adet =
-        typeof adetRaw === "number" && adetRaw > 0
-          ? Math.round(adetRaw)
-          : parseInt(String(adetRaw ?? "1"), 10) || 1;
-      return {
-        ham_isim,
-        tip_kodu,
-        kategori: String(row.kategori ?? row.cat ?? "diger").trim() || "diger",
-        adet,
-        poz: row.poz != null ? String(row.poz).trim() : undefined,
-        olcu:
-          row.olcu != null && String(row.olcu).trim()
-            ? String(row.olcu).trim()
-            : undefined,
-      } satisfies ListePdfKalem;
-    })
-    .filter((x): x is ListePdfKalem => x !== null);
+  const out: ListePdfKalem[] = [];
+  for (const x of raw) {
+    const row = x as Record<string, unknown>;
+    const ham_isim = String(row.ham_isim ?? row.name ?? "").trim();
+    const tip_kodu = String(row.tip_kodu ?? row.tip ?? "").trim();
+    if (!ham_isim || !tip_kodu) continue;
+    const adetRaw = row.adet;
+    const adet =
+      typeof adetRaw === "number" && adetRaw > 0
+        ? Math.round(adetRaw)
+        : parseInt(String(adetRaw ?? "1"), 10) || 1;
+    out.push({
+      ham_isim,
+      tip_kodu,
+      kategori: String(row.kategori ?? row.cat ?? "diger").trim() || "diger",
+      adet,
+      poz: row.poz != null ? String(row.poz).trim() : undefined,
+      olcu:
+        row.olcu != null && String(row.olcu).trim()
+          ? String(row.olcu).trim()
+          : undefined,
+    });
+  }
+  return out;
 }
 
 /** PDF buffer → ekipman kalemleri (Claude proxy) */
