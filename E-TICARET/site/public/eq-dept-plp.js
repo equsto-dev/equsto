@@ -782,6 +782,7 @@
     var host = document.getElementById('eq-dept-plp-facets');
     if (!host || !state.ready || !window.EqDeptCmFacets) return;
     window.EqDeptCmFacets.mount(host, {
+      dept: DEPT,
       allProducts: state.all,
       state: state,
       tiles: deptTiles(),

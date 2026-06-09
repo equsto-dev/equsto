@@ -44,6 +44,21 @@
   ];
 
   var MODEL_CAP = 48;
+  /** Yıkama PLP: Öztiryakiler OEM alt markaları filtrede gösterilmez. */
+  var YIKAMA_HIDDEN_FACET_BRANDS = { OKY: true, AMX: true };
+
+  function facetDept(opts) {
+    if (opts && opts.dept) return String(opts.dept);
+    if (typeof document !== 'undefined' && document.body) {
+      return String(document.body.getAttribute('data-eq-dept') || '');
+    }
+    return '';
+  }
+
+  function isHiddenFacetBrand(brand, dept) {
+    if (dept !== 'yikama') return false;
+    return !!YIKAMA_HIDDEN_FACET_BRANDS[facetBrandKey(brand)];
+  }
 
   function esc(s) {
     return String(s == null ? '' : s)
@@ -372,6 +387,7 @@
       return all;
     };
     var onChange = typeof opts.onChange === 'function' ? opts.onChange : function () {};
+    var dept = facetDept(opts);
     var activeTiles = Array.isArray(state.activeTiles)
       ? state.activeTiles
       : state.activeTile
@@ -386,7 +402,7 @@
       var priceMaxAll = 0;
       pool.forEach(function (u) {
         var b = productBrand(u);
-        if (b) brandCounts[b] = (brandCounts[b] || 0) + 1;
+        if (b && !isHiddenFacetBrand(b, dept)) brandCounts[b] = (brandCounts[b] || 0) + 1;
         var model = extractModel(u.n, u.b);
         if (model) modelCounts[model] = (modelCounts[model] || 0) + 1;
         ENERGY_TYPES.forEach(function (e) {
@@ -415,7 +431,7 @@
     var brands = Object.keys(brandCounts);
     (state.brands || []).forEach(function (b) {
       var k = facetBrandKey(b);
-      if (k && brands.indexOf(k) < 0) brands.push(k);
+      if (k && !isHiddenFacetBrand(k, dept) && brands.indexOf(k) < 0) brands.push(k);
     });
     brands.sort(function (a, b) {
       return (brandCounts[b] || 0) - (brandCounts[a] || 0);
@@ -690,8 +706,10 @@
       }
       chips.push({ type: 'tile', value: tid, text: label });
     });
+    var chipDept = facetDept();
     (state.brands || []).forEach(function (b) {
       var label = facetBrandKey(b);
+      if (isHiddenFacetBrand(label, chipDept)) return;
       chips.push({ type: 'brand', value: label, text: label });
     });
     (state.models || []).forEach(function (m) {
