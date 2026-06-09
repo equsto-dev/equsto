@@ -191,7 +191,7 @@ async function main() {
       continue;
     }
 
-    const shortName = row.aciklama || row.name || "";
+    const shortName = row.inoksan_excel_name || row.aciklama || row.name || "";
     const match = matchInoksanWeb(row.sku, shortName, index.products, codeIndex);
     const imgResult = downloadInoksanImage(row.sku, match?.product, IMG_DIR, IMG_SUB, {
       dryRun,
