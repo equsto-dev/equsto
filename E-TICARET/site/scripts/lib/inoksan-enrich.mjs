@@ -385,8 +385,14 @@ export function downloadInoksanImage(sku, web, imgDir, imgSub, opts = {}) {
   }
 
   const candidates = [];
+  if (web?.imgs?.length) {
+    const gallery = [...web.imgs].sort((a, b) => {
+      const hero = (u) => (/[_/]0\.(png|jpe?g)/i.test(u) ? 0 : 1);
+      return hero(a) - hero(b);
+    });
+    candidates.push(...gallery);
+  }
   candidates.push(...directImageUrls(sku));
-  if (web?.imgs?.length) candidates.push(...web.imgs);
   const fb = row ? deptFallbackUrl(row) : null;
   if (fb) candidates.push(fb);
 
