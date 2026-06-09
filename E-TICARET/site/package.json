@@ -47,6 +47,7 @@
     "catalog:vosco:compare-senox": "node scripts/compare-senox-vosco.mjs",
     "catalog:vosco:import": "node scripts/import-vosco-to-equsto.mjs",
     "catalog:vosco:full": "npm run catalog:vosco:pdf && npm run catalog:vosco:scrape && npm run catalog:vosco:compare-senox && npm run catalog:vosco:import",
+    "catalog:rational:prices": "node scripts/apply-rational-liste-prices.mjs",
     "catalog:cafemarkt:robot-coupe": "node scripts/fetch-cafemarkt-robot-coupe.mjs && node scripts/apply-cafemarkt-robot-coupe-to-equsto.mjs",
     "catalog:cafemarkt:portabianco": "node scripts/fetch-cafemarkt-portabianco.mjs && node scripts/gen-portabianco-cafemarkt-img-map.mjs && node scripts/apply-cafemarkt-portabianco-images.mjs --upgrade-b --search-missing",
     "catalog:portabianco:audit": "node scripts/fetch-cafemarkt-portabianco.mjs && node scripts/audit-fix-portabianco-catalog.mjs",
