@@ -1,5 +1,5 @@
 /**
- * PDF teklif listesi → Claude analiz (sunucu tarafı, public liste-fiyat için).
+ * PDF / Excel teklif listesi → Claude analiz (sunucu tarafı, public liste-fiyat için).
  */
 
 import { runImportDocumentAnaliz } from "@/lib/claude/import-analiz.server";
@@ -21,7 +21,7 @@ function buildSystemPrompt(entries: TipSozlukEntry[]): string {
     .join("\n");
 
   return `Sen bir endüstriyel mutfak ekipmanı uzmanısın.
-Kullanıcı sana bir PDF teklif / proforma / ekipman listesi yükleyecek.
+Kullanıcı sana bir PDF veya Excel teklif / proforma / ekipman listesi yükleyecek.
 Bu dosyadan ekipman kalemlerini çıkar ve aşağıdaki tip_sozlugu ile eşleştir.
 
 TİP SÖZLÜĞÜ (mevcut):
@@ -47,9 +47,12 @@ SADECE JSON dizi döndür:
 ]`;
 }
 
-/** PDF buffer → ekipman kalemleri */
-export async function analyzePdfForListe(
-  pdfBuffer: ArrayBuffer,
+const XLSX_MIME =
+  "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+
+async function analyzeDocumentForListe(
+  buffer: ArrayBuffer,
+  dosya_tip: string,
   opts?: { notlar?: string },
 ): Promise<ListePdfKalem[]> {
   const entries = await loadTipSozluguEntries();
@@ -61,9 +64,25 @@ export async function analyzePdfForListe(
     : "Dosyayı analiz et ve tüm ekipman kalemlerini çıkar:";
 
   return runImportDocumentAnaliz({
-    dosya_base64: Buffer.from(pdfBuffer).toString("base64"),
-    dosya_tip: "application/pdf",
+    dosya_base64: Buffer.from(buffer).toString("base64"),
+    dosya_tip,
     system_prompt,
     user_prompt,
   });
+}
+
+/** PDF buffer → ekipman kalemleri */
+export async function analyzePdfForListe(
+  pdfBuffer: ArrayBuffer,
+  opts?: { notlar?: string },
+): Promise<ListePdfKalem[]> {
+  return analyzeDocumentForListe(pdfBuffer, "application/pdf", opts);
+}
+
+/** Excel (.xlsx) — Equsto şablonu dışı teklif listeleri */
+export async function analyzeExcelForListe(
+  xlsxBuffer: ArrayBuffer,
+  opts?: { notlar?: string },
+): Promise<ListePdfKalem[]> {
+  return analyzeDocumentForListe(xlsxBuffer, XLSX_MIME, opts);
 }

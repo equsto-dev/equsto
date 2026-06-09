@@ -20,8 +20,21 @@ export type ImportAnalizRow = {
   olcu?: string;
 };
 
-const ANTHROPIC_MODEL =
-  process.env.ANTHROPIC_MODEL || "claude-3-5-sonnet-20241022";
+const DEFAULT_ANTHROPIC_MODEL = "claude-sonnet-4-6";
+/** Emekli modeller — Vercel env eski kalsa bile yeni modele düş */
+const RETIRED_ANTHROPIC_MODELS = new Set([
+  "claude-3-5-sonnet-20241022",
+  "claude-3-5-sonnet-20240620",
+  "claude-3-7-sonnet-20250219",
+]);
+
+function resolveAnthropicModel(): string {
+  const raw = process.env.ANTHROPIC_MODEL?.trim();
+  if (!raw || RETIRED_ANTHROPIC_MODELS.has(raw)) return DEFAULT_ANTHROPIC_MODEL;
+  return raw;
+}
+
+const ANTHROPIC_MODEL = resolveAnthropicModel();
 const IMPORT_MAX_TOKENS = Math.min(
   64000,
   Math.max(
@@ -138,6 +151,16 @@ async function analizViaAnthropic(
 
   const text = await res.text();
   if (!res.ok) {
+    if (/credit balance is too low/i.test(text)) {
+      throw new Error(
+        "Anthropic hesabında kredi yok. console.anthropic.com → Plans & Billing → kredi yükleyin.",
+      );
+    }
+    if (/not_found_error/i.test(text) && /model:/i.test(text)) {
+      throw new Error(
+        `Anthropic modeli bulunamadı (${ANTHROPIC_MODEL}). .env.local içinde ANTHROPIC_MODEL=claude-sonnet-4-6 deneyin.`,
+      );
+    }
     throw new Error(`Anthropic HTTP ${res.status}: ${text.slice(0, 500)}`);
   }
 

@@ -155,7 +155,18 @@ function shouldRequireAdminBearer(pathname, method) {
 }
 
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY || '';
-const ANTHROPIC_MODEL = process.env.ANTHROPIC_MODEL || 'claude-3-5-sonnet-20241022';
+const DEFAULT_ANTHROPIC_MODEL = 'claude-sonnet-4-6';
+const RETIRED_ANTHROPIC_MODELS = new Set([
+  'claude-3-5-sonnet-20241022',
+  'claude-3-5-sonnet-20240620',
+  'claude-3-7-sonnet-20250219',
+]);
+function resolveAnthropicModel() {
+  const raw = String(process.env.ANTHROPIC_MODEL || '').trim();
+  if (!raw || RETIRED_ANTHROPIC_MODELS.has(raw)) return DEFAULT_ANTHROPIC_MODEL;
+  return raw;
+}
+const ANTHROPIC_MODEL = resolveAnthropicModel();
 const IMPORT_MAX_TOKENS = Math.min(
   64000,
   Math.max(4096, Number(process.env.ANTHROPIC_IMPORT_MAX_TOKENS || 16384) || 16384),
