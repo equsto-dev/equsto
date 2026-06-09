@@ -135,8 +135,7 @@ export async function calculateListeQuote(
       urunTipi: item.urunTipi,
       isim: item.isim,
       tip: item.tip,
-      adet:
-        item.scale.type === "fixed" ? item.scale.adet : item.scale.adet ?? 1,
+      adet: item.scale.type === "fixed" ? item.scale.adet : 1,
       elektrikGucuKwHint: item.elektrikGucuKwHint,
       gazGucuKwHint: item.gazGucuKwHint,
       notlar: item.notlar,
