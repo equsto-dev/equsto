@@ -1,7 +1,10 @@
 import ExcelJS from "exceljs";
 import { NextRequest, NextResponse } from "next/server";
 import { parseEkipmanWorksheet } from "@/lib/pfos/kategoriler/parse-ekipman-xlsx";
-import { analyzePdfForListe } from "@/lib/pfos/liste-pdf-analiz";
+import {
+  analyzeExcelForListe,
+  analyzePdfForListe,
+} from "@/lib/pfos/liste-pdf-analiz";
 import { calculateListeQuote } from "@/lib/pfos/liste-fiyat";
 import { TEKLIF_DEFAULT_FIYAT_STRATEJISI } from "@/lib/pfos/teklif/teklif-policy";
 import type { FiyatStratejisi } from "@/lib/pfos/schemas/pfos.schema";
@@ -99,18 +102,21 @@ export async function POST(req: NextRequest) {
     }
 
     const satirlar = parseEkipmanWorksheet(ws);
-    if (!satirlar.length) {
-      return NextResponse.json(
-        {
-          error:
-            "Listeden kalem okunamadı — Equsto ekipman listesi formatında .xlsx yükleyin (P.No, tanım, ölçü, adet sütunları) veya PDF kullanın.",
-        },
-        { status: 400 },
-      );
+    if (satirlar.length) {
+      const response = await calculateListeQuote({
+        satirlar,
+        kaynakDosya: name,
+        kaynakTip: "excel",
+        projeAdi: projeAdi || baseName,
+        sehir,
+        fiyatStratejisi,
+      });
+      return NextResponse.json(response, { status: 200 });
     }
 
+    const importKalemler = await analyzeExcelForListe(ab, { notlar });
     const response = await calculateListeQuote({
-      satirlar,
+      importKalemler,
       kaynakDosya: name,
       kaynakTip: "excel",
       projeAdi: projeAdi || baseName,
