@@ -1569,8 +1569,8 @@ body.bd-page.besos.eq-shop .eq-mfoot-inner {
 }
 body.bd-page.besos.eq-shop .eq-mfoot-cols {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 20px 16px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px 20px;
   margin-bottom: 8px;
 }
 body.bd-page.besos.eq-shop .eq-mfoot-col h3 {

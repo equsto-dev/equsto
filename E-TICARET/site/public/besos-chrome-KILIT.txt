@@ -16,7 +16,7 @@ kaybolmaması içindir. Değiştirmeden önce kullanıcıdan AÇIK ONAY alın.
     • Sol üst: EQUSTO wordmark (beyaz PNG, /images/equsto-logo-white.png)
     • Teslimat + arama + departman şeridi (topnav-bar-design-KILIT.txt)
   Alt bant:
-    • footer.footer.eq-mfoot — 5 sütun + marka şeridi + yasal (footer-brand-KILIT)
+    • footer.footer.eq-mfoot — 4 sütun + marka şeridi + yasal (footer-brand-KILIT)
     • Besos: siyah zemin (#000), "Powered By Vitrum" görünür
 
 YASAK (onay olmadan):
