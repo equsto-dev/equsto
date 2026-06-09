@@ -98,6 +98,18 @@ export function kategoriFromReferansSatir(s: PfosEkipmanSatir): PfosKategoriKodu
 }
 
 function urunTipiFromSatir(s: PfosEkipmanSatir): string {
+  const bolum = String(s.bolumAd ?? "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/ı/g, "i");
+  if (/panel tip derin dondurucu|panel tipi derin dondurucu|panel tip dondurucu oda/.test(bolum)) {
+    return "panel-derin-dondurucu-oda";
+  }
+  if (/panel tip soguk oda|panel tipi soguk oda/.test(bolum)) {
+    return "panel-soguk-oda";
+  }
+
   const n = String(s.ad ?? "")
     .toLowerCase()
     .normalize("NFD")

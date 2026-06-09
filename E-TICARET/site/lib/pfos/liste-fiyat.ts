@@ -8,8 +8,6 @@ import { ekipmanToReferansKalemler } from "@/lib/pfos/referans/pfos-referans-loa
 import type { ReferansKalem } from "@/lib/pfos/referans/referans-types";
 import { referansKalemlerToTemplateItems } from "@/lib/pfos/referans/build-template-items";
 import type { ListePdfKalem } from "@/lib/pfos/liste-pdf-analiz";
-import type { PfosEkipmanSatir } from "@/lib/pfos/kategoriler/types";
-import { ekipmanToReferansKalemler } from "@/lib/pfos/referans/pfos-referans-loader";
 import type { PfosKategoriKodu } from "@/lib/pfos/core/engine-types";
 import { repairPfosDisplayText } from "@/lib/utf8/repair-turkish-fffd";
 import { matchProductForReferansKalem } from "@/lib/pfos/referans/match-referans-kalem";
