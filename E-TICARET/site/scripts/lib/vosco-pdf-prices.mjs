@@ -7,6 +7,7 @@ import { fileURLToPath } from "node:url";
 import {
   VOSCO_CODE_ALIASES,
   VOSCO_DIRECT_LISTE_USD,
+  VOSCO_MANUAL_KDV_DAHIL_TL,
 } from "./vosco-code-aliases.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "../..");
@@ -150,16 +151,35 @@ export function resolveListeEur(match, usdTry, eurTry) {
   return 0;
 }
 
+function fmtTry(n) {
+  const v = Math.round(Number(n));
+  const parts = v.toFixed(2).split(".");
+  const int = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  return `${int},${parts[1]}`;
+}
+
+export function pricingFromManualKdvDahilTry(kdvDahilTry, kdv = 20) {
+  const kdvDahil = Math.round(Number(kdvDahilTry));
+  const netTry = kdvDahil / (1 + kdv / 100);
+  return {
+    fiyat_tl: kdvDahil,
+    fiyat_tl_net: Math.round(netTry),
+    price: `₺${fmtTry(netTry)} + KDV\nKDV Dahil ₺${fmtTry(kdvDahil)}`,
+    fiyat_bekleniyor: false,
+    fiyat_kaynak: "vosco-manual-tl",
+  };
+}
+
+export function findManualVoscoPrice(p) {
+  const k = normVoscoKey(p?.stockCode || p?.model || "");
+  const kdvDahil = VOSCO_MANUAL_KDV_DAHIL_TL[k];
+  return kdvDahil > 0 ? pricingFromManualKdvDahilTry(kdvDahil) : null;
+}
+
 export function pricingFromVoscoListeEur(listeEur, eurTry, kdv = 20, satisOran = 0.55, meta = {}) {
   const satisEur = Math.round(listeEur * satisOran * 100) / 100;
   const netTry = satisEur * eurTry;
   const kdvDahil = netTry * (1 + kdv / 100);
-  const fmtTry = (n) => {
-    const v = Math.round(Number(n));
-    const parts = v.toFixed(2).split(".");
-    const int = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-    return `${int},${parts[1]}`;
-  };
   return {
     liste_fiyati_usd_pdf: meta.listeUsd || undefined,
     liste_fiyati_eur_pdf: meta.listeEur || undefined,

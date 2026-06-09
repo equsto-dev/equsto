@@ -105,3 +105,8 @@ export const VOSCO_DIRECT_LISTE_USD = {
   VSCTZ01: 20,
   VSCTZ02: 20,
 };
+
+/** PDF'te yok; doğrudan KDV dahil TL satış fiyatı */
+export const VOSCO_MANUAL_KDV_DAHIL_TL = {
+  VFTR50L: 21000,
+};
