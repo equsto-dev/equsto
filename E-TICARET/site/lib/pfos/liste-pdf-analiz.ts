@@ -2,15 +2,9 @@
  * PDF teklif listesi → Claude analiz (sunucu tarafı, public liste-fiyat için).
  */
 
-import { adminLoginToken } from "@/lib/admin-auth";
+import { runImportDocumentAnaliz } from "@/lib/claude/import-analiz.server";
 import { loadTipSozluguEntries } from "@/lib/tip-sozlugu/store";
 import type { TipSozlukEntry } from "@/lib/tip-sozlugu/types";
-
-const PROXY_BASE = (
-  process.env.CLAUDE_API_PROXY_URL ||
-  process.env.EQUSTO_CLAUDE_API_BASE ||
-  "http://127.0.0.1:3001/api"
-).replace(/\/$/, "");
 
 export type ListePdfKalem = {
   ham_isim: string;
@@ -53,35 +47,7 @@ SADECE JSON dizi döndür:
 ]`;
 }
 
-function parseProxyItems(raw: unknown): ListePdfKalem[] {
-  if (!Array.isArray(raw)) return [];
-  const out: ListePdfKalem[] = [];
-  for (const x of raw) {
-    const row = x as Record<string, unknown>;
-    const ham_isim = String(row.ham_isim ?? row.name ?? "").trim();
-    const tip_kodu = String(row.tip_kodu ?? row.tip ?? "").trim();
-    if (!ham_isim || !tip_kodu) continue;
-    const adetRaw = row.adet;
-    const adet =
-      typeof adetRaw === "number" && adetRaw > 0
-        ? Math.round(adetRaw)
-        : parseInt(String(adetRaw ?? "1"), 10) || 1;
-    out.push({
-      ham_isim,
-      tip_kodu,
-      kategori: String(row.kategori ?? row.cat ?? "diger").trim() || "diger",
-      adet,
-      poz: row.poz != null ? String(row.poz).trim() : undefined,
-      olcu:
-        row.olcu != null && String(row.olcu).trim()
-          ? String(row.olcu).trim()
-          : undefined,
-    });
-  }
-  return out;
-}
-
-/** PDF buffer → ekipman kalemleri (Claude proxy) */
+/** PDF buffer → ekipman kalemleri */
 export async function analyzePdfForListe(
   pdfBuffer: ArrayBuffer,
   opts?: { notlar?: string },
@@ -94,59 +60,10 @@ export async function analyzePdfForListe(
     ? `Dosyayı analiz et.\n\nListe notları:\n---\n${trimmedNotes}\n---`
     : "Dosyayı analiz et ve tüm ekipman kalemlerini çıkar:";
 
-  const token = adminLoginToken();
-  const body = JSON.stringify({
+  return runImportDocumentAnaliz({
     dosya_base64: Buffer.from(pdfBuffer).toString("base64"),
     dosya_tip: "application/pdf",
     system_prompt,
     user_prompt,
   });
-
-  let res: Response;
-  try {
-    res = await fetch(`${PROXY_BASE}/import/analiz`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        ...(token ? { Authorization: `Bearer ${token}` } : {}),
-      },
-      body,
-      signal: AbortSignal.timeout(20 * 60 * 1000),
-    });
-  } catch (e) {
-    const msg = e instanceof Error ? e.message : String(e);
-    throw new Error(
-      `PDF analiz servisi ulaşılamadı (${PROXY_BASE}): ${msg}`,
-    );
-  }
-
-  const text = await res.text();
-  let parsed: {
-    success?: boolean;
-    data?: unknown;
-    error?: string;
-    raw?: string;
-  };
-  try {
-    parsed = JSON.parse(text) as typeof parsed;
-  } catch {
-    throw new Error(`PDF analiz yanıtı okunamadı: ${text.slice(0, 300)}`);
-  }
-
-  if (!res.ok || parsed.success === false) {
-    const hint =
-      parsed.error ||
-      (parsed.raw ? `Claude yanıtı: ${parsed.raw.slice(0, 200)}` : null) ||
-      `HTTP ${res.status}`;
-    throw new Error(hint);
-  }
-
-  const items = parseProxyItems(parsed.data);
-  if (!items.length) {
-    throw new Error(
-      "PDF'den ekipman kalemi çıkarılamadı — liste okunabilir mi kontrol edin.",
-    );
-  }
-
-  return items;
 }

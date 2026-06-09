@@ -1,51 +1,45 @@
 import { NextRequest } from "next/server";
 import { assertAdminBearer } from "@/lib/auth";
-import { adminErr } from "@/lib/admin-response";
+import { adminErr, adminOk } from "@/lib/admin-response";
+import { runImportDocumentAnaliz } from "@/lib/claude/import-analiz.server";
 
 export const runtime = "nodejs";
 export const maxDuration = 300;
 
-const PROXY_BASE = (
-  process.env.CLAUDE_API_PROXY_URL ||
-  process.env.EQUSTO_CLAUDE_API_BASE ||
-  "http://127.0.0.1:3001/api"
-).replace(/\/$/, "");
-
-/** POST /api/import/analiz — claude-api-proxy vekili (PDF/Excel ekipman analizi) */
+/** POST /api/import/analiz — PDF/Excel ekipman analizi (Anthropic veya yerel proxy) */
 export async function POST(req: NextRequest) {
   const denied = assertAdminBearer(req);
   if (denied) return denied;
 
-  let body: string;
+  let body: {
+    dosya_base64?: string;
+    dosya_tip?: string;
+    system_prompt?: string;
+    user_prompt?: string;
+  };
   try {
-    body = await req.text();
+    body = (await req.json()) as typeof body;
   } catch {
-    return adminErr("Gövde okunamadı", 400);
+    return adminErr("Geçersiz JSON", 400);
   }
 
-  const auth = req.headers.get("authorization") || "";
+  if (!body.dosya_base64) {
+    return adminErr("dosya_base64 gerekli", 400);
+  }
 
   try {
-    const upstream = await fetch(`${PROXY_BASE}/import/analiz`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        ...(auth ? { Authorization: auth } : {}),
-      },
-      body,
-      signal: AbortSignal.timeout(20 * 60 * 1000),
+    const data = await runImportDocumentAnaliz({
+      dosya_base64: body.dosya_base64,
+      dosya_tip: body.dosya_tip || "application/pdf",
+      system_prompt: body.system_prompt || "",
+      user_prompt: body.user_prompt || "Dosyayı analiz et:",
     });
-
-    const text = await upstream.text();
-    return new Response(text, {
-      status: upstream.status,
-      headers: { "Content-Type": "application/json; charset=utf-8" },
-    });
+    return adminOk({ data });
   } catch (e) {
     const msg = e instanceof Error ? e.message : String(e);
-    return adminErr(
-      `Import proxy ulaşılamadı (${PROXY_BASE}): ${msg}. Yerelde npm run api çalıştırın.`,
-      502,
-    );
+    const status = /Anthropic|proxy ulaşılamad|ANTHROPIC_API_KEY/i.test(msg)
+      ? 502
+      : 500;
+    return adminErr(msg, status);
   }
 }
