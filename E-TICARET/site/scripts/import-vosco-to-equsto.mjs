@@ -117,20 +117,54 @@ function formatSpecs(p, px, pdfMatch) {
   return lines.filter((l, i, arr) => !(l === "" && arr[i + 1] === "")).join("\n");
 }
 
-function copyImage(p) {
-  if (!p.localImage) return [];
-  const src = path.join(ROOT, "scripts/data/vosco", p.localImage);
-  if (!fs.existsSync(src)) return [];
-  const fname = path.basename(src);
-  const dest = path.join(OUT_IMG, fname);
-  if (!dryRun) {
-    fs.mkdirSync(OUT_IMG, { recursive: true });
-    fs.copyFileSync(src, dest);
+const UA = "EqustoImport/1.0 (+https://equsto.com; vosco-catalog)";
+
+async function downloadImage(url, dest) {
+  try {
+    const res = await fetch(url, { headers: { "User-Agent": UA } });
+    if (!res.ok) return false;
+    const buf = Buffer.from(await res.arrayBuffer());
+    await fsp.mkdir(path.dirname(dest), { recursive: true });
+    await fsp.writeFile(dest, buf);
+    return true;
+  } catch {
+    return false;
   }
-  return [`images/catalog/vosco/${fname}`];
 }
 
-function toRow(p, eurTry, usdTry, pdfIndex, pdfProducts) {
+async function copyImage(p) {
+  const relPaths = [];
+  if (p.localImage) {
+    const src = path.join(ROOT, "scripts/data/vosco", p.localImage);
+    if (fs.existsSync(src)) {
+      const fname = path.basename(src);
+      const dest = path.join(OUT_IMG, fname);
+      if (!dryRun) {
+        fs.mkdirSync(OUT_IMG, { recursive: true });
+        fs.copyFileSync(src, dest);
+      }
+      relPaths.push(`images/catalog/vosco/${fname}`);
+    }
+  }
+  if (relPaths.length) return relPaths;
+
+  const imgUrl = p.images?.[0];
+  if (!imgUrl || !/^https?:\/\//i.test(imgUrl)) return [];
+
+  let ext = path.extname(new URL(imgUrl).pathname) || ".jpg";
+  if (!/^\.(jpe?g|png|webp|gif)$/i.test(ext)) ext = ".jpg";
+  const safe = `vosco-${String(p.stockCode || p.productId || "p")
+    .toLowerCase()
+    .replace(/[^\w.-]+/g, "-")}${ext}`;
+  const dest = path.join(OUT_IMG, safe);
+  if (!dryRun) {
+    const ok = await downloadImage(imgUrl, dest);
+    if (!ok) return [];
+  }
+  return [`images/catalog/vosco/${safe}`];
+}
+
+async function toRow(p, eurTry, usdTry, pdfIndex, pdfProducts) {
   const mapped = mapDeptCategory(p);
   const manualPx = findManualVoscoPrice(p);
   const pdfMatch = manualPx ? null : findPdfListPrice(p, pdfIndex, pdfProducts);
@@ -146,7 +180,7 @@ function toRow(p, eurTry, usdTry, pdfIndex, pdfProducts) {
           kurUsdEur: usdToEurRate(usdTry, eurTry),
         })
       : sitePx);
-  const images = copyImage(p);
+  const images = await copyImage(p);
   const teknikList = Object.entries(p.teknik_ozellikler || {}).map(([k, v]) => `${k}: ${v}`);
   return {
     id: `${BRAND_ID}__${voscoSlug(p)}`,
@@ -218,7 +252,10 @@ async function main() {
   console.log(`[vosco-import] PDF: ${pdfCatalog.products.length} ürün, ${pdfCatalog.index.size} kod`);
   console.log(`[vosco-import] kur: 1 EUR = ${eurTry} TRY, 1 USD = ${usdTry} TRY, 1 USD = ${usdEur.toFixed(4)} EUR`);
 
-  const rows = products.map((p) => toRow(p, eurTry, usdTry, pdfCatalog.index, pdfCatalog.products));
+  const rows = [];
+  for (const p of products) {
+    rows.push(await toRow(p, eurTry, usdTry, pdfCatalog.index, pdfCatalog.products));
+  }
   const unmatched = products.filter((p) => {
     if (findManualVoscoPrice(p) || findVoscoSitePrice(p)) return false;
     return !findPdfListPrice(p, pdfCatalog.index, pdfCatalog.products);
