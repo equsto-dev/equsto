@@ -1,0 +1,102 @@
+/**
+ * Web stok kodu → PDF katalog kodu (Vosco_Katalog_2026)
+ * Anahtarlar normVoscoKey formatında.
+ */
+export const VOSCO_CODE_ALIASES = {
+  // Teşhir / soğutucu — web FT-* → PDF VFT-*
+  FT235LB: "VFT235L",
+  FT235LS: "VFT235L",
+  FT280LB: "VFT280L",
+  FT280LS: "VFT280L",
+  FT100R1: "VFT100R",
+  FT78LB: "VFT78L",
+  FT78LS: "VFT78L",
+  VFTW160LYP: "VFTW160L",
+  VFTW120LYP: "VFTW120L",
+  // Web VSC-FRT* → PDF VSL-FRT*
+  VSCFRT1C08BB: "VSLFRT1C08B",
+  VSCFRT2C08BB: "VSLFRT2C08B",
+  VSLFRT1C12BB: "VSLFRT1C12B",
+
+  // Bar altı şişe — gri varyant → siyah PDF kodu (aynı liste)
+  VGBC150G: "VBBC150S",
+  VGBC250G: "VBBC250S",
+  VGBC350G: "VBBC350S",
+
+  // Buzlaş / slush — web VXY-SJ* → PDF VXC-*
+  VXYSJ15X1S: "VXC112",
+  VXYSJ15X1SR: "VXC112",
+  VXYSJ15X2S: "VXC224",
+  VXYSJ15X2SR: "VXC224",
+  VXYSJ15X3S: "VXC336",
+  VXYSJ15X3SR: "VXC336",
+
+  // Kahve değirmeni
+  VCG835B: "VAF68",
+  VKDP50B: "VKDP25",
+  VKDP50S: "VKDP25",
+  VA80SR: "VAF68",
+  VA80S: "VAF68",
+  VA80M: "VAF68",
+  VA80K: "VAF68",
+  VA80B: "VAF68",
+  VAF68B: "VAF68",
+  VAF68K: "VAF68",
+  VAF68S: "VAF68",
+  VAF74B: "VAF74",
+  VAF74K: "VAF74",
+  VAF74S: "VAF74",
+  VXB74S: "VAF74",
+  VXB74K: "VAF74",
+  VXB74B: "VAF74",
+
+  // Bar blender
+  VHS200EG: "VHS602C",
+  VHS200EK: "VHS602C",
+  VHS200ES: "VHS602C",
+  VHS212C: "VHS211E",
+  VHS360CG: "VHS360C",
+  VHS360CS: "VHS360C",
+  VHS608CG: "VHS608",
+  VHS608CDG: "VHS608",
+
+  // Dondurma
+  VST16EB: "VBDB7116",
+  VST16EM: "VBDB7116",
+  VST16ES: "VBDB7116",
+  VICM15A: "VICM15A",
+  VSC28F: "VDF7239",
+  VSC28T: "VD520SPRO",
+  VSC32F: "VDF7239",
+  VSC32T: "VD520SPRO",
+  VXYPT965S: "VD635AP",
+
+  // İndüksiyon / fritöz / pizza vb.
+  VALPA83: "VALPA83",
+  VALPC05D: "VALPDIC126",
+  VALPC09D: "VALPDIC126",
+  VALPDC50: "VALPDC50",
+  VALPDIC126: "VALPDIC126",
+  VSLFRT2C12B: "VSLFRT2C12B",
+
+  // Döner ocak — web VKM-NG* → PDF NG*
+  VKMNG3R: "NG3R",
+  VKMNG4R: "NG4R",
+  VKMNG5R: "NG5R",
+
+  // Kokteyl setleri (PDF VSC-3, VSC-6 …)
+  VSC300B: "VSC3",
+  VSC600B: "VSC6",
+  VSC700B: "VSC7",
+  VSC900B: "VSC6",
+};
+
+/** PDF'te kodu olmayan; doğrudan USD liste (katalog sayfası) */
+export const VOSCO_DIRECT_LISTE_USD = {
+  VST16EB: 750,
+  VST16EM: 750,
+  VST16ES: 750,
+  // Dondurma tozu — katalog: "Adet fiyatı $20"
+  VSCTZ01: 20,
+  VSCTZ02: 20,
+};

@@ -1,9 +1,13 @@
 /**
- * Vosco PDF katalog → stok kodu → USD liste (kaynak) → EUR vitrin fiyatı
+ * Vosco PDF katalog → stok kodu → EUR liste (PDF EUR veya USD→EUR)
  */
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import {
+  VOSCO_CODE_ALIASES,
+  VOSCO_DIRECT_LISTE_USD,
+} from "./vosco-code-aliases.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "../..");
 export const VOSCO_PDF_CATALOG = path.join(
@@ -20,17 +24,26 @@ export function normVoscoKey(s) {
     .replace(/[^A-Z0-9]/g, "");
 }
 
+function parsePriceSpecs(p) {
+  const usd = Number(p?.specs?.liste_usd);
+  const eur = Number(p?.specs?.liste_eur);
+  return {
+    listeUsd: usd > 0 ? usd : 0,
+    listeEur: eur > 0 ? eur : 0,
+  };
+}
+
 export function buildVoscoPdfPriceIndex(products) {
-  const map = new Map();
+  const byKey = new Map();
   for (const p of products || []) {
-    const price = Number(p.specs?.liste_usd);
-    if (!(price > 0)) continue;
+    const prices = parsePriceSpecs(p);
+    if (!(prices.listeUsd > 0) && !(prices.listeEur > 0)) continue;
     for (const code of [p.model, p.modelNorm]) {
       const k = normVoscoKey(code);
-      if (k && !map.has(k)) map.set(k, price);
+      if (k && !byKey.has(k)) byKey.set(k, prices);
     }
   }
-  return map;
+  return byKey;
 }
 
 export function loadVoscoPdfCatalog(catalogPath = VOSCO_PDF_CATALOG) {
@@ -47,43 +60,84 @@ export function loadVoscoPdfCatalog(catalogPath = VOSCO_PDF_CATALOG) {
   };
 }
 
+const COLOR_SUFFIXES = [
+  "HK", "HS", "HB", "CG", "CS", "CK", "LB", "LS", "LYP", "SR",
+  "EK", "ES", "EG", "EM", "EB", "CDG", "DG", "YP",
+];
+
 export function candidateKeys(p) {
   const keys = new Set();
   const add = (s) => {
     const k = normVoscoKey(s);
     if (k) keys.add(k);
   };
-  add(p.stockCode);
-  add(p.model);
-  add(String(p.stockCode || "").replace(/\//g, "-"));
+
+  const code = String(p.stockCode || p.model || "").trim().toUpperCase();
+  add(code);
+  add(code.replace(/\//g, "-"));
+
+  if (/^FT-/.test(code)) {
+    add("V" + code);
+    add("V" + code.replace(/LB$|LS$/i, "L"));
+  }
+  add(code.replace(/LYP$/i, "L").replace(/YP$/i, "L"));
+
+  let base = code;
+  for (const suf of COLOR_SUFFIXES) {
+    if (base.endsWith(suf) && base.length > suf.length + 3) {
+      add(base.slice(0, -suf.length));
+      base = base.slice(0, -suf.length);
+    }
+  }
+  if (/^[A-Z0-9-]{5,}[KSGBMRW]$/.test(code)) add(code.slice(0, -1));
+
+  for (const k of [...keys]) {
+    if (VOSCO_CODE_ALIASES[k]) add(VOSCO_CODE_ALIASES[k]);
+  }
+  if (VOSCO_DIRECT_LISTE_USD[normVoscoKey(code)]) add(normVoscoKey(code));
+
   return [...keys];
+}
+
+function pricesForKey(k, index, products) {
+  if (index.has(k)) return { ...index.get(k), matchKey: k };
+
+  for (const pp of products) {
+    const pk = normVoscoKey(pp.model);
+    if (pk !== k) continue;
+    const prices = parsePriceSpecs(pp);
+    if (prices.listeUsd > 0 || prices.listeEur > 0) {
+      return { ...prices, matchKey: pk };
+    }
+  }
+  return null;
 }
 
 export function findPdfListPrice(p, index, products = []) {
   const keys = candidateKeys(p);
+
   for (const k of keys) {
-    if (index.has(k)) return { listeUsd: index.get(k), matchKey: k };
+    const hit = pricesForKey(k, index, products);
+    if (hit) return { ...hit, fuzzy: false };
   }
-  for (const pp of products) {
-    const price = Number(pp.specs?.liste_usd);
-    if (!(price > 0)) continue;
-    const pk = normVoscoKey(pp.model);
-    for (const k of keys) {
-      if (pk && k && pk === k) return { listeUsd: price, matchKey: pk };
-    }
-  }
+
   for (const k of keys) {
     if (k.length < 4) continue;
-    for (const pp of products) {
-      const price = Number(pp.specs?.liste_usd);
-      if (!(price > 0)) continue;
-      const pk = normVoscoKey(pp.model);
-      if (pk.length < 4) continue;
-      if (pk.startsWith(k) || k.startsWith(pk)) {
-        return { listeUsd: price, matchKey: pk, fuzzy: true };
+    for (const [ik, prices] of index) {
+      if (ik.length < 4) continue;
+      if (ik.startsWith(k) || k.startsWith(ik)) {
+        return { ...prices, matchKey: ik, fuzzy: true };
       }
     }
   }
+
+  for (const k of keys) {
+    const direct = VOSCO_DIRECT_LISTE_USD[k];
+    if (direct > 0) {
+      return { listeUsd: direct, listeEur: 0, matchKey: k, direct: true };
+    }
+  }
+
   return null;
 }
 
@@ -99,9 +153,14 @@ export function usdToEur(listeUsd, usdTry, eurTry) {
   return Math.round(listeUsd * rate * 100) / 100;
 }
 
-export function pricingFromVoscoPdfListe(listeUsd, eurTry, usdTry, kdv = 20, satisOran = 0.55) {
-  const kurUsdEur = usdToEurRate(usdTry, eurTry);
-  const listeEur = usdToEur(listeUsd, usdTry, eurTry);
+export function resolveListeEur(match, usdTry, eurTry) {
+  if (!match) return 0;
+  if (match.listeEur > 0) return match.listeEur;
+  if (match.listeUsd > 0) return usdToEur(match.listeUsd, usdTry, eurTry);
+  return 0;
+}
+
+export function pricingFromVoscoListeEur(listeEur, eurTry, kdv = 20, satisOran = 0.55, meta = {}) {
   const satisEur = Math.round(listeEur * satisOran * 100) / 100;
   const netTry = satisEur * eurTry;
   const kdvDahil = netTry * (1 + kdv / 100);
@@ -112,17 +171,28 @@ export function pricingFromVoscoPdfListe(listeUsd, eurTry, usdTry, kdv = 20, sat
     return `${int},${parts[1]}`;
   };
   return {
-    liste_fiyati_usd_pdf: listeUsd,
+    liste_fiyati_usd_pdf: meta.listeUsd || undefined,
+    liste_fiyati_eur_pdf: meta.listeEur || undefined,
     liste_fiyati_eur: listeEur,
     satis_fiyati_eur: satisEur,
     satis_eur_indirimli: satisEur,
     satis_oran: satisOran,
     kur_eur_try: eurTry,
-    kur_usd_try: usdTry,
-    kur_usd_eur: Math.round(kurUsdEur * 10000) / 10000,
+    kur_usd_try: meta.usdTry,
+    kur_usd_eur: meta.kurUsdEur,
     fiyat_tl: Math.round(kdvDahil),
     fiyat_tl_net: Math.round(netTry),
     price: `₺${fmtTry(netTry)} + KDV\nKDV Dahil ₺${fmtTry(kdvDahil)}`,
     fiyat_bekleniyor: false,
   };
+}
+
+/** @deprecated use pricingFromVoscoListeEur via resolveListeEur */
+export function pricingFromVoscoPdfListe(listeUsd, eurTry, usdTry, kdv = 20, satisOran = 0.55) {
+  const listeEur = usdToEur(listeUsd, usdTry, eurTry);
+  return pricingFromVoscoListeEur(listeEur, eurTry, kdv, satisOran, {
+    listeUsd,
+    usdTry,
+    kurUsdEur: usdToEurRate(usdTry, eurTry),
+  });
 }

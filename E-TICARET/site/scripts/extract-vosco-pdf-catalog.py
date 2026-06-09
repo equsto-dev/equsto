@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Vosco_Katalog_2026.pdf → model kodu + USD liste fiyatı
+Vosco_Katalog_2026.pdf → model kodu + USD/EUR liste fiyatı
 
   python scripts/extract-vosco-pdf-catalog.py
 """
@@ -31,20 +31,21 @@ PDF = Path(
 )
 
 CODE_RE = re.compile(
-    r"^(?:V[A-Z]{1,3}[A-Z0-9\-/]{2,24}|VHZB-\d+[A-Z/]*|VSC-[A-Z0-9\-/]+|VFT-[A-Z0-9\-/]+|VCG-[A-Z0-9\-/]+|VBD-[A-Z0-9\-/]+)$",
+    r"^(?:V[A-Z0-9][A-Z0-9\-/]{2,28}|FT-\d+[A-Z0-9\-]*|NG[345]R)$",
     re.I,
 )
 PRICE_USD_RE = re.compile(r"\$\s*([\d,]+(?:\.\d+)?)\s*USD", re.I)
+PRICE_EUR_RE = re.compile(r"€\s*([\d,]+(?:\.\d+)?)\s*EUR", re.I)
 TITLE_RE = re.compile(r"^Vosco\s+(.+)$", re.I)
 DIM_RE = re.compile(
     r"(\d+(?:[.,]\d+)?)\s*[x×X*]\s*(\d+(?:[.,]\d+)?)\s*[x×X*]\s*(\d+(?:[.,]\d+)?)\s*cm",
     re.I,
 )
-GUC_RE = re.compile(r"(\d+)\s*W\s*/\s*(\d+)\s*V", re.I)
+GUC_RE = re.compile(r"(\d+)\s*W\s*/\s*(\d+)", re.I)
 KAP_RE = re.compile(r"(\d+(?:[.,]\d+)?)\s*kg(?:/24\s*saat)?", re.I)
 LT_RE = re.compile(r"(\d+(?:[.,]\d+)?)\s*L\b", re.I)
-SKIP = re.compile(
-    r"^(www\.|Biz Kimiz|VİZYON|MİSYON|\d{4}$|Endüstriyel|#2026|Güncel|QR|1\.BASKI)",
+SKIP_CAT = re.compile(
+    r"^(www\.|Biz Kimiz|VİZYON|MİSYON|\d{1,3}$|Endüstriyel|#2026|Güncel|QR|1\.BASKI|Vosco$)",
     re.I,
 )
 
@@ -53,77 +54,186 @@ def norm_code(code: str) -> str:
     return re.sub(r"[^A-Z0-9]", "", str(code or "").upper())
 
 
-def parse_page(text: str, page_no: int) -> list[dict]:
-    lines = [l.strip() for l in text.split("\n") if l.strip()]
-    category = ""
-    products: list[dict] = []
+def parse_prices_near(lines: list[str], idx: int) -> tuple[float, float]:
+    usd = eur = 0.0
+
+    def scan(start: int, stop: int, step: int) -> None:
+        nonlocal usd, eur
+        j = start
+        while j != stop:
+            bl = lines[j]
+            um = PRICE_USD_RE.search(bl)
+            em = PRICE_EUR_RE.search(bl)
+            if um and not usd:
+                usd = float(um.group(1).replace(",", ""))
+            if em and not eur:
+                eur = float(em.group(1).replace(",", ""))
+            if usd and eur:
+                return
+            j += step
+
+    # Önce kod satırından sonraki fiyat (VFT/VKM gibi bloklarda doğru eşleşme)
+    scan(idx + 1, min(len(lines), idx + 14), 1)
+    if not usd and not eur:
+        scan(idx - 1, max(-1, idx - 8), -1)
+    return usd, eur
+
+
+def expand_code_lines(
+    lines: list[str], line_pages: list[int]
+) -> tuple[list[str], list[int]]:
+    """VKM-G3R | NG3R gibi çoklu kod satırlarını ayır."""
+    out_lines: list[str] = []
+    out_pages: list[int] = []
+    for idx, line in enumerate(lines):
+        page = line_pages[idx]
+        if "|" not in line:
+            out_lines.append(line)
+            out_pages.append(page)
+            continue
+        parts = [p.strip() for p in line.split("|") if p.strip()]
+        codes = [p.upper().replace(" ", "") for p in parts if CODE_RE.match(p.strip())]
+        if len(codes) >= 2:
+            for c in codes:
+                out_lines.append(c)
+                out_pages.append(page)
+        else:
+            out_lines.append(line)
+            out_pages.append(page)
+    return out_lines, out_pages
+
+
+def pair_trailing_prices(lines: list[str]) -> None:
+    """Ardışık fiyat satırları + ardışık kod satırları → eşleştir."""
     i = 0
     while i < len(lines):
-        line = lines[i]
-        if line.isupper() and len(line) > 8 and not CODE_RE.match(line) and not PRICE_USD_RE.search(line):
-            if not SKIP.search(line) and "VOSCO" not in line:
+        prices: list[tuple[str, float]] = []
+        j = i
+        while j < len(lines) and j < i + 6:
+            um = PRICE_USD_RE.search(lines[j])
+            em = PRICE_EUR_RE.search(lines[j])
+            if um:
+                prices.append(("usd", float(um.group(1).replace(",", ""))))
+            elif em:
+                prices.append(("eur", float(em.group(1).replace(",", ""))))
+            elif prices:
+                break
+            j += 1
+        if not prices:
+            i += 1
+            continue
+        codes = []
+        k = j
+        while k < len(lines) and k < j + 8:
+            if CODE_RE.match(lines[k]):
+                codes.append(lines[k].upper().replace(" ", ""))
+                k += 1
+            elif codes:
+                break
+            else:
+                k += 1
+        if codes and len(prices) >= 1:
+            for ci, code in enumerate(codes):
+                pi = min(ci, len(prices) - 1)
+                kind, val = prices[pi]
+                # stored via global merge in extract_all
+                _pending_pairs.append((code, kind, val))
+        i = max(i + 1, k)
+
+
+_pending_pairs: list[tuple[str, str, float]] = []
+
+
+def extract_all(doc: fitz.Document) -> dict[str, dict]:
+    global _pending_pairs
+    _pending_pairs = []
+    lines: list[str] = []
+    line_pages: list[int] = []
+    for pi in range(doc.page_count):
+        for l in doc[pi].get_text().split("\n"):
+            l = l.strip()
+            if l:
+                lines.append(l)
+                line_pages.append(pi + 1)
+
+    lines, line_pages = expand_code_lines(lines, line_pages)
+    pair_trailing_prices(lines)
+
+    products: dict[str, dict] = {}
+    category = ""
+
+    for i, line in enumerate(lines):
+        if line.isupper() and len(line) > 8 and not CODE_RE.match(line):
+            if not SKIP_CAT.search(line) and not PRICE_USD_RE.search(line) and not PRICE_EUR_RE.search(line):
                 category = line.title() if line.isupper() else line
-        if CODE_RE.match(line):
-            code = line.upper().replace(" ", "")
-            block = lines[i : min(i + 14, len(lines))]
-            price_usd = 0.0
-            title = ""
-            specs: list[str] = []
-            dims = None
-            power = None
-            capacity_kg = None
-            capacity_l = None
-            for bl in block:
-                pm = PRICE_USD_RE.search(bl)
-                if pm and not price_usd:
-                    price_usd = float(pm.group(1).replace(",", ""))
-                tm = TITLE_RE.match(bl)
-                if tm and not title:
-                    title = f"Vosco {tm.group(1).strip()}"
-                if bl not in (code, category) and not CODE_RE.match(bl) and not PRICE_USD_RE.search(bl):
-                    if not tm and len(bl) > 4:
-                        specs.append(bl)
-                dm = DIM_RE.search(bl)
-                if dm and not dims:
-                    dims = {
-                        "raw": dm.group(0),
-                        "genislik_cm": float(dm.group(1).replace(",", ".")),
-                        "derinlik_cm": float(dm.group(2).replace(",", ".")),
-                        "yukseklik_cm": float(dm.group(3).replace(",", ".")),
-                    }
-                gm = GUC_RE.search(bl)
-                if gm and not power:
-                    power = f"{gm.group(1)} W / {gm.group(2)} V"
-                km = KAP_RE.search(bl)
-                if km and not capacity_kg:
-                    capacity_kg = float(km.group(1).replace(",", "."))
-                lm = LT_RE.search(bl)
-                if lm and not capacity_l:
-                    capacity_l = float(lm.group(1).replace(",", "."))
-            if not title:
-                for j in range(max(0, i - 6), i):
-                    tm = TITLE_RE.match(lines[j])
-                    if tm:
-                        title = f"Vosco {tm.group(1).strip()}"
-                        break
-            products.append(
-                {
-                    "model": code,
-                    "modelNorm": norm_code(code),
-                    "title": title or code,
-                    "category": category,
-                    "page": page_no,
-                    "specs": {
-                        "liste_usd": price_usd if price_usd > 0 else None,
-                        "guc": power,
-                        "kapasite_kg": capacity_kg,
-                        "kapasite_l": capacity_l,
-                        "olculer": dims,
-                    },
-                    "description": "\n".join(specs[:8]),
-                }
-            )
-        i += 1
+
+        if not CODE_RE.match(line):
+            continue
+
+        code = line.upper().replace(" ", "")
+        nk = norm_code(code)
+        usd, eur = parse_prices_near(lines, i)
+
+        title = ""
+        for j in range(max(0, i - 8), min(len(lines), i + 6)):
+            tm = TITLE_RE.match(lines[j])
+            if tm:
+                title = f"Vosco {tm.group(1).strip()}"
+                break
+
+        block = " ".join(lines[max(0, i - 2) : min(len(lines), i + 10)])
+        dims = None
+        dm = DIM_RE.search(block)
+        if dm:
+            dims = {
+                "raw": dm.group(0),
+                "genislik_cm": float(dm.group(1).replace(",", ".")),
+                "derinlik_cm": float(dm.group(2).replace(",", ".")),
+                "yukseklik_cm": float(dm.group(3).replace(",", ".")),
+            }
+        gm = GUC_RE.search(block)
+        km = KAP_RE.search(block)
+        lm = LT_RE.search(block)
+
+        prev = products.get(nk)
+        entry = {
+            "model": code,
+            "modelNorm": nk,
+            "title": title or (prev or {}).get("title") or code,
+            "category": category or (prev or {}).get("category") or "",
+            "page": line_pages[i],
+            "specs": {
+                "liste_usd": usd if usd > 0 else None,
+                "liste_eur": eur if eur > 0 else None,
+                "guc": gm.group(0) if gm else (prev or {}).get("specs", {}).get("guc"),
+                "kapasite_kg": float(km.group(1).replace(",", ".")) if km else None,
+                "kapasite_l": float(lm.group(1).replace(",", ".")) if lm else None,
+                "olculer": dims or (prev or {}).get("specs", {}).get("olculer"),
+            },
+        }
+        if prev:
+            if not entry["specs"]["liste_usd"]:
+                entry["specs"]["liste_usd"] = prev["specs"].get("liste_usd")
+            if not entry["specs"]["liste_eur"]:
+                entry["specs"]["liste_eur"] = prev["specs"].get("liste_eur")
+        products[nk] = entry
+
+    for code, kind, val in _pending_pairs:
+        nk = norm_code(code)
+        p = products.get(nk) or {
+            "model": code,
+            "modelNorm": nk,
+            "title": code,
+            "category": "",
+            "page": 0,
+            "specs": {},
+        }
+        if kind == "usd" and not p["specs"].get("liste_usd"):
+            p["specs"]["liste_usd"] = val
+        if kind == "eur" and not p["specs"].get("liste_eur"):
+            p["specs"]["liste_eur"] = val
+        products[nk] = p
+
     return products
 
 
@@ -133,17 +243,9 @@ def main() -> None:
         sys.exit(1)
 
     doc = fitz.open(str(PDF))
-    all_products: dict[str, dict] = {}
-    for pi in range(doc.page_count):
-        page_products = parse_page(doc[pi].get_text(), pi + 1)
-        for p in page_products:
-            k = p["modelNorm"]
-            prev = all_products.get(k)
-            if not prev or (p["specs"].get("liste_usd") and not prev["specs"].get("liste_usd")):
-                all_products[k] = p
-
+    all_products = extract_all(doc)
     products = sorted(all_products.values(), key=lambda x: x["model"])
-    priced = [p for p in products if p["specs"].get("liste_usd")]
+    priced = [p for p in products if p["specs"].get("liste_usd") or p["specs"].get("liste_eur")]
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     payload = {
@@ -157,20 +259,21 @@ def main() -> None:
     }
     OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
+    eur_n = sum(1 for p in priced if p["specs"].get("liste_eur"))
+    usd_n = sum(1 for p in priced if p["specs"].get("liste_usd"))
     lines = [
         "# Vosco PDF katalog raporu",
         "",
         f"Kaynak: `{PDF}`",
-        f"Sayfa: {doc.page_count} | Ürün: **{len(products)}** | Fiyatlı: **{len(priced)}**",
+        f"Ürün: **{len(products)}** | Fiyatlı: **{len(priced)}** (EUR: {eur_n}, USD: {usd_n})",
         "",
-        "## Örnek fiyatlı ürünler",
-        "",
-        "| Kod | USD liste | Kategori |",
-        "|-----|-----------|----------|",
+        "| Kod | EUR | USD |",
+        "|-----|-----|-----|",
     ]
-    for p in priced[:20]:
+    for p in priced[:25]:
+        s = p["specs"]
         lines.append(
-            f"| {p['model']} | ${p['specs']['liste_usd']} | {p.get('category') or '-'} |"
+            f"| {p['model']} | {s.get('liste_eur') or '—'} | {s.get('liste_usd') or '—'} |"
         )
     RAPOR.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"Yazıldı: {OUT} ({len(products)} ürün, {len(priced)} fiyatlı)")

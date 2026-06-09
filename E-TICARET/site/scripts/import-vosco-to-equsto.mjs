@@ -15,7 +15,9 @@ import { fetchTcmbEurUsdRates } from "./fetch-tcmb-kur.mjs";
 import {
   findPdfListPrice,
   loadVoscoPdfCatalog,
-  pricingFromVoscoPdfListe,
+  pricingFromVoscoListeEur,
+  resolveListeEur,
+  usdToEurRate,
 } from "./lib/vosco-pdf-prices.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -90,8 +92,11 @@ function formatSpecs(p, px, pdfMatch) {
   if (px) {
     lines.push(
       "",
-      `PDF kaynak (USD): $${px.liste_fiyati_usd_pdf}`,
-      `Liste fiyatı (EUR): ${px.liste_fiyati_eur} EUR (USD→EUR kur: ${px.kur_usd_eur})`,
+      px.liste_fiyati_eur_pdf
+        ? `Liste fiyatı (EUR, Vosco PDF 2026): ${px.liste_fiyati_eur_pdf} EUR`
+        : px.liste_fiyati_usd_pdf
+          ? `PDF kaynak (USD): $${px.liste_fiyati_usd_pdf} → ${px.liste_fiyati_eur} EUR`
+          : `Liste fiyatı (EUR): ${px.liste_fiyati_eur} EUR`,
       `Equsto satış: liste × ${Math.round(SATIS_ORAN * 100)}% = ${px.satis_fiyati_eur} EUR`,
       `Kur: 1 EUR = ${px.kur_eur_try} TRY (KDV %${KDV})`,
     );
@@ -117,8 +122,16 @@ function copyImage(p) {
 function toRow(p, eurTry, usdTry, pdfIndex, pdfProducts) {
   const mapped = mapDeptCategory(p);
   const pdfMatch = findPdfListPrice(p, pdfIndex, pdfProducts);
-  const listeUsd = pdfMatch?.listeUsd || 0;
-  const px = listeUsd > 0 ? pricingFromVoscoPdfListe(listeUsd, eurTry, usdTry, KDV, SATIS_ORAN) : null;
+  const listeEur = resolveListeEur(pdfMatch, usdTry, eurTry);
+  const px =
+    listeEur > 0
+      ? pricingFromVoscoListeEur(listeEur, eurTry, KDV, SATIS_ORAN, {
+          listeUsd: pdfMatch?.listeUsd,
+          listeEur: pdfMatch?.listeEur,
+          usdTry,
+          kurUsdEur: usdToEurRate(usdTry, eurTry),
+        })
+      : null;
   const images = copyImage(p);
   const teknikList = Object.entries(p.teknik_ozellikler || {}).map(([k, v]) => `${k}: ${v}`);
   return {

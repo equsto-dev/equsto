@@ -1,20 +1,81 @@
 {
   "liste": "Vosco Katalog 2026",
   "source": "c:\\D Disk\\FİYAT LİSTELERİ\\Vosco_Katalog_2026.pdf",
-  "extractedAt": "2026-06-08T23:44:16.474977+00:00",
+  "extractedAt": "2026-06-09T00:17:42.415657+00:00",
   "pageCount": 96,
-  "productCount": 151,
-  "pricedCount": 101,
+  "productCount": 157,
+  "pricedCount": 154,
   "products": [
+    {
+      "model": "NG3R",
+      "modelNorm": "NG3R",
+      "title": "NG3R",
+      "category": "Döner Maki̇nesi̇",
+      "page": 45,
+      "specs": {
+        "liste_usd": 1150.0,
+        "liste_eur": null,
+        "guc": "5 W / 220",
+        "kapasite_kg": null,
+        "kapasite_l": null,
+        "olculer": {
+          "raw": "54 x 62.5 x 85 cm",
+          "genislik_cm": 54.0,
+          "derinlik_cm": 62.5,
+          "yukseklik_cm": 85.0
+        }
+      }
+    },
+    {
+      "model": "NG4R",
+      "modelNorm": "NG4R",
+      "title": "Vosco Döner Ocağı Alttan Motorlu 3 Radyanlı",
+      "category": "Döner Maki̇nesi̇",
+      "page": 45,
+      "specs": {
+        "liste_usd": 1250.0,
+        "liste_eur": null,
+        "guc": "15 W / 220",
+        "kapasite_kg": null,
+        "kapasite_l": null,
+        "olculer": {
+          "raw": "54 x 62.5 x 103.5 cm",
+          "genislik_cm": 54.0,
+          "derinlik_cm": 62.5,
+          "yukseklik_cm": 103.5
+        }
+      }
+    },
+    {
+      "model": "NG5R",
+      "modelNorm": "NG5R",
+      "title": "Vosco Döner Ocağı Alttan Motorlu 4 Radyanlı",
+      "category": "Döner Maki̇nesi̇",
+      "page": 45,
+      "specs": {
+        "liste_usd": 1450.0,
+        "liste_eur": null,
+        "guc": "18 W / 220",
+        "kapasite_kg": null,
+        "kapasite_l": null,
+        "olculer": {
+          "raw": "54 x 62.5 x 121.5 cm",
+          "genislik_cm": 54.0,
+          "derinlik_cm": 62.5,
+          "yukseklik_cm": 121.5
+        }
+      }
+    },
     {
       "model": "VACK-120",
       "modelNorm": "VACK120",
-      "title": "Vosco 4 Tepsili Elektrikli Patisserie Fırın",
+      "title": "VACK-120",
       "category": "Pati̇sseri̇e Firinlar",
       "page": 74,
       "specs": {
         "liste_usd": 2500.0,
-        "guc": "6500 W / 220 V",
+        "liste_eur": null,
+        "guc": "6500 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -23,18 +84,18 @@
           "derinlik_cm": 76.6,
           "yukseklik_cm": 47.2
         }
-      },
-      "description": "6500 W / 220 V / 50 Hz\nÜrün Boyutu : 92 x 76.6 x 47.2 cm\nTepsi Boyutu : 40 x 60 cm\nSıcaklık Aralığı : 0-350°C\nYüksek sıcaklığa dayanıklı çift camlı\nÇift yöne dönebilen fan ile eşit ısı dağılımı.\nPaslanmaz Çelik Gövde\n9700 W / 220 V / 50 Hz"
+      }
     },
     {
       "model": "VACK-140",
       "modelNorm": "VACK140",
-      "title": "Vosco 6 Tepsili Elektrikli Patisserie Fırın",
+      "title": "Vosco 4 Tepsili Elektrikli Patisserie Fırın",
       "category": "Pati̇sseri̇e Firinlar",
       "page": 74,
       "specs": {
-        "liste_usd": null,
-        "guc": "9700 W / 220 V",
+        "liste_usd": 2500.0,
+        "liste_eur": null,
+        "guc": "9700 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -43,18 +104,18 @@
           "derinlik_cm": 76.6,
           "yukseklik_cm": 58.3
         }
-      },
-      "description": "9700 W / 220 V / 50 Hz\nÜrün Boyutu : 92 x 76.6 x 58.3 cm\nTepsi Boyutu : 40 x 60 cm\nSıcaklık Aralığı : 0-350°C\nYüksek sıcaklığa dayanıklı çift camlı\nÇift yöne dönebilen fan ile eşit ısı dağılımı.\nPaslanmaz Çelik Gövde\n13000 W / 380 V / 50 Hz"
+      }
     },
     {
       "model": "VACK-240",
       "modelNorm": "VACK240",
-      "title": "Vosco 10 Tepsili Elektrikli Patisserie Fırın",
+      "title": "Vosco 6 Tepsili Elektrikli Patisserie Fırın",
       "category": "Pati̇sseri̇e Firinlar",
       "page": 74,
       "specs": {
         "liste_usd": 4250.0,
-        "guc": "13000 W / 380 V",
+        "liste_eur": null,
+        "guc": "13000 W / 380",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -63,8 +124,7 @@
           "derinlik_cm": 76.6,
           "yukseklik_cm": 82.1
         }
-      },
-      "description": "13000 W / 380 V / 50 Hz\nÜrün Boyutu : 94.6 x 76.6 x 82.1 cm\nTepsi Boyutu : 40 x 60 cm\nSıcaklık Aralığı : 0-350°C\nYüksek sıcaklığa dayanıklı çift camlı\nÇift yöne dönebilen fan ile eşit ısı dağılımı.\nPaslanmaz Çelik Gövde"
+      }
     },
     {
       "model": "VAF-68",
@@ -74,7 +134,8 @@
       "page": 34,
       "specs": {
         "liste_usd": 1200.0,
-        "guc": "520 W / 220 V",
+        "liste_eur": null,
+        "guc": "520 W / 220",
         "kapasite_kg": 10.0,
         "kapasite_l": null,
         "olculer": {
@@ -83,18 +144,18 @@
           "derinlik_cm": 41.0,
           "yukseklik_cm": 55.5
         }
-      },
-      "description": "520 W / 220 V / 50-60 Hz\n68 mm paslanmaz çelik öğütme dişlisi\nÇekirdek Haznesi: 1650 gram\nÜrün Boyutu: 28 x 41 x 55.5 cm\nÜrün Ağırlığı: 10 kg\n1360 RPM motor gücü\n4.3\" Led akıllı dokunmatik ekran\nDozaj Ayarlı Tam Otomatik Kahve Değirmeni"
+      }
     },
     {
       "model": "VAF-74",
       "modelNorm": "VAF74",
-      "title": "VAF-74",
-      "category": "",
+      "title": "Vosco Profesyonel Kahve Öğütücü",
+      "category": "Kahve Deği̇rmenleri̇",
       "page": 34,
       "specs": {
         "liste_usd": 1200.0,
-        "guc": "550 W / 220 V",
+        "liste_eur": null,
+        "guc": "550 W / 220",
         "kapasite_kg": 12.0,
         "kapasite_l": null,
         "olculer": {
@@ -103,18 +164,18 @@
           "derinlik_cm": 41.0,
           "yukseklik_cm": 55.5
         }
-      },
-      "description": "550 W / 220 V / 50-60 Hz\n74 mm paslanmaz çelik öğütme dişlisi\nÇekirdek Haznesi: 1650 gram\nÜrün Boyutu: 28 x 41 x 55.5 cm\nÜrün Ağırlığı: 12 kg\n1400 RPM motor gücü\n4.3\" Led akıllı dokunmatik ekran\n74mm Çelik Öğütme Dişli Kahve Değirmeni"
+      }
     },
     {
       "model": "VAF-910",
       "modelNorm": "VAF910",
-      "title": "Vosco 20 Tepsili Elektrikli Buharlı Konveksiyonlu Fırın",
+      "title": "Vosco 10 Tepsili Elektrikli Buharlı Konveksiyonlu Fırın",
       "category": "Konveksi̇yonlu Firinlar",
       "page": 75,
       "specs": {
         "liste_usd": 6750.0,
-        "guc": "9000 W / 380 V",
+        "liste_eur": 15000.0,
+        "guc": "9000 W / 380",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -123,18 +184,18 @@
           "derinlik_cm": 97.7,
           "yukseklik_cm": 101.0
         }
-      },
-      "description": "9000 W / 380 V / 50 Hz\nÜrün Boyutu : 99.5 x 97.7 x 101 cm\nTepsi Boyutu : 65 x 53 cm (GN 2/1 uyumlu)\nTepsi Kapasitesi : GN 1/1: 20 adet-GN 2/1: 10 adet\nSıcaklık Aralığı : 0-300°C\nPastaneler, fırınlar, otel mutfakları ve catering işletmeleri için uygundur.\nFanlı hava sirkülasyonu sayesinde homojen pişirme sağlar."
+      }
     },
     {
       "model": "VAF-95",
       "modelNorm": "VAF95",
-      "title": "Vosco 10 Tepsili Elektrikli Buharlı Konveksiyonlu Fırın",
-      "category": "",
+      "title": "Vosco 10 Tepsili Elektrikli Patisserie Fırın",
+      "category": "Pati̇sseri̇e Firinlar",
       "page": 75,
       "specs": {
-        "liste_usd": null,
-        "guc": "9000 W / 380 V",
+        "liste_usd": 5750.0,
+        "liste_eur": null,
+        "guc": "9000 W / 380",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -143,18 +204,18 @@
           "derinlik_cm": 97.7,
           "yukseklik_cm": 86.0
         }
-      },
-      "description": "9000 W / 380 V / 50 Hz\nÜrün Boyutu : 99.5 x 97.7 x 86 cm\nTepsi Boyutu : 65 x 53 cm (GN 2/1 uyumlu)\nTepsi Kapasitesi : GN 1/1: 10 adet-GN 2/1: 5 adet\nSıcaklık Aralığı : 0-300°C\nPastaneler, fırınlar, otel mutfakları ve catering işletmeleri için uygundur.\nFanlı hava sirkülasyonu sayesinde homojen pişirme sağlar.\nELEKTRİKLİ BUHARLI"
+      }
     },
     {
       "model": "VALP-A83",
       "modelNorm": "VALPA83",
-      "title": "Vosco Endüstriyel Tekli İndüksiyon Ocak",
+      "title": "Vosco İkili İndüksiyon Ocak",
       "category": "İndüksi̇yon Ocaklar",
       "page": 59,
       "specs": {
-        "liste_usd": null,
-        "guc": null,
+        "liste_usd": 400.0,
+        "liste_eur": null,
+        "guc": "3500 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -163,8 +224,7 @@
           "derinlik_cm": 34.5,
           "yukseklik_cm": 13.0
         }
-      },
-      "description": "3500 W / 220-240 V / 50/60 Hz\nÜrün Boyutu: 45 × 34.5 × 13 cm\nPişirme Plakası Boyutu: 28 × 28 cm\n4 saatlik zamanlayıcı fonksiyonu\n8 kademeli güç ve sıcaklık ayarı\n1 dakika içinde tencere yoksa otomatik kapanma\nGüvenlik Koruması: Aşırı Isınma / Aşırı Voltaj"
+      }
     },
     {
       "model": "VALP-C05D",
@@ -173,8 +233,9 @@
       "category": "İndüksi̇yon Ocaklar",
       "page": 60,
       "specs": {
-        "liste_usd": null,
-        "guc": null,
+        "liste_usd": 375.0,
+        "liste_eur": null,
+        "guc": "3500 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -183,8 +244,7 @@
           "derinlik_cm": 34.5,
           "yukseklik_cm": 13.0
         }
-      },
-      "description": "3500 W / 220-240 V / 50/60 Hz\nÜrün Boyutu: 45 × 34.5 × 13 cm\nPişirme Plakası Boyutu: 28 × 28 cm\nGövde Malzemesi: Paslanmaz Çelik\n1 dakika içinde tencere yoksa otomatik kapanma\nGüvenlik Koruması: Aşırı Isınma / Aşırı Voltaj\n8 kademeli güç ve 4 saatlik zamanlayıcı fonk."
+      }
     },
     {
       "model": "VALP-C09D",
@@ -194,7 +254,8 @@
       "page": 60,
       "specs": {
         "liste_usd": 375.0,
-        "guc": null,
+        "liste_eur": null,
+        "guc": "3500 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -203,18 +264,18 @@
           "derinlik_cm": 35.5,
           "yukseklik_cm": 11.0
         }
-      },
-      "description": "3500 W / 220-240 V / 50/60 Hz\nÜrün Boyutu: 44 × 35.5 × 11 cm\nPişirme Plakası Boyutu: 30 × 30 cm\n10 kademeli güç ve 10 kademeli sıcaklık ayarı\n4 saatlik zamanlayıcı fonksiyonu\n1 dakika içinde tencere yoksa otomatik kapanma\nGüvenlik Koruması: Aşırı Isınma / Aşırı Voltaj\n3500 W / 220-240 V / 50/60 Hz"
+      }
     },
     {
       "model": "VALP-DC50",
       "modelNorm": "VALPDC50",
-      "title": "Vosco Tekli İndüksiyon Ocak",
+      "title": "VALP-DC50",
       "category": "İndüksi̇yon Ocaklar",
       "page": 59,
       "specs": {
         "liste_usd": 180.0,
-        "guc": null,
+        "liste_eur": null,
+        "guc": "2000 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -223,18 +284,18 @@
           "derinlik_cm": 35.5,
           "yukseklik_cm": 6.2
         }
-      },
-      "description": "2000 W / 220-240 V / 50/60 Hz\nÜrün Boyutu: 28.8 × 35.5 × 6.2 cm\nPişirme Plakası Boyutu: 28. 8 × 28.8 cm\n4 saatlik zamanlayıcı fonksiyonu\n8 kademeli güç ve sıcaklık ayarı\n1 dakika içinde tencere yoksa otomatik kapanma\nGüvenlik Koruması: Aşırı Isınma / Aşırı Voltaj\n3500 W / 220-240 V / 50/60 Hz"
+      }
     },
     {
       "model": "VALP-DIC126",
       "modelNorm": "VALPDIC126",
-      "title": "Vosco İkili İndüksiyon Ocak",
+      "title": "Vosco Tekli İndüksiyon Ocak",
       "category": "İndüksi̇yon Ocaklar",
       "page": 59,
       "specs": {
         "liste_usd": 350.0,
-        "guc": null,
+        "liste_eur": null,
+        "guc": "3500 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -243,18 +304,18 @@
           "derinlik_cm": 36.0,
           "yukseklik_cm": 6.4
         }
-      },
-      "description": "3500 W / 220-240 V / 50/60 Hz\nÜrün Boyutu: 60.5 × 36 × 6.4 cm\nPişirme Plakası Boyutu: 29 × 27.5 cm\n4 saatlik zamanlayıcı fonksiyonu\n8 kademeli güç ve sıcaklık ayarı\n1 dakika içinde tencere yoksa otomatik kapanma\nGüvenlik Koruması: Aşırı Isınma / Aşırı Voltaj\n3500 W / 220-240 V / 50/60 Hz"
+      }
     },
     {
       "model": "VAS-CF4S",
       "modelNorm": "VASCF4S",
-      "title": "Vosco 4 Katmanlı Çikolata Şelalesi Makinesi",
+      "title": "Vosco 10 Lt Kapasiteli Sıcak Çikolata Makinesi",
       "category": "Sicak Çi̇kolata & Şelale",
       "page": 91,
       "specs": {
         "liste_usd": 750.0,
-        "guc": "65 W / 220 V",
+        "liste_eur": null,
+        "guc": "65 W/ 220",
         "kapasite_kg": 6.0,
         "kapasite_l": 5.0,
         "olculer": {
@@ -263,48 +324,48 @@
           "derinlik_cm": 33.0,
           "yukseklik_cm": 60.0
         }
-      },
-      "description": "200 W+65 W/ 220 V / 50 Hz\nHazne Kapasitesi : 5 L\nÜrün Boyutu :  33 x 33 x 60 cm\nÜrün Ağırlığı : 6 kg\nGelişmiş akış için pürüzsüz katmanlar\nKolay kullanım ve temizlik\nPaslanmaz çelik"
+      }
     },
     {
       "model": "VAS-CH10D",
       "modelNorm": "VASCH10D",
-      "title": "Vosco Elektrikli 10 Tepsili Rotary Fırın",
-      "category": "Rotary Firin",
-      "page": 78,
-      "specs": {
-        "liste_usd": null,
-        "guc": null,
-        "kapasite_kg": null,
-        "kapasite_l": null,
-        "olculer": null
-      },
-      "description": "19.2 + 2.8 kW / 380 V / 50 Hz\nÜrün Boyutu : 91 x 142.5 x 137+88cm\nTepsi Boyutu : 40 x 60 cm\nSıcaklık Aralığı : 0-300°C\nYüksek sıcaklığa dayanıklı çift camlı\nÇift yöne dönebilen fan ile eşit ısı dağılımı.\nPaslanmaz Çelik Gövde"
-    },
-    {
-      "model": "VAS-CH10Q",
-      "modelNorm": "VASCH10Q",
       "title": "Vosco Gazlı 10 Tepsili Rotary Fırın",
       "category": "Rotary Firin",
       "page": 78,
       "specs": {
         "liste_usd": 13000.0,
+        "liste_eur": null,
         "guc": null,
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": null
-      },
-      "description": "1.2 + 2.8 kW / 380 V / 50 Hz\nÜrün Boyutu : 91 x 142.5 x 137+88cm\nTepsi Boyutu : 40 x 60 cm\nSıcaklık Aralığı : 0-300°C\nYüksek sıcaklığa dayanıklı çift camlı\nÇift yöne dönebilen fan ile eşit ısı dağılımı.\nPaslanmaz Çelik Gövde\n19.2 + 2.8 kW / 380 V / 50 Hz"
+      }
+    },
+    {
+      "model": "VAS-CH10Q",
+      "modelNorm": "VASCH10Q",
+      "title": "VAS-CH10Q",
+      "category": "Rotary Firin",
+      "page": 78,
+      "specs": {
+        "liste_usd": 13000.0,
+        "liste_eur": null,
+        "guc": null,
+        "kapasite_kg": null,
+        "kapasite_l": null,
+        "olculer": null
+      }
     },
     {
       "model": "VAS-CME01",
       "modelNorm": "VASCME01",
-      "title": "Vosco Tek Gözlü Elektrikli Krep Makinesi",
+      "title": "Vosco Tekli Kare Waffle Makinesi",
       "category": "Krep & Waffle",
       "page": 56,
       "specs": {
         "liste_usd": 760.0,
-        "guc": "3000 W / 220 V",
+        "liste_eur": null,
+        "guc": "3000 W / 220",
         "kapasite_kg": 23.0,
         "kapasite_l": null,
         "olculer": {
@@ -313,18 +374,18 @@
           "derinlik_cm": 49.0,
           "yukseklik_cm": 24.0
         }
-      },
-      "description": "3000 W / 220 V / 50-60 Hz\nÜrün Boyutu: 45 x 49 x 24 cm\nÜrün Ağırlığı : 23 kg\nPlaka Çapı : 40 cm\nTeflon kaplı yapışmaz pişirme yüzeyi\nSeri pişirmelerde yüksek performans\nPaslanmaz çelik gövde\n3000 W + 3000 W / 220 V / 50-60 Hz"
+      }
     },
     {
       "model": "VAS-CME02",
       "modelNorm": "VASCME02",
-      "title": "Vosco Çift Gözlü Elektrikli Krep Makinesi",
+      "title": "Vosco Tek Gözlü Elektrikli Krep Makinesi",
       "category": "Krep & Waffle",
       "page": 56,
       "specs": {
-        "liste_usd": null,
-        "guc": "3000 W / 220 V",
+        "liste_usd": 760.0,
+        "liste_eur": null,
+        "guc": "3000 W / 220",
         "kapasite_kg": 42.0,
         "kapasite_l": null,
         "olculer": {
@@ -333,18 +394,18 @@
           "derinlik_cm": 50.0,
           "yukseklik_cm": 24.0
         }
-      },
-      "description": "3000 W + 3000 W / 220 V / 50-60 Hz\nÜrün Boyutu: 88 x 50 x 24 cm\nÜrün Ağırlığı : 42 kg\nPlaka Çapı : 40 cm * 2\nTeflon kaplı yapışmaz pişirme yüzeyi\nSeri pişirmelerde yüksek performans\nPaslanmaz çelik gövde"
+      }
     },
     {
       "model": "VAS-HJ10L",
       "modelNorm": "VASHJ10L",
-      "title": "Vosco 10 Lt Kapasiteli Sıcak Çikolata Makinesi",
+      "title": "Vosco 5 Lt Kapasiteli Sıcak Çikolata Makinesi",
       "category": "Sicak Çi̇kolata & Şelale",
       "page": 91,
       "specs": {
         "liste_usd": 600.0,
-        "guc": "500 W / 220 V",
+        "liste_eur": null,
+        "guc": "500 W / 220",
         "kapasite_kg": 8.0,
         "kapasite_l": 10.0,
         "olculer": {
@@ -353,18 +414,18 @@
           "derinlik_cm": 32.0,
           "yukseklik_cm": 57.0
         }
-      },
-      "description": "500 W / 220 V / 50 Hz\nHazne Kapasitesi: 10 L\nÜrün Boyutu : 40 x 32 x 57 cm\nÜrün Ağırlığı : 8.0 kg\nSıcaklık Aralığı: 30-90°C\nLED ekran\nKolay kullanım\n200 W+65 W/ 220 V / 50 Hz"
+      }
     },
     {
       "model": "VAS-HJ5L",
       "modelNorm": "VASHJ5L",
-      "title": "Vosco 5 Lt Kapasiteli Sıcak Çikolata Makinesi",
+      "title": "VAS-HJ5L",
       "category": "Sicak Çi̇kolata & Şelale",
       "page": 91,
       "specs": {
-        "liste_usd": null,
-        "guc": "400 W / 220 V",
+        "liste_usd": 550.0,
+        "liste_eur": null,
+        "guc": "400 W / 220",
         "kapasite_kg": 8.0,
         "kapasite_l": 5.0,
         "olculer": {
@@ -373,18 +434,18 @@
           "derinlik_cm": 32.0,
           "yukseklik_cm": 45.0
         }
-      },
-      "description": "400 W / 220 V / 50 Hz\nHazne Kapasitesi: 5 L\nÜrün Boyutu : 40 x 32 x 45 cm\nÜrün Ağırlığı : 8.0 kg\nSıcaklık Aralığı: 30-90°C\nLED ekran\nKolay kullanım\n500 W / 220 V / 50 Hz"
+      }
     },
     {
       "model": "VAS-WN10D",
       "modelNorm": "VASWN10D",
-      "title": "Vosco 10 Tepsili Elektrikli Kombi Buharlı Fırın",
+      "title": "Vosco 6 Tepsili Elektrikli Kombi Buharlı Fırın",
       "category": "Kombi̇ Firinlar",
       "page": 76,
       "specs": {
         "liste_usd": null,
-        "guc": "18000 W / 380 V",
+        "liste_eur": 16750.0,
+        "guc": "18000 W / 380",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -393,18 +454,18 @@
           "derinlik_cm": 80.0,
           "yukseklik_cm": 106.0
         }
-      },
-      "description": "18000 W / 380 V / 50 Hz\nDış Ölçüler: 97 x 80 x 106 cm\nPişirme Odası (Chamber): 59.8 x 40 x 73 cm\nTepsi Kapasitesi: 10 x 1/1 GN (53 × 32.5 cm)\nSıcaklık Aralığı : 0-260°C\nPastaneler, fırınlar, otel mutfakları ve catering işletmeleri için uygundur.\nFanlı hava sirkülasyonu sayesinde homojen pişirme sağlar.\n€16750 EUR"
+      }
     },
     {
       "model": "VAS-WN6D",
       "modelNorm": "VASWN6D",
-      "title": "Vosco 6 Tepsili Elektrikli Kombi Buharlı Fırın",
-      "category": "€15000 Eur",
+      "title": "Vosco 20 Tepsili Elektrikli Buharlı Konveksiyonlu Fırın",
+      "category": "Konveksi̇yonlu Firinlar",
       "page": 76,
       "specs": {
-        "liste_usd": null,
-        "guc": "9400 W / 380 V",
+        "liste_usd": 6750.0,
+        "liste_eur": 15000.0,
+        "guc": "9400 W / 380",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -413,28 +474,27 @@
           "derinlik_cm": 80.0,
           "yukseklik_cm": 80.0
         }
-      },
-      "description": "9400 W / 380 V / 50 Hz\nÜrün Boyutu : 97 x 80 x 80 cm\nPişirme Odası (Chamber): 59.8 x 40 x 46 cm\nTepsi Kapasitesi: 6 × 1/1 GN (53 x 32.5 cm)\nSıcaklık Aralığı: 0 – 260°C\nPastaneler, fırınlar, otel mutfakları ve catering işletmeleri için uygundur.\nFanlı hava sirkülasyonu sayesinde homojen pişirme sağlar.\nKOMBİ FIRINLAR"
+      }
     },
     {
       "model": "VB-10S",
       "modelNorm": "VB10S",
-      "title": "Vosco Endüstriyel Çırpma ve Karıştırma Mikseri",
+      "title": "Vosco Stand Mikser – 16L",
       "category": "Mi̇kserler",
       "page": 65,
       "specs": {
         "liste_usd": 1250.0,
-        "guc": "750 W / 220 V",
+        "liste_eur": null,
+        "guc": "750 W / 220",
         "kapasite_kg": 60.0,
-        "kapasite_l": 10.0,
+        "kapasite_l": 16.0,
         "olculer": {
           "raw": "45 x 36 x 65 cm",
           "genislik_cm": 45.0,
           "derinlik_cm": 36.0,
           "yukseklik_cm": 65.0
         }
-      },
-      "description": "750 W / 220 V / 50/60 Hz\nÜrün Boyutu: 45 x 36 x 65 cm\nÜrün Ağırlığı: 60 kg\n10 L paslanmaz çelik hazneli hacim kapasitesi\nPaslanmaz çelik hazne\nÇırpıcı, tel çırpıcı ve hamur yoğurma kancası\n1100 W / 220 V / 50-60 Hz\nÜrün Boyutu: 45 x 36 x 65 cm"
+      }
     },
     {
       "model": "VB-2000",
@@ -443,13 +503,13 @@
       "category": "Kati Meyve Sikacaklari",
       "page": 37,
       "specs": {
-        "liste_usd": null,
+        "liste_usd": 1000.0,
+        "liste_eur": null,
         "guc": null,
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": null
-      },
-      "description": ""
+      }
     },
     {
       "model": "VB-20S",
@@ -459,7 +519,8 @@
       "page": 65,
       "specs": {
         "liste_usd": 1500.0,
-        "guc": "1100 W / 220 V",
+        "liste_eur": null,
+        "guc": "1100 W / 220",
         "kapasite_kg": 72.0,
         "kapasite_l": 20.0,
         "olculer": {
@@ -468,23 +529,22 @@
           "derinlik_cm": 36.0,
           "yukseklik_cm": 65.0
         }
-      },
-      "description": "1100 W / 220 V / 50-60 Hz\nÜrün Boyutu: 45 x 36 x 65 cm\nÜrün Ağırlığı: 72 kg\n20 L paslanmaz çelik hazneli hacim kapasitesi\nÜç farklı hız seçeneği ve koruyucu kapaklar\nÇırpıcı, tel çırpıcı ve hamur yoğurma kancası\n1500 W / 220 V / 50/60 Hz\nÜrün Boyutu: 52 x 43 x 93 cm"
+      }
     },
     {
       "model": "VB-300",
       "modelNorm": "VB300",
-      "title": "Vosco 12” Yarı Otomatik Et Dilimleme Makinesi",
+      "title": "VB-300",
       "category": "Et Di̇li̇mleme Maki̇neleri̇",
       "page": 68,
       "specs": {
         "liste_usd": 1150.0,
-        "guc": "250 W / 220 V",
+        "liste_eur": null,
+        "guc": "250 W / 220",
         "kapasite_kg": 25.0,
         "kapasite_l": null,
         "olculer": null
-      },
-      "description": "250 W / 220 V / 50/60 Hz\n300 mm paslanmaz çelik bıçak\nDilim Kalınlığı Aralığı: 0.2 – 16 mm\nMaksimum Dilimleme Boyutu: Ø 220 mm\nÜrün Ağırlığı: 25 kg\nPaslanmaz çelik bıçaklar\nEt, peynir, sebze, ekmek vs dilimlemeye uygun\n1800 W / 220 V / 50/60 Hz"
+      }
     },
     {
       "model": "VB-30S",
@@ -494,7 +554,8 @@
       "page": 65,
       "specs": {
         "liste_usd": 1750.0,
-        "guc": "1500 W / 220 V",
+        "liste_eur": null,
+        "guc": "1500 W / 220",
         "kapasite_kg": 82.0,
         "kapasite_l": 30.0,
         "olculer": {
@@ -503,18 +564,18 @@
           "derinlik_cm": 43.0,
           "yukseklik_cm": 93.0
         }
-      },
-      "description": "1500 W / 220 V / 50/60 Hz\nÜrün Boyutu: 52 x 43 x 93 cm\nÜrün Ağırlığı: 82 kg\n30 L paslanmaz çelik hazneli hacim kapasitesi\nÜç farklı hız seçeneği ve koruyucu kapaklar\nÇırpıcı, tel çırpıcı ve hamur yoğurma kancası"
+      }
     },
     {
       "model": "VBBC-150S",
       "modelNorm": "VBBC150S",
-      "title": "Vosco Tek Kapılı Soğutucu Bar Arkası Dolap",
+      "title": "VBBC-150S",
       "category": "Soğutucu Dolap",
       "page": 5,
       "specs": {
         "liste_usd": null,
-        "guc": "150 W / 220 V",
+        "liste_eur": 1050.0,
+        "guc": "150 W / 220",
         "kapasite_kg": 36.0,
         "kapasite_l": 118.0,
         "olculer": {
@@ -523,18 +584,18 @@
           "derinlik_cm": 50.0,
           "yukseklik_cm": 85.0
         }
-      },
-      "description": "150 W / 220 V / 50-60 Hz\n€1050 EUR\n118 L Hacim Kapasitesi\nÜrün Boyutu: 60 x 50 x 85 cm\nÜrün Ağırlığı: 36 KG\nSoğutma Derecesi: 0 - 10℃\nÇelik ve pvc kaplama, led aydınlatma\nDijital termostat"
+      }
     },
     {
       "model": "VBBC-250S",
       "modelNorm": "VBBC250S",
-      "title": "Vosco Çift Kapılı Soğutucu Bar Arkası Dolap",
-      "category": "€1050 Eur",
+      "title": "Vosco Tek Kapılı Soğutucu Bar Arkası Dolap",
+      "category": "Soğutucu Dolap",
       "page": 5,
       "specs": {
         "liste_usd": null,
-        "guc": "150 W / 220 V",
+        "liste_eur": 1050.0,
+        "guc": "150 W / 220",
         "kapasite_kg": 58.0,
         "kapasite_l": 238.0,
         "olculer": {
@@ -543,18 +604,18 @@
           "derinlik_cm": 50.0,
           "yukseklik_cm": 85.0
         }
-      },
-      "description": "150 W / 220 V / 50-60 Hz\n238 L Hacim Kapasitesi\nÜrün Boyutu: 90 x 50 x 85 cm\nÜrün Ağırlığı: 58 KG\nSoğutma Derecesi: 0 - 10℃\nÇelik ve pvc kaplama, led aydınlatma\nDijital termostat\n200 W / 220 V / 50-60 Hz"
+      }
     },
     {
       "model": "VBBC-350S",
       "modelNorm": "VBBC350S",
-      "title": "Vosco Üç Kapılı Soğutucu Bar Arkası Dolap",
-      "category": "€1050 Eur",
+      "title": "Vosco Çift Kapılı Soğutucu Bar Arkası Dolap",
+      "category": "Soğutucu Dolap",
       "page": 5,
       "specs": {
         "liste_usd": null,
-        "guc": "200 W / 220 V",
+        "liste_eur": 1450.0,
+        "guc": "200 W / 220",
         "kapasite_kg": 83.0,
         "kapasite_l": 338.0,
         "olculer": {
@@ -563,18 +624,18 @@
           "derinlik_cm": 50.0,
           "yukseklik_cm": 85.0
         }
-      },
-      "description": "200 W / 220 V / 50-60 Hz\n338 L Hacim kapasitesi\nÜrün Boyutu: 135 x 50 x 85 cm\nÜrün Ağırlığı: 83 KG\nSoğutma Derecesi: 0 - 10℃\nÇelik ve pvc kaplama, led aydınlatma\nDijital termostat\n€1450 EUR"
+      }
     },
     {
       "model": "VBD-CG018",
       "modelNorm": "VBDCG018",
-      "title": "Vosco Dijital Espresso Kahve Değirmeni",
+      "title": "VBD-CG018",
       "category": "Kahve Deği̇rmenleri̇",
       "page": 33,
       "specs": {
         "liste_usd": 270.0,
-        "guc": "200 W / 220 V",
+        "liste_eur": null,
+        "guc": "200 W / 220",
         "kapasite_kg": 2.2,
         "kapasite_l": null,
         "olculer": {
@@ -583,8 +644,7 @@
           "derinlik_cm": 18.0,
           "yukseklik_cm": 33.0
         }
-      },
-      "description": "200 W / 220 V / 50-60 Hz\nÇekirdek Haznesi: 320 gram\nÖğütülmüş Kahve Haznesi: 120 gram\nÜrün Boyutu: 12 x 18 x 33 cm\nÜrün Ağırlığı: 2.2 kg\n40 mm paslanmaz çelik öğütme dişlisi\n200 W / 220 V / 50-60 Hz\nÇekirdek Haznesi: 1100 gram"
+      }
     },
     {
       "model": "VBDB-7116",
@@ -593,23 +653,24 @@
       "category": "Dondurma Maki̇neleri̇",
       "page": 21,
       "specs": {
-        "liste_usd": null,
-        "guc": null,
+        "liste_usd": 6500.0,
+        "liste_eur": null,
+        "guc": "2500 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": null
-      },
-      "description": ""
+      }
     },
     {
       "model": "VBL-811E",
       "modelNorm": "VBL811E",
-      "title": "Vosco Endüstriyel Tost Makinesi 16 Dilim",
+      "title": "VBL-811E",
       "category": "Tost Maki̇neleri̇",
       "page": 41,
       "specs": {
         "liste_usd": 300.0,
-        "guc": "2200 W / 220 V",
+        "liste_eur": null,
+        "guc": "2200 W / 220",
         "kapasite_kg": 21.0,
         "kapasite_l": null,
         "olculer": {
@@ -618,18 +679,18 @@
           "derinlik_cm": 37.0,
           "yukseklik_cm": 21.0
         }
-      },
-      "description": "2200 W / 220 V / 50-60 Hz\nÜrün Boyutu: 43 x 37 x 21 cm\nÜrün Ağırlığı: 21 kg\nSıcaklık Aralığı: 50 - 300℃\nPaslanmaz çelik malzeme\nYapışmaz pişirme yüzeyi\nEv, otel, açık hava, ticari kullanımına uygundur\n4400 W / 220 V / 50-60 Hz"
+      }
     },
     {
       "model": "VBL-813",
       "modelNorm": "VBL813",
-      "title": "Vosco Endüstriyel İkili Tost Makinesi 22 Dilim",
+      "title": "Vosco Endüstriyel İkili Mega Tost Makinesi 32 Dilim",
       "category": "Tost Maki̇neleri̇",
       "page": 41,
       "specs": {
         "liste_usd": 550.0,
-        "guc": "3600 W / 220 V",
+        "liste_eur": null,
+        "guc": "3600 W / 220",
         "kapasite_kg": 26.0,
         "kapasite_l": null,
         "olculer": {
@@ -638,18 +699,18 @@
           "derinlik_cm": 40.0,
           "yukseklik_cm": 21.0
         }
-      },
-      "description": "3600 W / 220 V / 50-60 Hz\nÜrün Boyutu: 58 x 40 x 21 cm\nÜrün Ağırlığı: 26 kg\nSıcaklık Aralığı: 50 - 300℃\nPaslanmaz çelik malzeme\nYapışmaz pişirme yüzeyi\nEv, otel, açık hava, ticari kullanımına uygundur"
+      }
     },
     {
       "model": "VBL-813E",
       "modelNorm": "VBL813E",
-      "title": "Vosco Endüstriyel İkili Mega Tost Makinesi 32 Dilim",
+      "title": "Vosco Endüstriyel Tost Makinesi 16 Dilim",
       "category": "Tost Maki̇neleri̇",
       "page": 41,
       "specs": {
         "liste_usd": 550.0,
-        "guc": "4400 W / 220 V",
+        "liste_eur": null,
+        "guc": "4400 W / 220",
         "kapasite_kg": 37.0,
         "kapasite_l": null,
         "olculer": {
@@ -658,8 +719,7 @@
           "derinlik_cm": 40.0,
           "yukseklik_cm": 21.0
         }
-      },
-      "description": "4400 W / 220 V / 50-60 Hz\nÜrün Boyutu: 84.5 x 40 x 21 cm\nÜrün Ağırlığı: 37 kg\nSıcaklık Aralığı: 50 - 300℃\nPaslanmaz çelik malzeme\nYapışmaz pişirme yüzeyi\nEv, otel, açık hava, ticari kullanımına uygundur\n3600 W / 220 V / 50-60 Hz"
+      }
     },
     {
       "model": "VBL-818",
@@ -669,7 +729,8 @@
       "page": 47,
       "specs": {
         "liste_usd": 280.0,
-        "guc": "3000 W / 220 V",
+        "liste_eur": null,
+        "guc": "3000 W / 220",
         "kapasite_kg": 25.0,
         "kapasite_l": null,
         "olculer": {
@@ -678,18 +739,18 @@
           "derinlik_cm": 43.0,
           "yukseklik_cm": 24.0
         }
-      },
-      "description": "3000 W / 220 V / 50/60 Hz\nÜrün Boyutu: 55 x 43 x 24 cm\nÜrün Ağırlığı: 25 kg\nIzgara Tipi: Dumansız elektrikli ızgara\nYüzey Özelliği: Yapışmaz pişirme yüzeyi\nSandviç Plakaları: Var, tek yüzeyli düz ızgara\nKullanım Yeri: Restoran, otel, ev, ticari mutfak\n3000 W / 220 V / 50/60 Hz"
+      }
     },
     {
       "model": "VBL-818A",
       "modelNorm": "VBL818A",
-      "title": "Vosco Düz Pleyt Izgara",
+      "title": "VBL-818A",
       "category": "Elektri̇kli̇ Izgaralar",
       "page": 47,
       "specs": {
         "liste_usd": 210.0,
-        "guc": "3000 W / 220 V",
+        "liste_eur": null,
+        "guc": "3000 W / 220",
         "kapasite_kg": 23.0,
         "kapasite_l": null,
         "olculer": {
@@ -698,18 +759,18 @@
           "derinlik_cm": 43.0,
           "yukseklik_cm": 24.0
         }
-      },
-      "description": "3000 W / 220 V / 50/60 Hz\nÜrün Boyutu: 55 x 43 x 24 cm\nÜrün Ağırlığı: 23 kg\nIzgara Tipi: Dumansız elektrikli ızgara\nYüzey Özelliği: Yapışmaz pişirme yüzeyi\nSandviç Plakaları: Var, tek yüzeyli düz ızgara\nKullanım Yeri: Restoran, otel, ev, ticari mutfak\n3000 W / 220 V / 50/60 Hz"
+      }
     },
     {
       "model": "VBL-819",
       "modelNorm": "VBL819",
-      "title": "Vosco Çift Yüzeyli Pleyt Izgara",
+      "title": "Vosco Düz Pleyt Izgara",
       "category": "Elektri̇kli̇ Izgaralar",
       "page": 47,
       "specs": {
-        "liste_usd": null,
-        "guc": "3000 W / 220 V",
+        "liste_usd": 300.0,
+        "liste_eur": null,
+        "guc": "3000 W / 220",
         "kapasite_kg": 25.0,
         "kapasite_l": null,
         "olculer": {
@@ -718,18 +779,58 @@
           "derinlik_cm": 43.0,
           "yukseklik_cm": 24.0
         }
-      },
-      "description": "3000 W / 220 V / 50/60 Hz\nÜrün Boyutu: 55 x 43 x 24 cm\nÜrün Ağırlığı: 25 kg\nIzgara Tipi: Dumansız elektrikli ızgara\nYüzey Özelliği: Düz + Oluklu yapışmaz yüzey\nSandviç Plakaları: Var, tek yüzeyli düz ızgara\nKullanım Yeri: Restoran, otel, ev, ticari mutfak"
+      }
     },
     {
       "model": "VBL-820",
       "modelNorm": "VBL820",
+      "title": "Vosco Oluklu Pleyt Izgara",
+      "category": "Elektri̇kli̇ Izgaralar",
+      "page": 48,
+      "specs": {
+        "liste_usd": 350.0,
+        "liste_eur": null,
+        "guc": "4400 W / 220",
+        "kapasite_kg": 34.0,
+        "kapasite_l": null,
+        "olculer": {
+          "raw": "73 x 47 x 24 cm",
+          "genislik_cm": 73.0,
+          "derinlik_cm": 47.0,
+          "yukseklik_cm": 24.0
+        }
+      }
+    },
+    {
+      "model": "VBL-821",
+      "modelNorm": "VBL821",
+      "title": "Vosco Çift Yüzeyli Pleyt Izgara",
+      "category": "Elektri̇kli̇ Izgaralar",
+      "page": 48,
+      "specs": {
+        "liste_usd": 300.0,
+        "liste_eur": null,
+        "guc": "3000 W / 220",
+        "kapasite_kg": 25.0,
+        "kapasite_l": null,
+        "olculer": {
+          "raw": "55 x 43 x 24 cm",
+          "genislik_cm": 55.0,
+          "derinlik_cm": 43.0,
+          "yukseklik_cm": 24.0
+        }
+      }
+    },
+    {
+      "model": "VBL-822",
+      "modelNorm": "VBL822",
       "title": "Vosco Çift Kontrollü Düz Pleyt Izgara",
       "category": "Elektri̇kli̇ Izgaralar",
       "page": 48,
       "specs": {
         "liste_usd": 350.0,
-        "guc": "4400 W / 220 V",
+        "liste_eur": null,
+        "guc": "4400 W / 220",
         "kapasite_kg": 34.0,
         "kapasite_l": null,
         "olculer": {
@@ -738,73 +839,33 @@
           "derinlik_cm": 47.0,
           "yukseklik_cm": 24.0
         }
-      },
-      "description": "4400 W / 220 V / 50/60 Hz\nÜrün Boyutu: 73 x 47 x 24 cm\nÜrün Ağırlığı: 34 kg\nIzgara Tipi: Dumansız elektrikli ızgara\nYüzey Özelliği: Yapışmaz pişirme yüzeyi\nSandviç Plakaları: Var, tek yüzeyli düz ızgara\nKullanım Yeri: Restoran, otel, ev, ticari mutfak\n4400 W / 220 V / 50/60 Hz"
-    },
-    {
-      "model": "VBL-821",
-      "modelNorm": "VBL821",
-      "title": "Vosco Oluklu Pleyt Izgara",
-      "category": "Elektri̇kli̇ Izgaralar",
-      "page": 48,
-      "specs": {
-        "liste_usd": 300.0,
-        "guc": "3000 W / 220 V",
-        "kapasite_kg": 25.0,
-        "kapasite_l": null,
-        "olculer": {
-          "raw": "55 x 43 x 24 cm",
-          "genislik_cm": 55.0,
-          "derinlik_cm": 43.0,
-          "yukseklik_cm": 24.0
-        }
-      },
-      "description": "3000 W / 220 V / 50/60 Hz\nÜrün Boyutu: 55 x 43 x 24 cm\nÜrün Ağırlığı: 25 kg\nIzgara Tipi: Dumansız elektrikli ızgara\nYüzey Özelliği: Yapışmaz oluklu ızgara yüzeyi\nIsıtma Yöntemi: Elektrik ile rezistans ısıtma\nKullanım Yeri: Restoran, otel, ev, ticari mutfak\n4400 W / 220 V / 50/60 Hz"
-    },
-    {
-      "model": "VBL-822",
-      "modelNorm": "VBL822",
-      "title": "Vosco Çift Kontrollü Çift Yüzeyli Pleyt Izgara",
-      "category": "Elektri̇kli̇ Izgaralar",
-      "page": 48,
-      "specs": {
-        "liste_usd": null,
-        "guc": "4400 W / 220 V",
-        "kapasite_kg": 34.0,
-        "kapasite_l": null,
-        "olculer": {
-          "raw": "73 x 47 x 24 cm",
-          "genislik_cm": 73.0,
-          "derinlik_cm": 47.0,
-          "yukseklik_cm": 24.0
-        }
-      },
-      "description": "4400 W / 220 V / 50/60 Hz\nÜrün Boyutu: 73 x 47 x 24 cm\nÜrün Ağırlığı: 34 kg\nIzgara Tipi: Dumansız elektrikli ızgara\nYüzey Özelliği: Düz + Oluklu yapışmaz yüzey\nSandviç Plakaları: Var, tek yüzeyli düz ızgara\nKullanım Yeri: Restoran, otel, ev, ticari mutfak"
+      }
     },
     {
       "model": "VBL-922",
       "modelNorm": "VBL922",
-      "title": "Vosco Çift Kontrollü Oluklu Pleyt Izgara",
-      "category": "",
+      "title": "Vosco Çift Kontrollü Çift Yüzeyli Pleyt Izgara",
+      "category": "Elektri̇kli̇ Izgaralar",
       "page": 49,
       "specs": {
         "liste_usd": 400.0,
+        "liste_eur": null,
         "guc": null,
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": null
-      },
-      "description": ""
+      }
     },
     {
       "model": "VBS-210",
       "modelNorm": "VBS210",
-      "title": "Vosco Bıçak Sterilizatörü",
+      "title": "VBS-210",
       "category": "Biçak Steri̇li̇zatörleri̇",
       "page": 7,
       "specs": {
         "liste_usd": null,
-        "guc": "10 W / 220 V",
+        "liste_eur": 220.0,
+        "guc": "10 W / 220",
         "kapasite_kg": 7.5,
         "kapasite_l": null,
         "olculer": {
@@ -813,18 +874,18 @@
           "derinlik_cm": 14.0,
           "yukseklik_cm": 62.0
         }
-      },
-      "description": "10 W / 220 V / 50-60 Hz\n€220 EUR\nÜrün Boyutu: 40 × 14 × 62 cm\nÜrün Ağırlığı: 7.5 KG\nUV-C lamba ile mikrop ile bakterilerden arındırır\nEmniyet switchi: Kapak açıldığında UV ışığı kapanır\nKurulum: Tak-çalıştır\nPaslanmaz çelik malzeme kalitesi"
+      }
     },
     {
       "model": "VCP-03",
       "modelNorm": "VCP03",
-      "title": "Vosco Tek Katlı Taş Pizza Fırını",
-      "category": "",
+      "title": "Vosco Çift Katlı Elektrikli Pizza Fırını",
+      "category": "İtalya Lezzeti̇”",
       "page": 80,
       "specs": {
-        "liste_usd": null,
-        "guc": "2500 W / 220 V",
+        "liste_usd": 1400.0,
+        "liste_eur": null,
+        "guc": "2500 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -833,18 +894,18 @@
           "derinlik_cm": 62.5,
           "yukseklik_cm": 35.0
         }
-      },
-      "description": "2500 W / 220 V - 240 V / 50-60 Hz\nÜrün Boyutu: 72 x 62.5 x 35 cm\nPişirme Odası Boyutu : 52 x 50 x 18 cm\nTaş Ölçüsü : 47.3 x 50 cm\nSıcaklık Aralığı : 0-350°C\nTaş tabanlı yapısı sayesinde pizzalara çıtır taban sağlar\nPİZZA FIRINLAR\n= Ø 25 cm, 4 Adet pizzayı aynı anda pişirir."
+      }
     },
     {
       "model": "VCP-04",
       "modelNorm": "VCP04",
-      "title": "Vosco Çift Katlı Taş Pizza Fırını",
-      "category": "",
+      "title": "Vosco Elektrikli 10 Tepsili Rotary Fırın",
+      "category": "İtalya Lezzeti̇”",
       "page": 80,
       "specs": {
         "liste_usd": 1650.0,
-        "guc": "5000 W / 220 V",
+        "liste_eur": null,
+        "guc": "5000 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -853,8 +914,7 @@
           "derinlik_cm": 62.5,
           "yukseklik_cm": 64.0
         }
-      },
-      "description": "5000 W / 220 V - 240 V / 50/60 Hz\nÜrün Boyutu: 72 x 62.5 x 64 cm\nPişirme Odası Boyutu : 52 x 50 x 18 cm\nTaş Ölçüsü : 47.3 x 50 cm\nSıcaklık Aralığı : 0-350°C\nTaş tabanlı yapısı sayesinde pizzalara çıtır taban sağlar\n= Ø 25 cm, 8 Adet pizzayı aynı anda pişirir.\n4000 W / 220 V - 240 V / 50-60 Hz"
+      }
     },
     {
       "model": "VD-300",
@@ -863,13 +923,13 @@
       "category": "Dondurma Maki̇neleri̇",
       "page": 21,
       "specs": {
-        "liste_usd": null,
-        "guc": null,
+        "liste_usd": 6500.0,
+        "liste_eur": null,
+        "guc": "2500 W / 220",
         "kapasite_kg": null,
-        "kapasite_l": null,
+        "kapasite_l": 2.0,
         "olculer": null
-      },
-      "description": ""
+      }
     },
     {
       "model": "VD-520S-PRO",
@@ -879,7 +939,8 @@
       "page": 22,
       "specs": {
         "liste_usd": 6000.0,
-        "guc": "2500 W / 220 V",
+        "liste_eur": null,
+        "guc": "2500 W / 220",
         "kapasite_kg": 152.0,
         "kapasite_l": 2.0,
         "olculer": {
@@ -888,8 +949,7 @@
           "derinlik_cm": 71.0,
           "yukseklik_cm": 158.5
         }
-      },
-      "description": "2500 W / 220 V - 240 V / 50-60 Hz\nHazne Kapasitesi: 5.5 x 2 L\nÜrün Boyutu: 54.1 x 71 x 158.5 cm\nÜrün Ağırlığı: 152 kg\nSoğutucu Gaz: R404A/R134A\nÜretim Kapasitesi: 28 L / Saat\nDarbeye dayanıklı LED ekran"
+      }
     },
     {
       "model": "VD-635-AP",
@@ -898,13 +958,13 @@
       "category": "Dondurma Maki̇neleri̇",
       "page": 22,
       "specs": {
-        "liste_usd": null,
+        "liste_usd": 6000.0,
+        "liste_eur": null,
         "guc": null,
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": null
-      },
-      "description": ""
+      }
     },
     {
       "model": "VDF-7239",
@@ -914,27 +974,28 @@
       "page": 22,
       "specs": {
         "liste_usd": 5750.0,
-        "guc": "2200 W / 220 V",
+        "liste_eur": null,
+        "guc": "2200 W / 220",
         "kapasite_kg": 96.0,
-        "kapasite_l": 2.0,
+        "kapasite_l": 30.0,
         "olculer": {
           "raw": "54 x 78.5 x 80 cm",
           "genislik_cm": 54.0,
           "derinlik_cm": 78.5,
           "yukseklik_cm": 80.0
         }
-      },
-      "description": "2200 W / 220 V  - 240 V / 50-60 Hz\nHazne Kapasitesi: 5.5 x 2 L\nÜrün Boyutu: 54 x 78.5 x 80 cm\nÜrün Ağırlığı: 96 kg\nSoğutucu Gaz: R404A/R290\nÜretim Kapasitesi: 20 L / Saat\nDarbeye dayanıklı LED ekran\n2500 W / 220 V - 240 V / 50-60 Hz"
+      }
     },
     {
       "model": "VESD-8A",
       "modelNorm": "VESD8A",
-      "title": "Vosco 4 Tepsili Elektrikli Konveksiyonlu Fırın",
+      "title": "Vosco 5 Tepsili Elektrikli Plus Konveksiyonlu Fırın",
       "category": "Konveksi̇yonlu Firinlar",
       "page": 73,
       "specs": {
         "liste_usd": 1650.0,
-        "guc": "3000 W / 220 V",
+        "liste_eur": null,
+        "guc": "3000 W  / 220",
         "kapasite_kg": 45.0,
         "kapasite_l": null,
         "olculer": {
@@ -943,19 +1004,19 @@
           "derinlik_cm": 77.0,
           "yukseklik_cm": 57.0
         }
-      },
-      "description": "5000 W + 3000 W  / 220 V / 50 Hz\nÜrün Boyutu : 83.5 x 77 x 57 cm\nTepsi Boyutu : 40 x 60 cm\nSıcaklık Aralığı : 0-300°C\nÜrün Ağırlığı : 45 kg\nZamanlayıcı Aralığı: 0 – 120 dakika\nSıcak hava dolaşımı ve buharlı pişirme özelliği"
+      }
     },
     {
       "model": "VF-25H",
       "modelNorm": "VF25H",
-      "title": "Vosco Tekli Kare Waffle Makinesi",
+      "title": "Vosco Tekli Çiçek Model Waffle Makinesi",
       "category": "Krep & Waffle",
       "page": 56,
       "specs": {
         "liste_usd": 300.0,
-        "guc": "1750 W / 220 V",
-        "kapasite_kg": 23.0,
+        "liste_eur": null,
+        "guc": "1750 W / 220",
+        "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
           "raw": "30 x 38.5 x 25 cm",
@@ -963,18 +1024,18 @@
           "derinlik_cm": 38.5,
           "yukseklik_cm": 25.0
         }
-      },
-      "description": "1750 W / 220 V / 50/60 Hz\nÜrün Boyutu: 30 x 38.5 x 25 cm\nTeflon kaplı yapışmaz pişirme yüzeyi\nFarklı sıcaklık ayarında çalıştırma\nSeri pişirmelerde yüksek performans\nGösterge ve sinyal lambaları\nPaslanmaz çelik gövde\n3000 W / 220 V / 50-60 Hz"
+      }
     },
     {
       "model": "VF-2S",
       "modelNorm": "VF2S",
-      "title": "Vosco Tekli Kare Waffle Makinesi",
+      "title": "VF-2S",
       "category": "Krep & Waffle",
       "page": 55,
       "specs": {
         "liste_usd": 300.0,
-        "guc": "1750 W / 220 V",
+        "liste_eur": null,
+        "guc": "1750 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -983,18 +1044,18 @@
           "derinlik_cm": 30.0,
           "yukseklik_cm": 25.0
         }
-      },
-      "description": "1750 W / 220 V / 50/60 Hz\nÜrün Boyutu: 38.5 x 30 x 25 cm\nTeflon kaplı yapışmaz pişirme yüzeyi\nFarklı sıcaklık ayarında çalıştırma\nSeri pişirmelerde yüksek performans\nGösterge ve sinyal lambaları\nPaslanmaz çelik gövde\n1100 W / 220 V / 50-60 Hz"
+      }
     },
     {
       "model": "VFS-52LB",
       "modelNorm": "VFS52LB",
-      "title": "Vosco 5 Çekmeceli Yatay Salata Vitrin Dolabı",
+      "title": "Vosco Dikey Soğutmalı Teşhir Dolabı",
       "category": "Soğuk Teşhi̇r Dolaplari",
       "page": 13,
       "specs": {
-        "liste_usd": null,
-        "guc": "210 W / 220 V",
+        "liste_usd": 7500.0,
+        "liste_eur": null,
+        "guc": "210 W / 220",
         "kapasite_kg": 38.0,
         "kapasite_l": null,
         "olculer": {
@@ -1003,18 +1064,18 @@
           "derinlik_cm": 42.5,
           "yukseklik_cm": 29.5
         }
-      },
-      "description": "210 W / 220 V / 50-60 Hz\nKapasite: 5 × 1/3 GN kap\nÜrün Boyutu: 135 x 42.5 x 29.5 cm\nÜrün Ağırlığı: 38 kg\nSoğutma Derecesi: 0 - 12℃\nTemperli ön ve yan camlar\nSoğutucu: R290, Ayarlanabilir krom raflar\n210 W / 220 V / 50-60 Hz"
+      }
     },
     {
       "model": "VFT-100R",
       "modelNorm": "VFT100R",
-      "title": "Vosco Dikey Pasta Teşhir Dolabı Silindir",
+      "title": "VFT-100R",
       "category": "Soğuk Teşhi̇r Dolaplari",
       "page": 11,
       "specs": {
         "liste_usd": 2050.0,
-        "guc": "240 W / 220 V",
+        "liste_eur": null,
+        "guc": "240 W / 220",
         "kapasite_kg": 50.0,
         "kapasite_l": 100.0,
         "olculer": {
@@ -1023,18 +1084,18 @@
           "derinlik_cm": 49.0,
           "yukseklik_cm": 106.4
         }
-      },
-      "description": "240 W / 220 V / 50-60 Hz\n100 L Hacim Kapasitesi\nÜrün Boyutu: 49 x 49 x 106.4 cm\nÜrün Ağırlığı: 50 kg\nSoğutma Derecesi: 0 - 12℃\nSürgülü çift cam\nSoğutucu: R290, Ayarlanabilir krom raflar\n240 W / 220 V / 50-60 Hz"
+      }
     },
     {
       "model": "VFT-1500L2",
       "modelNorm": "VFT1500L2",
-      "title": "Vosco 6 Çekmeceli Yatay Salata Vitrin Dolabı",
+      "title": "Vosco 5 Çekmeceli Yatay Salata Vitrin Dolabı",
       "category": "Soğuk Teşhi̇r Dolaplari",
       "page": 13,
       "specs": {
         "liste_usd": 1850.0,
-        "guc": "210 W / 220 V",
+        "liste_eur": null,
+        "guc": "210 W / 220",
         "kapasite_kg": 49.0,
         "kapasite_l": null,
         "olculer": {
@@ -1043,8 +1104,7 @@
           "derinlik_cm": 39.5,
           "yukseklik_cm": 44.5
         }
-      },
-      "description": "210 W / 220 V / 50-60 Hz\nKapasite: 6 × 1/3 GN kap\nÜrün Boyutu: 150 x 39.5 x 44.5 cm\nÜrün Ağırlığı: 49 kg\nSoğutma Derecesi: 0 - 12℃\nTemperli ön ve yan camlar\nSoğutucu: R290, Ayarlanabilir krom raflar"
+      }
     },
     {
       "model": "VFT-235L",
@@ -1053,8 +1113,9 @@
       "category": "Soğuk Teşhi̇r Dolaplari",
       "page": 12,
       "specs": {
-        "liste_usd": null,
-        "guc": "350 W / 220 V",
+        "liste_usd": 1150.0,
+        "liste_eur": null,
+        "guc": "350 W / 220",
         "kapasite_kg": 76.0,
         "kapasite_l": 235.0,
         "olculer": {
@@ -1063,8 +1124,7 @@
           "derinlik_cm": 48.6,
           "yukseklik_cm": 170.2
         }
-      },
-      "description": "350 W / 220 V / 50-60 Hz\n235 L Hacim Kapasitesi\nÜrün Boyutu: 51.5 x 48.6 x 170.2 cm\nÜrün Ağırlığı: 76 kg\nSoğutma Derecesi: 0 - 12℃\nTemperli ön ve yan camlar\nSoğutucu: R290, Ayarlanabilir krom raflar\n350 W / 220 V / 50-60 Hz"
+      }
     },
     {
       "model": "VFT-280L",
@@ -1074,7 +1134,8 @@
       "page": 12,
       "specs": {
         "liste_usd": 2950.0,
-        "guc": "350 W / 220 V",
+        "liste_eur": null,
+        "guc": "350 W / 220",
         "kapasite_kg": 89.0,
         "kapasite_l": 280.0,
         "olculer": {
@@ -1083,8 +1144,7 @@
           "derinlik_cm": 48.6,
           "yukseklik_cm": 190.2
         }
-      },
-      "description": "350 W / 220 V / 50-60 Hz\n280 L Hacim kapasitesi\nÜrün Boyutu: 51.5 x 48.6 x 190.2 cm\nÜrün Ağırlığı: 89 kg\nSoğutma Derecesi: 0 - 12℃\nTemperli ön ve yan camlar\nSoğutucu: R290, Ayarlanabilir krom raflar"
+      }
     },
     {
       "model": "VFT-410L",
@@ -1094,7 +1154,8 @@
       "page": 13,
       "specs": {
         "liste_usd": 7500.0,
-        "guc": "340 W / 220 V",
+        "liste_eur": null,
+        "guc": "340 W / 220",
         "kapasite_kg": 165.0,
         "kapasite_l": 410.0,
         "olculer": {
@@ -1103,18 +1164,18 @@
           "derinlik_cm": 65.0,
           "yukseklik_cm": 188.5
         }
-      },
-      "description": "340 W / 220 V / 50-60 Hz\n400 L Hacim Kapasitesi\nÜrün Boyutu: 65 x 65 x 188.5 cm\nÜrün Ağırlığı: 165 kg\nSoğutma Derecesi: 0 - 12℃\nTemperli ön ve yan camlar\nSoğutucu: R290, Ayarlanabilir krom raflar\n210 W / 220 V / 50-60 Hz"
+      }
     },
     {
       "model": "VFT-78L",
       "modelNorm": "VFT78L",
-      "title": "Vosco Dikey Soğutmalı Teşhir Dolabı",
+      "title": "Vosco Tezgah Üstü Soğutmalı Vitrin Dolabı",
       "category": "Soğuk Teşhi̇r Dolaplari",
       "page": 12,
       "specs": {
         "liste_usd": 1150.0,
-        "guc": "250 W / 220 V",
+        "liste_eur": null,
+        "guc": "250 W / 220",
         "kapasite_kg": 37.0,
         "kapasite_l": 78.0,
         "olculer": {
@@ -1123,18 +1184,18 @@
           "derinlik_cm": 40.6,
           "yukseklik_cm": 96.8
         }
-      },
-      "description": "250 W / 220 V / 50-60 Hz\n78 L Hacim Kapasitesi\nÜrün Boyutu: 45.2 x 40.6 x 96.8 cm\nÜrün Ağırlığı: 37 kg\nSoğutma Derecesi: 0 - 12℃\nTemperli ön ve yan camlar\nSoğutucu: R290, Ayarlanabilir krom raflar\n350 W / 220 V / 50-60 Hz"
+      }
     },
     {
       "model": "VFTW-120L",
       "modelNorm": "VFTW120L",
-      "title": "Vosco Tezgah Üstü Soğutmalı Vitrin Dolabı",
+      "title": "Vosco Dikey Pasta Teşhir Dolabı Silindir",
       "category": "Soğuk Teşhi̇r Dolaplari",
       "page": 11,
       "specs": {
-        "liste_usd": null,
-        "guc": "240 W / 220 V",
+        "liste_usd": 2050.0,
+        "liste_eur": null,
+        "guc": "240 W / 220",
         "kapasite_kg": 57.0,
         "kapasite_l": 120.0,
         "olculer": {
@@ -1143,8 +1204,7 @@
           "derinlik_cm": 57.3,
           "yukseklik_cm": 68.6
         }
-      },
-      "description": "240 W / 220 V / 50-60 Hz\n120 L Hacim Kapasitesi\nÜrün Boyutu: 70.4 x 57.3 x 68.6 cm\nÜrün Ağırlığı: 57 kg\nSoğutma Derecesi: 0 - 12℃\nTemperli ön ve yan camlar\nSoğutucu: R290, Ayarlanabilir krom raflar\n240 W / 220 V / 50-60 Hz"
+      }
     },
     {
       "model": "VFTW-160L",
@@ -1154,7 +1214,8 @@
       "page": 11,
       "specs": {
         "liste_usd": 1850.0,
-        "guc": "240 W / 220 V",
+        "liste_eur": null,
+        "guc": "240 W / 220",
         "kapasite_kg": 66.0,
         "kapasite_l": 160.0,
         "olculer": {
@@ -1163,33 +1224,33 @@
           "derinlik_cm": 57.3,
           "yukseklik_cm": 68.6
         }
-      },
-      "description": "240 W / 220 V / 50-60 Hz\n160 L Hacim kapasitesi\nÜrün Boyutu: 88.7 x 57.3 x 68.6 cm\nÜrün Ağırlığı: 66 kg\nSoğutma Derecesi: 0 - 12℃\nTemperli ön ve yan camlar\nSoğutucu: R290, Ayarlanabilir krom raflar"
+      }
     },
     {
       "model": "VH-F280A",
       "modelNorm": "VHF280A",
-      "title": "Vosco Kemik Kesme Makinesi Paslanmaz Çelik",
+      "title": "Vosco 12” Yarı Otomatik Et Dilimleme Makinesi",
       "category": "Et Di̇li̇mleme Maki̇neleri̇",
       "page": 68,
       "specs": {
         "liste_usd": 2750.0,
-        "guc": "1800 W / 220 V",
+        "liste_eur": null,
+        "guc": "1800 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": null
-      },
-      "description": "1800 W / 220 V / 50/60 Hz\nKasnak Çapı: 21 cm\nTabla Ölçüleri: 60 x 41.5 cm\nTestere Bıçağı Uzunluğu: 165 cm\nPaket Ölçüsü (cm): 55 x 49 x 105\nPaslanmaz çelik gövde ve bıçaklar\nKemik, donmuş et ve sert gıdaların kesimi için\n500 W / 220 V / 50/60 Hz"
+      }
     },
     {
       "model": "VHF-F4",
       "modelNorm": "VHFF4",
-      "title": "Vosco Tekli Çiçek Model Waffle Makinesi",
+      "title": "Vosco Çevirmeli Bubble Waffle Makinesi",
       "category": "Krep & Waffle",
       "page": 55,
       "specs": {
-        "liste_usd": null,
-        "guc": "1750 W / 220 V",
+        "liste_usd": 380.0,
+        "liste_eur": null,
+        "guc": "1750 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -1198,18 +1259,18 @@
           "derinlik_cm": 30.5,
           "yukseklik_cm": 24.0
         }
-      },
-      "description": "1750 W / 220 V / 50/60 Hz\nÜrün Boyutu: 41 x 30.5 x 24 cm\nTeflon kaplı yapışmaz pişirme yüzeyi\nFarklı sıcaklık ayarında çalıştırma\nSeri pişirmelerde yüksek performans\nGösterge ve sinyal lambaları\nPaslanmaz çelik gövde"
+      }
     },
     {
       "model": "VHF-QQ11",
       "modelNorm": "VHFQQ11",
-      "title": "Vosco Çevirmeli Bubble Waffle Makinesi",
+      "title": "Vosco Tekli Kare Waffle Makinesi",
       "category": "Krep & Waffle",
       "page": 55,
       "specs": {
         "liste_usd": 300.0,
-        "guc": "1100 W / 220 V",
+        "liste_eur": null,
+        "guc": "1100 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -1218,18 +1279,18 @@
           "derinlik_cm": 24.0,
           "yukseklik_cm": 22.0
         }
-      },
-      "description": "1100 W / 220 V / 50-60 Hz\nÜrün Boyutu: 34 x 24 x 22 cm\nFarklı sıcaklık ayarlarında çalıştırma\nSeri pişirmelerde yüksek performans\nTeflon kaplı yapışmaz pişirme yüzeyi\nGösterge ve sinyal lambaları\nPaslanmaz çelik gövde\n1750 W / 220 V / 50/60 Hz"
+      }
     },
     {
       "model": "VHS-206",
       "modelNorm": "VHS206",
-      "title": "Vosco 2 Lt Manuel Bar Blender",
-      "category": "",
+      "title": "VHS-206",
+      "category": "Karişimlar.”",
       "page": 29,
       "specs": {
         "liste_usd": 190.0,
-        "guc": "2000 W / 220 V",
+        "liste_eur": null,
+        "guc": "2000 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -1238,18 +1299,18 @@
           "derinlik_cm": 23.0,
           "yukseklik_cm": 49.0
         }
-      },
-      "description": "2000 W / 220 V / 50-60 Hz\nHazne: 2 Litre, kırılmaz polikarbon hazne\nÜrün Boyutu: 21 x 23 x 49 cm\n6 adet paslanmaz çelik FDA gıda sınıfı bıçak\n9 Kademeli ayarlanabilir hız ayarı\n%100 Bakır sarmal 9525 blender Motoru\nHazne: 2 Litre, kırılmaz polikarbon hazne\nÜrün Boyutu: 21 x 23 x 49 cm"
+      }
     },
     {
       "model": "VHS-206C",
       "modelNorm": "VHS206C",
-      "title": "Vosco 2 Lt Dijital Bar Blender",
-      "category": "",
+      "title": "Vosco 2 Lt Manuel Bar Blender",
+      "category": "Karişimlar.”",
       "page": 29,
       "specs": {
         "liste_usd": 250.0,
-        "guc": "1600 W / 220 V",
+        "liste_eur": null,
+        "guc": "1600 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -1258,18 +1319,18 @@
           "derinlik_cm": 23.0,
           "yukseklik_cm": 49.0
         }
-      },
-      "description": "Hazne: 2 Litre, kırılmaz polikarbon hazne\nÜrün Boyutu: 21 x 23 x 49 cm\n6 adet paslanmaz çelik FDA gıda sınıfı bıçak\n8 farklı mod, ayarlanabilir hız ve zaman ayarı\n%100 Bakır sarmal 9535 blender Motoru\n1600 W / 220 V / 50-60 Hz\nHazne: 3 Litre, kırılmaz polikarbon hazne\nÜrün Boyutu: 22 x 23 x 50 cm"
+      }
     },
     {
       "model": "VHS-211E",
       "modelNorm": "VHS211E",
       "title": "Vosco 2 Lt Dijital Soundproof Kapaklı Blender",
-      "category": "",
+      "category": "Bar Blenderlari",
       "page": 30,
       "specs": {
         "liste_usd": 550.0,
-        "guc": "1600 W / 220 V",
+        "liste_eur": null,
+        "guc": "1600 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -1278,8 +1339,7 @@
           "derinlik_cm": 25.0,
           "yukseklik_cm": 48.0
         }
-      },
-      "description": "1600 W / 220 V / 50-60 Hz\nHazne: 2 Litre, kırılmaz polikarbon hazne\nÜrün Boyutu: 23 x 25 x 48 cm\n6 adet paslanmaz çelik FDA gıda sınıfı bıçak\n9 Kademeli ayarlanabilir hız ayarı\n%100 Bakır sarmal 9540 blender motoru\n1600 W / 220 V / 50/60 Hz\nÜrün Boyutu: 31 x 26 x 58 cm"
+      }
     },
     {
       "model": "VHS-360C",
@@ -1288,23 +1348,29 @@
       "category": "Bar Blenderlari",
       "page": 29,
       "specs": {
-        "liste_usd": null,
-        "guc": "2200 W / 220 V",
+        "liste_usd": 460.0,
+        "liste_eur": null,
+        "guc": "2200 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
-        "olculer": null
-      },
-      "description": "2200 W / 220 V / 50-60 Hz"
+        "olculer": {
+          "raw": "24 x 26 x 49 cm",
+          "genislik_cm": 24.0,
+          "derinlik_cm": 26.0,
+          "yukseklik_cm": 49.0
+        }
+      }
     },
     {
       "model": "VHS-602C",
       "modelNorm": "VHS602C",
-      "title": "Vosco 3 Lt Dijital Pro Bar Blender",
-      "category": "",
+      "title": "Vosco 2 Lt Dijital Bar Blender",
+      "category": "Karişimlar.”",
       "page": 29,
       "specs": {
         "liste_usd": 290.0,
-        "guc": "1600 W / 220 V",
+        "liste_eur": null,
+        "guc": "1600 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -1313,18 +1379,18 @@
           "derinlik_cm": 23.0,
           "yukseklik_cm": 50.0
         }
-      },
-      "description": "1600 W / 220 V / 50-60 Hz\nHazne: 3 Litre, kırılmaz polikarbon hazne\nÜrün Boyutu: 22 x 23 x 50 cm\n4 adet paslanmaz çelik FDA gıda sınıfı bıçak\n9 Kademeli ayarlanabilir hız ayarı\n%100 Bakır sarmal 9540 blender motoru\n1600 W / 220 V / 50/60 Hz\nHazne: 4 Litre, kırılmaz polikarbon hazne"
+      }
     },
     {
       "model": "VHS-608",
       "modelNorm": "VHS608",
-      "title": "Vosco 2 Lt Manuel Soundproof Kapaklı Blender",
-      "category": "",
+      "title": "Vosco 4 Lt Dijital Pro Bar Blender",
+      "category": "Bar Blenderlari",
       "page": 30,
       "specs": {
         "liste_usd": 460.0,
-        "guc": "1600 W / 220 V",
+        "liste_eur": null,
+        "guc": "2200 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -1333,18 +1399,18 @@
           "derinlik_cm": 26.0,
           "yukseklik_cm": 49.0
         }
-      },
-      "description": "1600 W / 220 V / 50-60 Hz\nHazne: 2 Litre, kırılmaz polikarbon hazne\nÜrün Boyutu : 24 x 26 x 49 cm\n6 adet paslanmaz çelik FDA gıda sınıfı\nOtomatik aşırı ısınma ve yük koruması mevcut\nUltra sessiz çalışma, üstün güvenlik performansı\nHazne: 2 Litre, kırılmaz polikarbon hazne\nÜrün Boyutu: 24 x 26 x 49 cm"
+      }
     },
     {
       "model": "VHS-608C",
       "modelNorm": "VHS608C",
-      "title": "Vosco 2 Lt Dijital Soundproof Kapaklı Blender",
-      "category": "",
+      "title": "Vosco 2 Lt Manuel Soundproof Kapaklı Blender",
+      "category": "Bar Blenderlari",
       "page": 30,
       "specs": {
         "liste_usd": 500.0,
-        "guc": "1600 W / 220 V",
+        "liste_eur": null,
+        "guc": "1600 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -1353,8 +1419,7 @@
           "derinlik_cm": 26.0,
           "yukseklik_cm": 49.0
         }
-      },
-      "description": "Hazne: 2 Litre, kırılmaz polikarbon hazne\nÜrün Boyutu: 24 x 26 x 49 cm\n6 adet paslanmaz çelik FDA gıda sınıfı bıçak\n8 farklı mod, ayarlanabilir hız ve zaman ayarı\n%100 Bakır sarmal 9535 blender Motoru\n1600 W / 220 V / 50-60 Hz\nHazne: 2 Litre, kırılmaz polikarbon hazne\nÜrün Boyutu: 23 x 25 x 48 cm"
+      }
     },
     {
       "model": "VHS-609C",
@@ -1363,23 +1428,24 @@
       "category": "Bar Blenderlari",
       "page": 30,
       "specs": {
-        "liste_usd": null,
-        "guc": "1600 W / 220 V",
+        "liste_usd": 700.0,
+        "liste_eur": null,
+        "guc": "1600 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": null
-      },
-      "description": "1600 W / 220 V / 50-60 Hz"
+      }
     },
     {
       "model": "VHS-J606",
       "modelNorm": "VHSJ606",
-      "title": "Vosco Sebze Doğrama Et Kıyıcılı 12 Lt",
+      "title": "VHS-J606",
       "category": "Sebze & Soğan Doğrama",
       "page": 71,
       "specs": {
         "liste_usd": 250.0,
-        "guc": "1600 W / 220 V",
+        "liste_eur": null,
+        "guc": "1600 W / 220",
         "kapasite_kg": null,
         "kapasite_l": 12.0,
         "olculer": {
@@ -1388,18 +1454,18 @@
           "derinlik_cm": 25.0,
           "yukseklik_cm": 38.0
         }
-      },
-      "description": "1600 W / 220 V / 50 Hz\n12 L Paslanmaz Çelik Hazne\nÜrün Boyutu : 34 x 25 x 38 cm\n4 adet ‘S’ şeklinde paslanmaz çelik bıçak\n5425 %100 bakır motor, PTC aşırı ısı koruması\nGüvenlik kilidi ve farklı hız kademeleri\nEnerji tasarruflu motor tasarımı, 2 kademe hız\n1100 W / 220 V / 50 Hz"
+      }
     },
     {
       "model": "VHS-JE2106A",
       "modelNorm": "VHSJE2106A",
-      "title": "Vosco Katı Meyve Sıkacağı",
+      "title": "VHS-JE2106A",
       "category": "Kati Meyve Sikacaklari",
       "page": 37,
       "specs": {
         "liste_usd": 250.0,
-        "guc": "1200 W / 220 V",
+        "liste_eur": null,
+        "guc": "1200 W / 220",
         "kapasite_kg": 4.5,
         "kapasite_l": null,
         "olculer": {
@@ -1408,18 +1474,18 @@
           "derinlik_cm": 17.7,
           "yukseklik_cm": 34.3
         }
-      },
-      "description": "1200 W / 220 V / 50-60 Hz\nHazne Kapasitesi: 1250 mL\nÜrün boyutu:  42 x 17.7 x 34.3 cm\nÜrün Ağırlığı: 4.5 kg\nBPA İçermeyen Malzeme/304 Paslanmaz Çelik\nDüşük gürültü ile çalışma fonksiyonu\nEnerji tasarruflu motor tasarımı\n550 W / 220 V / 50-60 Hz"
+      }
     },
     {
       "model": "VHZB-12C",
       "modelNorm": "VHZB12C",
-      "title": "Vosco Pro Set Üstü Buz Makinesi 12 Kg",
+      "title": "Vosco 6 Çekmeceli Yatay Salata Vitrin Dolabı",
       "category": "Buz Maki̇neleri̇",
       "page": 14,
       "specs": {
         "liste_usd": 550.0,
-        "guc": "100 W / 220 V",
+        "liste_eur": null,
+        "guc": "100 W / 220",
         "kapasite_kg": 12.0,
         "kapasite_l": null,
         "olculer": {
@@ -1428,19 +1494,19 @@
           "derinlik_cm": 35.3,
           "yukseklik_cm": 33.0
         }
-      },
-      "description": "100 W / 220 V / 50-60 Hz\n8-10 dakikada 9 adet buz, 12 kg/24 saat\nÜrün Boyutu: 24.2 x 35.3 x 33 cm\nÜrün Ağırlığı: 8 kg\nParmak (Mermi) tipi buz üretimi\nİki farklı büyüklükte buz seçeneği\nEv ve endüstriyel kullanım için uygundur\n150 W / 230 V / 50-60 Hz"
+      }
     },
     {
       "model": "VHZB-12H",
       "modelNorm": "VHZB12H",
-      "title": "Vosco Ekonomik Set Üstü Buz Makinesi 12 Kg",
+      "title": "Vosco Set Üstü Buz Makinesi 20 Kg",
       "category": "Buz Maki̇neleri̇",
       "page": 14,
       "specs": {
         "liste_usd": 500.0,
-        "guc": "100 W / 220 V",
-        "kapasite_kg": 12.0,
+        "liste_eur": null,
+        "guc": "100 W / 220",
+        "kapasite_kg": 20.0,
         "kapasite_l": 1.5,
         "olculer": {
           "raw": "22.2 x 29.4 x 29 cm",
@@ -1448,19 +1514,19 @@
           "derinlik_cm": 29.4,
           "yukseklik_cm": 29.0
         }
-      },
-      "description": "100 W / 220 V / 50-60 Hz\n8-12 dakikada 9 adet buz, 12 kg/24 saat\nÜrün Boyutu: 22.2 x 29.4 x 29 cm\nÜrün Ağırlığı: 8 kg\nSu Hazne Kapasitesi: 1.5 L\nParmak (Mermi) tipi buz üretimi\nİki farklı büyüklükte buz seçeneği\n(kalın & ince)"
+      }
     },
     {
       "model": "VHZB-20/A",
       "modelNorm": "VHZB20A",
-      "title": "Vosco Set Üstü Buz Makinesi 20 Kg",
+      "title": "Vosco Pro Set Üstü Buz Makinesi 12 Kg",
       "category": "Buz Maki̇neleri̇",
       "page": 14,
       "specs": {
         "liste_usd": 700.0,
-        "guc": "150 W / 230 V",
-        "kapasite_kg": 20.0,
+        "liste_eur": null,
+        "guc": "150 W / 230",
+        "kapasite_kg": 12.0,
         "kapasite_l": null,
         "olculer": {
           "raw": "38 x 43.5 x 43 cm",
@@ -1468,33 +1534,38 @@
           "derinlik_cm": 43.5,
           "yukseklik_cm": 43.0
         }
-      },
-      "description": "150 W / 230 V / 50-60 Hz\n10-12 dakikada 12 adet buz, 20 kg/24 saat\nÜrün Boyutu: 38 x 43.5 x 43 cm\nÜrün Ağırlığı: 12 kg\nSu Hazne Kapasitesi: 5 kg\nParmak (Mermi) tipi buz üretimi\nÜç farklı buz tipi boyutu S/M/L\n100 W / 220 V / 50-60 Hz"
+      }
     },
     {
       "model": "VICM-15A",
       "modelNorm": "VICM15A",
-      "title": "Vosco Set Üstü Dondurma Makinesi",
+      "title": "Vosco Tek Kollu Set Üstü Dondurma Makinesi",
       "category": "Dondurma Maki̇neleri̇",
       "page": 21,
       "specs": {
-        "liste_usd": null,
-        "guc": null,
-        "kapasite_kg": null,
-        "kapasite_l": null,
-        "olculer": null
-      },
-      "description": ""
+        "liste_usd": 6500.0,
+        "liste_eur": null,
+        "guc": "2500 W / 220",
+        "kapasite_kg": 140.0,
+        "kapasite_l": 2.0,
+        "olculer": {
+          "raw": "54 x 80 x 145 cm",
+          "genislik_cm": 54.0,
+          "derinlik_cm": 80.0,
+          "yukseklik_cm": 145.0
+        }
+      }
     },
     {
       "model": "VJY-826",
       "modelNorm": "VJY826",
-      "title": "Vosco Arabalı Otomatik Patlamış Mısır Makinesi",
+      "title": "Vosco Tezgah Üstü Otomatik Patlamış Mısır Makinesi",
       "category": "Patlamiş Misir & Candy",
       "page": 39,
       "specs": {
         "liste_usd": 900.0,
-        "guc": "1600 W / 220 V",
+        "liste_eur": null,
+        "guc": "1600 W / 220",
         "kapasite_kg": 17.0,
         "kapasite_l": null,
         "olculer": {
@@ -1503,8 +1574,7 @@
           "derinlik_cm": 41.0,
           "yukseklik_cm": 76.0
         }
-      },
-      "description": "1600 W / 220 V / 50-60 Hz\nHazne Kapasitesi: 300 gr\nÜrün Boyutu: 56 x 41 x 76 cm\nÜrün Ağırlığı: 17 kg\nPaslanmaz çelik + cam malzeme kalitesi\n2 dakika içinde patlamış mısır üretimi\n980 W / 220 V / 50-60 Hz\nKazan Çapı: 20 inç (yaklaşık 50 cm)"
+      }
     },
     {
       "model": "VK-R10",
@@ -1513,8 +1583,9 @@
       "category": "Sebze & Soğan Doğrama",
       "page": 71,
       "specs": {
-        "liste_usd": null,
-        "guc": "1100 W / 220 V",
+        "liste_usd": 250.0,
+        "liste_eur": null,
+        "guc": "1100 W / 220",
         "kapasite_kg": null,
         "kapasite_l": 10.0,
         "olculer": {
@@ -1523,8 +1594,7 @@
           "derinlik_cm": 46.5,
           "yukseklik_cm": 63.0
         }
-      },
-      "description": "1100 W / 220 V / 50 Hz\n10 L büyüklüğünde paslanmaz çelik hazne\nÜrün Boyutu : 42.5 x 46.5 x 63 cm\nPaslanmaz Çelik\nKolay ve rahat kullanım\nÇıkarılabilir hazne ve bıçak yapısı\nGüvenlik kilidi\n10 Lt Kapasiteli Meyve, Sebze ve Et Kıyma Makinesi"
+      }
     },
     {
       "model": "VK-R15",
@@ -1534,7 +1604,8 @@
       "page": 71,
       "specs": {
         "liste_usd": 1350.0,
-        "guc": "1400 W / 220 V",
+        "liste_eur": null,
+        "guc": "1400 W / 220",
         "kapasite_kg": null,
         "kapasite_l": 15.0,
         "olculer": {
@@ -1543,18 +1614,18 @@
           "derinlik_cm": 46.5,
           "yukseklik_cm": 63.0
         }
-      },
-      "description": "1400 W / 220 V / 50 Hz\n15 L büyüklüğünde paslanmaz çelik hazne\nÜrün Boyutu : 42.5 x 46.5 x 63 cm\nPaslanmaz Çelik\nKolay ve rahat kullanım\nÇıkarılabilir hazne ve bıçak yapısı\nGüvenlik kilidi\n15 Lt Kapasiteli Meyve, Sebze ve Et Kıyma Makinesi"
+      }
     },
     {
       "model": "VKB-150",
       "modelNorm": "VKB150",
-      "title": "Vosco Konveyörlü Ekmek Kızartma Makinesi",
+      "title": "VKB-150",
       "category": "Ekmek Kizartma Mak.",
       "page": 43,
       "specs": {
         "liste_usd": 700.0,
-        "guc": "1340 W / 220 V",
+        "liste_eur": null,
+        "guc": "1340 W / 220",
         "kapasite_kg": 14.0,
         "kapasite_l": null,
         "olculer": {
@@ -1563,8 +1634,7 @@
           "derinlik_cm": 42.0,
           "yukseklik_cm": 38.0
         }
-      },
-      "description": "1340 W / 220 V / 50-60 Hz\nSaatte 180 dilim kızartma kapasitesi\nÜrün Boyutu: 29 x 42 x 38 cm\nÜrün Ağırlığı: 14 kg\nMalzeme: Paslanmaz çelik\nÇıkarılabilir kırıntı tepsisi, Isıtıcı + gıda ısıtıcısı\nEv, otel, restaurant kullanımına uygundur\n2640 W / 220 V / 50-60 Hz"
+      }
     },
     {
       "model": "VKB-300",
@@ -1574,7 +1644,8 @@
       "page": 43,
       "specs": {
         "liste_usd": 850.0,
-        "guc": "1940 W / 220 V",
+        "liste_eur": null,
+        "guc": "1940 W / 220",
         "kapasite_kg": 16.0,
         "kapasite_l": null,
         "olculer": {
@@ -1583,8 +1654,7 @@
           "derinlik_cm": 42.0,
           "yukseklik_cm": 38.0
         }
-      },
-      "description": "1940 W / 220 V / 50-60 Hz\nSaatte 450 dilim kızartma kapasitesi\nÜrün Boyutu: 37 x 42 x 38 cm\nÜrün Ağırlığı: 16 kg\nMalzeme: Paslanmaz çelik\nÇıkarılabilir kırıntı tepsisi, Isıtıcı + gıda ısıtıcısı\nEv, otel, restaurant kullanımına uygundur"
+      }
     },
     {
       "model": "VKB-450",
@@ -1594,7 +1664,8 @@
       "page": 43,
       "specs": {
         "liste_usd": 850.0,
-        "guc": "2640 W / 220 V",
+        "liste_eur": null,
+        "guc": "2640 W / 220",
         "kapasite_kg": 20.5,
         "kapasite_l": null,
         "olculer": {
@@ -1603,33 +1674,33 @@
           "derinlik_cm": 42.0,
           "yukseklik_cm": 38.0
         }
-      },
-      "description": "2640 W / 220 V / 50-60 Hz\nSaatte 600 dilim kızartma kapasitesi\nÜrün Boyutu: 47 x 42 x 38 cm\nÜrün Ağırlığı: 20.5 kg\nMalzeme: Paslanmaz çelik\nÇıkarılabilir kırıntı tepsisi, Isıtıcı + gıda ısıtıcısı\nEv, otel, restaurant kullanımına uygundur\n1940 W / 220 V / 50-60 Hz"
+      }
     },
     {
       "model": "VKB1-601901",
       "modelNorm": "VKB1601901",
-      "title": "VKB1-601901",
-      "category": "",
+      "title": "Vosco 10 Parça Boston Kokteyl Shaker Seti",
+      "category": "Kokteyl Setleri̇",
       "page": 95,
       "specs": {
         "liste_usd": 60.0,
+        "liste_eur": null,
         "guc": null,
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": null
-      },
-      "description": "1 adet Vakum Pompası\n1 Adet Otomatik Elektrikli Tirbüşon\n1 Adet Folyo Kesici\n2 Adet Tıpa\n1 Adet Akıtıcı\nOtomatik Tirbuşon Şarap\nAçacağı 6 Parça Set"
+      }
     },
     {
       "model": "VKD-25",
       "modelNorm": "VKD25",
-      "title": "Vosco Dozaj Ayarlı Yarı Otomatik Kahve Değirmeni",
+      "title": "Vosco Dijital Espresso Kahve Değirmeni",
       "category": "Kahve Deği̇rmenleri̇",
       "page": 33,
       "specs": {
         "liste_usd": 480.0,
-        "guc": "200 W / 220 V",
+        "liste_eur": null,
+        "guc": "200 W / 220",
         "kapasite_kg": 5.5,
         "kapasite_l": null,
         "olculer": {
@@ -1638,18 +1709,18 @@
           "derinlik_cm": 14.0,
           "yukseklik_cm": 47.0
         }
-      },
-      "description": "200 W / 220 V / 50-60 Hz\nÇekirdek Haznesi: 1100 gram\nÜrün Boyutu: 22 x 14 x 47 cm\nÜrün Ağırlığı: 5.5 kg\n60 mm paslanmaz çelik öğütme dişlisi\n19 farklı öğütme inceliği seçeneği\n200 W / 220 V / 50-60 Hz\nÇekirdek Haznesi: 1100 gram"
+      }
     },
     {
       "model": "VKD-P25",
       "modelNorm": "VKDP25",
-      "title": "Vosco Dozaj Ayarlı Tam Otomatik Kahve Değirmeni",
+      "title": "Vosco Dozaj Ayarlı Yarı Otomatik Kahve Değirmeni",
       "category": "Kahve Deği̇rmenleri̇",
       "page": 33,
       "specs": {
         "liste_usd": 630.0,
-        "guc": "200 W / 220 V",
+        "liste_eur": null,
+        "guc": "200 W / 220",
         "kapasite_kg": 6.0,
         "kapasite_l": null,
         "olculer": {
@@ -1658,18 +1729,78 @@
           "derinlik_cm": 14.0,
           "yukseklik_cm": 47.0
         }
-      },
-      "description": "200 W / 220 V / 50-60 Hz\nÇekirdek Haznesi: 1100 gram\nÜrün Boyutu: 22 x 14 x 47 cm\nÜrün Ağırlığı: 6 kg\n60 mm paslanmaz çelik öğütme dişlisi\n19 farklı öğütme inceliği seçeneği\n420 W / 220 V / 50-60 Hz\nÇekirdek Haznesi: 850 gram"
+      }
+    },
+    {
+      "model": "VKM-G3R",
+      "modelNorm": "VKMG3R",
+      "title": "VKM-G3R",
+      "category": "Döner Maki̇nesi̇",
+      "page": 45,
+      "specs": {
+        "liste_usd": 1150.0,
+        "liste_eur": null,
+        "guc": "5 W / 220",
+        "kapasite_kg": null,
+        "kapasite_l": null,
+        "olculer": {
+          "raw": "54 x 62.5 x 85 cm",
+          "genislik_cm": 54.0,
+          "derinlik_cm": 62.5,
+          "yukseklik_cm": 85.0
+        }
+      }
+    },
+    {
+      "model": "VKM-G4R",
+      "modelNorm": "VKMG4R",
+      "title": "Vosco Döner Ocağı Alttan Motorlu 3 Radyanlı",
+      "category": "Döner Maki̇nesi̇",
+      "page": 45,
+      "specs": {
+        "liste_usd": 1250.0,
+        "liste_eur": null,
+        "guc": "15 W / 220",
+        "kapasite_kg": null,
+        "kapasite_l": null,
+        "olculer": {
+          "raw": "54 x 62.5 x 103.5 cm",
+          "genislik_cm": 54.0,
+          "derinlik_cm": 62.5,
+          "yukseklik_cm": 103.5
+        }
+      }
+    },
+    {
+      "model": "VKM-G5R",
+      "modelNorm": "VKMG5R",
+      "title": "Vosco Döner Ocağı Alttan Motorlu 4 Radyanlı",
+      "category": "Döner Maki̇nesi̇",
+      "page": 45,
+      "specs": {
+        "liste_usd": 1450.0,
+        "liste_eur": null,
+        "guc": "18 W / 220",
+        "kapasite_kg": null,
+        "kapasite_l": null,
+        "olculer": {
+          "raw": "54 x 62.5 x 121.5 cm",
+          "genislik_cm": 54.0,
+          "derinlik_cm": 62.5,
+          "yukseklik_cm": 121.5
+        }
+      }
     },
     {
       "model": "VKS-100T",
       "modelNorm": "VKS100T",
-      "title": "Vosco Elektrikli Döner Kesme Makinesi Çift Bıçaklı",
-      "category": "Vkm-G5R | Ng5R",
+      "title": "Vosco Döner Ocağı Alttan Motorlu 5 Radyanlı",
+      "category": "Döner Maki̇nesi̇",
       "page": 45,
       "specs": {
         "liste_usd": 275.0,
-        "guc": "80 W / 220 V",
+        "liste_eur": null,
+        "guc": "80 W / 220",
         "kapasite_kg": 1.25,
         "kapasite_l": null,
         "olculer": {
@@ -1678,18 +1809,18 @@
           "derinlik_cm": 15.0,
           "yukseklik_cm": 27.5
         }
-      },
-      "description": "80 W / 220 V / 50/60 Hz\nÜrün Boyutu: 25 x 15 x 27.5 cm\nÜrün Ağırlığı: 1.25 kg\nKesme Kalınlığı: 0-8 mm\nBıçak Çapı: 100 mm\nPürüzsüz ve testere dişli bıçak dahil"
+      }
     },
     {
       "model": "VLJH-20",
       "modelNorm": "VLJH20",
-      "title": "Vosco 20 Litre Meyve Suyu Dispanser",
-      "category": "",
+      "title": "Vosco İMZASI.”",
+      "category": "Vosco İmzasi.”",
       "page": 25,
       "specs": {
         "liste_usd": 1050.0,
-        "guc": "350 W / 220 V",
+        "liste_eur": null,
+        "guc": "350 W / 220",
         "kapasite_kg": 21.0,
         "kapasite_l": 20.0,
         "olculer": {
@@ -1698,18 +1829,18 @@
           "derinlik_cm": 41.2,
           "yukseklik_cm": 72.4
         }
-      },
-      "description": "350 W / 220 V - 240 V / 50 Hz\nÜrün Boyutu : 37.2 x 41.2 x 72.4 cm\nHazne Kapasitesi: 20 L\nÜrün Ağırlığı: 21 Kg\nSoğutucu Gaz: R290 (Çevre dostu,verimli gaz)\nSS + PC Tank: Şeffaf ve dayanıklı paslanmaz hazne\nMeyve suyu ve diğer içecekleri soğuk tutar\nMEYVE SUYU DİSPANSERLERİ"
+      }
     },
     {
       "model": "VLM-2S",
       "modelNorm": "VLM2S",
-      "title": "Vosco İki Isıtıcı Lambalı Sıcak Teşhir Ünitesi",
+      "title": "VLM-2S",
       "category": "Sicak Teşhi̇r Üni̇teleri̇",
       "page": 89,
       "specs": {
         "liste_usd": 750.0,
-        "guc": "550 W / 220 V",
+        "liste_eur": null,
+        "guc": "550 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -1718,18 +1849,18 @@
           "derinlik_cm": 50.0,
           "yukseklik_cm": 70.0
         }
-      },
-      "description": "550 W / 220 V / 50/60 Hz\nÜrün Boyutu: 75 x 50 x 70 cm\n30-80°C ayarlanabilir ısıtma paneli\nEşit ısı dağılımı sağlayan özel reflektör tasarımı\nTam yalıtımlı yapı\nYüksek güç performansı\nPaslanmaz çelik gövde ve bileşenler\n825 W / 220 V / 50/60 Hz"
+      }
     },
     {
       "model": "VLM-3S",
       "modelNorm": "VLM3S",
-      "title": "Vosco Üç Isıtıcı Lambalı Sıcak Teşhir Ünitesi",
+      "title": "Vosco İki Isıtıcı Lambalı Sıcak Teşhir Ünitesi",
       "category": "Sicak Teşhi̇r Üni̇teleri̇",
       "page": 89,
       "specs": {
-        "liste_usd": null,
-        "guc": "825 W / 220 V",
+        "liste_usd": 750.0,
+        "liste_eur": null,
+        "guc": "825 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -1738,28 +1869,27 @@
           "derinlik_cm": 50.0,
           "yukseklik_cm": 70.0
         }
-      },
-      "description": "825 W / 220 V / 50/60 Hz\nÜrün Boyutu: 105 x 50 x 70 cm\n30-80°C ayarlanabilir ısıtma paneli\nEşit ısı dağılımı sağlayan özel reflektör tasarımı\nTam yalıtımlı yapı\nYüksek güç performansı\nPaslanmaz çelik gövde ve bileşenler"
+      }
     },
     {
       "model": "VOSCO",
       "modelNorm": "VOSCO",
-      "title": "Vosco Dikey Pasta Teşhir Dolabı Silindir",
-      "category": "",
-      "page": 11,
+      "title": "Vosco 6 Parça",
+      "category": "Kokteyl Setleri̇",
+      "page": 94,
       "specs": {
-        "liste_usd": 2050.0,
-        "guc": "240 W / 220 V",
-        "kapasite_kg": 50.0,
-        "kapasite_l": 100.0,
+        "liste_usd": 50.0,
+        "liste_eur": 16750.0,
+        "guc": "400 W / 220",
+        "kapasite_kg": null,
+        "kapasite_l": null,
         "olculer": {
-          "raw": "49 x 49 x 106.4 cm",
-          "genislik_cm": 49.0,
-          "derinlik_cm": 49.0,
-          "yukseklik_cm": 106.4
+          "raw": "40 x 32 x 45 cm",
+          "genislik_cm": 40.0,
+          "derinlik_cm": 32.0,
+          "yukseklik_cm": 45.0
         }
-      },
-      "description": "SOĞUK TEŞHİR DOLAPLARI\n240 W / 220 V / 50-60 Hz\n100 L Hacim Kapasitesi\nÜrün Boyutu: 49 x 49 x 106.4 cm\nÜrün Ağırlığı: 50 kg\nSoğutma Derecesi: 0 - 12℃\nSürgülü çift cam\nSoğutucu: R290, Ayarlanabilir krom raflar"
+      }
     },
     {
       "model": "VS-150LK",
@@ -1769,7 +1899,8 @@
       "page": 9,
       "specs": {
         "liste_usd": null,
-        "guc": "150 W / 220 V",
+        "liste_eur": 1000.0,
+        "guc": "150 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -1778,18 +1909,18 @@
           "derinlik_cm": 43.5,
           "yukseklik_cm": 146.5
         }
-      },
-      "description": "150 W / 220 V\n€1000 EURO\n60.5x43.5x146.5 cm\n€1200 EURO\n€2500 EURO\nSoğutucu Gaz R404A\nİç hazne 304 kalite paslanmaz  / CR-Nİ dayanıklı dış yüzey\n150 W / 220 V"
+      }
     },
     {
       "model": "VS-300LK",
       "modelNorm": "VS300LK",
       "title": "VS-300LK",
-      "category": "",
+      "category": "Su Sebi̇lleri̇",
       "page": 9,
       "specs": {
         "liste_usd": null,
-        "guc": "1000 W / 220 V",
+        "liste_eur": null,
+        "guc": "1000 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -1798,18 +1929,18 @@
           "derinlik_cm": 60.0,
           "yukseklik_cm": 175.0
         }
-      },
-      "description": "Soğutucu Gaz R404A (çevre dostu) / CR-Nİ dayanıklı dış yüzey\nŞebeke ve damacanalı sistem olarak kullanılabilir\nİç hazne 304 kalite paslanmaz kromdan tasarlandı\n1000 W / 220 V\n95x60x175 cm\n1700 W / 220 V\n122x60x175 cm\n1720 W / 220 V"
+      }
     },
     {
       "model": "VS-400LK",
       "modelNorm": "VS400LK",
       "title": "VS-400LK",
-      "category": "",
+      "category": "Su Sebi̇lleri̇",
       "page": 9,
       "specs": {
         "liste_usd": null,
-        "guc": "1000 W / 220 V",
+        "liste_eur": null,
+        "guc": "1000 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -1818,18 +1949,18 @@
           "derinlik_cm": 60.0,
           "yukseklik_cm": 175.0
         }
-      },
-      "description": "Soğutucu Gaz R404A (çevre dostu) / CR-Nİ dayanıklı dış yüzey\nŞebeke ve damacanalı sistem olarak kullanılabilir\nİç hazne 304 kalite paslanmaz kromdan tasarlandı\n1000 W / 220 V\n95x60x175 cm\n1700 W / 220 V\n122x60x175 cm\n1720 W / 220 V"
+      }
     },
     {
       "model": "VS-500LK",
       "modelNorm": "VS500LK",
       "title": "VS-500LK",
-      "category": "",
+      "category": "Su Sebi̇lleri̇",
       "page": 9,
       "specs": {
         "liste_usd": null,
-        "guc": "1000 W / 220 V",
+        "liste_eur": 1000.0,
+        "guc": "1000 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -1838,18 +1969,18 @@
           "derinlik_cm": 60.0,
           "yukseklik_cm": 175.0
         }
-      },
-      "description": "Soğutucu Gaz R404A (çevre dostu) / CR-Nİ dayanıklı dış yüzey\nŞebeke ve damacanalı sistem olarak kullanılabilir\nİç hazne 304 kalite paslanmaz kromdan tasarlandı\n1000 W / 220 V\n95x60x175 cm\n1700 W / 220 V\n122x60x175 cm\n1720 W / 220 V"
+      }
     },
     {
       "model": "VS-50LK",
       "modelNorm": "VS50LK",
       "title": "VS-50LK",
-      "category": "€1000 Euro",
+      "category": "150 W / 220 V",
       "page": 9,
       "specs": {
         "liste_usd": null,
-        "guc": "150 W / 220 V",
+        "liste_eur": 1200.0,
+        "guc": "150 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -1858,8 +1989,7 @@
           "derinlik_cm": 43.5,
           "yukseklik_cm": 146.5
         }
-      },
-      "description": "€1200 EURO\n€2500 EURO\nSoğutucu Gaz R404A\nİç hazne 304 kalite paslanmaz  / CR-Nİ dayanıklı dış yüzey\n150 W / 220 V\n60.5x43.5x146.5 cm\n350 W / 220 V\n60.5x43.5x146.5 cm"
+      }
     },
     {
       "model": "VS-80LK",
@@ -1869,7 +1999,8 @@
       "page": 9,
       "specs": {
         "liste_usd": null,
-        "guc": "150 W / 220 V",
+        "liste_eur": 1000.0,
+        "guc": "1720 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -1878,18 +2009,18 @@
           "derinlik_cm": 43.5,
           "yukseklik_cm": 146.5
         }
-      },
-      "description": "150 W / 220 V\n€1000 EURO\n60.5x43.5x146.5 cm\n€1200 EURO\n€2500 EURO\nSoğutucu Gaz R404A\nİç hazne 304 kalite paslanmaz  / CR-Nİ dayanıklı dış yüzey\n150 W / 220 V"
+      }
     },
     {
       "model": "VS-ER268",
       "modelNorm": "VSER268",
-      "title": "Vosco Elektrikli Piliç Çevirme Fırını",
+      "title": "Vosco Elektrikli Piliç",
       "category": "Pi̇li̇ç Çevi̇rme Firinlari",
       "page": 84,
       "specs": {
         "liste_usd": 1250.0,
-        "guc": "6000 W / 220 V",
+        "liste_eur": null,
+        "guc": "6000W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -1898,33 +2029,33 @@
           "derinlik_cm": 63.0,
           "yukseklik_cm": 70.0
         }
-      },
-      "description": "6000W / 220V / 50-60Hz\nÜrün Boyutu: 101 x 63 x 70 cm\nKapasite: 12-16 Adet Piliç\nSıcaklık Aralığı: 20 – 300°C\nYüksek ısı verimi sağlayan rezistans sistemi\nPaslanmaz Çelik Gövde\nKolay kullanım yüksek verimlilik\n10000 W / 380 V / 50/60 Hz"
+      }
     },
     {
       "model": "VSC-1",
       "modelNorm": "VSC1",
-      "title": "Vosco 3 Parça",
+      "title": "Vosco 6 Parça",
       "category": "Kokteyl Setleri̇",
-      "page": 93,
+      "page": 94,
       "specs": {
-        "liste_usd": 25.0,
+        "liste_usd": 50.0,
+        "liste_eur": null,
         "guc": null,
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": null
-      },
-      "description": "Yüksek kaliteli paslanmaz çelik\n3 parça (Shaker, Jigger, Burgulu Bar Kaşığı)\n1 adet 750 ml paslanmaz çelik shaker haznesi\n1 adet burgulu bar kaşığı\n1 adet 3/1.5 cc jigger\nLeke tutmaz, korozyona dayanıklı, uzun ömürlü\nKullanım alanı: Profesyonel barlar ve evler\nKokteyl Shaker / Boston Kokteyl Shaker"
+      }
     },
     {
       "model": "VSC-100T/C",
       "modelNorm": "VSC100TC",
-      "title": "Vosco Buz Makinesi 100 Kg/Gün Gurme- Küp",
+      "title": "Vosco Buz Makinesi 65 Kg/Gün Küp Buz",
       "category": "Buz Maki̇neleri̇",
       "page": 17,
       "specs": {
         "liste_usd": 3250.0,
-        "guc": "665 W / 220 V",
+        "liste_eur": null,
+        "guc": "665 W / 220",
         "kapasite_kg": 100.0,
         "kapasite_l": null,
         "olculer": {
@@ -1933,34 +2064,34 @@
           "derinlik_cm": 58.5,
           "yukseklik_cm": 89.5
         }
-      },
-      "description": "665 W / 220 V / 50-60 Hz\nGünlük 100 kg buz üretim kapasitesi\nÜrün Boyutu: 68 x 58.5 x 89.5 cm\nHazne Kapasitesi: 30 kg\nAyarlanabilir Buz Kalınlığı\nBuz Türü: Gurme\nSessiz çalışma, bekleme ve ayarlanabilir mod\n720 W / 220 V / 50-60 Hz"
+      }
     },
     {
       "model": "VSC-10F",
       "modelNorm": "VSC10F",
-      "title": "Vosco 10 Parça French Kokteyl Shaker Seti",
+      "title": "Vosco 7 Parça",
       "category": "Kokteyl Setleri̇",
       "page": 94,
       "specs": {
         "liste_usd": 80.0,
+        "liste_eur": null,
         "guc": null,
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": null
-      },
-      "description": "Yüksek kaliteli paslanmaz çelik\n1 adet 750 ml paslanmaz çelik shaker haznesi\n1 adet burgulu bar kaşığı\n1 adet 3/1.5 cc jigger\n2 adet pourer; 1 adet buz maşası\n1 adet ezici tokmak ve çok fonksiyonlu tırbuşon\n1 adet bar shaker süzgeci\nYüksek kaliteli paslanmaz çelik"
+      }
     },
     {
       "model": "VSC-120C",
       "modelNorm": "VSC120C",
-      "title": "Vosco Buz Makinesi 120 Kg/ Gün Küp",
+      "title": "Vosco Buz Makinesi 100 Kg/Gün Gurme- Küp",
       "category": "Buz Maki̇neleri̇",
       "page": 17,
       "specs": {
-        "liste_usd": null,
-        "guc": "720 W / 220 V",
-        "kapasite_kg": 120.0,
+        "liste_usd": 3250.0,
+        "liste_eur": null,
+        "guc": "720 W / 220",
+        "kapasite_kg": 100.0,
         "kapasite_l": null,
         "olculer": {
           "raw": "67 x 65 x 121 cm",
@@ -1968,19 +2099,19 @@
           "derinlik_cm": 65.0,
           "yukseklik_cm": 121.0
         }
-      },
-      "description": "720 W / 220 V / 50-60 Hz\nGünlük 120 kg buz üretim kapasitesi\nÜrün Boyutu: 67 x 65 x 121 cm\nHazne Kapasitesi: 60 kg\nAyarlanabilir buz kalınlığı\nBuz Türü: Gurme\nSessiz çalışma, bekleme ve ayarlanabilir mod\n900 W / 220 V / 50-60 Hz"
+      }
     },
     {
       "model": "VSC-150C",
       "modelNorm": "VSC150C",
-      "title": "Vosco Buz Makinesi 150 Kg/Gün Küp",
+      "title": "Vosco Buz Makinesi 120 Kg/ Gün Küp",
       "category": "Buz Maki̇neleri̇",
       "page": 17,
       "specs": {
         "liste_usd": 3600.0,
-        "guc": "900 W / 220 V",
-        "kapasite_kg": 150.0,
+        "liste_eur": null,
+        "guc": "900 W / 220",
+        "kapasite_kg": 120.0,
         "kapasite_l": null,
         "olculer": {
           "raw": "76 x 60 x 53.5 cm",
@@ -1988,18 +2119,18 @@
           "derinlik_cm": 60.0,
           "yukseklik_cm": 53.5
         }
-      },
-      "description": "900 W / 220 V / 50-60 Hz\nGünlük 150 kg buz üretim kapasitesi\nÜrün Boyutu: 76 x 60 x 53.5 cm\nBuz Küp Boyutu: 28 x 28 x 22 mm\nHazne Kapasitesi: 150 kg\nSessiz çalışma, bekleme ve ayarlanabilir mod\n(içi boş & dolu buz)\n(içi boş veya dolu buz)"
+      }
     },
     {
       "model": "VSC-200C",
       "modelNorm": "VSC200C",
-      "title": "Vosco Buz Makinesi 200 Kg/Gün Küp",
+      "title": "VSC-200C",
       "category": "Buz Maki̇neleri̇",
       "page": 18,
       "specs": {
         "liste_usd": 7000.0,
-        "guc": "1200 W / 220 V",
+        "liste_eur": null,
+        "guc": "1200 W / 220",
         "kapasite_kg": 200.0,
         "kapasite_l": null,
         "olculer": {
@@ -2008,18 +2139,18 @@
           "derinlik_cm": 60.0,
           "yukseklik_cm": 53.5
         }
-      },
-      "description": "1200 W / 220 V / 50-60 Hz\nGünlük 200 kg buz üretim kapasitesi\nÜrün Boyutu: 76 x 60 x 53.5 cm\nHazne Boyutu: 76 x 82 x 98 cm\nHazne Kapasitesi: 150 kg\nSessiz çalışma, bekleme ve ayarlanabilir mod\n1500 W / 220 V / 50-60 Hz\n1800 W / 220 V / 50-60 Hz"
+      }
     },
     {
       "model": "VSC-23C",
       "modelNorm": "VSC23C",
-      "title": "Vosco Buz Makinesi 23 Kg/Gün Küp Buz",
+      "title": "Vosco Ekonomik Set Üstü Buz Makinesi 12 Kg",
       "category": "Buz Maki̇neleri̇",
       "page": 15,
       "specs": {
         "liste_usd": 1100.0,
-        "guc": "200 W / 220 V",
+        "liste_eur": null,
+        "guc": "200 W / 220",
         "kapasite_kg": 23.0,
         "kapasite_l": null,
         "olculer": {
@@ -2028,8 +2159,7 @@
           "derinlik_cm": 33.0,
           "yukseklik_cm": 60.0
         }
-      },
-      "description": "200 W / 220 V / 50-60 Hz\nGünlük 23 kg buz üretim kapasitesi\nÜrün Boyutu: 34 x 33 x 60 cm\nHazne Kapasitesi: 4 kg / 450 adet buz\nAyarlanabilir buz kalınlığı\nKüp Buz Ölçüleri: 22 x 22 x 22 mm\nSessiz çalışma, bekleme ve temizlik modları\n300 W / 220 V / 50-60 Hz"
+      }
     },
     {
       "model": "VSC-250C",
@@ -2038,9 +2168,10 @@
       "category": "Buz Maki̇neleri̇",
       "page": 18,
       "specs": {
-        "liste_usd": null,
-        "guc": "1500 W / 220 V",
-        "kapasite_kg": 250.0,
+        "liste_usd": 7000.0,
+        "liste_eur": null,
+        "guc": "1500 W / 220",
+        "kapasite_kg": 200.0,
         "kapasite_l": null,
         "olculer": {
           "raw": "76 x 60 x 53.5 cm",
@@ -2048,19 +2179,19 @@
           "derinlik_cm": 60.0,
           "yukseklik_cm": 53.5
         }
-      },
-      "description": "1500 W / 220 V / 50-60 Hz\n1800 W / 220 V / 50-60 Hz\nGünlük 250 kg buz üretim kapasitesi\nGünlük 300 kg buz üretim kapasitesi\nÜrün Boyutu: 76 x 60 x 53.5 cm\nÜrün Boyutu: 76 x 60 x 70 cm\nHazne Boyutu: 76 x 82 x 98 cm\nHazne Boyutu: 76 x 82 x 98 cm"
+      }
     },
     {
       "model": "VSC-25C",
       "modelNorm": "VSC25C",
-      "title": "Vosco Buz Makinesi 25 Kg/Gün Küp Buz",
+      "title": "Vosco Buz Makinesi 35 Kg/Gün Gurme Buz",
       "category": "Buz Maki̇neleri̇",
       "page": 15,
       "specs": {
         "liste_usd": 1400.0,
-        "guc": "350 W / 220 V",
-        "kapasite_kg": 25.0,
+        "liste_eur": null,
+        "guc": "350 W / 220",
+        "kapasite_kg": 35.0,
         "kapasite_l": null,
         "olculer": {
           "raw": "50 x 58 x 80 cm",
@@ -2068,49 +2199,49 @@
           "derinlik_cm": 58.0,
           "yukseklik_cm": 80.0
         }
-      },
-      "description": "350 W / 220 V / 50-60 Hz\nGünlük 25 kg buz üretim kapasitesi\nÜrün Boyutu: 50 x 58 x 80 cm\nHazne Kapasitesi: 22 kg\nAyarlanabilir Buz Kalınlığı\nKüp Buz Ölçüleri: 22 x 22 x 22 mm\nSessiz çalışma, bekleme ve ayarlanabilir mod"
+      }
     },
     {
       "model": "VSC-3",
       "modelNorm": "VSC3",
-      "title": "Vosco 6 Parça",
+      "title": "Vosco 3 Parça",
       "category": "Kokteyl Setleri̇",
       "page": 93,
       "specs": {
         "liste_usd": 35.0,
+        "liste_eur": null,
         "guc": null,
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": null
-      },
-      "description": "Kokteyl Shaker / Boston Kokteyl Shaker"
+      }
     },
     {
       "model": "VSC-300B",
       "modelNorm": "VSC300B",
-      "title": "Vosco 6 Parça",
+      "title": "Vosco 3 Parça",
       "category": "Kokteyl Setleri̇",
       "page": 93,
       "specs": {
         "liste_usd": 35.0,
+        "liste_eur": null,
         "guc": null,
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": null
-      },
-      "description": "Kokteyl Shaker / Boston Kokteyl Shaker"
+      }
     },
     {
       "model": "VSC-300C",
       "modelNorm": "VSC300C",
-      "title": "Vosco Buz Makinesi 250 Kg/Gün Küp",
+      "title": "Vosco Buz Makinesi 200 Kg/Gün Küp",
       "category": "Buz Maki̇neleri̇",
       "page": 18,
       "specs": {
-        "liste_usd": null,
-        "guc": "1500 W / 220 V",
-        "kapasite_kg": 250.0,
+        "liste_usd": 7000.0,
+        "liste_eur": null,
+        "guc": "1500 W / 220",
+        "kapasite_kg": 200.0,
         "kapasite_l": null,
         "olculer": {
           "raw": "76 x 60 x 53.5 cm",
@@ -2118,19 +2249,19 @@
           "derinlik_cm": 60.0,
           "yukseklik_cm": 53.5
         }
-      },
-      "description": "1500 W / 220 V / 50-60 Hz\n1800 W / 220 V / 50-60 Hz\nGünlük 250 kg buz üretim kapasitesi\nGünlük 300 kg buz üretim kapasitesi\nÜrün Boyutu: 76 x 60 x 53.5 cm\nÜrün Boyutu: 76 x 60 x 70 cm\nHazne Boyutu: 76 x 82 x 98 cm\nHazne Boyutu: 76 x 82 x 98 cm"
+      }
     },
     {
       "model": "VSC-35C",
       "modelNorm": "VSC35C",
-      "title": "Vosco Buz Makinesi 35 Kg/Gün Gurme Buz",
+      "title": "Vosco Buz Makinesi 23 Kg/Gün Küp Buz",
       "category": "Buz Maki̇neleri̇",
       "page": 15,
       "specs": {
         "liste_usd": 1550.0,
-        "guc": "300 W / 220 V",
-        "kapasite_kg": 35.0,
+        "liste_eur": null,
+        "guc": "300 W / 220",
+        "kapasite_kg": 23.0,
         "kapasite_l": null,
         "olculer": {
           "raw": "38 x 41 x 67.5 cm",
@@ -2138,18 +2269,18 @@
           "derinlik_cm": 41.0,
           "yukseklik_cm": 67.5
         }
-      },
-      "description": "300 W / 220 V / 50-60 Hz\nGünlük 35 kg Buz Üretim Kapasitesi\nÜrün Boyutu: 38 x 41 x 67.5 cm\nHazne Kapasitesi: 25 kg\nAyarlanabilir Buz Kalınlığı\nKüp Buz Ölçüleri: 22 x 22 x 22 mm\nİçi boş veya dolu buz seçenekleri sunar\n350 W / 220 V / 50-60 Hz"
+      }
     },
     {
       "model": "VSC-40C",
       "modelNorm": "VSC40C",
-      "title": "Vosco Buz Makinesi 40 Kg/Gün Küp Buz",
+      "title": "Vosco Buz Makinesi 25 Kg/Gün Küp Buz",
       "category": "Buz Maki̇neleri̇",
       "page": 16,
       "specs": {
         "liste_usd": 1800.0,
-        "guc": "440 W / 220 V",
+        "liste_eur": null,
+        "guc": "440 W / 220",
         "kapasite_kg": 40.0,
         "kapasite_l": null,
         "olculer": {
@@ -2158,19 +2289,19 @@
           "derinlik_cm": 58.0,
           "yukseklik_cm": 80.0
         }
-      },
-      "description": "440 W / 220 V / 50-60 Hz\nGünlük 40 kg Buz Üretim Kapasitesi\nÜrün Boyutu: 50 x 58 x 80 cm\nHazne Kapasitesi: 22 kg\nAyarlanabilir Buz Kalınlığı\nKüp Buz Ölçüleri: 22 x 22 x 22 mm\nSessiz çalışma, bekleme ve ayarlanabilir mod\n300 W / 220 V / 50-60 Hz"
+      }
     },
     {
       "model": "VSC-45/S",
       "modelNorm": "VSC45S",
-      "title": "Vosco Buz Makinesi 45 Kg/Gün Küp Buz",
+      "title": "Vosco Buz Makinesi 40 Kg/Gün Küp Buz",
       "category": "Buz Maki̇neleri̇",
       "page": 16,
       "specs": {
-        "liste_usd": null,
-        "guc": "300 W / 220 V",
-        "kapasite_kg": 45.0,
+        "liste_usd": 1800.0,
+        "liste_eur": null,
+        "guc": "300 W / 220",
+        "kapasite_kg": 40.0,
         "kapasite_l": null,
         "olculer": {
           "raw": "44.8 x 40.8 x 80 cm",
@@ -2178,18 +2309,18 @@
           "derinlik_cm": 40.8,
           "yukseklik_cm": 80.0
         }
-      },
-      "description": "300 W / 220 V / 50-60 Hz\nGünlük 45 kg Buz Üretim Kapasitesi\nÜrün Boyutu: 44.8 x 40.8 x 80 cm\nHazne Kapasitesi: 15 kg\nAyarlanabilir buz kalınlığı özelliği\nKüp Buz Ölçüleri: 22 x 22 x 22 mm\nSessiz çalışma, bekleme ve ayarlanabilir mod\n350 W / 230 V / 50-60 Hz"
+      }
     },
     {
       "model": "VSC-500C",
       "modelNorm": "VSC500C",
-      "title": "Vosco Buz Makinesi",
-      "category": "",
+      "title": "Vosco Buz Makinesi 250 Kg/Gün Küp",
+      "category": "Buz Maki̇neleri̇",
       "page": 19,
       "specs": {
         "liste_usd": 9000.0,
-        "guc": "2000 W / 220 V",
+        "liste_eur": null,
+        "guc": "2000 W / 220",
         "kapasite_kg": 500.0,
         "kapasite_l": null,
         "olculer": {
@@ -2198,8 +2329,7 @@
           "derinlik_cm": 60.0,
           "yukseklik_cm": 86.5
         }
-      },
-      "description": "2000 W / 220 V / 50-60 Hz\nGünlük 500 kg buz üretim kapasitesi\nÜrün Boyutu: 76 x 60 x 86.5 cm\nHazne Boyutu: 76 x 82 x 98 cm\nHazne Kapasitesi: 150 kg\nSessiz çalışma, bekleme ve ayarlanabilir mod\n500 Kg/Gün Küp\nBuz Küp Boyutu: 28 x 28 x 22 mm"
+      }
     },
     {
       "model": "VSC-6",
@@ -2208,13 +2338,13 @@
       "category": "Kokteyl Setleri̇",
       "page": 93,
       "specs": {
-        "liste_usd": null,
+        "liste_usd": 44.0,
+        "liste_eur": null,
         "guc": null,
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": null
-      },
-      "description": ""
+      }
     },
     {
       "model": "VSC-600B",
@@ -2223,24 +2353,25 @@
       "category": "Kokteyl Setleri̇",
       "page": 93,
       "specs": {
-        "liste_usd": null,
+        "liste_usd": 44.0,
+        "liste_eur": null,
         "guc": null,
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": null
-      },
-      "description": ""
+      }
     },
     {
       "model": "VSC-616DE",
       "modelNorm": "VSC616DE",
-      "title": "Vosco Stand Mikser – 16L",
+      "title": "VSC-616DE",
       "category": "Mi̇kserler",
       "page": 65,
       "specs": {
         "liste_usd": 950.0,
-        "guc": "750 W / 220 V",
-        "kapasite_kg": 60.0,
+        "liste_eur": null,
+        "guc": "2800 W / 220",
+        "kapasite_kg": null,
         "kapasite_l": 16.0,
         "olculer": {
           "raw": "52 x 34 x 48 cm",
@@ -2248,19 +2379,19 @@
           "derinlik_cm": 34.0,
           "yukseklik_cm": 48.0
         }
-      },
-      "description": "2800 W / 220-240 V / 50-60 Hz\n16 litre büyük 304 paslanmaz çelik hazne\nÜrün Boyutu: 52 x 34 x 48 cm\nTicari model, kesintisiz 4 saat çalışabilme\n6 kademeli hız + pulse ve LED gösterge\nHamur kancası, metal ve yumurta çırpıcı, spatula\n750 W / 220 V / 50/60 Hz\nÜrün Boyutu: 45 x 36 x 65 cm"
+      }
     },
     {
       "model": "VSC-65/S",
       "modelNorm": "VSC65S",
-      "title": "Vosco Buz Makinesi 65 Kg/Gün Küp Buz",
+      "title": "Vosco Buz Makinesi 45 Kg/Gün Küp Buz",
       "category": "Buz Maki̇neleri̇",
       "page": 16,
       "specs": {
         "liste_usd": 1900.0,
-        "guc": "350 W / 230 V",
-        "kapasite_kg": 65.0,
+        "liste_eur": null,
+        "guc": "350 W / 230",
+        "kapasite_kg": 45.0,
         "kapasite_l": null,
         "olculer": {
           "raw": "48 x 40 x 80 cm",
@@ -2268,68 +2399,67 @@
           "derinlik_cm": 40.0,
           "yukseklik_cm": 80.0
         }
-      },
-      "description": "350 W / 230 V / 50-60 Hz\nGünlük 65 kg Buz Üretim Kapasitesi\nÜrün Boyutu: 48 x 40 x 80 cm\nHazne Kapasitesi: 15 kg\nAyarlanabilir buz kalınlığı özelliği\nKüp Buz Ölçüleri: 22 x 22 x 22 mm\nSessiz çalışma, bekleme ve ayarlanabilir mod"
+      }
     },
     {
       "model": "VSC-7",
       "modelNorm": "VSC7",
-      "title": "Vosco 10 Parça French Kokteyl Shaker Seti",
+      "title": "Vosco 7 Parça",
       "category": "Kokteyl Setleri̇",
       "page": 94,
       "specs": {
         "liste_usd": 50.0,
+        "liste_eur": null,
         "guc": null,
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": null
-      },
-      "description": "Yüksek kaliteli paslanmaz çelik\n1 adet 750 ml paslanmaz çelik shaker haznesi\n1 adet burgulu bar kaşığı\n1 adet 3/1.5 cc jigger\n2 adet pourer; 1 adet buz maşası\n1 adet ezici tokmak ve çok fonksiyonlu tırbuşon\n1 adet bar shaker süzgeci\nYüksek kaliteli paslanmaz çelik"
+      }
     },
     {
       "model": "VSC-700B",
       "modelNorm": "VSC700B",
-      "title": "Vosco 7 Parça",
-      "category": "",
+      "title": "Vosco 6 Parça",
+      "category": "Kokteyl Setleri̇",
       "page": 94,
       "specs": {
-        "liste_usd": null,
+        "liste_usd": 44.0,
+        "liste_eur": null,
         "guc": null,
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": null
-      },
-      "description": "KOKTEYL SETLERİ\nYüksek kaliteli paslanmaz çelik\n1 adet 750 ml paslanmaz çelik shaker haznesi\n1 adet burgulu bar kaşığı\n1 adet 3/1.5 cc jigger\n2 adet pourer\n1 adet ezici tokmak\n1 adet bar shaker süzgeci"
+      }
     },
     {
       "model": "VSC-900B",
       "modelNorm": "VSC900B",
-      "title": "Vosco 10 Parça Boston Kokteyl Shaker Seti",
+      "title": "Vosco 10 Parça French Kokteyl Shaker Seti",
       "category": "Kokteyl Setleri̇",
       "page": 94,
       "specs": {
         "liste_usd": 76.0,
+        "liste_eur": null,
         "guc": null,
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": null
-      },
-      "description": "Yüksek kaliteli paslanmaz çelik\n1 adet 750 ml paslanmaz çelik shaker haznesi\n1 adet burgulu bar kaşığı\n1 adet 3/1.5 cc jigger\n2 adet pourer; 1 adet buz maşası\n1 adet ezici tokmak ve çok fonksiyonlu tırbuşon\n1 adet bar shaker süzgeci"
+      }
     },
     {
       "model": "VSC-KB1",
       "modelNorm": "VSCKB1",
-      "title": "Vosco 3 Parça",
+      "title": "VSC-KB1",
       "category": "Kokteyl Setleri̇",
       "page": 93,
       "specs": {
         "liste_usd": 25.0,
+        "liste_eur": null,
         "guc": null,
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": null
-      },
-      "description": "Yüksek kaliteli paslanmaz çelik\n3 parça (Shaker, Jigger, Burgulu Bar Kaşığı)\n1 adet 750 ml paslanmaz çelik shaker haznesi\n1 adet burgulu bar kaşığı\n1 adet 3/1.5 cc jigger\nLeke tutmaz, korozyona dayanıklı, uzun ömürlü\nKullanım alanı: Profesyonel barlar ve evler\nKokteyl Shaker / Boston Kokteyl Shaker"
+      }
     },
     {
       "model": "VSCG-3",
@@ -2339,22 +2469,23 @@
       "page": 92,
       "specs": {
         "liste_usd": 40.0,
+        "liste_eur": null,
         "guc": null,
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": null
-      },
-      "description": ""
+      }
     },
     {
       "model": "VSL-300E",
       "modelNorm": "VSL300E",
-      "title": "Vosco Tam Otomatik Et Dilimleme Makinesi",
+      "title": "Vosco Kemik Kesme Makinesi Paslanmaz Çelik",
       "category": "Et Di̇li̇mleme Maki̇neleri̇",
       "page": 68,
       "specs": {
         "liste_usd": 2750.0,
-        "guc": "500 W / 220 V",
+        "liste_eur": null,
+        "guc": "500 W / 220",
         "kapasite_kg": 44.0,
         "kapasite_l": null,
         "olculer": {
@@ -2363,58 +2494,58 @@
           "derinlik_cm": 54.0,
           "yukseklik_cm": 68.0
         }
-      },
-      "description": "500 W / 220 V / 50/60 Hz\n300 mm paslanmaz çelik bıçak\nDilim Kalınlığı Aralığı: 0 – 15 mm\nÜrün Boyutu: 60 x 54 x 68 cm\nÜrün Ağırlığı: 44 kg\nPaslanmaz çelik bıçaklar\nEt, peynir, sebze, ekmek vs dilimlemeye uygun"
+      }
     },
     {
       "model": "VSL-FRT1C08B",
       "modelNorm": "VSLFRT1C08B",
-      "title": "Vosco 8 Litre Endüstriyel Fritöz",
-      "category": "",
+      "title": "Vosco 6L + 6L Çift Hazneli Elektrikli z",
+      "category": "Fri̇tözler",
       "page": 51,
       "specs": {
         "liste_usd": 950.0,
-        "guc": "3500 W / 220 V",
+        "liste_eur": null,
+        "guc": "3500 W / 220",
         "kapasite_kg": null,
-        "kapasite_l": null,
+        "kapasite_l": 6.0,
         "olculer": {
           "raw": "29 x 52 x 41.8 cm",
           "genislik_cm": 29.0,
           "derinlik_cm": 52.0,
           "yukseklik_cm": 41.8
         }
-      },
-      "description": "3500 W / 220 V / 50-60 Hz\nHazne Kapasitesi: 8 Litre\nÜrün Boyutu: 29 x 52 x 41.8 cm\nSıcaklık Aralığı: 20 - 190C°\nPaslanmaz çelik malzeme, ntc sıcaklık sensörü\nDokunmatik Led kontrol paneli\nKullanım Yeri: Restoran, otel, ev, ticari mutfak"
+      }
     },
     {
       "model": "VSL-FRT1C12B",
       "modelNorm": "VSLFRT1C12B",
-      "title": "Vosco 12 Litre Endüstriyel Fritöz",
-      "category": "",
+      "title": "Vosco 16 Litre Endüstriyel Fritöz",
+      "category": "Fri̇tözler",
       "page": 52,
       "specs": {
         "liste_usd": 2050.0,
-        "guc": "3500 W / 220 V",
+        "liste_eur": null,
+        "guc": "3500 W / 220",
         "kapasite_kg": null,
-        "kapasite_l": 12.0,
+        "kapasite_l": null,
         "olculer": {
           "raw": "35.8 x 55.5 x 38.8 cm",
           "genislik_cm": 35.8,
           "derinlik_cm": 55.5,
           "yukseklik_cm": 38.8
         }
-      },
-      "description": "3500 W / 220 V / 50-60 Hz\nHazne Kapasitesi: 12 Litre\nÜrün Boyutu: 35.8 x 55.5 x 38.8 cm\nSıcaklık Aralığı: 20 - 190C°\nPaslanmaz çelik malzeme, ntc sıcaklık sensörü\nDokunmatik Led kontrol paneli\nKullanım Yeri: Restoran, otel, ev, ticari mutfak\n7000 W / 220 V / 50-60 Hz"
+      }
     },
     {
       "model": "VSL-FRT2C08B",
       "modelNorm": "VSLFRT2C08B",
-      "title": "Vosco 16 Litre Endüstriyel Fritöz",
-      "category": "",
+      "title": "Vosco 8 Litre Endüstriyel Fritöz",
+      "category": "Fri̇tözler",
       "page": 52,
       "specs": {
         "liste_usd": 1150.0,
-        "guc": "3500 W / 220 V",
+        "liste_eur": null,
+        "guc": "3500 W / 220",
         "kapasite_kg": null,
         "kapasite_l": 8.0,
         "olculer": {
@@ -2423,18 +2554,18 @@
           "derinlik_cm": 52.0,
           "yukseklik_cm": 41.8
         }
-      },
-      "description": "3500 W / 220 V / 50-60 Hz\nHazne Kapasitesi: 8L x 2\nÜrün Boyutu: 58 x 52 x 41.8 cm\nSıcaklık Aralığı: 20 - 190C°\nPaslanmaz çelik malzeme, ntc sıcaklık sensörü\nDokunmatik Led kontrol paneli\nKullanım Yeri: Restoran, otel, ev, ticari mutfak\n3500 W / 220 V / 50-60 Hz"
+      }
     },
     {
       "model": "VSL-FRT2C12B",
       "modelNorm": "VSLFRT2C12B",
-      "title": "Vosco 24 Litre Endüstriyel Fritöz",
-      "category": "",
+      "title": "Vosco 12 Litre Endüstriyel Fritöz",
+      "category": "Fri̇tözler",
       "page": 52,
       "specs": {
         "liste_usd": 2050.0,
-        "guc": "7000 W / 220 V",
+        "liste_eur": null,
+        "guc": "7000 W / 220",
         "kapasite_kg": null,
         "kapasite_l": 12.0,
         "olculer": {
@@ -2443,18 +2574,18 @@
           "derinlik_cm": 55.5,
           "yukseklik_cm": 38.8
         }
-      },
-      "description": "7000 W / 220 V / 50-60 Hz\nHazne Kapasitesi: 12L x 2\nÜrün Boyutu: 71.6 x 55.5 x 38.8 cm\nSıcaklık Aralığı: 20 - 190C°\nPaslanmaz çelik malzeme, ntc sıcaklık sensörü\nDokunmatik Led kontrol paneli\nKullanım Yeri: Restoran, otel, ev, ticari mutfak"
+      }
     },
     {
       "model": "VSS-08C",
       "modelNorm": "VSS08C",
-      "title": "Vosco 8 Tepsili Meyve Kurutma Makinesi",
+      "title": "VSS-08C",
       "category": "Sebze & Meyve Kurutucu",
       "page": 87,
       "specs": {
         "liste_usd": 450.0,
-        "guc": "700 W / 220 V",
+        "liste_eur": null,
+        "guc": "700 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -2463,18 +2594,18 @@
           "derinlik_cm": 45.0,
           "yukseklik_cm": 31.8
         }
-      },
-      "description": "700 W / 220 V / 50-60 Hz\n8 adet gıda sınıfı 304 paslanmaz çelik tepsi\nÜrün Boyutu: 34 x 45 x 31.8 cm\nAyarlanabilir Sıcaklık: 30 - 90C°\nSessiz Çalışma: Gürültü seviyesi 45-50dB\n360° Döngüsel Isıtma: Her tepsiye eşit ısı dağılımı\nLCD panelden sıcaklık, süre ve ışık ayarlanabilir\n800 W / 220 V / 50/60 Hz"
+      }
     },
     {
       "model": "VSS-10H",
       "modelNorm": "VSS10H",
-      "title": "Vosco 10 Tepsili Meyve Kurutma Makinesi",
+      "title": "Vosco 8 Tepsili Meyve Kurutma Makinesi",
       "category": "Sebze & Meyve Kurutucu",
       "page": 87,
       "specs": {
-        "liste_usd": null,
-        "guc": "800 W / 220 V",
+        "liste_usd": 450.0,
+        "liste_eur": null,
+        "guc": "800 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -2483,18 +2614,18 @@
           "derinlik_cm": 39.5,
           "yukseklik_cm": 42.7
         }
-      },
-      "description": "800 W / 220 V / 50/60 Hz\n10 adet gıda sınıfı 304 paslanmaz çelik tepsi\nÜrün Boyutu: 34.5 x 39.5 x 42.7 cm\nAyarlanabilir Sıcaklık: 30 - 90C°\nSessiz Çalışma: Gürültü seviyesi 50-55dB\n360° Döngüsel Isıtma: Her tepsiye eşit ısı dağılımı\nLCD panelden sıcaklık, süre ve ışık ayarlanabilir"
+      }
     },
     {
       "model": "VV-64",
       "modelNorm": "VV64",
-      "title": "Vosco Profesyonel Kahve Öğütücü",
+      "title": "Vosco Dozaj Ayarlı Tam Otomatik Kahve Değirmeni",
       "category": "Kahve Deği̇rmenleri̇",
       "page": 33,
       "specs": {
         "liste_usd": 1000.0,
-        "guc": "420 W / 220 V",
+        "liste_eur": null,
+        "guc": "420 W / 220",
         "kapasite_kg": 8.5,
         "kapasite_l": null,
         "olculer": {
@@ -2503,8 +2634,7 @@
           "derinlik_cm": 31.5,
           "yukseklik_cm": 51.0
         }
-      },
-      "description": "420 W / 220 V / 50-60 Hz\nÇekirdek Haznesi: 850 gram\nÜrün Boyutu: 22 x 31.5 x 51 cm\n64 mm paslanmaz çelik öğütme dişlisi\nBrüt Ağırlık: 8.5 kg\nAyarlanabilir portafilter tutucu, LED ekran"
+      }
     },
     {
       "model": "VWG-10T",
@@ -2514,7 +2644,8 @@
       "page": 82,
       "specs": {
         "liste_usd": 2850.0,
-        "guc": "10400 W / 220 V",
+        "liste_eur": null,
+        "guc": "10400 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -2523,18 +2654,18 @@
           "derinlik_cm": 108.0,
           "yukseklik_cm": 77.1
         }
-      },
-      "description": "10400 W / 220 V / 50 Hz\nÜrün Boyutu : 98.5 x 108 x 77.1 cm\nÇember Ölçüsü : 66 x 92 x 16 cm x2\nSıcaklık Aralığı : 0-500°C\n12 adet pizza kapasitelidir.\nTaş Ölçüsü : 89.5 x 33 cm x4\n120 dakikalık zamanlayıcı"
+      }
     },
     {
       "model": "VWG-3T",
       "modelNorm": "VWG3T",
-      "title": "Vosco Tek Katlı Pizza Fırını",
+      "title": "Vosco Tek Katlı Taş Pizza Fırını",
       "category": "Pi̇zza Firinlar",
       "page": 81,
       "specs": {
         "liste_usd": 1200.0,
-        "guc": "3200 W / 220 V",
+        "liste_eur": null,
+        "guc": "3200 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -2543,8 +2674,7 @@
           "derinlik_cm": 68.0,
           "yukseklik_cm": 44.0
         }
-      },
-      "description": "3200 W / 220 V / 50 Hz\nÜrün Boyutu : 84.5 x 68 x 44 cm\nÇember Ölçüsü : 52 x 52 x 16 cm\nSıcaklık Aralığı : 0-500°C\n2 adet pizza kapasitelidir.\nTaş Ölçüsü : 52 x 49.5 cm\n120 dakikalık zamanlayıcı\n4800 W / 220 V / 50 Hz"
+      }
     },
     {
       "model": "VWG-4T",
@@ -2553,8 +2683,9 @@
       "category": "Pi̇zza Firinlar",
       "page": 81,
       "specs": {
-        "liste_usd": null,
-        "guc": "4800 W / 220 V",
+        "liste_usd": 1200.0,
+        "liste_eur": null,
+        "guc": "4800 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -2563,8 +2694,7 @@
           "derinlik_cm": 60.5,
           "yukseklik_cm": 44.0
         }
-      },
-      "description": "4800 W / 220 V / 50 Hz\nÜrün Boyutu : 98.5 x 60.5 x 44 cm\nÇember Ölçüsü : 66 x 66 x 16 cm\nSıcaklık Aralığı : 0-500°C\n4 adet pizza kapasitelidir.\nTaş Ölçüsü : 63.5 x 33 cm\n120 dakikalık zamanlayıcı\n7200 W / 380 V / 50 Hz"
+      }
     },
     {
       "model": "VWG-5T",
@@ -2574,7 +2704,8 @@
       "page": 81,
       "specs": {
         "liste_usd": 1600.0,
-        "guc": "7200 W / 380 V",
+        "liste_eur": null,
+        "guc": "7200 W / 380",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -2583,18 +2714,18 @@
           "derinlik_cm": 108.0,
           "yukseklik_cm": 44.0
         }
-      },
-      "description": "7200 W / 380 V / 50 Hz\nÜrün Boyutu : 98.5 x 108 x 44 cm\nÇember Ölçüsü : 66 x 92 x 16 cm\nSıcaklık Aralığı : 0-500°C\n6 adet pizza kapasitelidir.\nTaş Ölçüsü : 89.5 x 33 cm\n120 dakikalık zamanlayıcı"
+      }
     },
     {
       "model": "VWG-6T",
       "modelNorm": "VWG6T",
-      "title": "Vosco Çift Katlı Pizza Fırını",
+      "title": "Vosco Tek Katlı Pizza Fırını",
       "category": "Pi̇zza Firinlar",
       "page": 82,
       "specs": {
         "liste_usd": 2050.0,
-        "guc": "7000 W / 220 V",
+        "liste_eur": null,
+        "guc": "7000 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -2603,8 +2734,7 @@
           "derinlik_cm": 68.0,
           "yukseklik_cm": 77.1
         }
-      },
-      "description": "7000 W / 220 V / 50 Hz\nÜrün Boyutu : 94.5 x 68 x 77.1 cm\nÇember Ölçüsü : 52 x 52 x 16 cm x2\nSıcaklık Aralığı : 0-500°C\n4 adet pizza kapasitelidir.\nTaş Ölçüsü : 52 x 49.5 cm x2\n120 dakikalık zamanlayıcı\n9000 W / 220 V / 50 Hz"
+      }
     },
     {
       "model": "VWG-8T",
@@ -2613,8 +2743,9 @@
       "category": "Pi̇zza Firinlar",
       "page": 82,
       "specs": {
-        "liste_usd": null,
-        "guc": "9000 W / 220 V",
+        "liste_usd": 2050.0,
+        "liste_eur": null,
+        "guc": "9000 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -2623,18 +2754,18 @@
           "derinlik_cm": 60.5,
           "yukseklik_cm": 77.1
         }
-      },
-      "description": "9000 W / 220 V / 50 Hz\nÜrün Boyutu : 98.5 x 60.5 x 77.1 cm\nÇember Ölçüsü : 66 x 66 x 16 cm x2\nSıcaklık Aralığı : 0-500°C\n8 adet pizza kapasitelidir.\nTaş Ölçüsü : 63.5 x 33 cm x4\n120 dakikalık zamanlayıcı\n10400 W / 220 V / 50 Hz"
+      }
     },
     {
       "model": "VWJG-5P",
       "modelNorm": "VWJG5P",
-      "title": "Vosco 5 Şişli Elektrikli Piliç Çevirme Fırını",
+      "title": "Vosco Elektrikli Piliç Çevirme Fırını",
       "category": "Pi̇li̇ç Çevi̇rme Firinlari",
       "page": 84,
       "specs": {
-        "liste_usd": null,
-        "guc": "10000 W / 380 V",
+        "liste_usd": 1250.0,
+        "liste_eur": null,
+        "guc": "10000 W / 380",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -2643,18 +2774,18 @@
           "derinlik_cm": 50.0,
           "yukseklik_cm": 126.0
         }
-      },
-      "description": "10000 W / 380 V / 50/60 Hz\nÜrün Boyutu: 138 x 50 x 126 cm\nMaksimum Kapasite: 20 Adet Tavuk\nSıcaklık Aralığı: 20 – 550°C\nHareketli Tekerlek Sistemi\nErgonomik Kapı Kolu\nPaslanmaz Çelik Gövde\n12000 W / 380 V / 50/60 Hz"
+      }
     },
     {
       "model": "VWJG-6P",
       "modelNorm": "VWJG6P",
-      "title": "Vosco 6 Şişli Elektrikli Piliç Çevirme Fırını",
+      "title": "Vosco 5 Şişli Elektrikli Piliç Çevirme Fırını",
       "category": "Pi̇li̇ç Çevi̇rme Firinlari",
       "page": 84,
       "specs": {
         "liste_usd": 3850.0,
-        "guc": "12000 W / 380 V",
+        "liste_eur": null,
+        "guc": "12000 W / 380",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -2663,18 +2794,18 @@
           "derinlik_cm": 50.0,
           "yukseklik_cm": 152.5
         }
-      },
-      "description": "12000 W / 380 V / 50/60 Hz\nÜrün Boyutu: 138 x 50 x 152.5 cm\nMaksimum Kapasite: 30 Adet Tavuk\nSıcaklık Aralığı: 20 – 550°C\nHareketli Tekerlek Sistemi\nErgonomik Kapı Kolu\nPaslanmaz Çelik Gövde"
+      }
     },
     {
       "model": "VWJG-7P",
       "modelNorm": "VWJG7P",
-      "title": "Vosco 7 Şişli Elektrikli Piliç Çevirme Fırını",
+      "title": "Vosco 6 Şişli Elektrikli Piliç Çevirme Fırını",
       "category": "Pi̇li̇ç Çevi̇rme Firinlari",
       "page": 85,
       "specs": {
         "liste_usd": 4200.0,
-        "guc": "14000 W / 380 V",
+        "liste_eur": null,
+        "guc": "14000 W / 380",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -2683,18 +2814,18 @@
           "derinlik_cm": 50.0,
           "yukseklik_cm": 172.5
         }
-      },
-      "description": "14000 W / 380 V / 50/60 Hz\nÜrün Boyutu: 138 x 50 x 172.5 cm\nMaksimum Kapasite: 35 Adet Piliç\nSıcaklık Aralığı: 20 – 550°C\nHareketli Tekerlek Sistemi\nErgonomik Kapı Kolu\nPaslanmaz Çelik Gövde\n16000 W / 380 V / 50/60 Hz"
+      }
     },
     {
       "model": "VWJG-8P",
       "modelNorm": "VWJG8P",
-      "title": "Vosco 8 Şişli Elektrikli Piliç Çevirme Fırını",
+      "title": "Vosco 7 Şişli Elektrikli Piliç Çevirme Fırını",
       "category": "Pi̇li̇ç Çevi̇rme Firinlari",
       "page": 85,
       "specs": {
         "liste_usd": 4550.0,
-        "guc": "16000 W / 380 V",
+        "liste_eur": null,
+        "guc": "16000 W / 380",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -2703,18 +2834,18 @@
           "derinlik_cm": 50.0,
           "yukseklik_cm": 192.5
         }
-      },
-      "description": "16000 W / 380 V / 50/60 Hz\nÜrün Boyutu: 138 x 50 x 192.5 cm\nMaksimum Kapasite: 40 Adet Piliç\nSıcaklık Aralığı: 20 – 550°C\nHareketli Tekerlek Sistemi\nErgonomik Kapı Kolu\nPaslanmaz Çelik Gövde"
+      }
     },
     {
       "model": "VWK-120C",
       "modelNorm": "VWK120C",
-      "title": "Vosco 5 Tepsili Elektrikli Plus Konveksiyonlu Fırın",
-      "category": "",
+      "title": "VWK-120C",
+      "category": "Kali̇teli̇ Duraği”",
       "page": 73,
       "specs": {
         "liste_usd": 2100.0,
-        "guc": "5000 W / 220 V",
+        "liste_eur": null,
+        "guc": "5000 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -2723,8 +2854,7 @@
           "derinlik_cm": 77.5,
           "yukseklik_cm": 65.9
         }
-      },
-      "description": "5000 W / 220 V / 50 Hz\nÜrün Boyutu : 84 x 77.5 x 65.9 cm\nTepsi Boyutu : 40 x 60 cm\nSıcaklık Aralığı : 0-350°C\nÇok Kademeli Fan\nProgram Hafızası\nAydınlatma & Soğutma\nKONVEKSİYONLU FIRINLAR"
+      }
     },
     {
       "model": "VXB-74",
@@ -2734,7 +2864,8 @@
       "page": 34,
       "specs": {
         "liste_usd": 1600.0,
-        "guc": "550 W / 220 V",
+        "liste_eur": null,
+        "guc": "550 W / 220",
         "kapasite_kg": 12.0,
         "kapasite_l": null,
         "olculer": {
@@ -2743,38 +2874,37 @@
           "derinlik_cm": 38.5,
           "yukseklik_cm": 59.5
         }
-      },
-      "description": "550 W / 220 V / 50-60 Hz\n74 mm paslanmaz çelik öğütme dişlisi\nÇekirdek Haznesi: 1650 gram\nÜrün Boyutu: 22 x 38.5 x 59.5 cm\nÜrün Ağırlığı: 12 kg\n1400 RPM motor gücü\n4.3\" Led akıllı dokunmatik ekran\nDozaj Ayarlı Tam Otomatik Kahve Değirmeni"
+      }
     },
     {
       "model": "VXC-112",
       "modelNorm": "VXC112",
-      "title": "Vosco Buzlaş Makinesi 12 Lt Tek Hazneli",
+      "title": "Vosco Buzlaş Makinesi 12+12+12 Lt Üç Hazneli",
       "category": "Ice Slush & Buzlaş",
       "page": 27,
       "specs": {
-        "liste_usd": null,
+        "liste_usd": 3500.0,
+        "liste_eur": null,
         "guc": null,
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": null
-      },
-      "description": ""
+      }
     },
     {
       "model": "VXC-224",
       "modelNorm": "VXC224",
-      "title": "Vosco Buzlaş Makinesi 12+12 Lt Çift Hazneli",
+      "title": "Vosco Buzlaş Makinesi 12+12+12 Lt Üç Hazneli",
       "category": "Ice Slush & Buzlaş",
       "page": 27,
       "specs": {
-        "liste_usd": null,
+        "liste_usd": 3500.0,
+        "liste_eur": null,
         "guc": null,
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": null
-      },
-      "description": ""
+      }
     },
     {
       "model": "VXC-336",
@@ -2783,23 +2913,24 @@
       "category": "Ice Slush & Buzlaş",
       "page": 27,
       "specs": {
-        "liste_usd": null,
+        "liste_usd": 3500.0,
+        "liste_eur": null,
         "guc": null,
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": null
-      },
-      "description": ""
+      }
     },
     {
       "model": "VXY-520",
       "modelNorm": "VXY520",
-      "title": "Vosco Tezgah Üstü Pamuk Şeker Makinesi",
+      "title": "Vosco Arabalı Otomatik Patlamış Mısır Makinesi",
       "category": "Patlamiş Misir & Candy",
       "page": 39,
       "specs": {
         "liste_usd": 500.0,
-        "guc": "980 W / 220 V",
+        "liste_eur": null,
+        "guc": "980 W / 220",
         "kapasite_kg": 10.0,
         "kapasite_l": null,
         "olculer": {
@@ -2808,18 +2939,18 @@
           "derinlik_cm": 52.0,
           "yukseklik_cm": 50.0
         }
-      },
-      "description": "980 W / 220 V / 50-60 Hz\nKazan Çapı: 20 inç (yaklaşık 50 cm)\nÜrün Boyutu: 52 x 52 x 50 cm\nÜrün Ağırlığı: 10 kg\nMalzeme: Paslanmaz çelik\nSert veya toz şekeri pamuk şekere dönüştürür\n980 W / 220 V / 50-60 Hz\nKazan Çapı: 20 inç (yaklaşık 50 cm)"
+      }
     },
     {
       "model": "VXY-520C",
       "modelNorm": "VXY520C",
-      "title": "Vosco Arabalı Pamuk Şeker Makinesi",
+      "title": "Vosco Tezgah Üstü Pamuk Şeker Makinesi",
       "category": "Patlamiş Misir & Candy",
       "page": 39,
       "specs": {
         "liste_usd": 1000.0,
-        "guc": "980 W / 220 V",
+        "liste_eur": null,
+        "guc": "980 W / 220",
         "kapasite_kg": 15.0,
         "kapasite_l": null,
         "olculer": {
@@ -2828,18 +2959,18 @@
           "derinlik_cm": 52.0,
           "yukseklik_cm": 104.0
         }
-      },
-      "description": "980 W / 220 V / 50-60 Hz\nKazan Çapı: 20 inç (yaklaşık 50 cm)\nÜrün Boyutu: 82.5 x 52 x 104 cm\nÜrün Ağırlığı: 15 kg\nMalzeme: Paslanmaz çelik\nSert veya toz şekeri pamuk şekere dönüştürür"
+      }
     },
     {
       "model": "VZA-803",
       "modelNorm": "VZA803",
-      "title": "Vosco Tezgah Üstü Otomatik Patlamış Mısır Makinesi",
+      "title": "VZA-803",
       "category": "Patlamiş Misir & Candy",
       "page": 39,
       "specs": {
         "liste_usd": 600.0,
-        "guc": "1300 W / 220 V",
+        "liste_eur": null,
+        "guc": "1300 W / 220",
         "kapasite_kg": 16.2,
         "kapasite_l": null,
         "olculer": {
@@ -2848,18 +2979,18 @@
           "derinlik_cm": 35.0,
           "yukseklik_cm": 68.0
         }
-      },
-      "description": "1300 W / 220 V / 50-60 Hz\nHazne Kapasitesi: 300 gr\nÜrün Boyutu: 51 x 35 x 68 cm\nÜrün Ağırlığı: 16.2 kg\nPaslanmaz çelik + cam malzeme kalitesi\n2 dakika içinde patlamış mısır üretimi\n1600 W / 220 V / 50-60 Hz\nHazne Kapasitesi: 300 gr"
+      }
     },
     {
       "model": "VZM-H2",
       "modelNorm": "VZMH2",
-      "title": "Vosco Çift Katlı Elektrikli Pizza Fırını",
-      "category": "",
+      "title": "Vosco Çift Katlı Taş Pizza Fırını",
+      "category": "İtalya Lezzeti̇”",
       "page": 80,
       "specs": {
         "liste_usd": 2000.0,
-        "guc": "4000 W / 220 V",
+        "liste_eur": null,
+        "guc": "4000 W / 220",
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": {
@@ -2868,23 +2999,22 @@
           "derinlik_cm": 65.0,
           "yukseklik_cm": 68.0
         }
-      },
-      "description": "4000 W / 220 V - 240 V / 50-60 Hz\nÜrün Boyutu: 50 x 65 x 68 cm\nTaş ölçüsü : 40 x 40 x 15 cm\nSıcaklık Aralığı : 0-350°C\nPaslanmaz Çelik\nAynı anda birden fazla pizza pişirmeye olanak sağlar.\nKompakt tasarımıyla küçük işletmeler için uygundur.\n2500 W / 220 V - 240 V / 50-60 Hz"
+      }
     },
     {
       "model": "VİZYONUMUZ",
       "modelNorm": "VZYONUMUZ",
       "title": "Vosco olarak amacımız, profesyonel mutfak",
-      "category": "",
+      "category": "İnovasyon",
       "page": 3,
       "specs": {
         "liste_usd": null,
+        "liste_eur": null,
         "guc": null,
         "kapasite_kg": null,
         "kapasite_l": null,
         "olculer": null
-      },
-      "description": "MİSYONUMUZ\nsektöründe yer alan işletmelere yüksek kaliteli,\nenerji tasarruflu ve uzun ömürlü mutfak\nekipmanları sunarak, mutfak yönetimlerini daha\nverimli ve kârlı hale getirmektir. Müşteri\nmemnuniyetini esas alarak, ISO ve CE sertifikalı\nürünlerimizle sürdürülebilir mutfak çözümleri\nsunuyoruz."
+      }
     }
   ]
 }

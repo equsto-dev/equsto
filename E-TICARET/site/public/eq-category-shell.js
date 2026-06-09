@@ -182,11 +182,14 @@
         return;
       }
       host.hidden = false;
+      host.className = "eq-dept-plp-pages eq-dept-plp-loadmore";
+      host.setAttribute("aria-label", "Daha fazla ürün yükle");
       host.innerHTML =
-        '<button type="button" class="eq-dept-plp-more__btn" id="eq-marka-load-more">' +
-        "Daha fazla göster (" +
+        '<button type="button" class="eq-dept-plp-loadmore__btn" id="eq-marka-load-more">' +
+        "Daha fazla ürün yükle" +
+        '<span class="eq-dept-plp-loadmore__meta">(' +
         esc(String(remaining)) +
-        ")</button>";
+        " kaldı)</span></button>";
       var btn = host.querySelector("#eq-marka-load-more");
       if (btn) {
         btn.onclick = function () {
