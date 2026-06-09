@@ -31,6 +31,7 @@ const UA = "Mozilla/5.0 (Equsto; +https://equsto.com)";
 const dryRun = process.argv.includes("--dry-run");
 const force = process.argv.includes("--force");
 const missingOnly = process.argv.includes("--missing-only");
+const deptFilter = process.argv.find((a) => a.startsWith("--dept="))?.split("=")[1] || "";
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 function curlText(url) {
@@ -49,6 +50,7 @@ function loadInoksanRows() {
     const list = JSON.parse(fs.readFileSync(path.join(DEPT_DIR, f), "utf8"));
     for (const row of list) {
       if (row?.brand === "İnoksan" || row?.kaynak_fiyat_listesi === KAYNAK) {
+        if (deptFilter && row.dept !== deptFilter) continue;
         rows.push({ row, file: f });
       }
     }
