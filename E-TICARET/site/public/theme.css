@@ -4638,8 +4638,8 @@ body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-inner {
 }
 body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-cols {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 20px 16px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px 20px;
   margin-bottom: 8px;
 }
 body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col h3 {

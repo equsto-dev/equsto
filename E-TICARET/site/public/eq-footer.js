@@ -14,7 +14,7 @@
 
 
 
-  var FOOTER_JSON = "/data/footer-vitrin.json?v=20260609footer-bilgi-col";
+  var FOOTER_JSON = "/data/footer-vitrin.json?v=20260609footer-no-bilgi";
 
   var SSS_LINK = { key: "footer.link_sss", label: "SSS", href: "/sss" };
 
@@ -281,34 +281,6 @@
       },
 
       columns: [
-
-        {
-
-          titleKey: "footer.col_info",
-
-          title: "Bilgi",
-
-          links: [
-
-            { key: "footer.link_info_about", label: "Hakkımızda", href: "/hakkimizda.html" },
-
-            { key: "footer.link_info_bank", label: "Banka Bilgilerimiz", href: "https://www.cafemarkt.com/banka-hesap-numaralarimiz-12" },
-
-            { key: "footer.link_info_export", label: "Export", href: "https://www.cafemarkt.com/export-deal" },
-
-            { key: "footer.link_info_career", label: "Kariyer", href: "https://www.cafemarkt.com/cafemarkt-kariyer" },
-
-            { key: "footer.link_info_contact", label: "İletişim", href: "/contact" },
-
-            { key: "footer.link_info_corporate", label: "Kurumsal Sitemiz", href: "https://kurumsal.cafemarkt.com/" },
-
-            { key: "footer.link_info_blog", label: "Blog", href: "/blog" },
-
-            { key: "footer.link_info_cafemarkt_uk", label: "Cafemarkt UK", href: "https://www.cafemarkt.co.uk/" },
-
-          ],
-
-        },
 
         {
 
