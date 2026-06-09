@@ -26,6 +26,7 @@ import {
   cafeImageExt,
   downloadCafeImage,
   ensureCafeCache,
+  IMAGE_FILE_SUFFIX,
   resolveSamixirImage,
 } from "./lib/samixir-cafemarkt-images.mjs";
 
@@ -84,13 +85,17 @@ function formatSpecs(p, px, pdfHit) {
 
 const UA = "EqustoImport/1.0 (+https://equsto.com; samixir-catalog)";
 
+function imageBasename(slug, ext) {
+  return `${slug}${IMAGE_FILE_SUFFIX}${ext}`;
+}
+
 async function copyImage(p, pdfCatalog, cafeItems) {
   if (!useSamixirImages) {
     const pdfCode = pdfCodeForSlug(p.slug, pdfCatalog);
     const hit = resolveSamixirImage(p.slug, pdfCode, cafeItems);
     if (hit?.url) {
       const ext = cafeImageExt(hit.url);
-      const safe = `${p.slug}${ext}`;
+      const safe = imageBasename(p.slug, ext);
       const dest = path.join(OUT_IMG, safe);
       if (!dryRun && (await downloadCafeImage(hit.url, dest))) {
         return {
@@ -112,20 +117,21 @@ async function copyImage(p, pdfCatalog, cafeItems) {
   if (p.localImage) {
     const src = path.join(ROOT, "scripts/data/samixir", p.localImage);
     if (fs.existsSync(src)) {
-      const fname = path.basename(src);
-      const dest = path.join(OUT_IMG, fname);
+      const ext = path.extname(src) || ".jpg";
+      const safe = imageBasename(p.slug, ext);
+      const dest = path.join(OUT_IMG, safe);
       if (!dryRun) {
         fs.mkdirSync(OUT_IMG, { recursive: true });
         fs.copyFileSync(src, dest);
       }
-      return { images: [`images/catalog/samixir/${fname}`], source: "samixir.com" };
+      return { images: [`images/catalog/samixir/${safe}`], source: "samixir.com" };
     }
   }
   const imgUrl = p.heroImage || p.images?.[0];
   if (!imgUrl) return { images: [], source: null };
   let ext = path.extname(new URL(imgUrl).pathname) || ".jpg";
   if (!/^\.(jpe?g|png|webp|gif)$/i.test(ext)) ext = ".jpg";
-  const safe = `${p.slug}${ext}`;
+  const safe = imageBasename(p.slug, ext);
   const dest = path.join(OUT_IMG, safe);
   if (!dryRun) {
     try {
