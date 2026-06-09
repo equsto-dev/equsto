@@ -7,7 +7,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const siteDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const SHOP_ASSET_V = "20260608ess37-10-olcu-180";
+const SHOP_ASSET_V = "20260609footer-bilgi-col";
 const WA_MODAL_BUILD = 24;
 let err = 0;
 
