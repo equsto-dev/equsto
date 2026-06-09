@@ -1,0 +1,825 @@
+{
+  "fetched_at": "2026-06-09T20:15:56.577Z",
+  "count": 91,
+  "items": [
+    {
+      "cafemarkt_id": "13564",
+      "name": "Samixir M10 Panaromik Analog Soğuk İçecek Dispenseri, 10 L, Siyah",
+      "code": "023.M10.AB",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-m10-soguk-icecek-dispenseri-10-l-analog-panaromik-siyah",
+      "image": "https://witcdn.cafemarkt.com/samixir-m10-soguk-icecek-dispenseri-10-l-analog-panaromik-siyah-limonata-serbet-ayran-makineleri-samixir-68067-13-O.jpg",
+      "price_try_kdv_dahil": 31387.75
+    },
+    {
+      "cafemarkt_id": "35023",
+      "name": "Samixir SC.06 Sıcak Çikolata ve Sahlep Makinesi, 6 L, Siyah",
+      "code": "023.SC06.BL",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-sc06-sicak-cikolata-ve-sahlep-makinesi-6-l-siyah",
+      "image": "https://witcdn.cafemarkt.com/samixir-sc06-sicak-cikolata-ve-sahlep-makinesi-6-l-siyah-sicak-cikolata-ve-sahlep-makineleri-samixir-88151-35-O.jpg",
+      "price_try_kdv_dahil": 28755.23
+    },
+    {
+      "cafemarkt_id": "9407",
+      "name": "Samixir SC.06 Sıcak Çikolata ve Sahlep Makinesi, 6 L, Inox",
+      "code": "023.SC06",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/sicak-cikolata-ve-sahlep-makinesi-6-lt-9407",
+      "image": "https://witcdn.cafemarkt.com/sicak-cikolata-ve-sahlep-makinesi-6-lt-9407-sicak-cikolata-ve-sahlep-makineleri-samixir-88146-94-O.jpg",
+      "price_try_kdv_dahil": 28755.23
+    },
+    {
+      "cafemarkt_id": "35024",
+      "name": "Samixir SC.10 Sıcak İçecek Dispenseri, 10 L, Siyah",
+      "code": "023.SC10.BL",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-sc10-sicak-icecek-dispenseri-10-l-siyah",
+      "image": "https://witcdn.cafemarkt.com/samixir-sc10-sicak-icecek-dispenseri-10-l-siyah-sicak-cikolata-ve-sahlep-makineleri-samixir-63461-35-O.jpg",
+      "price_try_kdv_dahil": 31995.26
+    },
+    {
+      "cafemarkt_id": "33468",
+      "name": "Samixir SC.10 Sıcak İçecek Dispenseri, 10 L, Inox",
+      "code": "023.SC10",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-sc10-sicak-icecek-dispenseri-10-l-inox",
+      "image": "https://witcdn.cafemarkt.com/samixir-sc10-sicak-icecek-dispenseri-10-l-inox-sicak-cikolata-ve-sahlep-makineleri-samixir-88155-33-O.jpg",
+      "price_try_kdv_dahil": 31995.26
+    },
+    {
+      "cafemarkt_id": "5472",
+      "name": "Samixir M22 Panaromik Analog Soğuk İçecek Dispenseri, 22 L, Sarı",
+      "code": "023.M22.AY",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/panaromik-ayran-ve-serbet-makinesi-22-lt-ak",
+      "image": "https://witcdn.cafemarkt.com/panaromik-ayran-ve-serbet-makinesi-22-lt-ak-limonata-serbet-ayran-makineleri-samixir-67374-54-O.jpg",
+      "price_try_kdv_dahil": 37260.3
+    },
+    {
+      "cafemarkt_id": "5490",
+      "name": "Samixir 40.SSY Klasik Twin Soğuk İçecek Dispenseri, 20+20 L, Fıskiyeli, Sarı",
+      "code": "023.40.SSY",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/limonata-serbet-makinesi-2x20-lt-ss-5490",
+      "image": "https://witcdn.cafemarkt.com/limonata-serbet-makinesi-2x20-lt-ss-5490-limonata-serbet-ayran-makineleri-samixir-67296-54-O.jpg",
+      "price_try_kdv_dahil": 39892.82
+    },
+    {
+      "cafemarkt_id": "19248",
+      "name": "Samixir SLUSH24 Allure Twin Ice Slush Granita Milkshake ve Soğuk Meyve Suyu Dispenseri, 12+12 L, Siyah",
+      "code": "023.SLUSH24.BA",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-allure-twin-ice-slush-granita-ve-soguk-meyve-suyu-dispenseri-1212-l-siyah",
+      "image": "https://witcdn.cafemarkt.com/samixir-allure-twin-ice-slush-granita-ve-soguk-meyve-suyu-dispenseri-1212-l-siyah-ice-slush-buzlas-makineleri-samixir-33960-19-O.jpg",
+      "price_try_kdv_dahil": 110363.38
+    },
+    {
+      "cafemarkt_id": "13567",
+      "name": "Samixir M22 Panaromik Analog Soğuk İçecek Dispenseri, 22 L, Siyah",
+      "code": "023.M22.AB",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-m22-soguk-icecek-dispenseri-22-l-analog-panaromik-siyah",
+      "image": "https://witcdn.cafemarkt.com/samixir-m22-soguk-icecek-dispenseri-22-l-analog-panaromik-siyah-limonata-serbet-ayran-makineleri-samixir-67372-13-O.jpg",
+      "price_try_kdv_dahil": 37260.3
+    },
+    {
+      "cafemarkt_id": "13566",
+      "name": "Samixir M10 Panaromik Analog Soğuk İçecek Dispenseri, 10 L, Sarı",
+      "code": "023.M10.AY",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-m10-soguk-icecek-dispenseri-10-l-analog-panaromik-sari",
+      "image": "https://witcdn.cafemarkt.com/samixir-m10-soguk-icecek-dispenseri-10-l-analog-panaromik-sari-limonata-serbet-ayran-makineleri-samixir-68064-13-O.jpg",
+      "price_try_kdv_dahil": 31387.75
+    },
+    {
+      "cafemarkt_id": "6503",
+      "name": "Samixir S22 Panaromik Dijital Soğuk İçecek Dispenseri, 22 L, Sarı",
+      "code": "023.S22.DY",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/panaromik-ayran-serbet-makinesi-22-lt-df-sari",
+      "image": "https://witcdn.cafemarkt.com/panaromik-ayran-serbet-makinesi-22-lt-df-sari-limonata-serbet-ayran-makineleri-samixir-67356-65-O.jpg",
+      "price_try_kdv_dahil": 39487.82
+    },
+    {
+      "cafemarkt_id": "13561",
+      "name": "Samixir 40.SSB Klasik Twin Soğuk İçecek Dispenseri, 20+20 L, Fıskiyeli, Siyah",
+      "code": "023.40.SSB",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-klasik-twin-soguk-icecek-dispenseri-2020-l-fiskiyeli-siyah",
+      "image": "https://witcdn.cafemarkt.com/samixir-klasik-twin-soguk-icecek-dispenseri-2020-l-fiskiyeli-siyah-limonata-serbet-ayran-makineleri-samixir-24036-13-O.jpg",
+      "price_try_kdv_dahil": 39892.82
+    },
+    {
+      "cafemarkt_id": "5486",
+      "name": "Samixir 40.MMY Klasik Twin Soğuk İçecek Dispenseri, 20+20 L, Karıştırıcılı, Sarı",
+      "code": "023.40.MMY",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/ayran-makinesi-2x20-lt-5486",
+      "image": "https://witcdn.cafemarkt.com/ayran-makinesi-2x20-lt-5486-limonata-serbet-ayran-makineleri-samixir-67293-54-O.jpg",
+      "price_try_kdv_dahil": 39892.82
+    },
+    {
+      "cafemarkt_id": "5476",
+      "name": "Samixir M40 Panaromik Dijital Soğuk İçecek Dispenseri, 40 L, Inox",
+      "code": "023.M40.DI",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/panaromik-ayran-ve-serbet-makinesi-40-lt-dk",
+      "image": "https://witcdn.cafemarkt.com/panaromik-ayran-ve-serbet-makinesi-40-lt-dk-limonata-serbet-ayran-makineleri-samixir-67314-54-O.jpg",
+      "price_try_kdv_dahil": 63585.51
+    },
+    {
+      "cafemarkt_id": "13573",
+      "name": "Samixir S22 Panaromik Dijital Soğuk İçecek Dispenseri, 22 L, Siyah",
+      "code": "023.S22.DB",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-s22-soguk-icecek-dispenseri-22-l-dijital-panaromik-siyah",
+      "image": "https://witcdn.cafemarkt.com/samixir-s22-soguk-icecek-dispenseri-22-l-dijital-panaromik-siyah-limonata-serbet-ayran-makineleri-samixir-67351-13-O.jpg",
+      "price_try_kdv_dahil": 39487.82
+    },
+    {
+      "cafemarkt_id": "5479",
+      "name": "Samixir M22 Panaromik Dijital Soğuk İçecek Dispenseri, 22 L, Sarı",
+      "code": "023.M22.DY",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/panaromik-ayran-ve-serbet-makinesi-22-lt-dk-5479",
+      "image": "https://witcdn.cafemarkt.com/panaromik-ayran-ve-serbet-makinesi-22-lt-dk-5479-limonata-serbet-ayran-makineleri-samixir-67311-54-O.jpg",
+      "price_try_kdv_dahil": 39487.82
+    },
+    {
+      "cafemarkt_id": "17274",
+      "name": "Samixir MMM30 Panaromik Triple Soğuk İçecek Dispenseri, 10 L+10 L+10 L, Siyah",
+      "code": "023.MMM30.AB",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-m10-triple-soguk-icecek-dispenseri-10-l10-l10-l-panaromik-siyah",
+      "image": "https://witcdn.cafemarkt.com/samixir-m10-triple-soguk-icecek-dispenseri-10-l10-l10-l-panaromik-siyah-limonata-serbet-ayran-makineleri-samixir-67330-17-O.jpg",
+      "price_try_kdv_dahil": 71280.57
+    },
+    {
+      "cafemarkt_id": "13563",
+      "name": "Samixir KAM40 Panaromik Dijital Köpüklü Ayran Dispenseri, 40 L, Beyaz",
+      "code": "023.KAM40.DW",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-kam40-kopuklu-ayran-dispenseri-40-l-dijital-panaromik-beyaz",
+      "image": "https://witcdn.cafemarkt.com/samixir-kam40-kopuklu-ayran-dispenseri-40-l-dijital-panaromik-beyaz-limonata-serbet-ayran-makineleri-samixir-67284-13-O.jpg",
+      "price_try_kdv_dahil": 78975.63
+    },
+    {
+      "cafemarkt_id": "13562",
+      "name": "Samixir KAM22 Panaromik Dijital Köpüklü Ayran Dispenseri, 22 L, Beyaz",
+      "code": "023.KAM22.DW",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-kam22-kopuklu-ayran-dispenseri-22-l-dijital-panaromik-beyaz",
+      "image": "https://witcdn.cafemarkt.com/samixir-kam22-kopuklu-ayran-dispenseri-22-l-dijital-panaromik-beyaz-limonata-serbet-ayran-makineleri-samixir-67280-13-O.jpg",
+      "price_try_kdv_dahil": 59130.47
+    },
+    {
+      "cafemarkt_id": "16569",
+      "name": "Samixir MM20 Panaromik Twin Soğuk İçecek Dispenseri, 10 L+10 L, Sarı",
+      "code": "023.MM20.AY",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-m10-twin-soguk-icecek-dispenseri-10-l10-l-panaromik-sari",
+      "image": "https://witcdn.cafemarkt.com/samixir-m10-twin-soguk-icecek-dispenseri-10-l10-l-panaromik-sari-limonata-serbet-ayran-makineleri-samixir-67323-16-O.jpg",
+      "price_try_kdv_dahil": 52245.42
+    },
+    {
+      "cafemarkt_id": "16568",
+      "name": "Samixir MM20 Panaromik Twin Soğuk İçecek Dispenseri, 10 L+10 L, Siyah",
+      "code": "023.MM20.AB",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-m10-twin-soguk-icecek-dispenseri-10-l10-l-panaromik-siyah",
+      "image": "https://witcdn.cafemarkt.com/samixir-m10-twin-soguk-icecek-dispenseri-10-l10-l-panaromik-siyah-limonata-serbet-ayran-makineleri-samixir-67326-16-O.jpg",
+      "price_try_kdv_dahil": 52245.42
+    },
+    {
+      "cafemarkt_id": "13576",
+      "name": "Samixir SLUSH36.Y Ice Slush Triple Milkshake Meyve Suyu Dispenseri, 12+12+12 L, Sarı",
+      "code": "023.SLUSH36.Y",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-ice-slush-triple-meyve-suyu-dispenseri-121212-l-sari",
+      "image": "https://witcdn.cafemarkt.com/samixir-ice-slush-triple-meyve-suyu-dispenseri-121212-l-sari-ice-slush-buzlas-makineleri-samixir-67371-13-O.jpg",
+      "price_try_kdv_dahil": 128386.03
+    },
+    {
+      "cafemarkt_id": "5475",
+      "name": "Samixir KAM22 Panaromik Dijital Köpüklü Ayran Dispenseri, 22 L, Inox",
+      "code": "023.KAM22.DI",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/panaromik-kopuklu-ayran-makinesi-22-lt",
+      "image": "https://witcdn.cafemarkt.com/panaromik-kopuklu-ayran-makinesi-22-lt-limonata-serbet-ayran-makineleri-samixir-67277-54-O.jpg",
+      "price_try_kdv_dahil": 63585.51
+    },
+    {
+      "cafemarkt_id": "13565",
+      "name": "Samixir M10 Panaromik Analog Soğuk İçecek Dispenseri, 10 L, Inox",
+      "code": "023.M10.AI",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-m10-soguk-icecek-dispenseri-10-l-analog-panaromik-inox",
+      "image": "https://witcdn.cafemarkt.com/samixir-m10-soguk-icecek-dispenseri-10-l-analog-panaromik-inox-limonata-serbet-ayran-makineleri-samixir-68069-13-O.jpg",
+      "price_try_kdv_dahil": 35842.79
+    },
+    {
+      "cafemarkt_id": "5474",
+      "name": "Samixir M22 Panaromik Dijital Soğuk İçecek Dispenseri, 22 L, Inox",
+      "code": "023.M22.DI",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/panaromik-ayran-ve-serbet-makinesi-22-lt-dk",
+      "image": "https://witcdn.cafemarkt.com/panaromik-ayran-ve-serbet-makinesi-22-lt-dk-limonata-serbet-ayran-makineleri-samixir-67309-54-O.jpg",
+      "price_try_kdv_dahil": 43942.85
+    },
+    {
+      "cafemarkt_id": "5477",
+      "name": "Samixir KAM40 Panaromik Dijital Köpüklü Ayran Dispenseri, 40 L, Inox",
+      "code": "023.KAM40.DI",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/panaromik-kopuklu-ayran-makinesi-40-lt",
+      "image": "https://witcdn.cafemarkt.com/panaromik-kopuklu-ayran-makinesi-40-lt-limonata-serbet-ayran-makineleri-samixir-67282-54-O.jpg",
+      "price_try_kdv_dahil": 83430.67
+    },
+    {
+      "cafemarkt_id": "13559",
+      "name": "Samixir 40.MMB Klasik Twin Soğuk İçecek Dispenseri, 20+20 L, Karıştırıcılı, Siyah",
+      "code": "023.40.MMB",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-klasik-twin-soguk-icecek-dispenseri-2020-l-karistiricili-siyah",
+      "image": "https://witcdn.cafemarkt.com/samixir-klasik-twin-soguk-icecek-dispenseri-2020-l-karistiricili-siyah-limonata-serbet-ayran-makineleri-samixir-24038-13-O.jpg",
+      "price_try_kdv_dahil": 39892.82
+    },
+    {
+      "cafemarkt_id": "5473",
+      "name": "Samixir M22 Panaromik Analog Soğuk İçecek Dispenseri, 22 L, Inox",
+      "code": "023.M22.AI",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/panaromik-ayran-ve-serbet-makinesi-22-lt-ak-5473",
+      "image": "https://witcdn.cafemarkt.com/panaromik-ayran-ve-serbet-makinesi-22-lt-ak-5473-limonata-serbet-ayran-makineleri-samixir-67318-54-O.jpg",
+      "price_try_kdv_dahil": 41715.33
+    },
+    {
+      "cafemarkt_id": "6501",
+      "name": "Samixir S22 Panaromik Analog Soğuk İçecek Dispenseri, 22 L, Sarı",
+      "code": "023.S22.AY",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/panaromik-ayran-serbet-makinesi-22-lt-af-sari",
+      "image": "https://witcdn.cafemarkt.com/panaromik-ayran-serbet-makinesi-22-lt-af-sari-limonata-serbet-ayran-makineleri-samixir-67362-65-O.jpg",
+      "price_try_kdv_dahil": 37260.3
+    },
+    {
+      "cafemarkt_id": "6500",
+      "name": "Samixir S22 Panaromik Analog Soğuk İçecek Dispenseri, 22 L, Inox",
+      "code": "023.S22.AI",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/panaromik-ayran-serbet-makinesi-22-lt-af-inox",
+      "image": "https://witcdn.cafemarkt.com/panaromik-ayran-serbet-makinesi-22-lt-af-inox-limonata-serbet-ayran-makineleri-samixir-67360-65-O.jpg",
+      "price_try_kdv_dahil": 41715.33
+    },
+    {
+      "cafemarkt_id": "6502",
+      "name": "Samixir S22 Panaromik Dijital Soğuk İçecek Dispenseri, 22 L, Inox",
+      "code": "023.S22.DI",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/panaromik-ayran-serbet-makinesi-22-lt-df-inox",
+      "image": "https://witcdn.cafemarkt.com/panaromik-ayran-serbet-makinesi-22-lt-df-inox-limonata-serbet-ayran-makineleri-samixir-67354-65-O.jpg",
+      "price_try_kdv_dahil": 43942.85
+    },
+    {
+      "cafemarkt_id": "13572",
+      "name": "Samixir S22 Panaromik Analog Soğuk İçecek Dispenseri, 22 L, Siyah",
+      "code": "023.S22.AB",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-s22-soguk-icecek-dispenseri-22-l-analog-panaromik-siyah",
+      "image": "https://witcdn.cafemarkt.com/samixir-s22-soguk-icecek-dispenseri-22-l-analog-panaromik-siyah-limonata-serbet-ayran-makineleri-samixir-67357-13-O.jpg",
+      "price_try_kdv_dahil": 37260.3
+    },
+    {
+      "cafemarkt_id": "19247",
+      "name": "Samixir SLUSH24 Twin Ice Slush Granita Milkshake ve Soğuk Meyve Suyu Dispenseri, 12+12 L, Siyah",
+      "code": "023.SLUSH24.B",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-twin-ice-slush-granita-ve-soguk-meyve-suyu-dispenseri-1212-l-siyah",
+      "image": "https://witcdn.cafemarkt.com/samixir-twin-ice-slush-granita-ve-soguk-meyve-suyu-dispenseri-1212-l-siyah-ice-slush-buzlas-makineleri-samixir-33968-19-O.jpg",
+      "price_try_kdv_dahil": 96593.27
+    },
+    {
+      "cafemarkt_id": "6505",
+      "name": "Samixir S40 Panaromik Dijital Soğuk İçecek Dispenseri, 40 L, Sarı",
+      "code": "023.S40.DY",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/panaromik-ayran-serbet-makinesi-40-lt-df-sari",
+      "image": "https://witcdn.cafemarkt.com/panaromik-ayran-serbet-makinesi-40-lt-df-sari-limonata-serbet-ayran-makineleri-samixir-67369-65-O.jpg",
+      "price_try_kdv_dahil": 59130.47
+    },
+    {
+      "cafemarkt_id": "6504",
+      "name": "Samixir S40 Panaromik Dijital Soğuk İçecek Dispenseri, 40 L, Inox",
+      "code": "023.S40.DI",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/panaromik-ayran-serbet-makinesi-40-lt-df-inox",
+      "image": "https://witcdn.cafemarkt.com/panaromik-ayran-serbet-makinesi-40-lt-df-inox-limonata-serbet-ayran-makineleri-samixir-67367-65-O.jpg",
+      "price_try_kdv_dahil": 63585.51
+    },
+    {
+      "cafemarkt_id": "19243",
+      "name": "Samixir SLUSH12 Mono Ice Slush Granita Milkshake ve Soğuk Meyve Suyu Dispenseri, 12 L, Inox",
+      "code": "023.SLUSH12.I",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-mono-ice-slush-granita-ve-soguk-meyve-suyu-dispenseri-12-l-inox",
+      "image": "https://witcdn.cafemarkt.com/samixir-mono-ice-slush-granita-ve-soguk-meyve-suyu-dispenseri-12-l-inox-ice-slush-buzlas-makineleri-samixir-33967-19-O.jpg",
+      "price_try_kdv_dahil": 67635.54
+    },
+    {
+      "cafemarkt_id": "13579",
+      "name": "Samixir SS44 Panaromik Analog Twin Soğuk İçecek Dispenseri, 22+22 L, Fıskiyeli, Siyah",
+      "code": "023.SS44.AB",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-twin-soguk-icecek-dispenseri-2222-l-panaromik-analog-fiskiyeli-siyah",
+      "image": "https://witcdn.cafemarkt.com/samixir-twin-soguk-icecek-dispenseri-2222-l-panaromik-analog-fiskiyeli-siyah-limonata-serbet-ayran-makineleri-samixir-67342-13-O.jpg",
+      "price_try_kdv_dahil": 68040.54
+    },
+    {
+      "cafemarkt_id": "13557",
+      "name": "Samixir 20.MB Klasik Mono Soğuk İçecek Dispenseri, 20 L, Karıştırıcılı, Siyah",
+      "code": "023.20.MB",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-klasik-mono-soguk-icecek-dispenseri-20-l-karistiricili-siyah",
+      "image": "https://witcdn.cafemarkt.com/samixir-klasik-mono-soguk-icecek-dispenseri-20-l-karistiricili-siyah-limonata-serbet-ayran-makineleri-samixir-67244-13-O.jpg",
+      "price_try_kdv_dahil": 26325.21
+    },
+    {
+      "cafemarkt_id": "13574",
+      "name": "Samixir S40 Panaromik Dijital Soğuk İçecek Dispenseri, 40 L, Siyah",
+      "code": "023.S40.DB",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-s40-soguk-icecek-dispenseri-40-l-dijital-panaromik-siyah",
+      "image": "https://witcdn.cafemarkt.com/samixir-s40-soguk-icecek-dispenseri-40-l-dijital-panaromik-siyah-limonata-serbet-ayran-makineleri-samixir-67364-13-O.jpg",
+      "price_try_kdv_dahil": 59130.47
+    },
+    {
+      "cafemarkt_id": "5487",
+      "name": "Samixir 40.SMY Klasik Twin Soğuk İçecek Dispenseri, 20+20 L, Fıskiyeli ve Karıştırıcılı, Sarı",
+      "code": "023.40.SMY",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/limonata-serbet-ayran-makinesi-2x20-lt-sa",
+      "image": "https://witcdn.cafemarkt.com/limonata-serbet-ayran-makinesi-2x20-lt-sa-limonata-serbet-ayran-makineleri-samixir-67295-54-O.jpg",
+      "price_try_kdv_dahil": 39892.82
+    },
+    {
+      "cafemarkt_id": "5489",
+      "name": "Samixir 40.SSI Klasik Twin Soğuk İçecek Dispenseri, 20+20 L, Fıskiyeli, Inox",
+      "code": "023.40.SSI",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/limonata-serbet-makinesi-2x20-lt-ss",
+      "image": "https://witcdn.cafemarkt.com/limonata-serbet-makinesi-2x20-lt-ss-limonata-serbet-ayran-makineleri-samixir-67290-54-O.jpg",
+      "price_try_kdv_dahil": 44347.85
+    },
+    {
+      "cafemarkt_id": "13568",
+      "name": "Samixir M22 Panaromik Dijital Soğuk İçecek Dispenseri, 22 L, Siyah",
+      "code": "023.M22.DB",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-m22-soguk-icecek-dispenseri-22-l-dijital-panaromik-siyah",
+      "image": "https://witcdn.cafemarkt.com/samixir-m22-soguk-icecek-dispenseri-22-l-dijital-panaromik-siyah-limonata-serbet-ayran-makineleri-samixir-88430-13-O.jpg",
+      "price_try_kdv_dahil": 39487.82
+    },
+    {
+      "cafemarkt_id": "19251",
+      "name": "Samixir SLUSH24 Allure Twin Ice Slush Granita Milkshake ve Soğuk Meyve Suyu Dispenseri, 12+12 L, Sarı",
+      "code": "023.SLUSH24.YA",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-allure-twin-ice-slush-granita-meyve-suyu-dispenseri-1212-l-sari",
+      "image": "https://witcdn.cafemarkt.com/samixir-allure-twin-ice-slush-granita-meyve-suyu-dispenseri-1212-l-sari-ice-slush-buzlas-makineleri-samixir-33959-19-O.jpg",
+      "price_try_kdv_dahil": 110363.38
+    },
+    {
+      "cafemarkt_id": "5480",
+      "name": "Samixir M40 Panaromik Dijital Soğuk İçecek Dispenseri, 40 L, Sarı",
+      "code": "023.M40.DY",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/panaromik-ayran-ve-serbet-makinesi-40-lt-dk-5480",
+      "image": "https://witcdn.cafemarkt.com/panaromik-ayran-ve-serbet-makinesi-40-lt-dk-5480-limonata-serbet-ayran-makineleri-samixir-67316-54-O.jpg",
+      "price_try_kdv_dahil": 59130.47
+    },
+    {
+      "cafemarkt_id": "19255",
+      "name": "Samixir SLUSH36 Allure Triple Ice Slush Granita Milkshake ve Soğuk Meyve Suyu Dispenseri, 12+12+12 L, Inox",
+      "code": "023.SLUSH36.IA",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-allure-triple-ice-slush-granita-ve-soguk-meyve-suyu-dispenseri-121212-l-inox",
+      "image": "https://witcdn.cafemarkt.com/samixir-allure-triple-ice-slush-granita-ve-soguk-meyve-suyu-dispenseri-121212-l-inox-ice-slush-buzlas-makineleri-samixir-33964-19-O.jpg",
+      "price_try_kdv_dahil": 153698.73
+    },
+    {
+      "cafemarkt_id": "19249",
+      "name": "Samixir SLUSH24.I Twin Ice Slush Granita Milkshake ve Soğuk Meyve Suyu Dispenseri, 12+12 L, Inox",
+      "code": "023.SLUSH24.I",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-twin-ice-slush-granita-ve-soguk-meyve-suyu-dispenseri-1212-l-inox",
+      "image": "https://witcdn.cafemarkt.com/samixir-twin-ice-slush-granita-ve-soguk-meyve-suyu-dispenseri-1212-l-inox-ice-slush-buzlas-makineleri-samixir-33969-19-O.jpg",
+      "price_try_kdv_dahil": 101048.31
+    },
+    {
+      "cafemarkt_id": "17275",
+      "name": "Samixir MMM30 Panaromik Triple Soğuk İçecek Dispenseri, 10 L+10 L+10 L, Sarı",
+      "code": "023.MMM30.AY",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-m10-triple-soguk-icecek-dispenseri-10-l10-l10-l-panaromik-sari",
+      "image": "https://witcdn.cafemarkt.com/samixir-m10-triple-soguk-icecek-dispenseri-10-l10-l10-l-panaromik-sari-limonata-serbet-ayran-makineleri-samixir-67328-17-O.jpg",
+      "price_try_kdv_dahil": 71280.57
+    },
+    {
+      "cafemarkt_id": "13570",
+      "name": "Samixir MM44.AB Panaromik Analog Twin Soğuk İçecek Dispenseri, 22+22 L, Karıştırıcılı, Siyah",
+      "code": "023.MM44.AB",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-twin-soguk-icecek-dispenseri-2222-l-panaromik-analog-karistiricili-siyah",
+      "image": "https://witcdn.cafemarkt.com/samixir-twin-soguk-icecek-dispenseri-2222-l-panaromik-analog-karistiricili-siyah-limonata-serbet-ayran-makineleri-samixir-67333-13-O.jpg",
+      "price_try_kdv_dahil": 68040.54
+    },
+    {
+      "cafemarkt_id": "5482",
+      "name": "Samixir 20.SY Klasik Mono Soğuk İçecek Dispenseri, 20 L, Fıskiyeli, Sarı",
+      "code": "023.20.SY",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/limonata-serbet-makinesi-20-lt",
+      "image": "https://witcdn.cafemarkt.com/limonata-serbet-makinesi-20-lt-limonata-serbet-ayran-makineleri-samixir-23954-54-O.jpg",
+      "price_try_kdv_dahil": 26325.21
+    },
+    {
+      "cafemarkt_id": "19253",
+      "name": "Samixir SLUSH36 Allure Triple Ice Slush Granita Milkshake ve Soğuk Meyve Suyu Dispenseri, 12+12+12 L, Siyah",
+      "code": "023.SLUSH36.BA",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-allure-triple-ice-slush-granita-ve-soguk-meyve-suyu-dispenseri-1212-l-siyah",
+      "image": "https://witcdn.cafemarkt.com/samixir-allure-triple-ice-slush-granita-ve-soguk-meyve-suyu-dispenseri-1212-l-siyah-ice-slush-buzlas-makineleri-samixir-33963-19-O.jpg",
+      "price_try_kdv_dahil": 149243.69
+    },
+    {
+      "cafemarkt_id": "19240",
+      "name": "Samixir 60.SSSY Triple Klasik Fıskiyeli Soğuk İçecek Dispenseri, 20+20+20 L, Sarı",
+      "code": "023.60.SSSY",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-triple-klasik-fiskiyeli-soguk-icecek-dispenseri-202020-l-sari",
+      "image": "https://witcdn.cafemarkt.com/samixir-triple-klasik-fiskiyeli-soguk-icecek-dispenseri-202020-l-sari-limonata-serbet-ayran-makineleri-samixir-67267-19-O.jpg",
+      "price_try_kdv_dahil": 57510.46
+    },
+    {
+      "cafemarkt_id": "5481",
+      "name": "Samixir 20.MY Klasik Mono Soğuk İçecek Dispenseri, 20 L, Karıştırıcılı, Sarı",
+      "code": "023.20.MY",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/ayran-makinesi-20-lt",
+      "image": "https://witcdn.cafemarkt.com/ayran-makinesi-20-lt-limonata-serbet-ayran-makineleri-samixir-67251-54-O.jpg",
+      "price_try_kdv_dahil": 26325.21
+    },
+    {
+      "cafemarkt_id": "19256",
+      "name": "Samixir SLUSH36 Allure Triple Ice Slush Granita Milkshake ve Soğuk Meyve Suyu Dispenseri, 12+12+12 L, Sarı",
+      "code": "023.SLUSH36.YA",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-allure-triple-ice-slush-granita-ve-soguk-meyve-suyu-dispenseri-1212-l-sari",
+      "image": "https://witcdn.cafemarkt.com/samixir-allure-triple-ice-slush-granita-ve-soguk-meyve-suyu-dispenseri-1212-l-sari-ice-slush-buzlas-makineleri-samixir-33962-19-O.jpg",
+      "price_try_kdv_dahil": 149243.69
+    },
+    {
+      "cafemarkt_id": "5488",
+      "name": "Samixir 40.SMI Klasik Twin Soğuk İçecek Dispenseri, 20+20 L, Fıskiyeli ve Karıştırıcılı, Inox",
+      "code": "023.40.SMI",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/limonata-serbet-ayran-makinesi-2x20-lt-sa-5488",
+      "image": "https://witcdn.cafemarkt.com/limonata-serbet-ayran-makinesi-2x20-lt-sa-5488-limonata-serbet-ayran-makineleri-samixir-67288-54-O.jpg",
+      "price_try_kdv_dahil": 44347.85
+    },
+    {
+      "cafemarkt_id": "13558",
+      "name": "Samixir 20.SB Klasik Mono Soğuk İçecek Dispenseri, 20 L, Fıskiyeli, Siyah",
+      "code": "023.20.SB",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-klasik-mono-soguk-icecek-dispenseri-20-l-fiskiyeli-siyah",
+      "image": "https://witcdn.cafemarkt.com/samixir-klasik-mono-soguk-icecek-dispenseri-20-l-fiskiyeli-siyah-limonata-serbet-ayran-makineleri-samixir-67246-13-O.jpg",
+      "price_try_kdv_dahil": 26325.21
+    },
+    {
+      "cafemarkt_id": "41638",
+      "name": "Samixir SS20 Twin Panaromik Fıskiyeli Soğuk İçecek Dispenseri, 10 L+10 L, Sarı",
+      "code": "023.SS20.AY",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-ss20-twin-panaromik-fiskiyeli-soguk-icecek-dispenseri-10-l10-l-sari",
+      "image": "https://witcdn.cafemarkt.com/samixir-ss20-twin-panaromik-fiskiyeli-soguk-icecek-dispenseri-10-l10-l-sari-limonata-serbet-ayran-makineleri-samixir-80430-41-O.jpg",
+      "price_try_kdv_dahil": 52245.42
+    },
+    {
+      "cafemarkt_id": "13580",
+      "name": "Samixir SS44 Panaromik Analog Twin Soğuk İçecek Dispenseri, 22+22 L, Fıskiyeli, Sarı",
+      "code": "023.SS44.AY",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-twin-soguk-icecek-dispenseri-2222-l-panaromik-analog-fiskiyeli-sari",
+      "image": "https://witcdn.cafemarkt.com/samixir-twin-soguk-icecek-dispenseri-2222-l-panaromik-analog-fiskiyeli-sari-limonata-serbet-ayran-makineleri-samixir-67344-13-O.jpg",
+      "price_try_kdv_dahil": 68040.54
+    },
+    {
+      "cafemarkt_id": "5478",
+      "name": "Samixir Alem 22 L Modellere Uyumlu",
+      "code": "023.ALEM",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-marka-22-lt-modellere-uyumlu-alem",
+      "image": "https://witcdn.cafemarkt.com/samixir-marka-22-lt-modellere-uyumlu-alem-limonata-serbet-ayran-makineleri-samixir-15467-54-O.jpg",
+      "price_try_kdv_dahil": 11745.09
+    },
+    {
+      "cafemarkt_id": "13569",
+      "name": "Samixir M40 Panaromik Dijital Soğuk İçecek Dispenseri, 40 L, Siyah",
+      "code": "023.M40.DB",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-m40-soguk-icecek-dispenseri-40-l-dijital-panaromik-siyah",
+      "image": "https://witcdn.cafemarkt.com/samixir-m40-soguk-icecek-dispenseri-40-l-dijital-panaromik-siyah-limonata-serbet-ayran-makineleri-samixir-67313-13-O.jpg",
+      "price_try_kdv_dahil": 59130.47
+    },
+    {
+      "cafemarkt_id": "5484",
+      "name": "Samixir 20.SI Klasik Mono Soğuk İçecek Dispenseri, 20 L, Fıskiyeli, Inox",
+      "code": "023.20.SI",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/limonata-serbet-makinesi-20-lt-5484",
+      "image": "https://witcdn.cafemarkt.com/limonata-serbet-makinesi-20-lt-5484-limonata-serbet-ayran-makineleri-samixir-23956-54-O.jpg",
+      "price_try_kdv_dahil": 30780.25
+    },
+    {
+      "cafemarkt_id": "9900",
+      "name": "Samixir Alem, 40 L Modellere Uyumlu",
+      "code": "023.ALEM40",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-marka-40-lt-modellere-uyumlu-alem",
+      "image": "https://witcdn.cafemarkt.com/samixir-marka-40-lt-modellere-uyumlu-alem-limonata-serbet-ayran-makineleri-samixir-15466-99-O.jpg",
+      "price_try_kdv_dahil": 15390.12
+    },
+    {
+      "cafemarkt_id": "41639",
+      "name": "Samixir SS20 Twin Panaromik Fıskiyeli Soğuk İçecek Dispenseri, 10 L+10 L, Siyah",
+      "code": "023.SS20.AB",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-ss20-twin-panaromik-fiskiyeli-soguk-icecek-dispenseri-10-l10-l-siyah",
+      "image": "https://witcdn.cafemarkt.com/samixir-ss20-twin-panaromik-fiskiyeli-soguk-icecek-dispenseri-10-l10-l-siyah-limonata-serbet-ayran-makineleri-samixir-80434-41-O.jpg",
+      "price_try_kdv_dahil": 52245.42
+    },
+    {
+      "cafemarkt_id": "5494",
+      "name": "Samixir 60.SSSI Klasik Triple Soğuk İçecek Dispenseri, 20+20+20 L, Fıskiyeli, Inox",
+      "code": "023.60.SSSI",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/limonata-serbet-makinesi-3x20-lt-sss",
+      "image": "https://witcdn.cafemarkt.com/limonata-serbet-makinesi-3x20-lt-sss-limonata-serbet-ayran-makineleri-samixir-67261-54-O.jpg",
+      "price_try_kdv_dahil": 61965.5
+    },
+    {
+      "cafemarkt_id": "5485",
+      "name": "Samixir 40.MMI Klasik Twin Soğuk İçecek Dispenseri, 20+20 L, Karıştırıcılı, Inox",
+      "code": "023.40.MMI",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/ayran-makinesi-2x20-lt",
+      "image": "https://witcdn.cafemarkt.com/ayran-makinesi-2x20-lt-limonata-serbet-ayran-makineleri-samixir-67286-54-O.jpg",
+      "price_try_kdv_dahil": 44347.85
+    },
+    {
+      "cafemarkt_id": "5483",
+      "name": "Samixir 20.MI Klasik Mono Soğuk İçecek Dispenseri, 20 L, Karıştırıcılı, Inox",
+      "code": "023.20.MI",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/ayran-makinesi-20-lt-5483",
+      "image": "https://witcdn.cafemarkt.com/ayran-makinesi-20-lt-5483-limonata-serbet-ayran-makineleri-samixir-67242-54-O.jpg",
+      "price_try_kdv_dahil": 30780.25
+    },
+    {
+      "cafemarkt_id": "13560",
+      "name": "Samixir 40.SMB Klasik Twin Soğuk İçecek Dispenseri, 20+20 L, Fıskiyeli ve Karıştırıcılı, Siyah",
+      "code": "023.40.SMB",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-klasik-twin-soguk-icecek-dispenseri-2020-l-fiskiyeli-ve-karistiricili-siyah",
+      "image": "https://witcdn.cafemarkt.com/samixir-klasik-twin-soguk-icecek-dispenseri-2020-l-fiskiyeli-ve-karistiricili-siyah-limonata-serbet-ayran-makineleri-samixir-67298-13-O.jpg",
+      "price_try_kdv_dahil": 39892.82
+    },
+    {
+      "cafemarkt_id": "19250",
+      "name": "Samixir SLUSH24 Allure Twin Ice Slush Granita Milkshake ve Soğuk Meyve Suyu Dispenseri, 12+12 L, Inox",
+      "code": "023.SLUSH24.IA",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-allure-twin-ice-slush-granita-ve-soguk-meyve-suyu-dispenseri-1212-l-inox",
+      "image": "https://witcdn.cafemarkt.com/samixir-allure-twin-ice-slush-granita-ve-soguk-meyve-suyu-dispenseri-1212-l-inox-ice-slush-buzlas-makineleri-samixir-33961-19-O.jpg",
+      "price_try_kdv_dahil": 114818.42
+    },
+    {
+      "cafemarkt_id": "5491",
+      "name": "Samixir 60.MMMI Klasik Triple Soğuk İçecek Dispenseri, 20+20+20 L, Karıştırıcılı, Inox",
+      "code": "023.60.MMMI",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/ayran-makinesi-3x20-lt-aaa",
+      "image": "https://witcdn.cafemarkt.com/ayran-makinesi-3x20-lt-aaa-limonata-serbet-ayran-makineleri-samixir-67253-54-O.jpg",
+      "price_try_kdv_dahil": 61965.5
+    },
+    {
+      "cafemarkt_id": "19241",
+      "name": "Samixir SLUSH12 Mono Ice Slush Granita Milkshake ve Soğuk Meyve Suyu Dispenseri, 12 L, Siyah",
+      "code": "023.SLUSH12.B",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-mono-ice-slush-granita-ve-soguk-meyve-suyu-dispenseri-12-l-siyah",
+      "image": "https://witcdn.cafemarkt.com/samixir-mono-ice-slush-granita-ve-soguk-meyve-suyu-dispenseri-12-l-siyah-ice-slush-buzlas-makineleri-samixir-33966-19-O.jpg",
+      "price_try_kdv_dahil": 63180.51
+    },
+    {
+      "cafemarkt_id": "19254",
+      "name": "Samixir SLUSH36 Triple Ice Slush Granita Milkshake ve Soğuk Meyve Suyu Dispenseri, 12+12+12 L, Inox",
+      "code": "023.SLUSH36.I",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-triple-ice-slush-granita-ve-soguk-meyve-suyu-dispenseri-121212-l-inox",
+      "image": "https://witcdn.cafemarkt.com/samixir-triple-ice-slush-granita-ve-soguk-meyve-suyu-dispenseri-121212-l-inox-ice-slush-buzlas-makineleri-samixir-33971-19-O.jpg",
+      "price_try_kdv_dahil": 132841.06
+    },
+    {
+      "cafemarkt_id": "19242",
+      "name": "Samixir SLUSH12 Allure Ice Slush Granita Milkshake ve Soğuk Meyve Suyu Dispenseri, 12 L, Siyah",
+      "code": "023.SLUSH12.BA",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-allure-ice-slush-granita-ve-soguk-meyve-suyu-dispenseri-12-l-siyah",
+      "image": "https://witcdn.cafemarkt.com/samixir-allure-ice-slush-granita-ve-soguk-meyve-suyu-dispenseri-12-l-siyah-ice-slush-buzlas-makineleri-samixir-34003-19-O.jpg",
+      "price_try_kdv_dahil": 70875.57
+    },
+    {
+      "cafemarkt_id": "19246",
+      "name": "Samixir SLUSH12 Allure Ice Slush Granita Milkshake ve Soğuk Meyve Suyu Dispenseri, 12 L, Sarı",
+      "code": "023.SLUSH12.YA",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-allure-ice-slush-granita-soguk-meyve-suyu-dispenseri-12-l-sari",
+      "image": "https://witcdn.cafemarkt.com/samixir-allure-ice-slush-granita-soguk-meyve-suyu-dispenseri-12-l-sari-ice-slush-buzlas-makineleri-samixir-34047-19-O.jpg",
+      "price_try_kdv_dahil": 70875.57
+    },
+    {
+      "cafemarkt_id": "43969",
+      "name": "Samixir HOT SC10 Sıcak İçecek Dispenseri, 10 L, Inox",
+      "code": "023.SC10.AI.SSPB",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-hot-inox-sc10-sicak-icecek-dispenseri-10-l-inox",
+      "image": "https://witcdn.cafemarkt.com/samixir-hot-inox-sc10-sicak-icecek-dispenseri-10-l-inox-sicak-cikolata-ve-sahlep-makineleri-samixir-87283-43-O.jpg",
+      "price_try_kdv_dahil": 38070.3
+    },
+    {
+      "cafemarkt_id": "39803",
+      "name": "Samixir SC.06 Sıcak Çikolata ve Sahlep Makinesi, 6 L, Gold",
+      "code": "023.SC06.GOLD",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-sc06-sicak-cikolata-ve-sahlep-makinesi-6-l-gold",
+      "image": "https://witcdn.cafemarkt.com/samixir-sc06-sicak-cikolata-ve-sahlep-makinesi-6-l-gold-sicak-cikolata-ve-sahlep-makineleri-samixir-88164-39-O.jpg",
+      "price_try_kdv_dahil": 38475.31
+    },
+    {
+      "cafemarkt_id": "39802",
+      "name": "Samixir SC.10 Sıcak İçecek Dispenseri, 10 L, Gold",
+      "code": "023.SC10.GOLD",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-sc10-sicak-icecek-dispenseri-10-l-gold",
+      "image": "https://witcdn.cafemarkt.com/samixir-sc10-sicak-icecek-dispenseri-10-l-gold-sicak-cikolata-ve-sahlep-makineleri-samixir-77991-39-O.jpg",
+      "price_try_kdv_dahil": 41917.84
+    },
+    {
+      "cafemarkt_id": "19252",
+      "name": "Samixir SLUSH36 Triple Ice Slush Granita Milkshake ve Soğuk Meyve Suyu Dispenseri, 12+12+12 L, Siyah",
+      "code": "023.SLUSH36.B",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-triple-ice-slush-granita-ve-soguk-meyve-suyu-dispenseri-121212-l-siyah",
+      "image": "https://witcdn.cafemarkt.com/samixir-triple-ice-slush-granita-ve-soguk-meyve-suyu-dispenseri-121212-l-siyah-ice-slush-buzlas-makineleri-samixir-33970-19-O.jpg",
+      "price_try_kdv_dahil": 128386.03
+    },
+    {
+      "cafemarkt_id": "19245",
+      "name": "Samixir SLUSH12 Mono Ice Slush Granita Milkshake ve Soğuk Meyve Suyu Dispenseri, 12 L, Sarı",
+      "code": "023.SLUSH12.Y",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-mono-ice-slush-granita-ve-soguk-meyve-suyu-dispenseri-12-l-sari",
+      "image": "https://witcdn.cafemarkt.com/samixir-mono-ice-slush-granita-ve-soguk-meyve-suyu-dispenseri-12-l-sari-ice-slush-buzlas-makineleri-samixir-33965-19-O.jpg",
+      "price_try_kdv_dahil": 63180.51
+    },
+    {
+      "cafemarkt_id": "19244",
+      "name": "Samixir SLUSH12 Allure Ice Slush Granita Milkshake ve Soğuk Meyve Suyu Dispenseri, 12 L, Inox",
+      "code": "023.SLUSH12.IA",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-allure-twin-ice-slush-granita-ve-soguk-meyve-suyu-dispenseri-12-l-inox",
+      "image": "https://witcdn.cafemarkt.com/samixir-allure-twin-ice-slush-granita-ve-soguk-meyve-suyu-dispenseri-12-l-inox-ice-slush-buzlas-makineleri-samixir-34006-19-O.jpg",
+      "price_try_kdv_dahil": 75330.6
+    },
+    {
+      "cafemarkt_id": "19239",
+      "name": "Samixir 60.SSSB Triple Klasik Fıskiyeli Soğuk İçecek Dispenseri, 20+20+20 L, Siyah",
+      "code": "023.60.SSSB",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-triple-klasik-fiskiyeli-soguk-icecek-dispenseri-202020-l-siyah",
+      "image": "https://witcdn.cafemarkt.com/samixir-triple-klasik-fiskiyeli-soguk-icecek-dispenseri-202020-l-siyah-limonata-serbet-ayran-makineleri-samixir-67275-19-O.jpg",
+      "price_try_kdv_dahil": 57510.46
+    },
+    {
+      "cafemarkt_id": "19238",
+      "name": "Samixir 60.SSMY Triple Klasik Fıskiyeli ve Fıskiyeli Karıştırıcılı Soğuk İçecek Dispenseri, 20+20+20 L, Sarı",
+      "code": "023.60.SSMY",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-triple-klasik-fiskiyeli-ve-fiskiyeli-karistiricili-soguk-icecek-dispenseri-202020-l-sari",
+      "image": "https://witcdn.cafemarkt.com/samixir-triple-klasik-fiskiyeli-ve-fiskiyeli-karistiricili-soguk-icecek-dispenseri-202020-l-sari-limonata-serbet-ayran-makineleri-samixir-67264-19-O.jpg",
+      "price_try_kdv_dahil": 57510.46
+    },
+    {
+      "cafemarkt_id": "19237",
+      "name": "Samixir 60.SSMB Triple Klasik Fıskiyeli ve Fıskiyeli Karıştırıcılı Soğuk İçecek Dispenseri, 20+20+20 L, Siyah",
+      "code": "023.60.SSMB",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-triple-klasik-fiskiyeli-ve-fiskiyeli-karistiricili-soguk-icecek-dispenseri-202020-l-siyah",
+      "image": "https://witcdn.cafemarkt.com/samixir-triple-klasik-fiskiyeli-ve-fiskiyeli-karistiricili-soguk-icecek-dispenseri-202020-l-siyah-limonata-serbet-ayran-makineleri-samixir-67272-19-O.jpg",
+      "price_try_kdv_dahil": 57510.46
+    },
+    {
+      "cafemarkt_id": "19236",
+      "name": "Samixir 60.SMMY Triple Klasik Fıskiyeli Karıştırıcılı ve Karıştırıcılı Soğuk İçecek Dispenseri, 20+20+20 L, Sarı",
+      "code": "023.60.SMMY",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-triple-klasik-fiskiyeli-karistiricili-ve-karistiricili-soguk-icecek-dispenseri-202020-l-sari",
+      "image": "https://witcdn.cafemarkt.com/samixir-triple-klasik-fiskiyeli-karistiricili-ve-karistiricili-soguk-icecek-dispenseri-202020-l-sari-limonata-serbet-ayran-makineleri-samixir-33952-19-O.jpg",
+      "price_try_kdv_dahil": 57510.46
+    },
+    {
+      "cafemarkt_id": "19235",
+      "name": "Samixir 60.SMMB Triple Klasik Fıskiyeli Karıştırıcılı ve Karıştırıcılı Soğuk İçecek Dispenseri, 20+20+20 L, Siyah",
+      "code": "023.60.SMMB",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-triple-klasik-fiskiyeli-karistiricili-ve-karistiricili-soguk-icecek-dispenseri-202020-l-siyah",
+      "image": "https://witcdn.cafemarkt.com/samixir-triple-klasik-fiskiyeli-karistiricili-ve-karistiricili-soguk-icecek-dispenseri-202020-l-siyah-limonata-serbet-ayran-makineleri-samixir-67271-19-O.jpg",
+      "price_try_kdv_dahil": 57510.46
+    },
+    {
+      "cafemarkt_id": "19234",
+      "name": "Samixir 60.MMMY Triple Klasik Karıştırıcılı Soğuk İçecek Dispenseri, 20+20+20 L, Sarı",
+      "code": "023.60.MMMY",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-triple-klasik-karistiricili-soguk-icecek-dispenseri-202020-l-sari",
+      "image": "https://witcdn.cafemarkt.com/samixir-triple-klasik-karistiricili-soguk-icecek-dispenseri-202020-l-sari-limonata-serbet-ayran-makineleri-samixir-67263-19-O.jpg",
+      "price_try_kdv_dahil": 57510.46
+    },
+    {
+      "cafemarkt_id": "19233",
+      "name": "Samixir 60.MMMB Triple Klasik Karıştırıcılı Soğuk İçecek Dispenseri, 20+20+20 L, Siyah",
+      "code": "023.60.MMMB",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-triple-klasik-karistiricili-soguk-icecek-dispenseri-202020-l-siyah",
+      "image": "https://witcdn.cafemarkt.com/samixir-triple-klasik-karistiricili-soguk-icecek-dispenseri-202020-l-siyah-limonata-serbet-ayran-makineleri-samixir-67268-19-O.jpg",
+      "price_try_kdv_dahil": 57510.46
+    },
+    {
+      "cafemarkt_id": "13578",
+      "name": "Samixir SM44 Panaromik Analog Twin Soğuk İçecek Dispenseri, 22+22 L, Fıskiyeli ve Karıştırıcılı, Sarı",
+      "code": "023.SM44.AY",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-twin-soguk-icecek-dispenseri-2222-l-panaromik-analog-fiskiyeli-ve-karistiricili-sari",
+      "image": "https://witcdn.cafemarkt.com/samixir-twin-soguk-icecek-dispenseri-2222-l-panaromik-analog-fiskiyeli-ve-karistiricili-sari-limonata-serbet-ayran-makineleri-samixir-67340-13-O.jpg",
+      "price_try_kdv_dahil": 68040.54
+    },
+    {
+      "cafemarkt_id": "13577",
+      "name": "Samixir SM44 Panaromik Analog Twin Soğuk İçecek Dispenseri, 22+22 L, Fıskiyeli ve Karıştırıcılı, Siyah",
+      "code": "023.SM44.AB",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-twin-soguk-icecek-dispenseri-2222-l-panaromik-analog-fiskiyeli-ve-karistiricili-siyah",
+      "image": "https://witcdn.cafemarkt.com/samixir-twin-soguk-icecek-dispenseri-2222-l-panaromik-analog-fiskiyeli-ve-karistiricili-siyah-limonata-serbet-ayran-makineleri-samixir-67337-13-O.jpg",
+      "price_try_kdv_dahil": 68040.54
+    },
+    {
+      "cafemarkt_id": "13575",
+      "name": "Samixir SLUSH24.Y Twin Ice Slush Granita Milkshake ve Soğuk Meyve Suyu Dispenseri, 12+12 L, Sarı",
+      "code": "023.SLUSH24.Y",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-ice-slush-twin-meyve-suyu-dispenseri-1212-l-sari",
+      "image": "https://witcdn.cafemarkt.com/samixir-ice-slush-twin-meyve-suyu-dispenseri-1212-l-sari-ice-slush-buzlas-makineleri-samixir-33936-13-O.jpg",
+      "price_try_kdv_dahil": 96593.27
+    },
+    {
+      "cafemarkt_id": "13571",
+      "name": "Samixir MM44.AY Panaromik Analog Twin Soğuk İçecek Dispenseri, 22+22 L, Karıştırıcılı, Sarı",
+      "code": "023.MM44.AY",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/samixir-twin-soguk-icecek-dispenseri-2222-l-panaromik-analog-karistiricili-sari",
+      "image": "https://witcdn.cafemarkt.com/samixir-twin-soguk-icecek-dispenseri-2222-l-panaromik-analog-karistiricili-sari-limonata-serbet-ayran-makineleri-samixir-67334-13-O.jpg",
+      "price_try_kdv_dahil": 68040.54
+    },
+    {
+      "cafemarkt_id": "5493",
+      "name": "Samixir 60.SSMI Klasik Triple Soğuk İçecek Dispenseri, 20+20+20 L, Fıskiyeli-Fıskiyeli-Karıştırıcılı, Inox",
+      "code": "023.60.SSMI",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/limonata-serbet-ayran-makinesi-3x20-lt-ssa",
+      "image": "https://witcdn.cafemarkt.com/limonata-serbet-ayran-makinesi-3x20-lt-ssa-limonata-serbet-ayran-makineleri-samixir-67258-54-O.jpg",
+      "price_try_kdv_dahil": 61965.5
+    },
+    {
+      "cafemarkt_id": "5492",
+      "name": "Samixir 60.SMMI Klasik Triple Soğuk İçecek Dispenseri, 20+20+20 L, Fıskiyeli-Karıştırıcılı-Karıştırıcılı, Inox",
+      "code": "023.60.SMMI",
+      "brand": "Samixir",
+      "url": "https://www.cafemarkt.com/limonata-serbet-ayran-makinesi-3x20-lt-saa",
+      "image": "https://witcdn.cafemarkt.com/limonata-serbet-ayran-makinesi-3x20-lt-saa-limonata-serbet-ayran-makineleri-samixir-67255-54-O.jpg",
+      "price_try_kdv_dahil": 61965.5
+    }
+  ]
+}
