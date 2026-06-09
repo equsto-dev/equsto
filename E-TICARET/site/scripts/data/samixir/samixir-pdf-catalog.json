@@ -1,0 +1,162 @@
+{
+  "source": "c:\\D Disk\\FİYAT LİSTELERİ\\SAMİXİR KATALOG 2026 (1).pdf",
+  "generated_at": "2026-06-09T18:45:14.844898+00:00",
+  "iskonto_oran": 0.4,
+  "equsto_satis_oran": 0.65,
+  "formula": "Equsto satış EUR = liste × 65% (bayi %40 iskonto + %15 kar); TL + KDV %20",
+  "by_code": {
+    "SLUSH24.IA": 2835.0,
+    "SLUSH36.IA": 3795.0,
+    "SLUSH24.I": 2495.0,
+    "SLUSH36.I": 3280.0,
+    "MM20.AB": 1290.0,
+    "M10.AI": 885.0,
+    "MMM30.AB": 1760.0,
+    "M22.AI": 1030.0,
+    "M40.DI": 1570.0,
+    "S22.AI": 1030.0,
+    "S40.DI": 1570.0,
+    "SM44.AB": 1680.0,
+    "SS44.AB": 1680.0,
+    "MM44.AB": 1680.0,
+    "KAM40.DI": 2060.0,
+    "HOT10.DNB": 640.0,
+    "SC10.AG": 1035.0,
+    "SC10.I": 790.0,
+    "SC06.I": 710.0,
+    "SC10.AI.SSPB": 940.0
+  },
+  "slug_map": {
+    "slush-mono-allure": "SLUSH12.IA",
+    "slush-twin-allure": "SLUSH24.IA",
+    "slush-triple-allure": "SLUSH36.IA",
+    "slush-mono": "SLUSH12.I",
+    "slush-twin": "SLUSH24.I",
+    "slush-triple": "SLUSH36.I",
+    "panoramik-m10": "M10.AI",
+    "panoramik-10-twin": "MM20.AB",
+    "panoramik-10-triple": "MMM30.AB",
+    "panoramik-m22": "M22.DI",
+    "panoramik-m40": "M40.DI",
+    "panoramik-s22": "S22.DI",
+    "panoramik-s40": "S40.DI",
+    "panoramik-22-twin": "SM44.AB",
+    "kam22": "KAM22.DI",
+    "kam40": "KAM40.DI",
+    "klasik-mono": "20.MI",
+    "klasik-twin": "40.SSI",
+    "klasik-triple": "40.MMI",
+    "hot-sc06": "SC06.I",
+    "hot-sc10": "SC10.I",
+    "hot-gold-sc06": "SC06.AG",
+    "hot-gold-sc10": "SC10.AG",
+    "hot-neo-10": "HOT10.DNB",
+    "hot-inox-10": "SC10.AI.SSPB"
+  },
+  "slug_prices": {
+    "slush-twin-allure": {
+      "pdf_code": "SLUSH24.IA",
+      "liste_eur": 2835.0
+    },
+    "slush-triple-allure": {
+      "pdf_code": "SLUSH36.IA",
+      "liste_eur": 3795.0
+    },
+    "slush-twin": {
+      "pdf_code": "SLUSH24.I",
+      "liste_eur": 2495.0
+    },
+    "slush-triple": {
+      "pdf_code": "SLUSH36.I",
+      "liste_eur": 3280.0
+    },
+    "panoramik-m10": {
+      "pdf_code": "M10.AI",
+      "liste_eur": 885.0
+    },
+    "panoramik-10-twin": {
+      "pdf_code": "MM20.AB",
+      "liste_eur": 1290.0
+    },
+    "panoramik-10-triple": {
+      "pdf_code": "MMM30.AB",
+      "liste_eur": 1760.0
+    },
+    "panoramik-m40": {
+      "pdf_code": "M40.DI",
+      "liste_eur": 1570.0
+    },
+    "panoramik-s40": {
+      "pdf_code": "S40.DI",
+      "liste_eur": 1570.0
+    },
+    "panoramik-22-twin": {
+      "pdf_code": "SM44.AB",
+      "liste_eur": 1680.0
+    },
+    "kam40": {
+      "pdf_code": "KAM40.DI",
+      "liste_eur": 2060.0
+    },
+    "hot-sc06": {
+      "pdf_code": "SC06.I",
+      "liste_eur": 710.0
+    },
+    "hot-sc10": {
+      "pdf_code": "SC10.I",
+      "liste_eur": 790.0
+    },
+    "hot-gold-sc10": {
+      "pdf_code": "SC10.AG",
+      "liste_eur": 1035.0
+    },
+    "hot-neo-10": {
+      "pdf_code": "HOT10.DNB",
+      "liste_eur": 640.0
+    },
+    "hot-inox-10": {
+      "pdf_code": "SC10.AI.SSPB",
+      "liste_eur": 940.0
+    }
+  },
+  "missing_slug_codes": [
+    {
+      "slug": "slush-mono-allure",
+      "pdf_code": "SLUSH12.IA"
+    },
+    {
+      "slug": "slush-mono",
+      "pdf_code": "SLUSH12.I"
+    },
+    {
+      "slug": "panoramik-m22",
+      "pdf_code": "M22.DI"
+    },
+    {
+      "slug": "panoramik-s22",
+      "pdf_code": "S22.DI"
+    },
+    {
+      "slug": "kam22",
+      "pdf_code": "KAM22.DI"
+    },
+    {
+      "slug": "klasik-mono",
+      "pdf_code": "20.MI"
+    },
+    {
+      "slug": "klasik-twin",
+      "pdf_code": "40.SSI"
+    },
+    {
+      "slug": "klasik-triple",
+      "pdf_code": "40.MMI"
+    },
+    {
+      "slug": "hot-gold-sc06",
+      "pdf_code": "SC06.AG"
+    }
+  ],
+  "pair_count": 46,
+  "unique_codes": 20
+}
