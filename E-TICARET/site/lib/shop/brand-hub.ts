@@ -204,6 +204,13 @@ export const BRAND_HUB_META: Record<string, BrandHubMeta> = {
     facet: "Şenox",
     sameAs: ["https://www.senox.com.tr"],
   },
+  vosco: {
+    displayName: "Vosco",
+    description:
+      "Vosco buz makineleri, teşhir dolapları, kahve ve hazırlık ekipmanları — vosco.com.tr katalog verisi ve 2026 PDF liste fiyatları ile Equsto vitrininde.",
+    facet: "Vosco",
+    sameAs: ["https://vosco.com.tr"],
+  },
 };
 
 export function getBrandHubMeta(slug: string): BrandHubMeta | null {
