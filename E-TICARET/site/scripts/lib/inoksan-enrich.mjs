@@ -409,7 +409,16 @@ function foldCmp(s) {
   return foldTr(s).replace(/\s+/g, "");
 }
 
-/** Vitrin başlığı: model kodu + inoksan.com veya Excel açıklaması */
+/** Web başlığı bu SKU için güvenilir mi? (yalnızca tam model kodu geçiyorsa) */
+function webTitleMatchesSku(model, title) {
+  if (/L\s*\/\s*R/i.test(title)) return false;
+  const wt = foldCmp(title);
+  const m = foldCmp(model);
+  if (!wt || !m || m.length < 4) return false;
+  return wt.includes(m);
+}
+
+/** Vitrin başlığı: model kodu + Excel; web yalnızca birebir eşleşmede */
 export function inoksanDisplayName(row, web, match) {
   const model = skuCore(row?.sku || "");
   const excel = String(row?.name || "")
@@ -417,18 +426,8 @@ export function inoksanDisplayName(row, web, match) {
     .replace(/^INOKSAN\s+/i, "")
     .trim();
 
-  const trusted =
-    web?.title &&
-    match &&
-    (match.via === "code-index" ||
-      match.via === "bundle-module" ||
-      (match.via === "family-alias" && match.score >= 85));
-
-  if (trusted) {
-    const wt = String(web.title).trim();
-    if (foldCmp(wt).includes(foldCmp(model))) return wt;
-    return `${model} – ${wt}`;
-  }
+  const wt = web?.title ? String(web.title).trim() : "";
+  if (wt && webTitleMatchesSku(model, wt)) return wt;
 
   if (excel && foldCmp(excel).includes(foldCmp(model))) return excel;
   if (excel) return `${model} – ${excel}`;
