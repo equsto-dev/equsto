@@ -112,6 +112,13 @@ function pickMerchantHeroImage(images: unknown[]): string {
   return String(images[0] || "");
 }
 
+/** XML 1.0: yalnızca tab, LF, CR kontrol karakterleri geçerlidir. */
+export function sanitizeXmlText(text: string): string {
+  return String(text || "")
+    .replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g, "")
+    .replace(/\uFFFE|\uFFFF/g, "");
+}
+
 export function cleanDescription(row: CatalogRow, maxLen = 5000): string {
   const parts = [
     String(row.name || ""),
@@ -119,12 +126,14 @@ export function cleanDescription(row: CatalogRow, maxLen = 5000): string {
     String(row.specs || ""),
     String(row.aciklama || ""),
   ].filter(Boolean);
-  return parts
-    .join("\n")
-    .replace(/<[^>]+>/g, " ")
-    .replace(/\s+/g, " ")
-    .trim()
-    .slice(0, maxLen);
+  return sanitizeXmlText(
+    parts
+      .join("\n")
+      .replace(/<[^>]+>/g, " ")
+      .replace(/\s+/g, " ")
+      .trim()
+      .slice(0, maxLen),
+  );
 }
 
 export function feedTitle(row: CatalogRow): string {
@@ -248,7 +257,7 @@ export async function buildMerchantFeedItems(opts?: {
 }
 
 export function escapeXml(text: string): string {
-  return String(text || "")
+  return sanitizeXmlText(text)
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
