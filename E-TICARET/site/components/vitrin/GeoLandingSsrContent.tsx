@@ -42,7 +42,7 @@ export default function GeoLandingSsrContent({
   const u = UI[lang];
   const homeHref = lang === "en" ? "/en" : "/";
   const pfosHref = lang === "en" ? "/en/pfos" : "/pfos";
-  const contactHref = lang === "en" ? "/en/contact" : "/contact";
+  const contactHref = lang === "en" ? "/en/iletisim" : "/iletisim";
   const besosHref = lang === "en" ? "/en/besos" : "/besos";
   const path = geoCanonicalPath(slug, lang, kind);
 

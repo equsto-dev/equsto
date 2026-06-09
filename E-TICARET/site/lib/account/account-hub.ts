@@ -53,7 +53,7 @@ export const ACCOUNT_CARDS: AccountCard[] = [
     title: "Ödeme ve teklif",
     description:
       "Kurumsal B2B akış: teklif onayı sonrası sipariş ve fatura süreci satış mühendisliği ile yürütülür.",
-    href: "/contact",
+    href: "/iletisim",
     icon: "payments",
   },
   {
@@ -77,7 +77,7 @@ export const ACCOUNT_CARDS: AccountCard[] = [
     title: "Bize ulaşın",
     description:
       "Satış mühendisliği, montaj ve teknik destek için iletişim kanalları.",
-    href: "/contact",
+    href: "/iletisim",
     icon: "contact",
   },
 ];
@@ -88,7 +88,7 @@ export const ACCOUNT_LINK_COLUMNS: AccountLinkColumn[] = [
     links: [
       { label: "Proje Fabrikası", href: "/pfos" },
       { label: "Bar Design Studio", href: "/besos" },
-      { label: "İletişim ve teklif", href: "/contact" },
+      { label: "İletişim ve teklif", href: "/iletisim" },
     ],
   },
   {

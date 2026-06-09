@@ -21,7 +21,7 @@ const DEFAULT_SERVE_TR: ServeYouData = {
   ctaCatalog: "Bar ürün kataloğunu incele",
   ctaCatalogHref: "#bd-stations",
   ctaInfo: "Daha fazla bilgi istiyorum",
-  ctaInfoHref: "/contact",
+  ctaInfoHref: "/iletisim",
   image: "images/catalog/besos/web/besos-bes-p23.avif",
 };
 
@@ -32,7 +32,7 @@ const DEFAULT_SERVE_EN: ServeYouData = {
   ctaCatalog: "Browse bar product catalogue",
   ctaCatalogHref: "#bd-stations",
   ctaInfo: "I'd like more information",
-  ctaInfoHref: "/en/contact",
+  ctaInfoHref: "/en/iletisim",
   image: "images/catalog/besos/web/besos-bes-p23.avif",
 };
 

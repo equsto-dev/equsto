@@ -1,5 +1,5 @@
 {
-  "version": 15,
+  "version": 16,
   "source": "equsto.com sitemap + llms.txt + index eq-footer-seo + llms Hakkımızda",
   "faq": {
     "title": "SSS",
@@ -72,8 +72,8 @@
   "companyDisplayKey": "footer.company_display",
   "tagline": "Equsto Teknolojisi · Gastronomi Tasarımı · Satış Mühendisliği",
   "legal": {
-    "terms": "/contact",
-    "privacy": "/contact",
+    "terms": "/iletisim",
+    "privacy": "/iletisim",
     "company": "Equsto Teknoloji Limited"
   },
   "columns": [
@@ -106,7 +106,7 @@
       "titleKey": "footer.col_help",
       "title": "Size yardımcı olalım",
       "links": [
-        { "key": "footer.link_quote", "label": "Teklif ve proje talebi", "href": "/contact" },
+        { "key": "footer.link_quote", "label": "Teklif ve proje talebi", "href": "/iletisim" },
         { "key": "footer.link_account", "label": "Hesabım ve siparişler", "href": "/login.html" },
         { "key": "footer.link_guide_m2", "label": "Rehber: mutfak m²", "href": "/rehber/mutfak-alani-kisi-basi-metrekare-2026" },
         { "key": "footer.link_cafe", "label": "Cafe kurulum rehberi", "href": "/cafe-kurulumu" },
@@ -118,15 +118,21 @@
     {
       "titleKey": "footer.col_about",
       "title": "Hakkımızda",
+      "contact": {
+        "email": "info@equsto.com",
+        "phoneDisplay": "+90 532 684 01 52",
+        "phoneTel": "+905326840152",
+        "whatsapp": "905326840152"
+      },
       "links": [
-        { "key": "footer.link_about", "label": "Equsto hakkında", "href": "/hakkimizda.html" },
-        { "key": "footer.link_blog", "label": "Rehber ve blog", "href": "/blog" },
-        { "key": "footer.link_story", "label": "Buradan başladık", "href": "/buradan-basladi" },
-        { "key": "footer.link_contact", "label": "İletişim", "href": "/contact" },
-        { "key": "footer.link_projects", "label": "Referans projeler", "href": "/projeler" },
-        { "key": "footer.link_sitemap", "label": "Site haritası", "href": "/sitemap.xml" },
-        { "key": "footer.link_llms", "label": "Asistan özet dosyası", "href": "/llms.txt" },
-        { "key": "footer.link_marka", "label": "Markalarımız", "href": "/shop/marka" }
+        { "key": "footer.link_about", "label": "Hakkımızda", "href": "/hakkimizda.html" },
+        { "key": "footer.link_bank", "label": "Banka Bilgilerimiz", "href": "#" },
+        { "key": "footer.link_export", "label": "Export", "href": "#" },
+        { "key": "footer.link_career", "label": "Kariyer", "href": "#" },
+        { "key": "footer.link_contact", "label": "İletişim", "href": "/iletisim" },
+        { "key": "footer.link_corporate", "label": "Kurumsal Sitemiz", "href": "#" },
+        { "key": "footer.link_blog", "label": "Blog", "href": "/blog" },
+        { "key": "footer.link_uk", "label": "UK", "href": "#" }
       ]
     }
   ]

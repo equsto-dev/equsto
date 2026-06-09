@@ -4,7 +4,7 @@ export const EQ_DEPT_PATH: Record<string, string> = {
   shop: "/shop",
   pfos: "/pfos",
   besos: "/besos",
-  contact: "/contact",
+  contact: "/iletisim",
   cart: "/sepet",
   pisirme: "/shop/pisirme",
   sogutma: "/shop/sogutma",

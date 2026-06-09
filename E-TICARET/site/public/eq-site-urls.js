@@ -16,7 +16,7 @@
     admin: "/admin.html",
     yerSofrasi: "/yer-sofrasi",
     besos: "/besos",
-    contact: "/contact",
+    contact: "/iletisim",
     sss: "/sss",
     login: "/login.html",
     account: "/hesabim",
@@ -45,7 +45,7 @@
     admin: "admin.html",
     yerSofrasi: "index.html",
     besos: "bar-design.html",
-    contact: "contact.html",
+    contact: "iletisim.html",
     sss: "sss.html",
     login: "login.html",
     cart: "sepet.html",
@@ -682,7 +682,7 @@
     if (file === "index.html") return window.equstoUrl("home") + query + hash;
     if (file === "admin.html") return window.equstoUrl("admin") + query + hash;
     if (file === "bar.html" || file === "bar-design.html") return window.equstoUrl("besos") + query + hash;
-    if (file === "contact.html") return window.equstoUrl("contact") + query + hash;
+    if (file === "contact.html" || file === "iletisim.html") return window.equstoUrl("contact") + query + hash;
     if (file === "sss.html") return window.equstoUrl("sss") + query + hash;
     if (file === "login.html") return window.equstoUrl("login") + query + hash;
     if (file === "sepet.html") return window.equstoUrl("cart") + query + hash;

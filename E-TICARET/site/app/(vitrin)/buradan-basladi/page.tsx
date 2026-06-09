@@ -59,7 +59,7 @@ export default function StoryPage() {
           <a className="hk-a-secondary" href="/hakkimizda" data-i18n="story.cta_about">
             Hakkımızda
           </a>
-          <a className="hk-a-secondary" href="/contact" data-i18n="story.cta_contact">
+          <a className="hk-a-secondary" href="/iletisim" data-i18n="story.cta_contact">
             İletişim
           </a>
         </div>

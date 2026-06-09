@@ -60,7 +60,7 @@ export default function HakkimizdaPage() {
           <a className="hk-a-secondary" href="/buradan-basladi" data-i18n="about.cta_story">
             Buradan başladık
           </a>
-          <a className="hk-a-secondary" href="/contact" data-i18n="about.cta_contact">
+          <a className="hk-a-secondary" href="/iletisim" data-i18n="about.cta_contact">
             İletişim
           </a>
           <a className="hk-a-secondary" href="/shop/marka" data-i18n="about.cta_brands">

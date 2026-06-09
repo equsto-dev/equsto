@@ -34,7 +34,7 @@ function legacyHtmlRedirects() {
   const pairs: [string, string][] = [
     ["pfos.html", "/pfos"],
     ["sss.html", "/sss"],
-    ["contact.html", "/contact"],
+    ["contact.html", "/iletisim"],
     ["hakkimizda.html", "/hakkimizda"],
     ["buradan-basladi.html", "/buradan-basladi"],
     ["marka.html", "/shop/marka"],
@@ -154,7 +154,7 @@ const nextConfig: NextConfig = {
       { source: "/besos", headers: [utf8Html] },
       { source: "/besos/:path*", headers: [utf8Html] },
       { source: "/admin", headers: [utf8Html] },
-      { source: "/contact", headers: [utf8Html] },
+      { source: "/iletisim", headers: [utf8Html] },
       { source: "/login", headers: [utf8Html] },
       { source: "/hesabim", headers: [utf8Html] },
       { source: "/marka", headers: [utf8Html] },
@@ -212,6 +212,8 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      { source: "/contact", destination: "/iletisim", permanent: true },
+      { source: "/en/contact", destination: "/en/iletisim", permanent: true },
       { source: "/index.html", destination: "/", permanent: true },
       { source: "/admin", destination: "/admin.html", permanent: false },
       { source: "/en/admin", destination: "/admin.html", permanent: false },

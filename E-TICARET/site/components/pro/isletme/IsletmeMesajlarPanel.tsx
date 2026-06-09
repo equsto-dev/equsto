@@ -8,7 +8,8 @@ import { useAdminTablePagination } from "@/lib/yonetim/table-pagination";
 
 const KAYNAK_LABEL: Record<string, string> = {
   "whatsapp-modal": "WhatsApp chat",
-  "iletisim-fab": "İletişim formu",
+  "iletisim-fab": "İletişim formu (FAB)",
+  "iletisim-sayfa": "İletişim sayfası formu",
   web: "Web",
 };
 

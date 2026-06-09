@@ -83,7 +83,7 @@ export default function HakkimizdaContent({ lang }: Props) {
           <a className="hk-a-secondary" href="/en/story">
             Our story
           </a>
-          <a className="hk-a-secondary" href="/en/contact">
+          <a className="hk-a-secondary" href="/en/iletisim">
             Contact
           </a>
           <a className="hk-a-secondary" href="/en/shop/marka">
@@ -169,7 +169,7 @@ export default function HakkimizdaContent({ lang }: Props) {
         <a className="hk-a-secondary" href="/buradan-basladi">
           Buradan başladık
         </a>
-        <a className="hk-a-secondary" href="/contact">
+        <a className="hk-a-secondary" href="/iletisim">
           İletişim
         </a>
         <a className="hk-a-secondary" href="/shop/marka">

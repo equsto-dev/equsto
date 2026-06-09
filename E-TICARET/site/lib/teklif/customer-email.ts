@@ -85,7 +85,7 @@ export async function sendTeklifCustomerEmail(
       <li><strong>Tahmini toplam:</strong> ${genel} (KDV hariç)</li>
     </ul>
     <p>Ekte ${attachmentLabel} proforma dosyanız vardır.</p>
-    <p><a href="${siteUrl()}/contact">İletişim</a> · <a href="${siteUrl()}/pfos">PFOS</a></p>
+    <p><a href="${siteUrl()}/iletisim">İletişim</a> · <a href="${siteUrl()}/pfos">PFOS</a></p>
   `.trim();
 
   const res = await sendResendEmail({

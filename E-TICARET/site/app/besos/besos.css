@@ -1597,6 +1597,31 @@ body.bd-page.besos.eq-shop .eq-mfoot-col a:hover {
   color: #fff;
   text-decoration: underline;
 }
+body.bd-page.besos.eq-shop .eq-mfoot-contact-li {
+  margin-bottom: 12px;
+}
+body.bd-page.besos.eq-shop .eq-mfoot-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 6px;
+}
+body.bd-page.besos.eq-shop .eq-mfoot-contact-item {
+  font-size: 12px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.58);
+  text-decoration: none;
+}
+body.bd-page.besos.eq-shop .eq-mfoot-contact-item:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+body.bd-page.besos.eq-shop .eq-mfoot-contact-wa {
+  color: rgba(134, 239, 172, 0.88);
+}
+body.bd-page.besos.eq-shop .eq-mfoot-contact-wa:hover {
+  color: #bbf7d0;
+}
 body.bd-page.besos.eq-shop .eq-mfoot-brand {
   display: flex !important;
   flex-direction: column !important;
