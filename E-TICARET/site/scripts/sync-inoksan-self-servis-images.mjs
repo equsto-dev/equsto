@@ -19,12 +19,37 @@ const IMG_SUB = "images/catalog/inoksan/web";
 const dryRun = process.argv.includes("--dry-run");
 const force = process.argv.includes("--force");
 
+function isValidImageFile(dest) {
+  if (!fs.existsSync(dest)) return false;
+  if (fs.statSync(dest).size <= 3000) return false;
+  const head = fs.readFileSync(dest, { start: 0, end: 11 });
+  if (head[0] === 0xff && head[1] === 0xd8) return true;
+  if (head[0] === 0x89 && head[1] === 0x50 && head[2] === 0x4e && head[3] === 0x47) return true;
+  return false;
+}
+
 function curlBin(url, dest) {
   if (dryRun) return false;
   fs.mkdirSync(path.dirname(dest), { recursive: true });
   const r = spawnSync("curl.exe", ["-sL", "--max-time", "60", "-o", dest, url], { stdio: "pipe" });
-  return r.status === 0 && fs.existsSync(dest) && fs.statSync(dest).size > 3000;
+  if (r.status !== 0 || !isValidImageFile(dest)) {
+    try {
+      fs.unlinkSync(dest);
+    } catch (_) {}
+    return false;
+  }
+  return true;
 }
+
+/** SKU kodu imagesfolder/products/{KOD}.jpg yoksa — inoksan.com kategori görseli */
+const SKU_PREFIX_FALLBACKS = [
+  [/^KLGK/i, "https://www.inoksan.com/imagesfolder/products/GLNK-TEPSI-STANDI.png"],
+  [/^KLG/i, "https://www.inoksan.com/imagesfolder/products/GLN-TEPSI-STANDI.png"],
+  [/^GT07/i, "https://www.inoksan.com/imagesfolder/products/GTN-SERVIS-TEZGAHI-ARA-RAFLI.png"],
+  [/^KST/i, "https://www.inoksan.com/imagesfolder/products/GSN-SICAK-SERVIS-UNITESI.png"],
+  [/^KBN/i, "https://www.inoksan.com/imagesfolder/products/KBN-Servis-Buzdolabi.png"],
+  [/^KBT/i, "https://www.inoksan.com/imagesfolder/products/KBN-Servis-Buzdolabi.png"],
+];
 
 function imgUrlsForSku(sku) {
   const code = String(sku || "")
@@ -50,7 +75,15 @@ function imgRel(sku) {
 }
 
 function hasGoodLocal(dest) {
-  return fs.existsSync(dest) && fs.statSync(dest).size > 3000;
+  return isValidImageFile(dest);
+}
+
+function fallbackUrlsForSku(sku) {
+  const code = String(sku || "").replace(/^INO-/i, "").trim();
+  for (const [re, url] of SKU_PREFIX_FALLBACKS) {
+    if (re.test(code)) return [url];
+  }
+  return [];
 }
 
 function downloadForSku(sku) {
@@ -58,7 +91,8 @@ function downloadForSku(sku) {
   if (!force && hasGoodLocal(dest)) {
     return imgRel(sku);
   }
-  for (const url of imgUrlsForSku(sku)) {
+  const urls = [...imgUrlsForSku(sku), ...fallbackUrlsForSku(sku)];
+  for (const url of urls) {
     if (curlBin(url, dest)) return imgRel(sku);
   }
   return hasGoodLocal(dest) ? imgRel(sku) : "";
