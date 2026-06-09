@@ -60,17 +60,24 @@ export function ocakSkuSuffixesFromOlcu(olcu: string): string[] {
   return [];
 }
 
-export function ocakFuelFromRow(row: AdminUrunRow): OcakFuel | null {
+export function ocakFuelFromRow(row: {
+  sku?: string | null;
+  ad?: string | null;
+  kategori?: string | null;
+}): OcakFuel | null {
   const sku = String(row.sku ?? "").toUpperCase();
-  const blob = norm(`${row.ad} ${row.kategori ?? ""}`);
+  const blob = norm(`${row.ad ?? ""} ${row.kategori ?? ""}`);
   if (/^AIO-/.test(sku) || /induksiyon|indüksiyon/.test(blob)) return "induksiyon";
   if (/^A(?:GO|EAGO)-|^EAGO/.test(sku) || /\bgaz\b|gazli|gazlı/.test(blob)) return "gaz";
   if (/^AE[O]|^EAEO-/.test(sku) || /elektrik/.test(blob)) return "elektrik";
   return null;
 }
 
-export function ocakBurnerCountFromRow(row: AdminUrunRow): number | null {
-  const blob = norm(`${row.ad} ${row.kategori ?? ""}`);
+export function ocakBurnerCountFromRow(row: {
+  ad?: string | null;
+  kategori?: string | null;
+}): number | null {
+  const blob = norm(`${row.ad ?? ""} ${row.kategori ?? ""}`);
   const plaka = blob.match(/plaka:\s*(\d+)/);
   if (plaka) return Number(plaka[1]);
   const inline = String(row.ad).match(/-\s*\d+\s+(\d)\s+\d{3,4}\s*x/i);
@@ -80,7 +87,10 @@ export function ocakBurnerCountFromRow(row: AdminUrunRow): number | null {
   return null;
 }
 
-export function ocakFuelMismatch(referansFuel: OcakFuel | null, row: AdminUrunRow): boolean {
+export function ocakFuelMismatch(
+  referansFuel: OcakFuel | null,
+  row: Parameters<typeof ocakFuelFromRow>[0],
+): boolean {
   if (!referansFuel) return false;
   const rowFuel = ocakFuelFromRow(row);
   return rowFuel !== null && rowFuel !== referansFuel;

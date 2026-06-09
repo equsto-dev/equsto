@@ -30,7 +30,7 @@ export function isTasFirinReferans(isim: string): boolean {
 }
 
 export function isKombiKonveksiyonReferans(
-  isim: string,
+  isim: string | null | undefined,
   urunTipi?: string | null,
 ): boolean {
   const tip = resolveTipKodu(String(urunTipi ?? "").trim());
@@ -162,7 +162,7 @@ export async function matchKombiFirinByReferans(
       id: `kombi-firin-${norm(isim).replace(/\s+/g, "-").slice(0, 48)}`,
       sku: null,
       ad: displayIsimFromSablon(isim),
-      marka: null,
+      marka: "—",
       model: null,
       olcu: olcuDisplay,
       elektrikGucuKw: null,
