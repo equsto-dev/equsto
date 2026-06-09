@@ -3,7 +3,7 @@
 İnoksan 2026 Yurtiçi Bayi Fiyatları R1.xlsx → dept katalog (yalnız INO-* ana ürünler).
 Aksesuar / Genel Aksesuar (201–209 önekleri) dahil değil.
 
-Alış: liste × 0,73 (%27 iskonto) · Satış: alış × 1,15 (%15 kar)
+Genel: liste × 0,73 × 1,15 · Bulaşık yıkama: liste × 0,77 × 1,15
 
   python scripts/sync-inoksan-fiyat-2026.py
   python scripts/sync-inoksan-fiyat-2026.py --dry-run
@@ -26,6 +26,8 @@ KUR_EUR_TRY = 53.2979
 KDV_ORAN = 20
 BAYI_ORAN = 0.73
 KAR_ORAN = 1.15
+YIKAMA_BAYI_ORAN = 0.77
+YIKAMA_ISKONTO = 0.23
 BRAND = "İnoksan"
 KAYNAK = "inoksan-fiyat-listesi-2026-r1"
 
@@ -88,9 +90,19 @@ def product_id(sku: str) -> str:
     return "inoksan__" + slugify(sku)
 
 
-def pricing_fields(liste_eur: float, sku: str, short_name: str, cat_label: str) -> dict:
+def pricing_fields(
+    liste_eur: float,
+    sku: str,
+    short_name: str,
+    cat_label: str,
+    *,
+    dept: str = "",
+) -> dict:
     liste = round(float(liste_eur), 2)
-    alis = round(liste * BAYI_ORAN, 2)
+    bayi = YIKAMA_BAYI_ORAN if dept == "yikama" else BAYI_ORAN
+    iskonto = YIKAMA_ISKONTO if dept == "yikama" else 0.27
+    iskonto_yuzde = int(round(iskonto * 100))
+    alis = round(liste * bayi, 2)
     satis = round(alis * KAR_ORAN, 2)
     fiyat_tl_net = round(satis * KUR_EUR_TRY)
     fiyat_tl = round(fiyat_tl_net * (1 + KDV_ORAN / 100))
@@ -102,11 +114,11 @@ def pricing_fields(liste_eur: float, sku: str, short_name: str, cat_label: str) 
             "",
             f"Ürün kodu: {sku}",
             f"Liste fiyatı (EUR): {liste}",
-            f"Bayi iskonto: %27 (ödeme oranı {BAYI_ORAN})",
+            f"Bayi iskonto: %{iskonto_yuzde} (ödeme oranı {bayi})",
             f"Bayi net alış (EUR): {alis}",
             f"Equsto kar: %15",
             f"Equsto satış (EUR): {satis}",
-            f"Hesap: liste × {BAYI_ORAN} × {KAR_ORAN}",
+            f"Hesap: liste × {bayi} × {KAR_ORAN}",
             f"Equsto satış (TL, KDV dahil): {fmt_try(fiyat_tl)}",
             f"Kur: 1 EUR = {KUR_EUR_TRY} TRY (KDV %{KDV_ORAN})",
             f"Kategori: {cat_label}",
@@ -124,7 +136,7 @@ def pricing_fields(liste_eur: float, sku: str, short_name: str, cat_label: str) 
         "satis_fiyati_eur": satis,
         "satis_eur_indirimli": satis,
         "iskontolu_fiyat": satis,
-        "bayi_iskonto": 0.27,
+        "bayi_iskonto": iskonto,
         "equsto_kar_oran": 0.15,
         "para_birimi": "EUR",
         "fiyat_kaynagi": KAYNAK,
@@ -169,7 +181,7 @@ def load_excel_rows() -> list[dict]:
         name = short.upper() if short else sku
         if not name.startswith("İNOKSAN") and not name.startswith("INOKSAN"):
             name = f"İNOKSAN {name}"
-        px = pricing_fields(float(liste), sku, short or sku, cat_label)
+        px = pricing_fields(float(liste), sku, short or sku, cat_label, dept=dept)
         row_obj = {
             "category": cat,
             "brand": BRAND,
@@ -205,8 +217,13 @@ def is_inoksan_row(row: dict) -> bool:
 
 
 def yikama_vitrin_ok(row: dict) -> bool:
-    """Bulaşık yıkama (yikama dept) sitede yok — hiçbir İnoksan yıkama satırı import edilmez."""
-    if row.get("dept") == "yikama":
+    """Yıkama: yalnızca makine satırları (tezgah / ZCO-ZMD / ekipman hariç)."""
+    if row.get("dept") != "yikama":
+        return True
+    if row.get("inoksan_h2") == "Ekipmanlar":
+        return False
+    sku = str(row.get("sku") or "")
+    if "-ZCO-" in sku or "-ZMD-" in sku:
         return False
     return True
 
@@ -225,6 +242,24 @@ PRESERVE_KEYS = (
 )
 
 
+def _merge_inoksan_idx(idx: dict[str, dict], row: dict) -> None:
+    if not is_inoksan_row(row) or not row.get("sku"):
+        return
+    sku = str(row["sku"])
+    prev = idx.get(sku)
+    if not prev:
+        idx[sku] = row
+        return
+    prev_img = bool(prev.get("images"))
+    new_img = bool(row.get("images"))
+    if new_img and not prev_img:
+        idx[sku] = row
+    elif prev_img and not new_img:
+        return
+    else:
+        idx[sku] = row
+
+
 def load_old_inoksan_by_sku() -> dict[str, dict]:
     idx: dict[str, dict] = {}
     for dept_file in DEPT_DIR.glob("*.json"):
@@ -232,8 +267,18 @@ def load_old_inoksan_by_sku() -> dict[str, dict]:
         if not isinstance(data, list):
             continue
         for row in data:
-            if is_inoksan_row(row) and row.get("sku"):
-                idx[str(row["sku"])] = row
+            _merge_inoksan_idx(idx, row)
+    repo = ROOT.parent.parent
+    try:
+        raw = subprocess.check_output(
+            ["git", "show", "b320d85c:E-TICARET/site/public/data/dept/yikama.json"],
+            cwd=repo,
+            stderr=subprocess.DEVNULL,
+        )
+        for row in json.loads(raw.decode("utf-8")):
+            _merge_inoksan_idx(idx, row)
+    except (subprocess.CalledProcessError, OSError, json.JSONDecodeError):
+        pass
     return idx
 
 
