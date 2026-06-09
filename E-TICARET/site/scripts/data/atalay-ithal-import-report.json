@@ -1,11 +1,16 @@
 {
   "dryRun": false,
   "pdfTotal": 282,
-  "matched": 143,
+  "matched": 205,
   "unmatched": 139,
+  "cafePriceOran": 0.97,
+  "cafePriced": 205,
+  "cafeDirectBrands": [
+    "Dito Sama"
+  ],
   "byDept": {
-    "hazirlik": 95,
-    "kahve": 48
+    "hazirlik": 156,
+    "kahve": 49
   },
   "unmatchedSample": [
     {
@@ -161,104 +166,164 @@
   ],
   "matchedSample": [
     {
+      "mode": "pdf+cafe",
+      "brand": "Santos",
       "pdf": "NO 11",
       "cafe": "Santos No 11 Portakal Sıkma Makinesi",
-      "sku": "058.NO.11"
+      "sku": "058.NO.11",
+      "fiyat": "cafemarkt"
     },
     {
+      "mode": "pdf+cafe",
+      "brand": "Santos",
       "pdf": "NO 11 C",
       "cafe": "Santos No 11 C Portakal Sıkma Makinesi",
-      "sku": "058.NO.11.C"
+      "sku": "058.NO.11.C",
+      "fiyat": "cafemarkt"
     },
     {
+      "mode": "pdf+cafe",
+      "brand": "Santos",
       "pdf": "NO 10",
       "cafe": "Santos No 10 Portakal Sıkma Makinesi",
-      "sku": "058.NO.10"
+      "sku": "058.NO.10",
+      "fiyat": "cafemarkt"
     },
     {
+      "mode": "pdf+cafe",
+      "brand": "Santos",
       "pdf": "NO 70",
       "cafe": "Santos No 70 Portakal Sıkma Makinesi, 1500 Devir/dk",
-      "sku": "058.NO.70"
+      "sku": "058.NO.70",
+      "fiyat": "cafemarkt"
     },
     {
+      "mode": "pdf+cafe",
+      "brand": "Santos",
       "pdf": "NO 50",
       "cafe": "Santos No 50 Katı Meyve Sıkacağı",
-      "sku": "058.NO.50"
+      "sku": "058.NO.50",
+      "fiyat": "cafemarkt"
     },
     {
+      "mode": "pdf+cafe",
+      "brand": "Santos",
       "pdf": "NO 28",
       "cafe": "Santos No 28 Katı Meyve Sıkacağı, Paslanmaz Çelik Gövdeli",
-      "sku": "058.NO.28"
+      "sku": "058.NO.28",
+      "fiyat": "cafemarkt"
     },
     {
+      "mode": "pdf+cafe",
+      "brand": "Santos",
       "pdf": "NO 68",
       "cafe": "Santos No 68 Kombine Katı Meyve Sıkacağı",
-      "sku": "058.NO.68"
+      "sku": "058.NO.68",
+      "fiyat": "cafemarkt"
     },
     {
+      "mode": "pdf+cafe",
+      "brand": "Santos",
       "pdf": "NO 65",
       "cafe": "Santos No 65 Soğuk Sıkım Katı Meyve Sıkacağı",
-      "sku": "058.NO.65"
+      "sku": "058.NO.65",
+      "fiyat": "cafemarkt"
     },
     {
+      "mode": "pdf+cafe",
+      "brand": "Santos",
       "pdf": "NO 33 GE",
       "cafe": "Santos No 33 GE Bar Blender, 1.25 L, 600 W, Siyah",
-      "sku": "058.NO.33.GE"
+      "sku": "058.NO.33.GE",
+      "fiyat": "cafemarkt"
     },
     {
+      "mode": "pdf+cafe",
+      "brand": "Santos",
       "pdf": "NO 37",
       "cafe": "Santos No 37 4 Paslanmaz Çelik Hazneli Mutfak Blender, 4 L, ",
-      "sku": "058.NO.37"
+      "sku": "058.NO.37",
+      "fiyat": "cafemarkt"
     },
     {
+      "mode": "pdf+cafe",
+      "brand": "Santos",
       "pdf": "NO 62",
       "cafe": "Santos No 62 Bar Blender, 1.4 L, 1000 W, Siyah",
-      "sku": "058.NO.62"
+      "sku": "058.NO.62",
+      "fiyat": "cafemarkt"
     },
     {
+      "mode": "pdf+cafe",
+      "brand": "Santos",
       "pdf": "NO 66",
       "cafe": "Santos NO 66 Bar Blender, 1.5 L",
-      "sku": "058.NO.66"
+      "sku": "058.NO.66",
+      "fiyat": "cafemarkt"
     },
     {
+      "mode": "pdf+cafe",
+      "brand": "Santos",
       "pdf": "NO 53",
       "cafe": "Santos No 53 Buz Kırma Makinesi",
-      "sku": "058.NO.53"
+      "sku": "058.NO.53",
+      "fiyat": "cafemarkt"
     },
     {
+      "mode": "pdf+cafe",
+      "brand": "Santos",
       "pdf": "NO 54 N",
       "cafe": "Santos No 54 Bar Mikseri",
-      "sku": "058.NO.54"
+      "sku": "058.NO.54",
+      "fiyat": "cafemarkt"
     },
     {
+      "mode": "pdf+cafe",
+      "brand": "Santos",
       "pdf": "NO 02",
       "cafe": "Santos No 02 Rende",
-      "sku": "058.NO.02"
+      "sku": "058.NO.02",
+      "fiyat": "cafemarkt"
     },
     {
+      "mode": "pdf+cafe",
+      "brand": "Faema",
       "pdf": "E98 UP S/3",
       "cafe": "Faema E98 Up Tall Cup Full Otomatik Espresso Kahve Makinesi,",
-      "sku": "197.9580.E98A2.WH"
+      "sku": "197.9580.E98A2.WH",
+      "fiyat": "cafemarkt"
     },
     {
+      "mode": "pdf+cafe",
+      "brand": "Faema",
       "pdf": "E98 UP S/2",
       "cafe": "Faema E98 UP S/2 Tall Cup Yarı Otomatik Espresso Kahve Makin",
-      "sku": "197.E98.UP.S2.TC"
+      "sku": "197.E98.UP.S2.TC",
+      "fiyat": "cafemarkt"
     },
     {
+      "mode": "pdf+cafe",
+      "brand": "Faema",
       "pdf": "E98 UP S/2 Tall Cup",
       "cafe": "Faema E98 UP S/2 Tall Cup Yarı Otomatik Espresso Kahve Makin",
-      "sku": "197.E98.UP.S2.TC"
+      "sku": "197.E98.UP.S2.TC",
+      "fiyat": "cafemarkt"
     },
     {
+      "mode": "pdf+cafe",
+      "brand": "Faema",
       "pdf": "E98 UP A/3",
       "cafe": "Faema E98 UP A/3 Tam Otomatik Espresso Kahve Makinesi, 3 Gru",
-      "sku": "197.E98.UP.A3"
+      "sku": "197.E98.UP.A3",
+      "fiyat": "cafemarkt"
     },
     {
+      "mode": "pdf+cafe",
+      "brand": "Faema",
       "pdf": "E98 UP A/2",
       "cafe": "Faema E98 Up Tall Cup Full Otomatik Espresso Kahve Makinesi,",
-      "sku": "197.9580.E98A2.WH"
+      "sku": "197.9580.E98A2.WH",
+      "fiyat": "cafemarkt"
     }
   ]
 }
