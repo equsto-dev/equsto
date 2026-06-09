@@ -1,0 +1,2434 @@
+{
+  "fetchedAt": "2026-06-09T18:38:29.951Z",
+  "byBrand": {
+    "Animo": [
+      {
+        "cafemarkt_id": "11092",
+        "name": "Animo Excelso Filtre Kahve Makinesi, 1.8 L",
+        "code": "199.10380",
+        "brand": "Animo",
+        "url": "https://www.cafemarkt.com/excelso-filtre-kahve-makinesi",
+        "image": "https://witcdn.cafemarkt.com/excelso-filtre-kahve-makinesi-filtre-kahve-makineleri-animo-19059-11-O.jpg",
+        "price_try_kdv_dahil": 22750.4
+      },
+      {
+        "cafemarkt_id": "26863",
+        "name": "Animo M100 Manuel Dolum Filtre Kahve Makinesi, 2 Cam Pot Dahil, 144 Fincan/Saat",
+        "code": "199.10502",
+        "brand": "Animo",
+        "url": "https://www.cafemarkt.com/animo-m100-filtre-kahve-makinesi-manuel-dolum",
+        "image": "https://witcdn.cafemarkt.com/animo-m100-filtre-kahve-makinesi-manuel-dolum-filtre-kahve-makineleri-animo-45872-26-O.jpg",
+        "price_try_kdv_dahil": 37917.33
+      },
+      {
+        "cafemarkt_id": "26864",
+        "name": "Animo MT100 Manuel Dolum Filtre Kahve Makinesi, 144 Fincan/Saat",
+        "code": "199.10522",
+        "brand": "Animo",
+        "url": "https://www.cafemarkt.com/animo-mt100-filtre-kahve-makinesi-manuel-dolum",
+        "image": "https://witcdn.cafemarkt.com/animo-mt100-filtre-kahve-makinesi-manuel-dolum-filtre-kahve-makineleri-animo-45844-26-O.jpg",
+        "price_try_kdv_dahil": 32861.69
+      },
+      {
+        "cafemarkt_id": "26845",
+        "name": "Animo ComBi-Line CB 2x5 Silindirik Filtre Kahve Makinesi, 10 L",
+        "code": "199.1005390",
+        "brand": "Animo",
+        "url": "https://www.cafemarkt.com/animo-combi-line-cb-2x5-silindirik-filtre-kahve-makinesi-10-l",
+        "image": "https://witcdn.cafemarkt.com/animo-combi-line-cb-2x5-silindirik-filtre-kahve-makinesi-10-l-filtre-kahve-makineleri-animo-45855-26-O.jpg",
+        "price_try_kdv_dahil": 210170.35
+      },
+      {
+        "cafemarkt_id": "35751",
+        "name": "Animo MT100 V Manuel Dolum Filtre Kahve Makinesi, 144 Fincan/Saat",
+        "code": "199.MT100.V",
+        "brand": "Animo",
+        "url": "https://www.cafemarkt.com/animo-mt100-v-manuel-dolum-filtre-kahve-makinesi-144-fincan-saat",
+        "image": "https://witcdn.cafemarkt.com/animo-mt100-v-manuel-dolum-filtre-kahve-makinesi-144-fincan-saat-filtre-kahve-makineleri-animo-65108-35-O.jpg",
+        "price_try_kdv_dahil": 40806.27
+      },
+      {
+        "cafemarkt_id": "35752",
+        "name": "Animo MT200 V Otomatik Dolum Filtre Kahve Makinesi, 144 Fincan/Saat",
+        "code": "199.MT200.V",
+        "brand": "Animo",
+        "url": "https://www.cafemarkt.com/animo-mt100-v-otomatik-dolum-filtre-kahve-makinesi-144-fincan-saat",
+        "image": "https://witcdn.cafemarkt.com/animo-mt100-v-otomatik-dolum-filtre-kahve-makinesi-144-fincan-saat-filtre-kahve-makineleri-animo-65111-35-O.jpg",
+        "price_try_kdv_dahil": 65362.26
+      },
+      {
+        "cafemarkt_id": "26848",
+        "name": "Animo ComBi-Line CB 2x5 W Silindirik Filtre Kahve Makinesi, 10 L",
+        "code": "199.1005394",
+        "brand": "Animo",
+        "url": "https://www.cafemarkt.com/animo-combi-line-cb-2x5-w-silindirik-filtre-kahve-makinesi-10-l",
+        "image": "https://witcdn.cafemarkt.com/animo-combi-line-cb-2x5-w-silindirik-filtre-kahve-makinesi-10-l-filtre-kahve-makineleri-animo-45861-26-O.jpg",
+        "price_try_kdv_dahil": 267226.91
+      },
+      {
+        "cafemarkt_id": "26852",
+        "name": "Animo ComBi-Line CB 2x10 W Silindirik Filtre Kahve Makinesi, 20 L",
+        "code": "199.1005402",
+        "brand": "Animo",
+        "url": "https://www.cafemarkt.com/animo-combi-line-cb-2x10-w-silindirik-filtre-kahve-makinesi-20-l",
+        "image": "https://witcdn.cafemarkt.com/animo-combi-line-cb-2x10-w-silindirik-filtre-kahve-makinesi-20-l-filtre-kahve-makineleri-animo-45862-26-O.jpg",
+        "price_try_kdv_dahil": 300449.71
+      },
+      {
+        "cafemarkt_id": "26862",
+        "name": "Animo Pompalı Termos, 2.1 L",
+        "code": "199.10419",
+        "brand": "Animo",
+        "url": "https://www.cafemarkt.com/animo-pompali-termos-2-1-l",
+        "image": "https://witcdn.cafemarkt.com/animo-pompali-termos-2-1-l-kahve-makinesi-termos-ve-hazneleri-animo-45845-26-O.jpg",
+        "price_try_kdv_dahil": 7583.47
+      },
+      {
+        "cafemarkt_id": "26849",
+        "name": "Animo ComBi-Line CB 2x10 Silindirik Filtre Kahve Makinesi, 20 L",
+        "code": "199.1005398",
+        "brand": "Animo",
+        "url": "https://www.cafemarkt.com/animo-combi-line-cb-2x10-silindirik-filtre-kahve-makinesi-20-l",
+        "image": "https://witcdn.cafemarkt.com/animo-combi-line-cb-2x10-silindirik-filtre-kahve-makinesi-20-l-filtre-kahve-makineleri-animo-45856-26-O.jpg",
+        "price_try_kdv_dahil": 251337.74
+      },
+      {
+        "cafemarkt_id": "26869",
+        "name": "Animo Konteyner, 2.4 L",
+        "code": "199.50241",
+        "brand": "Animo",
+        "url": "https://www.cafemarkt.com/animo-konteyner-2-4-l",
+        "image": "https://witcdn.cafemarkt.com/animo-konteyner-2-4-l-kahve-makinesi-termos-ve-hazneleri-animo-45846-26-O.jpg",
+        "price_try_kdv_dahil": 17694.75
+      },
+      {
+        "cafemarkt_id": "26853",
+        "name": "Animo ComBi-Line CB 2x20 Silindirik Filtre Kahve Makinesi, 40 L",
+        "code": "199.1005406",
+        "brand": "Animo",
+        "url": "https://www.cafemarkt.com/animo-combi-line-cb-2x20-silindirik-filtre-kahve-makinesi-40-l",
+        "image": "https://witcdn.cafemarkt.com/animo-combi-line-cb-2x20-silindirik-filtre-kahve-makinesi-40-l-filtre-kahve-makineleri-animo-45857-26-O.jpg",
+        "price_try_kdv_dahil": 311283.23
+      },
+      {
+        "cafemarkt_id": "26856",
+        "name": "Animo ComBi-Line CB 2x20 W Silindirik Filtre Kahve Makinesi, 40 L",
+        "code": "199.1005410",
+        "brand": "Animo",
+        "url": "https://www.cafemarkt.com/animo-combi-line-cb-2x20-w-silindirik-filtre-kahve-makinesi-40-l",
+        "image": "https://witcdn.cafemarkt.com/animo-combi-line-cb-2x20-w-silindirik-filtre-kahve-makinesi-40-l-filtre-kahve-makineleri-animo-45863-26-O.jpg",
+        "price_try_kdv_dahil": 360756.32
+      },
+      {
+        "cafemarkt_id": "26857",
+        "name": "Animo ComBi-Line CB 2x40 Silindirik Filtre Kahve Makinesi, 80 L",
+        "code": "199.1007173",
+        "brand": "Animo",
+        "url": "https://www.cafemarkt.com/animo-combi-line-cb-2x40-silindirik-filtre-kahve-makinesi-80-l",
+        "image": "https://witcdn.cafemarkt.com/animo-combi-line-cb-2x40-silindirik-filtre-kahve-makinesi-80-l-filtre-kahve-makineleri-animo-45860-26-O.jpg",
+        "price_try_kdv_dahil": 424312.99
+      },
+      {
+        "cafemarkt_id": "26866",
+        "name": "Animo M22 Cam Pot Sıcak Tutucu",
+        "code": "199.10597",
+        "brand": "Animo",
+        "url": "https://www.cafemarkt.com/animo-m22-cam-pot-sicak-tutucu",
+        "image": "https://witcdn.cafemarkt.com/animo-m22-cam-pot-sicak-tutucu-kahve-pot-isiticilari-animo-45848-26-O.jpg",
+        "price_try_kdv_dahil": 14805.82
+      },
+      {
+        "cafemarkt_id": "26860",
+        "name": "Animo ComBi-Line CN40E Silindirik Filtre Kahve Makinesi Haznesi, 40 L",
+        "code": "199.1007177",
+        "brand": "Animo",
+        "url": "https://www.cafemarkt.com/animo-combi-line-cn40e-silindirik-filtre-kahve-makinesi-haznesi-40-l",
+        "image": "https://witcdn.cafemarkt.com/animo-combi-line-cn40e-silindirik-filtre-kahve-makinesi-haznesi-40-l-kahve-makinesi-termos-ve-hazneleri-animo-45867-26-O.jpg",
+        "price_try_kdv_dahil": 87390.42
+      },
+      {
+        "cafemarkt_id": "26867",
+        "name": "Animo MPW-3 Tetra Pak Kutu Süt Isıtıcı",
+        "code": "199.50084",
+        "brand": "Animo",
+        "url": "https://www.cafemarkt.com/animo-mpw-3-tetra-pak-kutu-sut-isitici",
+        "image": "https://witcdn.cafemarkt.com/animo-mpw-3-tetra-pak-kutu-sut-isitici-sut-isiticilari-animo-45869-26-O.jpg",
+        "price_try_kdv_dahil": 43334.09
+      },
+      {
+        "cafemarkt_id": "26842",
+        "name": "Animo ComBi-Line CN5E Silindirik Filtre Kahve Makinesi Haznesi, 5 L",
+        "code": "199.1005364",
+        "brand": "Animo",
+        "url": "https://www.cafemarkt.com/animo-combi-line-cn5e-silindirik-filtre-kahve-makinesi-haznesi-5-l",
+        "image": "https://witcdn.cafemarkt.com/animo-combi-line-cn5e-silindirik-filtre-kahve-makinesi-haznesi-5-l-kahve-makinesi-termos-ve-hazneleri-animo-45864-26-O.jpg",
+        "price_try_kdv_dahil": 36472.86
+      },
+      {
+        "cafemarkt_id": "26865",
+        "name": "Animo M21 Cam Pot Sıcak Tutucu",
+        "code": "199.10592",
+        "brand": "Animo",
+        "url": "https://www.cafemarkt.com/animo-m21-cam-pot-sicak-tutucu",
+        "image": "https://witcdn.cafemarkt.com/animo-m21-cam-pot-sicak-tutucu-kahve-pot-isiticilari-animo-45847-26-O.jpg",
+        "price_try_kdv_dahil": 8666.82
+      },
+      {
+        "cafemarkt_id": "26844",
+        "name": "Animo ComBi-Line CN20E Silindirik Filtre Kahve Makinesi Haznesi, 20 L",
+        "code": "199.1005366",
+        "brand": "Animo",
+        "url": "https://www.cafemarkt.com/animo-combi-line-cn20e-silindirik-filtre-kahve-makinesi-haznesi-20-l",
+        "image": "https://witcdn.cafemarkt.com/animo-combi-line-cn20e-silindirik-filtre-kahve-makinesi-haznesi-20-l-kahve-makinesi-termos-ve-hazneleri-animo-45866-26-O.jpg",
+        "price_try_kdv_dahil": 57778.79
+      },
+      {
+        "cafemarkt_id": "26843",
+        "name": "Animo ComBi-Line CN10E Silindirik Filtre Kahve Makinesi Haznesi, 10 L",
+        "code": "199.1005365",
+        "brand": "Animo",
+        "url": "https://www.cafemarkt.com/animo-combi-line-cn10e-silindirik-filtre-kahve-makinesi-haznesi-10-l",
+        "image": "https://witcdn.cafemarkt.com/animo-combi-line-cn10e-silindirik-filtre-kahve-makinesi-haznesi-10-l-kahve-makinesi-termos-ve-hazneleri-animo-45865-26-O.jpg",
+        "price_try_kdv_dahil": 45139.68
+      },
+      {
+        "cafemarkt_id": "26868",
+        "name": "Animo MPW-6 Tetra Pak Kutu Süt Isıtıcı",
+        "code": "199.50087",
+        "brand": "Animo",
+        "url": "https://www.cafemarkt.com/animo-mpw-6-tetra-pak-kutu-sut-isitici",
+        "image": "https://witcdn.cafemarkt.com/animo-mpw-6-tetra-pak-kutu-sut-isitici-sut-isiticilari-animo-45868-26-O.jpg",
+        "price_try_kdv_dahil": 76918.01
+      },
+      {
+        "cafemarkt_id": "26859",
+        "name": "Animo ComBi-Line CB 1x40 L Silindirik Filtre Kahve Makinesi, 40 L",
+        "code": "199.1007175",
+        "brand": "Animo",
+        "url": "https://www.cafemarkt.com/animo-combi-line-cb-1x40-l-silindirik-filtre-kahve-makinesi-40-l",
+        "image": "https://witcdn.cafemarkt.com/animo-combi-line-cb-1x40-l-silindirik-filtre-kahve-makinesi-40-l-filtre-kahve-makineleri-animo-45858-26-O.jpg",
+        "price_try_kdv_dahil": 321033.4
+      },
+      {
+        "cafemarkt_id": "26858",
+        "name": "Animo ComBi-Line CB 1x40 R Silindirik Filtre Kahve Makinesi, 40 L",
+        "code": "199.1007174",
+        "brand": "Animo",
+        "url": "https://www.cafemarkt.com/animo-combi-line-cb-1x40-r-silindirik-filtre-kahve-makinesi-40-l",
+        "image": "https://witcdn.cafemarkt.com/animo-combi-line-cb-1x40-r-silindirik-filtre-kahve-makinesi-40-l-filtre-kahve-makineleri-animo-45859-26-O.jpg",
+        "price_try_kdv_dahil": 321033.4
+      },
+      {
+        "cafemarkt_id": "26855",
+        "name": "Animo ComBi-Line CB 1x20 L Silindirik Filtre Kahve Makinesi, 20 L",
+        "code": "199.1005408",
+        "brand": "Animo",
+        "url": "https://www.cafemarkt.com/animo-combi-line-cb-1x20-l-silindirik-filtre-kahve-makinesi-20-l",
+        "image": "https://witcdn.cafemarkt.com/animo-combi-line-cb-1x20-l-silindirik-filtre-kahve-makinesi-20-l-filtre-kahve-makineleri-animo-45851-26-O.jpg",
+        "price_try_kdv_dahil": 240865.33
+      },
+      {
+        "cafemarkt_id": "26854",
+        "name": "Animo ComBi-Line CB 1x20 R Silindirik Filtre Kahve Makinesi, 20 L",
+        "code": "199.1005407",
+        "brand": "Animo",
+        "url": "https://www.cafemarkt.com/animo-combi-line-cb-1x20-r-silindirik-filtre-kahve-makinesi-20-l",
+        "image": "https://witcdn.cafemarkt.com/animo-combi-line-cb-1x20-r-silindirik-filtre-kahve-makinesi-20-l-filtre-kahve-makineleri-animo-45854-26-O.jpg",
+        "price_try_kdv_dahil": 240865.33
+      },
+      {
+        "cafemarkt_id": "26851",
+        "name": "Animo ComBi-Line CB 1x10 L Silindirik Filtre Kahve Makinesi, 10 L",
+        "code": "199.1005400",
+        "brand": "Animo",
+        "url": "https://www.cafemarkt.com/animo-combi-line-cb-1x10-l-silindirik-filtre-kahve-makinesi-10-l",
+        "image": "https://witcdn.cafemarkt.com/animo-combi-line-cb-1x10-l-silindirik-filtre-kahve-makinesi-10-l-filtre-kahve-makineleri-animo-45850-26-O.jpg",
+        "price_try_kdv_dahil": 195364.54
+      },
+      {
+        "cafemarkt_id": "26850",
+        "name": "Animo ComBi-Line CB 1x10 R Silindirik Filtre Kahve Makinesi, 10 L",
+        "code": "199.1005399",
+        "brand": "Animo",
+        "url": "https://www.cafemarkt.com/animo-combi-line-cb-1x10-r-silindirik-filtre-kahve-makinesi-10-l",
+        "image": "https://witcdn.cafemarkt.com/animo-combi-line-cb-1x10-r-silindirik-filtre-kahve-makinesi-10-l-filtre-kahve-makineleri-animo-45853-26-O.jpg",
+        "price_try_kdv_dahil": 195364.54
+      },
+      {
+        "cafemarkt_id": "26847",
+        "name": "Animo ComBi-Line CB 1x5 L Silindirik Filtre Kahve Makinesi, 5 L",
+        "code": "199.1005392",
+        "brand": "Animo",
+        "url": "https://www.cafemarkt.com/animo-combi-line-cb-1x5-l-silindirik-filtre-kahve-makinesi-5-l",
+        "image": "https://witcdn.cafemarkt.com/animo-combi-line-cb-1x5-l-silindirik-filtre-kahve-makinesi-5-l-filtre-kahve-makineleri-animo-45849-26-O.jpg",
+        "price_try_kdv_dahil": 164669.55
+      },
+      {
+        "cafemarkt_id": "26846",
+        "name": "Animo ComBi-Line CB 1x5 R Silindirik Filtre Kahve Makinesi, 5 L",
+        "code": "199.1005391",
+        "brand": "Animo",
+        "url": "https://www.cafemarkt.com/animo-combi-line-cb-1x5-r-silindirik-filtre-kahve-makinesi-5-l",
+        "image": "https://witcdn.cafemarkt.com/animo-combi-line-cb-1x5-r-silindirik-filtre-kahve-makinesi-5-l-filtre-kahve-makineleri-animo-45852-26-O.jpg",
+        "price_try_kdv_dahil": 164669.55
+      },
+      {
+        "cafemarkt_id": "26841",
+        "name": "Animo Cam Pot, 1.8 L",
+        "code": "199.08208",
+        "brand": "Animo",
+        "url": "https://www.cafemarkt.com/animo-cam-pot-1-8-l",
+        "image": "https://witcdn.cafemarkt.com/animo-cam-pot-1-8-l-kahve-potlari-animo-45843-26-O.jpg",
+        "price_try_kdv_dahil": 1444.47
+      },
+      {
+        "cafemarkt_id": "26840",
+        "name": "Animo Paslanmaz Çelik Termos, 2 L",
+        "code": "199.08420",
+        "brand": "Animo",
+        "url": "https://www.cafemarkt.com/animo-paslanmaz-celik-termos-2-l",
+        "image": "https://witcdn.cafemarkt.com/animo-paslanmaz-celik-termos-2-l-kahve-makinesi-termos-ve-hazneleri-animo-45842-26-O.jpg",
+        "price_try_kdv_dahil": 2888.94
+      },
+      {
+        "cafemarkt_id": "26861",
+        "name": "Animo Excelso T Termoslu Filtre Kahve Makinesi",
+        "code": "199.10385",
+        "brand": "Animo",
+        "url": "https://www.cafemarkt.com/animo-excelso-t-termoslu-filtre-kahve-makinesi",
+        "image": "https://witcdn.cafemarkt.com/animo-excelso-t-termoslu-filtre-kahve-makinesi-filtre-kahve-makineleri-animo-45841-26-O.jpg",
+        "price_try_kdv_dahil": 24555.99
+      }
+    ],
+    "Santos": [
+      {
+        "cafemarkt_id": "5406",
+        "name": "Santos No 11 Portakal Sıkma Makinesi",
+        "code": "058.NO.11",
+        "brand": "Santos",
+        "url": "https://www.cafemarkt.com/portakal-sikma-makinesi-no-11",
+        "image": "https://witcdn.cafemarkt.com/portakal-sikma-makinesi-no-11-otomatik-portakal-sikma-makineleri-santos-22436-54-O.jpg",
+        "price_try_kdv_dahil": 28392.86
+      },
+      {
+        "cafemarkt_id": "5370",
+        "name": "Santos No 53 Buz Kırma Makinesi",
+        "code": "058.NO.53",
+        "brand": "Santos",
+        "url": "https://www.cafemarkt.com/buz-kirici-5370",
+        "image": "https://witcdn.cafemarkt.com/buz-kirici-5370-buz-kiricilar-santos-22437-53-O.jpg",
+        "price_try_kdv_dahil": 75330.6
+      },
+      {
+        "cafemarkt_id": "12778",
+        "name": "Santos No 65 Soğuk Sıkım Katı Meyve Sıkacağı",
+        "code": "058.NO.65",
+        "brand": "Santos",
+        "url": "https://www.cafemarkt.com/santos-no65-kati-meyve-sikacagi",
+        "image": "https://witcdn.cafemarkt.com/santos-no65-kati-meyve-sikacagi-kati-meyve-ve-narenciye-sikacaklari-santos-22446-12-O.jpg",
+        "price_try_kdv_dahil": 287013.13
+      },
+      {
+        "cafemarkt_id": "12775",
+        "name": "Santos No 50 Katı Meyve Sıkacağı",
+        "code": "058.NO.50",
+        "brand": "Santos",
+        "url": "https://www.cafemarkt.com/santos-no50-kati-meyve-sikacagi",
+        "image": "https://witcdn.cafemarkt.com/santos-no50-kati-meyve-sikacagi-kati-meyve-ve-narenciye-sikacaklari-santos-46077-12-O.jpg",
+        "price_try_kdv_dahil": 83553.66
+      },
+      {
+        "cafemarkt_id": "12773",
+        "name": "Santos No 37 4 Paslanmaz Çelik Hazneli Mutfak Blender, 4 L, 1200 W, Siyah",
+        "code": "058.NO.37",
+        "brand": "Santos",
+        "url": "https://www.cafemarkt.com/santos-no37-mini-bar-blender-1550-w",
+        "image": "https://witcdn.cafemarkt.com/santos-no37-mini-bar-blender-1550-w-bar-blenderlar-santos-22448-12-O.jpg",
+        "price_try_kdv_dahil": 80017.98
+      },
+      {
+        "cafemarkt_id": "19710",
+        "name": "Santos No 04 Filtre Kahve Değirmeni, Siyah",
+        "code": "058.NO.04",
+        "brand": "Santos",
+        "url": "https://www.cafemarkt.com/santos-no-04-filtre-kahve-degirmeni-siyah",
+        "image": "https://witcdn.cafemarkt.com/santos-no-04-filtre-kahve-degirmeni-siyah-kahve-ogutucu-degirmenleri-santos-35179-19-O.jpg",
+        "price_try_kdv_dahil": 85039.4
+      },
+      {
+        "cafemarkt_id": "12779",
+        "name": "Santos No 68 Kombine Katı Meyve Sıkacağı",
+        "code": "058.NO.68",
+        "brand": "Santos",
+        "url": "https://www.cafemarkt.com/santos-no68-kombine-kati-meyve-sikacagi",
+        "image": "https://witcdn.cafemarkt.com/santos-no68-kombine-kati-meyve-sikacagi-kati-meyve-ve-narenciye-sikacaklari-santos-22445-12-O.jpg",
+        "price_try_kdv_dahil": 166518.04
+      },
+      {
+        "cafemarkt_id": "12780",
+        "name": "Santos No 70 Portakal Sıkma Makinesi, 1500 Devir/dk",
+        "code": "058.NO.70",
+        "brand": "Santos",
+        "url": "https://www.cafemarkt.com/santos-no70-portakal-sikma-makinesi",
+        "image": "https://witcdn.cafemarkt.com/santos-no70-portakal-sikma-makinesi-kati-meyve-ve-narenciye-sikacaklari-santos-22442-12-O.jpg",
+        "price_try_kdv_dahil": 54461.85
+      },
+      {
+        "cafemarkt_id": "12776",
+        "name": "Santos No 54 Bar Mikseri",
+        "code": "058.NO.54",
+        "brand": "Santos",
+        "url": "https://www.cafemarkt.com/santos-no54-bar-mikseri-shaker",
+        "image": "https://witcdn.cafemarkt.com/santos-no54-bar-mikseri-shaker-bar-mikserleri-santos-22449-12-O.jpg",
+        "price_try_kdv_dahil": 33185.75
+      },
+      {
+        "cafemarkt_id": "12769",
+        "name": "Santos No 10 Portakal Sıkma Makinesi",
+        "code": "058.NO.10",
+        "brand": "Santos",
+        "url": "https://www.cafemarkt.com/santos-no10-portakal-sikma-makinesi",
+        "image": "https://witcdn.cafemarkt.com/santos-no10-portakal-sikma-makinesi-otomatik-portakal-sikma-makineleri-santos-22441-12-O.jpg",
+        "price_try_kdv_dahil": 39327.95
+      },
+      {
+        "cafemarkt_id": "6513",
+        "name": "Santos No 62 Bar Blender, 1.4 L, 1000 W, Siyah",
+        "code": "058.NO.62",
+        "brand": "Santos",
+        "url": "https://www.cafemarkt.com/santos-bar-blender-no-62",
+        "image": "https://witcdn.cafemarkt.com/santos-bar-blender-no-62-bar-blenderlar-santos-6851-65-O.jpg",
+        "price_try_kdv_dahil": 90935.16
+      },
+      {
+        "cafemarkt_id": "12772",
+        "name": "Santos No 33 GE Bar Blender, 1.25 L, 600 W, Siyah",
+        "code": "058.NO.33.GE",
+        "brand": "Santos",
+        "url": "https://www.cafemarkt.com/santos-no33-ge-mini-bar-blender-600-w",
+        "image": "https://witcdn.cafemarkt.com/santos-no33-ge-mini-bar-blender-600-w-bar-blenderlar-santos-22447-12-O.jpg",
+        "price_try_kdv_dahil": 22175.53
+      },
+      {
+        "cafemarkt_id": "6514",
+        "name": "Santos No 43 N Kahve Öğütme Değirmeni",
+        "code": "058.NO.43.N",
+        "brand": "Santos",
+        "url": "https://www.cafemarkt.com/santos-filtre-kahve-degirmeni",
+        "image": "https://witcdn.cafemarkt.com/santos-filtre-kahve-degirmeni-kahve-ogutucu-degirmenleri-santos-46085-65-O.jpg",
+        "price_try_kdv_dahil": 83320.33
+      },
+      {
+        "cafemarkt_id": "34996",
+        "name": "Santos NO 66 Bar Blender, 1.5 L",
+        "code": "058.NO.66",
+        "brand": "Santos",
+        "url": "https://www.cafemarkt.com/santos-no-66-bar-blender-1",
+        "image": "https://witcdn.cafemarkt.com/santos-no-66-bar-blender-1-bar-blenderlar-santos-63393-34-O.jpg",
+        "price_try_kdv_dahil": 66278.46
+      },
+      {
+        "cafemarkt_id": "12774",
+        "name": "Santos No 40 Manuel Kahve Değirmeni, Elektrikli",
+        "code": "058.NO.40.AN",
+        "brand": "Santos",
+        "url": "https://www.cafemarkt.com/santos-no40-kahve-degirmeni-manuel-elektrikli",
+        "image": "https://witcdn.cafemarkt.com/santos-no40-kahve-degirmeni-manuel-elektrikli-kahve-ogutucu-degirmenleri-santos-22438-12-O.jpg",
+        "price_try_kdv_dahil": 51158.3
+      },
+      {
+        "cafemarkt_id": "26953",
+        "name": "Santos No 37 4P Mutfak Blender, Polikarbon Hazneli, 4 L, 1200 W, Gri",
+        "code": "058.NO.37.4P",
+        "brand": "Santos",
+        "url": "https://www.cafemarkt.com/santos-no-37-4p-mutfak-blender-polikarbon-hazneli-1200-w",
+        "image": "https://witcdn.cafemarkt.com/santos-no-37-4p-mutfak-blender-polikarbon-hazneli-1200-w-bar-blenderlar-santos-46092-26-O.jpg",
+        "price_try_kdv_dahil": 85765.39
+      },
+      {
+        "cafemarkt_id": "19709",
+        "name": "Santos 01 BAR Çok Amaçlı Kahve Değirmeni, Siyah",
+        "code": "058.01.BAR",
+        "brand": "Santos",
+        "url": "https://www.cafemarkt.com/santos-01bar-cok-amacli-kahve-degirmeni-siyah",
+        "image": "https://witcdn.cafemarkt.com/santos-01bar-cok-amacli-kahve-degirmeni-siyah-kahve-ogutucu-degirmenleri-santos-35156-19-O.jpg",
+        "price_try_kdv_dahil": 93664.84
+      },
+      {
+        "cafemarkt_id": "26952",
+        "name": "Santos No 02 Rende",
+        "code": "058.NO.02",
+        "brand": "Santos",
+        "url": "https://www.cafemarkt.com/santos-no-02-rende",
+        "image": "https://witcdn.cafemarkt.com/santos-no-02-rende-gida-dilimleme-makineleri-santos-46088-26-O.jpg",
+        "price_try_kdv_dahil": 58681.59
+      },
+      {
+        "cafemarkt_id": "26954",
+        "name": "Santos No 63 Türk Kahvesi Öğütücü Kahve Değirmeni",
+        "code": "058.NO.63",
+        "brand": "Santos",
+        "url": "https://www.cafemarkt.com/santos-no-63-kahve-degirmeni-turk-kahvesi-ogutucu",
+        "image": "https://witcdn.cafemarkt.com/santos-no-63-kahve-degirmeni-turk-kahvesi-ogutucu-kahve-ogutucu-degirmenleri-santos-46095-26-O.jpg",
+        "price_try_kdv_dahil": 230964.7
+      },
+      {
+        "cafemarkt_id": "12781",
+        "name": "Santos No 75 Kahve Makinesi, 1 Gruplu",
+        "code": "058.NO.75",
+        "brand": "Santos",
+        "url": "https://www.cafemarkt.com/santos-no75-kahve-makinesi-tek-gruplu",
+        "image": "https://witcdn.cafemarkt.com/santos-no75-kahve-makinesi-tek-gruplu-espresso-makineleri-santos-22450-12-O.jpg",
+        "price_try_kdv_dahil": 91031.69
+      },
+      {
+        "cafemarkt_id": "12777",
+        "name": "Santos No 55 Otomatik Kahve Değirmeni, Elektrikli",
+        "code": "058.NO.55.BF",
+        "brand": "Santos",
+        "url": "https://www.cafemarkt.com/santos-no55-kahve-degirmeni-otomatik-elektrikli",
+        "image": "https://witcdn.cafemarkt.com/santos-no55-kahve-degirmeni-otomatik-elektrikli-kahve-ogutucu-degirmenleri-santos-22439-12-O.jpg",
+        "price_try_kdv_dahil": 69590.34
+      },
+      {
+        "cafemarkt_id": "12768",
+        "name": "Santos No 06 Nostaljik Kahve Değirmeni, Elektrikli",
+        "code": "058.NO.06.A",
+        "brand": "Santos",
+        "url": "https://www.cafemarkt.com/santos-no06-kahve-degirmeni-nostaljik-elektrikli",
+        "image": "https://witcdn.cafemarkt.com/santos-no06-kahve-degirmeni-nostaljik-elektrikli-kahve-ogutucu-degirmenleri-santos-22771-12-O.jpg",
+        "price_try_kdv_dahil": 47772.83
+      },
+      {
+        "cafemarkt_id": "12771",
+        "name": "Santos No 28 Katı Meyve Sıkacağı, Paslanmaz Çelik Gövdeli",
+        "code": "058.NO.28",
+        "brand": "Santos",
+        "url": "https://www.cafemarkt.com/santos-no28-kati-meyve-sikacagi",
+        "image": "https://witcdn.cafemarkt.com/santos-no28-kati-meyve-sikacagi-kati-meyve-ve-narenciye-sikacaklari-santos-46082-12-O.jpg",
+        "price_try_kdv_dahil": 191467.47
+      },
+      {
+        "cafemarkt_id": "12770",
+        "name": "Santos No 11 C Portakal Sıkma Makinesi",
+        "code": "058.NO.11.C",
+        "brand": "Santos",
+        "url": "https://www.cafemarkt.com/santos-no11-c-portakal-sikma-makinesi",
+        "image": "https://witcdn.cafemarkt.com/santos-no11-c-portakal-sikma-makinesi-otomatik-portakal-sikma-makineleri-santos-22440-12-O.jpg",
+        "price_try_kdv_dahil": 34230.92
+      }
+    ],
+    "Faema": [
+      {
+        "cafemarkt_id": "16884",
+        "name": "Faema E98 Up Tall Cup Full Otomatik Espresso Kahve Makinesi, 2 Gruplu, Beyaz",
+        "code": "197.9580.E98A2.WH",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-e98-up-tall-cup-espresso-kahve-makinesi-full-otomatik-2-gruplu-beyaz",
+        "image": "https://witcdn.cafemarkt.com/faema-e98-up-tall-cup-espresso-kahve-makinesi-full-otomatik-2-gruplu-beyaz-espresso-makineleri-faema-kahve-makinesi-alana-su-filtrasyon-indirimi-29886-16-O.jpg",
+        "price_try_kdv_dahil": 218099.89
+      },
+      {
+        "cafemarkt_id": "39660",
+        "name": "Faema X Compact 8 Süper Otomatik Espresso Kahve Makinesi",
+        "code": "197.XCOMPACT.8",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-x-compact-8-super-otomatik-espresso-kahve-makinesi",
+        "image": "https://witcdn.cafemarkt.com/faema-x-compact-8-super-otomatik-espresso-kahve-makinesi-espresso-makineleri-faema-kahve-makinesi-alana-su-filtrasyon-indirimi-75829-39-O.jpg",
+        "price_try_kdv_dahil": 186821.81
+      },
+      {
+        "cafemarkt_id": "26924",
+        "name": "Faema E61 Legend S/3 Jubile Yarı Otomatik Espresso Kahve Makinesi, 3 Gruplu",
+        "code": "197.E61.S3",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-e61-legend-s-3-jubile-yari-otomatik-espresso-kahve-makinesi-3-gruplu",
+        "image": "https://witcdn.cafemarkt.com/faema-e61-legend-s-3-jubile-yari-otomatik-espresso-kahve-makinesi-3-gruplu-espresso-makineleri-faema-46037-26-O.jpg",
+        "price_try_kdv_dahil": 588982.54
+      },
+      {
+        "cafemarkt_id": "26932",
+        "name": "Faema E98 UP S/2 Tall Cup Yarı Otomatik Espresso Kahve Makinesi, 2 Gruplu, Beyaz",
+        "code": "197.E98.UP.S2.TC",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-e98-up-s-2-tall-cup-yari-otomatik-espresso-kahve-makinesi-2-gruplu-beyaz",
+        "image": "https://witcdn.cafemarkt.com/faema-e98-up-s-2-tall-cup-yari-otomatik-espresso-kahve-makinesi-2-gruplu-beyaz-espresso-makineleri-faema-46029-26-O.jpg",
+        "price_try_kdv_dahil": 184169.89
+      },
+      {
+        "cafemarkt_id": "26922",
+        "name": "Faema E61 Legend S/1 Jubile Yarı Otomatik Espresso Kahve Makinesi, 1 Gruplu",
+        "code": "197.E61.S1",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-e61-legend-s-1-jubile-yari-otomatik-espresso-kahve-makinesi-1-gruplu",
+        "image": "https://witcdn.cafemarkt.com/faema-e61-legend-s-1-jubile-yari-otomatik-espresso-kahve-makinesi-1-gruplu-espresso-makineleri-faema-46035-26-O.jpg",
+        "price_try_kdv_dahil": 404812.65
+      },
+      {
+        "cafemarkt_id": "26923",
+        "name": "Faema E61 Legend S/2 Jubile Yarı Otomatik Espresso Kahve Makinesi, 2 Gruplu",
+        "code": "197.E61.S2",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-e61-legend-s-2-jubile-yari-otomatik-espresso-kahve-makinesi-2-gruplu",
+        "image": "https://witcdn.cafemarkt.com/faema-e61-legend-s-2-jubile-yari-otomatik-espresso-kahve-makinesi-2-gruplu-espresso-makineleri-faema-46036-26-O.jpg",
+        "price_try_kdv_dahil": 496897.6
+      },
+      {
+        "cafemarkt_id": "26941",
+        "name": "Faema X15 CS10 Milk PS Süper Otomatik Espresso Kahve Makinesi",
+        "code": "197.X15.CS10",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-x15-cs10-milk-ps-super-otomatik-espresso-kahve-makinesi",
+        "image": "https://witcdn.cafemarkt.com/faema-x15-cs10-milk-ps-super-otomatik-espresso-kahve-makinesi-espresso-makineleri-faema-46047-26-O.jpg",
+        "price_try_kdv_dahil": 514592.35
+      },
+      {
+        "cafemarkt_id": "26931",
+        "name": "Faema E98 UP S/2 Yarı Otomatik Espresso Kahve Makinesi, 2 Gruplu, Beyaz",
+        "code": "197.E98.UP.S2",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-e98-up-s-2-yari-otomatik-espresso-kahve-makinesi-2-gruplu-beyaz",
+        "image": "https://witcdn.cafemarkt.com/faema-e98-up-s-2-yari-otomatik-espresso-kahve-makinesi-2-gruplu-beyaz-espresso-makineleri-faema-51305-26-O.jpg",
+        "price_try_kdv_dahil": 177308.66
+      },
+      {
+        "cafemarkt_id": "26947",
+        "name": "Faema E61 A/2 Jubile White Wood Tam Otomatik Espresso Kahve Makinesi, 2 Gruplu",
+        "code": "197.E61.A2.WW",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-e61-a-2-jubile-white-wood-tam-otomatik-espresso-kahve-makinesi-2-gruplu",
+        "image": "https://witcdn.cafemarkt.com/faema-e61-a-2-jubile-white-wood-tam-otomatik-espresso-kahve-makinesi-2-gruplu-espresso-makineleri-faema-46039-26-O.jpg",
+        "price_try_kdv_dahil": 636650.05
+      },
+      {
+        "cafemarkt_id": "26946",
+        "name": "Faema E61 A/1 Jubile White Wood Tam Otomatik Espresso Kahve Makinesi, 1 Gruplu",
+        "code": "197.E61.A1.WW",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-e61-a-1-jubile-white-wood-tam-otomatik-espresso-kahve-makinesi-1-gruplu",
+        "image": "https://witcdn.cafemarkt.com/faema-e61-a-1-jubile-white-wood-tam-otomatik-espresso-kahve-makinesi-1-gruplu-espresso-makineleri-faema-46038-26-O.jpg",
+        "price_try_kdv_dahil": 500869.89
+      },
+      {
+        "cafemarkt_id": "26944",
+        "name": "Faema X30 CS10 Milk PS Süper Otomatik Espresso Kahve Makinesi",
+        "code": "197.X30.CS10",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-x30-cs10-milk-ps-super-otomatik-espresso-kahve-makinesi",
+        "image": "https://witcdn.cafemarkt.com/faema-x30-cs10-milk-ps-super-otomatik-espresso-kahve-makinesi-espresso-makineleri-faema-46043-26-O.jpg",
+        "price_try_kdv_dahil": 1020156.77
+      },
+      {
+        "cafemarkt_id": "26930",
+        "name": "Faema E98 UP A/3 Tam Otomatik Espresso Kahve Makinesi, 3 Gruplu, Beyaz",
+        "code": "197.E98.UP.A3",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-e98-up-a-3-tam-otomatik-espresso-kahve-makinesi-3-gruplu-beyaz",
+        "image": "https://witcdn.cafemarkt.com/faema-e98-up-a-3-tam-otomatik-espresso-kahve-makinesi-3-gruplu-beyaz-espresso-makineleri-faema-46031-26-O.jpg",
+        "price_try_kdv_dahil": 341255.98
+      },
+      {
+        "cafemarkt_id": "26937",
+        "name": "Faema President GTI A/2 Tam Otomatik Espresso Kahve Makinesi, 2 Gruplu",
+        "code": "197.PRESIDENT.A2",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-president-gti-a-2-tam-otomatik-espresso-kahve-makinesi-2-gruplu",
+        "image": "https://witcdn.cafemarkt.com/faema-president-gti-a-2-tam-otomatik-espresso-kahve-makinesi-2-gruplu-espresso-makineleri-faema-46040-26-O.jpg",
+        "price_try_kdv_dahil": 816125.41
+      },
+      {
+        "cafemarkt_id": "26943",
+        "name": "Faema X20 S10 AutoSteam Süper Otomatik Espresso Kahve Makinesi",
+        "code": "197.X20.S10",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-x20-s10-autosteam-super-otomatik-espresso-kahve-makinesi",
+        "image": "https://witcdn.cafemarkt.com/faema-x20-s10-autosteam-super-otomatik-espresso-kahve-makinesi-espresso-makineleri-faema-46046-26-O.jpg",
+        "price_try_kdv_dahil": 707790.18
+      },
+      {
+        "cafemarkt_id": "26938",
+        "name": "Faema President GTI A/3 Tam Otomatik Espresso Kahve Makinesi, 3 Gruplu",
+        "code": "197.PRESIDENT.A3",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-president-gti-a-3-tam-otomatik-espresso-kahve-makinesi-3-gruplu",
+        "image": "https://witcdn.cafemarkt.com/faema-president-gti-a-3-tam-otomatik-espresso-kahve-makinesi-3-gruplu-espresso-makineleri-faema-46041-26-O.jpg",
+        "price_try_kdv_dahil": 982239.44
+      },
+      {
+        "cafemarkt_id": "26951",
+        "name": "Faema E71 A/3 Touch Blue Pearl Tam Otomatik Espresso Kahve Makinesi, 3 Gruplu",
+        "code": "197.E71.TOU.A3.BP",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-e71-a-3-touch-blue-pearl-tam-otomatik-espresso-kahve-makinesi-3-gruplu",
+        "image": "https://witcdn.cafemarkt.com/faema-e71-a-3-touch-blue-pearl-tam-otomatik-espresso-kahve-makinesi-3-gruplu-espresso-makineleri-faema-46058-26-O.jpg",
+        "price_try_kdv_dahil": 1166409.33
+      },
+      {
+        "cafemarkt_id": "26925",
+        "name": "Faema E71 E A/2 Tam Otomatik Espresso Kahve Makinesi, 2 Gruplu, White Gold",
+        "code": "197.E71.A2.WG",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-e71-e-a-2-tam-otomatik-espresso-kahve-makinesi-2-gruplu-white-gold",
+        "image": "https://witcdn.cafemarkt.com/faema-e71-e-a-2-tam-otomatik-espresso-kahve-makinesi-2-gruplu-white-gold-espresso-makineleri-faema-46059-26-O.jpg",
+        "price_try_kdv_dahil": 893043.43
+      },
+      {
+        "cafemarkt_id": "26926",
+        "name": "Faema E71 E A/3 Tam Otomatik Espresso Kahve Makinesi, 3 Gruplu, White Gold",
+        "code": "197.E71.A3.WG",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-e71-e-a-3-tam-otomatik-espresso-kahve-makinesi-3-gruplu-white-gold",
+        "image": "https://witcdn.cafemarkt.com/faema-e71-e-a-3-tam-otomatik-espresso-kahve-makinesi-3-gruplu-white-gold-espresso-makineleri-faema-46060-26-O.jpg",
+        "price_try_kdv_dahil": 1045796.11
+      },
+      {
+        "cafemarkt_id": "12801",
+        "name": "Faema ME A64 Kahve Değirmeni, Saatte 2.3 kg Kapasiteli",
+        "code": "197.ME.A.64",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-me-a64-kahve-degirmeni-saatte-23-kg-kapasiteli",
+        "image": "https://witcdn.cafemarkt.com/faema-me-a64-kahve-degirmeni-saatte-23-kg-kapasiteli-kahve-ogutucu-degirmenleri-faema-22468-12-O.jpg",
+        "price_try_kdv_dahil": 73667.96
+      },
+      {
+        "cafemarkt_id": "12800",
+        "name": "Faema MD 3000 Kahve Değirmeni, Saatte 3.3 kg Kapasiteli",
+        "code": "197.MD.3000",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-md-3000-kahve-degirmeni-saatte-33-kg-kapasiteli",
+        "image": "https://witcdn.cafemarkt.com/faema-md-3000-kahve-degirmeni-saatte-33-kg-kapasiteli-kahve-ogutucu-degirmenleri-faema-22769-12-O.jpg",
+        "price_try_kdv_dahil": 93529.42
+      },
+      {
+        "cafemarkt_id": "26936",
+        "name": "Faema MD 3000 On Demand Kahve Değirmeni",
+        "code": "197.MD.3000.OD",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-md-3000-on-demand-kahve-degirmeni",
+        "image": "https://witcdn.cafemarkt.com/faema-md-3000-on-demand-kahve-degirmeni-kahve-ogutucu-degirmenleri-faema-46054-26-O.jpg",
+        "price_try_kdv_dahil": 146252.56
+      },
+      {
+        "cafemarkt_id": "26934",
+        "name": "Faema Groundbreaker Kahve Değirmeni",
+        "code": "197.GROUNDB",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-groundbreaker-kahve-degirmeni",
+        "image": "https://witcdn.cafemarkt.com/faema-groundbreaker-kahve-degirmeni-kahve-ogutucu-degirmenleri-faema-46052-26-O.jpg",
+        "price_try_kdv_dahil": 169273.8
+      },
+      {
+        "cafemarkt_id": "26935",
+        "name": "Faema Groundbreaker Autotamper Kahve Değirmeni",
+        "code": "197.GROUNDB.A",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-groundbreaker-autotamper-kahve-degirmeni",
+        "image": "https://witcdn.cafemarkt.com/faema-groundbreaker-autotamper-kahve-degirmeni-kahve-ogutucu-degirmenleri-faema-46053-26-O.jpg",
+        "price_try_kdv_dahil": 221936.76
+      },
+      {
+        "cafemarkt_id": "26949",
+        "name": "Faema E71 A/2 Touch Blue Pearl Tam Otomatik Espresso Kahve Makinesi, 2 Gruplu",
+        "code": "197.E71.TOU.A2.BP",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-e71-a-2-touch-blue-pearl-tam-otomatik-espresso-kahve-makinesi-2-gruplu",
+        "image": "https://witcdn.cafemarkt.com/faema-e71-a-2-touch-blue-pearl-tam-otomatik-espresso-kahve-makinesi-2-gruplu-espresso-makineleri-faema-46057-26-O.jpg",
+        "price_try_kdv_dahil": 1014740.01
+      },
+      {
+        "cafemarkt_id": "26940",
+        "name": "Faema Süt Soğutucu Ünite",
+        "code": "197.RUDM.01",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-sut-sogutucu-unite",
+        "image": "https://witcdn.cafemarkt.com/faema-sut-sogutucu-unite-sut-sogutuculari-faema-46051-26-O.jpg",
+        "price_try_kdv_dahil": 152391.56
+      },
+      {
+        "cafemarkt_id": "26948",
+        "name": "Faema E71 A/2 Touch Black Tam Otomatik Espresso Kahve Makinesi, 2 Gruplu",
+        "code": "197.E71.TOU.A2.BL",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-e71-a-2-touch-black-tam-otomatik-espresso-kahve-makinesi-2-gruplu",
+        "image": "https://witcdn.cafemarkt.com/faema-e71-a-2-touch-black-tam-otomatik-espresso-kahve-makinesi-2-gruplu-espresso-makineleri-faema-46055-26-O.jpg",
+        "price_try_kdv_dahil": 1055140.02
+      },
+      {
+        "cafemarkt_id": "39281",
+        "name": "Faema Faemina A/1 GTI Tam Otomatik Espresso Kahve Makinesi, 1 Gruplu",
+        "code": "197.FAEMINA.A1.GTI.1",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-faemina-a-1-gti-tam-otomatik-espresso-kahve-makinesi-1-gruplu",
+        "image": "https://witcdn.cafemarkt.com/faema-faemina-a-1-gti-tam-otomatik-espresso-kahve-makinesi-1-gruplu-espresso-makineleri-faema-74488-39-O.jpg",
+        "price_try_kdv_dahil": 402871.64
+      },
+      {
+        "cafemarkt_id": "26950",
+        "name": "Faema E71 A/3 Touch Black Tam Otomatik Espresso Kahve Makinesi, 3 Gruplu",
+        "code": "197.E71.TOU.A3.BL",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-e71-a-3-touch-black-tam-otomatik-espresso-kahve-makinesi-3-gruplu",
+        "image": "https://witcdn.cafemarkt.com/faema-e71-a-3-touch-black-tam-otomatik-espresso-kahve-makinesi-3-gruplu-espresso-makineleri-faema-46056-26-O.jpg",
+        "price_try_kdv_dahil": 1123075.24
+      },
+      {
+        "cafemarkt_id": "26945",
+        "name": "Faema X30 S10 AutoSteam Süper Otomatik Espresso Kahve Makinesi",
+        "code": "197.X30.S10",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-x30-s10-autosteam-super-otomatik-espresso-kahve-makinesi",
+        "image": "https://witcdn.cafemarkt.com/faema-x30-s10-autosteam-super-otomatik-espresso-kahve-makinesi-espresso-makineleri-faema-46044-26-O.jpg",
+        "price_try_kdv_dahil": 917238.3
+      },
+      {
+        "cafemarkt_id": "26942",
+        "name": "Faema X20 CS10 Milk PS Süper Otomatik Espresso Kahve Makinesi",
+        "code": "197.X20.CS10",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-x20-cs10-milk-ps-super-otomatik-espresso-kahve-makinesi",
+        "image": "https://witcdn.cafemarkt.com/faema-x20-cs10-milk-ps-super-otomatik-espresso-kahve-makinesi-espresso-makineleri-faema-46045-26-O.jpg",
+        "price_try_kdv_dahil": 784708.2
+      },
+      {
+        "cafemarkt_id": "17867",
+        "name": "Faema E71E Full Otomatik Espresso Kahve Makinesi, 3 Gruplu, Beyaz-Gold-Ahşap",
+        "code": "197.9580.E71BG.A3",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-e71e-espresso-kahve-makinesi-full-otomatik-3-gruplu-beyaz-gold-ahsap",
+        "image": "https://witcdn.cafemarkt.com/faema-e71e-espresso-kahve-makinesi-full-otomatik-3-gruplu-beyaz-gold-ahsap-espresso-makineleri-faema-31382-17-O.jpg",
+        "price_try_kdv_dahil": 1122793.12
+      },
+      {
+        "cafemarkt_id": "11086",
+        "name": "Faema E61 A/2 Jubile Tam Otomatik Espresso Kahve Makinesi, 2 Gruplu",
+        "code": "197.E61.A2",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/e61-2-gruplu-jubile-otomatik-kahve-makinesi",
+        "image": "https://witcdn.cafemarkt.com/e61-2-gruplu-jubile-otomatik-kahve-makinesi-espresso-makineleri-faema-19162-11-O.jpg",
+        "price_try_kdv_dahil": 600538.3
+      },
+      {
+        "cafemarkt_id": "11085",
+        "name": "Faema E61 A/1 Jubile Tam Otomatik Espresso Kahve Makinesi, 1 Gruplu",
+        "code": "197.E61.A1",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/e61-tek-gruplu-jubile-otomatik-kahve-makinesi",
+        "image": "https://witcdn.cafemarkt.com/e61-tek-gruplu-jubile-otomatik-kahve-makinesi-espresso-makineleri-faema-19161-11-O.jpg",
+        "price_try_kdv_dahil": 486786.31
+      },
+      {
+        "cafemarkt_id": "11084",
+        "name": "Faema E71 Tam Otomatik Espresso Kahve Makinesi, 3 Gruplu",
+        "code": "197.E71.A3",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/e71-3-gruplu-otomatik-espresso-kahve-makinesi",
+        "image": "https://witcdn.cafemarkt.com/e71-3-gruplu-otomatik-espresso-kahve-makinesi-espresso-makineleri-faema-19042-11-O.jpg",
+        "price_try_kdv_dahil": 985850.61
+      },
+      {
+        "cafemarkt_id": "11083",
+        "name": "Faema E71 Tam Otomatik Espresso Kahve Makinesi, 2 Gruplu",
+        "code": "197.E71.A2",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/e71-2-gruplu-otomatik-espresso-kahve-makinesi",
+        "image": "https://witcdn.cafemarkt.com/e71-2-gruplu-otomatik-espresso-kahve-makinesi-espresso-makineleri-faema-19041-11-O.jpg",
+        "price_try_kdv_dahil": 841403.64
+      },
+      {
+        "cafemarkt_id": "26920",
+        "name": "Faema BR9C Süt Soğutucu Ünite",
+        "code": "197.BR9C",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-br9c-sut-sogutucu-unite",
+        "image": "https://witcdn.cafemarkt.com/faema-br9c-sut-sogutucu-unite-sut-sogutuculari-faema-46050-26-O.jpg",
+        "price_try_kdv_dahil": 44417.45
+      },
+      {
+        "cafemarkt_id": "26921",
+        "name": "Faema Fincan Isıtıcı Ünite",
+        "code": "197.CW.01",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-fincan-isitici-unite",
+        "image": "https://witcdn.cafemarkt.com/faema-fincan-isitici-unite-fincan-isiticilari-faema-46048-26-O.jpg",
+        "price_try_kdv_dahil": 100390.65
+      },
+      {
+        "cafemarkt_id": "26933",
+        "name": "Faema Fincan Soğutucu ve Isıtıcı Ünite",
+        "code": "197.FM.CW.01",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-fincan-sogutucu-ve-isitici-unite",
+        "image": "https://witcdn.cafemarkt.com/faema-fincan-sogutucu-ve-isitici-unite-fincan-isiticilari-faema-46049-26-O.jpg",
+        "price_try_kdv_dahil": 174419.72
+      },
+      {
+        "cafemarkt_id": "12797",
+        "name": "Faema Frigomilk, Soğutmalı Ünite, 3 L Kapasiteli",
+        "code": "197.FRIGOMILK",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-frigomilk-sogutmali-unite-3-l-kapasiteli",
+        "image": "https://witcdn.cafemarkt.com/faema-frigomilk-sogutmali-unite-3-l-kapasiteli-sut-sogutuculari-faema-22467-12-O.jpg",
+        "price_try_kdv_dahil": 47396.66
+      },
+      {
+        "cafemarkt_id": "17162",
+        "name": "Faema On Demand Kahve Değirmeni, Hazne Kapasitesi 1.2 kg",
+        "code": "197.9999.MDOND.00",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-kahve-degirmeni-on-demand-cekirdek-hazne-kapasitesi-1",
+        "image": "https://witcdn.cafemarkt.com/faema-kahve-degirmeni-on-demand-cekirdek-hazne-kapasitesi-1-kahve-ogutucu-degirmenleri-faema-30391-17-O.jpg",
+        "price_try_kdv_dahil": 61886.5
+      },
+      {
+        "cafemarkt_id": "17869",
+        "name": "Faema Prestige Full Otomatik Espresso Kahve Makinesi, 2 Gruplu, Beyaz",
+        "code": "197.9580.PRTGA.2W",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-prestige-espresso-kahve-makinesi-full-otomatik-2-gruplu-beyaz",
+        "image": "https://witcdn.cafemarkt.com/faema-prestige-espresso-kahve-makinesi-full-otomatik-2-gruplu-beyaz-espresso-makineleri-faema-31377-17-O.jpg",
+        "price_try_kdv_dahil": 234613.49
+      },
+      {
+        "cafemarkt_id": "17868",
+        "name": "Faema Prestige Full Otomatik Espresso Kahve Makinesi, 2 Gruplu, Siyah",
+        "code": "197.9580.PRTGA.2B",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-prestige-espresso-kahve-makinesi-full-otomatik-2-gruplu-siyah",
+        "image": "https://witcdn.cafemarkt.com/faema-prestige-espresso-kahve-makinesi-full-otomatik-2-gruplu-siyah-espresso-makineleri-faema-31379-17-O.jpg",
+        "price_try_kdv_dahil": 296473.66
+      },
+      {
+        "cafemarkt_id": "17866",
+        "name": "Faema E71E Full Otomatik Espresso Kahve Makinesi, 2 Gruplu, Beyaz-Gold-Ahşap",
+        "code": "197.9580.E71B.GA",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-e71e-espresso-kahve-makinesi-full-otomatik-2-gruplu-beyaz-gold-ahsap",
+        "image": "https://witcdn.cafemarkt.com/faema-e71e-espresso-kahve-makinesi-full-otomatik-2-gruplu-beyaz-gold-ahsap-espresso-makineleri-faema-31384-17-O.jpg",
+        "price_try_kdv_dahil": 795823.84
+      },
+      {
+        "cafemarkt_id": "17161",
+        "name": "Faema E71 Full Otomatik GTi Espresso Kahve Makinesi, 3 Gruplu",
+        "code": "197.9580.E71S3.00",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-e71-gti-espresso-kahve-makinesi-full-otomatik-3-gruplu",
+        "image": "https://witcdn.cafemarkt.com/faema-e71-gti-espresso-kahve-makinesi-full-otomatik-3-gruplu-espresso-makineleri-faema-30390-17-O.jpg",
+        "price_try_kdv_dahil": 1110876.24
+      },
+      {
+        "cafemarkt_id": "17160",
+        "name": "Faema E71 E Full Otomatik Espresso Kahve Makinesi, 3 Gruplu, Gümüş",
+        "code": "197.9580.E71ES.G3",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-e71-e-espresso-kahve-makinesi-full-otomatik-3-gruplu-gumus",
+        "image": "https://witcdn.cafemarkt.com/faema-e71-e-espresso-kahve-makinesi-full-otomatik-3-gruplu-gumus-espresso-makineleri-faema-30389-17-O.jpg",
+        "price_try_kdv_dahil": 829441.62
+      },
+      {
+        "cafemarkt_id": "17159",
+        "name": "Faema E71 E Full Otomatik Espresso Kahve Makinesi, 2 Gruplu, Gümüş",
+        "code": "197.9580.E71ES.G2",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-e71-e-espresso-kahve-makinesi-full-otomatik-2-gruplu-gumus",
+        "image": "https://witcdn.cafemarkt.com/faema-e71-e-espresso-kahve-makinesi-full-otomatik-2-gruplu-gumus-espresso-makineleri-faema-30388-17-O.jpg",
+        "price_try_kdv_dahil": 706548.84
+      },
+      {
+        "cafemarkt_id": "17158",
+        "name": "Faema E71 E Full Otomatik Espresso Kahve Makinesi, 3 Gruplu, Siyah Bakır",
+        "code": "197.9580.E71ES.B3",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-e71-e-espresso-kahve-makinesi-full-otomatik-3-gruplu-siyah-bakir",
+        "image": "https://witcdn.cafemarkt.com/faema-e71-e-espresso-kahve-makinesi-full-otomatik-3-gruplu-siyah-bakir-espresso-makineleri-faema-30387-17-O.jpg",
+        "price_try_kdv_dahil": 888348.9
+      },
+      {
+        "cafemarkt_id": "17157",
+        "name": "Faema E71 E Full Otomatik Espresso Kahve Makinesi, 2 Gruplu, Siyah Bakır",
+        "code": "197.9580.E71ES.B2",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-e71-e-espresso-kahve-makinesi-full-otomatik-2-gruplu-siyah-bakir",
+        "image": "https://witcdn.cafemarkt.com/faema-e71-e-espresso-kahve-makinesi-full-otomatik-2-gruplu-siyah-bakir-espresso-makineleri-faema-30397-17-O.jpg",
+        "price_try_kdv_dahil": 758346.62
+      },
+      {
+        "cafemarkt_id": "16887",
+        "name": "Faema E71E Full Otomatik Espresso Kahve Makinesi, 2 Gruplu, Beyaz-Gümüş-Ahşap",
+        "code": "197.9580.E71WG.00",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-e71e-espresso-kahve-makinesi-full-otomatik-2-gruplu-beyaz-gumus-ahsap",
+        "image": "https://witcdn.cafemarkt.com/faema-e71e-espresso-kahve-makinesi-full-otomatik-2-gruplu-beyaz-gumus-ahsap-espresso-makineleri-faema-29890-16-O.jpg",
+        "price_try_kdv_dahil": 795789.99
+      },
+      {
+        "cafemarkt_id": "16886",
+        "name": "Faema E71E Full Otomatik Espresso Kahve Makinesi, 2 Gruplu, Siyah-Gümüş-Ahşap",
+        "code": "197.9580.E7100.00",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-e71e-espresso-kahve-makinesi-full-otomatik-2-gruplu-siyah-gumus-ahsap",
+        "image": "https://witcdn.cafemarkt.com/faema-e71e-espresso-kahve-makinesi-full-otomatik-2-gruplu-siyah-gumus-ahsap-espresso-makineleri-faema-29891-16-O.jpg",
+        "price_try_kdv_dahil": 770500.48
+      },
+      {
+        "cafemarkt_id": "16883",
+        "name": "Faema E98 Up Tall Cup Full Otomatik Espresso Kahve Makinesi, 2 Gruplu, Siyah",
+        "code": "197.9580.E98A2.VA",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-e98-up-tall-cup-espresso-kahve-makinesi-full-otomatik-2-gruplu-siyah",
+        "image": "https://witcdn.cafemarkt.com/faema-e98-up-tall-cup-espresso-kahve-makinesi-full-otomatik-2-gruplu-siyah-espresso-makineleri-faema-29883-16-O.jpg",
+        "price_try_kdv_dahil": 207642.53
+      },
+      {
+        "cafemarkt_id": "12799",
+        "name": "Faema Granditalia MilkPs X54 Süper Otomatik Espresso Kahve Makinesi",
+        "code": "197.GRANDITALIA.X54",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-granditalia-milkps-x54-super-otomatik-espresso-kahve-makinesi-saatte-260-fincan-kahve-kapasiteli",
+        "image": "https://witcdn.cafemarkt.com/faema-granditalia-milkps-x54-super-otomatik-espresso-kahve-makinesi-saatte-260-fincan-kahve-kapasiteli-espresso-makineleri-faema-22465-12-O.jpg",
+        "price_try_kdv_dahil": 944171.64
+      },
+      {
+        "cafemarkt_id": "12798",
+        "name": "Faema Granditalia MilkPs X1 Süper Otomatik Espresso Kahve Makinesi",
+        "code": "197.GRANDITALIA.X1",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-granditalia-milkps-x1-super-otomatik-espresso-kahve-makinesi-saatte-200-fincan-kahve-kapasiteli",
+        "image": "https://witcdn.cafemarkt.com/faema-granditalia-milkps-x1-super-otomatik-espresso-kahve-makinesi-saatte-200-fincan-kahve-kapasiteli-espresso-makineleri-faema-22464-12-O.jpg",
+        "price_try_kdv_dahil": 450268.31
+      },
+      {
+        "cafemarkt_id": "12796",
+        "name": "Faema Enova S3 Yarı Otomatik Espresso Kahve Makinesi, 3 Gruplu",
+        "code": "197.ENOVA.S3",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-enova-s3-yari-otomatik-espresso-kahve-makinesi-3-kollu",
+        "image": "https://witcdn.cafemarkt.com/faema-enova-s3-yari-otomatik-espresso-kahve-makinesi-3-kollu-espresso-makineleri-faema-22457-12-O.jpg",
+        "price_try_kdv_dahil": 265195.62
+      },
+      {
+        "cafemarkt_id": "12795",
+        "name": "Faema Enova S2 Yarı Otomatik Espresso Kahve Makinesi, 2 Gruplu",
+        "code": "197.ENOVA.S2",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-enova-s2-yari-otomatik-espresso-kahve-makinesi-2-kollu",
+        "image": "https://witcdn.cafemarkt.com/faema-enova-s2-yari-otomatik-espresso-kahve-makinesi-2-kollu-espresso-makineleri-faema-22456-12-O.jpg",
+        "price_try_kdv_dahil": 186201.18
+      },
+      {
+        "cafemarkt_id": "12794",
+        "name": "Faema Enova S1 Yarı Otomatik Espresso Kahve Makinesi, 1 Gruplu",
+        "code": "197.ENOVA.S1",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-enova-s1-yari-otomatik-espresso-kahve-makinesi-1-kollu",
+        "image": "https://witcdn.cafemarkt.com/faema-enova-s1-yari-otomatik-espresso-kahve-makinesi-1-kollu-espresso-makineleri-faema-22455-12-O.jpg",
+        "price_try_kdv_dahil": 131657.4
+      },
+      {
+        "cafemarkt_id": "12793",
+        "name": "Faema Enova A3 Tam Otomatik Espresso Kahve Makinesi, 3 Gruplu",
+        "code": "197.ENOVA.A3",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-enova-a3-otomatik-espresso-kahve-makinesi-3-kollu",
+        "image": "https://witcdn.cafemarkt.com/faema-enova-a3-otomatik-espresso-kahve-makinesi-3-kollu-espresso-makineleri-faema-22460-12-O.jpg",
+        "price_try_kdv_dahil": 361117.44
+      },
+      {
+        "cafemarkt_id": "12792",
+        "name": "Faema Enova A2 Tam Otomatik Espresso Kahve Makinesi, 2 Gruplu",
+        "code": "197.ENOVA.A2",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-enova-a2-otomatik-espresso-kahve-makinesi-2-kollu",
+        "image": "https://witcdn.cafemarkt.com/faema-enova-a2-otomatik-espresso-kahve-makinesi-2-kollu-espresso-makineleri-faema-22459-12-O.jpg",
+        "price_try_kdv_dahil": 246387.42
+      },
+      {
+        "cafemarkt_id": "12791",
+        "name": "Faema Enova A1 Tam Otomatik Espresso Kahve Makinesi, 1 Gruplu",
+        "code": "197.ENOVA.A1",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-enova-a1-otomatik-espresso-kahve-makinesi-1-kollu",
+        "image": "https://witcdn.cafemarkt.com/faema-enova-a1-otomatik-espresso-kahve-makinesi-1-kollu-espresso-makineleri-faema-22458-12-O.jpg",
+        "price_try_kdv_dahil": 157988.88
+      },
+      {
+        "cafemarkt_id": "12790",
+        "name": "Faema Emblema A4 Restyling Tall Cup Tam Otomatik Espresso Kahve Makinesi, 4 Gruplu",
+        "code": "197.EMBLEMA.A4",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-emblema-a4-restyling-otomatik-espresso-kahve-makinesi-tall-cup-versiyon-4-kollu",
+        "image": "https://witcdn.cafemarkt.com/faema-emblema-a4-restyling-otomatik-espresso-kahve-makinesi-tall-cup-versiyon-4-kollu-espresso-makineleri-faema-22463-12-O.jpg",
+        "price_try_kdv_dahil": 811385.75
+      },
+      {
+        "cafemarkt_id": "12789",
+        "name": "Faema Emblema A3 Restyling Tall Cup Tam Otomatik Espresso Kahve Makinesi, 3 Gruplu",
+        "code": "197.EMBLEMA.A3",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-emblema-a3-restyling-otomatik-espresso-kahve-makinesi-tall-cup-versiyon-3-kollu",
+        "image": "https://witcdn.cafemarkt.com/faema-emblema-a3-restyling-otomatik-espresso-kahve-makinesi-tall-cup-versiyon-3-kollu-espresso-makineleri-faema-38962-12-O.jpg",
+        "price_try_kdv_dahil": 621234.85
+      },
+      {
+        "cafemarkt_id": "12788",
+        "name": "Faema Emblema A2 Restyling Tall Cup Tam Otomatik Espresso Kahve Makinesi, 2 Gruplu",
+        "code": "197.EMBLEMA.A2",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-emblema-a2-restyling-otomatik-espresso-kahve-makinesi-tall-cup-versiyon-2-kollu",
+        "image": "https://witcdn.cafemarkt.com/faema-emblema-a2-restyling-otomatik-espresso-kahve-makinesi-tall-cup-versiyon-2-kollu-espresso-makineleri-faema-22461-12-O.jpg",
+        "price_try_kdv_dahil": 564246
+      },
+      {
+        "cafemarkt_id": "12787",
+        "name": "Faema E98 S3 Yarı Otomatik Espresso Kahve Makinesi, 3 Gruplu",
+        "code": "197.E98.S3",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-e98-s3-yari-otomatik-espresso-kahve-makinesi-3-kollu",
+        "image": "https://witcdn.cafemarkt.com/faema-e98-s3-yari-otomatik-espresso-kahve-makinesi-3-kollu-espresso-makineleri-faema-38959-12-O.jpg",
+        "price_try_kdv_dahil": 285282.78
+      },
+      {
+        "cafemarkt_id": "12786",
+        "name": "Faema E98 S2 Yarı Otomatik Espresso Kahve Makinesi, 2 Gruplu",
+        "code": "197.E98.S2",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-e98-s2-yari-otomatik-espresso-kahve-makinesi-2-kollu",
+        "image": "https://witcdn.cafemarkt.com/faema-e98-s2-yari-otomatik-espresso-kahve-makinesi-2-kollu-espresso-makineleri-faema-38958-12-O.jpg",
+        "price_try_kdv_dahil": 169002.96
+      },
+      {
+        "cafemarkt_id": "12785",
+        "name": "Faema E98 A3 Tam Otomatik Espresso Kahve Makinesi, 3 Gruplu",
+        "code": "197.E98.A3",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-e98-a3-otomatik-espresso-kahve-makinesi-3-kollu",
+        "image": "https://witcdn.cafemarkt.com/faema-e98-a3-otomatik-espresso-kahve-makinesi-3-kollu-espresso-makineleri-faema-38961-12-O.jpg",
+        "price_try_kdv_dahil": 325005.7
+      },
+      {
+        "cafemarkt_id": "12784",
+        "name": "Faema E98 A2 Espresso Kahve Makinesi, 2 Gruplu",
+        "code": "197.E98.A2",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-e98-a2-otomatik-espresso-kahve-makinesi-2-kollu",
+        "image": "https://witcdn.cafemarkt.com/faema-e98-a2-otomatik-espresso-kahve-makinesi-2-kollu-espresso-makineleri-faema-38960-12-O.jpg",
+        "price_try_kdv_dahil": 201142.41
+      },
+      {
+        "cafemarkt_id": "12783",
+        "name": "Faema Barcode MilkPs PS 11 Süper Otomatik Espresso Kahve Makinesi, 2 Öğütücülü",
+        "code": "197.BARCODE.PS.11",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-barcode-milkps-ps-11-super-otomatik-espresso-kahve-makinesi-2-ogutuculu-saatte-200-fincan-kahve-kapasiteli",
+        "image": "https://witcdn.cafemarkt.com/faema-barcode-milkps-ps-11-super-otomatik-espresso-kahve-makinesi-2-ogutuculu-saatte-200-fincan-kahve-kapasiteli-espresso-makineleri-faema-22466-12-O.jpg",
+        "price_try_kdv_dahil": 315977.76
+      },
+      {
+        "cafemarkt_id": "12782",
+        "name": "Faema Barcode MilkPs C&S 11 Süper Otomatik Espresso Kahve Makinesi, 2 Öğütücülü, Sıcak Çikolata Özellikli",
+        "code": "197.BARCODE.C.S.11",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-barcode-milkps-cs-11-super-otomatik-espresso-kahve-makinesi-2-ogutuculu-saatte-200-fincan-kahve-kapasiteli-sicak-cikolata-ozelligi",
+        "image": "https://witcdn.cafemarkt.com/faema-barcode-milkps-cs-11-super-otomatik-espresso-kahve-makinesi-2-ogutuculu-saatte-200-fincan-kahve-kapasiteli-sicak-cikolata-ozelligi-espresso-makineleri-faema-22770-12-O.jpg",
+        "price_try_kdv_dahil": 381806.46
+      },
+      {
+        "cafemarkt_id": "26927",
+        "name": "Faema E91 A/2 Ambassador Otomatik Espresso Kahve Makinesi, 2 Gruplu",
+        "code": "197.E91.A2",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-e91-a-2-ambassador-otomatik-espresso-kahve-makinesi-2-gruplu",
+        "image": "https://witcdn.cafemarkt.com/faema-e91-a-2-ambassador-otomatik-espresso-kahve-makinesi-2-gruplu-espresso-makineleri-faema-46032-26-O.jpg",
+        "price_try_kdv_dahil": 413780.4
+      },
+      {
+        "cafemarkt_id": "26928",
+        "name": "Faema E91 A/2 Ambassador Otomatik Espresso Kahve Makinesi, 3 Gruplu",
+        "code": "197.E91.A3",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-e91-a-3-ambassador-otomatik-espresso-kahve-makinesi-3-gruplu",
+        "image": "https://witcdn.cafemarkt.com/faema-e91-a-3-ambassador-otomatik-espresso-kahve-makinesi-3-gruplu-espresso-makineleri-faema-46033-26-O.jpg",
+        "price_try_kdv_dahil": 534152.88
+      },
+      {
+        "cafemarkt_id": "26929",
+        "name": "Faema E91 A/4 Ambassador Otomatik Espresso Kahve Makinesi, 4 Gruplu",
+        "code": "197.E91.A4",
+        "brand": "Faema",
+        "url": "https://www.cafemarkt.com/faema-e91-a-4-ambassador-otomatik-espresso-kahve-makinesi-4-gruplu",
+        "image": "https://witcdn.cafemarkt.com/faema-e91-a-4-ambassador-otomatik-espresso-kahve-makinesi-4-gruplu-espresso-makineleri-faema-46034-26-O.jpg",
+        "price_try_kdv_dahil": 601862.4
+      }
+    ],
+    "Dito Sama": [
+      {
+        "cafemarkt_id": "30379",
+        "name": "Dito Sama ZSP Spiral Hamur Yoğurma Makinesi, 12 L",
+        "code": "208.601525",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-zsp-spiral-hamur-yogurma-makinesi-12-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-zsp-spiral-hamur-yogurma-makinesi-12-l-hamur-yogurma-makineleri-dito-sama-52188-30-O.jpg",
+        "price_try_kdv_dahil": 84462.21
+      },
+      {
+        "cafemarkt_id": "30363",
+        "name": "Dito Sama ZSP Spiral Hamur Yoğurma Makinesi, 25 L",
+        "code": "208.601526",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-zsp-spiral-hamur-yogurma-makinesi-25-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-zsp-spiral-hamur-yogurma-makinesi-25-l-hamur-yogurma-makineleri-dito-sama-52189-30-O.jpg",
+        "price_try_kdv_dahil": 95660.35
+      },
+      {
+        "cafemarkt_id": "37205",
+        "name": "Dito Sama Dmix Set Üstü Mikser, 5 L, Siyah",
+        "code": "208.603797",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-dmix-set-ustu-mikser-5-l-siyah",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-dmix-set-ustu-mikser-5-l-siyah-stand-mikserler-dito-sama-68617-37-O.jpg",
+        "price_try_kdv_dahil": 49291.48
+      },
+      {
+        "cafemarkt_id": "15843",
+        "name": "Dito Sama 603677 El Blender için Çırpıcı",
+        "code": "208.650057",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-603677-el-blender-icin-cirpici",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-603677-el-blender-icin-cirpici-el-blenderlari-dito-sama-27957-15-O.jpg",
+        "price_try_kdv_dahil": 10114.45
+      },
+      {
+        "cafemarkt_id": "12897",
+        "name": "Dito Sama Otomatik Sebze Yükleme Silosu",
+        "code": "208.653037.AH260",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-otomatik-sebze-yukleme-silosu",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-otomatik-sebze-yukleme-silosu-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22640-12-O.jpg",
+        "price_try_kdv_dahil": 141011.17
+      },
+      {
+        "cafemarkt_id": "12953",
+        "name": "Dito Sama Rende Diski, Paslanmaz Çelik, 3 mm",
+        "code": "208.653774.J3X",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-rende-diski-paslanmaz-celik-3-mm-12953",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-rende-diski-paslanmaz-celik-3-mm-12953-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22596-12-O.jpg",
+        "price_try_kdv_dahil": 3061.22
+      },
+      {
+        "cafemarkt_id": "12846",
+        "name": "Dito Sama Gastronomi Disk Seti, 5 Bıçaklı",
+        "code": "208.650077.AS4XX",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-gastronomi-disk-seti-5-bicakli",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-gastronomi-disk-seti-5-bicakli-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22606-12-O.jpg",
+        "price_try_kdv_dahil": 10804.07
+      },
+      {
+        "cafemarkt_id": "15842",
+        "name": "Dito Sama Speedy El Mikser, Hız Varyatörlü, 250 mm, 250 W",
+        "code": "208.603677",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-speedy-mixer-el-blender-250-mm-tup-250-w",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-speedy-mixer-el-blender-250-mm-tup-250-w-el-blenderlari-dito-sama-27956-15-O.jpg",
+        "price_try_kdv_dahil": 24892.05
+      },
+      {
+        "cafemarkt_id": "12958",
+        "name": "Dito Sama Rende Diski, Paslanmaz Çelik, Permasan vb. Sert Peynirler ve Kuru Ekmek için",
+        "code": "208.653779.PX",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-rende-diski-paslanmaz-celik-permasan-vb-sert-peynirler-ve-kuru-ekmek-icin",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-rende-diski-paslanmaz-celik-permasan-vb-sert-peynirler-ve-kuru-ekmek-icin-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-69099-12-O.jpg",
+        "price_try_kdv_dahil": 4400.44
+      },
+      {
+        "cafemarkt_id": "12847",
+        "name": "Dito Sama Jülyen Kesme Diski, 6x6 mm",
+        "code": "208.650078.AS6XX",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-julyen-kesme-diski-6-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-julyen-kesme-diski-6-mm-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22607-12-O.jpg",
+        "price_try_kdv_dahil": 10804.07
+      },
+      {
+        "cafemarkt_id": "12946",
+        "name": "Dito Sama Küp Biçiminde Kesme Izgarası, 20x20 mm",
+        "code": "208.653570.MT20T",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-kup-biciminde-kesme-izgarasi-20x20-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-kup-biciminde-kesme-izgarasi-20x20-mm-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22633-12-O.jpg",
+        "price_try_kdv_dahil": 12774.42
+      },
+      {
+        "cafemarkt_id": "12956",
+        "name": "Dito Sama Rende Diski, Paslanmaz Çelik, 9 mm",
+        "code": "208.653777.J9X",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-rende-diski-paslanmaz-celik-9-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-rende-diski-paslanmaz-celik-9-mm-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22599-12-O.jpg",
+        "price_try_kdv_dahil": 3283.91
+      },
+      {
+        "cafemarkt_id": "12955",
+        "name": "Dito Sama Rende Diski, Paslanmaz Çelik, 7 mm",
+        "code": "208.653776.J7X",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-rende-diski-paslanmaz-celik-7-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-rende-diski-paslanmaz-celik-7-mm-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22598-12-O.jpg",
+        "price_try_kdv_dahil": 2789.63
+      },
+      {
+        "cafemarkt_id": "28604",
+        "name": "Dito Sama EL40 Sebze Kurutma Makinesi, 32 L",
+        "code": "208.603354",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-el40-sebze-kurutma-makinesi-32-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-el40-sebze-kurutma-makinesi-32-l-sebze-kurutma-makineleri-dito-sama-48235-28-O.jpg",
+        "price_try_kdv_dahil": 120158.33
+      },
+      {
+        "cafemarkt_id": "28544",
+        "name": "Dito Sama KE120S Cutter Mikser, Mutfak Robotu, Hız Varyatörlü, 11.5 L",
+        "code": "208.600093",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-ke120s-cutter-mikser-mutfak-robotu-hiz-varyatorlu-11-5-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-ke120s-cutter-mikser-mutfak-robotu-hiz-varyatorlu-11-5-l-sebze-dograma-makineleri-dito-sama-48195-28-O.jpg",
+        "price_try_kdv_dahil": 332641.83
+      },
+      {
+        "cafemarkt_id": "12879",
+        "name": "Dito Sama Rende Diski, Paslanmaz Çelik, 13 mm, TR260/TR300",
+        "code": "208.650165.C13SX",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-rende-diski-paslanmaz-celik-2-mm-tr260tr300",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-rende-diski-paslanmaz-celik-2-mm-tr260tr300-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22626-12-O.jpg",
+        "price_try_kdv_dahil": 12413.19
+      },
+      {
+        "cafemarkt_id": "12957",
+        "name": "Dito Sama Rende Diski, Paslanmaz Çelik, Kuru Ekmek için",
+        "code": "208.653778.KX",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-rende-diski-paslanmaz-celik-kuru-ekmek-icin",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-rende-diski-paslanmaz-celik-kuru-ekmek-icin-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-69098-12-O.jpg",
+        "price_try_kdv_dahil": 3743.66
+      },
+      {
+        "cafemarkt_id": "28607",
+        "name": "Dito Sama ELX65 Sebze Kurutma Makinesi, 65 L",
+        "code": "208.603651",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-elx65-sebze-kurutma-makinesi-65-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-elx65-sebze-kurutma-makinesi-65-l-sebze-kurutma-makineleri-dito-sama-48236-28-O.jpg",
+        "price_try_kdv_dahil": 176411.74
+      },
+      {
+        "cafemarkt_id": "12952",
+        "name": "Dito Sama Rende Diski, Paslanmaz Çelik, 2 mm",
+        "code": "208.653773.J2X",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-rende-diski-paslanmaz-celik-2-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-rende-diski-paslanmaz-celik-2-mm-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22595-12-O.jpg",
+        "price_try_kdv_dahil": 3177.08
+      },
+      {
+        "cafemarkt_id": "12944",
+        "name": "Dito Sama Küp Biçiminde Kesme Izgarası, 10x10 mm",
+        "code": "208.653568.MT10T",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-kup-biciminde-kesme-izgarasi-10x10-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-kup-biciminde-kesme-izgarasi-10x10-mm-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22631-12-O.jpg",
+        "price_try_kdv_dahil": 19769.15
+      },
+      {
+        "cafemarkt_id": "12945",
+        "name": "Dito Sama Küp Biçiminde Kesme Izgarası, 12x12 mm",
+        "code": "208.653569.MT12T",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-kup-biciminde-kesme-izgarasi-12x12-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-kup-biciminde-kesme-izgarasi-12x12-mm-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22632-12-O.jpg",
+        "price_try_kdv_dahil": 10871.14
+      },
+      {
+        "cafemarkt_id": "12878",
+        "name": "Dito Sama Dalgalı Dilimleme Diski, 10 mm",
+        "code": "208.650164.C10WX",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-rende-diski-paslanmaz-celik-knodel",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-rende-diski-paslanmaz-celik-knodel-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22627-12-O.jpg",
+        "price_try_kdv_dahil": 7323.12
+      },
+      {
+        "cafemarkt_id": "12949",
+        "name": "Dito Sama Cips Biçiminde Kesme Izgarası, 3x10 mm",
+        "code": "208.653573.FT10",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-cips-biciminde-kesme-izgarasi-10x10-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-cips-biciminde-kesme-izgarasi-10x10-mm-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-69097-12-O.jpg",
+        "price_try_kdv_dahil": 12544.54
+      },
+      {
+        "cafemarkt_id": "12880",
+        "name": "Dito Sama 650166 AS2XX Paslanmaz Çelik Şerit Kesme Diski, 2x2 mm",
+        "code": "208.650166.AS2XX",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-rende-diski-paslanmaz-celik-3-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-rende-diski-paslanmaz-celik-3-mm-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22602-12-O.jpg",
+        "price_try_kdv_dahil": 11756.4
+      },
+      {
+        "cafemarkt_id": "12947",
+        "name": "Dito Sama Cips Biçiminde Kesme Izgarası, 6x6 mm",
+        "code": "208.653571.FT06",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-cips-biciminde-kesme-izgarasi-6x6-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-cips-biciminde-kesme-izgarasi-6x6-mm-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22634-12-O.jpg",
+        "price_try_kdv_dahil": 15434.39
+      },
+      {
+        "cafemarkt_id": "12948",
+        "name": "Dito Sama Cips Biçiminde Kesme Izgarası, 8x8 mm",
+        "code": "208.653572.FT08",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-cips-biciminde-kesme-izgarasi-8x8-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-cips-biciminde-kesme-izgarasi-8x8-mm-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-69096-12-O.jpg",
+        "price_try_kdv_dahil": 12741.58
+      },
+      {
+        "cafemarkt_id": "12850",
+        "name": "Dito Sama Dilimleme Diski, Paslanmaz Çelik Baskılı, 0.6 mm",
+        "code": "208.650081.C06SX",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-dilimleme-diski-dalgali-agizi-s-tipi-bicakli-paslanmaz-celik-baskili-3-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-dilimleme-diski-dalgali-agizi-s-tipi-bicakli-paslanmaz-celik-baskili-3-mm-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22610-12-O.jpg",
+        "price_try_kdv_dahil": 8505.33
+      },
+      {
+        "cafemarkt_id": "12852",
+        "name": "Dito Sama Dilimleme Diski, Dalgalı Ağızı S-Tipi Bıçaklı, Paslanmaz Çelik Baskılı, 2 mm",
+        "code": "208.650083.C2SX",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-dilimleme-diski-dalgali-agizi-s-tipi-bicakli-paslanmaz-celik-baskili-8-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-dilimleme-diski-dalgali-agizi-s-tipi-bicakli-paslanmaz-celik-baskili-8-mm-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22612-12-O.jpg",
+        "price_try_kdv_dahil": 8505.33
+      },
+      {
+        "cafemarkt_id": "12861",
+        "name": "Dito Sama SCEQXX Bistro Diski Paketi, 2 mm Dilimleme Diski, 5 mm Dilimleme Diski, 2 mm Rendeleme Diski",
+        "code": "208.650092.SCEQXX",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-dilimleme-diski-s-tipi-bicakli-paslanmaz-celik-baskili-5-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-dilimleme-diski-s-tipi-bicakli-paslanmaz-celik-baskili-5-mm-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-52403-12-O.jpg",
+        "price_try_kdv_dahil": 20130.38
+      },
+      {
+        "cafemarkt_id": "15841",
+        "name": "Dito Sama Bermixer Pro El Mikser, 353 mm, 450 W",
+        "code": "208.600392",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-bermixer-pro-el-blender-350-mm-tup-450-w",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-bermixer-pro-el-blender-350-mm-tup-450-w-el-blenderlari-dito-sama-27955-15-O.jpg",
+        "price_try_kdv_dahil": 24826.37
+      },
+      {
+        "cafemarkt_id": "12877",
+        "name": "Dito Sama Dalgalı Dilimleme Diski, S-Tipi Bıçaklı, 8 mm",
+        "code": "208.650162.C8WX",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-sert-bicimde-kesme-diski-s-tipi-bicakli-paslanmaz-celik-2x8-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-sert-bicimde-kesme-diski-s-tipi-bicakli-paslanmaz-celik-2x8-mm-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22625-12-O.jpg",
+        "price_try_kdv_dahil": 7323.12
+      },
+      {
+        "cafemarkt_id": "12881",
+        "name": "Dito Sama 650167 AS3XX Paslanmaz Çelik Rende Diski, 3x3 mm",
+        "code": "208.650167.AS3XX",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-rende-diski-paslanmaz-celik-4-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-rende-diski-paslanmaz-celik-4-mm-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22603-12-O.jpg",
+        "price_try_kdv_dahil": 10804.07
+      },
+      {
+        "cafemarkt_id": "28584",
+        "name": "Dito Sama K55 Cutter Mikser, Mutfak Robotu, 2 Hızlı, 5.5 L",
+        "code": "208.600445",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-k55-cutter-mikser-mutfak-robotu-2-hizli-5-5-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-k55-cutter-mikser-mutfak-robotu-2-hizli-5-5-l-sebze-dograma-makineleri-dito-sama-48190-28-O.jpg",
+        "price_try_kdv_dahil": 93558.64
+      },
+      {
+        "cafemarkt_id": "12857",
+        "name": "Dito Sama Dilimleme Diski, S-Tipi Bıçaklı, Paslanmaz Çelik Baskılı, 8 mm",
+        "code": "208.650088.C8SX",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-dilimleme-diski-s-tipi-bicakli-paslanmaz-celik-baskili-1-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-dilimleme-diski-s-tipi-bicakli-paslanmaz-celik-baskili-1-mm-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22617-12-O.jpg",
+        "price_try_kdv_dahil": 6961.89
+      },
+      {
+        "cafemarkt_id": "12856",
+        "name": "Dito Sama Dilimleme Diski, S-Tipi Bıçaklı, Paslanmaz Çelik Baskılı, 6 mm",
+        "code": "208.650087.C6SX",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-dilimleme-diski-s-tipi-bicakli-paslanmaz-celik-baskili-13-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-dilimleme-diski-s-tipi-bicakli-paslanmaz-celik-baskili-13-mm-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22616-12-O.jpg",
+        "price_try_kdv_dahil": 8505.33
+      },
+      {
+        "cafemarkt_id": "17622",
+        "name": "Dito Sama Bermixer Pro Turbo El Mikser, 653 mm, 750 W",
+        "code": "208.600337",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-bermixer-pro-turbo-el-mikser-653-mm-750-w",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-bermixer-pro-turbo-el-mikser-653-mm-750-w-el-blenderlari-dito-sama-30933-17-O.jpg",
+        "price_try_kdv_dahil": 29850.76
+      },
+      {
+        "cafemarkt_id": "12848",
+        "name": "Dito Sama Jülyen Dilimleme Diski, 8x8 mm",
+        "code": "208.650079.AS8XX",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-dilimleme-diski-dalgali-agizi-s-tipi-bicakli-paslanmaz-celik-baskili-10-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-dilimleme-diski-dalgali-agizi-s-tipi-bicakli-paslanmaz-celik-baskili-10-mm-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22608-12-O.jpg",
+        "price_try_kdv_dahil": 8505.33
+      },
+      {
+        "cafemarkt_id": "12854",
+        "name": "Dito Sama Dilimleme Diski, S-Tipi Bıçaklı, Paslanmaz Çelik Baskılı, 4 mm",
+        "code": "208.650085.C4SX",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-dilimleme-diski-s-tipi-bicakli-paslanmaz-celik-baskili-10-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-dilimleme-diski-s-tipi-bicakli-paslanmaz-celik-baskili-10-mm-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22614-12-O.jpg",
+        "price_try_kdv_dahil": 8505.33
+      },
+      {
+        "cafemarkt_id": "12875",
+        "name": "Dito Sama Sert Biçimde Kesme Diski, S-Tipi Bıçaklı, Paslanmaz Çelik, 10 mm",
+        "code": "208.650160.C10SX",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-sert-bicimde-kesme-diski-s-tipi-bicakli-paslanmaz-celik-4x4-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-sert-bicimde-kesme-diski-s-tipi-bicakli-paslanmaz-celik-4x4-mm-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22623-12-O.jpg",
+        "price_try_kdv_dahil": 6961.89
+      },
+      {
+        "cafemarkt_id": "12858",
+        "name": "Dito Sama Dilimleme Diski, S-Tipi Bıçaklı, Paslanmaz Çelik Baskılı, 2 mm",
+        "code": "208.650089.C2WX",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-dilimleme-diski-s-tipi-bicakli-paslanmaz-celik-baskili-2-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-dilimleme-diski-s-tipi-bicakli-paslanmaz-celik-baskili-2-mm-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22618-12-O.jpg",
+        "price_try_kdv_dahil": 9227.79
+      },
+      {
+        "cafemarkt_id": "12859",
+        "name": "Dito Sama S-Tipi Bıçaklı Dalgalı Dilimleme Diski, Paslanmaz Çelik Baskılı, 3 mm",
+        "code": "208.650090.C3WX",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-dilimleme-diski-s-tipi-bicakli-paslanmaz-celik-baskili-3-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-dilimleme-diski-s-tipi-bicakli-paslanmaz-celik-baskili-3-mm-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22619-12-O.jpg",
+        "price_try_kdv_dahil": 9227.79
+      },
+      {
+        "cafemarkt_id": "15840",
+        "name": "Dito Sama Bermixer Pro El Mikser, 453 mm, 450 W",
+        "code": "208.600321",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-bermixer-pro-el-blender-450-mm-tup-450-w",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-bermixer-pro-el-blender-450-mm-tup-450-w-el-blenderlari-dito-sama-27954-15-O.jpg",
+        "price_try_kdv_dahil": 25917.7
+      },
+      {
+        "cafemarkt_id": "12851",
+        "name": "Dito Sama Dilimleme Diski, S-Tipi Bıçaklı, Paslanmaz Çelik Baskılı, 1 mm",
+        "code": "208.650082.C1SX",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-dilimleme-diski-dalgali-agizi-s-tipi-bicakli-paslanmaz-celik-baskili-6-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-dilimleme-diski-dalgali-agizi-s-tipi-bicakli-paslanmaz-celik-baskili-6-mm-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22611-12-O.jpg",
+        "price_try_kdv_dahil": 8505.33
+      },
+      {
+        "cafemarkt_id": "12874",
+        "name": "Dito Sama Şerit Dilimleme Diski, Paslanmaz Çelik, 2x10 mm",
+        "code": "208.650159.AS2X10X",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-serit-bicimi-kesme-diski-s-tipi-bicakli-paslanmaz-celik-3x3-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-serit-bicimi-kesme-diski-s-tipi-bicakli-paslanmaz-celik-3x3-mm-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22605-12-O.jpg",
+        "price_try_kdv_dahil": 10048.77
+      },
+      {
+        "cafemarkt_id": "28596",
+        "name": "Dito Sama Prep4You Cutter Mikser, Mutfak Robotu, 9 Kademeli Hız, 3.6 L",
+        "code": "208.600967",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-prep4you-cutter-mikser-mutfak-robotu-9-kademeli-hiz-3-6-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-prep4you-cutter-mikser-mutfak-robotu-9-kademeli-hiz-3-6-l-sebze-dograma-makineleri-dito-sama-48186-28-O.jpg",
+        "price_try_kdv_dahil": 81778.05
+      },
+      {
+        "cafemarkt_id": "28594",
+        "name": "Dito Sama Prep4You Cutter Mikser, Mutfak Robotu, Plastik Hazne, 2.6 L",
+        "code": "208.600960",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-prep4you-cutter-mikser-mutfak-robotu-plastik-hazne-2-6-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-prep4you-cutter-mikser-mutfak-robotu-plastik-hazne-2-6-l-sebze-dograma-makineleri-dito-sama-48183-28-O.jpg",
+        "price_try_kdv_dahil": 49804.11
+      },
+      {
+        "cafemarkt_id": "28586",
+        "name": "Dito Sama K45 Cutter Mikser, Mutfak Robotu, Hız Varyatörlü, 4.5 L",
+        "code": "208.600448",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-k45-cutter-mikser-mutfak-robotu-hiz-varyatorlu-4-5-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-k45-cutter-mikser-mutfak-robotu-hiz-varyatorlu-4-5-l-sebze-dograma-makineleri-dito-sama-48189-28-O.jpg",
+        "price_try_kdv_dahil": 106266.33
+      },
+      {
+        "cafemarkt_id": "12873",
+        "name": "Dito Sama Şerit Dilimleme Diski, Paslanmaz Çelik, 2x8 mm",
+        "code": "208.650158.AS2X8X",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-serit-bicimi-kesme-diski-s-tipi-bicakli-paslanmaz-celik-2x10-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-serit-bicimi-kesme-diski-s-tipi-bicakli-paslanmaz-celik-2x10-mm-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22604-12-O.jpg",
+        "price_try_kdv_dahil": 10048.77
+      },
+      {
+        "cafemarkt_id": "12876",
+        "name": "Dito Sama Dilimleme Diski, S-Tipi Bıçaklı, Paslanmaz Çelik, 12 mm",
+        "code": "208.650161.C12SX",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-sert-bicimde-kesme-diski-s-tipi-bicakli-paslanmaz-celik-2x2-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-sert-bicimde-kesme-diski-s-tipi-bicakli-paslanmaz-celik-2x2-mm-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22624-12-O.jpg",
+        "price_try_kdv_dahil": 6961.89
+      },
+      {
+        "cafemarkt_id": "37444",
+        "name": "Dito Sama 4'li Disk Seti",
+        "code": "208.650178",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-4li-disk-seti",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-4li-disk-seti-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-69115-37-O.jpg",
+        "price_try_kdv_dahil": 23250.09
+      },
+      {
+        "cafemarkt_id": "37443",
+        "name": "Dito Sama 7'li Disk Seti",
+        "code": "208.DS7DSET",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-7li-disk-seti",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-7li-disk-seti-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-69114-37-O.jpg",
+        "price_try_kdv_dahil": 55563.79
+      },
+      {
+        "cafemarkt_id": "37442",
+        "name": "Dito Sama 8'li Disk Seti",
+        "code": "208.CC0G12",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-8li-disk-seti",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-8li-disk-seti-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-69113-37-O.jpg",
+        "price_try_kdv_dahil": 49324.35
+      },
+      {
+        "cafemarkt_id": "37441",
+        "name": "Dito Sama 12'li Disk Seti",
+        "code": "208.CC0G13",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-12li-disk-seti",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-12li-disk-seti-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-69111-37-O.jpg",
+        "price_try_kdv_dahil": 83477.04
+      },
+      {
+        "cafemarkt_id": "17621",
+        "name": "Dito Sama Bermixer Pro Turbo El Mikser, 553 mm, 550 W",
+        "code": "208.600330",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-bermixer-pro-el-blender-550-mm-tup-550-w",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-bermixer-pro-el-blender-550-mm-tup-550-w-el-blenderlari-dito-sama-30932-17-O.jpg",
+        "price_try_kdv_dahil": 28776.55
+      },
+      {
+        "cafemarkt_id": "28603",
+        "name": "Dito Sama LVA100 Sebze Yıkama ve Kurutma Makinesi, 32 L",
+        "code": "208.601524",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-lva100-sebze-yikama-ve-kurutma-makinesi-32-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-lva100-sebze-yikama-ve-kurutma-makinesi-32-l-sebze-yikama-makineleri-dito-sama-48234-28-O.jpg",
+        "price_try_kdv_dahil": 417844.93
+      },
+      {
+        "cafemarkt_id": "12849",
+        "name": "Dito Sama Jülyen Dilimleme Diski, Paslanmaz Çelik Baskılı, 10x10 mm",
+        "code": "208.650080.AS10XX",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-dilimleme-diski-dalgali-agizi-s-tipi-bicakli-paslanmaz-celik-baskili-2-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-dilimleme-diski-dalgali-agizi-s-tipi-bicakli-paslanmaz-celik-baskili-2-mm-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22609-12-O.jpg",
+        "price_try_kdv_dahil": 8505.33
+      },
+      {
+        "cafemarkt_id": "12853",
+        "name": "Dito Sama C3SX S-Tipi Bıçaklı Dilimleme Diski, Paslanmaz Çelik Baskılı, 3 mm",
+        "code": "208.650084.C3SX",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-dilimleme-diski-s-tipi-bicakli-paslanmaz-celik-baskili-0",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-dilimleme-diski-s-tipi-bicakli-paslanmaz-celik-baskili-0-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22613-12-O.jpg",
+        "price_try_kdv_dahil": 8505.33
+      },
+      {
+        "cafemarkt_id": "12860",
+        "name": "Dito Sama Dalgalı Dilimleme Diski, S-Tipi Bıçaklı, 6 mm",
+        "code": "208.650091.C6WX",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-dilimleme-diski-s-tipi-bicakli-paslanmaz-celik-baskili-4-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-dilimleme-diski-s-tipi-bicakli-paslanmaz-celik-baskili-4-mm-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22620-12-O.jpg",
+        "price_try_kdv_dahil": 9227.79
+      },
+      {
+        "cafemarkt_id": "12855",
+        "name": "Dito Sama S-Tipi Bıçaklı Dilimleme Diski, Paslanmaz Çelik, 5 mm",
+        "code": "208.650086.C5SX",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-dilimleme-diski-s-tipi-bicakli-paslanmaz-celik-baskili-12-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-dilimleme-diski-s-tipi-bicakli-paslanmaz-celik-baskili-12-mm-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-22615-12-O.jpg",
+        "price_try_kdv_dahil": 8505.33
+      },
+      {
+        "cafemarkt_id": "28559",
+        "name": "Dito Sama BMXE60 Planet Mikser, 60 L",
+        "code": "208.600181",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-bmxe60-planet-mikser-60-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-bmxe60-planet-mikser-60-l-planet-mikserler-dito-sama-48231-28-O.jpg",
+        "price_try_kdv_dahil": 887972.74
+      },
+      {
+        "cafemarkt_id": "28542",
+        "name": "Dito Sama K120S Cutter Mikser, Mutfak Robotu, 2 Hızlı, 11.5 L",
+        "code": "208.600091",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-k120s-cutter-mikser-mutfak-robotu-2-hizli-11-5-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-k120s-cutter-mikser-mutfak-robotu-2-hizli-11-5-l-sebze-dograma-makineleri-dito-sama-48194-28-O.jpg",
+        "price_try_kdv_dahil": 320772.5
+      },
+      {
+        "cafemarkt_id": "28583",
+        "name": "Dito Sama K45 Cutter Mikser, Mutfak Robotu, 2 Hızlı, 4.5 L",
+        "code": "208.600444",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-k45-cutter-mikser-mutfak-robotu-2-hizli-4-5-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-k45-cutter-mikser-mutfak-robotu-2-hizli-4-5-l-sebze-dograma-makineleri-dito-sama-48188-28-O.jpg",
+        "price_try_kdv_dahil": 95997.05
+      },
+      {
+        "cafemarkt_id": "28598",
+        "name": "Dito Sama Prep4You Kompakt Sebze Doğrama Makinesi, Değişken Hızlı, 200 kg/saat",
+        "code": "208.600972",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-prep4you-kompakt-sebze-dograma-makinesi-degisken-hizli-200-kg-saat",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-prep4you-kompakt-sebze-dograma-makinesi-degisken-hizli-200-kg-saat-sebze-dograma-makineleri-dito-sama-48170-28-O.jpg",
+        "price_try_kdv_dahil": 72562.04
+      },
+      {
+        "cafemarkt_id": "28600",
+        "name": "Dito Sama Prep4You Kombine Cutter ve Sebze Doğrama Makinesi, Plastik Hazne, 2.6 L",
+        "code": "208.600976",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-prep4you-kombine-cutter-ve-sebze-dograma-makinesi-plastik-hazne-2-6-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-prep4you-kombine-cutter-ve-sebze-dograma-makinesi-plastik-hazne-2-6-l-sebze-dograma-makineleri-dito-sama-48198-28-O.jpg",
+        "price_try_kdv_dahil": 56913.61
+      },
+      {
+        "cafemarkt_id": "30384",
+        "name": "Dito Sama Ti25 Patates Soyma Makinesi, 25 kg",
+        "code": "208.603692",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-ti25-patates-soyma-makinesi-25-kg",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-ti25-patates-soyma-makinesi-25-kg-patates-ve-sogan-soyma-makineleri-dito-sama-52203-30-O.jpg",
+        "price_try_kdv_dahil": 433410.67
+      },
+      {
+        "cafemarkt_id": "28590",
+        "name": "Dito Sama Dik Tip Gıda Dilimleme Makinesi, 300 mm",
+        "code": "208.600522",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-dik-tip-gida-dilimleme-makinesi-300-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-dik-tip-gida-dilimleme-makinesi-300-mm-gida-dilimleme-makineleri-dito-sama-48239-28-O.jpg",
+        "price_try_kdv_dahil": 109501.34
+      },
+      {
+        "cafemarkt_id": "28599",
+        "name": "Dito Sama Prep4You Kombine Cutter ve Sebze Doğrama Makinesi, Paslanmaz Hazne, 2.6 L",
+        "code": "208.600974",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-prep4you-kombine-cutter-ve-sebze-dograma-makinesi-paslanmaz-hazne-2-6-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-prep4you-kombine-cutter-ve-sebze-dograma-makinesi-paslanmaz-hazne-2-6-l-sebze-dograma-makineleri-dito-sama-48199-28-O.jpg",
+        "price_try_kdv_dahil": 64023.11
+      },
+      {
+        "cafemarkt_id": "28582",
+        "name": "Dito Sama K45 Cutter Mikser, Mutfak Robotu, 1 Hızlı, 4.5 L",
+        "code": "208.600443",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-k45-cutter-mikser-mutfak-robotu-1-hizli-4-5-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-k45-cutter-mikser-mutfak-robotu-1-hizli-4-5-l-sebze-dograma-makineleri-dito-sama-48187-28-O.jpg",
+        "price_try_kdv_dahil": 79010.92
+      },
+      {
+        "cafemarkt_id": "28591",
+        "name": "Dito Sama Yatık Tip Gıda Dilimleme Makinesi, 350 mm",
+        "code": "208.600523",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-yatik-tip-gida-dilimleme-makinesi-350-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-yatik-tip-gida-dilimleme-makinesi-350-mm-gida-dilimleme-makineleri-dito-sama-48240-28-O.jpg",
+        "price_try_kdv_dahil": 160222.05
+      },
+      {
+        "cafemarkt_id": "28563",
+        "name": "Dito Sama Bermixer Pro El Blender, 353 mm, 350 W",
+        "code": "208.600314",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-bermixer-pro-el-mikser-353-mm-350-w",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-bermixer-pro-el-mikser-353-mm-350-w-el-blenderlari-dito-sama-48208-28-O.jpg",
+        "price_try_kdv_dahil": 24530.82
+      },
+      {
+        "cafemarkt_id": "28597",
+        "name": "Dito Sama Prep4You Kompakt Sebze Doğrama Makinesi, 1 Hızlı, 200 kg/saat",
+        "code": "208.600970",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-prep4you-kompakt-sebze-dograma-makinesi-1-hizli-200-kg-saat",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-prep4you-kompakt-sebze-dograma-makinesi-1-hizli-200-kg-saat-sebze-dograma-makineleri-dito-sama-48169-28-O.jpg",
+        "price_try_kdv_dahil": 49718.42
+      },
+      {
+        "cafemarkt_id": "28576",
+        "name": "Dito Sama TRS Sebze Doğrama Makinesi, 1 Hızlı, 500 kg/saat",
+        "code": "208.600419",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-trs-sebze-dograma-makinesi-1-hizli-500-kg-saat",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-trs-sebze-dograma-makinesi-1-hizli-500-kg-saat-sebze-dograma-makineleri-dito-sama-48173-28-O.jpg",
+        "price_try_kdv_dahil": 82688.9
+      },
+      {
+        "cafemarkt_id": "30372",
+        "name": "Dito Sama LMP400 Manuel Hamur Açma Makinesi, 400 mm",
+        "code": "208.601549",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-lmp400-manuel-hamur-acma-makinesi-400-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-lmp400-manuel-hamur-acma-makinesi-400-mm-hamur-acma-makineleri-dito-sama-52193-30-O.jpg",
+        "price_try_kdv_dahil": 89683.63
+      },
+      {
+        "cafemarkt_id": "28568",
+        "name": "Dito Sama Bermixer Pro Turbo El Blender, 553 mm, 650 W",
+        "code": "208.600331",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-bermixer-pro-turbo-el-mikser-553-mm-650-w",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-bermixer-pro-turbo-el-mikser-553-mm-650-w-el-blenderlari-dito-sama-48214-28-O.jpg",
+        "price_try_kdv_dahil": 28776.55
+      },
+      {
+        "cafemarkt_id": "28602",
+        "name": "Dito Sama Prep4You Kombine Cutter ve Sebze Doğrama Makinesi, 9 Kademeli Hız, 3.6 L",
+        "code": "208.600984",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-prep4you-kombine-cutter-ve-sebze-dograma-makinesi-9-kademeli-hiz-3-6-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-prep4you-kombine-cutter-ve-sebze-dograma-makinesi-9-kademeli-hiz-3-6-l-sebze-dograma-makineleri-dito-sama-48201-28-O.jpg",
+        "price_try_kdv_dahil": 88925.17
+      },
+      {
+        "cafemarkt_id": "28564",
+        "name": "Dito Sama Bermixer Pro El Blender, 453 mm, 350 W",
+        "code": "208.600320",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-bermixer-pro-el-mikser-453-mm-350-w",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-bermixer-pro-el-mikser-453-mm-350-w-el-blenderlari-dito-sama-48209-28-O.jpg",
+        "price_try_kdv_dahil": 25579.15
+      },
+      {
+        "cafemarkt_id": "28587",
+        "name": "Dito Sama K55 Cutter Mikser, Mutfak Robotu, Hız Varyatörlü, 5.5 L",
+        "code": "208.600450",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-k55-cutter-mikser-mutfak-robotu-hiz-varyatorlu-5-5-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-k55-cutter-mikser-mutfak-robotu-hiz-varyatorlu-5-5-l-sebze-dograma-makineleri-dito-sama-48191-28-O.jpg",
+        "price_try_kdv_dahil": 105150.85
+      },
+      {
+        "cafemarkt_id": "28577",
+        "name": "Dito Sama TRS Sebze Doğrama Makinesi, 2 Hızlı, 500 kg/saat",
+        "code": "208.600423",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-trs-sebze-dograma-makinesi-2-hizli-500-kg-saat",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-trs-sebze-dograma-makinesi-2-hizli-500-kg-saat-sebze-dograma-makineleri-dito-sama-48174-28-O.jpg",
+        "price_try_kdv_dahil": 107959.07
+      },
+      {
+        "cafemarkt_id": "28571",
+        "name": "Dito Sama TR210 Silolu Sebze Doğrama Makinesi, 1 Hızlı, 2100 kg/saat",
+        "code": "208.600411",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-tr210-silolu-sebze-dograma-makinesi-1-hizli-2100-kg-saat",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-tr210-silolu-sebze-dograma-makinesi-1-hizli-2100-kg-saat-sebze-dograma-makineleri-dito-sama-48176-28-O.jpg",
+        "price_try_kdv_dahil": 115002.59
+      },
+      {
+        "cafemarkt_id": "28581",
+        "name": "Dito Sama TRK70 Kombine Cutter ve Sebze Doğrama Makinesi, 7 L",
+        "code": "208.600437",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-trk70-kombine-cutter-ve-sebze-dograma-makinesi-7-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-trk70-kombine-cutter-ve-sebze-dograma-makinesi-7-l-sebze-dograma-makineleri-dito-sama-48204-28-O.jpg",
+        "price_try_kdv_dahil": 144623.47
+      },
+      {
+        "cafemarkt_id": "28589",
+        "name": "Dito Sama Yatık Tip Gıda Dilimleme Makinesi, 300 mm",
+        "code": "208.600521",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-yatik-tip-gida-dilimleme-makinesi-300-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-yatik-tip-gida-dilimleme-makinesi-300-mm-gida-dilimleme-makineleri-dito-sama-48238-28-O.jpg",
+        "price_try_kdv_dahil": 90504.61
+      },
+      {
+        "cafemarkt_id": "28557",
+        "name": "Dito Sama MBE40 Planet Mikser, 40 L, 380V",
+        "code": "208.600176",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-mbe40-planet-mikser-40-l-380v",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-mbe40-planet-mikser-40-l-380v-planet-mikserler-dito-sama-48228-28-O.jpg",
+        "price_try_kdv_dahil": 505113.02
+      },
+      {
+        "cafemarkt_id": "28543",
+        "name": "Dito Sama K180S Cutter Mikser, Mutfak Robotu, 2 Hızlı, 17.5 L",
+        "code": "208.600092",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-k180s-cutter-mikser-mutfak-robotu-2-hizli-17-5-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-k180s-cutter-mikser-mutfak-robotu-2-hizli-17-5-l-sebze-dograma-makineleri-dito-sama-48196-28-O.jpg",
+        "price_try_kdv_dahil": 350459.06
+      },
+      {
+        "cafemarkt_id": "28546",
+        "name": "Dito Sama BE5 Planet Mikser, 5 L",
+        "code": "208.600137",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-be5-planet-mikser-5-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-be5-planet-mikser-5-l-planet-mikserler-dito-sama-48217-28-O.jpg",
+        "price_try_kdv_dahil": 84659.24
+      },
+      {
+        "cafemarkt_id": "30380",
+        "name": "Dito Sama ZSP Spiral Hamur Yoğurma Makinesi, 32 L",
+        "code": "208.601546",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-zsp-spiral-hamur-yogurma-makinesi-32-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-zsp-spiral-hamur-yogurma-makinesi-32-l-hamur-yogurma-makineleri-dito-sama-52190-30-O.jpg",
+        "price_try_kdv_dahil": 105774.8
+      },
+      {
+        "cafemarkt_id": "28548",
+        "name": "Dito Sama XBM10 Planet Mikser, 10 L",
+        "code": "208.600141",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-xbm10-planet-mikser-10-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-xbm10-planet-mikser-10-l-planet-mikserler-dito-sama-48220-28-O.jpg",
+        "price_try_kdv_dahil": 200344.95
+      },
+      {
+        "cafemarkt_id": "28588",
+        "name": "Dito Sama K70 Cutter Mikser, Mutfak Robotu, Hız Varyatörlü, 7 L",
+        "code": "208.600453",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-k70-cutter-mikser-mutfak-robotu-hiz-varyatorlu-7-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-k70-cutter-mikser-mutfak-robotu-hiz-varyatorlu-7-l-sebze-dograma-makineleri-dito-sama-48193-28-O.jpg",
+        "price_try_kdv_dahil": 112548.27
+      },
+      {
+        "cafemarkt_id": "28580",
+        "name": "Dito Sama TRK55 Kombine Cutter ve Sebze Doğrama Makinesi, 5.5 L",
+        "code": "208.600434",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-trk55-kombine-cutter-ve-sebze-dograma-makinesi-5-5-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-trk55-kombine-cutter-ve-sebze-dograma-makinesi-5-5-l-sebze-dograma-makineleri-dito-sama-48203-28-O.jpg",
+        "price_try_kdv_dahil": 148509.55
+      },
+      {
+        "cafemarkt_id": "30361",
+        "name": "Dito Sama Vakumlu Paketleme Makinesi, 8 m3/h",
+        "code": "208.602184",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-vakumlu-paketleme-makinesi-8-m3-h",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-vakumlu-paketleme-makinesi-8-m3-h-vakumlama-makineleri-dito-sama-65093-30-O.jpg",
+        "price_try_kdv_dahil": 153063.13
+      },
+      {
+        "cafemarkt_id": "28573",
+        "name": "Dito Sama TR210 Silolu Sebze Doğrama Makinesi, Standlı, 2 Hızlı, 1500 kg/saat",
+        "code": "208.600413",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-tr210-silolu-sebze-dograma-makinesi-standli-2-hizli-2100-kg-saat",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-tr210-silolu-sebze-dograma-makinesi-standli-2-hizli-2100-kg-saat-sebze-dograma-makineleri-dito-sama-48179-28-O.jpg",
+        "price_try_kdv_dahil": 207641.74
+      },
+      {
+        "cafemarkt_id": "28592",
+        "name": "Dito Sama Yatık Tip Gıda Dilimleme Makinesi, 250 mm",
+        "code": "208.600524",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-yatik-tip-gida-dilimleme-makinesi-250-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-yatik-tip-gida-dilimleme-makinesi-250-mm-gida-dilimleme-makineleri-dito-sama-48237-28-O.jpg",
+        "price_try_kdv_dahil": 50178.17
+      },
+      {
+        "cafemarkt_id": "30365",
+        "name": "Dito Sama LMP500 Set Üstü Hamur Açma Makinesi, 500 mm",
+        "code": "208.601567",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-lmp500-set-ustu-hamur-acma-makinesi-500-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-lmp500-set-ustu-hamur-acma-makinesi-500-mm-hamur-acma-makineleri-dito-sama-52194-30-O.jpg",
+        "price_try_kdv_dahil": 157562.08
+      },
+      {
+        "cafemarkt_id": "28601",
+        "name": "Dito Sama Prep4You Kombine Cutter ve Sebze Doğrama Makinesi, 3.6 L",
+        "code": "208.600981",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-prep4you-kombine-cutter-ve-sebze-dograma-makinesi-3-6-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-prep4you-kombine-cutter-ve-sebze-dograma-makinesi-3-6-l-sebze-dograma-makineleri-dito-sama-48200-28-O.jpg",
+        "price_try_kdv_dahil": 65546.88
+      },
+      {
+        "cafemarkt_id": "28574",
+        "name": "Dito Sama TR210 Silolu Sebze Doğrama Makinesi, Standlı, Hız Varyatörlü, 2100 kg/saat",
+        "code": "208.600414",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-tr210-silolu-sebze-dograma-makinesi-standli-hiz-varyatorlu-2100-kg-saat",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-tr210-silolu-sebze-dograma-makinesi-standli-hiz-varyatorlu-2100-kg-saat-sebze-dograma-makineleri-dito-sama-48180-28-O.jpg",
+        "price_try_kdv_dahil": 207153.51
+      },
+      {
+        "cafemarkt_id": "30368",
+        "name": "Dito Sama LV301 Otomatik Sebze Yıkama Makinesi, 300 L",
+        "code": "208.660030",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-lv301-otomatik-sebze-yikama-makinesi-300-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-lv301-otomatik-sebze-yikama-makinesi-300-l-sebze-yikama-makineleri-dito-sama-52207-30-O.jpg",
+        "price_try_kdv_dahil": 897493.07
+      },
+      {
+        "cafemarkt_id": "28562",
+        "name": "Dito Sama XBE80 Planet Mikser, 80 L",
+        "code": "208.600187",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-xbe80-planet-mikser-80-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-xbe80-planet-mikser-80-l-planet-mikserler-dito-sama-48232-28-O.jpg",
+        "price_try_kdv_dahil": 1030839.83
+      },
+      {
+        "cafemarkt_id": "28593",
+        "name": "Dito Sama Prep4You Cutter Mikser, Mutfak Robotu, Paslanmaz Hazne, 2.6 L",
+        "code": "208.600959",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-prep4you-cutter-mikser-mutfak-robotu-paslanmaz-hazne-2-6-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-prep4you-cutter-mikser-mutfak-robotu-paslanmaz-hazne-2-6-l-sebze-dograma-makineleri-dito-sama-48184-28-O.jpg",
+        "price_try_kdv_dahil": 55202.56
+      },
+      {
+        "cafemarkt_id": "28609",
+        "name": "Dito Sama Sebze Doldurma Silosu",
+        "code": "208.650094",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-sebze-doldurma-silosu",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-sebze-doldurma-silosu-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-48182-28-O.jpg",
+        "price_try_kdv_dahil": 27584.86
+      },
+      {
+        "cafemarkt_id": "28569",
+        "name": "Dito Sama Bermixer Pro Turbo El Blender, 553 mm, 750 W",
+        "code": "208.600332",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-bermixer-pro-turbo-el-mikser-553-mm-750-w",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-bermixer-pro-turbo-el-mikser-553-mm-750-w-el-blenderlari-dito-sama-48216-28-O.jpg",
+        "price_try_kdv_dahil": 29226.81
+      },
+      {
+        "cafemarkt_id": "28561",
+        "name": "Dito Sama BMXE80 Planet Mikser, 80 L",
+        "code": "208.600186",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-bmxe80-planet-mikser-80-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-bmxe80-planet-mikser-80-l-planet-mikserler-dito-sama-48233-28-O.jpg",
+        "price_try_kdv_dahil": 966750.77
+      },
+      {
+        "cafemarkt_id": "30364",
+        "name": "Dito Sama ZSP Spiral Hamur Yoğurma Makinesi, 38 L",
+        "code": "208.601547",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-zsp-spiral-hamur-yogurma-makinesi-38-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-zsp-spiral-hamur-yogurma-makinesi-38-l-hamur-yogurma-makineleri-dito-sama-52191-30-O.jpg",
+        "price_try_kdv_dahil": 153654.23
+      },
+      {
+        "cafemarkt_id": "28610",
+        "name": "Dito Sama Bermixer için Çırpıcı",
+        "code": "208.650108",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-bermixer-icin-cirpici",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-bermixer-icin-cirpici-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-48211-28-O.jpg",
+        "price_try_kdv_dahil": 12183.31
+      },
+      {
+        "cafemarkt_id": "28585",
+        "name": "Dito Sama K70 Cutter Mikser, Mutfak Robotu, 2 Hızlı, 7 L",
+        "code": "208.600446",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-k70-cutter-mikser-mutfak-robotu-2-hizli-7-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-k70-cutter-mikser-mutfak-robotu-2-hizli-7-l-sebze-dograma-makineleri-dito-sama-48192-28-O.jpg",
+        "price_try_kdv_dahil": 99601.04
+      },
+      {
+        "cafemarkt_id": "30381",
+        "name": "Dito Sama ZSP Spiral Hamur Yoğurma Makinesi, 48 L",
+        "code": "208.601548",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-zsp-spiral-hamur-yogurma-makinesi-48-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-zsp-spiral-hamur-yogurma-makinesi-48-l-hamur-yogurma-makineleri-dito-sama-52192-30-O.jpg",
+        "price_try_kdv_dahil": 176116.19
+      },
+      {
+        "cafemarkt_id": "28566",
+        "name": "Dito Sama Bermixer Pro Turbo El Blender, 453 mm, 650 W",
+        "code": "208.600324",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-bermixer-pro-turbo-el-mikser-453-mm-650-w",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-bermixer-pro-turbo-el-mikser-453-mm-650-w-el-blenderlari-dito-sama-48213-28-O.jpg",
+        "price_try_kdv_dahil": 29378.41
+      },
+      {
+        "cafemarkt_id": "28595",
+        "name": "Dito Sama Prep4You Cutter Mikser, Mutfak Robotu, 3.6 L",
+        "code": "208.600965",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-prep4you-cutter-mikser-mutfak-robotu-3-6-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-prep4you-cutter-mikser-mutfak-robotu-3-6-l-sebze-dograma-makineleri-dito-sama-48185-28-O.jpg",
+        "price_try_kdv_dahil": 58683.5
+      },
+      {
+        "cafemarkt_id": "28605",
+        "name": "Dito Sama Speedy El Blender, 1 Hızlı, 200 mm, 250 W",
+        "code": "208.603464",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-speedy-el-mikser-1-hizli-200-mm-250-w",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-speedy-el-mikser-1-hizli-200-mm-250-w-el-blenderlari-dito-sama-48205-28-O.jpg",
+        "price_try_kdv_dahil": 18394.42
+      },
+      {
+        "cafemarkt_id": "28578",
+        "name": "Dito Sama TRS Sebze Doğrama Makinesi, Hız Varyatörlü, 500 kg/saat",
+        "code": "208.600424",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-trs-sebze-dograma-makinesi-hiz-varyatorlu-500-kg-saat",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-trs-sebze-dograma-makinesi-hiz-varyatorlu-500-kg-saat-sebze-dograma-makineleri-dito-sama-48175-28-O.jpg",
+        "price_try_kdv_dahil": 107056.27
+      },
+      {
+        "cafemarkt_id": "28547",
+        "name": "Dito Sama BE8 Planet Mikser, 8 L",
+        "code": "208.600139",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-be8-planet-mikser-8-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-be8-planet-mikser-8-l-planet-mikserler-dito-sama-48218-28-O.jpg",
+        "price_try_kdv_dahil": 99404.01
+      },
+      {
+        "cafemarkt_id": "30382",
+        "name": "Dito Sama T5M Kabuklu Deniz Ürünleri Ayıklama Makinesi, 5 kg",
+        "code": "208.603499",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-t5m-kabuklu-deniz-urunleri-ayiklama-makinesi-5-kg",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-t5m-kabuklu-deniz-urunleri-ayiklama-makinesi-5-kg-patates-ve-sogan-soyma-makineleri-dito-sama-52198-30-O.jpg",
+        "price_try_kdv_dahil": 146035.55
+      },
+      {
+        "cafemarkt_id": "28565",
+        "name": "Dito Sama Bermixer Pro Turbo El Blender, 453 mm, 550 W",
+        "code": "208.600322",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-bermixer-pro-turbo-el-mikser-453-mm-550-w",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-bermixer-pro-turbo-el-mikser-453-mm-550-w-el-blenderlari-dito-sama-48212-28-O.jpg",
+        "price_try_kdv_dahil": 27453.5
+      },
+      {
+        "cafemarkt_id": "28611",
+        "name": "Dito Sama 650109 Uzun Sebze Yükleme Silosu",
+        "code": "208.650109",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-uzun-sebze-yukleme-silosu-28611",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-uzun-sebze-yukleme-silosu-28611-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-48181-28-O.jpg",
+        "price_try_kdv_dahil": 33666.68
+      },
+      {
+        "cafemarkt_id": "28572",
+        "name": "Dito Sama TR210 Silolu Sebze Doğrama Makinesi, 2 Hızlı, 2100 kg/saat",
+        "code": "208.600412",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-tr210-silolu-sebze-dograma-makinesi-2-hizli-2100-kg-saat",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-tr210-silolu-sebze-dograma-makinesi-2-hizli-2100-kg-saat-sebze-dograma-makineleri-dito-sama-48177-28-O.jpg",
+        "price_try_kdv_dahil": 131995.95
+      },
+      {
+        "cafemarkt_id": "28606",
+        "name": "Dito Sama Speedy El Blender, 1 Hızlı, 250 mm, 250 W",
+        "code": "208.603465",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-speedy-el-mikser-1-hizli-250-mm-250-w",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-speedy-el-mikser-1-hizli-250-mm-250-w-el-blenderlari-dito-sama-48206-28-O.jpg",
+        "price_try_kdv_dahil": 19146.75
+      },
+      {
+        "cafemarkt_id": "28560",
+        "name": "Dito Sama XBE60 Planet Mikser, 60 L",
+        "code": "208.600182",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-xbe60-planet-mikser-60-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-xbe60-planet-mikser-60-l-planet-mikserler-dito-sama-48229-28-O.jpg",
+        "price_try_kdv_dahil": 920473.31
+      },
+      {
+        "cafemarkt_id": "28570",
+        "name": "Dito Sama Bermixer Pro Turbo El Blender, 653 mm, 650 W",
+        "code": "208.600336",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-bermixer-pro-turbo-el-mikser-653-mm-650-w",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-bermixer-pro-turbo-el-mikser-653-mm-650-w-el-blenderlari-dito-sama-48215-28-O.jpg",
+        "price_try_kdv_dahil": 29115.09
+      },
+      {
+        "cafemarkt_id": "30375",
+        "name": "Dito Sama T15E Standlı Patates Soyma Makinesi, 15 kg",
+        "code": "208.603512",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-t15e-standli-patates-soyma-makinesi-15-kg",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-t15e-standli-patates-soyma-makinesi-15-kg-patates-ve-sogan-soyma-makineleri-dito-sama-52202-30-O.jpg",
+        "price_try_kdv_dahil": 137628.74
+      },
+      {
+        "cafemarkt_id": "28553",
+        "name": "Dito Sama XBE20 Standlı Planet Mikser, 20 L",
+        "code": "208.600157",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-xbe20-standli-planet-mikser-20-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-xbe20-standli-planet-mikser-20-l-planet-mikserler-dito-sama-48222-28-O.jpg",
+        "price_try_kdv_dahil": 259252.23
+      },
+      {
+        "cafemarkt_id": "28556",
+        "name": "Dito Sama MBE40 Planet Mikser, 40 L, 220V",
+        "code": "208.600175",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-mbe40-planet-mikser-40-l-220v",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-mbe40-planet-mikser-40-l-220v-planet-mikserler-dito-sama-48227-28-O.jpg",
+        "price_try_kdv_dahil": 452096.13
+      },
+      {
+        "cafemarkt_id": "28613",
+        "name": "Dito Sama Prep4You Sebze Doğrama Disk Seti, 6 Adet",
+        "code": "208.650197",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-prep4you-sebze-dograma-disk-seti-6-adet",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-prep4you-sebze-dograma-disk-seti-6-adet-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-69091-28-O.jpg",
+        "price_try_kdv_dahil": 24826.37
+      },
+      {
+        "cafemarkt_id": "28579",
+        "name": "Dito Sama TRK45 Kombine Cutter ve Sebze Doğrama Makinesi, 4.5 L",
+        "code": "208.600431",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-trk45-kombine-cutter-ve-sebze-dograma-makinesi-4-5-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-trk45-kombine-cutter-ve-sebze-dograma-makinesi-4-5-l-sebze-dograma-makineleri-dito-sama-48202-28-O.jpg",
+        "price_try_kdv_dahil": 147493.9
+      },
+      {
+        "cafemarkt_id": "28612",
+        "name": "Dito Sama Prep4You Sebze Doğrama Disk Seti, 3 Adet",
+        "code": "208.650196",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-prep4you-sebze-dograma-disk-seti-3-adet",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-prep4you-sebze-dograma-disk-seti-3-adet-dito-sama-aksesuarlari-ve-yedek-parcalari-dito-sama-69094-28-O.jpg",
+        "price_try_kdv_dahil": 9950.25
+      },
+      {
+        "cafemarkt_id": "30383",
+        "name": "Dito Sama T10E Standlı Patates Soyma Makinesi, 10 kg",
+        "code": "208.603510",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-t10e-standli-patates-soyma-makinesi-10-kg",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-t10e-standli-patates-soyma-makinesi-10-kg-patates-ve-sogan-soyma-makineleri-dito-sama-52201-30-O.jpg",
+        "price_try_kdv_dahil": 134509.02
+      },
+      {
+        "cafemarkt_id": "30367",
+        "name": "Dito Sama T25E Standlı Patates Soyma Makinesi, 25 kg",
+        "code": "208.603649",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-t25e-standli-patates-soyma-makinesi-25-kg",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-t25e-standli-patates-soyma-makinesi-25-kg-patates-ve-sogan-soyma-makineleri-dito-sama-52204-30-O.jpg",
+        "price_try_kdv_dahil": 249675.81
+      },
+      {
+        "cafemarkt_id": "30369",
+        "name": "Dito Sama LV300 Sabit Kazanlı Sebze Yıkama Makinesi, 300 L",
+        "code": "208.660033",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-lv300-sabit-kazanli-sebze-yikama-makinesi-300-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-lv300-sabit-kazanli-sebze-yikama-makinesi-300-l-sebze-yikama-makineleri-dito-sama-52206-30-O.jpg",
+        "price_try_kdv_dahil": 477349.41
+      },
+      {
+        "cafemarkt_id": "30373",
+        "name": "Dito Sama LMP600BF Standlı Hamur Açma Makinesi, 600 mm",
+        "code": "208.601588",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-lmp600bf-standli-hamur-acma-makinesi-600-mm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-lmp600bf-standli-hamur-acma-makinesi-600-mm-hamur-acma-makineleri-dito-sama-52196-30-O.jpg",
+        "price_try_kdv_dahil": 373512.12
+      },
+      {
+        "cafemarkt_id": "28567",
+        "name": "Dito Sama Bermixer Pro El Blender, 553 mm, 450 W",
+        "code": "208.600329",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-bermixer-pro-el-mikser-553-mm-450-w",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-bermixer-pro-el-mikser-553-mm-450-w-el-blenderlari-dito-sama-48210-28-O.jpg",
+        "price_try_kdv_dahil": 26181.01
+      },
+      {
+        "cafemarkt_id": "28575",
+        "name": "Dito Sama TR210 Silolu Sebze Doğrama Makinesi, Hız Varyatörlü, 2100 kg/saat",
+        "code": "208.600415",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-tr210-silolu-sebze-dograma-makinesi-hiz-varyatorlu-2100-kg-saat",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-tr210-silolu-sebze-dograma-makinesi-hiz-varyatorlu-2100-kg-saat-sebze-dograma-makineleri-dito-sama-48178-28-O.jpg",
+        "price_try_kdv_dahil": 132936.36
+      },
+      {
+        "cafemarkt_id": "28554",
+        "name": "Dito Sama XBM30 Planet Mikser, 30 L, 380V",
+        "code": "208.600163",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-xbm30-planet-mikser-30-l-380v",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-xbm30-planet-mikser-30-l-380v-planet-mikserler-dito-sama-48226-28-O.jpg",
+        "price_try_kdv_dahil": 268886.69
+      },
+      {
+        "cafemarkt_id": "30374",
+        "name": "Dito Sama T5E Patates Soyma Makinesi, 5 kg",
+        "code": "208.603498",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-t5e-patates-soyma-makinesi-5-kg",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-t5e-patates-soyma-makinesi-5-kg-patates-ve-sogan-soyma-makineleri-dito-sama-52197-30-O.jpg",
+        "price_try_kdv_dahil": 127941.2
+      },
+      {
+        "cafemarkt_id": "30376",
+        "name": "Dito Sama Kazan Arabası, 35x65x105 cm",
+        "code": "208.653585",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-kazan-arabasi-35x65x105-cm",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-kazan-arabasi-35x65x105-cm-tepsi-istif-raflari-tasima-arabalari-dito-sama-52187-30-O.jpg",
+        "price_try_kdv_dahil": 27453.5
+      },
+      {
+        "cafemarkt_id": "28555",
+        "name": "Dito Sama XBE30 Planet Mikser, 30 L, 220V",
+        "code": "208.600167",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-xbe30-planet-mikser-30-l-220v",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-xbe30-planet-mikser-30-l-220v-planet-mikserler-dito-sama-48225-28-O.jpg",
+        "price_try_kdv_dahil": 292241.81
+      },
+      {
+        "cafemarkt_id": "30366",
+        "name": "Dito Sama T8E Patates Soyma Makinesi, 8 kg",
+        "code": "208.603506",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-t8e-patates-soyma-makinesi-8-kg",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-t8e-patates-soyma-makinesi-8-kg-patates-ve-sogan-soyma-makineleri-dito-sama-52199-30-O.jpg",
+        "price_try_kdv_dahil": 139631.93
+      },
+      {
+        "cafemarkt_id": "28558",
+        "name": "Dito Sama BMX60 Planet Mikser, 60 L",
+        "code": "208.600177",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-bmx60-planet-mikser-60-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-bmx60-planet-mikser-60-l-planet-mikserler-dito-sama-48230-28-O.jpg",
+        "price_try_kdv_dahil": 770340.01
+      },
+      {
+        "cafemarkt_id": "28549",
+        "name": "Dito Sama XBE10 Planet Mikser, 10 L",
+        "code": "208.600142",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-xbe10-planet-mikser-10-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-xbe10-planet-mikser-10-l-planet-mikserler-dito-sama-48219-28-O.jpg",
+        "price_try_kdv_dahil": 163604.48
+      },
+      {
+        "cafemarkt_id": "28551",
+        "name": "Dito Sama XBM20 Standlı Planet Mikser, 20 L",
+        "code": "208.600150",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-xbm20-standli-planet-mikser-20-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-xbm20-standli-planet-mikser-20-l-planet-mikserler-dito-sama-48224-28-O.jpg",
+        "price_try_kdv_dahil": 258575.13
+      },
+      {
+        "cafemarkt_id": "28552",
+        "name": "Dito Sama XBE20 Planet Mikser, 20 L",
+        "code": "208.600155",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-xbe20-planet-mikser-20-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-xbe20-planet-mikser-20-l-planet-mikserler-dito-sama-48221-28-O.jpg",
+        "price_try_kdv_dahil": 248907.72
+      },
+      {
+        "cafemarkt_id": "30377",
+        "name": "Dito Sama TR260 Sebze Doğrama Makinesi, 2 Kafalı, 2500 kg/saat",
+        "code": "208.600125",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-tr260-sebze-dograma-makinesi-2-kafali-2500-kg-saat",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-tr260-sebze-dograma-makinesi-2-kafali-2500-kg-saat-sebze-dograma-makineleri-dito-sama-52185-30-O.jpg",
+        "price_try_kdv_dahil": 591104.11
+      },
+      {
+        "cafemarkt_id": "30359",
+        "name": "Dito Sama LV200 Sabit Kazanlı Sebze Yıkama Makinesi, 200 L",
+        "code": "208.660031",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-lv200-sabit-kazanli-sebze-yikama-makinesi-200-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-lv200-sabit-kazanli-sebze-yikama-makinesi-200-l-sebze-yikama-makineleri-dito-sama-52205-30-O.jpg",
+        "price_try_kdv_dahil": 409142.56
+      },
+      {
+        "cafemarkt_id": "28550",
+        "name": "Dito Sama XBM20 Planet Mikser, 20 L",
+        "code": "208.600145",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-xbm20-planet-mikser-20-l",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-xbm20-planet-mikser-20-l-planet-mikserler-dito-sama-48223-28-O.jpg",
+        "price_try_kdv_dahil": 239988.27
+      },
+      {
+        "cafemarkt_id": "28608",
+        "name": "Dito Sama Speedy El Blender, Hız Varyatörlü, 200 mm, 250 W",
+        "code": "208.603676",
+        "brand": "Dito Sama",
+        "url": "https://www.cafemarkt.com/dito-sama-speedy-el-mikser-hiz-varyatorlu-200-mm-250-w",
+        "image": "https://witcdn.cafemarkt.com/dito-sama-speedy-el-mikser-hiz-varyatorlu-200-mm-250-w-el-blenderlari-dito-sama-48207-28-O.jpg",
+        "price_try_kdv_dahil": 24038.23
+      }
+    ]
+  }
+}
