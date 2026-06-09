@@ -94,6 +94,7 @@ export function parseProductPage(html) {
     images: [],
     specs: [],
     category: "",
+    price_try_kdv_dahil: null,
   };
   const blocks = [...html.matchAll(/<script type="application\/ld\+json">\s*([\s\S]*?)\s*<\/script>/gi)];
   for (const m of blocks) {
@@ -102,6 +103,10 @@ export function parseProductPage(html) {
       if (data["@type"] === "Product") {
         out.name = data.name || out.name;
         out.sku = data.sku || out.sku;
+        const offerPrice = data.offers?.price ?? data.offers?.[0]?.price;
+        if (offerPrice != null && !out.price_try_kdv_dahil) {
+          out.price_try_kdv_dahil = Number(offerPrice);
+        }
         if (data.image) {
           const imgs = Array.isArray(data.image) ? data.image : [data.image];
           out.images = imgs.filter(Boolean);

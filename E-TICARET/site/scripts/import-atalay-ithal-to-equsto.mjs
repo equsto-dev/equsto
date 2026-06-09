@@ -22,8 +22,13 @@ const PDF_RAW = path.join(ROOT, "scripts/data/atalay-ithal-pdf-raw.json");
 const CAFE_CACHE = path.join(ROOT, "scripts/data/cafemarkt-atalay-ithal.json");
 const IMG_OUT = path.join(ROOT, "public/images/catalog/atalay-ithal");
 const KAYNAK = "atalay-2025-ithal-pdf";
-const SATIS_ORAN = 0.45;
-const ISKONTO = 55;
+/** Cafemarkt KDV dahil fiyat × 0,97 (%%3 indirim) */
+const CAFE_PRICE_ORAN = 0.97;
+/** PDF liste EUR yedek (Cafemarkt fiyatı yoksa) */
+const PDF_SATIS_ORAN = 0.45;
+const PDF_ISKONTO = 55;
+/** Cafemarkt'taki tüm ürünler PDF eşleşmesi olmadan alınır */
+const CAFE_DIRECT_BRANDS = new Set(["Dito Sama"]);
 const dryRun = process.argv.includes("--dry-run");
 const skipCafeFetch = process.argv.includes("--skip-cafe-fetch");
 const skipImages = process.argv.includes("--skip-images");
@@ -141,49 +146,164 @@ function fmtTry(n) {
   return `₺${Math.round(n).toLocaleString("tr-TR")},00`;
 }
 
-function pricing(listeEur) {
-  const satisEur = Math.round(listeEur * SATIS_ORAN * 100) / 100;
+function cafeListPrice(cafe, detail) {
+  const p = detail?.price_try_kdv_dahil ?? cafe?.price_try_kdv_dahil;
+  return p != null && Number(p) > 0 ? Number(p) : null;
+}
+
+function pricingFromCafe(cafePriceKdvDahil) {
+  const equstoKdvDahil = Math.round(cafePriceKdvDahil * CAFE_PRICE_ORAN * 100) / 100;
+  const netTl = Math.round(equstoKdvDahil / 1.2);
+  const listeEur =
+    EUR_TRY > 0 ? Math.round((cafePriceKdvDahil / 1.2 / EUR_TRY) * 100) / 100 : null;
+  const satisEur =
+    EUR_TRY > 0 ? Math.round((equstoKdvDahil / 1.2 / EUR_TRY) * 100) / 100 : null;
+  return {
+    liste_fiyati_eur: listeEur,
+    satis_eur_indirimli: satisEur,
+    satis_oran: CAFE_PRICE_ORAN,
+    iskonto_oran: 3,
+    fiyat_tl: netTl,
+    price: `${fmtTry(equstoKdvDahil)} KDV dahil`,
+    fiyat_bekleniyor: false,
+    cafe_fiyat_kdv_dahil: cafePriceKdvDahil,
+    fiyat_kaynak: "cafemarkt",
+  };
+}
+
+function pricingFromPdf(listeEur) {
+  const satisEur = Math.round(listeEur * PDF_SATIS_ORAN * 100) / 100;
   const netTl = Math.round(satisEur * EUR_TRY);
   const kdvDahil = Math.round(netTl * 1.2);
   return {
     liste_fiyati_eur: listeEur,
     satis_eur_indirimli: satisEur,
-    satis_oran: SATIS_ORAN,
-    iskonto_oran: ISKONTO,
+    satis_oran: PDF_SATIS_ORAN,
+    iskonto_oran: PDF_ISKONTO,
     fiyat_tl: netTl,
     price: `${fmtTry(kdvDahil)} KDV dahil`,
     fiyat_bekleniyor: false,
+    fiyat_kaynak: "atalay-pdf",
+  };
+}
+
+function resolvePricing(pdf, cafe, detail) {
+  const cafePrice = cafeListPrice(cafe, detail);
+  if (cafePrice) return pricingFromCafe(cafePrice);
+  if (pdf?.liste_eur) return pricingFromPdf(pdf.liste_eur);
+  return {
+    price: "Fiyat sorunuz",
+    fiyat_bekleniyor: true,
+    fiyat_kaynak: "yok",
   };
 }
 
 function buildSpecs(pdf, cafe, detail, pricingFields) {
+  const brand = pdf?.brand || cafe?.brand || "";
+  const model = pdf?.model || cafeModel(cafe, detail);
   const lines = [
-    cafe?.name || pdf.model,
+    cafe?.name || detail?.name || model,
     "",
-    `Marka: ${pdf.brand}`,
-    `Model: ${pdf.model}`,
-    pdf.section ? `Kategori (PDF): ${pdf.section}` : "",
+    `Marka: ${brand}`,
+    `Model: ${model}`,
+    pdf?.section ? `Kategori (PDF): ${pdf.section}` : "",
     "",
-    `Liste fiyatı (EUR): ${pdf.liste_eur}`,
-    `Equsto iskonto: %${ISKONTO}`,
-    `Equsto satış (EUR): ${pricingFields.satis_eur_indirimli}`,
-    `Hesap: liste × ${SATIS_ORAN}`,
-    `Equsto satış (TL, KDV dahil): ${pricingFields.price}`,
-    `Kur: 1 EUR = ${EUR_TRY} TRY (KDV %20)`,
-    `Kaynak fiyat: ${KAYNAK}`,
-    cafe?.url ? `Cafemarkt: ${cafe.url}` : "",
-  ].filter(Boolean);
+  ];
+  if (pricingFields.fiyat_kaynak === "cafemarkt" && pricingFields.cafe_fiyat_kdv_dahil) {
+    lines.push(
+      `Cafemarkt fiyatı (KDV dahil): ${fmtTry(pricingFields.cafe_fiyat_kdv_dahil)}`,
+      `Equsto indirim: %3`,
+      `Equsto satış (KDV dahil): ${pricingFields.price}`,
+      `Hesap: Cafemarkt × ${CAFE_PRICE_ORAN}`,
+    );
+  } else if (pdf?.liste_eur) {
+    lines.push(
+      `Liste fiyatı (EUR, PDF): ${pdf.liste_eur}`,
+      `Equsto iskonto: %${PDF_ISKONTO}`,
+      `Equsto satış (EUR): ${pricingFields.satis_eur_indirimli}`,
+      `Hesap: liste × ${PDF_SATIS_ORAN}`,
+      `Equsto satış (TL, KDV dahil): ${pricingFields.price}`,
+      `Kur: 1 EUR = ${EUR_TRY} TRY (KDV %20)`,
+    );
+  }
+  lines.push(`Kaynak fiyat: ${KAYNAK}`, cafe?.url ? `Cafemarkt: ${cafe.url}` : "");
+  const specLines = lines.filter(Boolean);
   if (detail?.description) {
-    lines.push("", "Açıklama", detail.description.replace(/<[^>]+>/g, " ").trim());
+    specLines.push("", "Açıklama", detail.description.replace(/<[^>]+>/g, " ").trim());
   }
   if (detail?.specs?.length) {
-    lines.push("", "Teknik Özellikler");
-    lines.push(...detail.specs.slice(0, 40));
-  } else if (pdf.raw_fields?.length) {
-    lines.push("", "Teknik Özellikler (PDF)");
-    lines.push(...pdf.raw_fields);
+    specLines.push("", "Teknik Özellikler");
+    specLines.push(...detail.specs.slice(0, 40));
+  } else if (pdf?.raw_fields?.length) {
+    specLines.push("", "Teknik Özellikler (PDF)");
+    specLines.push(...pdf.raw_fields);
   }
-  return lines.join("\n");
+  return specLines.join("\n");
+}
+
+function cafeModel(cafe, detail) {
+  const code = String(detail?.supplier_code || cafe?.code || "").trim();
+  const digits = code.match(/(\d{5,7})/);
+  if (digits) return digits[1];
+  const inName = String(cafe?.name || "").match(/\b(\d{6})\b/);
+  if (inName) return inName[1];
+  return slugify(cafe?.name || code || "model").slice(0, 48);
+}
+
+function collectImages(cafe, detail) {
+  const srcImgs = detail?.images?.length ? detail.images : cafe?.image ? [cafe.image] : [];
+  return srcImgs.slice(0, 3).map((src) => String(src).replace(/\\/g, "/"));
+}
+
+async function buildRowFromMatch({ pdf, cafe, detail, detailCache }) {
+  if (!detail && cafe?.url) {
+    detail = detailCache.get(cafe.url);
+    if (detail === undefined) {
+      detail = await fetchProductDetail(cafe.url);
+      detailCache.set(cafe.url, detail);
+      await new Promise((r) => setTimeout(r, 280));
+    }
+  }
+  detail = detail || {};
+
+  const brand = pdf?.brand || cafe.brand;
+  const model = pdf?.model || cafeModel(cafe, detail);
+  const sku = detail.supplier_code || detail.sku || cafe.code || model;
+  const name = (detail.name || cafe.name || `${brand} ${model}`).trim();
+  const priceFields = resolvePricing(pdf, cafe, detail);
+  const dept = mapDept(brand, pdf?.section, name, detail.category);
+  const category = mapCategory(pdf?.section, name, detail.category);
+  const id = rowId(brand, model);
+  const images = collectImages(cafe, detail);
+  const teknik =
+    detail.specs?.length > 0
+      ? detail.specs.slice(0, 40)
+      : (pdf?.raw_fields || []).map((x) => String(x));
+
+  return {
+    id,
+    dept,
+    category,
+    brand,
+    oem_brand: brand,
+    name,
+    ...priceFields,
+    specs: buildSpecs(pdf, cafe, detail, priceFields),
+    aciklama: detail.description?.replace(/<[^>]+>/g, " ").trim() || name,
+    teknik_ozellikler: teknik,
+    images: images.length ? images : undefined,
+    sku: String(sku).trim(),
+    model,
+    urun_kodu: String(sku).trim(),
+    kaynak: KAYNAK,
+    kaynak_fiyat_listesi: KAYNAK,
+    kaynak_url: cafe.url || "",
+    cafemarkt_url: cafe.url || "",
+    cafemarkt_id: cafe.cafemarkt_id || "",
+    pdf_page: pdf?.page,
+    pdf_section: pdf?.section || "",
+    keywords: [brand, model, sku, category].filter(Boolean),
+  };
 }
 
 async function downloadImage(url, destPath) {
@@ -230,8 +350,17 @@ async function main() {
 
   const detailCache = new Map();
   const rows = [];
+  const rowsById = new Map();
   const unmatched = [];
   const matched = [];
+  const usedCafeUrls = new Set();
+
+  async function addRow(row, meta) {
+    if (!row || rowsById.has(row.id)) return;
+    rowsById.set(row.id, row);
+    rows.push(row);
+    matched.push(meta);
+  }
 
   for (const pdf of pdfProducts) {
     const cafeList = cafeData.byBrand[pdf.brand] || [];
@@ -240,68 +369,36 @@ async function main() {
       unmatched.push(pdf);
       continue;
     }
-
-    let detail = detailCache.get(cafe.url);
-    if (!detail && cafe.url) {
-      detail = await fetchProductDetail(cafe.url);
-      detailCache.set(cafe.url, detail);
-      await new Promise((r) => setTimeout(r, 280));
-    }
-    detail = detail || {};
-
-    const sku = detail.supplier_code || detail.sku || cafe.code || pdf.model;
-    const name = (detail.name || cafe.name || `${pdf.brand} ${pdf.model}`).trim();
-    const priceFields = pricing(pdf.liste_eur);
-    const dept = mapDept(pdf.brand, pdf.section, name, detail.category);
-    const category = mapCategory(pdf.section, name, detail.category);
-    const id = rowId(pdf.brand, pdf.model);
-
-    const images = [];
-    const srcImgs = detail.images?.length ? detail.images : cafe.image ? [cafe.image] : [];
-    for (let i = 0; i < Math.min(srcImgs.length, 3); i++) {
-      const src = srcImgs[i];
-      let ext = "jpg";
-    try {
-      ext = (path.extname(new URL(src).pathname) || ".jpg").replace(".", "") || "jpg";
-    } catch {
-      ext = "jpg";
-    }
-      const rel = imageRel(pdf.brand, pdf.model, i + 1, ext === "jpeg" ? "jpg" : ext);
-      const abs = path.join(ROOT, "public", rel);
-      if (!skipImages) await downloadImage(src, abs);
-      images.push(rel);
-    }
-
-    const teknik =
-      detail.specs?.length > 0
-        ? detail.specs.slice(0, 40)
-        : (pdf.raw_fields || []).map((x) => String(x));
-
-    rows.push({
-      id,
-      dept,
-      category,
+    usedCafeUrls.add(cafe.url);
+    const row = await buildRowFromMatch({ pdf, cafe, detail: null, detailCache });
+    await addRow(row, {
+      mode: "pdf+cafe",
       brand: pdf.brand,
-      oem_brand: pdf.brand,
-      name,
-      ...priceFields,
-      specs: buildSpecs(pdf, cafe, detail, priceFields),
-      aciklama: detail.description?.replace(/<[^>]+>/g, " ").trim() || name,
-      teknik_ozellikler: teknik,
-      images: images.length ? images : undefined,
-      sku: String(sku).trim(),
-      model: pdf.model,
-      urun_kodu: String(sku).trim(),
-      kaynak: KAYNAK,
-      kaynak_fiyat_listesi: KAYNAK,
-      kaynak_url: cafe.url || "",
-      cafemarkt_url: cafe.url || "",
-      cafemarkt_id: cafe.cafemarkt_id || "",
-      pdf_page: pdf.page,
-      pdf_section: pdf.section || "",
-      keywords: [pdf.brand, pdf.model, sku, category].filter(Boolean),
+      pdf: pdf.model,
+      cafe: cafe.name?.slice(0, 60),
+      sku: row.sku,
+      fiyat: row.fiyat_kaynak,
     });
-    matched.push({ pdf: pdf.model, cafe: cafe.name?.slice(0, 60), sku });
+  }
+
+  for (const brand of CAFE_DIRECT_BRANDS) {
+    const cafeList = cafeData.byBrand[brand] || [];
+    for (const cafe of cafeList) {
+      if (!cafe?.url || usedCafeUrls.has(cafe.url)) continue;
+      if (!cafeListPrice(cafe, null)) continue;
+      usedCafeUrls.add(cafe.url);
+      const pdf =
+        pdfProducts.find((p) => p.brand === brand && findCafemarktMatch(p, [cafe])) || null;
+      const row = await buildRowFromMatch({ pdf, cafe, detail: null, detailCache });
+      await addRow(row, {
+        mode: "cafe-direct",
+        brand,
+        pdf: pdf?.model || "",
+        cafe: cafe.name?.slice(0, 60),
+        sku: row.sku,
+        fiyat: row.fiyat_kaynak,
+      });
+    }
   }
 
   const byDept = {};
@@ -325,11 +422,15 @@ async function main() {
     }
   }
 
+  const cafePriced = rows.filter((r) => r.fiyat_kaynak === "cafemarkt").length;
   const report = {
     dryRun,
     pdfTotal: pdfProducts.length,
     matched: matched.length,
     unmatched: unmatched.length,
+    cafePriceOran: CAFE_PRICE_ORAN,
+    cafePriced,
+    cafeDirectBrands: [...CAFE_DIRECT_BRANDS],
     byDept: Object.fromEntries(Object.entries(byDept).map(([k, v]) => [k, v.length])),
     unmatchedSample: unmatched.slice(0, 30).map((u) => ({ brand: u.brand, model: u.model, eur: u.liste_eur })),
     matchedSample: matched.slice(0, 20),
