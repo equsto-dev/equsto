@@ -213,6 +213,28 @@ const TIP_RULES: TipRule[] = [
       n.includes("taş taban"),
   },
   {
+    tip: "tost-makinasi",
+    test: (n) => n.includes("tost mak"),
+  },
+  {
+    tip: "mikrodalga-firin",
+    test: (n) => n.includes("mikrodalga"),
+  },
+  {
+    tip: "pide-pizza-firin",
+    test: (n) =>
+      /pide\s*pizza|pizza\s*firin|pizza\s*fırın|pide\s*firin/.test(n),
+  },
+  {
+    tip: "patisserie-firin",
+    test: (n) => /patisserie|pâtisserie|pastane\s*firin/.test(n),
+  },
+  {
+    tip: "firin-tezgahi",
+    test: (n) =>
+      /firin\s*tezgah|fırın\s*tezgah/.test(n) && !/patisserie|pizza|pide/.test(n),
+  },
+  {
     tip: "konveksiyon-firin-unox",
     test: (n) =>
       (n.includes("firin") || n.includes("fırın")) &&
