@@ -28,7 +28,7 @@ export default function SssPage() {
           </p>
           <div className="eq-sss-list" id="eq-sss-list" aria-live="polite" />
           <div className="eq-sss-actions">
-            <a className="eq-sss-a-primary" href="/contact" data-i18n="footer.link_quote">
+            <a className="eq-sss-a-primary" href="/iletisim" data-i18n="footer.link_quote">
               Teklif ve proje talebi
             </a>
             <a className="eq-sss-a-secondary" href="/pfos" data-i18n="nav.pfos">

@@ -7,7 +7,7 @@ export default function PfosPublicChrome() {
       <Link href="/" className={styles.brand}>
         EQUSTO<span>Proje Fabrikası</span>
       </Link>
-      <Link href="/contact" className={styles.headerLink}>
+      <Link href="/iletisim" className={styles.headerLink}>
         İletişim
       </Link>
     </header>

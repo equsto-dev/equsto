@@ -41,7 +41,7 @@ export default function GlobalSiteJsonLd() {
         contactPoint: {
           "@type": "ContactPoint",
           contactType: "sales",
-          url: `${origin}/contact`,
+          url: `${origin}/iletisim`,
           availableLanguage: ["Turkish", "English"],
         },
       },

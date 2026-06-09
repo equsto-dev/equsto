@@ -16,7 +16,7 @@ export default function BesosContact() {
           Hazırsanız veya ek bilgi istiyorsanız — yardımcı olmak için buradayız.
         </p>
         <div className="besos-foot-cta">
-          <Link className="bd-btn bd-btn-primary" href="/contact">
+          <Link className="bd-btn bd-btn-primary" href="/iletisim">
             İletişime geç
           </Link>
           <Link className="bd-btn" href="/pfos">

@@ -136,7 +136,7 @@ export const homeStats = {
 export const homeRegions = {
   title: "Nerede hizmet veriyoruz",
   body: "Türkiye genelinde restoran, otel, catering ve perakende projeleri. Bölge ve lojistik metnini buradan özelleştirebilirsiniz.",
-  cta: { href: "/contact.html", label: "İletişim" },
+  cta: { href: "/iletisim", label: "İletişim" },
 };
 
 export const homeProjects = {
@@ -160,5 +160,5 @@ export const homeCta = {
   title: "Vizyonunuzu hayata geçirelim",
   body: "Konseptiniz net olsun veya fikir aşamasında olun — PFOS veya ekibimizle hemen başlayın.",
   primary: { href: "/pfos", label: "Projem var" },
-  secondary: { href: "/contact.html", label: "Bilgi almak istiyorum" },
+  secondary: { href: "/iletisim", label: "Bilgi almak istiyorum" },
 };

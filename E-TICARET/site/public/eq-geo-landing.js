@@ -739,7 +739,7 @@
         ? '<a class="eq-geo-btn" href="' + esc(navHref("/besos")) + '">' + esc(besosLabel) + "</a>"
         : "") +
       '<a class="eq-geo-btn" href="' +
-      esc(navHref("/contact")) +
+      esc(navHref("/iletisim")) +
       '">' +
       esc(contactLabel) +
       "</a>" +

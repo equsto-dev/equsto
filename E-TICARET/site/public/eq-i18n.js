@@ -37,7 +37,8 @@
   var EN_PATH_ALIASES = {
     "/hakkimizda": "/about",
     "/buradan-basladi": "/story",
-    "/contact": "/contact",
+    "/contact": "/iletisim",
+    "/iletisim": "/iletisim",
     "/pfos": "/pfos",
     "/sss": "/sss",
     "/login": "/login",

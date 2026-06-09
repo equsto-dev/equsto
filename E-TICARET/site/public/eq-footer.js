@@ -14,7 +14,7 @@
 
 
 
-  var FOOTER_JSON = "/data/footer-vitrin.json?v=20260609footer-no-bilgi";
+  var FOOTER_JSON = "/data/footer-vitrin.json?v=20260609iletisim-cafemarkt";
 
   var SSS_LINK = { key: "footer.link_sss", label: "SSS", href: "/sss" };
 
@@ -209,7 +209,43 @@
 
 
 
-  function colHtml(titleKey, titleFb, links) {
+  function contactBlockHtml(contact) {
+    if (!contact) return "";
+    var parts = [];
+    if (contact.email) {
+      parts.push(
+        '<a class="eq-mfoot-contact-item" href="mailto:' +
+          esc(contact.email) +
+          '">' +
+          esc(contact.email) +
+          "</a>"
+      );
+    }
+    if (contact.phoneTel && contact.phoneDisplay) {
+      parts.push(
+        '<a class="eq-mfoot-contact-item" href="tel:' +
+          esc(String(contact.phoneTel).replace(/\s/g, "")) +
+          '">' +
+          esc(contact.phoneDisplay) +
+          "</a>"
+      );
+    }
+    var wa = contact.whatsapp || (window.EQUSTO_WHATSAPP_E164 || "");
+    wa = String(wa).replace(/\D/g, "");
+    if (wa.length >= 10) {
+      parts.push(
+        '<a class="eq-mfoot-contact-item eq-mfoot-contact-wa" href="https://wa.me/' +
+          esc(wa) +
+          '" target="_blank" rel="noopener noreferrer">' +
+          esc(t("footer.contact_whatsapp", "WhatsApp")) +
+          "</a>"
+      );
+    }
+    if (!parts.length) return "";
+    return '<div class="eq-mfoot-contact">' + parts.join("") + "</div>";
+  }
+
+  function colHtml(titleKey, titleFb, links, contact) {
 
     var lis = links
 
@@ -218,10 +254,13 @@
         var target = resolveLinkHref(ln.rawHref || ln.href || ln.path || "#");
         var ext = /^https?:\/\//i.test(target);
         var extAttr = ext ? ' target="_blank" rel="noopener noreferrer"' : "";
+        var contactExtra =
+          ln.key === "footer.link_contact" ? contactBlockHtml(contact) : "";
+        var liClass = contactExtra ? ' class="eq-mfoot-contact-li"' : "";
 
         return (
 
-          '<li><a href="' +
+          "<li" + liClass + "><a href=\"" +
 
           esc(target) +
 
@@ -233,7 +272,7 @@
 
           esc(t(ln.key, ln.label)) +
 
-          "</a></li>"
+          "</a>" + contactExtra + "</li>"
 
         );
 
@@ -274,8 +313,8 @@
       tagline: "Equsto Teknolojisi · Gastronomi Tasarımı",
 
       legal: {
-        terms: "/contact",
-        privacy: "/contact",
+        terms: "/iletisim",
+        privacy: "/iletisim",
         returns: "/iade-politikasi",
         company: "Equsto Teknoloji Limited",
       },
@@ -348,7 +387,7 @@
 
           links: [
 
-            { key: "footer.link_quote", label: "Teklif ve proje talebi", href: "/contact" },
+            { key: "footer.link_quote", label: "Teklif ve proje talebi", href: "/iletisim" },
 
             { key: "footer.link_account", label: "Hesabım ve siparişler", href: "/login.html" },
 
@@ -372,23 +411,35 @@
 
           title: "Hakkımızda",
 
+          contact: {
+
+            email: "info@equsto.com",
+
+            phoneDisplay: "+90 532 684 01 52",
+
+            phoneTel: "+905326840152",
+
+            whatsapp: "905326840152",
+
+          },
+
           links: [
 
-            { key: "footer.link_about", label: "Equsto hakkında", href: "/hakkimizda.html" },
+            { key: "footer.link_about", label: "Hakkımızda", href: "/hakkimizda.html" },
 
-            { key: "footer.link_blog", label: "Rehber ve blog", href: "/blog" },
+            { key: "footer.link_bank", label: "Banka Bilgilerimiz", href: "#" },
 
-            { key: "footer.link_story", label: "Buradan başladık", href: "/buradan-basladi" },
+            { key: "footer.link_export", label: "Export", href: "#" },
 
-            { key: "footer.link_contact", label: "İletişim", href: "/contact" },
+            { key: "footer.link_career", label: "Kariyer", href: "#" },
 
-            { key: "footer.link_projects", label: "Referans projeler", href: "/projeler" },
+            { key: "footer.link_contact", label: "İletişim", href: "/iletisim" },
 
-            { key: "footer.link_sitemap", label: "Site haritası", href: "/sitemap.xml" },
+            { key: "footer.link_corporate", label: "Kurumsal Sitemiz", href: "#" },
 
-            { key: "footer.link_llms", label: "Asistan özet dosyası", href: "/llms.txt" },
+            { key: "footer.link_blog", label: "Blog", href: "/blog" },
 
-            { key: "footer.link_marka", label: "Markalarımız", href: "/shop/marka" },
+            { key: "footer.link_uk", label: "UK", href: "#" },
 
           ],
 
@@ -488,6 +539,8 @@
 
         }),
 
+        contact: col.contact || null,
+
       };
 
     });
@@ -555,7 +608,7 @@
 
       .map(function (c) {
 
-        return colHtml(c.titleKey, c.titleFb, c.links);
+        return colHtml(c.titleKey, c.titleFb, c.links, c.contact);
 
       })
 
@@ -621,7 +674,7 @@
 
       '<a href="' +
 
-      esc(resolveLinkHref(legal.terms || "/contact")) +
+      esc(resolveLinkHref(legal.terms || "/iletisim")) +
 
       '">' +
 
@@ -631,7 +684,7 @@
 
       '<a href="' +
 
-      esc(resolveLinkHref(legal.privacy || "/contact")) +
+      esc(resolveLinkHref(legal.privacy || "/iletisim")) +
 
       '">' +
 

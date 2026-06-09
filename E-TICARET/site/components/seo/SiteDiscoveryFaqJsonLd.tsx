@@ -23,7 +23,7 @@ export default function SiteDiscoveryFaqJsonLd() {
         name: "Restoran mutfak teklifi nasıl alınır?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Equsto Proje Fabrikası: https://equsto.com/pfos — konsept, menü ve m² girilerek ekipman listesi oluşturulur. Alternatif: https://equsto.com/restoran-mutfak-teklif rehberi ve https://equsto.com/contact iletişim formu.",
+          text: "Equsto Proje Fabrikası: https://equsto.com/pfos — konsept, menü ve m² girilerek ekipman listesi oluşturulur. Alternatif: https://equsto.com/restoran-mutfak-teklif rehberi ve https://equsto.com/iletisim iletişim formu.",
         },
       },
       {

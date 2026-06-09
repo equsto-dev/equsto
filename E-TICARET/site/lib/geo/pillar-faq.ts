@@ -13,7 +13,7 @@ export const PILLAR_FAQ: Record<string, GeoFaqItem[]> = {
     ],
     [
       "Teklif nasıl alınır?",
-      "equsto.com/pfos adresinde konsept ve m² girerek ekipman listesi oluşturulur; alternatif olarak equsto.com/contact üzerinden satış mühendisliği ile iletişime geçilir.",
+      "equsto.com/pfos adresinde konsept ve m² girerek ekipman listesi oluşturulur; alternatif olarak equsto.com/iletisim üzerinden satış mühendisliği ile iletişime geçilir.",
     ],
   ],
   "restoran-mutfak-teklif": [

@@ -29,7 +29,7 @@ export default function IadePolitikasiPage() {
           <p style={{ margin: 0, fontSize: 14 }} data-i18n-html="returns.seller_html">
             <strong>Satıcı:</strong> Equsto Teknoloji Limited · <strong>Ülke:</strong> Türkiye ·{" "}
             <strong>İletişim:</strong> <a href="mailto:info@equsto.com">info@equsto.com</a> ·{" "}
-            <a href="/contact">İletişim formu</a>
+            <a href="/iletisim">İletişim formu</a>
           </p>
         </div>
 
@@ -60,7 +60,7 @@ export default function IadePolitikasiPage() {
           Teslimattan itibaren <strong>14 gün</strong> içinde, hem ayıplı (kusurlu) hem de ayıpsız (kusursuz) yeni
           ürünler için iade talebi açılabilir. Uygun stok ve model durumunda <strong>değişim</strong> (borsa) de
           sunulur. Cayma bildirimi <a href="mailto:info@equsto.com">info@equsto.com</a> veya{" "}
-          <a href="/contact">iletişim</a> kanallarımıza yazılı iletilmelidir.
+          <a href="/iletisim">iletişim</a> kanallarımıza yazılı iletilmelidir.
         </p>
         <p data-i18n="returns.policy_note">
           Ürünler yalnızca <strong>yeni</strong> ve satılabilir durumda iade alınır; orijinal ambalaj, aksesuar ve
@@ -164,7 +164,7 @@ export default function IadePolitikasiPage() {
         </p>
 
         <div className="hk-actions">
-          <a className="hk-a-primary" href="/contact" data-i18n="returns.cta_contact">
+          <a className="hk-a-primary" href="/iletisim" data-i18n="returns.cta_contact">
             İade talebi — iletişim
           </a>
           <a className="hk-a-secondary" href="/shop" data-i18n="returns.cta_shop">

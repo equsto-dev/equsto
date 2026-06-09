@@ -4667,6 +4667,32 @@ body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-col a:hover {
   color: #fff;
   text-decoration: underline;
 }
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-contact-li {
+  margin-bottom: 12px;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 6px;
+  padding-left: 0;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-contact-item {
+  font-size: 12px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.62);
+  text-decoration: none;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-contact-item:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-contact-wa {
+  color: rgba(134, 239, 172, 0.88);
+}
+body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-contact-wa:hover {
+  color: #bbf7d0;
+}
 body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-brand {
   display: flex !important;
   flex-direction: column !important;

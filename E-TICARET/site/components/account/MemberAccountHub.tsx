@@ -180,7 +180,7 @@ export default function MemberAccountHub() {
       w.equstoShowWhatsAppModal();
       return;
     }
-    window.location.href = "/contact";
+    window.location.href = "/iletisim";
   }
 
   async function onLogout() {

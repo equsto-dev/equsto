@@ -1274,8 +1274,118 @@
       });
   }
 
+  function initIletisimForm() {
+    var form = document.getElementById("equsto-iletisim-form");
+    if (!form || form.getAttribute("data-eq-bound") === "1") return;
+    form.setAttribute("data-eq-bound", "1");
+
+    var captchaEl = document.getElementById("eq-iletisim-captcha-code");
+    var captchaInput = document.getElementById("eq-iletisim-captcha-input");
+    var refreshBtn = document.getElementById("eq-iletisim-captcha-refresh");
+    var currentCaptcha = "";
+
+    function randomCaptcha() {
+      var chars = "abcdefghjkmnpqrstuvwxyz23456789";
+      var out = "";
+      for (var i = 0; i < 5; i++) out += chars.charAt(Math.floor(Math.random() * chars.length));
+      currentCaptcha = out;
+      if (captchaEl) captchaEl.textContent = out;
+      if (captchaInput) captchaInput.value = "";
+    }
+
+    randomCaptcha();
+    if (refreshBtn) refreshBtn.addEventListener("click", randomCaptcha);
+
+    try {
+      var q = new URLSearchParams(String(window.location.search || "").replace(/^\?/, ""));
+      var konu = q.get("konu");
+      var mesajEl = document.getElementById("eq-iletisim-mesaj");
+      if (konu && mesajEl && !String(mesajEl.value || "").trim()) {
+        mesajEl.value = String(konu).trim();
+      }
+    } catch (_) {}
+
+    form.addEventListener("reset", function () {
+      setTimeout(randomCaptcha, 0);
+      var st = document.getElementById("eq-iletisim-status");
+      if (st) st.textContent = "";
+    });
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var st = document.getElementById("eq-iletisim-status");
+      var sb = document.getElementById("eq-iletisim-submit");
+      var deptEl = document.getElementById("eq-iletisim-dept");
+      var adEl = document.getElementById("eq-iletisim-ad");
+      var soyadEl = document.getElementById("eq-iletisim-soyad");
+      var mailEl = document.getElementById("eq-iletisim-mail");
+      var telEl = document.getElementById("eq-iletisim-tel");
+      var mesajEl = document.getElementById("eq-iletisim-mesaj");
+      var privacyEl = document.getElementById("eq-iletisim-privacy");
+
+      var dept = deptEl && deptEl.options ? deptEl.options[deptEl.selectedIndex].text : "";
+      var ad = adEl ? String(adEl.value || "").trim() : "";
+      var soyad = soyadEl ? String(soyadEl.value || "").trim() : "";
+      var mail = mailEl ? String(mailEl.value || "").trim() : "";
+      var tel = telEl ? String(telEl.value || "").trim() : "";
+      var mesaj = mesajEl ? String(mesajEl.value || "").trim() : "";
+      var captchaTry = captchaInput ? String(captchaInput.value || "").trim().toLowerCase() : "";
+
+      function fail(msg) {
+        if (st) { st.textContent = msg; st.style.color = "#c0392b"; }
+      }
+
+      if (!deptEl || !deptEl.value) return fail("Lütfen departman seçin.");
+      if (!ad || !soyad) return fail("Ad ve soyad zorunlu.");
+      if (!mail || !tel || !mesaj) return fail("E-posta, telefon ve mesaj zorunlu.");
+      if (!privacyEl || !privacyEl.checked) return fail("Gizlilik politikasını kabul etmelisiniz.");
+      if (captchaTry !== String(currentCaptcha).toLowerCase()) {
+        randomCaptcha();
+        return fail("Güvenlik kodu hatalı.");
+      }
+
+      var fullMesaj = ["Departman: " + dept, "", mesaj].join("\n");
+      if (sb) { sb.disabled = true; sb.textContent = "Gönderiliyor…"; }
+      if (st) { st.textContent = ""; st.style.color = "var(--eq-text-muted,#888)"; }
+
+      fetch(eqMsgApiBase() + "/musteriler", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ad: ad + " " + soyad,
+          telefon: tel,
+          eposta: mail,
+          mesaj: fullMesaj,
+          kaynak: "iletisim-sayfa",
+          sayfa: location.pathname || "",
+        }),
+      })
+        .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+        .then(function (res) {
+          var sendLabel = typeof window.eqT === "function" ? window.eqT("contact.form_send", "Gönder") : "Gönder";
+          if (sb) { sb.disabled = false; sb.textContent = sendLabel; }
+          if (!res.ok || !(res.j && res.j.success)) {
+            var msg = (res.j && (res.j.error || res.j.message)) || "HTTP hata";
+            return fail("Gönderilemedi: " + msg);
+          }
+          if (st) {
+            st.textContent = "Mesajınız alındı. En kısa sürede size dönüş yapılacaktır.";
+            st.style.color = "#1e7a45";
+          }
+          form.reset();
+          randomCaptcha();
+        })
+        .catch(function (err) {
+          var sendLabel = typeof window.eqT === "function" ? window.eqT("contact.form_send", "Gönder") : "Gönder";
+          if (sb) { sb.disabled = false; sb.textContent = sendLabel; }
+          fail("Sunucuya ulaşılamadı: " + (err && err.message ? err.message : String(err)));
+        });
+    });
+  }
+
   function init() {
     if (document.body && document.body.classList.contains("admin-app")) return;
+    initIletisimForm();
     mountWaModal();
     syncFabPlacement();
     try {

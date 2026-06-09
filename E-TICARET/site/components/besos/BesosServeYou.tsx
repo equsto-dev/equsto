@@ -14,7 +14,7 @@ type Props = {
 export default function BesosServeYou({ serve, locale = "tr" }: Props) {
   const s = localizeServeYou(serve, locale);
   const img = serve.image ? besosAssetPath(serve.image) : "";
-  const infoHref = locale === "en" ? "/en/contact" : serve.ctaInfoHref;
+  const infoHref = locale === "en" ? "/en/iletisim" : serve.ctaInfoHref;
 
   return (
     <section className="bes-vitrum-serve" aria-label={besosUi("serveAria", locale)}>
