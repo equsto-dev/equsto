@@ -88,7 +88,7 @@ async function copyImage(p) {
       return [`images/catalog/samixir/${fname}`];
     }
   }
-  const imgUrl = p.images?.[0];
+  const imgUrl = p.heroImage || p.images?.[0];
   if (!imgUrl) return [];
   let ext = path.extname(new URL(imgUrl).pathname) || ".jpg";
   if (!/^\.(jpe?g|png|webp|gif)$/i.test(ext)) ext = ".jpg";
