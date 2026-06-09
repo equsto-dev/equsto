@@ -19,13 +19,28 @@ export const CAFE_CODE_BY_SLUG = {
   "hot-inox-10": "SC10.AI.SSPB",
 };
 
-/** Cafemarkt vitrin/banner yerine temiz ürün fotoğrafı (samixir.com detay veya cafe galeri) */
+/**
+ * Banner/thumbnail yerine tam ürün fotoğrafı (Cafemarkt galeri — beyaz fon).
+ * witcdn 400×400 veya temiz 800×800 vitrin görselleri.
+ */
 export const IMAGE_URL_BY_SLUG = {
-  "hot-gold-sc06": "https://www.samixir.com/uploads/urunler/hot-gold-sc05-39352.jpg",
-  "hot-gold-sc10": "https://www.samixir.com/uploads/urunler/hot-gold-sc10-389621.jpg",
-  "hot-sc06": "https://www.samixir.com/uploads/urunler/hot-sc05-69793.jpg",
-  "hot-neo-10": "https://www.samixir.com/uploads/urunler/hot-neo-10-31087.jpg",
+  "hot-gold-sc06":
+    "https://witcdn.cafemarkt.com/samixir-sc06-sicak-cikolata-ve-sahlep-makinesi-6-l-gold-sicak-cikolata-ve-sahlep-makineleri-samixir-88164-39-O.jpg",
+  "hot-gold-sc10":
+    "https://witcdn.cafemarkt.com/samixir-sc10-sicak-icecek-dispenseri-10-l-gold-sicak-cikolata-ve-sahlep-makineleri-samixir-77988-39-O.jpg",
+  "hot-sc06":
+    "https://witcdn.cafemarkt.com/samixir-sc06-sicak-cikolata-ve-sahlep-makinesi-6-l-siyah-sicak-cikolata-ve-sahlep-makineleri-samixir-88154-35-O.jpg",
+  "hot-sc10":
+    "https://witcdn.cafemarkt.com/samixir-sc10-sicak-icecek-dispenseri-10-l-inox-sicak-cikolata-ve-sahlep-makineleri-samixir-88158-33-O.jpg",
+  "hot-inox-10":
+    "https://witcdn.cafemarkt.com/samixir-hot-inox-sc10-sicak-icecek-dispenseri-10-l-inox-sicak-cikolata-ve-sahlep-makineleri-samixir-87282-43-O.jpg",
+  /** Cafemarkt'ta yok — en yakın temiz 10L siyah sıcak görseli */
+  "hot-neo-10":
+    "https://witcdn.cafemarkt.com/samixir-sc10-sicak-icecek-dispenseri-10-l-siyah-sicak-cikolata-ve-sahlep-makineleri-samixir-63462-35-O.jpg",
 };
+
+/** CDN önbellek kırma — eski banner .jpg dosyalarından ayrı yol */
+export const IMAGE_FILE_SUFFIX = "-plp";
 
 function cafeProductCode(raw) {
   return String(raw || "")
@@ -66,7 +81,7 @@ export function cafeImageExt(url) {
 export function resolveSamixirImage(slug, pdfCode, items) {
   const override = IMAGE_URL_BY_SLUG[slug];
   if (override) {
-    return { url: override, source: "samixir-detail", cafe_code: null };
+    return { url: override, source: "cafemarkt-plp", cafe_code: null };
   }
   const cafe = matchSamixirCafeProduct(slug, pdfCode, items);
   if (cafe?.image) {
