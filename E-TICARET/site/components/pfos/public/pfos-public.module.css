@@ -24,6 +24,107 @@
   padding: 1.25rem 1rem 3rem;
 }
 
+.modeTabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.modeTab {
+  appearance: none;
+  border: 1px solid #c5d0e6;
+  background: #fff;
+  color: #3d4a63;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.modeTab:hover {
+  border-color: #1677ff;
+  color: #001e50;
+}
+
+.modeTabActive {
+  background: #001e50;
+  border-color: #001e50;
+  color: #fff;
+}
+
+.listeDropZone {
+  margin-top: 0.75rem;
+  border: 2px dashed #c5d0e6;
+  border-radius: 12px;
+  background: #fafbfd;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.listeDropZone:hover,
+.listeDropZoneDrag {
+  border-color: #1677ff;
+  background: #f0f5ff;
+}
+
+.listeDropZoneHasFile {
+  border-style: solid;
+  border-color: #1677ff;
+}
+
+.listeDropInput {
+  display: none;
+}
+
+.listeDropIcon {
+  display: block;
+  font-size: 2.25rem;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+
+.listeDropTitle {
+  display: block;
+  color: #001e50;
+  font-size: 1.05rem;
+  margin-bottom: 0.35rem;
+}
+
+.listeDropHint {
+  display: block;
+  color: #5a6270;
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+.listeFormatNote {
+  margin: 1rem 0 0;
+  color: #5a6270;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.listeSteps {
+  margin: 0.5rem 0 0;
+  padding-left: 1.2rem;
+  color: #3d4a63;
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.listeUyarilar {
+  margin: 0 0 1rem;
+  padding-left: 1.2rem;
+  color: #5a6270;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
 .proformaWrap {
   margin-top: 1rem;
   background: #fff;
