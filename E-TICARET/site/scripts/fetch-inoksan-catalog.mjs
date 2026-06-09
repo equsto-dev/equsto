@@ -16,6 +16,7 @@ import {
   buildWebCodeIndex,
   downloadInoksanImage,
   enrichInoksanRow,
+  isValidImageFile,
   matchInoksanWeb,
 } from "./lib/inoksan-enrich.mjs";
 
@@ -29,6 +30,7 @@ const KAYNAK = "inoksan-fiyat-listesi-2026-r1";
 const UA = "Mozilla/5.0 (Equsto; +https://equsto.com)";
 const dryRun = process.argv.includes("--dry-run");
 const force = process.argv.includes("--force");
+const missingOnly = process.argv.includes("--missing-only");
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 function curlText(url) {
@@ -117,6 +119,28 @@ async function buildWebIndex() {
   return index;
 }
 
+function writeJsonAtomic(dest, data) {
+  const dir = path.dirname(dest);
+  fs.mkdirSync(dir, { recursive: true });
+  const tmp = path.join(dir, `.${path.basename(dest)}.${process.pid}.tmp`);
+  const payload = JSON.stringify(data);
+  for (let attempt = 1; attempt <= 5; attempt++) {
+    try {
+      fs.writeFileSync(tmp, payload, "utf8");
+      fs.renameSync(tmp, dest);
+      return;
+    } catch (err) {
+      try {
+        fs.unlinkSync(tmp);
+      } catch (_) {}
+      if (attempt === 5) throw err;
+      spawnSync("powershell.exe", ["-Command", `Start-Sleep -Milliseconds ${250 * attempt}`], {
+        stdio: "ignore",
+      });
+    }
+  }
+}
+
 function saveDepts(updates) {
   const byFile = new Map();
   for (const { row, file } of updates) {
@@ -124,11 +148,10 @@ function saveDepts(updates) {
     byFile.get(file).set(row.sku, row);
   }
   for (const [file, map] of byFile) {
-    const full = JSON.parse(fs.readFileSync(path.join(DEPT_DIR, file), "utf8"));
+    const dest = path.join(DEPT_DIR, file);
+    const full = JSON.parse(fs.readFileSync(dest, "utf8"));
     const out = full.map((r) => (map.has(r.sku) ? map.get(r.sku) : r));
-    if (!dryRun) {
-      fs.writeFileSync(path.join(DEPT_DIR, file), JSON.stringify(out), "utf8");
-    }
+    if (!dryRun) writeJsonAtomic(dest, out);
   }
 }
 
@@ -151,9 +174,25 @@ async function main() {
   for (let i = 0; i < entries.length; i++) {
     const entry = entries[i];
     const { row } = entry;
+    if (
+      missingOnly &&
+      !force &&
+      row.inoksan_web_id &&
+      row.images?.length &&
+      isValidImageFile(path.join(ROOT, "public", row.images[0]))
+    ) {
+      if (row.inoksan_web_id) webMatched++;
+      if (row.images?.length) imged++;
+      continue;
+    }
+
     const shortName = row.aciklama || row.name || "";
     const match = matchInoksanWeb(row.sku, shortName, index.products, codeIndex);
-    const imgResult = downloadInoksanImage(row.sku, match?.product, IMG_DIR, IMG_SUB, dryRun, force);
+    const imgResult = downloadInoksanImage(row.sku, match?.product, IMG_DIR, IMG_SUB, {
+      dryRun,
+      force,
+      row,
+    });
 
     if (match) webMatched++;
     else missingWeb.push(row.sku);
@@ -165,6 +204,9 @@ async function main() {
 
     if ((i + 1) % 50 === 0 || i === entries.length - 1) {
       console.log(`[inoksan-web] ${i + 1}/${total} web:${webMatched} img:${imged}`);
+      if (!dryRun && (i + 1) % 50 === 0) {
+        saveDepts(entries);
+      }
     }
   }
 
