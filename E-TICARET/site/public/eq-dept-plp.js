@@ -328,10 +328,38 @@
     return '';
   }
 
+  function isInoksanCatalogRow(raw) {
+    if (!raw) return false;
+    var sku = String(raw.sku || raw.urun_kodu || raw.model || '')
+      .trim()
+      .toUpperCase();
+    if (/^INO-/.test(sku)) return true;
+    var id = String(raw.id || '');
+    if (id.indexOf('inoksan__') === 0) return true;
+    var b = lc(raw.brand || raw.oem_brand || '');
+    return b.indexOf('inoksan') >= 0;
+  }
+
+  /** İnoksan Excel: uzunluk×genişlik×yükseklik (modül genişliği × derinlik × yükseklik). */
+  function formatInoksanOlculer(raw) {
+    var o = raw && raw.olculer;
+    if (!o) return '';
+    var u = Number(o.uzunluk_mm);
+    var g = Number(o.genislik_mm);
+    var y = Number(o.yukseklik_mm);
+    if (u && g && y) return dimLabelFromMm(u, g, y);
+    return '';
+  }
+
   /** PLP kart alt satırı — olculer, ürün adı veya Öztiryakiler oda kodu. */
   function formatOlculerLine(raw) {
     if (!raw) return '';
     if (raw.olcu_etiket) return String(raw.olcu_etiket);
+
+    if (isInoksanCatalogRow(raw)) {
+      var inoDim = formatInoksanOlculer(raw);
+      if (inoDim) return inoDim;
+    }
 
     if (DEPT === 'tezgah') {
       var tezgahName = parseTezgahDimsFromName(raw.name);
