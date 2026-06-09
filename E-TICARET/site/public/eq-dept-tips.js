@@ -1020,9 +1020,28 @@
     return 1e6;
   }
 
+  function skuNormUpper(raw) {
+    return String((raw && (raw.sku || raw.model || raw.urun_kodu)) || "")
+      .toUpperCase()
+      .replace(/İ/g, "I")
+      .replace(/ı/g, "I");
+  }
+
+  /** Çok satan: BYM052S (set altı), BYM102S (giyotin) — listenin en üstü */
+  function yikamaFeaturedTier(u) {
+    if (!u) return null;
+    var sku = skuNormUpper(u.raw);
+    if (sku === "INO-BYM052S" || sku === "BYM052S") return -2;
+    if (sku === "INO-BYM102S" || sku === "BYM102S") return -1;
+    return null;
+  }
+
   /** PFOS bantları: 500 tb/s (setaltı) ve 1000 tb/s (giyotin) — yikama vitrininde önce */
   function yikamaTabakSaatTier(u) {
     if (!u) return 9;
+    var featured = yikamaFeaturedTier(u);
+    if (featured !== null) return featured;
+
     var id = lc(u.raw && u.raw.id);
     var sku = lc((u.raw && (u.raw.sku || u.raw.model || u.raw.urun_kodu)) || "");
     var hay = productHaystack(u) + " " + id + " " + sku;

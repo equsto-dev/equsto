@@ -8,8 +8,26 @@ function brandKey(row: CatalogRow): string {
   return lc(row.brand ?? row.oem_brand ?? "");
 }
 
-/** PLP ile uyumlu: 500 tb/s → 1000 tb/s → diğer bulaşık → evye/tezgah */
+function skuNorm(row: CatalogRow): string {
+  return String(row.sku ?? row.model ?? row.urun_kodu ?? "")
+    .toUpperCase()
+    .replace(/İ/g, "I")
+    .replace(/ı/g, "I");
+}
+
+/** Çok satan vitrin: set altı BYM052S, giyotin BYM102S */
+function yikamaFeaturedTier(row: CatalogRow): number | null {
+  const sku = skuNorm(row);
+  if (sku === "INO-BYM052S" || sku === "BYM052S") return -2;
+  if (sku === "INO-BYM102S" || sku === "BYM102S") return -1;
+  return null;
+}
+
+/** PLP ile uyumlu: öne çıkan → 500 tb/s → 1000 tb/s → diğer bulaşık → evye/tezgah */
 function yikamaTabakSaatTier(row: CatalogRow): number {
+  const featured = yikamaFeaturedTier(row);
+  if (featured !== null) return featured;
+
   const id = lc(row.id);
   const sku = lc(row.sku ?? row.model ?? row.urun_kodu);
   const hay = `${lc(row.name)} ${lc(row.category)} ${lc(row.specs)} ${id} ${sku}`;
