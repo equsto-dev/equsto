@@ -83,32 +83,6 @@
       "sku": "9805.CB425.HC",
       "name": "BREMA KÜP BUZ MAKİNESİ CB425 48 KG/GÜN B-QUBE"
     },
-    "bulasik_setalti": {
-      "marka": "Inoksan",
-      "sku": "INO-BYM052ST",
-      "name": "İNOKSAN BULAŞIK YIKAMA MAKINASI 500 TB/H BYM052ST"
-    },
-    "bulasik_giyotin_1000": {
-      "marka": "Inoksan",
-      "sku": "INO-BYM102S",
-      "name": "BYM102S - Giyotin Tip 1000 Tabak Ekonomik Bulaşık Yıkama Makinesi"
-    },
-    "bardak_yikama": {
-      "marka": "Inoksan",
-      "sku": "INO-BYM042S",
-      "name": "BYM042S - Set Altı Ekonomik Bardak Yıkama Makinesi"
-    },
-    "bulasik_tunel": {
-      "marka": "Inoksan",
-      "sku": "INO-BYK270R-K70D",
-      "name": "İNOKSAN BUL YIK MAK, KONVEYÖRLÜ, KÖŞE KURUTMALI",
-      "fiyat_try": 705676
-    },
-    "bulasik_sepet": {
-      "marka": "Inoksan",
-      "sku": "INO-BYM052S",
-      "name": "BYM052S – Set altı 500 Tabak Ekonomik Bulaşık Yıkama Makinesi"
-    },
     "istif_rafi": {
       "marka": "Portashelf",
       "sku": "46-X-152-X-183",
