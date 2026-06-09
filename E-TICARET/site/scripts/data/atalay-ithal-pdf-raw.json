@@ -1,0 +1,3159 @@
+{
+  "source": "c:\\D Disk\\FİYAT LİSTELERİ\\ATALAY 2025 İTHAL.pdf",
+  "parsedAt": "2026-06-09T21:36:50.609435",
+  "count": 282,
+  "byBrand": {
+    "Animo": 41,
+    "Santos": 16,
+    "Faema": 34,
+    "Dito Sama": 191
+  },
+  "products": [
+    {
+      "brand": "Animo",
+      "model": "NO 55 BF - Ondemand",
+      "liste_eur": 1850.0,
+      "page": 89,
+      "section": "Espresso Kahve Makinası",
+      "raw_fields": [
+        "NO 55 BF",
+        "25 kg/saat",
+        "220 - 240 V / 1100 W",
+        "2800 rpm-50Hz / 3500 rpm-60 Hz",
+        "15 kg.",
+        "16,5 kg."
+      ]
+    },
+    {
+      "brand": "Animo",
+      "model": "NO 75",
+      "liste_eur": 2420.0,
+      "page": 89,
+      "section": "Espresso Kahve Makinası",
+      "raw_fields": [
+        "220 - 240 V / 1240 W",
+        "50-60 Hz",
+        "17 kg.",
+        "19 kg.",
+        "265 x 320 x 400 mm.",
+        "330 x 405 x 485 mm."
+      ]
+    },
+    {
+      "brand": "Animo",
+      "model": "NO 55 BF",
+      "liste_eur": 1850.0,
+      "page": 89,
+      "section": "Espresso Kahve Makinası",
+      "raw_fields": [
+        "NO 55 BF - Ondemand"
+      ]
+    },
+    {
+      "brand": "Animo",
+      "model": "NO 06 A",
+      "liste_eur": 1270.0,
+      "page": 90,
+      "section": "NO 01 BAR",
+      "raw_fields": [
+        "8 kg/saat",
+        "220 - 240 V / 360 W",
+        "1500 rpm-50Hz / 1800 rpm-60 Hz",
+        "10,2 kg.",
+        "11,8 kg.",
+        "230 x 350 x 570 mm.",
+        "290 x 540 x 380 mm."
+      ]
+    },
+    {
+      "brand": "Animo",
+      "model": "NO 43 N",
+      "liste_eur": 2215.0,
+      "page": 90,
+      "section": "NO 01 BAR",
+      "raw_fields": [
+        "14 kg/saat",
+        "220 - 240 V / 600 W",
+        "1500 rpm-50Hz / 1800 rpm-60 Hz",
+        "20,6 kg.",
+        "22 kg.",
+        "190 x 335 x 690 mm.",
+        "280 x 390 x 760 mm."
+      ]
+    },
+    {
+      "brand": "Animo",
+      "model": "NO 01 BAR",
+      "liste_eur": 2490.0,
+      "page": 90,
+      "section": "NO 01 BAR",
+      "raw_fields": []
+    },
+    {
+      "brand": "Animo",
+      "model": "NO 63",
+      "liste_eur": 6140.0,
+      "page": 90,
+      "section": "NO 01 BAR",
+      "raw_fields": []
+    },
+    {
+      "brand": "Santos",
+      "model": "NO 11",
+      "liste_eur": 660.0,
+      "page": 91,
+      "section": "sahiptir.",
+      "raw_fields": [
+        "30 lt/saat",
+        "220 - 240 V / 130 W",
+        "1500 rpm-50Hz / 1800 rpm-60 Hz",
+        "4,9 kg.",
+        "5,7 kg.",
+        "230 x 300 x 350 mm.",
+        "255 x 340 x 400 mm."
+      ]
+    },
+    {
+      "brand": "Santos",
+      "model": "NO 11 C",
+      "liste_eur": 910.0,
+      "page": 91,
+      "section": "sahiptir.",
+      "raw_fields": [
+        "30 lt/saat",
+        "220 - 240 V / 130 W",
+        "1500 rpm-50Hz / 1800 rpm-60 Hz",
+        "4,9 kg.",
+        "5,7 kg.",
+        "230 x 300 x 350 mm.",
+        "255 x 340 x 400 mm."
+      ]
+    },
+    {
+      "brand": "Santos",
+      "model": "NO 10",
+      "liste_eur": 1140.0,
+      "page": 92,
+      "section": "sahiptir.",
+      "raw_fields": [
+        "30 lt/saat",
+        "220 - 240 V / 230 W",
+        "1500 rpm-50Hz / 1800 rpm-60 Hz",
+        "9,2 kg.",
+        "9,6 kg.",
+        "200 x 300 x 380 mm.",
+        "250 x 340 x 450 mm."
+      ]
+    },
+    {
+      "brand": "Santos",
+      "model": "NO 70",
+      "liste_eur": 1585.0,
+      "page": 92,
+      "section": "sahiptir.",
+      "raw_fields": [
+        "50 lt/saat",
+        "220-240 V / 300 W",
+        "1500 rpm-50Hz / 1800 rpm-60 Hz",
+        "13,4 kg.",
+        "14,4 kg.",
+        "240 x 400 x 490 mm.",
+        "280 x 440 x 540 mm."
+      ]
+    },
+    {
+      "brand": "Santos",
+      "model": "NO 50",
+      "liste_eur": 2560.0,
+      "page": 93,
+      "section": "materyallerden üretilmiﬂtir.",
+      "raw_fields": [
+        "100 lt/saat",
+        "220-240 V / 800 W",
+        "3000 rpm-50Hz / 3600 rpm-60 Hz",
+        "14,5 kg.",
+        "16,3 kg.",
+        "260 x 470 x 450 mm.",
+        "315 x 500 x 570 mm."
+      ]
+    },
+    {
+      "brand": "Santos",
+      "model": "NO 28",
+      "liste_eur": 5090.0,
+      "page": 93,
+      "section": "materyallerden üretilmiﬂtir.",
+      "raw_fields": [
+        "100 lt/saat",
+        "220-240 V / 1300 W",
+        "3000 rpm-50Hz / 3600 rpm-60 Hz",
+        "23,6 kg.",
+        "26,4 kg.",
+        "320 x 480 x 570 mm.",
+        "370 x 660 x 590 mm."
+      ]
+    },
+    {
+      "brand": "Santos",
+      "model": "NO 68",
+      "liste_eur": 4800.0,
+      "page": 94,
+      "section": "kalmadan bütün olarak sıkma özelli¤ine sahiptir.",
+      "raw_fields": [
+        "140 lt/saat",
+        "220 - 240 V / 1300 W",
+        "3000 rpm-50Hz / 3600 rpm-60 Hz",
+        "26 kg.",
+        "28,8 kg.",
+        "320 x 480 x 580 mm.",
+        "370 x 660 x 590 mm."
+      ]
+    },
+    {
+      "brand": "Santos",
+      "model": "NO 65",
+      "liste_eur": 7630.0,
+      "page": 94,
+      "section": "kalmadan bütün olarak sıkma özelli¤ine sahiptir.",
+      "raw_fields": [
+        "60 lt/saat",
+        "220-240 V / 650 W",
+        "5-80 rpm / 50-60Hz",
+        "28,5 kg.",
+        "31,3 kg.",
+        "236 x 412 x 642 mm.",
+        "330 x 490 x 660 mm."
+      ]
+    },
+    {
+      "brand": "Santos",
+      "model": "NO 33 GE",
+      "liste_eur": 700.0,
+      "page": 95,
+      "section": "Boyalı Gövde",
+      "raw_fields": [
+        "1,25 lt.",
+        "220 - 240 V / 600 W",
+        "13000 rpm-50 Hz. / 16000 rpm-60Hz",
+        "3 kg.",
+        "3,6 kg.",
+        "180 x 180 x 420 mm.",
+        "210 x 230 x 475 mm."
+      ]
+    },
+    {
+      "brand": "Santos",
+      "model": "NO 37",
+      "liste_eur": 1850.0,
+      "page": 95,
+      "section": "Boyalı Gövde",
+      "raw_fields": [
+        "220 - 240 V / 600 W",
+        "0 - 18000 rpm / 50Hz-60 Hz",
+        "8,96 kg.",
+        "10,6 kg.",
+        "210 x 310 x 560 mm.",
+        "280 x 400 x 650 mm."
+      ]
+    },
+    {
+      "brand": "Santos",
+      "model": "NO 62",
+      "liste_eur": 3040.0,
+      "page": 96,
+      "section": "sa¤layan motor.)",
+      "raw_fields": [
+        "2,4 lt.",
+        "220 - 240 V / 1500 W",
+        "15000 rpm / 50-60 Hz",
+        "8,3 kg.",
+        "9,2 kg.",
+        "200 x 247 x 441 mm.",
+        "255 x 330 x 510 mm."
+      ]
+    },
+    {
+      "brand": "Santos",
+      "model": "NO 66",
+      "liste_eur": 2120.0,
+      "page": 96,
+      "section": "sa¤layan motor.)",
+      "raw_fields": [
+        "1,4 lt.",
+        "220 - 240 V / 1000 W",
+        "1200-13000 rpm / 50-60 Hz",
+        "6,2 kg.",
+        "7,3 kg.",
+        "233 x 197 x 393 mm.",
+        "276 x 236 x 432 mm."
+      ]
+    },
+    {
+      "brand": "Santos",
+      "model": "NO 53",
+      "liste_eur": 2120.0,
+      "page": 97,
+      "section": "sahiptir.",
+      "raw_fields": [
+        "2,4 kg./dakika",
+        "220 - 240 V / 130 W",
+        "73 rpm-50Hz / 89 rpm-60 Hz",
+        "9,8 kg.",
+        "11,3 kg.",
+        "236 x 353 x 474 mm.",
+        "375 x 415 x 520 mm."
+      ]
+    },
+    {
+      "brand": "Santos",
+      "model": "NO 54 N",
+      "liste_eur": 1045.0,
+      "page": 97,
+      "section": "sahiptir.",
+      "raw_fields": [
+        "0,675 lt.",
+        "220 - 240 V / 230 W",
+        "8000 rpm - 16000 rpm / 50-60 Hz",
+        "5,7 kg.",
+        "6,4 kg.",
+        "182 x 186 x 530 mm.",
+        "244 x 215 x 600 mm."
+      ]
+    },
+    {
+      "brand": "Santos",
+      "model": "NO 09",
+      "liste_eur": 1560.0,
+      "page": 97,
+      "section": "sahiptir.",
+      "raw_fields": [
+        "Bar Mikseri",
+        "Buz Kırma Makinaları"
+      ]
+    },
+    {
+      "brand": "Santos",
+      "model": "NO 02",
+      "liste_eur": 1560.0,
+      "page": 98,
+      "section": "Net A¤ırlık",
+      "raw_fields": [
+        "50 kg/saat",
+        "220 - 240 V / 600 W",
+        "1500 rpm-50Hz / 1800 rpm-60Hz",
+        "14,5 kg.",
+        "15,6 kg.",
+        "250 x 420 x 350 mm.",
+        "295 x 455 x 410 mm."
+      ]
+    },
+    {
+      "brand": "Faema",
+      "model": "E98 UP S/3",
+      "liste_eur": 8300.0,
+      "page": 101,
+      "section": "E98 UP S Serisi",
+      "raw_fields": [
+        "17,5 Lt.",
+        "380-415V 3N / 50-60 Hz.",
+        "6900 - 7000 W",
+        "1020 x 518 x 552 mm.",
+        "78 kg."
+      ]
+    },
+    {
+      "brand": "Faema",
+      "model": "E98 UP S/2",
+      "liste_eur": 4910.0,
+      "page": 101,
+      "section": "E98 UP S Serisi",
+      "raw_fields": []
+    },
+    {
+      "brand": "Faema",
+      "model": "E98 UP S/2 Tall Cup",
+      "liste_eur": 5100.0,
+      "page": 101,
+      "section": "E98 UP S Serisi",
+      "raw_fields": [
+        "E98 UP S/2",
+        "mevcuttur."
+      ]
+    },
+    {
+      "brand": "Faema",
+      "model": "E98 UP A/3",
+      "liste_eur": 9450.0,
+      "page": 102,
+      "section": "E98 UP A Serisi",
+      "raw_fields": [
+        "17,5 Lt.",
+        "380-415V 3N / 50-60 Hz.",
+        "6900 - 7000 W",
+        "1020 x 518 x 552 mm.",
+        "78 kg."
+      ]
+    },
+    {
+      "brand": "Faema",
+      "model": "E98 UP A/2",
+      "liste_eur": 5850.0,
+      "page": 102,
+      "section": "E98 UP A Serisi",
+      "raw_fields": []
+    },
+    {
+      "brand": "Faema",
+      "model": "E98 UP A/2 Tall Cup",
+      "liste_eur": 6040.0,
+      "page": 102,
+      "section": "E98 UP A Serisi",
+      "raw_fields": []
+    },
+    {
+      "brand": "Faema",
+      "model": "E61 S/1 Legend",
+      "liste_eur": 11210.0,
+      "page": 103,
+      "section": "E61 S Serisi",
+      "raw_fields": [
+        "6 lt.",
+        "380-415V 3N / 50-60Hz",
+        "3300 - 3900 W",
+        "555 x 540 x 565 mm.",
+        "51 kg."
+      ]
+    },
+    {
+      "brand": "Faema",
+      "model": "E61 S/2 Legend",
+      "liste_eur": 13760.0,
+      "page": 103,
+      "section": "E61 S Serisi",
+      "raw_fields": []
+    },
+    {
+      "brand": "Faema",
+      "model": "E61 S/3 Legend",
+      "liste_eur": 16310.0,
+      "page": 103,
+      "section": "E61 S Serisi",
+      "raw_fields": []
+    },
+    {
+      "brand": "Faema",
+      "model": "E61 A/2 Jubilè",
+      "liste_eur": 16630.0,
+      "page": 104,
+      "section": "efsane modelidir.",
+      "raw_fields": [
+        "11 lt.",
+        "380-415V 3N / 50-60Hz",
+        "4000 - 4800 W",
+        "715 x 540 x 565 mm.",
+        "60 kg"
+      ]
+    },
+    {
+      "brand": "Faema",
+      "model": "E61 A/1 Jubilè",
+      "liste_eur": 13480.0,
+      "page": 104,
+      "section": "efsane modelidir.",
+      "raw_fields": []
+    },
+    {
+      "brand": "Faema",
+      "model": "E61 A/2 Jubilè White&Wood",
+      "liste_eur": 17630.0,
+      "page": 105,
+      "section": "E61 A Serisi",
+      "raw_fields": [
+        "11 lt.",
+        "380-415V 3N / 50-60Hz",
+        "4000 - 4800 W",
+        "715 x 540 x 565 mm.",
+        "60 kg"
+      ]
+    },
+    {
+      "brand": "Faema",
+      "model": "E61 A/1 Jubilè White&Wood",
+      "liste_eur": 13870.0,
+      "page": 105,
+      "section": "E61 A Serisi",
+      "raw_fields": []
+    },
+    {
+      "brand": "Faema",
+      "model": "E71 A/3 Touch Blue Pearl",
+      "liste_eur": 32300.0,
+      "page": 107,
+      "section": "E71 TOUCH A Serisi",
+      "raw_fields": [
+        "1x3",
+        "7 lt.",
+        "3 x 600 cc.",
+        "380-415V 3N / 50-60Hz",
+        "7500 - 8800 W",
+        "1034 x 619 x 484 mm.",
+        "90 kg."
+      ]
+    },
+    {
+      "brand": "Faema",
+      "model": "E71 A/2 Touch Blue Pearl",
+      "liste_eur": 28100.0,
+      "page": 107,
+      "section": "E71 TOUCH A Serisi",
+      "raw_fields": []
+    },
+    {
+      "brand": "Faema",
+      "model": "E71 A/3 Touch Black",
+      "liste_eur": 31100.0,
+      "page": 108,
+      "section": "Espresso Kahve Makinaları",
+      "raw_fields": [
+        "1x3",
+        "7 lt.",
+        "3 x 600 cc.",
+        "380-415V 3N / 50-60Hz",
+        "7500 - 8800 W",
+        "1034 x 619 x 484 mm.",
+        "90 kg."
+      ]
+    },
+    {
+      "brand": "Faema",
+      "model": "E71 A/2 Touch Black",
+      "liste_eur": 26900.0,
+      "page": 108,
+      "section": "Espresso Kahve Makinaları",
+      "raw_fields": []
+    },
+    {
+      "brand": "Faema",
+      "model": "E71 E A/3 5 Button Bakır",
+      "liste_eur": 28960.0,
+      "page": 109,
+      "section": "E71 E A/2",
+      "raw_fields": [
+        "1x3",
+        "7 lt.",
+        "3 x 600 cc.",
+        "380-415V 3N / 50-60Hz",
+        "7500 - 8800 W",
+        "1034 x 619 x 484 mm.",
+        "90 kg."
+      ]
+    },
+    {
+      "brand": "Faema",
+      "model": "E71 E A/2 5 Button Bakır",
+      "liste_eur": 24730.0,
+      "page": 109,
+      "section": "E71 E A/2",
+      "raw_fields": []
+    },
+    {
+      "brand": "Faema",
+      "model": "E71 E A/3 5 Button Siyah",
+      "liste_eur": 27300.0,
+      "page": 110,
+      "section": "E71 E A Serisi",
+      "raw_fields": [
+        "1x3",
+        "7 lt.",
+        "3 x 600 cc.",
+        "380-415V 3N / 50-60Hz",
+        "7500 - 8800 W",
+        "1034 x 619 x 484 mm.",
+        "90 kg."
+      ]
+    },
+    {
+      "brand": "Faema",
+      "model": "E71 E A/2 5 Button Siyah",
+      "liste_eur": 23300.0,
+      "page": 110,
+      "section": "E71 E A Serisi",
+      "raw_fields": []
+    },
+    {
+      "brand": "Faema",
+      "model": "President A/3",
+      "liste_eur": 27200.0,
+      "page": 111,
+      "section": "Buhar Çubu¤u",
+      "raw_fields": [
+        "1x3",
+        "7 lt.",
+        "3 x 600 cc.",
+        "380-415V 3N / 50-60Hz",
+        "7500 - 8800 W",
+        "1040 x 630 x 505 mm.",
+        "90 kg."
+      ]
+    },
+    {
+      "brand": "Faema",
+      "model": "X30 S10",
+      "liste_eur": 25400.0,
+      "page": 113,
+      "section": "Buhar Çubu¤u",
+      "raw_fields": [
+        "1 Autosteam Cold Touch",
+        "1x2",
+        "1x0,7 lt. + 1x1,25 lt.",
+        "2x1,2 kg.",
+        "380-415V 3N / 50-60Hz",
+        "4800 - 5700 W",
+        "370 x 620 x 762 mm.",
+        "79 kg."
+      ]
+    },
+    {
+      "brand": "Faema",
+      "model": "X30 CS10",
+      "liste_eur": 28250.0,
+      "page": 113,
+      "section": "Buhar Çubu¤u",
+      "raw_fields": []
+    },
+    {
+      "brand": "Faema",
+      "model": "X20 S10",
+      "liste_eur": 19600.0,
+      "page": 114,
+      "section": "X20 CS10 - X20 S10 - X15 CS10",
+      "raw_fields": [
+        "1 Autosteam Cold Touch",
+        "1x2",
+        "1x2,6 lt.",
+        "2x1,2 kg.",
+        "220-240V / 50-60 Hz.",
+        "3200 - 3800 W / 3400 W",
+        "370 x 620 x 762 mm.",
+        "71 kg."
+      ]
+    },
+    {
+      "brand": "Faema",
+      "model": "X20 CS10",
+      "liste_eur": 21730.0,
+      "page": 114,
+      "section": "X20 CS10 - X20 S10 - X15 CS10",
+      "raw_fields": []
+    },
+    {
+      "brand": "Faema",
+      "model": "X15 CS10",
+      "liste_eur": 14250.0,
+      "page": 114,
+      "section": "X20 CS10 - X20 S10 - X15 CS10",
+      "raw_fields": [
+        "X15 CS10",
+        "X20 CS10"
+      ]
+    },
+    {
+      "brand": "Faema",
+      "model": "FRI8L",
+      "liste_eur": 4220.0,
+      "page": 115,
+      "section": "X Serisi Aksesuarları",
+      "raw_fields": [
+        "220-240V / 50-60 Hz.",
+        "360 W",
+        "290 x 435 x 738 mm."
+      ]
+    },
+    {
+      "brand": "Faema",
+      "model": "SCALDATAZZE",
+      "liste_eur": 3190.0,
+      "page": 115,
+      "section": "X Serisi Aksesuarları",
+      "raw_fields": [
+        "220-240V / 50-60 Hz.",
+        "230 W",
+        "290 x 435 x 738 mm."
+      ]
+    },
+    {
+      "brand": "Faema",
+      "model": "FRI4L + SCALDATAZZE",
+      "liste_eur": 4830.0,
+      "page": 115,
+      "section": "X Serisi Aksesuarları",
+      "raw_fields": [
+        "220-240V / 50-60 Hz.",
+        "360 W",
+        "290 x 435 x 738 mm."
+      ]
+    },
+    {
+      "brand": "Faema",
+      "model": "BR9C",
+      "liste_eur": 1320.0,
+      "page": 115,
+      "section": "X Serisi Aksesuarları",
+      "raw_fields": [
+        "SO⁄UTUCU ÜN‹TE",
+        "BR9C - FRI8L"
+      ]
+    },
+    {
+      "brand": "Faema",
+      "model": "ME A",
+      "liste_eur": 2040.0,
+      "page": 116,
+      "section": "Kahve De¤irmenleri",
+      "raw_fields": [
+        "2,3 gr./saniye",
+        "2 kg.",
+        "Ø 64 mm",
+        "220-240V / 50-60 Hz.",
+        "300 W",
+        "260 x 470 x 640 mm."
+      ]
+    },
+    {
+      "brand": "Faema",
+      "model": "MD 3000 ON DEMAND",
+      "liste_eur": 4050.0,
+      "page": 116,
+      "section": "Kahve De¤irmenleri",
+      "raw_fields": []
+    },
+    {
+      "brand": "Faema",
+      "model": "MD 3000",
+      "liste_eur": 2590.0,
+      "page": 116,
+      "section": "Kahve De¤irmenleri",
+      "raw_fields": []
+    },
+    {
+      "brand": "Animo",
+      "model": "LEO 55",
+      "liste_eur": 850.0,
+      "page": 119,
+      "section": "Kahve De¤irmenleri",
+      "raw_fields": [
+        "0,3 kg.",
+        "Ø 55 mm.",
+        "1,8-2,2 gr/sn.",
+        "131 x 183 x 380 mm.",
+        "6,2 kg.",
+        "390 W",
+        "1400 rpm-50 Hz. / 1680 rpm-60 Hz."
+      ]
+    },
+    {
+      "brand": "Animo",
+      "model": "M2E",
+      "liste_eur": 720.0,
+      "page": 119,
+      "section": "Kahve De¤irmenleri",
+      "raw_fields": [
+        "0,25 kg.",
+        "Ø 50 mm.",
+        "1 gr/sn.",
+        "152 x 250 x 382 mm.",
+        "5,1 kg.",
+        "220 W",
+        "1400 rpm-50 Hz. / 1680 rpm-60 Hz."
+      ]
+    },
+    {
+      "brand": "Animo",
+      "model": "MI20 TOUCH",
+      "liste_eur": 1150.0,
+      "page": 120,
+      "section": "Kahve De¤irmenleri",
+      "raw_fields": [
+        "1,2 kg.",
+        "Ø 58 mm.",
+        "2-2,6 gr/sn.",
+        "194 x 307 x 440 mm.",
+        "7,5 kg.",
+        "300 W",
+        "1400 rpm-50 Hz. / 1680 rpm-60 Hz."
+      ]
+    },
+    {
+      "brand": "Animo",
+      "model": "MI40 TOUCH",
+      "liste_eur": 1330.0,
+      "page": 120,
+      "section": "Kahve De¤irmenleri",
+      "raw_fields": [
+        "1,2 kg.",
+        "Ø 65 mm.",
+        "2,6-3,3 gr/sn.",
+        "194 x 307 x 560 mm.",
+        "8,9 kg.",
+        "480 W",
+        "1400 rpm-50 Hz. / 1680 rpm-60 Hz."
+      ]
+    },
+    {
+      "brand": "Animo",
+      "model": "MXD XTREME",
+      "liste_eur": 2040.0,
+      "page": 121,
+      "section": "Ö¤ütücü Disk Çapı",
+      "raw_fields": [
+        "1,4 kg.",
+        "Ø 75 mm. Titanyum",
+        "4 gr/sn.",
+        "230 x 370 x 600 mm.",
+        "12,8 kg.",
+        "520 W",
+        "1400 rpm-50 Hz. / 1680 rpm-60 Hz."
+      ]
+    },
+    {
+      "brand": "Animo",
+      "model": "MXDZ XTREME - C18",
+      "liste_eur": 2610.0,
+      "page": 121,
+      "section": "Ö¤ütücü Disk Çapı",
+      "raw_fields": [
+        "1,4 kg.",
+        "Ø 75 mm. Titanyum",
+        "4 gr/sn.",
+        "230 x 370 x 600 mm.",
+        "14,9 kg.",
+        "520 W",
+        "1400 rpm-50 Hz. / 1680 rpm-60 Hz."
+      ]
+    },
+    {
+      "brand": "Animo",
+      "model": "C18",
+      "liste_eur": 2200.0,
+      "page": 121,
+      "section": "Ö¤ütücü Disk Çapı",
+      "raw_fields": [
+        "MXD XTREME - C83",
+        "CHROME",
+        "C05",
+        "C10"
+      ]
+    },
+    {
+      "brand": "Animo",
+      "model": "MC6",
+      "liste_eur": 730.0,
+      "page": 122,
+      "section": "Kahve De¤irmeni - Paket Doldurma",
+      "raw_fields": [
+        "1,4 kg.",
+        "Ø 65 mm.",
+        "230 x 370 x 600 mm.",
+        "10,6 kg.",
+        "340 W",
+        "1400 rpm-50 Hz. / 1680 rpm-60 Hz."
+      ]
+    },
+    {
+      "brand": "Animo",
+      "model": "LABO 70M",
+      "liste_eur": 3310.0,
+      "page": 122,
+      "section": "Kahve De¤irmeni - Paket Doldurma",
+      "raw_fields": [
+        "Manuel",
+        "1,2 kg.",
+        "Ø 70 mm.",
+        "6 gr/sn.",
+        "310 x 210 x 625 mm.",
+        "16,5 kg.",
+        "900 W",
+        "1400 rpm-50 Hz. / 1680 rpm-60 Hz."
+      ]
+    },
+    {
+      "brand": "Animo",
+      "model": "C05",
+      "liste_eur": 980.0,
+      "page": 122,
+      "section": "Kahve De¤irmeni - Paket Doldurma",
+      "raw_fields": [
+        "MC7 - C18",
+        "MC6 - MC7",
+        "C10",
+        "C18",
+        "RENK SEÇENEKLER‹"
+      ]
+    },
+    {
+      "brand": "Animo",
+      "model": "CPS TAMPER - C18",
+      "liste_eur": 540.0,
+      "page": 123,
+      "section": "CPS TAMPER - C18",
+      "raw_fields": [
+        "25 kg.",
+        "Ø 52 mm. / Ø 57,5 mm.",
+        "165 x 210 x 405 mm.",
+        "4 kg."
+      ]
+    },
+    {
+      "brand": "Animo",
+      "model": "F4-C10",
+      "liste_eur": 510.0,
+      "page": 124,
+      "section": "F4 - F4D - F4T - F4P PASLANMAZ HAZNE",
+      "raw_fields": [
+        "0,8 lt.",
+        "150 W",
+        "15.000 rpm - 50/60 Hz.",
+        "200 x 220 x 500 mm.",
+        "2,8 kg."
+      ]
+    },
+    {
+      "brand": "Animo",
+      "model": "F6-C10",
+      "liste_eur": 460.0,
+      "page": 124,
+      "section": "F4 - F4D - F4T - F4P PASLANMAZ HAZNE",
+      "raw_fields": [
+        "0,8 lt.",
+        "150 W",
+        "15.000 rpm - 50/60 Hz.",
+        "200 x 220 x 500 mm.",
+        "2,8 kg."
+      ]
+    },
+    {
+      "brand": "Animo",
+      "model": "A5-C18",
+      "liste_eur": 510.0,
+      "page": 125,
+      "section": "Buz Blender",
+      "raw_fields": [
+        "170 x 210 x 380 mm.",
+        "4,5 kg."
+      ]
+    },
+    {
+      "brand": "Animo",
+      "model": "ICE B100-C10 Polikarbon",
+      "liste_eur": 640.0,
+      "page": 125,
+      "section": "Buz Blender",
+      "raw_fields": [
+        "1,5 Lt.",
+        "400 W",
+        "10.000 rph 50 Hz. / 15.000 rpm 60 Hz.",
+        "200 x 200 x 460 mm.",
+        "4 kg."
+      ]
+    },
+    {
+      "brand": "Animo",
+      "model": "10380 - EXCELSO",
+      "liste_eur": 630.0,
+      "page": 127,
+      "section": "Pot Sayısı",
+      "raw_fields": [
+        "1 Cam Pot",
+        "144 Fincan/Saat",
+        "230V - 1N / 50-60 Hz.",
+        "2250 W",
+        "190 x 370 x 580 mm."
+      ]
+    },
+    {
+      "brand": "Animo",
+      "model": "10385 - EXCELSO T",
+      "liste_eur": 680.0,
+      "page": 127,
+      "section": "Pot Sayısı",
+      "raw_fields": [
+        "1 x 2lt. Çelik Termos",
+        "144 Fincan/Saat",
+        "230V - 1N / 50-60 Hz.",
+        "2100 W",
+        "190 x 370 x 480/650 mm."
+      ]
+    },
+    {
+      "brand": "Animo",
+      "model": "08208 - CAM POT",
+      "liste_eur": 40.0,
+      "page": 127,
+      "section": "Pot Sayısı",
+      "raw_fields": [
+        "1,8 lt."
+      ]
+    },
+    {
+      "brand": "Animo",
+      "model": "10502 - M100",
+      "liste_eur": 1050.0,
+      "page": 128,
+      "section": "Filtre Kahve Makineleri",
+      "raw_fields": [
+        "2 x 1,8 lt. Cam Pot",
+        "144 Fincan/Saat",
+        "230V - 1N / 50-60 Hz.",
+        "2250 W",
+        "205 x 380 x 625 mm. (Pot Dahil)"
+      ]
+    },
+    {
+      "brand": "Animo",
+      "model": "10592 - M21",
+      "liste_eur": 240.0,
+      "page": 128,
+      "section": "Filtre Kahve Makineleri",
+      "raw_fields": [
+        "1 Cam Pot",
+        "230V - 1N / 50-60 Hz.",
+        "70 W",
+        "205 x 200 x 75 mm. (Pot Hariç)"
+      ]
+    },
+    {
+      "brand": "Animo",
+      "model": "10522 - MT100",
+      "liste_eur": 910.0,
+      "page": 128,
+      "section": "Filtre Kahve Makineleri",
+      "raw_fields": [
+        "144 Fincan/Saat",
+        "230V - 1N / 50-60 Hz.",
+        "2100 W",
+        "205 x 380 x 595 mm."
+      ]
+    },
+    {
+      "brand": "Animo",
+      "model": "M100",
+      "liste_eur": 1050.0,
+      "page": 128,
+      "section": "Filtre Kahve Makineleri",
+      "raw_fields": []
+    },
+    {
+      "brand": "Animo",
+      "model": "1005390 - CB 2x5",
+      "liste_eur": 5820.0,
+      "page": 129,
+      "section": "Silindirik Filtre Kahve Makineleri",
+      "raw_fields": [
+        "30 lt./saat",
+        "230V - 1N / 50-60 Hz.",
+        "3175 W",
+        "815 x 470 x 700 mm."
+      ]
+    },
+    {
+      "brand": "Animo",
+      "model": "1005391 - CB 1x5 R",
+      "liste_eur": 4560.0,
+      "page": 129,
+      "section": "Silindirik Filtre Kahve Makineleri",
+      "raw_fields": [
+        "30 lt./saat",
+        "230V - 1N / 50-60 Hz.",
+        "3125 W",
+        "505 x 470 x 700 mm."
+      ]
+    },
+    {
+      "brand": "Animo",
+      "model": "1005392 - CB 1x5 L",
+      "liste_eur": 4560.0,
+      "page": 129,
+      "section": "Silindirik Filtre Kahve Makineleri",
+      "raw_fields": [
+        "30 lt./saat",
+        "230V - 1N / 50-60 Hz.",
+        "3125 W",
+        "505 x 470 x 700 mm."
+      ]
+    },
+    {
+      "brand": "Animo",
+      "model": "ComBi-Line",
+      "liste_eur": 5820.0,
+      "page": 129,
+      "section": "Silindirik Filtre Kahve Makineleri",
+      "raw_fields": []
+    },
+    {
+      "brand": "Animo",
+      "model": "1007174 - CB 1x40 R",
+      "liste_eur": 8890.0,
+      "page": 130,
+      "section": "Silindirik Filtre Kahve Makineleri",
+      "raw_fields": [
+        "180 lt./saat",
+        "400V - 3N / 50-60 Hz.",
+        "18225 W",
+        "805 x 685 x 975 mm."
+      ]
+    },
+    {
+      "brand": "Animo",
+      "model": "1005394 - CB 2x5 W",
+      "liste_eur": 7400.0,
+      "page": 130,
+      "section": "Silindirik Filtre Kahve Makineleri",
+      "raw_fields": [
+        "30 lt./saat - Kahve",
+        "33 lt./saat - Su",
+        "230V - 1N / 50-60 Hz.",
+        "3475 W",
+        "815 x 470 x 700 mm."
+      ]
+    },
+    {
+      "brand": "Animo",
+      "model": "50084 - MPW-3",
+      "liste_eur": 1200.0,
+      "page": 131,
+      "section": "Silindirik Filtre Kahve Makinesi Hazneleri",
+      "raw_fields": [
+        "3 Tetra Pak",
+        "230V - 1N / 50-60 Hz.",
+        "1100 W",
+        "270 x 150 x 240 mm. (Kutusuz)"
+      ]
+    },
+    {
+      "brand": "Animo",
+      "model": "1005364 - CN5E",
+      "liste_eur": 1010.0,
+      "page": 131,
+      "section": "Silindirik Filtre Kahve Makinesi Hazneleri",
+      "raw_fields": [
+        "5 lt.",
+        "230V - 1N / 50-60 Hz.",
+        "50 W",
+        "237 x 406 mm."
+      ]
+    },
+    {
+      "brand": "Animo",
+      "model": "50087 - MPW-6",
+      "liste_eur": 2130.0,
+      "page": 131,
+      "section": "Silindirik Filtre Kahve Makinesi Hazneleri",
+      "raw_fields": []
+    },
+    {
+      "brand": "Animo",
+      "model": "1005365 - CN10E",
+      "liste_eur": 1250.0,
+      "page": 131,
+      "section": "Silindirik Filtre Kahve Makinesi Hazneleri",
+      "raw_fields": []
+    },
+    {
+      "brand": "Animo",
+      "model": "1005366 - CN20E",
+      "liste_eur": 1600.0,
+      "page": 131,
+      "section": "Silindirik Filtre Kahve Makinesi Hazneleri",
+      "raw_fields": []
+    },
+    {
+      "brand": "Animo",
+      "model": "1007177 - CN40E",
+      "liste_eur": 2420.0,
+      "page": 131,
+      "section": "Silindirik Filtre Kahve Makinesi Hazneleri",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600889",
+      "liste_eur": 2344.0,
+      "page": 151,
+      "section": "Easy Cooking Pro Endüksiyon Ocaklar",
+      "raw_fields": [
+        "1 Zonlu",
+        "220-240 V 1N/50-60 Hz",
+        "3,5 kW",
+        "400 x 600 x 152 mm.",
+        "23 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600898",
+      "liste_eur": 3724.0,
+      "page": 151,
+      "section": "Easy Cooking Pro Endüksiyon Ocaklar",
+      "raw_fields": [
+        "Düz Krom",
+        "220-240 V 1N/50-60 Hz",
+        "3,5 kW",
+        "400 x 600 x 227 mm.",
+        "30 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600891",
+      "liste_eur": 3031.0,
+      "page": 151,
+      "section": "Easy Cooking Pro Endüksiyon Ocaklar",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600895",
+      "liste_eur": 3084.0,
+      "page": 151,
+      "section": "Easy Cooking Pro Endüksiyon Ocaklar",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600893",
+      "liste_eur": 3688.0,
+      "page": 151,
+      "section": "Easy Cooking Pro Endüksiyon Ocaklar",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600897",
+      "liste_eur": 4658.0,
+      "page": 151,
+      "section": "Easy Cooking Pro Endüksiyon Ocaklar",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600899",
+      "liste_eur": 6764.0,
+      "page": 151,
+      "section": "Easy Cooking Pro Endüksiyon Ocaklar",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "240203",
+      "liste_eur": 15586.0,
+      "page": 152,
+      "section": "Konveksiyonlu Fırınlar",
+      "raw_fields": [
+        "20 GN 1/1",
+        "220-240 V 1N/50 Hz",
+        "35 kW Gaz 0,5 kW Elk.",
+        "890 x 900 x 1700 mm.",
+        "285 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "240208",
+      "liste_eur": 14781.0,
+      "page": 152,
+      "section": "Konveksiyonlu Fırınlar",
+      "raw_fields": [
+        "20 GN 1/1",
+        "380-415 V 3N/50 Hz.",
+        "34,5 kW Elk.",
+        "890 x 900 x 1700 mm.",
+        "232 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "240204",
+      "liste_eur": 18109.0,
+      "page": 152,
+      "section": "Konveksiyonlu Fırınlar",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "240202",
+      "liste_eur": 8621.0,
+      "page": 152,
+      "section": "Konveksiyonlu Fırınlar",
+      "raw_fields": [
+        "ELEKTR‹KL‹",
+        "240202",
+        "240200",
+        "240204",
+        "izlenmesini sa¤lar.",
+        "(20 tepsilik fırınlar için 2 adet) gereklidir."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "240201",
+      "liste_eur": 7460.0,
+      "page": 152,
+      "section": "Konveksiyonlu Fırınlar",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "240200",
+      "liste_eur": 5986.0,
+      "page": 152,
+      "section": "Konveksiyonlu Fırınlar",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "240209",
+      "liste_eur": 16854.0,
+      "page": 152,
+      "section": "Konveksiyonlu Fırınlar",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "240207",
+      "liste_eur": 7714.0,
+      "page": 152,
+      "section": "Konveksiyonlu Fırınlar",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "240206",
+      "liste_eur": 6740.0,
+      "page": 152,
+      "section": "Konveksiyonlu Fırınlar",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "240205",
+      "liste_eur": 5291.0,
+      "page": 152,
+      "section": "Konveksiyonlu Fırınlar",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218885-NG",
+      "liste_eur": 36200.0,
+      "page": 153,
+      "section": "MAGISTAR / DS Dijital Ekran",
+      "raw_fields": [
+        "20 GN 2/1",
+        "220-240 V 1N/50 Hz",
+        "100 kW Gaz 2,50 kW Elk.",
+        "1162 x 1066 x 1794 mm.",
+        "475 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218884-NG",
+      "liste_eur": 26901.0,
+      "page": 153,
+      "section": "MAGISTAR / DS Dijital Ekran",
+      "raw_fields": [
+        "20 GN 1/1",
+        "220-240 V 1N/50 Hz",
+        "54 kW Gaz 1,80 kW Elk.",
+        "911 x 864 x 1794 mm.",
+        "360 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218883-NG",
+      "liste_eur": 20128.0,
+      "page": 153,
+      "section": "MAGISTAR / DS Dijital Ekran",
+      "raw_fields": [
+        "10 GN 2/1",
+        "220-240 V 1N/50 Hz",
+        "47 kW Gaz 1,50 kW Elk.",
+        "1090 x 971 x 1058 mm.",
+        "222,5 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218882-NG",
+      "liste_eur": 13817.0,
+      "page": 153,
+      "section": "MAGISTAR / DS Dijital Ekran",
+      "raw_fields": [
+        "10 GN 1/1",
+        "220-240 V 1N/50 Hz",
+        "31 kW Gaz 1,10 kW Elk.",
+        "867 x 775 x 1058 mm.",
+        "168 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218881-NG",
+      "liste_eur": 16636.0,
+      "page": 153,
+      "section": "MAGISTAR / DS Dijital Ekran",
+      "raw_fields": [
+        "6 GN 2/1",
+        "220-240 V 1N/50 Hz",
+        "32 kW Gaz 1,50 kW Elk.",
+        "1090 x 971 x 808 mm.",
+        "182 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218880-NG",
+      "liste_eur": 12098.0,
+      "page": 153,
+      "section": "MAGISTAR / DS Dijital Ekran",
+      "raw_fields": [
+        "6 GN 1/1",
+        "220-240 V 1N/50 Hz",
+        "19 kW Gaz 1,1 kW Elk.",
+        "867 x 775 x 808 mm.",
+        "152 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218865-LPG",
+      "liste_eur": 36926.0,
+      "page": 153,
+      "section": "MAGISTAR / DS Dijital Ekran",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218825-ELEKTR‹K",
+      "liste_eur": 29757.0,
+      "page": 153,
+      "section": "MAGISTAR / DS Dijital Ekran",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218864-LPG",
+      "liste_eur": 27437.0,
+      "page": 153,
+      "section": "MAGISTAR / DS Dijital Ekran",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218824-ELEKTR‹K",
+      "liste_eur": 22638.0,
+      "page": 153,
+      "section": "MAGISTAR / DS Dijital Ekran",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218863-LPG",
+      "liste_eur": 20537.0,
+      "page": 153,
+      "section": "MAGISTAR / DS Dijital Ekran",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218823-ELEKTR‹K",
+      "liste_eur": 16290.0,
+      "page": 153,
+      "section": "MAGISTAR / DS Dijital Ekran",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218862-LPG",
+      "liste_eur": 14097.0,
+      "page": 153,
+      "section": "MAGISTAR / DS Dijital Ekran",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218822-ELEKTR‹K",
+      "liste_eur": 10883.0,
+      "page": 153,
+      "section": "MAGISTAR / DS Dijital Ekran",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218861-LPG",
+      "liste_eur": 16969.0,
+      "page": 153,
+      "section": "MAGISTAR / DS Dijital Ekran",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218821-ELEKTR‹K",
+      "liste_eur": 13100.0,
+      "page": 153,
+      "section": "MAGISTAR / DS Dijital Ekran",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218860-LPG",
+      "liste_eur": 12339.0,
+      "page": 153,
+      "section": "MAGISTAR / DS Dijital Ekran",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218820-ELEKTR‹K",
+      "liste_eur": 9076.0,
+      "page": 153,
+      "section": "MAGISTAR / DS Dijital Ekran",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218785-NG",
+      "liste_eur": 41557.0,
+      "page": 154,
+      "section": "Kombi Fırınlar - Boylerli",
+      "raw_fields": [
+        "20 GN 2/1",
+        "220-240 V 1N/50 Hz",
+        "100 kW Gaz 2,50 kW Elk.",
+        "1162 x 1066 x 1794 mm.",
+        "475 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218784-NG",
+      "liste_eur": 31636.0,
+      "page": 154,
+      "section": "Kombi Fırınlar - Boylerli",
+      "raw_fields": [
+        "20 GN 1/1",
+        "220-240 V 1N/50 Hz",
+        "54 kW Gaz 1,80 kW Elk.",
+        "911 x 864 x 1794 mm.",
+        "360 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218783-NG",
+      "liste_eur": 24041.0,
+      "page": 154,
+      "section": "Kombi Fırınlar - Boylerli",
+      "raw_fields": [
+        "10 GN 2/1",
+        "220-240 V 1N/50 Hz",
+        "47 kW Gaz 1,50 kW Elk.",
+        "1090 x 971 x 1058 mm.",
+        "222,5 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218782-NG",
+      "liste_eur": 17744.0,
+      "page": 154,
+      "section": "Kombi Fırınlar - Boylerli",
+      "raw_fields": [
+        "10 GN 1/1",
+        "220-240 V 1N/50 Hz",
+        "31 kW Gaz 1,10 kW Elk.",
+        "867 x 775 x 1058 mm.",
+        "168 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218781-NG",
+      "liste_eur": 20054.0,
+      "page": 154,
+      "section": "Kombi Fırınlar - Boylerli",
+      "raw_fields": [
+        "6 GN 2/1",
+        "220-240 V 1N/50 Hz",
+        "32 kW Gaz 1,50 kW Elk.",
+        "1090 x 971 x 808 mm.",
+        "182 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218780-NG",
+      "liste_eur": 15546.0,
+      "page": 154,
+      "section": "Kombi Fırınlar - Boylerli",
+      "raw_fields": [
+        "6 GN 1/1",
+        "220-240 V 1N/50 Hz",
+        "19 kW Gaz 1,1 kW Elk.",
+        "867 x 775 x 808 mm.",
+        "152 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218765-LPG",
+      "liste_eur": 42390.0,
+      "page": 154,
+      "section": "Kombi Fırınlar - Boylerli",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218725-ELEKTR‹K",
+      "liste_eur": 34945.0,
+      "page": 154,
+      "section": "Kombi Fırınlar - Boylerli",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218764-LPG",
+      "liste_eur": 32272.0,
+      "page": 154,
+      "section": "Kombi Fırınlar - Boylerli",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218724-ELEKTR‹K",
+      "liste_eur": 27297.0,
+      "page": 154,
+      "section": "Kombi Fırınlar - Boylerli",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218763-LPG",
+      "liste_eur": 23430.0,
+      "page": 154,
+      "section": "Kombi Fırınlar - Boylerli",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218723-ELEKTR‹K",
+      "liste_eur": 19847.0,
+      "page": 154,
+      "section": "Kombi Fırınlar - Boylerli",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218762-LPG",
+      "liste_eur": 18098.0,
+      "page": 154,
+      "section": "Kombi Fırınlar - Boylerli",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218722-ELEKTR‹K",
+      "liste_eur": 14656.0,
+      "page": 154,
+      "section": "Kombi Fırınlar - Boylerli",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218761-LPG",
+      "liste_eur": 20455.0,
+      "page": 154,
+      "section": "Kombi Fırınlar - Boylerli",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218721-ELEKTR‹K",
+      "liste_eur": 16573.0,
+      "page": 154,
+      "section": "Kombi Fırınlar - Boylerli",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218760-LPG",
+      "liste_eur": 15857.0,
+      "page": 154,
+      "section": "Kombi Fırınlar - Boylerli",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218720-ELEKTR‹K",
+      "liste_eur": 12527.0,
+      "page": 154,
+      "section": "Kombi Fırınlar - Boylerli",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218985-NG",
+      "liste_eur": 30587.0,
+      "page": 155,
+      "section": "MAGISTAR / DI Dijital Ekran",
+      "raw_fields": [
+        "20 GN 2/1",
+        "220-240 V 1N/50 Hz",
+        "70 kW Gaz 2,50 kW Elk.",
+        "1162 x 1066 x 1794 mm.",
+        "475 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218984-NG",
+      "liste_eur": 22786.0,
+      "page": 155,
+      "section": "MAGISTAR / DI Dijital Ekran",
+      "raw_fields": [
+        "20 GN 1/1",
+        "220-240 V 1N/50 Hz",
+        "42 kW Gaz 1,80 kW Elk.",
+        "911 x 864 x 1794 mm.",
+        "360 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218983-NG",
+      "liste_eur": 17140.0,
+      "page": 155,
+      "section": "MAGISTAR / DI Dijital Ekran",
+      "raw_fields": [
+        "10 GN 2/1",
+        "220-240 V 1N/50 Hz",
+        "35 kW Gaz 1,50 kW Elk.",
+        "1090 x 971 x 1058 mm.",
+        "209 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218982-NG",
+      "liste_eur": 11669.0,
+      "page": 155,
+      "section": "MAGISTAR / DI Dijital Ekran",
+      "raw_fields": [
+        "10 GN 1/1",
+        "220-240 V 1N/50 Hz",
+        "21 kW Gaz 1,10 kW Elk.",
+        "867 x 775 x 1058 mm.",
+        "157 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218981-NG",
+      "liste_eur": 13419.0,
+      "page": 155,
+      "section": "MAGISTAR / DI Dijital Ekran",
+      "raw_fields": [
+        "6 GN 2/1",
+        "220-240 V 1N/50 Hz",
+        "24 kW Gaz 1,50 kW Elk.",
+        "1090 x 971 x 808 mm.",
+        "171 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218980-NG",
+      "liste_eur": 10144.0,
+      "page": 155,
+      "section": "MAGISTAR / DI Dijital Ekran",
+      "raw_fields": [
+        "6 GN 1/1",
+        "220-240 V 1N/50 Hz",
+        "12 kW Gaz 1,1 kW Elk.",
+        "867 x 775 x 808 mm.",
+        "137,5 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218965-LPG",
+      "liste_eur": 31198.0,
+      "page": 155,
+      "section": "MAGISTAR / DI Dijital Ekran",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218925-ELEKTR‹K",
+      "liste_eur": 26683.0,
+      "page": 155,
+      "section": "MAGISTAR / DI Dijital Ekran",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218964-LPG",
+      "liste_eur": 23238.0,
+      "page": 155,
+      "section": "MAGISTAR / DI Dijital Ekran",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218924-ELEKTR‹K",
+      "liste_eur": 20362.0,
+      "page": 155,
+      "section": "MAGISTAR / DI Dijital Ekran",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218963-LPG",
+      "liste_eur": 17477.0,
+      "page": 155,
+      "section": "MAGISTAR / DI Dijital Ekran",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218923-ELEKTR‹K",
+      "liste_eur": 14743.0,
+      "page": 155,
+      "section": "MAGISTAR / DI Dijital Ekran",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218962-LPG",
+      "liste_eur": 11903.0,
+      "page": 155,
+      "section": "MAGISTAR / DI Dijital Ekran",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218922-ELEKTR‹K",
+      "liste_eur": 9773.0,
+      "page": 155,
+      "section": "MAGISTAR / DI Dijital Ekran",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218961-LPG",
+      "liste_eur": 13687.0,
+      "page": 155,
+      "section": "MAGISTAR / DI Dijital Ekran",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218921-ELEKTR‹K",
+      "liste_eur": 11238.0,
+      "page": 155,
+      "section": "MAGISTAR / DI Dijital Ekran",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218960-LPG",
+      "liste_eur": 10349.0,
+      "page": 155,
+      "section": "MAGISTAR / DI Dijital Ekran",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218920-ELEKTR‹K",
+      "liste_eur": 8170.0,
+      "page": 155,
+      "section": "MAGISTAR / DI Dijital Ekran",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218685-NG",
+      "liste_eur": 34675.0,
+      "page": 156,
+      "section": "Kombi Fırınlar - Boylersiz",
+      "raw_fields": [
+        "20 GN 2/1",
+        "220-240 V 1N/50 Hz",
+        "70 kW Gaz 2,50 kW Elk.",
+        "1162 x 1066 x 1794 mm.",
+        "475 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218684-NG",
+      "liste_eur": 25805.0,
+      "page": 156,
+      "section": "Kombi Fırınlar - Boylersiz",
+      "raw_fields": [
+        "20 GN 1/1",
+        "220-240 V 1N/50 Hz",
+        "42 kW Gaz 1,80 kW Elk.",
+        "911 x 864 x 1794 mm.",
+        "360 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218683-NG",
+      "liste_eur": 19005.0,
+      "page": 156,
+      "section": "Kombi Fırınlar - Boylersiz",
+      "raw_fields": [
+        "10 GN 2/1",
+        "220-240 V 1N/50 Hz",
+        "35 kW Gaz 1,50 kW Elk.",
+        "1090 x 971 x 1058 mm.",
+        "209 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218682-NG",
+      "liste_eur": 13564.0,
+      "page": 156,
+      "section": "Kombi Fırınlar - Boylersiz",
+      "raw_fields": [
+        "10 GN 1/1",
+        "220-240 V 1N/50 Hz",
+        "21 kW Gaz 1,10 kW Elk.",
+        "867 x 775 x 1058 mm.",
+        "157 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218681-NG",
+      "liste_eur": 14642.0,
+      "page": 156,
+      "section": "Kombi Fırınlar - Boylersiz",
+      "raw_fields": [
+        "6 GN 2/1",
+        "220-240 V 1N/50 Hz",
+        "24 kW Gaz 1,50 kW Elk.",
+        "1090 x 971 x 808 mm.",
+        "171 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218680-NG",
+      "liste_eur": 11816.0,
+      "page": 156,
+      "section": "Kombi Fırınlar - Boylersiz",
+      "raw_fields": [
+        "6 GN 1/1",
+        "220-240 V 1N/50 Hz",
+        "12 kW Gaz 1,1 kW Elk.",
+        "867 x 775 x 808 mm.",
+        "137,5 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218665-LPG",
+      "liste_eur": 33995.0,
+      "page": 156,
+      "section": "Kombi Fırınlar - Boylersiz",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218625-ELEKTR‹K",
+      "liste_eur": 30193.0,
+      "page": 156,
+      "section": "Kombi Fırınlar - Boylersiz",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218664-LPG",
+      "liste_eur": 26297.0,
+      "page": 156,
+      "section": "Kombi Fırınlar - Boylersiz",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218624-ELEKTR‹K",
+      "liste_eur": 23366.0,
+      "page": 156,
+      "section": "Kombi Fırınlar - Boylersiz",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218663-LPG",
+      "liste_eur": 19384.0,
+      "page": 156,
+      "section": "Kombi Fırınlar - Boylersiz",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218623-ELEKTR‹K",
+      "liste_eur": 16964.0,
+      "page": 156,
+      "section": "Kombi Fırınlar - Boylersiz",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218662-LPG",
+      "liste_eur": 13690.0,
+      "page": 156,
+      "section": "Kombi Fırınlar - Boylersiz",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218622-ELEKTR‹K",
+      "liste_eur": 11328.0,
+      "page": 156,
+      "section": "Kombi Fırınlar - Boylersiz",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218661-LPG",
+      "liste_eur": 14787.0,
+      "page": 156,
+      "section": "Kombi Fırınlar - Boylersiz",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218621-ELEKTR‹K",
+      "liste_eur": 12232.0,
+      "page": 156,
+      "section": "Kombi Fırınlar - Boylersiz",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218660-LPG",
+      "liste_eur": 11914.0,
+      "page": 156,
+      "section": "Kombi Fırınlar - Boylersiz",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "218620-ELEKTR‹K",
+      "liste_eur": 9651.0,
+      "page": 156,
+      "section": "Kombi Fırınlar - Boylersiz",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "110544",
+      "liste_eur": 14647.0,
+      "page": 157,
+      "section": "Net A¤ılık",
+      "raw_fields": [
+        "6 GN 1/1 veya 400x600 mm.",
+        "30 kg. So¤./30 kg. Don.",
+        "380-415 V 3N/50 Hz.",
+        "2,7 kW",
+        "897 x 937 x 1060 mm.",
+        "199 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "110549",
+      "liste_eur": 24710.0,
+      "page": 157,
+      "section": "Net A¤ılık",
+      "raw_fields": [
+        "10 GN 2/1 veya 400x600 mm.",
+        "100 kg. So¤. / 70 kg. Don.",
+        "380-415 V 3N/50 Hz.",
+        "5,5 kW",
+        "1250 x 1092 x 1730 mm.",
+        "350 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "110545",
+      "liste_eur": 14647.0,
+      "page": 157,
+      "section": "Net A¤ılık",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "110547",
+      "liste_eur": 19500.0,
+      "page": 157,
+      "section": "Net A¤ılık",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "110557",
+      "liste_eur": 39440.0,
+      "page": 157,
+      "section": "Net A¤ılık",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "110555",
+      "liste_eur": 40814.0,
+      "page": 157,
+      "section": "Net A¤ılık",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "110836",
+      "liste_eur": 5887.0,
+      "page": 158,
+      "section": "ﬁOK SO⁄UTUCU ve DONDURUCULAR",
+      "raw_fields": [
+        "5 GN 1/1-12,5 So¤./7 Kg. Don.",
+        "220-240 V 1N/50Hz.",
+        "0,73 kW",
+        "762 x 700 x 844 mm.",
+        "100 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "110568",
+      "liste_eur": 1586.0,
+      "page": 158,
+      "section": "ﬁOK SO⁄UTUCU ve DONDURUCULAR",
+      "raw_fields": [
+        "160 lt.",
+        "+2 / +10",
+        "220-240 V 1N/50Hz.",
+        "0,13 kW",
+        "600 x 637 x 850 mm.",
+        "45 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "111153",
+      "liste_eur": 2107.0,
+      "page": 158,
+      "section": "ﬁOK SO⁄UTUCU ve DONDURUCULAR",
+      "raw_fields": [
+        "400 lt.",
+        "0 / +10",
+        "220-240 V 1N/50Hz.",
+        "0,13 kW",
+        "700 x 620 x 1755 mm.",
+        "80 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "110832",
+      "liste_eur": 7151.0,
+      "page": 158,
+      "section": "ﬁOK SO⁄UTUCU ve DONDURUCULAR",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "110833",
+      "liste_eur": 11434.0,
+      "page": 158,
+      "section": "ﬁOK SO⁄UTUCU ve DONDURUCULAR",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "110834",
+      "liste_eur": 17248.0,
+      "page": 158,
+      "section": "ﬁOK SO⁄UTUCU ve DONDURUCULAR",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "110835",
+      "liste_eur": 17958.0,
+      "page": 158,
+      "section": "ﬁOK SO⁄UTUCU ve DONDURUCULAR",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "110573",
+      "liste_eur": 1595.0,
+      "page": 158,
+      "section": "ﬁOK SO⁄UTUCU ve DONDURUCULAR",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "110815",
+      "liste_eur": 2534.0,
+      "page": 158,
+      "section": "ﬁOK SO⁄UTUCU ve DONDURUCULAR",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600970",
+      "liste_eur": 1363.0,
+      "page": 161,
+      "section": "Net A¤ırlık",
+      "raw_fields": [
+        "200 kg./saat",
+        "1 Hızlı 1500 rpm",
+        "220-240 V 1N / 50-60 Hz.",
+        "0,50 kW",
+        "348 x 315 x 527 mm.",
+        "14 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600972",
+      "liste_eur": 1929.0,
+      "page": 161,
+      "section": "Net A¤ırlık",
+      "raw_fields": [
+        "Kompakt Sebze Do¤rama Makinaları",
+        "Prep4You",
+        "bölümü mevcuttur.",
+        "opsiyonel do¤rama disk seçene¤i mevcuttur.",
+        "olarak de¤iﬂebilir.",
+        "Prep4You SEBZE DO⁄RAMA D‹SK SET‹",
+        "600972",
+        "600970"
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "650196",
+      "liste_eur": 273.0,
+      "page": 161,
+      "section": "Net A¤ırlık",
+      "raw_fields": [
+        "650199 - 3 mm. Rende Diski",
+        "650214 - 2 mm. Kesme Diski",
+        "650216 - 5 mm. Kesme Diski"
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "650197",
+      "liste_eur": 680.0,
+      "page": 161,
+      "section": "Net A¤ırlık",
+      "raw_fields": [
+        "650214 - 2 mm. Kesme Diski",
+        "650216 - 5 mm. Kesme Diski",
+        "650199 - 3 mm. Rende Diski",
+        "650207 - 7 mm. Rende Diski",
+        "650221 - 10 mm. Dilimleme Diski",
+        "650223 - 10x10 mm. Küp Kesme"
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600419",
+      "liste_eur": 2266.0,
+      "page": 162,
+      "section": "Sebze Do¤rama Makinaları",
+      "raw_fields": [
+        "500 kg./saat",
+        "1 hız 340 rpm",
+        "220-240 V 1N / 50Hz.",
+        "0,5 kW",
+        "252 x 500 x 515 mm.",
+        "24 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "650093",
+      "liste_eur": 1187.0,
+      "page": 162,
+      "section": "Sebze Do¤rama Makinaları",
+      "raw_fields": [
+        "650083 - C2SX, 2 mm. Dilimleme Diski",
+        "650086 - C5SX, 5 mm. Dilimleme Diski",
+        "653773 - J2X, 2 mm. Rende Diski",
+        "650077 - AS4XX, 4x4 ﬁerit Kesme Diski",
+        "650160 - C10SX, 10 mm. Pres Dilimleme Diski",
+        "653568 - MT10T, 10x10 mm. Küp ‹çin Izgara"
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600423",
+      "liste_eur": 2870.0,
+      "page": 162,
+      "section": "Sebze Do¤rama Makinaları",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600424",
+      "liste_eur": 2846.0,
+      "page": 162,
+      "section": "Sebze Do¤rama Makinaları",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600411",
+      "liste_eur": 3152.0,
+      "page": 163,
+      "section": "iﬂlemlerinde yüksek kapasiteli otomatik silolu modeldir.",
+      "raw_fields": [
+        "2100 kg./saat",
+        "1 hız 340 rpm",
+        "220-240 V 1N / 50 Hz.",
+        "0,50 kW",
+        "416 x 490 x 690 mm.",
+        "32,9 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600412",
+      "liste_eur": 3509.0,
+      "page": 163,
+      "section": "iﬂlemlerinde yüksek kapasiteli otomatik silolu modeldir.",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600415",
+      "liste_eur": 3534.0,
+      "page": 163,
+      "section": "iﬂlemlerinde yüksek kapasiteli otomatik silolu modeldir.",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600413",
+      "liste_eur": 5691.0,
+      "page": 163,
+      "section": "iﬂlemlerinde yüksek kapasiteli otomatik silolu modeldir.",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600414",
+      "liste_eur": 5507.0,
+      "page": 163,
+      "section": "iﬂlemlerinde yüksek kapasiteli otomatik silolu modeldir.",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "650109",
+      "liste_eur": 895.0,
+      "page": 163,
+      "section": "iﬂlemlerinde yüksek kapasiteli otomatik silolu modeldir.",
+      "raw_fields": [
+        "PASLANMAZ ÇEL‹K HAREKETL‹ STAND",
+        "UZUN SEBZE YÜKLEME S‹LOSU",
+        "SEBZE DOLDURMA S‹LOSU",
+        "Aksesuar",
+        "Farklı Çaplarda 4 Tüplü Uzun Sebze Yükleme Silosu, ‹tme kollu"
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "650094",
+      "liste_eur": 756.0,
+      "page": 163,
+      "section": "iﬂlemlerinde yüksek kapasiteli otomatik silolu modeldir.",
+      "raw_fields": [
+        "Aksesuar",
+        "Paslanmaz Çelik Kollu Sebze Doldurma Silosu"
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "603431",
+      "liste_eur": 5628.0,
+      "page": 164,
+      "section": "Patates Cips Do¤rama Makinaları",
+      "raw_fields": [
+        "1500 kg./saat",
+        "380-415 V 3N / 50 Hz.",
+        "0,37 kW",
+        "360 x 670 x 560 mm.",
+        "45 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600960",
+      "liste_eur": 1324.0,
+      "page": 164,
+      "section": "Patates Cips Do¤rama Makinaları",
+      "raw_fields": [
+        "2,6 lt. Plastik Hazne",
+        "1 Hızlı - 1500 rpm",
+        "220-240 V 1N / 50 Hz.",
+        "0,50 kW",
+        "247 x 328 x 456 mm.",
+        "13 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "603432",
+      "liste_eur": 5929.0,
+      "page": 164,
+      "section": "Patates Cips Do¤rama Makinaları",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600959",
+      "liste_eur": 1513.0,
+      "page": 164,
+      "section": "Patates Cips Do¤rama Makinaları",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600965",
+      "liste_eur": 1608.0,
+      "page": 164,
+      "section": "Patates Cips Do¤rama Makinaları",
+      "raw_fields": [
+        "603431",
+        "600967",
+        "Cutter Mikserler"
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600967",
+      "liste_eur": 2174.0,
+      "page": 164,
+      "section": "Patates Cips Do¤rama Makinaları",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600443",
+      "liste_eur": 2165.0,
+      "page": 165,
+      "section": "Cutter Mikserler",
+      "raw_fields": [
+        "4,5 lt.",
+        "1 Hızlı - 1500 rpm",
+        "220-240 V 1N / 50 Hz.",
+        "0,75 kW",
+        "256 x 415 x 482 mm.",
+        "25 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600445",
+      "liste_eur": 2564.0,
+      "page": 165,
+      "section": "Cutter Mikserler",
+      "raw_fields": [
+        "5,5 lt.",
+        "2 Hızlı - 1500-3000 rpm",
+        "380-415 V 3N / 50-60 Hz.",
+        "1 kW",
+        "256 x 415 x 482 mm.",
+        "22 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600446",
+      "liste_eur": 2730.0,
+      "page": 165,
+      "section": "Cutter Mikserler",
+      "raw_fields": [
+        "7 lt.",
+        "2 Hızlı - 1500-3000 rpm",
+        "380-415 V 3N / 50 Hz.",
+        "1,2 kW",
+        "256 x 422 x 522 mm.",
+        "27 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600444",
+      "liste_eur": 2552.0,
+      "page": 165,
+      "section": "Cutter Mikserler",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600448",
+      "liste_eur": 2825.0,
+      "page": 165,
+      "section": "Cutter Mikserler",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600450",
+      "liste_eur": 2882.0,
+      "page": 165,
+      "section": "Cutter Mikserler",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600453",
+      "liste_eur": 2922.0,
+      "page": 165,
+      "section": "Cutter Mikserler",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600091 (K120S)",
+      "liste_eur": 8791.0,
+      "page": 166,
+      "section": "Cutter Mikserler",
+      "raw_fields": [
+        "11,5 lt.",
+        "2 Hızlı - 1500-3000 rpm",
+        "380-415 V 3N / 50 Hz.",
+        "2,2 kW",
+        "416 x 680 x 517 mm.",
+        "70 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600092(K180S)",
+      "liste_eur": 9605.0,
+      "page": 166,
+      "section": "Cutter Mikserler",
+      "raw_fields": [
+        "17,5 lt.",
+        "2 Hızlı - 1500-3000 rpm",
+        "380-415 V 3N / 50 Hz.",
+        "3,6 kW",
+        "416 x 680 x 603 mm.",
+        "75 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600093 (KE120S)",
+      "liste_eur": 8843.0,
+      "page": 166,
+      "section": "Cutter Mikserler",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600094(KE180S)",
+      "liste_eur": 10305.0,
+      "page": 166,
+      "section": "Cutter Mikserler",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600976",
+      "liste_eur": 1513.0,
+      "page": 167,
+      "section": "Kombine Cutter ve Sebze Do¤rama Makinaları",
+      "raw_fields": [
+        "2,6 lt. Plastik Hazne",
+        "1 kg./saat - cutter parçalama",
+        "250 kg./saat - sebze do¤rama",
+        "1 Hızlı - 1500 rpm",
+        "220-240 V 1N / 50 Hz.",
+        "0,50 kW",
+        "348 x 328 x 527 mm.",
+        "15,8 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600974",
+      "liste_eur": 1702.0,
+      "page": 167,
+      "section": "Kombine Cutter ve Sebze Do¤rama Makinaları",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600981",
+      "liste_eur": 1796.0,
+      "page": 167,
+      "section": "Kombine Cutter ve Sebze Do¤rama Makinaları",
+      "raw_fields": [
+        "650196",
+        "650197"
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600984",
+      "liste_eur": 2364.0,
+      "page": 167,
+      "section": "Kombine Cutter ve Sebze Do¤rama Makinaları",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600434",
+      "liste_eur": 3948.0,
+      "page": 168,
+      "section": "Kombine Cutter ve Sebze Do¤rama Makinaları",
+      "raw_fields": [
+        "5,5 lt.",
+        "2,5 kg./saat - cutter parçalama",
+        "500 kg./saat - sebze do¤rama",
+        "Hız Varyatörlü- 300-3700 rpm",
+        "220-240 V 1N / 50-60 Hz.",
+        "1,30 kW",
+        "252 x 485 x 505 mm.",
+        "30,5 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600437",
+      "liste_eur": 3964.0,
+      "page": 168,
+      "section": "Kombine Cutter ve Sebze Do¤rama Makinaları",
+      "raw_fields": [
+        "600434",
+        "600437"
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600431",
+      "liste_eur": 3921.0,
+      "page": 168,
+      "section": "Kombine Cutter ve Sebze Do¤rama Makinaları",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "603464",
+      "liste_eur": 489.0,
+      "page": 169,
+      "section": "SPEEDY M‹KSER - 250 Watt",
+      "raw_fields": [
+        "200 mm.",
+        "1 Hızlı",
+        "220-240 V 1N / 50 Hz.",
+        "0,25 kW",
+        "110 x 75 x 470 mm.",
+        "2 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600314",
+      "liste_eur": 672.0,
+      "page": 169,
+      "section": "SPEEDY M‹KSER - 250 Watt",
+      "raw_fields": [
+        "353 mm.",
+        "Hız Varyatörlü",
+        "220-240 V 1N / 50-60 Hz.",
+        "0,35 kW",
+        "138 x 120 x 665 mm.",
+        "4,2 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "650057",
+      "liste_eur": 277.0,
+      "page": 169,
+      "section": "SPEEDY M‹KSER - 250 Watt",
+      "raw_fields": [
+        "90 x 90 x 290 mm.",
+        "1 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "650108",
+      "liste_eur": 334.0,
+      "page": 169,
+      "section": "SPEEDY M‹KSER - 250 Watt",
+      "raw_fields": [
+        "120 x 120 x 468 mm",
+        "1,5 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "603465",
+      "liste_eur": 509.0,
+      "page": 169,
+      "section": "SPEEDY M‹KSER - 250 Watt",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "603676",
+      "liste_eur": 659.0,
+      "page": 169,
+      "section": "SPEEDY M‹KSER - 250 Watt",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "603677",
+      "liste_eur": 682.0,
+      "page": 169,
+      "section": "SPEEDY M‹KSER - 250 Watt",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600320",
+      "liste_eur": 680.0,
+      "page": 169,
+      "section": "SPEEDY M‹KSER - 250 Watt",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600392",
+      "liste_eur": 680.0,
+      "page": 169,
+      "section": "SPEEDY M‹KSER - 250 Watt",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600321",
+      "liste_eur": 689.0,
+      "page": 169,
+      "section": "SPEEDY M‹KSER - 250 Watt",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600329",
+      "liste_eur": 696.0,
+      "page": 169,
+      "section": "SPEEDY M‹KSER - 250 Watt",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600322",
+      "liste_eur": 752.0,
+      "page": 170,
+      "section": "El Mikserleri",
+      "raw_fields": [
+        "453 mm.",
+        "Hız Varyatörlü",
+        "220-240 V 1N / 50-60 Hz.",
+        "0,55 kW",
+        "138 x 120 x 765 mm.",
+        "4,8 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600336",
+      "liste_eur": 774.0,
+      "page": 170,
+      "section": "El Mikserleri",
+      "raw_fields": [
+        "653 mm.",
+        "Hız Varyatörlü",
+        "220-240 V 1N / 50-60 Hz.",
+        "0,65 kW",
+        "138 x 120 x 965 mm.",
+        "5 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600330",
+      "liste_eur": 765.0,
+      "page": 170,
+      "section": "El Mikserleri",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600324",
+      "liste_eur": 781.0,
+      "page": 170,
+      "section": "El Mikserleri",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600331",
+      "liste_eur": 765.0,
+      "page": 170,
+      "section": "El Mikserleri",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600332",
+      "liste_eur": 801.0,
+      "page": 170,
+      "section": "El Mikserleri",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600337",
+      "liste_eur": 818.0,
+      "page": 170,
+      "section": "El Mikserleri",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600136 - BEYAZ",
+      "liste_eur": 1351.0,
+      "page": 171,
+      "section": "Planet Mikserler",
+      "raw_fields": [
+        "5 lt.",
+        "Elektronik Hız Ayarı",
+        "200-240 V 1N / 50-60 Hz.",
+        "0,50 kW",
+        "284 x 382 x 434 mm.",
+        "12 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600137",
+      "liste_eur": 2320.0,
+      "page": 171,
+      "section": "Planet Mikserler",
+      "raw_fields": [
+        "5 lt.",
+        "Hız Varyatörlü 15-220 rpm",
+        "200-240 V 1N / 50-60 Hz.",
+        "0,45 kW",
+        "266 x 416 x 487 mm.",
+        "19 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "603797 - S‹YAH",
+      "liste_eur": 1313.0,
+      "page": 171,
+      "section": "Planet Mikserler",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600139",
+      "liste_eur": 2724.0,
+      "page": 171,
+      "section": "Planet Mikserler",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600142-XBE10",
+      "liste_eur": 4484.0,
+      "page": 172,
+      "section": "XBE10 / XBM10 - 10 Litre",
+      "raw_fields": [
+        "10 lt.",
+        "Elektronik Hız Varyatörlü",
+        "200-220 V 1N / 50-60 Hz.",
+        "0,75 kW",
+        "454 x 606 x 700 mm.",
+        "48 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600155 - XBE20 - Setüstü",
+      "liste_eur": 6617.0,
+      "page": 172,
+      "section": "XBE10 / XBM10 - 10 Litre",
+      "raw_fields": [
+        "20 lt.",
+        "Elektronik Hız Varyatörü 30-180 rpm",
+        "220-240 V 1N / 50-60 Hz.",
+        "1,01 kW",
+        "521 x 685 x 980 mm.",
+        "87 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600141-XBM10",
+      "liste_eur": 5326.0,
+      "page": 172,
+      "section": "XBE10 / XBM10 - 10 Litre",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600157 - XBE20 - Standlı",
+      "liste_eur": 6892.0,
+      "page": 172,
+      "section": "XBE10 / XBM10 - 10 Litre",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600145 - XBM20 - Setüstü",
+      "liste_eur": 6577.0,
+      "page": 172,
+      "section": "XBE10 / XBM10 - 10 Litre",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600150 - XBM20 - Standlı",
+      "liste_eur": 6874.0,
+      "page": 172,
+      "section": "XBE10 / XBM10 - 10 Litre",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600167-XBE30",
+      "liste_eur": 7769.0,
+      "page": 173,
+      "section": "XBE30 / XBM30 - 30 Litre",
+      "raw_fields": [
+        "30 lt.",
+        "Elektronik Hız Varyatörlü 30-180 rpm",
+        "220-240 V 1N / 50-60 Hz.",
+        "1,10 kW",
+        "532 x 685 x 1208 mm.",
+        "111 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600175-MBE40",
+      "liste_eur": 12390.0,
+      "page": 173,
+      "section": "XBE30 / XBM30 - 30 Litre",
+      "raw_fields": [
+        "40 lt.",
+        "Elektronik Hız Varyatörlü",
+        "3 sabit hız ayarı 40-80-160 rpm",
+        "220-240 V 1N / 50-60 Hz.",
+        "2,20 kW",
+        "655 x 850 x 1370 mm.",
+        "195 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600163-XBM30",
+      "liste_eur": 7369.0,
+      "page": 173,
+      "section": "XBE30 / XBM30 - 30 Litre",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600176-MBE40",
+      "liste_eur": 13428.0,
+      "page": 173,
+      "section": "XBE30 / XBM30 - 30 Litre",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600187-XBE80",
+      "liste_eur": 27404.0,
+      "page": 174,
+      "section": "XBE60 - BMX60 - BMXE60 - XBE80 - BMXE80 / 60 Litre - 80 Litre",
+      "raw_fields": [
+        "80 lt.",
+        "Elektronik Hız Varyatörü 20-170 rpm",
+        "380-415 V 3N / 50-60 Hz.",
+        "4 kW",
+        "685 x 1050 x 1445 mm.",
+        "342 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600177-BMX60",
+      "liste_eur": 21112.0,
+      "page": 174,
+      "section": "XBE60 - BMX60 - BMXE60 - XBE80 - BMXE80 / 60 Litre - 80 Litre",
+      "raw_fields": [
+        "60 lt.",
+        "9 Kademeli Mekanik Hız Ayarı 20-160 rpm",
+        "380-415 V 3N / 50Hz.",
+        "1,54 kW",
+        "685 x 1087 x 1445 mm.",
+        "330 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600186-BMXE80",
+      "liste_eur": 26495.0,
+      "page": 174,
+      "section": "XBE60 - BMX60 - BMXE60 - XBE80 - BMXE80 / 60 Litre - 80 Litre",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600181-BMXE60",
+      "liste_eur": 23606.0,
+      "page": 174,
+      "section": "XBE60 - BMX60 - BMXE60 - XBE80 - BMXE80 / 60 Litre - 80 Litre",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600182-XBE60",
+      "liste_eur": 24470.0,
+      "page": 174,
+      "section": "XBE60 - BMX60 - BMXE60 - XBE80 - BMXE80 / 60 Litre - 80 Litre",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "602184",
+      "liste_eur": 4195.0,
+      "page": 175,
+      "section": "Vakum Paketleme Makinaları",
+      "raw_fields": [
+        "8 m",
+        "3/saat",
+        "220-240 V 1N / 50-60 Hz.",
+        "0,6 kW",
+        "425 x 479 x 374 mm.",
+        "47 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "602185",
+      "liste_eur": 4581.0,
+      "page": 175,
+      "section": "Vakum Paketleme Makinaları",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "602186",
+      "liste_eur": 5691.0,
+      "page": 175,
+      "section": "Vakum Paketleme Makinaları",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "602187",
+      "liste_eur": 7187.0,
+      "page": 175,
+      "section": "Vakum Paketleme Makinaları",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600524",
+      "liste_eur": 1375.0,
+      "page": 176,
+      "section": "LVA100 - 32 Litre / EL40 - 32 Litre / ELX65 - 65 Litre",
+      "raw_fields": [
+        "Yatık Tip - Kayıﬂlı",
+        "250 mm.",
+        "220-240 V 1N / 50 Hz.",
+        "0,15 kW",
+        "510 x 420 x 380 mm.",
+        "25 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "603354-EL40",
+      "liste_eur": 3293.0,
+      "page": 176,
+      "section": "LVA100 - 32 Litre / EL40 - 32 Litre / ELX65 - 65 Litre",
+      "raw_fields": [
+        "32 lt. 5 kg./Sefer",
+        "220-240 V 1N / 50 Hz.",
+        "0,37 kW",
+        "460 x 540 x 800 mm.",
+        "48 kg."
+      ]
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600521",
+      "liste_eur": 2480.0,
+      "page": 176,
+      "section": "LVA100 - 32 Litre / EL40 - 32 Litre / ELX65 - 65 Litre",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600522",
+      "liste_eur": 2911.0,
+      "page": 176,
+      "section": "LVA100 - 32 Litre / EL40 - 32 Litre / ELX65 - 65 Litre",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "600523",
+      "liste_eur": 4391.0,
+      "page": 176,
+      "section": "LVA100 - 32 Litre / EL40 - 32 Litre / ELX65 - 65 Litre",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "603651-ELX65",
+      "liste_eur": 4835.0,
+      "page": 176,
+      "section": "LVA100 - 32 Litre / EL40 - 32 Litre / ELX65 - 65 Litre",
+      "raw_fields": []
+    },
+    {
+      "brand": "Dito Sama",
+      "model": "601524-LVA100",
+      "liste_eur": 11452.0,
+      "page": 176,
+      "section": "LVA100 - 32 Litre / EL40 - 32 Litre / ELX65 - 65 Litre",
+      "raw_fields": []
+    }
+  ]
+}
