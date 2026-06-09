@@ -3,7 +3,7 @@
 İnoksan 2026 Yurtiçi Bayi Fiyatları R1.xlsx → dept katalog (yalnız INO-* ana ürünler).
 Aksesuar / Genel Aksesuar (201–209 önekleri) dahil değil.
 
-Alış: liste × 0,77 (%23 iskonto) · Satış: alış × 1,10 (%10 kar)
+Alış: liste × 0,73 (%27 iskonto) · Satış: alış × 1,15 (%15 kar)
 
   python scripts/sync-inoksan-fiyat-2026.py
   python scripts/sync-inoksan-fiyat-2026.py --dry-run
@@ -24,8 +24,8 @@ ROOT = Path(__file__).resolve().parent.parent
 DEPT_DIR = ROOT / "public/data/dept"
 KUR_EUR_TRY = 53.2979
 KDV_ORAN = 20
-BAYI_ORAN = 0.77
-KAR_ORAN = 1.10
+BAYI_ORAN = 0.73
+KAR_ORAN = 1.15
 BRAND = "İnoksan"
 KAYNAK = "inoksan-fiyat-listesi-2026-r1"
 
@@ -102,9 +102,9 @@ def pricing_fields(liste_eur: float, sku: str, short_name: str, cat_label: str) 
             "",
             f"Ürün kodu: {sku}",
             f"Liste fiyatı (EUR): {liste}",
-            f"Bayi iskonto: %23 (ödeme oranı {BAYI_ORAN})",
+            f"Bayi iskonto: %27 (ödeme oranı {BAYI_ORAN})",
             f"Bayi net alış (EUR): {alis}",
-            f"Equsto kar: %10",
+            f"Equsto kar: %15",
             f"Equsto satış (EUR): {satis}",
             f"Hesap: liste × {BAYI_ORAN} × {KAR_ORAN}",
             f"Equsto satış (TL, KDV dahil): {fmt_try(fiyat_tl)}",
@@ -124,8 +124,8 @@ def pricing_fields(liste_eur: float, sku: str, short_name: str, cat_label: str) 
         "satis_fiyati_eur": satis,
         "satis_eur_indirimli": satis,
         "iskontolu_fiyat": satis,
-        "bayi_iskonto": 0.23,
-        "equsto_kar_oran": 0.10,
+        "bayi_iskonto": 0.27,
+        "equsto_kar_oran": 0.15,
         "para_birimi": "EUR",
         "fiyat_kaynagi": KAYNAK,
         "kaynak": KAYNAK,
@@ -237,6 +237,13 @@ def load_old_inoksan_by_sku() -> dict[str, dict]:
     return idx
 
 
+def write_json_atomic(path: Path, data: list) -> None:
+    payload = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
+    tmp = path.with_suffix(f".tmp-{path.stem}.json")
+    tmp.write_text(payload, encoding="utf-8")
+    tmp.replace(path)
+
+
 def merge_into_depts(rows: list[dict], dry_run: bool) -> dict:
     by_dept: dict[str, list[dict]] = {}
     for r in rows:
@@ -259,10 +266,7 @@ def merge_into_depts(rows: list[dict], dry_run: bool) -> dict:
             data.extend(add)
             print(f"  {dept_file.name}: -{removed} +{len(add)}")
             if not dry_run:
-                dept_file.write_text(
-                    json.dumps(data, ensure_ascii=False, separators=(",", ":")),
-                    encoding="utf-8",
-                )
+                write_json_atomic(dept_file, data)
 
     if by_dept:
         for dept, add in by_dept.items():
@@ -279,10 +283,7 @@ def merge_into_depts(rows: list[dict], dry_run: bool) -> dict:
             stats["added"] += len(add)
             print(f"  {path.name}: +{len(add)} (yeni dept dosyası)")
             if not dry_run:
-                path.write_text(
-                    json.dumps(data, ensure_ascii=False, separators=(",", ":")),
-                    encoding="utf-8",
-                )
+                write_json_atomic(path, data)
     return stats
 
 
