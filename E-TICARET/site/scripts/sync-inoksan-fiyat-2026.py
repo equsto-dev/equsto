@@ -204,6 +204,44 @@ def is_inoksan_row(row: dict) -> bool:
     )
 
 
+def yikama_vitrin_ok(row: dict) -> bool:
+    """Yıkama vitrin: yalnızca makine satırları (tezgah/ZCO-ZMD paketleri hariç)."""
+    if row.get("dept") != "yikama":
+        return True
+    if row.get("inoksan_h2") == "Ekipmanlar":
+        return False
+    sku = str(row.get("sku") or "")
+    if "-ZCO-" in sku or "-ZMD-" in sku:
+        return False
+    return True
+
+
+PRESERVE_KEYS = (
+    "images",
+    "inoksan_web_id",
+    "inoksan_web_title",
+    "inoksan_slug",
+    "inoksan_url",
+    "inoksan_match_via",
+    "inoksan_image_source",
+    "inoksan_image_url",
+    "inoksan_enriched",
+    "inoksan_enriched_at",
+)
+
+
+def load_old_inoksan_by_sku() -> dict[str, dict]:
+    idx: dict[str, dict] = {}
+    for dept_file in DEPT_DIR.glob("*.json"):
+        data = json.loads(dept_file.read_text(encoding="utf-8"))
+        if not isinstance(data, list):
+            continue
+        for row in data:
+            if is_inoksan_row(row) and row.get("sku"):
+                idx[str(row["sku"])] = row
+    return idx
+
+
 def merge_into_depts(rows: list[dict], dry_run: bool) -> dict:
     by_dept: dict[str, list[dict]] = {}
     for r in rows:
@@ -261,10 +299,25 @@ def main() -> None:
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
-    rows = load_excel_rows()
-    print(f"[inoksan] Excel ana ürün (INO-*): {len(rows)}")
+    all_rows = load_excel_rows()
+    rows = [r for r in all_rows if yikama_vitrin_ok(r)]
+    skipped_yikama = sum(
+        1 for r in all_rows if r.get("dept") == "yikama" and not yikama_vitrin_ok(r)
+    )
+    print(f"[inoksan] Excel ana ürün (INO-*): {len(all_rows)}")
+    if skipped_yikama:
+        print(f"[inoksan] Yıkama vitrin dışı (silindi): {skipped_yikama}")
     if not rows:
         sys.exit(1)
+
+    old_by_sku = load_old_inoksan_by_sku()
+    for row in rows:
+        prev = old_by_sku.get(str(row.get("sku") or ""))
+        if not prev:
+            continue
+        for key in PRESERVE_KEYS:
+            if prev.get(key):
+                row[key] = prev[key]
 
     stats = merge_into_depts(rows, args.dry_run)
     print(f"\nÖzet: +{stats['added']} ürün | -{stats['removed']} eski | {stats['depts']} dept")
