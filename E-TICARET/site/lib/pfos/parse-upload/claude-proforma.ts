@@ -29,7 +29,7 @@ KURALLAR:
 - Sadece ürün satırlarını al. Bölüm başlıkları (kuru depo, sıcak mutfak vb.) ürün değil — bolum alanına yaz.
 - "mevcut" yazıyorsa o kalem müşteride zaten var, mevcut: true yap.
 - Ölçü yoksa boş string bırak.
-- Marka yoksa veya "-" ise boş string bırak.
+- Marka yoksa veya "-" Equsto kendi önerdiği markayla fiyalandırsın.
 - Adet sayısal olsun.
 - tanim = yalnızca ekipman adı (BÜYÜK HARF). Fiyat (€/TL), "sktürk", bölüm adı, marka kodu tanim içine YAZMA.
 - marka_orijinal = satırdaki marka (atalay, öztiryakiler, portashelf, equsto vb.).
