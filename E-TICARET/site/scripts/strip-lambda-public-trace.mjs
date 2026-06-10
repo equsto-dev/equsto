@@ -9,11 +9,14 @@ import { fileURLToPath } from "node:url";
 const siteDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const serverDir = path.join(siteDir, ".next", "server");
 
-const STRIP_RE =
-  /(?:^|[\\/])public[\\/](?:images|data|assets)(?:[\\/]|$)|electrolux-professional|[\\/]ozti[\\/]|[\\/]cafemarkt-images[\\/]/i;
+const STRIP_EXTRA_RE =
+  /electrolux-professional|[\\/]ozti[\\/]|[\\/]cafemarkt-images[\\/]/i;
 
+/** Lambda trace'ten public/ statik dosyalarini cikar (webpack build). */
 function shouldStrip(rel) {
-  return STRIP_RE.test(String(rel).replace(/\\/g, "/"));
+  const n = String(rel).replace(/\\/g, "/");
+  if (/(?:^|[/])public(?:[/]|$)/i.test(n)) return true;
+  return STRIP_EXTRA_RE.test(n);
 }
 
 function walk(dir, out) {

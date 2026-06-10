@@ -132,6 +132,8 @@ const nextConfig: NextConfig = {
     "meilisearch",
     "puppeteer-core",
     "@sparticuz/chromium-min",
+    "pdf-parse",
+    "exceljs",
   ],
   outputFileTracingExcludes: {
     "/**": apiTraceExcludes,
