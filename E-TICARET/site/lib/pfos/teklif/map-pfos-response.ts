@@ -20,6 +20,7 @@ import {
   normalizePfosGorselUrl,
   oztiWebImageRelFromSku,
 } from "../core/katalog-gorsel-url";
+import { equstoPimakGorselRelFromSku } from "../core/equsto-pimak-gorsel";
 import { displayIsimFromSablon } from "../core/ozel-imalat";
 import { sanitizeDavlumbazOlcu } from "./davlumbaz-olcu";
 import { repairPfosDisplayText } from "@/lib/utf8/repair-turkish-fffd";
@@ -85,7 +86,9 @@ export function pfosResponseToTeklifV14(
     const { bolumNo, bolumBaslik } = bolumForKalem(k, res.teklifLayout);
     const stokNo = u?.sku?.trim() ?? "";
     const gorselFallback = normalizePfosGorselUrl(
-      u?.gorselUrl ?? (stokNo ? oztiWebImageRelFromSku(stokNo) : null),
+      u?.gorselUrl ??
+        equstoPimakGorselRelFromSku(stokNo, k.isim) ??
+        (stokNo ? oztiWebImageRelFromSku(stokNo) : null),
     );
 
     return {

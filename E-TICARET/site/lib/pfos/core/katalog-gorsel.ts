@@ -10,6 +10,7 @@ import {
   oztiWebImageRelFromSku,
   portashelfGorselRelFromSku,
 } from "./katalog-gorsel-url";
+import { equstoPimakGorselRelFromSku } from "./equsto-pimak-gorsel";
 
 export {
   equstoGorselRelFromSku,
@@ -83,6 +84,7 @@ function hasKnownProductPrice(urun: EslesmisUrun): boolean {
 export async function resolveGorselUrlBySku(
   sku: string | null | undefined,
   existing?: string | null,
+  tanim?: string | null,
 ): Promise<string | null> {
   const key = normSku(sku);
   if (!key) return normalizePfosGorselUrl(existing);
@@ -90,11 +92,13 @@ export async function resolveGorselUrlBySku(
   const index = await loadSkuGorselIndex();
   const fromCatalog = index.get(key);
 
+  const pimakTezgah = equstoPimakGorselRelFromSku(key, tanim);
   const ozti = oztiWebImageRelFromSku(key);
   const portashelf = portashelfGorselRelFromSku(key);
   const equstoDir = equstoGorselRelFromSku(key);
   const equstoCandidates = equstoDir
     ? [
+        pimakTezgah,
         `${equstoDir}/p193-prod00.jpeg`,
         `${equstoDir}/p193-prod00.jpg`,
         `${equstoDir.replace("images/catalog/equsto/", "images/")}_1.jpg`,
@@ -103,6 +107,7 @@ export async function resolveGorselUrlBySku(
 
   const hit = firstExistingImageRel([
     existing,
+    pimakTezgah,
     portashelf,
     fromCatalog,
     ozti,
@@ -131,7 +136,7 @@ export async function enrichEslesmisGorsel(
     return normalizedExisting ? { ...urun, gorselUrl: normalizedExisting } : urun;
   }
 
-  const gorselUrl = await resolveGorselUrlBySku(sku, urun.gorselUrl);
+  const gorselUrl = await resolveGorselUrlBySku(sku, urun.gorselUrl, urun.ad);
   if (!gorselUrl || gorselUrl === urun.gorselUrl) return urun;
   return { ...urun, gorselUrl };
 }

@@ -14,7 +14,9 @@ export function extractFeatureSearchTerms(tanim: string): string[] {
     terms.push("ara raflı", "raflı", "taban raf");
   }
   if (/cekmece/.test(f)) terms.push("çekmeceli");
-  if (/evyeli|evye/.test(f)) terms.push("evyeli");
+  if (/çift\s*evy|cift\s*evy|iki\s*evye/.test(f)) {
+    terms.push("çift evyeli", "evyeli");
+  } else if (/evyeli|evye/.test(f)) terms.push("evyeli");
   if (/banket|sicak\s*banket/.test(f)) {
     terms.push("banket", "servis arabası", "tepsi arabası");
   }
@@ -79,6 +81,40 @@ export function requiresShelvedTezgah(tanim: string): boolean {
 export function requiresTrolley(tanim: string): boolean {
   const q = normTanim(tanim);
   return /banket|servis\s*arab|tasima\s*arab|sicak\s*banket/.test(q);
+}
+
+/** Evye sayısı — düz / rafsız tezgaha karşı */
+export function sinkFeatureScore(tanim: string, hit: CatalogSearchHit): number {
+  const q = normTanim(tanim);
+  const hay = hitHaystack(hit);
+
+  const wantsDoubleSink = /çift\s*evy|cift\s*evy|iki\s*evye/.test(q);
+  const wantsSingleSink = /tek\s*evy/.test(q);
+  const wantsAnySink = wantsDoubleSink || wantsSingleSink || /evyeli|evye\s*li/.test(q);
+
+  if (!wantsAnySink) return 0;
+
+  const hasDouble = /çift\s*evy|cift\s*evy|iki\s*evye|2\s*evye/.test(hay);
+  const hasSingle = /tek\s*evy|1\s*evye/.test(hay);
+  const hasSink = /evyeli|evye|lavabo/.test(hay);
+  const isPlainBench =
+    /alt\s*tablasiz|rafsiz|rafsız|duz\s*tezgah|düz\s*tezgah/.test(hay) &&
+    !hasSink;
+
+  if (wantsDoubleSink) {
+    if (hasDouble) return 60;
+    if (isPlainBench || (hasSingle && !hasDouble)) return -250;
+    if (!hasSink) return -180;
+  }
+  if (wantsSingleSink && hasSingle) return 45;
+  if (wantsAnySink && hasSink) return 35;
+  if (wantsAnySink && isPlainBench) return -200;
+  return -40;
+}
+
+export function requiresSinkTezgah(tanim: string): boolean {
+  const q = normTanim(tanim);
+  return /çift\s*evy|cift\s*evy|tek\s*evy|evyeli|evye\s*li|iki\s*evye/.test(q);
 }
 
 export function requiresDishwasher(tanim: string): boolean {
