@@ -18,9 +18,18 @@ const BOLUM_KALINTI = [
   "pastane",
 ];
 
+/** Proforma kısaltmaları (RFLI → RAFLI vb.) */
+export function expandProformaAbbreviations(raw: string): string {
+  return String(raw ?? "")
+    .replace(/\bRFLI\b/gi, "RAFLI")
+    .replace(/\bKAY\.?\s*/gi, "KAYDIRMA ")
+    .replace(/\bMOB\.?\s*/gi, "MOBİLYA ")
+    .replace(/\bSKTÜRK\b/gi, "sktürk");
+}
+
 /** Proforma PDF satırından arama / teklif için temiz tanım */
 export function cleanProformaTanim(raw: string): string {
-  let s = String(raw ?? "").trim();
+  let s = expandProformaAbbreviations(String(raw ?? "").trim());
   if (!s) return "";
 
   s = s.replace(OLCU_RE, " ");

@@ -2,11 +2,9 @@ import ExcelJS from "exceljs";
 import { NextRequest, NextResponse } from "next/server";
 import { parseEkipmanWorksheet } from "@/lib/pfos/kategoriler/parse-ekipman-xlsx";
 import { parseProformaExcelWorksheet } from "@/lib/pfos/liste-proforma-excel";
-import {
-  analyzeExcelForListe,
-  analyzePdfForListe,
-} from "@/lib/pfos/liste-pdf-analiz";
+import { analyzeExcelForListe } from "@/lib/pfos/liste-pdf-analiz";
 import { calculateListeQuote } from "@/lib/pfos/liste-fiyat";
+import { processPdfUpload } from "@/lib/pfos/parse-upload/process-pdf-upload";
 import { TEKLIF_DEFAULT_FIYAT_STRATEJISI } from "@/lib/pfos/teklif/teklif-policy";
 import type { FiyatStratejisi } from "@/lib/pfos/schemas/pfos.schema";
 
@@ -80,14 +78,12 @@ export async function POST(req: NextRequest) {
 
   try {
     if (kind === "pdf") {
-      const importKalemler = await analyzePdfForListe(ab, { notlar });
-      const response = await calculateListeQuote({
-        importKalemler,
+      const response = await processPdfUpload({
+        buffer: ab,
         kaynakDosya: name,
-        kaynakTip: "pdf",
         projeAdi: projeAdi || baseName,
         sehir,
-        fiyatStratejisi,
+        notlar,
       });
       return NextResponse.json(response, { status: 200 });
     }
