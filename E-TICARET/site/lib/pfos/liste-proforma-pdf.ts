@@ -94,9 +94,10 @@ function normalizeProformaBlob(text: string): string {
     .replace(/\r\n/g, "\n")
     .replace(/\s+/g, " ")
     .replace(/(\d+)mevcut/gi, "$1 mevcut")
+    // pdf-parse: "K1İSTİF", "C1PANEL" — poz ile tanım bitişik (boşluk yok)
     .replace(
-      /([ACDFK])(\d{1,2}(?:A|B)?)([A-ZİÇĞÖÜŞ])/gi,
-      "$1$2 $3",
+      /([ACDFK]\d{1,2}(?:A|B)?)(?=[İIŞÇĞÖÜA-Z])/g,
+      (m) => `${m} `,
     )
     .trim();
 }

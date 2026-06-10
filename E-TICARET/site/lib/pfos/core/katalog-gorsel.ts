@@ -127,7 +127,7 @@ export async function enrichEslesmisGorsel(
     return urun;
   }
 
-  if (!sku || !hasKnownProductPrice(urun)) {
+  if (!sku) {
     return normalizedExisting ? { ...urun, gorselUrl: normalizedExisting } : urun;
   }
 
@@ -143,7 +143,7 @@ export async function enrichPfosKalemlerGorsel(
   const out: PFOSKalemi[] = [];
   for (const k of kalemler) {
     const u = k.urun;
-    if (!u?.sku?.trim() || !hasKnownProductPrice(u)) {
+    if (!u?.sku?.trim()) {
       out.push(k);
       continue;
     }

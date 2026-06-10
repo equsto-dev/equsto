@@ -152,10 +152,7 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
   }
 
   function slimTeklifV14ForApi(m: TeklifModelV14): TeklifModelV14 {
-    return {
-      ...m,
-      satirlar: m.satirlar.map(({ fotoUrl: _foto, ...rest }) => rest),
-    };
+    return m;
   }
 
   async function handleSend(kanal: SendKanal) {

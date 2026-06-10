@@ -2,6 +2,7 @@ import chromium from "@sparticuz/chromium-min";
 import puppeteer from "puppeteer-core";
 import type { TeklifModelV14 } from "./teklif-v14.types";
 import { buildTeklifV14PrintHtml } from "./build-teklif-v14-print-html";
+import { enrichTeklifV14ModelGorsel } from "./enrich-teklif-v14-gorsel.server";
 
 const CHROMIUM_PACK_X64 =
   "https://github.com/Sparticuz/chromium/releases/download/v149.0.0/chromium-v149.0.0-pack.x64.tar";
@@ -25,7 +26,8 @@ export async function generateTeklifV14PdfBuffer(
 ): Promise<Buffer> {
   chromium.setGraphicsMode = false;
 
-  const html = buildTeklifV14PrintHtml(model, {
+  const enriched = await enrichTeklifV14ModelGorsel(model);
+  const html = buildTeklifV14PrintHtml(enriched, {
     siteOrigin: siteOrigin(),
     autoPrint: false,
   });
@@ -40,7 +42,19 @@ export async function generateTeklifV14PdfBuffer(
   try {
     const page = await browser.newPage();
     await page.setViewport({ width: 1920, height: 1080 });
-    await page.setContent(html, { waitUntil: "load", timeout: 60_000 });
+    await page.setContent(html, { waitUntil: "load", timeout: 90_000 });
+    await page.evaluate(() =>
+      Promise.all(
+        Array.from(document.images).map((img) =>
+          img.complete
+            ? Promise.resolve()
+            : new Promise<void>((resolve) => {
+                img.onload = () => resolve();
+                img.onerror = () => resolve();
+              }),
+        ),
+      ),
+    );
     const pdf = await page.pdf({
       format: "A4",
       landscape: true,

@@ -1,6 +1,7 @@
 import ExcelJS from "exceljs";
 import { NextRequest, NextResponse } from "next/server";
 import { parseEkipmanWorksheet } from "@/lib/pfos/kategoriler/parse-ekipman-xlsx";
+import { parseProformaExcelWorksheet } from "@/lib/pfos/liste-proforma-excel";
 import {
   analyzeExcelForListe,
   analyzePdfForListe,
@@ -101,7 +102,10 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const satirlar = parseEkipmanWorksheet(ws);
+    let satirlar = parseEkipmanWorksheet(ws);
+    if (!satirlar.length) {
+      satirlar = parseProformaExcelWorksheet(ws);
+    }
     if (satirlar.length) {
       const response = await calculateListeQuote({
         satirlar,

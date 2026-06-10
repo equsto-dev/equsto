@@ -84,12 +84,8 @@ export function pfosResponseToTeklifV14(
     const birimEur = birimEurFromEslesmis(u, eurTry);
     const { bolumNo, bolumBaslik } = bolumForKalem(k, res.teklifLayout);
     const stokNo = u?.sku?.trim() ?? "";
-    const hasKnownProduct =
-      Boolean(stokNo) &&
-      (birimEur != null || (u?.fiyat != null && Number(u.fiyat) > 0));
     const gorselFallback = normalizePfosGorselUrl(
-      u?.gorselUrl ??
-        (hasKnownProduct && stokNo ? oztiWebImageRelFromSku(stokNo) : null),
+      u?.gorselUrl ?? (stokNo ? oztiWebImageRelFromSku(stokNo) : null),
     );
 
     return {
