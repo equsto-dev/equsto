@@ -34,14 +34,21 @@ export function isPanelOdaReferansIsim(isim: string): boolean {
   );
 }
 
+function isIstifRafReferans(isim: string): boolean {
+  return /istif raf/.test(norm(isim));
+}
+
 export function isPanelSogukOdaPfosKalem(opts: {
   isim?: string | null;
   urunTipi?: string | null;
   notlar?: string | null;
   altKategori?: string | null;
 }): boolean {
+  if (isIstifRafReferans(String(opts.isim ?? ""))) return false;
   const tip = norm(String(opts.urunTipi ?? "")).replace(/_/g, "-");
-  if (/^panel-soguk-oda|^soguk-oda-panel|^soguk-oda$/.test(tip)) return true;
+  if (/^panel-soguk-oda|^soguk-oda-panel|^soguk-oda$/.test(tip)) {
+    return /panel tip|soguk oda/.test(norm(String(opts.isim ?? "")));
+  }
   if (isPanelOdaReferansIsim(String(opts.isim ?? ""))) {
     return !/derin dondurucu|dondurucu oda|deep freeze|deep freezer/.test(
       norm(String(opts.isim ?? "")),
@@ -58,13 +65,16 @@ export function isPanelDerinDondurucuOdaPfosKalem(opts: {
   notlar?: string | null;
   altKategori?: string | null;
 }): boolean {
+  if (isIstifRafReferans(String(opts.isim ?? ""))) return false;
   const tip = norm(String(opts.urunTipi ?? "")).replace(/_/g, "-");
   if (
     /^panel-derin-dondurucu-oda|^derin-dondurucu-oda-panel|^panel-dondurucu-oda$/.test(
       tip,
     )
   ) {
-    return true;
+    return /panel tip|derin dondurucu|dondurucu oda/.test(
+      norm(String(opts.isim ?? "")),
+    );
   }
   const n = norm(String(opts.isim ?? ""));
   if (

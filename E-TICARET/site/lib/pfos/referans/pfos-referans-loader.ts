@@ -103,10 +103,25 @@ function urunTipiFromSatir(s: PfosEkipmanSatir): string {
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/ı/g, "i");
-  if (/panel tip derin dondurucu|panel tipi derin dondurucu|panel tip dondurucu oda/.test(bolum)) {
+  const adNorm = String(s.ad ?? "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/ı/g, "i");
+  if (
+    /panel tip derin dondurucu|panel tipi derin dondurucu|panel tip dondurucu oda/.test(
+      bolum,
+    ) &&
+    /panel tip|derin dondurucu|dondurucu oda/.test(adNorm) &&
+    !/istif raf/.test(adNorm)
+  ) {
     return "panel-derin-dondurucu-oda";
   }
-  if (/panel tip soguk oda|panel tipi soguk oda/.test(bolum)) {
+  if (
+    /panel tip soguk oda|panel tipi soguk oda/.test(bolum) &&
+    /panel tip|soguk oda/.test(adNorm) &&
+    !/istif raf/.test(adNorm)
+  ) {
     return "panel-soguk-oda";
   }
 

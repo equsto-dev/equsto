@@ -3,6 +3,7 @@
  */
 
 import { adminLoginToken } from "@/lib/admin-auth";
+import { anthropicErrorMessage } from "@/lib/claude/anthropic-errors";
 
 export type ImportAnalizRequest = {
   dosya_base64: string;
@@ -39,7 +40,7 @@ const IMPORT_MAX_TOKENS = Math.min(
   64000,
   Math.max(
     4096,
-    Number(process.env.ANTHROPIC_IMPORT_MAX_TOKENS || 16384) || 16384,
+    Number(process.env.ANTHROPIC_IMPORT_MAX_TOKENS || 8192) || 8192,
   ),
 );
 
@@ -107,15 +108,31 @@ function mapAnalizRows(raw: unknown): ImportAnalizRow[] {
   return out;
 }
 
-async function analizViaAnthropic(
-  req: ImportAnalizRequest,
-): Promise<ImportAnalizRow[]> {
+async function anthropicJsonFromMessages(
+  system: string,
+  userText: string,
+  document?: { media_type: string; data: string },
+): Promise<unknown[]> {
   const apiKey = process.env.ANTHROPIC_API_KEY?.trim();
   if (!apiKey) {
     throw new Error(
       "ANTHROPIC_API_KEY tanımlı değil — Vercel Environment Variables'a ekleyin.",
     );
   }
+
+  const userContent = document
+    ? [
+        {
+          type: "document" as const,
+          source: {
+            type: "base64" as const,
+            media_type: document.media_type,
+            data: document.data,
+          },
+        },
+        { type: "text" as const, text: userText },
+      ]
+    : userText;
 
   const res = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
@@ -128,40 +145,15 @@ async function analizViaAnthropic(
       model: ANTHROPIC_MODEL,
       max_tokens: IMPORT_MAX_TOKENS,
       temperature: 0.2,
-      system: req.system_prompt,
-      messages: [
-        {
-          role: "user",
-          content: [
-            {
-              type: "document",
-              source: {
-                type: "base64",
-                media_type: req.dosya_tip,
-                data: req.dosya_base64,
-              },
-            },
-            { type: "text", text: req.user_prompt },
-          ],
-        },
-      ],
+      system,
+      messages: [{ role: "user", content: userContent }],
     }),
     signal: AbortSignal.timeout(20 * 60 * 1000),
   });
 
   const text = await res.text();
   if (!res.ok) {
-    if (/credit balance is too low/i.test(text)) {
-      throw new Error(
-        "Anthropic hesabında kredi yok. console.anthropic.com → Plans & Billing → kredi yükleyin.",
-      );
-    }
-    if (/not_found_error/i.test(text) && /model:/i.test(text)) {
-      throw new Error(
-        `Anthropic modeli bulunamadı (${ANTHROPIC_MODEL}). .env.local içinde ANTHROPIC_MODEL=claude-sonnet-4-6 deneyin.`,
-      );
-    }
-    throw new Error(`Anthropic HTTP ${res.status}: ${text.slice(0, 500)}`);
+    throw new Error(anthropicErrorMessage(res.status, text));
   }
 
   let body: { content?: Array<{ type?: string; text?: string }> };
@@ -174,21 +166,29 @@ async function analizViaAnthropic(
   const arr = tryParseJsonArray(extractTextFromClaude(body));
   if (!arr) {
     throw new Error(
-      "Claude geçerli JSON dizi döndürmedi — PDF okunabilir mi kontrol edin.",
+      "Claude geçerli JSON dizi döndürmedi — dosya okunabilir mi kontrol edin.",
+    );
+  }
+  return arr;
+}
+
+async function fetchDocumentJsonArray(
+  req: ImportAnalizRequest,
+): Promise<unknown[]> {
+  if (process.env.ANTHROPIC_API_KEY?.trim()) {
+    return anthropicJsonFromMessages(req.system_prompt, req.user_prompt, {
+      media_type: req.dosya_tip,
+      data: req.dosya_base64,
+    });
+  }
+
+  const base = proxyBase();
+  if (!base) {
+    throw new Error(
+      "PDF analiz için ANTHROPIC_API_KEY (canlı) veya yerelde npm run api gerekli.",
     );
   }
 
-  const rows = mapAnalizRows(arr);
-  if (!rows.length) {
-    throw new Error("Dosyadan ekipman kalemi çıkarılamadı.");
-  }
-  return rows;
-}
-
-async function analizViaProxy(
-  req: ImportAnalizRequest,
-  base: string,
-): Promise<ImportAnalizRow[]> {
   const token = adminLoginToken();
   let res: Response;
   try {
@@ -229,27 +229,59 @@ async function analizViaProxy(
     );
   }
 
-  const rows = mapAnalizRows(parsed.data);
-  if (!rows.length) {
+  if (!Array.isArray(parsed.data)) {
     throw new Error("Dosyadan ekipman kalemi çıkarılamadı.");
   }
-  return rows;
+  return parsed.data;
+}
+
+/** PDF/Excel base64 → ham JSON dizi (özel şema eşlemesi için) */
+export async function runImportDocumentJsonArray(
+  req: ImportAnalizRequest,
+): Promise<unknown[]> {
+  return fetchDocumentJsonArray(req);
+}
+
+/** Düz metin → ekipman satırları (Excel yedek — document API'den ucuz) */
+export async function runImportTextAnaliz(req: {
+  system_prompt: string;
+  user_prompt: string;
+}): Promise<ImportAnalizRow[]> {
+  if (process.env.ANTHROPIC_API_KEY?.trim()) {
+    const arr = await anthropicJsonFromMessages(
+      req.system_prompt,
+      req.user_prompt,
+    );
+    const rows = mapAnalizRows(arr);
+    if (!rows.length) {
+      throw new Error("Dosyadan ekipman kalemi çıkarılamadı.");
+    }
+    return rows;
+  }
+
+  const base = proxyBase();
+  if (base) {
+    return runImportDocumentAnaliz({
+      dosya_base64: Buffer.from(req.user_prompt, "utf8").toString("base64"),
+      dosya_tip: "text/plain",
+      system_prompt: req.system_prompt,
+      user_prompt: req.user_prompt,
+    });
+  }
+
+  throw new Error(
+    "Liste analizi için ANTHROPIC_API_KEY veya yerelde npm run api gerekli.",
+  );
 }
 
 /** PDF/Excel base64 → ekipman satırları */
 export async function runImportDocumentAnaliz(
   req: ImportAnalizRequest,
 ): Promise<ImportAnalizRow[]> {
-  if (process.env.ANTHROPIC_API_KEY?.trim()) {
-    return analizViaAnthropic(req);
+  const arr = await fetchDocumentJsonArray(req);
+  const rows = mapAnalizRows(arr);
+  if (!rows.length) {
+    throw new Error("Dosyadan ekipman kalemi çıkarılamadı.");
   }
-
-  const base = proxyBase();
-  if (base) {
-    return analizViaProxy(req, base);
-  }
-
-  throw new Error(
-    "PDF analiz için ANTHROPIC_API_KEY (canlı) veya yerelde npm run api gerekli.",
-  );
+  return rows;
 }

@@ -2,10 +2,13 @@
  * PDF / Excel teklif listesi → Claude analiz (sunucu tarafı, public liste-fiyat için).
  */
 
-import { runImportDocumentAnaliz } from "@/lib/claude/import-analiz.server";
+import {
+  runImportDocumentAnaliz,
+  runImportTextAnaliz,
+} from "@/lib/claude/import-analiz.server";
 import { parseProformaPdfBuffer } from "@/lib/pfos/liste-proforma-pdf";
-import { loadTipSozluguEntries } from "@/lib/tip-sozlugu/store";
-import type { TipSozlukEntry } from "@/lib/tip-sozlugu/types";
+import { worksheetToPlainText } from "@/lib/pfos/liste-proforma-excel";
+import ExcelJS from "exceljs";
 
 export type ListePdfKalem = {
   ham_isim: string;
@@ -16,11 +19,7 @@ export type ListePdfKalem = {
   olcu?: string;
 };
 
-function buildSystemPrompt(entries: TipSozlukEntry[]): string {
-  const tipListesi = entries
-    .map((t) => `${t.tip_kodu} → ${t.aciklama} (${t.kategori})`)
-    .join("\n");
-
+function buildSystemPrompt(): string {
   return `Sen bir endüstriyel mutfak ekipman listesi çıkarıcısısın.
 PDF veya Excel proforma/teklif dosyasındaki satırları BİREBİR kopyala — yorumlama veya stok kodu ekleme.
 
@@ -46,17 +45,12 @@ SADECE JSON dizi döndür:
 ]`;
 }
 
-const XLSX_MIME =
-  "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
-
 async function analyzeDocumentForListe(
   buffer: ArrayBuffer,
   dosya_tip: string,
   opts?: { notlar?: string },
 ): Promise<ListePdfKalem[]> {
-  const entries = await loadTipSozluguEntries();
-  const system_prompt = buildSystemPrompt(entries);
-
+  const system_prompt = buildSystemPrompt();
   const trimmedNotes = opts?.notlar?.trim();
   const user_prompt = trimmedNotes
     ? `Dosyayı analiz et.\n\nListe notları:\n---\n${trimmedNotes}\n---`
@@ -80,10 +74,22 @@ export async function analyzePdfForListe(
   return analyzeDocumentForListe(pdfBuffer, "application/pdf", opts);
 }
 
-/** Excel (.xlsx) — Equsto şablonu dışı teklif listeleri */
+/** Excel (.xlsx) — önce düz metin (ucuz); PDF document API kullanılmaz */
 export async function analyzeExcelForListe(
   xlsxBuffer: ArrayBuffer,
   opts?: { notlar?: string },
 ): Promise<ListePdfKalem[]> {
-  return analyzeDocumentForListe(xlsxBuffer, XLSX_MIME, opts);
+  const wb = new ExcelJS.Workbook();
+  await wb.xlsx.load(xlsxBuffer);
+  const ws = wb.worksheets[0];
+  if (!ws) throw new Error("Excel sayfası bulunamadı");
+
+  const plain = worksheetToPlainText(ws);
+  const system_prompt = buildSystemPrompt();
+  const trimmedNotes = opts?.notlar?.trim();
+  const user_prompt = trimmedNotes
+    ? `Aşağıdaki teklif listesi metninden kalemleri çıkar.\n\nNotlar:\n---\n${trimmedNotes}\n---\n\n${plain}`
+    : `Aşağıdaki teklif listesi metninden tüm ekipman kalemlerini çıkar:\n\n${plain}`;
+
+  return runImportTextAnaliz({ system_prompt, user_prompt });
 }

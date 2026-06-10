@@ -83,7 +83,9 @@ export default function PfosListeUpload() {
       form.append("file", f);
       form.append("projeAdi", f.name.replace(/\.xlsx?$/i, ""));
 
-      const res = await fetch("/api/pfos/liste-fiyat", {
+      const endpoint =
+        kind === "pdf" ? "/api/pfos/parse-upload" : "/api/pfos/liste-fiyat";
+      const res = await fetch(endpoint, {
         method: "POST",
         body: form,
       });
