@@ -5,6 +5,8 @@ import { searchCatalogForProforma } from "./meili-search";
 import { hitToEslesmis } from "./hit-to-eslesmis";
 import { buildMeiliSearchQuery, cleanProformaTanim } from "./sanitize-tanim";
 import {
+  dishwasherFeatureScore,
+  requiresDishwasher,
   requiresShelvedTezgah,
   requiresTrolley,
   shelfFeatureScore,
@@ -58,9 +60,15 @@ function tokenOverlapScore(query: string, hit: CatalogSearchHit): number {
 
 function categoryMismatchPenalty(item: ParsedItem, hit: CatalogSearchHit): number {
   const q = foldTr(cleanProformaTanim(item.tanim));
-  const hay = foldTr([hit.name, hit.category, hit.dept, hit.specs].join(" "));
+  const hay = foldTr([hit.name, hit.category, hit.dept, hit.specs, hit.sku].join(" "));
 
   let penalty = 0;
+  if (/banket|sicak\s*banket/.test(q) && /bulasik|yikama|bym\d|bardak/.test(hay)) {
+    penalty += 280;
+  }
+  if (/bulasik|yikama|giyotin|siyirma/.test(q) && /banket|servis\s*arab/.test(hay)) {
+    penalty += 280;
+  }
   if (/servis tezgah|make.?up/.test(q) && /bulasik|yikama/.test(hay)) penalty += 150;
   if (/bulasik|yikama|giyotin/.test(q) && !/bulasik|yikama|giyotin/.test(hay)) penalty += 60;
   if (/firin|konveksiyon/.test(q) && /kuzine|ocak/.test(hay) && !/firin/.test(hay)) {
@@ -78,6 +86,23 @@ function brandBonus(item: ParsedItem, hit: CatalogSearchHit): number {
   return 10;
 }
 
+/** 190*70*85 + raf tipi → EQUSTO.19070.04 / .08 */
+function guessEqustoTezgahSkuFromOlcu(
+  olcu: string | null | undefined,
+  tanim: string,
+): string | null {
+  const raw = String(olcu ?? "").split("/")[0];
+  const parts = raw.split("*").map((p) => parseInt(p.replace(/\D/g, ""), 10));
+  if (parts.length < 2 || !parts[0] || !parts[1]) return null;
+  const code = `${parts[0]}${String(parts[1]).padStart(2, "0")}`;
+  const base = `EQUSTO.${code}`;
+  const q = foldTr(cleanProformaTanim(tanim));
+  if (/taban\s*(ve\s*)?ara|ara\s*raf|rfli/.test(q)) return `${base}.04`;
+  if (/taban\s*raf/.test(q)) return `${base}.08`;
+  if (/rafl|rafli|rfli/.test(q)) return `${base}.04`;
+  return null;
+}
+
 /** 190*70*85 → 7912.19070.00 benzeri Öztiryakiler kod araması */
 function guessOztiSkuFromOlcu(olcu: string | null | undefined): string | null {
   const raw = String(olcu ?? "").split("/")[0];
@@ -93,7 +118,8 @@ function scoreHit(item: ParsedItem, query: string, hit: CatalogSearchHit): numbe
     brandBonus(item, hit) +
     olcuSkoru(item.olcu, hit.model || "") * 20 +
     shelfFeatureScore(item.tanim, hit) +
-    trolleyFeatureScore(item.tanim, hit) -
+    trolleyFeatureScore(item.tanim, hit) +
+    dishwasherFeatureScore(item.tanim, hit) -
     categoryMismatchPenalty(item, hit)
   );
 }
@@ -114,10 +140,14 @@ function pickBestHit(
   let best = ranked[0];
   const needsShelf = requiresShelvedTezgah(item.tanim);
   const needsTrolley = requiresTrolley(item.tanim);
+  const needsDishwasher = requiresDishwasher(item.tanim);
 
   function hitFeaturesOk(hit: CatalogSearchHit): boolean {
     if (needsShelf && shelfFeatureScore(item.tanim, hit) <= 0) return false;
     if (needsTrolley && trolleyFeatureScore(item.tanim, hit) <= 0) return false;
+    if (needsDishwasher && dishwasherFeatureScore(item.tanim, hit) <= 0) {
+      return false;
+    }
     return true;
   }
 
@@ -174,24 +204,58 @@ export async function matchItem(item: ParsedItem): Promise<ItemMatchResult> {
   }
 
   if (requiresShelvedTezgah(item.tanim)) {
-    const rafHits = await searchCatalogForProforma(
+    const equstoSku = guessEqustoTezgahSkuFromOlcu(item.olcu, item.tanim);
+    const extraQueries = [
       `${sorgu} ara raflı taban raf`,
-      8,
-    );
+      equstoSku,
+    ].filter(Boolean) as string[];
     const seen = new Set(hits.map((h) => h.id));
-    for (const h of rafHits) {
-      if (h.id && !seen.has(h.id)) hits.push(h);
+    for (const q of extraQueries) {
+      const rafHits = await searchCatalogForProforma(q, 8);
+      for (const h of rafHits) {
+        if (h.id && !seen.has(h.id)) {
+          hits.push(h);
+          seen.add(h.id);
+        }
+      }
     }
   }
 
   if (requiresTrolley(item.tanim)) {
-    const trolleyHits = await searchCatalogForProforma(
+    const gnMatch = foldTr(item.tanim).match(/(\d+)\s*x?\s*gn/i);
+    const gnHint = gnMatch ? `${gnMatch[1]} GN banket` : "";
+    const trolleyQueries = [
+      "sıcak banket arabası GN 2/1 inoksan",
+      gnHint,
       "banket servis arabası tepsi GN",
-      8,
-    );
+    ].filter(Boolean);
     const seen = new Set(hits.map((h) => h.id));
-    for (const h of trolleyHits) {
-      if (h.id && !seen.has(h.id)) hits.push(h);
+    for (const q of trolleyQueries) {
+      const trolleyHits = await searchCatalogForProforma(q, 8);
+      for (const h of trolleyHits) {
+        if (h.id && !seen.has(h.id)) {
+          hits.push(h);
+          seen.add(h.id);
+        }
+      }
+    }
+  }
+
+  if (requiresDishwasher(item.tanim)) {
+    const dwQueries = [
+      sorgu,
+      "bulaşık yıkama makinesi 500 tabak inoksan",
+      "BYM052 bulaşık yıkama",
+    ];
+    const seen = new Set(hits.map((h) => h.id));
+    for (const q of dwQueries) {
+      const dwHits = await searchCatalogForProforma(q, 8);
+      for (const h of dwHits) {
+        if (h.id && !seen.has(h.id)) {
+          hits.push(h);
+          seen.add(h.id);
+        }
+      }
     }
   }
 

@@ -1,11 +1,16 @@
 import { foldTr } from "@/lib/search-query";
 import type { CatalogSearchHit } from "@/lib/catalog-search-fallback";
+import { expandProformaAbbreviations } from "./sanitize-tanim";
+
+function normTanim(tanim: string): string {
+  return foldTr(expandProformaAbbreviations(tanim));
+}
 
 /** Tanımdan aramada öne çıkarılacak ayırt edici terimler */
 export function extractFeatureSearchTerms(tanim: string): string[] {
-  const f = foldTr(tanim);
+  const f = normTanim(tanim);
   const terms: string[] = [];
-  if (/ara\s*raf|taban\s*(ve\s*)?ara|rafl[iı]/.test(f)) {
+  if (/ara\s*raf|taban\s*(ve\s*)?ara|rafl[iı]|rfli/.test(f)) {
     terms.push("ara raflı", "raflı", "taban raf");
   }
   if (/cekmece/.test(f)) terms.push("çekmeceli");
@@ -28,10 +33,10 @@ function hitHaystack(hit: CatalogSearchHit): string {
 
 /** Raf / çekmece zorunluluğu — düz tezgaha ağır ceza */
 export function shelfFeatureScore(tanim: string, hit: CatalogSearchHit): number {
-  const q = foldTr(tanim);
+  const q = normTanim(tanim);
   const hay = hitHaystack(hit);
   const needsShelf =
-    /ara\s*raf|taban\s*(ve\s*)?ara|rafl[iı]|taban\s*raf/.test(q) ||
+    /ara\s*raf|taban\s*(ve\s*)?ara|rafl[iı]|rfli|taban\s*raf/.test(q) ||
     (/cekmece/.test(q) && /tezgah/.test(q));
 
   if (!needsShelf) return 0;
@@ -47,7 +52,7 @@ export function shelfFeatureScore(tanim: string, hit: CatalogSearchHit): number 
 
 /** Banket / servis arabası — bulaşık makinesine karşı */
 export function trolleyFeatureScore(tanim: string, hit: CatalogSearchHit): number {
-  const q = foldTr(tanim);
+  const q = normTanim(tanim);
   const hay = hitHaystack(hit);
 
   const wantsTrolley =
@@ -67,11 +72,31 @@ export function trolleyFeatureScore(tanim: string, hit: CatalogSearchHit): numbe
 }
 
 export function requiresShelvedTezgah(tanim: string): boolean {
-  const q = foldTr(tanim);
-  return /ara\s*raf|taban\s*(ve\s*)?ara|rafl[iı]|taban\s*raf/.test(q);
+  const q = normTanim(tanim);
+  return /ara\s*raf|taban\s*(ve\s*)?ara|rafl[iı]|rfli|taban\s*raf/.test(q);
 }
 
 export function requiresTrolley(tanim: string): boolean {
-  const q = foldTr(tanim);
+  const q = normTanim(tanim);
   return /banket|servis\s*arab|tasima\s*arab|sicak\s*banket/.test(q);
+}
+
+export function requiresDishwasher(tanim: string): boolean {
+  const q = normTanim(tanim);
+  return /bulasik|yikama\s*makin|giyotin|siyirma|bardak\s*yik/.test(q);
+}
+
+/** Bulaşık hattı — banket / tezgaha karşı */
+export function dishwasherFeatureScore(
+  tanim: string,
+  hit: CatalogSearchHit,
+): number {
+  const hay = hitHaystack(hit);
+  if (!requiresDishwasher(tanim)) return 0;
+
+  if (/banket|servis\s*arab|tepsi\s*arab/.test(hay) && !/bulasik|yikama|bym/.test(hay)) {
+    return -350;
+  }
+  if (/bulasik|yikama|bym\d|giyotin|siyirma|bardak\s*yik/.test(hay)) return 55;
+  return -40;
 }

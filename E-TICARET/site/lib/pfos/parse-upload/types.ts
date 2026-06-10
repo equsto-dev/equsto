@@ -30,6 +30,13 @@ export type MatchedItem = ParsedItem & {
   not_found: boolean;
 };
 
+export type ParseUploadOzet = {
+  eslesen: number;
+  mevcut_atlandi: number;
+  bulunamayan: number;
+  genel_toplam_eur: number;
+};
+
 /** PFOS teklif motoru iç eşlemesi */
 export type MeiliKalemEslestirme = {
   kalem: ParsedItem;
