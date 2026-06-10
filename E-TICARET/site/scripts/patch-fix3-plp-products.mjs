@@ -13,8 +13,10 @@ const WEB = path.join(ROOT, "public/images/catalog/ozti/web");
 const ELX_DIR = path.join(ROOT, "public/images/catalog/electrolux/217891");
 const PISIRME = path.join(ROOT, "public/data/dept/pisirme.json");
 
+// COD 217891 has no Mirror asset; 217881 (ECOG62B2G0) is the same SkyLine Premium 6×2/1 GN gas combi oven.
 const ELX_IMG_URL =
-  "https://www.electroluxprofessional.com/tr/wp-content/uploads/2024/12/IMG5_15534_72dpi-600x600pi.jpg";
+  "https://tools.electroluxprofessional.com/Mirror/Doc/PH_1000x1000/PH_217881_1_1_217881.jpg";
+const ELX_IMG_REL = "images/catalog/electrolux/217891/hero-plp.jpg";
 
 const KUR = 53.2979;
 const KDV = 20;
@@ -36,7 +38,7 @@ function copyIf(srcName, destName) {
 
 async function downloadElxHero() {
   fs.mkdirSync(ELX_DIR, { recursive: true });
-  const dest = path.join(ELX_DIR, "hero-1.jpg");
+  const dest = path.join(ROOT, "public", ELX_IMG_REL);
   const r = await fetch(ELX_IMG_URL, {
     headers: { "User-Agent": "Mozilla/5.0 (compatible; Equsto/1.0)" },
   });
@@ -44,7 +46,7 @@ async function downloadElxHero() {
   const buf = Buffer.from(await r.arrayBuffer());
   if (buf.length < 5000) throw new Error("Electrolux görsel çok küçük");
   fs.writeFileSync(dest, buf);
-  console.log(`[img] electrolux 217891 hero-1.jpg (${buf.length} B)`);
+  console.log(`[img] electrolux 217891 hero-plp.jpg (${buf.length} B)`);
 }
 
 function elxPricing(liste) {
@@ -166,7 +168,7 @@ async function main() {
     delete px._pricingBlock;
     Object.assign(elx, px);
     elx.specs = mergeSpecs(elx.specs, pricingText);
-    elx.images = ["images/catalog/electrolux/217891/hero-1.jpg"];
+    elx.images = [ELX_IMG_REL];
     n++;
     console.log(`[price] electrolux 217891 → ${elx.price}`);
   }
