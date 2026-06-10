@@ -10,6 +10,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { Meilisearch } from "meilisearch";
 import "./load-env.mjs";
+import { printMeiliConnectionHint } from "./lib/meili-error-hint.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DEPT_DIR = path.join(ROOT, "public/data/dept");
@@ -125,6 +126,9 @@ function categorySearchHints(dept, category, name) {
   if (/ocak|kuzin|gazli-firinli-kuzine|900-seri-kuzine/.test(cat) || /ocak|kuzine/.test(n)) {
     hints.push("ocak", "kuzine");
   }
+  if (/induksiyon|enduksiyon/.test(cat) || /induksiyon|enduksiyon/.test(n)) {
+    hints.push("induksiyonlu", "enduksiyonlu", "induksiyon", "enduksiyon", "ocak");
+  }
   if (/fritoz/.test(cat) || /fritoz/.test(n)) hints.push("fritoz");
   if (/buzdolab|sogutma|derin-dondur|sok-dondur/.test(cat)) hints.push("buzdolabi", "sogutma");
   if (/kahve|espresso|cay|barista/.test(cat)) hints.push("kahve", "espresso", "cay");
@@ -147,6 +151,13 @@ function rowToDoc(row, deptFallback) {
   const slug = productSlug(row);
   const id = docId(row, dept);
   const category = String(row.category || "").trim();
+  const kategoriYolu = [
+    row.urun_kategori,
+    row.urun_alt_kategori,
+    row.alt_kategori_1,
+    row.alt_kategori_2,
+  ].filter(Boolean);
+
   return {
     id,
     slug,
@@ -157,6 +168,10 @@ function rowToDoc(row, deptFallback) {
     dept,
     model: String(row.model || row.sku || "").trim(),
     sku: String(row.sku || "").trim(),
+    equsto_kod: String(row.equsto_kod || "").trim(),
+    marka_kodu: String(row.marka_kodu || "").trim(),
+    marka_urun_kodu: String(row.marka_urun_kodu || "").trim(),
+    kategori_yolu: kategoriYolu,
     price: String(row.price || "").split("\n")[0].slice(0, 120),
     liste_fiyati_eur: Number(row.liste_fiyati_eur) || null,
     satis_eur_indirimli: Number(row.satis_eur_indirimli) || null,
@@ -217,7 +232,9 @@ async function main() {
   try {
     await client.health();
   } catch (e) {
-    console.error("[search:index] Meilisearch erişilemiyor:", host, e?.message || e);
+    const msg = e?.message || e;
+    console.error("[search:index] Meilisearch erişilemiyor:", host, msg);
+    printMeiliConnectionHint(host, msg);
     process.exit(1);
   }
 
@@ -236,11 +253,15 @@ async function main() {
 
   await index.updateSettings({
     searchableAttributes: [
+      "equsto_kod",
+      "marka_kodu",
+      "marka_urun_kodu",
       "name",
       "category",
       "brand",
       "model",
       "sku",
+      "kategori_yolu",
       "search_hints",
       "dept",
     ],
@@ -264,6 +285,10 @@ async function main() {
       firinlar: ["firin", "konveksiyonlu"],
       kombi: ["konveksiyonlu", "firin"],
       konveksiyon: ["konveksiyonlu", "firin"],
+      induksiyonlu: ["enduksiyonlu", "enduksiyon"],
+      enduksiyonlu: ["induksiyonlu", "induksiyon"],
+      induksiyon: ["enduksiyon"],
+      enduksiyon: ["induksiyon"],
     },
     displayedAttributes: [
       "id",
@@ -274,6 +299,10 @@ async function main() {
       "category",
       "model",
       "sku",
+      "equsto_kod",
+      "marka_kodu",
+      "marka_urun_kodu",
+      "kategori_yolu",
       "price",
       "liste_fiyati_eur",
       "satis_eur_indirimli",
@@ -282,7 +311,14 @@ async function main() {
       "url",
       "search_hints",
     ],
-    filterableAttributes: ["dept", "brand", "category", "kaynak"],
+    filterableAttributes: [
+      "dept",
+      "brand",
+      "category",
+      "kaynak",
+      "equsto_kod",
+      "marka_kodu",
+    ],
     sortableAttributes: ["name", "brand"],
   });
 

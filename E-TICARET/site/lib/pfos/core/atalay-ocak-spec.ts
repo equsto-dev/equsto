@@ -16,7 +16,7 @@ function norm(s: string | null | undefined): string {
 export function parseOcakFuelFromReferans(...parts: Array<string | null | undefined>): OcakFuel | null {
   const n = norm(parts.filter(Boolean).join(" "));
   if (!n) return null;
-  if (/induksiyon|indüksiyon/.test(n)) return "induksiyon";
+  if (/induksiyon|indüksiyon|enduksiyon|endüksiyon/.test(n)) return "induksiyon";
   if (/gazli|gazlı|\bgaz\b|lpg|dogalgaz|dogal gaz|acik alev|açık alev|mavi alev/.test(n)) {
     return "gaz";
   }
@@ -67,7 +67,7 @@ export function ocakFuelFromRow(row: {
 }): OcakFuel | null {
   const sku = String(row.sku ?? "").toUpperCase();
   const blob = norm(`${row.ad ?? ""} ${row.kategori ?? ""}`);
-  if (/^AIO-/.test(sku) || /induksiyon|indüksiyon/.test(blob)) return "induksiyon";
+  if (/^AIO-/.test(sku) || /induksiyon|indüksiyon|enduksiyon|endüksiyon/.test(blob)) return "induksiyon";
   if (/^A(?:GO|EAGO)-|^EAGO/.test(sku) || /\bgaz\b|gazli|gazlı/.test(blob)) return "gaz";
   if (/^AE[O]|^EAEO-/.test(sku) || /elektrik/.test(blob)) return "elektrik";
   return null;

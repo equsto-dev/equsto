@@ -28,6 +28,10 @@ const QUERY_ALIASES: Record<string, string[]> = {
   kahve: ["wmf", "cay makinasi", "kahve makinesi"],
   cay: ["cay makinasi", "cay ocagi"],
   çay: ["cay makinasi", "cay ocagi"],
+  induksiyonlu: ["enduksiyonlu", "enduksiyon", "induksiyon"],
+  enduksiyonlu: ["induksiyonlu", "induksiyon", "enduksiyon"],
+  induksiyon: ["enduksiyon", "induksiyonlu", "enduksiyonlu"],
+  enduksiyon: ["induksiyon", "induksiyonlu", "enduksiyonlu"],
 };
 
 /** Meilisearch ve fallback için genişletilmiş sorgu dizisi (orijinal + eşanlamlılar). */
@@ -72,7 +76,7 @@ export function deptSearchHints(dept: string, category: string, name = ""): stri
 }
 
 const DEPT_QUERY_HINTS: Record<string, string[]> = {
-  pisirme: ["firin", "ocak", "fritoz", "konveksiyon", "salamander"],
+  pisirme: ["firin", "ocak", "fritoz", "konveksiyon", "salamander", "induksiyonlu", "enduksiyonlu"],
   sogutma: ["buzdolab", "sogutma", "dondurucu", "dolap"],
   kahve: ["kahve", "espresso", "cay", "wmf"],
   yikama: ["bulasik", "bulaşık", "yikama"],

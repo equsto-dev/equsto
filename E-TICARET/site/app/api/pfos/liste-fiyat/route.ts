@@ -1,7 +1,7 @@
 import ExcelJS from "exceljs";
 import { NextRequest, NextResponse } from "next/server";
 import { parseEkipmanWorksheet } from "@/lib/pfos/kategoriler/parse-ekipman-xlsx";
-import { parseProformaExcelWorksheet } from "@/lib/pfos/liste-proforma-excel";
+import { pickBestProformaRows } from "@/lib/pfos/liste-proforma-excel";
 import { analyzeExcelForListe } from "@/lib/pfos/liste-pdf-analiz";
 import { calculateListeQuote } from "@/lib/pfos/liste-fiyat";
 import { processPdfUpload } from "@/lib/pfos/parse-upload/process-pdf-upload";
@@ -98,10 +98,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    let satirlar = parseEkipmanWorksheet(ws);
-    if (!satirlar.length) {
-      satirlar = parseProformaExcelWorksheet(ws);
-    }
+    const satirlar = pickBestProformaRows(ws, [parseEkipmanWorksheet]);
     if (satirlar.length) {
       const response = await calculateListeQuote({
         satirlar,
