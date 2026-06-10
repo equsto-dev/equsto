@@ -82,8 +82,10 @@ export function isOzelImalatMotor(opts: {
 
 /** Tanımdan (PORTASHELF) / (Equsto) kaldır */
 export function displayIsimFromSablon(isim: string | null | undefined): string {
+  const raw =
+    typeof isim === "string" ? isim : isim != null ? JSON.stringify(isim) : "";
   return repairPfosDisplayText(
-    String(isim ?? "")
+    raw
       .replace(/\s*\(\s*PORTASHELF\s*\)\s*/gi, " ")
       .replace(/\s*\(\s*Equsto\s*\)\s*/gi, " ")
       .replace(/\s+/g, " ")

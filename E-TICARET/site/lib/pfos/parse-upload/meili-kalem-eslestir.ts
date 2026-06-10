@@ -8,10 +8,18 @@ import {
   dishwasherFeatureScore,
   requiresDishwasher,
   requiresShelvedTezgah,
+  requiresSinkTezgah,
   requiresTrolley,
   shelfFeatureScore,
+  sinkFeatureScore,
   trolleyFeatureScore,
 } from "./match-features";
+import {
+  generateEqustoTezgahSku,
+  isCalismaTezgahiReferansIsim,
+} from "../core/calisma-tezgah";
+import { isIstifRafiReferansIsim } from "../core/portashelf-marka";
+import { matchIstifRafiByReferans } from "../referans/istif-raf-match";
 
 /** Ölçü benzerliği — boyutlar yakınsa bonus */
 export function olcuSkoru(olcu1: string, olcu2: string): number {
@@ -33,6 +41,13 @@ export function olcuSkoru(olcu1: string, olcu2: string): number {
   if (ortalamaFark < 0.1) return 1;
   if (ortalamaFark < 0.2) return 0.7;
   return 0;
+}
+
+function normSku(s: string | null | undefined): string {
+  return String(s ?? "")
+    .replace(/\s+/g, "")
+    .trim()
+    .toUpperCase();
 }
 
 function hitToDto(hit: CatalogSearchHit): MeilisearchHitDto {
@@ -118,6 +133,7 @@ function scoreHit(item: ParsedItem, query: string, hit: CatalogSearchHit): numbe
     brandBonus(item, hit) +
     olcuSkoru(item.olcu, hit.model || "") * 20 +
     shelfFeatureScore(item.tanim, hit) +
+    sinkFeatureScore(item.tanim, hit) +
     trolleyFeatureScore(item.tanim, hit) +
     dishwasherFeatureScore(item.tanim, hit) -
     categoryMismatchPenalty(item, hit)
@@ -141,9 +157,11 @@ function pickBestHit(
   const needsShelf = requiresShelvedTezgah(item.tanim);
   const needsTrolley = requiresTrolley(item.tanim);
   const needsDishwasher = requiresDishwasher(item.tanim);
+  const needsSink = requiresSinkTezgah(item.tanim);
 
   function hitFeaturesOk(hit: CatalogSearchHit): boolean {
     if (needsShelf && shelfFeatureScore(item.tanim, hit) <= 0) return false;
+    if (needsSink && sinkFeatureScore(item.tanim, hit) <= 0) return false;
     if (needsTrolley && trolleyFeatureScore(item.tanim, hit) <= 0) return false;
     if (needsDishwasher && dishwasherFeatureScore(item.tanim, hit) <= 0) {
       return false;
@@ -189,8 +207,82 @@ export async function matchItem(item: ParsedItem): Promise<ItemMatchResult> {
     };
   }
 
+  if (isIstifRafiReferansIsim(item.tanim)) {
+    const istif = await matchIstifRafiByReferans(
+      item.tanim,
+      item.olcu,
+      null,
+    );
+    if (istif?.sku) {
+      const bestHit = {
+        id: istif.id,
+        name: istif.ad,
+        sku: istif.sku,
+        brand: istif.marka,
+        category: "istif",
+        dept: "istif",
+        specs: item.tanim,
+        image: String(istif.gorselUrl ?? "").replace(/^\/data\//, ""),
+        slug: istif.id,
+        satis_eur_indirimli: istif.fiyatEur ?? null,
+        liste_fiyati_eur: istif.fiyatEur ?? null,
+      } as CatalogSearchHit;
+      const { hit: ranked, guven } = pickBestHit(item, [bestHit]);
+      if (ranked) {
+        const dto = hitToDto(ranked);
+        const birim = dto.satis_fiyati_eur > 0 ? dto.satis_fiyati_eur : null;
+        return {
+          bestHit: ranked,
+          matched: {
+            ...item,
+            tanim: cleanProformaTanim(item.tanim) || item.tanim,
+            eslesen_urun: dto,
+            eslesen_skor: Math.max(guven, 0.88),
+            birim_fiyat_eur: birim,
+            toplam_eur:
+              birim != null ? Math.round(birim * item.adet * 100) / 100 : null,
+            not_found: false,
+          },
+        };
+      }
+    }
+  }
+
   const sorgu = buildMeiliSearchQuery(item);
   let hits = await searchCatalogForProforma(sorgu, 8);
+
+  if (isCalismaTezgahiReferansIsim(item.tanim, item.olcu)) {
+    const equstoSku = generateEqustoTezgahSku(item.tanim, item.olcu);
+    if (equstoSku) {
+      const skuHits = await searchCatalogForProforma(equstoSku, 6);
+      const pimakSku = equstoSku.replace(/^EQUSTO\./i, "PIMAK.");
+      const pimakHits = await searchCatalogForProforma(pimakSku, 4);
+      const oztiSku = `7911.${equstoSku.replace(/^EQUSTO\./i, "")}`;
+      const oztiHits = await searchCatalogForProforma(oztiSku, 4);
+      const seen = new Set(hits.map((h) => h.id));
+      for (const h of [...skuHits, ...pimakHits, ...oztiHits]) {
+        if (h.id && !seen.has(h.id)) {
+          hits.push(h);
+          seen.add(h.id);
+        }
+      }
+      if (!skuHits.some((h) => normSku(h.sku) === normSku(equstoSku))) {
+        hits.unshift({
+          id: `equsto-tezgah-${equstoSku.toLowerCase()}`,
+          name: cleanProformaTanim(item.tanim),
+          sku: equstoSku,
+          brand: "Pimak",
+          category: "tezgah",
+          dept: "tezgah",
+          specs: item.tanim,
+          image: "",
+          slug: "",
+          satis_eur_indirimli: 0,
+          liste_fiyati_eur: 0,
+        } as CatalogSearchHit);
+      }
+    }
+  }
 
   if (!requiresShelvedTezgah(item.tanim)) {
     const oztiSku = guessOztiSkuFromOlcu(item.olcu);
@@ -261,7 +353,20 @@ export async function matchItem(item: ParsedItem): Promise<ItemMatchResult> {
 
   const { hit: best, guven } = pickBestHit(item, hits);
 
-  if (!best) {
+  let bestHit = best;
+  const equstoTezgahSku = isCalismaTezgahiReferansIsim(item.tanim, item.olcu)
+    ? generateEqustoTezgahSku(item.tanim, item.olcu)
+    : null;
+  if (bestHit && equstoTezgahSku) {
+    bestHit = {
+      ...bestHit,
+      sku: equstoTezgahSku,
+      brand: "Pimak",
+      name: cleanProformaTanim(item.tanim) || bestHit.name,
+    };
+  }
+
+  if (!bestHit) {
     return {
       matched: {
         ...item,
@@ -275,11 +380,11 @@ export async function matchItem(item: ParsedItem): Promise<ItemMatchResult> {
     };
   }
 
-  const dto = hitToDto(best);
+  const dto = hitToDto(bestHit);
   const birim = dto.satis_fiyati_eur > 0 ? dto.satis_fiyati_eur : null;
 
   return {
-    bestHit: best,
+    bestHit,
     matched: {
       ...item,
       tanim: cleanProformaTanim(item.tanim) || item.tanim,

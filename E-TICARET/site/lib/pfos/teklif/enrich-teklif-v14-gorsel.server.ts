@@ -19,7 +19,7 @@ export async function enrichTeklifV14ModelGorsel(
       const sku = s.stokNo?.trim();
       if (!sku) return s;
 
-      const resolved = await resolveGorselUrlBySku(sku, s.fotoUrl);
+      const resolved = await resolveGorselUrlBySku(sku, s.fotoUrl, s.tanim);
       const ozti = normalizePfosGorselUrl(oztiWebImageRelFromSku(sku));
       const fotoUrl = resolved ?? ozti;
       return fotoUrl ? { ...s, fotoUrl } : s;

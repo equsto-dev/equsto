@@ -1,6 +1,7 @@
 import { resolveTipKodu } from "./tip-kodu";
 
-export const CALISMA_TEZGAH_MARKA = "Equsto";
+/** Yer tezgahları — Pimak imalat (EQUSTO / PIMAK SKU) */
+export const CALISMA_TEZGAH_MARKA = "Pimak";
 
 export const CALISMA_TEZGAH_TIP_KODLARI = new Set([
   "calisma_tezgahi",
