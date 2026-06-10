@@ -136,6 +136,9 @@ export function categorySearchHints(
   if (/ocak|kuzin|gazli-firinli-kuzine|900-seri-kuzine/.test(cat) || /ocak|kuzine/.test(n)) {
     hints.push("ocak", "kuzine");
   }
+  if (/induksiyon|enduksiyon/.test(cat) || /induksiyon|enduksiyon/.test(n)) {
+    hints.push("induksiyonlu", "enduksiyonlu", "induksiyon", "enduksiyon", "ocak");
+  }
   if (/fritoz/.test(cat) || /fritoz/.test(n)) hints.push("fritoz");
   if (/buzdolab|sogutma|derin-dondur|sok-dondur/.test(cat)) {
     hints.push("buzdolabi", "sogutma");
@@ -165,6 +168,10 @@ export const MEILI_SYNONYMS: Record<string, string[]> = {
   firinlar: ["firin", "konveksiyonlu"],
   kombi: ["konveksiyonlu", "firin"],
   konveksiyon: ["konveksiyonlu", "firin"],
+  induksiyonlu: ["enduksiyonlu", "enduksiyon"],
+  enduksiyonlu: ["induksiyonlu", "induksiyon"],
+  induksiyon: ["enduksiyon"],
+  enduksiyon: ["induksiyon"],
 };
 
 export const MEILI_INDEX_SETTINGS = {

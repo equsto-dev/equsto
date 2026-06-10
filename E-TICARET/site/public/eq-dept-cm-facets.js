@@ -40,7 +40,7 @@
     { id: 'dogalgaz', label: 'Doğalgazlı', keys: ['doğalgaz', 'dogalgaz', 'doğal gaz', 'dogal gaz'] },
     { id: 'gazli', label: 'Gazlı', keys: ['gazlı', 'gazli'] },
     { id: 'lpg', label: 'LPG', keys: ['lpg', 'tüp gaz', 'tup gaz'] },
-    { id: 'induksiyon', label: 'İndüksiyonlu', keys: ['indüksiyon', 'induksiyon', 'induction'] },
+    { id: 'induksiyon', label: 'İndüksiyonlu', keys: ['indüksiyon', 'induksiyon', 'endüksiyon', 'enduksiyon', 'induction'] },
   ];
 
   var MODEL_CAP = 48;

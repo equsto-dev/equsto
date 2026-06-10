@@ -11,7 +11,7 @@
     { tip: "komurlu-firin", dept: "pisirme", label: "Kömürlü Fırınlar", search: "kömür|komur|taş fırın|tas firin|lahmacun|pide" },
     { tip: "pizza-firinlari", dept: "pisirme", label: "Pizza Fırınları", search: "pizza|kubbe|taş taban" },
     { tip: "mayalama-dolabi", dept: "pisirme", label: "Mayalama Dolapları", search: "mayalama|prover|ferment" },
-    { tip: "induksiyonlu-ocak", dept: "pisirme", label: "İndüksiyonlu Ocaklar", search: "indüksiyon|induksiyon|induction" },
+    { tip: "induksiyonlu-ocak", dept: "pisirme", label: "İndüksiyonlu Ocaklar", search: "indüksiyon|induksiyon|endüksiyon|enduksiyon|induction" },
     { tip: "asansorlu-izgara", dept: "pisirme", label: "Asansörlü Izgaralar", search: "salamander|gratin|üst ızgara|ust izgara|gratinator|broiler" },
     { tip: "doner-ocaklari", dept: "pisirme", label: "Döner Ocakları", search: "döner|doner|kebab|kebap" },
     { tip: "pilic-cevirme", dept: "pisirme", label: "Piliç Çevirme Makineleri", search: "piliç|pilic|rotisserie|çevirme|cevirme" },
@@ -26,7 +26,7 @@
       tip: "ocak-vitrini",
       dept: "pisirme",
       label: "Ocaklar",
-      search: "set üstü ocak|setustu ocak|wok ocak|kuzine|indüksiyon|induksiyon|döner ocak|doner ocak",
+      search: "set üstü ocak|setustu ocak|wok ocak|kuzine|indüksiyon|induksiyon|endüksiyon|enduksiyon|döner ocak|doner ocak",
     },
     { tip: "sanayi-tipi-izgaralar", dept: "pisirme", label: "Endüstriyel Izgaralar", slug: "sanayi-tipi-izgaralar" },
     { tip: "kuzineler", dept: "pisirme", label: "Kuzineler", slug: "kuzineler" },
@@ -908,12 +908,12 @@
     if (!u) return false;
     if (isSuzgecProduct(u) || isMutfakTencereGereci(u) || isOyacakSoyacakProduct(u)) return false;
     var cat = productCategorySlug(u);
-    if (cat && /ocak|kuzine|wok|induksiyon|indüksiyon/.test(cat)) return true;
+    if (cat && /ocak|kuzine|wok|induksiyon|indüksiyon|enduksiyon|endüksiyon/.test(cat)) return true;
     var hay = productHaystack(u);
     if (/fırın|firin|fritöz|fritoz|salamander|tost\s*mak|benmari|bain\s*marie/.test(hay)) {
-      if (!/ocak|kuzine|wok|indüksiyon|induksiyon/.test(hay)) return false;
+      if (!/ocak|kuzine|wok|indüksiyon|induksiyon|endüksiyon|enduksiyon/.test(hay)) return false;
     }
-    return /ocak|kuzine|wok|indüksiyon|induksiyon|set üstü ocak|setustu ocak|döner ocak|doner ocak/.test(hay);
+    return /ocak|kuzine|wok|indüksiyon|induksiyon|endüksiyon|enduksiyon|set üstü ocak|setustu ocak|döner ocak|doner ocak/.test(hay);
   }
 
   /** Fırınlı kuzine — Fırınlar filtresinde değil, Kuzineler altında. */
