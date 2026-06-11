@@ -80,7 +80,7 @@ export function portashelfDisplayName(
 
 /** Portashelf 4 katlı raf — kanonik 304 kalite tel raf görseli (tüm ölçü SKU'ları). */
 export const PORTASHELF_304_GORSEL_REL =
-  "images/catalog/yuksel/yuksel-46-x-152-x-183_1.jpg";
+  "images/catalog/yuksel/portashelf-304-katli-raf.jpg";
 
 /** Portashelf ölçü SKU → her zaman 304 kalite referans görseli */
 export function portashelfGorselRelFromSku(

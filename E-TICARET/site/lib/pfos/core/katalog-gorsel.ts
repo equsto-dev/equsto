@@ -10,6 +10,7 @@ import {
   oztiWebImageRelFromSku,
   portashelfGorselRelFromSku,
 } from "./katalog-gorsel-url";
+import { isPortashelfSku, PORTASHELF_304_GORSEL_REL } from "./portashelf-fiyat";
 import { equstoPimakGorselRelFromSku } from "./equsto-pimak-gorsel";
 
 export {
@@ -89,6 +90,10 @@ export async function resolveGorselUrlBySku(
   const key = normSku(sku);
   if (!key) return normalizePfosGorselUrl(existing);
 
+  if (isPortashelfSku(key)) {
+    return normalizePfosGorselUrl(PORTASHELF_304_GORSEL_REL);
+  }
+
   const index = await loadSkuGorselIndex();
   const fromCatalog = index.get(key);
 
@@ -124,6 +129,14 @@ export async function enrichEslesmisGorsel(
   if (!urun) return null;
 
   const sku = urun.sku?.trim();
+  if (sku && isPortashelfSku(sku)) {
+    const canonical = normalizePfosGorselUrl(PORTASHELF_304_GORSEL_REL);
+    if (canonical && canonical !== urun.gorselUrl) {
+      return { ...urun, gorselUrl: canonical };
+    }
+    return urun;
+  }
+
   const normalizedExisting = normalizePfosGorselUrl(urun.gorselUrl);
   if (normalizedExisting && localPublicFileExists(normalizedExisting.replace(/^\/data\//, ""))) {
     if (normalizedExisting !== urun.gorselUrl) {
