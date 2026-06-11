@@ -33,6 +33,7 @@ import PfosTeklifLoading from "./PfosTeklifLoading";
 import {
   defaultPublicQuestions,
   dukkanSecenekleri,
+  mergePublicWizardQuestions,
   type WizardQuestion,
 } from "@/lib/pfos/wizard/public-flow";
 import {
@@ -154,7 +155,9 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
       const { data } = await fetchProjeAkis();
       if (cancelled || !data) return;
       if (Array.isArray(data.questions) && data.questions.length) {
-        setQuestions(data.questions as WizardQuestion[]);
+        setQuestions(
+          mergePublicWizardQuestions(data.questions as WizardQuestion[]),
+        );
       }
       if (Array.isArray(data.shopTypes)) {
         setShopTypes(data.shopTypes as ShopTypeRow[]);

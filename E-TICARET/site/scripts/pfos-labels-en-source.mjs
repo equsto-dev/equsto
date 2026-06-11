@@ -263,6 +263,9 @@ export const PFOS_LABELS_EN = {
   "Pop-up engellendi. localhost için pop-up izni verin veya Excel indirin.":
     "Pop-up blocked. Allow pop-ups for localhost or download Excel instead.",
 
+  "Projeni oluştur": "Create your project",
+  "Listeni yükle": "Upload your list",
+
   /* Next.js /pfos sihirbaz — panel, ipuçları, sağ sütun */
   "PFOS adım 01 — mesleğe göre teknik derinlik.":
     "Project Factory step 01 — technical depth by role.",

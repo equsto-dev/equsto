@@ -219,7 +219,7 @@
         var el = document.getElementById("auth-social-msg");
         if (el) {
           el.textContent =
-            "Google girişi yapılandırılmamış (GOOGLE_CLIENT_ID). Vercel ortam değişkenini kontrol edin.";
+            "Google girişi yapılandırılmamış (GOOGLE_CLIENT_ID). Sunucu .env.production dosyasını kontrol edin.";
           el.className = "auth-msg";
           el.style.display = "block";
         }
