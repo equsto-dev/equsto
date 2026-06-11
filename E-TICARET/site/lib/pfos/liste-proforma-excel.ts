@@ -1,5 +1,6 @@
 /**
- * SKTÜRK / proforma Excel — Equsto şablonu dışı listeler (Claude'sız).
+ * Müşteri / tedarikçi proforma Excel — Equsto şablonu dışı listeler (Claude'sız).
+ * Birden fazla tablo düzeni denenir; en çok geçerli kalem üreten sonuç seçilir.
  */
 
 import type { Worksheet } from "exceljs";
@@ -151,7 +152,7 @@ function findColumnarHeader(cells: string[]): ColumnarHeader | null {
 }
 
 /**
- * Başlık satırlı proforma (SKTürk / Equsto export): Poz | Tanım | Boy | En | Yük | Adet
+ * Boyut sütunlu proforma: Poz | Tanım | Boy | En | Yük | Adet
  */
 export function parseColumnarProformaWorksheet(ws: Worksheet): PfosEkipmanSatir[] {
   const rows: PfosEkipmanSatir[] = [];
@@ -287,8 +288,8 @@ function resolveTabularPoz(
 }
 
 /**
- * SKTürk / Hampton proforma tablosu: No | Poz No | Malzeme Cinsi | Açıklama | Ölçü | Ad.
- * Sayısal poz (01, 02) ve harfli poz (C46) birlikte okunur.
+ * Sütun başlıklı proforma tablosu (yaygın mühendislik listeleri):
+ * No | Poz | Malzeme/Tanım | Açıklama | Ölçü | Adet — sayısal ve harfli poz birlikte.
  */
 export function parseTabularProformaWorksheet(ws: Worksheet): PfosEkipmanSatir[] {
   const rows: PfosEkipmanSatir[] = [];

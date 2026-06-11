@@ -19,6 +19,7 @@ import { resolveTeklifMarka } from "../core/catalog-enrich";
 import {
   normalizePfosGorselUrl,
   oztiWebImageRelFromSku,
+  portashelfGorselRelFromSku,
 } from "../core/katalog-gorsel-url";
 import { equstoPimakGorselRelFromSku } from "../core/equsto-pimak-gorsel";
 import { displayIsimFromSablon } from "../core/ozel-imalat";
@@ -87,6 +88,7 @@ export function pfosResponseToTeklifV14(
     const stokNo = u?.sku?.trim() ?? "";
     const gorselFallback = normalizePfosGorselUrl(
       u?.gorselUrl ??
+        portashelfGorselRelFromSku(stokNo) ??
         equstoPimakGorselRelFromSku(stokNo, k.isim) ??
         (stokNo ? oztiWebImageRelFromSku(stokNo) : null),
     );

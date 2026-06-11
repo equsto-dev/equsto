@@ -44,8 +44,11 @@ function displayName(d, w, h) {
   return `Portashelf 4 Katlı Raf ${d}×${w}×${h} cm`;
 }
 
-function portashelfImageRel(d, w, h) {
-  return `images/catalog/yuksel/yuksel-${d}-x-${w}-x-${h}_1.jpg`;
+/** Tüm Portashelf katlı raflar — kanonik 304 kalite tel raf görseli */
+const PORTASHELF_304_GORSEL = "images/catalog/yuksel/yuksel-46-x-152-x-183_1.jpg";
+
+function portashelfImageRel() {
+  return PORTASHELF_304_GORSEL;
 }
 
 function buildRow(d, w, h, listeEur) {
@@ -53,9 +56,9 @@ function buildRow(d, w, h, listeEur) {
   const satisEur = Math.round(listeEur * SATIS_ORAN * 100) / 100;
   const fiyatTl = Math.round(satisEur * KUR_EUR_TRY);
   const fiyatTlKdv = Math.round(fiyatTl * KDV);
-  const img = portashelfImageRel(d, w, h);
+  const img = portashelfImageRel();
   const imgAbs = path.join(ROOT, "public/data", img);
-  const fallback = `images/yuksel-${d}x${w}x${h}_1.jpg`;
+  const fallback = PORTASHELF_304_GORSEL;
   const olcuMm = `${d}X${w}X${h}`;
   const olcuCm = `${d} X ${w} X ${h}`;
 
