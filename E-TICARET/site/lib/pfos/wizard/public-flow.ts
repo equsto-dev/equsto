@@ -109,3 +109,18 @@ export function isQuestionAnswered(
 export function defaultPublicQuestions(): WizardQuestion[] {
   return DEFAULT_WIZARD_QUESTIONS as WizardQuestion[];
 }
+
+/** API’den gelen eksik/bozuk soru setine karşı — zorunlu PFOS adımları korunur */
+export function mergePublicWizardQuestions(
+  fromApi: WizardQuestion[],
+): WizardQuestion[] {
+  const defaults = defaultPublicQuestions();
+  const byId = new Map<string, WizardQuestion>();
+  for (const q of defaults) byId.set(q.id, q);
+  for (const q of fromApi) {
+    if (!q?.id) continue;
+    const base = byId.get(q.id);
+    byId.set(q.id, base ? { ...base, ...q } : q);
+  }
+  return sortWizardQuestions([...byId.values()]);
+}

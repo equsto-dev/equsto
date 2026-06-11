@@ -729,7 +729,7 @@ export async function saveProjeAkis(
   payload: ProjeAkisData,
 ): Promise<{ data?: ProjeAkisData; error?: string }> {
   const token = getProToken();
-  const res = await fetch("/api/proje-akis", {
+  const res = await fetch("/api/cms?kind=proje-akis", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -788,7 +788,7 @@ export async function fetchProjeAkis(): Promise<{
   );
   const token = getProToken();
   try {
-    const res = await fetch("/api/proje-akis", {
+    const res = await fetch("/api/cms?kind=proje-akis", {
       headers: token ? { Authorization: `Bearer ${token}` } : {},
       cache: "no-store",
       signal: AbortSignal.timeout(12_000),

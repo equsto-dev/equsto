@@ -50,14 +50,14 @@ export default function PfosPublicPage() {
               className={`${styles.modeTab}${mode === "wizard" ? ` ${styles.modeTabActive}` : ""}`}
               onClick={() => setMode("wizard")}
             >
-              {t("Proje sihirbazı")}
+              {t("Projeni oluştur")}
             </button>
             <button
               type="button"
               className={`${styles.modeTab}${mode === "liste" ? ` ${styles.modeTabActive}` : ""}`}
               onClick={() => setMode("liste")}
             >
-              {t("Liste yükle")}
+              {t("Listeni yükle")}
             </button>
           </nav>
 

@@ -14,12 +14,24 @@ http://167.233.86.144 {
 # DNS kesimi öncesi — hosts dosyası testi (https henüz sertifika alamaz)
 http://equsto.com, http://www.equsto.com {
 	encode gzip zstd
-	reverse_proxy app:3000
+	handle /api/proje-akis* {
+		rewrite * /api/cms?kind=proje-akis
+		reverse_proxy app:3000
+	}
+	handle {
+		reverse_proxy app:3000
+	}
 }
 
 equsto.com {
 	encode gzip zstd
-	reverse_proxy app:3000
+	handle /api/proje-akis* {
+		rewrite * /api/cms?kind=proje-akis
+		reverse_proxy app:3000
+	}
+	handle {
+		reverse_proxy app:3000
+	}
 }
 
 www.equsto.com {
