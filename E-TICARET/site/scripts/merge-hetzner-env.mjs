@@ -41,6 +41,11 @@ const example = parseEnv(
     ? fs.readFileSync(path.join(root, ".env.example"), "utf8")
     : "",
 );
+const dbSecrets = parseEnv(
+  fs.existsSync(path.join(root, ".env.database.secrets"))
+    ? fs.readFileSync(path.join(root, ".env.database.secrets"), "utf8")
+    : "",
+);
 
 const skip = new Set([
   "VERCEL",
@@ -52,8 +57,8 @@ const skip = new Set([
   "NX_DAEMON",
   "TURBO_",
 ]);
-/** öncelik: template < example < vercel (dolu alanlar) */
-const merged = { ...template, ...example, ...vercel };
+/** öncelik: template < example < vercel < dbSecrets */
+const merged = { ...template, ...example, ...vercel, ...dbSecrets };
 for (const k of Object.keys(merged)) {
   if ([...skip].some((p) => k.startsWith(p.replace(/_$/, "")) || k.startsWith(p))) {
     delete merged[k];
@@ -78,7 +83,7 @@ merged.MEILISEARCH_INDEX = merged.MEILISEARCH_INDEX || "equsto_products";
 
 const dbPlaceholder =
   !merged.DATABASE_URL ||
-  /YOUR_DB_PASSWORD|\[PASSWORD\]|PASSWORD@/i.test(merged.DATABASE_URL);
+  /YOUR_DB_PASSWORD|\[PASSWORD\]/i.test(merged.DATABASE_URL);
 if (dbPlaceholder) {
   delete merged.DATABASE_URL;
   delete merged.DIRECT_URL;
@@ -116,6 +121,10 @@ const order = [
   "GREEN_API_INSTANCE_ID",
   "AWS_CLOUDFRONT_URL",
   "ACME_EMAIL",
+  "PRISMA_SKIP_POSTINSTALL_GENERATE",
+  "TCMB_KUR_REVALIDATE_SEC",
+  "EQUSTO_EUR_TRY_FALLBACK",
+  "NODE_ENV",
 ];
 
 const outPath = path.join(root, ".env.production.hetzner");

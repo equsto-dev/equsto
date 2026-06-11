@@ -14,12 +14,6 @@ fi
 echo "[hetzner-deploy] site: $SITE_DIR"
 git pull --ff-only
 
-COMPOSE_PROFILES="${COMPOSE_PROFILES:-}"
-if grep -q '^MEILISEARCH_HOST=http://meilisearch' .env.production 2>/dev/null; then
-  COMPOSE_PROFILES="${COMPOSE_PROFILES:+$COMPOSE_PROFILES,}meili"
-fi
-
-export COMPOSE_PROFILES
 docker compose --env-file .env.production build --pull
 docker compose --env-file .env.production up -d
 

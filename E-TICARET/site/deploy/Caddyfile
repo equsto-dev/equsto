@@ -5,6 +5,18 @@
 	email {$ACME_EMAIL:admin@equsto.com}
 }
 
+# DNS kesimi öncesi — yalnızca http://167.233.86.144 (https://IP çalışmaz)
+http://167.233.86.144 {
+	encode gzip zstd
+	reverse_proxy app:3000
+}
+
+# DNS kesimi öncesi — hosts dosyası testi (https henüz sertifika alamaz)
+http://equsto.com, http://www.equsto.com {
+	encode gzip zstd
+	reverse_proxy app:3000
+}
+
 equsto.com {
 	encode gzip zstd
 	reverse_proxy app:3000

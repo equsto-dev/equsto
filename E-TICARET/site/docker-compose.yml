@@ -2,7 +2,7 @@
 #   cp .env.production.example .env
 #   docker compose --env-file .env.production up -d --build
 #
-# Meilisearch Cloud kullanıyorsanız: docker compose up -d app caddy
+# Meilisearch: aynı sunucuda Docker (ücretsiz) — Cloud gerekmez
 
 name: equsto
 
@@ -27,6 +27,8 @@ services:
       NODE_ENV: production
       PORT: "3000"
       HOSTNAME: 0.0.0.0
+    depends_on:
+      - meilisearch
     networks:
       - web
     expose:
@@ -35,8 +37,6 @@ services:
   meilisearch:
     image: getmeili/meilisearch:v1.12
     restart: unless-stopped
-    profiles:
-      - meili
     environment:
       MEILI_ENV: production
       MEILI_MASTER_KEY: ${MEILISEARCH_MASTER_KEY:-equsto-prod-meili-key}
