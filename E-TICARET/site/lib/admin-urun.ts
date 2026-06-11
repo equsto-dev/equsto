@@ -258,9 +258,9 @@ export type AdminUrunPayload = {
   el_guc?: number | string | null;
   gaz_guc?: number | string | null;
   fiyat_tl?: number;
-  fiyat_kdv_haric_doviz?: number | null;
+  fiyat_kdv_haric_doviz?: number | string | null;
   doviz?: string | null;
-  kdv_oran?: number | null;
+  kdv_oran?: number | string | null;
   stok?: number;
   durum?: string;
   aciklama?: string | null;

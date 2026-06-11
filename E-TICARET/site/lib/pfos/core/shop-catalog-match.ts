@@ -318,6 +318,9 @@ function pseudoRowFromLink(link: TipShopLink, tip: string): AdminUrunRow {
   const bulasik = isBulasikMakinesiTipKodu(tip);
   return {
     id: `pfos-link-${tip}`,
+    equsto_kod: null,
+    marka_kodu: null,
+    urun_kodu: null,
     ad: link.name ?? link.sku ?? tip,
     sku: link.sku ?? null,
     tip_kodu: tip,
@@ -345,6 +348,7 @@ function pseudoRowFromLink(link: TipShopLink, tip: string): AdminUrunRow {
     el_guc: null,
     gaz_guc: null,
     aciklama: null,
+    detay: null,
     gorsel_url: null,
     durum: "aktif",
     proje_fab_aktif: true,

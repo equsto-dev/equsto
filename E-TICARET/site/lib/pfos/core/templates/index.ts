@@ -7,7 +7,7 @@ import { buildAllDayDiningTemplate } from "../../referans/all-day-dining";
 import { kebapOrtadogu } from "../rules/kebap-ortadogu/template";
 import { meyhane } from "../rules/meyhane/template";
 import { buildTurkRestoranTemplate } from "../../referans/turk-restoran";
-import type { Konsept } from "../../schemas/pfos.schema";
+import { KonseptEnum, type Konsept } from "../../schemas/pfos.schema";
 import type { ShopTypeKayit } from "../../proje-akis/konsept-tanimlari";
 import { buildTemplateFromShopType } from "../../proje-akis/shop-type-referans";
 import { buildBalikciTemplate } from "../../referans/balikci";
@@ -99,7 +99,7 @@ export function getTemplate(konsept: string): ConceptTemplate {
   if (!parsed.success) {
     throw new Error(`Bilinmeyen konsept: ${konsept}`);
   }
-  const t = TEMPLATES[parsed.data];
+  const t = TEMPLATES[parsed.data as keyof typeof TEMPLATES];
   if (!t) throw new Error(`Bilinmeyen konsept: ${konsept}`);
   return t;
 }
