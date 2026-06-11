@@ -78,13 +78,16 @@ export function portashelfDisplayName(
   return `Portashelf 4 Katlı Raf ${depthCm}×${widthCm}×${heightCm} cm`;
 }
 
-/** PDF gömülü görsel — INOX 201 LIGHT sütunu (yuksel-46-x-152-x-183_1.jpg) */
+/** Portashelf 4 katlı raf — kanonik 304 kalite tel raf görseli (tüm ölçü SKU'ları). */
+export const PORTASHELF_304_GORSEL_REL =
+  "images/catalog/yuksel/yuksel-46-x-152-x-183_1.jpg";
+
+/** Portashelf ölçü SKU → her zaman 304 kalite referans görseli */
 export function portashelfGorselRelFromSku(
   sku: string | null | undefined,
 ): string | null {
-  const m = /^(\d+)-x-(\d+)-x-(\d+)$/i.exec(String(sku ?? "").trim());
-  if (!m) return null;
-  return `images/catalog/yuksel/yuksel-${m[1]}-x-${m[2]}-x-${m[3]}_1.jpg`;
+  if (!isPortashelfSku(sku)) return null;
+  return PORTASHELF_304_GORSEL_REL;
 }
 
 function olcuNums(olcu: string): number[] {
