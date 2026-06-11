@@ -36,6 +36,11 @@ const vercel = parseEnv(
 const template = parseEnv(
   fs.readFileSync(path.join(root, ".env.local.template"), "utf8"),
 );
+const example = parseEnv(
+  fs.existsSync(path.join(root, ".env.example"))
+    ? fs.readFileSync(path.join(root, ".env.example"), "utf8")
+    : "",
+);
 
 const skip = new Set([
   "VERCEL",
@@ -47,7 +52,8 @@ const skip = new Set([
   "NX_DAEMON",
   "TURBO_",
 ]);
-const merged = { ...template, ...vercel };
+/** öncelik: template < example < vercel (dolu alanlar) */
+const merged = { ...template, ...example, ...vercel };
 for (const k of Object.keys(merged)) {
   if ([...skip].some((p) => k.startsWith(p.replace(/_$/, "")) || k.startsWith(p))) {
     delete merged[k];
@@ -58,6 +64,30 @@ merged.NEXT_PUBLIC_SITE_URL = "https://equsto.com";
 merged.LEGACY_DATA_BASE = "https://equsto.com";
 merged.NODE_ENV = "production";
 merged.ACME_EMAIL = merged.ACME_EMAIL || "admin@equsto.com";
+merged.NEXT_PUBLIC_ASSET_CDN_URL =
+  merged.NEXT_PUBLIC_ASSET_CDN_URL ||
+  merged.AWS_CLOUDFRONT_URL ||
+  "https://dqb0g8etbedva.cloudfront.net";
+merged.NEXT_PUBLIC_GA4_ID =
+  merged.NEXT_PUBLIC_GA4_ID || "G-MVRNFQC4PQ";
+
+/** Sunucuda yerel Meili (Cloud URL şablonda eski/ölü olabilir) */
+merged.MEILISEARCH_HOST = "http://meilisearch:7700";
+merged.MEILISEARCH_MASTER_KEY = "equsto-prod-meili-key";
+merged.MEILISEARCH_INDEX = merged.MEILISEARCH_INDEX || "equsto_products";
+
+const dbPlaceholder =
+  !merged.DATABASE_URL ||
+  /YOUR_DB_PASSWORD|\[PASSWORD\]|PASSWORD@/i.test(merged.DATABASE_URL);
+if (dbPlaceholder) {
+  delete merged.DATABASE_URL;
+  delete merged.DIRECT_URL;
+  console.error(
+    "[merge-hetzner-env] UYARI: DATABASE_URL eksik — Vercel panelinden ekleyin",
+  );
+} else {
+  console.log("[merge-hetzner-env] DATABASE_URL mevcut");
+}
 
 const order = [
   "NEXT_PUBLIC_SITE_URL",
@@ -88,31 +118,17 @@ const order = [
   "ACME_EMAIL",
 ];
 
-const lines = [];
-const seen = new Set();
+const outPath = path.join(root, ".env.production.hetzner");
+const linesOut = [];
+const seenOut = new Set();
 for (const k of order) {
   if (merged[k] == null) continue;
-  lines.push(`${k}=${merged[k]}`);
-  seen.add(k);
+  linesOut.push(`${k}=${merged[k]}`);
+  seenOut.add(k);
 }
 for (const k of Object.keys(merged).sort()) {
-  if (seen.has(k)) continue;
-  lines.push(`${k}=${merged[k]}`);
+  if (seenOut.has(k)) continue;
+  linesOut.push(`${k}=${merged[k]}`);
 }
-
-const outPath = path.join(root, ".env.production.hetzner");
-fs.writeFileSync(outPath, `${lines.join("\n")}\n`, "utf8");
-
-merged.NEXT_PUBLIC_ASSET_CDN_URL =
-  merged.NEXT_PUBLIC_ASSET_CDN_URL ||
-  merged.AWS_CLOUDFRONT_URL ||
-  "https://dqb0g8etbedva.cloudfront.net";
-
-if (!merged.DATABASE_URL || merged.DATABASE_URL.includes("YOUR_DB_PASSWORD")) {
-  console.error(
-    "[merge-hetzner-env] UYARI: DATABASE_URL eksik — sunucuda Vercel panelinden ekleyin",
-  );
-} else {
-  console.log("[merge-hetzner-env] DATABASE_URL mevcut");
-}
-console.log("[merge-hetzner-env] OK", outPath, Object.keys(merged).length, "keys");
+fs.writeFileSync(outPath, `${linesOut.join("\n")}\n`, "utf8");
+console.log("[merge-hetzner-env] OK", outPath, linesOut.length, "keys");
