@@ -1,7 +1,9 @@
 import ContactKonuBanner from "@/components/vitrin/ContactKonuBanner";
 
 const MAP_EMBED =
-  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d192697.79303597306!2d28.8717546!3d41.0055005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab9bd6577c883%3A0x10ca6c382f2c590!2zxLBzdGFuYnVs!5e0!3m2!1str!2str!4v1717689600000!5m2!1str!2str";
+  "https://maps.google.com/maps?q=" +
+  encodeURIComponent("Çağlayan Mah. Fevizçakmak Cad. No: 69/1 Kağıthane İstanbul") +
+  "&hl=tr&z=16&output=embed";
 
 export default function IletisimPageContent() {
   return (
@@ -27,7 +29,9 @@ export default function IletisimPageContent() {
                   <th scope="row" data-i18n="contact.info_address_l">
                     Adres
                   </th>
-                  <td data-i18n="contact.info_address_v">İstanbul, Türkiye</td>
+                  <td data-i18n="contact.info_address_v">
+                    Çağlayan Mah. Fevizçakmak Cad. No: 69/1 Kağıthane/ İstanbul
+                  </td>
                 </tr>
                 <tr>
                   <th scope="row" data-i18n="contact.info_phone_l">
@@ -184,7 +188,7 @@ export default function IletisimPageContent() {
 
         <div className="ct-map-wrap">
           <iframe
-            title="Equsto — İstanbul harita"
+            title="Equsto — Kağıthane, İstanbul"
             className="ct-map"
             src={MAP_EMBED}
             loading="lazy"
