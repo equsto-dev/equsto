@@ -1,9 +1,5 @@
 import ContactKonuBanner from "@/components/vitrin/ContactKonuBanner";
-
-const MAP_EMBED =
-  "https://maps.google.com/maps?q=" +
-  encodeURIComponent("Çağlayan Mah. Fevizçakmak Cad. No: 69/1 Kağıthane İstanbul") +
-  "&hl=tr&z=16&output=embed";
+import { EQUSTO_OFFICE_ADDRESS, EQUSTO_OFFICE_MAP_EMBED } from "@/lib/site/company-address";
 
 export default function IletisimPageContent() {
   return (
@@ -29,9 +25,7 @@ export default function IletisimPageContent() {
                   <th scope="row" data-i18n="contact.info_address_l">
                     Adres
                   </th>
-                  <td data-i18n="contact.info_address_v">
-                    Çağlayan Mah. Fevizçakmak Cad. No: 69/1 Kağıthane/ İstanbul
-                  </td>
+                  <td data-i18n-skip>{EQUSTO_OFFICE_ADDRESS}</td>
                 </tr>
                 <tr>
                   <th scope="row" data-i18n="contact.info_phone_l">
@@ -190,8 +184,8 @@ export default function IletisimPageContent() {
           <iframe
             title="Equsto — Kağıthane, İstanbul"
             className="ct-map"
-            src={MAP_EMBED}
-            loading="lazy"
+            src={EQUSTO_OFFICE_MAP_EMBED}
+            loading="eager"
             referrerPolicy="no-referrer-when-downgrade"
             allowFullScreen
           />

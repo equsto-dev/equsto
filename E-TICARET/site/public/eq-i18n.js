@@ -221,11 +221,11 @@
     var k;
     if ((k = el.getAttribute("data-i18n"))) {
       var v = get(k);
-      if (v != null) el.textContent = v;
+      if (v != null && v !== "") el.textContent = v;
     }
     if ((k = el.getAttribute("data-i18n-html"))) {
       var vh = get(k);
-      if (vh != null) el.innerHTML = vh;
+      if (vh != null && vh !== "") el.innerHTML = vh;
     }
     if ((k = el.getAttribute("data-i18n-title"))) {
       var vt = get(k);
