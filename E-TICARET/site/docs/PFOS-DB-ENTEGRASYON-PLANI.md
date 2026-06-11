@@ -1,7 +1,11 @@
 # PFOS ↔ Prisma tek katalog — uygulama planı
 
-**Referanslar:** `schema-product-sketch.prisma` (v0.1), `prisma/schema.prisma`, `docs/PRISMA-PFOS-KATALOG-MERGE.md`  
+**Referanslar:** `schema-product-sketch.prisma` (v0.1), `prisma/schema.prisma`, `docs/PRISMA-PFOS-KATALOG-MERGE.md`, **`docs/KATALOG-URUN-HIYERARSI.md`**  
 **Hedef:** PFOS teklif satırları ve e-ticaret aynı `Product.priceListTl` değerini kullanır; kural motoru (`pfos-rules.json`) aynı kalır, **ürün seçimi ve fiyat** DB’den gelir.
+
+### Katalog sütun hiyerarşisi (Haziran 2026)
+
+Equsto kodu → Marka (ad) → Marka kodu → Ürün kodu → Kategori (depth 0) → Alt kategori 1–4+ → Açıklama → Detay → Ölçü (mm) → Fiyat (KDV hariç döviz). Ayrıntı: **`KATALOG-URUN-HIYERARSI.md`**.
 
 ---
 

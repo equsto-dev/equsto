@@ -4,6 +4,7 @@
  */
 import "./load-env.mjs";
 import { Meilisearch } from "meilisearch";
+import { printMeiliConnectionHint } from "./lib/meili-error-hint.mjs";
 
 const host = process.env.MEILISEARCH_HOST?.trim();
 const key = process.env.MEILISEARCH_MASTER_KEY?.trim();
@@ -31,7 +32,9 @@ try {
     console.log("[meili-health]", indexUid, "belge:", st.numberOfDocuments);
   }
 } catch (e) {
+  const msg = e?.message || e;
   console.error("[meili-health] HATA — instance hazır değil veya anahtar yanlış:");
-  console.error(e?.message || e);
+  console.error(msg);
+  printMeiliConnectionHint(host, msg);
   process.exit(1);
 }

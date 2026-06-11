@@ -27,12 +27,11 @@ export function findShopTypeByDukkanSecim(
 ): ShopTypeKayit | null {
   const d = dukkanSecim.trim();
   if (!d) return null;
-  const aktif = shopTypes.filter((t) => t.pfos.durum !== "planlanan");
-  const byDukkan = aktif.find((t) => t.pfos.dukkanSecim === d);
+  const byDukkan = shopTypes.find((t) => t.pfos.dukkanSecim === d);
   if (byDukkan) return byDukkan;
   if (motorSlug) {
     const slug = motorSlug.trim();
-    return aktif.find((t) => t.pfos.motorSlug === slug) ?? null;
+    return shopTypes.find((t) => t.pfos.motorSlug === slug) ?? null;
   }
   return null;
 }

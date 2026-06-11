@@ -1,0 +1,14 @@
+{
+  "generatedAt": "2026-05-31T01:37:23.947Z",
+  "catalogProducts": 7530,
+  "shopProducts": 7530,
+  "brandCount": 4,
+  "categoryTips": 150,
+  "sitemapUrls": 15496,
+  "findings": {
+    "error": 0,
+    "warn": 112,
+    "info": 2,
+    "ok": 4
+  }
+}

@@ -1,3 +1,4 @@
+import type { AdminUrunRow } from "@/lib/admin-urun";
 import type { EslesmisUrun } from "../schemas/pfos.schema";
 import { enrichEslesmisFromKatalogRow } from "./catalog-enrich";
 import {
@@ -14,6 +15,7 @@ import {
   isOzelImalatMotor,
 } from "./ozel-imalat";
 import { matchCatalogByIsimOlcu } from "../referans/referans-eslestirme";
+import { matchEslesmisByEqustoGuess } from "@/lib/catalog/equsto-kod-lookup";
 import { isBulasikPfosKalem } from "./bulasik-marka";
 import { matchBulasikByReferans } from "../referans/bulasik-match";
 import { isPortashelfPfosKalem, isCopArabasiPfosKalem } from "./portashelf-marka";
@@ -53,8 +55,11 @@ async function getTipKoduIndex(): Promise<Map<string, ZoneCatalogProduct>> {
 
 function catalogProductToEslesmis(p: ZoneCatalogProduct): EslesmisUrun {
   const fiyat = Math.round(Number(p.unit_price_try) || 0);
-  const pseudoRow = {
+  const pseudoRow: AdminUrunRow = {
     id: `catalog-${p.id}`,
+    equsto_kod: null,
+    marka_kodu: null,
+    urun_kodu: null,
     ad: p.name,
     sku: p.tip_kodu || p.id,
     tip_kodu: p.tip_kodu || null,
@@ -68,8 +73,9 @@ function catalogProductToEslesmis(p: ZoneCatalogProduct): EslesmisUrun {
     el_guc: null,
     gaz_guc: null,
     aciklama: null,
+    detay: null,
     gorsel_url: null,
-    durum: "aktif" as const,
+    durum: "aktif",
     proje_fab_aktif: true,
   };
   const enriched = enrichEslesmisFromKatalogRow(pseudoRow, {
@@ -278,6 +284,13 @@ export async function matchCatalogFallback(
     if (pisirme) return pisirme;
   }
 
+  if (sablonIsim?.trim()) {
+    const byEq = await matchEslesmisByEqustoGuess({
+      tanim: [sablonIsim, notlar].filter(Boolean).join(" "),
+    });
+    if (byEq) return byEq;
+  }
+
   const shop = await matchShopCatalog(urunTipi, fiyatStratejisi);
   if (shop) return shop;
   if (sablonIsim?.trim()) {
@@ -391,6 +404,11 @@ export async function matchOzelImalatForSablon(
     );
     if (pisirme) return pisirme;
   }
+
+  const byEq = await matchEslesmisByEqustoGuess({
+    tanim: [isim, notlar].filter(Boolean).join(" "),
+  });
+  if (byEq) return byEq;
 
   const shop = await matchShopCatalog(urunTipi, "ekonomik");
   if (shop) return shop;

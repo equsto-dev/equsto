@@ -229,6 +229,13 @@
     "search:up": "docker compose -f docker-compose.meilisearch.yml up -d",
     "search:health": "node --import ./scripts/load-env.mjs scripts/meili-health.mjs",
     "search:index": "node --import ./scripts/load-env.mjs scripts/index-meilisearch.mjs",
+    "catalog:kategorizasyon:export": "node scripts/export-urun-kategorizasyon-xlsx.mjs",
+    "catalog:master:import-xlsx": "node scripts/import-katalog-master-from-xlsx.mjs",
+    "catalog:master:apply": "node scripts/apply-katalog-master.mjs",
+    "catalog:master:publish": "npm run catalog:master:apply && npm run search:index",
+    "catalog:master:sync": "node scripts/import-katalog-master-from-xlsx.mjs && npm run catalog:master:publish",
+    "catalog:master:sync:full": "node scripts/import-katalog-master-from-xlsx.mjs && npm run catalog:master:publish && npm run catalog:master:prisma",
+    "catalog:master:prisma": "node --import ./scripts/load-env.mjs ./node_modules/tsx/dist/cli.mjs scripts/sync-master-to-prisma.ts",
     "postinstall": "node scripts/prisma-postinstall-skip.mjs"
   },
   "dependencies": {
@@ -247,6 +254,7 @@
     "puppeteer-core": "^25.1.0",
     "react": "19.2.4",
     "react-dom": "19.2.4",
+    "server-only": "^0.0.1",
     "zod": "^4.4.3"
   },
   "devDependencies": {

@@ -15,7 +15,8 @@
       "poz": "A1",
       "ad": "SOĞUK TEŞHİR DOLABI (İÇECEK+ PASTA + NÖTR)",
       "olcu": "220*100*140",
-      "adet": 1
+      "adet": 1,
+      "kategori": "icecek"
     },
     {
       "bolum": "",
@@ -23,7 +24,8 @@
       "poz": "A2",
       "ad": "ÇALIŞMA TEZGAHI, KASA ÇEKMECELİ, KAHVE ÇEKMECELİ, TABAN VE ARA RAFLI",
       "olcu": "150*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "",
@@ -31,7 +33,8 @@
       "poz": "A3",
       "ad": "ŞİŞE SOĞUTUCU, İKİ KAPILI",
       "olcu": "90*50*92",
-      "adet": 2
+      "adet": 2,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -39,7 +42,8 @@
       "poz": "A4",
       "ad": "ESPRESSO KAHVE MAKİNASI",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "kahve"
     },
     {
       "bolum": "",
@@ -47,7 +51,8 @@
       "poz": "A5",
       "ad": "KAHVE DEĞİRMENİ",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "kahve"
     },
     {
       "bolum": "",
@@ -55,7 +60,8 @@
       "poz": "A6",
       "ad": "ÇÖP ARABASI",
       "olcu": "40*40*50",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -63,7 +69,8 @@
       "poz": "A7",
       "ad": "BUZ MAKİNASI",
       "olcu": "90 kg/gün",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -71,7 +78,8 @@
       "poz": "A8",
       "ad": "BARDAK YIKAMA MAKİNASI, UCL 500 TB/SAAT, ALMAN",
       "olcu": "60*60*82",
-      "adet": 1
+      "adet": 1,
+      "kategori": "bardak-yikama"
     },
     {
       "bolum": "",
@@ -79,7 +87,8 @@
       "poz": "A8",
       "ad": "BARDAK YIKAMA MAKİNASI, NEOSYSTEM 500 TB/SAAT, İTALYAN",
       "olcu": "60*60*82",
-      "adet": 1
+      "adet": 1,
+      "kategori": "bardak-yikama"
     },
     {
       "bolum": "",
@@ -87,7 +96,8 @@
       "poz": "A9",
       "ad": "ÇİFT EVYELİ ÇALIŞMA TEZGAHI, DOLAPLI, SİYAH BOYALI",
       "olcu": "95*70*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "",
@@ -95,7 +105,8 @@
       "poz": "A10",
       "ad": "ÇALIŞMA TEZGAHI, ÇÖP ÇEKMECELİ, SİYAH BOYALI",
       "olcu": "30*40*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "",
@@ -103,7 +114,8 @@
       "poz": "A11",
       "ad": "BAR BLENDER",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "bar-blender"
     },
     {
       "bolum": "",
@@ -111,7 +123,8 @@
       "poz": "A12",
       "ad": "KAHVE MAKİNASI",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "kahve"
     },
     {
       "bolum": "",
@@ -119,7 +132,8 @@
       "poz": "A13",
       "ad": "KATI MEYVE SIKACAĞI",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -127,7 +141,8 @@
       "poz": "A14",
       "ad": "BAR MİKSER",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -135,7 +150,8 @@
       "poz": "A15",
       "ad": "FİLTRE KAHVE MAKİNASI (ANIMO M200)",
       "olcu": "420*380*625",
-      "adet": 1
+      "adet": 1,
+      "kategori": "kahve"
     },
     {
       "bolum": "",
@@ -143,7 +159,8 @@
       "poz": "A17",
       "ad": "MERRYCHEF",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -151,7 +168,8 @@
       "poz": "A18",
       "ad": "SETALTI BUZDOLABI, TEK KAPILI",
       "olcu": "60*60*82",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -159,7 +177,8 @@
       "poz": "A19",
       "ad": "SETALTI DERİNDONDURUCU, TEK KAPILI",
       "olcu": "60*60*82",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -167,7 +186,25 @@
       "poz": "A20",
       "ad": "MONTAJ NAKLİYE",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     }
-  ]
+  ],
+  "kategoriTags": [
+    "icecek",
+    "tezgah",
+    "diger",
+    "kahve",
+    "bardak-yikama",
+    "bar-blender"
+  ],
+  "_mappingApplied": {
+    "source": "public/data/pfos-ekipman-mapping.json",
+    "generated_at": "2026-06-11T10:16:08.432Z",
+    "file": "coffee-shop-referans.json",
+    "counts": {
+      "mapped": 8,
+      "unmapped": 12
+    }
+  }
 }

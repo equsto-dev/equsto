@@ -15,7 +15,8 @@
       "poz": "A1",
       "ad": "KASA TEZGAHI",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "A",
@@ -23,7 +24,8 @@
       "poz": "A2",
       "ad": "SERVİS TEZGAHI",
       "olcu": "65*80*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "A",
@@ -31,7 +33,8 @@
       "poz": "A3",
       "ad": "TATLI- İÇECEK DOLABI",
       "olcu": "130*80*85/130",
-      "adet": 1
+      "adet": 1,
+      "kategori": "icecek"
     },
     {
       "bolum": "A",
@@ -39,7 +42,8 @@
       "poz": "A4",
       "ad": "BAINMARIE 5 GN 1/1",
       "olcu": "180*80*85/130",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "A",
@@ -47,7 +51,8 @@
       "poz": "A5",
       "ad": "ÇORBALIK ÜNİTESİ, 2 AD. ÇORBALIK KARTUŞLU",
       "olcu": "50*80*85/130",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "A",
@@ -55,7 +60,8 @@
       "poz": "A6",
       "ad": "SERVİS TEZGAHI KÖŞE UYUM TİP",
       "olcu": "120/120*80*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "A",
@@ -63,7 +69,8 @@
       "poz": "A7",
       "ad": "ZEYTİNYAĞLI TEŞHİR DOLABI",
       "olcu": "85*80*85/130",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "A",
@@ -71,7 +78,8 @@
       "poz": "A8",
       "ad": "SALATA TEŞHİR DOLABI",
       "olcu": "120*80*85/130",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "A",
@@ -79,7 +87,8 @@
       "poz": "A9",
       "ad": "KÜVER ÜNİTESİ",
       "olcu": "40*80*85/130",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "A",
@@ -87,7 +96,8 @@
       "poz": "A10",
       "ad": "FIRIN TEZGAHI",
       "olcu": "95*80*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "A",
@@ -95,7 +105,8 @@
       "poz": "A11",
       "ad": "KONVEKSİYONLU FIRIN, ELK.",
       "olcu": "10 GN 1/1",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "A",
@@ -103,7 +114,8 @@
       "poz": "A12",
       "ad": "FIRIN DAVLUMBAZI, YAN PANELLER DAHİL",
       "olcu": "100*100*50",
-      "adet": 1
+      "adet": 1,
+      "kategori": "davlumbaz"
     },
     {
       "bolum": "A",
@@ -111,7 +123,8 @@
       "poz": "A13",
       "ad": "ÇALIŞMA TEZGAHI, DOLAPLI",
       "olcu": "130*70*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "A",
@@ -119,7 +132,8 @@
       "poz": "A14",
       "ad": "ÇAY OTOMATI",
       "olcu": "23 lt.",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "A",
@@ -127,7 +141,8 @@
       "poz": "A15",
       "ad": "TEZGAH TİPİ BUZDOLABI, ÇEKMECELİ",
       "olcu": "180*70*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "A",
@@ -135,7 +150,8 @@
       "poz": "A16",
       "ad": "FRİTÖZ, ELK. SETÜSTÜ",
       "olcu": "40*70*30",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "A",
@@ -143,7 +159,8 @@
       "poz": "A16A",
       "ad": "CİĞER FRİTÖZü, ELK. SETÜSTÜ",
       "olcu": "40*70*30",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "A",
@@ -151,7 +168,8 @@
       "poz": "A17",
       "ad": "CİĞER OCAĞI",
       "olcu": "40*40*20",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "A",
@@ -159,7 +177,8 @@
       "poz": "A18",
       "ad": "TEZGAH TİPİ BUZDOLABI, ÇEKMECELİ",
       "olcu": "140*70*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "A",
@@ -167,7 +186,8 @@
       "poz": "A19",
       "ad": "IZGARA, GAZLI, SETÜSTÜ",
       "olcu": "80*70*30",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "A",
@@ -175,7 +195,8 @@
       "poz": "A20",
       "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ, YAN PANELLER DAHİL",
       "olcu": "440*100*50",
-      "adet": 1
+      "adet": 1,
+      "kategori": "davlumbaz"
     },
     {
       "bolum": "A",
@@ -183,7 +204,8 @@
       "poz": "A21",
       "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
       "olcu": "220*75*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "A",
@@ -191,7 +213,8 @@
       "poz": "A22",
       "ad": "3 AÇIK ALEVLİ OCAK, GAZLI, SETÜSTÜ",
       "olcu": "120*70*30",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "A",
@@ -199,7 +222,8 @@
       "poz": "A23",
       "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ, YAN PANELLER DAHİL",
       "olcu": "140*100*50",
-      "adet": 1
+      "adet": 1,
+      "kategori": "davlumbaz"
     },
     {
       "bolum": "B",
@@ -207,7 +231,8 @@
       "poz": "B1",
       "ad": "TEK EVYELİ BYM GİRİŞ TEZGAHI",
       "olcu": "70*75*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "B",
@@ -215,7 +240,8 @@
       "poz": "B2",
       "ad": "ÖN YIKAMA DUŞU",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "B",
@@ -223,7 +249,8 @@
       "poz": "B3",
       "ad": "BULAŞIK YIKAMA MAKİNASI, GİYOTİN TİP",
       "olcu": "1000 tb/s",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "B",
@@ -231,7 +258,8 @@
       "poz": "B4",
       "ad": "DAVLUMBAZ, DUVAR TİPİ",
       "olcu": "100*97*50",
-      "adet": 1
+      "adet": 1,
+      "kategori": "davlumbaz"
     },
     {
       "bolum": "B",
@@ -239,7 +267,8 @@
       "poz": "B5",
       "ad": "BYM ÇIKIŞ TEZGAHI",
       "olcu": "70*75*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "B",
@@ -247,7 +276,23 @@
       "poz": "Z1",
       "ad": "NAKLİYE MONTAJ",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     }
-  ]
+  ],
+  "kategoriTags": [
+    "tezgah",
+    "icecek",
+    "diger",
+    "davlumbaz"
+  ],
+  "_mappingApplied": {
+    "source": "public/data/pfos-ekipman-mapping.json",
+    "generated_at": "2026-06-11T10:16:08.470Z",
+    "file": "kiremit-akasya-100-250.json",
+    "counts": {
+      "mapped": 15,
+      "unmapped": 15
+    }
+  }
 }

@@ -89,10 +89,10 @@ function formatTry(n: number) {
   }).format(n);
 }
 
-function parseKonsept(slug: string | null): Konsept | null {
+function parseKonsept(slug: string | null): string | null {
   if (!slug) return null;
-  const r = KonseptEnum.safeParse(slug);
-  return r.success ? r.data : null;
+  const normalized = String(slug).trim();
+  return normalized.length > 0 ? normalized : null;
 }
 
 export default function PfosPublicWizard({ initialQuestions }: Props) {
@@ -306,7 +306,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     () => dukkanSecimdenMotorSlug(motorGirdi.dukkanSecim, shopTypes),
     [motorGirdi.dukkanSecim, shopTypes],
   );
-  const konsept = parseKonsept(motorSlug);
+  const konsept = parseKonsept(motorSlug ?? motorGirdi.dukkanSecim);
 
   useEffect(() => {
     const dukkan = motorGirdi.dukkanSecim?.trim();

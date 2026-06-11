@@ -17,7 +17,8 @@
       "poz": "K1",
       "ad": "DEPO TİPİ BUZDOLABI, ÇİFT KAPILI",
       "olcu": "140*70*205",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "kuru-depo",
@@ -25,7 +26,8 @@
       "poz": "K2",
       "ad": "İSTİF RAFI, 4 KATLI, DEMONTE",
       "olcu": "107*53*160",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "kuru-depo",
@@ -33,7 +35,8 @@
       "poz": "K3",
       "ad": "İSTİF RAFI, 4 KATLI, DEMONTE",
       "olcu": "183*53*160",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "mutfak",
@@ -41,7 +44,8 @@
       "poz": "M1",
       "ad": "KUVER UNİTESİ, KAYDIRMA STANDLI, MOBİLYASIZ",
       "olcu": "70*70*135",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "mutfak",
@@ -49,7 +53,8 @@
       "poz": "M2",
       "ad": "BAINMARIE, SERVİS RAFLI, AYDINLATMALI, KAYDIRMA STANDLI, 4 GN 1/1, MOBİLYASIZ, KÜVETLER HARİÇTİR.",
       "olcu": "150*70*85/135",
-      "adet": 1
+      "adet": 1,
+      "kategori": "servis"
     },
     {
       "bolum": "mutfak",
@@ -57,7 +62,8 @@
       "poz": "M3",
       "ad": "TEZGAH TİPİ BUZDOLABI, 2 KAPILI, SERVİS RAFLI, AYDINLATMALI, KAYDIRMA STANDLI, 4 GN 1/1, MOBİLYASIZ",
       "olcu": "143*70*85/135",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "mutfak",
@@ -65,7 +71,8 @@
       "poz": "M4",
       "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI, DOLAPLI",
       "olcu": "140*70*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "mutfak",
@@ -73,7 +80,8 @@
       "poz": "M5",
       "ad": "DUVAR DOLABI, SÜRGÜ KAPILI, 2 KATLI",
       "olcu": "110*40*60",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "mutfak",
@@ -81,7 +89,8 @@
       "poz": "M6",
       "ad": "4 AÇIK ALEVLİ OCAK, KUZİNELİ, GAZLI",
       "olcu": "80*70*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "mutfak",
@@ -89,7 +98,8 @@
       "poz": "M7",
       "ad": "FRİTÖZ, TEK SEPETLİ, ELK., DOLAPLI",
       "olcu": "40*70*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "dolap"
     },
     {
       "bolum": "mutfak",
@@ -97,7 +107,8 @@
       "poz": "M8",
       "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
       "olcu": "100*70*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "mutfak",
@@ -105,7 +116,8 @@
       "poz": "M9",
       "ad": "ÇAY OCAĞI, GAZLI+ ELEKTRİKLİ",
       "olcu": "2 DEMLİKLİ",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "mutfak",
@@ -113,7 +125,8 @@
       "poz": "M10",
       "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
       "olcu": "280*90*50",
-      "adet": 1
+      "adet": 1,
+      "kategori": "davlumbaz"
     },
     {
       "bolum": "mutfak",
@@ -121,7 +134,8 @@
       "poz": "M11",
       "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI, DOLAPLI",
       "olcu": "140*70*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "mutfak",
@@ -129,7 +143,8 @@
       "poz": "M12",
       "ad": "BULAŞIK YIKAMA MAKİNASI, SETALTI",
       "olcu": "500 tb/saat",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "mutfak",
@@ -137,7 +152,8 @@
       "poz": "M13",
       "ad": "DUVAR DOLABI, SÜRGÜ KAPILI, 2 KATLI",
       "olcu": "110*40*60",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "mutfak",
@@ -145,7 +161,8 @@
       "poz": "M14",
       "ad": "ÇAY SERVİS TEZGAHI, ETRAFI KAPALI",
       "olcu": "60*70*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "yer-izgarasi",
@@ -153,7 +170,24 @@
       "poz": "Y1",
       "ad": "YER IZGARASI",
       "olcu": "30*30*14",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     }
-  ]
+  ],
+  "kategoriTags": [
+    "diger",
+    "servis",
+    "tezgah",
+    "dolap",
+    "davlumbaz"
+  ],
+  "_mappingApplied": {
+    "source": "public/data/pfos-ekipman-mapping.json",
+    "generated_at": "2026-06-11T10:16:08.593Z",
+    "file": "yerinde-uretim-20-60.json",
+    "counts": {
+      "mapped": 8,
+      "unmapped": 10
+    }
+  }
 }

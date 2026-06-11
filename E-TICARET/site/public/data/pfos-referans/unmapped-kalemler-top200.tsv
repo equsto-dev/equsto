@@ -1,0 +1,201 @@
+count	ad	bolum	bolumAd	files
+46	DUVAR RAFI			all-day-dining-cafe-150-300.json; balikci-150-250-ekipman-listesi.json; balikci-80-150.json; balikci-mahalle.json; birahane-100-300.json; italyan-100-300.json; italyan-150-300.json; pastane-100-200.json; pideci-100-250.json; restoran-500-1000.json
+36	İSTİF RAFI			all-day-dining-cafe-150-300.json; birahane-100-300.json; hotdog-kiosk-kiosk.json; italyan-100-300.json; italyan-150-300.json; pastane-100-200.json; pideci-100-250.json; restoran-500-1000.json; sarkuteri-kiosk-kiosk.json; sushi-40-100.json
+26	ÇÖP ARABASI			all-day-dining-cafe-150-300.json; balikci-150-250-ekipman-listesi.json; balikci-80-150.json; balikci-mahalle.json; birahane-100-300.json; coffee-shop-referans-ekipman-listesi.json; coffee-shop-referans.json; italyan-100-300.json; italyan-150-300.json; pideci-100-250.json
+24	YER IZGARASI			all-day-dining-cafe-150-300.json; balikci-150-250-ekipman-listesi.json; balikci-mahalle.json; birahane-100-300.json; coffee-shop-referans-ekipman-listesi.json; hamburger-kiosk-60-100.json; italyan-100-300.json; italyan-150-300.json; pastane-100-200.json; pideci-100-250.json
+19	PANEL TİP SOĞUK ODA			all-day-dining-cafe-150-300.json; balikci-150-250-ekipman-listesi.json; balikci-80-150.json; balikci-mahalle.json; birahane-100-300.json; italyan-100-300.json; italyan-150-300.json; pastane-100-200.json; pideci-100-250.json; restoran-500-1000.json
+17	BIÇAK STERİL DOLABI			all-day-dining-cafe-150-300.json; balikci-150-250-ekipman-listesi.json; balikci-80-150.json; balikci-mahalle.json; italyan-100-300.json; italyan-150-300.json; pideci-100-250.json; restoran-500-1000.json; steakhouse-150-250.json; steakhouse-80-150.json
+14	DEPO TİPİ BUZDOLABI, TEK KAPILI			all-day-dining-cafe-150-300.json; italyan-100-300.json; italyan-150-300.json; restoran-500-1000.json; steakhouse-150-250.json; steakhouse-80-150.json
+13	YER IZGARASI	Y	Y- YER IZGARASI	balikci-150-250.json; casual-cafe-50-150.json; guneli-pastane-200-400.json; harvest-cafe-100-200.json; inari-bar-yemek-100-200.json; kahve-atolyesi-80-150.json; sarkuteri-kiosk-kiosk.json; tavukcu-80-150.json
+12	DİZDEN KUMANDALI EL YIKAMA LAVABOSU			all-day-dining-cafe-150-300.json; balikci-150-250-ekipman-listesi.json; balikci-80-150.json; italyan-100-300.json; italyan-150-300.json; pastane-100-200.json; restoran-500-1000.json; steakhouse-150-250.json; steakhouse-80-150.json
+11	İSTİP RAFI			balikci-150-250-ekipman-listesi.json; balikci-80-150.json; balikci-mahalle.json
+10	SİNEK ÖLDÜRÜCÜ			all-day-dining-cafe-150-300.json; balikci-150-250-ekipman-listesi.json; birahane-100-300.json; italyan-100-300.json; italyan-150-300.json; pastane-100-200.json; pideci-100-250.json; restoran-500-1000.json; steakhouse-150-250.json; steakhouse-80-150.json
+9	YAĞ TUTUCU			all-day-dining-cafe-150-300.json; balikci-150-250-ekipman-listesi.json; balikci-mahalle.json; italyan-100-300.json; italyan-150-300.json; pideci-100-250.json; restoran-500-1000.json; steakhouse-150-250.json
+8	BASKET RAFI			all-day-dining-cafe-150-300.json; balikci-150-250-ekipman-listesi.json; balikci-mahalle.json; italyan-100-300.json; italyan-150-300.json; pideci-100-250.json; restoran-500-1000.json
+8	YER IZGARASI	Y	YER IZGARASI	kahve-duragi-pastane-100-200.json; kasap-100-250.json; kasap-sarkuteri-100-250.json; sehir-otel-500-2000-topkapi.json
+8	DUVAR RAFİ			steakhouse-150-250.json; steakhouse-80-150.json
+7	ÇAY OTOMATI			all-day-dining-cafe-150-300.json; balikci-150-250-ekipman-listesi.json; italyan-100-300.json; italyan-150-300.json; pideci-100-250.json; steakhouse-150-250.json; steakhouse-80-150.json
+7	ÖN YIKAMA DUŞU			all-day-dining-cafe-150-300.json; italyan-100-300.json; italyan-150-300.json; pastane-100-200.json; restoran-500-1000.json; steakhouse-150-250.json
+7	YER IZGARASI, B2 SIĞ TİP	YER_IZGARALA	YER IZGARALARI	buyuk-yemekhane-2000-3500.json
+7	İSTİF RAFİ			steakhouse-150-250.json; steakhouse-80-150.json
+6	4 AÇIK ALEVLİ OCAK, GAZLI, SETÜSTÜ			all-day-dining-cafe-150-300.json; italyan-100-300.json; italyan-150-300.json; pideci-100-250.json; restoran-500-1000.json; steakhouse-80-150.json
+6	TOST MAKİNASI			all-day-dining-cafe-150-300.json; balikci-150-250-ekipman-listesi.json; birahane-100-300.json; italyan-100-300.json; italyan-150-300.json; restoran-500-1000.json
+5	ET KÜTÜĞÜ			all-day-dining-cafe-150-300.json; italyan-150-300.json; restoran-500-1000.json; steakhouse-150-250.json; steakhouse-80-150.json
+5	LAVTAŞLI IZGARA, GAZLI, SETÜSTÜ			all-day-dining-cafe-150-300.json; italyan-100-300.json; italyan-150-300.json; pideci-100-250.json; steakhouse-80-150.json
+5	BAR MİKSER			all-day-dining-cafe-150-300.json; coffee-shop-referans-ekipman-listesi.json; coffee-shop-referans.json; italyan-100-300.json; italyan-150-300.json
+5	PORTAKAL SIKMA MAKİNASI			all-day-dining-cafe-150-300.json; italyan-100-300.json; italyan-150-300.json; pastane-100-200.json; pideci-100-250.json
+5	MAKE-UP ÜNİTESİ, 3 KAPILI			balikci-150-250-ekipman-listesi.json; pideci-100-250.json; restoran-500-1000.json; steakhouse-150-250.json; steakhouse-80-150.json
+5	FRİTÖZ, ÇİFT SEPETLİ, ELK., SETÜSTÜ			birahane-100-300.json; italyan-100-300.json; restoran-500-1000.json; steakhouse-150-250.json; steakhouse-80-150.json
+5	BUZ MAKİNASI			birahane-100-300.json; coffee-shop-referans-ekipman-listesi.json; coffee-shop-referans.json; italyan-100-300.json; pideci-100-250.json
+5	PANEL TİP SOĞUK ODA	B	B- SOĞUK ODA	harvest-cafe-100-200.json; hotdog-kiosk-kiosk.json; sarkuteri-kiosk-kiosk.json; sushi-40-100.json; tavukcu-80-150.json
+5	İSTİF RAFI	B	B- SOĞUK ODA	hotdog-kiosk-kiosk.json; sarkuteri-kiosk-kiosk.json; sushi-40-100.json; tavukcu-80-150.json
+4	DUVAR RAFI	M	M- MUTFAK	balikci-150-250.json; kahve-atolyesi-80-150.json
+4	DUVAR RAFI, YÜKSEL	SICAK_MUTFAK	SICAK MUTFAK	buyuk-yemekhane-2000-3500.json
+4	DUVAR RAFI, YÜKSEL	KAHVALTI_SOĞ	KAHVALTI SOĞUK MUTFAK	buyuk-yemekhane-2000-3500.json
+4	TEL RAF 4 KATLI	M	M- DEPOLAR	kahve-duragi-100-200.json; kahve-duragi-150-200.json
+4	DUVAR RAFI	M	MUTFAK	kahve-duragi-pastane-100-200.json
+4	PASLANMAZ TABLA	Z	ZEMİN KAT SATIŞ ALANI	kasap-100-250.json; kasap-sarkuteri-100-250.json
+4	YER IZGARASI	y	y- yer ızgarası	pizzaci-200-500.json; pizzaci-80-200.json
+4	DUVAR RAFI	R	RESTAURANT MUTFAĞI	sehir-otel-500-2000-topkapi.json
+3	PANEL TİP DERİN DONDURUCU DEPO			all-day-dining-cafe-150-300.json; italyan-150-300.json; restoran-500-1000.json
+3	PİZZA FIRINI, ÇİFT KATLI			all-day-dining-cafe-150-300.json; italyan-100-300.json; italyan-150-300.json
+3	2 AÇIK ALEVLİ OCAK, GAZLI, SETÜSTÜ			all-day-dining-cafe-150-300.json; italyan-150-300.json; restoran-500-1000.json
+3	TAVA RAFI			all-day-dining-cafe-150-300.json; italyan-100-300.json; italyan-150-300.json
+3	BUZ MAKİNASI	B	B- BAR	all-sport-cafe-100-200.json; inari-bar-yemek-100-200.json; kahve-atolyesi-80-150.json
+3	KASA BANKOSU			balikci-150-250-ekipman-listesi.json; italyan-100-300.json; pideci-100-250.json
+3	BULAŞIK YIKAMA MAKİNASI			balikci-150-250-ekipman-listesi.json; balikci-mahalle.json; hamburger-kiosk-60-100.json
+3	KÖMÜRLÜ IZGARA			balikci-mahalle.json; restoran-500-1000.json; steakhouse-150-250.json
+3	İSTİF ETAJERİ, 304K PASLANMAZ	BULAŞIK	BULAŞIK	buyuk-yemekhane-2000-3500.json
+3	İSTİF ETAJERİ, 304K PASLANMAZ	GENEL_ALANLA	GENEL ALANLAR	buyuk-yemekhane-2000-3500.json
+3	DUVAR RAFI, YÜKSEL	TATLI_&_KAHV	TATLI & KAHVALTI	buyuk-yemekhane-2000-3500.json
+3	İSTİF ETAJERİ, 304K PASLANMAZ	PORSIYONLAMA	PORSIYONLAMA MUTFAGI	buyuk-yemekhane-2000-3500.json
+3	DUVAR RAFI (imalat)	M	M- MUTFAK	guneli-pastane-200-400.json
+3	İSTİF RAFI, DEMONTE, 4 KATLI	C	C- DERİN DONDURUCU ODA	harvest-cafe-100-200.json
+3	UN ŞEKER ARABASI			italyan-100-300.json; pastane-100-200.json; restoran-500-1000.json
+3	SOS BAINMARIE, ELK. SETÜSTÜ			italyan-100-300.json; steakhouse-150-250.json; steakhouse-80-150.json
+3	KATI MEYVE PRESİ			italyan-100-300.json; pastane-100-200.json; pideci-100-250.json
+3	DUVAR RAFI	B	B- BULAŞIK YIKAMA	kahve-atolyesi-80-150.json
+3	DUVAR RAFI	A	ALT KAT MUTFAK	kahve-tatli-40-100.json
+3	YER IZGARASI	YER IZGARASI	YER IZGARASI	mus-selinoz-turk-100-250.json
+3	HAMUR YOĞURMA MAKİNASI			pastane-100-200.json; pideci-100-250.json; restoran-500-1000.json
+3	Tepsi standı, Cr-Ni boru	personel	PERSONEL	resort-otel-200-500.json
+3	İSTİF RAFI	A	ANA MUTFAK DERİN DONDURUCU DEPO	sehir-otel-500-2000-topkapi.json
+3	DUVAR RAFI	03-hazirlik	03-HAZIRLIK	turk-restoran-200-5000.json
+2	HAMUR YOĞURMA MAKİNASIİ DOMINO			all-day-dining-cafe-150-300.json; italyan-150-300.json
+2	MAKE-UP PİZZA HAZIRLIK BUZDOLABI, 3 KAPILI, MERMER TABLALI			all-day-dining-cafe-150-300.json; italyan-150-300.json
+2	MAKE-UP ÜNİTESİ, 2 KAPILI			all-day-dining-cafe-150-300.json; italyan-150-300.json
+2	FRİTÖZ, ÇİFT SEPETLİ, ELK. SETÜSTÜ			all-day-dining-cafe-150-300.json; italyan-150-300.json
+2	MAKARNA PİŞİRİCİ, ELK., SETÜSTÜ			all-day-dining-cafe-150-300.json; italyan-150-300.json
+2	MİKRODALGA FIRIN			all-day-dining-cafe-150-300.json; italyan-150-300.json
+2	BUZ MAKİNASI, BREMA CB416			all-day-dining-cafe-150-300.json; italyan-150-300.json
+2	KATI MEYVE PRESİ, SANTOS			all-day-dining-cafe-150-300.json; italyan-150-300.json
+2	BULAŞIK YIKAMA MAKİNASI, GİYOTİN TİP, NEO NSP80			all-day-dining-cafe-150-300.json; italyan-150-300.json
+2	4 AÇIK ALEVLİ OCAK, GAZLI, SETÜSTÜ	M	M- MUTFAK	all-sport-cafe-100-200.json; kahve-atolyesi-80-150.json
+2	ÇÖP ARABASI	M	M- MUTFAK	all-sport-cafe-100-200.json; balikci-150-250.json
+2	PORTAKAL SIKMA MAKİNASI	B	B- BAR	all-sport-cafe-100-200.json; inari-bar-yemek-100-200.json
+2	4 AÇIK ALEVLİ KUZİNE, GAZLI, MARENO			balikci-150-250-ekipman-listesi.json; balikci-80-150.json
+2	FRİTÖZ, ÇİFT SEPETLİ, ELK. 10+10 LT, MARENO FQ94L			balikci-150-250-ekipman-listesi.json; balikci-80-150.json
+2	LAVA TAŞLI IZGARA, GAZLI, SETÜSTÜ, OPL88G			balikci-150-250-ekipman-listesi.json; balikci-80-150.json
+2	İSTİF RAFI, 4 KATLI	A	A- SEBZE SOĞUK ODA	balikci-150-250.json
+2	İSTİF RAFI, 4 KATLI	H	H- BALIK SOĞUK ODA	balikci-150-250.json
+2	ÇÖP ARABASI	D	D- BULAŞIKHANE	balikci-150-250.json; guneli-pastane-200-400.json
+2	ÖN YIKAMA DUŞU (cancan)	D	D- BULAŞIKHANE	balikci-150-250.json; guneli-pastane-200-400.json
+2	KARBUZ MAKİNASI, BREMA G250			balikci-80-150.json; balikci-mahalle.json
+2	BLOK KAPAKLI DERİN DONDURUCU			birahane-100-300.json; sarkuteri-kiosk-kiosk.json
+2	İSTİF ETAJERİ, 304K PASLANMAZ	SOĞUK_ODA	SOĞUK ODA	buyuk-yemekhane-2000-3500.json
+2	İSTİF ETAJERİ, 304K PASLANMAZ	ISITMA_MUTFA	ISITMA MUTFAĞI	buyuk-yemekhane-2000-3500.json
+2	BASKET RAFI, YÜKSEL-K	BULAŞIK	BULAŞIK	buyuk-yemekhane-2000-3500.json
+2	ÇÖP ARABASI, MB126X	BULAŞIK	BULAŞIK	buyuk-yemekhane-2000-3500.json
+2	ON YIKAMA DUSU, LIVA	BULAŞIK	BULAŞIK	buyuk-yemekhane-2000-3500.json
+2	BULASIK YIKAMA MAKINASI, COMENDA, RC411	BULAŞIK	BULAŞIK	buyuk-yemekhane-2000-3500.json
+2	BOS TEPSI TOPLAMA ARABASI, MB102X	BULAŞIK	BULAŞIK	buyuk-yemekhane-2000-3500.json
+2	DUVAR RAFI, YÜKSEL	SEBZE_ON_HAZ	SEBZE ON HAZIRLIK & SEBZE HAZIRLIK	buyuk-yemekhane-2000-3500.json
+2	DUVAR RAFI, YÜKSEL	ET_HAZIRLIK	ET HAZIRLIK	buyuk-yemekhane-2000-3500.json
+2	DUVAR RAFI, YÜKSEL	TAVUK_HAZIRL	TAVUK HAZIRLIK	buyuk-yemekhane-2000-3500.json
+2	ÇÖP ARABASI, MB126X	SICAK_MUTFAK	SICAK MUTFAK	buyuk-yemekhane-2000-3500.json
+2	DUVAR RAFI, YÜKSEL	PORSIYONLAMA	PORSIYONLAMA MUTFAGI	buyuk-yemekhane-2000-3500.json
+2	BASKET RAFI, YÜKSEL-K	BULASIK	BULASIK	buyuk-yemekhane-2000-3500.json
+2	ON YIKAMA DUSU, LIVA	BULASIK	BULASIK	buyuk-yemekhane-2000-3500.json
+2	İSTİF ETAJERİ, 304K PASLANMAZ	BULASIK	BULASIK	buyuk-yemekhane-2000-3500.json
+2	DUVAR RAFI	B	B- HAZIRLIK MUTFAĞI	casual-cafe-50-150.json
+2	ŞİŞE SOĞUTUCU, İKİ KAPILI			coffee-shop-referans-ekipman-listesi.json; coffee-shop-referans.json
+2	KATI MEYVE SIKACAĞI			coffee-shop-referans-ekipman-listesi.json; coffee-shop-referans.json
+2	İSTİF RAFI, DEMONTE, 4 KATLI	B	B- SOĞUK ODA	harvest-cafe-100-200.json
+2	ÇÖP ARABASI, PASLANMAZ ÇELİK	B	B- BAR	inari-bar-yemek-100-200.json
+2	SETALTI BUZDOLABI, 3 KAPILI			italyan-100-300.json; restoran-500-1000.json
+2	BULAŞIK YIKAMA MAKİNASI, GİYOTİN TİP			italyan-100-300.json; restoran-500-1000.json
+2	İSTİF RAFI, DEMONTE, 4 KATLI	K	K- KURU DEPO	kahve-atolyesi-80-150.json
+2	FIRIN STANDI	A	A- SICAK MUTFAK	kahve-duragi-100-200.json; kahve-duragi-150-200.json
+2	BUHAR KONVEKSİYONLU FIRIN, ELK	A	A- SICAK MUTFAK	kahve-duragi-100-200.json; kahve-duragi-150-200.json
+2	MAKARNA PİŞİRİCİ	A	A- SICAK MUTFAK	kahve-duragi-100-200.json; kahve-duragi-150-200.json
+2	IZGARA	A	A- SICAK MUTFAK	kahve-duragi-100-200.json; kahve-duragi-150-200.json
+2	KUZİNE	A	A- SICAK MUTFAK	kahve-duragi-100-200.json; kahve-duragi-150-200.json
+2	TEK KAPAKLI TOST MAKİNASI	A	A- SICAK MUTFAK	kahve-duragi-100-200.json; kahve-duragi-150-200.json
+2	TAVA RAFI	A	A- SICAK MUTFAK	kahve-duragi-100-200.json; kahve-duragi-150-200.json
+2	TEL RAF 4 KATLI	A	A- SICAK MUTFAK	kahve-duragi-100-200.json; kahve-duragi-150-200.json
+2	GARNİTÜR ÜNİTELİ BUZDOLABI	A	A- SICAK MUTFAK	kahve-duragi-100-200.json; kahve-duragi-150-200.json
+2	DUVAR RAFI	G	G- SEBZE HAZIRLIK	kahve-duragi-100-200.json; kahve-duragi-150-200.json
+2	DEPO TİPİ BUZDOLABI, TEK KAPILI	M	M- DEPOLAR	kahve-duragi-100-200.json; kahve-duragi-150-200.json
+2	DEPO TİPİ DERİN DONDURUCU, TEK KAPILI	M	M- DEPOLAR	kahve-duragi-100-200.json; kahve-duragi-150-200.json
+2	YER IZGARASI	Y	Y- YER IZGARALARI	kahve-duragi-100-200.json; kahve-duragi-150-200.json
+2	ET TEŞHİR REYONU	Z	ZEMİN KAT SATIŞ ALANI	kasap-100-250.json; kasap-sarkuteri-100-250.json
+2	MEZE TEŞHİR REYONU	Z	ZEMİN KAT SATIŞ ALANI	kasap-100-250.json; kasap-sarkuteri-100-250.json
+2	ŞARKÜTERİ TEŞHİR REYONU	Z	ZEMİN KAT SATIŞ ALANI	kasap-100-250.json; kasap-sarkuteri-100-250.json
+2	VAKUM MAKİNASI	Z	ZEMİN KAT SATIŞ ALANI	kasap-100-250.json; kasap-sarkuteri-100-250.json
+2	SÜTLÜK, CEPHE CAMLI, SÜRGÜ CAM KAPILI	Z	ZEMİN KAT SATIŞ ALANI	kasap-100-250.json; kasap-sarkuteri-100-250.json
+2	HAMUR (KÖFTE) YOĞURMA MAKİNASI	A	ALT KAT HAZIRLIK MUTFAĞI	kasap-100-250.json; kasap-sarkuteri-100-250.json
+2	TARTI, ET ASKILI	A	ALT KAT HAZIRLIK MUTFAĞI	kasap-100-250.json; kasap-sarkuteri-100-250.json
+2	ÇÖP ARABASI	A	ALT KAT HAZIRLIK MUTFAĞI	kasap-100-250.json; kasap-sarkuteri-100-250.json
+2	BIÇAK STERİL DOLABI	A	ALT KAT HAZIRLIK MUTFAĞI	kasap-100-250.json; kasap-sarkuteri-100-250.json
+2	PANEL TİP SOĞUK ODA	Ş	ŞARKÜTERİ SOĞUK ODA	kasap-100-250.json; kasap-sarkuteri-100-250.json
+2	İSTİF RAFI	Ş	ŞARKÜTERİ SOĞUK ODA	kasap-100-250.json; kasap-sarkuteri-100-250.json
+2	PANEL TİP SOĞUK ODA	E	ET SOĞUK ODA	kasap-100-250.json; kasap-sarkuteri-100-250.json
+2	İSTİF RAFI	E	ET SOĞUK ODA	kasap-100-250.json; kasap-sarkuteri-100-250.json
+2	DUVAR DOLABI			pastane-100-200.json; restoran-500-1000.json
+2	FIRIN ARABASI			pastane-100-200.json; restoran-500-1000.json
+2	DEPO TİPİ BUZDOLABI, TEK KAPILI, 2. EL	m	m- mutfak	pizzaci-200-500.json; pizzaci-80-200.json
+2	DEPO TİPİ DERİN DONDURUCU, TEK KAPILI, 2. EL	m	m- mutfak	pizzaci-200-500.json; pizzaci-80-200.json
+2	FRİTÖZ, ÇİFT HAZNELİ, ELK., SETÜSTÜİ 2. EL	m	m- mutfak	pizzaci-200-500.json; pizzaci-80-200.json
+2	PATATES DİNLENDİRME ÜNİTESİ, ELK., 2. EL	m	m- mutfak	pizzaci-200-500.json; pizzaci-80-200.json
+2	BULAŞIK YIKAMA MAKİNASI, SETALTI, 2. EL	m	m- mutfak	pizzaci-200-500.json; pizzaci-80-200.json
+2	PİZZA FIRINI, TEK KATLI, ELK.	m	m- mutfak	pizzaci-200-500.json; pizzaci-80-200.json
+2	KUBBELİ PİZZA FIRINI, DÖNER TABANLI, GAZLI, DİJİTAL	m	m- mutfak	pizzaci-200-500.json; pizzaci-80-200.json
+2	DİZDEN KUMANDALI EL YIKAMA LAVABOSU	m	m- mutfak	pizzaci-200-500.json; pizzaci-80-200.json
+2	DEPO TİPİ PİZZA BUZDOLABI, TEK KAPILI	m	m- mutfak	pizzaci-200-500.json; pizzaci-80-200.json
+2	MAKE-UP BUZDOLABI, 3 KAPILI	m	m- mutfak	pizzaci-200-500.json; pizzaci-80-200.json
+2	POZ M36'YA MERMER İLAVESİ	m	m- mutfak	pizzaci-200-500.json
+2	MAKE-UP BUZDOLABI, İKİ KAPILI	m	m- mutfak	pizzaci-200-500.json; pizzaci-80-200.json
+2	PİZZA TEŞHİR ÜNİTESİ, DEKORASYON HARİÇ	m	m- mutfak	pizzaci-200-500.json; pizzaci-80-200.json
+2	KASA BANKOSU	m	m- mutfak	pizzaci-200-500.json; pizzaci-80-200.json
+2	Demonte istif rafı, 4 düz tablalı	üst-kat-restaourant	ÜST KAT RESTAOURANT	resort-otel-200-500.json
+2	Duvar rafı	G	G -SEBZE HAZIRLIK	sehir-otel-500-2000-kocaeli.json
+2	Yer ızgarası, tavalı, alttan çıkışlı, eğimsiz, 300*300*122 mm DN 70 PVC(Ø75mm), Sığ tip	Y	Y-YER IZGARALARI	sehir-otel-500-2000-kocaeli.json
+2	Yer ızgarası, tavalı, alttan çıkışlı, eğimsiz, 300*300*122 mm DN 70 PVC(Ø75mm), Sığ tip	Y	Y -YER IZGARALARI	sehir-otel-500-2000-kocaeli.json
+2	Tepsi standı, Cr-Ni boru	P	P -PERSONEL MUTFAĞI	sehir-otel-500-2000-kocaeli.json
+2	DUVAR DOLABI	L	LOUNGE MUTFAK	sehir-otel-500-2000-topkapi.json
+2	DEPO TİPİ BUZDOLABI, TEK KAPILI	R	RESTAURANT MUTFAĞI	sehir-otel-500-2000-topkapi.json
+2	Salam dilimleme makinesi, ekonomik model, çap: 300 mm	B	S O ı U K M U T F A K	sehir-otel-500-2000.json
+2	Yer üzgarası, tavalı,yatay ııkışlı, eğimsiz, 300*300*122 mm DN 70 PVC(Ø75mm), SIKI TİP	Y	YER IZGARALARI	sehir-otel-500-2000.json
+2	Yer üzgarası, tavalı, alttan ııkışlı, eğimsiz, 300*300*122 mm DN 70 PVC(Ø75mm), Sıı tip	Y	YER IZGARALARI	sehir-otel-500-2000.json
+2	Duvar rafı	A	S I C A K M U T F A K	sehir-otel-500-2000.json
+2	Demonte istif rafı, Kazan/tencere	D	M U T F A K BULAŞIK	sehir-otel-500-2000.json
+2	Soğuk Oda, 0-10 m3 arası soğuk oda (ROTA)	S	Soğuk ODALAR	sehir-otel-500-2000.json
+2	Tepsi standı, Cr-Ni boru	B	BANQUET MUTFAıI TOPLAM	sehir-otel-500-2000.json
+2	DRY-AGED DOLABI			steakhouse-150-250.json; steakhouse-80-150.json
+2	ET TEŞHİR REYONU			steakhouse-150-250.json; steakhouse-80-150.json
+2	BUZ MAKİNESİ			steakhouse-150-250.json; steakhouse-80-150.json
+2	İSTİF RAFI, 4 KATLI, DEMONTE	kuru-depo	KURU DEPO	yerinde-uretim-20-60.json
+2	DUVAR DOLABI, SÜRGÜ KAPILI, 2 KATLI	mutfak	MUTFAK	yerinde-uretim-20-60.json
+1	FIRIN, COMPACT BY NABOO, 6 GN 1/1	M	M- MUTFAK	all-sport-cafe-100-200.json
+1	CİHAZALTI BUZDOLABI, ÇİFT SIRA ÇEKMECELİ, REMOTE CONTROL	M	M- MUTFAK	all-sport-cafe-100-200.json
+1	FRİTÖZ, TEK SEPETLİ, ELK., SETÜSTÜ	M	M- MUTFAK	all-sport-cafe-100-200.json
+1	MAKARNA PİŞİRİCİ, ELK., SETÜSTÜ	M	M- MUTFAK	all-sport-cafe-100-200.json
+1	DÖKÜM IZGARA, GAZLI, SETÜSTÜ	M	M- MUTFAK	all-sport-cafe-100-200.json
+1	MAKE-UP BUZDOLABI, 3 SIRA ÇEKMECELİ, REMOTE CONTROL	M	M- MUTFAK	all-sport-cafe-100-200.json
+1	MİKRODALGA FIRIN	M	M- MUTFAK	all-sport-cafe-100-200.json
+1	TOST MAKİNASI	M	M- MUTFAK	all-sport-cafe-100-200.json
+1	HATCO TABAK ISITICI	M	M- MUTFAK	all-sport-cafe-100-200.json
+1	TEK KAPILI DERİN DONDURUCU	M	M- MUTFAK	all-sport-cafe-100-200.json
+1	BULAŞIK YIKAMA MAKİNASI, SETALTI	M	M- MUTFAK	all-sport-cafe-100-200.json
+1	BULAŞIK YIKAMA MAKİNASI, SETALTI	B	B- BAR	all-sport-cafe-100-200.json
+1	ÇAY OTOMATI	B	B- BAR	all-sport-cafe-100-200.json
+1	ŞİŞE SOĞUTUCU, DUVAR TİPİ, REMOTE CONTROL	B	B- BAR	all-sport-cafe-100-200.json
+1	KONVEKSİYONLU FIRIN, ELK. RATIONAL SCC61			balikci-150-250-ekipman-listesi.json
+1	KABUKLU MAKİNASI, BREMA G250			balikci-150-250-ekipman-listesi.json
+1	BUZ MAKİNASI, BREMA CB425			balikci-150-250-ekipman-listesi.json
+1	BALIK TEŞHİR ÜNİTESİ			balikci-150-250-ekipman-listesi.json
+1	SALATA MEZE TEŞHİR ÜNİTESİ			balikci-150-250-ekipman-listesi.json
+1	TATLI TEŞHİR ÜNİTESİ			balikci-150-250-ekipman-listesi.json
+1	İSTİF RAFI, 4 KATLI	K	K- KURU DEPO	balikci-150-250.json
+1	PANEL TİP SOĞUK ODA (rota grup)	A	A- SEBZE SOĞUK ODA	balikci-150-250.json
+1	PANEL TİP SOĞUK ODA (rota grup)	H	H- BALIK SOĞUK ODA	balikci-150-250.json
+1	PANEL TİP DERİN DONDURUCU (rota grup)	F	F- BALIK DERİN DONDURUCU	balikci-150-250.json
+1	İSTİF RAFI, 4 KATLI	F	F- BALIK DERİN DONDURUCU	balikci-150-250.json
+1	DİZDEN KUMANDALI ELYIKAMA LAVABOSU (atalay)	G	G- BALIK HAZIRLIK	balikci-150-250.json
+1	DUVAR RAFI	G	G- BALIK HAZIRLIK	balikci-150-250.json
+1	ÇÖP ARABASI	G	G- BALIK HAZIRLIK	balikci-150-250.json
+1	DEPO TİPİ BUZDOLABI, TEK KAPILI (fagor)	M	M- MUTFAK	balikci-150-250.json
+1	MAKE-UP BUZDOLABI, 3 KAPILI (fagor)	M	M- MUTFAK	balikci-150-250.json
+1	FRİTÖZ, ELK., SETÜSTÜ (atalay)	M	M- MUTFAK	balikci-150-250.json
+1	PLATE IZGARA, GAZLI, SETÜSTÜ (atalay)	M	M- MUTFAK	balikci-150-250.json
+1	KUZİNE, 1 m2, GAZLI (ersöz)	M	M- MUTFAK	balikci-150-250.json

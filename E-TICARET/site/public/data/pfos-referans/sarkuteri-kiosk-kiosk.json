@@ -14,7 +14,8 @@
       "poz": "A1",
       "ad": "İSTİF RAFI",
       "olcu": "152*46*160",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -22,7 +23,8 @@
       "poz": "A2",
       "ad": "BLOK KAPAKLI DERİN DONDURUCU",
       "olcu": "400 lt.",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "B",
@@ -30,7 +32,8 @@
       "poz": "B1",
       "ad": "PANEL TİP SOĞUK ODA",
       "olcu": "270*220*240",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "B",
@@ -38,7 +41,8 @@
       "poz": "B2",
       "ad": "İSTİF RAFI",
       "olcu": "152*46*160",
-      "adet": 3
+      "adet": 3,
+      "kategori": "diger"
     },
     {
       "bolum": "C",
@@ -46,7 +50,8 @@
       "poz": "C1",
       "ad": "KASA BANKOSU",
       "olcu": "130*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "C",
@@ -54,7 +59,8 @@
       "poz": "C2",
       "ad": "ÇALIŞMA TEZGAHI",
       "olcu": "160*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "C",
@@ -62,7 +68,8 @@
       "poz": "C3",
       "ad": "TÜRK KAHVE MAKİNASI",
       "olcu": "130*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "C",
@@ -70,7 +77,8 @@
       "poz": "C4",
       "ad": "KATI MEYVE PRESİ",
       "olcu": "170*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "C",
@@ -78,7 +86,8 @@
       "poz": "C5",
       "ad": "PORTAKAL SIKMA MAKİNASI",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "C",
@@ -86,7 +95,8 @@
       "poz": "C6",
       "ad": "ÇAY OTOMATI",
       "olcu": "23 lt.",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "C",
@@ -94,7 +104,8 @@
       "poz": "C7",
       "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
       "olcu": "60*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "C",
@@ -102,7 +113,8 @@
       "poz": "C8",
       "ad": "ÇÖP ARABASI",
       "olcu": "Ø40*50",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "C",
@@ -110,7 +122,8 @@
       "poz": "C9",
       "ad": "BULAŞIK YIKAMA MAKİNASI",
       "olcu": "500 tb/saat",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "C",
@@ -118,7 +131,8 @@
       "poz": "C10",
       "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
       "olcu": "180*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "C",
@@ -126,7 +140,8 @@
       "poz": "C11",
       "ad": "4 AÇIK ALEVLİ OCAK, SETÜSTÜ",
       "olcu": "80*70*30",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "C",
@@ -134,7 +149,8 @@
       "poz": "C12",
       "ad": "TOST MAKİNASI",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "C",
@@ -142,7 +158,8 @@
       "poz": "C13",
       "ad": "ÇORBA POTU",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "C",
@@ -150,7 +167,8 @@
       "poz": "C14",
       "ad": "BUZ MAKİNASI",
       "olcu": "42 kg/gün",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "C",
@@ -158,7 +176,8 @@
       "poz": "C15",
       "ad": "DAVLUMBAZ, ORTA TİP, FİLTRELİ",
       "olcu": "140*90*50",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "C",
@@ -166,7 +185,8 @@
       "poz": "C16",
       "ad": "ET TEŞHİR ÜNİTESİ",
       "olcu": "1000*115*125",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "C",
@@ -174,7 +194,8 @@
       "poz": "C17",
       "ad": "GIDA DİLİMLEME MAKİNASI",
       "olcu": "Ø275 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "C",
@@ -182,7 +203,8 @@
       "poz": "C18",
       "ad": "SİNEK ÖLDÜRÜCÜ",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "Y",
@@ -190,7 +212,21 @@
       "poz": "Y1",
       "ad": "YER IZGARASI",
       "olcu": "30*30*14",
-      "adet": 2
+      "adet": 2,
+      "kategori": "diger"
     }
-  ]
+  ],
+  "kategoriTags": [
+    "diger",
+    "pisirme"
+  ],
+  "_mappingApplied": {
+    "source": "public/data/pfos-ekipman-mapping.json",
+    "generated_at": "2026-06-11T10:16:08.495Z",
+    "file": "sarkuteri-kiosk-kiosk.json",
+    "counts": {
+      "mapped": 18,
+      "unmapped": 5
+    }
+  }
 }

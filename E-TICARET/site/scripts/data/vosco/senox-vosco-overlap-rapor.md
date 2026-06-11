@@ -24,30 +24,30 @@ Vosco PDF'te Senox adı geçmiyor; eşleşme **kategori ailesi + kapasite + baş
 | VHZB-12HB | Vosco Eko Set Üstü Buz Makinesi 12 Kg Be | 118.BZ12 | Senox BZ12 Buz Makinesi, 12 kg/gün Kapas | 500 | 60% |
 | VHZB-12HK | Vosco Eko Set Üstü Buz Makinesi 12 Kg Kı | 118.BZ12 | Senox BZ12 Buz Makinesi, 12 kg/gün Kapas | 500 | 60% |
 | VHZB-12HS | Vosco Eko Set Üstü Buz Makinesi 12 Kg Si | 118.BZ12 | Senox BZ12 Buz Makinesi, 12 kg/gün Kapas | 500 | 60% |
-| VST-16EB | Vosco Dondurma Makinesi Tek Kollu (Soft) | 118.DY.01 | Senox DY 01 Tek Hazneli Dondurma Yapıcı, | — | 57% |
-| VST-16EM | Vosco Dondurma Makinesi Tek Kollu (Soft) | 118.DY.01 | Senox DY 01 Tek Hazneli Dondurma Yapıcı, | — | 57% |
-| VST-16ES | Vosco Dondurma Makinesi Tek Kollu (Soft) | 118.DY.01 | Senox DY 01 Tek Hazneli Dondurma Yapıcı, | — | 57% |
+| VST-16EB | Vosco Dondurma Makinesi Tek Kollu (Soft) | 118.DY.01 | Senox DY 01 Tek Hazneli Dondurma Yapıcı, | 6500 | 57% |
+| VST-16EM | Vosco Dondurma Makinesi Tek Kollu (Soft) | 118.DY.01 | Senox DY 01 Tek Hazneli Dondurma Yapıcı, | 6500 | 57% |
+| VST-16ES | Vosco Dondurma Makinesi Tek Kollu (Soft) | 118.DY.01 | Senox DY 01 Tek Hazneli Dondurma Yapıcı, | 6500 | 57% |
 | VBBC-150S | Vosco Bar Altı Şişe Soğutucusu Tek Kapak | 118.SMF.5120.ST | Senox SMF-5120 ST Tezgah Altı Derin Dond | — | 57% |
 | VGBC-150G | Vosco Bar Altı Şişe Soğutucusu Tek Kapak | 118.SMF.5120.ST | Senox SMF-5120 ST Tezgah Altı Derin Dond | — | 57% |
-| VSC-32F | Vosco Pro Soft Dondurma Makinesi (Üç Kol | 118.DY.02 | Senox DY 02 Çift Hazneli Dondurma Yapıcı | 35 | 54% |
-| VA-80SR | Vosco Kahve Değirmeni ve Öğütücü 420W 1. | 118.COFFEDIO | Senox Coffeedio Filtre Kahve Makinesi, 1 | — | 54% |
-| VA-80S | Vosco Kahve Değirmeni ve Öğütücü 420W 1. | 118.COFFEDIO | Senox Coffeedio Filtre Kahve Makinesi, 1 | — | 54% |
-| VA-80M | Vosco Kahve Değirmeni ve Öğütücü 420W 1. | 118.COFFEDIO | Senox Coffeedio Filtre Kahve Makinesi, 1 | — | 54% |
-| VA-80K | Vosco Kahve Değirmeni ve Öğütücü 420W 1. | 118.COFFEDIO | Senox Coffeedio Filtre Kahve Makinesi, 1 | — | 54% |
-| VA-80B | Vosco Kahve Değirmeni ve Öğütücü 420W 1. | 118.COFFEDIO | Senox Coffeedio Filtre Kahve Makinesi, 1 | — | 54% |
+| VSC-32F | Vosco Pro Soft Dondurma Makinesi (Üç Kol | 118.DY.02 | Senox DY 02 Çift Hazneli Dondurma Yapıcı | 5750 | 54% |
+| VA-80SR | Vosco Kahve Değirmeni ve Öğütücü 420W 1. | 118.COFFEDIO | Senox Coffeedio Filtre Kahve Makinesi, 1 | 1200 | 54% |
+| VA-80S | Vosco Kahve Değirmeni ve Öğütücü 420W 1. | 118.COFFEDIO | Senox Coffeedio Filtre Kahve Makinesi, 1 | 1200 | 54% |
+| VA-80M | Vosco Kahve Değirmeni ve Öğütücü 420W 1. | 118.COFFEDIO | Senox Coffeedio Filtre Kahve Makinesi, 1 | 1200 | 54% |
+| VA-80K | Vosco Kahve Değirmeni ve Öğütücü 420W 1. | 118.COFFEDIO | Senox Coffeedio Filtre Kahve Makinesi, 1 | 1200 | 54% |
+| VA-80B | Vosco Kahve Değirmeni ve Öğütücü 420W 1. | 118.COFFEDIO | Senox Coffeedio Filtre Kahve Makinesi, 1 | 1200 | 54% |
 | VKD-25K | Vosco KD-25 Dozaj Ayarlı Tam Otomatik Ka | 118.COFFEDIO | Senox Coffeedio Filtre Kahve Makinesi, 1 | 480 | 54% |
 | VKD-25S | Vosco KD-25 Dozaj Ayarlı Tam Otomatik Ka | 118.COFFEDIO | Senox Coffeedio Filtre Kahve Makinesi, 1 | 480 | 54% |
-| VSC-32T | Vosco Pro Soft Dondurma Makinesi Set Üst | 118.DY.02 | Senox DY 02 Çift Hazneli Dondurma Yapıcı | 35 | 54% |
+| VSC-32T | Vosco Pro Soft Dondurma Makinesi Set Üst | 118.DY.02 | Senox DY 02 Çift Hazneli Dondurma Yapıcı | 6000 | 54% |
 | VKD-25G | Vosco KD-25 Dozaj Ayarlı Tam Otomatik Ka | 118.COFFEDIO | Senox Coffeedio Filtre Kahve Makinesi, 1 | 480 | 54% |
-| VXY-PT965S | Vosco Pro Silver Soft Dondurma Makinesi  | 118.DY.02 | Senox DY 02 Çift Hazneli Dondurma Yapıcı | — | 53% |
+| VXY-PT965S | Vosco Pro Silver Soft Dondurma Makinesi  | 118.DY.02 | Senox DY 02 Çift Hazneli Dondurma Yapıcı | 1050 | 53% |
 | VST-520ECB | Vosco Tek Kazanlı Öğütücü ve Espresso 2  | 118.COFFEDIO | Senox Coffeedio Filtre Kahve Makinesi, 1 | — | 50% |
 | VST-520ECS | Vosco Tek Kazanlı Öğütücü ve Espresso 2  | 118.COFFEDIO | Senox Coffeedio Filtre Kahve Makinesi, 1 | — | 50% |
-| FT-100R-1 | Vosco Dikey Pasta Teşhir Dolabı (Cam Raf | 118.SMF.5120.ST | Senox SMF-5120 ST Tezgah Altı Derin Dond | — | 50% |
-| FT-235LB | Vosco 235L Dikey Soğutmalı Teşhir Dolabı | 118.SYD310 | Senox 5 Gözlü Dondurma Reyonu, 210 lt, 1 | — | 50% |
-| FT-235LS | Vosco 235L Dikey Soğutmalı Teşhir Dolabı | 118.SYD310 | Senox 5 Gözlü Dondurma Reyonu, 210 lt, 1 | — | 50% |
+| FT-100R-1 | Vosco Dikey Pasta Teşhir Dolabı (Cam Raf | 118.SMF.5120.ST | Senox SMF-5120 ST Tezgah Altı Derin Dond | 2050 | 50% |
+| FT-235LB | Vosco 235L Dikey Soğutmalı Teşhir Dolabı | 118.SYD310 | Senox 5 Gözlü Dondurma Reyonu, 210 lt, 1 | 2950 | 50% |
+| FT-235LS | Vosco 235L Dikey Soğutmalı Teşhir Dolabı | 118.SYD310 | Senox 5 Gözlü Dondurma Reyonu, 210 lt, 1 | 2950 | 50% |
 | VFTW-160L | Vosco 160L Tezgah Üstü Soğutmalı Vitrin  | 118.300.COMBİ | Senox 300 Combi Bar Tipi Soğutucu Dolap, | 1850 | 50% |
-| FT-280LB | Vosco 280L Dikey Soğutmalı Teşhir Dolabı | 118.SYD410 | Senox 7 Gözlü Dondurma Reyonu, 283 lt, 1 | — | 50% |
-| FT-280LS | Vosco 280L Dikey Soğutmalı Teşhir Dolabı | 118.SYD410 | Senox 7 Gözlü Dondurma Reyonu, 283 lt, 1 | — | 50% |
+| FT-280LB | Vosco 280L Dikey Soğutmalı Teşhir Dolabı | 118.SYD410 | Senox 7 Gözlü Dondurma Reyonu, 283 lt, 1 | 2950 | 50% |
+| FT-280LS | Vosco 280L Dikey Soğutmalı Teşhir Dolabı | 118.SYD410 | Senox 7 Gözlü Dondurma Reyonu, 283 lt, 1 | 2950 | 50% |
 | VFTW-160LYP | Vosco 160L Tezgah Üstü Soğutmalı Vitrin  | 118.300.COMBİ | Senox 300 Combi Bar Tipi Soğutucu Dolap, | 1850 | 50% |
 
 ## Orta güven (örnek 20)

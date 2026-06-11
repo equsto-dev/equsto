@@ -14,7 +14,8 @@
       "poz": "A1",
       "ad": "TEK EVİYELİ ÇALIŞMA TEZGAHI",
       "olcu": "190*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "",
@@ -22,7 +23,8 @@
       "poz": "A2",
       "ad": "BULAŞIK YIKAMA MAKİNASI",
       "olcu": "500 tb/saat",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -30,7 +32,8 @@
       "poz": "A3",
       "ad": "ÇALIŞMA TEZGAHI - DOLAPLI , ARA RAFLI",
       "olcu": "190*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "",
@@ -38,7 +41,8 @@
       "poz": "A4",
       "ad": "ÇALIŞMA TEZGAHI - DOLAPLI - ARA RAFLI",
       "olcu": "190*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "",
@@ -46,7 +50,8 @@
       "poz": "A5",
       "ad": "CAM KAPILI TEZGAH TİPİ SOĞUK DOLAP, 2 KAPILI",
       "olcu": "143*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "",
@@ -54,7 +59,8 @@
       "poz": "A6",
       "ad": "ÇALIŞMA TEZGAHI",
       "olcu": "190*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "",
@@ -62,7 +68,8 @@
       "poz": "A7",
       "ad": "SET ALTI DEEP FREEZE",
       "olcu": "60*60*5",
-      "adet": 2
+      "adet": 2,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -70,7 +77,8 @@
       "poz": "A8",
       "ad": "ÇALIŞMA TEZGAHI - DOLAPLI , ARA RAFLI",
       "olcu": "190*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "",
@@ -78,7 +86,8 @@
       "poz": "A9",
       "ad": "ÇALIŞMA TEZGAHI -DOLAPLI , ARA RAFLI",
       "olcu": "170*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "",
@@ -86,7 +95,8 @@
       "poz": "A10",
       "ad": "2 AÇIK ALEVLİ OCAK, SETÜSTÜ",
       "olcu": "40*70*30",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -94,7 +104,8 @@
       "poz": "A11",
       "ad": "FRİTÖZ, TEK SEPETLİ, ELK. SETÜSTÜ",
       "olcu": "80*70*30",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -102,7 +113,8 @@
       "poz": "A12",
       "ad": "PATATES DİNLENDİRME, ELK. SETÜSTÜ",
       "olcu": "40*70*30",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -110,7 +122,8 @@
       "poz": "A13",
       "ad": "OLUKLU IZGARA, GAZLI, MARENO",
       "olcu": "80*70*30",
-      "adet": 2
+      "adet": 2,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -118,7 +131,8 @@
       "poz": "A14",
       "ad": "YARI OLUKLU IZGARA, GAZL",
       "olcu": "80*70*30",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -126,7 +140,8 @@
       "poz": "A15",
       "ad": "SETALTI BUZDOLABI, 4 KAPILI",
       "olcu": "233*70*56",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -134,7 +149,8 @@
       "poz": "A16",
       "ad": "DAVLUMBAZ, ORTA TİP, FİLTRELİ",
       "olcu": "300*130*50",
-      "adet": 1
+      "adet": 1,
+      "kategori": "davlumbaz"
     },
     {
       "bolum": "",
@@ -142,7 +158,8 @@
       "poz": "A17",
       "ad": "YER IZGARASI",
       "olcu": "30*30*14",
-      "adet": 2
+      "adet": 2,
+      "kategori": "diger"
     },
     {
       "bolum": "B",
@@ -150,7 +167,8 @@
       "poz": "B1",
       "ad": "İSTİF RAFI",
       "olcu": "137*53*183",
-      "adet": 3
+      "adet": 3,
+      "kategori": "diger"
     },
     {
       "bolum": "C",
@@ -158,7 +176,8 @@
       "poz": "C1",
       "ad": "PANEL TİP SOĞUK ODA",
       "olcu": "150*200*240",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "C",
@@ -166,7 +185,8 @@
       "poz": "B1",
       "ad": "İSTİF RAFI",
       "olcu": "137*53*183",
-      "adet": 3
+      "adet": 3,
+      "kategori": "diger"
     },
     {
       "bolum": "D",
@@ -174,7 +194,8 @@
       "poz": "D1",
       "ad": "PANEL TİP SOĞUK ODA",
       "olcu": "150*200*240",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "D",
@@ -182,7 +203,22 @@
       "poz": "B1",
       "ad": "İSTİF RAFI",
       "olcu": "137*53*183",
-      "adet": 3
+      "adet": 3,
+      "kategori": "diger"
     }
-  ]
+  ],
+  "kategoriTags": [
+    "tezgah",
+    "diger",
+    "davlumbaz"
+  ],
+  "_mappingApplied": {
+    "source": "public/data/pfos-ekipman-mapping.json",
+    "generated_at": "2026-06-11T10:16:08.440Z",
+    "file": "hamburger-kiosk-60-100.json",
+    "counts": {
+      "mapped": 8,
+      "unmapped": 14
+    }
+  }
 }

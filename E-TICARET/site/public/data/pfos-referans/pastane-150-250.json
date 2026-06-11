@@ -14,7 +14,8 @@
       "poz": "A1",
       "ad": "MEŞRUBAT DOLABI",
       "olcu": "102*80*140",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pasta"
     },
     {
       "bolum": "P",
@@ -22,7 +23,8 @@
       "poz": "A2",
       "ad": "KASA TEZGAHI",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "P",
@@ -30,7 +32,8 @@
       "poz": "A3",
       "ad": "PASTA DOLABI",
       "olcu": "150/ 150*80*140",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pasta"
     },
     {
       "bolum": "P",
@@ -38,7 +41,8 @@
       "poz": "A4",
       "ad": "DİLİM PASTA DOLABI",
       "olcu": "210*80*140",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pasta"
     },
     {
       "bolum": "P",
@@ -46,7 +50,8 @@
       "poz": "A5",
       "ad": "ÇİKOLATA DOLABI",
       "olcu": "210*80*140",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pasta"
     },
     {
       "bolum": "P",
@@ -54,7 +59,8 @@
       "poz": "A6",
       "ad": "POĞAÇA SİMİT DOLABI",
       "olcu": "300*80*140",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pasta"
     },
     {
       "bolum": "P",
@@ -62,7 +68,8 @@
       "poz": "A7",
       "ad": "BÖREK PİŞİRME",
       "olcu": "80*80*140",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "P",
@@ -70,7 +77,8 @@
       "poz": "A8",
       "ad": "SICAK BÖREK DOLABI",
       "olcu": "150*80*140",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pasta"
     },
     {
       "bolum": "P",
@@ -78,7 +86,8 @@
       "poz": "A9",
       "ad": "PASTA BÖREK FIRINI",
       "olcu": "90*90*160",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pasta"
     },
     {
       "bolum": "P",
@@ -86,7 +95,8 @@
       "poz": "A10",
       "ad": "HAMUR BUZDOLABI",
       "olcu": "80*80*210",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pasta"
     },
     {
       "bolum": "P",
@@ -94,7 +104,8 @@
       "poz": "M1",
       "ad": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
       "olcu": "70*70*205",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pasta"
     },
     {
       "bolum": "P",
@@ -102,7 +113,8 @@
       "poz": "M2",
       "ad": "DEPO TİPİ DERİN DONDURUCU, TEK KAPILI",
       "olcu": "70*70*205",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pasta"
     },
     {
       "bolum": "P",
@@ -110,7 +122,8 @@
       "poz": "M3",
       "ad": "ÇALIŞMA TEZGAHI, TABAN RAFLI",
       "olcu": "100*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "P",
@@ -118,7 +131,8 @@
       "poz": "M4",
       "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
       "olcu": "60*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "P",
@@ -126,7 +140,8 @@
       "poz": "M5",
       "ad": "ÇÖP ARABASI",
       "olcu": "Ø40*50",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pasta"
     },
     {
       "bolum": "P",
@@ -134,7 +149,8 @@
       "poz": "M6",
       "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
       "olcu": "125*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "P",
@@ -142,7 +158,8 @@
       "poz": "M7",
       "ad": "TOST MAKİNASI",
       "olcu": "2745",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pasta"
     },
     {
       "bolum": "P",
@@ -150,7 +167,8 @@
       "poz": "M8",
       "ad": "CİHAZALTI ÇALIŞMA TEZGAHI, TABAN RAFLI",
       "olcu": "280*70*55",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "P",
@@ -158,7 +176,8 @@
       "poz": "M9",
       "ad": "FRİTÖZ, ÇİFT SEPETLİ, ELK., SETÜSTÜ",
       "olcu": "80*70*30",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pasta"
     },
     {
       "bolum": "P",
@@ -166,7 +185,8 @@
       "poz": "M10",
       "ad": "NÖTR ARA TEZGAHI, SETÜSTÜ",
       "olcu": "40*70*30",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "P",
@@ -174,7 +194,8 @@
       "poz": "M11",
       "ad": "4 AÇIK ALEVLİ OCAK, GAZLI, SETÜSTÜ",
       "olcu": "80*70*30",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pasta"
     },
     {
       "bolum": "P",
@@ -182,7 +203,8 @@
       "poz": "M12",
       "ad": "IZGARA, GAZLI, SETÜSTÜ",
       "olcu": "80*70*30",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pasta"
     },
     {
       "bolum": "P",
@@ -190,7 +212,8 @@
       "poz": "M13",
       "ad": "TAVA RAFI",
       "olcu": "335*35*35",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pasta"
     },
     {
       "bolum": "P",
@@ -198,7 +221,8 @@
       "poz": "M14",
       "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
       "olcu": "335*97*50",
-      "adet": 1
+      "adet": 1,
+      "kategori": "davlumbaz"
     },
     {
       "bolum": "P",
@@ -206,7 +230,8 @@
       "poz": "M15",
       "ad": "DUVAR RAFI",
       "olcu": "100*30*4",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pasta"
     },
     {
       "bolum": "P",
@@ -214,7 +239,8 @@
       "poz": "M16",
       "ad": "DUVAR RAFI",
       "olcu": "120*30*4",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pasta"
     },
     {
       "bolum": "B",
@@ -222,7 +248,8 @@
       "poz": "D1",
       "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
       "olcu": "180*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "B",
@@ -230,7 +257,8 @@
       "poz": "D2",
       "ad": "DUVAR RAFI",
       "olcu": "210*30*4",
-      "adet": 1
+      "adet": 1,
+      "kategori": "icecek"
     },
     {
       "bolum": "B",
@@ -238,7 +266,8 @@
       "poz": "D3",
       "ad": "BULAŞIK YIKAMA MAKİNASI, SETALTI",
       "olcu": "500 tb/s",
-      "adet": 1
+      "adet": 1,
+      "kategori": "icecek"
     },
     {
       "bolum": "B",
@@ -246,7 +275,8 @@
       "poz": "D4",
       "ad": "ÇÖP ARABASI",
       "olcu": "Ø40*50",
-      "adet": 1
+      "adet": 1,
+      "kategori": "icecek"
     },
     {
       "bolum": "B",
@@ -254,7 +284,8 @@
       "poz": "D5",
       "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
       "olcu": "210*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "B",
@@ -262,7 +293,8 @@
       "poz": "D6",
       "ad": "DUVAR RAFI",
       "olcu": "210*30*4",
-      "adet": 1
+      "adet": 1,
+      "kategori": "icecek"
     },
     {
       "bolum": "B",
@@ -270,7 +302,8 @@
       "poz": "D7",
       "ad": "BAR BLENDER",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "icecek"
     },
     {
       "bolum": "B",
@@ -278,7 +311,8 @@
       "poz": "D8",
       "ad": "PORTAKAL SIKMA MAKİNASI",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "icecek"
     },
     {
       "bolum": "B",
@@ -286,7 +320,8 @@
       "poz": "D9",
       "ad": "TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
       "olcu": "188*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "B",
@@ -294,7 +329,8 @@
       "poz": "D10",
       "ad": "ÇAY OCAĞI, 3 DEMLİKLİ",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "icecek"
     },
     {
       "bolum": "B",
@@ -302,7 +338,8 @@
       "poz": "D11",
       "ad": "DAVLUMBAZ, DUVAR TİPİ",
       "olcu": "100*60*40",
-      "adet": 1
+      "adet": 1,
+      "kategori": "davlumbaz"
     },
     {
       "bolum": "B",
@@ -310,7 +347,8 @@
       "poz": "D12",
       "ad": "ESPRESSO KAHVE MAKİNASI",
       "olcu": "çift gruplu",
-      "adet": 1
+      "adet": 1,
+      "kategori": "icecek"
     },
     {
       "bolum": "B",
@@ -318,7 +356,8 @@
       "poz": "D13",
       "ad": "KAHVE DEĞİRMENİ",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "icecek"
     },
     {
       "bolum": "B",
@@ -326,7 +365,8 @@
       "poz": "Y1",
       "ad": "YER IZGARASI",
       "olcu": "30*30*14",
-      "adet": 1
+      "adet": 1,
+      "kategori": "icecek"
     },
     {
       "bolum": "B",
@@ -334,7 +374,24 @@
       "poz": "Y2",
       "ad": "YER IZGARASI",
       "olcu": "95*30*14",
-      "adet": 1
+      "adet": 1,
+      "kategori": "icecek"
     }
-  ]
+  ],
+  "kategoriTags": [
+    "pasta",
+    "tezgah",
+    "pisirme",
+    "davlumbaz",
+    "icecek"
+  ],
+  "_mappingApplied": {
+    "source": "public/data/pfos-ekipman-mapping.json",
+    "generated_at": "2026-06-11T10:16:08.480Z",
+    "file": "pastane-150-250.json",
+    "counts": {
+      "mapped": 23,
+      "unmapped": 18
+    }
+  }
 }

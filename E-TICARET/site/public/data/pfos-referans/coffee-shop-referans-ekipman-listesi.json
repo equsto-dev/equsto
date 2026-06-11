@@ -14,7 +14,8 @@
       "poz": "A1",
       "ad": "SOĞUK TEŞHİR DOLABI (İÇECEK+ PASTA)",
       "olcu": "250*100*140",
-      "adet": 1
+      "adet": 1,
+      "kategori": "icecek"
     },
     {
       "bolum": "",
@@ -22,7 +23,8 @@
       "poz": "A2",
       "ad": "ÇALIŞMA TEZGAHI, KASA VE KAHVE ÇEKMECELİ, TABAN RAFLI",
       "olcu": "120*70*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "",
@@ -30,7 +32,8 @@
       "poz": "A3",
       "ad": "ESPRESSO KAHVE MAKİNASI, ÇİFT GRUPLU",
       "olcu": "—",
-      "adet": 1
+      "adet": 1,
+      "kategori": "kahve"
     },
     {
       "bolum": "",
@@ -38,7 +41,8 @@
       "poz": "A4",
       "ad": "KAHVE DEĞİRMENİ",
       "olcu": "—",
-      "adet": 1
+      "adet": 1,
+      "kategori": "kahve"
     },
     {
       "bolum": "",
@@ -46,7 +50,8 @@
       "poz": "A5",
       "ad": "ŞİŞE SOĞUTUCU, ÜÇ KAPILI",
       "olcu": "135*50*90",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -54,7 +59,8 @@
       "poz": "A6",
       "ad": "ŞİŞE SOĞUTUCU, İKİ KAPILI",
       "olcu": "90*50*90",
-      "adet": 2
+      "adet": 2,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -62,7 +68,8 @@
       "poz": "A7",
       "ad": "ÇÖP TEZGAHI",
       "olcu": "50*70*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "",
@@ -70,7 +77,8 @@
       "poz": "A8",
       "ad": "ÇÖP ARABASI",
       "olcu": "40*40*50",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -78,7 +86,8 @@
       "poz": "A9",
       "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI, TABAN RAFLI, DOLAPLI",
       "olcu": "100*70*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "",
@@ -86,7 +95,8 @@
       "poz": "A10",
       "ad": "RINCER EVYESİ",
       "olcu": "—",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -94,7 +104,8 @@
       "poz": "A11",
       "ad": "BUZ MAKİNASI",
       "olcu": "90 kg/gün",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -102,7 +113,8 @@
       "poz": "A12",
       "ad": "DERİN DONDURUCU, TEK KAPILI",
       "olcu": "60*60*84",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -110,7 +122,8 @@
       "poz": "A13",
       "ad": "BARDAK YIKAMA MAKİNASI",
       "olcu": "60*60*82",
-      "adet": 1
+      "adet": 1,
+      "kategori": "bardak-yikama"
     },
     {
       "bolum": "",
@@ -118,7 +131,8 @@
       "poz": "A14",
       "ad": "JET FIRIN",
       "olcu": "—",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -126,7 +140,8 @@
       "poz": "A15",
       "ad": "FIRIN UNOX",
       "olcu": "—",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -134,7 +149,8 @@
       "poz": "A16",
       "ad": "ÇALIŞMA TEZGAHI, DOLAPLI",
       "olcu": "140*60*85",
-      "adet": 2
+      "adet": 2,
+      "kategori": "tezgah"
     },
     {
       "bolum": "",
@@ -142,7 +158,8 @@
       "poz": "A17",
       "ad": "BAR BLENDER",
       "olcu": "—",
-      "adet": 1
+      "adet": 1,
+      "kategori": "bar-blender"
     },
     {
       "bolum": "",
@@ -150,7 +167,8 @@
       "poz": "A18",
       "ad": "KATI MEYVE SIKACAĞI",
       "olcu": "—",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -158,7 +176,8 @@
       "poz": "A19",
       "ad": "BAR MİKSER",
       "olcu": "—",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -166,7 +185,8 @@
       "poz": "A20",
       "ad": "FİLTRE KAHVE MAKİNASI",
       "olcu": "—",
-      "adet": 1
+      "adet": 1,
+      "kategori": "kahve"
     },
     {
       "bolum": "",
@@ -174,7 +194,8 @@
       "poz": "A21",
       "ad": "YER IZGARASI",
       "olcu": "30*30*14",
-      "adet": 2
+      "adet": 2,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -182,7 +203,8 @@
       "poz": "B1",
       "ad": "DEPO TİPİ DERİNDONDURUCU",
       "olcu": "70*85*205",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -190,7 +212,8 @@
       "poz": "B2",
       "ad": "DEPO TİPİ BUZDOLABI",
       "olcu": "70*85*205",
-      "adet": 2
+      "adet": 2,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -198,7 +221,25 @@
       "poz": "B3",
       "ad": "NAKLİYE MONTAJ",
       "olcu": "—",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     }
-  ]
+  ],
+  "kategoriTags": [
+    "icecek",
+    "tezgah",
+    "kahve",
+    "diger",
+    "bardak-yikama",
+    "bar-blender"
+  ],
+  "_mappingApplied": {
+    "source": "public/data/pfos-ekipman-mapping.json",
+    "generated_at": "2026-06-11T10:16:08.430Z",
+    "file": "coffee-shop-referans-ekipman-listesi.json",
+    "counts": {
+      "mapped": 8,
+      "unmapped": 16
+    }
+  }
 }

@@ -1,0 +1,176 @@
+{
+  "live_count": 8726,
+  "archive_count": 5688,
+  "archive_only_count": 1609,
+  "archive_only_priced": 1555,
+  "archive_only_with_image": 1277,
+  "archive_only_by_dept": {
+    "davlumbaz": 24,
+    "dolap": 15,
+    "hazirlik": 5,
+    "icecek": 7,
+    "istif": 1,
+    "kahve": 15,
+    "set-ustu-mutfak": 1460,
+    "pisirme": 29,
+    "sogutma": 6,
+    "tasima": 35,
+    "tezgah": 12
+  },
+  "sitemap_product_urls": 16846,
+  "sitemap_not_in_live": 8,
+  "sitemap_archive_only_hits": 0,
+  "sitemap_not_in_live_samples": [
+    "https://equsto.com/shop/hazirlik/pimak__70s-m173-patates-dinlendirme-unitesi",
+    "https://equsto.com/shop/hazirlik/pimak__70sd-m173-patates-dinlendirme-unitesi",
+    "https://equsto.com/shop/hazirlik/pimak__90sd-m168e-patates-dinlendirme-unitesi",
+    "https://equsto.com/shop/hazirlik/pimak__m0168-elektrikli-patates-dinlendirme-unitesi",
+    "https://equsto.com/en/shop/hazirlik/pimak__70s-m173-patates-dinlendirme-unitesi",
+    "https://equsto.com/en/shop/hazirlik/pimak__70sd-m173-patates-dinlendirme-unitesi",
+    "https://equsto.com/en/shop/hazirlik/pimak__90sd-m168e-patates-dinlendirme-unitesi",
+    "https://equsto.com/en/shop/hazirlik/pimak__m0168-elektrikli-patates-dinlendirme-unitesi"
+  ],
+  "sitemap_archive_only_samples": [],
+  "archive_only_samples": [
+    {
+      "id": "oztiryakiler-endustriyel-mutfak__5rrx-60738-65",
+      "dept": "davlumbaz",
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "name": "RATIONAL UltraVent XS yogusturma davlumbazı 60.73.865",
+      "fiyat_tl": 236300
+    },
+    {
+      "id": "oztiryakiler-endustriyel-mutfak__5rrx-60743-94",
+      "dept": "davlumbaz",
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "name": "RATIONAL ULTRAVENT PLUS YOĞUŞTURMA DAVLUMBAZI TİP XS 6-2/3",
+      "fiyat_tl": 366289
+    },
+    {
+      "id": "oztiryakiler-endustriyel-mutfak__5rrx-60751-34",
+      "dept": "davlumbaz",
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "name": "RATIONAL ULTRAVENT DAVLUMBAZ TİP 6-1/1, 10-1/1",
+      "fiyat_tl": 306880
+    },
+    {
+      "id": "oztiryakiler-endustriyel-mutfak__5rrx-60751-42",
+      "dept": "davlumbaz",
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "name": "RATIONAL ULTRAVENT YOĞUŞTURMA DAVLUMBAZI",
+      "fiyat_tl": 475688
+    },
+    {
+      "id": "oztiryakiler-endustriyel-mutfak__5rrx-60751-35",
+      "dept": "davlumbaz",
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "name": "RATIONAL ULTRAVENT DAVLUMBAZ TİP 6-2/1, 10-2/1",
+      "fiyat_tl": 380576
+    },
+    {
+      "id": "oztiryakiler-endustriyel-mutfak__5rrx-60751-43",
+      "dept": "davlumbaz",
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "name": "RATIONAL ULTRAVENT PLUS DAVLUMBAZ TİP 6-2/1, 10-2/1",
+      "fiyat_tl": 589861
+    },
+    {
+      "id": "oztiryakiler-endustriyel-mutfak__5rrx-60751-36",
+      "dept": "davlumbaz",
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "name": "RATIONAL ULTRAVENT DAVLUMBAZ TİP 20-1/1",
+      "fiyat_tl": 380576
+    },
+    {
+      "id": "oztiryakiler-endustriyel-mutfak__5rrx-60751-37",
+      "dept": "davlumbaz",
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "name": "RATIONAL ULTRAVENT DAVLUMBAZ TİP 20-2/1",
+      "fiyat_tl": 497136
+    },
+    {
+      "id": "oztiryakiler-endustriyel-mutfak__7885-25155-00",
+      "dept": "davlumbaz",
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "name": "DAVLUMBAZ ORTA TİP FİLTRESİZ 250*165",
+      "fiyat_tl": null
+    },
+    {
+      "id": "oztiryakiler-endustriyel-mutfak__7885-30155-00",
+      "dept": "davlumbaz",
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "name": "DAVLUMBAZ ORTA TİP FİLTRESİZ 300*165",
+      "fiyat_tl": null
+    },
+    {
+      "id": "oztiryakiler-endustriyel-mutfak__7885-35155-00",
+      "dept": "davlumbaz",
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "name": "DAVLUMBAZ ORTA TİP FİLTRESİZ 350*165",
+      "fiyat_tl": null
+    },
+    {
+      "id": "oztiryakiler-endustriyel-mutfak__7885-40155-00",
+      "dept": "davlumbaz",
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "name": "DAVLUMBAZ ORTA TİP FİLTRESİZ 400*165",
+      "fiyat_tl": null
+    },
+    {
+      "id": "oztiryakiler-endustriyel-mutfak__7885-45155-00",
+      "dept": "davlumbaz",
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "name": "DAVLUMBAZ ORTA TİP FİLTRESİZ 450*165",
+      "fiyat_tl": null
+    },
+    {
+      "id": "oztiryakiler-endustriyel-mutfak__7885-50155-00",
+      "dept": "davlumbaz",
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "name": "DAVLUMBAZ ORTA TİP FİLTRESİZ 500*165",
+      "fiyat_tl": null
+    },
+    {
+      "id": "oztiryakiler-endustriyel-mutfak__7885-55155-00",
+      "dept": "davlumbaz",
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "name": "DAVLUMBAZ ORTA TİP FİLTRESİZ 550*165",
+      "fiyat_tl": null
+    },
+    {
+      "id": "oztiryakiler-endustriyel-mutfak__7885-60155-00",
+      "dept": "davlumbaz",
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "name": "DAVLUMBAZ ORTA TİP FİLTRESİZ 600*165",
+      "fiyat_tl": null
+    },
+    {
+      "id": "oztiryakiler-endustriyel-mutfak__7885-25205-00",
+      "dept": "davlumbaz",
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "name": "DAVLUMBAZ ORTA TİP FİLTRESİZ 250*200",
+      "fiyat_tl": null
+    },
+    {
+      "id": "oztiryakiler-endustriyel-mutfak__7885-30205-00",
+      "dept": "davlumbaz",
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "name": "DAVLUMBAZ ORTA TİP FİLTRESİZ 300*200",
+      "fiyat_tl": null
+    },
+    {
+      "id": "oztiryakiler-endustriyel-mutfak__7885-35205-00",
+      "dept": "davlumbaz",
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "name": "DAVLUMBAZ ORTA TİP FİLTRESİZ 350*200",
+      "fiyat_tl": null
+    },
+    {
+      "id": "oztiryakiler-endustriyel-mutfak__7885-40205-00",
+      "dept": "davlumbaz",
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "name": "DAVLUMBAZ ORTA TİP FİLTRESİZ 400*200",
+      "fiyat_tl": null
+    }
+  ]
+}

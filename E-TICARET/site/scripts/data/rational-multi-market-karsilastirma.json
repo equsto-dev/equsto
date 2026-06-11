@@ -1,0 +1,1863 @@
+{
+  "summary": {
+    "fetched_at": "2026-06-09T16:59:16.324Z",
+    "toplam_firin_sku": 38,
+    "equsto_count": 25,
+    "equsto_disinda_cafemarkt": 13,
+    "icombi_count": 25,
+    "cmp_count": 12,
+    "scc_count": 1,
+    "cafemarkt_matched": 37,
+    "mutbex_matched": 24,
+    "akakce_matched": 24,
+    "equsto_cafemarkt_birlikte": 24,
+    "equsto_en_ucuz": 2,
+    "ort_equsto_vs_cafemarkt_pct": -40.24121898149706,
+    "ort_equsto_vs_mutbex_pct": -6.79180888515381,
+    "ort_equsto_vs_akakce_pct": 3.723325723942754
+  },
+  "rows": [
+    {
+      "sku": "9890.ICCLS10.1E",
+      "seri": "iCombi Classic",
+      "grup": "icombi",
+      "cfg": "10/1/1",
+      "fuel": "Elektrik",
+      "name": "RATIONAL BUHAR KONVEKSİYONLU ELEKTRİKLİ FIRIN 10*1/1 GN İcombi Classic",
+      "in_equsto": true,
+      "rational_liste_eur": 11860,
+      "market": {
+        "equsto": {
+          "price_try_kdv_dahil": 492954,
+          "url": "https://equsto.com/shop/marka/rational"
+        },
+        "cafemarkt": {
+          "price_try_kdv_dahil": 829545.97,
+          "url": "https://www.cafemarkt.com/rational-icombi-classic-buhar-konveksiyonlu-firin-10x1-1-gn-kapasiteli-elektrikli",
+          "code": "083.9890.ICCLS10.1E",
+          "name": "Rational iCombi Classic 101E Buhar Konveksiyonlu Fırın, 10x1/1 GN Kapasiteli, Elektrikli"
+        },
+        "mutbex": {
+          "price_try_kdv_dahil": 554093,
+          "url": "https://www.mutbex.com/rational-firinlar",
+          "code": "019.ICCLS10.1E"
+        },
+        "akakce_en_ucuz": {
+          "price_try_kdv_dahil": 477435,
+          "url": "https://www.akakce.com/c/?z=134&s=0&v=5273&p=1201938128&c=23665&k=5555&g=1201938128&f=%2fr%2f%3fpr%3d1201938128%26vd%3d5273%26pg%3d1201938128",
+          "title": "Rational 10 Tepsili Buhar Konveksiyonlu Elektrikli Fırın 10x1/1 iCombi Classic ICC101EEn Ucuz 477.434,87 TL TEK FİYAT Al"
+        }
+      },
+      "akakce_saticilar": [],
+      "min_price_tl": 477435,
+      "equsto_vs_cafemarkt_pct": -40.57544514380559,
+      "equsto_vs_mutbex_pct": -11.034068288175451,
+      "equsto_vs_akakce_pct": 3.2504948317572024,
+      "equsto_en_ucuz": false,
+      "rank_among_known": [
+        {
+          "site": "akakce",
+          "price": 477435
+        },
+        {
+          "site": "equsto",
+          "price": 492954
+        },
+        {
+          "site": "mutbex",
+          "price": 554093
+        },
+        {
+          "site": "cafemarkt",
+          "price": 829545.97
+        }
+      ]
+    },
+    {
+      "sku": "9890.ICCLS10.1G",
+      "seri": "iCombi Classic",
+      "grup": "icombi",
+      "cfg": "10/1/1",
+      "fuel": "Gaz",
+      "name": "RATIONAL BUHAR KONVEKSİYONLU GAZLI FIRIN 10*1/1 GN  İcombi Classic",
+      "in_equsto": true,
+      "rational_liste_eur": 13760,
+      "market": {
+        "equsto": {
+          "price_try_kdv_dahil": 571926,
+          "url": "https://equsto.com/shop/marka/rational"
+        },
+        "cafemarkt": {
+          "price_try_kdv_dahil": 954165.68,
+          "url": "https://www.cafemarkt.com/rational-icombi-classic-buhar-konveksiyonlu-firin-10x1-1-gn-kapasiteli-gazli",
+          "code": "083.9890.ICCLS10.1G",
+          "name": "Rational iCombi Classic 101G Buhar Konveksiyonlu Fırın, 10x1/1 GN Kapasiteli, Gazlı"
+        },
+        "mutbex": {
+          "price_try_kdv_dahil": 612389,
+          "url": "https://www.mutbex.com/rational-firinlar",
+          "code": "019.ICCLS10.1G"
+        },
+        "akakce_en_ucuz": {
+          "price_try_kdv_dahil": 551678,
+          "url": "https://www.akakce.com/c/?z=134&s=0&v=5273&p=1201938130&c=23665&k=5555&g=1201938130&f=%2fr%2f%3fpr%3d1201938130%26vd%3d5273%26pg%3d1201938130",
+          "title": "Rational 10 Tepsili Buhar Konveksiyonlu Gazlı Fırın 10x1/1 iCombi Classic ICC101GEn Ucuz 551.678,36 TL TEK FİYAT Alarm K"
+        }
+      },
+      "akakce_saticilar": [],
+      "min_price_tl": 551678,
+      "equsto_vs_cafemarkt_pct": -40.06009522371419,
+      "equsto_vs_mutbex_pct": -6.6074015045992,
+      "equsto_vs_akakce_pct": 3.6702569252353725,
+      "equsto_en_ucuz": false,
+      "rank_among_known": [
+        {
+          "site": "akakce",
+          "price": 551678
+        },
+        {
+          "site": "equsto",
+          "price": 571926
+        },
+        {
+          "site": "mutbex",
+          "price": 612389
+        },
+        {
+          "site": "cafemarkt",
+          "price": 954165.68
+        }
+      ]
+    },
+    {
+      "sku": "9890.ICCLS10.2E",
+      "seri": "iCombi Classic",
+      "grup": "icombi",
+      "cfg": "10/2/1",
+      "fuel": "Elektrik",
+      "name": "RATIONAL BUHAR KONVEKSİYONLU ELEKTRİKLİ FIRIN 10*2/1 GN  İcombi Classic",
+      "in_equsto": true,
+      "rational_liste_eur": 17140,
+      "market": {
+        "equsto": {
+          "price_try_kdv_dahil": 712414,
+          "url": "https://equsto.com/shop/marka/rational"
+        },
+        "cafemarkt": {
+          "price_try_kdv_dahil": 1234588.64,
+          "url": "https://www.cafemarkt.com/rational-icombi-classic-buhar-konveksiyonlu-firin-10x2-1-gn-kapasiteli-elektrikli",
+          "code": "083.9890.ICCLS10.2E",
+          "name": "Rational iCombi Classic 102E Buhar Konveksiyonlu Fırın, 10x2/1 GN Kapasiteli, Elektrikli"
+        },
+        "mutbex": {
+          "price_try_kdv_dahil": 762816,
+          "url": "https://www.mutbex.com/rational-firinlar",
+          "code": "019.ICCLS10.2E"
+        },
+        "akakce_en_ucuz": {
+          "price_try_kdv_dahil": 687120,
+          "url": "https://www.akakce.com/c/?z=134&s=0&v=5273&p=1201938129&c=23665&k=5555&g=1201938129&f=%2fr%2f%3fpr%3d1201938129%26vd%3d5273%26pg%3d1201938129",
+          "title": "Rational 10 Tepsili Buhar Konveksiyonlu Elektrikli Fırın 10x2/1 iCombi Classic ICC102EEn Ucuz 687.119,97 TL TEK FİYAT Al"
+        }
+      },
+      "akakce_saticilar": [],
+      "min_price_tl": 687120,
+      "equsto_vs_cafemarkt_pct": -42.29543534435891,
+      "equsto_vs_mutbex_pct": -6.6073600973236015,
+      "equsto_vs_akakce_pct": 3.6811619513331006,
+      "equsto_en_ucuz": false,
+      "rank_among_known": [
+        {
+          "site": "akakce",
+          "price": 687120
+        },
+        {
+          "site": "equsto",
+          "price": 712414
+        },
+        {
+          "site": "mutbex",
+          "price": 762816
+        },
+        {
+          "site": "cafemarkt",
+          "price": 1234588.64
+        }
+      ]
+    },
+    {
+      "sku": "9890.ICCLS10.2G",
+      "seri": "iCombi Classic",
+      "grup": "icombi",
+      "cfg": "10/2/1",
+      "fuel": "Gaz",
+      "name": "RATIONAL BUHAR KONVEKSİYONLU GAZLI FIRIN 10*2/1 GN  İcombi Classic",
+      "in_equsto": true,
+      "rational_liste_eur": 19870,
+      "market": {
+        "equsto": {
+          "price_try_kdv_dahil": 825884,
+          "url": "https://equsto.com/shop/marka/rational"
+        },
+        "cafemarkt": {
+          "price_try_kdv_dahil": 1465156.56,
+          "url": "https://www.cafemarkt.com/rational-icombi-classic-buhar-konveksiyonlu-firin-10x2-1-gn-kapasiteli-gazli",
+          "code": "083.9890.ICCLS10.2G",
+          "name": "Rational iCombi Classic 102G Buhar Konveksiyonlu Fırın, 10x2/1 GN Kapasiteli, Gazlı"
+        },
+        "mutbex": {
+          "price_try_kdv_dahil": 884314,
+          "url": "https://www.mutbex.com/rational-firinlar",
+          "code": "019.ICCLS10.2G"
+        },
+        "akakce_en_ucuz": {
+          "price_try_kdv_dahil": 796599,
+          "url": "https://www.akakce.com/c/?z=134&s=0&v=5273&p=1201938131&c=23665&k=5555&g=1201938131&f=%2fr%2f%3fpr%3d1201938131%26vd%3d5273%26pg%3d1201938131",
+          "title": "Rational 10 Tepsili Buhar Konveksiyonlu Gazlı Fırın 10x2/1 iCombi Classic ICC102GEn Ucuz 796.598,74 TL TEK FİYAT Alarm K"
+        }
+      },
+      "akakce_saticilar": [],
+      "min_price_tl": 796599,
+      "equsto_vs_cafemarkt_pct": -43.63168943529148,
+      "equsto_vs_mutbex_pct": -6.6073815409458625,
+      "equsto_vs_akakce_pct": 3.676253673429166,
+      "equsto_en_ucuz": false,
+      "rank_among_known": [
+        {
+          "site": "akakce",
+          "price": 796599
+        },
+        {
+          "site": "equsto",
+          "price": 825884
+        },
+        {
+          "site": "mutbex",
+          "price": 884314
+        },
+        {
+          "site": "cafemarkt",
+          "price": 1465156.56
+        }
+      ]
+    },
+    {
+      "sku": "9890.ICCLS20.1E",
+      "seri": "iCombi Classic",
+      "grup": "icombi",
+      "cfg": "20/1/1",
+      "fuel": "Elektrik",
+      "name": "RATIONAL  BUHAR KONVEKSİYONLU ELEKTRİKLİ FIRIN 20*1/1 GN  İcombi Classic",
+      "in_equsto": true,
+      "rational_liste_eur": 21940,
+      "market": {
+        "equsto": {
+          "price_try_kdv_dahil": 911923,
+          "url": "https://equsto.com/shop/marka/rational"
+        },
+        "cafemarkt": {
+          "price_try_kdv_dahil": 1546946.54,
+          "url": "https://www.cafemarkt.com/rational-icombi-classic-buhar-konveksiyonlu-firin-20x1-1-gn-kapasiteli-elektrikli",
+          "code": "083.9890.ICCLS20.1E",
+          "name": "Rational iCombi Classic 201E Buhar Konveksiyonlu Fırın, 20x1/1 GN Kapasiteli, Elektrikli"
+        },
+        "mutbex": {
+          "price_try_kdv_dahil": 976440,
+          "url": "https://www.mutbex.com/rational-firinlar",
+          "code": "019.ICCLS20.1E"
+        },
+        "akakce_en_ucuz": {
+          "price_try_kdv_dahil": 879603,
+          "url": "https://www.akakce.com/c/?z=134&s=0&v=5273&p=1201938136&c=23665&k=5555&g=1201938136&f=%2fr%2f%3fpr%3d1201938136%26vd%3d5273%26pg%3d1201938136",
+          "title": "Rational 20 Tepsili Buhar Konveksiyonlu Elektrikli Fırın 20x1/1 iCombi Classic ICC201EEn Ucuz 879.603,09 TL TEK FİYAT Al"
+        }
+      },
+      "akakce_saticilar": [],
+      "min_price_tl": 879603,
+      "equsto_vs_cafemarkt_pct": -41.050128338630245,
+      "equsto_vs_mutbex_pct": -6.607369628446193,
+      "equsto_vs_akakce_pct": 3.6743849213793043,
+      "equsto_en_ucuz": false,
+      "rank_among_known": [
+        {
+          "site": "akakce",
+          "price": 879603
+        },
+        {
+          "site": "equsto",
+          "price": 911923
+        },
+        {
+          "site": "mutbex",
+          "price": 976440
+        },
+        {
+          "site": "cafemarkt",
+          "price": 1546946.54
+        }
+      ]
+    },
+    {
+      "sku": "9890.ICCLS20.1G",
+      "seri": "iCombi Classic",
+      "grup": "icombi",
+      "cfg": "20/1/1",
+      "fuel": "Gaz",
+      "name": "RATIONAL BUHAR KONVEKSİYONLU GAZLI FIRIN 20*1/1 GN İcombi Classic",
+      "in_equsto": true,
+      "rational_liste_eur": 24780,
+      "market": {
+        "equsto": {
+          "price_try_kdv_dahil": 1029966,
+          "url": "https://equsto.com/shop/marka/rational"
+        },
+        "cafemarkt": {
+          "price_try_kdv_dahil": 1709026.92,
+          "url": "https://www.cafemarkt.com/rational-icombi-classic-buhar-konveksiyonlu-firin-20x1-1-gn-kapasiteli-gazli",
+          "code": "083.9890.ICCLS20.1G",
+          "name": "Rational iCombi Classic 201G Buhar Konveksiyonlu Fırın, 20x1/1 GN Kapasiteli, Gazlı"
+        },
+        "mutbex": {
+          "price_try_kdv_dahil": 1102834,
+          "url": "https://www.mutbex.com/rational-firinlar",
+          "code": "019.ICCLS20.1G"
+        },
+        "akakce_en_ucuz": {
+          "price_try_kdv_dahil": 993494,
+          "url": "https://www.akakce.com/c/?z=134&s=0&v=5273&p=1201938138&c=23665&k=5555&g=1201938138&f=%2fr%2f%3fpr%3d1201938138%26vd%3d5273%26pg%3d1201938138",
+          "title": "Rational 20 Tepsili Buhar Konveksiyonlu Gazlı Fırın 20x1/1 iCombi Classic ICC201GEn Ucuz 993.494,26 TL TEK FİYAT Alarm K"
+        }
+      },
+      "akakce_saticilar": [],
+      "min_price_tl": 993494,
+      "equsto_vs_cafemarkt_pct": -39.73377552180395,
+      "equsto_vs_mutbex_pct": -6.607340723989285,
+      "equsto_vs_akakce_pct": 3.6710840729788004,
+      "equsto_en_ucuz": false,
+      "rank_among_known": [
+        {
+          "site": "akakce",
+          "price": 993494
+        },
+        {
+          "site": "equsto",
+          "price": 1029966
+        },
+        {
+          "site": "mutbex",
+          "price": 1102834
+        },
+        {
+          "site": "cafemarkt",
+          "price": 1709026.92
+        }
+      ]
+    },
+    {
+      "sku": "9890.ICCLS20.2E",
+      "seri": "iCombi Classic",
+      "grup": "icombi",
+      "cfg": "20/2/1",
+      "fuel": "Elektrik",
+      "name": "RATIONAL BUHAR KONVEKSİYONLU ELEKTRİKLİ FIRIN 20*2/1 GN İcombi Classic",
+      "in_equsto": true,
+      "rational_liste_eur": 31440,
+      "market": {
+        "equsto": {
+          "price_try_kdv_dahil": 1306784,
+          "url": "https://equsto.com/shop/marka/rational"
+        },
+        "cafemarkt": {
+          "price_try_kdv_dahil": 2164833.34,
+          "url": "https://www.cafemarkt.com/rational-icombi-classic-buhar-konveksiyonlu-firin-20x2-1-gn-kapasiteli-elektrikli",
+          "code": "083.9890.ICCLS20.2E",
+          "name": "Rational iCombi Classic 202E Buhar Konveksiyonlu Fırın, 20x2/1 GN Kapasiteli, Elektrikli"
+        },
+        "mutbex": {
+          "price_try_kdv_dahil": 1399237,
+          "url": "https://www.mutbex.com/rational-firinlar",
+          "code": "019.ICCLS20.2E"
+        },
+        "akakce_en_ucuz": {
+          "price_try_kdv_dahil": 1224085,
+          "url": "https://www.akakce.com/c/?z=134&s=0&v=3801&p=1373107269&c=20450&k=5555&g=1372450395&f=%2fr%2f%3fpr%3d1373107269%26vd%3d3801%26pg%3d1372450395",
+          "title": "Rational iCombi Classic Konveksiyonel Fırın, 20x2/1 GN Kapasiteli, ElektrikliEn Ucuz 1.224.084,96 TL TEK FİYAT Alarm Kur"
+        }
+      },
+      "akakce_saticilar": [],
+      "min_price_tl": 1224085,
+      "equsto_vs_cafemarkt_pct": -39.63581510621044,
+      "equsto_vs_mutbex_pct": -6.607386740059046,
+      "equsto_vs_akakce_pct": 6.755985082735267,
+      "equsto_en_ucuz": false,
+      "rank_among_known": [
+        {
+          "site": "akakce",
+          "price": 1224085
+        },
+        {
+          "site": "equsto",
+          "price": 1306784
+        },
+        {
+          "site": "mutbex",
+          "price": 1399237
+        },
+        {
+          "site": "cafemarkt",
+          "price": 2164833.34
+        }
+      ]
+    },
+    {
+      "sku": "9890.ICCLS20.2G",
+      "seri": "iCombi Classic",
+      "grup": "icombi",
+      "cfg": "20/2/1",
+      "fuel": "Gaz",
+      "name": "RATIONAL BUHAR KONVEKSİYONLU GAZLI FIRIN 20*2/1 GN İcombi Classic",
+      "in_equsto": true,
+      "rational_liste_eur": 35530,
+      "market": {
+        "equsto": {
+          "price_try_kdv_dahil": 1476784,
+          "url": "https://equsto.com/shop/marka/rational"
+        },
+        "cafemarkt": {
+          "price_try_kdv_dahil": 2436335.57,
+          "url": "https://www.cafemarkt.com/rational-icombi-classic-buhar-konveksiyonlu-firin-20x2-1-gn-kapasiteli-gazli",
+          "code": "083.9890.ICCLS20.2G",
+          "name": "Rational iCombi Classic 202G Buhar Konveksiyonlu Fırın, 20x2/1 GN Kapasiteli, Gazlı"
+        },
+        "mutbex": {
+          "price_try_kdv_dahil": 1581263,
+          "url": "https://www.mutbex.com/rational-firinlar",
+          "code": "019.ICCLS20.2G"
+        },
+        "akakce_en_ucuz": {
+          "price_try_kdv_dahil": 1553933,
+          "url": "https://www.akakce.com/c/?z=134&s=0&v=5273&p=1201938139&c=23665&k=5555&g=1201938139&f=%2fr%2f%3fpr%3d1201938139%26vd%3d5273%26pg%3d1201938139",
+          "title": "Rational 20 Tepsili Buhar Konveksiyonlu Gazlı Fırın 20x2/1 iCombi Classic ICC202GEn Ucuz 1.553.933,48 TL TEK FİYAT Alarm"
+        }
+      },
+      "akakce_saticilar": [],
+      "min_price_tl": 1476784,
+      "equsto_vs_cafemarkt_pct": -39.385033072435085,
+      "equsto_vs_mutbex_pct": -6.60731326793835,
+      "equsto_vs_akakce_pct": -4.964757167780078,
+      "equsto_en_ucuz": true,
+      "rank_among_known": [
+        {
+          "site": "equsto",
+          "price": 1476784
+        },
+        {
+          "site": "akakce",
+          "price": 1553933
+        },
+        {
+          "site": "mutbex",
+          "price": 1581263
+        },
+        {
+          "site": "cafemarkt",
+          "price": 2436335.57
+        }
+      ]
+    },
+    {
+      "sku": "9890.ICCLS61.0G",
+      "seri": "iCombi Classic",
+      "grup": "icombi",
+      "cfg": "6/1/1",
+      "fuel": "Gaz",
+      "name": "RATIONAL BUHAR KONVEKSIYONLU GAZLI FIRIN İcombi Classic",
+      "in_equsto": true,
+      "rational_liste_eur": 10060,
+      "market": {
+        "equsto": {
+          "price_try_kdv_dahil": 418138,
+          "url": "https://equsto.com/shop/marka/rational"
+        },
+        "cafemarkt": {
+          "price_try_kdv_dahil": 703624.28,
+          "url": "https://www.cafemarkt.com/rational-icombi-classic-buhar-konveksiyonlu-firin-6x1-1-gn-kapasiteli-gazli",
+          "code": "083.9890.ICCLS61.0G",
+          "name": "Rational iCombi Classic 6-1/1/G Buhar Konveksiyonlu Fırın, 6x1/1 GN Kapasiteli, Gazlı"
+        },
+        "mutbex": {
+          "price_try_kdv_dahil": 447720,
+          "url": "https://www.mutbex.com/rational-firinlar",
+          "code": "019.ICCLS61.0G"
+        },
+        "akakce_en_ucuz": {
+          "price_try_kdv_dahil": 403319,
+          "url": "https://www.akakce.com/c/?z=134&s=0&v=5273&p=1201938146&c=23665&k=5555&g=1201938146&f=%2fr%2f%3fpr%3d1201938146%26vd%3d5273%26pg%3d1201938146",
+          "title": "Rational 6 Tepsili Buhar Konveksiyonlu Gazlı Fırın 6x1/1 iCombi Classic ICC61GEn Ucuz 403.319,28 TL TEK FİYAT Alarm KurE"
+        }
+      },
+      "akakce_saticilar": [],
+      "min_price_tl": 403319,
+      "equsto_vs_cafemarkt_pct": -40.573682306699254,
+      "equsto_vs_mutbex_pct": -6.607254534083802,
+      "equsto_vs_akakce_pct": 3.6742628043806516,
+      "equsto_en_ucuz": false,
+      "rank_among_known": [
+        {
+          "site": "akakce",
+          "price": 403319
+        },
+        {
+          "site": "equsto",
+          "price": 418138
+        },
+        {
+          "site": "mutbex",
+          "price": 447720
+        },
+        {
+          "site": "cafemarkt",
+          "price": 703624.28
+        }
+      ]
+    },
+    {
+      "sku": "9890.ICCLS61.E0",
+      "seri": "iCombi Classic",
+      "grup": "icombi",
+      "cfg": "6/1/1",
+      "fuel": "Elektrik",
+      "name": "RATIONAL BUHAR KONVEKSİYONLU ELEKTRİKLİ FIRIN 6*1/1 GN  İcombi Classic",
+      "in_equsto": true,
+      "rational_liste_eur": 8440,
+      "market": {
+        "equsto": {
+          "price_try_kdv_dahil": 350803,
+          "url": "https://equsto.com/shop/marka/rational"
+        },
+        "cafemarkt": {
+          "price_try_kdv_dahil": 590017.67,
+          "url": "https://www.cafemarkt.com/rational-icombi-classic-buhar-konveksiyonlu-firin-6x1-1-gn-kapasiteli-elektrikli",
+          "code": "083.9890.ICCLS61.E0",
+          "name": "Rational iCombi Classic 6-1/1/E Buhar Konveksiyonlu Fırın, 6x1/1 GN Kapasiteli, Elektrikli"
+        },
+        "mutbex": {
+          "price_try_kdv_dahil": 375622,
+          "url": "https://www.mutbex.com/rational-firinlar",
+          "code": "019.ICCLS61.E0"
+        },
+        "akakce_en_ucuz": {
+          "price_try_kdv_dahil": 333819,
+          "url": "https://www.akakce.com/endustriyel-firin/en-ucuz-rational-icombi-classic-buhar-konveksiyonlu-firin-6x1-1-gn-kapasiteli-elektrikli-fiyati,1682897294.html",
+          "title": "Rational iCombi Classic Buhar Konveksiyonlu Fırın, 6x1/1 GN Kapasiteli, ElektrikliEn Ucuz 333.818,88 TL +2 FİYAT Ürüne G"
+        }
+      },
+      "akakce_saticilar": [],
+      "min_price_tl": 333819,
+      "equsto_vs_cafemarkt_pct": -40.54364507422295,
+      "equsto_vs_mutbex_pct": -6.607440458759071,
+      "equsto_vs_akakce_pct": 5.087787094203746,
+      "equsto_en_ucuz": false,
+      "rank_among_known": [
+        {
+          "site": "akakce",
+          "price": 333819
+        },
+        {
+          "site": "equsto",
+          "price": 350803
+        },
+        {
+          "site": "mutbex",
+          "price": 375622
+        },
+        {
+          "site": "cafemarkt",
+          "price": 590017.67
+        }
+      ]
+    },
+    {
+      "sku": "9890.ICCLS62.E0",
+      "seri": "iCombi Classic",
+      "grup": "icombi",
+      "cfg": "6/2/1",
+      "fuel": "Elektrik",
+      "name": "RATIONAL BUHAR KONVEKSİYONLU ELEKTRİKLİ FIRIN 6*2/1 GN  İcombi Classic",
+      "in_equsto": true,
+      "rational_liste_eur": 12890,
+      "market": {
+        "equsto": {
+          "price_try_kdv_dahil": 535765,
+          "url": "https://equsto.com/shop/marka/rational"
+        },
+        "cafemarkt": {
+          "price_try_kdv_dahil": 901309.56,
+          "url": "https://www.cafemarkt.com/rational-icombi-classic-buhar-konveksiyonlu-firin-6x2-1-gn-kapasiteli-elektrikli",
+          "code": "083.9890.ICCLS62.E0",
+          "name": "Rational iCombi Classic 6-2/1/E Buhar Konveksiyonlu Fırın, 6x2/1 GN Kapasiteli, Elektrikli"
+        },
+        "mutbex": null,
+        "akakce_en_ucuz": {
+          "price_try_kdv_dahil": 516763,
+          "url": "https://www.akakce.com/c/?z=134&s=0&v=5273&p=1201938145&c=23665&k=5555&g=1201938145&f=%2fr%2f%3fpr%3d1201938145%26vd%3d5273%26pg%3d1201938145",
+          "title": "Rational 6 Tepsili Buhar Konveksiyonlu Elektrikli Fırın 6x2/1 iCombi Classic ICC62EEn Ucuz 516.762,82 TL TEK FİYAT Alarm"
+        }
+      },
+      "akakce_saticilar": [],
+      "min_price_tl": 516763,
+      "equsto_vs_cafemarkt_pct": -40.55704901210635,
+      "equsto_vs_mutbex_pct": null,
+      "equsto_vs_akakce_pct": 3.6771208465002334,
+      "equsto_en_ucuz": false,
+      "rank_among_known": [
+        {
+          "site": "akakce",
+          "price": 516763
+        },
+        {
+          "site": "equsto",
+          "price": 535765
+        },
+        {
+          "site": "cafemarkt",
+          "price": 901309.56
+        }
+      ]
+    },
+    {
+      "sku": "9890.ICCLS62.G0",
+      "seri": "iCombi Classic",
+      "grup": "icombi",
+      "cfg": "6/2/1",
+      "fuel": "Gaz",
+      "name": "RATIONAL BUHAR KONVEKSİYONLU GAZLI FIRIN 6*2/1 GN  İcombi Classic",
+      "in_equsto": true,
+      "rational_liste_eur": 14950,
+      "market": {
+        "equsto": {
+          "price_try_kdv_dahil": 621388,
+          "url": "https://equsto.com/shop/marka/rational"
+        },
+        "cafemarkt": {
+          "price_try_kdv_dahil": 1052258.53,
+          "url": "https://www.cafemarkt.com/rational-icombi-classic-buhar-konveksiyonlu-firin-6x2-1-gn-kapasiteli-gazli",
+          "code": "083.9890.ICCLS62.G0",
+          "name": "Rational iCombi Classic 6-2/1/G Buhar Konveksiyonlu Fırın, 6x2/1 GN Kapasiteli, Gazlı"
+        },
+        "mutbex": {
+          "price_try_kdv_dahil": 665350,
+          "url": "https://www.mutbex.com/rational-firinlar",
+          "code": "019.ICCLS62.G0"
+        },
+        "akakce_en_ucuz": {
+          "price_try_kdv_dahil": 599383,
+          "url": "https://www.akakce.com/c/?z=134&s=0&v=5273&p=1201938147&c=23665&k=5555&g=1201938147&f=%2fr%2f%3fpr%3d1201938147%26vd%3d5273%26pg%3d1201938147",
+          "title": "Rational 6 Tepsili Buhar Konveksiyonlu Gazlı Fırın 6x2/1 iCombi Classic ICC62GEn Ucuz 599.383,48 TL TEK FİYAT Alarm KurE"
+        }
+      },
+      "akakce_saticilar": [],
+      "min_price_tl": 599383,
+      "equsto_vs_cafemarkt_pct": -40.947211898581614,
+      "equsto_vs_mutbex_pct": -6.607349515292703,
+      "equsto_vs_akakce_pct": 3.671275294761446,
+      "equsto_en_ucuz": false,
+      "rank_among_known": [
+        {
+          "site": "akakce",
+          "price": 599383
+        },
+        {
+          "site": "equsto",
+          "price": 621388
+        },
+        {
+          "site": "mutbex",
+          "price": 665350
+        },
+        {
+          "site": "cafemarkt",
+          "price": 1052258.53
+        }
+      ]
+    },
+    {
+      "sku": "9890.ICPRO10.1E",
+      "seri": "iCombi Pro",
+      "grup": "icombi",
+      "cfg": "10/1/1",
+      "fuel": "Elektrik",
+      "name": "RATIONAL ELEKTRİKLİ FIRIN 10*1/1 GN   İcombi Pro",
+      "in_equsto": true,
+      "rational_liste_eur": 15090,
+      "market": {
+        "equsto": {
+          "price_try_kdv_dahil": 627206,
+          "url": "https://equsto.com/shop/marka/rational"
+        },
+        "cafemarkt": {
+          "price_try_kdv_dahil": 1045942.4,
+          "url": "https://www.cafemarkt.com/rational-icombi-pro-firin-10x1-1-gn-kapasiteli-elektrikli",
+          "code": "083.9890.ICPRO10.1E",
+          "name": "Rational iCombi Pro 101E Fırın, 10x1/1 GN Kapasiteli, Elektrikli"
+        },
+        "mutbex": {
+          "price_try_kdv_dahil": 671580,
+          "url": "https://www.mutbex.com/rational-firinlar",
+          "code": "019.ICPRO10.1E"
+        },
+        "akakce_en_ucuz": {
+          "price_try_kdv_dahil": 585123,
+          "url": "https://www.akakce.com/c/?z=134&s=0&v=5273&p=1201938132&c=23665&k=5555&g=1201938132&f=%2fr%2f%3fpr%3d1201938132%26vd%3d5273%26pg%3d1201938132",
+          "title": "Rational 10 Tepsili Elektrikli Fırın 10x1/1 iCombi Pro ICP101EEn Ucuz 585.123,10 TL TEK FİYAT Alarm KurEn ucuz585.123,10"
+        }
+      },
+      "akakce_saticilar": [],
+      "min_price_tl": 585123,
+      "equsto_vs_cafemarkt_pct": -40.03436518110367,
+      "equsto_vs_mutbex_pct": -6.60740343667173,
+      "equsto_vs_akakce_pct": 7.192163015297639,
+      "equsto_en_ucuz": false,
+      "rank_among_known": [
+        {
+          "site": "akakce",
+          "price": 585123
+        },
+        {
+          "site": "equsto",
+          "price": 627206
+        },
+        {
+          "site": "mutbex",
+          "price": 671580
+        },
+        {
+          "site": "cafemarkt",
+          "price": 1045942.4
+        }
+      ]
+    },
+    {
+      "sku": "9890.ICPRO10.1G",
+      "seri": "iCombi Pro",
+      "grup": "icombi",
+      "cfg": "10/1/1",
+      "fuel": "Gaz",
+      "name": "RATIONAL GAZLI FIRIN 10*1/1 GN   İcombi Pro",
+      "in_equsto": true,
+      "rational_liste_eur": 17500,
+      "market": {
+        "equsto": {
+          "price_try_kdv_dahil": 727378,
+          "url": "https://equsto.com/shop/marka/rational"
+        },
+        "cafemarkt": {
+          "price_try_kdv_dahil": 1190141.03,
+          "url": "https://www.cafemarkt.com/rational-icombi-pro-firin-10x1-1-gn-kapasiteli-gazli",
+          "code": "083.9890.ICPRO10.1G",
+          "name": "Rational iCombi Pro 101G Fırın, 10x1/1 GN Kapasiteli, Gazlı"
+        },
+        "mutbex": {
+          "price_try_kdv_dahil": 778838,
+          "url": "https://www.mutbex.com/rational-firinlar",
+          "code": "019.ICPRO10.1G"
+        },
+        "akakce_en_ucuz": {
+          "price_try_kdv_dahil": 697461,
+          "url": "https://www.akakce.com/endustriyel-firin/en-ucuz-rational-icombi-pro-firin-10x1-1-gn-kapasiteli-gazli-fiyati,73944070.html",
+          "title": "Rational iCombi Pro Fırın 10x1/1 GN Kapasiteli GazlıEn Ucuz 697.460,94 TL +2 FİYAT Ürüne Git (+2)Alarm KurKargo dahil en"
+        }
+      },
+      "akakce_saticilar": [
+        {
+          "shop": "Arigastro.com",
+          "price_try_kdv_dahil": 697461,
+          "url": "https://www.akakce.com/endustriyel-firin/en-ucuz-rational-icombi-pro-firin-10x1-1-gn-kapasiteli-gazli-fiyati,73944070.html#/5985952/?s=3&v=3916&p=73944070&c=20630&g=1333108503&f=%2fr%2f%3fpr%3d73944070%26vd%3d3916%26pg%3d1333108503",
+          "shop_key": "Arigastro.com"
+        },
+        {
+          "shop": "Mutfak10.com",
+          "price_try_kdv_dahil": 894370,
+          "url": "https://www.akakce.com/endustriyel-firin/en-ucuz-rational-icombi-pro-firin-10x1-1-gn-kapasiteli-gazli-fiyati,73944070.html#/5985952/?s=2&v=3801&p=73944070&c=20450&g=1372454497&f=%2fr%2f%3fpr%3d73944070%26vd%3d3801%26pg%3d1372454497",
+          "shop_key": "Mutfak10.com"
+        },
+        {
+          "shop": "724mutfak.com",
+          "price_try_kdv_dahil": 997755,
+          "url": "https://www.akakce.com/endustriyel-firin/en-ucuz-rational-icombi-pro-firin-10x1-1-gn-kapasiteli-gazli-fiyati,73944070.html#/5985952/?s=1&v=2459&p=73944070&c=22002&g=1607986164&f=%2fr%2f%3fpr%3d73944070%26vd%3d2459%26pg%3d1607986164",
+          "shop_key": "724mutfak.com"
+        }
+      ],
+      "min_price_tl": 697461,
+      "equsto_vs_cafemarkt_pct": -38.88304144929782,
+      "equsto_vs_mutbex_pct": -6.607279049044859,
+      "equsto_vs_akakce_pct": 4.289415465524237,
+      "equsto_en_ucuz": false,
+      "rank_among_known": [
+        {
+          "site": "akakce",
+          "price": 697461
+        },
+        {
+          "site": "equsto",
+          "price": 727378
+        },
+        {
+          "site": "mutbex",
+          "price": 778838
+        },
+        {
+          "site": "cafemarkt",
+          "price": 1190141.03
+        }
+      ]
+    },
+    {
+      "sku": "9890.ICPRO10.2E",
+      "seri": "iCombi Pro",
+      "grup": "icombi",
+      "cfg": "10/2/1",
+      "fuel": "Elektrik",
+      "name": "RATIONAL ELEKTRİKLİ FIRIN 10*2/1 GN   İcombi Pro",
+      "in_equsto": true,
+      "rational_liste_eur": 21800,
+      "market": {
+        "equsto": {
+          "price_try_kdv_dahil": 906104,
+          "url": "https://equsto.com/shop/marka/rational"
+        },
+        "cafemarkt": {
+          "price_try_kdv_dahil": 1482682.76,
+          "url": "https://www.cafemarkt.com/rational-icombi-pro-firin-10x2-1-gn-kapasiteli-elektrikli",
+          "code": "083.9890.ICPRO10.2E",
+          "name": "Rational iCombi Pro 102E Fırın, 10x2/1 GN Kapasiteli, Elektrikli"
+        },
+        "mutbex": {
+          "price_try_kdv_dahil": 970209,
+          "url": "https://www.mutbex.com/rational-firinlar",
+          "code": "019.ICPRO10.2E"
+        },
+        "akakce_en_ucuz": {
+          "price_try_kdv_dahil": 874040,
+          "url": "https://www.akakce.com/c/?z=134&s=0&v=5273&p=1201938133&c=23665&k=5555&g=1201938133&f=%2fr%2f%3fpr%3d1201938133%26vd%3d5273%26pg%3d1201938133",
+          "title": "Rational 10 Tepsili Elektrikli Fırın 10x2/1 iCombi Pro ICP102EEn Ucuz 874.039,62 TL TEK FİYAT Alarm KurEn ucuz874.039,62"
+        }
+      },
+      "akakce_saticilar": [],
+      "min_price_tl": 874040,
+      "equsto_vs_cafemarkt_pct": -38.8875338376498,
+      "equsto_vs_mutbex_pct": -6.607339243400133,
+      "equsto_vs_akakce_pct": 3.6684819916708618,
+      "equsto_en_ucuz": false,
+      "rank_among_known": [
+        {
+          "site": "akakce",
+          "price": 874040
+        },
+        {
+          "site": "equsto",
+          "price": 906104
+        },
+        {
+          "site": "mutbex",
+          "price": 970209
+        },
+        {
+          "site": "cafemarkt",
+          "price": 1482682.76
+        }
+      ]
+    },
+    {
+      "sku": "9890.ICPRO10.2G",
+      "seri": "iCombi Pro",
+      "grup": "icombi",
+      "cfg": "10/2/1",
+      "fuel": "Gaz",
+      "name": "RATIONAL GAZLI FIRIN 10*2/1 GN   İcombi Pro",
+      "in_equsto": true,
+      "rational_liste_eur": 25290,
+      "market": {
+        "equsto": {
+          "price_try_kdv_dahil": 1051164,
+          "url": "https://equsto.com/shop/marka/rational"
+        },
+        "cafemarkt": {
+          "price_try_kdv_dahil": 1720868.79,
+          "url": "https://www.cafemarkt.com/rational-icombi-pro-firin-10x2-1-gn-kapasiteli-gazli",
+          "code": "083.9890.ICPRO10.2G",
+          "name": "Rational iCombi Pro 102G Fırın, 10x2/1 GN Kapasiteli, Gazlı"
+        },
+        "mutbex": {
+          "price_try_kdv_dahil": 1125531,
+          "url": "https://www.mutbex.com/rational-firinlar",
+          "code": "019.ICPRO10.2G"
+        },
+        "akakce_en_ucuz": {
+          "price_try_kdv_dahil": 1013958,
+          "url": "https://www.akakce.com/c/?z=134&s=0&v=5273&p=1201938135&c=23665&k=5555&g=1201938135&f=%2fr%2f%3fpr%3d1201938135%26vd%3d5273%26pg%3d1201938135",
+          "title": "Rational 10 Tepsili Gazlı Fırın 10x2/1 iCombi Pro ICP102GEn Ucuz 1.013.957,59 TL TEK FİYAT Alarm KurEn ucuz1.013.957,59 "
+        }
+      },
+      "akakce_saticilar": [],
+      "min_price_tl": 1013958,
+      "equsto_vs_cafemarkt_pct": -38.91666778383494,
+      "equsto_vs_mutbex_pct": -6.607281363196571,
+      "equsto_vs_akakce_pct": 3.6693827554987486,
+      "equsto_en_ucuz": false,
+      "rank_among_known": [
+        {
+          "site": "akakce",
+          "price": 1013958
+        },
+        {
+          "site": "equsto",
+          "price": 1051164
+        },
+        {
+          "site": "mutbex",
+          "price": 1125531
+        },
+        {
+          "site": "cafemarkt",
+          "price": 1720868.79
+        }
+      ]
+    },
+    {
+      "sku": "9890.ICPRO20.1E",
+      "seri": "iCombi Pro",
+      "grup": "icombi",
+      "cfg": "20/1/1",
+      "fuel": "Elektrik",
+      "name": "RATIONAL ELEKTRİKLİ FIRIN 20*1/1 GN  İcombi Pro",
+      "in_equsto": true,
+      "rational_liste_eur": 25520,
+      "market": {
+        "equsto": {
+          "price_try_kdv_dahil": 1060723,
+          "url": "https://equsto.com/shop/marka/rational"
+        },
+        "cafemarkt": {
+          "price_try_kdv_dahil": 1739776.89,
+          "url": "https://www.cafemarkt.com/rational-icombi-pro-firin-20x1-1-gn-kapasiteli-elektrikli",
+          "code": "083.9890.ICPRO20.1E",
+          "name": "Rational iCombi Pro 201E Fırın, 20x1/1 GN Kapasiteli, Elektrikli"
+        },
+        "mutbex": {
+          "price_try_kdv_dahil": 1135768,
+          "url": "https://www.mutbex.com/rational-firinlar",
+          "code": "019.ICPRO20.1E"
+        },
+        "akakce_en_ucuz": {
+          "price_try_kdv_dahil": 1023166,
+          "url": "https://www.akakce.com/c/?z=134&s=0&v=5273&p=1201938140&c=23665&k=5555&g=1201938140&f=%2fr%2f%3fpr%3d1201938140%26vd%3d5273%26pg%3d1201938140",
+          "title": "Rational 20 Tepsili Elektrikli Fırın 20x1/1 iCombi Pro ICP201EEn Ucuz 1.023.166,08 TL TEK FİYAT Alarm KurEn ucuz1.023.16"
+        }
+      },
+      "akakce_saticilar": [],
+      "min_price_tl": 1023166,
+      "equsto_vs_cafemarkt_pct": -39.031090360097835,
+      "equsto_vs_mutbex_pct": -6.607423347021575,
+      "equsto_vs_akakce_pct": 3.670665366128272,
+      "equsto_en_ucuz": false,
+      "rank_among_known": [
+        {
+          "site": "akakce",
+          "price": 1023166
+        },
+        {
+          "site": "equsto",
+          "price": 1060723
+        },
+        {
+          "site": "mutbex",
+          "price": 1135768
+        },
+        {
+          "site": "cafemarkt",
+          "price": 1739776.89
+        }
+      ]
+    },
+    {
+      "sku": "9890.ICPRO20.1G",
+      "seri": "iCombi Pro",
+      "grup": "icombi",
+      "cfg": "20/1/1",
+      "fuel": "Gaz",
+      "name": "RATIONAL GAZLI FIRIN 20*1/1 GN   İcombi Pro",
+      "in_equsto": true,
+      "rational_liste_eur": 28830,
+      "market": {
+        "equsto": {
+          "price_try_kdv_dahil": 1198302,
+          "url": "https://equsto.com/shop/marka/rational"
+        },
+        "cafemarkt": {
+          "price_try_kdv_dahil": 1962529.1,
+          "url": "https://www.cafemarkt.com/rational-icombi-pro-firin-20x1-1-gn-kapasiteli-gazli",
+          "code": "083.9890.ICPRO20.1G",
+          "name": "Rational iCombi Pro 201G Fırın, 20x1/1 GN Kapasiteli, Gazlı"
+        },
+        "mutbex": {
+          "price_try_kdv_dahil": 1283079,
+          "url": "https://www.mutbex.com/rational-firinlar",
+          "code": "019.ICPRO20.1G"
+        },
+        "akakce_en_ucuz": {
+          "price_try_kdv_dahil": 1122467,
+          "url": "https://www.akakce.com/endustriyel-firin/en-ucuz-rational-icombi-pro-firin-20x1-1-gn-kapasiteli-gazli-fiyati,413641391.html",
+          "title": "Rational iCombi Pro Fırın, 20x1/1 GN Kapasiteli, GazlıEn Ucuz 1.122.467,22 TL +2 FİYAT Ürüne Git (+2)Alarm KurKargo dahi"
+        }
+      },
+      "akakce_saticilar": [],
+      "min_price_tl": 1122467,
+      "equsto_vs_cafemarkt_pct": -38.94093086313982,
+      "equsto_vs_mutbex_pct": -6.607309448599813,
+      "equsto_vs_akakce_pct": 6.756100624784516,
+      "equsto_en_ucuz": false,
+      "rank_among_known": [
+        {
+          "site": "akakce",
+          "price": 1122467
+        },
+        {
+          "site": "equsto",
+          "price": 1198302
+        },
+        {
+          "site": "mutbex",
+          "price": 1283079
+        },
+        {
+          "site": "cafemarkt",
+          "price": 1962529.1
+        }
+      ]
+    },
+    {
+      "sku": "9890.ICPRO20.2E",
+      "seri": "iCombi Pro",
+      "grup": "icombi",
+      "cfg": "20/2/1",
+      "fuel": "Elektrik",
+      "name": "RATIONAL ELEKTRİKLİ FIRIN 20*2/1 GN  İcombi Pro",
+      "in_equsto": true,
+      "rational_liste_eur": 36580,
+      "market": {
+        "equsto": {
+          "price_try_kdv_dahil": 1520425,
+          "url": "https://equsto.com/shop/marka/rational"
+        },
+        "cafemarkt": {
+          "price_try_kdv_dahil": 2489111.76,
+          "url": "https://www.cafemarkt.com/rational-icombi-pro-firin-20x2-1-gn-kapasiteli-elektrikli",
+          "code": "083.9890.ICPRO20.2E",
+          "name": "Rational iCombi Pro 202E Fırın, 20x2/1 GN Kapasiteli, Elektrikli"
+        },
+        "mutbex": {
+          "price_try_kdv_dahil": 1627993,
+          "url": "https://www.mutbex.com/rational-firinlar",
+          "code": "019.ICPRO20.2E"
+        },
+        "akakce_en_ucuz": {
+          "price_try_kdv_dahil": 1457429,
+          "url": "https://www.akakce.com/endustriyel-firin/en-ucuz-rational-icombi-pro-firin-20x2-1-gn-kapasiteli-elektrikli-fiyati,658024475.html",
+          "title": "Rational iCombi Pro Fırın 20x2/1 GN Kapasiteli ElektrikliEn Ucuz 1.457.428,67 TL +1 FİYAT Ürüne Git (+1)Alarm KurKargo d"
+        }
+      },
+      "akakce_saticilar": [],
+      "min_price_tl": 1457429,
+      "equsto_vs_cafemarkt_pct": -38.916965303317674,
+      "equsto_vs_mutbex_pct": -6.6073994175650625,
+      "equsto_vs_akakce_pct": 4.322406100057019,
+      "equsto_en_ucuz": false,
+      "rank_among_known": [
+        {
+          "site": "akakce",
+          "price": 1457429
+        },
+        {
+          "site": "equsto",
+          "price": 1520425
+        },
+        {
+          "site": "mutbex",
+          "price": 1627993
+        },
+        {
+          "site": "cafemarkt",
+          "price": 2489111.76
+        }
+      ]
+    },
+    {
+      "sku": "9890.ICPRO20.2G",
+      "seri": "iCombi Pro",
+      "grup": "icombi",
+      "cfg": "20/2/1",
+      "fuel": "Gaz",
+      "name": "RATIONAL GAZLI FIRIN 20*2/1 GN  İcombi Pro",
+      "in_equsto": true,
+      "rational_liste_eur": 41330,
+      "market": {
+        "equsto": {
+          "price_try_kdv_dahil": 1717856,
+          "url": "https://equsto.com/shop/marka/rational"
+        },
+        "cafemarkt": {
+          "price_try_kdv_dahil": 2801745.91,
+          "url": "https://www.cafemarkt.com/rational-icombi-pro-firin-20x2-1-gn-kapasiteli-gazli",
+          "code": "083.9890.ICPRO20.2G",
+          "name": "Rational iCombi Pro 202G Fırın, 20x2/1 GN Kapasiteli, Gazlı"
+        },
+        "mutbex": {
+          "price_try_kdv_dahil": 1839392,
+          "url": "https://www.mutbex.com/rational-firinlar",
+          "code": "019.ICPRO20.2G"
+        },
+        "akakce_en_ucuz": null
+      },
+      "akakce_saticilar": [],
+      "min_price_tl": 1717856,
+      "equsto_vs_cafemarkt_pct": -38.68623154338789,
+      "equsto_vs_mutbex_pct": -6.607400706320349,
+      "equsto_vs_akakce_pct": null,
+      "equsto_en_ucuz": true,
+      "rank_among_known": [
+        {
+          "site": "equsto",
+          "price": 1717856
+        },
+        {
+          "site": "mutbex",
+          "price": 1839392
+        },
+        {
+          "site": "cafemarkt",
+          "price": 2801745.91
+        }
+      ]
+    },
+    {
+      "sku": "9890.ICPRO61.0G",
+      "seri": "iCombi Pro",
+      "grup": "icombi",
+      "cfg": "6/1/1",
+      "fuel": "Gaz",
+      "name": "RATIONAL GAZLI FIRIN 6*1/1 GN   İcombi Pro",
+      "in_equsto": true,
+      "rational_liste_eur": 12800,
+      "market": {
+        "equsto": {
+          "price_try_kdv_dahil": 532025,
+          "url": "https://equsto.com/shop/marka/rational"
+        },
+        "cafemarkt": {
+          "price_try_kdv_dahil": 922191.74,
+          "url": "https://www.cafemarkt.com/rational-icombi-pro-firin-6x1-1-gn-kapasiteli-gazli",
+          "code": "083.9890.ICPRO61.0G",
+          "name": "Rational iCombi Pro 6-1/1/G Fırın, 6x1/1 GN Kapasiteli, Gazlı"
+        },
+        "mutbex": {
+          "price_try_kdv_dahil": 569664,
+          "url": "https://www.mutbex.com/rational-firinlar",
+          "code": "019.ICPRO61.0G"
+        },
+        "akakce_en_ucuz": {
+          "price_try_kdv_dahil": 510259,
+          "url": "https://www.akakce.com/endustriyel-firin/en-ucuz-rational-icombi-pro-firin-6x1-1-gn-kapasiteli-gazli-fiyati,413641392.html",
+          "title": "Rational iCombi Pro Fırın, 6x1/1 GN Kapasiteli, GazlıEn Ucuz 510.259,49 TL +2 FİYAT Ürüne Git (+2)Alarm KurKargo dahil e"
+        }
+      },
+      "akakce_saticilar": [
+        {
+          "shop": "Arigastro.com",
+          "price_try_kdv_dahil": 510259,
+          "url": "https://www.akakce.com/endustriyel-firin/en-ucuz-rational-icombi-pro-firin-6x1-1-gn-kapasiteli-gazli-fiyati,413641392.html#/5384926/?s=3&v=3916&p=413641392&c=20630&g=1333108511&f=%2fr%2f%3fpr%3d413641392%26vd%3d3916%26pg%3d1333108511",
+          "shop_key": "Arigastro.com"
+        },
+        {
+          "shop": "Mutfak10.com",
+          "price_try_kdv_dahil": 685813,
+          "url": "https://www.akakce.com/endustriyel-firin/en-ucuz-rational-icombi-pro-firin-6x1-1-gn-kapasiteli-gazli-fiyati,413641392.html#/5384926/?s=1&v=3801&p=413641392&c=20450&g=1372458909&f=%2fr%2f%3fpr%3d413641392%26vd%3d3801%26pg%3d1372458909",
+          "shop_key": "Mutfak10.com"
+        },
+        {
+          "shop": "724mutfak.com",
+          "price_try_kdv_dahil": 773120,
+          "url": "https://www.akakce.com/endustriyel-firin/en-ucuz-rational-icombi-pro-firin-6x1-1-gn-kapasiteli-gazli-fiyati,413641392.html#/5384926/?s=2&v=2459&p=413641392&c=22002&g=1607989037&f=%2fr%2f%3fpr%3d413641392%26vd%3d2459%26pg%3d1607989037",
+          "shop_key": "724mutfak.com"
+        }
+      ],
+      "min_price_tl": 510259,
+      "equsto_vs_cafemarkt_pct": -42.30863529530204,
+      "equsto_vs_mutbex_pct": -6.607228120435906,
+      "equsto_vs_akakce_pct": 4.265676842544668,
+      "equsto_en_ucuz": false,
+      "rank_among_known": [
+        {
+          "site": "akakce",
+          "price": 510259
+        },
+        {
+          "site": "equsto",
+          "price": 532025
+        },
+        {
+          "site": "mutbex",
+          "price": 569664
+        },
+        {
+          "site": "cafemarkt",
+          "price": 922191.74
+        }
+      ]
+    },
+    {
+      "sku": "9890.ICPRO61.E0",
+      "seri": "iCombi Pro",
+      "grup": "icombi",
+      "cfg": "6/1/1",
+      "fuel": "Elektrik",
+      "name": "RATIONAL ELEKTRİKLİ FIRIN 6*1/1 GN   İcombi Pro",
+      "in_equsto": true,
+      "rational_liste_eur": 10730,
+      "market": {
+        "equsto": {
+          "price_try_kdv_dahil": 445986,
+          "url": "https://equsto.com/shop/marka/rational"
+        },
+        "cafemarkt": {
+          "price_try_kdv_dahil": 773177.19,
+          "url": "https://www.cafemarkt.com/rational-icombi-pro-firin-6x1-1-gn-kapasiteli-elektrikli",
+          "code": "083.9890.ICPRO61.E0",
+          "name": "Rational iCombi Pro 6-1/1/E Fırın, 6x1/1 GN Kapasiteli, Elektrikli"
+        },
+        "mutbex": {
+          "price_try_kdv_dahil": 477539,
+          "url": "https://www.mutbex.com/rational-firinlar",
+          "code": "019.ICPRO61.E0"
+        },
+        "akakce_en_ucuz": {
+          "price_try_kdv_dahil": 444438,
+          "url": "https://www.akakce.com/c/?z=134&s=0&v=5273&p=1201938148&c=23665&k=5555&g=1201938148&f=%2fr%2f%3fpr%3d1201938148%26vd%3d5273%26pg%3d1201938148",
+          "title": "Rational 6 Tepsili Elektrikli Fırın 6x1/1 iCombi Pro ICP61EEn Ucuz 444.437,77 TL TEK FİYAT Alarm KurEn ucuz444.437,77 TL"
+        }
+      },
+      "akakce_saticilar": [],
+      "min_price_tl": 444438,
+      "equsto_vs_cafemarkt_pct": -42.317749958453895,
+      "equsto_vs_mutbex_pct": -6.6074184516866685,
+      "equsto_vs_akakce_pct": 0.3483050504232311,
+      "equsto_en_ucuz": false,
+      "rank_among_known": [
+        {
+          "site": "akakce",
+          "price": 444438
+        },
+        {
+          "site": "equsto",
+          "price": 445986
+        },
+        {
+          "site": "mutbex",
+          "price": 477539
+        },
+        {
+          "site": "cafemarkt",
+          "price": 773177.19
+        }
+      ]
+    },
+    {
+      "sku": "9890.ICPRO62.E0",
+      "seri": "iCombi Pro",
+      "grup": "icombi",
+      "cfg": "6/2/1",
+      "fuel": "Elektrik",
+      "name": "RATIONAL ELEKTRİKLİ FIRIN 6*2/1 GN  İcombi Pro",
+      "in_equsto": true,
+      "rational_liste_eur": 16390,
+      "market": {
+        "equsto": {
+          "price_try_kdv_dahil": 681240,
+          "url": "https://equsto.com/shop/marka/rational"
+        },
+        "cafemarkt": {
+          "price_try_kdv_dahil": 1127733.01,
+          "url": "https://www.cafemarkt.com/rational-icombi-pro-firin-6x2-1-gn-kapasiteli-elektrikli",
+          "code": "083.9890.ICPRO62.E0",
+          "name": "Rational iCombi Pro 6-2/1/E Fırın, 6x2/1 GN Kapasiteli, Elektrikli"
+        },
+        "mutbex": {
+          "price_try_kdv_dahil": 729437,
+          "url": "https://www.mutbex.com/rational-firinlar",
+          "code": "019.ICPRO62.E0"
+        },
+        "akakce_en_ucuz": {
+          "price_try_kdv_dahil": 657128,
+          "url": "https://www.akakce.com/c/?z=134&s=0&v=5273&p=1201938149&c=23665&k=5555&g=1201938149&f=%2fr%2f%3fpr%3d1201938149%26vd%3d5273%26pg%3d1201938149",
+          "title": "Rational 6 Tepsili Elektrikli Fırın 6x2/1 iCombi Pro ICP62EEn Ucuz 657.128,41 TL TEK FİYAT Alarm KurEn ucuz657.128,41 TL"
+        }
+      },
+      "akakce_saticilar": [],
+      "min_price_tl": 657128,
+      "equsto_vs_cafemarkt_pct": -39.59208483220687,
+      "equsto_vs_mutbex_pct": -6.607424630228518,
+      "equsto_vs_akakce_pct": 3.6693003493992036,
+      "equsto_en_ucuz": false,
+      "rank_among_known": [
+        {
+          "site": "akakce",
+          "price": 657128
+        },
+        {
+          "site": "equsto",
+          "price": 681240
+        },
+        {
+          "site": "mutbex",
+          "price": 729437
+        },
+        {
+          "site": "cafemarkt",
+          "price": 1127733.01
+        }
+      ]
+    },
+    {
+      "sku": "9890.ICPRO62.G0",
+      "seri": "iCombi Pro",
+      "grup": "icombi",
+      "cfg": "6/2/1",
+      "fuel": "Gaz",
+      "name": "RATIONAL GAZLI FIRIN 6*2/1 GN  İcombi Pro",
+      "in_equsto": true,
+      "rational_liste_eur": 19020,
+      "market": {
+        "equsto": {
+          "price_try_kdv_dahil": 790555,
+          "url": "https://equsto.com/shop/marka/rational"
+        },
+        "cafemarkt": {
+          "price_try_kdv_dahil": 1323879.07,
+          "url": "https://www.cafemarkt.com/rational-icombi-pro-firin-6x2-1-gn-kapasiteli-gazli",
+          "code": "083.9890.ICPRO62.G0",
+          "name": "Rational iCombi Pro 6-2/1/G Fırın, 6x2/1 GN Kapasiteli, Gazlı"
+        },
+        "mutbex": {
+          "price_try_kdv_dahil": 846485,
+          "url": "https://www.mutbex.com/rational-firinlar",
+          "code": "019.ICPRO62.G0"
+        },
+        "akakce_en_ucuz": {
+          "price_try_kdv_dahil": 762578,
+          "url": "https://www.akakce.com/c/?z=134&s=0&v=5273&p=1201938151&c=23665&k=5555&g=1201938151&f=%2fr%2f%3fpr%3d1201938151%26vd%3d5273%26pg%3d1201938151",
+          "title": "Rational 6 Tepsili Gazlı Fırın 6x2/1 iCombi Pro ICP62GEn Ucuz 762.578,47 TL TEK FİYAT Alarm KurEn ucuz762.578,47 TLKariy"
+        }
+      },
+      "akakce_saticilar": [],
+      "min_price_tl": 762578,
+      "equsto_vs_cafemarkt_pct": -40.28495367027746,
+      "equsto_vs_mutbex_pct": -6.607323224865177,
+      "equsto_vs_akakce_pct": 3.6687394600945744,
+      "equsto_en_ucuz": false,
+      "rank_among_known": [
+        {
+          "site": "akakce",
+          "price": 762578
+        },
+        {
+          "site": "equsto",
+          "price": 790555
+        },
+        {
+          "site": "mutbex",
+          "price": 846485
+        },
+        {
+          "site": "cafemarkt",
+          "price": 1323879.07
+        }
+      ]
+    },
+    {
+      "sku": "9890.ICPROXS.00",
+      "seri": "iCombi Pro XS",
+      "grup": "icombi",
+      "cfg": "6/2/3",
+      "fuel": "Elektrik",
+      "name": "RATIONAL ELEKTRİKLİ FIRIN 6x2/3 GN  İcombi Pro",
+      "in_equsto": true,
+      "rational_liste_eur": 8580,
+      "market": {
+        "equsto": {
+          "price_try_kdv_dahil": 356622,
+          "url": "https://equsto.com/shop/marka/rational"
+        },
+        "cafemarkt": null,
+        "mutbex": {
+          "price_try_kdv_dahil": 381853,
+          "url": "https://www.mutbex.com/rational-firinlar",
+          "code": "019.ICPROXS.00"
+        },
+        "akakce_en_ucuz": {
+          "price_try_kdv_dahil": 341874,
+          "url": "https://www.akakce.com/endustriyel-firin/en-ucuz-rational-icombi-pro-xs-kombi-fiyati,1235832127.html",
+          "title": "Rational iCombi Pro XS Kombi Endüstriyel FırınEn Ucuz 341.873,86 TL +2 FİYAT Ürüne Git (+2)Alarm KurKargo dahil en ucuz3"
+        }
+      },
+      "akakce_saticilar": [],
+      "min_price_tl": 341874,
+      "equsto_vs_cafemarkt_pct": null,
+      "equsto_vs_mutbex_pct": -6.607516505042517,
+      "equsto_vs_akakce_pct": 4.3138700222889135,
+      "equsto_en_ucuz": false,
+      "rank_among_known": [
+        {
+          "site": "akakce",
+          "price": 341874
+        },
+        {
+          "site": "equsto",
+          "price": 356622
+        },
+        {
+          "site": "mutbex",
+          "price": 381853
+        }
+      ]
+    },
+    {
+      "sku": "9890.OCMP10.1E",
+      "seri": "CombiMaster Plus",
+      "grup": "cmp",
+      "cfg": "10..1",
+      "fuel": "Elektrik",
+      "name": "Rational CMP10 1E Buhar Konveksiyonlu Fırın, 10 Adet GN 1/1 Tepsi Kapasiteli, Elektrikli",
+      "in_equsto": false,
+      "rational_liste_eur": null,
+      "market": {
+        "equsto": null,
+        "cafemarkt": {
+          "price_try_kdv_dahil": 648004.97,
+          "url": "https://www.cafemarkt.com/oztirational-buhar-konveksiyonlu-elektrikli-firin",
+          "code": "083.9890.OCMP10.1E",
+          "name": "Rational CMP10 1E Buhar Konveksiyonlu Fırın, 10 Adet GN 1/1 Tepsi Kapasiteli, Elektrikli"
+        },
+        "mutbex": null,
+        "akakce_en_ucuz": null
+      },
+      "akakce_saticilar": [],
+      "min_price_tl": 648004.97,
+      "equsto_vs_cafemarkt_pct": null,
+      "equsto_vs_mutbex_pct": null,
+      "equsto_vs_akakce_pct": null,
+      "equsto_en_ucuz": null,
+      "rank_among_known": [
+        {
+          "site": "cafemarkt",
+          "price": 648004.97
+        }
+      ]
+    },
+    {
+      "sku": "9890.OCMP10.1G",
+      "seri": "CombiMaster Plus",
+      "grup": "cmp",
+      "cfg": "10..1",
+      "fuel": "Gaz",
+      "name": "Rational CMP10 1G Buhar Konveksiyonlu Fırın, 10 Adet GN 1/1 Tepsi Kapasiteli, Gazlı",
+      "in_equsto": false,
+      "rational_liste_eur": null,
+      "market": {
+        "equsto": null,
+        "cafemarkt": {
+          "price_try_kdv_dahil": 745348.35,
+          "url": "https://www.cafemarkt.com/oztirational-buhar-konveksiyonlu-gazli-firin-10x1",
+          "code": "083.9890.OCMP10.1G",
+          "name": "Rational CMP10 1G Buhar Konveksiyonlu Fırın, 10 Adet GN 1/1 Tepsi Kapasiteli, Gazlı"
+        },
+        "mutbex": null,
+        "akakce_en_ucuz": null
+      },
+      "akakce_saticilar": [],
+      "min_price_tl": 745348.35,
+      "equsto_vs_cafemarkt_pct": null,
+      "equsto_vs_mutbex_pct": null,
+      "equsto_vs_akakce_pct": null,
+      "equsto_en_ucuz": null,
+      "rank_among_known": [
+        {
+          "site": "cafemarkt",
+          "price": 745348.35
+        }
+      ]
+    },
+    {
+      "sku": "9890.OCMP10.2E",
+      "seri": "CombiMaster Plus",
+      "grup": "cmp",
+      "cfg": "10..2",
+      "fuel": "Elektrik",
+      "name": "Rational CMP10 2E Buhar Konveksiyonlu Fırın, 10 Adet GN 2/1 Tepsi Kapasiteli, Elektrikli",
+      "in_equsto": false,
+      "rational_liste_eur": null,
+      "market": {
+        "equsto": null,
+        "cafemarkt": {
+          "price_try_kdv_dahil": 913657.25,
+          "url": "https://www.cafemarkt.com/oztirational-buhar-konveksiyonlu-elektrikli-firin-2970",
+          "code": "083.9890.OCMP10.2E",
+          "name": "Rational CMP10 2E Buhar Konveksiyonlu Fırın, 10 Adet GN 2/1 Tepsi Kapasiteli, Elektrikli"
+        },
+        "mutbex": null,
+        "akakce_en_ucuz": null
+      },
+      "akakce_saticilar": [],
+      "min_price_tl": 913657.25,
+      "equsto_vs_cafemarkt_pct": null,
+      "equsto_vs_mutbex_pct": null,
+      "equsto_vs_akakce_pct": null,
+      "equsto_en_ucuz": null,
+      "rank_among_known": [
+        {
+          "site": "cafemarkt",
+          "price": 913657.25
+        }
+      ]
+    },
+    {
+      "sku": "9890.OCMP10.2G",
+      "seri": "CombiMaster Plus",
+      "grup": "cmp",
+      "cfg": "10..2",
+      "fuel": "Gaz",
+      "name": "Rational CMP10 2G Buhar Konveksiyonlu Fırın, 10 Adet GN 2/1 Tepsi Kapasiteli, Gazlı",
+      "in_equsto": false,
+      "rational_liste_eur": null,
+      "market": {
+        "equsto": null,
+        "cafemarkt": {
+          "price_try_kdv_dahil": 1084279.79,
+          "url": "https://www.cafemarkt.com/oztirational-buhar-konveksiyonlu-gazli-firin-10x2",
+          "code": "083.9890.OCMP10.2G",
+          "name": "Rational CMP10 2G Buhar Konveksiyonlu Fırın, 10 Adet GN 2/1 Tepsi Kapasiteli, Gazlı"
+        },
+        "mutbex": null,
+        "akakce_en_ucuz": null
+      },
+      "akakce_saticilar": [],
+      "min_price_tl": 1084279.79,
+      "equsto_vs_cafemarkt_pct": null,
+      "equsto_vs_mutbex_pct": null,
+      "equsto_vs_akakce_pct": null,
+      "equsto_en_ucuz": null,
+      "rank_among_known": [
+        {
+          "site": "cafemarkt",
+          "price": 1084279.79
+        }
+      ]
+    },
+    {
+      "sku": "9890.OCMP20.1E",
+      "seri": "CombiMaster Plus",
+      "grup": "cmp",
+      "cfg": "20..1",
+      "fuel": "Elektrik",
+      "name": "Rational CMP20 1E Buhar Konveksiyonlu Fırın, 20 Adet GN 1/1 Tepsi Kapasiteli, Elektrikli",
+      "in_equsto": false,
+      "rational_liste_eur": null,
+      "market": {
+        "equsto": null,
+        "cafemarkt": {
+          "price_try_kdv_dahil": 1144826.28,
+          "url": "https://www.cafemarkt.com/oztirational-buhar-konveksiyonlu-elektrikli-firin-2972",
+          "code": "083.9890.OCMP20.1E",
+          "name": "Rational CMP20 1E Buhar Konveksiyonlu Fırın, 20 Adet GN 1/1 Tepsi Kapasiteli, Elektrikli"
+        },
+        "mutbex": null,
+        "akakce_en_ucuz": null
+      },
+      "akakce_saticilar": [],
+      "min_price_tl": 1144826.28,
+      "equsto_vs_cafemarkt_pct": null,
+      "equsto_vs_mutbex_pct": null,
+      "equsto_vs_akakce_pct": null,
+      "equsto_en_ucuz": null,
+      "rank_among_known": [
+        {
+          "site": "cafemarkt",
+          "price": 1144826.28
+        }
+      ]
+    },
+    {
+      "sku": "9890.OCMP20.1G",
+      "seri": "CombiMaster Plus",
+      "grup": "cmp",
+      "cfg": "20..1",
+      "fuel": "Gaz",
+      "name": "Rational CMP20 1G Buhar Konveksiyonlu Fırın, 20 Adet GN 1/1 Tepsi Kapasiteli, Gazlı",
+      "in_equsto": false,
+      "rational_liste_eur": null,
+      "market": {
+        "equsto": null,
+        "cafemarkt": {
+          "price_try_kdv_dahil": 1264750.94,
+          "url": "https://www.cafemarkt.com/oztirational-buhar-konveksiyonlu-gazli-firin-20x1",
+          "code": "083.9890.OCMP20.1G",
+          "name": "Rational CMP20 1G Buhar Konveksiyonlu Fırın, 20 Adet GN 1/1 Tepsi Kapasiteli, Gazlı"
+        },
+        "mutbex": null,
+        "akakce_en_ucuz": null
+      },
+      "akakce_saticilar": [],
+      "min_price_tl": 1264750.94,
+      "equsto_vs_cafemarkt_pct": null,
+      "equsto_vs_mutbex_pct": null,
+      "equsto_vs_akakce_pct": null,
+      "equsto_en_ucuz": null,
+      "rank_among_known": [
+        {
+          "site": "cafemarkt",
+          "price": 1264750.94
+        }
+      ]
+    },
+    {
+      "sku": "9890.OCMP20.2E",
+      "seri": "CombiMaster Plus",
+      "grup": "cmp",
+      "cfg": "20..2",
+      "fuel": "Elektrik",
+      "name": "Rational CMP20 2E Buhar Konveksiyonlu Fırın, 20 Adet GN 2/1 Tepsi Kapasiteli, Elektrikli",
+      "in_equsto": false,
+      "rational_liste_eur": null,
+      "market": {
+        "equsto": null,
+        "cafemarkt": {
+          "price_try_kdv_dahil": 1602098.39,
+          "url": "https://www.cafemarkt.com/oztirational-buhar-konveksiyonlu-elektrikli-firin-2974",
+          "code": "083.9890.OCMP20.2E",
+          "name": "Rational CMP20 2E Buhar Konveksiyonlu Fırın, 20 Adet GN 2/1 Tepsi Kapasiteli, Elektrikli"
+        },
+        "mutbex": null,
+        "akakce_en_ucuz": null
+      },
+      "akakce_saticilar": [],
+      "min_price_tl": 1602098.39,
+      "equsto_vs_cafemarkt_pct": null,
+      "equsto_vs_mutbex_pct": null,
+      "equsto_vs_akakce_pct": null,
+      "equsto_en_ucuz": null,
+      "rank_among_known": [
+        {
+          "site": "cafemarkt",
+          "price": 1602098.39
+        }
+      ]
+    },
+    {
+      "sku": "9890.OCMP20.2G",
+      "seri": "CombiMaster Plus",
+      "grup": "cmp",
+      "cfg": "20..2",
+      "fuel": "Gaz",
+      "name": "Rational CMP20 2G Buhar Konveksiyonlu Fırın, 20 Adet GN 2/1 Tepsi Kapasiteli, Gazlı",
+      "in_equsto": false,
+      "rational_liste_eur": null,
+      "market": {
+        "equsto": null,
+        "cafemarkt": {
+          "price_try_kdv_dahil": 1803011.12,
+          "url": "https://www.cafemarkt.com/oztirational-buhar-konveksiyonlu-gazli-firin-20x2",
+          "code": "083.9890.OCMP20.2G",
+          "name": "Rational CMP20 2G Buhar Konveksiyonlu Fırın, 20 Adet GN 2/1 Tepsi Kapasiteli, Gazlı"
+        },
+        "mutbex": null,
+        "akakce_en_ucuz": null
+      },
+      "akakce_saticilar": [],
+      "min_price_tl": 1803011.12,
+      "equsto_vs_cafemarkt_pct": null,
+      "equsto_vs_mutbex_pct": null,
+      "equsto_vs_akakce_pct": null,
+      "equsto_en_ucuz": null,
+      "rank_among_known": [
+        {
+          "site": "cafemarkt",
+          "price": 1803011.12
+        }
+      ]
+    },
+    {
+      "sku": "9890.OCMP61.E0",
+      "seri": "CombiMaster Plus",
+      "grup": "cmp",
+      "cfg": "6/1/1",
+      "fuel": "Elektrik",
+      "name": "Rational CMP61 E0 Buhar Konveksiyonlu Fırın, 6 Adet GN 1/1 Tepsi Kapasiteli, Elektrikli",
+      "in_equsto": false,
+      "rational_liste_eur": null,
+      "market": {
+        "equsto": null,
+        "cafemarkt": {
+          "price_try_kdv_dahil": 460910.74,
+          "url": "https://www.cafemarkt.com/oztirational-buhar-konveksiyonlu-elektrikli-firin-2976",
+          "code": "083.9890.OCMP61.E0",
+          "name": "Rational CMP61 E0 Buhar Konveksiyonlu Fırın, 6 Adet GN 1/1 Tepsi Kapasiteli, Elektrikli"
+        },
+        "mutbex": null,
+        "akakce_en_ucuz": null
+      },
+      "akakce_saticilar": [],
+      "min_price_tl": 460910.74,
+      "equsto_vs_cafemarkt_pct": null,
+      "equsto_vs_mutbex_pct": null,
+      "equsto_vs_akakce_pct": null,
+      "equsto_en_ucuz": null,
+      "rank_among_known": [
+        {
+          "site": "cafemarkt",
+          "price": 460910.74
+        }
+      ]
+    },
+    {
+      "sku": "9890.OCMP61.G0",
+      "seri": "CombiMaster Plus",
+      "grup": "cmp",
+      "cfg": "6/1/1",
+      "fuel": "Gaz",
+      "name": "Rational CMP61 G0 Buhar Konveksiyonlu Fırın, 6 Adet GN 1/1 Tepsi Kapasiteli, Gazlı",
+      "in_equsto": false,
+      "rational_liste_eur": null,
+      "market": {
+        "equsto": null,
+        "cafemarkt": {
+          "price_try_kdv_dahil": 549652.49,
+          "url": "https://www.cafemarkt.com/oztirational-buhar-konveksiyonlu-gazli-firin",
+          "code": "083.9890.OCMP61.G0",
+          "name": "Rational CMP61 G0 Buhar Konveksiyonlu Fırın, 6 Adet GN 1/1 Tepsi Kapasiteli, Gazlı"
+        },
+        "mutbex": null,
+        "akakce_en_ucuz": null
+      },
+      "akakce_saticilar": [],
+      "min_price_tl": 549652.49,
+      "equsto_vs_cafemarkt_pct": null,
+      "equsto_vs_mutbex_pct": null,
+      "equsto_vs_akakce_pct": null,
+      "equsto_en_ucuz": null,
+      "rank_among_known": [
+        {
+          "site": "cafemarkt",
+          "price": 549652.49
+        }
+      ]
+    },
+    {
+      "sku": "9890.OCMP62.E0",
+      "seri": "CombiMaster Plus",
+      "grup": "cmp",
+      "cfg": "6/2/1",
+      "fuel": "Elektrik",
+      "name": "Rational CMP62 E0 Buhar Konveksiyonlu Fırın, 6 Adet GN 2/1 Tepsi Kapasiteli, Elektrikli",
+      "in_equsto": false,
+      "rational_liste_eur": null,
+      "market": {
+        "equsto": null,
+        "cafemarkt": {
+          "price_try_kdv_dahil": 704062.32,
+          "url": "https://www.cafemarkt.com/oztirational-buhar-konveksiyonlu-elektrikli-firin-2978",
+          "code": "083.9890.OCMP62.E0",
+          "name": "Rational CMP62 E0 Buhar Konveksiyonlu Fırın, 6 Adet GN 2/1 Tepsi Kapasiteli, Elektrikli"
+        },
+        "mutbex": null,
+        "akakce_en_ucuz": null
+      },
+      "akakce_saticilar": [],
+      "min_price_tl": 704062.32,
+      "equsto_vs_cafemarkt_pct": null,
+      "equsto_vs_mutbex_pct": null,
+      "equsto_vs_akakce_pct": null,
+      "equsto_en_ucuz": null,
+      "rank_among_known": [
+        {
+          "site": "cafemarkt",
+          "price": 704062.32
+        }
+      ]
+    },
+    {
+      "sku": "9890.OCMP62.G0",
+      "seri": "CombiMaster Plus",
+      "grup": "cmp",
+      "cfg": "6/2/1",
+      "fuel": "Gaz",
+      "name": "Rational CMP62 G0 Buhar Konveksiyonlu Fırın, 6 Adet GN 2/1 Tepsi Kapasiteli, Gazlı",
+      "in_equsto": false,
+      "rational_liste_eur": null,
+      "market": {
+        "equsto": null,
+        "cafemarkt": {
+          "price_try_kdv_dahil": 821973.26,
+          "url": "https://www.cafemarkt.com/oztirational-buhar-konveksiyonlu-gazli-firin-6x2",
+          "code": "083.9890.OCMP62.G0",
+          "name": "Rational CMP62 G0 Buhar Konveksiyonlu Fırın, 6 Adet GN 2/1 Tepsi Kapasiteli, Gazlı"
+        },
+        "mutbex": null,
+        "akakce_en_ucuz": null
+      },
+      "akakce_saticilar": [],
+      "min_price_tl": 821973.26,
+      "equsto_vs_cafemarkt_pct": null,
+      "equsto_vs_mutbex_pct": null,
+      "equsto_vs_akakce_pct": null,
+      "equsto_en_ucuz": null,
+      "rank_among_known": [
+        {
+          "site": "cafemarkt",
+          "price": 821973.26
+        }
+      ]
+    },
+    {
+      "sku": "9890.SCCWEXS.00",
+      "seri": "SelfCooking Center",
+      "grup": "scc",
+      "cfg": "6x2/3 GN",
+      "fuel": "Elektrik",
+      "name": "Rational SelfCooking Center Fırın, 6x GN 2/3 Kapasiteli, Elektrikli",
+      "in_equsto": false,
+      "rational_liste_eur": null,
+      "market": {
+        "equsto": null,
+        "cafemarkt": {
+          "price_try_kdv_dahil": 466405.78,
+          "url": "https://www.cafemarkt.com/oztiryakiler-rational-selfcooking-center-firin-6x-gn-2-3-kapasiteli-elektrikli",
+          "code": "083.9890.SCCWEXS.00",
+          "name": "Rational SelfCooking Center Fırın, 6x GN 2/3 Kapasiteli, Elektrikli"
+        },
+        "mutbex": null,
+        "akakce_en_ucuz": null
+      },
+      "akakce_saticilar": [],
+      "min_price_tl": 466405.78,
+      "equsto_vs_cafemarkt_pct": null,
+      "equsto_vs_mutbex_pct": null,
+      "equsto_vs_akakce_pct": null,
+      "equsto_en_ucuz": null,
+      "rank_among_known": [
+        {
+          "site": "cafemarkt",
+          "price": 466405.78
+        }
+      ]
+    }
+  ]
+}

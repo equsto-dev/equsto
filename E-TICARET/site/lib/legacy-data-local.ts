@@ -1,4 +1,3 @@
-import "server-only";
 
 import { access, readFile } from "node:fs/promises";
 

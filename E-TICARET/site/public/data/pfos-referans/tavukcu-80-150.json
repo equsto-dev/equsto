@@ -14,7 +14,8 @@
       "poz": "A1",
       "ad": "ÇİFT EVYELİ ÇALIŞMA TEZGAHI",
       "olcu": "140*70*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "",
@@ -22,7 +23,8 @@
       "poz": "A2",
       "ad": "DUVAR RAFI",
       "olcu": "140*30*3",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -30,7 +32,8 @@
       "poz": "A3",
       "ad": "ÇALIŞMA TEZGAHI, TABAN RAFLI",
       "olcu": "90*70*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "",
@@ -38,7 +41,8 @@
       "poz": "A4",
       "ad": "DUVAR RAFI",
       "olcu": "90*30*3",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "B",
@@ -46,7 +50,8 @@
       "poz": "B1",
       "ad": "PANEL TİP SOĞUK ODA",
       "olcu": "300*200*240",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "B",
@@ -54,7 +59,8 @@
       "poz": "B2",
       "ad": "İSTİF RAFI",
       "olcu": "137*46*160",
-      "adet": 2
+      "adet": 2,
+      "kategori": "diger"
     },
     {
       "bolum": "B",
@@ -62,7 +68,8 @@
       "poz": "B3",
       "ad": "İSTİF RAFI",
       "olcu": "152*46*160",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "C",
@@ -70,7 +77,8 @@
       "poz": "C1",
       "ad": "KASA BANKOSU",
       "olcu": "100*70*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "C",
@@ -78,7 +86,8 @@
       "poz": "C2",
       "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
       "olcu": "100*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "C",
@@ -86,7 +95,8 @@
       "poz": "C3",
       "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
       "olcu": "175*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "C",
@@ -94,7 +104,8 @@
       "poz": "C4",
       "ad": "BUZ MAKİNASI, BREMA",
       "olcu": "42 kg/gün",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "C",
@@ -102,7 +113,8 @@
       "poz": "C5",
       "ad": "BULAŞIK YIKAMA MAKİNASI",
       "olcu": "500 tb/saat",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "C",
@@ -110,7 +122,8 @@
       "poz": "C6",
       "ad": "CAM KAPILI TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
       "olcu": "188*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "C",
@@ -118,7 +131,8 @@
       "poz": "C7",
       "ad": "ÇAY OTOMATI",
       "olcu": "23 lt.",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "C",
@@ -126,7 +140,8 @@
       "poz": "C8",
       "ad": "PORTAKAL SIKMA MAKİNASı",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "C",
@@ -134,7 +149,8 @@
       "poz": "C9",
       "ad": "BAR BLENDER, SANTOS",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "C",
@@ -142,7 +158,8 @@
       "poz": "C11",
       "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
       "olcu": "90*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "C",
@@ -150,7 +167,8 @@
       "poz": "C12",
       "ad": "ÇALIŞMA TEZGAHI",
       "olcu": "125*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "C",
@@ -158,7 +176,8 @@
       "poz": "C13",
       "ad": "SETALTI DERİN DONDURUCU",
       "olcu": "60*60*85",
-      "adet": 2
+      "adet": 2,
+      "kategori": "pisirme"
     },
     {
       "bolum": "C",
@@ -166,7 +185,8 @@
       "poz": "C14",
       "ad": "SETALTI TEZGAH TİPİ BUZDOLABI, 2 KAPILI",
       "olcu": "143*70*56",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "C",
@@ -174,7 +194,8 @@
       "poz": "C15",
       "ad": "6 AÇIK ALEVLİ OCAK",
       "olcu": "120*70*30",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "C",
@@ -182,7 +203,8 @@
       "poz": "C16",
       "ad": "FRİTÖZ, ÇİFT HAZNELİ, ELK",
       "olcu": "80*70*30",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "C",
@@ -190,7 +212,8 @@
       "poz": "C17",
       "ad": "IZGARA, GAZLI, SETÜSTÜ",
       "olcu": "40*70*30",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "C",
@@ -198,7 +221,8 @@
       "poz": "C18",
       "ad": "TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
       "olcu": "188*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "C",
@@ -206,7 +230,8 @@
       "poz": "C19",
       "ad": "PİLİÇ ÇEVİRME MAKİNASI",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "C",
@@ -214,7 +239,8 @@
       "poz": "C20",
       "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI",
       "olcu": "90*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "C",
@@ -222,7 +248,8 @@
       "poz": "C21",
       "ad": "SİNEK ÖLDÜRÜCÜ",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "Y",
@@ -230,7 +257,22 @@
       "poz": "Y1",
       "ad": "YER IZGARASI",
       "olcu": "—",
-      "adet": 2
+      "adet": 2,
+      "kategori": "diger"
     }
-  ]
+  ],
+  "kategoriTags": [
+    "tezgah",
+    "diger",
+    "pisirme"
+  ],
+  "_mappingApplied": {
+    "source": "public/data/pfos-ekipman-mapping.json",
+    "generated_at": "2026-06-11T10:16:08.581Z",
+    "file": "tavukcu-80-150.json",
+    "counts": {
+      "mapped": 22,
+      "unmapped": 6
+    }
+  }
 }

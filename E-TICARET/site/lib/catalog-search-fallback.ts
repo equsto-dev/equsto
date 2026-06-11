@@ -22,6 +22,10 @@ export type CatalogSearchHit = {
   dept: string;
   model: string;
   sku: string;
+  equsto_kod?: string;
+  marka_kodu?: string;
+  marka_urun_kodu?: string;
+  kategori_yolu?: string[];
   price: string;
   liste_fiyati_eur: number | null;
   satis_eur_indirimli: number | null;
@@ -40,6 +44,7 @@ type CatalogLookupMaps = {
   byMeiliId: Map<string, CatalogRow>;
   byCatalogSlug: Map<string, CatalogRow>;
   byLegacySlug: Map<string, CatalogRow>;
+  byEqustoKod: Map<string, CatalogRow>;
 };
 
 let lookupMaps: CatalogLookupMaps | null = null;
@@ -83,6 +88,12 @@ export function rowToHitFromRow(row: CatalogRow): CatalogSearchHit | null {
     dept,
     model: String(row.model || row.sku || "").trim(),
     sku: String(row.sku || "").trim(),
+    equsto_kod: String(row.equsto_kod || "").trim() || undefined,
+    marka_kodu: String(row.marka_kodu || "").trim() || undefined,
+    marka_urun_kodu: String(row.marka_urun_kodu || "").trim() || undefined,
+    kategori_yolu: Array.isArray(row.kategori_yolu)
+      ? (row.kategori_yolu as string[])
+      : undefined,
     price: String(row.price || "").split("\n")[0].slice(0, 120),
     liste_fiyati_eur: Number(row.liste_fiyati_eur) || null,
     satis_eur_indirimli:
@@ -120,6 +131,7 @@ export async function getCatalogLookupMaps(): Promise<CatalogLookupMaps> {
   const byMeiliId = new Map<string, CatalogRow>();
   const byCatalogSlug = new Map<string, CatalogRow>();
   const byLegacySlug = new Map<string, CatalogRow>();
+  const byEqustoKod = new Map<string, CatalogRow>();
 
   for (const row of rows) {
     const dept = String(row.dept || "").trim();
@@ -134,10 +146,30 @@ export async function getCatalogLookupMaps(): Promise<CatalogLookupMaps> {
     if (cid) byCatalogSlug.set(cid, row);
     const legacy = legacyMeiliPathSlug(row);
     if (legacy) byLegacySlug.set(legacy, row);
+    const eq = String(row.equsto_kod || "")
+      .trim()
+      .toUpperCase();
+    if (eq) byEqustoKod.set(eq, row);
   }
 
-  lookupMaps = { rows, byMeiliId, byCatalogSlug, byLegacySlug };
+  lookupMaps = { rows, byMeiliId, byCatalogSlug, byLegacySlug, byEqustoKod };
   return lookupMaps;
+}
+
+/** Master tablo EQ- kodu ile doğrudan katalog satırı */
+export async function lookupCatalogByEqustoKod(
+  equstoKod: string,
+): Promise<CatalogSearchHit | null> {
+  const kod = String(equstoKod || "").trim().toUpperCase();
+  if (!kod.startsWith("EQ-")) return null;
+  const maps = await getCatalogLookupMaps();
+  const row = maps.byEqustoKod.get(kod);
+  if (row) return rowToHitFromRow(row);
+
+  const { lookupMasterByEqustoKod } = await import(
+    "@/lib/catalog/master-catalog"
+  );
+  return lookupMasterByEqustoKod(kod);
 }
 
 function rowHaystack(row: CatalogRow) {
@@ -153,6 +185,10 @@ function rowHaystack(row: CatalogRow) {
       deptSearchHints(dept, category, name),
       row.sku,
       row.model,
+      row.equsto_kod,
+      row.marka_kodu,
+      row.marka_urun_kodu,
+      Array.isArray(row.kategori_yolu) ? row.kategori_yolu.join(" ") : "",
     ].join(" "),
   );
 }

@@ -1,0 +1,21 @@
+{
+  "sourceFile": "C:\\D Disk\\EQUSTO-WORK\\PFOS\\ÜRÜN KATEGORİZASYONU-DOLU.xlsx",
+  "generated_at": "2026-06-11T10:02:35.033Z",
+  "mapping": {
+    "Pişirme": "pisirme",
+    "Soğutma": "sogutma",
+    "Tezgah": "tezgah",
+    "İstif & Depolama": "istif-depolama",
+    "Dolap": "dolap",
+    "Davlumbaz": "davlumbaz",
+    "Yıkama": "yikama",
+    "İçecek": "icecek",
+    "Kahve": "kahve",
+    "Hazırlık": "hazirlik",
+    "Servis Arabaları": "servis-arabalari",
+    "Taşıma": "tasima",
+    "Servis": "servis",
+    "Market Reyon": "market-reyon",
+    "Set Üstü Mutfak": "set-ustu-mutfak"
+  }
+}

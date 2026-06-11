@@ -99,7 +99,7 @@ export const KONSEPT_LABELS: Record<Konsept, string> = {
 export type FiyatStratejisi = "ekonomik" | "orta" | "premium";
 
 export const PFOSRequestSchema = z.object({
-  konsept: KonseptEnum,
+  konsept: z.string().min(1),
   m2: z.number().min(30).max(10000),
   sehir: z.string().default("istanbul"),
   lokasyon: z.enum(["cadde", "avm"]).optional(),

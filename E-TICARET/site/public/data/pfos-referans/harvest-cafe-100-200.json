@@ -15,7 +15,8 @@
       "poz": "A1",
       "ad": "İSTİF RAFI, DEMONTE, 4 KATLI",
       "olcu": "122*53*160",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "A",
@@ -23,7 +24,8 @@
       "poz": "A2",
       "ad": "ÇALIŞMA TEZGAHI, TEK ÇEKMECELİ, TABAN RAFLI",
       "olcu": "120*70*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "A",
@@ -31,7 +33,8 @@
       "poz": "A3",
       "ad": "DUVAR RAFI",
       "olcu": "135*30*4",
-      "adet": 2
+      "adet": 2,
+      "kategori": "diger"
     },
     {
       "bolum": "B",
@@ -39,7 +42,8 @@
       "poz": "B1",
       "ad": "PANEL TİP SOĞUK ODA",
       "olcu": "180*340*240",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "B",
@@ -47,7 +51,8 @@
       "poz": "B2",
       "ad": "İSTİF RAFI, DEMONTE, 4 KATLI",
       "olcu": "107*53*160",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "B",
@@ -55,7 +60,8 @@
       "poz": "B3",
       "ad": "İSTİF RAFI, DEMONTE, 4 KATLI",
       "olcu": "122*53*160",
-      "adet": 2
+      "adet": 2,
+      "kategori": "diger"
     },
     {
       "bolum": "C",
@@ -63,7 +69,8 @@
       "poz": "C1",
       "ad": "PANEL TİP DERİN DONDURUCU ODA",
       "olcu": "170*340*240",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "C",
@@ -71,7 +78,8 @@
       "poz": "C2",
       "ad": "İSTİF RAFI, DEMONTE, 4 KATLI",
       "olcu": "107*53*160",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "C",
@@ -79,7 +87,8 @@
       "poz": "C3",
       "ad": "İSTİF RAFI, DEMONTE, 4 KATLI",
       "olcu": "137*53*160",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "C",
@@ -87,7 +96,8 @@
       "poz": "C4",
       "ad": "İSTİF RAFI, DEMONTE, 4 KATLI",
       "olcu": "183*53*160",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "D",
@@ -95,7 +105,8 @@
       "poz": "D2",
       "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, BLOK ÇEKMECELİ",
       "olcu": "140*50*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "D",
@@ -103,7 +114,8 @@
       "poz": "D3",
       "ad": "FIRIN TEZGAHI",
       "olcu": "95*90*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "D",
@@ -111,7 +123,8 @@
       "poz": "D4",
       "ad": "FERMANTASYON DOLABI",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "D",
@@ -119,7 +132,8 @@
       "poz": "D5",
       "ad": "FIRIN",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "D",
@@ -127,7 +141,8 @@
       "poz": "D6",
       "ad": "FIRIN DAVLUMBAZI",
       "olcu": "95*100*20",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "D",
@@ -135,7 +150,8 @@
       "poz": "D7",
       "ad": "MAKE-UP DOLABI, 2 KAPILI",
       "olcu": "135*70*85/105",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "D",
@@ -143,7 +159,8 @@
       "poz": "D8",
       "ad": "DUVAR DOLABI",
       "olcu": "135*40*60",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "D",
@@ -151,7 +168,8 @@
       "poz": "D9",
       "ad": "CİHAZLATI ÇALIŞMA TEZGAHI, TABAN RAFLI",
       "olcu": "180*70*60",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "D",
@@ -159,7 +177,8 @@
       "poz": "D10",
       "ad": "FRİTÖZ, TEK SEPETLİ, ELK., SETÜSTÜ",
       "olcu": "40*60*30",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "D",
@@ -167,7 +186,8 @@
       "poz": "D11",
       "ad": "4 GÖZLÜ OCAK, ELK., SETÜSTÜ",
       "olcu": "60*60*30",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "D",
@@ -175,7 +195,8 @@
       "poz": "D12",
       "ad": "IZGARA, ELK., SETÜSTÜ",
       "olcu": "40*60*30",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "D",
@@ -183,7 +204,8 @@
       "poz": "D13",
       "ad": "MAKARNA PİŞİRİCİ, ELK., SETÜSTÜ",
       "olcu": "40*60*30",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "D",
@@ -191,7 +213,8 @@
       "poz": "D14",
       "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
       "olcu": "180*97*50",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "D",
@@ -199,7 +222,8 @@
       "poz": "D15",
       "ad": "TAVA RAFI",
       "olcu": "180*35*30",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "D",
@@ -207,7 +231,8 @@
       "poz": "D16",
       "ad": "DEPO TİPİ BUZDOLABI, TEK KAPILI",
       "olcu": "70*70*205",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "D",
@@ -215,7 +240,8 @@
       "poz": "D17",
       "ad": "TOST MAKİNASI",
       "olcu": "2745",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pisirme"
     },
     {
       "bolum": "E",
@@ -223,7 +249,8 @@
       "poz": "E1",
       "ad": "ÇİFT EVYELİ ÇALIŞMA TEZGAHI",
       "olcu": "190*70*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "E",
@@ -231,7 +258,8 @@
       "poz": "E2",
       "ad": "DUVAR RAFI",
       "olcu": "190*30*4",
-      "adet": 2
+      "adet": 2,
+      "kategori": "diger"
     },
     {
       "bolum": "E",
@@ -239,7 +267,8 @@
       "poz": "E3",
       "ad": "BULAŞIK YIKAMA MAKİNASI, SETALTI (TECH-500)",
       "olcu": "500 tb/saat",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "F",
@@ -247,7 +276,8 @@
       "poz": "F1",
       "ad": "KASA TEZGAHI, MOBİLYA",
       "olcu": "150*70*90",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "F",
@@ -255,7 +285,8 @@
       "poz": "F2",
       "ad": "ESPRESSO KAHVE MAKİNASI",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "kahve"
     },
     {
       "bolum": "F",
@@ -263,7 +294,8 @@
       "poz": "F3",
       "ad": "BAR BLENDER",
       "olcu": "VITAMIX",
-      "adet": 1
+      "adet": 1,
+      "kategori": "bar-blender"
     },
     {
       "bolum": "F",
@@ -271,7 +303,8 @@
       "poz": "F4",
       "ad": "NÖTR TEŞHİR DOLABI, ALT DEPO SOĞUTMALI, GRANİT DAHİL, MOBİLYA HARİÇTİR",
       "olcu": "110*70*125",
-      "adet": 1
+      "adet": 1,
+      "kategori": "sogutma"
     },
     {
       "bolum": "F",
@@ -279,7 +312,8 @@
       "poz": "F5",
       "ad": "SOĞUK TEŞHİR DOLABI, DEPOSUZ, MOTORU BÜNYESİNDE, GRANİT DAHİL, MOBİLYA HARİÇTİR",
       "olcu": "270*70*125",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "F",
@@ -287,7 +321,8 @@
       "poz": "F6",
       "ad": "ÇALIŞMA TEZGAHI, DOLAPLI",
       "olcu": "200*60*90",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "F",
@@ -295,7 +330,8 @@
       "poz": "F7",
       "ad": "BUZ MAKİNASI",
       "olcu": "30 kg/gün",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "F",
@@ -303,7 +339,8 @@
       "poz": "F8",
       "ad": "ÇAY OTOMATI",
       "olcu": "23 lt.",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "F",
@@ -311,7 +348,8 @@
       "poz": "F9",
       "ad": "KOLLU PORTAKAL SIKMA",
       "olcu": "CANCAN",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "F",
@@ -319,7 +357,8 @@
       "poz": "F11",
       "ad": "ŞİŞE SOĞUTUCU, TEK KAPILI, SETALTI",
       "olcu": "60*50*90",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "F",
@@ -327,7 +366,8 @@
       "poz": "F12",
       "ad": "TÜRK KAHVE MAKİNASI",
       "olcu": "ARÇELİK",
-      "adet": 1
+      "adet": 1,
+      "kategori": "kahve"
     },
     {
       "bolum": "F",
@@ -335,7 +375,8 @@
       "poz": "F13",
       "ad": "FİLTRE KAHVE MAKİNASI",
       "olcu": "BUNN",
-      "adet": 1
+      "adet": 1,
+      "kategori": "kahve"
     },
     {
       "bolum": "Y",
@@ -343,7 +384,8 @@
       "poz": "Y1",
       "ad": "YER IZGARASI",
       "olcu": "30*30*14",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "Y",
@@ -351,7 +393,8 @@
       "poz": "Y2",
       "ad": "YER IZGARASI",
       "olcu": "120*30*14",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "Z",
@@ -359,7 +402,25 @@
       "poz": "Z1",
       "ad": "YOĞUŞMALI HAVALANDIRMA SİSTEMİ; ELEKTROSTATİK FİLTRELİ, KOKU TUTUCU, DUMAN TUTUCU, İNVEKTÖR, DIŞARI TAHLİYE BACALI",
       "olcu": "240*80*80",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     }
-  ]
+  ],
+  "kategoriTags": [
+    "diger",
+    "tezgah",
+    "pisirme",
+    "kahve",
+    "bar-blender",
+    "sogutma"
+  ],
+  "_mappingApplied": {
+    "source": "public/data/pfos-ekipman-mapping.json",
+    "generated_at": "2026-06-11T10:16:08.443Z",
+    "file": "harvest-cafe-100-200.json",
+    "counts": {
+      "mapped": 24,
+      "unmapped": 20
+    }
+  }
 }
