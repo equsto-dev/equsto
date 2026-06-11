@@ -1,0 +1,15 @@
+# Caddy — equsto.com reverse proxy (otomatik HTTPS)
+# Ortam: ACME_EMAIL=admin@equsto.com  (docker-compose .env veya sunucu env)
+
+{
+	email {$ACME_EMAIL:admin@equsto.com}
+}
+
+equsto.com {
+	encode gzip zstd
+	reverse_proxy app:3000
+}
+
+www.equsto.com {
+	redir https://equsto.com{uri} permanent
+}

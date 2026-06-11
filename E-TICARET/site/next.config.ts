@@ -124,6 +124,8 @@ function cdnAssetFallbackRewrites(base: string) {
 const cdnBase = assetCdnBaseForRewrites();
 
 const nextConfig: NextConfig = {
+  /** Docker/Hetzner — .next/standalone; Vercel kendi paketlemesini kullanır */
+  output: "standalone",
   /** Monorepo (git kok = path0); Vercel paketleme icin */
   outputFileTracingRoot: tracingRoot,
   serverExternalPackages: [

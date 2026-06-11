@@ -1,0 +1,31 @@
+# Docker build context — E-TICARET/site
+node_modules
+.next
+.git
+.gitignore
+*.md
+!docs/s3-upload-manifest.json
+
+.env
+.env.*
+!.env.example
+
+# Yerel / yedek veri
+public/data/**/*.backup*
+public/data/**/backup-*/
+**/*.backup-*.json
+scripts/__pycache__
+scripts/out
+scripts/data/trial
+scripts/tmp-*
+scripts/audit.json
+
+# Büyük medya — canlıda CloudFront (NEXT_PUBLIC_ASSET_CDN_URL)
+public/images
+public/assets
+
+# Geliştirme
+coverage
+.turbo
+*.log
+npm-debug.log*

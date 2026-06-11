@@ -53,4 +53,8 @@ dist/
 .env*.local
 node_modules
 
-.vercel
+# Ortam dosyaları (örnek şablonlar commit edilir)
+.env
+.env.production
+!.env.production.example
+!.env.example

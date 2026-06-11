@@ -1,5 +1,7 @@
 # Canlıya alma (equsto.com)
 
+**Hetzner / Docker:** bkz. [`HETZNER-DEPLOY.md`](HETZNER-DEPLOY.md) (Vercel yerine self-hosted).
+
 ## Tek kod klasörü (önemli)
 
 | Ne | Yol |
