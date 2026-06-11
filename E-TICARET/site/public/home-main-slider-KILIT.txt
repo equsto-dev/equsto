@@ -18,7 +18,7 @@ AYRI bileşendir (HomeMainSlider). Değiştirmeden önce AÇIK ONAY alın.
 ── Kilitli slayt görselleri ───────────────────────────────────────────────
   PFOS (sketch, eq-mx-hero__slide--pfos eq-mx-hero__slide--sketch-only):
     /images/pfos/proje-fabrikasi-bar-plan-eskiz.png (1024×331)
-    Sol alt: Projeni/ listeni gönder fiyatlandıralım. (12pt) — tıklanınca pfos.html
+    Sol alt: Projeni/ listeni gönder fiyatlandıralım. (12pt) — tıklanınca /pfos?mode=liste
   IMT300 (hero-img, eq-mx-hero__slide--imt300):
     /images/imt300/imt300-2.png (3381×3007, siyah zemin · lighten · mavi zemin)
   Electrolux XP (hero-img, eq-mx-hero__slide--electrolux-xp):
