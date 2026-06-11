@@ -39,12 +39,14 @@ services:
       - meili
     environment:
       MEILI_ENV: production
-      MEILI_MASTER_KEY: ${MEILISEARCH_MASTER_KEY:-local-meili-dev-key}
+      MEILI_MASTER_KEY: ${MEILISEARCH_MASTER_KEY:-equsto-prod-meili-key}
       MEILI_NO_ANALYTICS: "true"
     volumes:
       - meili_data:/meili_data
     networks:
       - web
+    ports:
+      - "127.0.0.1:7700:7700"
     expose:
       - "7700"
 

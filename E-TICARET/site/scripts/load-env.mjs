@@ -8,13 +8,21 @@ export const envRoot = path.join(path.dirname(fileURLToPath(import.meta.url)), "
 /** Hangi dosya yüklendi (tanılama) */
 export let envLoadedFrom = "";
 
-for (const name of [".env.local", ".env"]) {
+const preferProduction =
+  process.env.EQUSTO_ENV_FILE === ".env.production" ||
+  process.env.NODE_ENV === "production";
+
+const chain = preferProduction
+  ? [".env.production", ".env.local", ".env"]
+  : [".env.local", ".env.production", ".env"];
+
+for (const name of chain) {
   const file = path.join(envRoot, name);
   if (!fs.existsSync(file)) continue;
-  envLoadedFrom = file;
+  if (!envLoadedFrom) envLoadedFrom = file;
   for (const line of fs.readFileSync(file, "utf8").replace(/^\uFEFF/, "").split(/\r?\n/)) {
     const t = line.trim();
-    if (!t || t.startsWith("#")) continue;
+    if (!t || t.startsWith("#") || t.startsWith("$")) continue;
     const i = t.indexOf("=");
     if (i < 1) continue;
     const key = t.slice(0, i).trim();
@@ -25,7 +33,6 @@ for (const name of [".env.local", ".env"]) {
     ) {
       val = val.slice(1, -1);
     }
-    process.env[key] = val;
+    if (val !== "") process.env[key] = val;
   }
-  break;
 }
