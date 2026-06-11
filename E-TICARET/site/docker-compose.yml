@@ -22,7 +22,7 @@ services:
     image: equsto-app:latest
     restart: unless-stopped
     env_file:
-      - .env
+      - .env.production
     environment:
       NODE_ENV: production
       PORT: "3000"
@@ -39,7 +39,7 @@ services:
       - meili
     environment:
       MEILI_ENV: production
-      MEILI_MASTER_KEY: ${MEILISEARCH_MASTER_KEY:?MEILISEARCH_MASTER_KEY required for local Meili}
+      MEILI_MASTER_KEY: ${MEILISEARCH_MASTER_KEY:-local-meili-dev-key}
       MEILI_NO_ANALYTICS: "true"
     volumes:
       - meili_data:/meili_data

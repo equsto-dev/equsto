@@ -6,7 +6,8 @@ FROM node:20-bookworm-slim AS deps
 WORKDIR /app
 COPY package.json package-lock.json ./
 ENV PRISMA_SKIP_POSTINSTALL_GENERATE=true
-RUN npm ci
+# postinstall scripts/ gerektirir — deps aşamasında yalnızca package*.json var
+RUN npm ci --ignore-scripts
 
 FROM node:20-bookworm-slim AS builder
 WORKDIR /app
