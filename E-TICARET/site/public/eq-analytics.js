@@ -31,7 +31,10 @@
   }
 
   if (ga4) window.gtag("config", ga4, { send_page_view: true });
-  if (ads) window.gtag("config", ads);
+  if (ads) {
+    window.gtag("config", ads);
+    if (!ga4) window.gtag("event", "page_view");
+  }
 
   window.equstoTrackEvent = function (name, params) {
     if (typeof window.gtag !== "function") return;
