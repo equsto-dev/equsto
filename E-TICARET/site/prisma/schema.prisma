@@ -1,7 +1,9 @@
 generator client {
-  provider   = "prisma-client-js"
+  provider      = "prisma-client-js"
   /// DLL’i node_modules\.prisma\client altına kopyalamaz (Windows EPERM)
-  engineType = "library"
+  engineType    = "library"
+  /// Docker/Hetzner (node:20-bookworm) + yerel Windows
+  binaryTargets = ["native", "debian-openssl-3.0.x"]
 }
 
 datasource db {
