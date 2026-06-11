@@ -48,6 +48,8 @@ model Brand {
   id          String     @id @default(cuid())
   slug        String     @unique
   name        String
+  /// Marka kodu (ör. PIMAK, OZTI) — üretici stok kodunun ön eki
+  kod         String?    @unique
   description String?    @db.Text
   logoUrl     String?
   websiteUrl  String?
@@ -60,6 +62,7 @@ model Brand {
   products Product[]
 }
 
+/// Ürün kategori ağacı: depth 0 = ürün kategori, 1–4+ = alt kategori katmanları
 model Category {
   id          String  @id @default(cuid())
   slug        String  @unique
@@ -69,12 +72,16 @@ model Category {
   parentId String?
   parent   Category?  @relation("CategoryHierarchy", fields: [parentId], references: [id], onDelete: SetNull)
   children Category[] @relation("CategoryHierarchy")
+  /// 0 = ürün kategori, 1 = alt kategori 1, 2 = alt kategori 2, …
+  depth     Int      @default(0)
 
   order     Int      @default(0)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
   products Product[]
+
+  @@index([parentId, depth])
 }
 
 /// Tek katalog — storefront + PFOS aynı satış fiyatını (priceListTl) kullanır
@@ -85,23 +92,37 @@ model Product {
   sku       String? @unique
   model     String?
 
+  /// Equsto ürün kodu: EQ-{Brand.kod}.{urunKodu} (ör. EQ-PIMAK.19070.04)
+  equstoKod String? @unique
+  /// Üretici ürün kodu — marka öneki olmadan (ör. 19070.04)
+  urunKodu  String?
+
   brandId    String
   brand      Brand    @relation(fields: [brandId], references: [id])
   categoryId String
   category   Category @relation(fields: [categoryId], references: [id])
 
   name            String
+  /// Açıklama (kısa)
   description     String? @db.Text
+  /// Detay (uzun açıklama / teknik metin)
   detayliAciklama String? @db.Text
   specs           Json    @default("{}")
 
   ebat           String?
+  genislikMm     Int?
+  derinlikMm     Int?
+  yukseklikMm    Int?
   elektrikGucuKw Decimal? @db.Decimal(8, 2)
   gazGucuKw      Decimal? @db.Decimal(8, 2)
 
   /// Kanonik satış fiyatı (TRY) — PFOS teklif + e-ticaret
   priceListTl   Decimal? @db.Decimal(12, 2)
   priceCurrency String   @default("TRY")
+  /// Liste fiyatı KDV hariç, döviz cinsinden (kaynak fiyat)
+  fiyatKdvHaricDoviz Decimal? @db.Decimal(12, 2)
+  dovizFiyat         Doviz?   @default(EUR)
+  kdvOran            Decimal? @db.Decimal(5, 2) @default(20)
   /// Kaynak liste (genelde EUR) + iskonto → priceListTl (TCMB cron / import)
   fiyatListe    Decimal? @db.Decimal(12, 2)
   dovizListe    Doviz?   @default(EUR)
@@ -125,6 +146,7 @@ model Product {
   updatedAt DateTime @updatedAt
 
   @@unique([brandId, modelCode])
+  @@unique([brandId, urunKodu])
   @@index([categoryId])
   @@index([status])
   @@index([pfosKategoriKodu])

@@ -1,0 +1,143 @@
+{
+  "generated": "2026-06-11T00:03:56.542Z",
+  "summary": {
+    "toplam": 10,
+    "kariyerdeBulunan": 2,
+    "equstoUcuz": 2,
+    "kariyerUcuz": 0,
+    "esit": 0,
+    "bulunamadi": 8
+  },
+  "results": [
+    {
+      "sku": "7911.12060.56",
+      "urun": "ÇAL.TEZG.DOLAPLI ARA RAFLI GR.ÇEKM.120*60",
+      "equstoKdvDahil": 58320,
+      "equstoKdvHaric": 48600,
+      "kariyerKdvHaric": null,
+      "kariyerKdvDahil": null,
+      "kariyerUrl": null,
+      "kariyerBaslik": null,
+      "farkDahilTry": null,
+      "farkPctDahil": null,
+      "durum": "kariyerde_yok"
+    },
+    {
+      "sku": "8356.60304.00",
+      "urun": "POLIETILEN LEVHA 60*30*4",
+      "equstoKdvDahil": 1310,
+      "equstoKdvHaric": 1091.67,
+      "kariyerKdvHaric": null,
+      "kariyerKdvDahil": null,
+      "kariyerUrl": null,
+      "kariyerBaslik": null,
+      "farkDahilTry": null,
+      "farkPctDahil": null,
+      "durum": "kariyerde_yok"
+    },
+    {
+      "sku": "7856.N1.40908.04",
+      "urun": "900 SERİ FRİTÖZ DOLAPLI GAZLI 40*90*85",
+      "equstoKdvDahil": 71171,
+      "equstoKdvHaric": 59309.17,
+      "kariyerKdvHaric": 63096.59,
+      "kariyerKdvDahil": 75715.91,
+      "kariyerUrl": "https://www.kariyermutfak.com/oztiryakiler-gazli-dolapli-fritoz-40x90x85-900-seri-4128",
+      "kariyerBaslik": "Öztiryakiler Gazlı Dolaplı Fritöz 40x90x85 900 Seri 7856.N1.40908.04",
+      "farkDahilTry": -4544.91,
+      "farkPctDahil": -6,
+      "durum": "equsto_ucuz"
+    },
+    {
+      "sku": "7864.N1.80903.17",
+      "urun": "900 SERİ SET ÜSTÜ GRİLL PLATE DÜZ ELEKTRİKLİ  80*90*30",
+      "equstoKdvDahil": 64121,
+      "equstoKdvHaric": 53434.17,
+      "kariyerKdvHaric": 56846.69,
+      "kariyerKdvDahil": 68216.03,
+      "kariyerUrl": "https://www.kariyermutfak.com/oztiryakiler-set-ustu-duz-pleyt-izgara-elektrikli-80x90x30-900-seri-4118",
+      "kariyerBaslik": "Öztiryakiler Set Üstü Düz Pleyt Izgara Elektrikli 80x90x30 900 Seri 7864.N1.80903.17",
+      "farkDahilTry": -4095.03,
+      "farkPctDahil": -6,
+      "durum": "equsto_ucuz"
+    },
+    {
+      "sku": "RC.28170",
+      "urun": "ROBOT COUPE CL 55 İÇİN OTOMATİK KAFA",
+      "equstoKdvDahil": 83824.61,
+      "equstoKdvHaric": 69853.84,
+      "kariyerKdvHaric": null,
+      "kariyerKdvDahil": null,
+      "kariyerUrl": null,
+      "kariyerBaslik": null,
+      "farkDahilTry": null,
+      "farkPctDahil": null,
+      "durum": "kariyerde_yok"
+    },
+    {
+      "sku": "9840.CL55D.00",
+      "urun": "ROBOT COUPE SEBZE DOGRAMA MAKINESI CL55 BICAKSIZ İTME KAFALI",
+      "equstoKdvDahil": 300443,
+      "equstoKdvHaric": 250369.17,
+      "kariyerKdvHaric": null,
+      "kariyerKdvDahil": null,
+      "kariyerUrl": null,
+      "kariyerBaslik": null,
+      "farkDahilTry": null,
+      "farkPctDahil": null,
+      "durum": "kariyerde_yok"
+    },
+    {
+      "sku": "8820.UHM15.TR",
+      "urun": "HAMUR YOGURMA MAKINASI 15 KG UN KAPASITE 380 V",
+      "equstoKdvDahil": 58776,
+      "equstoKdvHaric": 48980,
+      "kariyerKdvHaric": null,
+      "kariyerKdvDahil": null,
+      "kariyerUrl": null,
+      "kariyerBaslik": null,
+      "farkDahilTry": null,
+      "farkPctDahil": null,
+      "durum": "kariyerde_yok"
+    },
+    {
+      "sku": "7960.20629.7O1",
+      "urun": "YER IZGARASI TAVALI ORTADAN SIFONLU –ALTAN CIKISLI Q70 PVC 2060*290",
+      "equstoKdvDahil": 17192,
+      "equstoKdvHaric": 14326.67,
+      "kariyerKdvHaric": null,
+      "kariyerKdvDahil": null,
+      "kariyerUrl": null,
+      "kariyerBaslik": null,
+      "farkDahilTry": null,
+      "farkPctDahil": null,
+      "durum": "kariyerde_yok"
+    },
+    {
+      "sku": "7960.11829.7O1",
+      "urun": "YER IZGARASI TAVALI ORTADAN SIFONLU –ALTAN CIKISLI Q70 PVC 1180*290",
+      "equstoKdvDahil": 11141,
+      "equstoKdvHaric": 9284.17,
+      "kariyerKdvHaric": null,
+      "kariyerKdvDahil": null,
+      "kariyerUrl": null,
+      "kariyerBaslik": null,
+      "farkDahilTry": null,
+      "farkPctDahil": null,
+      "durum": "kariyerde_yok"
+    },
+    {
+      "sku": "7961.20629.5O3",
+      "urun": "YER IZGARASI TAVALI ORTADAN SIFONLU -ONDEN CIKISLI Q50 PIK 2060*290",
+      "equstoKdvDahil": 17192,
+      "equstoKdvHaric": 14326.67,
+      "kariyerKdvHaric": null,
+      "kariyerKdvDahil": null,
+      "kariyerUrl": null,
+      "kariyerBaslik": null,
+      "farkDahilTry": null,
+      "farkPctDahil": null,
+      "durum": "kariyerde_yok"
+    }
+  ]
+}

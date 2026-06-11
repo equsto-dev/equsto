@@ -89,35 +89,30 @@ export const TEMPLATES: Record<
   meyhane,
 };
 
-export function getTemplate(konsept: Konsept): ConceptTemplate {
-  if (DYNAMIC_KONSEPT.has(konsept)) {
+export function getTemplate(konsept: string): ConceptTemplate {
+  if (DYNAMIC_KONSEPT.has(konsept as Konsept)) {
     throw new Error(
       `${konsept} şablonu referans listesi ile yüklenir — resolveTemplateForQuote kullanın`,
     );
   }
-  const t = TEMPLATES[
-    konsept as Exclude<
-      Konsept,
-      "steakhouse" | "balikci" | "coffee-shop" | "italyan" | "birahane" | "pastane" | "pizzaci" | "pideci" | "sushi" | "sarkuteri-kiosk" | "hamburger-kiosk" | "hotdog-kiosk" | "tavukcu" | "all-day-dining-cafe" | "restoran" | "kokteyl-kahve" | "kahve-atolyesi" | "harvest-cafe" | "all-sport-cafe" | "casual-cafe" | "buyuk-yemekhane" | "guneli-pastane" | "sehir-otel" | "kiremit-akasya" | "mus-selinoz-turk" | "kasap" | "kasap-sarkuteri" | "inari-bar-yemek" | "kahve-duragi" | "kahve-tatli" | "kahve-duragi-pastane" | "resort-otel" | "turk-restoran"
-    >
-  ];
+  const parsed = KonseptEnum.safeParse(konsept);
+  if (!parsed.success) {
+    throw new Error(`Bilinmeyen konsept: ${konsept}`);
+  }
+  const t = TEMPLATES[parsed.data];
   if (!t) throw new Error(`Bilinmeyen konsept: ${konsept}`);
   return t;
 }
 
 /** Teklif API — referans JSON ile yüklenen konseptler */
 export async function resolveTemplateForQuote(
-  konsept: Konsept,
+  konsept: string,
   m2: number,
   altTip?: string | null,
   referansId?: string | null,
   shopType?: ShopTypeKayit | null,
 ): Promise<ConceptTemplate> {
-  if (
-    shopType &&
-    shopType.pfos.teklifKaynagi !== "planlanan" &&
-    shopType.pfos.bantlar.length > 0
-  ) {
+  if (shopType && shopType.pfos.bantlar.length > 0) {
     const fromShop = await buildTemplateFromShopType(shopType, m2, altTip);
     if (fromShop) return fromShop;
   }

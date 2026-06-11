@@ -129,6 +129,11 @@ import {
   referansKatalogCeliski,
   tipShopLinkUygun,
 } from "./referans-nitelikleri";
+import {
+  extractEqustoKodFromText,
+  matchEslesmisByEqustoGuess,
+  matchEslesmisByEqustoKod,
+} from "@/lib/catalog/equsto-kod-lookup";
 
 export type ReferansMatchInput = {
   isim: string;
@@ -862,6 +867,23 @@ async function fallbackOzelImalat(input: ReferansMatchInput): Promise<EslesmisUr
   });
 }
 
+/** Ana besleyici master tablo — EQ- kodu önceliği */
+async function matchByMasterEqustoKod(
+  input: ReferansMatchInput,
+): Promise<EslesmisUrun | null> {
+  const fromText =
+    extractEqustoKodFromText(input.isim) ||
+    extractEqustoKodFromText(input.notlar ?? "");
+  if (fromText) {
+    const direct = await matchEslesmisByEqustoKod(fromText);
+    if (direct) return direct;
+  }
+  return matchEslesmisByEqustoGuess({
+    tanim: input.isim,
+    marka_urun_kodu: input.sku ?? undefined,
+  });
+}
+
 /** İsim + ölçü ile sıkı katalog araması (özel imalat / zone fallback için) */
 export async function matchCatalogByIsimOlcu(
   isim: string,
@@ -869,6 +891,11 @@ export async function matchCatalogByIsimOlcu(
   urunTipi = "",
   fiyatStratejisi: FiyatStratejisi = "ekonomik",
 ): Promise<EslesmisUrun | null> {
+  const byEq = await matchEslesmisByEqustoGuess({
+    tanim: [isim, notlar].filter(Boolean).join(" "),
+  });
+  if (byEq) return byEq;
+
   const olcu =
     extractOlcuFromNotlar(notlar) ||
     (notlar?.match(/(\d+\s*[*xX×]\s*\d+)/)?.[1] ?? "");
@@ -893,6 +920,9 @@ export async function matchReferansKalem(
 
   const verified = await matchByVerifiedLink(input);
   if (verified) return verified;
+
+  const byMasterEq = await matchByMasterEqustoKod(input);
+  if (byMasterEq) return byMasterEq;
 
   if (isCalismaTezgahiPfosKalem({ isim: input.isim, urunTipi: input.urunTipi, notlar: input.notlar })) {
     const tezgah = await matchCalismaTezgahiByReferans(

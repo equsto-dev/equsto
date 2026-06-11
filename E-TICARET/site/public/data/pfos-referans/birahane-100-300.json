@@ -14,7 +14,8 @@
       "poz": "A1",
       "ad": "İSTİF RAFI",
       "olcu": "152*46*160",
-      "adet": 2
+      "adet": 2,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -22,7 +23,8 @@
       "poz": "A2",
       "ad": "BLOK KAPAKLI DERİN DONDURUCU",
       "olcu": "400 lt.",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -30,7 +32,8 @@
       "poz": "B1",
       "ad": "PANEL TİP SOĞUK ODA",
       "olcu": "230*275*240",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -38,7 +41,8 @@
       "poz": "B2",
       "ad": "İSTİF RAFI",
       "olcu": "152*46*160",
-      "adet": 2
+      "adet": 2,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -46,7 +50,8 @@
       "poz": "C1",
       "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
       "olcu": "180*70*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "",
@@ -54,7 +59,8 @@
       "poz": "C2",
       "ad": "DUVAR RAFI",
       "olcu": "180*30*3",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -62,7 +68,8 @@
       "poz": "C3",
       "ad": "BARDAK YIKAMA MAKİNASI, SETALTI",
       "olcu": "500 Tb/saat",
-      "adet": 1
+      "adet": 1,
+      "kategori": "bardak-yikama"
     },
     {
       "bolum": "",
@@ -70,7 +77,8 @@
       "poz": "C4",
       "ad": "ÇÖP ARABASI",
       "olcu": "Ø40*50",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -78,7 +86,8 @@
       "poz": "D1",
       "ad": "IZGARA, GAZLI, SETÜSTÜ",
       "olcu": "80*70*30",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -86,7 +95,8 @@
       "poz": "D2",
       "ad": "PATATES DİNLENDİRME, SETÜSTÜ",
       "olcu": "40*70*30",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -94,7 +104,8 @@
       "poz": "D3",
       "ad": "FRİTÖZ, ÇİFT SEPETLİ, ELK., SETÜSTÜ",
       "olcu": "80*70*30",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -102,7 +113,8 @@
       "poz": "D4",
       "ad": "FRİTÖZ, TEK SEPETLİ, ELK., SETÜSTÜ",
       "olcu": "40*70*30",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -110,7 +122,8 @@
       "poz": "D5",
       "ad": "ÇALIŞMA TEZGAHI",
       "olcu": "190*80*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "",
@@ -118,7 +131,8 @@
       "poz": "D6",
       "ad": "SETALTI DERİN DONDURUCU",
       "olcu": "60*60*85",
-      "adet": 3
+      "adet": 3,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -126,7 +140,8 @@
       "poz": "D7",
       "ad": "TOST MAKİNASI",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -134,7 +149,8 @@
       "poz": "D8",
       "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
       "olcu": "240*97*50",
-      "adet": 1
+      "adet": 1,
+      "kategori": "davlumbaz"
     },
     {
       "bolum": "",
@@ -142,7 +158,8 @@
       "poz": "E1",
       "ad": "BAR ARKASI FIÇI TEZGAHI, DOLAPLI",
       "olcu": "230*80*85",
-      "adet": 4
+      "adet": 4,
+      "kategori": "tezgah"
     },
     {
       "bolum": "",
@@ -150,7 +167,8 @@
       "poz": "E2",
       "ad": "KASA TEZGAHI",
       "olcu": "140*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "",
@@ -158,7 +176,8 @@
       "poz": "E3",
       "ad": "CAM KAPILI TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
       "olcu": "188*60*85",
-      "adet": 3
+      "adet": 3,
+      "kategori": "tezgah"
     },
     {
       "bolum": "",
@@ -166,7 +185,8 @@
       "poz": "E4",
       "ad": "PREMIX TEZGAHI, DOLAPLI",
       "olcu": "180*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "",
@@ -174,7 +194,8 @@
       "poz": "E5",
       "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
       "olcu": "180*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "",
@@ -182,7 +203,8 @@
       "poz": "E6",
       "ad": "BUZ MAKİNASI",
       "olcu": "42 kg/gün",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -190,7 +212,8 @@
       "poz": "E7",
       "ad": "BARDAK YIKAMA MAKİNASI",
       "olcu": "60*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "bardak-yikama"
     },
     {
       "bolum": "",
@@ -198,7 +221,8 @@
       "poz": "E8",
       "ad": "SİNEK ÖLDÜRÜCÜ",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -206,7 +230,8 @@
       "poz": "Y1",
       "ad": "YER IZGARASI",
       "olcu": "30*30*14",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -214,7 +239,8 @@
       "poz": "Y2",
       "ad": "YER IZGARASI",
       "olcu": "95*30*14",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -222,7 +248,23 @@
       "poz": "Y3",
       "ad": "YER IZGARASI",
       "olcu": "180*30*14",
-      "adet": 2
+      "adet": 2,
+      "kategori": "diger"
     }
-  ]
+  ],
+  "kategoriTags": [
+    "diger",
+    "tezgah",
+    "bardak-yikama",
+    "davlumbaz"
+  ],
+  "_mappingApplied": {
+    "source": "public/data/pfos-ekipman-mapping.json",
+    "generated_at": "2026-06-11T10:16:08.405Z",
+    "file": "birahane-100-300.json",
+    "counts": {
+      "mapped": 8,
+      "unmapped": 19
+    }
+  }
 }

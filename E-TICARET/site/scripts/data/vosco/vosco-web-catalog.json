@@ -1,6 +1,6 @@
 {
   "source": "https://vosco.com.tr",
-  "scrapedAt": "2026-06-09T00:43:05.172Z",
+  "scrapedAt": "2026-06-09T15:51:39.656Z",
   "productCount": 164,
   "products": [
     {
@@ -28,7 +28,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-bar-alti-sise-sogutucusu-tek-kap-61a-69.jpg"
       ],
       "sitePriceTry": 33452.937,
-      "sitePriceStr": "33452,94"
+      "sitePriceStr": "33452,94",
+      "localImage": "images/87.png"
     },
     {
       "productId": 88,
@@ -58,7 +59,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-bar-alti-sise-sogutucusu-iki-kap--419c-.jpg"
       ],
       "sitePriceTry": 42055.120800000004,
-      "sitePriceStr": "42055,12"
+      "sitePriceStr": "42055,12",
+      "localImage": "images/88.png"
     },
     {
       "productId": 89,
@@ -86,7 +88,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-bar-alti-sise-sogutucusu-uc-kapa--92d6-.jpg"
       ],
       "sitePriceTry": 50816.60429999999,
-      "sitePriceStr": "50816,6"
+      "sitePriceStr": "50816,6",
+      "localImage": "images/89.png"
     },
     {
       "productId": 90,
@@ -116,7 +119,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-dijital-espresso-kahve-degirmeni--4d2f-.jpg"
       ],
       "sitePriceTry": 7467.762599999999,
-      "sitePriceStr": "7467,76"
+      "sitePriceStr": "7467,76",
+      "localImage": "images/90.jpg"
     },
     {
       "productId": 91,
@@ -147,7 +151,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-dozaj-ayarli-kahve-degirmeni-b4e-ea.jpg"
       ],
       "sitePriceTry": 2634.9198241079994,
-      "sitePriceStr": "2634,92"
+      "sitePriceStr": "2634,92",
+      "localImage": "images/91.jpg"
     },
     {
       "productId": 97,
@@ -175,7 +180,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-bar-alti-sise-sogutucusu-tek-kap-5c-4f7.jpg"
       ],
       "sitePriceTry": 39516.41245700401,
-      "sitePriceStr": "39516,41"
+      "sitePriceStr": "39516,41",
+      "localImage": "images/97.jpg"
     },
     {
       "productId": 98,
@@ -202,7 +208,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-bar-alti-sise-sogutucusu-iki-kap-4a40e2.jpg"
       ],
       "sitePriceTry": 45756.181706004005,
-      "sitePriceStr": "45756,18"
+      "sitePriceStr": "45756,18",
+      "localImage": "images/98.jpg"
     },
     {
       "productId": 99,
@@ -229,7 +236,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-bar-alti-sise-sogutucusu-uc-kapa-4eae-a.jpg"
       ],
       "sitePriceTry": 56155.266122004,
-      "sitePriceStr": "56155,27"
+      "sitePriceStr": "56155,27",
+      "localImage": "images/99.jpg"
     },
     {
       "productId": 100,
@@ -257,7 +265,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-home-pro-blender-1600w-2l-gri-1e-793.jpg"
       ],
       "sitePriceTry": 3204.682452108,
-      "sitePriceStr": "3204,68"
+      "sitePriceStr": "3204,68",
+      "localImage": "images/100.jpg"
     },
     {
       "productId": 101,
@@ -285,7 +294,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-home-pro-blender-1600w-2l-kirmiz-4ea-a0.jpg"
       ],
       "sitePriceTry": 3204.682452108,
-      "sitePriceStr": "3204,68"
+      "sitePriceStr": "3204,68",
+      "localImage": "images/101.jpg"
     },
     {
       "productId": 102,
@@ -313,7 +323,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-home-pro-blender-1600w-2l-siyah--101e7.jpg"
       ],
       "sitePriceTry": 3204.682452108,
-      "sitePriceStr": "3204,68"
+      "sitePriceStr": "3204,68",
+      "localImage": "images/102.jpg"
     },
     {
       "productId": 103,
@@ -343,7 +354,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-bar-blender-pro-dijital-2-lt-buz-3-c666.jpg"
       ],
       "sitePriceTry": 6914.594999999999,
-      "sitePriceStr": "6914,6"
+      "sitePriceStr": "6914,6",
+      "localImage": "images/103.jpg"
     },
     {
       "productId": 104,
@@ -370,7 +382,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-bar-blender-pro-dijital-2-lt-buz-7-3af8.jpg"
       ],
       "sitePriceTry": 6914.594999999999,
-      "sitePriceStr": "6914,6"
+      "sitePriceStr": "6914,6",
+      "localImage": "images/104.jpg"
     },
     {
       "productId": 105,
@@ -398,7 +411,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-bar-blender-pro-dijital-2-lt-buz-412f14.jpg"
       ],
       "sitePriceTry": 6914.594999999999,
-      "sitePriceStr": "6914,6"
+      "sitePriceStr": "6914,6",
+      "localImage": "images/105.jpg"
     },
     {
       "productId": 106,
@@ -427,7 +441,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-bar-blender-manuel-2-lt-buz-kiri--8a20-.jpg"
       ],
       "sitePriceTry": 5255.092199999999,
-      "sitePriceStr": "5255,09"
+      "sitePriceStr": "5255,09",
+      "localImage": "images/106.jpg"
     },
     {
       "productId": 107,
@@ -456,7 +471,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-bar-blender-manuel-2-lt-buz-kiri--622e-.jpg"
       ],
       "sitePriceTry": 5255.092199999999,
-      "sitePriceStr": "5255,09"
+      "sitePriceStr": "5255,09",
+      "localImage": "images/107.jpg"
     },
     {
       "productId": 108,
@@ -487,7 +503,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-bar-blender-manuel-2-lt-buz-kiri-b930-4.jpg"
       ],
       "sitePriceTry": 5255.092199999999,
-      "sitePriceStr": "5255,09"
+      "sitePriceStr": "5255,09",
+      "localImage": "images/108.jpg"
     },
     {
       "productId": 109,
@@ -516,7 +533,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-soundproof-bar-blender-pro-kapak-82716-.jpg"
       ],
       "sitePriceTry": 15212.109,
-      "sitePriceStr": "15212,11"
+      "sitePriceStr": "15212,11",
+      "localImage": "images/109.jpg"
     },
     {
       "productId": 110,
@@ -547,7 +565,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-bar-blender-pro-kapakli-2-lt-buz-3364b6.jpg"
       ],
       "sitePriceTry": 15534.788256108,
-      "sitePriceStr": "15534,79"
+      "sitePriceStr": "15534,79",
+      "localImage": "images/110.jpg"
     },
     {
       "productId": 112,
@@ -577,7 +596,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-dijital-bar-blender-pro-xl-4l-8--dbdd-4.jpg"
       ],
       "sitePriceTry": 10510.184399999998,
-      "sitePriceStr": "10510,18"
+      "sitePriceStr": "10510,18",
+      "localImage": "images/112.jpg"
     },
     {
       "productId": 114,
@@ -606,7 +626,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-dijital-bar-blender-pro-xl-4l-8--42cd-2.jpg"
       ],
       "sitePriceTry": 10510.184399999998,
-      "sitePriceStr": "10510,18"
+      "sitePriceStr": "10510,18",
+      "localImage": "images/114.jpg"
     },
     {
       "productId": 121,
@@ -645,7 +666,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-set-ustu-buz-makinesi-12-kg-gri--e98f-.jpg"
       ],
       "sitePriceTry": 11293.840343891998,
-      "sitePriceStr": "11293,84"
+      "sitePriceStr": "11293,84",
+      "localImage": "images/121.jpg"
     },
     {
       "productId": 122,
@@ -687,7 +709,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-set-ustu-buz-makinesi-12-kg-kirm-e5b-4e.jpg"
       ],
       "sitePriceTry": 11293.840343891998,
-      "sitePriceStr": "11293,84"
+      "sitePriceStr": "11293,84",
+      "localImage": "images/122.jpg"
     },
     {
       "productId": 123,
@@ -727,7 +750,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-set-ustu-buz-makinesi-12-kg-siya-9-e6c6.jpg"
       ],
       "sitePriceTry": 11293.840343891998,
-      "sitePriceStr": "11293,84"
+      "sitePriceStr": "11293,84",
+      "localImage": "images/123.jpg"
     },
     {
       "productId": 124,
@@ -764,7 +788,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-eko-set-ustu-buz-makinesi-12-kg--5-2a53.jpg"
       ],
       "sitePriceTry": 9910.921343892,
-      "sitePriceStr": "9910,92"
+      "sitePriceStr": "9910,92",
+      "localImage": "images/124.jpg"
     },
     {
       "productId": 125,
@@ -802,7 +827,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-eko-set-ustu-buz-makinesi-12-kg--a-c376.jpg"
       ],
       "sitePriceTry": 9910.921343892,
-      "sitePriceStr": "9910,92"
+      "sitePriceStr": "9910,92",
+      "localImage": "images/125.jpg"
     },
     {
       "productId": 126,
@@ -841,7 +867,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-eko-set-ustu-buz-makinesi-12-kg--c-49f7.jpg"
       ],
       "sitePriceTry": 9910.921343892,
-      "sitePriceStr": "9910,92"
+      "sitePriceStr": "9910,92",
+      "localImage": "images/126.jpg"
     },
     {
       "productId": 127,
@@ -880,7 +907,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-set-ustu-buz-makinesi-20-kg-18c-49.jpg"
       ],
       "sitePriceTry": 19360.865999999998,
-      "sitePriceStr": "19360,87"
+      "sitePriceStr": "19360,87",
+      "localImage": "images/127.jpg"
     },
     {
       "productId": 128,
@@ -916,7 +944,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-dondurma-makinesi-sert-set-ustu-90a5dc.jpg"
       ],
       "sitePriceTry": 20743.785,
-      "sitePriceStr": "20743,79"
+      "sitePriceStr": "20743,79",
+      "localImage": "images/128.jpg"
     },
     {
       "productId": 130,
@@ -951,7 +980,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-kd-25-dozaj-ayarli-yari-otomatik-65665-.jpg"
       ],
       "sitePriceTry": 13276.022399999998,
-      "sitePriceStr": "13276,02"
+      "sitePriceStr": "13276,02",
+      "localImage": "images/130.jpg"
     },
     {
       "productId": 131,
@@ -987,7 +1017,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-kd-25-dozaj-ayarli-yari-otomatik-0-cac4.jpg"
       ],
       "sitePriceTry": 13276.022399999998,
-      "sitePriceStr": "13276,02"
+      "sitePriceStr": "13276,02",
+      "localImage": "images/131.jpg"
     },
     {
       "productId": 132,
@@ -1020,7 +1051,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-kd-p25-dozaj-ayarli-tam-otomatik-3bc-ba.png"
       ],
       "sitePriceTry": 17424.7794,
-      "sitePriceStr": "17424,78"
+      "sitePriceStr": "17424,78",
+      "localImage": "images/132.png"
     },
     {
       "productId": 133,
@@ -1055,7 +1087,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-kd-p25-dozaj-ayarli-tam-otomatik-8b22aa.png"
       ],
       "sitePriceTry": 17424.7794,
-      "sitePriceStr": "17424,78"
+      "sitePriceStr": "17424,78",
+      "localImage": "images/133.png"
     },
     {
       "productId": 134,
@@ -1090,7 +1123,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-kd-p50-dozaj-ayarli-tam-otomatik-38-4a6.jpg"
       ],
       "sitePriceTry": 32636.8884,
-      "sitePriceStr": "32636,89"
+      "sitePriceStr": "32636,89",
+      "localImage": "images/134.jpg"
     },
     {
       "productId": 135,
@@ -1125,7 +1159,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-kd-p50-dozaj-ayarli-tam-otomatik-3-2437.jpg"
       ],
       "sitePriceTry": 32636.8884,
-      "sitePriceStr": "32636,89"
+      "sitePriceStr": "32636,89",
+      "localImage": "images/135.jpg"
     },
     {
       "productId": 137,
@@ -1154,7 +1189,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-kokteyl-shaker-750ml-8-4c44.jpg"
       ],
       "sitePriceTry": 760.6054499999999,
-      "sitePriceStr": "760,61"
+      "sitePriceStr": "760,61",
+      "localImage": "images/137.jpg"
     },
     {
       "productId": 138,
@@ -1188,7 +1224,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-buz-makinesi-100-kggun-parmak-e-f4fd.jpg"
       ],
       "sitePriceTry": 97910.66519999999,
-      "sitePriceStr": "97910,67"
+      "sitePriceStr": "97910,67",
+      "localImage": "images/138.jpg"
     },
     {
       "productId": 139,
@@ -1222,7 +1259,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-buz-makinesi-100-kggun-kup-2-dba3.jpg"
       ],
       "sitePriceTry": 89889.73499999999,
-      "sitePriceStr": "89889,74"
+      "sitePriceStr": "89889,74",
+      "localImage": "images/139.jpg"
     },
     {
       "productId": 140,
@@ -1256,7 +1294,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-buz-makinesi-100-kg-gurme-00b6-2.jpg"
       ],
       "sitePriceTry": 89889.73499999999,
-      "sitePriceStr": "89889,74"
+      "sitePriceStr": "89889,74",
+      "localImage": "images/140.jpg"
     },
     {
       "productId": 141,
@@ -1290,7 +1329,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-buz-makinesi-120-kggun-kup-526-bc.jpg"
       ],
       "sitePriceTry": 99570.168,
-      "sitePriceStr": "99570,17"
+      "sitePriceStr": "99570,17",
+      "localImage": "images/141.jpg"
     },
     {
       "productId": 142,
@@ -1326,7 +1366,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-buz-makinesi-150-kggun-kup-hazne--670b5.jpg"
       ],
       "sitePriceTry": 179779.46999999997,
-      "sitePriceStr": "179779,47"
+      "sitePriceStr": "179779,47",
+      "localImage": "images/142.jpg"
     },
     {
       "productId": 143,
@@ -1362,7 +1403,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-buz-makinesi-200-kggun-kup-hazne-6c8641.jpg"
       ],
       "sitePriceTry": 193608.65999999997,
-      "sitePriceStr": "193608,66"
+      "sitePriceStr": "193608,66",
+      "localImage": "images/143.jpg"
     },
     {
       "productId": 144,
@@ -1397,7 +1439,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-buz-makinesi-250-kggun-kup-hazne-a51cf5.jpg"
       ],
       "sitePriceTry": 207437.85,
-      "sitePriceStr": "207437,85"
+      "sitePriceStr": "207437,85",
+      "localImage": "images/144.jpg"
     },
     {
       "productId": 145,
@@ -1433,7 +1476,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-buz-makinesi-25-kggun-kup--00ab-.jpg"
       ],
       "sitePriceTry": 38721.731999999996,
-      "sitePriceStr": "38721,73"
+      "sitePriceStr": "38721,73",
+      "localImage": "images/145.jpg"
     },
     {
       "productId": 146,
@@ -1469,7 +1513,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-dondurma-makinesi-3-kollu-soft-b0a-b1.jpg"
       ],
       "sitePriceTry": 195821.33039999998,
-      "sitePriceStr": "195821,33"
+      "sitePriceStr": "195821,33",
+      "localImage": "images/146.jpg"
     },
     {
       "productId": 147,
@@ -1505,7 +1550,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-dondurma-makinesi-3-kollu-soft-s-0790c7.jpg"
       ],
       "sitePriceTry": 187662.10829999996,
-      "sitePriceStr": "187662,11"
+      "sitePriceStr": "187662,11",
+      "localImage": "images/147.jpg"
     },
     {
       "productId": 148,
@@ -1530,7 +1576,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-kokteyl-shaker-seti-3-parca-f3b-e6.jpg"
       ],
       "sitePriceTry": 1060.2397438919998,
-      "sitePriceStr": "1060,24"
+      "sitePriceStr": "1060,24",
+      "localImage": "images/148.jpg"
     },
     {
       "productId": 149,
@@ -1555,7 +1602,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-3-parca-avantajli-kokteyl-set-bo-521b64.jpg"
       ],
       "sitePriceTry": 1060.2397438919998,
-      "sitePriceStr": "1060,24"
+      "sitePriceStr": "1060,24",
+      "localImage": "images/149.jpg"
     },
     {
       "productId": 150,
@@ -1592,7 +1640,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-pro-soft-dondurma-makinesi-uc-ko-b2-8d4.jpg"
       ],
       "sitePriceTry": 221930.84112,
-      "sitePriceStr": "221930,84"
+      "sitePriceStr": "221930,84",
+      "localImage": "images/150.jpg"
     },
     {
       "productId": 151,
@@ -1628,7 +1677,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-pro-soft-dondurma-makinesi-set-u-78a38e.jpg"
       ],
       "sitePriceTry": 203980.5525,
-      "sitePriceStr": "203980,55"
+      "sitePriceStr": "203980,55",
+      "localImage": "images/151.jpg"
     },
     {
       "productId": 153,
@@ -1664,7 +1714,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-buz-makinesi-40-kggun-kup-4680-8.jpg"
       ],
       "sitePriceTry": 49785.084,
-      "sitePriceStr": "49785,08"
+      "sitePriceStr": "49785,08",
+      "localImage": "images/153.jpg"
     },
     {
       "productId": 154,
@@ -1690,7 +1741,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-kokteyl-shaker-seti-6-parca-d9-2cd.jpg"
       ],
       "sitePriceTry": 1336.8235438919999,
-      "sitePriceStr": "1336,82"
+      "sitePriceStr": "1336,82",
+      "localImage": "images/154.jpg"
     },
     {
       "productId": 155,
@@ -1717,7 +1769,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-6-parca-avantajli-kokteyl-set-bo-6-0018.jpg"
       ],
       "sitePriceTry": 1336.8235438919999,
-      "sitePriceStr": "1336,82"
+      "sitePriceStr": "1336,82",
+      "localImage": "images/155.jpg"
     },
     {
       "productId": 156,
@@ -1747,7 +1800,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-kokteyl-shaker-seti-7-parca-3dfe25.jpg"
       ],
       "sitePriceTry": 1521.2108999999998,
-      "sitePriceStr": "1521,21"
+      "sitePriceStr": "1521,21",
+      "localImage": "images/156.jpg"
     },
     {
       "productId": 157,
@@ -1775,7 +1829,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-7-parca-avantajli-kokteyl-set-bo-b5e-ab.jpg"
       ],
       "sitePriceTry": 1521.2108999999998,
-      "sitePriceStr": "1521,21"
+      "sitePriceStr": "1521,21",
+      "localImage": "images/157.jpg"
     },
     {
       "productId": 158,
@@ -1803,7 +1858,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-buz-makinesi-70-kggun-kup-68-503.jpg"
       ],
       "sitePriceTry": 80599.28515799998,
-      "sitePriceStr": "80599,29"
+      "sitePriceStr": "80599,29",
+      "localImage": "images/158.jpg"
     },
     {
       "productId": 159,
@@ -1827,7 +1883,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-10-parca-avantajli-kokteyl-set-b-e829b2.png"
       ],
       "sitePriceTry": 2304.866843892,
-      "sitePriceStr": "2304,87"
+      "sitePriceStr": "2304,87",
+      "localImage": "images/159.jpg"
     },
     {
       "productId": 160,
@@ -1853,7 +1910,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-boston-shaker-750ml-paslanmaz-b34a-9.jpg"
       ],
       "sitePriceTry": 760.6054499999999,
-      "sitePriceStr": "760,61"
+      "sitePriceStr": "760,61",
+      "localImage": "images/160.jpg"
     },
     {
       "productId": 161,
@@ -1877,7 +1935,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-macaron-3lu-mod-3-ahsap-tamper-s-51305c.png"
       ],
       "sitePriceTry": 1083.284706108,
-      "sitePriceStr": "1083,28"
+      "sitePriceStr": "1083,28",
+      "localImage": "images/161.png"
     },
     {
       "productId": 162,
@@ -1900,7 +1959,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-macaron-3lu-mod-5-ahsap-tamper-s-22-48a.png"
       ],
       "sitePriceTry": 0.9999600000000001,
-      "sitePriceStr": "1"
+      "sitePriceStr": "1",
+      "localImage": "images/162.png"
     },
     {
       "productId": 163,
@@ -1926,7 +1986,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-macaron-tamper-58mm-b-4a8d.jpg"
       ],
       "sitePriceTry": 460.97115610799995,
-      "sitePriceStr": "460,97"
+      "sitePriceStr": "460,97",
+      "localImage": "images/163.jpg"
     },
     {
       "productId": 164,
@@ -1948,7 +2009,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-press-tamper-58mm-c3eabe.png"
       ],
       "sitePriceTry": 597.8801371079999,
-      "sitePriceStr": "597,88"
+      "sitePriceStr": "597,88",
+      "localImage": "images/164.png"
     },
     {
       "productId": 165,
@@ -1970,7 +2032,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-macaron-3lu-mod-6-ahsap-tamper-s-45f3-9.png"
       ],
       "sitePriceTry": 2347.2726721080003,
-      "sitePriceStr": "2347,27"
+      "sitePriceStr": "2347,27",
+      "localImage": "images/165.png"
     },
     {
       "productId": 182,
@@ -1998,7 +2061,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-3-parca-paslanmaz-celik-kokteyl--ceb10c.jpg"
       ],
       "sitePriceTry": 1014.1387561079999,
-      "sitePriceStr": "1014,14"
+      "sitePriceStr": "1014,14",
+      "localImage": "images/182.jpg"
     },
     {
       "productId": 186,
@@ -2033,7 +2097,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-meyve-kurutma-makinesi-700w-8-te--83a3-.jpg"
       ],
       "sitePriceTry": 12446.271,
-      "sitePriceStr": "12446,27"
+      "sitePriceStr": "12446,27",
+      "localImage": "images/186.jpg"
     },
     {
       "productId": 187,
@@ -2066,7 +2131,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-meyve-kurutma-makinesi-800w-10-t-d529fd.jpg"
       ],
       "sitePriceTry": 14105.773799999999,
-      "sitePriceStr": "14105,77"
+      "sitePriceStr": "14105,77",
+      "localImage": "images/187.jpg"
     },
     {
       "productId": 188,
@@ -2102,7 +2168,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-dondurma-makinesi-tek-kollu-soft-3530e9.jpg"
       ],
       "sitePriceTry": 106069.88729999999,
-      "sitePriceStr": "106069,89"
+      "sitePriceStr": "106069,89",
+      "localImage": "images/188.jpg"
     },
     {
       "productId": 189,
@@ -2139,7 +2206,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-dondurma-makinesi-tek-kollu-soft-c8-954.jpg"
       ],
       "sitePriceTry": 106069.88729999999,
-      "sitePriceStr": "106069,89"
+      "sitePriceStr": "106069,89",
+      "localImage": "images/189.jpg"
     },
     {
       "productId": 190,
@@ -2175,7 +2243,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-dondurma-makinesi-tek-kollu-soft-2-a22b.jpg"
       ],
       "sitePriceTry": 106069.88729999999,
-      "sitePriceStr": "106069,89"
+      "sitePriceStr": "106069,89",
+      "localImage": "images/190.jpg"
     },
     {
       "productId": 191,
@@ -2209,7 +2278,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-tek-kazanli-ogutucu-ve-espresso--5d27-a.jpg"
       ],
       "sitePriceTry": 40796.1105,
-      "sitePriceStr": "40796,11"
+      "sitePriceStr": "40796,11",
+      "localImage": "images/191.jpg"
     },
     {
       "productId": 192,
@@ -2244,7 +2314,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-tek-kazanli-ogutucu-ve-espresso--c2d60-.jpg"
       ],
       "sitePriceTry": 40796.1105,
-      "sitePriceStr": "40796,11"
+      "sitePriceStr": "40796,11",
+      "localImage": "images/192.jpg"
     },
     {
       "productId": 194,
@@ -2280,7 +2351,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-pro-silver-soft-dondurma-makines-16-af6.jpg"
       ],
       "sitePriceTry": 187662.10829999996,
-      "sitePriceStr": "187662,11"
+      "sitePriceStr": "187662,11",
+      "localImage": "images/194.jpg"
     },
     {
       "productId": 202,
@@ -2315,7 +2387,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-kd-25-dozaj-ayarli-yari-otomatik-dfe50c.jpg"
       ],
       "sitePriceTry": 14686.599779999999,
-      "sitePriceStr": "14686,6"
+      "sitePriceStr": "14686,6",
+      "localImage": "images/202.jpg"
     },
     {
       "productId": 204,
@@ -2340,7 +2413,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-elektrikli-tirbuson-otomatik-sar--b365-.jpg"
       ],
       "sitePriceTry": 1843.890156108,
-      "sitePriceStr": "1843,89"
+      "sitePriceStr": "1843,89",
+      "localImage": "images/204.jpg"
     },
     {
       "productId": 264,
@@ -2376,7 +2450,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-kahve-degirmeni-ve-ogutucu-420w--a34dcb.jpg"
       ],
       "sitePriceTry": 40796.1105,
-      "sitePriceStr": "40796,11"
+      "sitePriceStr": "40796,11",
+      "localImage": "images/264.jpg"
     },
     {
       "productId": 265,
@@ -2405,7 +2480,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-kahve-degirmeni-ve-ogutucu-420w---a60d5.jpg"
       ],
       "sitePriceTry": 40796.1105,
-      "sitePriceStr": "40796,11"
+      "sitePriceStr": "40796,11",
+      "localImage": "images/265.jpg"
     },
     {
       "productId": 266,
@@ -2441,7 +2517,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-kahve-degirmeni-ve-ogutucu-420w--a3-1e8.jpg"
       ],
       "sitePriceTry": 40796.1105,
-      "sitePriceStr": "40796,11"
+      "sitePriceStr": "40796,11",
+      "localImage": "images/266.jpg"
     },
     {
       "productId": 267,
@@ -2477,7 +2554,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-kahve-degirmeni-ve-ogutucu-420w--7-4d03.jpg"
       ],
       "sitePriceTry": 40796.1105,
-      "sitePriceStr": "40796,11"
+      "sitePriceStr": "40796,11",
+      "localImage": "images/267.jpg"
     },
     {
       "productId": 268,
@@ -2512,7 +2590,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-kahve-degirmeni-ve-ogutucu-420w--419-4e.jpg"
       ],
       "sitePriceTry": 40796.1105,
-      "sitePriceStr": "40796,11"
+      "sitePriceStr": "40796,11",
+      "localImage": "images/268.jpg"
     },
     {
       "productId": 310,
@@ -2544,7 +2623,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-a14-sebze-dograma-et-kiyicili-2--78cc-d.jpg"
       ],
       "sitePriceTry": 2581.450643892,
-      "sitePriceStr": "2581,45"
+      "sitePriceStr": "2581,45",
+      "localImage": "images/310.jpg"
     },
     {
       "productId": 312,
@@ -2570,7 +2650,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-a26-sebze-dograma-et-kiyicili-12-bb1-bb.jpg"
       ],
       "sitePriceTry": 6914.594999999999,
-      "sitePriceStr": "6914,6"
+      "sitePriceStr": "6914,6",
+      "localImage": "images/312.jpg"
     },
     {
       "productId": 313,
@@ -2602,7 +2683,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-meyve-sikacagi-1200w-9fc101.jpg"
       ],
       "sitePriceTry": 6914.594999999999,
-      "sitePriceStr": "6914,6"
+      "sitePriceStr": "6914,6",
+      "localImage": "images/313.jpg"
     },
     {
       "productId": 915,
@@ -2624,7 +2706,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/otomatik-patlamis-misir-makinesi--b0bf-.png"
       ],
       "sitePriceTry": 16595.028,
-      "sitePriceStr": "16595,03"
+      "sitePriceStr": "16595,03",
+      "localImage": "images/915.png"
     },
     {
       "productId": 917,
@@ -2662,7 +2745,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-buz-makinesi-23-kggun-kup-gold-b1e5ec.jpg"
       ],
       "sitePriceTry": 30424.218,
-      "sitePriceStr": "30424,22"
+      "sitePriceStr": "30424,22",
+      "localImage": "images/917.jpg"
     },
     {
       "productId": 919,
@@ -2704,7 +2788,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-buz-makinesi-23-kggun-kup-siyah-9a3a1b.jpg"
       ],
       "sitePriceTry": 30424.218,
-      "sitePriceStr": "30424,22"
+      "sitePriceStr": "30424,22",
+      "localImage": "images/919.jpg"
     },
     {
       "productId": 920,
@@ -2733,7 +2818,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-buzlas-makinasi-tek-hazne-15-lt--87a-8e.jpg"
       ],
       "sitePriceTry": 60848.436,
-      "sitePriceStr": "60848,44"
+      "sitePriceStr": "60848,44",
+      "localImage": "images/920.jpg"
     },
     {
       "productId": 921,
@@ -2762,7 +2848,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-buzlas-makinasi-15-lt-tek-haznel--a482-.jpg"
       ],
       "sitePriceTry": 60848.436,
-      "sitePriceStr": "60848,44"
+      "sitePriceStr": "60848,44",
+      "localImage": "images/921.jpg"
     },
     {
       "productId": 922,
@@ -2791,7 +2878,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-buzlas-makinasi-cift-hazneli-151-f7c2e-.jpg"
       ],
       "sitePriceTry": 83666.5995,
-      "sitePriceStr": "83666,6"
+      "sitePriceStr": "83666,6",
+      "localImage": "images/922.jpg"
     },
     {
       "productId": 923,
@@ -2820,7 +2908,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-buzlas-makinasi-1515-lt-cift-haz-4d5-9d.jpg"
       ],
       "sitePriceTry": 83666.5995,
-      "sitePriceStr": "83666,6"
+      "sitePriceStr": "83666,6",
+      "localImage": "images/923.jpg"
     },
     {
       "productId": 924,
@@ -2849,7 +2938,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-buzlas-makinasi-uc-hazneli-15151-aa44-1.jpg"
       ],
       "sitePriceTry": 106484.76299999999,
-      "sitePriceStr": "106484,76"
+      "sitePriceStr": "106484,76",
+      "localImage": "images/924.jpg"
     },
     {
       "productId": 925,
@@ -2878,7 +2968,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-buzlas-makinasi-151515-lt-uc-haz-361-46.jpg"
       ],
       "sitePriceTry": 106484.76299999999,
-      "sitePriceStr": "106484,76"
+      "sitePriceStr": "106484,76",
+      "localImage": "images/925.jpg"
     },
     {
       "productId": 926,
@@ -2917,7 +3008,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-buz-makinesi-45-kggun-kup-buz-b4-26c.jpg"
       ],
       "sitePriceTry": 52550.922,
-      "sitePriceStr": "52550,92"
+      "sitePriceStr": "52550,92",
+      "localImage": "images/926.jpg"
     },
     {
       "productId": 927,
@@ -2956,7 +3048,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-buz-makinesi-65-kggun-kup-buz-e594fa.jpg"
       ],
       "sitePriceTry": 58082.59799999999,
-      "sitePriceStr": "58082,6"
+      "sitePriceStr": "58082,6",
+      "localImage": "images/927.jpg"
     },
     {
       "productId": 929,
@@ -2986,7 +3079,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-3-lt-dijital-pro-bar-blender-gri-2-c899.jpg"
       ],
       "sitePriceTry": 8020.930199999999,
-      "sitePriceStr": "8020,93"
+      "sitePriceStr": "8020,93",
+      "localImage": "images/929.jpg"
     },
     {
       "productId": 930,
@@ -3016,7 +3110,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-3-lt-dijital-pro-bar-blender-siy-11ff-4.jpg"
       ],
       "sitePriceTry": 8020.930199999999,
-      "sitePriceStr": "8020,93"
+      "sitePriceStr": "8020,93",
+      "localImage": "images/930.jpg"
     },
     {
       "productId": 931,
@@ -3047,7 +3142,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-tek-hazneli-indiksiyon-fritoz-8---86f3-.jpg"
       ],
       "sitePriceTry": 26275.461,
-      "sitePriceStr": "26275,46"
+      "sitePriceStr": "26275,46",
+      "localImage": "images/931.jpg"
     },
     {
       "productId": 932,
@@ -3078,7 +3174,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-tek-hazneli-indiksiyon-fritoz-12-b68a31.jpg"
       ],
       "sitePriceTry": 31807.137,
-      "sitePriceStr": "31807,14"
+      "sitePriceStr": "31807,14",
+      "localImage": "images/932.jpg"
     },
     {
       "productId": 933,
@@ -3109,7 +3206,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-cift-hazneli-indiksiyon-fritoz-8-7b-a7d.jpg"
       ],
       "sitePriceTry": 48402.16499999999,
-      "sitePriceStr": "48402,17"
+      "sitePriceStr": "48402,17",
+      "localImage": "images/933.jpg"
     },
     {
       "productId": 1152,
@@ -3132,7 +3230,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-dikey-pasta-teshir-dolabi-silind--015f5.jpg"
       ],
       "sitePriceTry": 56699.679,
-      "sitePriceStr": "56699,68"
+      "sitePriceStr": "56699,68",
+      "localImage": "images/1152.jpg"
     },
     {
       "productId": 1153,
@@ -3155,7 +3254,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-dikey-sogutmali-teshir-dolabi-be-c5c26c.jpg"
       ],
       "sitePriceTry": 71358.6204,
-      "sitePriceStr": "71358,62"
+      "sitePriceStr": "71358,62",
+      "localImage": "images/1153.jpg"
     },
     {
       "productId": 1154,
@@ -3178,7 +3278,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-dikey-sogutmali-teshir-dolabi-si--be79f.jpg"
       ],
       "sitePriceTry": 71358.6204,
-      "sitePriceStr": "71358,62"
+      "sitePriceStr": "71358,62",
+      "localImage": "images/1154.jpg"
     },
     {
       "productId": 1155,
@@ -3201,7 +3302,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-dikey-sogutmali-teshir-dolabi-be-42c5-9.jpg"
       ],
       "sitePriceTry": 31807.137,
-      "sitePriceStr": "31807,14"
+      "sitePriceStr": "31807,14",
+      "localImage": "images/1155.jpg"
     },
     {
       "productId": 1158,
@@ -3224,7 +3326,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-tezgah-ustu-sogutmali-vitrin-dol-76b-7b.jpg"
       ],
       "sitePriceTry": 51168.003,
-      "sitePriceStr": "51168"
+      "sitePriceStr": "51168",
+      "localImage": "images/1158.jpg"
     },
     {
       "productId": 1160,
@@ -3247,7 +3350,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-dikey-sogutmali-teshir-dolabi-be-e65071.jpg"
       ],
       "sitePriceTry": 89751.44309999999,
-      "sitePriceStr": "89751,44"
+      "sitePriceStr": "89751,44",
+      "localImage": "images/1160.jpg"
     },
     {
       "productId": 1161,
@@ -3270,7 +3374,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-dikey-sogutmali-teshir-dolabi-si-0-8f37.jpg"
       ],
       "sitePriceTry": 89751.44309999999,
-      "sitePriceStr": "89751,44"
+      "sitePriceStr": "89751,44",
+      "localImage": "images/1161.jpg"
     },
     {
       "productId": 1162,
@@ -3302,7 +3407,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-68mm-celik-ogutme-disli-kahve-de-61cb-4.jpg"
       ],
       "sitePriceTry": 33190.056,
-      "sitePriceStr": "33190,06"
+      "sitePriceStr": "33190,06",
+      "localImage": "images/1162.jpg"
     },
     {
       "productId": 1163,
@@ -3334,7 +3440,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-68mm-celik-ogutme-disli-kahve-de-d-8c0a.jpg"
       ],
       "sitePriceTry": 33190.056,
-      "sitePriceStr": "33190,06"
+      "sitePriceStr": "33190,06",
+      "localImage": "images/1163.jpg"
     },
     {
       "productId": 1164,
@@ -3366,7 +3473,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-68mm-celik-ogutme-disli-kahve-de-aa84-a.jpg"
       ],
       "sitePriceTry": 33190.056,
-      "sitePriceStr": "33190,06"
+      "sitePriceStr": "33190,06",
+      "localImage": "images/1164.jpg"
     },
     {
       "productId": 1165,
@@ -3399,7 +3507,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-74mm-celik-disli-profesyonel-kah-6-91be.jpg"
       ],
       "sitePriceTry": 49785.084,
-      "sitePriceStr": "49785,08"
+      "sitePriceStr": "49785,08",
+      "localImage": "images/1165.jpg"
     },
     {
       "productId": 1166,
@@ -3432,7 +3541,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-74mm-celik-disli-profesyonel-kah-e89e8e.jpg"
       ],
       "sitePriceTry": 54763.592399999994,
-      "sitePriceStr": "54763,59"
+      "sitePriceStr": "54763,59",
+      "localImage": "images/1166.jpg"
     },
     {
       "productId": 1167,
@@ -3466,7 +3576,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-74mm-celik-disli-profesyonel-kah-0-aa31.jpg"
       ],
       "sitePriceTry": 49785.084,
-      "sitePriceStr": "49785,08"
+      "sitePriceStr": "49785,08",
+      "localImage": "images/1167.jpg"
     },
     {
       "productId": 1168,
@@ -3498,7 +3609,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-74mm-celik-ogutme-disli-kahve-de-07-c76.jpg"
       ],
       "sitePriceTry": 44253.407999999996,
-      "sitePriceStr": "44253,41"
+      "sitePriceStr": "44253,41",
+      "localImage": "images/1168.jpg"
     },
     {
       "productId": 1169,
@@ -3530,7 +3642,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-74mm-celik-ogutme-disli-kahve-de-c2-219.jpg"
       ],
       "sitePriceTry": 44253.407999999996,
-      "sitePriceStr": "44253,41"
+      "sitePriceStr": "44253,41",
+      "localImage": "images/1169.jpg"
     },
     {
       "productId": 1170,
@@ -3562,7 +3675,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-74mm-celik-ogutme-disli-kahve-de-9ddb84.jpg"
       ],
       "sitePriceTry": 44253.407999999996,
-      "sitePriceStr": "44253,41"
+      "sitePriceStr": "44253,41",
+      "localImage": "images/1170.jpg"
     },
     {
       "productId": 1173,
@@ -3598,7 +3712,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-buz-makinesi-500-kggun-kup-937-99.jpg"
       ],
       "sitePriceTry": 298710.50399999996,
-      "sitePriceStr": "298710,5"
+      "sitePriceStr": "298710,5",
+      "localImage": "images/1173.jpg"
     },
     {
       "productId": 1174,
@@ -3631,7 +3746,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/elektrikli-doner-kesme-makinasi-cift-b-98b4e8.jpg"
       ],
       "sitePriceTry": 7606.0545,
-      "sitePriceStr": "7606,05"
+      "sitePriceStr": "7606,05",
+      "localImage": "images/1174.jpg"
     },
     {
       "productId": 1175,
@@ -3661,7 +3777,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-doner-ocagi-alttan-motorlu-3-rad-ac-af6.jpg"
       ],
       "sitePriceTry": 31807.137,
-      "sitePriceStr": "31807,14"
+      "sitePriceStr": "31807,14",
+      "localImage": "images/1175.jpg"
     },
     {
       "productId": 1176,
@@ -3691,7 +3808,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-doner-ocagi-alttan-motorlu-4-rad-9-ac69.jpg"
       ],
       "sitePriceTry": 34572.975,
-      "sitePriceStr": "34572,98"
+      "sitePriceStr": "34572,98",
+      "localImage": "images/1176.jpg"
     },
     {
       "productId": 1177,
@@ -3720,7 +3838,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-doner-ocagi-alttan-motorlu-5-rad-fc4210.jpg"
       ],
       "sitePriceTry": 40104.651,
-      "sitePriceStr": "40104,65"
+      "sitePriceStr": "40104,65",
+      "localImage": "images/1177.jpg"
     },
     {
       "productId": 1178,
@@ -3750,7 +3869,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-doner-ocagi-alttan-motorlu-3-rad-3-04a4.jpg"
       ],
       "sitePriceTry": 31807.137,
-      "sitePriceStr": "31807,14"
+      "sitePriceStr": "31807,14",
+      "localImage": "images/1178.jpg"
     },
     {
       "productId": 1179,
@@ -3779,7 +3899,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-doner-ocagi-alttan-motorlu-5-rad-3a7-39.jpg"
       ],
       "sitePriceTry": 40104.651,
-      "sitePriceStr": "40104,65"
+      "sitePriceStr": "40104,65",
+      "localImage": "images/1179.jpg"
     },
     {
       "productId": 1180,
@@ -3812,7 +3933,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-tost-makinasi-16-dilim-429d-b.jpg"
       ],
       "sitePriceTry": 8297.514,
-      "sitePriceStr": "8297,51"
+      "sitePriceStr": "8297,51",
+      "localImage": "images/1180.jpg"
     },
     {
       "productId": 1181,
@@ -3845,7 +3967,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-cift-kapak-tost-makinasi-22-dili-c55-bc.jpg"
       ],
       "sitePriceTry": 15212.109,
-      "sitePriceStr": "15212,11"
+      "sitePriceStr": "15212,11",
+      "localImage": "images/1181.jpg"
     },
     {
       "productId": 1182,
@@ -3878,7 +4001,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-mega-cift-kapak-tost-makinasi-32-3-9875.jpg"
       ],
       "sitePriceTry": 17977.947,
-      "sitePriceStr": "17977,95"
+      "sitePriceStr": "17977,95",
+      "localImage": "images/1182.jpg"
     },
     {
       "productId": 1183,
@@ -3901,7 +4025,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-doner-ocagi-alttan-motorlu-4-rad-4cf33-.jpg"
       ],
       "sitePriceTry": 34572.975,
-      "sitePriceStr": "34572,98"
+      "sitePriceStr": "34572,98",
+      "localImage": "images/1183.jpg"
     },
     {
       "productId": 1184,
@@ -3933,7 +4058,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-konveyorlu-ekmek-kizartma-makina-1ec7a-.jpg"
       ],
       "sitePriceTry": 23509.622999999996,
-      "sitePriceStr": "23509,62"
+      "sitePriceStr": "23509,62",
+      "localImage": "images/1184.jpg"
     },
     {
       "productId": 1185,
@@ -3965,7 +4091,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-konveyorlu-ekmek-kizartma-makina-d1-470.jpg"
       ],
       "sitePriceTry": 26275.461,
-      "sitePriceStr": "26275,46"
+      "sitePriceStr": "26275,46",
+      "localImage": "images/1185.jpg"
     },
     {
       "productId": 1188,
@@ -3990,7 +4117,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-cift-hazneli-endustriyel-fritoz--3aa0ba.png"
       ],
       "sitePriceTry": 68039.6148,
-      "sitePriceStr": "68039,61"
+      "sitePriceStr": "68039,61",
+      "localImage": "images/1188.png"
     },
     {
       "productId": 1189,
@@ -4018,7 +4146,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-12-litre-meyve-suyu-dispanser-d20f41.png"
       ],
       "sitePriceTry": 26275.461,
-      "sitePriceStr": "26275,46"
+      "sitePriceStr": "26275,46",
+      "localImage": "images/1189.png"
     },
     {
       "productId": 1190,
@@ -4046,7 +4175,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-20-litre-meyve-suyu-dispanser--3f9f8.png"
       ],
       "sitePriceTry": 29041.298999999995,
-      "sitePriceStr": "29041,3"
+      "sitePriceStr": "29041,3",
+      "localImage": "images/1190.png"
     },
     {
       "productId": 1191,
@@ -4070,7 +4200,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-profesyonel-blender-2-lt-1600w-s-eaee-4.png"
       ],
       "sitePriceTry": 12722.8548,
-      "sitePriceStr": "12722,85"
+      "sitePriceStr": "12722,85",
+      "localImage": "images/1191.png"
     },
     {
       "productId": 1192,
@@ -4090,7 +4221,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-profesyonel-stand-mikser-16-lt-2-8-5995.png"
       ],
       "sitePriceTry": 26275.461,
-      "sitePriceStr": "26275,46"
+      "sitePriceStr": "26275,46",
+      "localImage": "images/1192.png"
     },
     {
       "productId": 1193,
@@ -4112,7 +4244,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-2-lt-dijital-soundproof-kapakli--b2-436.png"
       ],
       "sitePriceTry": 13829.189999999999,
-      "sitePriceStr": "13829,19"
+      "sitePriceStr": "13829,19",
+      "localImage": "images/1193.png"
     },
     {
       "productId": 1194,
@@ -4138,7 +4271,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-soundproof-profesyonel-bar-blend-a55-7c.png"
       ],
       "sitePriceTry": 13829.189999999999,
-      "sitePriceStr": "13829,19"
+      "sitePriceStr": "13829,19",
+      "localImage": "images/1194.png"
     },
     {
       "productId": 1195,
@@ -4159,7 +4293,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-tezgah-ustu-pamuk-seker-makinesi-f220f5.png"
       ],
       "sitePriceTry": 13829.189999999999,
-      "sitePriceStr": "13829,19"
+      "sitePriceStr": "13829,19",
+      "localImage": "images/1195.png"
     },
     {
       "productId": 1196,
@@ -4180,7 +4315,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-arabali-pamuk-seker-makinesi-3f5b83.png"
       ],
       "sitePriceTry": 27658.379999999997,
-      "sitePriceStr": "27658,38"
+      "sitePriceStr": "27658,38",
+      "localImage": "images/1196.png"
     },
     {
       "productId": 1198,
@@ -4203,7 +4339,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-sicak-teshir-dolabi-50l-debde-.png"
       ],
       "sitePriceTry": 20743.785,
-      "sitePriceStr": "20743,79"
+      "sitePriceStr": "20743,79",
+      "localImage": "images/1198.png"
     },
     {
       "productId": 1200,
@@ -4224,7 +4361,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-120l-tezgah-ustu-sogutmali-vitri-15bef8.png"
       ],
       "sitePriceTry": 46466.0784,
-      "sitePriceStr": "46466,08"
+      "sitePriceStr": "46466,08",
+      "localImage": "images/1200.png"
     },
     {
       "productId": 1201,
@@ -4250,7 +4388,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-tezgah-ustu-sogutmali-vitrin-dol--4bef-.png"
       ],
       "sitePriceTry": 49093.62449999999,
-      "sitePriceStr": "49093,62"
+      "sitePriceStr": "49093,62",
+      "localImage": "images/1201.png"
     },
     {
       "productId": 1202,
@@ -4272,7 +4411,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-tekli-induksiyon-ocak-3500w-prof-e96f3c.png"
       ],
       "sitePriceTry": 9680.432999999999,
-      "sitePriceStr": "9680,43"
+      "sitePriceStr": "9680,43",
+      "localImage": "images/1202.png"
     },
     {
       "productId": 1203,
@@ -4293,7 +4433,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-endustriyel-tekli-induksiyon-oca-c90-47.png"
       ],
       "sitePriceTry": 11063.351999999999,
-      "sitePriceStr": "11063,35"
+      "sitePriceStr": "11063,35",
+      "localImage": "images/1203.png"
     },
     {
       "productId": 1204,
@@ -4314,7 +4455,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-tekli-induksiyon-ocak-3500w-prof-c-5430.png"
       ],
       "sitePriceTry": 10371.8925,
-      "sitePriceStr": "10371,89"
+      "sitePriceStr": "10371,89",
+      "localImage": "images/1204.png"
     },
     {
       "productId": 1205,
@@ -4336,7 +4478,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-tekli-induksiyon-ocak-2000w-prof-c-aca8.png"
       ],
       "sitePriceTry": 3750,
-      "sitePriceStr": "3750"
+      "sitePriceStr": "3750",
+      "localImage": "images/1205.png"
     },
     {
       "productId": 1206,
@@ -4357,7 +4500,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-ikili-induksiyon-ocak-3500w-prof-a2-4b3.png"
       ],
       "sitePriceTry": 7500,
-      "sitePriceStr": "7500"
+      "sitePriceStr": "7500",
+      "localImage": "images/1206.png"
     },
     {
       "productId": 1207,
@@ -4378,7 +4522,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/kahve-posa-cekmecesi-siyah-espresso-ma--4077-.png"
       ],
       "sitePriceTry": 1749.99996,
-      "sitePriceStr": "1750"
+      "sitePriceStr": "1750",
+      "localImage": "images/1207.png"
     },
     {
       "productId": 1208,
@@ -4398,7 +4543,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/premium-soft-kakaolu-dondurma-tozu-sof-2ab-af.png"
       ],
       "sitePriceTry": 450.000046,
-      "sitePriceStr": "450"
+      "sitePriceStr": "450",
+      "localImage": "images/1208.png"
     },
     {
       "productId": 1209,
@@ -4418,7 +4564,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/premium-soft-vanilyali-dondurma-tozu-s-88f7-4.png"
       ],
       "sitePriceTry": 450.000046,
-      "sitePriceStr": "450"
+      "sitePriceStr": "450",
+      "localImage": "images/1209.png"
     },
     {
       "productId": 1210,
@@ -4439,7 +4586,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-elektrikli-pilic-cevirme-firini-261619.png"
       ],
       "sitePriceTry": 34572.975,
-      "sitePriceStr": "34572,98"
+      "sitePriceStr": "34572,98",
+      "localImage": "images/1210.png"
     },
     {
       "productId": 1211,
@@ -4459,7 +4607,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-cift-katli-pizza-firini-58-afd.png"
       ],
       "sitePriceTry": 63614.274,
-      "sitePriceStr": "63614,27"
+      "sitePriceStr": "63614,27",
+      "localImage": "images/1211.png"
     },
     {
       "productId": 1212,
@@ -4479,7 +4628,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-cift-katli-pizza-firini-48b-5d.png"
       ],
       "sitePriceTry": 78826.383,
-      "sitePriceStr": "78826,38"
+      "sitePriceStr": "78826,38",
+      "localImage": "images/1212.png"
     },
     {
       "productId": 1213,
@@ -4502,7 +4652,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-cift-katli-elektrikli-pizza-firi-9-f8cd.png"
       ],
       "sitePriceTry": 55316.759999999995,
-      "sitePriceStr": "55316,76"
+      "sitePriceStr": "55316,76",
+      "localImage": "images/1213.png"
     },
     {
       "productId": 1214,
@@ -4523,7 +4674,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-tekli-kare-waffle-makinesi-profe-d6a-b5.png"
       ],
       "sitePriceTry": 8297.514,
-      "sitePriceStr": "8297,51"
+      "sitePriceStr": "8297,51",
+      "localImage": "images/1214.png"
     },
     {
       "productId": 1215,
@@ -4544,7 +4696,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-tek-gozlu-elektrikli-krep-makine-57e-59.png"
       ],
       "sitePriceTry": 10510.184399999998,
-      "sitePriceStr": "10510,18"
+      "sitePriceStr": "10510,18",
+      "localImage": "images/1215.png"
     },
     {
       "productId": 1216,
@@ -4565,7 +4718,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-cift-gozlu-elektrikli-krep-makin-d6435c.png"
       ],
       "sitePriceTry": 21020.368799999997,
-      "sitePriceStr": "21020,37"
+      "sitePriceStr": "21020,37",
+      "localImage": "images/1216.png"
     },
     {
       "productId": 1217,
@@ -4586,7 +4740,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-5-sisli-elektrikli-pilic-cevirme-fa1888.png"
       ],
       "sitePriceTry": 96804.32999999999,
-      "sitePriceStr": "96804,33"
+      "sitePriceStr": "96804,33",
+      "localImage": "images/1217.png"
     },
     {
       "productId": 1218,
@@ -4607,7 +4762,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-6-sisli-elektrikli-pilic-cevirme-f109-4.png"
       ],
       "sitePriceTry": 106484.76299999999,
-      "sitePriceStr": "106484,76"
+      "sitePriceStr": "106484,76",
+      "localImage": "images/1218.png"
     },
     {
       "productId": 1219,
@@ -4627,7 +4783,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-7-sisli-elektrikli-pilic-cevirme--b661-.png"
       ],
       "sitePriceTry": 116165.19599999998,
-      "sitePriceStr": "116165,2"
+      "sitePriceStr": "116165,2",
+      "localImage": "images/1219.png"
     },
     {
       "productId": 1220,
@@ -4648,7 +4805,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-8-sisli-elektrikli-pilic-cevirme-4b4d-4.png"
       ],
       "sitePriceTry": 125845.629,
-      "sitePriceStr": "125845,63"
+      "sitePriceStr": "125845,63",
+      "localImage": "images/1220.png"
     },
     {
       "productId": 1221,
@@ -4669,7 +4827,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-tek-katli-pizza-firini--b525-.png"
       ],
       "sitePriceTry": 33190.056,
-      "sitePriceStr": "33190,06"
+      "sitePriceStr": "33190,06",
+      "localImage": "images/1221.png"
     },
     {
       "productId": 1222,
@@ -4690,7 +4849,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-tek-katli-pizza-firini-901f4-.png"
       ],
       "sitePriceTry": 38721.731999999996,
-      "sitePriceStr": "38721,73"
+      "sitePriceStr": "38721,73",
+      "localImage": "images/1222.png"
     },
     {
       "productId": 1223,
@@ -4711,7 +4871,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-tek-katli-pizza-firini-8-41b6.png"
       ],
       "sitePriceTry": 44253.407999999996,
-      "sitePriceStr": "44253,41"
+      "sitePriceStr": "44253,41",
+      "localImage": "images/1223.png"
     },
     {
       "productId": 1224,
@@ -4732,7 +4893,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-5-tepsili-elektrikli-plus-konvek-273-e3.png"
       ],
       "sitePriceTry": 58082.59799999999,
-      "sitePriceStr": "58082,6"
+      "sitePriceStr": "58082,6",
+      "localImage": "images/1224.png"
     },
     {
       "productId": 1225,
@@ -4752,7 +4914,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-cift-katli-pizza-firini-4-pizza--dfcb53.png"
       ],
       "sitePriceTry": 56699.679,
-      "sitePriceStr": "56699,68"
+      "sitePriceStr": "56699,68",
+      "localImage": "images/1225.png"
     },
     {
       "productId": 1226,
@@ -4773,7 +4936,8 @@
         "https://static.ticimax.cloud/64110/uploads/urunresimleri/buyuk/vosco-tekli-cicek-model-waffle-makines-09-8c7.png"
       ],
       "sitePriceTry": 8297.514,
-      "sitePriceStr": "8297,51"
+      "sitePriceStr": "8297,51",
+      "localImage": "images/1226.png"
     }
   ]
 }

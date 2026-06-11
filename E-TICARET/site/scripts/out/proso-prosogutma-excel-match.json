@@ -1,0 +1,1649 @@
+{
+  "generatedAt": "2026-06-06T13:17:15.078Z",
+  "prosogutmaUrl": "https://prosogutma.com",
+  "xlsx": "c:/D Disk/FİYAT LİSTELERİ/RRRr_PROSO DISPLAY CABINETS PRICE LıST WITH ALL OPTIONS 2023 03.10.2025.xlsx",
+  "eurTry": 53.5921,
+  "summary": {
+    "prosogutmaParentProducts": 73,
+    "equstoProsoRows": 743,
+    "excelPriceIndex": 2213,
+    "kodFromProsogutmaSite": 0,
+    "kodFromSlugMap": 16,
+    "defaultWidthAdded": 0,
+    "pricedAfterSync": 689,
+    "stillPending": 54
+  },
+  "prosogutmaPages": [
+    {
+      "slug": "barracuda-frozen",
+      "title": "Barracuda Frozen",
+      "url": "https://prosogutma.com/urun/barracuda-frozen/",
+      "variantsOnSite": 3,
+      "modelKodSample": "BARRACUDA",
+      "catalogRows": 3,
+      "pricedRows": 0,
+      "excelFam": null,
+      "note": "Excel'de yok"
+    },
+    {
+      "slug": "buffalo",
+      "title": "Buffalo",
+      "url": "https://prosogutma.com/urun/buffalo/",
+      "variantsOnSite": 6,
+      "modelKodSample": "BUFFALO",
+      "catalogRows": 6,
+      "pricedRows": 0,
+      "excelFam": null,
+      "note": "Excel'de yok"
+    },
+    {
+      "slug": "butterfly-ba",
+      "title": "Butterfly BA",
+      "url": "https://prosogutma.com/urun/butterfly-ba/",
+      "variantsOnSite": 0,
+      "modelKodSample": "BUTTERFLY BA 75/130",
+      "catalogRows": 1,
+      "pricedRows": 0,
+      "excelFam": null,
+      "note": "Excel'de BA yok (BM/HP var)"
+    },
+    {
+      "slug": "butterfly-bm",
+      "title": "Butterfly BM",
+      "url": "https://prosogutma.com/urun/butterfly-bm/",
+      "variantsOnSite": 0,
+      "modelKodSample": "BUTTERFLY BM 75/130",
+      "catalogRows": 3,
+      "pricedRows": 3,
+      "excelFam": [
+        "BUTTERFLY BM 75/130 BAIN-MARIE TYPE HEATED HOT MEAL"
+      ],
+      "note": null
+    },
+    {
+      "slug": "butterfly-br",
+      "title": "Butterfly BR",
+      "url": "https://prosogutma.com/urun/butterfly-br/",
+      "variantsOnSite": 0,
+      "modelKodSample": "BUTTERFLY BR 75/130",
+      "catalogRows": 2,
+      "pricedRows": 2,
+      "excelFam": [
+        "BUTTERFLY BR 75/130 NEUTRAL BREAD"
+      ],
+      "note": null
+    },
+    {
+      "slug": "butterfly-cg-pr-pn-ht",
+      "title": "Butterfly CG PR PN HT",
+      "url": "https://prosogutma.com/urun/butterfly-cg-pr-pn-ht/",
+      "variantsOnSite": 9,
+      "modelKodSample": "BUTTERFLY PR/CG/75/130",
+      "catalogRows": 9,
+      "pricedRows": 6,
+      "excelFam": null,
+      "note": null
+    },
+    {
+      "slug": "butterfly-dp",
+      "title": "Butterfly DP",
+      "url": "https://prosogutma.com/urun/butterfly-dp/",
+      "variantsOnSite": 0,
+      "modelKodSample": "BUTTERFLY DP/SS 75/130",
+      "catalogRows": 2,
+      "pricedRows": 2,
+      "excelFam": [
+        "BUTTERFLY DP/SS 75/130"
+      ],
+      "note": null
+    },
+    {
+      "slug": "butterfly-dvn-pr-pn",
+      "title": "Butterfly DVN PR PN",
+      "url": "https://prosogutma.com/urun/butterfly-dvn-pr-pn/",
+      "variantsOnSite": 0,
+      "modelKodSample": "BUTTERFLY PR DVN PR - PR SS 75/130",
+      "catalogRows": 1,
+      "pricedRows": 0,
+      "excelFam": null,
+      "note": "Excel'de DVN varyantı sınırlı"
+    },
+    {
+      "slug": "butterfly-hp",
+      "title": "Butterfly HP",
+      "url": "https://prosogutma.com/urun/butterfly-hp/",
+      "variantsOnSite": 0,
+      "modelKodSample": "BUTTERFLY HP 75/130",
+      "catalogRows": 3,
+      "pricedRows": 3,
+      "excelFam": [
+        "BUTTERFLY HP 75/130 DRY HOT PLATE HEATED"
+      ],
+      "note": null
+    },
+    {
+      "slug": "butterfly-mft",
+      "title": "Butterfly MFT",
+      "url": "https://prosogutma.com/urun/butterfly-mft/",
+      "variantsOnSite": 0,
+      "modelKodSample": "BUTTERFLY MFT PR 75/150",
+      "catalogRows": 5,
+      "pricedRows": 5,
+      "excelFam": [
+        "BUTTERFLY MFT PR 75/150"
+      ],
+      "note": null
+    },
+    {
+      "slug": "butterfly-pn",
+      "title": "Butterfly PN",
+      "url": "https://prosogutma.com/urun/butterfly-pn/",
+      "variantsOnSite": 0,
+      "modelKodSample": "BUTTERFLY PN 75/130",
+      "catalogRows": 1,
+      "pricedRows": 0,
+      "excelFam": [
+        "BUTTERFLY PN 75/130"
+      ],
+      "note": null
+    },
+    {
+      "slug": "butterfly-pr",
+      "title": "Butterfly PR",
+      "url": "https://prosogutma.com/urun/butterfly-pr/",
+      "variantsOnSite": 0,
+      "modelKodSample": "BUTTERFLY PR 75/130",
+      "catalogRows": 2,
+      "pricedRows": 2,
+      "excelFam": [
+        "BUTTERFLY PR 75/130"
+      ],
+      "note": null
+    },
+    {
+      "slug": "butterfly-sb",
+      "title": "Butterfly SB",
+      "url": "https://prosogutma.com/urun/butterfly-sb/",
+      "variantsOnSite": 0,
+      "modelKodSample": "BUTTERFLY SB 75/130",
+      "catalogRows": 3,
+      "pricedRows": 3,
+      "excelFam": [
+        "BUTTERFLY SB 75/130"
+      ],
+      "note": null
+    },
+    {
+      "slug": "butterfly-sp",
+      "title": "Butterfly SP",
+      "url": "https://prosogutma.com/urun/butterfly-sp/",
+      "variantsOnSite": 0,
+      "modelKodSample": "BUTTERFLY SP 75/170",
+      "catalogRows": 3,
+      "pricedRows": 3,
+      "excelFam": [
+        "BUTTERFLY SP 75/170"
+      ],
+      "note": null
+    },
+    {
+      "slug": "butterfly-tk",
+      "title": "Butterfly TK",
+      "url": "https://prosogutma.com/urun/butterfly-tk/",
+      "variantsOnSite": 0,
+      "modelKodSample": "BUTTERFLY TK",
+      "catalogRows": 1,
+      "pricedRows": 0,
+      "excelFam": null,
+      "note": "Excel'de TK serisi yok"
+    },
+    {
+      "slug": "cobra",
+      "title": "Cobra",
+      "url": "https://prosogutma.com/urun/cobra/",
+      "variantsOnSite": 0,
+      "modelKodSample": "COBRA 800 FG/CB",
+      "catalogRows": 7,
+      "pricedRows": 7,
+      "excelFam": [
+        "COBRA 800-900 FG/CB-OF"
+      ],
+      "note": null
+    },
+    {
+      "slug": "cobra-tower",
+      "title": "Cobra Tower",
+      "url": "https://prosogutma.com/urun/cobra-tower/",
+      "variantsOnSite": 0,
+      "modelKodSample": "COBRA TOWER 800 FG/CB",
+      "catalogRows": 2,
+      "pricedRows": 2,
+      "excelFam": [
+        "COBRA TOWER 800-900 FG/CB-OF UPRIGHT"
+      ],
+      "note": null
+    },
+    {
+      "slug": "crab",
+      "title": "Crab",
+      "url": "https://prosogutma.com/urun/crab/",
+      "variantsOnSite": 0,
+      "modelKodSample": "CRAB 800/1050",
+      "catalogRows": 1,
+      "pricedRows": 1,
+      "excelFam": [
+        "CRAB 800/1050"
+      ],
+      "note": null
+    },
+    {
+      "slug": "cift-rejimli-merkezi-sogutma",
+      "title": "Çift Rejimli Merkezi Soğutma",
+      "url": "https://prosogutma.com/urun/cift-rejimli-merkezi-sogutma/",
+      "variantsOnSite": 0,
+      "modelKodSample": "CIFT REJIMLI",
+      "catalogRows": 1,
+      "pricedRows": 0,
+      "excelFam": null,
+      "note": "Excel'de yok — sistem ürünü"
+    },
+    {
+      "slug": "dolphin-is",
+      "title": "Dolphin IS",
+      "url": "https://prosogutma.com/urun/dolphin-is/",
+      "variantsOnSite": 0,
+      "modelKodSample": "DOLPHIN IS G20/110",
+      "catalogRows": 3,
+      "pricedRows": 3,
+      "excelFam": [
+        "DOLPHIN IS G20/110 SINGLE"
+      ],
+      "note": null
+    },
+    {
+      "slug": "dolphin-wa",
+      "title": "Dolphin WA",
+      "url": "https://prosogutma.com/urun/dolphin-wa/",
+      "variantsOnSite": 0,
+      "modelKodSample": "DOLPHIN WA G50/110",
+      "catalogRows": 3,
+      "pricedRows": 3,
+      "excelFam": [
+        "DOLPHIN WA G50/110"
+      ],
+      "note": null
+    },
+    {
+      "slug": "dragon",
+      "title": "Dragon",
+      "url": "https://prosogutma.com/urun/dragon/",
+      "variantsOnSite": 0,
+      "modelKodSample": "DRAGON 75/205",
+      "catalogRows": 1,
+      "pricedRows": 1,
+      "excelFam": [
+        "DRAGON 75/205 2D"
+      ],
+      "note": null
+    },
+    {
+      "slug": "endu%cc%88striyel-sog%cc%86utma-sistemi",
+      "title": "Endüstriyel Soğutma Sistemi",
+      "url": "https://prosogutma.com/urun/endu%cc%88striyel-sog%cc%86utma-sistemi/",
+      "variantsOnSite": 0,
+      "modelKodSample": "ENDUSTRIYEL SOGUTMA",
+      "catalogRows": 1,
+      "pricedRows": 0,
+      "excelFam": null,
+      "note": "Excel'de yok"
+    },
+    {
+      "slug": "falcon",
+      "title": "Falcon",
+      "url": "https://prosogutma.com/urun/falcon/",
+      "variantsOnSite": 192,
+      "modelKodSample": "FALCON DP/110",
+      "catalogRows": 192,
+      "pricedRows": 192,
+      "excelFam": null,
+      "note": null
+    },
+    {
+      "slug": "falcon-plug-in",
+      "title": "Falcon Plug-in",
+      "url": "https://prosogutma.com/urun/falcon-plug-in/",
+      "variantsOnSite": 16,
+      "modelKodSample": "FALCON DP/SLD/100/150",
+      "catalogRows": 16,
+      "pricedRows": 16,
+      "excelFam": null,
+      "note": "Excel'de PLG ayrı satır yok"
+    },
+    {
+      "slug": "falcon-sld",
+      "title": "Falcon SLD",
+      "url": "https://prosogutma.com/urun/falcon-sld/",
+      "variantsOnSite": 128,
+      "modelKodSample": "FALCON DP/110",
+      "catalogRows": 128,
+      "pricedRows": 128,
+      "excelFam": null,
+      "note": null
+    },
+    {
+      "slug": "firefly-br",
+      "title": "Firefly BR",
+      "url": "https://prosogutma.com/urun/firefly-br/",
+      "variantsOnSite": 0,
+      "modelKodSample": "FIREFLY BR 75/130",
+      "catalogRows": 1,
+      "pricedRows": 0,
+      "excelFam": [
+        "FIREFLY BR 75/130"
+      ],
+      "note": null
+    },
+    {
+      "slug": "firefly-corners",
+      "title": "Firefly Corners",
+      "url": "https://prosogutma.com/urun/firefly-corners/",
+      "variantsOnSite": 0,
+      "modelKodSample": "FIREFLY PR 75/130/OC90",
+      "catalogRows": 1,
+      "pricedRows": 1,
+      "excelFam": [
+        "FIREFLY PR 75/130/OC90"
+      ],
+      "note": null
+    },
+    {
+      "slug": "firefly-pn",
+      "title": "Firefly PN",
+      "url": "https://prosogutma.com/urun/firefly-pn/",
+      "variantsOnSite": 0,
+      "modelKodSample": "FIREFLY PN 75/130",
+      "catalogRows": 1,
+      "pricedRows": 0,
+      "excelFam": [
+        "FIREFLY PN 75/130"
+      ],
+      "note": null
+    },
+    {
+      "slug": "firefly-pr",
+      "title": "Firefly PR",
+      "url": "https://prosogutma.com/urun/firefly-pr/",
+      "variantsOnSite": 0,
+      "modelKodSample": "FIREFLY PR 75/130",
+      "catalogRows": 2,
+      "pricedRows": 2,
+      "excelFam": [
+        "FIREFLY PR 75/130"
+      ],
+      "note": null
+    },
+    {
+      "slug": "flamingo",
+      "title": "Flamingo",
+      "url": "https://prosogutma.com/urun/flamingo/",
+      "variantsOnSite": 0,
+      "modelKodSample": "FLAMINGO",
+      "catalogRows": 1,
+      "pricedRows": 0,
+      "excelFam": null,
+      "note": "Excel'de yok"
+    },
+    {
+      "slug": "fox",
+      "title": "Fox",
+      "url": "https://prosogutma.com/urun/fox/",
+      "variantsOnSite": 0,
+      "modelKodSample": "FOX 90/117",
+      "catalogRows": 4,
+      "pricedRows": 4,
+      "excelFam": [
+        "FOX 90/117 PI"
+      ],
+      "note": null
+    },
+    {
+      "slug": "iguana",
+      "title": "Iguana",
+      "url": "https://prosogutma.com/urun/iguana/",
+      "variantsOnSite": 0,
+      "modelKodSample": "IGUANA 75/205",
+      "catalogRows": 1,
+      "pricedRows": 1,
+      "excelFam": [
+        "IGUANA 75/205 2D"
+      ],
+      "note": null
+    },
+    {
+      "slug": "kangaroo",
+      "title": "Kangaroo",
+      "url": "https://prosogutma.com/urun/kangaroo/",
+      "variantsOnSite": 0,
+      "modelKodSample": "KANGAROO 800 CG/CB",
+      "catalogRows": 7,
+      "pricedRows": 7,
+      "excelFam": [
+        "KANGAROO 800 CG/CB"
+      ],
+      "note": null
+    },
+    {
+      "slug": "leopard",
+      "title": "Leopard",
+      "url": "https://prosogutma.com/urun/leopard/",
+      "variantsOnSite": 0,
+      "modelKodSample": "LEOPARD 800 FG/CB",
+      "catalogRows": 7,
+      "pricedRows": 7,
+      "excelFam": [
+        "LEOPARD 800 FG/CB"
+      ],
+      "note": null
+    },
+    {
+      "slug": "lion",
+      "title": "Lion",
+      "url": "https://prosogutma.com/urun/lion/",
+      "variantsOnSite": 64,
+      "modelKodSample": "LION V2 FV/110",
+      "catalogRows": 64,
+      "pricedRows": 64,
+      "excelFam": null,
+      "note": null
+    },
+    {
+      "slug": "lion-cc",
+      "title": "Lion CC",
+      "url": "https://prosogutma.com/urun/lion-cc/",
+      "variantsOnSite": 0,
+      "modelKodSample": "LION CC",
+      "catalogRows": 1,
+      "pricedRows": 0,
+      "excelFam": null,
+      "note": "Excel'de CC serisi yok"
+    },
+    {
+      "slug": "lion-dgd",
+      "title": "Lion DGD",
+      "url": "https://prosogutma.com/urun/lion-dgd/",
+      "variantsOnSite": 4,
+      "modelKodSample": "LION DP 75/205 DGD",
+      "catalogRows": 4,
+      "pricedRows": 4,
+      "excelFam": [
+        "LION DP 75/205 DGD"
+      ],
+      "note": "Landing — detay varyantlar lion sayfasında"
+    },
+    {
+      "slug": "lion-fva",
+      "title": "Lion FVA",
+      "url": "https://prosogutma.com/urun/lion-fva/",
+      "variantsOnSite": 8,
+      "modelKodSample": "LION FVA",
+      "catalogRows": 8,
+      "pricedRows": 0,
+      "excelFam": null,
+      "note": "Excel'de FVA serisi yok"
+    },
+    {
+      "slug": "lion-lgd",
+      "title": "Lion LGD",
+      "url": "https://prosogutma.com/urun/lion-lgd/",
+      "variantsOnSite": 4,
+      "modelKodSample": "LION DP 75/205 LGD",
+      "catalogRows": 4,
+      "pricedRows": 4,
+      "excelFam": [
+        "LION DP 75/205 LGD"
+      ],
+      "note": "Landing"
+    },
+    {
+      "slug": "lion-max",
+      "title": "Lion MAX",
+      "url": "https://prosogutma.com/urun/lion-max/",
+      "variantsOnSite": 4,
+      "modelKodSample": "LION MAX",
+      "catalogRows": 4,
+      "pricedRows": 0,
+      "excelFam": null,
+      "note": "Excel'de MAX serisi yok"
+    },
+    {
+      "slug": "lion-pgd",
+      "title": "Lion PGD",
+      "url": "https://prosogutma.com/urun/lion-pgd/",
+      "variantsOnSite": 4,
+      "modelKodSample": "LION DP 75/205 PGD",
+      "catalogRows": 4,
+      "pricedRows": 4,
+      "excelFam": [
+        "LION DP 75/205 PGD"
+      ],
+      "note": "Landing"
+    },
+    {
+      "slug": "lion-retrobanco",
+      "title": "Lion Retrobanco",
+      "url": "https://prosogutma.com/urun/lion-retrobanco/",
+      "variantsOnSite": 4,
+      "modelKodSample": "LION V2 DP/75/1500",
+      "catalogRows": 4,
+      "pricedRows": 0,
+      "excelFam": null,
+      "note": null
+    },
+    {
+      "slug": "lion-retrobanco-dgd",
+      "title": "Lion Retrobanco DGD",
+      "url": "https://prosogutma.com/urun/lion-retrobanco-dgd/",
+      "variantsOnSite": 4,
+      "modelKodSample": "LION V2 DP/75/1500",
+      "catalogRows": 4,
+      "pricedRows": 0,
+      "excelFam": null,
+      "note": null
+    },
+    {
+      "slug": "lion-sgd",
+      "title": "Lion SGD",
+      "url": "https://prosogutma.com/urun/lion-sgd/",
+      "variantsOnSite": 4,
+      "modelKodSample": "LION DP 75/205 SGD",
+      "catalogRows": 4,
+      "pricedRows": 4,
+      "excelFam": [
+        "LION DP 75/205 SGD"
+      ],
+      "note": "Landing"
+    },
+    {
+      "slug": "lion-sld",
+      "title": "Lion SLD",
+      "url": "https://prosogutma.com/urun/lion-sld/",
+      "variantsOnSite": 64,
+      "modelKodSample": "LION V2 DP SLD/90",
+      "catalogRows": 64,
+      "pricedRows": 64,
+      "excelFam": null,
+      "note": null
+    },
+    {
+      "slug": "lion-tgd",
+      "title": "Lion TGD",
+      "url": "https://prosogutma.com/urun/lion-tgd/",
+      "variantsOnSite": 64,
+      "modelKodSample": "LION DP TGD/110",
+      "catalogRows": 64,
+      "pricedRows": 64,
+      "excelFam": null,
+      "note": null
+    },
+    {
+      "slug": "octopus",
+      "title": "Octopus",
+      "url": "https://prosogutma.com/urun/octopus/",
+      "variantsOnSite": 0,
+      "modelKodSample": "OCTOPUS 110",
+      "catalogRows": 3,
+      "pricedRows": 3,
+      "excelFam": [
+        "OCTOPUS 110"
+      ],
+      "note": null
+    },
+    {
+      "slug": "octopus-sld",
+      "title": "Octopus SLD",
+      "url": "https://prosogutma.com/urun/octopus-sld/",
+      "variantsOnSite": 0,
+      "modelKodSample": "OCTOPUS 110 SLD",
+      "catalogRows": 1,
+      "pricedRows": 0,
+      "excelFam": null,
+      "note": "Excel'de OCTOPUS SLD yok"
+    },
+    {
+      "slug": "orca",
+      "title": "Orca",
+      "url": "https://prosogutma.com/urun/orca/",
+      "variantsOnSite": 0,
+      "modelKodSample": "ORCA",
+      "catalogRows": 1,
+      "pricedRows": 0,
+      "excelFam": null,
+      "note": "Excel'de ORCA yok"
+    },
+    {
+      "slug": "orca-plugin",
+      "title": "Orca Plugin",
+      "url": "https://prosogutma.com/urun/orca-plugin/",
+      "variantsOnSite": 3,
+      "modelKodSample": "ORCA PLG",
+      "catalogRows": 3,
+      "pricedRows": 0,
+      "excelFam": null,
+      "note": "Excel'de ORCA plug-in yok"
+    },
+    {
+      "slug": "panther",
+      "title": "Panther",
+      "url": "https://prosogutma.com/urun/panther/",
+      "variantsOnSite": 0,
+      "modelKodSample": "PANTHER DP 75/205",
+      "catalogRows": 4,
+      "pricedRows": 4,
+      "excelFam": [
+        "PANTHER DP 75/205"
+      ],
+      "note": null
+    },
+    {
+      "slug": "panther-dgd-sld",
+      "title": "Panther DGD-SLD",
+      "url": "https://prosogutma.com/urun/panther-dgd-sld/",
+      "variantsOnSite": 0,
+      "modelKodSample": "PANTHER DP 75/205 DGD",
+      "catalogRows": 1,
+      "pricedRows": 0,
+      "excelFam": null,
+      "note": "Excel'de DGD+SLD kombinasyonu yok"
+    },
+    {
+      "slug": "panther-sgd",
+      "title": "Panther SGD",
+      "url": "https://prosogutma.com/urun/panther-sgd/",
+      "variantsOnSite": 0,
+      "modelKodSample": "PANTHER DP 75/205 SGD",
+      "catalogRows": 4,
+      "pricedRows": 4,
+      "excelFam": [
+        "PANTHER DP 75/205 SGD"
+      ],
+      "note": null
+    },
+    {
+      "slug": "penguin",
+      "title": "Penguin",
+      "url": "https://prosogutma.com/urun/penguin/",
+      "variantsOnSite": 0,
+      "modelKodSample": "PENGUIN",
+      "catalogRows": 1,
+      "pricedRows": 0,
+      "excelFam": null,
+      "note": "Excel'de yok"
+    },
+    {
+      "slug": "phoenix",
+      "title": "Phoenix",
+      "url": "https://prosogutma.com/urun/phoenix/",
+      "variantsOnSite": 0,
+      "modelKodSample": "PHOENIX DP 75/140",
+      "catalogRows": 3,
+      "pricedRows": 3,
+      "excelFam": [
+        "PHOENIX DP 75-90/140"
+      ],
+      "note": null
+    },
+    {
+      "slug": "puma",
+      "title": "Puma",
+      "url": "https://prosogutma.com/urun/puma/",
+      "variantsOnSite": 0,
+      "modelKodSample": "PUMA DP 80/205",
+      "catalogRows": 4,
+      "pricedRows": 4,
+      "excelFam": [
+        "PUMA DP 80/205"
+      ],
+      "note": null
+    },
+    {
+      "slug": "puma-dgd-sld",
+      "title": "Puma DGD-SLD",
+      "url": "https://prosogutma.com/urun/puma-dgd-sld/",
+      "variantsOnSite": 0,
+      "modelKodSample": "PUMA DP 80/205 DGD",
+      "catalogRows": 1,
+      "pricedRows": 0,
+      "excelFam": null,
+      "note": "Excel'de DGD+SLD kombinasyonu yok"
+    },
+    {
+      "slug": "puma-sgd",
+      "title": "Puma SGD",
+      "url": "https://prosogutma.com/urun/puma-sgd/",
+      "variantsOnSite": 0,
+      "modelKodSample": "PUMA DP 80/205 SGD",
+      "catalogRows": 4,
+      "pricedRows": 4,
+      "excelFam": [
+        "PUMA DP 80/205 SGD"
+      ],
+      "note": null
+    },
+    {
+      "slug": "quokka",
+      "title": "Quokka",
+      "url": "https://prosogutma.com/urun/quokka/",
+      "variantsOnSite": 0,
+      "modelKodSample": "QUOKKA",
+      "catalogRows": 10,
+      "pricedRows": 10,
+      "excelFam": [
+        "QUOKKA"
+      ],
+      "note": null
+    },
+    {
+      "slug": "rabbit",
+      "title": "Rabbit",
+      "url": "https://prosogutma.com/urun/rabbit/",
+      "variantsOnSite": 0,
+      "modelKodSample": "RABBIT PR/PR 90/145",
+      "catalogRows": 3,
+      "pricedRows": 3,
+      "excelFam": [
+        "RABBIT PR/PR 90/145"
+      ],
+      "note": null
+    },
+    {
+      "slug": "rhino",
+      "title": "Rhino",
+      "url": "https://prosogutma.com/urun/rhino/",
+      "variantsOnSite": 8,
+      "modelKodSample": "RHINO 125/160",
+      "catalogRows": 8,
+      "pricedRows": 8,
+      "excelFam": [
+        "RHINO 125/160"
+      ],
+      "note": null
+    },
+    {
+      "slug": "scorpion",
+      "title": "Scorpion",
+      "url": "https://prosogutma.com/urun/scorpion/",
+      "variantsOnSite": 0,
+      "modelKodSample": "SCORPION 75/205",
+      "catalogRows": 1,
+      "pricedRows": 1,
+      "excelFam": [
+        "SCORPION 75/205 1D UPRIGHT"
+      ],
+      "note": null
+    },
+    {
+      "slug": "scorpion-max",
+      "title": "Scorpion MAX",
+      "url": "https://prosogutma.com/urun/scorpion-max/",
+      "variantsOnSite": 0,
+      "modelKodSample": "SCORPION MAX",
+      "catalogRows": 1,
+      "pricedRows": 0,
+      "excelFam": null,
+      "note": "Excel'de MAX serisi yok"
+    },
+    {
+      "slug": "soguk-hava-deposu",
+      "title": "Soğuk Hava Deposu",
+      "url": "https://prosogutma.com/urun/soguk-hava-deposu/",
+      "variantsOnSite": 0,
+      "modelKodSample": "SOGUK HAVA DEPOSU",
+      "catalogRows": 1,
+      "pricedRows": 0,
+      "excelFam": null,
+      "note": "Excel'de yok — ayrı fiyat listesi"
+    },
+    {
+      "slug": "spider",
+      "title": "Spider",
+      "url": "https://prosogutma.com/urun/spider/",
+      "variantsOnSite": 0,
+      "modelKodSample": "SPIDER 800/1050",
+      "catalogRows": 1,
+      "pricedRows": 1,
+      "excelFam": [
+        "SPIDER 800/1050"
+      ],
+      "note": null
+    },
+    {
+      "slug": "split-sogutma-sistemi",
+      "title": "Split Soğutma Sistemi",
+      "url": "https://prosogutma.com/urun/split-sogutma-sistemi/",
+      "variantsOnSite": 0,
+      "modelKodSample": "SPLIT SOGUTMA",
+      "catalogRows": 1,
+      "pricedRows": 0,
+      "excelFam": null,
+      "note": "Excel'de yok"
+    },
+    {
+      "slug": "tiger-cg",
+      "title": "Tiger CG",
+      "url": "https://prosogutma.com/urun/tiger-cg/",
+      "variantsOnSite": 0,
+      "modelKodSample": "TIGER 800 CG/CB",
+      "catalogRows": 7,
+      "pricedRows": 7,
+      "excelFam": [
+        "TIGER 800 CG/CB - OF"
+      ],
+      "note": null
+    },
+    {
+      "slug": "tiger-dp",
+      "title": "Tiger DP",
+      "url": "https://prosogutma.com/urun/tiger-dp/",
+      "variantsOnSite": 0,
+      "modelKodSample": "TIGER 800 DP/OF",
+      "catalogRows": 7,
+      "pricedRows": 7,
+      "excelFam": [
+        "TIGER 800 DP/OF"
+      ],
+      "note": null
+    },
+    {
+      "slug": "tiger-fg",
+      "title": "Tiger FG",
+      "url": "https://prosogutma.com/urun/tiger-fg/",
+      "variantsOnSite": 0,
+      "modelKodSample": "TIGER 800 FG/CB",
+      "catalogRows": 7,
+      "pricedRows": 7,
+      "excelFam": [
+        "TIGER 800 FG/CB - OF"
+      ],
+      "note": null
+    },
+    {
+      "slug": "tiger-ifg",
+      "title": "Tiger IFG",
+      "url": "https://prosogutma.com/urun/tiger-ifg/",
+      "variantsOnSite": 0,
+      "modelKodSample": "TIGER 800 IFG/CB",
+      "catalogRows": 1,
+      "pricedRows": 0,
+      "excelFam": null,
+      "note": "Excel'de IFG satırı yok"
+    },
+    {
+      "slug": "tiger-wfg",
+      "title": "Tiger WFG",
+      "url": "https://prosogutma.com/urun/tiger-wfg/",
+      "variantsOnSite": 0,
+      "modelKodSample": "TIGER 800 WFG/CB",
+      "catalogRows": 7,
+      "pricedRows": 7,
+      "excelFam": [
+        "TIGER 800 WFG/CB"
+      ],
+      "note": null
+    },
+    {
+      "slug": "whale",
+      "title": "Whale",
+      "url": "https://prosogutma.com/urun/whale/",
+      "variantsOnSite": 0,
+      "modelKodSample": "WHALE G50/150",
+      "catalogRows": 4,
+      "pricedRows": 4,
+      "excelFam": [
+        "WHALE G50/150 DOUBLE"
+      ],
+      "note": null
+    }
+  ],
+  "matchedSamples": [
+    {
+      "sku": "EQ-BUTTERFLY-BM-EQ1",
+      "slug": "butterfly-bm",
+      "prosoModelKod": "BUTTERFLY BM 75/130",
+      "width": 625,
+      "listEur": 1688.4,
+      "sheet": "PASTRY AND BAKERY CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/butterfly-bm/"
+    },
+    {
+      "sku": "EQ-BUTTERFLY-BM-EQ2",
+      "slug": "butterfly-bm",
+      "prosoModelKod": "BUTTERFLY BM 75/130",
+      "width": 937,
+      "listEur": 1876,
+      "sheet": "PASTRY AND BAKERY CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/butterfly-bm/"
+    },
+    {
+      "sku": "EQ-BUTTERFLY-BM-EQ3",
+      "slug": "butterfly-bm",
+      "prosoModelKod": "BUTTERFLY BM 75/130",
+      "width": 1250,
+      "listEur": 2497,
+      "sheet": "PASTRY AND BAKERY CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/butterfly-bm/"
+    },
+    {
+      "sku": "EQ-BUTTERFLY-BR-EQ1",
+      "slug": "butterfly-br",
+      "prosoModelKod": "BUTTERFLY BR 75/130",
+      "width": 937,
+      "listEur": 1165,
+      "sheet": "PASTRY AND BAKERY CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/butterfly-br/"
+    },
+    {
+      "sku": "EQ-BUTTERFLY-BR-EQ2",
+      "slug": "butterfly-br",
+      "prosoModelKod": "BUTTERFLY BR 75/130",
+      "width": 1250,
+      "listEur": 1271,
+      "sheet": "PASTRY AND BAKERY CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/butterfly-br/"
+    },
+    {
+      "sku": "EQ-BUTTERFLY-CG-PR-PN-HT-EQ1",
+      "slug": "butterfly-cg-pr-pn-ht",
+      "prosoModelKod": "BUTTERFLY PR/CG/75/130",
+      "width": 625,
+      "listEur": 2911,
+      "sheet": "PASTRY AND BAKERY CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/butterfly-cg-pr-pn-ht/"
+    },
+    {
+      "sku": "EQ-BUTTERFLY-CG-PR-PN-HT-EQ3",
+      "slug": "butterfly-cg-pr-pn-ht",
+      "prosoModelKod": "BUTTERFLY PR/CG/110/140",
+      "width": 625,
+      "listEur": 3375,
+      "sheet": "PASTRY AND BAKERY CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/butterfly-cg-pr-pn-ht/"
+    },
+    {
+      "sku": "EQ-BUTTERFLY-CG-PR-PN-HT-EQ4",
+      "slug": "butterfly-cg-pr-pn-ht",
+      "prosoModelKod": "BUTTERFLY PR/CG/75/130",
+      "width": 937,
+      "listEur": 2911,
+      "sheet": "PASTRY AND BAKERY CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/butterfly-cg-pr-pn-ht/"
+    },
+    {
+      "sku": "EQ-BUTTERFLY-CG-PR-PN-HT-EQ6",
+      "slug": "butterfly-cg-pr-pn-ht",
+      "prosoModelKod": "BUTTERFLY PR/CG/110/140",
+      "width": 937,
+      "listEur": 3375,
+      "sheet": "PASTRY AND BAKERY CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/butterfly-cg-pr-pn-ht/"
+    },
+    {
+      "sku": "EQ-BUTTERFLY-CG-PR-PN-HT-EQ7",
+      "slug": "butterfly-cg-pr-pn-ht",
+      "prosoModelKod": "BUTTERFLY PR/CG/75/130",
+      "width": 1250,
+      "listEur": 3221,
+      "sheet": "PASTRY AND BAKERY CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/butterfly-cg-pr-pn-ht/"
+    },
+    {
+      "sku": "EQ-BUTTERFLY-CG-PR-PN-HT-EQ9",
+      "slug": "butterfly-cg-pr-pn-ht",
+      "prosoModelKod": "BUTTERFLY PR/CG/110/140",
+      "width": 1250,
+      "listEur": 3375,
+      "sheet": "PASTRY AND BAKERY CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/butterfly-cg-pr-pn-ht/"
+    },
+    {
+      "sku": "EQ-BUTTERFLY-DP-EQ1",
+      "slug": "butterfly-dp",
+      "prosoModelKod": "BUTTERFLY DP/SS 75/130",
+      "width": 937,
+      "listEur": 2911,
+      "sheet": "PASTRY AND BAKERY CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/butterfly-dp/"
+    },
+    {
+      "sku": "EQ-BUTTERFLY-DP-EQ2",
+      "slug": "butterfly-dp",
+      "prosoModelKod": "BUTTERFLY DP/SS 75/130",
+      "width": 1250,
+      "listEur": 3221,
+      "sheet": "PASTRY AND BAKERY CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/butterfly-dp/"
+    },
+    {
+      "sku": "EQ-BUTTERFLY-HP-EQ1",
+      "slug": "butterfly-hp",
+      "prosoModelKod": "BUTTERFLY HP 75/130",
+      "width": 625,
+      "listEur": 1857.2400000000005,
+      "sheet": "PASTRY AND BAKERY CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/butterfly-hp/"
+    },
+    {
+      "sku": "EQ-BUTTERFLY-HP-EQ2",
+      "slug": "butterfly-hp",
+      "prosoModelKod": "BUTTERFLY HP 75/130",
+      "width": 937,
+      "listEur": 2063.6000000000004,
+      "sheet": "PASTRY AND BAKERY CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/butterfly-hp/"
+    },
+    {
+      "sku": "EQ-BUTTERFLY-HP-EQ3",
+      "slug": "butterfly-hp",
+      "prosoModelKod": "BUTTERFLY HP 75/130",
+      "width": 1250,
+      "listEur": 2746.7000000000003,
+      "sheet": "PASTRY AND BAKERY CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/butterfly-hp/"
+    },
+    {
+      "sku": "EQ-BUTTERFLY-MFT-EQ1",
+      "slug": "butterfly-mft",
+      "prosoModelKod": "BUTTERFLY MFT PR 75/150",
+      "width": 625,
+      "listEur": 3114,
+      "sheet": "PASTRY AND BAKERY CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/butterfly-mft/"
+    },
+    {
+      "sku": "EQ-BUTTERFLY-MFT-EQ2",
+      "slug": "butterfly-mft",
+      "prosoModelKod": "BUTTERFLY MFT PR 75/150",
+      "width": 937,
+      "listEur": 3460,
+      "sheet": "PASTRY AND BAKERY CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/butterfly-mft/"
+    },
+    {
+      "sku": "EQ-BUTTERFLY-MFT-EQ3",
+      "slug": "butterfly-mft",
+      "prosoModelKod": "BUTTERFLY MFT PR 75/150",
+      "width": 1250,
+      "listEur": 3900,
+      "sheet": "PASTRY AND BAKERY CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/butterfly-mft/"
+    },
+    {
+      "sku": "EQ-BUTTERFLY-MFT-EQ4",
+      "slug": "butterfly-mft",
+      "prosoModelKod": "BUTTERFLY MFT PR 75/150",
+      "width": 1875,
+      "listEur": 6923.692636072572,
+      "sheet": "PASTRY AND BAKERY CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/butterfly-mft/"
+    },
+    {
+      "sku": "EQ-BUTTERFLY-MFT-EQ5",
+      "slug": "butterfly-mft",
+      "prosoModelKod": "BUTTERFLY MFT PR 75/150",
+      "width": 2500,
+      "listEur": 7800,
+      "sheet": "PASTRY AND BAKERY CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/butterfly-mft/"
+    },
+    {
+      "sku": "EQ-BUTTERFLY-PR-EQ1",
+      "slug": "butterfly-pr",
+      "prosoModelKod": "BUTTERFLY PR 75/130",
+      "width": 937,
+      "listEur": 2911,
+      "sheet": "PASTRY AND BAKERY CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/butterfly-pr/"
+    },
+    {
+      "sku": "EQ-BUTTERFLY-PR-EQ2",
+      "slug": "butterfly-pr",
+      "prosoModelKod": "BUTTERFLY PR 75/130",
+      "width": 1250,
+      "listEur": 3221,
+      "sheet": "PASTRY AND BAKERY CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/butterfly-pr/"
+    },
+    {
+      "sku": "EQ-BUTTERFLY-SB-EQ1",
+      "slug": "butterfly-sb",
+      "prosoModelKod": "BUTTERFLY SB 75/130",
+      "width": 625,
+      "listEur": 2563.2000000000003,
+      "sheet": "PASTRY AND BAKERY CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/butterfly-sb/"
+    },
+    {
+      "sku": "EQ-BUTTERFLY-SB-EQ2",
+      "slug": "butterfly-sb",
+      "prosoModelKod": "BUTTERFLY SB 75/130",
+      "width": 937,
+      "listEur": 2848,
+      "sheet": "PASTRY AND BAKERY CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/butterfly-sb/"
+    },
+    {
+      "sku": "EQ-BUTTERFLY-SB-EQ3",
+      "slug": "butterfly-sb",
+      "prosoModelKod": "BUTTERFLY SB 75/130",
+      "width": 1250,
+      "listEur": 3517,
+      "sheet": "PASTRY AND BAKERY CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/butterfly-sb/"
+    },
+    {
+      "sku": "EQ-BUTTERFLY-SP-EQ1",
+      "slug": "butterfly-sp",
+      "prosoModelKod": "BUTTERFLY SP 75/170",
+      "width": 625,
+      "listEur": 3275.1,
+      "sheet": "PASTRY AND BAKERY CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/butterfly-sp/"
+    },
+    {
+      "sku": "EQ-BUTTERFLY-SP-EQ2",
+      "slug": "butterfly-sp",
+      "prosoModelKod": "BUTTERFLY SP 75/170",
+      "width": 937,
+      "listEur": 3639,
+      "sheet": "PASTRY AND BAKERY CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/butterfly-sp/"
+    },
+    {
+      "sku": "EQ-BUTTERFLY-SP-EQ3",
+      "slug": "butterfly-sp",
+      "prosoModelKod": "BUTTERFLY SP 75/170",
+      "width": 1250,
+      "listEur": 4026,
+      "sheet": "PASTRY AND BAKERY CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/butterfly-sp/"
+    },
+    {
+      "sku": "EQ-COBRA-EQ1",
+      "slug": "cobra",
+      "prosoModelKod": "COBRA 800 FG/CB",
+      "width": 937,
+      "listEur": 4101,
+      "sheet": "MEAT DELI CHEESE SALAD CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/cobra/"
+    },
+    {
+      "sku": "EQ-COBRA-EQ2",
+      "slug": "cobra",
+      "prosoModelKod": "COBRA 800 FG/CB",
+      "width": 1250,
+      "listEur": 4348,
+      "sheet": "MEAT DELI CHEESE SALAD CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/cobra/"
+    },
+    {
+      "sku": "EQ-COBRA-EQ3",
+      "slug": "cobra",
+      "prosoModelKod": "COBRA 800 FG/CB",
+      "width": 1875,
+      "listEur": 6234,
+      "sheet": "MEAT DELI CHEESE SALAD CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/cobra/"
+    },
+    {
+      "sku": "EQ-COBRA-EQ4",
+      "slug": "cobra",
+      "prosoModelKod": "COBRA 800 FG/CB",
+      "width": 2500,
+      "listEur": 7897,
+      "sheet": "MEAT DELI CHEESE SALAD CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/cobra/"
+    },
+    {
+      "sku": "EQ-COBRA-EQ5",
+      "slug": "cobra",
+      "prosoModelKod": "COBRA 800 FG/CB",
+      "width": 2812,
+      "listEur": 8886.30879999999,
+      "sheet": "MEAT DELI CHEESE SALAD CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/cobra/"
+    },
+    {
+      "sku": "EQ-COBRA-EQ6",
+      "slug": "cobra",
+      "prosoModelKod": "COBRA 800 FG/CB",
+      "width": 3125,
+      "listEur": 9873.75,
+      "sheet": "MEAT DELI CHEESE SALAD CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/cobra/"
+    },
+    {
+      "sku": "EQ-COBRA-EQ7",
+      "slug": "cobra",
+      "prosoModelKod": "COBRA 800 FG/CB",
+      "width": 3750,
+      "listEur": 10753,
+      "sheet": "MEAT DELI CHEESE SALAD CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/cobra/"
+    },
+    {
+      "sku": "EQ-COBRA-TOWER-EQ1",
+      "slug": "cobra-tower",
+      "prosoModelKod": "COBRA TOWER 800 FG/CB",
+      "width": 937,
+      "listEur": 8176,
+      "sheet": "MEAT DELI CHEESE SALAD CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/cobra-tower/"
+    },
+    {
+      "sku": "EQ-COBRA-TOWER-EQ2",
+      "slug": "cobra-tower",
+      "prosoModelKod": "COBRA TOWER 800 FG/CB",
+      "width": 1250,
+      "listEur": 8663,
+      "sheet": "MEAT DELI CHEESE SALAD CASES",
+      "prosogutmaUrl": "https://prosogutma.com/urun/cobra-tower/"
+    },
+    {
+      "sku": "EQ-CRAB-EQ1",
+      "slug": "crab",
+      "prosoModelKod": "CRAB 800/1050",
+      "width": 1050,
+      "listEur": 2330,
+      "sheet": "PROMOTIONAL ISLANDS",
+      "prosogutmaUrl": "https://prosogutma.com/urun/crab/"
+    },
+    {
+      "sku": "EQ-DOLPHIN-IS-EQ1",
+      "slug": "dolphin-is",
+      "prosoModelKod": "DOLPHIN IS G20/110",
+      "width": 1875,
+      "listEur": 3178,
+      "sheet": "ISLAND FREEZERS",
+      "prosogutmaUrl": "https://prosogutma.com/urun/dolphin-is/"
+    }
+  ],
+  "unmatchedSite": [
+    {
+      "sku": "EQ-BARRACUDA-FROZEN-EQ1",
+      "slug": "barracuda-frozen",
+      "prosoModelKod": "BARRACUDA",
+      "note": "Excel'de yok",
+      "prosogutmaUrl": "https://prosogutma.com/urun/barracuda-frozen/"
+    },
+    {
+      "sku": "EQ-BARRACUDA-FROZEN-EQ2",
+      "slug": "barracuda-frozen",
+      "prosoModelKod": "BARRACUDA",
+      "note": "Excel'de yok",
+      "prosogutmaUrl": "https://prosogutma.com/urun/barracuda-frozen/"
+    },
+    {
+      "sku": "EQ-BARRACUDA-FROZEN-EQ3",
+      "slug": "barracuda-frozen",
+      "prosoModelKod": "BARRACUDA",
+      "note": "Excel'de yok",
+      "prosogutmaUrl": "https://prosogutma.com/urun/barracuda-frozen/"
+    },
+    {
+      "sku": "EQ-BUFFALO-EQ1",
+      "slug": "buffalo",
+      "prosoModelKod": "BUFFALO",
+      "note": "Excel'de yok",
+      "prosogutmaUrl": "https://prosogutma.com/urun/buffalo/"
+    },
+    {
+      "sku": "EQ-BUFFALO-EQ2",
+      "slug": "buffalo",
+      "prosoModelKod": "BUFFALO",
+      "note": "Excel'de yok",
+      "prosogutmaUrl": "https://prosogutma.com/urun/buffalo/"
+    },
+    {
+      "sku": "EQ-BUFFALO-EQ3",
+      "slug": "buffalo",
+      "prosoModelKod": "BUFFALO",
+      "note": "Excel'de yok",
+      "prosogutmaUrl": "https://prosogutma.com/urun/buffalo/"
+    },
+    {
+      "sku": "EQ-BUFFALO-EQ4",
+      "slug": "buffalo",
+      "prosoModelKod": "BUFFALO",
+      "note": "Excel'de yok",
+      "prosogutmaUrl": "https://prosogutma.com/urun/buffalo/"
+    },
+    {
+      "sku": "EQ-BUFFALO-EQ5",
+      "slug": "buffalo",
+      "prosoModelKod": "BUFFALO",
+      "note": "Excel'de yok",
+      "prosogutmaUrl": "https://prosogutma.com/urun/buffalo/"
+    },
+    {
+      "sku": "EQ-BUFFALO-EQ6",
+      "slug": "buffalo",
+      "prosoModelKod": "BUFFALO",
+      "note": "Excel'de yok",
+      "prosogutmaUrl": "https://prosogutma.com/urun/buffalo/"
+    },
+    {
+      "sku": "EQ-BUTTERFLY-BA-EQ1",
+      "slug": "butterfly-ba",
+      "prosoModelKod": "BUTTERFLY BA 75/130",
+      "note": "Excel'de BA yok (BM/HP var)",
+      "prosogutmaUrl": "https://prosogutma.com/urun/butterfly-ba/"
+    },
+    {
+      "sku": "EQ-BUTTERFLY-CG-PR-PN-HT-EQ2",
+      "slug": "butterfly-cg-pr-pn-ht",
+      "prosoModelKod": "BUTTERFLY PR/CG/90/130",
+      "note": null,
+      "prosogutmaUrl": "https://prosogutma.com/urun/butterfly-cg-pr-pn-ht/"
+    },
+    {
+      "sku": "EQ-BUTTERFLY-CG-PR-PN-HT-EQ5",
+      "slug": "butterfly-cg-pr-pn-ht",
+      "prosoModelKod": "BUTTERFLY PR/CG/90/130",
+      "note": null,
+      "prosogutmaUrl": "https://prosogutma.com/urun/butterfly-cg-pr-pn-ht/"
+    },
+    {
+      "sku": "EQ-BUTTERFLY-CG-PR-PN-HT-EQ8",
+      "slug": "butterfly-cg-pr-pn-ht",
+      "prosoModelKod": "BUTTERFLY PR/CG/90/130",
+      "note": null,
+      "prosogutmaUrl": "https://prosogutma.com/urun/butterfly-cg-pr-pn-ht/"
+    },
+    {
+      "sku": "EQ-BUTTERFLY-DVN-PR-PN-EQ1",
+      "slug": "butterfly-dvn-pr-pn",
+      "prosoModelKod": "BUTTERFLY PR DVN PR - PR SS 75/130",
+      "note": "Excel'de DVN varyantı sınırlı",
+      "prosogutmaUrl": "https://prosogutma.com/urun/butterfly-dvn-pr-pn/"
+    },
+    {
+      "sku": "EQ-BUTTERFLY-PN-EQ1",
+      "slug": "butterfly-pn",
+      "prosoModelKod": "BUTTERFLY PN 75/130",
+      "note": null,
+      "prosogutmaUrl": "https://prosogutma.com/urun/butterfly-pn/"
+    },
+    {
+      "sku": "EQ-BUTTERFLY-TK-EQ1",
+      "slug": "butterfly-tk",
+      "prosoModelKod": "BUTTERFLY TK",
+      "note": "Excel'de TK serisi yok",
+      "prosogutmaUrl": "https://prosogutma.com/urun/butterfly-tk/"
+    },
+    {
+      "sku": "EQ-ÇIFT-REJIMLI-MERKEZI-SOĞUTMA-EQ1",
+      "slug": "cift-rejimli-merkezi-sogutma",
+      "prosoModelKod": "CIFT REJIMLI",
+      "note": "Excel'de yok — sistem ürünü",
+      "prosogutmaUrl": "https://prosogutma.com/urun/cift-rejimli-merkezi-sogutma/"
+    },
+    {
+      "sku": "EQ-ENDU-STRIYEL-SOG-UTMA-SISTEMI-EQ1",
+      "slug": "endu%cc%88striyel-sog%cc%86utma-sistemi",
+      "prosoModelKod": "ENDUSTRIYEL SOGUTMA",
+      "note": "Excel'de yok",
+      "prosogutmaUrl": "https://prosogutma.com/urun/endu%cc%88striyel-sog%cc%86utma-sistemi/"
+    },
+    {
+      "sku": "EQ-FIREFLY-BR-EQ1",
+      "slug": "firefly-br",
+      "prosoModelKod": "FIREFLY BR 75/130",
+      "note": null,
+      "prosogutmaUrl": "https://prosogutma.com/urun/firefly-br/"
+    },
+    {
+      "sku": "EQ-FIREFLY-PN-EQ1",
+      "slug": "firefly-pn",
+      "prosoModelKod": "FIREFLY PN 75/130",
+      "note": null,
+      "prosogutmaUrl": "https://prosogutma.com/urun/firefly-pn/"
+    },
+    {
+      "sku": "EQ-FLAMINGO-EQ1",
+      "slug": "flamingo",
+      "prosoModelKod": "FLAMINGO",
+      "note": "Excel'de yok",
+      "prosogutmaUrl": "https://prosogutma.com/urun/flamingo/"
+    },
+    {
+      "sku": "EQ-LION-CC-EQ1",
+      "slug": "lion-cc",
+      "prosoModelKod": "LION CC",
+      "note": "Excel'de CC serisi yok",
+      "prosogutmaUrl": "https://prosogutma.com/urun/lion-cc/"
+    },
+    {
+      "sku": "EQ-LION-FVA-EQ1",
+      "slug": "lion-fva",
+      "prosoModelKod": "LION FVA",
+      "note": "Excel'de FVA serisi yok",
+      "prosogutmaUrl": "https://prosogutma.com/urun/lion-fva/"
+    },
+    {
+      "sku": "EQ-LION-FVA-EQ2",
+      "slug": "lion-fva",
+      "prosoModelKod": "LION FVA",
+      "note": "Excel'de FVA serisi yok",
+      "prosogutmaUrl": "https://prosogutma.com/urun/lion-fva/"
+    },
+    {
+      "sku": "EQ-LION-FVA-EQ3",
+      "slug": "lion-fva",
+      "prosoModelKod": "LION FVA",
+      "note": "Excel'de FVA serisi yok",
+      "prosogutmaUrl": "https://prosogutma.com/urun/lion-fva/"
+    },
+    {
+      "sku": "EQ-LION-FVA-EQ4",
+      "slug": "lion-fva",
+      "prosoModelKod": "LION FVA",
+      "note": "Excel'de FVA serisi yok",
+      "prosogutmaUrl": "https://prosogutma.com/urun/lion-fva/"
+    },
+    {
+      "sku": "EQ-LION-FVA-EQ5",
+      "slug": "lion-fva",
+      "prosoModelKod": "LION FVA",
+      "note": "Excel'de FVA serisi yok",
+      "prosogutmaUrl": "https://prosogutma.com/urun/lion-fva/"
+    },
+    {
+      "sku": "EQ-LION-FVA-EQ6",
+      "slug": "lion-fva",
+      "prosoModelKod": "LION FVA",
+      "note": "Excel'de FVA serisi yok",
+      "prosogutmaUrl": "https://prosogutma.com/urun/lion-fva/"
+    },
+    {
+      "sku": "EQ-LION-FVA-EQ7",
+      "slug": "lion-fva",
+      "prosoModelKod": "LION FVA",
+      "note": "Excel'de FVA serisi yok",
+      "prosogutmaUrl": "https://prosogutma.com/urun/lion-fva/"
+    },
+    {
+      "sku": "EQ-LION-FVA-EQ8",
+      "slug": "lion-fva",
+      "prosoModelKod": "LION FVA",
+      "note": "Excel'de FVA serisi yok",
+      "prosogutmaUrl": "https://prosogutma.com/urun/lion-fva/"
+    },
+    {
+      "sku": "EQ-LION-MAX-EQ1",
+      "slug": "lion-max",
+      "prosoModelKod": "LION MAX",
+      "note": "Excel'de MAX serisi yok",
+      "prosogutmaUrl": "https://prosogutma.com/urun/lion-max/"
+    },
+    {
+      "sku": "EQ-LION-MAX-EQ2",
+      "slug": "lion-max",
+      "prosoModelKod": "LION MAX",
+      "note": "Excel'de MAX serisi yok",
+      "prosogutmaUrl": "https://prosogutma.com/urun/lion-max/"
+    },
+    {
+      "sku": "EQ-LION-MAX-EQ3",
+      "slug": "lion-max",
+      "prosoModelKod": "LION MAX",
+      "note": "Excel'de MAX serisi yok",
+      "prosogutmaUrl": "https://prosogutma.com/urun/lion-max/"
+    },
+    {
+      "sku": "EQ-LION-MAX-EQ4",
+      "slug": "lion-max",
+      "prosoModelKod": "LION MAX",
+      "note": "Excel'de MAX serisi yok",
+      "prosogutmaUrl": "https://prosogutma.com/urun/lion-max/"
+    },
+    {
+      "sku": "EQ-LION-RETROBANCO-EQ1",
+      "slug": "lion-retrobanco",
+      "prosoModelKod": "LION V2 DP/75/1500",
+      "note": null,
+      "prosogutmaUrl": "https://prosogutma.com/urun/lion-retrobanco/"
+    },
+    {
+      "sku": "EQ-LION-RETROBANCO-EQ2",
+      "slug": "lion-retrobanco",
+      "prosoModelKod": "LION V2 DP/75/1500",
+      "note": null,
+      "prosogutmaUrl": "https://prosogutma.com/urun/lion-retrobanco/"
+    },
+    {
+      "sku": "EQ-LION-RETROBANCO-EQ3",
+      "slug": "lion-retrobanco",
+      "prosoModelKod": "LION V2 DP/75/1500",
+      "note": null,
+      "prosogutmaUrl": "https://prosogutma.com/urun/lion-retrobanco/"
+    },
+    {
+      "sku": "EQ-LION-RETROBANCO-EQ4",
+      "slug": "lion-retrobanco",
+      "prosoModelKod": "LION V2 DP/75/1500",
+      "note": null,
+      "prosogutmaUrl": "https://prosogutma.com/urun/lion-retrobanco/"
+    },
+    {
+      "sku": "EQ-LION-RETROBANCO-DGD-EQ1",
+      "slug": "lion-retrobanco-dgd",
+      "prosoModelKod": "LION V2 DP/75/1500",
+      "note": null,
+      "prosogutmaUrl": "https://prosogutma.com/urun/lion-retrobanco-dgd/"
+    },
+    {
+      "sku": "EQ-LION-RETROBANCO-DGD-EQ2",
+      "slug": "lion-retrobanco-dgd",
+      "prosoModelKod": "LION V2 DP/75/1500",
+      "note": null,
+      "prosogutmaUrl": "https://prosogutma.com/urun/lion-retrobanco-dgd/"
+    },
+    {
+      "sku": "EQ-LION-RETROBANCO-DGD-EQ3",
+      "slug": "lion-retrobanco-dgd",
+      "prosoModelKod": "LION V2 DP/75/1500",
+      "note": null,
+      "prosogutmaUrl": "https://prosogutma.com/urun/lion-retrobanco-dgd/"
+    },
+    {
+      "sku": "EQ-LION-RETROBANCO-DGD-EQ4",
+      "slug": "lion-retrobanco-dgd",
+      "prosoModelKod": "LION V2 DP/75/1500",
+      "note": null,
+      "prosogutmaUrl": "https://prosogutma.com/urun/lion-retrobanco-dgd/"
+    },
+    {
+      "sku": "EQ-OCTOPUS-SLD-EQ1",
+      "slug": "octopus-sld",
+      "prosoModelKod": "OCTOPUS 110 SLD",
+      "note": "Excel'de OCTOPUS SLD yok",
+      "prosogutmaUrl": "https://prosogutma.com/urun/octopus-sld/"
+    },
+    {
+      "sku": "EQ-ORCA-EQ1",
+      "slug": "orca",
+      "prosoModelKod": "ORCA",
+      "note": "Excel'de ORCA yok",
+      "prosogutmaUrl": "https://prosogutma.com/urun/orca/"
+    },
+    {
+      "sku": "EQ-ORCA-PLUGIN-EQ1",
+      "slug": "orca-plugin",
+      "prosoModelKod": "ORCA PLG",
+      "note": "Excel'de ORCA plug-in yok",
+      "prosogutmaUrl": "https://prosogutma.com/urun/orca-plugin/"
+    },
+    {
+      "sku": "EQ-ORCA-PLUGIN-EQ2",
+      "slug": "orca-plugin",
+      "prosoModelKod": "ORCA PLG",
+      "note": "Excel'de ORCA plug-in yok",
+      "prosogutmaUrl": "https://prosogutma.com/urun/orca-plugin/"
+    },
+    {
+      "sku": "EQ-ORCA-PLUGIN-EQ3",
+      "slug": "orca-plugin",
+      "prosoModelKod": "ORCA PLG",
+      "note": "Excel'de ORCA plug-in yok",
+      "prosogutmaUrl": "https://prosogutma.com/urun/orca-plugin/"
+    },
+    {
+      "sku": "EQ-PANTHER-DGD-SLD-EQ1",
+      "slug": "panther-dgd-sld",
+      "prosoModelKod": "PANTHER DP 75/205 DGD",
+      "note": "Excel'de DGD+SLD kombinasyonu yok",
+      "prosogutmaUrl": "https://prosogutma.com/urun/panther-dgd-sld/"
+    },
+    {
+      "sku": "EQ-PENGUIN-EQ1",
+      "slug": "penguin",
+      "prosoModelKod": "PENGUIN",
+      "note": "Excel'de yok",
+      "prosogutmaUrl": "https://prosogutma.com/urun/penguin/"
+    },
+    {
+      "sku": "EQ-PUMA-DGD-SLD-EQ1",
+      "slug": "puma-dgd-sld",
+      "prosoModelKod": "PUMA DP 80/205 DGD",
+      "note": "Excel'de DGD+SLD kombinasyonu yok",
+      "prosogutmaUrl": "https://prosogutma.com/urun/puma-dgd-sld/"
+    },
+    {
+      "sku": "EQ-SCORPION-MAX-EQ1",
+      "slug": "scorpion-max",
+      "prosoModelKod": "SCORPION MAX",
+      "note": "Excel'de MAX serisi yok",
+      "prosogutmaUrl": "https://prosogutma.com/urun/scorpion-max/"
+    },
+    {
+      "sku": "EQ-SOĞUK-HAVA-DEPOSU-EQ1",
+      "slug": "soguk-hava-deposu",
+      "prosoModelKod": "SOGUK HAVA DEPOSU",
+      "note": "Excel'de yok — ayrı fiyat listesi",
+      "prosogutmaUrl": "https://prosogutma.com/urun/soguk-hava-deposu/"
+    },
+    {
+      "sku": "EQ-SPLIT-SOĞUTMA-SISTEMI-EQ1",
+      "slug": "split-sogutma-sistemi",
+      "prosoModelKod": "SPLIT SOGUTMA",
+      "note": "Excel'de yok",
+      "prosogutmaUrl": "https://prosogutma.com/urun/split-sogutma-sistemi/"
+    },
+    {
+      "sku": "EQ-TIGER-IFG-EQ1",
+      "slug": "tiger-ifg",
+      "prosoModelKod": "TIGER 800 IFG/CB",
+      "note": "Excel'de IFG satırı yok",
+      "prosogutmaUrl": "https://prosogutma.com/urun/tiger-ifg/"
+    }
+  ]
+}

@@ -1083,16 +1083,16 @@ export const PFOS_KONSEPT_SHOP_TYPES: ShopTypeKayit[] = [
     name: "Yerinde Üretim",
     parent: "Catering",
     desc:
-      "20–60 kişilik fabrika mutfağı · Liva 2016-178 referans · motor: yerinde-uretim (planlanan)",
+      "20–60 kişilik fabrika mutfağı · Liva 2016-178 referans · motor: yerinde-uretim",
     pfos: {
-      motorSlug: "",
+      motorSlug: "yerinde-uretim",
       dukkanSecim: "Yerinde Üretim",
       m2Min: 20,
       m2Max: 60,
       bantKurali: "Kişi sayısı bandı (20–60); referans liste Liva 178",
       listeYolu: "veri/liva-fabrika-2016-178.xlsx",
       teklifKaynagi: "referans-json",
-      durum: "planlanan",
+      durum: "aktif",
       bantlar: [
         liste("20-60", "20–60 kişi (Liva 178)", 40, "yerinde-uretim"),
       ],
@@ -1195,6 +1195,20 @@ export function buildDukkanBranchesFromKonseptler(
     if (!branches[parent].includes("Bilmiyorum")) {
       branches[parent].push("Bilmiyorum");
     }
+  }
+  if (!branches.Catering) {
+    branches.Catering = [
+      "Üretim Fabrikası",
+      "Yerinde Üretim",
+      "Taşıma Yemek (Servis & Yıkama)",
+      "Bilmiyorum",
+    ];
+  } else if (!branches.Catering.includes("Yerinde Üretim")) {
+    branches.Catering.splice(
+      Math.max(0, branches.Catering.length - 1),
+      0,
+      "Yerinde Üretim",
+    );
   }
   if (!branches.Bilmiyorum) branches.Bilmiyorum = ["Bilmiyorum"];
   return branches;

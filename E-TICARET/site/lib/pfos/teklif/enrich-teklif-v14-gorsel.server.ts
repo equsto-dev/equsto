@@ -1,4 +1,3 @@
-import "server-only";
 
 import type { TeklifModelV14 } from "./teklif-v14.types";
 import { resolveGorselUrlBySku } from "../core/katalog-gorsel";

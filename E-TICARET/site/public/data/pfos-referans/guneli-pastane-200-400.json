@@ -15,7 +15,8 @@
       "poz": "M1",
       "ad": "İSTİF RAFI, 4 KATLI",
       "olcu": "137*36*160",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "M",
@@ -23,7 +24,8 @@
       "poz": "M2",
       "ad": "DEPO TİPİ BUZDOLABI, TEK KAPILI (frenox)",
       "olcu": "70*80*205",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "M",
@@ -31,7 +33,8 @@
       "poz": "M3",
       "ad": "DEPO TİPİ DERİNDONDURUCU, TEK KAPILI (frenox)",
       "olcu": "70*80*205",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "M",
@@ -39,7 +42,8 @@
       "poz": "M4",
       "ad": "CİHAZALTI BUZDOLABI, ÇEKMECELİ (frenox)",
       "olcu": "143*90*55",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "M",
@@ -47,7 +51,8 @@
       "poz": "M5",
       "ad": "MAKARNA PİŞİRİCİ, ELK., SETÜSTÜ (t. çelik)",
       "olcu": "40*63*30",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "M",
@@ -55,7 +60,8 @@
       "poz": "M6",
       "ad": "4 AÇIK ALEVLİ OCAK, GAZLI, SETÜSTÜ (inoksan)",
       "olcu": "80*90*30",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "M",
@@ -63,7 +69,8 @@
       "poz": "M7",
       "ad": "DÖKÜM IZGARA, GAZLI, SETÜSTÜ (t. çelik)",
       "olcu": "40*70*30",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "M",
@@ -71,7 +78,8 @@
       "poz": "M8",
       "ad": "CİHAZALTI ÇALIŞMA TEZGAHI, TABAN RAFLI (imalat)",
       "olcu": "80*90*55",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "M",
@@ -79,7 +87,8 @@
       "poz": "M9",
       "ad": "FRİTÖZ, ÇİFT SEPETLİ, ELK., SETÜSTÜ (t. çelik)",
       "olcu": "60*63*60",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "M",
@@ -87,7 +96,8 @@
       "poz": "M10",
       "ad": "SALAMANDER, ELK., ASANSÖRLÜ (t. çelik)",
       "olcu": "60*60*60",
-      "adet": 1
+      "adet": 1,
+      "kategori": "salamander"
     },
     {
       "bolum": "M",
@@ -95,7 +105,8 @@
       "poz": "M11",
       "ad": "ÇALIŞMA TEZGAHI, TABAN RAFLI (imalat)",
       "olcu": "150*80*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "M",
@@ -103,7 +114,8 @@
       "poz": "M12",
       "ad": "KONVEKSİYONLU FIRIN, ELK., LAINOX (lainox)",
       "olcu": "4 GN 1/1",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "M",
@@ -111,7 +123,8 @@
       "poz": "M13",
       "ad": "PİZZA FIRINI, 2 KATLI (atalay)",
       "olcu": "6262DE",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "M",
@@ -119,7 +132,8 @@
       "poz": "M14",
       "ad": "TAVA RAFI (imalat)",
       "olcu": "160*35*35",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "M",
@@ -127,7 +141,8 @@
       "poz": "M15",
       "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ (imalat)",
       "olcu": "375*100*50",
-      "adet": 1
+      "adet": 1,
+      "kategori": "davlumbaz"
     },
     {
       "bolum": "M",
@@ -135,7 +150,8 @@
       "poz": "M16",
       "ad": "PİZZA HAZIRLIK BUZDOLABI, MERMER TABLALI, 2 KAPILI (frenox)",
       "olcu": "143*70*85/135",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "M",
@@ -143,7 +159,8 @@
       "poz": "M17",
       "ad": "DUVAR RAFI (imalat)",
       "olcu": "205*30*4",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "M",
@@ -151,7 +168,8 @@
       "poz": "M18",
       "ad": "HAMUR YOĞURMA MAKİNASI (bosfor)",
       "olcu": "15 kg/sefer",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "M",
@@ -159,7 +177,8 @@
       "poz": "M19",
       "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI (imalat)",
       "olcu": "120*70*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "M",
@@ -167,7 +186,8 @@
       "poz": "M20",
       "ad": "DUVAR RAFI (imalat)",
       "olcu": "120*30*4",
-      "adet": 2
+      "adet": 2,
+      "kategori": "diger"
     },
     {
       "bolum": "M",
@@ -175,7 +195,8 @@
       "poz": "M21",
       "ad": "MAKE-UP BUZDOLABI, 2 KAPILI (frenox)",
       "olcu": "143*70*85/105",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "M",
@@ -183,7 +204,8 @@
       "poz": "M22",
       "ad": "DUVAR RAFI (imalat)",
       "olcu": "143*30*4",
-      "adet": 2
+      "adet": 2,
+      "kategori": "diger"
     },
     {
       "bolum": "M",
@@ -191,7 +213,8 @@
       "poz": "M23",
       "ad": "SERVİS TEZGAHI, TABAN VE ARA RAFLI (imalat)",
       "olcu": "150*50*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "M",
@@ -199,7 +222,8 @@
       "poz": "M24",
       "ad": "SERVİS RAFI, 2 KATLI (imalat)",
       "olcu": "125*40*70",
-      "adet": 1
+      "adet": 1,
+      "kategori": "servis"
     },
     {
       "bolum": "M",
@@ -207,7 +231,8 @@
       "poz": "M25",
       "ad": "TOST MAKİNASI (atalay)",
       "olcu": "2745",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "M",
@@ -215,7 +240,8 @@
       "poz": "M26",
       "ad": "TEZGAH TİPİ BUZDOLABI, 2 KAPILI (frenox)",
       "olcu": "143*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "M",
@@ -223,7 +249,8 @@
       "poz": "M27",
       "ad": "SERVİS RAFI, 2 KATLI (imalat)",
       "olcu": "143*40*70",
-      "adet": 1
+      "adet": 1,
+      "kategori": "servis"
     },
     {
       "bolum": "D",
@@ -231,7 +258,8 @@
       "poz": "D1",
       "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI, SIYIRMA HUNİLİ (imalat)",
       "olcu": "175*70*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "D",
@@ -239,7 +267,8 @@
       "poz": "D2",
       "ad": "ÖN YIKAMA DUŞU (cancan)",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "D",
@@ -247,7 +276,8 @@
       "poz": "D3",
       "ad": "BULAŞIK YIKAMA MAKİNASI, SETALTI (fagor)",
       "olcu": "500 tb/s",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "D",
@@ -255,7 +285,8 @@
       "poz": "D4",
       "ad": "ÇÖP ARABASI",
       "olcu": "4050",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "D",
@@ -263,7 +294,8 @@
       "poz": "D5",
       "ad": "İSTİF RAFI, ÖZEL İMALAT (imalat)",
       "olcu": "200/117*50*120",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "B",
@@ -271,7 +303,8 @@
       "poz": "B1",
       "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI, DOLAPLI (imalat)",
       "olcu": "140*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "B",
@@ -279,7 +312,8 @@
       "poz": "B2",
       "ad": "BULAŞIK YIKAMA MAKİNASI, SETALTI (fagor)",
       "olcu": "500 tb/s",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "B",
@@ -287,7 +321,8 @@
       "poz": "B3",
       "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI, DOLAPLI (imalat)",
       "olcu": "120*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "B",
@@ -295,7 +330,8 @@
       "poz": "B4",
       "ad": "BUZ MAKİNASI, ITALYAN (brema)",
       "olcu": "42 kg/gün",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "B",
@@ -303,7 +339,8 @@
       "poz": "B5",
       "ad": "PORTAKAL SIKMA MAKİNASI (santos)",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "B",
@@ -311,7 +348,8 @@
       "poz": "B6",
       "ad": "BAR BLENDER (santos)",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "bar-blender"
     },
     {
       "bolum": "B",
@@ -319,7 +357,8 @@
       "poz": "B7",
       "ad": "ÇAY KAZANI, 2 DEMLİKLİ, GAZLI+ ELEKTRİKLİ (meşale)",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "B",
@@ -327,7 +366,8 @@
       "poz": "B8",
       "ad": "ÇAY OCAĞI DAVLUMBAZI (imalat)",
       "olcu": "100*60*40",
-      "adet": 1
+      "adet": 1,
+      "kategori": "davlumbaz"
     },
     {
       "bolum": "B",
@@ -335,7 +375,8 @@
       "poz": "B9",
       "ad": "CAM KAPILI TEZGAH TİPİ BUZDOLABI, 2 KAPILI (frenox)",
       "olcu": "143*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "B",
@@ -343,7 +384,8 @@
       "poz": "B10",
       "ad": "KAHVE MAKİNASI",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "kahve"
     },
     {
       "bolum": "B",
@@ -351,7 +393,8 @@
       "poz": "B11",
       "ad": "ŞERBETLİK (ugolini)",
       "olcu": "A 19",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "B",
@@ -359,7 +402,8 @@
       "poz": "B12",
       "ad": "TÜRK KAHVE MAKİNASI",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "kahve"
     },
     {
       "bolum": "Y",
@@ -367,7 +411,8 @@
       "poz": "Y1",
       "ad": "YER IZGARASI",
       "olcu": "—",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "Y",
@@ -375,7 +420,26 @@
       "poz": "Y2",
       "ad": "YER IZGARASI",
       "olcu": "—",
-      "adet": 2
+      "adet": 2,
+      "kategori": "diger"
     }
-  ]
+  ],
+  "kategoriTags": [
+    "diger",
+    "tezgah",
+    "salamander",
+    "davlumbaz",
+    "servis",
+    "bar-blender",
+    "kahve"
+  ],
+  "_mappingApplied": {
+    "source": "public/data/pfos-ekipman-mapping.json",
+    "generated_at": "2026-06-11T10:16:08.437Z",
+    "file": "guneli-pastane-200-400.json",
+    "counts": {
+      "mapped": 15,
+      "unmapped": 31
+    }
+  }
 }

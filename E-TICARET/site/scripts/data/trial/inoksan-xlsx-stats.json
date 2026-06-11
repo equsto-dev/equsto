@@ -1,0 +1,127 @@
+{
+  "path": "c:\\D Disk\\FİYAT LİSTELERİ\\İNOKSAN 2026 Yurtiçi Bayi Fiyatları R1.xlsx",
+  "header": [
+    "Ürün Hiyerarşisi 1",
+    "Ürün Hiyerarşisi 2",
+    "Ürün Hiyerarşisi",
+    "Malzeme",
+    "Malzeme kısa metni ",
+    "Uzunluk (mm)",
+    "Genişlik (mm)",
+    "Yükseklik (mm)",
+    "A1 Bayi Fiyatı"
+  ],
+  "total_rows": 1306,
+  "priced_rows": 1306,
+  "categories_top": [
+    [
+      "Pişirici Cihazlar",
+      479
+    ],
+    [
+      "Genel Aksesuar",
+      335
+    ],
+    [
+      "Servis Hatları",
+      298
+    ],
+    [
+      "Bulaşık Yıkama Makineleri",
+      108
+    ],
+    [
+      "Fırınlar",
+      38
+    ],
+    [
+      "Depolama ve İstifleme Üniteleri",
+      32
+    ],
+    [
+      "Arabalar",
+      9
+    ],
+    [
+      "Soğutucular",
+      6
+    ],
+    [
+      "Tezgahlar",
+      1
+    ]
+  ],
+  "category_count": 9,
+  "prefixes_top": [
+    [
+      "INO",
+      971
+    ],
+    [
+      "202",
+      145
+    ],
+    [
+      "204",
+      120
+    ],
+    [
+      "203",
+      36
+    ],
+    [
+      "201",
+      30
+    ],
+    [
+      "209",
+      4
+    ]
+  ],
+  "price_min": 1.2637769219074555,
+  "price_max": 25676.194480136954,
+  "price_avg": 1625.7,
+  "fke_samples": [
+    {
+      "sku": "INO-FKE006",
+      "name": "Konveksiyonlu fırın, elk., dijital panel",
+      "liste": 3584.3206406863915
+    },
+    {
+      "sku": "INO-FKE010",
+      "name": "Konveksiyonlu fırın, elk., dijital panel",
+      "liste": 4210.423638989051
+    },
+    {
+      "sku": "INO-FKE022",
+      "name": "Konveksiyonlu fırın, elk., dijital panel",
+      "liste": 5275.267927439993
+    },
+    {
+      "sku": "INO-FKE042",
+      "name": "Konveksiyonlu fırın, elk., dijital panel",
+      "liste": 7287.502606788864
+    },
+    {
+      "sku": "INO-FKE06",
+      "name": "Konveksiyonlu fırın, elk., dijital, yeni",
+      "liste": 4184.947831877979
+    },
+    {
+      "sku": "INO-FKE10",
+      "name": "Konveksiyonlu fırın, elk., dijital, yeni",
+      "liste": 4273.19286782209
+    },
+    {
+      "sku": "INO-FKE20",
+      "name": "Konveksiyonlu fırın, elk., dijital, yeni",
+      "liste": 4982.471566710634
+    },
+    {
+      "sku": "INO-FKE40",
+      "name": "Konveksiyonlu fırın, elk., dijital, yeni",
+      "liste": 8277.363705563252
+    }
+  ],
+  "fke_count": 8
+}

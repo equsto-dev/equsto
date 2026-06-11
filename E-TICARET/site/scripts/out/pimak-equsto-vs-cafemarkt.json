@@ -1,0 +1,1282 @@
+{
+  "generated": "2026-06-08T11:20:07.777Z",
+  "note": "KDV dahil TL. Cafemarkt urun kodu = supplier-product-code.",
+  "equsto_priced": 156,
+  "cafemarkt_scraped": 218,
+  "cafemarkt_priced": 218,
+  "matched": 52,
+  "summary": {
+    "cheaper": 36,
+    "dearer": 0,
+    "similar": 16,
+    "unmatched": 104
+  },
+  "rows": [
+    {
+      "kod": "KM012-4",
+      "name": "KM012-4 Kömürlü Yatay Tip Piliç Çevirme",
+      "equsto_tl": 132419,
+      "cafe_tl": 132772,
+      "diff_tl": -353,
+      "diff_pct": -0.3,
+      "equsto_cheaper": true,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.KM012.4",
+      "cafe_url": "https://www.cafemarkt.com/pimak-yatay-tip-pilic-cevirme-makinesi-40-pilic-kapasiteli-komurlu",
+      "cafe_title": "Pimak Yatay Tip Piliç Çevirme Makinesi, 40 Piliç Kapasiteli,"
+    },
+    {
+      "kod": "KM012-6",
+      "name": "KM012-6 Kömürlü Yatay Tip Piliç Çevirme",
+      "equsto_tl": 207575,
+      "cafe_tl": 208129,
+      "diff_tl": -554,
+      "diff_pct": -0.3,
+      "equsto_cheaper": true,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.KM012.6",
+      "cafe_url": "https://www.cafemarkt.com/pimak-yatay-tip-pilic-cevirme-makinesi-60-pilic-kapasiteli-komurlu",
+      "cafe_title": "Pimak Yatay Tip Piliç Çevirme Makinesi, 60 Piliç Kapasiteli,"
+    },
+    {
+      "kod": "KM012-8",
+      "name": "KM012-8 Kömürlü Yatay Tip Piliç Çevirme",
+      "equsto_tl": 250522,
+      "cafe_tl": 251191,
+      "diff_tl": -669,
+      "diff_pct": -0.3,
+      "equsto_cheaper": true,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.KM012.8",
+      "cafe_url": "https://www.cafemarkt.com/pimak-yatay-tip-pilic-cevirme-makinesi-80-pilic-kapasiteli-komurlu",
+      "cafe_title": "Pimak Yatay Tip Piliç Çevirme Makinesi, 80 Piliç Kapasiteli,"
+    },
+    {
+      "kod": "M001-E",
+      "name": "M001-E Elektrikli Setüstü Piliç Çevirme Makinesi",
+      "equsto_tl": 35073,
+      "cafe_tl": 35167,
+      "diff_tl": -94,
+      "diff_pct": -0.3,
+      "equsto_cheaper": false,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.M001.E",
+      "cafe_url": "https://www.cafemarkt.com/pimak-set-ustu-pilic-cevirme-makinesi-6-pilic-kapasiteli-elektrikli",
+      "cafe_title": "Pimak Set Üstü Piliç Çevirme Makinesi, 6 Piliç Kapasiteli, E"
+    },
+    {
+      "kod": "M002-E",
+      "name": "M002-E Elektrikli Setüstü Piliç Çevirme Makinesi",
+      "equsto_tl": 39368,
+      "cafe_tl": 39473,
+      "diff_tl": -105,
+      "diff_pct": -0.3,
+      "equsto_cheaper": true,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.M002.E",
+      "cafe_url": "https://www.cafemarkt.com/pimak-set-ustu-pilic-cevirme-makinesi-9-pilic-kapasiteli-elektrikli",
+      "cafe_title": "Pimak Set Üstü Piliç Çevirme Makinesi, 9 Piliç Kapasiteli, E"
+    },
+    {
+      "kod": "M003",
+      "name": "M003 Gazlı Setüstü Piliç Çevirme Makinesi",
+      "equsto_tl": 41157,
+      "cafe_tl": 41267,
+      "diff_tl": -110,
+      "diff_pct": -0.3,
+      "equsto_cheaper": true,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.M003",
+      "cafe_url": "https://www.cafemarkt.com/pimak-set-ustu-pilic-cevirme-makinesi-12-pilic-kapasiteli-dogalgazli",
+      "cafe_title": "Pimak Set Üstü Piliç Çevirme Makinesi, 12 Piliç Kapasiteli, "
+    },
+    {
+      "kod": "M003-DE",
+      "name": "M003-DE Elektrikli Dik Tip Piliç Çevirme Makinesi",
+      "equsto_tl": 46525,
+      "cafe_tl": 46650,
+      "diff_tl": -125,
+      "diff_pct": -0.3,
+      "equsto_cheaper": true,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.M003.DE",
+      "cafe_url": "https://www.cafemarkt.com/pimak-tek-vitrinli-pilic-cevirme-makinesi-12-pilic-kapasiteli-elektrikli",
+      "cafe_title": "Pimak Tek Vitrinli Piliç Çevirme Makinesi, 12 Piliç Kapasite"
+    },
+    {
+      "kod": "M003-E",
+      "name": "M003-E Elektrikli Setüstü Piliç Çevirme Makinesi",
+      "equsto_tl": 41157,
+      "cafe_tl": 41267,
+      "diff_tl": -110,
+      "diff_pct": -0.3,
+      "equsto_cheaper": true,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.M003.E",
+      "cafe_url": "https://www.cafemarkt.com/pimak-set-ustu-pilic-cevirme-makinesi-12-pilic-kapasiteli-elektrikli",
+      "cafe_title": "Pimak Set Üstü Piliç Çevirme Makinesi, 12 Piliç Kapasiteli, "
+    },
+    {
+      "kod": "M004",
+      "name": "M004 Gazlı Setüstü Piliç Çevirme Makinesi",
+      "equsto_tl": 46525,
+      "cafe_tl": 46650,
+      "diff_tl": -125,
+      "diff_pct": -0.3,
+      "equsto_cheaper": true,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.M004",
+      "cafe_url": "https://www.cafemarkt.com/pimak-set-ustu-pilic-cevirme-makinesi-15-pilic-kapasiteli-dogalgazli",
+      "cafe_title": "Pimak Set Üstü Piliç Çevirme Makinesi, 15 Piliç Kapasiteli, "
+    },
+    {
+      "kod": "M004-DE",
+      "name": "M004-DE Elektrikli Dik Tip Piliç Çevirme Makinesi",
+      "equsto_tl": 50104,
+      "cafe_tl": 50238,
+      "diff_tl": -134,
+      "diff_pct": -0.3,
+      "equsto_cheaper": true,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.M004.DE",
+      "cafe_url": "https://www.cafemarkt.com/pimak-tek-vitrinli-pilic-cevirme-makinesi-15-pilic-kapasiteli-elektrikli",
+      "cafe_title": "Pimak Tek Vitrinli Piliç Çevirme Makinesi, 15 Piliç Kapasite"
+    },
+    {
+      "kod": "M004-E",
+      "name": "M004-E Elektrikli Setüstü Piliç Çevirme Makinesi",
+      "equsto_tl": 46525,
+      "cafe_tl": 46650,
+      "diff_tl": -125,
+      "diff_pct": -0.3,
+      "equsto_cheaper": true,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.M004.E",
+      "cafe_url": "https://www.cafemarkt.com/pimak-set-ustu-pilic-cevirme-makinesi-15-pilic-kapasiteli-elektrikli",
+      "cafe_title": "Pimak Set Üstü Piliç Çevirme Makinesi, 15 Piliç Kapasiteli, "
+    },
+    {
+      "kod": "M005-E",
+      "name": "M005-E Elektrikli Setüstü Tamburlu Piliç Makinesi",
+      "equsto_tl": 71578,
+      "cafe_tl": 71769,
+      "diff_tl": -191,
+      "diff_pct": -0.3,
+      "equsto_cheaper": true,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.M005.E",
+      "cafe_url": "https://www.cafemarkt.com/pimak-tamburlu-set-ustu-pilic-makinesi-20-pilic-kapasiteli-elektrikli",
+      "cafe_title": "Pimak Tamburlu Set Üstü Piliç Makinesi, 20 Piliç Kapasiteli,"
+    },
+    {
+      "kod": "M006-E",
+      "name": "M006-E Setüstü Tamburlu Piliç Makinesi",
+      "equsto_tl": 78735,
+      "cafe_tl": 78946,
+      "diff_tl": -211,
+      "diff_pct": -0.3,
+      "equsto_cheaper": true,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.M006.E",
+      "cafe_url": "https://www.cafemarkt.com/pimak-tamburlu-set-ustu-pilic-makinesi-25-pilic-kapasiteli-elektrikli",
+      "cafe_title": "Pimak Tamburlu Set Üstü Piliç Makinesi, 25 Piliç Kapasiteli,"
+    },
+    {
+      "kod": "M007-E",
+      "name": "M007-E Elektrikli Çift Katlı Tamburlu Dinlendirmeli Pil",
+      "equsto_tl": 114524,
+      "cafe_tl": 114830,
+      "diff_tl": -306,
+      "diff_pct": -0.3,
+      "equsto_cheaper": true,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.M007.E",
+      "cafe_url": "https://www.cafemarkt.com/pimak-tamburlu-dinlendirmeli-pilic-cevirme-makinesi-20-pilic-kapasitesi-elektrikli",
+      "cafe_title": "Pimak Tamburlu Dinlendirmeli Piliç Çevirme Makinesi, 20 Pili"
+    },
+    {
+      "kod": "M008-E",
+      "name": "M008-E Elektrikli Çift Katlı Tamburlu Dinlendirmeli Pil",
+      "equsto_tl": 121682,
+      "cafe_tl": 122007,
+      "diff_tl": -325,
+      "diff_pct": -0.3,
+      "equsto_cheaper": true,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.M008.E",
+      "cafe_url": "https://www.cafemarkt.com/pimak-tamburlu-dinlendirmeli-pilic-cevirme-makinesi-25-pilic-kapasitesi-elektrikli",
+      "cafe_title": "Pimak Tamburlu Dinlendirmeli Piliç Çevirme Makinesi, 25 Pili"
+    },
+    {
+      "kod": "M009B-E",
+      "name": "M009B-E Elektrikli Çift Katlı Tamburlu Piliç Makinesi",
+      "equsto_tl": 135997,
+      "cafe_tl": 136361,
+      "diff_tl": -364,
+      "diff_pct": -0.3,
+      "equsto_cheaper": true,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.M009B.E",
+      "cafe_url": "https://www.cafemarkt.com/pimak-tamburlu-cift-katli-pilic-cevirme-makinesi-50-pilic-kapasiteli-elektrikli",
+      "cafe_title": "Pimak Tamburlu Çift Katlı Piliç Çevirme Makinesi, 50 Piliç K"
+    },
+    {
+      "kod": "M010-DE",
+      "name": "M010-DE Elektrikli Dik Tip Piliç Çevirme Makinesi",
+      "equsto_tl": 110945,
+      "cafe_tl": 111242,
+      "diff_tl": -297,
+      "diff_pct": -0.3,
+      "equsto_cheaper": true,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.M010.DE",
+      "cafe_url": "https://www.cafemarkt.com/pimak-dik-tip-pilic-cevirme-makinesi-24-pilic-kapasiteli-elektrikli",
+      "cafe_title": "Pimak Dik Tip Piliç Çevirme Makinesi, 24 Piliç Kapasiteli, E"
+    },
+    {
+      "kod": "M011-DE",
+      "name": "M011-DE Elektrikli Dik Tip Piliç Çevirme Makinesi",
+      "equsto_tl": 118103,
+      "cafe_tl": 118418,
+      "diff_tl": -315,
+      "diff_pct": -0.3,
+      "equsto_cheaper": true,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.M011.DE",
+      "cafe_url": "https://www.cafemarkt.com/pimak-dik-tip-pilic-cevirme-makinesi-30-pilic-kapasiteli-elektrikli",
+      "cafe_title": "Pimak Dik Tip Piliç Çevirme Makinesi, 30 Piliç Kapasiteli, E"
+    },
+    {
+      "kod": "PI/M001",
+      "name": "PI/M001 Gazlı Setüstü Piliç Çevirme Makinesi",
+      "equsto_tl": 35073,
+      "cafe_tl": 35167,
+      "diff_tl": -94,
+      "diff_pct": -0.3,
+      "equsto_cheaper": false,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.PI.M001",
+      "cafe_url": "https://www.cafemarkt.com/pimak-set-ustu-pilic-cevirme-makinesi-6-pilic-kapasiteli-dogalgazli",
+      "cafe_title": "Pimak Set Üstü Piliç Çevirme Makinesi, 6 Piliç Kapasiteli, D"
+    },
+    {
+      "kod": "PI/M002",
+      "name": "PI/M002 Gazlı Setüstü Piliç Çevirme Makinesi",
+      "equsto_tl": 39368,
+      "cafe_tl": 39473,
+      "diff_tl": -105,
+      "diff_pct": -0.3,
+      "equsto_cheaper": true,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.PI.M002",
+      "cafe_url": "https://www.cafemarkt.com/pimak-set-ustu-pilic-cevirme-makinesi-9-pilic-kapasiteli-dogalgazli",
+      "cafe_title": "Pimak Set Üstü Piliç Çevirme Makinesi, 9 Piliç Kapasiteli, D"
+    },
+    {
+      "kod": "PI1/M005",
+      "name": "PI1/M005 Gazlı Setüstü Tamburlu Piliç Makinesi",
+      "equsto_tl": 71578,
+      "cafe_tl": 71769,
+      "diff_tl": -191,
+      "diff_pct": -0.3,
+      "equsto_cheaper": true,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.PI1.M005",
+      "cafe_url": "https://www.cafemarkt.com/pimak-tamburlu-set-ustu-pilic-makinesi-20-pilic-kapasiteli-dogalgazli",
+      "cafe_title": "Pimak Tamburlu Set Üstü Piliç Makinesi, 20 Piliç Kapasiteli,"
+    },
+    {
+      "kod": "PI1/M007B",
+      "name": "PI1/M007B Gazlı Tamburlu Dinlendirmeli Piliç Makinesi",
+      "equsto_tl": 114524,
+      "cafe_tl": 114830,
+      "diff_tl": -306,
+      "diff_pct": -0.3,
+      "equsto_cheaper": true,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.PI1.M007B",
+      "cafe_url": "https://www.cafemarkt.com/pimak-tamburlu-dinlendirmeli-pilic-cevirme-makinesi-20-pilic-kapasiteli-dogalgazli",
+      "cafe_title": "Pimak Tamburlu Dinlendirmeli Piliç Çevirme Makinesi, 20 Pili"
+    },
+    {
+      "kod": "PI2/M008B",
+      "name": "PI2/M008B Gazlı Tamburlu Dinlendirmeli Piliç Makinesi",
+      "equsto_tl": 121682,
+      "cafe_tl": 122007,
+      "diff_tl": -325,
+      "diff_pct": -0.3,
+      "equsto_cheaper": true,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.PI2.M008B",
+      "cafe_url": "https://www.cafemarkt.com/pimak-tamburlu-pilic-cevirme-makinesi-dinlendirmeli-25-pilic-dogalgazli",
+      "cafe_title": "Pimak Tamburlu Piliç Çevirme Makinesi, Dinlendirmeli, 25 Pil"
+    },
+    {
+      "kod": "PI3/M009",
+      "name": "PI3/M009 Gazlı Tamburlu Dinlendirmeli Piliç Makinesi",
+      "equsto_tl": 128840,
+      "cafe_tl": 129184,
+      "diff_tl": -344,
+      "diff_pct": -0.3,
+      "equsto_cheaper": true,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.PI3.M009",
+      "cafe_url": "https://www.cafemarkt.com/pimak-tamburlu-cift-katli-pilic-cevirme-makinesi-40-pilic-kapasiteli-dogalgazli",
+      "cafe_title": "Pimak Tamburlu Çift Katlı Piliç Çevirme Makinesi, 40 Piliç K"
+    },
+    {
+      "kod": "PI4/M009B",
+      "name": "PI4/M009B Gazlı Tamburlu Piliç Makinesi",
+      "equsto_tl": 135997,
+      "cafe_tl": 136361,
+      "diff_tl": -364,
+      "diff_pct": -0.3,
+      "equsto_cheaper": true,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.PI4.M009B",
+      "cafe_url": "https://www.cafemarkt.com/pimak-tamburlu-cift-katli-pilic-cevirme-makinesi-50-pilic-kapasiteli-dogalgazli",
+      "cafe_title": "Pimak Tamburlu Çift Katlı Piliç Çevirme Makinesi, 50 Piliç K"
+    },
+    {
+      "kod": "PI5/M004-K",
+      "name": "PI5/M004-K Gazlı Kollu Piliç Makinesi",
+      "equsto_tl": 69788,
+      "cafe_tl": 69975,
+      "diff_tl": -187,
+      "diff_pct": -0.3,
+      "equsto_cheaper": true,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.PI5.M004.K",
+      "cafe_url": "https://www.cafemarkt.com/pimak-kollu-set-ustu-pilic-cevirme-makinesi-15-pilic-kapasiteli-dogalgazli",
+      "cafe_title": "Pimak Kollu Set Üstü Piliç Çevirme Makinesi, 15 Piliç Kapasi"
+    },
+    {
+      "kod": "PI6/M005-K",
+      "name": "PI6/M005-K Gazlı Kollu Piliç Makinesi",
+      "equsto_tl": 82314,
+      "cafe_tl": 82534,
+      "diff_tl": -220,
+      "diff_pct": -0.3,
+      "equsto_cheaper": true,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.PI6.M005.K",
+      "cafe_url": "https://www.cafemarkt.com/pimak-kollu-set-ustu-pilic-cevirme-makinesi-20-pilic-kapasiteli-dogalgazli",
+      "cafe_title": "Pimak Kollu Set Üstü Piliç Çevirme Makinesi, 20 Piliç Kapasi"
+    },
+    {
+      "kod": "70S-M184",
+      "name": "70S-M184 Elektrikli Makarna Haşlama",
+      "equsto_tl": 37579,
+      "cafe_tl": 37679,
+      "diff_tl": -100,
+      "diff_pct": -0.3,
+      "equsto_cheaper": false,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.70S.M184",
+      "cafe_url": "https://www.cafemarkt.com/pimak-makarna-haslama-makinesi-10-l-elektrikli",
+      "cafe_title": "Pimak Makarna Haşlama Makinesi, 10 L, Elektrikli"
+    },
+    {
+      "kod": "70SD-M184",
+      "name": "70SD-M184 Elektrikli Makarna Haşlama",
+      "equsto_tl": 51894,
+      "cafe_tl": 52032,
+      "diff_tl": -138,
+      "diff_pct": -0.3,
+      "equsto_cheaper": true,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.70SD.M184",
+      "cafe_url": "https://www.cafemarkt.com/pimak-dolapli-makarna-haslama-makinesi-10-l-elektrikli",
+      "cafe_title": "Pimak Dolaplı Makarna Haşlama Makinesi, 10 L, Elektrikli"
+    },
+    {
+      "kod": "90SD-M184E",
+      "name": "90SD-M184E Elektrikli Makarna Haşlama",
+      "equsto_tl": 62631,
+      "cafe_tl": 62798,
+      "diff_tl": -167,
+      "diff_pct": -0.3,
+      "equsto_cheaper": true,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.90SD.M184E",
+      "cafe_url": "https://www.cafemarkt.com/pimak-makarna-haslama-makinesi-40x90x85-cm-elektrikli",
+      "cafe_title": "Pimak Makarna Haşlama Makinesi, 40x90x85 cm, Elektrikli"
+    },
+    {
+      "kod": "PTS04-MANUEL",
+      "name": "PTS04-MANUEL Patisserie Fırın",
+      "equsto_tl": 71578,
+      "cafe_tl": 71769,
+      "diff_tl": -191,
+      "diff_pct": -0.3,
+      "equsto_cheaper": true,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.PTS04.MANUEL",
+      "cafe_url": "https://www.cafemarkt.com/pimak-manuel-patisserie-firini-4-tepsili-elektrikli",
+      "cafe_title": "Pimak Manuel Patisserie Fırını, 4 Tepsili, Elektrikli"
+    },
+    {
+      "kod": "PTS06-MANUEL",
+      "name": "PTS06-MANUEL Patisserie Fırın",
+      "equsto_tl": 89472,
+      "cafe_tl": 89711,
+      "diff_tl": -239,
+      "diff_pct": -0.3,
+      "equsto_cheaper": true,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.PTS06.MANUEL",
+      "cafe_url": "https://www.cafemarkt.com/pimak-manuel-patisserie-firini-6-tepsili-elektrikli",
+      "cafe_title": "Pimak Manuel Patisserie Fırını, 6 Tepsili, Elektrikli"
+    },
+    {
+      "kod": "PTS09-MANUEL",
+      "name": "PTS09-MANUEL Patisserie Fırın",
+      "equsto_tl": 143155,
+      "cafe_tl": 143538,
+      "diff_tl": -383,
+      "diff_pct": -0.3,
+      "equsto_cheaper": true,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.PTS09.MANUEL",
+      "cafe_url": "https://www.cafemarkt.com/pimak-manuel-patisserie-firini-9-tepsili-elektrikli",
+      "cafe_title": "Pimak Manuel Patisserie Fırını, 9 Tepsili, Elektrikli"
+    },
+    {
+      "kod": "KF-M079-2G",
+      "name": "KF-M079-2G Gazlı Kumpir Fırın",
+      "equsto_tl": 42947,
+      "cafe_tl": 43061,
+      "diff_tl": -114,
+      "diff_pct": -0.3,
+      "equsto_cheaper": true,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.KF.M079.2G.LPG",
+      "cafe_url": "https://www.cafemarkt.com/pimak-2-cekmeceli-kumpir-firini-lpg-li",
+      "cafe_title": "Pimak 2 Çekmeceli Kumpir Fırını, LPG'li"
+    },
+    {
+      "kod": "KF-M079-3G",
+      "name": "KF-M079-3G Gazlı Kumpir Fırın",
+      "equsto_tl": 46525,
+      "cafe_tl": 46650,
+      "diff_tl": -125,
+      "diff_pct": -0.3,
+      "equsto_cheaper": true,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.KF.M079.3G.LPG",
+      "cafe_url": "https://www.cafemarkt.com/pimak-3-cekmeceli-kumpir-firini-lpg-li",
+      "cafe_title": "Pimak 3 Çekmeceli Kumpir Fırını, LPG'li"
+    },
+    {
+      "kod": "KF-M079-4G",
+      "name": "KF-M079-4G Gazlı Kumpir Fırın",
+      "equsto_tl": 50104,
+      "cafe_tl": 50238,
+      "diff_tl": -134,
+      "diff_pct": -0.3,
+      "equsto_cheaper": true,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.KF.M079.4G.LPG",
+      "cafe_url": "https://www.cafemarkt.com/pimak-4-cekmeceli-kumpir-firini-lpg-li",
+      "cafe_title": "Pimak 4 Çekmeceli Kumpir Fırını, LPG'li"
+    },
+    {
+      "kod": "M056",
+      "name": "M056 Elektrikli Ekonomik Model Fritözler",
+      "equsto_tl": 9305,
+      "cafe_tl": 9330,
+      "diff_tl": -25,
+      "diff_pct": -0.3,
+      "equsto_cheaper": false,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.M056",
+      "cafe_url": "https://www.cafemarkt.com/pimak-ekonomik-fritoz-3-l-elektrikli",
+      "cafe_title": "Pimak Ekonomik Fritöz, 3 L, Elektrikli"
+    },
+    {
+      "kod": "M057",
+      "name": "M057 Elektrikli Ekonomik Model Fritözler",
+      "equsto_tl": 9663,
+      "cafe_tl": 9689,
+      "diff_tl": -26,
+      "diff_pct": -0.3,
+      "equsto_cheaper": false,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.M057",
+      "cafe_url": "https://www.cafemarkt.com/pimak-ekonomik-fritoz-5-l-elektrikli",
+      "cafe_title": "Pimak Ekonomik Fritöz, 5 L, Elektrikli"
+    },
+    {
+      "kod": "M058",
+      "name": "M058 Elektrikli Ekonomik Model Fritözler",
+      "equsto_tl": 12347,
+      "cafe_tl": 12380,
+      "diff_tl": -33,
+      "diff_pct": -0.3,
+      "equsto_cheaper": false,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.M058",
+      "cafe_url": "https://www.cafemarkt.com/pimak-ekonomik-fritoz-3-3-l-elektrikli",
+      "cafe_title": "Pimak Ekonomik Fritöz, 3+3 L, Elektrikli"
+    },
+    {
+      "kod": "M059",
+      "name": "M059 Elektrikli Ekonomik Model Fritözler",
+      "equsto_tl": 14674,
+      "cafe_tl": 14713,
+      "diff_tl": -39,
+      "diff_pct": -0.3,
+      "equsto_cheaper": false,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.M059",
+      "cafe_url": "https://www.cafemarkt.com/pimak-ekonomik-fritoz-5-5-l-elektrikli",
+      "cafe_title": "Pimak Ekonomik Fritöz, 5+5 L, Elektrikli"
+    },
+    {
+      "kod": "M060",
+      "name": "M060 Elektrikli Ekonomik Model Fritözler",
+      "equsto_tl": 11452,
+      "cafe_tl": 11483,
+      "diff_tl": -31,
+      "diff_pct": -0.3,
+      "equsto_cheaper": false,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.M060",
+      "cafe_url": "https://www.cafemarkt.com/pimak-ekonomik-fritoz-8-l-elektrikli",
+      "cafe_title": "Pimak Ekonomik Fritöz, 8 L, Elektrikli"
+    },
+    {
+      "kod": "M060-1",
+      "name": "M060-1 Elektrikli Ekonomik Model Fritözler",
+      "equsto_tl": 18610,
+      "cafe_tl": 18660,
+      "diff_tl": -50,
+      "diff_pct": -0.3,
+      "equsto_cheaper": false,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.M060.1",
+      "cafe_url": "https://www.cafemarkt.com/pimak-ekonomik-fritoz-8-8-l-elektrikli",
+      "cafe_title": "Pimak Ekonomik Fritöz, 8+8 L, Elektrikli"
+    },
+    {
+      "kod": "M070",
+      "name": "M070 Elektrikli Tost Makineleri",
+      "equsto_tl": 14316,
+      "cafe_tl": 14354,
+      "diff_tl": -38,
+      "diff_pct": -0.3,
+      "equsto_cheaper": false,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.M.070",
+      "cafe_url": "https://www.cafemarkt.com/pimak-tost-makinesi-12-dilim-kapasiteli-elektrikli",
+      "cafe_title": "Pimak Tost Makinesi, 12 Dilim Kapasiteli, Elektrikli"
+    },
+    {
+      "kod": "M071-1",
+      "name": "M071-1 Elektrikli Tost Makineleri",
+      "equsto_tl": 15747,
+      "cafe_tl": 15789,
+      "diff_tl": -42,
+      "diff_pct": -0.3,
+      "equsto_cheaper": false,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.M.071.1",
+      "cafe_url": "https://www.cafemarkt.com/pimak-blok-kapakli-tost-makinesi-20-dilim-kapasiteli-elektrikli",
+      "cafe_title": "Pimak Blok Kapaklı Tost Makinesi, 20 Dilim Kapasiteli, Elekt"
+    },
+    {
+      "kod": "M071-2",
+      "name": "M071-2 Elektrikli Tost Makineleri",
+      "equsto_tl": 17179,
+      "cafe_tl": 17225,
+      "diff_tl": -46,
+      "diff_pct": -0.3,
+      "equsto_cheaper": false,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.M.071.2",
+      "cafe_url": "https://www.cafemarkt.com/pimak-cift-kapakli-tost-makinesi-20-dilim-kapasiteli-elektrikli",
+      "cafe_title": "Pimak Çift Kapaklı Tost Makinesi, 20 Dilim Kapasiteli, Elekt"
+    },
+    {
+      "kod": "M079-2E",
+      "name": "M079-2E Elektrikli Kumpir Fırın",
+      "equsto_tl": 42947,
+      "cafe_tl": 43061,
+      "diff_tl": -114,
+      "diff_pct": -0.3,
+      "equsto_cheaper": true,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.M079.2E",
+      "cafe_url": "https://www.cafemarkt.com/pimak-2-cekmeceli-kumpir-firini-elektrikli",
+      "cafe_title": "Pimak 2 Çekmeceli Kumpir Fırını, Elektrikli"
+    },
+    {
+      "kod": "M079-3E",
+      "name": "M079-3E Elektrikli Kumpir Fırın",
+      "equsto_tl": 46525,
+      "cafe_tl": 46650,
+      "diff_tl": -125,
+      "diff_pct": -0.3,
+      "equsto_cheaper": true,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.M079.3E",
+      "cafe_url": "https://www.cafemarkt.com/pimak-3-cekmeceli-kumpir-firini-elektrikli",
+      "cafe_title": "Pimak 3 Çekmeceli Kumpir Fırını, Elektrikli"
+    },
+    {
+      "kod": "M079-4E",
+      "name": "M079-4E Elektrikli Kumpir Fırın",
+      "equsto_tl": 50104,
+      "cafe_tl": 50238,
+      "diff_tl": -134,
+      "diff_pct": -0.3,
+      "equsto_cheaper": true,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.M079.4E",
+      "cafe_url": "https://www.cafemarkt.com/pimak-4-cekmeceli-kumpir-firini-elektrikli",
+      "cafe_title": "Pimak 4 Çekmeceli Kumpir Fırını, Elektrikli"
+    },
+    {
+      "kod": "M097",
+      "name": "M097 Elektrikli Krep Makinası",
+      "equsto_tl": 14316,
+      "cafe_tl": 14354,
+      "diff_tl": -38,
+      "diff_pct": -0.3,
+      "equsto_cheaper": false,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.M097",
+      "cafe_url": "https://www.cafemarkt.com/pimak-krep-makinesi-elektrikli",
+      "cafe_title": "Pimak Krep Makinesi, Elektrikli"
+    },
+    {
+      "kod": "M097-G",
+      "name": "M097-G Gazlı Krep Makinası",
+      "equsto_tl": 14316,
+      "cafe_tl": 14354,
+      "diff_tl": -38,
+      "diff_pct": -0.3,
+      "equsto_cheaper": false,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.M097.G",
+      "cafe_url": "https://www.cafemarkt.com/pimak-krep-makinesi-dogalgazli",
+      "cafe_title": "Pimak Krep Makinesi, Doğalgazlı"
+    },
+    {
+      "kod": "M098",
+      "name": "M098 Elektrikli Krep Makinası",
+      "equsto_tl": 28631,
+      "cafe_tl": 28708,
+      "diff_tl": -77,
+      "diff_pct": -0.3,
+      "equsto_cheaper": false,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.M098",
+      "cafe_url": "https://www.cafemarkt.com/pimak-2-li-krep-makinesi-elektrikli",
+      "cafe_title": "Pimak 2'li Krep Makinesi, Elektrikli"
+    },
+    {
+      "kod": "M098-G",
+      "name": "M098-G Gazlı Krep Makinası",
+      "equsto_tl": 28631,
+      "cafe_tl": 28708,
+      "diff_tl": -77,
+      "diff_pct": -0.3,
+      "equsto_cheaper": false,
+      "equsto_dearer": false,
+      "cafe_supplier": "301.M098.G",
+      "cafe_url": "https://www.cafemarkt.com/pimak-2-li-krep-makinesi-dogalgazli",
+      "cafe_title": "Pimak 2'li Krep Makinesi, Doğalgazlı"
+    }
+  ],
+  "unmatched_equsto": [
+    {
+      "kod": "M00-T.1",
+      "name": "M00-T.1 Piliç Teşhir Ünitesi",
+      "tl": 67999
+    },
+    {
+      "kod": "M003R",
+      "name": "M003R Radyanlı Piliç Çevirme Makinesi",
+      "tl": 75156
+    },
+    {
+      "kod": "M004R",
+      "name": "M004R Radyanlı Piliç Çevirme Makinesi",
+      "tl": 89472
+    },
+    {
+      "kod": "M005R",
+      "name": "M005R Radyanlı Piliç Çevirme Makinesi",
+      "tl": 100209
+    },
+    {
+      "kod": "M006R",
+      "name": "M006R Radyanlı Piliç Çevirme Makinesi",
+      "tl": 118103
+    },
+    {
+      "kod": "M009-E",
+      "name": "M009-E Elektrikli Çift Katlı Tamburlu Piliç Makinesi",
+      "tl": 128840
+    },
+    {
+      "kod": "PI1/M003-DG",
+      "name": "PI1/M003-DG Gazlı Tek Vitrinli Çevirme Makinesi",
+      "tl": 46525
+    },
+    {
+      "kod": "PI2/M004-DG",
+      "name": "PI2/M004-DG Gazlı Tek Vitrinli Çevirme Makinesi",
+      "tl": 50104
+    },
+    {
+      "kod": "PI2/M006",
+      "name": "PI2/M006 Gazlı Setüstü Tamburlu Piliç Makinesi",
+      "tl": 78735
+    },
+    {
+      "kod": "PI2/M014B",
+      "name": "PI2/M014B Gazlı Dökümlü Piliç Çevirme Makinesi",
+      "tl": 157471
+    },
+    {
+      "kod": "PI3/M010B",
+      "name": "PI3/M010B Gazlı Çift Vitrinli Lavtaşlı Piliç Makinesi",
+      "tl": 139576
+    },
+    {
+      "kod": "PI3/M012B",
+      "name": "PI3/M012B Gazlı Tek Vitrinli Çevirme Makinesi",
+      "tl": 110945
+    },
+    {
+      "kod": "PI4/M011B",
+      "name": "PI4/M011B Gazlı Çift Vitrinli Lavtaşlı Piliç Makinesi",
+      "tl": 150313
+    },
+    {
+      "kod": "PI4/M013B",
+      "name": "PI4/M013B Gazlı Tek Vitrinli Çevirme Makinesi",
+      "tl": 118103
+    },
+    {
+      "kod": "PI5/M015B",
+      "name": "PI5/M015B Gazlı Dökümlü Piliç Çevirme Makinesi",
+      "tl": 178944
+    },
+    {
+      "kod": "PI6/M16KB",
+      "name": "PI6/M16KB Gazlı Kollu Piliç Makinesi",
+      "tl": 121682
+    },
+    {
+      "kod": "PI6/M17KB",
+      "name": "PI6/M17KB Gazlı Kollu Piliç Makinesi",
+      "tl": 135997
+    },
+    {
+      "kod": "BDH.30",
+      "name": "BDH.30 Devrilir Humus Makinesı",
+      "tl": 135997
+    },
+    {
+      "kod": "BDH.50",
+      "name": "BDH.50 Devrilir Humus Makinesı",
+      "tl": 143155
+    },
+    {
+      "kod": "BKM.12",
+      "name": "BKM.12 Kıyma Makinesi",
+      "tl": 28631
+    },
+    {
+      "kod": "BKM.22",
+      "name": "BKM.22 Kıyma Makinesi",
+      "tl": 44736
+    },
+    {
+      "kod": "BKM.22S",
+      "name": "BKM.22S Soğutuculu Kıyma Makinesi",
+      "tl": 64420
+    },
+    {
+      "kod": "BKM.32",
+      "name": "BKM.32 Kıyma Makinesi",
+      "tl": 60841
+    },
+    {
+      "kod": "BKM.32S",
+      "name": "BKM.32S Soğutuculu Kıyma Makinesi",
+      "tl": 78735
+    },
+    {
+      "kod": "BKTA.2500",
+      "name": "BKTA.2500 Et Kemik Testeresi",
+      "tl": 207575
+    },
+    {
+      "kod": "BKTA.3100",
+      "name": "BKTA.3100 Et Kemik Testeresi",
+      "tl": 322099
+    },
+    {
+      "kod": "BM.40S.3D",
+      "name": "BM.40S.3D Üç Devirli Mikser Makinesi",
+      "tl": 155682
+    },
+    {
+      "kod": "BM.60",
+      "name": "BM.60 Mikser Makinesi",
+      "tl": 203996
+    },
+    {
+      "kod": "BM.60S.3D",
+      "name": "BM.60S.3D Üç Devirli Mikser Makinesi",
+      "tl": 173576
+    },
+    {
+      "kod": "BPD",
+      "name": "BPD Patates Doğrama Makinesi",
+      "tl": 44736
+    },
+    {
+      "kod": "BPD.A",
+      "name": "BPD.A Patates Doğrama Makinesi Ayaklı",
+      "tl": 48315
+    },
+    {
+      "kod": "BPKM.22",
+      "name": "BPKM.22 Paslanmaz Kıyma Makinesi",
+      "tl": 64420
+    },
+    {
+      "kod": "BPKM.32",
+      "name": "BPKM.32 Paslanmaz Kıyma Makinesi",
+      "tl": 93051
+    },
+    {
+      "kod": "BTM.100",
+      "name": "BTM.100 Et Soslama Makinesi",
+      "tl": 429466
+    },
+    {
+      "kod": "BTM.200",
+      "name": "BTM.200 Et Soslama Makinesi",
+      "tl": 572621
+    },
+    {
+      "kod": "BTM.400",
+      "name": "BTM.400 Et Soslama Makinesi",
+      "tl": 966298
+    },
+    {
+      "kod": "BTM.400S",
+      "name": "BTM.400S Soğutmalı Et Soslama Makinesi",
+      "tl": 1216819
+    },
+    {
+      "kod": "FRN-SMKETTÜTSÜLEMEFIRINI",
+      "name": "FRN-SMK Kömürlü Et Tütsüleme Fırını",
+      "tl": 110945
+    },
+    {
+      "kod": "BKD.100",
+      "name": "Kuşbaşı Doğrama Makinesi",
+      "tl": 715776
+    },
+    {
+      "kod": "M066",
+      "name": "M066 Elektrikli Makarna Haşlama",
+      "tl": 32210
+    },
+    {
+      "kod": "PMK-ET45",
+      "name": "PMK-ET45 Döner Eti Açma Makinesi",
+      "tl": 518938
+    },
+    {
+      "kod": "PMK-ST32",
+      "name": "PMK-ST32 Setüstü Döner Eti Açma Makinesi",
+      "tl": 375782
+    },
+    {
+      "kod": "PTS04-DİJİTAL",
+      "name": "PTS04-DİJİTAL Patisserie Fırın",
+      "tl": 78735
+    },
+    {
+      "kod": "PTS06-DİJİTAL",
+      "name": "PTS06-DİJİTAL Patisserie Fırın",
+      "tl": 96630
+    },
+    {
+      "kod": "PTS09-DİJİTAL",
+      "name": "PTS09-DİJİTAL Patisserie Fırın",
+      "tl": 150313
+    },
+    {
+      "kod": "G.GN.150.D.1",
+      "name": "G.GN.150.D.1 İkili Gn Küvet Taşıma Arabası 150 (Etrafı Açık)",
+      "tl": 25768
+    },
+    {
+      "kod": "G.GN.150.D.2",
+      "name": "G.GN.150.D.2 İkili Gn Küvet Taşıma Arabası 150 (2 Yanı Kapalı)",
+      "tl": 28989
+    },
+    {
+      "kod": "G.GN.150.S.1",
+      "name": "G.GN.150.S.1 Tekli Gn Küvet Taşıma Arabası 150 (Etrafı Açık)",
+      "tl": 16105
+    },
+    {
+      "kod": "G.GN.150.S.2",
+      "name": "G.GN.150.S.2 Tekli Gn Küvet Taşıma Arabası 150 (2 Yanı Kapalı)",
+      "tl": 17894
+    },
+    {
+      "kod": "G.GN.75.D.1",
+      "name": "G.GN.75.D.1 İkili Gn Küvet Taşıma Arabası 75 (Etrafı Açık)",
+      "tl": 19326
+    },
+    {
+      "kod": "G.GN.75.D.2",
+      "name": "G.GN.75.D.2 İkili Gn Küvet Taşıma Arabası 75 (2 Yanı Kapalı)",
+      "tl": 20758
+    },
+    {
+      "kod": "G.GN.75.S.1",
+      "name": "G.GN.75.S.1 Tekli Gn Küvet Taşıma Arabası 75 (Etrafı Açık)",
+      "tl": 12526
+    },
+    {
+      "kod": "G.GN.75.S.2",
+      "name": "G.GN.75.S.2 Tekli Gn Küvet Taşıma Arabası 75 (2 Yanı Kapalı)",
+      "tl": 13600
+    },
+    {
+      "kod": "G.MD.100.25.D",
+      "name": "G.MD.100.25.D İkili Hastane Tepsi Arabası 100 / 25 (Isıtmalı+Nötr)",
+      "tl": 114524
+    },
+    {
+      "kod": "G.MD.100.25.S",
+      "name": "G.MD.100.25.S Tekli Hastane Tepsi Arabası 100 / 25 (Isıtmalı+Nötr)",
+      "tl": 78735
+    },
+    {
+      "kod": "G.SS.150.D.1",
+      "name": "G.SS.150.D.1 İkili Self Servis Arabası 150 (Etrafı Açık)",
+      "tl": 26842
+    },
+    {
+      "kod": "G.SS.150.D.2",
+      "name": "G.SS.150.D.2 İkili Self Servis Arabası 150 (2 Yanı Kapalı)",
+      "tl": 28631
+    },
+    {
+      "kod": "G.SS.150.S.1",
+      "name": "G.SS.150.S.1 Tekli Self Servis Arabası 150 (Etrafı Açık)",
+      "tl": 16463
+    },
+    {
+      "kod": "G.SS.150.S.2",
+      "name": "G.SS.150.S.2 Tekli Self Servis Arabası 150 (2 Yanı Kapalı)",
+      "tl": 17894
+    },
+    {
+      "kod": "G.ST.150.D.1",
+      "name": "G.ST.150.D.1 İkili Servis Tepsi Arabası 150 (Etrafı Açık)",
+      "tl": 28631
+    },
+    {
+      "kod": "G.ST.150.D.2",
+      "name": "G.ST.150.D.2 İkili Servis Tepsi Arabası 150 (2 Yanı Kapalı)",
+      "tl": 32210
+    },
+    {
+      "kod": "G.ST.150.D.3",
+      "name": "G.ST.150.D.3 İkili Servis Tepsi Arabası 150 (2 Yanı Kapalı+Arka Kapalı)",
+      "tl": 35073
+    },
+    {
+      "kod": "G.ST.150.D.4",
+      "name": "G.ST.150.D.4 İkili Servis Tepsi Arabası 150(2 Yanı Kapalı+Arka Kapalı+ Kapılı)",
+      "tl": 50104
+    },
+    {
+      "kod": "G.ST.150.S.1",
+      "name": "G.ST.150.S.1 Tekli Servis Tepsi Arabası 150 (Etrafı Açık)",
+      "tl": 16463
+    },
+    {
+      "kod": "G.ST.150.S.2",
+      "name": "G.ST.150.S.2 Tekli Servis Tepsi Arabası 150 (2 Yanı Kapalı)",
+      "tl": 18968
+    },
+    {
+      "kod": "G.ST.150.S.3",
+      "name": "G.ST.150.S.3 Tekli Servis Tepsi Arabası 150 (2 Yanı + Arka Kapalı)",
+      "tl": 22189
+    },
+    {
+      "kod": "G.ST.150.S.4",
+      "name": "G.ST.150.S.4 Tekli Servis Tepsi Arabası 150 (2 Yanı + Arka Kapalı + Kapılı)",
+      "tl": 28273
+    },
+    {
+      "kod": "G.ST.75.D.1",
+      "name": "G.ST.75.D.1 Tepsi Taşıma Arabaları (İkili/75)",
+      "tl": 20042
+    },
+    {
+      "kod": "G.ST.75.D.2",
+      "name": "G.ST.75.D.2 İkili Servis Tepsi Arabası 75 (2 Yanı Kapalı)",
+      "tl": 21473
+    },
+    {
+      "kod": "G.ST.75.D.3",
+      "name": "G.ST.75.D.3 İkili Servis Tepsi Arabası 75 (2 Yanı Kapalı+Arka Kapalı)",
+      "tl": 22905
+    },
+    {
+      "kod": "G.ST.75.D.4",
+      "name": "G.ST.75.D.4 İkili Servis Tepsi Arabası 75 (2 Yanı Kapalı+Arka Kapalı+ Kapılı)",
+      "tl": 29347
+    },
+    {
+      "kod": "G.ST.75.S.1",
+      "name": "G.ST.75.S.1 Tekli Servis Tepsi Arabası 75 (Etrafı Açık)",
+      "tl": 12168
+    },
+    {
+      "kod": "G.ST.75.S.2",
+      "name": "G.ST.75.S.2 Tekli Servis Tepsi Arabası 75 (2 Yanı Kapalı)",
+      "tl": 13242
+    },
+    {
+      "kod": "G.ST.75.S.3",
+      "name": "G.ST.75.S.3 Tekli Servis Tepsi Arabası 75 (2 Yanı + Arka Kapalı)",
+      "tl": 13958
+    },
+    {
+      "kod": "G.ST.75.S.4",
+      "name": "G.ST.75.S.4 Tekli Servis Tepsi Arabası 75 (2 Yanı + Arka Kapalı + Kapılı)",
+      "tl": 17537
+    },
+    {
+      "kod": "FC-100",
+      "name": "FC-100 Un Şeker Arabası",
+      "tl": 2506
+    },
+    {
+      "kod": "PDB-75",
+      "name": "PDB-75 Tepsi",
+      "tl": 286
+    },
+    {
+      "kod": "PDB-100",
+      "name": "PDB-100 Tepsi",
+      "tl": 251
+    },
+    {
+      "kod": "PDB-L",
+      "name": "PDB-L Tepsi Kapağı",
+      "tl": 215
+    },
+    {
+      "kod": "TTFG-85",
+      "name": "TTFG-85 - Çok Amaçlı Portatif Mini Fırın",
+      "tl": 34000
+    },
+    {
+      "kod": "BE/M037-3K",
+      "name": "BE/M037-3K Bain Marieler (Kuru-Sulu Tip)",
+      "tl": 78735
+    },
+    {
+      "kod": "BE/M037-3S",
+      "name": "BE/M037-3S Gazlı Sulu Tip Bain Marie",
+      "tl": 67999
+    },
+    {
+      "kod": "BE/M037-4K",
+      "name": "BE/M037-4K Bain Marieler (Kuru-Sulu Tip)",
+      "tl": 82672
+    },
+    {
+      "kod": "BE/M037-4S",
+      "name": "BE/M037-4S Gazlı Sulu Tip Bain Marie",
+      "tl": 71578
+    },
+    {
+      "kod": "BE1/M037-5K",
+      "name": "BE1/M037-5K Bain Marieler (Kuru-Sulu Tip)",
+      "tl": 94841
+    },
+    {
+      "kod": "BE1/M037-5S",
+      "name": "BE1/M037-5S Gazlı Sulu Tip Bain Marie",
+      "tl": 85893
+    },
+    {
+      "kod": "BE1/M037-6K",
+      "name": "BE1/M037-6K Bain Marieler (Kuru-Sulu Tip)",
+      "tl": 118103
+    },
+    {
+      "kod": "BE1/M037-6S",
+      "name": "BE1/M037-6S Gazlı Sulu Tip Bain Marie",
+      "tl": 107366
+    },
+    {
+      "kod": "E-SS37-10",
+      "name": "E-SS37-10 Soğuk Servis Ünitesi",
+      "tl": 93051
+    },
+    {
+      "kod": "E-SS37-3",
+      "name": "E-SS37-3 Soğutmalı Teşhir Ünitesi",
+      "tl": 143155
+    },
+    {
+      "kod": "E-SS37-4",
+      "name": "E-SS37-4 Soğutmalı Teşhir Ünitesi",
+      "tl": 200417
+    },
+    {
+      "kod": "E-SS37-6",
+      "name": "E-SS37-6 Soğutmalı Teşhir Ünitesi",
+      "tl": 78735
+    },
+    {
+      "kod": "E-SS37-8",
+      "name": "E-SS37-8 Soğuk Servis Ünitesi",
+      "tl": 85893
+    },
+    {
+      "kod": "M037-3SE",
+      "name": "M037-3SE Elektrikli Sulu Tip Bain Marie",
+      "tl": 67999
+    },
+    {
+      "kod": "M037-4SE",
+      "name": "M037-4SE Elektrikli Sulu Tip Bain Marie",
+      "tl": 71578
+    },
+    {
+      "kod": "M037-5SE",
+      "name": "M037-5SE Elektrikli Sulu Tip Bain Marie",
+      "tl": 85893
+    },
+    {
+      "kod": "M037-6SE",
+      "name": "M037-6SE Elektrikli Sulu Tip Bain Marie",
+      "tl": 107366
+    },
+    {
+      "kod": "MX037-1MBL",
+      "name": "MX037-1 MBL Nötr Tezgah",
+      "tl": 35789
+    },
+    {
+      "kod": "MX037-2",
+      "name": "MX037-2 MBL Nötr Tezgah",
+      "tl": 42947
+    },
+    {
+      "kod": "MX037-3",
+      "name": "MX037-3 MBL Nötr Tezgah",
+      "tl": 50104
+    },
+    {
+      "kod": "MX037-4",
+      "name": "MX037-4 MBL Nötr Tezgah",
+      "tl": 62631
+    },
+    {
+      "kod": "PVK100",
+      "name": "PVK100 Kuver Ünitesi",
+      "tl": 50104
+    },
+    {
+      "kod": "PVK60",
+      "name": "PVK60 Kuver Ünitesi",
+      "tl": 42947
+    },
+    {
+      "kod": "PVK80",
+      "name": "PVK80 Kuver Ünitesi",
+      "tl": 46525
+    }
+  ],
+  "cafemarkt_sample": [
+    {
+      "slug": "pimak-dolapli-bain-marie-40x70x85-cm-elektrikli",
+      "url": "https://www.cafemarkt.com/pimak-dolapli-bain-marie-40x70x85-cm-elektrikli",
+      "title": "Pimak Dolaplı Bain Marie, 40x70x85 cm, Elektrikli",
+      "supplier": "301.70SD.M180.1",
+      "tl": 37679,
+      "codes": [
+        "301.70SD.M180.1",
+        "70SD.M180.1",
+        "70SD-M180-1",
+        "70SDM1801",
+        "70SD.M180-1"
+      ]
+    },
+    {
+      "slug": "pimak-bain-maire-2x1-1-gn-80x70x30-cm-elektrikli",
+      "url": "https://www.cafemarkt.com/pimak-bain-maire-2x1-1-gn-80x70x30-cm-elektrikli",
+      "title": "Pimak Bain Maire, 2x1/1 GN Kapasiteli, 80x70x30 cm, Elektrikli",
+      "supplier": "301.70S.M180",
+      "tl": 37679,
+      "codes": [
+        "301.70S.M180",
+        "70S.M180",
+        "70S-M180",
+        "70SM180"
+      ]
+    },
+    {
+      "slug": "pimak-blok-kapakli-tost-makinesi-20-dilim-kapasiteli-elektrikli",
+      "url": "https://www.cafemarkt.com/pimak-blok-kapakli-tost-makinesi-20-dilim-kapasiteli-elektrikli",
+      "title": "Pimak Blok Kapaklı Tost Makinesi, 20 Dilim Kapasiteli, Elektrikli",
+      "supplier": "301.M.071.1",
+      "tl": 15789,
+      "codes": [
+        "301.M.071.1",
+        "M.071.1",
+        "M-071-1",
+        "M0711",
+        "M.071-1",
+        "M071-1"
+      ]
+    },
+    {
+      "slug": "pimak-4-cekmeceli-kumpir-firini-elektrikli",
+      "url": "https://www.cafemarkt.com/pimak-4-cekmeceli-kumpir-firini-elektrikli",
+      "title": "Pimak 4 Çekmeceli Kumpir Fırını, Elektrikli",
+      "supplier": "301.M079.4E",
+      "tl": 50238,
+      "codes": [
+        "301.M079.4E",
+        "M079.4E",
+        "M079-4E",
+        "M0794E"
+      ]
+    },
+    {
+      "slug": "pimak-pasta-borek-firini-5-tepsili-dogalgazli",
+      "url": "https://www.cafemarkt.com/pimak-pasta-borek-firini-5-tepsili-dogalgazli",
+      "title": "Pimak Pasta Börek Fırını, 5 Tepsili, Doğalgazlı",
+      "supplier": "301.M016",
+      "tl": 61003,
+      "codes": [
+        "301.M016",
+        "M016"
+      ]
+    }
+  ]
+}

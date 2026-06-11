@@ -1,0 +1,1810 @@
+{
+  "summary": {
+    "fetched_at": "2026-06-08T11:36:37.965Z",
+    "equsto_inoksan": 971,
+    "cafemarkt_inoksan": 50,
+    "matched": 25,
+    "equsto_eslesmeyen": 946,
+    "cafemarkt_eslesmeyen": 27,
+    "equsto_daha_ucuz": 25,
+    "cafemarkt_daha_ucuz": 0,
+    "fark_50tl_alti": 0,
+    "ortalama_fark_pct": -6.744066633926309,
+    "medyan_fark_pct": -8.065900151067755
+  },
+  "cafemarkt_products": [
+    {
+      "code": "BYM052ST",
+      "sku": "210.INO.BYM052ST",
+      "name": "İnoksan BYM052ST Bulaşık Makinesi, 500 Tabak Kapasiteli, Tahliye Pompalı",
+      "price_try_kdv_dahil": 60046.73,
+      "url": "https://www.cafemarkt.com/inoksan-bym052st-bulasik-makinesi-500-tabak-kapasiteli-tahliye-pompali"
+    },
+    {
+      "code": "FKE04M",
+      "sku": "210.INO.FKE04M",
+      "name": "İnoksan INO-FKE04M Konveksiyonlu Manuel Patisserie Fırın, 40x60 cm 4 Tepsi Kapasiteli, Elektrikli",
+      "price_try_kdv_dahil": 64214.16,
+      "url": "https://www.cafemarkt.com/inoksan-ino-fke04m-konveksiyonlu-manuel-patisserie-firin-40x60-cm-4-tepsi-kapasiteli-elektrikli"
+    },
+    {
+      "code": "BYM102S",
+      "sku": "210.INO.BYM102S",
+      "name": "İnoksan BYM102S Giyotin Tipi Bulaşık Yıkama Makinesi, 1000 Tabak Kapasiteli",
+      "price_try_kdv_dahil": 89289.8,
+      "url": "https://www.cafemarkt.com/inoksan-bulasik-yikama-makinesi-1000-tabaksaatte"
+    },
+    {
+      "code": "BYM042",
+      "sku": "210.INO.BYM042",
+      "name": "İnoksan BYM042 Bardak Yıkama Makinesi, 40 Sepet/Saat Kapasiteli, Parlatıcı Pompalı",
+      "price_try_kdv_dahil": 59068.68,
+      "url": "https://www.cafemarkt.com/inoksan-bardak-yikama-makinesi-parlatici-pompali"
+    },
+    {
+      "code": "FKE04D",
+      "sku": "210.INO.FKE04D",
+      "name": "İnoksan INO-FKE04D Konveksiyonlu Dijital Patisserie Fırın, 40x60 cm 4 Tepsi Kapasiteli, Elektrikli",
+      "price_try_kdv_dahil": 70257.84,
+      "url": "https://www.cafemarkt.com/inoksan-ino-fke04d-konveksiyonlu-dijital-patisserie-firin-40x60-cm-4-tepsi-kapasiteli-elektrikli"
+    },
+    {
+      "code": "BYM052S",
+      "sku": "210.INO.BYM052S",
+      "name": "İnoksan BYM052S Set Altı Bulaşık Yıkama Makinesi",
+      "price_try_kdv_dahil": 57423.18,
+      "url": "https://www.cafemarkt.com/inoksan-bym0-52s-bulasik-yikama-makinesi-set-alti"
+    },
+    {
+      "code": "BYM052T",
+      "sku": "210.INO.BYM052T",
+      "name": "İnoksan BYM052T Bulaşık Yıkama Makinesi, 500 Tabak/Saatte, Tahliye ve Parlatıcı Pompalı",
+      "price_try_kdv_dahil": 67687.42,
+      "url": "https://www.cafemarkt.com/inoksan-bulasik-yikama-makinesi-500-tabaksaatte-tahliye-ve-parlatici-pompali"
+    },
+    {
+      "code": "7FE20S",
+      "sku": "210.INO.7FE20S",
+      "name": "İnoksan Perfect 700 Seri Fritöz, Setüstü, 1 Modül , Elektrikli",
+      "price_try_kdv_dahil": 122766.73,
+      "url": "https://www.cafemarkt.com/inoksan-perfect-700-seri-fritoz-setustu-1-modul-elektrikli"
+    },
+    {
+      "code": "7KE10S",
+      "sku": "210.INO.7KE10S",
+      "name": "İnoksan Perfect 700 Seri Set Üstü Ocak, 1/2 Modül, Elektrikli",
+      "price_try_kdv_dahil": 25778.96,
+      "url": "https://www.cafemarkt.com/inoksan-perfect-700-seri-kuzine-setustu-12-modul-elektrikli"
+    },
+    {
+      "code": "7IE22S",
+      "sku": "210.INO.7IE22S",
+      "name": "İnoksan Perfect 700 Seri Setüstü Düz+Oluklu Izgara, 1 Modül, Elektrikli",
+      "price_try_kdv_dahil": 70021.14,
+      "url": "https://www.cafemarkt.com/inoksan-perfect-700-seri-izgara-setustu-duzoluklu-1-modul-elektrikli"
+    },
+    {
+      "code": "7FE10S",
+      "sku": "210.INO.7FE10S",
+      "name": "İnoksan Perfect 700 Seri Fritöz, Setüstü, 1/2 Modül, Elektrikli",
+      "price_try_kdv_dahil": 66784.86,
+      "url": "https://www.cafemarkt.com/inoksan-perfect-700-seri-fritoz-setustu-12-modul-elektrikli"
+    },
+    {
+      "code": "7KG20S",
+      "sku": "210.INO.7KG20S",
+      "name": "İnoksan Perfect 700 Seri Set Üstü Ocak, 1 Modül, Gazlı",
+      "price_try_kdv_dahil": 62413.3,
+      "url": "https://www.cafemarkt.com/inoksan-perfect-700-seri-kuzine-setustu-1-modul-gazli"
+    },
+    {
+      "code": "7IG10S",
+      "sku": "210.INO.7IG10S",
+      "name": "İnoksan Perfect 700 Seri Setüstü Düz Izgara, 1/2 Modül, Gazlı",
+      "price_try_kdv_dahil": 44377.44,
+      "url": "https://www.cafemarkt.com/inoksan-perfect-700-seri-izgara-setustu-12-modul-duz-gazli"
+    },
+    {
+      "code": "7IE10S",
+      "sku": "210.INO.7IE10S",
+      "name": "İnoksan Perfect 700 Seri Setüstü Düz Izgara, 1/2 Modül, Elektrikli",
+      "price_try_kdv_dahil": 41580.91,
+      "url": "https://www.cafemarkt.com/inoksan-perfect-700-seri-izgara-setustu-duz-12-modul-elektrikli"
+    },
+    {
+      "code": "7KG10S",
+      "sku": "210.INO.7KG10S",
+      "name": "İnoksan Perfect 700 Seri Set Üstü Ocak, 1/2 Modül, Gazlı",
+      "price_try_kdv_dahil": 38572.44,
+      "url": "https://www.cafemarkt.com/inoksan-perfect-700-seri-kuzine-setustu-12-modul-gazli"
+    },
+    {
+      "code": "7KE20S",
+      "sku": "210.INO.7KE20S",
+      "name": "İnoksan Perfect 700 Seri Set Üstü Ocak, 1 Modül, Elektrikli",
+      "price_try_kdv_dahil": 42042.36,
+      "url": "https://www.cafemarkt.com/inoksan-perfect-700-seri-kuzine-setustu-1-modul-elektrikli"
+    },
+    {
+      "code": "7IG22S",
+      "sku": "210.INO.7IG22S",
+      "name": "İnoksan Perfect 700 Seri Setüstü Yarı Oluklu Izgara, 1 Modül, Gazlı",
+      "price_try_kdv_dahil": 70438.14,
+      "url": "https://www.cafemarkt.com/inoksan-perfect-700-seri-izgara-setustu-12-duz12-oluklu-gazli-1-modul"
+    },
+    {
+      "code": "MDF90W25L",
+      "sku": "210.GAL.MDF90W25L",
+      "name": "İnoksan GAL-MDF90W25L Profesyonel Mikrodalga Fırın, 25 L, 900 W",
+      "price_try_kdv_dahil": 9669.9,
+      "url": "https://www.cafemarkt.com/inoksan-gal-mdf90w25l-profesyonel-mikrodalga-firin-25-l-900-w"
+    },
+    {
+      "code": "FBE042",
+      "sku": "210.FBE042",
+      "name": "İnoksan INO-FBE042 Buhar Konveksiyonlu Fırın, GN 1/1 40 Tepsi Kapasiteli, Elektrikli",
+      "price_try_kdv_dahil": 755622.56,
+      "url": "https://www.cafemarkt.com/inoksan-ino-fbe042-buhar-konveksiyonlu-firin-gn-1-1-40-tepsi-kapasiteli-elektrikli"
+    },
+    {
+      "code": "SG0071",
+      "sku": "210.INT.SG0071",
+      "name": "İnoksan Yonca Model Waffle Makinesi, Tekli",
+      "price_try_kdv_dahil": 16723.77,
+      "url": "https://www.cafemarkt.com/inoksan-yonca-model-waffle-makinesi-tekli"
+    },
+    {
+      "code": "FBE010",
+      "sku": "210.FBE010",
+      "name": "İnoksan INO-FBE010 Buhar Konveksiyonlu Fırın, GN 1/1 10 Tepsi Kapasiteli, Elektrikli",
+      "price_try_kdv_dahil": 441138.81,
+      "url": "https://www.cafemarkt.com/inoksan-ino-fbe010-buhar-konveksiyonlu-firin-gn-1-1-10-tepsi-kapasiteli-elektrikli"
+    },
+    {
+      "code": "FBG040",
+      "sku": "210.FBG040",
+      "name": "İnoksan FBG 040 Kombi Fırın, GN 1/1 40 Tepsi Kapasiteli, Gazlı",
+      "price_try_kdv_dahil": 857044.86,
+      "url": "https://www.cafemarkt.com/inoksan-fbg-040-kombi-firin-gn-1-1-40-tepsi-kapasiteli-gazli"
+    },
+    {
+      "code": "FBE10",
+      "sku": "210.FBE10",
+      "name": "İnoksan FBE 10 Kombi Fırın, GN 1/1 10 Tepsi Kapasiteli, Elektrikli",
+      "price_try_kdv_dahil": 441138.81,
+      "url": "https://www.cafemarkt.com/inoksan-fbe-10-kombi-firin-gn-1-1-10-tepsi-kapasiteli-elektrikli"
+    },
+    {
+      "code": "FBE20",
+      "sku": "210.FBE20",
+      "name": "İnoksan FBE 20 Kombi Fırın, GN 1/1 20 Tepsi Kapasiteli, Elektrikli",
+      "price_try_kdv_dahil": 534207.8,
+      "url": "https://www.cafemarkt.com/inoksan-fbe-20-kombi-firin-gn-1-1-20-tepsi-kapasiteli-elektrikli"
+    },
+    {
+      "code": "042",
+      "sku": "210.FKE.042",
+      "name": "İnoksan FKE42 Konveksiyonlu Fırın, 40 Tepsi Kapasiteli, Elektrikli",
+      "price_try_kdv_dahil": 412906.49,
+      "url": "https://www.cafemarkt.com/inoksan-fke42-konveksiyonlu-firin-40-tepsi-kapasiteli-elektrikli"
+    },
+    {
+      "code": "006",
+      "sku": "210.FBE.006",
+      "name": "İnoksan FBE-006 Konveksiyonlu Fırın, 40 Tepsi Kapasiteli, Elektrikli",
+      "price_try_kdv_dahil": 203085.97,
+      "url": "https://www.cafemarkt.com/inoksan-fbe-006-konveksiyonlu-firin-40-tepsi-kapasiteli-elektrikli"
+    },
+    {
+      "code": "SG0072",
+      "sku": "210.INT.SG0072",
+      "name": "İnoksan Çam Model Waffle Makinesi, İkili",
+      "price_try_kdv_dahil": 29379.29,
+      "url": "https://www.cafemarkt.com/inoksan-cam-model-waffle-makinesi-ikili"
+    },
+    {
+      "code": "022",
+      "sku": "210.FKE.022",
+      "name": "İnoksan FKE-022 Konveksiyonlu Fırın, 20 Tepsi Kapasiteli, Elektrikli",
+      "price_try_kdv_dahil": 298894.44,
+      "url": "https://www.cafemarkt.com/inoksan-fke-022-konveksiyonlu-firin-20-tepsi-kapasiteli-elektrikli"
+    },
+    {
+      "code": "101S",
+      "sku": "210.ABS.101S",
+      "name": "İnoksan ABS 101S Banket Arabası, GN 2/1 10 Tepsi Kapasiteli",
+      "price_try_kdv_dahil": 74066.36,
+      "url": "https://www.cafemarkt.com/inoksan-abs-101s-banket-arabasi"
+    },
+    {
+      "code": "BYM102T",
+      "sku": "210.INO.BYM102T",
+      "name": "İnoksan INO-BYM102T Dijital Göstergeli Giyotin Tip Bulaşık Yıkama Makinesi, 1080 Tabak/Saatte Yıkama Kapasiteli, Tahliye ve Parlatıcı Pompalı",
+      "price_try_kdv_dahil": 106112.01,
+      "url": "https://www.cafemarkt.com/inoksan-bulasik-yikama-makinesi-1080-tabak-saatte"
+    },
+    {
+      "code": "BYM042T",
+      "sku": "210.INO.BYM042T",
+      "name": "İnoksan BYM042T Dijital Bardak Yıkama Makinesi, 40 Sepet/Saat Kapasiteli, Tahliye Pompalı",
+      "price_try_kdv_dahil": 61775.78,
+      "url": "https://www.cafemarkt.com/inoksan-bym042t-dijital-bardak-yikama-makinesi-40-sepet-saat-kapasiteli-tahliye-pompali"
+    },
+    {
+      "code": "BYM042ST",
+      "sku": "210.INO.BYM042ST",
+      "name": "İnoksan BYM042ST Elektromekanik Bardak Yıkama Makinesi, 40 Sepet/Saat Kapasiteli, Tahliye Pompalı",
+      "price_try_kdv_dahil": 57179.32,
+      "url": "https://www.cafemarkt.com/inoksan-bym042st-elektromekanik-bardak-yikama-makinesi-40-sepet-saat-kapasiteli-tahliye-pompali"
+    },
+    {
+      "code": "M10",
+      "sku": "210.M10",
+      "name": "İnoksan M-10 Profesyonel Planet Mikser, 10 L",
+      "price_try_kdv_dahil": 40190.51,
+      "url": "https://www.cafemarkt.com/inoksan-m-10-profesyonel-planet-mikser-10-l"
+    },
+    {
+      "code": "M30",
+      "sku": "210.M30",
+      "name": "İnoksan M-30 Profesyonel Planet Mikser, 30 L",
+      "price_try_kdv_dahil": 57415.01,
+      "url": "https://www.cafemarkt.com/inoksan-m-30-profesyonel-planet-mikser-30-l"
+    },
+    {
+      "code": "M20",
+      "sku": "210.M20",
+      "name": "İnoksan M-20 Profesyonel Planet Mikser, 20 L",
+      "price_try_kdv_dahil": 45932.01,
+      "url": "https://www.cafemarkt.com/inoksan-m-20-profesyonel-planet-mikser-20-l"
+    },
+    {
+      "code": "042E",
+      "sku": "210.FKG.042E",
+      "name": "İnoksan FKG 042E Dijital Panel Konveksiyonlu Fırın, 40 Tepsi Kapasiteli, Gazlı",
+      "price_try_kdv_dahil": 425133.62,
+      "url": "https://www.cafemarkt.com/inoksan-fkg-042e-dijital-panel-konveksiyonlu-firin-40-tepsi-kapasiteli-gazli"
+    },
+    {
+      "code": "SG0070",
+      "sku": "210.INT.SG0070",
+      "name": "İnoksan Yonca Model Waffle Makinesi, İkili",
+      "price_try_kdv_dahil": 29830.67,
+      "url": "https://www.cafemarkt.com/inoksan-yonca-model-waffle-makinesi-ikili"
+    },
+    {
+      "code": "SG0066",
+      "sku": "210.INT.SG0066",
+      "name": "İnoksan Tost Makinesi, Çift Kapaklı",
+      "price_try_kdv_dahil": 23955.16,
+      "url": "https://www.cafemarkt.com/inoksan-tost-makinesi-cift-kapakli"
+    },
+    {
+      "code": "SG0064",
+      "sku": "210.INT.SG0064",
+      "name": "İnoksan Tost Makinesi, Tek Kapaklı",
+      "price_try_kdv_dahil": 14915.33,
+      "url": "https://www.cafemarkt.com/inoksan-tost-makinesi-tek-kapakli"
+    },
+    {
+      "code": "40",
+      "sku": "210.FBE.40",
+      "name": "İnoksan FBE-40 Kombi Fırın, 40 Tepsi Kapasiteli, Elektrikli",
+      "price_try_kdv_dahil": 755622.56,
+      "url": "https://www.cafemarkt.com/inoksan-fbe-40-kombi-firin-40-tepsi-kapasiteli-elektrikli"
+    },
+    {
+      "code": "BKE2000L",
+      "sku": "210.INO.BKE2000L",
+      "name": "İnoksan BKE2000L Soldan Girişli Konveyörlü Bulaşık Makinesi, 2000 Tabak/Saat",
+      "price_try_kdv_dahil": 428329.34,
+      "url": "https://www.cafemarkt.com/inoksan-konveyorlu-bulasik-makinesi-soldan-girisli"
+    },
+    {
+      "code": "40T",
+      "sku": "210.FBG.40T",
+      "name": "İnoksan FBG-40T Dokunmatik Ekranlı Kombi Fırın, 40 Tepsi Kapasiteli, Gazlı",
+      "price_try_kdv_dahil": 984373.04,
+      "url": "https://www.cafemarkt.com/inoksan-fbg-40t-dokunmatik-ekranli-kombi-firin-40-tepsi-kapasiteli-gazli"
+    },
+    {
+      "code": "010",
+      "sku": "210.FKE.010",
+      "name": "İnoksan FKE-010 Konveksiyonlu Fırın, 10 Tepsi Kapasiteli, Elektrikli",
+      "price_try_kdv_dahil": 238560.51,
+      "url": "https://www.cafemarkt.com/inoksan-fke-010-konveksiyonlu-firin-10-tepsi-kapasiteli-elektrikli"
+    },
+    {
+      "code": "022E",
+      "sku": "210.FKG.022E",
+      "name": "İnoksan FKG022E Konveksiyonlu Fırın, 10 Tepsi Kapasiteli, Gazlı",
+      "price_try_kdv_dahil": 316171.64,
+      "url": "https://www.cafemarkt.com/inoksan-fkg022e-konveksiyonlu-firin-10-tepsi-kapasiteli-gazli"
+    },
+    {
+      "code": "006",
+      "sku": "210.FKE.006",
+      "name": "İnoksan FKE-006 Set Üstü Konveksiyonlu Fırın, 10 Tepsi Kapasiteli, Elektrikli",
+      "price_try_kdv_dahil": 203085.97,
+      "url": "https://www.cafemarkt.com/inoksan-fke-006-set-ustu-konveksiyonlu-firin-10-tepsi-kapasiteli-elektrikli"
+    },
+    {
+      "code": "40T",
+      "sku": "210.FBE.40T",
+      "name": "İnoksan FBE-40T Kombi Fırın, 40 Tepsi Kapasiteli, Elektrikli",
+      "price_try_kdv_dahil": 876352.74,
+      "url": "https://www.cafemarkt.com/inoksan-fbe40t-kombi-firin-40-tepsi-kapasiteli-elektrikli"
+    },
+    {
+      "code": "42E",
+      "sku": "210.FKG.42E",
+      "name": "İnoksan FKG42E Konveksiyonlu Fırın, 40 Tepsi Kapasiteli, Gazlı",
+      "price_try_kdv_dahil": 425133.62,
+      "url": "https://www.cafemarkt.com/inoksan-fkg42e-konveksiyonlu-firin-40-tepsi-kapasiteli-gazli"
+    },
+    {
+      "code": "BKE2000R",
+      "sku": "210.INO.BKE2000R",
+      "name": "İnoksan BKE2000R Sağdan Girişli Konveyörlü Bulaşık Makinesi, 2000 Tabak/Saat",
+      "price_try_kdv_dahil": 428329.34,
+      "url": "https://www.cafemarkt.com/inoksan-konveyorlu-bulasik-makinesi-sagdan-girisli"
+    },
+    {
+      "code": "SG0075",
+      "sku": "210.INT.SG0075",
+      "name": "İnoksan Kare Model İkili Waffle Makinesi",
+      "price_try_kdv_dahil": 16271.22,
+      "url": "https://www.cafemarkt.com/inoksan-kare-model-waffle-makinesi-ikili"
+    },
+    {
+      "code": "FBE022",
+      "sku": "210.FBE022",
+      "name": "İnoksan INO-FBE022 Buhar Konveksiyonlu Fırın, GN 1/1 20 Tepsi Kapasiteli, Elektrikli",
+      "price_try_kdv_dahil": 534207.8,
+      "url": "https://www.cafemarkt.com/inoksan-ino-fbe022-buhar-konveksiyonlu-firin-gn-1-1-20-tepsi-kapasiteli-elektrikli"
+    }
+  ],
+  "matched": [
+    {
+      "sku": "INO-7FE20-S",
+      "name": "7FE20-S - Tam Modül Standart Seri Elektrikli Fritöz",
+      "equsto_kdv_dahil": 106232,
+      "cafemarkt_kdv_dahil": 122766.73,
+      "fark_tl": -16534.729999999996,
+      "fark_pct": -13.468412818358846,
+      "equsto_ucuz": true,
+      "cafe_url": "https://www.cafemarkt.com/inoksan-perfect-700-seri-fritoz-setustu-1-modul-elektrikli",
+      "cafe_name": "İnoksan Perfect 700 Seri Fritöz, Setüstü, 1 Modül , Elektrikli"
+    },
+    {
+      "sku": "INO-BYM042T",
+      "name": "BYM042 – Set Altı Dijital Bardak Yıkama Makinesi",
+      "equsto_kdv_dahil": 56791,
+      "cafemarkt_kdv_dahil": 61775.78,
+      "fark_tl": -4984.779999999999,
+      "fark_pct": -8.069149430407837,
+      "equsto_ucuz": true,
+      "cafe_url": "https://www.cafemarkt.com/inoksan-bym042t-dijital-bardak-yikama-makinesi-40-sepet-saat-kapasiteli-tahliye-pompali",
+      "cafe_name": "İnoksan BYM042T Dijital Bardak Yıkama Makinesi, 40 Sepet/Saat Kapasiteli, Tahliye Pompalı"
+    },
+    {
+      "sku": "INO-7KG10S",
+      "name": "İNOKSAN KUZINE SETÜSTÜ, 1/2 MODÜL, GAZLI",
+      "equsto_kdv_dahil": 35460,
+      "cafemarkt_kdv_dahil": 38572.44,
+      "fark_tl": -3112.4400000000023,
+      "fark_pct": -8.069077299750813,
+      "equsto_ucuz": true,
+      "cafe_url": "https://www.cafemarkt.com/inoksan-perfect-700-seri-kuzine-setustu-12-modul-gazli",
+      "cafe_name": "İnoksan Perfect 700 Seri Set Üstü Ocak, 1/2 Modül, Gazlı"
+    },
+    {
+      "sku": "INO-7FE20S",
+      "name": "7FE20S-S - 1 Modül Standart Seri Set Üstü Fritöz",
+      "equsto_kdv_dahil": 112862,
+      "cafemarkt_kdv_dahil": 122766.73,
+      "fark_tl": -9904.729999999996,
+      "fark_pct": -8.06792687237006,
+      "equsto_ucuz": true,
+      "cafe_url": "https://www.cafemarkt.com/inoksan-perfect-700-seri-fritoz-setustu-1-modul-elektrikli",
+      "cafe_name": "İnoksan Perfect 700 Seri Fritöz, Setüstü, 1 Modül , Elektrikli"
+    },
+    {
+      "sku": "INO-7IE22S",
+      "name": "9IE 32S 1.5 MODUL ELEKTRIKLI SETÜSTÜ IZGARA",
+      "equsto_kdv_dahil": 64372,
+      "cafemarkt_kdv_dahil": 70021.14,
+      "fark_tl": -5649.139999999999,
+      "fark_pct": -8.067763535412304,
+      "equsto_ucuz": true,
+      "cafe_url": "https://www.cafemarkt.com/inoksan-perfect-700-seri-izgara-setustu-duzoluklu-1-modul-elektrikli",
+      "cafe_name": "İnoksan Perfect 700 Seri Setüstü Düz+Oluklu Izgara, 1 Modül, Elektrikli"
+    },
+    {
+      "sku": "INO-7KG20S",
+      "name": "İNOKSAN KUZINE SETÜSTÜ, 1 MODÜL, GAZLI",
+      "equsto_kdv_dahil": 57378,
+      "cafemarkt_kdv_dahil": 62413.3,
+      "fark_tl": -5035.300000000003,
+      "fark_pct": -8.067671473868556,
+      "equsto_ucuz": true,
+      "cafe_url": "https://www.cafemarkt.com/inoksan-perfect-700-seri-kuzine-setustu-1-modul-gazli",
+      "cafe_name": "İnoksan Perfect 700 Seri Set Üstü Ocak, 1 Modül, Gazlı"
+    },
+    {
+      "sku": "INO-7FE10S",
+      "name": "7FE10S-S - 1/2 Modül Ekonomik Seri Set Üstü Elektrikli Fritöz",
+      "equsto_kdv_dahil": 61397,
+      "cafemarkt_kdv_dahil": 66784.86,
+      "fark_tl": -5387.860000000001,
+      "fark_pct": -8.06748715202817,
+      "equsto_ucuz": true,
+      "cafe_url": "https://www.cafemarkt.com/inoksan-perfect-700-seri-fritoz-setustu-12-modul-elektrikli",
+      "cafe_name": "İnoksan Perfect 700 Seri Fritöz, Setüstü, 1/2 Modül, Elektrikli"
+    },
+    {
+      "sku": "INO-7IG22S",
+      "name": "İNOKSAN IZGARA, SETÜSTÜ, 1M, GAZLI, DÜZ+OLK",
+      "equsto_kdv_dahil": 64756,
+      "cafemarkt_kdv_dahil": 70438.14,
+      "fark_tl": -5682.139999999999,
+      "fark_pct": -8.066851282558,
+      "equsto_ucuz": true,
+      "cafe_url": "https://www.cafemarkt.com/inoksan-perfect-700-seri-izgara-setustu-12-duz12-oluklu-gazli-1-modul",
+      "cafe_name": "İnoksan Perfect 700 Seri Setüstü Yarı Oluklu Izgara, 1 Modül, Gazlı"
+    },
+    {
+      "sku": "INO-7KE20S",
+      "name": "9KE10S - 1/2 Modül Elektrikli Setüstü Kuzine",
+      "equsto_kdv_dahil": 38651,
+      "cafemarkt_kdv_dahil": 42042.36,
+      "fark_tl": -3391.3600000000006,
+      "fark_pct": -8.066530993978455,
+      "equsto_ucuz": true,
+      "cafe_url": "https://www.cafemarkt.com/inoksan-perfect-700-seri-kuzine-setustu-1-modul-elektrikli",
+      "cafe_name": "İnoksan Perfect 700 Seri Set Üstü Ocak, 1 Modül, Elektrikli"
+    },
+    {
+      "sku": "INO-BYM042ST",
+      "name": "BYM042 – Set Altı Dijital Bardak Yıkama Makinesi",
+      "equsto_kdv_dahil": 52567,
+      "cafemarkt_kdv_dahil": 57179.32,
+      "fark_tl": -4612.32,
+      "fark_pct": -8.066412821978295,
+      "equsto_ucuz": true,
+      "cafe_url": "https://www.cafemarkt.com/inoksan-bym042st-elektromekanik-bardak-yikama-makinesi-40-sepet-saat-kapasiteli-tahliye-pompali",
+      "cafe_name": "İnoksan BYM042ST Elektromekanik Bardak Yıkama Makinesi, 40 Sepet/Saat Kapasiteli, Tahliye Pompalı"
+    },
+    {
+      "sku": "INO-BYM042",
+      "name": "BYM042 – Set Altı Dijital Bardak Yıkama Makinesi",
+      "equsto_kdv_dahil": 54304,
+      "cafemarkt_kdv_dahil": 59068.68,
+      "fark_tl": -4764.68,
+      "fark_pct": -8.066339048036964,
+      "equsto_ucuz": true,
+      "cafe_url": "https://www.cafemarkt.com/inoksan-bardak-yikama-makinesi-parlatici-pompali",
+      "cafe_name": "İnoksan BYM042 Bardak Yıkama Makinesi, 40 Sepet/Saat Kapasiteli, Parlatıcı Pompalı"
+    },
+    {
+      "sku": "INO-7IE10S",
+      "name": "9IE 32S 1.5 MODUL ELEKTRIKLI SETÜSTÜ IZGARA",
+      "equsto_kdv_dahil": 38227,
+      "cafemarkt_kdv_dahil": 41580.91,
+      "fark_tl": -3353.9100000000035,
+      "fark_pct": -8.065985087868455,
+      "equsto_ucuz": true,
+      "cafe_url": "https://www.cafemarkt.com/inoksan-perfect-700-seri-izgara-setustu-duz-12-modul-elektrikli",
+      "cafe_name": "İnoksan Perfect 700 Seri Setüstü Düz Izgara, 1/2 Modül, Elektrikli"
+    },
+    {
+      "sku": "INO-7IG10S",
+      "name": "İNOKSAN IZGARA, SETÜSTÜ, 1/2M, GAZLI, DÜZ",
+      "equsto_kdv_dahil": 40798,
+      "cafemarkt_kdv_dahil": 44377.44,
+      "fark_tl": -3579.4400000000023,
+      "fark_pct": -8.065900151067755,
+      "equsto_ucuz": true,
+      "cafe_url": "https://www.cafemarkt.com/inoksan-perfect-700-seri-izgara-setustu-12-modul-duz-gazli",
+      "cafe_name": "İnoksan Perfect 700 Seri Setüstü Düz Izgara, 1/2 Modül, Gazlı"
+    },
+    {
+      "sku": "INO-7KE10S",
+      "name": "9KE10S - 1/2 Modül Elektrikli Setüstü Kuzine",
+      "equsto_kdv_dahil": 23700,
+      "cafemarkt_kdv_dahil": 25778.96,
+      "fark_tl": -2078.959999999999,
+      "fark_pct": -8.06456117702188,
+      "equsto_ucuz": true,
+      "cafe_url": "https://www.cafemarkt.com/inoksan-perfect-700-seri-kuzine-setustu-12-modul-elektrikli",
+      "cafe_name": "İnoksan Perfect 700 Seri Set Üstü Ocak, 1/2 Modül, Elektrikli"
+    },
+    {
+      "sku": "INO-7FE10-S",
+      "name": "7FE10-S - 1/2 Modül Standart Seri Elektrikli Fritöz",
+      "equsto_kdv_dahil": 62539,
+      "cafemarkt_kdv_dahil": 66784.86,
+      "fark_tl": -4245.860000000001,
+      "fark_pct": -6.357518754999263,
+      "equsto_ucuz": true,
+      "cafe_url": "https://www.cafemarkt.com/inoksan-perfect-700-seri-fritoz-setustu-12-modul-elektrikli",
+      "cafe_name": "İnoksan Perfect 700 Seri Fritöz, Setüstü, 1/2 Modül, Elektrikli"
+    },
+    {
+      "sku": "INO-BYM052ST",
+      "name": "İNOKSAN BULAŞIK YIKAMA MAKINASI 500 TB/H",
+      "equsto_kdv_dahil": 57410,
+      "cafemarkt_kdv_dahil": 60046.73,
+      "fark_tl": -2636.730000000003,
+      "fark_pct": -4.391130041552643,
+      "equsto_ucuz": true,
+      "cafe_url": "https://www.cafemarkt.com/inoksan-bym052st-bulasik-makinesi-500-tabak-kapasiteli-tahliye-pompali",
+      "cafe_name": "İnoksan BYM052ST Bulaşık Makinesi, 500 Tabak Kapasiteli, Tahliye Pompalı"
+    },
+    {
+      "sku": "INO-BYM102S",
+      "name": "BYM102S - Giyotin Tip 1000 Tabak Ekonomik Bulaşık Yıkama Makinesi",
+      "equsto_kdv_dahil": 85369,
+      "cafemarkt_kdv_dahil": 89289.8,
+      "fark_tl": -3920.800000000003,
+      "fark_pct": -4.391095063489898,
+      "equsto_ucuz": true,
+      "cafe_url": "https://www.cafemarkt.com/inoksan-bulasik-yikama-makinesi-1000-tabaksaatte",
+      "cafe_name": "İnoksan BYM102S Giyotin Tipi Bulaşık Yıkama Makinesi, 1000 Tabak Kapasiteli"
+    },
+    {
+      "sku": "INO-BYM052S",
+      "name": "BYM052S – Set altı 500 Tabak Ekonomik Bulaşık Yıkama Makinesi",
+      "equsto_kdv_dahil": 54902,
+      "cafemarkt_kdv_dahil": 57423.18,
+      "fark_tl": -2521.1800000000003,
+      "fark_pct": -4.390526613120347,
+      "equsto_ucuz": true,
+      "cafe_url": "https://www.cafemarkt.com/inoksan-bym0-52s-bulasik-yikama-makinesi-set-alti",
+      "cafe_name": "İnoksan BYM052S Set Altı Bulaşık Yıkama Makinesi"
+    },
+    {
+      "sku": "INO-FBE10",
+      "name": "FBE 10T - İnosmart Elektrikli Dokunmatik Kombi Fırın GN 1/1 10 Tepsi",
+      "equsto_kdv_dahil": 421771,
+      "cafemarkt_kdv_dahil": 441138.81,
+      "fark_tl": -19367.809999999998,
+      "fark_pct": -4.390411716439095,
+      "equsto_ucuz": true,
+      "cafe_url": "https://www.cafemarkt.com/inoksan-fbe-10-kombi-firin-gn-1-1-10-tepsi-kapasiteli-elektrikli",
+      "cafe_name": "İnoksan FBE 10 Kombi Fırın, GN 1/1 10 Tepsi Kapasiteli, Elektrikli"
+    },
+    {
+      "sku": "INO-BKE2000L",
+      "name": "BKE2000L/R Konveyörlü Bulaşık Yıkama Makinesi",
+      "equsto_kdv_dahil": 409524,
+      "cafemarkt_kdv_dahil": 428329.34,
+      "fark_tl": -18805.340000000026,
+      "fark_pct": -4.390392682415831,
+      "equsto_ucuz": true,
+      "cafe_url": "https://www.cafemarkt.com/inoksan-konveyorlu-bulasik-makinesi-soldan-girisli",
+      "cafe_name": "İnoksan BKE2000L Soldan Girişli Konveyörlü Bulaşık Makinesi, 2000 Tabak/Saat"
+    },
+    {
+      "sku": "INO-BKE2000R",
+      "name": "BKE2000L/R Konveyörlü Bulaşık Yıkama Makinesi",
+      "equsto_kdv_dahil": 409524,
+      "cafemarkt_kdv_dahil": 428329.34,
+      "fark_tl": -18805.340000000026,
+      "fark_pct": -4.390392682415831,
+      "equsto_ucuz": true,
+      "cafe_url": "https://www.cafemarkt.com/inoksan-konveyorlu-bulasik-makinesi-sagdan-girisli",
+      "cafe_name": "İnoksan BKE2000R Sağdan Girişli Konveyörlü Bulaşık Makinesi, 2000 Tabak/Saat"
+    },
+    {
+      "sku": "INO-FBG040",
+      "name": "FBG 040 - İnosmart Gazlı Kombi Fırın GN 1/1 40 Tepsi",
+      "equsto_kdv_dahil": 819418,
+      "cafemarkt_kdv_dahil": 857044.86,
+      "fark_tl": -37626.859999999986,
+      "fark_pct": -4.390302276592615,
+      "equsto_ucuz": true,
+      "cafe_url": "https://www.cafemarkt.com/inoksan-fbg-040-kombi-firin-gn-1-1-40-tepsi-kapasiteli-gazli",
+      "cafe_name": "İnoksan FBG 040 Kombi Fırın, GN 1/1 40 Tepsi Kapasiteli, Gazlı"
+    },
+    {
+      "sku": "INO-FBE20",
+      "name": "FBE 20T - İnosmart Elektrikli Dokunmatik Kombi Fırın GN 1/1 20 Tepsi",
+      "equsto_kdv_dahil": 510755,
+      "cafemarkt_kdv_dahil": 534207.8,
+      "fark_tl": -23452.800000000047,
+      "fark_pct": -4.3902017155122115,
+      "equsto_ucuz": true,
+      "cafe_url": "https://www.cafemarkt.com/inoksan-fbe-20-kombi-firin-gn-1-1-20-tepsi-kapasiteli-elektrikli",
+      "cafe_name": "İnoksan FBE 20 Kombi Fırın, GN 1/1 20 Tepsi Kapasiteli, Elektrikli"
+    },
+    {
+      "sku": "INO-BYM052T",
+      "name": "İNOKSAN BULAŞIK YIKAMA MAKINASI, 500TB/H",
+      "equsto_kdv_dahil": 64716,
+      "cafemarkt_kdv_dahil": 67687.42,
+      "fark_tl": -2971.4199999999983,
+      "fark_pct": -4.3899146990681555,
+      "equsto_ucuz": true,
+      "cafe_url": "https://www.cafemarkt.com/inoksan-bulasik-yikama-makinesi-500-tabaksaatte-tahliye-ve-parlatici-pompali",
+      "cafe_name": "İnoksan BYM052T Bulaşık Yıkama Makinesi, 500 Tabak/Saatte, Tahliye ve Parlatıcı Pompalı"
+    },
+    {
+      "sku": "INO-BYM102T",
+      "name": "İNOKSAN BULAŞIK YIKAMA MAKINASI, 1080 TB/H",
+      "equsto_kdv_dahil": 101454,
+      "cafemarkt_kdv_dahil": 106112.01,
+      "fark_tl": -4658.009999999995,
+      "fark_pct": -4.389710457845436,
+      "equsto_ucuz": true,
+      "cafe_url": "https://www.cafemarkt.com/inoksan-bulasik-yikama-makinesi-1080-tabak-saatte",
+      "cafe_name": "İnoksan INO-BYM102T Dijital Göstergeli Giyotin Tip Bulaşık Yıkama Makinesi, 1080 Tabak/Saatte Yıkama Kapasiteli, Tahliye ve Parlatıcı Pompalı"
+    }
+  ],
+  "unmatched_equsto_skus": [
+    {
+      "sku": "INO-ABC100",
+      "fiyat_tl": 99908,
+      "name": "ABC 100 - Soğuk Banket Arabası - 14 Tepsi (GN 2/1)"
+    },
+    {
+      "sku": "INO-ABS101S",
+      "fiyat_tl": 68090,
+      "name": "ABS 101S Banket Arabaları"
+    },
+    {
+      "sku": "INO-ABS102",
+      "fiyat_tl": 75098,
+      "name": "ABS 102  Banket Arabası"
+    },
+    {
+      "sku": "INO-ABS12",
+      "fiyat_tl": 70630,
+      "name": "ABS 12 Banket Arabası 12XGN1/1"
+    },
+    {
+      "sku": "INO-ABS15",
+      "fiyat_tl": 70986,
+      "name": "ABS 15 Banket Arabası  15GN 1/1"
+    },
+    {
+      "sku": "INO-ABS201S",
+      "fiyat_tl": 113836,
+      "name": "ABS 201S Banket Arabası"
+    },
+    {
+      "sku": "INO-ABS202",
+      "fiyat_tl": 121124,
+      "name": "ABS 202 Banket Arabası"
+    },
+    {
+      "sku": "INO-ATI100",
+      "fiyat_tl": 31712,
+      "name": "ATI 100-Tabak Isıtma Arabası"
+    },
+    {
+      "sku": "INO-ATI200",
+      "fiyat_tl": 51121,
+      "name": "ATI200 Tabak Isıtma Arabası"
+    },
+    {
+      "sku": "INO-IDD084",
+      "fiyat_tl": 14394,
+      "name": "İNOKSAN DEMONTE ISTIF RAFI, 4 DÜZ TABLALI"
+    },
+    {
+      "sku": "INO-IDD086",
+      "fiyat_tl": 16832,
+      "name": "İNOKSAN DEMONTE ISTIF RAFI, 4 DÜZ TABLALI"
+    },
+    {
+      "sku": "INO-IDD104",
+      "fiyat_tl": 17480,
+      "name": "İNOKSAN DEMONTE ISTIF RAFI, 4 DÜZ TABLALI"
+    },
+    {
+      "sku": "INO-IDD106",
+      "fiyat_tl": 20159,
+      "name": "İNOKSAN DEMONTE ISTIF RAFI, 4 DÜZ TABLALI"
+    },
+    {
+      "sku": "INO-IDD124",
+      "fiyat_tl": 18473,
+      "name": "İNOKSAN DEMONTE ISTIF RAFI, 4 DÜZ TABLALI"
+    },
+    {
+      "sku": "INO-IDD126",
+      "fiyat_tl": 21840,
+      "name": "İNOKSAN DEMONTE ISTIF RAFI, 4 DÜZ TABLALI"
+    },
+    {
+      "sku": "INO-IDD144",
+      "fiyat_tl": 20059,
+      "name": "İNOKSAN DEMONTE ISTIF RAFI, 4 DÜZ TABLALI"
+    },
+    {
+      "sku": "INO-IDD146",
+      "fiyat_tl": 23542,
+      "name": "İNOKSAN DEMONTE ISTIF RAFI, 4 DÜZ TABLALI"
+    },
+    {
+      "sku": "INO-IDD164",
+      "fiyat_tl": 21494,
+      "name": "İNOKSAN DEMONTE ISTIF RAFI, 4 DÜZ TABLALI"
+    },
+    {
+      "sku": "INO-IDD166",
+      "fiyat_tl": 25241,
+      "name": "İNOKSAN DEMONTE ISTIF RAFI, 4 DÜZ TABLALI"
+    },
+    {
+      "sku": "INO-IDK086",
+      "fiyat_tl": 18427,
+      "name": "İNOKSAN DEMONTE ISTIF RAFI KAZAN/TENCERE"
+    },
+    {
+      "sku": "INO-IDK088",
+      "fiyat_tl": 22176,
+      "name": "İNOKSAN DEMONTE ISTIF RAFI KAZAN/TENCERE"
+    },
+    {
+      "sku": "INO-IDK106",
+      "fiyat_tl": 20125,
+      "name": "İNOKSAN DEMONTE ISTIF RAFI KAZAN/TENCERE"
+    },
+    {
+      "sku": "INO-IDK108",
+      "fiyat_tl": 24745,
+      "name": "İNOKSAN DEMONTE ISTIF RAFI KAZAN/TENCERE"
+    },
+    {
+      "sku": "INO-IDK126",
+      "fiyat_tl": 22165,
+      "name": "İNOKSAN DEMONTE ISTIF RAFI KAZAN/TENCERE"
+    },
+    {
+      "sku": "INO-IDK128",
+      "fiyat_tl": 26932,
+      "name": "İNOKSAN DEMONTE ISTIF RAFI KAZAN/TENCERE"
+    },
+    {
+      "sku": "INO-IDK146",
+      "fiyat_tl": 23563,
+      "name": "İNOKSAN DEMONTE ISTIF RAFI KAZAN/TENCERE"
+    },
+    {
+      "sku": "INO-IDK148",
+      "fiyat_tl": 29086,
+      "name": "İNOKSAN DEMONTE ISTIF RAFI KAZAN/TENCERE"
+    },
+    {
+      "sku": "INO-IDK166",
+      "fiyat_tl": 25406,
+      "name": "İNOKSAN DEMONTE ISTIF RAFI KAZAN/TENCERE"
+    },
+    {
+      "sku": "INO-IDK168",
+      "fiyat_tl": 31508,
+      "name": "İNOKSAN DEMONTE ISTIF RAFI KAZAN/TENCERE"
+    },
+    {
+      "sku": "INO-IDP084",
+      "fiyat_tl": 14532,
+      "name": "İNOKSAN DEMONTE ISTIF RAFI, 4 PERFORE TABLALI"
+    },
+    {
+      "sku": "INO-IDP086",
+      "fiyat_tl": 16840,
+      "name": "İNOKSAN DEMONTE ISTIF RAFI, 4 PERFORE TABLALI"
+    },
+    {
+      "sku": "INO-IDP104",
+      "fiyat_tl": 17372,
+      "name": "İNOKSAN DEMONTE ISTIF RAFI, 4 PERFORE TABLALI"
+    },
+    {
+      "sku": "INO-IDP106",
+      "fiyat_tl": 20394,
+      "name": "İNOKSAN DEMONTE ISTIF RAFI, 4 PERFORE TABLALI"
+    },
+    {
+      "sku": "INO-IDP124",
+      "fiyat_tl": 18778,
+      "name": "İNOKSAN DEMONTE ISTIF RAFI, 4 PERFORE TABLALI"
+    },
+    {
+      "sku": "INO-IDP126",
+      "fiyat_tl": 22158,
+      "name": "İNOKSAN DEMONTE ISTIF RAFI, 4 PERFORE TABLALI"
+    },
+    {
+      "sku": "INO-IDP144",
+      "fiyat_tl": 20171,
+      "name": "İNOKSAN DEMONTE ISTIF RAFI, 4 PERFORE TABLALI"
+    },
+    {
+      "sku": "INO-IDP146",
+      "fiyat_tl": 24068,
+      "name": "İNOKSAN DEMONTE ISTIF RAFI, 4 PERFORE TABLALI"
+    },
+    {
+      "sku": "INO-IDP164",
+      "fiyat_tl": 21635,
+      "name": "İNOKSAN DEMONTE ISTIF RAFI, 4 PERFORE TABLALI"
+    },
+    {
+      "sku": "INO-IDP166",
+      "fiyat_tl": 25816,
+      "name": "İNOKSAN DEMONTE ISTIF RAFI, 4 PERFORE TABLALI"
+    },
+    {
+      "sku": "INO-RBS100",
+      "fiyat_tl": 13854,
+      "name": "RBS 100"
+    },
+    {
+      "sku": "INO-RBS200",
+      "fiyat_tl": 22063,
+      "name": "RBS 200"
+    },
+    {
+      "sku": "INO-FBE10T",
+      "fiyat_tl": 483324,
+      "name": "FBE 10T - İnosmart Elektrikli Dokunmatik Kombi Fırın GN 1/1 10 Tepsi"
+    },
+    {
+      "sku": "INO-FBE20T",
+      "fiyat_tl": 573244,
+      "name": "FBE 20T - İnosmart Elektrikli Dokunmatik Kombi Fırın GN 1/1 20 Tepsi"
+    },
+    {
+      "sku": "INO-FBE40",
+      "fiyat_tl": 722448,
+      "name": "FBE 40T - İnosmart Elektrikli Dokunmatik Kombi Fırın GN 1/1 40 Tepsi"
+    },
+    {
+      "sku": "INO-FBE40T",
+      "fiyat_tl": 837877,
+      "name": "FBE 40T - İnosmart Elektrikli Dokunmatik Kombi Fırın GN 1/1 40 Tepsi"
+    },
+    {
+      "sku": "INO-FBG010",
+      "fiyat_tl": 491369,
+      "name": "FBG 010 - İnosmart Gazlı Kombi Fırın GN 1/1 10 Tepsi"
+    },
+    {
+      "sku": "INO-FBG020",
+      "fiyat_tl": 591724,
+      "name": "FBG 020 - İnosmart Gazlı Kombi Fırın GN 1/1 20 Tepsi"
+    },
+    {
+      "sku": "INO-FBG10T",
+      "fiyat_tl": 570156,
+      "name": "FBG 10T - İnosmart Gazlı Dokunmatik Kombi Fırın GN 1/1 10 Tepsi"
+    },
+    {
+      "sku": "INO-FBG20T",
+      "fiyat_tl": 684617,
+      "name": "FBG 20T - İnosmart Gazlı Dokunmatik Kombi Fırın GN 1/1 20 Tepsi"
+    },
+    {
+      "sku": "INO-FBG40T",
+      "fiyat_tl": 941155,
+      "name": "FBG 40T - İnosmart Gazlı Dokunmatik Kombi Fırın GN 1/1 40 Tepsi"
+    },
+    {
+      "sku": "INO-FGA100",
+      "fiyat_tl": 38749,
+      "name": "FGA 100 - Fırın Standı"
+    },
+    {
+      "sku": "INO-FGA101",
+      "fiyat_tl": 39319,
+      "name": "FGA 101D/FGA 201S/FGA 102D/FGA 202D - DOLAPLI STAND"
+    },
+    {
+      "sku": "INO-FGA101D",
+      "fiyat_tl": 43082,
+      "name": "FGA 101D/FGA 201S/FGA 102D/FGA 202D - DOLAPLI STAND"
+    },
+    {
+      "sku": "INO-FGA200K",
+      "fiyat_tl": 35374,
+      "name": "İNOKSAN FIRIN STANDI GN1/1X20 KOMBI FIRIN IÇIN"
+    },
+    {
+      "sku": "INO-FGA201",
+      "fiyat_tl": 48907,
+      "name": "FGA 101D/FGA 201S/FGA 102D/FGA 202D - DOLAPLI STAND"
+    },
+    {
+      "sku": "INO-FGA201D",
+      "fiyat_tl": 52474,
+      "name": "İNOKSAN KONVEKSIYONLU-BUHARLI FIRIN STANDI"
+    },
+    {
+      "sku": "INO-FGM100",
+      "fiyat_tl": 78151,
+      "name": "FGM 100-Mayalama Dolabı"
+    },
+    {
+      "sku": "INO-FGM101",
+      "fiyat_tl": 73405,
+      "name": "FGM 101 / FGM 201 - MAYALAMA DOLABI"
+    },
+    {
+      "sku": "INO-FGM201",
+      "fiyat_tl": 82222,
+      "name": "FGM 101 / FGM 201 - MAYALAMA DOLABI"
+    },
+    {
+      "sku": "INO-FKA020",
+      "fiyat_tl": 39584,
+      "name": "FKA 020I-Konveksiyonlu Fırın Arabaları"
+    },
+    {
+      "sku": "INO-FKA020T",
+      "fiyat_tl": 20222,
+      "name": "FKA 020T-Konveksiyonlu Fırın Arabaları"
+    },
+    {
+      "sku": "INO-FKA040",
+      "fiyat_tl": 47112,
+      "name": "FKA 040T–Konveksiyonlu Fırın Arabaları"
+    },
+    {
+      "sku": "INO-FKA040T",
+      "fiyat_tl": 15634,
+      "name": "FKA 040T–Konveksiyonlu Fırın Arabaları"
+    },
+    {
+      "sku": "INO-FKE006",
+      "fiyat_tl": 194170,
+      "name": "FKE 006 - Konveksiyonlu Elektrikli Fırın GN 1/1 6 Tepsi"
+    },
+    {
+      "sku": "INO-FKE010",
+      "fiyat_tl": 228086,
+      "name": "FKE 010 - Konveksiyonlu Elektrikli Fırın GN 1/1 10 Tepsi"
+    },
+    {
+      "sku": "INO-FKE022",
+      "fiyat_tl": 285773,
+      "name": "FKE 022 - Konveksiyonlu Elektrikli Fırın GN 1/1 20 Tepsi"
+    },
+    {
+      "sku": "INO-FKE042",
+      "fiyat_tl": 394778,
+      "name": "FKE 042 - Konveksiyonlu Elektrikli Fırın GN 1/1 40 Tepsi"
+    },
+    {
+      "sku": "INO-FKE06",
+      "fiyat_tl": 226706,
+      "name": "FKE 006 - Konveksiyonlu Elektrikli Fırın GN 1/1 6 Tepsi"
+    },
+    {
+      "sku": "INO-FKE10",
+      "fiyat_tl": 231487,
+      "name": "FKE 10 Digital Panelli Konveksiyonlu Elektrikli Fırın GN 1/1 10 Tepsi"
+    },
+    {
+      "sku": "INO-FKE20",
+      "fiyat_tl": 269910,
+      "name": "FKE 20 Digital Panelli Konveksiyonlu Elektrikli Fırın GN 1/1 20 Tepsi"
+    },
+    {
+      "sku": "INO-FKE40",
+      "fiyat_tl": 448402,
+      "name": "FKE 40 Digital Panelli Konveksiyonlu Elektrikli Fırın GN 1/1 40 Tepsi"
+    },
+    {
+      "sku": "INO-FKG022E",
+      "fiyat_tl": 302291,
+      "name": "FKG 022E Konveksiyonlu Gazlı Fırın GN1/1 20 Tepsi"
+    },
+    {
+      "sku": "INO-FKG042E",
+      "fiyat_tl": 406469,
+      "name": "FKG 042E Konveksiyonlu Gazlı Fırın GN1/1 40 Tepsi"
+    },
+    {
+      "sku": "INO-FKG10",
+      "fiyat_tl": 310912,
+      "name": "FKG 10 Digital Panelli Konveksiyonlu Gazlı Fırın GN 1/1 10 Tepsi"
+    },
+    {
+      "sku": "INO-FKG20",
+      "fiyat_tl": 332177,
+      "name": "FKG 20 Digital Panelli Konveksiyonlu Gazlı Fırın GN 1/1 20 Tepsi"
+    },
+    {
+      "sku": "INO-FKG40",
+      "fiyat_tl": 543463,
+      "name": "FKG 40 Digital Panelli Konveksiyonlu Gazlı Fırın GN 1/1 40 Tepsi"
+    },
+    {
+      "sku": "INO-1YE100",
+      "fiyat_tl": 41680,
+      "name": "1YE100 - Elektrikli Yer Ocağı"
+    },
+    {
+      "sku": "INO-1YG200",
+      "fiyat_tl": 23531,
+      "name": "1YG200 - Çift Yanışlı Gazlı Yer Ocağı"
+    },
+    {
+      "sku": "INO-7BE10",
+      "fiyat_tl": 33029,
+      "name": "İNOKSAN SOSBENMARI, 1/2 MODÜL, ELEKTRIKLI"
+    },
+    {
+      "sku": "INO-7BE10S",
+      "fiyat_tl": 26153,
+      "name": "İNOKSAN SOSBENMARI, 1/2 MODÜL, ELEKTRIKLI"
+    },
+    {
+      "sku": "INO-7BE20",
+      "fiyat_tl": 46534,
+      "name": "İNOKSAN SOSBENMARI, 1 MODÜL, ELEKTRIKLI"
+    },
+    {
+      "sku": "INO-7BE20S",
+      "fiyat_tl": 35894,
+      "name": "İNOKSAN SOSBENMARI, 1 MODÜL, ELEKTRIKLI"
+    },
+    {
+      "sku": "INO-7DE06",
+      "fiyat_tl": 165444,
+      "name": "İNOKSAN DEVRILIR TAVA, ELEKTRIKLI, 60 LT."
+    },
+    {
+      "sku": "INO-7DE06T",
+      "fiyat_tl": 172531,
+      "name": "İNOKSAN DEVRILIR TAVA, ELEKTR., 60 LT., OTOMATIK"
+    },
+    {
+      "sku": "INO-7DG06",
+      "fiyat_tl": 176029,
+      "name": "İNOKSAN DEVRILIR TAVA, GAZLI, 60LT."
+    },
+    {
+      "sku": "INO-7DG06T",
+      "fiyat_tl": 175504,
+      "name": "İNOKSAN DEVRILIR TAVA, GAZLI, 60LT., OTOMATIK"
+    },
+    {
+      "sku": "INO-7FE10",
+      "fiyat_tl": 72445,
+      "name": "7FE10S-S - 1/2 Modül Ekonomik Seri Set Üstü Elektrikli Fritöz"
+    },
+    {
+      "sku": "INO-7FE10S-S",
+      "fiyat_tl": 54473,
+      "name": "7FE10S-S - 1/2 Modül Ekonomik Seri Set Üstü Elektrikli Fritöz"
+    },
+    {
+      "sku": "INO-7FE20",
+      "fiyat_tl": 128460,
+      "name": "7FE20S-S - 1 Modül Standart Seri Set Üstü Fritöz"
+    },
+    {
+      "sku": "INO-7FE20S-S",
+      "fiyat_tl": 96274,
+      "name": "7FE20S-S - 1 Modül Standart Seri Set Üstü Fritöz"
+    },
+    {
+      "sku": "INO-7FG10",
+      "fiyat_tl": 78928,
+      "name": "7FG10 - 1/2 Modül Gazlı Fritöz"
+    },
+    {
+      "sku": "INO-7FG20",
+      "fiyat_tl": 132888,
+      "name": "7FG20 - Tam Modül Gazlı Fritöz"
+    },
+    {
+      "sku": "INO-7GA10",
+      "fiyat_tl": 17046,
+      "name": "7GA10 ALT STAND"
+    },
+    {
+      "sku": "INO-7GA20",
+      "fiyat_tl": 18466,
+      "name": "7GA20 ALT STAND"
+    },
+    {
+      "sku": "INO-7GA30",
+      "fiyat_tl": 22417,
+      "name": "7GA30 ALT STAND"
+    },
+    {
+      "sku": "INO-7GA40",
+      "fiyat_tl": 23782,
+      "name": "7GA40 ALT STAND"
+    },
+    {
+      "sku": "INO-7HE10",
+      "fiyat_tl": 43722,
+      "name": "İNOKSAN PATATES DINLENDIRICI, 1/2 MODÜL"
+    },
+    {
+      "sku": "INO-7HE10S",
+      "fiyat_tl": 31996,
+      "name": "9HE 10S ½ Modül Elektrikli Setüstü Patates Dinlendirici"
+    },
+    {
+      "sku": "INO-7IE10",
+      "fiyat_tl": 47609,
+      "name": "İNOKSAN IZGARA, 1/2 MODÜL, ELEKTRIKLI, DÜZ"
+    },
+    {
+      "sku": "INO-7IE11",
+      "fiyat_tl": 50230,
+      "name": "7IE 32S 1,5 MODÜL DÜZ+OLUKLU ELEKTRİKLİ IZGARA"
+    },
+    {
+      "sku": "INO-7IE11S",
+      "fiyat_tl": 41560,
+      "name": "9IE 32S 1.5 MODUL ELEKTRIKLI SETÜSTÜ IZGARA"
+    },
+    {
+      "sku": "INO-7IE20",
+      "fiyat_tl": 73014,
+      "name": "İNOKSAN IZGARA, 1 MODÜL, ELEKTRIKLI, DÜZ"
+    },
+    {
+      "sku": "INO-7IE20S",
+      "fiyat_tl": 59809,
+      "name": "9IE 32S 1.5 MODUL ELEKTRIKLI SETÜSTÜ IZGARA"
+    },
+    {
+      "sku": "INO-7IE21",
+      "fiyat_tl": 80932,
+      "name": "7IE 32S 1,5 MODÜL DÜZ+OLUKLU ELEKTRİKLİ IZGARA"
+    },
+    {
+      "sku": "INO-7IE21S",
+      "fiyat_tl": 68437,
+      "name": "9IE 32S 1.5 MODUL ELEKTRIKLI SETÜSTÜ IZGARA"
+    },
+    {
+      "sku": "INO-7IE22",
+      "fiyat_tl": 77066,
+      "name": "7IE 32S 1,5 MODÜL DÜZ+OLUKLU ELEKTRİKLİ IZGARA"
+    },
+    {
+      "sku": "INO-7IE30",
+      "fiyat_tl": 111437,
+      "name": "İNOKSAN IZGARA, 1,5 MODÜL, ELEKTRIKLI, DÜZ"
+    },
+    {
+      "sku": "INO-7IE30S",
+      "fiyat_tl": 96553,
+      "name": "İNOKSAN IZGARA, 1,5 MODÜL, ELEKTRIKLI, DÜZ"
+    },
+    {
+      "sku": "INO-7IE31",
+      "fiyat_tl": 112928,
+      "name": "7IE 32S 1,5 MODÜL DÜZ+OLUKLU ELEKTRİKLİ IZGARA"
+    },
+    {
+      "sku": "INO-7IE31S",
+      "fiyat_tl": 101344,
+      "name": "7IE 32S 1,5 MODÜL DÜZ+OLUKLU ELEKTRİKLİ IZGARA"
+    },
+    {
+      "sku": "INO-7IE32",
+      "fiyat_tl": 110762,
+      "name": "7IE 32S 1,5 MODÜL DÜZ+OLUKLU ELEKTRİKLİ IZGARA"
+    },
+    {
+      "sku": "INO-7IE32S",
+      "fiyat_tl": 99282,
+      "name": "7IE 32S 1,5 MODÜL DÜZ+OLUKLU ELEKTRİKLİ IZGARA"
+    },
+    {
+      "sku": "INO-7IG10",
+      "fiyat_tl": 50098,
+      "name": "İNOKSAN IZGARA, 1/2 MODÜL, GAZLI, DÜZ"
+    },
+    {
+      "sku": "INO-7IG11",
+      "fiyat_tl": 52646,
+      "name": "7IG11 IZGARA/OLUKLU"
+    },
+    {
+      "sku": "INO-7IG11S",
+      "fiyat_tl": 43758,
+      "name": "7IE 31S 1,5 MODÜL SETÜSTÜ OLUKLU IZGARA"
+    },
+    {
+      "sku": "INO-7IG20",
+      "fiyat_tl": 72118,
+      "name": "İNOKSAN IZGARA, 1 MODÜL, GAZLI, DÜZ"
+    },
+    {
+      "sku": "INO-7IG20S",
+      "fiyat_tl": 59525,
+      "name": "İNOKSAN IZGARA, SETÜSTÜ, 1M, GAZLI, DÜZ"
+    },
+    {
+      "sku": "INO-7IG21",
+      "fiyat_tl": 81100,
+      "name": "İNOKSAN IZGARA, 1 MODÜL, GAZLI, OLUKLU"
+    },
+    {
+      "sku": "INO-7IG21S",
+      "fiyat_tl": 68137,
+      "name": "7IE 31S 1,5 MODÜL SETÜSTÜ OLUKLU IZGARA"
+    },
+    {
+      "sku": "INO-7IG22",
+      "fiyat_tl": 76050,
+      "name": "İNOKSAN IZGARA, 1 MODÜL, GAZLI, DÜZ+OLUKLU"
+    },
+    {
+      "sku": "INO-7IG30",
+      "fiyat_tl": 115890,
+      "name": "İNOKSAN IZGARA, 1,5 MODÜL, GAZLI, DÜZ"
+    },
+    {
+      "sku": "INO-7IG30S",
+      "fiyat_tl": 99846,
+      "name": "İNOKSAN IZGARA, 1,5 MODÜL, GAZLI, DÜZ"
+    },
+    {
+      "sku": "INO-7IG31",
+      "fiyat_tl": 120710,
+      "name": "İNOKSAN IZGARA, 1,5 MODÜL, GAZLI, OLUKLU"
+    },
+    {
+      "sku": "INO-7IG31S",
+      "fiyat_tl": 104753,
+      "name": "İNOKSAN IZGARA, 1,5 MODÜL, GAZLI, OLUKLU"
+    },
+    {
+      "sku": "INO-7IG32",
+      "fiyat_tl": 118546,
+      "name": "İNOKSAN IZGARA, 1,5 MODÜL, GAZLI, DÜZ+OLUKLU"
+    },
+    {
+      "sku": "INO-7IG32S",
+      "fiyat_tl": 102589,
+      "name": "İNOKSAN IZGARA, 1,5 MODÜL, GAZLI, DÜZ+OLUKLU"
+    },
+    {
+      "sku": "INO-7KE10",
+      "fiyat_tl": 35264,
+      "name": "İNOKSAN KUZINE, 1/2 MODÜL, ELEKTRKLI"
+    },
+    {
+      "sku": "INO-7KE20",
+      "fiyat_tl": 52193,
+      "name": "İNOKSAN KUZINE, 1 MODÜL, ELEKTRKLI"
+    },
+    {
+      "sku": "INO-7KE23",
+      "fiyat_tl": 112358,
+      "name": "9KE33F - Elektrikli 1,5 Modül Fırınlı Kuzine"
+    },
+    {
+      "sku": "INO-7KE30",
+      "fiyat_tl": 79820,
+      "name": "İNOKSAN KUZINE, 1,5 MODÜL, ELEKTRKLI"
+    },
+    {
+      "sku": "INO-7KE30S",
+      "fiyat_tl": 61434,
+      "name": "9KE10S - 1/2 Modül Elektrikli Setüstü Kuzine"
+    },
+    {
+      "sku": "INO-7KE33",
+      "fiyat_tl": 148246,
+      "name": "İNOKSAN KUZINE, 1,5M, ELEKTRKLI, FIRIN+DOLAPLI"
+    },
+    {
+      "sku": "INO-7KE33F",
+      "fiyat_tl": 159192,
+      "name": "İNOKSAN KUZINE, 1,5 MODÜL, ELEKTRKLI, FIRINLI"
+    },
+    {
+      "sku": "INO-7KG10",
+      "fiyat_tl": 45079,
+      "name": "İNOKSAN KUZINE, 1/2 MODÜL, GAZLI"
+    },
+    {
+      "sku": "INO-7KG20",
+      "fiyat_tl": 70981,
+      "name": "İNOKSAN KUZINE, 1 MODÜL, GAZLI"
+    },
+    {
+      "sku": "INO-7KG21",
+      "fiyat_tl": 59274,
+      "name": "İNOKSAN KUZINE, 1 MODÜL, GAZLI, KAPALI DÖKÜM"
+    },
+    {
+      "sku": "INO-7KG21S",
+      "fiyat_tl": 47659,
+      "name": "İNOKSAN KUZINE, 1 MODÜL, GAZLI, KAPALI DÖKÜM"
+    },
+    {
+      "sku": "INO-7KG23",
+      "fiyat_tl": 122765,
+      "name": "7KG23 KUZİNE/ FIRINLI"
+    },
+    {
+      "sku": "INO-7KG30",
+      "fiyat_tl": 106747,
+      "name": "İNOKSAN KUZINE, 1,5 MODÜL, GAZLI"
+    },
+    {
+      "sku": "INO-7KG30S",
+      "fiyat_tl": 91543,
+      "name": "İNOKSAN KUZINE SETÜSTÜ, 1,5 MODÜL, GAZLI"
+    },
+    {
+      "sku": "INO-7KG33",
+      "fiyat_tl": 173394,
+      "name": "7KG33F - KUZİNE"
+    },
+    {
+      "sku": "INO-7KG33F",
+      "fiyat_tl": 180761,
+      "name": "7KG33F - KUZİNE"
+    },
+    {
+      "sku": "INO-7LG10",
+      "fiyat_tl": 64670,
+      "name": "İNOKSAN LAVATAŞLI IZGARA, 1/2 MODÜL"
+    },
+    {
+      "sku": "INO-7LG10S",
+      "fiyat_tl": 54973,
+      "name": "9LG10S 1/2 Modül Setüstü Lavataşlı Izgara"
+    },
+    {
+      "sku": "INO-7LG20",
+      "fiyat_tl": 95112,
+      "name": "İNOKSAN LAVATAŞLI IZGARA, 1 MODÜL, DOLAPLI"
+    },
+    {
+      "sku": "INO-7LG20S",
+      "fiyat_tl": 83148,
+      "name": "9LG10S 1/2 Modül Setüstü Lavataşlı Izgara"
+    },
+    {
+      "sku": "INO-7LG30",
+      "fiyat_tl": 127776,
+      "name": "İNOKSAN LAVATAŞLI IZGARA, 1,5M, DOLAPLI, GAZLI"
+    },
+    {
+      "sku": "INO-7LG30S",
+      "fiyat_tl": 113831,
+      "name": "9LG10S 1/2 Modül Setüstü Lavataşlı Izgara"
+    },
+    {
+      "sku": "INO-7ME10",
+      "fiyat_tl": 78174,
+      "name": "9ME 20S 1 Modül Elektrikli Setüstü Makarna Haslama"
+    },
+    {
+      "sku": "INO-7ME10S",
+      "fiyat_tl": 67849,
+      "name": "9ME 20S 1 Modül Elektrikli Setüstü Makarna Haslama"
+    },
+    {
+      "sku": "INO-7ME20",
+      "fiyat_tl": 123518,
+      "name": "9ME 20S 1 Modül Elektrikli Setüstü Makarna Haslama"
+    },
+    {
+      "sku": "INO-7ME20S",
+      "fiyat_tl": 112346,
+      "name": "9ME 20S 1 Modül Elektrikli Setüstü Makarna Haslama"
+    },
+    {
+      "sku": "INO-7MG10",
+      "fiyat_tl": 94022,
+      "name": "İNOKSAN MAKARNA HAŞLAMA, 1/2 MODÜL, GAZLI"
+    },
+    {
+      "sku": "INO-7MG20",
+      "fiyat_tl": 149755,
+      "name": "İNOKSAN MAKARNA HAŞLAMA, 1 MODÜL, GAZLI"
+    },
+    {
+      "sku": "INO-7OE10I",
+      "fiyat_tl": 82505,
+      "name": "7OE10IS İNDÜKSİYONLU OCAK"
+    },
+    {
+      "sku": "INO-7OE10IS",
+      "fiyat_tl": 72068,
+      "name": "7OE10IS İNDÜKSİYONLU OCAK"
+    },
+    {
+      "sku": "INO-7OE20I",
+      "fiyat_tl": 147721,
+      "name": "7OE20IS Perfect 700 Serisi Set Üstü İndüksiyonlu Ocak"
+    },
+    {
+      "sku": "INO-7OE20IS",
+      "fiyat_tl": 134531,
+      "name": "7OE20IS Perfect 700 Serisi Set Üstü İndüksiyonlu Ocak"
+    },
+    {
+      "sku": "INO-7OG10",
+      "fiyat_tl": 42724,
+      "name": "İNOKSAN SHOW OCAĞI, 1/2 MODÜL, GAZLI"
+    },
+    {
+      "sku": "INO-7OG10S",
+      "fiyat_tl": 32551,
+      "name": "İNOKSAN SHOW OCAĞI, 1/2 MODÜL, SETÜSTÜ"
+    },
+    {
+      "sku": "INO-7OG10W",
+      "fiyat_tl": 57544,
+      "name": "İNOKSAN WOK OCAĞI, 1/2 MODÜL, GAZLI"
+    },
+    {
+      "sku": "INO-7OG10WS",
+      "fiyat_tl": 44939,
+      "name": "İNOKSAN WOK OCAĞI, 1/2 MODÜL, GAZLI"
+    },
+    {
+      "sku": "INO-7SE05",
+      "fiyat_tl": 181972,
+      "name": "İNOKSAN KAYNATMA TENCERESI, SILINDIRIK, 50LT"
+    },
+    {
+      "sku": "INO-7SG05",
+      "fiyat_tl": 190304,
+      "name": "İNOKSAN KAYNATMA TENCERESI, SILINDIRIK, 50LT"
+    },
+    {
+      "sku": "INO-7TC10",
+      "fiyat_tl": 26275,
+      "name": "İNOKSAN ARA TEZGAH, 1/2 MODÜL, ÇEKMECELI PANEL"
+    },
+    {
+      "sku": "INO-7TC10C",
+      "fiyat_tl": 42965,
+      "name": "İNOKSAN ARA TEZGAH, 1/2M, ÇEKMECELI DOLAP+PANEL"
+    },
+    {
+      "sku": "INO-7TC10S",
+      "fiyat_tl": 17819,
+      "name": "İNOKSAN ARA TEZGAH SETÜSTÜ 1/2 MODÜL ÇEKMECELI"
+    },
+    {
+      "sku": "INO-7TC20",
+      "fiyat_tl": 33698,
+      "name": "İNOKSAN ARA TEZGAH, 1 MODÜL, ÇEKMECELI PANEL"
+    },
+    {
+      "sku": "INO-7TC20S",
+      "fiyat_tl": 21562,
+      "name": "İNOKSAN ARA TEZGAH SETÜSTÜ, 1 MODÜL ÇEKMECELI"
+    },
+    {
+      "sku": "INO-7TE10",
+      "fiyat_tl": 30301,
+      "name": "İNOKSAN ARA TEZGAH, 1/2 MODÜL, DOLAPLI, EVIYELI"
+    },
+    {
+      "sku": "INO-7TE10S",
+      "fiyat_tl": 21325,
+      "name": "İNOKSAN ARA TEZGAH SETÜSTÜ 1/2 MODÜL EVIYELI"
+    },
+    {
+      "sku": "INO-7TN05",
+      "fiyat_tl": 16577,
+      "name": "İNOKSAN ARA TEZGAH, 1/4 MODÜL, DOLAPLI"
+    },
+    {
+      "sku": "INO-7TN05S",
+      "fiyat_tl": 10448,
+      "name": "İNOKSAN ARA TEZGAH, SETÜSTÜ, 1/4 MODÜL"
+    },
+    {
+      "sku": "INO-7TN10",
+      "fiyat_tl": 19031,
+      "name": "7TN10C ARA TEZGAH/ÇEKMECELİ DOLAPLI"
+    },
+    {
+      "sku": "INO-7TN10C",
+      "fiyat_tl": 34247,
+      "name": "7TN10C ARA TEZGAH/ÇEKMECELİ DOLAPLI"
+    },
+    {
+      "sku": "INO-7TN10S",
+      "fiyat_tl": 9858,
+      "name": "İNOKSAN ARA TEZGAH, SETÜSTÜ 1/2 MODÜL"
+    },
+    {
+      "sku": "INO-7TN20",
+      "fiyat_tl": 25561,
+      "name": "7TN20 – ARA TEZGAH"
+    },
+    {
+      "sku": "INO-7TN20S",
+      "fiyat_tl": 13393,
+      "name": "İNOKSAN ARA TEZGAH SETÜSTÜ, 1 MODÜL"
+    },
+    {
+      "sku": "INO-7ZG10",
+      "fiyat_tl": 63625,
+      "name": "7ZG10S SULU IZGARA"
+    },
+    {
+      "sku": "INO-7ZG10S",
+      "fiyat_tl": 53592,
+      "name": "7ZG10S SULU IZGARA"
+    },
+    {
+      "sku": "INO-7ZG20",
+      "fiyat_tl": 94430,
+      "name": "7ZG20S SULU IZGARA"
+    },
+    {
+      "sku": "INO-7ZG20S",
+      "fiyat_tl": 83852,
+      "name": "7ZG20S SULU IZGARA"
+    },
+    {
+      "sku": "INO-7ZG30",
+      "fiyat_tl": 125268,
+      "name": "7ZG30S SULU IZGARA"
+    },
+    {
+      "sku": "INO-7ZG30S",
+      "fiyat_tl": 113300,
+      "name": "7ZG30S SULU IZGARA"
+    },
+    {
+      "sku": "INO-9BE10",
+      "fiyat_tl": 42180,
+      "name": "İNOKSAN SOSBENMARI, 1/2 MODÜL, ELEKTRIKLI"
+    },
+    {
+      "sku": "INO-9BE10S",
+      "fiyat_tl": 37865,
+      "name": "İNOKSAN SOSBENMARI, 1/2 MODÜL, ELEKTRIKLI"
+    },
+    {
+      "sku": "INO-9BE20",
+      "fiyat_tl": 55776,
+      "name": "İNOKSAN SOSBENMARI, 1 MODÜL, ELEKTRIKLI"
+    },
+    {
+      "sku": "INO-9BE20S",
+      "fiyat_tl": 47808,
+      "name": "İNOKSAN SOSBENMARI, 1 MODÜL, ELEKTRIKLI"
+    },
+    {
+      "sku": "INO-9DE08",
+      "fiyat_tl": 170762,
+      "name": "İNOKSAN DEVRILIR TAVA, ELEKTRIKLI, 80 LT."
+    },
+    {
+      "sku": "INO-9DE08T",
+      "fiyat_tl": 180264,
+      "name": "İNOKSAN DEVRILIR TAVA, ELEKTRIK, 80 LT, OTOMATIK"
+    },
+    {
+      "sku": "INO-9DE12",
+      "fiyat_tl": 207961,
+      "name": "9DE12 - Devrilir Tava"
+    },
+    {
+      "sku": "INO-9DE12T",
+      "fiyat_tl": 204701,
+      "name": "İNOKSAN DEVRILIR TAVA, ELEKTRIK, 120LT, OTOMATIK"
+    },
+    {
+      "sku": "INO-9DG08",
+      "fiyat_tl": 178175,
+      "name": "İNOKSAN DEVRILIR TAVA, GAZLI, 80 LT."
+    },
+    {
+      "sku": "INO-9DG08T",
+      "fiyat_tl": 183269,
+      "name": "İNOKSAN DEVRILIR TAVA, GAZLI, 80LT, OTOMATIK"
+    },
+    {
+      "sku": "INO-9DG12",
+      "fiyat_tl": 216449,
+      "name": "İNOKSAN DEVRILIR TAVA, GAZLI, 120 LT"
+    },
+    {
+      "sku": "INO-9DG12T",
+      "fiyat_tl": 217510,
+      "name": "İNOKSAN DEVRILIR TAVA, GAZLI, 120 LT, OTOMATIK"
+    },
+    {
+      "sku": "INO-9FE10",
+      "fiyat_tl": 81174,
+      "name": "9FE10S-S - ½ Modül Elektrikli Setüstü Ekonomik Fritöz"
+    },
+    {
+      "sku": "INO-9FE10S",
+      "fiyat_tl": 68635,
+      "name": "9FE10S-S - ½ Modül Elektrikli Setüstü Ekonomik Fritöz"
+    },
+    {
+      "sku": "INO-9FE10-S",
+      "fiyat_tl": 80119,
+      "name": "9FE10-S - 1/2 Modül Standart Seri Elektrikli Fritöz"
+    },
+    {
+      "sku": "INO-9FE10S-S",
+      "fiyat_tl": 58517,
+      "name": "9FE10S-S - ½ Modül Elektrikli Setüstü Ekonomik Fritöz"
+    }
+  ],
+  "unmatched_cafemarkt": [
+    {
+      "code": "FKE04M",
+      "name": "İnoksan INO-FKE04M Konveksiyonlu Manuel Patisserie Fırın, 40x60 cm 4 Tepsi Kapasiteli, Elektrikli",
+      "price": 64214.16,
+      "url": "https://www.cafemarkt.com/inoksan-ino-fke04m-konveksiyonlu-manuel-patisserie-firin-40x60-cm-4-tepsi-kapasiteli-elektrikli"
+    },
+    {
+      "code": "FKE04D",
+      "name": "İnoksan INO-FKE04D Konveksiyonlu Dijital Patisserie Fırın, 40x60 cm 4 Tepsi Kapasiteli, Elektrikli",
+      "price": 70257.84,
+      "url": "https://www.cafemarkt.com/inoksan-ino-fke04d-konveksiyonlu-dijital-patisserie-firin-40x60-cm-4-tepsi-kapasiteli-elektrikli"
+    },
+    {
+      "code": "MDF90W25L",
+      "name": "İnoksan GAL-MDF90W25L Profesyonel Mikrodalga Fırın, 25 L, 900 W",
+      "price": 9669.9,
+      "url": "https://www.cafemarkt.com/inoksan-gal-mdf90w25l-profesyonel-mikrodalga-firin-25-l-900-w"
+    },
+    {
+      "code": "FBE042",
+      "name": "İnoksan INO-FBE042 Buhar Konveksiyonlu Fırın, GN 1/1 40 Tepsi Kapasiteli, Elektrikli",
+      "price": 755622.56,
+      "url": "https://www.cafemarkt.com/inoksan-ino-fbe042-buhar-konveksiyonlu-firin-gn-1-1-40-tepsi-kapasiteli-elektrikli"
+    },
+    {
+      "code": "SG0071",
+      "name": "İnoksan Yonca Model Waffle Makinesi, Tekli",
+      "price": 16723.77,
+      "url": "https://www.cafemarkt.com/inoksan-yonca-model-waffle-makinesi-tekli"
+    },
+    {
+      "code": "FBE010",
+      "name": "İnoksan INO-FBE010 Buhar Konveksiyonlu Fırın, GN 1/1 10 Tepsi Kapasiteli, Elektrikli",
+      "price": 441138.81,
+      "url": "https://www.cafemarkt.com/inoksan-ino-fbe010-buhar-konveksiyonlu-firin-gn-1-1-10-tepsi-kapasiteli-elektrikli"
+    },
+    {
+      "code": "042",
+      "name": "İnoksan FKE42 Konveksiyonlu Fırın, 40 Tepsi Kapasiteli, Elektrikli",
+      "price": 412906.49,
+      "url": "https://www.cafemarkt.com/inoksan-fke42-konveksiyonlu-firin-40-tepsi-kapasiteli-elektrikli"
+    },
+    {
+      "code": "006",
+      "name": "İnoksan FBE-006 Konveksiyonlu Fırın, 40 Tepsi Kapasiteli, Elektrikli",
+      "price": 203085.97,
+      "url": "https://www.cafemarkt.com/inoksan-fbe-006-konveksiyonlu-firin-40-tepsi-kapasiteli-elektrikli"
+    },
+    {
+      "code": "SG0072",
+      "name": "İnoksan Çam Model Waffle Makinesi, İkili",
+      "price": 29379.29,
+      "url": "https://www.cafemarkt.com/inoksan-cam-model-waffle-makinesi-ikili"
+    },
+    {
+      "code": "022",
+      "name": "İnoksan FKE-022 Konveksiyonlu Fırın, 20 Tepsi Kapasiteli, Elektrikli",
+      "price": 298894.44,
+      "url": "https://www.cafemarkt.com/inoksan-fke-022-konveksiyonlu-firin-20-tepsi-kapasiteli-elektrikli"
+    },
+    {
+      "code": "101S",
+      "name": "İnoksan ABS 101S Banket Arabası, GN 2/1 10 Tepsi Kapasiteli",
+      "price": 74066.36,
+      "url": "https://www.cafemarkt.com/inoksan-abs-101s-banket-arabasi"
+    },
+    {
+      "code": "M10",
+      "name": "İnoksan M-10 Profesyonel Planet Mikser, 10 L",
+      "price": 40190.51,
+      "url": "https://www.cafemarkt.com/inoksan-m-10-profesyonel-planet-mikser-10-l"
+    },
+    {
+      "code": "M30",
+      "name": "İnoksan M-30 Profesyonel Planet Mikser, 30 L",
+      "price": 57415.01,
+      "url": "https://www.cafemarkt.com/inoksan-m-30-profesyonel-planet-mikser-30-l"
+    },
+    {
+      "code": "M20",
+      "name": "İnoksan M-20 Profesyonel Planet Mikser, 20 L",
+      "price": 45932.01,
+      "url": "https://www.cafemarkt.com/inoksan-m-20-profesyonel-planet-mikser-20-l"
+    },
+    {
+      "code": "042E",
+      "name": "İnoksan FKG 042E Dijital Panel Konveksiyonlu Fırın, 40 Tepsi Kapasiteli, Gazlı",
+      "price": 425133.62,
+      "url": "https://www.cafemarkt.com/inoksan-fkg-042e-dijital-panel-konveksiyonlu-firin-40-tepsi-kapasiteli-gazli"
+    },
+    {
+      "code": "SG0070",
+      "name": "İnoksan Yonca Model Waffle Makinesi, İkili",
+      "price": 29830.67,
+      "url": "https://www.cafemarkt.com/inoksan-yonca-model-waffle-makinesi-ikili"
+    },
+    {
+      "code": "SG0066",
+      "name": "İnoksan Tost Makinesi, Çift Kapaklı",
+      "price": 23955.16,
+      "url": "https://www.cafemarkt.com/inoksan-tost-makinesi-cift-kapakli"
+    },
+    {
+      "code": "SG0064",
+      "name": "İnoksan Tost Makinesi, Tek Kapaklı",
+      "price": 14915.33,
+      "url": "https://www.cafemarkt.com/inoksan-tost-makinesi-tek-kapakli"
+    },
+    {
+      "code": "40",
+      "name": "İnoksan FBE-40 Kombi Fırın, 40 Tepsi Kapasiteli, Elektrikli",
+      "price": 755622.56,
+      "url": "https://www.cafemarkt.com/inoksan-fbe-40-kombi-firin-40-tepsi-kapasiteli-elektrikli"
+    },
+    {
+      "code": "40T",
+      "name": "İnoksan FBG-40T Dokunmatik Ekranlı Kombi Fırın, 40 Tepsi Kapasiteli, Gazlı",
+      "price": 984373.04,
+      "url": "https://www.cafemarkt.com/inoksan-fbg-40t-dokunmatik-ekranli-kombi-firin-40-tepsi-kapasiteli-gazli"
+    },
+    {
+      "code": "010",
+      "name": "İnoksan FKE-010 Konveksiyonlu Fırın, 10 Tepsi Kapasiteli, Elektrikli",
+      "price": 238560.51,
+      "url": "https://www.cafemarkt.com/inoksan-fke-010-konveksiyonlu-firin-10-tepsi-kapasiteli-elektrikli"
+    },
+    {
+      "code": "022E",
+      "name": "İnoksan FKG022E Konveksiyonlu Fırın, 10 Tepsi Kapasiteli, Gazlı",
+      "price": 316171.64,
+      "url": "https://www.cafemarkt.com/inoksan-fkg022e-konveksiyonlu-firin-10-tepsi-kapasiteli-gazli"
+    },
+    {
+      "code": "006",
+      "name": "İnoksan FKE-006 Set Üstü Konveksiyonlu Fırın, 10 Tepsi Kapasiteli, Elektrikli",
+      "price": 203085.97,
+      "url": "https://www.cafemarkt.com/inoksan-fke-006-set-ustu-konveksiyonlu-firin-10-tepsi-kapasiteli-elektrikli"
+    },
+    {
+      "code": "40T",
+      "name": "İnoksan FBE-40T Kombi Fırın, 40 Tepsi Kapasiteli, Elektrikli",
+      "price": 876352.74,
+      "url": "https://www.cafemarkt.com/inoksan-fbe40t-kombi-firin-40-tepsi-kapasiteli-elektrikli"
+    },
+    {
+      "code": "42E",
+      "name": "İnoksan FKG42E Konveksiyonlu Fırın, 40 Tepsi Kapasiteli, Gazlı",
+      "price": 425133.62,
+      "url": "https://www.cafemarkt.com/inoksan-fkg42e-konveksiyonlu-firin-40-tepsi-kapasiteli-gazli"
+    },
+    {
+      "code": "SG0075",
+      "name": "İnoksan Kare Model İkili Waffle Makinesi",
+      "price": 16271.22,
+      "url": "https://www.cafemarkt.com/inoksan-kare-model-waffle-makinesi-ikili"
+    },
+    {
+      "code": "FBE022",
+      "name": "İnoksan INO-FBE022 Buhar Konveksiyonlu Fırın, GN 1/1 20 Tepsi Kapasiteli, Elektrikli",
+      "price": 534207.8,
+      "url": "https://www.cafemarkt.com/inoksan-ino-fbe022-buhar-konveksiyonlu-firin-gn-1-1-20-tepsi-kapasiteli-elektrikli"
+    }
+  ]
+}

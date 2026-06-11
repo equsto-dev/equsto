@@ -1,29 +1,40 @@
 import type { Product, Brand, Category } from "@/lib/prisma";
+import { buildEqustoKod, deriveProductCodes } from "@/lib/catalog/product-hierarchy";
 
 /** admin.html / yönetim ProTable ile uyumlu kayıt */
 export type AdminUrunRow = {
   id: string;
+  /** Equsto ürün kodu (EQ-{marka_kodu}.{urun_kodu}) */
+  equsto_kod: string | null;
+  /** Marka kodu (Brand.kod — PIMAK, OZTI) */
+  marka_kodu: string | null;
+  /** Üretici ürün kodu (marka öneki olmadan) */
+  urun_kodu: string | null;
   ad: string;
   sku: string | null;
   tip_kodu: string | null;
   kategori: string;
   kategori_ad: string;
+  /** Kategori yolu: [ürün kategori, alt1, alt2, …] */
+  kategori_yolu?: string[];
   marka_id: string | null;
   marka_ad: string;
   model: string | null;
   stok: number;
   fiyat_tl: number;
+  /** KDV hariç liste fiyatı (döviz) */
+  fiyat_kdv_haric_doviz?: number | null;
+  doviz?: string | null;
+  kdv_oran?: number | null;
   alis_fiyati_eur?: number | null;
   alis_fiyati_tl?: number | null;
   satis_fiyat_eur?: number | null;
   satis_fiyati_tl?: number | null;
   para_birimi?: string | null;
-  kdv_oran?: number;
-  /** Elektrik gücü (kW) */
   el_guc: number | null;
-  /** Gaz gücü (kW) */
   gaz_guc: number | null;
   aciklama: string | null;
+  detay: string | null;
   gorsel_url: string | null;
   olculer?: {
     genislik_mm?: number;
@@ -110,6 +121,9 @@ export function ecomRowToAdminUrun(u: EcomRow, index: number): AdminUrunRow {
 
   return {
     id: ecomId(name, index),
+    equsto_kod: null,
+    marka_kodu: null,
+    urun_kodu: null,
     ad: name,
     sku: u?.sku ? String(u.sku) : null,
     tip_kodu: u?.tip_kodu ? String(u.tip_kodu) : null,
@@ -129,6 +143,7 @@ export function ecomRowToAdminUrun(u: EcomRow, index: number): AdminUrunRow {
     el_guc: elGuc,
     gaz_guc: null,
     aciklama: u?.specs ? String(u.specs) : null,
+    detay: null,
     gorsel_url: gorsel,
     olculer: u?.olculer ?? null,
     teknik_ozellikler: Array.isArray(u?.teknik_ozellikler)
@@ -184,8 +199,15 @@ export function prismaToAdminUrun(p: PrismaProductWithImages): AdminUrunRow {
     p.images?.find((i) => i.isPrimary)?.url ??
     p.images?.[0]?.url ??
     (typeof specs.gorsel_url === "string" ? specs.gorsel_url : null);
+  const brandKod = p.brand.kod ?? null;
+  const urunKodu = p.urunKodu ?? null;
   return {
     id: p.id,
+    equsto_kod:
+      p.equstoKod ??
+      (brandKod && urunKodu ? buildEqustoKod(brandKod, urunKodu) : null),
+    marka_kodu: brandKod,
+    urun_kodu: urunKodu,
     ad: p.name,
     sku: p.sku ?? p.modelCode ?? null,
     tip_kodu: p.modelCode || null,
@@ -196,10 +218,24 @@ export function prismaToAdminUrun(p: PrismaProductWithImages): AdminUrunRow {
     model: p.model ?? p.modelCode ?? null,
     stok: p.stok ?? 0,
     fiyat_tl: p.priceListTl != null ? Number(p.priceListTl) : 0,
+    fiyat_kdv_haric_doviz:
+      p.fiyatKdvHaricDoviz != null
+        ? Number(p.fiyatKdvHaricDoviz)
+        : p.fiyatListe != null
+          ? Number(p.fiyatListe)
+          : null,
+    doviz: p.dovizFiyat ?? p.dovizListe ?? null,
+    kdv_oran: p.kdvOran != null ? Number(p.kdvOran) : null,
     el_guc: decimalToKw(p.elektrikGucuKw) ?? fromSpecs.el,
     gaz_guc: decimalToKw(p.gazGucuKw) ?? fromSpecs.gaz,
     aciklama: p.description,
+    detay: p.detayliAciklama,
     gorsel_url: typeof primary === "string" ? primary : null,
+    olculer: {
+      genislik_mm: p.genislikMm ?? undefined,
+      derinlik_mm: p.derinlikMm ?? undefined,
+      yukseklik_mm: p.yukseklikMm ?? undefined,
+    },
     durum: p.status === "PUBLISHED" ? "aktif" : "pasif",
     proje_fab_aktif: p.pfosAktif !== false,
     readonly: false,
@@ -211,14 +247,27 @@ export type AdminUrunPayload = {
   tip_kodu?: string | null;
   kategori?: string;
   marka_id?: string | null;
+  marka_ad?: string | null;
+  /** Brand.kod — PIMAK, OZTI (marka adından ayrı) */
+  marka_kodu?: string | null;
+  /** Üretici ürün kodu — marka öneki olmadan */
+  urun_kodu?: string | null;
+  equsto_kod?: string | null;
   model?: string | null;
   sku?: string | null;
   el_guc?: number | string | null;
   gaz_guc?: number | string | null;
   fiyat_tl?: number;
+  fiyat_kdv_haric_doviz?: number | null;
+  doviz?: string | null;
+  kdv_oran?: number | null;
   stok?: number;
   durum?: string;
   aciklama?: string | null;
+  detay?: string | null;
+  genislik_mm?: number | null;
+  derinlik_mm?: number | null;
+  yukseklik_mm?: number | null;
   gorsel_url?: string | null;
   proje_fab_aktif?: boolean;
 };
@@ -229,10 +278,21 @@ export function parseAdminUrunPayload(
   name: string;
   modelCode: string;
   sku: string | null;
+  brandKod: string | null;
+  brandName: string;
+  urunKodu: string | null;
+  equstoKod: string | null;
   categorySlug: string;
   brandSlug: string;
   description: string | null;
+  detayliAciklama: string | null;
   priceListTl: number;
+  fiyatKdvHaricDoviz: number | null;
+  dovizFiyat: "EUR" | "TRY" | "USD" | null;
+  kdvOran: number | null;
+  genislikMm: number | null;
+  derinlikMm: number | null;
+  yukseklikMm: number | null;
   stok: number;
   elektrikGucuKw: number | null;
   gazGucuKw: number | null;
@@ -244,8 +304,41 @@ export function parseAdminUrunPayload(
   if (!name) return { error: "ad zorunlu" };
   const durum = body.durum === "pasif" ? "pasif" : "aktif";
   const status = durum === "aktif" ? "PUBLISHED" : "DRAFT";
-  const skuRaw = String(body.sku || body.model || body.tip_kodu || "").trim();
-  const modelCode = skuRaw || `ADM-${Date.now()}`;
+  const brandSlug = String(body.marka_id || "atalay").trim() || "atalay";
+  const brandName = String(body.marka_ad || brandSlug).trim() || brandSlug;
+  const brandKod = String(body.marka_kodu || "").trim().toUpperCase() || null;
+  const codes = deriveProductCodes({
+    brandKod,
+    urunKodu: body.urun_kodu,
+    sku: body.sku || body.model || body.tip_kodu,
+  });
+  const modelCode = codes.modelCode || `ADM-${Date.now()}`;
+  const skuRaw = String(body.sku || modelCode).trim();
+  const urunKodu = codes.urunKodu || null;
+  const equstoKod = String(
+    body.equsto_kod || (brandKod && urunKodu ? buildEqustoKod(brandKod, urunKodu) : ""),
+  ).trim();
+  const dovizRaw = String(body.doviz || "EUR").trim().toUpperCase();
+  const dovizFiyat =
+    dovizRaw === "TRY" || dovizRaw === "USD" || dovizRaw === "EUR"
+      ? (dovizRaw as "EUR" | "TRY" | "USD")
+      : "EUR";
+  const parseMm = (v: unknown): number | null => {
+    if (typeof v === "number" && Number.isFinite(v)) return Math.round(v);
+    if (v != null && v !== "") {
+      const n = Number(String(v).replace(",", "."));
+      return Number.isFinite(n) ? Math.round(n) : null;
+    }
+    return null;
+  };
+  const fiyatDoviz =
+    body.fiyat_kdv_haric_doviz != null && body.fiyat_kdv_haric_doviz !== ""
+      ? Number(body.fiyat_kdv_haric_doviz)
+      : null;
+  const kdvOran =
+    body.kdv_oran != null && body.kdv_oran !== ""
+      ? Number(body.kdv_oran)
+      : null;
   const el =
     typeof body.el_guc === "number"
       ? body.el_guc
@@ -262,10 +355,21 @@ export function parseAdminUrunPayload(
     name,
     modelCode,
     sku: skuRaw || modelCode,
+    brandKod,
+    brandName,
+    urunKodu,
+    equstoKod: equstoKod || null,
     categorySlug: String(body.kategori || "pisirme").trim() || "pisirme",
-    brandSlug: String(body.marka_id || "atalay").trim() || "atalay",
+    brandSlug,
     description: body.aciklama ?? null,
+    detayliAciklama: body.detay ?? null,
     priceListTl: Number(body.fiyat_tl) || 0,
+    fiyatKdvHaricDoviz: Number.isFinite(fiyatDoviz) ? fiyatDoviz : null,
+    dovizFiyat: fiyatDoviz != null ? dovizFiyat : null,
+    kdvOran: Number.isFinite(kdvOran) ? kdvOran : null,
+    genislikMm: parseMm(body.genislik_mm),
+    derinlikMm: parseMm(body.derinlik_mm),
+    yukseklikMm: parseMm(body.yukseklik_mm),
     stok: Number(body.stok) || 0,
     elektrikGucuKw: Number.isFinite(el) ? el : null,
     gazGucuKw: Number.isFinite(gaz) ? gaz : null,

@@ -113,8 +113,12 @@ export async function POST(req: NextRequest, ctx: Ctx) {
   try {
     const brand = await db.brand.upsert({
       where: { slug: parsed.brandSlug },
-      update: {},
-      create: { slug: parsed.brandSlug, name: parsed.brandSlug },
+      update: parsed.brandKod ? { kod: parsed.brandKod } : {},
+      create: {
+        slug: parsed.brandSlug,
+        name: parsed.brandName,
+        kod: parsed.brandKod,
+      },
     });
     const category = await db.category.upsert({
       where: { slug: parsed.categorySlug },
@@ -128,9 +132,18 @@ export async function POST(req: NextRequest, ctx: Ctx) {
         slug,
         modelCode: parsed.modelCode,
         sku: parsed.sku,
+        urunKodu: parsed.urunKodu,
+        equstoKod: parsed.equstoKod,
         name: parsed.name,
         description: parsed.description,
+        detayliAciklama: parsed.detayliAciklama,
         priceListTl: parsed.priceListTl,
+        fiyatKdvHaricDoviz: parsed.fiyatKdvHaricDoviz,
+        dovizFiyat: parsed.dovizFiyat ?? undefined,
+        kdvOran: parsed.kdvOran,
+        genislikMm: parsed.genislikMm,
+        derinlikMm: parsed.derinlikMm,
+        yukseklikMm: parsed.yukseklikMm,
         stok: parsed.stok,
         elektrikGucuKw: parsed.elektrikGucuKw,
         gazGucuKw: parsed.gazGucuKw,
@@ -179,8 +192,12 @@ export async function PUT(req: NextRequest, ctx: Ctx) {
   try {
     const brand = await db.brand.upsert({
       where: { slug: parsed.brandSlug },
-      update: {},
-      create: { slug: parsed.brandSlug, name: parsed.brandSlug },
+      update: parsed.brandKod ? { kod: parsed.brandKod } : {},
+      create: {
+        slug: parsed.brandSlug,
+        name: parsed.brandName,
+        kod: parsed.brandKod,
+      },
     });
     const category = await db.category.upsert({
       where: { slug: parsed.categorySlug },
@@ -194,8 +211,17 @@ export async function PUT(req: NextRequest, ctx: Ctx) {
         name: parsed.name,
         modelCode: parsed.modelCode,
         sku: parsed.sku,
+        urunKodu: parsed.urunKodu,
+        equstoKod: parsed.equstoKod,
         description: parsed.description,
+        detayliAciklama: parsed.detayliAciklama,
         priceListTl: parsed.priceListTl,
+        fiyatKdvHaricDoviz: parsed.fiyatKdvHaricDoviz,
+        dovizFiyat: parsed.dovizFiyat ?? undefined,
+        kdvOran: parsed.kdvOran,
+        genislikMm: parsed.genislikMm,
+        derinlikMm: parsed.derinlikMm,
+        yukseklikMm: parsed.yukseklikMm,
         stok: parsed.stok,
         elektrikGucuKw: parsed.elektrikGucuKw,
         gazGucuKw: parsed.gazGucuKw,

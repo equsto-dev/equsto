@@ -340,6 +340,61 @@
     return b.indexOf('inoksan') >= 0;
   }
 
+  function isElectroluxCatalogRow(raw) {
+    if (!raw) return false;
+    if (String(raw.kaynak || '') === 'electrolux-professional') return true;
+    var id = String(raw.id || '');
+    if (id.indexOf('electrolux-professional__') === 0) return true;
+    var b = lc(raw.brand || raw.oem_brand || '');
+    return b.indexOf('electrolux') >= 0;
+  }
+
+  /** Electrolux specs — yalnızca Dış boyutlar satırları (sırt ölçüleri karışmasın). */
+  function parseElectroluxDimsFromSpecs(raw) {
+    var lines = [];
+    if (raw && raw.teknik_ozellikler && raw.teknik_ozellikler.length) {
+      lines = raw.teknik_ozellikler;
+    } else if (raw && raw.specs) {
+      lines = String(raw.specs).split('\n');
+    }
+    var g = 0;
+    var d = 0;
+    var y = 0;
+    for (var i = 0; i < lines.length; i++) {
+      var t = String(lines[i] || '');
+      if (!/dış\s*boyutlar/i.test(t)) continue;
+      var mg = t.match(/Genişlik:\s*([^,\n]+)/i);
+      var md = t.match(/Derinlik:\s*([^,\n]+)/i);
+      var my = t.match(/Yükseklik:\s*([^,\n]+)/i);
+      if (mg) g = parseLenToMm(mg[1]) || g;
+      if (md) d = parseLenToMm(md[1]) || d;
+      if (my) y = parseLenToMm(my[1]) || y;
+    }
+    if (g && d && y) return dimLabelFromMm(g, d, y);
+    if (g && d) return g + '×' + d + ' mm';
+    if (g) return g + ' mm';
+
+    var name = String((raw && raw.name) || '');
+    var mW = name.match(/-\s*(\d{3,4})\s*mm\b/i) || name.match(/(\d{3,4})\s*mm\b/i);
+    if (mW) {
+      g = Number(mW[1]);
+      var specText = String((raw && raw.specs) || '');
+      var mD = specText.match(/(\d+)\s*mm\s*derinlik/i);
+      var depth = mD ? Number(mD[1]) : 0;
+      if (g && depth) return g + '×' + depth + ' mm';
+      if (g) return g + ' mm';
+    }
+    return '';
+  }
+
+  function formatElectroluxKodLine(raw) {
+    var kod = String(
+      (raw && (raw.electrolux_cod || raw.urun_kodu || raw.sku)) || ''
+    ).trim();
+    if (!kod || !/^\d{5,7}$/.test(kod)) return '';
+    return __plpT('pdp.product_code_prefix', 'Ürün kodu:') + ' ' + kod;
+  }
+
   /** İnoksan Excel: uzunluk×genişlik×yükseklik (modül genişliği × derinlik × yükseklik). */
   function formatInoksanOlculer(raw) {
     var o = raw && raw.olculer;
@@ -359,6 +414,11 @@
     if (isInoksanCatalogRow(raw)) {
       var inoDim = formatInoksanOlculer(raw);
       if (inoDim) return inoDim;
+    }
+
+    if (isElectroluxCatalogRow(raw)) {
+      var elxDim = parseElectroluxDimsFromSpecs(raw);
+      if (elxDim) return elxDim;
     }
 
     if (DEPT === 'tezgah') {
@@ -883,6 +943,13 @@
         var brandLab = plpCardBrand(u);
         return brandLab
           ? '<div class="eq-dept-plp-card__brand">' + esc(brandLab) + '</div>'
+          : '';
+      })() +
+      (function () {
+        if (!u.raw || !isElectroluxCatalogRow(u.raw)) return '';
+        var kodLine = formatElectroluxKodLine(u.raw);
+        return kodLine
+          ? '<div class="eq-dept-plp-card__code">' + esc(kodLine) + '</div>'
           : '';
       })() +
       (function () {

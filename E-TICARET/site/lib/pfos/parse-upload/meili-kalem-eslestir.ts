@@ -20,6 +20,10 @@ import {
 } from "../core/calisma-tezgah";
 import { isIstifRafiReferansIsim } from "../core/portashelf-marka";
 import { matchIstifRafiByReferans } from "../referans/istif-raf-match";
+import {
+  guessEqustoKodFromItem,
+  matchCatalogByEqustoKod,
+} from "@/lib/catalog/equsto-kod-lookup";
 
 /** Ölçü benzerliği — boyutlar yakınsa bonus */
 export function olcuSkoru(olcu1: string, olcu2: string): number {
@@ -192,6 +196,28 @@ export type ItemMatchResult = {
   bestHit: CatalogSearchHit | null;
 };
 
+function matchFromEqustoHit(
+  item: ParsedItem,
+  hit: CatalogSearchHit,
+  guven = 0.97,
+): ItemMatchResult {
+  const dto = hitToDto(hit);
+  const birim = dto.satis_fiyati_eur > 0 ? dto.satis_fiyati_eur : null;
+  return {
+    bestHit: hit,
+    matched: {
+      ...item,
+      tanim: cleanProformaTanim(item.tanim) || item.tanim,
+      eslesen_urun: dto,
+      eslesen_skor: guven,
+      birim_fiyat_eur: birim,
+      toplam_eur:
+        birim != null ? Math.round(birim * item.adet * 100) / 100 : null,
+      not_found: false,
+    },
+  };
+}
+
 export async function matchItem(item: ParsedItem): Promise<ItemMatchResult> {
   if (item.mevcut) {
     return {
@@ -205,6 +231,12 @@ export async function matchItem(item: ParsedItem): Promise<ItemMatchResult> {
       },
       bestHit: null,
     };
+  }
+
+  const equstoKod = guessEqustoKodFromItem(item);
+  if (equstoKod) {
+    const eqHit = await matchCatalogByEqustoKod(equstoKod);
+    if (eqHit) return matchFromEqustoHit(item, eqHit);
   }
 
   if (isIstifRafiReferansIsim(item.tanim)) {

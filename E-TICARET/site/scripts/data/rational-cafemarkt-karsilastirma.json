@@ -1,0 +1,1040 @@
+{
+  "summary": {
+    "fetched_at": "2026-06-09T16:27:11.634Z",
+    "equsto_rational": 25,
+    "cafemarkt_rational": 117,
+    "matched": 24,
+    "equsto_eslesmeyen": 1,
+    "cafemarkt_eslesmeyen": 93,
+    "equsto_daha_ucuz": 24,
+    "cafemarkt_daha_ucuz": 0,
+    "fark_50tl_alti": 0,
+    "ortalama_fark_pct": -40.24121898149707,
+    "medyan_fark_pct": -40.03436518110367
+  },
+  "matched": [
+    {
+      "sku": "9890.ICCLS10.2G",
+      "name": "RATIONAL BUHAR KONVEKSİYONLU GAZLI FIRIN 10*2/1 GN  İcombi Classic",
+      "equsto_kdv_dahil": 825884,
+      "cafemarkt_kdv_dahil": 1465156.56,
+      "fark_tl": -639272.56,
+      "fark_pct": -43.63168943529148,
+      "equsto_ucuz": true,
+      "match_key": "9890.ICCLS10.2G",
+      "cafe_url": "https://www.cafemarkt.com/rational-icombi-classic-buhar-konveksiyonlu-firin-10x2-1-gn-kapasiteli-gazli",
+      "cafe_name": "Rational iCombi Classic 102G Buhar Konveksiyonlu Fırın, 10x2/1 GN Kapasiteli, Gazlı",
+      "cafe_sku": "083.9890.ICCLS10.2G"
+    },
+    {
+      "sku": "9890.ICPRO61.E0",
+      "name": "RATIONAL ELEKTRİKLİ FIRIN 6*1/1 GN   İcombi Pro",
+      "equsto_kdv_dahil": 445986,
+      "cafemarkt_kdv_dahil": 773177.19,
+      "fark_tl": -327191.18999999994,
+      "fark_pct": -42.317749958453895,
+      "equsto_ucuz": true,
+      "match_key": "9890.ICPRO61.E0",
+      "cafe_url": "https://www.cafemarkt.com/rational-icombi-pro-firin-6x1-1-gn-kapasiteli-elektrikli",
+      "cafe_name": "Rational iCombi Pro 6-1/1/E Fırın, 6x1/1 GN Kapasiteli, Elektrikli",
+      "cafe_sku": "083.9890.ICPRO61.E0"
+    },
+    {
+      "sku": "9890.ICPRO61.0G",
+      "name": "RATIONAL GAZLI FIRIN 6*1/1 GN   İcombi Pro",
+      "equsto_kdv_dahil": 532025,
+      "cafemarkt_kdv_dahil": 922191.74,
+      "fark_tl": -390166.74,
+      "fark_pct": -42.30863529530204,
+      "equsto_ucuz": true,
+      "match_key": "9890.ICPRO61.0G",
+      "cafe_url": "https://www.cafemarkt.com/rational-icombi-pro-firin-6x1-1-gn-kapasiteli-gazli",
+      "cafe_name": "Rational iCombi Pro 6-1/1/G Fırın, 6x1/1 GN Kapasiteli, Gazlı",
+      "cafe_sku": "083.9890.ICPRO61.0G"
+    },
+    {
+      "sku": "9890.ICCLS10.2E",
+      "name": "RATIONAL BUHAR KONVEKSİYONLU ELEKTRİKLİ FIRIN 10*2/1 GN  İcombi Classic",
+      "equsto_kdv_dahil": 712414,
+      "cafemarkt_kdv_dahil": 1234588.64,
+      "fark_tl": -522174.6399999999,
+      "fark_pct": -42.29543534435891,
+      "equsto_ucuz": true,
+      "match_key": "9890.ICCLS10.2E",
+      "cafe_url": "https://www.cafemarkt.com/rational-icombi-classic-buhar-konveksiyonlu-firin-10x2-1-gn-kapasiteli-elektrikli",
+      "cafe_name": "Rational iCombi Classic 102E Buhar Konveksiyonlu Fırın, 10x2/1 GN Kapasiteli, Elektrikli",
+      "cafe_sku": "083.9890.ICCLS10.2E"
+    },
+    {
+      "sku": "9890.ICCLS20.1E",
+      "name": "RATIONAL  BUHAR KONVEKSİYONLU ELEKTRİKLİ FIRIN 20*1/1 GN  İcombi Classic",
+      "equsto_kdv_dahil": 911923,
+      "cafemarkt_kdv_dahil": 1546946.54,
+      "fark_tl": -635023.54,
+      "fark_pct": -41.050128338630245,
+      "equsto_ucuz": true,
+      "match_key": "9890.ICCLS20.1E",
+      "cafe_url": "https://www.cafemarkt.com/rational-icombi-classic-buhar-konveksiyonlu-firin-20x1-1-gn-kapasiteli-elektrikli",
+      "cafe_name": "Rational iCombi Classic 201E Buhar Konveksiyonlu Fırın, 20x1/1 GN Kapasiteli, Elektrikli",
+      "cafe_sku": "083.9890.ICCLS20.1E"
+    },
+    {
+      "sku": "9890.ICCLS62.G0",
+      "name": "RATIONAL BUHAR KONVEKSİYONLU GAZLI FIRIN 6*2/1 GN  İcombi Classic",
+      "equsto_kdv_dahil": 621388,
+      "cafemarkt_kdv_dahil": 1052258.53,
+      "fark_tl": -430870.53,
+      "fark_pct": -40.947211898581614,
+      "equsto_ucuz": true,
+      "match_key": "9890.ICCLS62.G0",
+      "cafe_url": "https://www.cafemarkt.com/rational-icombi-classic-buhar-konveksiyonlu-firin-6x2-1-gn-kapasiteli-gazli",
+      "cafe_name": "Rational iCombi Classic 6-2/1/G Buhar Konveksiyonlu Fırın, 6x2/1 GN Kapasiteli, Gazlı",
+      "cafe_sku": "083.9890.ICCLS62.G0"
+    },
+    {
+      "sku": "9890.ICCLS10.1E",
+      "name": "RATIONAL BUHAR KONVEKSİYONLU ELEKTRİKLİ FIRIN 10*1/1 GN İcombi Classic",
+      "equsto_kdv_dahil": 492954,
+      "cafemarkt_kdv_dahil": 829545.97,
+      "fark_tl": -336591.97,
+      "fark_pct": -40.57544514380559,
+      "equsto_ucuz": true,
+      "match_key": "9890.ICCLS10.1E",
+      "cafe_url": "https://www.cafemarkt.com/rational-icombi-classic-buhar-konveksiyonlu-firin-10x1-1-gn-kapasiteli-elektrikli",
+      "cafe_name": "Rational iCombi Classic 101E Buhar Konveksiyonlu Fırın, 10x1/1 GN Kapasiteli, Elektrikli",
+      "cafe_sku": "083.9890.ICCLS10.1E"
+    },
+    {
+      "sku": "9890.ICCLS61.0G",
+      "name": "RATIONAL BUHAR KONVEKSIYONLU GAZLI FIRIN İcombi Classic",
+      "equsto_kdv_dahil": 418138,
+      "cafemarkt_kdv_dahil": 703624.28,
+      "fark_tl": -285486.28,
+      "fark_pct": -40.573682306699254,
+      "equsto_ucuz": true,
+      "match_key": "9890.ICCLS61.0G",
+      "cafe_url": "https://www.cafemarkt.com/rational-icombi-classic-buhar-konveksiyonlu-firin-6x1-1-gn-kapasiteli-gazli",
+      "cafe_name": "Rational iCombi Classic 6-1/1/G Buhar Konveksiyonlu Fırın, 6x1/1 GN Kapasiteli, Gazlı",
+      "cafe_sku": "083.9890.ICCLS61.0G"
+    },
+    {
+      "sku": "9890.ICCLS62.E0",
+      "name": "RATIONAL BUHAR KONVEKSİYONLU ELEKTRİKLİ FIRIN 6*2/1 GN  İcombi Classic",
+      "equsto_kdv_dahil": 535765,
+      "cafemarkt_kdv_dahil": 901309.56,
+      "fark_tl": -365544.56000000006,
+      "fark_pct": -40.55704901210635,
+      "equsto_ucuz": true,
+      "match_key": "9890.ICCLS62.E0",
+      "cafe_url": "https://www.cafemarkt.com/rational-icombi-classic-buhar-konveksiyonlu-firin-6x2-1-gn-kapasiteli-elektrikli",
+      "cafe_name": "Rational iCombi Classic 6-2/1/E Buhar Konveksiyonlu Fırın, 6x2/1 GN Kapasiteli, Elektrikli",
+      "cafe_sku": "083.9890.ICCLS62.E0"
+    },
+    {
+      "sku": "9890.ICCLS61.E0",
+      "name": "RATIONAL BUHAR KONVEKSİYONLU ELEKTRİKLİ FIRIN 6*1/1 GN  İcombi Classic",
+      "equsto_kdv_dahil": 350803,
+      "cafemarkt_kdv_dahil": 590017.67,
+      "fark_tl": -239214.67000000004,
+      "fark_pct": -40.54364507422295,
+      "equsto_ucuz": true,
+      "match_key": "9890.ICCLS61.E0",
+      "cafe_url": "https://www.cafemarkt.com/rational-icombi-classic-buhar-konveksiyonlu-firin-6x1-1-gn-kapasiteli-elektrikli",
+      "cafe_name": "Rational iCombi Classic 6-1/1/E Buhar Konveksiyonlu Fırın, 6x1/1 GN Kapasiteli, Elektrikli",
+      "cafe_sku": "083.9890.ICCLS61.E0"
+    },
+    {
+      "sku": "9890.ICPRO62.G0",
+      "name": "RATIONAL GAZLI FIRIN 6*2/1 GN  İcombi Pro",
+      "equsto_kdv_dahil": 790555,
+      "cafemarkt_kdv_dahil": 1323879.07,
+      "fark_tl": -533324.0700000001,
+      "fark_pct": -40.28495367027746,
+      "equsto_ucuz": true,
+      "match_key": "9890.ICPRO62.G0",
+      "cafe_url": "https://www.cafemarkt.com/rational-icombi-pro-firin-6x2-1-gn-kapasiteli-gazli",
+      "cafe_name": "Rational iCombi Pro 6-2/1/G Fırın, 6x2/1 GN Kapasiteli, Gazlı",
+      "cafe_sku": "083.9890.ICPRO62.G0"
+    },
+    {
+      "sku": "9890.ICCLS10.1G",
+      "name": "RATIONAL BUHAR KONVEKSİYONLU GAZLI FIRIN 10*1/1 GN  İcombi Classic",
+      "equsto_kdv_dahil": 571926,
+      "cafemarkt_kdv_dahil": 954165.68,
+      "fark_tl": -382239.68000000005,
+      "fark_pct": -40.06009522371419,
+      "equsto_ucuz": true,
+      "match_key": "9890.ICCLS10.1G",
+      "cafe_url": "https://www.cafemarkt.com/rational-icombi-classic-buhar-konveksiyonlu-firin-10x1-1-gn-kapasiteli-gazli",
+      "cafe_name": "Rational iCombi Classic 101G Buhar Konveksiyonlu Fırın, 10x1/1 GN Kapasiteli, Gazlı",
+      "cafe_sku": "083.9890.ICCLS10.1G"
+    },
+    {
+      "sku": "9890.ICPRO10.1E",
+      "name": "RATIONAL ELEKTRİKLİ FIRIN 10*1/1 GN   İcombi Pro",
+      "equsto_kdv_dahil": 627206,
+      "cafemarkt_kdv_dahil": 1045942.4,
+      "fark_tl": -418736.4,
+      "fark_pct": -40.03436518110367,
+      "equsto_ucuz": true,
+      "match_key": "9890.ICPRO10.1E",
+      "cafe_url": "https://www.cafemarkt.com/rational-icombi-pro-firin-10x1-1-gn-kapasiteli-elektrikli",
+      "cafe_name": "Rational iCombi Pro 101E Fırın, 10x1/1 GN Kapasiteli, Elektrikli",
+      "cafe_sku": "083.9890.ICPRO10.1E"
+    },
+    {
+      "sku": "9890.ICCLS20.1G",
+      "name": "RATIONAL BUHAR KONVEKSİYONLU GAZLI FIRIN 20*1/1 GN İcombi Classic",
+      "equsto_kdv_dahil": 1029966,
+      "cafemarkt_kdv_dahil": 1709026.92,
+      "fark_tl": -679060.9199999999,
+      "fark_pct": -39.73377552180395,
+      "equsto_ucuz": true,
+      "match_key": "9890.ICCLS20.1G",
+      "cafe_url": "https://www.cafemarkt.com/rational-icombi-classic-buhar-konveksiyonlu-firin-20x1-1-gn-kapasiteli-gazli",
+      "cafe_name": "Rational iCombi Classic 201G Buhar Konveksiyonlu Fırın, 20x1/1 GN Kapasiteli, Gazlı",
+      "cafe_sku": "083.9890.ICCLS20.1G"
+    },
+    {
+      "sku": "9890.ICCLS20.2E",
+      "name": "RATIONAL BUHAR KONVEKSİYONLU ELEKTRİKLİ FIRIN 20*2/1 GN İcombi Classic",
+      "equsto_kdv_dahil": 1306784,
+      "cafemarkt_kdv_dahil": 2164833.34,
+      "fark_tl": -858049.3399999999,
+      "fark_pct": -39.63581510621044,
+      "equsto_ucuz": true,
+      "match_key": "9890.ICCLS20.2E",
+      "cafe_url": "https://www.cafemarkt.com/rational-icombi-classic-buhar-konveksiyonlu-firin-20x2-1-gn-kapasiteli-elektrikli",
+      "cafe_name": "Rational iCombi Classic 202E Buhar Konveksiyonlu Fırın, 20x2/1 GN Kapasiteli, Elektrikli",
+      "cafe_sku": "083.9890.ICCLS20.2E"
+    },
+    {
+      "sku": "9890.ICPRO62.E0",
+      "name": "RATIONAL ELEKTRİKLİ FIRIN 6*2/1 GN  İcombi Pro",
+      "equsto_kdv_dahil": 681240,
+      "cafemarkt_kdv_dahil": 1127733.01,
+      "fark_tl": -446493.01,
+      "fark_pct": -39.59208483220687,
+      "equsto_ucuz": true,
+      "match_key": "9890.ICPRO62.E0",
+      "cafe_url": "https://www.cafemarkt.com/rational-icombi-pro-firin-6x2-1-gn-kapasiteli-elektrikli",
+      "cafe_name": "Rational iCombi Pro 6-2/1/E Fırın, 6x2/1 GN Kapasiteli, Elektrikli",
+      "cafe_sku": "083.9890.ICPRO62.E0"
+    },
+    {
+      "sku": "9890.ICCLS20.2G",
+      "name": "RATIONAL BUHAR KONVEKSİYONLU GAZLI FIRIN 20*2/1 GN İcombi Classic",
+      "equsto_kdv_dahil": 1476784,
+      "cafemarkt_kdv_dahil": 2436335.57,
+      "fark_tl": -959551.5699999998,
+      "fark_pct": -39.385033072435085,
+      "equsto_ucuz": true,
+      "match_key": "9890.ICCLS20.2G",
+      "cafe_url": "https://www.cafemarkt.com/rational-icombi-classic-buhar-konveksiyonlu-firin-20x2-1-gn-kapasiteli-gazli",
+      "cafe_name": "Rational iCombi Classic 202G Buhar Konveksiyonlu Fırın, 20x2/1 GN Kapasiteli, Gazlı",
+      "cafe_sku": "083.9890.ICCLS20.2G"
+    },
+    {
+      "sku": "9890.ICPRO20.1E",
+      "name": "RATIONAL ELEKTRİKLİ FIRIN 20*1/1 GN  İcombi Pro",
+      "equsto_kdv_dahil": 1060723,
+      "cafemarkt_kdv_dahil": 1739776.89,
+      "fark_tl": -679053.8899999999,
+      "fark_pct": -39.031090360097835,
+      "equsto_ucuz": true,
+      "match_key": "9890.ICPRO20.1E",
+      "cafe_url": "https://www.cafemarkt.com/rational-icombi-pro-firin-20x1-1-gn-kapasiteli-elektrikli",
+      "cafe_name": "Rational iCombi Pro 201E Fırın, 20x1/1 GN Kapasiteli, Elektrikli",
+      "cafe_sku": "083.9890.ICPRO20.1E"
+    },
+    {
+      "sku": "9890.ICPRO20.1G",
+      "name": "RATIONAL GAZLI FIRIN 20*1/1 GN   İcombi Pro",
+      "equsto_kdv_dahil": 1198302,
+      "cafemarkt_kdv_dahil": 1962529.1,
+      "fark_tl": -764227.1000000001,
+      "fark_pct": -38.94093086313982,
+      "equsto_ucuz": true,
+      "match_key": "9890.ICPRO20.1G",
+      "cafe_url": "https://www.cafemarkt.com/rational-icombi-pro-firin-20x1-1-gn-kapasiteli-gazli",
+      "cafe_name": "Rational iCombi Pro 201G Fırın, 20x1/1 GN Kapasiteli, Gazlı",
+      "cafe_sku": "083.9890.ICPRO20.1G"
+    },
+    {
+      "sku": "9890.ICPRO20.2E",
+      "name": "RATIONAL ELEKTRİKLİ FIRIN 20*2/1 GN  İcombi Pro",
+      "equsto_kdv_dahil": 1520425,
+      "cafemarkt_kdv_dahil": 2489111.76,
+      "fark_tl": -968686.7599999998,
+      "fark_pct": -38.916965303317674,
+      "equsto_ucuz": true,
+      "match_key": "9890.ICPRO20.2E",
+      "cafe_url": "https://www.cafemarkt.com/rational-icombi-pro-firin-20x2-1-gn-kapasiteli-elektrikli",
+      "cafe_name": "Rational iCombi Pro 202E Fırın, 20x2/1 GN Kapasiteli, Elektrikli",
+      "cafe_sku": "083.9890.ICPRO20.2E"
+    },
+    {
+      "sku": "9890.ICPRO10.2G",
+      "name": "RATIONAL GAZLI FIRIN 10*2/1 GN   İcombi Pro",
+      "equsto_kdv_dahil": 1051164,
+      "cafemarkt_kdv_dahil": 1720868.79,
+      "fark_tl": -669704.79,
+      "fark_pct": -38.91666778383494,
+      "equsto_ucuz": true,
+      "match_key": "9890.ICPRO10.2G",
+      "cafe_url": "https://www.cafemarkt.com/rational-icombi-pro-firin-10x2-1-gn-kapasiteli-gazli",
+      "cafe_name": "Rational iCombi Pro 102G Fırın, 10x2/1 GN Kapasiteli, Gazlı",
+      "cafe_sku": "083.9890.ICPRO10.2G"
+    },
+    {
+      "sku": "9890.ICPRO10.2E",
+      "name": "RATIONAL ELEKTRİKLİ FIRIN 10*2/1 GN   İcombi Pro",
+      "equsto_kdv_dahil": 906104,
+      "cafemarkt_kdv_dahil": 1482682.76,
+      "fark_tl": -576578.76,
+      "fark_pct": -38.8875338376498,
+      "equsto_ucuz": true,
+      "match_key": "9890.ICPRO10.2E",
+      "cafe_url": "https://www.cafemarkt.com/rational-icombi-pro-firin-10x2-1-gn-kapasiteli-elektrikli",
+      "cafe_name": "Rational iCombi Pro 102E Fırın, 10x2/1 GN Kapasiteli, Elektrikli",
+      "cafe_sku": "083.9890.ICPRO10.2E"
+    },
+    {
+      "sku": "9890.ICPRO10.1G",
+      "name": "RATIONAL GAZLI FIRIN 10*1/1 GN   İcombi Pro",
+      "equsto_kdv_dahil": 727378,
+      "cafemarkt_kdv_dahil": 1190141.03,
+      "fark_tl": -462763.03,
+      "fark_pct": -38.88304144929782,
+      "equsto_ucuz": true,
+      "match_key": "9890.ICPRO10.1G",
+      "cafe_url": "https://www.cafemarkt.com/rational-icombi-pro-firin-10x1-1-gn-kapasiteli-gazli",
+      "cafe_name": "Rational iCombi Pro 101G Fırın, 10x1/1 GN Kapasiteli, Gazlı",
+      "cafe_sku": "083.9890.ICPRO10.1G"
+    },
+    {
+      "sku": "9890.ICPRO20.2G",
+      "name": "RATIONAL GAZLI FIRIN 20*2/1 GN  İcombi Pro",
+      "equsto_kdv_dahil": 1717856,
+      "cafemarkt_kdv_dahil": 2801745.91,
+      "fark_tl": -1083889.9100000001,
+      "fark_pct": -38.68623154338789,
+      "equsto_ucuz": true,
+      "match_key": "9890.ICPRO20.2G",
+      "cafe_url": "https://www.cafemarkt.com/rational-icombi-pro-firin-20x2-1-gn-kapasiteli-gazli",
+      "cafe_name": "Rational iCombi Pro 202G Fırın, 20x2/1 GN Kapasiteli, Gazlı",
+      "cafe_sku": "083.9890.ICPRO20.2G"
+    }
+  ],
+  "unmatched_equsto": [
+    {
+      "sku": "9890.ICPROXS.00",
+      "fiyat_tl": 356622,
+      "name": "RATIONAL ELEKTRİKLİ FIRIN 6x2/3 GN  İcombi Pro"
+    }
+  ],
+  "cafemarkt_all": [
+    {
+      "sku": "083.9890.ICPRO61.E0",
+      "name": "Rational iCombi Pro 6-1/1/E Fırın, 6x1/1 GN Kapasiteli, Elektrikli",
+      "price_try_kdv_dahil": 773177.19,
+      "url": "https://www.cafemarkt.com/rational-icombi-pro-firin-6x1-1-gn-kapasiteli-elektrikli"
+    },
+    {
+      "sku": "083.9890.ICPRO10.1E",
+      "name": "Rational iCombi Pro 101E Fırın, 10x1/1 GN Kapasiteli, Elektrikli",
+      "price_try_kdv_dahil": 1045942.4,
+      "url": "https://www.cafemarkt.com/rational-icombi-pro-firin-10x1-1-gn-kapasiteli-elektrikli"
+    },
+    {
+      "sku": "083.9890.ICPRO20.2G",
+      "name": "Rational iCombi Pro 202G Fırın, 20x2/1 GN Kapasiteli, Gazlı",
+      "price_try_kdv_dahil": 2801745.91,
+      "url": "https://www.cafemarkt.com/rational-icombi-pro-firin-20x2-1-gn-kapasiteli-gazli"
+    },
+    {
+      "sku": "083.9890.ICPRO20.2E",
+      "name": "Rational iCombi Pro 202E Fırın, 20x2/1 GN Kapasiteli, Elektrikli",
+      "price_try_kdv_dahil": 2489111.76,
+      "url": "https://www.cafemarkt.com/rational-icombi-pro-firin-20x2-1-gn-kapasiteli-elektrikli"
+    },
+    {
+      "sku": "083.9890.ICPRO62.E0",
+      "name": "Rational iCombi Pro 6-2/1/E Fırın, 6x2/1 GN Kapasiteli, Elektrikli",
+      "price_try_kdv_dahil": 1127733.01,
+      "url": "https://www.cafemarkt.com/rational-icombi-pro-firin-6x2-1-gn-kapasiteli-elektrikli"
+    },
+    {
+      "sku": "083.5RRX.60611.28",
+      "name": "Rational Mobil Tabak Rafı, 15 Tabak",
+      "price_try_kdv_dahil": 44230.83,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tabak-rafi-15-tabak"
+    },
+    {
+      "sku": "022.56.00.210",
+      "name": "Rational Temizlik Deterjan Tablet, 100 Adet",
+      "price_try_kdv_dahil": 4628.96,
+      "url": "https://www.cafemarkt.com/rational-temizlik-tableti-100-adet"
+    },
+    {
+      "sku": "083.5RRX.60111.22",
+      "name": "Rational Mobil Tepsi Rafı, 1/1-8 Raflı",
+      "price_try_kdv_dahil": 39555.6,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tepsi-rafi-11-8-rafli"
+    },
+    {
+      "sku": "083.5RRX.60701.60",
+      "name": "Rational Mobil Tabak Rafları İçin Taşıma Arabası, 74.7x97.7 cm, H:95-133 cm",
+      "price_try_kdv_dahil": 93756.54,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tabak-raflari-icin-tasima-arab-2878"
+    },
+    {
+      "sku": "083.5RRX.60110.30",
+      "name": "Rational Mobil Tabak Rafı, 32 Tabak",
+      "price_try_kdv_dahil": 49168.89,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tabak-rafi-32-tabak"
+    },
+    {
+      "sku": "083.5RRX.60620.61",
+      "name": "Rational Mobil Tabak Rafı, 24 Tabak",
+      "price_try_kdv_dahil": 57109.93,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tabak-rafi-24-tabak"
+    },
+    {
+      "sku": "083.5RRX.60612.26",
+      "name": "Rational Mobil Tabak Rafı, Sürme Rayı",
+      "price_try_kdv_dahil": 9817.92,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tabak-rafi-surme-yayi"
+    },
+    {
+      "sku": "083.5RRX.60620.17",
+      "name": "Rational Mobil Tabak Rafı, 34 Tabak",
+      "price_try_kdv_dahil": 103777.18,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tabak-rafi-34-tabak"
+    },
+    {
+      "sku": "083.5RRX.60610.47",
+      "name": "Rational Mobil Tabak Rafı, 20 Tabak",
+      "price_try_kdv_dahil": 44230.83,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tabak-rafi-20-tabak"
+    },
+    {
+      "sku": "083.5RRX.60620.49",
+      "name": "Rational Mobil Tepsi Rafı, 2/1-5 Raflı",
+      "price_try_kdv_dahil": 41427.99,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tepsi-rafi-21-5-rafli"
+    },
+    {
+      "sku": "083.5RRX.60171.002",
+      "name": "Rational Muffin Vetimbal Kalıpları, 1/1 GN",
+      "price_try_kdv_dahil": 11590.55,
+      "url": "https://www.cafemarkt.com/ozti-rational-muffin-vetimbal-kaliplari-11-gn"
+    },
+    {
+      "sku": "083.5RRX.60620.99",
+      "name": "Rational Mobil Tepsi Askı Rafı, 2/1-6 Raflı",
+      "price_try_kdv_dahil": 25315.69,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tepsi-aski-rafi-21-6-rafli"
+    },
+    {
+      "sku": "083.5RRX.60120.11",
+      "name": "Rational Mobil Tepsi Rafı 2/1-10 Raflı",
+      "price_try_kdv_dahil": 44069.68,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tepsi-rafi-21-10-rafli"
+    },
+    {
+      "sku": "083.5RRX.60221.82",
+      "name": "Rational Mobil Tabak Rafı, 84 Tabak Kapasiteli",
+      "price_try_kdv_dahil": 160162.58,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tabak-rafi-84-tabak"
+    },
+    {
+      "sku": "083.5RRX.60621.08",
+      "name": "Rational Mobil Tepsi Askı Rafı, 2/1-5 Raflı",
+      "price_try_kdv_dahil": 25315.69,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tepsi-aski-rafi-21-5-rafli"
+    },
+    {
+      "sku": "083.5RRX.60620.94",
+      "name": "Rational Mobil Tabak Rafları İçin Sürme Rayı",
+      "price_try_kdv_dahil": 12639.3,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tabak-raflari-icin-surme-rayi"
+    },
+    {
+      "sku": "083.5RRX.60620.03",
+      "name": "Rational Mobil Tepsi Rafı, 2/1-6 Raflı",
+      "price_try_kdv_dahil": 41427.99,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tepsi-rafi-21-6-rafli"
+    },
+    {
+      "sku": "083.5RRX.60606.78",
+      "name": "Rational Mobil Tabak Rafları İçin Taşıma Arabası, 74.7x97.7 cm, H:98.9 cm",
+      "price_try_kdv_dahil": 66399,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tabak-raflari-icin-tasima-arab-2864"
+    },
+    {
+      "sku": "083.5RRX.60610.05",
+      "name": "Rational Mobil Tepsi Rafı, 1/1-6 Raflı, 382x579x458 mm",
+      "price_try_kdv_dahil": 33068.73,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tepsi-rafi-11-6-rafli"
+    },
+    {
+      "sku": "083.5RRX.60612.43",
+      "name": "Rational Mobil Tepsi Rafı, 1/1-6 Raflı",
+      "price_try_kdv_dahil": 18770.62,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tepsi-rafi-11-6-rafli-2869"
+    },
+    {
+      "sku": "083.5RRX.60600.20",
+      "name": "Rational Mobil Tabak Rafları İçin Taşıma Arabası, 54.7x85.2 cm, H:98.9 cm",
+      "price_try_kdv_dahil": 46398.02,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tabak-raflari-icin-tasima-arab"
+    },
+    {
+      "sku": "083.5RRX.60221.08",
+      "name": "Rational Mobil Tabak Rafı, 120 Tabak",
+      "price_try_kdv_dahil": 181260.91,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tabak-rafi-120-tabak"
+    },
+    {
+      "sku": "083.5RRX.60120.62",
+      "name": "Rational Mobil Tabak Rafı, 42 Tabak",
+      "price_try_kdv_dahil": 109737.76,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tabak-rafi-42-tabak"
+    },
+    {
+      "sku": "083.5RRX.60111.49",
+      "name": "Rational Mobil Tabak Rafı, 26 Tabak",
+      "price_try_kdv_dahil": 49168.89,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tabak-rafi-26-tabak"
+    },
+    {
+      "sku": "083.5RRX.60120.55",
+      "name": "Rational Mobil Tepsi Rafı, 2/1-8 Raflı",
+      "price_try_kdv_dahil": 44069.68,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tepsi-rafi-21-8-rafli"
+    },
+    {
+      "sku": "083.5RRX.60211.56",
+      "name": "Rational Mobil Tepsi Rafı, 1/1-15 Raflı",
+      "price_try_kdv_dahil": 120222.01,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tepsi-rafi-11-15-rafli"
+    },
+    {
+      "sku": "083.5RRX.60221.09",
+      "name": "Rational Mobil Tabak Rafı, 100 Tabak",
+      "price_try_kdv_dahil": 160162.58,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tabak-rafi-100-tabak"
+    },
+    {
+      "sku": "083.5RRX.60211.74",
+      "name": "Rational Mobil Tepsi Rafı, 1/1-17 Raflı",
+      "price_try_kdv_dahil": 120222.01,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tepsi-rafi-11-17-rafli"
+    },
+    {
+      "sku": "083.5RRX.60171.001",
+      "name": "Rational Muffin Vetimbal Kalıpları, 2/1 GN",
+      "price_try_kdv_dahil": 16608.54,
+      "url": "https://www.cafemarkt.com/ozti-rational-muffin-vetimbal-kaliplari-21-gn"
+    },
+    {
+      "sku": "083.5RRX.60601.88",
+      "name": "Rational Mobil Tabak Rafları İçin Taşıma Arabası, 55.7x107.3 cm, H:95-133 cm",
+      "price_try_kdv_dahil": 74865.06,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tabak-raflari-icin-tasima-arab-2863"
+    },
+    {
+      "sku": "083.5RRX.60220.86",
+      "name": "Rational Mobil Tepsi Rafı, 2/1-20 Raflı",
+      "price_try_kdv_dahil": 135747.28,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tepsi-rafi-21-20-rafli"
+    },
+    {
+      "sku": "083.5RRX.60113.66",
+      "name": "Rational Mobil Tepsi Askı Rafı, 1/1-10 Raflı",
+      "price_try_kdv_dahil": 24525.93,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tepsi-aski-rafi-11-10-rafli"
+    },
+    {
+      "sku": "083.5RRX.60612.69",
+      "name": "Rational Mobil Tepsi Askı Rafı, 1/1-5 Raflı",
+      "price_try_kdv_dahil": 18770.62,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tepsi-aski-rafi-11-5-rafli"
+    },
+    {
+      "sku": "083.5RRX.60210.99",
+      "name": "Rational Mobil Tabak Rafı, 60 Tabak",
+      "price_try_kdv_dahil": 130403.8,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tabak-rafi-60-tabak"
+    },
+    {
+      "sku": "083.5RRX.60120.22",
+      "name": "Rational Mobil Tabak Rafı, 52 Tabak, 2/1-10 GN",
+      "price_try_kdv_dahil": 129672.23,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tabak-rafi-52-tabak-10-21-gn"
+    },
+    {
+      "sku": "083.5RRX.60211.04",
+      "name": "Rational Mobil Tabak Rafı, 50 Tabak",
+      "price_try_kdv_dahil": 130403.8,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tabak-rafi-50-tabak"
+    },
+    {
+      "sku": "083.5RRX.60121.20",
+      "name": "Rational Mobil Tepsi Askı Rafı, 2/1-8 Raflı",
+      "price_try_kdv_dahil": 27083.85,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tepsi-aski-rafi-21-8-rafli"
+    },
+    {
+      "sku": "083.5RRX.60210.54",
+      "name": "Rational Mobil Tepsi Rafı, 1/1-20 Raflı",
+      "price_try_kdv_dahil": 113150.02,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tepsi-rafi-11-20-rafli"
+    },
+    {
+      "sku": "083.5RRX.60211.72",
+      "name": "Rational Mobil Tepsi Rafı, 1/1-16 Raflı",
+      "price_try_kdv_dahil": 120222.01,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tepsi-rafi-11-16-rafli"
+    },
+    {
+      "sku": "083.5RRX.60221.60",
+      "name": "Rational Mobil Tepsi Rafı, 2/1-16 Raflı",
+      "price_try_kdv_dahil": 135747.28,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tepsi-rafi-21-16-rafli"
+    },
+    {
+      "sku": "083.5RRX.60110.11",
+      "name": "Rational Mobil Tepsi Rafı, 1/1-10 Raflı",
+      "price_try_kdv_dahil": 39555.6,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tepsi-rafi11-10-rafli"
+    },
+    {
+      "sku": "083.5RRX.60221.53",
+      "name": "Rational Mobil Tepsi Rafı, 2/1-15 Raflı",
+      "price_try_kdv_dahil": 135747.28,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tepsi-rafi-21-15-rafli"
+    },
+    {
+      "sku": "083.5RRX.60121.15",
+      "name": "Rational Mobil Tepsi Askı Rafı, 2/1-10 Raflı",
+      "price_try_kdv_dahil": 93118.98,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tepsi-aski-rafi-21-10-rafli"
+    },
+    {
+      "sku": "083.5RRX.60221.62",
+      "name": "Rational Mobil Tepsi Rafı, 2/1-17 Raflı",
+      "price_try_kdv_dahil": 135747.28,
+      "url": "https://www.cafemarkt.com/ozti-rational-mobil-tepsi-rafi-21-17-rafli"
+    },
+    {
+      "sku": "022.56.00.562",
+      "name": "Rational Bakım Tableti, 150 Adet",
+      "price_try_kdv_dahil": 5431.94,
+      "url": "https://www.cafemarkt.com/rational-bakim-tableti-150-adet"
+    },
+    {
+      "sku": "083.9890.ICCLS61.E0",
+      "name": "Rational iCombi Classic 6-1/1/E Buhar Konveksiyonlu Fırın, 6x1/1 GN Kapasiteli, Elektrikli",
+      "price_try_kdv_dahil": 590017.67,
+      "url": "https://www.cafemarkt.com/rational-icombi-classic-buhar-konveksiyonlu-firin-6x1-1-gn-kapasiteli-elektrikli"
+    },
+    {
+      "sku": "083.5RRX.60191.150",
+      "name": "Rational Combifry Patates Kızartma Sepeti, 1/1 GN, 50 mm",
+      "price_try_kdv_dahil": 10747.08,
+      "url": "https://www.cafemarkt.com/rational-combifry-patates-kizartma-sepeti-1-1-gn-50-mm"
+    },
+    {
+      "sku": "083.9890.ICPRO62.G0",
+      "name": "Rational iCombi Pro 6-2/1/G Fırın, 6x2/1 GN Kapasiteli, Gazlı",
+      "price_try_kdv_dahil": 1323879.07,
+      "url": "https://www.cafemarkt.com/rational-icombi-pro-firin-6x2-1-gn-kapasiteli-gazli"
+    },
+    {
+      "sku": "083.9890.ICPRO20.1E",
+      "name": "Rational iCombi Pro 201E Fırın, 20x1/1 GN Kapasiteli, Elektrikli",
+      "price_try_kdv_dahil": 1739776.89,
+      "url": "https://www.cafemarkt.com/rational-icombi-pro-firin-20x1-1-gn-kapasiteli-elektrikli"
+    },
+    {
+      "sku": "083.9890.ICPRO61.0G",
+      "name": "Rational iCombi Pro 6-1/1/G Fırın, 6x1/1 GN Kapasiteli, Gazlı",
+      "price_try_kdv_dahil": 922191.74,
+      "url": "https://www.cafemarkt.com/rational-icombi-pro-firin-6x1-1-gn-kapasiteli-gazli"
+    },
+    {
+      "sku": "022.56.01.535",
+      "name": "Rational iCombi Pro ve iCombi Classic için Aktif Yeşil Temizleyici Tablet, 150 Adet",
+      "price_try_kdv_dahil": 6093.22,
+      "url": "https://www.cafemarkt.com/rational-icombi-pro-ve-icombi-classic-icin-aktif-yesil-temizleyici-tablet-150-adet"
+    },
+    {
+      "sku": "083.9890.ICCLS10.1E",
+      "name": "Rational iCombi Classic 101E Buhar Konveksiyonlu Fırın, 10x1/1 GN Kapasiteli, Elektrikli",
+      "price_try_kdv_dahil": 829545.97,
+      "url": "https://www.cafemarkt.com/rational-icombi-classic-buhar-konveksiyonlu-firin-10x1-1-gn-kapasiteli-elektrikli"
+    },
+    {
+      "sku": "083.5RRX.60351.006",
+      "name": "Rational Tavuk Kızartma Teli, 8 Tavuk Kapasiteli",
+      "price_try_kdv_dahil": 6724.12,
+      "url": "https://www.cafemarkt.com/rational-tavuk-kizartma-teli-8-tavuk-kapasiteli"
+    },
+    {
+      "sku": "083.9890.ICPRO10.2G",
+      "name": "Rational iCombi Pro 102G Fırın, 10x2/1 GN Kapasiteli, Gazlı",
+      "price_try_kdv_dahil": 1720868.79,
+      "url": "https://www.cafemarkt.com/rational-icombi-pro-firin-10x2-1-gn-kapasiteli-gazli"
+    },
+    {
+      "sku": "083.9890.ICCLS20.2G",
+      "name": "Rational iCombi Classic 202G Buhar Konveksiyonlu Fırın, 20x2/1 GN Kapasiteli, Gazlı",
+      "price_try_kdv_dahil": 2436335.57,
+      "url": "https://www.cafemarkt.com/rational-icombi-classic-buhar-konveksiyonlu-firin-20x2-1-gn-kapasiteli-gazli"
+    },
+    {
+      "sku": "083.5RRX.60191.250",
+      "name": "Rational Combifry Patates Kızartma Sepeti, 1/2 GN, 50 mm",
+      "price_try_kdv_dahil": 8510.82,
+      "url": "https://www.cafemarkt.com/rational-combifry-patates-kizartma-sepeti-1-2-gn-50-mm"
+    },
+    {
+      "sku": "083.9890.ICCLS61.0G",
+      "name": "Rational iCombi Classic 6-1/1/G Buhar Konveksiyonlu Fırın, 6x1/1 GN Kapasiteli, Gazlı",
+      "price_try_kdv_dahil": 703624.28,
+      "url": "https://www.cafemarkt.com/rational-icombi-classic-buhar-konveksiyonlu-firin-6x1-1-gn-kapasiteli-gazli"
+    },
+    {
+      "sku": "083.5RRX.60351.017",
+      "name": "Rational Izgara Fırın Tepsisi, 32.5x53 cm",
+      "price_try_kdv_dahil": 14299.39,
+      "url": "https://www.cafemarkt.com/rational-izgara-firin-tepsisi-32-5x53-cm"
+    },
+    {
+      "sku": "083.9890.ICCLS20.2E",
+      "name": "Rational iCombi Classic 202E Buhar Konveksiyonlu Fırın, 20x2/1 GN Kapasiteli, Elektrikli",
+      "price_try_kdv_dahil": 2164833.34,
+      "url": "https://www.cafemarkt.com/rational-icombi-classic-buhar-konveksiyonlu-firin-20x2-1-gn-kapasiteli-elektrikli"
+    },
+    {
+      "sku": "083.5RRX.60041.016",
+      "name": "Rational 62 Model Isı Koruyucu Taşıma Arabası Örtüsü",
+      "price_try_kdv_dahil": 38485.75,
+      "url": "https://www.cafemarkt.com/rational-62-model-isi-koruyucu-tasima-arabasi-ortusu"
+    },
+    {
+      "sku": "083.9890.ICPRO10.1G",
+      "name": "Rational iCombi Pro 101G Fırın, 10x1/1 GN Kapasiteli, Gazlı",
+      "price_try_kdv_dahil": 1190141.03,
+      "url": "https://www.cafemarkt.com/rational-icombi-pro-firin-10x1-1-gn-kapasiteli-gazli"
+    },
+    {
+      "sku": "083.9890.ICCLS10.2G",
+      "name": "Rational iCombi Classic 102G Buhar Konveksiyonlu Fırın, 10x2/1 GN Kapasiteli, Gazlı",
+      "price_try_kdv_dahil": 1465156.56,
+      "url": "https://www.cafemarkt.com/rational-icombi-classic-buhar-konveksiyonlu-firin-10x2-1-gn-kapasiteli-gazli"
+    },
+    {
+      "sku": "083.9890.ICCLS62.G0",
+      "name": "Rational iCombi Classic 6-2/1/G Buhar Konveksiyonlu Fırın, 6x2/1 GN Kapasiteli, Gazlı",
+      "price_try_kdv_dahil": 1052258.53,
+      "url": "https://www.cafemarkt.com/rational-icombi-classic-buhar-konveksiyonlu-firin-6x2-1-gn-kapasiteli-gazli"
+    },
+    {
+      "sku": "083.9890.ICCLS10.2E",
+      "name": "Rational iCombi Classic 102E Buhar Konveksiyonlu Fırın, 10x2/1 GN Kapasiteli, Elektrikli",
+      "price_try_kdv_dahil": 1234588.64,
+      "url": "https://www.cafemarkt.com/rational-icombi-classic-buhar-konveksiyonlu-firin-10x2-1-gn-kapasiteli-elektrikli"
+    },
+    {
+      "sku": "083.9890.ICPRO20.1G",
+      "name": "Rational iCombi Pro 201G Fırın, 20x1/1 GN Kapasiteli, Gazlı",
+      "price_try_kdv_dahil": 1962529.1,
+      "url": "https://www.cafemarkt.com/rational-icombi-pro-firin-20x1-1-gn-kapasiteli-gazli"
+    },
+    {
+      "sku": "083.9890.ICPRO10.2E",
+      "name": "Rational iCombi Pro 102E Fırın, 10x2/1 GN Kapasiteli, Elektrikli",
+      "price_try_kdv_dahil": 1482682.76,
+      "url": "https://www.cafemarkt.com/rational-icombi-pro-firin-10x2-1-gn-kapasiteli-elektrikli"
+    },
+    {
+      "sku": "083.9890.ICCLS10.1G",
+      "name": "Rational iCombi Classic 101G Buhar Konveksiyonlu Fırın, 10x1/1 GN Kapasiteli, Gazlı",
+      "price_try_kdv_dahil": 954165.68,
+      "url": "https://www.cafemarkt.com/rational-icombi-classic-buhar-konveksiyonlu-firin-10x1-1-gn-kapasiteli-gazli"
+    },
+    {
+      "sku": "083.9890.ICCLS62.E0",
+      "name": "Rational iCombi Classic 6-2/1/E Buhar Konveksiyonlu Fırın, 6x2/1 GN Kapasiteli, Elektrikli",
+      "price_try_kdv_dahil": 901309.56,
+      "url": "https://www.cafemarkt.com/rational-icombi-classic-buhar-konveksiyonlu-firin-6x2-1-gn-kapasiteli-elektrikli"
+    },
+    {
+      "sku": "083.5RRX.60709.20",
+      "name": "Rational Combi Duo Taşıma Arabası 55x107 cm",
+      "price_try_kdv_dahil": 121442.78,
+      "url": "https://www.cafemarkt.com/rational-combi-duo-tasima-arabasi-55x107-cm"
+    },
+    {
+      "sku": "083.5RRX.60704.04",
+      "name": "Rational Banket için Tabaklık, 60 Tabak",
+      "price_try_kdv_dahil": 166448.66,
+      "url": "https://www.cafemarkt.com/rational-banket-icin-tabaklik-60-tabak"
+    },
+    {
+      "sku": "083.5RRX.60711.58",
+      "name": "Rational Pizza Tavası, 28 cm",
+      "price_try_kdv_dahil": 2633.37,
+      "url": "https://www.cafemarkt.com/rational-pizza-tavasi-28-cm"
+    },
+    {
+      "sku": "083.5RRX.60041.009",
+      "name": "Rational 101 Model Isı Koruyucu Taşıma Arabası Örtüsü",
+      "price_try_kdv_dahil": 33737.62,
+      "url": "https://www.cafemarkt.com/rational-101-model-isi-koruyucu-tasima-arabasi-ortusu"
+    },
+    {
+      "sku": "083.9890.ICCLS20.1G",
+      "name": "Rational iCombi Classic 201G Buhar Konveksiyonlu Fırın, 20x1/1 GN Kapasiteli, Gazlı",
+      "price_try_kdv_dahil": 1709026.92,
+      "url": "https://www.cafemarkt.com/rational-icombi-classic-buhar-konveksiyonlu-firin-20x1-1-gn-kapasiteli-gazli"
+    },
+    {
+      "sku": "083.5RRX.60351.009",
+      "name": "Rational Ördek Kızartma Teli, 8 Ördek Kapasiteli",
+      "price_try_kdv_dahil": 11412.78,
+      "url": "https://www.cafemarkt.com/rational-ordek-kizartma-teli-8-ordek-kapasiteli"
+    },
+    {
+      "sku": "083.5RRX.60351.015",
+      "name": "Rational Tavuk Kızartma Teli, 4 Tavuk Kapasiteli",
+      "price_try_kdv_dahil": 5078.1,
+      "url": "https://www.cafemarkt.com/rational-tavuk-kizartma-teli-4-tavuk-kapasiteli"
+    },
+    {
+      "sku": "083.5RRX.60141.106",
+      "name": "Rational Granit Fırın Tepsisi, 1/1 GN, 60 mm",
+      "price_try_kdv_dahil": 11990.23,
+      "url": "https://www.cafemarkt.com/rational-granit-firin-tepsisi-1-1-gn-60-mm"
+    },
+    {
+      "sku": "083.5RRX.60142.102",
+      "name": "Rational Granit Fırın Tepsisi, 2/1 GN, 20 mm",
+      "price_try_kdv_dahil": 13145.13,
+      "url": "https://www.cafemarkt.com/rational-granit-firin-tepsisi-2-1-gn-20-mm"
+    },
+    {
+      "sku": "083.5RRX.60351.016",
+      "name": "Rational Tavuk Kızartma Teli, 6 Tavuk Kapasiteli",
+      "price_try_kdv_dahil": 6112.78,
+      "url": "https://www.cafemarkt.com/rational-tavuk-kizartma-teli-6-tavuk-kapasiteli"
+    },
+    {
+      "sku": "083.5RRX.60041.012",
+      "name": "Rational Isı Koruyucu Fırın içi Tepsi Örtüsü, 20x2/1 GN",
+      "price_try_kdv_dahil": 90413.35,
+      "url": "https://www.cafemarkt.com/rational-isi-koruyucu-firin-ici-tepsi-ortusu-20x2-1-gn"
+    },
+    {
+      "sku": "083.5RRX.60141.104",
+      "name": "Rational Granit Fırın Tepsisi, 1/1 GN, 40 mm",
+      "price_try_kdv_dahil": 9769.96,
+      "url": "https://www.cafemarkt.com/rational-granit-firin-tepsisi-1-1-gn-40-mm"
+    },
+    {
+      "sku": "083.5RRX.60351.011",
+      "name": "Rational Tavuk Kızartma Teli, 12 Tavuk Kapasiteli",
+      "price_try_kdv_dahil": 4927.82,
+      "url": "https://www.cafemarkt.com/rational-tavuk-kizartma-teli-12-tavuk-kapasiteli"
+    },
+    {
+      "sku": "083.5RRX.60351.010",
+      "name": "Rational Tavuk Kızartma Teli, 10 Tavuk Kapasiteli",
+      "price_try_kdv_dahil": 7711.47,
+      "url": "https://www.cafemarkt.com/rational-tavuk-kizartma-teli-10-tavuk-kapasiteli"
+    },
+    {
+      "sku": "083.9890.ICCLS20.1E",
+      "name": "Rational iCombi Classic 201E Buhar Konveksiyonlu Fırın, 20x1/1 GN Kapasiteli, Elektrikli",
+      "price_try_kdv_dahil": 1546946.54,
+      "url": "https://www.cafemarkt.com/rational-icombi-classic-buhar-konveksiyonlu-firin-20x1-1-gn-kapasiteli-elektrikli"
+    },
+    {
+      "sku": "083.5RRX.60141.204",
+      "name": "Rational Granit Fırın Tepsisi, 1/2 GN, 40 mm",
+      "price_try_kdv_dahil": 7711.47,
+      "url": "https://www.cafemarkt.com/rational-granit-firin-tepsisi-1-2-gn-40-mm"
+    },
+    {
+      "sku": "083.5RRX.60711.57",
+      "name": "Rational Multibaker Yumurta Pişirme Kalıbı, 32.5x53 cm",
+      "price_try_kdv_dahil": 10569.31,
+      "url": "https://www.cafemarkt.com/rational-multibaker-yumurta-pisirme-kalibi-32-5x53-cm"
+    },
+    {
+      "sku": "083.5RRX.60041.011",
+      "name": "Rational 201 Model Isı Koruyucu Taşıma Arabası Örtüsü",
+      "price_try_kdv_dahil": 64834.2,
+      "url": "https://www.cafemarkt.com/rational-201-model-isi-koruyucu-tasima-arabasi-ortusu"
+    },
+    {
+      "sku": "083.5RRX.60041.014",
+      "name": "Rational 102 Model Isı Koruyucu Taşıma Arabası Örtüsü",
+      "price_try_kdv_dahil": 43668.73,
+      "url": "https://www.cafemarkt.com/rational-102-model-isi-koruyucu-tasima-arabasi-ortusu"
+    },
+    {
+      "sku": "083.5RRX.60041.007",
+      "name": "Rational 61 Model Isı Koruyucu Taşıma Arabası Örtüsü",
+      "price_try_kdv_dahil": 29378.3,
+      "url": "https://www.cafemarkt.com/rational-61-model-isi-koruyucu-tasima-arabasi-ortusu"
+    },
+    {
+      "sku": "083.5RRX.60708.56",
+      "name": "Rational Combi Duo Taşıma Arabası Örtüsü 41x49x63 cm",
+      "price_try_kdv_dahil": 43668.73,
+      "url": "https://www.cafemarkt.com/rational-combi-duo-tasima-arabasi-ortusu-41x49x63-cm"
+    },
+    {
+      "sku": "083.5RRX.60351.019",
+      "name": "Rational Patates Pişirme Ünitesi, 32.5x53 cm",
+      "price_try_kdv_dahil": 12745.45,
+      "url": "https://www.cafemarkt.com/rational-patates-pisirme-unitesi-32-5x53-cm"
+    },
+    {
+      "sku": "083.5RRX.60142.104",
+      "name": "Rational Granit Fırın Tepsisi, 2/1 GN, 40 mm",
+      "price_try_kdv_dahil": 14388.27,
+      "url": "https://www.cafemarkt.com/rational-granit-firin-tepsisi-2-1-gn-40-mm"
+    },
+    {
+      "sku": "083.5RRX.60142.106",
+      "name": "Rational Granit Fırın Tepsisi, 2/1 GN, 60 mm",
+      "price_try_kdv_dahil": 17763.44,
+      "url": "https://www.cafemarkt.com/rational-granit-firin-tepsisi-2-1-gn-60-mm"
+    },
+    {
+      "sku": "083.5RRX.60141.206",
+      "name": "Rational Granit Fırın Tepsisi, 1/2 GN, 60 mm",
+      "price_try_kdv_dahil": 11590.55,
+      "url": "https://www.cafemarkt.com/rational-granit-firin-tepsisi-1-2-gn-60-mm"
+    },
+    {
+      "sku": "083.5RRX.60141.102",
+      "name": "Rational Granit Fırın Tepsisi, 1/1 GN, 20 mm",
+      "price_try_kdv_dahil": 9356.85,
+      "url": "https://www.cafemarkt.com/rational-granit-firin-tepsisi-1-1-gn-20-mm"
+    },
+    {
+      "sku": "083.5RRX.60141.202",
+      "name": "Rational Granit Fırın Tepsisi, 1/2 GN, 20 mm",
+      "price_try_kdv_dahil": 7006.13,
+      "url": "https://www.cafemarkt.com/rational-granit-firin-tepsisi-1-2-gn-20-mm"
+    },
+    {
+      "sku": "083.5RRX.60704.00",
+      "name": "Rational Banket için Tabaklık, 20 Tabak",
+      "price_try_kdv_dahil": 93622.89,
+      "url": "https://www.cafemarkt.com/rational-banket-icin-tabaklik-20-tabak"
+    },
+    {
+      "sku": "083.5RRX.60704.03",
+      "name": "Rational Banket için Tabaklık, 52 Tabak",
+      "price_try_kdv_dahil": 144380.24,
+      "url": "https://www.cafemarkt.com/rational-banket-icin-tabaklik-52-tabak"
+    },
+    {
+      "sku": "083.5RRX.60704.02",
+      "name": "Rational Banket için Tabaklık, 34 Tabak",
+      "price_try_kdv_dahil": 134883.98,
+      "url": "https://www.cafemarkt.com/rational-banket-icin-tabaklik-34-tabak"
+    },
+    {
+      "sku": "083.9890.OCMP20.2E",
+      "name": "Rational CMP20 2E Buhar Konveksiyonlu Fırın, 20 Adet GN 2/1 Tepsi Kapasiteli, Elektrikli",
+      "price_try_kdv_dahil": 1602098.39,
+      "url": "https://www.cafemarkt.com/oztirational-buhar-konveksiyonlu-elektrikli-firin-2974"
+    },
+    {
+      "sku": "083.9890.OCMP20.2G",
+      "name": "Rational CMP20 2G Buhar Konveksiyonlu Fırın, 20 Adet GN 2/1 Tepsi Kapasiteli, Gazlı",
+      "price_try_kdv_dahil": 1803011.12,
+      "url": "https://www.cafemarkt.com/oztirational-buhar-konveksiyonlu-gazli-firin-20x2"
+    },
+    {
+      "sku": "083.9890.OCMP61.G0",
+      "name": "Rational CMP61 G0 Buhar Konveksiyonlu Fırın, 6 Adet GN 1/1 Tepsi Kapasiteli, Gazlı",
+      "price_try_kdv_dahil": 549652.49,
+      "url": "https://www.cafemarkt.com/oztirational-buhar-konveksiyonlu-gazli-firin"
+    },
+    {
+      "sku": "083.9890.OCMP10.2G",
+      "name": "Rational CMP10 2G Buhar Konveksiyonlu Fırın, 10 Adet GN 2/1 Tepsi Kapasiteli, Gazlı",
+      "price_try_kdv_dahil": 1084279.79,
+      "url": "https://www.cafemarkt.com/oztirational-buhar-konveksiyonlu-gazli-firin-10x2"
+    },
+    {
+      "sku": "083.9890.OCMP61.E0",
+      "name": "Rational CMP61 E0 Buhar Konveksiyonlu Fırın, 6 Adet GN 1/1 Tepsi Kapasiteli, Elektrikli",
+      "price_try_kdv_dahil": 460910.74,
+      "url": "https://www.cafemarkt.com/oztirational-buhar-konveksiyonlu-elektrikli-firin-2976"
+    },
+    {
+      "sku": "083.9890.OCMP10.2E",
+      "name": "Rational CMP10 2E Buhar Konveksiyonlu Fırın, 10 Adet GN 2/1 Tepsi Kapasiteli, Elektrikli",
+      "price_try_kdv_dahil": 913657.25,
+      "url": "https://www.cafemarkt.com/oztirational-buhar-konveksiyonlu-elektrikli-firin-2970"
+    },
+    {
+      "sku": "083.9890.OCMP20.1E",
+      "name": "Rational CMP20 1E Buhar Konveksiyonlu Fırın, 20 Adet GN 1/1 Tepsi Kapasiteli, Elektrikli",
+      "price_try_kdv_dahil": 1144826.28,
+      "url": "https://www.cafemarkt.com/oztirational-buhar-konveksiyonlu-elektrikli-firin-2972"
+    },
+    {
+      "sku": "083.9890.OCMP10.1G",
+      "name": "Rational CMP10 1G Buhar Konveksiyonlu Fırın, 10 Adet GN 1/1 Tepsi Kapasiteli, Gazlı",
+      "price_try_kdv_dahil": 745348.35,
+      "url": "https://www.cafemarkt.com/oztirational-buhar-konveksiyonlu-gazli-firin-10x1"
+    },
+    {
+      "sku": "083.9890.OCMP62.E0",
+      "name": "Rational CMP62 E0 Buhar Konveksiyonlu Fırın, 6 Adet GN 2/1 Tepsi Kapasiteli, Elektrikli",
+      "price_try_kdv_dahil": 704062.32,
+      "url": "https://www.cafemarkt.com/oztirational-buhar-konveksiyonlu-elektrikli-firin-2978"
+    },
+    {
+      "sku": "083.9890.OCMP10.1E",
+      "name": "Rational CMP10 1E Buhar Konveksiyonlu Fırın, 10 Adet GN 1/1 Tepsi Kapasiteli, Elektrikli",
+      "price_try_kdv_dahil": 648004.97,
+      "url": "https://www.cafemarkt.com/oztirational-buhar-konveksiyonlu-elektrikli-firin"
+    },
+    {
+      "sku": "083.9890.OCMP20.1G",
+      "name": "Rational CMP20 1G Buhar Konveksiyonlu Fırın, 20 Adet GN 1/1 Tepsi Kapasiteli, Gazlı",
+      "price_try_kdv_dahil": 1264750.94,
+      "url": "https://www.cafemarkt.com/oztirational-buhar-konveksiyonlu-gazli-firin-20x1"
+    },
+    {
+      "sku": "083.9890.OCMP62.G0",
+      "name": "Rational CMP62 G0 Buhar Konveksiyonlu Fırın, 6 Adet GN 2/1 Tepsi Kapasiteli, Gazlı",
+      "price_try_kdv_dahil": 821973.26,
+      "url": "https://www.cafemarkt.com/oztirational-buhar-konveksiyonlu-gazli-firin-6x2"
+    },
+    {
+      "sku": "083.9890.SCCWEXS.00",
+      "name": "Rational SelfCooking Center Fırın, 6x GN 2/3 Kapasiteli, Elektrikli",
+      "price_try_kdv_dahil": 466405.78,
+      "url": "https://www.cafemarkt.com/oztiryakiler-rational-selfcooking-center-firin-6x-gn-2-3-kapasiteli-elektrikli"
+    },
+    {
+      "sku": "083.5RRX.60704.09",
+      "name": "Rational Elektrikli Kireç Çözme Pompası",
+      "price_try_kdv_dahil": 22938.1,
+      "url": "https://www.cafemarkt.com/ozti-rational-elektrikli-kirec-cozme-pompasi"
+    }
+  ]
+}

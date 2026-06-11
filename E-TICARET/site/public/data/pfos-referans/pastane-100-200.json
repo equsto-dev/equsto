@@ -14,7 +14,8 @@
       "poz": "A1",
       "ad": "KURABİYE DOLABI",
       "olcu": "360*80*125",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -22,7 +23,8 @@
       "poz": "A2",
       "ad": "PASTA- SÜTLÜ TATLI DOLABI",
       "olcu": "250*80*125",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pasta"
     },
     {
       "bolum": "",
@@ -30,7 +32,8 @@
       "poz": "A3",
       "ad": "PASTA- SÜTLÜ TATLI DOLABI",
       "olcu": "300*80*125",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pasta"
     },
     {
       "bolum": "",
@@ -38,7 +41,8 @@
       "poz": "A4",
       "ad": "ÇİKOLATA DOLABI",
       "olcu": "170*80*125",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -46,7 +50,8 @@
       "poz": "A5",
       "ad": "CAM KAPILI TEZGAH TİPİ BUZDOLABI, 4 KAPILI",
       "olcu": "233*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "",
@@ -54,7 +59,8 @@
       "poz": "A6",
       "ad": "ŞERBETLİK",
       "olcu": "A19",
-      "adet": 2
+      "adet": 2,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -62,7 +68,8 @@
       "poz": "A7",
       "ad": "KATI MEYVE PRESİ",
       "olcu": "SANTOS",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -70,7 +77,8 @@
       "poz": "A8",
       "ad": "PORTAKAL SIKMA MAKİNASI",
       "olcu": "SANTOS",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -78,7 +86,8 @@
       "poz": "A9",
       "ad": "TÜRK KAHVE MAKİNASI",
       "olcu": "MT",
-      "adet": 1
+      "adet": 1,
+      "kategori": "kahve"
     },
     {
       "bolum": "",
@@ -86,7 +95,8 @@
       "poz": "A10",
       "ad": "CAM KAPILI TEZGAH TİPİ BUZDOLABI, 3 KAPILI",
       "olcu": "188*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "",
@@ -94,7 +104,8 @@
       "poz": "A11",
       "ad": "KAHVE DEĞİRMENİ",
       "olcu": "MAZZER",
-      "adet": 1
+      "adet": 1,
+      "kategori": "kahve"
     },
     {
       "bolum": "",
@@ -102,7 +113,8 @@
       "poz": "A12",
       "ad": "ESPRESSO KAHVE MAKİNASI",
       "olcu": "CIMBALI",
-      "adet": 1
+      "adet": 1,
+      "kategori": "kahve"
     },
     {
       "bolum": "",
@@ -110,7 +122,8 @@
       "poz": "A13",
       "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
       "olcu": "160*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "",
@@ -118,7 +131,8 @@
       "poz": "A14",
       "ad": "BARDAK YIKAMA MAKİNASI, SETALTI",
       "olcu": "60*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "bardak-yikama"
     },
     {
       "bolum": "",
@@ -126,7 +140,8 @@
       "poz": "A15",
       "ad": "KASA TEZGAHI",
       "olcu": "140*60*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "",
@@ -134,7 +149,8 @@
       "poz": "A16",
       "ad": "YER IZGARASI",
       "olcu": "30*30*14",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -142,7 +158,8 @@
       "poz": "A17",
       "ad": "SİNEK ÖLDÜRÜCÜ",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -150,7 +167,8 @@
       "poz": "A1",
       "ad": "PLASTİK PALET",
       "olcu": "120*80*16",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -158,7 +176,8 @@
       "poz": "A2",
       "ad": "UN ELEME MAKİNASI",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -166,7 +185,8 @@
       "poz": "A3",
       "ad": "YUVARLAMA MAKİNASI",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -174,7 +194,8 @@
       "poz": "B1",
       "ad": "PANEL TİP SOĞUK ODA",
       "olcu": "228*200*240",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -182,7 +203,8 @@
       "poz": "B2",
       "ad": "İSTİF RAFI",
       "olcu": "122*46*160",
-      "adet": 2
+      "adet": 2,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -190,7 +212,8 @@
       "poz": "B3",
       "ad": "İSTİF RAFI",
       "olcu": "152*46*160",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -198,7 +221,8 @@
       "poz": "C1",
       "ad": "DİZDEN KUMANDALI EL YIKAMA LAVABOSU",
       "olcu": "120*70*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -206,7 +230,8 @@
       "poz": "C2",
       "ad": "TEZGAH TİPİ SOĞUK HAMUR DOLABI, 3 KAPILI",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "",
@@ -214,7 +239,8 @@
       "poz": "C3",
       "ad": "DUVAR DOLABI",
       "olcu": "188*40*60",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -222,7 +248,8 @@
       "poz": "C4",
       "ad": "MERMER TABLALI ÇALIŞMA TEZGAHI, HAREKETLİ, TEK ÇEKMECELİ",
       "olcu": "160*90*85",
-      "adet": 2
+      "adet": 2,
+      "kategori": "tezgah"
     },
     {
       "bolum": "",
@@ -230,7 +257,8 @@
       "poz": "C5",
       "ad": "UN ŞEKER ARABASI",
       "olcu": "103 lt.",
-      "adet": 3
+      "adet": 3,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -238,7 +266,8 @@
       "poz": "C6",
       "ad": "FIRIN ARABASI",
       "olcu": "40*60 15 TEPSİ",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -246,7 +275,8 @@
       "poz": "C7",
       "ad": "PLANET MİKSER, DOMINO",
       "olcu": "60 lt.",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -254,7 +284,8 @@
       "poz": "C8",
       "ad": "HAMUR YOĞURMA MAKİNASI",
       "olcu": "50 kg.",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -262,7 +293,8 @@
       "poz": "C9",
       "ad": "TEK EVYELİ ÇALIŞMA TEZGAHI",
       "olcu": "70*70*85",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "",
@@ -270,7 +302,8 @@
       "poz": "C10",
       "ad": "DUVAR RAFI",
       "olcu": "70*30*3",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -278,7 +311,8 @@
       "poz": "D1",
       "ad": "MAYALAMA DOLABI",
       "olcu": "15 TEPSİLİ",
-      "adet": 2
+      "adet": 2,
+      "kategori": "mayalama-dolabi"
     },
     {
       "bolum": "",
@@ -286,7 +320,8 @@
       "poz": "D2",
       "ad": "KONVEKSİYONLU FIRIN, ELK., SCC 202E",
       "olcu": "20 GN 2/1",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -294,7 +329,8 @@
       "poz": "D3",
       "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
       "olcu": "190*117*50",
-      "adet": 1
+      "adet": 1,
+      "kategori": "davlumbaz"
     },
     {
       "bolum": "",
@@ -302,7 +338,8 @@
       "poz": "D4",
       "ad": "4 KATLI TAŞ FIRIN + MAYALAMA DOLABI + DAVLUMBAZ",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "davlumbaz"
     },
     {
       "bolum": "",
@@ -310,7 +347,8 @@
       "poz": "D5",
       "ad": "2'Lİ OCAK, TABAN RAFLI",
       "olcu": "100*60*50",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -318,7 +356,8 @@
       "poz": "D6",
       "ad": "DAVLUMBAZ, DUVAR TİPİ, FİLTRELİ",
       "olcu": "130*80*50",
-      "adet": 1
+      "adet": 1,
+      "kategori": "davlumbaz"
     },
     {
       "bolum": "",
@@ -326,7 +365,8 @@
       "poz": "E1",
       "ad": "KAZAN YIKAMA EVYESİ, YALAK TİP",
       "olcu": "100*80*57/91",
-      "adet": 1
+      "adet": 1,
+      "kategori": "kazan-yikama"
     },
     {
       "bolum": "",
@@ -334,7 +374,8 @@
       "poz": "E2",
       "ad": "ÖN YIKAMA DUŞU",
       "olcu": "-",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -342,7 +383,8 @@
       "poz": "E3",
       "ad": "İSTİF RAFI",
       "olcu": "137*61*160",
-      "adet": 2
+      "adet": 2,
+      "kategori": "diger"
     },
     {
       "bolum": "",
@@ -350,7 +392,27 @@
       "poz": "Y2",
       "ad": "YER IZGARASI",
       "olcu": "95*30*14",
-      "adet": 3
+      "adet": 3,
+      "kategori": "diger"
     }
-  ]
+  ],
+  "kategoriTags": [
+    "diger",
+    "pasta",
+    "tezgah",
+    "kahve",
+    "bardak-yikama",
+    "mayalama-dolabi",
+    "davlumbaz",
+    "kazan-yikama"
+  ],
+  "_mappingApplied": {
+    "source": "public/data/pfos-ekipman-mapping.json",
+    "generated_at": "2026-06-11T10:16:08.478Z",
+    "file": "pastane-100-200.json",
+    "counts": {
+      "mapped": 13,
+      "unmapped": 30
+    }
+  }
 }

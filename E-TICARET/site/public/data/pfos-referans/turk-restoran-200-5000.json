@@ -16,7 +16,8 @@
       "poz": "1",
       "ad": "PANEL TİP SOĞUK ODA",
       "olcu": "3000 × 2200 × 2350 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "01-hazirlik-ve-depolar",
@@ -24,7 +25,8 @@
       "poz": "1.1",
       "ad": "SOĞUK ODA CİHAZI",
       "olcu": "—",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "01-hazirlik-ve-depolar",
@@ -32,7 +34,8 @@
       "poz": "2",
       "ad": "ETEJER,AL.AYAK,4 P.ETİLEN RAF-475X2048MM",
       "olcu": "2048 × 475 × 1700 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "01-hazirlik-ve-depolar",
@@ -40,7 +43,8 @@
       "poz": "3",
       "ad": "ETEJER,AL.AYAK,4 P.ETİLEN RAF-475X1872MM",
       "olcu": "1872 × 475 × 1700 mm",
-      "adet": 2
+      "adet": 2,
+      "kategori": "diger"
     },
     {
       "bolum": "01-hazirlik-ve-depolar",
@@ -48,7 +52,8 @@
       "poz": "4",
       "ad": "ETEJER,AL.AYAK,4 P.ETİLEN RAF-475X950MM",
       "olcu": "950 × 475 × 1700 mm",
-      "adet": 2
+      "adet": 2,
+      "kategori": "diger"
     },
     {
       "bolum": "01-hazirlik-ve-depolar",
@@ -56,7 +61,8 @@
       "poz": "5",
       "ad": "ETEJER,AL.AYAK,4 P.ETİLEN RAF-475X1216MM",
       "olcu": "1216 × 475 × 1700 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "02-pi̇de-bölümü",
@@ -65,7 +71,8 @@
       "ad": "TAŞ TABANLI FIRIN",
       "marka": "Müşteri Temini",
       "olcu": "—",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "02-pi̇de-bölümü",
@@ -73,7 +80,8 @@
       "poz": "2",
       "ad": "SOĞUK TEZGAH,3 KAPILI-CONCEPT",
       "olcu": "1721 × 700 × 850 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "02-pi̇de-bölümü",
@@ -81,7 +89,8 @@
       "poz": "3",
       "ad": "MERMER ÜST TABLA",
       "olcu": "1721 × 700 × 40 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "02-pi̇de-bölümü",
@@ -89,7 +98,8 @@
       "poz": "4",
       "ad": "GARNİTÜRLÜK ALT RAFI",
       "olcu": "1200 × 300 × 250 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "02-pi̇de-bölümü",
@@ -97,7 +107,8 @@
       "poz": "5",
       "ad": "SETÜSTÜ SOĞUT.GARNİTÜR ÜNİTESİ-1780MM",
       "olcu": "1780 × 350 × 250 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "02-pi̇de-bölümü",
@@ -106,7 +117,8 @@
       "ad": "HAMUR YOĞURMA MAKİNAESI",
       "marka": "Fimak",
       "olcu": "—",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "02-pi̇de-bölümü",
@@ -114,7 +126,8 @@
       "poz": "16",
       "ad": "DAVLUMBAZ ALT RAFI",
       "olcu": "4000 × 500 × 350 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "davlumbaz"
     },
     {
       "bolum": "02-pi̇de-bölümü",
@@ -122,7 +135,8 @@
       "poz": "18",
       "ad": "DUVAR DAVLUMBAZI",
       "olcu": "4000 × 1100 × 500 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "davlumbaz"
     },
     {
       "bolum": "03-hazirlik",
@@ -130,7 +144,8 @@
       "poz": "1",
       "ad": "2 EVYELİ TEZGAH",
       "olcu": "1200 × 700 × 1000 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "03-hazirlik",
@@ -138,7 +153,8 @@
       "poz": "1.1",
       "ad": "DİRSEK KONTROLLU BATARYA 3/4,TEK GÖVDE",
       "olcu": "600 × 390 × 700 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "03-hazirlik",
@@ -146,7 +162,8 @@
       "poz": "2",
       "ad": "DUVAR RAFI",
       "olcu": "1200 × 400 × 30 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "03-hazirlik",
@@ -154,7 +171,8 @@
       "poz": "3",
       "ad": "DUVAR RAFI",
       "olcu": "1300 × 400 × 30 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "03-hazirlik",
@@ -162,7 +180,8 @@
       "poz": "4",
       "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
       "olcu": "1300 × 700 × 1000 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "03-hazirlik",
@@ -170,7 +189,8 @@
       "poz": "5",
       "ad": "ETEJER,AL.AYAK,4 P.ETİLEN RAF-373X1872MM",
       "olcu": "1872 × 373 × 1700 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "03-hazirlik",
@@ -178,7 +198,8 @@
       "poz": "6",
       "ad": "GN D.DONDURUCU,304,1 KAPI-670L-22°C-ECO",
       "olcu": "710 × 837 × 2050 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "03-hazirlik",
@@ -186,7 +207,8 @@
       "poz": "7",
       "ad": "DUVAR RAFI",
       "olcu": "2200 × 400 × 30 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "03-hazirlik",
@@ -194,7 +216,8 @@
       "poz": "8",
       "ad": "ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
       "olcu": "2200 × 700 × 1000 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "03-hazirlik",
@@ -202,7 +225,8 @@
       "poz": "9",
       "ad": "YER OCAĞI, GAZLI",
       "olcu": "700 × 700 × 500 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "03-hazirlik",
@@ -210,7 +234,8 @@
       "poz": "10",
       "ad": "4 OCAKLI (10KW) GAZLI KUZİNE+FIRIN-800MM",
       "olcu": "800 × 930 × 850 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "03-hazirlik",
@@ -218,7 +243,8 @@
       "poz": "11",
       "ad": "DUVAR DAVLUMBAZI",
       "olcu": "2200 × 1100 × 500 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "davlumbaz"
     },
     {
       "bolum": "04-sicak-servi̇s",
@@ -226,7 +252,8 @@
       "poz": "1",
       "ad": "SALADET,2 KAPI,KAPAK,KESME TAHTASI-250LT",
       "olcu": "955 × 700 × 845 mm",
-      "adet": 2
+      "adet": 2,
+      "kategori": "servis"
     },
     {
       "bolum": "04-sicak-servi̇s",
@@ -234,7 +261,8 @@
       "poz": "2",
       "ad": "SOĞUTMALI ALT DOLAP,6 ÇEKMECELİ-1600MM",
       "olcu": "1600 × 700 × 600 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "sogutma"
     },
     {
       "bolum": "04-sicak-servi̇s",
@@ -242,7 +270,8 @@
       "poz": "3",
       "ad": "SETÜSTÜ ARA TEZGAH,ÖNÜ KAPALI-400MM",
       "olcu": "1600 × 700 × 600 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "04-sicak-servi̇s",
@@ -250,7 +279,8 @@
       "poz": "4",
       "ad": "EL.SALAMANDER,ASANSÖRLÜ-650MM",
       "olcu": "650 × 450 × 465 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "servis"
     },
     {
       "bolum": "04-sicak-servi̇s",
@@ -258,7 +288,8 @@
       "poz": "5",
       "ad": "6-AÇIK ATEŞLİ GAZLI OCAK-1200MM",
       "olcu": "1200 × 730 × 250 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "servis"
     },
     {
       "bolum": "04-sicak-servi̇s",
@@ -266,7 +297,8 @@
       "poz": "6",
       "ad": "ELEK.MAKARNA PİŞİRİCİ,1X24LT-800MM",
       "olcu": "400 × 730 × 850 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "servis"
     },
     {
       "bolum": "04-sicak-servi̇s",
@@ -274,7 +306,8 @@
       "poz": "6.1",
       "ad": "4LÜ MAKARNA SEPETİ İÇİN SUPORT",
       "olcu": "230 × 350 × 30 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "servis"
     },
     {
       "bolum": "04-sicak-servi̇s",
@@ -282,7 +315,8 @@
       "poz": "6.2",
       "ad": "MAKARNA PİŞİRİCİLER İÇİN KAPAK",
       "olcu": "250 × 450 × 50 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "servis"
     },
     {
       "bolum": "04-sicak-servi̇s",
@@ -290,7 +324,8 @@
       "poz": "6.3",
       "ad": "MAKARNA PİŞİRİCİ İÇİN 2 SEPET",
       "olcu": "105 × 160 × 265 mm",
-      "adet": 2
+      "adet": 2,
+      "kategori": "servis"
     },
     {
       "bolum": "04-sicak-servi̇s",
@@ -298,7 +333,8 @@
       "poz": "7",
       "ad": "ŞİŞELİKLİ ALT DOLAP-200MM",
       "olcu": "200 × 550 × 600 mm",
-      "adet": 2
+      "adet": 2,
+      "kategori": "dolap"
     },
     {
       "bolum": "04-sicak-servi̇s",
@@ -306,7 +342,8 @@
       "poz": "8",
       "ad": "SETÜSTÜ ARA TEZGAH,ÖNÜ KAPALI-200MM",
       "olcu": "200 × 730 × 250 mm",
-      "adet": 2
+      "adet": 2,
+      "kategori": "tezgah"
     },
     {
       "bolum": "04-sicak-servi̇s",
@@ -314,7 +351,8 @@
       "poz": "9",
       "ad": "12LT SETÜSTÜ ELEKTRİKLİ FRİTÖZ-400MM",
       "olcu": "400 × 730 × 250 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "servis"
     },
     {
       "bolum": "04-sicak-servi̇s",
@@ -322,7 +360,8 @@
       "poz": "10",
       "ad": "ÖNÜ AÇIK ALT DOLAP-400MM",
       "olcu": "400 × 550 × 600 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "dolap"
     },
     {
       "bolum": "04-sicak-servi̇s",
@@ -330,7 +369,8 @@
       "poz": "10.1",
       "ad": "ALT DOLAP ICIN KAPI",
       "olcu": "400 × 40 × 440 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "dolap"
     },
     {
       "bolum": "04-sicak-servi̇s",
@@ -338,7 +378,8 @@
       "poz": "11",
       "ad": "SETÜSTÜ GAZLI GRİL,HP-800MM",
       "olcu": "800 × 730 × 250 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "servis"
     },
     {
       "bolum": "04-sicak-servi̇s",
@@ -346,7 +387,8 @@
       "poz": "12",
       "ad": "SOĞUTMALI ALT DOLAP,4 ÇEKMECELİ-1200MM",
       "olcu": "1200 × 700 × 600 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "sogutma"
     },
     {
       "bolum": "04-sicak-servi̇s",
@@ -354,7 +396,8 @@
       "poz": "13",
       "ad": "EVYELİ TEZGAH,BATARYALI-400 MM",
       "olcu": "400 × 730 × 250 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "04-sicak-servi̇s",
@@ -362,7 +405,8 @@
       "poz": "14",
       "ad": "4 GÖZLÜ 1/1 GN KÜVETLİ ÇORBALIK, ALTI SICAKLIK DOLAPLI",
       "olcu": "1200 × 700 × 850 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "dolap"
     },
     {
       "bolum": "04-sicak-servi̇s",
@@ -370,7 +414,8 @@
       "poz": "15",
       "ad": "SICAKLIK DOLABI, KAYAR KAPILI",
       "olcu": "1400 × 700 × 900 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "servis"
     },
     {
       "bolum": "04-sicak-servi̇s",
@@ -378,7 +423,8 @@
       "poz": "16",
       "ad": "DOLAPLI ÇALIŞMA TEZGAHI, KAYAR KAPILI, SIRTLI",
       "olcu": "2100 × 700 × 1000 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "04-sicak-servi̇s",
@@ -386,7 +432,8 @@
       "poz": "17",
       "ad": "DUVAR DOLABI",
       "olcu": "1400 × 400 × 650 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "servis"
     },
     {
       "bolum": "04-sicak-servi̇s",
@@ -394,7 +441,8 @@
       "poz": "18",
       "ad": "DOLAPLI ÇALIŞMA TEZGAHI, KAYAR KAPILI, SIRTLI",
       "olcu": "1400 × 700 × 1000 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "05-bar",
@@ -402,7 +450,8 @@
       "poz": "1",
       "ad": "DUVAR DAVLUMBAZI",
       "olcu": "1600 × 800 × 500 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "davlumbaz"
     },
     {
       "bolum": "05-bar",
@@ -410,7 +459,8 @@
       "poz": "2",
       "ad": "KAHVE DEĞİRMENİ & DOZAJ MAKİNESİ-CUNILL",
       "olcu": "180 × 310 × 560 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "kahve"
     },
     {
       "bolum": "05-bar",
@@ -418,7 +468,8 @@
       "poz": "3",
       "ad": "2 GRUPLU OTOMATİK ESPRESSO KAHVE MAKİNESİ",
       "olcu": "817 × 559 × 570 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "kahve"
     },
     {
       "bolum": "05-bar",
@@ -426,7 +477,8 @@
       "poz": "4",
       "ad": "ŞERBETLİK, AYRANLIK, 2X20 LT",
       "olcu": "300 × 300 × 690 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "05-bar",
@@ -434,7 +486,8 @@
       "poz": "5",
       "ad": "KATI MEYVE SIKACAĞI,100 LT/S-SANTOS",
       "olcu": "260 × 470 × 450 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "05-bar",
@@ -442,7 +495,8 @@
       "poz": "6",
       "ad": "BLENDER,POLİKARBONAT KAPLI,1.4LT-H.BEACH",
       "olcu": "165 × 229 × 432 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "05-bar",
@@ -450,7 +504,8 @@
       "poz": "7",
       "ad": "OTOMATİK PORTAKAL SIKMA MAKİNESİ",
       "olcu": "400 × 500 × 880 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "05-bar",
@@ -458,7 +513,8 @@
       "poz": "8",
       "ad": "T.ALTI BULAŞIK M.540T/S,2 PRG.PD.DP.1PH",
       "olcu": "600 × 610 × 820 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "05-bar",
@@ -466,7 +522,8 @@
       "poz": "9",
       "ad": "ÇALIŞMA TEZGAHI, SIRTLI",
       "olcu": "1090 × 600 × 1000 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "05-bar",
@@ -474,7 +531,8 @@
       "poz": "10",
       "ad": "BUZ MAKİNESİ,42 KG/GÜN,HAVA SOĞUTMALI",
       "olcu": "500 × 580 × 800 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "sogutma"
     },
     {
       "bolum": "05-bar",
@@ -482,7 +540,8 @@
       "poz": "11",
       "ad": "KOKTEYL HAZIRLIK TEZGAHI",
       "olcu": "400 × 600 × 850 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "05-bar",
@@ -490,7 +549,8 @@
       "poz": "12",
       "ad": "DOLAPLI ÇALIŞMA TEZGAHI, KAYAR KAPILI",
       "olcu": "1400 × 550 × 900 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "05-bar",
@@ -498,7 +558,8 @@
       "poz": "13",
       "ad": "2 CAM KAPILI BR BUZDOLABI",
       "olcu": "920 × 500 × 910 mm",
-      "adet": 2
+      "adet": 2,
+      "kategori": "diger"
     },
     {
       "bolum": "05-bar",
@@ -507,7 +568,8 @@
       "ad": "DEKORATİF BANKO",
       "marka": "Müşteri Temini",
       "olcu": "—",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "05-bar",
@@ -515,7 +577,8 @@
       "poz": "15",
       "ad": "DOLAPLI ÇALIŞMA TEZGAHI, KAYAR KAPILI, SIRTLI",
       "olcu": "1400 × 700 × 1000 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "05-bar",
@@ -524,7 +587,8 @@
       "ad": "6 DEMLİKLİ ÇAY OCAĞI",
       "marka": "Müşteri Temini",
       "olcu": "—",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "05-bar",
@@ -532,7 +596,8 @@
       "poz": "17",
       "ad": "1 EVYELİ TEZGAH",
       "olcu": "1200 × 600 × 900 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "05-bar",
@@ -540,7 +605,8 @@
       "poz": "17.1",
       "ad": "DİRSEK KONTROLLU BATARYA 3/4,TEK GÖVDE",
       "olcu": "600 × 390 × 700 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "06-bulaşikhane",
@@ -548,7 +614,8 @@
       "poz": "1",
       "ad": "HAREKETLİ ÇALIŞMA TEZGAHI, TABAN VE ARA RAFLI",
       "olcu": "1000 × 600 × 900 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "06-bulaşikhane",
@@ -556,7 +623,8 @@
       "poz": "2",
       "ad": "60 L S/S ÇÖP ARABASI-KAPAKLI",
       "olcu": "450 × 450 × 640 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "06-bulaşikhane",
@@ -564,7 +632,8 @@
       "poz": "3",
       "ad": "DİRSEK KONTROLLU SPREY DUŞ 3/4",
       "olcu": "800 × 465 × 1400 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "06-bulaşikhane",
@@ -572,7 +641,8 @@
       "poz": "4",
       "ad": "BULAŞIK MAKİNESİ GİRİŞ TEZGAHI",
       "olcu": "1400 × 745 × 1170 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "06-bulaşikhane",
@@ -580,7 +650,8 @@
       "poz": "5",
       "ad": "BULAŞIK KABUL TEZGAHI, BASKET RAFLI",
       "olcu": "1600 × 600 × 1551 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "06-bulaşikhane",
@@ -588,7 +659,8 @@
       "poz": "6",
       "ad": "DUVAR DAVLUMBAZI",
       "olcu": "1000 × 1000 × 500 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "davlumbaz"
     },
     {
       "bolum": "06-bulaşikhane",
@@ -596,7 +668,8 @@
       "poz": "7",
       "ad": "BULAŞIK MAKİNESİ GİRİŞ-ÇIKIŞ TEZGAHI",
       "olcu": "800 × 600 × 910 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "tezgah"
     },
     {
       "bolum": "06-bulaşikhane",
@@ -604,7 +677,8 @@
       "poz": "8",
       "ad": "GİYOTİN BULAŞIK MAKİNESİ,80 SEPET/S",
       "olcu": "746 × 755 × 1549 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "06-bulaşikhane",
@@ -612,7 +686,8 @@
       "poz": "9",
       "ad": "ETEJER,AL.AYAK,4 P.ETİLEN RAF-475X1037MM",
       "olcu": "1037 × 475 × 1700 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "06-bulaşikhane",
@@ -620,7 +695,8 @@
       "poz": "10",
       "ad": "ETEJER,AL.AYAK,4 P.ETİLEN RAF-475X1960MM",
       "olcu": "1960 × 475 × 1700 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "diger"
     },
     {
       "bolum": "teşhi̇r-ürünleri̇",
@@ -628,7 +704,27 @@
       "poz": "1",
       "ad": "PASTA TEŞHİR ÜNİTESİ (KAPLAMALAR MİMARİ GRUBA AİTTİR.)",
       "olcu": "1650 × 800 × 1300 mm",
-      "adet": 1
+      "adet": 1,
+      "kategori": "pasta"
     }
-  ]
+  ],
+  "kategoriTags": [
+    "diger",
+    "tezgah",
+    "davlumbaz",
+    "servis",
+    "sogutma",
+    "dolap",
+    "kahve",
+    "pasta"
+  ],
+  "_mappingApplied": {
+    "source": "public/data/pfos-ekipman-mapping.json",
+    "generated_at": "2026-06-11T10:16:08.588Z",
+    "file": "turk-restoran-200-5000.json",
+    "counts": {
+      "mapped": 43,
+      "unmapped": 34
+    }
+  }
 }
