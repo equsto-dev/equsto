@@ -33,6 +33,6 @@ for (const name of chain) {
     ) {
       val = val.slice(1, -1);
     }
-    if (val !== "") process.env[key] = val;
+    if (val !== "" && process.env[key] == null) process.env[key] = val;
   }
 }
