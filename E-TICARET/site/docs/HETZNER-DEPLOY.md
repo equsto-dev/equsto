@@ -1,6 +1,6 @@
 # Hetzner — equsto.com (Docker)
 
-Vercel yerine kendi sunucunuzda Next.js + Caddy. Veritabanı (Supabase), medya (CloudFront) ve isteğe bağlı Meilisearch Cloud aynı kalır.
+Vercel yerine kendi sunucunuzda Next.js + Caddy + **Meilisearch (Docker, ücretsiz)**. Veritabanı (Supabase) ve medya (CloudFront) dışarıda kalır.
 
 ## Sunucu önerisi
 
@@ -30,11 +30,10 @@ cp .env.production.example .env
 docker compose --env-file .env.production up -d --build
 ```
 
-Yerel Meilisearch istiyorsanız `.env` içinde `MEILISEARCH_HOST=http://meilisearch:7700` yapın ve:
+Meilisearch `docker-compose.yml` ile otomatik başlar. İlk indeks (bir kez):
 
 ```bash
-docker compose --env-file .env.production --profile meili up -d --build
-npm run search:index   # bir kez, sunucuda veya yerelde aynı index'e karşı
+MEILISEARCH_HOST=http://127.0.0.1:7700 MEILISEARCH_MASTER_KEY=equsto-prod-meili-key npm run search:index
 ```
 
 ## Güncelleme
@@ -91,7 +90,7 @@ Production (+ gerekiyorsa Preview) — `docs/VERCEL-ENV-VE-DOMAIN.md` ile aynı:
 | `NEXT_PUBLIC_ASSET_CDN_URL` | CloudFront |
 | `NEXT_PUBLIC_SUPABASE_URL` | |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | |
-| `MEILISEARCH_HOST` | Cloud veya `http://meilisearch:7700` |
+| `MEILISEARCH_HOST` | `http://meilisearch:7700` (Hetzner Docker) |
 | `MEILISEARCH_MASTER_KEY` | |
 | `MEILISEARCH_INDEX` | `equsto_products` |
 | `CRON_SECRET` | |

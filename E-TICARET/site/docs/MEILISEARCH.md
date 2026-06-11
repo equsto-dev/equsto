@@ -1,14 +1,14 @@
-# Meilisearch — arama (Hetzner yok)
+# Meilisearch — arama
 
-Motor: **Meilisearch** (plan değişmedi; yalnızca barındırma Hetzner yerine Cloud veya yerel).
+Motor: **Meilisearch** (açık kaynak). **Canlıda ücret yok** — Hetzner sunucusunda Docker ile çalışır.
 
 ## Seçenekler
 
 | Ortam | Nerede | Env |
 |--------|--------|-----|
+| **Canlı (equsto.com)** | Hetzner `docker-compose.yml` → `meilisearch` servisi | `MEILISEARCH_HOST=http://meilisearch:7700` |
 | **Geliştirme** | Docker yerelde `localhost:7700` | `docker-compose.meilisearch.yml` |
-| **Canlı (önerilen)** | [Meilisearch Cloud](https://www.meilisearch.com/cloud) ücretsiz/ücretli | Dashboard → Project URL + **Admin API Key** |
-| ~~Hetzner~~ | ~~`search.equsto.com`~~ | Kullanılmıyor |
+| ~~Cloud~~ | ~~meilisearch.com/cloud~~ | Kullanmayın (ücretli / eski kurulum) |
 
 ## 1) Yerel (Docker)
 
