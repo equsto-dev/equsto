@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import PfosPublicPage from "@/components/pfos/public/PfosPublicPage";
 import { SHOP_ASSET_V } from "@/lib/shop/assets";
 
@@ -36,7 +37,9 @@ export default function PfosPage() {
       <link rel="stylesheet" href={`/contact.css?v=${v}`} />
       {/* eslint-disable-next-line @next/next/no-css-tags */}
       <link rel="stylesheet" href={`/eq-mobile.css?v=${v}`} />
-      <PfosPublicPage />
+      <Suspense fallback={null}>
+        <PfosPublicPage />
+      </Suspense>
     </>
   );
 }
