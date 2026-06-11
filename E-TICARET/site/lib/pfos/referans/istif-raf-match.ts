@@ -17,6 +17,7 @@ import {
 } from "../core/portashelf-marka";
 import {
   findPortashelfInox201ByOlcu,
+  PORTASHELF_304_GORSEL_REL,
   portashelfDisplayName,
   portashelfGorselRelFromSku,
   portashelfInox201BySku,
@@ -121,6 +122,7 @@ function portashelfToEslesmis(
       model: null,
       fiyatEur: eur,
       fiyat: row.fiyat_tl > 0 ? row.fiyat_tl : 0,
+      gorselUrl: normalizePfosGorselUrl(PORTASHELF_304_GORSEL_REL),
     };
   }
 

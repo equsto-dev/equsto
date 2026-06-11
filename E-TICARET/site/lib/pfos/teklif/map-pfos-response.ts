@@ -87,8 +87,8 @@ export function pfosResponseToTeklifV14(
     const { bolumNo, bolumBaslik } = bolumForKalem(k, res.teklifLayout);
     const stokNo = u?.sku?.trim() ?? "";
     const gorselFallback = normalizePfosGorselUrl(
-      u?.gorselUrl ??
-        portashelfGorselRelFromSku(stokNo) ??
+      portashelfGorselRelFromSku(stokNo) ??
+        u?.gorselUrl ??
         equstoPimakGorselRelFromSku(stokNo, k.isim) ??
         (stokNo ? oztiWebImageRelFromSku(stokNo) : null),
     );

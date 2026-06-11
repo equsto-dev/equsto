@@ -45,7 +45,7 @@ function displayName(d, w, h) {
 }
 
 /** Tüm Portashelf katlı raflar — kanonik 304 kalite tel raf görseli */
-const PORTASHELF_304_GORSEL = "images/catalog/yuksel/yuksel-46-x-152-x-183_1.jpg";
+const PORTASHELF_304_GORSEL = "images/catalog/yuksel/portashelf-304-katli-raf.jpg";
 
 function portashelfImageRel() {
   return PORTASHELF_304_GORSEL;
