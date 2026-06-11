@@ -4,6 +4,7 @@
  *   npm run catalog:master:apply
  */
 import fs from "node:fs";
+import path from "node:path";
 import {
   DEPT_DIR,
   EKIPMANLAR_PATH,
