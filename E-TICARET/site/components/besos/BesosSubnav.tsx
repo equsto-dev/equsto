@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { SHOP_ASSET_V } from "@/lib/shop/assets";
+import { BESOS_SUBNAV_ICON_V } from "@/lib/shop/assets";
 
 type SubnavItem = {
   key: string;
@@ -13,7 +13,7 @@ type SubnavItem = {
   isActive: (pathname: string | null) => boolean;
 };
 
-const ICON_V = SHOP_ASSET_V;
+const ICON_V = BESOS_SUBNAV_ICON_V;
 
 const ITEMS: SubnavItem[] = [
   {
@@ -29,7 +29,7 @@ const ITEMS: SubnavItem[] = [
     href: (en) => (en ? "/en/besos/imt300" : "/besos/imt300"),
     labelTr: "Buz Makinesi",
     labelEn: "Ice Machine",
-    iconSrc: `/images/besos/subnav/ice-machine.png?v=${ICON_V}`,
+    iconSrc: `/besos/subnav/ice-machine.png?v=${ICON_V}`,
     isActive: (pathname) => !!pathname?.includes("/imt300"),
   },
   {
@@ -37,7 +37,7 @@ const ITEMS: SubnavItem[] = [
     href: (en) => (en ? "/en/shop/hazirlik" : "/shop/hazirlik"),
     labelTr: "Bar Ekipmanları",
     labelEn: "Bar Equipment",
-    iconSrc: `/images/besos/subnav/bar-equipment.png?v=${ICON_V}`,
+    iconSrc: `/besos/subnav/bar-equipment.png?v=${ICON_V}`,
     isActive: (pathname) => !!pathname?.includes("/shop/hazirlik"),
   },
   {
@@ -45,7 +45,7 @@ const ITEMS: SubnavItem[] = [
     href: (en) => (en ? "/en/besos#bd-stations" : "/besos#bd-stations"),
     labelTr: "Bar İstasyonları",
     labelEn: "Bar Stations",
-    iconSrc: `/images/besos/subnav/bar-stations.png?v=${ICON_V}`,
+    iconSrc: `/besos/subnav/bar-stations.png?v=${ICON_V}`,
     isActive: (pathname) => {
       if (!pathname) return false;
       if (pathname.includes("/imt300")) return false;
