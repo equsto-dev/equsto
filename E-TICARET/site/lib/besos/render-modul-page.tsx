@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import Script from "next/script";
-import BesosEqustoChrome from "@/components/besos/BesosEqustoChrome";
 import BesosModulPdpBoot from "@/components/besos/BesosModulPdpBoot";
 import BesosModulProductScripts from "@/components/besos/BesosModulProductScripts";
 import JsonLdScript from "@/components/seo/JsonLdScript";
@@ -33,7 +32,6 @@ export async function renderBesosModulPage(
       {/* eslint-disable-next-line @next/next/no-css-tags */}
       <link rel="stylesheet" href={`/eq-product-page.css?v=${SHOP_ASSET_V}`} precedence="high" />
       <ShopStyles variant="product" />
-      <BesosEqustoChrome />
       <ShopProductMain ssr={ssr} />
       <BesosModulPdpBoot />
       <BesosModulProductScripts />

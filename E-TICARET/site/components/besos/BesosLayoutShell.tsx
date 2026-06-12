@@ -3,6 +3,7 @@ import Script from "next/script";
 import BesosBodyClass from "@/components/besos/BesosBodyClass";
 import BesosScripts from "@/components/besos/BesosScripts";
 import BesosDrawerShell from "@/components/besos/BesosDrawerShell";
+import BesosSiteChrome from "@/components/besos/BesosSiteChrome";
 import { SHOP_ASSET_V } from "@/lib/shop/assets";
 import "@/app/besos/besos.css";
 
@@ -26,6 +27,7 @@ export default function BesosLayoutShell({ children }: { children: ReactNode }) 
         {`(function(){try{document.body.classList.add("bd-page","besos","eq-shop");}catch(e){}})();`}
       </Script>
       <BesosBodyClass />
+      <BesosSiteChrome />
       {children}
       <BesosDrawerShell />
       <BesosScripts />
