@@ -1004,6 +1004,7 @@
       !/\/images\/catalog\/(?:ozti\/(?:web|cafemarkt)|atalay\/|inoksan\/web\/)/i.test(url)
     )
       return url;
+    if (url.indexOf("v=" + EQ_CATALOG_IMG_V) >= 0) return url;
     return url + (url.indexOf("?") >= 0 ? "&" : "?") + "v=" + EQ_CATALOG_IMG_V;
   }
 
