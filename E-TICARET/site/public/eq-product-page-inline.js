@@ -582,19 +582,44 @@ window.searchFilter = window.searchFilter || function () {};
       });
     }
 
+    function isInoksanCatalogRow(raw) {
+      if (!raw) return false;
+      var sku = String(raw.sku || raw.urun_kodu || raw.model || "")
+        .trim()
+        .toUpperCase();
+      if (/^INO-/.test(sku)) return true;
+      var id = String(raw.id || "");
+      if (id.indexOf("inoksan__") === 0) return true;
+      var b = String(raw.brand || raw.oem_brand || "").toLocaleLowerCase("tr");
+      return b.indexOf("inoksan") >= 0;
+    }
+
+    function dimLabelFromMmPdp(g, d, y) {
+      if (!g || !d || !y) return "";
+      if (g >= 1000 && d >= 1000) {
+        return Math.round(g / 10) + "×" + Math.round(d / 10) + "×" + Math.round(y / 10) + " cm";
+      }
+      return g + "×" + d + "×" + y + " mm";
+    }
+
     function formatOlculerLinePdp(raw) {
-      if (!raw || !raw.olculer) return "";
+      if (!raw) return "";
+      if (raw.olcu_etiket) return String(raw.olcu_etiket);
       var o = raw.olculer;
+      if (!o) return "";
+      if (isInoksanCatalogRow(raw)) {
+        var u = Number(o.uzunluk_mm);
+        var gIno = Number(o.genislik_mm);
+        var yIno = Number(o.yukseklik_mm);
+        if (u && gIno && yIno) return dimLabelFromMmPdp(u, gIno, yIno);
+      }
       var g = Number(o.genislik_mm);
       var d = Number(o.derinlik_mm);
       var y = Number(o.yukseklik_mm);
       if (!g || !d || !y) return "";
       var name = String(raw.name || "");
       if (/×\d/.test(name)) return "";
-      if (g >= 1000 && d >= 1000) {
-        return Math.round(g / 10) + "×" + Math.round(d / 10) + "×" + Math.round(y / 10) + " cm";
-      }
-      return g + "×" + d + "×" + y + " mm";
+      return dimLabelFromMmPdp(g, d, y);
     }
 
     function shortModelLabel(p) {
@@ -1436,6 +1461,13 @@ window.searchFilter = window.searchFilter || function () {};
       var m = String((x && x.name) || "").match(
         /(\d{3,4})\s*[×x]\s*(\d{3,4})\s*[×x]\s*(\d{3,4})\s*mm/i
       );
+      if (isInoksanCatalogRow(x)) {
+        return {
+          len: Number(o.uzunluk_mm) || (m ? +m[1] : 0),
+          depth: Number(o.genislik_mm) || (m ? +m[2] : 0),
+          height: Number(o.yukseklik_mm) || (m ? +m[3] : 0),
+        };
+      }
       return {
         len: Number(o.genislik_mm) || (m ? +m[1] : 0),
         depth: Number(o.derinlik_mm) || (m ? +m[2] : 0),
@@ -2391,8 +2423,6 @@ window.searchFilter = window.searchFilter || function () {};
               ? String(x.description).trim()
               : "";
       if (desc) return desc.split(/\n/)[0].slice(0, 320);
-      var dim = formatOlculerLinePdp(x);
-      if (dim) return __pdpT("pdp.inner_dims_prefix", "İç ölçüler: {dim}.", { dim: dim });
       var bullets = buildAboutBullets(splitSpecsCols(x.specs).left || x.specs, 3);
       if (bullets.length) return bullets.join(" · ");
       var visBrand = pdpVisibleBrand(x.brand);
@@ -3107,6 +3137,10 @@ window.searchFilter = window.searchFilter || function () {};
         " <strong>" +
         esc(x.sku || x.model || x.urun_kodu || "—") +
         "</strong></p>" +
+        (function () {
+          var dim = formatOlculerLinePdp(x);
+          return dim ? '<p class="eq-epdp-dims">' + esc(dim) + "</p>" : "";
+        })() +
         '<p class="eq-epdp-lead eq-caglayan-lead">' +
         esc(pdpLeadParagraph(x)) +
         "</p>" +
