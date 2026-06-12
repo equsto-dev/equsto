@@ -50,13 +50,34 @@ export function ocakSkuSuffixesFromOlcu(olcu: string): string[] {
   const nums = olcuParts(olcu);
   const w = nums[0] ?? 0;
   const d = nums[1] ?? 0;
-  const seri730 = d >= 65;
 
-  if (w >= 115) return seri730 ? ["1273"] : ["1270", "1290", "1060"];
-  if (w >= 95) return seri730 ? ["1273"] : ["1060", "1270"];
-  if (w >= 75) return seri730 ? ["873", "890", "870"] : ["860", "890", "870"];
-  if (w >= 55) return seri730 ? ["673"] : ["660", "670"];
-  if (w >= 35) return seri730 ? ["473", "470"] : ["460", "470", "360"];
+  const is900 = d >= 85;
+  const is730 = d >= 65 && d < 85;
+
+  if (w >= 115) {
+    if (is900) return ["1290", "1290S", "1290T"];
+    if (is730) return ["1273", "1273T"];
+    return ["1270", "1060"];
+  }
+  if (w >= 95) {
+    if (is900) return ["1290", "1290S", "1290T"];
+    if (is730) return ["1273"];
+    return ["1060", "1270"];
+  }
+  if (w >= 75) {
+    if (is900) return ["890", "890S", "890T", "870"];
+    if (is730) return ["873", "873T", "870"];
+    return ["860", "860T", "860CR", "860/N", "860/ND"];
+  }
+  if (w >= 55) {
+    if (is730) return ["673"];
+    return ["660", "670", "660CR"];
+  }
+  if (w >= 35) {
+    if (is900) return ["490", "490S", "490T"];
+    if (is730) return ["473", "473T", "470"];
+    return ["460", "460T", "460CR", "360"];
+  }
   return [];
 }
 
