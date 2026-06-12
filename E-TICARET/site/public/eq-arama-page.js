@@ -75,6 +75,48 @@
     return String(s || "").toLocaleLowerCase("tr");
   }
 
+  function dimLabelFromMm(g, d, y) {
+    if (!g || !d || !y) return "";
+    if (g >= 1000 && d >= 1000) {
+      return Math.round(g / 10) + "×" + Math.round(d / 10) + "×" + Math.round(y / 10) + " cm";
+    }
+    return g + "×" + d + "×" + y + " mm";
+  }
+
+  function isInoksanCatalogRow(raw) {
+    if (!raw) return false;
+    var sku = String(raw.sku || raw.urun_kodu || raw.model || "")
+      .trim()
+      .toUpperCase();
+    if (/^INO-/.test(sku)) return true;
+    var id = String(raw.id || "");
+    if (id.indexOf("inoksan__") === 0) return true;
+    var b = lc(raw.brand || raw.oem_brand || "");
+    return b.indexOf("inoksan") >= 0;
+  }
+
+  function formatOlculerLine(raw) {
+    if (!raw) return "";
+    if (raw.olcu_etiket) return String(raw.olcu_etiket);
+    if (isInoksanCatalogRow(raw)) {
+      var o = raw.olculer;
+      if (o) {
+        var u = Number(o.uzunluk_mm);
+        var g = Number(o.genislik_mm);
+        var y = Number(o.yukseklik_mm);
+        if (u && g && y) return dimLabelFromMm(u, g, y);
+      }
+    }
+    var o2 = raw.olculer;
+    if (o2) {
+      var g2 = Number(o2.genislik_mm);
+      var d2 = Number(o2.derinlik_mm);
+      var y2 = Number(o2.yukseklik_mm);
+      if (g2 && d2 && y2) return dimLabelFromMm(g2, d2, y2);
+    }
+    return "";
+  }
+
   function trimQ(q) {
     return String(q == null ? "" : q).trim();
   }
@@ -266,6 +308,9 @@
           map[String(row.id)] = {
             images: row.images || [],
             sku: row.sku || row.model || row.urun_kodu || "",
+            brand: row.brand || "",
+            olculer: row.olculer || null,
+            olcu_etiket: row.olcu_etiket || "",
           };
         });
       }
@@ -309,7 +354,7 @@
     if (!Array.isArray(hits) || !hits.length) return false;
     for (var i = 0; i < hits.length; i++) {
       var h = hits[i];
-      if (h && !h.image) return true;
+      if (h && (!h.image || !h.olculer)) return true;
     }
     return false;
   }
@@ -373,12 +418,27 @@
       if (!h) return h;
       var cat = catalogImgById[h.id];
       var row = cat
-        ? { images: cat.images || [], sku: cat.sku || h.sku || h.model }
-        : { images: h.image ? [h.image] : [], sku: h.sku || h.model };
+        ? {
+            images: cat.images || [],
+            sku: cat.sku || h.sku || h.model,
+            brand: cat.brand || h.brand,
+            olculer: cat.olculer || h.olculer || null,
+            olcu_etiket: cat.olcu_etiket || h.olcu_etiket || "",
+          }
+        : {
+            images: h.image ? [h.image] : [],
+            sku: h.sku || h.model,
+            brand: h.brand,
+            olculer: h.olculer || null,
+            olcu_etiket: h.olcu_etiket || "",
+          };
       var img = pickCatalogImage(row, cat && cat.images && cat.images[0]);
-      if (!img && h.image) return h;
-      if (!img) return h;
-      return Object.assign({}, h, { image: img });
+      var next = Object.assign({}, h, {
+        olculer: row.olculer || h.olculer || null,
+        olcu_etiket: row.olcu_etiket || h.olcu_etiket || "",
+      });
+      if (img) next.image = img;
+      return next;
     });
   }
 
@@ -791,6 +851,10 @@
             return brandLab
               ? '<div class="eq-dept-plp-card__brand">' + esc(brandLab) + "</div>"
               : "";
+          })() +
+          (function () {
+            var dim = formatOlculerLine(h);
+            return dim ? '<div class="eq-dept-plp-card__dims">' + esc(dim) + "</div>" : "";
           })() +
           (h.price || h.satis_eur_indirimli
             ? '<div class="eq-dept-plp-card__price">' + esc(formatPrice(h)) + "</div>"

@@ -747,6 +747,15 @@ body.eq-shop .eq-product-specs .eq-specs-cols pre {
   color: var(--eq-text, #111);
 }
 
+.eq-epdp-dims {
+  margin: 6px 0 0;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--eq-text-secondary, #4b5563);
+  letter-spacing: 0.01em;
+}
+
 .eq-epdp-lead {
   margin: 0 0 6px;
   font-size: 14px;
