@@ -6,6 +6,7 @@ export const EQ_DEPT_PATH: Record<string, string> = {
   besos: "/besos",
   besosBardaklar: "/besos/bardaklar",
   besosBarEkipman: "/besos/bar-ekipman",
+  besosBarIstasyonlari: "/besos/bar-istasyonlari",
   contact: "/iletisim",
   cart: "/sepet",
   pisirme: "/shop/pisirme",
@@ -52,11 +53,25 @@ export function submitBesosSearch(query: string): void {
   const q = String(query || "").trim();
   if (!q) return;
 
+  const stationsEl = document.getElementById("bd-stations");
   const filter = (window as Window & { filterStations?: (s: string) => void })
     .filterStations;
-  if (typeof filter === "function") {
+  if (typeof filter === "function" && stationsEl) {
     filter(q);
-    document.getElementById("bd-stations")?.scrollIntoView({ behavior: "smooth" });
+    stationsEl.scrollIntoView({ behavior: "smooth" });
+    return;
+  }
+
+  const path = window.location.pathname.replace(/\/$/, "");
+  if (/\/besos(\/|$)/.test(path)) {
+    const en = path.startsWith("/en");
+    const target = en ? "/en/besos/bar-istasyonlari" : "/besos/bar-istasyonlari";
+    try {
+      sessionStorage.setItem("besos-station-q", q);
+    } catch {
+      /* ignore */
+    }
+    window.location.href = `${target}#bd-stations`;
     return;
   }
 

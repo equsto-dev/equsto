@@ -42,14 +42,17 @@ const ITEMS: SubnavItem[] = [
   },
   {
     key: "bar-istasyonlari",
-    href: (en) => (en ? "/en/besos#bd-stations" : "/besos#bd-stations"),
+    href: (en) => (en ? "/en/besos/bar-istasyonlari" : "/besos/bar-istasyonlari"),
     labelTr: "Bar İstasyonları",
     labelEn: "Bar Stations",
     iconSrc: `/besos/subnav/bar-stations.png?v=${ICON_V}`,
     isActive: (pathname) => {
       if (!pathname) return false;
       if (pathname.includes("/imt300")) return false;
-      return !!pathname.match(/\/besos(\/modul\/|$)/);
+      return (
+        !!pathname.includes("/besos/bar-istasyonlari") ||
+        !!pathname.match(/\/besos(\/modul\/|$)/)
+      );
     },
   },
 ];
