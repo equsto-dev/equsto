@@ -105,7 +105,13 @@ export function displayBolumBaslik(
   bolum?: string | null,
 ): string {
   const ad = String(bolumAd ?? "").trim();
-  if (ad) return ad.replace(/\s+/g, " ").trim();
+  if (ad) {
+    let cleanAd = ad.replace(/\s+/g, " ").trim();
+    if (/mutfak\s*depolama/i.test(cleanAd)) {
+      return "Mutfak";
+    }
+    return cleanAd;
+  }
   const kod = String(bolum ?? "").trim();
   return kod || "—";
 }

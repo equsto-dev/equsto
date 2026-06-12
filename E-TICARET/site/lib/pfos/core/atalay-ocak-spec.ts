@@ -16,7 +16,7 @@ function norm(s: string | null | undefined): string {
 export function parseOcakFuelFromReferans(...parts: Array<string | null | undefined>): OcakFuel | null {
   const n = norm(parts.filter(Boolean).join(" "));
   if (!n) return null;
-  if (/induksiyon|indüksiyon|enduksiyon|endüksiyon/.test(n)) return "induksiyon";
+  if (/induksiyon|indüksiyon|enduksiyon|endüksiyon|endusy|endüsy/.test(n)) return "induksiyon";
   if (/gazli|gazlı|\bgaz\b|lpg|dogalgaz|dogal gaz|acik alev|açık alev|mavi alev/.test(n)) {
     return "gaz";
   }

@@ -157,7 +157,7 @@ body.bd-page.besos .bd-besos-subnav {
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  background: #1a1a1c;
+  background: #222;
   border-bottom: 2px solid var(--bes-gold);
   box-sizing: border-box;
 }

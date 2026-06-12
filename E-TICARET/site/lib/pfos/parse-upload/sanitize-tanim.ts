@@ -24,6 +24,7 @@ export function expandProformaAbbreviations(raw: string): string {
     .replace(/\bRFLI\b/gi, "RAFLI")
     .replace(/\bKAY\.?\s*/gi, "KAYDIRMA ")
     .replace(/\bMOB\.?\s*/gi, "MOBİLYA ")
+    .replace(/\bPOWER\s+GRILL\b/gi, "POWERGRILL")
     .replace(/\bSKTÜRK\b/gi, "sktürk");
 }
 

@@ -232,8 +232,10 @@ function scoreAtalayRow(
   referansIsim: string,
   preferred: string[],
   notlar?: string | null,
+  uyumsuzlukKontrol?: (sablon: string, katName: string, notes?: string | null, sku?: string | null) => boolean,
 ): number {
   if (!isAtalayPisirmeRow(row)) return -9999;
+  if (uyumsuzlukKontrol && uyumsuzlukKontrol(referansIsim, row.ad, notlar, row.sku)) return -9999;
   if (family && !rowMatchesFamily(row, family)) return -9999;
 
   let score = 80;
@@ -281,6 +283,8 @@ export async function matchPisirmeByReferans(
 ): Promise<EslesmisUrun | null> {
   if (isKombiKonveksiyonReferans(isim, urunTipi)) return null;
 
+  const { referansKatalogUyumsuz } = await import("./referans-eslestirme");
+
   const olcu =
     olcuRaw.trim() ||
     extractOlcuFromNotlar(notlar) ||
@@ -299,7 +303,7 @@ export async function matchPisirmeByReferans(
         isAtalayPisirmeRow(r) &&
         norm(r.sku ?? "") === norm(sku),
     );
-    if (exact && rowMatchesFamily(exact, family)) {
+    if (exact && rowMatchesFamily(exact, family) && !referansKatalogUyumsuz(isim, exact.ad, notlar, exact.sku)) {
       const matched = katalogRowToEslesmis(exact, {
         linkMarka: ATALAY_MARKA,
         sablonIsim: isim,
@@ -321,7 +325,7 @@ export async function matchPisirmeByReferans(
   const scored = rows
     .map((row) => ({
       row,
-      score: scoreAtalayRow(row, family, olcu, isim, preferred, notlar),
+      score: scoreAtalayRow(row, family, olcu, isim, preferred, notlar, referansKatalogUyumsuz),
     }))
     .filter((x) => x.score >= 100)
     .sort((a, b) => b.score - a.score);
