@@ -182,22 +182,45 @@ function preferredSkus(
   const nums = olcuParts(olcu);
   const w = nums[0] ?? 0;
   const d = nums[1] ?? 0;
+  
+  const is900 = d >= 85;
+  const is730 = d >= 65 && d < 85;
+
   if (family === "ocak") {
     return preferredOcakSkus(referansIsim, olcu, notlar);
   }
   if (family === "fritoz") {
-    if (w >= 75 || d >= 75) return ["AEF-870", "EAEF-870"];
-    if (w >= 55) return ["EAEF-460", "AEF-460", "EAEF-360"];
-    return ["EAEF-360", "AEF-360"];
+    if (is900) {
+      if (w >= 75) return ["AEF-890"];
+      return ["AEF-490"];
+    }
+    if (is730) {
+      if (w >= 75) return ["AEF-870", "AEF-873"];
+      return ["AEF-470", "AEF-473"];
+    }
+    // 600 series
+    if (w >= 75 || d >= 75) return ["EAEF-860"];
+    if (w >= 55) return ["EAEF-660"];
+    return ["EAEF-460", "EAEF-360"];
   }
   if (family === "patates_dinlendirme") {
     if (w >= 38 && d >= 65) return ["APD-473"];
     return ["APD-473"];
   }
   if (family === "izgara") {
-    if (w >= 75 || d >= 75) return ["EAEI-860", "EAGI-860"];
-    if (w >= 55 || d >= 55) return ["EAEI-660", "EAGI-660"];
-    return ["EAEI-460", "EAGI-460", "EAEI-360"];
+    if (is900) {
+      if (w >= 75) return ["AEI-890S", "AEI-890/NDS", "AEI-890/NSCR", "AEI-890"];
+      return ["AEI-490S", "AEI-490/NS", "AEI-490"];
+    }
+    if (is730) {
+      if (w >= 75) return ["AEI-873/ND", "AEI-873CR", "AEI-873/NCR", "AEI-870/ND", "AEI-870/N"];
+      if (w >= 55) return ["AEI-673/ND", "AEI-673/N", "AEI-673/NCR"];
+      return ["AEI-473/NCR"];
+    }
+    // 600 series
+    if (w >= 75 || d >= 75) return ["EAEI-860", "EAEI-860/NDCR", "EAEI-860/N", "EAEI-860/ND"];
+    if (w >= 55 || d >= 55) return ["EAEI-660", "EAEI-660/NDCR"];
+    return ["EAEI-460", "EAEI-360"];
   }
   return [];
 }

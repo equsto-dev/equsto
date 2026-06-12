@@ -28,6 +28,7 @@ services:
       PORT: "3000"
       HOSTNAME: 0.0.0.0
       CHROMIUM_LOCAL_EXEC_PATH: /usr/bin/chromium
+      HOME: /tmp
     depends_on:
       - meilisearch
     networks:

@@ -42,7 +42,8 @@ WORKDIR /app
 ENV NODE_ENV=production \
     PORT=3000 \
     HOSTNAME=0.0.0.0 \
-    CHROMIUM_LOCAL_EXEC_PATH=/usr/bin/chromium
+    CHROMIUM_LOCAL_EXEC_PATH=/usr/bin/chromium \
+    HOME=/tmp
 
 # PFOS teklif PDF — puppeteer-core + sistem Chromium (libnspr4 vb.)
 RUN apt-get update -qq \
