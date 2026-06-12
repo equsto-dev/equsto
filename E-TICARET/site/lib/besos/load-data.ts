@@ -40,9 +40,9 @@ export async function loadBesosPageData() {
     loadBesosCatalogue(),
     loadBesosProjects(),
     loadBesosHeroVideo().catch(() => ({
-      mp4: "/assets/besos/vitrum-bars-hero.mp4",
-      webm: "/assets/besos/vitrum-bars-hero.webm",
-      poster: "/assets/besos/vitrum-bars-hero-poster.jpg",
+      mp4: "/besos/vitrum-bars-hero.mp4",
+      webm: "/besos/vitrum-bars-hero.webm",
+      poster: "/besos/vitrum-bars-hero-poster.jpg",
     })),
   ]);
   return { landing, catalogue, projects, heroVideo };
