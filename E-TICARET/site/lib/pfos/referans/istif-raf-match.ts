@@ -21,7 +21,6 @@ import {
   portashelfBySku,
   portashelfDisplayName,
   portashelfGorselRelFromSku,
-  portashelfInox201BySku,
   portashelfSatisEurFromListe,
   type PortashelfKatliRafRow,
 } from "../core/portashelf-fiyat";
@@ -71,7 +70,7 @@ function inoxRowFromProduct(
   p: PortashelfProduct,
 ): (PortashelfKatliRafRow & { sku: string; satisEur: number }) | null {
   const sku = String(p.sku ?? "").trim();
-  const fromTable = portashelfBySku(sku) ?? portashelfInox201BySku(sku);
+  const fromTable = portashelfBySku(sku);
   if (fromTable) return fromTable;
   const liste = Number(p.liste_fiyati_eur ?? p.fiyat_euro);
   if (!(liste > 0) || !isPortashelfSku(sku)) return null;
