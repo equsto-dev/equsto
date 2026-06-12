@@ -1,0 +1,1067 @@
+[
+  {
+    "id": 4804,
+    "slug": "kuverli-tepsi-otomati",
+    "name": "Kuverli Tepsi Otomatı",
+    "sku": "M0182X",
+    "model_keys": [],
+    "pdf_model_guess": "M0182X",
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/tepsi-otomati-kuverli-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/tepsi-otomati-kuverli-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 67,
+        "slug": "otomatlar",
+        "name": "Otomatlar"
+      }
+    ],
+    "subcat_slug": "otomatlar",
+    "subcat_label": "Otomatlar",
+    "url": "https://www.yukselendustriyel.com/urun/kuverli-tepsi-otomati/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 4798,
+    "slug": "17-katli-tepsi-tasima-gn-2-1",
+    "name": "17 Katlı Tepsi Taşıma – GN 2/1",
+    "sku": "MT152X2",
+    "model_keys": [],
+    "pdf_model_guess": "MT152X2",
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/tepsi-tasima-yuksek-gn2-1-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/tepsi-tasima-yuksek-gn2-1-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 64,
+        "slug": "tasima-ve-muhafaza-arabalari",
+        "name": "Taşıma ve Muhafaza Arabaları"
+      }
+    ],
+    "subcat_slug": "tasima-ve-muhafaza-arabalari",
+    "subcat_label": "Taşıma ve Muhafaza Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/17-katli-tepsi-tasima-gn-2-1/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 4790,
+    "slug": "17-katli-tepsi-tasima-gn-1-1",
+    "name": "17 Katlı Tepsi Taşıma – GN 1/1",
+    "sku": "MT150X2",
+    "model_keys": [],
+    "pdf_model_guess": "MT150X2",
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/tepsi-tasima-yuksek-gn1-1-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/tepsi-tasima-yuksek-gn1-1-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 64,
+        "slug": "tasima-ve-muhafaza-arabalari",
+        "name": "Taşıma ve Muhafaza Arabaları"
+      }
+    ],
+    "subcat_slug": "tasima-ve-muhafaza-arabalari",
+    "subcat_label": "Taşıma ve Muhafaza Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/17-katli-tepsi-tasima-gn-1-1/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 4784,
+    "slug": "cift-kapakli-erzak-arabasi",
+    "name": "Çift Kapaklı Erzak Arabası",
+    "sku": "",
+    "model_keys": [],
+    "pdf_model_guess": null,
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/erzak-cift-kapakli.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/erzak-cift-kapakli.jpg"
+    ],
+    "categories": [
+      {
+        "id": 64,
+        "slug": "tasima-ve-muhafaza-arabalari",
+        "name": "Taşıma ve Muhafaza Arabaları"
+      }
+    ],
+    "subcat_slug": "tasima-ve-muhafaza-arabalari",
+    "subcat_label": "Taşıma ve Muhafaza Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/cift-kapakli-erzak-arabasi/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 4754,
+    "slug": "tabak-tasima-400",
+    "name": "Tabak Taşıma – 400",
+    "sku": "MT162X2",
+    "model_keys": [],
+    "pdf_model_guess": "MT162X2",
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/tabaktasima-400-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/tabaktasima-400-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 63,
+        "slug": "mutfak-bulasik-arabalari",
+        "name": "Mutfak Bulaşık Arabaları"
+      }
+    ],
+    "subcat_slug": "mutfak-bulasik-arabalari",
+    "subcat_label": "Mutfak Bulaşık Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/tabak-tasima-400/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 4748,
+    "slug": "yuksek-kaset-tasima",
+    "name": "Yüksek Kaset Taşıma",
+    "sku": "MB136X2",
+    "model_keys": [],
+    "pdf_model_guess": "MB136X2",
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/kasettasima-yuksek-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/kasettasima-yuksek-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 63,
+        "slug": "mutfak-bulasik-arabalari",
+        "name": "Mutfak Bulaşık Arabaları"
+      }
+    ],
+    "subcat_slug": "mutfak-bulasik-arabalari",
+    "subcat_label": "Mutfak Bulaşık Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/yuksek-kaset-tasima/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 4744,
+    "slug": "kollu-kaset-tasima",
+    "name": "Kollu Kaset Taşıma",
+    "sku": "MB132X2",
+    "model_keys": [],
+    "pdf_model_guess": "MB132X2",
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/kasettasima-kollu-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/kasettasima-kollu-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 63,
+        "slug": "mutfak-bulasik-arabalari",
+        "name": "Mutfak Bulaşık Arabaları"
+      }
+    ],
+    "subcat_slug": "mutfak-bulasik-arabalari",
+    "subcat_label": "Mutfak Bulaşık Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/kollu-kaset-tasima/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 4743,
+    "slug": "kare-cop-arabasi",
+    "name": "Kare Çöp Arabası",
+    "sku": "MB126X",
+    "model_keys": [],
+    "pdf_model_guess": "MB126X",
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/cop-kare-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/cop-kare-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 63,
+        "slug": "mutfak-bulasik-arabalari",
+        "name": "Mutfak Bulaşık Arabaları"
+      }
+    ],
+    "subcat_slug": "mutfak-bulasik-arabalari",
+    "subcat_label": "Mutfak Bulaşık Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/kare-cop-arabasi/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3288,
+    "slug": "tepsi-otomati",
+    "name": "Kuversiz Tepsi Otomatı",
+    "sku": "M0180X",
+    "model_keys": [],
+    "pdf_model_guess": "M0180X",
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/tepsi-otomati-kuversiz-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/tepsi-otomati-kuversiz-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 67,
+        "slug": "otomatlar",
+        "name": "Otomatlar"
+      }
+    ],
+    "subcat_slug": "otomatlar",
+    "subcat_label": "Otomatlar",
+    "url": "https://www.yukselendustriyel.com/urun/tepsi-otomati/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3284,
+    "slug": "tabak-kartusu",
+    "name": "Tabak Kartuşu",
+    "sku": "M08221",
+    "model_keys": [],
+    "pdf_model_guess": "M08221",
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/tabak-kartusu-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/tabak-kartusu-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 67,
+        "slug": "otomatlar",
+        "name": "Otomatlar"
+      }
+    ],
+    "subcat_slug": "otomatlar",
+    "subcat_label": "Otomatlar",
+    "url": "https://www.yukselendustriyel.com/urun/tabak-kartusu/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3280,
+    "slug": "dortlu-tabak-otomati",
+    "name": "Dörtlü Tabak Otomatı",
+    "sku": "M0130X",
+    "model_keys": [],
+    "pdf_model_guess": "M0130X",
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/otomat-dortlu-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/otomat-dortlu-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 67,
+        "slug": "otomatlar",
+        "name": "Otomatlar"
+      }
+    ],
+    "subcat_slug": "otomatlar",
+    "subcat_label": "Otomatlar",
+    "url": "https://www.yukselendustriyel.com/urun/dortlu-tabak-otomati/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3277,
+    "slug": "ikili-tabak-otomati",
+    "name": "İkili Tabak Otomatı",
+    "sku": "",
+    "model_keys": [],
+    "pdf_model_guess": null,
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/otomat-ikili-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/otomat-ikili-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 67,
+        "slug": "otomatlar",
+        "name": "Otomatlar"
+      }
+    ],
+    "subcat_slug": "otomatlar",
+    "subcat_label": "Otomatlar",
+    "url": "https://www.yukselendustriyel.com/urun/ikili-tabak-otomati/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3267,
+    "slug": "tekli-tabak-otomati",
+    "name": "Tekli Tabak Otomatı",
+    "sku": "M0100X",
+    "model_keys": [],
+    "pdf_model_guess": "M0100X",
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/otomat-tekli-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/otomat-tekli-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 67,
+        "slug": "otomatlar",
+        "name": "Otomatlar"
+      }
+    ],
+    "subcat_slug": "otomatlar",
+    "subcat_label": "Otomatlar",
+    "url": "https://www.yukselendustriyel.com/urun/tekli-tabak-otomati/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3265,
+    "slug": "camasir-sepeti",
+    "name": "Çamaşır Sepeti",
+    "sku": "",
+    "model_keys": [],
+    "pdf_model_guess": null,
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/camasir-sepeti-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/camasir-sepeti-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 66,
+        "slug": "camasirhane-arabalari",
+        "name": "Çamaşırhane Arabaları"
+      }
+    ],
+    "subcat_slug": "camasirhane-arabalari",
+    "subcat_label": "Çamaşırhane Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/camasir-sepeti/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3258,
+    "slug": "sepetli-araba",
+    "name": "Sepetli Araba",
+    "sku": "MT150X2",
+    "model_keys": [],
+    "pdf_model_guess": "MT150X2",
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/sepetli-araba-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/sepetli-araba-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 66,
+        "slug": "camasirhane-arabalari",
+        "name": "Çamaşırhane Arabaları"
+      }
+    ],
+    "subcat_slug": "camasirhane-arabalari",
+    "subcat_label": "Çamaşırhane Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/sepetli-araba/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3256,
+    "slug": "kirli-toplama-arabasi",
+    "name": "Kirli Toplama Arabası",
+    "sku": "C130B",
+    "model_keys": [],
+    "pdf_model_guess": "C130B",
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/kirli-toplama-arabasi-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/kirli-toplama-arabasi-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 66,
+        "slug": "camasirhane-arabalari",
+        "name": "Çamaşırhane Arabaları"
+      }
+    ],
+    "subcat_slug": "camasirhane-arabalari",
+    "subcat_label": "Çamaşırhane Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/kirli-toplama-arabasi/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3251,
+    "slug": "aski-arabasi",
+    "name": "Askı Arabası",
+    "sku": "C120B",
+    "model_keys": [],
+    "pdf_model_guess": "C120B",
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/aski-arabasi-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/aski-arabasi-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 66,
+        "slug": "camasirhane-arabalari",
+        "name": "Çamaşırhane Arabaları"
+      }
+    ],
+    "subcat_slug": "camasirhane-arabalari",
+    "subcat_label": "Çamaşırhane Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/aski-arabasi/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 2577,
+    "slug": "uc-katli-servis-arabasi",
+    "name": "Üç Katlı Servis Arabası",
+    "sku": "",
+    "model_keys": [],
+    "pdf_model_guess": null,
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/servis-uc-katli-paslanmaz-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/servis-uc-katli-paslanmaz-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 65,
+        "slug": "servis-arabalari",
+        "name": "Servis Arabaları"
+      }
+    ],
+    "subcat_slug": "servis-arabalari",
+    "subcat_label": "Servis Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/uc-katli-servis-arabasi/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 2574,
+    "slug": "iki-katli-servis-arabasi",
+    "name": "İki Katlı Servis Arabası",
+    "sku": "",
+    "model_keys": [],
+    "pdf_model_guess": null,
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/servis-iki-katli-paslanmaz-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/servis-iki-katli-paslanmaz-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 65,
+        "slug": "servis-arabalari",
+        "name": "Servis Arabaları"
+      }
+    ],
+    "subcat_slug": "servis-arabalari",
+    "subcat_label": "Servis Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/iki-katli-servis-arabasi/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 2569,
+    "slug": "uc-katli-ahsap-servis-arabasi",
+    "name": "Üç Katlı Ahşap Servis Arabası",
+    "sku": "",
+    "model_keys": [],
+    "pdf_model_guess": null,
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/servis-uc-katli-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/servis-uc-katli-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 65,
+        "slug": "servis-arabalari",
+        "name": "Servis Arabaları"
+      }
+    ],
+    "subcat_slug": "servis-arabalari",
+    "subcat_label": "Servis Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/uc-katli-ahsap-servis-arabasi/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 2565,
+    "slug": "iki-katli-ahsap-servis-arabasi",
+    "name": "İki Katlı Ahşap Servis Arabası",
+    "sku": "",
+    "model_keys": [],
+    "pdf_model_guess": null,
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/servis-iki-katli-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/servis-iki-katli-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 65,
+        "slug": "servis-arabalari",
+        "name": "Servis Arabaları"
+      }
+    ],
+    "subcat_slug": "servis-arabalari",
+    "subcat_label": "Servis Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/iki-katli-ahsap-servis-arabasi/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 2557,
+    "slug": "platform-duz",
+    "name": "Platform Düz",
+    "sku": "MT170X2",
+    "model_keys": [],
+    "pdf_model_guess": "MT170X2",
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/platform-duz.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/platform-duz.jpg"
+    ],
+    "categories": [
+      {
+        "id": 64,
+        "slug": "tasima-ve-muhafaza-arabalari",
+        "name": "Taşıma ve Muhafaza Arabaları"
+      }
+    ],
+    "subcat_slug": "tasima-ve-muhafaza-arabalari",
+    "subcat_label": "Taşıma ve Muhafaza Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/platform-duz/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 2554,
+    "slug": "platfrom-tel-galvanizli",
+    "name": "Platfrom Tel – Galvanizli",
+    "sku": "MT190G",
+    "model_keys": [],
+    "pdf_model_guess": "MT190G",
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/platform-tel-kucuk-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/platform-tel-kucuk-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 64,
+        "slug": "tasima-ve-muhafaza-arabalari",
+        "name": "Taşıma ve Muhafaza Arabaları"
+      }
+    ],
+    "subcat_slug": "tasima-ve-muhafaza-arabalari",
+    "subcat_label": "Taşıma ve Muhafaza Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/platfrom-tel-galvanizli/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 2550,
+    "slug": "tepsi-tasima-70x50",
+    "name": "Tepsi Taşıma – 70×50",
+    "sku": "MT132X2",
+    "model_keys": [
+      "70X50"
+    ],
+    "pdf_model_guess": "MT132X2",
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/tepsi-tasima-70-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/tepsi-tasima-70-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 64,
+        "slug": "tasima-ve-muhafaza-arabalari",
+        "name": "Taşıma ve Muhafaza Arabaları"
+      }
+    ],
+    "subcat_slug": "tasima-ve-muhafaza-arabalari",
+    "subcat_label": "Taşıma ve Muhafaza Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/tepsi-tasima-70x50/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 2543,
+    "slug": "tepsi-tasima-60x40",
+    "name": "Tepsi Taşıma – 60×40",
+    "sku": "MT130X2",
+    "model_keys": [
+      "60X40"
+    ],
+    "pdf_model_guess": "MT130X2",
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/tepsi-tasima-60-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/tepsi-tasima-60-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 64,
+        "slug": "tasima-ve-muhafaza-arabalari",
+        "name": "Taşıma ve Muhafaza Arabaları"
+      }
+    ],
+    "subcat_slug": "tasima-ve-muhafaza-arabalari",
+    "subcat_label": "Taşıma ve Muhafaza Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/tepsi-tasima-60x40/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 2539,
+    "slug": "tepsi-tasima-gn-2-1",
+    "name": "9 Katlı Tepsi Taşıma – GN 2/1",
+    "sku": "MT152X2",
+    "model_keys": [],
+    "pdf_model_guess": "MT152X2",
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/tepsi-tasima-alcak-gn2-1-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/tepsi-tasima-alcak-gn2-1-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 64,
+        "slug": "tasima-ve-muhafaza-arabalari",
+        "name": "Taşıma ve Muhafaza Arabaları"
+      }
+    ],
+    "subcat_slug": "tasima-ve-muhafaza-arabalari",
+    "subcat_label": "Taşıma ve Muhafaza Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/tepsi-tasima-gn-2-1/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 2529,
+    "slug": "tepsi-tasima",
+    "name": "9 Katlı Tepsi Taşıma – GN 1/1",
+    "sku": "MT150X2",
+    "model_keys": [],
+    "pdf_model_guess": "MT150X2",
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/tepsi-tasima-alcak-gn1-1-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/tepsi-tasima-alcak-gn1-1-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 64,
+        "slug": "tasima-ve-muhafaza-arabalari",
+        "name": "Taşıma ve Muhafaza Arabaları"
+      }
+    ],
+    "subcat_slug": "tasima-ve-muhafaza-arabalari",
+    "subcat_label": "Taşıma ve Muhafaza Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/tepsi-tasima/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 2525,
+    "slug": "erzak-arabasi",
+    "name": "Tek Kapaklı Erzak Arabası",
+    "sku": "MT140X",
+    "model_keys": [],
+    "pdf_model_guess": "MT140X",
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/erzak-tek-kapakli.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/erzak-tek-kapakli.jpg"
+    ],
+    "categories": [
+      {
+        "id": 64,
+        "slug": "tasima-ve-muhafaza-arabalari",
+        "name": "Taşıma ve Muhafaza Arabaları"
+      }
+    ],
+    "subcat_slug": "tasima-ve-muhafaza-arabalari",
+    "subcat_label": "Taşıma ve Muhafaza Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/erzak-arabasi/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 2522,
+    "slug": "et-balik-tasima",
+    "name": "Et – Balık Taşıma",
+    "sku": "MT120X",
+    "model_keys": [],
+    "pdf_model_guess": "MT120X",
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/et-balik-tasima-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/et-balik-tasima-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 64,
+        "slug": "tasima-ve-muhafaza-arabalari",
+        "name": "Taşıma ve Muhafaza Arabaları"
+      }
+    ],
+    "subcat_slug": "tasima-ve-muhafaza-arabalari",
+    "subcat_label": "Taşıma ve Muhafaza Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/et-balik-tasima/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 2510,
+    "slug": "et-aski-arabasi",
+    "name": "Et Askı Arabası",
+    "sku": "MT120X",
+    "model_keys": [],
+    "pdf_model_guess": "MT120X",
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/et-aski-arabasi-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/et-aski-arabasi-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 64,
+        "slug": "tasima-ve-muhafaza-arabalari",
+        "name": "Taşıma ve Muhafaza Arabaları"
+      }
+    ],
+    "subcat_slug": "tasima-ve-muhafaza-arabalari",
+    "subcat_label": "Taşıma ve Muhafaza Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/et-aski-arabasi/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 2508,
+    "slug": "tabak-tasima-200",
+    "name": "Tabak Taşıma – 200",
+    "sku": "MT160X2",
+    "model_keys": [],
+    "pdf_model_guess": "MT160X2",
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/tabaktasima-200-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/tabaktasima-200-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 63,
+        "slug": "mutfak-bulasik-arabalari",
+        "name": "Mutfak Bulaşık Arabaları"
+      }
+    ],
+    "subcat_slug": "mutfak-bulasik-arabalari",
+    "subcat_label": "Mutfak Bulaşık Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/tabak-tasima-200/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 2504,
+    "slug": "alcak-kaset-tasima",
+    "name": "Alçak Kaset Taşıma",
+    "sku": "MB134X2",
+    "model_keys": [],
+    "pdf_model_guess": "MB134X2",
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/kasettasima-alcak-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/kasettasima-alcak-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 63,
+        "slug": "mutfak-bulasik-arabalari",
+        "name": "Mutfak Bulaşık Arabaları"
+      }
+    ],
+    "subcat_slug": "mutfak-bulasik-arabalari",
+    "subcat_label": "Mutfak Bulaşık Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/alcak-kaset-tasima/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 2498,
+    "slug": "kazan-tencere-tasima",
+    "name": "Kazan – Tencere Taşıma",
+    "sku": "MT128X2",
+    "model_keys": [],
+    "pdf_model_guess": "MT128X2",
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/kazantenceretasima-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/kazantenceretasima-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 63,
+        "slug": "mutfak-bulasik-arabalari",
+        "name": "Mutfak Bulaşık Arabaları"
+      }
+    ],
+    "subcat_slug": "mutfak-bulasik-arabalari",
+    "subcat_label": "Mutfak Bulaşık Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/kazan-tencere-tasima/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 2492,
+    "slug": "kolsuz-kaset-tasima",
+    "name": "Kolsuz Kaset Taşıma",
+    "sku": "MB130X2",
+    "model_keys": [],
+    "pdf_model_guess": "MB130X2",
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/kaset-tasima-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/kaset-tasima-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 63,
+        "slug": "mutfak-bulasik-arabalari",
+        "name": "Mutfak Bulaşık Arabaları"
+      }
+    ],
+    "subcat_slug": "mutfak-bulasik-arabalari",
+    "subcat_label": "Mutfak Bulaşık Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/kolsuz-kaset-tasima/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 2483,
+    "slug": "yuvarlak-cop-arabasi",
+    "name": "Yuvarlak Çöp Arabası",
+    "sku": "MB126X",
+    "model_keys": [],
+    "pdf_model_guess": "MB126X",
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/cop-yuvarlak-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/cop-yuvarlak-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 63,
+        "slug": "mutfak-bulasik-arabalari",
+        "name": "Mutfak Bulaşık Arabaları"
+      }
+    ],
+    "subcat_slug": "mutfak-bulasik-arabalari",
+    "subcat_label": "Mutfak Bulaşık Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/yuvarlak-cop-arabasi/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 2388,
+    "slug": "evyeli-araba",
+    "name": "Evyeli Araba",
+    "sku": "MB124X",
+    "model_keys": [],
+    "pdf_model_guess": "MB124X",
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/evyeliaraba-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/evyeliaraba-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 63,
+        "slug": "mutfak-bulasik-arabalari",
+        "name": "Mutfak Bulaşık Arabaları"
+      }
+    ],
+    "subcat_slug": "mutfak-bulasik-arabalari",
+    "subcat_label": "Mutfak Bulaşık Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/evyeli-araba/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 2382,
+    "slug": "bulasik-toplama-havuzu",
+    "name": "Bulaşık Toplama Havuzu",
+    "sku": "MB120X2",
+    "model_keys": [],
+    "pdf_model_guess": "MB120X2",
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/bulasiktoplamahavuzu-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/bulasiktoplamahavuzu-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 63,
+        "slug": "mutfak-bulasik-arabalari",
+        "name": "Mutfak Bulaşık Arabaları"
+      }
+    ],
+    "subcat_slug": "mutfak-bulasik-arabalari",
+    "subcat_label": "Mutfak Bulaşık Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/bulasik-toplama-havuzu/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 2376,
+    "slug": "ikili-tel-raf-bulasik-toplama",
+    "name": "İkili Tel Raf",
+    "sku": "",
+    "model_keys": [],
+    "pdf_model_guess": null,
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/ikilibulasiktoplama-tel-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/ikilibulasiktoplama-tel-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 63,
+        "slug": "mutfak-bulasik-arabalari",
+        "name": "Mutfak Bulaşık Arabaları"
+      }
+    ],
+    "subcat_slug": "mutfak-bulasik-arabalari",
+    "subcat_label": "Mutfak Bulaşık Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/ikili-tel-raf-bulasik-toplama/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 2374,
+    "slug": "tekli-tel-raf-bulasik-toplama",
+    "name": "Tekli Tel Raf",
+    "sku": "MB110X4",
+    "model_keys": [],
+    "pdf_model_guess": "MB110X4",
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/teklibulasiktoplama-tel-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/teklibulasiktoplama-tel-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 63,
+        "slug": "mutfak-bulasik-arabalari",
+        "name": "Mutfak Bulaşık Arabaları"
+      }
+    ],
+    "subcat_slug": "mutfak-bulasik-arabalari",
+    "subcat_label": "Mutfak Bulaşık Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/tekli-tel-raf-bulasik-toplama/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 2371,
+    "slug": "ikili-komple-sac-bulasik-toplama",
+    "name": "İkili Komple Sac",
+    "sku": "",
+    "model_keys": [],
+    "pdf_model_guess": null,
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/ikilibulasiktoplama-sac-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/ikilibulasiktoplama-sac-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 63,
+        "slug": "mutfak-bulasik-arabalari",
+        "name": "Mutfak Bulaşık Arabaları"
+      }
+    ],
+    "subcat_slug": "mutfak-bulasik-arabalari",
+    "subcat_label": "Mutfak Bulaşık Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/ikili-komple-sac-bulasik-toplama/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 2360,
+    "slug": "tekli-komple-sac-bulasik-toplama",
+    "name": "Tekli Komple Sac",
+    "sku": "MB100X2",
+    "model_keys": [],
+    "pdf_model_guess": "MB100X2",
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/teklibulasiktoplama-sac-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/teklibulasiktoplama-sac-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 63,
+        "slug": "mutfak-bulasik-arabalari",
+        "name": "Mutfak Bulaşık Arabaları"
+      }
+    ],
+    "subcat_slug": "mutfak-bulasik-arabalari",
+    "subcat_label": "Mutfak Bulaşık Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/tekli-komple-sac-bulasik-toplama/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 2354,
+    "slug": "uclu-bulasik-toplama",
+    "name": "Üçlü Bulaşık Toplama",
+    "sku": "MB108X2",
+    "model_keys": [],
+    "pdf_model_guess": "MB108X2",
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/uclubulasiktoplama-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/uclubulasiktoplama-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 63,
+        "slug": "mutfak-bulasik-arabalari",
+        "name": "Mutfak Bulaşık Arabaları"
+      }
+    ],
+    "subcat_slug": "mutfak-bulasik-arabalari",
+    "subcat_label": "Mutfak Bulaşık Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/uclu-bulasik-toplama/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 2349,
+    "slug": "ikili-bulasik-toplama",
+    "name": "İkili Bulaşık Toplama",
+    "sku": "",
+    "model_keys": [],
+    "pdf_model_guess": null,
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/ikilibulasiktoplama-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/ikilibulasiktoplama-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 63,
+        "slug": "mutfak-bulasik-arabalari",
+        "name": "Mutfak Bulaşık Arabaları"
+      }
+    ],
+    "subcat_slug": "mutfak-bulasik-arabalari",
+    "subcat_label": "Mutfak Bulaşık Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/ikili-bulasik-toplama/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 2263,
+    "slug": "bulasik-toplama-tekli",
+    "name": "Tekli Bulaşık Toplama",
+    "sku": "",
+    "model_keys": [],
+    "pdf_model_guess": null,
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/teklibulasiktoplama-01.jpg",
+    "images": [
+      "https://www.yukselendustriyel.com/wp-content/uploads/2019/09/teklibulasiktoplama-01.jpg"
+    ],
+    "categories": [
+      {
+        "id": 63,
+        "slug": "mutfak-bulasik-arabalari",
+        "name": "Mutfak Bulaşık Arabaları"
+      },
+      {
+        "id": 50,
+        "slug": "tasima-arabalari",
+        "name": "Taşıma Arabaları"
+      }
+    ],
+    "subcat_slug": "mutfak-bulasik-arabalari",
+    "subcat_label": "Mutfak Bulaşık Arabaları",
+    "url": "https://www.yukselendustriyel.com/urun/bulasik-toplama-tekli/",
+    "fetched_at": "2026-06-12"
+  }
+]
