@@ -1,5 +1,6 @@
 /**
  * İnoksan SKU ↔ inoksan.com eşleştirme + imagesfolder görsel indirme.
+ * KİLİT: public/inoksan-istif-images-KILIT.txt
  */
 import fs from "node:fs";
 import path from "node:path";
