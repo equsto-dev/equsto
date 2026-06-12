@@ -289,9 +289,6 @@ export function portashelfBySku(
 /** @deprecated use portashelfBySku */
 export function portashelfInox201BySku(
   sku: string,
-): (PortashelfInox201Row & { sku: string; satisEur: number }) | null {
-  const row = portashelfBySku(sku);
-  if (!row) return null;
-  const { depthCm, widthCm, heightCm, listeEur, sku: resolvedSku, satisEur } = row;
-  return { depthCm, widthCm, heightCm, listeEur, sku: resolvedSku, satisEur };
+): (PortashelfKatliRafRow & { sku: string; satisEur: number }) | null {
+  return portashelfBySku(sku);
 }
