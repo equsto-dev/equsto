@@ -18,11 +18,11 @@ const ICON_V = BESOS_SUBNAV_ICON_V;
 const ITEMS: SubnavItem[] = [
   {
     key: "bardaklar",
-    href: (en) => (en ? "/en/shop/icecek" : "/shop/icecek"),
+    href: (en) => (en ? "/en/besos/bardaklar" : "/besos/bardaklar"),
     labelTr: "Bardaklar",
     labelEn: "Glassware",
     iconSrc: `/besos/subnav/glassware.png?v=${ICON_V}`,
-    isActive: (pathname) => !!pathname?.includes("/shop/icecek"),
+    isActive: (pathname) => !!pathname?.includes("/besos/bardaklar"),
   },
   {
     key: "buz-makinesi",
@@ -34,11 +34,11 @@ const ITEMS: SubnavItem[] = [
   },
   {
     key: "bar-ekipman",
-    href: (en) => (en ? "/en/shop/hazirlik" : "/shop/hazirlik"),
+    href: (en) => (en ? "/en/besos/bar-ekipman" : "/besos/bar-ekipman"),
     labelTr: "Bar Ekipmanları",
     labelEn: "Bar Equipment",
     iconSrc: `/besos/subnav/bar-equipment.png?v=${ICON_V}`,
-    isActive: (pathname) => !!pathname?.includes("/shop/hazirlik"),
+    isActive: (pathname) => !!pathname?.includes("/besos/bar-ekipman"),
   },
   {
     key: "bar-istasyonlari",
