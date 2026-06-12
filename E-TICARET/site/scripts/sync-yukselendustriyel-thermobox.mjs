@@ -12,7 +12,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
 import { fetchTcmbEurRate } from "./fetch-tcmb-kur.mjs";
-import { applyAvathermTasimaMeta, isAvathermRow } from "./lib/avatherm-tasima.mjs";
+import { applyAvathermTasimaMeta, applyAvathermBrand, AVATHERM_BRAND, isAvathermRow } from "./lib/avatherm-tasima.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const HOST = "https://www.yukselendustriyel.com";
@@ -319,7 +319,7 @@ function buildNewRow(p, imageRel, pdfHit) {
     id: `yukselendustriyel__${p.slug}`,
     dept: "tasima",
     category: "tasima-ekipmanlari-yemek-tasima-kaplari",
-    brand: "Yüksel Endüstriyel",
+    brand: AVATHERM_BRAND,
     name: p.name,
     specs: [
       p.name,
@@ -345,7 +345,7 @@ function buildNewRow(p, imageRel, pdfHit) {
     urun_kategori: "Taşıma",
     urun_alt_kategori: "Yemek Taşıma Kapları",
     kategori_yolu: ["Taşıma", "Thermobox", p.subcat_label],
-    keywords: ["Yüksel Endüstriyel", "Avatherm", p.name, p.subcat_label].filter(Boolean),
+    keywords: [AVATHERM_BRAND, p.name, p.subcat_label].filter(Boolean),
   };
   applyAvathermTasimaMeta(row, p.subcat_slug);
   if (pdfHit) applyPrice(row, pdfHit);
@@ -358,7 +358,7 @@ function buildNewRow(p, imageRel, pdfHit) {
 
 function enrichExistingRow(row, p, imageRel, pdfHit) {
   applyAvathermTasimaMeta(row, p.subcat_slug);
-  row.brand = "Yüksel Endüstriyel";
+  applyAvathermBrand(row);
   row.alt_kategori_1 = p.subcat_label;
   row.yukselendustriyel_url = p.url;
   row.yukselendustriyel_slug = p.slug;
