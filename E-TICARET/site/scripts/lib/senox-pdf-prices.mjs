@@ -37,6 +37,14 @@ export const SENOX_LISTE_OVERRIDES = new Map([
   ["SNX17S", 300],
   // SNX-25-G yanlışlıkla SNX-8060 1500 EUR ile eşleşmiş; SNX-25-C ile aynı liste
   ["SNX25G", 330],
+  // SENOX 2026-1 s.67 — Vakum makineleri (OCR komşu ürün fiyatı ile karışmış)
+  ["VM01", 300],
+  ["WM2", 1800],
+  ["WM2TEKENEVAKUMMAKNES", 1800],
+  ["DZ280", 1800],
+  ["VM3", 2400],
+  ["VM3FTENEVAKUMMAKNES", 2400],
+  ["DZ4002F", 2400],
 ]);
 
 /** Mutbex / Equsto model → PDF kod eşlemesi */

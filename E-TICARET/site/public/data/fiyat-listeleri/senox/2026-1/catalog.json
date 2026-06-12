@@ -2504,7 +2504,7 @@
       "categoryGroup": "Hazırlık Ekipmanları",
       "category": "El Blenderleri",
       "specs": {
-        "fiyat_eur": "970",
+        "fiyat_eur": "300",
         "elektrik_gucu": "440 W",
         "agirlik_kg": "6.2"
       },
@@ -2540,9 +2540,9 @@
         "genislik_mm": 280,
         "derinlik_mm": 385,
         "yukseklik_mm": 110,
-        "fiyat_eur": "1500",
-        "elektrik_gucu": "440 W",
-        "agirlik_kg": "7.9"
+        "fiyat_eur": "1800",
+        "elektrik_gucu": "370 W",
+        "agirlik_kg": "36"
       },
       "image": "/data/senox/images/senox-wm-2-tek-enevakum-mak-nes_1.jpg",
       "imageMethod": "bbox-render-v4"
