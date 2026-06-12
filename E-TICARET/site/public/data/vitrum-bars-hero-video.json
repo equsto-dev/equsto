@@ -1,9 +1,9 @@
 {
   "source": "https://www.vitrumgroup.org/bars",
-  "fetchedAt": "2026-06-12T23:56:38.314Z",
+  "fetchedAt": "2026-06-13T00:00:00.000Z",
   "local": {
-    "mp4": "/assets/besos/vitrum-bars-hero.mp4",
-    "webm": "/assets/besos/vitrum-bars-hero.webm",
-    "poster": "/assets/besos/vitrum-bars-hero-poster.jpg"
+    "mp4": "/besos/vitrum-bars-hero.mp4",
+    "webm": "/besos/vitrum-bars-hero.webm",
+    "poster": "/besos/vitrum-bars-hero-poster.jpg"
   }
 }

@@ -1,5 +1,5 @@
 /**
- * Vitrum /bars hero video + poster → public/assets/besos/
+ * Vitrum /bars hero video + poster → public/besos/
  * Kaynak: https://www.vitrumgroup.org/bars
  *
  *   node scripts/fetch-vitrum-bars-hero.mjs
@@ -9,7 +9,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
-const OUT = path.join(ROOT, "public/assets/besos");
+const OUT = path.join(ROOT, "public/besos");
 
 const ASSETS = {
   mp4: "https://cdn.prod.website-files.com/678a5dce92e76b8ef57ebc9d%2F678fcaaaeb2ce6f77c20ab7a_vitrum%20bars%20hero-transcode.mp4",
@@ -22,9 +22,9 @@ const META = {
   source: "https://www.vitrumgroup.org/bars",
   fetchedAt: new Date().toISOString(),
   local: {
-    mp4: "/assets/besos/vitrum-bars-hero.mp4",
-    webm: "/assets/besos/vitrum-bars-hero.webm",
-    poster: "/assets/besos/vitrum-bars-hero-poster.jpg",
+    mp4: "/besos/vitrum-bars-hero.mp4",
+    webm: "/besos/vitrum-bars-hero.webm",
+    poster: "/besos/vitrum-bars-hero-poster.jpg",
   },
 };
 
