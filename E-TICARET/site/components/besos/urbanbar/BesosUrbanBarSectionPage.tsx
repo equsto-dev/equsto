@@ -5,6 +5,7 @@ import { getBesosUrbanBarSection } from "@/lib/besos/urbanbar/catalog";
 import type { BesosUrbanBarSectionKey } from "@/lib/besos/urbanbar/catalog";
 import { loadBesosUrbanBarCatalog } from "@/lib/besos/urbanbar/load-data";
 import type { BesosLocale } from "@/lib/besos/locale";
+import { SHOP_ASSET_V } from "@/lib/shop/assets";
 
 const META: Record<
   BesosUrbanBarSectionKey,
@@ -61,6 +62,8 @@ export default async function BesosUrbanBarSectionPage({ section, locale = "tr" 
 
   return (
     <>
+      {/* eslint-disable-next-line @next/next/no-css-tags */}
+      <link rel="stylesheet" href={`/eq-dept-plp.css?v=${SHOP_ASSET_V}`} />
       <main className="besos-page ub-besos-page">
         <header className="ub-besos-hero">
           <div className="ub-besos-hero-inner">
