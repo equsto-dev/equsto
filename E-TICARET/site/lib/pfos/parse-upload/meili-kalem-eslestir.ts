@@ -24,7 +24,8 @@ import {
   guessEqustoKodFromItem,
   matchCatalogByEqustoKod,
 } from "@/lib/catalog/equsto-kod-lookup";
-import { referansKatalogUyumsuz } from "../referans/referans-eslestirme";
+import { referansKatalogUyumsuz, matchReferansKalem } from "../referans/referans-eslestirme";
+import { inferUrunTipiFromReferansSatir } from "../referans/infer-urun-tipi";
 
 
 /** Ölçü benzerliği — boyutlar yakınsa bonus */
@@ -238,6 +239,63 @@ export async function matchItem(item: ParsedItem): Promise<ItemMatchResult> {
       },
       bestHit: null,
     };
+  }
+
+  // Try rule-based referans matching first
+  const refInput = {
+    isim: item.tanim,
+    urunTipi: inferUrunTipiFromReferansSatir({
+      bolum: "",
+      bolumAd: "",
+      poz: item.poz,
+      ad: item.tanim,
+      olcu: item.olcu,
+      adet: 1,
+    }),
+    notlar: item.olcu,
+    fiyatStratejisi: "orta" as const,
+    sku: null,
+  };
+  const refMatch = await matchReferansKalem(refInput);
+  if (refMatch && refMatch.sku && !refMatch.id.startsWith("custom-") && !refMatch.id.includes("-ozel")) {
+    const bestHit = {
+      id: refMatch.id,
+      name: refMatch.ad,
+      sku: refMatch.sku,
+      brand: refMatch.marka,
+      category: refMatch.model || "",
+      dept: refMatch.model || "",
+      specs: item.tanim,
+      image: String(refMatch.gorselUrl ?? "").replace(/^\/data\//, "").replace(/^\//, ""),
+      slug: refMatch.id,
+      satis_eur_indirimli: refMatch.fiyatEur ?? null,
+      liste_fiyati_eur: refMatch.fiyatEur ?? null,
+    } as CatalogSearchHit;
+
+    const { hit: ranked, guven } = pickBestHit(item, [bestHit]);
+    if (ranked) {
+      const dto = hitToDto(ranked);
+      if (refMatch.fiyat > 0) {
+        dto.fiyat_try = refMatch.fiyat;
+      }
+      if (refMatch.fiyatEur && refMatch.fiyatEur > 0) {
+        dto.satis_fiyati_eur = refMatch.fiyatEur;
+        dto.liste_fiyati_eur = refMatch.fiyatEur;
+      }
+      const birim = dto.satis_fiyati_eur > 0 ? dto.satis_fiyati_eur : null;
+      return {
+        bestHit: ranked,
+        matched: {
+          ...item,
+          tanim: cleanProformaTanim(item.tanim) || item.tanim,
+          eslesen_urun: dto,
+          eslesen_skor: Math.max(guven, 0.92),
+          birim_fiyat_eur: birim,
+          toplam_eur: birim != null ? Math.round(birim * item.adet * 100) / 100 : null,
+          not_found: false,
+        },
+      };
+    }
   }
 
   const equstoKod = guessEqustoKodFromItem(item);

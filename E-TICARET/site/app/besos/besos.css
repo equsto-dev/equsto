@@ -1782,7 +1782,7 @@ body.bd-page.besos.eq-shop .eq-mfoot-copy {
   color: var(--bes-text-3);
 }
 .ub-besos-catalog {
-  max-width: 1200px;
+  max-width: 1320px;
   margin: 0 auto;
   padding: 24px 20px 56px;
 }
@@ -1812,88 +1812,131 @@ body.bd-page.besos.eq-shop .eq-mfoot-copy {
   padding: 10px 14px;
   font: inherit;
 }
-.ub-besos-filters {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 10px 12px;
-  margin-bottom: 24px;
-  padding-bottom: 18px;
-  border-bottom: 1px solid var(--bes-rule);
+.ub-besos-plp {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
 }
-.ub-besos-filters-label {
-  flex: 0 0 auto;
+.ub-besos-facets {
+  position: sticky;
+  top: calc(var(--bes-chrome-h, 112px) + 12px);
+}
+.ub-besos-facets--mob {
+  display: none;
+}
+.ub-besos-facets__panel {
+  border: 1px solid var(--bes-rule);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 14px 12px;
+}
+.ub-besos-facets__hd {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 12px;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--bes-text-3);
 }
-.ub-besos-filters-scroll {
-  display: flex;
-  flex: 1 1 auto;
-  flex-wrap: nowrap;
-  gap: 8px;
-  min-width: 0;
-  overflow-x: auto;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  padding-bottom: 2px;
-}
-.ub-besos-filters-scroll::-webkit-scrollbar {
-  display: none;
-}
-.ub-besos-filter-chip {
-  flex: 0 0 auto;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  min-height: 36px;
-  padding: 7px 14px;
-  border: 1px solid var(--bes-rule);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.04);
-  color: var(--bes-text-2);
-  font: inherit;
-  font-size: 12px;
-  font-weight: 600;
-  white-space: nowrap;
-  cursor: pointer;
-  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
-}
-.ub-besos-filter-chip:hover {
-  background: rgba(255, 255, 255, 0.08);
-  color: #fff;
-}
-.ub-besos-filter-chip.is-active {
-  border-color: var(--bes-gold-soft);
-  background: rgba(201, 162, 77, 0.14);
-  color: #fff;
-}
-.ub-besos-filter-chip__count {
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  color: var(--bes-text-3);
-}
-.ub-besos-filter-chip.is-active .ub-besos-filter-chip__count {
-  color: var(--bes-gold-soft);
-}
-.ub-besos-filters-clear {
-  flex: 0 0 auto;
+.ub-besos-facets__clear {
   background: none;
   border: none;
   padding: 0;
   font: inherit;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 600;
   color: var(--bes-gold-soft);
   text-decoration: underline;
   cursor: pointer;
 }
-.ub-besos-filters-clear:hover {
+.ub-besos-facets__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: min(62vh, 520px);
+  overflow: auto;
+}
+.ub-besos-facets__label {
+  display: grid;
+  grid-template-columns: 16px minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 8px;
+  padding: 7px 4px;
+  font-size: 13px;
+  color: var(--bes-text-2);
+  cursor: pointer;
+}
+.ub-besos-facets__label:hover {
   color: #fff;
+}
+.ub-besos-facets__label input {
+  margin-top: 2px;
+  accent-color: var(--bes-gold-soft);
+}
+.ub-besos-facets__name {
+  line-height: 1.35;
+}
+.ub-besos-facets__count {
+  font-size: 11px;
+  color: var(--bes-text-3);
+  font-variant-numeric: tabular-nums;
+}
+.ub-besos-plp-main {
+  min-width: 0;
+}
+.ub-besos-plp-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 16px;
+  margin-bottom: 16px;
+}
+.ub-besos-filter-mob {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  min-height: 36px;
+  padding: 8px 14px;
+  border: 1px solid var(--bes-rule);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.ub-besos-filter-mob__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--bes-gold-soft);
+}
+.ub-besos-plp-status {
+  margin: 0;
+  font-size: 12px;
+  color: var(--bes-text-3);
+}
+@media (max-width: 900px) {
+  .ub-besos-plp {
+    grid-template-columns: 1fr;
+  }
+  .ub-besos-facets:not(.ub-besos-facets--mob) {
+    display: none;
+  }
+  .ub-besos-facets--mob {
+    display: block;
+    position: static;
+    margin-bottom: 16px;
+  }
+  .ub-besos-filter-mob {
+    display: inline-flex;
+  }
 }
 .ub-besos-group-head {
   display: flex;

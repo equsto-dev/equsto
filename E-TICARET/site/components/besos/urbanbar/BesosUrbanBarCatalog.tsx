@@ -26,14 +26,21 @@ const UI = {
   loadMore: { tr: "Daha fazla ürün yükle", en: "Load more products" },
   remaining: { tr: "kaldı", en: "remaining" },
   loadMoreAria: { tr: "Daha fazla ürün yükle", en: "Load more products" },
-  filterAll: { tr: "Tümü", en: "All" },
   filterLabel: { tr: "Kategori", en: "Category" },
+  filtersAria: { tr: "Ürün filtreleri", en: "Product filters" },
   clearFilters: { tr: "Filtreleri temizle", en: "Clear filters" },
-  filterAria: { tr: "Ürün kategorisi filtrele", en: "Filter by product category" },
+  showing: { tr: "{shown} / {total} ürün gösteriliyor", en: "Showing {shown} / {total} products" },
+  filterMob: { tr: "Filtrele", en: "Filter" },
 };
 
-function ui(key: keyof typeof UI, locale: BesosLocale) {
-  return UI[key][locale];
+function ui(key: keyof typeof UI, locale: BesosLocale, vars?: Record<string, string | number>) {
+  let text = UI[key][locale];
+  if (vars) {
+    for (const [k, v] of Object.entries(vars)) {
+      text = text.replace(`{${k}}`, String(v));
+    }
+  }
+  return text;
 }
 
 function ProductTile({
@@ -82,6 +89,7 @@ function gridColumnsForWidth(width: number): number {
 export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) {
   const [query, setQuery] = useState("");
   const [activeGroups, setActiveGroups] = useState<ReadonlySet<string>>(new Set());
+  const [filtersOpen, setFiltersOpen] = useState(false);
   const [cols, setCols] = useState(4);
   const [loadedCount, setLoadedCount] = useState(ROWS_PER_PAGE * 4);
   const gridRef = useRef<HTMLDivElement>(null);
@@ -106,21 +114,12 @@ export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) 
     );
   }, [filteredGroups]);
 
-  const pageSize = cols * ROWS_PER_PAGE;
+  const pageSize = Math.max(ROWS_PER_PAGE, cols * ROWS_PER_PAGE);
   const visibleCount = flatProducts.length;
   const shownCount = Math.min(loadedCount, visibleCount);
   const remaining = visibleCount - shownCount;
   const visibleProducts = flatProducts.slice(0, shownCount);
   const hasGroupFilter = activeGroups.size > 0;
-
-  const toggleGroup = (key: string) => {
-    setActiveGroups((prev) => {
-      const next = new Set(prev);
-      if (next.has(key)) next.delete(key);
-      else next.add(key);
-      return next;
-    });
-  };
 
   const clearGroupFilters = () => setActiveGroups(new Set());
 
@@ -137,6 +136,57 @@ export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) 
   useEffect(() => {
     setLoadedCount(pageSize);
   }, [query, pageSize, activeGroups]);
+
+  const facetPanel = (
+    <div className="ub-besos-facets__panel">
+      <div className="ub-besos-facets__hd">
+        <span>{ui("filterLabel", locale)}</span>
+        {hasGroupFilter ? (
+          <button type="button" className="ub-besos-facets__clear" onClick={clearGroupFilters}>
+            {ui("clearFilters", locale)}
+          </button>
+        ) : null}
+      </div>
+      <ul className="ub-besos-facets__list">
+        {searchableGroups.map((group) => {
+          const checked = !hasGroupFilter || activeGroups.has(group.key);
+          return (
+            <li key={group.key}>
+              <label className="ub-besos-facets__label">
+                <input
+                  type="checkbox"
+                  checked={checked}
+                  onChange={(e) => {
+                    const on = e.target.checked;
+                    if (!hasGroupFilter) {
+                      if (!on) {
+                        setActiveGroups(
+                          new Set(searchableGroups.filter((g) => g.key !== group.key).map((g) => g.key)),
+                        );
+                      }
+                      return;
+                    }
+                    if (on) {
+                      const next = new Set(activeGroups);
+                      next.add(group.key);
+                      if (next.size >= searchableGroups.length) clearGroupFilters();
+                      else setActiveGroups(next);
+                      return;
+                    }
+                    const next = new Set(activeGroups);
+                    next.delete(group.key);
+                    setActiveGroups(next);
+                  }}
+                />
+                <span className="ub-besos-facets__name">{group.label}</span>
+                <span className="ub-besos-facets__count">{group.items.length}</span>
+              </label>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
 
   return (
     <section className="ub-besos-catalog" id="ub-catalog">
@@ -159,81 +209,77 @@ export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) 
         </label>
       </div>
 
-      {searchableGroups.length > 0 ? (
-        <div className="ub-besos-filters" aria-label={ui("filterAria", locale)}>
-          <div className="ub-besos-filters-label">{ui("filterLabel", locale)}</div>
-          <div className="ub-besos-filters-scroll">
+      <div className="ub-besos-plp">
+        <aside className="ub-besos-facets" aria-label={ui("filtersAria", locale)}>
+          {facetPanel}
+        </aside>
+
+        <div className="ub-besos-plp-main">
+          <div className="ub-besos-plp-toolbar">
             <button
               type="button"
-              className={`ub-besos-filter-chip${!hasGroupFilter ? " is-active" : ""}`}
-              onClick={clearGroupFilters}
+              className="ub-besos-filter-mob"
+              aria-expanded={filtersOpen}
+              onClick={() => setFiltersOpen((v) => !v)}
             >
-              {ui("filterAll", locale)}
-              <span className="ub-besos-filter-chip__count">
-                {searchableGroups.reduce((n, g) => n + g.items.length, 0)}
-              </span>
+              {ui("filterMob", locale)}
+              {hasGroupFilter ? <span className="ub-besos-filter-mob__dot" aria-hidden="true" /> : null}
             </button>
-            {searchableGroups.map((group) => {
-              const active = activeGroups.has(group.key);
-              return (
-                <button
-                  key={group.key}
-                  type="button"
-                  className={`ub-besos-filter-chip${active ? " is-active" : ""}`}
-                  onClick={() => toggleGroup(group.key)}
-                  aria-pressed={active}
-                >
-                  {group.label}
-                  <span className="ub-besos-filter-chip__count">{group.items.length}</span>
-                </button>
-              );
-            })}
+            <p className="ub-besos-plp-status">
+              {visibleCount > 0
+                ? ui("showing", locale, { shown: shownCount, total: visibleCount })
+                : null}
+            </p>
           </div>
-          {hasGroupFilter ? (
-            <button type="button" className="ub-besos-filters-clear" onClick={clearGroupFilters}>
-              {ui("clearFilters", locale)}
-            </button>
-          ) : null}
-        </div>
-      ) : null}
 
-      {visibleCount === 0 ? (
-        <p className="ub-besos-empty">{ui("noMatch", locale)}</p>
-      ) : (
-        <>
-          <div className="ub-besos-grid" ref={gridRef}>
-            {visibleProducts.map(({ group, product }, index) => {
-              const showHead =
-                index === 0 || visibleProducts[index - 1]?.group.key !== group.key;
-              return (
-                <Fragment key={product.equstoId}>
-                  {showHead ? (
-                    <div className="ub-besos-group-head ub-besos-group-head--grid" id={`ub-${group.slug}`}>
-                      <h2>{group.label}</h2>
-                      <span>{group.items.length}</span>
-                    </div>
-                  ) : null}
-                  <ProductTile product={product} locale={locale} />
-                </Fragment>
-              );
-            })}
-          </div>
-          {remaining > 0 ? (
-            <div className="ub-besos-loadmore" aria-label={ui("loadMoreAria", locale)}>
-              <button
-                type="button"
-                className="ub-besos-loadmore__btn"
-                onClick={() => setLoadedCount((n) => Math.min(n + pageSize, visibleCount))}
-              >
-                {ui("loadMore", locale)}
-                <span className="ub-besos-loadmore__meta">
-                  ({remaining} {ui("remaining", locale)})
-                </span>
-              </button>
+          {filtersOpen ? (
+            <div className="ub-besos-facets ub-besos-facets--mob" aria-label={ui("filtersAria", locale)}>
+              {facetPanel}
             </div>
           ) : null}
-        </>
-      )}
+
+          {visibleCount === 0 ? (
+            <p className="ub-besos-empty">{ui("noMatch", locale)}</p>
+          ) : (
+            <>
+              <div className="ub-besos-grid" ref={gridRef}>
+                {visibleProducts.map(({ group, product }, index) => {
+                  const showHead =
+                    index === 0 || visibleProducts[index - 1]?.group.key !== group.key;
+                  return (
+                    <Fragment key={product.equstoId}>
+                      {showHead ? (
+                        <div
+                          className="ub-besos-group-head ub-besos-group-head--grid"
+                          id={`ub-${group.slug}`}
+                        >
+                          <h2>{group.label}</h2>
+                          <span>{group.items.length}</span>
+                        </div>
+                      ) : null}
+                      <ProductTile product={product} locale={locale} />
+                    </Fragment>
+                  );
+                })}
+              </div>
+              {remaining > 0 ? (
+                <div className="ub-besos-loadmore eq-dept-plp-loadmore" aria-label={ui("loadMoreAria", locale)}>
+                  <button
+                    type="button"
+                    className="ub-besos-loadmore__btn eq-dept-plp-loadmore__btn"
+                    onClick={() => setLoadedCount((n) => Math.min(n + pageSize, visibleCount))}
+                  >
+                    {ui("loadMore", locale)}
+                    <span className="ub-besos-loadmore__meta eq-dept-plp-loadmore__meta">
+                      ({remaining} {ui("remaining", locale)})
+                    </span>
+                  </button>
+                </div>
+              ) : null}
+            </>
+          )}
+        </div>
+      </div>
     </section>
   );
 }

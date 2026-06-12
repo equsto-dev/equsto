@@ -17,6 +17,8 @@ export type MeilisearchHitDto = {
   marka: string;
   olcu?: string;
   satis_fiyati_eur: number;
+  liste_fiyati_eur?: number;
+  fiyat_try?: number;
   elk_kw?: number;
   gaz_kw?: number;
   kategori?: string;
