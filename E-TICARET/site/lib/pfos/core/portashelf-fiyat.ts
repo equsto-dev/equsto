@@ -183,9 +183,9 @@ export function portashelfDisplayName(
   return `Portashelf 4 Katlı Raf ${depthCm}×${widthCm}×${heightCm} cm`;
 }
 
-/** Portashelf 4 katlı raf — tek takım istif rafı görseli (tüm malzeme/ölçü SKU'ları). */
+/** Portashelf 4 katlı raf — tek takım paslanmaz istif rafı görseli (tüm malzeme/ölçü SKU'ları). */
 export const PORTASHELF_304_GORSEL_REL =
-  "images/catalog/yuksel/portashelf-304-katli-raf.jpg";
+  "images/catalog/yuksel/portashelf-inox-4katli-raf.jpg";
 
 /** Portashelf ölçü SKU → kanonik tel raf görseli */
 export function portashelfGorselRelFromSku(

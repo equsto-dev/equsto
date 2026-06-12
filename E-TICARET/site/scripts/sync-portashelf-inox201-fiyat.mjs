@@ -75,8 +75,8 @@ function displayName(d, w, h, materialLabel) {
   return `Portashelf 4 Katlı Raf ${materialLabel} ${d}×${w}×${h} cm`;
 }
 
-/** Tüm Portashelf katlı raflar — tek takım istif rafı görseli */
-const PORTASHELF_304_GORSEL = "images/catalog/yuksel/portashelf-304-katli-raf.jpg";
+/** Tüm Portashelf katlı raflar — tek takım paslanmaz istif rafı görseli */
+const PORTASHELF_304_GORSEL = "images/catalog/yuksel/portashelf-inox-4katli-raf.jpg";
 
 function portashelfImageRel() {
   return PORTASHELF_304_GORSEL;
