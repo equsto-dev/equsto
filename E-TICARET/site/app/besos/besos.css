@@ -1812,6 +1812,76 @@ body.bd-page.besos.eq-shop .eq-mfoot-copy {
   padding: 10px 14px;
   font: inherit;
 }
+.ub-besos-quick-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 12px;
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--bes-rule);
+}
+.ub-besos-quick-filters__label {
+  flex: 0 0 auto;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--bes-text-3);
+}
+.ub-besos-quick-filters__scroll {
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: nowrap;
+  gap: 8px;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 2px;
+}
+.ub-besos-quick-filters__scroll::-webkit-scrollbar {
+  display: none;
+}
+.ub-besos-quick-filter {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 36px;
+  max-width: min(100%, 280px);
+  padding: 7px 14px;
+  border: 1px solid var(--bes-rule);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--bes-text-2);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+.ub-besos-quick-filter:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+.ub-besos-quick-filter.is-active {
+  border-color: var(--bes-gold-soft);
+  background: rgba(201, 162, 77, 0.14);
+  color: #fff;
+}
+.ub-besos-quick-filter__count {
+  flex: 0 0 auto;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--bes-text-3);
+}
+.ub-besos-quick-filter.is-active .ub-besos-quick-filter__count {
+  color: var(--bes-gold-soft);
+}
 .ub-besos-plp {
   display: grid;
   grid-template-columns: 240px minmax(0, 1fr);
@@ -1880,6 +1950,9 @@ body.bd-page.besos.eq-shop .eq-mfoot-copy {
 }
 .ub-besos-facets__name {
   line-height: 1.35;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .ub-besos-facets__count {
   font-size: 11px;
