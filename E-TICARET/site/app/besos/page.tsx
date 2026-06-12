@@ -40,9 +40,7 @@ type Props = {
 };
 
 export async function BesosPageContent({ locale = "tr" }: Props) {
-  const { landing, catalogue, projects, heroVideo } = await loadBesosPageData();
-  const products = localizeProducts(catalogue.products ?? [], locale);
-  const serve = landing.serveYou ?? (locale === "en" ? DEFAULT_SERVE_EN : DEFAULT_SERVE_TR);
+  const { landing, heroVideo } = await loadBesosPageData();
 
   return (
     <>
@@ -52,6 +50,20 @@ export async function BesosPageContent({ locale = "tr" }: Props) {
           <BesosMethod steps={landing.method} locale={locale} />
         </div>
         <BesosVitrumVideo video={heroVideo} hero={landing.hero} stats={landing.stats} locale={locale} />
+      </main>
+      <ShopFooterHost />
+    </>
+  );
+}
+
+export async function BesosBarIstasyonlariContent({ locale = "tr" }: Props) {
+  const { landing, catalogue, projects } = await loadBesosPageData();
+  const products = localizeProducts(catalogue.products ?? [], locale);
+  const serve = landing.serveYou ?? (locale === "en" ? DEFAULT_SERVE_EN : DEFAULT_SERVE_TR);
+
+  return (
+    <>
+      <main className="besos-page">
         <BesosSignatureBars items={landing.signatureTrio} products={products} locale={locale} />
         <BesosModular modular={landing.modular} products={products} locale={locale} />
         <BesosServeYou serve={serve} locale={locale} />

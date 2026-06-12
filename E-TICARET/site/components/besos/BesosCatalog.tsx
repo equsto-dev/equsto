@@ -151,6 +151,15 @@ export default function BesosCatalog({ products, locale = "tr" }: Props) {
   useEffect(() => {
     (window as Window & { filterStations?: (q: string) => void }).filterStations = (q) =>
       setQuery(String(q ?? "").trim());
+    try {
+      const stored = sessionStorage.getItem("besos-station-q");
+      if (stored) {
+        setQuery(stored);
+        sessionStorage.removeItem("besos-station-q");
+      }
+    } catch {
+      /* ignore */
+    }
     return () => {
       delete (window as Window & { filterStations?: (q: string) => void }).filterStations;
     };

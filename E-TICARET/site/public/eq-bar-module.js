@@ -77,6 +77,14 @@
       : "/besos";
   }
 
+  function barStationsHref() {
+    var base =
+      typeof window.equstoResolveNavHref === "function"
+        ? window.equstoResolveNavHref("/besos/bar-istasyonlari")
+        : "/besos/bar-istasyonlari";
+    return base + "#bd-stations";
+  }
+
   function render(p) {
     var root = document.getElementById("bm-root");
     if (!root) return;
@@ -174,8 +182,8 @@
       '<button type="button" class="bm-btn bm-btn-outline" id="bm-contact">İletişime Geç</button>' +
       "</div>" +
       '<a class="bm-btn bm-btn-ghost" href="' +
-      esc(besosHref()) +
-      '#bd-stations">← Tüm modüller</a>' +
+      esc(barStationsHref()) +
+      '">← Tüm modüller</a>' +
       "</div></div></div></div>" +
       techSection +
       '<footer class="bm-foot"><a href="' +

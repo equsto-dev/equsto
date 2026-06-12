@@ -177,7 +177,10 @@ function buildCategories(tips) {
 }
 
 function buildBesos() {
-  const urls = [urlEntry(`${ORIGIN}/besos`, { priority: "0.95" })];
+  const urls = [
+    urlEntry(`${ORIGIN}/besos`, { priority: "0.95" }),
+    urlEntry(`${ORIGIN}/besos/bar-istasyonlari`, { priority: "0.92", changefreq: "weekly" }),
+  ];
   const catPath = path.join(PUBLIC, "data", "vitrum-bars-catalogue.json");
   if (!fs.existsSync(catPath)) return urls;
   const data = JSON.parse(fs.readFileSync(catPath, "utf8"));

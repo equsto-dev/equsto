@@ -14,6 +14,8 @@ type Props = {
 export default function BesosVitrumVideo({ video, hero, stats, locale = "tr" }: Props) {
   const h = localizeHero(hero, locale);
   const projectHref = locale === "en" ? "/en/pfos" : "/pfos";
+  const modulesHref =
+    locale === "en" ? "/en/besos/bar-istasyonlari" : "/besos/bar-istasyonlari";
 
   return (
     <section
@@ -50,7 +52,7 @@ export default function BesosVitrumVideo({ video, hero, stats, locale = "tr" }: 
             })}
           </div>
           <div className="bd-vl-cta-row">
-            <Link className="bd-btn bd-btn-primary" href="#bd-stations">
+            <Link className="bd-btn bd-btn-primary" href={modulesHref}>
               {besosUi("browseModules", locale)}
             </Link>
             <Link className="bd-btn" href={projectHref}>

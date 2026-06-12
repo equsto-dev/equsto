@@ -11,10 +11,13 @@ export default function BesosHdrBrand({ active = "vitrin" }: BesosHdrBrandProps)
         <a href="/besos" className={active === "vitrin" ? "is-active" : undefined}>
           Vitrin
         </a>
-        <a href="/besos#bd-stations" className={active === "module" ? "is-active" : undefined}>
+        <a
+          href="/besos/bar-istasyonlari"
+          className={active === "module" ? "is-active" : undefined}
+        >
           Modüller
         </a>
-        <a href="/besos#bd-vitrum-projects">Projeler</a>
+        <a href="/besos/bar-istasyonlari#bd-vitrum-projects">Projeler</a>
         <a href="/besos/imt300" className={active === "imt300" ? "is-active" : undefined}>
           IMT300
         </a>
