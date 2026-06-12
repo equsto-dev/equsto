@@ -1,0 +1,890 @@
+[
+  {
+    "id": 4848,
+    "slug": "avatherm-tepsi-tasima-arabasi-20",
+    "name": "Avatherm Tepsi Taşıma Arabası 20",
+    "sku": "avatherm-tepsi-tasima-arabasi-20",
+    "pdf_hit": {
+      "model": "avatherm-tepsi-tasima-arabasi-20",
+      "listEur": 1275,
+      "via": "slug:avatherm-tepsi-tasima-arabasi-20"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/tepsi-tasima-20-01.jpg",
+    "categories": [
+      {
+        "id": 60,
+        "slug": "tepsi-tasima-arabasi-modelleri",
+        "name": "Tepsi Taşıma Arabası Modelleri"
+      }
+    ],
+    "subcat_slug": "tepsi-tasima-arabasi-modelleri",
+    "subcat_label": "Tepsi Taşıma Arabası Modelleri",
+    "url": "https://www.yukselendustriyel.com/urun/avatherm-tepsi-tasima-arabasi-20/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 4846,
+    "slug": "avatherm-tepsi-tasima-arabasi-12",
+    "name": "Avatherm Tepsi Taşıma Arabası 12",
+    "sku": "avatherm-tepsi-tasima-arabasi-12",
+    "pdf_hit": {
+      "model": "avatherm-tepsi-tasima-arabasi-12",
+      "listEur": 424,
+      "via": "slug:avatherm-tepsi-tasima-arabasi-12"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/tepsi-tasima-12-01.jpg",
+    "categories": [
+      {
+        "id": 60,
+        "slug": "tepsi-tasima-arabasi-modelleri",
+        "name": "Tepsi Taşıma Arabası Modelleri"
+      }
+    ],
+    "subcat_slug": "tepsi-tasima-arabasi-modelleri",
+    "subcat_label": "Tepsi Taşıma Arabası Modelleri",
+    "url": "https://www.yukselendustriyel.com/urun/avatherm-tepsi-tasima-arabasi-12/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 4837,
+    "slug": "avatherm-kilitli-resital-tepsi",
+    "name": "Avatherm Kilitli Resital Tepsi",
+    "sku": "avatherm-kilitli-resital-tepsi",
+    "pdf_hit": {
+      "model": "avatherm-kilitli-resital-tepsi",
+      "listEur": 71,
+      "via": "slug:avatherm-kilitli-resital-tepsi"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/tepsi-resital-kilitli-01.jpg",
+    "categories": [
+      {
+        "id": 59,
+        "slug": "tepsi-modelleri",
+        "name": "Tepsi Modelleri"
+      }
+    ],
+    "subcat_slug": "tepsi-modelleri",
+    "subcat_label": "Tepsi Modelleri",
+    "url": "https://www.yukselendustriyel.com/urun/avatherm-kilitli-resital-tepsi/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 4836,
+    "slug": "avatherm-kilitli-prestij-tepsi",
+    "name": "Avatherm Kilitli Prestij Tepsi",
+    "sku": "avatherm-kilitli-prestij-tepsi",
+    "pdf_hit": {
+      "model": "avatherm-kilitli-prestij-tepsi",
+      "listEur": 71,
+      "via": "slug:avatherm-kilitli-prestij-tepsi"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/tepsi-prestij-kilitli-01.jpg",
+    "categories": [
+      {
+        "id": 59,
+        "slug": "tepsi-modelleri",
+        "name": "Tepsi Modelleri"
+      }
+    ],
+    "subcat_slug": "tepsi-modelleri",
+    "subcat_label": "Tepsi Modelleri",
+    "url": "https://www.yukselendustriyel.com/urun/avatherm-kilitli-prestij-tepsi/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3898,
+    "slug": "avatherm-menu-mobil",
+    "name": "Avatherm Menü Mobil",
+    "sku": "avatherm-menu-mobil",
+    "pdf_hit": {
+      "model": "avatherm-menu-mobil",
+      "listEur": 142,
+      "via": "slug:avatherm-menu-mobil"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/tepsi-menu-mobil-01.jpg",
+    "categories": [
+      {
+        "id": 59,
+        "slug": "tepsi-modelleri",
+        "name": "Tepsi Modelleri"
+      }
+    ],
+    "subcat_slug": "tepsi-modelleri",
+    "subcat_label": "Tepsi Modelleri",
+    "url": "https://www.yukselendustriyel.com/urun/avatherm-menu-mobil/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3894,
+    "slug": "avatherm-prestij-tepsi",
+    "name": "Avatherm Prestij Tepsi",
+    "sku": "avatherm-prestij-tepsi",
+    "pdf_hit": {
+      "model": "avatherm-prestij-tepsi",
+      "listEur": 71,
+      "via": "slug:avatherm-prestij-tepsi"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/tepsi-prestij-01.jpg",
+    "categories": [
+      {
+        "id": 59,
+        "slug": "tepsi-modelleri",
+        "name": "Tepsi Modelleri"
+      }
+    ],
+    "subcat_slug": "tepsi-modelleri",
+    "subcat_label": "Tepsi Modelleri",
+    "url": "https://www.yukselendustriyel.com/urun/avatherm-prestij-tepsi/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3889,
+    "slug": "avatherm-resital-tepsi",
+    "name": "Avatherm Resital Tepsi",
+    "sku": "avatherm-resital-tepsi",
+    "pdf_hit": {
+      "model": "avatherm-resital-tepsi",
+      "listEur": 71,
+      "via": "slug:avatherm-resital-tepsi"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/tepsi-resital-01.jpg",
+    "categories": [
+      {
+        "id": 59,
+        "slug": "tepsi-modelleri",
+        "name": "Tepsi Modelleri"
+      }
+    ],
+    "subcat_slug": "tepsi-modelleri",
+    "subcat_label": "Tepsi Modelleri",
+    "url": "https://www.yukselendustriyel.com/urun/avatherm-resital-tepsi/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3886,
+    "slug": "av18-ekstra-cepli-pizza-cantasi",
+    "name": "AV18 Ekstra Cepli Pizza Çantası",
+    "sku": "av18-ekstra-cepli-pizza-cantasi",
+    "pdf_hit": {
+      "model": "av18-ekstra-cepli-pizza-cantasi",
+      "listEur": 34,
+      "via": "slug:av18-ekstra-cepli-pizza-cantasi"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/av18-ekstracepli-canta-01.jpg",
+    "categories": [
+      {
+        "id": 58,
+        "slug": "fast-food-modelleri",
+        "name": "Fast Food Modelleri"
+      }
+    ],
+    "subcat_slug": "fast-food-modelleri",
+    "subcat_label": "Fast Food Modelleri",
+    "url": "https://www.yukselendustriyel.com/urun/av18-ekstra-cepli-pizza-cantasi/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3884,
+    "slug": "av17-buyuk-multi-servis-cantasi",
+    "name": "AV17 Büyük Multi Servis Çantası",
+    "sku": "av17-buyuk-multi-servis-cantasi",
+    "pdf_hit": {
+      "model": "av17-buyuk-multi-servis-cantasi",
+      "listEur": 34,
+      "via": "slug:av17-buyuk-multi-servis-cantasi"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/av17-multiservis-canta-01.jpg",
+    "categories": [
+      {
+        "id": 58,
+        "slug": "fast-food-modelleri",
+        "name": "Fast Food Modelleri"
+      }
+    ],
+    "subcat_slug": "fast-food-modelleri",
+    "subcat_label": "Fast Food Modelleri",
+    "url": "https://www.yukselendustriyel.com/urun/av17-buyuk-multi-servis-cantasi/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3881,
+    "slug": "av16-pide-cantasi",
+    "name": "AV16 Pide Çantası",
+    "sku": "av16-pide-cantasi",
+    "pdf_hit": {
+      "model": "av16-pide-cantasi",
+      "listEur": 34,
+      "via": "slug:av16-pide-cantasi"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/av16-pide-canta-01-1.jpg",
+    "categories": [
+      {
+        "id": 58,
+        "slug": "fast-food-modelleri",
+        "name": "Fast Food Modelleri"
+      }
+    ],
+    "subcat_slug": "fast-food-modelleri",
+    "subcat_label": "Fast Food Modelleri",
+    "url": "https://www.yukselendustriyel.com/urun/av16-pide-cantasi/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3878,
+    "slug": "av15-buyuk-boy-pizza-cantasi",
+    "name": "AV15 Büyük Boy Pizza Çantası",
+    "sku": "av15-buyuk-boy-pizza-cantasi",
+    "pdf_hit": {
+      "model": "av15-buyuk-boy-pizza-cantasi",
+      "listEur": 80,
+      "via": "slug:av15-buyuk-boy-pizza-cantasi"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/av15-pizza-canta-buyuk-01.jpg",
+    "categories": [
+      {
+        "id": 58,
+        "slug": "fast-food-modelleri",
+        "name": "Fast Food Modelleri"
+      }
+    ],
+    "subcat_slug": "fast-food-modelleri",
+    "subcat_label": "Fast Food Modelleri",
+    "url": "https://www.yukselendustriyel.com/urun/av15-buyuk-boy-pizza-cantasi/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3875,
+    "slug": "av14-orta-boy-pizza-cantasi",
+    "name": "AV14 Orta Boy Pizza Çantası",
+    "sku": "av14-orta-boy-pizza-cantasi",
+    "pdf_hit": {
+      "model": "av14-orta-boy-pizza-cantasi",
+      "listEur": 80,
+      "via": "slug:av14-orta-boy-pizza-cantasi"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/av14-pizza-canta-orta-01.jpg",
+    "categories": [
+      {
+        "id": 58,
+        "slug": "fast-food-modelleri",
+        "name": "Fast Food Modelleri"
+      }
+    ],
+    "subcat_slug": "fast-food-modelleri",
+    "subcat_label": "Fast Food Modelleri",
+    "url": "https://www.yukselendustriyel.com/urun/av14-orta-boy-pizza-cantasi/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3871,
+    "slug": "av13-kucuk-boy-pizza-cantasi",
+    "name": "AV13 Küçük Boy Pizza Çantası",
+    "sku": "av13-kucuk-boy-pizza-cantasi",
+    "pdf_hit": {
+      "model": "av13-kucuk-boy-pizza-cantasi",
+      "listEur": 80,
+      "via": "slug:av13-kucuk-boy-pizza-cantasi"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/av13-pizza-canta-kucuk-01.jpg",
+    "categories": [
+      {
+        "id": 58,
+        "slug": "fast-food-modelleri",
+        "name": "Fast Food Modelleri"
+      }
+    ],
+    "subcat_slug": "fast-food-modelleri",
+    "subcat_label": "Fast Food Modelleri",
+    "url": "https://www.yukselendustriyel.com/urun/av13-kucuk-boy-pizza-cantasi/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3868,
+    "slug": "av12-dikdortgen-servis-cantasi",
+    "name": "AV12 Dikdörtgen Servis Çantası",
+    "sku": "av12-dikdortgen-servis-cantasi",
+    "pdf_hit": {
+      "model": "av12-dikdortgen-servis-cantasi",
+      "listEur": 80,
+      "via": "slug:av12-dikdortgen-servis-cantasi"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/av12-dikdortgen-canta-01.jpg",
+    "categories": [
+      {
+        "id": 58,
+        "slug": "fast-food-modelleri",
+        "name": "Fast Food Modelleri"
+      }
+    ],
+    "subcat_slug": "fast-food-modelleri",
+    "subcat_label": "Fast Food Modelleri",
+    "url": "https://www.yukselendustriyel.com/urun/av12-dikdortgen-servis-cantasi/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3866,
+    "slug": "av11-kare-servis-cantasi",
+    "name": "AV11 Kare Servis Çantası",
+    "sku": "av11-kare-servis-cantasi",
+    "pdf_hit": {
+      "model": "av11-kare-servis-cantasi",
+      "listEur": 80,
+      "via": "slug:av11-kare-servis-cantasi"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/av11-kare-canta-01.jpg",
+    "categories": [
+      {
+        "id": 58,
+        "slug": "fast-food-modelleri",
+        "name": "Fast Food Modelleri"
+      }
+    ],
+    "subcat_slug": "fast-food-modelleri",
+    "subcat_label": "Fast Food Modelleri",
+    "url": "https://www.yukselendustriyel.com/urun/av11-kare-servis-cantasi/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3861,
+    "slug": "avatherm-640-thermobox",
+    "name": "Avatherm 640 Thermobox",
+    "sku": "avatherm-640-thermobox",
+    "pdf_hit": {
+      "model": "avatherm-640-thermobox",
+      "listEur": 215,
+      "via": "slug:avatherm-640-thermobox"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/avatherm-640-thermobox-01.jpg",
+    "categories": [
+      {
+        "id": 58,
+        "slug": "fast-food-modelleri",
+        "name": "Fast Food Modelleri"
+      }
+    ],
+    "subcat_slug": "fast-food-modelleri",
+    "subcat_label": "Fast Food Modelleri",
+    "url": "https://www.yukselendustriyel.com/urun/avatherm-640-thermobox/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3858,
+    "slug": "avatherm-pizzabox",
+    "name": "Avatherm Pizzabox",
+    "sku": "avatherm-pizzabox",
+    "pdf_hit": {
+      "model": "avatherm-pizzabox",
+      "listEur": 255,
+      "via": "slug:avatherm-pizzabox"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/avatherm-pizzabox-01.jpg",
+    "categories": [
+      {
+        "id": 58,
+        "slug": "fast-food-modelleri",
+        "name": "Fast Food Modelleri"
+      }
+    ],
+    "subcat_slug": "fast-food-modelleri",
+    "subcat_label": "Fast Food Modelleri",
+    "url": "https://www.yukselendustriyel.com/urun/avatherm-pizzabox/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3854,
+    "slug": "avatherm-ergoline",
+    "name": "Avatherm Ergoline",
+    "sku": "avatherm-ergoline",
+    "pdf_hit": {
+      "model": "avatherm-ergoline",
+      "listEur": 255,
+      "via": "slug:avatherm-ergoline"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/avatherm-ergoli-01.jpg",
+    "categories": [
+      {
+        "id": 58,
+        "slug": "fast-food-modelleri",
+        "name": "Fast Food Modelleri"
+      }
+    ],
+    "subcat_slug": "fast-food-modelleri",
+    "subcat_label": "Fast Food Modelleri",
+    "url": "https://www.yukselendustriyel.com/urun/avatherm-ergoline/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3853,
+    "slug": "avatherm-hamur-tekne-ve-kapagi",
+    "name": "Avatherm Hamur Tekne ve Kapağı",
+    "sku": "avatherm-hamur-tekne-ve-kapagi",
+    "pdf_hit": {
+      "model": "avatherm-hamur-tekne-ve-kapagi",
+      "listEur": 74,
+      "via": "slug:avatherm-hamur-tekne-ve-kapagi"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/avatherm-hamur-tekne-01.jpg",
+    "categories": [
+      {
+        "id": 62,
+        "slug": "pasta-tasima-modelleri",
+        "name": "Pasta Taşıma Modelleri"
+      }
+    ],
+    "subcat_slug": "pasta-tasima-modelleri",
+    "subcat_label": "Pasta Taşıma Modelleri",
+    "url": "https://www.yukselendustriyel.com/urun/avatherm-hamur-tekne-ve-kapagi/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3848,
+    "slug": "avatherm-hamur-tepsisi",
+    "name": "Avatherm Hamur Tepsisi",
+    "sku": "avatherm-hamur-tepsisi",
+    "pdf_hit": {
+      "model": "avatherm-hamur-tepsisi",
+      "listEur": 34,
+      "via": "slug:avatherm-hamur-tepsisi"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/avatherm-hamur-tepsi-01.jpg",
+    "categories": [
+      {
+        "id": 62,
+        "slug": "pasta-tasima-modelleri",
+        "name": "Pasta Taşıma Modelleri"
+      }
+    ],
+    "subcat_slug": "pasta-tasima-modelleri",
+    "subcat_label": "Pasta Taşıma Modelleri",
+    "url": "https://www.yukselendustriyel.com/urun/avatherm-hamur-tepsisi/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3847,
+    "slug": "avatherm-660-thermobox",
+    "name": "Avatherm 660 Thermobox",
+    "sku": "avatherm-660-thermobox",
+    "pdf_hit": {
+      "model": "avatherm-660-thermobox",
+      "listEur": 675,
+      "via": "slug:avatherm-660-thermobox"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/avatherm-660-01.jpg",
+    "categories": [
+      {
+        "id": 62,
+        "slug": "pasta-tasima-modelleri",
+        "name": "Pasta Taşıma Modelleri"
+      }
+    ],
+    "subcat_slug": "pasta-tasima-modelleri",
+    "subcat_label": "Pasta Taşıma Modelleri",
+    "url": "https://www.yukselendustriyel.com/urun/avatherm-660-thermobox/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3843,
+    "slug": "avatherm-630-thermobox",
+    "name": "Avatherm 630 Thermobox",
+    "sku": "avatherm-630-thermobox",
+    "pdf_hit": {
+      "model": "avatherm-630-thermobox",
+      "listEur": 335,
+      "via": "slug:avatherm-630-thermobox"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/avatherm-630-01.jpg",
+    "categories": [
+      {
+        "id": 62,
+        "slug": "pasta-tasima-modelleri",
+        "name": "Pasta Taşıma Modelleri"
+      }
+    ],
+    "subcat_slug": "pasta-tasima-modelleri",
+    "subcat_label": "Pasta Taşıma Modelleri",
+    "url": "https://www.yukselendustriyel.com/urun/avatherm-630-thermobox/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3841,
+    "slug": "avatherm-180",
+    "name": "Avatherm 180",
+    "sku": "avatherm-180",
+    "pdf_hit": {
+      "model": "avatherm-180",
+      "listEur": 184,
+      "via": "slug:avatherm-180"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/avatherm-180-01.jpg",
+    "categories": [
+      {
+        "id": 61,
+        "slug": "medikal-modeller",
+        "name": "Medikal Modeller"
+      }
+    ],
+    "subcat_slug": "medikal-modeller",
+    "subcat_label": "Medikal Modeller",
+    "url": "https://www.yukselendustriyel.com/urun/avatherm-180/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3836,
+    "slug": "avatherm-f55",
+    "name": "Avatherm F55",
+    "sku": "avatherm-f55",
+    "pdf_hit": {
+      "model": "avatherm-f55",
+      "listEur": 361,
+      "via": "slug:avatherm-f55"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/avatherm-f55-01.jpg",
+    "categories": [
+      {
+        "id": 61,
+        "slug": "medikal-modeller",
+        "name": "Medikal Modeller"
+      }
+    ],
+    "subcat_slug": "medikal-modeller",
+    "subcat_label": "Medikal Modeller",
+    "url": "https://www.yukselendustriyel.com/urun/avatherm-f55/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3829,
+    "slug": "avatherm-f40",
+    "name": "Avatherm F40",
+    "sku": "avatherm-f40",
+    "pdf_hit": {
+      "model": "avatherm-f40",
+      "listEur": 314,
+      "via": "slug:avatherm-f40"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/avatherm-f40-01.jpg",
+    "categories": [
+      {
+        "id": 61,
+        "slug": "medikal-modeller",
+        "name": "Medikal Modeller"
+      }
+    ],
+    "subcat_slug": "medikal-modeller",
+    "subcat_label": "Medikal Modeller",
+    "url": "https://www.yukselendustriyel.com/urun/avatherm-f40/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3827,
+    "slug": "avatherm-f25",
+    "name": "Avatherm F25",
+    "sku": "avatherm-f25",
+    "pdf_hit": {
+      "model": "avatherm-f25",
+      "listEur": 263,
+      "via": "slug:avatherm-f25"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/avatherm-f25-01.jpg",
+    "categories": [
+      {
+        "id": 61,
+        "slug": "medikal-modeller",
+        "name": "Medikal Modeller"
+      }
+    ],
+    "subcat_slug": "medikal-modeller",
+    "subcat_label": "Medikal Modeller",
+    "url": "https://www.yukselendustriyel.com/urun/avatherm-f25/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3822,
+    "slug": "avatherm-f20",
+    "name": "Avatherm F20",
+    "sku": "avatherm-f20",
+    "pdf_hit": {
+      "model": "avatherm-f20",
+      "listEur": 198,
+      "via": "slug:avatherm-f20"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/avatherm-f20-01.jpg",
+    "categories": [
+      {
+        "id": 61,
+        "slug": "medikal-modeller",
+        "name": "Medikal Modeller"
+      }
+    ],
+    "subcat_slug": "medikal-modeller",
+    "subcat_label": "Medikal Modeller",
+    "url": "https://www.yukselendustriyel.com/urun/avatherm-f20/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3819,
+    "slug": "avatherm-f10",
+    "name": "Avatherm F10",
+    "sku": "avatherm-f10",
+    "pdf_hit": {
+      "model": "avatherm-f10",
+      "listEur": 165,
+      "via": "slug:avatherm-f10"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/avatherm-f10-01.jpg",
+    "categories": [
+      {
+        "id": 61,
+        "slug": "medikal-modeller",
+        "name": "Medikal Modeller"
+      }
+    ],
+    "subcat_slug": "medikal-modeller",
+    "subcat_label": "Medikal Modeller",
+    "url": "https://www.yukselendustriyel.com/urun/avatherm-f10/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3812,
+    "slug": "avatherm-waterbox",
+    "name": "Avatherm Waterbox",
+    "sku": "avatherm-waterbox",
+    "pdf_hit": {
+      "model": "avatherm-waterbox",
+      "listEur": 445,
+      "via": "slug:avatherm-waterbox"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/avatherm-waterbox-01.jpg",
+    "categories": [
+      {
+        "id": 57,
+        "slug": "catering-modelleri",
+        "name": "Catering Modelleri"
+      }
+    ],
+    "subcat_slug": "catering-modelleri",
+    "subcat_label": "Catering Modelleri",
+    "url": "https://www.yukselendustriyel.com/urun/avatherm-waterbox/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3809,
+    "slug": "avatherm-50-thermobox",
+    "name": "Avatherm 50 Thermobox",
+    "sku": "avatherm-50-thermobox",
+    "pdf_hit": {
+      "model": "avatherm-50-thermobox",
+      "listEur": 225,
+      "via": "slug:avatherm-50-thermobox"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/avatherm-50-01.jpg",
+    "categories": [
+      {
+        "id": 57,
+        "slug": "catering-modelleri",
+        "name": "Catering Modelleri"
+      }
+    ],
+    "subcat_slug": "catering-modelleri",
+    "subcat_label": "Catering Modelleri",
+    "url": "https://www.yukselendustriyel.com/urun/avatherm-50-thermobox/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3806,
+    "slug": "avatherm-300-thermobox",
+    "name": "Avatherm 300 Thermobox",
+    "sku": "avatherm-300-thermobox",
+    "pdf_hit": {
+      "model": "avatherm-300-thermobox",
+      "listEur": 241,
+      "via": "slug:avatherm-300-thermobox"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/avatherm-300-01.jpg",
+    "categories": [
+      {
+        "id": 57,
+        "slug": "catering-modelleri",
+        "name": "Catering Modelleri"
+      }
+    ],
+    "subcat_slug": "catering-modelleri",
+    "subcat_label": "Catering Modelleri",
+    "url": "https://www.yukselendustriyel.com/urun/avatherm-300-thermobox/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3791,
+    "slug": "avatherm-100-thermobox",
+    "name": "Avatherm 100 Thermobox",
+    "sku": "avatherm-100-thermobox",
+    "pdf_hit": {
+      "model": "avatherm-100-thermobox",
+      "listEur": 214,
+      "via": "slug:avatherm-100-thermobox"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/avatherm-100-01.jpg",
+    "categories": [
+      {
+        "id": 57,
+        "slug": "catering-modelleri",
+        "name": "Catering Modelleri"
+      }
+    ],
+    "subcat_slug": "catering-modelleri",
+    "subcat_label": "Catering Modelleri",
+    "url": "https://www.yukselendustriyel.com/urun/avatherm-100-thermobox/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3784,
+    "slug": "avatherm-600x2-double-thermobox",
+    "name": "Avatherm 600X2 Double Thermobox",
+    "sku": "avatherm-600x2-double-thermobox",
+    "pdf_hit": {
+      "model": "avatherm-600x2-double-thermobox",
+      "listEur": 2140,
+      "via": "slug:avatherm-600x2-double-thermobox"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/avatherm-600x2-double-01.jpg",
+    "categories": [
+      {
+        "id": 57,
+        "slug": "catering-modelleri",
+        "name": "Catering Modelleri"
+      }
+    ],
+    "subcat_slug": "catering-modelleri",
+    "subcat_label": "Catering Modelleri",
+    "url": "https://www.yukselendustriyel.com/urun/avatherm-600x2-double-thermobox/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3777,
+    "slug": "avatherm-600x2-thermobox",
+    "name": "Avatherm 600X2 Thermobox",
+    "sku": "avatherm-600x2-thermobox",
+    "pdf_hit": {
+      "model": "avatherm-600x2-thermobox",
+      "listEur": 639,
+      "via": "slug:avatherm-600x2-thermobox"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/avatherm-600x2-01-1.jpg",
+    "categories": [
+      {
+        "id": 57,
+        "slug": "catering-modelleri",
+        "name": "Catering Modelleri"
+      }
+    ],
+    "subcat_slug": "catering-modelleri",
+    "subcat_label": "Catering Modelleri",
+    "url": "https://www.yukselendustriyel.com/urun/avatherm-600x2-thermobox/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3771,
+    "slug": "avatherm-601-m-thermobox",
+    "name": "Avatherm 601 M Thermobox",
+    "sku": "avatherm-601-m-thermobox",
+    "pdf_hit": {
+      "model": "avatherm-601-m-thermobox",
+      "listEur": 251,
+      "via": "slug:avatherm-601-m-thermobox"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/avatherm-601m-01.jpg",
+    "categories": [
+      {
+        "id": 57,
+        "slug": "catering-modelleri",
+        "name": "Catering Modelleri"
+      }
+    ],
+    "subcat_slug": "catering-modelleri",
+    "subcat_label": "Catering Modelleri",
+    "url": "https://www.yukselendustriyel.com/urun/avatherm-601-m-thermobox/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3768,
+    "slug": "avatherm-601-thermobox",
+    "name": "Avatherm 601 Thermobox",
+    "sku": "avatherm-601-thermobox",
+    "pdf_hit": {
+      "model": "avatherm-601-thermobox",
+      "listEur": 225,
+      "via": "slug:avatherm-601-thermobox"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/avatherm-601-01.jpg",
+    "categories": [
+      {
+        "id": 57,
+        "slug": "catering-modelleri",
+        "name": "Catering Modelleri"
+      }
+    ],
+    "subcat_slug": "catering-modelleri",
+    "subcat_label": "Catering Modelleri",
+    "url": "https://www.yukselendustriyel.com/urun/avatherm-601-thermobox/",
+    "fetched_at": "2026-06-12"
+  },
+  {
+    "id": 3764,
+    "slug": "avatherm-200-thermobox",
+    "name": "Avatherm 200 Thermobox",
+    "sku": "avatherm-200-thermobox",
+    "pdf_hit": {
+      "model": "avatherm-200-thermobox",
+      "listEur": 314,
+      "via": "slug:avatherm-200-thermobox"
+    },
+    "attributes": [],
+    "image_url": "https://www.yukselendustriyel.com/wp-content/uploads/2019/10/avatherm-200-01.jpg",
+    "categories": [
+      {
+        "id": 57,
+        "slug": "catering-modelleri",
+        "name": "Catering Modelleri"
+      }
+    ],
+    "subcat_slug": "catering-modelleri",
+    "subcat_label": "Catering Modelleri",
+    "url": "https://www.yukselendustriyel.com/urun/avatherm-200-thermobox/",
+    "fetched_at": "2026-06-12"
+  }
+]
