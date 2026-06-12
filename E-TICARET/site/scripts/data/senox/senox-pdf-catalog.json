@@ -1,9 +1,9 @@
 {
-  "source": "c:\\D Disk\\FİYAT LİSTELERİ\\SENOX 2026-1-1.pdf",
+  "source": "c:\\D Disk\\FİYAT LİSTELERİ\\SENOX 2026-1 4 (1).pdf",
   "liste": "SENOX 2026-1",
-  "scrapedAt": "2026-06-08T23:09:21.719625+00:00",
-  "pages": 54,
-  "productCount": 237,
+  "scrapedAt": "2026-06-12T07:41:22.534778+00:00",
+  "pages": 55,
+  "productCount": 245,
   "products": [
     {
       "model": "160LK",
@@ -63,14 +63,69 @@
       "parseSource": "code-line"
     },
     {
+      "model": "40LK",
+      "title": "Senox 40 LK",
+      "page": 5,
+      "categoryGroup": "Soğutma",
+      "category": "Su Sebilleri",
+      "anchorY": 75.8,
+      "anchorX": 839.9,
+      "description": "Senox 40 LK\n430 paslanmaz krom dış yuzeyi bulunmaktadır.",
+      "specs": {
+        "fiyat_eur": "340",
+        "fiyat_eur_source": "page-order"
+      },
+      "parseSource": "senox-title"
+    },
+    {
+      "model": "40LK-AS",
+      "title": "Senox 40LK-AS",
+      "page": 5,
+      "categoryGroup": "Soğutma",
+      "category": "Su Sebilleri",
+      "anchorY": 257.0,
+      "anchorX": 851.7,
+      "description": "40 LK AS\n190 EUR\n220 V ~ 50Hz\n15 kg\n63 kg\n300 x 292x 856\nR134a\n“Filtreler” altı (6) ayda\n“Tatlandırıcı” bir (1) yılda",
+      "specs": {
+        "ebat_mm": "300 x 292 x 856",
+        "genislik_mm": 300,
+        "derinlik_mm": 292,
+        "yukseklik_mm": 856,
+        "fiyat_eur": "190",
+        "voltaj": "220 V ~ 50Hz",
+        "agirlik_kg": "15"
+      },
+      "parseSource": "lk-line"
+    },
+    {
+      "model": "40LKAS",
+      "title": "40LKAS",
+      "page": 5,
+      "categoryGroup": "Soğutma",
+      "category": "Su Sebilleri",
+      "anchorY": 257.0,
+      "anchorX": 851.7,
+      "description": "40 LK AS\n190 EUR\n220 V ~ 50Hz\n15 kg\n63 kg\n300 x 292x 856\nR134a\n“Filtreler” altı (6) ayda\n“Tatlandırıcı” bir (1) yılda",
+      "specs": {
+        "ebat_mm": "300 x 292 x 856",
+        "genislik_mm": 300,
+        "derinlik_mm": 292,
+        "yukseklik_mm": 856,
+        "fiyat_eur": "190",
+        "voltaj": "220 V ~ 50Hz",
+        "agirlik_kg": "15"
+      },
+      "parseSource": "code-line"
+    },
+    {
       "model": "500LK",
-      "title": "SENOX - 160 / 300 / 400 / 500 LK",
+      "title": "Senox 160 / 300 / 400 / 500 LK",
       "page": 5,
       "categoryGroup": "Soğutma",
       "category": "Su Sebilleri",
       "anchorY": 595.4,
-      "anchorX": 884.3,
-      "description": "SENOX - 160 / 300 / 400 / 500 LK\n430 paslanmaz krom dış yuzey bulunmaktadır.\nİç haznes paslanmaz 304 krom meteryalden monoblok olarak üretilmştir\nYalıtımda kullanılan enjeksyon polüretan ile ısı kaybı mnmum sevyededir.\nŞebekeye bağlanabilen şamandıralı sistemdir\nManuel termostat sayesinde su sıcaklığı kolaylıkla kontrol edilir\nUzun ömürlü çevirmeli musluk sistem bulunmaktadır\nŞebeke su ile ya da opsiyonel olarak damacana kapak ilavesyle damacanalı sistem olarak da\nkullanılabilmektedir.\nFiyat\nElektrik Gücü\nEbatlar (mm)\nAğırlık\nFiyat\nVoltaj\nEbatlar (mm)\nModel\n2800 EUR\n220 V ~ 50Hz\n160LK\n800 EUR\n430 x 310x 1120\n955 x 605x 1755\n4600 EUR\n220 V ~ 50Hz\n1225 x 605x 1755\n300LK\n5200 EUR\n220 V ~ 50Hz\n1505 x 605 x 1755\n400LK\n5700 EUR\n1400 x 660 x 2400\n220 V ~ 50Hz\n500LK\n6\nwww.senox.com.tr",
+      "anchorX": 878.8,
+      "description": "Senox 160 / 300 / 400 / 500 LK\n430 paslanmaz krom dış yuzey bulunmaktadır.\nİç haznes paslanmaz 304 krom meteryalden monoblok olarak üretilmştir\nYalıtımda kullanılan enjeksyon polüretan ile ısı kaybı mnmum sevyededir.\nŞebekeye bağlanabilen şamandıralı sistemdir\nManuel termostat sayesinde su sıcaklığı kolaylıkla kontrol edilir\nUzun ömürlü çevirmeli musluk sistem bulunmaktadır\nŞebeke su ile ya da opsiyonel olarak damacana kapak ilavesyle damacanalı sistem olarak da\nkullanılabilmektedir.\nFiyat\nElektrik Gücü\nEbatlar (mm)\nAğırlık\nFiyat\nVoltaj\nEbatlar (mm)\nModel\n2800 EUR\n220 V ~ 50Hz\n160LK\n800 EUR\n430 x 310x 1120\n955 x 605x 1755\n4600 EUR\n220 V ~ 50Hz\n1225 x 605x 1755\n300LK\n5200 EUR\n220 V ~ 50Hz\n1505 x 605 x 1755\n400LK\n5700 EUR\n1400 x 660 x 2400\n220 V ~ 50Hz\n500LK\n6\nwww.senox.com.tr",
       "specs": {
         "ebat_mm": "430 x 310 x 1120",
         "genislik_mm": 430,
@@ -83,35 +138,34 @@
     },
     {
       "model": "80LK",
-      "title": "SENOX - 80 LK",
+      "title": "80LK",
       "page": 5,
       "categoryGroup": "Soğutma",
       "category": "Su Sebilleri",
-      "anchorY": 101.7,
-      "anchorX": 845.5,
-      "description": "SENOX - 80 LK\n430 paslanmaz krom dış yuzeyi bulunmaktadır.\nİç haznesi paslanmaz 304 krom meteryalden mono blok olarak üretilmiştir.\nYalıtımda kullanılan enjeksiyon poliüretan ile ısı\nkaybı minimum seviyededir.\nŞebekeye bağlanabilen şamandıralı sistemlerdir.\nManuel termostat sayesinde su sıcaklığı kolaylıkla kontrol edilir.\nUzun ömürlü çevirmeli musluk sistemi bulunmaktadır.\nŞebeke su ile veya damacana kapak ilavesiyle, damacanalı sistem olarak da kullanılabilmektedir.\nSoğutucu Gaz: R134A\nFiyat\nAğırlık\nVoltaj\nElektrik Gücü\nEbatlar (mm)\nAğırlık\nFiyat\nEbatlar (mm)\n610 x 430x 1550\n1100 EUR\n220 V ~ 50Hz\n250 W\n63 kg\n190 EUR\n15 kg\n300 x 292x 856\n“Filtreler” altı (6) ayda\n“Tatlandırıcı” bir (1) yılda",
+      "anchorY": 496.7,
+      "anchorX": 852.0,
+      "description": "80 LK\n310 x 340x 1045\n63 kg\nVN25HA\n220 V ~ 50Hz\n150 W\n1400 EUR",
       "specs": {
-        "ebat_mm": "610 x 430 x 1550",
-        "genislik_mm": 610,
-        "derinlik_mm": 430,
-        "yukseklik_mm": 1550,
-        "fiyat_eur": "1100",
-        "sogutucu_gaz": "R134A",
+        "ebat_mm": "310 x 340 x 1045",
+        "genislik_mm": 310,
+        "derinlik_mm": 340,
+        "yukseklik_mm": 1045,
+        "fiyat_eur": "1400",
         "voltaj": "220 V ~ 50Hz",
-        "elektrik_gucu": "250 W",
+        "elektrik_gucu": "150 W",
         "agirlik_kg": "63"
       },
-      "parseSource": "senox-title"
+      "parseSource": "code-line"
     },
     {
       "model": "80LK-AS",
-      "title": "SENOX - 80 LK-AS",
+      "title": "Senox 80 LK-AS 80lt",
       "page": 5,
       "categoryGroup": "Soğutma",
       "category": "Su Sebilleri",
       "anchorY": 341.4,
-      "anchorX": 853.8,
-      "description": "SENOX - 80 LK-AS",
+      "anchorX": 859.7,
+      "description": "Senox 80 LK-AS 80lt",
       "specs": {
         "fiyat_eur": "190",
         "fiyat_eur_source": "page-order"
@@ -119,17 +173,44 @@
       "parseSource": "senox-title"
     },
     {
+      "model": "80LKAS",
+      "title": "80LKAS",
+      "page": 5,
+      "categoryGroup": "Soğutma",
+      "category": "Su Sebilleri",
+      "anchorY": 510.7,
+      "anchorX": 852.3,
+      "description": "80 LK AS\n250 W\n610 x 430x 1550\n310 x 340x 1045\n550 EUR\n63 kg\n150 W\n220 V ~ 50Hz\nVN25RO",
+      "specs": {
+        "ebat_mm": "610 x 430 x 1550",
+        "genislik_mm": 610,
+        "derinlik_mm": 430,
+        "yukseklik_mm": 1550,
+        "fiyat_eur": "550",
+        "voltaj": "220 V ~ 50Hz",
+        "elektrik_gucu": "250 W",
+        "agirlik_kg": "63"
+      },
+      "parseSource": "code-line"
+    },
+    {
       "model": "DS-01",
-      "title": "SENOX - DS-01 Sıcak Soğuk Su Sebili Üstten Damacanalı",
+      "title": "Senox DS-01 Sıcak Soğuk Su Sebili Üstten Damacanalı",
       "page": 5,
       "categoryGroup": "Soğutma",
       "category": "Su Sebilleri",
       "anchorY": 101.6,
-      "anchorX": 362.9,
-      "description": "SENOX - DS-01 Sıcak Soğuk Su Sebili Üstten Damacanalı",
+      "anchorX": 357.3,
+      "description": "Senox DS-01 Sıcak Soğuk Su Sebili Üstten Damacanalı\nÜrün Rengi Inox\nElektrik Tüketimi 110W\nSoğuk Su Tank Kapasitesi 3.2 Litre\nSoğuk Su Tank Malzemesı 304 Kalite Paslanmaz Çelik, Kaynaksız, Tek Parçadır.\nSoğuk Su Derecesi Aralığı 6-8 C\nSoğutma Kapasitesi ( lt / saat ) 2.0 Litre / Saat\nElektrik Gücü : 110 W\nAğırlık\nFiyat\nEbatlar (mm)\nSoğutucu Gaz\nVoltaj\n190 EUR\n220 V ~ 50Hz\n15 kg\n300 x 292x 856\nR134a",
       "specs": {
-        "fiyat_eur": "340",
-        "fiyat_eur_source": "page-order"
+        "ebat_mm": "300 x 292 x 856",
+        "genislik_mm": 300,
+        "derinlik_mm": 292,
+        "yukseklik_mm": 856,
+        "fiyat_eur": "190",
+        "voltaj": "220 V ~ 50Hz",
+        "elektrik_gucu": "110W",
+        "agirlik_kg": "15"
       },
       "parseSource": "senox-title"
     },
@@ -154,8 +235,8 @@
       "page": 5,
       "categoryGroup": "Soğutma",
       "category": "Su Sebilleri",
-      "anchorY": 342.2,
-      "anchorX": 305.3,
+      "anchorY": 342.7,
+      "anchorX": 306.5,
       "description": "Senox DS-03 Arıtmalı Su Sebili\nFonksiyon: Sıcak / Normal / Soğuk Su\nSu Tankı Malzeme : 304 SSCr-Ni>7\nSoğuk Su Tankı Kapasitesi : 3.2 Litre\nSoğuk Su Tankı Kaynaksız Yekparedir.\nSıcak Su Tankı Kapasitesi : 1 Litre\nIsıtma Derecesi : 85*90 ° C\nSoğutma Derecesi +1.5/ 12.5 ° C\nSoğutma Gaz : R134 - Ecologictype\nEvaporator Grade : Mng23\nVoltaj\nAğırlık\nElektrik Gücü\nEbatlar (mm)\nFiyat\nÜrün Kodu\n340 EUR\n310 x 340x 1045\nVN25HA\n220 V ~ 50Hz\n150 W\n310 x 340x 1045\n550 EUR\n150 W\n220 V ~ 50Hz\nVN25RO",
       "specs": {
         "ebat_mm": "310 x 340 x 1045",
@@ -179,7 +260,7 @@
       "anchorX": 347.6,
       "description": "Senox DS-04 Sıcak-Soguk Buz Yapan Su Sebili",
       "specs": {
-        "fiyat_eur": "1400",
+        "fiyat_eur": "1100",
         "fiyat_eur_source": "page-order"
       },
       "parseSource": "senox-title"
@@ -242,13 +323,13 @@
     },
     {
       "model": "SNX-35SC",
-      "title": "SENOX - SNX-35SC Cam Kapılı Minibar",
+      "title": "Senox SNX-35SC Cam Kapılı Minibar",
       "page": 6,
       "categoryGroup": "Otel Ekipmanları",
       "category": "Minibar",
       "anchorY": 106.7,
-      "anchorX": 704.7,
-      "description": "SENOX - SNX-35SC Cam Kapılı Minibar\nPeltier Sistemli\nUzun Ömürlü Soğutma Sistemi\nGaz Kaçağı Riski Olmayan, Gazsız, Kimya ile Mühendisliğin Birleştiği Yeni Nesil Teknoloji\nEnerji Tüketimi Diğer Sistemlerin 1/10'u Kadar\nCamlı Şık Tasarım\n3MM Plastik Kaplı Dayanıklı Raf Teli\nElektrostatik Toz Boyalı\nDiğer Sistemlere Göre %50 Daha Fazla Isı İzolasyonu\nSes Düzeyi 10 Desibel Altında\nTitreşimsiz Çalışma\nFişe Takıldıktan Sonra 4 Dakika İçerisinde Soğutma\nsenox\nRenk Seçeneklerਟ\nFiyat\nKapasite (L)\nEbatlar (mm)\n300 EUR\n370x460x500\n37cm\n35\n46cm\n50cm",
+      "anchorX": 699.2,
+      "description": "Senox SNX-35SC Cam Kapılı Minibar\nPeltier Sistemli\nUzun Ömürlü Soğutma Sistemi\nGaz Kaçağı Riski Olmayan, Gazsız, Kimya ile Mühendisliğin Birleştiği Yeni Nesil Teknoloji\nEnerji Tüketimi Diğer Sistemlerin 1/10'u Kadar\nCamlı Şık Tasarım\n3MM Plastik Kaplı Dayanıklı Raf Teli\nElektrostatik Toz Boyalı\nDiğer Sistemlere Göre %50 Daha Fazla Isı İzolasyonu\nSes Düzeyi 10 Desibel Altında\nTitreşimsiz Çalışma\nFişe Takıldıktan Sonra 4 Dakika İçerisinde Soğutma\nsenox\nRenk Seçeneklerਟ\nFiyat\nKapasite (L)\nEbatlar (mm)\n300 EUR\n370x460x500\n37cm\n35\n46cm\n50cm",
       "specs": {
         "ebat_mm": "370 x 460 x 500",
         "genislik_mm": 370,
@@ -260,13 +341,13 @@
     },
     {
       "model": "BBC-150",
-      "title": "SENOX - BBC-150",
+      "title": "Senox BBC-150",
       "page": 7,
       "categoryGroup": "Soğutma",
       "category": "Şişe Soğutucular",
       "anchorY": 111.5,
-      "anchorX": 665.6,
-      "description": "SENOX - BBC-150\nPVC kaplı sac iç ve dış gövde.\nCFC içermeyen, yüksek basınçla enjekte edilmiş, 40 mm kalınlığında poliüretan\nizolasyon.\nÖzel tasarım rolbond evaporatör.\nKilitli cam kapılar.\nLed aydınlatmalı iç kabin.\nAyarlanabilir iç rafla.\nİç ısı dağılımını sağlayan fanlı sistem.\nAnalog Termostat\nAğırlık\nFiyat\nEbatlar (mm)\nSoğutucu Gaz\nVoltaj\n41 kg\n220 V ~ 50Hz\n1100 EUR\n600 x 505 x 850\nR600a",
+      "anchorX": 660.0,
+      "description": "Senox BBC-150\nPVC kaplı sac iç ve dış gövde.\nCFC içermeyen, yüksek basınçla enjekte edilmiş, 40 mm kalınlığında poliüretan\nizolasyon.\nÖzel tasarım rolbond evaporatör.\nKilitli cam kapılar.\nLed aydınlatmalı iç kabin.\nAyarlanabilir iç rafla.\nİç ısı dağılımını sağlayan fanlı sistem.\nAnalog Termostat\nAğırlık\nFiyat\nEbatlar (mm)\nSoğutucu Gaz\nVoltaj\n41 kg\n220 V ~ 50Hz\n1100 EUR\n600 x 505 x 850\nR600a",
       "specs": {
         "ebat_mm": "600 x 505 x 850",
         "genislik_mm": 600,
@@ -280,13 +361,13 @@
     },
     {
       "model": "BBC-250",
-      "title": "SENOX - BBC-250 (Çarpma Kapılı) / BBCS-250 (Sürgü Kapılı)",
+      "title": "Senox BBC-250 (Çarpma Kapılı) / BBCS-250 (Sürgü Kapılı)",
       "page": 7,
       "categoryGroup": "Soğutma",
       "category": "Şişe Soğutucular",
       "anchorY": 350.5,
-      "anchorX": 764.3,
-      "description": "SENOX - BBC-250 (Çarpma Kapılı) / BBCS-250 (Sürgü Kapılı)\nPVC kaplı sac iç ve dış gövde.\nCFC içermeyen, yüksek basınçla enjekte edilmiş, 40 mm kalınlığında poliüretan\nizolasyon.\nÖzel tasarım rolbond evaporatör.\nKilitli cam kapılar.\nLed aydınlatmalı iç kabin.\nAyarlanabilir iç rafla.\nİç ısı dağılımını sağlayan fanlı sistem\nSoğutucu Gaz: R600A\nAğırlık\nFiyat\nEbatlar (mm)\nVoltaj\nÜrün Kodu\n55 kg\n900 x 505 x 850\n1250 EUR\n220 V ~ 50Hz\nBBC-250\n1300 EUR\n55 kg\n220 V ~ 50Hz\n900 x 505 x 850\nBBCS-250",
+      "anchorX": 758.7,
+      "description": "Senox BBC-250 (Çarpma Kapılı) / BBCS-250 (Sürgü Kapılı)\nPVC kaplı sac iç ve dış gövde.\nCFC içermeyen, yüksek basınçla enjekte edilmiş, 40 mm kalınlığında poliüretan\nizolasyon.\nÖzel tasarım rolbond evaporatör.\nKilitli cam kapılar.\nLed aydınlatmalı iç kabin.\nAyarlanabilir iç rafla.\nİç ısı dağılımını sağlayan fanlı sistem\nSoğutucu Gaz: R600A\nAğırlık\nFiyat\nEbatlar (mm)\nVoltaj\nÜrün Kodu\n55 kg\n900 x 505 x 850\n1250 EUR\n220 V ~ 50Hz\nBBC-250\n1300 EUR\n55 kg\n220 V ~ 50Hz\n900 x 505 x 850\nBBCS-250",
       "specs": {
         "ebat_mm": "900 x 505 x 850",
         "genislik_mm": 900,
@@ -301,13 +382,13 @@
     },
     {
       "model": "BBC-350",
-      "title": "SENOX - BBC-350 (Çarpma Kapılı) / SENOX - BBCS-350 (Sürgü Kapılı)",
+      "title": "Senox BBC-350 (Çarpma Kapılı) / Senox BBCS-350 (Sürgü Kapılı)",
       "page": 7,
       "categoryGroup": "Soğutma",
       "category": "Şişe Soğutucular",
       "anchorY": 592.9,
-      "anchorX": 789.3,
-      "description": "SENOX - BBC-350 (Çarpma Kapılı) / SENOX - BBCS-350 (Sürgü Kapılı)\nPVC kaplı sac iç ve dış gövde.\nCFC içermeyen, yüksek basınçla enjekte edilmiş, 40 mm kalınlığında poliüretan izolasyon.\nÖzel tasarım rolbond evaporatör.\nKilitli cam kapılar.\nLed aydınlatmalı iç kabin.\nAyarlanabilir iç rafla.\nİç ısı dağılımını sağlayan fanlı sistem\nSoğutucu Gaz: R600A\nAğırlık\nFiyat\nEbatlar (mm)\nVoltaj\nÜrün Kodu\n75 kg\n1350 x 505 x 850\n1500 EUR\nBBC-350\n220 V ~ 50Hz\n1600 EUR\n220 V ~ 50Hz\n1350 x 505 x 850\n75 kg\nBBCS-350\n10\nwww.senox.com.tr",
+      "anchorX": 778.2,
+      "description": "Senox BBC-350 (Çarpma Kapılı) / Senox BBCS-350 (Sürgü Kapılı)\nPVC kaplı sac iç ve dış gövde.\nCFC içermeyen, yüksek basınçla enjekte edilmiş, 40 mm kalınlığında poliüretan izolasyon.\nÖzel tasarım rolbond evaporatör.\nKilitli cam kapılar.\nLed aydınlatmalı iç kabin.\nAyarlanabilir iç rafla.\nİç ısı dağılımını sağlayan fanlı sistem\nSoğutucu Gaz: R600A\nAğırlık\nFiyat\nEbatlar (mm)\nVoltaj\nÜrün Kodu\n75 kg\n1350 x 505 x 850\n1500 EUR\nBBC-350\n220 V ~ 50Hz\n1600 EUR\n220 V ~ 50Hz\n1350 x 505 x 850\n75 kg\nBBCS-350\n10\nwww.senox.com.tr",
       "specs": {
         "ebat_mm": "1350 x 505 x 850",
         "genislik_mm": 1350,
@@ -322,13 +403,13 @@
     },
     {
       "model": "BBCS-250",
-      "title": "SENOX - BBC-250 (Çarpma Kapılı) / BBCS-250 (Sürgü Kapılı)",
+      "title": "Senox BBC-250 (Çarpma Kapılı) / BBCS-250 (Sürgü Kapılı)",
       "page": 7,
       "categoryGroup": "Soğutma",
       "category": "Şişe Soğutucular",
       "anchorY": 350.5,
-      "anchorX": 764.3,
-      "description": "SENOX - BBC-250 (Çarpma Kapılı) / BBCS-250 (Sürgü Kapılı)\nPVC kaplı sac iç ve dış gövde.\nCFC içermeyen, yüksek basınçla enjekte edilmiş, 40 mm kalınlığında poliüretan\nizolasyon.\nÖzel tasarım rolbond evaporatör.\nKilitli cam kapılar.\nLed aydınlatmalı iç kabin.\nAyarlanabilir iç rafla.\nİç ısı dağılımını sağlayan fanlı sistem\nSoğutucu Gaz: R600A\nAğırlık\nFiyat\nEbatlar (mm)\nVoltaj\nÜrün Kodu\n55 kg\n900 x 505 x 850\n1250 EUR\n220 V ~ 50Hz\nBBC-250\n1300 EUR\n55 kg\n220 V ~ 50Hz\n900 x 505 x 850\nBBCS-250",
+      "anchorX": 758.7,
+      "description": "Senox BBC-250 (Çarpma Kapılı) / BBCS-250 (Sürgü Kapılı)\nPVC kaplı sac iç ve dış gövde.\nCFC içermeyen, yüksek basınçla enjekte edilmiş, 40 mm kalınlığında poliüretan\nizolasyon.\nÖzel tasarım rolbond evaporatör.\nKilitli cam kapılar.\nLed aydınlatmalı iç kabin.\nAyarlanabilir iç rafla.\nİç ısı dağılımını sağlayan fanlı sistem\nSoğutucu Gaz: R600A\nAğırlık\nFiyat\nEbatlar (mm)\nVoltaj\nÜrün Kodu\n55 kg\n900 x 505 x 850\n1250 EUR\n220 V ~ 50Hz\nBBC-250\n1300 EUR\n55 kg\n220 V ~ 50Hz\n900 x 505 x 850\nBBCS-250",
       "specs": {
         "ebat_mm": "900 x 505 x 850",
         "genislik_mm": 900,
@@ -343,13 +424,13 @@
     },
     {
       "model": "BBCS-350",
-      "title": "SENOX - BBC-350 (Çarpma Kapılı) / SENOX - BBCS-350 (Sürgü Kapılı)",
+      "title": "Senox BBC-350 (Çarpma Kapılı) / Senox BBCS-350 (Sürgü Kapılı)",
       "page": 7,
       "categoryGroup": "Soğutma",
       "category": "Şişe Soğutucular",
       "anchorY": 592.9,
-      "anchorX": 789.3,
-      "description": "SENOX - BBC-350 (Çarpma Kapılı) / SENOX - BBCS-350 (Sürgü Kapılı)\nPVC kaplı sac iç ve dış gövde.\nCFC içermeyen, yüksek basınçla enjekte edilmiş, 40 mm kalınlığında poliüretan izolasyon.\nÖzel tasarım rolbond evaporatör.\nKilitli cam kapılar.\nLed aydınlatmalı iç kabin.\nAyarlanabilir iç rafla.\nİç ısı dağılımını sağlayan fanlı sistem\nSoğutucu Gaz: R600A\nAğırlık\nFiyat\nEbatlar (mm)\nVoltaj\nÜrün Kodu\n75 kg\n1350 x 505 x 850\n1500 EUR\nBBC-350\n220 V ~ 50Hz\n1600 EUR\n220 V ~ 50Hz\n1350 x 505 x 850\n75 kg\nBBCS-350\n10\nwww.senox.com.tr",
+      "anchorX": 778.2,
+      "description": "Senox BBC-350 (Çarpma Kapılı) / Senox BBCS-350 (Sürgü Kapılı)\nPVC kaplı sac iç ve dış gövde.\nCFC içermeyen, yüksek basınçla enjekte edilmiş, 40 mm kalınlığında poliüretan izolasyon.\nÖzel tasarım rolbond evaporatör.\nKilitli cam kapılar.\nLed aydınlatmalı iç kabin.\nAyarlanabilir iç rafla.\nİç ısı dağılımını sağlayan fanlı sistem\nSoğutucu Gaz: R600A\nAğırlık\nFiyat\nEbatlar (mm)\nVoltaj\nÜrün Kodu\n75 kg\n1350 x 505 x 850\n1500 EUR\nBBC-350\n220 V ~ 50Hz\n1600 EUR\n220 V ~ 50Hz\n1350 x 505 x 850\n75 kg\nBBCS-350\n10\nwww.senox.com.tr",
       "specs": {
         "ebat_mm": "1350 x 505 x 850",
         "genislik_mm": 1350,
@@ -456,13 +537,13 @@
     },
     {
       "model": "SDS265",
-      "title": "SENOX - SDS 265 DC 1 CF Slim Tip Soğutucu",
+      "title": "Senox SDS 265 DC 1 CF Slim Tip Soğutucu",
       "page": 9,
       "categoryGroup": "Soğutma",
       "category": "Şişe Soğutucular",
       "anchorY": 339.7,
-      "anchorX": 759.8,
-      "description": "SENOX - SDS 265 DC 1 CF Slim Tip Soğutucu",
+      "anchorX": 754.3,
+      "description": "Senox SDS 265 DC 1 CF Slim Tip Soğutucu",
       "specs": {
         "fiyat_eur": "800",
         "fiyat_eur_source": "page-order"
@@ -471,13 +552,13 @@
     },
     {
       "model": "SDS385",
-      "title": "SENOX - SDS 385 DC 1 CF",
+      "title": "Senox SDS 385 DC 1 CF",
       "page": 9,
       "categoryGroup": "Soğutma",
       "category": "Şişe Soğutucular",
       "anchorY": 105.3,
-      "anchorX": 715.3,
-      "description": "SENOX - SDS 385 DC 1 CF\nNet Hacim 345\nIsı Aralığı: 0 - +10°C\nRaf sayısı 5\n500ml şişe yükleme kapasitesi 80\nadet İzolasyon Kalınlığı 50\nİklim Sınıfı B/C\nDijital Termostat\nLed aydınlatma\nIp24 su geçirmezlik\nAğırlık\nFiyat\nSoğutucu Gaz\nEbatlar (mm)\nVoltaj\n220 V ~ 50Hz\nR134a\n80 kg\n800 EUR\n595 x 605x 1994",
+      "anchorX": 709.7,
+      "description": "Senox SDS 385 DC 1 CF\nNet Hacim 345\nIsı Aralığı: 0 - +10°C\nRaf sayısı 5\n500ml şişe yükleme kapasitesi 80\nadet İzolasyon Kalınlığı 50\nİklim Sınıfı B/C\nDijital Termostat\nLed aydınlatma\nIp24 su geçirmezlik\nAğırlık\nFiyat\nSoğutucu Gaz\nEbatlar (mm)\nVoltaj\n220 V ~ 50Hz\nR134a\n80 kg\n800 EUR\n595 x 605x 1994",
       "specs": {
         "ebat_mm": "595 x 605 x 1994",
         "genislik_mm": 595,
@@ -491,13 +572,13 @@
     },
     {
       "model": "SDS710",
-      "title": "SENOX - SDS 710 DC Dik Tip Soğutucu Kanopisiz",
+      "title": "Senox SDS 710 DC Dik Tip Soğutucu Kanopisiz",
       "page": 9,
       "categoryGroup": "Soğutma",
       "category": "Şişe Soğutucular",
       "anchorY": 613.0,
-      "anchorX": 772.0,
-      "description": "SENOX - SDS 710 DC Dik Tip Soğutucu Kanopisiz\nHacim Brüt/Net (lt) - 728/678\nÇalışma Sıcaklığı -18\nEnerji Sınıfı/Tüketimi B/1,24 Raf Sayısı 5\nIsı Aralığı: 0 /-18°C\nFiyat\nAğırlık\nEbatlar (mm)\nVoltaj\nSoğutucu Gaz\nR290a\n1450 EUR\n220 V ~ 50Hz\n157 kg\n980x740x2145\n14\nwww.senox.com.tr",
+      "anchorX": 766.5,
+      "description": "Senox SDS 710 DC Dik Tip Soğutucu Kanopisiz\nHacim Brüt/Net (lt) - 728/678\nÇalışma Sıcaklığı -18\nEnerji Sınıfı/Tüketimi B/1,24 Raf Sayısı 5\nIsı Aralığı: 0 /-18°C\nFiyat\nAğırlık\nEbatlar (mm)\nVoltaj\nSoğutucu Gaz\nR290a\n1450 EUR\n220 V ~ 50Hz\n157 kg\n980x740x2145\n14\nwww.senox.com.tr",
       "specs": {
         "ebat_mm": "980 x 740 x 2145",
         "genislik_mm": 980,
@@ -512,13 +593,13 @@
     },
     {
       "model": "SDS-385",
-      "title": "SENOX - SDS-385 Dc1 CF SILVER",
+      "title": "Senox SDS-385 Dc1 CF SILVER",
       "page": 10,
       "categoryGroup": "Soğutma",
       "category": "Şişe Soğutucular",
       "anchorY": 352.7,
-      "anchorX": 708.9,
-      "description": "SENOX - SDS-385 Dc1 CF SILVER",
+      "anchorX": 703.3,
+      "description": "Senox SDS-385 Dc1 CF SILVER",
       "specs": {
         "fiyat_eur": "2250",
         "fiyat_eur_source": "page-order"
@@ -527,13 +608,13 @@
     },
     {
       "model": "SDS1010",
-      "title": "SENOX - SDS 1010 DC 2 CF Siyah Kanopili ÇarpmaKapılı",
+      "title": "Senox SDS 1010 DC 2 CF Siyah Kanopili ÇarpmaKapılı",
       "page": 10,
       "categoryGroup": "Soğutma",
       "category": "Şişe Soğutucular",
       "anchorY": 354.5,
-      "anchorX": 348.8,
-      "description": "SENOX - SDS 1010 DC 2 CF Siyah Kanopili ÇarpmaKapılı\nNet Hacim 903/816\nNet Hacim 345\nRaf sayısı 4\nRaf sayısı 5\n500ml şişe yükleme kapasitesi 200\n500ml şişe yükleme kapasitesi 80\nadet İzolasyon Kalınlığı 50\nadet İzolasyon Kalınlığı 50\nİklim Sınıfı B/C\nİklim Sınıfı B/C\nDijital Termostat, Led aydınlatma\nDijital Termostat, Led aydınlatma\nIp24 su geçirmezlik\nIp24 su geçirmezlik\nIsı Aralığı: 0 -10 °C\nIsı Aralığı: 0 -10 °C\nSoğutucu Faz: R290A\nSoğutucu Gaz: R134A\nFiyat\nAğırlık\nEbatlar (mm)\nVoltaj\nVoltaj\nÜrün Açıklaması\nÜrün Kodu\n158 kg\n220 V ~ 50Hz\n2250 EUR\nÇarpma Kapı\n980x740x2145\n220 V ~ 50Hz\nSDS 385 Dc1",
+      "anchorX": 343.2,
+      "description": "Senox SDS 1010 DC 2 CF Siyah Kanopili ÇarpmaKapılı\nNet Hacim 903/816\nNet Hacim 345\nRaf sayısı 4\nRaf sayısı 5\n500ml şişe yükleme kapasitesi 200\n500ml şişe yükleme kapasitesi 80\nadet İzolasyon Kalınlığı 50\nadet İzolasyon Kalınlığı 50\nİklim Sınıfı B/C\nİklim Sınıfı B/C\nDijital Termostat, Led aydınlatma\nDijital Termostat, Led aydınlatma\nIp24 su geçirmezlik\nIp24 su geçirmezlik\nIsı Aralığı: 0 -10 °C\nIsı Aralığı: 0 -10 °C\nSoğutucu Faz: R290A\nSoğutucu Gaz: R134A\nFiyat\nAğırlık\nEbatlar (mm)\nVoltaj\nVoltaj\nÜrün Açıklaması\nÜrün Kodu\n158 kg\n220 V ~ 50Hz\n2250 EUR\nÇarpma Kapı\n980x740x2145\n220 V ~ 50Hz\nSDS 385 Dc1",
       "specs": {
         "ebat_mm": "980 x 740 x 2145",
         "genislik_mm": 980,
@@ -548,13 +629,13 @@
     },
     {
       "model": "SDS1510",
-      "title": "SENOX - SDS 1510 DC 3 YF Siyah Kanopisiz",
+      "title": "Senox SDS 1510 DC 3 YF Siyah Kanopisiz",
       "page": 10,
       "categoryGroup": "Soğutma",
       "category": "Şişe Soğutucular",
       "anchorY": 591.1,
-      "anchorX": 735.1,
-      "description": "SENOX - SDS 1510 DC 3 YF Siyah Kanopisiz\nNet Hacim 1491/1215\nRaf sayısı 4+4+4\n500ml şişe yükleme kapasitesi 200\n500ml şişe yükleme kapasitesi 620\nadet İzolasyon Kalınlığı 50\nİklim Sınıfı B/C\nDijital Termostat, Led aydınlatma\nDijital Termostat, Led aydınlatma\nIp24 su geçirmezlik\nIsı Aralığı: 0 -10 °C\nSoğutucu Gaz: R290A\nAğırlık\nEbatlar (mm)\nFiyat\nAğırlık\nVoltaj\nEbatlar (mm)\nFiyat\nVoltaj\nÜrün Kodu\n157 kg\n220 V ~ 50Hz\n980x740x2145\n2250 EUR\n3000 EUR\n1500 x 690x 2075\n220 V ~ 50Hz\nSDS 1510 DC 3 YF\n213\n157 kg\n2250 EUR\n220 V ~ 50Hz\n980x740x2145\n15\n16\nwww.senox.com.tr",
+      "anchorX": 729.6,
+      "description": "Senox SDS 1510 DC 3 YF Siyah Kanopisiz\nNet Hacim 1491/1215\nRaf sayısı 4+4+4\n500ml şişe yükleme kapasitesi 200\n500ml şişe yükleme kapasitesi 620\nadet İzolasyon Kalınlığı 50\nİklim Sınıfı B/C\nDijital Termostat, Led aydınlatma\nDijital Termostat, Led aydınlatma\nIp24 su geçirmezlik\nIsı Aralığı: 0 -10 °C\nSoğutucu Gaz: R290A\nAğırlık\nEbatlar (mm)\nFiyat\nAğırlık\nVoltaj\nEbatlar (mm)\nFiyat\nVoltaj\nÜrün Kodu\n157 kg\n220 V ~ 50Hz\n980x740x2145\n2250 EUR\n3000 EUR\n1500 x 690x 2075\n220 V ~ 50Hz\nSDS 1510 DC 3 YF\n213\n157 kg\n2250 EUR\n220 V ~ 50Hz\n980x740x2145\n15\n16\nwww.senox.com.tr",
       "specs": {
         "ebat_mm": "980 x 740 x 2145",
         "genislik_mm": 980,
@@ -569,13 +650,13 @@
     },
     {
       "model": "SDS385",
-      "title": "SENOX - SDS 385 DC 2 PF Siyah Kanopisiz Çarpma Kapılı",
+      "title": "Senox SDS 385 DC 2 PF Siyah Kanopisiz Çarpma Kapılı",
       "page": 10,
       "categoryGroup": "Soğutma",
       "category": "Şişe Soğutucular",
       "anchorY": 117.7,
-      "anchorX": 766.2,
-      "description": "SENOX - SDS 385 DC 2 PF Siyah Kanopisiz Çarpma Kapılı",
+      "anchorX": 760.7,
+      "description": "Senox SDS 385 DC 2 PF Siyah Kanopisiz Çarpma Kapılı",
       "specs": {
         "fiyat_eur": "1000",
         "fiyat_eur_source": "page-order"
@@ -584,13 +665,13 @@
     },
     {
       "model": "SDS770",
-      "title": "SENOX - SDS 770 DC 2 DF Siyah Kanopisiz Çarpma Kapılı",
+      "title": "Senox SDS 770 DC 2 DF Siyah Kanopisiz Çarpma Kapılı",
       "page": 10,
       "categoryGroup": "Soğutma",
       "category": "Şişe Soğutucular",
       "anchorY": 119.6,
-      "anchorX": 348.9,
-      "description": "SENOX - SDS 770 DC 2 DF Siyah Kanopisiz Çarpma Kapılı\nNet Hacim 345\nNet Hacim(L): 696/683\nRaf sayısı 5\nRaf sayısı 5+5\n500ml şişe yükleme kapasitesi 80\n500ml şişe yükleme kapasitesi 620 adet\nadet İzolasyon Kalınlığı 50\nİzolasyon Kalınlığı 50\nİklim Sınıfı B/C\nİklim Sınıfı B/C\nDijital Termostat\nDijital Termostat\nLed aydınlatma\nLed aydınlatma\nIp24 su geçirmezlik\nIp24 su geçirmezlik\nIsı Aralığı: 0 -10 °C\nIsı Aralığı: 0 -10 °C\nVoltaj\nAğırlık\nFiyat\nÜrün Kodu\nÜrün Açıklaması\nVoltaj\nEbatlar (mm)\nKanopisiz/Çarpma\n220 V ~ 50Hz\n2300 EUR\nSSC-390\n220 V ~ 50Hz\n150\n1200 x 600x 1795",
+      "anchorX": 343.3,
+      "description": "Senox SDS 770 DC 2 DF Siyah Kanopisiz Çarpma Kapılı\nNet Hacim 345\nNet Hacim(L): 696/683\nRaf sayısı 5\nRaf sayısı 5+5\n500ml şişe yükleme kapasitesi 80\n500ml şişe yükleme kapasitesi 620 adet\nadet İzolasyon Kalınlığı 50\nİzolasyon Kalınlığı 50\nİklim Sınıfı B/C\nİklim Sınıfı B/C\nDijital Termostat\nDijital Termostat\nLed aydınlatma\nLed aydınlatma\nIp24 su geçirmezlik\nIp24 su geçirmezlik\nIsı Aralığı: 0 -10 °C\nIsı Aralığı: 0 -10 °C\nVoltaj\nAğırlık\nFiyat\nÜrün Kodu\nÜrün Açıklaması\nVoltaj\nEbatlar (mm)\nKanopisiz/Çarpma\n220 V ~ 50Hz\n2300 EUR\nSSC-390\n220 V ~ 50Hz\n150\n1200 x 600x 1795",
       "specs": {
         "ebat_mm": "1200 x 600 x 1795",
         "genislik_mm": 1200,
@@ -603,13 +684,13 @@
     },
     {
       "model": "SDS385",
-      "title": "SENOX - SDS 385 DC 1 YW-P",
+      "title": "Senox SDS 385 DC 1 YW-P",
       "page": 12,
       "categoryGroup": "Soğutma",
       "category": "Şişe Soğutucular",
       "anchorY": 108.3,
-      "anchorX": 684.0,
-      "description": "SENOX - SDS 385 DC 1 YW-P",
+      "anchorX": 678.5,
+      "description": "Senox SDS 385 DC 1 YW-P",
       "specs": {
         "fiyat_eur": "1350",
         "fiyat_eur_source": "page-order"
@@ -618,13 +699,28 @@
     },
     {
       "model": "WN-1010",
-      "title": "SENOX - WN-1010 Kanopili Çarpma Kapı Siyah",
+      "title": "Senox WN-1010 Kanopili Çarpma Kapı Siyah",
       "page": 12,
       "categoryGroup": "Soğutma",
       "category": "Şişe Soğutucular",
       "anchorY": 347.1,
-      "anchorX": 732.3,
-      "description": "SENOX - WN-1010 Kanopili Çarpma Kapı Siyah",
+      "anchorX": 726.8,
+      "description": "Senox WN-1010 Kanopili Çarpma Kapı Siyah",
+      "specs": {
+        "fiyat_eur": "1450",
+        "fiyat_eur_source": "page-order"
+      },
+      "parseSource": "senox-title"
+    },
+    {
+      "model": "WN-770",
+      "title": "Senox WN-770 Kanopili",
+      "page": 12,
+      "categoryGroup": "Soğutma",
+      "category": "Şişe Soğutucular",
+      "anchorY": 582.5,
+      "anchorX": 672.5,
+      "description": "Senox WN-770 Kanopili",
       "specs": {
         "fiyat_eur": "1700",
         "fiyat_eur_source": "page-order"
@@ -632,29 +728,14 @@
       "parseSource": "senox-title"
     },
     {
-      "model": "WN-770",
-      "title": "SENOX - WN-770 Kanopili",
-      "page": 12,
-      "categoryGroup": "Soğutma",
-      "category": "Şişe Soğutucular",
-      "anchorY": 582.5,
-      "anchorX": 678.1,
-      "description": "SENOX - WN-770 Kanopili",
-      "specs": {
-        "fiyat_eur": "1100",
-        "fiyat_eur_source": "page-order"
-      },
-      "parseSource": "senox-title"
-    },
-    {
       "model": "WN150",
-      "title": "SENOX - WN 150",
+      "title": "Senox WN 150",
       "page": 12,
       "categoryGroup": "Soğutma",
       "category": "Şişe Soğutucular",
       "anchorY": 110.6,
-      "anchorX": 274.7,
-      "description": "SENOX - WN 150\nPVC kaplı sac iç ve dış gövde.\nNet Hacim 683\nCFC içermeyen, yüksek basınçla enjekte edilmiş, 40 mm kalınlığında poliüretan izolasyon.\nRaf sayısı 5 ahşap kayın\nÖzel tasarım rolbond evaporatör.\nağacı şişe kapasitesi 150 adet\nKilitli cam kapılar.\nİzolasyon Kalınlığı 50\nLed aydınlatmalı iç kabin.\nİklim Sınıfı B/C\nAyarlanabilir iç rafla.\nDijital Termostat\nİç ısı dağılımını sağlayan fanlı sistem.\nLed aydınlatma\nÜç ahşap raflıdır\nIp24 su geçirmezlik\nIsı Aralığı: +10 - +14°C\nSoğutucu Gaz: R134A\nAğırlık\nSoğutucu Gaz\nEbatlar (mm)\nVoltaj\nVoltaj\nFiyat\n1350 EUR\n600x550x830\n41 kg\n220 V ~ 50Hz\n220 V ~ 50Hz\nR600a",
+      "anchorX": 269.1,
+      "description": "Senox WN 150\nPVC kaplı sac iç ve dış gövde.\nNet Hacim 683\nCFC içermeyen, yüksek basınçla enjekte edilmiş, 40 mm kalınlığında poliüretan izolasyon.\nRaf sayısı 5 ahşap kayın\nÖzel tasarım rolbond evaporatör.\nağacı şişe kapasitesi 150 adet\nKilitli cam kapılar.\nİzolasyon Kalınlığı 50\nLed aydınlatmalı iç kabin.\nİklim Sınıfı B/C\nAyarlanabilir iç rafla.\nDijital Termostat\nİç ısı dağılımını sağlayan fanlı sistem.\nLed aydınlatma\nÜç ahşap raflıdır\nIp24 su geçirmezlik\nIsı Aralığı: +10 - +14°C\nSoğutucu Gaz: R134A\nAğırlık\nSoğutucu Gaz\nEbatlar (mm)\nVoltaj\nVoltaj\nFiyat\n1350 EUR\n600x550x830\n41 kg\n220 V ~ 50Hz\n220 V ~ 50Hz\nR600a\nSeno WN 250",
       "specs": {
         "ebat_mm": "600 x 550 x 830",
         "genislik_mm": 600,
@@ -668,50 +749,34 @@
       "parseSource": "senox-title"
     },
     {
-      "model": "WN180",
-      "title": "SENOX - WN 180",
-      "page": 12,
-      "categoryGroup": "Soğutma",
-      "category": "Şişe Soğutucular",
-      "anchorY": 596.3,
-      "anchorX": 275.5,
-      "description": "SENOX - WN 180\nPVC kaplı sac iç ve dış gövde.\nPVC kaplı sac iç ve dış gövde.\nÖzel tasarım rolbond evaporatör. Kilitli cam kapılar.\nCFC içermeyen, yüksek basınçla enjekte edilmiş, 40 mm kalınlığında poliüretan izolasyon.\nLed aydınlatmalı iç kabin, Ayarlanabilir 5 ahşap raflar\nÖzel tasarım rolbond evaporatör.\nİç ısı dağılımını sağlayan fanlı sistem.\nKilitli cam kapılar.\nLed aydınlatmalı iç kabin.\nBirinci bölüm 10-12°C Beyaz şaraba uygundur.\nAyarlanabilir iç rafla.\nİkinci bölüm 12-14°C Kırmızı şaraba uygundur.\nİç ısı dağılımını sağlayan fanlı sistem.\nSoğutucu Gaz: R600A\nÜçahşap raflıdır\nIsı Aralığı: +10 - +14°C\nSoğutucu Gaz: R134A\nVoltaj\nÜrün Açıklaması\nAğırlık\nEbatlar (mm)\nVoltaj\nFiyat\nIsı Aralığı\n1100 EUR\nKanopili\n220 V ~ 50Hz\n+10 - +14°C\n56 kg\n470 x 545x 1265\nKanopisiz\n18\nwww.senox.com.tr",
-      "specs": {
-        "ebat_mm": "470 x 545 x 1265",
-        "genislik_mm": 470,
-        "derinlik_mm": 545,
-        "yukseklik_mm": 1265,
-        "fiyat_eur": "1100",
-        "sogutucu_gaz": "R600A",
-        "voltaj": "220 V ~ 50Hz",
-        "agirlik_kg": "56"
-      },
-      "parseSource": "senox-title"
-    },
-    {
       "model": "WN250",
-      "title": "SENOX - WN 250",
+      "title": "WN250",
       "page": 12,
       "categoryGroup": "Soğutma",
       "category": "Şişe Soğutucular",
-      "anchorY": 336.6,
-      "anchorX": 273.8,
-      "description": "SENOX - WN 250",
+      "anchorY": 505.8,
+      "anchorX": 280.8,
+      "description": "WN 250\n220 V ~ 50Hz\n75 kg\n1350 x 505x 850\n1700 EUR",
       "specs": {
-        "fiyat_eur": "1450",
-        "fiyat_eur_source": "page-order"
+        "ebat_mm": "1350 x 505 x 850",
+        "genislik_mm": 1350,
+        "derinlik_mm": 505,
+        "yukseklik_mm": 850,
+        "fiyat_eur": "1700",
+        "voltaj": "220 V ~ 50Hz",
+        "agirlik_kg": "75"
       },
-      "parseSource": "senox-title"
+      "parseSource": "code-line"
     },
     {
       "model": "WN350",
-      "title": "SENOX - WN 350",
+      "title": "Senox WN 350",
       "page": 12,
       "categoryGroup": "Soğutma",
       "category": "Şişe Soğutucular",
       "anchorY": 352.1,
-      "anchorX": 274.2,
-      "description": "SENOX - WN 350\nNet Hacim 903/816\nPVC kaplı sac iç ve dış gövde.\nRaf sayısı 4\nCFC içermeyen, yüksek basınçla enjekte edilmiş, 40 mm kalınlığında poliüretan izolasyon.\n500ml şişe yükleme kapasitesi 200\nÖzel tasarım rolbond evaporatör.\nadet İzolasyon Kalınlığı 50\nKilitli cam kapılar.\nİklim Sınıfı B/C\nLed aydınlatmalı iç kabin, Ayarlanabilir iç raflar\nDijital Termostat\nİç ısı dağılımını sağlayan fanlı sistem.\nLed aydınlatma\nÜç ahşap raflıdır\nIp24 su geçirmezlik\nSoğutucu Gaz: R600A\nSoğutucu Gaz: R290A\nIsı aralığı: +10 - +14°C\nVoltaj\nFiyat\nAğırlık\nEbatlar (mm)\nÜrün Kodu\nVoltaj\n220 V ~ 50Hz\n1450 EUR\n220 V ~ 50Hz\n61 kg\n900 x 505x 850\nWN 250\n220 V ~ 50Hz\n75 kg\n1350 x 505x 850\n1700 EUR\nWN 350",
+      "anchorX": 268.6,
+      "description": "Senox WN 350\nNet Hacim 903/816\nPVC kaplı sac iç ve dış gövde.\nRaf sayısı 4\nCFC içermeyen, yüksek basınçla enjekte edilmiş, 40 mm kalınlığında poliüretan izolasyon.\n500ml şişe yükleme kapasitesi 200\nÖzel tasarım rolbond evaporatör.\nadet İzolasyon Kalınlığı 50\nKilitli cam kapılar.\nİklim Sınıfı B/C\nLed aydınlatmalı iç kabin, Ayarlanabilir iç raflar\nDijital Termostat\nİç ısı dağılımını sağlayan fanlı sistem.\nLed aydınlatma\nÜç ahşap raflıdır\nIp24 su geçirmezlik\nSoğutucu Gaz: R600A\nSoğutucu Gaz: R290A\nIsı aralığı: +10 - +14°C\nVoltaj\nFiyat\nAğırlık\nEbatlar (mm)\nÜrün Kodu\nVoltaj\n220 V ~ 50Hz\n1450 EUR\n220 V ~ 50Hz\n61 kg\n900 x 505x 850\nWN 250\n220 V ~ 50Hz\n75 kg\n1350 x 505x 850\n1700 EUR\nWN 350",
       "specs": {
         "ebat_mm": "900 x 505 x 850",
         "genislik_mm": 900,
@@ -721,6 +786,25 @@
         "sogutucu_gaz": "R600A",
         "voltaj": "220 V ~ 50Hz",
         "agirlik_kg": "61"
+      },
+      "parseSource": "senox-title"
+    },
+    {
+      "model": "WN400",
+      "title": "Senox WN 400",
+      "page": 12,
+      "categoryGroup": "Soğutma",
+      "category": "Şişe Soğutucular",
+      "anchorY": 596.3,
+      "anchorX": 270.0,
+      "description": "Senox WN 400\nPVC kaplı sac iç ve dış gövde.\n4 tarafta parlak iç LED aydınlatma\nÖzel tasarım rolbond evaporatör. Kilitli cam kapılar.\nDijital sıcaklık kontrolörü ve sıcaklık göstergesi\nÜstten soğutma sistemi\nİç ısı dağılımını sağlayan fanlı sistem.\n81 şişe kapasiteli, 9 adet ayarlanabilir şarap rafı\nÖnden düz cam kapı (otomatik kapanma özelliği)\nBirinci bölüm 10-12°C Beyaz şaraba uygundur.\n4 tarafı çift temperli cam\nİkinci bölüm 12-14°C Kırmızı şaraba uygundur.\nİkisi frenli olmak üzere 4 adet tekerlek\nSoğutucu Gaz: R600A\nAçma / kapama anahtarı\nIsı Aralığı: +10 - +14°C\nFanlı soğutma sistemi\nOtomatik defrost (otomatik buz çözme)\nVoltaj\nÜrün Açıklaması\nKanopili\nAğırlık\nEbatlar (mm)\nKapasite (L)\nFiyat\nIsı Aralığı\n3400 EUR\n650×650×1894\nKanopisiz\n400\n163\n+5 - +18°C\n18\nwww.senox.com.tr",
+      "specs": {
+        "ebat_mm": "650 x 650 x 1894",
+        "genislik_mm": 650,
+        "derinlik_mm": 650,
+        "yukseklik_mm": 1894,
+        "fiyat_eur": "3400",
+        "sogutucu_gaz": "R600A"
       },
       "parseSource": "senox-title"
     },
@@ -766,13 +850,13 @@
     },
     {
       "model": "SFT-03-PRO",
-      "title": "SENOX SFT 03 Pro",
+      "title": "Senox SFT 03 Pro",
       "page": 13,
       "categoryGroup": "Soğutma",
       "category": "Soft Dondurma Makineleri",
       "anchorY": 599.2,
-      "anchorX": 662.1,
-      "description": "SENOX SFT 03 Pro\n2+1 farklı aroma seçeneği\nHer biri 1.9 litre kapasiteli çift dondurma silindiri. Haznelerde karıştırıcı mevcuttur\nKarışım hazne kapasitesi 5.5 lt × 2\nKayışlı çalışma sistemi ve Hava pompalı besleme sistemine sahiptir.\nÖn soğutma özelliği\nGece muhafaza (Fresh Overnight) fonksiyonu\nOtomatik defrost özelliği vardır\nGüç (W): 2200\nEbatlar (mm)\nSoğutucu Gaz\nFiyat\nVoltaj\nKapasite\nAğırlık\n20-25 L/H\n539x710x1310\n220V~50Hz\n102 kg\n4700 EUR\nR404A\n20\n21",
+      "anchorX": 659.6,
+      "description": "Senox SFT 03 Pro\n2+1 farklı aroma seçeneği\nHer biri 1.9 litre kapasiteli çift dondurma silindiri. Haznelerde karıştırıcı mevcuttur\nKarışım hazne kapasitesi 5.5 lt × 2\nKayışlı çalışma sistemi ve Hava pompalı besleme sistemine sahiptir.\nÖn soğutma özelliği\nGece muhafaza (Fresh Overnight) fonksiyonu\nOtomatik defrost özelliği vardır\nGüç (W): 2200\nEbatlar (mm)\nSoğutucu Gaz\nFiyat\nVoltaj\nKapasite\nAğırlık\n20-25 L/H\n539x710x1310\n220V~50Hz\n102 kg\n4700 EUR\nR404A\n20\n21",
       "specs": {
         "ebat_mm": "539 x 710 x 1310",
         "genislik_mm": 539,
@@ -1227,13 +1311,13 @@
     },
     {
       "model": "7300",
-      "title": "SENOX 7300 + STATİK 7 ÇEKMECELİ DERİN DONDURUCU",
+      "title": "Senox 7300 STATİK 7 ÇEKMECELİ DERİN DONDURUCU",
       "page": 19,
       "categoryGroup": "Soğutma",
       "category": "Derin Dondurucular",
       "anchorY": 141.1,
-      "anchorX": 753.5,
-      "description": "SENOX 7300 + STATİK 7 ÇEKMECELİ DERİN DONDURUCU\nAyarlanabilir termostat\nŞebeke uyarı lambası\nSıcaklık uyarı lambası\nKapak kilidi\nGofrajlı alüminyum iç gövde\nElektrostatk toz boyalı dış gövde sacı\nÇevre dostu soğutucu akışkan\nTemperli cam\nIsı Aralığı\nSoğutucu Gaz\nEbatlar (mm)\nVoltaj\nFiyat\n-18 - +34°C\n220 V ~ 50Hz\n750 EUR\n600 x690x176,5\nR134a",
+      "anchorX": 746.4,
+      "description": "Senox 7300 STATİK 7 ÇEKMECELİ DERİN DONDURUCU\nAyarlanabilir termostat\nŞebeke uyarı lambası\nSıcaklık uyarı lambası\nKapak kilidi\nGofrajlı alüminyum iç gövde\nElektrostatk toz boyalı dış gövde sacı\nÇevre dostu soğutucu akışkan\nTemperli cam\nIsı Aralığı\nSoğutucu Gaz\nEbatlar (mm)\nVoltaj\nFiyat\n-18 - +34°C\n220 V ~ 50Hz\n750 EUR\n600 x690x176,5\nR134a",
       "specs": {
         "ebat_mm": "600 x 690 x 176,5",
         "genislik_mm": 600,
@@ -1246,13 +1330,13 @@
     },
     {
       "model": "7301",
-      "title": "SENOX 7301 NF A+FANLI 7 ÇEKMECELİ DERİN DONDURUCU SİYAH",
+      "title": "Senox 7301 NF FANLI 7 ÇEKMECELİ DERİN DONDURUCU SİYAH",
       "page": 19,
       "categoryGroup": "Soğutma",
       "category": "Derin Dondurucular",
-      "anchorY": 530.6,
-      "anchorX": 774.9,
-      "description": "SENOX 7301 NF A+FANLI 7 ÇEKMECELİ DERİN DONDURUCU SİYAH",
+      "anchorY": 530.8,
+      "anchorX": 767.5,
+      "description": "Senox 7301 NF FANLI 7 ÇEKMECELİ DERİN DONDURUCU SİYAH",
       "specs": {
         "fiyat_eur": "750",
         "fiyat_eur_source": "page-order"
@@ -1261,13 +1345,13 @@
     },
     {
       "model": "SNX12R",
-      "title": "SENOX - SNX12R 12 Gözlü Dondurma Reyonu",
+      "title": "Senox SNX12R 12 Gözlü Dondurma Reyonu",
       "page": 20,
       "categoryGroup": "Soğutma",
       "category": "Dondurma Reyonları",
       "anchorY": 550.9,
-      "anchorX": 718.2,
-      "description": "SENOX - SNX12R 12 Gözlü Dondurma Reyonu\nAyarlanabilir termostat\nŞebeke uyarı lambası\nSıcaklık uyarı lambası\nKapak kilidi\nGofrajlı alüminyum iç gövde\nElektrostatk toz boyalı dış gövde\nsacı Çevre dostu soğutucu akışkan\nTemperli cam\nSoğutucu Gaz: R134A\nFiyat\nIsı Aralığı\nAğırlık\nEbatlar (mm)\nVoltaj\n2300 EUR\n220 V ~ 50Hz\n1152 x 903x 1267\n-18 - +34°C\n92 kg\n34\n35\nwww.senox.com.tr",
+      "anchorX": 711.2,
+      "description": "Senox SNX12R 12 Gözlü Dondurma Reyonu\nAyarlanabilir termostat\nŞebeke uyarı lambası\nSıcaklık uyarı lambası\nKapak kilidi\nGofrajlı alüminyum iç gövde\nElektrostatk toz boyalı dış gövde\nsacı Çevre dostu soğutucu akışkan\nTemperli cam\nSoğutucu Gaz: R134A\nFiyat\nIsı Aralığı\nAğırlık\nEbatlar (mm)\nVoltaj\n2300 EUR\n220 V ~ 50Hz\n1152 x 903x 1267\n-18 - +34°C\n92 kg\n34\n35\nwww.senox.com.tr",
       "specs": {
         "ebat_mm": "1152 x 903 x 1267",
         "genislik_mm": 1152,
@@ -1388,14 +1472,14 @@
       "parseSource": "senox-title"
     },
     {
-      "model": "6-G-ZL-DONDURMA-REYONU",
-      "title": "Senox 6 Gözlü Dondurma Reyonu",
+      "model": "6-VE-8-G-ZL-DONDURMA-REYONLARI",
+      "title": "Senox 6 ve 8 Gözlü Dondurma Reyonları",
       "page": 21,
       "categoryGroup": "Soğutma",
       "category": "Dondurma Reyonları",
       "anchorY": 111.3,
-      "anchorX": 705.4,
-      "description": "Senox 6 Gözlü Dondurma Reyonu\nÜst kısımda parlak iç LED aydınlatma\nDijital sıcaklık kontrol ünitesi ve göstergesi\n6 adet 1/3 Gastronom küvet ile birlikte\nIsıtmalı ön cam, 4 tarafı çift temperli cam\nArka kısımda sürgülü kapılar\n4 adet ayarlanabilir ayak\nFanlı soğutma sistemi ve Otomatik defrost (buz çözme)\nYoğuşma suyu otomatik olarak buharlaştırılır\nSoğutucu Gaz: R290\nFiyat\nAğırlık\nEbatlar (mm)\nIsı Aralığı\nKapasite (L)\nÜrün Kodu\nVoltaj\n5000 EUR\n-12 / -22°C\n6*1/3\n1170×845×618\nDT 6\n220V~50Hz\n93 kg",
+      "anchorX": 720.9,
+      "description": "Senox 6 ve 8 Gözlü Dondurma Reyonları\nÜst kısımda parlak iç LED aydınlatma\nDijital sıcaklık kontrol ünitesi ve göstergesi\n6-8 adet 1/3 Gastronom küvet ile birlikte\nIsıtmalı ön cam, 4 tarafı çift temperli cam\nArka kısımda sürgülü kapılar\n4 adet ayarlanabilir ayak\nFanlı soğutma sistemi ve Otomatik defrost (buz çözme)\nYoğuşma suyu otomatik olarak buharlaştırılır\nSoğutucu Gaz: R290\nFiyat\nAğırlık\nEbatlar (mm)\nIsı Aralığı\nKapasite (L)\nÜrün Kodu\nVoltaj\n5000 EUR\n-12 / -22°C\n6*1/3\n1170×845×618\nDT 6\n220V~50Hz\n93 kg\n6000 EUR\n-12 / -22°C\n1525×845×618\nDT 8\n220V~50Hz\n118 kg\n8*1/3",
       "specs": {
         "ebat_mm": "1170 x 845 x 618",
         "genislik_mm": 1170,
@@ -1409,21 +1493,6 @@
       "parseSource": "senox-title"
     },
     {
-      "model": "8-G-ZL-DONDURMA-REYONU",
-      "title": "Senox 8 Gözlü Dondurma Reyonu",
-      "page": 21,
-      "categoryGroup": "Soğutma",
-      "category": "Dondurma Reyonları",
-      "anchorY": 352.3,
-      "anchorX": 705.8,
-      "description": "Senox 8 Gözlü Dondurma Reyonu",
-      "specs": {
-        "fiyat_eur": "14000",
-        "fiyat_eur_source": "page-order"
-      },
-      "parseSource": "senox-title"
-    },
-    {
       "model": "9-13-G-ZL-DONDURMA-REYONU",
       "title": "Senox 9-13 Gözlü Dondurma Reyonu",
       "page": 21,
@@ -1431,7 +1500,7 @@
       "category": "Dondurma Reyonları",
       "anchorY": 355.4,
       "anchorX": 315.9,
-      "description": "Senox 9-13 Gözlü Dondurma Reyonu\nÜst kısımda parlak iç LED aydınlatma\nÜst kısımda parlak iç LED aydınlatma\nDijital sıcaklık kontrol ünitesi ve göstergesi\nDijital sıcaklık kontrol ünitesi ve göstergesi\n8 adet 1/3 Gastronom küvet ile birlikte\nİç kısımda ekstra sıcaklık göstergesi\nIsıtmalı ön cam, 4 tarafı çift temperli cam\nTanesi 5 litrelik olmak üzere 9 ve 13 gözlü dondurma küvetleri dahildir\nArka kısımda sürgülü kapılar\n4 tarafı çift temperli cam, Ön camda ve yan 2 camda ısıtıcı\n4 adet ayarlanabilir ayak\nÖn kavisli cam ve arka akrilik sürgülü kapılar\nFanlı soğutma sistemi ve Otomatik defrost (buz çözme)\nİki ayarlanabilir ayak, 4 tekerlekli\nYoğuşma suyu otomatik olarak buharlaştırılır\nFanlı soğutma sistemi ve Otomatik defrost (buz çözme)\nSoğutucu Gaz: R290\nSoğutucu Gaz: R290\nKapasite (L)\nÜrün Kodu\nVoltaj\nAğırlık\nAğırlık\nFiyat\nIsı Aralığı\nKapasite (L)\nKapasite (L)\nÜrün Kodu\nÜrün Kodu\nEbatlar (mm)\nEbatlar (mm)\nVoltaj\nVoltaj\n8*1/3\nDT 8\n220V~50Hz\n-12 / -22°C\n120\n120\nDW 9RA\nDT 9\n220V~50Hz\n220V~50Hz\n1292×880×1263\n1292×880×1263\n189.5 kg\n189.5 kg\n10.000 EUR\n-12 / -22°C\n220V~50Hz\n220V~50Hz\n160\n160\n1832×880×1263\n1832×880×1263\nDT 13\nD\n14.000 EUR\n225.5 kg\n225.5 kg",
+      "description": "Senox 9-13 Gözlü Dondurma Reyonu\nÜst kısımda 2 adet LED, yanlarda 4 adet LED aydınlatma\nÜst kısımda parlak iç LED aydınlatma\nDijital sıcaklık kontrolörü ve sıcaklık göstergesi\nDijital sıcaklık kontrol ünitesi ve göstergesi\n4 adet ayarlanabilir krom kaplı raf\nİç kısımda ekstra sıcaklık göstergesi\n4 tarafı üç kat temperli cam\nTanesi 5 litrelik olmak üzere 9 ve 13 gözlü dondurma küvetleri dahildir\nÖn tarafta 2 adet menteşeli kapı, İkisi frenli olmak üzere 4 adet tekerlek\n4 tarafı çift temperli cam, Ön camda ve yan 2 camda ısıtıcı\nFanlı soğutma sistemi\nÖn kavisli cam ve arka akrilik sürgülü kapılar\nOtomatik defrost (otomatik buz çözme)\nİki ayarlanabilir ayak, 4 tekerlekli\nCam üzerindeki suyu önlemek için 4 taraftan sıcak hava üfleme sistemi\nFanlı soğutma sistemi ve Otomatik defrost (buz çözme)\nYoğuşma suyu otomatik olarak buharlaştırılır\nSoğutucu Gaz: R290\nAğırlık\nAğırlık\nFiyat\nKapasite (L)\nSoğutma Gazı\nÜrün Kodu\nIsı Aralığı\nKapasite (L)\nKapasite (L)\nÜrün Kodu\nÜrün Kodu\nEbatlar (mm)\nEbatlar (mm)\nVoltaj\nVoltaj\n650\nR290\nDT 600\n-12 / -22°C\n120\n120\nDW 9RA\nDT 9\n220V~50Hz\n220V~50Hz\n1292×880×1263\n1292×880×1263\n189.5 kg\n189.5 kg\n10.000 EUR\n-12 / -22°C\n220V~50Hz\n220V~50Hz\n160\n160\n1832×880×1263\n1832×880×1263\nDT 13\nD\n14.000 EUR\n225.5 kg\n225.5 kg",
       "specs": {
         "ebat_mm": "1292 x 880 x 1263",
         "genislik_mm": 1292,
@@ -1450,11 +1519,11 @@
       "page": 21,
       "categoryGroup": "Soğutma",
       "category": "Dondurma Reyonları",
-      "anchorY": 593.6,
-      "anchorX": 691.4,
+      "anchorY": 355.2,
+      "anchorX": 696.8,
       "description": "Senox Dondurma Teşhir Dolabı",
       "specs": {
-        "fiyat_eur": "1600",
+        "fiyat_eur": "14000",
         "fiyat_eur_source": "page-order"
       },
       "parseSource": "senox-title"
@@ -1573,11 +1642,30 @@
       "category": "Dondurma Reyonları",
       "anchorY": 264.3,
       "anchorX": 635.4,
-      "description": "DT 6\n220V~50Hz\n93 kg",
+      "description": "DT 6\n220V~50Hz\n93 kg\n6000 EUR\n-12 / -22°C\n1525×845×618",
       "specs": {
+        "ebat_mm": "1525 x 845 x 618",
+        "genislik_mm": 1525,
+        "derinlik_mm": 845,
+        "yukseklik_mm": 618,
+        "fiyat_eur": "6000",
         "voltaj": "220V~50Hz",
-        "agirlik_kg": "93",
-        "fiyat_eur": "10000",
+        "agirlik_kg": "93"
+      },
+      "parseSource": "code-line"
+    },
+    {
+      "model": "DT600",
+      "title": "DT600",
+      "page": 21,
+      "categoryGroup": "Soğutma",
+      "category": "Dondurma Reyonları",
+      "anchorY": 508.2,
+      "anchorX": 637.8,
+      "description": "DT 600\n-12 / -22°C\n-12 / -22°C\n241 kg\n120\n120",
+      "specs": {
+        "agirlik_kg": "241",
+        "fiyat_eur": "22000",
         "fiyat_eur_source": "page-order"
       },
       "parseSource": "code-line"
@@ -1588,13 +1676,13 @@
       "page": 21,
       "categoryGroup": "Soğutma",
       "category": "Dondurma Reyonları",
-      "anchorY": 505.3,
-      "anchorX": 635.8,
-      "description": "DT 8\n220V~50Hz\n118 kg\n-12 / -22°C\n120\n120",
+      "anchorY": 278.9,
+      "anchorX": 635.4,
+      "description": "DT 8\n220V~50Hz\n118 kg\n8*1/3",
       "specs": {
         "voltaj": "220V~50Hz",
         "agirlik_kg": "118",
-        "fiyat_eur": "6000",
+        "fiyat_eur": "10000",
         "fiyat_eur_source": "page-order"
       },
       "parseSource": "code-line"
@@ -1629,20 +1717,20 @@
       "anchorX": 245.6,
       "description": "DW 9RA",
       "specs": {
-        "fiyat_eur": "22000",
+        "fiyat_eur": "1600",
         "fiyat_eur_source": "page-order"
       },
       "parseSource": "code-line"
     },
     {
-      "model": "2-RAFLI-DEMONTE-PASTA-TE-HIR-DOLABI",
-      "title": "Senox 2 Raflı Demonte Pasta Teşhir Dolabı",
+      "model": "2-RAFLI-MOD-LER-PASTA-TE-HIR-DOLABI",
+      "title": "Senox 2 Raflı Modüler Pasta Teşhir Dolabı",
       "page": 23,
       "categoryGroup": "Soğutma",
       "category": "Teşhir Dolapları",
       "anchorY": 348.4,
-      "anchorX": 331.5,
-      "description": "Senox 2 Raflı Demonte Pasta Teşhir Dolabı\nParlak LED aydınlatma (üstte, her raf altında ve yanlarda)\nParlak LED aydınlatma (üstte, her raf altında ve yanlarda)\nDijital sıcaklık kontrolörü ve gösterge\nDijital sıcaklık kontrolörü ve gösterge\n3 adet ayarlanabilir cam raf, Çift temperli cam\n2 adet ayarlanabilir cam raf, Çift temperli cam\nArkadan açılan menteşeli kapı\nArkadan açılan menteşeli kapı\nİkisi frenli olmak üzere 5 tekerlekli\nİkisi frenli olmak üzere 5 tekerlekli\nFanlı soğutma sistemi ve Otomatik defrost (buz çözme) özelliği\nFanlı soğutma sistemi ve Otomatik defrost (buz çözme) özelliği\nYoğuşma suyunu tahliye etmek için 3 taraflı hava kanalları\nYoğuşma suyunu tahliye etmek için 3 taraflı hava kanalları\nIsı Aralığı : +2 / +8°C\nIsı Aralığı : +2 / +8°C, 330L\nSoğutucu Gaz: R290\nSoğutucu Gaz: R290\nÜrün Kodu\nVoltaj\nFiyat\nEbatlar (mm)\nAğırlık\nVoltaj\nÜrün Kodu\n220 V ~ 50Hz\nPDM 440L\n4400 EUR\n220 V ~ 50Hz\n1484×678×1198\n160 kg\nPDM 300L",
+      "anchorX": 329.6,
+      "description": "Senox 2 Raflı Modüler Pasta Teşhir Dolabı\nParlak LED aydınlatma (üstte, her raf altında ve yanlarda)\nParlak LED aydınlatma (üstte, her raf altında ve yanlarda)\nDijital sıcaklık kontrolörü ve gösterge\nDijital sıcaklık kontrolörü ve gösterge\n3 adet ayarlanabilir cam raf, Çift temperli cam\n2 adet ayarlanabilir cam raf, Çift temperli cam\nArkadan açılan menteşeli kapı\nArkadan açılan menteşeli kapı\nİkisi frenli olmak üzere 5 tekerlekli\nİkisi frenli olmak üzere 5 tekerlekli\nFanlı soğutma sistemi ve Otomatik defrost (buz çözme) özelliği\nFanlı soğutma sistemi ve Otomatik defrost (buz çözme) özelliği\nYoğuşma suyunu tahliye etmek için 3 taraflı hava kanalları\nYoğuşma suyunu tahliye etmek için 3 taraflı hava kanalları\nIsı Aralığı : +2 / +8°C\nIsı Aralığı : +2 / +8°C, 330L\nSoğutucu Gaz: R290\nSoğutucu Gaz: R290\nÜrün Kodu\nVoltaj\nFiyat\nEbatlar (mm)\nAğırlık\nVoltaj\nÜrün Kodu\n220 V ~ 50Hz\nPDM 440L\n4400 EUR\n220 V ~ 50Hz\n1484×678×1198\n160 kg\nPDM 300L",
       "specs": {
         "ebat_mm": "1484 x 678 x 1198",
         "genislik_mm": 1484,
@@ -1656,14 +1744,14 @@
       "parseSource": "senox-title"
     },
     {
-      "model": "3-RAFLI-DEMONTE-PASTA-TE-HIR-DOLABI",
-      "title": "Senox 3 Raflı Demonte Pasta Teşhir Dolabı",
+      "model": "3-RAFLI-MOD-LER-PASTA-TE-HIR-DOLABI",
+      "title": "Senox 3 Raflı Modüler Pasta Teşhir Dolabı",
       "page": 23,
       "categoryGroup": "Soğutma",
       "category": "Teşhir Dolapları",
       "anchorY": 345.3,
-      "anchorX": 744.1,
-      "description": "Senox 3 Raflı Demonte Pasta Teşhir Dolabı",
+      "anchorX": 742.1,
+      "description": "Senox 3 Raflı Modüler Pasta Teşhir Dolabı",
       "specs": {
         "fiyat_eur": "2800",
         "fiyat_eur_source": "page-order"
@@ -1881,8 +1969,8 @@
       "page": 26,
       "categoryGroup": "Soğutma",
       "category": "Teşhir Dolapları",
-      "anchorY": 351.6,
-      "anchorX": 719.4,
+      "anchorY": 353.1,
+      "anchorX": 332.0,
       "description": "Senox Dik Soğuk Pasta Teşhir Dolabı",
       "specs": {
         "fiyat_eur": "900",
@@ -1898,13 +1986,13 @@
       "category": "Teşhir Dolapları",
       "anchorY": 665.8,
       "anchorX": 674.0,
-      "description": "Senox Çekmeceli Sıcak Dolap\nÇift Fanlı Sistem, Embraco Motor\nPaslanmaz çelik gövde\nTemperli Isı cam, Kapılar sürgü camlı ve rezistanslı\nPaslanmaz çelik 304 iç hazne ve GN küvetler\nÜrün standartı siyah ve paslanmaz kromdur\nBağımsız mekanik kontrol sistemi\nSoğutucu Gaz: R600A\nBağımsız sıcaklık göstergesi\nOpsiyonlar; Renk değiştren led\n4 adet tekerlek\nGold krom ya da farklı renk dolap rengi\nDış kapı kolu\nAna açma/kapama şalteri\nEbatlar (mm)\nEbatlar (mm)\nFiyat\nKapasite\nIsı Aralığı\nFiyat\nAğırlık (kg)\nIsı Aralığı\nAçıklama\nÜrün Kodu\nGüç (W)\nVoltaj\n3*1/1 GN 150mm\n733×419×870\n750×600×700\n1400 EUR\n66\n+4 - +6°C\n30-90°C\nSET 75P\n220-240V~50-60Hz\n1100\nSoğuk Teşhir\n1500 EUR\n900×600×700\n1500 EUR\n220-240V~50-60Hz\n+4 - +6°C\nSET 90P\nSoğuk Teşhir\n47\n48",
+      "description": "Senox Çekmeceli Sıcak Dolap\nÇift Fanlı Sistem, Embraco Motor\nPaslanmaz çelik gövde\nTemperli Isı cam, Kapılar sürgü camlı ve rezistanslı\nPaslanmaz çelik 304 iç hazne ve GN küvetler\nÜrün standartı siyah ve paslanmaz kromdur\nBağımsız mekanik kontrol sistemi\nSoğutucu Gaz: R600A\nBağımsız sıcaklık göstergesi\nOpsiyonlar; Renk değiştren led\n4 adet tekerlek\nGold krom ya da farklı renk dolap rengi\nDış kapı kolu\nAna açma/kapama şalteri\nEbatlar (mm)\nEbatlar (mm)\nFiyat\nKapasite\nIsı Aralığı\nFiyat\nAğırlık (kg)\nIsı Aralığı\nAçıklama\nÜrün Kodu\nGüç (W)\nVoltaj\n3*1/1 GN 150mm\n733×419×870\n750×600×700\n1650 EUR\n66\n+4 - +6°C\n30-90°C\nSET 75P\n220-240V~50-60Hz\n1100\nSoğuk Teşhir\n1500 EUR\n900×600×700\n1750 EUR\n220-240V~50-60Hz\n+4 - +6°C\nSET 90P\nSoğuk Teşhir\n47\n48",
       "specs": {
         "ebat_mm": "733 x 419 x 870",
         "genislik_mm": 733,
         "derinlik_mm": 419,
         "yukseklik_mm": 870,
-        "fiyat_eur": "1400",
+        "fiyat_eur": "1650",
         "sogutucu_gaz": "R600A"
       },
       "parseSource": "senox-title"
@@ -2025,13 +2113,13 @@
     },
     {
       "model": "ATILI-K-P-KL-AYRAN-MAKINESI",
-      "title": "SENOX - Çatılı Köpüklü Ayran Makinesi",
+      "title": "Senox Çatılı Köpüklü Ayran Makinesi",
       "page": 29,
       "categoryGroup": "Soğutma",
       "category": "Teşhir Dolapları",
       "anchorY": 576.2,
-      "anchorX": 715.4,
-      "description": "SENOX - Çatılı Köpüklü Ayran Makinesi\n40 Litre\nPompa Gücü :40 W\nAydinlatma:12 + 12 W\nKontrol Paneli:MK-20\nToplam Güç:340 W\nDekoratif Krom Kesme Isiklandirmali Tabela Gün Isigi ve Led Aydinlatma\nFarkli Ahsap Kaplama Seçenekleri\nSoğutucu Gaz\nIsı Aralığı\nEbatlar (mm)\nFiyat\nVoltaj\n2550 EUR\n+2 / +14 °C\n220 V ~ 50Hz\nR134a\n900 x 550x 2050\n51\n52\nwww.senox.com.tr",
+      "anchorX": 708.4,
+      "description": "Senox Çatılı Köpüklü Ayran Makinesi\n40 Litre\nPompa Gücü :40 W\nAydinlatma:12 + 12 W\nKontrol Paneli:MK-20\nToplam Güç:340 W\nDekoratif Krom Kesme Isiklandirmali Tabela Gün Isigi ve Led Aydinlatma\nFarkli Ahsap Kaplama Seçenekleri\nSoğutucu Gaz\nIsı Aralığı\nEbatlar (mm)\nFiyat\nVoltaj\n2550 EUR\n+2 / +14 °C\n220 V ~ 50Hz\nR134a\n900 x 550x 2050\n51\n52\nwww.senox.com.tr",
       "specs": {
         "ebat_mm": "900 x 550 x 2050",
         "genislik_mm": 900,
@@ -2045,13 +2133,13 @@
     },
     {
       "model": "KA-18",
-      "title": "SENOX KA-18 Set Üstü Köpüklü Ayran Makinesi",
+      "title": "Senox KA-18 Set Üstü Köpüklü Ayran Makinesi",
       "page": 29,
       "categoryGroup": "Soğutma",
       "category": "Teşhir Dolapları",
       "anchorY": 110.6,
-      "anchorX": 734.7,
-      "description": "SENOX KA-18 Set Üstü Köpüklü Ayran Makinesi\n18 Litre\nPompa Gücü :40 W\nAydinlatma:8+15 W\nKontrol Paneli:MK-20\nToplam Güç:215 W\nSoğutucu Gaz\nIsı Aralığı\nEbatlar (mm)\nVoltaj\nFiyat\n+2 /+14 °C\n220 V ~ 50Hz\nR134a\n1880 EUR\n570 x 450x 900",
+      "anchorX": 732.2,
+      "description": "Senox KA-18 Set Üstü Köpüklü Ayran Makinesi\n18 Litre\nPompa Gücü :40 W\nAydinlatma:8+15 W\nKontrol Paneli:MK-20\nToplam Güç:215 W\nSoğutucu Gaz\nIsı Aralığı\nEbatlar (mm)\nVoltaj\nFiyat\n+2 /+14 °C\n220 V ~ 50Hz\nR134a\n1880 EUR\n570 x 450x 900",
       "specs": {
         "ebat_mm": "570 x 450 x 900",
         "genislik_mm": 570,
@@ -2065,13 +2153,13 @@
     },
     {
       "model": "KA-30",
-      "title": "SENOX - KA-30 Köpüklü Ayran Makinesi",
+      "title": "Senox KA-30 Köpüklü Ayran Makinesi",
       "page": 29,
       "categoryGroup": "Soğutma",
       "category": "Teşhir Dolapları",
       "anchorY": 341.8,
-      "anchorX": 718.7,
-      "description": "SENOX - KA-30 Köpüklü Ayran Makinesi\n30 litre kapasiteli.\nKazan temizlik ve tahliye vanası.\nBardak doldurma musluğu ve alt süzgeci.\nKöpüklü veya&nbsp köpüksüz ayran doldurma seçeneği.\nİç aydınlatmalı.\nGövde renk seçenekleri veya reklammarka kaplama opsiyonu.\nFiyat\nSoğutucu Gaz\nIsı Aralığı\nEbatlar (mm)\nVoltaj\n1800 EUR\n+2 / +14 °C\n220 V ~ 50Hz\nR134a\n600 x 470x 1450",
+      "anchorX": 711.8,
+      "description": "Senox KA-30 Köpüklü Ayran Makinesi\n30 litre kapasiteli.\nKazan temizlik ve tahliye vanası.\nBardak doldurma musluğu ve alt süzgeci.\nKöpüklü veya&nbsp köpüksüz ayran doldurma seçeneği.\nİç aydınlatmalı.\nGövde renk seçenekleri veya reklammarka kaplama opsiyonu.\nFiyat\nSoğutucu Gaz\nIsı Aralığı\nEbatlar (mm)\nVoltaj\n1800 EUR\n+2 / +14 °C\n220 V ~ 50Hz\nR134a\n600 x 470x 1450",
       "specs": {
         "ebat_mm": "600 x 470 x 1450",
         "genislik_mm": 600,
@@ -2084,13 +2172,13 @@
     },
     {
       "model": "BLK-01",
-      "title": "SENOX BLK-01 Balık Teşhir Reyonu",
+      "title": "Senox BLK-01 Balık Teşhir Reyonu",
       "page": 30,
       "categoryGroup": "Otel Ekipmanları",
       "category": "Minibar / Kasa",
       "anchorY": 142.1,
-      "anchorX": 705.3,
-      "description": "SENOX BLK-01 Balık Teşhir Reyonu\nIsı Aralığı\nFiyat\nSoğutucu Gaz\nEbatlar (mm)\nÜrün Kodu\n3050 EUR\nBLK 01\n+2 / +14 °C\nR134A\n900x800x800\nBLK 01\n+2 / +14 °C\nR134A\n3200 EUR\n1100x800x800\nSalad Bar\nÜst tabla ve iç havuz paslanmaz çeliktir.\nİç havuz tek parça pres bask›l›d›r.\nSoğutucu gaz R 134 A / 250 gr.’d›r.\nKüvetler hariçtir.\nEtrafı komple ahflap kaplamad›r.\nÇift tarafta borulu kaydırma stand› vard›r.\nAydınlatma mevcuttur.\n2 adet frenli, 2 adet frensiz tekerleklidir.\nSoğutucu\nIsı Aralığı\nFiyat\nGazÜrün Kodu\nEbatlar (mm)\nAçıklama\n1800 EUR\nGN 1/1 3 AD\nSLD-03\n1150x700x1400\nR134a\n+4 - +6°C\nSLD-04\n2000 EUR\nGN 1/1 4AD\n+4 - +6°C\n1500x700x1400\nR134a",
+      "anchorX": 702.8,
+      "description": "Senox BLK-01 Balık Teşhir Reyonu\nIsı Aralığı\nFiyat\nSoğutucu Gaz\nEbatlar (mm)\nÜrün Kodu\n3050 EUR\nBLK 01\n+2 / +14 °C\nR134A\n900x800x800\nBLK 01\n+2 / +14 °C\nR134A\n3200 EUR\n1100x800x800\nSalad Bar\nÜst tabla ve iç havuz paslanmaz çeliktir.\nİç havuz tek parça pres bask›l›d›r.\nSoğutucu gaz R 134 A / 250 gr.’d›r.\nKüvetler hariçtir.\nEtrafı komple ahflap kaplamad›r.\nÇift tarafta borulu kaydırma stand› vard›r.\nAydınlatma mevcuttur.\n2 adet frenli, 2 adet frensiz tekerleklidir.\nSoğutucu\nIsı Aralığı\nFiyat\nGazÜrün Kodu\nEbatlar (mm)\nAçıklama\n1800 EUR\nGN 1/1 3 AD\nSLD-03\n1150x700x1400\nR134a\n+4 - +6°C\nSLD-04\n2000 EUR\nGN 1/1 4AD\n+4 - +6°C\n1500x700x1400\nR134a",
       "specs": {
         "ebat_mm": "900 x 800 x 800",
         "genislik_mm": 900,
@@ -2191,6 +2279,36 @@
       "parseSource": "senox-title"
     },
     {
+      "model": "M20",
+      "title": "Senox / Inoksan M20",
+      "page": 32,
+      "categoryGroup": "Hazırlık Ekipmanları",
+      "category": "Mikser",
+      "anchorY": 385.1,
+      "anchorX": 664.0,
+      "description": "Senox / Inoksan M20",
+      "specs": {
+        "fiyat_eur": "1100",
+        "fiyat_eur_source": "page-order"
+      },
+      "parseSource": "senox-title"
+    },
+    {
+      "model": "M30",
+      "title": "Senox / Inoksan M30",
+      "page": 32,
+      "categoryGroup": "Hazırlık Ekipmanları",
+      "category": "Mikser",
+      "anchorY": 620.3,
+      "anchorX": 665.4,
+      "description": "Senox / Inoksan M30",
+      "specs": {
+        "fiyat_eur": "1300",
+        "fiyat_eur_source": "page-order"
+      },
+      "parseSource": "senox-title"
+    },
+    {
       "model": "PLM-10",
       "title": "Senox PLM 10",
       "page": 32,
@@ -2216,12 +2334,17 @@
       "page": 32,
       "categoryGroup": "Hazırlık Ekipmanları",
       "category": "Mikser",
-      "anchorY": 385.1,
-      "anchorX": 648.7,
-      "description": "Senox PLM 20",
+      "anchorY": 385.6,
+      "anchorX": 301.9,
+      "description": "Senox PLM 20\n20 litreye kadar\n20 litreye kadar\nEkmek hamuru sadece küçük miktarlarda\nEkmek hamuru sadece küçük miktarlarda\nmümkündür hamur, krema, yumurta vb. için\nmümkündür hamur, krema, yumurta vb. için\nuygundur.\nuygundur.\nFırınlar ve pizzacılar için özellikle uygundur\nFırınlar ve pizzacılar için özellikle uygundur\nKararlı ve çizilmeye karşı dayanıklı\nKararlı ve çizilmeye karşı dayanıklı\nTemizlemesi kolay planet dişli\nTemizlemesi kolay planet dişli\nManyetik güvenlik anahtarı\nManyetik güvenlik anahtarı\n3 hız seviyesi\n3 hız seviyesi\nElektrik Gücü\nFiyat\nVoltaj\nElektrik Gücü\nEbatlar (mm)\nVoltaj\n1100 W\n1100 EUR\n1100 W\n520 x 420 x 760\n220 V ~ 60Hz\n220 V ~ 60Hz",
       "specs": {
+        "ebat_mm": "520 x 420 x 760",
+        "genislik_mm": 520,
+        "derinlik_mm": 420,
+        "yukseklik_mm": 760,
         "fiyat_eur": "1100",
-        "fiyat_eur_source": "page-order"
+        "voltaj": "220 V ~ 60Hz",
+        "elektrik_gucu": "1100 W"
       },
       "parseSource": "senox-title"
     },
@@ -2231,12 +2354,17 @@
       "page": 32,
       "categoryGroup": "Hazırlık Ekipmanları",
       "category": "Mikser",
-      "anchorY": 620.3,
-      "anchorX": 648.7,
-      "description": "Senox PLM 30",
+      "anchorY": 620.8,
+      "anchorX": 301.9,
+      "description": "Senox PLM 30\n30 litreye kadar\n30 litreye kadar\nEkmek hamuru sadece küçük miktarlarda mümkündür\nEkmek hamuru sadece küçük miktarlarda mümkündür\nhamur, krema, yumurta vb. için uygundur.\nhamur, krema, yumurta vb. için uygundur.\nFırınlar ve pizzacılar için özellikle uygundur\nFırınlar ve pizzacılar için özellikle uygundur\nKararlı ve çizilmeye karşı dayanıklı\nKararlı ve çizilmeye karşı dayanıklı\nTemizlemesi kolay planet dişli\nTemizlemesi kolay planet dişli\nManyetik güvenlik anahtar 3 hız seviyesi\nManyetik güvenlik anahtar 3 hız seviyesi\n3 hız seviyesi\n3 hız seviyesi\nElektrik Gücü\nFiyat\nModel\nElektrik Gücü\nEbatlar (mm)\nModel\n1300 EUR\n1100 W\n1100 W\n545 x 440 x 882\n220 V ~ 60Hz\n220 V ~ 60Hz\n57\nwww.senox.com.tr",
       "specs": {
+        "ebat_mm": "545 x 440 x 882",
+        "genislik_mm": 545,
+        "derinlik_mm": 440,
+        "yukseklik_mm": 882,
         "fiyat_eur": "1300",
-        "fiyat_eur_source": "page-order"
+        "voltaj": "220 V ~ 60Hz",
+        "elektrik_gucu": "1100 W"
       },
       "parseSource": "senox-title"
     },
@@ -2640,7 +2768,7 @@
       "category": "El Blenderleri",
       "anchorY": 239.9,
       "anchorX": 352.0,
-      "description": "Vakum Makineleri\nRobotcoupe - MP 350 ULTRA\nRobotcoupe - Mp450 COMBI ULTRA\nRobotcoupe - MP 450 ULTRA\nEl Blenderları\nSENOX - VM-01 Mini Vakum Makinesi\nKutu İçeriği\n1 adet Senox vakum makinesi,\n5 adet 19x30 cm vakul poşeti,\n1 adet şişe vakum aparatı,\n20 cm genişliğinde 10 m uzunluğunda rulo vakum poşeti.\nVakum Hızı: 12L/dakika\nHavayı çektikten sonra ağızını ısı ile yapıştırmaktadır.",
+      "description": "Vakum Makineleri\nRobotcoupe - MP 350 ULTRA\nRobotcoupe - Mp450 COMBI ULTRA\nRobotcoupe - MP 450 ULTRA\nEl Blenderları\nSenox VM-01 Mini Vakum Makinesi\nKutu İçeriği\n1 adet Senox vakum makinesi,\n5 adet 19x30 cm vakul poşeti,\n1 adet şişe vakum aparatı,\n20 cm genişliğinde 10 m uzunluğunda rulo vakum poşeti.\nVakum Hızı: 12L/dakika\nHavayı çektikten sonra ağızını ısı ile yapıştırmaktadır.",
       "specs": {
         "fiyat_eur": "1215",
         "fiyat_eur_source": "page-order"
@@ -2655,7 +2783,7 @@
       "category": "El Blenderleri",
       "anchorY": 535.7,
       "anchorX": 350.6,
-      "description": "Robotcoupe - MP 350 ULTRA\nRobotcoupe - Mp450 COMBI ULTRA\nRobotcoupe - MP 450 ULTRA\nEl Blenderları\nSENOX - VM-01 Mini Vakum Makinesi\nKutu İçeriği\n1 adet Senox vakum makinesi,\n5 adet 19x30 cm vakul poşeti,\n1 adet şişe vakum aparatı,\n20 cm genişliğinde 10 m uzunluğunda rulo vakum poşeti.\nVakum Hızı: 12L/dakika\nHavayı çektikten sonra ağızını ısı ile yapıştırmaktadır.\nEn fazla 30 cm genişliğinde poşetleri vakumlayabilir.\nMarka : SELES",
+      "description": "Robotcoupe - MP 350 ULTRA\nRobotcoupe - Mp450 COMBI ULTRA\nRobotcoupe - MP 450 ULTRA\nEl Blenderları\nSenox VM-01 Mini Vakum Makinesi\nKutu İçeriği\n1 adet Senox vakum makinesi,\n5 adet 19x30 cm vakul poşeti,\n1 adet şişe vakum aparatı,\n20 cm genişliğinde 10 m uzunluğunda rulo vakum poşeti.\nVakum Hızı: 12L/dakika\nHavayı çektikten sonra ağızını ısı ile yapıştırmaktadır.\nEn fazla 30 cm genişliğinde poşetleri vakumlayabilir.\nMarka : SELES",
       "specs": {
         "fiyat_eur": "970",
         "fiyat_eur_source": "page-order"
@@ -2670,7 +2798,7 @@
       "category": "El Blenderleri",
       "anchorY": 674.8,
       "anchorX": 367.2,
-      "description": "Vakum Makineleri\nRobotcoupe - MP 350 ULTRA\nRobotcoupe - Mp450 COMBI ULTRA\nRobotcoupe - MP 450 ULTRA\nEl Blenderları\nSENOX - VM-01 Mini Vakum Makinesi\nKutu İçeriği\n1 adet Senox vakum makinesi,\n5 adet 19x30 cm vakul poşeti,\n1 adet şişe vakum aparatı,\n20 cm genişliğinde 10 m uzunluğunda rulo vakum poşeti.\nVakum Hızı: 12L/dakika\nHavayı çektikten sonra ağızını ısı ile yapıştırmaktadır.\nEn fazla 30 cm genişliğinde poşetleri vakumlayabilir.",
+      "description": "Vakum Makineleri\nRobotcoupe - MP 350 ULTRA\nRobotcoupe - Mp450 COMBI ULTRA\nRobotcoupe - MP 450 ULTRA\nEl Blenderları\nSenox VM-01 Mini Vakum Makinesi\nKutu İçeriği\n1 adet Senox vakum makinesi,\n5 adet 19x30 cm vakul poşeti,\n1 adet şişe vakum aparatı,\n20 cm genişliğinde 10 m uzunluğunda rulo vakum poşeti.\nVakum Hızı: 12L/dakika\nHavayı çektikten sonra ağızını ısı ile yapıştırmaktadır.\nEn fazla 30 cm genişliğinde poşetleri vakumlayabilir.",
       "specs": {
         "fiyat_eur": "1500",
         "fiyat_eur_source": "page-order"
@@ -2679,13 +2807,13 @@
     },
     {
       "model": "VM-01",
-      "title": "SENOX - VM-01 Mini Vakum Makinesi",
+      "title": "Senox VM-01 Mini Vakum Makinesi",
       "page": 37,
       "categoryGroup": "Hazırlık Ekipmanları",
       "category": "El Blenderleri",
       "anchorY": 270.3,
-      "anchorX": 725.7,
-      "description": "SENOX - VM-01 Mini Vakum Makinesi\nKutu İçeriği\nGüç: 0,44 Elek. kW ~ 50 Hz AC 220/230V 1N\n1 adet Senox vakum makinesi,\nTek Hız: 9500 devir/dk\n5 adet 19x30 cm vakul poşeti,\nTüp uzunluğu: 350 mm\n1 adet şişe vakum aparatı,\nGüç\nFiyat\nEbatlar (mm)\nAğırlık\n20 cm genişliğinde 10 m uzunluğunda rulo vakum poşeti.\n970 EUR\n220 V - 1N\n440 W\n725x125\n6.2 kg\nVakum Hızı: 12L/dakika\nHavayı çektikten sonra ağızını ısı ile yapıştırmaktadır.\nRobotcoupe Mp 350 COMBI ULTRA\nEn fazla 30 cm genişliğinde poşetleri vakumlayabilir.\nOtomatik hız regülasyonlu sistem\nGüç\nFiyat\nEbatlar (mm)\nAğırlık\nSökülebilir paslanmaz çan ve bıçak\n300 EUR\n220 V - 1N\n1 adet paslanmaz duvar tipi askılık ile beraber teslim edilir\nGüç: 0,44 Elek. kW ~ 50 Hz AC 220/230V 1N\nKarıştırma Çoklu Hız: 1500-9000 devir/dk",
+      "anchorX": 720.1,
+      "description": "Senox VM-01 Mini Vakum Makinesi\nKutu İçeriği\nGüç: 0,44 Elek. kW ~ 50 Hz AC 220/230V 1N\n1 adet Senox vakum makinesi,\nTek Hız: 9500 devir/dk\n5 adet 19x30 cm vakul poşeti,\nTüp uzunluğu: 350 mm\n1 adet şişe vakum aparatı,\nGüç\nFiyat\nEbatlar (mm)\nAğırlık\n20 cm genişliğinde 10 m uzunluğunda rulo vakum poşeti.\n970 EUR\n220 V - 1N\n440 W\n725x125\n6.2 kg\nVakum Hızı: 12L/dakika\nHavayı çektikten sonra ağızını ısı ile yapıştırmaktadır.\nRobotcoupe Mp 350 COMBI ULTRA\nEn fazla 30 cm genişliğinde poşetleri vakumlayabilir.\nOtomatik hız regülasyonlu sistem\nGüç\nFiyat\nEbatlar (mm)\nAğırlık\nSökülebilir paslanmaz çan ve bıçak\n300 EUR\n220 V - 1N\n1 adet paslanmaz duvar tipi askılık ile beraber teslim edilir\nGüç: 0,44 Elek. kW ~ 50 Hz AC 220/230V 1N\nKarıştırma Çoklu Hız: 1500-9000 devir/dk",
       "specs": {
         "fiyat_eur": "970",
         "elektrik_gucu": "440 W",
@@ -2695,13 +2823,13 @@
     },
     {
       "model": "VM-3-FT-ENE-VAKUM-MAK-NES",
-      "title": "SENOX -VM 3 ÇİFT ÇENE VAKUM MAKİNESİ",
+      "title": "Senox VM 3 ÇİFT ÇENE VAKUM MAKİNESİ",
       "page": 37,
       "categoryGroup": "Hazırlık Ekipmanları",
       "category": "El Blenderleri",
       "anchorY": 644.1,
-      "anchorX": 738.1,
-      "description": "SENOX -VM 3 ÇİFT ÇENE VAKUM MAKİNESİ\nMarka : SELES\nRobotcoupe - Mp450 COMBI ULTRA\nModel : DZ-400 2F\nVakumlama Ölçüleri (mm) : 440 x 420 x 125\nOtomatik hız regülasyonlu sistem, Sökülebilir paslanmaz çan ve bıçak\n(75) Vakum Pompa Kapasitesi : 20 m3/h\n1 adet paslanmaz duvar tipi askılık ile beraber teslim edilir\nVakumlama Süresi : 1 - 2 h/dak\nGüç: 0,50 Elek. kW ~ 50 Hz AC 220/230V 1N\nYapıştıma : Çift Çene\nKarıştırma Çoklu Hız: 1500-9000 devir/dk\nBesleme : 220 V / 50 Hz\nÇırpma Çoklu Hız: 250-1500 devir/dk\nAmbalaj Ölçüleri (mm) : 610 x 430 x 480\nKarıştırıcı Tüp uzunluğu: 450 mm\nGüç\nFiyat\nEbatlar (mm)\nAğırlık\nÇırpıcı Tüp uzunluğu: 280 mm\n2400 EUR\n220 V - 1N\n900 W\n555x475x450\n76 kg\nGüç\nFiyat\nEbatlar (mm)\nAğırlık\n1620 EUR\n890/840x125\n220 V - 1N\n500 W\n8.2 kg\n66\n67\nwww.senox.com.tr",
+      "anchorX": 733.9,
+      "description": "Senox VM 3 ÇİFT ÇENE VAKUM MAKİNESİ\nMarka : SELES\nRobotcoupe - Mp450 COMBI ULTRA\nModel : DZ-400 2F\nVakumlama Ölçüleri (mm) : 440 x 420 x 125\nOtomatik hız regülasyonlu sistem, Sökülebilir paslanmaz çan ve bıçak\n(75) Vakum Pompa Kapasitesi : 20 m3/h\n1 adet paslanmaz duvar tipi askılık ile beraber teslim edilir\nVakumlama Süresi : 1 - 2 h/dak\nGüç: 0,50 Elek. kW ~ 50 Hz AC 220/230V 1N\nYapıştıma : Çift Çene\nKarıştırma Çoklu Hız: 1500-9000 devir/dk\nBesleme : 220 V / 50 Hz\nÇırpma Çoklu Hız: 250-1500 devir/dk\nAmbalaj Ölçüleri (mm) : 610 x 430 x 480\nKarıştırıcı Tüp uzunluğu: 450 mm\nGüç\nFiyat\nEbatlar (mm)\nAğırlık\nÇırpıcı Tüp uzunluğu: 280 mm\n2400 EUR\n220 V - 1N\n900 W\n555x475x450\n76 kg\nGüç\nFiyat\nEbatlar (mm)\nAğırlık\n1620 EUR\n890/840x125\n220 V - 1N\n500 W\n8.2 kg\n66\n67\nwww.senox.com.tr",
       "specs": {
         "ebat_mm": "440 x 420 x 125",
         "genislik_mm": 440,
@@ -2715,13 +2843,13 @@
     },
     {
       "model": "WM-2-TEK-ENEVAKUM-MAK-NES",
-      "title": "SENOX WM-2 TEK ÇENEVAKUM MAKİNESİ",
+      "title": "Senox WM-2 TEK ÇENEVAKUM MAKİNESİ",
       "page": 37,
       "categoryGroup": "Hazırlık Ekipmanları",
       "category": "El Blenderleri",
       "anchorY": 446.2,
-      "anchorX": 733.9,
-      "description": "SENOX WM-2 TEK ÇENEVAKUM MAKİNESİ\nÇırpma Çoklu Hız: 250-1500 devir/dk\nMarka : Seles\nKarıştırıcı Tüp uzunluğu: 350 mm\nModel : Dz 280\nÇırpıcı Tüp uzunluğu: 280 mm\nVakumlama Ölçüleri (mm) : 280 x 385 x 110\nGüç\nFiyat\nEbatlar (mm)\nAğırlık\n(50) Vakum Pompa Kapasitesi : 10 m3/h\n1500 EUR\n220 V - 1N\n440 W\n790/805x125\n7.9 kg\nVakumlama Süresi : 1 – 2 h/dak\nYapışma : Tek Çene\nRobotcoupe - MP 450 ULTRA\nBesleme : 220 V / 50 Hz\nSökülebilir paslanmaz çan ve bıçak\nAmbalaj Ölçüleri (mm) : 560 x 430 x 425\n1 adet paslanmaz duvar tipi askılık ile beraber teslim edilir\nGüç\nFiyat\nEbatlar (mm)\nAğırlık\nGüç: 0,5 Elek. kW ~ 50 Hz AC 220/230V 1N\n1800 EUR\n220 V - 1N\n370 W\n480x330x320\n36 kg\nTek Hız: 9500 devir/dk\nTüp uzunluğu: 450 mm\nGüç\nFiyat\nEbatlar (mm)\nAğırlık\n1070 EUR\n220 V - 1N\n500 W\n6.3 kg\n825x125",
+      "anchorX": 731.4,
+      "description": "Senox WM-2 TEK ÇENEVAKUM MAKİNESİ\nÇırpma Çoklu Hız: 250-1500 devir/dk\nMarka : Seles\nKarıştırıcı Tüp uzunluğu: 350 mm\nModel : Dz 280\nÇırpıcı Tüp uzunluğu: 280 mm\nVakumlama Ölçüleri (mm) : 280 x 385 x 110\nGüç\nFiyat\nEbatlar (mm)\nAğırlık\n(50) Vakum Pompa Kapasitesi : 10 m3/h\n1500 EUR\n220 V - 1N\n440 W\n790/805x125\n7.9 kg\nVakumlama Süresi : 1 – 2 h/dak\nYapışma : Tek Çene\nRobotcoupe - MP 450 ULTRA\nBesleme : 220 V / 50 Hz\nSökülebilir paslanmaz çan ve bıçak\nAmbalaj Ölçüleri (mm) : 560 x 430 x 425\n1 adet paslanmaz duvar tipi askılık ile beraber teslim edilir\nGüç\nFiyat\nEbatlar (mm)\nAğırlık\nGüç: 0,5 Elek. kW ~ 50 Hz AC 220/230V 1N\n1800 EUR\n220 V - 1N\n370 W\n480x330x320\n36 kg\nTek Hız: 9500 devir/dk\nTüp uzunluğu: 450 mm\nGüç\nFiyat\nEbatlar (mm)\nAğırlık\n1070 EUR\n220 V - 1N\n500 W\n6.3 kg\n825x125",
       "specs": {
         "ebat_mm": "280 x 385 x 110",
         "genislik_mm": 280,
@@ -2812,8 +2940,8 @@
       "anchorX": 712.6,
       "description": "Hazırlık Ekipmanları\nYSO-200 Yapışkanlı Sinek Öldürücü 200 m2\nYSO-100 Yapışkanlı Sinek Öldürücü 100 m2\nİnoksan - GD-250 Gıda Dilimleme\nAlüminyum gövde.\nPaslanmaz çelik bıçak.\nKendinden bileylemeli.\n15 Farklı dilimleme aralığ\nVoltaj : 230V - 1N\nElektrik Gücü\nEbatlar (mm)\nBıçak Çapı\nElektrik Gücü\nEbatlar (mm)",
       "specs": {
-        "fiyat_eur": "200",
-        "fiyat_eur_source": "manual-override"
+        "fiyat_eur": "650",
+        "fiyat_eur_source": "page-order"
       },
       "parseSource": "distributor"
     },
@@ -3024,14 +3152,14 @@
       "parseSource": "senox-title"
     },
     {
-      "model": "SELES-XK-3108B-PASLANMAZ-TARTIM-BASK-L",
-      "title": "Senox / Seles XK 3108B Paslanmaz Tartım Baskülü",
+      "model": "SELES-XK-3108B-50-60-CM-PASLANMAZ-TARTIM-BASK-L",
+      "title": "Senox / Seles XK 3108B 50*60 cm Paslanmaz Tartım Baskülü",
       "page": 40,
       "categoryGroup": "Hazırlık Ekipmanları",
       "category": "Hazırlık / Terazi",
       "anchorY": 604.9,
-      "anchorX": 734.8,
-      "description": "Senox / Seles XK 3108B Paslanmaz Tartım Baskülü\n10 adet ön hızlı PLU (kayıtlı hafıza) tuşu\nİkili taksimat sayesinde daha hassas tartım\nElektrostatik toz boyalı platforma sahiptir.\nGöstergedeki ikonlar sayesinde kolay anlaşılırlık\nOtomatik sıfırlama ve dara alma\nDahili Akü ile gösterge aydınlatmasız\nAyarlanabilen ayakları sayesinde her zemine uyumlu Dara alma ve sıfırlama\n60 saate kadar çalışabilme, Akü tasarruf modu\nözelliği mevcuttur.\nSu Koruma Kılıfı\n304 veya 316 paslanma dış gövdeye sahiptir.\nOtomatik sıfırlama ve dara alma\n360 derece dönebilen gösterge\nAyarlanabilen ayaklar, Hızlı işlem yüksek doğruluk\nOpsiyonel yazıcı bağlantısı.\nOtomatik kapanma fonksiyonu\nOpsiyonel RS-232 bağlantısı sayesinde pc veri aktarımı Dahili aküsü ile 72\nAğırlık- Birim Fiyat- Toplam fiyat göstergesi Paslanmaz Kefe\nsaat kullanma olanağı\nAlım ve satım işlerinde kullanılabilir\nYukarı aşağı hareket edebilen gösterge\nFiyat\nFiyat\nÜrün Kodu\nÜrün Kodu\n300 EUR\nWSP Boyunlu Terazi\n800 EUR\nWSP Boyunlu Terazi\n72\n73\nwww.senox.com.tr",
+      "anchorX": 757.8,
+      "description": "Senox / Seles XK 3108B 50*60 cm Paslanmaz Tartım Baskülü\n10 adet ön hızlı PLU (kayıtlı hafıza) tuşu\nİkili taksimat sayesinde daha hassas tartım\nElektrostatik toz boyalı platforma sahiptir.\nGöstergedeki ikonlar sayesinde kolay anlaşılırlık\nOtomatik sıfırlama ve dara alma\nDahili Akü ile gösterge aydınlatmasız\nAyarlanabilen ayakları sayesinde her zemine uyumlu Dara alma ve sıfırlama\n60 saate kadar çalışabilme, Akü tasarruf modu\nözelliği mevcuttur.\nSu Koruma Kılıfı\n304 veya 316 paslanma dış gövdeye sahiptir.\nOtomatik sıfırlama ve dara alma\n360 derece dönebilen gösterge\nAyarlanabilen ayaklar, Hızlı işlem yüksek doğruluk\nOpsiyonel yazıcı bağlantısı.\nOtomatik kapanma fonksiyonu\nOpsiyonel RS-232 bağlantısı sayesinde pc veri aktarımı Dahili aküsü ile 72\nAğırlık- Birim Fiyat- Toplam fiyat göstergesi Paslanmaz Kefe\nsaat kullanma olanağı\nAlım ve satım işlerinde kullanılabilir\nYukarı aşağı hareket edebilen gösterge\nFiyat\nFiyat\nÜrün Kodu\nÜrün Kodu\n300 EUR\nWSP Boyunlu Terazi\n1150 EUR\nWSP Boyunlu Terazi\n72\n73\nwww.senox.com.tr",
       "specs": {
         "fiyat_eur": "300"
       },
@@ -3291,13 +3419,13 @@
     },
     {
       "model": "SNX-35SC",
-      "title": "SENOX - SNX-35SC Süt Soğutucu",
+      "title": "Senox SNX-35SC Süt Soğutucu",
       "page": 43,
       "categoryGroup": "Kahve Ekipmanları",
       "category": "Kahve Kavurma Makineleri",
       "anchorY": 606.5,
-      "anchorX": 348.9,
-      "description": "SENOX - SNX-35SC Süt Soğutucu\nPeltier Sistemli\nUzun Ömürlü Soğutma Sistemi\nGaz Kaçağı Riski Olmayan, Gazsız, Yeni Nesil Teknoloji\nEnerji Tüketimi Diğer Sistemlerin 1/10'u Kadar\nCamlı Şık Tasarım, 3MM Plastik Kaplı Dayanıklı Raf Teli\nElektrostatik Toz Boyalı\nDiğer Sistemlere Göre %50 Daha Fazla Isı İzolasyonu\nSes Düzeyi 10 Desibel Altında\nTitreşimsiz Çalışma\nFişe Takıldıktan Sonra 4 Dakika İçerisinde Soğutma\nKapasite (L)\nEbatlar (mm)\nFiyat\n300 EUR\n35\n370x460x500\n78\nwww.senox.com.tr",
+      "anchorX": 343.4,
+      "description": "Senox SNX-35SC Süt Soğutucu\nPeltier Sistemli\nUzun Ömürlü Soğutma Sistemi\nGaz Kaçağı Riski Olmayan, Gazsız, Yeni Nesil Teknoloji\nEnerji Tüketimi Diğer Sistemlerin 1/10'u Kadar\nCamlı Şık Tasarım, 3MM Plastik Kaplı Dayanıklı Raf Teli\nElektrostatik Toz Boyalı\nDiğer Sistemlere Göre %50 Daha Fazla Isı İzolasyonu\nSes Düzeyi 10 Desibel Altında\nTitreşimsiz Çalışma\nFişe Takıldıktan Sonra 4 Dakika İçerisinde Soğutma\nKapasite (L)\nEbatlar (mm)\nFiyat\n300 EUR\n35\n370x460x500\n78\nwww.senox.com.tr",
       "specs": {
         "ebat_mm": "370 x 460 x 500",
         "genislik_mm": 370,
@@ -3309,13 +3437,13 @@
     },
     {
       "model": "COFFEEDIO-FILTRE-MAKINESI",
-      "title": "Senox - Coffeedio Filtre Makinesi",
+      "title": "Senox Coffeedio Filtre Makinesi",
       "page": 44,
       "categoryGroup": "Kahve Ekipmanları",
       "category": "Kahve Değirmenleri / Filtre Kahve",
       "anchorY": 647.4,
-      "anchorX": 365.7,
-      "description": "Senox - Coffeedio Filtre Makinesi\nElektronik Kahve Değirmeni\nBirbirinden bağımsız kullanılabilen ısıtıcılar Susuz kaynama koruması\nAyarlanan dozajları anında taze çekerek kaşığa döker\nHızlı demleme süresi (6 dakika)\nMikrometrik ayarlama çubuğu\nMekan ve zevkinize uygun kişiselleştirme imkanı\nModel: F83E\nKapasite: 144 fincan/saat\nBıçak Çapı: 83 mm\n1.8 lt. cam pot kapasitesi\nHazne Kapasitesi: 1,5 kg\nOpsiyonel olarak 1 veya 2 ısıtıcılı ve potlu\nGüç: 650 W\nVoltaj: 220 V - 1N\nEbatlar (mm)\nElektrik Gücü\nFiyat\nAğırlık\nEbatlar (mm)\nElektrik Gücü\n270 W\n650 W\n15 kg\n230 x 670 x 270\n2\n40\nW\n400 EUR\n5.2 kg\n190×370 ×440\n80\nwww.senox.com.tr",
+      "anchorX": 362.6,
+      "description": "Senox Coffeedio Filtre Makinesi\nElektronik Kahve Değirmeni\nBirbirinden bağımsız kullanılabilen ısıtıcılar Susuz kaynama koruması\nAyarlanan dozajları anında taze çekerek kaşığa döker\nHızlı demleme süresi (6 dakika)\nMikrometrik ayarlama çubuğu\nMekan ve zevkinize uygun kişiselleştirme imkanı\nModel: F83E\nKapasite: 144 fincan/saat\nBıçak Çapı: 83 mm\n1.8 lt. cam pot kapasitesi\nHazne Kapasitesi: 1,5 kg\nOpsiyonel olarak 1 veya 2 ısıtıcılı ve potlu\nGüç: 650 W\nVoltaj: 220 V - 1N\nEbatlar (mm)\nElektrik Gücü\nFiyat\nAğırlık\nEbatlar (mm)\nElektrik Gücü\n270 W\n650 W\n230 x 670 x 270\n2\n40\nW\n400 EUR\n5.2 kg\n190×370 ×440\n80\nwww.senox.com.tr",
       "specs": {
         "ebat_mm": "230 x 670 x 270",
         "genislik_mm": 230,
@@ -3868,7 +3996,7 @@
         "derinlik_mm": 720,
         "yukseklik_mm": 830,
         "agirlik_kg": "50",
-        "fiyat_eur": "1820",
+        "fiyat_eur": "1960",
         "fiyat_eur_source": "page-order"
       },
       "parseSource": "distributor"
@@ -3884,7 +4012,7 @@
       "description": "230 V - 1N\n25 kg\nIceinox Ice25 Buz Makinesi- 25kg/gün\nTropikal iklim sınıfı +43 0C\nTemizlik gerektirmeyen kondenser\nSıfır ODP enjekte 42 kg/m3 çevre dostu poliüretan izolasyon\nAntibakteriyel buz saklama alanı\nManyetik pompa ile sessiz çalışma\nElektronik kontrol\nGeniş buz depolama alanı\nErgonomik kapak kulbu\nPatentli nozul sistemi ile daha kısa süreli buz döngüsü\nVoltaj\nKapasite",
       "specs": {
         "agirlik_kg": "25",
-        "fiyat_eur": "1460",
+        "fiyat_eur": "1570",
         "fiyat_eur_source": "page-order"
       },
       "parseSource": "distributor"
@@ -3904,7 +4032,7 @@
         "derinlik_mm": 720,
         "yukseklik_mm": 600,
         "agirlik_kg": "250",
-        "fiyat_eur": "3450",
+        "fiyat_eur": "3710",
         "fiyat_eur_source": "page-order"
       },
       "parseSource": "distributor"
@@ -3920,7 +4048,7 @@
       "description": "Sıfır ODP enjekte 42 kg/m3 çevre dostu poliüretan izolasyon\nAntibakteriyel buz saklama alanı\nIceinox Ice35 Buz Makinesi- 35kg/gün\nTropikal iklim sınıfı +43 0C\nTemizlik gerektirmeyen kondenser\nSıfır ODP enjekte 42 kg/m3 çevre dostu poliüretan izolasyon\nAntibakteriyel buz saklama alanı\nManyetik pompa ile sessiz çalışma\nElektronik kontrol\nGeniş buz depolama alanı\nErgonomik kapak kulbu\nPatentli nozul sistemi ile daha kısa süreli buz döngüsü\nIceinox Ice50 Buz Makinesi- 50kg/gün\nIceinox Ice90 Buz Makinesi- 90kg/gün",
       "specs": {
         "agirlik_kg": "42",
-        "fiyat_eur": "2750",
+        "fiyat_eur": "2960",
         "fiyat_eur_source": "page-order"
       },
       "parseSource": "distributor"
@@ -3940,7 +4068,7 @@
         "derinlik_mm": 720,
         "yukseklik_mm": 830,
         "agirlik_kg": "50",
-        "fiyat_eur": "7960",
+        "fiyat_eur": "8560",
         "fiyat_eur_source": "page-order"
       },
       "parseSource": "distributor"
@@ -3960,7 +4088,7 @@
         "derinlik_mm": 720,
         "yukseklik_mm": 600,
         "agirlik_kg": "250",
-        "fiyat_eur": "6550",
+        "fiyat_eur": "7040",
         "fiyat_eur_source": "page-order"
       },
       "parseSource": "distributor"
@@ -3980,7 +4108,7 @@
         "derinlik_mm": 720,
         "yukseklik_mm": 830,
         "agirlik_kg": "50",
-        "fiyat_eur": "1390",
+        "fiyat_eur": "1495",
         "fiyat_eur_source": "page-order"
       },
       "parseSource": "distributor"
@@ -4123,7 +4251,7 @@
       "category": "Bulaşık Makineleri",
       "anchorY": 374.9,
       "anchorX": 737.8,
-      "description": "35 kg\n600 x 610 x 820\nElectrolux 505089 Giyotin Bulaşık Makinesi\nBulaşık Makineleri\nwww.senox.com.tr\nwww.senox.com.tr\n95\n96\n1400 EUR\n1500 EUR\n2400 EUR\n4000 EUR\n5250 EUR\n12.000 EUR",
+      "description": "35 kg\n600 x 610 x 820\nElectrolux 505089 Giyotin Bulaşık Makinesi\nBulaşık Makineleri\nwww.senox.com.tr\nwww.senox.com.tr\n95\n96\n1400 EUR\n1500 EUR\n2400 EUR\n4000 EUR\n5250 EUR\n12.500 EUR",
       "specs": {
         "ebat_mm": "600 x 610 x 820",
         "genislik_mm": 600,
@@ -4148,6 +4276,36 @@
         "fiyat_eur_source": "page-order"
       },
       "parseSource": "distributor"
+    },
+    {
+      "model": "TABAN-FIR-ALI-HIJYEN-BARIYERI",
+      "title": "Senox Taban Fırçalı Hijyen Bariyeri",
+      "page": 54,
+      "categoryGroup": "Senox",
+      "category": "Genel",
+      "anchorY": 485.4,
+      "anchorX": 690.5,
+      "description": "Senox Taban Fırçalı Hijyen Bariyeri\nGövde ve Turnike Kolları AISI 304 Kalite paslanmaz çelik\nSabunluk: Manuel / Sensörlü / Dirsek Kumandalı\nLavabo: Sensörlü / Diz Kumandalı / Pedallı\nPeçetelik: Z Katlı / Sensörlü\nTaban Fırçalama: Var, Su dezenfektan karışımlı yıkama\nEl dezenfeksiyon: İki ele aynı anda püskürtme, Ayarlanabilir otomatik sensörlü\ndozajlama\nGeçiş Mesafesi: 80 cm\nGeçiş Yönü: Sipariş aşamasında belirlenir, Lavabolu makinelerde sonradan\ndeğiştirilemez\nFiyat\nAçıklama\nGüç\nFrekans\nVoltaj (V)\nTaban Fırçalı\n220/240 V\n10.000 EUR\n50-60 Hz\n24 W\n97\n98\nwww.senox.com.tr",
+      "specs": {
+        "fiyat_eur": "10000",
+        "elektrik_gucu": "24 W"
+      },
+      "parseSource": "senox-title"
+    },
+    {
+      "model": "TABAN-FIR-ASIZ-HIJYEN-BARIYERI",
+      "title": "Senox Taban Fırçasız Hijyen Bariyeri",
+      "page": 54,
+      "categoryGroup": "Senox",
+      "category": "Genel",
+      "anchorY": 225.8,
+      "anchorX": 694.2,
+      "description": "Senox Taban Fırçasız Hijyen Bariyeri\nGövde ve Turnike Kolları AISI 304 Kalite paslanmaz çelik\nSabunluk: Manuel / Sensörlü / Dirsek Kumandalı\nLavabo: Sensörlü / Diz Kumandalı / Pedallı\nPeçetelik: Z Katlı / Sensörlü\nTaban Fırçalama: Yok\nEl dezenfeksiyon: İki ele aynı anda püskürtme, Ayarlanabilir otomatik sensörlü\ndozajlama\nGeçiş Mesafesi: 80 cm\nGeçiş Yönü: Sipariş aşamasında belirlenir, Lavabolu makinelerde sonradan\ndeğiştirilemez\nAçıklama\nFiyat\nFrekans\nGüç\nVoltaj (V)\nTaban Fırçasız\n220/240 V\n50-60 Hz\n9000 EUR\n24 W",
+      "specs": {
+        "fiyat_eur": "9000",
+        "elektrik_gucu": "24 W"
+      },
+      "parseSource": "senox-title"
     }
   ]
 }

@@ -15,6 +15,23 @@ export const SENOX_PDF_CATALOG = path.join(
 export const SENOX_LISTE_OVERRIDES = new Map([
   ["YSO100", 200],
   ["YSO200", 250],
+  // SENOX 2026-1 s.39–71 (Livagaz duş spreyi tablosu — 20 EUR filtre fiyatı ile karışmasın)
+  ["TM02", 200],
+  ["TM01", 180],
+  ["DM02", 200],
+  ["DM01", 180],
+  ["T02", 200],
+  ["118T02", 200],
+  // Geri toplanabilir ön yıkama duşu (HT 10/12/15 m)
+  ["HT10", 1000],
+  ["HT12", 1100],
+  ["HT15", 1200],
+]);
+
+/** Mutbex / Equsto model → PDF kod eşlemesi */
+export const SENOX_CODE_ALIASES = new Map([
+  ["T02", "TM02"],
+  ["118T02", "TM02"],
 ]);
 
 export function normSenoxKey(s) {
@@ -197,8 +214,15 @@ export function candidateKeys(p) {
   };
   add(p.model);
   add(p.mutbexCode);
-  add(String(p.mutbexCode || "").replace(/^118\./, ""));
-  add(String(p.mutbexCode || "").replace(/^118\./, "").replace(/\./g, "-"));
+  add(p.sku);
+  add(p.urun_kodu);
+  add(String(p.mutbexCode || p.sku || "").replace(/^118\./, ""));
+  add(String(p.mutbexCode || p.sku || "").replace(/^118\./, "").replace(/\./g, "-"));
+  const expanded = [...keys];
+  for (const k of expanded) {
+    const alias = SENOX_CODE_ALIASES.get(k);
+    if (alias) keys.add(alias);
+  }
   return [...keys];
 }
 
