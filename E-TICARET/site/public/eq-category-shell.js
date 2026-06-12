@@ -123,7 +123,9 @@
       var img = im
         ? '<img src="' +
           esc(imgSrc(im)) +
-          '" alt="" loading="lazy" decoding="async" onerror="typeof __eqImgFail===\'function\'&&__eqImgFail(this)">'
+          '"' +
+          (im ? ' data-eq-img-raw="' + esc(String(im).replace(/\\/g, "/")) + '" data-eq-img-step="0"' : "") +
+          ' alt="" loading="lazy" decoding="async" onerror="typeof __eqImgFail===\'function\'&&__eqImgFail(this)">'
         : '<span class="eq-img-ph" aria-hidden="true">—</span>';
       var cartBtn =
         global.EqustoCart && typeof global.EqustoCart.cartAddButtonAttrs === "function"
@@ -157,7 +159,9 @@
       var img = im
         ? '<img src="' +
           esc(imgSrc(im)) +
-          '" alt="" loading="lazy" decoding="async" onerror="typeof __eqImgFail===\'function\'&&__eqImgFail(this)">'
+          '"' +
+          (im ? ' data-eq-img-raw="' + esc(String(im).replace(/\\/g, "/")) + '" data-eq-img-step="0"' : "") +
+          ' alt="" loading="lazy" decoding="async" onerror="typeof __eqImgFail===\'function\'&&__eqImgFail(this)">'
         : '<span class="eq-cat-card__ph" aria-hidden="true"></span>';
       return (
         '<article class="eq-cat-card">' +

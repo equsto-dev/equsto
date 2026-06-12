@@ -996,12 +996,14 @@
     );
   }
 
-  var EQ_CATALOG_IMG_V = "20260609samixir-hot-plp";
-  var EQ_OZTI_BAD_CAFE_STUB_MD5 = "6696b6d14fecffc05fb1dc0156c9f6b4";
-  var EQ_OZTI_BAD_CAFE_STUB_BYTES = 10995;
+  var EQ_CATALOG_IMG_V = "20260613inoksan-imgcb";
 
   function withCatalogImgV(url) {
-    if (!url || !/\/images\/catalog\/(?:ozti\/(?:web|cafemarkt)|atalay\/)/i.test(url)) return url;
+    if (
+      !url ||
+      !/\/images\/catalog\/(?:ozti\/(?:web|cafemarkt)|atalay\/|inoksan\/web\/)/i.test(url)
+    )
+      return url;
     return url + (url.indexOf("?") >= 0 ? "&" : "?") + "v=" + EQ_CATALOG_IMG_V;
   }
 
@@ -1185,7 +1187,7 @@
     if (s === "#" || s.charAt(0) === "#") return s;
     if (/^https?:\/\//i.test(s)) return s;
     var cdnHit = equstoCdnAssetHref(s.charAt(0) === "/" ? s.slice(1) : s);
-    if (cdnHit) return cdnHit;
+    if (cdnHit) return withCatalogImgV(cdnHit);
     if (s.charAt(0) === "/") return s;
     if (s.indexOf("./") === 0 || s.indexOf("../") === 0) return s;
     return "/" + s;
