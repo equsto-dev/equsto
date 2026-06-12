@@ -10,6 +10,10 @@ export const SENOX_PDF_CATALOG = path.join(
   ROOT,
   "scripts/data/senox/senox-pdf-catalog.json",
 );
+export const SENOX_MUTBEX_CATALOG = path.join(
+  ROOT,
+  "scripts/data/senox/mutbex/senox-mutbex-catalog.json",
+);
 
 /** PDF sayfa OCR / yanlış fiyat eşlemesi — doğrulanmış Şenox liste EUR */
 export const SENOX_LISTE_OVERRIDES = new Map([
@@ -26,12 +30,21 @@ export const SENOX_LISTE_OVERRIDES = new Map([
   ["HT10", 1000],
   ["HT12", 1100],
   ["HT15", 1200],
+  // SENOX 2026-1 s.41 — Isıtıcı lambalar (OCR fiyatı specs'e düşmemiş)
+  ["SNX17B", 300],
+  ["SNX17C", 300],
+  ["SNX17G", 300],
+  ["SNX17S", 300],
+  // SNX-25-G yanlışlıkla SNX-8060 1500 EUR ile eşleşmiş; SNX-25-C ile aynı liste
+  ["SNX25G", 330],
 ]);
 
 /** Mutbex / Equsto model → PDF kod eşlemesi */
 export const SENOX_CODE_ALIASES = new Map([
   ["T02", "TM02"],
   ["118T02", "TM02"],
+  ["GGMM20", "PLM20"],
+  ["GGMM30", "PLM30"],
 ]);
 
 export function normSenoxKey(s) {
@@ -224,6 +237,67 @@ export function candidateKeys(p) {
     if (alias) keys.add(alias);
   }
   return [...keys];
+}
+
+/** Mutbex priceEur = Equsto satış EUR (liste × %50); liste = priceEur × 2 */
+export function mutbexListeFromSatis(priceEur) {
+  const satis = Number(priceEur);
+  if (!(satis > 0)) return 0;
+  return Math.round(satis * 2 * 100) / 100;
+}
+
+export function buildMutbexPriceIndex(products) {
+  const map = new Map();
+  for (const p of products || []) {
+    const liste = mutbexListeFromSatis(p.priceEur);
+    if (!(liste > 0)) continue;
+    const entry = {
+      listeEur: liste,
+      mutbexCode: p.mutbexCode,
+      model: p.model,
+      satisEur: p.priceEur,
+    };
+    const keys = new Set([
+      normSenoxKey(p.model),
+      normSenoxKey(p.mutbexCode),
+      normSenoxKey(String(p.mutbexCode || "").replace(/\./g, "")),
+    ]);
+    for (const k of keys) {
+      if (k && !map.has(k)) map.set(k, entry);
+    }
+  }
+  return map;
+}
+
+export function loadMutbexCatalog(catalogPath = SENOX_MUTBEX_CATALOG) {
+  if (!fs.existsSync(catalogPath)) {
+    return { products: [], index: new Map(), source: "" };
+  }
+  const raw = JSON.parse(fs.readFileSync(catalogPath, "utf8"));
+  const products = raw.products || [];
+  return {
+    products,
+    index: buildMutbexPriceIndex(products),
+    source: raw.source || "mutbex.com",
+    scrapedAt: raw.scrapedAt || "",
+  };
+}
+
+export function findMutbexListPrice(p, index) {
+  for (const k of candidateKeys(p)) {
+    const hit = index.get(k);
+    if (hit?.listeEur > 0) {
+      return {
+        listeEur: hit.listeEur,
+        matchKey: k,
+        mutbexCode: hit.mutbexCode,
+        model: hit.model,
+        satisEur: hit.satisEur,
+        source: "mutbex",
+      };
+    }
+  }
+  return null;
 }
 
 export function pricingFromSenoxPdfListe(listeEur, kur, kdv = 20, satisOran = 0.5) {
