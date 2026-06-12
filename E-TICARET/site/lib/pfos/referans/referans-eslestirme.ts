@@ -897,12 +897,18 @@ async function matchByMasterEqustoKod(
     extractEqustoKodFromText(input.notlar ?? "");
   if (fromText) {
     const direct = await matchEslesmisByEqustoKod(fromText);
-    if (direct) return direct;
+    if (direct && !referansKatalogUyumsuz(input.isim, direct.ad ?? "", input.notlar, direct.sku)) {
+      return direct;
+    }
   }
-  return matchEslesmisByEqustoGuess({
+  const guess = await matchEslesmisByEqustoGuess({
     tanim: input.isim,
     marka_urun_kodu: input.sku ?? undefined,
   });
+  if (guess && !referansKatalogUyumsuz(input.isim, guess.ad ?? "", input.notlar, guess.sku)) {
+    return guess;
+  }
+  return null;
 }
 
 /** İsim + ölçü ile sıkı katalog araması (özel imalat / zone fallback için) */
@@ -915,7 +921,9 @@ export async function matchCatalogByIsimOlcu(
   const byEq = await matchEslesmisByEqustoGuess({
     tanim: [isim, notlar].filter(Boolean).join(" "),
   });
-  if (byEq) return byEq;
+  if (byEq && !referansKatalogUyumsuz(isim, byEq.ad ?? "", notlar, byEq.sku)) {
+    return byEq;
+  }
 
   const olcu =
     extractOlcuFromNotlar(notlar) ||

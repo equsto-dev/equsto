@@ -24,6 +24,8 @@ import {
   guessEqustoKodFromItem,
   matchCatalogByEqustoKod,
 } from "@/lib/catalog/equsto-kod-lookup";
+import { referansKatalogUyumsuz } from "../referans/referans-eslestirme";
+
 
 /** Ölçü benzerliği — boyutlar yakınsa bonus */
 export function olcuSkoru(olcu1: string, olcu2: string): number {
@@ -151,7 +153,12 @@ function pickBestHit(
   if (!hits.length) return { hit: null, guven: 0 };
   const query = buildMeiliSearchQuery(item);
 
-  const ranked = [...hits].sort((a, b) => {
+  const validHits = hits.filter(
+    (h) => !referansKatalogUyumsuz(item.tanim, h.name, item.olcu, h.sku)
+  );
+  if (!validHits.length) return { hit: null, guven: 0 };
+
+  const ranked = [...validHits].sort((a, b) => {
     const sa = scoreHit(item, query, a);
     const sb = scoreHit(item, query, b);
     return sb - sa;
@@ -236,7 +243,9 @@ export async function matchItem(item: ParsedItem): Promise<ItemMatchResult> {
   const equstoKod = guessEqustoKodFromItem(item);
   if (equstoKod) {
     const eqHit = await matchCatalogByEqustoKod(equstoKod);
-    if (eqHit) return matchFromEqustoHit(item, eqHit);
+    if (eqHit && !referansKatalogUyumsuz(item.tanim, eqHit.name, item.olcu, eqHit.sku)) {
+      return matchFromEqustoHit(item, eqHit);
+    }
   }
 
   if (isIstifRafiReferansIsim(item.tanim)) {
