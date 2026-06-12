@@ -13,6 +13,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
 import { fetchTcmbEurRate } from "./fetch-tcmb-kur.mjs";
+import { avathermTasimaCategory } from "./lib/avatherm-tasima.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const HOST = "https://yukselsatis.com";
@@ -199,7 +200,7 @@ const DEPT_GROUPS = [
   },
   {
     label: "Taşıma ekipmanları",
-    test: /servis-araba|camasir-araba|banket-araba|tasima-ve-muhafaza|tepsi-modelleri|trolley|thermobox|pasta-tasima|tabak-otomat|mutfak-bulasik|tepsi-tasima|avatherm-tepsi/i,
+    test: /servis-araba|camasir-araba|banket-araba|tasima-ve-muhafaza|tepsi-modelleri|trolley|thermobox|pasta-tasima|tabak-otomat|mutfak-bulasik|tepsi-tasima|avatherm/i,
   },
   {
     label: "İstif / raf sistemleri",
@@ -215,7 +216,7 @@ const DEPT_GROUPS = [
   },
   {
     label: "Catering / Fast food / Medical",
-    test: /catering|fast-food|medical-modeller|avatherm(?!-tepsi)/i,
+    test: /catering|fast-food|medical-modeller/i,
   },
   {
     label: "Yedek parça / aksesuar",
@@ -397,11 +398,8 @@ function mapWebDept(p) {
     }
     return { dept: "tasima", category: "servis-arabalar" };
   }
-  if (/avatherm/i.test(p.name || "") && /thermobox|tepsi|menu mobile|pasta ta/i.test(p.name || "")) {
-    if (/tepsi taşıma araba|tepsi tasima araba/i.test(p.name || "")) {
-      return { dept: "tasima", category: "servis-arabalar" };
-    }
-    return { dept: "tasima", category: "tasima-ekipmanlari-yemek-tasima-kaplari" };
+  if (/avatherm|^av\d{2}/i.test(p.name || "") || /^avatherm-|^av\d/i.test(p.sku || "")) {
+    return { dept: "tasima", category: avathermTasimaCategory(p.name) };
   }
 
   const base = WEB_DEPT_MAP[p.dept_group] || { dept: "istif", category: "istif-raflari" };

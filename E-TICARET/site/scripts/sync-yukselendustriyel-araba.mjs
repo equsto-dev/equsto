@@ -2,6 +2,7 @@
 /**
  * yukselendustriyel.com — Taşıma Arabaları (44 ürün)
  * Görseller + katalog eşleştirme + PDF fiyat (%55 iskonto)
+ * KİLİT: public/yukselendustriyel-araba-KILIT.txt
  *
  *   node scripts/sync-yukselendustriyel-araba.mjs
  *   node scripts/sync-yukselendustriyel-araba.mjs --fetch-only
@@ -12,6 +13,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
 import { fetchTcmbEurRate } from "./fetch-tcmb-kur.mjs";
+import { isAvathermRow } from "./lib/avatherm-tasima.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const HOST = "https://www.yukselendustriyel.com";
@@ -332,7 +334,8 @@ function findWebProduct(row, index) {
 }
 
 function isArabaRow(row) {
-  return row.category === "tasima-arabalari" || String(row.id || "").startsWith("yukselsatis__");
+  if (isAvathermRow(row)) return false;
+  return row.category === "tasima-arabalari";
 }
 
 function imageFileName(row, product) {

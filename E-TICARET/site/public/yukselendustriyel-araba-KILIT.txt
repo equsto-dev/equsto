@@ -1,0 +1,40 @@
+═══════════════════════════════════════════════════════════════════════════
+KİLİT — Yüksel Endüstriyel taşıma arabaları + AVATHERM → tasima dept
+Onay: 2026-06-06 · Commit referans: 11d61231
+═══════════════════════════════════════════════════════════════════════════
+
+── Yüksel Endüstriyel taşıma arabaları (yukselendustriyel.com) ───────────
+Kaynak: https://www.yukselendustriyel.com/tasima-arabalari/ (WC cat 50)
+Script: npm run catalog:yukselendustriyel:araba
+Dept: araba · category: tasima-arabalari
+Fiyat: public/data/fiyat-listeleri/yuksel/2025-yerli/araba-fiyatlar.json
+İskonto: %55 (satış = liste × 0.45)
+Görsel: images/catalog/yuksel/web/yuksel-{sku}_1.jpg → S3 equsto-assets
+
+── AVATHERM → Taşıma ekipmanları (dept: tasima) ───────────────────────────
+Tüm AVATHERM / AV** çanta ve thermobox ürünleri araba veya servis dept'te
+KALMAMALI. dept=tasima:
+  • Trolley / tepsi taşıma arabası → category: servis-arabalar
+  • Thermobox / tepsi / çanta      → category: tasima-ekipmanlari-yemek-tasima-kaplari
+Kural: scripts/lib/avatherm-tasima.mjs · isAvathermRow · applyAvathermTasimaMeta
+
+── Kilitli dosyalar ───────────────────────────────────────────────────────
+  scripts/sync-yukselendustriyel-araba.mjs   — isArabaRow AVATHERM hariç
+  scripts/sync-yukselsatis-catalog.mjs       — avathermTasimaCategory
+  scripts/lib/avatherm-tasima.mjs
+  scripts/establish-avatherm-tasima.mjs
+  scripts/data/yukselendustriyel-araba-catalog.json
+  public/data/dept/araba.json                — tasima-arabalari (~42)
+  public/data/dept/tasima.json               — AVATHERM (≥41)
+  public/data/ekipmanlar.json                — rebuild sonrası
+
+YASAK (onay olmadan):
+  • isArabaRow içinde yukselsatis__ veya AVATHERM satırları
+  • AVATHERM ürünlerini araba.json veya servis/avatherm category'de bırakmak
+  • sync-yukselsatis DEPT_GROUPS'ta AVATHERM'ı Catering grubuna geri almak
+
+── Doğrulama ──────────────────────────────────────────────────────────────
+  npm run verify:yukselendustriyel-araba-kilit
+  npm run catalog:yukselendustriyel:araba -- --apply-only  (görsel yenileme)
+
+═══════════════════════════════════════════════════════════════════════════
