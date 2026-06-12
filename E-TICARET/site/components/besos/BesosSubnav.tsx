@@ -13,51 +13,57 @@ type SubnavItem = {
   isActive: (pathname: string | null) => boolean;
 };
 
-/** Coupe / kokteyl bardağı */
+/** Coupe bardağı — referans line-art */
 function IcoBardaklar() {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" aria-hidden="true">
-      <path d="M6 4h12l-2.5 9.5c-.4 1.5-1.6 2.5-3.5 2.5s-3.1-1-3.5-2.5L6 4z" />
-      <path d="M12 16v3" />
-      <path d="M9 21h6" />
+    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.15" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M10 6h12l-2.2 10.2c-.35 1.35-1.45 2.3-3.8 2.3s-3.45-.95-3.8-2.3L10 6z" />
+      <path d="M16 18.5V24" />
+      <path d="M12.5 26.5h7" />
     </svg>
   );
 }
 
-/** Bar ekipmanı — süzgeç / jigger */
+/** Hawthorne süzgeç — bar ekipmanları */
 function IcoBarEkipman() {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" aria-hidden="true">
-      <ellipse cx="12" cy="8" rx="7" ry="3.5" />
-      <path d="M5 8v2c0 2.2 3.1 4 7 4s7-1.8 7-4V8" />
-      <path d="M12 12v8" />
-      <path d="M9.5 20h5" />
-      <path d="M8 6.5c2 .8 6 .8 8 0" />
+    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.15" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <circle cx="14.5" cy="16" r="7" />
+      <path d="M21.5 16H28" />
+      <path d="M8.2 11.2c-1.1 1.4-1.6 3.1-1.3 4.8" />
+      <path d="M7.4 14.2c-.4 1.6 0 3.3 1.1 4.6" />
+      <path d="M8.3 17.1c.9 1.2 2.1 2 3.5 2.2" />
+      <path d="M9.8 19.2c1.2.5 2.5.4 3.5-.2" />
+      <path d="M11.5 20.5c1-.6 1.7-1.5 2-2.5" />
     </svg>
   );
 }
 
-/** Buz makinesi — dikey ünite */
+/** Buz makinesi — referanstaki dikey ünite (Evebot formu) */
 function IcoBuzMakinesi() {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" aria-hidden="true">
-      <rect x="7" y="3" width="10" height="18" rx="1.5" />
-      <rect x="9" y="5.5" width="6" height="4" rx=".5" />
-      <path d="M9 12h6M9 15h6M9 18h4" />
-      <path d="M10 21h4" />
+    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.15" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M11 5.5h10a2 2 0 0 1 2 2v17a2 2 0 0 1-2 2H11a2 2 0 0 1-2-2v-17a2 2 0 0 1 2-2z" />
+      <rect x="13" y="8" width="6" height="5" rx=".8" />
+      <path d="M14 16h4M14 19h4" />
+      <path d="M13.5 24.5h5l-1 2.5h-3l-1-2.5z" />
+      <path d="M12 27.5h8" />
     </svg>
   );
 }
 
-/** Modüler bar istasyonu */
+/** Modüler bar istasyonu — speed rail + şişeler */
 function IcoBarIstasyon() {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" aria-hidden="true">
-      <rect x="2" y="10" width="6" height="9" rx=".5" />
-      <rect x="9" y="7" width="6" height="12" rx=".5" />
-      <rect x="16" y="10" width="6" height="9" rx=".5" />
-      <path d="M3 10V8h4v2M10 7V5h4v2M17 10V8h4v2" />
-      <path d="M11 13h2M11 16h2" />
+    <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.15" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M3 14v10h7V14" />
+      <path d="M5 14V11h3v3" />
+      <path d="M10 11v13h12V8" />
+      <path d="M12 8V6h8v2" />
+      <path d="M13 13v6M15.5 12.5v6.5M18 13v6M20.5 12.5v6.5" />
+      <path d="M22 14v10h7V14" />
+      <path d="M24 14V11h3v3" />
+      <path d="M3 24h26" />
     </svg>
   );
 }
@@ -72,20 +78,20 @@ const ITEMS: SubnavItem[] = [
     isActive: (pathname) => !!pathname?.includes("/shop/icecek"),
   },
   {
-    key: "bar-ekipman",
-    href: (en) => (en ? "/en/shop/hazirlik" : "/shop/hazirlik"),
-    labelTr: "Bar Ekipmanları",
-    labelEn: "Bar Equipment",
-    icon: <IcoBarEkipman />,
-    isActive: (pathname) => !!pathname?.includes("/shop/hazirlik"),
-  },
-  {
     key: "buz-makinesi",
     href: (en) => (en ? "/en/besos/imt300" : "/besos/imt300"),
     labelTr: "Buz Makinesi",
     labelEn: "Ice Machine",
     icon: <IcoBuzMakinesi />,
     isActive: (pathname) => !!pathname?.includes("/imt300"),
+  },
+  {
+    key: "bar-ekipman",
+    href: (en) => (en ? "/en/shop/hazirlik" : "/shop/hazirlik"),
+    labelTr: "Bar Ekipmanları",
+    labelEn: "Bar Equipment",
+    icon: <IcoBarEkipman />,
+    isActive: (pathname) => !!pathname?.includes("/shop/hazirlik"),
   },
   {
     key: "bar-istasyonlari",

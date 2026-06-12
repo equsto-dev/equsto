@@ -35,7 +35,7 @@ YASAK (onay olmadan):
   lib/shop/assets.ts       — SHOP_ASSET_V
 
 ── Besos (/besos) ek şerit (ayrı kilit) ───────────────────────────────────
-  bd-besos-subnav: Bardaklar · Bar Ekipmanları · Buz Makinesi · Bar İstasyonları
+  bd-besos-subnav: Bardaklar · Buz Makinesi · Bar Ekipmanları · Bar İstasyonları
   (Ana topnav'dan bağımsız; siyah alt şerit)
 
 ── Deploy / doğrulama ─────────────────────────────────────────────────────
