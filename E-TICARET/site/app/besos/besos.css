@@ -1812,6 +1812,89 @@ body.bd-page.besos.eq-shop .eq-mfoot-copy {
   padding: 10px 14px;
   font: inherit;
 }
+.ub-besos-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 12px;
+  margin-bottom: 24px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--bes-rule);
+}
+.ub-besos-filters-label {
+  flex: 0 0 auto;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--bes-text-3);
+}
+.ub-besos-filters-scroll {
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: nowrap;
+  gap: 8px;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 2px;
+}
+.ub-besos-filters-scroll::-webkit-scrollbar {
+  display: none;
+}
+.ub-besos-filter-chip {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 36px;
+  padding: 7px 14px;
+  border: 1px solid var(--bes-rule);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--bes-text-2);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+.ub-besos-filter-chip:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+.ub-besos-filter-chip.is-active {
+  border-color: var(--bes-gold-soft);
+  background: rgba(201, 162, 77, 0.14);
+  color: #fff;
+}
+.ub-besos-filter-chip__count {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--bes-text-3);
+}
+.ub-besos-filter-chip.is-active .ub-besos-filter-chip__count {
+  color: var(--bes-gold-soft);
+}
+.ub-besos-filters-clear {
+  flex: 0 0 auto;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--bes-gold-soft);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.ub-besos-filters-clear:hover {
+  color: #fff;
+}
 .ub-besos-group-head {
   display: flex;
   align-items: baseline;

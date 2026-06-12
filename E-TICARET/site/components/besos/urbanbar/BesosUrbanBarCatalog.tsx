@@ -26,6 +26,10 @@ const UI = {
   loadMore: { tr: "Daha fazla ürün yükle", en: "Load more products" },
   remaining: { tr: "kaldı", en: "remaining" },
   loadMoreAria: { tr: "Daha fazla ürün yükle", en: "Load more products" },
+  filterAll: { tr: "Tümü", en: "All" },
+  filterLabel: { tr: "Kategori", en: "Category" },
+  clearFilters: { tr: "Filtreleri temizle", en: "Clear filters" },
+  filterAria: { tr: "Ürün kategorisi filtrele", en: "Filter by product category" },
 };
 
 function ui(key: keyof typeof UI, locale: BesosLocale) {
@@ -77,11 +81,12 @@ function gridColumnsForWidth(width: number): number {
 
 export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) {
   const [query, setQuery] = useState("");
+  const [activeGroups, setActiveGroups] = useState<ReadonlySet<string>>(new Set());
   const [cols, setCols] = useState(4);
   const [loadedCount, setLoadedCount] = useState(ROWS_PER_PAGE * 4);
   const gridRef = useRef<HTMLDivElement>(null);
 
-  const filteredGroups = useMemo(() => {
+  const searchableGroups = useMemo(() => {
     return section.groups
       .map((group) => ({
         ...group,
@@ -89,6 +94,11 @@ export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) 
       }))
       .filter((g) => g.items.length > 0);
   }, [section.groups, query]);
+
+  const filteredGroups = useMemo(() => {
+    if (!activeGroups.size) return searchableGroups;
+    return searchableGroups.filter((g) => activeGroups.has(g.key));
+  }, [searchableGroups, activeGroups]);
 
   const flatProducts = useMemo(() => {
     return filteredGroups.flatMap((group) =>
@@ -101,6 +111,18 @@ export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) 
   const shownCount = Math.min(loadedCount, visibleCount);
   const remaining = visibleCount - shownCount;
   const visibleProducts = flatProducts.slice(0, shownCount);
+  const hasGroupFilter = activeGroups.size > 0;
+
+  const toggleGroup = (key: string) => {
+    setActiveGroups((prev) => {
+      const next = new Set(prev);
+      if (next.has(key)) next.delete(key);
+      else next.add(key);
+      return next;
+    });
+  };
+
+  const clearGroupFilters = () => setActiveGroups(new Set());
 
   useEffect(() => {
     const el = gridRef.current;
@@ -114,7 +136,7 @@ export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) 
 
   useEffect(() => {
     setLoadedCount(pageSize);
-  }, [query, pageSize]);
+  }, [query, pageSize, activeGroups]);
 
   return (
     <section className="ub-besos-catalog" id="ub-catalog">
@@ -136,6 +158,44 @@ export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) 
           />
         </label>
       </div>
+
+      {searchableGroups.length > 0 ? (
+        <div className="ub-besos-filters" aria-label={ui("filterAria", locale)}>
+          <div className="ub-besos-filters-label">{ui("filterLabel", locale)}</div>
+          <div className="ub-besos-filters-scroll">
+            <button
+              type="button"
+              className={`ub-besos-filter-chip${!hasGroupFilter ? " is-active" : ""}`}
+              onClick={clearGroupFilters}
+            >
+              {ui("filterAll", locale)}
+              <span className="ub-besos-filter-chip__count">
+                {searchableGroups.reduce((n, g) => n + g.items.length, 0)}
+              </span>
+            </button>
+            {searchableGroups.map((group) => {
+              const active = activeGroups.has(group.key);
+              return (
+                <button
+                  key={group.key}
+                  type="button"
+                  className={`ub-besos-filter-chip${active ? " is-active" : ""}`}
+                  onClick={() => toggleGroup(group.key)}
+                  aria-pressed={active}
+                >
+                  {group.label}
+                  <span className="ub-besos-filter-chip__count">{group.items.length}</span>
+                </button>
+              );
+            })}
+          </div>
+          {hasGroupFilter ? (
+            <button type="button" className="ub-besos-filters-clear" onClick={clearGroupFilters}>
+              {ui("clearFilters", locale)}
+            </button>
+          ) : null}
+        </div>
+      ) : null}
 
       {visibleCount === 0 ? (
         <p className="ub-besos-empty">{ui("noMatch", locale)}</p>
