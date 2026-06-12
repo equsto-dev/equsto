@@ -21,7 +21,7 @@ const ITEMS: SubnavItem[] = [
     href: (en) => (en ? "/en/shop/icecek" : "/shop/icecek"),
     labelTr: "Bardaklar",
     labelEn: "Glassware",
-    iconSrc: `/images/besos/subnav/glassware.png?v=${ICON_V}`,
+    iconSrc: `/besos/subnav/glassware.png?v=${ICON_V}`,
     isActive: (pathname) => !!pathname?.includes("/shop/icecek"),
   },
   {
