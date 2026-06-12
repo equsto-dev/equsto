@@ -83,7 +83,51 @@ export function getBesosUrbanBarSection(
   sectionKey: BesosUrbanBarSectionKey,
   locale: BesosLocale = "tr",
 ): BesosUrbanBarSectionCatalog | null {
-  return catalog.sections.find((s) => s.key === sectionKey) ?? null;
+  const raw = catalog.sections.find((s) => s.key === sectionKey);
+  if (!raw) return null;
+
+  const sectionDef = BESOS_URBANBAR_TAXONOMY.sections.find((s) => s.key === sectionKey);
+  const meta = sectionDef ? sectionMeta(sectionDef, locale) : { label: sectionKey, blurb: "" };
+
+  const groups: BesosUrbanBarGroup[] = raw.groups.map((g) => {
+    const groupDef = sectionDef?.groups.find((x) => x.key === g.key);
+    const rawGroup = g as BesosUrbanBarGroup & { labelTr?: string; labelEn?: string };
+    const label =
+      (locale === "en"
+        ? rawGroup.labelEn ?? groupDef?.labelEn
+        : rawGroup.labelTr ?? groupDef?.labelTr) ||
+      groupDef?.labelTr ||
+      g.key;
+
+    return {
+      key: g.key,
+      slug: g.slug || g.key,
+      label,
+      items: sortProducts(g.items || []),
+    };
+  });
+
+  const rawSection = raw as BesosUrbanBarSectionCatalog & {
+    labelTr?: string;
+    labelEn?: string;
+    blurbTr?: string;
+    blurbEn?: string;
+  };
+
+  return {
+    key: raw.key,
+    slug: raw.slug,
+    label:
+      meta.label ||
+      (locale === "en" ? rawSection.labelEn : rawSection.labelTr) ||
+      sectionKey,
+    blurb:
+      meta.blurb ||
+      (locale === "en" ? rawSection.blurbEn : rawSection.blurbTr) ||
+      "",
+    productCount: raw.productCount || groups.reduce((n, g) => n + g.items.length, 0),
+    groups,
+  };
 }
 
 export function filterUrbanBarProducts(
