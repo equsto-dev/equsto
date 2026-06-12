@@ -60,6 +60,7 @@ yarn-error.log*
 !.env.production.example
 .env.database.secrets
 .env.whatsapp.secrets
+.env.resend.secrets
 
 # vercel
 .vercel
