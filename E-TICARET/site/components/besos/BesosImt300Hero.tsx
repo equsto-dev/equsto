@@ -3,15 +3,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { besosAssetPath } from "@/lib/besos/asset-path";
 import { besosHeroYoutubeEmbedUrl, BESOS_HERO_YT_ID } from "@/lib/besos/youtube-embed";
 
 const ICE_STRIP_IMAGES = [
-  { src: "/assets/besos-ice-mint-DUtHKFgd.png", alt: "Berrak buz küpü" },
-  { src: "/assets/besos-ice-bar-uGGlF5Nj.png", alt: "Buz çubuğu" },
-  { src: "/assets/besos-ice-tong-DsigH4FN.png", alt: "Buz küpü servisi" },
-  { src: "/assets/besos-ice-diamond-DMNdO_4O.png", alt: "Buz elması" },
-  { src: "/assets/besos-ice-molds-6zkZE2su.png", alt: "Silikon kalıplar" },
-  { src: "/assets/besos-ice-sphere-NLq_ILu6.png", alt: "Buz küresi" },
+  { src: besosAssetPath("images/besos/besos-ice-mint.png"), alt: "Berrak buz küpü" },
+  { src: besosAssetPath("images/besos/besos-ice-bar.png"), alt: "Buz çubuğu" },
+  { src: besosAssetPath("images/besos/besos-ice-tong.png"), alt: "Buz küpü servisi" },
+  { src: besosAssetPath("images/besos/besos-ice-diamond.png"), alt: "Buz elması" },
+  { src: besosAssetPath("images/besos/besos-ice-molds.png"), alt: "Silikon kalıplar" },
+  { src: besosAssetPath("images/besos/besos-ice-sphere.png"), alt: "Buz küresi" },
 ] as const;
 
 const HERO_EMBED_SRC = besosHeroYoutubeEmbedUrl(BESOS_HERO_YT_ID);
