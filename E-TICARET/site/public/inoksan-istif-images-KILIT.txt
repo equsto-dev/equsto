@@ -1,0 +1,45 @@
+═══════════════════════════════════════════════════════════════════════════
+KİLİT — İnoksan demonte istif rafı görselleri (IDD / IDK / IDP)
+Onay: 2026-06-13 · Commit referans: 97080efd
+═══════════════════════════════════════════════════════════════════════════
+
+IDD/IDK/IDP serileri tepsi istif ünitesi (FKA011I) görseline eşlenmemeli.
+Tarayıcı immutable önbelleği nedeniyle seri başına yeni CDN yolu kullanılır.
+
+── Zorunlu görsel yolları (30 SKU · istif dept) ───────────────────────────
+  IDD* → images/catalog/inoksan/web/istif-v2/ino-idd.jpg
+  IDK* → images/catalog/inoksan/web/istif-v2/ino-idk.jpg
+  IDP* → images/catalog/inoksan/web/istif-v2/ino-idp.jpg
+
+── Web indeks alias (inoksan.com kategori görselleri) ─────────────────────
+  idd → 10633   (IDD.png — düz tablalı)
+  idk → 10635   (IDK.png — kazan/tencere)
+  idp → 10634   (IDP.png — perfore tablalı)
+
+── Cache bust ─────────────────────────────────────────────────────────────
+  EQ_CATALOG_IMG_V = 20260613inoksan-istif-v2  (eq-site-urls.js)
+  SHOP_ASSET_V     = 20260613inoksan-istif-v2  (lib/shop/assets.ts)
+
+YASAK (onay olmadan):
+  • IDD/IDK/IDP → fka011i alias veya tepsi istif ünitesi görseli
+  • Per-SKU ino-idd084.jpg / ino-idk128.jpg yollarına istif dept geri dönmek
+  • DEPT_FALLBACK_IMAGES.istif → FKA011I veya tepsi istif PNG
+  • istif-v2/ seri yollarını kaldırmak (immutable CDN önbellek geri döner)
+  • EQ_CATALOG_IMG_V / SHOP_ASSET_V bump olmadan istif.json deploy
+
+── Kilitli dosyalar ───────────────────────────────────────────────────────
+  scripts/lib/inoksan-enrich.mjs        — istifSeriesKey · istif-v2 yolları
+  scripts/fetch-inoksan-catalog.mjs
+  public/data/dept/istif.json           — 30 İnoksan IDD/IDK/IDP
+  public/data/ekipmanlar.json           — rebuild sonrası
+  public/eq-site-urls.js                — withCatalogImgV + inoksan/istif-v2
+  lib/shop/assets.ts                    — SHOP_ASSET_V
+
+── S3 / CDN (Faz B) ───────────────────────────────────────────────────────
+  s3://equsto-assets/images/catalog/inoksan/web/istif-v2/ino-{idd,idk,idp}.jpg
+
+── Doğrulama ──────────────────────────────────────────────────────────────
+  npm run verify:inoksan-istif-images-kilit
+  Canlı: /shop/istif + marka İnoksan → 3 farklı raf tipi (IDD düz / IDK kazan / IDP perfore)
+
+═══════════════════════════════════════════════════════════════════════════

@@ -197,6 +197,12 @@ if (fs.existsSync(verifyPfosUyeAuth)) {
   if (r.status !== 0) process.exit(r.status ?? 1);
 }
 
+const verifyInoksanIstif = path.join(siteDir, "scripts/verify-inoksan-istif-images-kilit.mjs");
+if (fs.existsSync(verifyInoksanIstif)) {
+  const r = spawnSync(process.execPath, [verifyInoksanIstif], { cwd: siteDir, stdio: "inherit" });
+  if (r.status !== 0) process.exit(r.status ?? 1);
+}
+
 const buildSitemap = path.join(siteDir, "scripts/build-sitemap.mjs");
 if (fs.existsSync(buildSitemap)) {
   const r = spawnSync(process.execPath, [buildSitemap], { cwd: siteDir, stdio: "inherit" });
