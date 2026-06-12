@@ -147,38 +147,82 @@ body.bd-page.besos .topnav-besos.active {
   box-shadow: inset 0 -2px 0 0 var(--bes-gold) !important;
 }
 
-/* Bar Design alt şerit — Vitrin / Modüller / IMT300 */
+/* Bar Design alt şerit — Vitrin / Modüller / Projeler / IMT300 / Teklif */
 body.bd-page.besos .bd-besos-subnav {
   display: flex;
-  flex-wrap: nowrap;
+  justify-content: center;
   align-items: stretch;
-  gap: 0;
   width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  background: #000;
-  border-bottom: 1px solid var(--bes-rule);
+  background: #1a1a1c;
+  border-bottom: 2px solid var(--bes-gold);
+  box-sizing: border-box;
 }
 body.bd-page.besos .bd-besos-subnav::-webkit-scrollbar {
   display: none;
 }
+body.bd-page.besos .bd-besos-subnav-inner {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: center;
+  gap: 4px;
+  width: max-content;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 6px 12px;
+  box-sizing: border-box;
+}
+body.bd-page.besos .bd-besos-subnav-link,
 body.bd-page.besos .bd-besos-subnav a {
   flex: 0 0 auto;
-  padding: 10px 14px;
-  font-size: 11px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-width: 72px;
+  padding: 6px 14px 8px;
+  font-size: 10px;
   font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--bes-text-2);
+  letter-spacing: 0.04em;
+  text-transform: none;
+  color: rgba(255, 255, 255, 0.72);
   text-decoration: none;
   white-space: nowrap;
+  border-radius: 4px;
+  transition: color 0.15s ease, background 0.15s ease;
 }
-body.bd-page.besos .bd-besos-subnav a:hover,
-body.bd-page.besos .bd-besos-subnav a.is-active {
+body.bd-page.besos .bd-besos-subnav-ico {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  color: rgba(255, 255, 255, 0.88);
+}
+body.bd-page.besos .bd-besos-subnav-ico svg {
+  width: 22px;
+  height: 22px;
+}
+body.bd-page.besos .bd-besos-subnav-label {
+  line-height: 1.2;
+}
+body.bd-page.besos .bd-besos-subnav-link:hover,
+body.bd-page.besos .bd-besos-subnav a:hover {
   color: #fff;
-  box-shadow: inset 0 -2px 0 0 var(--bes-gold);
+  background: rgba(255, 255, 255, 0.06);
+}
+body.bd-page.besos .bd-besos-subnav-link.is-active,
+body.bd-page.besos .bd-besos-subnav a.is-active {
+  color: var(--bes-gold-soft);
+}
+body.bd-page.besos .bd-besos-subnav-link.is-active .bd-besos-subnav-ico,
+body.bd-page.besos .bd-besos-subnav a.is-active .bd-besos-subnav-ico {
+  color: var(--bes-gold-soft);
 }
 
 body.bd-page.besos.besos-locked .breadcrumb {

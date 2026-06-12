@@ -1,5 +1,6 @@
 import BesosCatalog from "@/components/besos/BesosCatalog";
 import BesosEqustoChrome from "@/components/besos/BesosEqustoChrome";
+import BesosSubnav from "@/components/besos/BesosSubnav";
 import ShopFooterHost from "@/components/shop/ShopFooterHost";
 import BesosImt300Hero from "@/components/besos/BesosImt300Hero";
 import BesosMethod from "@/components/besos/BesosMethod";
@@ -48,6 +49,7 @@ export async function BesosPageContent({ locale = "tr" }: Props) {
   return (
     <>
       <BesosEqustoChrome />
+      <BesosSubnav />
       <main className="besos-page">
         <BesosImt300Hero />
         <div className="bd-vitrum-landing">
