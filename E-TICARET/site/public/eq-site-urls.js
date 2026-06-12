@@ -996,12 +996,12 @@
     );
   }
 
-  var EQ_CATALOG_IMG_V = "20260613inoksan-imgcb";
+  var EQ_CATALOG_IMG_V = "20260613inoksan-istif-v2";
 
   function withCatalogImgV(url) {
     if (
       !url ||
-      !/\/images\/catalog\/(?:ozti\/(?:web|cafemarkt)|atalay\/|inoksan\/web\/)/i.test(url)
+      !/\/images\/catalog\/(?:ozti\/(?:web|cafemarkt)|atalay\/|inoksan\/(?:web\/|web\/istif-v2\/))/i.test(url)
     )
       return url;
     if (url.indexOf("v=" + EQ_CATALOG_IMG_V) >= 0) return url;
