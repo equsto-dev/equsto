@@ -41,10 +41,17 @@ WORKDIR /app
 
 ENV NODE_ENV=production \
     PORT=3000 \
-    HOSTNAME=0.0.0.0
+    HOSTNAME=0.0.0.0 \
+    CHROMIUM_LOCAL_EXEC_PATH=/usr/bin/chromium
 
+# PFOS teklif PDF — puppeteer-core + sistem Chromium (libnspr4 vb.)
 RUN apt-get update -qq \
-  && apt-get install -y --no-install-recommends openssl ca-certificates \
+  && apt-get install -y --no-install-recommends \
+    openssl \
+    ca-certificates \
+    chromium \
+    fonts-liberation \
+    fonts-noto-core \
   && rm -rf /var/lib/apt/lists/* \
   && addgroup --system --gid 1001 nodejs \
   && adduser --system --uid 1001 nextjs

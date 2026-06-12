@@ -310,6 +310,13 @@ export function referansKatalogUyumsuz(
     return true;
   }
   if (
+    isCalismaTezgahiReferansIsim(sablonIsim, notlar) &&
+    /(?:firin|fırın|kuzine|ocak|fritoz|fritöz|izgara|ızgara)/.test(k) &&
+    !/(?:alti|altı|sehpa|tezgah)/.test(k)
+  ) {
+    return true;
+  }
+  if (
     /davlumbaz/.test(s) &&
     (/7885\.|oztiryakiler|\bozti\b/.test(k) && !/^equsto\./i.test(k))
   ) {

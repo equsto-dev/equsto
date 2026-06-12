@@ -36,6 +36,20 @@ const KAR_ORAN = 0.05;
 const KDV = Number(process.env.EQUSTO_KDV_ORAN || "20");
 const dryRun = process.argv.includes("--dry-run");
 
+/** Pimak web kodu → PDF liste kodu (pimak-fiyat.json) */
+const PIMAK_LISTE_ALIASES = new Map([
+  ["VDD70", "PMK-HY70"],
+  ["VDD90", "PMK-HY90"],
+  ["VDD110", "PMK-HY110"],
+  ["VDD130", "PMK-HY130"],
+  ["CR120", "PMK-KY120"],
+  ["BKM22EECO", "BKM.22"],
+  ["BKM32EECO", "BKM.32EECO"],
+  ["BKT", "BKT.1840"],
+  ["BKTA", "BKTA.1840"],
+  ["BSH20", "BSH.20"],
+]);
+
 const KAFETERYA_KAT = new Set(["kafeterya-ekipmanlari", "kumpir-firini"]);
 const HAZIRLIK_KAT = new Set([
   "endustriyel-kiyma-makinesi",
@@ -178,9 +192,20 @@ function priceAliases(k) {
 }
 
 function lookupListe(priceMap, urunKodu) {
+  const tryKeys = (keys) => {
+    for (const a of keys) {
+      const v = priceMap.get(a);
+      if (v > 0) return v;
+    }
+    return 0;
+  };
+  const direct = tryKeys(priceAliases(urunKodu));
+  if (direct > 0) return direct;
   for (const a of priceAliases(urunKodu)) {
-    const v = priceMap.get(a);
-    if (v > 0) return v;
+    const alias = PIMAK_LISTE_ALIASES.get(a);
+    if (!alias) continue;
+    const hit = tryKeys(priceAliases(alias));
+    if (hit > 0) return hit;
   }
   return 0;
 }

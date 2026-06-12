@@ -27,6 +27,7 @@ services:
       NODE_ENV: production
       PORT: "3000"
       HOSTNAME: 0.0.0.0
+      CHROMIUM_LOCAL_EXEC_PATH: /usr/bin/chromium
     depends_on:
       - meilisearch
     networks:

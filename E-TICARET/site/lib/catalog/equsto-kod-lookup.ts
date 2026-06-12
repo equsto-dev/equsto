@@ -26,6 +26,9 @@ const PROFORMA_MARKA_KOD: Record<string, string> = {
   tic: "CAGLAYAN",
   skturk: "CAGLAYAN",
   sktürk: "CAGLAYAN",
+  portashelf: "PORTASHELF",
+  p: "PORTASHELF",
+  ps: "PORTASHELF",
 };
 
 /** Proforma stok öneki: INK- EEN → marka kodu + ürün kodu adayı */
