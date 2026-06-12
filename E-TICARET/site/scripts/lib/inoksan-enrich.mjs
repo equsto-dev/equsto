@@ -10,8 +10,7 @@ const UA = "Mozilla/5.0 (Equsto; +https://equsto.com)";
 
 /** dept / kategori yedek görseli (sitede PDP yok) */
 export const DEPT_FALLBACK_IMAGES = {
-  istif:
-    "https://www.inoksan.com/imagesfolder/products/FKA011I-FKA021I-TEPSI-ISTIF-UNITESI.png",
+  istif: "https://www.inoksan.com/imagesfolder/products/IDD.png",
   araba: "https://www.inoksan.com/imagesfolder/products/ABC100.png",
   pisirme: "https://www.inoksan.com/imagesfolder/products/7FE10.png",
   yikama: "https://www.inoksan.com/imagesfolder/products/BCB100.png",
@@ -103,7 +102,9 @@ export function skuMatchCodes(sku) {
 
 /** Excel konfigüratör kodu → web indeks anahtarı */
 export const SKU_WEB_ALIASES = [
-  [/^(IDD|IDK|IDP)\d/i, "fka011i"],
+  [/^IDD/i, "idd"],
+  [/^IDK/i, "idk"],
+  [/^IDP/i, "idp"],
   [/^BCB/i, "bcb"],
   [/^BCN/i, "bcb"],
   [/^BCK0*90/i, "bck90"],
@@ -211,6 +212,9 @@ function extractCodesFromProduct(p) {
 /** Web indeksine manuel alias (başlık kodu çıkaramadığı ürünler) */
 const WEB_INDEX_ALIASES = {
   bcb: "10288",
+  idd: "10633",
+  idk: "10635",
+  idp: "10634",
   fka011i: "10224",
   gln: "10358",
   glnk: "10359",
