@@ -1,0 +1,73 @@
+{
+  "brand": "Urban Bar",
+  "brandSlug": "urban-bar",
+  "sections": [
+    {
+      "key": "bardaklar",
+      "slug": "bardaklar",
+      "labelTr": "Bardaklar",
+      "labelEn": "Glassware",
+      "blurbTr": "Kokteyl, viski, şampanya ve servis bardakları — Urban Bar cam koleksiyonu.",
+      "blurbEn": "Cocktail, whisky, champagne and serve glassware — the Urban Bar glass collection.",
+      "groups": [
+        { "key": "cocktail-glasses", "labelTr": "Kokteyl Bardağı", "labelEn": "Cocktail Glasses", "tags": ["cocktail-glasses", "b2b-cocktail", "b2b-coupe"] },
+        { "key": "whisky-glasses", "labelTr": "Viski Bardağı", "labelEn": "Whisky Glasses", "tags": ["whisky-glasses", "b2b-whisky-and-spirits-tasting-glasses", "b2b-old-fashioned", "old-fashioned-tumblers", "old-fashioned-glasses"] },
+        { "key": "gin-glasses", "labelTr": "Cin Bardağı", "labelEn": "Gin Glasses", "tags": ["gin-glasses", "gin-balloon", "b2b-tumbler-shots"] },
+        { "key": "champagne-glasses", "labelTr": "Şampanya & Köpüklü", "labelEn": "Champagne & Sparkling", "tags": ["sparkling-wine-champagne-glasses", "b2b-flute", "b2b-wine-and-champagne", "sparkling-wine"] },
+        { "key": "wine-glasses", "labelTr": "Şarap Bardağı", "labelEn": "Wine Glasses", "tags": ["wine-glasses", "b2b-wine", "b2b-stem"] },
+        { "key": "highball-tumblers", "labelTr": "Highball & Tumbler", "labelEn": "Highball & Tumblers", "tags": ["highball-tumblers", "highball-glasses", "b2b-high-ball", "highballs-and-old-fashioned"] },
+        { "key": "beer-glasses", "labelTr": "Bira Bardağı", "labelEn": "Beer Glasses", "tags": ["beer-glasses"] },
+        { "key": "shot-glasses", "labelTr": "Shot Bardağı", "labelEn": "Shot Glasses", "tags": ["shot-glasses", "spirit-tasting-glasses", "b2b-tankards-and-other-glassware"] },
+        { "key": "water-glasses", "labelTr": "Su Bardağı", "labelEn": "Water Glasses", "tags": ["water-glasses", "plastic-drinkware", "metal-drinkware"] },
+        { "key": "glass-gift-sets", "labelTr": "Hediye Setleri", "labelEn": "Gift Sets", "tags": ["gift-sets-glassware", "glass-gift-sets", "gifting"] },
+        { "key": "glassware-collections", "labelTr": "Koleksiyonlar", "labelEn": "Collections", "tags": ["glassware-collections", "1910-design", "1920-design", "1890-design", "gold-rim-glassware", "recycled-glassware", "tattoo-tiki"] },
+        { "key": "glassware", "labelTr": "Cam Servis", "labelEn": "Glassware", "tags": ["glassware", "b2b-tankards-and-other-glassware"] }
+      ]
+    },
+    {
+      "key": "bar-ekipman",
+      "slug": "bar-ekipman",
+      "labelTr": "Bar Ekipmanları",
+      "labelEn": "Bar Equipment",
+      "blurbTr": "Shaker, jigger, süzgeç, bar kaşığı ve profesyonel bar aksesuarları.",
+      "blurbEn": "Shakers, jiggers, strainers, bar spoons and professional bar accessories.",
+      "groups": [
+        { "key": "cocktail-shakers", "labelTr": "Shaker", "labelEn": "Shakers", "tags": ["cocktail-shakers", "b2b-cocktail-shakers-mixing-glasses-and-tools", "shakers"] },
+        { "key": "jiggers", "labelTr": "Jigger & Ölçek", "labelEn": "Jiggers & Measures", "tags": ["jiggers-wine-measures", "cocktail-jiggers-wine-measures"] },
+        { "key": "bar-spoons", "labelTr": "Bar Kaşığı", "labelEn": "Bar Spoons", "tags": ["bar-spoons"] },
+        { "key": "strainers", "labelTr": "Süzgeç", "labelEn": "Strainers", "tags": ["cocktail-strainers", "strainers"] },
+        { "key": "mixing-glasses", "labelTr": "Mixing Glass", "labelEn": "Mixing Glasses", "tags": ["mixing-glasses", "cocktail-mixing-glasses"] },
+        { "key": "ice-tools", "labelTr": "Buz & Servis", "labelEn": "Ice & Service", "tags": ["ice-tools-buckets-jugs", "ice-tools-buckets", "jugs"] },
+        { "key": "cocktail-accessories", "labelTr": "Kokteyl Aksesuarları", "labelEn": "Cocktail Accessories", "tags": ["cocktail-accessories", "cocktail-accessories-tools-sticks-and-stirrers", "accessories"] },
+        { "key": "bitter-bottles", "labelTr": "Bitter & Şişe", "labelEn": "Bitters & Bottles", "tags": ["bitter-bottles", "bitters-bottles", "bitters-syrups-cordials-condiments"] },
+        { "key": "barware-collections", "labelTr": "Bar Koleksiyonları", "labelEn": "Bar Collections", "tags": ["barware-collections", "calabrese-barware", "classico-barware", "japanese-barware", "copper", "gold", "silver", "rose-gold", "stone", "cocktail-kingdom"] },
+        { "key": "bar-gift-sets", "labelTr": "Bar Hediye Setleri", "labelEn": "Bar Gift Sets", "tags": ["gift-sets-barware", "gift-sets", "cocktail-kits", "cocktail-kit-bags"] },
+        { "key": "personalised-barware", "labelTr": "Kişiselleştirilmiş", "labelEn": "Personalised", "tags": ["personalised-barware", "branded-and-point-of-sale", "b2b-branded-and-point-of-sale"] },
+        { "key": "barware", "labelTr": "Bar Ekipman", "labelEn": "Barware", "tags": ["barware", "b2b-cocktail-shakers-mixing-glasses-and-tools"] }
+      ]
+    }
+  ],
+  "excludeFromBesos": {
+    "tags": [
+      "spirits",
+      "gin",
+      "whisky",
+      "rum",
+      "tequila",
+      "cognac",
+      "vermouth",
+      "english-sparkling-wines",
+      "other-spirits-&-liqueurs",
+      "bitters-syrups-condiments",
+      "cocktail-bitters",
+      "bar-snacks",
+      "clothing",
+      "cocktail-books",
+      "books",
+      "gift-cards",
+      "clearance",
+      "b2c-only"
+    ],
+    "collectionHandles": ["drinks-more", "spirits-liquors", "gin", "whisky", "rum", "tequila", "vermouth", "gift-cards"]
+  }
+}
