@@ -365,12 +365,27 @@ export function curlBin(url, dest, dryRun = false) {
   return true;
 }
 
-export function imgFileFor(sku, imgDir) {
+export function imgFileFor(sku, imgDir, row) {
+  const series = istifSeriesKey(sku, row);
+  if (series) {
+    return path.join(imgDir, "istif-v2", `ino-${series}.jpg`);
+  }
   return path.join(imgDir, `${slugify(sku)}.jpg`);
 }
 
-export function imgRelFor(sku, imgSub) {
+export function imgRelFor(sku, imgSub, row) {
+  const series = istifSeriesKey(sku, row);
+  if (series) {
+    return `${imgSub}/istif-v2/ino-${series}.jpg`;
+  }
   return `${imgSub}/${slugify(sku)}.jpg`;
+}
+
+function istifSeriesKey(sku, row) {
+  if (row?.dept !== "istif") return "";
+  const core = skuCore(sku).replace(/^INO-/i, "");
+  const m = core.match(/^(IDD|IDK|IDP)/i);
+  return m ? m[1].toLowerCase() : "";
 }
 
 /** Web galeri veya imagesfolder — yerel JPG döndürür */
@@ -378,14 +393,14 @@ export function downloadInoksanImage(sku, web, imgDir, imgSub, opts = {}) {
   const dryRun = opts.dryRun === true;
   const force = opts.force === true;
   const row = opts.row || null;
-  const dest = imgFileFor(sku, imgDir);
+  const dest = imgFileFor(sku, imgDir, row);
   if (!force && fs.existsSync(dest) && !isValidImageFile(dest)) {
     try {
       fs.unlinkSync(dest);
     } catch (_) {}
   }
   if (!force && isValidImageFile(dest)) {
-    return { rel: imgRelFor(sku, imgSub), source: "local" };
+    return { rel: imgRelFor(sku, imgSub, row), source: "local" };
   }
 
   const candidates = [];
@@ -405,12 +420,12 @@ export function downloadInoksanImage(sku, web, imgDir, imgSub, opts = {}) {
       let source = "imagesfolder";
       if (web?.imgs?.includes(url)) source = "pdp-gallery";
       else if (fb && url === fb) source = "dept-fallback";
-      return { rel: imgRelFor(sku, imgSub), source, url };
+      return { rel: imgRelFor(sku, imgSub, row), source, url };
     }
   }
 
   if (isValidImageFile(dest)) {
-    return { rel: imgRelFor(sku, imgSub), source: "local" };
+    return { rel: imgRelFor(sku, imgSub, row), source: "local" };
   }
   return null;
 }
