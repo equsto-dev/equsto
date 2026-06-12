@@ -13,7 +13,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
 import { fetchTcmbEurRate } from "./fetch-tcmb-kur.mjs";
-import { avathermTasimaCategory } from "./lib/avatherm-tasima.mjs";
+import { avathermTasimaCategory, AVATHERM_BRAND } from "./lib/avatherm-tasima.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const HOST = "https://yukselsatis.com";
@@ -413,6 +413,12 @@ function mapWebDept(p) {
 function brandForWeb(p, deptFile) {
   if (/portabianco/i.test(p.name || "") || deptFile === "sogutma" || deptFile === "yikama") {
     return "PORTABIANCO";
+  }
+  if (
+    deptFile === "tasima" &&
+    (/avatherm|^av\d{2}/i.test(p.name || "") || /^avatherm-|^av\d/i.test(p.sku || ""))
+  ) {
+    return AVATHERM_BRAND;
   }
   return "Yüksel Endüstriyel";
 }

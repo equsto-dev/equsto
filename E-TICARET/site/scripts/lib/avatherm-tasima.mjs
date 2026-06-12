@@ -27,6 +27,20 @@ export function avathermTasimaCategory(name, subcatSlug = "") {
   return "tasima-ekipmanlari-yemek-tasima-kaplari";
 }
 
+export const AVATHERM_BRAND = "Avatherm";
+
+export function applyAvathermBrand(row) {
+  row.brand = AVATHERM_BRAND;
+  row.marka_kodu = "AVATHERM";
+  if (Array.isArray(row.keywords)) {
+    row.keywords = row.keywords
+      .map((k) => (/yuksel\s*end[uü]striyel/i.test(String(k)) ? AVATHERM_BRAND : k))
+      .filter((k, i, a) => k && a.indexOf(k) === i);
+    if (!row.keywords.some((k) => /^avatherm$/i.test(k))) row.keywords.unshift(AVATHERM_BRAND);
+  }
+  return row;
+}
+
 const CAT_LABELS = {
   "servis-arabalar": "Servis Arabalar",
   "tasima-ekipmanlari-yemek-tasima-kaplari": "Yemek Taşıma Kapları",
@@ -40,6 +54,6 @@ export function applyAvathermTasimaMeta(row, subcatSlug = "") {
   row.urun_kategori = "Taşıma";
   row.urun_alt_kategori = catLabel;
   row.kategori_yolu = ["Taşıma", catLabel];
-  if (!row.brand || /yuksel/i.test(row.brand)) row.brand = "Yüksel Endüstriyel";
+  applyAvathermBrand(row);
   return row;
 }

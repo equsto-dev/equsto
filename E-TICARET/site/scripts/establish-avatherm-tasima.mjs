@@ -47,7 +47,7 @@ const arabaNext = pull(araba, "araba");
 const servisNext = pull(servis, "servis");
 
 for (const row of tasima) {
-  if (isAvathermRow(row) && row.dept !== "tasima") applyAvathermTasimaMeta(row);
+  if (isAvathermRow(row)) applyAvathermTasimaMeta(row);
 }
 
 save("araba.json", arabaNext);
