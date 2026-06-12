@@ -229,6 +229,20 @@ export function referansKatalogUyumsuz(
   const s = norm(sablonIsim);
   const k = norm(`${katalogAd} ${katalogSku ?? ""}`);
   if (!s || !k) return false;
+  if (
+    /davlumbaz/.test(k) &&
+    /tezgah|sehpa|raf|evye|masa|dolap/i.test(s) &&
+    !/davlumbaz/i.test(s)
+  ) {
+    return true;
+  }
+  if (
+    /(?:araba|tasima|ta[sş]ima)/.test(k) &&
+    /raf|tezgah|sehpa|masa|dolap/i.test(s) &&
+    !/(?:araba|tasima|ta[sş]ima)/i.test(s)
+  ) {
+    return true;
+  }
   if (s.includes("karbuz") && k.includes("buz mak") && !k.includes("karbuz")) {
     return true;
   }
