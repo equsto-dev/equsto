@@ -147,7 +147,7 @@ body.bd-page.besos .topnav-besos.active {
   box-shadow: inset 0 -2px 0 0 var(--bes-gold) !important;
 }
 
-/* Bar Design alt şerit — Vitrin / Modüller / Projeler / IMT300 / Teklif */
+/* Bar Design alt şerit — Bardaklar / Bar Ekipmanları / Buz Makinesi / Bar İstasyonları */
 body.bd-page.besos .bd-besos-subnav {
   display: flex;
   justify-content: center;
@@ -169,24 +169,25 @@ body.bd-page.besos .bd-besos-subnav-inner {
   flex-wrap: nowrap;
   align-items: stretch;
   justify-content: center;
-  gap: 4px;
-  width: max-content;
-  max-width: 100%;
+  gap: 8px;
+  width: 100%;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 6px 12px;
+  padding: 8px 16px;
   box-sizing: border-box;
 }
 body.bd-page.besos .bd-besos-subnav-link,
 body.bd-page.besos .bd-besos-subnav a {
-  flex: 0 0 auto;
+  flex: 1 1 0;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 4px;
-  min-width: 72px;
-  padding: 6px 14px 8px;
-  font-size: 10px;
+  gap: 6px;
+  min-width: 88px;
+  max-width: 180px;
+  padding: 6px 10px 8px;
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: none;
@@ -200,13 +201,13 @@ body.bd-page.besos .bd-besos-subnav-ico {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 22px;
-  height: 22px;
+  width: 28px;
+  height: 28px;
   color: rgba(255, 255, 255, 0.88);
 }
 body.bd-page.besos .bd-besos-subnav-ico svg {
-  width: 22px;
-  height: 22px;
+  width: 28px;
+  height: 28px;
 }
 body.bd-page.besos .bd-besos-subnav-label {
   line-height: 1.2;

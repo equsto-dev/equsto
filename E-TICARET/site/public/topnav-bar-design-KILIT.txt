@@ -35,7 +35,7 @@ YASAK (onay olmadan):
   lib/shop/assets.ts       — SHOP_ASSET_V
 
 ── Besos (/besos) ek şerit (ayrı kilit) ───────────────────────────────────
-  bd-besos-subnav: Vitrin · Modüller · Projeler · IMT300 · Teklif iste
+  bd-besos-subnav: Bardaklar · Bar Ekipmanları · Buz Makinesi · Bar İstasyonları
   (Ana topnav'dan bağımsız; siyah alt şerit)
 
 ── Deploy / doğrulama ─────────────────────────────────────────────────────
