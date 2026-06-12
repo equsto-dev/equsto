@@ -72,7 +72,9 @@ import {
 } from "../core/caglayan-marka";
 import { matchTeshirReyonByReferans } from "./teshir-reyon-match";
 import {
+  ATALAY_MARKA,
   isAtalayPisirmePfosKalem,
+  isAtalayPisirmeRow,
   isPisirmeReferansIsim,
 } from "../core/atalay-marka";
 import { ocakFuelFromRow, parseOcakFuelFromReferans } from "../core/atalay-ocak-spec";
@@ -229,6 +231,62 @@ export function referansKatalogUyumsuz(
   const s = norm(sablonIsim);
   const k = norm(`${katalogAd} ${katalogSku ?? ""}`);
   if (!s || !k) return false;
+
+  // 10. Tost makinesi vs döner sarma/kesme/döner
+  const isKatTost = k.includes("tost") || /akek|eaek/i.test(katalogSku ?? "");
+  if (s.includes("tost") && (k.includes("doner") || k.includes("döner") || k.includes("sarma") || !isKatTost)) {
+    return true;
+  }
+  if ((s.includes("doner") || s.includes("döner") || s.includes("sarma")) && isKatTost) {
+    return true;
+  }
+
+  // 11. Taş fırın vs bıçak steril dolabı
+  if (
+    /firin|fırın/.test(s) &&
+    !/firin|fırın|kuzine|ocak/.test(k) &&
+    (/steril|dolap|dolab|dolabi/i.test(k) || /abs-\d+/i.test(katalogSku ?? ""))
+  ) {
+    return true;
+  }
+
+  // 15. Mikrodalga fırın vs pizza/taş fırın
+  if (
+    /mikrodalga|microwave|menumaster/i.test(s) &&
+    !/mikrodalga|microwave|menumaster/i.test(k)
+  ) {
+    return true;
+  }
+  if (
+    !/mikrodalga|microwave|menumaster/i.test(s) &&
+    /mikrodalga|microwave/i.test(k)
+  ) {
+    return true;
+  }
+
+  // 16. Katı meyve sıkacağı vs portakal sıkma (citrus juicer)
+  if (
+    /kati\s*meyve|katı\s*meyve|centrifugal/i.test(s) &&
+    /portakal|narenciye|citrus/i.test(k)
+  ) {
+    return true;
+  }
+  if (
+    /portakal|narenciye|citrus/i.test(s) &&
+    /kati\s*meyve|katı\s*meyve|centrifugal/i.test(k)
+  ) {
+    return true;
+  }
+
+  // 17. Çöp arabası/trolley vs static shelving/worktop
+  if (
+    /araba|tasima|ta[sş]ima|trolley/i.test(s) &&
+    !/araba|tasima|ta[sş]ima|trolley/i.test(k) &&
+    !/setalt|alt\s+tezgah/i.test(k)
+  ) {
+    return true;
+  }
+
   if (
     /davlumbaz/.test(k) &&
     /tezgah|sehpa|raf|evye|masa|dolap/i.test(s) &&
@@ -370,6 +428,7 @@ export function referansKatalogUyumsuz(
   if (
     isPisirmeReferansIsim(sablonIsim) &&
     !isKombiKonveksiyonReferans(sablonIsim) &&
+    !s.includes("salamander") &&
     !/atalay/.test(k) &&
     (/^78[0-9]{2}\.|7864\.|7831\.|7850\.|9890\.|oztiryakiler|\bozti\b|electrolux|rational|unox/.test(k))
   ) {
@@ -1070,6 +1129,11 @@ export async function matchReferansKalem(
     if (dav) return dav;
   }
 
+  if (/ara\s*tezgah|notr\s*ara|notr\s*tezgah|nötr\s*ara|nötr\s*tezgah/.test(String(input.isim).toLowerCase())) {
+    const atalayAra = await matchAtalayAraTezgahByReferans(input.isim, olcu);
+    if (atalayAra) return atalayAra;
+  }
+
   const hazirlikTip = inferHazirlikTipFromIsim(input.isim);
   if (hazirlikTip) {
     const shop = await matchShopCatalog(hazirlikTip, input.fiyatStratejisi);
@@ -1177,4 +1241,52 @@ export async function matchReferansKalem(
   }
 
   return await fallbackOzelImalat(input);
+}
+
+function extractWidth(s: string): number {
+  const nums = s.match(/(\d+)/g)?.map(Number) || [];
+  return nums[0] || 40;
+}
+function extractDepth(s: string): number {
+  const nums = s.match(/(\d+)/g)?.map(Number) || [];
+  return nums[1] || 70;
+}
+
+export async function matchAtalayAraTezgahByReferans(
+  isim: string,
+  olcu: string,
+): Promise<EslesmisUrun | null> {
+  const width = extractWidth(olcu || isim);
+  const depth = extractDepth(olcu || isim) || 70;
+  
+  let sku = "AAT-470";
+  if (depth === 70) {
+    if (width >= 80) sku = "AAT-870";
+    else if (width >= 60) sku = "AAT-670";
+    else sku = "AAT-470";
+  } else if (depth === 90) {
+    if (width >= 80) sku = "AAT-890S";
+    else sku = "AAT-490S";
+  }
+  
+  const rows = await loadLegacyCatalogRows();
+  const found = rows.find(
+    (r) =>
+      r.durum === "aktif" &&
+      isAtalayPisirmeRow(r) &&
+      String(r.sku ?? "").replace(/\s+/g, "").toUpperCase() === sku.toUpperCase(),
+  );
+  if (found) {
+    const matched = katalogRowToEslesmis(found, {
+      linkMarka: ATALAY_MARKA,
+      sablonIsim: isim,
+    });
+    return {
+      ...matched,
+      ad: `Atalay Ara Tezgah, Setüstü ${sku.replace("AAT-", "")}`,
+      marka: ATALAY_MARKA,
+      olcu: olcu || `${width}*${depth}*30`,
+    };
+  }
+  return null;
 }

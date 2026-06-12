@@ -50,7 +50,7 @@ export function isBuzdolabiReferansIsim(isim: string | null | undefined): boolea
   if (/teshir\s*dolab|teşhir\s*dolab|vitrin/.test(n) && !/buzdolab/.test(n)) return false;
   if (/bulasik|bulaşık|yikama|bardak\s*yik/.test(n)) return false;
   return (
-    /buzdolab|donduruc|derin\s*dondur|sogutuc|soğutuc|sishe\s*sogut|şişe\s*soğut|icecek\s*sogut|içecek\s*soğut|bar\s*sogut|saladette|pizza\s*prep|sogutmali\s*tezgah|soğutmali\s*tezgah|hazirlik\s*buzdolab|hazırlık\s*buzdolab/.test(
+    /buzdolab|donduruc|derin\s*dondur|sogutuc|soğutuc|sishe\s*sogut|şişe\s*soğut|icecek\s*sogut|içecek\s*soğut|bar\s*sogut|saladette|pizza\s*prep|sogutmali\s*tezgah|soğutmali\s*tezgah|hazirlik\s*buzdolab|hazırlık\s*buzdolab|bizdlab|bizlab|buzdlab/.test(
       n,
     )
   );

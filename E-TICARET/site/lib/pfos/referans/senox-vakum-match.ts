@@ -17,6 +17,7 @@ import {
   isSenoxOnYikamaDusuReferansIsim,
   isSenoxSinekReferansIsim,
   isSenoxVakumPfosKalem,
+  isSenoxDilimlemeReferansIsim,
 } from "../core/senox-marka";
 
 type SenoxCatalogProduct = {
@@ -459,7 +460,22 @@ export async function matchSenoxVakumByReferans(
   return fromList.fiyatEur ? fromList : fromShop;
 }
 
-/** Şenox katalog eşlemesi — el yıkama, sinek, vakum */
+/** Dilimleme makinesi — Şenox */
+export async function matchSenoxDilimlemeByReferans(
+  isim: string,
+): Promise<EslesmisUrun | null> {
+  const mutbexList = await loadSenoxMutbexProducts();
+  const pick = mutbexList.find(
+    (p) =>
+      p.mutbexCode === "118.AAMH300" ||
+      /aamh300|aamh-300|dilimleme/i.test(norm(p.title ?? "")),
+  );
+  if (!pick) return null;
+
+  return mutbexToEslesmis(pick, isim);
+}
+
+/** Şenox katalog eşlemesi — el yıkama, sinek, vakum, dilimleme */
 export async function matchSenoxByReferans(
   isim: string,
   urunTipi?: string | null,
@@ -478,6 +494,9 @@ export async function matchSenoxByReferans(
   }
   if (isSenoxVakumPfosKalem({ isim, urunTipi })) {
     return matchSenoxVakumByReferans(isim);
+  }
+  if (isSenoxDilimlemeReferansIsim(isim) || urunTipi === "dilimleme_makinesi") {
+    return matchSenoxDilimlemeByReferans(isim);
   }
   return null;
 }

@@ -84,6 +84,13 @@ export function isSenoxVakumPfosKalem(opts: {
   return isSenoxVakumReferansIsim(opts.isim);
 }
 
+export function isSenoxDilimlemeReferansIsim(
+  isim: string | null | undefined,
+): boolean {
+  const n = norm(isim);
+  return /dilimleme\s*mak|gida\s*dilim|gıda\s*dilim|slicing\s*mach|slicer/.test(n);
+}
+
 /** Şenox katalog ürünü — vakum, el yıkama, sinek öldürücü vb. */
 export function isSenoxPfosKalem(opts: {
   isim?: string | null;
@@ -93,6 +100,7 @@ export function isSenoxPfosKalem(opts: {
   if (isSenoxElYikamaReferansIsim(opts.isim)) return true;
   if (isSenoxSinekReferansIsim(opts.isim)) return true;
   if (isSenoxOnYikamaDusuReferansIsim(opts.isim)) return true;
+  if (isSenoxDilimlemeReferansIsim(opts.isim) || opts.urunTipi === "dilimleme_makinesi") return true;
   return false;
 }
 

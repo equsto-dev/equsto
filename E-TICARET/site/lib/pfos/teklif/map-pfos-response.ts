@@ -30,31 +30,7 @@ function specAciklama(
   k: PFOSResponse["kalemler"][number],
   referansListe = false,
 ): string {
-  const u = k.urun;
-  const lines: string[] = [];
-  if (
-    !referansListe &&
-    u?.ad &&
-    u.ad !== k.isim
-  ) {
-    lines.push(`•  ${repairPfosDisplayText(u.ad)}`);
-  }
-  if (k.notlar && !isOlcuMetni(k.notlar))
-    lines.push(`•  ${repairPfosDisplayText(k.notlar)}`);
-  if (u?.sku?.trim()) lines.push(`•  Stok: ${u.sku}`);
-  const marka = resolveTeklifMarka({
-    katalogMarka: u?.marka,
-    urunAd: u?.ad,
-    sablonIsim: k.isim,
-    urunTipi: k.urunTipi,
-    sku: u?.sku,
-  });
-  if (marka && marka !== "—") lines.push(`•  Marka: ${marka}`);
-  const elk = u?.elektrikGucuKw ?? k.elektrikGucuKwHint;
-  const gaz = u?.gazGucuKw ?? k.gazGucuKwHint;
-  if (elk && elk > 0) lines.push(`•  Elektrik: ${elk} kW`);
-  if (gaz && gaz > 0) lines.push(`•  Gaz: ${gaz} kW`);
-  return lines.join("\n");
+  return "";
 }
 
 /**
@@ -86,12 +62,23 @@ export function pfosResponseToTeklifV14(
     const birimEur = birimEurFromEslesmis(u, eurTry);
     const { bolumNo, bolumBaslik } = bolumForKalem(k, res.teklifLayout);
     const stokNo = u?.sku?.trim() ?? "";
-    const gorselFallback = normalizePfosGorselUrl(
-      portashelfGorselRelFromSku(stokNo) ??
+
+    let finalGorsel = portashelfGorselRelFromSku(stokNo) ??
         u?.gorselUrl ??
         equstoPimakGorselRelFromSku(stokNo, k.isim) ??
-        (stokNo ? oztiWebImageRelFromSku(stokNo) : null),
-    );
+        (stokNo ? oztiWebImageRelFromSku(stokNo) : null);
+
+    const normSkuKey = String(stokNo || "").trim().toUpperCase();
+    const normNameKey = String(k.isim || "").toLowerCase();
+    if (normSkuKey.endsWith(".12") || normSkuKey.endsWith("-12") || /çift\s*evye|cift\s*evye|iki\s*evye/i.test(normNameKey)) {
+      finalGorsel = "/data/images/catalog/cafemarkt-images/tablali-evye-cift-goz-damlaliksiz_1.jpg";
+    } else if (normSkuKey.endsWith(".11") || normSkuKey.endsWith("-11") || /tek\s*evye|1\s*evye/i.test(normNameKey)) {
+      finalGorsel = "/data/images/catalog/cafemarkt-images/tablali-evye-tek-goz-damlaliksiz_1.jpg";
+    } else if (normSkuKey.endsWith(".17") || normSkuKey.endsWith("-17") || /üç\s*evye|uc\s*evye|3\s*evye/i.test(normNameKey)) {
+      finalGorsel = "/data/images/catalog/cafemarkt-images/tablali-evye-uc-goz-damlaliksiz_1.jpg";
+    }
+
+    const gorselFallback = normalizePfosGorselUrl(finalGorsel);
 
     return {
       bolumNo,

@@ -250,6 +250,10 @@ export function resolveTeklifMarka(opts: {
       urunTipi: opts.urunTipi,
     })
   ) {
+    const m = (String(opts.katalogMarka || "") + " " + String(opts.urunAd || "")).toLowerCase();
+    if (m.includes("rational")) return "Rational";
+    if (m.includes("unox")) return "Unox";
+    if (m.includes("electrolux")) return "Electrolux";
     return ATALAY_MARKA;
   }
 

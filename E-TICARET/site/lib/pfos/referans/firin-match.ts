@@ -40,7 +40,7 @@ export function isKombiKonveksiyonReferans(
   if (/setalt|set alt|tezgah alt|mikrodalga|pizza|blender|robot coupe/.test(n)) {
     return false;
   }
-  if (/kombili|icombi|\bcombi\b|konveksiyon/.test(n) && /firin/.test(n)) {
+  if (/kombili|icombi|\bcombi\b|konveksiyon|yemekcilik|yemekçilik/.test(n) && /firin/.test(n)) {
     return true;
   }
   return (
@@ -91,6 +91,12 @@ function scoreKombiRow(row: AdminUrunRow, gn: GnSpec, referansIsim: string): num
   const ad = norm(row.ad);
   if (/unox|electrolux|rational/.test(ad)) score += 40;
   if (/kombi|combi/.test(ad)) score += 30;
+
+  // Prefer Rational for Yemekçilik/Catering Oven
+  if (/yemekcilik|yemekçilik/i.test(referansIsim) && /rational/i.test(ad)) {
+    score += 500;
+  }
+
   if (gn.trays) {
     const trayHit = new RegExp(`\\b${gn.trays}\\s*(gn|tepsi)`).test(ad);
     if (trayHit) score += 500;

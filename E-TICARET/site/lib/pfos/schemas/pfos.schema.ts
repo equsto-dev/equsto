@@ -14,7 +14,7 @@ export const KATEGORI_LABELS: Record<KategoriKodu, string> = {
   D: "Pastane & Tatlı Hazırlık",
   E: "Soğuk Hazırlık & Salata",
   F: "Pizza Hazırlık & Servis",
-  G: "Mutfak Depolama",
+  G: "Mutfak",
   H: "Mutfak Bulaşık",
   X: "Nakliye & Montaj",
 };
