@@ -201,13 +201,22 @@ body.bd-page.besos .bd-besos-subnav-ico {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: auto;
+  min-width: 44px;
+  height: 44px;
   color: #fff;
 }
+body.bd-page.besos .bd-besos-subnav-ico img {
+  display: block;
+  width: auto;
+  height: 44px;
+  max-width: 72px;
+  object-fit: contain;
+  image-rendering: -webkit-optimize-contrast;
+}
 body.bd-page.besos .bd-besos-subnav-ico svg {
-  width: 32px;
-  height: 32px;
+  width: 44px;
+  height: 44px;
 }
 body.bd-page.besos .bd-besos-subnav-label {
   line-height: 1.15;
@@ -225,6 +234,11 @@ body.bd-page.besos .bd-besos-subnav a.is-active {
 body.bd-page.besos .bd-besos-subnav-link.is-active .bd-besos-subnav-ico,
 body.bd-page.besos .bd-besos-subnav a.is-active .bd-besos-subnav-ico {
   color: var(--bes-gold-soft);
+}
+body.bd-page.besos .bd-besos-subnav-link.is-active .bd-besos-subnav-ico img,
+body.bd-page.besos .bd-besos-subnav a.is-active .bd-besos-subnav-ico img {
+  opacity: 1;
+  filter: brightness(0) saturate(100%) invert(78%) sepia(28%) saturate(620%) hue-rotate(6deg) brightness(95%) contrast(90%);
 }
 
 body.bd-page.besos.besos-locked .breadcrumb {
