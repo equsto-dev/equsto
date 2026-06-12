@@ -18,11 +18,12 @@ import {
 import {
   findPortashelfInox201ByOlcu,
   PORTASHELF_304_GORSEL_REL,
+  portashelfBySku,
   portashelfDisplayName,
   portashelfGorselRelFromSku,
   portashelfInox201BySku,
   portashelfSatisEurFromListe,
-  type PortashelfInox201Row,
+  type PortashelfKatliRafRow,
 } from "../core/portashelf-fiyat";
 import { extractOlcuFromNotlar } from "./yer-izgara-match";
 
@@ -55,7 +56,7 @@ async function loadPortashelfCatalog(): Promise<PortashelfProduct[]> {
       ? raw.items
       : [];
   portashelfCatalogCache = items.filter((p) =>
-    /inox\s*201\s*light|katli\s*raf|tier\s*shelving/i.test(
+    /inox\s*(304|201)|katli\s*raf|tier\s*shelving/i.test(
       `${p.alt_kategori ?? ""} ${p.name ?? ""}`,
     ),
   );
@@ -68,19 +69,20 @@ function portashelfImageRel(sku: string): string | null {
 
 function inoxRowFromProduct(
   p: PortashelfProduct,
-): (PortashelfInox201Row & { sku: string; satisEur: number }) | null {
+): (PortashelfKatliRafRow & { sku: string; satisEur: number }) | null {
   const sku = String(p.sku ?? "").trim();
-  const fromTable = portashelfInox201BySku(sku);
+  const fromTable = portashelfBySku(sku) ?? portashelfInox201BySku(sku);
   if (fromTable) return fromTable;
   const liste = Number(p.liste_fiyati_eur ?? p.fiyat_euro);
   if (!(liste > 0) || !isPortashelfSku(sku)) return null;
-  const m = /^(\d+)-x-(\d+)-x-(\d+)$/i.exec(sku);
+  const m = /^(\d+)-x-(\d+)-x-(\d+)/i.exec(sku);
   if (!m) return null;
   return {
     depthCm: Number(m[1]),
     widthCm: Number(m[2]),
     heightCm: Number(m[3]),
     listeEur: liste,
+    variant: "201L",
     sku,
     satisEur: portashelfSatisEurFromListe(liste),
   };
@@ -126,7 +128,7 @@ function portashelfToEslesmis(
     };
   }
 
-  const m = /^(\d+)-x-(\d+)-x-(\d+)$/i.exec(sku);
+  const m = /^(\d+)-x-(\d+)-x-(\d+)/i.exec(sku);
   const ad = m
     ? portashelfDisplayName(Number(m[1]), Number(m[2]), Number(m[3]))
     : isim.trim();

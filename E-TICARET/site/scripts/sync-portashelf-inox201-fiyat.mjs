@@ -1,6 +1,6 @@
 /**
- * Portashelf 4 katlı raf — INOX 201 LIGHT liste fiyatları, satış = %45.
- * urunler.json + dept/istif + ekipmanlar.json günceller.
+ * Portashelf 4 katlı raf — INOX 304 / 304 LIGHT / 201 / 201 LIGHT liste fiyatları.
+ * Satış = listenin %45'i (%55 iskonto). urunler.json + dept/istif + ekipmanlar.json.
  *
  *   node scripts/sync-portashelf-inox201-fiyat.mjs
  */
@@ -11,48 +11,79 @@ import { fileURLToPath } from "node:url";
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SATIS_ORAN = 0.45;
 const ALT_KAT_DISPLAY = "KATLI RAFLAR · TIER SHELVING";
-const ALT_KAT_INTERNAL = "KATLI RAFLAR · TIER SHELVING · INOX 201 LIGHT";
 const KUR_EUR_TRY = 53.5921;
 const KDV = 1.2;
 
-const INOX201_4KAT = [
-  [46, 91, 183, 336],
-  [46, 107, 183, 356],
-  [46, 122, 183, 372],
-  [46, 137, 183, 416],
-  [46, 152, 183, 440],
-  [46, 183, 183, 492],
-  [53, 91, 183, 356],
-  [53, 107, 183, 376],
-  [53, 122, 183, 432],
-  [53, 137, 183, 460],
-  [53, 152, 183, 492],
-  [53, 183, 183, 568],
-  [61, 91, 183, 380],
-  [61, 107, 183, 416],
-  [61, 122, 183, 460],
-  [61, 137, 183, 492],
-  [61, 152, 183, 528],
-  [61, 183, 183, 584],
+/** [depth, width, height, INOX304, 304LIGHT, INOX201, 201LIGHT] — Yüksel 2025 liste EUR */
+const CATALOG_4KAT = [
+  [46, 91, 183, 488, 424, 372, 336],
+  [46, 107, 183, 532, 464, 408, 356],
+  [46, 122, 183, 560, 480, 432, 372],
+  [46, 137, 183, 628, 536, 484, 416],
+  [46, 152, 183, 680, 576, 516, 440],
+  [46, 183, 183, 764, 632, 572, 492],
+  [53, 91, 183, 528, 452, 408, 356],
+  [53, 107, 183, 568, 480, 432, 376],
+  [53, 122, 183, 672, 568, 508, 432],
+  [53, 137, 183, 716, 620, 540, 460],
+  [53, 152, 183, 768, 636, 580, 492],
+  [53, 183, 183, 868, 744, 660, 568],
+  [61, 91, 183, 588, 508, 440, 380],
+  [61, 107, 183, 632, 544, 488, 416],
+  [61, 122, 183, 724, 600, 540, 460],
+  [61, 137, 183, 768, 636, 580, 492],
+  [61, 152, 183, 832, 688, 632, 528],
+  [61, 183, 183, 952, 776, 716, 584],
 ];
 
-function sku(d, w, h) {
+const VARIANTS = [
+  {
+    key: "304",
+    label: "INOX 304",
+    skuSuffix: "-304",
+    idSuffix: "304",
+    priceIdx: 3,
+  },
+  {
+    key: "304L",
+    label: "INOX 304 LIGHT",
+    skuSuffix: "-304L",
+    idSuffix: "304l",
+    priceIdx: 4,
+  },
+  {
+    key: "201",
+    label: "INOX 201",
+    skuSuffix: "-201",
+    idSuffix: "201",
+    priceIdx: 5,
+  },
+  {
+    key: "201L",
+    label: "INOX 201 LIGHT",
+    skuSuffix: "",
+    idSuffix: "201l",
+    priceIdx: 6,
+  },
+];
+
+function baseSku(d, w, h) {
   return `${d}-X-${w}-X-${h}`;
 }
 
-function displayName(d, w, h) {
-  return `Portashelf 4 Katlı Raf ${d}×${w}×${h} cm`;
+function displayName(d, w, h, materialLabel) {
+  return `Portashelf 4 Katlı Raf ${materialLabel} ${d}×${w}×${h} cm`;
 }
 
-/** Tüm Portashelf katlı raflar — kanonik 304 kalite tel raf görseli */
+/** Tüm Portashelf katlı raflar — tek takım istif rafı görseli */
 const PORTASHELF_304_GORSEL = "images/catalog/yuksel/portashelf-304-katli-raf.jpg";
 
 function portashelfImageRel() {
   return PORTASHELF_304_GORSEL;
 }
 
-function buildRow(d, w, h, listeEur) {
-  const code = sku(d, w, h);
+function buildRow(d, w, h, listeEur, variant) {
+  const code = `${baseSku(d, w, h)}${variant.skuSuffix}`;
   const satisEur = Math.round(listeEur * SATIS_ORAN * 100) / 100;
   const fiyatTl = Math.round(satisEur * KUR_EUR_TRY);
   const fiyatTlKdv = Math.round(fiyatTl * KDV);
@@ -61,16 +92,19 @@ function buildRow(d, w, h, listeEur) {
   const fallback = PORTASHELF_304_GORSEL;
   const olcuMm = `${d}X${w}X${h}`;
   const olcuCm = `${d} X ${w} X ${h}`;
+  const altKatInternal = `${ALT_KAT_DISPLAY} · ${variant.label}`;
+  const name = displayName(d, w, h, variant.label);
 
   return {
     category: "istif-raflari",
     brand: "Portashelf",
-    name: displayName(d, w, h),
+    name,
     price: `₺${fiyatTl.toLocaleString("tr-TR")},00 + KDV\nKDV Dahil ₺${fiyatTlKdv.toLocaleString("tr-TR")},00`,
     specs: [
-      displayName(d, w, h),
+      name,
       "Kaynak: YÜKSEL YERLİ - 2025 · Portashelf",
       `Kategori: ${ALT_KAT_DISPLAY}`,
+      `Malzeme: ${variant.label}`,
       `Kod: ${code}`,
       `Ölçü (cm): ${olcuCm}`,
       `Liste fiyatı (EUR): ${listeEur}`,
@@ -85,7 +119,7 @@ function buildRow(d, w, h, listeEur) {
     kaynak: "yuksel-2025-yerli-pdf",
     kaynak_fiyat_listesi: "yuksel-2025-yerli-pdf",
     dept: "istif",
-    alt_kategori: ALT_KAT_INTERNAL,
+    alt_kategori: altKatInternal,
     seri: "4 KATLI RAF",
     fiyat_euro: listeEur,
     liste_fiyati_eur: listeEur,
@@ -96,12 +130,26 @@ function buildRow(d, w, h, listeEur) {
     olculer_net_mm: olcuMm,
     page: 7,
     equsto_folder: "istif/portashelf",
-    id: `portashelf__${d}x${w}x${h}`,
+    id: `portashelf__${variant.idSuffix}__${d}x${w}x${h}`,
   };
 }
 
-const catalogRows = INOX201_4KAT.map(([d, w, h, eur]) => buildRow(d, w, h, eur));
+const catalogRows = [];
+for (const variant of VARIANTS) {
+  for (const row of CATALOG_4KAT) {
+    const [d, w, h] = row;
+    catalogRows.push(buildRow(d, w, h, row[variant.priceIdx], variant));
+  }
+}
+
 const bySku = new Map(catalogRows.map((r) => [r.sku.toLowerCase(), r]));
+
+function isPortashelfKatliRafRow(row) {
+  const text = `${row.alt_kategori ?? ""} ${row.name ?? ""} ${row.seri ?? ""}`;
+  if (!/katli\s*raf|tier\s*shelving/i.test(text)) return false;
+  const sku = String(row.sku ?? "").trim();
+  return /^\d+-x-\d+-x-\d+(-304l?|-201)?$/i.test(sku);
+}
 
 function mergePortashelfIntoArray(arr, label) {
   let added = 0;
@@ -114,6 +162,9 @@ function mergePortashelfIntoArray(arr, label) {
       out.push({ ...row, ...bySku.get(s) });
       seen.add(s);
       updated++;
+      continue;
+    }
+    if (isPortashelfKatliRafRow(row)) {
       continue;
     }
     if (/^8897\.|^7897\./i.test(row.sku ?? "") && /istif|raf/i.test(row.name ?? "")) {
@@ -137,15 +188,10 @@ const urunlerPath = path.join(
 );
 const urunler = JSON.parse(fs.readFileSync(urunlerPath, "utf8"));
 const urunlerArr = Array.isArray(urunler) ? urunler : urunler.items ?? [];
-const other = urunlerArr.filter(
-  (p) =>
-    !/katli\s*raf|tier\s*shelving/i.test(
-      `${p.alt_kategori ?? ""} ${p.name ?? ""}`,
-    ) || !/^\d+-x-/i.test(String(p.sku ?? "")),
-);
+const other = urunlerArr.filter((p) => !isPortashelfKatliRafRow(p));
 const mergedUrunler = [...other, ...catalogRows];
 fs.writeFileSync(urunlerPath, JSON.stringify(mergedUrunler, null, 2) + "\n", "utf8");
-console.log("[urunler.json]", mergedUrunler.length, "ürün");
+console.log("[urunler.json]", mergedUrunler.length, "ürün,", catalogRows.length, "katlı raf");
 
 const istifPath = path.join(ROOT, "public/data/dept/istif.json");
 const istif = JSON.parse(fs.readFileSync(istifPath, "utf8"));
@@ -194,5 +240,10 @@ const patchedEkip = mergedEkip.map(patchCopArabasiRow);
 fs.writeFileSync(ekipPath, JSON.stringify(patchedEkip), "utf8");
 console.log("[portashelf] MB126X çöp arabası satış EUR:", copSatisEur);
 
-console.log("\n[sync-portashelf-inox201] tamam — örnek 46-X-152-X-183 satış EUR:",
-  bySku.get("46-x-152-x-183")?.satis_eur_indirimli);
+console.log("\n[sync-portashelf] tamam — örnekler:");
+for (const sample of ["46-x-91-x-183-304", "46-x-91-x-183-304l", "46-x-91-x-183-201", "46-x-91-x-183"]) {
+  const row = bySku.get(sample);
+  if (row) {
+    console.log(`  ${row.sku}: liste ${row.liste_fiyati_eur} EUR → satış ${row.satis_eur_indirimli} EUR`);
+  }
+}
