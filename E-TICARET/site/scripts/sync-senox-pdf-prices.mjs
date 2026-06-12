@@ -13,7 +13,9 @@ import { fileURLToPath } from "node:url";
 import { execFileSync } from "node:child_process";
 import { fetchTcmbEurRate } from "./fetch-tcmb-kur.mjs";
 import {
+  findMutbexListPrice,
   findPdfListPrice,
+  loadMutbexCatalog,
   loadSenoxPdfCatalog,
   pricingFromSenoxPdfListe,
 } from "./lib/senox-pdf-prices.mjs";
@@ -29,16 +31,24 @@ function isSenoxRow(r) {
   return String(r?.kaynak || "") === KAYNAK || String(r?.id || "").startsWith("senox__");
 }
 
-function patchSpecsPriceBlock(specs, px, pdfMatch) {
+function patchSpecsPriceBlock(specs, px, match, priceSource) {
   const lines = String(specs || "").split("\n");
-  const start = lines.findIndex((l) => /^Liste fiyatı \(EUR, SENOX PDF\):/i.test(l));
+  const start = lines.findIndex((l) =>
+    /^Liste fiyatı \(EUR, (SENOX PDF|Mutbex liste)\):/i.test(l),
+  );
+  const listeLabel =
+    priceSource === "senox-mutbex-liste"
+      ? "Liste fiyatı (EUR, Mutbex liste)"
+      : "Liste fiyatı (EUR, SENOX PDF)";
   const block = [
-    `Liste fiyatı (EUR, SENOX PDF): ${px.liste_fiyati_eur}`,
+    `${listeLabel}: ${px.liste_fiyati_eur}`,
     `Equsto satış: liste × ${Math.round(SATIS_ORAN * 100)}% = ${px.satis_fiyati_eur} EUR`,
     `Kur: 1 EUR = ${px.kur_eur_try} TRY (KDV %${KDV})`,
-    pdfMatch?.matchKey
-      ? `PDF eşleşme: ${pdfMatch.matchKey}${pdfMatch.fuzzy ? " (yakın)" : ""}`
-      : "",
+    match?.source === "mutbex" && match?.mutbexCode
+      ? `Mutbex kod: ${match.mutbexCode} (satis ${match.satisEur} EUR × 2)`
+      : match?.matchKey
+        ? `PDF eşleşme: ${match.matchKey}${match.fuzzy ? " (yakın)" : ""}`
+        : "",
   ].filter(Boolean);
   if (start >= 0) {
     let end = start + 1;
@@ -54,29 +64,38 @@ function patchSpecsPriceBlock(specs, px, pdfMatch) {
   return `${specs}\n\n${block.join("\n")}`;
 }
 
-function applyPrice(row, kur, pdfIndex, pdfProducts) {
-  const pdfMatch = findPdfListPrice(
-    { model: row.model, mutbexCode: row.sku || row.urun_kodu, sku: row.sku, urun_kodu: row.urun_kodu },
-    pdfIndex,
-    pdfProducts,
-  );
-  const liste = pdfMatch?.listeEur || 0;
-  if (!(liste > 0)) return { row, updated: false, pdfMatch };
+function applyPrice(row, kur, pdfIndex, pdfProducts, mutbexIndex) {
+  const productRef = {
+    model: row.model,
+    mutbexCode: row.sku || row.urun_kodu,
+    sku: row.sku,
+    urun_kodu: row.urun_kodu,
+  };
+  const pdfMatch = findPdfListPrice(productRef, pdfIndex, pdfProducts);
+  const mutbexMatch = pdfMatch ? null : findMutbexListPrice(productRef, mutbexIndex);
+  const priceMatch = pdfMatch || mutbexMatch;
+  const liste = priceMatch?.listeEur || 0;
+  if (!(liste > 0)) return { row, updated: false, priceMatch };
 
   const px = pricingFromSenoxPdfListe(liste, kur, KDV, SATIS_ORAN);
+  const kaynakListe = pdfMatch ? "senox-pdf-2026-1" : "senox-mutbex-liste";
   const next = {
     ...row,
     ...px,
     iskonto_oran: Math.round(SATIS_ORAN * 100),
-    kaynak_fiyat_listesi: "senox-pdf-2026-1",
-    senox_pdf_match: pdfMatch.matchKey,
-    senox_pdf_fuzzy: pdfMatch.fuzzy || false,
-    specs: patchSpecsPriceBlock(row.specs, px, pdfMatch),
+    kaynak_fiyat_listesi: kaynakListe,
+    senox_pdf_match: pdfMatch?.matchKey || "",
+    senox_pdf_fuzzy: pdfMatch?.fuzzy || false,
+    senox_mutbex_match: mutbexMatch?.mutbexCode || "",
+    specs: patchSpecsPriceBlock(row.specs, px, priceMatch, kaynakListe),
   };
-  const teknik = [...(row.teknik_ozellikler || [])].filter((l) => !/^PDF kod:/i.test(l));
-  if (pdfMatch.matchKey) teknik.push(`PDF kod: ${pdfMatch.matchKey}`);
+  const teknik = [...(row.teknik_ozellikler || [])].filter(
+    (l) => !/^(PDF kod|Mutbex kod):/i.test(l),
+  );
+  if (pdfMatch?.matchKey) teknik.push(`PDF kod: ${pdfMatch.matchKey}`);
+  if (mutbexMatch?.mutbexCode) teknik.push(`Mutbex kod: ${mutbexMatch.mutbexCode}`);
   next.teknik_ozellikler = teknik;
-  return { row: next, updated: true, pdfMatch };
+  return { row: next, updated: true, priceMatch, kaynakListe };
 }
 
 function writeJsonAtomic(filePath, data) {
@@ -91,12 +110,16 @@ function writeJsonAtomic(filePath, data) {
 async function main() {
   const pdfCatalog = loadSenoxPdfCatalog();
   const pdfIndex = pdfCatalog.index;
+  const mutbexCatalog = loadMutbexCatalog();
+  const mutbexIndex = mutbexCatalog.index;
   const tcmb = await fetchTcmbEurRate();
   const kur =
     Number(process.env.EQUSTO_EUR_TRY) > 0 ? Number(process.env.EQUSTO_EUR_TRY) : tcmb.rate;
 
   let total = 0;
   let updated = 0;
+  let fromPdf = 0;
+  let fromMutbex = 0;
   let stillMissing = 0;
   const missing = [];
 
@@ -110,10 +133,18 @@ async function main() {
     const nextRows = rows.map((row) => {
       if (!isSenoxRow(row)) return row;
       total++;
-      const { row: patched, updated: ok, pdfMatch } = applyPrice(row, kur, pdfIndex, pdfCatalog.products);
+      const { row: patched, updated: ok, kaynakListe } = applyPrice(
+        row,
+        kur,
+        pdfIndex,
+        pdfCatalog.products,
+        mutbexIndex,
+      );
       if (ok) {
         updated++;
         fileUpdated++;
+        if (kaynakListe === "senox-mutbex-liste") fromMutbex++;
+        else fromPdf++;
         return patched;
       }
       stillMissing++;
@@ -124,8 +155,10 @@ async function main() {
     if (fileUpdated && !dryRun) writeJsonAtomic(filePath, nextRows);
   }
 
-  console.log(`[senox-pdf-prices] PDF: ${pdfCatalog.liste} | kur: ${kur}`);
-  console.log(`  senox satır: ${total} | fiyat güncellendi: ${updated} | hâlâ eşleşmeyen: ${stillMissing}`);
+  console.log(`[senox-pdf-prices] PDF: ${pdfCatalog.liste} | Mutbex: ${mutbexCatalog.products.length} ürün | kur: ${kur}`);
+  console.log(
+    `  senox satır: ${total} | güncellendi: ${updated} (PDF: ${fromPdf}, Mutbex: ${fromMutbex}) | hâlâ eşleşmeyen: ${stillMissing}`,
+  );
   if (missing.length) {
     console.log("  eşleşmeyen örnek:", missing.slice(0, 12).map((m) => m.model || m.sku).join(", "));
   }
