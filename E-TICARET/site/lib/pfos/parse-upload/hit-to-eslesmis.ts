@@ -5,6 +5,8 @@ import { loadLegacyCatalogRows } from "@/lib/legacy-catalog";
 import { enrichEslesmisFromKatalogRow } from "@/lib/pfos/core/catalog-enrich";
 import { equstoSatisEurFromRow } from "@/lib/pfos/core/shop-catalog-match";
 import type { EslesmisUrun } from "@/lib/pfos/schemas/pfos.schema";
+import { getTcmbEurForPricing } from "@/lib/tcmb-kur";
+import { enrichEslesmisGorsel } from "@/lib/pfos/core/katalog-gorsel";
 
 function gorselFromHit(hit: CatalogSearchHit): string | null {
   const img = String(hit.image || "").trim();
@@ -13,7 +15,7 @@ function gorselFromHit(hit: CatalogSearchHit): string | null {
 }
 
 /** Meilisearch hit → PFOS EslesmisUrun (katalog satırı üzerinden fiyat/güç) */
-export async function hitToEslesmis(
+async function hitToEslesmisRaw(
   hit: CatalogSearchHit,
 ): Promise<EslesmisUrun | null> {
   const maps = await getCatalogLookupMaps();
@@ -86,6 +88,8 @@ export async function hitToEslesmis(
 
   const fiyatEur = hit.satis_eur_indirimli ?? hit.liste_fiyati_eur;
   if (fiyatEur != null && fiyatEur > 0) {
+    const tcmb = await getTcmbEurForPricing();
+    const fiyatTry = Math.round(fiyatEur * tcmb.rate * 100) / 100;
     return {
       id: hit.id,
       slug: hit.slug,
@@ -96,7 +100,7 @@ export async function hitToEslesmis(
       olcu: null,
       elektrikGucuKw: null,
       gazGucuKw: null,
-      fiyat: 0,
+      fiyat: fiyatTry,
       fiyatEur,
       doviz: "TRY",
       gorselUrl: gorselFromHit(hit),
@@ -104,4 +108,12 @@ export async function hitToEslesmis(
   }
 
   return null;
+}
+
+export async function hitToEslesmis(
+  hit: CatalogSearchHit,
+): Promise<EslesmisUrun | null> {
+  const urun = await hitToEslesmisRaw(hit);
+  if (!urun) return null;
+  return enrichEslesmisGorsel(urun);
 }

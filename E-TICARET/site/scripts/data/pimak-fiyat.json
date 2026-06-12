@@ -1,7 +1,7 @@
 {
   "_meta": {
     "kaynak": "C:\\D Disk\\FİYAT LİSTELERİ\\pimak 27-27-030426.pdf",
-    "tarih": "2026-06-08",
+    "tarih": "2026-06-12",
     "para_birimi": "EUR",
     "iskonto_yuzde": 47,
     "odeme_carpani": 0.53,
@@ -1104,6 +1104,11 @@
     "liste_fiyati_eur": 1700.0,
     "pdf_page": 104
   },
+  "BKM.32EECO": {
+    "urun_kodu": "BKM.32E ECO",
+    "liste_fiyati_eur": 1200.0,
+    "pdf_page": 103
+  },
   "BKM.32S": {
     "urun_kodu": "BKM.32S",
     "liste_fiyati_eur": 2200.0,
@@ -1308,6 +1313,11 @@
     "urun_kodu": "BSD",
     "liste_fiyati_eur": 420.0,
     "pdf_page": 128
+  },
+  "BSH.20": {
+    "urun_kodu": "BSH.20",
+    "liste_fiyati_eur": 2450.0,
+    "pdf_page": 122
   },
   "BSH.135": {
     "urun_kodu": "BSH.135",
@@ -4826,8 +4836,38 @@
   },
   "PMK-KY240": {
     "urun_kodu": "PMK-KY240",
-    "liste_fiyati_eur": 12000.0,
+    "liste_fiyati_eur": 6500.0,
     "pdf_page": 46
+  },
+  "VDD70": {
+    "urun_kodu": "VDD 70",
+    "liste_fiyati_eur": 12000.0,
+    "pdf_page": 46,
+    "pdf_kod": "PMK-HY70"
+  },
+  "VDD90": {
+    "urun_kodu": "VDD 90",
+    "liste_fiyati_eur": 12000.0,
+    "pdf_page": 46,
+    "pdf_kod": "PMK-HY90"
+  },
+  "VDD110": {
+    "urun_kodu": "VDD 110",
+    "liste_fiyati_eur": 12000.0,
+    "pdf_page": 46,
+    "pdf_kod": "PMK-HY110"
+  },
+  "VDD130": {
+    "urun_kodu": "VDD 130",
+    "liste_fiyati_eur": 12000.0,
+    "pdf_page": 46,
+    "pdf_kod": "PMK-HY130"
+  },
+  "CR120": {
+    "urun_kodu": "CR 120",
+    "liste_fiyati_eur": 6500.0,
+    "pdf_page": 46,
+    "pdf_kod": "PMK-KY120"
   },
   "PMK-RD135": {
     "urun_kodu": "PMK-RD135",

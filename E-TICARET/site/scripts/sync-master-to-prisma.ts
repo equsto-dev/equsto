@@ -6,7 +6,9 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient, PfosKategoriKodu } from "@prisma/client";
+import { productMatchesTipKodu } from "../lib/pfos/core/shop-catalog-match";
+import { URUN_TIPI_ALIASES } from "../lib/pfos/core/tip-kodu";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const MASTER = path.join(ROOT, "public/data/equsto-katalog-master.json");
@@ -106,6 +108,57 @@ async function getCategoryId(
   });
   categoryCache.set(label, category.id);
   return category.id;
+}
+
+// Reverse map tip_kodu to primary/specific aliases
+function getBestAlias(tipKodu: string, name: string): string {
+  const n = name.toLowerCase();
+  if (tipKodu === "dik_tip_buzdolabi") {
+    if (n.includes("tek kap") || n.includes("1 kap")) return "depo-buzdolabi-tek-kapili";
+    return "dik-buzdolabı-depo";
+  }
+  if (tipKodu === "ocak_4gz") {
+    if (n.includes("2 goz") || n.includes("2 göz")) return "ocak-2-gozlu";
+    return "ocak-4-gozlu";
+  }
+  if (tipKodu === "fritoz_tek") {
+    if (n.includes("cift") || n.includes("çift")) return "friteuse-cift-hazneli";
+    return "friteuse-setustü";
+  }
+  if (tipKodu === "derin_dondurucu_dik") {
+    if (n.includes("cift") || n.includes("çift")) return "depo-derin-dondurucu-cift-kapili";
+    return "depo-derin-dondurucu";
+  }
+  
+  const aliases = Object.keys(URUN_TIPI_ALIASES).filter(k => URUN_TIPI_ALIASES[k] === tipKodu);
+  return aliases[0] || tipKodu.replace(/_/g, "-");
+}
+
+function getKategoriKodu(tipKodu: string, urunTipi: string): PfosKategoriKodu {
+  const t = tipKodu.toLowerCase();
+  const u = urunTipi.toLowerCase();
+  if (u.includes("espresso") || u.includes("kahve") || u.includes("blender") || u.includes("degirmen") || u.includes("bar-mikser") || u.includes("meyve-sikacagi") || u.includes("filter-coffee")) {
+    return PfosKategoriKodu.A;
+  }
+  if (t.includes("firin") || t.includes("ocak") || t.includes("izgara") || t.includes("fritoz") || t.includes("benmari") || t.includes("tencere") || t.includes("davlumbaz") || t.includes("salamander")) {
+    if (u.includes("pizza") || u.includes("pide")) return PfosKategoriKodu.F;
+    if (u.includes("pasta") || u.includes("raf-firin") || u.includes("patisserie")) return PfosKategoriKodu.D;
+    return PfosKategoriKodu.B;
+  }
+  if (t.includes("tezgah") || t.includes("evye") || t.includes("mikser") || t.includes("hamur") || t.includes("kiyma") || t.includes("testere") || t.includes("dilimleme") || t.includes("vakum")) {
+    if (u.includes("sogutma") || u.includes("sogutmali") || u.includes("saladette") || u.includes("prep")) return PfosKategoriKodu.E;
+    return PfosKategoriKodu.C;
+  }
+  if (t.includes("buzdolab") || t.includes("dondurucu") || t.includes("sogutucu") || t.includes("sarap") || t.includes("buz_mak")) {
+    return PfosKategoriKodu.G;
+  }
+  if (t.includes("bulasik") || t.includes("yikama") || t.includes("giyotin") || t.includes("siyirma") || t.includes("cikis_tez")) {
+    return PfosKategoriKodu.H;
+  }
+  if (u.includes("nakliye") || u.includes("montaj")) {
+    return PfosKategoriKodu.X;
+  }
+  return PfosKategoriKodu.B;
 }
 
 type LookupMaps = {
@@ -220,6 +273,34 @@ async function main() {
       const sku = p.marka_urun_kodu || modelCode;
       const slug = slugify(equstoKod);
 
+      // Match to tip
+      let matchedTip: string | null = null;
+      const mockRow = {
+        id: "",
+        ad: p.aciklama || modelCode,
+        sku,
+        kategori: p.urun_kategori || p.dept,
+        kategori_ad: p.urun_kategori || p.dept,
+        marka_ad: p.marka || "",
+        durum: "aktif",
+      } as any;
+
+      const tipKodus = Array.from(new Set(Object.values(URUN_TIPI_ALIASES)));
+      for (const tipKodu of tipKodus) {
+        if (productMatchesTipKodu(mockRow, tipKodu)) {
+          matchedTip = tipKodu;
+          break;
+        }
+      }
+
+      let pfosUrunTipi: string | null = null;
+      let pfosKategoriKodu: PfosKategoriKodu | null = null;
+
+      if (matchedTip) {
+        pfosUrunTipi = getBestAlias(matchedTip, p.aciklama || modelCode);
+        pfosKategoriKodu = getKategoriKodu(matchedTip, pfosUrunTipi);
+      }
+
       const data = {
         equstoKod,
         urunKodu: p.marka_urun_kodu || null,
@@ -232,6 +313,8 @@ async function main() {
         categoryId,
         modelCode,
         sku,
+        pfosUrunTipi,
+        pfosKategoriKodu,
       };
 
       const productId = resolveProductId(maps, {

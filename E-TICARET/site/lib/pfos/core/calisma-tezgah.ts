@@ -44,7 +44,7 @@ export function isCalismaTezgahiReferansIsim(
   ) {
     return true;
   }
-  if (/(?:calisma|çalışma)\s*tezgah/.test(n)) return true;
+  if (/(?:calisma|çalışma|firin|fırın)\s*(?:tezgah|sehpa)/.test(n)) return true;
   if (/tezgah.*(?:taban|dolap|mermer|polietilen|hareketli|cekmeceli)/.test(n)) {
     return true;
   }
