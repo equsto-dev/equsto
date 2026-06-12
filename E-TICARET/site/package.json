@@ -51,6 +51,7 @@
     "catalog:senox:mutbex": "node scripts/scrape-senox-mutbex.mjs --detail",
     "catalog:senox:mutbex:preview": "node scripts/sync-senox-mutbex-preview.mjs",
     "catalog:senox:mutbex:import": "node scripts/import-senox-mutbex-to-equsto.mjs",
+    "catalog:senox:mutbex:prices": "node scripts/sync-senox-pdf-prices.mjs",
     "catalog:vosco:pdf": "python scripts/extract-vosco-pdf-catalog.py",
     "catalog:vosco:scrape": "node scripts/scrape-vosco-catalog.mjs",
     "catalog:vosco:compare-senox": "node scripts/compare-senox-vosco.mjs",
