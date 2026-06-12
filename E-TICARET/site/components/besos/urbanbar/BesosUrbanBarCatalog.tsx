@@ -2,11 +2,15 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { Fragment, useEffect, useMemo, useRef, useState } from "react";
 import { besosAssetPath } from "@/lib/besos/asset-path";
 import { filterUrbanBarProducts } from "@/lib/besos/urbanbar/catalog";
 import type { BesosLocale } from "@/lib/besos/locale";
 import type { BesosUrbanBarSectionCatalog } from "@/lib/besos/urbanbar/types";
+
+const ROWS_PER_PAGE = 6;
+const GRID_GAP_PX = 16;
+const GRID_MIN_COL_PX = 220;
 
 type Props = {
   section: BesosUrbanBarSectionCatalog;
@@ -19,6 +23,9 @@ const UI = {
   source: { tr: "Urban Bar · equsto.com", en: "Urban Bar · equsto.com" },
   view: { tr: "İncele", en: "View" },
   noMatch: { tr: "Aramanızla eşleşen ürün bulunamadı.", en: "No products match your search." },
+  loadMore: { tr: "Daha fazla ürün yükle", en: "Load more products" },
+  remaining: { tr: "kaldı", en: "remaining" },
+  loadMoreAria: { tr: "Daha fazla ürün yükle", en: "Load more products" },
 };
 
 function ui(key: keyof typeof UI, locale: BesosLocale) {
@@ -64,8 +71,15 @@ function ProductTile({
   );
 }
 
+function gridColumnsForWidth(width: number): number {
+  return Math.max(1, Math.floor((width + GRID_GAP_PX) / (GRID_MIN_COL_PX + GRID_GAP_PX)));
+}
+
 export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) {
   const [query, setQuery] = useState("");
+  const [cols, setCols] = useState(4);
+  const [loadedCount, setLoadedCount] = useState(ROWS_PER_PAGE * 4);
+  const gridRef = useRef<HTMLDivElement>(null);
 
   const filteredGroups = useMemo(() => {
     return section.groups
@@ -76,7 +90,31 @@ export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) 
       .filter((g) => g.items.length > 0);
   }, [section.groups, query]);
 
-  const visibleCount = filteredGroups.reduce((n, g) => n + g.items.length, 0);
+  const flatProducts = useMemo(() => {
+    return filteredGroups.flatMap((group) =>
+      group.items.map((product) => ({ group, product })),
+    );
+  }, [filteredGroups]);
+
+  const pageSize = cols * ROWS_PER_PAGE;
+  const visibleCount = flatProducts.length;
+  const shownCount = Math.min(loadedCount, visibleCount);
+  const remaining = visibleCount - shownCount;
+  const visibleProducts = flatProducts.slice(0, shownCount);
+
+  useEffect(() => {
+    const el = gridRef.current;
+    if (!el) return;
+    const update = () => setCols(gridColumnsForWidth(el.clientWidth));
+    update();
+    const ro = new ResizeObserver(update);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+
+  useEffect(() => {
+    setLoadedCount(pageSize);
+  }, [query, pageSize]);
 
   return (
     <section className="ub-besos-catalog" id="ub-catalog">
@@ -102,19 +140,39 @@ export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) 
       {visibleCount === 0 ? (
         <p className="ub-besos-empty">{ui("noMatch", locale)}</p>
       ) : (
-        filteredGroups.map((group) => (
-          <div key={group.key} className="ub-besos-group" id={`ub-${group.slug}`}>
-            <div className="ub-besos-group-head">
-              <h2>{group.label}</h2>
-              <span>{group.items.length}</span>
-            </div>
-            <div className="ub-besos-grid">
-              {group.items.map((product) => (
-                <ProductTile key={product.equstoId} product={product} locale={locale} />
-              ))}
-            </div>
+        <>
+          <div className="ub-besos-grid" ref={gridRef}>
+            {visibleProducts.map(({ group, product }, index) => {
+              const showHead =
+                index === 0 || visibleProducts[index - 1]?.group.key !== group.key;
+              return (
+                <Fragment key={product.equstoId}>
+                  {showHead ? (
+                    <div className="ub-besos-group-head ub-besos-group-head--grid" id={`ub-${group.slug}`}>
+                      <h2>{group.label}</h2>
+                      <span>{group.items.length}</span>
+                    </div>
+                  ) : null}
+                  <ProductTile product={product} locale={locale} />
+                </Fragment>
+              );
+            })}
           </div>
-        ))
+          {remaining > 0 ? (
+            <div className="ub-besos-loadmore" aria-label={ui("loadMoreAria", locale)}>
+              <button
+                type="button"
+                className="ub-besos-loadmore__btn"
+                onClick={() => setLoadedCount((n) => Math.min(n + pageSize, visibleCount))}
+              >
+                {ui("loadMore", locale)}
+                <span className="ub-besos-loadmore__meta">
+                  ({remaining} {ui("remaining", locale)})
+                </span>
+              </button>
+            </div>
+          ) : null}
+        </>
       )}
     </section>
   );
