@@ -102,10 +102,16 @@ export function preferredOztiPisirmeSkus(
     return ["7856.GN120.08", "7856.GN12S.08", "7856.GN23S.10"];
   }
   if (family === "izgara") {
-    if (/plate|lavataş|lavatas|duz|düz/.test(refN)) {
+    if (/plate\s*izgar|grill plate/.test(refN)) {
+      return [`${izgaraBase}.19`];
+    }
+    if (/lavatas|lavataş/.test(refN)) {
       return [`${izgaraBase}.20`];
     }
-    return [`${izgaraBase}.70`, `${izgaraBase}.72`, `${izgaraBase}.20`];
+    if (/dokum\s*izgar/.test(refN)) {
+      return [`${izgaraBase}.72`, `${izgaraBase}.70`];
+    }
+    return [`${izgaraBase}.72`, `${izgaraBase}.70`, `${izgaraBase}.19`, `${izgaraBase}.20`];
   }
   if (family === "makarna") {
     return is900

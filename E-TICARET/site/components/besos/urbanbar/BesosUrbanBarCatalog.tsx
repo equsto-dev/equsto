@@ -8,6 +8,10 @@ import {
   buildUrbanBarCapacityFacets,
   filterUrbanBarProducts,
   productMatchesUrbanBarCapacities,
+  buildUrbanBarMaterialFacets,
+  productMatchesUrbanBarMaterial,
+  buildUrbanBarCollectionFacets,
+  productMatchesUrbanBarCollection,
 } from "@/lib/besos/urbanbar/catalog";
 import type { BesosLocale } from "@/lib/besos/locale";
 import type { BesosUrbanBarSectionCatalog } from "@/lib/besos/urbanbar/types";
@@ -32,6 +36,8 @@ const UI = {
   filterLabel: { tr: "Alt kategoriler", en: "Subcategories" },
   sectionFilter: { tr: "{section} alt kategorileri", en: "{section} subcategories" },
   capacityLabel: { tr: "Kapasite", en: "Capacity" },
+  materialLabel: { tr: "Malzeme", en: "Material" },
+  collectionLabel: { tr: "Koleksiyon", en: "Collection" },
   filterAll: { tr: "Tümü", en: "All" },
   selectedFilters: { tr: "Seçilen filtreler", en: "Selected filters" },
   clearAllFilters: { tr: "Hepsini sil", en: "Clear all" },
@@ -93,6 +99,8 @@ export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) 
   const [cartReady, setCartReady] = useState(false);
   const [activeGroups, setActiveGroups] = useState<ReadonlySet<string>>(new Set());
   const [activeCapacities, setActiveCapacities] = useState<ReadonlySet<string>>(new Set());
+  const [activeMaterials, setActiveMaterials] = useState<ReadonlySet<string>>(new Set());
+  const [activeCollections, setActiveCollections] = useState<ReadonlySet<string>>(new Set());
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [cols, setCols] = useState(4);
   const [loadedCount, setLoadedCount] = useState(ROWS_PER_PAGE * 4);
@@ -122,14 +130,40 @@ export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) 
     [capacityFacetSource, locale],
   );
 
+  const materialFacetSource = useMemo(
+    () => categoryFilteredGroups.flatMap((g) => g.items),
+    [categoryFilteredGroups],
+  );
+
+  const materialFacets = useMemo(
+    () => buildUrbanBarMaterialFacets(materialFacetSource, locale),
+    [materialFacetSource, locale],
+  );
+
+  const collectionFacetSource = useMemo(
+    () => categoryFilteredGroups.flatMap((g) => g.items),
+    [categoryFilteredGroups],
+  );
+
+  const collectionFacets = useMemo(
+    () => buildUrbanBarCollectionFacets(collectionFacetSource, locale),
+    [collectionFacetSource, locale],
+  );
+
   const filteredGroups = useMemo(() => {
     return categoryFilteredGroups
       .map((group) => ({
         ...group,
-        items: group.items.filter((p) => productMatchesUrbanBarCapacities(p, activeCapacities)),
+        items: group.items.filter((p) => {
+          return (
+            productMatchesUrbanBarCapacities(p, activeCapacities) &&
+            productMatchesUrbanBarMaterial(p, activeMaterials) &&
+            productMatchesUrbanBarCollection(p, activeCollections)
+          );
+        }),
       }))
       .filter((g) => g.items.length > 0);
-  }, [categoryFilteredGroups, activeCapacities]);
+  }, [categoryFilteredGroups, activeCapacities, activeMaterials, activeCollections]);
 
   const flatProducts = useMemo(() => {
     return filteredGroups.flatMap((group) =>
@@ -144,10 +178,12 @@ export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) 
   const visibleProducts = flatProducts.slice(0, shownCount);
   const hasGroupFilter = activeGroups.size > 0;
   const hasCapacityFilter = activeCapacities.size > 0;
-  const hasAnyFilter = hasGroupFilter || hasCapacityFilter;
+  const hasMaterialFilter = activeMaterials.size > 0;
+  const hasCollectionFilter = activeCollections.size > 0;
+  const hasAnyFilter = hasGroupFilter || hasCapacityFilter || hasMaterialFilter || hasCollectionFilter;
 
   const activeFilterChips = useMemo(() => {
-    const chips: { id: string; label: string; kind: "group" | "capacity" }[] = [];
+    const chips: { id: string; label: string; kind: "group" | "capacity" | "material" | "collection" }[] = [];
     for (const group of searchableGroups) {
       if (activeGroups.has(group.key)) {
         chips.push({ id: `g:${group.key}`, label: group.label, kind: "group" });
@@ -158,12 +194,24 @@ export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) 
         chips.push({ id: `c:${cap.key}`, label: cap.label, kind: "capacity" });
       }
     }
+    for (const mat of materialFacets) {
+      if (activeMaterials.has(mat.key)) {
+        chips.push({ id: `m:${mat.key}`, label: mat.label, kind: "material" });
+      }
+    }
+    for (const col of collectionFacets) {
+      if (activeCollections.has(col.key)) {
+        chips.push({ id: `o:${col.key}`, label: col.label, kind: "collection" });
+      }
+    }
     return chips;
-  }, [searchableGroups, capacityFacets, activeGroups, activeCapacities]);
+  }, [searchableGroups, capacityFacets, materialFacets, collectionFacets, activeGroups, activeCapacities, activeMaterials, activeCollections]);
 
   const clearAllFilters = () => {
     setActiveGroups(new Set());
     setActiveCapacities(new Set());
+    setActiveMaterials(new Set());
+    setActiveCollections(new Set());
   };
 
   useEffect(() => {
@@ -182,7 +230,7 @@ export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) 
 
   useEffect(() => {
     setLoadedCount(pageSize);
-  }, [query, pageSize, activeGroups, activeCapacities]);
+  }, [query, pageSize, activeGroups, activeCapacities, activeMaterials, activeCollections]);
 
   const categoryPanel = (
     <div className="ub-besos-facets__panel">
@@ -223,6 +271,46 @@ export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) 
       </div>
     ) : null;
 
+  const materialPanel =
+    materialFacets.length > 0 ? (
+      <div className="ub-besos-facets__panel ub-besos-facets__panel--material">
+        <div className="ub-besos-facets__hd">
+          <span>{ui("materialLabel", locale)}</span>
+        </div>
+        <ul className="ub-besos-facets__list ub-besos-facets__list--material">
+          {materialFacets.map((mat) => (
+            <FacetButton
+              key={mat.key}
+              label={mat.label}
+              count={mat.count}
+              active={activeMaterials.has(mat.key)}
+              onToggle={() => setActiveMaterials(toggleFilterKey(activeMaterials, mat.key))}
+            />
+          ))}
+        </ul>
+      </div>
+    ) : null;
+
+  const collectionPanel =
+    collectionFacets.length > 0 ? (
+      <div className="ub-besos-facets__panel ub-besos-facets__panel--collection">
+        <div className="ub-besos-facets__hd">
+          <span>{ui("collectionLabel", locale)}</span>
+        </div>
+        <ul className="ub-besos-facets__list ub-besos-facets__list--collection">
+          {collectionFacets.map((col) => (
+            <FacetButton
+              key={col.key}
+              label={col.label}
+              count={col.count}
+              active={activeCollections.has(col.key)}
+              onToggle={() => setActiveCollections(toggleFilterKey(activeCollections, col.key))}
+            />
+          ))}
+        </ul>
+      </div>
+    ) : null;
+
   const facetPanel = (
     <div className="ub-besos-facets__stack">
       {hasAnyFilter ? (
@@ -234,6 +322,8 @@ export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) 
       ) : null}
       {categoryPanel}
       {capacityPanel}
+      {materialPanel}
+      {collectionPanel}
     </div>
   );
 
@@ -345,8 +435,12 @@ export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) 
                     onClick={() => {
                       if (chip.kind === "group") {
                         setActiveGroups(toggleFilterKey(activeGroups, chip.id.slice(2)));
-                      } else {
+                      } else if (chip.kind === "capacity") {
                         setActiveCapacities(toggleFilterKey(activeCapacities, chip.id.slice(2)));
+                      } else if (chip.kind === "material") {
+                        setActiveMaterials(toggleFilterKey(activeMaterials, chip.id.slice(2)));
+                      } else {
+                        setActiveCollections(toggleFilterKey(activeCollections, chip.id.slice(2)));
                       }
                     }}
                   >

@@ -465,7 +465,21 @@ export function referansKatalogUyumsuz(
     !isKombiKonveksiyonReferans(sablonIsim) &&
     !s.includes("salamander") &&
     !/atalay/.test(k) &&
-    (/^78[0-9]{2}\.|7864\.|7831\.|7850\.|9890\.|oztiryakiler|\bozti\b|electrolux|rational|unox/.test(k))
+    !/plate\s*izgar|dokum\s*izgar|lavatas.*izgar/.test(s) &&
+    /^78\d{2}\./i.test(String(katalogSku ?? "").trim())
+  ) {
+    return true;
+  }
+  if (
+    /plate\s*izgar/.test(s) &&
+    (/kuzine|firinli|elektrik/.test(k) && !/grill plate|plate duz|plate düz/.test(k))
+  ) {
+    return true;
+  }
+  if (
+    /dokum\s*izgar/.test(s) &&
+    (/kuzine|firinli|elektrik|grill plate|plate duz|lavatas/.test(k) &&
+      !/dokum izgar/.test(k))
   ) {
     return true;
   }

@@ -122,12 +122,17 @@ export function sanitizeXmlText(text: string): string {
 }
 
 export function cleanDescription(row: CatalogRow, maxLen = 5000): string {
-  const parts = [
-    String(row.name || ""),
-    String(row.brand || ""),
-    String(row.specs || ""),
-    String(row.aciklama || ""),
-  ].filter(Boolean);
+  const shopDesc = String(
+    row.ozti_web_description || row.inoksan_shop_description || row.description || "",
+  ).trim();
+  const parts = shopDesc.length >= 40
+    ? [shopDesc]
+    : [
+        String(row.name || ""),
+        String(row.brand || ""),
+        String(row.specs || ""),
+        String(row.aciklama || ""),
+      ].filter(Boolean);
   return sanitizeXmlText(
     parts
       .join("\n")

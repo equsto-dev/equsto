@@ -143,7 +143,12 @@ const TIP_MATCH_RULES: Record<string, (name: string) => boolean> = {
     !name.includes("buzdolab") &&
     !name.includes("set ust") &&
     !name.includes("setust") &&
-    !name.includes("ara tezgah"),
+    !name.includes("ara tezgah") &&
+    !/firin\s*stand|fırın\s*stand|firin\s*alt\s*tezgah|fırın\s*alt\s*tezgah/.test(name),
+  tezgah_taban_rafli: (name) =>
+    /firin\s*stand|fırın\s*stand|firin\s*alt\s*tezgah|fırın\s*alt\s*tezgah/.test(name) ||
+    (/konveksiyonlu\s*firin\s*stand|setustu\s*konveksiyonlu\s*firin\s*stand/.test(name) &&
+      /tepsi|istif|raf/.test(name)),
   davlumbaz_duvar: (name) => {
     if (isUnoxCheftopHoodName(name)) return false;
     if (name.includes("ultravent") || name.includes("yogusturma")) return false;

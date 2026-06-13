@@ -37,10 +37,11 @@ const UI = {
   sku: { tr: "SKU", en: "SKU" },
   inStock: { tr: "Stokta", en: "In stock" },
   outOfStock: { tr: "Stokta yok", en: "Out of stock" },
-  features: { tr: "Ürün Özellikleri:", en: "Product Features:" },
-  specs: { tr: "Teknik Özellikler:", en: "Specifications:" },
-  care: { tr: "Ürün Bakımı:", en: "Product Care:" },
-  safety: { tr: "Güvenlik Etiketlerini Görüntüle", en: "View Product Safety Labels" },
+  desc: { tr: "Açıklama", en: "Description" },
+  features: { tr: "Ürün Özellikleri", en: "Product Features" },
+  specs: { tr: "Teknik Özellikler", en: "Specifications" },
+  care: { tr: "Ürün Bakımı", en: "Care & Handling" },
+  safety: { tr: "Güvenlik ve Sürdürülebilirlik", en: "Safety & Sustainability" },
   besos: { tr: "Besos", en: "Besos" },
 };
 
@@ -51,6 +52,17 @@ function ui(key: keyof typeof UI, locale: BesosLocale) {
 function HtmlBlock({ html, className }: { html?: string; className?: string }) {
   if (!html?.trim()) return null;
   return <div className={className} dangerouslySetInnerHTML={{ __html: html }} />;
+}
+
+function getBoxQuantity(name: string, specs?: { key: string; value: string }[]): string | null {
+  const nameMatch = name.match(/\bbox of (\d+)\b|\bpack of (\d+)\b|\bset of (\d+)\b/i);
+  if (nameMatch) {
+    const qty = nameMatch[1] || nameMatch[2] || nameMatch[3];
+    return qty;
+  }
+  const boxSpec = specs?.find((s) => /box|pack|qty|quantity/i.test(s.key));
+  if (boxSpec) return boxSpec.value;
+  return null;
 }
 
 export default function BesosUrbanBarPdp({ view }: { view: BesosUrbanBarPdpView }) {
@@ -65,6 +77,7 @@ export default function BesosUrbanBarPdp({ view }: { view: BesosUrbanBarPdpView 
   } = view;
   const features = product.features?.length ? product.features : null;
   const { amount, vat } = splitUrbanBarPrice(priceLabel, locale);
+  const boxQty = getBoxQuantity(product.name, product.specifications);
 
   return (
     <main className="besos-page ub-pdp-page ub-shop">
@@ -84,9 +97,20 @@ export default function BesosUrbanBarPdp({ view }: { view: BesosUrbanBarPdpView 
               </div>
             ) : null}
 
-            <p className={`ub-pdp-stock${product.inStock === false ? " ub-pdp-stock--out" : ""}`}>
-              {product.inStock === false ? ui("outOfStock", locale) : ui("inStock", locale)}
-            </p>
+            {boxQty ? (
+              <div className="ub-pdp-box-qty">
+                <span className="ub-pdp-box-qty__label">
+                  {locale === "en" ? "Sold in box quantities of:" : "Kutu İçeriği Adedi:"}
+                </span>
+                <strong className="ub-pdp-box-qty__val"> {boxQty}</strong>
+              </div>
+            ) : null}
+
+            {product.inStock !== false ? (
+              <p className="ub-pdp-stock">
+                {ui("inStock", locale)}
+              </p>
+            ) : null}
 
             <BesosUrbanBarPdpCart item={cartItem} locale={locale} inStock={product.inStock !== false} />
 
@@ -98,60 +122,80 @@ export default function BesosUrbanBarPdp({ view }: { view: BesosUrbanBarPdpView 
               </p>
             ) : null}
 
-            {product.introHtml ? (
-              <HtmlBlock html={product.introHtml} className="ub-pdp-desc ub-pdp-prose" />
-            ) : product.description ? (
-              <p className="ub-pdp-desc">{product.description}</p>
-            ) : null}
+            <div className="ub-pdp-accordions">
+              {/* Description Accordion */}
+              {product.introHtml || product.description ? (
+                <details className="ub-pdp-accordion" open>
+                  <summary className="ub-pdp-accordion__summary">{ui("desc", locale)}</summary>
+                  <div className="ub-pdp-accordion__body">
+                    {product.introHtml ? (
+                      <HtmlBlock html={product.introHtml} className="ub-pdp-prose" />
+                    ) : (
+                      <p className="ub-pdp-desc">{product.description}</p>
+                    )}
+                  </div>
+                </details>
+              ) : null}
 
-            {features ? (
-              <section className="ub-pdp-block">
-                <h2 className="ub-pdp-block__title">{ui("features", locale)}</h2>
-                <ul className="ub-pdp-list">
-                  {features.map((f) => (
-                    <li key={f}>{f}</li>
-                  ))}
-                </ul>
-              </section>
-            ) : product.featuresHtml ? (
-              <section className="ub-pdp-block">
-                <h2 className="ub-pdp-block__title">{ui("features", locale)}</h2>
-                <HtmlBlock html={product.featuresHtml} className="ub-pdp-prose ub-pdp-prose--list" />
-              </section>
-            ) : null}
+              {/* Features Accordion */}
+              {features || product.featuresHtml ? (
+                <details className="ub-pdp-accordion">
+                  <summary className="ub-pdp-accordion__summary">{ui("features", locale)}</summary>
+                  <div className="ub-pdp-accordion__body">
+                    {features ? (
+                      <ul className="ub-pdp-list">
+                        {features.map((f) => (
+                          <li key={f}>{f}</li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <HtmlBlock html={product.featuresHtml} className="ub-pdp-prose ub-pdp-prose--list" />
+                    )}
+                  </div>
+                </details>
+              ) : null}
 
-            {product.specifications?.length ? (
-              <section className="ub-pdp-block">
-                <h2 className="ub-pdp-block__title">{ui("specs", locale)}</h2>
-                <ul className="ub-pdp-list ub-pdp-list--specs">
-                  {product.specifications.map((s) => (
-                    <li key={s.key}>
-                      <strong>{s.key}:</strong>
-                      {s.value}
-                    </li>
-                  ))}
-                </ul>
-              </section>
-            ) : product.specificationsHtml ? (
-              <section className="ub-pdp-block">
-                <h2 className="ub-pdp-block__title">{ui("specs", locale)}</h2>
-                <HtmlBlock html={product.specificationsHtml} className="ub-pdp-prose ub-pdp-prose--list" />
-              </section>
-            ) : null}
+              {/* Specifications Accordion */}
+              {product.specifications?.length || product.specificationsHtml ? (
+                <details className="ub-pdp-accordion">
+                  <summary className="ub-pdp-accordion__summary">{ui("specs", locale)}</summary>
+                  <div className="ub-pdp-accordion__body">
+                    {product.specifications?.length ? (
+                      <ul className="ub-pdp-list ub-pdp-list--specs">
+                        {product.specifications.map((s) => (
+                          <li key={s.key}>
+                            <strong>{s.key}:</strong>
+                            {s.value}
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <HtmlBlock html={product.specificationsHtml} className="ub-pdp-prose ub-pdp-prose--list" />
+                    )}
+                  </div>
+                </details>
+              ) : null}
 
-            {product.productCareHtml ? (
-              <section className="ub-pdp-block">
-                <h2 className="ub-pdp-block__title">{ui("care", locale)}</h2>
-                <HtmlBlock html={product.productCareHtml} className="ub-pdp-prose" />
-              </section>
-            ) : null}
+              {/* Care Accordion */}
+              {product.productCareHtml ? (
+                <details className="ub-pdp-accordion">
+                  <summary className="ub-pdp-accordion__summary">{ui("care", locale)}</summary>
+                  <div className="ub-pdp-accordion__body">
+                    <HtmlBlock html={product.productCareHtml} className="ub-pdp-prose" />
+                  </div>
+                </details>
+              ) : null}
 
-            {product.safetyLabelsHtml ? (
-              <details className="ub-pdp-safety">
-                <summary className="ub-pdp-safety__summary">{ui("safety", locale)}</summary>
-                <HtmlBlock html={product.safetyLabelsHtml} className="ub-pdp-prose ub-pdp-safety__body" />
-              </details>
-            ) : null}
+              {/* Safety Accordion */}
+              {product.safetyLabelsHtml ? (
+                <details className="ub-pdp-accordion">
+                  <summary className="ub-pdp-accordion__summary">{ui("safety", locale)}</summary>
+                  <div className="ub-pdp-accordion__body">
+                    <HtmlBlock html={product.safetyLabelsHtml} className="ub-pdp-prose" />
+                  </div>
+                </details>
+              ) : null}
+            </div>
           </div>
         </div>
 

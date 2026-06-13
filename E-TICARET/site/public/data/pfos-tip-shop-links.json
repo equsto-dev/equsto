@@ -33,7 +33,17 @@
     },
     "char_broil": {
       "marka": "Öztiryakiler",
-      "name": "PLATE / SETÜSTÜ IZGARA — Öztiryakiler ölçü eşlemesi"
+      "name": "LAVATAŞ / SETÜSTÜ IZGARA — Öztiryakiler ölçü eşlemesi"
+    },
+    "dokum_izgara_gaz": {
+      "marka": "Öztiryakiler",
+      "sku": "7864.N1.80703.72",
+      "name": "700 SERİ SET ÜSTÜ DÖKÜM IZGARA GAZLI V2 MODEL 80*70*30"
+    },
+    "plate_izgara_gaz": {
+      "marka": "Öztiryakiler",
+      "sku": "7864.N1.80703.19",
+      "name": "700 SERİ SET ÜSTÜ GRİLL PLATE DÜZ GAZLI 80*70*30"
     },
     "salamander": {
       "marka": "Öztiryakiler",

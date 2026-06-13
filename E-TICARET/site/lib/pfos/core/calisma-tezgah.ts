@@ -10,6 +10,7 @@ export const CALISMA_TEZGAH_TIP_KODLARI = new Set([
   "cop_tezgahi",
   "tezgah_evyeli",
   "evye_tezgah_dolap",
+  "tezgah_taban_rafli",
 ]);
 
 function norm(s: string | null | undefined): string {
@@ -46,6 +47,7 @@ export function isCalismaTezgahiReferansIsim(
     return true;
   }
   if (/(?:calisma|çalışma|firin|fırın)\s*(?:tezgah|sehpa)/.test(n)) return true;
+  if (/firin\s*stand|fırın\s*stand|firin\s*alt\s*tezgah|fırın\s*alt\s*tezgah/.test(n)) return true;
   if (/tezgah.*(?:taban|dolap|mermer|polietilen|hareketli|cekmeceli)/.test(n)) {
     return true;
   }

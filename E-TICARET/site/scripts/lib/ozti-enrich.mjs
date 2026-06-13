@@ -106,6 +106,53 @@ export function parseOztiGdyTable(hay, kod) {
   };
 }
 
+/** Ürün kodundan sonraki PDF tablo bloğundaki toplam güç (kW) — brülör başı değil. */
+export function parseOztiToplamGucKw(hay, kod) {
+  const kodEsc = normKod(kod).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  if (!kodEsc) return null;
+  const parts = String(hay).split(new RegExp(kodEsc, "i"));
+  if (parts.length < 2) return null;
+  const chunk = parts[1].slice(0, 700);
+  const nextKod = chunk.match(/\n\s*78\d{2}\.[A-Z0-9][A-Z0-9.\-]{4,}/i);
+  const slice = nextKod?.index ? chunk.slice(0, nextKod.index) : chunk;
+  const hits = [...slice.matchAll(/(\d+(?:[.,]\d+)?)\s*(?:k\s*w|kw)\b/gi)]
+    .map((m) => Number(String(m[1]).replace(",", ".")))
+    .filter((n) => Number.isFinite(n) && n > 0);
+  if (!hits.length) return null;
+  return String(Math.max(...hits));
+}
+
+/** oztiryakiler.com.tr specs — Elektrik Gücü (kW). */
+export function parseWebElektrikGucuKw(specs) {
+  if (!Array.isArray(specs)) return null;
+  for (const line of specs) {
+    const m = String(line).match(/^Elektrik\s*G[uü]c[uü]:\s*(\d+(?:[.,]\d+)?)/i);
+    if (m) return String(m[1]).replace(",", ".");
+  }
+  return null;
+}
+
+function syncRowGucKw(row, gucKw) {
+  if (!gucKw) return;
+  row.olculer = { ...(row.olculer || {}), guc_kw: gucKw };
+  const gucLine = `Güç: ${gucKw} kW`;
+  const tech = [...(row.teknik_ozellikler || [])];
+  const idx = tech.findIndex((t) => /^G[uü]ç:/i.test(String(t)));
+  if (idx >= 0) tech[idx] = gucLine;
+  else tech.unshift(gucLine);
+  row.teknik_ozellikler = tech;
+  if (row.specs) {
+    row.specs = String(row.specs).replace(/^G[uü]ç:\s*[^\n]+/im, gucLine);
+    if (!/\bG[uü]ç:\s*\d/i.test(row.specs)) {
+      const marker = "\n\nTeknik Özellikler\n";
+      const pos = row.specs.indexOf(marker);
+      if (pos >= 0) {
+        row.specs = `${row.specs.slice(0, pos + marker.length)}${gucLine}\n${row.specs.slice(pos + marker.length)}`;
+      }
+    }
+  }
+}
+
 /** G×D×Y veya 80*90*85 gibi ölçüleri ürün adı / PDF metninden çıkar. */
 export function parseOlculer(text, kod) {
   const hay = String(text || "");
@@ -154,8 +201,12 @@ export function parseOlculer(text, kod) {
   const cap = hay.match(/(\d+(?:[.,]\d+)?)\s*(?:lt|l\.?t\.?|litre)/i);
   if (cap) out.kapasite_lt = String(cap[1]).replace(",", ".");
 
-  const kw = hay.match(/(\d+(?:[.,]\d+)?)\s*k\s*w\b/i);
-  if (kw) out.guc_kw = String(kw[1]).replace(",", ".");
+  const toplamKw = parseOztiToplamGucKw(hay, kod);
+  if (toplamKw) out.guc_kw = toplamKw;
+  else {
+    const kw = hay.match(/(\d+(?:[.,]\d+)?)\s*k\s*w\b/i);
+    if (kw) out.guc_kw = String(kw[1]).replace(",", ".");
+  }
 
   return Object.keys(out).length ? out : null;
 }
@@ -1140,6 +1191,9 @@ export function applyOztiWebDescription(row, payload) {
     }
   }
   row.teknik_ozellikler = tech;
+
+  const webKw = parseWebElektrikGucuKw(specs);
+  if (webKw) syncRowGucKw(row, webKw);
 
   row.description = String(payload.description).trim();
   row.ozti_web_description = row.description;

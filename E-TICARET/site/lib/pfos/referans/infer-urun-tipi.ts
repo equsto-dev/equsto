@@ -220,6 +220,13 @@ const TIP_RULES: TipRule[] = [
     test: (n) => n.includes("kuvet"),
   },
   {
+    tip: "firin-standi-taban-rafli",
+    test: (n) =>
+      /firin\s*stand|fırın\s*stand|firin\s*alt\s*tezgah|fırın\s*alt\s*tezgah/.test(n) ||
+      (/konveksiyonlu\s*firin\s*stand|setustu\s*konveksiyonlu\s*firin\s*stand/.test(n) &&
+        /tepsi|istif|raf/.test(n)),
+  },
+  {
     tip: "tas-firin",
     test: (n) =>
       n.includes("tas firin") ||
@@ -247,7 +254,9 @@ const TIP_RULES: TipRule[] = [
   {
     tip: "firin-tezgahi",
     test: (n) =>
-      /firin\s*tezgah|fırın\s*tezgah/.test(n) && !/patisserie|pizza|pide/.test(n),
+      /firin\s*tezgah|fırın\s*tezgah/.test(n) &&
+      !/alt\s*tezgah/.test(n) &&
+      !/patisserie|pizza|pide/.test(n),
   },
   {
     tip: "konveksiyon-firin-unox",
@@ -341,6 +350,7 @@ const TIP_RULES: TipRule[] = [
         !n.includes("unox") &&
         !n.includes("tas") &&
         !n.includes("taş") &&
+        !/firin\s*alt\s*tezgah|fırın\s*alt\s*tezgah|firin\s*stand|fırın\s*stand/.test(n) &&
         n.length > 12),
   },
   {
@@ -383,6 +393,17 @@ const TIP_RULES: TipRule[] = [
   {
     tip: "yer-izgara",
     test: (n) => n.includes("yer izgar") || n.includes("yer ızgar"),
+  },
+  {
+    tip: "dokum-izgara-gazli",
+    test: (n) =>
+      n.includes("izgar") &&
+      (n.includes("dokum") || n.includes("döküm")) &&
+      !n.includes("lavatas"),
+  },
+  {
+    tip: "plate-izgara-gazli",
+    test: (n) => n.includes("izgar") && n.includes("plate"),
   },
   {
     tip: "izgara-gazli",
