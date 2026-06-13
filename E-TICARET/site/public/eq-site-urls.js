@@ -996,7 +996,7 @@
     );
   }
 
-  var EQ_CATALOG_IMG_V = "20260613urbanbar-live-v1";
+  var EQ_CATALOG_IMG_V = "20260613urbanbar-pdp-fix404";
 
   function withCatalogImgV(url) {
     if (
