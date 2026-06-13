@@ -35,6 +35,13 @@ export type AdminUrunRow = {
   gaz_guc: number | null;
   aciklama: string | null;
   detay: string | null;
+  /** inoksanshop / inoksan.com ürün açıklaması (teklif + PDP) */
+  description?: string | null;
+  /** oztiryakiler.com.tr WP REST açıklaması (teklif + PDP) */
+  ozti_web_description?: string | null;
+  ozti_web_url?: string | null;
+  inoksan_shop_description?: string | null;
+  inoksan_shop_url?: string | null;
   gorsel_url: string | null;
   olculer?: {
     genislik_mm?: number;
@@ -78,6 +85,12 @@ type EcomRow = {
     guc_kw?: string | number;
   } | null;
   teknik_ozellikler?: string[];
+  description?: string;
+  ozti_web_description?: string;
+  ozti_web_url?: string;
+  inoksan_shop_description?: string;
+  inoksan_shop_url?: string;
+  aciklama?: string;
 };
 
 function parseFirstTl(price: unknown): number {
@@ -142,8 +155,23 @@ export function ecomRowToAdminUrun(u: EcomRow, index: number): AdminUrunRow {
     kdv_oran: Number(u?.kdv_oran) > 0 ? Number(u.kdv_oran) : 20,
     el_guc: elGuc,
     gaz_guc: null,
-    aciklama: u?.specs ? String(u.specs) : null,
-    detay: null,
+    aciklama: u?.aciklama
+      ? String(u.aciklama)
+      : u?.specs
+        ? String(u.specs)
+        : null,
+    detay: u?.description ? String(u.description) : null,
+    description: u?.description ? String(u.description) : null,
+    ozti_web_description: u?.ozti_web_description
+      ? String(u.ozti_web_description)
+      : null,
+    ozti_web_url: u?.ozti_web_url ? String(u.ozti_web_url) : null,
+    inoksan_shop_description: u?.inoksan_shop_description
+      ? String(u.inoksan_shop_description)
+      : u?.description
+        ? String(u.description)
+        : null,
+    inoksan_shop_url: u?.inoksan_shop_url ? String(u.inoksan_shop_url) : null,
     gorsel_url: gorsel,
     olculer: u?.olculer ?? null,
     teknik_ozellikler: Array.isArray(u?.teknik_ozellikler)
