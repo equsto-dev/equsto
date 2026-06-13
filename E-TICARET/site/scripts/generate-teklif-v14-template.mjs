@@ -150,12 +150,12 @@ async function build() {
     ws.getCell(6, c).border = borderThin();
   }
 
-  // Row 7 — foto + açıklama şablonu
-  mergeSafe(ws, 7, 1, 7, 7);
-  mergeSafe(ws, 7, 8, 7, 13);
-  ws.getCell(7, 1).value = "📷\nFotoğraf";
-  ws.getCell(7, 1).alignment = center;
-  ws.getCell(7, 8).value = "•  Örnek teknik açıklama";
+  // Row 7 — foto (Stok no sütunu) + açıklama şablonu
+  mergeSafe(ws, 7, 1, 7, 3);
+  mergeSafe(ws, 7, 5, 7, 13);
+  ws.getCell(7, 4).value = "📷\nFotoğraf";
+  ws.getCell(7, 4).alignment = leftTop;
+  ws.getCell(7, 5).value = "•  Örnek teknik açıklama";
   ws.getCell(7, 8).alignment = leftTop;
   ws.getRow(7).height = 120;
   for (let c = 1; c <= 13; c++) {

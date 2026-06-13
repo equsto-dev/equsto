@@ -434,7 +434,8 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
                     </tr>
                     {showSpecRow && (
                       <tr>
-                        <td colSpan={7} style={specTdFoto}>
+                        <td colSpan={3} style={specTd} />
+                        <td style={specTdFoto}>
                           {row.fotoUrl ? (
                             // eslint-disable-next-line @next/next/no-img-element
                             <img
@@ -445,14 +446,13 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
                                 maxHeight: 100,
                                 objectFit: "contain",
                                 display: "block",
-                                margin: "0 auto",
                               }}
                             />
                           ) : hasKnownProduct ? (
                             row.fotoNot ?? "📷 Fotoğraf"
                           ) : null}
                         </td>
-                        <td colSpan={5} style={specTd}>
+                        <td colSpan={8} style={specTd}>
                           <pre style={{ margin: 0, whiteSpace: "pre-wrap" }}>
                             {row.aciklama}
                           </pre>
@@ -680,6 +680,6 @@ const specTd: CSSProperties = {
 
 const specTdFoto: CSSProperties = {
   ...specTd,
-  textAlign: "center",
+  textAlign: "left",
   verticalAlign: "middle",
 };

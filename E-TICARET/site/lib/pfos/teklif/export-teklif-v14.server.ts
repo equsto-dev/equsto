@@ -93,13 +93,23 @@ function writeSpecRow(
 ) {
   applyRowStyle(ws, rowNum, specTpl);
   try {
-    ws.mergeCells(`A${rowNum}:G${rowNum}`);
-    ws.mergeCells(`H${rowNum}:M${rowNum}`);
+    ws.mergeCells(`A${rowNum}:C${rowNum}`);
+    ws.mergeCells(`E${rowNum}:M${rowNum}`);
   } catch {
     /* merged */
   }
-  ws.getCell(rowNum, 1).value = satir.fotoNot ?? "Fotoğraf";
-  ws.getCell(rowNum, 8).value = satir.aciklama ?? "";
+  ws.getCell(rowNum, 4).value = satir.fotoNot ?? "Fotoğraf";
+  ws.getCell(rowNum, 4).alignment = {
+    horizontal: "left",
+    vertical: "middle",
+    wrapText: true,
+  };
+  ws.getCell(rowNum, 5).value = satir.aciklama ?? "";
+  ws.getCell(rowNum, 5).alignment = {
+    horizontal: "left",
+    vertical: "top",
+    wrapText: true,
+  };
   ws.getRow(rowNum).height = 80;
 }
 

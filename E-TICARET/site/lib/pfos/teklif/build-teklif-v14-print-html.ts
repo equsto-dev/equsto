@@ -75,8 +75,9 @@ export function buildTeklifV14PrintHtml(
       const acik = row.aciklama ? esc(row.aciklama) : "";
       if (imgUrl || acik) {
         tbody += `<tr class="spec">
-          <td colspan="6" class="foto-cell">${fotoCell}</td>
-          <td colspan="6" class="spec-cell"><pre>${acik}</pre></td>
+          <td colspan="3"></td>
+          <td class="foto-cell">${fotoCell}</td>
+          <td colspan="8" class="spec-cell"><pre>${acik}</pre></td>
         </tr>`;
       }
     }
@@ -113,8 +114,8 @@ export function buildTeklifV14PrintHtml(
   td.num { text-align: right; white-space: nowrap; }
   tr.sec td { font-weight: 700; background: ${TEKLIF_BOLUM_ROW_FILL}; color: #1e4620; padding: 7px 4px; border-bottom: 1px solid #b7dfc5; }
   tr.spec td { background: #fafafa; }
-  .foto-cell { width: 28%; text-align: center; vertical-align: middle; }
-  .foto { max-width: 120px; max-height: 100px; object-fit: contain; display: block; margin: 0 auto; }
+  .foto-cell { text-align: left; vertical-align: middle; }
+  .foto { max-width: 120px; max-height: 100px; object-fit: contain; display: block; }
   .foto-ph { color: #999; }
   .spec-cell pre { margin: 0; white-space: pre-wrap; font-family: inherit; font-size: 9px; line-height: 1.45; }
   tr.total td { font-weight: 700; }
