@@ -47,7 +47,7 @@ export function buildTeklifV14PrintHtml(
 
   let tbody = "";
   for (const block of blocks) {
-    tbody += `<tr class="sec"><td colspan="12">${esc(block.bolumBaslik)}</td></tr>`;
+    tbody += `<tr class="sec"><td colspan="11">${esc(block.bolumBaslik)}</td></tr>`;
     for (const row of block.satirlar) {
       const birim =
         row.birimSatis != null
@@ -60,16 +60,15 @@ export function buildTeklifV14PrintHtml(
       tbody += `<tr>
         <td>${esc(row.bolumNo)}</td>
         <td>${esc(row.poz)}</td>
-        <td>${esc(row.ek || "")}</td>
-        <td>${esc(row.stokNo)}</td>
-        <td>${esc(sanitizeTeklifV14SatirTanim(row.tanim))}</td>
-        <td>${esc(row.marka)}</td>
-        <td>${esc(row.olcu || "—")}</td>
+        <td class="stok">${esc(row.stokNo)}</td>
+        <td class="tanim">${esc(sanitizeTeklifV14SatirTanim(row.tanim))}</td>
         <td class="num">${esc(formatKwHucre(row.elkKw))}</td>
         <td class="num">${esc(formatKwHucre(row.gazKw))}</td>
         <td class="num">${row.adet}</td>
         <td class="num">${birim}</td>
         <td class="num">${toplam}</td>
+        <td class="marka">${esc(row.marka)}</td>
+        <td class="olcu">${esc(row.olcu || "—")}</td>
       </tr>`;
 
       const imgUrl = row.fotoUrl ? absImageUrl(row.fotoUrl, siteOrigin) : "";
@@ -80,7 +79,7 @@ export function buildTeklifV14PrintHtml(
       const acikHtml = acik ? esc(acik) : "";
       if (imgUrl || acikHtml) {
         tbody += `<tr class="spec">
-          <td colspan="3"></td>
+          <td colspan="2"></td>
           <td class="foto-cell">${fotoCell}</td>
           <td colspan="8" class="spec-cell"><pre>${acikHtml}</pre></td>
         </tr>`;
@@ -113,9 +112,22 @@ export function buildTeklifV14PrintHtml(
   .head h1 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.06em; }
   .meta { font-size: 10px; line-height: 1.5; }
   .meta-r { text-align: right; min-width: 180px; }
-  table { width: 100%; border-collapse: collapse; }
+  table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+  col.c-bol { width: 3%; }
+  col.c-poz { width: 4%; }
+  col.c-stok { width: 9%; }
+  col.c-tanim { width: 34%; }
+  col.c-kw { width: 5%; }
+  col.c-adet { width: 4%; }
+  col.c-fiyat { width: 7%; }
+  col.c-toplam { width: 8%; }
+  col.c-marka { width: 9%; }
+  col.c-olcu { width: 10%; }
   th { text-align: center; font-size: 9px; padding: 5px 3px; border-bottom: 1px solid #999; }
   td { padding: 4px 3px; border-bottom: 1px solid #eee; vertical-align: top; }
+  td.stok { text-align: left; white-space: nowrap; }
+  td.tanim { word-break: break-word; }
+  td.marka, td.olcu { text-align: center; font-size: 9px; padding: 4px 2px; }
   td.num { text-align: right; white-space: nowrap; }
   tr.sec td { font-weight: 700; background: ${TEKLIF_BOLUM_ROW_FILL}; color: #1e4620; padding: 7px 4px; border-bottom: 1px solid #b7dfc5; }
   tr.spec td { background: #fafafa; }
@@ -146,19 +158,27 @@ export function buildTeklifV14PrintHtml(
     </div>
   </div>
   <table>
+    <colgroup>
+      <col class="c-bol"><col class="c-poz"><col class="c-stok"><col class="c-tanim">
+      <col class="c-kw"><col class="c-kw"><col class="c-adet"><col class="c-fiyat"><col class="c-toplam">
+      <col class="c-marka"><col class="c-olcu">
+    </colgroup>
     <thead><tr>
-      <th>Böl.</th><th>Poz</th><th>EK</th><th>Stok no</th><th>Tanımı</th><th>Marka</th>
-      <th>Ölçü</th><th>Elk. kW</th><th>Gaz kW</th><th>Adet</th><th>Satış</th><th>Toplam</th>
+      <th>Böl.</th><th>Poz</th><th>Stok no</th><th>Tanımı</th><th>Elk. kW</th><th>Gaz kW</th>
+      <th>Adet</th><th>Satış</th><th>Toplam</th><th>Marka</th><th>Ölçü</th>
     </tr></thead>
     <tbody>${tbody}
       <tr class="total">
-        <td colspan="4"></td>
-        <td colspan="2" style="text-align:right">Sütun toplamları →</td>
+        <td colspan="2"></td>
+        <td></td>
+        <td style="text-align:right">Sütun toplamları →</td>
         <td class="num">${esc(formatKwHucre(ozet.toplamElektrikKw))}</td>
         <td class="num">${esc(formatKwHucre(ozet.toplamGazKw))}</td>
         <td></td>
-        <td colspan="2">GENEL TOPLAM</td>
+        <td style="font-weight:700">GENEL TOPLAM</td>
         <td class="num">${esc(genel)}</td>
+        <td></td>
+        <td></td>
       </tr>
     </tbody>
   </table>

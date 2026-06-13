@@ -23,8 +23,10 @@ function borderThin() {
   return { top: s, left: s, bottom: s, right: s };
 }
 
+const COL_COUNT = 12;
+
 function fillRow(ws, row, argb) {
-  for (let c = 1; c <= 13; c++) {
+  for (let c = 1; c <= COL_COUNT; c++) {
     ws.getCell(row, c).fill = {
       type: "pattern",
       pattern: "solid",
@@ -50,16 +52,15 @@ async function build() {
   ws.columns = [
     { width: 4 },
     { width: 6 },
-    { width: 4 },
     { width: 12 },
-    { width: 28 },
-    { width: 12 },
-    { width: 10 },
+    { width: 36 },
     { width: 8 },
     { width: 8 },
     { width: 6 },
     { width: 10 },
     { width: 12 },
+    { width: 10 },
+    { width: 10 },
     { width: 6 },
   ];
 
@@ -87,16 +88,15 @@ async function build() {
   const headers = [
     "Böl.",
     "Poz",
-    "EK",
     "Stok no",
     "Tanımı",
-    "Marka",
-    "Ölçü",
     "Elk. kW",
     "Gaz kW",
     "Adet",
     "Satış",
     "Toplam",
+    "Marka",
+    "Ölçü",
     "Döviz",
   ];
   headers.forEach((h, i) => {
@@ -108,7 +108,7 @@ async function build() {
   });
 
   // Row 5 — bölüm başlığı şablonu
-  mergeSafe(ws, 5, 1, 5, 13);
+  mergeSafe(ws, 5, 1, 5, COL_COUNT);
   ws.getCell(5, 1).value = "01. MUTFAK";
   ws.getCell(5, 1).font = fontBold;
   ws.getCell(5, 1).alignment = { horizontal: "left", vertical: "middle" };
@@ -118,47 +118,48 @@ async function build() {
   const sample = {
     bol: "01",
     poz: "A01",
-    ek: "",
     stok: "STK-001",
     tanim: "Örnek ürün",
-    marka: "Marka",
-    olcu: "600×800×900",
     elk: 3.5,
     gaz: 0,
     adet: 1,
     satis: 1000,
+    marka: "Marka",
+    olcu: "600×800×900",
   };
   ws.getCell(6, 1).value = sample.bol;
   ws.getCell(6, 2).value = sample.poz;
-  ws.getCell(6, 3).value = sample.ek;
-  ws.getCell(6, 4).value = sample.stok;
-  ws.getCell(6, 5).value = sample.tanim;
-  ws.getCell(6, 6).value = sample.marka;
-  ws.getCell(6, 7).value = sample.olcu;
-  ws.getCell(6, 8).value = sample.elk;
-  ws.getCell(6, 8).numFmt = "0.0";
-  ws.getCell(6, 9).value = sample.gaz;
-  ws.getCell(6, 9).numFmt = "0.0";
-  ws.getCell(6, 10).value = sample.adet;
-  ws.getCell(6, 11).value = sample.satis;
-  ws.getCell(6, 11).numFmt = "#,##0.00";
-  ws.getCell(6, 12).value = { formula: "J6*K6" };
-  ws.getCell(6, 12).numFmt = "#,##0.00";
-  ws.getCell(6, 13).value = "EUR";
-  for (let c = 1; c <= 13; c++) {
+  ws.getCell(6, 3).value = sample.stok;
+  ws.getCell(6, 3).alignment = leftTop;
+  ws.getCell(6, 4).value = sample.tanim;
+  ws.getCell(6, 5).value = sample.elk;
+  ws.getCell(6, 5).numFmt = "0.0";
+  ws.getCell(6, 6).value = sample.gaz;
+  ws.getCell(6, 6).numFmt = "0.0";
+  ws.getCell(6, 7).value = sample.adet;
+  ws.getCell(6, 8).value = sample.satis;
+  ws.getCell(6, 8).numFmt = "#,##0.00";
+  ws.getCell(6, 9).value = { formula: "G6*H6" };
+  ws.getCell(6, 9).numFmt = "#,##0.00";
+  ws.getCell(6, 10).value = sample.marka;
+  ws.getCell(6, 10).alignment = center;
+  ws.getCell(6, 11).value = sample.olcu;
+  ws.getCell(6, 11).alignment = center;
+  ws.getCell(6, 12).value = "EUR";
+  for (let c = 1; c <= COL_COUNT; c++) {
     ws.getCell(6, c).font = fontNorm;
     ws.getCell(6, c).border = borderThin();
   }
 
   // Row 7 — foto (Stok no sütunu) + açıklama şablonu
-  mergeSafe(ws, 7, 1, 7, 3);
-  mergeSafe(ws, 7, 5, 7, 13);
-  ws.getCell(7, 4).value = "📷\nFotoğraf";
+  mergeSafe(ws, 7, 1, 7, 2);
+  mergeSafe(ws, 7, 4, 7, COL_COUNT);
+  ws.getCell(7, 3).value = "📷\nFotoğraf";
+  ws.getCell(7, 3).alignment = leftTop;
+  ws.getCell(7, 4).value = "•  Örnek teknik açıklama";
   ws.getCell(7, 4).alignment = leftTop;
-  ws.getCell(7, 5).value = "•  Örnek teknik açıklama";
-  ws.getCell(7, 8).alignment = leftTop;
   ws.getRow(7).height = 120;
-  for (let c = 1; c <= 13; c++) {
+  for (let c = 1; c <= COL_COUNT; c++) {
     ws.getCell(7, c).fill = {
       type: "pattern",
       pattern: "solid",
@@ -169,32 +170,32 @@ async function build() {
 
   // Rows 8-11 filler (splice block içinde)
   for (let r = 8; r <= 11; r++) {
-    for (let c = 1; c <= 13; c++) ws.getCell(r, c).border = borderThin();
+    for (let c = 1; c <= COL_COUNT; c++) ws.getCell(r, c).border = borderThin();
   }
 
   // Row 12 — gaz toplam şablonu
-  ws.getCell(12, 5).value = "Gazlı cihaz toplam bağlantısı (kW)";
-  ws.getCell(12, 5).font = fontBold;
-  ws.getCell(12, 9).numFmt = "0.0";
-  for (let c = 1; c <= 13; c++) ws.getCell(12, c).border = borderThin();
+  ws.getCell(12, 4).value = "Gazlı cihaz toplam bağlantısı (kW)";
+  ws.getCell(12, 4).font = fontBold;
+  ws.getCell(12, 6).numFmt = "0.0";
+  for (let c = 1; c <= COL_COUNT; c++) ws.getCell(12, c).border = borderThin();
 
   // Row 13 — sütun toplamları
-  ws.getCell(13, 7).value = "Sütun toplamları →";
-  ws.getCell(13, 7).alignment = { horizontal: "right", vertical: "middle" };
-  ws.getCell(13, 8).numFmt = "0.0";
-  ws.getCell(13, 9).numFmt = "0.0";
-  for (let c = 1; c <= 13; c++) ws.getCell(13, c).border = borderThin();
+  ws.getCell(13, 4).value = "Sütun toplamları →";
+  ws.getCell(13, 4).alignment = { horizontal: "right", vertical: "middle" };
+  ws.getCell(13, 5).numFmt = "0.0";
+  ws.getCell(13, 6).numFmt = "0.0";
+  for (let c = 1; c <= COL_COUNT; c++) ws.getCell(13, c).border = borderThin();
 
   // Row 14 — genel toplam
-  ws.getCell(14, 10).value = "GENEL TOPLAM";
-  ws.getCell(14, 10).font = fontBold;
-  ws.getCell(14, 12).numFmt = "#,##0.00";
-  ws.getCell(14, 13).value = "EUR";
-  for (let c = 1; c <= 13; c++) ws.getCell(14, c).border = borderThin();
+  ws.getCell(14, 8).value = "GENEL TOPLAM";
+  ws.getCell(14, 8).font = fontBold;
+  ws.getCell(14, 9).numFmt = "#,##0.00";
+  ws.getCell(14, 12).value = "EUR";
+  for (let c = 1; c <= COL_COUNT; c++) ws.getCell(14, c).border = borderThin();
 
   // Rows 15-20 padding (PRODUCT_BLOCK_ROWS = 16)
   for (let r = 15; r <= 20; r++) {
-    for (let c = 1; c <= 13; c++) ws.getCell(r, c).border = borderThin();
+    for (let c = 1; c <= COL_COUNT; c++) ws.getCell(r, c).border = borderThin();
   }
 
   // Şartlar
@@ -208,7 +209,7 @@ async function build() {
   for (const line of sartlar) {
     ws.getCell(r, 1).value = line;
     ws.getCell(r, 1).font = line.startsWith("  ") ? fontNorm : fontBold;
-    mergeSafe(ws, r, 1, r, 13);
+    mergeSafe(ws, r, 1, r, COL_COUNT);
     r++;
   }
 
