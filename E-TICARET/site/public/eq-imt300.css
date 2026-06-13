@@ -119,6 +119,15 @@ body.eq-imt-page .imt-page-main {
   background: color-mix(in srgb, var(--eq-topnav-dept-bg, #001e50) 6%, transparent);
 }
 
+.imt-price {
+  font-size: clamp(28px, 3.2vw, 38px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin: 0 0 20px;
+}
+
 .imt-ctas.eq-product-actions {
   margin-bottom: 0;
 }
