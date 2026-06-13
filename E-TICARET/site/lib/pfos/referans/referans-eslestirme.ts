@@ -77,7 +77,7 @@ import {
   isAtalayPisirmeRow,
   isPisirmeReferansIsim,
 } from "../core/atalay-marka";
-import { ocakFuelFromRow, parseOcakFuelFromReferans } from "../core/atalay-ocak-spec";
+import { matchPisirmeByReferans } from "./pisirme-match";
 import {
   isDuvarRafiReferans,
   matchDuvarRafiByReferans,
@@ -1042,7 +1042,7 @@ export async function matchUnSekerArabasiByReferans(
   const rows = (await loadLegacyCatalogRows()).filter(
     (r) =>
       r.durum === "aktif" &&
-      (r.fiyat_tl > 0 || (r.satis_eur_indirimli ?? 0) > 0),
+      (r.fiyat_tl > 0 || (r.satis_fiyat_eur ?? 0) > 0),
   );
 
   const unSekerRows = rows.filter((r) => {
