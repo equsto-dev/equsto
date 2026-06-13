@@ -1,4 +1,5 @@
-/** Urban Bar yerel katalog görselleri henüz deploy edilmediyse atla — Shopify CDN yeterli */
+/** Urban Bar yerel katalog görselleri henüz deploy edilmediyse atla — Shopify CDN yeterli
+ * KİLİT: public/besos-urbanbar-images-KILIT.txt */
 export function isUrbanBarLocalCatalogPath(url: string): boolean {
   const s = String(url || "").trim();
   return !/^https?:\/\//i.test(s) && /(^|\/)images\/catalog\/urbanbar\//i.test(s);

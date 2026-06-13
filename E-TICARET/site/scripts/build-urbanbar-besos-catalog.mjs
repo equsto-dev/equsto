@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /**
  * Urban Bar → Besos sınıflandırılmış katalog (urbanbar.com PDP detayları dahil)
+ * KİLİT: public/besos-urbanbar-images-KILIT.txt
  *   node scripts/build-urbanbar-besos-catalog.mjs
  */
 import fs from "node:fs";
