@@ -77,6 +77,7 @@ import {
   isAtalayPisirmeRow,
   isPisirmeReferansIsim,
 } from "../core/atalay-marka";
+import { ocakFuelFromRow, parseOcakFuelFromReferans } from "../core/atalay-ocak-spec";
 import { matchPisirmeByReferans } from "./pisirme-match";
 import {
   isDuvarRafiReferans,
@@ -139,7 +140,8 @@ import {
   matchEslesmisByEqustoGuess,
   matchEslesmisByEqustoKod,
 } from "@/lib/catalog/equsto-kod-lookup";
-import { formatPfosDisplayTanim } from "../parse-upload/sanitize-tanim";
+import { formatPfosDisplayTanim, stripEmbeddedSupplierSku } from "../parse-upload/sanitize-tanim";
+import { isEqustoDavlumbazRow } from "../core/davlumbaz-marka";
 
 export type ReferansMatchInput = {
   isim: string;
@@ -295,6 +297,26 @@ export function referansKatalogUyumsuz(
     /davlumbaz/.test(k) &&
     /tezgah|sehpa|raf|evye|masa|dolap|buzdolab|sogutu/i.test(s) &&
     !/davlumbaz/i.test(s)
+  ) {
+    return true;
+  }
+  if (
+    isCalismaTezgahiReferansIsim(sablonIsim, notlar) &&
+    isEqustoDavlumbazRow(katalogSku, katalogAd)
+  ) {
+    return true;
+  }
+  if (
+    /induksiyon|indüksiyon|enduksiyon|endüksiyon/.test(s) &&
+    /elektrik/.test(k) &&
+    !/induksiyon|indüksiyon/.test(k)
+  ) {
+    return true;
+  }
+  if (
+    /induksiyon|indüksiyon|enduksiyon|endüksiyon/.test(s) &&
+    /teshir|teşhir|vitrin|display|pasta|cupcake|tatli|tatlı/.test(k) &&
+    !/ocak|induksiyon/.test(k)
   ) {
     return true;
   }
@@ -939,6 +961,18 @@ async function matchStrictCatalog(
       ) {
         return { row, score: -9999 };
       }
+      if (
+        isEqustoDavlumbazRow(row.sku, row.ad) &&
+        !isDavlumbazReferans(input.isim)
+      ) {
+        return { row, score: -9999 };
+      }
+      if (
+        /^(7885|9885)\./i.test(String(row.sku ?? "")) &&
+        !isDavlumbazReferans(input.isim)
+      ) {
+        return { row, score: -9999 };
+      }
       const isimScore = isimEslesmeSkoru(input.isim, row.ad);
       if (isimScore < MIN_STRICT_ISIM_SCORE) {
         return { row, score: -9999 };
@@ -976,6 +1010,15 @@ async function fallbackOzelImalat(input: ReferansMatchInput): Promise<EslesmisUr
 async function matchByMasterEqustoKod(
   input: ReferansMatchInput,
 ): Promise<EslesmisUrun | null> {
+  if (
+    isCalismaTezgahiPfosKalem({
+      isim: input.isim,
+      urunTipi: input.urunTipi,
+      notlar: input.notlar,
+    })
+  ) {
+    return null;
+  }
   const cleanedIsim = formatPfosDisplayTanim(input.isim) || input.isim;
   const fromText =
     extractEqustoKodFromText(cleanedIsim) ||
@@ -1071,8 +1114,11 @@ export async function matchUnSekerArabasiByReferans(
 export async function matchReferansKalem(
   rawInput: ReferansMatchInput,
 ): Promise<EslesmisUrun | null> {
-  let input = rawInput;
-  const normalizedIsim = norm(rawInput.isim);
+  const cleanedIsim = stripEmbeddedSupplierSku(
+    formatPfosDisplayTanim(rawInput.isim) || rawInput.isim,
+  );
+  let input: ReferansMatchInput = { ...rawInput, isim: cleanedIsim };
+  const normalizedIsim = norm(input.isim);
   if (normalizedIsim.includes("duvar rafi") && normalizedIsim.includes("aydinlatmali")) {
     const newIsim = rawInput.isim
       .replace(/aydinlatmali|aydınlatmalı/gi, "")
