@@ -4,7 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { Fragment, useEffect, useMemo, useRef, useState } from "react";
 import { besosAssetPath } from "@/lib/besos/asset-path";
-import { filterUrbanBarProducts } from "@/lib/besos/urbanbar/catalog";
+import {
+  buildUrbanBarCapacityFacets,
+  filterUrbanBarProducts,
+  productMatchesUrbanBarCapacities,
+} from "@/lib/besos/urbanbar/catalog";
 import type { BesosLocale } from "@/lib/besos/locale";
 import type { BesosUrbanBarSectionCatalog } from "@/lib/besos/urbanbar/types";
 
@@ -26,9 +30,9 @@ const UI = {
   loadMore: { tr: "Daha fazla ürün yükle", en: "Load more products" },
   remaining: { tr: "kaldı", en: "remaining" },
   loadMoreAria: { tr: "Daha fazla ürün yükle", en: "Load more products" },
-  filterLabel: { tr: "Alt kategoriler", en: "Subcategories" },
+  categoryLabel: { tr: "Kategori", en: "Category" },
+  capacityLabel: { tr: "Kapasite", en: "Capacity" },
   filterAll: { tr: "Tümü", en: "All" },
-  sectionFilter: { tr: "{section} alt kategorileri", en: "{section} subcategories" },
   filtersAria: { tr: "Ürün filtreleri", en: "Product filters" },
   clearFilters: { tr: "Filtreleri temizle", en: "Clear filters" },
   showing: { tr: "{shown} / {total} ürün gösteriliyor", en: "Showing {shown} / {total} products" },
@@ -54,10 +58,11 @@ function ProductTile({
 }) {
   const img = product.imageUrl || (product.image ? besosAssetPath(product.image) : "");
   const groupLabel = locale === "en" ? product.groupLabelEn : product.groupLabelTr;
+  const pdpHref = product.besosHref || product.shopHref;
 
   return (
     <article className="ub-besos-card" data-group={product.group}>
-      <Link className="ub-besos-card-media" href={product.shopHref}>
+      <Link className="ub-besos-card-media" href={pdpHref}>
         {img ? (
           img.startsWith("http") ? (
             // eslint-disable-next-line @next/next/no-img-element
@@ -72,11 +77,11 @@ function ProductTile({
       <div className="ub-besos-card-body">
         <div className="ub-besos-card-kicker">{groupLabel}</div>
         <h3 className="ub-besos-card-title">
-          <Link href={product.shopHref}>{product.name}</Link>
+          <Link href={pdpHref}>{product.name}</Link>
         </h3>
         {product.code ? <div className="ub-besos-card-code">{product.code}</div> : null}
         {product.price ? <div className="ub-besos-card-price">{product.price}</div> : null}
-        <Link className="ub-besos-card-cta" href={product.shopHref}>
+        <Link className="ub-besos-card-cta" href={pdpHref}>
           {ui("view", locale)}
         </Link>
       </div>
@@ -88,9 +93,17 @@ function gridColumnsForWidth(width: number): number {
   return Math.max(1, Math.floor((width + GRID_GAP_PX) / (GRID_MIN_COL_PX + GRID_GAP_PX)));
 }
 
+function toggleSetItem(set: ReadonlySet<string>, key: string, on: boolean): Set<string> {
+  const next = new Set(set);
+  if (on) next.add(key);
+  else next.delete(key);
+  return next;
+}
+
 export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) {
   const [query, setQuery] = useState("");
   const [activeGroups, setActiveGroups] = useState<ReadonlySet<string>>(new Set());
+  const [activeCapacities, setActiveCapacities] = useState<ReadonlySet<string>>(new Set());
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [cols, setCols] = useState(4);
   const [loadedCount, setLoadedCount] = useState(ROWS_PER_PAGE * 4);
@@ -105,10 +118,29 @@ export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) 
       .filter((g) => g.items.length > 0);
   }, [section.groups, query]);
 
-  const filteredGroups = useMemo(() => {
+  const categoryFilteredGroups = useMemo(() => {
     if (!activeGroups.size) return searchableGroups;
     return searchableGroups.filter((g) => activeGroups.has(g.key));
   }, [searchableGroups, activeGroups]);
+
+  const capacityFacetSource = useMemo(
+    () => categoryFilteredGroups.flatMap((g) => g.items),
+    [categoryFilteredGroups],
+  );
+
+  const capacityFacets = useMemo(
+    () => buildUrbanBarCapacityFacets(capacityFacetSource, locale),
+    [capacityFacetSource, locale],
+  );
+
+  const filteredGroups = useMemo(() => {
+    return categoryFilteredGroups
+      .map((group) => ({
+        ...group,
+        items: group.items.filter((p) => productMatchesUrbanBarCapacities(p, activeCapacities)),
+      }))
+      .filter((g) => g.items.length > 0);
+  }, [categoryFilteredGroups, activeCapacities]);
 
   const flatProducts = useMemo(() => {
     return filteredGroups.flatMap((group) =>
@@ -122,8 +154,13 @@ export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) 
   const remaining = visibleCount - shownCount;
   const visibleProducts = flatProducts.slice(0, shownCount);
   const hasGroupFilter = activeGroups.size > 0;
+  const hasCapacityFilter = activeCapacities.size > 0;
+  const hasAnyFilter = hasGroupFilter || hasCapacityFilter;
 
-  const clearGroupFilters = () => setActiveGroups(new Set());
+  const clearAllFilters = () => {
+    setActiveGroups(new Set());
+    setActiveCapacities(new Set());
+  };
 
   useEffect(() => {
     const el = gridRef.current;
@@ -137,17 +174,12 @@ export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) 
 
   useEffect(() => {
     setLoadedCount(pageSize);
-  }, [query, pageSize, activeGroups]);
+  }, [query, pageSize, activeGroups, activeCapacities]);
 
-  const facetPanel = (
+  const categoryPanel = (
     <div className="ub-besos-facets__panel">
       <div className="ub-besos-facets__hd">
-        <span>{ui("sectionFilter", locale, { section: section.label })}</span>
-        {hasGroupFilter ? (
-          <button type="button" className="ub-besos-facets__clear" onClick={clearGroupFilters}>
-            {ui("clearFilters", locale)}
-          </button>
-        ) : null}
+        <span>{ui("categoryLabel", locale)}</span>
       </div>
       <ul className="ub-besos-facets__list">
         {searchableGroups.map((group) => {
@@ -171,13 +203,11 @@ export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) 
                     if (on) {
                       const next = new Set(activeGroups);
                       next.add(group.key);
-                      if (next.size >= searchableGroups.length) clearGroupFilters();
+                      if (next.size >= searchableGroups.length) setActiveGroups(new Set());
                       else setActiveGroups(next);
                       return;
                     }
-                    const next = new Set(activeGroups);
-                    next.delete(group.key);
-                    setActiveGroups(next);
+                    setActiveGroups(toggleSetItem(activeGroups, group.key, false));
                   }}
                 />
                 <span className="ub-besos-facets__name">{group.label}</span>
@@ -190,14 +220,73 @@ export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) 
     </div>
   );
 
+  const capacityPanel =
+    capacityFacets.length > 0 ? (
+      <div className="ub-besos-facets__panel ub-besos-facets__panel--capacity">
+        <div className="ub-besos-facets__hd">
+          <span>{ui("capacityLabel", locale)}</span>
+        </div>
+        <ul className="ub-besos-facets__list">
+          {capacityFacets.map((cap) => {
+            const checked = !hasCapacityFilter || activeCapacities.has(cap.key);
+            return (
+              <li key={cap.key}>
+                <label className="ub-besos-facets__label">
+                  <input
+                    type="checkbox"
+                    checked={checked}
+                    onChange={(e) => {
+                      const on = e.target.checked;
+                      if (!hasCapacityFilter) {
+                        if (!on) {
+                          setActiveCapacities(
+                            new Set(capacityFacets.filter((c) => c.key !== cap.key).map((c) => c.key)),
+                          );
+                        }
+                        return;
+                      }
+                      if (on) {
+                        const next = new Set(activeCapacities);
+                        next.add(cap.key);
+                        if (next.size >= capacityFacets.length) setActiveCapacities(new Set());
+                        else setActiveCapacities(next);
+                        return;
+                      }
+                      setActiveCapacities(toggleSetItem(activeCapacities, cap.key, false));
+                    }}
+                  />
+                  <span className="ub-besos-facets__name">{cap.label}</span>
+                  <span className="ub-besos-facets__count">{cap.count}</span>
+                </label>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    ) : null;
+
+  const facetPanel = (
+    <>
+      {hasAnyFilter ? (
+        <div className="ub-besos-facets__clear-row">
+          <button type="button" className="ub-besos-facets__clear" onClick={clearAllFilters}>
+            {ui("clearFilters", locale)}
+          </button>
+        </div>
+      ) : null}
+      {categoryPanel}
+      {capacityPanel}
+    </>
+  );
+
   const quickFilters = searchableGroups.length > 0 ? (
-    <div className="ub-besos-quick-filters" aria-label={ui("filterLabel", locale)}>
-      <span className="ub-besos-quick-filters__label">{ui("filterLabel", locale)}</span>
+    <div className="ub-besos-quick-filters" aria-label={ui("categoryLabel", locale)}>
+      <span className="ub-besos-quick-filters__label">{ui("categoryLabel", locale)}</span>
       <div className="ub-besos-quick-filters__scroll">
         <button
           type="button"
           className={`ub-besos-quick-filter${!hasGroupFilter ? " is-active" : ""}`}
-          onClick={clearGroupFilters}
+          onClick={() => setActiveGroups(new Set())}
         >
           {ui("filterAll", locale)}
           <span className="ub-besos-quick-filter__count">
@@ -218,8 +307,7 @@ export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) 
                   return;
                 }
                 if (active) {
-                  const next = new Set(activeGroups);
-                  next.delete(group.key);
+                  const next = toggleSetItem(activeGroups, group.key, false);
                   setActiveGroups(next.size ? next : new Set());
                   return;
                 }
@@ -234,6 +322,48 @@ export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) 
       </div>
     </div>
   ) : null;
+
+  const capacityQuickFilters =
+    capacityFacets.length > 0 ? (
+      <div className="ub-besos-quick-filters ub-besos-quick-filters--capacity" aria-label={ui("capacityLabel", locale)}>
+        <span className="ub-besos-quick-filters__label">{ui("capacityLabel", locale)}</span>
+        <div className="ub-besos-quick-filters__scroll">
+          <button
+            type="button"
+            className={`ub-besos-quick-filter${!hasCapacityFilter ? " is-active" : ""}`}
+            onClick={() => setActiveCapacities(new Set())}
+          >
+            {ui("filterAll", locale)}
+          </button>
+          {capacityFacets.slice(0, 24).map((cap) => {
+            const active = hasCapacityFilter && activeCapacities.has(cap.key);
+            return (
+              <button
+                key={cap.key}
+                type="button"
+                className={`ub-besos-quick-filter${active ? " is-active" : ""}`}
+                aria-pressed={active}
+                onClick={() => {
+                  if (!hasCapacityFilter) {
+                    setActiveCapacities(new Set([cap.key]));
+                    return;
+                  }
+                  if (active) {
+                    const next = toggleSetItem(activeCapacities, cap.key, false);
+                    setActiveCapacities(next.size ? next : new Set());
+                    return;
+                  }
+                  setActiveCapacities(new Set([...activeCapacities, cap.key]));
+                }}
+              >
+                {cap.label}
+                <span className="ub-besos-quick-filter__count">{cap.count}</span>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+    ) : null;
 
   return (
     <section className="ub-besos-catalog" id="ub-catalog">
@@ -257,6 +387,7 @@ export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) 
       </div>
 
       {quickFilters}
+      {capacityQuickFilters}
 
       <div className="ub-besos-plp">
         <aside className="ub-besos-facets" aria-label={ui("filtersAria", locale)}>
@@ -272,7 +403,7 @@ export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) 
               onClick={() => setFiltersOpen((v) => !v)}
             >
               {ui("filterMob", locale)}
-              {hasGroupFilter ? <span className="ub-besos-filter-mob__dot" aria-hidden="true" /> : null}
+              {hasAnyFilter ? <span className="ub-besos-filter-mob__dot" aria-hidden="true" /> : null}
             </button>
             <p className="ub-besos-plp-status">
               {visibleCount > 0

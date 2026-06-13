@@ -3290,6 +3290,20 @@ window.searchFilter = window.searchFilter || function () {};
         }
         return;
       }
+      if (/\/(?:en\/)?besos\/(bardaklar|bar-ekipman)\/[^/?#]+/i.test(location.pathname || "")) {
+        if (typeof window.__eqBootBesosUrbanBarPdp === "function") {
+          window.__eqBootBesosUrbanBarPdp();
+          return;
+        }
+        var ubRoot = document.getElementById("eq-product-root");
+        if (ubRoot) {
+          ubRoot.innerHTML =
+            '<div class="eq-product-miss">' +
+            esc(__pdpT("pdp.besos_loader_waiting", "Besos ürün yükleyici bekleniyor… Sayfayı yenileyin.")) +
+            "</div>";
+        }
+        return;
+      }
       var bcHome = document.getElementById("eq-product-bc-home");
       if (bcHome && typeof window.equstoUrl === "function") bcHome.href = window.equstoUrl("shop");
       if (window.EqFilterColumn) {

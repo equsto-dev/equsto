@@ -145,6 +145,75 @@ export function filterUrbanBarProducts(
   );
 }
 
+const CAPACITY_RE = /(\d+(?:[.,]\d+)?)\s*(cl|ml|oz|lt|l)\b/gi;
+
+/** Ürün adı/açıklamasından kapasite değerleri (20cl, 50ml, 20oz …) */
+export function extractUrbanBarCapacities(
+  product: Pick<BesosUrbanBarProduct, "name" | "description">,
+): string[] {
+  const hay = `${product.name || ""} ${product.description || ""}`;
+  const out = new Set<string>();
+  for (const m of hay.matchAll(CAPACITY_RE)) {
+    const val = m[1].replace(",", ".");
+    let unit = m[2].toLowerCase();
+    if (unit === "l") unit = "lt";
+    out.add(`${val}${unit}`);
+  }
+  return [...out];
+}
+
+function capacitySortKey(key: string): number {
+  const m = key.match(/^([\d.]+)(cl|ml|oz|lt)$/i);
+  if (!m) return Number.MAX_SAFE_INTEGER;
+  const n = parseFloat(m[1]);
+  const unit = m[2].toLowerCase();
+  const unitRank = unit === "cl" ? 0 : unit === "ml" ? 1 : unit === "oz" ? 2 : 3;
+  const toCl = unit === "cl" ? n : unit === "ml" ? n / 10 : unit === "oz" ? n * 2.957 : n * 100;
+  return unitRank * 1_000_000 + toCl;
+}
+
+export function formatUrbanBarCapacityLabel(key: string, locale: BesosLocale): string {
+  const m = key.match(/^([\d.]+)(cl|ml|oz|lt)$/i);
+  if (!m) return key;
+  const num = m[1];
+  const unit = m[2].toLowerCase();
+  if (locale === "en") return `${num} ${unit}`;
+  return `${num} ${unit}`;
+}
+
+export type UrbanBarCapacityFacet = {
+  key: string;
+  label: string;
+  count: number;
+};
+
+export function buildUrbanBarCapacityFacets(
+  products: BesosUrbanBarProduct[],
+  locale: BesosLocale = "tr",
+): UrbanBarCapacityFacet[] {
+  const counts = new Map<string, number>();
+  for (const p of products) {
+    for (const cap of extractUrbanBarCapacities(p)) {
+      counts.set(cap, (counts.get(cap) || 0) + 1);
+    }
+  }
+  return [...counts.entries()]
+    .map(([key, count]) => ({
+      key,
+      label: formatUrbanBarCapacityLabel(key, locale),
+      count,
+    }))
+    .sort((a, b) => capacitySortKey(a.key) - capacitySortKey(b.key) || a.key.localeCompare(b.key));
+}
+
+export function productMatchesUrbanBarCapacities(
+  product: BesosUrbanBarProduct,
+  activeCapacities: ReadonlySet<string>,
+): boolean {
+  if (!activeCapacities.size) return true;
+  return extractUrbanBarCapacities(product).some((c) => activeCapacities.has(c));
+}
+
 export function groupBesosUrbanBarCatalog(
   products: BesosUrbanBarProduct[],
   locale: BesosLocale = "tr",
@@ -210,4 +279,30 @@ export function enrichUrbanBarLabels(
 export function besosUrbanBarSectionHref(section: BesosUrbanBarSectionKey, locale: BesosLocale): string {
   const base = locale === "en" ? "/en/besos" : "/besos";
   return `${base}/${section === "bardaklar" ? "bardaklar" : "bar-ekipman"}`;
+}
+
+export function besosUrbanBarProductSlug(
+  product: Pick<BesosUrbanBarProduct, "handle" | "equstoId" | "code">,
+): string {
+  const handle = String(product.handle || "").trim();
+  if (handle) return handle;
+  const tail = String(product.equstoId || "")
+    .split("__")
+    .pop()
+    ?.trim();
+  if (tail) return tail.toLowerCase();
+  return String(product.code || "")
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, "-");
+}
+
+export function besosUrbanBarProductHref(
+  section: BesosUrbanBarSectionKey,
+  slug: string,
+  locale: BesosLocale = "tr",
+): string {
+  const base = locale === "en" ? "/en/besos" : "/besos";
+  const sec = section === "bardaklar" ? "bardaklar" : "bar-ekipman";
+  return `${base}/${sec}/${encodeURIComponent(slug)}`;
 }
