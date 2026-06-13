@@ -4,7 +4,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260613-fuel-spec-fix-v1";
+  var CATALOG_V = "20260613-pimak-pdp-ozti-v1";
 
   window.EqMarketReyon = {
     loadCatalog: function () {
