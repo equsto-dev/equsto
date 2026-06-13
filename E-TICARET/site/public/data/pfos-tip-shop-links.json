@@ -236,6 +236,11 @@
       "marka": "Boğaziçi",
       "name": "Boğaziçi Patates Soyma Makinesi 15 kg",
       "fiyat_try": 28500
+    },
+    "makarna_pisirici_elk": {
+      "marka": "Öztiryakiler",
+      "sku": "7858.N1.40703.11",
+      "name": "700 SERİ SET ÜSTÜ MAKARNA FRİTÖZÜ ELEKTRİKLİ 40*70*30"
     }
   }
 }

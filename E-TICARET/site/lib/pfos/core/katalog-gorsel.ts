@@ -12,6 +12,7 @@ import {
 import { isPortashelfSku, PORTASHELF_304_GORSEL_REL } from "./portashelf-fiyat";
 import { equstoPimakGorselRelFromSku } from "./equsto-pimak-gorsel";
 import { isEqustoDavlumbazRow } from "./davlumbaz-marka";
+import { tezgahEvyeGorselRel } from "./tezgah-evye-gorsel";
 
 export {
   equstoGorselRelFromSku,
@@ -94,15 +95,8 @@ export async function resolveGorselUrlBySku(
     return normalizePfosGorselUrl(PORTASHELF_304_GORSEL_REL);
   }
 
-  if (key.endsWith(".12") || key.endsWith("-12") || (tanim && /çift\s*evye|cift\s*evye|iki\s*evye/i.test(tanim))) {
-    return "/data/images/catalog/cafemarkt-images/tablali-evye-cift-goz-damlaliksiz_1.jpg";
-  }
-  if (key.endsWith(".11") || key.endsWith("-11") || (tanim && /tek\s*evye|1\s*evye/i.test(tanim))) {
-    return "/data/images/catalog/cafemarkt-images/tablali-evye-tek-goz-damlaliksiz_1.jpg";
-  }
-  if (key.endsWith(".17") || key.endsWith("-17") || (tanim && /üç\s*evye|uc\s*evye|3\s*evye/i.test(tanim))) {
-    return "/data/images/catalog/cafemarkt-images/tablali-evye-uc-goz-damlaliksiz_1.jpg";
-  }
+  const evyeRel = tezgahEvyeGorselRel(key, tanim);
+  if (evyeRel) return evyeRel;
 
   const index = await loadSkuGorselIndex();
   const fromCatalog = index.get(key);
@@ -183,17 +177,9 @@ export async function enrichEslesmisGorsel(
     return urun;
   }
 
-  const isDoubleSink = (sku && (sku.endsWith(".12") || sku.endsWith("-12"))) || (urun.ad && /çift\s*evye|cift\s*evye|iki\s*evye/i.test(urun.ad));
-  if (isDoubleSink) {
-    return { ...urun, gorselUrl: "/data/images/catalog/cafemarkt-images/tablali-evye-cift-goz-damlaliksiz_1.jpg" };
-  }
-  const isSingleSink = (sku && (sku.endsWith(".11") || sku.endsWith("-11"))) || (urun.ad && /tek\s*evye|1\s*evye/i.test(urun.ad));
-  if (isSingleSink) {
-    return { ...urun, gorselUrl: "/data/images/catalog/cafemarkt-images/tablali-evye-tek-goz-damlaliksiz_1.jpg" };
-  }
-  const isTripleSink = (sku && (sku.endsWith(".17") || sku.endsWith("-17"))) || (urun.ad && /üç\s*evye|uc\s*evye|3\s*evye/i.test(urun.ad));
-  if (isTripleSink) {
-    return { ...urun, gorselUrl: "/data/images/catalog/cafemarkt-images/tablali-evye-uc-goz-damlaliksiz_1.jpg" };
+  const evyeRel = tezgahEvyeGorselRel(sku, urun.ad);
+  if (evyeRel) {
+    return { ...urun, gorselUrl: evyeRel };
   }
 
   const normalizedExisting = normalizePfosGorselUrl(urun.gorselUrl);

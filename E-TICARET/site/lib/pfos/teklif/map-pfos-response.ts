@@ -31,6 +31,7 @@ import {
 } from "../parse-upload/sanitize-tanim";
 import { buildCatalogTeklifAciklama, normalizeTeklifAciklamaText } from "./catalog-teklif-aciklama";
 import { resolveTeklifKw } from "@/lib/catalog/kw-resolve";
+import { tezgahEvyeGorselRel } from "../core/tezgah-evye-gorsel";
 
 function cleanObjectString(s: string | null | undefined): string {
   if (!s) return "";
@@ -113,14 +114,9 @@ export function pfosResponseToTeklifV14(
         (stokNo ? oztiWebImageRelFromSku(stokNo) : null);
     }
 
-    const normSkuKey = String(stokNo || "").trim().toUpperCase();
-    const normNameKey = String(k.isim || "").toLowerCase();
-    if (normSkuKey.endsWith(".12") || normSkuKey.endsWith("-12") || /çift\s*evye|cift\s*evye|iki\s*evye/i.test(normNameKey)) {
-      finalGorsel = "/data/images/catalog/cafemarkt-images/tablali-evye-cift-goz-damlaliksiz_1.jpg";
-    } else if (normSkuKey.endsWith(".11") || normSkuKey.endsWith("-11") || /tek\s*evye|1\s*evye/i.test(normNameKey)) {
-      finalGorsel = "/data/images/catalog/cafemarkt-images/tablali-evye-tek-goz-damlaliksiz_1.jpg";
-    } else if (normSkuKey.endsWith(".17") || normSkuKey.endsWith("-17") || /üç\s*evye|uc\s*evye|3\s*evye/i.test(normNameKey)) {
-      finalGorsel = "/data/images/catalog/cafemarkt-images/tablali-evye-uc-goz-damlaliksiz_1.jpg";
+    const evyeGorsel = tezgahEvyeGorselRel(stokNo, sablonIsim);
+    if (evyeGorsel) {
+      finalGorsel = evyeGorsel;
     }
 
     const gorselFallback = normalizePfosGorselUrl(finalGorsel);
