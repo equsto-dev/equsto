@@ -78,6 +78,7 @@ import {
   isAtalayPisirmePfosKalem,
   isAtalayPisirmeRow,
   isPisirmeReferansIsim,
+  isTostMakinasiReferans,
 } from "../core/atalay-marka";
 import { ocakFuelFromRow, parseOcakFuelFromReferans } from "../core/atalay-ocak-spec";
 import { matchPisirmeByReferans } from "./pisirme-match";
@@ -1241,7 +1242,20 @@ export async function matchReferansKalem(
     if (kombi) return kombi;
   }
 
-  if (isAtalayPisirmePfosKalem({ isim: input.isim, urunTipi: input.urunTipi })) {
+  if (isTostMakinasiReferans(input.isim, input.urunTipi)) {
+    const tost = await matchByTipShopLink(input);
+    if (
+      tost &&
+      !referansKatalogUyumsuz(input.isim, tost.ad, input.notlar, tost.sku)
+    ) {
+      return tost;
+    }
+  }
+
+  if (
+    isAtalayPisirmePfosKalem({ isim: input.isim, urunTipi: input.urunTipi }) &&
+    !isTostMakinasiReferans(input.isim, input.urunTipi)
+  ) {
     const pisirme = await matchPisirmeByReferans(
       input.isim,
       olcu,
@@ -1382,7 +1396,19 @@ export async function matchReferansKalem(
       );
       if (kombi) return kombi;
     }
-    if (isAtalayPisirmePfosKalem({ isim: input.isim, urunTipi: input.urunTipi })) {
+    if (isTostMakinasiReferans(input.isim, input.urunTipi)) {
+      const tost = await matchByTipShopLink(input);
+      if (
+        tost &&
+        !referansKatalogUyumsuz(input.isim, tost.ad, input.notlar, tost.sku)
+      ) {
+        return tost;
+      }
+    }
+    if (
+      isAtalayPisirmePfosKalem({ isim: input.isim, urunTipi: input.urunTipi }) &&
+      !isTostMakinasiReferans(input.isim, input.urunTipi)
+    ) {
       const pisirme = await matchPisirmeByReferans(
         input.isim,
         olcu,

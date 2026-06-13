@@ -163,6 +163,9 @@ const TIP_MATCH_RULES: Record<string, (name: string) => boolean> = {
     !name.includes("istif") &&
     !name.includes("davlumbaz"),
   fritoz_tek: (name) => name.includes("fritoz") || name.includes("fritöz"),
+  tost_makinasi: (name) =>
+    name.includes("tost") &&
+    (name.includes("atm") || name.includes("atalay") || name.includes("tost mak")),
   filter_coffee: (name) =>
     name.includes("filtre kahve") ||
     name.includes("filter kahve") ||

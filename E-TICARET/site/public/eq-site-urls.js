@@ -996,7 +996,7 @@
     );
   }
 
-  var EQ_CATALOG_IMG_V = "20260613-ozti-kw-fritoz-v1";
+  var EQ_CATALOG_IMG_V = "20260613-tost-atalay-v1";
 
   function withCatalogImgV(url) {
     if (

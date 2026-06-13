@@ -53,6 +53,15 @@ export function isPisirmeTipKodu(tip: string | null | undefined): boolean {
   return PISIRME_TIP_KODLARI.has(resolveTipKodu(String(tip ?? "").trim()));
 }
 
+export function isTostMakinasiReferans(
+  isim?: string | null,
+  urunTipi?: string | null,
+): boolean {
+  const n = norm(String(isim ?? ""));
+  if (/tost\s*mak/.test(n)) return true;
+  return resolveTipKodu(String(urunTipi ?? "")) === "tost_makinasi";
+}
+
 export function isAtalayPisirmePfosKalem(opts: {
   isim?: string | null;
   urunTipi?: string | null;

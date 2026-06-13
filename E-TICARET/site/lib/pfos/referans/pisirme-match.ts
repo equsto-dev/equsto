@@ -16,6 +16,7 @@ import {
   scoreOztiOcakRow,
 } from "../core/ozti-pisirme-spec";
 import { isKombiKonveksiyonReferans } from "./firin-match";
+import { resolveTipKodu } from "../core/tip-kodu";
 import { referansKatalogCeliski } from "./referans-nitelikleri";
 import { extractOlcuFromNotlar } from "./yer-izgara-match";
 
@@ -62,7 +63,7 @@ export function oztiPisirmeKatalogUyumsuz(
   if (/cift|çift|iki\s*hazne/.test(s) && /7856\.n1\.80703\.(11|13)/.test(k)) {
     return true;
   }
-  if (/cift|çift|iki\s*hazne/.test(s) && /set\s*ustu.*80\*70|80\*70\*30/.test(k) && /7856\.n1\./.test(k)) {
+  if (/tost\s*mak/.test(s) && /^78\d{2}\./.test(String(katalogSku ?? ""))) {
     return true;
   }
   return false;
@@ -298,6 +299,9 @@ export async function matchPisirmeByReferans(
   _fiyatStratejisi: FiyatStratejisi = "ekonomik",
 ): Promise<EslesmisUrun | null> {
   if (isKombiKonveksiyonReferans(isim, urunTipi)) return null;
+  if (/tost\s*mak/i.test(norm(isim)) || resolveTipKodu(String(urunTipi ?? "")) === "tost_makinasi") {
+    return null;
+  }
 
   const olcu =
     olcuRaw.trim() ||

@@ -476,6 +476,14 @@
       "frekans": 0
     },
     {
+      "tip_kodu": "tost_makinasi",
+      "aciklama": "Tost makinesi",
+      "kategori": "pisirme",
+      "alt_kategori": "tost-makineleri",
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
       "tip_kodu": "fritoz_tek",
       "aciklama": "Atalay Fritözler AEF - 870 2 x Min. 6 lt. Max 12 lt 800 x 700 x 300",
       "kategori": "diger",
