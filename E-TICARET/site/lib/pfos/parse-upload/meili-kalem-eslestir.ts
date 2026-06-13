@@ -272,7 +272,7 @@ function refMatchToResult(
   refMatch: {
     id: string;
     ad: string;
-    sku: string;
+    sku: string | null;
     marka: string;
     model?: string | null;
     gorselUrl?: string | null;
@@ -284,7 +284,7 @@ function refMatchToResult(
   const bestHit = {
     id: refMatch.id,
     name: refMatch.ad,
-    sku: refMatch.sku,
+    sku: refMatch.sku || "",
     brand: refMatch.marka,
     category: refMatch.model || "",
     dept: refMatch.model || "",
