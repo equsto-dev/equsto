@@ -64,6 +64,7 @@ import {
 import {
   matchBuzdolabiByReferans,
   matchBuzdolapByReferans,
+  isBuroTipiDerinDondurucuReferans,
 } from "./buzdolabi-match";
 import {
   isDavlumbazReferans,
@@ -1159,7 +1160,11 @@ export async function matchReferansKalem(
 
   const olcu =
     extractOlcuFromNotlar(input.notlar) ||
-    (input.notlar?.match(/(\d+\s*[*xX×]\s*\d+)/)?.[1] ?? "");
+    (input.notlar?.match(/(\d+\s*[*xX×]\s*\d+(?:\s*[*xX×]\s*\d+)?)/)?.[1] ?? "");
+
+  if (isBuroTipiDerinDondurucuReferans(input.isim, olcu, input.notlar)) {
+    return null;
+  }
 
   const verified = await matchByVerifiedLink(input);
   if (verified) {

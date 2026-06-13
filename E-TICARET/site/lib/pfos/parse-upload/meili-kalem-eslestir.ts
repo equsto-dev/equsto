@@ -30,6 +30,7 @@ import {
   matchCatalogByEqustoKod,
 } from "@/lib/catalog/equsto-kod-lookup";
 import { referansKatalogUyumsuz, matchReferansKalem } from "../referans/referans-eslestirme";
+import { isBuroTipiDerinDondurucuReferans } from "../referans/buzdolabi-match";
 import { inferUrunTipiFromReferansSatir } from "../referans/infer-urun-tipi";
 import { matchDuvarRafiByReferans } from "../referans/duvar-raf-match";
 import { matchPisirmeByReferans } from "../referans/pisirme-match";
@@ -344,6 +345,19 @@ export async function matchItem(item: ParsedItem): Promise<ItemMatchResult> {
 
   // Try rule-based referans matching first
   const refNotlar = [item.olcu, item.tanim].filter(Boolean).join(" ");
+  if (isBuroTipiDerinDondurucuReferans(item.tanim, item.olcu, refNotlar)) {
+    return {
+      matched: {
+        ...item,
+        eslesen_urun: null,
+        eslesen_skor: 0,
+        birim_fiyat_eur: null,
+        toplam_eur: null,
+        not_found: true,
+      },
+      bestHit: null,
+    };
+  }
   const refInput = {
     isim: item.tanim,
     urunTipi: inferUrunTipiFromReferansSatir({

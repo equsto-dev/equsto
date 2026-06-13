@@ -2,8 +2,17 @@ import type { PfosEkipmanSatir } from "@/lib/pfos/kategoriler/types";
 
 type TipRule = {
   tip: string;
-  test: (n: string, poz: string) => boolean;
+  test: (n: string, poz: string, olcu?: string) => boolean;
 };
+
+function isBuroTipiDerinDondurucuOlcu(olcu: string): boolean {
+  const nums = [...String(olcu).matchAll(/(\d+(?:[.,]\d+)?)/g)]
+    .map((m) => Number(m[1].replace(",", ".")))
+    .filter((n) => Number.isFinite(n) && n >= 8);
+  if (nums.length < 2) return false;
+  const [w, d, h] = [nums[0], nums[1], nums[2] ?? 0];
+  return w >= 55 && w <= 65 && d >= 55 && d <= 65 && h >= 75 && h <= 95;
+}
 
 function norm(s: string): string {
   return String(s || "")
@@ -331,6 +340,14 @@ const TIP_RULES: TipRule[] = [
       (n.includes("depo") || n.includes("dik tip")),
   },
   {
+    tip: "buro-tipi-derin-dondurucu",
+    test: (n, _poz, olcu = "") =>
+      (/derin donduruc|derindonduruc|dondurucu/.test(n) &&
+        (/buro tip|office type|slim buzdolab|tezgah alti slim/.test(n) ||
+          isBuroTipiDerinDondurucuOlcu(olcu))) ||
+      false,
+  },
+  {
     tip: "setalti-derin-dondurucu",
     test: (n) =>
       (n.includes("derin donduruc") || n.includes("derindonduruc")) &&
@@ -338,7 +355,6 @@ const TIP_RULES: TipRule[] = [
       (n.includes("setalti") ||
         n.includes("set alti") ||
         n.includes("cihazalti") ||
-        n.includes("tek kapili") ||
         n.includes("60*60")),
   },
   {
@@ -473,9 +489,10 @@ const TIP_RULES: TipRule[] = [
 export function inferUrunTipiFromReferansSatir(s: PfosEkipmanSatir): string {
   const n = norm(s.ad);
   const poz = String(s.poz || "").trim().toUpperCase();
+  const olcu = String(s.olcu || "").trim();
 
   for (const rule of TIP_RULES) {
-    if (rule.test(n, poz)) return rule.tip;
+    if (rule.test(n, poz, olcu)) return rule.tip;
   }
 
   const base = s.ad

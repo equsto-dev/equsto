@@ -91,6 +91,7 @@ export const URUN_TIPI_ALIASES: Record<string, string> = {
   "icecek-havuzu-soguk": "icecek_havuzu_soguk",
   "depo-derin-dondurucu-cift-kapili": "derin_dondurucu_dik",
   "setalti-derin-dondurucu": "setalti_derin_dondurucu",
+  "buro-tipi-derin-dondurucu": "buro_tipi_derin_dondurucu",
   "setalti-buzdolabi-tek": "setalti_buzdolabi",
   "setaltı-buzdolabi": "setalti_buzdolabi",
   "filter-coffee-makinesi-2": "filter_coffee",
@@ -211,6 +212,12 @@ export const TIP_SEARCH_TERMS: Record<string, string[]> = {
   calisma_tezgahi_dolap: ["calisma tezgah", "çalışma tezgah", "140*60"],
   bar_kuvet: ["kuvet", "40*40*25"],
   setalti_derin_dondurucu: ["setalti derin", "setaltı derin", "tezgah alti derin", "cihazalti derin"],
+  buro_tipi_derin_dondurucu: [
+    "buro tipi derin",
+    "büro tipi derin",
+    "60x60 derin dondurucu",
+    "606085 derin",
+  ],
   setalti_buzdolabi: [
     "tag 270",
     "yatay tip buzdolab",
