@@ -996,7 +996,7 @@
     );
   }
 
-  var EQ_CATALOG_IMG_V = "20260613-atalay-pdp-v1";
+  var EQ_CATALOG_IMG_V = "20260613-ozti-sogutma-pdp-v1";
 
   function withCatalogImgV(url) {
     if (

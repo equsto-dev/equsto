@@ -2655,6 +2655,11 @@ window.searchFilter = window.searchFilter || function () {};
       var raw = decodeHtmlEntitiesPdp(
         String(x.ozti_web_description || x.description || "").trim()
       );
+      if (!raw && x.specs) {
+        var sp = String(x.specs || "");
+        var m = sp.match(/Ürün açıklaması \(oztiryakiler\.com\.tr\)\s*\n([\s\S]+?)(?:\n\n|$)/i);
+        if (m) raw = decodeHtmlEntitiesPdp(m[1].trim());
+      }
       if (!raw) return [];
       var parts;
       if (/\n\s*[•·\-–—*]/.test(raw)) {
@@ -2746,16 +2751,26 @@ window.searchFilter = window.searchFilter || function () {};
 
       if (!gas && !electric) {
         if (hasElkFields) electric = true;
-        else if (/güç:/i.test(lines.join(" "))) gas = /gazl[ıi]/i.test(low);
+        else if (/^ürün tipi:\s*elektrikli/i.test(lines.join("\n"))) electric = true;
+        else if (/buzdolab|soğut|sogut|derin dondur|chiller|freezer|refrigerat/i.test(low)) {
+          electric = true;
+        } else if (/güç:/i.test(lines.join(" "))) {
+          if (/gazl[ıi]|brülör|brulor|doğalgaz|dogalgaz|\blpg\b/i.test(low)) gas = true;
+          else electric = true;
+        }
       }
 
       return { gas: gas, electric: electric };
     }
 
     function oztiKwSuffix(val) {
-      var v = String(val || "").trim();
+      var v = String(val || "")
+        .trim()
+        .replace(",", ".");
       if (!v) return "";
       if (/\bkw\b/i.test(v)) return v;
+      var n = Number(v);
+      if (Number.isFinite(n) && n > 0 && n < 100) return String(n) + " kW";
       return v + " kW";
     }
 

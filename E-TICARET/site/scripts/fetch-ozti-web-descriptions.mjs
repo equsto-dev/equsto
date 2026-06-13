@@ -114,6 +114,7 @@ function preferEntry(existing, candidate) {
 
 function saveIndexPartial(byKod, bySoft, meta) {
   if (dryRun) return;
+  if (meta.lastPage % 5 !== 0 && meta.lastPage !== 1 && meta.lastPage < meta.totalPages) return;
   const index = {
     builtAt: new Date().toISOString(),
     apiTotal: meta.total,
@@ -124,7 +125,7 @@ function saveIndexPartial(byKod, bySoft, meta) {
     bySoft,
   };
   fs.mkdirSync(path.dirname(WEB_INDEX), { recursive: true });
-  fs.writeFileSync(WEB_INDEX, JSON.stringify(index, null, 2), "utf8");
+  writeJsonAtomic(WEB_INDEX, index);
 }
 
 async function buildWebIndex() {
@@ -188,7 +189,7 @@ async function buildWebIndex() {
 
   if (!dryRun) {
     fs.mkdirSync(path.dirname(WEB_INDEX), { recursive: true });
-    fs.writeFileSync(WEB_INDEX, JSON.stringify(index, null, 2), "utf8");
+    writeJsonAtomic(WEB_INDEX, index);
   }
 
   console.log(`[ozti-web] indeks hazır — ${index.count} kod (API toplam ~${total})`);
@@ -223,7 +224,7 @@ function writeJsonAtomic(dest, data) {
     fs.writeFileSync(tmp, json, "utf8");
     fs.renameSync(tmp, dest);
   } catch (err) {
-    if (err?.code === "EPERM" || err?.code === "EBUSY") {
+    if (err?.code === "EPERM" || err?.code === "EBUSY" || err?.code === "UNKNOWN") {
       fs.writeFileSync(dest, json, "utf8");
       try {
         fs.unlinkSync(tmp);
