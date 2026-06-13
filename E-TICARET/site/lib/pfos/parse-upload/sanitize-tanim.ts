@@ -22,6 +22,12 @@ const BOLUM_KALINTI = [
 const PROFORMA_JUNK_RE =
   /\s*(?:skt[uü]rk|skturk)(?:\s+mutfak)?(?:\s+\d+(?:\s+\d+){0,3})?\s*\+?\s*$/i;
 
+/** Satır içinde / başında gömülü tedarikçi stok kodu (proforma Excel artığı) */
+const EMBEDDED_EQUSTO_SKU_RE = /\bEQUSTO\.\d{4,5}\.\d{2}\b/gi;
+const EMBEDDED_EQ_KOD_RE = /\bEQ-[A-Z0-9][A-Z0-9.\-_]*/gi;
+const INLINE_SKTURK_RE =
+  /\bskt[uü]rk(?:\s+mutfak)?(?:\s+\d+(?:\s+\d+){0,3})?/gi;
+
 const TRAILING_PRICE_TAIL_RE =
   /\s+[-–—]?\s*(?:\d+\s+){1,3}\d{3,4}(?:\s+\d{3,4})?\s*\+?\s*$/;
 
@@ -60,6 +66,7 @@ function stripProformaInlineJunk(s: string): string {
   }
 
   out = out
+    .replace(INLINE_SKTURK_RE, " ")
     .replace(PROFORMA_JUNK_RE, "")
     .replace(TRAILING_PRICE_TAIL_RE, "")
     .replace(TRAILING_BRAND_QTY_RE, "")
@@ -74,6 +81,16 @@ function stripProformaInlineJunk(s: string): string {
   return out;
 }
 
+/** Proforma satırından gömülü stok kodlarını çıkar — eşleştirmeyi bozmasın */
+export function stripEmbeddedSupplierSku(raw: string): string {
+  return String(raw ?? "")
+    .replace(EMBEDDED_EQUSTO_SKU_RE, " ")
+    .replace(EMBEDDED_EQ_KOD_RE, " ")
+    .replace(/\b(?:stok|sku)\s*:\s*EQUSTO\.[^\s,;]+/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 /** Proforma PDF satırından arama için temiz tanım */
 export function cleanProformaTanim(raw: string): string {
   const s = stripProformaInlineJunk(expandProformaAbbreviations(String(raw ?? "").trim()));
@@ -82,8 +99,10 @@ export function cleanProformaTanim(raw: string): string {
 
 /** Teklif / tablo görünümü — orijinal büyük-küçük harf korunur */
 export function formatPfosDisplayTanim(raw: string | null | undefined): string {
-  const cleaned = stripProformaInlineJunk(
-    expandProformaAbbreviations(String(raw ?? "").trim()),
+  const cleaned = stripEmbeddedSupplierSku(
+    stripProformaInlineJunk(
+      expandProformaAbbreviations(String(raw ?? "").trim()),
+    ),
   );
   return repairPfosDisplayText(cleaned);
 }
