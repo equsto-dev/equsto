@@ -996,7 +996,7 @@
     );
   }
 
-  var EQ_CATALOG_IMG_V = "20260613imt300-price";
+  var EQ_CATALOG_IMG_V = "20260613teklif-stok-foto";
 
   function withCatalogImgV(url) {
     if (
