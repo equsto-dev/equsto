@@ -25,7 +25,7 @@ import { isCalismaTezgahiPfosKalem } from "./calisma-tezgah";
 import { matchCalismaTezgahiByReferans } from "../referans/calisma-tezgah-match";
 import { isDavlumbazReferans, matchDavlumbazByReferans } from "../referans/davlumbaz-match";
 import { isBuzdolabiPfosKalem } from "./portabianco-marka";
-import { matchBuzdolabiByReferans } from "../referans/buzdolabi-match";
+import { matchBuzdolapByReferans } from "../referans/buzdolabi-match";
 import { isCaglayanTeshirPfosKalem } from "./caglayan-marka";
 import { matchTeshirReyonByReferans } from "../referans/teshir-reyon-match";
 import { isAtalayPisirmePfosKalem } from "./atalay-marka";
@@ -220,7 +220,7 @@ export async function matchCatalogFallback(
       notlar?.match(/(\d+\s*[*xX×]\s*\d+\s*[*xX×]\s*\d+)/)?.[1] ??
       notlar?.match(/(\d+\s*[*xX×]\s*\d+)/)?.[1] ??
       "";
-    const buz = await matchBuzdolabiByReferans(
+    const buz = await matchBuzdolapByReferans(
       sablonIsim,
       olcu,
       notlar,
@@ -350,7 +350,7 @@ export async function matchOzelImalatForSablon(
       notlar?.match(/(\d+\s*[*xX×]\s*\d+\s*[*xX×]\s*\d+)/)?.[1] ??
       notlar?.match(/(\d+\s*[*xX×]\s*\d+)/)?.[1] ??
       "";
-    const buz = await matchBuzdolabiByReferans(
+    const buz = await matchBuzdolapByReferans(
       isim,
       olcu,
       notlar,

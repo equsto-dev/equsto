@@ -63,6 +63,9 @@ export async function matchDuvarRafiByReferans(
       best = row;
     }
   }
-  if (best && bestScore > 0) return katalogRowToEslesmis(best);
+  if (best && bestScore > 0) {
+    const matched = katalogRowToEslesmis(best, { sablonIsim: isim });
+    return { ...matched, ad: isim.trim() || matched.ad };
+  }
   return null;
 }
