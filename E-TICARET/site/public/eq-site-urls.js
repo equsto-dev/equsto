@@ -706,7 +706,7 @@
     if (file === "catering-mutfagi.html") return "/catering-mutfagi" + query + hash;
     if (file === "fast-food-kurulumu.html") return "/fast-food-kurulumu" + query + hash;
     if (file === "fine-dining-kurulumu.html") return "/fine-dining-kurulumu" + query + hash;
-    if (file === "imt300.html") return "/besos/imt300" + query + hash;
+    if (file === "imt300.html") return window.equstoUrl("home").replace(/\/?$/, "") + "/imt300" + query + hash;
     if (file === "marka.html" && query) {
       try {
         var sp = new URLSearchParams(query.replace(/^\?/, ""));
