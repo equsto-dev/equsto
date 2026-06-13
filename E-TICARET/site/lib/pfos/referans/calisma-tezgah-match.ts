@@ -13,6 +13,7 @@ import {
   isCalismaTezgahiReferansIsim,
   isEqustoTezgahRow,
 } from "../core/calisma-tezgah";
+import { findClosestEqustoTezgahPriceRow } from "../core/ozel-imalat-yakin-olcu";
 import { extractOlcuFromNotlar } from "./yer-izgara-match";
 
 function norm(s: string): string {
@@ -131,6 +132,7 @@ function buildGeneratedEqustoTezgah(
   notlar: string | null | undefined,
   row?: AdminUrunRow | null,
   imageRow?: AdminUrunRow | null,
+  priceRow?: AdminUrunRow | null,
 ): EslesmisUrun {
   if (row && row.fiyat_tl > 0) {
     return katalogRowToEslesmis(row, {
@@ -140,8 +142,9 @@ function buildGeneratedEqustoTezgah(
     });
   }
 
+  const priced = priceRow ?? row;
   const img =
-    row?.gorsel_url ?? imageRow?.gorsel_url ?? null;
+    row?.gorsel_url ?? imageRow?.gorsel_url ?? priceRow?.gorsel_url ?? null;
   const olcuText = olcu.trim() || null;
 
   return {
@@ -153,7 +156,8 @@ function buildGeneratedEqustoTezgah(
     olcu: olcuText,
     elektrikGucuKw: null,
     gazGucuKw: null,
-    fiyat: row?.fiyat_tl && row.fiyat_tl > 0 ? row.fiyat_tl : 0,
+    fiyat:
+      priced?.fiyat_tl && priced.fiyat_tl > 0 ? priced.fiyat_tl : 0,
     fiyatEur: null,
     doviz: "TRY",
     gorselUrl: normalizePfosGorselUrl(img),
@@ -198,6 +202,14 @@ export async function matchCalismaTezgahiByReferans(
       );
     }
 
+    const catalogRows = await loadLegacyCatalogRows();
+    const closestPrice = findClosestEqustoTezgahPriceRow(
+      catalogRows,
+      isim,
+      olcuText,
+      generatedSku,
+    );
+
     const evye = evyeCountFromIsim(isim);
     const suffix = inferEqustoTezgahVariantSuffix(isim);
     if (evye === 2 && suffix === "12") {
@@ -210,10 +222,11 @@ export async function matchCalismaTezgahiByReferans(
         notlar,
         null,
         imageRow,
+        closestPrice,
       );
     }
 
-    const rows = (await loadLegacyCatalogRows()).filter(
+    const rows = catalogRows.filter(
       (r) => r.durum === "aktif" && r.fiyat_tl > 0 && isEqustoTezgahRow(r.sku, r.ad),
     );
     const scored = rows
@@ -242,6 +255,7 @@ export async function matchCalismaTezgahiByReferans(
       notlar,
       null,
       imageRow,
+      closestPrice,
     );
   }
 
@@ -263,4 +277,4 @@ export async function matchCalismaTezgahiByReferans(
   }
   return null;
 }
-
+

@@ -6,6 +6,11 @@ import { isDuvarRafiReferans } from "../referans/duvar-raf-heuristics";
 
 /** Özel imalat / atölye — katalog markası yok; teklifte Equsto */
 export const OZEL_IMALAT_MARKA = "Equsto";
+
+/**
+ * Tezgah / davlumbaz fiyatı: referans ölçüsü katalogda yoksa sitedeki en yakın EQUSTO ölçüsünün
+ * fiyatı kullanılır (@see ozel-imalat-yakin-olcu.ts). Diğer özel imalat kalemlerde fiyat yoksa boş kalır.
+ */
 /** Referans şablonunda Portashelf etiketi (ürün henüz katalogda yok) */
 export function isPortashelfSablon(isim: string | null | undefined): boolean {
   return /portashelf/i.test(String(isim ?? ""));

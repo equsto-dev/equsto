@@ -5,7 +5,7 @@
  * 2) pfos-tip-shop-links.json (urunTipi → SKU) — doğrulanmış tip eşlemesi
  * 3) Aile kuralları (yer ızgarası, make-up, fırın, vb.)
  * 4) İsim + ölçü ile sıkı katalog araması
- * 5) Özel imalat (Equsto) — katalogda fiyat yoksa boş; formül/tahmin yok
+ * 5) Özel imalat — tezgah/davlumbaz: en yakın EQUSTO katalog ölçüsünden fiyat; diğerleri boş
  */
 import { readJsonFile } from "@/lib/legacy-data";
 import type { EslesmisUrun, FiyatStratejisi } from "../schemas/pfos.schema";
