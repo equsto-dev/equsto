@@ -1,0 +1,38 @@
+═══════════════════════════════════════════════════════════════════════════
+KİLİT — Besos Urban Bar PDP/PLP görselleri (Shopify CDN)
+Onay: 2026-06-13 · Commit referans: 399d3de6
+═══════════════════════════════════════════════════════════════════════════
+
+Urban Bar ürün görselleri yerel public/images/catalog/urbanbar/ altında
+(.gitignore — deploy edilmez). Besos katalog/PDP yalnızca cdn.shopify.com
+URL'lerini kullanmalı; kırık yerel yollar galeriye eklenmemeli.
+
+── Referans ürün (doğrulama) ─────────────────────────────────────────────
+  /besos/bardaklar/alto-cocktail-17cl-copy · UB6979
+  imageUrls (yalnızca Shopify):
+    • UB6979.jpg
+    • UB6979_904b25a7-7605-43cc-9609-45f8c06f7379.png
+
+── Kök neden (tekrar etme) ───────────────────────────────────────────────
+  build-urbanbar-besos-catalog.mjs web.images + row.images birleştiriyordu;
+  row.images gitignore'lu yerel kopyalar → Hetzner'da 404 → kırık thumbnail.
+
+YASAK (onay olmadan):
+  • web.images varken row.images (images/catalog/urbanbar/*) imageUrls'e eklemek
+  • resolveUrbanBarGalleryImages / isUrbanBarLocalCatalogPath kaldırmak
+  • PLP normalizeUrl'de yerel urbanbar yollarını tekrar kullanmak
+  • urbanbar-besos-catalog.json deploy etmeden kilit doğrulamasını devre dışı bırakmak
+
+── Kilitli dosyalar ───────────────────────────────────────────────────────
+  lib/besos/urbanbar/gallery-images.ts
+  lib/besos/urbanbar/plp-images.ts
+  components/besos/urbanbar/BesosUrbanBarPdp.tsx
+  components/besos/urbanbar/BesosUrbanBarPdpGallery.tsx
+  scripts/build-urbanbar-besos-catalog.mjs
+  public/data/urbanbar-besos-catalog.json
+
+── Doğrulama ──────────────────────────────────────────────────────────────
+  npm run verify:besos-urbanbar-images-kilit
+  Canlı: /besos/bardaklar/alto-cocktail-17cl-copy → 2 çalışan görsel, kırık kare yok
+
+═══════════════════════════════════════════════════════════════════════════

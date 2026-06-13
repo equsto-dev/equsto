@@ -99,6 +99,7 @@
     "verify:buzdolap-nav-kilit": "node scripts/verify-buzdolap-nav-kilit.mjs",
     "verify:arama-kilit": "node scripts/verify-arama-kilit.mjs",
     "verify:besos-chrome-kilit": "node scripts/verify-besos-chrome-kilit.mjs",
+    "verify:besos-urbanbar-images-kilit": "node scripts/verify-besos-urbanbar-images-kilit.mjs",
     "verify:home-hero-ads-kilit": "node scripts/verify-home-hero-ads-kilit.mjs",
     "verify:home-main-slider-kilit": "node scripts/verify-home-main-slider-kilit.mjs",
     "verify:home-cafemarkt-hero-kilit": "node scripts/verify-home-cafemarkt-hero-kilit.mjs",
