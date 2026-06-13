@@ -23,6 +23,25 @@ const BOLUM_BY_POZ: Record<string, string> = {
 
 function cellStr(v: unknown): string {
   if (v == null) return "";
+  if (typeof v === "object") {
+    if (v instanceof Date) {
+      return v.toISOString();
+    }
+    if ("result" in v) {
+      const res = (v as { result: unknown }).result;
+      return res == null ? "" : String(res).trim();
+    }
+    if ("richText" in v && Array.isArray((v as { richText: unknown }).richText)) {
+      return (v as { richText: any[] }).richText
+        .map((t) => (t && typeof t === "object" && "text" in t ? String(t.text) : String(t)))
+        .join("")
+        .trim();
+    }
+    if ("text" in v) {
+      const txt = (v as { text: unknown }).text;
+      return txt == null ? "" : String(txt).trim();
+    }
+  }
   return String(v).trim();
 }
 

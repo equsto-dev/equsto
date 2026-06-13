@@ -38,6 +38,8 @@
   ],
   "exclude": [
     "node_modules",
+    "scratch",
+    "scripts",
     "**/*_local_bak/**",
     "**/*_ref_bak/**"
   ]
