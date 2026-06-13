@@ -25,6 +25,7 @@
     depts: [],
     brands: [],
     kuvetGn: [],
+    buzdolapTip: [],
     sort: "",
     priceMin: "",
     priceMax: "",
@@ -206,6 +207,7 @@
     filterState.depts = [];
     filterState.brands = [];
     filterState.kuvetGn = [];
+    filterState.buzdolapTip = [];
     filterState.sort = "";
     filterState.priceMin = "";
     filterState.priceMax = "";
@@ -217,11 +219,16 @@
     return !!(window.EqKuvetGnFacets && sourceHits.some(window.EqKuvetGnFacets.isGnKuvetProduct));
   }
 
+  function hasBuzdolapFacets() {
+    return !!(window.EqBuzdolapFacets && sourceHits.some(window.EqBuzdolapFacets.isBuzdolapProduct));
+  }
+
   function hasActiveFilters() {
     return (
       filterState.depts.length > 0 ||
       filterState.brands.length > 0 ||
       filterState.kuvetGn.length > 0 ||
+      filterState.buzdolapTip.length > 0 ||
       filterState.priceMin !== "" ||
       filterState.priceMax !== "" ||
       !!filterState.sort
@@ -243,6 +250,11 @@
     if (filterState.kuvetGn.length && exclude !== "kuvetGn" && window.EqKuvetGnFacets) {
       list = list.filter(function (h) {
         return window.EqKuvetGnFacets.hitMatchesAnyFacet(h, filterState.kuvetGn);
+      });
+    }
+    if (filterState.buzdolapTip.length && exclude !== "buzdolapTip" && window.EqBuzdolapFacets) {
+      list = list.filter(function (h) {
+        return window.EqBuzdolapFacets.hitMatchesAnyFacet(h, filterState.buzdolapTip);
       });
     }
     if (filterState.priceMin !== "" && exclude !== "price") {
@@ -582,6 +594,18 @@
         esc(lbl) +
         " ×</button>";
     });
+    filterState.buzdolapTip.forEach(function (k) {
+      var blbl =
+        window.EqBuzdolapFacets && window.EqBuzdolapFacets.labelFromKey
+          ? window.EqBuzdolapFacets.labelFromKey(k)
+          : k;
+      html +=
+        '<button type="button" class="eq-cm-chip" data-kind="buzdolapTip" data-value="' +
+        esc(k) +
+        '">' +
+        esc(blbl) +
+        " ×</button>";
+    });
     if (filterState.priceMin !== "") {
       html +=
         '<button type="button" class="eq-cm-chip" data-kind="priceMin">min ' +
@@ -612,6 +636,10 @@
           filterState.kuvetGn = filterState.kuvetGn.filter(function (k) {
             return k !== val;
           });
+        } else if (kind === "buzdolapTip") {
+          filterState.buzdolapTip = filterState.buzdolapTip.filter(function (k) {
+            return k !== val;
+          });
         } else if (kind === "priceMin") filterState.priceMin = "";
         else if (kind === "priceMax") filterState.priceMax = "";
         renderAll();
@@ -629,6 +657,7 @@
     var deptPool = poolForCounts("dept");
     var brandPool = poolForCounts("brand");
     var kuvetGnPool = poolForCounts("kuvetGn");
+    var buzdolapTipPool = poolForCounts("buzdolapTip");
     var pricePool = poolForCounts("price");
     var deptCounts = Object.create(null);
     var brandCounts = Object.create(null);
@@ -726,6 +755,16 @@
       });
     }
 
+    if (window.EqBuzdolapFacets && hasBuzdolapFacets()) {
+      var buzCounts = window.EqBuzdolapFacets.countFacets(buzdolapTipPool);
+      html += window.EqBuzdolapFacets.renderFacetListHtml({
+        counts: buzCounts,
+        selected: filterState.buzdolapTip,
+        inputName: "eq-arama-buzdolap-tip",
+        title: __searchT("search.filter_buzdolap_type", "Buzdolabı tipi"),
+      });
+    }
+
     html +=
       '<details class="eq-cm-facet" open><summary class="eq-cm-facet__hd">' +
       esc(__searchT("search.filter_price", "Fiyat")) +
@@ -795,6 +834,15 @@
           gnVals.push(el.value);
         });
         filterState.kuvetGn = gnVals;
+        renderAll();
+        return;
+      }
+      if (t.name === "eq-arama-buzdolap-tip") {
+        var buzVals = [];
+        host.querySelectorAll('input[name="eq-arama-buzdolap-tip"]:checked').forEach(function (el) {
+          buzVals.push(el.value);
+        });
+        filterState.buzdolapTip = buzVals;
         renderAll();
       }
     });
