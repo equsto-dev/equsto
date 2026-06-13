@@ -1730,11 +1730,11 @@ body.bd-page.besos.eq-shop .eq-mfoot-copy {
   }
 }
 
-/* Urban Bar — Besos katalog (urbanbar.com white shop) */
+/* Urban Bar — Besos katalog (siyah vitrin) */
 .ub-shop.ub-besos-page,
 body.bd-page.besos .ub-shop.ub-besos-page {
-  background: #fff;
-  color: #1a1a1a;
+  background: #000;
+  color: var(--bes-ink);
 }
 .ub-shop .ub-besos-catalog {
   max-width: 1320px;
@@ -2036,6 +2036,22 @@ body.bd-page.besos .ub-shop.ub-besos-page {
   opacity: 0.5;
 }
 
+
+.ub-shop .ub-besos-loadmore__btn {
+  border-color: #fff;
+  background: transparent;
+  color: #fff;
+}
+.ub-shop .ub-besos-loadmore__btn:hover {
+  background: #fff;
+  color: #000;
+}
+.ub-shop .ub-besos-loadmore__meta {
+  color: var(--bes-text-3);
+}
+.ub-shop .ub-besos-loadmore__btn:hover .ub-besos-loadmore__meta {
+  color: #444;
+}
 
 /* Urban Bar — Besos katalog (legacy dark) */
 .ub-besos-page {
