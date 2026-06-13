@@ -996,7 +996,7 @@
     );
   }
 
-  var EQ_CATALOG_IMG_V = "20260613-pimak-pdp-ozti-v2";
+  var EQ_CATALOG_IMG_V = "20260613-kuvet-gn-facet";
 
   function withCatalogImgV(url) {
     if (
