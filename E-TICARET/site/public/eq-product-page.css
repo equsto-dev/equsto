@@ -710,6 +710,30 @@ body.eq-shop .eq-product-specs .eq-specs-cols pre {
 
 .eq-epdp-hero__media {
   min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.eq-inoksan-hero-specs {
+  margin-top: 2px;
+}
+
+.eq-inoksan-hero-specs .eq-epdp-panel > h2,
+.eq-inoksan-hero-specs .eq-caglayan-panel > h2 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a365d;
+}
+
+.eq-inoksan-hero-specs .eq-caglayan-acc {
+  border-top: 1px solid var(--eq-border, #e5e7eb);
+}
+
+.eq-epdp--inoksan .eq-epdp-panels--docs-only {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: none;
 }
 
 .eq-epdp-hero__copy {
