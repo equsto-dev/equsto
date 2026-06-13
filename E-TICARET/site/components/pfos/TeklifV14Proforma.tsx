@@ -10,6 +10,7 @@ import { downloadTeklifV14Excel } from "@/lib/pfos/teklif/export-teklif-v14.clie
 import { printTeklifV14 } from "@/lib/pfos/teklif/print-teklif-v14.client";
 import { sanitizeTeklifV14SatirTanim } from "@/lib/pfos/teklif/sanitize-teklif-v14-export";
 import { TEKLIF_V14_FORM_NO, TEKLIF_BOLUM_ROW_FILL } from "@/lib/pfos/teklif/constants";
+import { normalizeTeklifAciklamaText } from "@/lib/pfos/teklif/catalog-teklif-aciklama";
 import { memberLoggedInNow } from "@/lib/pfos/member-session.client";
 
 type Props = {
@@ -31,16 +32,15 @@ type DeliveryResult = {
 const COLS = [
   "Böl.",
   "Poz",
-  "EK",
   "Stok no",
   "Tanımı",
-  "Marka",
-  "Ölçü",
   "Elk. kW",
   "Gaz kW",
   "Adet",
   "Satış",
   "Toplam",
+  "Marka",
+  "Ölçü",
 ] as const;
 
 /** Üye oturumu / sepet checkout — Mr. Equsto modal ile paylaşılan telefon */
@@ -381,10 +381,28 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
 
       <div style={{ overflowX: "auto" }}>
         <table style={table}>
+          <colgroup>
+            <col style={{ width: "3%" }} />
+            <col style={{ width: "4%" }} />
+            <col style={{ width: "9%" }} />
+            <col style={{ width: "34%" }} />
+            <col style={{ width: "5%" }} />
+            <col style={{ width: "5%" }} />
+            <col style={{ width: "4%" }} />
+            <col style={{ width: "7%" }} />
+            <col style={{ width: "8%" }} />
+            <col style={{ width: "9%" }} />
+            <col style={{ width: "10%" }} />
+          </colgroup>
           <thead>
             <tr>
               {COLS.map((h) => (
-                <th key={h} style={thStyle}>
+                <th
+                  key={h}
+                  style={
+                    h === "Marka" || h === "Ölçü" ? thMarkaOlcu : thStyle
+                  }
+                >
                   {h}
                 </th>
               ))}
@@ -401,8 +419,9 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
                 {block.satirlar.map((row, i) => {
                   const hasKnownProduct =
                     Boolean(row.stokNo?.trim()) && row.birimSatis != null;
+                  const aciklamaMetni = normalizeTeklifAciklamaText(row.aciklama);
                   const showSpecRow =
-                    Boolean(row.aciklama) ||
+                    Boolean(aciklamaMetni) ||
                     Boolean(row.fotoUrl) ||
                     hasKnownProduct;
                   return (
@@ -410,11 +429,10 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
                     <tr>
                       <td style={td}>{row.bolumNo}</td>
                       <td style={td}>{row.poz}</td>
-                      <td style={td}>{row.ek || ""}</td>
-                      <td style={td}>{row.stokNo}</td>
-                      <td style={td}>{sanitizeTeklifV14SatirTanim(row.tanim)}</td>
-                      <td style={td}>{row.marka}</td>
-                      <td style={td}>{row.olcu || "—"}</td>
+                      <td style={tdStok}>{row.stokNo}</td>
+                      <td style={tdTanim}>
+                        {sanitizeTeklifV14SatirTanim(row.tanim)}
+                      </td>
                       <td style={tdR}>{formatKwHucre(row.elkKw)}</td>
                       <td style={tdR}>{formatKwHucre(row.gazKw)}</td>
                       <td style={tdR}>{row.adet}</td>
@@ -432,10 +450,12 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
                             })
                           : "—"}
                       </td>
+                      <td style={tdMarka}>{row.marka}</td>
+                      <td style={tdOlcu}>{row.olcu || "—"}</td>
                     </tr>
                     {showSpecRow && (
                       <tr>
-                        <td colSpan={3} style={specTd} />
+                        <td colSpan={2} style={specTd} />
                         <td style={specTdFoto}>
                           {row.fotoUrl ? (
                             // eslint-disable-next-line @next/next/no-img-element
@@ -455,7 +475,7 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
                         </td>
                         <td colSpan={8} style={specTd}>
                           <pre style={{ margin: 0, whiteSpace: "pre-wrap" }}>
-                            {row.aciklama}
+                            {aciklamaMetni}
                           </pre>
                         </td>
                       </tr>
@@ -466,19 +486,15 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
               </Fragment>
             ))}
             <tr>
-              <td colSpan={4} style={td} />
-              <td
-                colSpan={2}
-                style={{ ...td, textAlign: "right", fontWeight: 600 }}
-              >
+              <td colSpan={2} style={td} />
+              <td style={td} />
+              <td style={{ ...td, textAlign: "right", fontWeight: 600 }}>
                 Sütun toplamları →
               </td>
               <td style={tdR}>{formatKwHucre(ozet.toplamElektrikKw)}</td>
               <td style={tdR}>{formatKwHucre(ozet.toplamGazKw)}</td>
               <td style={tdR} />
-              <td colSpan={2} style={{ ...td, fontWeight: 700 }}>
-                GENEL TOPLAM
-              </td>
+              <td style={{ ...td, fontWeight: 700 }}>GENEL TOPLAM</td>
               <td style={{ ...tdR, fontWeight: 700 }}>
                 {ozet.genelToplam != null
                   ? `${ozet.genelToplam.toLocaleString("tr-TR", {
@@ -486,6 +502,8 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
                     })} ${ozet.doviz}`
                   : "—"}
               </td>
+              <td style={td} />
+              <td style={td} />
             </tr>
           </tbody>
         </table>
@@ -644,6 +662,7 @@ const table: CSSProperties = {
   width: "100%",
   borderCollapse: "collapse",
   fontSize: 11,
+  tableLayout: "fixed",
 };
 
 const thStyle: CSSProperties = {
@@ -655,10 +674,43 @@ const thStyle: CSSProperties = {
   whiteSpace: "nowrap",
 };
 
+const thMarkaOlcu: CSSProperties = {
+  ...thStyle,
+  width: 72,
+  padding: "6px 2px",
+};
+
 const td: CSSProperties = {
   padding: "5px 4px",
   borderBottom: "1px solid #eee",
   verticalAlign: "top",
+};
+
+const tdStok: CSSProperties = {
+  ...td,
+  textAlign: "left",
+  whiteSpace: "nowrap",
+  paddingLeft: 2,
+};
+
+const tdTanim: CSSProperties = {
+  ...td,
+  wordBreak: "break-word",
+};
+
+const tdMarka: CSSProperties = {
+  ...td,
+  textAlign: "center",
+  fontSize: 10,
+  padding: "5px 2px",
+};
+
+const tdOlcu: CSSProperties = {
+  ...td,
+  textAlign: "center",
+  fontSize: 10,
+  whiteSpace: "nowrap",
+  padding: "5px 2px",
 };
 
 const tdR: CSSProperties = { ...td, textAlign: "right" };

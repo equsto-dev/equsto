@@ -64,6 +64,8 @@ function fillHeader(ws: ExcelJS.Worksheet, model: TeklifModelV14) {
   kurCell.numFmt = '"₺"#,##0.00';
 }
 
+const TEKLIF_V14_COL_COUNT = 12;
+
 function writeDataRow(
   ws: ExcelJS.Worksheet,
   rowNum: number,
@@ -71,23 +73,25 @@ function writeDataRow(
 ) {
   ws.getCell(rowNum, 1).value = satir.bolumNo;
   ws.getCell(rowNum, 2).value = satir.poz;
-  ws.getCell(rowNum, 3).value = satir.ek ?? "";
-  ws.getCell(rowNum, 4).value = satir.stokNo;
-  ws.getCell(rowNum, 5).value = satir.tanim;
-  ws.getCell(rowNum, 6).value = satir.marka;
-  ws.getCell(rowNum, 7).value = satir.olcu || "—";
-  ws.getCell(rowNum, 8).value = kwHucreExcelValue(satir.elkKw);
-  ws.getCell(rowNum, 8).numFmt = "0.0";
-  ws.getCell(rowNum, 9).value = kwHucreExcelValue(satir.gazKw);
-  ws.getCell(rowNum, 9).numFmt = "0.0";
-  ws.getCell(rowNum, 10).value = satir.adet;
-  ws.getCell(rowNum, 11).value = satir.birimSatis ?? 0;
-  ws.getCell(rowNum, 11).numFmt = "#,##0.00";
-  ws.getCell(rowNum, 12).value = {
-    formula: `J${rowNum}*K${rowNum}`,
+  ws.getCell(rowNum, 3).value = satir.stokNo;
+  ws.getCell(rowNum, 3).alignment = { horizontal: "left", vertical: "top" };
+  ws.getCell(rowNum, 4).value = satir.tanim;
+  ws.getCell(rowNum, 5).value = kwHucreExcelValue(satir.elkKw);
+  ws.getCell(rowNum, 5).numFmt = "0.0";
+  ws.getCell(rowNum, 6).value = kwHucreExcelValue(satir.gazKw);
+  ws.getCell(rowNum, 6).numFmt = "0.0";
+  ws.getCell(rowNum, 7).value = satir.adet;
+  ws.getCell(rowNum, 8).value = satir.birimSatis ?? 0;
+  ws.getCell(rowNum, 8).numFmt = "#,##0.00";
+  ws.getCell(rowNum, 9).value = {
+    formula: `G${rowNum}*H${rowNum}`,
   };
-  ws.getCell(rowNum, 12).numFmt = "#,##0.00";
-  ws.getCell(rowNum, 13).value = satir.doviz;
+  ws.getCell(rowNum, 9).numFmt = "#,##0.00";
+  ws.getCell(rowNum, 10).value = satir.marka;
+  ws.getCell(rowNum, 10).alignment = { horizontal: "center", vertical: "top" };
+  ws.getCell(rowNum, 11).value = satir.olcu || "—";
+  ws.getCell(rowNum, 11).alignment = { horizontal: "center", vertical: "top" };
+  ws.getCell(rowNum, 12).value = satir.doviz;
 }
 
 function absFetchUrl(url: string): string {
@@ -127,8 +131,8 @@ async function writeSpecRow(
 ) {
   applyRowStyle(ws, rowNum, specTpl);
   try {
-    ws.mergeCells(`A${rowNum}:C${rowNum}`);
-    ws.mergeCells(`E${rowNum}:M${rowNum}`);
+    ws.mergeCells(`A${rowNum}:B${rowNum}`);
+    ws.mergeCells(`D${rowNum}:L${rowNum}`);
   } catch {
     /* merged */
   }
@@ -140,21 +144,21 @@ async function writeSpecRow(
       extension: img.extension,
     });
     ws.addImage(imageId, {
-      tl: { col: 3.08, row: rowNum - 1 + 0.15 },
+      tl: { col: 2.08, row: rowNum - 1 + 0.15 },
       ext: { width: 110, height: 90 },
     });
-    ws.getCell(rowNum, 4).value = "";
+    ws.getCell(rowNum, 3).value = "";
   } else {
-    ws.getCell(rowNum, 4).value = satir.fotoNot ?? "📷\nFotoğraf";
-    ws.getCell(rowNum, 4).alignment = {
+    ws.getCell(rowNum, 3).value = satir.fotoNot ?? "📷\nFotoğraf";
+    ws.getCell(rowNum, 3).alignment = {
       horizontal: "left",
       vertical: "middle",
       wrapText: true,
     } as ExcelJS.Alignment;
   }
 
-  ws.getCell(rowNum, 5).value = satir.aciklama ?? "";
-  ws.getCell(rowNum, 5).alignment = {
+  ws.getCell(rowNum, 4).value = satir.aciklama ?? "";
+  ws.getCell(rowNum, 4).alignment = {
     horizontal: "left",
     vertical: "top",
     wrapText: true,
@@ -162,7 +166,7 @@ async function writeSpecRow(
   ws.getRow(rowNum).height = 120;
 }
 
-function applyBolumRowFill(ws: ExcelJS.Worksheet, rowNum: number, colCount = 13) {
+function applyBolumRowFill(ws: ExcelJS.Worksheet, rowNum: number, colCount = TEKLIF_V14_COL_COUNT) {
   for (let col = 1; col <= colCount; col++) {
     const cell = ws.getCell(rowNum, col);
     cell.fill = {
@@ -198,7 +202,7 @@ async function buildProductBlock(
     applyRowStyle(ws, rowNum, sectionTpl);
     applyBolumRowFill(ws, rowNum);
     try {
-      ws.mergeCells(`A${rowNum}:M${rowNum}`);
+      ws.mergeCells(`A${rowNum}:L${rowNum}`);
     } catch {
       /* merged */
     }
@@ -210,10 +214,10 @@ async function buildProductBlock(
       applyRowStyle(ws, rowNum, dataTpl);
       writeDataRow(ws, rowNum, satir);
       const dr = rowNum;
-      sumRefs.push(`L${dr}`);
-      elkParts.push(`H${dr}*J${dr}`);
-      gazParts.push(`I${dr}*J${dr}`);
-      adetRefs.push(`J${dr}`);
+      sumRefs.push(`I${dr}`);
+      elkParts.push(`E${dr}*G${dr}`);
+      gazParts.push(`F${dr}*G${dr}`);
+      adetRefs.push(`G${dr}`);
       rowNum++;
 
       ws.insertRow(rowNum, []);
@@ -229,36 +233,36 @@ async function buildProductBlock(
 
   ws.insertRow(rowNum, []);
   applyRowStyle(ws, rowNum, kwTpl);
-  ws.getCell(rowNum, 5).value = "Gazlı cihaz toplam bağlantısı (kW)";
+  ws.getCell(rowNum, 4).value = "Gazlı cihaz toplam bağlantısı (kW)";
   if (gazParts.length) {
-    ws.getCell(rowNum, 9).value = { formula: gazSum };
-    ws.getCell(rowNum, 9).numFmt = "0.0";
+    ws.getCell(rowNum, 6).value = { formula: gazSum };
+    ws.getCell(rowNum, 6).numFmt = "0.0";
   }
   rowNum++;
 
   ws.insertRow(rowNum, []);
   applyRowStyle(ws, rowNum, subTpl);
-  ws.getCell(rowNum, 7).value = "Sütun toplamları →";
+  ws.getCell(rowNum, 4).value = "Sütun toplamları →";
   if (elkParts.length) {
-    ws.getCell(rowNum, 8).value = { formula: elkSum };
-    ws.getCell(rowNum, 8).numFmt = "0.0";
+    ws.getCell(rowNum, 5).value = { formula: elkSum };
+    ws.getCell(rowNum, 5).numFmt = "0.0";
   }
   if (gazParts.length) {
-    ws.getCell(rowNum, 9).value = { formula: gazSum };
-    ws.getCell(rowNum, 9).numFmt = "0.0";
+    ws.getCell(rowNum, 6).value = { formula: gazSum };
+    ws.getCell(rowNum, 6).numFmt = "0.0";
   }
   if (adetRefs.length) {
-    ws.getCell(rowNum, 10).value = { formula: adetSum };
+    ws.getCell(rowNum, 7).value = { formula: adetSum };
   }
   rowNum++;
 
   ws.insertRow(rowNum, []);
   applyRowStyle(ws, rowNum, grandTpl);
-  ws.getCell(rowNum, 10).value = "GENEL TOPLAM";
-  ws.getCell(rowNum, 10).font = { bold: true };
-  ws.getCell(rowNum, 12).value = { formula: sumFormula };
-  ws.getCell(rowNum, 12).numFmt = "#,##0.00";
-  ws.getCell(rowNum, 13).value = model.ozet.doviz;
+  ws.getCell(rowNum, 8).value = "GENEL TOPLAM";
+  ws.getCell(rowNum, 8).font = { bold: true };
+  ws.getCell(rowNum, 9).value = { formula: sumFormula };
+  ws.getCell(rowNum, 9).numFmt = "#,##0.00";
+  ws.getCell(rowNum, 12).value = model.ozet.doviz;
 }
 
 async function fetchEurTry(): Promise<number | null> {

@@ -71,11 +71,14 @@ const kalemColumns: ProColumns<KalemRow>[] = [
 const v14Columns: ProColumns<TeklifModelV14["satirlar"][number]>[] = [
   { title: "Böl.", dataIndex: "bolumNo", width: 44 },
   { title: "Poz", dataIndex: "poz", width: 52 },
-  { title: "EK", dataIndex: "ek", width: 36 },
-  { title: "Stok no", dataIndex: "stokNo", width: 88, ellipsis: true },
+  {
+    title: "Stok no",
+    dataIndex: "stokNo",
+    width: 96,
+    ellipsis: true,
+    align: "left",
+  },
   { title: "Tanımı", dataIndex: "tanim", ellipsis: true },
-  { title: "Marka", dataIndex: "marka", width: 88, ellipsis: true },
-  { title: "Ölçü", dataIndex: "olcu", width: 100, ellipsis: true },
   {
     title: "Elk",
     width: 52,
@@ -106,6 +109,20 @@ const v14Columns: ProColumns<TeklifModelV14["satirlar"][number]>[] = [
       r.toplamSatis != null
         ? `${r.toplamSatis.toLocaleString("tr-TR", { minimumFractionDigits: 2 })} ${r.doviz}`
         : "—",
+  },
+  {
+    title: "Marka",
+    dataIndex: "marka",
+    width: 80,
+    align: "center",
+    ellipsis: true,
+  },
+  {
+    title: "Ölçü",
+    dataIndex: "olcu",
+    width: 88,
+    align: "center",
+    ellipsis: true,
   },
 ];
 
