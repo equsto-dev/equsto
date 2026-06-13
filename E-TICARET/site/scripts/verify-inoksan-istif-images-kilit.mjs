@@ -8,8 +8,8 @@ import { fileURLToPath } from "node:url";
 import { mustExistOrCdn } from "./lib/must-exist-or-cdn.mjs";
 
 const siteDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const SHOP_ASSET_V = "20260613urbanbar-pdp-fix404";
-const EQ_CATALOG_IMG_V = "20260613urbanbar-pdp-fix404";
+const SHOP_ASSET_V = "20260613imt300-price";
+const EQ_CATALOG_IMG_V = "20260613imt300-price";
 const ISTIF_V2 = [
   "images/catalog/inoksan/web/istif-v2/ino-idd.jpg",
   "images/catalog/inoksan/web/istif-v2/ino-idk.jpg",
