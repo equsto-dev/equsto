@@ -4,6 +4,7 @@ import type { PfosKategoriKodu } from "@/lib/pfos/core/engine-types";
 import type { ReferansKalem, ReferansProfil } from "./referans-types";
 import { inferUrunTipiFromReferansSatir } from "./infer-urun-tipi";
 import { repairPfosDisplayText } from "@/lib/utf8/repair-turkish-fffd";
+import { formatPfosDisplayTanim } from "../parse-upload/sanitize-tanim";
 import { sanitizeDavlumbazOlcu } from "../teklif/davlumbaz-olcu";
 import {
   displayBolumBaslik,
@@ -181,7 +182,7 @@ export function ekipmanToReferansKalemler(
 
     return {
       referansPoz: s.poz,
-      isim: repairPfosDisplayText(s.ad),
+      isim: formatPfosDisplayTanim(s.ad) || repairPfosDisplayText(s.ad),
       urunTipi,
       kategoriKodu: kategoriFromReferansSatir(s),
       adet: adetSayi(s.adet),

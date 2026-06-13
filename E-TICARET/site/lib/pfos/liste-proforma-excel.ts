@@ -5,6 +5,7 @@
 
 import type { Worksheet } from "exceljs";
 import type { PfosEkipmanSatir } from "@/lib/pfos/kategoriler/types";
+import { formatPfosDisplayTanim } from "@/lib/pfos/parse-upload/sanitize-tanim";
 import { repairPfosDisplayText } from "@/lib/utf8/repair-turkish-fffd";
 
 const POZ_RE = /^[A-Z]\s*\d{1,3}A?$/i;
@@ -68,7 +69,13 @@ function rowCells(row: { values: unknown }): string[] {
 
 function parseAdet(raw: string): number {
   const n = parseInt(raw.replace(/[^\d]/g, ""), 10);
-  return Number.isFinite(n) && n > 0 ? n : 1;
+  if (!Number.isFinite(n) || n <= 0) return 1;
+  if (n > 99) return 1;
+  return n;
+}
+
+function cleanProformaAd(raw: string): string {
+  return formatPfosDisplayTanim(raw) || repairPfosDisplayText(raw);
 }
 
 function findPozIndex(cells: string[]): number {
@@ -116,15 +123,12 @@ function parseRowFromPoz(
     olcu = split.olcu;
   }
 
-  const last = rest[rest.length - 1];
-  if (/^\d+$/.test(last) && last !== olcu.replace(/\D/g, "")) {
-    adet = parseAdet(last);
-    if (tanim.endsWith(last)) {
-      tanim = tanim.slice(0, -last.length).trim();
-    }
-  }
+  tanim = cleanProformaAd(tanim);
 
-  tanim = repairPfosDisplayText(tanim);
+  const last = rest[rest.length - 1];
+  if (/^\d{1,2}$/.test(last) && last !== olcu.replace(/\D/g, "")) {
+    adet = parseAdet(last);
+  }
   if (!tanim) return null;
 
   return {
@@ -203,7 +207,7 @@ export function parseColumnarProformaWorksheet(ws: Worksheet): PfosEkipmanSatir[
     if (/^poz$/i.test(pozRaw)) return;
 
     const poz = normalizePoz(pozRaw);
-    const ad = repairPfosDisplayText(cells[header.tanim] || "");
+    const ad = cleanProformaAd(cells[header.tanim] || "");
     if (!ad) return;
 
     let adet = 1;
@@ -339,10 +343,10 @@ export function parseTabularProformaWorksheet(ws: Worksheet): PfosEkipmanSatir[]
       return;
     }
 
-    const malzeme = repairPfosDisplayText(cells[header.malzeme] || "");
+    const malzeme = cleanProformaAd(cells[header.malzeme] || "");
     const aciklama =
       header.aciklama >= 0
-        ? repairPfosDisplayText(cells[header.aciklama] || "")
+        ? cleanProformaAd(cells[header.aciklama] || "")
         : "";
     const pozRaw = header.poz >= 0 ? cells[header.poz]?.trim() ?? "" : "";
     const noRaw = header.no >= 0 ? cells[header.no]?.trim() ?? "" : "";
@@ -381,7 +385,7 @@ export function parseTabularProformaWorksheet(ws: Worksheet): PfosEkipmanSatir[]
     if (aciklama && aciklama !== malzeme) {
       ad = malzeme ? `${malzeme} — ${aciklama}` : aciklama;
     }
-    ad = repairPfosDisplayText(ad);
+    ad = cleanProformaAd(ad);
     if (!ad) return;
 
     let olcu = "—";

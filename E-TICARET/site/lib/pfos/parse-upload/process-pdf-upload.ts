@@ -1,4 +1,5 @@
 import { parseWithClaude } from "./claude-proforma";
+import { clearMatchProductCache } from "../core/match-product";
 import { eslestirProformaKalemler } from "./meili-kalem-eslestir";
 import { buildQuoteFromMeiliEslestirme } from "./build-quote";
 import type { PFOSResponse } from "../schemas/pfos.schema";
@@ -23,6 +24,7 @@ export type ProcessPdfUploadResult = PFOSResponse & {
 export async function processPdfUpload(
   input: ProcessPdfUploadInput,
 ): Promise<ProcessPdfUploadResult> {
+  clearMatchProductCache();
   const sehir = input.sehir?.trim() || "İstanbul";
   const baseName = input.kaynakDosya.replace(/\.pdf$/i, "");
   const projeAdi = input.projeAdi?.trim() || baseName;

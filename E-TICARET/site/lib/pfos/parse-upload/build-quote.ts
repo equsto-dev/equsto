@@ -14,7 +14,7 @@ import {
 } from "../referans/kategori-from-bolum";
 import type { PfosKategoriKodu } from "../core/engine-types";
 import type { MeiliKalemEslestirme } from "./types";
-import { cleanProformaTanim } from "./sanitize-tanim";
+import { formatPfosDisplayTanim } from "./sanitize-tanim";
 
 const POZ_BOLUM: Record<string, string> = {
   A: "sıcak mutfak",
@@ -86,7 +86,7 @@ export async function buildQuoteFromMeiliEslestirme(
       kategoriKodu: kategoriForKalem(e),
       altKategori: displayBolumBaslik(bolum, e.kalem.poz.charAt(0)),
       urunTipi: "upload-meili",
-      isim: cleanProformaTanim(e.kalem.tanim) || e.kalem.tanim,
+      isim: formatPfosDisplayTanim(e.kalem.tanim) || e.kalem.tanim,
       tip: e.kalem.mevcut ? ("opsiyonel" as const) : ("zorunlu" as const),
       opsiyonelSebep: e.kalem.mevcut ? "Müşteride mevcut" : undefined,
       adet: e.kalem.adet,

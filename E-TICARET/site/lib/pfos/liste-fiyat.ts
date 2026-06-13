@@ -11,6 +11,8 @@ import type { ListePdfKalem } from "@/lib/pfos/liste-pdf-analiz";
 import type { PfosKategoriKodu } from "@/lib/pfos/core/engine-types";
 import { repairPfosDisplayText } from "@/lib/utf8/repair-turkish-fffd";
 import { matchProductForReferansKalem } from "@/lib/pfos/referans/match-referans-kalem";
+import { clearMatchProductCache } from "@/lib/pfos/core/match-product";
+import { formatPfosDisplayTanim } from "@/lib/pfos/parse-upload/sanitize-tanim";
 import { finalizeKalemlerForTeklif } from "@/lib/pfos/teklif/assign-poz";
 import { applyNakliyeMontajToKalemler } from "@/lib/pfos/teklif/nakliye-montaj";
 import { enrichPfosKalemlerGorsel } from "@/lib/pfos/core/katalog-gorsel";
@@ -69,6 +71,7 @@ export function importKalemlerToReferansKalemler(
 export async function calculateListeQuote(
   input: ListeFiyatInput,
 ): Promise<PFOSResponse> {
+  clearMatchProductCache();
   const fiyatStratejisi =
     input.fiyatStratejisi ?? TEKLIF_DEFAULT_FIYAT_STRATEJISI;
   const sehir = input.sehir?.trim() || "İstanbul";
@@ -109,7 +112,7 @@ export async function calculateListeQuote(
       referansBolumSira: item.referansBolumSira,
       referansBolumKey: item.referansBolumKey,
       urunTipi: item.urunTipi,
-      isim: item.isim,
+      isim: formatPfosDisplayTanim(item.isim) || item.isim,
       tip: item.tip,
       adet: item.scale.type === "fixed" ? item.scale.adet : 1,
       elektrikGucuKwHint: item.elektrikGucuKwHint,
