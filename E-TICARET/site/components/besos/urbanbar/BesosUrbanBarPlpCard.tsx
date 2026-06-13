@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { useState, type MouseEvent } from "react";
+import { useMemo, useState, type MouseEvent, type SyntheticEvent } from "react";
 import type { BesosLocale } from "@/lib/besos/locale";
-import { resolveUrbanBarPlpImages } from "@/lib/besos/urbanbar/plp-images";
+import { isShopifyCdn, resolveUrbanBarPlpImages } from "@/lib/besos/urbanbar/plp-images";
 import { splitUrbanBarPrice } from "@/lib/besos/urbanbar/price";
 import type { BesosUrbanBarProduct } from "@/lib/besos/urbanbar/types";
 
@@ -21,9 +21,24 @@ type Props = {
   cartReady?: boolean;
 };
 
+function imgProps(url: string) {
+  return {
+    referrerPolicy: isShopifyCdn(url) ? ("no-referrer" as const) : undefined,
+    decoding: "async" as const,
+  };
+}
+
 export default function BesosUrbanBarPlpCard({ product, locale = "tr", cartReady = false }: Props) {
   const [qty, setQty] = useState(1);
-  const { defaultUrl: imgDefault, hoverUrl: imgHover } = resolveUrbanBarPlpImages(product);
+  const resolved = useMemo(() => resolveUrbanBarPlpImages(product), [product]);
+  const [defaultOverride, setDefaultOverride] = useState<string | null>(null);
+  const [hoverOverride, setHoverOverride] = useState<string | null>(null);
+  const [hoverIdx, setHoverIdx] = useState(0);
+
+  const defaultUrl = defaultOverride || resolved.defaultUrl;
+  const hoverUrl = hoverOverride || resolved.hoverUrl;
+  const { hoverCandidates } = resolved;
+
   const pdpHref = product.besosHref || product.shopHref || "#";
   const { amount, vat } = splitUrbanBarPrice(product.price || "", locale);
   const inStock = product.inStock !== false;
@@ -40,7 +55,7 @@ export default function BesosUrbanBarPlpCard({ product, locale = "tr", cartReady
     b: product.vendor || "Urban Bar",
     c: product.groupLabelTr || product.sectionLabelTr || "",
     p: product.price || "",
-    img: imgDefault.startsWith("http") ? imgDefault : imgDefault || undefined,
+    img: defaultUrl.startsWith("http") ? defaultUrl : defaultUrl || undefined,
   };
 
   function addToCart(e: MouseEvent<HTMLButtonElement>) {
@@ -56,31 +71,52 @@ export default function BesosUrbanBarPlpCard({ product, locale = "tr", cartReady
     cart.syncBadge?.();
   }
 
+  function onHoverError(e: SyntheticEvent<HTMLImageElement>) {
+    const next = hoverCandidates[hoverIdx + 1];
+    if (!next) {
+      setHoverOverride("");
+      return;
+    }
+    setHoverIdx((i) => i + 1);
+    setHoverOverride(next);
+    e.currentTarget.src = next;
+  }
+
+  function onDefaultError(e: SyntheticEvent<HTMLImageElement>) {
+    const fallbacks = (product.imageUrls || []).filter((u) => u && u !== defaultUrl);
+    const next = fallbacks[0] || product.imageUrl;
+    if (!next || next === defaultUrl) return;
+    setDefaultOverride(next);
+    e.currentTarget.src = next;
+  }
+
   return (
     <article className="ub-plp-card">
       <Link
-        className={`ub-plp-card__media${imgHover ? " ub-plp-card__media--has-hover" : ""}`}
+        className={`ub-plp-card__media${hoverUrl ? " ub-plp-card__media--has-hover" : ""}`}
         href={pdpHref}
       >
-        {imgDefault ? (
+        {defaultUrl ? (
           <>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={imgDefault}
+              src={defaultUrl}
               alt={product.name}
               className="ub-plp-card__image ub-plp-card__image--default"
               loading="lazy"
-              decoding="async"
+              onError={onDefaultError}
+              {...imgProps(defaultUrl)}
             />
-            {imgHover ? (
+            {hoverUrl ? (
               // eslint-disable-next-line @next/next/no-img-element
               <img
-                src={imgHover}
+                src={hoverUrl}
                 alt=""
                 aria-hidden="true"
                 className="ub-plp-card__image ub-plp-card__image--hover"
                 loading="eager"
-                decoding="async"
+                onError={onHoverError}
+                {...imgProps(hoverUrl)}
               />
             ) : null}
           </>
