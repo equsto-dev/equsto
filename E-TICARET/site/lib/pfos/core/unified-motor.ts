@@ -34,6 +34,8 @@ const YIKAMA_TIP_KODU = new Set([
   "bulasik_cikis_tezgahi",
   "yag_tutucu",
   "on_yikama_dusu",
+  "dus_sprey",
+  "yer_yikama_hortumu",
 ]);
 
 function normalizeKategoriKodu(k: PFOSKalemi): PFOSKalemi {

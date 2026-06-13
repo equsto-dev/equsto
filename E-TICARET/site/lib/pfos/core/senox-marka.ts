@@ -52,24 +52,50 @@ export function isSenoxSinekReferansIsim(isim: string | null | undefined): boole
   );
 }
 
-/** Geri toplamalı ön yıkama duşu — Şenox HT serisi (8760.0CCGT yerine) */
+/** Geri toplamalı yer yıkama hortumu — Şenox 118.HT (HT-10/12/15); ön yıkama duşu değil */
+export function isSenoxYerYikamaHortumuReferansIsim(
+  isim: string | null | undefined,
+  notlar?: string | null,
+): boolean {
+  const n = norm(`${isim ?? ""} ${notlar ?? ""}`);
+  if (!n) return false;
+  if (/118\.ht|ht-\d{2}\b|ht\d{2}\b/.test(n)) return true;
+  if (/yer yikama hortum|yer yıkama hortum|floor wash hose/.test(n)) return true;
+  if (/geri toplam|geri top/.test(n) && /on yik|ön yik|du[sş]|hortum|118\.ht|ht-\d|\d+\s*m\b|\d+\s*mt/.test(n)) {
+    return true;
+  }
+  if (/8760\.0ccgt|ccgt\.(06|10|15)/.test(n)) return true;
+  return false;
+}
+
+/** Ön yıkama duşu = sprey ünitesi (duş sprey / ara musluk); HT hortum hariç */
 export function isSenoxOnYikamaDusuReferansIsim(
   isim: string | null | undefined,
+  notlar?: string | null,
 ): boolean {
-  const n = norm(isim);
+  const n = norm(`${isim ?? ""} ${notlar ?? ""}`);
   if (!n) return false;
+  if (isSenoxYerYikamaHortumuReferansIsim(isim, notlar)) return false;
   if (/bulasik|bulaşık|tezgah.*on yik|on yikama tezgah|on-yikama-tezgah/.test(n)) {
     return false;
   }
-  if (/geri toplam|geri top/.test(n) && /on yik|ön yik|duş|dus/.test(n)) {
+  if (/sprey unitesi|sprey ünitesi|du[sş] sprey|dus sprey|pre.?rinse/.test(n)) {
     return true;
   }
   if (/on yikama dus|ön yikama duş|on yikama dusu|ön yikama duşu/.test(n)) {
     return true;
   }
   if (/on yik.*du[sş]|ön yik.*du[sş]/.test(n)) return true;
-  if (/pre.?rinse/.test(n)) return true;
+  if (/ara musluk/.test(n) && /sprey|on yik|ön yik|dus|duş/.test(n)) return true;
   return false;
+}
+
+/** Duş sprey ünitesi — on_yikama_dusu ile eşdeğer */
+export function isSenoxDusSpreyReferansIsim(
+  isim: string | null | undefined,
+  notlar?: string | null,
+): boolean {
+  return isSenoxOnYikamaDusuReferansIsim(isim, notlar);
 }
 
 export function isSenoxVakumTipKodu(tip: string | null | undefined): boolean {
@@ -95,11 +121,13 @@ export function isSenoxDilimlemeReferansIsim(
 export function isSenoxPfosKalem(opts: {
   isim?: string | null;
   urunTipi?: string | null;
+  notlar?: string | null;
 }): boolean {
   if (isSenoxVakumPfosKalem(opts)) return true;
   if (isSenoxElYikamaReferansIsim(opts.isim)) return true;
   if (isSenoxSinekReferansIsim(opts.isim)) return true;
-  if (isSenoxOnYikamaDusuReferansIsim(opts.isim)) return true;
+  if (isSenoxYerYikamaHortumuReferansIsim(opts.isim, opts.notlar)) return true;
+  if (isSenoxOnYikamaDusuReferansIsim(opts.isim, opts.notlar)) return true;
   if (isSenoxDilimlemeReferansIsim(opts.isim) || opts.urunTipi === "dilimleme_makinesi") return true;
   return false;
 }
