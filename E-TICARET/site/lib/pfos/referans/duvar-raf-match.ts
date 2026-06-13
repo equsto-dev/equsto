@@ -29,7 +29,7 @@ function scoreDuvarRafRow(row: AdminUrunRow, olcu: string, targetSku?: string | 
     const blob = `${ad} ${sku}`;
     if (blob.includes(String(nums[0])) && blob.includes(String(nums[1]))) score += 120;
   }
-  if (row.fiyat_tl > 0 || (row.satis_eur_indirimli ?? 0) > 0) score += 40;
+  if (row.fiyat_tl > 0 || (row.satis_fiyat_eur ?? 0) > 0) score += 40;
   return score;
 }
 
