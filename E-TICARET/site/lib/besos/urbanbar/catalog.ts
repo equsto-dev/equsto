@@ -306,3 +306,21 @@ export function besosUrbanBarProductHref(
   const sec = section === "bardaklar" ? "bardaklar" : "bar-ekipman";
   return `${base}/${sec}/${encodeURIComponent(slug)}`;
 }
+
+export function pickUrbanBarRelatedProducts(
+  catalog: BesosUrbanBarCatalog,
+  product: BesosUrbanBarProduct,
+  limit = 12,
+): BesosUrbanBarProduct[] {
+  const sameGroup = catalog.products.filter(
+    (p) => p.group === product.group && p.equstoId !== product.equstoId,
+  );
+  if (sameGroup.length >= limit) return sameGroup.slice(0, limit);
+  const sameSection = catalog.products.filter(
+    (p) =>
+      p.section === product.section &&
+      p.equstoId !== product.equstoId &&
+      !sameGroup.some((g) => g.equstoId === p.equstoId),
+  );
+  return [...sameGroup, ...sameSection].slice(0, limit);
+}

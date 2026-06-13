@@ -1,7 +1,7 @@
 {
   "brand": "Urban Bar",
   "brandSlug": "urban-bar",
-  "builtAt": "2026-06-13T00:33:31.918Z",
+  "builtAt": "2026-06-13T00:37:28.767Z",
   "productCount": 927,
   "sections": [
     {
@@ -267,7 +267,7 @@
               "specificationsHtml": "",
               "productCareHtml": "",
               "safetyLabelsHtml": "",
-              "inStock": false,
+              "inStock": true,
               "image": "images/catalog/urbanbar/1910-alto-cocktail-17cl-copy-1.jpg",
               "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB6980v2.jpg?v=1741890215",
               "imageUrls": [
@@ -341,7 +341,7 @@
               "specificationsHtml": "",
               "productCareHtml": "",
               "safetyLabelsHtml": "",
-              "inStock": false,
+              "inStock": true,
               "image": "images/catalog/urbanbar/1910-alto-cocktail-glass-17cl-1.jpg",
               "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB6980.jpg?v=1741890222",
               "imageUrls": [
@@ -503,7 +503,7 @@
               "specificationsHtml": "",
               "productCareHtml": "",
               "safetyLabelsHtml": "",
-              "inStock": false,
+              "inStock": true,
               "image": "images/catalog/urbanbar/crystal-retro-coupe-glass-1910-21cl-1.jpg",
               "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB2975.jpg?v=1741891030",
               "imageUrls": [
@@ -1220,7 +1220,7 @@
               "specificationsHtml": "",
               "productCareHtml": "",
               "safetyLabelsHtml": "",
-              "inStock": false,
+              "inStock": true,
               "image": "images/catalog/urbanbar/crystal-1910-martini-glass-21cl-1.jpg",
               "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB4507.jpg?v=1741890910",
               "imageUrls": [
@@ -1403,7 +1403,7 @@
               "specificationsHtml": "",
               "productCareHtml": "",
               "safetyLabelsHtml": "",
-              "inStock": false,
+              "inStock": true,
               "image": "images/catalog/urbanbar/crystal-nick-nora-1910-glass-17cl-1.jpg",
               "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB3570.jpg?v=1745397057",
               "imageUrls": [
@@ -1606,7 +1606,7 @@
               "specificationsHtml": "",
               "productCareHtml": "",
               "safetyLabelsHtml": "",
-              "inStock": false,
+              "inStock": true,
               "image": "images/catalog/urbanbar/1920-alto-cocktail-17cl-copy-1.jpg",
               "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB6981v2.jpg?v=1741890213",
               "imageUrls": [
@@ -1769,7 +1769,7 @@
               "specificationsHtml": "",
               "productCareHtml": "",
               "safetyLabelsHtml": "",
-              "inStock": false,
+              "inStock": true,
               "image": "images/catalog/urbanbar/1920-alto-cocktail-glass-17cl-1.jpg",
               "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB6981.jpg?v=1741890220",
               "imageUrls": [
@@ -1932,7 +1932,7 @@
               "specificationsHtml": "",
               "productCareHtml": "",
               "safetyLabelsHtml": "",
-              "inStock": false,
+              "inStock": true,
               "image": "images/catalog/urbanbar/crystal-retro-coupe-glass-1920-21cl-1.jpg",
               "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB2976.jpg?v=1741891028",
               "imageUrls": [
@@ -2438,7 +2438,7 @@
               "specificationsHtml": "",
               "productCareHtml": "",
               "safetyLabelsHtml": "",
-              "inStock": false,
+              "inStock": true,
               "image": "images/catalog/urbanbar/crystal-1920-martini-glass-21cl-1.jpg",
               "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB4508.jpg?v=1741890908",
               "imageUrls": [
@@ -2615,7 +2615,7 @@
               "specificationsHtml": "",
               "productCareHtml": "",
               "safetyLabelsHtml": "",
-              "inStock": false,
+              "inStock": true,
               "image": "images/catalog/urbanbar/crystal-nick-nora-1920-glass-17cl-1.jpg",
               "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB3572.jpg?v=1745400062",
               "imageUrls": [
@@ -2811,7 +2811,7 @@
               "specificationsHtml": "",
               "productCareHtml": "",
               "safetyLabelsHtml": "",
-              "inStock": false,
+              "inStock": true,
               "image": "images/catalog/urbanbar/alto-cocktail-17cl-copy-1.jpg",
               "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB6979.jpg?v=1741890217",
               "imageUrls": [
@@ -2970,7 +2970,7 @@
               "specificationsHtml": "",
               "productCareHtml": "",
               "safetyLabelsHtml": "",
-              "inStock": false,
+              "inStock": true,
               "image": "images/catalog/urbanbar/alto-cocktail-glass-17cl-1.jpg",
               "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/white-3421-061.jpg?v=1741890223",
               "imageUrls": [
@@ -3727,7 +3727,7 @@
               "specificationsHtml": "",
               "productCareHtml": "",
               "safetyLabelsHtml": "",
-              "inStock": false,
+              "inStock": true,
               "image": "images/catalog/urbanbar/calabrese-mini-martini-glass-1.jpg",
               "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB4131-2_8339f350-74b0-4d1a-8b95-082cc99efe77.jpg?v=1741891171",
               "imageUrls": [
@@ -3896,7 +3896,7 @@
               "specificationsHtml": "",
               "productCareHtml": "",
               "safetyLabelsHtml": "",
-              "inStock": false,
+              "inStock": true,
               "image": "images/catalog/urbanbar/calabrese-zigzag-coupe-23cl-1.jpg",
               "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/Calabrese-ZigZag-Coupe.jpg?v=1746195688",
               "imageUrls": [
@@ -4902,7 +4902,7 @@
               "specificationsHtml": "",
               "productCareHtml": "",
               "safetyLabelsHtml": "",
-              "inStock": false,
+              "inStock": true,
               "image": "images/catalog/urbanbar/freddo-nick-nora-1.jpg",
               "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/Ub5459-Freddo-Nick-and-Nora-empty.jpg?v=1741890508",
               "imageUrls": [
@@ -5529,7 +5529,7 @@
               "specificationsHtml": "",
               "productCareHtml": "",
               "safetyLabelsHtml": "",
-              "inStock": false,
+              "inStock": true,
               "image": "images/catalog/urbanbar/crystal-ginza-tall-cuts-martini-glass-21cl-1.jpg",
               "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB4833.jpg?v=1741890898",
               "imageUrls": [
@@ -5699,7 +5699,7 @@
               "specificationsHtml": "",
               "productCareHtml": "",
               "safetyLabelsHtml": "",
-              "inStock": false,
+              "inStock": true,
               "image": "images/catalog/urbanbar/gold-rim-alto-cocktail-17cl-1.jpg",
               "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB6982v2.jpg?v=1741890212",
               "imageUrls": [
@@ -5861,7 +5861,7 @@
               "specificationsHtml": "",
               "productCareHtml": "",
               "safetyLabelsHtml": "",
-              "inStock": false,
+              "inStock": true,
               "image": "images/catalog/urbanbar/gold-rim-alto-cocktail-glass-17cl-1.jpg",
               "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB6982.jpg?v=1741890218",
               "imageUrls": [
@@ -6023,7 +6023,7 @@
               "specificationsHtml": "",
               "productCareHtml": "",
               "safetyLabelsHtml": "",
-              "inStock": false,
+              "inStock": true,
               "image": "images/catalog/urbanbar/crystal-retro-gold-rim-coupe-glass-21cl-1.jpg",
               "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB2977.jpg?v=1741891027",
               "imageUrls": [
@@ -6621,7 +6621,7 @@
               "specificationsHtml": "",
               "productCareHtml": "",
               "safetyLabelsHtml": "",
-              "inStock": false,
+              "inStock": true,
               "image": "images/catalog/urbanbar/gold-rim-nick-nora-glass-1.jpg",
               "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB3577.jpg?v=1745407502",
               "imageUrls": [
@@ -7446,7 +7446,7 @@
               "specificationsHtml": "",
               "productCareHtml": "",
               "safetyLabelsHtml": "",
-              "inStock": false,
+              "inStock": true,
               "image": "images/catalog/urbanbar/retro-coupe-glass-21cl-1.jpg",
               "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB2974.jpg?v=1741890834",
               "imageUrls": [
@@ -7919,7 +7919,7 @@
               "specificationsHtml": "",
               "productCareHtml": "",
               "safetyLabelsHtml": "",
-              "inStock": false,
+              "inStock": true,
               "image": "images/catalog/urbanbar/crystal-nick-nora-glass-17cl-1.jpg",
               "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB3569.jpg?v=1745334169",
               "imageUrls": [
@@ -8103,7 +8103,7 @@
               "specificationsHtml": "",
               "productCareHtml": "",
               "safetyLabelsHtml": "",
-              "inStock": false,
+              "inStock": true,
               "image": "images/catalog/urbanbar/retro-optic-champagne-glass-coupe-21cl-1.jpg",
               "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/white-3372-033.jpg?v=1741890430",
               "imageUrls": [
@@ -9319,7 +9319,7 @@
               "specificationsHtml": "",
               "productCareHtml": "",
               "safetyLabelsHtml": "",
-              "inStock": false,
+              "inStock": true,
               "image": "images/catalog/urbanbar/verdot-crystal-martini-glass-21cl-1.jpg",
               "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB3244.jpg?v=1741890987",
               "imageUrls": [
@@ -9501,7 +9501,7 @@
               "specificationsHtml": "",
               "productCareHtml": "",
               "safetyLabelsHtml": "",
-              "inStock": false,
+              "inStock": true,
               "image": "images/catalog/urbanbar/crystal-verdot-gold-rim-martini-glass-21cl-1.jpg",
               "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB4900.jpg?v=1741890896",
               "imageUrls": [
@@ -11080,7 +11080,7 @@
               "specificationsHtml": "",
               "productCareHtml": "",
               "safetyLabelsHtml": "",
-              "inStock": false,
+              "inStock": true,
               "image": "images/catalog/urbanbar/classico-margot-old-fashioned-32cl-1.jpg",
               "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/Classico-Margot-Old-Fashioned-25cl.jpg?v=1741890514",
               "imageUrls": [
@@ -32599,7 +32599,7 @@
               "specificationsHtml": "",
               "productCareHtml": "",
               "safetyLabelsHtml": "",
-              "inStock": false,
+              "inStock": true,
               "image": "images/catalog/urbanbar/classico-margot-highball-35cl-box-2-1.jpg",
               "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/classico-margto-highball-empty.jpg?v=1744806763",
               "imageUrls": [
@@ -38063,7 +38063,7 @@
               "specificationsHtml": "",
               "productCareHtml": "",
               "safetyLabelsHtml": "",
-              "inStock": false,
+              "inStock": true,
               "image": "images/catalog/urbanbar/the-mini-4-5cl-1.jpg",
               "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/white-UB7235TheMini.jpg?v=1741890193",
               "imageUrls": [
@@ -42654,7 +42654,7 @@
               "specificationsHtml": "",
               "productCareHtml": "",
               "safetyLabelsHtml": "",
-              "inStock": false,
+              "inStock": true,
               "image": "images/catalog/urbanbar/1910-alto-cocktail-17cl-b4-1.jpg",
               "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB6980v2_9b1105b2-78b7-4c59-a975-6526dd54b32d.jpg?v=1773139931",
               "imageUrls": [
@@ -46916,7 +46916,7 @@
               "specificationsHtml": "",
               "productCareHtml": "",
               "safetyLabelsHtml": "",
-              "inStock": false,
+              "inStock": true,
               "image": "images/catalog/urbanbar/verdot-crystal-champagne-flute-20cl-1.jpg",
               "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB3246.jpg?v=1715970464",
               "imageUrls": [
@@ -46973,7 +46973,7 @@
               "specificationsHtml": "",
               "productCareHtml": "",
               "safetyLabelsHtml": "",
-              "inStock": false,
+              "inStock": true,
               "image": "images/catalog/urbanbar/vintage-irish-coffee-glass-17cl-1.jpg",
               "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/CoffeeGlassgeorgian.jpg?v=1758635445",
               "imageUrls": [
@@ -71938,7 +71938,7 @@
               "specificationsHtml": "",
               "productCareHtml": "",
               "safetyLabelsHtml": "",
-              "inStock": false,
+              "inStock": true,
               "image": "images/catalog/urbanbar/biloxi-gold-strainer-bar-spoon-34-5cm-1.jpg",
               "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB4366G.jpg?v=1741890915",
               "imageUrls": [
@@ -73227,7 +73227,7 @@
               "specificationsHtml": "",
               "productCareHtml": "",
               "safetyLabelsHtml": "",
-              "inStock": false,
+              "inStock": true,
               "image": "images/catalog/urbanbar/octagonal-boston-shaker-tin-1.jpg",
               "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB3285.jpg?v=1715970108",
               "imageUrls": [
@@ -73627,7 +73627,7 @@
       "specificationsHtml": "",
       "productCareHtml": "",
       "safetyLabelsHtml": "",
-      "inStock": false,
+      "inStock": true,
       "image": "images/catalog/urbanbar/1910-alto-cocktail-17cl-b4-1.jpg",
       "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB6980v2_9b1105b2-78b7-4c59-a975-6526dd54b32d.jpg?v=1773139931",
       "imageUrls": [
@@ -76624,7 +76624,7 @@
       "specificationsHtml": "",
       "productCareHtml": "",
       "safetyLabelsHtml": "",
-      "inStock": false,
+      "inStock": true,
       "image": "images/catalog/urbanbar/biloxi-gold-strainer-bar-spoon-34-5cm-1.jpg",
       "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB4366G.jpg?v=1741890915",
       "imageUrls": [
@@ -76691,7 +76691,7 @@
       "specificationsHtml": "",
       "productCareHtml": "",
       "safetyLabelsHtml": "",
-      "inStock": false,
+      "inStock": true,
       "image": "images/catalog/urbanbar/verdot-crystal-champagne-flute-20cl-1.jpg",
       "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB3246.jpg?v=1715970464",
       "imageUrls": [
@@ -76755,7 +76755,7 @@
       "specificationsHtml": "",
       "productCareHtml": "",
       "safetyLabelsHtml": "",
-      "inStock": false,
+      "inStock": true,
       "image": "images/catalog/urbanbar/octagonal-boston-shaker-tin-1.jpg",
       "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB3285.jpg?v=1715970108",
       "imageUrls": [
@@ -78122,7 +78122,7 @@
       "specificationsHtml": "",
       "productCareHtml": "",
       "safetyLabelsHtml": "",
-      "inStock": false,
+      "inStock": true,
       "image": "images/catalog/urbanbar/vintage-irish-coffee-glass-17cl-1.jpg",
       "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/CoffeeGlassgeorgian.jpg?v=1758635445",
       "imageUrls": [
@@ -78461,7 +78461,7 @@
       "specificationsHtml": "",
       "productCareHtml": "",
       "safetyLabelsHtml": "",
-      "inStock": false,
+      "inStock": true,
       "image": "images/catalog/urbanbar/classico-margot-highball-35cl-box-2-1.jpg",
       "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/classico-margto-highball-empty.jpg?v=1744806763",
       "imageUrls": [
@@ -78535,7 +78535,7 @@
       "specificationsHtml": "",
       "productCareHtml": "",
       "safetyLabelsHtml": "",
-      "inStock": false,
+      "inStock": true,
       "image": "images/catalog/urbanbar/classico-margot-old-fashioned-32cl-1.jpg",
       "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/Classico-Margot-Old-Fashioned-25cl.jpg?v=1741890514",
       "imageUrls": [
@@ -78615,7 +78615,7 @@
       "specificationsHtml": "",
       "productCareHtml": "",
       "safetyLabelsHtml": "",
-      "inStock": false,
+      "inStock": true,
       "image": "images/catalog/urbanbar/crystal-nick-nora-glass-17cl-1.jpg",
       "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB3569.jpg?v=1745334169",
       "imageUrls": [
@@ -78697,7 +78697,7 @@
       "specificationsHtml": "",
       "productCareHtml": "",
       "safetyLabelsHtml": "",
-      "inStock": false,
+      "inStock": true,
       "image": "images/catalog/urbanbar/crystal-nick-nora-1910-glass-17cl-1.jpg",
       "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB3570.jpg?v=1745397057",
       "imageUrls": [
@@ -78789,7 +78789,7 @@
       "specificationsHtml": "",
       "productCareHtml": "",
       "safetyLabelsHtml": "",
-      "inStock": false,
+      "inStock": true,
       "image": "images/catalog/urbanbar/crystal-nick-nora-1920-glass-17cl-1.jpg",
       "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB3572.jpg?v=1745400062",
       "imageUrls": [
@@ -78877,7 +78877,7 @@
       "specificationsHtml": "",
       "productCareHtml": "",
       "safetyLabelsHtml": "",
-      "inStock": false,
+      "inStock": true,
       "image": "images/catalog/urbanbar/gold-rim-nick-nora-glass-1.jpg",
       "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB3577.jpg?v=1745407502",
       "imageUrls": [
@@ -78955,7 +78955,7 @@
       "specificationsHtml": "",
       "productCareHtml": "",
       "safetyLabelsHtml": "",
-      "inStock": false,
+      "inStock": true,
       "image": "images/catalog/urbanbar/freddo-nick-nora-1.jpg",
       "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/Ub5459-Freddo-Nick-and-Nora-empty.jpg?v=1741890508",
       "imageUrls": [
@@ -79023,7 +79023,7 @@
       "specificationsHtml": "",
       "productCareHtml": "",
       "safetyLabelsHtml": "",
-      "inStock": false,
+      "inStock": true,
       "image": "images/catalog/urbanbar/calabrese-zigzag-coupe-23cl-1.jpg",
       "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/Calabrese-ZigZag-Coupe.jpg?v=1746195688",
       "imageUrls": [
@@ -79111,7 +79111,7 @@
       "specificationsHtml": "",
       "productCareHtml": "",
       "safetyLabelsHtml": "",
-      "inStock": false,
+      "inStock": true,
       "image": "images/catalog/urbanbar/crystal-verdot-gold-rim-martini-glass-21cl-1.jpg",
       "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB4900.jpg?v=1741890896",
       "imageUrls": [
@@ -79198,7 +79198,7 @@
       "specificationsHtml": "",
       "productCareHtml": "",
       "safetyLabelsHtml": "",
-      "inStock": false,
+      "inStock": true,
       "image": "images/catalog/urbanbar/verdot-crystal-martini-glass-21cl-1.jpg",
       "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB3244.jpg?v=1741890987",
       "imageUrls": [
@@ -79277,7 +79277,7 @@
       "specificationsHtml": "",
       "productCareHtml": "",
       "safetyLabelsHtml": "",
-      "inStock": false,
+      "inStock": true,
       "image": "images/catalog/urbanbar/crystal-1910-martini-glass-21cl-1.jpg",
       "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB4507.jpg?v=1741890910",
       "imageUrls": [
@@ -79357,7 +79357,7 @@
       "specificationsHtml": "",
       "productCareHtml": "",
       "safetyLabelsHtml": "",
-      "inStock": false,
+      "inStock": true,
       "image": "images/catalog/urbanbar/crystal-1920-martini-glass-21cl-1.jpg",
       "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB4508.jpg?v=1741890908",
       "imageUrls": [
@@ -79433,7 +79433,7 @@
       "specificationsHtml": "",
       "productCareHtml": "",
       "safetyLabelsHtml": "",
-      "inStock": false,
+      "inStock": true,
       "image": "images/catalog/urbanbar/crystal-ginza-tall-cuts-martini-glass-21cl-1.jpg",
       "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB4833.jpg?v=1741890898",
       "imageUrls": [
@@ -79505,7 +79505,7 @@
       "specificationsHtml": "",
       "productCareHtml": "",
       "safetyLabelsHtml": "",
-      "inStock": false,
+      "inStock": true,
       "image": "images/catalog/urbanbar/calabrese-mini-martini-glass-1.jpg",
       "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB4131-2_8339f350-74b0-4d1a-8b95-082cc99efe77.jpg?v=1741891171",
       "imageUrls": [
@@ -79577,7 +79577,7 @@
       "specificationsHtml": "",
       "productCareHtml": "",
       "safetyLabelsHtml": "",
-      "inStock": false,
+      "inStock": true,
       "image": "images/catalog/urbanbar/retro-coupe-glass-21cl-1.jpg",
       "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB2974.jpg?v=1741890834",
       "imageUrls": [
@@ -79660,7 +79660,7 @@
       "specificationsHtml": "",
       "productCareHtml": "",
       "safetyLabelsHtml": "",
-      "inStock": false,
+      "inStock": true,
       "image": "images/catalog/urbanbar/crystal-retro-gold-rim-coupe-glass-21cl-1.jpg",
       "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB2977.jpg?v=1741891027",
       "imageUrls": [
@@ -79744,7 +79744,7 @@
       "specificationsHtml": "",
       "productCareHtml": "",
       "safetyLabelsHtml": "",
-      "inStock": false,
+      "inStock": true,
       "image": "images/catalog/urbanbar/crystal-retro-coupe-glass-1910-21cl-1.jpg",
       "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB2975.jpg?v=1741891030",
       "imageUrls": [
@@ -79831,7 +79831,7 @@
       "specificationsHtml": "",
       "productCareHtml": "",
       "safetyLabelsHtml": "",
-      "inStock": false,
+      "inStock": true,
       "image": "images/catalog/urbanbar/crystal-retro-coupe-glass-1920-21cl-1.jpg",
       "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB2976.jpg?v=1741891028",
       "imageUrls": [
@@ -79917,7 +79917,7 @@
       "specificationsHtml": "",
       "productCareHtml": "",
       "safetyLabelsHtml": "",
-      "inStock": false,
+      "inStock": true,
       "image": "images/catalog/urbanbar/retro-optic-champagne-glass-coupe-21cl-1.jpg",
       "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/white-3372-033.jpg?v=1741890430",
       "imageUrls": [
@@ -80192,7 +80192,7 @@
       "specificationsHtml": "",
       "productCareHtml": "",
       "safetyLabelsHtml": "",
-      "inStock": false,
+      "inStock": true,
       "image": "images/catalog/urbanbar/alto-cocktail-glass-17cl-1.jpg",
       "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/white-3421-061.jpg?v=1741890223",
       "imageUrls": [
@@ -80264,7 +80264,7 @@
       "specificationsHtml": "",
       "productCareHtml": "",
       "safetyLabelsHtml": "",
-      "inStock": false,
+      "inStock": true,
       "image": "images/catalog/urbanbar/1910-alto-cocktail-glass-17cl-1.jpg",
       "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB6980.jpg?v=1741890222",
       "imageUrls": [
@@ -80337,7 +80337,7 @@
       "specificationsHtml": "",
       "productCareHtml": "",
       "safetyLabelsHtml": "",
-      "inStock": false,
+      "inStock": true,
       "image": "images/catalog/urbanbar/1920-alto-cocktail-glass-17cl-1.jpg",
       "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB6981.jpg?v=1741890220",
       "imageUrls": [
@@ -80410,7 +80410,7 @@
       "specificationsHtml": "",
       "productCareHtml": "",
       "safetyLabelsHtml": "",
-      "inStock": false,
+      "inStock": true,
       "image": "images/catalog/urbanbar/gold-rim-alto-cocktail-glass-17cl-1.jpg",
       "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB6982.jpg?v=1741890218",
       "imageUrls": [
@@ -80483,7 +80483,7 @@
       "specificationsHtml": "",
       "productCareHtml": "",
       "safetyLabelsHtml": "",
-      "inStock": false,
+      "inStock": true,
       "image": "images/catalog/urbanbar/alto-cocktail-17cl-copy-1.jpg",
       "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB6979.jpg?v=1741890217",
       "imageUrls": [
@@ -80554,7 +80554,7 @@
       "specificationsHtml": "",
       "productCareHtml": "",
       "safetyLabelsHtml": "",
-      "inStock": false,
+      "inStock": true,
       "image": "images/catalog/urbanbar/1910-alto-cocktail-17cl-copy-1.jpg",
       "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB6980v2.jpg?v=1741890215",
       "imageUrls": [
@@ -80627,7 +80627,7 @@
       "specificationsHtml": "",
       "productCareHtml": "",
       "safetyLabelsHtml": "",
-      "inStock": false,
+      "inStock": true,
       "image": "images/catalog/urbanbar/1920-alto-cocktail-17cl-copy-1.jpg",
       "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB6981v2.jpg?v=1741890213",
       "imageUrls": [
@@ -80700,7 +80700,7 @@
       "specificationsHtml": "",
       "productCareHtml": "",
       "safetyLabelsHtml": "",
-      "inStock": false,
+      "inStock": true,
       "image": "images/catalog/urbanbar/gold-rim-alto-cocktail-17cl-1.jpg",
       "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/UB6982v2.jpg?v=1741890212",
       "imageUrls": [
@@ -143983,7 +143983,7 @@
       "specificationsHtml": "",
       "productCareHtml": "",
       "safetyLabelsHtml": "",
-      "inStock": false,
+      "inStock": true,
       "image": "images/catalog/urbanbar/the-mini-4-5cl-1.jpg",
       "imageUrl": "https://cdn.shopify.com/s/files/1/0467/5066/2816/files/white-UB7235TheMini.jpg?v=1741890193",
       "imageUrls": [
