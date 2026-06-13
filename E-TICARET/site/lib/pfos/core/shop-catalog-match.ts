@@ -7,7 +7,7 @@ import {
 import type { EslesmisUrun, FiyatStratejisi } from "../schemas/pfos.schema";
 import { enrichEslesmisFromKatalogRow } from "./catalog-enrich";
 import { invalidateKatalogGorselCache } from "./katalog-gorsel";
-import { buildCatalogTeklifAciklama } from "../teklif/catalog-teklif-aciklama";
+import { katalogRowToEslesmis } from "./katalog-row-eslesmis";
 import {
   isBulasikMakinesiTipKodu,
   BULASIK_MARKA,
@@ -363,39 +363,11 @@ function adminRowToEslesmis(
     zoneMeta?: { marka?: string; olcu?: string } | null;
   },
 ): EslesmisUrun {
-  const enriched = enrichEslesmisFromKatalogRow(row, {
+  return katalogRowToEslesmis(row, {
     linkMarka: ctx?.link?.marka,
     zoneMarka: ctx?.zoneMeta?.marka,
     zoneOlcu: ctx?.zoneMeta?.olcu,
   });
-  const fiyatEur = equstoSatisEurFromRow(row);
-
-  const teklifAciklama =
-    buildCatalogTeklifAciklama({
-      description: row.detay,
-      ozti_web_description: row.ozti_web_description,
-      inoksan_shop_description: row.inoksan_shop_description,
-      teknik_ozellikler: row.teknik_ozellikler,
-      specs: row.aciklama,
-      aciklama: row.ad,
-    }).trim() || null;
-
-  return {
-    id: row.id,
-    slug: row.id.replace(/^ecom_/, ""),
-    sku: row.sku,
-    ad: row.ad,
-    marka: enriched.marka,
-    model: enriched.model,
-    olcu: enriched.olcu,
-    elektrikGucuKw: row.el_guc,
-    gazGucuKw: row.gaz_guc,
-    fiyat: row.fiyat_tl,
-    fiyatEur,
-    doviz: "TRY",
-    gorselUrl: row.gorsel_url,
-    teklifAciklama,
-  };
 }
 
 function scoreCandidate(

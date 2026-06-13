@@ -16,6 +16,10 @@ import { fileURLToPath } from "node:url";
 import { execFileSync } from "node:child_process";
 import { foldTr, slugify } from "./lib/ozti-enrich.mjs";
 import { fetchTcmbEurRate } from "./fetch-tcmb-kur.mjs";
+import {
+  decodePimakHtml,
+  teknikLinesFromPimakPage,
+} from "./lib/pimak-kw.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SRC_MANIFEST = path.resolve(ROOT, "../../PFOS/veri/pimak/products-tr.json");
@@ -408,19 +412,7 @@ function parsePimakOlculer(d, kod) {
 }
 
 function teknikLines(d) {
-  const out = [];
-  for (const t of d.temelOzellikler || []) {
-    const s = String(t).replace(/\s+/g, " ").trim();
-    if (s) out.push(s);
-  }
-  for (const r of d.teknikDetaylar?.satirlar || []) {
-    for (const [k, v] of Object.entries(r)) {
-      if (k.endsWith("_gorsel") || !v || k === "Fiyat") continue;
-      const val = String(v).replace(/\s+/g, " ").trim();
-      if (val && val.length < 200) out.push(`${k}: ${val}`);
-    }
-  }
-  return out;
+  return teknikLinesFromPimakPage(d).lines;
 }
 
 function formatSpecs(d, px, kod) {
@@ -491,6 +483,10 @@ function toRow(d, bucket, priceMap, kur) {
 
   const olcu = parsePimakOlculer(d, kod);
   const pimakGorsel = String(d.gorsel || "").trim();
+  const teknik = teknikLinesFromPimakPage(d);
+  const descRaw = decodePimakHtml(
+    String(d.temelOzelliklerMetin || d.metaAciklama || "").trim(),
+  );
 
   const id = `${BRAND_ID}__${slug}`;
   const row = {
@@ -502,8 +498,11 @@ function toRow(d, bucket, priceMap, kur) {
     price,
     fiyat_bekleniyor,
     specs: formatSpecs(d, px, kod),
-    aciklama: d.temelOzelliklerMetin || d.metaAciklama || "",
-    teknik_ozellikler: teknikLines(d),
+    aciklama: descRaw,
+    pimak_web_description: descRaw || undefined,
+    teknik_ozellikler: teknik.lines,
+    ...(teknik.el_guc != null ? { el_guc: teknik.el_guc } : {}),
+    ...(teknik.gaz_guc != null ? { gaz_guc: teknik.gaz_guc } : {}),
     ...(olcu || {}),
     pimak_gorsel: /^https?:\/\//i.test(pimakGorsel) ? pimakGorsel : undefined,
     images: images.length ? images : undefined,

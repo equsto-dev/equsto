@@ -1,5 +1,11 @@
 /** Katalog satırı / specs metninden elektrik ve gaz kW çözümleme */
 
+import { decodeHtmlEntities } from "@/lib/text/decode-html-entities";
+import {
+  parsePimakGucFromTeknikLine,
+  parsePimakGucKwValue,
+} from "@/lib/catalog/pimak-kw";
+
 export type ResolvedKw = {
   elektrikGucuKw: number | null;
   gazGucuKw: number | null;
@@ -43,6 +49,24 @@ export function parseKwFromText(text: string): ResolvedKw {
     /(?:guc|güç|elektrik\s*gucu|elektrik\s*gücü|elektrik\s*baglantisi|elektrik\s*bağlantısı|elk\.?\s*kw)\s*[:=]?\s*([\d.,]+)\s*kW/i,
   );
   if (elkExplicit) elk = parseKwNumber(elkExplicit[1]);
+
+  if (!elk) {
+    for (const line of t.split("\n")) {
+      const pimakKw = parsePimakGucFromTeknikLine(line);
+      if (pimakKw != null) {
+        elk = pimakKw;
+        break;
+      }
+      const pimakRaw = line.match(/g[uü][çc]\s*\([^)]*kw[^)]*\)\s*[:=]?\s*(.+)$/i);
+      if (pimakRaw) {
+        const p = parsePimakGucKwValue(pimakRaw[1]);
+        if (p != null) {
+          elk = p;
+          break;
+        }
+      }
+    }
+  }
 
   if (!elk) {
     for (const line of t.split("\n")) {
@@ -114,6 +138,7 @@ type KwTextSources = {
   description?: string | null;
   ozti_web_description?: string | null;
   inoksan_shop_description?: string | null;
+  pimak_web_description?: string | null;
   teknik_ozellikler?: string[];
   olculer?: OlcuGuc | null;
 };
@@ -130,8 +155,11 @@ export function resolveKwFromSources(src: KwTextSources): ResolvedKw {
     src.description,
     src.ozti_web_description,
     src.inoksan_shop_description,
+    src.pimak_web_description,
     ...(src.teknik_ozellikler ?? []),
-  ].filter((x): x is string => Boolean(x?.trim()));
+  ]
+    .filter((x): x is string => Boolean(x?.trim()))
+    .map((t) => decodeHtmlEntities(t));
 
   let fromText: ResolvedKw = { elektrikGucuKw: null, gazGucuKw: null };
   for (const text of texts) {
@@ -189,6 +217,7 @@ export function resolveTeklifKw(opts: {
   urun?: {
     sku?: string | null;
     ad?: string | null;
+    teklifAciklama?: string | null;
     elektrikGucuKw?: number | null;
     gazGucuKw?: number | null;
   } | null;
@@ -218,6 +247,13 @@ export function resolveTeklifKw(opts: {
 
   if (fromUrun.elektrikGucuKw != null || fromUrun.gazGucuKw != null) {
     return fromUrun;
+  }
+
+  const fromAciklama = parseKwFromText(
+    decodeHtmlEntities(opts.urun?.teklifAciklama ?? ""),
+  );
+  if (fromAciklama.elektrikGucuKw != null || fromAciklama.gazGucuKw != null) {
+    return fromAciklama;
   }
 
   if (!isPoweredPfosEkipman(ctx)) {

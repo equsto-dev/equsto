@@ -69,6 +69,7 @@ export type CatalogAciklamaInput = {
   description?: string | null;
   ozti_web_description?: string | null;
   inoksan_shop_description?: string | null;
+  pimak_web_description?: string | null;
   teknik_ozellikler?: string[] | null;
   specs?: string | null;
   aciklama?: string | null;
@@ -107,6 +108,7 @@ export function buildCatalogTeklifAciklama(
     String(
       row.ozti_web_description ||
         row.inoksan_shop_description ||
+        row.pimak_web_description ||
         row.description ||
         "",
     ),
