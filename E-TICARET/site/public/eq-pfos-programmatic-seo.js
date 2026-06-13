@@ -173,14 +173,88 @@
   ];
 
   var cityHint = "";
-  if (/istanbul/i.test(sehirSlug)) {
+  var lowerCity = String(sehirSlug || "").toLowerCase();
+
+  if (/istanbul/i.test(lowerCity)) {
     cityHint = isEn
       ? "In dense districts, façade loads and shaft allocation should be clarified before equipment orders; Equsto ties delivery slots to readiness at site."
       : "Yoğun ilçelerde cephe kapasitesi ve baca/davlumbaz kuyusu netleştirilmeden ekipman siparişi risklidir; Equsto teslim tarihlerini sahada hazırlık durumuna bağlar.";
-  } else if (/ankara|izmir/i.test(sehirSlug)) {
+  } else if (/ankara/i.test(lowerCity)) {
     cityHint = isEn
-      ? "For Ankara-class climates, glycol and suction line sizing for remote condensing should be validated early alongside fire curtain requirements."
-      : "Ankara/İzmir sınıfı iklimlerde uzak kondanser senaryosu ve emiş hattı ölçüleri erken doğrulanmalı; davlumbaz yangın perdesi gereksinimleri de keşifle birlikte alınır.";
+      ? "For Ankara-class cold/hot climates, remote condensing lines and glycol ratios should be validated alongside local fire safety standards."
+      : "Ankara sınıfı karasal iklimlerde uzak kondanser hatları ve glikol oranları, yerel itfaiye yangın yönetmelikleriyle birlikte erken doğrulanmalıdır.";
+  } else if (/izmir/i.test(lowerCity)) {
+    cityHint = isEn
+      ? "Coastal humidity and outdoor patio ventilation zones must be balanced with grease filter class and exhaust direction rules in Izmir."
+      : "Kıyı nem yükü ve açık alan/teras davlumbaz konumlandırması, İzmir'deki koku filtresi ve egzoz atım yönü kurallarıyla dengelenmelidir.";
+  } else if (/bursa/i.test(lowerCity)) {
+    cityHint = isEn
+      ? "Industrial zone (OSB) electrical grid limits and gas pressure regulators require early coordination for heavy cooking suites in Bursa."
+      : "Bursa'daki OSB ve sanayi bölgesi elektrik altyapı limitleri ile gaz basınç düşürücüleri, yoğun pişirme hatları için erken koordine edilmelidir.";
+  } else if (/antalya/i.test(lowerCity)) {
+    cityHint = isEn
+      ? "Under Antalya's high summer temperatures (+43°C), remote refrigeration condenser sizing and high-ambient duty cooling units are mandatory."
+      : "Antalya'nın yüksek yaz sıcaklıkları (+43°C) altında, uzak soğutma kondanser boyutlandırması ve tropikal sınıf (+43°C) soğutma grupları zorundur.";
+  } else if (/adana/i.test(lowerCity)) {
+    cityHint = isEn
+      ? "Charcoal cooking concepts (kebap/hearths) require electrostatic precipitators and high-capacity ice machines for Adana's climate."
+      : "Kebap ve ocakbaşı konseptleri için elektrostatik filtreleme sistemi ve Adana sıcağına dayanıklı yüksek kapasiteli buz makineleri planlanmalıdır.";
+  } else if (/konya/i.test(lowerCity)) {
+    cityHint = isEn
+      ? "Hard water profiles require commercial water softeners; bakery line dough processing units must scale with regional pastry throughput."
+      : "Konya'nın kireçli su profili için endüstriyel su yumuşatıcı; unlu mamul pişirme hatları ise bölgesel hamur işleme kapasitelerine göre ölçeklenmelidir.";
+  } else if (/sanliurfa|şanlıurfa/i.test(lowerCity)) {
+    cityHint = isEn
+      ? "Extreme summer dry heat and heavy charcoal grill exhausts require high-efficiency canopy filtration and specific dust/grease traps in Urfa."
+      : "Urfa'nın aşırı yaz sıcakları ve yoğun kömürlü ızgara dumanı, yüksek verimli davlumbaz filtrasyonu ve özel yağ/toz tutucular gerektirir.";
+  } else if (/gaziantep/i.test(lowerCity)) {
+    cityHint = isEn
+      ? "High-output baking gas lines and high-temperature pastry ovens require dynamic gas safety validation and soot scrubbing in Gaziantep."
+      : "Gaziantep'teki yüksek kapasiteli baklava/hamur pişirme gaz hatları ve yüksek ısı fırınları, dinamik gas emniyet onayları ve baca sulu filtreyle kurulmalıdır.";
+  } else if (/kocaeli/i.test(lowerCity)) {
+    cityHint = isEn
+      ? "Industrial zoning permits and seismic automatic gas shut-off valves require strict certification reviews before installation in Kocaeli."
+      : "Kocaeli bölgesindeki sanayi ruhsat izinleri ve deprem sensörlü otomatik gaz kesme vanaları, kurulum öncesi sıkı sertifika denetimi gerektirir.";
+  } else if (/mersin/i.test(lowerCity)) {
+    cityHint = isEn
+      ? "High marine humidity calls for AISI 304 grade stainless steel structure and coastal-rated evaporator protective coatings in Mersin."
+      : "Mersin'deki yüksek deniz nemi yükü nedeniyle tüm tezgahlarda AISI 304 kalite paslanmaz çelik ve korozyon korumalı evaporatörler tercih edilmelidir.";
+  } else if (/diyarbakir|diyarbakır/i.test(lowerCity)) {
+    cityHint = isEn
+      ? "Heavy charcoal hearth chimney heights, soot scrubbers, and high-capacity flour processing units are key compliance checkpoints in Diyarbakir."
+      : "Diyarbakır'da yoğun ocakbaşı baca yükseklikleri, sulu baca filtresi (soot scrubber) ve yüksek kapasiteli unlu mamul hazırlık hatları kritik denetim noktalarıdır.";
+  } else if (/hatay/i.test(lowerCity)) {
+    cityHint = isEn
+      ? "Gastro-tourism heavy baking ovens, gas security checks, and municipal grease separators are strictly inspected in Hatay."
+      : "Hatay'ın gastronomi odaklı taş fırınları, yüksek gaz emniyet kontrolleri ve belediye atık su yağ ayırıcı (grease trap) standartları sıkı denetlenir.";
+  } else if (/manisa/i.test(lowerCity)) {
+    cityHint = isEn
+      ? "Agricultural produce processing requires dedicated washing sinks, raw intake zoning, and large cold room configurations in Manisa."
+      : "Manisa'da tarımsal hammadde işleme için özel sebze yıkama evyeleri, mal kabul hijyen bariyerleri ve geniş soğuk oda tasarımları önceliklidir.";
+  } else if (/kayseri/i.test(lowerCity)) {
+    cityHint = isEn
+      ? "Bakery and meat drying concepts require precise temperature/humidity cold storage and high-load power line coordination in Kayseri."
+      : "Kayseri'de unlu mamul ve et kurutma işlemleri için hassas sıcaklık/nem kontrollü depolar ile yüksek kurulu güç bağlantısı koordine edilmelidir.";
+  } else if (/samsun/i.test(lowerCity)) {
+    cityHint = isEn
+      ? "Black Sea humidity requires continuous passive kitchen air-exchange cycles and coastal-grade grease interceptors in Samsun."
+      : "Karadeniz nemi nedeniyle Samsun'daki projelerde sürekli pasif hava çevrim sistemleri ve kıyıya uygun paslanmaz yağ ayırıcılar planlanmalıdır.";
+  } else if (/balikesir|balıkesir/i.test(lowerCity)) {
+    cityHint = isEn
+      ? "High wind load on rooftop refrigeration condensers and dairy storage cold room backups should be designed early in Balikesir."
+      : "Balıkesir'deki rüzgar yükü nedeniyle çatı kondanser sabitlemeleri ve mandıra/süt ürünleri deposu için yedekli soğutma grupları kurulmalıdır.";
+  } else if (/kahramanmaras|kahramanmaraş/i.test(lowerCity)) {
+    cityHint = isEn
+      ? "Sub-zero ice cream storage freezers (-25°C) and seismic utility shut-offs require specialized refrigeration engineering in Maras."
+      : "Maraş'ta eksi yirmi beş derece (-25°C) dondurma saklama dolapları ve sismik hat emniyet ekipmanları özel soğutma mühendisliği gerektirir.";
+  } else if (/van/i.test(lowerCity)) {
+    cityHint = isEn
+      ? "High altitude drops atmospheric pressure; gas burners require high-altitude nozzles and severe winter anti-freeze glycol lines in Van."
+      : "Van'ın yüksek rakımı gazlı brülörlerde %15 hava-yakıt düzeltme memesi gerektirir; kış aylarında ise dış kondanser hatları yüksek glikollü olmalıdır.";
+  } else if (/aydin|aydın/i.test(lowerCity)) {
+    cityHint = isEn
+      ? "Heavy olive oil usage requires oversized wastewater grease traps, and coastal hot weather demands tropical-rated condensers in Aydin."
+      : "Aydın'daki yoğun zeytinyağı kullanımı için geniş hacimli yağ sıyırıcılar, Kuşadası/Didim kıyı hattında ise tropikal kondanserler kurulmalıdır.";
   } else {
     cityHint = isEn
       ? "Regional municipality checklists vary; zoning, wastewater grease separation and canopy filtration class should be validated with drawings before capex freeze."

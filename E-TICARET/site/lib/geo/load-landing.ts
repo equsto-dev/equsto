@@ -48,3 +48,30 @@ export function geoCanonicalPath(
   }
   return kind === "rehber" ? `/rehber/${slug}` : `/${slug}`;
 }
+
+export function getAlternativeGeoPath(
+  slug: string,
+  lang: "tr" | "en",
+  kind: GeoRouteKind = "root",
+): string | null {
+  const currentPage = getGeoLanding(slug, lang, kind);
+  if (!currentPage || !currentPage.profile) return null;
+
+  const targetLang = lang === "tr" ? "en" : "tr";
+  const targetStore = targetLang === "en" ? landingsEn : landingsTr;
+
+  for (const [key, value] of Object.entries(targetStore)) {
+    if (key === "version" || key === "source") continue;
+    const page = value as any;
+    if (page && page.profile === currentPage.profile) {
+      let targetSlug = key;
+      if (targetLang === "en") {
+        targetSlug = key.replace(/^en\/guides\//, "").replace(/^en\//, "");
+      } else {
+        targetSlug = key.replace(/^rehber\//, "");
+      }
+      return geoCanonicalPath(targetSlug, targetLang, kind);
+    }
+  }
+  return null;
+}

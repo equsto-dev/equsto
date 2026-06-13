@@ -149,6 +149,18 @@ export function buildProductJsonLd(ssr: PdpSsrPayload) {
   const origin = getSiteOrigin();
   const deptUrl = `${origin}${ssr.deptHref}`;
 
+  const seller = {
+    "@type": "Organization",
+    name: "Equsto",
+    url: origin,
+    areaServed: [
+      "Istanbul", "Ankara", "Izmir", "Bursa", "Antalya",
+      "Adana", "Konya", "Sanliurfa", "Gaziantep", "Kocaeli",
+      "Mersin", "Diyarbakir", "Hatay", "Manisa", "Kayseri",
+      "Samsun", "Balikesir", "Kahramanmaras", "Van", "Aydin"
+    ].map((city) => ({ "@type": "City", name: city })),
+  };
+
   const offer =
     ssr.priceTry && ssr.priceTry > 0
       ? {
@@ -157,12 +169,14 @@ export function buildProductJsonLd(ssr: PdpSsrPayload) {
           priceCurrency: "TRY",
           availability: "https://schema.org/InStock",
           url: ssr.canonical,
+          seller,
         }
       : {
           "@type": "Offer",
           availability: "https://schema.org/PreOrder",
           url: ssr.canonical,
           priceCurrency: "TRY",
+          seller,
         };
 
   return {

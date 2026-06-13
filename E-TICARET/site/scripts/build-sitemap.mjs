@@ -88,6 +88,35 @@ function writeProductChunks(prefix, productUrls, indexFiles) {
   return productUrls.length;
 }
 
+const PSEO_COMBOS = [
+  { tr: ["restoran", "istanbul", "modern", "150m2"], en: ["restaurant", "istanbul", "modern", "150m2"] },
+  { tr: ["kafe", "istanbul", "ozgun", "80m2"], en: ["cafe", "istanbul", "signature", "80m2"] },
+  { tr: ["catering", "istanbul", "klasik", "200m2"], en: ["catering", "istanbul", "classic", "200m2"] },
+  { tr: ["steakhouse", "istanbul", "modern", "150m2"], en: ["steakhouse", "istanbul", "modern", "150m2"] },
+  { tr: ["bar", "istanbul", "ozgun", "100m2"], en: ["bar", "istanbul", "signature", "100m2"] },
+  { tr: ["bulut-mutfak", "istanbul", "modern", "120m2"], en: ["cloud-kitchen", "istanbul", "modern", "120m2"] },
+  { tr: ["restoran", "ankara", "modern", "150m2"], en: ["restaurant", "ankara", "modern", "150m2"] },
+  { tr: ["kafe", "ankara", "ozgun", "80m2"], en: ["cafe", "ankara", "signature", "80m2"] },
+  { tr: ["catering", "ankara", "klasik", "200m2"], en: ["catering", "ankara", "classic", "200m2"] },
+  { tr: ["steakhouse", "ankara", "modern", "150m2"], en: ["steakhouse", "ankara", "modern", "150m2"] },
+  { tr: ["restoran", "izmir", "modern", "120m2"], en: ["restaurant", "izmir", "modern", "120m2"] },
+  { tr: ["kafe", "izmir", "ozgun", "100m2"], en: ["cafe", "izmir", "signature", "100m2"] },
+  { tr: ["bar", "izmir", "ozgun", "80m2"], en: ["bar", "izmir", "signature", "80m2"] },
+  { tr: ["steakhouse", "izmir", "modern", "150m2"], en: ["steakhouse", "izmir", "modern", "150m2"] },
+  { tr: ["restoran", "bursa", "modern", "150m2"], en: ["restaurant", "bursa", "modern", "150m2"] },
+  { tr: ["kafe", "bursa", "ozgun", "80m2"], en: ["cafe", "bursa", "signature", "80m2"] },
+  { tr: ["catering", "bursa", "klasik", "200m2"], en: ["catering", "bursa", "classic", "200m2"] },
+  { tr: ["restoran", "antalya", "modern", "150m2"], en: ["restaurant", "antalya", "modern", "150m2"] },
+  { tr: ["kafe", "antalya", "ozgun", "100m2"], en: ["cafe", "antalya", "signature", "100m2"] },
+  { tr: ["bar", "antalya", "ozgun", "80m2"], en: ["bar", "antalya", "signature", "80m2"] },
+  { tr: ["restoran", "adana", "modern", "150m2"], en: ["restaurant", "adana", "modern", "150m2"] },
+  { tr: ["steakhouse", "adana", "modern", "150m2"], en: ["steakhouse", "adana", "modern", "150m2"] },
+  { tr: ["restoran", "gaziantep", "modern", "150m2"], en: ["restaurant", "gaziantep", "modern", "150m2"] },
+  { tr: ["kafe", "gaziantep", "ozgun", "80m2"], en: ["cafe", "gaziantep", "signature", "80m2"] },
+  { tr: ["restoran", "kocaeli", "modern", "150m2"], en: ["restaurant", "kocaeli", "modern", "150m2"] },
+  { tr: ["catering", "kocaeli", "klasik", "200m2"], en: ["catering", "kocaeli", "classic", "200m2"] }
+];
+
 function buildShopHubs() {
   const urls = [
     urlEntry(`${ORIGIN}/`, { priority: "1", changefreq: "weekly" }),
@@ -100,6 +129,10 @@ function buildShopHubs() {
   ];
   for (const d of SHOP_DEPTS) {
     urls.push(urlEntry(`${ORIGIN}/shop/${d}`, { priority: "0.85", changefreq: "weekly" }));
+  }
+  for (const item of PSEO_COMBOS) {
+    const path = `/pfos/${item.tr.join("/")}`;
+    urls.push(urlEntry(`${ORIGIN}${path}`, { priority: "0.78", changefreq: "monthly" }));
   }
   return urls;
 }
@@ -114,6 +147,10 @@ function buildShopEnHubs() {
     urls.push(
       urlEntry(`${ORIGIN}/en/shop/${d}`, { priority: "0.84", changefreq: "weekly" }),
     );
+  }
+  for (const item of PSEO_COMBOS) {
+    const path = `/en/pfos/${item.en.join("/")}`;
+    urls.push(urlEntry(`${ORIGIN}${path}`, { priority: "0.76", changefreq: "monthly" }));
   }
   return urls;
 }

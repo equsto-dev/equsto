@@ -9,25 +9,31 @@ function isPoz(s: string) {
 
 function cellStr(v: unknown): string {
   if (v == null) return "";
+  if (typeof v === "string") return v.trim();
+  if (typeof v === "number" || typeof v === "boolean") return String(v).trim();
+  if (v instanceof Date) return v.toISOString().trim();
+
   if (typeof v === "object") {
-    if (v instanceof Date) {
-      return v.toISOString();
+    if ("result" in v && v.result != null) {
+      return cellStr(v.result);
     }
-    if ("result" in v) {
-      const res = (v as { result: unknown }).result;
-      return res == null ? "" : String(res).trim();
+    if ("formula" in v && v.formula != null) {
+      return String(v.formula).trim();
     }
-    if ("richText" in v && Array.isArray((v as { richText: unknown }).richText)) {
-      return (v as { richText: any[] }).richText
-        .map((t) => (t && typeof t === "object" && "text" in t ? String(t.text) : String(t)))
-        .join("")
-        .trim();
+    if ("text" in v && v.text != null) {
+      return cellStr(v.text);
     }
-    if ("text" in v) {
-      const txt = (v as { text: unknown }).text;
-      return txt == null ? "" : String(txt).trim();
+    if ("richText" in v && Array.isArray((v as any).richText)) {
+      return (v as any).richText
+        .map((rt: any) =>
+          rt && typeof rt === "object" && "text" in rt
+            ? cellStr(rt.text)
+            : cellStr(rt)
+        )
+        .join("");
     }
   }
+
   return String(v).trim();
 }
 
