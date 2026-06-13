@@ -996,7 +996,7 @@
     );
   }
 
-  var EQ_CATALOG_IMG_V = "20260613teklif-stok-foto";
+  var EQ_CATALOG_IMG_V = "20260613inoksan-pdp";
 
   function withCatalogImgV(url) {
     if (

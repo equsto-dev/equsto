@@ -606,6 +606,63 @@ window.searchFilter = window.searchFilter || function () {};
       return b.indexOf("inoksan") >= 0;
     }
 
+    function decodeHtmlEntitiesPdp(s) {
+      return String(s || "")
+        .replace(/&nbsp;/gi, " ")
+        .replace(/&amp;/gi, "&")
+        .replace(/&lt;/gi, "<")
+        .replace(/&gt;/gi, ">")
+        .replace(/&quot;/gi, '"')
+        .replace(/&#(\d+);/g, function (_, n) {
+          return String.fromCharCode(Number(n));
+        })
+        .replace(/&([a-z]+);/gi, function (_, name) {
+          var map = {
+            ouml: "ö",
+            Ouml: "Ö",
+            uuml: "ü",
+            Uuml: "Ü",
+            ccedil: "ç",
+            Ccedil: "Ç",
+            scedil: "ş",
+            Scedil: "Ş",
+            gbreve: "ğ",
+            Gbreve: "Ğ",
+            imath: "ı",
+            Iuml: "İ",
+            nbsp: " ",
+            middot: "·",
+          };
+          return Object.prototype.hasOwnProperty.call(map, name) ? map[name] : "&" + name + ";";
+        });
+    }
+
+    function inoksanDescriptionBullets(x) {
+      var raw = decodeHtmlEntitiesPdp(
+        String(x.inoksan_shop_description || x.description || "").trim()
+      );
+      if (!raw) return [];
+      return raw
+        .split(/\r?\n/)
+        .map(function (l) {
+          return String(l || "")
+            .replace(/^\*\s+/, "")
+            .replace(/^[•\-–—*·]+\s*/, "")
+            .trim();
+        })
+        .filter(function (l) {
+          return l.length > 2 && !/^genel\s*özellikler$/i.test(l);
+        });
+    }
+
+    function inoksanLeadLine(x) {
+      var bullets = inoksanDescriptionBullets(x);
+      for (var i = 0; i < bullets.length; i++) {
+        if (bullets[i].length >= 16) return bullets[i].slice(0, 320);
+      }
+      return bullets[0] || "";
+    }
+
     function dimLabelFromMmPdp(g, d, y) {
       if (!g || !d || !y) return "";
       if (g >= 1000 && d >= 1000) {
@@ -2428,6 +2485,10 @@ window.searchFilter = window.searchFilter || function () {};
 
     function pdpLeadParagraph(x) {
       if (isCaglayanRefrigeration(x)) return caglayanLeadParagraph(x);
+      if (isInoksanCatalogRow(x)) {
+        var inoLead = inoksanLeadLine(x);
+        if (inoLead) return inoLead;
+      }
       var desc =
         window.eqLang === "en" && x.descriptionEn && String(x.descriptionEn).trim()
           ? String(x.descriptionEn).trim()
@@ -2673,6 +2734,22 @@ window.searchFilter = window.searchFilter || function () {};
           false
         );
       });
+      if (isInoksanCatalogRow(x)) {
+        var inoBullets = inoksanDescriptionBullets(x);
+        if (inoBullets.length) {
+          acc += renderEpdpFlatAccSection(
+            __pdpT("pdp.product_description", "Ürün açıklaması"),
+            '<ul class="eq-specs-list">' +
+              inoBullets
+                .map(function (l) {
+                  return "<li>" + esc(l) + "</li>";
+                })
+                .join("") +
+              "</ul>",
+            !acc
+          );
+        }
+      }
       if (!acc) {
         acc =
           '<p class="eq-elx-acc__empty">' +

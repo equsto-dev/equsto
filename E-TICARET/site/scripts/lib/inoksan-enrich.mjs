@@ -6,6 +6,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
 import { foldTr, slugify } from "./ozti-enrich.mjs";
+import { decodeHtmlEntities } from "./inoksan-pdp-parse.mjs";
 
 const UA = "Mozilla/5.0 (Equsto; +https://equsto.com)";
 
@@ -514,4 +515,61 @@ export function enrichInoksanRow(row, match, imgResult) {
 
   row.aciklama = `${row.name}\n\nKategori: ${row.inoksan_h3 || row.category || ""}`;
   return changed;
+}
+
+/** inoksanshop / inoksan.com PDP açıklamasını katalog satırına yazar */
+export function applyInoksanDescription(row, payload) {
+  if (!payload?.description) return false;
+
+  const bullets = Array.isArray(payload.bullets) ? payload.bullets : [];
+  const tech = [...(row.teknik_ozellikler || [])];
+  for (const line of bullets) {
+    const t = String(line || "").trim();
+    if (!t) continue;
+    const norm = t.replace(/^•\s*/, "");
+    if (!tech.some((x) => String(x).trim() === norm)) tech.push(norm);
+  }
+  row.teknik_ozellikler = tech;
+
+  row.description = decodeHtmlEntities(String(payload.description)).trim();
+  row.inoksan_shop_description = row.description;
+  if (payload.url) row.inoksan_shop_url = payload.url;
+  if (payload.shopSku) row.inoksan_shop_sku = payload.shopSku;
+  row.inoksan_description_source = payload.source || "inoksanshop.com.tr";
+  row.inoksan_description_at = new Date().toISOString().slice(0, 10);
+
+  const marker = `\n\nÜrün açıklaması (${row.inoksan_description_source})\n`;
+  const baseSpecs = String(row.specs || "").split("\n\nÜrün açıklaması")[0].trim();
+  if (!baseSpecs.includes(row.description.slice(0, 40))) {
+    row.specs = `${baseSpecs}${marker}${row.description}`.trim();
+  }
+
+  const lead = String(row.description)
+    .split(/\r?\n/)
+    .map((l) => l.replace(/^•\s*/, "").trim())
+    .filter(Boolean)[0];
+  if (lead) {
+    row.aciklama = `${row.name}\n\n${lead}\n\nKategori: ${row.inoksan_h3 || row.category || ""}`;
+  }
+
+  return true;
+}
+
+/** inoksan.com PDP #urunacikla boşsa — web indeks title + specs */
+export function buildInoksanComIndexDescription(product) {
+  if (!product) return null;
+  const bullets = [];
+  const title = String(product.title || "").trim();
+  if (title) bullets.push(title);
+  for (const s of product.specs || []) {
+    const k = String(s?.k || "").trim();
+    const v = String(s?.v || "").trim();
+    if (k && v) bullets.push(`${k}: ${v}`);
+  }
+  if (!bullets.length) return null;
+  return {
+    description: bullets.map((b) => `• ${b}`).join("\n"),
+    bullets,
+    source: "inoksan.com-index",
+  };
 }
