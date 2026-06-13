@@ -996,7 +996,7 @@
     );
   }
 
-  var EQ_CATALOG_IMG_V = "20260613inoksan-istif-v2";
+  var EQ_CATALOG_IMG_V = "20260613urbanbar-live-v1";
 
   function withCatalogImgV(url) {
     if (
