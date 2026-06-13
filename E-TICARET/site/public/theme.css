@@ -662,6 +662,21 @@ a.topnav-item:visited {
 .topnav-item.topnav-pfos:hover {
   background: var(--eq-topnav-dept-hover) !important;
 }
+
+.topnav-pfos-beta {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 6px;
+  padding: 1px 5px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 1.25;
+  border: 1px solid color-mix(in srgb, currentColor 35%, transparent);
+  border-radius: 3px;
+  color: inherit;
+  flex-shrink: 0;
+}
 .topnav-besos__in,
 .topnav-pfos__in {
   position: relative;

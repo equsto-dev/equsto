@@ -712,46 +712,19 @@ window.searchFilter = window.searchFilter || function () {};
       return { elk: elk, gaz: gaz, su: su };
     }
 
-    function renderInoksanTechnicalSpecsBody(specs) {
-      var html = "";
-      if (specs.elk.length) {
-        html +=
-          '<p class="eq-inoksan-spec-sub">' +
-          esc(__pdpT("pdp.inoksan_electric", "Elektrik")) +
-          "</p><ul>" +
-          specs.elk.map(function (l) { return "<li>" + esc(l) + "</li>"; }).join("") +
-          "</ul>";
-      }
-      if (specs.gaz.length) {
-        html +=
-          '<p class="eq-inoksan-spec-sub">' +
-          esc(__pdpT("pdp.inoksan_gas", "Gaz")) +
-          "</p><ul>" +
-          specs.gaz.map(function (l) { return "<li>" + esc(l) + "</li>"; }).join("") +
-          "</ul>";
-      }
-      if (specs.su.length) {
-        html +=
-          '<p class="eq-inoksan-spec-sub">' +
-          esc(__pdpT("pdp.inoksan_water", "Su")) +
-          "</p><ul>" +
-          specs.su.map(function (l) { return "<li>" + esc(l) + "</li>"; }).join("") +
-          "</ul>";
-      }
-      return html;
-    }
-
-    function renderInoksanHeroDescription(x) {
+    function renderInoksanDescriptionCol(x) {
       var bullets = inoksanDescriptionBullets(x);
       if (!bullets.length) return "";
-      return (
-        '<div class="eq-inoksan-hero-desc">' +
-        "<h2 class=\"eq-inoksan-hero-desc__title\">" +
-        esc(__pdpT("pdp.product_description", "Ürün açıklaması")) +
-        "</h2>" +
-        '<ul class="eq-specs-list">' +
-        bullets.map(function (l) { return "<li>" + esc(l) + "</li>"; }).join("") +
-        "</ul></div>"
+      return renderEpdpDocsPanel(
+        __pdpT("pdp.product_description", "Ürün açıklaması"),
+        '<div class="eq-ozti-desc-panel">' +
+          '<ul class="eq-ozti-desc-list">' +
+          bullets
+            .map(function (l) {
+              return "<li>" + esc(l) + "</li>";
+            })
+            .join("") +
+          "</ul></div>"
       );
     }
 
@@ -760,42 +733,98 @@ window.searchFilter = window.searchFilter || function () {};
       var temel = [];
       var visBrand = pdpVisibleBrand(x.brand);
       if (visBrand) temel.push(__pdpT("pdp.brand_prefix", "Marka:") + " " + visBrand);
-      if (x.sku || x.model) temel.push(__pdpT("pdp.product_code_prefix", "Ürün kodu:") + " " + (x.sku || x.model));
+      if (x.sku || x.model) {
+        temel.push(__pdpT("pdp.product_code_prefix", "Ürün kodu:") + " " + (x.sku || x.model));
+      }
       if (ref.label) temel.push(__pdpT("pdp.category_prefix", "Kategori:") + " " + ref.label);
       var dim = formatOlculerLinePdp(x);
       if (dim) temel.push(__pdpT("pdp.dims_prefix", "Ölçüler:") + " " + dim);
 
+      var skipDims = Object.create(null);
+      if (x.olculer) {
+        if (x.olculer.genislik_mm) skipDims["genişlik"] = 1;
+        if (x.olculer.derinlik_mm) skipDims["derinlik"] = 1;
+        if (x.olculer.yukseklik_mm) skipDims["yükseklik"] = 1;
+        if (x.olculer.uzunluk_mm) skipDims["uzunluk"] = 1;
+      }
+
       (Array.isArray(x.teknik_ozellikler) ? x.teknik_ozellikler : []).forEach(function (ln) {
         var t = decodeHtmlEntitiesPdp(String(ln || "").trim());
-        if (!t || t.indexOf(":") < 0 || t.length > 120) return;
+        if (!t || t.indexOf(":") < 0 || t.length > 160) return;
         if (inoksanIsHeadingLine(t) || t.indexOf(" * ") >= 0) return;
         var key = t.split(":")[0].trim().toLocaleLowerCase("tr-TR");
-        if (/^genel\s|^teknik\s/.test(key)) return;
-        if (/elektrik|güç|guc|voltaj|frekans|fan motor|buhar|gaz|doğalgaz|lpg|mbar|tüketim|brülör|brulor|su bas|su gir|su tük|drenaj|^su\s/.test(key)) {
+        if (
+          /^güç$|^guc$|^elektrik|^gaz\s|genişlik|derinlik|yükseklik|uzunluk|^en \(mm\)|^boy \(mm\)|^yükseklik \(mm\)|barkod|katalog sayfası|ürün markası|^genel\s|^teknik\s/.test(
+            key
+          )
+        ) {
+          return;
+        }
+        if (skipDims[key] || /^paket /.test(key)) return;
+        if (
+          /elektrik|güç|guc|voltaj|frekans|fan motor|buhar|gaz|doğalgaz|lpg|mbar|tüketim|brülör|brulor|su bas|su gir|su tük|drenaj|^su\s/.test(
+            key
+          )
+        ) {
           return;
         }
         if (temel.indexOf(t) < 0) temel.push(t);
       });
 
+      var conn = inoksanConnectionSpecs(x);
       var acc = "";
       if (temel.length) {
         acc += renderEpdpFlatAccSection(
           __pdpT("pdp.basic_info", "Temel bilgiler"),
-          "<ul>" + temel.map(function (l) { return "<li>" + esc(l) + "</li>"; }).join("") + "</ul>",
+          "<ul>" +
+            temel
+              .map(function (l) {
+                return "<li>" + esc(l) + "</li>";
+              })
+              .join("") +
+            "</ul>",
           true
         );
       }
-
-      var conn = inoksanConnectionSpecs(x);
-      var connBody = renderInoksanTechnicalSpecsBody(conn);
-      if (connBody) {
+      if (conn.gaz.length) {
         acc += renderEpdpFlatAccSection(
-          __pdpT("pdp.specs_heading_short", "Teknik özellikler"),
-          connBody,
+          __pdpT("pdp.spec_group_gas", "Gaz"),
+          "<ul>" +
+            conn.gaz
+              .map(function (l) {
+                return "<li>" + esc(l) + "</li>";
+              })
+              .join("") +
+            "</ul>",
           !acc
         );
       }
-
+      if (conn.elk.length) {
+        acc += renderEpdpFlatAccSection(
+          __pdpT("pdp.spec_group_electric", "Elektrik"),
+          "<ul>" +
+            conn.elk
+              .map(function (l) {
+                return "<li>" + esc(l) + "</li>";
+              })
+              .join("") +
+            "</ul>",
+          !acc
+        );
+      }
+      if (conn.su.length) {
+        acc += renderEpdpFlatAccSection(
+          __pdpT("pdp.spec_group_other", "Diğer"),
+          "<ul>" +
+            conn.su
+              .map(function (l) {
+                return "<li>" + esc(l) + "</li>";
+              })
+              .join("") +
+            "</ul>",
+          !acc
+        );
+      }
       if (!acc) {
         acc =
           '<p class="eq-elx-acc__empty">' +
@@ -2976,8 +3005,7 @@ window.searchFilter = window.searchFilter || function () {};
       );
     }
 
-    function renderEpdpBuybox(x, cartU, opts) {
-      opts = opts || null;
+    function renderEpdpBuybox(x, cartU) {
       var parts = buyboxPriceParts(x);
       var pfosHref = eqHtmlUrl(typeof window.equstoUrl === "function" ? window.equstoUrl("pfos") : "pfos.html");
       var waMsg = pdpWhatsAppPrefill(x);
@@ -3029,18 +3057,9 @@ window.searchFilter = window.searchFilter || function () {};
         "</span>" +
         esc(__pdpT("pdp.whatsapp_ask", "Whatsapp ile Soru Sor")) +
         "</button></div>";
-      var actionsBlock =
-        opts && opts.inoksanDescHtml
-          ? '<div class="eq-inoksan-buy-row"><div class="eq-inoksan-buy-row__actions">' +
-            actionsHtml +
-            "</div><div class=\"eq-inoksan-buy-row__desc\">" +
-            opts.inoksanDescHtml +
-            "</div></div>"
-          : actionsHtml;
       return (
-        '<div class="eq-epdp-buybox eq-cmf-buybox' +
-        (opts && opts.inoksanDescHtml ? " eq-cmf-buybox--inoksan" : "") +
-        '" aria-label="' +
+        '<div class="eq-epdp-buybox eq-cmf-buybox"' +
+        ' aria-label="' +
         esc(__pdpT("pdp.buybox_aria", "Satın al")) +
         '">' +
         '<div class="eq-cmf-topbar">' +
@@ -3068,7 +3087,7 @@ window.searchFilter = window.searchFilter || function () {};
         '">+</button>' +
         "</div>" +
         "</div>" +
-        actionsBlock +
+        actionsHtml +
         '<div class="eq-cmf-pay-panel" hidden>' +
         "<ul>" +
         "<li>" +
@@ -3199,6 +3218,10 @@ window.searchFilter = window.searchFilter || function () {};
     }
 
     function renderEpdpDocsCol(x) {
+      if (isInoksanCatalogRow(x)) {
+        var inoDesc = renderInoksanDescriptionCol(x);
+        if (inoDesc) return inoDesc;
+      }
       if (isOztiCatalogRow(x)) {
         var oztiDesc = renderOztiDescriptionCol(x);
         if (oztiDesc) return oztiDesc;
@@ -3636,19 +3659,8 @@ window.searchFilter = window.searchFilter || function () {};
 
       var epdpFeaturesCol = renderEpdpFeaturesCol(x);
       var epdpDocsCol = renderEpdpDocsCol(x);
-      var inoksanSpecsUnderMedia =
-        isInoksanCatalogRow(x) && epdpFeaturesCol
-          ? '<div class="eq-epdp-hero__specs eq-inoksan-hero-specs">' + epdpFeaturesCol + "</div>"
-          : "";
       var epdpPanelsHtml = "";
-      if (isInoksanCatalogRow(x)) {
-        if (epdpDocsCol) {
-          epdpPanelsHtml =
-            '<div class="eq-epdp-panels eq-caglayan-panels eq-epdp-panels--docs-only">' +
-            epdpDocsCol +
-            "</div>";
-        }
-      } else if (epdpFeaturesCol || epdpDocsCol) {
+      if (epdpFeaturesCol || epdpDocsCol) {
         epdpPanelsHtml =
           '<div class="eq-epdp-panels eq-caglayan-panels">' +
           epdpFeaturesCol +
@@ -3667,7 +3679,6 @@ window.searchFilter = window.searchFilter || function () {};
         '">' +
         heroImg +
         "</div></div></div>" +
-        inoksanSpecsUnderMedia +
         "</div>" +
         '<div class="eq-epdp-hero__copy eq-caglayan-hero__copy">' +
         '<p class="eq-epdp-eyebrow eq-caglayan-eyebrow">' +
@@ -3690,9 +3701,7 @@ window.searchFilter = window.searchFilter || function () {};
           return lead ? '<p class="eq-epdp-lead eq-caglayan-lead">' + esc(lead) + "</p>" : "";
         })() +
         (function () {
-          if (!isInoksanCatalogRow(x)) return renderEpdpBuybox(x, cartU);
-          var inoDesc = renderInoksanHeroDescription(x);
-          return renderEpdpBuybox(x, cartU, inoDesc ? { inoksanDescHtml: inoDesc } : null);
+          return renderEpdpBuybox(x, cartU);
         })() +
         (pdf && /\.pdf/i.test(pdf)
           ? '<div class="eq-epdp-cta eq-caglayan-cta">' +

@@ -171,7 +171,10 @@ export default function PfosEqustoChrome() {
             onClick={() => goEqDept("pfos")}
             aria-current="page"
           >
-            Proje Fabrikası
+            <span data-i18n="nav.pfos">Proje Fabrikası</span>
+            <span className="topnav-pfos-beta" aria-label="Beta">
+              BETA
+            </span>
           </div>
           <span className="topnav-sep" aria-hidden="true">
             |
