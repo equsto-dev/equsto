@@ -1,16 +1,35 @@
 "use client";
 
 import { useCallback, useState } from "react";
+import { isShopifyCdn } from "@/lib/besos/urbanbar/plp-images";
 
 type Props = {
   images: string[];
   name: string;
 };
 
+function imgExtra(url: string) {
+  return isShopifyCdn(url) ? ({ referrerPolicy: "no-referrer" as const }) : {});
+}
+
 export default function BesosUrbanBarPdpGallery({ images, name }: Props) {
-  const urls = images.filter(Boolean);
+  const [urls, setUrls] = useState(() => images.filter(Boolean));
   const [active, setActive] = useState(0);
   const current = urls[active] || "";
+
+  const dropBroken = useCallback((badSrc: string) => {
+    setUrls((prev) => {
+      const idx = prev.indexOf(badSrc);
+      const next = prev.filter((u) => u !== badSrc);
+      if (next.length === prev.length) return prev;
+      setActive((i) => {
+        if (idx < 0) return Math.min(i, next.length - 1);
+        if (i > idx) return Math.min(i - 1, next.length - 1);
+        return Math.min(i, Math.max(0, next.length - 1));
+      });
+      return next;
+    });
+  }, []);
 
   const prev = useCallback(() => {
     if (urls.length < 2) return;
@@ -57,7 +76,13 @@ export default function BesosUrbanBarPdpGallery({ images, name }: Props) {
         ) : null}
         <div className="ub-pdp-gallery__main-wrap">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className="ub-pdp-gallery__main" src={current} alt={name} />
+          <img
+            className="ub-pdp-gallery__main"
+            src={current}
+            alt={name}
+            onError={() => dropBroken(current)}
+            {...imgExtra(current)}
+          />
         </div>
       </div>
       {urls.length > 1 ? (
@@ -72,7 +97,7 @@ export default function BesosUrbanBarPdpGallery({ images, name }: Props) {
               onClick={() => setActive(i)}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={src} alt="" loading="lazy" decoding="async" />
+              <img src={src} alt="" loading="lazy" decoding="async" onError={() => dropBroken(src)} {...imgExtra(src)} />
             </button>
           ))}
         </div>

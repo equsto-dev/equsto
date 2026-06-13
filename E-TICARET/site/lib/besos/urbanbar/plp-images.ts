@@ -1,4 +1,5 @@
 import { besosAssetPath } from "@/lib/besos/asset-path";
+import { isUrbanBarLocalCatalogPath } from "@/lib/besos/urbanbar/gallery-images";
 import type { BesosUrbanBarProduct } from "@/lib/besos/urbanbar/types";
 
 /** Size chart / comparison / pack shots — not lifestyle hover */
@@ -12,6 +13,7 @@ const HOVER_PREFER =
 function normalizeUrl(img: string): string {
   const s = String(img || "").trim();
   if (!s) return "";
+  if (isUrbanBarLocalCatalogPath(s)) return "";
   if (s.startsWith("http")) return s;
   return besosAssetPath(s);
 }

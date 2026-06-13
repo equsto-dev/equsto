@@ -25,6 +25,14 @@ const WEB_CATALOG = path.join(ROOT, "scripts/data/urbanbar/urbanbar-web-catalog.
 const PDP_DETAILS = path.join(ROOT, "scripts/data/urbanbar/urbanbar-pdp-details.json");
 const OUT = path.join(ROOT, "public/data/urbanbar-besos-catalog.json");
 const KAYNAK = "urbanbar-web";
+const PUBLIC_ROOT = path.join(ROOT, "public");
+
+function localCatalogImageExists(rel) {
+  const s = String(rel || "").trim();
+  if (!s || /^https?:\/\//i.test(s)) return true;
+  const relPath = s.replace(/^\/+/, "");
+  return fs.existsSync(path.join(PUBLIC_ROOT, relPath));
+}
 
 function loadWebByHandle() {
   const map = new Map();
@@ -100,9 +108,10 @@ function toProduct(row, taxonomy, webByHandle, pdpByHandle) {
     for (const u of web.images) if (u && !imageUrls.includes(u)) imageUrls.push(u);
   } else if (row.shopify_image) {
     imageUrls.push(row.shopify_image);
-  }
-  for (const rel of row.images || []) {
-    if (rel && !imageUrls.includes(rel)) imageUrls.push(rel);
+  } else {
+    for (const rel of row.images || []) {
+      if (rel && localCatalogImageExists(rel) && !imageUrls.includes(rel)) imageUrls.push(rel);
+    }
   }
 
   const plpHoverImageUrl = pickUrbanBarPlpHoverUrl(imageUrls, imageUrls[0] || "");
