@@ -3189,6 +3189,281 @@ window.searchFilter = window.searchFilter || function () {};
       return renderEpdpFeaturesPanel(__pdpT("pdp.features_heading", "Özellikler"), acc);
     }
 
+    function isPimakCatalogRow(x) {
+      if (!x) return false;
+      if (x.pimak_web_description || x.pimak_slug || x.pimak_gorsel) return true;
+      if (/^pimak__/i.test(String(x.id || ""))) return true;
+      var kaynak = String(x.kaynak || x.kaynak_fiyat_listesi || "").toLowerCase();
+      if (kaynak === "pimak" || kaynak.indexOf("pimak") >= 0) return true;
+      return /^pimak$/i.test(String(x.brand || "").trim());
+    }
+
+    function parsePimakGucKwValue(raw) {
+      var s = decodeHtmlEntitiesPdp(String(raw || "").trim());
+      if (!s || /iletisim|contact/i.test(s)) return null;
+      var kwPart = s.split("/")[0].trim();
+      var nums = [];
+      var m;
+      var re = /(\d+(?:[.,]\d+)?)/g;
+      while ((m = re.exec(kwPart))) {
+        var n = Number(m[1].replace(",", "."));
+        if (Number.isFinite(n) && n > 0 && n <= 200) nums.push(n);
+      }
+      return nums.length ? Math.max.apply(null, nums) : null;
+    }
+
+    function pimakKwSuffix(val) {
+      var kw = typeof val === "number" ? val : parsePimakGucKwValue(val);
+      if (kw == null) return oztiKwSuffix(val);
+      var s = String(kw);
+      return (s.indexOf(".") >= 0 ? s.replace(".", ",") : s) + " kW";
+    }
+
+    function pimakTeknikMarketingLines(x) {
+      return (Array.isArray(x.teknik_ozellikler) ? x.teknik_ozellikler : [])
+        .map(function (ln) {
+          return decodeHtmlEntitiesPdp(String(ln || "").trim());
+        })
+        .filter(function (t) {
+          return t.length > 3 && t.indexOf(":") < 0;
+        });
+    }
+
+    function isPimakGucSpecKey(key) {
+      return /^g[uü][çc](?:\s*\([^)]*\))?$|^guc$/i.test(String(key || "").trim());
+    }
+
+    function pimakDescriptionBullets(x) {
+      var raw = decodeHtmlEntitiesPdp(
+        String(x.pimak_web_description || x.aciklama || x.description || "").trim()
+      );
+      if (raw) {
+        var parts;
+        if (/\n\s*[•·\-–—*]/.test(raw)) {
+          parts = raw.split(/\n\s*[•·\-–—*]\s*/);
+        } else if (/(?:^|\s)\*\s+/.test(raw)) {
+          parts = raw.split(/(?:^|\s)\*\s+/);
+        } else if (/\S\*(?=\S)/.test(raw)) {
+          parts = raw.split(/\*(?=\S)/);
+        } else {
+          parts = raw.split(/\r?\n/);
+        }
+        var fromWeb = parts
+          .map(function (l) {
+            return String(l || "")
+              .replace(/^[•\-–—*·]+\s*/, "")
+              .trim();
+          })
+          .filter(function (l) {
+            return l.length > 3 && !/^tasar[iı]m:?$/i.test(l);
+          });
+        if (fromWeb.length) return fromWeb;
+      }
+      return pimakTeknikMarketingLines(x);
+    }
+
+    function renderPimakDescriptionCol(x) {
+      var bullets = pimakDescriptionBullets(x);
+      if (!bullets.length) return "";
+      return renderEpdpDocsPanel(
+        __pdpT("pdp.product_description", "Ürün açıklaması"),
+        '<div class="eq-ozti-desc-panel">' +
+          '<ul class="eq-ozti-desc-list">' +
+          bullets
+            .map(function (l) {
+              return "<li>" + esc(l) + "</li>";
+            })
+            .join("") +
+          "</ul></div>"
+      );
+    }
+
+    function pimakFuelProfile(x) {
+      var lines = Array.isArray(x.teknik_ozellikler) ? x.teknik_ozellikler : [];
+      var blob = [x.name, x.sku, x.model].filter(Boolean).join(" ").toLocaleLowerCase("tr-TR");
+      var gas = false;
+      var electric = false;
+      lines.forEach(function (ln) {
+        var t = decodeHtmlEntitiesPdp(String(ln || "").trim());
+        var key = t.split(":")[0].trim().toLocaleLowerCase("tr-TR");
+        if (/^enerji tipi:/.test(key)) {
+          var tip = t.split(":").slice(1).join(":").trim().toLocaleLowerCase("tr-TR");
+          if (/gaz|lpg|doğalgaz|dogalgaz/.test(tip)) gas = true;
+          if (/elektr/.test(tip)) electric = true;
+        }
+        if (/^gaz bas/i.test(key)) gas = true;
+        if (/^voltaj/.test(key)) electric = true;
+        if (isPimakGucSpecKey(key)) {
+          if (x.gaz_guc != null && x.gaz_guc > 0) gas = true;
+          else if (x.el_guc != null && x.el_guc > 0) electric = true;
+          else if (/gaz|mbar|lpg|brülör|brulor/.test(blob)) gas = true;
+          else electric = true;
+        }
+      });
+      if (x.gaz_guc != null && x.gaz_guc > 0) gas = true;
+      if (x.el_guc != null && x.el_guc > 0) electric = true;
+      if (!gas && !electric) {
+        if (/elektr|380\s*v|230\s*v|220\s*v|fritoz|firin|fırın|mikser|buz|ocak|izgar|y[ıi]kama|bula[sş][ıi]k/.test(blob)) {
+          electric = true;
+        }
+      }
+      return { gas: gas, electric: electric };
+    }
+
+    function pimakConnectionSpecs(x) {
+      var profile = pimakFuelProfile(x);
+      var lines = Array.isArray(x.teknik_ozellikler) ? x.teknik_ozellikler : [];
+      var elk = [];
+      var gaz = [];
+      var diger = [];
+      var seen = Object.create(null);
+
+      function push(group, line) {
+        var t = String(line || "").trim();
+        if (!t || seen[t]) return;
+        seen[t] = 1;
+        group.push(t);
+      }
+
+      lines.forEach(function (ln) {
+        var t = decodeHtmlEntitiesPdp(String(ln || "").trim());
+        if (!t || t.indexOf(":") < 0 || t.length > 200) return;
+        var key = t.split(":")[0].trim().toLocaleLowerCase("tr-TR");
+        var val = t.split(":").slice(1).join(":").trim();
+
+        if (isPimakGucSpecKey(key)) {
+          push(profile.gas && !profile.electric ? gaz : elk, "Güç: " + pimakKwSuffix(val));
+          return;
+        }
+        if (/^voltaj/.test(key)) {
+          push(elk, "Voltaj: " + val);
+          return;
+        }
+        if (/^gaz bas/.test(key)) {
+          push(gaz, "Gaz basıncı: " + val);
+          return;
+        }
+        if (/^motor g[uü][çc]/.test(key)) {
+          var motorKw = parsePimakGucKwValue(val);
+          push(diger, motorKw != null ? "Motor gücü: " + pimakKwSuffix(motorKw) : "Motor gücü: " + val);
+          return;
+        }
+        if (/^enerji tipi/.test(key)) return;
+      });
+
+      if (profile.electric && !elk.some(function (l) { return /^Güç:/.test(l); }) && x.el_guc > 0) {
+        push(elk, "Güç: " + pimakKwSuffix(x.el_guc));
+      }
+      if (profile.gas && !gaz.some(function (l) { return /^Güç:/.test(l); }) && x.gaz_guc > 0) {
+        push(gaz, "Güç: " + pimakKwSuffix(x.gaz_guc));
+      }
+
+      return { profile: profile, elk: elk, gaz: gaz, diger: diger };
+    }
+
+    function renderPimakFeaturesCol(x) {
+      var ref = deptLink(x.category, x.dept);
+      var temel = [];
+      var visBrand = pdpVisibleBrand(x.brand);
+      if (visBrand) temel.push(__pdpT("pdp.brand_prefix", "Marka:") + " " + visBrand);
+      if (x.sku || x.model) {
+        temel.push(__pdpT("pdp.product_code_prefix", "Ürün kodu:") + " " + (x.sku || x.model));
+      }
+      if (ref.label) temel.push(__pdpT("pdp.category_prefix", "Kategori:") + " " + ref.label);
+      var dim = formatOlculerLinePdp(x);
+      if (dim) temel.push(__pdpT("pdp.dims_prefix", "Ölçüler:") + " " + dim);
+
+      var skipDims = Object.create(null);
+      if (x.olculer) {
+        if (x.olculer.genislik_mm) skipDims["genişlik"] = 1;
+        if (x.olculer.derinlik_mm) skipDims["derinlik"] = 1;
+        if (x.olculer.yukseklik_mm) skipDims["yükseklik"] = 1;
+      }
+
+      (Array.isArray(x.teknik_ozellikler) ? x.teknik_ozellikler : []).forEach(function (ln) {
+        var t = decodeHtmlEntitiesPdp(String(ln || "").trim());
+        if (!t || t.indexOf(":") < 0 || t.length > 160) return;
+        var key = t.split(":")[0].trim().toLocaleLowerCase("tr-TR");
+        if (
+          isPimakGucSpecKey(key) ||
+          /^voltaj|^gaz bas|^motor g|^enerji tipi|^ebat|^a[gğ]ırlık|^kapasite|^en \(|^boy \(|^ürün kodu/.test(
+            key
+          )
+        ) {
+          return;
+        }
+        if (skipDims[key] || /^paket /.test(key)) return;
+        if (temel.indexOf(t) < 0) temel.push(t);
+      });
+
+      var conn = pimakConnectionSpecs(x);
+      var acc = "";
+      if (temel.length) {
+        acc += renderEpdpFlatAccSection(
+          __pdpT("pdp.basic_info", "Temel bilgiler"),
+          "<ul>" +
+            temel
+              .map(function (l) {
+                return "<li>" + esc(l) + "</li>";
+              })
+              .join("") +
+            "</ul>",
+          true
+        );
+      }
+      if (conn.profile.gas && conn.gaz.length) {
+        acc += renderEpdpFlatAccSection(
+          __pdpT("pdp.spec_group_gas", "Gaz"),
+          "<ul>" +
+            conn.gaz
+              .map(function (l) {
+                return "<li>" + esc(l) + "</li>";
+              })
+              .join("") +
+            "</ul>",
+          !acc
+        );
+      }
+      if (conn.profile.electric && conn.elk.length) {
+        acc += renderEpdpFlatAccSection(
+          __pdpT("pdp.spec_group_electric", "Elektrik"),
+          "<ul>" +
+            conn.elk
+              .map(function (l) {
+                return "<li>" + esc(l) + "</li>";
+              })
+              .join("") +
+            "</ul>",
+          !acc
+        );
+      }
+      if (conn.diger.length) {
+        acc += renderEpdpFlatAccSection(
+          __pdpT("pdp.spec_group_other", "Diğer"),
+          "<ul>" +
+            conn.diger
+              .map(function (l) {
+                return "<li>" + esc(l) + "</li>";
+              })
+              .join("") +
+            "</ul>",
+          !acc
+        );
+      }
+      if (!acc) {
+        acc =
+          '<p class="eq-elx-acc__empty">' +
+          esc(
+            __pdpT(
+              "pdp.specs_request_quote",
+              "Detaylı teknik özellikler için teklif sürecinden talep edebilirsiniz."
+            )
+          ) +
+          "</p>";
+      }
+      return renderEpdpFeaturesPanel(__pdpT("pdp.features_heading", "Özellikler"), acc);
+    }
+
     function isAtalayCatalogRow(x) {
       if (!x) return false;
       if (x.atalay_web_description || x.atalay_description_at || x.atalay_web_url) return true;
@@ -3497,6 +3772,7 @@ window.searchFilter = window.searchFilter || function () {};
         return "";
       }
       if (isOztiCatalogRow(x) && oztiDescriptionBullets(x).length) return "";
+      if (isPimakCatalogRow(x) && pimakDescriptionBullets(x).length) return "";
       if (isAtalayCatalogRow(x) && atalayDescriptionBullets(x).length) return "";
       var desc =
         window.eqLang === "en" && x.descriptionEn && String(x.descriptionEn).trim()
@@ -3715,6 +3991,7 @@ window.searchFilter = window.searchFilter || function () {};
       if (isCaglayanRefrigeration(x)) return renderCaglayanFeaturesCol(x);
       if (isElectroluxProfessional(x)) return renderElectroluxFeaturesCol(x);
       if (isInoksanCatalogRow(x)) return renderInoksanFeaturesCol(x);
+      if (isPimakCatalogRow(x)) return renderPimakFeaturesCol(x);
       if (isOztiCatalogRow(x)) return renderOztiFeaturesCol(x);
       if (isAtalayCatalogRow(x)) return renderAtalayFeaturesCol(x);
       var ref = deptLink(x.category, x.dept);
@@ -3782,6 +4059,10 @@ window.searchFilter = window.searchFilter || function () {};
       if (isOztiCatalogRow(x)) {
         var oztiDesc = renderOztiDescriptionCol(x);
         if (oztiDesc) return oztiDesc;
+      }
+      if (isPimakCatalogRow(x)) {
+        var pimakDesc = renderPimakDescriptionCol(x);
+        if (pimakDesc) return pimakDesc;
       }
       if (isAtalayCatalogRow(x)) {
         var atalayDesc = renderAtalayDescriptionCol(x);
@@ -4027,6 +4308,7 @@ window.searchFilter = window.searchFilter || function () {};
           (isElectroluxProfessional(x) ? " eq-epdp--electrolux" : "") +
           (isInoksanCatalogRow(x) ? " eq-epdp--inoksan" : "") +
           (isOztiCatalogRow(x) ? " eq-epdp--ozti" : "") +
+          (isPimakCatalogRow(x) ? " eq-epdp--pimak eq-epdp--ozti" : "") +
           (isAtalayCatalogRow(x) ? " eq-epdp--atalay" : "");
       }
 

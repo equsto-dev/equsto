@@ -2,7 +2,7 @@ import { ecomRowToAdminUrun } from "@/lib/admin-urun";
 import type { CatalogSearchHit } from "@/lib/catalog-search-fallback";
 import { getCatalogLookupMaps } from "@/lib/catalog-search-fallback";
 import { loadLegacyCatalogRows } from "@/lib/legacy-catalog";
-import { enrichEslesmisFromKatalogRow } from "@/lib/pfos/core/catalog-enrich";
+import { katalogRowToEslesmis } from "@/lib/pfos/core/katalog-row-eslesmis";
 import { equstoSatisEurFromRow } from "@/lib/pfos/core/shop-catalog-match";
 import type { EslesmisUrun } from "@/lib/pfos/schemas/pfos.schema";
 import { getTcmbEurForPricing } from "@/lib/tcmb-kur";
@@ -37,21 +37,13 @@ async function hitToEslesmisRaw(
     const hasPrice =
       admin.fiyat_tl > 0 || (eur != null && eur > 0) || (meiliEur != null && meiliEur > 0);
     if (!hasPrice) return null;
-    const enriched = enrichEslesmisFromKatalogRow(admin);
+    const matched = katalogRowToEslesmis(admin, { linkMarka: hit.brand });
     return {
-      id: admin.id,
-      slug: hit.slug || admin.id.replace(/^ecom_/, ""),
-      sku: admin.sku,
-      ad: admin.ad || hit.name,
-      marka: enriched.marka || hit.brand || "—",
-      model: enriched.model || hit.model || null,
-      olcu: enriched.olcu || null,
-      elektrikGucuKw: admin.el_guc,
-      gazGucuKw: admin.gaz_guc,
-      fiyat: admin.fiyat_tl,
-      fiyatEur: eur ?? (meiliEur != null && meiliEur > 0 ? meiliEur : null),
-      doviz: "TRY",
-      gorselUrl: admin.gorsel_url || gorselFromHit(hit),
+      ...matched,
+      slug: hit.slug || matched.slug,
+      ad: matched.ad || hit.name,
+      marka: matched.marka || hit.brand || "—",
+      gorselUrl: matched.gorselUrl || gorselFromHit(hit),
     };
   }
 
@@ -67,21 +59,13 @@ async function hitToEslesmisRaw(
       if (!(admin.fiyat_tl > 0 || (eurSku != null && eurSku > 0) || (meiliEur != null && meiliEur > 0))) {
         return null;
       }
-      const enriched = enrichEslesmisFromKatalogRow(admin);
+      const matched = katalogRowToEslesmis(admin, { linkMarka: hit.brand });
       return {
-        id: admin.id,
-        slug: hit.slug || admin.id.replace(/^ecom_/, ""),
-        sku: admin.sku,
-        ad: admin.ad || hit.name,
-        marka: enriched.marka || hit.brand || "—",
-        model: enriched.model || hit.model || null,
-        olcu: enriched.olcu || null,
-        elektrikGucuKw: admin.el_guc,
-        gazGucuKw: admin.gaz_guc,
-        fiyat: admin.fiyat_tl,
-        fiyatEur: equstoSatisEurFromRow(admin),
-        doviz: "TRY",
-        gorselUrl: admin.gorsel_url || gorselFromHit(hit),
+        ...matched,
+        slug: hit.slug || matched.slug,
+        ad: matched.ad || hit.name,
+        marka: matched.marka || hit.brand || "—",
+        gorselUrl: matched.gorselUrl || gorselFromHit(hit),
       };
     }
   }

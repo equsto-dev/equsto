@@ -43,6 +43,7 @@ export type AdminUrunRow = {
   ozti_web_url?: string | null;
   inoksan_shop_description?: string | null;
   inoksan_shop_url?: string | null;
+  pimak_web_description?: string | null;
   gorsel_url: string | null;
   olculer?: {
     genislik_mm?: number;
@@ -93,6 +94,9 @@ type EcomRow = {
   ozti_web_url?: string;
   inoksan_shop_description?: string;
   inoksan_shop_url?: string;
+  pimak_web_description?: string;
+  el_guc?: number;
+  gaz_guc?: number;
   aciklama?: string;
 };
 
@@ -132,6 +136,8 @@ export function ecomRowToAdminUrun(u: EcomRow, index: number): AdminUrunRow {
   const alisTl = Number(u?.alis_fiyati_tl) > 0 ? Number(u.alis_fiyati_tl) : null;
   const satisTl = Number(u?.satis_fiyati_tl) > 0 ? Number(u.satis_fiyati_tl) : null;
   const resolvedKw = resolveKwFromSources({
+    el_guc: u?.el_guc != null ? Number(u.el_guc) : null,
+    gaz_guc: u?.gaz_guc != null ? Number(u.gaz_guc) : null,
     aciklama: u?.aciklama ? String(u.aciklama) : u?.specs ? String(u.specs) : null,
     description: u?.description ? String(u.description) : null,
     ozti_web_description: u?.ozti_web_description
@@ -139,6 +145,9 @@ export function ecomRowToAdminUrun(u: EcomRow, index: number): AdminUrunRow {
       : null,
     inoksan_shop_description: u?.inoksan_shop_description
       ? String(u.inoksan_shop_description)
+      : null,
+    pimak_web_description: u?.pimak_web_description
+      ? String(u.pimak_web_description)
       : null,
     teknik_ozellikler: u?.teknik_ozellikler,
     olculer: u?.olculer ?? null,
@@ -184,6 +193,9 @@ export function ecomRowToAdminUrun(u: EcomRow, index: number): AdminUrunRow {
         ? String(u.description)
         : null,
     inoksan_shop_url: u?.inoksan_shop_url ? String(u.inoksan_shop_url) : null,
+    pimak_web_description: u?.pimak_web_description
+      ? String(u.pimak_web_description)
+      : null,
     gorsel_url: gorsel,
     olculer: u?.olculer ?? null,
     teknik_ozellikler: Array.isArray(u?.teknik_ozellikler)

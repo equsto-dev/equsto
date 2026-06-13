@@ -29,7 +29,7 @@ import {
   formatPfosDisplayTanim,
   isProformaJunkText,
 } from "../parse-upload/sanitize-tanim";
-import { buildCatalogTeklifAciklama } from "./catalog-teklif-aciklama";
+import { buildCatalogTeklifAciklama, normalizeTeklifAciklamaText } from "./catalog-teklif-aciklama";
 import { resolveTeklifKw } from "@/lib/catalog/kw-resolve";
 
 function cleanObjectString(s: string | null | undefined): string {
@@ -42,17 +42,19 @@ function specAciklama(
   _referansListe = false,
 ): string {
   const fromUrun = k.urun?.teklifAciklama?.trim();
-  if (fromUrun) return cleanObjectString(fromUrun);
+  if (fromUrun) return normalizeTeklifAciklamaText(cleanObjectString(fromUrun));
   const notlar = cleanObjectString(k.notlar);
   if (isProformaJunkText(notlar)) {
     return "";
   }
-  return buildCatalogTeklifAciklama({
-    description: null,
-    teknik_ozellikler: null,
-    specs: notlar || null,
-    aciklama: formatPfosDisplayTanim(k.isim),
-  });
+  return normalizeTeklifAciklamaText(
+    buildCatalogTeklifAciklama({
+      description: null,
+      teknik_ozellikler: null,
+      specs: notlar || null,
+      aciklama: formatPfosDisplayTanim(k.isim),
+    }),
+  );
 }
 
 /**

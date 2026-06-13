@@ -13,6 +13,7 @@ function teklifAciklamaFromAdminRow(row: AdminUrunRow): string | null {
     description: row.detay,
     ozti_web_description: row.ozti_web_description,
     inoksan_shop_description: row.inoksan_shop_description,
+    pimak_web_description: row.pimak_web_description,
     teknik_ozellikler: row.teknik_ozellikler,
     specs: row.aciklama,
     aciklama: row.ad,
