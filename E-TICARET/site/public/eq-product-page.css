@@ -764,9 +764,32 @@ body.eq-shop .eq-product-specs .eq-specs-cols pre {
 }
 
 .eq-inoksan-hero-desc {
-  margin-top: 6px;
-  padding-top: 14px;
-  border-top: 1px solid var(--eq-border, #e5e7eb);
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+.eq-inoksan-buy-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
+  gap: 12px 18px;
+  align-items: start;
+}
+
+.eq-inoksan-buy-row__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.eq-inoksan-buy-row__desc {
+  min-width: 0;
+}
+
+.eq-cmf-buybox--inoksan .eq-inoksan-hero-desc {
+  max-height: min(320px, 52vh);
+  overflow: auto;
+  padding-right: 4px;
 }
 
 .eq-inoksan-hero-desc__title {
@@ -800,6 +823,31 @@ body.eq-shop .eq-product-specs .eq-specs-cols pre {
 
 .eq-inoksan-spec-sub:first-child {
   margin-top: 0;
+}
+
+.eq-ozti-desc-panel {
+  padding: 2px 0 4px;
+}
+
+.eq-ozti-desc-panel .eq-specs-list {
+  margin: 0;
+  padding-left: 1.15rem;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--eq-text-secondary, #374151);
+}
+
+.eq-ozti-desc-panel .eq-specs-list li + li {
+  margin-top: 8px;
+}
+
+.eq-epdp--ozti .eq-epdp-panels {
+  align-items: start;
+}
+
+.eq-epdp--ozti .eq-epdp-panels .eq-epdp-panel:last-child .eq-specs-list {
+  font-size: 14px;
+  line-height: 1.6;
 }
 
 .eq-epdp-buybox {
@@ -1605,6 +1653,14 @@ body.eq-shop .eq-cmf-buybox .eq-cart-add:hover {
   .eq-epdp-hero .eq-product-thumbs--vertical {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  .eq-inoksan-buy-row {
+    grid-template-columns: 1fr;
+  }
+
+  .eq-cmf-buybox--inoksan .eq-inoksan-hero-desc {
+    max-height: none;
   }
 }
 
