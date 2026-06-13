@@ -15,7 +15,7 @@ function norm(s: string | null | undefined): string {
 }
 
 export function isOztiBuzdolabiSku(sku: string | null | undefined): boolean {
-  return /^7919\.|^8919\.|^79e4\./i.test(String(sku ?? "").trim());
+  return /^7919\.|^8919\.|^79e[34]\./i.test(String(sku ?? "").trim());
 }
 
 export function isOztiBuzdolabiRow(row: {

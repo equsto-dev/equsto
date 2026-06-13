@@ -68,6 +68,17 @@ const TIP_RULES: TipRule[] = [
       (n.includes("iki kapili") || n.includes("2 kapili")),
   },
   {
+    tip: "tezgah-buzdolabi-3-kapili",
+    test: (n) =>
+      n.includes("buzdolab") &&
+      !n.includes("derin") &&
+      !n.includes("make up") &&
+      !n.includes("saladette") &&
+      !n.includes("hazirlik buzdolab") &&
+      (n.includes("uc kapili") || n.includes("3 kapili") || n.includes("üç kapili")) &&
+      (n.includes("tezgah") || n.includes("yatay")),
+  },
+  {
     tip: "tezgah-tip-buzdolabi",
     test: (n) =>
       n.includes("buzdolab") &&

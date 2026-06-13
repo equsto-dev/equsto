@@ -1013,7 +1013,7 @@
     },
     {
       "tip_kodu": "tezgah_buzdolabi_3kapi",
-      "aciklama": "Tezgah tipi buzdolabı, 3 kapılı",
+      "aciklama": "Tezgah tipi buzdolabı, 3 kapılı — varsayılan: Öztiryakiler 79E3.37NMV.00 (TAG 370 NMV, 187×70)",
       "kategori": "sogutma",
       "alt_kategori": null,
       "kaynak": "P1",
