@@ -4,11 +4,30 @@ export const DAVLUMBAZ_MARKA = "Equsto";
 /** EQUSTO katalog derinlikleri (cm) */
 export const EQUSTO_DAVLUMBAZ_DEPTHS_CM = [100, 120, 150, 200, 250] as const;
 
+/**
+ * EQUSTO 5 haneli orta blok: davlumbaz 200×150→20155; tezgah 130×70→13070 (son hane 70/85).
+ * @see scripts/_compare-davlumbaz-cafemarkt.mjs
+ */
+export function isEqustoDavlumbazMiddleBlock(mid: string): boolean {
+  if (!/^\d{5}$/.test(mid)) return false;
+  const tail = Number(mid.slice(3));
+  if (tail === 70 || tail === 85 || tail === 60 || tail === 75 || tail === 80) {
+    return false;
+  }
+  const width = Number(mid.slice(0, 3));
+  if (width < 120) return false;
+  return tail === 55 || tail === 5 || tail === 15 || tail === 25 || tail === 0;
+}
+
 export function isEqustoDavlumbazRow(sku: string | null | undefined, ad?: string | null): boolean {
   const s = String(sku ?? "").trim();
-  if (!/^EQUSTO\.\d{5}\./i.test(s)) return false;
-  if (ad && !/davlumbaz/i.test(ad)) return false;
-  return true;
+  const mid = s.match(/^EQUSTO\.(\d{5})\./i)?.[1];
+  if (!mid) return false;
+  if (ad && /tezgah|sehpa|evye|calisma|çalışma/i.test(ad) && !/davlumbaz/i.test(ad)) {
+    return false;
+  }
+  if (ad && /davlumbaz/i.test(ad)) return true;
+  return isEqustoDavlumbazMiddleBlock(mid);
 }
 
 export function isOztiDavlumbazSku(sku: string | null | undefined): boolean {

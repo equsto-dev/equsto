@@ -138,7 +138,13 @@ function urunTipiFromSatir(s: PfosEkipmanSatir): string {
 }
 
 function adetSayi(adet: number | string): number {
-  if (typeof adet === "number" && adet > 0) return Math.round(adet);
+  if (typeof adet === "number" && adet > 0) {
+    return Math.min(99, Math.round(adet));
+  }
+  if (typeof adet === "string" && adet !== "—") {
+    const n = parseInt(adet.replace(/[^\d]/g, ""), 10);
+    if (Number.isFinite(n) && n > 0) return Math.min(99, n);
+  }
   return 1;
 }
 

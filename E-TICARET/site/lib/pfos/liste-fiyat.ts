@@ -15,7 +15,7 @@ import { clearMatchProductCache } from "@/lib/pfos/core/match-product";
 import { formatPfosDisplayTanim } from "@/lib/pfos/parse-upload/sanitize-tanim";
 import { finalizeKalemlerForTeklif } from "@/lib/pfos/teklif/assign-poz";
 import { applyNakliyeMontajToKalemler } from "@/lib/pfos/teklif/nakliye-montaj";
-import { enrichPfosKalemlerGorsel } from "@/lib/pfos/core/katalog-gorsel";
+import { enrichPfosKalemlerGorsel, invalidateKatalogGorselCache } from "@/lib/pfos/core/katalog-gorsel";
 import { resolveTipKodu } from "@/lib/pfos/core/tip-kodu";
 import { TEKLIF_DEFAULT_FIYAT_STRATEJISI } from "@/lib/pfos/teklif/teklif-policy";
 import type {
@@ -72,6 +72,7 @@ export async function calculateListeQuote(
   input: ListeFiyatInput,
 ): Promise<PFOSResponse> {
   clearMatchProductCache();
+  invalidateKatalogGorselCache();
   const fiyatStratejisi =
     input.fiyatStratejisi ?? TEKLIF_DEFAULT_FIYAT_STRATEJISI;
   const sehir = input.sehir?.trim() || "İstanbul";

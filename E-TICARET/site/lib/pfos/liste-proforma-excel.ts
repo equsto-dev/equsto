@@ -408,7 +408,7 @@ export function parseTabularProformaWorksheet(ws: Worksheet): PfosEkipmanSatir[]
         typeof raw === "number"
           ? Math.round(raw)
           : parseInt(String(raw ?? "").replace(/[^\d]/g, ""), 10);
-      if (Number.isFinite(n) && n > 0) adet = n;
+      if (Number.isFinite(n) && n > 0) adet = Math.min(99, n);
     }
 
     const harf = poz.charAt(0).toUpperCase();
