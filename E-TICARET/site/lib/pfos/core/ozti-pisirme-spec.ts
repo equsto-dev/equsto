@@ -98,7 +98,11 @@ export function preferredOztiPisirmeSkus(
     return preferredOztiOcakSkus(referansIsim, olcu, notlar);
   }
   if (family === "fritoz") {
+    if (/cift|çift|iki\s*hazne|2\s*[x×]\s*\d+\s*lt|12\s*lt\s*\+/.test(refN)) {
+      return ["7856.GN120.08", "7856.GN12S.08"];
+    }
     if (w >= 75 && is900) return ["7856.EF8DS.08", "7856.EF10D.S0"];
+    if (w >= 75 && is730) return ["7856.N1.80703.11", "7856.N1.40703.11"];
     return ["7856.GN120.08", "7856.GN12S.08", "7856.GN23S.10"];
   }
   if (family === "izgara") {
