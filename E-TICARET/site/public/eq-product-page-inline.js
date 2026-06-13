@@ -596,14 +596,27 @@ window.searchFilter = window.searchFilter || function () {};
 
     function isInoksanCatalogRow(raw) {
       if (!raw) return false;
-      var sku = String(raw.sku || raw.urun_kodu || raw.model || "")
+      var sku = String(raw.sku || raw.urun_kodu || raw.stok_no || raw.model || "")
         .trim()
         .toUpperCase();
       if (/^INO-/.test(sku)) return true;
-      var id = String(raw.id || "");
+      var id = String(raw.id || "").toLowerCase();
       if (id.indexOf("inoksan__") === 0) return true;
-      var b = String(raw.brand || raw.oem_brand || "").toLocaleLowerCase("tr");
+      var kaynak = String(raw.kaynak || raw.kaynak_fiyat_listesi || "").toLocaleLowerCase("tr-TR");
+      if (kaynak.indexOf("inoksan") >= 0) return true;
+      var mk = String(raw.marka_kodu || raw.equsto_kod || "").toUpperCase();
+      if (mk.indexOf("INOKSAN") >= 0 || mk.indexOf("İNOKSAN") >= 0) return true;
+      if (raw.inoksan_shop_description || raw.inoksan_description_at || raw.inoksan_url) return true;
+      var b = String(raw.brand || raw.oem_brand || "").toLocaleLowerCase("tr-TR");
       return b.indexOf("inoksan") >= 0;
+    }
+
+    function inoksanIsHeadingLine(line) {
+      var t = String(line || "")
+        .replace(/^[•\-–—*·]+\s*/, "")
+        .trim()
+        .toLocaleLowerCase("tr-TR");
+      return t === "genel özellikler" || t === "teknik özellikler" || /^genel\s+özellikler\b/.test(t);
     }
 
     function decodeHtmlEntitiesPdp(s) {
@@ -632,6 +645,8 @@ window.searchFilter = window.searchFilter || function () {};
             Iuml: "İ",
             nbsp: " ",
             middot: "·",
+            deg: "°",
+            sup2: "²",
           };
           return Object.prototype.hasOwnProperty.call(map, name) ? map[name] : "&" + name + ";";
         });
@@ -643,10 +658,15 @@ window.searchFilter = window.searchFilter || function () {};
       );
       if (!raw) return [];
       var general = raw.split(/TEKNİK\s*ÖZELLİKLER/i)[0].trim();
-      general = general.replace(/^genel\s*özellikler\s*/i, "").trim();
+      general = general
+        .replace(/^[•\-–—*·]+\s*/g, "")
+        .replace(/^genel\s*özellikler\s*/i, "")
+        .trim();
       var parts = [];
       if (general.indexOf(" * ") >= 0) {
         parts = general.split(/\s*\*\s+/);
+      } else if (/\n\s*[•·\-–—*]/.test(general)) {
+        parts = general.split(/\n\s*[•·\-–—*]\s*/);
       } else {
         parts = general.split(/\r?\n/);
       }
@@ -657,7 +677,7 @@ window.searchFilter = window.searchFilter || function () {};
             .trim();
         })
         .filter(function (l) {
-          return l.length > 2 && !/^genel\s*özellikler$/i.test(l);
+          return l.length > 2 && !inoksanIsHeadingLine(l) && l.indexOf(" * ") < 0;
         });
     }
 
@@ -744,6 +764,18 @@ window.searchFilter = window.searchFilter || function () {};
       if (ref.label) temel.push(__pdpT("pdp.category_prefix", "Kategori:") + " " + ref.label);
       var dim = formatOlculerLinePdp(x);
       if (dim) temel.push(__pdpT("pdp.dims_prefix", "Ölçüler:") + " " + dim);
+
+      (Array.isArray(x.teknik_ozellikler) ? x.teknik_ozellikler : []).forEach(function (ln) {
+        var t = decodeHtmlEntitiesPdp(String(ln || "").trim());
+        if (!t || t.indexOf(":") < 0 || t.length > 120) return;
+        if (inoksanIsHeadingLine(t) || t.indexOf(" * ") >= 0) return;
+        var key = t.split(":")[0].trim().toLocaleLowerCase("tr-TR");
+        if (/^genel\s|^teknik\s/.test(key)) return;
+        if (/elektrik|güç|guc|voltaj|frekans|fan motor|buhar|gaz|doğalgaz|lpg|mbar|tüketim|brülör|brulor|su bas|su gir|su tük|drenaj|^su\s/.test(key)) {
+          return;
+        }
+        if (temel.indexOf(t) < 0) temel.push(t);
+      });
 
       var acc = "";
       if (temel.length) {
@@ -2580,6 +2612,49 @@ window.searchFilter = window.searchFilter || function () {};
       return /^(?:ÖZTİRYAKİLER|OZTIRYAKILER|Öztiryakiler|Oztiryakiler)(?:\s+(?:Endüstriyel\s+Mutfak|ENDÜSTRIYEL\s+MUTFAK|Endustriyel\s+Mutfak|ENDUSTRIYEL\s+MUTFAK))?$/i.test(b);
     }
 
+    function isOztiCatalogRow(x) {
+      if (!x) return false;
+      if (x.ozti_web_description || x.ozti_description_at || x.ozti_web_url) return true;
+      if (isOztiEqustoBrand(x.brand)) return true;
+      var id = String(x.id || "").toLowerCase();
+      if (id.indexOf("oztiryakiler-endustriyel-mutfak__") === 0) return true;
+      var kaynak = String(x.kaynak || x.kaynak_fiyat_listesi || "").toLowerCase();
+      return kaynak.indexOf("ozti") >= 0;
+    }
+
+    function oztiDescriptionBullets(x) {
+      var raw = decodeHtmlEntitiesPdp(
+        String(x.ozti_web_description || x.description || "").trim()
+      );
+      if (!raw) return [];
+      return raw
+        .split(/\r?\n/)
+        .map(function (l) {
+          return String(l || "")
+            .replace(/^[•\-–—*·]+\s*/, "")
+            .trim();
+        })
+        .filter(function (l) {
+          return l.length > 3;
+        });
+    }
+
+    function renderOztiDescriptionCol(x) {
+      var bullets = oztiDescriptionBullets(x);
+      if (!bullets.length) return "";
+      return renderEpdpDocsPanel(
+        __pdpT("pdp.product_description", "Ürün açıklaması"),
+        '<div class="eq-ozti-desc-panel">' +
+          '<ul class="eq-specs-list">' +
+          bullets
+            .map(function (l) {
+              return "<li>" + esc(l) + "</li>";
+            })
+            .join("") +
+          "</ul></div>"
+      );
+    }
+
     function pdpVisibleBrand(brand) {
       if (!brand || isOztiEqustoBrand(brand)) return "";
       return String(brand).trim();
@@ -2603,11 +2678,13 @@ window.searchFilter = window.searchFilter || function () {};
 
     function pdpLeadParagraph(x) {
       if (isCaglayanRefrigeration(x)) return caglayanLeadParagraph(x);
-      if (isInoksanCatalogRow(x) && inoksanDescriptionBullets(x).length) return "";
       if (isInoksanCatalogRow(x)) {
+        if (inoksanDescriptionBullets(x).length) return "";
         var inoLead = inoksanLeadLine(x);
-        if (inoLead) return inoLead;
+        if (inoLead && !inoksanIsHeadingLine(inoLead)) return inoLead;
+        return "";
       }
+      if (isOztiCatalogRow(x) && oztiDescriptionBullets(x).length) return "";
       var desc =
         window.eqLang === "en" && x.descriptionEn && String(x.descriptionEn).trim()
           ? String(x.descriptionEn).trim()
@@ -2671,7 +2748,8 @@ window.searchFilter = window.searchFilter || function () {};
       );
     }
 
-    function renderEpdpBuybox(x, cartU) {
+    function renderEpdpBuybox(x, cartU, opts) {
+      opts = opts || null;
       var parts = buyboxPriceParts(x);
       var pfosHref = eqHtmlUrl(typeof window.equstoUrl === "function" ? window.equstoUrl("pfos") : "pfos.html");
       var waMsg = pdpWhatsAppPrefill(x);
@@ -2700,8 +2778,41 @@ window.searchFilter = window.searchFilter || function () {};
             esc(__pdpT("pdp.add_to_cart_cmf", "Sepete Ekle")) +
             "</button>"
           : "";
+      var actionsHtml =
+        '<div class="eq-cmf-actions eq-cmf-actions--primary">' +
+        cartBtnSolid +
+        '<button type="button" class="eq-cmf-btn-outline eq-cmf-btn--pay">' +
+        '<span class="eq-cmf-btn-outline__icon" aria-hidden="true">' +
+        '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>' +
+        "</span>" +
+        esc(__pdpT("pdp.payment_options", "Ödeme Seçenekleri")) +
+        "</button></div>" +
+        '<div class="eq-cmf-actions eq-cmf-actions--secondary">' +
+        '<a class="eq-cmf-btn eq-cmf-btn--pfos" href="' +
+        esc(pfosHref) +
+        '">' +
+        esc(__pdpT("nav.pfos", "Proje Fabrikası")) +
+        "</a>" +
+        '<button type="button" class="eq-cmf-btn-outline eq-cmf-btn--wa" data-eq-wa-msg="' +
+        esc(waMsg) +
+        '">' +
+        '<span class="eq-cmf-btn-outline__icon" aria-hidden="true">' +
+        '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492l4.587-1.452A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.378l-.357-.212-3.064.972.998-2.988-.233-.375A9.818 9.818 0 0 1 2.182 12c0-5.422 4.396-9.818 9.818-9.818S21.818 6.578 21.818 12 17.422 21.818 12 21.818z"/></svg>' +
+        "</span>" +
+        esc(__pdpT("pdp.whatsapp_ask", "Whatsapp ile Soru Sor")) +
+        "</button></div>";
+      var actionsBlock =
+        opts && opts.inoksanDescHtml
+          ? '<div class="eq-inoksan-buy-row"><div class="eq-inoksan-buy-row__actions">' +
+            actionsHtml +
+            "</div><div class=\"eq-inoksan-buy-row__desc\">" +
+            opts.inoksanDescHtml +
+            "</div></div>"
+          : actionsHtml;
       return (
-        '<div class="eq-epdp-buybox eq-cmf-buybox" aria-label="' +
+        '<div class="eq-epdp-buybox eq-cmf-buybox' +
+        (opts && opts.inoksanDescHtml ? " eq-cmf-buybox--inoksan" : "") +
+        '" aria-label="' +
         esc(__pdpT("pdp.buybox_aria", "Satın al")) +
         '">' +
         '<div class="eq-cmf-topbar">' +
@@ -2729,28 +2840,7 @@ window.searchFilter = window.searchFilter || function () {};
         '">+</button>' +
         "</div>" +
         "</div>" +
-        '<div class="eq-cmf-actions eq-cmf-actions--primary">' +
-        cartBtnSolid +
-        '<button type="button" class="eq-cmf-btn-outline eq-cmf-btn--pay">' +
-        '<span class="eq-cmf-btn-outline__icon" aria-hidden="true">' +
-        '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>' +
-        "</span>" +
-        esc(__pdpT("pdp.payment_options", "Ödeme Seçenekleri")) +
-        "</button></div>" +
-        '<div class="eq-cmf-actions eq-cmf-actions--secondary">' +
-        '<a class="eq-cmf-btn eq-cmf-btn--pfos" href="' +
-        esc(pfosHref) +
-        '">' +
-        esc(__pdpT("nav.pfos", "Proje Fabrikası")) +
-        "</a>" +
-        '<button type="button" class="eq-cmf-btn-outline eq-cmf-btn--wa" data-eq-wa-msg="' +
-        esc(waMsg) +
-        '">' +
-        '<span class="eq-cmf-btn-outline__icon" aria-hidden="true">' +
-        '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492l4.587-1.452A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.378l-.357-.212-3.064.972.998-2.988-.233-.375A9.818 9.818 0 0 1 2.182 12c0-5.422 4.396-9.818 9.818-9.818S21.818 6.578 21.818 12 17.422 21.818 12 21.818z"/></svg>' +
-        "</span>" +
-        esc(__pdpT("pdp.whatsapp_ask", "Whatsapp ile Soru Sor")) +
-        "</button></div>" +
+        actionsBlock +
         '<div class="eq-cmf-pay-panel" hidden>' +
         "<ul>" +
         "<li>" +
@@ -2880,6 +2970,10 @@ window.searchFilter = window.searchFilter || function () {};
     }
 
     function renderEpdpDocsCol(x) {
+      if (isOztiCatalogRow(x)) {
+        var oztiDesc = renderOztiDescriptionCol(x);
+        if (oztiDesc) return oztiDesc;
+      }
       if (isCaglayanRefrigeration(x)) {
         return renderCaglayanDocsCol(x).replace(/eq-caglayan-drawings/g, "eq-epdp-drawings");
       }
@@ -3117,7 +3211,9 @@ window.searchFilter = window.searchFilter || function () {};
         root.className =
           "eq-product-main eq-epdp" +
           (isCaglayanRefrigeration(x) ? " eq-caglayan-pdp" : "") +
-          (isElectroluxProfessional(x) ? " eq-epdp--electrolux" : "");
+          (isElectroluxProfessional(x) ? " eq-epdp--electrolux" : "") +
+          (isInoksanCatalogRow(x) ? " eq-epdp--inoksan" : "") +
+          (isOztiCatalogRow(x) ? " eq-epdp--ozti" : "");
       }
 
       /* Canonical + OG meta güncellemeleri */
@@ -3340,8 +3436,11 @@ window.searchFilter = window.searchFilter || function () {};
           var lead = pdpLeadParagraph(x);
           return lead ? '<p class="eq-epdp-lead eq-caglayan-lead">' + esc(lead) + "</p>" : "";
         })() +
-        renderEpdpBuybox(x, cartU) +
-        (isInoksanCatalogRow(x) ? renderInoksanHeroDescription(x) : "") +
+        (function () {
+          if (!isInoksanCatalogRow(x)) return renderEpdpBuybox(x, cartU);
+          var inoDesc = renderInoksanHeroDescription(x);
+          return renderEpdpBuybox(x, cartU, inoDesc ? { inoksanDescHtml: inoDesc } : null);
+        })() +
         (pdf && /\.pdf/i.test(pdf)
           ? '<div class="eq-epdp-cta eq-caglayan-cta">' +
             '<a class="eq-caglayan-btn" href="' +

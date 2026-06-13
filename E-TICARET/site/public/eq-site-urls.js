@@ -996,7 +996,7 @@
     );
   }
 
-  var EQ_CATALOG_IMG_V = "20260613inoksan-pdp-v2";
+  var EQ_CATALOG_IMG_V = "20260613inoksan-pdp-v4";
 
   function withCatalogImgV(url) {
     if (
