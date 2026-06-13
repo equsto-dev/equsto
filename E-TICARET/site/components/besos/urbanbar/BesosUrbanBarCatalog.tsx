@@ -9,6 +9,7 @@ import {
   filterUrbanBarProducts,
   productMatchesUrbanBarCapacities,
 } from "@/lib/besos/urbanbar/catalog";
+import BesosUrbanBarPowered from "@/components/besos/urbanbar/BesosUrbanBarPowered";
 import type { BesosLocale } from "@/lib/besos/locale";
 import type { BesosUrbanBarSectionCatalog } from "@/lib/besos/urbanbar/types";
 
@@ -24,7 +25,6 @@ type Props = {
 const UI = {
   searchPh: { tr: "Urban Bar ürünlerinde ara…", en: "Search Urban Bar products…" },
   products: { tr: "ürün", en: "products" },
-  source: { tr: "Urban Bar · equsto.com", en: "Urban Bar · equsto.com" },
   view: { tr: "İncele", en: "View" },
   noMatch: { tr: "Aramanızla eşleşen ürün bulunamadı.", en: "No products match your search." },
   loadMore: { tr: "Daha fazla ürün yükle", en: "Load more products" },
@@ -328,7 +328,7 @@ export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) 
     <section className="ub-besos-catalog" id="ub-catalog">
       <div className="ub-besos-catalog-head">
         <div className="ub-besos-catalog-meta">
-          <span className="ub-besos-catalog-brand">{ui("source", locale)}</span>
+          <BesosUrbanBarPowered className="ub-besos-powered--meta" />
           <span className="ub-besos-catalog-count">
             {visibleCount} {ui("products", locale)}
           </span>
