@@ -1112,6 +1112,7 @@
     "spec_group_electric": "Elektrik",
     "spec_group_gas": "Gaz",
     "spec_group_cooling": "Çalışma koşulları",
+    "spec_group_water": "Su",
     "spec_group_other": "Diğer",
     "inner_dims_prefix": "İç ölçüler: {dim}.",
     "besos_loader_waiting": "Besos modül yükleyici bekleniyor… Sayfayı yenileyin."
