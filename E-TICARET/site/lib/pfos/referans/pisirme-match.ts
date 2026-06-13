@@ -16,6 +16,7 @@ import {
   scoreOztiOcakRow,
 } from "../core/ozti-pisirme-spec";
 import { isKombiKonveksiyonReferans } from "./firin-match";
+import { referansKatalogCeliski } from "./referans-nitelikleri";
 import { extractOlcuFromNotlar } from "./yer-izgara-match";
 
 function norm(s: string): string {
@@ -26,6 +27,39 @@ function norm(s: string): string {
     .replace(/ı/g, "i")
     .replace(/\s+/g, " ")
     .trim();
+}
+
+/** Öztiryakiler pişirme eşlemesi — Atalay marka kilidi ve ızgara çeşidi kontrolü */
+export function oztiPisirmeKatalogUyumsuz(
+  sablonIsim: string,
+  katalogAd: string,
+  notlar?: string | null,
+  katalogSku?: string | null,
+): boolean {
+  if (referansKatalogCeliski(sablonIsim, katalogAd, notlar)) return true;
+  const s = norm(sablonIsim);
+  const k = norm(`${katalogAd} ${katalogSku ?? ""}`);
+  if (!s || !k) return false;
+
+  if (/plate\s*izgar/.test(s) && !/grill plate|plate duz|plate düz/.test(k)) {
+    if (/lavatas|dokum izgar|kuzine|firinli|elektrik|ocak/.test(k)) return true;
+  }
+  if (/dokum\s*izgar/.test(s) && !/dokum izgar/.test(k)) {
+    if (/lavatas|grill plate|plate duz|kuzine|firinli|elektrik/.test(k)) return true;
+  }
+  if (/lavatas/.test(s) && !/lavatas/.test(k)) {
+    if (/dokum izgar|grill plate|plate duz|kuzine|firinli/.test(k)) return true;
+  }
+  if (/izgar/.test(s) && /kuzine|firinli|elektrikli/.test(k) && !/izgar/.test(k)) {
+    return true;
+  }
+  if (/gazli|gazlı|\bgaz\b/.test(s) && /elektrik/.test(k) && !/gaz/.test(k)) {
+    return true;
+  }
+  if (/elektrik/.test(s) && /gazli|gazlı|\bgaz\b/.test(k) && !/elektrik/.test(k)) {
+    return true;
+  }
+  return false;
 }
 
 export function isPisirmeReferans(isim: string): boolean {
@@ -138,8 +172,10 @@ function rowMatchesFamily(row: AdminUrunRow, family: PisirmeFamily): boolean {
       );
     case "izgara":
       return (
-        (cat.includes("izgar") || /izgar|plate|lavash|charbroil/.test(ad)) &&
-        !/patates\s*dinlendir|fritoz|fritöz/.test(ad)
+        (cat.includes("izgar") ||
+          /izgar|lavash|charbroil|grill plate|plate duz/.test(ad)) &&
+        !/patates\s*dinlendir|fritoz|fritöz|kuzine|firinli|elektrikli\s*4/.test(ad) &&
+        !(/plate/.test(ad) && !/izgar|grill plate|plate duz/.test(ad))
       );
     case "ocak":
       return (
@@ -189,10 +225,15 @@ function scoreOztiPisirmeRow(
   referansIsim: string,
   preferred: string[],
   notlar?: string | null,
-  uyumsuzlukKontrol?: (sablon: string, katName: string, notes?: string | null, sku?: string | null) => boolean,
+  uyumsuzlukKontrol: (
+    sablon: string,
+    katName: string,
+    notes?: string | null,
+    sku?: string | null,
+  ) => boolean = oztiPisirmeKatalogUyumsuz,
 ): number {
   if (!isOztiPisirmeRow(row)) return -9999;
-  if (uyumsuzlukKontrol && uyumsuzlukKontrol(referansIsim, row.ad, notlar, row.sku)) return -9999;
+  if (uyumsuzlukKontrol(referansIsim, row.ad, notlar, row.sku)) return -9999;
   if (family && !rowMatchesFamily(row, family)) return -9999;
 
   let score = 80;
@@ -220,6 +261,12 @@ function scoreOztiPisirmeRow(
     score += 30;
   }
   if (family === "izgara" && /gaz|gazli|gazlı/.test(refN) && /e agi|gaz/.test(ad)) score += 30;
+  if (family === "izgara") {
+    if (/kuzine|firinli|elektrikli/.test(ad) && !/izgar/.test(ad)) score -= 5000;
+    if (/plate\s*izgar/.test(refN) && /grill plate|plate duz/.test(ad)) score += 120;
+    if (/dokum\s*izgar/.test(refN) && /dokum izgar/.test(ad)) score += 120;
+    if (/lavatas/.test(refN) && /lavatas/.test(ad)) score += 120;
+  }
   if (family === "ocak") {
     const ocakScore = scoreOztiOcakRow(row, referansIsim, olcu, notlar, preferred);
     if (ocakScore < 0) return ocakScore;
@@ -240,8 +287,6 @@ export async function matchPisirmeByReferans(
 ): Promise<EslesmisUrun | null> {
   if (isKombiKonveksiyonReferans(isim, urunTipi)) return null;
 
-  const { referansKatalogUyumsuz } = await import("./referans-eslestirme");
-
   const olcu =
     olcuRaw.trim() ||
     extractOlcuFromNotlar(notlar) ||
@@ -260,7 +305,7 @@ export async function matchPisirmeByReferans(
         isOztiPisirmeRow(r) &&
         norm(r.sku ?? "") === norm(sku),
     );
-    if (exact && rowMatchesFamily(exact, family) && !referansKatalogUyumsuz(isim, exact.ad, notlar, exact.sku)) {
+    if (exact && rowMatchesFamily(exact, family) && !oztiPisirmeKatalogUyumsuz(isim, exact.ad, notlar, exact.sku)) {
       const matched = katalogRowToEslesmis(exact, {
         linkMarka: OZTI_MARKA,
         sablonIsim: isim,
@@ -282,7 +327,7 @@ export async function matchPisirmeByReferans(
   const scored = rows
     .map((row) => ({
       row,
-      score: scoreOztiPisirmeRow(row, family, olcu, isim, preferred, notlar, referansKatalogUyumsuz),
+      score: scoreOztiPisirmeRow(row, family, olcu, isim, preferred, notlar),
     }))
     .filter((x) => x.score >= 100)
     .sort((a, b) => b.score - a.score);

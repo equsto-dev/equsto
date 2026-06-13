@@ -246,6 +246,12 @@ PRESERVE_KEYS = (
     "inoksan_image_url",
     "inoksan_enriched",
     "inoksan_enriched_at",
+    "description",
+    "inoksan_shop_description",
+    "inoksan_shop_url",
+    "inoksan_shop_sku",
+    "inoksan_description_source",
+    "inoksan_description_at",
 )
 
 

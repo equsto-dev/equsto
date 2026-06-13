@@ -324,3 +324,120 @@ export function pickUrbanBarRelatedProducts(
   );
   return [...sameGroup, ...sameSection].slice(0, limit);
 }
+
+function translateMaterial(mat: string, locale: BesosLocale): string {
+  if (locale === "en") return mat;
+  const lower = mat.toLowerCase().trim();
+  if (lower === "glass") return "Cam";
+  if (lower === "lead free crystal") return "Kurşunsuz Kristal";
+  if (lower === "metal") return "Metal";
+  if (lower === "steel" || lower === "stainless steel") return "Paslanmaz Çelik";
+  if (lower === "plastic") return "Plastik";
+  if (lower === "wood") return "Ahşap";
+  if (lower === "silicone") return "Silikon";
+  if (lower === "paper") return "Kağıt";
+  if (lower === "stoneware") return "Seramik";
+  if (lower === "cork & metal") return "Mantar ve Metal";
+  if (lower === "glass & wicker") return "Hasır ve Cam";
+  if (lower === "recycled glass") return "Geri Dönüştürülmüş Cam";
+  if (lower === "fabric") return "Kumaş";
+  return mat;
+}
+
+function formatCollectionLabel(key: string, locale: BesosLocale): string {
+  let clean = key
+    .replace(/-design$/i, "")
+    .replace(/-glassware$/i, "")
+    .replace(/-barware$/i, "")
+    .replace(/-collection$/i, "")
+    .replace(/-/g, " ");
+  clean = clean
+    .split(" ")
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
+  return clean;
+}
+
+export type UrbanBarMaterialFacet = {
+  key: string;
+  label: string;
+  count: number;
+};
+
+export function buildUrbanBarMaterialFacets(
+  products: BesosUrbanBarProduct[],
+  locale: BesosLocale = "tr"
+): UrbanBarMaterialFacet[] {
+  const counts = new Map<string, number>();
+  for (const p of products) {
+    const matSpec = p.specifications?.find((s) => s.key === "Material");
+    if (matSpec && matSpec.value) {
+      const mat = matSpec.value.trim();
+      if (mat) {
+        counts.set(mat, (counts.get(mat) || 0) + 1);
+      }
+    }
+  }
+  return [...counts.entries()]
+    .map(([key, count]) => ({
+      key,
+      label: translateMaterial(key, locale),
+      count,
+    }))
+    .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
+}
+
+export function productMatchesUrbanBarMaterial(
+  product: BesosUrbanBarProduct,
+  activeMaterials: ReadonlySet<string>
+): boolean {
+  if (!activeMaterials.size) return true;
+  const matSpec = product.specifications?.find((s) => s.key === "Material");
+  if (!matSpec || !matSpec.value) return false;
+  return activeMaterials.has(matSpec.value.trim());
+}
+
+export type UrbanBarCollectionFacet = {
+  key: string;
+  label: string;
+  count: number;
+};
+
+export function buildUrbanBarCollectionFacets(
+  products: BesosUrbanBarProduct[],
+  locale: BesosLocale = "tr"
+): UrbanBarCollectionFacet[] {
+  const counts = new Map<string, number>();
+  for (const p of products) {
+    if (p.collections) {
+      for (const col of p.collections) {
+        const lower = col.toLowerCase();
+        if (
+          /all|new|b2b|b2c|restricted|favour|fabor|some-of-our|barware|glassware|pos|point-of-sale|branded/i.test(
+            lower
+          )
+        ) {
+          continue;
+        }
+        counts.set(col, (counts.get(col) || 0) + 1);
+      }
+    }
+  }
+  return [...counts.entries()]
+    .map(([key, count]) => ({
+      key,
+      label: formatCollectionLabel(key, locale),
+      count,
+    }))
+    .filter((c) => c.count > 1)
+    .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
+}
+
+export function productMatchesUrbanBarCollection(
+  product: BesosUrbanBarProduct,
+  activeCollections: ReadonlySet<string>
+): boolean {
+  if (!activeCollections.size) return true;
+  if (!product.collections) return false;
+  return product.collections.some((c) => activeCollections.has(c));
+}

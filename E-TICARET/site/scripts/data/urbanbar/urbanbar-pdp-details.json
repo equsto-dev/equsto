@@ -1,6 +1,6 @@
 {
   "source": "https://www.urbanbar.com",
-  "enrichedAt": "2026-06-13T00:33:27.959Z",
+  "enrichedAt": "2026-06-13T01:27:40.093Z",
   "productCount": 1102,
   "byHandle": {
     "ginza-stone-tin-on-tin-cocktail-shaker-copy-1": {
@@ -107,7 +107,7 @@
     "1910-alto-cocktail-17cl-b4": {
       "handle": "1910-alto-cocktail-17cl-b4",
       "url": "https://www.urbanbar.com/products/1910-alto-cocktail-17cl-b4",
-      "enrichedAt": "2026-06-13T00:31:39.432Z",
+      "enrichedAt": "2026-06-13T01:26:59.424Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -699,7 +699,7 @@
     "georgian-dash-bottle-copper-band-22cl": {
       "handle": "georgian-dash-bottle-copper-band-22cl",
       "url": "https://www.urbanbar.com/products/georgian-dash-bottle-copper-band-22cl",
-      "enrichedAt": "2026-06-13T00:31:40.868Z",
+      "enrichedAt": "2026-06-13T01:26:59.482Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -709,7 +709,7 @@
     "georgian-bitters-bottle-22cl": {
       "handle": "georgian-bitters-bottle-22cl",
       "url": "https://www.urbanbar.com/products/georgian-bitters-bottle-22cl",
-      "enrichedAt": "2026-06-13T00:31:40.917Z",
+      "enrichedAt": "2026-06-13T01:26:59.430Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -718,28 +718,58 @@
     },
     "gin-balloon-mixer-glass-60cl": {
       "handle": "gin-balloon-mixer-glass-60cl",
-      "error": "HTTP 429"
+      "url": "https://www.urbanbar.com/products/gin-balloon-mixer-glass-60cl",
+      "enrichedAt": "2026-06-13T01:26:59.428Z",
+      "specifications": [],
+      "specificationsHtml": "",
+      "productCareHtml": "",
+      "safetyLabelsHtml": "",
+      "inStock": false
     },
     "handmade-crystal-qubo-double-old-fashioned-glass-30cl": {
       "handle": "handmade-crystal-qubo-double-old-fashioned-glass-30cl",
-      "error": "HTTP 429"
+      "url": "https://www.urbanbar.com/products/handmade-crystal-qubo-double-old-fashioned-glass-30cl",
+      "enrichedAt": "2026-06-13T01:26:59.434Z",
+      "specifications": [],
+      "specificationsHtml": "",
+      "productCareHtml": "",
+      "safetyLabelsHtml": "",
+      "inStock": false
     },
     "handmade-crystal-cubana-double-old-fashioned-glass-35cl": {
       "handle": "handmade-crystal-cubana-double-old-fashioned-glass-35cl",
-      "error": "HTTP 429"
+      "url": "https://www.urbanbar.com/products/handmade-crystal-cubana-double-old-fashioned-glass-35cl",
+      "enrichedAt": "2026-06-13T01:26:59.463Z",
+      "specifications": [],
+      "specificationsHtml": "",
+      "productCareHtml": "",
+      "safetyLabelsHtml": "",
+      "inStock": false
     },
     "hammer-jigger-25-50ml": {
       "handle": "hammer-jigger-25-50ml",
-      "error": "HTTP 429"
+      "url": "https://www.urbanbar.com/products/hammer-jigger-25-50ml",
+      "enrichedAt": "2026-06-13T01:27:00.103Z",
+      "specifications": [],
+      "specificationsHtml": "",
+      "productCareHtml": "",
+      "safetyLabelsHtml": "",
+      "inStock": false
     },
     "coley-jigger-rose-gold-25-50ml": {
       "handle": "coley-jigger-rose-gold-25-50ml",
-      "error": "HTTP 429"
+      "url": "https://www.urbanbar.com/products/coley-jigger-rose-gold-25-50ml",
+      "enrichedAt": "2026-06-13T01:27:00.121Z",
+      "specifications": [],
+      "specificationsHtml": "",
+      "productCareHtml": "",
+      "safetyLabelsHtml": "",
+      "inStock": false
     },
     "coley-jigger-25-50ml": {
       "handle": "coley-jigger-25-50ml",
       "url": "https://www.urbanbar.com/products/coley-jigger-25-50ml",
-      "enrichedAt": "2026-06-13T00:31:41.711Z",
+      "enrichedAt": "2026-06-13T01:27:00.006Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -748,12 +778,18 @@
     },
     "seal-bottle-opener-gold": {
       "handle": "seal-bottle-opener-gold",
-      "error": "HTTP 429"
+      "url": "https://www.urbanbar.com/products/seal-bottle-opener-gold",
+      "enrichedAt": "2026-06-13T01:27:00.048Z",
+      "specifications": [],
+      "specificationsHtml": "",
+      "productCareHtml": "",
+      "safetyLabelsHtml": "",
+      "inStock": false
     },
     "scallop-straw-stirrer-18cm-x6": {
       "handle": "scallop-straw-stirrer-18cm-x6",
       "url": "https://www.urbanbar.com/products/scallop-straw-stirrer-18cm-x6",
-      "enrichedAt": "2026-06-13T00:31:41.969Z",
+      "enrichedAt": "2026-06-13T01:27:00.157Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -763,7 +799,7 @@
     "scallop-straw-stirrer-14cm-x6": {
       "handle": "scallop-straw-stirrer-14cm-x6",
       "url": "https://www.urbanbar.com/products/scallop-straw-stirrer-14cm-x6",
-      "enrichedAt": "2026-06-13T00:31:41.796Z",
+      "enrichedAt": "2026-06-13T01:27:00.148Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -773,7 +809,7 @@
     "scallop-cocktail-pick-11cm-x6": {
       "handle": "scallop-cocktail-pick-11cm-x6",
       "url": "https://www.urbanbar.com/products/scallop-cocktail-pick-11cm-x6",
-      "enrichedAt": "2026-06-13T00:31:41.797Z",
+      "enrichedAt": "2026-06-13T01:27:00.624Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -783,7 +819,7 @@
     "mr-slim-jigger-gold-30-45ml": {
       "handle": "mr-slim-jigger-gold-30-45ml",
       "url": "https://www.urbanbar.com/products/mr-slim-jigger-gold-30-45ml",
-      "enrichedAt": "2026-06-13T00:31:41.862Z",
+      "enrichedAt": "2026-06-13T01:27:00.636Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -793,7 +829,7 @@
     "pro-copper-cocktail-garnish-tongs-27cm": {
       "handle": "pro-copper-cocktail-garnish-tongs-27cm",
       "url": "https://www.urbanbar.com/products/pro-copper-cocktail-garnish-tongs-27cm",
-      "enrichedAt": "2026-06-13T00:31:41.889Z",
+      "enrichedAt": "2026-06-13T01:27:00.661Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -802,16 +838,28 @@
     },
     "aero-wine-measure-copper-175ml-ce": {
       "handle": "aero-wine-measure-copper-175ml-ce",
-      "error": "HTTP 429"
+      "url": "https://www.urbanbar.com/products/aero-wine-measure-copper-175ml-ce",
+      "enrichedAt": "2026-06-13T01:27:00.762Z",
+      "specifications": [],
+      "specificationsHtml": "",
+      "productCareHtml": "",
+      "safetyLabelsHtml": "",
+      "inStock": false
     },
     "rose-gold-calabrese-cocktail-shaker-90cl": {
       "handle": "rose-gold-calabrese-cocktail-shaker-90cl",
-      "error": "HTTP 429"
+      "url": "https://www.urbanbar.com/products/rose-gold-calabrese-cocktail-shaker-90cl",
+      "enrichedAt": "2026-06-13T01:27:00.814Z",
+      "specifications": [],
+      "specificationsHtml": "",
+      "productCareHtml": "",
+      "safetyLabelsHtml": "",
+      "inStock": false
     },
     "handmade-crystal-distillery-jug-58cl": {
       "handle": "handmade-crystal-distillery-jug-58cl",
       "url": "https://www.urbanbar.com/products/handmade-crystal-distillery-jug-58cl",
-      "enrichedAt": "2026-06-13T00:31:42.107Z",
+      "enrichedAt": "2026-06-13T01:27:00.780Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -821,7 +869,7 @@
     "gold-scallop-straw-stirrer-18cm-x6": {
       "handle": "gold-scallop-straw-stirrer-18cm-x6",
       "url": "https://www.urbanbar.com/products/gold-scallop-straw-stirrer-18cm-x6",
-      "enrichedAt": "2026-06-13T00:31:42.178Z",
+      "enrichedAt": "2026-06-13T01:27:01.197Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -831,7 +879,7 @@
     "rose-gold-drop-bar-spoon": {
       "handle": "rose-gold-drop-bar-spoon",
       "url": "https://www.urbanbar.com/products/rose-gold-drop-bar-spoon",
-      "enrichedAt": "2026-06-13T00:31:42.341Z",
+      "enrichedAt": "2026-06-13T01:27:01.259Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -841,7 +889,7 @@
     "nokogiri-ice-saw-42cm": {
       "handle": "nokogiri-ice-saw-42cm",
       "url": "https://www.urbanbar.com/products/nokogiri-ice-saw-42cm",
-      "enrichedAt": "2026-06-13T00:31:42.397Z",
+      "enrichedAt": "2026-06-13T01:27:01.276Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -851,7 +899,7 @@
     "victorinox-melon-baller-parisienne-scoop": {
       "handle": "victorinox-melon-baller-parisienne-scoop",
       "url": "https://www.urbanbar.com/products/victorinox-melon-baller-parisienne-scoop",
-      "enrichedAt": "2026-06-13T00:31:42.503Z",
+      "enrichedAt": "2026-06-13T01:27:01.447Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -861,7 +909,7 @@
     "gold-scallop-cocktail-pick-11cm": {
       "handle": "gold-scallop-cocktail-pick-11cm",
       "url": "https://www.urbanbar.com/products/gold-scallop-cocktail-pick-11cm",
-      "enrichedAt": "2026-06-13T00:31:42.540Z",
+      "enrichedAt": "2026-06-13T01:27:01.359Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -871,7 +919,7 @@
     "rose-gold-boston-cocktail-shaker": {
       "handle": "rose-gold-boston-cocktail-shaker",
       "url": "https://www.urbanbar.com/products/rose-gold-boston-cocktail-shaker",
-      "enrichedAt": "2026-06-13T00:31:42.546Z",
+      "enrichedAt": "2026-06-13T01:27:01.430Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -881,7 +929,7 @@
     "iris-plastic-tumbler-61cl": {
       "handle": "iris-plastic-tumbler-61cl",
       "url": "https://www.urbanbar.com/products/iris-plastic-tumbler-61cl",
-      "enrichedAt": "2026-06-13T00:31:42.592Z",
+      "enrichedAt": "2026-06-13T01:27:01.845Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -891,7 +939,7 @@
     "bitters-bottle-horizontal-cut-20cl-with-standard-dripper-ub3824": {
       "handle": "bitters-bottle-horizontal-cut-20cl-with-standard-dripper-ub3824",
       "url": "https://www.urbanbar.com/products/bitters-bottle-horizontal-cut-20cl-with-standard-dripper-ub3824",
-      "enrichedAt": "2026-06-13T00:31:42.809Z",
+      "enrichedAt": "2026-06-13T01:27:01.871Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -901,7 +949,7 @@
     "rose-gold-ginza-cup-57cl": {
       "handle": "rose-gold-ginza-cup-57cl",
       "url": "https://www.urbanbar.com/products/rose-gold-ginza-cup-57cl",
-      "enrichedAt": "2026-06-13T00:31:43.081Z",
+      "enrichedAt": "2026-06-13T01:27:01.921Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -911,7 +959,7 @@
     "rose-gold-ginza-can-75cl": {
       "handle": "rose-gold-ginza-can-75cl",
       "url": "https://www.urbanbar.com/products/rose-gold-ginza-can-75cl",
-      "enrichedAt": "2026-06-13T00:31:43.120Z",
+      "enrichedAt": "2026-06-13T01:27:02.006Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -921,7 +969,7 @@
     "leather-bartenders-roll": {
       "handle": "leather-bartenders-roll",
       "url": "https://www.urbanbar.com/products/leather-bartenders-roll",
-      "enrichedAt": "2026-06-13T00:31:43.023Z",
+      "enrichedAt": "2026-06-13T01:27:02.033Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -931,7 +979,7 @@
     "leather-kit-bag-brown": {
       "handle": "leather-kit-bag-brown",
       "url": "https://www.urbanbar.com/products/leather-kit-bag-brown",
-      "enrichedAt": "2026-06-13T00:31:43.163Z",
+      "enrichedAt": "2026-06-13T01:27:02.087Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -941,7 +989,7 @@
     "ub-pro-spoon": {
       "handle": "ub-pro-spoon",
       "url": "https://www.urbanbar.com/products/ub-pro-spoon",
-      "enrichedAt": "2026-06-13T00:31:43.198Z",
+      "enrichedAt": "2026-06-13T01:27:02.493Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -951,7 +999,7 @@
     "baron-yukiwa-shaker-round-top-50cl": {
       "handle": "baron-yukiwa-shaker-round-top-50cl",
       "url": "https://www.urbanbar.com/products/baron-yukiwa-shaker-round-top-50cl",
-      "enrichedAt": "2026-06-13T00:31:43.188Z",
+      "enrichedAt": "2026-06-13T01:27:02.517Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -961,7 +1009,7 @@
     "retro-margarita-engraved-28cl": {
       "handle": "retro-margarita-engraved-28cl",
       "url": "https://www.urbanbar.com/products/retro-margarita-engraved-28cl",
-      "enrichedAt": "2026-06-13T00:31:43.318Z",
+      "enrichedAt": "2026-06-13T01:27:02.586Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -971,7 +1019,7 @@
     "soho-diamond-old-fashioned-25cl": {
       "handle": "soho-diamond-old-fashioned-25cl",
       "url": "https://www.urbanbar.com/products/soho-diamond-old-fashioned-25cl",
-      "enrichedAt": "2026-06-13T00:31:43.766Z",
+      "enrichedAt": "2026-06-13T01:27:02.616Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -981,7 +1029,7 @@
     "ice-mixer-highball-41cl": {
       "handle": "ice-mixer-highball-41cl",
       "url": "https://www.urbanbar.com/products/ice-mixer-highball-41cl",
-      "enrichedAt": "2026-06-13T00:31:43.631Z",
+      "enrichedAt": "2026-06-13T01:27:02.627Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -991,7 +1039,7 @@
     "biloxi-gold-strainer-bar-spoon-34-5cm": {
       "handle": "biloxi-gold-strainer-bar-spoon-34-5cm",
       "url": "https://www.urbanbar.com/products/biloxi-gold-strainer-bar-spoon-34-5cm",
-      "enrichedAt": "2026-06-13T00:31:43.706Z",
+      "enrichedAt": "2026-06-13T01:27:02.642Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1001,7 +1049,7 @@
     "verdot-crystal-champagne-flute-20cl": {
       "handle": "verdot-crystal-champagne-flute-20cl",
       "url": "https://www.urbanbar.com/products/verdot-crystal-champagne-flute-20cl",
-      "enrichedAt": "2026-06-13T00:31:43.752Z",
+      "enrichedAt": "2026-06-13T01:27:03.173Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1011,7 +1059,7 @@
     "octagonal-boston-shaker-tin": {
       "handle": "octagonal-boston-shaker-tin",
       "url": "https://www.urbanbar.com/products/octagonal-boston-shaker-tin",
-      "enrichedAt": "2026-06-13T00:31:44.076Z",
+      "enrichedAt": "2026-06-13T01:27:03.184Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1021,7 +1069,7 @@
     "gold-boston-cocktail-shaker": {
       "handle": "gold-boston-cocktail-shaker",
       "url": "https://www.urbanbar.com/products/gold-boston-cocktail-shaker",
-      "enrichedAt": "2026-06-13T00:31:43.802Z",
+      "enrichedAt": "2026-06-13T01:27:03.110Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1031,7 +1079,7 @@
     "cone-old-fashioned-glass-29cl": {
       "handle": "cone-old-fashioned-glass-29cl",
       "url": "https://www.urbanbar.com/products/cone-old-fashioned-glass-29cl",
-      "enrichedAt": "2026-06-13T00:31:43.841Z",
+      "enrichedAt": "2026-06-13T01:27:03.227Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1041,7 +1089,7 @@
     "soho-julep-tumbler-34cl": {
       "handle": "soho-julep-tumbler-34cl",
       "url": "https://www.urbanbar.com/products/soho-julep-tumbler-34cl",
-      "enrichedAt": "2026-06-13T00:31:44.069Z",
+      "enrichedAt": "2026-06-13T01:27:03.245Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1051,7 +1099,7 @@
     "perfect-whisky-glass-28cl": {
       "handle": "perfect-whisky-glass-28cl",
       "url": "https://www.urbanbar.com/products/perfect-whisky-glass-28cl",
-      "enrichedAt": "2026-06-13T00:31:44.268Z",
+      "enrichedAt": "2026-06-13T01:27:03.212Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1060,28 +1108,16 @@
     },
     "muddler-bar-spoon-28cm-2-5ml-5ml": {
       "handle": "muddler-bar-spoon-28cm-2-5ml-5ml",
-      "url": "https://www.urbanbar.com/products/muddler-bar-spoon-28cm-2-5ml-5ml",
-      "enrichedAt": "2026-06-13T00:31:44.370Z",
-      "specifications": [],
-      "specificationsHtml": "",
-      "productCareHtml": "",
-      "safetyLabelsHtml": "",
-      "inStock": false
+      "error": "HTTP 429"
     },
     "mr-slim-jigger-gold-30-45": {
       "handle": "mr-slim-jigger-gold-30-45",
-      "url": "https://www.urbanbar.com/products/mr-slim-jigger-gold-30-45",
-      "enrichedAt": "2026-06-13T00:31:44.436Z",
-      "specifications": [],
-      "specificationsHtml": "",
-      "productCareHtml": "",
-      "safetyLabelsHtml": "",
-      "inStock": false
+      "error": "HTTP 429"
     },
     "strathspey-dram-glass": {
       "handle": "strathspey-dram-glass",
       "url": "https://www.urbanbar.com/products/strathspey-dram-glass",
-      "enrichedAt": "2026-06-13T00:31:44.478Z",
+      "enrichedAt": "2026-06-13T01:27:04.248Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1091,7 +1127,7 @@
     "aero-spoon-28cm": {
       "handle": "aero-spoon-28cm",
       "url": "https://www.urbanbar.com/products/aero-spoon-28cm",
-      "enrichedAt": "2026-06-13T00:31:44.485Z",
+      "enrichedAt": "2026-06-13T01:27:04.062Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1101,7 +1137,7 @@
     "georgian-dash-bottle-copper-band-etched-bitters-22cl-with-standard-dripper-ub3824": {
       "handle": "georgian-dash-bottle-copper-band-etched-bitters-22cl-with-standard-dripper-ub3824",
       "url": "https://www.urbanbar.com/products/georgian-dash-bottle-copper-band-etched-bitters-22cl-with-standard-dripper-ub3824",
-      "enrichedAt": "2026-06-13T00:31:44.535Z",
+      "enrichedAt": "2026-06-13T01:27:03.902Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1110,18 +1146,12 @@
     },
     "biloxi-fine-strainer-short-copper": {
       "handle": "biloxi-fine-strainer-short-copper",
-      "url": "https://www.urbanbar.com/products/biloxi-fine-strainer-short-copper",
-      "enrichedAt": "2026-06-13T00:31:44.680Z",
-      "specifications": [],
-      "specificationsHtml": "",
-      "productCareHtml": "",
-      "safetyLabelsHtml": "",
-      "inStock": false
+      "error": "HTTP 429"
     },
     "leaning-old-fashioned-31cl": {
       "handle": "leaning-old-fashioned-31cl",
       "url": "https://www.urbanbar.com/products/leaning-old-fashioned-31cl",
-      "enrichedAt": "2026-06-13T00:31:44.698Z",
+      "enrichedAt": "2026-06-13T01:27:03.990Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1131,7 +1161,7 @@
     "aero-wine-measure-250ml-ce": {
       "handle": "aero-wine-measure-250ml-ce",
       "url": "https://www.urbanbar.com/products/aero-wine-measure-250ml-ce",
-      "enrichedAt": "2026-06-13T00:31:44.981Z",
+      "enrichedAt": "2026-06-13T01:27:03.962Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1141,7 +1171,7 @@
     "aero-jigger-rose-gold-25-50ml": {
       "handle": "aero-jigger-rose-gold-25-50ml",
       "url": "https://www.urbanbar.com/products/aero-jigger-rose-gold-25-50ml",
-      "enrichedAt": "2026-06-13T00:31:45.041Z",
+      "enrichedAt": "2026-06-13T01:27:03.992Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1150,18 +1180,12 @@
     },
     "aero-jigger-gold-25-50ml": {
       "handle": "aero-jigger-gold-25-50ml",
-      "url": "https://www.urbanbar.com/products/aero-jigger-gold-25-50ml",
-      "enrichedAt": "2026-06-13T00:31:45.080Z",
-      "specifications": [],
-      "specificationsHtml": "",
-      "productCareHtml": "",
-      "safetyLabelsHtml": "",
-      "inStock": false
+      "error": "HTTP 429"
     },
     "pro-cocktail-garnish-tongs-27cm": {
       "handle": "pro-cocktail-garnish-tongs-27cm",
       "url": "https://www.urbanbar.com/products/pro-cocktail-garnish-tongs-27cm",
-      "enrichedAt": "2026-06-13T00:31:45.073Z",
+      "enrichedAt": "2026-06-13T01:27:04.644Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1171,7 +1195,7 @@
     "rose-gold-boston-shaker-tin-85cl": {
       "handle": "rose-gold-boston-shaker-tin-85cl",
       "url": "https://www.urbanbar.com/products/rose-gold-boston-shaker-tin-85cl",
-      "enrichedAt": "2026-06-13T00:31:45.547Z",
+      "enrichedAt": "2026-06-13T01:27:04.842Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1181,7 +1205,7 @@
     "aero-wine-measure-copper-125ml-ce": {
       "handle": "aero-wine-measure-copper-125ml-ce",
       "url": "https://www.urbanbar.com/products/aero-wine-measure-copper-125ml-ce",
-      "enrichedAt": "2026-06-13T00:31:45.227Z",
+      "enrichedAt": "2026-06-13T01:27:04.629Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1190,23 +1214,11 @@
     },
     "coley-jigger-gold-25-50ml": {
       "handle": "coley-jigger-gold-25-50ml",
-      "url": "https://www.urbanbar.com/products/coley-jigger-gold-25-50ml",
-      "enrichedAt": "2026-06-13T00:31:45.310Z",
-      "specifications": [],
-      "specificationsHtml": "",
-      "productCareHtml": "",
-      "safetyLabelsHtml": "",
-      "inStock": false
+      "error": "HTTP 429"
     },
     "aero-wine-measure-copper-250ml-ce": {
       "handle": "aero-wine-measure-copper-250ml-ce",
-      "url": "https://www.urbanbar.com/products/aero-wine-measure-copper-250ml-ce",
-      "enrichedAt": "2026-06-13T00:31:45.285Z",
-      "specifications": [],
-      "specificationsHtml": "",
-      "productCareHtml": "",
-      "safetyLabelsHtml": "",
-      "inStock": false
+      "error": "HTTP 429"
     },
     "foravia-euro-strainer": {
       "handle": "foravia-euro-strainer",
@@ -1316,7 +1328,7 @@
     "vintage-irish-coffee-glass-17cl": {
       "handle": "vintage-irish-coffee-glass-17cl",
       "url": "https://www.urbanbar.com/products/vintage-irish-coffee-glass-17cl",
-      "enrichedAt": "2026-06-13T00:31:45.721Z",
+      "enrichedAt": "2026-06-13T01:27:04.840Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1435,7 +1447,7 @@
     "classico-margot-highball-35cl-box-2": {
       "handle": "classico-margot-highball-35cl-box-2",
       "url": "https://www.urbanbar.com/products/classico-margot-highball-35cl-box-2",
-      "enrichedAt": "2026-06-13T00:31:46.184Z",
+      "enrichedAt": "2026-06-13T01:27:04.953Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1445,7 +1457,7 @@
     "classico-margot-old-fashioned-32cl": {
       "handle": "classico-margot-old-fashioned-32cl",
       "url": "https://www.urbanbar.com/products/classico-margot-old-fashioned-32cl",
-      "enrichedAt": "2026-06-13T00:31:46.569Z",
+      "enrichedAt": "2026-06-13T01:27:04.931Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1455,7 +1467,7 @@
     "crystal-nick-nora-glass-17cl": {
       "handle": "crystal-nick-nora-glass-17cl",
       "url": "https://www.urbanbar.com/products/crystal-nick-nora-glass-17cl",
-      "enrichedAt": "2026-06-13T00:31:46.355Z",
+      "enrichedAt": "2026-06-13T01:27:05.239Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1465,7 +1477,7 @@
     "crystal-nick-nora-1910-glass-17cl": {
       "handle": "crystal-nick-nora-1910-glass-17cl",
       "url": "https://www.urbanbar.com/products/crystal-nick-nora-1910-glass-17cl",
-      "enrichedAt": "2026-06-13T00:31:46.436Z",
+      "enrichedAt": "2026-06-13T01:27:05.465Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1475,7 +1487,7 @@
     "crystal-nick-nora-1920-glass-17cl": {
       "handle": "crystal-nick-nora-1920-glass-17cl",
       "url": "https://www.urbanbar.com/products/crystal-nick-nora-1920-glass-17cl",
-      "enrichedAt": "2026-06-13T00:31:46.526Z",
+      "enrichedAt": "2026-06-13T01:27:05.413Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1485,7 +1497,7 @@
     "gold-rim-nick-nora-glass": {
       "handle": "gold-rim-nick-nora-glass",
       "url": "https://www.urbanbar.com/products/gold-rim-nick-nora-glass",
-      "enrichedAt": "2026-06-13T00:31:46.633Z",
+      "enrichedAt": "2026-06-13T01:27:05.387Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1495,7 +1507,7 @@
     "freddo-nick-nora": {
       "handle": "freddo-nick-nora",
       "url": "https://www.urbanbar.com/products/freddo-nick-nora",
-      "enrichedAt": "2026-06-13T00:31:46.986Z",
+      "enrichedAt": "2026-06-13T01:27:05.791Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1505,7 +1517,7 @@
     "calabrese-zigzag-coupe-23cl": {
       "handle": "calabrese-zigzag-coupe-23cl",
       "url": "https://www.urbanbar.com/products/calabrese-zigzag-coupe-23cl",
-      "enrichedAt": "2026-06-13T00:31:46.913Z",
+      "enrichedAt": "2026-06-13T01:27:05.511Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1515,7 +1527,7 @@
     "crystal-verdot-gold-rim-martini-glass-21cl": {
       "handle": "crystal-verdot-gold-rim-martini-glass-21cl",
       "url": "https://www.urbanbar.com/products/crystal-verdot-gold-rim-martini-glass-21cl",
-      "enrichedAt": "2026-06-13T00:31:47.044Z",
+      "enrichedAt": "2026-06-13T01:27:05.938Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1525,7 +1537,7 @@
     "verdot-crystal-martini-glass-21cl": {
       "handle": "verdot-crystal-martini-glass-21cl",
       "url": "https://www.urbanbar.com/products/verdot-crystal-martini-glass-21cl",
-      "enrichedAt": "2026-06-13T00:31:46.950Z",
+      "enrichedAt": "2026-06-13T01:27:05.961Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1535,7 +1547,7 @@
     "crystal-1910-martini-glass-21cl": {
       "handle": "crystal-1910-martini-glass-21cl",
       "url": "https://www.urbanbar.com/products/crystal-1910-martini-glass-21cl",
-      "enrichedAt": "2026-06-13T00:31:47.140Z",
+      "enrichedAt": "2026-06-13T01:27:05.971Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1545,7 +1557,7 @@
     "crystal-1920-martini-glass-21cl": {
       "handle": "crystal-1920-martini-glass-21cl",
       "url": "https://www.urbanbar.com/products/crystal-1920-martini-glass-21cl",
-      "enrichedAt": "2026-06-13T00:31:47.255Z",
+      "enrichedAt": "2026-06-13T01:27:06.017Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1555,7 +1567,7 @@
     "crystal-ginza-tall-cuts-martini-glass-21cl": {
       "handle": "crystal-ginza-tall-cuts-martini-glass-21cl",
       "url": "https://www.urbanbar.com/products/crystal-ginza-tall-cuts-martini-glass-21cl",
-      "enrichedAt": "2026-06-13T00:31:47.341Z",
+      "enrichedAt": "2026-06-13T01:27:06.095Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1565,7 +1577,7 @@
     "calabrese-mini-martini-glass": {
       "handle": "calabrese-mini-martini-glass",
       "url": "https://www.urbanbar.com/products/calabrese-mini-martini-glass",
-      "enrichedAt": "2026-06-13T00:31:47.282Z",
+      "enrichedAt": "2026-06-13T01:27:06.355Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1575,7 +1587,7 @@
     "retro-coupe-glass-21cl": {
       "handle": "retro-coupe-glass-21cl",
       "url": "https://www.urbanbar.com/products/retro-coupe-glass-21cl",
-      "enrichedAt": "2026-06-13T00:31:47.560Z",
+      "enrichedAt": "2026-06-13T01:27:06.582Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1585,7 +1597,7 @@
     "crystal-retro-gold-rim-coupe-glass-21cl": {
       "handle": "crystal-retro-gold-rim-coupe-glass-21cl",
       "url": "https://www.urbanbar.com/products/crystal-retro-gold-rim-coupe-glass-21cl",
-      "enrichedAt": "2026-06-13T00:31:47.625Z",
+      "enrichedAt": "2026-06-13T01:27:06.697Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1595,7 +1607,7 @@
     "crystal-retro-coupe-glass-1910-21cl": {
       "handle": "crystal-retro-coupe-glass-1910-21cl",
       "url": "https://www.urbanbar.com/products/crystal-retro-coupe-glass-1910-21cl",
-      "enrichedAt": "2026-06-13T00:31:47.637Z",
+      "enrichedAt": "2026-06-13T01:27:06.535Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1605,7 +1617,7 @@
     "crystal-retro-coupe-glass-1920-21cl": {
       "handle": "crystal-retro-coupe-glass-1920-21cl",
       "url": "https://www.urbanbar.com/products/crystal-retro-coupe-glass-1920-21cl",
-      "enrichedAt": "2026-06-13T00:31:47.668Z",
+      "enrichedAt": "2026-06-13T01:27:06.645Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1615,7 +1627,7 @@
     "retro-optic-champagne-glass-coupe-21cl": {
       "handle": "retro-optic-champagne-glass-coupe-21cl",
       "url": "https://www.urbanbar.com/products/retro-optic-champagne-glass-coupe-21cl",
-      "enrichedAt": "2026-06-13T00:31:47.824Z",
+      "enrichedAt": "2026-06-13T01:27:06.753Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1625,7 +1637,7 @@
     "the-mini-4-5cl": {
       "handle": "the-mini-4-5cl",
       "url": "https://www.urbanbar.com/products/the-mini-4-5cl",
-      "enrichedAt": "2026-06-13T00:31:48.047Z",
+      "enrichedAt": "2026-06-13T01:27:06.934Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1697,7 +1709,7 @@
     "alto-cocktail-glass-17cl": {
       "handle": "alto-cocktail-glass-17cl",
       "url": "https://www.urbanbar.com/products/alto-cocktail-glass-17cl",
-      "enrichedAt": "2026-06-13T00:31:48.327Z",
+      "enrichedAt": "2026-06-13T01:27:07.145Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1707,7 +1719,7 @@
     "1910-alto-cocktail-glass-17cl": {
       "handle": "1910-alto-cocktail-glass-17cl",
       "url": "https://www.urbanbar.com/products/1910-alto-cocktail-glass-17cl",
-      "enrichedAt": "2026-06-13T00:31:48.319Z",
+      "enrichedAt": "2026-06-13T01:27:07.207Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1717,7 +1729,7 @@
     "1920-alto-cocktail-glass-17cl": {
       "handle": "1920-alto-cocktail-glass-17cl",
       "url": "https://www.urbanbar.com/products/1920-alto-cocktail-glass-17cl",
-      "enrichedAt": "2026-06-13T00:31:48.338Z",
+      "enrichedAt": "2026-06-13T01:27:07.186Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1727,7 +1739,7 @@
     "gold-rim-alto-cocktail-glass-17cl": {
       "handle": "gold-rim-alto-cocktail-glass-17cl",
       "url": "https://www.urbanbar.com/products/gold-rim-alto-cocktail-glass-17cl",
-      "enrichedAt": "2026-06-13T00:31:48.370Z",
+      "enrichedAt": "2026-06-13T01:27:07.277Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1737,7 +1749,7 @@
     "alto-cocktail-17cl-copy": {
       "handle": "alto-cocktail-17cl-copy",
       "url": "https://www.urbanbar.com/products/alto-cocktail-17cl-copy",
-      "enrichedAt": "2026-06-13T00:31:48.564Z",
+      "enrichedAt": "2026-06-13T01:27:07.323Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1747,7 +1759,7 @@
     "1910-alto-cocktail-17cl-copy": {
       "handle": "1910-alto-cocktail-17cl-copy",
       "url": "https://www.urbanbar.com/products/1910-alto-cocktail-17cl-copy",
-      "enrichedAt": "2026-06-13T00:31:48.832Z",
+      "enrichedAt": "2026-06-13T01:27:07.513Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1757,7 +1769,7 @@
     "1920-alto-cocktail-17cl-copy": {
       "handle": "1920-alto-cocktail-17cl-copy",
       "url": "https://www.urbanbar.com/products/1920-alto-cocktail-17cl-copy",
-      "enrichedAt": "2026-06-13T00:31:48.839Z",
+      "enrichedAt": "2026-06-13T01:27:07.749Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -1767,7 +1779,7 @@
     "gold-rim-alto-cocktail-17cl": {
       "handle": "gold-rim-alto-cocktail-17cl",
       "url": "https://www.urbanbar.com/products/gold-rim-alto-cocktail-17cl",
-      "enrichedAt": "2026-06-13T00:31:48.835Z",
+      "enrichedAt": "2026-06-13T01:27:08.031Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -2013,7 +2025,7 @@
     "ballantines-chevron-tumbler": {
       "handle": "ballantines-chevron-tumbler",
       "url": "https://www.urbanbar.com/products/ballantines-chevron-tumbler",
-      "enrichedAt": "2026-06-13T00:31:49.410Z",
+      "enrichedAt": "2026-06-13T01:27:07.886Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -2023,7 +2035,7 @@
     "royal-salute-pourer": {
       "handle": "royal-salute-pourer",
       "url": "https://www.urbanbar.com/products/royal-salute-pourer",
-      "enrichedAt": "2026-06-13T00:31:49.563Z",
+      "enrichedAt": "2026-06-13T01:27:08.148Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -2033,7 +2045,7 @@
     "bruichladdich-tumbler": {
       "handle": "bruichladdich-tumbler",
       "url": "https://www.urbanbar.com/products/bruichladdich-tumbler",
-      "enrichedAt": "2026-06-13T00:31:49.621Z",
+      "enrichedAt": "2026-06-13T01:27:07.898Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -2043,7 +2055,7 @@
     "don-papa-hip-flask": {
       "handle": "don-papa-hip-flask",
       "url": "https://www.urbanbar.com/products/don-papa-hip-flask",
-      "enrichedAt": "2026-06-13T00:31:50.122Z",
+      "enrichedAt": "2026-06-13T01:27:08.138Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -2053,7 +2065,7 @@
     "elixr-elit-mixing-jug": {
       "handle": "elixr-elit-mixing-jug",
       "url": "https://www.urbanbar.com/products/elixr-elit-mixing-jug",
-      "enrichedAt": "2026-06-13T00:31:49.821Z",
+      "enrichedAt": "2026-06-13T01:27:08.301Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -2063,7 +2075,7 @@
     "botanist-mixing-jug": {
       "handle": "botanist-mixing-jug",
       "url": "https://www.urbanbar.com/products/botanist-mixing-jug",
-      "enrichedAt": "2026-06-13T00:31:49.930Z",
+      "enrichedAt": "2026-06-13T01:27:08.516Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -2073,7 +2085,7 @@
     "macallan-tumbler": {
       "handle": "macallan-tumbler",
       "url": "https://www.urbanbar.com/products/macallan-tumbler",
-      "enrichedAt": "2026-06-13T00:31:50.019Z",
+      "enrichedAt": "2026-06-13T01:27:08.469Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -2083,7 +2095,7 @@
     "absolut-coupe": {
       "handle": "absolut-coupe",
       "url": "https://www.urbanbar.com/products/absolut-coupe",
-      "enrichedAt": "2026-06-13T00:31:50.444Z",
+      "enrichedAt": "2026-06-13T01:27:08.804Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -2093,7 +2105,7 @@
     "jameson-tumbler": {
       "handle": "jameson-tumbler",
       "url": "https://www.urbanbar.com/products/jameson-tumbler",
-      "enrichedAt": "2026-06-13T00:31:50.415Z",
+      "enrichedAt": "2026-06-13T01:27:08.776Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -2103,7 +2115,7 @@
     "plymouth-gin-recycled-glass": {
       "handle": "plymouth-gin-recycled-glass",
       "url": "https://www.urbanbar.com/products/plymouth-gin-recycled-glass",
-      "enrichedAt": "2026-06-13T00:31:50.348Z",
+      "enrichedAt": "2026-06-13T01:27:08.752Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -2958,7 +2970,7 @@
     "ub791": {
       "handle": "ub791",
       "url": "https://www.urbanbar.com/products/ub791",
-      "enrichedAt": "2026-06-13T00:31:54.345Z",
+      "enrichedAt": "2026-06-13T01:27:08.854Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -2968,7 +2980,7 @@
     "ub792": {
       "handle": "ub792",
       "url": "https://www.urbanbar.com/products/ub792",
-      "enrichedAt": "2026-06-13T00:31:54.571Z",
+      "enrichedAt": "2026-06-13T01:27:09.045Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -2978,7 +2990,7 @@
     "ub793": {
       "handle": "ub793",
       "url": "https://www.urbanbar.com/products/ub793",
-      "enrichedAt": "2026-06-13T00:31:54.461Z",
+      "enrichedAt": "2026-06-13T01:27:09.122Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -2988,7 +3000,7 @@
     "ub794": {
       "handle": "ub794",
       "url": "https://www.urbanbar.com/products/ub794",
-      "enrichedAt": "2026-06-13T00:31:54.363Z",
+      "enrichedAt": "2026-06-13T01:27:09.276Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -2998,7 +3010,7 @@
     "ub795": {
       "handle": "ub795",
       "url": "https://www.urbanbar.com/products/ub795",
-      "enrichedAt": "2026-06-13T00:31:54.735Z",
+      "enrichedAt": "2026-06-13T01:27:09.412Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3008,7 +3020,7 @@
     "ub796": {
       "handle": "ub796",
       "url": "https://www.urbanbar.com/products/ub796",
-      "enrichedAt": "2026-06-13T00:31:54.850Z",
+      "enrichedAt": "2026-06-13T01:27:09.393Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3018,7 +3030,7 @@
     "ub997": {
       "handle": "ub997",
       "url": "https://www.urbanbar.com/products/ub997",
-      "enrichedAt": "2026-06-13T00:31:54.640Z",
+      "enrichedAt": "2026-06-13T01:27:09.594Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3028,7 +3040,7 @@
     "ub787": {
       "handle": "ub787",
       "url": "https://www.urbanbar.com/products/ub787",
-      "enrichedAt": "2026-06-13T00:31:55.063Z",
+      "enrichedAt": "2026-06-13T01:27:09.622Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3038,7 +3050,7 @@
     "ub788": {
       "handle": "ub788",
       "url": "https://www.urbanbar.com/products/ub788",
-      "enrichedAt": "2026-06-13T00:31:55.159Z",
+      "enrichedAt": "2026-06-13T01:27:09.669Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3048,7 +3060,7 @@
     "ub789": {
       "handle": "ub789",
       "url": "https://www.urbanbar.com/products/ub789",
-      "enrichedAt": "2026-06-13T00:31:55.245Z",
+      "enrichedAt": "2026-06-13T01:27:09.823Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3058,7 +3070,7 @@
     "ub790": {
       "handle": "ub790",
       "url": "https://www.urbanbar.com/products/ub790",
-      "enrichedAt": "2026-06-13T00:31:55.064Z",
+      "enrichedAt": "2026-06-13T01:27:10.074Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3068,7 +3080,7 @@
     "ub779": {
       "handle": "ub779",
       "url": "https://www.urbanbar.com/products/ub779",
-      "enrichedAt": "2026-06-13T00:31:55.375Z",
+      "enrichedAt": "2026-06-13T01:27:09.971Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3078,7 +3090,7 @@
     "ub780": {
       "handle": "ub780",
       "url": "https://www.urbanbar.com/products/ub780",
-      "enrichedAt": "2026-06-13T00:31:55.396Z",
+      "enrichedAt": "2026-06-13T01:27:10.372Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3088,7 +3100,7 @@
     "ub781": {
       "handle": "ub781",
       "url": "https://www.urbanbar.com/products/ub781",
-      "enrichedAt": "2026-06-13T00:31:55.519Z",
+      "enrichedAt": "2026-06-13T01:27:10.316Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3098,7 +3110,7 @@
     "ub782": {
       "handle": "ub782",
       "url": "https://www.urbanbar.com/products/ub782",
-      "enrichedAt": "2026-06-13T00:31:55.659Z",
+      "enrichedAt": "2026-06-13T01:27:10.319Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3108,7 +3120,7 @@
     "ub783": {
       "handle": "ub783",
       "url": "https://www.urbanbar.com/products/ub783",
-      "enrichedAt": "2026-06-13T00:31:55.768Z",
+      "enrichedAt": "2026-06-13T01:27:10.477Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3118,7 +3130,7 @@
     "ub784": {
       "handle": "ub784",
       "url": "https://www.urbanbar.com/products/ub784",
-      "enrichedAt": "2026-06-13T00:31:55.762Z",
+      "enrichedAt": "2026-06-13T01:27:10.829Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3128,7 +3140,7 @@
     "ub785": {
       "handle": "ub785",
       "url": "https://www.urbanbar.com/products/ub785",
-      "enrichedAt": "2026-06-13T00:31:55.862Z",
+      "enrichedAt": "2026-06-13T01:27:10.645Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3138,7 +3150,7 @@
     "ub786": {
       "handle": "ub786",
       "url": "https://www.urbanbar.com/products/ub786",
-      "enrichedAt": "2026-06-13T00:31:55.897Z",
+      "enrichedAt": "2026-06-13T01:27:10.928Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3148,7 +3160,7 @@
     "ub775": {
       "handle": "ub775",
       "url": "https://www.urbanbar.com/products/ub775",
-      "enrichedAt": "2026-06-13T00:31:55.951Z",
+      "enrichedAt": "2026-06-13T01:27:10.963Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3158,7 +3170,7 @@
     "ub776": {
       "handle": "ub776",
       "url": "https://www.urbanbar.com/products/ub776",
-      "enrichedAt": "2026-06-13T00:31:55.962Z",
+      "enrichedAt": "2026-06-13T01:27:11.004Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3168,7 +3180,7 @@
     "ub777": {
       "handle": "ub777",
       "url": "https://www.urbanbar.com/products/ub777",
-      "enrichedAt": "2026-06-13T00:31:56.354Z",
+      "enrichedAt": "2026-06-13T01:27:11.031Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3178,7 +3190,7 @@
     "ub778": {
       "handle": "ub778",
       "url": "https://www.urbanbar.com/products/ub778",
-      "enrichedAt": "2026-06-13T00:31:56.264Z",
+      "enrichedAt": "2026-06-13T01:27:11.436Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3188,7 +3200,7 @@
     "ub771": {
       "handle": "ub771",
       "url": "https://www.urbanbar.com/products/ub771",
-      "enrichedAt": "2026-06-13T00:31:56.472Z",
+      "enrichedAt": "2026-06-13T01:27:11.403Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3198,7 +3210,7 @@
     "ub772": {
       "handle": "ub772",
       "url": "https://www.urbanbar.com/products/ub772",
-      "enrichedAt": "2026-06-13T00:31:56.378Z",
+      "enrichedAt": "2026-06-13T01:27:11.495Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3208,7 +3220,7 @@
     "ub773": {
       "handle": "ub773",
       "url": "https://www.urbanbar.com/products/ub773",
-      "enrichedAt": "2026-06-13T00:31:56.434Z",
+      "enrichedAt": "2026-06-13T01:27:11.704Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3218,7 +3230,7 @@
     "ub774": {
       "handle": "ub774",
       "url": "https://www.urbanbar.com/products/ub774",
-      "enrichedAt": "2026-06-13T00:31:56.602Z",
+      "enrichedAt": "2026-06-13T01:27:11.713Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3228,7 +3240,7 @@
     "ub770": {
       "handle": "ub770",
       "url": "https://www.urbanbar.com/products/ub770",
-      "enrichedAt": "2026-06-13T00:31:56.834Z",
+      "enrichedAt": "2026-06-13T01:27:11.684Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3238,7 +3250,7 @@
     "ub764": {
       "handle": "ub764",
       "url": "https://www.urbanbar.com/products/ub764",
-      "enrichedAt": "2026-06-13T00:31:56.866Z",
+      "enrichedAt": "2026-06-13T01:27:12.138Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3248,7 +3260,7 @@
     "ub765": {
       "handle": "ub765",
       "url": "https://www.urbanbar.com/products/ub765",
-      "enrichedAt": "2026-06-13T00:31:56.796Z",
+      "enrichedAt": "2026-06-13T01:27:12.078Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3258,7 +3270,7 @@
     "ub763": {
       "handle": "ub763",
       "url": "https://www.urbanbar.com/products/ub763",
-      "enrichedAt": "2026-06-13T00:31:56.957Z",
+      "enrichedAt": "2026-06-13T01:27:12.085Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3268,7 +3280,7 @@
     "ub762": {
       "handle": "ub762",
       "url": "https://www.urbanbar.com/products/ub762",
-      "enrichedAt": "2026-06-13T00:31:57.169Z",
+      "enrichedAt": "2026-06-13T01:27:12.359Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3278,7 +3290,7 @@
     "ub766": {
       "handle": "ub766",
       "url": "https://www.urbanbar.com/products/ub766",
-      "enrichedAt": "2026-06-13T00:31:57.159Z",
+      "enrichedAt": "2026-06-13T01:27:12.396Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3288,7 +3300,7 @@
     "ub767": {
       "handle": "ub767",
       "url": "https://www.urbanbar.com/products/ub767",
-      "enrichedAt": "2026-06-13T00:31:57.117Z",
+      "enrichedAt": "2026-06-13T01:27:12.322Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3298,7 +3310,7 @@
     "ub768": {
       "handle": "ub768",
       "url": "https://www.urbanbar.com/products/ub768",
-      "enrichedAt": "2026-06-13T00:31:57.445Z",
+      "enrichedAt": "2026-06-13T01:27:12.700Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3308,7 +3320,7 @@
     "ub759": {
       "handle": "ub759",
       "url": "https://www.urbanbar.com/products/ub759",
-      "enrichedAt": "2026-06-13T00:31:57.622Z",
+      "enrichedAt": "2026-06-13T01:27:12.894Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3318,7 +3330,7 @@
     "ub758": {
       "handle": "ub758",
       "url": "https://www.urbanbar.com/products/ub758",
-      "enrichedAt": "2026-06-13T00:31:57.435Z",
+      "enrichedAt": "2026-06-13T01:27:12.948Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3328,7 +3340,7 @@
     "ub761": {
       "handle": "ub761",
       "url": "https://www.urbanbar.com/products/ub761",
-      "enrichedAt": "2026-06-13T00:31:57.629Z",
+      "enrichedAt": "2026-06-13T01:27:13.013Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3338,7 +3350,7 @@
     "ub760": {
       "handle": "ub760",
       "url": "https://www.urbanbar.com/products/ub760",
-      "enrichedAt": "2026-06-13T00:31:57.587Z",
+      "enrichedAt": "2026-06-13T01:27:12.910Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3348,7 +3360,7 @@
     "ub750": {
       "handle": "ub750",
       "url": "https://www.urbanbar.com/products/ub750",
-      "enrichedAt": "2026-06-13T00:31:57.885Z",
+      "enrichedAt": "2026-06-13T01:27:12.990Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3358,7 +3370,7 @@
     "ub754": {
       "handle": "ub754",
       "url": "https://www.urbanbar.com/products/ub754",
-      "enrichedAt": "2026-06-13T00:31:58.023Z",
+      "enrichedAt": "2026-06-13T01:27:13.263Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3368,7 +3380,7 @@
     "ub753": {
       "handle": "ub753",
       "url": "https://www.urbanbar.com/products/ub753",
-      "enrichedAt": "2026-06-13T00:31:57.809Z",
+      "enrichedAt": "2026-06-13T01:27:13.422Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3378,7 +3390,7 @@
     "ub751": {
       "handle": "ub751",
       "url": "https://www.urbanbar.com/products/ub751",
-      "enrichedAt": "2026-06-13T00:31:58.347Z",
+      "enrichedAt": "2026-06-13T01:27:13.623Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3388,7 +3400,7 @@
     "ub752": {
       "handle": "ub752",
       "url": "https://www.urbanbar.com/products/ub752",
-      "enrichedAt": "2026-06-13T00:31:58.201Z",
+      "enrichedAt": "2026-06-13T01:27:13.523Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3398,7 +3410,7 @@
     "ub757": {
       "handle": "ub757",
       "url": "https://www.urbanbar.com/products/ub757",
-      "enrichedAt": "2026-06-13T00:31:58.282Z",
+      "enrichedAt": "2026-06-13T01:27:13.649Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3408,7 +3420,7 @@
     "ub756": {
       "handle": "ub756",
       "url": "https://www.urbanbar.com/products/ub756",
-      "enrichedAt": "2026-06-13T00:31:58.204Z",
+      "enrichedAt": "2026-06-13T01:27:13.548Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3418,7 +3430,7 @@
     "ub755": {
       "handle": "ub755",
       "url": "https://www.urbanbar.com/products/ub755",
-      "enrichedAt": "2026-06-13T00:31:58.224Z",
+      "enrichedAt": "2026-06-13T01:27:13.867Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3428,7 +3440,7 @@
     "ub748": {
       "handle": "ub748",
       "url": "https://www.urbanbar.com/products/ub748",
-      "enrichedAt": "2026-06-13T00:31:58.422Z",
+      "enrichedAt": "2026-06-13T01:27:14.292Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3438,7 +3450,7 @@
     "ub749": {
       "handle": "ub749",
       "url": "https://www.urbanbar.com/products/ub749",
-      "enrichedAt": "2026-06-13T00:31:58.672Z",
+      "enrichedAt": "2026-06-13T01:27:14.256Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3448,7 +3460,7 @@
     "ub747": {
       "handle": "ub747",
       "url": "https://www.urbanbar.com/products/ub747",
-      "enrichedAt": "2026-06-13T00:31:58.678Z",
+      "enrichedAt": "2026-06-13T01:27:14.199Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3458,7 +3470,7 @@
     "ub746": {
       "handle": "ub746",
       "url": "https://www.urbanbar.com/products/ub746",
-      "enrichedAt": "2026-06-13T00:31:58.838Z",
+      "enrichedAt": "2026-06-13T01:27:14.360Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3468,7 +3480,7 @@
     "ub742": {
       "handle": "ub742",
       "url": "https://www.urbanbar.com/products/ub742",
-      "enrichedAt": "2026-06-13T00:31:58.894Z",
+      "enrichedAt": "2026-06-13T01:27:14.244Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3478,7 +3490,7 @@
     "ub745": {
       "handle": "ub745",
       "url": "https://www.urbanbar.com/products/ub745",
-      "enrichedAt": "2026-06-13T00:31:58.861Z",
+      "enrichedAt": "2026-06-13T01:27:14.485Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3488,7 +3500,7 @@
     "ub744": {
       "handle": "ub744",
       "url": "https://www.urbanbar.com/products/ub744",
-      "enrichedAt": "2026-06-13T00:31:59.230Z",
+      "enrichedAt": "2026-06-13T01:27:14.506Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3498,7 +3510,7 @@
     "ub743": {
       "handle": "ub743",
       "url": "https://www.urbanbar.com/products/ub743",
-      "enrichedAt": "2026-06-13T00:31:59.097Z",
+      "enrichedAt": "2026-06-13T01:27:14.958Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3508,7 +3520,7 @@
     "ub740": {
       "handle": "ub740",
       "url": "https://www.urbanbar.com/products/ub740",
-      "enrichedAt": "2026-06-13T00:31:59.159Z",
+      "enrichedAt": "2026-06-13T01:27:14.859Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3518,7 +3530,7 @@
     "ub741": {
       "handle": "ub741",
       "url": "https://www.urbanbar.com/products/ub741",
-      "enrichedAt": "2026-06-13T00:31:59.269Z",
+      "enrichedAt": "2026-06-13T01:27:14.996Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3528,7 +3540,7 @@
     "ub739": {
       "handle": "ub739",
       "url": "https://www.urbanbar.com/products/ub739",
-      "enrichedAt": "2026-06-13T00:31:59.388Z",
+      "enrichedAt": "2026-06-13T01:27:14.972Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3538,7 +3550,7 @@
     "ub738": {
       "handle": "ub738",
       "url": "https://www.urbanbar.com/products/ub738",
-      "enrichedAt": "2026-06-13T00:31:59.499Z",
+      "enrichedAt": "2026-06-13T01:27:15.239Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3548,7 +3560,7 @@
     "ub737": {
       "handle": "ub737",
       "url": "https://www.urbanbar.com/products/ub737",
-      "enrichedAt": "2026-06-13T00:31:59.533Z",
+      "enrichedAt": "2026-06-13T01:27:14.802Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3558,7 +3570,7 @@
     "ub736": {
       "handle": "ub736",
       "url": "https://www.urbanbar.com/products/ub736",
-      "enrichedAt": "2026-06-13T00:31:59.569Z",
+      "enrichedAt": "2026-06-13T01:27:15.130Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3568,7 +3580,7 @@
     "ub734": {
       "handle": "ub734",
       "url": "https://www.urbanbar.com/products/ub734",
-      "enrichedAt": "2026-06-13T00:31:59.804Z",
+      "enrichedAt": "2026-06-13T01:27:15.170Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3578,7 +3590,7 @@
     "ub735": {
       "handle": "ub735",
       "url": "https://www.urbanbar.com/products/ub735",
-      "enrichedAt": "2026-06-13T00:31:59.987Z",
+      "enrichedAt": "2026-06-13T01:27:15.498Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3588,7 +3600,7 @@
     "ub733": {
       "handle": "ub733",
       "url": "https://www.urbanbar.com/products/ub733",
-      "enrichedAt": "2026-06-13T00:31:59.814Z",
+      "enrichedAt": "2026-06-13T01:27:15.571Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3598,7 +3610,7 @@
     "ub732": {
       "handle": "ub732",
       "url": "https://www.urbanbar.com/products/ub732",
-      "enrichedAt": "2026-06-13T00:32:00.086Z",
+      "enrichedAt": "2026-06-13T01:27:15.287Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3608,7 +3620,7 @@
     "ub731": {
       "handle": "ub731",
       "url": "https://www.urbanbar.com/products/ub731",
-      "enrichedAt": "2026-06-13T00:32:00.289Z",
+      "enrichedAt": "2026-06-13T01:27:15.714Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3618,7 +3630,7 @@
     "ub730": {
       "handle": "ub730",
       "url": "https://www.urbanbar.com/products/ub730",
-      "enrichedAt": "2026-06-13T00:32:00.604Z",
+      "enrichedAt": "2026-06-13T01:27:15.789Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3628,7 +3640,7 @@
     "ub723": {
       "handle": "ub723",
       "url": "https://www.urbanbar.com/products/ub723",
-      "enrichedAt": "2026-06-13T00:32:00.127Z",
+      "enrichedAt": "2026-06-13T01:27:15.520Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3638,7 +3650,7 @@
     "ub722": {
       "handle": "ub722",
       "url": "https://www.urbanbar.com/products/ub722",
-      "enrichedAt": "2026-06-13T00:32:00.437Z",
+      "enrichedAt": "2026-06-13T01:27:15.905Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3648,7 +3660,7 @@
     "ub727": {
       "handle": "ub727",
       "url": "https://www.urbanbar.com/products/ub727",
-      "enrichedAt": "2026-06-13T00:32:00.439Z",
+      "enrichedAt": "2026-06-13T01:27:16.390Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3658,7 +3670,7 @@
     "ub729": {
       "handle": "ub729",
       "url": "https://www.urbanbar.com/products/ub729",
-      "enrichedAt": "2026-06-13T00:32:00.744Z",
+      "enrichedAt": "2026-06-13T01:27:16.186Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3668,7 +3680,7 @@
     "ub728": {
       "handle": "ub728",
       "url": "https://www.urbanbar.com/products/ub728",
-      "enrichedAt": "2026-06-13T00:32:00.728Z",
+      "enrichedAt": "2026-06-13T01:27:16.336Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3678,7 +3690,7 @@
     "ub726": {
       "handle": "ub726",
       "url": "https://www.urbanbar.com/products/ub726",
-      "enrichedAt": "2026-06-13T00:32:00.688Z",
+      "enrichedAt": "2026-06-13T01:27:16.228Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3688,7 +3700,7 @@
     "ub725": {
       "handle": "ub725",
       "url": "https://www.urbanbar.com/products/ub725",
-      "enrichedAt": "2026-06-13T00:32:01.162Z",
+      "enrichedAt": "2026-06-13T01:27:16.492Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3698,7 +3710,7 @@
     "ub724": {
       "handle": "ub724",
       "url": "https://www.urbanbar.com/products/ub724",
-      "enrichedAt": "2026-06-13T00:32:01.021Z",
+      "enrichedAt": "2026-06-13T01:27:16.518Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3708,7 +3720,7 @@
     "ub718": {
       "handle": "ub718",
       "url": "https://www.urbanbar.com/products/ub718",
-      "enrichedAt": "2026-06-13T00:32:01.079Z",
+      "enrichedAt": "2026-06-13T01:27:16.706Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3718,7 +3730,7 @@
     "ub721": {
       "handle": "ub721",
       "url": "https://www.urbanbar.com/products/ub721",
-      "enrichedAt": "2026-06-13T00:32:01.306Z",
+      "enrichedAt": "2026-06-13T01:27:16.553Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3728,7 +3740,7 @@
     "ub719": {
       "handle": "ub719",
       "url": "https://www.urbanbar.com/products/ub719",
-      "enrichedAt": "2026-06-13T00:32:01.368Z",
+      "enrichedAt": "2026-06-13T01:27:16.648Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3738,7 +3750,7 @@
     "ub720": {
       "handle": "ub720",
       "url": "https://www.urbanbar.com/products/ub720",
-      "enrichedAt": "2026-06-13T00:32:01.433Z",
+      "enrichedAt": "2026-06-13T01:27:16.949Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3748,7 +3760,7 @@
     "ub717": {
       "handle": "ub717",
       "url": "https://www.urbanbar.com/products/ub717",
-      "enrichedAt": "2026-06-13T00:32:01.494Z",
+      "enrichedAt": "2026-06-13T01:27:17.084Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3758,7 +3770,7 @@
     "ub716": {
       "handle": "ub716",
       "url": "https://www.urbanbar.com/products/ub716",
-      "enrichedAt": "2026-06-13T00:32:01.495Z",
+      "enrichedAt": "2026-06-13T01:27:17.064Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3768,7 +3780,7 @@
     "ub715": {
       "handle": "ub715",
       "url": "https://www.urbanbar.com/products/ub715",
-      "enrichedAt": "2026-06-13T00:32:01.621Z",
+      "enrichedAt": "2026-06-13T01:27:16.812Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3778,7 +3790,7 @@
     "ub712": {
       "handle": "ub712",
       "url": "https://www.urbanbar.com/products/ub712",
-      "enrichedAt": "2026-06-13T00:32:01.788Z",
+      "enrichedAt": "2026-06-13T01:27:17.344Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3788,7 +3800,7 @@
     "ub713": {
       "handle": "ub713",
       "url": "https://www.urbanbar.com/products/ub713",
-      "enrichedAt": "2026-06-13T00:32:01.980Z",
+      "enrichedAt": "2026-06-13T01:27:16.996Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3798,7 +3810,7 @@
     "ub714": {
       "handle": "ub714",
       "url": "https://www.urbanbar.com/products/ub714",
-      "enrichedAt": "2026-06-13T00:32:02.068Z",
+      "enrichedAt": "2026-06-13T01:27:17.716Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3808,7 +3820,7 @@
     "ub710": {
       "handle": "ub710",
       "url": "https://www.urbanbar.com/products/ub710",
-      "enrichedAt": "2026-06-13T00:32:01.986Z",
+      "enrichedAt": "2026-06-13T01:27:17.621Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3818,7 +3830,7 @@
     "ub711": {
       "handle": "ub711",
       "url": "https://www.urbanbar.com/products/ub711",
-      "enrichedAt": "2026-06-13T00:32:02.231Z",
+      "enrichedAt": "2026-06-13T01:27:17.268Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3828,7 +3840,7 @@
     "ub709": {
       "handle": "ub709",
       "url": "https://www.urbanbar.com/products/ub709",
-      "enrichedAt": "2026-06-13T00:32:02.149Z",
+      "enrichedAt": "2026-06-13T01:27:17.651Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3838,7 +3850,7 @@
     "ub708": {
       "handle": "ub708",
       "url": "https://www.urbanbar.com/products/ub708",
-      "enrichedAt": "2026-06-13T00:32:02.230Z",
+      "enrichedAt": "2026-06-13T01:27:17.365Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3848,7 +3860,7 @@
     "ub707": {
       "handle": "ub707",
       "url": "https://www.urbanbar.com/products/ub707",
-      "enrichedAt": "2026-06-13T00:32:02.372Z",
+      "enrichedAt": "2026-06-13T01:27:17.871Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3858,7 +3870,7 @@
     "ub706": {
       "handle": "ub706",
       "url": "https://www.urbanbar.com/products/ub706",
-      "enrichedAt": "2026-06-13T00:32:02.492Z",
+      "enrichedAt": "2026-06-13T01:27:17.926Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3868,7 +3880,7 @@
     "ub703": {
       "handle": "ub703",
       "url": "https://www.urbanbar.com/products/ub703",
-      "enrichedAt": "2026-06-13T00:32:03.062Z",
+      "enrichedAt": "2026-06-13T01:27:17.853Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3878,7 +3890,7 @@
     "ub702": {
       "handle": "ub702",
       "url": "https://www.urbanbar.com/products/ub702",
-      "enrichedAt": "2026-06-13T00:32:02.618Z",
+      "enrichedAt": "2026-06-13T01:27:18.288Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3888,7 +3900,7 @@
     "ub705": {
       "handle": "ub705",
       "url": "https://www.urbanbar.com/products/ub705",
-      "enrichedAt": "2026-06-13T00:32:02.814Z",
+      "enrichedAt": "2026-06-13T01:27:17.946Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3898,7 +3910,7 @@
     "ub704": {
       "handle": "ub704",
       "url": "https://www.urbanbar.com/products/ub704",
-      "enrichedAt": "2026-06-13T00:32:02.813Z",
+      "enrichedAt": "2026-06-13T01:27:18.453Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3908,7 +3920,7 @@
     "ub679": {
       "handle": "ub679",
       "url": "https://www.urbanbar.com/products/ub679",
-      "enrichedAt": "2026-06-13T00:32:02.961Z",
+      "enrichedAt": "2026-06-13T01:27:18.484Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3918,7 +3930,7 @@
     "ub6665": {
       "handle": "ub6665",
       "url": "https://www.urbanbar.com/products/ub6665",
-      "enrichedAt": "2026-06-13T00:32:03.069Z",
+      "enrichedAt": "2026-06-13T01:27:18.633Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3928,7 +3940,7 @@
     "ub65": {
       "handle": "ub65",
       "url": "https://www.urbanbar.com/products/ub65",
-      "enrichedAt": "2026-06-13T00:32:03.014Z",
+      "enrichedAt": "2026-06-13T01:27:18.530Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3938,7 +3950,7 @@
     "ub701": {
       "handle": "ub701",
       "url": "https://www.urbanbar.com/products/ub701",
-      "enrichedAt": "2026-06-13T00:32:03.165Z",
+      "enrichedAt": "2026-06-13T01:27:18.261Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3948,7 +3960,7 @@
     "ub599": {
       "handle": "ub599",
       "url": "https://www.urbanbar.com/products/ub599",
-      "enrichedAt": "2026-06-13T00:32:03.257Z",
+      "enrichedAt": "2026-06-13T01:27:18.881Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3958,7 +3970,7 @@
     "ub597": {
       "handle": "ub597",
       "url": "https://www.urbanbar.com/products/ub597",
-      "enrichedAt": "2026-06-13T00:32:03.432Z",
+      "enrichedAt": "2026-06-13T01:27:18.854Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3968,7 +3980,7 @@
     "ub596": {
       "handle": "ub596",
       "url": "https://www.urbanbar.com/products/ub596",
-      "enrichedAt": "2026-06-13T00:32:03.565Z",
+      "enrichedAt": "2026-06-13T01:27:18.734Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3978,7 +3990,7 @@
     "ub598": {
       "handle": "ub598",
       "url": "https://www.urbanbar.com/products/ub598",
-      "enrichedAt": "2026-06-13T00:32:03.542Z",
+      "enrichedAt": "2026-06-13T01:27:19.100Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3988,7 +4000,7 @@
     "ub595": {
       "handle": "ub595",
       "url": "https://www.urbanbar.com/products/ub595",
-      "enrichedAt": "2026-06-13T00:32:03.863Z",
+      "enrichedAt": "2026-06-13T01:27:19.155Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -3998,7 +4010,7 @@
     "ub594": {
       "handle": "ub594",
       "url": "https://www.urbanbar.com/products/ub594",
-      "enrichedAt": "2026-06-13T00:32:03.762Z",
+      "enrichedAt": "2026-06-13T01:27:19.341Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4008,7 +4020,7 @@
     "ub593": {
       "handle": "ub593",
       "url": "https://www.urbanbar.com/products/ub593",
-      "enrichedAt": "2026-06-13T00:32:03.939Z",
+      "enrichedAt": "2026-06-13T01:27:19.013Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4018,7 +4030,7 @@
     "ub592": {
       "handle": "ub592",
       "url": "https://www.urbanbar.com/products/ub592",
-      "enrichedAt": "2026-06-13T00:32:03.912Z",
+      "enrichedAt": "2026-06-13T01:27:19.539Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4028,7 +4040,7 @@
     "ub5885": {
       "handle": "ub5885",
       "url": "https://www.urbanbar.com/products/ub5885",
-      "enrichedAt": "2026-06-13T00:32:03.889Z",
+      "enrichedAt": "2026-06-13T01:27:19.505Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4038,7 +4050,7 @@
     "ub587": {
       "handle": "ub587",
       "url": "https://www.urbanbar.com/products/ub587",
-      "enrichedAt": "2026-06-13T00:32:04.220Z",
+      "enrichedAt": "2026-06-13T01:27:19.310Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4048,7 +4060,7 @@
     "ub589": {
       "handle": "ub589",
       "url": "https://www.urbanbar.com/products/ub589",
-      "enrichedAt": "2026-06-13T00:32:04.118Z",
+      "enrichedAt": "2026-06-13T01:27:19.670Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4058,7 +4070,7 @@
     "ub588": {
       "handle": "ub588",
       "url": "https://www.urbanbar.com/products/ub588",
-      "enrichedAt": "2026-06-13T00:32:04.253Z",
+      "enrichedAt": "2026-06-13T01:27:19.808Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4068,7 +4080,7 @@
     "ub586": {
       "handle": "ub586",
       "url": "https://www.urbanbar.com/products/ub586",
-      "enrichedAt": "2026-06-13T00:32:04.381Z",
+      "enrichedAt": "2026-06-13T01:27:19.857Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4078,7 +4090,7 @@
     "ub585": {
       "handle": "ub585",
       "url": "https://www.urbanbar.com/products/ub585",
-      "enrichedAt": "2026-06-13T00:32:04.637Z",
+      "enrichedAt": "2026-06-13T01:27:20.024Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4088,7 +4100,7 @@
     "ub590": {
       "handle": "ub590",
       "url": "https://www.urbanbar.com/products/ub590",
-      "enrichedAt": "2026-06-13T00:32:04.777Z",
+      "enrichedAt": "2026-06-13T01:27:20.166Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4098,7 +4110,7 @@
     "ub591": {
       "handle": "ub591",
       "url": "https://www.urbanbar.com/products/ub591",
-      "enrichedAt": "2026-06-13T00:32:04.745Z",
+      "enrichedAt": "2026-06-13T01:27:19.855Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4108,7 +4120,7 @@
     "ub583": {
       "handle": "ub583",
       "url": "https://www.urbanbar.com/products/ub583",
-      "enrichedAt": "2026-06-13T00:32:04.578Z",
+      "enrichedAt": "2026-06-13T01:27:20.298Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4118,7 +4130,7 @@
     "ub584": {
       "handle": "ub584",
       "url": "https://www.urbanbar.com/products/ub584",
-      "enrichedAt": "2026-06-13T00:32:04.827Z",
+      "enrichedAt": "2026-06-13T01:27:20.094Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4128,7 +4140,7 @@
     "ub582": {
       "handle": "ub582",
       "url": "https://www.urbanbar.com/products/ub582",
-      "enrichedAt": "2026-06-13T00:32:04.872Z",
+      "enrichedAt": "2026-06-13T01:27:20.556Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4138,7 +4150,7 @@
     "ub581": {
       "handle": "ub581",
       "url": "https://www.urbanbar.com/products/ub581",
-      "enrichedAt": "2026-06-13T00:32:05.355Z",
+      "enrichedAt": "2026-06-13T01:27:20.133Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4148,7 +4160,7 @@
     "ub579": {
       "handle": "ub579",
       "url": "https://www.urbanbar.com/products/ub579",
-      "enrichedAt": "2026-06-13T00:32:05.112Z",
+      "enrichedAt": "2026-06-13T01:27:20.333Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4158,7 +4170,7 @@
     "ub580": {
       "handle": "ub580",
       "url": "https://www.urbanbar.com/products/ub580",
-      "enrichedAt": "2026-06-13T00:32:05.412Z",
+      "enrichedAt": "2026-06-13T01:27:20.810Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4168,7 +4180,7 @@
     "ub576": {
       "handle": "ub576",
       "url": "https://www.urbanbar.com/products/ub576",
-      "enrichedAt": "2026-06-13T00:32:05.272Z",
+      "enrichedAt": "2026-06-13T01:27:20.677Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4178,7 +4190,7 @@
     "ub578": {
       "handle": "ub578",
       "url": "https://www.urbanbar.com/products/ub578",
-      "enrichedAt": "2026-06-13T00:32:05.489Z",
+      "enrichedAt": "2026-06-13T01:27:20.471Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4188,7 +4200,7 @@
     "ub577": {
       "handle": "ub577",
       "url": "https://www.urbanbar.com/products/ub577",
-      "enrichedAt": "2026-06-13T00:32:05.421Z",
+      "enrichedAt": "2026-06-13T01:27:20.981Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4198,7 +4210,7 @@
     "ub574": {
       "handle": "ub574",
       "url": "https://www.urbanbar.com/products/ub574",
-      "enrichedAt": "2026-06-13T00:32:05.450Z",
+      "enrichedAt": "2026-06-13T01:27:20.988Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4208,7 +4220,7 @@
     "ub575": {
       "handle": "ub575",
       "url": "https://www.urbanbar.com/products/ub575",
-      "enrichedAt": "2026-06-13T00:32:05.578Z",
+      "enrichedAt": "2026-06-13T01:27:21.206Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4218,7 +4230,7 @@
     "ub573": {
       "handle": "ub573",
       "url": "https://www.urbanbar.com/products/ub573",
-      "enrichedAt": "2026-06-13T00:32:05.925Z",
+      "enrichedAt": "2026-06-13T01:27:20.861Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4228,7 +4240,7 @@
     "ub5725": {
       "handle": "ub5725",
       "url": "https://www.urbanbar.com/products/ub5725",
-      "enrichedAt": "2026-06-13T00:32:05.950Z",
+      "enrichedAt": "2026-06-13T01:27:21.294Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4238,7 +4250,7 @@
     "ub570": {
       "handle": "ub570",
       "url": "https://www.urbanbar.com/products/ub570",
-      "enrichedAt": "2026-06-13T00:32:06.055Z",
+      "enrichedAt": "2026-06-13T01:27:21.444Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4248,7 +4260,7 @@
     "ub572": {
       "handle": "ub572",
       "url": "https://www.urbanbar.com/products/ub572",
-      "enrichedAt": "2026-06-13T00:32:06.066Z",
+      "enrichedAt": "2026-06-13T01:27:21.463Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4258,7 +4270,7 @@
     "ub571": {
       "handle": "ub571",
       "url": "https://www.urbanbar.com/products/ub571",
-      "enrichedAt": "2026-06-13T00:32:06.083Z",
+      "enrichedAt": "2026-06-13T01:27:21.804Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4268,7 +4280,7 @@
     "ub569": {
       "handle": "ub569",
       "url": "https://www.urbanbar.com/products/ub569",
-      "enrichedAt": "2026-06-13T00:32:06.140Z",
+      "enrichedAt": "2026-06-13T01:27:21.611Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4278,7 +4290,7 @@
     "ub568": {
       "handle": "ub568",
       "url": "https://www.urbanbar.com/products/ub568",
-      "enrichedAt": "2026-06-13T00:32:06.190Z",
+      "enrichedAt": "2026-06-13T01:27:21.823Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4288,7 +4300,7 @@
     "ub567": {
       "handle": "ub567",
       "url": "https://www.urbanbar.com/products/ub567",
-      "enrichedAt": "2026-06-13T00:32:06.305Z",
+      "enrichedAt": "2026-06-13T01:27:21.641Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4298,7 +4310,7 @@
     "ub564": {
       "handle": "ub564",
       "url": "https://www.urbanbar.com/products/ub564",
-      "enrichedAt": "2026-06-13T00:32:06.490Z",
+      "enrichedAt": "2026-06-13T01:27:22.171Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4308,7 +4320,7 @@
     "ub566": {
       "handle": "ub566",
       "url": "https://www.urbanbar.com/products/ub566",
-      "enrichedAt": "2026-06-13T00:32:06.553Z",
+      "enrichedAt": "2026-06-13T01:27:22.347Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4318,7 +4330,7 @@
     "ub565": {
       "handle": "ub565",
       "url": "https://www.urbanbar.com/products/ub565",
-      "enrichedAt": "2026-06-13T00:32:06.763Z",
+      "enrichedAt": "2026-06-13T01:27:22.139Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4328,7 +4340,7 @@
     "ub562": {
       "handle": "ub562",
       "url": "https://www.urbanbar.com/products/ub562",
-      "enrichedAt": "2026-06-13T00:32:06.896Z",
+      "enrichedAt": "2026-06-13T01:27:22.264Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4338,7 +4350,7 @@
     "ub563": {
       "handle": "ub563",
       "url": "https://www.urbanbar.com/products/ub563",
-      "enrichedAt": "2026-06-13T00:32:06.772Z",
+      "enrichedAt": "2026-06-13T01:27:22.365Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4348,7 +4360,7 @@
     "ub559": {
       "handle": "ub559",
       "url": "https://www.urbanbar.com/products/ub559",
-      "enrichedAt": "2026-06-13T00:32:06.798Z",
+      "enrichedAt": "2026-06-13T01:27:22.376Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4358,7 +4370,7 @@
     "ub561": {
       "handle": "ub561",
       "url": "https://www.urbanbar.com/products/ub561",
-      "enrichedAt": "2026-06-13T00:32:07.199Z",
+      "enrichedAt": "2026-06-13T01:27:22.794Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4368,7 +4380,7 @@
     "ub560": {
       "handle": "ub560",
       "url": "https://www.urbanbar.com/products/ub560",
-      "enrichedAt": "2026-06-13T00:32:07.031Z",
+      "enrichedAt": "2026-06-13T01:27:22.774Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4378,7 +4390,7 @@
     "ub558": {
       "handle": "ub558",
       "url": "https://www.urbanbar.com/products/ub558",
-      "enrichedAt": "2026-06-13T00:32:07.205Z",
+      "enrichedAt": "2026-06-13T01:27:23.054Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4388,7 +4400,7 @@
     "ub555": {
       "handle": "ub555",
       "url": "https://www.urbanbar.com/products/ub555",
-      "enrichedAt": "2026-06-13T00:32:07.151Z",
+      "enrichedAt": "2026-06-13T01:27:23.264Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4398,7 +4410,7 @@
     "ub554": {
       "handle": "ub554",
       "url": "https://www.urbanbar.com/products/ub554",
-      "enrichedAt": "2026-06-13T00:32:07.503Z",
+      "enrichedAt": "2026-06-13T01:27:22.939Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4408,7 +4420,7 @@
     "ub553": {
       "handle": "ub553",
       "url": "https://www.urbanbar.com/products/ub553",
-      "enrichedAt": "2026-06-13T00:32:07.447Z",
+      "enrichedAt": "2026-06-13T01:27:22.677Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4418,7 +4430,7 @@
     "ub556": {
       "handle": "ub556",
       "url": "https://www.urbanbar.com/products/ub556",
-      "enrichedAt": "2026-06-13T00:32:07.480Z",
+      "enrichedAt": "2026-06-13T01:27:23.325Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4428,7 +4440,7 @@
     "ub557": {
       "handle": "ub557",
       "url": "https://www.urbanbar.com/products/ub557",
-      "enrichedAt": "2026-06-13T00:32:07.614Z",
+      "enrichedAt": "2026-06-13T01:27:23.607Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4438,7 +4450,7 @@
     "ub550": {
       "handle": "ub550",
       "url": "https://www.urbanbar.com/products/ub550",
-      "enrichedAt": "2026-06-13T00:32:07.828Z",
+      "enrichedAt": "2026-06-13T01:27:23.401Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4448,7 +4460,7 @@
     "ub552": {
       "handle": "ub552",
       "url": "https://www.urbanbar.com/products/ub552",
-      "enrichedAt": "2026-06-13T00:32:07.908Z",
+      "enrichedAt": "2026-06-13T01:27:23.671Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4458,7 +4470,7 @@
     "ub551": {
       "handle": "ub551",
       "url": "https://www.urbanbar.com/products/ub551",
-      "enrichedAt": "2026-06-13T00:32:07.892Z",
+      "enrichedAt": "2026-06-13T01:27:23.629Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4468,7 +4480,7 @@
     "ub547": {
       "handle": "ub547",
       "url": "https://www.urbanbar.com/products/ub547",
-      "enrichedAt": "2026-06-13T00:32:07.890Z",
+      "enrichedAt": "2026-06-13T01:27:23.879Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4478,7 +4490,7 @@
     "ub548": {
       "handle": "ub548",
       "url": "https://www.urbanbar.com/products/ub548",
-      "enrichedAt": "2026-06-13T00:32:08.279Z",
+      "enrichedAt": "2026-06-13T01:27:23.859Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4488,7 +4500,7 @@
     "ub549": {
       "handle": "ub549",
       "url": "https://www.urbanbar.com/products/ub549",
-      "enrichedAt": "2026-06-13T00:32:08.165Z",
+      "enrichedAt": "2026-06-13T01:27:24.264Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4498,7 +4510,7 @@
     "ub546": {
       "handle": "ub546",
       "url": "https://www.urbanbar.com/products/ub546",
-      "enrichedAt": "2026-06-13T00:32:08.120Z",
+      "enrichedAt": "2026-06-13T01:27:23.921Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4508,7 +4520,7 @@
     "ub545": {
       "handle": "ub545",
       "url": "https://www.urbanbar.com/products/ub545",
-      "enrichedAt": "2026-06-13T00:32:08.417Z",
+      "enrichedAt": "2026-06-13T01:27:23.928Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4518,7 +4530,7 @@
     "ub544": {
       "handle": "ub544",
       "url": "https://www.urbanbar.com/products/ub544",
-      "enrichedAt": "2026-06-13T00:32:08.425Z",
+      "enrichedAt": "2026-06-13T01:27:23.996Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4528,7 +4540,7 @@
     "ub543": {
       "handle": "ub543",
       "url": "https://www.urbanbar.com/products/ub543",
-      "enrichedAt": "2026-06-13T00:32:08.608Z",
+      "enrichedAt": "2026-06-13T01:27:24.467Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4538,7 +4550,7 @@
     "ub542": {
       "handle": "ub542",
       "url": "https://www.urbanbar.com/products/ub542",
-      "enrichedAt": "2026-06-13T00:32:08.743Z",
+      "enrichedAt": "2026-06-13T01:27:24.401Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4548,7 +4560,7 @@
     "ub539": {
       "handle": "ub539",
       "url": "https://www.urbanbar.com/products/ub539",
-      "enrichedAt": "2026-06-13T00:32:08.528Z",
+      "enrichedAt": "2026-06-13T01:27:24.240Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4558,7 +4570,7 @@
     "ub541": {
       "handle": "ub541",
       "url": "https://www.urbanbar.com/products/ub541",
-      "enrichedAt": "2026-06-13T00:32:08.915Z",
+      "enrichedAt": "2026-06-13T01:27:24.605Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4568,7 +4580,7 @@
     "ub540": {
       "handle": "ub540",
       "url": "https://www.urbanbar.com/products/ub540",
-      "enrichedAt": "2026-06-13T00:32:08.980Z",
+      "enrichedAt": "2026-06-13T01:27:24.694Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4578,7 +4590,7 @@
     "ub538": {
       "handle": "ub538",
       "url": "https://www.urbanbar.com/products/ub538",
-      "enrichedAt": "2026-06-13T00:32:09.097Z",
+      "enrichedAt": "2026-06-13T01:27:24.794Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4588,7 +4600,7 @@
     "ub534": {
       "handle": "ub534",
       "url": "https://www.urbanbar.com/products/ub534",
-      "enrichedAt": "2026-06-13T00:32:09.164Z",
+      "enrichedAt": "2026-06-13T01:27:24.902Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4598,7 +4610,7 @@
     "ub537": {
       "handle": "ub537",
       "url": "https://www.urbanbar.com/products/ub537",
-      "enrichedAt": "2026-06-13T00:32:09.252Z",
+      "enrichedAt": "2026-06-13T01:27:24.939Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4608,7 +4620,7 @@
     "ub536": {
       "handle": "ub536",
       "url": "https://www.urbanbar.com/products/ub536",
-      "enrichedAt": "2026-06-13T00:32:09.211Z",
+      "enrichedAt": "2026-06-13T01:27:25.173Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4618,7 +4630,7 @@
     "ub535": {
       "handle": "ub535",
       "url": "https://www.urbanbar.com/products/ub535",
-      "enrichedAt": "2026-06-13T00:32:09.321Z",
+      "enrichedAt": "2026-06-13T01:27:25.153Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4628,7 +4640,7 @@
     "ub533": {
       "handle": "ub533",
       "url": "https://www.urbanbar.com/products/ub533",
-      "enrichedAt": "2026-06-13T00:32:09.754Z",
+      "enrichedAt": "2026-06-13T01:27:25.308Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4638,7 +4650,7 @@
     "ub530": {
       "handle": "ub530",
       "url": "https://www.urbanbar.com/products/ub530",
-      "enrichedAt": "2026-06-13T00:32:09.556Z",
+      "enrichedAt": "2026-06-13T01:27:25.391Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4648,7 +4660,7 @@
     "ub531": {
       "handle": "ub531",
       "url": "https://www.urbanbar.com/products/ub531",
-      "enrichedAt": "2026-06-13T00:32:09.746Z",
+      "enrichedAt": "2026-06-13T01:27:25.448Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4658,7 +4670,7 @@
     "ub532": {
       "handle": "ub532",
       "url": "https://www.urbanbar.com/products/ub532",
-      "enrichedAt": "2026-06-13T00:32:09.764Z",
+      "enrichedAt": "2026-06-13T01:27:25.222Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4668,7 +4680,7 @@
     "ub526": {
       "handle": "ub526",
       "url": "https://www.urbanbar.com/products/ub526",
-      "enrichedAt": "2026-06-13T00:32:10.028Z",
+      "enrichedAt": "2026-06-13T01:27:25.814Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4678,7 +4690,7 @@
     "ub525": {
       "handle": "ub525",
       "url": "https://www.urbanbar.com/products/ub525",
-      "enrichedAt": "2026-06-13T00:32:09.898Z",
+      "enrichedAt": "2026-06-13T01:27:25.515Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4688,7 +4700,7 @@
     "ub527": {
       "handle": "ub527",
       "url": "https://www.urbanbar.com/products/ub527",
-      "enrichedAt": "2026-06-13T00:32:10.029Z",
+      "enrichedAt": "2026-06-13T01:27:25.512Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4698,7 +4710,7 @@
     "ub529": {
       "handle": "ub529",
       "url": "https://www.urbanbar.com/products/ub529",
-      "enrichedAt": "2026-06-13T00:32:10.236Z",
+      "enrichedAt": "2026-06-13T01:27:25.613Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4708,7 +4720,7 @@
     "ub528": {
       "handle": "ub528",
       "url": "https://www.urbanbar.com/products/ub528",
-      "enrichedAt": "2026-06-13T00:32:10.249Z",
+      "enrichedAt": "2026-06-13T01:27:25.915Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4718,7 +4730,7 @@
     "ub524": {
       "handle": "ub524",
       "url": "https://www.urbanbar.com/products/ub524",
-      "enrichedAt": "2026-06-13T00:32:10.493Z",
+      "enrichedAt": "2026-06-13T01:27:25.776Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4728,7 +4740,7 @@
     "ub523": {
       "handle": "ub523",
       "url": "https://www.urbanbar.com/products/ub523",
-      "enrichedAt": "2026-06-13T00:32:10.630Z",
+      "enrichedAt": "2026-06-13T01:27:25.842Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4738,7 +4750,7 @@
     "ub522": {
       "handle": "ub522",
       "url": "https://www.urbanbar.com/products/ub522",
-      "enrichedAt": "2026-06-13T00:32:10.644Z",
+      "enrichedAt": "2026-06-13T01:27:26.135Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4748,7 +4760,7 @@
     "ub521": {
       "handle": "ub521",
       "url": "https://www.urbanbar.com/products/ub521",
-      "enrichedAt": "2026-06-13T00:32:10.792Z",
+      "enrichedAt": "2026-06-13T01:27:25.905Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4758,7 +4770,7 @@
     "ub518": {
       "handle": "ub518",
       "url": "https://www.urbanbar.com/products/ub518",
-      "enrichedAt": "2026-06-13T00:32:10.879Z",
+      "enrichedAt": "2026-06-13T01:27:26.480Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4768,7 +4780,7 @@
     "ub519": {
       "handle": "ub519",
       "url": "https://www.urbanbar.com/products/ub519",
-      "enrichedAt": "2026-06-13T00:32:10.858Z",
+      "enrichedAt": "2026-06-13T01:27:26.120Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4778,7 +4790,7 @@
     "ub520": {
       "handle": "ub520",
       "url": "https://www.urbanbar.com/products/ub520",
-      "enrichedAt": "2026-06-13T00:32:10.974Z",
+      "enrichedAt": "2026-06-13T01:27:26.448Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4788,7 +4800,7 @@
     "ub517": {
       "handle": "ub517",
       "url": "https://www.urbanbar.com/products/ub517",
-      "enrichedAt": "2026-06-13T00:32:11.057Z",
+      "enrichedAt": "2026-06-13T01:27:26.187Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4798,7 +4810,7 @@
     "ub516": {
       "handle": "ub516",
       "url": "https://www.urbanbar.com/products/ub516",
-      "enrichedAt": "2026-06-13T00:32:11.172Z",
+      "enrichedAt": "2026-06-13T01:27:26.530Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4808,7 +4820,7 @@
     "ub513": {
       "handle": "ub513",
       "url": "https://www.urbanbar.com/products/ub513",
-      "enrichedAt": "2026-06-13T00:32:11.293Z",
+      "enrichedAt": "2026-06-13T01:27:26.779Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4818,7 +4830,7 @@
     "ub515": {
       "handle": "ub515",
       "url": "https://www.urbanbar.com/products/ub515",
-      "enrichedAt": "2026-06-13T00:32:11.230Z",
+      "enrichedAt": "2026-06-13T01:27:26.425Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4828,7 +4840,7 @@
     "ub514": {
       "handle": "ub514",
       "url": "https://www.urbanbar.com/products/ub514",
-      "enrichedAt": "2026-06-13T00:32:11.505Z",
+      "enrichedAt": "2026-06-13T01:27:26.498Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4838,7 +4850,7 @@
     "ub510": {
       "handle": "ub510",
       "url": "https://www.urbanbar.com/products/ub510",
-      "enrichedAt": "2026-06-13T00:32:11.590Z",
+      "enrichedAt": "2026-06-13T01:27:27.036Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4848,7 +4860,7 @@
     "ub512": {
       "handle": "ub512",
       "url": "https://www.urbanbar.com/products/ub512",
-      "enrichedAt": "2026-06-13T00:32:11.603Z",
+      "enrichedAt": "2026-06-13T01:27:27.115Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4858,7 +4870,7 @@
     "ub511": {
       "handle": "ub511",
       "url": "https://www.urbanbar.com/products/ub511",
-      "enrichedAt": "2026-06-13T00:32:11.710Z",
+      "enrichedAt": "2026-06-13T01:27:27.136Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4868,7 +4880,7 @@
     "ub507": {
       "handle": "ub507",
       "url": "https://www.urbanbar.com/products/ub507",
-      "enrichedAt": "2026-06-13T00:32:11.844Z",
+      "enrichedAt": "2026-06-13T01:27:27.251Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4878,7 +4890,7 @@
     "ub509": {
       "handle": "ub509",
       "url": "https://www.urbanbar.com/products/ub509",
-      "enrichedAt": "2026-06-13T00:32:11.797Z",
+      "enrichedAt": "2026-06-13T01:27:27.065Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4888,7 +4900,7 @@
     "ub508": {
       "handle": "ub508",
       "url": "https://www.urbanbar.com/products/ub508",
-      "enrichedAt": "2026-06-13T00:32:11.968Z",
+      "enrichedAt": "2026-06-13T01:27:27.314Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4898,7 +4910,7 @@
     "ub506": {
       "handle": "ub506",
       "url": "https://www.urbanbar.com/products/ub506",
-      "enrichedAt": "2026-06-13T00:32:11.957Z",
+      "enrichedAt": "2026-06-13T01:27:27.697Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4908,7 +4920,7 @@
     "ub503": {
       "handle": "ub503",
       "url": "https://www.urbanbar.com/products/ub503",
-      "enrichedAt": "2026-06-13T00:32:12.328Z",
+      "enrichedAt": "2026-06-13T01:27:27.727Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4918,7 +4930,7 @@
     "ub502": {
       "handle": "ub502",
       "url": "https://www.urbanbar.com/products/ub502",
-      "enrichedAt": "2026-06-13T00:32:12.403Z",
+      "enrichedAt": "2026-06-13T01:27:27.757Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4928,7 +4940,7 @@
     "ub504": {
       "handle": "ub504",
       "url": "https://www.urbanbar.com/products/ub504",
-      "enrichedAt": "2026-06-13T00:32:12.390Z",
+      "enrichedAt": "2026-06-13T01:27:27.395Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4938,7 +4950,7 @@
     "ub505": {
       "handle": "ub505",
       "url": "https://www.urbanbar.com/products/ub505",
-      "enrichedAt": "2026-06-13T00:32:12.915Z",
+      "enrichedAt": "2026-06-13T01:27:27.840Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4948,7 +4960,7 @@
     "ub488": {
       "handle": "ub488",
       "url": "https://www.urbanbar.com/products/ub488",
-      "enrichedAt": "2026-06-13T00:32:12.345Z",
+      "enrichedAt": "2026-06-13T01:27:27.950Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4958,7 +4970,7 @@
     "ub492": {
       "handle": "ub492",
       "url": "https://www.urbanbar.com/products/ub492",
-      "enrichedAt": "2026-06-13T00:32:12.494Z",
+      "enrichedAt": "2026-06-13T01:27:27.912Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4968,7 +4980,7 @@
     "ub493": {
       "handle": "ub493",
       "url": "https://www.urbanbar.com/products/ub493",
-      "enrichedAt": "2026-06-13T00:32:12.982Z",
+      "enrichedAt": "2026-06-13T01:27:28.315Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4978,7 +4990,7 @@
     "ub494": {
       "handle": "ub494",
       "url": "https://www.urbanbar.com/products/ub494",
-      "enrichedAt": "2026-06-13T00:32:12.781Z",
+      "enrichedAt": "2026-06-13T01:27:28.447Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4988,7 +5000,7 @@
     "ub501": {
       "handle": "ub501",
       "url": "https://www.urbanbar.com/products/ub501",
-      "enrichedAt": "2026-06-13T00:32:13.106Z",
+      "enrichedAt": "2026-06-13T01:27:28.432Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -4998,7 +5010,7 @@
     "ub489": {
       "handle": "ub489",
       "url": "https://www.urbanbar.com/products/ub489",
-      "enrichedAt": "2026-06-13T00:32:12.953Z",
+      "enrichedAt": "2026-06-13T01:27:28.793Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5008,7 +5020,7 @@
     "ub490": {
       "handle": "ub490",
       "url": "https://www.urbanbar.com/products/ub490",
-      "enrichedAt": "2026-06-13T00:32:13.355Z",
+      "enrichedAt": "2026-06-13T01:27:28.736Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5018,7 +5030,7 @@
     "ub491": {
       "handle": "ub491",
       "url": "https://www.urbanbar.com/products/ub491",
-      "enrichedAt": "2026-06-13T00:32:13.070Z",
+      "enrichedAt": "2026-06-13T01:27:28.746Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5028,7 +5040,7 @@
     "ub484": {
       "handle": "ub484",
       "url": "https://www.urbanbar.com/products/ub484",
-      "enrichedAt": "2026-06-13T00:32:13.315Z",
+      "enrichedAt": "2026-06-13T01:27:28.686Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5038,7 +5050,7 @@
     "ub485": {
       "handle": "ub485",
       "url": "https://www.urbanbar.com/products/ub485",
-      "enrichedAt": "2026-06-13T00:32:13.555Z",
+      "enrichedAt": "2026-06-13T01:27:29.115Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5048,7 +5060,7 @@
     "ub486": {
       "handle": "ub486",
       "url": "https://www.urbanbar.com/products/ub486",
-      "enrichedAt": "2026-06-13T00:32:13.597Z",
+      "enrichedAt": "2026-06-13T01:27:28.972Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5058,7 +5070,7 @@
     "ub487": {
       "handle": "ub487",
       "url": "https://www.urbanbar.com/products/ub487",
-      "enrichedAt": "2026-06-13T00:32:13.741Z",
+      "enrichedAt": "2026-06-13T01:27:29.365Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5068,7 +5080,7 @@
     "ub480": {
       "handle": "ub480",
       "url": "https://www.urbanbar.com/products/ub480",
-      "enrichedAt": "2026-06-13T00:32:13.746Z",
+      "enrichedAt": "2026-06-13T01:27:29.125Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5078,7 +5090,7 @@
     "ub481": {
       "handle": "ub481",
       "url": "https://www.urbanbar.com/products/ub481",
-      "enrichedAt": "2026-06-13T00:32:13.607Z",
+      "enrichedAt": "2026-06-13T01:27:29.132Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5088,7 +5100,7 @@
     "ub482": {
       "handle": "ub482",
       "url": "https://www.urbanbar.com/products/ub482",
-      "enrichedAt": "2026-06-13T00:32:13.890Z",
+      "enrichedAt": "2026-06-13T01:27:29.110Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5098,7 +5110,7 @@
     "ub483": {
       "handle": "ub483",
       "url": "https://www.urbanbar.com/products/ub483",
-      "enrichedAt": "2026-06-13T00:32:14.067Z",
+      "enrichedAt": "2026-06-13T01:27:29.600Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5108,7 +5120,7 @@
     "ub477": {
       "handle": "ub477",
       "url": "https://www.urbanbar.com/products/ub477",
-      "enrichedAt": "2026-06-13T00:32:14.107Z",
+      "enrichedAt": "2026-06-13T01:27:29.414Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5118,7 +5130,7 @@
     "ub476": {
       "handle": "ub476",
       "url": "https://www.urbanbar.com/products/ub476",
-      "enrichedAt": "2026-06-13T00:32:14.334Z",
+      "enrichedAt": "2026-06-13T01:27:29.686Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5128,7 +5140,7 @@
     "ub475": {
       "handle": "ub475",
       "url": "https://www.urbanbar.com/products/ub475",
-      "enrichedAt": "2026-06-13T00:32:14.385Z",
+      "enrichedAt": "2026-06-13T01:27:29.837Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5138,7 +5150,7 @@
     "ub474": {
       "handle": "ub474",
       "url": "https://www.urbanbar.com/products/ub474",
-      "enrichedAt": "2026-06-13T00:32:14.199Z",
+      "enrichedAt": "2026-06-13T01:27:29.739Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5148,7 +5160,7 @@
     "ub473": {
       "handle": "ub473",
       "url": "https://www.urbanbar.com/products/ub473",
-      "enrichedAt": "2026-06-13T00:32:14.481Z",
+      "enrichedAt": "2026-06-13T01:27:29.668Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5158,7 +5170,7 @@
     "ub472": {
       "handle": "ub472",
       "url": "https://www.urbanbar.com/products/ub472",
-      "enrichedAt": "2026-06-13T00:32:14.471Z",
+      "enrichedAt": "2026-06-13T01:27:29.722Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5168,7 +5180,7 @@
     "ub471": {
       "handle": "ub471",
       "url": "https://www.urbanbar.com/products/ub471",
-      "enrichedAt": "2026-06-13T00:32:14.596Z",
+      "enrichedAt": "2026-06-13T01:27:30.231Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5178,7 +5190,7 @@
     "ub470": {
       "handle": "ub470",
       "url": "https://www.urbanbar.com/products/ub470",
-      "enrichedAt": "2026-06-13T00:32:14.826Z",
+      "enrichedAt": "2026-06-13T01:27:30.068Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5188,7 +5200,7 @@
     "ub4676": {
       "handle": "ub4676",
       "url": "https://www.urbanbar.com/products/ub4676",
-      "enrichedAt": "2026-06-13T00:32:14.946Z",
+      "enrichedAt": "2026-06-13T01:27:30.002Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5198,7 +5210,7 @@
     "ub469": {
       "handle": "ub469",
       "url": "https://www.urbanbar.com/products/ub469",
-      "enrichedAt": "2026-06-13T00:32:15.113Z",
+      "enrichedAt": "2026-06-13T01:27:30.046Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5208,7 +5220,7 @@
     "ub468": {
       "handle": "ub468",
       "url": "https://www.urbanbar.com/products/ub468",
-      "enrichedAt": "2026-06-13T00:32:15.099Z",
+      "enrichedAt": "2026-06-13T01:27:30.523Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5218,7 +5230,7 @@
     "ub467": {
       "handle": "ub467",
       "url": "https://www.urbanbar.com/products/ub467",
-      "enrichedAt": "2026-06-13T00:32:15.153Z",
+      "enrichedAt": "2026-06-13T01:27:30.481Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5228,7 +5240,7 @@
     "ub466": {
       "handle": "ub466",
       "url": "https://www.urbanbar.com/products/ub466",
-      "enrichedAt": "2026-06-13T00:32:15.176Z",
+      "enrichedAt": "2026-06-13T01:27:30.723Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5238,7 +5250,7 @@
     "ub465": {
       "handle": "ub465",
       "url": "https://www.urbanbar.com/products/ub465",
-      "enrichedAt": "2026-06-13T00:32:15.453Z",
+      "enrichedAt": "2026-06-13T01:27:30.322Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5248,7 +5260,7 @@
     "ub464": {
       "handle": "ub464",
       "url": "https://www.urbanbar.com/products/ub464",
-      "enrichedAt": "2026-06-13T00:32:15.414Z",
+      "enrichedAt": "2026-06-13T01:27:30.797Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5258,7 +5270,7 @@
     "ub463": {
       "handle": "ub463",
       "url": "https://www.urbanbar.com/products/ub463",
-      "enrichedAt": "2026-06-13T00:32:15.594Z",
+      "enrichedAt": "2026-06-13T01:27:30.965Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5268,7 +5280,7 @@
     "ub462": {
       "handle": "ub462",
       "url": "https://www.urbanbar.com/products/ub462",
-      "enrichedAt": "2026-06-13T00:32:15.810Z",
+      "enrichedAt": "2026-06-13T01:27:30.945Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5278,7 +5290,7 @@
     "ub461": {
       "handle": "ub461",
       "url": "https://www.urbanbar.com/products/ub461",
-      "enrichedAt": "2026-06-13T00:32:16.028Z",
+      "enrichedAt": "2026-06-13T01:27:30.755Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5288,7 +5300,7 @@
     "ub460": {
       "handle": "ub460",
       "url": "https://www.urbanbar.com/products/ub460",
-      "enrichedAt": "2026-06-13T00:32:15.782Z",
+      "enrichedAt": "2026-06-13T01:27:30.824Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5298,7 +5310,7 @@
     "ub459": {
       "handle": "ub459",
       "url": "https://www.urbanbar.com/products/ub459",
-      "enrichedAt": "2026-06-13T00:32:15.796Z",
+      "enrichedAt": "2026-06-13T01:27:31.548Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5308,7 +5320,7 @@
     "ub458": {
       "handle": "ub458",
       "url": "https://www.urbanbar.com/products/ub458",
-      "enrichedAt": "2026-06-13T00:32:15.835Z",
+      "enrichedAt": "2026-06-13T01:27:31.408Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5318,7 +5330,7 @@
     "ub457": {
       "handle": "ub457",
       "url": "https://www.urbanbar.com/products/ub457",
-      "enrichedAt": "2026-06-13T00:32:16.297Z",
+      "enrichedAt": "2026-06-13T01:27:31.097Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5328,7 +5340,7 @@
     "ub456": {
       "handle": "ub456",
       "url": "https://www.urbanbar.com/products/ub456",
-      "enrichedAt": "2026-06-13T00:32:16.229Z",
+      "enrichedAt": "2026-06-13T01:27:31.592Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5338,7 +5350,7 @@
     "ub455": {
       "handle": "ub455",
       "url": "https://www.urbanbar.com/products/ub455",
-      "enrichedAt": "2026-06-13T00:32:16.446Z",
+      "enrichedAt": "2026-06-13T01:27:31.273Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5348,7 +5360,7 @@
     "ub454": {
       "handle": "ub454",
       "url": "https://www.urbanbar.com/products/ub454",
-      "enrichedAt": "2026-06-13T00:32:16.493Z",
+      "enrichedAt": "2026-06-13T01:27:31.566Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5358,7 +5370,7 @@
     "ub453": {
       "handle": "ub453",
       "url": "https://www.urbanbar.com/products/ub453",
-      "enrichedAt": "2026-06-13T00:32:16.534Z",
+      "enrichedAt": "2026-06-13T01:27:31.915Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5368,7 +5380,7 @@
     "ub452": {
       "handle": "ub452",
       "url": "https://www.urbanbar.com/products/ub452",
-      "enrichedAt": "2026-06-13T00:32:16.690Z",
+      "enrichedAt": "2026-06-13T01:27:31.596Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5378,7 +5390,7 @@
     "ub451": {
       "handle": "ub451",
       "url": "https://www.urbanbar.com/products/ub451",
-      "enrichedAt": "2026-06-13T00:32:16.693Z",
+      "enrichedAt": "2026-06-13T01:27:31.720Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5388,7 +5400,7 @@
     "ub450": {
       "handle": "ub450",
       "url": "https://www.urbanbar.com/products/ub450",
-      "enrichedAt": "2026-06-13T00:32:17.030Z",
+      "enrichedAt": "2026-06-13T01:27:32.147Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5398,7 +5410,7 @@
     "ub449": {
       "handle": "ub449",
       "url": "https://www.urbanbar.com/products/ub449",
-      "enrichedAt": "2026-06-13T00:32:17.311Z",
+      "enrichedAt": "2026-06-13T01:27:31.880Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5408,7 +5420,7 @@
     "ub448": {
       "handle": "ub448",
       "url": "https://www.urbanbar.com/products/ub448",
-      "enrichedAt": "2026-06-13T00:32:17.037Z",
+      "enrichedAt": "2026-06-13T01:27:32.225Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5418,7 +5430,7 @@
     "ub447": {
       "handle": "ub447",
       "url": "https://www.urbanbar.com/products/ub447",
-      "enrichedAt": "2026-06-13T00:32:17.097Z",
+      "enrichedAt": "2026-06-13T01:27:32.666Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5428,7 +5440,7 @@
     "ub446": {
       "handle": "ub446",
       "url": "https://www.urbanbar.com/products/ub446",
-      "enrichedAt": "2026-06-13T00:32:17.379Z",
+      "enrichedAt": "2026-06-13T01:27:32.642Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5438,7 +5450,7 @@
     "ub445": {
       "handle": "ub445",
       "url": "https://www.urbanbar.com/products/ub445",
-      "enrichedAt": "2026-06-13T00:32:17.212Z",
+      "enrichedAt": "2026-06-13T01:27:32.185Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5448,7 +5460,7 @@
     "ub444": {
       "handle": "ub444",
       "url": "https://www.urbanbar.com/products/ub444",
-      "enrichedAt": "2026-06-13T00:32:17.537Z",
+      "enrichedAt": "2026-06-13T01:27:32.660Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5458,7 +5470,7 @@
     "ub443": {
       "handle": "ub443",
       "url": "https://www.urbanbar.com/products/ub443",
-      "enrichedAt": "2026-06-13T00:32:17.682Z",
+      "enrichedAt": "2026-06-13T01:27:32.892Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5468,7 +5480,7 @@
     "ub442": {
       "handle": "ub442",
       "url": "https://www.urbanbar.com/products/ub442",
-      "enrichedAt": "2026-06-13T00:32:17.798Z",
+      "enrichedAt": "2026-06-13T01:27:32.877Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5478,7 +5490,7 @@
     "ub441": {
       "handle": "ub441",
       "url": "https://www.urbanbar.com/products/ub441",
-      "enrichedAt": "2026-06-13T00:32:17.691Z",
+      "enrichedAt": "2026-06-13T01:27:32.853Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5488,7 +5500,7 @@
     "ub440": {
       "handle": "ub440",
       "url": "https://www.urbanbar.com/products/ub440",
-      "enrichedAt": "2026-06-13T00:32:17.737Z",
+      "enrichedAt": "2026-06-13T01:27:32.966Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5498,7 +5510,7 @@
     "ub439": {
       "handle": "ub439",
       "url": "https://www.urbanbar.com/products/ub439",
-      "enrichedAt": "2026-06-13T00:32:17.888Z",
+      "enrichedAt": "2026-06-13T01:27:33.465Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5508,7 +5520,7 @@
     "ub438": {
       "handle": "ub438",
       "url": "https://www.urbanbar.com/products/ub438",
-      "enrichedAt": "2026-06-13T00:32:18.214Z",
+      "enrichedAt": "2026-06-13T01:27:33.281Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5518,7 +5530,7 @@
     "ub437": {
       "handle": "ub437",
       "url": "https://www.urbanbar.com/products/ub437",
-      "enrichedAt": "2026-06-13T00:32:18.089Z",
+      "enrichedAt": "2026-06-13T01:27:33.418Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5528,7 +5540,7 @@
     "ub435": {
       "handle": "ub435",
       "url": "https://www.urbanbar.com/products/ub435",
-      "enrichedAt": "2026-06-13T00:32:18.473Z",
+      "enrichedAt": "2026-06-13T01:27:33.577Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5538,7 +5550,7 @@
     "ub436": {
       "handle": "ub436",
       "url": "https://www.urbanbar.com/products/ub436",
-      "enrichedAt": "2026-06-13T00:32:18.416Z",
+      "enrichedAt": "2026-06-13T01:27:33.226Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5548,7 +5560,7 @@
     "ub434": {
       "handle": "ub434",
       "url": "https://www.urbanbar.com/products/ub434",
-      "enrichedAt": "2026-06-13T00:32:18.546Z",
+      "enrichedAt": "2026-06-13T01:27:33.267Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5558,7 +5570,7 @@
     "ub433": {
       "handle": "ub433",
       "url": "https://www.urbanbar.com/products/ub433",
-      "enrichedAt": "2026-06-13T00:32:18.531Z",
+      "enrichedAt": "2026-06-13T01:27:33.920Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5568,7 +5580,7 @@
     "ub432": {
       "handle": "ub432",
       "url": "https://www.urbanbar.com/products/ub432",
-      "enrichedAt": "2026-06-13T00:32:18.662Z",
+      "enrichedAt": "2026-06-13T01:27:33.633Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5578,7 +5590,7 @@
     "ub431": {
       "handle": "ub431",
       "url": "https://www.urbanbar.com/products/ub431",
-      "enrichedAt": "2026-06-13T00:32:18.707Z",
+      "enrichedAt": "2026-06-13T01:27:33.607Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5588,7 +5600,7 @@
     "ub429": {
       "handle": "ub429",
       "url": "https://www.urbanbar.com/products/ub429",
-      "enrichedAt": "2026-06-13T00:32:18.780Z",
+      "enrichedAt": "2026-06-13T01:27:34.133Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5598,7 +5610,7 @@
     "ub430": {
       "handle": "ub430",
       "url": "https://www.urbanbar.com/products/ub430",
-      "enrichedAt": "2026-06-13T00:32:18.932Z",
+      "enrichedAt": "2026-06-13T01:27:34.357Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5608,7 +5620,7 @@
     "ub428": {
       "handle": "ub428",
       "url": "https://www.urbanbar.com/products/ub428",
-      "enrichedAt": "2026-06-13T00:32:19.045Z",
+      "enrichedAt": "2026-06-13T01:27:33.871Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5618,7 +5630,7 @@
     "ub427": {
       "handle": "ub427",
       "url": "https://www.urbanbar.com/products/ub427",
-      "enrichedAt": "2026-06-13T00:32:19.342Z",
+      "enrichedAt": "2026-06-13T01:27:34.355Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5628,7 +5640,7 @@
     "ub4263": {
       "handle": "ub4263",
       "url": "https://www.urbanbar.com/products/ub4263",
-      "enrichedAt": "2026-06-13T00:32:19.399Z",
+      "enrichedAt": "2026-06-13T01:27:34.301Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5638,7 +5650,7 @@
     "ub426": {
       "handle": "ub426",
       "url": "https://www.urbanbar.com/products/ub426",
-      "enrichedAt": "2026-06-13T00:32:19.246Z",
+      "enrichedAt": "2026-06-13T01:27:34.609Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5648,7 +5660,7 @@
     "ub425": {
       "handle": "ub425",
       "url": "https://www.urbanbar.com/products/ub425",
-      "enrichedAt": "2026-06-13T00:32:19.599Z",
+      "enrichedAt": "2026-06-13T01:27:34.260Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5658,7 +5670,7 @@
     "ub424": {
       "handle": "ub424",
       "url": "https://www.urbanbar.com/products/ub424",
-      "enrichedAt": "2026-06-13T00:32:19.435Z",
+      "enrichedAt": "2026-06-13T01:27:34.439Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5668,7 +5680,7 @@
     "ub423": {
       "handle": "ub423",
       "url": "https://www.urbanbar.com/products/ub423",
-      "enrichedAt": "2026-06-13T00:32:19.748Z",
+      "enrichedAt": "2026-06-13T01:27:34.653Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5678,7 +5690,7 @@
     "ub422": {
       "handle": "ub422",
       "url": "https://www.urbanbar.com/products/ub422",
-      "enrichedAt": "2026-06-13T00:32:19.688Z",
+      "enrichedAt": "2026-06-13T01:27:35.492Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5688,7 +5700,7 @@
     "ub421": {
       "handle": "ub421",
       "url": "https://www.urbanbar.com/products/ub421",
-      "enrichedAt": "2026-06-13T00:32:19.769Z",
+      "enrichedAt": "2026-06-13T01:27:34.664Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5698,7 +5710,7 @@
     "ub420": {
       "handle": "ub420",
       "url": "https://www.urbanbar.com/products/ub420",
-      "enrichedAt": "2026-06-13T00:32:20.105Z",
+      "enrichedAt": "2026-06-13T01:27:34.689Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5708,7 +5720,7 @@
     "ub42-01": {
       "handle": "ub42-01",
       "url": "https://www.urbanbar.com/products/ub42-01",
-      "enrichedAt": "2026-06-13T00:32:20.104Z",
+      "enrichedAt": "2026-06-13T01:27:35.071Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5718,7 +5730,7 @@
     "ub419": {
       "handle": "ub419",
       "url": "https://www.urbanbar.com/products/ub419",
-      "enrichedAt": "2026-06-13T00:32:20.166Z",
+      "enrichedAt": "2026-06-13T01:27:35.331Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5728,7 +5740,7 @@
     "ub418": {
       "handle": "ub418",
       "url": "https://www.urbanbar.com/products/ub418",
-      "enrichedAt": "2026-06-13T00:32:20.128Z",
+      "enrichedAt": "2026-06-13T01:27:35.381Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5738,7 +5750,7 @@
     "ub417": {
       "handle": "ub417",
       "url": "https://www.urbanbar.com/products/ub417",
-      "enrichedAt": "2026-06-13T00:32:20.429Z",
+      "enrichedAt": "2026-06-13T01:27:35.642Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5752,7 +5764,7 @@
     "ub413": {
       "handle": "ub413",
       "url": "https://www.urbanbar.com/products/ub413",
-      "enrichedAt": "2026-06-13T00:32:20.605Z",
+      "enrichedAt": "2026-06-13T01:27:35.827Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5762,7 +5774,7 @@
     "ub416": {
       "handle": "ub416",
       "url": "https://www.urbanbar.com/products/ub416",
-      "enrichedAt": "2026-06-13T00:32:20.488Z",
+      "enrichedAt": "2026-06-13T01:27:35.741Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5772,7 +5784,7 @@
     "ub415": {
       "handle": "ub415",
       "url": "https://www.urbanbar.com/products/ub415",
-      "enrichedAt": "2026-06-13T00:32:21.126Z",
+      "enrichedAt": "2026-06-13T01:27:36.143Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5782,7 +5794,7 @@
     "ub411": {
       "handle": "ub411",
       "url": "https://www.urbanbar.com/products/ub411",
-      "enrichedAt": "2026-06-13T00:32:20.919Z",
+      "enrichedAt": "2026-06-13T01:27:36.127Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5792,7 +5804,7 @@
     "ub410": {
       "handle": "ub410",
       "url": "https://www.urbanbar.com/products/ub410",
-      "enrichedAt": "2026-06-13T00:32:20.943Z",
+      "enrichedAt": "2026-06-13T01:27:36.183Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5802,7 +5814,7 @@
     "ub412": {
       "handle": "ub412",
       "url": "https://www.urbanbar.com/products/ub412",
-      "enrichedAt": "2026-06-13T00:32:20.917Z",
+      "enrichedAt": "2026-06-13T01:27:36.303Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5812,7 +5824,7 @@
     "ub409": {
       "handle": "ub409",
       "url": "https://www.urbanbar.com/products/ub409",
-      "enrichedAt": "2026-06-13T00:32:21.118Z",
+      "enrichedAt": "2026-06-13T01:27:36.424Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5822,7 +5834,7 @@
     "ub4055": {
       "handle": "ub4055",
       "url": "https://www.urbanbar.com/products/ub4055",
-      "enrichedAt": "2026-06-13T00:32:21.342Z",
+      "enrichedAt": "2026-06-13T01:27:36.627Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5832,7 +5844,7 @@
     "ub408": {
       "handle": "ub408",
       "url": "https://www.urbanbar.com/products/ub408",
-      "enrichedAt": "2026-06-13T00:32:21.245Z",
+      "enrichedAt": "2026-06-13T01:27:36.484Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5842,7 +5854,7 @@
     "ub407": {
       "handle": "ub407",
       "url": "https://www.urbanbar.com/products/ub407",
-      "enrichedAt": "2026-06-13T00:32:21.468Z",
+      "enrichedAt": "2026-06-13T01:27:36.806Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5852,7 +5864,7 @@
     "ub406": {
       "handle": "ub406",
       "url": "https://www.urbanbar.com/products/ub406",
-      "enrichedAt": "2026-06-13T00:32:21.571Z",
+      "enrichedAt": "2026-06-13T01:27:36.457Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5862,7 +5874,7 @@
     "ub4041": {
       "handle": "ub4041",
       "url": "https://www.urbanbar.com/products/ub4041",
-      "enrichedAt": "2026-06-13T00:32:21.623Z",
+      "enrichedAt": "2026-06-13T01:27:36.685Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5872,7 +5884,7 @@
     "ub405": {
       "handle": "ub405",
       "url": "https://www.urbanbar.com/products/ub405",
-      "enrichedAt": "2026-06-13T00:32:21.574Z",
+      "enrichedAt": "2026-06-13T01:27:37.150Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5882,7 +5894,7 @@
     "ub404": {
       "handle": "ub404",
       "url": "https://www.urbanbar.com/products/ub404",
-      "enrichedAt": "2026-06-13T00:32:21.902Z",
+      "enrichedAt": "2026-06-13T01:27:37.173Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5892,7 +5904,7 @@
     "ub403": {
       "handle": "ub403",
       "url": "https://www.urbanbar.com/products/ub403",
-      "enrichedAt": "2026-06-13T00:32:21.864Z",
+      "enrichedAt": "2026-06-13T01:27:36.780Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5902,7 +5914,7 @@
     "ub3291": {
       "handle": "ub3291",
       "url": "https://www.urbanbar.com/products/ub3291",
-      "enrichedAt": "2026-06-13T00:32:21.899Z",
+      "enrichedAt": "2026-06-13T01:27:37.267Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5912,7 +5924,7 @@
     "ub3277": {
       "handle": "ub3277",
       "url": "https://www.urbanbar.com/products/ub3277",
-      "enrichedAt": "2026-06-13T00:32:22.140Z",
+      "enrichedAt": "2026-06-13T01:27:37.400Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5922,7 +5934,7 @@
     "ub3946": {
       "handle": "ub3946",
       "url": "https://www.urbanbar.com/products/ub3946",
-      "enrichedAt": "2026-06-13T00:32:22.266Z",
+      "enrichedAt": "2026-06-13T01:27:37.457Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5932,7 +5944,7 @@
     "ub3886": {
       "handle": "ub3886",
       "url": "https://www.urbanbar.com/products/ub3886",
-      "enrichedAt": "2026-06-13T00:32:22.255Z",
+      "enrichedAt": "2026-06-13T01:27:37.416Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5942,7 +5954,7 @@
     "ub3952": {
       "handle": "ub3952",
       "url": "https://www.urbanbar.com/products/ub3952",
-      "enrichedAt": "2026-06-13T00:32:22.171Z",
+      "enrichedAt": "2026-06-13T01:27:37.769Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5952,7 +5964,7 @@
     "ub3576": {
       "handle": "ub3576",
       "url": "https://www.urbanbar.com/products/ub3576",
-      "enrichedAt": "2026-06-13T00:32:22.295Z",
+      "enrichedAt": "2026-06-13T01:27:37.775Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5962,7 +5974,7 @@
     "ub402": {
       "handle": "ub402",
       "url": "https://www.urbanbar.com/products/ub402",
-      "enrichedAt": "2026-06-13T00:32:22.611Z",
+      "enrichedAt": "2026-06-13T01:27:37.929Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5972,7 +5984,7 @@
     "ub401": {
       "handle": "ub401",
       "url": "https://www.urbanbar.com/products/ub401",
-      "enrichedAt": "2026-06-13T00:32:22.847Z",
+      "enrichedAt": "2026-06-13T01:27:37.993Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5982,7 +5994,7 @@
     "ub3167": {
       "handle": "ub3167",
       "url": "https://www.urbanbar.com/products/ub3167",
-      "enrichedAt": "2026-06-13T00:32:22.799Z",
+      "enrichedAt": "2026-06-13T01:27:37.694Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -5992,7 +6004,7 @@
     "ub2942": {
       "handle": "ub2942",
       "url": "https://www.urbanbar.com/products/ub2942",
-      "enrichedAt": "2026-06-13T00:32:22.757Z",
+      "enrichedAt": "2026-06-13T01:27:38.146Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -6002,7 +6014,7 @@
     "ub20": {
       "handle": "ub20",
       "url": "https://www.urbanbar.com/products/ub20",
-      "enrichedAt": "2026-06-13T00:32:22.996Z",
+      "enrichedAt": "2026-06-13T01:27:38.414Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -6012,7 +6024,7 @@
     "ub23": {
       "handle": "ub23",
       "url": "https://www.urbanbar.com/products/ub23",
-      "enrichedAt": "2026-06-13T00:32:23.039Z",
+      "enrichedAt": "2026-06-13T01:27:38.109Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -6022,7 +6034,7 @@
     "ub123": {
       "handle": "ub123",
       "url": "https://www.urbanbar.com/products/ub123",
-      "enrichedAt": "2026-06-13T00:32:22.961Z",
+      "enrichedAt": "2026-06-13T01:27:38.466Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -6032,7 +6044,7 @@
     "ub117cp": {
       "handle": "ub117cp",
       "url": "https://www.urbanbar.com/products/ub117cp",
-      "enrichedAt": "2026-06-13T00:32:23.088Z",
+      "enrichedAt": "2026-06-13T01:27:38.572Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -6042,7 +6054,7 @@
     "sb1022": {
       "handle": "sb1022",
       "url": "https://www.urbanbar.com/products/sb1022",
-      "enrichedAt": "2026-06-13T00:32:23.523Z",
+      "enrichedAt": "2026-06-13T01:27:38.652Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -6052,7 +6064,7 @@
     "sb1023": {
       "handle": "sb1023",
       "url": "https://www.urbanbar.com/products/sb1023",
-      "enrichedAt": "2026-06-13T00:32:23.447Z",
+      "enrichedAt": "2026-06-13T01:27:38.845Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -6862,7 +6874,7 @@
     "japanese-style-jigger-25ml-50ml-stainless-steel": {
       "handle": "japanese-style-jigger-25ml-50ml-stainless-steel",
       "url": "https://www.urbanbar.com/products/japanese-style-jigger-25ml-50ml-stainless-steel",
-      "enrichedAt": "2026-06-13T00:32:27.158Z",
+      "enrichedAt": "2026-06-13T01:27:38.474Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -10073,7 +10085,7 @@
     "regency-crystal-champagne-flute-19cl": {
       "handle": "regency-crystal-champagne-flute-19cl",
       "url": "https://www.urbanbar.com/products/regency-crystal-champagne-flute-19cl",
-      "enrichedAt": "2026-06-13T00:32:41.498Z",
+      "enrichedAt": "2026-06-13T01:27:38.744Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -10638,7 +10650,7 @@
     "vintage-tall-chromedrinks-trolley": {
       "handle": "vintage-tall-chromedrinks-trolley",
       "url": "https://www.urbanbar.com/products/vintage-tall-chromedrinks-trolley",
-      "enrichedAt": "2026-06-13T00:32:43.397Z",
+      "enrichedAt": "2026-06-13T01:27:39.162Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -10648,7 +10660,7 @@
     "small-bamboo-drinks-trolley": {
       "handle": "small-bamboo-drinks-trolley",
       "url": "https://www.urbanbar.com/products/small-bamboo-drinks-trolley",
-      "enrichedAt": "2026-06-13T00:32:43.639Z",
+      "enrichedAt": "2026-06-13T01:27:39.175Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -10658,7 +10670,7 @@
     "trolley-2": {
       "handle": "trolley-2",
       "url": "https://www.urbanbar.com/products/trolley-2",
-      "enrichedAt": "2026-06-13T00:32:43.713Z",
+      "enrichedAt": "2026-06-13T01:27:39.221Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -10668,7 +10680,7 @@
     "geest-industrial-trolley-blue": {
       "handle": "geest-industrial-trolley-blue",
       "url": "https://www.urbanbar.com/products/geest-industrial-trolley-blue",
-      "enrichedAt": "2026-06-13T00:32:43.861Z",
+      "enrichedAt": "2026-06-13T01:27:39.277Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -10678,7 +10690,7 @@
     "polished-drinks-trolley": {
       "handle": "polished-drinks-trolley",
       "url": "https://www.urbanbar.com/products/polished-drinks-trolley",
-      "enrichedAt": "2026-06-13T00:32:44.057Z",
+      "enrichedAt": "2026-06-13T01:27:39.481Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -10859,7 +10871,7 @@
     "trolley-1": {
       "handle": "trolley-1",
       "url": "https://www.urbanbar.com/products/trolley-1",
-      "enrichedAt": "2026-06-13T00:32:44.699Z",
+      "enrichedAt": "2026-06-13T01:27:39.588Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -10943,7 +10955,7 @@
     "chrome-vintage-drinks-trolley": {
       "handle": "chrome-vintage-drinks-trolley",
       "url": "https://www.urbanbar.com/products/chrome-vintage-drinks-trolley",
-      "enrichedAt": "2026-06-13T00:32:44.915Z",
+      "enrichedAt": "2026-06-13T01:27:39.485Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -18646,7 +18658,7 @@
     "urban-bar-gift-card": {
       "handle": "urban-bar-gift-card",
       "url": "https://www.urbanbar.com/products/urban-bar-gift-card",
-      "enrichedAt": "2026-06-13T00:33:08.647Z",
+      "enrichedAt": "2026-06-13T01:27:39.511Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -24017,7 +24029,7 @@
     "crystal-gold-rim-coley-coupe-17cl": {
       "handle": "crystal-gold-rim-coley-coupe-17cl",
       "url": "https://www.urbanbar.com/products/crystal-gold-rim-coley-coupe-17cl",
-      "enrichedAt": "2026-06-13T00:33:23.780Z",
+      "enrichedAt": "2026-06-13T01:27:39.516Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",
@@ -25185,7 +25197,7 @@
     "gold-scallop-straw-stirrer-14cm-x6": {
       "handle": "gold-scallop-straw-stirrer-14cm-x6",
       "url": "https://www.urbanbar.com/products/gold-scallop-straw-stirrer-14cm-x6",
-      "enrichedAt": "2026-06-13T00:33:27.008Z",
+      "enrichedAt": "2026-06-13T01:27:39.959Z",
       "specifications": [],
       "specificationsHtml": "",
       "productCareHtml": "",

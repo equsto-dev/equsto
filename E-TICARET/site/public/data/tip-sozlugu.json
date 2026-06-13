@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updated": "2026-05-31T19:46:53.185Z",
-  "count": 142,
+  "count": 144,
   "entries": [
     {
       "tip_kodu": "bar_blender",
@@ -452,6 +452,14 @@
       "frekans": 8
     },
     {
+      "tip_kodu": "tezgah_taban_rafli",
+      "aciklama": "Çalışma tezgahı, taban raflı",
+      "kategori": "tezgah",
+      "alt_kategori": "firin-standi",
+      "kaynak": "motor",
+      "frekans": 0
+    },
+    {
       "tip_kodu": "fritoz_cift",
       "aciklama": "Fritöz çift gözlü 2×12 LT",
       "kategori": "pisirme",
@@ -767,6 +775,14 @@
       "tip_kodu": "pizza_teshir_unitesi",
       "aciklama": "Pizza teşhir ünitesi",
       "kategori": "diger",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
+      "tip_kodu": "dokum_izgara_gaz",
+      "aciklama": "Döküm ızgara, gazlı setüstü",
+      "kategori": "pisirme",
       "alt_kategori": null,
       "kaynak": "P1",
       "frekans": 0
