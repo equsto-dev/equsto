@@ -2,6 +2,10 @@ import type { TeklifModelV14 } from "./teklif-v14.types";
 import { groupTeklifV14Satirlar } from "./group-v14-bolumler";
 import { formatTarihTr, formatKwHucre } from "./format-v14";
 import { TEKLIF_V14_FORM_NO, TEKLIF_BOLUM_ROW_FILL } from "./constants";
+import {
+  sanitizeTeklifV14SatirAciklama,
+  sanitizeTeklifV14SatirTanim,
+} from "./sanitize-teklif-v14-export";
 
 function esc(s: string): string {
   return s
@@ -58,7 +62,7 @@ export function buildTeklifV14PrintHtml(
         <td>${esc(row.poz)}</td>
         <td>${esc(row.ek || "")}</td>
         <td>${esc(row.stokNo)}</td>
-        <td>${esc(row.tanim)}</td>
+        <td>${esc(sanitizeTeklifV14SatirTanim(row.tanim))}</td>
         <td>${esc(row.marka)}</td>
         <td>${esc(row.olcu || "—")}</td>
         <td class="num">${esc(formatKwHucre(row.elkKw))}</td>
@@ -72,12 +76,13 @@ export function buildTeklifV14PrintHtml(
       const fotoCell = imgUrl
         ? `<img src="${esc(imgUrl)}" alt="" class="foto">`
         : `<span class="foto-ph">—</span>`;
-      const acik = row.aciklama ? esc(row.aciklama) : "";
-      if (imgUrl || acik) {
+      const acik = sanitizeTeklifV14SatirAciklama(row.aciklama);
+      const acikHtml = acik ? esc(acik) : "";
+      if (imgUrl || acikHtml) {
         tbody += `<tr class="spec">
           <td colspan="3"></td>
           <td class="foto-cell">${fotoCell}</td>
-          <td colspan="8" class="spec-cell"><pre>${acik}</pre></td>
+          <td colspan="8" class="spec-cell"><pre>${acikHtml}</pre></td>
         </tr>`;
       }
     }

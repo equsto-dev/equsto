@@ -7,6 +7,7 @@ import puppeteer from "puppeteer-core";
 import type { TeklifModelV14 } from "./teklif-v14.types";
 import { buildTeklifV14PrintHtml } from "./build-teklif-v14-print-html";
 import { enrichTeklifV14ModelGorsel } from "./enrich-teklif-v14-gorsel.server";
+import { sanitizeTeklifV14ModelForExport } from "./sanitize-teklif-v14-export";
 
 const CHROMIUM_PACK_X64 =
   "https://github.com/Sparticuz/chromium/releases/download/v149.0.0/chromium-v149.0.0-pack.x64.tar";
@@ -60,7 +61,8 @@ export async function generateTeklifV14PdfBuffer(
 ): Promise<Buffer> {
   chromium.setGraphicsMode = false;
 
-  const enriched = await enrichTeklifV14ModelGorsel(model);
+  const cleaned = sanitizeTeklifV14ModelForExport(model);
+  const enriched = await enrichTeklifV14ModelGorsel(cleaned);
   const html = buildTeklifV14PrintHtml(enriched, {
     siteOrigin: siteOrigin(),
     autoPrint: false,
