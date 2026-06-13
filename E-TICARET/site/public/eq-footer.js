@@ -571,8 +571,23 @@
 
 
 
+  function isUrbanBarBesosPage() {
+    try {
+      var p = String(location.pathname || "").replace(/\/+$/, "");
+      return /^\/(?:en\/)?besos\/(?:bardaklar|bar-ekipman)(?:\/|$)/i.test(p);
+    } catch (_) {
+      return false;
+    }
+  }
+
   function poweredByHtml() {
     var prefix = t("footer.powered_by_prefix", "Powered By");
+    if (isUrbanBarBesosPage()) {
+      return (
+        esc(prefix) +
+        ' <a class="eq-mfoot-vitrum-name eq-mfoot-urbanbar-name" href="https://www.urbanbar.com/" target="_blank" rel="noopener noreferrer">Urban Bar</a>'
+      );
+    }
     return (
       esc(prefix) +
       ' <a class="eq-mfoot-vitrum-name" href="https://www.vitrumgroup.org/" target="_blank" rel="noopener noreferrer">Vitrum</a>'

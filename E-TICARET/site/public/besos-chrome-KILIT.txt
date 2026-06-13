@@ -18,6 +18,7 @@ kaybolmaması içindir. Değiştirmeden önce kullanıcıdan AÇIK ONAY alın.
   Alt bant:
     • footer.footer.eq-mfoot — 4 sütun + marka şeridi + yasal (footer-brand-KILIT)
     • Besos: siyah zemin (#000), "Powered By Vitrum" görünür
+    • Besos Urban Bar (/besos/bardaklar, /besos/bar-ekipman): "Powered By Urban Bar" → urbanbar.com
 
 YASAK (onay olmadan):
   • ShopEqustoChrome'da boş <a class="logo" /> geri getirmek (yalnız JS'e bırakmak)
