@@ -101,6 +101,7 @@ export const URUN_TIPI_ALIASES: Record<string, string> = {
   "kahve-makinasi-turk": "turk_kahve_cift",
   "kati-meyve-sikacagi": "meyve_sikacagi",
   "bar-mikser": "bar_mikser",
+  "makarna-pisirici": "makarna_pisirici_elk",
   "yer-izgara-kucuk": "yer_izgara",
   "filter-coffee-makinesi": "filter_coffee",
   "turk-kahvesi-makinasi": "turk_kahve_cift",
@@ -218,6 +219,7 @@ export const TIP_SHOP_CATS: Record<string, string[]> = {
   spiral_hamur: ["hazirlik", "hamur"],
   hamur_acma: ["hazirlik", "hamur"],
   patates_soyma: ["hazirlik", "sebze"],
+  makarna_pisirici_elk: ["makarna", "pisir", "pişir", "fritoz"],
   tezgah_taban_rafli: ["tezgah", "pisirme", "set-ustu-mutfak"],
 };
 

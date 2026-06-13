@@ -118,9 +118,9 @@ export function preferredOztiPisirmeSkus(
     return [`${izgaraBase}.72`, `${izgaraBase}.70`, `${izgaraBase}.19`, `${izgaraBase}.20`];
   }
   if (family === "makarna") {
-    return is900
-      ? ["7858.N1.80908.23", "7858.N1.80908.11"]
-      : ["7858.N1.80708.23"];
+    if (is900) return ["7858.N1.80908.23", "7858.N1.80908.11"];
+    if (w <= 45) return ["7858.N1.40703.11", "7858.N1.80708.23"];
+    return ["7858.N1.80708.23"];
   }
   if (family === "patates_dinlendirme") {
     return [];
