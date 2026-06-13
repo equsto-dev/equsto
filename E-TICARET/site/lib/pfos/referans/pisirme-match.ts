@@ -59,6 +59,12 @@ export function oztiPisirmeKatalogUyumsuz(
   if (/elektrik/.test(s) && /gazli|gazlı|\bgaz\b/.test(k) && !/elektrik/.test(k)) {
     return true;
   }
+  if (/cift|çift|iki\s*hazne/.test(s) && /7856\.n1\.80703\.(11|13)/.test(k)) {
+    return true;
+  }
+  if (/cift|çift|iki\s*hazne/.test(s) && /set\s*ustu.*80\*70|80\*70\*30/.test(k) && /7856\.n1\./.test(k)) {
+    return true;
+  }
   return false;
 }
 
@@ -253,8 +259,14 @@ function scoreOztiPisirmeRow(
 
   const refN = norm(referansIsim);
   const ad = norm(row.ad);
-  if (family === "fritoz" && /cift|çift|2\s*x|iki\s*sepet/.test(refN) && /870|2\s*x/.test(ad)) {
+  if (family === "fritoz" && /cift|çift|2\s*x|iki\s*sepet|iki\s*hazne/.test(refN) && /870|2\s*x/.test(ad)) {
     score += 60;
+  }
+  if (family === "fritoz" && /cift|çift|iki\s*hazne/.test(refN) && /7856\.n1\.80703\.(11|13)/.test(sku)) {
+    score -= 6000;
+  }
+  if (family === "fritoz" && /7856\.gn/i.test(sku) && preferred.some((p) => /7856\.gn/i.test(p))) {
+    score += 200;
   }
   if (family === "patates_dinlendirme" && /patates|dinlendir|apd/.test(ad)) score += 80;
   if (family === "izgara" && /elektrik|e aei|e agi/.test(ad) && /elektrik|elk/.test(refN)) {

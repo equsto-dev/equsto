@@ -382,6 +382,16 @@ const TIP_RULES: TipRule[] = [
     test: (n) => n.includes("davlumbaz"),
   },
   {
+    tip: "fritoz-cift-hazne-elk",
+    test: (n) =>
+      (n.includes("fritoz") || n.includes("fritöz")) &&
+      (n.includes("cift") ||
+        n.includes("çift") ||
+        n.includes("iki hazne") ||
+        n.includes("2 x") ||
+        n.includes("2×")),
+  },
+  {
     tip: "fritoz-tek",
     test: (n) => n.includes("fritoz") || n.includes("fritöz"),
   },

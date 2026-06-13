@@ -137,20 +137,69 @@ function syncRowGucKw(row, gucKw) {
   row.olculer = { ...(row.olculer || {}), guc_kw: gucKw };
   const gucLine = `Güç: ${gucKw} kW`;
   const tech = [...(row.teknik_ozellikler || [])];
-  const idx = tech.findIndex((t) => /^G[uü]ç:/i.test(String(t)));
+  const idx = tech.findIndex((t) => /^G[uü]ç:\s*[\d.,]+\s*kW/i.test(String(t)));
   if (idx >= 0) tech[idx] = gucLine;
   else tech.unshift(gucLine);
   row.teknik_ozellikler = tech;
   if (row.specs) {
-    row.specs = String(row.specs).replace(/^G[uü]ç:\s*[^\n]+/im, gucLine);
-    if (!/\bG[uü]ç:\s*\d/i.test(row.specs)) {
-      const marker = "\n\nTeknik Özellikler\n";
-      const pos = row.specs.indexOf(marker);
-      if (pos >= 0) {
-        row.specs = `${row.specs.slice(0, pos + marker.length)}${gucLine}\n${row.specs.slice(pos + marker.length)}`;
-      }
-    }
+    row.specs = String(row.specs).replace(/(^|\n)G[uü]ç:\s*[\d.,]+\s*kW/gi, `$1${gucLine}`);
   }
+}
+
+function isOztiElectricProduct(row) {
+  const hay = foldTr(
+    [row.name, row.urun_tanimi, row.kategori, ...(row.kategori_yolu || [])].join(" "),
+  );
+  if (/elektrik|elektrikli|\belekt\b/i.test(hay)) return true;
+  if (/\bgazl[ıi]\b|\bgaz\b/i.test(hay)) return false;
+  return /elektrik|elektrikli|\belekt\b/i.test(
+    foldTr((row.teknik_ozellikler || []).join(" ")),
+  );
+}
+
+function isOztiYikamaProduct(row) {
+  const hay = foldTr(
+    [row.name, row.urun_tanimi, row.kategori, row.dept, ...(row.kategori_yolu || [])].join(" "),
+  );
+  return /yikama|bula[sş]ik|bardak\s*yikama|obf\b|obs\b/i.test(hay);
+}
+
+/** PDF + web kaynaklarından doğru toplam kW. */
+export function resolveOztiGucKw(row, pdfEntry, webPayload) {
+  const kod = normKod(row.urun_kodu || row.sku);
+  const pdfText = (pdfEntry?.pdf_metin_parcalari || []).join("\n");
+  const hay = `${row.urun_tanimi || ""}\n${pdfText}`;
+  const pdfToplam = pdfText ? parseOztiToplamGucKw(hay, kod) : null;
+  if (pdfToplam) return pdfToplam;
+
+  const webKw =
+    webPayload && isOztiElectricProduct(row) && !isOztiYikamaProduct(row)
+      ? parseWebElektrikGucuKw(webPayload.specs)
+      : null;
+  if (webKw) return webKw;
+
+  if (pdfText) return parseOlculer(hay, kod)?.guc_kw || null;
+  return null;
+}
+
+/** Katalog satırında güç alanlarını PDF/web ile senkronize et. */
+export function applyOztiGucKwFix(row, pdfByKod, webByKod) {
+  if (!isOztiBrand(row)) return false;
+  const kod = normKod(row.urun_kodu || row.sku);
+  if (!kod) return false;
+  const pdfEntry = pdfByKod?.get(kod) || pdfByKod?.get(kodSoftKey(kod));
+  const webPayload = webByKod?.get(kod) || webByKod?.get(kodSoftKey(kod));
+  const nextKw = resolveOztiGucKw(row, pdfEntry, webPayload);
+  if (!nextKw) return false;
+  const prev = String(row.olculer?.guc_kw ?? "").replace(",", ".");
+  const next = String(nextKw).replace(",", ".");
+  if (prev === next) return false;
+  // Yalnızca mevcut değeri düzelt veya PDF'de ürün koduna özel toplam güç varsa yaz.
+  const pdfText = (pdfEntry?.pdf_metin_parcalari || []).join("\n");
+  const pdfToplam = pdfText ? parseOztiToplamGucKw(`${row.urun_tanimi || ""}\n${pdfText}`, kod) : null;
+  if (!prev && !pdfToplam) return false;
+  syncRowGucKw(row, nextKw);
+  return true;
 }
 
 /** G×D×Y veya 80*90*85 gibi ölçüleri ürün adı / PDF metninden çıkar. */
