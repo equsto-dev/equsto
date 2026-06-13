@@ -235,8 +235,11 @@ export default function ShopEqustoChrome({
             <span className="topnav-sep" aria-hidden="true">
               |
             </span>
-            <a className="topnav-item topnav-pfos" href={hrefFor("pfos")} data-i18n="nav.pfos">
-              Proje Fabrikası
+            <a className="topnav-item topnav-pfos" href={hrefFor("pfos")}>
+              <span data-i18n="nav.pfos">Proje Fabrikası</span>
+              <span className="topnav-pfos-beta" aria-label="Beta">
+                BETA
+              </span>
             </a>
             <span className="topnav-sep" aria-hidden="true">
               |
