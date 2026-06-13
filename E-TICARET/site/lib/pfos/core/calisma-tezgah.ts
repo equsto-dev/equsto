@@ -1,4 +1,5 @@
 import { resolveTipKodu } from "./tip-kodu";
+import { isEqustoDavlumbazRow } from "./davlumbaz-marka";
 
 /** Yer tezgahları — Pimak imalat (EQUSTO / PIMAK SKU) */
 export const CALISMA_TEZGAH_MARKA = "Pimak";
@@ -80,6 +81,7 @@ export function isSetUstuAraTezgahKatalog(ad: string, sku?: string | null): bool
 export function isEqustoTezgahRow(sku: string | null | undefined, ad?: string | null): boolean {
   const s = String(sku ?? "").trim();
   if (!/^EQUSTO\.\d{4,5}\./i.test(s)) return false;
+  if (isEqustoDavlumbazRow(s, ad)) return false;
   if (ad && /davlumbaz/i.test(ad)) return false;
   return true;
 }

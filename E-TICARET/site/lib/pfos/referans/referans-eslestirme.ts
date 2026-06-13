@@ -139,6 +139,7 @@ import {
   matchEslesmisByEqustoGuess,
   matchEslesmisByEqustoKod,
 } from "@/lib/catalog/equsto-kod-lookup";
+import { formatPfosDisplayTanim } from "../parse-upload/sanitize-tanim";
 
 export type ReferansMatchInput = {
   isim: string;
@@ -560,9 +561,19 @@ async function findAdminRowBySku(sku: string): Promise<AdminUrunRow | null> {
 
 async function matchByExplicitSku(
   sku: string,
+  sablonIsim?: string | null,
+  notlar?: string | null,
 ): Promise<EslesmisUrun | null> {
   const row = await findAdminRowBySku(sku);
-  return row ? rowToEslesmis(row) : null;
+  if (!row) return null;
+  const matched = rowToEslesmis(row);
+  if (
+    sablonIsim &&
+    referansKatalogUyumsuz(sablonIsim, matched.ad ?? "", notlar, matched.sku)
+  ) {
+    return null;
+  }
+  return matched;
 }
 
 /** Doğrulanmış tip_kodu → SKU (pfos-tip-shop-links) — yalnızca referans urunTipi ile */
@@ -700,7 +711,8 @@ async function matchByVerifiedLink(
   input: ReferansMatchInput,
 ): Promise<EslesmisUrun | null> {
   if (input.sku?.trim()) {
-    return matchByExplicitSku(input.sku);
+    const bySku = await matchByExplicitSku(input.sku, input.isim, input.notlar);
+    if (bySku) return bySku;
   }
   const liste = input.referansListeKey?.trim();
   const poz = input.referansPoz?.trim();
@@ -710,7 +722,7 @@ async function matchByVerifiedLink(
   const link = links[referansLinkKey(liste, poz)];
   if (!link?.sku) return null;
 
-  const bySku = await matchByExplicitSku(link.sku);
+  const bySku = await matchByExplicitSku(link.sku, input.isim, input.notlar);
   if (bySku) {
     if (
       isIstifRafiReferansIsim(input.isim) &&
@@ -964,20 +976,21 @@ async function fallbackOzelImalat(input: ReferansMatchInput): Promise<EslesmisUr
 async function matchByMasterEqustoKod(
   input: ReferansMatchInput,
 ): Promise<EslesmisUrun | null> {
+  const cleanedIsim = formatPfosDisplayTanim(input.isim) || input.isim;
   const fromText =
-    extractEqustoKodFromText(input.isim) ||
+    extractEqustoKodFromText(cleanedIsim) ||
     extractEqustoKodFromText(input.notlar ?? "");
   if (fromText) {
     const direct = await matchEslesmisByEqustoKod(fromText);
-    if (direct && !referansKatalogUyumsuz(input.isim, direct.ad ?? "", input.notlar, direct.sku)) {
+    if (direct && !referansKatalogUyumsuz(cleanedIsim, direct.ad ?? "", input.notlar, direct.sku)) {
       return direct;
     }
   }
   const guess = await matchEslesmisByEqustoGuess({
-    tanim: input.isim,
+    tanim: cleanedIsim,
     marka_urun_kodu: input.sku ?? undefined,
   });
-  if (guess && !referansKatalogUyumsuz(input.isim, guess.ad ?? "", input.notlar, guess.sku)) {
+  if (guess && !referansKatalogUyumsuz(cleanedIsim, guess.ad ?? "", input.notlar, guess.sku)) {
     return guess;
   }
   return null;
@@ -1084,9 +1097,6 @@ export async function matchReferansKalem(
       return verified;
     }
   }
-
-  const byMasterEq = await matchByMasterEqustoKod(input);
-  if (byMasterEq) return byMasterEq;
 
   if (isCalismaTezgahiPfosKalem({ isim: input.isim, urunTipi: input.urunTipi, notlar: input.notlar })) {
     const tezgah = await matchCalismaTezgahiByReferans(
@@ -1246,6 +1256,9 @@ export async function matchReferansKalem(
 
   const strict = await matchStrictCatalog(input, olcu);
   if (strict) return strict;
+
+  const byMasterEq = await matchByMasterEqustoKod(input);
+  if (byMasterEq) return byMasterEq;
 
   if (
     isOzelImalatMotor({ sablonIsim: input.isim, urunTipi: input.urunTipi }) ||
