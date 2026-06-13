@@ -763,6 +763,45 @@ body.eq-shop .eq-product-specs .eq-specs-cols pre {
   color: var(--eq-text-secondary, #4b5563);
 }
 
+.eq-inoksan-hero-desc {
+  margin-top: 6px;
+  padding-top: 14px;
+  border-top: 1px solid var(--eq-border, #e5e7eb);
+}
+
+.eq-inoksan-hero-desc__title {
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--eq-text, #111);
+}
+
+.eq-inoksan-hero-desc .eq-specs-list {
+  margin: 0;
+  padding-left: 1.15rem;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--eq-text-secondary, #4b5563);
+}
+
+.eq-inoksan-hero-desc .eq-specs-list li + li {
+  margin-top: 6px;
+}
+
+.eq-inoksan-spec-sub {
+  margin: 12px 0 4px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #007185;
+}
+
+.eq-inoksan-spec-sub:first-child {
+  margin-top: 0;
+}
+
 .eq-epdp-buybox {
   margin: 10px 0 12px;
   padding: 16px 18px;

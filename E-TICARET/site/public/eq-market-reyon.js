@@ -4,7 +4,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260613inoksan-pdp";
+  var CATALOG_V = "20260613inoksan-pdp-v2";
 
   window.EqMarketReyon = {
     loadCatalog: function () {

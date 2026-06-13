@@ -17,8 +17,8 @@ Tarayıcı immutable önbelleği nedeniyle seri başına yeni CDN yolu kullanıl
   idp → 10634   (IDP.png — perfore tablalı)
 
 ── Cache bust ─────────────────────────────────────────────────────────────
-  EQ_CATALOG_IMG_V = 20260613inoksan-pdp  (eq-site-urls.js)
-  SHOP_ASSET_V     = 20260613inoksan-pdp  (lib/shop/assets.ts)
+  EQ_CATALOG_IMG_V = 20260613inoksan-pdp-v2  (eq-site-urls.js)
+  SHOP_ASSET_V     = 20260613inoksan-pdp-v2  (lib/shop/assets.ts)
 
 YASAK (onay olmadan):
   • IDD/IDK/IDP → fka011i alias veya tepsi istif ünitesi görseli
