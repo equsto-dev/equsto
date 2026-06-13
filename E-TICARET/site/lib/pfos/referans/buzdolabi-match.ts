@@ -163,6 +163,43 @@ function preferredSkus(
   return [];
 }
 
+function parseCatalogRowBuzProperties(row: AdminUrunRow): {
+  doors: number | null;
+  depth: number | null;
+  freezer: boolean;
+} {
+  const ad = norm(row.ad);
+  const sku = String(row.sku ?? "").toUpperCase();
+
+  let doors = kapiSayisiFromIsim(row.ad);
+  if (doors == null) {
+    const m = sku.match(/(?:TT|CA|DT|CAM|TTM|TTX|TTR|TTC|TTK|TTS|SBHD|SBH|MSBH|ASBH)-\(?(\d)\)?/i);
+    if (m) {
+      doors = Number(m[1]);
+    } else if (sku.includes("BAR-150")) {
+      doors = 1;
+    } else if (sku.includes("BAR-250")) {
+      doors = 2;
+    } else if (sku.includes("BAR-350")) {
+      doors = 3;
+    }
+  }
+
+  let depth: number | null = null;
+  const mDepth = sku.match(/(?:TT|CA|CAM|TTM|TTX|TTR|TTC|TTK|TTS|SBHD|SBH|MSBH|ASBH)-\d+[A-Z]*(\d{2})/i);
+  if (mDepth) {
+    depth = Number(mDepth[1]);
+  } else if (/60x60|600x600/i.test(row.ad)) {
+    depth = 60;
+  } else if (/70x70|700x700/i.test(row.ad)) {
+    depth = 70;
+  }
+
+  const freezer = /donduruc|derin/.test(ad) || /DGN|D70|D60|D80/.test(sku);
+
+  return { doors, depth, freezer };
+}
+
 function scorePortabiancoRow(
   row: AdminUrunRow,
   family: BuzFamily,
@@ -171,6 +208,9 @@ function scorePortabiancoRow(
   referansIsim: string,
   freezer: boolean,
   camKapili: boolean,
+  reqDoors: number | null,
+  reqDepth: number | null,
+  hasRequestedSize: boolean,
 ): number {
   if (!isPortabiancoBuzdolabiRow(row)) return -9999;
   const ad = norm(row.ad);
@@ -183,6 +223,19 @@ function scorePortabiancoRow(
     return -9999;
   }
   if (!freezer && /derin\s*donduruc/.test(ad) && !/buzdolab/.test(ad)) {
+    return -9999;
+  }
+
+  // Parse catalog row properties
+  const catProps = parseCatalogRowBuzProperties(row);
+
+  // If a specific number of doors is requested, heavily penalize door count mismatch
+  if (reqDoors != null && catProps.doors != null && reqDoors !== catProps.doors) {
+    return -9999;
+  }
+
+  // If dimensions were explicitly requested, heavily penalize depth mismatch
+  if (hasRequestedSize && reqDepth != null && catProps.depth != null && reqDepth !== catProps.depth) {
     return -9999;
   }
 
@@ -326,6 +379,9 @@ export async function matchBuzdolabiByReferans(
         isim,
         freezer,
         camKapili,
+        kapi,
+        depth,
+        !!parts,
       ),
     }))
     .filter((x) => x.score >= 120)

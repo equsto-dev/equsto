@@ -44,7 +44,7 @@ function scoreEqustoTezgahRow(
   olcu: string,
   targetSku?: string | null,
 ): number {
-  if (!isEqustoTezgahRow(row.sku)) return -9999;
+  if (!isEqustoTezgahRow(row.sku, row.ad)) return -9999;
   const ad = norm(row.ad);
   if (/bulasik.*giris|bym|suzme\s*havuz|set\s*alti\s*dolap/.test(ad) && !/calisma|çalışma|evyeli|tezgah/.test(ad)) {
     return -9999;
@@ -54,7 +54,13 @@ function scoreEqustoTezgahRow(
 
   let score = 100;
   const prefix = equstoTezgahSizePrefix(olcu);
-  if (prefix && row.sku?.includes(`.${prefix}.`)) score += 400;
+  if (prefix) {
+    if (row.sku?.includes(`.${prefix}.`)) {
+      score += 400;
+    } else {
+      return -9999;
+    }
+  }
 
   const wantSuffix = inferEqustoTezgahVariantSuffix(isim);
   if (wantSuffix && row.sku?.endsWith(`.${wantSuffix}`)) score += 250;
@@ -83,7 +89,7 @@ async function findEqustoRowBySku(sku: string): Promise<AdminUrunRow | null> {
   const needle = norm(sku).replace(/\s+/g, "");
   if (!needle) return null;
   const rows = (await loadLegacyCatalogRows()).filter(
-    (r) => r.durum === "aktif" && isEqustoTezgahRow(r.sku),
+    (r) => r.durum === "aktif" && isEqustoTezgahRow(r.sku, r.ad),
   );
   return (
     rows.find((r) => norm(r.sku ?? "").replace(/\s+/g, "") === needle) ?? null
@@ -100,7 +106,7 @@ async function fallbackImageRow(
   const rows = (await loadLegacyCatalogRows()).filter(
     (r) =>
       r.durum === "aktif" &&
-      isEqustoTezgahRow(r.sku) &&
+      isEqustoTezgahRow(r.sku, r.ad) &&
       r.sku?.includes(`.${prefix}.`) &&
       r.gorsel_url,
   );
@@ -208,7 +214,7 @@ export async function matchCalismaTezgahiByReferans(
     }
 
     const rows = (await loadLegacyCatalogRows()).filter(
-      (r) => r.durum === "aktif" && r.fiyat_tl > 0 && isEqustoTezgahRow(r.sku),
+      (r) => r.durum === "aktif" && r.fiyat_tl > 0 && isEqustoTezgahRow(r.sku, r.ad),
     );
     const scored = rows
       .map((row) => ({

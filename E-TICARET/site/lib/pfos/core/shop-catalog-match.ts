@@ -7,6 +7,7 @@ import {
 import type { EslesmisUrun, FiyatStratejisi } from "../schemas/pfos.schema";
 import { enrichEslesmisFromKatalogRow } from "./catalog-enrich";
 import { invalidateKatalogGorselCache } from "./katalog-gorsel";
+import { buildCatalogTeklifAciklama } from "../teklif/catalog-teklif-aciklama";
 import {
   isBulasikMakinesiTipKodu,
   BULASIK_MARKA,
@@ -371,6 +372,16 @@ function adminRowToEslesmis(
   });
   const fiyatEur = equstoSatisEurFromRow(row);
 
+  const teklifAciklama =
+    buildCatalogTeklifAciklama({
+      description: row.description ?? row.detay,
+      ozti_web_description: row.ozti_web_description,
+      inoksan_shop_description: row.inoksan_shop_description,
+      teknik_ozellikler: row.teknik_ozellikler,
+      specs: row.aciklama,
+      aciklama: row.ad,
+    }).trim() || null;
+
   return {
     id: row.id,
     slug: row.id.replace(/^ecom_/, ""),
@@ -385,6 +396,7 @@ function adminRowToEslesmis(
     fiyatEur,
     doviz: "TRY",
     gorselUrl: row.gorsel_url,
+    teklifAciklama,
   };
 }
 
@@ -444,7 +456,7 @@ function scoreCandidate(
     if (/electrolux|^132\d{3,6}$|371\d|^7711\.|^7897\.|^7911\./.test(skuN) || /electrolux/.test(normName(row.marka_ad))) {
       return -9999;
     }
-    if (isEqustoTezgahRow(row.sku)) score += 350;
+    if (isEqustoTezgahRow(row.sku, row.ad)) score += 350;
     if (isOztiKatalogMarka(row.marka_ad) && /7911\.n1\./.test(skuN)) {
       return -9999;
     }
@@ -463,7 +475,7 @@ function scoreCandidate(
     if (isOztiDavlumbazSku(row.sku) || (isOztiKatalogMarka(row.marka_ad) && /7885\./.test(normName(row.sku ?? "")))) {
       return -9999;
     }
-    if (isEqustoDavlumbazRow(row.sku)) score += 350;
+    if (isEqustoDavlumbazRow(row.sku, row.ad)) score += 350;
   }
 
   if (isBuzdolabiTipKodu(tip)) {

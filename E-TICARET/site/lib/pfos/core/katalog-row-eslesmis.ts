@@ -3,8 +3,21 @@ import type { EslesmisUrun } from "../schemas/pfos.schema";
 import { enrichEslesmisFromKatalogRow } from "./catalog-enrich";
 import { normalizePfosGorselUrl } from "./katalog-gorsel-url";
 import { equstoSatisEurFromRow } from "./shop-catalog-match";
+import { buildCatalogTeklifAciklama } from "../teklif/catalog-teklif-aciklama";
 
 type EnrichOpts = Parameters<typeof enrichEslesmisFromKatalogRow>[1];
+
+function teklifAciklamaFromAdminRow(row: AdminUrunRow): string | null {
+  const text = buildCatalogTeklifAciklama({
+    description: row.description ?? row.detay,
+    ozti_web_description: row.ozti_web_description,
+    inoksan_shop_description: row.inoksan_shop_description,
+    teknik_ozellikler: row.teknik_ozellikler,
+    specs: row.aciklama,
+    aciklama: row.ad,
+  });
+  return text.trim() || null;
+}
 
 /** ekipmanlar.json satırı → PFOS eşleşmesi (fiyat yalnızca katalog alanlarından) */
 export function katalogRowToEslesmis(
@@ -26,5 +39,6 @@ export function katalogRowToEslesmis(
     fiyatEur: equstoSatisEurFromRow(row),
     doviz: "TRY",
     gorselUrl: normalizePfosGorselUrl(row.gorsel_url),
+    teklifAciklama: teklifAciklamaFromAdminRow(row),
   };
 }

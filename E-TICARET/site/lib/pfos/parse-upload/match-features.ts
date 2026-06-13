@@ -24,6 +24,7 @@ export function extractFeatureSearchTerms(tanim: string): string[] {
     terms.push("servis arabası", "taşıma arabası");
   }
   if (/\bgn\s*\d|2\s*\/\s*1\b/.test(f)) terms.push("GN tepsi");
+  if (/un\s*seker|un-seker|un\s*şeker/.test(f)) terms.push("un şeker arabası", "FC-100");
   return [...new Set(terms)];
 }
 
@@ -81,6 +82,25 @@ export function requiresShelvedTezgah(tanim: string): boolean {
 export function requiresTrolley(tanim: string): boolean {
   const q = normTanim(tanim);
   return /banket|servis\s*arab|tasima\s*arab|sicak\s*banket/.test(q);
+}
+
+export function requiresUnSekerArabasi(tanim: string): boolean {
+  const q = normTanim(tanim);
+  const hasUn = /\bun\b/.test(q) || q.includes("un-seker") || q.includes("un seker");
+  const hasSeker = /\bseker\b/.test(q);
+  const hasAraba = /araba|trolley|container|konteyner/.test(q);
+  return (hasUn || hasSeker) && hasAraba;
+}
+
+/** Un / şeker arabası — davlumbaz / tezgaha karşı */
+export function unSekerFeatureScore(tanim: string, hit: CatalogSearchHit): number {
+  const q = normTanim(tanim);
+  if (!requiresUnSekerArabasi(tanim)) return 0;
+  const hay = hitHaystack(hit);
+  if (/davlumbaz|7885\.|9885\./.test(hay)) return -400;
+  if (/un.*seker|un.*şeker|fc-100|fc100/.test(hay)) return 80;
+  if (/araba|trolley|container/.test(hay)) return 35;
+  return -20;
 }
 
 /** Evye sayısı — düz / rafsız tezgaha karşı */

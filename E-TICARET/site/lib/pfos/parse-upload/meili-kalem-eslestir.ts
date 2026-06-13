@@ -10,9 +10,11 @@ import {
   requiresShelvedTezgah,
   requiresSinkTezgah,
   requiresTrolley,
+  requiresUnSekerArabasi,
   shelfFeatureScore,
   sinkFeatureScore,
   trolleyFeatureScore,
+  unSekerFeatureScore,
 } from "./match-features";
 import {
   generateEqustoTezgahSku,
@@ -26,6 +28,14 @@ import {
 } from "@/lib/catalog/equsto-kod-lookup";
 import { referansKatalogUyumsuz, matchReferansKalem } from "../referans/referans-eslestirme";
 import { inferUrunTipiFromReferansSatir } from "../referans/infer-urun-tipi";
+import { matchDuvarRafiByReferans } from "../referans/duvar-raf-match";
+import { matchPisirmeByReferans } from "../referans/pisirme-match";
+import { isAtalayPisirmePfosKalem } from "../core/atalay-marka";
+import {
+  ocakFuelFromRow,
+  ocakFuelMismatch,
+  parseOcakFuelFromReferans,
+} from "../core/atalay-ocak-spec";
 
 
 /** Ölçü benzerliği — boyutlar yakınsa bonus */
@@ -92,6 +102,20 @@ function categoryMismatchPenalty(item: ParsedItem, hit: CatalogSearchHit): numbe
     penalty += 280;
   }
   if (/servis tezgah|make.?up/.test(q) && /bulasik|yikama/.test(hay)) penalty += 150;
+  if (
+    /tezgah|calisma|çalışma|buzdolab|sogutuc|soğutuc|araba|un\s*seker|raf\b|evye/.test(q) &&
+    /davlumbaz/.test(hay) &&
+    !/davlumbaz/.test(q)
+  ) {
+    penalty += 350;
+  }
+  if (
+    /davlumbaz/.test(hay) &&
+    !/davlumbaz/.test(q) &&
+    /7885\.|9885\./.test(String(hit.sku ?? ""))
+  ) {
+    penalty += 200;
+  }
   if (/bulasik|yikama|giyotin/.test(q) && !/bulasik|yikama|giyotin/.test(hay)) penalty += 60;
   if (/firin|konveksiyon/.test(q) && /kuzine|ocak/.test(hay) && !/firin/.test(hay)) {
     penalty += 80;
@@ -134,6 +158,21 @@ function guessOztiSkuFromOlcu(olcu: string | null | undefined): string | null {
   return `7912.${code}`;
 }
 
+function ocakFuelPenalty(item: ParsedItem, hit: CatalogSearchHit): number {
+  const blob = `${item.tanim} ${item.olcu ?? ""}`;
+  const refFuel = parseOcakFuelFromReferans(blob);
+  if (!refFuel || !/ocak|induksiyon|enduksiyon/.test(foldTr(cleanProformaTanim(item.tanim)))) {
+    return 0;
+  }
+  if (ocakFuelMismatch(refFuel, { sku: hit.sku, ad: hit.name, kategori: hit.category })) {
+    return 320;
+  }
+  const rowFuel = ocakFuelFromRow({ sku: hit.sku, ad: hit.name, kategori: hit.category });
+  if (refFuel === "induksiyon" && rowFuel === "induksiyon") return -80;
+  if (refFuel === rowFuel) return -40;
+  return 0;
+}
+
 function scoreHit(item: ParsedItem, query: string, hit: CatalogSearchHit): number {
   return (
     tokenOverlapScore(query, hit) * 50 +
@@ -142,8 +181,10 @@ function scoreHit(item: ParsedItem, query: string, hit: CatalogSearchHit): numbe
     shelfFeatureScore(item.tanim, hit) +
     sinkFeatureScore(item.tanim, hit) +
     trolleyFeatureScore(item.tanim, hit) +
+    unSekerFeatureScore(item.tanim, hit) +
     dishwasherFeatureScore(item.tanim, hit) -
-    categoryMismatchPenalty(item, hit)
+    categoryMismatchPenalty(item, hit) -
+    ocakFuelPenalty(item, hit)
   );
 }
 
@@ -226,6 +267,55 @@ function matchFromEqustoHit(
   };
 }
 
+function refMatchToResult(
+  item: ParsedItem,
+  refMatch: {
+    id: string;
+    ad: string;
+    sku: string;
+    marka: string;
+    model?: string | null;
+    gorselUrl?: string | null;
+    fiyatEur?: number | null;
+    fiyat: number;
+  },
+  guven = 0.94,
+): ItemMatchResult {
+  const bestHit = {
+    id: refMatch.id,
+    name: refMatch.ad,
+    sku: refMatch.sku,
+    brand: refMatch.marka,
+    category: refMatch.model || "",
+    dept: refMatch.model || "",
+    specs: item.tanim,
+    image: String(refMatch.gorselUrl ?? "").replace(/^\/data\//, "").replace(/^\//, ""),
+    slug: refMatch.id,
+    satis_eur_indirimli: refMatch.fiyatEur ?? null,
+    liste_fiyati_eur: refMatch.fiyatEur ?? null,
+  } as CatalogSearchHit;
+
+  const dto = hitToDto(bestHit);
+  if (refMatch.fiyat > 0) dto.fiyat_try = refMatch.fiyat;
+  if (refMatch.fiyatEur && refMatch.fiyatEur > 0) {
+    dto.satis_fiyati_eur = refMatch.fiyatEur;
+    dto.liste_fiyati_eur = refMatch.fiyatEur;
+  }
+  const birim = dto.satis_fiyati_eur > 0 ? dto.satis_fiyati_eur : null;
+  return {
+    bestHit,
+    matched: {
+      ...item,
+      tanim: cleanProformaTanim(item.tanim) || item.tanim,
+      eslesen_urun: dto,
+      eslesen_skor: guven,
+      birim_fiyat_eur: birim,
+      toplam_eur: birim != null ? Math.round(birim * item.adet * 100) / 100 : null,
+      not_found: false,
+    },
+  };
+}
+
 export async function matchItem(item: ParsedItem): Promise<ItemMatchResult> {
   if (item.mevcut) {
     return {
@@ -242,6 +332,7 @@ export async function matchItem(item: ParsedItem): Promise<ItemMatchResult> {
   }
 
   // Try rule-based referans matching first
+  const refNotlar = [item.olcu, item.tanim].filter(Boolean).join(" ");
   const refInput = {
     isim: item.tanim,
     urunTipi: inferUrunTipiFromReferansSatir({
@@ -252,50 +343,19 @@ export async function matchItem(item: ParsedItem): Promise<ItemMatchResult> {
       olcu: item.olcu,
       adet: 1,
     }),
-    notlar: item.olcu,
+    notlar: refNotlar,
     fiyatStratejisi: "orta" as const,
     sku: null,
   };
   const refMatch = await matchReferansKalem(refInput);
-  if (refMatch && refMatch.sku && !refMatch.id.startsWith("custom-") && !refMatch.id.includes("-ozel")) {
-    const bestHit = {
-      id: refMatch.id,
-      name: refMatch.ad,
-      sku: refMatch.sku,
-      brand: refMatch.marka,
-      category: refMatch.model || "",
-      dept: refMatch.model || "",
-      specs: item.tanim,
-      image: String(refMatch.gorselUrl ?? "").replace(/^\/data\//, "").replace(/^\//, ""),
-      slug: refMatch.id,
-      satis_eur_indirimli: refMatch.fiyatEur ?? null,
-      liste_fiyati_eur: refMatch.fiyatEur ?? null,
-    } as CatalogSearchHit;
-
-    const { hit: ranked, guven } = pickBestHit(item, [bestHit]);
-    if (ranked) {
-      const dto = hitToDto(ranked);
-      if (refMatch.fiyat > 0) {
-        dto.fiyat_try = refMatch.fiyat;
-      }
-      if (refMatch.fiyatEur && refMatch.fiyatEur > 0) {
-        dto.satis_fiyati_eur = refMatch.fiyatEur;
-        dto.liste_fiyati_eur = refMatch.fiyatEur;
-      }
-      const birim = dto.satis_fiyati_eur > 0 ? dto.satis_fiyati_eur : null;
-      return {
-        bestHit: ranked,
-        matched: {
-          ...item,
-          tanim: cleanProformaTanim(item.tanim) || item.tanim,
-          eslesen_urun: dto,
-          eslesen_skor: Math.max(guven, 0.92),
-          birim_fiyat_eur: birim,
-          toplam_eur: birim != null ? Math.round(birim * item.adet * 100) / 100 : null,
-          not_found: false,
-        },
-      };
-    }
+  if (
+    refMatch &&
+    refMatch.sku &&
+    !refMatch.id.startsWith("custom-") &&
+    !refMatch.id.includes("-ozel") &&
+    !referansKatalogUyumsuz(item.tanim, refMatch.ad, refNotlar, refMatch.sku)
+  ) {
+    return refMatchToResult(item, refMatch, 0.94);
   }
 
   const equstoKod = guessEqustoKodFromItem(item);
@@ -347,8 +407,53 @@ export async function matchItem(item: ParsedItem): Promise<ItemMatchResult> {
     }
   }
 
+  if (requiresUnSekerArabasi(item.tanim)) {
+    const unSekerRef = await matchReferansKalem({
+      ...refInput,
+      isim: item.tanim,
+      notlar: refNotlar,
+    });
+    if (unSekerRef?.sku && !unSekerRef.id.includes("-ozel")) {
+      return refMatchToResult(item, unSekerRef, 0.93);
+    }
+  }
+
+  if (isAtalayPisirmePfosKalem({ isim: item.tanim, urunTipi: refInput.urunTipi })) {
+    const pisirme = await matchPisirmeByReferans(
+      item.tanim,
+      item.olcu ?? "",
+      refNotlar,
+      refInput.urunTipi,
+      "orta",
+    );
+    if (pisirme?.sku && !referansKatalogUyumsuz(item.tanim, pisirme.ad, refNotlar, pisirme.sku)) {
+      return refMatchToResult(item, pisirme, 0.91);
+    }
+  }
+
+  const duvarRaf = await matchDuvarRafiByReferans(
+    item.tanim,
+    item.olcu ?? "",
+    refNotlar,
+    "orta",
+  );
+  if (duvarRaf?.sku) {
+    return refMatchToResult(item, duvarRaf, 0.9);
+  }
+
   const sorgu = buildMeiliSearchQuery(item);
   let hits = await searchCatalogForProforma(sorgu, 8);
+
+  if (requiresUnSekerArabasi(item.tanim)) {
+    const unHits = await searchCatalogForProforma("FC-100 un şeker arabası pimak", 6);
+    const seen = new Set(hits.map((h) => h.id));
+    for (const h of unHits) {
+      if (h.id && !seen.has(h.id)) {
+        hits.push(h);
+        seen.add(h.id);
+      }
+    }
+  }
 
   if (isCalismaTezgahiReferansIsim(item.tanim, item.olcu)) {
     const equstoSku = generateEqustoTezgahSku(item.tanim, item.olcu);

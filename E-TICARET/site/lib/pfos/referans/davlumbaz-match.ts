@@ -77,7 +77,7 @@ function olcuDistance(
 function rowMatchesTip(row: AdminUrunRow, tip: DavlumbazTip): boolean {
   const k = norm(row.ad);
   if (!k.includes("davlumbaz") || isUnoxCheftopHood(k)) return false;
-  if (!isEqustoDavlumbazRow(row.sku)) return false;
+  if (!isEqustoDavlumbazRow(row.sku, row.ad)) return false;
 
   if (tip.form === "orta" && !/orta\s*tip/.test(k)) return false;
   if (tip.form === "duvar" && !/duvar\s*tip/.test(k)) return false;
@@ -119,7 +119,7 @@ async function findEqustoRowBySku(sku: string): Promise<AdminUrunRow | null> {
   const needle = norm(sku).replace(/\s+/g, "");
   if (!needle) return null;
   const rows = (await loadLegacyCatalogRows()).filter(
-    (r) => r.durum === "aktif" && isEqustoDavlumbazRow(r.sku),
+    (r) => r.durum === "aktif" && isEqustoDavlumbazRow(r.sku, r.ad),
   );
   return (
     rows.find((r) => norm(r.sku ?? "").replace(/\s+/g, "") === needle) ?? null
@@ -174,7 +174,7 @@ export async function matchDavlumbazByReferans(
     (r) =>
       r.durum === "aktif" &&
       r.fiyat_tl > 0 &&
-      isEqustoDavlumbazRow(r.sku),
+      isEqustoDavlumbazRow(r.sku, r.ad),
   );
 
   const generatedSku = target

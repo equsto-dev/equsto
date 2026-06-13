@@ -135,6 +135,8 @@ export const EslesmisUrunSchema = z.object({
   doviz: z.enum(["EUR", "TRY", "USD"]),
   gorselUrl: z.string().nullable(),
   slug: z.string().optional(),
+  /** PFOS teklif — teknik / ürün açıklaması (fiyat hariç) */
+  teklifAciklama: z.string().nullable().optional(),
 });
 
 export type EslesmisUrun = z.infer<typeof EslesmisUrunSchema>;

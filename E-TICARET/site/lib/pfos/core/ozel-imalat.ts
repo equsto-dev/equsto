@@ -1,5 +1,7 @@
 import { repairPfosDisplayText } from "@/lib/utf8/repair-turkish-fffd";
+import { isPastaDolabiReferans } from "./caglayan-marka";
 import { isBuzdolabiPfosKalem } from "./portabianco-marka";
+import { isDuvarRafiReferans } from "../referans/duvar-raf-match";
 
 /** Özel imalat / atölye — katalog markası yok; teklifte Equsto */
 export const OZEL_IMALAT_MARKA = "Equsto";
@@ -15,7 +17,6 @@ const OZEL_IMALAT_AD_KALIP = [
   /\bpasta\s*dolab/i,
   /\bşarap\s*dolab/i,
   /\bsarap\s*dolab/i,
-  /\bduvar\s*raf/i,
   /\bduvar\s*dolab/i,
   /\bkokteyl\s*tezgah/i,
   /\bservis\s*tezgah/i,
@@ -45,6 +46,8 @@ export function isOzelImalatSablon(isim: string | null | undefined): boolean {
   if (isPortashelfSablon(s)) return true;
   const n = s.toLocaleLowerCase("tr");
   if (isSogutmaTezgahSablon(s)) return false;
+  if (isPastaDolabiReferans(s)) return false;
+  if (isDuvarRafiReferans(s)) return false;
   if (/\(equsto\)/i.test(s)) return true;
   return OZEL_IMALAT_AD_KALIP.some((re) => re.test(n));
 }
@@ -70,13 +73,15 @@ export function isOzelImalatMotor(opts: {
     .replace(/_/g, "-");
   if (!tip) return false;
   if (/^davlumbaz/.test(tip)) return true;
+  if (/^pasta-sutlu-tatli-tesir$/.test(tip)) return false;
   if (
-    /^(cop-siyirma|bym-cikis|bulasik-cikis|yag-tutucu|bulasik-makinesi-setalt|on-yikama|polietilen-tabla|mermer-tabla|kokteyl-tezgah|servis-tezgah|servis-banko|kasa-banko|pasta-dolab|sarap-dolab)/.test(
+    /^(cop-siyirma|bym-cikis|bulasik-cikis|yag-tutucu|bulasik-makinesi-setalt|on-yikama|polietilen-tabla|mermer-tabla|kokteyl-tezgah|servis-tezgah|servis-banko|kasa-banko|sarap-dolab)/.test(
       tip,
     )
   ) {
     return true;
   }
+  if (/^pasta-dolab/.test(tip)) return false;
   return false;
 }
 
@@ -86,6 +91,7 @@ export function displayIsimFromSablon(isim: string | null | undefined): string {
     typeof isim === "string" ? isim : isim != null ? JSON.stringify(isim) : "";
   return repairPfosDisplayText(
     raw
+      .replace(/\s*\[object\s+object\]\s*/gi, " ")
       .replace(/\s*\(\s*PORTASHELF\s*\)\s*/gi, " ")
       .replace(/\s*\(\s*Equsto\s*\)\s*/gi, " ")
       .replace(/\s+/g, " ")

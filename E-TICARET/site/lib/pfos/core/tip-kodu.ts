@@ -52,6 +52,7 @@ export const URUN_TIPI_ALIASES: Record<string, string> = {
   "soguk-hazirlik-tezgahi": "sogutma_tezgah",
   "soguk-tesir-dolabi-pastane": "teshir_vitrin",
   "pastane-vitrin-soguk": "teshir_vitrin",
+  "pasta-sutlu-tatli-tesir": "teshir_vitrin",
   "konveksiyon-firin-pastane": "raf_firin",
   "pizza-firin-kubbeli": "raf_firin",
   "pizza-firin-kubbeli-gazli": "raf_firin",

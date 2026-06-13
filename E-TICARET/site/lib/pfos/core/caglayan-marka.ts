@@ -26,10 +26,15 @@ export function isTeshirReyonReferansIsim(isim: string | null | undefined): bool
   }
   return (
     /teshir|teşhir|vitrin|reyon|mostra|display/.test(n) ||
-    /et\s*teshir|kasap.*teshir|sarkuteri.*teshir|borek\s*teshir|börek\s*teşhir|pastane.*vitrin|pasta.*teshir|tatli\s*teshir|tatlı\s*teşhir/.test(
+    /et\s*teshir|kasap.*teshir|sarkuteri.*teshir|borek\s*teshir|börek\s*teşhir|pastane.*vitrin|pasta.*teshir|pasta\s*dolab|tatli\s*teshir|tatlı\s*teşhir/.test(
       n,
     )
   );
+}
+
+/** PFOS pasta dolabı — Çağlayan Yasemin serisi */
+export function isPastaDolabiReferans(isim: string | null | undefined): boolean {
+  return /\bpasta\s*dolab/i.test(norm(String(isim ?? "")));
 }
 
 export function isEtTeshirReyonReferans(isim: string | null | undefined): boolean {
