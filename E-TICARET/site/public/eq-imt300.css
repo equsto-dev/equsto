@@ -561,22 +561,6 @@ body.eq-imt-page .imt-fmt-cap span {
   line-height: 1.5;
 }
 
-.imt-powered {
-  text-align: center;
-  padding: 20px;
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.45);
-  background: #000;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-.imt-powered strong {
-  color: var(--bes-gold, #c8a44a);
-  font-weight: 600;
-}
-
 @media (max-width: 800px) {
   .imt-cols {
     grid-template-columns: 1fr;

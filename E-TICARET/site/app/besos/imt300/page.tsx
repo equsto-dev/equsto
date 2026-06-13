@@ -56,9 +56,6 @@ export default function Imt300Page() {
       <link rel="stylesheet" href={`/eq-youtube-embed.css?v=${v}`} />
       <Imt300BodyClass />
       <div id="eq-legacy-vitrin-root" dangerouslySetInnerHTML={{ __html: Imt300BodyHtml }} />
-      <div className="imt-powered">
-        Powered By <strong>Equsto</strong>
-      </div>
       <ShopFooterHost />
       <Script src={`/eq-youtube-embed.js?v=${v}`} strategy="afterInteractive" />
       <Script id="imt300-interactions" strategy="afterInteractive">
