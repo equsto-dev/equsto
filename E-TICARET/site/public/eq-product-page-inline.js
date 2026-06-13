@@ -3405,6 +3405,28 @@ window.searchFilter = window.searchFilter || function () {};
       );
       var pfosHref = eqHtmlUrl(typeof window.equstoUrl === "function" ? window.equstoUrl("pfos") : "pfos.html");
 
+      var epdpFeaturesCol = renderEpdpFeaturesCol(x);
+      var epdpDocsCol = renderEpdpDocsCol(x);
+      var inoksanSpecsUnderMedia =
+        isInoksanCatalogRow(x) && epdpFeaturesCol
+          ? '<div class="eq-epdp-hero__specs eq-inoksan-hero-specs">' + epdpFeaturesCol + "</div>"
+          : "";
+      var epdpPanelsHtml = "";
+      if (isInoksanCatalogRow(x)) {
+        if (epdpDocsCol) {
+          epdpPanelsHtml =
+            '<div class="eq-epdp-panels eq-caglayan-panels eq-epdp-panels--docs-only">' +
+            epdpDocsCol +
+            "</div>";
+        }
+      } else if (epdpFeaturesCol || epdpDocsCol) {
+        epdpPanelsHtml =
+          '<div class="eq-epdp-panels eq-caglayan-panels">' +
+          epdpFeaturesCol +
+          epdpDocsCol +
+          "</div>";
+      }
+
       root.innerHTML =
         familyRail +
         '<div class="eq-epdp-hero eq-caglayan-hero">' +
@@ -3415,7 +3437,9 @@ window.searchFilter = window.searchFilter || function () {};
         (heroLineArt ? " eq-product-hero-wrap--lineart" : "") +
         '">' +
         heroImg +
-        "</div></div></div></div>" +
+        "</div></div></div>" +
+        inoksanSpecsUnderMedia +
+        "</div>" +
         '<div class="eq-epdp-hero__copy eq-caglayan-hero__copy">' +
         '<p class="eq-epdp-eyebrow eq-caglayan-eyebrow">' +
         esc(pdpSeriesEyebrow(x)) +
@@ -3450,10 +3474,7 @@ window.searchFilter = window.searchFilter || function () {};
             "</a></div>"
           : "") +
         "</div></div>" +
-        '<div class="eq-epdp-panels eq-caglayan-panels">' +
-        renderEpdpFeaturesCol(x) +
-        renderEpdpDocsCol(x) +
-        "</div>" +
+        epdpPanelsHtml +
         renderEpdpDrawings(x) +
         relatedStrip +
         renderRecentlyViewed(x, all);
