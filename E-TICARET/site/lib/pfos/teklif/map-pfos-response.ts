@@ -22,6 +22,7 @@ import {
   portashelfGorselRelFromSku,
 } from "../core/katalog-gorsel-url";
 import { equstoPimakGorselRelFromSku } from "../core/equsto-pimak-gorsel";
+import { isEqustoDavlumbazRow } from "../core/davlumbaz-marka";
 import { displayIsimFromSablon } from "../core/ozel-imalat";
 import { sanitizeDavlumbazOlcu } from "./davlumbaz-olcu";
 import {
@@ -89,9 +90,24 @@ export function pfosResponseToTeklifV14(
         (stokNo ? oztiWebImageRelFromSku(stokNo) : null);
 
     const sablonIsim = formatPfosDisplayTanim(k.isim);
-    const isDavlumbazSku = /^(7885|9885)\./i.test(stokNo);
+    const isDavlumbazSku =
+      isEqustoDavlumbazRow(stokNo) || /^(7885|9885)\./i.test(stokNo);
     if (isDavlumbazSku && !/davlumbaz/i.test(sablonIsim)) {
-      finalGorsel = u?.gorselUrl ?? equstoPimakGorselRelFromSku(stokNo, k.isim) ?? null;
+      finalGorsel =
+        equstoPimakGorselRelFromSku(stokNo, sablonIsim) ?? null;
+    }
+
+    const nameL = sablonIsim.toLowerCase();
+    if (
+      /induksiyon|indüksiyon|ocak|mikser/.test(nameL) &&
+      finalGorsel &&
+      /market|inci|vitrin|display|tatlı|tatli|caglayan|cupcake/i.test(
+        String(finalGorsel),
+      )
+    ) {
+      finalGorsel =
+        equstoPimakGorselRelFromSku(stokNo, sablonIsim) ??
+        (stokNo ? oztiWebImageRelFromSku(stokNo) : null);
     }
 
     const normSkuKey = String(stokNo || "").trim().toUpperCase();

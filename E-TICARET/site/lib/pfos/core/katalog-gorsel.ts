@@ -11,6 +11,7 @@ import {
 } from "./katalog-gorsel-url";
 import { isPortashelfSku, PORTASHELF_304_GORSEL_REL } from "./portashelf-fiyat";
 import { equstoPimakGorselRelFromSku } from "./equsto-pimak-gorsel";
+import { isEqustoDavlumbazRow } from "./davlumbaz-marka";
 
 export {
   equstoGorselRelFromSku,
@@ -128,7 +129,33 @@ export async function resolveGorselUrlBySku(
     ...equstoCandidates,
   ]);
 
+  const tanimL = String(tanim ?? "").toLowerCase();
+  const isDavSku =
+    isEqustoDavlumbazRow(key) || /^(7885|9885)\./i.test(key);
+  if (tanimL && !/davlumbaz/.test(tanimL) && isDavSku) {
+    const safe = firstExistingImageRel([
+      existing,
+      pimakTezgah,
+      portashelf,
+      equstoPimakGorselRelFromSku(key, tanim),
+    ]);
+    return normalizePfosGorselUrl(safe ?? existing);
+  }
+
   const finalHit = hit ?? existing ?? fromCatalog ?? ozti;
+  if (
+    tanimL &&
+    /induksiyon|indüksiyon|ocak|mikser|mikser/.test(tanimL) &&
+    finalHit &&
+    /market|inci|vitrin|display|tatlı|tatli|caglayan|cupcake|cake/i.test(
+      String(finalHit),
+    )
+  ) {
+    const alt = equstoPimakGorselRelFromSku(key, tanim) ?? existing;
+    if (alt) return normalizePfosGorselUrl(alt);
+    return normalizePfosGorselUrl(existing);
+  }
+
   if (
     tanim &&
     /pasta|pastane|tatli|tatlı|borek|börek/.test(tanim.toLowerCase())
@@ -188,7 +215,7 @@ export async function enrichEslesmisGorsel(
     return normalizedExisting ? { ...urun, gorselUrl: normalizedExisting } : urun;
   }
 
-  const gorselUrl = await resolveGorselUrlBySku(sku, urun.gorselUrl, urun.ad);
+  const gorselUrl = await resolveGorselUrlBySku(sku, urun.gorselUrl, urun.ad ?? undefined);
   if (!gorselUrl || gorselUrl === urun.gorselUrl) return urun;
   return { ...urun, gorselUrl };
 }
