@@ -9,7 +9,7 @@ type EnrichOpts = Parameters<typeof enrichEslesmisFromKatalogRow>[1];
 
 function teklifAciklamaFromAdminRow(row: AdminUrunRow): string | null {
   const text = buildCatalogTeklifAciklama({
-    description: row.description ?? row.detay,
+    description: row.detay,
     ozti_web_description: row.ozti_web_description,
     inoksan_shop_description: row.inoksan_shop_description,
     teknik_ozellikler: row.teknik_ozellikler,

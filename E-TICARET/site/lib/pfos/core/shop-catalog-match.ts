@@ -374,7 +374,7 @@ function adminRowToEslesmis(
 
   const teklifAciklama =
     buildCatalogTeklifAciklama({
-      description: row.description ?? row.detay,
+      description: row.detay,
       ozti_web_description: row.ozti_web_description,
       inoksan_shop_description: row.inoksan_shop_description,
       teknik_ozellikler: row.teknik_ozellikler,
