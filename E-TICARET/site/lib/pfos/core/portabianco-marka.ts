@@ -1,6 +1,6 @@
 import { resolveTipKodu } from "./tip-kodu";
 
-/** PFOS buzdolabı / soğutma dolabı — teklif markası Portabianco */
+/** PFOS buzdolabı / soğutma dolabı tip kodları (marka: Öztiryakiler — ozti-marka.ts) */
 export const PORTABIANCO_MARKA = "Portabianco";
 
 export const BUZDOLABI_TIP_KODLARI = new Set([

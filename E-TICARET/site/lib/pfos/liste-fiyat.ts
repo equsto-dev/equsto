@@ -16,6 +16,8 @@ import { formatPfosDisplayTanim } from "@/lib/pfos/parse-upload/sanitize-tanim";
 import { finalizeKalemlerForTeklif } from "@/lib/pfos/teklif/assign-poz";
 import { applyNakliyeMontajToKalemler } from "@/lib/pfos/teklif/nakliye-montaj";
 import { enrichPfosKalemlerGorsel, invalidateKatalogGorselCache } from "@/lib/pfos/core/katalog-gorsel";
+import { enrichEslesmisUrunKw } from "@/lib/pfos/core/enrich-eslesmis-kw";
+import { resolveTeklifKw } from "@/lib/catalog/kw-resolve";
 import { resolveTipKodu } from "@/lib/pfos/core/tip-kodu";
 import { TEKLIF_DEFAULT_FIYAT_STRATEJISI } from "@/lib/pfos/teklif/teklif-policy";
 import type {
@@ -95,7 +97,7 @@ export async function calculateListeQuote(
 
   for (let i = 0; i < templateItems.length; i++) {
     const item = templateItems[i];
-    const urun = await matchProductForReferansKalem({
+    const urunMatched = await matchProductForReferansKalem({
       urunTipi: item.urunTipi,
       fiyatStratejisi,
       isim: item.isim,
@@ -103,6 +105,10 @@ export async function calculateListeQuote(
       referansPoz: item.referansPoz,
       referansListeKey: item.referansListeKey ?? listeKey,
       kategoriKodu: item.kategoriKodu,
+    });
+    const urun = await enrichEslesmisUrunKw(urunMatched, {
+      isim: item.isim,
+      urunTipi: item.urunTipi,
     });
 
     kalemlerRaw.push({
@@ -148,12 +154,26 @@ export async function calculateListeQuote(
   const eksikZorunlu = zorunluKalemler.filter((k) => k.urun === null);
 
   const toplamElektrikKw = kalemler.reduce((sum, k) => {
-    const kw = k.urun?.elektrikGucuKw ?? k.elektrikGucuKwHint ?? 0;
+    const kw =
+      resolveTeklifKw({
+        isim: k.isim,
+        urunTipi: k.urunTipi,
+        urun: k.urun,
+        elektrikGucuKwHint: k.elektrikGucuKwHint,
+        gazGucuKwHint: k.gazGucuKwHint,
+      }).elektrikGucuKw ?? 0;
     return sum + kw * k.adet;
   }, 0);
 
   const toplamGazKw = kalemler.reduce((sum, k) => {
-    const kw = k.urun?.gazGucuKw ?? k.gazGucuKwHint ?? 0;
+    const kw =
+      resolveTeklifKw({
+        isim: k.isim,
+        urunTipi: k.urunTipi,
+        urun: k.urun,
+        elektrikGucuKwHint: k.elektrikGucuKwHint,
+        gazGucuKwHint: k.gazGucuKwHint,
+      }).gazGucuKw ?? 0;
     return sum + kw * k.adet;
   }, 0);
 

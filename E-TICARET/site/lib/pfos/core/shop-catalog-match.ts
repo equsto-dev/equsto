@@ -30,8 +30,8 @@ import {
 import {
   isBuzdolabiTipKodu,
   isPortabiancoBuzdolabiRow,
-  isBuzdolabiDisMarka,
 } from "./portabianco-marka";
+import { isOztiBuzdolabiRow, isOztiPisirmeRow, OZTI_MARKA } from "./ozti-marka";
 import {
   isTeshirVitrinTipKodu,
   isCaglayanTeshirRow,
@@ -40,8 +40,6 @@ import {
 import {
   isPisirmeTipKodu,
   isAtalayPisirmeRow,
-  isOztiPisirmeSku,
-  ATALAY_MARKA,
 } from "./atalay-marka";
 import {
   isHazirlikTipKodu,
@@ -481,37 +479,34 @@ function scoreCandidate(
   if (isBuzdolabiTipKodu(tip)) {
     const sku = normName(row.sku ?? "");
     if (
-      (isOztiKatalogMarka(row.marka_ad) || isBuzdolabiDisMarka(row.marka_ad)) &&
-      !isPortabiancoBuzdolabiRow(row)
+      (isPortabiancoBuzdolabiRow(row) || /^TT-|^DT-|^CA-|^BAR-|^SBT-|^SBM-/.test(sku)) &&
+      !isOztiBuzdolabiRow(row)
     ) {
       return -9999;
     }
-    if (/^7919\.|^8919\.|^79e4\.|^371\d/.test(sku) && !isPortabiancoBuzdolabiRow(row)) {
-      return -9999;
+    if (/^7919\.|^8919\.|^79e4\./.test(sku) && isOztiBuzdolabiRow(row)) {
+      score += 350;
     }
-    if (isPortabiancoBuzdolabiRow(row)) score += 350;
   }
 
+  if (isPisirmeTipKodu(tip)) {
+    const sku = normName(row.sku ?? "");
+    if (
+      (isAtalayPisirmeRow(row) || /^AEF-|^AEI-|^AGO-|^AAT-/.test(sku)) &&
+      !isOztiPisirmeRow(row)
+    ) {
+      return -9999;
+    }
+    if (/^78\d{2}\./.test(sku) && isOztiPisirmeRow(row)) {
+      score += 350;
+    }
+  }
   if (isTeshirVitrinTipKodu(tip)) {
     const sku = normName(row.sku ?? "");
     if (isOztiTeshirSku(row.sku) || (isOztiKatalogMarka(row.marka_ad) && /8919\.ts/.test(sku))) {
       return -9999;
     }
     if (isCaglayanTeshirRow(row)) score += 350;
-  }
-
-  if (isPisirmeTipKodu(tip)) {
-    const sku = normName(row.sku ?? "");
-    if (
-      (isOztiKatalogMarka(row.marka_ad) || isOztiPisirmeSku(row.sku)) &&
-      !isAtalayPisirmeRow(row)
-    ) {
-      return -9999;
-    }
-    if (/^9890\.|^7864\.|^7831\.|^7850\./.test(sku) && !isAtalayPisirmeRow(row)) {
-      return -9999;
-    }
-    if (isAtalayPisirmeRow(row)) score += 350;
   }
 
   const wantDept = tipDeptHint(tip);
@@ -611,7 +606,7 @@ export async function matchShopCatalog(
     return null;
   }
 
-  /** Buzdolabı — Portabianco ölçü/tip eşlemesi; Öztiryakiler / Electrolux kullanılmaz */
+  /** Buzdolabı — Öztiryakiler ölçü/tip eşlemesi; Portabianco kullanılmaz */
   if (isBuzdolabiTipKodu(tip) && link?.marka) {
     return null;
   }
@@ -621,20 +616,22 @@ export async function matchShopCatalog(
     return null;
   }
 
-  /** Pişirme — Atalay ölçü/tip eşlemesi; Öztiryakiler 78xx kullanılmaz */
+  /** Pişirme — Öztiryakiler ölçü/tip eşlemesi; Atalay kullanılmaz */
   if (isPisirmeTipKodu(tip) && (link?.marka || link?.sku)) {
-    if (link.sku && isAtalayPisirmeRow({ sku: link.sku, marka_ad: link.brand ?? link.marka })) {
+    if (link.sku && isOztiPisirmeRow({ sku: link.sku, marka_ad: link.brand ?? link.marka })) {
       const bySku = pool.find(
         (r) => r.sku && normName(r.sku) === normName(link.sku!),
       );
       if (bySku) {
         return adminRowToEslesmis(bySku, {
           ...ctx,
-          link: { ...link, marka: ATALAY_MARKA },
+          link: { ...link, marka: OZTI_MARKA },
         });
       }
     }
-    if (!link.sku || isOztiPisirmeSku(link.sku)) return null;
+    if (!link.sku || isAtalayPisirmeRow({ sku: link.sku, marka_ad: link.brand ?? link.marka })) {
+      return null;
+    }
   }
 
   /** Çöp arabası — Portashelf (Yüksel); Öztiryakiler plastik kova kullanılmaz */

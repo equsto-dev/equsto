@@ -37,6 +37,8 @@ const TRAILING_BRAND_QTY_RE =
 /** Mefftech / tedarikçi proforma: adet birim toplam + kur çarpanı + 342 + float artığı */
 const PROFORMA_S_MULT_RE = /\s+S\d{1,3}\*[\d.,]+/gi;
 const PROFORMA_RATE_342_TAIL_RE = /\s+342\s+\d+(?:\.\d+)?\s*$/i;
+const INLINE_PROFORMA_RATE_342_RE = /\s+342\s+\d+(?:\.\d{6,})?/gi;
+const INLINE_PROFORMA_QTY_PRICE_RE = /\s+\d{1,3}\s+\d{2,5}\s+\d{2,5}(?:\s+S\d{1,3}\*[\d.,]+)?(?:\s+342\s+\d+(?:\.\d+)?)?/gi;
 const PROFORMA_QTY_PRICE_TRIPLE_RE = /\s+\d{1,3}\s+\d{2,5}\s+\d{2,5}\s*$/i;
 const PROFORMA_FLOAT_JUNK_RE = /\s+\d+\.\d{6,}\s*$/i;
 const ILYA_REPEAT_RE = /\s+(?:İLYA|ILYA|İlya|Ilya)(?:\s+(?:İLYA|ILYA|İlya|Ilya))+\s*/gi;
@@ -95,6 +97,9 @@ function stripProformaInlineJunk(s: string): string {
 
   out = out
     .replace(INLINE_SKTURK_RE, " ")
+    .replace(INLINE_PROFORMA_QTY_PRICE_RE, " ")
+    .replace(INLINE_PROFORMA_RATE_342_RE, " ")
+    .replace(PROFORMA_S_MULT_RE, " ")
     .replace(PROFORMA_JUNK_RE, "")
     .replace(TRAILING_PRICE_TAIL_RE, "")
     .replace(TRAILING_BRAND_QTY_RE, "")

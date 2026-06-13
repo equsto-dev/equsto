@@ -7,6 +7,7 @@ import { LISTE_KONSEPT, LISTE_KONSEPT_LABEL } from "../liste-fiyat";
 import { finalizeKalemlerForTeklif } from "../teklif/assign-poz";
 import { applyNakliyeMontajToKalemler } from "../teklif/nakliye-montaj";
 import { enrichPfosKalemlerGorsel } from "../core/katalog-gorsel";
+import { resolveTeklifKw } from "@/lib/catalog/kw-resolve";
 import {
   kategoriFromBolumAd,
   kategoriFromUrunAd,
@@ -119,11 +120,25 @@ export async function buildQuoteFromMeiliEslestirme(
   const eksikZorunlu = zorunluKalemler.filter((k) => k.urun === null);
 
   const toplamElektrikKw = kalemler.reduce((sum, k) => {
-    const kw = k.urun?.elektrikGucuKw ?? k.elektrikGucuKwHint ?? 0;
+    const kw =
+      resolveTeklifKw({
+        isim: k.isim,
+        urunTipi: k.urunTipi,
+        urun: k.urun,
+        elektrikGucuKwHint: k.elektrikGucuKwHint,
+        gazGucuKwHint: k.gazGucuKwHint,
+      }).elektrikGucuKw ?? 0;
     return sum + kw * k.adet;
   }, 0);
   const toplamGazKw = kalemler.reduce((sum, k) => {
-    const kw = k.urun?.gazGucuKw ?? k.gazGucuKwHint ?? 0;
+    const kw =
+      resolveTeklifKw({
+        isim: k.isim,
+        urunTipi: k.urunTipi,
+        urun: k.urun,
+        elektrikGucuKwHint: k.elektrikGucuKwHint,
+        gazGucuKwHint: k.gazGucuKwHint,
+      }).gazGucuKw ?? 0;
     return sum + kw * k.adet;
   }, 0);
   const toplamFiyatEslesen = kalemler.reduce((sum, k) => {

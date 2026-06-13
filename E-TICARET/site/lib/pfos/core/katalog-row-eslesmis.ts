@@ -1,4 +1,5 @@
 import type { AdminUrunRow } from "@/lib/legacy-catalog";
+import { resolveKwFromSources } from "@/lib/catalog/kw-resolve";
 import type { EslesmisUrun } from "../schemas/pfos.schema";
 import { enrichEslesmisFromKatalogRow } from "./catalog-enrich";
 import { normalizePfosGorselUrl } from "./katalog-gorsel-url";
@@ -25,6 +26,7 @@ export function katalogRowToEslesmis(
   enrichOpts: EnrichOpts = {},
 ): EslesmisUrun {
   const enriched = enrichEslesmisFromKatalogRow(row, enrichOpts);
+  const kw = resolveKwFromSources(row);
   return {
     id: row.id,
     slug: row.id.replace(/^ecom_/, ""),
@@ -33,8 +35,8 @@ export function katalogRowToEslesmis(
     marka: enriched.marka,
     model: enriched.model,
     olcu: enriched.olcu,
-    elektrikGucuKw: row.el_guc,
-    gazGucuKw: row.gaz_guc,
+    elektrikGucuKw: kw.elektrikGucuKw,
+    gazGucuKw: kw.gazGucuKw,
     fiyat: row.fiyat_tl,
     fiyatEur: equstoSatisEurFromRow(row),
     doviz: "TRY",

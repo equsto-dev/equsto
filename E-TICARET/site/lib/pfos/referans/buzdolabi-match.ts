@@ -5,10 +5,13 @@ import {
 import { katalogRowToEslesmis } from "../core/katalog-row-eslesmis";
 import { equstoSatisEurFromRow } from "../core/shop-catalog-match";
 import {
-  PORTABIANCO_MARKA,
-  isPortabiancoBuzdolabiRow,
-  isPortabiancoKatalogMarka,
-} from "../core/portabianco-marka";
+  OZTI_MARKA,
+  isOztiBuzdolabiRow,
+} from "../core/ozti-marka";
+import {
+  oztiPreferredBuzSkus,
+  scoreOztiBuzdolabiRow,
+} from "../core/ozti-buzdolabi-spec";
 import { displayIsimFromSablon } from "../core/ozel-imalat";
 import type { EslesmisUrun, FiyatStratejisi } from "../schemas/pfos.schema";
 import { toOlcuMmDisplay } from "../teklif/olcu-mm";
@@ -116,160 +119,6 @@ function isCamKapiliReferans(isim: string): boolean {
   return /cam\s*kapili|cam\s*kapı|camlı\s*kap/i.test(norm(isim));
 }
 
-function preferredSkus(
-  family: BuzFamily,
-  kapi: number,
-  depth: 60 | 70,
-  freezer: boolean,
-  referansIsim: string,
-): string[] {
-  const cool = freezer ? "D" : "N";
-  const camKapili = isCamKapiliReferans(referansIsim);
-  if (family === "tezgah") {
-    if (kapi === 1) return [`TT-1${cool}${depth}`];
-    if (kapi === 2) {
-      if (camKapili) {
-        return [`TTR-2${cool}${depth}`, `TTC-2${cool}${depth}`, `TTK-2${cool}${depth}`];
-      }
-      return [`TTK-2${cool}${depth}`, `TTR-2${cool}${depth}`, `TTC-2${cool}${depth}`];
-    }
-    if (kapi === 3) return [`TT-3${cool}${depth}`];
-    if (kapi === 4) {
-      if (camKapili) {
-        return [`TTR-4${cool}${depth}`, `TTK-4${cool}${depth}`, `TT-4ND${depth}`];
-      }
-      return [`TT-4ND${depth}`, `TTK-4${cool}${depth}`, `TTR-4${cool}${depth}`];
-    }
-  }
-  if (family === "cihazalti") {
-    if (kapi === 1) return [`CA-1${cool}${depth}`];
-    if (kapi === 2) return [`CA-1${cool}${depth}`];
-    if (kapi === 3) return [`CA-3${cool}${depth}`];
-  }
-  if (family === "dik") {
-    if (freezer) {
-      if (kapi === 1) return ["DT-1DGN-EKO", "DT-1DGN"];
-      if (kapi === 2) return ["DT-2DGN-EKO", "DT-2DGN"];
-    }
-    if (kapi === 1) return ["DT-1NGN-EKO", "DT-1NGN"];
-    if (kapi === 2) return ["DT-2NGN-EKO", "DT-2NGN"];
-  }
-  if (family === "bar") {
-    const w = kapi;
-    if (w >= 3) return ["BAR-350", "BAR-350P"];
-    if (w === 2) return ["BAR-250", "BAR-250P"];
-    return ["BAR-150", "BAR-150P"];
-  }
-  return [];
-}
-
-function parseCatalogRowBuzProperties(row: AdminUrunRow): {
-  doors: number | null;
-  depth: number | null;
-  freezer: boolean;
-} {
-  const ad = norm(row.ad);
-  const sku = String(row.sku ?? "").toUpperCase();
-
-  let doors = kapiSayisiFromIsim(row.ad);
-  if (doors == null) {
-    const m = sku.match(/(?:TT|CA|DT|CAM|TTM|TTX|TTR|TTC|TTK|TTS|SBHD|SBH|MSBH|ASBH)-\(?(\d)\)?/i);
-    if (m) {
-      doors = Number(m[1]);
-    } else if (sku.includes("BAR-150")) {
-      doors = 1;
-    } else if (sku.includes("BAR-250")) {
-      doors = 2;
-    } else if (sku.includes("BAR-350")) {
-      doors = 3;
-    }
-  }
-
-  let depth: number | null = null;
-  const mDepth = sku.match(/(?:TT|CA|CAM|TTM|TTX|TTR|TTC|TTK|TTS|SBHD|SBH|MSBH|ASBH)-\d+[A-Z]*(\d{2})/i);
-  if (mDepth) {
-    depth = Number(mDepth[1]);
-  } else if (/60x60|600x600/i.test(row.ad)) {
-    depth = 60;
-  } else if (/70x70|700x700/i.test(row.ad)) {
-    depth = 70;
-  }
-
-  const freezer = /donduruc|derin/.test(ad) || /DGN|D70|D60|D80/.test(sku);
-
-  return { doors, depth, freezer };
-}
-
-function scorePortabiancoRow(
-  row: AdminUrunRow,
-  family: BuzFamily,
-  targetModels: string[],
-  targetSkus: string[],
-  referansIsim: string,
-  freezer: boolean,
-  camKapili: boolean,
-  reqDoors: number | null,
-  reqDepth: number | null,
-  hasRequestedSize: boolean,
-): number {
-  if (!isPortabiancoBuzdolabiRow(row)) return -9999;
-  const ad = norm(row.ad);
-  const sku = String(row.sku ?? "").toUpperCase();
-  if (!/buzdolab|donduruc|sogutuc|soğutuc|bar\s*sise|bar\s*şişe|tezgah tip|cihaz alt|dik tip/.test(ad)) {
-    return -9999;
-  }
-
-  if (freezer && !/donduruc|derin/.test(ad) && !/DGN|D70|D60|D80/.test(sku)) {
-    return -9999;
-  }
-  if (!freezer && /derin\s*donduruc/.test(ad) && !/buzdolab/.test(ad)) {
-    return -9999;
-  }
-
-  // Parse catalog row properties
-  const catProps = parseCatalogRowBuzProperties(row);
-
-  // If a specific number of doors is requested, heavily penalize door count mismatch
-  if (reqDoors != null && catProps.doors != null && reqDoors !== catProps.doors) {
-    return -9999;
-  }
-
-  // If dimensions were explicitly requested, heavily penalize depth mismatch
-  if (hasRequestedSize && reqDepth != null && catProps.depth != null && reqDepth !== catProps.depth) {
-    return -9999;
-  }
-
-  let score = 50;
-  if (isPortabiancoKatalogMarka(row.marka_ad)) score += 40;
-
-  if (targetSkus.some((t) => norm(sku) === norm(t))) score += 500;
-
-  const model = modelFromRow(row);
-  if (model && targetModels.some((t) => norm(model).startsWith(norm(t.split("-E")[0])))) {
-    score += 350;
-  }
-  for (const t of targetModels) {
-    if (ad.includes(norm(t).toLowerCase())) score += 280;
-  }
-
-  if (family === "tezgah" && /tezgah tipi buzdolab/.test(ad)) score += 80;
-  if (family === "cihazalti" && /cihaz alti buzdolab/.test(ad)) score += 80;
-  if (family === "dik" && /dik tip/.test(ad)) score += 80;
-  if (family === "bar" && /bar.*sise|bar.*şişe/.test(ad)) score += 80;
-
-  if (/^TT-\d+N\d+$/.test(sku) || /^TT-\d+ND\d+$/.test(sku)) score += 30;
-  if (/^TTR-/.test(sku)) {
-    score += camKapili ? 40 : -5;
-  } else if (/^TTK-|^PZA-|^PZAC-/.test(sku)) {
-    score += camKapili ? -15 : -5;
-  }
-  if (/-E$/.test(sku) && !/eko|ekop|ekon/.test(norm(referansIsim))) score -= 8;
-
-  if (row.gorsel_url) score += 5;
-  if (row.fiyat_tl > 0) score += 5;
-  return score;
-}
-
 async function findRowBySku(sku: string): Promise<AdminUrunRow | null> {
   const needle = norm(sku).replace(/\s+/g, "").toUpperCase();
   if (!needle) return null;
@@ -277,12 +126,13 @@ async function findRowBySku(sku: string): Promise<AdminUrunRow | null> {
   return (
     rows.find(
       (r) =>
-        isPortabiancoBuzdolabiRow(r) &&
+        isOztiBuzdolabiRow(r) &&
         norm(r.sku ?? "").replace(/\s+/g, "").toUpperCase() === needle,
     ) ??
     rows.find(
       (r) =>
         norm(r.sku ?? "").replace(/\s+/g, "").toUpperCase() === needle &&
+        isOztiBuzdolabiRow(r) &&
         (r.fiyat_tl > 0 || equstoSatisEurFromRow(r)),
     ) ??
     null
@@ -298,19 +148,19 @@ async function hydrateBuzdolabiFromSku(
   const row = await findRowBySku(sku);
   if (!row || !(row.fiyat_tl > 0 || equstoSatisEurFromRow(row))) return null;
   const matched = katalogRowToEslesmis(row, {
-    linkMarka: PORTABIANCO_MARKA,
+    linkMarka: OZTI_MARKA,
     sablonIsim: isim,
     urunTipi: urunTipi ?? undefined,
   });
   return {
     ...matched,
     ad: displayIsimFromSablon(isim),
-    marka: PORTABIANCO_MARKA,
+    marka: OZTI_MARKA,
     olcu: olcuDisplay,
   };
 }
 
-/** Buzdolabı / derin dondurucu — Portabianco katalog; Öztiryakiler / Electrolux kullanılmaz */
+/** Buzdolabı / derin dondurucu — Öztiryakiler katalog */
 export async function matchBuzdolabiByReferans(
   isim: string,
   olcuRaw: string,
@@ -336,45 +186,39 @@ export async function matchBuzdolabiByReferans(
   if (kapi == null && family === "bar") kapi = 3;
 
   const camKapili = isCamKapiliReferans(isim);
-  const models =
-    family && kapi != null
-      ? preferredSkus(family, kapi, depth, freezer, isim).map((s) =>
-          s.replace(/-EKO$/, "").replace(/^TTK-2N(\d+)$/, "TT-2N$1"),
-        )
-      : [];
+  const widthCm = parts?.[0] ?? 140;
   const skus =
     family && kapi != null
-      ? preferredSkus(family, kapi, depth, freezer, isim)
+      ? oztiPreferredBuzSkus(family, kapi, widthCm, freezer, camKapili)
       : [];
 
   for (const sku of skus) {
     const exact = await findRowBySku(sku);
     if (exact) {
       const matched = katalogRowToEslesmis(exact, {
-        linkMarka: PORTABIANCO_MARKA,
+        linkMarka: OZTI_MARKA,
         sablonIsim: isim,
         urunTipi: urunTipi ?? undefined,
       });
       return {
         ...matched,
         ad: displayIsimFromSablon(isim),
-        marka: PORTABIANCO_MARKA,
+        marka: OZTI_MARKA,
         olcu: olcuDisplay,
       };
     }
   }
 
   const rows = (await loadLegacyCatalogRows()).filter(
-    (r) => r.durum === "aktif" && r.fiyat_tl > 0 && isPortabiancoBuzdolabiRow(r),
+    (r) => r.durum === "aktif" && r.fiyat_tl > 0 && isOztiBuzdolabiRow(r),
   );
 
   const scored = rows
     .map((row) => ({
       row,
-      score: scorePortabiancoRow(
+      score: scoreOztiBuzdolabiRow(
         row,
         family,
-        models,
         skus,
         isim,
         freezer,
@@ -389,20 +233,20 @@ export async function matchBuzdolabiByReferans(
 
   if (scored.length > 0) {
     const matched = katalogRowToEslesmis(scored[0].row, {
-      linkMarka: PORTABIANCO_MARKA,
+      linkMarka: OZTI_MARKA,
       sablonIsim: isim,
       urunTipi: urunTipi ?? undefined,
     });
     return {
       ...matched,
       ad: displayIsimFromSablon(isim),
-      marka: PORTABIANCO_MARKA,
+      marka: OZTI_MARKA,
       olcu: olcuDisplay,
     };
   }
 
-  if (isBuzdolabiReferans(isim) && (skus[0] || models[0])) {
-    for (const sku of skus.length ? skus : models) {
+  if (isBuzdolabiReferans(isim) && skus[0]) {
+    for (const sku of skus) {
       const hydrated = await hydrateBuzdolabiFromSku(
         sku,
         isim,
@@ -412,12 +256,12 @@ export async function matchBuzdolabiByReferans(
       if (hydrated) return hydrated;
     }
 
-    const sku = skus[0] ?? models[0];
+    const sku = skus[0];
     return {
-      id: `portabianco-buz-${sku.toLowerCase()}`,
+      id: `ozti-buz-${sku.toLowerCase()}`,
       sku,
       ad: displayIsimFromSablon(isim),
-      marka: PORTABIANCO_MARKA,
+      marka: OZTI_MARKA,
       model: sku,
       olcu: olcuDisplay,
       elektrikGucuKw: null,

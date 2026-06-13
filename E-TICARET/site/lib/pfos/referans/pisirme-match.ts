@@ -2,21 +2,21 @@ import {
   loadLegacyCatalogRows,
   type AdminUrunRow,
 } from "@/lib/legacy-catalog";
-import { katalogRowToEslesmis } from "../core/katalog-row-eslesmis";
-import {
-  ATALAY_MARKA,
-  isAtalayKatalogMarka,
-  isAtalayPisirmeRow,
-} from "../core/atalay-marka";
-import { displayIsimFromSablon } from "../core/ozel-imalat";
 import type { EslesmisUrun, FiyatStratejisi } from "../schemas/pfos.schema";
+import { katalogRowToEslesmis } from "../core/katalog-row-eslesmis";
+import { displayIsimFromSablon } from "../core/ozel-imalat";
 import { toOlcuMmDisplay } from "../teklif/olcu-mm";
+import {
+  OZTI_MARKA,
+  isOztiPisirmeRow,
+} from "../core/ozti-marka";
+import { isOztiKatalogMarka } from "../core/hazirlik-marka";
+import {
+  preferredOztiPisirmeSkus,
+  scoreOztiOcakRow,
+} from "../core/ozti-pisirme-spec";
 import { isKombiKonveksiyonReferans } from "./firin-match";
 import { extractOlcuFromNotlar } from "./yer-izgara-match";
-import {
-  preferredOcakSkus,
-  scoreOcakRow,
-} from "../core/atalay-ocak-spec";
 
 function norm(s: string): string {
   return String(s ?? "")
@@ -179,53 +179,10 @@ function preferredSkus(
   referansIsim = "",
   notlar?: string | null,
 ): string[] {
-  const nums = olcuParts(olcu);
-  const w = nums[0] ?? 0;
-  const d = nums[1] ?? 0;
-  
-  const is900 = d >= 85;
-  const is730 = d >= 65 && d < 85;
-
-  if (family === "ocak") {
-    return preferredOcakSkus(referansIsim, olcu, notlar);
-  }
-  if (family === "fritoz") {
-    if (is900) {
-      if (w >= 75) return ["AEF-890"];
-      return ["AEF-490"];
-    }
-    if (is730) {
-      if (w >= 75) return ["AEF-870", "AEF-873"];
-      return ["AEF-470", "AEF-473"];
-    }
-    // 600 series
-    if (w >= 75 || d >= 75) return ["EAEF-860"];
-    if (w >= 55) return ["EAEF-660"];
-    return ["EAEF-460", "EAEF-360"];
-  }
-  if (family === "patates_dinlendirme") {
-    if (w >= 38 && d >= 65) return ["APD-473"];
-    return ["APD-473"];
-  }
-  if (family === "izgara") {
-    if (is900) {
-      if (w >= 75) return ["AEI-890S", "AEI-890/NDS", "AEI-890/NSCR", "AEI-890"];
-      return ["AEI-490S", "AEI-490/NS", "AEI-490"];
-    }
-    if (is730) {
-      if (w >= 75) return ["AEI-873/ND", "AEI-873CR", "AEI-873/NCR", "AEI-870/ND", "AEI-870/N"];
-      if (w >= 55) return ["AEI-673/ND", "AEI-673/N", "AEI-673/NCR"];
-      return ["AEI-473/NCR"];
-    }
-    // 600 series
-    if (w >= 75 || d >= 75) return ["EAEI-860", "EAEI-860/NDCR", "EAEI-860/N", "EAEI-860/ND"];
-    if (w >= 55 || d >= 55) return ["EAEI-660", "EAEI-660/NDCR"];
-    return ["EAEI-460", "EAEI-360"];
-  }
-  return [];
+  return preferredOztiPisirmeSkus(family, olcu, referansIsim, notlar);
 }
 
-function scoreAtalayRow(
+function scoreOztiPisirmeRow(
   row: AdminUrunRow,
   family: PisirmeFamily,
   olcu: string,
@@ -234,12 +191,12 @@ function scoreAtalayRow(
   notlar?: string | null,
   uyumsuzlukKontrol?: (sablon: string, katName: string, notes?: string | null, sku?: string | null) => boolean,
 ): number {
-  if (!isAtalayPisirmeRow(row)) return -9999;
+  if (!isOztiPisirmeRow(row)) return -9999;
   if (uyumsuzlukKontrol && uyumsuzlukKontrol(referansIsim, row.ad, notlar, row.sku)) return -9999;
   if (family && !rowMatchesFamily(row, family)) return -9999;
 
   let score = 80;
-  if (isAtalayKatalogMarka(row.marka_ad)) score += 40;
+  if (isOztiKatalogMarka(row.marka_ad)) score += 40;
 
   const sku = String(row.sku ?? "").toUpperCase();
   if (preferred.some((p) => norm(sku) === norm(p))) score += 400;
@@ -264,7 +221,7 @@ function scoreAtalayRow(
   }
   if (family === "izgara" && /gaz|gazli|gazlı/.test(refN) && /e agi|gaz/.test(ad)) score += 30;
   if (family === "ocak") {
-    const ocakScore = scoreOcakRow(row, referansIsim, olcu, notlar, preferred);
+    const ocakScore = scoreOztiOcakRow(row, referansIsim, olcu, notlar, preferred);
     if (ocakScore < 0) return ocakScore;
     score += ocakScore;
   }
@@ -273,7 +230,7 @@ function scoreAtalayRow(
   return score;
 }
 
-/** Pişirme ekipmanı — Atalay katalog; Öztiryakiler 78xx kullanılmaz */
+/** Pişirme ekipmanı — Öztiryakiler katalog */
 export async function matchPisirmeByReferans(
   isim: string,
   olcuRaw: string,
@@ -300,56 +257,56 @@ export async function matchPisirmeByReferans(
     const exact = rows.find(
       (r) =>
         r.durum === "aktif" &&
-        isAtalayPisirmeRow(r) &&
+        isOztiPisirmeRow(r) &&
         norm(r.sku ?? "") === norm(sku),
     );
     if (exact && rowMatchesFamily(exact, family) && !referansKatalogUyumsuz(isim, exact.ad, notlar, exact.sku)) {
       const matched = katalogRowToEslesmis(exact, {
-        linkMarka: ATALAY_MARKA,
+        linkMarka: OZTI_MARKA,
         sablonIsim: isim,
         urunTipi: urunTipi ?? undefined,
       });
       return {
         ...matched,
         ad: displayIsimFromSablon(isim),
-        marka: ATALAY_MARKA,
+        marka: OZTI_MARKA,
         olcu: olcuDisplay,
       };
     }
   }
 
   const rows = (await loadLegacyCatalogRows()).filter(
-    (r) => r.durum === "aktif" && isAtalayPisirmeRow(r),
+    (r) => r.durum === "aktif" && isOztiPisirmeRow(r),
   );
 
   const scored = rows
     .map((row) => ({
       row,
-      score: scoreAtalayRow(row, family, olcu, isim, preferred, notlar, referansKatalogUyumsuz),
+      score: scoreOztiPisirmeRow(row, family, olcu, isim, preferred, notlar, referansKatalogUyumsuz),
     }))
     .filter((x) => x.score >= 100)
     .sort((a, b) => b.score - a.score);
 
   if (scored.length > 0) {
     const matched = katalogRowToEslesmis(scored[0].row, {
-      linkMarka: ATALAY_MARKA,
+      linkMarka: OZTI_MARKA,
       sablonIsim: isim,
       urunTipi: urunTipi ?? undefined,
     });
     return {
       ...matched,
       ad: displayIsimFromSablon(isim),
-      marka: ATALAY_MARKA,
+      marka: OZTI_MARKA,
       olcu: olcuDisplay,
     };
   }
 
   if (isPisirmeReferans(isim)) {
     return {
-      id: `atalay-pisirme-${norm(isim).replace(/\s+/g, "-").slice(0, 48)}`,
+      id: `ozti-pisirme-${norm(isim).replace(/\s+/g, "-").slice(0, 48)}`,
       sku: preferred[0] ?? null,
       ad: displayIsimFromSablon(isim),
-      marka: ATALAY_MARKA,
+      marka: OZTI_MARKA,
       model: preferred[0] ?? null,
       olcu: olcuDisplay,
       elektrikGucuKw: null,
