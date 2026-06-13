@@ -24,7 +24,6 @@ const OZEL_IMALAT_AD_KALIP = [
   /\bşarap\s*dolab/i,
   /\bsarap\s*dolab/i,
   /\bduvar\s*dolab/i,
-  /\bkokteyl\s*tezgah/i,
   /\bservis\s*tezgah/i,
   /\bservis\s*banko/i,
   /\bdekoratif\s*servis\s*banko/i,
@@ -81,7 +80,7 @@ export function isOzelImalatMotor(opts: {
   if (/^davlumbaz/.test(tip)) return true;
   if (/^pasta-sutlu-tatli-tesir$/.test(tip)) return false;
   if (
-    /^(cop-siyirma|bym-cikis|bulasik-cikis|yag-tutucu|bulasik-makinesi-setalt|on-yikama|polietilen-tabla|mermer-tabla|kokteyl-tezgah|servis-tezgah|servis-banko|kasa-banko|sarap-dolab)/.test(
+    /^(cop-siyirma|bym-cikis|bulasik-cikis|yag-tutucu|bulasik-makinesi-setalt|on-yikama|polietilen-tabla|mermer-tabla|servis-tezgah|servis-banko|kasa-banko|sarap-dolab)/.test(
       tip,
     )
   ) {

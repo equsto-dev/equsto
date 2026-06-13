@@ -268,6 +268,14 @@
       "frekans": 0
     },
     {
+      "tip_kodu": "kokteyl_istasyon",
+      "aciklama": "Kokteyl istasyonu — Besos modüler bar (vitrum-bars-catalogue)",
+      "kategori": "bar",
+      "alt_kategori": null,
+      "kaynak": "P1",
+      "frekans": 0
+    },
+    {
       "tip_kodu": "buro_tipi_derin_dondurucu",
       "aciklama": "60×60×85 büro tipi paslanmaz gövdeli derin dondurucu",
       "kategori": "sogutma",
