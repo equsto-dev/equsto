@@ -62,13 +62,13 @@ export function buildTeklifV14PrintHtml(
         <td class="poz">${esc(row.poz)}</td>
         <td class="stok">${esc(row.stokNo)}</td>
         <td class="tanim">${esc(sanitizeTeklifV14SatirTanim(row.tanim))}</td>
+        <td class="olcu">${esc(row.olcu || "—")}</td>
+        <td class="marka">${esc(row.marka)}</td>
         <td class="num">${esc(formatKwHucre(row.elkKw))}</td>
         <td class="num">${esc(formatKwHucre(row.gazKw))}</td>
         <td class="num">${row.adet}</td>
         <td class="num">${birim}</td>
         <td class="num">${toplam}</td>
-        <td class="marka">${esc(row.marka)}</td>
-        <td class="olcu">${esc(row.olcu || "—")}</td>
       </tr>`;
 
       const imgUrl = row.fotoUrl ? absImageUrl(row.fotoUrl, siteOrigin) : "";
@@ -79,9 +79,11 @@ export function buildTeklifV14PrintHtml(
       const acikHtml = acik ? esc(acik) : "";
       if (imgUrl || acikHtml) {
         tbody += `<tr class="spec">
-          <td class="foto-cell" colspan="2">${fotoCell}</td>
-          <td class="spec-gap"></td>
-          <td class="spec-acik" colspan="8"><pre>${acikHtml}</pre></td>
+          <td></td>
+          <td></td>
+          <td class="foto-cell">${fotoCell}</td>
+          <td class="spec-acik"><pre>${acikHtml}</pre></td>
+          <td colspan="7"></td>
         </tr>`;
       }
     }
@@ -117,27 +119,26 @@ export function buildTeklifV14PrintHtml(
   col.c-poz { width: 4%; }
   col.c-stok { width: 9%; }
   col.c-tanim { width: 34%; }
+  col.c-olcu { width: 10%; }
+  col.c-marka { width: 9%; }
   col.c-kw { width: 5%; }
   col.c-adet { width: 4%; }
   col.c-fiyat { width: 7%; }
   col.c-toplam { width: 8%; }
-  col.c-marka { width: 9%; }
-  col.c-olcu { width: 10%; }
   th { text-align: center; font-size: 9px; padding: 5px 3px; border-bottom: 1px solid #999; }
   td { padding: 4px 3px; border-bottom: 1px solid #eee; vertical-align: top; }
   td.bol, td.poz { text-align: center; white-space: nowrap; }
-  td.stok { text-align: left; white-space: nowrap; }
-  td.tanim { word-break: break-word; }
+  td.stok { text-align: left; overflow: hidden; overflow-wrap: anywhere; word-break: break-all; max-width: 0; }
+  td.tanim { word-break: break-word; overflow: hidden; max-width: 0; }
   td.marka, td.olcu { text-align: center; font-size: 9px; padding: 4px 2px; }
   td.num { text-align: center; white-space: nowrap; }
   tr.sec td { font-weight: 700; background: ${TEKLIF_BOLUM_ROW_FILL}; color: #1e4620; padding: 7px 4px; border-bottom: 1px solid #b7dfc5; }
   tr.spec td { background: #fafafa; }
-  tr.spec td.foto-cell { padding: 4px 0 4px 0; text-align: left; vertical-align: top; }
-  tr.spec td.spec-gap { padding: 0; background: #fafafa; }
-  .foto { max-width: 150px; max-height: 125px; object-fit: contain; display: block; margin: 0; }
+  tr.spec td.foto-cell { padding: 4px 2px; text-align: left; vertical-align: top; overflow: hidden; max-width: 0; }
+  .foto { max-width: 100%; max-height: 125px; object-fit: contain; display: block; margin: 0; }
   .foto-ph { color: #999; }
   td.spec-acik pre { margin: 0; white-space: pre-wrap; font-family: inherit; font-size: 9px; line-height: 1.45; word-break: break-word; }
-  td.spec-acik { word-break: break-word; vertical-align: top; padding: 4px 3px 4px 4px; }
+  td.spec-acik { word-break: break-word; vertical-align: top; padding: 4px 3px 4px 4px; overflow: hidden; max-width: 0; }
   tr.total td { font-weight: 700; }
   .foot { margin-top: 14px; font-size: 9px; color: #555; display: flex; justify-content: space-between; }
   .sartlar { margin-top: 16px; font-size: 9px; line-height: 1.5; page-break-inside: avoid; }
@@ -163,25 +164,25 @@ export function buildTeklifV14PrintHtml(
   <table>
     <colgroup>
       <col class="c-bol"><col class="c-poz"><col class="c-stok"><col class="c-tanim">
+      <col class="c-olcu"><col class="c-marka">
       <col class="c-kw"><col class="c-kw"><col class="c-adet"><col class="c-fiyat"><col class="c-toplam">
-      <col class="c-marka"><col class="c-olcu">
     </colgroup>
     <thead><tr>
-      <th>Böl.</th><th>Poz</th><th>Stok no</th><th>Tanımı</th><th>Elk. kW</th><th>Gaz kW</th>
-      <th>Adet</th><th>Satış</th><th>Toplam</th><th>Marka</th><th>Ölçü</th>
+      <th>Böl.</th><th>Poz</th><th>Stok no</th><th>Tanımı</th><th>Ölçü</th><th>Marka</th>
+      <th>Elk. kW</th><th>Gaz kW</th><th>Adet</th><th>Satış</th><th>Toplam</th>
     </tr></thead>
     <tbody>${tbody}
       <tr class="total">
         <td colspan="2"></td>
         <td></td>
         <td style="text-align:right">Sütun toplamları →</td>
+        <td></td>
+        <td></td>
         <td class="num">${esc(formatKwHucre(ozet.toplamElektrikKw))}</td>
         <td class="num">${esc(formatKwHucre(ozet.toplamGazKw))}</td>
         <td></td>
         <td style="font-weight:700;text-align:center">GENEL TOPLAM</td>
         <td class="num" style="font-weight:700">${esc(genel)}</td>
-        <td></td>
-        <td></td>
       </tr>
     </tbody>
   </table>

@@ -34,13 +34,13 @@ const COLS = [
   "Poz",
   "Stok no",
   "Tanımı",
+  "Ölçü",
+  "Marka",
   "Elk. kW",
   "Gaz kW",
   "Adet",
   "Satış",
   "Toplam",
-  "Marka",
-  "Ölçü",
 ] as const;
 
 /** Üye oturumu / sepet checkout — Mr. Equsto modal ile paylaşılan telefon */
@@ -386,13 +386,13 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
             <col style={{ width: "4%" }} />
             <col style={{ width: "9%" }} />
             <col style={{ width: "34%" }} />
+            <col style={{ width: "10%" }} />
+            <col style={{ width: "9%" }} />
             <col style={{ width: "5%" }} />
             <col style={{ width: "5%" }} />
             <col style={{ width: "4%" }} />
             <col style={{ width: "7%" }} />
             <col style={{ width: "8%" }} />
-            <col style={{ width: "9%" }} />
-            <col style={{ width: "10%" }} />
           </colgroup>
           <thead>
             <tr>
@@ -433,6 +433,8 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
                       <td style={tdTanim}>
                         {sanitizeTeklifV14SatirTanim(row.tanim)}
                       </td>
+                      <td style={tdOlcu}>{row.olcu || "—"}</td>
+                      <td style={tdMarka}>{row.marka}</td>
                       <td style={tdC}>{formatKwHucre(row.elkKw)}</td>
                       <td style={tdC}>{formatKwHucre(row.gazKw)}</td>
                       <td style={tdC}>{row.adet}</td>
@@ -450,19 +452,19 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
                             })
                           : "—"}
                       </td>
-                      <td style={tdMarka}>{row.marka}</td>
-                      <td style={tdOlcu}>{row.olcu || "—"}</td>
                     </tr>
                     {showSpecRow && (
                       <tr>
-                        <td colSpan={2} style={specTdFoto}>
+                        <td style={specTd} />
+                        <td style={specTd} />
+                        <td style={specTdFoto}>
                           {row.fotoUrl ? (
                             // eslint-disable-next-line @next/next/no-img-element
                             <img
                               src={row.fotoUrl}
                               alt=""
                               style={{
-                                maxWidth: 150,
+                                maxWidth: "100%",
                                 maxHeight: 125,
                                 objectFit: "contain",
                                 display: "block",
@@ -473,10 +475,10 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
                             row.fotoNot ?? "📷 Fotoğraf"
                           ) : null}
                         </td>
-                        <td style={specTdGap} />
-                        <td colSpan={8} style={specTdAcik}>
+                        <td style={specTdAcik}>
                           <pre style={specPre}>{aciklamaMetni}</pre>
                         </td>
+                        <td colSpan={7} style={specTd} />
                       </tr>
                     )}
                   </Fragment>
@@ -490,6 +492,8 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
               <td style={{ ...td, textAlign: "right", fontWeight: 600 }}>
                 Sütun toplamları →
               </td>
+              <td style={td} />
+              <td style={td} />
               <td style={tdC}>{formatKwHucre(ozet.toplamElektrikKw)}</td>
               <td style={tdC}>{formatKwHucre(ozet.toplamGazKw)}</td>
               <td style={tdC} />
@@ -503,8 +507,6 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
                     })} ${ozet.doviz}`
                   : "—"}
               </td>
-              <td style={td} />
-              <td style={td} />
             </tr>
           </tbody>
         </table>
@@ -690,13 +692,18 @@ const td: CSSProperties = {
 const tdStok: CSSProperties = {
   ...td,
   textAlign: "left",
-  whiteSpace: "nowrap",
+  overflow: "hidden",
+  overflowWrap: "anywhere",
+  wordBreak: "break-all",
   paddingLeft: 2,
+  maxWidth: 0,
 };
 
 const tdTanim: CSSProperties = {
   ...td,
   wordBreak: "break-word",
+  overflow: "hidden",
+  maxWidth: 0,
 };
 
 const tdMarka: CSSProperties = {
@@ -738,19 +745,18 @@ const specTdFoto: CSSProperties = {
   ...specTd,
   textAlign: "left",
   verticalAlign: "top",
-  paddingLeft: 0,
+  paddingLeft: 2,
   paddingRight: 2,
+  overflow: "hidden",
+  maxWidth: 0,
 };
 
-const specTdGap: CSSProperties = {
-  ...specTd,
-  padding: 0,
-};
-
-/** Açıklama — Tanımı sütunu hizası (Böl+Poz+Stok sonrası) */
+/** Açıklama — yalnızca Tanımı sütunu */
 const specTdAcik: CSSProperties = {
   ...specTd,
   paddingLeft: 4,
+  overflow: "hidden",
+  maxWidth: 0,
 };
 
 const specPre: CSSProperties = {
