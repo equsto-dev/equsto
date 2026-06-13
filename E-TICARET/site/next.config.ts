@@ -41,7 +41,7 @@ function legacyHtmlRedirects() {
     ["login.html", "/login"],
     ["hesabim.html", "/hesabim"],
     ["bar-design.html", "/besos"],
-    ["imt300.html", "/besos/imt300"],
+    ["imt300.html", "/imt300"],
     ["bar-module.html", "/besos"],
     ["geo-landing.html", "/"],
     ["arama.html", "/arama"],
@@ -251,8 +251,6 @@ const nextConfig: NextConfig = {
       { source: "/bar-design", destination: "/besos", permanent: true },
       { source: "/bar-design/", destination: "/besos", permanent: true },
       { source: "/bar-design.html", destination: "/besos", permanent: true },
-      { source: "/imt300", destination: "/besos/imt300", permanent: true },
-      { source: "/imt300/", destination: "/besos/imt300", permanent: true },
       { source: "/en/project-factory", destination: "/en/pfos", permanent: true },
       { source: "/en/project-factory/", destination: "/en/pfos", permanent: true },
       /* Cafemarkt şablon önizleme — statik HTML yedek (App route ile birlikte deploy) */
