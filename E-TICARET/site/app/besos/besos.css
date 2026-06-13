@@ -1898,6 +1898,11 @@ body.bd-page.besos.eq-shop .eq-mfoot-copy {
   position: sticky;
   top: calc(var(--bes-chrome-h, 112px) + 12px);
 }
+.ub-besos-facets__stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
 .ub-besos-facets--mob {
   display: none;
 }
@@ -1908,7 +1913,7 @@ body.bd-page.besos.eq-shop .eq-mfoot-copy {
   padding: 14px 12px;
 }
 .ub-besos-facets__panel--capacity {
-  margin-top: 12px;
+  margin-top: 0;
 }
 .ub-besos-facets__clear-row {
   margin-bottom: 10px;
@@ -1940,8 +1945,13 @@ body.bd-page.besos.eq-shop .eq-mfoot-copy {
   list-style: none;
   margin: 0;
   padding: 0;
-  max-height: min(62vh, 520px);
   overflow: auto;
+}
+.ub-besos-facets__list--category {
+  max-height: min(34vh, 300px);
+}
+.ub-besos-facets__list--capacity {
+  max-height: min(36vh, 320px);
 }
 .ub-besos-facets__label {
   display: grid;

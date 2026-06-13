@@ -30,7 +30,8 @@ const UI = {
   loadMore: { tr: "Daha fazla ürün yükle", en: "Load more products" },
   remaining: { tr: "kaldı", en: "remaining" },
   loadMoreAria: { tr: "Daha fazla ürün yükle", en: "Load more products" },
-  categoryLabel: { tr: "Kategori", en: "Category" },
+  filterLabel: { tr: "Alt kategoriler", en: "Subcategories" },
+  sectionFilter: { tr: "{section} alt kategorileri", en: "{section} subcategories" },
   capacityLabel: { tr: "Kapasite", en: "Capacity" },
   filterAll: { tr: "Tümü", en: "All" },
   filtersAria: { tr: "Ürün filtreleri", en: "Product filters" },
@@ -179,9 +180,9 @@ export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) 
   const categoryPanel = (
     <div className="ub-besos-facets__panel">
       <div className="ub-besos-facets__hd">
-        <span>{ui("categoryLabel", locale)}</span>
+        <span>{ui("sectionFilter", locale, { section: section.label })}</span>
       </div>
-      <ul className="ub-besos-facets__list">
+      <ul className="ub-besos-facets__list ub-besos-facets__list--category">
         {searchableGroups.map((group) => {
           const checked = !hasGroupFilter || activeGroups.has(group.key);
           return (
@@ -226,7 +227,7 @@ export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) 
         <div className="ub-besos-facets__hd">
           <span>{ui("capacityLabel", locale)}</span>
         </div>
-        <ul className="ub-besos-facets__list">
+        <ul className="ub-besos-facets__list ub-besos-facets__list--capacity">
           {capacityFacets.map((cap) => {
             const checked = !hasCapacityFilter || activeCapacities.has(cap.key);
             return (
@@ -266,7 +267,7 @@ export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) 
     ) : null;
 
   const facetPanel = (
-    <>
+    <div className="ub-besos-facets__stack">
       {hasAnyFilter ? (
         <div className="ub-besos-facets__clear-row">
           <button type="button" className="ub-besos-facets__clear" onClick={clearAllFilters}>
@@ -276,12 +277,12 @@ export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) 
       ) : null}
       {categoryPanel}
       {capacityPanel}
-    </>
+    </div>
   );
 
   const quickFilters = searchableGroups.length > 0 ? (
-    <div className="ub-besos-quick-filters" aria-label={ui("categoryLabel", locale)}>
-      <span className="ub-besos-quick-filters__label">{ui("categoryLabel", locale)}</span>
+    <div className="ub-besos-quick-filters" aria-label={ui("filterLabel", locale)}>
+      <span className="ub-besos-quick-filters__label">{ui("filterLabel", locale)}</span>
       <div className="ub-besos-quick-filters__scroll">
         <button
           type="button"
@@ -323,48 +324,6 @@ export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) 
     </div>
   ) : null;
 
-  const capacityQuickFilters =
-    capacityFacets.length > 0 ? (
-      <div className="ub-besos-quick-filters ub-besos-quick-filters--capacity" aria-label={ui("capacityLabel", locale)}>
-        <span className="ub-besos-quick-filters__label">{ui("capacityLabel", locale)}</span>
-        <div className="ub-besos-quick-filters__scroll">
-          <button
-            type="button"
-            className={`ub-besos-quick-filter${!hasCapacityFilter ? " is-active" : ""}`}
-            onClick={() => setActiveCapacities(new Set())}
-          >
-            {ui("filterAll", locale)}
-          </button>
-          {capacityFacets.slice(0, 24).map((cap) => {
-            const active = hasCapacityFilter && activeCapacities.has(cap.key);
-            return (
-              <button
-                key={cap.key}
-                type="button"
-                className={`ub-besos-quick-filter${active ? " is-active" : ""}`}
-                aria-pressed={active}
-                onClick={() => {
-                  if (!hasCapacityFilter) {
-                    setActiveCapacities(new Set([cap.key]));
-                    return;
-                  }
-                  if (active) {
-                    const next = toggleSetItem(activeCapacities, cap.key, false);
-                    setActiveCapacities(next.size ? next : new Set());
-                    return;
-                  }
-                  setActiveCapacities(new Set([...activeCapacities, cap.key]));
-                }}
-              >
-                {cap.label}
-                <span className="ub-besos-quick-filter__count">{cap.count}</span>
-              </button>
-            );
-          })}
-        </div>
-      </div>
-    ) : null;
-
   return (
     <section className="ub-besos-catalog" id="ub-catalog">
       <div className="ub-besos-catalog-head">
@@ -387,7 +346,6 @@ export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) 
       </div>
 
       {quickFilters}
-      {capacityQuickFilters}
 
       <div className="ub-besos-plp">
         <aside className="ub-besos-facets" aria-label={ui("filtersAria", locale)}>
