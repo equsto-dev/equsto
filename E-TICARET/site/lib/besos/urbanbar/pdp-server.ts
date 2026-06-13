@@ -1,12 +1,6 @@
 import type { Metadata } from "next";
-import { readJsonFile, dataRel } from "@/lib/legacy-data";
 import { absoluteAssetUrl, cleanDescription, feedTitle, resolveMerchantPriceTry } from "@/lib/google-merchant-feed";
-import {
-  rowToPdpClientSeed,
-  type PdpSsrPayload,
-} from "@/lib/shop/pdp-server";
-import { resolveShopDept } from "@/lib/shop/category-dept";
-import { isShopDeptSlug, type ShopDeptSlug } from "@/lib/shop/depts";
+import { type PdpSsrPayload } from "@/lib/shop/pdp-server";
 import { getSiteOrigin } from "@/lib/site-origin";
 import type { BesosLocale } from "../locale";
 import {
@@ -16,8 +10,6 @@ import {
 } from "./catalog";
 import { loadBesosUrbanBarCatalog } from "./load-data";
 import type { BesosUrbanBarProduct } from "./types";
-
-type CatalogRow = Record<string, unknown>;
 
 function slugCandidates(pathSlug: string): string[] {
   const raw = decodeURIComponent(pathSlug || "").trim();
@@ -54,28 +46,6 @@ export async function findBesosUrbanBarProduct(
   return null;
 }
 
-async function loadDeptRowByEqustoId(
-  equstoId: string,
-): Promise<{ row: CatalogRow; dept: ShopDeptSlug } | null> {
-  const id = String(equstoId || "").trim().toLowerCase();
-  if (!id) return null;
-
-  for (const fileDept of ["icecek", "servis"]) {
-    const rows = await readJsonFile<CatalogRow[]>(dataRel("dept", `${fileDept}.json`));
-    if (!Array.isArray(rows)) continue;
-    for (const row of rows) {
-      if (!row) continue;
-      if (String(row.id || "").trim().toLowerCase() !== id) continue;
-      const dept = resolveShopDept(row);
-      if (dept && isShopDeptSlug(dept)) return { row, dept };
-      if (fileDept === "icecek" || fileDept === "servis") {
-        return { row, dept: fileDept as ShopDeptSlug };
-      }
-    }
-  }
-  return null;
-}
-
 function productHeroImage(product: BesosUrbanBarProduct, origin: string): string | undefined {
   const shopify = product.imageUrl;
   if (shopify?.startsWith("http")) return shopify;
@@ -88,12 +58,8 @@ function productHeroImage(product: BesosUrbanBarProduct, origin: string): string
 
 export type BesosUrbanBarPdpBundle = {
   product: BesosUrbanBarProduct;
-  deptRow: CatalogRow;
-  dept: ShopDeptSlug;
-  seed: CatalogRow;
   ssr: PdpSsrPayload;
 };
-
 export async function loadBesosUrbanBarPdpBundle(
   sectionKey: BesosUrbanBarSectionKey,
   pathSlug: string,
@@ -102,20 +68,9 @@ export async function loadBesosUrbanBarPdpBundle(
   const product = await findBesosUrbanBarProduct(sectionKey, pathSlug);
   if (!product) return null;
 
-  const deptHit = await loadDeptRowByEqustoId(product.equstoId);
-  if (!deptHit) return null;
-
   const slug = besosUrbanBarProductSlug(product);
-  const seed = rowToPdpClientSeed(deptHit.row, deptHit.dept);
-  if (product.imageUrl && !seed.shopify_image) {
-    seed.shopify_image = product.imageUrl;
-  }
-  seed.besosUrbanBarSection = sectionKey;
-  seed.besosUrbanBarSlug = slug;
-  seed.equstoPage = besosUrbanBarProductHref(sectionKey, slug, locale);
-
-  const ssr = urbanBarToPdpSsr(product, sectionKey, slug, locale, deptHit.dept);
-  return { product, deptRow: deptHit.row, dept: deptHit.dept, seed, ssr };
+  const ssr = urbanBarToPdpSsr(product, sectionKey, slug, locale);
+  return { product, ssr };
 }
 
 export function urbanBarToPdpSsr(
@@ -123,7 +78,6 @@ export function urbanBarToPdpSsr(
   sectionKey: BesosUrbanBarSectionKey,
   slug: string,
   locale: BesosLocale = "tr",
-  dept?: ShopDeptSlug,
 ): PdpSsrPayload {
   const origin = getSiteOrigin();
   const prefix = locale === "en" ? "/en" : "";
@@ -131,8 +85,14 @@ export function urbanBarToPdpSsr(
   const sectionLabel =
     locale === "en" ? product.sectionLabelEn || sectionKey : product.sectionLabelTr || sectionKey;
   const description =
-    cleanDescription({ aciklama: product.description, specs: product.description, name: product.name }, 320) ||
-    `${product.name} — Urban Bar · Besos`;
+    cleanDescription(
+      {
+        aciklama: product.introHtml || product.description,
+        specs: product.description,
+        name: product.name,
+      },
+      320,
+    ) || `${product.name} — Urban Bar · Besos`;
 
   const priceTry =
     typeof product.fiyat_tl === "number" && product.fiyat_tl > 0

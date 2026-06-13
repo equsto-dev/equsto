@@ -25,6 +25,8 @@ export type BesosUrbanBarTaxonomy = {
   };
 };
 
+export type UrbanBarSpec = { key: string; value: string };
+
 export type BesosUrbanBarProduct = {
   id: string;
   equstoId: string;
@@ -38,8 +40,18 @@ export type BesosUrbanBarProduct = {
   groupLabelTr: string;
   groupLabelEn: string;
   description?: string;
+  descriptionHtml?: string;
+  introHtml?: string;
+  features?: string[];
+  featuresHtml?: string;
+  specifications?: UrbanBarSpec[];
+  specificationsHtml?: string;
+  productCareHtml?: string;
+  safetyLabelsHtml?: string;
+  inStock?: boolean;
   image?: string;
   imageUrl?: string;
+  imageUrls?: string[];
   images?: string[];
   price?: string;
   fiyat_tl?: number;
@@ -47,6 +59,7 @@ export type BesosUrbanBarProduct = {
   vendor?: string;
   catTags?: string[];
   collections?: string[];
+  collectionPath?: string;
   shopHref: string;
   besosHref?: string;
   sourceUrl?: string;

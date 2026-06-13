@@ -72,6 +72,8 @@
     "catalog:urbanbar:import": "node scripts/import-urbanbar-to-equsto.mjs",
     "catalog:urbanbar:full": "npm run catalog:urbanbar:scrape && npm run catalog:urbanbar:import && npm run catalog:urbanbar:besos",
     "catalog:urbanbar:besos": "node scripts/build-urbanbar-besos-catalog.mjs",
+    "catalog:urbanbar:pdp-enrich": "node scripts/enrich-urbanbar-pdp-details.mjs",
+    "catalog:urbanbar:besos:full": "npm run catalog:urbanbar:pdp-enrich && npm run catalog:urbanbar:besos",
     "catalog:urbanbar:live": "node --import ./scripts/load-env.mjs scripts/publish-urbanbar-live.mjs",
     "catalog:urbanbar:shopify-images": "node scripts/patch-urbanbar-shopify-images.mjs --write",
     "catalog:cafemarkt:robot-coupe": "node scripts/fetch-cafemarkt-robot-coupe.mjs && node scripts/apply-cafemarkt-robot-coupe-to-equsto.mjs",
