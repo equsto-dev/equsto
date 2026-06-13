@@ -117,6 +117,26 @@ export function isSenoxDilimlemeReferansIsim(
   return /dilimleme\s*mak|gida\s*dilim|gıda\s*dilim|slicing\s*mach|slicer/.test(n);
 }
 
+/** Katı meyve sıkacağı / presi — Şenox KM01 / KMP; portakal (citrus) hariç */
+export function isSenoxMeyveSikacagiReferansIsim(
+  isim: string | null | undefined,
+  urunTipi?: string | null,
+  notlar?: string | null,
+): boolean {
+  const rawTip = String(urunTipi ?? "").trim();
+  if (/kati-meyve|kati_meyve|meyve-pres|meyve_pres/i.test(rawTip)) {
+    return true;
+  }
+  const n = norm(`${isim ?? ""} ${notlar ?? ""}`);
+  if (!n) return false;
+  if (/portakal|narenciye|citrus|9860\.00011|santos\s*no\s*11|motorlu portakal/.test(n)) {
+    return false;
+  }
+  return /kati\s*meyve|katı\s*meyve|meyve\s*pres|meyve\s*sikac|meyve\s*sıkac|extractor|santrifuj/.test(
+    n,
+  );
+}
+
 /** Şenox katalog ürünü — vakum, el yıkama, sinek öldürücü vb. */
 export function isSenoxPfosKalem(opts: {
   isim?: string | null;
@@ -129,6 +149,11 @@ export function isSenoxPfosKalem(opts: {
   if (isSenoxYerYikamaHortumuReferansIsim(opts.isim, opts.notlar)) return true;
   if (isSenoxOnYikamaDusuReferansIsim(opts.isim, opts.notlar)) return true;
   if (isSenoxDilimlemeReferansIsim(opts.isim) || opts.urunTipi === "dilimleme_makinesi") return true;
+  if (
+    isSenoxMeyveSikacagiReferansIsim(opts.isim, opts.urunTipi, opts.notlar)
+  ) {
+    return true;
+  }
   return false;
 }
 

@@ -11,7 +11,6 @@ export const HAZIRLIK_TIP_KODLARI = new Set([
   "spiral_hamur",
   "hamur_acma",
   "patates_soyma",
-  "meyve_sikacagi",
 ]);
 
 function norm(s: string | null | undefined): string {
@@ -41,7 +40,6 @@ const HAZIRLIK_ISIM_KALIP: Array<{ tip: string; test: RegExp }> = [
   },
   { tip: "hamur_acma", test: /hamur\s*acma|hamur\s*açma/ },
   { tip: "patates_soyma", test: /patates\s*soy|sebze\s*soy/ },
-  { tip: "meyve_sikacagi", test: /meyve\s*sik|portakal\s*sik|kati\s*meyve|katı\s*meyve/ },
 ];
 
 export function inferHazirlikTipFromIsim(

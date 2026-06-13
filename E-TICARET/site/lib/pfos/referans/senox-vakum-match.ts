@@ -20,6 +20,7 @@ import {
   isSenoxSinekReferansIsim,
   isSenoxVakumPfosKalem,
   isSenoxDilimlemeReferansIsim,
+  isSenoxMeyveSikacagiReferansIsim,
 } from "../core/senox-marka";
 
 type SenoxCatalogProduct = {
@@ -204,6 +205,21 @@ function isSenoxDusSpreyiRow(row: AdminUrunRow): boolean {
     (/118\.dm|118\.tm|118\.t\.|duş sprey|dus sprey|ara musluk/.test(blob) ||
       /^118\.(DM|TM|T)\./i.test(String(row.sku ?? "")))
   );
+}
+
+function isSenoxMeyveSikacagiRow(row: AdminUrunRow): boolean {
+  const blob = norm(`${row.ad ?? ""} ${row.sku ?? ""} ${row.model ?? ""}`);
+  return (
+    isSenoxKatalogMarka(row.marka_ad) &&
+    (/118\.km|kati meyve|katı meyve|km01|kmp/i.test(blob) ||
+      /^118\.(KM|KMP)/i.test(String(row.sku ?? "")))
+  );
+}
+
+function pickSenoxMeyveSikacagiSku(isim: string): string {
+  const n = norm(isim);
+  if (/kmp|pres\b|presi/.test(n) && !/km01|km-01/.test(n)) return "118.KMP.01";
+  return "118.KM01";
 }
 
 function hoseLengthMFromIsim(isim: string): number | null {
@@ -523,6 +539,50 @@ export async function matchSenoxDilimlemeByReferans(
   return mutbexToEslesmis(pick, isim);
 }
 
+/** Katı meyve sıkacağı / presi — Şenox KM01 (varsayılan) / KMP.01 */
+export async function matchSenoxMeyveSikacagiByReferans(
+  isim: string,
+): Promise<EslesmisUrun | null> {
+  const targetSku = pickSenoxMeyveSikacagiSku(isim);
+  const rows = (await loadLegacyCatalogRows()).filter(
+    (r) =>
+      r.durum === "aktif" &&
+      isSenoxKatalogMarka(r.marka_ad) &&
+      isSenoxMeyveSikacagiRow(r),
+  );
+
+  const exact =
+    rows.find(
+      (r) => String(r.sku ?? "").toUpperCase() === targetSku.toUpperCase(),
+    ) ??
+    rows.find((r) => /118\.KM01/i.test(String(r.sku ?? ""))) ??
+    rows.find((r) => isSenoxMeyveSikacagiRow(r));
+
+  if (exact && (exact.fiyat_tl > 0 || equstoSatisEurFromRow(exact))) {
+    const matched = rowToSenoxEslesmis(exact, isim);
+    return { ...matched, ad: isim.trim() || matched.ad };
+  }
+
+  const mutbex = await loadSenoxMutbexProducts();
+  const pick =
+    mutbex.find(
+      (p) =>
+        String(p.mutbexCode ?? "").toUpperCase() === targetSku.toUpperCase(),
+    ) ??
+    mutbex.find((p) =>
+      /kati meyve|katı meyve|118\.km/i.test(String(p.title ?? "")),
+    );
+  if (pick) {
+    const matched = mutbexToEslesmis(pick, isim);
+    return { ...matched, ad: isim.trim() || matched.ad };
+  }
+
+  const products = await loadSenoxCatalogProducts(/km01|kati meyve|meyve sik/i);
+  const cat =
+    products.find((p) => /km01/i.test(norm(p.model ?? ""))) ?? products[0];
+  return cat ? senoxProductToEslesmis(cat, isim) : null;
+}
+
 /** Şenox katalog eşlemesi — el yıkama, sinek, vakum, dilimleme */
 export async function matchSenoxByReferans(
   isim: string,
@@ -544,6 +604,10 @@ export async function matchSenoxByReferans(
   if (isSenoxOnYikamaDusuReferansIsim(isim, notlar)) {
     const dus = await matchSenoxOnYikamaDusuByReferans(isim);
     if (dus) return dus;
+  }
+  if (isSenoxMeyveSikacagiReferansIsim(isim, urunTipi, notlar)) {
+    const sikac = await matchSenoxMeyveSikacagiByReferans(isim);
+    if (sikac) return sikac;
   }
   if (isSenoxVakumPfosKalem({ isim, urunTipi })) {
     return matchSenoxVakumByReferans(isim);
