@@ -10,6 +10,7 @@ import {
   besosUrbanBarProductSlug,
   besosUrbanBarSectionHref,
 } from "@/lib/besos/urbanbar/catalog";
+import { resolveUrbanBarGalleryImages } from "@/lib/besos/urbanbar/gallery-images";
 import { splitUrbanBarPrice } from "@/lib/besos/urbanbar/price";
 import type { BesosUrbanBarProduct } from "@/lib/besos/urbanbar/types";
 
@@ -216,11 +217,7 @@ export function buildUrbanBarPdpView(
   const rawImages = product.imageUrls?.length
     ? product.imageUrls
     : [product.imageUrl, product.image].filter(Boolean);
-  const images = rawImages.map((img) => {
-    const s = String(img);
-    if (s.startsWith("http")) return s;
-    return s.startsWith("/") ? s : `/${s}`;
-  });
+  const images = resolveUrbanBarGalleryImages(rawImages);
 
   const sectionLabel = locale === "en" ? product.sectionLabelEn : product.sectionLabelTr;
   const sectionHref = besosUrbanBarSectionHref(sectionKey, locale);
