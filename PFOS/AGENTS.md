@@ -50,4 +50,4 @@ npm run pfos:referans:all-day-dining
 npm run pfos:referans:s13-388
 ```
 
-Canlı: Vercel root `EQUSTO-WORK/E-TICARET/site` → equsto.com
+Canlı: Hetzner (Docker) — `E-TICARET/site/docs/HETZNER-DEPLOY.md` → equsto.com
