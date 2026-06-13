@@ -47,6 +47,12 @@ function shopHref(row) {
   return `/shop/${dept}/${id}`;
 }
 
+function besosHref(section, handle, equstoId) {
+  const slug = handle || String(equstoId || "").split("__").pop() || "";
+  const sec = section === "bardaklar" ? "bardaklar" : "bar-ekipman";
+  return `/besos/${sec}/${encodeURIComponent(slug)}`;
+}
+
 function toProduct(row, taxonomy, shopifyMap) {
   const hit = classifyUrbanBarBesos(
     {
@@ -89,6 +95,7 @@ function toProduct(row, taxonomy, shopifyMap) {
     catTags: row.urbanbar_cat_tags || [],
     collections: row.urbanbar_collections || [],
     shopHref: shopHref(row),
+    besosHref: besosHref(hit.section, handle, row.id),
     sourceUrl: row.kaynak_url,
   };
 }
