@@ -274,6 +274,7 @@ async function toRows(p, gbpTry, eurTry) {
       urbanbar_variant_id: variant.id,
       kaynak: KAYNAK,
       kaynak_url: p.url,
+      shopify_image: p.images?.[0] || undefined,
       urbanbar_cat_tags: p.catTags,
       urbanbar_collections: p.collections?.map((c) => c.handle),
       besos_section: besosHit.section || undefined,

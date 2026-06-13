@@ -1594,6 +1594,20 @@
       img.src = pimakGorsel;
       return;
     }
+    var shopifyImg = img.getAttribute("data-eq-shopify-img") || "";
+    if (
+      shopifyImg &&
+      /^https:\/\/cdn\.shopify\.com\//i.test(shopifyImg) &&
+      !img.dataset.eqShopifyTried
+    ) {
+      img.dataset.eqShopifyTried = "1";
+      img.onerror = function () {
+        window.__eqImgFail(img);
+      };
+      img.referrerPolicy = "no-referrer";
+      img.src = shopifyImg;
+      return;
+    }
     var oztiKod = img.getAttribute("data-eq-ozti-kod") || "";
     if (oztiKod && !/7919\.CR/i.test(oztiKod) && typeof window.eqOztiAxImageFromSku === "function") {
       var axTry = window.eqOztiAxImageFromSku(oztiKod);
