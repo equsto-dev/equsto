@@ -1,4 +1,5 @@
 import { repairPfosDisplayText } from "@/lib/utf8/repair-turkish-fffd";
+import { formatPfosDisplayTanim } from "../parse-upload/sanitize-tanim";
 import { isPastaDolabiReferans } from "./caglayan-marka";
 import { isBuzdolabiPfosKalem } from "./portabianco-marka";
 import { isDuvarRafiReferans } from "../referans/duvar-raf-heuristics";
@@ -90,12 +91,14 @@ export function displayIsimFromSablon(isim: string | null | undefined): string {
   const raw =
     typeof isim === "string" ? isim : isim != null ? JSON.stringify(isim) : "";
   return repairPfosDisplayText(
-    raw
-      .replace(/\s*\[object\s+object\]\s*/gi, " ")
-      .replace(/\s*\(\s*PORTASHELF\s*\)\s*/gi, " ")
-      .replace(/\s*\(\s*Equsto\s*\)\s*/gi, " ")
-      .replace(/\s+/g, " ")
-      .trim(),
+    formatPfosDisplayTanim(
+      raw
+        .replace(/\s*\[object\s+object\]\s*/gi, " ")
+        .replace(/\s*\(\s*PORTASHELF\s*\)\s*/gi, " ")
+        .replace(/\s*\(\s*Equsto\s*\)\s*/gi, " ")
+        .replace(/\s+/g, " ")
+        .trim(),
+    ),
   );
 }
 
