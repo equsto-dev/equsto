@@ -365,6 +365,18 @@ const TIP_RULES: TipRule[] = [
         n.length > 12),
   },
   {
+    tip: "duvar-rafi",
+    test: (n) =>
+      /basket\s*raf/.test(n) || (/duvar\s*raf/.test(n) && !/davlumbaz/.test(n)),
+  },
+  {
+    tip: "cop-siyirma-tezgahi",
+    test: (n) =>
+      /bulasik\s*siyirma|bulaşık\s*sıyır|cop\s*siyirma/.test(n) ||
+      ((/siyirma|sıyırma|hunili/.test(n) || n.includes("siyirma")) &&
+        /tezgah|alma/.test(n)),
+  },
+  {
     tip: "bulasik-makinesi-setalti",
     test: (n) =>
       (n.includes("bulasik") || n.includes("bulaşık")) &&
@@ -386,7 +398,9 @@ const TIP_RULES: TipRule[] = [
       (n.includes("bulasik") || n.includes("bulaşık")) &&
       !n.includes("setalti") &&
       !n.includes("bardak") &&
-      !n.includes("500 tb"),
+      !n.includes("500 tb") &&
+      !/siyirma|sıyır|hunili/.test(n) &&
+      !/tezgah|alma/.test(n),
   },
   {
     tip: "davlumbaz-duvar",

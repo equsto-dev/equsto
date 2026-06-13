@@ -4,6 +4,18 @@ import { isOztiKatalogMarka } from "./hazirlik-marka";
 
 export type BuzFamily = "tezgah" | "cihazalti" | "dik" | "bar" | null;
 
+/**
+ * Öztiryakiler buzdolabı — PFOS ekonomik seri önceliği
+ *
+ * | Seri   | Kullanım              | Sac      | Örnek SKU        |
+ * |--------|------------------------|----------|------------------|
+ * | 79K4   | Dik tip buzdolabı (K)  | 430      | 79K4.06NMV.00    |
+ * | 79E3/4 | Tezgah / yatay NMV-LMV | 304 eco  | 79E3.27NMV.00    |
+ * | 7919   | Premium / cihaz altı   | 304      | 7919.06NMV.00    |
+ *
+ * @see pfos-tip-shop-links.json — tip başına doğrulanmış en ucuz SKU
+ */
+
 function norm(s: string): string {
   return String(s ?? "")
     .toLocaleLowerCase("tr")
@@ -12,6 +24,14 @@ function norm(s: string): string {
     .replace(/ı/g, "i")
     .replace(/\s+/g, " ")
     .trim();
+}
+
+export function isOztiEcoKTipSku(sku: string | null | undefined): boolean {
+  return /^79k4\./i.test(String(sku ?? "").trim());
+}
+
+export function isOztiEcoYataySku(sku: string | null | undefined): boolean {
+  return /^79e[34]\./i.test(String(sku ?? "").trim());
 }
 
 /** Ölçü genişliği + kapı → 7919 NTV/NMV önek (27=~140cm, 37=~187cm, 47=~240cm) */
@@ -23,6 +43,15 @@ export function oztiNtvPrefix(kapi: number, widthCm: number): string {
   return "27";
 }
 
+function nmvSuffix(camKapili: boolean): string {
+  return camKapili ? "01" : "00";
+}
+
+function lmvSuffix(camKapili: boolean): string {
+  return camKapili ? "10" : "00";
+}
+
+/** PFOS — tercih sırasına göre katalog SKU adayları (en ucuz seri önce) */
 export function oztiPreferredBuzSkus(
   family: BuzFamily,
   kapi: number,
@@ -33,25 +62,37 @@ export function oztiPreferredBuzSkus(
 ): string[] {
   const p = oztiNtvPrefix(kapi, widthCm);
   const depthSeries = depthCm === 60 ? "79E4" : "79E3";
+
   if (family === "tezgah") {
-    const nmv = `${depthSeries}.${p}NMV.${camKapili ? "01" : "00"}`;
-    if (camKapili) return [nmv, `7919.${p}NTV.24`];
-    return [nmv];
+    const eco = `${depthSeries}.${p}NMV.${nmvSuffix(camKapili)}`;
+    if (camKapili) return [eco, `7919.${p}NTV.24`];
+    return [eco];
   }
+
   if (family === "cihazalti") {
-    return [`7919.${p}NTV.C1`, `7919.${p}NTV.C2`];
+    return [`7919.${p}NTV.C1`, `7919.${p}NTV.C2`, `${depthSeries}.${p}NTV.C1`];
   }
+
   if (family === "dik") {
     if (freezer) {
-      if (kapi <= 1) return ["7919.06LMV.00", "7919.06LMV.10"];
-      return ["7919.12LMV.00", "7919.12LMV.10"];
+      const ecoLmv = `${depthSeries}.${p}LMV.${lmvSuffix(camKapili)}`;
+      if (kapi <= 1) {
+        return [ecoLmv, "7919.06LMV.00", "7919.06LMV.10"];
+      }
+      return [ecoLmv, "7919.12LMV.00", "7919.12LMV.10"];
     }
-    if (kapi <= 1) return ["7919.06NMV.00"];
-    return ["7919.12NMV.00"];
+    const k4Prefix = kapi <= 1 ? "06" : "12";
+    const eco = `79K4.${k4Prefix}NMV.${nmvSuffix(camKapili)}`;
+    if (kapi <= 1) {
+      return [eco, "7919.06NMV.00", "7919.06NMV.01"];
+    }
+    return [eco, "7919.12NMV.00", "7919.12NMV.01"];
   }
+
   if (family === "bar") {
     return [];
   }
+
   return [];
 }
 
@@ -83,6 +124,13 @@ export function scoreOztiBuzdolabiRow(
   let score = 50;
   if (isOztiKatalogMarka(row.marka_ad)) score += 40;
   if (targetSkus.some((t) => norm(sku) === norm(t.replace(/\s+/g, "")))) score += 500;
+
+  if (family === "dik" && isOztiEcoKTipSku(sku)) score += 320;
+  if ((family === "tezgah" || family === "cihazalti") && isOztiEcoYataySku(sku)) {
+    score += 180;
+  }
+  if (/430\s*kalite|430\s*k\s*tip|\bk\s*tip\b/.test(ad) && family === "dik") score += 80;
+  if (family === "dik" && /^7919\./i.test(sku) && !freezer) score -= 120;
 
   if (family === "tezgah" && /tezgah|yatay\s*tip|nmv|tag\s*\d+\s*nmv/i.test(ad)) {
     score += 80;

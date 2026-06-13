@@ -11,18 +11,28 @@ function norm(s: string): string {
 
 export function isDuvarRafiReferans(isim: string | null | undefined): boolean {
   const n = norm(String(isim ?? ""));
+  if (/basket\s*raf/.test(n)) return true;
   return /duvar\s*raf/.test(n) && !/davlumbaz/.test(n);
 }
 
-/** 140*30 veya 140*30*30 → 7897.14030.30 */
+const OZTI_DUVAR_RAF_WIDTHS_CM = [100, 120, 140, 160, 190] as const;
+
+function snapDuvarRafWidthCm(widthCm: number): number {
+  let best: number = OZTI_DUVAR_RAF_WIDTHS_CM[0];
+  for (const w of OZTI_DUVAR_RAF_WIDTHS_CM) {
+    if (Math.abs(widthCm - w) < Math.abs(widthCm - best)) best = w;
+    else if (Math.abs(widthCm - w) === Math.abs(widthCm - best) && w > best) best = w;
+  }
+  return best;
+}
+
+/** 140*30 veya 175*40*60 → en yakın 7897.{genişlik}30.30 (Öztiryakiler duvar rafı) */
 export function oztiDuvarRafSkuFromOlcu(olcu: string): string | null {
   const raw = String(olcu ?? "").split("/")[0];
   const m = raw.match(/(\d{2,4})\s*[*xX×]\s*(\d{2,3})(?:\s*[*xX×]\s*(\d{2,3}))?/);
   if (!m) return null;
-  const w = m[1];
-  const d = m[2].padStart(2, "0");
-  const h = (m[3] ?? m[2]).padStart(2, "0");
-  return `7897.${w}${d}.${h}`;
+  const w = snapDuvarRafWidthCm(Number(m[1]));
+  return `7897.${w}30.30`;
 }
 
 export { norm as duvarRafNorm };

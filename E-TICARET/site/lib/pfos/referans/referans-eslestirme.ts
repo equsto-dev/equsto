@@ -63,6 +63,7 @@ import {
 } from "./soguk-oda-match";
 import {
   matchBuzdolabiByReferans,
+  matchBuzdolapByReferans,
 } from "./buzdolabi-match";
 import {
   isDavlumbazReferans,
@@ -835,7 +836,7 @@ async function matchByFamilyRules(
     isBuzdolabiReferansIsim(input.isim) ||
     isBuzdolabiPfosKalem({ isim: input.isim, urunTipi: input.urunTipi })
   ) {
-    return matchBuzdolabiByReferans(
+    return matchBuzdolapByReferans(
       input.isim,
       olcu,
       input.notlar,
@@ -1210,7 +1211,7 @@ export async function matchReferansKalem(
   }
 
   if (isBuzdolabiPfosKalem({ isim: input.isim, urunTipi: input.urunTipi })) {
-    const buz = await matchBuzdolabiByReferans(
+    const buz = await matchBuzdolapByReferans(
       input.isim,
       olcu,
       input.notlar,
@@ -1367,7 +1368,7 @@ export async function matchReferansKalem(
       if (dav) return dav;
     }
     if (isBuzdolabiPfosKalem({ isim: input.isim, urunTipi: input.urunTipi })) {
-      const buz = await matchBuzdolabiByReferans(
+      const buz = await matchBuzdolapByReferans(
         input.isim,
         olcu,
         input.notlar,
@@ -1428,7 +1429,7 @@ export async function matchReferansKalem(
   }
 
   if (isBuzdolabiPfosKalem({ isim: input.isim, urunTipi: input.urunTipi })) {
-    const buz = await matchBuzdolabiByReferans(
+    const buz = await matchBuzdolapByReferans(
       input.isim,
       olcu,
       input.notlar,

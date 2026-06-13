@@ -12,6 +12,7 @@ import {
   inferEqustoTezgahVariantSuffix,
   isCalismaTezgahiReferansIsim,
   isEqustoTezgahRow,
+  isBulasikSiyirmaTezgahReferans,
 } from "../core/calisma-tezgah";
 import { findClosestEqustoTezgahPriceRow } from "../core/ozel-imalat-yakin-olcu";
 import { extractOlcuFromNotlar } from "./yer-izgara-match";
@@ -80,6 +81,13 @@ function scoreEqustoTezgahRow(
   if (/polietilen/i.test(n) && /polietilen/i.test(ad)) score += 80;
   if (/hareketli/i.test(n) && /hareketli/i.test(ad)) score += 80;
   if (/cekmeceli|çekmeceli/i.test(n) && /cekmeceli|çekmeceli|blok/.test(ad)) score += 60;
+
+  if (isBulasikSiyirmaTezgahReferans(isim)) {
+    if (/suzme\s*havuz|\.31\b/.test(ad) || /\.31$/i.test(String(row.sku ?? ""))) {
+      score += 220;
+    }
+    if (/by[mf]\d|yikama\s*mak|bulasik\s*yik/.test(ad)) score -= 8000;
+  }
 
   if (row.gorsel_url) score += 10;
   if (row.fiyat_tl > 0) score += 5;

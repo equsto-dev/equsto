@@ -8,10 +8,27 @@ export const CALISMA_TEZGAH_TIP_KODLARI = new Set([
   "calisma_tezgahi",
   "calisma_tezgahi_dolap",
   "cop_tezgahi",
+  "cop_siyirma_tez",
+  "bym_siyirma_tezgah",
   "tezgah_evyeli",
   "evye_tezgah_dolap",
   "tezgah_taban_rafli",
 ]);
+
+/** Bulaşık sıyırma / hunili alma tezgahı — bulaşık yıkama makinesi değil */
+export function isBulasikSiyirmaTezgahReferans(
+  isim: string | null | undefined,
+  notlar?: string | null,
+): boolean {
+  const n = norm(`${isim ?? ""} ${notlar ?? ""}`);
+  if (!n) return false;
+  if (/cikis\s*tezgah|giris\s*tezgah|giri[sş]\s*tezgah|makine\s*(?:giris|cikis)|giyotin/.test(n)) {
+    return false;
+  }
+  if (/bulasik\s*siyirma|bulaşık\s*sıyır|cop\s*siyirma/.test(n)) return true;
+  if (/siyirma|sıyırma|hunili/.test(n) && /tezgah|alma/.test(n)) return true;
+  return false;
+}
 
 function norm(s: string | null | undefined): string {
   return String(s ?? "")
@@ -52,6 +69,7 @@ export function isCalismaTezgahiReferansIsim(
     return true;
   }
   if (/^tezgah,|^tezgah\s+dolapli|calisma\s*tezgahi/i.test(n)) return true;
+  if (isBulasikSiyirmaTezgahReferans(isim, notlar)) return true;
   return false;
 }
 
@@ -103,6 +121,7 @@ export function equstoTezgahSizePrefix(olcu: string): string | null {
 /** Referans adından EQUSTO varyant soneki (.08 taban raflı, .51 polietilen …) */
 export function inferEqustoTezgahVariantSuffix(isim: string): string {
   const n = norm(isim);
+  if (isBulasikSiyirmaTezgahReferans(isim)) return "31";
   if (/polietilen/.test(n) && /taban\s*ve\s*ara\s*rafl/.test(n)) return "51";
   if (/polietilen/.test(n) && /taban\s*rafl/.test(n)) return "51";
   if (/mermer/.test(n) && /taban\s*ve\s*ara\s*rafl/.test(n)) return "46";

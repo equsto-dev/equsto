@@ -137,9 +137,42 @@ export function requiresSinkTezgah(tanim: string): boolean {
   return /çift\s*evy|cift\s*evy|tek\s*evy|evyeli|evye\s*li|iki\s*evye/.test(q);
 }
 
-export function requiresDishwasher(tanim: string): boolean {
+/** Bulaşık sıyırma / hunili tezgah — makine değil */
+export function isScrapingTezgahTanim(tanim: string): boolean {
   const q = normTanim(tanim);
-  return /bulasik|yikama\s*makin|giyotin|siyirma|bardak\s*yik/.test(q);
+  if (/cikis\s*tezgah|giris\s*tezgah|giyotin|makine\s*(?:giris|cikis)/.test(q)) {
+    return false;
+  }
+  if (/bulasik\s*siyirma|bulaşık\s*sıyır|cop\s*siyirma/.test(q)) return true;
+  return /siyirma|sıyırma|hunili/.test(q) && /tezgah|alma/.test(q);
+}
+
+export function requiresScrapingTezgah(tanim: string): boolean {
+  return isScrapingTezgahTanim(tanim);
+}
+
+export function requiresDishwasher(tanim: string): boolean {
+  if (isScrapingTezgahTanim(tanim)) return false;
+  const q = normTanim(tanim);
+  return (
+    /bulasik\s*yik|yikama\s*makin|giyotin|bardak\s*yik/.test(q) ||
+    (/bulasik|yikama/.test(q) && /makine|makin/.test(q))
+  );
+}
+
+/** Süzme havuzlu EQUSTO tezgah — bulaşık makinesine karşı */
+export function scrapingTezgahFeatureScore(
+  tanim: string,
+  hit: CatalogSearchHit,
+): number {
+  if (!requiresScrapingTezgah(tanim)) return 0;
+  const hay = hitHaystack(hit);
+  if (/by[mf]\d|bulasik\s*yik|yikama\s*mak|dishwash|setalti|tezgahalti/.test(hay)) {
+    return -420;
+  }
+  if (/suzme\s*havuz|\.31\b|equsto\.\d+\.31/.test(hay)) return 75;
+  if (/equsto\.|tezgah|siyirma|sıyırma|hunili/.test(hay)) return 35;
+  return -60;
 }
 
 /** Bulaşık hattı — banket / tezgaha karşı */

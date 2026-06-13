@@ -7,10 +7,12 @@ import { buildMeiliSearchQuery, cleanProformaTanim } from "./sanitize-tanim";
 import {
   dishwasherFeatureScore,
   requiresDishwasher,
+  requiresScrapingTezgah,
   requiresShelvedTezgah,
   requiresSinkTezgah,
   requiresTrolley,
   requiresUnSekerArabasi,
+  scrapingTezgahFeatureScore,
   shelfFeatureScore,
   sinkFeatureScore,
   trolleyFeatureScore,
@@ -19,6 +21,7 @@ import {
 import {
   generateEqustoTezgahSku,
   isCalismaTezgahiReferansIsim,
+  isBulasikSiyirmaTezgahReferans,
 } from "../core/calisma-tezgah";
 import { isIstifRafiReferansIsim } from "../core/portashelf-marka";
 import { matchIstifRafiByReferans } from "../referans/istif-raf-match";
@@ -143,6 +146,9 @@ function guessEqustoTezgahSkuFromOlcu(
   const code = `${parts[0]}${String(parts[1]).padStart(2, "0")}`;
   const base = `EQUSTO.${code}`;
   const q = foldTr(cleanProformaTanim(tanim));
+  if (/siyirma|sıyırma|hunili|bulasik\s*siyirma|bulaşık\s*sıyır/.test(q)) {
+    return `${base}.31`;
+  }
   if (/taban\s*(ve\s*)?ara|ara\s*raf|rfli/.test(q)) return `${base}.04`;
   if (/taban\s*raf/.test(q)) return `${base}.08`;
   if (/rafl|rafli|rfli/.test(q)) return `${base}.04`;
@@ -182,6 +188,7 @@ function scoreHit(item: ParsedItem, query: string, hit: CatalogSearchHit): numbe
     sinkFeatureScore(item.tanim, hit) +
     trolleyFeatureScore(item.tanim, hit) +
     unSekerFeatureScore(item.tanim, hit) +
+    scrapingTezgahFeatureScore(item.tanim, hit) +
     dishwasherFeatureScore(item.tanim, hit) -
     categoryMismatchPenalty(item, hit) -
     ocakFuelPenalty(item, hit)
@@ -210,12 +217,16 @@ function pickBestHit(
   const needsShelf = requiresShelvedTezgah(item.tanim);
   const needsTrolley = requiresTrolley(item.tanim);
   const needsDishwasher = requiresDishwasher(item.tanim);
+  const needsScrapingTezgah = requiresScrapingTezgah(item.tanim);
   const needsSink = requiresSinkTezgah(item.tanim);
 
   function hitFeaturesOk(hit: CatalogSearchHit): boolean {
     if (needsShelf && shelfFeatureScore(item.tanim, hit) <= 0) return false;
     if (needsSink && sinkFeatureScore(item.tanim, hit) <= 0) return false;
     if (needsTrolley && trolleyFeatureScore(item.tanim, hit) <= 0) return false;
+    if (needsScrapingTezgah && scrapingTezgahFeatureScore(item.tanim, hit) <= 0) {
+      return false;
+    }
     if (needsDishwasher && dishwasherFeatureScore(item.tanim, hit) <= 0) {
       return false;
     }
@@ -560,7 +571,9 @@ export async function matchItem(item: ParsedItem): Promise<ItemMatchResult> {
   let bestHit = best;
   const equstoTezgahSku = isCalismaTezgahiReferansIsim(item.tanim, item.olcu)
     ? generateEqustoTezgahSku(item.tanim, item.olcu)
-    : null;
+    : isBulasikSiyirmaTezgahReferans(item.tanim, item.olcu)
+      ? generateEqustoTezgahSku(item.tanim, item.olcu)
+      : null;
   if (bestHit && equstoTezgahSku) {
     bestHit = {
       ...bestHit,

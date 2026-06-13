@@ -16,6 +16,10 @@ import { displayIsimFromSablon } from "../core/ozel-imalat";
 import type { EslesmisUrun, FiyatStratejisi } from "../schemas/pfos.schema";
 import { toOlcuMmDisplay } from "../teklif/olcu-mm";
 import { extractOlcuFromNotlar } from "./yer-izgara-match";
+import {
+  isPortabiancoBuzdolabiReferans,
+  matchPortabiancoBuzdolabiByReferans,
+} from "./portabianco-buzdolabi-match";
 
 function norm(s: string): string {
   return String(s ?? "")
@@ -229,7 +233,10 @@ export async function matchBuzdolabiByReferans(
       ),
     }))
     .filter((x) => x.score >= 120)
-    .sort((a, b) => b.score - a.score);
+    .sort((a, b) => {
+      if (b.score !== a.score) return b.score - a.score;
+      return (a.row.fiyat_tl || 0) - (b.row.fiyat_tl || 0);
+    });
 
   if (scored.length > 0) {
     const matched = katalogRowToEslesmis(scored[0].row, {
@@ -274,4 +281,30 @@ export async function matchBuzdolabiByReferans(
   }
 
   return null;
+}
+
+/** Buzdolabı — Portabianco referansında Portabianco eco; aksi halde Öztiryakiler 79K4/79E3 */
+export async function matchBuzdolapByReferans(
+  isim: string,
+  olcuRaw: string,
+  notlar: string | null | undefined,
+  urunTipi?: string | null,
+  fiyatStratejisi: FiyatStratejisi = "ekonomik",
+): Promise<EslesmisUrun | null> {
+  if (isPortabiancoBuzdolabiReferans(isim, notlar)) {
+    return matchPortabiancoBuzdolabiByReferans(
+      isim,
+      olcuRaw,
+      notlar,
+      urunTipi,
+      fiyatStratejisi,
+    );
+  }
+  return matchBuzdolabiByReferans(
+    isim,
+    olcuRaw,
+    notlar,
+    urunTipi,
+    fiyatStratejisi,
+  );
 }

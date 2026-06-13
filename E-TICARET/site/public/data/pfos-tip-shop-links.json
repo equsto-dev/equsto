@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "note": "PFOS tip_kodu → Equsto katalog SKU (manuel / doğrulanmış eşleşmeler)",
+  "note": "PFOS tip_kodu → Equsto katalog SKU — ekonomik / eco seri öncelikli (79K4 Öztiryakiler, EKOP Portabianco)",
   "links": {
     "kombi_firin_6t": {
       "marka": "Atalay",
@@ -12,7 +12,8 @@
     },
     "tezgah_tip_buzdolabi": {
       "marka": "Öztiryakiler",
-      "name": "TEZGAH TİPİ BUZDOLABI — Öztiryakiler ölçü/kapı eşlemesi"
+      "sku": "79E3.27NMV.00",
+      "name": "TAG 270 NMV 2 INOX KAPI YATAY TIP BUZDOLABI — 79E3 eco"
     },
     "tezgah_buzdolabi_3kapi": {
       "marka": "Öztiryakiler",
@@ -21,7 +22,8 @@
     },
     "sogutma_tezgah": {
       "marka": "Öztiryakiler",
-      "name": "SOĞUTMALI TEZGAH / HAZIRLIK BUZDOLABI — Öztiryakiler"
+      "sku": "79E3.27NMV.00",
+      "name": "SOĞUTMALI TEZGAH / HAZIRLIK — 79E3 yatay eco"
     },
     "cop_arabasi": {
       "marka": "Portashelf",
@@ -136,6 +138,81 @@
       "marka": "Öztiryakiler",
       "name": "BAR ŞİŞE SOĞUTUCU 2 KAPILI — Öztiryakiler"
     },
+    "setalti_buzdolabi": {
+      "marka": "Öztiryakiler",
+      "sku": "7919.26NTV.C1",
+      "name": "CİHAZ ALTI BUZDOLABI — en ucuz NTV.C1"
+    },
+    "setalti_derin_dondurucu": {
+      "marka": "Öztiryakiler",
+      "sku": "79E3.26LMV.00",
+      "name": "CİHAZ ALTI / TEZGAH DERİN DONDURUCU — 79E3 LMV eco"
+    },
+    "dik_tip_buzdolabi": {
+      "marka": "Öztiryakiler",
+      "sku": "79K4.06NMV.00",
+      "name": "GN 600 NMV TEK INOX KAPI DIK TIP BUZDOLABI K TİP — 430 eco"
+    },
+    "dik_tip_buzdolabi_2k": {
+      "marka": "Öztiryakiler",
+      "sku": "79K4.12NMV.00",
+      "name": "GN 1200 NMV CIFT INOX KAPI DIK TIP BUZDOLABI K TİP — 430 eco"
+    },
+    "tezgah_alti_buz_cek": {
+      "marka": "Öztiryakiler",
+      "sku": "7919.26NTV.C1",
+      "name": "CİHAZ ALTI ÇEKMECELİ BUZDOLABI — NTV.C1"
+    },
+    "portabianco_dik_tip_buzdolabi": {
+      "marka": "Portabianco",
+      "sku": "DT-1NGN-EKOP",
+      "name": "Dik tip buzdolabı tek kapılı EKOP — en ucuz"
+    },
+    "portabianco_tezgah_tip_buzdolabi": {
+      "marka": "Portabianco",
+      "sku": "TTS-2N70-E",
+      "name": "Tezgah tip buzdolabı iki kapılı — eco"
+    },
+    "portabianco_setalti_buzdolabi": {
+      "marka": "Portabianco",
+      "sku": "CAM-2N70",
+      "name": "Cihaz altı buzdolabı iki kapılı"
+    },
+    "portabianco_derin_dondurucu_dik": {
+      "marka": "Portabianco",
+      "sku": "DTT-1NGNE",
+      "name": "Dik tip GN derin dondurucu"
+    },
+    "portabianco_sogutma_tezgah": {
+      "marka": "Portabianco",
+      "sku": "SBHD-2N70E",
+      "name": "GN havuzlu make-up buzdolabı — en ucuz SB serisi"
+    },
+    "portabianco_bar_buzdolabi": {
+      "marka": "Portabianco",
+      "sku": "BAR-150P",
+      "name": "Bar buzdolabı — en ucuz"
+    },
+    "cop_siyirma_tez": {
+      "marka": "Equsto",
+      "sku": "EQUSTO.19070.31",
+      "name": "Süzme Havuzlu Tezgah — bulaşık sıyırma; ölçüye göre EQUSTO .31"
+    },
+    "bym_siyirma_tezgah": {
+      "marka": "Equsto",
+      "sku": "EQUSTO.19070.31",
+      "name": "Bulaşık sıyırma tezgahı — süzme havuzlu EQUSTO serisi"
+    },
+    "basket_rafi": {
+      "marka": "Öztiryakiler",
+      "sku": "7897.19030.30",
+      "name": "DUVAR RAFI — basket rafı; ölçü genişliğine göre 7897.*30.30"
+    },
+    "duvar_rafi": {
+      "marka": "Öztiryakiler",
+      "sku": "7897.14030.30",
+      "name": "DUVAR RAFI 140×30 — ölçü genişliğine göre en yakın 7897"
+    },
     "montaj_nakliye": {
       "brand": "Equsto Proje Fabrikası",
       "sku": "PFOS-MONTAJ",
@@ -195,18 +272,6 @@
       "sku": "073M.11010.AD",
       "name": "RINCER EVYESİ",
       "fiyat_try": 15000
-    },
-    "setalti_buzdolabi": {
-      "marka": "Öztiryakiler",
-      "name": "CİHAZ ALTI BUZDOLABI — Öztiryakiler ölçü/kapı eşlemesi"
-    },
-    "setalti_derin_dondurucu": {
-      "marka": "Öztiryakiler",
-      "name": "CİHAZ ALTI DERİN DONDURUCU — Öztiryakiler"
-    },
-    "dik_tip_buzdolabi": {
-      "marka": "Öztiryakiler",
-      "name": "DEPO TİPİ BUZDOLABI — Öztiryakiler kapı sayısına göre"
     },
     "kiyma_makinesi": {
       "marka": "Boğaziçi",
