@@ -32,7 +32,7 @@
   }
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260613-ozti-sogutma-pdp-v1';
+  var CATALOG_V = '20260613-fuel-spec-fix-v1';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   /* Next.js URL slug → katalog dept id (data/dept/*.json) */
   if (DEPT === 'market-reyonlari') DEPT = 'market-reyon';
