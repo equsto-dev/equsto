@@ -1728,7 +1728,270 @@ body.bd-page.besos.eq-shop .eq-mfoot-copy {
   }
 }
 
-/* Urban Bar — Besos katalog */
+/* Urban Bar — Besos katalog (urbanbar.com white shop) */
+.ub-shop.ub-besos-page,
+body.bd-page.besos .ub-shop.ub-besos-page {
+  background: #fff;
+  color: #1a1a1a;
+}
+.ub-shop .ub-besos-catalog {
+  max-width: 1320px;
+  padding: 28px 24px 64px;
+}
+.ub-shop .ub-besos-catalog-head {
+  margin-bottom: 24px;
+  align-items: flex-end;
+}
+.ub-shop .ub-besos-catalog-head__title {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ub-shop .ub-besos-plp-title {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 400;
+  color: #1a1a1a;
+}
+.ub-shop .ub-besos-catalog-meta {
+  color: #666;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+.ub-shop .ub-besos-powered--meta,
+.ub-shop .ub-besos-powered--meta a {
+  color: #666;
+}
+.ub-shop .ub-besos-search input {
+  background: #fff;
+  border: 1px solid #d8d8d8;
+  color: #1a1a1a;
+  border-radius: 2px;
+}
+.ub-shop .ub-besos-quick-filters {
+  border-bottom-color: #e8e8e8;
+}
+.ub-shop .ub-besos-quick-filters__label {
+  color: #666;
+}
+.ub-shop .ub-besos-quick-filter {
+  border-color: #d8d8d8;
+  background: #fff;
+  color: #333;
+  border-radius: 2px;
+}
+.ub-shop .ub-besos-quick-filter.is-active {
+  border-color: #1a1a1a;
+  background: #f5f5f5;
+  color: #1a1a1a;
+}
+.ub-shop .ub-besos-quick-filter__count {
+  color: #888;
+}
+.ub-shop .ub-besos-plp {
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 32px;
+}
+.ub-shop .ub-besos-facets__panel {
+  border: none;
+  border-radius: 0;
+  background: #f4f4f4;
+  padding: 0;
+}
+.ub-shop .ub-besos-facets__hd {
+  padding: 14px 16px;
+  margin: 0;
+  border-bottom: 1px solid #e0e0e0;
+  color: #333;
+  font-size: 13px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.ub-shop .ub-besos-facets__list {
+  padding: 8px 0;
+}
+.ub-shop .ub-besos-facet-item {
+  color: #333;
+  border-radius: 0;
+  padding: 10px 16px;
+  font-size: 14px;
+}
+.ub-shop .ub-besos-facet-item:hover {
+  background: #ececec;
+  color: #000;
+}
+.ub-shop .ub-besos-facet-item.is-active {
+  background: #e8e8e8;
+  border-color: transparent;
+  color: #000;
+  font-weight: 600;
+}
+.ub-shop .ub-besos-facet-item__count {
+  color: #888;
+}
+.ub-shop .ub-besos-plp-status,
+.ub-shop .ub-besos-empty {
+  color: #666;
+}
+.ub-shop .ub-besos-selected-filters {
+  border-color: #e8e8e8;
+  background: #fafafa;
+}
+.ub-shop .ub-besos-selected-chip {
+  border-color: #ccc;
+  background: #fff;
+  color: #333;
+}
+.ub-shop .ub-plp-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px 16px;
+}
+@media (max-width: 1100px) {
+  .ub-shop .ub-plp-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 820px) {
+  .ub-shop .ub-plp-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 960px) {
+  .ub-shop .ub-besos-plp {
+    grid-template-columns: 1fr;
+  }
+  .ub-shop .ub-besos-facets {
+    display: none;
+  }
+  .ub-shop .ub-besos-facets--mob {
+    display: block;
+    position: static;
+    margin-bottom: 16px;
+  }
+}
+.ub-plp-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+.ub-plp-card__media {
+  display: block;
+  aspect-ratio: 1;
+  background: #fff;
+  border: none;
+}
+.ub-plp-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.ub-plp-card__ph {
+  display: grid;
+  place-items: center;
+  min-height: 180px;
+  color: #999;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.ub-plp-card__body {
+  background: #f4f4f4;
+  padding: 14px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+.ub-plp-card__title {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.35;
+  font-weight: 400;
+}
+.ub-plp-card__title a {
+  color: #1a1a1a;
+  text-decoration: none;
+}
+.ub-plp-card__title a:hover {
+  text-decoration: underline;
+}
+.ub-plp-card__price {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.ub-plp-card__price-amount {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+.ub-plp-card__price-vat {
+  font-size: 12px;
+  color: #555;
+}
+.ub-plp-card__buy {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  margin-top: 4px;
+}
+.ub-plp-card__qty {
+  display: inline-flex;
+  align-items: center;
+  background: #ececec;
+  border: 1px solid #d0d0d0;
+  border-right: none;
+}
+.ub-plp-card__qty-btn {
+  width: 32px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+}
+.ub-plp-card__qty-val {
+  min-width: 28px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+.ub-plp-card__cart-btn {
+  flex: 1;
+  min-height: 40px;
+  padding: 0 10px;
+  border: none;
+  background: #1c2340;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.ub-plp-card__cart-btn:hover:not(:disabled) {
+  background: #12182c;
+}
+.ub-plp-card__cart-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.ub-plp-card__wish {
+  flex: 0 0 40px;
+  width: 40px;
+  border: 1px solid #d0d0d0;
+  border-left: none;
+  background: #ececec;
+  color: #333;
+  font-size: 18px;
+  cursor: default;
+  opacity: 0.5;
+}
+
+/* Urban Bar — Besos katalog (legacy dark) */
 .ub-besos-page {
   background: var(--bes-void);
 }
@@ -2408,11 +2671,20 @@ body.bd-page.besos .ub-pdp-page {
 }
 .ub-pdp-price {
   margin: 0 0 8px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
 }
 .ub-pdp-price__amount {
   font-size: 1.125rem;
   font-weight: 700;
   color: #1a1a1a;
+}
+.ub-pdp-price__vat {
+  font-size: 14px;
+  font-weight: 400;
+  color: #555;
 }
 .ub-pdp-stock {
   margin: 0 0 20px;
@@ -2424,27 +2696,16 @@ body.bd-page.besos .ub-pdp-page {
   color: #c62828;
 }
 .ub-pdp-buy {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
   gap: 12px;
   margin-bottom: 16px;
-}
-@media (min-width: 520px) {
-  .ub-pdp-buy {
-    grid-template-columns: 1fr auto;
-    align-items: stretch;
-  }
-}
-.ub-pdp-buy__row {
-  display: flex;
-  gap: 0;
-  align-items: stretch;
-  border: 1px solid #d8d8d8;
 }
 .ub-pdp-qty {
   display: inline-flex;
   align-items: center;
-  border-right: 1px solid #d8d8d8;
+  border: 1px solid #d8d8d8;
   background: #f7f7f7;
 }
 .ub-pdp-qty__btn {
@@ -2463,7 +2724,7 @@ body.bd-page.besos .ub-pdp-page {
   font-size: 15px;
 }
 .ub-pdp-cart-btn {
-  flex: 1;
+  flex: 0 1 auto;
   min-width: 160px;
   min-height: 52px;
   padding: 0 28px;
@@ -2483,24 +2744,25 @@ body.bd-page.besos .ub-pdp-page {
   opacity: 0.45;
   cursor: not-allowed;
 }
-.ub-pdp-trust {
+.ub-pdp-greenspark {
+  flex: 1 1 200px;
   background: #2b2b2b;
   color: #fff;
-  padding: 14px 16px;
+  padding: 12px 16px;
   min-width: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 4px;
 }
-.ub-pdp-trust__brand {
+.ub-pdp-greenspark__logo {
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  opacity: 0.85;
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
+  opacity: 0.9;
 }
-.ub-pdp-trust__text {
+.ub-pdp-greenspark__text {
   margin: 0;
   font-size: 12px;
   line-height: 1.45;
@@ -2661,20 +2923,37 @@ body.bd-page.besos .ub-pdp-page {
   scroll-snap-align: start;
   text-decoration: none;
   color: inherit;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
   background: #f5f5f5;
+  position: relative;
 }
 .ub-pdp-related__card:hover .ub-pdp-related__name {
   text-decoration: underline;
 }
 .ub-pdp-related__img {
+  grid-column: 1 / -1;
   aspect-ratio: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #fff;
   padding: 12px;
+}
+.ub-pdp-related__body {
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.ub-pdp-related__wish {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: start;
+  padding: 8px 12px 0 0;
+  font-size: 16px;
+  color: #555;
 }
 .ub-pdp-related__img img {
   max-width: 100%;
@@ -2702,4 +2981,8 @@ body.bd-page.besos .ub-pdp-page {
   font-size: 13px;
   font-weight: 600;
   color: #1a1a1a;
+}
+.ub-pdp-related__vat {
+  font-weight: 400;
+  color: #555;
 }
