@@ -1053,17 +1053,27 @@
         continue;
       }
       if (/^catalog\/portabianco\/cafemarkt\//i.test(file)) {
+        var pbLocal = portabiancoLocalCatalogHref("images/" + file);
+        if (pbLocal && !seen[pbLocal]) {
+          seen[pbLocal] = 1;
+          list.unshift(pbLocal);
+        }
         var pbCm = portabiancoCafemarktWitCdn("images/" + file);
         if (pbCm && !seen[pbCm]) {
           seen[pbCm] = 1;
-          list.unshift(pbCm);
+          list.push(pbCm);
         }
       }
       if (/^catalog\/yuksel\/yuksel-/i.test(file)) {
+        var pbYl = portabiancoYukselRelToLocal("images/" + file);
+        if (pbYl && !seen[pbYl]) {
+          seen[pbYl] = 1;
+          list.unshift(pbYl);
+        }
         var pbYw = portabiancoYukselRelToWit("images/" + file);
         if (pbYw && !seen[pbYw]) {
           seen[pbYw] = 1;
-          list.unshift(pbYw);
+          list.push(pbYw);
         }
       }
       var chunk = [];
@@ -1283,8 +1293,14 @@
     return "https://witcdn.cafemarkt.com/" + fname;
   }
 
+  /** witcdn.cafemarkt.com — equsto.com referansında 200 OK placeholder döner; tarayıcıda kullanma. */
+  function portabiancoRemoteWitAllowed() {
+    return allowRemoteImages() && !isEqustoLiveHost();
+  }
+
   /** Portabianco PLP — yerel yol CDN'de yoksa witcdn (Cafemarkt). */
   function portabiancoCafemarktWitCdn(s) {
+    if (!portabiancoRemoteWitAllowed()) return "";
     var t = String(s || "").trim().replace(/\\/g, "/");
     var m = t.match(/\/portabianco\/cafemarkt\/([^/?#]+)$/i);
     if (!m) return "";
@@ -1295,6 +1311,23 @@
       .replace(/-b\.jpg$/i, "-B.jpg");
     if (/-O\.jpg$/i.test(fname)) fname = fname.replace(/-O\.jpg$/i, "-B.jpg");
     return "https://witcdn.cafemarkt.com/" + fname;
+  }
+
+  function portabiancoWitUrlToLocalRel(url) {
+    var u = String(url || "").trim();
+    var m = u.match(/witcdn\.cafemarkt\.com\/([^?#]+)/i);
+    if (!m) return "";
+    return "images/catalog/portabianco/cafemarkt/" + m[1];
+  }
+
+  /** Yerel / CloudFront katalog görseli — witcdn hotlink yerine. */
+  function portabiancoLocalCatalogHref(s) {
+    var t = String(s || "").trim().replace(/\\/g, "/");
+    if (!/\/catalog\/portabianco\/cafemarkt\//i.test(t)) return "";
+    var cdn = equstoCdnAssetHref(t);
+    if (cdn) return withCatalogImgV(cdn);
+    if (typeof window.eqAttrPath === "function") return withCatalogImgV(window.eqAttrPath(t));
+    return "";
   }
 
   /** Yüksel PDF yolu → Cafemarkt witcdn (SKU + aile eşleşmesi). */
@@ -1339,6 +1372,7 @@
     add(s.replace(/^MSBHG/, "SBHG"));
     add(s.replace(/^SBTM/, "SBM"));
     add(s.replace(/^SBTP/, "SBT"));
+    add(s.replace(/^SBTG/, "SBT"));
     add(s.replace(/^SBHK/, "SBH"));
     add(s.replace(/^SBHKG/, "SBH"));
     add(s.replace(/^CAM-/, "CA-"));
@@ -1393,6 +1427,13 @@
     return map.TT4N70 || map["251TT4N70"] || "";
   }
 
+  /** Yüksel PDF yolu → indirilen Cafemarkt dosyası (witcdn hotlink değil). */
+  function portabiancoYukselRelToLocal(s) {
+    var wit = portabiancoYukselRelToWit(s);
+    if (!wit) return "";
+    return portabiancoLocalCatalogHref(portabiancoWitUrlToLocalRel(wit));
+  }
+
   window.eqProductImgSrc = function (p) {
     if (p == null || p === "") return "";
     var s = String(p).trim().replace(/\\/g, "/");
@@ -1403,6 +1444,10 @@
     var istifFb = ozti8897PolipropilenFallbackRel(s);
     if (istifFb) s = istifFb;
     if (/^https?:\/\//i.test(s)) return s;
+    var pbLocalFirst = portabiancoLocalCatalogHref(s);
+    if (pbLocalFirst) return pbLocalFirst;
+    var pbYukselLocal = portabiancoYukselRelToLocal(s);
+    if (pbYukselLocal) return pbYukselLocal;
     var rcWit = robotCoupeCafemarktWitCdn(s);
     if (rcWit) return rcWit;
     var pbWit = portabiancoCafemarktWitCdn(s);

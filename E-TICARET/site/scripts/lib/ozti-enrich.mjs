@@ -1218,6 +1218,71 @@ export function applyOztiCatalogFallbackDescription(row, pdfEntry) {
   return true;
 }
 
+/** 7919.xxNTV.C1 — sitede PDP yok; aynı serinin C2 kardeşinden türet. */
+export function oztiNtvC1SiblingKod(kod) {
+  const k = normKod(kod);
+  if (!/^7919\.\d{2}NTV\.C1$/i.test(k)) return null;
+  return k.replace(/\.C1$/i, ".C2");
+}
+
+function oztiSpecValue(specs, label) {
+  const re = new RegExp(`^${label}:\\s*(.+)$`, "i");
+  for (const line of specs || []) {
+    const m = String(line).match(re);
+    if (m) return m[1].trim();
+  }
+  return "";
+}
+
+/** C2 web specs → C1 teklif/PDP açıklaması (2 kapılı varyant). */
+export function buildOztiNtvC1PayloadFromC2(targetKod, c2Payload) {
+  const kod = normKod(targetKod);
+  const siblingKod = normKod(c2Payload?.kod || oztiNtvC1SiblingKod(kod));
+  if (!siblingKod || !Array.isArray(c2Payload?.specs) || !c2Payload.specs.length) return null;
+
+  const specs = c2Payload.specs.map((line) =>
+    String(line)
+      .replace(/\.C2\b/gi, ".C1")
+      .replace(new RegExp(siblingKod.replace(/\./g, "\\."), "gi"), kod),
+  );
+
+  const en = oztiSpecValue(specs, "En \\(mm\\)");
+  const boy = oztiSpecValue(specs, "Boy \\(mm\\)");
+  const yuk = oztiSpecValue(specs, "Yükseklik \\(mm\\)");
+  const kap = oztiSpecValue(specs, "Kapasite");
+  const kwRaw = oztiSpecValue(specs, "Elektrik Gücü");
+  const model = oztiSpecValue(specs, "Model Numarası");
+  const kw = kwRaw
+    ? String(kwRaw)
+        .replace(",", ".")
+        .replace(/\s*kW\s*$/i, "")
+        .trim()
+    : "";
+
+  const bullets = [
+    "GN 1/1 raflı çift kapılı cihazaltı buzdolabı",
+    "İç ve dış gövde paslanmaz çelik",
+    "Normal sıcaklıkta fanlı soğutma sistemi (NTV)",
+  ];
+  if (kap) bullets.push(`Kapasite ${kap}`);
+  if (kw) bullets.push(`Elektrik gücü ${kw} kW — 230 V / 50 Hz`);
+  bullets.push("Çalışma sıcaklığı -2 / +8 °C");
+  if (en && boy && yuk) bullets.push(`Ölçü: ${en} x ${boy} x ${yuk} mm (G x D x Y)`);
+  if (model) bullets.push(`Model ${model}`);
+
+  const description = bullets.map((b) => `* ${b}`).join("\n");
+
+  return {
+    kod,
+    kodSoft: kodSoftKey(kod),
+    description,
+    bullets,
+    specs,
+    url: c2Payload.url,
+    source: "oztiryakiler.com.tr (NTV.C2 kardeş SKU)",
+  };
+}
+
 /** oztiryakiler.com.tr WP REST / PDP açıklamasını katalog satırına yazar */
 export function applyOztiWebDescription(row, payload) {
   if (!payload?.description) return false;
