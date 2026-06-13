@@ -92,6 +92,8 @@ export const URUN_TIPI_ALIASES: Record<string, string> = {
   "depo-derin-dondurucu-cift-kapili": "derin_dondurucu_dik",
   "setalti-derin-dondurucu": "setalti_derin_dondurucu",
   "buro-tipi-derin-dondurucu": "buro_tipi_derin_dondurucu",
+  "kokteyl-tezgah": "kokteyl_istasyon",
+  "kokteyl-istasyon": "kokteyl_istasyon",
   "setalti-buzdolabi-tek": "setalti_buzdolabi",
   "setaltı-buzdolabi": "setalti_buzdolabi",
   "filter-coffee-makinesi-2": "filter_coffee",
@@ -217,6 +219,12 @@ export const TIP_SEARCH_TERMS: Record<string, string[]> = {
     "büro tipi derin",
     "60x60 derin dondurucu",
     "606085 derin",
+  ],
+  kokteyl_istasyon: [
+    "kokteyl istasyon",
+    "kokteyl tezgah",
+    "cocktail station",
+    "besos bar",
   ],
   setalti_buzdolabi: [
     "tag 270",

@@ -67,6 +67,10 @@ import {
   isBuroTipiDerinDondurucuReferans,
 } from "./buzdolabi-match";
 import {
+  matchBesosKokteylIstasyonByReferans,
+  isKokteylIstasyonReferansIsim,
+} from "./besos-kokteyl-match";
+import {
   isDavlumbazReferans,
   matchDavlumbazByReferans,
 } from "./davlumbaz-match";
@@ -1300,6 +1304,17 @@ export async function matchReferansKalem(
       input.fiyatStratejisi,
     );
     if (duvarRaf) return duvarRaf;
+  }
+
+  if (isKokteylIstasyonReferansIsim(input.isim)) {
+    const besos = await matchBesosKokteylIstasyonByReferans(
+      input.isim,
+      olcu,
+      input.notlar,
+      input.urunTipi,
+      input.fiyatStratejisi,
+    );
+    if (besos) return besos;
   }
 
   if (isUnSekerArabasiReferans(input.isim)) {
