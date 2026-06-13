@@ -46,11 +46,24 @@ export function extractOztiKodFromHtml(html, slug) {
 
 export function parseOztiExcerptBullets(excerptHtml) {
   const text = stripHtml(excerptHtml);
-  const lines = text
-    .split(/\r?\n/)
-    .map((l) => l.replace(/^\*\s*/, "").replace(/^•\s*/, "").trim())
+  return [...new Set(splitOztiBulletText(text))];
+}
+
+/** WP excerpt — satır, • veya " * " ile ayrılmış maddeler */
+export function splitOztiBulletText(text) {
+  const raw = String(text || "").trim();
+  if (!raw) return [];
+  let parts;
+  if (/\n\s*[•·\-–—*]/.test(raw)) {
+    parts = raw.split(/\n\s*[•·\-–—*]\s*/);
+  } else if (/\s\*\s/.test(raw)) {
+    parts = raw.split(/\s*\*\s+/);
+  } else {
+    parts = raw.split(/\r?\n/);
+  }
+  return parts
+    .map((l) => l.replace(/^[•\-–—*·]+\s*/, "").trim())
     .filter((l) => l.length > 4);
-  return [...new Set(lines)];
 }
 
 /** content.rendered — tablo öncesi kısa açıklama */
@@ -105,8 +118,8 @@ export function parseOztiWpProduct(product) {
   if (!allBullets.length && !specs.length) return null;
 
   const description = allBullets.length
-    ? allBullets.map((b) => `• ${b}`).join("\n")
-    : specs.slice(0, 12).map((s) => `• ${s}`).join("\n");
+    ? allBullets.map((b) => `* ${b}`).join("\n")
+    : specs.slice(0, 12).map((s) => `* ${s}`).join("\n");
 
   const url =
     (product.link && /oztiryakiler\.com\.tr/i.test(product.link)
