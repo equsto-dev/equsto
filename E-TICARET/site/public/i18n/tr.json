@@ -1110,6 +1110,7 @@
     "mfg_source_link": "Üretici / kaynak sayfası",
     "specs_request_quote": "Detaylı teknik özellikler için teklif sürecinden talep edebilirsiniz.",
     "spec_group_electric": "Elektrik",
+    "spec_group_gas": "Gaz",
     "spec_group_cooling": "Çalışma koşulları",
     "spec_group_other": "Diğer",
     "inner_dims_prefix": "İç ölçüler: {dim}.",

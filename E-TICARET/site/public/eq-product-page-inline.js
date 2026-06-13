@@ -2662,6 +2662,227 @@ window.searchFilter = window.searchFilter || function () {};
       );
     }
 
+    function oztiFuelProfile(x) {
+      var lines = Array.isArray(x.teknik_ozellikler) ? x.teknik_ozellikler : [];
+      var blob = [x.name, x.sku, x.model].filter(Boolean).join(" ");
+      lines.forEach(function (ln) {
+        var t = String(ln || "");
+        if (/ürün tipi|ürün adı/i.test(t)) blob += " " + t;
+      });
+      var low = blob.toLocaleLowerCase("tr");
+      var hasElkFields = lines.some(function (ln) {
+        return /^elektrik\s/i.test(String(ln || "").trim());
+      });
+      var hasGazFields = lines.some(function (ln) {
+        var k = String(ln || "")
+          .split(":")[0]
+          .trim()
+          .toLowerCase();
+        return /^gaz\s/.test(k) || /gaz gücü|gaz girişi|gaz basınç|doğalgaz|dogalgaz/.test(k);
+      });
+      var tipLine = "";
+      lines.forEach(function (ln) {
+        if (/^ürün tipi:/i.test(String(ln || "").trim())) tipLine = String(ln);
+      });
+      var tip = tipLine
+        ? tipLine
+            .split(":")
+            .slice(1)
+            .join(":")
+            .trim()
+            .toLocaleLowerCase("tr")
+        : "";
+
+      var electric =
+        hasElkFields ||
+        /elektrikli|elektrik\s|f[ıi]r[ıi]n\s*elektrik|[-_.]50e\b/i.test(low);
+      var gas =
+        hasGazFields ||
+        /gazl[ıi]|\bgaz\b.*ocak|brülör|brulor|açık ateş|acik ates|doğalgaz|dogalgaz|\blpg\b/i.test(
+          low
+        );
+
+      if (tip === "elektrikli") {
+        electric = true;
+        gas = false;
+      } else if (tip === "gazlı" || tip === "gazli") {
+        gas = true;
+        if (
+          !hasElkFields &&
+          !/elektrikli|f[ıi]r[ıi]n\s*elektrik|[-_.]50e\b/i.test(low)
+        ) {
+          electric = false;
+        }
+      }
+
+      if (!gas && !electric) {
+        if (hasElkFields) electric = true;
+        else if (/güç:/i.test(lines.join(" "))) gas = /gazl[ıi]/i.test(low);
+      }
+
+      return { gas: gas, electric: electric };
+    }
+
+    function oztiKwSuffix(val) {
+      var v = String(val || "").trim();
+      if (!v) return "";
+      if (/\bkw\b/i.test(v)) return v;
+      return v + " kW";
+    }
+
+    function oztiConnectionSpecs(x) {
+      var profile = oztiFuelProfile(x);
+      var lines = Array.isArray(x.teknik_ozellikler) ? x.teknik_ozellikler : [];
+      var elk = [];
+      var gaz = [];
+      var diger = [];
+      var seen = Object.create(null);
+      var hasElkGuc = lines.some(function (ln) {
+        return /^elektrik\s+g[uü]c/i.test(String(ln || "").trim());
+      });
+
+      function push(group, line) {
+        var t = String(line || "").trim();
+        if (!t || seen[t]) return;
+        seen[t] = 1;
+        group.push(t);
+      }
+
+      lines.forEach(function (ln) {
+        var t = decodeHtmlEntitiesPdp(String(ln || "").trim());
+        if (!t || t.indexOf(":") < 0 || t.length > 200) return;
+        var key = t.split(":")[0].trim().toLocaleLowerCase("tr");
+        var val = t.split(":").slice(1).join(":").trim();
+
+        if (/^elektrik\s/.test(key)) {
+          if (/g[uü]c/.test(key)) push(elk, "Güç: " + oztiKwSuffix(val));
+          else if (/volt/.test(key)) push(elk, "Voltaj: " + val);
+          else if (/frekans/.test(key)) push(elk, "Frekans: " + val);
+          else push(elk, t);
+          return;
+        }
+        if (
+          /^gaz\s/.test(key) ||
+          /doğalgaz|dogalgaz|lpg|mbar|gaz girişi|gaz tüketim|gaz basınç/.test(key)
+        ) {
+          if (/g[uü]c/.test(key)) push(gaz, "Güç: " + oztiKwSuffix(val));
+          else push(gaz, t);
+          return;
+        }
+        if (/^güç$|^guc$/.test(key)) {
+          var gucLine = "Güç: " + oztiKwSuffix(val);
+          if (profile.gas && (!profile.electric || !hasElkGuc)) push(gaz, gucLine);
+          else if (profile.electric && !hasElkGuc) push(elk, gucLine);
+          else if (profile.gas) push(gaz, gucLine);
+          else push(diger, t);
+        }
+      });
+
+      return { profile: profile, elk: elk, gaz: gaz, diger: diger };
+    }
+
+    function renderOztiFeaturesCol(x) {
+      var ref = deptLink(x.category, x.dept);
+      var temel = [];
+      var visBrand = pdpVisibleBrand(x.brand);
+      if (visBrand) temel.push(__pdpT("pdp.brand_prefix", "Marka:") + " " + visBrand);
+      if (x.sku || x.model) {
+        temel.push(__pdpT("pdp.product_code_prefix", "Ürün kodu:") + " " + (x.sku || x.model));
+      }
+      if (ref.label) temel.push(__pdpT("pdp.category_prefix", "Kategori:") + " " + ref.label);
+      var dim = formatOlculerLinePdp(x);
+      if (dim) temel.push(__pdpT("pdp.dims_prefix", "Ölçüler:") + " " + dim);
+
+      var skipDims = Object.create(null);
+      if (x.olculer) {
+        if (x.olculer.genislik_mm) skipDims["genişlik"] = 1;
+        if (x.olculer.derinlik_mm) skipDims["derinlik"] = 1;
+        if (x.olculer.yukseklik_mm) skipDims["yükseklik"] = 1;
+      }
+
+      (Array.isArray(x.teknik_ozellikler) ? x.teknik_ozellikler : []).forEach(function (ln) {
+        var t = decodeHtmlEntitiesPdp(String(ln || "").trim());
+        if (!t || t.indexOf(":") < 0 || t.length > 160) return;
+        var key = t.split(":")[0].trim().toLocaleLowerCase("tr");
+        if (
+          /^güç$|^guc$|^elektrik|^gaz\s|genişlik|derinlik|yükseklik|^en \(mm\)|^boy \(mm\)|^yükseklik \(mm\)|barkod|katalog sayfası|ürün markası/i.test(
+            key
+          )
+        ) {
+          return;
+        }
+        if (skipDims[key] || /^paket /.test(key)) return;
+        if (temel.indexOf(t) < 0) temel.push(t);
+      });
+
+      var conn = oztiConnectionSpecs(x);
+      var acc = "";
+      if (temel.length) {
+        acc += renderEpdpFlatAccSection(
+          __pdpT("pdp.basic_info", "Temel bilgiler"),
+          "<ul>" +
+            temel
+              .map(function (l) {
+                return "<li>" + esc(l) + "</li>";
+              })
+              .join("") +
+            "</ul>",
+          true
+        );
+      }
+      if (conn.profile.gas && conn.gaz.length) {
+        acc += renderEpdpFlatAccSection(
+          __pdpT("pdp.spec_group_gas", "Gaz"),
+          "<ul>" +
+            conn.gaz
+              .map(function (l) {
+                return "<li>" + esc(l) + "</li>";
+              })
+              .join("") +
+            "</ul>",
+          !acc
+        );
+      }
+      if (conn.profile.electric && conn.elk.length) {
+        acc += renderEpdpFlatAccSection(
+          __pdpT("pdp.spec_group_electric", "Elektrik"),
+          "<ul>" +
+            conn.elk
+              .map(function (l) {
+                return "<li>" + esc(l) + "</li>";
+              })
+              .join("") +
+            "</ul>",
+          !acc
+        );
+      }
+      if (conn.diger.length) {
+        acc += renderEpdpFlatAccSection(
+          __pdpT("pdp.spec_group_other", "Diğer"),
+          "<ul>" +
+            conn.diger
+              .map(function (l) {
+                return "<li>" + esc(l) + "</li>";
+              })
+              .join("") +
+            "</ul>",
+          !acc
+        );
+      }
+      if (!acc) {
+        acc =
+          '<p class="eq-elx-acc__empty">' +
+          esc(
+            __pdpT(
+              "pdp.specs_request_quote",
+              "Detaylı teknik özellikler için teklif sürecinden talep edebilirsiniz."
+            )
+          ) +
+          "</p>";
+      }
+      return renderEpdpFeaturesPanel(__pdpT("pdp.features_heading", "Özellikler"), acc);
+    }
+
     function pdpVisibleBrand(brand) {
       if (!brand || isOztiEqustoBrand(brand)) return "";
       return String(brand).trim();
@@ -2919,6 +3140,7 @@ window.searchFilter = window.searchFilter || function () {};
       if (isCaglayanRefrigeration(x)) return renderCaglayanFeaturesCol(x);
       if (isElectroluxProfessional(x)) return renderElectroluxFeaturesCol(x);
       if (isInoksanCatalogRow(x)) return renderInoksanFeaturesCol(x);
+      if (isOztiCatalogRow(x)) return renderOztiFeaturesCol(x);
       var ref = deptLink(x.category, x.dept);
       var temel = [];
       var visBrand = pdpVisibleBrand(x.brand);
