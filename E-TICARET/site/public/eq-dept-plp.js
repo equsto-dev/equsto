@@ -684,6 +684,7 @@
     var imgOut = '';
     var shopifyImg = String(row.shopify_image || '').trim();
     var isUrbanBar = /urban\s*bar/i.test(fb || b || '');
+    if (imgRel) imgOut = imgSrc(imgRel) || '';
     if (isUrbanBar && shopifyImg && /^https:\/\/cdn\.shopify\.com\//i.test(shopifyImg)) {
       try {
         var host = (location.hostname || '').toLowerCase();
@@ -692,7 +693,6 @@
         }
       } catch (_) {}
     }
-    if (!imgOut && imgRel) imgOut = imgSrc(imgRel) || '';
     if (!imgOut && shopifyImg) imgOut = shopifyImg;
     if (!imgOut && isOztiRow(row) && ozSku && typeof window.eqOztiAxImageFromSku === 'function') {
       imgOut = window.eqOztiAxImageFromSku(ozSku) || '';
