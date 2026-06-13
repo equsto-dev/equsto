@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import ShopFooterHost from "@/components/shop/ShopFooterHost";
 import BesosUrbanBarCatalog from "@/components/besos/urbanbar/BesosUrbanBarCatalog";
-import BesosUrbanBarPowered from "@/components/besos/urbanbar/BesosUrbanBarPowered";
 import { getBesosUrbanBarSection } from "@/lib/besos/urbanbar/catalog";
 import type { BesosUrbanBarSectionKey } from "@/lib/besos/urbanbar/catalog";
 import { loadBesosUrbanBarCatalog } from "@/lib/besos/urbanbar/load-data";
@@ -49,8 +48,8 @@ export default async function BesosUrbanBarSectionPage({ section, locale = "tr" 
 
   if (!sectionData) {
     return (
-      <main className="besos-page ub-besos-page">
-        <div className="ub-besos-hero">
+      <main className="besos-page ub-besos-page ub-shop">
+        <div className="ub-besos-catalog">
           <p>{locale === "en" ? "Catalog not built yet." : "Katalog henüz oluşturulmadı."}</p>
         </div>
         <ShopFooterHost />
@@ -58,29 +57,11 @@ export default async function BesosUrbanBarSectionPage({ section, locale = "tr" 
     );
   }
 
-  const homeHref = locale === "en" ? "/en/besos" : "/besos";
-  const sectionLabel = sectionData.label;
-
   return (
     <>
       {/* eslint-disable-next-line @next/next/no-css-tags */}
       <link rel="stylesheet" href={`/eq-dept-plp.css?v=${SHOP_ASSET_V}`} />
-      <main className="besos-page ub-besos-page">
-        <header className="ub-besos-hero">
-          <div className="ub-besos-hero-inner">
-            <nav className="ub-besos-crumb" aria-label="Breadcrumb">
-              <a href={homeHref}>Besos</a>
-              <span aria-hidden="true">›</span>
-              <span>{sectionLabel}</span>
-            </nav>
-            <BesosUrbanBarPowered className="ub-besos-kicker" />
-            <h1>{sectionLabel}</h1>
-            <p className="ub-besos-lead">{sectionData.blurb}</p>
-            <p className="ub-besos-stat">
-              {sectionData.productCount} {locale === "en" ? "products" : "ürün"}
-            </p>
-          </div>
-        </header>
+      <main className="besos-page ub-besos-page ub-shop">
         <BesosUrbanBarCatalog section={sectionData} locale={locale} />
       </main>
       <ShopFooterHost />

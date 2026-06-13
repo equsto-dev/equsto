@@ -31,10 +31,11 @@ export default function BesosUrbanBarPdpCart({ item, locale = "tr", inStock = tr
     qty: locale === "en" ? "Quantity" : "Adet",
     minus: locale === "en" ? "Decrease" : "Azalt",
     plus: locale === "en" ? "Increase" : "Artır",
-    trust:
+    greensparkLine1: locale === "en" ? "For every order we:" : "Her siparişte:",
+    greensparkLine2:
       locale === "en"
-        ? "Professional barware — Urban Bar collection on Equsto."
-        : "Profesyonel bar ekipmanı — Equsto'da Urban Bar koleksiyonu.",
+        ? "Plant 1 tree, Recover 2 plastic bottles."
+        : "1 ağaç dikilir, 2 plastik şişe geri kazanılır.",
   };
 
   function addToCart() {
@@ -62,38 +63,40 @@ export default function BesosUrbanBarPdpCart({ item, locale = "tr", inStock = tr
         }}
       />
       <div className="ub-pdp-buy">
-        <div className="ub-pdp-buy__row">
-          <div className="ub-pdp-qty" role="group" aria-label={labels.qty}>
-            <button
-              type="button"
-              className="ub-pdp-qty__btn"
-              aria-label={labels.minus}
-              onClick={() => setQty((q) => Math.max(1, q - 1))}
-            >
-              −
-            </button>
-            <span className="ub-pdp-qty__val">{qty}</span>
-            <button
-              type="button"
-              className="ub-pdp-qty__btn"
-              aria-label={labels.plus}
-              onClick={() => setQty((q) => Math.min(99, q + 1))}
-            >
-              +
-            </button>
-          </div>
+        <div className="ub-pdp-qty" role="group" aria-label={labels.qty}>
           <button
             type="button"
-            className="ub-pdp-cart-btn"
-            disabled={!cartReady || !inStock}
-            onClick={addToCart}
+            className="ub-pdp-qty__btn"
+            aria-label={labels.minus}
+            onClick={() => setQty((q) => Math.max(1, q - 1))}
           >
-            {labels.add}
+            −
+          </button>
+          <span className="ub-pdp-qty__val">{qty}</span>
+          <button
+            type="button"
+            className="ub-pdp-qty__btn"
+            aria-label={labels.plus}
+            onClick={() => setQty((q) => Math.min(99, q + 1))}
+          >
+            +
           </button>
         </div>
-        <aside className="ub-pdp-trust" aria-label="Urban Bar">
-          <span className="ub-pdp-trust__brand">Urban Bar</span>
-          <p className="ub-pdp-trust__text">{labels.trust}</p>
+        <button
+          type="button"
+          className="ub-pdp-cart-btn"
+          disabled={!cartReady || !inStock}
+          onClick={addToCart}
+        >
+          {labels.add}
+        </button>
+        <aside className="ub-pdp-greenspark" aria-label="Greenspark">
+          <span className="ub-pdp-greenspark__logo">greenspark</span>
+          <p className="ub-pdp-greenspark__text">
+            {labels.greensparkLine1}
+            <br />
+            {labels.greensparkLine2}
+          </p>
         </aside>
       </div>
     </>

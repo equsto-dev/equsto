@@ -1,4 +1,3 @@
-import Link from "next/link";
 import BesosUrbanBarPdpActions from "@/components/besos/urbanbar/BesosUrbanBarPdpActions";
 import BesosUrbanBarPdpCart from "@/components/besos/urbanbar/BesosUrbanBarPdpCart";
 import BesosUrbanBarPdpGallery from "@/components/besos/urbanbar/BesosUrbanBarPdpGallery";
@@ -11,6 +10,7 @@ import {
   besosUrbanBarProductSlug,
   besosUrbanBarSectionHref,
 } from "@/lib/besos/urbanbar/catalog";
+import { splitUrbanBarPrice } from "@/lib/besos/urbanbar/price";
 import type { BesosUrbanBarProduct } from "@/lib/besos/urbanbar/types";
 
 export type BesosUrbanBarPdpView = {
@@ -37,11 +37,10 @@ const UI = {
   sku: { tr: "SKU", en: "SKU" },
   inStock: { tr: "Stokta", en: "In stock" },
   outOfStock: { tr: "Stokta yok", en: "Out of stock" },
-  features: { tr: "Ürün Özellikleri", en: "Product Features" },
-  specs: { tr: "Teknik Özellikler", en: "Specifications" },
-  care: { tr: "Ürün Bakımı", en: "Product Care" },
-  safety: { tr: "Güvenlik Etiketleri", en: "Product Safety Labels" },
-  vat: { tr: "KDV dahil", en: "Incl. VAT" },
+  features: { tr: "Ürün Özellikleri:", en: "Product Features:" },
+  specs: { tr: "Teknik Özellikler:", en: "Specifications:" },
+  care: { tr: "Ürün Bakımı:", en: "Product Care:" },
+  safety: { tr: "Güvenlik Etiketlerini Görüntüle", en: "View Product Safety Labels" },
   besos: { tr: "Besos", en: "Besos" },
 };
 
@@ -54,20 +53,10 @@ function HtmlBlock({ html, className }: { html?: string; className?: string }) {
   return <div className={className} dangerouslySetInnerHTML={{ __html: html }} />;
 }
 
-function formatPriceDisplay(priceLabel: string, locale: BesosLocale): string {
-  const raw = String(priceLabel || "").trim();
-  if (!raw) return "";
-  if (locale === "en") return raw.replace(/KDV dahil/i, "Incl. VAT");
-  return raw;
-}
-
 export default function BesosUrbanBarPdp({ view }: { view: BesosUrbanBarPdpView }) {
   const {
     product,
     locale,
-    homeHref,
-    sectionHref,
-    sectionLabel,
     canonicalUrl,
     images,
     priceLabel,
@@ -75,19 +64,11 @@ export default function BesosUrbanBarPdp({ view }: { view: BesosUrbanBarPdpView 
     related,
   } = view;
   const features = product.features?.length ? product.features : null;
-  const price = formatPriceDisplay(priceLabel, locale);
+  const { amount, vat } = splitUrbanBarPrice(priceLabel, locale);
 
   return (
-    <main className="besos-page ub-pdp-page">
+    <main className="besos-page ub-pdp-page ub-shop">
       <div className="ub-pdp-shell">
-        <nav className="ub-pdp-crumb" aria-label="Breadcrumb">
-          <Link href={homeHref}>{ui("besos", locale)}</Link>
-          <span aria-hidden="true">›</span>
-          <Link href={sectionHref}>{sectionLabel}</Link>
-          <span aria-hidden="true">›</span>
-          <span>{product.name}</span>
-        </nav>
-
         <div className="ub-pdp-layout">
           <div className="ub-pdp-layout__gallery">
             <BesosUrbanBarPdpGallery images={images} name={product.name} />
@@ -96,9 +77,10 @@ export default function BesosUrbanBarPdp({ view }: { view: BesosUrbanBarPdpView 
           <div className="ub-pdp-layout__info">
             <h1 className="ub-pdp-title">{product.name}</h1>
 
-            {price ? (
+            {amount ? (
               <div className="ub-pdp-price">
-                <span className="ub-pdp-price__amount">{price}</span>
+                <span className="ub-pdp-price__amount">{amount}</span>
+                {vat ? <span className="ub-pdp-price__vat">{vat}</span> : null}
               </div>
             ) : null}
 

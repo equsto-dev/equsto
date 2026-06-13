@@ -1,21 +1,21 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
-import { Fragment, useEffect, useMemo, useRef, useState } from "react";
-import { besosAssetPath } from "@/lib/besos/asset-path";
+import { useEffect, useMemo, useRef, useState } from "react";
+import Script from "next/script";
+import BesosUrbanBarPlpCard from "@/components/besos/urbanbar/BesosUrbanBarPlpCard";
+import BesosUrbanBarPowered from "@/components/besos/urbanbar/BesosUrbanBarPowered";
 import {
   buildUrbanBarCapacityFacets,
   filterUrbanBarProducts,
   productMatchesUrbanBarCapacities,
 } from "@/lib/besos/urbanbar/catalog";
-import BesosUrbanBarPowered from "@/components/besos/urbanbar/BesosUrbanBarPowered";
 import type { BesosLocale } from "@/lib/besos/locale";
 import type { BesosUrbanBarSectionCatalog } from "@/lib/besos/urbanbar/types";
+import { SHOP_ASSET_V } from "@/lib/shop/assets";
 
 const ROWS_PER_PAGE = 6;
 const GRID_GAP_PX = 16;
-const GRID_MIN_COL_PX = 220;
+const GRID_MIN_COL_PX = 240;
 
 type Props = {
   section: BesosUrbanBarSectionCatalog;
@@ -25,7 +25,6 @@ type Props = {
 const UI = {
   searchPh: { tr: "Urban Bar ürünlerinde ara…", en: "Search Urban Bar products…" },
   products: { tr: "ürün", en: "products" },
-  view: { tr: "İncele", en: "View" },
   noMatch: { tr: "Aramanızla eşleşen ürün bulunamadı.", en: "No products match your search." },
   loadMore: { tr: "Daha fazla ürün yükle", en: "Load more products" },
   remaining: { tr: "kaldı", en: "remaining" },
@@ -50,46 +49,6 @@ function ui(key: keyof typeof UI, locale: BesosLocale, vars?: Record<string, str
     }
   }
   return text;
-}
-
-function ProductTile({
-  product,
-  locale,
-}: {
-  product: BesosUrbanBarSectionCatalog["groups"][0]["items"][0];
-  locale: BesosLocale;
-}) {
-  const img = product.imageUrl || (product.image ? besosAssetPath(product.image) : "");
-  const groupLabel = locale === "en" ? product.groupLabelEn : product.groupLabelTr;
-  const pdpHref = product.besosHref || product.shopHref;
-
-  return (
-    <article className="ub-besos-card" data-group={product.group}>
-      <Link className="ub-besos-card-media" href={pdpHref}>
-        {img ? (
-          img.startsWith("http") ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={img} alt={product.name} loading="lazy" decoding="async" />
-          ) : (
-            <Image src={img} alt={product.name} width={360} height={360} loading="lazy" unoptimized />
-          )
-        ) : (
-          <span className="ub-besos-card-ph">Urban Bar</span>
-        )}
-      </Link>
-      <div className="ub-besos-card-body">
-        <div className="ub-besos-card-kicker">{groupLabel}</div>
-        <h3 className="ub-besos-card-title">
-          <Link href={pdpHref}>{product.name}</Link>
-        </h3>
-        {product.code ? <div className="ub-besos-card-code">{product.code}</div> : null}
-        {product.price ? <div className="ub-besos-card-price">{product.price}</div> : null}
-        <Link className="ub-besos-card-cta" href={pdpHref}>
-          {ui("view", locale)}
-        </Link>
-      </div>
-    </article>
-  );
 }
 
 function gridColumnsForWidth(width: number): number {
@@ -131,6 +90,7 @@ function FacetButton({
 
 export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) {
   const [query, setQuery] = useState("");
+  const [cartReady, setCartReady] = useState(false);
   const [activeGroups, setActiveGroups] = useState<ReadonlySet<string>>(new Set());
   const [activeCapacities, setActiveCapacities] = useState<ReadonlySet<string>>(new Set());
   const [filtersOpen, setFiltersOpen] = useState(false);
@@ -205,6 +165,10 @@ export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) 
     setActiveGroups(new Set());
     setActiveCapacities(new Set());
   };
+
+  useEffect(() => {
+    if (window.EqustoCart) setCartReady(true);
+  }, []);
 
   useEffect(() => {
     const el = gridRef.current;
@@ -308,12 +272,23 @@ export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) 
 
   return (
     <section className="ub-besos-catalog" id="ub-catalog">
+      <Script
+        src={`/ecom-cart.js?v=${SHOP_ASSET_V}`}
+        strategy="afterInteractive"
+        onReady={() => {
+          setCartReady(true);
+          window.EqustoCart?.syncBadge?.();
+        }}
+      />
       <div className="ub-besos-catalog-head">
-        <div className="ub-besos-catalog-meta">
-          <BesosUrbanBarPowered className="ub-besos-powered--meta" />
-          <span className="ub-besos-catalog-count">
-            {visibleCount} {ui("products", locale)}
-          </span>
+        <div className="ub-besos-catalog-head__title">
+          <h1 className="ub-besos-plp-title">{section.label}</h1>
+          <div className="ub-besos-catalog-meta">
+            <BesosUrbanBarPowered className="ub-besos-powered--meta" />
+            <span className="ub-besos-catalog-count">
+              {visibleCount} {ui("products", locale)}
+            </span>
+          </div>
         </div>
         <label className="ub-besos-search">
           <span className="sr-only">{ui("searchPh", locale)}</span>
@@ -390,25 +365,15 @@ export default function BesosUrbanBarCatalog({ section, locale = "tr" }: Props) 
             <p className="ub-besos-empty">{ui("noMatch", locale)}</p>
           ) : (
             <>
-              <div className="ub-besos-grid" ref={gridRef}>
-                {visibleProducts.map(({ group, product }, index) => {
-                  const showHead =
-                    index === 0 || visibleProducts[index - 1]?.group.key !== group.key;
-                  return (
-                    <Fragment key={product.equstoId}>
-                      {showHead ? (
-                        <div
-                          className="ub-besos-group-head ub-besos-group-head--grid"
-                          id={`ub-${group.slug}`}
-                        >
-                          <h2>{group.label}</h2>
-                          <span>{group.items.length}</span>
-                        </div>
-                      ) : null}
-                      <ProductTile product={product} locale={locale} />
-                    </Fragment>
-                  );
-                })}
+              <div className="ub-besos-grid ub-plp-grid" ref={gridRef}>
+                {visibleProducts.map(({ product }) => (
+                  <BesosUrbanBarPlpCard
+                    key={product.equstoId}
+                    product={product}
+                    locale={locale}
+                    cartReady={cartReady}
+                  />
+                ))}
               </div>
               {remaining > 0 ? (
                 <div className="ub-besos-loadmore eq-dept-plp-loadmore" aria-label={ui("loadMoreAria", locale)}>

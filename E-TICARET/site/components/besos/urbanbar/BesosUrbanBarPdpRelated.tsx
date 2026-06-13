@@ -2,6 +2,7 @@
 
 import { useCallback, useRef } from "react";
 import Link from "next/link";
+import { splitUrbanBarPrice } from "@/lib/besos/urbanbar/price";
 
 export type RelatedProduct = {
   name: string;
@@ -35,7 +36,9 @@ export default function BesosUrbanBarPdpRelated({ items, locale = "tr" }: Props)
           ‹
         </button>
         <div className="ub-pdp-related__track" ref={trackRef}>
-          {items.map((p) => (
+          {items.map((p) => {
+            const { amount, vat } = splitUrbanBarPrice(p.price, locale);
+            return (
             <Link key={p.href} href={p.href} className="ub-pdp-related__card">
               <span className="ub-pdp-related__img">
                 {p.image ? (
@@ -45,10 +48,20 @@ export default function BesosUrbanBarPdpRelated({ items, locale = "tr" }: Props)
                   <span className="ub-pdp-related__ph">Urban Bar</span>
                 )}
               </span>
-              <span className="ub-pdp-related__name">{p.name}</span>
-              {p.price ? <span className="ub-pdp-related__price">{p.price}</span> : null}
+              <span className="ub-pdp-related__body">
+                <span className="ub-pdp-related__name">{p.name}</span>
+                {amount ? (
+                  <span className="ub-pdp-related__price">
+                    {amount}
+                    {vat ? <span className="ub-pdp-related__vat"> {vat}</span> : null}
+                  </span>
+                ) : null}
+              </span>
+              <span className="ub-pdp-related__wish" aria-hidden="true">
+                ♡
+              </span>
             </Link>
-          ))}
+          );})}
         </div>
         <button type="button" className="ub-pdp-related__nav ub-pdp-related__nav--next" onClick={() => scroll(1)} aria-label={locale === "en" ? "Next" : "Sonraki"}>
           ›
