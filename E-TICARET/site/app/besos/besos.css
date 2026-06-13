@@ -1895,6 +1895,13 @@ body.bd-page.besos .ub-shop.ub-besos-page {
   border: none;
   overflow: hidden;
 }
+.ub-plp-card__media--has-hover .ub-plp-card__image--default,
+.ub-plp-card__media--has-hover .ub-plp-card__image--hover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
 .ub-plp-card__image {
   width: 100%;
   height: 100%;
@@ -1903,22 +1910,19 @@ body.bd-page.besos .ub-shop.ub-besos-page {
 }
 .ub-plp-card__image--default {
   opacity: 1;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.35s ease;
 }
 .ub-plp-card__image--hover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.35s ease;
 }
-.ub-plp-card:hover .ub-plp-card__image--default {
+.ub-plp-card__media--has-hover:hover .ub-plp-card__image--default,
+.ub-plp-card__media--has-hover:focus-visible .ub-plp-card__image--default {
   opacity: 0;
 }
-.ub-plp-card:hover .ub-plp-card__image--hover {
+.ub-plp-card__media--has-hover:hover .ub-plp-card__image--hover,
+.ub-plp-card__media--has-hover:focus-visible .ub-plp-card__image--hover {
   opacity: 1;
 }
 .ub-plp-card__ph {

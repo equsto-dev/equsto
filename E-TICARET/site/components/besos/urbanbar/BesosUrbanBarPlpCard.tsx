@@ -1,12 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useRef, useState, type MouseEvent } from "react";
-import Script from "next/script";
-import { besosAssetPath } from "@/lib/besos/asset-path";
+import { useState, type MouseEvent } from "react";
 import type { BesosLocale } from "@/lib/besos/locale";
-import type { BesosUrbanBarProduct } from "@/lib/besos/urbanbar/types";
+import { resolveUrbanBarPlpImages } from "@/lib/besos/urbanbar/plp-images";
 import { splitUrbanBarPrice } from "@/lib/besos/urbanbar/price";
+import type { BesosUrbanBarProduct } from "@/lib/besos/urbanbar/types";
 
 type CartItem = {
   n: string;
@@ -24,7 +23,7 @@ type Props = {
 
 export default function BesosUrbanBarPlpCard({ product, locale = "tr", cartReady = false }: Props) {
   const [qty, setQty] = useState(1);
-  const img = product.imageUrl || (product.image ? besosAssetPath(product.image) : "");
+  const { defaultUrl: imgDefault, hoverUrl: imgHover } = resolveUrbanBarPlpImages(product);
   const pdpHref = product.besosHref || product.shopHref || "#";
   const { amount, vat } = splitUrbanBarPrice(product.price || "", locale);
   const inStock = product.inStock !== false;
@@ -41,7 +40,7 @@ export default function BesosUrbanBarPlpCard({ product, locale = "tr", cartReady
     b: product.vendor || "Urban Bar",
     c: product.groupLabelTr || product.sectionLabelTr || "",
     p: product.price || "",
-    img: img.startsWith("http") ? img : img || undefined,
+    img: imgDefault.startsWith("http") ? imgDefault : imgDefault || undefined,
   };
 
   function addToCart(e: MouseEvent<HTMLButtonElement>) {
@@ -59,10 +58,32 @@ export default function BesosUrbanBarPlpCard({ product, locale = "tr", cartReady
 
   return (
     <article className="ub-plp-card">
-      <Link className="ub-plp-card__media" href={pdpHref}>
-        {img ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img src={img} alt={product.name} loading="lazy" decoding="async" />
+      <Link
+        className={`ub-plp-card__media${imgHover ? " ub-plp-card__media--has-hover" : ""}`}
+        href={pdpHref}
+      >
+        {imgDefault ? (
+          <>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={imgDefault}
+              alt={product.name}
+              className="ub-plp-card__image ub-plp-card__image--default"
+              loading="lazy"
+              decoding="async"
+            />
+            {imgHover ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={imgHover}
+                alt=""
+                aria-hidden="true"
+                className="ub-plp-card__image ub-plp-card__image--hover"
+                loading="eager"
+                decoding="async"
+              />
+            ) : null}
+          </>
         ) : (
           <span className="ub-plp-card__ph">Urban Bar</span>
         )}

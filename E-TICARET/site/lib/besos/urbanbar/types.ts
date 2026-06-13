@@ -52,6 +52,7 @@ export type BesosUrbanBarProduct = {
   image?: string;
   imageUrl?: string;
   imageUrls?: string[];
+  plpHoverImageUrl?: string;
   images?: string[];
   price?: string;
   fiyat_tl?: number;
