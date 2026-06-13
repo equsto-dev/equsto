@@ -4,6 +4,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { getSetUstuTipContext, mapSetUstuTip } from "./ozti-set-ustu-tip.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "../..");
 
@@ -575,10 +576,138 @@ export function mapOztiPisirmeCategory(row) {
   return slugify(row.kategori) || "diger";
 }
 
+/** GN küvet / gastronorm kap — küvetler PLP ve set üstü alt kategori */
+export function isOztiGnKuvetRow(row) {
+  if (isOztiBainMarieKap(row)) return true;
+  const hay = foldTr(
+    [row.kategori, row.urun_tanimi, row.name, ...(row.kategori_yolu || [])].join(" "),
+  );
+  if (
+    /gastronorm|gn\s*kuvet|gn\s*küvet|standart\s*gn|kose\s*desenli|yapismaz\s*kaplamali|polipropilen.*kuvet|polikarbonat.*kuvet|delikli.*kuvet|sapli.*kuvet|gastronorm\s*kapak|gn\s*servis\s*tepsi|karistirma\s*kap|suzgec|süzgeç/i.test(
+      hay,
+    )
+  ) {
+    return true;
+  }
+  return /\bgn\s*\d{1,2}\s*\/\s*\d{1,2}/.test(hay);
+}
+
+/** GN küvet — vitrin category slug (küvetler PLP filtresi) */
+export function mapOztiGnKuvetCategory(row) {
+  const kat = String(row.kategori || "").toLocaleUpperCase("tr");
+  if (kat) {
+    const slug = slugify(row.kategori);
+    if (
+      /kuvet|gastronorm-kapak|bain-marie-celik|polipropilen-gastronorm|polikarbonat-gastronorm|karistirma-kaplari|gn-servis-tepsi|delikli-gastronom|kose-desenli|yapismaz-kaplamali|sapli-gastronorm/.test(
+        slug,
+      )
+    ) {
+      return slug;
+    }
+  }
+  const hay = foldTr(`${row.urun_tanimi || row.name || ""} ${kat}`);
+  if (/yapismaz|yapışmaz/.test(hay)) return "gn-kuvetler-yapismaz-kaplamali";
+  if (/delikli.*kose|kose.*delikli/.test(hay)) return "delikli-kose-desenli-gastronorm-kuvetler";
+  if (/delikli/.test(hay)) return "delikli-gastronom-kuvetler";
+  if (/kose|köşe/.test(hay)) return "kose-desenli-gastronorm-kuvetler";
+  if (/sapli|saplı/.test(hay)) return "sapli-gastronorm-kuvetler";
+  if (/polipropilen|\bpp\b/.test(hay)) return "polipropilen-gastronorm-kuvetler";
+  if (/polikarbonat|\bpc\b/.test(hay)) return "polikarbonat-gastronorm-kuvetler";
+  if (/kapak/.test(hay)) return "gastronorm-kapaklar";
+  if (/servis\s*tepsi/.test(hay)) return "gn-servis-tepsileri";
+  if (/karistirma|suzgec|süzgeç/.test(hay)) return "karistirma-kaplari-ve-suzgecler";
+  return "standart-gastronorm-kuvetler";
+}
+
 /** Set üstü dept vitrin kategorisi */
 export function mapOztiSetUstuCategory(row) {
   if (isOztiBainMarieKap(row)) return "bain-marie-celik-saklama-kaplari";
-  return slugify(row.kategori) || "diger";
+  if (isOztiGnKuvetRow(row)) return mapOztiGnKuvetCategory(row);
+  const kat =
+    row.kategori ||
+    (Array.isArray(row.kategori_yolu) ? row.kategori_yolu[row.kategori_yolu.length - 1] : null);
+  const ctx = getSetUstuTipContext();
+  return mapSetUstuTip(kat, ctx.index, ctx.nav);
+}
+
+/** Hazırlık dept vitrin kategorisi (?tip= eşlemesi) */
+export function mapOztiHazirlikCategory(row) {
+  const kod = normKod(row.urun_kodu || row.sku);
+  const name = String(row.urun_tanimi || row.name || "");
+  const kat = String(
+    row.kategori ||
+      (Array.isArray(row.kategori_yolu) ? row.kategori_yolu[row.kategori_yolu.length - 1] : "") ||
+      "",
+  );
+  const hay = foldTr(`${name} ${kod} ${kat}`);
+  const katU = kat.toLocaleUpperCase("tr");
+
+  if (/^RC\.|robot\s*coupe/i.test(kod) || /robot\s*coupe/i.test(name)) {
+    if (/disk|bıçak|bicak|aksesuar|yedek|parça|parca|tabak|kase|kep|kapak/i.test(hay))
+      return "robot-coupe-aksesuarlari";
+    if (/el\s*blender|el\s*mikser|micromix|mp\d|cmp/i.test(hay)) return "robot-coupe-el-mikserleri";
+    if (/sebze|dograma|dograma|blixer|mutfak\s*robot/i.test(hay)) return "sebze-dograma-makineleri";
+    return "robot-coupe-aksesuarlari";
+  }
+  if (/vakum/i.test(hay) || /VAKUM/i.test(katU)) return "vakum-makinesi";
+  if (/sous\s*vide/i.test(hay)) return "sous-vide";
+  if (/kıyma|kiyma|et\s*kıyma/i.test(hay) || /KIYMA/i.test(katU)) return "kiyma_makinesi";
+  if (/kemik\s*testere/i.test(hay)) return "et_kemik_testeresi";
+  if (/kütük|kutuk/i.test(hay)) return "et_kutugu";
+  if (/hamur|spiral|planet|tulumba|şekillendir|sekillendir|köfte\s*şekil/i.test(hay) || /HAMUR/i.test(katU))
+    return "hamur-hazirlik";
+  if (/sebze|doğrama|dograma|patates\s*soyma|dilimleme/i.test(hay) || /SEBZE|DOĞRAMA|DILIMLEME/i.test(katU))
+    return "sebze-dograma";
+  if (/et\s*hazırlık|kasap/i.test(hay) || /ET\s*HAZIRLIK/i.test(katU)) return "et-hazirlik";
+  const slug = slugify(kat);
+  return slug && slug !== "diger" ? slug : "diger";
+}
+
+/** Soğutma dept vitrin kategorisi */
+export function mapOztiSogutmaCategory(row) {
+  const kod = normKod(row.urun_kodu || row.sku);
+  const name = String(row.urun_tanimi || row.name || "");
+  const kat = String(row.kategori || "");
+  const hay = foldTr(`${name} ${kod} ${kat}`);
+  if (/^9805\.|buz\s*mak|ice\s*maker|hoshizaki|simag/i.test(hay)) return "buz-makinesi";
+  if (/tezgah\s*tip|tezgahalt|counter\s*top/i.test(hay)) return "tezgah-tipi-buzdolabi";
+  if (/make\s*up|makyaj/i.test(hay)) return "make-up-dolabi";
+  if (/dik\s*tip|upright/i.test(hay)) return "dik-tip-buzdolap";
+  if (/derin\s*dondur|freezer/i.test(hay)) return "derin-dondurucu";
+  if (/blast|şok\s*so[gğ]ut|sok\s*sogut|chiller/i.test(hay)) return "blast-chiller";
+  if (/so[gğ]uk\s*oda|cold\s*room/i.test(hay)) return "soguk-oda";
+  if (/şarap|sarap|wine/i.test(hay)) return "sarap-dolabi";
+  if (/dry\s*age|olgunlaştır/i.test(hay)) return "dry_age_dolabi";
+  if (/buzdolab|buz\s*dolab/i.test(hay)) return "dik-tip-buzdolap";
+  const slug = slugify(kat);
+  if (slug === "buz-makineleri") return "buz-makinesi";
+  return slug && slug !== "diger" ? slug : "sogutma-ekipmanlari";
+}
+
+/** Tezgah dept vitrin kategorisi */
+export function mapOztiTezgahCategory(row) {
+  const kat = String(
+    row.kategori ||
+      (Array.isArray(row.kategori_yolu) ? row.kategori_yolu[row.kategori_yolu.length - 1] : "") ||
+      "",
+  ).toLocaleUpperCase("tr");
+  if (/ARA\s*TEZGAH/i.test(kat)) return "taban-ve-ara-rafli";
+  if (/DOLAP/i.test(kat)) return "dolapli-tezgah";
+  return "taban-rafli";
+}
+
+/** Set üstü vitrininde yanlış dept’te kalan Öztiryakiler satırları */
+export function correctOztiMisplacedDept(row, dept) {
+  const katU = String(
+    row.kategori ||
+      (Array.isArray(row.kategori_yolu) ? row.kategori_yolu[row.kategori_yolu.length - 1] : "") ||
+      row.urun_alt_kategori ||
+      "",
+  ).toLocaleUpperCase("tr");
+  if (/PATATES|EKMEK\s*D[Iİ]L[Iİ]M|P[ÜU]RE\s*MAK|ET\s*KIYMA|D[Iİ]L[Iİ]MLE/i.test(katU)) return "hazirlik";
+  if (/SU\s*SEB[Iİ]L|DE[GĞ][Iİ]RMEN|BAR\s*BLENDER/i.test(katU)) return "icecek";
+  if (/ARA\s*TEZGAH|ARATEZGAH/i.test(katU)) return "tezgah";
+  return dept;
 }
 
 /** İçecek dept alt kategori (facet) */
@@ -960,6 +1089,78 @@ export function oztiPricingLines(row, kurTry, opts) {
 
 export function isOztiBrand(row) {
   return /öztiryaki|oztiryaki/i.test(String(row.brand || ""));
+}
+
+/** oztiryakiler.com.tr yok — PDF/katalog açıklaması yedek */
+export function applyOztiCatalogFallbackDescription(row, pdfEntry) {
+  if (row.ozti_web_description) return false;
+  const src = {
+    urun_kodu: row.urun_kodu || row.sku,
+    urun_tanimi: row.urun_tanimi || row.name,
+    kategori: row.kategori,
+    kategori_yolu: row.kategori_yolu,
+    barkod: row.barkod,
+  };
+  const bullets = pdfBulletLines(pdfEntry, src.urun_kodu);
+  const aciklama = buildAciklama(src, pdfEntry, bullets);
+  if (!aciklama || aciklama.length < 12) return false;
+
+  row.description = aciklama;
+  row.ozti_description_source = pdfEntry ? "katalog-pdf" : "fiyat-listesi";
+  row.ozti_description_at = new Date().toISOString().slice(0, 10);
+  if (!row.aciklama) row.aciklama = aciklama;
+
+  const marker = `\n\nÜrün açıklaması (${row.ozti_description_source})\n`;
+  const baseSpecs = String(row.specs || "").split("\n\nÜrün açıklaması")[0].trim();
+  if (!baseSpecs.includes(aciklama.slice(0, 40))) {
+    row.specs = `${baseSpecs}${marker}${aciklama}`.trim();
+  }
+  return true;
+}
+
+/** oztiryakiler.com.tr WP REST / PDP açıklamasını katalog satırına yazar */
+export function applyOztiWebDescription(row, payload) {
+  if (!payload?.description) return false;
+
+  const bullets = Array.isArray(payload.bullets) ? payload.bullets : [];
+  const specs = Array.isArray(payload.specs) ? payload.specs : [];
+
+  const tech = [...(row.teknik_ozellikler || [])];
+  for (const line of specs) {
+    const t = String(line || "").trim();
+    if (!t) continue;
+    if (!tech.some((x) => String(x).trim() === t)) tech.push(t);
+  }
+  for (const line of bullets) {
+    const t = String(line || "").trim();
+    if (!t || t.length < 8) continue;
+    const norm = t.replace(/^•\s*/, "");
+    if (/^(genişlik|derinlik|yükseklik|güç|en \(mm\)|boy \(mm\))/i.test(norm)) {
+      if (!tech.some((x) => String(x).trim() === norm)) tech.push(norm);
+    }
+  }
+  row.teknik_ozellikler = tech;
+
+  row.description = String(payload.description).trim();
+  row.ozti_web_description = row.description;
+  if (payload.url) row.ozti_web_url = payload.url;
+  if (payload.wpId) row.ozti_web_id = payload.wpId;
+  if (payload.slug) row.ozti_web_slug = payload.slug;
+  row.ozti_description_source = payload.source || "oztiryakiler.com.tr";
+  row.ozti_description_at = new Date().toISOString().slice(0, 10);
+
+  const marker = `\n\nÜrün açıklaması (${row.ozti_description_source})\n`;
+  const baseSpecs = String(row.specs || "").split("\n\nÜrün açıklaması")[0].trim();
+  if (!baseSpecs.includes(row.description.slice(0, 40))) {
+    row.specs = `${baseSpecs}${marker}${row.description}`.trim();
+  }
+
+  const lead = bullets[0] || row.description.replace(/^•\s*/, "").split("\n")[0];
+  if (lead) {
+    row.aciklama = `${row.name}\n\n${lead}\n\nKategori: ${row.category || ""}`.trim();
+  }
+
+  return true;
 }
 
 const OZTI_AX_BASE = "https://oztiryakiler.com.tr/ax-images/images";
