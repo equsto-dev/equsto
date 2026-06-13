@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Urban Bar → Besos sınıflandırılmış katalog
+ * Urban Bar → Besos sınıflandırılmış katalog (urbanbar.com PDP detayları dahil)
  *   node scripts/build-urbanbar-besos-catalog.mjs
  */
 import fs from "node:fs";
@@ -12,21 +12,38 @@ import {
   sectionDef,
   groupDef,
 } from "./lib/urbanbar-besos-taxonomy.mjs";
+import {
+  mergeSpecifications,
+  parseDescriptionHtml,
+  variantFacts,
+} from "./lib/parse-urbanbar-pdp-html.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DEPT_DIR = path.join(ROOT, "public/data/dept");
 const WEB_CATALOG = path.join(ROOT, "scripts/data/urbanbar/urbanbar-web-catalog.json");
+const PDP_DETAILS = path.join(ROOT, "scripts/data/urbanbar/urbanbar-pdp-details.json");
 const OUT = path.join(ROOT, "public/data/urbanbar-besos-catalog.json");
 const KAYNAK = "urbanbar-web";
 
-function shopifyHeroByHandle() {
+function loadWebByHandle() {
   const map = new Map();
   if (!fs.existsSync(WEB_CATALOG)) return map;
   const raw = JSON.parse(fs.readFileSync(WEB_CATALOG, "utf8"));
   for (const p of raw.products || []) {
-    const url = p.images?.[0];
-    if (p.handle && url) map.set(p.handle, url);
+    if (p.handle) map.set(p.handle, p);
   }
+  return map;
+}
+
+function loadPdpDetailsByHandle() {
+  const map = new Map();
+  if (!fs.existsSync(PDP_DETAILS)) return map;
+  try {
+    const raw = JSON.parse(fs.readFileSync(PDP_DETAILS, "utf8"));
+    for (const [handle, row] of Object.entries(raw.byHandle || {})) {
+      map.set(handle, row);
+    }
+  } catch (_) {}
   return map;
 }
 
@@ -53,7 +70,7 @@ function besosHref(section, handle, equstoId) {
   return `/besos/${sec}/${encodeURIComponent(slug)}`;
 }
 
-function toProduct(row, taxonomy, shopifyMap) {
+function toProduct(row, taxonomy, webByHandle, pdpByHandle) {
   const hit = classifyUrbanBarBesos(
     {
       catTags: row.urbanbar_cat_tags,
@@ -70,13 +87,30 @@ function toProduct(row, taxonomy, shopifyMap) {
   const grp = groupDef(hit.section, hit.group, taxonomy);
 
   const handle = row.urbanbar_handle || "";
-  const shopifyImage = handle ? shopifyMap.get(handle) : null;
+  const web = handle ? webByHandle.get(handle) : null;
+  const pdp = handle ? pdpByHandle.get(handle) : null;
+
+  const descriptionHtml = web?.descriptionHtml || "";
+  const parsed = parseDescriptionHtml(descriptionHtml);
+  const variant = variantFacts(web?.variants);
+
+  const imageUrls = [];
+  if (web?.images?.length) {
+    for (const u of web.images) if (u && !imageUrls.includes(u)) imageUrls.push(u);
+  } else if (row.shopify_image) {
+    imageUrls.push(row.shopify_image);
+  }
+
+  const specifications = mergeSpecifications(
+    pdp?.specifications || [],
+    variant.variantSpecs || [],
+  );
 
   return {
     id: handle || row.id,
     equstoId: row.id,
     handle,
-    code: row.sku || row.model || handle || row.id,
+    code: variant.sku || row.sku || row.model || handle || row.id,
     name: row.name,
     section: hit.section,
     group: hit.group,
@@ -84,19 +118,30 @@ function toProduct(row, taxonomy, shopifyMap) {
     sectionLabelEn: sec?.labelEn || hit.section,
     groupLabelTr: grp?.labelTr || hit.group,
     groupLabelEn: grp?.labelEn || hit.group,
-    description: row.aciklama || "",
+    description: web?.description || row.aciklama || "",
+    descriptionHtml,
+    introHtml: parsed.introHtml,
+    features: parsed.features,
+    featuresHtml: parsed.featuresHtml,
+    specifications,
+    specificationsHtml: pdp?.specificationsHtml || "",
+    productCareHtml: pdp?.productCareHtml || "",
+    safetyLabelsHtml: pdp?.safetyLabelsHtml || "",
+    inStock: pdp?.inStock ?? variant.available ?? true,
     image: row.images?.[0],
-    imageUrl: shopifyImage || undefined,
+    imageUrl: imageUrls[0] || undefined,
+    imageUrls,
     images: row.images || [],
     price: row.price,
     fiyat_tl: row.fiyat_tl,
-    priceGbp: row.liste_fiyati_gbp,
-    vendor: row.oem_brand || row.brand,
-    catTags: row.urbanbar_cat_tags || [],
-    collections: row.urbanbar_collections || [],
+    priceGbp: variant.priceGbp ?? row.liste_fiyati_gbp,
+    vendor: row.oem_brand || row.brand || web?.vendor,
+    catTags: row.urbanbar_cat_tags || web?.catTags || [],
+    collections: row.urbanbar_collections || web?.collections?.map((c) => c.handle || c) || [],
+    collectionPath: web?.collectionPath || "",
     shopHref: shopHref(row),
     besosHref: besosHref(hit.section, handle, row.id),
-    sourceUrl: row.kaynak_url,
+    sourceUrl: web?.url || row.kaynak_url,
   };
 }
 
@@ -140,10 +185,15 @@ function groupCatalog(products, taxonomy) {
 
 function main() {
   const taxonomy = loadUrbanBarBesosTaxonomy();
-  const shopifyMap = shopifyHeroByHandle();
+  const webByHandle = loadWebByHandle();
+  const pdpByHandle = loadPdpDetailsByHandle();
   const rows = readDeptRows();
-  const products = rows.map((r) => toProduct(r, taxonomy, shopifyMap)).filter(Boolean);
+  const products = rows.map((r) => toProduct(r, taxonomy, webByHandle, pdpByHandle)).filter(Boolean);
   const skipped = rows.length - products.length;
+
+  const withSpecs = products.filter((p) => p.specifications?.length).length;
+  const withCare = products.filter((p) => p.productCareHtml).length;
+  const withFeatures = products.filter((p) => p.features?.length).length;
 
   const catalog = {
     brand: taxonomy.brand,
@@ -156,11 +206,11 @@ function main() {
 
   fs.writeFileSync(OUT, JSON.stringify(catalog, null, 2), "utf8");
 
-  const bySection = Object.fromEntries(
-    catalog.sections.map((s) => [s.key, s.productCount]),
-  );
+  const bySection = Object.fromEntries(catalog.sections.map((s) => [s.key, s.productCount]));
   console.log(`[urbanbar-besos] ${products.length} ürün → ${OUT}`);
   console.log(`  kaynak satır: ${rows.length}, besos dışı/atlanan: ${skipped}`);
+  console.log(`  özellikler: ${withFeatures}, specs: ${withSpecs}, bakım: ${withCare}`);
+  console.log(`  pdp önbellek: ${pdpByHandle.size} handle`);
   console.log(`  bölüm:`, bySection);
 }
 

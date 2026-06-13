@@ -1,12 +1,7 @@
 import { notFound, redirect } from "next/navigation";
-import Script from "next/script";
-import BesosUrbanBarPdpBoot from "@/components/besos/urbanbar/BesosUrbanBarPdpBoot";
-import BesosUrbanBarProductScripts from "@/components/besos/urbanbar/BesosUrbanBarProductScripts";
+import BesosUrbanBarPdp, { buildUrbanBarPdpView } from "@/components/besos/urbanbar/BesosUrbanBarPdp";
 import JsonLdScript from "@/components/seo/JsonLdScript";
 import ShopFooterHost from "@/components/shop/ShopFooterHost";
-import ShopProductMain from "@/components/shop/ShopProductMain";
-import ShopProductPdpSeed from "@/components/shop/ShopProductPdpSeed";
-import ShopStyles from "@/components/shop/ShopStyles";
 import type { BesosLocale } from "@/lib/besos/locale";
 import {
   besosUrbanBarProductSlug,
@@ -15,8 +10,8 @@ import {
 import {
   buildBesosUrbanBarJsonLd,
   loadBesosUrbanBarPdpBundle,
+  urbanBarToPdpSsr,
 } from "@/lib/besos/urbanbar/pdp-server";
-import { SHOP_ASSET_V } from "@/lib/shop/assets";
 
 export async function renderBesosUrbanBarPdpPage(
   sectionKey: BesosUrbanBarSectionKey,
@@ -35,21 +30,14 @@ export async function renderBesosUrbanBarPdpPage(
     redirect(`${prefix}/${sec}/${encodeURIComponent(canonicalSlug)}`);
   }
 
-  const jsonLd = buildBesosUrbanBarJsonLd(bundle.ssr);
+  const view = buildUrbanBarPdpView(bundle.product, sectionKey, locale);
+  const ssr = urbanBarToPdpSsr(bundle.product, sectionKey, canonicalSlug, locale);
+  const jsonLd = buildBesosUrbanBarJsonLd(ssr);
 
   return (
     <>
-      <ShopProductPdpSeed seed={bundle.seed} />
       <JsonLdScript data={jsonLd} />
-      <Script id="besos-urbanbar-pdp-body-class" strategy="beforeInteractive">
-        {`(function(){try{document.body.classList.add("eq-besos-urbanbar-pdp","eq-shop");}catch(e){}})();`}
-      </Script>
-      {/* eslint-disable-next-line @next/next/no-css-tags */}
-      <link rel="stylesheet" href={`/eq-product-page.css?v=${SHOP_ASSET_V}`} precedence="high" />
-      <ShopStyles variant="product" />
-      <ShopProductMain ssr={bundle.ssr} />
-      <BesosUrbanBarPdpBoot />
-      <BesosUrbanBarProductScripts />
+      <BesosUrbanBarPdp view={view} />
       <ShopFooterHost />
     </>
   );
