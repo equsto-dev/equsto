@@ -1,7 +1,7 @@
 import { repairPfosDisplayText } from "@/lib/utf8/repair-turkish-fffd";
 import { isPastaDolabiReferans } from "./caglayan-marka";
 import { isBuzdolabiPfosKalem } from "./portabianco-marka";
-import { isDuvarRafiReferans } from "../referans/duvar-raf-match";
+import { isDuvarRafiReferans } from "../referans/duvar-raf-heuristics";
 
 /** Özel imalat / atölye — katalog markası yok; teklifte Equsto */
 export const OZEL_IMALAT_MARKA = "Equsto";
