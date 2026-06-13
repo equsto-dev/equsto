@@ -28,18 +28,30 @@ export function stripHtml(html) {
 }
 
 const KOD_IN_HTML =
-  /(?:Ürün Kodu|Product Code|URUN\s*KODU)<\/th>\s*[\s\S]{0,40}?([0-9]{2,4}\.[A-Z0-9][A-Z0-9.\-]{2,48})/i;
+  /(?:Ürün Kodu|Product Code|URUN\s*KODU)<\/th>\s*[\s\S]{0,80}?([0-9]{2,4}[A-Z0-9]*\.[A-Z0-9][A-Z0-9.\-]{1,48})/i;
 
-/** Slug sonundan kod tahmini — 7865-n1-80908-10 → 7865.N1.80908.10 */
+/** Slug sonundan kod tahmini — 7865-n1-80908-10 → 7865.N1.80908.10; 79e3-46nmv-03 → 79E3.46NMV.03 */
 export function kodFromOztiSlug(slug) {
   const s = String(slug || "").trim();
+  const alnum = s.match(/-(\d{2,4}[a-z0-9]*)-((?:[a-z0-9]+-)+[a-z0-9]+)$/i);
+  if (alnum) {
+    return normKod(`${alnum[1]}.${alnum[2].replace(/-/g, ".")}`);
+  }
   const m = s.match(/(\d{4})-([a-z0-9]+(?:-[a-z0-9]+)*)$/i);
   if (!m) return "";
   return normKod(`${m[1]}.${m[2].replace(/-/g, ".")}`);
 }
 
 export function extractOztiKodFromHtml(html, slug) {
-  const m = String(html || "").match(KOD_IN_HTML);
+  const src = String(html || "");
+  const tdMatch = src.match(
+    /<th[^>]*>\s*(?:Ürün Kodu|Product Code|URUN\s*KODU)\s*<\/th>\s*<td[^>]*>([\s\S]*?)<\/td>/i,
+  );
+  if (tdMatch) {
+    const kod = stripHtml(tdMatch[1]).replace(/\s+/g, "");
+    if (kod && /[0-9A-Z]/i.test(kod)) return normKod(kod);
+  }
+  const m = src.match(KOD_IN_HTML);
   if (m) return normKod(m[1]);
   return kodFromOztiSlug(slug);
 }
