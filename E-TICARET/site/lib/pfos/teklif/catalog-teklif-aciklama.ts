@@ -1,10 +1,12 @@
 /** Müşteriye/teklife gidecek açıklama — fiyat satırları hariç */
 
+import { decodeHtmlEntities } from "@/lib/text/decode-html-entities";
+
 const INTERNAL_LINE =
-  /^(liste fiyatı|bayi\b|equsto\b|hesap\s*:|kur\s*:|kaynak\s*:|kategori:|model:|ürün kodu|barkod:)/i;
+  /^(liste fiyatı|bayi\b|equsto\b|hesap\s*:|kur\s*:|kaynak\s*:|kategori:|model:|ürün kodu|barkod:|katalog sayfası)/i;
 
 function isInternalLine(ln: string): boolean {
-  const t = ln.trim();
+  const t = decodeHtmlEntities(ln).trim();
   if (!t) return true;
   if (INTERNAL_LINE.test(t)) return true;
   if (/iskonto/i.test(t) && /liste|eur|bayi|kalan|%/i.test(t)) return true;
@@ -12,10 +14,55 @@ function isInternalLine(ln: string): boolean {
   return false;
 }
 
+function isHeadingLine(ln: string): boolean {
+  const t = decodeHtmlEntities(ln)
+    .replace(/^[•\-–—*·]+\s*/, "")
+    .trim()
+    .toLocaleLowerCase("tr-TR");
+  return (
+    t === "genel özellikler" ||
+    t === "teknik özellikler" ||
+    /^genel\s+özellikler\b/.test(t) ||
+    /^teknik\s+özellikler\b/.test(t)
+  );
+}
+
+function isDescriptionBlob(ln: string): boolean {
+  const t = decodeHtmlEntities(ln);
+  if (t.length < 140) return false;
+  return (
+    /\s\*\s/.test(t) ||
+    /genel\s*özellikler/i.test(t) ||
+    (t.split(/\s*\*\s+/).length > 4 && t.length > 200)
+  );
+}
+
+function dedupeLines(lines: string[]): string[] {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  for (const ln of lines) {
+    const t = decodeHtmlEntities(ln).trim();
+    if (!t || isHeadingLine(t) || isDescriptionBlob(t) || isInternalLine(t)) continue;
+    const key = t.toLocaleLowerCase("tr-TR");
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(t);
+  }
+  return out;
+}
+
+function formatBullets(lines: string[], prefix: "*" | "•" = "*"): string {
+  return dedupeLines(lines)
+    .map((l) => {
+      const t = l.replace(/^[•\-–—*·]+\s*/, "").trim();
+      return t.startsWith(prefix) ? t : `${prefix} ${t}`;
+    })
+    .join("\n")
+    .trim();
+}
+
 function cleanLines(lines: string[]): string[] {
-  return lines
-    .map((l) => String(l || "").trim())
-    .filter((l) => l && !isInternalLine(l));
+  return dedupeLines(lines.map((l) => String(l || "").trim()).filter(Boolean));
 }
 
 export type CatalogAciklamaInput = {
@@ -28,58 +75,104 @@ export type CatalogAciklamaInput = {
 };
 
 function splitShopDescriptionBullets(shop: string): string[] {
-  const raw = shop.trim();
+  const raw = decodeHtmlEntities(shop).trim();
   if (!raw) return [];
+
+  let general = raw.split(/TEKNİK\s*ÖZELLİKLER/i)[0].trim();
+  general = general
+    .replace(/^[•\-–—*·]+\s*/g, "")
+    .replace(/^genel\s*özellikler\s*/i, "")
+    .trim();
+
   let parts: string[];
-  if (/\n\s*[•·\-–—*]/.test(raw)) {
-    parts = raw.split(/\n\s*[•·\-–—*]\s*/);
-  } else if (/\s\*\s/.test(raw)) {
-    parts = raw.split(/\s*\*\s+/);
+  if (/\n\s*[•·\-–—*]/.test(general)) {
+    parts = general.split(/\n\s*[•·\-–—*]\s*/);
+  } else if (/\s\*\s/.test(general)) {
+    parts = general.split(/\s*\*\s+/);
   } else {
-    parts = raw.split(/\r?\n/);
+    parts = general.split(/\r?\n/);
   }
   return parts
     .map((l) => l.replace(/^[•\-–—*·]+\s*/, "").trim())
-    .filter((l) => l.length > 3 && !isInternalLine(l));
+    .filter((l) => l.length > 2);
 }
 
 /** Katalog satırından PFOS teklif `aciklama` metni */
-export function buildCatalogTeklifAciklama(row: CatalogAciklamaInput | null | undefined): string {
+export function buildCatalogTeklifAciklama(
+  row: CatalogAciklamaInput | null | undefined,
+): string {
   if (!row) return "";
 
-  const shop = String(
-    row.ozti_web_description || row.inoksan_shop_description || row.description || "",
+  const shop = decodeHtmlEntities(
+    String(
+      row.ozti_web_description ||
+        row.inoksan_shop_description ||
+        row.description ||
+        "",
+    ),
   ).trim();
+
   if (shop.length >= 40) {
     const bullets = splitShopDescriptionBullets(shop);
-    if (bullets.length > 1) {
-      return bullets.map((l) => `* ${l}`).join("\n").trim();
+    if (bullets.length > 0) {
+      return formatBullets(bullets, "*");
     }
-    return shop
-      .split(/\r?\n/)
-      .map((l) => l.replace(/^[•\-–—*·]+\s*/, "").trim())
-      .filter((l) => l && !isInternalLine(l))
-      .map((l) => (l.startsWith("*") ? l : `* ${l}`))
-      .join("\n")
-      .trim();
   }
 
-  const teknik = cleanLines(Array.isArray(row.teknik_ozellikler) ? row.teknik_ozellikler : []);
+  const teknikRaw = Array.isArray(row.teknik_ozellikler) ? row.teknik_ozellikler : [];
+  const teknik = cleanLines(teknikRaw);
   if (teknik.length) {
-    return teknik.map((l) => (l.startsWith("•") ? l : `• ${l}`)).join("\n");
+    const adLead = decodeHtmlEntities(String(row.aciklama || "")).trim();
+    const bullets = [...teknik];
+    if (
+      adLead &&
+      !isInternalLine(adLead) &&
+      bullets.length < 5 &&
+      !bullets.some((b) =>
+        b.toLocaleLowerCase("tr-TR").includes(adLead.toLocaleLowerCase("tr-TR").slice(0, 24)),
+      )
+    ) {
+      bullets.unshift(adLead);
+    }
+    return formatBullets(bullets, "•");
   }
 
-  const fromSpecs = String(row.specs || "")
+  const fromSpecs = decodeHtmlEntities(String(row.specs || ""))
     .split(/\r?\n/)
-    .filter((l) => l.trim() && !isInternalLine(l))
-    .filter((l) => !/^teknik özellikler/i.test(l.trim()))
-    .slice(0, 12);
-  if (fromSpecs.length) return fromSpecs.join("\n");
+    .map((l) => l.trim())
+    .filter((l) => l && !isInternalLine(l))
+    .filter((l) => !/^teknik özellikler/i.test(l));
+  if (fromSpecs.length) {
+    return formatBullets(fromSpecs.slice(0, 12), "•");
+  }
 
-  const lead = String(row.aciklama || "")
+  const lead = decodeHtmlEntities(String(row.aciklama || ""))
     .split(/\r?\n/)
     .map((l) => l.trim())
     .filter(Boolean)
     .filter((l) => !/^kategori:/i.test(l));
-  return lead.slice(0, 6).join("\n");
+  return formatBullets(lead.slice(0, 6), "•");
+}
+
+/** PDF / Excel — HTML entity decode, tekrarları at, satır yapısını koru */
+export function normalizeTeklifAciklamaText(raw: string | null | undefined): string {
+  const decoded = decodeHtmlEntities(String(raw ?? "")).trim();
+  if (!decoded) return "";
+
+  const lines = decoded.split(/\r?\n/);
+  if (lines.length === 1 && /\s\*\s/.test(decoded)) {
+    return formatBullets(decoded.split(/\s*\*\s+/), "*");
+  }
+
+  const bulletLines = lines.flatMap((line) => {
+    const t = line.trim();
+    if (!t) return [];
+    if (/\s\*\s/.test(t) && !t.startsWith("*") && !t.startsWith("•")) {
+      return t.split(/\s*\*\s+/);
+    }
+    return [t];
+  });
+
+  const prefix: "*" | "•" = decoded.includes("•") ? "•" : "*";
+  return formatBullets(bulletLines, prefix);
 }
