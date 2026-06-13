@@ -4,7 +4,7 @@ import {
   pdpSlugAliases,
 } from "@/lib/catalog-product-slug";
 import { loadEkipmanlarJson } from "@/lib/catalog-json";
-import { readJsonFile, dataRel } from "@/lib/legacy-data";
+import { dataRel, readJsonFile } from "@/lib/legacy-data";
 import {
   absoluteAssetUrl,
   cleanDescription,
@@ -59,19 +59,29 @@ export async function findProductForPdp(
 
   const fileDept = urlDeptToFileDept(urlDept);
   const deptRows = await readJsonFile<CatalogRow[]>(dataRel("dept", `${fileDept}.json`));
-  for (const slug of slugCandidates) {
-    if (Array.isArray(deptRows)) {
-      for (const row of deptRows) {
-        if (!row) continue;
-        if (resolveShopDept(row) !== urlDept) continue;
-        if (matchCatalogRowByPathSlug(row, slug)) return { row, dept: urlDept };
-      }
-    }
 
+  const matchInRows = (rows: CatalogRow[] | null | undefined, slug: string) => {
+    if (!Array.isArray(rows)) return null;
+    for (const row of rows) {
+      if (!row || resolveShopDept(row) !== urlDept) continue;
+      if (matchCatalogRowByPathSlug(row, slug)) return row;
+    }
+    return null;
+  };
+
+  for (const slug of slugCandidates) {
+    const deptHit = matchInRows(deptRows, slug);
+    if (deptHit) return { row: deptHit, dept: urlDept };
+  }
+
+  let ekipRows: CatalogRow[] | null = null;
+  for (const slug of slugCandidates) {
     try {
-      const raw = await loadEkipmanlarJson();
-      const rows = Array.isArray(raw) ? (raw as CatalogRow[]) : [];
-      for (const row of rows) {
+      if (!ekipRows) {
+        const raw = await loadEkipmanlarJson();
+        ekipRows = Array.isArray(raw) ? (raw as CatalogRow[]) : [];
+      }
+      for (const row of ekipRows) {
         if (!row || resolveShopDept(row) !== urlDept) continue;
         const cid = String(row.id || "").trim().toLowerCase();
         if (cid && (cid === slug || cid.replace(/__/g, "-") === slug)) {

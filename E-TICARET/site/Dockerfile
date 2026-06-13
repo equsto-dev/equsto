@@ -42,6 +42,7 @@ WORKDIR /app
 ENV NODE_ENV=production \
     PORT=3000 \
     HOSTNAME=0.0.0.0 \
+    NODE_OPTIONS=--max-old-space-size=2560 \
     CHROMIUM_LOCAL_EXEC_PATH=/usr/bin/chromium \
     HOME=/tmp
 

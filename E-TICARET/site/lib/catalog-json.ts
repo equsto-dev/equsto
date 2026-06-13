@@ -1,3 +1,4 @@
+import { dataRel, readJsonFile } from "@/lib/legacy-data";
 import { getSiteOrigin } from "@/lib/site-origin";
 
 function safeDeptSlug(dept: string): string {
@@ -17,9 +18,18 @@ async function fetchDataJson<T>(rel: string): Promise<T> {
   return res.json() as Promise<T>;
 }
 
-/** Vercel Turbopack: path.join(cwd, public/data, …) trace genişlemesi yok — CDN fetch */
+let ekipmanlarCache: Promise<unknown> | null = null;
+
+/** Önce disk (Hetzner/Docker), yoksa origin fetch; tek parse — bellek taşması önleme */
 export async function loadEkipmanlarJson(): Promise<unknown> {
-  return fetchDataJson("ekipmanlar.json");
+  if (!ekipmanlarCache) {
+    ekipmanlarCache = (async () => {
+      const local = await readJsonFile<unknown>(dataRel("ekipmanlar.json"));
+      if (local != null) return local;
+      return fetchDataJson("ekipmanlar.json");
+    })();
+  }
+  return ekipmanlarCache;
 }
 
 export async function loadDeptJson(dept: string): Promise<unknown> {
