@@ -1,8 +1,16 @@
 import Link from "next/link";
+import BesosUrbanBarPdpActions from "@/components/besos/urbanbar/BesosUrbanBarPdpActions";
 import BesosUrbanBarPdpCart from "@/components/besos/urbanbar/BesosUrbanBarPdpCart";
 import BesosUrbanBarPdpGallery from "@/components/besos/urbanbar/BesosUrbanBarPdpGallery";
+import BesosUrbanBarPdpRelated, {
+  type RelatedProduct,
+} from "@/components/besos/urbanbar/BesosUrbanBarPdpRelated";
 import type { BesosLocale } from "@/lib/besos/locale";
-import { besosUrbanBarSectionHref } from "@/lib/besos/urbanbar/catalog";
+import {
+  besosUrbanBarProductHref,
+  besosUrbanBarProductSlug,
+  besosUrbanBarSectionHref,
+} from "@/lib/besos/urbanbar/catalog";
 import type { BesosUrbanBarProduct } from "@/lib/besos/urbanbar/types";
 
 export type BesosUrbanBarPdpView = {
@@ -12,6 +20,7 @@ export type BesosUrbanBarPdpView = {
   homeHref: string;
   sectionHref: string;
   sectionLabel: string;
+  canonicalUrl: string;
   images: string[];
   priceLabel: string;
   cartItem: {
@@ -21,6 +30,7 @@ export type BesosUrbanBarPdpView = {
     p: string;
     img?: string;
   };
+  related: RelatedProduct[];
 };
 
 const UI = {
@@ -32,9 +42,7 @@ const UI = {
   care: { tr: "Ürün Bakımı", en: "Product Care" },
   safety: { tr: "Güvenlik Etiketleri", en: "Product Safety Labels" },
   vat: { tr: "KDV dahil", en: "Incl. VAT" },
-  urbanBar: { tr: "Urban Bar", en: "Urban Bar" },
   besos: { tr: "Besos", en: "Besos" },
-  source: { tr: "Kaynak", en: "Source" },
 };
 
 function ui(key: keyof typeof UI, locale: BesosLocale) {
@@ -46,10 +54,28 @@ function HtmlBlock({ html, className }: { html?: string; className?: string }) {
   return <div className={className} dangerouslySetInnerHTML={{ __html: html }} />;
 }
 
+function formatPriceDisplay(priceLabel: string, locale: BesosLocale): string {
+  const raw = String(priceLabel || "").trim();
+  if (!raw) return "";
+  if (locale === "en") return raw.replace(/KDV dahil/i, "Incl. VAT");
+  return raw;
+}
+
 export default function BesosUrbanBarPdp({ view }: { view: BesosUrbanBarPdpView }) {
-  const { product, locale, homeHref, sectionHref, sectionLabel, images, priceLabel, cartItem } = view;
-  const groupLabel = locale === "en" ? product.groupLabelEn : product.groupLabelTr;
+  const {
+    product,
+    locale,
+    homeHref,
+    sectionHref,
+    sectionLabel,
+    canonicalUrl,
+    images,
+    priceLabel,
+    cartItem,
+    related,
+  } = view;
   const features = product.features?.length ? product.features : null;
+  const price = formatPriceDisplay(priceLabel, locale);
 
   return (
     <main className="besos-page ub-pdp-page">
@@ -62,106 +88,92 @@ export default function BesosUrbanBarPdp({ view }: { view: BesosUrbanBarPdpView 
           <span>{product.name}</span>
         </nav>
 
-        <div className="ub-pdp-grid">
-          <BesosUrbanBarPdpGallery images={images} name={product.name} />
+        <div className="ub-pdp-layout">
+          <div className="ub-pdp-layout__gallery">
+            <BesosUrbanBarPdpGallery images={images} name={product.name} />
+          </div>
 
-          <div className="ub-pdp-summary">
-            <p className="ub-pdp-kicker">{ui("urbanBar", locale)}</p>
+          <div className="ub-pdp-layout__info">
             <h1 className="ub-pdp-title">{product.name}</h1>
 
-            <div className="ub-pdp-meta">
-              {product.code ? (
-                <span className="ub-pdp-sku">
-                  {ui("sku", locale)}: <strong>{product.code}</strong>
-                </span>
-              ) : null}
-              <span className={`ub-pdp-stock${product.inStock === false ? " ub-pdp-stock--out" : ""}`}>
-                {product.inStock === false ? ui("outOfStock", locale) : ui("inStock", locale)}
-              </span>
-            </div>
-
-            {priceLabel ? (
+            {price ? (
               <div className="ub-pdp-price">
-                <span className="ub-pdp-price__amount">{priceLabel}</span>
-                <span className="ub-pdp-price__vat">{ui("vat", locale)}</span>
+                <span className="ub-pdp-price__amount">{price}</span>
               </div>
             ) : null}
 
-            <BesosUrbanBarPdpCart item={cartItem} locale={locale} />
+            <p className={`ub-pdp-stock${product.inStock === false ? " ub-pdp-stock--out" : ""}`}>
+              {product.inStock === false ? ui("outOfStock", locale) : ui("inStock", locale)}
+            </p>
 
-            {groupLabel ? <div className="ub-pdp-group-label">{groupLabel}</div> : null}
+            <BesosUrbanBarPdpCart item={cartItem} locale={locale} inStock={product.inStock !== false} />
+
+            <BesosUrbanBarPdpActions title={product.name} url={canonicalUrl} locale={locale} />
+
+            {product.code ? (
+              <p className="ub-pdp-sku-line">
+                {ui("sku", locale)}: {product.code}
+              </p>
+            ) : null}
+
+            {product.introHtml ? (
+              <HtmlBlock html={product.introHtml} className="ub-pdp-desc ub-pdp-prose" />
+            ) : product.description ? (
+              <p className="ub-pdp-desc">{product.description}</p>
+            ) : null}
+
+            {features ? (
+              <section className="ub-pdp-block">
+                <h2 className="ub-pdp-block__title">{ui("features", locale)}</h2>
+                <ul className="ub-pdp-list">
+                  {features.map((f) => (
+                    <li key={f}>{f}</li>
+                  ))}
+                </ul>
+              </section>
+            ) : product.featuresHtml ? (
+              <section className="ub-pdp-block">
+                <h2 className="ub-pdp-block__title">{ui("features", locale)}</h2>
+                <HtmlBlock html={product.featuresHtml} className="ub-pdp-prose ub-pdp-prose--list" />
+              </section>
+            ) : null}
+
+            {product.specifications?.length ? (
+              <section className="ub-pdp-block">
+                <h2 className="ub-pdp-block__title">{ui("specs", locale)}</h2>
+                <ul className="ub-pdp-list ub-pdp-list--specs">
+                  {product.specifications.map((s) => (
+                    <li key={s.key}>
+                      <strong>{s.key}:</strong>
+                      {s.value}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ) : product.specificationsHtml ? (
+              <section className="ub-pdp-block">
+                <h2 className="ub-pdp-block__title">{ui("specs", locale)}</h2>
+                <HtmlBlock html={product.specificationsHtml} className="ub-pdp-prose ub-pdp-prose--list" />
+              </section>
+            ) : null}
+
+            {product.productCareHtml ? (
+              <section className="ub-pdp-block">
+                <h2 className="ub-pdp-block__title">{ui("care", locale)}</h2>
+                <HtmlBlock html={product.productCareHtml} className="ub-pdp-prose" />
+              </section>
+            ) : null}
+
+            {product.safetyLabelsHtml ? (
+              <details className="ub-pdp-safety">
+                <summary className="ub-pdp-safety__summary">{ui("safety", locale)}</summary>
+                <HtmlBlock html={product.safetyLabelsHtml} className="ub-pdp-prose ub-pdp-safety__body" />
+              </details>
+            ) : null}
           </div>
         </div>
 
-        <div className="ub-pdp-details">
-          {product.introHtml ? (
-            <section className="ub-pdp-section">
-              <HtmlBlock html={product.introHtml} className="ub-pdp-prose" />
-            </section>
-          ) : product.description ? (
-            <section className="ub-pdp-section">
-              <p className="ub-pdp-prose">{product.description}</p>
-            </section>
-          ) : null}
-
-          {features ? (
-            <section className="ub-pdp-section">
-              <h2 className="ub-pdp-section__title">{ui("features", locale)}</h2>
-              <ul className="ub-pdp-features">
-                {features.map((f) => (
-                  <li key={f}>{f}</li>
-                ))}
-              </ul>
-            </section>
-          ) : product.featuresHtml ? (
-            <section className="ub-pdp-section">
-              <h2 className="ub-pdp-section__title">{ui("features", locale)}</h2>
-              <HtmlBlock html={product.featuresHtml} className="ub-pdp-prose ub-pdp-prose--list" />
-            </section>
-          ) : null}
-
-          {product.specifications?.length ? (
-            <section className="ub-pdp-section">
-              <h2 className="ub-pdp-section__title">{ui("specs", locale)}</h2>
-              <dl className="ub-pdp-specs">
-                {product.specifications.map((s) => (
-                  <div key={s.key} className="ub-pdp-specs__row">
-                    <dt>{s.key}</dt>
-                    <dd>{s.value}</dd>
-                  </div>
-                ))}
-              </dl>
-            </section>
-          ) : product.specificationsHtml ? (
-            <section className="ub-pdp-section">
-              <h2 className="ub-pdp-section__title">{ui("specs", locale)}</h2>
-              <HtmlBlock html={product.specificationsHtml} className="ub-pdp-prose ub-pdp-prose--list" />
-            </section>
-          ) : null}
-
-          {product.productCareHtml ? (
-            <section className="ub-pdp-section">
-              <h2 className="ub-pdp-section__title">{ui("care", locale)}</h2>
-              <HtmlBlock html={product.productCareHtml} className="ub-pdp-prose" />
-            </section>
-          ) : null}
-
-          {product.safetyLabelsHtml ? (
-            <section className="ub-pdp-section">
-              <h2 className="ub-pdp-section__title">{ui("safety", locale)}</h2>
-              <HtmlBlock html={product.safetyLabelsHtml} className="ub-pdp-prose" />
-            </section>
-          ) : null}
-
-          {product.sourceUrl ? (
-            <p className="ub-pdp-source">
-              {ui("source", locale)}:{" "}
-              <a href={product.sourceUrl} target="_blank" rel="noopener noreferrer">
-                urbanbar.com
-              </a>
-            </p>
-          ) : null}
-        </div>
+        <BesosUrbanBarPdpRelated items={related} locale={locale} />
       </div>
     </main>
   );
@@ -171,6 +183,8 @@ export function buildUrbanBarPdpView(
   product: BesosUrbanBarProduct,
   sectionKey: "bardaklar" | "bar-ekipman",
   locale: BesosLocale = "tr",
+  relatedProducts: BesosUrbanBarProduct[] = [],
+  origin = "https://equsto.com",
 ): BesosUrbanBarPdpView {
   const prefix = locale === "en" ? "/en" : "";
   const rawImages = product.imageUrls?.length
@@ -183,14 +197,26 @@ export function buildUrbanBarPdpView(
   });
 
   const sectionLabel = locale === "en" ? product.sectionLabelEn : product.sectionLabelTr;
+  const sectionHref = besosUrbanBarSectionHref(sectionKey, locale);
+  const slug = besosUrbanBarProductSlug(product);
+  const pdpPath = besosUrbanBarProductHref(sectionKey, slug, locale);
+  const canonicalUrl = `${origin.replace(/\/$/, "")}${pdpPath}`;
+
+  const related: RelatedProduct[] = relatedProducts.map((p) => ({
+    name: p.name,
+    price: p.price || "",
+    image: p.imageUrl || (p.image?.startsWith("http") ? p.image : p.image ? `/${p.image.replace(/^\.\//, "")}` : undefined),
+    href: p.besosHref || besosUrbanBarProductHref(sectionKey, besosUrbanBarProductSlug(p), locale),
+  }));
 
   return {
     product,
     sectionKey,
     locale,
     homeHref: `${prefix}/besos`,
-    sectionHref: besosUrbanBarSectionHref(sectionKey, locale),
+    sectionHref,
     sectionLabel,
+    canonicalUrl,
     images,
     priceLabel: product.price || "",
     cartItem: {
@@ -200,5 +226,6 @@ export function buildUrbanBarPdpView(
       p: product.price || "",
       img: images[0],
     },
+    related,
   };
 }

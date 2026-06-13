@@ -25,26 +25,40 @@ export default function BesosUrbanBarPdpGallery({ images, name }: Props) {
   if (!current) {
     return (
       <div className="ub-pdp-gallery">
-        <div className="ub-pdp-gallery__main ub-pdp-gallery__main--ph">Urban Bar</div>
+        <div className="ub-pdp-gallery__stage">
+          <div className="ub-pdp-gallery__main ub-pdp-gallery__main--ph">Urban Bar</div>
+        </div>
       </div>
     );
   }
 
   return (
     <div className="ub-pdp-gallery">
-      <div className="ub-pdp-gallery__main-wrap">
+      <div className="ub-pdp-gallery__stage">
         {urls.length > 1 ? (
           <>
-            <button type="button" className="ub-pdp-gallery__nav ub-pdp-gallery__nav--prev" onClick={prev} aria-label="Önceki görsel">
+            <button
+              type="button"
+              className="ub-pdp-gallery__nav ub-pdp-gallery__nav--prev"
+              onClick={prev}
+              aria-label="Önceki görsel"
+            >
               ‹
             </button>
-            <button type="button" className="ub-pdp-gallery__nav ub-pdp-gallery__nav--next" onClick={next} aria-label="Sonraki görsel">
+            <button
+              type="button"
+              className="ub-pdp-gallery__nav ub-pdp-gallery__nav--next"
+              onClick={next}
+              aria-label="Sonraki görsel"
+            >
               ›
             </button>
           </>
         ) : null}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="ub-pdp-gallery__main" src={current} alt={name} />
+        <div className="ub-pdp-gallery__main-wrap">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className="ub-pdp-gallery__main" src={current} alt={name} />
+        </div>
       </div>
       {urls.length > 1 ? (
         <div className="ub-pdp-gallery__thumbs" role="tablist" aria-label="Ürün görselleri">

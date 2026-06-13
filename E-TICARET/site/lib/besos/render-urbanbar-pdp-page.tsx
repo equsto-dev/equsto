@@ -5,6 +5,7 @@ import ShopFooterHost from "@/components/shop/ShopFooterHost";
 import type { BesosLocale } from "@/lib/besos/locale";
 import {
   besosUrbanBarProductSlug,
+  pickUrbanBarRelatedProducts,
   type BesosUrbanBarSectionKey,
 } from "@/lib/besos/urbanbar/catalog";
 import {
@@ -12,6 +13,8 @@ import {
   loadBesosUrbanBarPdpBundle,
   urbanBarToPdpSsr,
 } from "@/lib/besos/urbanbar/pdp-server";
+import { loadBesosUrbanBarCatalog } from "@/lib/besos/urbanbar/load-data";
+import { getSiteOrigin } from "@/lib/site-origin";
 
 export async function renderBesosUrbanBarPdpPage(
   sectionKey: BesosUrbanBarSectionKey,
@@ -38,7 +41,13 @@ export async function renderBesosUrbanBarPdpPage(
     redirect(`${prefix}/${sec}/${encodeURIComponent(canonicalSlug)}`);
   }
 
-  const view = buildUrbanBarPdpView(bundle.product, sectionKey, locale);
+  const view = buildUrbanBarPdpView(
+    bundle.product,
+    sectionKey,
+    locale,
+    pickUrbanBarRelatedProducts(await loadBesosUrbanBarCatalog(), bundle.product),
+    getSiteOrigin(),
+  );
   const ssr = urbanBarToPdpSsr(bundle.product, sectionKey, canonicalSlug, locale);
   const jsonLd = buildBesosUrbanBarJsonLd(ssr);
 
