@@ -19,6 +19,8 @@ import { KONSEPT_LABELS, type Konsept } from "../schemas/pfos.schema";
 import { finalizeKalemlerForTeklif } from "../teklif/assign-poz";
 import { applyNakliyeMontajToKalemler } from "../teklif/nakliye-montaj";
 import { enrichPfosKalemlerGorsel } from "./katalog-gorsel";
+import { enrichEslesmisUrunKw } from "./enrich-eslesmis-kw";
+import { resolveTeklifKw } from "@/lib/catalog/kw-resolve";
 import type { KategoriKodu } from "../schemas/pfos.schema";
 import { isDynamicKonsept } from "./templates";
 import { matchProductForReferansKalem } from "../referans/match-referans-kalem";
@@ -107,7 +109,7 @@ async function buildTemplateKalemler(
         ? item.scale.adet
         : calcAdet(item.scale, m2, template.seatDensity)
       : calcAdet(item.scale, m2, template.seatDensity);
-    const urun = referansListOnly
+    const urunMatched = referansListOnly
       ? await matchProductForReferansKalem({
           urunTipi: item.urunTipi,
           fiyatStratejisi,
@@ -124,6 +126,10 @@ async function buildTemplateKalemler(
           item.isim,
           item.notlar,
         );
+    const urun = await enrichEslesmisUrunKw(urunMatched, {
+      isim: item.isim,
+      urunTipi: item.urunTipi,
+    });
 
     kalemler.push({
       poz: item.referansPoz ?? "",
@@ -265,12 +271,26 @@ export async function calculateUnifiedQuote(
   const eslesmeToplam = kalemlerWithGorsel.filter((k) => k.urun !== null).length;
 
   const toplamElektrikKw = kalemlerWithGorsel.reduce((sum, k) => {
-    const kw = k.urun?.elektrikGucuKw ?? k.elektrikGucuKwHint ?? 0;
+    const kw =
+      resolveTeklifKw({
+        isim: k.isim,
+        urunTipi: k.urunTipi,
+        urun: k.urun,
+        elektrikGucuKwHint: k.elektrikGucuKwHint,
+        gazGucuKwHint: k.gazGucuKwHint,
+      }).elektrikGucuKw ?? 0;
     return sum + kw * k.adet;
   }, 0);
 
   const toplamGazKw = kalemlerWithGorsel.reduce((sum, k) => {
-    const kw = k.urun?.gazGucuKw ?? k.gazGucuKwHint ?? 0;
+    const kw =
+      resolveTeklifKw({
+        isim: k.isim,
+        urunTipi: k.urunTipi,
+        urun: k.urun,
+        elektrikGucuKwHint: k.elektrikGucuKwHint,
+        gazGucuKwHint: k.gazGucuKwHint,
+      }).gazGucuKw ?? 0;
     return sum + kw * k.adet;
   }, 0);
 

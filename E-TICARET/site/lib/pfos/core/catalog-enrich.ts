@@ -24,16 +24,13 @@ import {
 import {
   isBuzdolabiPfosKalem,
   isMakeUpPfosKalem,
-  isPortabiancoBuzdolabiSku,
-  isPortabiancoKatalogMarka,
-  PORTABIANCO_MARKA,
 } from "./portabianco-marka";
+import { OZTI_MARKA, isOztiBuzdolabiRow, isOztiBuzdolabiSku, isOztiPisirmeRow } from "./ozti-marka";
 import {
   CAGLAYAN_MARKA,
   isCaglayanTeshirPfosKalem,
 } from "./caglayan-marka";
 import {
-  ATALAY_MARKA,
   isAtalayPisirmePfosKalem,
 } from "./atalay-marka";
 import {
@@ -181,10 +178,10 @@ export function resolveTeklifMarka(opts: {
   sku?: string | null;
 }): string {
   if (
-    isPortabiancoBuzdolabiSku(opts.sku) ||
-    isPortabiancoKatalogMarka(opts.katalogMarka)
+    isOztiBuzdolabiSku(opts.sku) ||
+    isOztiBuzdolabiRow({ sku: opts.sku, marka_ad: opts.katalogMarka, ad: opts.urunAd })
   ) {
-    return PORTABIANCO_MARKA;
+    return OZTI_MARKA;
   }
 
   if (
@@ -193,7 +190,7 @@ export function resolveTeklifMarka(opts: {
       urunTipi: opts.urunTipi,
     })
   ) {
-    return PORTABIANCO_MARKA;
+    return OZTI_MARKA;
   }
 
   if (
@@ -202,7 +199,7 @@ export function resolveTeklifMarka(opts: {
       urunTipi: opts.urunTipi,
     })
   ) {
-    return PORTABIANCO_MARKA;
+    return OZTI_MARKA;
   }
 
   if (
@@ -254,7 +251,10 @@ export function resolveTeklifMarka(opts: {
     if (m.includes("rational")) return "Rational";
     if (m.includes("unox")) return "Unox";
     if (m.includes("electrolux")) return "Electrolux";
-    return ATALAY_MARKA;
+    if (isOztiPisirmeRow({ sku: opts.sku, marka_ad: opts.katalogMarka, ad: opts.urunAd })) {
+      return OZTI_MARKA;
+    }
+    return OZTI_MARKA;
   }
 
   if (

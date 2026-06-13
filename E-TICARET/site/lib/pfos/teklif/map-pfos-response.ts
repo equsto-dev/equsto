@@ -30,6 +30,7 @@ import {
   isProformaJunkText,
 } from "../parse-upload/sanitize-tanim";
 import { buildCatalogTeklifAciklama } from "./catalog-teklif-aciklama";
+import { resolveTeklifKw } from "@/lib/catalog/kw-resolve";
 
 function cleanObjectString(s: string | null | undefined): string {
   if (!s) return "";
@@ -121,6 +122,13 @@ export function pfosResponseToTeklifV14(
     }
 
     const gorselFallback = normalizePfosGorselUrl(finalGorsel);
+    const kw = resolveTeklifKw({
+      isim: sablonIsim,
+      urunTipi: k.urunTipi,
+      urun: u,
+      elektrikGucuKwHint: k.elektrikGucuKwHint,
+      gazGucuKwHint: k.gazGucuKwHint,
+    });
 
     return {
       bolumNo,
@@ -142,8 +150,8 @@ export function pfosResponseToTeklifV14(
           olcuForTeklifUrun(u, cleanObjectString(k.notlar)),
           k.urunTipi,
         ) ?? olcuForTeklifUrun(u, cleanObjectString(k.notlar)),
-      elkKw: u?.elektrikGucuKw ?? k.elektrikGucuKwHint ?? null,
-      gazKw: u?.gazGucuKw ?? k.gazGucuKwHint ?? null,
+      elkKw: kw.elektrikGucuKw,
+      gazKw: kw.gazGucuKw,
       adet,
       birimSatis: birimEur,
       toplamSatis: birimEur != null ? birimEur * adet : null,

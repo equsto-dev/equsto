@@ -54,7 +54,9 @@ import {
   isBuzdolabiReferansIsim,
   isMakeUpPfosKalem,
   isPortabiancoBuzdolabiRow,
+  isPortabiancoBuzdolabiSku,
 } from "../core/portabianco-marka";
+import { isOztiBuzdolabiRow, isOztiPisirmeRow } from "../core/ozti-marka";
 import {
   isPanelSogukOdaPfosKalemAny,
   matchSogukOdaByReferans,
@@ -918,14 +920,20 @@ async function matchStrictCatalog(
       }
       if (
         isMakeUpPfosKalem({ isim: input.isim, urunTipi: familyTip }) &&
-        (isOztiKatalogMarka(row.marka_ad) ||
-          /^7919\.|^8919\./.test(String(row.sku ?? "")))
+        (isPortabiancoBuzdolabiRow(row) ||
+          isPortabiancoBuzdolabiSku(row.sku))
       ) {
         return { row, score: -9999 };
       }
       if (
         isBuzdolabiPfosKalem({ isim: input.isim, urunTipi: familyTip }) &&
-        !isPortabiancoBuzdolabiRow(row)
+        !isOztiBuzdolabiRow(row)
+      ) {
+        return { row, score: -9999 };
+      }
+      if (
+        isAtalayPisirmePfosKalem({ isim: input.isim, urunTipi: familyTip }) &&
+        !isOztiPisirmeRow(row)
       ) {
         return { row, score: -9999 };
       }

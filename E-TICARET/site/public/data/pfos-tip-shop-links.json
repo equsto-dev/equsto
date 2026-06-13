@@ -11,12 +11,12 @@
       "name": "DAVLUMBAZ — EQUSTO ölçü/tip eşlemesi"
     },
     "tezgah_tip_buzdolabi": {
-      "marka": "Portabianco",
-      "name": "TEZGAH TİPİ BUZDOLABI — Portabianco ölçü/kapı eşlemesi"
+      "marka": "Öztiryakiler",
+      "name": "TEZGAH TİPİ BUZDOLABI — Öztiryakiler ölçü/kapı eşlemesi"
     },
     "sogutma_tezgah": {
-      "marka": "Portabianco",
-      "name": "SOĞUTMALI TEZGAH / HAZIRLIK BUZDOLABI — Portabianco"
+      "marka": "Öztiryakiler",
+      "name": "SOĞUTMALI TEZGAH / HAZIRLIK BUZDOLABI — Öztiryakiler"
     },
     "cop_arabasi": {
       "marka": "Portashelf",
@@ -32,12 +32,12 @@
       "sku": "0913.00507.01"
     },
     "char_broil": {
-      "marka": "Atalay",
-      "name": "PLATE / SETÜSTÜ IZGARA — Atalay ölçü eşlemesi"
+      "marka": "Öztiryakiler",
+      "name": "PLATE / SETÜSTÜ IZGARA — Öztiryakiler ölçü eşlemesi"
     },
     "salamander": {
-      "marka": "Atalay",
-      "name": "SALAMANDER — Atalay katalog eşlemesi"
+      "marka": "Öztiryakiler",
+      "name": "SALAMANDER — Öztiryakiler katalog eşlemesi"
     },
     "tezgah_duz": {
       "brand": "Öztiryakiler Endüstriyel Mutfak",
@@ -45,10 +45,10 @@
       "name": "600 SERİ ARA TEZGAH SET ÜSTÜ 40*60*26"
     },
     "fritoz_tek": {
-      "brand": "Atalay Endüstriyel Mutfak Ekipmanları",
-      "sku": "AEF-870",
-      "model": "AEF - 870",
-      "name": "Atalay Fritözler AEF - 870 2 x Min. 6 lt. Max 12 lt 800 x 700 x 300"
+      "brand": "Öztiryakiler Endüstriyel Mutfak",
+      "sku": "7856.GN120.08",
+      "marka": "Öztiryakiler",
+      "name": "FRİTÖZ — Öztiryakiler GN120 800 x 700"
     },
     "espresso_makinasi": {
       "brand": "Nuova Simonelli",
@@ -99,16 +99,16 @@
       "name": "YER IZGARASI TAVALI KENARDAN SİFONLU ALTTAN CIKISLI Q50 PVC 940*290"
     },
     "bar_buzdolabi": {
-      "marka": "Portabianco",
-      "name": "BAR ŞİŞE SOĞUTUCU — Portabianco kapı sayısına göre"
+      "marka": "Öztiryakiler",
+      "name": "BAR ŞİŞE SOĞUTUCU — Öztiryakiler kapı sayısına göre"
     },
     "sise_sogutucu_3k": {
-      "marka": "Portabianco",
-      "name": "BAR ŞİŞE SOĞUTUCU 3 KAPILI — Portabianco"
+      "marka": "Öztiryakiler",
+      "name": "BAR ŞİŞE SOĞUTUCU 3 KAPILI — Öztiryakiler"
     },
     "sise_sogutucu_2k": {
-      "marka": "Portabianco",
-      "name": "BAR ŞİŞE SOĞUTUCU 2 KAPILI — Portabianco"
+      "marka": "Öztiryakiler",
+      "name": "BAR ŞİŞE SOĞUTUCU 2 KAPILI — Öztiryakiler"
     },
     "montaj_nakliye": {
       "brand": "Equsto Proje Fabrikası",
@@ -171,16 +171,16 @@
       "fiyat_try": 15000
     },
     "setalti_buzdolabi": {
-      "marka": "Portabianco",
-      "name": "CİHAZ ALTI BUZDOLABI — Portabianco ölçü/kapı eşlemesi"
+      "marka": "Öztiryakiler",
+      "name": "CİHAZ ALTI BUZDOLABI — Öztiryakiler ölçü/kapı eşlemesi"
     },
     "setalti_derin_dondurucu": {
-      "marka": "Portabianco",
-      "name": "CİHAZ ALTI DERİN DONDURUCU — Portabianco"
+      "marka": "Öztiryakiler",
+      "name": "CİHAZ ALTI DERİN DONDURUCU — Öztiryakiler"
     },
     "dik_tip_buzdolabi": {
-      "marka": "Portabianco",
-      "name": "DEPO TİPİ BUZDOLABI — Portabianco kapı sayısına göre"
+      "marka": "Öztiryakiler",
+      "name": "DEPO TİPİ BUZDOLABI — Öztiryakiler kapı sayısına göre"
     },
     "kiyma_makinesi": {
       "marka": "Boğaziçi",

@@ -5,10 +5,11 @@ import {
 import { katalogRowToEslesmis } from "../core/katalog-row-eslesmis";
 import { displayIsimFromSablon } from "../core/ozel-imalat";
 import {
-  PORTABIANCO_MARKA,
-  isPortabiancoBuzdolabiRow,
-  isPortabiancoKatalogMarka,
-} from "../core/portabianco-marka";
+  OZTI_MARKA,
+  isOztiBuzdolabiRow,
+} from "../core/ozti-marka";
+import { oztiNtvPrefix } from "../core/ozti-buzdolabi-spec";
+import { isOztiKatalogMarka } from "../core/hazirlik-marka";
 import type { EslesmisUrun, FiyatStratejisi } from "../schemas/pfos.schema";
 import { toOlcuMmDisplay } from "../teklif/olcu-mm";
 import { extractOlcuFromNotlar } from "./yer-izgara-match";
@@ -65,14 +66,6 @@ function kapiSayisiFromSku(sku: string): number | null {
   return m ? Number(m[1]) : null;
 }
 
-function isPortabiancoMakeUpRow(row: AdminUrunRow): boolean {
-  if (!isPortabiancoBuzdolabiRow(row)) return false;
-  const blob = norm(`${row.ad ?? ""} ${row.sku ?? ""}`);
-  if (!/make.?up|makeup|makyaj/.test(blob)) return false;
-  if (/^7919\.|^8919\./.test(String(row.sku ?? ""))) return false;
-  return /^SB[A-Z]+-\dN\d+/i.test(String(row.sku ?? "")) || isPortabiancoKatalogMarka(row.marka_ad);
-}
-
 function isOztiPizzaMakeUpRow(row: AdminUrunRow): boolean {
   const blob = norm(`${row.ad ?? ""} ${row.sku ?? ""}`);
   return (
@@ -85,20 +78,27 @@ function preferredMakeUpSkus(
   variant: MakeUpVariant,
   kapi: number,
   depth: 60 | 70,
+  widthCm = 140,
 ): string[] {
-  const n = `${kapi}N${depth}`;
+  const p = oztiNtvPrefix(kapi, widthCm);
   switch (variant) {
     case "yuksek":
-      return [`SBB-${n}`, `SBB-${n}E`];
+      return [`7919.${p}NTV.S0`, `7919.37NTV.S0`];
     case "camli":
-      return [`SBTG-${n}`, `SBTG-${n}E`];
+      return [`7919.${p}NTV.24`, `7919.${p}NTV.S0`];
     case "mermer":
-      return [`SBM-${n}`, `SBTM-${n}`, `SBM-${n}E`, `SBTM-${n}E`];
+      return [`7919.${p}NTV.S0`, `7919.38NTV.PJ`];
     case "pizza":
-      return [`7919.37NTV.S0`, `7919.38NTV.PJ`, `7919.48NTV.PJ`];
+      return [`7919.${p}NTV.PJ`, `7919.38NTV.PJ`, `7919.48NTV.PJ`];
     default:
-      return [`SBT-${n}`, `SBTP-${n}`, `SBT-${n}E`, `SBTP-${n}E`];
+      return [`7919.28NTV.PJ`, `7919.${p}NTV.PJ`, `7919.38NTV.PJ`];
   }
+}
+
+function isOztiMakeUpRow(row: AdminUrunRow): boolean {
+  if (!isOztiBuzdolabiRow(row)) return false;
+  const blob = norm(`${row.ad ?? ""} ${row.sku ?? ""}`);
+  return /make.?up|makeup|makyaj|ntv\.pj|ntv\.s0/i.test(blob);
 }
 
 function kapiSayisiFromUrunAd(ad: string): number | null {
@@ -132,8 +132,8 @@ function scoreMakeUpRow(
   const pizzaRef = variant === "pizza";
 
   if (pizzaRef) {
-    if (!isOztiPizzaMakeUpRow(row)) return -9999;
-  } else if (!isPortabiancoMakeUpRow(row)) {
+    if (!isOztiPizzaMakeUpRow(row) && !isOztiMakeUpRow(row)) return -9999;
+  } else if (!isOztiMakeUpRow(row)) {
     return -9999;
   }
 
@@ -172,7 +172,7 @@ function toEslesmis(
   isim: string,
   olcuDisplay: string | null,
   urunTipi?: string | null,
-  marka = PORTABIANCO_MARKA,
+  marka = OZTI_MARKA,
 ): EslesmisUrun {
   const matched = katalogRowToEslesmis(row, {
     linkMarka: marka,
@@ -187,7 +187,7 @@ function toEslesmis(
   };
 }
 
-/** Make-up ünitesi — Portabianco (Yüksel); pizza hazırlık hariç Öztiryakiler NTV kullanılmaz */
+/** Make-up ünitesi — Öztiryakiler NTV katalog */
 export async function matchMakeUpByReferans(
   isim: string,
   olcuRaw: string,
@@ -212,7 +212,9 @@ export async function matchMakeUpByReferans(
   const wantGen = parts?.[0] ?? null;
 
   const targetSkus =
-    wantKapi != null ? preferredMakeUpSkus(variant, wantKapi, depth) : [];
+    wantKapi != null
+      ? preferredMakeUpSkus(variant, wantKapi, depth, wantGen ?? 140)
+      : [];
 
   const rows = (await loadLegacyCatalogRows()).filter(
     (r) => r.durum === "aktif" && r.fiyat_tl > 0,
@@ -223,8 +225,7 @@ export async function matchMakeUpByReferans(
       (r) => String(r.sku ?? "").toUpperCase() === sku.toUpperCase(),
     );
     if (exact) {
-      const marka = variant === "pizza" ? exact.marka_ad : PORTABIANCO_MARKA;
-      return toEslesmis(exact, isim, olcuDisplay, urunTipi, marka);
+      return toEslesmis(exact, isim, olcuDisplay, urunTipi, OZTI_MARKA);
     }
   }
 
@@ -245,9 +246,5 @@ export async function matchMakeUpByReferans(
 
   if (!scored.length) return null;
   const pick = scored[0].row;
-  const marka =
-    variant === "pizza" && !isPortabiancoMakeUpRow(pick)
-      ? pick.marka_ad
-      : PORTABIANCO_MARKA;
-  return toEslesmis(pick, isim, olcuDisplay, urunTipi, marka);
+  return toEslesmis(pick, isim, olcuDisplay, urunTipi, OZTI_MARKA);
 }

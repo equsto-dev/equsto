@@ -1,5 +1,6 @@
 import type { Product, Brand, Category } from "@/lib/prisma";
 import { buildEqustoKod, deriveProductCodes } from "@/lib/catalog/product-hierarchy";
+import { resolveKwFromSources } from "@/lib/catalog/kw-resolve";
 
 /** admin.html / yönetim ProTable ile uyumlu kayıt */
 export type AdminUrunRow = {
@@ -49,6 +50,7 @@ export type AdminUrunRow = {
     yukseklik_mm?: number;
     kapasite_lt?: string | number;
     guc_kw?: string | number;
+    guc_w?: string | number;
   } | null;
   teknik_ozellikler?: string[];
   durum: "aktif" | "pasif";
@@ -83,6 +85,7 @@ type EcomRow = {
     yukseklik_mm?: number;
     kapasite_lt?: string | number;
     guc_kw?: string | number;
+    guc_w?: string | number;
   } | null;
   teknik_ozellikler?: string[];
   description?: string;
@@ -128,9 +131,18 @@ export function ecomRowToAdminUrun(u: EcomRow, index: number): AdminUrunRow {
   const alisEur = Number(u?.alis_fiyati_eur) > 0 ? Number(u.alis_fiyati_eur) : null;
   const alisTl = Number(u?.alis_fiyati_tl) > 0 ? Number(u.alis_fiyati_tl) : null;
   const satisTl = Number(u?.satis_fiyati_tl) > 0 ? Number(u.satis_fiyati_tl) : null;
-  const elKw = u?.olculer?.guc_kw;
-  const elGuc =
-    elKw != null && Number.isFinite(Number(elKw)) ? Number(elKw) : null;
+  const resolvedKw = resolveKwFromSources({
+    aciklama: u?.aciklama ? String(u.aciklama) : u?.specs ? String(u.specs) : null,
+    description: u?.description ? String(u.description) : null,
+    ozti_web_description: u?.ozti_web_description
+      ? String(u.ozti_web_description)
+      : null,
+    inoksan_shop_description: u?.inoksan_shop_description
+      ? String(u.inoksan_shop_description)
+      : null,
+    teknik_ozellikler: u?.teknik_ozellikler,
+    olculer: u?.olculer ?? null,
+  });
 
   return {
     id: ecomId(name, index),
@@ -153,8 +165,8 @@ export function ecomRowToAdminUrun(u: EcomRow, index: number): AdminUrunRow {
     satis_fiyati_tl: satisTl,
     para_birimi: u?.para_birimi ? String(u.para_birimi) : null,
     kdv_oran: Number(u?.kdv_oran) > 0 ? Number(u.kdv_oran) : 20,
-    el_guc: elGuc,
-    gaz_guc: null,
+    el_guc: resolvedKw.elektrikGucuKw,
+    gaz_guc: resolvedKw.gazGucuKw,
     aciklama: u?.aciklama
       ? String(u.aciklama)
       : u?.specs
