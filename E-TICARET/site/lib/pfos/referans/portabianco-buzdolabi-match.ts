@@ -32,10 +32,10 @@ export function isPortabiancoBuzdolabiReferans(
   return /portabianco/.test(norm(`${isim} ${notlar ?? ""}`));
 }
 
+type PortabiancoBuzKey = Exclude<BuzFamily, null> | "makeup" | "derin";
+
 /** Tip sözlüğü — Portabianco en ucuz referans SKU (pfos-tip-shop-links.json ile hizalı) */
-export const PORTABIANCO_ECO_BUZ_SKUS: Partial<
-  Record<BuzFamily | "makeup" | "derin", string>
-> = {
+export const PORTABIANCO_ECO_BUZ_SKUS: Partial<Record<PortabiancoBuzKey, string>> = {
   dik: "DT-1NGN-EKOP",
   tezgah: "TTS-2N70-E",
   cihazalti: "CAM-2N70",
@@ -112,11 +112,12 @@ export async function matchPortabiancoBuzdolabiByReferans(
   const family = parseBuzFamily(isim, urunTipi);
   const freezer = isDerinDondurucu(isim);
   const familyKey = freezer ? "derin" : family;
-  const targetSku =
-    (familyKey && PORTABIANCO_ECO_BUZ_SKUS[familyKey]) ||
+  const targetSku: string | null =
+    (familyKey ? PORTABIANCO_ECO_BUZ_SKUS[familyKey] : undefined) ??
     (/make.?up|makeup|makyaj/.test(norm(isim))
       ? PORTABIANCO_ECO_BUZ_SKUS.makeup
-      : null);
+      : undefined) ??
+    null;
 
   if (targetSku) {
     const rows = (await loadLegacyCatalogRows()).filter((r) => r.durum === "aktif");
