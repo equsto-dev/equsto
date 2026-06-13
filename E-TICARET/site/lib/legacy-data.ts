@@ -36,14 +36,16 @@ function canReadLocalPublicData(): boolean {
   return false;
 }
 
-/** JSON okuma — build/yerel: disk; canlı lambda: /data/* fetch */
+/** JSON okuma — önce disk (Vercel trace dahil), sonra /data/* fetch */
 export async function readJsonFile<T>(fileOrRel: string): Promise<T | null> {
   const rel = normalizeDataRel(fileOrRel);
 
+  const { readLocalDataJson } = await import("@/lib/legacy-data-local");
+  const local = await readLocalDataJson<T>(rel);
+  if (local != null) return local;
+
   if (canReadLocalPublicData()) {
-    const { readLocalDataJson } = await import("@/lib/legacy-data-local");
-    const local = await readLocalDataJson<T>(rel);
-    if (local != null) return local;
+    return null;
   }
 
   try {

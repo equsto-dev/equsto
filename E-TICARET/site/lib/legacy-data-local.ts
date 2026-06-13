@@ -1,10 +1,15 @@
 
 import { access, readFile } from "node:fs/promises";
 
-/** Monorepo: cwd bazen git kökü (EQUSTO-WORK) olur */
+/** Monorepo + Vercel standalone — public/data konumu */
 async function resolveSiteRoot(): Promise<string | null> {
   const cwd = process.cwd().replace(/\\/g, "/");
-  const candidates = [cwd, `${cwd}/E-TICARET/site`];
+  const candidates = [
+    cwd,
+    `${cwd}/E-TICARET/site`,
+    `${cwd}/../E-TICARET/site`,
+    "/var/task",
+  ];
   for (const root of candidates) {
     try {
       await access(`${root}/public/data`);
