@@ -32,7 +32,7 @@
   }
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260613-pimak-pdp-ozti-v2';
+  var CATALOG_V = '20260613-kuvet-gn-facet';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   /* Next.js URL slug → katalog dept id (data/dept/*.json) */
   if (DEPT === 'market-reyonlari') DEPT = 'market-reyon';
@@ -45,6 +45,7 @@
     brands: [],
     models: [],
     energy: [],
+    kuvetGn: [],
     q: '',
     sort: '',
     priceMin: '',
@@ -731,6 +732,14 @@
         return state.models.indexOf(m) >= 0;
       });
     }
+    if (state.kuvetGn.length && window.EqKuvetGnFacets) {
+      list = list.filter(function (u) {
+        return window.EqKuvetGnFacets.hitMatchesAnyFacet(
+          { name: u.n, n: u.n, category: u.c, raw: u.raw },
+          state.kuvetGn,
+        );
+      });
+    }
     if (state.energy.length && window.EqDeptCmFacets) {
       list = list.filter(function (u) {
         for (var ei = 0; ei < state.energy.length; ei++) {
@@ -801,6 +810,14 @@
         return state.models.indexOf(window.EqDeptCmFacets.extractModel(u.n, u.b)) >= 0;
       });
     }
+    if (state.kuvetGn.length && exclude !== 'kuvetGn' && window.EqKuvetGnFacets) {
+      list = list.filter(function (u) {
+        return window.EqKuvetGnFacets.hitMatchesAnyFacet(
+          { name: u.n, n: u.n, category: u.c, raw: u.raw },
+          state.kuvetGn,
+        );
+      });
+    }
     if (state.energy.length && exclude !== 'energy' && window.EqDeptCmFacets) {
       list = list.filter(function (u) {
         for (var ei = 0; ei < state.energy.length; ei++) {
@@ -835,6 +852,7 @@
     state.brands = [];
     state.models = [];
     state.energy = [];
+    state.kuvetGn = [];
     state.priceMin = '';
     state.priceMax = '';
     state.loadedCount = PAGE_SIZE;
@@ -857,6 +875,7 @@
       else if (type === 'brand') state.brands = state.brands.filter(function (b) { return b !== value; });
       else if (type === 'model') state.models = state.models.filter(function (m) { return m !== value; });
       else if (type === 'energy') state.energy = state.energy.filter(function (e) { return e !== value; });
+      else if (type === 'kuvetGn') state.kuvetGn = state.kuvetGn.filter(function (k) { return k !== value; });
       else if (type === 'priceMin') state.priceMin = '';
       else if (type === 'priceMax') state.priceMax = '';
       state.loadedCount = PAGE_SIZE;

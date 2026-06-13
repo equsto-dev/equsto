@@ -58,8 +58,8 @@ export function buildTeklifV14PrintHtml(
           ? row.toplamSatis.toLocaleString("tr-TR", { minimumFractionDigits: 2 })
           : "—";
       tbody += `<tr>
-        <td>${esc(row.bolumNo)}</td>
-        <td>${esc(row.poz)}</td>
+        <td class="bol">${esc(row.bolumNo)}</td>
+        <td class="poz">${esc(row.poz)}</td>
         <td class="stok">${esc(row.stokNo)}</td>
         <td class="tanim">${esc(sanitizeTeklifV14SatirTanim(row.tanim))}</td>
         <td class="num">${esc(formatKwHucre(row.elkKw))}</td>
@@ -127,6 +127,7 @@ export function buildTeklifV14PrintHtml(
   col.c-olcu { width: 10%; }
   th { text-align: center; font-size: 9px; padding: 5px 3px; border-bottom: 1px solid #999; }
   td { padding: 4px 3px; border-bottom: 1px solid #eee; vertical-align: top; }
+  td.bol, td.poz { text-align: center; white-space: nowrap; }
   td.stok { text-align: left; white-space: nowrap; }
   td.tanim { word-break: break-word; }
   td.marka, td.olcu { text-align: center; font-size: 9px; padding: 4px 2px; }

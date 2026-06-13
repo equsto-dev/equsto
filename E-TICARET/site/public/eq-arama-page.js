@@ -24,6 +24,7 @@
   var filterState = {
     depts: [],
     brands: [],
+    kuvetGn: [],
     sort: "",
     priceMin: "",
     priceMax: "",
@@ -204,6 +205,7 @@
   function resetFilters() {
     filterState.depts = [];
     filterState.brands = [];
+    filterState.kuvetGn = [];
     filterState.sort = "";
     filterState.priceMin = "";
     filterState.priceMax = "";
@@ -211,10 +213,15 @@
     if (sortEl) sortEl.value = "";
   }
 
+  function hasKuvetGnFacets() {
+    return !!(window.EqKuvetGnFacets && sourceHits.some(window.EqKuvetGnFacets.isGnKuvetProduct));
+  }
+
   function hasActiveFilters() {
     return (
       filterState.depts.length > 0 ||
       filterState.brands.length > 0 ||
+      filterState.kuvetGn.length > 0 ||
       filterState.priceMin !== "" ||
       filterState.priceMax !== "" ||
       !!filterState.sort
@@ -231,6 +238,11 @@
     if (filterState.brands.length && exclude !== "brand") {
       list = list.filter(function (h) {
         return filterState.brands.indexOf(hitBrandKey(h)) >= 0;
+      });
+    }
+    if (filterState.kuvetGn.length && exclude !== "kuvetGn" && window.EqKuvetGnFacets) {
+      list = list.filter(function (h) {
+        return window.EqKuvetGnFacets.hitMatchesAnyFacet(h, filterState.kuvetGn);
       });
     }
     if (filterState.priceMin !== "" && exclude !== "price") {
@@ -558,6 +570,18 @@
         esc(b) +
         " ×</button>";
     });
+    filterState.kuvetGn.forEach(function (k) {
+      var lbl =
+        window.EqKuvetGnFacets && window.EqKuvetGnFacets.labelFromKey
+          ? window.EqKuvetGnFacets.labelFromKey(k)
+          : k;
+      html +=
+        '<button type="button" class="eq-cm-chip" data-kind="kuvetGn" data-value="' +
+        esc(k) +
+        '">' +
+        esc(lbl) +
+        " ×</button>";
+    });
     if (filterState.priceMin !== "") {
       html +=
         '<button type="button" class="eq-cm-chip" data-kind="priceMin">min ' +
@@ -584,6 +608,10 @@
           filterState.brands = filterState.brands.filter(function (b) {
             return b !== val;
           });
+        } else if (kind === "kuvetGn") {
+          filterState.kuvetGn = filterState.kuvetGn.filter(function (k) {
+            return k !== val;
+          });
         } else if (kind === "priceMin") filterState.priceMin = "";
         else if (kind === "priceMax") filterState.priceMax = "";
         renderAll();
@@ -600,6 +628,7 @@
 
     var deptPool = poolForCounts("dept");
     var brandPool = poolForCounts("brand");
+    var kuvetGnPool = poolForCounts("kuvetGn");
     var pricePool = poolForCounts("price");
     var deptCounts = Object.create(null);
     var brandCounts = Object.create(null);
@@ -687,6 +716,16 @@
     });
     html += "</ul></div></details>";
 
+    if (window.EqKuvetGnFacets && hasKuvetGnFacets()) {
+      var gnCounts = window.EqKuvetGnFacets.countFacets(kuvetGnPool);
+      html += window.EqKuvetGnFacets.renderFacetListHtml({
+        counts: gnCounts,
+        selected: filterState.kuvetGn,
+        inputName: "eq-arama-kuvet-gn",
+        title: __searchT("search.filter_gn_size", "GN ölçü"),
+      });
+    }
+
     html +=
       '<details class="eq-cm-facet" open><summary class="eq-cm-facet__hd">' +
       esc(__searchT("search.filter_price", "Fiyat")) +
@@ -747,6 +786,15 @@
           brandVals.push(el.value);
         });
         filterState.brands = brandVals;
+        renderAll();
+        return;
+      }
+      if (t.name === "eq-arama-kuvet-gn") {
+        var gnVals = [];
+        host.querySelectorAll('input[name="eq-arama-kuvet-gn"]:checked').forEach(function (el) {
+          gnVals.push(el.value);
+        });
+        filterState.kuvetGn = gnVals;
         renderAll();
       }
     });
