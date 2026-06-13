@@ -12,6 +12,7 @@ import {
   sectionDef,
   groupDef,
 } from "./lib/urbanbar-besos-taxonomy.mjs";
+import { pickUrbanBarPlpHoverUrl } from "./lib/urbanbar-plp-images.mjs";
 import {
   mergeSpecifications,
   parseDescriptionHtml,
@@ -101,6 +102,8 @@ function toProduct(row, taxonomy, webByHandle, pdpByHandle) {
     imageUrls.push(row.shopify_image);
   }
 
+  const plpHoverImageUrl = pickUrbanBarPlpHoverUrl(imageUrls, imageUrls[0] || "");
+
   const specifications = mergeSpecifications(
     pdp?.specifications || [],
     variant.variantSpecs || [],
@@ -131,6 +134,7 @@ function toProduct(row, taxonomy, webByHandle, pdpByHandle) {
     image: row.images?.[0],
     imageUrl: imageUrls[0] || undefined,
     imageUrls,
+    plpHoverImageUrl: plpHoverImageUrl || undefined,
     images: row.images || [],
     price: row.price,
     fiyat_tl: row.fiyat_tl,
