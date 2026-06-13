@@ -27,6 +27,22 @@ export type CatalogAciklamaInput = {
   aciklama?: string | null;
 };
 
+function splitShopDescriptionBullets(shop: string): string[] {
+  const raw = shop.trim();
+  if (!raw) return [];
+  let parts: string[];
+  if (/\n\s*[•·\-–—*]/.test(raw)) {
+    parts = raw.split(/\n\s*[•·\-–—*]\s*/);
+  } else if (/\s\*\s/.test(raw)) {
+    parts = raw.split(/\s*\*\s+/);
+  } else {
+    parts = raw.split(/\r?\n/);
+  }
+  return parts
+    .map((l) => l.replace(/^[•\-–—*·]+\s*/, "").trim())
+    .filter((l) => l.length > 3 && !isInternalLine(l));
+}
+
 /** Katalog satırından PFOS teklif `aciklama` metni */
 export function buildCatalogTeklifAciklama(row: CatalogAciklamaInput | null | undefined): string {
   if (!row) return "";
@@ -35,10 +51,15 @@ export function buildCatalogTeklifAciklama(row: CatalogAciklamaInput | null | un
     row.ozti_web_description || row.inoksan_shop_description || row.description || "",
   ).trim();
   if (shop.length >= 40) {
+    const bullets = splitShopDescriptionBullets(shop);
+    if (bullets.length > 1) {
+      return bullets.map((l) => `* ${l}`).join("\n").trim();
+    }
     return shop
       .split(/\r?\n/)
       .map((l) => l.replace(/^[•\-–—*·]+\s*/, "").trim())
       .filter((l) => l && !isInternalLine(l))
+      .map((l) => (l.startsWith("*") ? l : `* ${l}`))
       .join("\n")
       .trim();
   }

@@ -2627,8 +2627,15 @@ window.searchFilter = window.searchFilter || function () {};
         String(x.ozti_web_description || x.description || "").trim()
       );
       if (!raw) return [];
-      return raw
-        .split(/\r?\n/)
+      var parts;
+      if (/\n\s*[•·\-–—*]/.test(raw)) {
+        parts = raw.split(/\n\s*[•·\-–—*]\s*/);
+      } else if (/\s\*\s/.test(raw)) {
+        parts = raw.split(/\s*\*\s+/);
+      } else {
+        parts = raw.split(/\r?\n/);
+      }
+      return parts
         .map(function (l) {
           return String(l || "")
             .replace(/^[•\-–—*·]+\s*/, "")
@@ -2645,7 +2652,7 @@ window.searchFilter = window.searchFilter || function () {};
       return renderEpdpDocsPanel(
         __pdpT("pdp.product_description", "Ürün açıklaması"),
         '<div class="eq-ozti-desc-panel">' +
-          '<ul class="eq-specs-list">' +
+          '<ul class="eq-ozti-desc-list">' +
           bullets
             .map(function (l) {
               return "<li>" + esc(l) + "</li>";
