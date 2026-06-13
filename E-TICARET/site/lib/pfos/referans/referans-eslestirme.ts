@@ -1027,7 +1027,7 @@ async function matchByMasterEqustoKod(
   ) {
     return null;
   }
-  const cleanedIsim = formatPfosDisplayTanim(input.isim) || input.isim;
+  const cleanedIsim = formatPfosDisplayTanim(input.isim);
   const fromText =
     extractEqustoKodFromText(cleanedIsim) ||
     extractEqustoKodFromText(input.notlar ?? "");
@@ -1123,7 +1123,7 @@ export async function matchReferansKalem(
   rawInput: ReferansMatchInput,
 ): Promise<EslesmisUrun | null> {
   const cleanedIsim = stripEmbeddedSupplierSku(
-    formatPfosDisplayTanim(rawInput.isim) || rawInput.isim,
+    formatPfosDisplayTanim(rawInput.isim),
   );
   let input: ReferansMatchInput = { ...rawInput, isim: cleanedIsim };
   const normalizedIsim = norm(input.isim);

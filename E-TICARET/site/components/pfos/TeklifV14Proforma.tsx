@@ -8,6 +8,7 @@ import { groupTeklifV14Satirlar } from "@/lib/pfos/teklif/group-v14-bolumler";
 import { formatTarihTr, formatKwHucre } from "@/lib/pfos/teklif/format-v14";
 import { downloadTeklifV14Excel } from "@/lib/pfos/teklif/export-teklif-v14.client";
 import { printTeklifV14 } from "@/lib/pfos/teklif/print-teklif-v14.client";
+import { sanitizeTeklifV14SatirTanim } from "@/lib/pfos/teklif/sanitize-teklif-v14-export";
 import { TEKLIF_V14_FORM_NO, TEKLIF_BOLUM_ROW_FILL } from "@/lib/pfos/teklif/constants";
 import { memberLoggedInNow } from "@/lib/pfos/member-session.client";
 
@@ -411,7 +412,7 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
                       <td style={td}>{row.poz}</td>
                       <td style={td}>{row.ek || ""}</td>
                       <td style={td}>{row.stokNo}</td>
-                      <td style={td}>{row.tanim}</td>
+                      <td style={td}>{sanitizeTeklifV14SatirTanim(row.tanim)}</td>
                       <td style={td}>{row.marka}</td>
                       <td style={td}>{row.olcu || "—"}</td>
                       <td style={tdR}>{formatKwHucre(row.elkKw)}</td>

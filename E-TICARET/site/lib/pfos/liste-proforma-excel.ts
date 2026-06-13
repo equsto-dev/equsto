@@ -6,7 +6,6 @@
 import type { Worksheet } from "exceljs";
 import type { PfosEkipmanSatir } from "@/lib/pfos/kategoriler/types";
 import { formatPfosDisplayTanim } from "@/lib/pfos/parse-upload/sanitize-tanim";
-import { repairPfosDisplayText } from "@/lib/utf8/repair-turkish-fffd";
 
 const POZ_RE = /^[A-Z]\s*\d{1,3}A?$/i;
 const NUM_POZ_RE = /^\d{1,3}$/;
@@ -75,7 +74,29 @@ function parseAdet(raw: string): number {
 }
 
 function cleanProformaAd(raw: string): string {
-  return formatPfosDisplayTanim(raw) || repairPfosDisplayText(raw);
+  return formatPfosDisplayTanim(raw);
+}
+
+/** Poz sonrası hücreler — sondaki adet/fiyat/kur sütunlarını ayır (kaynak temizliği) */
+function isProformaTailCell(raw: string): boolean {
+  const s = raw.trim();
+  if (!s) return false;
+  if (/^342$/i.test(s)) return true;
+  if (/^S\d{1,3}\*[\d.,]+$/i.test(s)) return true;
+  if (/^\d+[.,]\d{6,}$/.test(s)) return true;
+  if (/^\d{2,5}$/.test(s)) return true;
+  if (/^\d{1,2}$/.test(s)) return true;
+  return false;
+}
+
+function splitProformaTailCells(cells: string[]): { head: string[]; adet: number } {
+  const rest = cells.filter(Boolean);
+  let adet = 1;
+  while (rest.length > 1 && isProformaTailCell(rest[rest.length - 1] ?? "")) {
+    const last = rest.pop()!.trim();
+    if (/^\d{1,2}$/.test(last)) adet = parseAdet(last);
+  }
+  return { head: rest, adet };
 }
 
 function findPozIndex(cells: string[]): number {
@@ -103,12 +124,14 @@ function parseRowFromPoz(
   bolumAd: string,
 ): PfosEkipmanSatir | null {
   const poz = normalizePoz(cells[pozIdx]);
-  const rest = cells.slice(pozIdx + 1).filter(Boolean);
+  const { head: rest, adet: peeledAdet } = splitProformaTailCells(
+    cells.slice(pozIdx + 1),
+  );
   if (!rest.length) return null;
 
   let tanim = rest.join(" ").trim();
   let olcu = "";
-  let adet = 1;
+  let adet = peeledAdet;
 
   const olcuCell = rest.find((c) => OLCU_RE.test(c));
   if (olcuCell) {

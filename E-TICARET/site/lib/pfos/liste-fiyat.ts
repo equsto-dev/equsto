@@ -59,7 +59,7 @@ export function importKalemlerToReferansKalemler(
       bolum: poz.charAt(0).toUpperCase(),
       bolumAd,
       poz,
-      ad: repairPfosDisplayText(item.ham_isim),
+      ad: formatPfosDisplayTanim(repairPfosDisplayText(item.ham_isim)),
       olcu: olcu || "—",
       adet:
         typeof item.adet === "number" && item.adet > 0
@@ -119,7 +119,7 @@ export async function calculateListeQuote(
       referansBolumSira: item.referansBolumSira,
       referansBolumKey: item.referansBolumKey,
       urunTipi: item.urunTipi,
-      isim: formatPfosDisplayTanim(item.isim) || item.isim,
+      isim: formatPfosDisplayTanim(item.isim),
       tip: item.tip,
       adet: item.scale.type === "fixed" ? item.scale.adet : 1,
       elektrikGucuKwHint: item.elektrikGucuKwHint,
