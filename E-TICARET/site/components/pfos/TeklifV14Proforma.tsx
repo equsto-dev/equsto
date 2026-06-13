@@ -433,17 +433,17 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
                       <td style={tdTanim}>
                         {sanitizeTeklifV14SatirTanim(row.tanim)}
                       </td>
-                      <td style={tdR}>{formatKwHucre(row.elkKw)}</td>
-                      <td style={tdR}>{formatKwHucre(row.gazKw)}</td>
-                      <td style={tdR}>{row.adet}</td>
-                      <td style={tdR}>
+                      <td style={tdC}>{formatKwHucre(row.elkKw)}</td>
+                      <td style={tdC}>{formatKwHucre(row.gazKw)}</td>
+                      <td style={tdC}>{row.adet}</td>
+                      <td style={tdC}>
                         {row.birimSatis != null
                           ? row.birimSatis.toLocaleString("tr-TR", {
                               minimumFractionDigits: 2,
                             })
                           : "—"}
                       </td>
-                      <td style={tdR}>
+                      <td style={tdC}>
                         {row.toplamSatis != null
                           ? row.toplamSatis.toLocaleString("tr-TR", {
                               minimumFractionDigits: 2,
@@ -455,7 +455,8 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
                     </tr>
                     {showSpecRow && (
                       <tr>
-                        <td colSpan={2} style={specTd} />
+                        <td style={specTd} />
+                        <td style={specTd} />
                         <td style={specTdFoto}>
                           {row.fotoUrl ? (
                             // eslint-disable-next-line @next/next/no-img-element
@@ -473,11 +474,10 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
                             row.fotoNot ?? "📷 Fotoğraf"
                           ) : null}
                         </td>
-                        <td colSpan={8} style={specTd}>
-                          <pre style={{ margin: 0, whiteSpace: "pre-wrap" }}>
-                            {aciklamaMetni}
-                          </pre>
+                        <td style={specTdAcik}>
+                          <pre style={specPre}>{aciklamaMetni}</pre>
                         </td>
+                        <td colSpan={7} style={specTd} />
                       </tr>
                     )}
                   </Fragment>
@@ -491,11 +491,13 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
               <td style={{ ...td, textAlign: "right", fontWeight: 600 }}>
                 Sütun toplamları →
               </td>
-              <td style={tdR}>{formatKwHucre(ozet.toplamElektrikKw)}</td>
-              <td style={tdR}>{formatKwHucre(ozet.toplamGazKw)}</td>
-              <td style={tdR} />
-              <td style={{ ...td, fontWeight: 700 }}>GENEL TOPLAM</td>
-              <td style={{ ...tdR, fontWeight: 700 }}>
+              <td style={tdC}>{formatKwHucre(ozet.toplamElektrikKw)}</td>
+              <td style={tdC}>{formatKwHucre(ozet.toplamGazKw)}</td>
+              <td style={tdC} />
+              <td style={{ ...td, fontWeight: 700, textAlign: "center" }}>
+                GENEL TOPLAM
+              </td>
+              <td style={{ ...tdC, fontWeight: 700 }}>
                 {ozet.genelToplam != null
                   ? `${ozet.genelToplam.toLocaleString("tr-TR", {
                       minimumFractionDigits: 2,
@@ -713,7 +715,7 @@ const tdOlcu: CSSProperties = {
   padding: "5px 2px",
 };
 
-const tdR: CSSProperties = { ...td, textAlign: "right" };
+const tdC: CSSProperties = { ...td, textAlign: "center", whiteSpace: "nowrap" };
 
 const sectionTd: CSSProperties = {
   padding: "8px 4px",
@@ -735,4 +737,15 @@ const specTdFoto: CSSProperties = {
   ...specTd,
   textAlign: "left",
   verticalAlign: "middle",
+};
+
+/** Açıklama — Tanımı hizası; Poz sütunu kadar iç boşluk */
+const specTdAcik: CSSProperties = {
+  ...specTd,
+  paddingLeft: 0,
+};
+
+const specPre: CSSProperties = {
+  margin: 0,
+  whiteSpace: "pre-wrap",
 };

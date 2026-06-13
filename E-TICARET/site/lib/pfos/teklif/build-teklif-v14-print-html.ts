@@ -79,9 +79,11 @@ export function buildTeklifV14PrintHtml(
       const acikHtml = acik ? esc(acik) : "";
       if (imgUrl || acikHtml) {
         tbody += `<tr class="spec">
-          <td colspan="2"></td>
+          <td></td>
+          <td></td>
           <td class="foto-cell">${fotoCell}</td>
-          <td colspan="8" class="spec-cell"><pre>${acikHtml}</pre></td>
+          <td class="spec-acik"><pre>${acikHtml}</pre></td>
+          <td colspan="7"></td>
         </tr>`;
       }
     }
@@ -128,13 +130,14 @@ export function buildTeklifV14PrintHtml(
   td.stok { text-align: left; white-space: nowrap; }
   td.tanim { word-break: break-word; }
   td.marka, td.olcu { text-align: center; font-size: 9px; padding: 4px 2px; }
-  td.num { text-align: right; white-space: nowrap; }
+  td.num { text-align: center; white-space: nowrap; }
   tr.sec td { font-weight: 700; background: ${TEKLIF_BOLUM_ROW_FILL}; color: #1e4620; padding: 7px 4px; border-bottom: 1px solid #b7dfc5; }
   tr.spec td { background: #fafafa; }
   .foto-cell { text-align: left; vertical-align: middle; }
   .foto { max-width: 120px; max-height: 100px; object-fit: contain; display: block; }
   .foto-ph { color: #999; }
   .spec-cell pre { margin: 0; white-space: pre-wrap; font-family: inherit; font-size: 9px; line-height: 1.45; }
+  td.spec-acik { word-break: break-word; }
   tr.total td { font-weight: 700; }
   .foot { margin-top: 14px; font-size: 9px; color: #555; display: flex; justify-content: space-between; }
   .sartlar { margin-top: 16px; font-size: 9px; line-height: 1.5; page-break-inside: avoid; }
@@ -175,8 +178,8 @@ export function buildTeklifV14PrintHtml(
         <td class="num">${esc(formatKwHucre(ozet.toplamElektrikKw))}</td>
         <td class="num">${esc(formatKwHucre(ozet.toplamGazKw))}</td>
         <td></td>
-        <td style="font-weight:700">GENEL TOPLAM</td>
-        <td class="num">${esc(genel)}</td>
+        <td style="font-weight:700;text-align:center">GENEL TOPLAM</td>
+        <td class="num" style="font-weight:700">${esc(genel)}</td>
         <td></td>
         <td></td>
       </tr>
