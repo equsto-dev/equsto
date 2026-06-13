@@ -4,7 +4,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260608davlumbaz-orta-filtreli-v2";
+  var CATALOG_V = "20260613inoksan-pdp";
 
   window.EqMarketReyon = {
     loadCatalog: function () {
