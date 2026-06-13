@@ -939,6 +939,7 @@ const EN = {
     specs_request_quote:
       "Request detailed technical specifications through the quote process.",
     spec_group_electric: "Electrical",
+    spec_group_gas: "Gas",
     spec_group_cooling: "Operating conditions",
     spec_group_other: "Other",
     inner_dims_prefix: "Internal dimensions: {dim}.",
