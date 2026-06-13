@@ -92,7 +92,7 @@ body.eq-imt-page .imt-page-main {
 
 .imt-hero h1 em {
   font-style: normal;
-  color: var(--eq-topnav-dept-bg, #001e50);
+  color: #fff;
 }
 
 .imt-lead {
