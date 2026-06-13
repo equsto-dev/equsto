@@ -996,7 +996,7 @@
     );
   }
 
-  var EQ_CATALOG_IMG_V = "20260613ozti-gaz-elk-v6";
+  var EQ_CATALOG_IMG_V = "20260606-inoksan-pdp-ozti-v7";
 
   function withCatalogImgV(url) {
     if (

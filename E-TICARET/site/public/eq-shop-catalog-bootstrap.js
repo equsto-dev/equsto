@@ -6,7 +6,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260613ozti-gaz-elk-v6";
+  var CATALOG_V = "20260606-inoksan-pdp-ozti-v7";
   var __fullMem = null;
   var __fullInflight = null;
   var __deptMem = Object.create(null);
