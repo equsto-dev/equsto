@@ -29,11 +29,14 @@ export function oztiPreferredBuzSkus(
   widthCm: number,
   freezer: boolean,
   camKapili: boolean,
+  depthCm: 60 | 70 = 70,
 ): string[] {
   const p = oztiNtvPrefix(kapi, widthCm);
+  const depthSeries = depthCm === 60 ? "79E4" : "79E3";
   if (family === "tezgah") {
-    if (camKapili) return [`7919.${p}NTV.24`, `7919.${p}NTV.T1`];
-    return [`7919.${p}NTV.T1`, `7919.${p}NTV.S0`];
+    const nmv = `${depthSeries}.${p}NMV.${camKapili ? "01" : "00"}`;
+    if (camKapili) return [nmv, `7919.${p}NTV.24`];
+    return [nmv];
   }
   if (family === "cihazalti") {
     return [`7919.${p}NTV.C1`, `7919.${p}NTV.C2`];
@@ -81,7 +84,7 @@ export function scoreOztiBuzdolabiRow(
   if (isOztiKatalogMarka(row.marka_ad)) score += 40;
   if (targetSkus.some((t) => norm(sku) === norm(t.replace(/\s+/g, "")))) score += 500;
 
-  if (family === "tezgah" && /tezgah|ntv\s*t\s*tip|havuzlu|tag\s*\d+\s*ntv/i.test(ad)) {
+  if (family === "tezgah" && /tezgah|yatay\s*tip|nmv|tag\s*\d+\s*nmv/i.test(ad)) {
     score += 80;
   }
   if (family === "cihazalti" && /cihaz\s*alti|cihazalti/.test(ad)) score += 80;
@@ -114,5 +117,18 @@ export function scoreOztiBuzdolabiRow(
 
   if (row.gorsel_url) score += 5;
   if (row.fiyat_tl > 0) score += 5;
+
+  const refN = norm(referansIsim);
+  const wantsPrepTop = /make\s*up|saladette|hazirlik|pizza\s*prep|havuz|sogutma\s*tezgah|sogutmali\s*tezgah|pizza\s*hazirlik/.test(
+    refN,
+  );
+  if (family === "tezgah") {
+    if (/yatay\s*tip|nmv|79e3\.|79e4\./i.test(`${ad} ${sku}`)) score += 120;
+    if (!wantsPrepTop && /havuzlu|make\s*up|pizza\s*hazirlik|soguk\s*servis\s*bankosu|\.t1\b|\.s0\b/i.test(`${ad} ${sku}`)) {
+      score -= 8000;
+    }
+    if (wantsPrepTop && /havuzlu|make\s*up|\.t1\b|pizza\s*hazirlik/i.test(ad)) score += 80;
+  }
+
   return score;
 }

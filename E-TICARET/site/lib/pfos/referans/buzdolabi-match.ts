@@ -189,7 +189,7 @@ export async function matchBuzdolabiByReferans(
   const widthCm = parts?.[0] ?? 140;
   const skus =
     family && kapi != null
-      ? oztiPreferredBuzSkus(family, kapi, widthCm, freezer, camKapili)
+      ? oztiPreferredBuzSkus(family, kapi, widthCm, freezer, camKapili, depth)
       : [];
 
   for (const sku of skus) {
