@@ -32,7 +32,7 @@
   }
 
   var PAGE_SIZE = 24;
-  var CATALOG_V = '20260608equsto-tezgah-fiyat-fix';
+  var CATALOG_V = '20260613urbanbar-img-fix';
   var DEPT = (document.body && document.body.getAttribute('data-eq-dept')) || 'pisirme';
   /* Next.js URL slug → katalog dept id (data/dept/*.json) */
   if (DEPT === 'market-reyonlari') DEPT = 'market-reyon';
@@ -136,6 +136,7 @@
       return '/data/' + s.replace(/^data\//, '');
     }
     if (/^https?:\/\//i.test(s)) {
+      if (/cdn\.shopify\.com\/s\/files\//i.test(s)) return s;
       try {
         if (typeof window.eqAllowRemoteImages === 'function' && window.eqAllowRemoteImages()) return s;
       } catch (_) {}
@@ -681,7 +682,18 @@
       }
     }
     var imgOut = '';
-    if (imgRel) imgOut = imgSrc(imgRel) || '';
+    var shopifyImg = String(row.shopify_image || '').trim();
+    var isUrbanBar = /urban\s*bar/i.test(fb || b || '');
+    if (isUrbanBar && shopifyImg && /^https:\/\/cdn\.shopify\.com\//i.test(shopifyImg)) {
+      try {
+        var host = (location.hostname || '').toLowerCase();
+        if (host === 'equsto.com' || host.slice(-12) === '.equsto.com') {
+          imgOut = shopifyImg;
+        }
+      } catch (_) {}
+    }
+    if (!imgOut && imgRel) imgOut = imgSrc(imgRel) || '';
+    if (!imgOut && shopifyImg) imgOut = shopifyImg;
     if (!imgOut && isOztiRow(row) && ozSku && typeof window.eqOztiAxImageFromSku === 'function') {
       imgOut = window.eqOztiAxImageFromSku(ozSku) || '';
     }
@@ -912,6 +924,8 @@
       u.raw && isOztiRow(u.raw) ? String(u.raw.sku || u.raw.model || u.raw.urun_kodu || '') : '';
     var pimakGorsel =
       u.raw && u.raw.pimak_gorsel ? String(u.raw.pimak_gorsel).trim() : '';
+    var shopifyImg =
+      u.raw && u.raw.shopify_image ? String(u.raw.shopify_image).trim() : '';
     var img = u.img
       ? '<img src="' +
         esc(u.img) +
@@ -919,6 +933,7 @@
         (rawImg ? ' data-eq-img-raw="' + esc(rawImg) + '" data-eq-img-step="0"' : '') +
         (oztiKod ? ' data-eq-ozti-kod="' + esc(oztiKod) + '"' : '') +
         (pimakGorsel ? ' data-eq-pimak-gorsel="' + esc(pimakGorsel) + '"' : '') +
+        (shopifyImg ? ' data-eq-shopify-img="' + esc(shopifyImg) + '"' : '') +
         ' alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="typeof __eqImgFail===\'function\'&&__eqImgFail(this)">'
       : '';
     var cartBtn =

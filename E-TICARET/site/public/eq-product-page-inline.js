@@ -303,8 +303,20 @@ window.searchFilter = window.searchFilter || function () {};
       if (wrap) wrap.classList.toggle("eq-product-hero-wrap--lineart", !!lineart);
     }
 
+    function urbanBarShopifyRels(x) {
+      if (!x || !/urban\s*bar/i.test(String(x.brand || ""))) return null;
+      var u = String(x.shopify_image || "").trim();
+      if (!u || !/^https:\/\/cdn\.shopify\.com\//i.test(u)) return null;
+      try {
+        var host = (location.hostname || "").toLowerCase();
+        if (host === "equsto.com" || host.slice(-12) === ".equsto.com") return [u];
+      } catch (_) {}
+      return null;
+    }
+
     function collectProductImgs(x) {
-      var rels = uniqueImgs(x.images);
+      var urbanSh = urbanBarShopifyRels(x);
+      var rels = urbanSh || uniqueImgs(x.images);
       if (!rels.length) {
         var syn = oztiWebRelFromSku(x.sku || x.urun_kodu || x.model);
         if (syn) rels.push(syn);
@@ -641,6 +653,8 @@ window.searchFilter = window.searchFilter || function () {};
     }
 
     function thumbSrc(p) {
+      var urbanSh = urbanBarShopifyRels(p);
+      if (urbanSh && urbanSh.length) return urbanSh[0];
       var imgs = uniqueImgs(p && p.images);
       return imgs.length ? imgs[0] : "";
     }
