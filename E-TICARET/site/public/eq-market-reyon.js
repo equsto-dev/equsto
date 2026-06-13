@@ -4,7 +4,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260613-pimak-pdp-ozti-v2";
+  var CATALOG_V = "20260613-kuvet-gn-facet";
 
   window.EqMarketReyon = {
     loadCatalog: function () {
