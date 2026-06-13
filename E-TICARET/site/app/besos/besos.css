@@ -1821,6 +1821,12 @@ body.bd-page.besos.eq-shop .eq-mfoot-copy {
   padding-bottom: 18px;
   border-bottom: 1px solid var(--bes-rule);
 }
+.ub-besos-quick-filters--capacity {
+  margin-top: -8px;
+  padding-top: 0;
+  border-bottom: none;
+  margin-bottom: 18px;
+}
 .ub-besos-quick-filters__label {
   flex: 0 0 auto;
   font-size: 10px;
@@ -1900,6 +1906,12 @@ body.bd-page.besos.eq-shop .eq-mfoot-copy {
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.03);
   padding: 14px 12px;
+}
+.ub-besos-facets__panel--capacity {
+  margin-top: 12px;
+}
+.ub-besos-facets__clear-row {
+  margin-bottom: 10px;
 }
 .ub-besos-facets__hd {
   display: flex;
