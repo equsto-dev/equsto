@@ -74,19 +74,19 @@ function writeDataRow(
   ws.getCell(rowNum, 3).value = satir.stokNo;
   ws.getCell(rowNum, 3).alignment = { horizontal: "left", vertical: "top" };
   ws.getCell(rowNum, 4).value = satir.tanim;
-  ws.getCell(rowNum, 5).value = kwHucreExcelValue(satir.elkKw);
-  ws.getCell(rowNum, 5).numFmt = "0.0";
-  ws.getCell(rowNum, 6).value = kwHucreExcelValue(satir.gazKw);
-  ws.getCell(rowNum, 6).numFmt = "0.0";
-  ws.getCell(rowNum, 7).value = satir.adet;
-  ws.getCell(rowNum, 8).value = satir.birimSatis ?? 0;
-  ws.getCell(rowNum, 8).numFmt = "#,##0.00";
-  ws.getCell(rowNum, 9).value = { formula: `G${rowNum}*H${rowNum}` };
-  ws.getCell(rowNum, 9).numFmt = "#,##0.00";
-  ws.getCell(rowNum, 10).value = satir.marka;
-  ws.getCell(rowNum, 10).alignment = { horizontal: "center", vertical: "top" };
-  ws.getCell(rowNum, 11).value = satir.olcu || "—";
-  ws.getCell(rowNum, 11).alignment = { horizontal: "center", vertical: "top" };
+  ws.getCell(rowNum, 5).value = satir.olcu || "—";
+  ws.getCell(rowNum, 5).alignment = { horizontal: "center", vertical: "top" };
+  ws.getCell(rowNum, 6).value = satir.marka;
+  ws.getCell(rowNum, 6).alignment = { horizontal: "center", vertical: "top" };
+  ws.getCell(rowNum, 7).value = kwHucreExcelValue(satir.elkKw);
+  ws.getCell(rowNum, 7).numFmt = "0.0";
+  ws.getCell(rowNum, 8).value = kwHucreExcelValue(satir.gazKw);
+  ws.getCell(rowNum, 8).numFmt = "0.0";
+  ws.getCell(rowNum, 9).value = satir.adet;
+  ws.getCell(rowNum, 10).value = satir.birimSatis ?? 0;
+  ws.getCell(rowNum, 10).numFmt = "#,##0.00";
+  ws.getCell(rowNum, 11).value = { formula: `I${rowNum}*J${rowNum}` };
+  ws.getCell(rowNum, 11).numFmt = "#,##0.00";
   ws.getCell(rowNum, 12).value = satir.doviz;
 }
 
@@ -161,10 +161,10 @@ function buildProductBlock(ws: ExcelJS.Worksheet, model: TeklifModelV14) {
       applyRowStyle(ws, rowNum, dataTpl);
       writeDataRow(ws, rowNum, satir);
       const dr = rowNum;
-      sumRefs.push(`I${dr}`);
-      elkParts.push(`E${dr}*G${dr}`);
-      gazParts.push(`F${dr}*G${dr}`);
-      adetRefs.push(`G${dr}`);
+      sumRefs.push(`K${dr}`);
+      elkParts.push(`G${dr}*I${dr}`);
+      gazParts.push(`H${dr}*I${dr}`);
+      adetRefs.push(`I${dr}`);
       rowNum++;
 
       ws.insertRow(rowNum, []);
@@ -182,8 +182,8 @@ function buildProductBlock(ws: ExcelJS.Worksheet, model: TeklifModelV14) {
   applyRowStyle(ws, rowNum, kwTpl);
   ws.getCell(rowNum, 4).value = "Gazlı cihaz toplam bağlantısı (kW)";
   if (gazParts.length) {
-    ws.getCell(rowNum, 6).value = { formula: gazSum };
-    ws.getCell(rowNum, 6).numFmt = "0.0";
+    ws.getCell(rowNum, 8).value = { formula: gazSum };
+    ws.getCell(rowNum, 8).numFmt = "0.0";
   }
   rowNum++;
 
@@ -191,24 +191,24 @@ function buildProductBlock(ws: ExcelJS.Worksheet, model: TeklifModelV14) {
   applyRowStyle(ws, rowNum, subTpl);
   ws.getCell(rowNum, 4).value = "Sütun toplamları →";
   if (elkParts.length) {
-    ws.getCell(rowNum, 5).value = { formula: elkSum };
-    ws.getCell(rowNum, 5).numFmt = "0.0";
+    ws.getCell(rowNum, 7).value = { formula: elkSum };
+    ws.getCell(rowNum, 7).numFmt = "0.0";
   }
   if (gazParts.length) {
-    ws.getCell(rowNum, 6).value = { formula: gazSum };
-    ws.getCell(rowNum, 6).numFmt = "0.0";
+    ws.getCell(rowNum, 8).value = { formula: gazSum };
+    ws.getCell(rowNum, 8).numFmt = "0.0";
   }
   if (adetRefs.length) {
-    ws.getCell(rowNum, 7).value = { formula: adetSum };
+    ws.getCell(rowNum, 9).value = { formula: adetSum };
   }
   rowNum++;
 
   ws.insertRow(rowNum, []);
   applyRowStyle(ws, rowNum, grandTpl);
-  ws.getCell(rowNum, 8).value = "GENEL TOPLAM";
-  ws.getCell(rowNum, 8).font = { bold: true };
-  ws.getCell(rowNum, 9).value = { formula: sumFormula };
-  ws.getCell(rowNum, 9).numFmt = "#,##0.00";
+  ws.getCell(rowNum, 10).value = "GENEL TOPLAM";
+  ws.getCell(rowNum, 10).font = { bold: true };
+  ws.getCell(rowNum, 11).value = { formula: sumFormula };
+  ws.getCell(rowNum, 11).numFmt = "#,##0.00";
   ws.getCell(rowNum, 12).value = model.ozet.doviz;
 }
 
