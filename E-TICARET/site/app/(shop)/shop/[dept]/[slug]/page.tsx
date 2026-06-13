@@ -18,6 +18,7 @@ import {
   rowToPdpClientSeed,
   rowToPdpSsr,
 } from "@/lib/shop/pdp-server";
+import { findBesosUrbanBarProductByEqustoId } from "@/lib/besos/urbanbar/pdp-server";
 
 export const dynamic = "force-dynamic";
 
@@ -45,6 +46,11 @@ export default async function ShopProductPage({
 }) {
   const { dept, slug } = await params;
   if (!isShopDeptSlug(dept) || !slug) notFound();
+
+  if (/^urban-bar__/i.test(slug)) {
+    const ub = await findBesosUrbanBarProductByEqustoId(slug.replace(/_/g, "-"));
+    if (ub?.besosHref) redirect(ub.besosHref);
+  }
 
   const found = await findProductForPdp(dept, slug);
   if (!found) notFound();

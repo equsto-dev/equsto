@@ -40,10 +40,21 @@ export async function findBesosUrbanBarProduct(
 ): Promise<BesosUrbanBarProduct | null> {
   const catalog = await loadBesosUrbanBarCatalog();
   for (const product of catalog.products) {
-    if (product.section !== sectionKey) continue;
-    if (productMatchesSlug(product, pathSlug)) return product;
+    if (!productMatchesSlug(product, pathSlug)) continue;
+    return product;
   }
   return null;
+}
+
+export async function findBesosUrbanBarProductByEqustoId(
+  equstoId: string,
+): Promise<BesosUrbanBarProduct | null> {
+  const id = String(equstoId || "").trim().toLowerCase();
+  if (!id) return null;
+  const catalog = await loadBesosUrbanBarCatalog();
+  return (
+    catalog.products.find((p) => String(p.equstoId || "").trim().toLowerCase() === id) || null
+  );
 }
 
 function productHeroImage(product: BesosUrbanBarProduct, origin: string): string | undefined {

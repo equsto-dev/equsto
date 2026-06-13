@@ -71,6 +71,8 @@ const traceExcludes = [
 
 const apiTraceExcludes = [...traceExcludes];
 
+const urbanBarBesosCatalogInclude = ["./public/data/urbanbar-besos-catalog.json"];
+
 /** Monorepo: node_modules / shared packages repo kökünden trace edilebilir */
 const parentRepo = path.join(__dirname, "..", "..");
 const tracingRoot = fs.existsSync(
@@ -141,6 +143,12 @@ const nextConfig: NextConfig = {
     "/**": apiTraceExcludes,
     "/api/**": apiTraceExcludes,
     "/api/cms": apiTraceExcludes,
+  },
+  outputFileTracingIncludes: {
+    "/besos/bardaklar/[slug]": urbanBarBesosCatalogInclude,
+    "/besos/bar-ekipman/[slug]": urbanBarBesosCatalogInclude,
+    "/en/besos/bardaklar/[slug]": urbanBarBesosCatalogInclude,
+    "/en/besos/bar-ekipman/[slug]": urbanBarBesosCatalogInclude,
   },
   transpilePackages: [
     "antd",

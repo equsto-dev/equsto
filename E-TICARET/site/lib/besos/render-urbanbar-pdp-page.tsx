@@ -21,6 +21,14 @@ export async function renderBesosUrbanBarPdpPage(
   const bundle = await loadBesosUrbanBarPdpBundle(sectionKey, pathSlug, locale);
   if (!bundle) notFound();
 
+  const productSection = bundle.product.section as BesosUrbanBarSectionKey;
+  if (productSection !== sectionKey) {
+    const prefix = locale === "en" ? "/en" : "";
+    const sec = productSection === "bardaklar" ? "bardaklar" : "bar-ekipman";
+    const slug = besosUrbanBarProductSlug(bundle.product);
+    redirect(`${prefix}/besos/${sec}/${encodeURIComponent(slug)}`);
+  }
+
   const canonicalSlug = besosUrbanBarProductSlug(bundle.product);
   const normalizedPath = decodeURIComponent(pathSlug).toLowerCase().replace(/_/g, "-");
   const normalizedCanonical = canonicalSlug.toLowerCase().replace(/_/g, "-");
