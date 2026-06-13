@@ -4,7 +4,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260606-inoksan-pdp-ozti-v7";
+  var CATALOG_V = "20260613-atalay-pdp-v1";
 
   window.EqMarketReyon = {
     loadCatalog: function () {

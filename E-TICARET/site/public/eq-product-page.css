@@ -806,12 +806,14 @@ body.eq-shop .eq-product-specs .eq-specs-cols pre {
 }
 
 .eq-epdp--ozti .eq-epdp-panels,
-.eq-epdp--inoksan .eq-epdp-panels {
+.eq-epdp--inoksan .eq-epdp-panels,
+.eq-epdp--atalay .eq-epdp-panels {
   align-items: start;
 }
 
 .eq-epdp--ozti .eq-epdp-panels .eq-epdp-panel:last-child .eq-specs-list,
-.eq-epdp--inoksan .eq-epdp-panels .eq-epdp-panel:last-child .eq-specs-list {
+.eq-epdp--inoksan .eq-epdp-panels .eq-epdp-panel:last-child .eq-specs-list,
+.eq-epdp--atalay .eq-epdp-panels .eq-epdp-panel:last-child .eq-specs-list {
   font-size: 14px;
   line-height: 1.6;
 }
