@@ -455,29 +455,28 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
                     </tr>
                     {showSpecRow && (
                       <tr>
-                        <td style={specTd} />
-                        <td style={specTd} />
-                        <td style={specTdFoto}>
+                        <td colSpan={2} style={specTdFoto}>
                           {row.fotoUrl ? (
                             // eslint-disable-next-line @next/next/no-img-element
                             <img
                               src={row.fotoUrl}
                               alt=""
                               style={{
-                                maxWidth: 120,
-                                maxHeight: 100,
+                                maxWidth: 150,
+                                maxHeight: 125,
                                 objectFit: "contain",
                                 display: "block",
+                                margin: 0,
                               }}
                             />
                           ) : hasKnownProduct ? (
                             row.fotoNot ?? "📷 Fotoğraf"
                           ) : null}
                         </td>
-                        <td style={specTdAcik}>
+                        <td style={specTdGap} />
+                        <td colSpan={8} style={specTdAcik}>
                           <pre style={specPre}>{aciklamaMetni}</pre>
                         </td>
-                        <td colSpan={7} style={specTd} />
                       </tr>
                     )}
                   </Fragment>
@@ -738,13 +737,20 @@ const specTd: CSSProperties = {
 const specTdFoto: CSSProperties = {
   ...specTd,
   textAlign: "left",
-  verticalAlign: "middle",
+  verticalAlign: "top",
+  paddingLeft: 0,
+  paddingRight: 2,
 };
 
-/** Açıklama — Tanımı hizası; Poz sütunu kadar iç boşluk */
+const specTdGap: CSSProperties = {
+  ...specTd,
+  padding: 0,
+};
+
+/** Açıklama — Tanımı sütunu hizası (Böl+Poz+Stok sonrası) */
 const specTdAcik: CSSProperties = {
   ...specTd,
-  paddingLeft: 0,
+  paddingLeft: 4,
 };
 
 const specPre: CSSProperties = {

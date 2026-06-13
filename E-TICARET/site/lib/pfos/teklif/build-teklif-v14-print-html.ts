@@ -79,11 +79,9 @@ export function buildTeklifV14PrintHtml(
       const acikHtml = acik ? esc(acik) : "";
       if (imgUrl || acikHtml) {
         tbody += `<tr class="spec">
-          <td></td>
-          <td></td>
-          <td class="foto-cell">${fotoCell}</td>
-          <td class="spec-acik"><pre>${acikHtml}</pre></td>
-          <td colspan="7"></td>
+          <td class="foto-cell" colspan="2">${fotoCell}</td>
+          <td class="spec-gap"></td>
+          <td class="spec-acik" colspan="8"><pre>${acikHtml}</pre></td>
         </tr>`;
       }
     }
@@ -134,11 +132,12 @@ export function buildTeklifV14PrintHtml(
   td.num { text-align: center; white-space: nowrap; }
   tr.sec td { font-weight: 700; background: ${TEKLIF_BOLUM_ROW_FILL}; color: #1e4620; padding: 7px 4px; border-bottom: 1px solid #b7dfc5; }
   tr.spec td { background: #fafafa; }
-  .foto-cell { text-align: left; vertical-align: middle; }
-  .foto { max-width: 120px; max-height: 100px; object-fit: contain; display: block; }
+  tr.spec td.foto-cell { padding: 4px 0 4px 0; text-align: left; vertical-align: top; }
+  tr.spec td.spec-gap { padding: 0; background: #fafafa; }
+  .foto { max-width: 150px; max-height: 125px; object-fit: contain; display: block; margin: 0; }
   .foto-ph { color: #999; }
-  .spec-cell pre { margin: 0; white-space: pre-wrap; font-family: inherit; font-size: 9px; line-height: 1.45; }
-  td.spec-acik { word-break: break-word; }
+  td.spec-acik pre { margin: 0; white-space: pre-wrap; font-family: inherit; font-size: 9px; line-height: 1.45; word-break: break-word; }
+  td.spec-acik { word-break: break-word; vertical-align: top; padding: 4px 3px 4px 4px; }
   tr.total td { font-weight: 700; }
   .foot { margin-top: 14px; font-size: 9px; color: #555; display: flex; justify-content: space-between; }
   .sartlar { margin-top: 16px; font-size: 9px; line-height: 1.5; page-break-inside: avoid; }
