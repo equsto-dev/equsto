@@ -89,6 +89,8 @@
     "feed:google": "node scripts/build-google-merchant-feed.mjs",
     "feed:google:stats": "tsx scripts/run-google-merchant-feed.ts --stats",
     "catalog:atalay:gmc-images": "node scripts/fetch-atalay-gmc-images.mjs --fix-small",
+    "catalog:atalay:web-desc": "node scripts/fetch-atalay-web-descriptions.mjs",
+    "catalog:atalay:web-desc:full": "node scripts/fetch-atalay-web-descriptions.mjs --refresh-index --force",
     "verify:pdp-kilit": "node scripts/verify-pdp-kilit.mjs",
     "verify:pdp-buybox-kilit": "node scripts/verify-pdp-buybox-kilit.mjs",
     "verify:topnav-kilit": "node scripts/verify-topnav-kilit.mjs",
