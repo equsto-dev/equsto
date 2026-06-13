@@ -71,6 +71,18 @@ function findCm(row, cmIndex) {
   for (const key of rowLookupKeys(row)) {
     if (cmIndex.has(key)) return cmIndex.get(key);
   }
+  const sku = String(row.sku || row.model || "").trim();
+  const alias = [
+    sku.replace(/^SBTP/i, "SBT"),
+    sku.replace(/^SBTG/i, "SBT"),
+    sku.replace(/^SBTM/i, "SBM"),
+    sku.replace(/^ASBH/i, "SBH"),
+    sku.replace(/^MSBH/i, "SBH"),
+  ];
+  for (const a of alias) {
+    const key = normHay(a);
+    if (cmIndex.has(key)) return cmIndex.get(key);
+  }
   return null;
 }
 

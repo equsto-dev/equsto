@@ -16,9 +16,11 @@ import { fileURLToPath } from "node:url";
 import {
   OZTI_BRAND,
   applyOztiWebDescription,
+  buildOztiNtvC1PayloadFromC2,
   isOztiBrand,
   kodSoftKey,
   normKod,
+  oztiNtvC1SiblingKod,
 } from "./lib/ozti-enrich.mjs";
 import { isOztiTurkishProduct, parseOztiWpProduct } from "./lib/ozti-pdp-parse.mjs";
 
@@ -279,7 +281,14 @@ async function applyToCatalog(index) {
       continue;
     }
 
-    const payload = lookupPayload(index, kod);
+    let payload = lookupPayload(index, kod);
+    if (!payload?.description) {
+      const siblingKod = oztiNtvC1SiblingKod(kod);
+      if (siblingKod) {
+        const c2Payload = lookupPayload(index, siblingKod);
+        payload = c2Payload ? buildOztiNtvC1PayloadFromC2(kod, c2Payload) : null;
+      }
+    }
     if (payload?.description) {
       applyOztiWebDescription(row, payload);
       ok++;
