@@ -78,7 +78,10 @@ import {
   isPisirmeReferansIsim,
 } from "../core/atalay-marka";
 import { ocakFuelFromRow, parseOcakFuelFromReferans } from "../core/atalay-ocak-spec";
-import { matchPisirmeByReferans } from "./pisirme-match";
+import {
+  isDuvarRafiReferans,
+  matchDuvarRafiByReferans,
+} from "./duvar-raf-match";
 import { matchSenoxByReferans } from "./senox-vakum-match";
 import { isSenoxPfosKalem } from "../core/senox-marka";
 import { isMakeUpReferans, matchMakeUpByReferans } from "./make-up-match";
@@ -233,7 +236,7 @@ export function referansKatalogUyumsuz(
   if (!s || !k) return false;
 
   // 10. Tost makinesi vs döner sarma/kesme/döner
-  const isKatTost = k.includes("tost") || /akek|eaek/i.test(katalogSku ?? "");
+  const isKatTost = k.includes("tost") || /^aktm|^akek-0/i.test(katalogSku ?? "");
   if (s.includes("tost") && (k.includes("doner") || k.includes("döner") || k.includes("sarma") || !isKatTost)) {
     return true;
   }
@@ -289,8 +292,15 @@ export function referansKatalogUyumsuz(
 
   if (
     /davlumbaz/.test(k) &&
-    /tezgah|sehpa|raf|evye|masa|dolap/i.test(s) &&
+    /tezgah|sehpa|raf|evye|masa|dolap|buzdolab|sogutu/i.test(s) &&
     !/davlumbaz/i.test(s)
+  ) {
+    return true;
+  }
+  if (
+    /davlumbaz/.test(s) &&
+    /tezgah|sehpa|raf|evye|masa|dolap|buzdolab|sogutu/i.test(k) &&
+    !/davlumbaz/i.test(k)
   ) {
     return true;
   }
@@ -375,7 +385,7 @@ export function referansKatalogUyumsuz(
   }
   if (
     isCalismaTezgahiReferansIsim(sablonIsim, notlar) &&
-    !isEqustoTezgahRow(katalogSku) &&
+    !isEqustoTezgahRow(katalogSku, katalogAd) &&
     (/7911\.n1\.|7711\.|7897\.|oztiryakiler|\bozti\b|electrolux|^132\d{3,6}\b|371\d/.test(k) ||
       isSetUstuAraTezgahKatalog(katalogAd, katalogSku))
   ) {
@@ -500,15 +510,18 @@ function isimEslesmeSkoru(isim: string, urunAd: string): number {
   const b = norm(urunAd);
   if (!a || !b) return 0;
   if (a === b) return 200;
-  if (b.includes(a) || a.includes(b)) return 120;
 
-  const tokens = a
+  const aClean = a.replace(/[,;.:|]/g, " ");
+  const bClean = b.replace(/[,;.:|]/g, " ");
+  if (bClean.includes(aClean) || aClean.includes(bClean)) return 120;
+
+  const tokens = aClean
     .split(/\s+/)
     .filter((w) => w.length >= 4 && !/^(gazli|elektrikli|setalti|dolapli)$/.test(w));
   if (!tokens.length) return 0;
   let hit = 0;
   for (const t of tokens) {
-    if (b.includes(t)) hit++;
+    if (bClean.includes(t)) hit++;
   }
   return hit >= 2 ? hit * 35 : hit * 15;
 }
@@ -910,7 +923,7 @@ async function matchStrictCatalog(
           urunTipi: familyTip,
           notlar: input.notlar,
         }) &&
-        !isEqustoTezgahRow(row.sku)
+        !isEqustoTezgahRow(row.sku, row.ad)
       ) {
         return { row, score: -9999 };
       }
@@ -998,16 +1011,79 @@ export async function matchCatalogByIsimOlcu(
   );
 }
 
+export function isUnSekerArabasiReferans(isim: string): boolean {
+  const n = norm(isim);
+  const hasUn = /\bun\b/i.test(n) || n.includes("un-seker") || n.includes("un seker");
+  const hasSeker = /\bseker\b/i.test(n);
+  const hasAraba = /araba|trolley|container|konteyner/i.test(n);
+  return (hasUn || hasSeker) && hasAraba;
+}
+
+export async function matchUnSekerArabasiByReferans(
+  isim: string,
+  fiyatStratejisi: FiyatStratejisi = "ekonomik",
+): Promise<EslesmisUrun | null> {
+  const fc100 = await matchEslesmisByEqustoKod("EQ-PIMAK.FC-100");
+  if (fc100) return fc100;
+
+  const rows = (await loadLegacyCatalogRows()).filter(
+    (r) =>
+      r.durum === "aktif" &&
+      (r.fiyat_tl > 0 || (r.satis_eur_indirimli ?? 0) > 0),
+  );
+
+  const unSekerRows = rows.filter((r) => {
+    const name = String(r.ad ?? "").toLowerCase();
+    const hasUn = /\bun\b/i.test(name) || name.includes("un-şeker") || name.includes("un şeker") || name.includes("un-seker");
+    const hasSeker = /\bseker\b/i.test(name) || /\bşeker\b/i.test(name);
+    const hasAraba = /araba/i.test(name) || /trolley/i.test(name) || /container/i.test(name) || /konteyner/i.test(name);
+    return (hasUn || hasSeker) && hasAraba;
+  });
+
+  if (!unSekerRows.length) return null;
+
+  let selected = unSekerRows[0];
+  if (fiyatStratejisi === "premium") {
+    const ozti = unSekerRows.find((r) => /oztiryakiler|ozti/i.test(r.marka_ad ?? ""));
+    if (ozti) selected = ozti;
+  } else {
+    const pimak = unSekerRows.find((r) => /pimak/i.test(r.marka_ad ?? "") || r.sku === "FC-100");
+    if (pimak) selected = pimak;
+  }
+
+  return katalogRowToEslesmis(selected);
+}
+
 /** Referans satırı için güvenli katalog eşlemesi */
 export async function matchReferansKalem(
-  input: ReferansMatchInput,
+  rawInput: ReferansMatchInput,
 ): Promise<EslesmisUrun | null> {
+  let input = rawInput;
+  const normalizedIsim = norm(rawInput.isim);
+  if (normalizedIsim.includes("duvar rafi") && normalizedIsim.includes("aydinlatmali")) {
+    const newIsim = rawInput.isim
+      .replace(/aydinlatmali|aydınlatmalı/gi, "")
+      .replace(/,\s*,/g, ",")
+      .replace(/\s+/g, " ")
+      .trim()
+      .replace(/^,\s*|,\s*$/g, "")
+      .trim();
+    input = {
+      ...rawInput,
+      isim: newIsim,
+    };
+  }
+
   const olcu =
     extractOlcuFromNotlar(input.notlar) ||
     (input.notlar?.match(/(\d+\s*[*xX×]\s*\d+)/)?.[1] ?? "");
 
   const verified = await matchByVerifiedLink(input);
-  if (verified) return verified;
+  if (verified) {
+    if (!referansKatalogUyumsuz(input.isim, verified.ad ?? "", input.notlar, verified.sku)) {
+      return verified;
+    }
+  }
 
   const byMasterEq = await matchByMasterEqustoKod(input);
   if (byMasterEq) return byMasterEq;
@@ -1116,6 +1192,21 @@ export async function matchReferansKalem(
       input.fiyatStratejisi,
     );
     if (cop) return cop;
+  }
+
+  if (isDuvarRafiReferans(input.isim)) {
+    const duvarRaf = await matchDuvarRafiByReferans(
+      input.isim,
+      olcu,
+      input.notlar,
+      input.fiyatStratejisi,
+    );
+    if (duvarRaf) return duvarRaf;
+  }
+
+  if (isUnSekerArabasiReferans(input.isim)) {
+    const unSeker = await matchUnSekerArabasiByReferans(input.isim, input.fiyatStratejisi);
+    if (unSeker) return unSeker;
   }
 
   if (isDavlumbazReferans(input.isim)) {

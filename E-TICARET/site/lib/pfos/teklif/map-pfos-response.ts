@@ -24,13 +24,33 @@ import {
 import { equstoPimakGorselRelFromSku } from "../core/equsto-pimak-gorsel";
 import { displayIsimFromSablon } from "../core/ozel-imalat";
 import { sanitizeDavlumbazOlcu } from "./davlumbaz-olcu";
-import { repairPfosDisplayText } from "@/lib/utf8/repair-turkish-fffd";
+import {
+  formatPfosDisplayTanim,
+  isProformaJunkText,
+} from "../parse-upload/sanitize-tanim";
+import { buildCatalogTeklifAciklama } from "./catalog-teklif-aciklama";
+
+function cleanObjectString(s: string | null | undefined): string {
+  if (!s) return "";
+  return s.replace(/\[object\s+object\]/gi, " ").replace(/\s+/g, " ").trim();
+}
 
 function specAciklama(
   k: PFOSResponse["kalemler"][number],
-  referansListe = false,
+  _referansListe = false,
 ): string {
-  return "";
+  const fromUrun = k.urun?.teklifAciklama?.trim();
+  if (fromUrun) return cleanObjectString(fromUrun);
+  const notlar = cleanObjectString(k.notlar);
+  if (isProformaJunkText(notlar)) {
+    return "";
+  }
+  return buildCatalogTeklifAciklama({
+    description: null,
+    teknik_ozellikler: null,
+    specs: notlar || null,
+    aciklama: formatPfosDisplayTanim(k.isim),
+  });
 }
 
 /**
@@ -68,6 +88,12 @@ export function pfosResponseToTeklifV14(
         equstoPimakGorselRelFromSku(stokNo, k.isim) ??
         (stokNo ? oztiWebImageRelFromSku(stokNo) : null);
 
+    const sablonIsim = formatPfosDisplayTanim(k.isim);
+    const isDavlumbazSku = /^(7885|9885)\./i.test(stokNo);
+    if (isDavlumbazSku && !/davlumbaz/i.test(sablonIsim)) {
+      finalGorsel = u?.gorselUrl ?? equstoPimakGorselRelFromSku(stokNo, k.isim) ?? null;
+    }
+
     const normSkuKey = String(stokNo || "").trim().toUpperCase();
     const normNameKey = String(k.isim || "").toLowerCase();
     if (normSkuKey.endsWith(".12") || normSkuKey.endsWith("-12") || /çift\s*evye|cift\s*evye|iki\s*evye/i.test(normNameKey)) {
@@ -86,20 +112,20 @@ export function pfosResponseToTeklifV14(
       poz: k.poz,
       ek: "",
       stokNo: u?.sku ?? "",
-      tanim: displayIsimFromSablon(k.isim),
+      tanim: displayIsimFromSablon(sablonIsim),
       marka: resolveTeklifMarka({
         katalogMarka: u?.marka,
         urunAd: u?.ad,
-        sablonIsim: k.isim,
+        sablonIsim,
         urunTipi: k.urunTipi,
         sku: u?.sku,
       }),
       olcu:
         sanitizeDavlumbazOlcu(
-          displayIsimFromSablon(k.isim),
-          olcuForTeklifUrun(u, k.notlar),
+          displayIsimFromSablon(sablonIsim),
+          olcuForTeklifUrun(u, cleanObjectString(k.notlar)),
           k.urunTipi,
-        ) ?? olcuForTeklifUrun(u, k.notlar),
+        ) ?? olcuForTeklifUrun(u, cleanObjectString(k.notlar)),
       elkKw: u?.elektrikGucuKw ?? k.elektrikGucuKwHint ?? null,
       gazKw: u?.gazGucuKw ?? k.gazGucuKwHint ?? null,
       adet,
@@ -137,7 +163,6 @@ export function pfosResponseToTeklifV14(
     },
     sartlar: [
       ...TEKLIF_V14_SARTLAR,
-      ...res.uyarilar.filter((u) => !u.startsWith("PFOS yapay")),
     ],
     meta: {
       konsept: res.konsept,

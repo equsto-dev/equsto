@@ -77,8 +77,11 @@ export function isSetUstuAraTezgahKatalog(ad: string, sku?: string | null): bool
   );
 }
 
-export function isEqustoTezgahRow(sku: string | null | undefined): boolean {
-  return /^EQUSTO\.\d{4,5}\./i.test(String(sku ?? "").trim());
+export function isEqustoTezgahRow(sku: string | null | undefined, ad?: string | null): boolean {
+  const s = String(sku ?? "").trim();
+  if (!/^EQUSTO\.\d{4,5}\./i.test(s)) return false;
+  if (ad && /davlumbaz/i.test(ad)) return false;
+  return true;
 }
 
 /** 120×70 → 12070; 90×70 → 09070 (EQUSTO katalog önek formatı) */

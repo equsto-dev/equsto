@@ -23,7 +23,10 @@ const BOLUM_BY_POZ: Record<string, string> = {
 
 function cellStr(v: unknown): string {
   if (v == null) return "";
-  if (typeof v === "string") return v.trim();
+  if (typeof v === "string") {
+    const s = v.trim();
+    return s.toLowerCase() === "[object object]" ? "" : s;
+  }
   if (typeof v === "number" || typeof v === "boolean") return String(v).trim();
   if (v instanceof Date) return v.toISOString().trim();
 
@@ -32,7 +35,8 @@ function cellStr(v: unknown): string {
       return cellStr(v.result);
     }
     if ("formula" in v && v.formula != null) {
-      return String(v.formula).trim();
+      const s = String(v.formula).trim();
+      return s.toLowerCase() === "[object object]" ? "" : s;
     }
     if ("text" in v && v.text != null) {
       return cellStr(v.text);
@@ -44,11 +48,13 @@ function cellStr(v: unknown): string {
             ? cellStr(rt.text)
             : cellStr(rt)
         )
+        .filter(Boolean)
         .join("");
     }
   }
 
-  return String(v).trim();
+  const s = String(v).trim();
+  return s.toLowerCase() === "[object object]" ? "" : s;
 }
 
 function rowCells(row: { values: unknown }): string[] {
@@ -272,7 +278,9 @@ function findTabularHeader(cells: string[]): TabularHeader | null {
             c.includes("tanim") ||
             c === "aciklama" ||
             c.includes("ekipman") ||
-            c.includes("cinsi"),
+            c.includes("cinsi") ||
+            c.includes("urun") ||
+            c.includes("adi"),
         );
 
   if (tanimIdx < 0) return null;

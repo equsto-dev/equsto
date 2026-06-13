@@ -4,8 +4,11 @@ export const DAVLUMBAZ_MARKA = "Equsto";
 /** EQUSTO katalog derinlikleri (cm) */
 export const EQUSTO_DAVLUMBAZ_DEPTHS_CM = [100, 120, 150, 200, 250] as const;
 
-export function isEqustoDavlumbazRow(sku: string | null | undefined): boolean {
-  return /^EQUSTO\.\d{5}\./i.test(String(sku ?? "").trim());
+export function isEqustoDavlumbazRow(sku: string | null | undefined, ad?: string | null): boolean {
+  const s = String(sku ?? "").trim();
+  if (!/^EQUSTO\.\d{5}\./i.test(s)) return false;
+  if (ad && !/davlumbaz/i.test(ad)) return false;
+  return true;
 }
 
 export function isOztiDavlumbazSku(sku: string | null | undefined): boolean {

@@ -8,6 +8,7 @@ import {
   isCaglayanKatalogMarka,
   isCaglayanTeshirRow,
   isEtTeshirReyonReferans,
+  isPastaDolabiReferans,
 } from "../core/caglayan-marka";
 import { displayIsimFromSablon } from "../core/ozel-imalat";
 import type { EslesmisUrun, FiyatStratejisi } from "../schemas/pfos.schema";
@@ -77,12 +78,17 @@ function seriesBoost(category: string | null | undefined, isim: string): number 
   ];
   const pastrySeries = ["krizantem", "begonvil", "iris", "defne", "inci", "itir"];
 
+  if (isPastaDolabiReferans(isim)) {
+    if (cat.includes("yasemin")) score += 95;
+    const blob = `${cat} ${norm(String(category ?? ""))}`;
+    if (blob.includes("yasemin") && blob.includes("cl")) score += 30;
+  }
   if (isEtTeshirReyonReferans(isim) || /kasap|sarkuteri|et\s*teshir/.test(n)) {
     for (const s of meatSeries) {
       if (cat.includes(s)) score += 45;
     }
   }
-  if (/pastane|pasta|tatli|tatlı|borek|börek|kurabiye/.test(n)) {
+  if (/pastane|pasta|tatli|tatlı|borek|börek|kurabiye/.test(n) && !isPastaDolabiReferans(isim)) {
     for (const s of pastrySeries) {
       if (cat.includes(s)) score += 35;
     }
@@ -90,6 +96,15 @@ function seriesBoost(category: string | null | undefined, isim: string): number 
   if (/motoru\s*disar|motoru\s*dışar|remote/.test(n) && /gl-|lm-/.test(cat)) {
     score += 20;
   }
+  return score;
+}
+
+function pastaDolabiTieBreak(row: AdminUrunRow): number {
+  const blob = norm(`${row.sku ?? ""} ${row.ad ?? ""} ${row.kategori ?? ""}`);
+  let score = 0;
+  if (blob.includes("yasemin") && blob.includes("cl")) score += 12;
+  if (blob.includes("1600")) score += 6;
+  if (blob.includes("1300")) score += 3;
   return score;
 }
 
@@ -109,6 +124,7 @@ function scoreCaglayanRow(
     score += Math.max(0, 1200 - dist);
   }
   score += seriesBoost(row.kategori, isim);
+  if (isPastaDolabiReferans(isim)) score += pastaDolabiTieBreak(row);
   if (row.gorsel_url) score += 5;
   if (row.fiyat_tl > 0) score += 5;
   return score;
