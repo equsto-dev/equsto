@@ -87,7 +87,7 @@ export async function buildQuoteFromMeiliEslestirme(
       kategoriKodu: kategoriForKalem(e),
       altKategori: displayBolumBaslik(bolum, e.kalem.poz.charAt(0)),
       urunTipi: "upload-meili",
-      isim: formatPfosDisplayTanim(e.kalem.tanim) || e.kalem.tanim,
+      isim: formatPfosDisplayTanim(e.kalem.tanim),
       tip: e.kalem.mevcut ? ("opsiyonel" as const) : ("zorunlu" as const),
       opsiyonelSebep: e.kalem.mevcut ? "Müşteride mevcut" : undefined,
       adet: e.kalem.adet,

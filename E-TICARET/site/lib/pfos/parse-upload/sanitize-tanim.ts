@@ -35,12 +35,24 @@ const TRAILING_BRAND_QTY_RE =
   /\s+[-–—]\s*(?:electrolux|fimak|oztiryakiler|ozti|atalay|inoksan|pimak|equsto)\b.*$/i;
 
 /** Mefftech / tedarikçi proforma: adet birim toplam + kur çarpanı + 342 + float artığı */
+const PROFORMA_FLOAT_NUM = String.raw`\d+(?:[.,]\d+)?`;
 const PROFORMA_S_MULT_RE = /\s+S\d{1,3}\*[\d.,]+/gi;
-const PROFORMA_RATE_342_TAIL_RE = /\s+342\s+\d+(?:\.\d+)?\s*$/i;
-const INLINE_PROFORMA_RATE_342_RE = /\s+342\s+\d+(?:\.\d+)?/gi;
-const INLINE_PROFORMA_QTY_PRICE_RE = /\s+\d{1,3}\s+\d{2,5}\s+\d{2,5}(?:\s+S\d{1,3}\*[\d.,]+)?(?:\s+342\s+\d+(?:\.\d+)?)?/gi;
+const PROFORMA_RATE_342_TAIL_RE = new RegExp(
+  String.raw`\s+342\s+${PROFORMA_FLOAT_NUM}\s*$`,
+  "i",
+);
+const INLINE_PROFORMA_RATE_342_RE = new RegExp(
+  String.raw`\s+342\s+${PROFORMA_FLOAT_NUM}`,
+  "gi",
+);
+const INLINE_PROFORMA_QTY_PRICE_RE = new RegExp(
+  String.raw`\s+\d{1,3}\s+\d{2,5}\s+\d{2,5}(?:\s+S\d{1,3}\*[\d.,]+)?(?:\s+342\s+${PROFORMA_FLOAT_NUM})?`,
+  "gi",
+);
 const PROFORMA_QTY_PRICE_TRIPLE_RE = /\s+\d{1,3}\s+\d{2,5}\s+\d{2,5}\s*$/i;
-const PROFORMA_FLOAT_JUNK_RE = /\s+\d+\.\d{6,}\s*$/i;
+const PROFORMA_FLOAT_JUNK_RE = /\s+\d+[.,]\d{6,}\s*$/i;
+/** Virgüllü Excel kur artığı — `393,29999999999995` → kısmi eşleşme sonrası `,299…` kalır */
+const PROFORMA_COMMA_FLOAT_JUNK_RE = /[.,]\d{6,}\s*$/i;
 const ILYA_REPEAT_RE = /\s+(?:İLYA|ILYA|İlya|Ilya)(?:\s+(?:İLYA|ILYA|İlya|Ilya))+\s*/gi;
 
 /** Sondan proforma fiyat / kur artığını kademeli temizle */
@@ -50,6 +62,7 @@ function stripProformaPriceTail(s: string): string {
     const prev = out;
     out = out
       .replace(PROFORMA_FLOAT_JUNK_RE, "")
+      .replace(PROFORMA_COMMA_FLOAT_JUNK_RE, "")
       .replace(PROFORMA_RATE_342_TAIL_RE, "")
       .replace(/\s+342\s*$/i, "")
       .replace(PROFORMA_S_MULT_RE, "")
@@ -151,7 +164,8 @@ export function isProformaJunkText(raw: string | null | undefined): boolean {
   if (/^\d+(?:\s+\d+){1,3}\s*\+?\s*$/.test(s)) return true;
   if (/^[-–—]\s*\d+\s*(?:\[object\s+object\])?/i.test(s)) return true;
   if (/\bS\d{1,3}\*[\d.,]+/.test(s)) return true;
-  if (/\b342\s+\d+\.\d{6,}/.test(s)) return true;
+  if (/\b342\s+\d+[.,]\d{6,}/.test(s)) return true;
+  if (/[.,]\d{6,}\s*$/.test(s)) return true;
   if (/^\d{1,3}\s+\d{2,5}\s+\d{2,5}\s*$/.test(s)) return true;
   const meaningful = formatPfosDisplayTanim(s);
   return meaningful.length < 4;

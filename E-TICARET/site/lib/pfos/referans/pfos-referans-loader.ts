@@ -188,7 +188,7 @@ export function ekipmanToReferansKalemler(
 
     return {
       referansPoz: s.poz,
-      isim: formatPfosDisplayTanim(s.ad) || repairPfosDisplayText(s.ad),
+      isim: formatPfosDisplayTanim(s.ad),
       urunTipi,
       kategoriKodu: kategoriFromReferansSatir(s),
       adet: adetSayi(s.adet),
