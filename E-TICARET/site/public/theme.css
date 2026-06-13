@@ -4757,7 +4757,8 @@ body.bd-page.besos.eq-shop .eq-mfoot-powered {
   font-size: calc(9px * 1.4);
   line-height: 1.2;
   color: rgba(255, 255, 255, 0.5);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
+  text-transform: none;
 }
 body.eq-shop:not(.admin-app):not(.bd-page) .eq-mfoot-vitrum-name {
   color: #c5a046;

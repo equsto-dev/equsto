@@ -580,8 +580,23 @@
     }
   }
 
+  function isImt300BesosPage() {
+    try {
+      var p = String(location.pathname || "").replace(/\/+$/, "");
+      return /^\/(?:en\/)?(?:besos\/)?imt300$/i.test(p);
+    } catch (_) {
+      return false;
+    }
+  }
+
   function poweredByHtml() {
     var prefix = t("footer.powered_by_prefix", "Powered By");
+    if (isImt300BesosPage()) {
+      return (
+        esc(prefix) +
+        ' <a class="eq-mfoot-vitrum-name eq-mfoot-equsto-name" href="https://equsto.com/">Equsto</a>'
+      );
+    }
     if (isUrbanBarBesosPage()) {
       return (
         esc(prefix) +

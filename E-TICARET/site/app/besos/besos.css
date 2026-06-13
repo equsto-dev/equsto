@@ -1638,6 +1638,8 @@ body.bd-page.besos.eq-shop .eq-mfoot-powered {
   text-align: center;
   font-size: calc(10px * 1.4);
   color: rgba(255, 255, 255, 0.45);
+  text-transform: none;
+  letter-spacing: 0.02em;
 }
 body.bd-page.besos.eq-shop .eq-mfoot-vitrum-name {
   color: #c5a046;
@@ -1752,59 +1754,63 @@ body.bd-page.besos .ub-shop.ub-besos-page {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: clamp(1.75rem, 3vw, 2.25rem);
   font-weight: 400;
-  color: #1a1a1a;
+  color: #fff;
 }
 .ub-shop .ub-besos-catalog-meta {
-  color: #666;
+  color: var(--bes-text-3);
   font-size: 12px;
   letter-spacing: 0.04em;
   text-transform: none;
 }
 .ub-shop .ub-besos-powered--meta,
 .ub-shop .ub-besos-powered--meta a {
-  color: #666;
+  color: var(--bes-text-3);
 }
 .ub-shop .ub-besos-search input {
-  background: #fff;
-  border: 1px solid #d8d8d8;
-  color: #1a1a1a;
-  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--bes-rule);
+  color: #fff;
+  border-radius: 4px;
 }
 .ub-shop .ub-besos-quick-filters {
-  border-bottom-color: #e8e8e8;
+  border-bottom-color: var(--bes-rule);
 }
 .ub-shop .ub-besos-quick-filters__label {
-  color: #666;
+  color: var(--bes-text-3);
 }
 .ub-shop .ub-besos-quick-filter {
-  border-color: #d8d8d8;
-  background: #fff;
-  color: #333;
-  border-radius: 2px;
+  border-color: var(--bes-rule);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--bes-text-2);
+  border-radius: 4px;
+}
+.ub-shop .ub-besos-quick-filter:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
 }
 .ub-shop .ub-besos-quick-filter.is-active {
-  border-color: #1a1a1a;
-  background: #f5f5f5;
-  color: #1a1a1a;
+  border-color: var(--bes-gold-soft);
+  background: rgba(201, 162, 77, 0.14);
+  color: #fff;
 }
 .ub-shop .ub-besos-quick-filter__count {
-  color: #888;
+  color: var(--bes-text-3);
 }
 .ub-shop .ub-besos-plp {
   grid-template-columns: 220px minmax(0, 1fr);
   gap: 32px;
 }
 .ub-shop .ub-besos-facets__panel {
-  border: none;
-  border-radius: 0;
-  background: #f4f4f4;
+  border: 1px solid var(--bes-rule);
+  border-radius: 4px;
+  background: #111;
   padding: 0;
 }
 .ub-shop .ub-besos-facets__hd {
   padding: 14px 16px;
   margin: 0;
-  border-bottom: 1px solid #e0e0e0;
-  color: #333;
+  border-bottom: 1px solid var(--bes-rule);
+  color: #fff;
   font-size: 13px;
   letter-spacing: 0;
   text-transform: none;
@@ -1813,36 +1819,36 @@ body.bd-page.besos .ub-shop.ub-besos-page {
   padding: 8px 0;
 }
 .ub-shop .ub-besos-facet-item {
-  color: #333;
+  color: var(--bes-text-2);
   border-radius: 0;
   padding: 10px 16px;
   font-size: 14px;
 }
 .ub-shop .ub-besos-facet-item:hover {
-  background: #ececec;
-  color: #000;
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
 }
 .ub-shop .ub-besos-facet-item.is-active {
-  background: #e8e8e8;
+  background: rgba(255, 255, 255, 0.12);
   border-color: transparent;
-  color: #000;
+  color: #fff;
   font-weight: 600;
 }
 .ub-shop .ub-besos-facet-item__count {
-  color: #888;
+  color: var(--bes-text-3);
 }
 .ub-shop .ub-besos-plp-status,
 .ub-shop .ub-besos-empty {
-  color: #666;
+  color: var(--bes-text-3);
 }
 .ub-shop .ub-besos-selected-filters {
-  border-color: #e8e8e8;
-  background: #fafafa;
+  border-color: var(--bes-rule);
+  background: #111;
 }
 .ub-shop .ub-besos-selected-chip {
-  border-color: #ccc;
-  background: #fff;
-  color: #333;
+  border-color: var(--bes-rule);
+  background: #222;
+  color: #fff;
 }
 .ub-shop .ub-plp-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1874,30 +1880,58 @@ body.bd-page.besos .ub-shop.ub-besos-page {
 .ub-plp-card {
   display: flex;
   flex-direction: column;
-  background: #fff;
+  background: #000;
+  border: 1px solid var(--bes-rule);
+  transition: border-color 0.3s ease;
+}
+.ub-plp-card:hover {
+  border-color: var(--bes-rule-strong);
 }
 .ub-plp-card__media {
+  position: relative;
   display: block;
   aspect-ratio: 1;
-  background: #fff;
+  background: #000;
   border: none;
+  overflow: hidden;
 }
-.ub-plp-card__media img {
+.ub-plp-card__image {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  display: block;
+}
+.ub-plp-card__image--default {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+.ub-plp-card__image--hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+.ub-plp-card:hover .ub-plp-card__image--default {
+  opacity: 0;
+}
+.ub-plp-card:hover .ub-plp-card__image--hover {
+  opacity: 1;
 }
 .ub-plp-card__ph {
   display: grid;
   place-items: center;
   min-height: 180px;
-  color: #999;
+  color: var(--bes-text-3);
   font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 .ub-plp-card__body {
-  background: #f4f4f4;
+  background: #000;
   padding: 14px 12px 12px;
   display: flex;
   flex-direction: column;
@@ -1911,10 +1945,11 @@ body.bd-page.besos .ub-shop.ub-besos-page {
   font-weight: 400;
 }
 .ub-plp-card__title a {
-  color: #1a1a1a;
+  color: #fff;
   text-decoration: none;
 }
 .ub-plp-card__title a:hover {
+  color: var(--bes-gold-soft);
   text-decoration: underline;
 }
 .ub-plp-card__price {
@@ -1925,11 +1960,11 @@ body.bd-page.besos .ub-shop.ub-besos-page {
 .ub-plp-card__price-amount {
   font-size: 15px;
   font-weight: 700;
-  color: #1a1a1a;
+  color: #fff;
 }
 .ub-plp-card__price-vat {
   font-size: 12px;
-  color: #555;
+  color: var(--bes-text-3);
 }
 .ub-plp-card__buy {
   display: flex;
@@ -1940,8 +1975,8 @@ body.bd-page.besos .ub-shop.ub-besos-page {
 .ub-plp-card__qty {
   display: inline-flex;
   align-items: center;
-  background: #ececec;
-  border: 1px solid #d0d0d0;
+  background: #111;
+  border: 1px solid var(--bes-rule);
   border-right: none;
 }
 .ub-plp-card__qty-btn {
@@ -1950,46 +1985,57 @@ body.bd-page.besos .ub-shop.ub-besos-page {
   border: none;
   background: transparent;
   font-size: 18px;
-  color: #333;
+  color: #fff;
   cursor: pointer;
+}
+.ub-plp-card__qty-btn:hover {
+  color: var(--bes-gold-soft);
 }
 .ub-plp-card__qty-val {
   min-width: 28px;
   text-align: center;
   font-size: 14px;
   font-weight: 500;
+  color: #fff;
 }
 .ub-plp-card__cart-btn {
   flex: 1;
   min-height: 40px;
   padding: 0 10px;
-  border: none;
-  background: #1c2340;
-  color: #fff;
+  border: 1px solid #fff;
+  background: #fff;
+  color: #000;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 .ub-plp-card__cart-btn:hover:not(:disabled) {
-  background: #12182c;
+  background: #000;
+  color: #fff;
+  border-color: #fff;
 }
 .ub-plp-card__cart-btn:disabled {
-  opacity: 0.45;
+  opacity: 0.35;
   cursor: not-allowed;
+  background: #333;
+  border-color: #333;
+  color: #777;
 }
 .ub-plp-card__wish {
   flex: 0 0 40px;
   width: 40px;
-  border: 1px solid #d0d0d0;
+  border: 1px solid var(--bes-rule);
   border-left: none;
-  background: #ececec;
-  color: #333;
+  background: #111;
+  color: #888;
   font-size: 18px;
   cursor: default;
   opacity: 0.5;
 }
+
 
 /* Urban Bar — Besos katalog (legacy dark) */
 .ub-besos-page {
@@ -2545,12 +2591,12 @@ body.bd-page.besos .ub-shop.ub-besos-page {
 
 /* ── Urban Bar PDP (urbanbar.com layout) ── */
 body.bd-page.besos .ub-pdp-page {
-  background: #fff;
-  color: #1a1a1a;
+  background: #000;
+  color: #fff;
 }
 .ub-pdp-page {
-  background: #fff;
-  color: #1a1a1a;
+  background: #000;
+  color: #fff;
   min-height: 60vh;
 }
 .ub-pdp-shell {
@@ -2564,14 +2610,15 @@ body.bd-page.besos .ub-pdp-page {
   gap: 8px;
   align-items: center;
   font-size: 12px;
-  color: #666;
+  color: var(--bes-text-3);
   margin-bottom: 24px;
 }
 .ub-pdp-crumb a {
-  color: #333;
+  color: var(--bes-text-2);
   text-decoration: none;
 }
 .ub-pdp-crumb a:hover {
+  color: #fff;
   text-decoration: underline;
 }
 .ub-pdp-layout {
@@ -2598,7 +2645,7 @@ body.bd-page.besos .ub-pdp-page {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fff;
+  background: #000;
 }
 .ub-pdp-gallery__main {
   max-width: 100%;
@@ -2608,7 +2655,7 @@ body.bd-page.besos .ub-pdp-page {
   object-fit: contain;
 }
 .ub-pdp-gallery__main--ph {
-  color: #999;
+  color: var(--bes-text-3);
   font-size: 13px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -2622,14 +2669,14 @@ body.bd-page.besos .ub-pdp-page {
   height: 36px;
   border: none;
   background: transparent;
-  color: #333;
+  color: var(--bes-text-2);
   font-size: 28px;
   line-height: 1;
   cursor: pointer;
   padding: 0;
 }
 .ub-pdp-gallery__nav:hover {
-  color: #000;
+  color: #fff;
 }
 .ub-pdp-gallery__thumbs {
   display: flex;
@@ -2643,13 +2690,13 @@ body.bd-page.besos .ub-pdp-page {
   width: 88px;
   height: 88px;
   padding: 6px;
-  border: 1px solid #e5e5e5;
-  background: #fff;
+  border: 1px solid var(--bes-rule);
+  background: #000;
   cursor: pointer;
 }
 .ub-pdp-gallery__thumb.is-active {
-  border-color: #1a1a1a;
-  box-shadow: inset 0 0 0 1px #1a1a1a;
+  border-color: var(--bes-gold-soft);
+  box-shadow: inset 0 0 0 1px var(--bes-gold-soft);
 }
 .ub-pdp-gallery__thumb img {
   width: 100%;
@@ -2659,7 +2706,7 @@ body.bd-page.besos .ub-pdp-page {
 .ub-pdp-layout__info {
   font-size: 15px;
   line-height: 1.6;
-  color: #333;
+  color: var(--bes-text-2);
 }
 .ub-pdp-title {
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -2667,7 +2714,7 @@ body.bd-page.besos .ub-pdp-page {
   font-weight: 400;
   line-height: 1.2;
   margin: 0 0 12px;
-  color: #1a1a1a;
+  color: #fff;
 }
 .ub-pdp-price {
   margin: 0 0 8px;
@@ -2679,12 +2726,12 @@ body.bd-page.besos .ub-pdp-page {
 .ub-pdp-price__amount {
   font-size: 1.125rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: #fff;
 }
 .ub-pdp-price__vat {
   font-size: 14px;
   font-weight: 400;
-  color: #555;
+  color: var(--bes-text-3);
 }
 .ub-pdp-stock {
   margin: 0 0 20px;
@@ -2705,8 +2752,8 @@ body.bd-page.besos .ub-pdp-page {
 .ub-pdp-qty {
   display: inline-flex;
   align-items: center;
-  border: 1px solid #d8d8d8;
-  background: #f7f7f7;
+  border: 1px solid var(--bes-rule);
+  background: #111;
 }
 .ub-pdp-qty__btn {
   width: 44px;
@@ -2714,35 +2761,45 @@ body.bd-page.besos .ub-pdp-page {
   border: none;
   background: transparent;
   font-size: 20px;
-  color: #333;
+  color: #fff;
   cursor: pointer;
+}
+.ub-pdp-qty__btn:hover {
+  color: var(--bes-gold-soft);
 }
 .ub-pdp-qty__val {
   min-width: 40px;
   text-align: center;
   font-weight: 500;
   font-size: 15px;
+  color: #fff;
 }
 .ub-pdp-cart-btn {
   flex: 0 1 auto;
   min-width: 160px;
   min-height: 52px;
   padding: 0 28px;
-  border: none;
-  background: #1c2340;
-  color: #fff;
+  border: 1px solid #fff;
+  background: #fff;
+  color: #000;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 .ub-pdp-cart-btn:hover:not(:disabled) {
-  background: #12182c;
+  background: #000;
+  color: #fff;
+  border-color: #fff;
 }
 .ub-pdp-cart-btn:disabled {
-  opacity: 0.45;
+  opacity: 0.35;
   cursor: not-allowed;
+  background: #333;
+  border-color: #333;
+  color: #777;
 }
 .ub-pdp-greenspark {
   flex: 1 1 200px;
@@ -2774,7 +2831,7 @@ body.bd-page.besos .ub-pdp-page {
   gap: 20px;
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--bes-rule);
 }
 .ub-pdp-actions__btn {
   display: inline-flex;
@@ -2785,10 +2842,13 @@ body.bd-page.besos .ub-pdp-page {
   padding: 0;
   font: inherit;
   font-size: 13px;
-  color: #333;
+  color: var(--bes-text-2);
   cursor: pointer;
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+.ub-pdp-actions__btn:hover {
+  color: #fff;
 }
 .ub-pdp-actions__btn:disabled {
   opacity: 0.45;
@@ -2801,13 +2861,13 @@ body.bd-page.besos .ub-pdp-page {
 .ub-pdp-sku-line {
   margin: 0 0 20px;
   font-size: 13px;
-  color: #555;
+  color: var(--bes-text-3);
 }
 .ub-pdp-desc {
   margin: 0 0 24px;
   font-size: 15px;
   line-height: 1.65;
-  color: #333;
+  color: var(--bes-text-2);
 }
 .ub-pdp-block {
   margin-bottom: 24px;
@@ -2817,14 +2877,14 @@ body.bd-page.besos .ub-pdp-page {
   font-size: 15px;
   font-weight: 700;
   margin: 0 0 10px;
-  color: #1a1a1a;
+  color: #fff;
 }
 .ub-pdp-list {
   margin: 0;
   padding-left: 1.15em;
   font-size: 15px;
   line-height: 1.65;
-  color: #333;
+  color: var(--bes-text-2);
 }
 .ub-pdp-list li {
   margin-bottom: 4px;
@@ -2836,7 +2896,7 @@ body.bd-page.besos .ub-pdp-page {
 .ub-pdp-prose {
   font-size: 15px;
   line-height: 1.65;
-  color: #333;
+  color: var(--bes-text-2);
 }
 .ub-pdp-prose p {
   margin: 0 0 10px;
@@ -2846,12 +2906,12 @@ body.bd-page.besos .ub-pdp-page {
   padding-left: 1.15em;
 }
 .ub-pdp-prose a {
-  color: #1a1a1a;
+  color: #fff;
   text-decoration: underline;
 }
 .ub-pdp-safety {
   margin-top: 8px;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--bes-rule);
   padding-top: 16px;
 }
 .ub-pdp-safety__summary {
@@ -2880,14 +2940,14 @@ body.bd-page.besos .ub-pdp-page {
 .ub-pdp-related {
   margin-top: 56px;
   padding-top: 40px;
-  border-top: 1px solid #e8e8e8;
+  border-top: 1px solid var(--bes-rule);
 }
 .ub-pdp-related__title {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 1.35rem;
   font-weight: 400;
   margin: 0 0 24px;
-  color: #1a1a1a;
+  color: #fff;
 }
 .ub-pdp-related__wrap {
   position: relative;
@@ -2902,9 +2962,12 @@ body.bd-page.besos .ub-pdp-page {
   border: none;
   background: transparent;
   font-size: 32px;
-  color: #333;
+  color: var(--bes-text-2);
   cursor: pointer;
   line-height: 1;
+}
+.ub-pdp-related__nav:hover {
+  color: #fff;
 }
 .ub-pdp-related__track {
   flex: 1;
@@ -2926,8 +2989,13 @@ body.bd-page.besos .ub-pdp-page {
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-rows: auto auto;
-  background: #f5f5f5;
+  background: #000;
+  border: 1px solid var(--bes-rule);
   position: relative;
+  transition: border-color 0.3s ease;
+}
+.ub-pdp-related__card:hover {
+  border-color: var(--bes-rule-strong);
 }
 .ub-pdp-related__card:hover .ub-pdp-related__name {
   text-decoration: underline;
@@ -2938,7 +3006,7 @@ body.bd-page.besos .ub-pdp-page {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fff;
+  background: #000;
   padding: 12px;
 }
 .ub-pdp-related__body {
@@ -2953,7 +3021,7 @@ body.bd-page.besos .ub-pdp-page {
   align-self: start;
   padding: 8px 12px 0 0;
   font-size: 16px;
-  color: #555;
+  color: var(--bes-text-3);
 }
 .ub-pdp-related__img img {
   max-width: 100%;
@@ -2964,13 +3032,13 @@ body.bd-page.besos .ub-pdp-page {
   font-size: 10px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #999;
+  color: var(--bes-text-3);
 }
 .ub-pdp-related__name {
   padding: 12px 12px 4px;
   font-size: 13px;
   line-height: 1.35;
-  color: #1a1a1a;
+  color: #fff;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -2980,9 +3048,77 @@ body.bd-page.besos .ub-pdp-page {
   padding: 0 12px 14px;
   font-size: 13px;
   font-weight: 600;
-  color: #1a1a1a;
+  color: #fff;
 }
 .ub-pdp-related__vat {
   font-weight: 400;
-  color: #555;
+  color: var(--bes-text-3);
+}
+
+/* Urban Bar PDP Accordions & UI Elements */
+.ub-pdp-box-qty {
+  margin: 12px 0 16px;
+  font-size: 14px;
+  color: var(--bes-text-2);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.ub-pdp-box-qty__label {
+  color: var(--bes-text-3);
+}
+.ub-pdp-box-qty__val {
+  font-weight: 600;
+  color: #fff;
+}
+.ub-pdp-accordions {
+  margin-top: 24px;
+  border-top: 1px solid var(--bes-rule);
+}
+.ub-pdp-accordion {
+  border-bottom: 1px solid var(--bes-rule);
+}
+.ub-pdp-accordion__summary {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  padding: 16px 0;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+.ub-pdp-accordion__summary::-webkit-details-marker {
+  display: none;
+}
+.ub-pdp-accordion__summary::after {
+  content: "+";
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--bes-text-3);
+  transition: transform 0.2s ease;
+}
+.ub-pdp-accordion[open] .ub-pdp-accordion__summary::after {
+  content: "−";
+  transform: rotate(180deg);
+}
+.ub-pdp-accordion__body {
+  padding: 0 0 16px;
+  animation: ubFadeIn 0.3s ease;
+}
+.ub-shop .ub-besos-facets__panel {
+  margin-bottom: 16px;
+}
+@keyframes ubFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
