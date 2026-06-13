@@ -101,6 +101,9 @@ function toProduct(row, taxonomy, webByHandle, pdpByHandle) {
   } else if (row.shopify_image) {
     imageUrls.push(row.shopify_image);
   }
+  for (const rel of row.images || []) {
+    if (rel && !imageUrls.includes(rel)) imageUrls.push(rel);
+  }
 
   const plpHoverImageUrl = pickUrbanBarPlpHoverUrl(imageUrls, imageUrls[0] || "");
 

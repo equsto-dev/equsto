@@ -1917,12 +1917,13 @@ body.bd-page.besos .ub-shop.ub-besos-page {
   pointer-events: none;
   transition: opacity 0.35s ease;
 }
-.ub-plp-card__media--has-hover:hover .ub-plp-card__image--default,
-.ub-plp-card__media--has-hover:focus-visible .ub-plp-card__image--default {
+/* Urban Bar: hover tüm kartta (sadece görsel linki değil) */
+.ub-plp-card--has-hover:hover .ub-plp-card__image--default,
+.ub-plp-card--has-hover:focus-within .ub-plp-card__image--default {
   opacity: 0;
 }
-.ub-plp-card__media--has-hover:hover .ub-plp-card__image--hover,
-.ub-plp-card__media--has-hover:focus-visible .ub-plp-card__image--hover {
+.ub-plp-card--has-hover:hover .ub-plp-card__image--hover,
+.ub-plp-card--has-hover:focus-within .ub-plp-card__image--hover {
   opacity: 1;
 }
 .ub-plp-card__ph {
