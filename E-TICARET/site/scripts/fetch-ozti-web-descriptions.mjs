@@ -217,9 +217,23 @@ function lookupPayload(index, kod) {
 }
 
 function writeJsonAtomic(dest, data) {
+  const json = JSON.stringify(data);
   const tmp = `${dest}.${process.pid}.tmp`;
-  fs.writeFileSync(tmp, JSON.stringify(data), "utf8");
-  fs.renameSync(tmp, dest);
+  try {
+    fs.writeFileSync(tmp, json, "utf8");
+    fs.renameSync(tmp, dest);
+  } catch (err) {
+    if (err?.code === "EPERM" || err?.code === "EBUSY") {
+      fs.writeFileSync(dest, json, "utf8");
+      try {
+        fs.unlinkSync(tmp);
+      } catch {
+        /* ignore */
+      }
+      return;
+    }
+    throw err;
+  }
 }
 
 function saveDepts(entries) {
@@ -272,9 +286,8 @@ async function applyToCatalog(index) {
       missing.push(kod);
     }
 
-    if ((i + 1) % 200 === 0 || i === entries.length - 1) {
+    if ((i + 1) % 500 === 0 || i === entries.length - 1) {
       console.log(`[ozti-web] ${i + 1}/${entries.length} eşleşen:${ok} eksik:${missing.length}`);
-      if (!dryRun && (i + 1) % 200 === 0) saveDepts(entries);
     }
   }
 
