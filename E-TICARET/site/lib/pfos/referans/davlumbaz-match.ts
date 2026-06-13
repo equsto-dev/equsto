@@ -4,6 +4,7 @@ import {
   type AdminUrunRow,
 } from "@/lib/legacy-catalog";
 import { katalogRowToEslesmis } from "../core/katalog-row-eslesmis";
+import { normalizePfosGorselUrl } from "../core/katalog-gorsel-url";
 import {
   DAVLUMBAZ_MARKA,
   dimsCmFromOlcu,
@@ -14,6 +15,7 @@ import {
   parseDavlumbazForm,
   snapDavlumbazDepthCm,
 } from "../core/davlumbaz-marka";
+import { findClosestEqustoDavlumbazPriceRow } from "../core/ozel-imalat-yakin-olcu";
 import { displayIsimFromSablon } from "../core/ozel-imalat";
 import { sanitizeDavlumbazOlcu } from "../teklif/davlumbaz-olcu";
 import { toOlcuMmDisplay } from "../teklif/olcu-mm";
@@ -207,6 +209,11 @@ export async function matchDavlumbazByReferans(
     const sku =
       generatedSku ??
       `EQUSTO.${String(target[0]).padStart(3, "0")}${String(snapDavlumbazDepthCm(target[1])).padStart(2, "0")}.${inferEqustoDavlumbazSuffix(isim, tip.form)}`;
+    const closestPrice = findClosestEqustoDavlumbazPriceRow(
+      rows,
+      target,
+      (row) => rowMatchesTip(row, tip),
+    );
     return {
       id: `equsto-davlumbaz-${sku.toLowerCase()}`,
       sku,
@@ -216,10 +223,10 @@ export async function matchDavlumbazByReferans(
       olcu: olcuDisplay,
       elektrikGucuKw: null,
       gazGucuKw: null,
-      fiyat: 0,
+      fiyat: closestPrice?.fiyat_tl ?? 0,
       fiyatEur: null,
       doviz: "TRY",
-      gorselUrl: null,
+      gorselUrl: normalizePfosGorselUrl(closestPrice?.gorsel_url ?? null),
     };
   }
 

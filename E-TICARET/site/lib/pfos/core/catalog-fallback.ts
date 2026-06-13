@@ -306,7 +306,7 @@ export async function matchCatalogFallback(
   return matchZoneCatalog(urunTipi);
 }
 
-/** Portashelf / özel imalat — önce sitedeki katalog fiyatı, yoksa boş */
+/** Portashelf / özel imalat — önce sitedeki katalog fiyatı; tezgah/davlumbaz en yakın ölçü */
 export async function matchOzelImalatForSablon(
   isim: string,
   urunTipi: string,
