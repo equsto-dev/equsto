@@ -1977,6 +1977,96 @@ body.bd-page.besos.eq-shop .eq-mfoot-copy {
 .ub-besos-facets__list--capacity {
   max-height: min(36vh, 320px);
 }
+.ub-besos-facet-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  font: inherit;
+  font-size: 13px;
+  color: var(--bes-text-2);
+  cursor: pointer;
+  text-align: left;
+}
+.ub-besos-facet-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+.ub-besos-facet-item.is-active {
+  border-color: rgba(212, 175, 55, 0.35);
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--bes-gold-soft);
+}
+.ub-besos-facet-item__name {
+  line-height: 1.35;
+  min-width: 0;
+}
+.ub-besos-facet-item__count {
+  flex: 0 0 auto;
+  font-size: 11px;
+  color: var(--bes-text-3);
+  font-variant-numeric: tabular-nums;
+}
+.ub-besos-facet-item.is-active .ub-besos-facet-item__count {
+  color: var(--bes-gold-soft);
+}
+.ub-besos-selected-filters {
+  margin-bottom: 18px;
+  padding: 14px 16px;
+  border: 1px solid var(--bes-rule);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+}
+.ub-besos-selected-filters__hd {
+  margin-bottom: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--bes-text-3);
+}
+.ub-besos-selected-filters__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.ub-besos-selected-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 32px;
+  padding: 6px 12px;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 999px;
+  background: rgba(212, 175, 55, 0.08);
+  color: var(--bes-gold-soft);
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+.ub-besos-selected-chip span {
+  font-size: 14px;
+  line-height: 1;
+}
+.ub-besos-selected-filters__clear {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bes-gold-soft);
+  text-decoration: underline;
+  cursor: pointer;
+}
 .ub-besos-facets__label {
   display: grid;
   grid-template-columns: 16px minmax(0, 1fr) auto;
