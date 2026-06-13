@@ -941,6 +941,7 @@ const EN = {
     spec_group_electric: "Electrical",
     spec_group_gas: "Gas",
     spec_group_cooling: "Operating conditions",
+    spec_group_water: "Water",
     spec_group_other: "Other",
     inner_dims_prefix: "Internal dimensions: {dim}.",
     besos_loader_waiting: "Waiting for Besos module loader… Refresh the page.",

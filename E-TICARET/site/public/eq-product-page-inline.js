@@ -652,6 +652,222 @@ window.searchFilter = window.searchFilter || function () {};
         });
     }
 
+    function pdpSpecKeyFromLine(line) {
+      return String(line || "")
+        .split(":")[0]
+        .trim()
+        .toLocaleLowerCase("tr");
+    }
+
+    function pdpSpecValFromLine(line) {
+      return String(line || "").split(":").slice(1).join(":").trim();
+    }
+
+    function pdpIsGasSpecValue(val) {
+      var v = String(val || "").toLocaleLowerCase("tr");
+      return /kcal|mbar|\bbar\b|g31|g25|g27|\blpg\b|\bng\b|doğalgaz|dogalgaz|cm³\/h|cm3\/h|m³\/h|m3\/h/i.test(v);
+    }
+
+    function pdpIsElectricSpecValue(val) {
+      var v = String(val || "").toLocaleLowerCase("tr");
+      return /\b\d+\s*[-–]\s*\d+\s*v|\b\d+\s*v\b|\b\d+\s*[-–]\s*\d+\s*hz|\b\d+\s*hz\b|\bnpe\b|monofaze|trifaze|380|400\s*v|230\s*v|220\s*v/i.test(
+        v
+      );
+    }
+
+    var INOKSAN_TEKNIK_LABELS = [
+      "Su tüketimi (su basıncına göre değişebilir.)",
+      "Redüktörlü motor gücü",
+      "Ön yıkama motor gücü",
+      "Max. Elektrik Gücü",
+      "Kurutma motor gücü",
+      "Durulama Sıcaklığı",
+      "Yıkama Motor Gücü",
+      "Bardak Kapasitesi",
+      "Yıkama Sıcaklığı",
+      "Tabak Kapasitesi",
+      "Elektrik girişi",
+      "Ana yıkama tank",
+      "Kurutma gücü",
+      "Su tüketimi",
+      "Boyler Gücü",
+      "Giriş su basıncı",
+      "Su basıncı",
+      "Toplam Güç",
+      "Gaz Girişi",
+      "Tüketim",
+      "Motor Gücü",
+      "Su girişi",
+      "Tank Gücü",
+      "Program süresi",
+      "Sepet ebadı",
+      "Şebeke basıncı",
+      "Drenaj",
+      "Frekans",
+      "Isıtıcı gücü",
+      "Boyler kapasitesi",
+      "Voltaj",
+      "Volt",
+      "Güç",
+    ];
+
+    function parseInoksanTeknikBlob(section) {
+      var sec = String(section || "").trim();
+      if (!sec) return [];
+      var labels = INOKSAN_TEKNIK_LABELS.slice().sort(function (a, b) {
+        return b.length - a.length;
+      });
+      var hits = [];
+      labels.forEach(function (label) {
+        var re = new RegExp(label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "gi");
+        var m;
+        while ((m = re.exec(sec)) !== null) {
+          hits.push({ pos: m.index, end: m.index + m[0].length, label: m[0] });
+        }
+      });
+      if (!hits.length) return [];
+      hits.sort(function (a, b) {
+        return a.pos - b.pos || b.end - a.end;
+      });
+      var deduped = [];
+      var lastEnd = -1;
+      hits.forEach(function (h) {
+        if (h.pos < lastEnd) return;
+        deduped.push(h);
+        lastEnd = h.end;
+      });
+      var pairs = [];
+      for (var i = 0; i < deduped.length; i++) {
+        var valStart = deduped[i].end;
+        var valEnd = i + 1 < deduped.length ? deduped[i + 1].pos : sec.length;
+        var val = sec.slice(valStart, valEnd).trim().replace(/\s+/g, " ");
+        if (!val) continue;
+        pairs.push(deduped[i].label + ": " + val);
+      }
+      return pairs;
+    }
+
+    function inoksanStructuredTeknikLines(x) {
+      var out = [];
+      var seen = Object.create(null);
+      function add(line) {
+        var t = String(line || "").trim();
+        if (!t || seen[t]) return;
+        seen[t] = 1;
+        out.push(t);
+      }
+      (Array.isArray(x.teknik_ozellikler) ? x.teknik_ozellikler : []).forEach(function (ln) {
+        var t = decodeHtmlEntitiesPdp(String(ln || "").trim());
+        if (!t) return;
+        if (t.length > 160) {
+          var tm = t.match(/TEKNİK\s*ÖZELLİKLER\s*([\s\S]+)/i);
+          if (tm) parseInoksanTeknikBlob(tm[1]).forEach(add);
+          return;
+        }
+        if (t.indexOf(":") < 0 || /^genel\s|^teknik\s/i.test(t)) return;
+        add(t);
+      });
+      var desc = decodeHtmlEntitiesPdp(String(x.inoksan_shop_description || ""));
+      var dm = desc.match(/TEKNİK\s*ÖZELLİKLER\s*([\s\S]+)/i);
+      if (dm) parseInoksanTeknikBlob(dm[1]).forEach(add);
+      return out;
+    }
+
+    function inoksanFuelProfile(x) {
+      var lines = inoksanStructuredTeknikLines(x);
+      var blob = decodeHtmlEntitiesPdp(
+        [x.name, x.sku, x.model, x.inoksan_shop_description, x.description].filter(Boolean).join(" ")
+      ).toLocaleLowerCase("tr-TR");
+
+      var hasElkFields = false;
+      var hasGazFields = false;
+      lines.forEach(function (ln) {
+        var key = pdpSpecKeyFromLine(ln);
+        var val = pdpSpecValFromLine(ln).toLocaleLowerCase("tr-TR");
+        if (/^elektrik\s|voltaj|frekans|elektrik girişi|elektrik girisi|max\. elektrik/.test(key)) {
+          hasElkFields = true;
+        }
+        if (/^gaz\s|gaz girişi|gaz girisi|brülör|brulor/.test(key) || pdpIsGasSpecValue(val)) {
+          hasGazFields = true;
+        }
+        if (pdpIsElectricSpecValue(val) && /elektrik|voltaj|frekans|girişi|giris/.test(key)) {
+          hasElkFields = true;
+        }
+      });
+
+      var gas =
+        hasGazFields ||
+        /gazl[ıi]|,\s*gaz,|\bgazli\b|\bgaz\b.*(tava|ocak|fırın|firin|kuzine|döner|doner|kebap|wok)|\blpg\b|\bng\b|doğalgaz|dogalgaz|brülör|brulor|kcal\/h/i.test(
+          blob
+        );
+      var electric =
+        hasElkFields ||
+        /elektrikli|elektrik\s|,\s*elektrik|380-50|220-50|230-50|230v|220v|\b50\s*hz/i.test(blob);
+
+      var name = String(x.name || "");
+      if (/gazl[ıi]|,\s*gaz,\s*|,\s*gazli\s*|\(gaz\)/i.test(name) && !/elektrikli/i.test(name)) {
+        gas = true;
+        if (!hasElkFields && !/voltaj|frekans|elektrik girişi|elektrik girisi|\d+\s*v\b/i.test(blob)) {
+          electric = false;
+        }
+      }
+      if (/elektrikli/i.test(name) && !/gazl[ıi]|,\s*gaz/i.test(name)) {
+        electric = true;
+        if (!hasGazFields && !/kcal|gaz girişi|gaz girisi|\blpg\b|\bng\b/i.test(blob)) gas = false;
+      }
+      if (/^INO-BK|y[ıi]kama|bula[sş][ıi]k|bardak/i.test(String(x.sku || "") + " " + name)) {
+        electric = true;
+        if (!hasGazFields) gas = false;
+      }
+      if (/buzdolab|soğut|sogut|freezer|chiller/i.test(blob)) {
+        electric = true;
+        gas = false;
+      }
+
+      return { gas: gas, electric: electric };
+    }
+
+    function inoksanRouteSpecLine(key, val, profile) {
+      key = String(key || "")
+        .trim()
+        .toLocaleLowerCase("tr-TR");
+      val = String(val || "").trim();
+      var valLow = val.toLocaleLowerCase("tr-TR");
+
+      if (/^elektrik\s/.test(key)) return "elk";
+      if (/^gaz\s/.test(key)) return "gaz";
+      if (pdpIsGasSpecValue(val)) return "gaz";
+      if (pdpIsElectricSpecValue(val) && /elektrik|voltaj|frekans|girişi|giris/.test(key)) {
+        return "elk";
+      }
+      if (
+        /^tüketim$|^tuketim$|sarfiyat|gaz tüketim|gaz tuketim|gaz girişi|gaz girisi|gaz bas|brülör|brulor|doğalgaz|dogalgaz|\blpg\b/.test(
+          key
+        )
+      ) {
+        return "gaz";
+      }
+      if (/voltaj|frekans|elektrik girişi|elektrik girisi|max\. elektrik|elektrik g/i.test(key)) {
+        return "elk";
+      }
+      if (/su bas|su gir|su tük|su tuk|drenaj|^su\s|şebeke bas|sebeke bas/.test(key)) return "su";
+      if (/yıkama motor|yikama motor|kurutma motor|redüktör|reduktor|fan motor|buhar/.test(key)) {
+        return "elk";
+      }
+      if (/boyler|tank g[uü][çc]|tank guc|ısıtıcı g[uü][çc]|isitici guc|kurutma g[uü][çc]|kurutma guc/.test(key)) {
+        return profile.gas && !profile.electric ? "gaz" : "elk";
+      }
+      if (/^toplam\s*g[uü][çc]|^g[uü][çc]$|^guc$|motor g[uü][çc]|motor guc/.test(key)) {
+        if (pdpIsGasSpecValue(val)) return "gaz";
+        if (profile.gas && !profile.electric) return "gaz";
+        if (profile.electric && !profile.gas) return "elk";
+        if (/^toplam/.test(key) && profile.gas) return "gaz";
+        if (profile.gas && profile.electric) return /elektrik|max\./i.test(key) ? "elk" : "gaz";
+        return null;
+      }
+      return null;
+    }
+
     function inoksanDescriptionBullets(x) {
       var raw = decodeHtmlEntitiesPdp(
         String(x.inoksan_shop_description || x.description || "").trim()
@@ -682,6 +898,7 @@ window.searchFilter = window.searchFilter || function () {};
     }
 
     function inoksanConnectionSpecs(x) {
+      var profile = inoksanFuelProfile(x);
       var elk = [];
       var gaz = [];
       var su = [];
@@ -694,22 +911,25 @@ window.searchFilter = window.searchFilter || function () {};
         group.push(t);
       }
 
-      (Array.isArray(x.teknik_ozellikler) ? x.teknik_ozellikler : []).forEach(function (ln) {
+      inoksanStructuredTeknikLines(x).forEach(function (ln) {
         var t = decodeHtmlEntitiesPdp(String(ln || "").trim());
         if (!t || t.length > 220) return;
         if (/^genel\s*özellikler/i.test(t) || /^teknik\s*özellikler/i.test(t)) return;
         if (t.indexOf(":") < 0) return;
-        var key = t.split(":")[0].trim().toLowerCase();
-        if (/elektrik|güç|guc|voltaj|frekans|fan motor|buhar/.test(key)) push(elk, t);
-        else if (/gaz|doğalgaz|lpg|mbar|tüketim|brülör|brulor/.test(key)) push(gaz, t);
-        else if (/su bas|su gir|su tük|drenaj|^su\s/.test(key)) push(su, t);
+        var key = pdpSpecKeyFromLine(t);
+        var val = pdpSpecValFromLine(t);
+        var route = inoksanRouteSpecLine(key, val, profile);
+        if (route === "elk") push(elk, t);
+        else if (route === "gaz") push(gaz, t);
+        else if (route === "su") push(su, t);
       });
 
       var guc = x.olculer && x.olculer.guc_kw;
       if (guc && Number(guc) > 0) {
-        push(elk, "Elektrik gücü: " + guc + " kW");
+        if (profile.gas && !profile.electric) push(gaz, "Güç: " + guc + " kW");
+        else if (profile.electric) push(elk, "Elektrik gücü: " + guc + " kW");
       }
-      return { elk: elk, gaz: gaz, su: su };
+      return { profile: profile, elk: elk, gaz: gaz, su: su };
     }
 
     function renderInoksanDescriptionCol(x) {
@@ -748,26 +968,22 @@ window.searchFilter = window.searchFilter || function () {};
         if (x.olculer.uzunluk_mm) skipDims["uzunluk"] = 1;
       }
 
+      var inoProfile = inoksanFuelProfile(x);
       (Array.isArray(x.teknik_ozellikler) ? x.teknik_ozellikler : []).forEach(function (ln) {
         var t = decodeHtmlEntitiesPdp(String(ln || "").trim());
         if (!t || t.indexOf(":") < 0 || t.length > 160) return;
         if (inoksanIsHeadingLine(t) || t.indexOf(" * ") >= 0) return;
         var key = t.split(":")[0].trim().toLocaleLowerCase("tr-TR");
         if (
-          /^güç$|^guc$|^elektrik|^gaz\s|genişlik|derinlik|yükseklik|uzunluk|^en \(mm\)|^boy \(mm\)|^yükseklik \(mm\)|barkod|katalog sayfası|ürün markası|^genel\s|^teknik\s/.test(
+          /^g[uü][çc]$|^guc$|^elektrik|^gaz\s|toplam\s*g[uü][çc]|genişlik|derinlik|yükseklik|uzunluk|^en \(mm\)|^boy \(mm\)|^yükseklik \(mm\)|barkod|katalog sayfası|ürün markası|^genel\s|^teknik\s/.test(
             key
           )
         ) {
           return;
         }
         if (skipDims[key] || /^paket /.test(key)) return;
-        if (
-          /elektrik|güç|guc|voltaj|frekans|fan motor|buhar|gaz|doğalgaz|lpg|mbar|tüketim|brülör|brulor|su bas|su gir|su tük|drenaj|^su\s/.test(
-            key
-          )
-        ) {
-          return;
-        }
+        var route = inoksanRouteSpecLine(key, pdpSpecValFromLine(t), inoProfile);
+        if (route) return;
         if (temel.indexOf(t) < 0) temel.push(t);
       });
 
@@ -786,7 +1002,7 @@ window.searchFilter = window.searchFilter || function () {};
           true
         );
       }
-      if (conn.gaz.length) {
+      if (conn.profile.gas && conn.gaz.length) {
         acc += renderEpdpFlatAccSection(
           __pdpT("pdp.spec_group_gas", "Gaz"),
           "<ul>" +
@@ -799,7 +1015,7 @@ window.searchFilter = window.searchFilter || function () {};
           !acc
         );
       }
-      if (conn.elk.length) {
+      if (conn.profile.electric && conn.elk.length) {
         acc += renderEpdpFlatAccSection(
           __pdpT("pdp.spec_group_electric", "Elektrik"),
           "<ul>" +
@@ -814,7 +1030,7 @@ window.searchFilter = window.searchFilter || function () {};
       }
       if (conn.su.length) {
         acc += renderEpdpFlatAccSection(
-          __pdpT("pdp.spec_group_other", "Diğer"),
+          __pdpT("pdp.spec_group_water", "Su"),
           "<ul>" +
             conn.su
               .map(function (l) {
@@ -2664,8 +2880,10 @@ window.searchFilter = window.searchFilter || function () {};
       var parts;
       if (/\n\s*[•·\-–—*]/.test(raw)) {
         parts = raw.split(/\n\s*[•·\-–—*]\s*/);
-      } else if (/\s\*\s/.test(raw)) {
-        parts = raw.split(/\s*\*\s+/);
+      } else if (/(?:^|\s)\*\s+/.test(raw)) {
+        parts = raw.split(/(?:^|\s)\*\s+/);
+      } else if (/\S\*(?=\S)/.test(raw)) {
+        parts = raw.split(/\*(?=\S)/);
       } else {
         parts = raw.split(/\r?\n/);
       }
@@ -2754,7 +2972,13 @@ window.searchFilter = window.searchFilter || function () {};
         else if (/^ürün tipi:\s*elektrikli/i.test(lines.join("\n"))) electric = true;
         else if (/buzdolab|soğut|sogut|derin dondur|chiller|freezer|refrigerat/i.test(low)) {
           electric = true;
-        } else if (/güç:/i.test(lines.join(" "))) {
+        } else if (
+          /y[ıi]kama|bula[sş][ıi]k|bardak\s*y[ıi]k|OBY|OBM|OBU|dishwash|setalti|set alt/i.test(
+            low
+          )
+        ) {
+          electric = true;
+        } else if (/g[uü][çc]:/i.test(lines.join(" "))) {
           if (/gazl[ıi]|brülör|brulor|doğalgaz|dogalgaz|\blpg\b/i.test(low)) gas = true;
           else electric = true;
         }
@@ -2779,10 +3003,11 @@ window.searchFilter = window.searchFilter || function () {};
       var lines = Array.isArray(x.teknik_ozellikler) ? x.teknik_ozellikler : [];
       var elk = [];
       var gaz = [];
+      var su = [];
       var diger = [];
       var seen = Object.create(null);
       var hasElkGuc = lines.some(function (ln) {
-        return /^elektrik\s+g[uü]c/i.test(String(ln || "").trim());
+        return /^elektrik\s+g[uü][çc]/i.test(String(ln || "").trim());
       });
 
       function push(group, line) {
@@ -2798,22 +3023,46 @@ window.searchFilter = window.searchFilter || function () {};
         var key = t.split(":")[0].trim().toLocaleLowerCase("tr");
         var val = t.split(":").slice(1).join(":").trim();
 
+        if (/^toplam\s*g[uü][çc]/.test(key)) {
+          var topLine = t.split(":")[0].trim() + ": " + oztiKwSuffix(val);
+          if (profile.gas && (!profile.electric || !hasElkGuc)) push(gaz, topLine);
+          else if (profile.electric) push(elk, topLine);
+          else push(gaz, topLine);
+          return;
+        }
+        if (/^tüketim$|^tuketim$/.test(key) || pdpIsGasSpecValue(val)) {
+          push(gaz, t);
+          return;
+        }
         if (/^elektrik\s/.test(key)) {
-          if (/g[uü]c/.test(key)) push(elk, "Güç: " + oztiKwSuffix(val));
+          if (/g[uü][çc]/.test(key)) push(elk, "Güç: " + oztiKwSuffix(val));
           else if (/volt/.test(key)) push(elk, "Voltaj: " + val);
           else if (/frekans/.test(key)) push(elk, "Frekans: " + val);
           else push(elk, t);
           return;
         }
         if (
+          /tank\s*ısıt|tank\s*isit|boyler\s*g[uü][çc]|ısıtıcı\s*g[uü][çc]|isitici\s*guc|kurutma\s*g[uü][çc]|motor\s*g[uü][çc]/.test(
+            key
+          )
+        ) {
+          if (/g[uü][çc]/.test(key)) push(elk, t.split(":")[0].trim() + ": " + oztiKwSuffix(val));
+          else push(elk, t);
+          return;
+        }
+        if (/^su\s|su tük|su bas|şebeke bas|sebeke bas|drenaj|su gir/.test(key)) {
+          push(su, t);
+          return;
+        }
+        if (
           /^gaz\s/.test(key) ||
           /doğalgaz|dogalgaz|lpg|mbar|gaz girişi|gaz tüketim|gaz basınç/.test(key)
         ) {
-          if (/g[uü]c/.test(key)) push(gaz, "Güç: " + oztiKwSuffix(val));
+          if (/g[uü][çc]/.test(key)) push(gaz, "Güç: " + oztiKwSuffix(val));
           else push(gaz, t);
           return;
         }
-        if (/^güç$|^guc$/.test(key)) {
+        if (/^g[uü][çc]$|^guc$/.test(key)) {
           var gucLine = "Güç: " + oztiKwSuffix(val);
           if (profile.gas && (!profile.electric || !hasElkGuc)) push(gaz, gucLine);
           else if (profile.electric && !hasElkGuc) push(elk, gucLine);
@@ -2822,7 +3071,7 @@ window.searchFilter = window.searchFilter || function () {};
         }
       });
 
-      return { profile: profile, elk: elk, gaz: gaz, diger: diger };
+      return { profile: profile, elk: elk, gaz: gaz, su: su, diger: diger };
     }
 
     function renderOztiFeaturesCol(x) {
@@ -2849,7 +3098,7 @@ window.searchFilter = window.searchFilter || function () {};
         if (!t || t.indexOf(":") < 0 || t.length > 160) return;
         var key = t.split(":")[0].trim().toLocaleLowerCase("tr");
         if (
-          /^güç$|^guc$|^elektrik|^gaz\s|genişlik|derinlik|yükseklik|^en \(mm\)|^boy \(mm\)|^yükseklik \(mm\)|barkod|katalog sayfası|ürün markası/i.test(
+          /^g[uü][çc]$|^guc$|^elektrik|^gaz\s|genişlik|derinlik|yükseklik|^en \(mm\)|^boy \(mm\)|^yükseklik \(mm\)|barkod|katalog sayfası|ürün markası|tank\s*ısıt|tank\s*isit|boyler|kurutma\s*g[uü][çc]|motor\s*g[uü][çc]|su tük|su bas|şebeke bas|drenaj|^su\s/.test(
             key
           )
         ) {
@@ -2892,6 +3141,19 @@ window.searchFilter = window.searchFilter || function () {};
           __pdpT("pdp.spec_group_electric", "Elektrik"),
           "<ul>" +
             conn.elk
+              .map(function (l) {
+                return "<li>" + esc(l) + "</li>";
+              })
+              .join("") +
+            "</ul>",
+          !acc
+        );
+      }
+      if (conn.su.length) {
+        acc += renderEpdpFlatAccSection(
+          __pdpT("pdp.spec_group_water", "Su"),
+          "<ul>" +
+            conn.su
               .map(function (l) {
                 return "<li>" + esc(l) + "</li>";
               })
@@ -3025,7 +3287,7 @@ window.searchFilter = window.searchFilter || function () {};
       if (!gas && !electric) {
         if (hasElkFields) electric = true;
         else if (hasGazFields) gas = true;
-        else if (/güç:/i.test(lines.join(" "))) gas = /gazl[ıi]/i.test(low);
+        else if (/g[uü][çc]:/i.test(lines.join(" "))) gas = /gazl[ıi]/i.test(low);
       }
 
       return { gas: gas, electric: electric };
@@ -3043,7 +3305,7 @@ window.searchFilter = window.searchFilter || function () {};
           .split(":")[0]
           .trim()
           .toLocaleLowerCase("tr");
-        return /^elektrik\s+g[uü]c/.test(k) || (/^g[uü]c$/.test(k) && profile.electric && !profile.gas);
+        return /^elektrik\s+g[uü][çc]/.test(k) || (/^g[uü][çc]$/.test(k) && profile.electric && !profile.gas);
       });
 
       function push(group, line) {
@@ -3059,8 +3321,19 @@ window.searchFilter = window.searchFilter || function () {};
         var key = t.split(":")[0].trim().toLocaleLowerCase("tr");
         var val = t.split(":").slice(1).join(":").trim();
 
+        if (/^toplam\s*g[uü][çc]/.test(key)) {
+          var topLine = t.split(":")[0].trim() + ": " + oztiKwSuffix(val);
+          if (profile.gas && (!profile.electric || !hasElkGuc)) push(gaz, topLine);
+          else if (profile.electric) push(elk, topLine);
+          else push(gaz, topLine);
+          return;
+        }
+        if (/^tüketim$|^tuketim$/.test(key) || pdpIsGasSpecValue(val)) {
+          push(gaz, t);
+          return;
+        }
         if (/^elektrik\s/.test(key)) {
-          if (/g[uü]c/.test(key)) push(elk, "Güç: " + oztiKwSuffix(val));
+          if (/g[uü][çc]/.test(key)) push(elk, "Güç: " + oztiKwSuffix(val));
           else if (/volt/.test(key)) push(elk, "Voltaj: " + val);
           else if (/frekans/.test(key)) push(elk, "Frekans: " + val);
           else push(elk, t);
@@ -3076,11 +3349,11 @@ window.searchFilter = window.searchFilter || function () {};
           /^gaz\s/.test(key) ||
           /doğalgaz|dogalgaz|lpg|mbar|gaz girişi|gaz tüketim|gaz basınç|gaz sarfiyat|\bng\b/.test(key)
         ) {
-          if (/g[uü]c/.test(key)) push(gaz, "Güç: " + oztiKwSuffix(val));
+          if (/g[uü][çc]/.test(key)) push(gaz, "Güç: " + oztiKwSuffix(val));
           else push(gaz, t);
           return;
         }
-        if (/^güç$|^guc$/.test(key)) {
+        if (/^g[uü][çc]$|^guc$/.test(key)) {
           var gucLine = "Güç: " + oztiKwSuffix(val);
           if (profile.gas && (!profile.electric || !hasElkGuc)) push(gaz, gucLine);
           else if (profile.electric && !hasElkGuc) push(elk, gucLine);
@@ -3116,7 +3389,7 @@ window.searchFilter = window.searchFilter || function () {};
         if (!t || t.indexOf(":") < 0 || t.length > 160) return;
         var key = t.split(":")[0].trim().toLocaleLowerCase("tr");
         if (
-          /^güç$|^guc$|^elektrik|^gaz\s|gerilim|frekans|genişlik|derinlik|yükseklik|^en \(mm\)|^boy \(mm\)|^yükseklik \(mm\)|^ölçüler$|^olculer$|barkod|katalog sayfası|ürün markası/i.test(
+          /^g[uü][çc]$|^guc$|^elektrik|^gaz\s|gerilim|frekans|genişlik|derinlik|yükseklik|^en \(mm\)|^boy \(mm\)|^yükseklik \(mm\)|^ölçüler$|^olculer$|barkod|katalog sayfası|ürün markası/i.test(
             key
           )
         ) {
