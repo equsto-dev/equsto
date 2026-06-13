@@ -427,8 +427,8 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
                   return (
                   <Fragment key={`${row.poz}-${i}`}>
                     <tr>
-                      <td style={td}>{row.bolumNo}</td>
-                      <td style={td}>{row.poz}</td>
+                      <td style={tdBolPoz}>{row.bolumNo}</td>
+                      <td style={tdBolPoz}>{row.poz}</td>
                       <td style={tdStok}>{row.stokNo}</td>
                       <td style={tdTanim}>
                         {sanitizeTeklifV14SatirTanim(row.tanim)}
@@ -714,6 +714,8 @@ const tdOlcu: CSSProperties = {
   whiteSpace: "nowrap",
   padding: "5px 2px",
 };
+
+const tdBolPoz: CSSProperties = { ...td, textAlign: "center", whiteSpace: "nowrap" };
 
 const tdC: CSSProperties = { ...td, textAlign: "center", whiteSpace: "nowrap" };
 

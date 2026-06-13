@@ -15,6 +15,8 @@ export default function ShopSearchScripts() {
   return (
     <>
       <Script src={`/eq-header-search.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/eq-dept-tips.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/eq-kuvet-gn-facets.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-product-card-tint.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-arama-page.js?v=${v}`} strategy="afterInteractive" />
     </>

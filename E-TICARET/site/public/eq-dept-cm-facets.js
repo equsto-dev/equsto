@@ -501,6 +501,21 @@
       html += '</ul></div></details>';
     }
 
+    if (dept === 'kuvetler' && global.EqKuvetGnFacets) {
+      var gnPool = getPool('kuvetGn');
+      var gnCounts = global.EqKuvetGnFacets.countFacets(
+        gnPool.map(function (u) {
+          return { name: u.n, n: u.n, category: u.c, raw: u.raw };
+        }),
+      );
+      html += global.EqKuvetGnFacets.renderFacetListHtml({
+        counts: gnCounts,
+        selected: state.kuvetGn || [],
+        inputName: 'eq-dept-cm-kuvet-gn',
+        title: __facetT('plp.facet_gn_size', 'GN ölçü'),
+      });
+    }
+
     var energyRows = ENERGY_TYPES.filter(function (e) {
       return energyCounts[e.id] > 0;
     });
@@ -669,6 +684,16 @@
       });
     });
 
+    host.querySelectorAll('input[name="eq-dept-cm-kuvet-gn"]').forEach(function (inp) {
+      inp.addEventListener('change', function () {
+        state.kuvetGn = [];
+        host.querySelectorAll('input[name="eq-dept-cm-kuvet-gn"]:checked').forEach(function (c) {
+          state.kuvetGn.push(c.value);
+        });
+        onChange('kuvetGn');
+      });
+    });
+
     var applyPrice = host.querySelector('#eq-dept-cm-price-apply');
     if (applyPrice) {
       applyPrice.addEventListener('click', function () {
@@ -721,6 +746,13 @@
         if (e.id === eid) lbl = energyFacetLabel(e);
       });
       chips.push({ type: 'energy', value: eid, text: lbl });
+    });
+    (state.kuvetGn || []).forEach(function (gk) {
+      var gl =
+        global.EqKuvetGnFacets && global.EqKuvetGnFacets.labelFromKey
+          ? global.EqKuvetGnFacets.labelFromKey(gk)
+          : gk;
+      chips.push({ type: 'kuvetGn', value: gk, text: gl });
     });
     if (state.priceMin !== '' && state.priceMin != null) {
       chips.push({
