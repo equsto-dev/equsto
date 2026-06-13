@@ -37,7 +37,7 @@ const TRAILING_BRAND_QTY_RE =
 /** Mefftech / tedarikçi proforma: adet birim toplam + kur çarpanı + 342 + float artığı */
 const PROFORMA_S_MULT_RE = /\s+S\d{1,3}\*[\d.,]+/gi;
 const PROFORMA_RATE_342_TAIL_RE = /\s+342\s+\d+(?:\.\d+)?\s*$/i;
-const INLINE_PROFORMA_RATE_342_RE = /\s+342\s+\d+(?:\.\d{6,})?/gi;
+const INLINE_PROFORMA_RATE_342_RE = /\s+342\s+\d+(?:\.\d+)?/gi;
 const INLINE_PROFORMA_QTY_PRICE_RE = /\s+\d{1,3}\s+\d{2,5}\s+\d{2,5}(?:\s+S\d{1,3}\*[\d.,]+)?(?:\s+342\s+\d+(?:\.\d+)?)?/gi;
 const PROFORMA_QTY_PRICE_TRIPLE_RE = /\s+\d{1,3}\s+\d{2,5}\s+\d{2,5}\s*$/i;
 const PROFORMA_FLOAT_JUNK_RE = /\s+\d+\.\d{6,}\s*$/i;
@@ -77,6 +77,7 @@ export function expandProformaAbbreviations(raw: string): string {
 
 function stripProformaInlineJunk(s: string): string {
   let out = String(s ?? "")
+    .replace(/[\u00a0\u202f\u2007\u2009\u2060]/g, " ")
     .replace(/\[object\s+object\]/gi, " ")
     .replace(OLCU_RE, " ")
     .replace(

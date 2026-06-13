@@ -10,6 +10,7 @@ import {
 import { groupTeklifV14Satirlar } from "./group-v14-bolumler";
 import { formatTarihTr, kwHucreExcelValue } from "./format-v14";
 import { fetchTcmbKurForTeklif } from "./fetch-kur.client";
+import { sanitizeTeklifV14ModelForExport } from "./sanitize-teklif-v14-export";
 
 const PRODUCT_BLOCK_START = 5;
 const PRODUCT_BLOCK_ROWS = 16;
@@ -269,13 +270,13 @@ async function fetchEurTry(): Promise<number | null> {
 export async function downloadTeklifV14Excel(model: TeklifModelV14) {
   const ExcelJS = (await import("exceljs")).default;
 
-  let merged = model;
+  let merged = sanitizeTeklifV14ModelForExport(model);
   if (merged.ust.eurTry == null) {
     const rate = await fetchEurTry();
     if (rate) {
       merged = {
-        ...model,
-        ust: { ...model.ust, eurTry: rate },
+        ...merged,
+        ust: { ...merged.ust, eurTry: rate },
       };
     }
   }

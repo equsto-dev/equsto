@@ -8,6 +8,7 @@ import {
 } from "./constants";
 import { groupTeklifV14Satirlar } from "./group-v14-bolumler";
 import { formatTarihTr, kwHucreExcelValue } from "./format-v14";
+import { sanitizeTeklifV14ModelForExport } from "./sanitize-teklif-v14-export";
 
 const PRODUCT_BLOCK_START = 5;
 const PRODUCT_BLOCK_ROWS = 16;
@@ -233,6 +234,7 @@ export async function generateTeklifV14ExcelBuffer(
   model: TeklifModelV14,
 ): Promise<Buffer> {
   const ExcelJS = (await import("exceljs")).default;
+  const cleaned = sanitizeTeklifV14ModelForExport(model);
   const templateBytes = await loadTemplateBytes();
   const wb = new ExcelJS.Workbook();
   const templateAb = templateBytes.buffer.slice(
@@ -244,8 +246,8 @@ export async function generateTeklifV14ExcelBuffer(
   const ws = wb.worksheets[0];
   if (!ws) throw new Error("Excel sayfası bulunamadı");
 
-  fillHeader(ws, model);
-  buildProductBlock(ws, model);
+  fillHeader(ws, cleaned);
+  buildProductBlock(ws, cleaned);
 
   const buffer = await wb.xlsx.writeBuffer();
   return Buffer.from(buffer);
