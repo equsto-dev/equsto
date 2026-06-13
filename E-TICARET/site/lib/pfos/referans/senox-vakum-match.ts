@@ -15,6 +15,8 @@ import {
   isSenoxElYikamaReferansIsim,
   isSenoxKatalogMarka,
   isSenoxOnYikamaDusuReferansIsim,
+  isSenoxYerYikamaHortumuReferansIsim,
+  isSenoxDusSpreyReferansIsim,
   isSenoxSinekReferansIsim,
   isSenoxVakumPfosKalem,
   isSenoxDilimlemeReferansIsim,
@@ -176,12 +178,22 @@ function isSenoxVakumRow(row: AdminUrunRow): boolean {
   );
 }
 
-function isSenoxOnYikamaDusuRow(row: AdminUrunRow): boolean {
+function isSenoxYerYikamaHortumuRow(row: AdminUrunRow): boolean {
   const blob = norm(`${row.ad ?? ""} ${row.sku ?? ""} ${row.model ?? ""}`);
   return (
     isSenoxKatalogMarka(row.marka_ad) &&
-    (/118\.ht|ht-\d{2}|geri toplam|on yikama dus|ön yikama duş/.test(blob) ||
-      /^118\.ht/i.test(String(row.sku ?? "")))
+    (/118\.ht|^ht-\d{2}\b/i.test(String(row.sku ?? row.model ?? "")) ||
+      (/geri toplam/.test(blob) && /118\.ht|ht-\d|hortum/.test(blob)))
+  );
+}
+
+function isSenoxOnYikamaDusuRow(row: AdminUrunRow): boolean {
+  const blob = norm(`${row.ad ?? ""} ${row.sku ?? ""} ${row.model ?? ""}`);
+  if (isSenoxYerYikamaHortumuRow(row)) return false;
+  return (
+    isSenoxKatalogMarka(row.marka_ad) &&
+    (/on yikama dus|ön yikama duş|pre.?rinse/.test(blob) ||
+      isSenoxDusSpreyiRow(row))
   );
 }
 
@@ -207,25 +219,20 @@ function hoseLengthMFromIsim(isim: string): number | null {
   return null;
 }
 
-function pickOnYikamaSku(isim: string): string {
-  const n = norm(isim);
-  const araMusluk = /ara musluk|ara musluğu/.test(n);
-  const wantHortum =
-    /geri toplam|geri top|ccgt|8760\.0ccgt/.test(n) ||
-    (/on yikama dus|ön yikama duş|on yikama dusu|ön yikama duşu|pre.?rinse/.test(
-      n,
-    ) &&
-      !araMusluk);
-
-  if (!wantHortum && araMusluk) {
-    if (/tezgah|tezgaha/.test(n)) return "118.T.02";
-    return "118.DM.02";
-  }
-
-  const len = hoseLengthMFromIsim(isim);
+function pickYerYikamaHortumuSku(isim: string, notlar?: string | null): string {
+  const blob = norm(`${isim} ${notlar ?? ""}`);
+  const len = hoseLengthMFromIsim(blob);
   if (len != null && len >= 15) return "118.HT.15";
   if (len != null && len >= 12) return "118.HT.12";
   return "118.HT.10";
+}
+
+function pickDusSpreySku(isim: string): string {
+  const n = norm(isim);
+  if (/tezgah|tezgaha/.test(n)) {
+    return /ara musluk|ara musluğu/.test(n) ? "118.T.02" : "118.TM.01";
+  }
+  return "118.DM.02";
 }
 
 function mutbexToEslesmis(p: SenoxMutbexProduct, isim: string): EslesmisUrun {
@@ -255,16 +262,17 @@ function mutbexToEslesmis(p: SenoxMutbexProduct, isim: string): EslesmisUrun {
   };
 }
 
-/** Geri toplamalı ön yıkama duşu — Şenox HT-10 / HT-12 / HT-15 */
-export async function matchSenoxOnYikamaDusuByReferans(
+/** Geri toplamalı yer yıkama hortumu — Şenox 118.HT.10 / .12 / .15 */
+export async function matchSenoxYerYikamaHortumuByReferans(
   isim: string,
+  notlar?: string | null,
 ): Promise<EslesmisUrun | null> {
-  const targetSku = pickOnYikamaSku(isim);
+  const targetSku = pickYerYikamaHortumuSku(isim, notlar);
   const rows = (await loadLegacyCatalogRows()).filter(
     (r) =>
       r.durum === "aktif" &&
       isSenoxKatalogMarka(r.marka_ad) &&
-      (isSenoxOnYikamaDusuRow(r) || isSenoxDusSpreyiRow(r)),
+      isSenoxYerYikamaHortumuRow(r),
   );
 
   const exact =
@@ -272,11 +280,11 @@ export async function matchSenoxOnYikamaDusuByReferans(
       (r) =>
         String(r.sku ?? "").toUpperCase() === targetSku.toUpperCase() ||
         String(r.model ?? "").toUpperCase() === targetSku.replace(/^118\./, "").toUpperCase(),
-    ) ??
-    rows.find((r) => isSenoxOnYikamaDusuRow(r) || isSenoxDusSpreyiRow(r));
+    ) ?? rows.find((r) => isSenoxYerYikamaHortumuRow(r));
 
   if (exact && (exact.fiyat_tl > 0 || equstoSatisEurFromRow(exact))) {
-    return rowToSenoxEslesmis(exact, isim);
+    const matched = rowToSenoxEslesmis(exact, isim);
+    return { ...matched, ad: isim.trim() || matched.ad };
   }
 
   const mutbex = await loadSenoxMutbexProducts();
@@ -286,7 +294,47 @@ export async function matchSenoxOnYikamaDusuByReferans(
         String(p.mutbexCode ?? "").toUpperCase() === targetSku.toUpperCase(),
     ) ??
     mutbex.find((p) =>
-      /geri toplam|on yikama dus|ön yikama duş/i.test(String(p.title ?? "")),
+      /118\.ht|geri toplam|yer yikama hortum/i.test(String(p.title ?? "")),
+    );
+  if (!pick) return null;
+  const matched = mutbexToEslesmis(pick, isim);
+  return { ...matched, ad: isim.trim() || matched.ad };
+}
+
+/** Ön yıkama duşu / sprey ünitesi — Şenox DM / T / TM (HT hortum değil) */
+export async function matchSenoxOnYikamaDusuByReferans(
+  isim: string,
+): Promise<EslesmisUrun | null> {
+  const targetSku = pickDusSpreySku(isim);
+  const rows = (await loadLegacyCatalogRows()).filter(
+    (r) =>
+      r.durum === "aktif" &&
+      isSenoxKatalogMarka(r.marka_ad) &&
+      isSenoxDusSpreyiRow(r),
+  );
+
+  const exact =
+    rows.find(
+      (r) =>
+        String(r.sku ?? "").toUpperCase() === targetSku.toUpperCase() ||
+        String(r.model ?? "").toUpperCase() === targetSku.replace(/^118\./, "").toUpperCase(),
+    ) ?? rows.find((r) => isSenoxDusSpreyiRow(r));
+
+  if (exact && (exact.fiyat_tl > 0 || equstoSatisEurFromRow(exact))) {
+    const matched = rowToSenoxEslesmis(exact, isim);
+    return { ...matched, ad: isim.trim() || matched.ad };
+  }
+
+  const mutbex = await loadSenoxMutbexProducts();
+  const pick =
+    mutbex.find(
+      (p) =>
+        String(p.mutbexCode ?? "").toUpperCase() === targetSku.toUpperCase(),
+    ) ??
+    mutbex.find((p) =>
+      /du[sş] sprey|dus sprey|sprey unitesi|118\.dm|118\.t\./i.test(
+        String(p.title ?? ""),
+      ),
     );
   return pick ? mutbexToEslesmis(pick, isim) : null;
 }
@@ -479,6 +527,7 @@ export async function matchSenoxDilimlemeByReferans(
 export async function matchSenoxByReferans(
   isim: string,
   urunTipi?: string | null,
+  notlar?: string | null,
 ): Promise<EslesmisUrun | null> {
   if (isSenoxElYikamaReferansIsim(isim)) {
     const el = await matchSenoxElYikamaByReferans(isim);
@@ -488,7 +537,11 @@ export async function matchSenoxByReferans(
     const sinek = await matchSenoxSinekByReferans(isim);
     if (sinek) return sinek;
   }
-  if (isSenoxOnYikamaDusuReferansIsim(isim)) {
+  if (isSenoxYerYikamaHortumuReferansIsim(isim, notlar)) {
+    const hortum = await matchSenoxYerYikamaHortumuByReferans(isim, notlar);
+    if (hortum) return hortum;
+  }
+  if (isSenoxOnYikamaDusuReferansIsim(isim, notlar)) {
     const dus = await matchSenoxOnYikamaDusuByReferans(isim);
     if (dus) return dus;
   }

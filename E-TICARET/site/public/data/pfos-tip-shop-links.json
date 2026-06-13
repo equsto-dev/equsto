@@ -213,6 +213,21 @@
       "sku": "7897.14030.30",
       "name": "DUVAR RAFI 140×30 — ölçü genişliğine göre en yakın 7897"
     },
+    "yer_yikama_hortumu": {
+      "marka": "Şenox",
+      "sku": "118.HT.10",
+      "name": "Geri toplamalı yer yıkama hortumu 10 m — 118.HT.* (ön yıkama duşu değil)"
+    },
+    "on_yikama_dusu": {
+      "marka": "Şenox",
+      "sku": "118.DM.02",
+      "name": "Duvara monte duş spreyi ara musluklu — ön yıkama duşu = sprey ünitesi"
+    },
+    "dus_sprey": {
+      "marka": "Şenox",
+      "sku": "118.DM.02",
+      "name": "Duş sprey ünitesi — on_yikama_dusu ile eşdeğer"
+    },
     "montaj_nakliye": {
       "brand": "Equsto Proje Fabrikası",
       "sku": "PFOS-MONTAJ",

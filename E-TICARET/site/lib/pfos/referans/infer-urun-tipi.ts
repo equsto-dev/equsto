@@ -365,6 +365,22 @@ const TIP_RULES: TipRule[] = [
         n.length > 12),
   },
   {
+    tip: "yer-yikama-hortumu",
+    test: (n) =>
+      /yer yikama hortum|118\.ht|ht-\d{2}\b/.test(n) ||
+      (/geri toplam/.test(n) &&
+        /on yik|ön yik|du[sş]|\d+\s*m\b|\d+\s*mt|118\.ht/.test(n)),
+  },
+  {
+    tip: "on-yikama-dusu",
+    test: (n) =>
+      (/on yikama dus|ön yikama duş|sprey unitesi|sprey ünitesi|du[sş] sprey|pre.?rinse/.test(
+        n,
+      ) &&
+        !/geri toplam|118\.ht|yer yikama hortum/.test(n)) ||
+      (/ara musluk/.test(n) && /sprey|on yik|ön yik/.test(n)),
+  },
+  {
     tip: "duvar-rafi",
     test: (n) =>
       /basket\s*raf/.test(n) || (/duvar\s*raf/.test(n) && !/davlumbaz/.test(n)),

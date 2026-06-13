@@ -644,7 +644,7 @@ async function matchByTipShopLink(
   if (isBuzdolabiPfosKalem({ isim: input.isim, urunTipi: input.urunTipi })) {
     return null;
   }
-  if (isSenoxPfosKalem({ isim: input.isim, urunTipi: input.urunTipi })) {
+  if (isSenoxPfosKalem({ isim: input.isim, urunTipi: input.urunTipi, notlar: input.notlar })) {
     return null;
   }
   if (isMakeUpPfosKalem({ isim: input.isim, urunTipi: input.urunTipi })) {
@@ -929,7 +929,7 @@ async function matchStrictCatalog(
         return { row, score: -9999 };
       }
       if (
-        isSenoxPfosKalem({ isim: input.isim, urunTipi: familyTip }) &&
+        isSenoxPfosKalem({ isim: input.isim, urunTipi: familyTip, notlar: input.notlar }) &&
         isOztiKatalogMarka(row.marka_ad)
       ) {
         return { row, score: -9999 };
@@ -1179,8 +1179,8 @@ export async function matchReferansKalem(
     if (tezgah) return tezgah;
   }
 
-  if (isSenoxPfosKalem({ isim: input.isim, urunTipi: input.urunTipi })) {
-    const senox = await matchSenoxByReferans(input.isim, input.urunTipi);
+  if (isSenoxPfosKalem({ isim: input.isim, urunTipi: input.urunTipi, notlar: input.notlar })) {
+    const senox = await matchSenoxByReferans(input.isim, input.urunTipi, input.notlar);
     if (senox) return senox;
   }
 
