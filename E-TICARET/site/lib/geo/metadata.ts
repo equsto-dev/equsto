@@ -3,6 +3,7 @@ import { getSiteOrigin } from "@/lib/site-origin";
 import {
   geoCanonicalPath,
   getGeoLanding,
+  getAlternativeGeoPath,
   type GeoRouteKind,
 } from "./load-landing";
 
@@ -16,17 +17,29 @@ export function buildGeoMetadata(
   const path = geoCanonicalPath(slug, lang, kind);
   const url = `${origin}${path}`;
 
+  const altPath = getAlternativeGeoPath(slug, lang, kind);
+  const alternates: { canonical: string; languages?: Record<string, string> } = {
+    canonical: url,
+  };
+  if (altPath) {
+    const altLang = lang === "tr" ? "en" : "tr";
+    const altLangCode = altLang === "en" ? "en-US" : "tr-TR";
+    alternates.languages = {
+      [altLangCode]: `${origin}${altPath}`,
+    };
+  }
+
   if (!page) {
     return {
       title: "Equsto",
-      alternates: { canonical: url },
+      alternates,
     };
   }
 
   return {
     title: page.title,
     description: page.description,
-    alternates: { canonical: url },
+    alternates,
     openGraph: {
       title: page.title,
       description: page.description,
