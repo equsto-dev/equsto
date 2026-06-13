@@ -1762,6 +1762,30 @@ body.bd-page.besos.eq-shop .eq-mfoot-copy {
   text-transform: uppercase;
   color: var(--bes-gold-soft);
 }
+.ub-besos-powered {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: inherit;
+}
+.ub-besos-powered a {
+  color: inherit;
+  text-decoration: none;
+}
+.ub-besos-powered a:hover {
+  text-decoration: underline;
+}
+.ub-besos-powered strong {
+  font-weight: inherit;
+}
+.ub-besos-powered--meta {
+  color: var(--bes-text-3);
+}
+.ub-besos-powered--meta a {
+  color: var(--bes-gold-soft);
+}
 .ub-besos-hero h1 {
   margin: 0 0 10px;
   font-size: clamp(28px, 4vw, 42px);
@@ -2164,4 +2188,294 @@ body.bd-page.besos.eq-shop .eq-mfoot-copy {
 }
 .ub-besos-loadmore__btn:hover .ub-besos-loadmore__meta {
   color: #e0e0e0;
+}
+
+/* ── Urban Bar PDP (urbanbar.com tarzı) ── */
+.ub-pdp-page {
+  background: #fff;
+  color: #111;
+  min-height: 60vh;
+}
+.ub-pdp-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+.ub-pdp-crumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 28px;
+}
+.ub-pdp-crumb a {
+  color: #333;
+  text-decoration: none;
+}
+.ub-pdp-crumb a:hover {
+  text-decoration: underline;
+}
+.ub-pdp-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+  gap: 40px;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .ub-pdp-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.ub-pdp-gallery__main-wrap {
+  position: relative;
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ub-pdp-gallery__main {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.ub-pdp-gallery__main--ph {
+  color: #999;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.ub-pdp-gallery__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  border-radius: 50%;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 2;
+}
+.ub-pdp-gallery__nav--prev {
+  left: 12px;
+}
+.ub-pdp-gallery__nav--next {
+  right: 12px;
+}
+.ub-pdp-gallery__thumbs {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+.ub-pdp-gallery__thumb {
+  flex: 0 0 72px;
+  width: 72px;
+  height: 72px;
+  padding: 4px;
+  border: 2px solid transparent;
+  background: #fafafa;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.ub-pdp-gallery__thumb.is-active {
+  border-color: #111;
+}
+.ub-pdp-gallery__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.ub-pdp-kicker {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #888;
+  margin: 0 0 8px;
+}
+.ub-pdp-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 400;
+  line-height: 1.25;
+  margin: 0 0 16px;
+  color: #111;
+}
+.ub-pdp-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  align-items: center;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+.ub-pdp-sku strong {
+  font-weight: 600;
+}
+.ub-pdp-stock {
+  color: #1a7f37;
+  font-weight: 600;
+  font-size: 13px;
+}
+.ub-pdp-stock--out {
+  color: #b42318;
+}
+.ub-pdp-price {
+  margin-bottom: 20px;
+}
+.ub-pdp-price__amount {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #111;
+}
+.ub-pdp-price__vat {
+  display: block;
+  font-size: 13px;
+  color: #666;
+  margin-top: 4px;
+}
+.ub-pdp-buy {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: stretch;
+  margin-bottom: 16px;
+}
+.ub-pdp-qty {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+.ub-pdp-qty__btn {
+  width: 40px;
+  height: 48px;
+  border: none;
+  background: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+.ub-pdp-qty__val {
+  min-width: 36px;
+  text-align: center;
+  font-weight: 600;
+}
+.ub-pdp-cart-btn {
+  flex: 1;
+  min-width: 180px;
+  min-height: 48px;
+  padding: 0 24px;
+  border: none;
+  background: #111;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.ub-pdp-cart-btn:hover:not(:disabled) {
+  background: #333;
+}
+.ub-pdp-cart-btn:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+.ub-pdp-group-label {
+  font-size: 12px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.ub-pdp-details {
+  margin-top: 48px;
+  border-top: 1px solid #eee;
+  padding-top: 32px;
+  max-width: 800px;
+}
+.ub-pdp-section {
+  margin-bottom: 32px;
+}
+.ub-pdp-section__title {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+  color: #111;
+}
+.ub-pdp-prose {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #333;
+}
+.ub-pdp-prose p {
+  margin: 0 0 12px;
+}
+.ub-pdp-prose ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+.ub-pdp-prose a {
+  color: #111;
+  text-decoration: underline;
+}
+.ub-pdp-features {
+  margin: 0;
+  padding-left: 1.2em;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #333;
+}
+.ub-pdp-features li {
+  margin-bottom: 6px;
+}
+.ub-pdp-specs {
+  margin: 0;
+  display: grid;
+  gap: 0;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.ub-pdp-specs__row {
+  display: grid;
+  grid-template-columns: minmax(140px, 38%) 1fr;
+  gap: 12px;
+  padding: 10px 14px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+.ub-pdp-specs__row:last-child {
+  border-bottom: none;
+}
+.ub-pdp-specs__row:nth-child(even) {
+  background: #fafafa;
+}
+.ub-pdp-specs dt {
+  margin: 0;
+  font-weight: 600;
+  color: #444;
+}
+.ub-pdp-specs dd {
+  margin: 0;
+  color: #111;
+}
+.ub-pdp-source {
+  font-size: 12px;
+  color: #888;
+  margin-top: 24px;
+}
+.ub-pdp-source a {
+  color: #666;
 }

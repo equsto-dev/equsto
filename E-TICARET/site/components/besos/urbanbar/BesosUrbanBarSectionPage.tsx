@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ShopFooterHost from "@/components/shop/ShopFooterHost";
 import BesosUrbanBarCatalog from "@/components/besos/urbanbar/BesosUrbanBarCatalog";
+import BesosUrbanBarPowered from "@/components/besos/urbanbar/BesosUrbanBarPowered";
 import { getBesosUrbanBarSection } from "@/lib/besos/urbanbar/catalog";
 import type { BesosUrbanBarSectionKey } from "@/lib/besos/urbanbar/catalog";
 import { loadBesosUrbanBarCatalog } from "@/lib/besos/urbanbar/load-data";
@@ -72,7 +73,7 @@ export default async function BesosUrbanBarSectionPage({ section, locale = "tr" 
               <span aria-hidden="true">›</span>
               <span>{sectionLabel}</span>
             </nav>
-            <p className="ub-besos-kicker">Urban Bar</p>
+            <BesosUrbanBarPowered className="ub-besos-kicker" />
             <h1>{sectionLabel}</h1>
             <p className="ub-besos-lead">{sectionData.blurb}</p>
             <p className="ub-besos-stat">
