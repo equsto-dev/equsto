@@ -34,9 +34,10 @@ export default function BesosUrbanBarPlpCard({ product, locale = "tr", cartReady
   const [defaultOverride, setDefaultOverride] = useState<string | null>(null);
   const [hoverOverride, setHoverOverride] = useState<string | null>(null);
   const [hoverIdx, setHoverIdx] = useState(0);
+  const [hoverFailed, setHoverFailed] = useState(false);
 
   const defaultUrl = defaultOverride || resolved.defaultUrl;
-  const hoverUrl = hoverOverride || resolved.hoverUrl;
+  const hoverUrl = hoverFailed ? "" : hoverOverride || resolved.hoverUrl;
   const { hoverCandidates } = resolved;
 
   const pdpHref = product.besosHref || product.shopHref || "#";
@@ -74,12 +75,19 @@ export default function BesosUrbanBarPlpCard({ product, locale = "tr", cartReady
   function onHoverError(e: SyntheticEvent<HTMLImageElement>) {
     const next = hoverCandidates[hoverIdx + 1];
     if (!next) {
-      setHoverOverride("");
+      setHoverFailed(true);
       return;
     }
     setHoverIdx((i) => i + 1);
     setHoverOverride(next);
     e.currentTarget.src = next;
+  }
+
+  function preloadHoverImage() {
+    if (!hoverUrl || hoverFailed) return;
+    const probe = new Image();
+    if (isShopifyCdn(hoverUrl)) probe.referrerPolicy = "no-referrer";
+    probe.src = hoverUrl;
   }
 
   function onDefaultError(e: SyntheticEvent<HTMLImageElement>) {
@@ -91,7 +99,10 @@ export default function BesosUrbanBarPlpCard({ product, locale = "tr", cartReady
   }
 
   return (
-    <article className="ub-plp-card">
+    <article
+      className={`ub-plp-card${hoverUrl ? " ub-plp-card--has-hover" : ""}`}
+      onMouseEnter={preloadHoverImage}
+    >
       <Link
         className={`ub-plp-card__media${hoverUrl ? " ub-plp-card__media--has-hover" : ""}`}
         href={pdpHref}
