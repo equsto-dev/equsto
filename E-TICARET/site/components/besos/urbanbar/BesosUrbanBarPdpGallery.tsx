@@ -9,7 +9,7 @@ type Props = {
 };
 
 function imgExtra(url: string) {
-  return isShopifyCdn(url) ? ({ referrerPolicy: "no-referrer" as const }) : {});
+  return isShopifyCdn(url) ? ({ referrerPolicy: "no-referrer" as const }) : {};
 }
 
 export default function BesosUrbanBarPdpGallery({ images, name }: Props) {
