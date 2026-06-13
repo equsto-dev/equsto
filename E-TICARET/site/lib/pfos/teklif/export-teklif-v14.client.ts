@@ -126,8 +126,8 @@ async function writeSpecRow(
 ) {
   applyRowStyle(ws, rowNum, specTpl);
   try {
-    ws.mergeCells(`A${rowNum}:G${rowNum}`);
-    ws.mergeCells(`H${rowNum}:M${rowNum}`);
+    ws.mergeCells(`A${rowNum}:C${rowNum}`);
+    ws.mergeCells(`E${rowNum}:M${rowNum}`);
   } catch {
     /* merged */
   }
@@ -139,21 +139,21 @@ async function writeSpecRow(
       extension: img.extension,
     });
     ws.addImage(imageId, {
-      tl: { col: 0.2, row: rowNum - 1 + 0.15 },
+      tl: { col: 3.08, row: rowNum - 1 + 0.15 },
       ext: { width: 110, height: 90 },
     });
-    ws.getCell(rowNum, 1).value = "";
+    ws.getCell(rowNum, 4).value = "";
   } else {
-    ws.getCell(rowNum, 1).value = satir.fotoNot ?? "📷\nFotoğraf";
-    ws.getCell(rowNum, 1).alignment = {
-      horizontal: "center",
+    ws.getCell(rowNum, 4).value = satir.fotoNot ?? "📷\nFotoğraf";
+    ws.getCell(rowNum, 4).alignment = {
+      horizontal: "left",
       vertical: "middle",
       wrapText: true,
     } as ExcelJS.Alignment;
   }
 
-  ws.getCell(rowNum, 8).value = satir.aciklama ?? "";
-  ws.getCell(rowNum, 8).alignment = {
+  ws.getCell(rowNum, 5).value = satir.aciklama ?? "";
+  ws.getCell(rowNum, 5).alignment = {
     horizontal: "left",
     vertical: "top",
     wrapText: true,
