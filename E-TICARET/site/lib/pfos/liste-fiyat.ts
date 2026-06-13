@@ -11,6 +11,8 @@ import type { ListePdfKalem } from "@/lib/pfos/liste-pdf-analiz";
 import type { PfosKategoriKodu } from "@/lib/pfos/core/engine-types";
 import { repairPfosDisplayText } from "@/lib/utf8/repair-turkish-fffd";
 import { matchProductForReferansKalem } from "@/lib/pfos/referans/match-referans-kalem";
+import { isBuroTipiDerinDondurucuReferans } from "@/lib/pfos/referans/buzdolabi-match";
+import { extractOlcuFromNotlar } from "@/lib/pfos/referans/yer-izgara-match";
 import { clearMatchProductCache } from "@/lib/pfos/core/match-product";
 import { formatPfosDisplayTanim } from "@/lib/pfos/parse-upload/sanitize-tanim";
 import { finalizeKalemlerForTeklif } from "@/lib/pfos/teklif/assign-poz";
@@ -97,6 +99,10 @@ export async function calculateListeQuote(
 
   for (let i = 0; i < templateItems.length; i++) {
     const item = templateItems[i];
+    const olcuHint = extractOlcuFromNotlar(item.notlar) || "";
+    if (isBuroTipiDerinDondurucuReferans(item.isim, olcuHint, item.notlar)) {
+      continue;
+    }
     const urunMatched = await matchProductForReferansKalem({
       urunTipi: item.urunTipi,
       fiyatStratejisi,

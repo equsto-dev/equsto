@@ -48,8 +48,16 @@ export function isBuzdolabiReferans(isim: string): boolean {
 
 type BuzFamily = "tezgah" | "cihazalti" | "dik" | "bar" | null;
 
-function parseBuzFamily(isim: string, urunTipi?: string | null): BuzFamily {
+function parseBuzFamily(
+  isim: string,
+  urunTipi?: string | null,
+  olcuRaw?: string | null,
+  notlar?: string | null,
+): BuzFamily {
   const n = norm(`${isim} ${urunTipi ?? ""}`);
+  if (isBuroTipiDerinDondurucuReferans(isim, olcuRaw, notlar)) {
+    return "cihazalti";
+  }
   if (/bar\s*sogut|sishe\s*sogut|şişe\s*soğut|icecek\s*sogut|içecek\s*soğut|bar_buzdolabi|sise_sogutucu/.test(n)) {
     return "bar";
   }
@@ -96,6 +104,30 @@ function olcuParts(olcu: string): [number, number, number] | null {
     .filter((n) => Number.isFinite(n) && n >= 8);
   if (nums.length < 2) return null;
   return [nums[0], nums[1], nums[2] ?? 0];
+}
+
+/** 60×60×80–95 kompakt büro / tezgah altı derin dondurucu (GN600 dik tip değil) */
+export function isBuroTipiDerinDondurucuReferans(
+  isim: string,
+  olcuRaw?: string | null,
+  notlar?: string | null,
+): boolean {
+  const n = norm(`${isim} ${notlar ?? ""}`);
+  if (!/derin\s*donduruc|dondurucu|freezer/.test(n)) return false;
+  if (/dik\s*tip|depo\s*tip|gn\s*600|gn\s*1200/.test(n)) return false;
+  if (/buro tip|büro tip|office type|slim buzdolab|tezgah alti slim/.test(n)) {
+    return true;
+  }
+  const olcu =
+    String(olcuRaw ?? "").trim() ||
+    extractOlcuFromNotlar(notlar) ||
+    "";
+  const parts = olcuParts(olcu);
+  if (!parts) return false;
+  const [w, d, h] = parts;
+  if (w < 55 || w > 65 || d < 55 || d > 65) return false;
+  if (h < 75 || h > 95) return false;
+  return true;
 }
 
 function snapDepthCm(depth: number): 60 | 70 {
@@ -180,7 +212,11 @@ export async function matchBuzdolabiByReferans(
       .trim();
   const olcuDisplay = toOlcuMmDisplay(olcu) ?? (olcu || null);
 
-  const family = parseBuzFamily(isim, urunTipi);
+  if (isDerinDondurucu(isim) && isBuroTipiDerinDondurucuReferans(isim, olcu, notlar)) {
+    return null;
+  }
+
+  const family = parseBuzFamily(isim, urunTipi, olcu, notlar);
   const freezer = isDerinDondurucu(isim);
   const parts = olcuParts(olcu);
   const depth = parts ? snapDepthCm(parts[1]) : 70;
