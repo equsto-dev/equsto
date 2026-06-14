@@ -110,11 +110,14 @@ export function olcuForTeklifUrun(
   );
 }
 
-/** Proforma/tablo kW hücresi — değer yoksa veya 0 ise boş */
+/** Proforma/tablo kW hücresi — değer yoksa veya 0 ise boş; birim: kW */
 export function formatKwHucre(kw: number | null | undefined): string {
   if (kw == null || !Number.isFinite(kw) || kw <= 0) return "";
-  return String(kw);
+  return `${String(kw)} kW`;
 }
+
+/** Excel kW sütunu — sayısal değer + görünüm birimi */
+export const KW_HUCRE_EXCEL_NUMFMT = '0.0" kW"';
 
 /** Excel hücresi — boş bırakılacaksa null */
 export function kwHucreExcelValue(kw: number | null | undefined): number | null {
