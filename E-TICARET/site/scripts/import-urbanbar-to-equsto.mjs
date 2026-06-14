@@ -13,6 +13,7 @@ import { execFileSync } from "node:child_process";
 import { slugify } from "./lib/ozti-enrich.mjs";
 import { fetchTcmbEurUsdRates } from "./fetch-tcmb-kur.mjs";
 import { classifyUrbanBarBesos, loadUrbanBarBesosTaxonomy } from "./lib/urbanbar-besos-taxonomy.mjs";
+import { isUrbanBarAlcoholProduct } from "./lib/urbanbar-alcohol-filter.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SRC_JSON = path.join(ROOT, "scripts/data/urbanbar/urbanbar-web-catalog.json");
@@ -314,9 +315,15 @@ async function main() {
   console.log(`[kur] 1 GBP = ${gbpTry} TRY, 1 EUR = ${eurTry} TRY`);
 
   const rows = [];
+  let skippedAlcohol = 0;
   for (const p of products) {
+    if (isUrbanBarAlcoholProduct(p)) {
+      skippedAlcohol++;
+      continue;
+    }
     rows.push(...(await toRows(p, gbpTry, eurTry)));
   }
+  if (skippedAlcohol) console.log(`[urbanbar-import] içki atlandı: ${skippedAlcohol} ürün`);
 
   const byDept = rows.reduce((acc, r) => {
     (acc[r.dept] ||= []).push(r);

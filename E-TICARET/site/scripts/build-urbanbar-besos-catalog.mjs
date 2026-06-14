@@ -13,6 +13,7 @@ import {
   sectionDef,
   groupDef,
 } from "./lib/urbanbar-besos-taxonomy.mjs";
+import { isUrbanBarAlcoholRow } from "./lib/urbanbar-alcohol-filter.mjs";
 import { pickUrbanBarPlpHoverUrl } from "./lib/urbanbar-plp-images.mjs";
 import {
   mergeSpecifications,
@@ -81,6 +82,8 @@ function besosHref(section, handle, equstoId) {
 }
 
 function toProduct(row, taxonomy, webByHandle, pdpByHandle) {
+  if (isUrbanBarAlcoholRow(row)) return null;
+
   const hit = classifyUrbanBarBesos(
     {
       catTags: row.urbanbar_cat_tags,
