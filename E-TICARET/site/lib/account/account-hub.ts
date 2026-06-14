@@ -20,8 +20,8 @@ export const ACCOUNT_CARDS: AccountCard[] = [
     id: "orders",
     title: "Siparişlerim",
     description:
-      "Sepetinizi görüntüleyin, WhatsApp ile talep gönderin ve sipariş durumunuzu takip edin.",
-    href: "/sepet",
+      "Geçmiş sipariş taleplerinizi görüntüleyin ve durumlarını takip edin.",
+    href: "#siparislerim",
     icon: "orders",
   },
   {

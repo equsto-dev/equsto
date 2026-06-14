@@ -1731,6 +1731,17 @@
             valEl.textContent = j.code;
             disp.style.display = 'inline-block';
             disp.removeAttribute('hidden');
+
+            var syncUrl = location.origin + '/sepet?sync=' + j.code;
+            var qrImg = document.getElementById('eq-cart-pair-qr-img');
+            if (qrImg) {
+              qrImg.src = 'https://chart.googleapis.com/chart?cht=qr&chs=150x150&chl=' + encodeURIComponent(syncUrl);
+              qrImg.style.display = 'block';
+            }
+            var waBtn = document.getElementById('eq-cart-pair-wa-btn');
+            if (waBtn) {
+              waBtn.href = 'https://wa.me/?text=' + encodeURIComponent('Equsto sepetimi bu cihazla eşleştirmek için tıklayın: ' + syncUrl);
+            }
           }
         } else {
           alert('Kod oluşturulamadı: ' + (j && j.error || 'Bilinmeyen hata'));
@@ -1835,6 +1846,16 @@
         }
         pairJoinCode(val);
       });
+    }
+
+    if (window.URLSearchParams) {
+      var params = new URLSearchParams(location.search);
+      var syncCode = params.get('sync');
+      if (syncCode && syncCode.trim().length === 6) {
+        var cleanUrl = location.protocol + '//' + location.host + location.pathname;
+        history.replaceState({ path: cleanUrl }, '', cleanUrl);
+        pairJoinCode(syncCode.trim().toUpperCase());
+      }
     }
   }
 

@@ -123,3 +123,29 @@ export async function putMemberProfile(
   });
   return { success: true, user: data.user };
 }
+
+export async function fetchMemberDashboardRemote(): Promise<{
+  orders: any[];
+  quotes: any[];
+} | null> {
+  const token = await ensureMemberToken();
+  if (!token) return null;
+  const res = await fetch("/api/auth/dashboard", {
+    headers: {
+      Authorization: `Bearer ${token}`,
+      "X-Equsto-Authorization": token,
+    },
+    cache: "no-store",
+  });
+  if (!res.ok) return null;
+  const data = (await res.json()) as {
+    success?: boolean;
+    orders?: any[];
+    quotes?: any[];
+  };
+  if (!data.success) return null;
+  return {
+    orders: data.orders || [],
+    quotes: data.quotes || [],
+  };
+}

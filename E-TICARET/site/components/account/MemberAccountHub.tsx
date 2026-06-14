@@ -10,13 +10,16 @@ import {
 import {
   EMPTY_MEMBER_TESLIMAT_ADRES,
   normalizeMemberTeslimatAdres,
+  normalizeMemberAddressBook,
   type MemberTeslimatAdres,
+  type MemberAddressBook,
 } from "@/lib/account/member-teslimat-adres";
 import {
   ensureMemberToken,
   fetchMemberProfileRemote,
   putMemberProfile,
   waitForMemberApi,
+  fetchMemberDashboardRemote,
 } from "@/lib/account/member-profile.client";
 import {
   memberLoggedInNow,
@@ -28,7 +31,7 @@ type MemberProfile = {
   email: string;
   name: string;
   telefon: string;
-  teslimatAdres: MemberTeslimatAdres;
+  teslimatAdres: any;
   provider: string;
   picture: string;
 };
@@ -96,6 +99,9 @@ export default function MemberAccountHub() {
   const [phoneSaving, setPhoneSaving] = useState(false);
   const [phoneError, setPhoneError] = useState("");
   const [addressAutoEdit, setAddressAutoEdit] = useState(false);
+  const [orders, setOrders] = useState<any[]>([]);
+  const [quotes, setQuotes] = useState<any[]>([]);
+  const [loadingHistory, setLoadingHistory] = useState(false);
 
   const load = useCallback(async () => {
     await waitForMemberApi();
@@ -129,6 +135,21 @@ export default function MemberAccountHub() {
       window.location.href = pfosLoginHref();
       return;
     }
+    
+    // Load orders and quotes history
+    try {
+      setLoadingHistory(true);
+      const history = await fetchMemberDashboardRemote();
+      if (history) {
+        setOrders(history.orders || []);
+        setQuotes(history.quotes || []);
+      }
+    } catch (err) {
+      console.error("Dashboard history load error:", err);
+    } finally {
+      setLoadingHistory(false);
+    }
+
     setReady(true);
   }, []);
 
@@ -149,10 +170,17 @@ export default function MemberAccountHub() {
     if (!ready) return;
     function focusAddressSection() {
       const hash = window.location.hash.replace("#", "");
-      if (hash !== "adres-ekle" && hash !== "teslimat") return;
-      const el = document.getElementById("adres-ekle");
-      el?.scrollIntoView({ behavior: "smooth", block: "start" });
-      setAddressAutoEdit(true);
+      if (hash === "adres-ekle" || hash === "teslimat") {
+        const el = document.getElementById("adres-ekle");
+        el?.scrollIntoView({ behavior: "smooth", block: "start" });
+        setAddressAutoEdit(true);
+      } else if (hash === "siparislerim") {
+        const el = document.getElementById("siparislerim");
+        el?.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else if (hash === "tekliflerim") {
+        const el = document.getElementById("tekliflerim");
+        el?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     }
     focusAddressSection();
     window.addEventListener("hashchange", focusAddressSection);
@@ -367,6 +395,122 @@ export default function MemberAccountHub() {
           setProfile((prev) => (prev ? { ...prev, teslimatAdres } : prev))
         }
       />
+
+      {/* Siparişlerim Section */}
+      <section className={styles.section} id="siparislerim">
+        <h2 className={styles.sectionTitle}>Siparişlerim / Taleplerim</h2>
+        {loadingHistory ? (
+          <div className={styles.hint}>Siparişler yükleniyor…</div>
+        ) : orders.length === 0 ? (
+          <p className={styles.hint}>Henüz sipariş talebiniz bulunmuyor.</p>
+        ) : (
+          <div style={{ overflowX: "auto" }}>
+            <table style={{ width: "100%", borderCollapse: "collapse", marginTop: "12px" }}>
+              <thead>
+                <tr style={{ borderBottom: "2px solid #dde1ea", textAlign: "left" }}>
+                  <th style={{ padding: "10px", fontSize: "0.82rem", color: "#5c6378" }}>Sipariş No</th>
+                  <th style={{ padding: "10px", fontSize: "0.82rem", color: "#5c6378" }}>Tarih</th>
+                  <th style={{ padding: "10px", fontSize: "0.82rem", color: "#5c6378" }}>Kalem / Adet</th>
+                  <th style={{ padding: "10px", fontSize: "0.82rem", color: "#5c6378" }}>Durum</th>
+                  <th style={{ padding: "10px", fontSize: "0.82rem", color: "#5c6378", textAlign: "right" }}>Tutar</th>
+                </tr>
+              </thead>
+              <tbody>
+                {orders.map((order) => {
+                  const dateStr = order.createdAt ? new Date(order.createdAt).toLocaleDateString("tr-TR") : "—";
+                  return (
+                    <tr key={order.id} style={{ borderBottom: "1px solid #dde1ea" }}>
+                      <td style={{ padding: "12px 10px", fontSize: "0.88rem", fontWeight: "600", color: "#001e50" }}>
+                        {order.siparisNo || order.id}
+                      </td>
+                      <td style={{ padding: "12px 10px", fontSize: "0.85rem", color: "#5c6378" }}>
+                        {dateStr}
+                      </td>
+                      <td style={{ padding: "12px 10px", fontSize: "0.85rem", color: "#1a1d2b" }}>
+                        {order.toplamKalem || 0} Kalem / {order.toplamAdet || 0} Adet
+                      </td>
+                      <td style={{ padding: "12px 10px", fontSize: "0.85rem" }}>
+                        <span style={{
+                          display: "inline-block",
+                          padding: "4px 10px",
+                          borderRadius: "12px",
+                          fontSize: "0.75rem",
+                          fontWeight: "600",
+                          background: order.durum === "teslim" ? "#e6f4ea" : order.durum === "beklemede" ? "#fff8e6" : "#eef3fb",
+                          color: order.durum === "teslim" ? "#137333" : order.durum === "beklemede" ? "#b06000" : "#001e50",
+                        }}>
+                          {order.durum}
+                        </span>
+                      </td>
+                      <td style={{ padding: "12px 10px", fontSize: "0.88rem", fontWeight: "600", color: "#1a1d2b", textAlign: "right" }}>
+                        {new Intl.NumberFormat("tr-TR", { style: "currency", currency: "TRY" }).format(Number(order.toplamTl || 0))}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </section>
+
+      {/* Teklif Havuzum Section */}
+      <section className={styles.section} id="tekliflerim">
+        <h2 className={styles.sectionTitle}>Proje Fabrikası (PFOS) Tekliflerim</h2>
+        {loadingHistory ? (
+          <div className={styles.hint}>Teklifler yükleniyor…</div>
+        ) : quotes.length === 0 ? (
+          <p className={styles.hint}>Henüz Proje Fabrikası teklifiniz bulunmuyor.</p>
+        ) : (
+          <div style={{ overflowX: "auto" }}>
+            <table style={{ width: "100%", borderCollapse: "collapse", marginTop: "12px" }}>
+              <thead>
+                <tr style={{ borderBottom: "2px solid #dde1ea", textAlign: "left" }}>
+                  <th style={{ padding: "10px", fontSize: "0.82rem", color: "#5c6378" }}>Teklif No</th>
+                  <th style={{ padding: "10px", fontSize: "0.82rem", color: "#5c6378" }}>Tarih</th>
+                  <th style={{ padding: "10px", fontSize: "0.82rem", color: "#5c6378" }}>Konsept</th>
+                  <th style={{ padding: "10px", fontSize: "0.82rem", color: "#5c6378" }}>Durum</th>
+                  <th style={{ padding: "10px", fontSize: "0.82rem", color: "#5c6378", textAlign: "right" }}>Tutar</th>
+                </tr>
+              </thead>
+              <tbody>
+                {quotes.map((quote) => {
+                  const dateStr = quote.createdAt ? new Date(quote.createdAt).toLocaleDateString("tr-TR") : "—";
+                  return (
+                    <tr key={quote.id} style={{ borderBottom: "1px solid #dde1ea" }}>
+                      <td style={{ padding: "12px 10px", fontSize: "0.88rem", fontWeight: "600", color: "#001e50" }}>
+                        {quote.refNo}
+                      </td>
+                      <td style={{ padding: "12px 10px", fontSize: "0.85rem", color: "#5c6378" }}>
+                        {dateStr}
+                      </td>
+                      <td style={{ padding: "12px 10px", fontSize: "0.85rem", color: "#1a1d2b" }}>
+                        {quote.konsept || "Mutfak Tasarımı"}
+                      </td>
+                      <td style={{ padding: "12px 10px", fontSize: "0.85rem" }}>
+                        <span style={{
+                          display: "inline-block",
+                          padding: "4px 10px",
+                          borderRadius: "12px",
+                          fontSize: "0.75rem",
+                          fontWeight: "600",
+                          background: quote.durum === "onaylandi" ? "#e6f4ea" : quote.durum === "taslak" ? "#eef3fb" : "#fff8e6",
+                          color: quote.durum === "onaylandi" ? "#137333" : quote.durum === "taslak" ? "#001e50" : "#b06000",
+                        }}>
+                          {quote.durum}
+                        </span>
+                      </td>
+                      <td style={{ padding: "12px 10px", fontSize: "0.88rem", fontWeight: "600", color: "#1a1d2b", textAlign: "right" }}>
+                        {new Intl.NumberFormat("tr-TR", { style: "currency", currency: "TRY" }).format(Number(quote.toplamTl || 0))}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </section>
 
       <div className={styles.linkColumns}>
         {ACCOUNT_LINK_COLUMNS.map((col) => (
