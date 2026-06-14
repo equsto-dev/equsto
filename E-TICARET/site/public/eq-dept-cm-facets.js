@@ -37,11 +37,25 @@
 
   var ENERGY_TYPES = [
     { id: 'elektrik', label: 'Elektrikli', keys: ['elektrikli', 'elektrik', 'electric'] },
-    { id: 'dogalgaz', label: 'Doğalgazlı', keys: ['doğalgaz', 'dogalgaz', 'doğal gaz', 'dogal gaz'] },
-    { id: 'gazli', label: 'Gazlı', keys: ['gazlı', 'gazli'] },
+    {
+      id: 'dogalgaz',
+      label: 'Doğalgazlı',
+      keys: ['doğalgaz', 'dogalgaz', 'doğal gaz', 'dogal gaz', 'gazlı', 'gazli'],
+    },
     { id: 'lpg', label: 'LPG', keys: ['lpg', 'tüp gaz', 'tup gaz'] },
     { id: 'induksiyon', label: 'İndüksiyonlu', keys: ['indüksiyon', 'induksiyon', 'endüksiyon', 'enduksiyon', 'induction'] },
   ];
+
+  /** Eski "gazli" seçimleri → doğalgaz (Gazlı filtresi kaldırıldı) */
+  function normalizeEnergyIds(ids) {
+    if (!Array.isArray(ids)) return [];
+    var out = [];
+    ids.forEach(function (id) {
+      var x = id === 'gazli' ? 'dogalgaz' : id;
+      if (x && out.indexOf(x) < 0) out.push(x);
+    });
+    return out;
+  }
 
   var MODEL_CAP = 48;
   /** Yıkama PLP: Öztiryakiler OEM alt markaları filtrede gösterilmez. */
@@ -368,9 +382,24 @@
       }
     }
     if (!row) return false;
-    var hay = lc(u.n) + ' ' + lc((u.raw && u.raw.specs) || '');
+    var hay =
+      lc(u.n) +
+      ' ' +
+      lc((u.raw && u.raw.specs) || '') +
+      ' ' +
+      lc(u.c || (u.raw && u.raw.category) || '');
     for (var k = 0; k < row.keys.length; k++) {
-      if (hay.indexOf(lc(row.keys[k])) !== -1) return true;
+      var key = lc(row.keys[k]);
+      if (hay.indexOf(key) === -1) continue;
+      if (
+        energyId === 'dogalgaz' &&
+        (key === 'gazlı' || key === 'gazli') &&
+        /lpg|tüp gaz|tup gaz/.test(hay) &&
+        !/doğalgaz|dogalgaz|doğal gaz|dogal gaz/.test(hay)
+      ) {
+        continue;
+      }
+      return true;
     }
     return false;
   }
@@ -388,6 +417,7 @@
     };
     var onChange = typeof opts.onChange === 'function' ? opts.onChange : function () {};
     var dept = facetDept(opts);
+    if (state.energy) state.energy = normalizeEnergyIds(state.energy);
     var activeTiles = Array.isArray(state.activeTiles)
       ? state.activeTiles
       : state.activeTile
@@ -706,10 +736,14 @@
 
     host.querySelectorAll('input[name="eq-dept-cm-energy"]').forEach(function (inp) {
       inp.addEventListener('change', function () {
-        state.energy = [];
-        host.querySelectorAll('input[name="eq-dept-cm-energy"]:checked').forEach(function (c) {
-          state.energy.push(c.value);
-        });
+        state.energy = normalizeEnergyIds(
+          Array.prototype.map.call(
+            host.querySelectorAll('input[name="eq-dept-cm-energy"]:checked'),
+            function (c) {
+              return c.value;
+            },
+          ),
+        );
         onChange('energy');
       });
     });
