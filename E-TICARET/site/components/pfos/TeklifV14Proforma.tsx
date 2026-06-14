@@ -455,16 +455,14 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
                     </tr>
                     {showSpecRow && (
                       <tr>
-                        <td style={specTd} />
-                        <td style={specTd} />
-                        <td style={specTdFoto}>
+                        <td colSpan={2} style={specTdFoto}>
                           {row.fotoUrl ? (
                             // eslint-disable-next-line @next/next/no-img-element
                             <img
                               src={row.fotoUrl}
                               alt=""
                               style={{
-                                maxWidth: "100%",
+                                maxWidth: 150,
                                 maxHeight: 125,
                                 objectFit: "contain",
                                 display: "block",
@@ -475,10 +473,10 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
                             row.fotoNot ?? "📷 Fotoğraf"
                           ) : null}
                         </td>
-                        <td style={specTdAcik}>
+                        <td style={specTdGap} />
+                        <td colSpan={8} style={specTdAcik}>
                           <pre style={specPre}>{aciklamaMetni}</pre>
                         </td>
-                        <td colSpan={7} style={specTd} />
                       </tr>
                     )}
                   </Fragment>
@@ -745,18 +743,19 @@ const specTdFoto: CSSProperties = {
   ...specTd,
   textAlign: "left",
   verticalAlign: "top",
-  paddingLeft: 2,
-  paddingRight: 2,
-  overflow: "hidden",
-  maxWidth: 0,
+  paddingLeft: 0,
+  paddingRight: 0,
 };
 
-/** Açıklama — yalnızca Tanımı sütunu */
+const specTdGap: CSSProperties = {
+  ...specTd,
+  padding: 0,
+};
+
+/** Açıklama — Tanımı sütunundan itibaren (Stok no boşluk) */
 const specTdAcik: CSSProperties = {
   ...specTd,
   paddingLeft: 4,
-  overflow: "hidden",
-  maxWidth: 0,
 };
 
 const specPre: CSSProperties = {
