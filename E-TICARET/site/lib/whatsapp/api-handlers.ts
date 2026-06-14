@@ -24,6 +24,7 @@ import {
   whatsAppSendConfigured,
   whatsAppVerifyToken,
   whatsAppWebhookConfigured,
+  greenApiConfigured,
 } from "@/lib/whatsapp";
 
 const DEFAULT_PREFILL = "Merhaba, equsto.com üzerinden yazıyorum.";
@@ -164,6 +165,16 @@ export async function waWebhookGet(req: NextRequest) {
   const expected = whatsAppVerifyToken();
   if (mode === "subscribe" && token && expected && token === expected && challenge) {
     return new Response(challenge, { status: 200 });
+  }
+
+  // Green API — tarayıcı / panel URL kontrolü (Meta hub parametreleri yok)
+  if (whatsAppMode() === "green-api" && greenApiConfigured()) {
+    return Response.json({
+      ok: true,
+      provider: "green-api",
+      endpoint: "/api/whatsapp/webhook",
+      method: "POST",
+    });
   }
 
   return new Response("Forbidden", { status: 403 });
