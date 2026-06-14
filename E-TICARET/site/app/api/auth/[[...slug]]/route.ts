@@ -14,7 +14,12 @@ import {
   updateMemberProfilePhone,
   updateMemberProfileAddress,
 } from "@/lib/member-auth";
+import {
+  requestMemberPasswordReset,
+  resetMemberPasswordWithCode,
+} from "@/lib/member-password-reset";
 import { normalizeShopCartItems } from "@/lib/shop-cart";
+import { db } from "@/lib/db";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -78,6 +83,29 @@ async function action(req: NextRequest, ctx: Ctx): Promise<Response> {
     }
   }
 
+  if (path === "forgot-password" && method === "POST") {
+    try {
+      const result = await requestMemberPasswordReset(String(body.email || ""));
+      return json({ success: true, message: result.message });
+    } catch (e) {
+      return err(e instanceof Error ? e.message : "Kod gönderilemedi", 400);
+    }
+  }
+
+  if (path === "reset-password" && method === "POST") {
+    try {
+      await resetMemberPasswordWithCode(
+        String(body.email || ""),
+        String(body.code || ""),
+        String(body.password || ""),
+        String(body.passwordConfirm || body.password2 || ""),
+      );
+      return json({ success: true, message: "Şifreniz güncellendi. Giriş yapabilirsiniz." });
+    } catch (e) {
+      return err(e instanceof Error ? e.message : "Şifre güncellenemedi", 400);
+    }
+  }
+
   if (path === "google" && method === "POST") {
     try {
       const credential = String(body.credential || body.id_token || "");
@@ -98,6 +126,38 @@ async function action(req: NextRequest, ctx: Ctx): Promise<Response> {
   }
 
   const token = readBearerToken(req) || readTokenFromBody(body);
+
+  if (path === "dashboard" && method === "GET") {
+    const session = await getSessionByToken(token);
+    const memberId = await getMemberIdByToken(token);
+    if (!session || !memberId) return err("Oturum geçersiz", 401);
+
+    const orders = await db.siparis.findMany({
+      where: {
+        OR: [
+          { musteriId: memberId },
+          { musteriMail: session.user.email },
+        ],
+      },
+      orderBy: { createdAt: "desc" },
+    });
+
+    const quotes = await db.teklif.findMany({
+      where: {
+        OR: [
+          { musteriId: memberId },
+          { musteriMail: session.user.email },
+        ],
+      },
+      orderBy: { createdAt: "desc" },
+    });
+
+    return json({
+      success: true,
+      orders,
+      quotes,
+    });
+  }
 
   if (path === "me" && method === "GET") {
     const session = await getSessionByToken(token);

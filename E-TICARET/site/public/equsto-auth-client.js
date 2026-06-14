@@ -168,6 +168,25 @@
     });
   };
 
+  window.equstoAuthForgotPassword = function (email) {
+    return apiFetch('/forgot-password', {
+      method: 'POST',
+      json: { email: email },
+    });
+  };
+
+  window.equstoAuthResetPassword = function (email, code, password, passwordConfirm) {
+    return apiFetch('/reset-password', {
+      method: 'POST',
+      json: {
+        email: email,
+        code: code,
+        password: password,
+        passwordConfirm: passwordConfirm,
+      },
+    });
+  };
+
   function redirectAfterAuth() {
     var next = new URLSearchParams(location.search).get('next') || '/';
     var phoneOk =
