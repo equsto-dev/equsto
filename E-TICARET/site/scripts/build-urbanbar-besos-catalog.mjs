@@ -15,6 +15,7 @@ import {
 } from "./lib/urbanbar-besos-taxonomy.mjs";
 import { isUrbanBarAlcoholRow } from "./lib/urbanbar-alcohol-filter.mjs";
 import { pickUrbanBarPlpHoverUrl } from "./lib/urbanbar-plp-images.mjs";
+import { buildUrbanBarRowsFromWeb } from "./lib/urbanbar-equsto-rows.mjs";
 import {
   mergeSpecifications,
   parseDescriptionHtml,
@@ -22,11 +23,9 @@ import {
 } from "./lib/parse-urbanbar-pdp-html.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
-const DEPT_DIR = path.join(ROOT, "public/data/dept");
 const WEB_CATALOG = path.join(ROOT, "scripts/data/urbanbar/urbanbar-web-catalog.json");
 const PDP_DETAILS = path.join(ROOT, "scripts/data/urbanbar/urbanbar-pdp-details.json");
 const OUT = path.join(ROOT, "public/data/urbanbar-besos-catalog.json");
-const KAYNAK = "urbanbar-web";
 const PUBLIC_ROOT = path.join(ROOT, "public");
 
 function localCatalogImageExists(rel) {
@@ -56,23 +55,6 @@ function loadPdpDetailsByHandle() {
     }
   } catch (_) {}
   return map;
-}
-
-function readDeptRows() {
-  const rows = [];
-  for (const dept of ["servis", "icecek"]) {
-    const file = path.join(DEPT_DIR, `${dept}.json`);
-    if (!fs.existsSync(file)) continue;
-    const list = JSON.parse(fs.readFileSync(file, "utf8"));
-    rows.push(...list.filter((r) => String(r?.kaynak || "") === KAYNAK));
-  }
-  return rows;
-}
-
-function shopHref(row) {
-  const dept = row.dept || "servis";
-  const id = String(row.id || "").replace(/\//g, "-");
-  return `/shop/${dept}/${id}`;
 }
 
 function besosHref(section, handle, equstoId) {
@@ -159,7 +141,6 @@ function toProduct(row, taxonomy, webByHandle, pdpByHandle) {
     catTags: row.urbanbar_cat_tags || web?.catTags || [],
     collections: row.urbanbar_collections || web?.collections?.map((c) => c.handle || c) || [],
     collectionPath: web?.collectionPath || "",
-    shopHref: shopHref(row),
     besosHref: besosHref(hit.section, handle, row.id),
     sourceUrl: web?.url || row.kaynak_url,
   };
@@ -203,11 +184,11 @@ function groupCatalog(products, taxonomy) {
   return sections;
 }
 
-function main() {
+async function main() {
   const taxonomy = loadUrbanBarBesosTaxonomy();
   const webByHandle = loadWebByHandle();
   const pdpByHandle = loadPdpDetailsByHandle();
-  const rows = readDeptRows();
+  const { rows } = await buildUrbanBarRowsFromWeb({ root: ROOT, dryRun: true, copyImages: false });
   const products = rows.map((r) => toProduct(r, taxonomy, webByHandle, pdpByHandle)).filter(Boolean);
   const skipped = rows.length - products.length;
 
@@ -234,4 +215,7 @@ function main() {
   console.log(`  bölüm:`, bySection);
 }
 
-main();
+main().catch((e) => {
+  console.error(e);
+  process.exit(1);
+});

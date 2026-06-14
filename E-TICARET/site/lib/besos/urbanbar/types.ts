@@ -61,8 +61,8 @@ export type BesosUrbanBarProduct = {
   catTags?: string[];
   collections?: string[];
   collectionPath?: string;
-  shopHref: string;
-  besosHref?: string;
+  shopHref?: string;
+  besosHref: string;
   sourceUrl?: string;
 };
 

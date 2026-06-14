@@ -11,6 +11,7 @@ import {
   rankSearchHitsByRelevance,
   shouldDiversifySearchHits,
 } from "@/lib/rank-search-hits";
+import { isBarDesignShopProduct } from "@/lib/shop/bar-design-exclusive";
 
 export type CatalogSearchHit = {
   id: string;
@@ -72,6 +73,7 @@ function firstImage(row: CatalogRow) {
 }
 
 export function rowToHitFromRow(row: CatalogRow): CatalogSearchHit | null {
+  if (isBarDesignShopProduct(row)) return null;
   const name = String(row.name || "").trim();
   if (!name) return null;
   const dept = String(row.dept || "").trim();
@@ -116,7 +118,7 @@ async function loadCatalogRows(): Promise<CatalogRow[]> {
   if (cache) return cache.rows;
   try {
     const rows = await loadEkipmanlarJson();
-    const list = Array.isArray(rows) ? rows : [];
+    const list = Array.isArray(rows) ? rows.filter((r) => !isBarDesignShopProduct(r as CatalogRow)) : [];
     cache = { rows: list };
     lookupMaps = null;
     return list;

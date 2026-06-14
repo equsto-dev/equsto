@@ -11,6 +11,7 @@ import { fileURLToPath } from "node:url";
 import { Meilisearch } from "meilisearch";
 import "./load-env.mjs";
 import { printMeiliConnectionHint } from "./lib/meili-error-hint.mjs";
+import { isBarDesignShopProduct } from "./lib/bar-design-shop-exclude.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DEPT_DIR = path.join(ROOT, "public/data/dept");
@@ -197,6 +198,7 @@ function loadCatalogRows() {
   const ekipPath = path.join(ROOT, "public/data/ekipmanlar.json");
 
   function pushRow(row, deptFallback) {
+    if (isBarDesignShopProduct(row)) return;
     const doc = rowToDoc(row, deptFallback);
     if (!doc || seen.has(doc.id)) return;
     seen.add(doc.id);
