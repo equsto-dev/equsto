@@ -19,6 +19,9 @@ export default function EticaretOzetPanel() {
     urunCount: 0,
     urunSource: "—",
     catalog: { ekipmanlar: 0, withImage: 0, brands: 0 },
+    catalogRebuiltAt: "",
+    inoksanComDescriptions: 0,
+    productsEnStale: 0,
     searchOk: false,
     kur: null as number | null,
     kurDate: "",
@@ -49,6 +52,9 @@ export default function EticaretOzetPanel() {
           urunCount: urun.rows.length,
           urunSource: urun.source,
           catalog: cat,
+          catalogRebuiltAt: cat.rebuiltAt || "",
+          inoksanComDescriptions: cat.inoksanComDescriptions ?? 0,
+          productsEnStale: cat.productsEnStale ?? 0,
           searchOk: !!search.configured,
           kur: kurRes.rate ?? null,
           kurDate: kurRes.date || "",
@@ -121,6 +127,48 @@ export default function EticaretOzetPanel() {
           message="TCMB kur yedek değer kullanılıyor"
           description="Canlı kur alınamadı; Öztiryakiler EUR fiyatları yedek kurla hesaplanır."
         />
+      )}
+
+      {(stats.productsEnStale > 0 ||
+        (stats.urunCount > 0 &&
+          stats.urunCount !== stats.catalog.ekipmanlar)) && (
+        <Alert
+          type="warning"
+          showIcon
+          style={{ marginTop: 16 }}
+          message="Katalog uyumsuzluğu"
+          description={
+            <>
+              {stats.productsEnStale > 0 && (
+                <>
+                  EN çeviri dosyası vitrin kataloğundan{" "}
+                  <strong>{stats.productsEnStale}</strong> ürün geride —{" "}
+                  <Typography.Text code>
+                    node scripts/build-product-i18n-en.mjs
+                  </Typography.Text>{" "}
+                  çalıştırın.
+                  <br />
+                </>
+              )}
+              {stats.urunCount > 0 &&
+                stats.urunCount !== stats.catalog.ekipmanlar && (
+                  <>
+                    Admin ürün API ({stats.urunCount}) ≠ vitrin katalog (
+                    {stats.catalog.ekipmanlar}).
+                  </>
+                )}
+            </>
+          }
+        />
+      )}
+
+      {stats.catalogRebuiltAt && (
+        <Typography.Text type="secondary" style={{ display: "block", marginTop: 12 }}>
+          Katalog birleştirme:{" "}
+          {new Date(stats.catalogRebuiltAt).toLocaleString("tr-TR")}
+          {stats.inoksanComDescriptions > 0 &&
+            ` · İnoksan.com açıklama: ${stats.inoksanComDescriptions}`}
+        </Typography.Text>
       )}
 
       <Row gutter={[16, 16]} style={{ marginTop: 16 }}>

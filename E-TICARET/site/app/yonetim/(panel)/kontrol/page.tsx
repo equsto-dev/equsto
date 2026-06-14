@@ -59,8 +59,24 @@ export default function YonetimKontrolPage() {
         key: "catalog",
         label: "Vitrin katalog (ekipmanlar.json)",
         ok: cat.ekipmanlar > 0,
-        detail: `${cat.ekipmanlar} ürün · ${cat.withImage} görselli · ${cat.brands} marka`,
+        detail: `${cat.ekipmanlar} ürün · ${cat.withImage} görselli · ${cat.brands} marka${
+          cat.rebuiltAt
+            ? ` · birleştirme: ${new Date(cat.rebuiltAt).toLocaleString("tr-TR")}`
+            : ""
+        }${
+          cat.inoksanComDescriptions
+            ? ` · İnoksan.com: ${cat.inoksanComDescriptions}`
+            : ""
+        }`,
       });
+      if (cat.productsEnStale && cat.productsEnStale > 0) {
+        rows.push({
+          key: "products-en",
+          label: "EN ürün çevirileri (products-en-by-id.json)",
+          ok: false,
+          detail: `${cat.productsEnCount ?? "?"} kayıt — vitrin katalogdan ${cat.productsEnStale} ürün geride`,
+        });
+      }
     } catch (e) {
       rows.push({
         key: "catalog",

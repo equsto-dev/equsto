@@ -1,5 +1,7 @@
 /** Yönetim paneli — /api istekleri (Bearer) */
 
+import { CATALOG_DATA_V } from "@/lib/shop/assets";
+
 export const PRO_TOKEN_KEY = "equsto_pro_admin_token";
 
 export type AdminUrunApiRow = {
@@ -500,10 +502,29 @@ export async function fetchPublishChecks(): Promise<PublishCheckItem[]> {
   return results;
 }
 
+export type CatalogMeta = {
+  version?: string;
+  rebuiltAt?: string;
+  ekipmanlar?: number;
+  withImage?: number;
+  brands?: number;
+  deptCounts?: Record<string, number>;
+  inoksanComDescriptions?: number;
+  inoksanShopDescriptions?: number;
+  inoksanMissing?: number | null;
+  productsEnCount?: number | null;
+  productsEnStale?: number;
+};
+
 export type CatalogStats = {
   ekipmanlar: number;
   withImage: number;
   brands: number;
+  rebuiltAt?: string;
+  inoksanComDescriptions?: number;
+  inoksanShopDescriptions?: number;
+  productsEnCount?: number;
+  productsEnStale?: number;
 };
 
 export type EkipmanRow = {
@@ -609,8 +630,20 @@ export function ekipmanPreviewSrc(row: EkipmanRow): string {
   return rel.startsWith("/") ? rel : `/${rel}`;
 }
 
+export async function fetchCatalogMeta(): Promise<CatalogMeta | null> {
+  try {
+    const res = await fetch(`/data/catalog-meta.json?v=${CATALOG_DATA_V}`, {
+      cache: "no-store",
+    });
+    if (!res.ok) return null;
+    return (await res.json()) as CatalogMeta;
+  } catch {
+    return null;
+  }
+}
+
 export async function fetchEkipmanlarCatalog(): Promise<EkipmanRow[]> {
-  const res = await fetch("/data/ekipmanlar.json?v=20260527ozti-pricing", {
+  const res = await fetch(`/data/ekipmanlar.json?v=${CATALOG_DATA_V}`, {
     cache: "no-store",
   });
   if (!res.ok) throw new Error("ekipmanlar.json yüklenemedi");
@@ -619,14 +652,33 @@ export async function fetchEkipmanlarCatalog(): Promise<EkipmanRow[]> {
 }
 
 export async function fetchCatalogStats(): Promise<CatalogStats> {
-  const rows = await fetchEkipmanlarCatalog();
+  const [rows, meta] = await Promise.all([
+    fetchEkipmanlarCatalog(),
+    fetchCatalogMeta(),
+  ]);
   const brands = new Set<string>();
   let withImage = 0;
   for (const r of rows) {
     if (r.brand) brands.add(r.brand);
     if (rowHasImage(r)) withImage++;
   }
-  return { ekipmanlar: rows.length, withImage, brands: brands.size };
+  const productsEnCount =
+    meta?.productsEnCount != null ? meta.productsEnCount : undefined;
+  const productsEnStale =
+    meta?.productsEnStale ??
+    (productsEnCount != null && productsEnCount < rows.length
+      ? rows.length - productsEnCount
+      : 0);
+  return {
+    ekipmanlar: rows.length,
+    withImage,
+    brands: brands.size,
+    rebuiltAt: meta?.rebuiltAt,
+    inoksanComDescriptions: meta?.inoksanComDescriptions,
+    inoksanShopDescriptions: meta?.inoksanShopDescriptions,
+    productsEnCount,
+    productsEnStale: productsEnStale > 0 ? productsEnStale : undefined,
+  };
 }
 
 export type PfosKategoriBantMeta = {
