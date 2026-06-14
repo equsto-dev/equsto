@@ -350,3 +350,17 @@ model SearchQueryLog {
   @@index([query])
   @@map("search_query_log")
 }
+
+/// Mr. Equsto WhatsApp modal — üye telefonu ile eşleşen sohbet satırları
+model WaChatMessage {
+  id          String   @id @default(cuid())
+  phone       String
+  role        String
+  body        String   @db.Text
+  waMessageId String?  @unique @map("wa_message_id")
+  memberId    String?  @map("member_id")
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  @@index([phone, createdAt])
+  @@map("wa_chat_message")
+}

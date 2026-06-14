@@ -123,6 +123,43 @@ export type GreenApiInboundMessage = {
   profileName: string;
 };
 
+export type GreenApiOutboundMessage = {
+  to: string;
+  messageId: string;
+  text: string;
+};
+
+function parseGreenApiTextMessage(root: {
+  typeWebhook?: string;
+  idMessage?: string;
+  senderData?: { sender?: string; senderName?: string; chatId?: string };
+  messageData?: {
+    typeMessage?: string;
+    textMessageData?: { textMessage?: string };
+    extendedTextMessageData?: { text?: string };
+  };
+}): { type: string; messageId: string; chatId: string; text: string; senderName: string } | null {
+  const type = root.messageData?.typeMessage || "";
+  if (type !== "textMessage" && type !== "extendedTextMessage") return null;
+
+  const text = String(
+    root.messageData?.textMessageData?.textMessage ||
+      root.messageData?.extendedTextMessageData?.text ||
+      "",
+  ).trim();
+  const chatId = String(root.senderData?.chatId || root.senderData?.sender || "");
+  const messageId = String(root.idMessage || "");
+  if (!chatId || !messageId) return null;
+
+  return {
+    type,
+    messageId,
+    chatId,
+    text,
+    senderName: String(root.senderData?.senderName || "").trim(),
+  };
+}
+
 /** Green API webhook gövdesinden gelen metin mesajları */
 export function parseGreenApiInboundMessages(body: unknown): GreenApiInboundMessage[] {
   const root = body as {
@@ -138,24 +175,45 @@ export function parseGreenApiInboundMessages(body: unknown): GreenApiInboundMess
 
   if (root.typeWebhook !== "incomingMessageReceived") return [];
 
-  const type = root.messageData?.typeMessage || "";
-  if (type !== "textMessage" && type !== "extendedTextMessage") return [];
+  const parsed = parseGreenApiTextMessage(root);
+  if (!parsed || !parsed.text) return [];
 
-  const text =
-    root.messageData?.textMessageData?.textMessage ||
-    root.messageData?.extendedTextMessageData?.text ||
-    "";
-  const sender = String(root.senderData?.sender || root.senderData?.chatId || "");
-  const from = sender.replace(/@c\.us$/i, "");
-  const messageId = String(root.idMessage || "");
-  if (!from || !messageId) return [];
+  const from = parsed.chatId.replace(/@c\.us$/i, "");
+  if (!from) return [];
 
   return [
     {
       from,
-      messageId,
-      text: String(text).trim(),
-      profileName: String(root.senderData?.senderName || "").trim(),
+      messageId: parsed.messageId,
+      text: parsed.text,
+      profileName: parsed.senderName,
     },
   ];
+}
+
+/** Green API — telefondan/API'den giden müşteri mesajları */
+export function parseGreenApiOutboundMessages(body: unknown): GreenApiOutboundMessage[] {
+  const root = body as {
+    typeWebhook?: string;
+    idMessage?: string;
+    senderData?: { sender?: string; senderName?: string; chatId?: string };
+    messageData?: {
+      typeMessage?: string;
+      textMessageData?: { textMessage?: string };
+      extendedTextMessageData?: { text?: string };
+    };
+  };
+
+  const hook = root.typeWebhook || "";
+  if (hook !== "outgoingMessageReceived" && hook !== "outgoingAPIMessageReceived") {
+    return [];
+  }
+
+  const parsed = parseGreenApiTextMessage(root);
+  if (!parsed || !parsed.text) return [];
+
+  const to = parsed.chatId.replace(/@c\.us$/i, "");
+  if (!to) return [];
+
+  return [{ to, messageId: parsed.messageId, text: parsed.text }];
 }

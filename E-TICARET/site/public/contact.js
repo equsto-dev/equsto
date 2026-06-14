@@ -45,11 +45,13 @@
   /** Kilit: public/whatsapp-cat-fab-KILIT.txt — npm run verify:whatsapp-cat-fab-kilit */
   var WA_FAB_IMG = "/equsto-bize-ulasin-isimlik.png";
   /** Modal şablonu değişince artırın (eski DOM'u zorla yeniler). */
-  var WA_MODAL_BUILD = 24;
+  var WA_MODAL_BUILD = 25;
 
   var waModalDigits = "";
   var waModalLastSentText = "";
   var waModalResizeHandler = null;
+  var waPollTimer = null;
+  var waServerSyncTs = 0;
 
   function syncWaModalNearFab() {
     var fab = document.querySelector(".equsto-contact-wa-fab");
@@ -440,6 +442,99 @@
     } catch (e) {}
   }
 
+  function mergeServerWaMessages(serverRows, replaceAll) {
+    if (!Array.isArray(serverRows)) return false;
+    if (replaceAll && !serverRows.length) return false;
+    var arr = replaceAll ? [] : loadChat();
+    var seen = {};
+    arr.forEach(function (m) {
+      if (m.sid) seen[m.sid] = true;
+    });
+    var changed = false;
+    serverRows.forEach(function (row) {
+      if (!row || !row.body) return;
+      var sid = row.id ? String(row.id) : "";
+      if (sid && seen[sid]) return;
+      if (sid) seen[sid] = true;
+      arr.push({
+        role: row.role === "user" ? "user" : "team",
+        body: String(row.body),
+        ts: row.ts || Date.now(),
+        sid: sid || undefined,
+      });
+      changed = true;
+      if (row.ts && row.ts > waServerSyncTs) waServerSyncTs = row.ts;
+    });
+    if (!changed) return false;
+    arr.sort(function (a, b) {
+      return (a.ts || 0) - (b.ts || 0);
+    });
+    saveChat(arr.slice(-80));
+    return true;
+  }
+
+  function syncWaChatFromServer(full, done) {
+    done = typeof done === "function" ? done : function () {};
+    if (!equstoWaApiSessionOk()) {
+      done(false);
+      return;
+    }
+    var tok = equstoMemberToken();
+    if (!tok) {
+      done(false);
+      return;
+    }
+    var url = eqMsgApiBase() + "/whatsapp/chat";
+    if (!full && waServerSyncTs > 0) {
+      url += "?since=" + encodeURIComponent(new Date(waServerSyncTs).toISOString());
+    }
+    fetch(url, {
+      method: "GET",
+      cache: "no-store",
+      headers: {
+        Authorization: "Bearer " + tok,
+        "X-Equsto-Authorization": tok,
+      },
+    })
+      .then(function (r) {
+        return r.json().then(function (j) {
+          return { ok: r.ok, j: j };
+        });
+      })
+      .then(function (res) {
+        if (!res.ok || !(res.j && res.j.success)) {
+          done(false);
+          return;
+        }
+        var data = res.j.data || res.j;
+        var rows = data.messages || [];
+        if (typeof data.lastTs === "number" && data.lastTs > waServerSyncTs) {
+          waServerSyncTs = data.lastTs;
+        }
+        if (mergeServerWaMessages(rows, !!full)) renderWaChat();
+        done(true);
+      })
+      .catch(function () {
+        done(false);
+      });
+  }
+
+  function startWaChatPoll() {
+    stopWaChatPoll();
+    if (!equstoWaApiSessionOk()) return;
+    syncWaChatFromServer(true);
+    waPollTimer = window.setInterval(function () {
+      syncWaChatFromServer(false);
+    }, 4000);
+  }
+
+  function stopWaChatPoll() {
+    if (waPollTimer) {
+      window.clearInterval(waPollTimer);
+      waPollTimer = null;
+    }
+  }
+
   function appendChatMessage(role, body) {
     var arr = loadChat();
     arr.push({ role: role === "user" ? "user" : "team", body: String(body || "").trim(), ts: Date.now() });
@@ -618,6 +713,7 @@
   }
 
   function equstoHideWhatsAppModal() {
+    stopWaChatPoll();
     var overlay = document.getElementById("equsto-wa-overlay");
     if (!overlay) return;
     overlay.classList.remove("equsto-wa-overlay--open");
@@ -681,6 +777,7 @@
         syncWaModalNearFab();
         syncWaModalAuthBtn();
         syncWaComposeSendMode();
+        startWaChatPoll();
         if (msgEl) {
           try {
             msgEl.focus();
@@ -835,13 +932,7 @@
             window.equstoTrackConversion("lead", { kaynak: payload.kaynak, sayfa: payload.sayfa });
           }
         } catch (_) {}
-        appendChatMessage(
-          "team",
-          __waT(
-            "wa.received",
-            "Mesajınız alındı. Equsto ekibi en kısa sürede size dönüş yapacak."
-          )
-        );
+        syncWaChatFromServer(true);
         renderWaHistoryList();
         if (st) {
           st.textContent = "";

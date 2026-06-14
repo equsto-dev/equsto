@@ -1,4 +1,5 @@
 import type { Musteri, Siparis } from "@/lib/prisma";
+import { appendWaChatMessage } from "@/lib/wa-chat";
 import { normalizeWaRecipient } from "@/lib/whatsapp/config";
 import { buildWaMeUrl } from "@/lib/whatsapp/link";
 import {
@@ -240,7 +241,14 @@ export async function notifyCustomerLeadAck(m: Musteri): Promise<void> {
   const wa = await sendWhatsAppText(to, text);
   if (!wa.ok) {
     console.error("[notify] customer wa ack", wa.error);
+    return;
   }
+  void appendWaChatMessage({
+    phone: to,
+    role: "team",
+    body: text,
+    waMessageId: wa.messageId,
+  }).catch((e) => console.error("[wa-chat] customer ack", e));
 }
 
 function siparisBody(s: Siparis): string {
