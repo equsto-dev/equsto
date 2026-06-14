@@ -92,6 +92,75 @@ function reconcileFuelKwFromContext(
   return reconcileFuelKw(kw, fuelContextFromText(blob));
 }
 
+function parseSumKwExpression(raw: string): number | null {
+  const parts = String(raw ?? "")
+    .split("+")
+    .map((p) => Number(p.replace(",", ".").trim()))
+    .filter((n) => Number.isFinite(n) && n > 0);
+  if (!parts.length) return null;
+  const sum = parts.reduce((a, b) => a + b, 0);
+  return sum > 0 && sum <= 200 ? Math.round(sum * 1000) / 1000 : null;
+}
+
+function parseMaxGucKwFromText(text: string): number | null {
+  const patterns = [
+    /maks\.?\s*g[uü][çc]\s*t[uü]ketimi\s*(?:\(kw\))?\s*[:=]\s*([\d.,]+(?:\s*\+\s*[\d.,]+)?)/i,
+    /(?:^|\n)\s*g[uü][çc]\s*t[uü]ketimi\s*[:=]\s*([\d.,]+(?:\s*\+\s*[\d.,]+)?)\s*(?:kW|kw)?/im,
+    /max\.?\s*elektrik\s*g[uü]c[uü]\s*[:=]\s*([\d.,]+(?:\s*\+\s*[\d.,]+)?)\s*kw/i,
+    /maks\.?\s*elektrik\s*g[uü]c[uü]\s*[:=]\s*([\d.,]+(?:\s*\+\s*[\d.,]+)?)\s*kw/i,
+  ];
+  for (const re of patterns) {
+    const m = text.match(re);
+    if (!m) continue;
+    if (m[1].includes("+")) {
+      const sum = parseSumKwExpression(m[1]);
+      if (sum != null) return sum;
+    }
+    const n = Number(m[1].replace(",", "."));
+    if (Number.isFinite(n) && n > 0 && n <= 200) return n;
+  }
+  return null;
+}
+
+function parseWattsToKw(text: string): number | null {
+  const patterns = [
+    /([\d.,]+)\s*watts?\s*(?:trifaze|triphase|monofaze|mono|sanayi|motor)?/i,
+    /([\d.,]+)\s*W\s*(?:trifaze|triphase|monofaze|mono|sanayi|motor)/i,
+    /motor[^.\n]{0,48}([\d.,]+)\s*(?:watts?|W)\b/i,
+    /([\d.,]+)\s*W\b/i,
+    /([\d.,]+)w\b/i,
+  ];
+  for (const re of patterns) {
+    const m = text.match(re);
+    if (!m) continue;
+    const w = Number(m[1].replace(",", "."));
+    if (Number.isFinite(w) && w >= 50 && w <= 200_000) {
+      return Math.round((w / 1000) * 1000) / 1000;
+    }
+  }
+  return null;
+}
+
+function parseHorsepowerToKw(text: string): number | null {
+  const m = text.match(/([\d.,]+)\s*HP\b/i);
+  if (!m) return null;
+  const hp = Number(m[1].replace(",", "."));
+  if (!Number.isFinite(hp) || hp <= 0 || hp > 50) return null;
+  return Math.round(hp * 0.746 * 1000) / 1000;
+}
+
+function parseElektrikGucuLineValue(raw: string): number | null {
+  const s = String(raw ?? "").trim();
+  if (!s) return null;
+  const wMatch = s.match(/([\d.,]+)\s*(?:watts?|W)\b/i);
+  if (wMatch) return parseWattsToKw(wMatch[0]);
+  const n = Number(s.replace(/[^\d.,]/g, "").replace(",", "."));
+  if (!Number.isFinite(n) || n <= 0) return null;
+  if (/kW/i.test(s) || n <= 50) return n <= 200 ? n : null;
+  if (n >= 50 && n <= 200_000) return Math.round((n / 1000) * 1000) / 1000;
+  return null;
+}
+
 /** Specs / açıklama metninden elk. ve gaz kW */
 export function parseKwFromText(text: string): ResolvedKw {
   const t = String(text ?? "").replace(/\r/g, "");
@@ -111,6 +180,31 @@ export function parseKwFromText(text: string): ResolvedKw {
   );
   if (elkExplicit) elk = parseKwNumber(elkExplicit[1]);
 
+  if (!elk && fuel !== "gaz") {
+    const maxGuc = parseMaxGucKwFromText(t);
+    if (maxGuc != null) elk = maxGuc;
+  }
+
+  if (!elk && fuel !== "gaz") {
+    const fromW = parseWattsToKw(t);
+    if (fromW != null) elk = fromW;
+  }
+
+  if (fuel !== "gaz") {
+    const fromHp = parseHorsepowerToKw(t);
+    if (fromHp != null) {
+      elk = elk != null ? Math.max(elk, fromHp) : fromHp;
+    }
+  }
+
+  if (!elk && fuel !== "gaz") {
+    const elkGucu = t.match(/elektrik\s*g[uü]c[uü]\s*[:=]\s*([\d.,]+(?:[.,]\d+)?(?:\s*W|\s*kW)?)/i);
+    if (elkGucu) {
+      const parsed = parseElektrikGucuLineValue(elkGucu[1]);
+      if (parsed != null) elk = parsed;
+    }
+  }
+
   if (!elk && !gaz && fuel !== "gaz") {
     const genericGuc = t.match(
       /(?:^|\n)\s*(?:guc|güc)\s*[:=]?\s*([\d.,]+)\s*kW/im,
@@ -129,6 +223,14 @@ export function parseKwFromText(text: string): ResolvedKw {
 
   if (!elk && fuel !== "gaz") {
     for (const line of t.split("\n")) {
+      const elkLine = line.match(/^elektrik\s*g[uü]c[uü]\s*:\s*(.+)$/i);
+      if (elkLine) {
+        const parsed = parseElektrikGucuLineValue(elkLine[1]);
+        if (parsed != null) {
+          elk = parsed;
+          break;
+        }
+      }
       const pimakKw = parsePimakGucFromTeknikLine(line);
       if (pimakKw != null) {
         elk = pimakKw;
@@ -320,8 +422,10 @@ export function resolveTeklifKw(opts: {
     });
   }
 
-  const fromAciklama = parseKwFromText(
-    decodeHtmlEntities(opts.urun?.teklifAciklama ?? ""),
+  const fromAciklama = mergeResolvedKw(
+    parseKwFromText(decodeHtmlEntities(opts.urun?.teklifAciklama ?? "")),
+    parseKwFromText(decodeHtmlEntities(opts.urun?.ad ?? "")),
+    parseKwFromText(decodeHtmlEntities(opts.isim ?? "")),
   );
   if (fromAciklama.elektrikGucuKw != null || fromAciklama.gazGucuKw != null) {
     return reconcileFuelKwFromContext(fromAciklama, {

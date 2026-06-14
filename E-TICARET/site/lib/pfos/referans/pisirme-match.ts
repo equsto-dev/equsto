@@ -60,7 +60,23 @@ export function oztiPisirmeKatalogUyumsuz(
   if (/elektrik/.test(s) && /gazli|gazlı|\bgaz\b/.test(k) && !/elektrik/.test(k)) {
     return true;
   }
-  if (/cift|çift|iki\s*hazne/.test(s) && /7856\.n1\.80703\.(11|13)/.test(k)) {
+  if (/cift|çift|iki\s*hazne/.test(s) && /set\s*ustu|setüstü/.test(s) && /7856\.(gn|ef)/i.test(k)) {
+    return true;
+  }
+  if (
+    /cift|çift|iki\s*hazne/.test(s) &&
+    /set\s*ustu|setüstü/.test(s) &&
+    /7856\.n1\.80703\.13/.test(k) &&
+    /elektrik|elk/.test(s)
+  ) {
+    return true;
+  }
+  if (
+    /cift|çift|iki\s*hazne/.test(s) &&
+    /set\s*ustu|setüstü/.test(s) &&
+    /7856\.n1\.80703\.11/.test(k) &&
+    /gazli|gazlı|\bgaz\b/.test(s)
+  ) {
     return true;
   }
   if (/tost\s*mak/.test(s) && /^78\d{2}\./.test(String(katalogSku ?? ""))) {
@@ -260,14 +276,15 @@ function scoreOztiPisirmeRow(
 
   const refN = norm(referansIsim);
   const ad = norm(row.ad);
-  if (family === "fritoz" && /cift|çift|2\s*x|iki\s*sepet|iki\s*hazne/.test(refN) && /870|2\s*x/.test(ad)) {
-    score += 60;
-  }
-  if (family === "fritoz" && /cift|çift|iki\s*hazne/.test(refN) && /7856\.n1\.80703\.(11|13)/.test(sku)) {
-    score -= 6000;
-  }
-  if (family === "fritoz" && /7856\.gn/i.test(sku) && preferred.some((p) => /7856\.gn/i.test(p))) {
-    score += 200;
+  const refBlob = norm(`${referansIsim} ${notlar ?? ""}`);
+  if (family === "fritoz" && /cift|çift|2\s*x|iki\s*sepet|iki\s*hazne/.test(refBlob)) {
+    if (/set\s*ustu|setüstü/.test(refBlob)) {
+      if (/7856\.n1\.80703\.11/i.test(sku) && /elektrik|elk/.test(refBlob)) score += 300;
+      if (/7856\.n1\.80703\.13/i.test(sku) && /gazli|gazlı|\bgaz\b/.test(refBlob)) score += 300;
+      if (/7856\.(gn|ef)/i.test(sku)) score -= 8000;
+    } else if (/870|2\s*x/.test(ad)) {
+      score += 60;
+    }
   }
   if (family === "patates_dinlendirme" && /patates|dinlendir|apd/.test(ad)) score += 80;
   if (family === "izgara" && /elektrik|e aei|e agi/.test(ad) && /elektrik|elk/.test(refN)) {

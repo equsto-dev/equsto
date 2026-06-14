@@ -3,6 +3,8 @@ import type { CatalogSearchHit } from "@/lib/catalog-search-fallback";
 import type { ParsedItem, MatchedItem, MeiliKalemEslestirme, MeilisearchHitDto } from "./types";
 import { searchCatalogForProforma } from "./meili-search";
 import { hitToEslesmis } from "./hit-to-eslesmis";
+import { enrichEslesmisUrunKw } from "../core/enrich-eslesmis-kw";
+import type { EslesmisUrun } from "../schemas/pfos.schema";
 import { buildMeiliSearchQuery, cleanProformaTanim } from "./sanitize-tanim";
 import {
   dishwasherFeatureScore,
@@ -255,6 +257,7 @@ function pickBestHit(
 export type ItemMatchResult = {
   matched: MatchedItem;
   bestHit: CatalogSearchHit | null;
+  urun?: EslesmisUrun | null;
 };
 
 function matchFromEqustoHit(
@@ -281,16 +284,7 @@ function matchFromEqustoHit(
 
 function refMatchToResult(
   item: ParsedItem,
-  refMatch: {
-    id: string;
-    ad: string;
-    sku: string | null;
-    marka: string;
-    model?: string | null;
-    gorselUrl?: string | null;
-    fiyatEur?: number | null;
-    fiyat: number;
-  },
+  refMatch: EslesmisUrun,
   guven = 0.94,
 ): ItemMatchResult {
   const bestHit = {
@@ -316,6 +310,7 @@ function refMatchToResult(
   const birim = dto.satis_fiyati_eur > 0 ? dto.satis_fiyati_eur : null;
   return {
     bestHit,
+    urun: refMatch,
     matched: {
       ...item,
       tanim: cleanProformaTanim(item.tanim) || item.tanim,
@@ -639,8 +634,14 @@ export async function eslestirProformaKalemler(
   const out: MeiliKalemEslestirme[] = [];
   for (let i = 0; i < kalemler.length; i++) {
     const kalem = kalemler[i];
-    const { matched, bestHit } = results[i];
-    const urun = bestHit ? await hitToEslesmis(bestHit) : null;
+    const { matched, bestHit, urun: refUrun } = results[i];
+    let urun =
+      refUrun ??
+      (bestHit ? await hitToEslesmis(bestHit) : null);
+    urun = await enrichEslesmisUrunKw(urun, {
+      isim: kalem.tanim,
+      urunTipi: null,
+    });
     out.push({ kalem, matched, urun });
   }
   return out;

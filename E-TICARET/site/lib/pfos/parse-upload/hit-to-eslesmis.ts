@@ -6,6 +6,7 @@ import { katalogRowToEslesmis } from "@/lib/pfos/core/katalog-row-eslesmis";
 import { equstoSatisEurFromRow } from "@/lib/pfos/core/shop-catalog-match";
 import type { EslesmisUrun } from "@/lib/pfos/schemas/pfos.schema";
 import { getTcmbEurForPricing } from "@/lib/tcmb-kur";
+import { enrichEslesmisUrunKw } from "@/lib/pfos/core/enrich-eslesmis-kw";
 import { enrichEslesmisGorsel } from "@/lib/pfos/core/katalog-gorsel";
 
 function gorselFromHit(hit: CatalogSearchHit): string | null {
@@ -99,5 +100,10 @@ export async function hitToEslesmis(
 ): Promise<EslesmisUrun | null> {
   const urun = await hitToEslesmisRaw(hit);
   if (!urun) return null;
-  return enrichEslesmisGorsel(urun);
+  const withKw = await enrichEslesmisUrunKw(urun, {
+    isim: hit.name,
+    urunTipi: null,
+  });
+  if (!withKw) return null;
+  return enrichEslesmisGorsel(withKw);
 }
