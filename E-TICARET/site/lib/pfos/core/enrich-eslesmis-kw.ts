@@ -15,6 +15,8 @@ function normSku(s: string | null | undefined): string {
 
 function kwFromAdminRow(row: AdminUrunRow) {
   return resolveKwFromSources({
+    sku: row.sku,
+    urunAd: row.ad,
     el_guc: row.el_guc,
     gaz_guc: row.gaz_guc,
     aciklama: row.aciklama,

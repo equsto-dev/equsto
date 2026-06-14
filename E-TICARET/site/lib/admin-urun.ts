@@ -136,6 +136,7 @@ export function ecomRowToAdminUrun(u: EcomRow, index: number): AdminUrunRow {
   const alisTl = Number(u?.alis_fiyati_tl) > 0 ? Number(u.alis_fiyati_tl) : null;
   const satisTl = Number(u?.satis_fiyati_tl) > 0 ? Number(u.satis_fiyati_tl) : null;
   const resolvedKw = resolveKwFromSources({
+    urunAd: name,
     el_guc: u?.el_guc != null ? Number(u.el_guc) : null,
     gaz_guc: u?.gaz_guc != null ? Number(u.gaz_guc) : null,
     aciklama: u?.aciklama ? String(u.aciklama) : u?.specs ? String(u.specs) : null,

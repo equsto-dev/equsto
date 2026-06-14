@@ -27,6 +27,11 @@ function oztiOcakBase(olcu: string): string {
   return d >= 85 ? "7865.N1.80903" : "7865.N1.80703";
 }
 
+function oztiBainMarieBase(olcu: string): string {
+  const w = olcuParts(olcu)[0] ?? 40;
+  return w >= 75 ? "7854.N1.80703" : "7854.N1.40703";
+}
+
 export function oztiOcakFuelFromRow(row: {
   sku?: string | null;
   ad?: string | null;
@@ -136,6 +141,15 @@ export function preferredOztiPisirmeSkus(
     if (is900) return ["7858.N1.80908.23", "7858.N1.80908.11"];
     if (w <= 45) return ["7858.N1.40703.11", "7858.N1.80708.23"];
     return ["7858.N1.80708.23"];
+  }
+  if (family === "bainmarie") {
+    const blob = norm(`${referansIsim} ${notlar ?? ""}`);
+    const wantsGaz = /gazli|gazlı|\bgaz\b/.test(blob);
+    const wantsElk = /elektrik|elk|elektr/.test(blob);
+    const base = oztiBainMarieBase(olcu);
+    if (wantsGaz && !wantsElk) return [`${base}.13`];
+    if (wantsElk && !wantsGaz) return [`${base}.11`];
+    return [`${base}.11`, `${base}.13`];
   }
   if (family === "patates_dinlendirme") {
     return [];

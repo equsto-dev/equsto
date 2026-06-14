@@ -1,6 +1,7 @@
 /** Katalog satırı / specs metninden elektrik ve gaz kW çözümleme */
 
 import { decodeHtmlEntities } from "@/lib/text/decode-html-entities";
+import { resolveCaglayanTeshirKw } from "@/lib/catalog/caglayan-kw";
 import {
   parsePimakGucFromTeknikLine,
   parsePimakGucKwValue,
@@ -61,6 +62,10 @@ function assignGenericGucKw(
   return { elektrikGucuKw: kw, gazGucuKw: null };
 }
 
+function kwValuesEqual(a: number, b: number): boolean {
+  return Math.abs(a - b) < 0.01;
+}
+
 /** Gazlı / elektrikli ayrımı — yanlış sütuna yazılmış kW düzelt */
 export function reconcileFuelKw(
   kw: ResolvedKw,
@@ -69,10 +74,11 @@ export function reconcileFuelKw(
   let { elektrikGucuKw: elk, gazGucuKw: gaz } = kw;
   if (fuel === "gaz") {
     if (!gaz && elk) gaz = elk;
-    if (gaz && elk) elk = null;
+    // Gazlı kombi fırın: fan/kontrol (0.35 kW) + brülör (8+ kW) birlikte kalır
+    if (gaz && elk && kwValuesEqual(gaz, elk)) elk = null;
   } else if (fuel === "elk") {
     if (!elk && gaz) elk = gaz;
-    if (elk && gaz) gaz = null;
+    if (elk && gaz && kwValuesEqual(elk, gaz)) gaz = null;
   }
   return { elektrikGucuKw: elk, gazGucuKw: gaz };
 }
@@ -176,7 +182,7 @@ export function parseKwFromText(text: string): ResolvedKw {
   if (gazExplicit) gaz = parseKwNumber(gazExplicit[1]);
 
   const elkExplicit = t.match(
-    /(?:elektrik\s*gucu|elektrik\s*gücü|elektrik\s*baglantisi|elektrik\s*bağlantısı|elk\.?\s*kw)\s*[:=]?\s*([\d.,]+)\s*kW/i,
+    /(?:elektrik\s*gucu|elektrik\s*gücü|elektrik\s*baglantisi|elektrik\s*bağlantısı|elk\.?\s*kw|yardimci|yardımcı)\s*(?:\s*max)?\s*[:=]?\s*([\d.,]+)\s*kW/i,
   );
   if (elkExplicit) elk = parseKwNumber(elkExplicit[1]);
 
@@ -301,6 +307,8 @@ export function mergeResolvedKw(...parts: ResolvedKw[]): ResolvedKw {
 type KwTextSources = {
   el_guc?: number | null;
   gaz_guc?: number | null;
+  sku?: string | null;
+  urunAd?: string | null;
   aciklama?: string | null;
   detay?: string | null;
   description?: string | null;
@@ -310,6 +318,44 @@ type KwTextSources = {
   teknik_ozellikler?: string[];
   olculer?: OlcuGuc | null;
 };
+
+function kwSourceBlob(src: KwTextSources): string {
+  return [
+    src.urunAd,
+    src.aciklama,
+    src.detay,
+    src.description,
+    src.ozti_web_description,
+    src.inoksan_shop_description,
+    src.pimak_web_description,
+    ...(src.teknik_ozellikler ?? []),
+  ]
+    .filter(Boolean)
+    .join("\n");
+}
+
+function fuelContextFromSources(src: KwTextSources): FuelContext {
+  return fuelContextFromText(kwSourceBlob(src));
+}
+
+/** Öztiryakiler ocak/ızgarada brülör başı güç: 4x6 kW, 2x6kW+2x7,5kW → toplam. */
+export function parseBrulorToplamKwFromText(text: string): number | null {
+  let best: number | null = null;
+  for (const line of String(text ?? "").split("\n")) {
+    const terms = [...line.matchAll(/(\d+)\s*[x×]\s*([\d.,]+)\s*k?\s*w/gi)];
+    if (!terms.length) continue;
+    let sum = 0;
+    for (const m of terms) {
+      const count = Number(m[1]);
+      const kw = Number(String(m[2]).replace(",", "."));
+      if (!Number.isFinite(count) || !Number.isFinite(kw)) continue;
+      if (count <= 0 || count > 12 || kw <= 0 || kw > 50) continue;
+      sum += count * kw;
+    }
+    if (sum > 0 && sum <= 200 && (best == null || sum > best)) best = sum;
+  }
+  return best == null ? null : Math.round(best * 100) / 100;
+}
 
 /** ekipmanlar.json / AdminUrunRow alanlarından kW */
 export function resolveKwFromSources(src: KwTextSources): ResolvedKw {
@@ -335,14 +381,52 @@ export function resolveKwFromSources(src: KwTextSources): ResolvedKw {
     fromText = mergeResolvedKw(fromText, p);
   }
 
-  return mergeResolvedKw(fromFields, fromText, parseKwFromOlcu(src.olculer));
+  const fuel = fuelContextFromSources(src);
+  const olcuRaw = parseKwFromOlcu(src.olculer);
+  const fromOlcu: ResolvedKw =
+    fuel === "gaz"
+      ? { elektrikGucuKw: null, gazGucuKw: olcuRaw.elektrikGucuKw ?? olcuRaw.gazGucuKw }
+      : olcuRaw;
+  const merged = mergeResolvedKw(fromFields, fromText, fromOlcu);
+  const brulorToplam = parseBrulorToplamKwFromText(
+    [src.urunAd, src.aciklama, src.detay].filter(Boolean).join("\n"),
+  );
+  if (
+    brulorToplam != null &&
+    (fuel === "gaz" || fuel === "mixed") &&
+    (!merged.gazGucuKw || merged.gazGucuKw < brulorToplam)
+  ) {
+    merged.gazGucuKw = brulorToplam;
+  }
+  if (
+    fuel === "gaz" &&
+    brulorToplam != null &&
+    merged.elektrikGucuKw != null &&
+    merged.elektrikGucuKw <= brulorToplam
+  ) {
+    merged.elektrikGucuKw = null;
+  }
+  const reconciled = reconcileFuelKw(merged, fuel);
+  if (reconciled.elektrikGucuKw == null) {
+    const caglayan = resolveCaglayanTeshirKw({
+      sku: src.sku,
+      urunAd: src.urunAd,
+      aciklama: src.aciklama,
+      detay: src.detay,
+      olculer: src.olculer,
+    });
+    if (caglayan.elektrikGucuKw != null) {
+      reconciled.elektrikGucuKw = caglayan.elektrikGucuKw;
+    }
+  }
+  return reconciled;
 }
 
 const PASIF_RE =
   /istif\s*raf|duvar\s*raf|servis\s*raf|tava\s*raf|basket\s*raf|\bcop\s*arab|tepsi\s*tasi|firin\s*standi|yer\s*izgar|kokteyl\s*istasyon|notr\s*ara\s*tezgah|nötr\s*ara\s*tezgah|calisma\s*tezgah|çalisma\s*tezgah|evyeli\s*calisma|tek\s*evyeli|çift\s*evyeli|cift\s*evyeli|mermer\s*tablali|polietilen\s*tablali|bym\s*giris|bym\s*cikis|bulasik\s*siyirma|siyirma\s*tezgah|montaj|nakliye|davlumbaz\s*stand/i;
 
 const POWERED_RE =
-  /buzdolab|donduruc|soguk\s*oda|derin\s*dondurucu|panel\s*tip|(^|[^a-z])firin|rational|unox|pizza\s*firin|\bocak\b|izgar|fritoz|makarna|salamander|tost\s*mak|mikser|hamur|dograma|bula[sş]ik\s*(?:mak|yikama)|kahve|espresso|degirmen|değirmen|blender|buz\s*makin|sikma|sikac|induksiyon|make.?up|sicak\s*dolap|sushi|rice\s*cooker|spiral|vakum|konveksiyon|davlumbaz|ice\s*maker|sogutma\s*tezgah|tezgah\s*tip\s*buz|cihazalti\s*buz|depo\s*tip\s*buz|çay\s*otomat|cay\s*otomat|on\s*yikama|yikama\s*dusu|sebze\s*yikama|vakum\s*mak|kombi\s*firin|kombine\s*firin|elektrikli\s*firin|gazli\s*ocak|gazli\s*izgara|gazli\s*fritoz/i;
+  /buzdolab|donduruc|soguk\s*oda|derin\s*dondurucu|panel\s*tip|(^|[^a-z])firin|rational|unox|pizza\s*firin|\bocak\b|izgar|fritoz|makarna|salamander|tost\s*mak|mikser|hamur|dograma|bula[sş]ik\s*(?:mak|yikama)|kahve|espresso|degirmen|değirmen|blender|buz\s*makin|sikma|sikac|induksiyon|make.?up|sicak\s*dolap|sushi|rice\s*cooker|spiral|vakum|konveksiyon|davlumbaz|ice\s*maker|sogutma\s*tezgah|tezgah\s*tip\s*buz|cihazalti\s*buz|depo\s*tip\s*buz|çay\s*otomat|cay\s*otomat|on\s*yikama|yikama\s*dusu|sebze\s*yikama|vakum\s*mak|kombi\s*firin|kombine\s*firin|elektrikli\s*firin|gazli\s*ocak|gazli\s*izgara|gazli\s*fritoz|teshir|teşhir|reyon|vitrin|display/i;
 
 /** Raf, tezgah, araç vb. — kW yazılmaz */
 export function isPasifPfosEkipman(opts: {

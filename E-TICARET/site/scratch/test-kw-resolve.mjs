@@ -2,6 +2,7 @@ import { describe, it } from "node:test";
 import assert from "node:assert/strict";
 import {
   isPasifPfosEkipman,
+  parseBrulorToplamKwFromText,
   parseKwFromText,
   resolveKwFromSources,
   resolveTeklifKw,
@@ -123,5 +124,60 @@ describe("kw-resolve", () => {
     });
     assert.equal(r.elektrikGucuKw, null);
     assert.equal(r.gazGucuKw, 14);
+  });
+
+  it("gazli konveksiyon firin — elk fan + gaz brulor ayri", () => {
+    const r = resolveKwFromSources({
+      urunAd: "Crosswise Konveksiyon Fırın Gazlı Konveksiyon Fırın, 6 GN1/1",
+      aciklama: "Konveksiyon Fırın 6 GN 1/1, gazlı",
+      teknik_ozellikler: [
+        "Elektrik gücü max: 0.35 kW",
+        "Gaz Gücü: 8.35 kW",
+      ],
+    });
+    assert.equal(r.elektrikGucuKw, 0.35);
+    assert.equal(r.gazGucuKw, 8.35);
+  });
+
+  it("parses brulor toplam from 4x6 kW", () => {
+    assert.equal(parseBrulorToplamKwFromText("DÖRTLÜ OCAK (L)-4x6 kW"), 24);
+    assert.equal(parseBrulorToplamKwFromText("2x6kW+2x7,5kW"), 27);
+    assert.equal(parseBrulorToplamKwFromText("4x7,5kW"), 30);
+  });
+
+  it("ozti dortlu ocak — katalog 6 kW brulor basi, toplam 24 kW", () => {
+    const r = resolveKwFromSources({
+      urunAd: "700 SERİ SET ÜSTÜ DÖRTLÜ OCAK GAZLI 80*70*30 (L)-4x6 kW",
+      aciklama: "700 SERİ SET ÜSTÜ DÖRTLÜ OCAK GAZLI",
+      teknik_ozellikler: ["Güç: 6 kW"],
+      olculer: { guc_kw: "6" },
+    });
+    assert.equal(r.elektrikGucuKw, null);
+    assert.equal(r.gazGucuKw, 24);
+  });
+
+  it("resolveTeklifKw keeps mixed gas oven kW columns", () => {
+    const r = resolveTeklifKw({
+      isim: "KONVEKSİYONLU FIRIN, GAZLI",
+      urun: {
+        sku: "260813",
+        ad: "Crosswise Konveksiyon Fırın Gazlı Konveksiyon Fırın, 6 GN1/1",
+        elektrikGucuKw: 0.35,
+        gazGucuKw: 8.35,
+      },
+    });
+    assert.equal(r.elektrikGucuKw, 0.35);
+    assert.equal(r.gazGucuKw, 8.35);
+  });
+
+  it("estimates Çağlayan teşhir reyonu kW from length when catalog has none", () => {
+    const r = resolveKwFromSources({
+      sku: "EQ-AÇELYA-EQ26",
+      urunAd: "EQ-AÇELYA EQ26 · ML (3M1) — 2812×1050×1200 mm",
+      aciklama: "YÜKLEME ALANI / LOADING AREA (m²)",
+      olculer: { genislik_mm: 2812, derinlik_mm: 1050, yukseklik_mm: 1200 },
+    });
+    assert.equal(r.elektrikGucuKw, 0.37);
+    assert.equal(r.gazGucuKw, null);
   });
 });
