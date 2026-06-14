@@ -140,15 +140,17 @@ export function stripEmbeddedSupplierSku(raw: string): string {
 
 /** Proforma PDF satırından arama için temiz tanım */
 export function cleanProformaTanim(raw: string): string {
-  const s = stripProformaInlineJunk(expandProformaAbbreviations(String(raw ?? "").trim()));
+  const cleanObj = String(raw ?? "").replace(/\[object\s+object\]/gi, " ");
+  const s = stripProformaInlineJunk(expandProformaAbbreviations(cleanObj.trim()));
   return s ? s.toUpperCase() : "";
 }
 
 /** Teklif / tablo görünümü — orijinal büyük-küçük harf korunur */
 export function formatPfosDisplayTanim(raw: string | null | undefined): string {
+  const cleanObj = String(raw ?? "").replace(/\[object\s+object\]/gi, " ");
   const cleaned = stripEmbeddedSupplierSku(
     stripProformaInlineJunk(
-      expandProformaAbbreviations(String(raw ?? "").trim()),
+      expandProformaAbbreviations(cleanObj.trim()),
     ),
   );
   return repairPfosDisplayText(cleaned);

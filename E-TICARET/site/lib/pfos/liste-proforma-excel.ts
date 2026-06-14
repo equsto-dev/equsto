@@ -179,7 +179,7 @@ type ColumnarHeader = {
 };
 
 function findColumnarHeader(cells: string[]): ColumnarHeader | null {
-  const lower = cells.map((c) => c.toLowerCase());
+  const lower = cells.map(normHeaderCell);
   const pozIdx = lower.findIndex(
     (c) =>
       c === "poz" ||
@@ -191,11 +191,14 @@ function findColumnarHeader(cells: string[]): ColumnarHeader | null {
   );
   const tanimIdx = lower.findIndex(
     (c) =>
-      c.includes("tanım") ||
       c.includes("tanim") ||
-      c === "açıklama" ||
+      c === "aciklama" ||
       c.includes("malzeme cinsi") ||
-      c.includes("malzeme"),
+      c.includes("malzeme") ||
+      c.includes("ekipman") ||
+      c.includes("cinsi") ||
+      c.includes("urun") ||
+      c.includes("adi"),
   );
   if (pozIdx < 0 || tanimIdx < 0) return null;
   return {
@@ -204,8 +207,8 @@ function findColumnarHeader(cells: string[]): ColumnarHeader | null {
     adet: lower.findIndex((c) => c === "adet"),
     stok: lower.findIndex((c) => c.includes("stok") || c.includes("kaynak")),
     boy: lower.findIndex((c) => c === "boy" || c === "derinlik"),
-    en: lower.findIndex((c) => c === "en" || c === "genişlik" || c === "genislik"),
-    yuk: lower.findIndex((c) => c.includes("yük") || c.includes("yuk")),
+    en: lower.findIndex((c) => c === "en" || c === "genislik"),
+    yuk: lower.findIndex((c) => c.includes("yuk")),
   };
 }
 
