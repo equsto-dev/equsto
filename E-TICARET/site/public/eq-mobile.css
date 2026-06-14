@@ -85,14 +85,14 @@ nav.topnav {
   .drawer-overlay-close,
   .eq-mx-hero__nav,
   .eq-mx-pop-cats__nav {
-    min-height: 44px;
+    min-height: 48px;
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
   }
 
   .products .prod-card-wrap .eq-cart-add {
-    min-width: 44px;
-    min-height: 44px;
+    min-width: 48px;
+    min-height: 48px;
   }
 }
 
@@ -136,6 +136,7 @@ nav.topnav {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
+    scroll-snap-type: x mandatory;
   }
 
   .eq-decor-catstrip::-webkit-scrollbar {
@@ -154,6 +155,7 @@ nav.topnav {
   .eq-decor-catstrip__link {
     flex: 0 0 auto;
     white-space: nowrap;
+    scroll-snap-align: start;
   }
 
   .eq-decor-promos__inner {
@@ -185,6 +187,10 @@ nav.topnav {
   .eq-rail {
     -webkit-overflow-scrolling: touch;
     scroll-padding-inline: 12px;
+    scroll-snap-type: x mandatory;
+  }
+  .eq-rail > * {
+    scroll-snap-align: start;
   }
 }
 
@@ -231,6 +237,10 @@ nav.topnav {
 
   body.eq-shop .eq-product-hero-img {
     max-height: min(52vh, 420px);
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    width: 100%;
+    background: #f9f9f9;
   }
 
   .eq-epdp-hero .eq-product-buy-col,
@@ -321,6 +331,10 @@ nav.topnav {
     flex-wrap: nowrap;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+  }
+  body.bd-page.besos .besos-hdr-nav > * {
+    scroll-snap-align: start;
   }
 
   body.bd-page.besos .besos-hdr-nav::-webkit-scrollbar {
@@ -389,5 +403,186 @@ nav.topnav {
 
   body.admin-app .ant-table-wrapper {
     overflow-x: auto;
+  }
+}
+
+/* ── Mobil Optimizasyon: Yapışkan / Slimming Header & Sticky Bottom CTA ── */
+@keyframes slimMobileHeader {
+  to {
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+    row-gap: 0 !important;
+  }
+}
+
+@keyframes slimLogo {
+  to {
+    transform: scale(0.8);
+    margin-top: -4px !important;
+    margin-bottom: -4px !important;
+  }
+}
+
+@keyframes slimSearch {
+  to {
+    max-height: 0px !important;
+    opacity: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+}
+
+@supports (animation-timeline: scroll()) {
+  @media (max-width: 768px) {
+    body.eq-shop:not(.admin-app):not(.bd-page) .eq-shop-chrome > header.hdr {
+      position: sticky !important;
+      top: 0 !important;
+      z-index: 500 !important;
+      animation: slimMobileHeader linear both;
+      animation-timeline: scroll();
+      animation-range: 0px 100px;
+    }
+
+    body.eq-shop:not(.admin-app):not(.bd-page) header.hdr > a.logo {
+      transform-origin: left center;
+      animation: slimLogo linear both;
+      animation-timeline: scroll();
+      animation-range: 0px 100px;
+    }
+
+    body.eq-shop:not(.admin-app):not(.bd-page) header.hdr > .pg-inner {
+      max-height: 100px;
+      animation: slimSearch linear both;
+      animation-timeline: scroll();
+      animation-range: 0px 100px;
+    }
+  }
+}
+
+/* Fallback: If no scroll timeline is supported, but sticky header is preferred on mobile */
+@supports not (animation-timeline: scroll()) {
+  @media (max-width: 768px) {
+    body.eq-shop:not(.admin-app):not(.bd-page) .eq-shop-chrome > header.hdr {
+      position: sticky !important;
+      top: 0 !important;
+      z-index: 500 !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    }
+  }
+}
+
+/* Sticky Bottom Buybox / CTA on PDP */
+@media (max-width: 768px) {
+  body.eq-pdp-page #eq-bottom-tabbar {
+    display: none !important;
+  }
+
+  body.eq-pdp-page {
+    padding-bottom: calc(60px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+
+  body.eq-pdp-page #equsto-contact-fab,
+  body.eq-pdp-page .equsto-contact-fab {
+    bottom: calc(72px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+
+  body.eq-pdp-page .eq-cmf-buybox {
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 1000 !important;
+    background: #ffffff !important;
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.1) !important;
+    border-top: 1px solid #e5e7eb !important;
+    padding: 10px 16px !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+    border-radius: 0 !important;
+  }
+
+  body.eq-pdp-page .eq-cmf-buybox .eq-cmf-topbar,
+  body.eq-pdp-page .eq-cmf-buybox .eq-cmf-ship-banner,
+  body.eq-pdp-page .eq-cmf-buybox .eq-cmf-quote-note,
+  body.eq-pdp-page .eq-cmf-buybox .eq-cmf-actions--secondary,
+  body.eq-pdp-page .eq-cmf-buybox .eq-cmf-pay-panel {
+    display: none !important;
+  }
+
+  body.eq-pdp-page .eq-cmf-buybox .eq-cmf-price {
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 2px !important;
+    flex-shrink: 0 !important;
+  }
+
+  body.eq-pdp-page .eq-cmf-buybox .eq-cmf-price__amount {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+  }
+
+  body.eq-pdp-page .eq-cmf-buybox .eq-cmf-price__vat-tag {
+    font-size: 10px !important;
+  }
+
+  body.eq-pdp-page .eq-cmf-buybox .eq-cmf-price--quote {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+  }
+
+  body.eq-pdp-page .eq-cmf-buybox .eq-cmf-purchase {
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    flex-shrink: 0 !important;
+  }
+
+  body.eq-pdp-page .eq-cmf-buybox .eq-cmf-qty {
+    height: 38px !important;
+    border-radius: 4px !important;
+    border: 1px solid #d1d5db !important;
+  }
+
+  body.eq-pdp-page .eq-cmf-buybox .eq-cmf-qty__btn {
+    width: 32px !important;
+    font-size: 16px !important;
+  }
+
+  body.eq-pdp-page .eq-cmf-buybox .eq-cmf-qty__val {
+    min-width: 32px !important;
+    font-size: 13px !important;
+  }
+
+  body.eq-pdp-page .eq-cmf-buybox .eq-cmf-actions--primary {
+    margin: 0 !important;
+    display: flex !important;
+    gap: 8px !important;
+    flex: 1 !important;
+    justify-content: flex-end !important;
+  }
+
+  body.eq-pdp-page .eq-cmf-buybox .eq-cmf-btn--cart {
+    width: 100% !important;
+    min-height: 38px !important;
+    height: 38px !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    padding: 0 16px !important;
+    border-radius: 4px !important;
+    flex: 1 !important;
+    max-width: 160px !important;
+  }
+
+  body.eq-pdp-page .eq-cmf-buybox .eq-cmf-btn--pay {
+    display: none !important;
   }
 }
