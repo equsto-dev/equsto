@@ -3,6 +3,7 @@ import type { Prisma } from "@/lib/prisma";
 import { assertAdminBearer } from "@/lib/auth";
 import { adminErr, adminOk } from "@/lib/admin-response";
 import { parseAdminUrunPayload } from "@/lib/admin-urun";
+import { loadCatalogStats } from "@/lib/catalog-meta";
 import {
   deleteLegacyCatalogIndex,
   loadLegacyCatalogRows,
@@ -49,6 +50,7 @@ export async function GET(req: NextRequest, ctx: Ctx) {
   const marka = sp.get("marka")?.trim() || "";
   const kategori = sp.get("kategori")?.trim() || "";
   const q = sp.get("q")?.trim() || "";
+  const catalog = await loadCatalogStats();
 
   const where = {
     ...(marka ? { brand: { slug: marka } } : {}),
@@ -81,6 +83,7 @@ export async function GET(req: NextRequest, ctx: Ctx) {
         count: total,
         returned: products.length,
         source: "db",
+        catalog,
       });
     }
   } catch (e) {
@@ -90,13 +93,13 @@ export async function GET(req: NextRequest, ctx: Ctx) {
   try {
     if (await legacyCatalogExists()) {
       const data = await loadLegacyCatalogRows();
-      return adminOk({ data, count: data.length, source: "legacy" });
+      return adminOk({ data, count: data.length, source: "legacy", catalog });
     }
   } catch (e) {
     console.warn("[GET /urunler] legacy:", e);
   }
 
-  return adminOk({ data: [], count: 0, source: "empty" });
+  return adminOk({ data: [], count: 0, source: "empty", catalog });
 }
 
 export async function POST(req: NextRequest, ctx: Ctx) {

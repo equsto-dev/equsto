@@ -82,7 +82,7 @@ export default function EticaretYayinPanel() {
         showIcon
         style={{ marginBottom: 16 }}
         message="Sırayla ürün ekliyorsunuz"
-        description="Vitrin = dept birleşimi → ekipmanlar.json → Meilisearch → deploy."
+        description="Tek sayaç: dept/*.json → rebuild → catalog-meta.json + ekipmanlar.json → Meilisearch → deploy."
       />
 
       <ProCard>
@@ -100,12 +100,17 @@ export default function EticaretYayinPanel() {
           </StepsForm.StepForm>
           <StepsForm.StepForm
             name="merge"
-            title="2. ekipmanlar.json birleştir"
+            title="2. Birleştir (catalog-meta + ekipmanlar)"
             onFinish={async () => true}
           >
             <Typography.Paragraph copyable>
               node scripts/rebuild-ekipmanlar-from-dept.mjs
             </Typography.Paragraph>
+            <Typography.Text type="secondary">
+              Yazar: <Typography.Text code>ekipmanlar.json</Typography.Text> +{" "}
+              <Typography.Text code>catalog-meta.json</Typography.Text> (paneldeki
+              ürün sayısı).
+            </Typography.Text>
           </StepsForm.StepForm>
           <StepsForm.StepForm
             name="search"
@@ -117,7 +122,7 @@ export default function EticaretYayinPanel() {
                 npm run search:index
               </Typography.Paragraph>
               <Typography.Text type="secondary">
-                Kaynak: ekipmanlar.json — ürün sayısı katalog ile eşleşmeli.
+                Kaynak: catalog-meta / ekipmanlar.json — sayılar eşleşmeli.
               </Typography.Text>
             </Space>
           </StepsForm.StepForm>

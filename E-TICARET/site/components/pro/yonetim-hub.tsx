@@ -16,7 +16,6 @@ import { useEffect, useState, type ReactNode } from "react";
 import {
   fetchCatalogStats,
   fetchProjeAkis,
-  fetchUrunler,
 } from "@/lib/pro-admin-client";
 
 type ModuleCard = {
@@ -168,16 +167,20 @@ export default function YonetimHub() {
     sets: 0,
     products: 0,
     catalog: 0,
-    adminProducts: 0,
+    catalogBrands: 0,
   });
 
   useEffect(() => {
     Promise.all([
       fetchProjeAkis(),
-      fetchCatalogStats().catch(() => ({ ekipmanlar: 0, withImage: 0, brands: 0 })),
-      fetchUrunler(),
+      fetchCatalogStats().catch(() => ({
+        ekipmanlar: 0,
+        withImage: 0,
+        brands: 0,
+        source: "missing" as const,
+      })),
     ])
-      .then(([akis, cat, urun]) => {
+      .then(([akis, cat]) => {
         setStats({
           questions: akis.data?.questions?.length ?? 0,
           concepts: akis.data?.shopTypes?.length ?? 0,
@@ -185,7 +188,7 @@ export default function YonetimHub() {
           sets: akis.data?.eqSets?.length ?? 0,
           products: akis.data?.products?.length ?? 0,
           catalog: cat.ekipmanlar,
-          adminProducts: urun.rows.length,
+          catalogBrands: cat.brands,
         });
       })
       .finally(() => setLoading(false));
@@ -218,10 +221,10 @@ export default function YonetimHub() {
           <StatisticCard loading={loading} statistic={{ title: "Kurallar", value: stats.rules }} />
         </Col>
         <Col xs={12} sm={8} lg={4}>
-          <StatisticCard loading={loading} statistic={{ title: "Katalog", value: stats.catalog }} />
+          <StatisticCard loading={loading} statistic={{ title: "Katalog ürünü", value: stats.catalog }} />
         </Col>
         <Col xs={12} sm={8} lg={4}>
-          <StatisticCard loading={loading} statistic={{ title: "Admin ürün", value: stats.adminProducts }} />
+          <StatisticCard loading={loading} statistic={{ title: "Marka", value: stats.catalogBrands }} />
         </Col>
       </Row>
 

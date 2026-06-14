@@ -57,15 +57,19 @@ export default function YonetimKontrolPage() {
       const cat = await fetchCatalogStats();
       rows.push({
         key: "catalog",
-        label: "Vitrin katalog (ekipmanlar.json)",
-        ok: cat.ekipmanlar > 0,
-        detail: `${cat.ekipmanlar} ürün · ${cat.withImage} görselli · ${cat.brands} marka${
+        label: "Katalog (catalog-meta.json)",
+        ok: cat.ekipmanlar > 0 && cat.source !== "missing",
+        detail: `${cat.ekipmanlar} ürün · ${cat.withImage} görselli · ${cat.brands} marka · kaynak: ${cat.source}${
           cat.rebuiltAt
             ? ` · birleştirme: ${new Date(cat.rebuiltAt).toLocaleString("tr-TR")}`
             : ""
         }${
           cat.inoksanComDescriptions
             ? ` · İnoksan.com: ${cat.inoksanComDescriptions}`
+            : ""
+        }${
+          cat.liveDrift
+            ? ` · meta↔json fark: ${cat.liveDrift > 0 ? "+" : ""}${cat.liveDrift}`
             : ""
         }`,
       });

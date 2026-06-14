@@ -10,18 +10,20 @@ import {
   fetchFiyatlarMap,
   fetchKur,
   fetchSearchCheck,
-  fetchUrunler,
+  type CatalogStats,
 } from "@/lib/pro-admin-client";
+
+const EMPTY_CATALOG: CatalogStats = {
+  ekipmanlar: 0,
+  withImage: 0,
+  brands: 0,
+  source: "missing",
+};
 
 export default function EticaretOzetPanel() {
   const [loading, setLoading] = useState(true);
   const [stats, setStats] = useState({
-    urunCount: 0,
-    urunSource: "—",
-    catalog: { ekipmanlar: 0, withImage: 0, brands: 0 },
-    catalogRebuiltAt: "",
-    inoksanComDescriptions: 0,
-    productsEnStale: 0,
+    catalog: EMPTY_CATALOG,
     searchOk: false,
     kur: null as number | null,
     kurDate: "",
@@ -35,16 +37,8 @@ export default function EticaretOzetPanel() {
     let cancelled = false;
     (async () => {
       try {
-        const [urun, cat, search, kurRes, fiyat, eticaret] = await Promise.all([
-          fetchUrunler(),
-          fetchCatalogStats().catch(() => ({
-            ekipmanlar: 0,
-            withImage: 0,
-            brands: 0,
-            rebuiltAt: undefined,
-            inoksanComDescriptions: 0,
-            productsEnStale: 0,
-          })),
+        const [cat, search, kurRes, fiyat, eticaret] = await Promise.all([
+          fetchCatalogStats().catch(() => EMPTY_CATALOG),
           fetchSearchCheck(),
           fetchKur(),
           fetchFiyatlarMap(),
@@ -52,12 +46,7 @@ export default function EticaretOzetPanel() {
         ]);
         if (cancelled) return;
         setStats({
-          urunCount: urun.rows.length,
-          urunSource: urun.source,
           catalog: cat,
-          catalogRebuiltAt: cat.rebuiltAt || "",
-          inoksanComDescriptions: cat.inoksanComDescriptions ?? 0,
-          productsEnStale: cat.productsEnStale ?? 0,
           searchOk: !!search.configured,
           kur: kurRes.rate ?? null,
           kurDate: kurRes.date || "",
@@ -75,25 +64,27 @@ export default function EticaretOzetPanel() {
     };
   }, []);
 
+  const cat = stats.catalog;
+
   return (
     <>
       <Row gutter={[16, 16]}>
         <Col xs={12} sm={8} lg={4}>
           <StatisticCard
             loading={loading}
-            statistic={{ title: "Vitrin ürünü", value: stats.catalog.ekipmanlar }}
+            statistic={{ title: "Katalog ürünü", value: cat.ekipmanlar }}
           />
         </Col>
         <Col xs={12} sm={8} lg={4}>
           <StatisticCard
             loading={loading}
-            statistic={{ title: "Görselli", value: stats.catalog.withImage }}
+            statistic={{ title: "Görselli", value: cat.withImage }}
           />
         </Col>
         <Col xs={12} sm={8} lg={4}>
           <StatisticCard
             loading={loading}
-            statistic={{ title: "Admin ürün", value: stats.urunCount }}
+            statistic={{ title: "Marka", value: cat.brands }}
           />
         </Col>
         <Col xs={12} sm={8} lg={4}>
@@ -132,56 +123,72 @@ export default function EticaretOzetPanel() {
         />
       )}
 
-      {(stats.productsEnStale > 0 ||
-        (stats.urunCount > 0 &&
-          stats.urunCount !== stats.catalog.ekipmanlar)) && (
+      {cat.source === "missing" && (
         <Alert
-          type="warning"
+          type="error"
           showIcon
           style={{ marginTop: 16 }}
-          message="Katalog uyumsuzluğu"
+          message="Katalog meta eksik"
           description={
             <>
-              {stats.productsEnStale > 0 && (
-                <>
-                  EN çeviri dosyası vitrin kataloğundan{" "}
-                  <strong>{stats.productsEnStale}</strong> ürün geride —{" "}
-                  <Typography.Text code>
-                    node scripts/build-product-i18n-en.mjs
-                  </Typography.Text>{" "}
-                  çalıştırın.
-                  <br />
-                </>
-              )}
-              {stats.urunCount > 0 &&
-                stats.urunCount !== stats.catalog.ekipmanlar && (
-                  <>
-                    Admin ürün API ({stats.urunCount}) ≠ vitrin katalog (
-                    {stats.catalog.ekipmanlar}).
-                  </>
-                )}
+              <Typography.Text code>
+                node scripts/rebuild-ekipmanlar-from-dept.mjs
+              </Typography.Text>{" "}
+              çalıştırın — <Typography.Text code>catalog-meta.json</Typography.Text>{" "}
+              oluşur.
             </>
           }
         />
       )}
 
-      {stats.catalogRebuiltAt && (
+      {cat.liveDrift != null && cat.liveDrift !== 0 && (
+        <Alert
+          type="warning"
+          showIcon
+          style={{ marginTop: 16 }}
+          message="Meta ↔ ekipmanlar.json uyumsuz"
+          description={`catalog-meta ${cat.ekipmanlar} satır diyor; ekipmanlar.json fark: ${cat.liveDrift > 0 ? "+" : ""}${cat.liveDrift}. Rebuild çalıştırın.`}
+        />
+      )}
+
+      {cat.productsEnStale != null && cat.productsEnStale > 0 && (
+        <Alert
+          type="warning"
+          showIcon
+          style={{ marginTop: 16 }}
+          message="EN çeviri geride"
+          description={
+            <>
+              <strong>{cat.productsEnStale}</strong> ürün — deploy veya{" "}
+              <Typography.Text code>
+                node scripts/build-product-i18n-en.mjs
+              </Typography.Text>
+            </>
+          }
+        />
+      )}
+
+      {cat.rebuiltAt && (
         <Typography.Text type="secondary" style={{ display: "block", marginTop: 12 }}>
-          Katalog birleştirme:{" "}
-          {new Date(stats.catalogRebuiltAt).toLocaleString("tr-TR")}
-          {stats.inoksanComDescriptions > 0 &&
-            ` · İnoksan.com açıklama: ${stats.inoksanComDescriptions}`}
+          Tek kaynak: <Typography.Text code>catalog-meta.json</Typography.Text>
+          {cat.rebuiltAt &&
+            ` · birleştirme: ${new Date(cat.rebuiltAt).toLocaleString("tr-TR")}`}
+          {cat.inoksanComDescriptions != null &&
+            cat.inoksanComDescriptions > 0 &&
+            ` · İnoksan.com: ${cat.inoksanComDescriptions}`}
         </Typography.Text>
       )}
 
       <Row gutter={[16, 16]} style={{ marginTop: 16 }}>
         <Col xs={24} md={8}>
-          <ProCard title="Ürün API" loading={loading} bordered>
-            <Typography.Text type="secondary">
-              Kaynak: {stats.urunSource}
-            </Typography.Text>
-            <br />
-            <Link href="/yonetim/eticaret?tab=urunler">Ürün yönetimine git →</Link>
+          <ProCard title="Katalog güncelleme" loading={loading} bordered>
+            <Typography.Paragraph type="secondary" style={{ marginBottom: 8 }}>
+              dept/*.json düzenle → birleştir → deploy
+            </Typography.Paragraph>
+            <Typography.Paragraph copyable={{ text: "node scripts/rebuild-ekipmanlar-from-dept.mjs" }} style={{ marginBottom: 8 }}>
+              <Typography.Text code>node scripts/rebuild-ekipmanlar-from-dept.mjs</Typography.Text>
+            </Typography.Paragraph>
+            <Link href="/yonetim/eticaret?tab=katalog">Katalog tablosu →</Link>
           </ProCard>
         </Col>
         <Col xs={24} md={8}>
