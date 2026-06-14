@@ -13,6 +13,10 @@ import {
   referansBolumKey,
 } from "./kategori-from-bolum";
 import { yerIzgarasiTipFromOlcu } from "./yer-izgara-match";
+import {
+  filterKasapYalnizKalemler,
+  olcekReferansKalemlerForM2,
+} from "./referans-m2-olcek";
 
 const REF_DIR = "pfos-referans";
 
@@ -329,11 +333,21 @@ export async function loadReferansProfil(
       `${kategoriId} ${bantId} referans listesi yok — önce Kategoriler sekmesinden Excel yükleyin veya seed script çalıştırın.`,
     );
   }
+  let kalemler = ekipmanToReferansKalemler(
+    raw.kalemler,
+    `${kategoriId}-${bantId}`,
+  );
+  if (kategoriId === "kasap") {
+    kalemler = filterKasapYalnizKalemler(kalemler);
+  }
+  if (raw.referansM2 > 0) {
+    kalemler = olcekReferansKalemlerForM2(kalemler, m2, raw.referansM2);
+  }
   return {
     id: `${kategoriId}-${bantId}`,
     label: raw.label,
     referansM2: raw.referansM2,
     kaynak: raw.kaynakDosya,
-    kalemler: ekipmanToReferansKalemler(raw.kalemler, `${kategoriId}-${bantId}`),
+    kalemler,
   };
 }
