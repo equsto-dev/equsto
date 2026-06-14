@@ -54,29 +54,101 @@ def norm_code(code: str) -> str:
     return re.sub(r"[^A-Z0-9]", "", str(code or "").upper())
 
 
-def parse_prices_near(lines: list[str], idx: int) -> tuple[float, float]:
+def code_sort_key(code: str) -> tuple[int, str]:
+    """VXC-112 < VXC-224 < VXC-336 gibi kapasite sıralaması."""
+    nk = norm_code(code)
+    nums = [int(x) for x in re.findall(r"\d+", nk)]
+    return (nums[-1] if nums else 0, nk)
+
+
+def parse_prices_near(
+    lines: list[str], idx: int, line_pages: list[int]
+) -> tuple[float, float]:
+    """Kod satırına en yakın fiyat — yalnızca aynı PDF sayfasında."""
     usd = eur = 0.0
+    page = line_pages[idx]
 
-    def scan(start: int, stop: int, step: int) -> None:
-        nonlocal usd, eur
-        j = start
-        while j != stop:
-            bl = lines[j]
-            um = PRICE_USD_RE.search(bl)
-            em = PRICE_EUR_RE.search(bl)
-            if um and not usd:
-                usd = float(um.group(1).replace(",", ""))
-            if em and not eur:
-                eur = float(em.group(1).replace(",", ""))
-            if usd and eur:
-                return
-            j += step
+    # Kod → fiyat (VHS-206C → $250): sonraki kod satırına kadar tara
+    j = idx + 1
+    while j < len(lines) and j < idx + 22 and line_pages[j] == page:
+        if CODE_RE.match(lines[j]):
+            break
+        um = PRICE_USD_RE.search(lines[j])
+        em = PRICE_EUR_RE.search(lines[j])
+        if um:
+            usd = float(um.group(1).replace(",", ""))
+            break
+        if em:
+            eur = float(em.group(1).replace(",", ""))
+            break
+        j += 1
 
-    # Önce kod satırından sonraki fiyat (VFT/VKM gibi bloklarda doğru eşleşme)
-    scan(idx + 1, min(len(lines), idx + 14), 1)
-    if not usd and not eur:
-        scan(idx - 1, max(-1, idx - 8), -1)
+    if usd or eur:
+        return usd, eur
+
+    # Geriye: fiyat → kod blokları
+    j = idx - 1
+    while j >= 0 and j >= idx - 35 and line_pages[j] == page:
+        um = PRICE_USD_RE.search(lines[j])
+        em = PRICE_EUR_RE.search(lines[j])
+        if um:
+            usd = float(um.group(1).replace(",", ""))
+            break
+        if em:
+            eur = float(em.group(1).replace(",", ""))
+            break
+        j -= 1
+
     return usd, eur
+
+
+def pair_page_block_prices(lines: list[str], line_pages: list[int]) -> None:
+    """Aynı sayfada uzak fiyat + ardışık kod blokları (VXC buzlaş vb.)."""
+    pages = sorted(set(line_pages))
+    for page in pages:
+        page_idxs = [i for i, p in enumerate(line_pages) if p == page]
+        if not page_idxs:
+            continue
+        pi = 0
+        while pi < len(page_idxs):
+            i = page_idxs[pi]
+            if not CODE_RE.match(lines[i]):
+                pi += 1
+                continue
+            codes: list[str] = []
+            j = i
+            last = page_idxs[-1]
+            while j <= last and line_pages[j] == page:
+                if CODE_RE.match(lines[j]):
+                    codes.append(lines[j].upper().replace(" ", ""))
+                    j += 1
+                elif TITLE_RE.match(lines[j]):
+                    j += 1
+                else:
+                    break
+            if len(codes) >= 2:
+                prices: list[tuple[str, float]] = []
+                for k in page_idxs:
+                    if k >= i:
+                        break
+                    um = PRICE_USD_RE.search(lines[k])
+                    em = PRICE_EUR_RE.search(lines[k])
+                    if um:
+                        prices.append(("usd", float(um.group(1).replace(",", ""))))
+                    elif em:
+                        prices.append(("eur", float(em.group(1).replace(",", ""))))
+                usd_vals = sorted({v for k, v in prices if k == "usd"})
+                eur_vals = sorted({v for k, v in prices if k == "eur"})
+                sorted_codes = sorted(codes, key=code_sort_key)
+                if len(usd_vals) >= len(sorted_codes):
+                    for ci, code in enumerate(sorted_codes):
+                        _pending_pairs.append(("pageblock", code, "usd", usd_vals[ci]))
+                elif len(eur_vals) >= len(sorted_codes):
+                    for ci, code in enumerate(sorted_codes):
+                        _pending_pairs.append(("pageblock", code, "eur", eur_vals[ci]))
+                pi += len(codes)
+            else:
+                pi += 1
 
 
 def expand_code_lines(
@@ -137,6 +209,21 @@ def pair_trailing_prices(lines: list[str]) -> None:
                 k += 1
         if codes and len(prices) >= 1:
             if len(prices) > 1 and len(codes) < len(prices):
+                i = max(i + 1, k)
+                continue
+            # Tek fiyat + hemen sonraki tek kod: fiyat önceki koda aittir (VHS-206 → $190 → VHS-206C)
+            if len(prices) == 1 and len(codes) == 1:
+                kind, val = prices[0]
+                assigned = False
+                for back in range(i - 1, max(-1, i - 15), -1):
+                    if CODE_RE.match(lines[back]):
+                        _pending_pairs.append(
+                            ("trail", lines[back].upper().replace(" ", ""), kind, val)
+                        )
+                        assigned = True
+                        break
+                if not assigned:
+                    _pending_pairs.append(("trail", codes[0], kind, val))
                 i = max(i + 1, k)
                 continue
             for ci, code in enumerate(codes):
@@ -209,6 +296,7 @@ def extract_all(doc: fitz.Document) -> dict[str, dict]:
                 line_pages.append(pi + 1)
 
     lines, line_pages = expand_code_lines(lines, line_pages)
+    pair_page_block_prices(lines, line_pages)
     pair_trailing_prices(lines)
     pair_leading_codes_trailing_prices(lines)
 
@@ -225,7 +313,7 @@ def extract_all(doc: fitz.Document) -> dict[str, dict]:
 
         code = line.upper().replace(" ", "")
         nk = norm_code(code)
-        usd, eur = parse_prices_near(lines, i)
+        usd, eur = parse_prices_near(lines, i, line_pages)
 
         title = ""
         for j in range(max(0, i - 8), min(len(lines), i + 6)):
@@ -271,8 +359,15 @@ def extract_all(doc: fitz.Document) -> dict[str, dict]:
                 entry["specs"]["liste_eur"] = prev["specs"].get("liste_eur")
         products[nk] = entry
 
+    priority = {"pageblock": 3, "lead": 2, "trail": 1}
+    best: dict[str, tuple[int, str, str, float]] = {}
     for src, code, kind, val in _pending_pairs:
         nk = norm_code(code)
+        pr = priority.get(src, 0)
+        if nk not in best or pr >= best[nk][0]:
+            best[nk] = (pr, code, kind, val)
+
+    for nk, (pr, code, kind, val) in best.items():
         p = products.get(nk) or {
             "model": code,
             "modelNorm": nk,
@@ -281,13 +376,15 @@ def extract_all(doc: fitz.Document) -> dict[str, dict]:
             "page": 0,
             "specs": {},
         }
-        has = p["specs"].get("liste_usd") or p["specs"].get("liste_eur")
-        if src == "trail" and has:
+        has_parse = p["specs"].get("liste_usd") or p["specs"].get("liste_eur")
+        if pr < 3 and has_parse:
             continue
         if kind == "usd":
             p["specs"]["liste_usd"] = val
+            p["specs"]["liste_eur"] = None
         if kind == "eur":
             p["specs"]["liste_eur"] = val
+            p["specs"]["liste_usd"] = None
         products[nk] = p
 
     return products

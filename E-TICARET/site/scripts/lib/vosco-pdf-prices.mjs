@@ -145,11 +145,61 @@ export function usdToEur(listeUsd, usdTry, eurTry) {
   return Math.round(listeUsd * rate * 100) / 100;
 }
 
+export function resolveListeTry(match, usdTry, eurTry) {
+  if (!match) return { listeTry: 0, para: "" };
+  if (match.listeUsd > 0) {
+    return {
+      listeTry: Math.round(match.listeUsd * usdTry * 100) / 100,
+      para: "USD",
+    };
+  }
+  if (match.listeEur > 0) {
+    return {
+      listeTry: Math.round(match.listeEur * eurTry * 100) / 100,
+      para: "EUR",
+    };
+  }
+  return { listeTry: 0, para: "" };
+}
+
+/** @deprecated USD→EUR ara adımı kaldırıldı; resolveListeTry kullanın */
 export function resolveListeEur(match, usdTry, eurTry) {
   if (!match) return 0;
   if (match.listeEur > 0) return match.listeEur;
   if (match.listeUsd > 0) return usdToEur(match.listeUsd, usdTry, eurTry);
   return 0;
+}
+
+export function pricingFromVoscoPdfMatch(
+  match,
+  usdTry,
+  eurTry,
+  kdv = 20,
+  satisOran = VOSCO_SATIS_ORAN,
+) {
+  const { listeTry, para } = resolveListeTry(match, usdTry, eurTry);
+  if (!(listeTry > 0)) return null;
+
+  const satisTry = Math.round(listeTry * satisOran * 100) / 100;
+  const netTry = Math.round(satisTry);
+  const kdvDahil = Math.round(satisTry * (1 + kdv / 100));
+  return {
+    liste_fiyati_usd_pdf: match.listeUsd > 0 ? match.listeUsd : undefined,
+    liste_fiyati_eur_pdf: match.listeEur > 0 ? match.listeEur : undefined,
+    liste_fiyati_tl: listeTry,
+    liste_para_birimi: para,
+    satis_fiyati_tl: satisTry,
+    satis_oran: satisOran,
+    iskonto_oran: Math.round(VOSCO_ISKONTO_ORAN * 100),
+    bayi_iskonto: VOSCO_ISKONTO_ORAN,
+    kur_usd_try: usdTry,
+    kur_eur_try: eurTry,
+    fiyat_tl: kdvDahil,
+    fiyat_tl_net: netTry,
+    price: `₺${fmtTry(netTry)} + KDV\nKDV Dahil ₺${fmtTry(kdvDahil)}`,
+    fiyat_bekleniyor: false,
+    fiyat_kaynak: "vosco-pdf-2026",
+  };
 }
 
 function fmtTry(n) {
@@ -192,47 +242,3 @@ export function findVoscoSitePrice(p, kdv = 20) {
   });
 }
 
-export function pricingFromVoscoListeEur(
-  listeEur,
-  eurTry,
-  kdv = 20,
-  satisOran = VOSCO_SATIS_ORAN,
-  meta = {},
-) {
-  const satisEur = Math.round(listeEur * satisOran * 100) / 100;
-  const netTry = satisEur * eurTry;
-  const kdvDahil = netTry * (1 + kdv / 100);
-  return {
-    liste_fiyati_usd_pdf: meta.listeUsd || undefined,
-    liste_fiyati_eur_pdf: meta.listeEur || undefined,
-    liste_fiyati_eur: listeEur,
-    satis_fiyati_eur: satisEur,
-    satis_eur_indirimli: satisEur,
-    satis_oran: satisOran,
-    iskonto_oran: Math.round(VOSCO_ISKONTO_ORAN * 100),
-    bayi_iskonto: VOSCO_ISKONTO_ORAN,
-    kur_eur_try: eurTry,
-    kur_usd_try: meta.usdTry,
-    kur_usd_eur: meta.kurUsdEur,
-    fiyat_tl: Math.round(kdvDahil),
-    fiyat_tl_net: Math.round(netTry),
-    price: `₺${fmtTry(netTry)} + KDV\nKDV Dahil ₺${fmtTry(kdvDahil)}`,
-    fiyat_bekleniyor: false,
-  };
-}
-
-/** @deprecated use pricingFromVoscoListeEur via resolveListeEur */
-export function pricingFromVoscoPdfListe(
-  listeUsd,
-  eurTry,
-  usdTry,
-  kdv = 20,
-  satisOran = VOSCO_SATIS_ORAN,
-) {
-  const listeEur = usdToEur(listeUsd, usdTry, eurTry);
-  return pricingFromVoscoListeEur(listeEur, eurTry, kdv, satisOran, {
-    listeUsd,
-    usdTry,
-    kurUsdEur: usdToEurRate(usdTry, eurTry),
-  });
-}
