@@ -1,3 +1,4 @@
+import { resolveCatalogImagePath } from "@/lib/catalog-image-resolve";
 import { catalogUrlSlug } from "@/lib/catalog-product-slug";
 import { loadEkipmanlarJson } from "@/lib/catalog-json";
 import { getSiteOrigin } from "@/lib/site-origin";
@@ -86,12 +87,7 @@ function productImagePath(row: CatalogRow): string {
   if (!Array.isArray(imgs) || !imgs.length) return "";
   const pick = pickMerchantHeroImage(imgs);
   if (!pick) return "";
-  let rel = String(pick).replace(/\\/g, "/").replace(/^\.\//, "");
-  if (rel.startsWith("http://") || rel.startsWith("https://")) return rel;
-  if (rel.startsWith("data/")) rel = rel.slice(5);
-  if (rel.startsWith("/")) return rel;
-  if (rel.startsWith("images/")) return `/${rel}`;
-  return `/data/${rel}`;
+  return resolveCatalogImagePath(String(pick));
 }
 
 /** GMC: teknik çizim / kesit değil; kapak veya ilk foto. */
