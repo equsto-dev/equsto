@@ -191,6 +191,12 @@ if (fs.existsSync(verifyWaCatFab)) {
   if (r.status !== 0) process.exit(r.status ?? 1);
 }
 
+const verifyWaModalChat = path.join(siteDir, "scripts/verify-whatsapp-modal-chat-kilit.mjs");
+if (fs.existsSync(verifyWaModalChat)) {
+  const r = spawnSync(process.execPath, [verifyWaModalChat], { cwd: siteDir, stdio: "inherit" });
+  if (r.status !== 0) process.exit(r.status ?? 1);
+}
+
 const verifyPfosUyeAuth = path.join(siteDir, "scripts/verify-pfos-uye-auth-kilit.mjs");
 if (fs.existsSync(verifyPfosUyeAuth)) {
   const r = spawnSync(process.execPath, [verifyPfosUyeAuth], { cwd: siteDir, stdio: "inherit" });

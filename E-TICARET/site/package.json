@@ -108,6 +108,7 @@
     "verify:home-vitrin-kilit": "node scripts/verify-home-vitrin-kilit.mjs",
     "verify:cdn-asset-urls-kilit": "node scripts/verify-cdn-asset-urls-kilit.mjs",
     "verify:whatsapp-cat-fab-kilit": "node scripts/verify-whatsapp-cat-fab-kilit.mjs",
+    "verify:whatsapp-modal-chat-kilit": "node scripts/verify-whatsapp-modal-chat-kilit.mjs",
     "verify:pfos-uye-auth-kilit": "node scripts/verify-pfos-uye-auth-kilit.mjs",
     "verify:inoksan-istif-images-kilit": "node scripts/verify-inoksan-istif-images-kilit.mjs",
     "verify:yukselendustriyel-araba-kilit": "node scripts/verify-yukselendustriyel-araba-kilit.mjs",

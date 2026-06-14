@@ -77,6 +77,10 @@ YASAK (onay olmadan):
   • WA modal üye kapısını kaldırmak veya WA_MODAL_BUILD'i düşürmek
   • PFOS panel clip-path sıçrama animasyonlarına geri dönmek
 
+── İlgili kilit ────────────────────────────────────────────────────────────
+  WhatsApp modal ↔ telefon sohbet senkronu: whatsapp-modal-chat-KILIT.txt
+  npm run verify:whatsapp-modal-chat-kilit
+
 ── Doğrulama ─────────────────────────────────────────────────────────────
   npm run verify:pfos-uye-auth-kilit
   Vercel prebuild: zorunlu

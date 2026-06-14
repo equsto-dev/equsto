@@ -1028,6 +1028,7 @@
     overlay.id = "equsto-wa-overlay";
     overlay.className = "equsto-wa-overlay";
     overlay.setAttribute("data-wa-build", String(WA_MODAL_BUILD));
+    overlay.setAttribute("data-eq-wa-chat-kilit", "1");
     overlay.setAttribute("aria-hidden", "true");
     overlay.style.cssText =
       "display:none;position:fixed;inset:0;z-index:10050;pointer-events:none;";
