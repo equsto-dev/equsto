@@ -99,74 +99,63 @@ async function buildTemplateKalemler(
 
   await loadLegacyCatalogRows();
 
-  const built = await Promise.all(
-    eligibleItems.map(async (item, i) => {
-      const tipResolved = resolveTipKodu(item.urunTipi);
-      const tipKey = item.referansPoz
-        ? `${tipResolved}|${item.referansPoz}`
-        : tipResolved;
-      if (existingTips.has(tipKey)) return null;
-
-      const adet = referansListOnly
-        ? item.scale.type === "fixed"
-          ? item.scale.adet
-          : calcAdet(item.scale, m2, template.seatDensity)
-        : calcAdet(item.scale, m2, template.seatDensity);
-      const urunMatched = referansListOnly
-        ? await matchProductForReferansKalem({
-            urunTipi: item.urunTipi,
-            fiyatStratejisi,
-            isim: item.isim,
-            notlar: item.notlar,
-            referansPoz: item.referansPoz,
-            referansListeKey:
-              item.referansListeKey ?? template.referansId ?? undefined,
-          })
-        : await matchProductForMotor(
-            item.urunTipi,
-            item.kategoriKodu,
-            fiyatStratejisi,
-            item.isim,
-            item.notlar,
-          );
-      const urun = await enrichEslesmisUrunKw(urunMatched, {
-        isim: item.isim,
-        urunTipi: item.urunTipi,
-      });
-
-      return {
-        kalem: {
-          poz: item.referansPoz ?? "",
-          referansPoz: item.referansPoz,
-          kategoriKodu: item.kategoriKodu,
-          altKategori: item.altKategori,
-          referansBolumSira: item.referansBolumSira,
-          referansBolumKey: item.referansBolumKey,
-          urunTipi: item.urunTipi,
-          isim: item.isim,
-          tip: item.tip,
-          opsiyonelSebep: item.opsiyonelSebep,
-          adet,
-          elektrikGucuKwHint: item.elektrikGucuKwHint,
-          gazGucuKwHint: item.gazGucuKwHint,
-          notlar: item.notlar,
-          urun,
-          kaynak: "template" as const,
-          sablonSira: item.sablonSira ?? i,
-        },
-        tipKey,
-      };
-    }),
-  );
-
   const kalemler: PFOSKalemi[] = [];
-  const seenTips = new Set(existingTips);
-  for (const row of built
-    .filter((row): row is NonNullable<typeof row> => row !== null)
-    .sort((a, b) => (a.kalem.sablonSira ?? 0) - (b.kalem.sablonSira ?? 0))) {
-    if (seenTips.has(row.tipKey)) continue;
-    seenTips.add(row.tipKey);
-    kalemler.push(row.kalem);
+
+  for (let i = 0; i < eligibleItems.length; i++) {
+    const item = eligibleItems[i];
+    const tipResolved = resolveTipKodu(item.urunTipi);
+    const tipKey = item.referansPoz
+      ? `${tipResolved}|${item.referansPoz}`
+      : tipResolved;
+    if (existingTips.has(tipKey)) continue;
+
+    const adet = referansListOnly
+      ? item.scale.type === "fixed"
+        ? item.scale.adet
+        : calcAdet(item.scale, m2, template.seatDensity)
+      : calcAdet(item.scale, m2, template.seatDensity);
+    const urunMatched = referansListOnly
+      ? await matchProductForReferansKalem({
+          urunTipi: item.urunTipi,
+          fiyatStratejisi,
+          isim: item.isim,
+          notlar: item.notlar,
+          referansPoz: item.referansPoz,
+          referansListeKey:
+            item.referansListeKey ?? template.referansId ?? undefined,
+        })
+      : await matchProductForMotor(
+          item.urunTipi,
+          item.kategoriKodu,
+          fiyatStratejisi,
+          item.isim,
+          item.notlar,
+        );
+    const urun = await enrichEslesmisUrunKw(urunMatched, {
+      isim: item.isim,
+      urunTipi: item.urunTipi,
+    });
+
+    kalemler.push({
+      poz: item.referansPoz ?? "",
+      referansPoz: item.referansPoz,
+      kategoriKodu: item.kategoriKodu,
+      altKategori: item.altKategori,
+      referansBolumSira: item.referansBolumSira,
+      referansBolumKey: item.referansBolumKey,
+      urunTipi: item.urunTipi,
+      isim: item.isim,
+      tip: item.tip,
+      opsiyonelSebep: item.opsiyonelSebep,
+      adet,
+      elektrikGucuKwHint: item.elektrikGucuKwHint,
+      gazGucuKwHint: item.gazGucuKwHint,
+      notlar: item.notlar,
+      urun,
+      kaynak: "template",
+      sablonSira: item.sablonSira ?? i,
+    });
+    existingTips.add(tipKey);
   }
 
   return kalemler;
