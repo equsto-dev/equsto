@@ -25,6 +25,9 @@
     "doner-ocaklari-": "ocaklar",
     "doner-ocaklari": "ocaklar",
     "adr-seri-doner-robotu": "ocaklar",
+    "doner-makineleri": "ocaklar",
+    "elektrikli-setustu-ocaklar": "ocaklar",
+    "elektrikli-setustu-dinlendirme-ocagi": "ocaklar",
     "yer-izgaralari": "izgaralar",
     "sanayi-tipi-izgaralar": "izgaralar",
     izgaralar: "izgaralar",
@@ -35,6 +38,12 @@
     "setustu-elektrikli-izgaralar": "izgaralar",
     "lava-tasli-izgaralar": "izgaralar",
     "ocakbasi-izgara": "izgaralar",
+    "asansorlu-izgara": "izgaralar",
+    salamander: "izgaralar",
+    "char-izgara": "izgaralar",
+    "lavtasli_izgara": "izgaralar",
+    "speedelight-mekanik-ayarlanabilen-ust-isitici-plaka-nervurlu": "izgaralar",
+    "speedelight-manuel-ayarlanabilen-ust-isitici-plaka-nervurlu": "izgaralar",
     fritozler: "fritozler",
     firinlar: "firinlar",
     "linemiss-linemicro-serisi-firinlar": "firinlar",
@@ -42,6 +51,10 @@
     "konveksiyonlu-firin": "firinlar",
     "pizza-firinlari": "firinlar",
     "dijital-kontrol-panelli": "firinlar",
+    "tas-firinlar-mikrodalga-firinlar": "firinlar",
+    "mikrodalga-firin": "firinlar",
+    "jet-mikrodalga-firin": "firinlar",
+    "komurlu-firin": "firinlar",
     benmariler: "benmariler",
     "sos-benmariler": "benmariler",
     "kaynatma-tenceleri": "benmariler",
@@ -52,10 +65,23 @@
     "devrilir-tavalar": "benmariler",
     "devrilir-tava": "benmariler",
     "patates-dinlendirmeler": "benmariler",
+    "patates-dinlendirme": "benmariler",
+    "buharli-kaynatma-tenceeleri": "benmariler",
+    "hareketli-bain-marie": "benmariler",
+    "setustu-bain-marie": "benmariler",
+    "elektrikli-kaynatma-kazanlari-ebe-easy-line": "benmariler",
+    "eb-elektrikli-kaynatma-kazanlari-smart": "benmariler",
+    "elektrikli-kaynatma-kazanlari": "benmariler",
+    "gazli-kaynatma-kazanlari": "benmariler",
+    "gazli-silindirik-kaynatma-kazanlari": "benmariler",
+    "dikdortgen-kaynatma-kazanlari": "benmariler",
+    "elektrikli-silindirik-kaynatma-kazanlari": "benmariler",
+    "otomatik-makarna-pisiriciler": "benmariler",
     "ara-tezgahlar": "diger-pisirme",
     "setustu-ara-tezgahlar": "diger-pisirme",
     "dolaplar-ve-taban-raflari-ara-tezgahlar": "diger-pisirme",
     "taban-raflari": "diger-pisirme",
+    "alt-dolaplar": "diger-pisirme",
     dolaplar: "diger-pisirme",
     "yardimci-ekipmanlar": "diger-pisirme",
     ekipmanlar: "diger-pisirme",
@@ -63,7 +89,19 @@
     "tost-makineleri": "diger-pisirme",
     "waffle-krep-makineleri": "diger-pisirme",
     "pilic-cevirme-makineleri": "diger-pisirme",
+    "pilic-cevirme-makinesi": "diger-pisirme",
+    "pilic-cevirme": "diger-pisirme",
+    "cay-makineleri": "diger-pisirme",
+    "ekmek-kizartma-makineleri": "diger-pisirme",
+    "cihazalti-soguk-ve-dondurucu-dolaplar": "diger-pisirme",
+    "cihazalti-sogutucu-ve-derin-dondurucular": "diger-pisirme",
   };
+
+  /** pilic-* gibi dinamik kategori slug'ları */
+  var CATEGORY_PREFIX_FACET = [
+    ["pilic-", "diger-pisirme"],
+    ["pilic_", "diger-pisirme"],
+  ];
 
   function lc(s) {
     return String(s || "").toLocaleLowerCase("tr");
@@ -90,10 +128,23 @@
         hit.raw && hit.raw.specs,
         hit.raw && hit.raw.urun_kategori,
         hit.raw && hit.raw.alt_kategori_1,
+        hit.raw && hit.raw.alt_kategori_2,
+        hit.raw && hit.raw.urun_alt_kategori,
       ]
         .filter(Boolean)
         .join(" "),
     );
+  }
+
+  function facetFromCategorySlug(cat) {
+    if (!cat) return null;
+    if (CATEGORY_FACET[cat]) return CATEGORY_FACET[cat];
+    for (var i = 0; i < CATEGORY_PREFIX_FACET.length; i++) {
+      if (cat.indexOf(CATEGORY_PREFIX_FACET[i][0]) === 0) {
+        return CATEGORY_PREFIX_FACET[i][1];
+      }
+    }
+    return null;
   }
 
   function isPisirmeProduct(hit) {
@@ -108,24 +159,36 @@
   function classifyFromHaystack(hay) {
     if (!hay) return null;
     if (/fritöz|fritoz|freidora|deep\s*fry|friteuse/.test(hay)) return "fritozler";
+    if (/mikrodalga|microwave|jet\s*oven|speed\s*oven/.test(hay)) return "firinlar";
     if (
-      /pizza\s*fır|pizza\s*fir|konveksiyon|kombi\s*fır|kombi\s*fir|mayalama\s*dolab|combi\s*oven|jet\s*oven|speed\s*oven/.test(
+      /pizza\s*fır|pizza\s*fir|konveksiyon|kombi\s*fır|kombi\s*fir|mayalama\s*dolab|combi\s*oven|taş\s*fır|tas\s*fir/.test(
         hay,
       )
     ) {
       return "firinlar";
     }
     if (/\bfırın\b|\bfirin\b/.test(hay) && !/mikrodalga|microwave/.test(hay)) return "firinlar";
-    if (/ızgara|izgara|grill|salamander|plancha|lavtaş|lavtas|griddle|char\s*grill/.test(hay)) {
+    if (/ızgara|izgara|grill|salamander|plancha|lavtaş|lavtas|griddle|char\s*grill|broiler|gratin/.test(hay)) {
       return "izgaralar";
     }
-    if (/ocak|kuzine|indüksiyon|induksiyon|endüksiyon|enduksiyon|wok|döner\s*ocak|doner\s*ocak/.test(hay)) {
+    if (
+      /ocak|kuzine|indüksiyon|induksiyon|endüksiyon|enduksiyon|wok|döner|doner|kebab|kebap/.test(hay) &&
+      !/dondurucu|soğutucu|sogutucu|buzdolab/.test(hay)
+    ) {
       return "ocaklar";
     }
-    if (/benmari|bain\s*marie|kaynatma\s*tencere|makarna\s*haş|makarna\s*has|devrilir\s*tava|patates\s*dinlen/.test(hay)) {
+    if (
+      /benmari|bain\s*marie|kaynatma\s*tencere|kaynatma\s*kazan|makarna\s*haş|makarna\s*has|devrilir\s*tava|patates\s*dinlen|buharli\s*kaynatma/.test(
+        hay,
+      )
+    ) {
       return "benmariler";
     }
-    if (/tost\s*mak|waffle|krep\s*mak|ara\s*tezgah|taban\s*raf|yardımcı\s*ekipman|yardimci\s*ekipman/.test(hay)) {
+    if (
+      /tost\s*mak|waffle|krep\s*mak|ara\s*tezgah|taban\s*raf|yardımcı\s*ekipman|yardimci\s*ekipman|pilic|piliç|rotisserie|çevirme|cevirme|ekmek\s*kızart|cay\s*mak|çay\s*mak/.test(
+        hay,
+      )
+    ) {
       return "diger-pisirme";
     }
     return null;
@@ -133,7 +196,8 @@
 
   function classifyFacet(hit) {
     var cat = categorySlug(hit);
-    if (cat && CATEGORY_FACET[cat]) return CATEGORY_FACET[cat];
+    var fromCat = facetFromCategorySlug(cat);
+    if (fromCat) return fromCat;
     return classifyFromHaystack(productHaystack(hit));
   }
 
@@ -182,8 +246,8 @@
     var selected = opts.selected || [];
     var inputName = opts.inputName || "eq-pisirme-tip";
     var keys = sortKeys(
-      Object.keys(counts).filter(function (k) {
-        return counts[k] > 0;
+      FACET_ORDER.filter(function (k) {
+        return (counts[k] || 0) > 0;
       }),
     );
     if (!keys.length) return "";
