@@ -71,7 +71,7 @@ export default async function ShopProductPage({
       {/* eslint-disable-next-line @next/next/no-css-tags */}
       <link rel="stylesheet" href={`/eq-product-page.css?v=${SHOP_ASSET_V}`} precedence="high" />
       <ShopStyles variant="product" />
-      <ShopBodyClass className="eq-shop" />
+      <ShopBodyClass className="eq-shop eq-pdp-page" />
       <ShopEqustoChrome activeDept={null} />
       <ShopProductMain ssr={ssr} />
       <ShopProductPdpBoot />
