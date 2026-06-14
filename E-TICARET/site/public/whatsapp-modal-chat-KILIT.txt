@@ -1,0 +1,58 @@
+═══════════════════════════════════════════════════════════════════════════
+KİLİT — WhatsApp modal sohbet senkronu (Mr. Equsto ↔ telefon)
+Onay: 2026-06-12 · Commit referans: f5cac61c · e7dade99 · 63e2cf11
+İlgili: pfos-uye-auth-KILIT.txt (üye kapısı · WA_MODAL_BUILD=25)
+═══════════════════════════════════════════════════════════════════════════
+
+Modal yalnızca localStorage kullanınca telefondan gelen cevaplar görünmez.
+Bu kilit sunucu tarafı WaChatMessage + Green API webhook + 4 sn polling akışını korur.
+
+── Beklenen davranış ───────────────────────────────────────────────────────
+  • Üye oturumu + Hesabım’da kayıtlı cep telefonu zorunlu (equsto-wa-phone-gate)
+  • Modal açıkken GET /api/whatsapp/chat ile 4 sn polling (since= artımlı)
+  • Müşteri modalden yazınca: POST /api/musteriler (kaynak: whatsapp-modal) → DB user satırı
+  • Otomatik «mesajınız alındı» cevabı: notifyCustomerLeadAck → team satırı (waMessageId)
+  • Telefondan müşteriye yazılan: Green API outgoingMessageReceived → webhook → team satırı
+  • Müşteriden gelen WA: incomingMessageReceived → webhook → user satırı
+  • İç numaralar (vitrin / notify) isInternalWhatsAppPhone ile filtrelenir
+  • Green API GET /api/whatsapp/webhook → 200 JSON (panel URL kontrolü; Forbidden değil)
+
+── Green API webhook (Hetzner / configure script) ───────────────────────────
+  URL: https://equsto.com/api/whatsapp/webhook
+  • incomingWebhook = yes          (Gelen mesaj…)
+  • outgoingMessageWebhook = yes   (Telefondan gönderilen…)
+  • outgoingAPIMessageWebhook = yes (API'den gönderilen…)
+  Script: node --import ./scripts/load-env.mjs scripts/configure-green-api-webhook.mjs
+
+── Kilitli dosyalar ───────────────────────────────────────────────────────
+  lib/wa-chat.ts                    — appendWaChatMessage, listWaChatMessages
+  app/api/whatsapp/chat/route.ts    — GET, requireMemberSession
+  lib/whatsapp/green-api.ts         — parseGreenApiOutboundMessages
+  lib/whatsapp/api-handlers.ts      — webhook inbound/outbound → DB; GET green-api 200
+  app/api/musteriler/[[...id]]/route.ts — modal gönderim → appendWaChatMessage
+  lib/notify.ts                       — notifyCustomerLeadAck → team satırı
+  public/contact.js                 — syncWaChatFromServer, startWaChatPoll (4000 ms)
+  prisma/schema.prisma              — model WaChatMessage
+  prisma/migrations/20260614170000_wa_chat_message/
+  scripts/configure-green-api-webhook.mjs
+
+── Kritik kod (bozulursa telefon cevabı modalde görünmez) ─────────────────
+  contact.js: eqMsgApiBase() + "/whatsapp/chat" + Bearer token
+  contact.js: startWaChatPoll → setInterval(..., 4000)
+  api-handlers waWebhookPost: parseGreenApiOutboundMessages + appendWaChatMessage team
+  wa-chat.ts: waMessageId unique dedupe
+  WA_MODAL_BUILD = 25 (pfos-uye-auth kilidi ile birlikte)
+
+YASAK (onay olmadan):
+  • Polling’i kaldırmak veya yalnızca localStorage’a dönmek
+  • Webhook outbound (telefondan gönderilen) parse/kaydını kaldırmak
+  • GET webhook’u Green API modunda Forbidden yapmak
+  • requireMemberSession’ı /api/whatsapp/chat’ten çıkarmak
+  • WaChatMessage modelini / migration’ı silmek
+  • isInternalWhatsAppPhone filtresini kaldırmak (iç sohbet karışır)
+
+── Doğrulama ─────────────────────────────────────────────────────────────
+  npm run verify:whatsapp-modal-chat-kilit
+  Vercel prebuild: zorunlu
+
+═══════════════════════════════════════════════════════════════════════════
