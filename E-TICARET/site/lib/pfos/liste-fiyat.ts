@@ -22,6 +22,7 @@ import { enrichEslesmisUrunKw } from "@/lib/pfos/core/enrich-eslesmis-kw";
 import { resolveTeklifKw } from "@/lib/catalog/kw-resolve";
 import { resolveTipKodu } from "@/lib/pfos/core/tip-kodu";
 import { TEKLIF_DEFAULT_FIYAT_STRATEJISI } from "@/lib/pfos/teklif/teklif-policy";
+import { resetTeshirReyonSeriesPin } from "@/lib/pfos/referans/teshir-reyon-match";
 import type {
   FiyatStratejisi,
   PFOSKalemi,
@@ -77,6 +78,7 @@ export async function calculateListeQuote(
 ): Promise<PFOSResponse> {
   clearMatchProductCache();
   invalidateKatalogGorselCache();
+  resetTeshirReyonSeriesPin();
   const fiyatStratejisi =
     input.fiyatStratejisi ?? TEKLIF_DEFAULT_FIYAT_STRATEJISI;
   const sehir = input.sehir?.trim() || "İstanbul";

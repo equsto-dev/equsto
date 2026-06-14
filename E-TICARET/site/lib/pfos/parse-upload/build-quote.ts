@@ -16,6 +16,7 @@ import {
 import type { PfosKategoriKodu } from "../core/engine-types";
 import type { MeiliKalemEslestirme } from "./types";
 import { formatPfosDisplayTanim } from "./sanitize-tanim";
+import { resetTeshirReyonSeriesPin } from "../referans/teshir-reyon-match";
 
 const POZ_BOLUM: Record<string, string> = {
   A: "sıcak mutfak",
@@ -61,6 +62,7 @@ export type ParseUploadQuoteInput = {
 export async function buildQuoteFromMeiliEslestirme(
   input: ParseUploadQuoteInput,
 ): Promise<PFOSResponse> {
+  resetTeshirReyonSeriesPin();
   const sehir = input.sehir?.trim() || "İstanbul";
   const kalemlerRaw: PFOSKalemi[] = input.eslestirmeler.map((e, i) => {
     const bolum =

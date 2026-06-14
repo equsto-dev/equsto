@@ -32,6 +32,7 @@ import {
   matchCatalogByEqustoKod,
 } from "@/lib/catalog/equsto-kod-lookup";
 import { referansKatalogUyumsuz, matchReferansKalem } from "../referans/referans-eslestirme";
+import { resetTeshirReyonSeriesPin } from "../referans/teshir-reyon-match";
 import { isBuroTipiDerinDondurucuReferans } from "../referans/buzdolabi-match";
 import { inferUrunTipiFromReferansSatir } from "../referans/infer-urun-tipi";
 import { matchDuvarRafiByReferans } from "../referans/duvar-raf-match";
@@ -630,6 +631,7 @@ export async function matchItems(items: ParsedItem[]): Promise<ItemMatchResult[]
 export async function eslestirProformaKalemler(
   kalemler: ParsedItem[],
 ): Promise<MeiliKalemEslestirme[]> {
+  resetTeshirReyonSeriesPin();
   const results = await matchItems(kalemler);
   const out: MeiliKalemEslestirme[] = [];
   for (let i = 0; i < kalemler.length; i++) {
