@@ -47,6 +47,7 @@
     energy: [],
     kuvetGn: [],
     buzdolapTip: [],
+    pisirmeTip: [],
     q: '',
     sort: '',
     priceMin: '',
@@ -749,6 +750,14 @@
         );
       });
     }
+    if (state.pisirmeTip.length && window.EqPisirmeFacets) {
+      list = list.filter(function (u) {
+        return window.EqPisirmeFacets.hitMatchesAnyFacet(
+          { name: u.n, n: u.n, category: u.c, raw: u.raw },
+          state.pisirmeTip,
+        );
+      });
+    }
     if (state.energy.length && window.EqDeptCmFacets) {
       list = list.filter(function (u) {
         for (var ei = 0; ei < state.energy.length; ei++) {
@@ -835,6 +844,14 @@
         );
       });
     }
+    if (state.pisirmeTip.length && exclude !== 'pisirmeTip' && window.EqPisirmeFacets) {
+      list = list.filter(function (u) {
+        return window.EqPisirmeFacets.hitMatchesAnyFacet(
+          { name: u.n, n: u.n, category: u.c, raw: u.raw },
+          state.pisirmeTip,
+        );
+      });
+    }
     if (state.energy.length && exclude !== 'energy' && window.EqDeptCmFacets) {
       list = list.filter(function (u) {
         for (var ei = 0; ei < state.energy.length; ei++) {
@@ -871,6 +888,7 @@
     state.energy = [];
     state.kuvetGn = [];
     state.buzdolapTip = [];
+    state.pisirmeTip = [];
     state.priceMin = '';
     state.priceMax = '';
     state.loadedCount = PAGE_SIZE;
@@ -895,6 +913,7 @@
       else if (type === 'energy') state.energy = state.energy.filter(function (e) { return e !== value; });
       else if (type === 'kuvetGn') state.kuvetGn = state.kuvetGn.filter(function (k) { return k !== value; });
       else if (type === 'buzdolapTip') state.buzdolapTip = state.buzdolapTip.filter(function (k) { return k !== value; });
+      else if (type === 'pisirmeTip') state.pisirmeTip = state.pisirmeTip.filter(function (k) { return k !== value; });
       else if (type === 'priceMin') state.priceMin = '';
       else if (type === 'priceMax') state.priceMax = '';
       state.loadedCount = PAGE_SIZE;

@@ -26,6 +26,7 @@
     brands: [],
     kuvetGn: [],
     buzdolapTip: [],
+    pisirmeTip: [],
     sort: "",
     priceMin: "",
     priceMax: "",
@@ -208,6 +209,7 @@
     filterState.brands = [];
     filterState.kuvetGn = [];
     filterState.buzdolapTip = [];
+    filterState.pisirmeTip = [];
     filterState.sort = "";
     filterState.priceMin = "";
     filterState.priceMax = "";
@@ -223,12 +225,17 @@
     return !!(window.EqBuzdolapFacets && sourceHits.some(window.EqBuzdolapFacets.isBuzdolapProduct));
   }
 
+  function hasPisirmeFacets() {
+    return !!(window.EqPisirmeFacets && sourceHits.some(window.EqPisirmeFacets.isPisirmeProduct));
+  }
+
   function hasActiveFilters() {
     return (
       filterState.depts.length > 0 ||
       filterState.brands.length > 0 ||
       filterState.kuvetGn.length > 0 ||
       filterState.buzdolapTip.length > 0 ||
+      filterState.pisirmeTip.length > 0 ||
       filterState.priceMin !== "" ||
       filterState.priceMax !== "" ||
       !!filterState.sort
@@ -255,6 +262,11 @@
     if (filterState.buzdolapTip.length && exclude !== "buzdolapTip" && window.EqBuzdolapFacets) {
       list = list.filter(function (h) {
         return window.EqBuzdolapFacets.hitMatchesAnyFacet(h, filterState.buzdolapTip);
+      });
+    }
+    if (filterState.pisirmeTip.length && exclude !== "pisirmeTip" && window.EqPisirmeFacets) {
+      list = list.filter(function (h) {
+        return window.EqPisirmeFacets.hitMatchesAnyFacet(h, filterState.pisirmeTip);
       });
     }
     if (filterState.priceMin !== "" && exclude !== "price") {
@@ -606,6 +618,18 @@
         esc(blbl) +
         " ×</button>";
     });
+    filterState.pisirmeTip.forEach(function (k) {
+      var plbl =
+        window.EqPisirmeFacets && window.EqPisirmeFacets.labelFromKey
+          ? window.EqPisirmeFacets.labelFromKey(k)
+          : k;
+      html +=
+        '<button type="button" class="eq-cm-chip" data-kind="pisirmeTip" data-value="' +
+        esc(k) +
+        '">' +
+        esc(plbl) +
+        " ×</button>";
+    });
     if (filterState.priceMin !== "") {
       html +=
         '<button type="button" class="eq-cm-chip" data-kind="priceMin">min ' +
@@ -640,6 +664,10 @@
           filterState.buzdolapTip = filterState.buzdolapTip.filter(function (k) {
             return k !== val;
           });
+        } else if (kind === "pisirmeTip") {
+          filterState.pisirmeTip = filterState.pisirmeTip.filter(function (k) {
+            return k !== val;
+          });
         } else if (kind === "priceMin") filterState.priceMin = "";
         else if (kind === "priceMax") filterState.priceMax = "";
         renderAll();
@@ -658,6 +686,7 @@
     var brandPool = poolForCounts("brand");
     var kuvetGnPool = poolForCounts("kuvetGn");
     var buzdolapTipPool = poolForCounts("buzdolapTip");
+    var pisirmeTipPool = poolForCounts("pisirmeTip");
     var pricePool = poolForCounts("price");
     var deptCounts = Object.create(null);
     var brandCounts = Object.create(null);
@@ -765,6 +794,16 @@
       });
     }
 
+    if (window.EqPisirmeFacets && hasPisirmeFacets()) {
+      var pisCounts = window.EqPisirmeFacets.countFacets(pisirmeTipPool);
+      html += window.EqPisirmeFacets.renderFacetListHtml({
+        counts: pisCounts,
+        selected: filterState.pisirmeTip,
+        inputName: "eq-arama-pisirme-tip",
+        title: __searchT("search.filter_pisirme_type", "Pişirme tipi"),
+      });
+    }
+
     html +=
       '<details class="eq-cm-facet" open><summary class="eq-cm-facet__hd">' +
       esc(__searchT("search.filter_price", "Fiyat")) +
@@ -843,6 +882,15 @@
           buzVals.push(el.value);
         });
         filterState.buzdolapTip = buzVals;
+        renderAll();
+        return;
+      }
+      if (t.name === "eq-arama-pisirme-tip") {
+        var pisVals = [];
+        host.querySelectorAll('input[name="eq-arama-pisirme-tip"]:checked').forEach(function (el) {
+          pisVals.push(el.value);
+        });
+        filterState.pisirmeTip = pisVals;
         renderAll();
       }
     });

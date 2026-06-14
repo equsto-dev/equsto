@@ -18,6 +18,7 @@ export default function ShopSearchScripts() {
       <Script src={`/eq-dept-tips.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-kuvet-gn-facets.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-buzdolap-facets.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/eq-pisirme-facets.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-product-card-tint.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-arama-page.js?v=${v}`} strategy="afterInteractive" />
     </>
