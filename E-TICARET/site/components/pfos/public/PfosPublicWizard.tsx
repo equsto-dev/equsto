@@ -90,6 +90,22 @@ function formatTry(n: number) {
   }).format(n);
 }
 
+async function readFetchJson<T>(
+  res: Response,
+  emptyMessage: string,
+  invalidMessage: string,
+): Promise<T> {
+  const text = await res.text();
+  if (!text.trim()) {
+    throw new Error(emptyMessage);
+  }
+  try {
+    return JSON.parse(text) as T;
+  } catch {
+    throw new Error(invalidMessage);
+  }
+}
+
 function parseKonsept(slug: string | null): string | null {
   if (!slug) return null;
   const normalized = String(slug).trim();
@@ -331,10 +347,14 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
             altTip: motorGirdi.altTip,
           }),
         });
-        const json = (await res.json()) as {
+        const json = await readFetchJson<{
           success?: boolean;
           data?: ReferansOnizleme;
-        };
+        }>(
+          res,
+          t("Referans önizlemesi alınamadı."),
+          t("Referans önizlemesi geçersiz yanıt."),
+        );
         if (cancelled) return;
         if (res.ok && json.success && json.data) {
           setReferansOnizleme(json.data);
@@ -493,7 +513,13 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
           projeAdi: `${motorGirdi.dukkanSecim}${m2 ? ` · ${m2} m²` : ""}`,
         }),
       });
-      const data = await res.json();
+      const data = await readFetchJson<PFOSResponse>(
+        res,
+        t(
+          "Teklif yanıtı boş geldi. Hesaplama uzun sürebilir; lütfen birkaç saniye bekleyip tekrar deneyin.",
+        ),
+        t("Teklif yanıtı okunamadı. Lütfen tekrar deneyin."),
+      );
       if (!res.ok) {
         throw new Error(
           (data as { error?: string }).error ?? t("Teklif oluşturulamadı"),
