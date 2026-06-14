@@ -16,6 +16,7 @@ import {
 } from "@/lib/google-merchant-feed";
 import { sortYikamaCatalogRows } from "@/lib/shop/yikama-plp-order";
 import { resolveShopDept } from "@/lib/shop/category-dept";
+import { isBarDesignShopProduct } from "@/lib/shop/bar-design-exclusive";
 import { SHOP_DEPTS, isShopDeptSlug, type ShopDeptSlug } from "@/lib/shop/depts";
 import type { Metadata } from "next";
 
@@ -57,7 +58,7 @@ export async function findProductForPdp(
   const matchInRows = (rows: CatalogRow[] | null | undefined, slug: string) => {
     if (!Array.isArray(rows)) return null;
     for (const row of rows) {
-      if (!row || resolveShopDept(row) !== urlDept) continue;
+      if (!row || isBarDesignShopProduct(row) || resolveShopDept(row) !== urlDept) continue;
       if (matchCatalogRowByPathSlug(row, slug)) return row;
     }
     return null;
@@ -76,7 +77,7 @@ export async function findProductForPdp(
         ekipRows = Array.isArray(raw) ? (raw as CatalogRow[]) : [];
       }
       for (const row of ekipRows) {
-        if (!row || resolveShopDept(row) !== urlDept) continue;
+        if (!row || isBarDesignShopProduct(row) || resolveShopDept(row) !== urlDept) continue;
         const cid = String(row.id || "").trim().toLowerCase();
         if (cid && (cid === slug || cid.replace(/__/g, "-") === slug)) {
           return { row, dept: urlDept };

@@ -40,7 +40,7 @@ export default function BesosUrbanBarPlpCard({ product, locale = "tr", cartReady
   const hoverUrl = hoverFailed ? "" : hoverOverride || resolved.hoverUrl;
   const { hoverCandidates } = resolved;
 
-  const pdpHref = product.besosHref || product.shopHref || "#";
+  const pdpHref = product.besosHref || "#";
   const { amount, vat } = splitUrbanBarPrice(product.price || "", locale);
   const inStock = product.inStock !== false;
 

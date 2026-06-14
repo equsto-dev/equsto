@@ -4,6 +4,7 @@ import { loadEkipmanlarJson } from "@/lib/catalog-json";
 import { getSiteOrigin } from "@/lib/site-origin";
 import { resolveShopDept } from "@/lib/shop/category-dept";
 import { isShopDeptSlug } from "@/lib/shop/depts";
+import { isBarDesignShopProduct } from "@/lib/shop/bar-design-exclusive";
 import { absoluteAssetUrl } from "@/lib/asset-cdn";
 
 export { absoluteAssetUrl };
@@ -221,6 +222,7 @@ export async function buildMerchantFeedItems(opts?: {
   const seenIds = new Set<string>();
 
   for (const row of rows) {
+    if (isBarDesignShopProduct(row)) continue;
     if (opts?.includeQuoteOnly !== true && isQuoteOnlyProduct(row)) {
       stats.skippedQuoteOnly++;
       continue;

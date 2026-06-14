@@ -7,6 +7,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { isBarDesignShopProduct } from "./lib/bar-design-shop-exclude.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DEPT_DIR = path.join(ROOT, "public/data/dept");
@@ -33,6 +34,7 @@ for (const file of fs.readdirSync(DEPT_DIR).sort()) {
   if (!Array.isArray(rows)) continue;
   for (const row of rows) {
     if (!row || typeof row !== "object") continue;
+    if (isBarDesignShopProduct(row)) continue;
     const k = rowKey(row);
     if (seen.has(k)) continue;
     seen.add(k);
