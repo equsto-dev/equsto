@@ -14,6 +14,11 @@ fi
 echo "[hetzner-deploy] site: $SITE_DIR"
 git pull --ff-only
 
+# Docker app nextjs (uid 1001) — public/data bind mount yazılabilir olmalı
+if [[ -d public/data ]]; then
+  chown -R 1001:1001 public/data 2>/dev/null || true
+fi
+
 docker compose --env-file .env.production build --pull
 docker compose --env-file .env.production up -d
 

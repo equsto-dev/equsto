@@ -32,6 +32,9 @@ services:
       HOME: /tmp
     depends_on:
       - meilisearch
+    volumes:
+      # Admin panel JSON yazımı (eticaret-icerik, tip-sozlugu, pfos-referans…) — host'ta kalıcı
+      - ./public/data:/app/public/data
     networks:
       - web
     expose:
