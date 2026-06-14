@@ -1,8 +1,8 @@
 {
-  "version": "2026-06-14T09-57-20",
-  "rebuiltAt": "2026-06-14T09:57:20.810Z",
-  "ekipmanlar": 10501,
-  "withImage": 10499,
+  "version": "2026-06-14T10-34-50",
+  "rebuiltAt": "2026-06-14T10:34:50.799Z",
+  "ekipmanlar": 10500,
+  "withImage": 10498,
   "brands": 23,
   "deptCounts": {
     "araba": 92,
@@ -13,7 +13,7 @@
     "istif": 276,
     "kahve": 145,
     "market-reyon": 2009,
-    "pisirme": 2126,
+    "pisirme": 2125,
     "servis": 1058,
     "set-ustu-mutfak": 968,
     "sogutma": 850,

@@ -1,6 +1,7 @@
-/**
- * Vosco PDF katalog → stok kodu → EUR liste (PDF EUR veya USD→EUR)
- */
+/** Equsto satış = liste × 45% (%55 bayi iskonto) */
+export const VOSCO_SATIS_ORAN = 0.45;
+export const VOSCO_ISKONTO_ORAN = 0.55;
+
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -191,7 +192,13 @@ export function findVoscoSitePrice(p, kdv = 20) {
   });
 }
 
-export function pricingFromVoscoListeEur(listeEur, eurTry, kdv = 20, satisOran = 0.55, meta = {}) {
+export function pricingFromVoscoListeEur(
+  listeEur,
+  eurTry,
+  kdv = 20,
+  satisOran = VOSCO_SATIS_ORAN,
+  meta = {},
+) {
   const satisEur = Math.round(listeEur * satisOran * 100) / 100;
   const netTry = satisEur * eurTry;
   const kdvDahil = netTry * (1 + kdv / 100);
@@ -202,6 +209,8 @@ export function pricingFromVoscoListeEur(listeEur, eurTry, kdv = 20, satisOran =
     satis_fiyati_eur: satisEur,
     satis_eur_indirimli: satisEur,
     satis_oran: satisOran,
+    iskonto_oran: Math.round(VOSCO_ISKONTO_ORAN * 100),
+    bayi_iskonto: VOSCO_ISKONTO_ORAN,
     kur_eur_try: eurTry,
     kur_usd_try: meta.usdTry,
     kur_usd_eur: meta.kurUsdEur,
@@ -213,7 +222,13 @@ export function pricingFromVoscoListeEur(listeEur, eurTry, kdv = 20, satisOran =
 }
 
 /** @deprecated use pricingFromVoscoListeEur via resolveListeEur */
-export function pricingFromVoscoPdfListe(listeUsd, eurTry, usdTry, kdv = 20, satisOran = 0.55) {
+export function pricingFromVoscoPdfListe(
+  listeUsd,
+  eurTry,
+  usdTry,
+  kdv = 20,
+  satisOran = VOSCO_SATIS_ORAN,
+) {
   const listeEur = usdToEur(listeUsd, usdTry, eurTry);
   return pricingFromVoscoListeEur(listeEur, eurTry, kdv, satisOran, {
     listeUsd,
