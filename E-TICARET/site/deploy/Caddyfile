@@ -18,6 +18,14 @@ http://equsto.com, http://www.equsto.com {
 		rewrite * /api/cms?kind=proje-akis
 		reverse_proxy app:3000
 	}
+	handle /api/pfos/* {
+		reverse_proxy app:3000 {
+			transport http {
+				read_timeout 5m
+				write_timeout 5m
+			}
+		}
+	}
 	handle {
 		reverse_proxy app:3000
 	}
@@ -28,6 +36,14 @@ equsto.com {
 	handle /api/proje-akis* {
 		rewrite * /api/cms?kind=proje-akis
 		reverse_proxy app:3000
+	}
+	handle /api/pfos/* {
+		reverse_proxy app:3000 {
+			transport http {
+				read_timeout 5m
+				write_timeout 5m
+			}
+		}
 	}
 	handle {
 		reverse_proxy app:3000
