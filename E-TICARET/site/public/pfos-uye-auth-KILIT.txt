@@ -23,7 +23,7 @@ kayıt (telefon + şifre tekrar) ve Amazon tarzı /hesabim merkezini korur.
 
 ── 3. WhatsApp modal (Mr. Equsto) ──────────────────────────────────────────
   • Sohbet öncesi üye kapısı — PFOS ile aynı «Üye Girişi» + «Kayıt ol»
-  • WA_MODAL_BUILD = 24 (DOM yenileme kilidi)
+  • WA_MODAL_BUILD = 25 (DOM yenileme kilidi)
   • equstoLoginHref / equstoRegisterHref ile ?next= geri dönüş
   • Telefon kapısı: equsto-wa-phone-gate → /hesabim#guvenlik (mesaj öncesi zorunlu)
   • Stil: .equsto-wa-login-gate__btn (lacivert), __register linki

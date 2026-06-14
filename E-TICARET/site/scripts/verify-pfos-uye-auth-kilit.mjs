@@ -8,7 +8,7 @@ import { fileURLToPath } from "node:url";
 
 const siteDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SHOP_ASSET_V = "20260614-senox-wn-fiyat-v1";
-const WA_MODAL_BUILD = 24;
+const WA_MODAL_BUILD = 25;
 let err = 0;
 
 function fail(msg) {
