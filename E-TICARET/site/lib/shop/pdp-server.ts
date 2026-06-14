@@ -3,6 +3,7 @@ import {
   matchCatalogRowByPathSlug,
   pdpSlugAliases,
 } from "@/lib/catalog-product-slug";
+import { resolveCatalogImageFromRow } from "@/lib/catalog-image-resolve";
 import { loadEkipmanlarJson } from "@/lib/catalog-json";
 import { dataRel, readJsonFile } from "@/lib/legacy-data";
 import {
@@ -27,14 +28,7 @@ function urlDeptToFileDept(urlDept: string): string {
 }
 
 function productImagePath(row: CatalogRow): string {
-  const imgs = row.images;
-  if (!Array.isArray(imgs) || !imgs.length) return "";
-  const pick = String(imgs[0] || "").replace(/\\/g, "/").replace(/^\.\//, "");
-  if (!pick) return "";
-  if (pick.startsWith("http")) return pick;
-  if (pick.startsWith("data/")) return `/${pick}`;
-  if (pick.startsWith("images/")) return `/${pick}`;
-  return `/data/${pick.replace(/^data\//, "")}`;
+  return resolveCatalogImageFromRow(row);
 }
 
 export type PdpSsrPayload = {
