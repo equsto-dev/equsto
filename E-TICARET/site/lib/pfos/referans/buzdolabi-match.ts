@@ -12,7 +12,7 @@ import {
   oztiPreferredBuzSkus,
   scoreOztiBuzdolabiRow,
 } from "../core/ozti-buzdolabi-spec";
-import { displayIsimFromSablon } from "../core/ozel-imalat";
+import { buzdolabiDisplayIsimFromSablon } from "./buzdolabi-display";
 import type { EslesmisUrun, FiyatStratejisi } from "../schemas/pfos.schema";
 import { toOlcuMmDisplay } from "../teklif/olcu-mm";
 import { extractOlcuFromNotlar } from "./yer-izgara-match";
@@ -190,10 +190,27 @@ async function hydrateBuzdolabiFromSku(
   });
   return {
     ...matched,
-    ad: displayIsimFromSablon(isim),
+    ad: buzdolabiDisplayIsimFromSablon(isim, {
+      sku: row.sku,
+      katalogAd: row.ad,
+      olcu: olcuDisplay,
+    }),
     marka: OZTI_MARKA,
     olcu: olcuDisplay,
   };
+}
+
+function buzAdFromSablon(
+  isim: string,
+  olcuDisplay: string | null,
+  row?: AdminUrunRow | null,
+  sku?: string | null,
+): string {
+  return buzdolabiDisplayIsimFromSablon(isim, {
+    sku: sku ?? row?.sku,
+    katalogAd: row?.ad,
+    olcu: olcuDisplay,
+  });
 }
 
 /** Buzdolabı / derin dondurucu — Öztiryakiler katalog */
@@ -242,7 +259,7 @@ export async function matchBuzdolabiByReferans(
       });
       return {
         ...matched,
-        ad: displayIsimFromSablon(isim),
+        ad: buzAdFromSablon(isim, olcuDisplay, exact),
         marka: OZTI_MARKA,
         olcu: olcuDisplay,
       };
@@ -282,7 +299,7 @@ export async function matchBuzdolabiByReferans(
     });
     return {
       ...matched,
-      ad: displayIsimFromSablon(isim),
+      ad: buzAdFromSablon(isim, olcuDisplay, scored[0].row),
       marka: OZTI_MARKA,
       olcu: olcuDisplay,
     };
@@ -303,7 +320,7 @@ export async function matchBuzdolabiByReferans(
     return {
       id: `ozti-buz-${sku.toLowerCase()}`,
       sku,
-      ad: displayIsimFromSablon(isim),
+      ad: buzAdFromSablon(isim, olcuDisplay, null, sku),
       marka: OZTI_MARKA,
       model: sku,
       olcu: olcuDisplay,

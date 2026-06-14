@@ -23,7 +23,7 @@ import {
 } from "../core/katalog-gorsel-url";
 import { equstoPimakGorselRelFromSku } from "../core/equsto-pimak-gorsel";
 import { isEqustoDavlumbazRow } from "../core/davlumbaz-marka";
-import { displayIsimFromSablon } from "../core/ozel-imalat";
+import { buzdolabiDisplayIsimFromSablon } from "../referans/buzdolabi-display";
 import { sanitizeDavlumbazOlcu } from "./davlumbaz-olcu";
 import {
   formatPfosDisplayTanim,
@@ -128,13 +128,21 @@ export function pfosResponseToTeklifV14(
       gazGucuKwHint: k.gazGucuKwHint,
     });
 
+    const olcuTeklif =
+      olcuForTeklifUrun(u, cleanObjectString(k.notlar));
+    const tanim = buzdolabiDisplayIsimFromSablon(sablonIsim, {
+      sku: u?.sku,
+      katalogAd: u?.ad,
+      olcu: olcuTeklif,
+    });
+
     return {
       bolumNo,
       bolumBaslik,
       poz: k.poz,
       ek: "",
       stokNo: u?.sku ?? "",
-      tanim: displayIsimFromSablon(sablonIsim),
+      tanim,
       marka: resolveTeklifMarka({
         katalogMarka: u?.marka,
         urunAd: u?.ad,
@@ -144,10 +152,10 @@ export function pfosResponseToTeklifV14(
       }),
       olcu:
         sanitizeDavlumbazOlcu(
-          displayIsimFromSablon(sablonIsim),
-          olcuForTeklifUrun(u, cleanObjectString(k.notlar)),
+          tanim,
+          olcuTeklif,
           k.urunTipi,
-        ) ?? olcuForTeklifUrun(u, cleanObjectString(k.notlar)),
+        ) ?? olcuTeklif,
       elkKw: kw.elektrikGucuKw,
       gazKw: kw.gazGucuKw,
       adet,

@@ -3,6 +3,7 @@
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import PfosEqustoChrome from "@/components/pfos/public/PfosEqustoChrome";
+import PfosVersionBar from "@/components/pfos/public/PfosVersionBar";
 import PfosListeUpload from "@/components/pfos/public/PfosListeUpload";
 import PfosPublicWizard from "@/components/pfos/public/PfosPublicWizard";
 import PfosScripts from "@/components/pfos/public/PfosScripts";
@@ -64,6 +65,7 @@ export default function PfosPublicPage() {
           {mode === "wizard" ? <PfosPublicWizard /> : <PfosListeUpload />}
         </div>
         <footer className="footer eq-mfoot" id="eq-shop-footer" />
+        <PfosVersionBar />
       </div>
     </>
   );

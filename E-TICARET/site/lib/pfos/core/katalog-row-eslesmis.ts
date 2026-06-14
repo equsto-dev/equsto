@@ -27,7 +27,7 @@ export function katalogRowToEslesmis(
   enrichOpts: EnrichOpts = {},
 ): EslesmisUrun {
   const enriched = enrichEslesmisFromKatalogRow(row, enrichOpts);
-  const kw = resolveKwFromSources(row);
+  const kw = resolveKwFromSources({ ...row, sku: row.sku, urunAd: row.ad });
   return {
     id: row.id,
     slug: row.id.replace(/^ecom_/, ""),

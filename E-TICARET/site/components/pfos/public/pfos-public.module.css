@@ -508,6 +508,43 @@
   font-size: 0.8rem;
 }
 
+.versionBar {
+  width: 100%;
+  background: #fffbf0;
+  border-top: 1px solid #f3e8c8;
+  box-shadow: inset 3px 0 0 #c9a227;
+  padding: 0.7rem 1rem;
+}
+
+.versionBarText {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1.55;
+  color: #6b7280;
+}
+
+.versionBarVersion {
+  font-weight: 600;
+  color: #001e50;
+}
+
+.versionBarSep {
+  color: #9ca3af;
+}
+
+.versionBarLink {
+  color: #1677ff;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.versionBarLink:hover {
+  color: #001e50;
+}
+
 /* ── pfos.html legacy layout ── */
 .layout {
   display: grid;

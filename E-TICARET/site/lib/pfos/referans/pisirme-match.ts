@@ -87,7 +87,7 @@ export function oztiPisirmeKatalogUyumsuz(
 
 export function isPisirmeReferans(isim: string): boolean {
   const n = norm(isim);
-  return /fritoz|fritöz|izgar|ocak|kuzine|salamander|firin|fırın|patates\s*dinlendir|wok|benmari|makarna\s*pisir|tost|waffle|pizza\s*firin/.test(
+  return /fritoz|fritöz|izgar|ocak|kuzine|salamander|firin|fırın|patates\s*dinlendir|wok|benmari|bain\s*marie|bainmarie|sos\s*bain|makarna\s*pisir|tost|waffle|pizza\s*firin/.test(
     n,
   );
 }
@@ -104,6 +104,7 @@ type PisirmeFamily =
   | "wok"
   | "doner"
   | "makarna"
+  | "bainmarie"
   | "komurlu_izgara"
   | null;
 
@@ -116,6 +117,7 @@ function parsePisirmeFamily(isim: string, urunTipi?: string | null): PisirmeFami
     return "komurlu_izgara";
   }
   if (/fritoz|fritöz|friteuse/.test(n)) return "fritoz";
+  if (/bain\s*marie|bainmarie|sos\s*bain|benmari/.test(n)) return "bainmarie";
   if (/pizza\s*firin|pizza\s*fırın/.test(n)) return "pizza_firin";
   if (/salamander/.test(n)) return "salamander";
   if (/wok/.test(n)) return "wok";
@@ -225,6 +227,12 @@ function rowMatchesFamily(row: AdminUrunRow, family: PisirmeFamily): boolean {
       return cat.includes("doner") || /döner|doner/.test(ad);
     case "makarna":
       return cat.includes("makarna") || /makarna/.test(ad);
+    case "bainmarie":
+      return (
+        (cat.includes("bain") || /bain\s*marie|benmari/.test(ad)) &&
+        !/bain\s*marie\s*(kapak|kuvet|küvet)/.test(ad) &&
+        !( /celik\s*saklama/.test(ad) && /bain\s*marie|benmari/.test(ad) )
+      );
     case "komurlu_izgara":
       return /komurlu.*izgar|kömürlü.*izgar/.test(ad);
     default:
@@ -301,6 +309,13 @@ function scoreOztiPisirmeRow(
     const ocakScore = scoreOztiOcakRow(row, referansIsim, olcu, notlar, preferred);
     if (ocakScore < 0) return ocakScore;
     score += ocakScore;
+  }
+  if (family === "bainmarie") {
+    if (/elektrik|elk|elektr/.test(refBlob) && /elektrik/.test(ad)) score += 80;
+    if (/gazli|gazlı|\bgaz\b/.test(refBlob) && /gazli|gazlı|\bgaz\b/.test(ad)) score += 80;
+    if (/elektrik|elk|elektr/.test(refBlob) && /gazli|gazlı|\bgaz\b/.test(ad) && !/elektrik/.test(ad)) {
+      score -= 5000;
+    }
   }
   if (row.gorsel_url) score += 5;
   if (row.fiyat_tl > 0) score += 5;

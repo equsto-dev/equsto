@@ -42,7 +42,7 @@ export function isPisirmeReferansIsim(isim: string | null | undefined): boolean 
   }
   return (
     /fritoz|fritöz|izgar|ocak|kuzine|salamander|firin|fırın|konveksiyon|combi|kombi/.test(n) ||
-    /patates\s*dinlendir|scuttle|wok|benmari|benmari|döner\s*ocak|doner\s*ocak|makarna\s*pisir|makarna\s*pişir/.test(n) ||
+    /patates\s*dinlendir|scuttle|wok|benmari|bain\s*marie|bainmarie|sos\s*bain|döner\s*ocak|doner\s*ocak|makarna\s*pisir|makarna\s*pişir/.test(n) ||
     /plate\s*izgar|char\s*broil|lavash|dokum\s*izgar|döküm\s*ızgara|tost\s*mak|waffle|krep/.test(n) ||
     /pizza\s*firin|pizza\s*fırın|combi\s*firin|kombili\s*firin/.test(n) ||
     (/komurlu|kömürlü/.test(n) && /izgar/.test(n))

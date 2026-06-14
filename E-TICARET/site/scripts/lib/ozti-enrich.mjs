@@ -164,9 +164,38 @@ function isOztiYikamaProduct(row) {
   return /yikama|bula[sş]ik|bardak\s*yikama|obf\b|obs\b/i.test(hay);
 }
 
+/** Ürün adındaki 4x6 kW / 2x6kW+2x7,5kW → toplam brülör gücü (katalog Güç satırı brülör başı). */
+export function parseBrulorToplamKwFromText(text) {
+  let best = null;
+  for (const line of String(text ?? "").split("\n")) {
+    const terms = [...line.matchAll(/(\d+)\s*[x×]\s*([\d.,]+)\s*k?\s*w/gi)];
+    if (!terms.length) continue;
+    let sum = 0;
+    for (const m of terms) {
+      const count = Number(m[1]);
+      const kw = Number(String(m[2]).replace(",", "."));
+      if (!Number.isFinite(count) || !Number.isFinite(kw)) continue;
+      if (count <= 0 || count > 12 || kw <= 0 || kw > 50) continue;
+      sum += count * kw;
+    }
+    if (sum > 0 && sum <= 200 && (best == null || sum > best)) best = sum;
+  }
+  return best == null ? null : String(Math.round(best * 100) / 100);
+}
+
 /** PDF + web kaynaklarından doğru toplam kW. */
 export function resolveOztiGucKw(row, pdfEntry, webPayload) {
   const kod = normKod(row.urun_kodu || row.sku);
+  const nameHay = [
+    row.name,
+    row.urun_tanimi,
+    ...(row.teknik_ozellikler || []),
+  ]
+    .filter(Boolean)
+    .join("\n");
+  const brulorToplam = parseBrulorToplamKwFromText(nameHay);
+  if (brulorToplam && !isOztiElectricProduct(row)) return brulorToplam;
+
   const pdfText = (pdfEntry?.pdf_metin_parcalari || []).join("\n");
   const hay = `${row.urun_tanimi || ""}\n${pdfText}`;
   const pdfToplam = pdfText ? parseOztiToplamGucKw(hay, kod) : null;
