@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { isUrbanBarAlcoholProduct } from "./urbanbar-alcohol-filter.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const TAXONOMY_PATH = path.join(ROOT, "lib/besos/urbanbar/besos-urbanbar-taxonomy.json");
@@ -21,6 +22,8 @@ function normTags(tags) {
 }
 
 export function isExcludedFromBesos(product, taxonomy = loadUrbanBarBesosTaxonomy()) {
+  if (isUrbanBarAlcoholProduct(product)) return true;
+
   const tags = normTags(product.catTags || product.urbanbar_cat_tags || product.tags);
   const ex = taxonomy.excludeFromBesos || {};
   if (tags.some((t) => (ex.tags || []).includes(t))) return true;
