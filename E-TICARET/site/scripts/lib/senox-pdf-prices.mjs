@@ -48,6 +48,9 @@ export const SENOX_LISTE_OVERRIDES = new Map([
   ["DT100", 1600],
   ["DT200", 1800],
   ["DT600", 10000],
+  // SENOX 2026-1 s.12 — Şarap dolabı WN 250/350 (tablo satır karışması)
+  ["WN250", 1450],
+  ["WN350", 1700],
   // SENOX 2026-1 s.67 — Vakum makineleri (OCR komşu ürün fiyatı ile karışmış)
   ["VM01", 300],
   ["WM2", 1800],
