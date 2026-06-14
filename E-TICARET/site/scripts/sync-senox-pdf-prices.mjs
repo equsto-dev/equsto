@@ -19,6 +19,7 @@ import {
   loadSenoxPdfCatalog,
   pricingFromSenoxPdfListe,
 } from "./lib/senox-pdf-prices.mjs";
+import { MASTER_JSON_PATH } from "./catalog-master-paths.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DEPT_DIR = path.join(ROOT, "public/data/dept");
@@ -107,6 +108,28 @@ function writeJsonAtomic(filePath, data) {
   fs.renameSync(tmp, filePath);
 }
 
+/** dept Şenox satırları → equsto-katalog-master.json (PFOS arama) */
+function syncSenoxRowsToMaster(senoxById) {
+  if (!fs.existsSync(MASTER_JSON_PATH) || senoxById.size === 0) return 0;
+  const master = JSON.parse(fs.readFileSync(MASTER_JSON_PATH, "utf8"));
+  const products = master.products || [];
+  let patched = 0;
+  for (const p of products) {
+    if (!p?.id?.startsWith("senox__")) continue;
+    const row = senoxById.get(p.id);
+    if (!row) continue;
+    if (row.liste_fiyati_eur > 0) p.fiyat_eur = row.liste_fiyati_eur;
+    if (row.fiyat_tl > 0) p.fiyat_tl = row.fiyat_tl;
+    if (row.specs) p.teknik_ozellikler = row.specs;
+    patched++;
+  }
+  if (patched) {
+    master.generated = new Date().toISOString();
+    writeJsonAtomic(MASTER_JSON_PATH, master);
+  }
+  return patched;
+}
+
 async function main() {
   const pdfCatalog = loadSenoxPdfCatalog();
   const pdfIndex = pdfCatalog.index;
@@ -122,6 +145,7 @@ async function main() {
   let fromMutbex = 0;
   let stillMissing = 0;
   const missing = [];
+  const senoxById = new Map();
 
   for (const file of (await fsp.readdir(DEPT_DIR)).sort()) {
     if (!file.endsWith(".json")) continue;
@@ -145,8 +169,10 @@ async function main() {
         fileUpdated++;
         if (kaynakListe === "senox-mutbex-liste") fromMutbex++;
         else fromPdf++;
+        senoxById.set(patched.id, patched);
         return patched;
       }
+      if (patched.id) senoxById.set(patched.id, patched);
       stillMissing++;
       missing.push({ model: row.model, sku: row.sku, name: row.name });
       return row;
@@ -168,6 +194,13 @@ async function main() {
       cwd: ROOT,
       stdio: "inherit",
     });
+  }
+
+  if (!dryRun) {
+    const masterPatched = syncSenoxRowsToMaster(senoxById);
+    if (masterPatched) {
+      console.log(`  master katalog: ${masterPatched} Şenox satırı güncellendi`);
+    }
   }
 }
 
