@@ -25,6 +25,7 @@ export default function ShopPlpScripts() {
       <Script src={`/eq-dept-tips.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-kuvet-gn-facets.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/eq-buzdolap-facets.js?v=${v}`} strategy="afterInteractive" />
+      <Script src={`/eq-pisirme-facets.js?v=${v}`} strategy="afterInteractive" />
       <Script src="/eq-dept-plp-config.js" strategy="afterInteractive" />
       <Script src={`/eq-dept-cm-facets.js?v=${v}`} strategy="afterInteractive" />
       <Script src={`/equsto-pricing-core.js?v=${v}`} strategy="afterInteractive" />
