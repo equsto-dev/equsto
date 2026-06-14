@@ -52,11 +52,15 @@ export {
 
   parseGreenApiInboundMessages,
 
+  parseGreenApiOutboundMessages,
+
   greenApiInstanceId,
 
   greenApiToken,
 
   type GreenApiInboundMessage,
+
+  type GreenApiOutboundMessage,
 
 } from "./green-api";
 

@@ -9,7 +9,8 @@ import {
   validatePublicMusteriPayload,
 } from "@/lib/musteri";
 import { notifyCustomerLeadAck, notifyNewLead } from "@/lib/notify";
-import { requireMemberSession, type MemberSessionPayload } from "@/lib/member-auth";
+import { requireMemberSession, getMemberIdByToken, readBearerToken, readTokenFromBody, type MemberSessionPayload } from "@/lib/member-auth";
+import { appendWaChatMessage, normalizeChatPhone } from "@/lib/wa-chat";
 
 export const dynamic = "force-dynamic";
 
@@ -87,6 +88,19 @@ export async function POST(req: NextRequest, ctx: Ctx) {
       void notifyCustomerLeadAck(row).catch((e) => {
         console.error("[notify] customer wa ack", e);
       });
+      const chatPhone = normalizeChatPhone(data.tel || "");
+      const chatBody = String(data.mesaj || data.not || "").trim();
+      if (chatPhone && chatBody) {
+        const tok =
+          readBearerToken(req) || readTokenFromBody(body) || "";
+        const memberId = tok ? await getMemberIdByToken(tok) : null;
+        void appendWaChatMessage({
+          phone: chatPhone,
+          role: "user",
+          body: chatBody,
+          memberId,
+        }).catch((e) => console.error("[wa-chat] modal user", e));
+      }
     }
     return adminOk({ data: musteriToAdmin(row) }, 201);
   } catch (e) {

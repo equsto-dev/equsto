@@ -3,10 +3,15 @@ import { assertAdminBearer } from "@/lib/auth";
 import { adminErr, adminOk } from "@/lib/admin-response";
 import { notifyChannelsConfigured } from "@/lib/notify";
 import {
+  appendWaChatMessage,
+  isInternalWhatsAppPhone,
+} from "@/lib/wa-chat";
+import {
   buildWhatsAppLink,
   handleGreenApiInboundMessage,
   handleInboundWhatsAppMessage,
   parseGreenApiInboundMessages,
+  parseGreenApiOutboundMessages,
   parseInboundWhatsAppMessages,
   sendWhatsAppTemplate,
   sendWhatsAppText,
@@ -180,13 +185,38 @@ export async function waWebhookPost(req: NextRequest) {
   const mode = whatsAppMode();
 
   if (mode === "green-api" || (body as { typeWebhook?: string }).typeWebhook) {
-    const messages = parseGreenApiInboundMessages(body);
-    const results = [];
-    for (const msg of messages) {
-      if (!msg.text) continue;
+    const inbound = parseGreenApiInboundMessages(body);
+    const outbound = parseGreenApiOutboundMessages(body);
+    const results: unknown[] = [];
+
+    for (const msg of inbound) {
+      if (!msg.text || isInternalWhatsAppPhone(msg.from)) continue;
+      void appendWaChatMessage({
+        phone: msg.from,
+        role: "user",
+        body: msg.text,
+        waMessageId: msg.messageId,
+      }).catch((e) => console.error("[wa-chat] inbound", e));
       results.push(await handleGreenApiInboundMessage(msg));
     }
-    return Response.json({ ok: true, provider: "green-api", processed: results.length, results });
+
+    for (const msg of outbound) {
+      if (!msg.text || isInternalWhatsAppPhone(msg.to)) continue;
+      const saved = await appendWaChatMessage({
+        phone: msg.to,
+        role: "team",
+        body: msg.text,
+        waMessageId: msg.messageId,
+      });
+      results.push({ saved: !!saved?.created, direction: "outbound", id: saved?.id });
+    }
+
+    return Response.json({
+      ok: true,
+      provider: "green-api",
+      processed: results.length,
+      results,
+    });
   }
 
   const sig = req.headers.get("x-hub-signature-256");
