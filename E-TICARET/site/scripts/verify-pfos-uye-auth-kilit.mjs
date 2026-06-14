@@ -7,7 +7,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const siteDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const SHOP_ASSET_V = "20260613-vosco-usd-tl-v1";
+const SHOP_ASSET_V = "20260613-electrolux-fiyat-v1";
 const WA_MODAL_BUILD = 24;
 let err = 0;
 

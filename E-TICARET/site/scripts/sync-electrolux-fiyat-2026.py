@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Electrolux Professional Fiyat Listesi 2026 (PDF) → dept katalog fiyatları.
-Equsto satış = liste fiyatının %52'si (%48 iskonto).
+Equsto satış = liste fiyatının %45'i (%55 iskonto).
 
   python scripts/sync-electrolux-fiyat-2026.py
   python scripts/sync-electrolux-fiyat-2026.py --dry-run
@@ -23,8 +23,8 @@ DATA_OUT = ROOT / "scripts/data/electrolux-fiyat-2026.json"
 
 KUR_EUR_TRY = 53.2979
 KDV_ORAN = 20
-ISKONTO_YUZDE = 48
-SATIS_ORAN = 0.52  # liste × 52%
+ISKONTO_YUZDE = 55
+SATIS_ORAN = 0.45  # liste × 45%
 BRAND = "Electrolux Professional"
 KAYNAK = "electrolux-fiyat-listesi-2026"
 
@@ -77,9 +77,8 @@ def pricing_block(cod: str, liste: float, satis: float, model: str) -> dict:
             f"Ürün kodu (COD): {cod}",
             f"Model: {model}",
             f"Liste fiyatı (EUR): {liste}",
-            f"Equsto iskonto: %{ISKONTO_YUZDE}",
-            f"Equsto satış (EUR): {satis}",
-            f"Hesap: liste × {SATIS_ORAN}",
+            f"Bayi iskonto: %{ISKONTO_YUZDE}",
+            f"Equsto satış (EUR): liste × {int(SATIS_ORAN * 100)}% = {satis}",
             f"Equsto satış (TL, KDV dahil): {fmt_try(fiyat_tl)}",
             f"Kur: 1 EUR = {KUR_EUR_TRY} TRY (KDV %{KDV_ORAN})",
             f"Kaynak: Electrolux Professional Fiyat Listesi 2026",
