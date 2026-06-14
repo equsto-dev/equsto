@@ -278,6 +278,9 @@ export function parseKwFromText(text: string): ResolvedKw {
 type OlcuGuc = {
   guc_kw?: string | number;
   guc_w?: string | number;
+  genislik_mm?: number;
+  derinlik_mm?: number;
+  yukseklik_mm?: number;
 };
 
 export function parseKwFromOlcu(olculer: OlcuGuc | null | undefined): ResolvedKw {
