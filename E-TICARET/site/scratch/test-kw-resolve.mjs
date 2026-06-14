@@ -52,6 +52,49 @@ describe("kw-resolve", () => {
     );
   });
 
+  it("parses 230 watt and 1.0 HP bar blender", () => {
+    const r = parseKwFromText("230 watt *1.0 HP *17 sn");
+    assert.equal(r.elektrikGucuKw, 0.746);
+  });
+
+  it("parses Güç Tüketimi without Maks prefix", () => {
+    const r = parseKwFromText("Güç Tüketimi: 3,15 kW");
+    assert.equal(r.elektrikGucuKw, 3.15);
+  });
+
+  it("parses Maks. Güç Tüketimi for giyotin bulaşık makinesi", () => {
+    const r = parseKwFromText(
+      "Teknik Özellikler\nMaks. Güç Tüketimi(kW): 11,3\nElektrik Girişi: 380-400V 3N 50Hz",
+    );
+    assert.equal(r.elektrikGucuKw, 11.3);
+  });
+
+  it("parses Max. Elektrik Gücü sum expression", () => {
+    const r = parseKwFromText("Max. Elektrik Gücü: 25+1 kW");
+    assert.equal(r.elektrikGucuKw, 26);
+  });
+
+  it("parses 1100 W trifaze as 1.1 kW", () => {
+    const r = parseKwFromText(
+      "* 1100 W trifaze Asenkron sanayi motoru, 2 hız 375-750 rpm",
+    );
+    assert.equal(r.elektrikGucuKw, 1.1);
+  });
+
+  it("CL50 sebze doğrama — specs metninden elk kW", () => {
+    const r = resolveKwFromSources({
+      aciklama:
+        "ROBOT COUPE SEBZE DOGRAMA MAKINASI CL50 BICAKSIZ\n* 1100 W trifaze Asenkron sanayi motoru",
+      teknik_ozellikler: ["Elektrik Gücü: 0,5500", "Elektrik Volt: 230 V NPE"],
+    });
+    assert.equal(r.elektrikGucuKw, 1.1);
+  });
+
+  it("parses Elektrik Gücü kW line", () => {
+    const r = parseKwFromText("Elektrik Gücü: 2,15 kW");
+    assert.equal(r.elektrikGucuKw, 2.15);
+  });
+
   it("gazli ozti ocak — Güç yalnızca gaz sütunu", () => {
     const specs =
       "700 SERİ SET ÜSTÜ DÖRTLÜ OCAK GAZLI 80*70*30\nGüç: 6 kW";

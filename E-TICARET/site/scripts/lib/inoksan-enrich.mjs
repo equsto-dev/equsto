@@ -521,33 +521,58 @@ export function enrichInoksanRow(row, match, imgResult) {
 export function applyInoksanDescription(row, payload) {
   if (!payload?.description) return false;
 
-  const bullets = Array.isArray(payload.bullets) ? payload.bullets : [];
-  const tech = [...(row.teknik_ozellikler || [])];
-  for (const line of bullets) {
-    const t = String(line || "").trim();
-    if (!t) continue;
-    const norm = t.replace(/^•\s*/, "");
-    if (!tech.some((x) => String(x).trim() === norm)) tech.push(norm);
+  const source = payload.source || "inoksanshop.com.tr";
+  const specBullets = Array.isArray(payload.specBullets) ? payload.specBullets : [];
+  const descBullets = Array.isArray(payload.descBullets)
+    ? payload.descBullets
+    : Array.isArray(payload.bullets)
+      ? payload.bullets.filter((b) => !specBullets.includes(b))
+      : [];
+  const bullets =
+    specBullets.length || descBullets.length
+      ? [...new Set([...specBullets, ...descBullets])]
+      : Array.isArray(payload.bullets)
+        ? payload.bullets
+        : [];
+
+  if (source === "inoksan.com" && bullets.length) {
+    row.teknik_ozellikler = bullets.map((b) => String(b).replace(/^•\s*/, "").trim()).filter(Boolean);
+  } else {
+    const tech = [...(row.teknik_ozellikler || [])];
+    for (const line of bullets) {
+      const t = String(line || "").trim();
+      if (!t) continue;
+      const norm = t.replace(/^•\s*/, "");
+      if (!tech.some((x) => String(x).trim() === norm)) tech.push(norm);
+    }
+    row.teknik_ozellikler = tech;
   }
-  row.teknik_ozellikler = tech;
 
   row.description = decodeHtmlEntities(String(payload.description)).trim();
   row.inoksan_shop_description = row.description;
   if (payload.url) row.inoksan_shop_url = payload.url;
   if (payload.shopSku) row.inoksan_shop_sku = payload.shopSku;
-  row.inoksan_description_source = payload.source || "inoksanshop.com.tr";
+  row.inoksan_description_source = source;
   row.inoksan_description_at = new Date().toISOString().slice(0, 10);
 
-  const marker = `\n\nÜrün açıklaması (${row.inoksan_description_source})\n`;
-  const baseSpecs = String(row.specs || "").split("\n\nÜrün açıklaması")[0].trim();
-  if (!baseSpecs.includes(row.description.slice(0, 40))) {
-    row.specs = `${baseSpecs}${marker}${row.description}`.trim();
+  const baseSpecs = String(row.specs || "")
+    .split(/\n\n(?:Teknik Özellikler \(inoksan\.com\)|Ürün açıklaması)/)[0]
+    .trim();
+  let extra = "";
+  if (specBullets.length) {
+    extra += `\n\nTeknik Özellikler (inoksan.com)\n${specBullets.join("\n")}`;
   }
+  if (descBullets.length) {
+    extra += `\n\nÜrün açıklaması (inoksan.com)\n${descBullets.map((b) => `• ${b}`).join("\n")}`;
+  } else if (source !== "inoksan.com") {
+    extra += `\n\nÜrün açıklaması (${source})\n${row.description}`;
+  }
+  row.specs = `${baseSpecs}${extra}`.trim();
 
-  const lead = String(row.description)
-    .split(/\r?\n/)
-    .map((l) => l.replace(/^•\s*/, "").trim())
-    .filter(Boolean)[0];
+  const lead = (descBullets[0] || bullets[0] || row.description)
+    .toString()
+    .replace(/^•\s*/, "")
+    .trim();
   if (lead) {
     row.aciklama = `${row.name}\n\n${lead}\n\nKategori: ${row.inoksan_h3 || row.category || ""}`;
   }

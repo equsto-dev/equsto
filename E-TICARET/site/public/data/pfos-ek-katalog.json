@@ -16,9 +16,14 @@
       "kdv_oran": 20,
       "kaynak_fiyat_listesi": "pfos-brema-oem-2026",
       "dept": "sogutma",
-      "specs": "Brema CB416 HC B-QUBE küp buz makinesi\nGünlük kapasite: 44 kg/gün\nDepo: ~16 kg\nKaynak: Brema OEM — Equsto satış ~1300 EUR\nÜrün kodu: 9805.CB416.HC",
+      "specs": "Brema CB416 HC B-QUBE küp buz makinesi\nGünlük kapasite: 44 kg/gün\nDepo: ~16 kg\nKaynak: Brema OEM — Equsto satış ~1300 EUR\nÜrün kodu: 9805.CB416.HC\n\nTeknik Özellikler (bremagroup.it)\nElektrik Girişi: 220-240V ~ 50Hz\nOrtalama güç tüketimi: 450 W\nMaks. Güç Tüketimi(kW): 0,45",
       "images": [
         "images/catalog/brema/ozti-9805-cb416-hc.jpg"
+      ],
+      "teknik_ozellikler": [
+        "Elektrik Girişi: 220-240V ~ 50Hz",
+        "Ortalama güç tüketimi: 450 W",
+        "Maks. Güç Tüketimi(kW): 0,45"
       ]
     },
     {
