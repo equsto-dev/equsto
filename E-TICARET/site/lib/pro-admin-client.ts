@@ -1,6 +1,12 @@
 /** Yönetim paneli — /api istekleri (Bearer) */
 
+import {
+  type CatalogMeta,
+  type CatalogStats,
+} from "@/lib/catalog-meta";
 import { CATALOG_DATA_V } from "@/lib/shop/assets";
+
+export type { CatalogMeta, CatalogStats };
 
 export const PRO_TOKEN_KEY = "equsto_pro_admin_token";
 
@@ -38,6 +44,7 @@ export type UrunlerResponse = {
   data?: AdminUrunApiRow[];
   count?: number;
   source?: string;
+  catalog?: CatalogStats;
   error?: string;
 };
 
@@ -460,9 +467,26 @@ export async function fetchPublishChecks(): Promise<PublishCheckItem[]> {
         let ok = res.ok;
 
         if (item.id === "ekipmanlar" && res.ok) {
-          const rows = await res.json();
-          const count = Array.isArray(rows) ? rows.length : 0;
-          detail = `${count} ürün`;
+          try {
+            const metaRes = await fetch("/data/catalog-meta.json", {
+              cache: "no-store",
+            });
+            if (metaRes.ok) {
+              const meta = (await metaRes.json()) as CatalogMeta;
+              const n = meta.ekipmanlar ?? 0;
+              const rebuilt = meta.rebuiltAt
+                ? ` · ${new Date(meta.rebuiltAt).toLocaleString("tr-TR")}`
+                : "";
+              detail = `${n} ürün (catalog-meta)${rebuilt}`;
+            } else {
+              const rows = await res.json();
+              const count = Array.isArray(rows) ? rows.length : 0;
+              detail = `${count} ürün`;
+            }
+          } catch {
+            detail = "katalog okunamadı";
+            ok = false;
+          }
         }
         if (item.id === "fiyatlar" && res.ok) {
           const file = await res.json();
@@ -502,30 +526,59 @@ export async function fetchPublishChecks(): Promise<PublishCheckItem[]> {
   return results;
 }
 
-export type CatalogMeta = {
-  version?: string;
-  rebuiltAt?: string;
-  ekipmanlar?: number;
-  withImage?: number;
-  brands?: number;
-  deptCounts?: Record<string, number>;
-  inoksanComDescriptions?: number;
-  inoksanShopDescriptions?: number;
-  inoksanMissing?: number | null;
-  productsEnCount?: number | null;
-  productsEnStale?: number;
+export type CatalogStatsResponse = CatalogStats & {
+  rebuild?: string;
+  canonical?: string;
 };
 
-export type CatalogStats = {
-  ekipmanlar: number;
-  withImage: number;
-  brands: number;
-  rebuiltAt?: string;
-  inoksanComDescriptions?: number;
-  inoksanShopDescriptions?: number;
-  productsEnCount?: number;
-  productsEnStale?: number;
-};
+export async function fetchCatalogMeta(): Promise<CatalogMeta | null> {
+  try {
+    const res = await fetch(`/data/catalog-meta.json?v=${CATALOG_DATA_V}`, {
+      cache: "no-store",
+    });
+    if (!res.ok) return null;
+    return (await res.json()) as CatalogMeta;
+  } catch {
+    return null;
+  }
+}
+
+export async function fetchCatalogStats(): Promise<CatalogStats> {
+  try {
+    const res = await fetch("/api/catalog/stats?verify=1", { cache: "no-store" });
+    const body = await parseJson<{
+      success?: boolean;
+      data?: CatalogStats;
+    }>(res);
+    if (res.ok && body.data) return body.data;
+  } catch {
+    /* API fallback */
+  }
+
+  const meta = await fetchCatalogMeta();
+  if (meta?.ekipmanlar != null) {
+    const productsEnCount =
+      meta.productsEnCount != null ? meta.productsEnCount : undefined;
+    const productsEnStale =
+      meta.productsEnStale ??
+      (productsEnCount != null && productsEnCount < meta.ekipmanlar
+        ? meta.ekipmanlar - productsEnCount
+        : 0);
+    return {
+      ekipmanlar: meta.ekipmanlar,
+      withImage: meta.withImage ?? 0,
+      brands: meta.brands ?? 0,
+      rebuiltAt: meta.rebuiltAt,
+      inoksanComDescriptions: meta.inoksanComDescriptions,
+      inoksanShopDescriptions: meta.inoksanShopDescriptions,
+      productsEnCount,
+      productsEnStale: productsEnStale > 0 ? productsEnStale : undefined,
+      source: "catalog-meta.json",
+    };
+  }
+
+  return { ekipmanlar: 0, withImage: 0, brands: 0, source: "missing" };
+}
 
 export type EkipmanRow = {
   id?: string;
@@ -630,18 +683,6 @@ export function ekipmanPreviewSrc(row: EkipmanRow): string {
   return rel.startsWith("/") ? rel : `/${rel}`;
 }
 
-export async function fetchCatalogMeta(): Promise<CatalogMeta | null> {
-  try {
-    const res = await fetch(`/data/catalog-meta.json?v=${CATALOG_DATA_V}`, {
-      cache: "no-store",
-    });
-    if (!res.ok) return null;
-    return (await res.json()) as CatalogMeta;
-  } catch {
-    return null;
-  }
-}
-
 export async function fetchEkipmanlarCatalog(): Promise<EkipmanRow[]> {
   const res = await fetch(`/data/ekipmanlar.json?v=${CATALOG_DATA_V}`, {
     cache: "no-store",
@@ -649,36 +690,6 @@ export async function fetchEkipmanlarCatalog(): Promise<EkipmanRow[]> {
   if (!res.ok) throw new Error("ekipmanlar.json yüklenemedi");
   const rows = await res.json();
   return Array.isArray(rows) ? rows : [];
-}
-
-export async function fetchCatalogStats(): Promise<CatalogStats> {
-  const [rows, meta] = await Promise.all([
-    fetchEkipmanlarCatalog(),
-    fetchCatalogMeta(),
-  ]);
-  const brands = new Set<string>();
-  let withImage = 0;
-  for (const r of rows) {
-    if (r.brand) brands.add(r.brand);
-    if (rowHasImage(r)) withImage++;
-  }
-  const productsEnCount =
-    meta?.productsEnCount != null ? meta.productsEnCount : undefined;
-  const productsEnStale =
-    meta?.productsEnStale ??
-    (productsEnCount != null && productsEnCount < rows.length
-      ? rows.length - productsEnCount
-      : 0);
-  return {
-    ekipmanlar: rows.length,
-    withImage,
-    brands: brands.size,
-    rebuiltAt: meta?.rebuiltAt,
-    inoksanComDescriptions: meta?.inoksanComDescriptions,
-    inoksanShopDescriptions: meta?.inoksanShopDescriptions,
-    productsEnCount,
-    productsEnStale: productsEnStale > 0 ? productsEnStale : undefined,
-  };
 }
 
 export type PfosKategoriBantMeta = {
