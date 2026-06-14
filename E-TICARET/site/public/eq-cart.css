@@ -773,3 +773,34 @@ body.eq-cart-page .eq-cart-layout__aside.is-empty {
 .eq-cart-sync__msg--err {
   color: #b42318;
 }
+
+.eq-cart-sync__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--eq-topnav-dept-bg, #001e50);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: opacity 0.2s;
+}
+
+.eq-cart-sync__btn:hover {
+  opacity: 0.9;
+}
+
+.eq-cart-sync__btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.eq-cart-sync__row--join button {
+  flex-shrink: 0;
+}
+

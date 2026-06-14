@@ -1713,6 +1713,86 @@
     updatePanelMode();
   }
 
+  function pairCreateCode() {
+    var btn = document.getElementById('eq-cart-pair-gen-btn');
+    var disp = document.getElementById('eq-cart-pair-code-display');
+    var valEl = document.getElementById('eq-cart-pair-code-val');
+    if (btn) btn.disabled = true;
+    var payload = shopCartPayload({ action: 'create' });
+    fetch('/api/shop/cart/link', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify(payload)
+    })
+      .then(function (r) { return r.json(); })
+      .then(function (j) {
+        if (j && j.success && j.code) {
+          if (disp && valEl) {
+            valEl.textContent = j.code;
+            disp.style.display = 'inline-block';
+            disp.removeAttribute('hidden');
+          }
+        } else {
+          alert('Kod oluşturulamadı: ' + (j && j.error || 'Bilinmeyen hata'));
+        }
+      })
+      .catch(function () {
+        alert('Sunucu hatası, lütfen tekrar deneyin.');
+      })
+      .finally(function () {
+        if (btn) btn.disabled = false;
+      });
+  }
+
+  function pairJoinCode(code) {
+    var btn = document.getElementById('eq-cart-pair-join-btn');
+    var statusEl = document.getElementById('eq-cart-pair-status');
+    if (btn) btn.disabled = true;
+    if (statusEl) {
+      statusEl.textContent = 'Eşleştiriliyor...';
+      statusEl.className = 'eq-cart-sync__msg eq-cart-sync__msg--ok';
+      statusEl.removeAttribute('hidden');
+      statusEl.style.display = 'block';
+    }
+    fetch('/api/shop/cart/link', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({ action: 'join', code: code })
+    })
+      .then(function (r) { return r.json(); })
+      .then(function (j) {
+        if (j && j.success) {
+          if (j.syncToken) {
+            setSyncToken(j.syncToken);
+            document.cookie = 'equsto_cart_sync=' + j.syncToken + '; Path=/; Max-Age=31536000; Secure; SameSite=Lax';
+          }
+          saveLocal(Array.isArray(j.items) ? j.items : []);
+          syncBadge();
+          if (statusEl) {
+            statusEl.textContent = 'Başarıyla eşleştirildi! Sayfa yenileniyor...';
+            statusEl.className = 'eq-cart-sync__msg eq-cart-sync__msg--ok';
+          }
+          setTimeout(function () {
+            location.reload();
+          }, 1200);
+        } else {
+          if (statusEl) {
+            statusEl.textContent = 'Hata: ' + (j && j.error || 'Kod geçersiz');
+            statusEl.className = 'eq-cart-sync__msg eq-cart-sync__msg--err';
+          }
+        }
+      })
+      .catch(function () {
+        if (statusEl) {
+          statusEl.textContent = 'Bağlantı hatası, tekrar deneyin.';
+          statusEl.className = 'eq-cart-sync__msg eq-cart-sync__msg--err';
+        }
+      })
+      .finally(function () {
+        if (btn) btn.disabled = false;
+      });
+  }
+
   function bindCartPageActions() {
     if (!isCartPage()) return;
     var clearBtn = document.getElementById('equsto-cart-clear');
@@ -1737,6 +1817,24 @@
     if (ordBtn && ordBtn.dataset.eqCartBound !== '1') {
       ordBtn.dataset.eqCartBound = '1';
       ordBtn.addEventListener('click', submitOrder);
+    }
+    var genBtn = document.getElementById('eq-cart-pair-gen-btn');
+    if (genBtn && genBtn.dataset.eqCartBound !== '1') {
+      genBtn.dataset.eqCartBound = '1';
+      genBtn.addEventListener('click', pairCreateCode);
+    }
+    var joinBtn = document.getElementById('eq-cart-pair-join-btn');
+    if (joinBtn && joinBtn.dataset.eqCartBound !== '1') {
+      joinBtn.dataset.eqCartBound = '1';
+      joinBtn.addEventListener('click', function () {
+        var inp = document.getElementById('eq-cart-pair-input');
+        var val = inp ? inp.value.trim().toUpperCase() : '';
+        if (val.length < 6) {
+          alert('Lütfen 6 haneli eşleştirme kodunu girin.');
+          return;
+        }
+        pairJoinCode(val);
+      });
     }
   }
 
