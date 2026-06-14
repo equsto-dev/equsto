@@ -61,6 +61,32 @@ export default function ShopCartMain() {
               </button>
               <div id="eq-cart-pair-code-display" className="eq-cart-sync__code" hidden>
                 KOD: <strong id="eq-cart-pair-code-val">------</strong>
+                <div id="eq-cart-pair-qr-wrap" style={{ marginTop: "14px", display: "flex", flexDirection: "column", alignItems: "center", gap: "10px" }}>
+                  <img id="eq-cart-pair-qr-img" src="" alt="QR" style={{ background: "#fff", padding: "6px", border: "1px solid #d5dbe6", borderRadius: "8px", width: "140px", height: "140px" }} />
+                  <p style={{ margin: 0, fontSize: "0.78rem", color: "#5c6378" }}>Kameranızla taratarak anında eşleştirebilirsiniz.</p>
+                  <a
+                    id="eq-cart-pair-wa-btn"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      background: "#25d366",
+                      color: "#fff",
+                      border: "none",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "6px",
+                      textDecoration: "none",
+                      padding: "8px 14px",
+                      fontSize: "0.82rem",
+                      fontWeight: "600",
+                      borderRadius: "8px",
+                      marginTop: "4px"
+                    }}
+                  >
+                    WhatsApp ile Gönder
+                  </a>
+                </div>
               </div>
             </div>
             <div className="eq-cart-sync__row eq-cart-sync__row--join">

@@ -5,17 +5,17 @@ import PfosAdresAutocomplete from "@/components/pfos/public/PfosAdresAutocomplet
 import {
   EMPTY_MEMBER_TESLIMAT_ADRES,
   formatMemberTeslimatAdres,
-  isMemberTeslimatAdresComplete,
-  normalizeMemberTeslimatAdres,
+  normalizeMemberAddressBook,
   type MemberTeslimatAdres,
+  type MemberAddressBook,
 } from "@/lib/account/member-teslimat-adres";
 import { putMemberProfile } from "@/lib/account/member-profile.client";
 import type { PfosAdresFormValue } from "@/lib/pfos/adres/tr-adres";
 import styles from "./account.module.css";
 
 type Props = {
-  value: MemberTeslimatAdres;
-  onSaved: (next: MemberTeslimatAdres) => void;
+  value: any;
+  onSaved: (next: any) => void;
   autoEdit?: boolean;
 };
 
@@ -23,8 +23,10 @@ function toFormValue(v: MemberTeslimatAdres): PfosAdresFormValue {
   return { il: v.il, ilce: v.ilce, mahalle: "" };
 }
 
-function fromFormValue(form: PfosAdresFormValue, acikAdres: string): MemberTeslimatAdres {
+function fromFormValue(form: PfosAdresFormValue, acikAdres: string, title: string, id?: string): MemberTeslimatAdres {
   return {
+    id: id || `addr-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
+    title: title.trim() || "Adresim",
     il: form.il.trim(),
     ilce: form.ilce.trim(),
     acikAdres: acikAdres.trim(),
@@ -36,52 +38,83 @@ export default function MemberAddressSection({
   onSaved,
   autoEdit = false,
 }: Props) {
-  const complete = isMemberTeslimatAdresComplete(value);
-  const [editing, setEditing] = useState(autoEdit || !complete);
-  const [form, setForm] = useState<PfosAdresFormValue>(() => toFormValue(value));
-  const [acikAdres, setAcikAdres] = useState(value.acikAdres);
+  const book = normalizeMemberAddressBook(value);
+  const [editing, setEditing] = useState(autoEdit && book.addresses.length === 0);
+  const [editId, setEditId] = useState<string | null>(null);
+  const [titleInput, setTitleInput] = useState("");
+  const [form, setForm] = useState<PfosAdresFormValue>({ il: "", ilce: "", mahalle: "" });
+  const [acikAdres, setAcikAdres] = useState("");
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
 
   useEffect(() => {
-    if (!editing) {
-      setForm(toFormValue(value));
-      setAcikAdres(value.acikAdres);
+    if (autoEdit && book.addresses.length === 0) {
+      setEditing(true);
+      setEditId(null);
+      setTitleInput("Varsayılan Adres");
+      setForm({ il: "", ilce: "", mahalle: "" });
+      setAcikAdres("");
     }
-  }, [value, editing]);
+  }, [autoEdit, book.addresses.length]);
 
-  useEffect(() => {
-    if (autoEdit) setEditing(true);
-  }, [autoEdit]);
-
-  const startEdit = useCallback(() => {
-    setForm(toFormValue(value));
-    setAcikAdres(value.acikAdres);
+  const startAddNew = useCallback(() => {
+    setEditId(null);
+    setTitleInput("");
+    setForm({ il: "", ilce: "", mahalle: "" });
+    setAcikAdres("");
     setError("");
     setEditing(true);
-  }, [value]);
+  }, []);
+
+  const startEdit = useCallback((addr: MemberTeslimatAdres) => {
+    setEditId(addr.id || "default");
+    setTitleInput(addr.title || "Adresim");
+    setForm(toFormValue(addr));
+    setAcikAdres(addr.acikAdres);
+    setError("");
+    setEditing(true);
+  }, []);
 
   const cancelEdit = useCallback(() => {
     setEditing(false);
+    setEditId(null);
     setError("");
   }, []);
 
-  async function save() {
-    const next = fromFormValue(form, acikAdres);
-    if (!next.il || !next.ilce) {
+  async function saveAddress() {
+    if (!form.il || !form.ilce) {
       setError("İl ve ilçe zorunludur.");
       return;
     }
     setSaving(true);
     setError("");
+
     try {
-      const result = await putMemberProfile({ teslimatAdres: next });
+      const nextAddr = fromFormValue(form, acikAdres, titleInput, editId || undefined);
+      
+      let nextAddresses = [...book.addresses];
+      if (editId) {
+        nextAddresses = nextAddresses.map((a) => (a.id === editId ? nextAddr : a));
+      } else {
+        nextAddresses.push(nextAddr);
+      }
+
+      const nextBook: MemberAddressBook = {
+        addresses: nextAddresses,
+        defaultAddressId: book.defaultAddressId || nextAddr.id || "default",
+      };
+      if (nextAddresses.length === 1) {
+        nextBook.defaultAddressId = nextAddresses[0].id || "default";
+      }
+
+      const result = await putMemberProfile({ teslimatAdres: nextBook });
       if (!result.success || !result.user?.teslimatAdres) {
         setError(result.error || "Adres kaydedilemedi.");
         return;
       }
-      onSaved(normalizeMemberTeslimatAdres(result.user.teslimatAdres));
+      onSaved(result.user.teslimatAdres);
       setEditing(false);
+      setEditId(null);
     } catch {
       setError("Bağlantı hatası. Lütfen tekrar deneyin.");
     } finally {
@@ -89,16 +122,170 @@ export default function MemberAddressSection({
     }
   }
 
+  async function deleteAddress(id: string) {
+    if (confirm("Bu adresi silmek istediğinize emin misiniz?")) {
+      setSaving(true);
+      try {
+        const nextAddresses = book.addresses.filter((a) => a.id !== id);
+        let defaultId = book.defaultAddressId;
+        if (defaultId === id) {
+          defaultId = nextAddresses[0]?.id || "";
+        }
+        const nextBook: MemberAddressBook = {
+          addresses: nextAddresses,
+          defaultAddressId: defaultId,
+        };
+
+        const result = await putMemberProfile({ teslimatAdres: nextBook });
+        if (!result.success || !result.user?.teslimatAdres) {
+          alert(result.error || "Adres silinemedi.");
+          return;
+        }
+        onSaved(result.user.teslimatAdres);
+      } catch {
+        alert("Bağlantı hatası.");
+      } finally {
+        setSaving(false);
+      }
+    }
+  }
+
+  async function setDefaultAddress(id: string) {
+    setSaving(true);
+    try {
+      const nextBook: MemberAddressBook = {
+        addresses: book.addresses,
+        defaultAddressId: id,
+      };
+      const result = await putMemberProfile({ teslimatAdres: nextBook });
+      if (!result.success || !result.user?.teslimatAdres) {
+        alert(result.error || "Varsayılan adres güncellenemedi.");
+        return;
+      }
+      onSaved(result.user.teslimatAdres);
+    } catch {
+      alert("Bağlantı hatası.");
+    } finally {
+      setSaving(false);
+    }
+  }
+
   return (
     <section className={styles.section} id="adres-ekle">
-      <h2 className={styles.sectionTitle}>Adres ekle</h2>
-      <p className={styles.hint}>
-        Proje teslimatı ve PFOS nakliye tahmini için kayıtlı adresiniz. PFOS
-        teklifinde bu bilgi otomatik kullanılabilir.
-      </p>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px" }}>
+        <h2 className={styles.sectionTitle} style={{ margin: 0 }}>Adres Defterim</h2>
+        {!editing && (
+          <button type="button" className={styles.phoneEditBtn} onClick={startAddNew}>
+            Yeni Adres Ekle
+          </button>
+        )}
+      </div>
 
-      {editing ? (
-        <div className={styles.addressForm}>
+      {!editing && book.addresses.length === 0 && (
+        <div style={{ textAlign: "center", padding: "20px 0" }}>
+          <p className={styles.hint} style={{ marginBottom: "12px" }}>
+            Kayıtlı teslimat adresiniz bulunmamaktadır. Proje teslimatı ve PFOS nakliye tahmini için adres ekleyin.
+          </p>
+          <button type="button" className={styles.phoneSaveBtn} onClick={startAddNew}>
+            Adres Ekle
+          </button>
+        </div>
+      )}
+
+      {!editing && book.addresses.length > 0 && (
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "16px", marginTop: "12px" }}>
+          {book.addresses.map((addr) => {
+            const isDefault = addr.id === book.defaultAddressId;
+            return (
+              <div
+                key={addr.id}
+                style={{
+                  border: isDefault ? "2px solid #001e50" : "1px solid #d5dbe6",
+                  borderRadius: "10px",
+                  padding: "16px",
+                  background: "#fff",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                  boxShadow: isDefault ? "0 4px 12px rgba(0, 30, 80, 0.05)" : "none",
+                }}
+              >
+                <div>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "8px" }}>
+                    <h3 style={{ margin: 0, fontSize: "0.95rem", fontWeight: "600", color: "#001e50" }}>
+                      {addr.title || "Adres"}
+                    </h3>
+                    {isDefault && (
+                      <span
+                        style={{
+                          background: "#eef3fb",
+                          color: "#001e50",
+                          fontSize: "0.7rem",
+                          fontWeight: "600",
+                          padding: "2px 8px",
+                          borderRadius: "10px",
+                        }}
+                      >
+                        Varsayılan
+                      </span>
+                    )}
+                  </div>
+                  <p style={{ margin: 0, fontSize: "0.85rem", color: "#1a1d2b", fontWeight: "500", marginBottom: "4px" }}>
+                    {addr.il} / {addr.ilce}
+                  </p>
+                  <p style={{ margin: 0, fontSize: "0.82rem", color: "#5c6378", lineHeight: "1.4" }}>
+                    {addr.acikAdres}
+                  </p>
+                </div>
+
+                <div style={{ display: "flex", gap: "10px", marginTop: "14px", borderTop: "1px solid #eef3fb", paddingTop: "10px" }}>
+                  <button
+                    type="button"
+                    style={{ background: "none", border: "none", color: "#2563a8", fontSize: "0.78rem", fontWeight: "600", cursor: "pointer", padding: 0 }}
+                    onClick={() => startEdit(addr)}
+                  >
+                    Düzenle
+                  </button>
+                  {book.addresses.length > 1 && (
+                    <button
+                      type="button"
+                      style={{ background: "none", border: "none", color: "#c0392b", fontSize: "0.78rem", fontWeight: "600", cursor: "pointer", padding: 0 }}
+                      onClick={() => void deleteAddress(addr.id || "")}
+                      disabled={saving}
+                    >
+                      Sil
+                    </button>
+                  )}
+                  {!isDefault && (
+                    <button
+                      type="button"
+                      style={{ background: "none", border: "none", color: "#5c6378", fontSize: "0.78rem", fontWeight: "600", cursor: "pointer", padding: 0, marginLeft: "auto" }}
+                      onClick={() => void setDefaultAddress(addr.id || "")}
+                      disabled={saving}
+                    >
+                      Varsayılan Yap
+                    </button>
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
+
+      {editing && (
+        <div className={styles.addressForm} style={{ marginTop: "12px" }}>
+          <label className={styles.addressField} style={{ marginBottom: "12px" }}>
+            <span className={styles.profileLabel}>Adres Başlığı (ör. Ev, Ofis, Şantiye)</span>
+            <input
+              type="text"
+              className={styles.phoneInput}
+              value={titleInput}
+              onChange={(e) => setTitleInput(e.target.value)}
+              placeholder="Adres başlığı girin…"
+              disabled={saving}
+            />
+          </label>
           <div className={styles.addressAdresPick}>
             <PfosAdresAutocomplete
               value={form}
@@ -106,7 +293,7 @@ export default function MemberAddressSection({
             />
           </div>
           <label className={styles.addressField}>
-            <span className={styles.profileLabel}>Açık adres (cadde, bina, kat)</span>
+            <span className={styles.profileLabel}>Açık adres (cadde, sokak, bina no, kat)</span>
             <textarea
               className={styles.addressTextarea}
               value={acikAdres}
@@ -120,36 +307,27 @@ export default function MemberAddressSection({
             <button
               type="button"
               className={styles.phoneSaveBtn}
-              onClick={() => void save()}
+              onClick={() => void saveAddress()}
               disabled={saving}
             >
               {saving ? "Kaydediliyor…" : "Kaydet"}
             </button>
-            {complete ? (
-              <button
-                type="button"
-                className={styles.phoneCancelBtn}
-                onClick={cancelEdit}
-                disabled={saving}
-              >
-                İptal
-              </button>
-            ) : null}
+            <button
+              type="button"
+              className={styles.phoneCancelBtn}
+              onClick={cancelEdit}
+              disabled={saving}
+            >
+              İptal
+            </button>
           </div>
           {error ? (
             <p className={styles.phoneError}>{error}</p>
           ) : (
             <p className={styles.phoneHint}>
-              İl ve ilçe zorunludur. Açık adres teslimat ve montaj planlaması için önerilir.
+              İl, ilçe ve açık adres nakliye tahmini ve sipariş gönderimleri için gereklidir.
             </p>
           )}
-        </div>
-      ) : (
-        <div className={styles.addressDisplay}>
-          <p className={styles.addressSummary}>{formatMemberTeslimatAdres(value)}</p>
-          <button type="button" className={styles.phoneEditBtn} onClick={startEdit}>
-            {complete ? "Düzenle" : "Adres ekle"}
-          </button>
         </div>
       )}
     </section>
