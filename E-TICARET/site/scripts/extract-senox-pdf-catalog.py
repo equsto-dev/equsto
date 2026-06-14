@@ -32,7 +32,7 @@ OUT = ROOT / "scripts" / "data" / "senox" / "senox-pdf-catalog.json"
 PDF = Path(
     os.environ.get(
         "SENOX_PDF",
-        r"c:\D Disk\FİYAT LİSTELERİ\SENOX 2026-1-1.pdf",
+        r"c:\D Disk\FİYAT LİSTELERİ\SENOX 2026-1 4 (1).pdf",
     )
 )
 
@@ -194,7 +194,64 @@ def category_for_page(page_no: int, page_text: str, hint: str = "") -> tuple[str
     return "Senox", "Genel"
 
 
-def parse_specs(text: str) -> dict:
+def parse_eur_token(raw: str) -> float:
+    s = str(raw or "").strip()
+    if not s:
+        return 0.0
+    # 18.000 / 1.800 — binlik nokta (TR/EU)
+    if re.fullmatch(r"\d{1,3}(?:\.\d{3})+", s):
+        return float(s.replace(".", ""))
+    # 1.234,56 ondalık virgül
+    if "," in s and "." in s:
+        return float(s.replace(".", "").replace(",", "."))
+    if "," in s:
+        return float(s.replace(",", "."))
+    return float(s.replace(".", ""))
+
+
+def find_eur_near_row(rows: list[dict], idx: int, max_dy: float = 220) -> float | None:
+    """Kod satırına en yakın EUR — sayfa düzenine göre sütun seçimi."""
+    if idx < 0 or idx >= len(rows):
+        return None
+    code_y = rows[idx]["y0"]
+    code_x = rows[idx]["cx"]
+    candidates: list[tuple[float, float, float]] = []
+    for r in rows:
+        m = PRICE_EUR_RE.search(r["text"])
+        if not m:
+            continue
+        price = parse_eur_token(m.group(1))
+        if not (price > 0):
+            continue
+        dy = r["y0"] - code_y
+        px = r["cx"]
+        dx = abs(px - code_x)
+        if dy < -40 or dy > max_dy:
+            continue
+        # Çift tablo (s.21 dondurma reyonu): sol kod → orta fiyat sütunu (~530)
+        if code_x < 400:
+            if not (450 <= px <= 620):
+                continue
+            if dx > 320:
+                continue
+        # Orta/sağ ürün kodu → sağ fiyat sütunu (~900+)
+        elif code_x >= 500:
+            if px < 820:
+                continue
+            if dx > 420:
+                continue
+        else:
+            if dx > 380:
+                continue
+        sort_dy = abs(dy) if abs(dy) <= 25 else (1000 + abs(dy))
+        candidates.append((sort_dy, dx, price))
+    if not candidates:
+        return None
+    candidates.sort(key=lambda t: (t[0], t[1]))
+    return candidates[0][2]
+
+
+def parse_specs(text: str, rows: list[dict] | None = None, row_idx: int | None = None) -> dict:
     t = clean_line(text.replace("\n", " "))
     specs: dict = {}
     for dm in DIM_RE.finditer(t):
@@ -206,9 +263,23 @@ def parse_specs(text: str) -> dict:
         except ValueError:
             pass
         break
-    pe = PRICE_EUR_RE.search(t)
-    if pe:
-        specs["fiyat_eur"] = pe.group(1).replace(".", "").replace(",", ".")
+    price_val = 0.0
+    if rows is not None and row_idx is not None:
+        near = find_eur_near_row(rows, row_idx)
+        if near and near > 0:
+            price_val = near
+    if not price_val:
+        eur_hits = [parse_eur_token(m.group(1)) for m in PRICE_EUR_RE.finditer(text)]
+        eur_hits = [p for p in eur_hits if p > 0]
+        if eur_hits:
+            if len(eur_hits) == 1:
+                price_val = eur_hits[0]
+            else:
+                # Komşu ürün fiyatı karışmasın: en küçük makul aday (18.000 + 1800 → 1800)
+                lo, hi = min(eur_hits), max(eur_hits)
+                price_val = lo if hi >= lo * 5 else sorted(eur_hits)[len(eur_hits) // 2]
+    if price_val > 0:
+        specs["fiyat_eur"] = str(int(price_val) if price_val == int(price_val) else price_val)
     gz = GAZ_RE.search(t)
     if gz:
         specs["sogutucu_gaz"] = gz.group(1).upper()
@@ -407,14 +478,19 @@ def parse_page(page, page_no: int) -> list[dict]:
     eurs = page_eur_prices(page_text)
     found: dict[str, dict] = {}
 
-    def add_product(code: str, title: str, block: str, anchor: dict | None, source: str) -> None:
+    def add_product(code: str, title: str, block: str, anchor: dict | None, source: str, row_idx: int | None = None) -> None:
         code = norm_model(code) if not re.match(r"^BL\d", code, re.I) else code.replace("-", "").upper()
         if not code or len(code) < 2:
             return
         key = f"{page_no}:{code}"
+        specs = parse_specs(block, rows, row_idx)
         if key in found:
-            return
-        specs = parse_specs(block)
+            prev = found[key]
+            # LK satırı — önceki hatalı kaydın üzerine yaz
+            if source == "lk-line" and prev.get("parseSource") in ("senox-title", "code-line"):
+                pass
+            else:
+                return
         found[key] = {
             "model": code,
             "title": title or code,
@@ -454,12 +530,12 @@ def parse_page(page, page_no: int) -> list[dict]:
             continue
         code = normalize_code(r["text"])
         block = context_block(rows, i)
-        # uzun açıklama satırı üstte olabilir
         title = code
-        if i > 0 and len(rows[i - 1]["text"]) > 15 and not is_code_line(rows[i - 1]["text"]):
-            if not re.match(r"^(?:Senox|senox|www)", rows[i - 1]["text"], re.I):
-                title = rows[i - 1]["text"][:120]
-        add_product(code, title, block, r, "code-line")
+        if not re.match(r"^\d{2,4}LK", code, re.I):
+            if i > 0 and len(rows[i - 1]["text"]) > 15 and not is_code_line(rows[i - 1]["text"]):
+                if not re.match(r"^(?:Senox|senox|www)", rows[i - 1]["text"], re.I):
+                    title = rows[i - 1]["text"][:120]
+        add_product(code, title, block, r, "code-line", i)
 
     # D) Ürün Kodu etiketi sonrası
     for i, ln in enumerate(lines):
@@ -498,23 +574,43 @@ def parse_page(page, page_no: int) -> list[dict]:
         anchor = next((r for r in rows if r["text"] == ln), None)
         add_product(code, ln, block, anchor, "robotcoupe")
 
-    # H) LK kapasite satırları (40 LK, 40 LK-AS …)
+    # H) LK kapasite satırları (40 LK, 40 LK-AS …) — başlık = kod satırı
     for i, r in enumerate(rows):
         m = re.match(r"^(\d{2,4})\s*LK(?:[-\s/]?\s*([A-Z]{1,4}))?\s*$", r["text"], re.I)
         if not m:
             continue
         code = f"{m.group(1)}LK" + (f"-{m.group(2).upper()}" if m.group(2) else "")
         block = context_block(rows, i)
-        add_product(code, f"Senox {code}", block, r, "lk-line")
+        add_product(code, code, block, r, "lk-line", i)
 
-    # E) Sayfa EUR → fiyatsız ürünlere sırayla (sol→sağ, üst→alt)
-    prods = sorted(found.values(), key=lambda p: (p["anchorY"], p["anchorX"]))
+    # E) Sayfa EUR → fiyatsız ürünlere: koda en yakın atanmamış fiyat
+    used_prices: set[float] = set()
+    for p in found.values():
+        fe = p["specs"].get("fiyat_eur")
+        if fe:
+            try:
+                used_prices.add(float(str(fe).replace(",", ".")))
+            except ValueError:
+                pass
+    eur_floats = []
+    for ep in eurs:
+        try:
+            eur_floats.append(float(ep))
+        except ValueError:
+            pass
+    free_prices = [p for p in eur_floats if p not in used_prices]
+    prods = sorted(
+        [p for p in found.values() if not p["specs"].get("fiyat_eur")],
+        key=lambda p: (p["anchorY"], p["anchorX"]),
+    )
     ei = 0
     for p in prods:
-        if not p["specs"].get("fiyat_eur") and ei < len(eurs):
-            p["specs"]["fiyat_eur"] = eurs[ei]
-            p["specs"]["fiyat_eur_source"] = "page-order"
-            ei += 1
+        if ei >= len(free_prices):
+            break
+        p["specs"]["fiyat_eur"] = str(int(free_prices[ei]) if free_prices[ei] == int(free_prices[ei]) else free_prices[ei])
+        p["specs"]["fiyat_eur_source"] = "page-order"
+        used_prices.add(free_prices[ei])
+        ei += 1
 
     return list(found.values())
 

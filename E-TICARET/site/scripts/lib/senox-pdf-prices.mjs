@@ -37,6 +37,17 @@ export const SENOX_LISTE_OVERRIDES = new Map([
   ["SNX17S", 300],
   // SNX-25-G yanlışlıkla SNX-8060 1500 EUR ile eşleşmiş; SNX-25-C ile aynı liste
   ["SNX25G", 330],
+  // SENOX 2026-1 s.21 — Dondurma reyonları (PDF sütun eşlemesi doğrulandı)
+  ["DT6", 5000],
+  ["DT8", 6000],
+  ["DT9", 10000],
+  ["DT12", 14000],
+  ["DT13", 14000],
+  ["DT18", 18000],
+  ["DT24", 22000],
+  ["DT100", 1600],
+  ["DT200", 1800],
+  ["DT600", 10000],
   // SENOX 2026-1 s.67 — Vakum makineleri (OCR komşu ürün fiyatı ile karışmış)
   ["VM01", 300],
   ["WM2", 1800],
@@ -51,8 +62,29 @@ export const SENOX_LISTE_OVERRIDES = new Map([
 export const SENOX_CODE_ALIASES = new Map([
   ["T02", "TM02"],
   ["118T02", "TM02"],
+  ["DY01", "DY01TEKHAZNELIDONDURMAYAPICI"],
+  ["DY02", "DY02IFTHAZNELIDONDURMAYAPICI"],
+  ["DY04", "DY04DRTHAZNELIDONDURMAYAPICI"],
+  ["PDY01", "PDY01PROFESYONELDONDURMAYAPICISI"],
+  ["GGM-M-20", "PLM20"],
   ["GGMM20", "PLM20"],
+  ["GGM-M-30", "PLM30"],
   ["GGMM30", "PLM30"],
+  ["GGM", "GGM"],
+  ["EMH15", "EMH15"],
+  ["AAMH300", "AAMH300"],
+  ["SEMG16K", "SEMG16K"],
+  ["STRC", "STRC"],
+  ["40LB", "40LB"],
+  ["BZ12", "BZ12"],
+  ["BZ20", "BZ20"],
+  ["CKA", "CKA"],
+  ["KMP01", "KMP01"],
+  ["KRS105", "KRS105"],
+  ["PS01", "PS01"],
+  ["LT12", "LT12"],
+  ["LT16", "LT16"],
+  ["LT8", "LT8"],
 ]);
 
 export function normSenoxKey(s) {
@@ -67,14 +99,26 @@ export function normSenoxKey(s) {
 }
 
 function parseEurNum(raw) {
-  const n = Number(String(raw || "").replace(/\./g, "").replace(",", "."));
+  const s = String(raw || "").trim();
+  if (!s) return 0;
+  // 14.000 / 18.000 — binlik nokta (PDF OCR)
+  if (/^\d{1,3}(?:\.\d{3})+$/.test(s)) {
+    const n = Number(s.replace(/\./g, ""));
+    return Number.isFinite(n) && n > 0 ? n : 0;
+  }
+  const n = Number(s.replace(/\./g, "").replace(",", "."));
   return Number.isFinite(n) && n > 0 ? n : 0;
 }
 
-function addPrice(map, code, price) {
+function parseEurFromLine(line) {
+  const m = String(line || "").trim().match(/^([\d.,]+)\s*EUR$/i);
+  return m ? parseEurNum(m[1]) : 0;
+}
+
+function addPrice(map, code, price, force = false) {
   const k = normSenoxKey(code);
   if (!k || !(price > 0)) return;
-  if (!map.has(k)) map.set(k, price);
+  if (force || !map.has(k)) map.set(k, price);
 }
 
 function looksLikeCode(line) {
@@ -94,9 +138,8 @@ function parseDescriptionPrices(text) {
     .filter(Boolean);
 
   for (let i = 0; i < lines.length; i++) {
-    const priceM = lines[i].match(/^(\d+(?:\.\d+)?)\s*EUR$/i);
-    if (!priceM) continue;
-    const price = Number(priceM[1]);
+    const price = parseEurFromLine(lines[i]);
+    if (!(price > 0)) continue;
     for (let j = i + 1; j < Math.min(i + 10, lines.length); j++) {
       if (looksLikeCode(lines[j])) addPrice(out, lines[j], price);
     }
@@ -106,43 +149,67 @@ function parseDescriptionPrices(text) {
   }
 
   for (let i = 1; i < lines.length; i++) {
-    const prev = lines[i - 1].match(/^(\d+(?:\.\d+)?)\s*EUR$/i);
-    if (prev && looksLikeCode(lines[i])) addPrice(out, lines[i], Number(prev[1]));
+    const prev = parseEurFromLine(lines[i - 1]);
+    if (prev > 0 && looksLikeCode(lines[i])) addPrice(out, lines[i], prev);
   }
 
   return out;
 }
 
+function expandPdfShortKeys(model) {
+  const out = new Set();
+  const raw = String(model || "");
+  const prefixNum = raw.match(/^(DY|PDY|PDM|PLM|BLK|SNX|SYD|SDS|BBC|SBC|SMR|WN|WF|BZ|MS|KRS|CF|SYS|BN|BGN|UGN|CKT|DS|SFT|SLS|SRB|KM|IC|SMF|PDM)[-\s]?0?(\d+[A-Z0-9]*)/i);
+  if (prefixNum) {
+    out.add(prefixNum[1].toUpperCase() + prefixNum[2].toUpperCase().replace(/[^A-Z0-9]/g, ""));
+  }
+  const lk = raw.match(/^(\d{2,4})LK(?:[-\s/]?([A-Z]{1,4}))?$/i);
+  if (lk) out.add(`${lk[1]}LK${lk[2] ? lk[2].toUpperCase() : ""}`);
+  return [...out];
+}
+
 export function buildSenoxPdfPriceIndex(products) {
+  const descMap = new Map();
+  for (const p of products || []) {
+    for (const [k, v] of parseDescriptionPrices(p.description)) {
+      addPrice(descMap, k, v);
+    }
+  }
+
   const map = new Map();
 
   for (const p of products || []) {
+    const modelKey = normSenoxKey(p.model);
     const overrideKey = normSenoxKey(
       String(p.title || "").match(/\b(YSO-\d+)\b/i)?.[1] ?? "",
     );
-    const main =
+    const fromOverride =
       (overrideKey && SENOX_LISTE_OVERRIDES.has(overrideKey)
         ? SENOX_LISTE_OVERRIDES.get(overrideKey)
-        : 0) || parseEurNum(p.specs?.fiyat_eur);
+        : 0) ||
+      (modelKey && SENOX_LISTE_OVERRIDES.has(modelKey)
+        ? SENOX_LISTE_OVERRIDES.get(modelKey)
+        : 0);
+    const fromDesc =
+      (modelKey && descMap.get(modelKey)) ||
+      (normSenoxKey(p.title) && descMap.get(normSenoxKey(p.title))) ||
+      0;
+    const fromSpecs = parseEurNum(p.specs?.fiyat_eur);
+    const main = fromOverride || fromDesc || fromSpecs;
 
     if (main > 0) {
-      addPrice(map, p.model, main);
-      addPrice(map, p.title, main);
+      addPrice(map, p.model, main, true);
+      addPrice(map, p.title, main, true);
       const short = String(p.title || "").match(/\b([A-Z]{2,4}-\d+[A-Z]?)\b/i);
-      if (short) addPrice(map, short[1], main);
-    }
-
-    for (const [k, v] of parseDescriptionPrices(p.description)) {
-      if (!map.has(k)) map.set(k, v);
-    }
-
-    for (const m of String(p.title || "").matchAll(/\b([A-Z]{2,}\s?\d[\w\s\-./]{0,20})\b/g)) {
-      if (main > 0) addPrice(map, m[1], main);
+      if (short) addPrice(map, short[1], main, true);
+      for (const sk of expandPdfShortKeys(p.model)) {
+        addPrice(map, sk, main, true);
+      }
     }
   }
 
   for (const [k, v] of SENOX_LISTE_OVERRIDES) {
-    if (!map.has(k)) map.set(k, v);
+    map.set(k, v);
   }
 
   return map;
@@ -168,12 +235,20 @@ export function loadSenoxPdfCatalog(catalogPath = SENOX_PDF_CATALOG) {
 }
 
 function priceFromProduct(pp) {
-  const main = parseEurNum(pp.specs?.fiyat_eur);
-  if (main > 0) return main;
-  for (const [, v] of parseDescriptionPrices(pp.description)) {
-    if (v > 0) return v;
+  const modelKey = normSenoxKey(pp.model);
+  if (modelKey && SENOX_LISTE_OVERRIDES.has(modelKey)) {
+    return SENOX_LISTE_OVERRIDES.get(modelKey);
   }
-  return 0;
+  const overrideKey = normSenoxKey(
+    String(pp.title || "").match(/\b(YSO-\d+)\b/i)?.[1] ?? "",
+  );
+  if (overrideKey && SENOX_LISTE_OVERRIDES.has(overrideKey)) {
+    return SENOX_LISTE_OVERRIDES.get(overrideKey);
+  }
+  for (const [k, v] of parseDescriptionPrices(pp.description)) {
+    if (k === modelKey) return v;
+  }
+  return parseEurNum(pp.specs?.fiyat_eur);
 }
 
 export function findPdfListPrice(p, index, products = []) {
@@ -200,31 +275,7 @@ export function findPdfListPrice(p, index, products = []) {
     }
   }
 
-  for (const k of keys) {
-    if (k.length < 4) continue;
-    for (const pp of products) {
-      const price = priceFromProduct(pp);
-      if (!(price > 0)) continue;
-      const pk = normSenoxKey(pp.model);
-      if (pk.length < 4) continue;
-      if (pk.startsWith(k) || k.startsWith(pk)) {
-        return { listeEur: price, matchKey: pk, fuzzy: true };
-      }
-    }
-  }
-
-  let best = null;
-  for (const k of keys) {
-    if (k.length < 5) continue;
-    for (const [ik, price] of index) {
-      if (ik.length < 5) continue;
-      if (ik.includes(k) || k.includes(ik)) {
-        const score = Math.min(k.length, ik.length);
-        if (!best || score > best.score) best = { listeEur: price, matchKey: ik, fuzzy: true, score };
-      }
-    }
-  }
-  return best;
+  return null;
 }
 
 export function candidateKeys(p) {

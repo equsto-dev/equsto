@@ -1,7 +1,7 @@
 {
   "source": "c:\\D Disk\\FİYAT LİSTELERİ\\SENOX 2026-1 4 (1).pdf",
   "liste": "SENOX 2026-1",
-  "scrapedAt": "2026-06-12T07:41:22.534778+00:00",
+  "scrapedAt": "2026-06-14T16:45:09.823551+00:00",
   "pages": 55,
   "productCount": 245,
   "products": [
@@ -19,16 +19,14 @@
         "genislik_mm": 430,
         "derinlik_mm": 310,
         "yukseklik_mm": 1120,
-        "fiyat_eur": "800",
+        "fiyat_eur": "2800",
         "voltaj": "220 V ~ 50Hz"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-160lk_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "lk-line"
     },
     {
       "model": "300LK",
-      "title": "1225 x 605x 1755",
+      "title": "300LK",
       "page": 5,
       "categoryGroup": "Soğutma",
       "category": "Su Sebilleri",
@@ -40,16 +38,14 @@
         "genislik_mm": 1505,
         "derinlik_mm": 605,
         "yukseklik_mm": 1755,
-        "fiyat_eur": "5200",
+        "fiyat_eur": "4600",
         "voltaj": "220 V ~ 50Hz"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-300lk_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "lk-line"
     },
     {
       "model": "400LK",
-      "title": "1505 x 605 x 1755",
+      "title": "400LK",
       "page": 5,
       "categoryGroup": "Soğutma",
       "category": "Su Sebilleri",
@@ -61,33 +57,33 @@
         "genislik_mm": 1400,
         "derinlik_mm": 660,
         "yukseklik_mm": 2400,
-        "fiyat_eur": "5700",
+        "fiyat_eur": "5200",
         "voltaj": "220 V ~ 50Hz"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-400lk_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "lk-line"
     },
     {
       "model": "40LK",
-      "title": "Senox 40 LK",
+      "title": "40LK",
       "page": 5,
       "categoryGroup": "Soğutma",
       "category": "Su Sebilleri",
-      "anchorY": 75.8,
-      "anchorX": 839.9,
-      "description": "Senox 40 LK\n430 paslanmaz krom dış yuzeyi bulunmaktadır.",
+      "anchorY": 244.2,
+      "anchorX": 849.9,
+      "description": "40 LK\nKrom 40 LT\n63 kg\nKrom 40 LT, Arıtmalı\n1200 EUR\n610 x 430x 1550",
       "specs": {
-        "fiyat_eur": "340",
-        "fiyat_eur_source": "page-order"
+        "ebat_mm": "610 x 430 x 1550",
+        "genislik_mm": 610,
+        "derinlik_mm": 430,
+        "yukseklik_mm": 1550,
+        "fiyat_eur": "800",
+        "agirlik_kg": "63"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-40lk_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "lk-line"
     },
     {
       "model": "40LK-AS",
-      "title": "Senox 40LK-AS",
+      "title": "40LK-AS",
       "page": 5,
       "categoryGroup": "Soğutma",
       "category": "Su Sebilleri",
@@ -99,13 +95,11 @@
         "genislik_mm": 300,
         "derinlik_mm": 292,
         "yukseklik_mm": 856,
-        "fiyat_eur": "190",
+        "fiyat_eur": "1200",
         "voltaj": "220 V ~ 50Hz",
         "agirlik_kg": "15"
       },
-      "parseSource": "lk-line",
-      "localImage": "images/senox-40lkas_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "lk-line"
     },
     {
       "model": "40LKAS",
@@ -121,34 +115,25 @@
         "genislik_mm": 300,
         "derinlik_mm": 292,
         "yukseklik_mm": 856,
-        "fiyat_eur": "190",
+        "fiyat_eur": "1200",
         "voltaj": "220 V ~ 50Hz",
         "agirlik_kg": "15"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-40lkas_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "500LK",
-      "title": "Senox 160 / 300 / 400 / 500 LK",
+      "title": "500LK",
       "page": 5,
       "categoryGroup": "Soğutma",
       "category": "Su Sebilleri",
-      "anchorY": 595.4,
-      "anchorX": 878.8,
-      "description": "Senox 160 / 300 / 400 / 500 LK\n430 paslanmaz krom dış yuzey bulunmaktadır.\nİç haznes paslanmaz 304 krom meteryalden monoblok olarak üretilmştir\nYalıtımda kullanılan enjeksyon polüretan ile ısı kaybı mnmum sevyededir.\nŞebekeye bağlanabilen şamandıralı sistemdir\nManuel termostat sayesinde su sıcaklığı kolaylıkla kontrol edilir\nUzun ömürlü çevirmeli musluk sistem bulunmaktadır\nŞebeke su ile ya da opsiyonel olarak damacana kapak ilavesyle damacanalı sistem olarak da\nkullanılabilmektedir.\nFiyat\nElektrik Gücü\nEbatlar (mm)\nAğırlık\nFiyat\nVoltaj\nEbatlar (mm)\nModel\n2800 EUR\n220 V ~ 50Hz\n160LK\n800 EUR\n430 x 310x 1120\n955 x 605x 1755\n4600 EUR\n220 V ~ 50Hz\n1225 x 605x 1755\n300LK\n5200 EUR\n220 V ~ 50Hz\n1505 x 605 x 1755\n400LK\n5700 EUR\n1400 x 660 x 2400\n220 V ~ 50Hz\n500LK\n6\nwww.senox.com.tr",
+      "anchorY": 793.6,
+      "anchorX": 855.1,
+      "description": "500LK\n5\n6\nwww.senox.com.tr\nwww.senox.com.tr",
       "specs": {
-        "ebat_mm": "430 x 310 x 1120",
-        "genislik_mm": 430,
-        "derinlik_mm": 310,
-        "yukseklik_mm": 1120,
-        "fiyat_eur": "2800",
-        "voltaj": "220 V ~ 50Hz"
+        "fiyat_eur": "5700"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-500lk_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "lk-line"
     },
     {
       "model": "80LK",
@@ -164,31 +149,33 @@
         "genislik_mm": 310,
         "derinlik_mm": 340,
         "yukseklik_mm": 1045,
-        "fiyat_eur": "1400",
+        "fiyat_eur": "1100",
         "voltaj": "220 V ~ 50Hz",
         "elektrik_gucu": "150 W",
         "agirlik_kg": "63"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-80lk_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "lk-line"
     },
     {
       "model": "80LK-AS",
-      "title": "Senox 80 LK-AS 80lt",
+      "title": "80LK-AS",
       "page": 5,
       "categoryGroup": "Soğutma",
       "category": "Su Sebilleri",
-      "anchorY": 341.4,
-      "anchorX": 859.7,
-      "description": "Senox 80 LK-AS 80lt",
+      "anchorY": 510.7,
+      "anchorX": 852.3,
+      "description": "80 LK AS\n250 W\n610 x 430x 1550\n310 x 340x 1045\n550 EUR\n63 kg\n150 W\n220 V ~ 50Hz\nVN25RO",
       "specs": {
-        "fiyat_eur": "190",
-        "fiyat_eur_source": "page-order"
+        "ebat_mm": "610 x 430 x 1550",
+        "genislik_mm": 610,
+        "derinlik_mm": 430,
+        "yukseklik_mm": 1550,
+        "fiyat_eur": "1400",
+        "voltaj": "220 V ~ 50Hz",
+        "elektrik_gucu": "250 W",
+        "agirlik_kg": "63"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-80lkas_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "lk-line"
     },
     {
       "model": "80LKAS",
@@ -204,14 +191,12 @@
         "genislik_mm": 610,
         "derinlik_mm": 430,
         "yukseklik_mm": 1550,
-        "fiyat_eur": "550",
+        "fiyat_eur": "1400",
         "voltaj": "220 V ~ 50Hz",
         "elektrik_gucu": "250 W",
         "agirlik_kg": "63"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-80lkas_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "DS-01",
@@ -232,9 +217,7 @@
         "elektrik_gucu": "110W",
         "agirlik_kg": "15"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-ds-01_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "DS-02",
@@ -246,12 +229,10 @@
       "anchorX": 330.5,
       "description": "Senox DS-02 Alttan Damacanalı Su Sebili",
       "specs": {
-        "fiyat_eur": "550",
+        "fiyat_eur": "340",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-ds-02_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "DS-03",
@@ -267,14 +248,12 @@
         "genislik_mm": 310,
         "derinlik_mm": 340,
         "yukseklik_mm": 1045,
-        "fiyat_eur": "340",
+        "fiyat_eur": "550",
         "sogutucu_gaz": "R134",
         "voltaj": "220 V ~ 50Hz",
         "elektrik_gucu": "150 W"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-ds-03_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "DS-04",
@@ -286,12 +265,10 @@
       "anchorX": 347.6,
       "description": "Senox DS-04 Sıcak-Soguk Buz Yapan Su Sebili",
       "specs": {
-        "fiyat_eur": "1100",
+        "fiyat_eur": "700",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-ds-04_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "ABS-PLASTIK-EXCLUSIVE-KAR-ILAMA-TEPSI",
@@ -309,9 +286,7 @@
         "yukseklik_mm": 30,
         "fiyat_eur": "18"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-abs-plastik-exclusive-kar-ilama-tepsi_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "KASA",
@@ -330,9 +305,7 @@
         "fiyat_eur": "120",
         "agirlik_kg": "11"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-kasa_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "KRS009",
@@ -348,12 +321,9 @@
         "genislik_mm": 425,
         "derinlik_mm": 225,
         "yukseklik_mm": 30,
-        "fiyat_eur": "300",
-        "fiyat_eur_source": "page-order"
+        "fiyat_eur": "18"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-krs009_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "SNX-35SC",
@@ -371,9 +341,7 @@
         "yukseklik_mm": 500,
         "fiyat_eur": "300"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-snx-35sc_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "BBC-150",
@@ -393,9 +361,7 @@
         "voltaj": "220 V ~ 50Hz",
         "agirlik_kg": "41"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-bbc-150_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "BBC-250",
@@ -411,14 +377,12 @@
         "genislik_mm": 900,
         "derinlik_mm": 505,
         "yukseklik_mm": 850,
-        "fiyat_eur": "1250",
+        "fiyat_eur": "1300",
         "sogutucu_gaz": "R600A",
         "voltaj": "220 V ~ 50Hz",
         "agirlik_kg": "55"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-bbc-250_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "BBC-350",
@@ -434,14 +398,12 @@
         "genislik_mm": 1350,
         "derinlik_mm": 505,
         "yukseklik_mm": 850,
-        "fiyat_eur": "1500",
+        "fiyat_eur": "1600",
         "sogutucu_gaz": "R600A",
         "voltaj": "220 V ~ 50Hz",
         "agirlik_kg": "75"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-bbc-350_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "BBCS-250",
@@ -457,14 +419,12 @@
         "genislik_mm": 900,
         "derinlik_mm": 505,
         "yukseklik_mm": 850,
-        "fiyat_eur": "1250",
+        "fiyat_eur": "1300",
         "sogutucu_gaz": "R600A",
         "voltaj": "220 V ~ 50Hz",
         "agirlik_kg": "55"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-bbcs-250_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "BBCS-350",
@@ -480,14 +440,12 @@
         "genislik_mm": 1350,
         "derinlik_mm": 505,
         "yukseklik_mm": 850,
-        "fiyat_eur": "1500",
+        "fiyat_eur": "1600",
         "sogutucu_gaz": "R600A",
         "voltaj": "220 V ~ 50Hz",
         "agirlik_kg": "75"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-bbcs-350_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SBC-150",
@@ -507,9 +465,7 @@
         "voltaj": "220 V ~ 50Hz",
         "agirlik_kg": "45"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-sbc-150_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SBC-250-ARPMA-KAPILI-SENOX-SBCS-250-S-RG-KAPILI",
@@ -525,14 +481,12 @@
         "genislik_mm": 900,
         "derinlik_mm": 505,
         "yukseklik_mm": 850,
-        "fiyat_eur": "1350",
+        "fiyat_eur": "1400",
         "sogutucu_gaz": "R600A",
         "voltaj": "220 V ~ 50Hz",
         "agirlik_kg": "60"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-sbc-250-arpma-kapili-senox-sbcs-250-s-rg-kapili_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SBC-350-ARPMA-KAPILI-SENOX-SBCS-350-S-RG-KAPILI",
@@ -548,14 +502,12 @@
         "genislik_mm": 1350,
         "derinlik_mm": 505,
         "yukseklik_mm": 850,
-        "fiyat_eur": "1650",
+        "fiyat_eur": "1700",
         "sogutucu_gaz": "R600A",
         "voltaj": "220 V ~ 50Hz",
         "agirlik_kg": "80"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-sbc-350-arpma-kapili-senox-sbcs-350-s-rg-kapili_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SMF-5105",
@@ -567,12 +519,10 @@
       "anchorX": 911.2,
       "description": "Senox SMF-5105 ST Dondurucu",
       "specs": {
-        "fiyat_eur": "1200",
+        "fiyat_eur": "1350",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-smf-5105_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SMR-5120",
@@ -584,12 +534,10 @@
       "anchorX": 681.2,
       "description": "Senox SMR-5120 ST Soğutuculu",
       "specs": {
-        "fiyat_eur": "1350",
+        "fiyat_eur": "1650",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-smr-5120_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SDS265",
@@ -601,12 +549,10 @@
       "anchorX": 754.3,
       "description": "Senox SDS 265 DC 1 CF Slim Tip Soğutucu",
       "specs": {
-        "fiyat_eur": "800",
+        "fiyat_eur": "1000",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-sds265_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SDS385",
@@ -626,9 +572,7 @@
         "voltaj": "220 V ~ 50Hz",
         "agirlik_kg": "80"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-sds385_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SDS710",
@@ -649,9 +593,7 @@
         "voltaj": "220 V ~ 50Hz",
         "agirlik_kg": "157"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-sds710_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SDS-385",
@@ -663,12 +605,10 @@
       "anchorX": 703.3,
       "description": "Senox SDS-385 Dc1 CF SILVER",
       "specs": {
-        "fiyat_eur": "2250",
+        "fiyat_eur": "1000",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-sds385_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SDS1010",
@@ -689,9 +629,7 @@
         "voltaj": "220 V ~ 50Hz",
         "agirlik_kg": "158"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-sds1010_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SDS1510",
@@ -712,9 +650,7 @@
         "voltaj": "220 V ~ 50Hz",
         "agirlik_kg": "157"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-sds1510_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SDS385",
@@ -729,9 +665,7 @@
         "fiyat_eur": "1000",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-sds385_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SDS770",
@@ -750,9 +684,7 @@
         "fiyat_eur": "2300",
         "voltaj": "220 V ~ 50Hz"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-sds770_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SDS385",
@@ -764,12 +696,10 @@
       "anchorX": 678.5,
       "description": "Senox SDS 385 DC 1 YW-P",
       "specs": {
-        "fiyat_eur": "1350",
+        "fiyat_eur": "1550",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-sds385_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "WN-1010",
@@ -781,12 +711,10 @@
       "anchorX": 726.8,
       "description": "Senox WN-1010 Kanopili Çarpma Kapı Siyah",
       "specs": {
-        "fiyat_eur": "1450",
+        "fiyat_eur": "2700",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-wn-1010_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "WN-770",
@@ -798,12 +726,10 @@
       "anchorX": 672.5,
       "description": "Senox WN-770 Kanopili",
       "specs": {
-        "fiyat_eur": "1700",
+        "fiyat_eur": "2700",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-wn-770_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "WN150",
@@ -824,9 +750,7 @@
         "voltaj": "220 V ~ 50Hz",
         "agirlik_kg": "41"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-wn150_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "WN250",
@@ -842,13 +766,11 @@
         "genislik_mm": 1350,
         "derinlik_mm": 505,
         "yukseklik_mm": 850,
-        "fiyat_eur": "1700",
+        "fiyat_eur": "1450",
         "voltaj": "220 V ~ 50Hz",
         "agirlik_kg": "75"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-wn250_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "WN350",
@@ -864,14 +786,12 @@
         "genislik_mm": 900,
         "derinlik_mm": 505,
         "yukseklik_mm": 850,
-        "fiyat_eur": "1450",
+        "fiyat_eur": "1700",
         "sogutucu_gaz": "R600A",
         "voltaj": "220 V ~ 50Hz",
         "agirlik_kg": "61"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-wn350_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "WN400",
@@ -890,9 +810,7 @@
         "fiyat_eur": "3400",
         "sogutucu_gaz": "R600A"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-wn400_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SFT-01",
@@ -912,9 +830,7 @@
         "voltaj": "220V~50Hz",
         "agirlik_kg": "15"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-sft-01_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SFT-02-PRO",
@@ -934,9 +850,7 @@
         "voltaj": "220V~50Hz",
         "agirlik_kg": "96"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-sft-02-pro_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SFT-03-PRO",
@@ -956,9 +870,7 @@
         "voltaj": "220V~50Hz",
         "agirlik_kg": "102"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-sft-03-pro_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "DY-01-TEK-HAZNELI-DONDURMA-YAPICI",
@@ -977,9 +889,7 @@
         "fiyat_eur": "6500",
         "voltaj": "220 V ~ 50Hz"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-dy-01-tek-hazneli-dondurma-yapici_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "DY-02-IFT-HAZNELI-DONDURMA-YAPICI",
@@ -991,12 +901,10 @@
       "anchorX": 714.6,
       "description": "Senox DY 02 Çift Hazneli Dondurma Yapıcı",
       "specs": {
-        "fiyat_eur": "7000",
+        "fiyat_eur": "12000",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-dy-02-ift-hazneli-dondurma-yapici_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "DY-04-D-RT-HAZNELI-DONDURMA-YAPICI",
@@ -1008,12 +916,10 @@
       "anchorX": 703.3,
       "description": "Senox DY 04 Dört Hazneli Dondurma Yapıcı",
       "specs": {
-        "fiyat_eur": "12000",
+        "fiyat_eur": "20000",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-dy-04-d-rt-hazneli-dondurma-yapici_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "PDY-01-PROFESYONEL-DONDURMA-YAPICISI",
@@ -1033,9 +939,7 @@
         "voltaj": "220 V ~ 50Hz",
         "agirlik_kg": "130"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-pdy-01-profesyonel-dondurma-yapicisi_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SLS-01",
@@ -1055,9 +959,7 @@
         "voltaj": "220V~50Hz",
         "agirlik_kg": "31"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-sls-01_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SLS-02",
@@ -1078,9 +980,7 @@
         "fiyat_eur": "2100",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-sls-02_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SLS-03",
@@ -1100,9 +1000,7 @@
         "voltaj": "220V~50Hz",
         "agirlik_kg": "65"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-sls-03_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SRB-15",
@@ -1122,9 +1020,7 @@
         "voltaj": "220V~50Hz",
         "agirlik_kg": "19"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-srb-15_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SRB-15X2",
@@ -1144,9 +1040,7 @@
         "voltaj": "220V~50Hz",
         "agirlik_kg": "26"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-srb-15x2_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SRB-15X3",
@@ -1158,12 +1052,10 @@
       "anchorX": 660.9,
       "description": "Senox SRB 15X3",
       "specs": {
-        "fiyat_eur": "450",
+        "fiyat_eur": "700",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-srb-15x3_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SRB12",
@@ -1178,9 +1070,7 @@
         "fiyat_eur": "600",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-srb12_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SRB20",
@@ -1201,9 +1091,7 @@
         "fiyat_eur": "700",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-srb20_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "BBL-A",
@@ -1215,12 +1103,10 @@
       "anchorX": 681.4,
       "description": "SENOX BBL-A\nSes yalıtımlı koruyucu kabine sahiptir.",
       "specs": {
-        "fiyat_eur": "350",
+        "fiyat_eur": "300",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-bbl-a_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "BBL-D",
@@ -1237,12 +1123,10 @@
         "derinlik_mm": 240,
         "yukseklik_mm": 525,
         "voltaj": "220 V ~ 50Hz",
-        "fiyat_eur": "400",
+        "fiyat_eur": "350",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-bbl-d_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "CMVA1-KOKTEYL-MIKSERI",
@@ -1255,12 +1139,10 @@
       "description": "SENOX CMVA1 Kokteyl Mikseri\nDijital kontrol paneli\nABS plastik gövde\nPaslanmaz çelik hazne\nBıçak malzemesi SUS 420 paslanmaz çeliktir\nKolay kullanım, bakım ve temizlik\n15000-22000 RPM 2 hızlı\nMikroswitch’li, otomatik çalışma\nKapasite: 1.2 litre\nÖlçüler:\nVoltaj\nEbatlar (mm)\nKapasite (L)\nAğırlık\nVoltaj\nGüç (W)\n220 V ~ 50Hz\n1 L\n220 V ~ 50Hz\n1680\n28\nwww.senox.com.tr",
       "specs": {
         "voltaj": "220 V ~ 50Hz",
-        "fiyat_eur": "400",
+        "fiyat_eur": "550",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-cmva1-kokteyl-mikseri_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "IC80A",
@@ -1279,9 +1161,7 @@
         "fiyat_eur": "700",
         "voltaj": "220 V ~ 50Hz"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-ic80a_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "KM01",
@@ -1301,9 +1181,7 @@
         "voltaj": "220 V ~ 50Hz",
         "elektrik_gucu": "400 W"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-km01_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "MOTORLU-PORTAKAL-SIKMA-MAKINESI",
@@ -1318,9 +1196,7 @@
         "fiyat_eur": "420",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-motorlu-portakal-sikma-makinesi_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "BLOK-KAPILI-DERIN-DONDURUCU-BEYAZ",
@@ -1336,12 +1212,10 @@
         "genislik_mm": 765,
         "derinlik_mm": 743,
         "yukseklik_mm": 840,
-        "fiyat_eur": "600",
+        "fiyat_eur": "1100",
         "voltaj": "220 V ~ 50Hz"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-blok-kapili-derin-dondurucu-beyaz_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "BLOK-KAPILI-DERIN-DONDURUCU-INOX",
@@ -1357,12 +1231,10 @@
         "genislik_mm": 765,
         "derinlik_mm": 743,
         "yukseklik_mm": 840,
-        "fiyat_eur": "650",
+        "fiyat_eur": "1200",
         "voltaj": "220 V ~ 50Hz"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-blok-kapili-derin-dondurucu-inox_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "CF5500KROM",
@@ -1378,12 +1250,10 @@
         "genislik_mm": 1492,
         "derinlik_mm": 743,
         "yukseklik_mm": 840,
-        "fiyat_eur": "1350",
+        "fiyat_eur": "1100",
         "voltaj": "220 V ~ 50Hz"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-cf5500krom_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "CF6000KROM",
@@ -1399,12 +1269,10 @@
         "genislik_mm": 1775,
         "derinlik_mm": 743,
         "yukseklik_mm": 840,
-        "fiyat_eur": "1450",
+        "fiyat_eur": "1350",
         "voltaj": "220 V ~ 50Hz"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-cf6000krom_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "CF6600KROM",
@@ -1423,9 +1291,7 @@
         "fiyat_eur": "1550",
         "voltaj": "220 V ~ 50Hz"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-cf6600krom_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "CF6650KROM",
@@ -1441,13 +1307,10 @@
         "genislik_mm": 1906,
         "derinlik_mm": 743,
         "yukseklik_mm": 840,
-        "voltaj": "220 V ~ 50Hz",
-        "fiyat_eur": "600",
-        "fiyat_eur_source": "page-order"
+        "fiyat_eur": "1450",
+        "voltaj": "220 V ~ 50Hz"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-cf6650krom_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "7300",
@@ -1466,9 +1329,7 @@
         "fiyat_eur": "750",
         "voltaj": "220 V ~ 50Hz"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-7300_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "7301",
@@ -1480,12 +1341,10 @@
       "anchorX": 767.5,
       "description": "Senox 7301 NF FANLI 7 ÇEKMECELİ DERİN DONDURUCU SİYAH",
       "specs": {
-        "fiyat_eur": "750",
+        "fiyat_eur": "850",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-7301_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SNX12R",
@@ -1506,9 +1365,7 @@
         "voltaj": "220 V ~ 50Hz",
         "agirlik_kg": "92"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-snx12r_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SYD-310",
@@ -1519,13 +1376,8 @@
       "anchorY": 159.6,
       "anchorX": 729.8,
       "description": "Senox / Simfer SYD-310 5 Gözlü Dondurma Reyonu",
-      "specs": {
-        "fiyat_eur": "1300",
-        "fiyat_eur_source": "page-order"
-      },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-syd310_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "specs": {},
+      "parseSource": "senox-title"
     },
     {
       "model": "SYD-410",
@@ -1536,13 +1388,8 @@
       "anchorY": 173.1,
       "anchorX": 728.9,
       "description": "Senox / Simfer SYD-410 7 Gözlü Dondurma Reyonu",
-      "specs": {
-        "fiyat_eur": "1500",
-        "fiyat_eur_source": "page-order"
-      },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-syd410_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "specs": {},
+      "parseSource": "senox-title"
     },
     {
       "model": "SYD-510",
@@ -1558,13 +1405,11 @@
         "genislik_mm": 1036,
         "derinlik_mm": 650,
         "yukseklik_mm": 850,
-        "fiyat_eur": "1300",
+        "fiyat_eur": "1500",
         "sogutucu_gaz": "R290A",
         "voltaj": "220 V ~ 50Hz"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-syd-510_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SYD310",
@@ -1580,11 +1425,9 @@
         "genislik_mm": 1036,
         "derinlik_mm": 650,
         "yukseklik_mm": 850,
-        "fiyat_eur": "1500"
+        "fiyat_eur": "1300"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-syd310_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "SYD410",
@@ -1600,11 +1443,9 @@
         "genislik_mm": 1514,
         "derinlik_mm": 650,
         "yukseklik_mm": 850,
-        "fiyat_eur": "1600"
+        "fiyat_eur": "1500"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-syd410_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "12-18-24-G-ZL-DONDURMA-REYONU",
@@ -1620,14 +1461,12 @@
         "genislik_mm": 1200,
         "derinlik_mm": 1095,
         "yukseklik_mm": 1350,
-        "fiyat_eur": "14000",
+        "fiyat_eur": "18000",
         "sogutucu_gaz": "R290",
         "voltaj": "220V~50Hz",
         "agirlik_kg": "235"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-12-18-24-g-zl-dondurma-reyonu_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "6-VE-8-G-ZL-DONDURMA-REYONLARI",
@@ -1643,14 +1482,12 @@
         "genislik_mm": 1170,
         "derinlik_mm": 845,
         "yukseklik_mm": 618,
-        "fiyat_eur": "5000",
+        "fiyat_eur": "6000",
         "sogutucu_gaz": "R290",
         "voltaj": "220V~50Hz",
         "agirlik_kg": "93"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-6-ve-8-g-zl-dondurma-reyonlari_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "9-13-G-ZL-DONDURMA-REYONU",
@@ -1666,14 +1503,12 @@
         "genislik_mm": 1292,
         "derinlik_mm": 880,
         "yukseklik_mm": 1263,
-        "fiyat_eur": "10000",
+        "fiyat_eur": "14000",
         "sogutucu_gaz": "R290",
         "voltaj": "220V~50Hz",
         "agirlik_kg": "189.5"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-9-13-g-zl-dondurma-reyonu_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "DONDURMA-TE-HIR-DOLABI",
@@ -1684,13 +1519,8 @@
       "anchorY": 355.2,
       "anchorX": 696.8,
       "description": "Senox Dondurma Teşhir Dolabı",
-      "specs": {
-        "fiyat_eur": "14000",
-        "fiyat_eur_source": "page-order"
-      },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-dondurma-te-hir-dolabi_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "specs": {},
+      "parseSource": "senox-title"
     },
     {
       "model": "DT100",
@@ -1706,13 +1536,11 @@
         "genislik_mm": 620,
         "derinlik_mm": 616,
         "yukseklik_mm": 883,
-        "fiyat_eur": "18000",
+        "fiyat_eur": "1600",
         "voltaj": "220V~50Hz",
         "agirlik_kg": "256.5"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-dt100_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "DT12",
@@ -1724,13 +1552,10 @@
       "anchorX": 259.1,
       "description": "DT 12\n235 kg\n89\n-12 / -22°C",
       "specs": {
-        "agirlik_kg": "235",
-        "fiyat_eur": "1800",
-        "fiyat_eur_source": "page-order"
+        "fiyat_eur": "14000",
+        "agirlik_kg": "235"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-dt12_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "DT13",
@@ -1745,9 +1570,7 @@
         "fiyat_eur": "14000",
         "agirlik_kg": "225.5"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-dt13_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "DT18",
@@ -1763,13 +1586,11 @@
         "genislik_mm": 2245,
         "derinlik_mm": 1095,
         "yukseklik_mm": 1350,
-        "fiyat_eur": "22000",
+        "fiyat_eur": "18000",
         "voltaj": "220V~50Hz",
         "agirlik_kg": "389"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-dt18_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "DT200",
@@ -1785,13 +1606,10 @@
         "genislik_mm": 1720,
         "derinlik_mm": 1095,
         "yukseklik_mm": 1350,
-        "voltaj": "220V~50Hz",
-        "fiyat_eur": "5000",
-        "fiyat_eur_source": "page-order"
+        "fiyat_eur": "1800",
+        "voltaj": "220V~50Hz"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-dt200_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "DT24",
@@ -1803,12 +1621,9 @@
       "anchorX": 257.6,
       "description": "DT 24\n24*5\n36\n37\nwww.senox.com.tr\nwww.senox.com.tr",
       "specs": {
-        "fiyat_eur": "18000",
-        "fiyat_eur_source": "page-order"
+        "fiyat_eur": "22000"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-dt24_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "DT6",
@@ -1824,13 +1639,11 @@
         "genislik_mm": 1525,
         "derinlik_mm": 845,
         "yukseklik_mm": 618,
-        "fiyat_eur": "6000",
+        "fiyat_eur": "5000",
         "voltaj": "220V~50Hz",
         "agirlik_kg": "93"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-dt6_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "DT600",
@@ -1842,13 +1655,10 @@
       "anchorX": 637.8,
       "description": "DT 600\n-12 / -22°C\n-12 / -22°C\n241 kg\n120\n120",
       "specs": {
-        "agirlik_kg": "241",
-        "fiyat_eur": "22000",
-        "fiyat_eur_source": "page-order"
+        "fiyat_eur": "10000",
+        "agirlik_kg": "241"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-dt600_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "DT8",
@@ -1860,14 +1670,11 @@
       "anchorX": 635.4,
       "description": "DT 8\n220V~50Hz\n118 kg\n8*1/3",
       "specs": {
+        "fiyat_eur": "6000",
         "voltaj": "220V~50Hz",
-        "agirlik_kg": "118",
-        "fiyat_eur": "10000",
-        "fiyat_eur_source": "page-order"
+        "agirlik_kg": "118"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-dt8_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "DT9",
@@ -1887,9 +1694,7 @@
         "voltaj": "220V~50Hz",
         "agirlik_kg": "189.5"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-dt9_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "DW9RA",
@@ -1901,12 +1706,9 @@
       "anchorX": 245.6,
       "description": "DW 9RA",
       "specs": {
-        "fiyat_eur": "1600",
-        "fiyat_eur_source": "page-order"
+        "fiyat_eur": "10000"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-dw9ra_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "2-RAFLI-MOD-LER-PASTA-TE-HIR-DOLABI",
@@ -1927,9 +1729,7 @@
         "voltaj": "220 V ~ 50Hz",
         "agirlik_kg": "160"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-2-rafli-mod-ler-pasta-te-hir-dolabi_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "3-RAFLI-MOD-LER-PASTA-TE-HIR-DOLABI",
@@ -1940,13 +1740,8 @@
       "anchorY": 345.3,
       "anchorX": 742.1,
       "description": "Senox 3 Raflı Modüler Pasta Teşhir Dolabı",
-      "specs": {
-        "fiyat_eur": "2800",
-        "fiyat_eur_source": "page-order"
-      },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-3-rafli-mod-ler-pasta-te-hir-dolabi_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "specs": {},
+      "parseSource": "senox-title"
     },
     {
       "model": "PDM124-2",
@@ -1962,12 +1757,10 @@
         "genislik_mm": 1240,
         "derinlik_mm": 688,
         "yukseklik_mm": 1200,
-        "fiyat_eur": "3500",
+        "fiyat_eur": "3000",
         "agirlik_kg": "182"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-pdm124-2_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "PDM124-3",
@@ -1979,12 +1772,9 @@
       "anchorX": 671.5,
       "description": "PDM 124-3\n400",
       "specs": {
-        "fiyat_eur": "3000",
-        "fiyat_eur_source": "page-order"
+        "fiyat_eur": "3250"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-pdm124-3_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "PDM154-2",
@@ -2000,14 +1790,11 @@
         "genislik_mm": 1540,
         "derinlik_mm": 688,
         "yukseklik_mm": 1200,
+        "fiyat_eur": "3500",
         "voltaj": "220V~50Hz",
-        "agirlik_kg": "229",
-        "fiyat_eur": "3750",
-        "fiyat_eur_source": "page-order"
+        "agirlik_kg": "229"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-pdm154-2_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "PDM154-3",
@@ -2019,12 +1806,9 @@
       "anchorX": 671.2,
       "description": "PDM 154-3",
       "specs": {
-        "fiyat_eur": "3250",
-        "fiyat_eur_source": "page-order"
+        "fiyat_eur": "3750"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-pdm154-3_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "PDM300L",
@@ -2036,12 +1820,9 @@
       "anchorX": 270.7,
       "description": "PDM 300L",
       "specs": {
-        "fiyat_eur": "3000",
-        "fiyat_eur_source": "page-order"
+        "fiyat_eur": "4400"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-pdm300l_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "PDM440L",
@@ -2057,13 +1838,11 @@
         "genislik_mm": 1484,
         "derinlik_mm": 678,
         "yukseklik_mm": 1403,
-        "fiyat_eur": "4400",
+        "fiyat_eur": "5000",
         "voltaj": "220 V ~ 50Hz",
         "agirlik_kg": "181.5"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-pdm440l_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "PDM94-2",
@@ -2079,13 +1858,11 @@
         "genislik_mm": 940,
         "derinlik_mm": 688,
         "yukseklik_mm": 1200,
-        "fiyat_eur": "3000",
+        "fiyat_eur": "2800",
         "voltaj": "220V~50Hz",
         "agirlik_kg": "195"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-pdm94-2_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "PDM94-3",
@@ -2097,12 +1874,9 @@
       "anchorX": 669.6,
       "description": "PDM 94-3",
       "specs": {
-        "fiyat_eur": "3500",
-        "fiyat_eur_source": "page-order"
+        "fiyat_eur": "3000"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-pdm94-3_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "EKMECELI-SO-UK-TE-HIR-DOLABI",
@@ -2117,9 +1891,7 @@
         "fiyat_eur": "6000",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-ekmeceli-so-uk-te-hir-dolabi_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SO-UK-ADA-TIPI-TE-HIR-DOLABI",
@@ -2134,9 +1906,7 @@
         "fiyat_eur": "5500",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-so-uk-ada-tipi-te-hir-dolabi_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SO-UK-MEZE-TE-HIR-DOLABI",
@@ -2152,13 +1922,11 @@
         "genislik_mm": 1223,
         "derinlik_mm": 855,
         "yukseklik_mm": 1406,
-        "fiyat_eur": "3000",
+        "fiyat_eur": "3500",
         "voltaj": "220V~50Hz",
         "agirlik_kg": "151"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-so-uk-meze-te-hir-dolabi_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "I-ECEK-TE-HIR-DOLABI",
@@ -2173,9 +1941,7 @@
         "fiyat_eur": "4500",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-i-ecek-te-hir-dolabi_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "DIK-SO-UK-PASTA-TE-HIR-DOLABI",
@@ -2190,9 +1956,7 @@
         "fiyat_eur": "900",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-dik-so-uk-pasta-te-hir-dolabi_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "EKMECELI-SICAK-DOLAP",
@@ -2211,9 +1975,7 @@
         "fiyat_eur": "1650",
         "sogutucu_gaz": "R600A"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-ekmeceli-sicak-dolap_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SET-ST-SICAK-PASTA-TE-H-R-DOLABI-PANAROMK-CAM",
@@ -2228,9 +1990,7 @@
         "fiyat_eur": "1500",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-set-st-sicak-pasta-te-h-r-dolabi-panaromk-cam_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SET-ST-SICAK-TE-HIR-DOLABI",
@@ -2251,9 +2011,7 @@
         "voltaj": "220V~50Hz",
         "agirlik_kg": "57"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-set-st-sicak-te-hir-dolabi_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SET-ST-SO-UK-PASTA-TE-HIR-DOLABI",
@@ -2274,9 +2032,7 @@
         "voltaj": "220V~50Hz",
         "agirlik_kg": "115"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-set-st-so-uk-pasta-te-hir-dolabi_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SET-ST-SO-UK-PASTA-TE-HR-DOLABI-PANAROMK-CAM",
@@ -2288,12 +2044,10 @@
       "anchorX": 364.2,
       "description": "Senox Set Üstü Soğuk Pasta Teşhr Dolabı (Panaromk Cam)",
       "specs": {
-        "fiyat_eur": "1400",
+        "fiyat_eur": "2500",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-set-st-so-uk-pasta-te-hr-dolabi-panaromk-cam_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "KASA-N-EXCLUSIVE-SO-UK-ECEK-DOLABI",
@@ -2309,14 +2063,12 @@
         "genislik_mm": 1500,
         "derinlik_mm": 845,
         "yukseklik_mm": 1510,
-        "fiyat_eur": "6600",
+        "fiyat_eur": "8000",
         "sogutucu_gaz": "R290",
         "voltaj": "220V~50Hz",
         "agirlik_kg": "256.5"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-kasa-n-exclusive-so-uk-ecek-dolabi_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "KASA-N-SO-UK-ECEK-DOLABI",
@@ -2332,14 +2084,12 @@
         "genislik_mm": 1200,
         "derinlik_mm": 845,
         "yukseklik_mm": 1548,
-        "fiyat_eur": "5600",
+        "fiyat_eur": "6600",
         "sogutucu_gaz": "R290",
         "voltaj": "220V~50Hz",
         "agirlik_kg": "176"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-kasa-n-so-uk-ecek-dolabi_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "ATILI-K-P-KL-AYRAN-MAKINESI",
@@ -2359,9 +2109,7 @@
         "voltaj": "220 V ~ 50Hz",
         "elektrik_gucu": "40 W"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-atili-k-p-kl-ayran-makinesi_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "KA-18",
@@ -2381,9 +2129,7 @@
         "voltaj": "220 V ~ 50Hz",
         "elektrik_gucu": "40 W"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-ka-18_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "KA-30",
@@ -2402,9 +2148,7 @@
         "fiyat_eur": "1800",
         "voltaj": "220 V ~ 50Hz"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-ka-30_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "BLK-01",
@@ -2422,9 +2166,7 @@
         "yukseklik_mm": 800,
         "fiyat_eur": "3050"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-blk01_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "BLK01",
@@ -2440,12 +2182,9 @@
         "genislik_mm": 900,
         "derinlik_mm": 800,
         "yukseklik_mm": 800,
-        "fiyat_eur": "3200",
-        "fiyat_eur_source": "page-order"
+        "fiyat_eur": "3050"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-blk01_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "N-DUSTRIO-SET-ST-BALIK-TE-HIR-NITESI",
@@ -2463,9 +2202,7 @@
         "yukseklik_mm": 460,
         "fiyat_eur": "1550"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-n-dustrio-set-st-balik-te-hir-nitesi_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "MS-07",
@@ -2484,9 +2221,7 @@
         "fiyat_eur": "750",
         "voltaj": "220 V ~ 50Hz"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-ms-07_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "MS-10",
@@ -2505,9 +2240,7 @@
         "fiyat_eur": "850",
         "voltaj": "220 V ~ 50Hz"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-ms-10_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "M10",
@@ -2519,12 +2252,10 @@
       "anchorX": 663.3,
       "description": "Senox / Inoksan M10",
       "specs": {
-        "fiyat_eur": "950",
+        "fiyat_eur": "1400",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-m10_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "M20",
@@ -2536,12 +2267,10 @@
       "anchorX": 664.0,
       "description": "Senox / Inoksan M20",
       "specs": {
-        "fiyat_eur": "1100",
+        "fiyat_eur": "1600",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-m20_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "M30",
@@ -2553,12 +2282,10 @@
       "anchorX": 665.4,
       "description": "Senox / Inoksan M30",
       "specs": {
-        "fiyat_eur": "1300",
+        "fiyat_eur": "2000",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-m30_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "PLM-10",
@@ -2578,9 +2305,7 @@
         "voltaj": "220 V ~ 60Hz",
         "elektrik_gucu": "450 W"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-plm-10_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "PLM-20",
@@ -2600,9 +2325,7 @@
         "voltaj": "220 V ~ 60Hz",
         "elektrik_gucu": "1100 W"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-plm-20_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "PLM-30",
@@ -2622,9 +2345,7 @@
         "voltaj": "220 V ~ 60Hz",
         "elektrik_gucu": "1100 W"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-plm-30_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "BL25",
@@ -2640,14 +2361,11 @@
         "genislik_mm": 595,
         "derinlik_mm": 130,
         "yukseklik_mm": 98,
-        "elektrik_gucu": "250 W",
-        "agirlik_kg": "2.25",
         "fiyat_eur": "270",
-        "fiyat_eur_source": "page-order"
+        "elektrik_gucu": "250 W",
+        "agirlik_kg": "2.25"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-bl25_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "BL25C",
@@ -2659,12 +2377,9 @@
       "anchorX": 266.9,
       "description": "BL25-C\nGradual speed adjustment and staਟnless steel blade\nKademeli hız ayarı ve paslanmaz çelik bıçak\nConstant speed and staਟnless steel blade\nSabit hız ve paslanmaz çelik bıçak",
       "specs": {
-        "fiyat_eur": "420",
-        "fiyat_eur_source": "page-order"
+        "fiyat_eur": "420"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-bl25c_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "BL25L35",
@@ -2676,12 +2391,9 @@
       "anchorX": 266.8,
       "description": "BL25 L35\nGradual speed adjustment and staਟnless steel blade\nKademeli hız ayarı ve paslanmaz çelik bıçak\nConstant speed and staਟnless steel blade\nSabit hız ve paslanmaz çelik bıçak\nMਟxer arm (500 mm)\nParçalayıcı aparat (500 mm)\nMਟxer arm 350 mm\nParçalayıcı (350 mm)\nWhਟsk (360 mm-Combਟ models only)\nÇırpıcı Aparat (360 mm-Combi modeller için)",
       "specs": {
-        "fiyat_eur": "290",
-        "fiyat_eur_source": "page-order"
+        "fiyat_eur": "290"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-bl25l35_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "BL25L35C",
@@ -2693,12 +2405,9 @@
       "anchorX": 267.5,
       "description": "BL25 L35-C\n60\n61\nwww.senox.com.tr\nwww.senox.com.tr",
       "specs": {
-        "fiyat_eur": "440",
-        "fiyat_eur_source": "page-order"
+        "fiyat_eur": "440"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-bl25l35c_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "BL40",
@@ -2712,9 +2421,7 @@
       "specs": {
         "fiyat_eur": "400"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-bl40_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "BL40C",
@@ -2730,13 +2437,11 @@
         "genislik_mm": 595,
         "derinlik_mm": 130,
         "yukseklik_mm": 98,
-        "fiyat_eur": "420",
+        "fiyat_eur": "550",
         "elektrik_gucu": "400 W",
         "agirlik_kg": "3.15"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-bl40c_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "BL40L50",
@@ -2752,13 +2457,11 @@
         "genislik_mm": 705,
         "derinlik_mm": 130,
         "yukseklik_mm": 98,
-        "fiyat_eur": "290",
+        "fiyat_eur": "425",
         "elektrik_gucu": "250 W",
         "agirlik_kg": "2.40"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-bl40l50_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "BL40L50C",
@@ -2774,13 +2477,11 @@
         "genislik_mm": 705,
         "derinlik_mm": 130,
         "yukseklik_mm": 98,
-        "fiyat_eur": "440",
+        "fiyat_eur": "575",
         "elektrik_gucu": "250 W",
         "agirlik_kg": "3.30"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-bl40l50c_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "BL40L60",
@@ -2792,12 +2493,10 @@
       "anchorX": 266.3,
       "description": "BL40 L60\nGıda ile temas eden yüzeyler Paslanmaz Çelik'tir.\nGövde renkleri değişkenlik gösterebilir.\nsenox\nGüç (W)\nKapasite\nFiyat\nVoltaj\n225 EUR\n150\n10 lt\n220 V ~ 50Hz",
       "specs": {
-        "fiyat_eur": "225",
+        "fiyat_eur": "450",
         "voltaj": "220 V ~ 50Hz"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-bl40l60_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "BL40L60C",
@@ -2809,12 +2508,10 @@
       "anchorX": 266.2,
       "description": "BL40 L60-C\n250 EUR\n13.5\n250\n30 lt\n220 V ~ 50Hz",
       "specs": {
-        "fiyat_eur": "250",
+        "fiyat_eur": "600",
         "voltaj": "220 V ~ 50Hz"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-bl40l60c_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "R301",
@@ -2830,12 +2527,10 @@
         "genislik_mm": 325,
         "derinlik_mm": 300,
         "yukseklik_mm": 550,
-        "fiyat_eur": "2410",
+        "fiyat_eur": "632",
         "agirlik_kg": "17"
       },
-      "parseSource": "urun-kodu",
-      "localImage": "images/senox-r301_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "urun-kodu"
     },
     {
       "model": "ROBOTCOUPE-CL50-ULTRA",
@@ -2852,12 +2547,10 @@
         "derinlik_mm": 305,
         "yukseklik_mm": 610,
         "agirlik_kg": "150",
-        "fiyat_eur": "1620",
+        "fiyat_eur": "3075",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-robotcoupe-cl50-ultra_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "ROBOTCOUPE-CL55",
@@ -2870,12 +2563,10 @@
       "description": "Ağırlık\n20,2 kg\nRobotcoupe Cl55\n220 V - 1N\nGüç: 550 Watt\nHız: 375 devir/dk\nVoltaj: Monofaz 220 V\nSaatte uygulanabilir kesim miktarı: 150 kg\nSaatte teorik kesim miktarı: 500 kg\nMevcut diskler: +50\nDahili aksesuar: 1 adet 2 mm rende ve 1 adet 2 mm doğrayıcı\nVoltaj\n220 V - 1N\nEbatlar (mm)",
       "specs": {
         "agirlik_kg": "20.2",
-        "fiyat_eur": "3075",
+        "fiyat_eur": "9390",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-robotcoupe-cl55_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "ROBOTCOUPE-J80",
@@ -2890,9 +2581,7 @@
         "fiyat_eur": "1620",
         "agirlik_kg": "17"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-robotcoupe-j80_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "ROBOTCOUPE-MICROMIX-EL-BLENDER",
@@ -2910,9 +2599,7 @@
         "fiyat_eur": "2680",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-robotcoupe-micromix-el-blender_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "ROBOTCOUPE-MINI-MP-190-V-V-",
@@ -2927,12 +2614,10 @@
         "voltaj": "230v H",
         "elektrik_gucu": "700 W",
         "agirlik_kg": "1.4",
-        "fiyat_eur": "2410",
+        "fiyat_eur": "3325",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-robotcoupe-mini-mp-190-v-v_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "ROBOTCOUPE-MINIMP190-COMBI",
@@ -2952,9 +2637,7 @@
         "elektrik_gucu": "270 W",
         "agirlik_kg": "2.5"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-robotcoupe-minimp190-combi_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "ROBOTCOUPE-MINIMP240-V-V-",
@@ -2969,12 +2652,10 @@
         "voltaj": "230v H",
         "elektrik_gucu": "220 W",
         "agirlik_kg": "1.4",
-        "fiyat_eur": "3325",
+        "fiyat_eur": "2880",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-robotcoupe-minimp240-v-v_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "ROBOTCOUPE-MP160-V-V",
@@ -2987,12 +2668,10 @@
       "description": "Ölçülür Uzunluk: 430 mm, Ø 61 mm\nBrüt ağırlık: 1,4 Kg\nRobotcoupe - Mp160 V.V\nGüç: 240 Watt\nVoltaj: Monofaz\nDeğiştirilebilir hız 2000 - 12500 devir/dk\nTüp uzunluğu: 160 mm\nBoyutları: Toplam uzunluk 430 mm, Ø 78 mm\nToplam ağırlık: 2.4 Kg\nRfs-1942\nRfs-28170\nOtomatik Kafa\nRfs-22245\nCl55 İtme Kafa",
       "specs": {
         "agirlik_kg": "1.4",
-        "fiyat_eur": "2827",
+        "fiyat_eur": "2410",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-robotcoupe-mp160-v-v_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "ROBOTCOUPE-R301",
@@ -3004,12 +2683,10 @@
       "anchorX": 287.8,
       "description": "12 bıçaklı disk seti\n2680 EUR\nRobotcoupe R301\n2827 EUR\n220 V - 1N\nVoltaj: Monofaz\n1 hız: 1500 devir/dk\nDoğrama haznesi: paslanmaz çelik\nGüç:650 W\nHazne Malzemesi:Çelik\nKapasite:1500 devir/dk\nVoltaj\n230 V - 1N\nEbatlar (mm)",
       "specs": {
-        "fiyat_eur": "2680",
+        "fiyat_eur": "2827",
         "elektrik_gucu": "650 W"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-robotcoupe-r301_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "ROBOTCOUPE-R301ULTRA",
@@ -3024,9 +2701,7 @@
         "fiyat_eur": "1620",
         "agirlik_kg": "17"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-robotcoupe-r301ultra_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "ROBOTCOUPE-MINI-CMP-250-COMBI",
@@ -3042,9 +2717,7 @@
         "elektrik_gucu": "440 W",
         "agirlik_kg": "6.2"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-robotcoupe-mini-cmp-250-combi_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "ROBOTCOUPE-MP-350-COMBI-ULTRA",
@@ -3060,9 +2733,7 @@
         "elektrik_gucu": "440 W",
         "agirlik_kg": "6.3"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-robotcoupe-mp-350-combi-ultra_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "ROBOTCOUPE-MP-350-ULTRA",
@@ -3077,9 +2748,7 @@
         "fiyat_eur": "1215",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-robotcoupe-mp-350-ultra_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "ROBOTCOUPE-MP-450-ULTRA",
@@ -3091,12 +2760,10 @@
       "anchorX": 350.6,
       "description": "Robotcoupe - MP 350 ULTRA\nRobotcoupe - Mp450 COMBI ULTRA\nRobotcoupe - MP 450 ULTRA\nEl Blenderları\nSenox VM-01 Mini Vakum Makinesi\nKutu İçeriği\n1 adet Senox vakum makinesi,\n5 adet 19x30 cm vakul poşeti,\n1 adet şişe vakum aparatı,\n20 cm genişliğinde 10 m uzunluğunda rulo vakum poşeti.\nVakum Hızı: 12L/dakika\nHavayı çektikten sonra ağızını ısı ile yapıştırmaktadır.\nEn fazla 30 cm genişliğinde poşetleri vakumlayabilir.\nMarka : SELES",
       "specs": {
-        "fiyat_eur": "970",
+        "fiyat_eur": "1620",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-robotcoupe-mp-450-ultra_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "ROBOTCOUPE-MP450-COMBI-ULTRA",
@@ -3108,12 +2775,10 @@
       "anchorX": 367.2,
       "description": "Vakum Makineleri\nRobotcoupe - MP 350 ULTRA\nRobotcoupe - Mp450 COMBI ULTRA\nRobotcoupe - MP 450 ULTRA\nEl Blenderları\nSenox VM-01 Mini Vakum Makinesi\nKutu İçeriği\n1 adet Senox vakum makinesi,\n5 adet 19x30 cm vakul poşeti,\n1 adet şişe vakum aparatı,\n20 cm genişliğinde 10 m uzunluğunda rulo vakum poşeti.\nVakum Hızı: 12L/dakika\nHavayı çektikten sonra ağızını ısı ile yapıştırmaktadır.\nEn fazla 30 cm genişliğinde poşetleri vakumlayabilir.",
       "specs": {
-        "fiyat_eur": "1500",
+        "fiyat_eur": "1800",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-robotcoupe-mp450-combi-ultra_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "VM-01",
@@ -3125,13 +2790,11 @@
       "anchorX": 720.1,
       "description": "Senox VM-01 Mini Vakum Makinesi\nKutu İçeriği\nGüç: 0,44 Elek. kW ~ 50 Hz AC 220/230V 1N\n1 adet Senox vakum makinesi,\nTek Hız: 9500 devir/dk\n5 adet 19x30 cm vakul poşeti,\nTüp uzunluğu: 350 mm\n1 adet şişe vakum aparatı,\nGüç\nFiyat\nEbatlar (mm)\nAğırlık\n20 cm genişliğinde 10 m uzunluğunda rulo vakum poşeti.\n970 EUR\n220 V - 1N\n440 W\n725x125\n6.2 kg\nVakum Hızı: 12L/dakika\nHavayı çektikten sonra ağızını ısı ile yapıştırmaktadır.\nRobotcoupe Mp 350 COMBI ULTRA\nEn fazla 30 cm genişliğinde poşetleri vakumlayabilir.\nOtomatik hız regülasyonlu sistem\nGüç\nFiyat\nEbatlar (mm)\nAğırlık\nSökülebilir paslanmaz çan ve bıçak\n300 EUR\n220 V - 1N\n1 adet paslanmaz duvar tipi askılık ile beraber teslim edilir\nGüç: 0,44 Elek. kW ~ 50 Hz AC 220/230V 1N\nKarıştırma Çoklu Hız: 1500-9000 devir/dk",
       "specs": {
-        "fiyat_eur": "300",
+        "fiyat_eur": "970",
         "elektrik_gucu": "440 W",
         "agirlik_kg": "6.2"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-vm-01_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "VM-3-FT-ENE-VAKUM-MAK-NES",
@@ -3151,9 +2814,7 @@
         "elektrik_gucu": "900 W",
         "agirlik_kg": "76"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-vm-3-ft-ene-vakum-mak-nes_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "WM-2-TEK-ENEVAKUM-MAK-NES",
@@ -3169,13 +2830,11 @@
         "genislik_mm": 280,
         "derinlik_mm": 385,
         "yukseklik_mm": 110,
-        "fiyat_eur": "1800",
-        "elektrik_gucu": "370 W",
-        "agirlik_kg": "36"
+        "fiyat_eur": "1500",
+        "elektrik_gucu": "440 W",
+        "agirlik_kg": "7.9"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-wm-2-tek-enevakum-mak-nes_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "-NOKSAN-GD-220-G-DA-DILIMLEME",
@@ -3195,9 +2854,7 @@
         "fiyat_eur": "620",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-noksan-gd-220-g-da-dilimleme_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "-NOKSAN-GD-250-G-DA-DILIMLEME",
@@ -3212,9 +2869,7 @@
         "fiyat_eur": "1100",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-noksan-gd-250-g-da-dilimleme_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "-NOKSAN-GD-300-G-DA-DILIMLEME",
@@ -3229,9 +2884,7 @@
         "fiyat_eur": "200",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-noksan-gd-300-g-da-dilimleme_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "DDKB-MOTORLU-D-NER-KESME-B-A-",
@@ -3250,9 +2903,7 @@
         "fiyat_eur": "250",
         "elektrik_gucu": "80 W"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-ddkb-motorlu-d-ner-kesme-b-a_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "YSO-100-YAP-KANL-SINEK-LD-R-C-100-M2",
@@ -3267,9 +2918,7 @@
         "fiyat_eur": "650",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-yso-100-yap-kanl-sinek-ld-r-c-100-m2_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "YSO-200-YAP-KANL-SINEK-LD-R-C-200-M2",
@@ -3281,12 +2930,10 @@
       "anchorX": 710.8,
       "description": "Gıda Dilimleme Makineleri\nHazırlık Ekipmanları\nYSO-200 Yapışkanlı Sinek Öldürücü 200 m2\nYSO-100 Yapışkanlı Sinek Öldürücü 100 m2\nİnoksan - GD-250 Gıda Dilimleme\nAlüminyum gövde.\nPaslanmaz çelik bıçak.\nKendinden bileylemeli.\n15 Farklı dilimleme aralığ\nVoltaj : 230V - 1N\nElektrik Gücü\nEbatlar (mm)\nBıçak Çapı\nElektrik Gücü",
       "specs": {
-        "fiyat_eur": "250",
+        "fiyat_eur": "200",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-yso-200-yap-kanl-sinek-ld-r-c-200-m2_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "BS-01-BI-AK-STERILIZAT-R",
@@ -3306,9 +2953,7 @@
         "voltaj": "220V~50Hz",
         "elektrik_gucu": "15 W"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-bs-01-bi-ak-sterilizat-r_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "DBE-01-DIZDEN-BASMALI-EVYE-TEK-SU-GIRI",
@@ -3326,9 +2971,7 @@
         "yukseklik_mm": 265,
         "fiyat_eur": "250"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-dbe-01-dizden-basmali-evye-tek-su-giri_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "DBE-02-DIZDEN-BASMALI-EVYE-IFT-SU-GIRI",
@@ -3346,9 +2989,7 @@
         "yukseklik_mm": 265,
         "fiyat_eur": "300"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-dbe-02-dizden-basmali-evye-ift-su-giri_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "DVF-01-DAVLUMBAZ-FILTRESI",
@@ -3360,12 +3001,10 @@
       "anchorX": 342.7,
       "description": "Senox DVF 01 Davlumbaz Filtresi",
       "specs": {
-        "fiyat_eur": "300",
+        "fiyat_eur": "1000",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-dvf-01-davlumbaz-filtresi_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "LIVAGAZ-DU-SPREYI-ARA-MUSLUKLU",
@@ -3377,12 +3016,10 @@
       "anchorX": 987.4,
       "description": "Senox / Livagaz Duş Spreyi Ara MuslukLU",
       "specs": {
-        "fiyat_eur": "20",
+        "fiyat_eur": "1100",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-livagaz-du-spreyi-ara-musluklu_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "LIVAGAZ-DU-SPREYI-ARA-MUSLUKSUZ",
@@ -3396,9 +3033,7 @@
       "specs": {
         "fiyat_eur": "20"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-livagaz-du-spreyi-ara-musluksuz_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SELES-A1-L-50X60-CM-150-KG-TARTIM-BASK-L",
@@ -3413,9 +3048,7 @@
         "fiyat_eur": "125",
         "agirlik_kg": "150"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-seles-a1-l-50x60-cm-150-kg-tartim-bask-l_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SELES-BW-60X70-CM-300-KG-TARTIM-BASK-L",
@@ -3428,12 +3061,10 @@
       "description": "Senox / Seles BW 60x70 cm 300 kg Tartım Baskülü\nElektrostatik toz boyalı platform",
       "specs": {
         "agirlik_kg": "300",
-        "fiyat_eur": "200",
+        "fiyat_eur": "300",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-seles-bw-60x70-cm-300-kg-tartim-bask-l_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SELES-T-28-TARTIM-TERAZISI",
@@ -3445,12 +3076,10 @@
       "anchorX": 347.8,
       "description": "Senox / Seles T 28 Tartım Terazisi\nAyarlanabilen ayakları sayesinde her zemine uyumlu Bilgisayar bağlantı\nLcd Ekran, Hızlı işlem yüksek doğruluk\nuygunluğu (RS-232)\n6-15-30 kg kapasite seçeneği\nOpsiyonel RF modülü ile tartım bilgisini kablosuz olarak bilgisayar veya\nErgonomik dizayn, Elektrik ve Pilli Kullanım İmkanı\nbarkod etiket yazıcıya aktarabilme\nButon tuş takımı, Kolay kullanım\nDahili aküsü ile 72 saat kullanma olanağı\nİkili taksimat sayesinde daha hassas tartım Göstergedeki ikonlar sayesinde\n360 derece dönebilen gösterge, Yukarı aşağı hareket edebilen gösterge\nkolay anlaşılırlık\n0-150 kg arasında 50 g, 150-300 kg arasında 100 g hassasiyeti mevcuttur.\nOtomatik sıfırlama ve dara alma Ayarlanabilen ayaklar\nAlım ve satım işlerinde kullanılabilir.\nOtomatik kapanma fonksiyonu\nSanayi bakanlığı tarafından onaylı.\nKefe Ölçüleri 230×190 mm\nÜrün Kodu\nFiyat\nÜrün Kodu\nBW 300 kg\n190 EUR\nT 28 Tek Ekran\nT 28 Çift Ekran\n200 EUR",
       "specs": {
-        "fiyat_eur": "190",
+        "fiyat_eur": "200",
         "agirlik_kg": "30"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-seles-t-28-tartim-terazisi_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SELES-TDS-15B-TARTIM-TERAZISI",
@@ -3465,9 +3094,7 @@
         "fiyat_eur": "190",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-seles-tds-15b-tartim-terazisi_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SELES-TDS-30B-TARTIM-TERAZISI",
@@ -3482,9 +3109,7 @@
         "fiyat_eur": "130",
         "agirlik_kg": "150"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-seles-tds-30b-tartim-terazisi_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SELES-WSP-BOYUNLU-FIYAT-HESAPLAMALI-TERAZI",
@@ -3499,9 +3124,7 @@
         "fiyat_eur": "300",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-seles-wsp-boyunlu-fiyat-hesaplamali-terazi_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SELES-XK-3108B-50-60-CM-PASLANMAZ-TARTIM-BASK-L",
@@ -3513,11 +3136,9 @@
       "anchorX": 757.8,
       "description": "Senox / Seles XK 3108B 50*60 cm Paslanmaz Tartım Baskülü\n10 adet ön hızlı PLU (kayıtlı hafıza) tuşu\nİkili taksimat sayesinde daha hassas tartım\nElektrostatik toz boyalı platforma sahiptir.\nGöstergedeki ikonlar sayesinde kolay anlaşılırlık\nOtomatik sıfırlama ve dara alma\nDahili Akü ile gösterge aydınlatmasız\nAyarlanabilen ayakları sayesinde her zemine uyumlu Dara alma ve sıfırlama\n60 saate kadar çalışabilme, Akü tasarruf modu\nözelliği mevcuttur.\nSu Koruma Kılıfı\n304 veya 316 paslanma dış gövdeye sahiptir.\nOtomatik sıfırlama ve dara alma\n360 derece dönebilen gösterge\nAyarlanabilen ayaklar, Hızlı işlem yüksek doğruluk\nOpsiyonel yazıcı bağlantısı.\nOtomatik kapanma fonksiyonu\nOpsiyonel RS-232 bağlantısı sayesinde pc veri aktarımı Dahili aküsü ile 72\nAğırlık- Birim Fiyat- Toplam fiyat göstergesi Paslanmaz Kefe\nsaat kullanma olanağı\nAlım ve satım işlerinde kullanılabilir\nYukarı aşağı hareket edebilen gösterge\nFiyat\nFiyat\nÜrün Kodu\nÜrün Kodu\n300 EUR\nWSP Boyunlu Terazi\n1150 EUR\nWSP Boyunlu Terazi\n72\n73\nwww.senox.com.tr",
       "specs": {
-        "fiyat_eur": "300"
+        "fiyat_eur": "1150"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-seles-xk-3108b-50-60-cm-paslanmaz-tartim-bask-l_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SNX-17-B",
@@ -3529,9 +3150,7 @@
       "anchorX": 894.6,
       "description": "SNX-17-B\n74\n75\nwww.senox.com.tr\nwww.senox.com.tr",
       "specs": {},
-      "parseSource": "code-line",
-      "localImage": "images/senox-snx-17-b_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "SNX-17-C",
@@ -3543,9 +3162,7 @@
       "anchorX": 725.4,
       "description": "SNX-17-C",
       "specs": {},
-      "parseSource": "code-line",
-      "localImage": "images/senox-snx-17-c_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "SNX-17-G",
@@ -3557,9 +3174,7 @@
       "anchorX": 811.6,
       "description": "SNX-17-G",
       "specs": {},
-      "parseSource": "code-line",
-      "localImage": "images/senox-snx-17-g_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "SNX-17-S",
@@ -3570,10 +3185,11 @@
       "anchorY": 787.3,
       "anchorX": 639.9,
       "description": "SNX-17-S",
-      "specs": {},
-      "parseSource": "code-line",
-      "localImage": "images/senox-snx-17-s_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "specs": {
+        "fiyat_eur": "330",
+        "fiyat_eur_source": "page-order"
+      },
+      "parseSource": "code-line"
     },
     {
       "model": "SNX-25-B",
@@ -3585,12 +3201,9 @@
       "anchorX": 951.6,
       "description": "SNX-25-B",
       "specs": {
-        "fiyat_eur": "300",
-        "fiyat_eur_source": "page-order"
+        "fiyat_eur": "300"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-snx-25-b_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "SNX-25-C",
@@ -3602,12 +3215,9 @@
       "anchorX": 739.9,
       "description": "SNX-25-C",
       "specs": {
-        "fiyat_eur": "330",
-        "fiyat_eur_source": "page-order"
+        "fiyat_eur": "300"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-snx-25-c_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "SNX-25-G",
@@ -3619,12 +3229,9 @@
       "anchorX": 840.6,
       "description": "SNX-25-G",
       "specs": {
-        "fiyat_eur": "1500",
-        "fiyat_eur_source": "page-order"
+        "fiyat_eur": "300"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-snx-25-g_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "SNX-25-S",
@@ -3638,9 +3245,7 @@
       "specs": {
         "fiyat_eur": "300"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-snx-25-s_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "SNX-8060-MCC",
@@ -3658,9 +3263,7 @@
         "yukseklik_mm": 120,
         "fiyat_eur": "1350"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-snx-8060-mcc_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "SNX-8060-PPNC",
@@ -3676,12 +3279,9 @@
         "genislik_mm": 800,
         "derinlik_mm": 600,
         "yukseklik_mm": 120,
-        "fiyat_eur": "1350",
-        "fiyat_eur_source": "page-order"
+        "fiyat_eur": "1500"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-snx-8060-ppnc_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "CIMBALI-M23",
@@ -3696,9 +3296,7 @@
         "fiyat_eur": "7000",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-cimbali-m23_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "ELUX-602633",
@@ -3717,9 +3315,7 @@
         "fiyat_eur": "5400",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-elux-602633_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "GELENEKSEL-ESPRESSO-KAHVE-MAKINESI-",
@@ -3735,9 +3331,7 @@
         "fiyat_eur": "8450",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-geleneksel-espresso-kahve-makinesi_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "MAG-GT",
@@ -3756,9 +3350,7 @@
         "fiyat_eur": "4200",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-mag-gt_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "OTOMATIK-ESPRESSO-KAHVE-MAKINESI",
@@ -3770,9 +3362,7 @@
       "anchorX": 683.1,
       "description": "Manuel su ve buhar, otomatik temizleme programı\nPaslanmaz çelik gövde\nOtomatik espresso kahve makinesi\nYenilenmiş dış gövde\nStandart üst fincan ısıtıcı\nKolay programlama ve sıcak su dozajı için mikro prosesör kontrollü\nDozaj ayarlı\n2 döner yönlü buhar kollu\n1 sıcak su musluklu\nBoiler kapasitesi 10 L\nVolumetrik dozaj ayarı\nSiyah ve Beyaz renk seçeneği\nTall Cup versiyon\n2 Buhar kolu, 1 sıcak su musluğu",
       "specs": {},
-      "parseSource": "distributor",
-      "localImage": "images/senox-otomatik-espresso-kahve-makinesi_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "TAM-OTOMATIK-ESPRESSO-KAHVE-MAKINESI-2-G",
@@ -3784,9 +3374,7 @@
       "anchorX": 734.5,
       "description": "2 Gruplu ve 3 Gruplu\nLa Cimbali M23 UP DT/2\nTam Otomatik Espresso Kahve Makinesi, 2 Gruplu\nsenox\nsenox",
       "specs": {},
-      "parseSource": "distributor",
-      "localImage": "images/senox-tam-otomatik-espresso-kahve-makinesi-2-g_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "KKM-01-KAHVE-KAVURMA-MAKINESI",
@@ -3801,9 +3389,7 @@
         "fiyat_eur": "1800",
         "voltaj": "220V~50Hz"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-kkm-01-kahve-kavurma-makinesi_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "SNX-35SC",
@@ -3821,9 +3407,7 @@
         "yukseklik_mm": 500,
         "fiyat_eur": "300"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-snx-35sc_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "COFFEEDIO-FILTRE-MAKINESI",
@@ -3843,9 +3427,7 @@
         "elektrik_gucu": "650 W",
         "agirlik_kg": "1.5"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-coffeedio-filtre-makinesi_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "CUNILL-TRANQUILA-MANUEL",
@@ -3863,9 +3445,7 @@
         "fiyat_eur": "650",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-cunill-tranquila-manuel_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "CUNILL-TRANQUILO-TRON-DIJITAL",
@@ -3878,12 +3458,10 @@
       "description": "kg\n~ 50Hz\nCunill - Tranquilo Tron Dijital\nElektronik Kahve Değirmeni\nAyarlanan dozajları anında taze çekerek kaşığa döker\nMikrometrik ayarlama çubuğu\nModel: F64E\nBıçak Çapı: 64 mm\nHazne Kapasitesi: 1,5 kg\nSoğutmalı versiyon,\nLCD dokunmatik ekran ve elektronik kontrol,\nDozaj ayarı: saniye ile,\n64 mm öğütücü dişli çapı,\n1500 gr çekirdek haznesi,",
       "specs": {
         "agirlik_kg": "1.5",
-        "fiyat_eur": "1605",
+        "fiyat_eur": "1745",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-cunill-tranquilo-tron-dijital_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "FIO-F64",
@@ -3899,9 +3477,7 @@
         "fiyat_eur": "500",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-fio-f64_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "FIO-F83",
@@ -3917,12 +3493,10 @@
         "genislik_mm": 230,
         "derinlik_mm": 615,
         "yukseklik_mm": 270,
-        "fiyat_eur": "650",
+        "fiyat_eur": "1605",
         "elektrik_gucu": "350 W"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-fio-f83_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "BL14MR290",
@@ -3937,9 +3511,7 @@
         "fiyat_eur": "3000",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-bl14mr290_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "BL7MR290",
@@ -3952,12 +3524,10 @@
       "description": "BL7-M-R290\nFrenox / Inoksan UGN3 DZ-6D Set Altı Buzdolabı 3x 2/1 Çekmece 200 cm\n50 mm kalınlığında, 35-40 Kg/m3 yoğunlukta , çevre dostu HFC-Free poliüretan izolasyon\nÖzel yuvarlatılmış tasarım\nKolay müdahale için açılır kanopi\nDijital kumanda paneli\nTemizlenebilir ve sökülebilir özel kir tutmaz manyetik kapı contası\nKendinden kapanan özel yaylı menteşe sistemi\n50mm poliüretan izolasyonlu üst tabla\nÖzel su buharlaştırma sistemi",
       "specs": {
         "agirlik_kg": "40",
-        "fiyat_eur": "1850",
+        "fiyat_eur": "3100",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-bl7mr290_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "BN14-M-R290",
@@ -3969,12 +3539,10 @@
       "anchorX": 205.8,
       "description": "BN14-M-R290",
       "specs": {
-        "fiyat_eur": "2800",
+        "fiyat_eur": "3000",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-bn14-m-r290_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "BN7-M-R290",
@@ -3986,12 +3554,10 @@
       "anchorX": 52.0,
       "description": "BN7-M-R290",
       "specs": {
-        "fiyat_eur": "2200",
+        "fiyat_eur": "1850",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-bn7-m-r290_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "FRENOX-INOKSAN-430-K-DIK-TIP-BUZDOLAB-",
@@ -4003,11 +3569,9 @@
       "anchorX": 389.6,
       "description": "BN7-M-R290\nBN14-M-R290\nFrenox / Inoksan 430 K Dik Tip Buzdolabı\nBL7-M-R290\nBL14-M-R290\nFrenox / Inoksan 430 K Dik Tip Dondurucu\nFrenox / Inoksan BGN2-R290 430K İki Kapılı Yatay Buzdolabı\nFrenox / Inoksan BGN3-R290 430K Üç Kapılı Yatay Buzdolabı\nFrenox / Inoksan UGN2 2D Set Altı Buzdolabı 2x 1/1 Çekmece 160 cm\nFrenox / Inoksan UGN2 4D Set Altı Buzdolabı 2x 2/1 Çekmece 160 cm\nFrenox / Inoksan UGN3 3D DZ Set Altı Buzdolabı 3x 1/1 Çekmece 200 cm\nFrenox / Inoksan UGN3 DZ-6D Set Altı Buzdolabı 3x 2/1 Çekmece 200 cm\n1900 EUR\n2800 EUR",
       "specs": {
-        "fiyat_eur": "1900"
+        "fiyat_eur": "2800"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-frenox-inoksan-430-k-dik-tip-buzdolab_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "FRENOX-INOKSAN-430-K-DIK-TIP-DONDURUCU",
@@ -4019,11 +3583,9 @@
       "anchorX": 391.4,
       "description": "BL7-M-R290\nBL14-M-R290\nFrenox / Inoksan 430 K Dik Tip Dondurucu\nFrenox / Inoksan BGN2-R290 430K İki Kapılı Yatay Buzdolabı\nFrenox / Inoksan BGN3-R290 430K Üç Kapılı Yatay Buzdolabı\nFrenox / Inoksan UGN2 2D Set Altı Buzdolabı 2x 1/1 Çekmece 160 cm\nFrenox / Inoksan UGN2 4D Set Altı Buzdolabı 2x 2/1 Çekmece 160 cm\nFrenox / Inoksan UGN3 3D DZ Set Altı Buzdolabı 3x 1/1 Çekmece 200 cm\nFrenox / Inoksan UGN3 DZ-6D Set Altı Buzdolabı 3x 2/1 Çekmece 200 cm\n1900 EUR\n2800 EUR\n2200 EUR\n3000 EUR\n1850 EUR",
       "specs": {
-        "fiyat_eur": "1900"
+        "fiyat_eur": "2200"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-frenox-inoksan-430-k-dik-tip-dondurucu_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "FRENOX-INOKSAN-BGN2-R290-430K-KI-KAP-L-Y",
@@ -4035,11 +3597,9 @@
       "anchorX": 766.1,
       "description": "BL14-M-R290\nFrenox / Inoksan 430 K Dik Tip Dondurucu\nFrenox / Inoksan BGN2-R290 430K İki Kapılı Yatay Buzdolabı\nFrenox / Inoksan BGN3-R290 430K Üç Kapılı Yatay Buzdolabı\nFrenox / Inoksan UGN2 2D Set Altı Buzdolabı 2x 1/1 Çekmece 160 cm\nFrenox / Inoksan UGN2 4D Set Altı Buzdolabı 2x 2/1 Çekmece 160 cm\nFrenox / Inoksan UGN3 3D DZ Set Altı Buzdolabı 3x 1/1 Çekmece 200 cm\nFrenox / Inoksan UGN3 DZ-6D Set Altı Buzdolabı 3x 2/1 Çekmece 200 cm\n1900 EUR\n2800 EUR\n2200 EUR\n3000 EUR\n1850 EUR\n2200 EUR",
       "specs": {
-        "fiyat_eur": "1900"
+        "fiyat_eur": "2200"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-frenox-inoksan-bgn2-r290-430k-ki-kap-l-y_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "FRENOX-INOKSAN-BGN3-R290-430K-KAP-L-YATA",
@@ -4051,11 +3611,9 @@
       "anchorX": 767.3,
       "description": "Frenox / Inoksan 430 K Dik Tip Dondurucu\nFrenox / Inoksan BGN2-R290 430K İki Kapılı Yatay Buzdolabı\nFrenox / Inoksan BGN3-R290 430K Üç Kapılı Yatay Buzdolabı\nFrenox / Inoksan UGN2 2D Set Altı Buzdolabı 2x 1/1 Çekmece 160 cm\nFrenox / Inoksan UGN2 4D Set Altı Buzdolabı 2x 2/1 Çekmece 160 cm\nFrenox / Inoksan UGN3 3D DZ Set Altı Buzdolabı 3x 1/1 Çekmece 200 cm\nFrenox / Inoksan UGN3 DZ-6D Set Altı Buzdolabı 3x 2/1 Çekmece 200 cm\n1900 EUR\n2800 EUR\n2200 EUR\n3000 EUR\n1850 EUR\n2200 EUR\n2500 EUR",
       "specs": {
-        "fiyat_eur": "1900"
+        "fiyat_eur": "2200"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-frenox-inoksan-bgn3-r290-430k-kap-l-yata_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "FRENOX-INOKSAN-CKT2-W-K-WP-2-KAP-L-SO-UT",
@@ -4076,9 +3634,7 @@
         "fiyat_eur": "1900",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-frenox-inoksan-ckt2-w-k-wp-2-kap-l-so-ut_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "FRENOX-INOKSAN-UGN2-2D-SET-ALT-BUZDOLAB-",
@@ -4090,11 +3646,9 @@
       "anchorX": 795.3,
       "description": "Frenox / Inoksan BGN2-R290 430K İki Kapılı Yatay Buzdolabı\nFrenox / Inoksan BGN3-R290 430K Üç Kapılı Yatay Buzdolabı\nFrenox / Inoksan UGN2 2D Set Altı Buzdolabı 2x 1/1 Çekmece 160 cm\nFrenox / Inoksan UGN2 4D Set Altı Buzdolabı 2x 2/1 Çekmece 160 cm\nFrenox / Inoksan UGN3 3D DZ Set Altı Buzdolabı 3x 1/1 Çekmece 200 cm\nFrenox / Inoksan UGN3 DZ-6D Set Altı Buzdolabı 3x 2/1 Çekmece 200 cm\n1900 EUR\n2800 EUR\n2200 EUR\n3000 EUR\n1850 EUR\n2200 EUR\n2500 EUR\n3000 EUR",
       "specs": {
-        "fiyat_eur": "1900"
+        "fiyat_eur": "2500"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-frenox-inoksan-ugn2-2d-set-alt-buzdolab_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "FRENOX-INOKSAN-UGN2-4D-SET-ALT-BUZDOLAB-",
@@ -4106,11 +3660,9 @@
       "anchorX": 795.5,
       "description": "Frenox / Inoksan BGN3-R290 430K Üç Kapılı Yatay Buzdolabı\nFrenox / Inoksan UGN2 2D Set Altı Buzdolabı 2x 1/1 Çekmece 160 cm\nFrenox / Inoksan UGN2 4D Set Altı Buzdolabı 2x 2/1 Çekmece 160 cm\nFrenox / Inoksan UGN3 3D DZ Set Altı Buzdolabı 3x 1/1 Çekmece 200 cm\nFrenox / Inoksan UGN3 DZ-6D Set Altı Buzdolabı 3x 2/1 Çekmece 200 cm\n1900 EUR\n2800 EUR\n2200 EUR\n3000 EUR\n1850 EUR\n2200 EUR\n2500 EUR\n3000 EUR\n3100 EUR",
       "specs": {
-        "fiyat_eur": "1900"
+        "fiyat_eur": "2500"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-frenox-inoksan-ugn2-4d-set-alt-buzdolab_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "FRENOX-INOKSAN-UGN3-3D-DZ-SET-ALT-BUZDOL",
@@ -4122,11 +3674,9 @@
       "anchorX": 803.4,
       "description": "Frenox / Inoksan UGN2 2D Set Altı Buzdolabı 2x 1/1 Çekmece 160 cm\nFrenox / Inoksan UGN2 4D Set Altı Buzdolabı 2x 2/1 Çekmece 160 cm\nFrenox / Inoksan UGN3 3D DZ Set Altı Buzdolabı 3x 1/1 Çekmece 200 cm\nFrenox / Inoksan UGN3 DZ-6D Set Altı Buzdolabı 3x 2/1 Çekmece 200 cm\n1900 EUR\n2800 EUR\n2200 EUR\n3000 EUR\n1850 EUR\n2200 EUR\n2500 EUR\n3000 EUR\n3100 EUR\n3600 EUR",
       "specs": {
-        "fiyat_eur": "1900"
+        "fiyat_eur": "2800"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-frenox-inoksan-ugn3-3d-dz-set-alt-buzdol_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "FRENOX-INOKSAN-UGN3-DZ-6D-SET-ALT-BUZDOL",
@@ -4138,11 +3688,9 @@
       "anchorX": 801.8,
       "description": "Frenox / Inoksan UGN2 4D Set Altı Buzdolabı 2x 2/1 Çekmece 160 cm\nFrenox / Inoksan UGN3 3D DZ Set Altı Buzdolabı 3x 1/1 Çekmece 200 cm\nFrenox / Inoksan UGN3 DZ-6D Set Altı Buzdolabı 3x 2/1 Çekmece 200 cm\n1900 EUR\n2800 EUR\n2200 EUR\n3000 EUR\n1850 EUR\n2200 EUR\n2500 EUR\n3000 EUR\n3100 EUR\n3600 EUR\nFiyat",
       "specs": {
-        "fiyat_eur": "1900"
+        "fiyat_eur": "2800"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-frenox-inoksan-ugn3-dz-6d-set-alt-buzdol_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "FRENOX-INOKSAN-VBL-10-OK-DONDURUCU-304-K",
@@ -4154,11 +3702,9 @@
       "anchorX": 756.2,
       "description": "85\nFrenox / Inoksan VBL-5 Şok Dondurucu 304 Kalite\nFrenox / Inoksan VBL-10 Şok Dondurucu 304 Kalite\n4350 EUR\n6000 EUR\nAğırlık\nFiyat\nFiyat\n6000 EUR\nsenox\nsenox",
       "specs": {
-        "fiyat_eur": "4350"
+        "fiyat_eur": "6000"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-frenox-inoksan-vbl-10-ok-dondurucu-304-k_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "FRENOX-INOKSAN-VBL-5-OK-DONDURUCU-304-KA",
@@ -4170,11 +3716,9 @@
       "anchorX": 753.7,
       "description": "www.senox.com.tr\n85\nFrenox / Inoksan VBL-5 Şok Dondurucu 304 Kalite\nFrenox / Inoksan VBL-10 Şok Dondurucu 304 Kalite\n4350 EUR\n6000 EUR\nAğırlık\nFiyat\nFiyat\n6000 EUR\nsenox\nsenox",
       "specs": {
-        "fiyat_eur": "4350"
+        "fiyat_eur": "6000"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-frenox-inoksan-vbl-5-ok-dondurucu-304-ka_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "FR-25",
@@ -4194,9 +3738,7 @@
         "elektrik_gucu": "500W",
         "agirlik_kg": "27"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-fr-25_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "FR-250",
@@ -4216,9 +3758,7 @@
         "elektrik_gucu": "2500W",
         "agirlik_kg": "450"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-fr-250_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "FR-30",
@@ -4238,9 +3778,7 @@
         "elektrik_gucu": "500W",
         "agirlik_kg": "32"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-fr-30_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "FR-35",
@@ -4260,9 +3798,7 @@
         "elektrik_gucu": "500W",
         "agirlik_kg": "40"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-fr-35_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "FR-40",
@@ -4282,9 +3818,7 @@
         "elektrik_gucu": "600W",
         "agirlik_kg": "47"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-fr-40_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "FR-50",
@@ -4304,9 +3838,7 @@
         "elektrik_gucu": "800W",
         "agirlik_kg": "67"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-fr-50_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "FR-500",
@@ -4326,9 +3858,7 @@
         "elektrik_gucu": "1200W",
         "agirlik_kg": "175"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-fr-500_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "FR-60",
@@ -4348,9 +3878,7 @@
         "elektrik_gucu": "800W",
         "agirlik_kg": "67"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-fr-60_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "FR-70",
@@ -4370,9 +3898,7 @@
         "elektrik_gucu": "1100W",
         "agirlik_kg": "85"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-fr-70_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "FR-90",
@@ -4392,9 +3918,7 @@
         "elektrik_gucu": "1200W",
         "agirlik_kg": "230"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-fr-90_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "SB-200",
@@ -4414,9 +3938,7 @@
         "elektrik_gucu": "2500W",
         "agirlik_kg": "210"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-sb-200_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "SB-400",
@@ -4431,9 +3953,7 @@
         "fiyat_eur": "1500",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-sb-400_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "ICEINOX-ICE130-BUZ-MAKINESI-130KG-G-N",
@@ -4453,9 +3973,7 @@
         "fiyat_eur": "1960",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-iceinox-ice130-buz-makinesi-130kg-g-n_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "ICEINOX-ICE25-BUZ-MAKINESI-25KG-G-N",
@@ -4471,9 +3989,7 @@
         "fiyat_eur": "1570",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-iceinox-ice25-buz-makinesi-25kg-g-n_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "ICEINOX-ICE250-BUZ-MAKINESI-250KG-G-N",
@@ -4493,9 +4009,7 @@
         "fiyat_eur": "3710",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-iceinox-ice250-buz-makinesi-250kg-g-n_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "ICEINOX-ICE35-BUZ-MAKINESI-35KG-G-N",
@@ -4511,9 +4025,7 @@
         "fiyat_eur": "2960",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-iceinox-ice35-buz-makinesi-35kg-g-n_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "ICEINOX-ICE50-BUZ-MAKINESI-50KG-G-N",
@@ -4533,9 +4045,7 @@
         "fiyat_eur": "8560",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-iceinox-ice50-buz-makinesi-50kg-g-n_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "ICEINOX-ICE500-BUZ-MAKINESI-500KG-G-N",
@@ -4555,9 +4065,7 @@
         "fiyat_eur": "7040",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-iceinox-ice500-buz-makinesi-500kg-g-n_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "ICEINOX-ICE90-BUZ-MAKINESI-90KG-G-N",
@@ -4577,9 +4085,7 @@
         "fiyat_eur": "1495",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-iceinox-ice90-buz-makinesi-90kg-g-n_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "ELECTROLUX-25-LITRE-MIKRODALGA-F-R-N",
@@ -4597,12 +4103,10 @@
         "yukseklik_mm": 335,
         "voltaj": "220 V ~ 50Hz",
         "elektrik_gucu": "900 W",
-        "fiyat_eur": "400",
+        "fiyat_eur": "350",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-electrolux-25-litre-mikrodalga-f-r-n_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "ELECTROLUX-29-LITRE-MIKRODALGA-F-R-N",
@@ -4619,12 +4123,10 @@
         "derinlik_mm": 442,
         "yukseklik_mm": 390,
         "elektrik_gucu": "1000W",
-        "fiyat_eur": "350",
+        "fiyat_eur": "450",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-electrolux-29-litre-mikrodalga-f-r-n_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "MC25",
@@ -4638,9 +4140,7 @@
       "specs": {
         "fiyat_eur": "400"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-mc25_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "MC30",
@@ -4655,9 +4155,7 @@
         "fiyat_eur": "320",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "code-line",
-      "localImage": "images/senox-mc30_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "code-line"
     },
     {
       "model": "-NOKSAN-BYM-042ST-BARDAK-Y-KAMA",
@@ -4674,12 +4172,10 @@
         "derinlik_mm": 528,
         "yukseklik_mm": 570,
         "agirlik_kg": "57",
-        "fiyat_eur": "1500",
+        "fiyat_eur": "2400",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-noksan-bym-042st-bardak-y-kama_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "-NOKSAN-BYM-052ST-SET-ALT-BULA-K-MAKINES",
@@ -4696,12 +4192,10 @@
         "derinlik_mm": 528,
         "yukseklik_mm": 570,
         "agirlik_kg": "57",
-        "fiyat_eur": "2400",
+        "fiyat_eur": "4000",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-noksan-bym-052st-set-alt-bula-k-makines_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "ELUX-400343",
@@ -4718,12 +4212,10 @@
         "derinlik_mm": 800,
         "yukseklik_mm": 1750,
         "agirlik_kg": "113",
-        "fiyat_eur": "1400",
+        "fiyat_eur": "1500",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-elux-400343_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "ELUX-505089",
@@ -4742,9 +4234,7 @@
         "fiyat_eur": "1400",
         "agirlik_kg": "35"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-elux-505089_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "INOKSAN-INO-BKE2000R-BULA-K-MAKINESI",
@@ -4756,12 +4246,10 @@
       "anchorX": 734.4,
       "description": "9,6 kW\nBulaşık Makineleri\nInoksan - INO-BKE2000R Bulaşık Makinesi\nYıkama ve durulama sıcaklıklarını gösteren dijital termometre bulunmaktadır.\nMakine sanitasyon standartlarına uygun olarak 85°c (185°f)\nsu ile durulama sağlamaktadır.\nÇift hızlı konveyor motoru ve konveyor motorunun sıkışmasına karşı koruma\nCihazda standart aksesuar olarak; 1 adet bardak + 1 adet çatal-kaşık +\n4 adet tabak kasası bulunmaktadır.\nsu girişi: 3⁄4 “\nısı kapasitesi: boyler: 24 kw\nmax. güç tüketimi: 34 kw\n220 V - 1N\nVoltaj",
       "specs": {
-        "fiyat_eur": "4000",
+        "fiyat_eur": "5250",
         "fiyat_eur_source": "page-order"
       },
-      "parseSource": "distributor",
-      "localImage": "images/senox-inoksan-ino-bke2000r-bula-k-makinesi_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "distributor"
     },
     {
       "model": "TABAN-FIR-ALI-HIJYEN-BARIYERI",
@@ -4776,9 +4264,7 @@
         "fiyat_eur": "10000",
         "elektrik_gucu": "24 W"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-taban-fir-ali-hijyen-bariyeri_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     },
     {
       "model": "TABAN-FIR-ASIZ-HIJYEN-BARIYERI",
@@ -4793,9 +4279,7 @@
         "fiyat_eur": "9000",
         "elektrik_gucu": "24 W"
       },
-      "parseSource": "senox-title",
-      "localImage": "images/senox-taban-fir-asiz-hijyen-bariyeri_1.jpg",
-      "imageMethod": "bbox-render-v4"
+      "parseSource": "senox-title"
     }
   ]
 }
