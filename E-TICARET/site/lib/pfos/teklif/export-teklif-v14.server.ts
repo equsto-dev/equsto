@@ -7,7 +7,7 @@ import {
   TEKLIF_BOLUM_ROW_FILL_ARGB,
 } from "./constants";
 import { groupTeklifV14Satirlar } from "./group-v14-bolumler";
-import { formatTarihTr, kwHucreExcelValue } from "./format-v14";
+import { formatTarihTr, kwHucreExcelValue, KW_HUCRE_EXCEL_NUMFMT } from "./format-v14";
 import { sanitizeTeklifV14ModelForExport } from "./sanitize-teklif-v14-export";
 
 const PRODUCT_BLOCK_START = 5;
@@ -79,9 +79,9 @@ function writeDataRow(
   ws.getCell(rowNum, 6).value = satir.marka;
   ws.getCell(rowNum, 6).alignment = { horizontal: "center", vertical: "top" };
   ws.getCell(rowNum, 7).value = kwHucreExcelValue(satir.elkKw);
-  ws.getCell(rowNum, 7).numFmt = "0.0";
+  ws.getCell(rowNum, 7).numFmt = KW_HUCRE_EXCEL_NUMFMT;
   ws.getCell(rowNum, 8).value = kwHucreExcelValue(satir.gazKw);
-  ws.getCell(rowNum, 8).numFmt = "0.0";
+  ws.getCell(rowNum, 8).numFmt = KW_HUCRE_EXCEL_NUMFMT;
   ws.getCell(rowNum, 9).value = satir.adet;
   ws.getCell(rowNum, 10).value = satir.birimSatis ?? 0;
   ws.getCell(rowNum, 10).numFmt = "#,##0.00";
@@ -183,7 +183,7 @@ function buildProductBlock(ws: ExcelJS.Worksheet, model: TeklifModelV14) {
   ws.getCell(rowNum, 4).value = "Gazlı cihaz toplam bağlantısı (kW)";
   if (gazParts.length) {
     ws.getCell(rowNum, 8).value = { formula: gazSum };
-    ws.getCell(rowNum, 8).numFmt = "0.0";
+    ws.getCell(rowNum, 8).numFmt = KW_HUCRE_EXCEL_NUMFMT;
   }
   rowNum++;
 
@@ -192,11 +192,11 @@ function buildProductBlock(ws: ExcelJS.Worksheet, model: TeklifModelV14) {
   ws.getCell(rowNum, 4).value = "Sütun toplamları →";
   if (elkParts.length) {
     ws.getCell(rowNum, 7).value = { formula: elkSum };
-    ws.getCell(rowNum, 7).numFmt = "0.0";
+    ws.getCell(rowNum, 7).numFmt = KW_HUCRE_EXCEL_NUMFMT;
   }
   if (gazParts.length) {
     ws.getCell(rowNum, 8).value = { formula: gazSum };
-    ws.getCell(rowNum, 8).numFmt = "0.0";
+    ws.getCell(rowNum, 8).numFmt = KW_HUCRE_EXCEL_NUMFMT;
   }
   if (adetRefs.length) {
     ws.getCell(rowNum, 9).value = { formula: adetSum };

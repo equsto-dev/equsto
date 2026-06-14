@@ -4,6 +4,7 @@ import type { CSSProperties } from "react";
 import type { PFOSResponse, PFOSKalemi } from "@/lib/pfos/schemas/pfos.schema";
 import { KATEGORI_LABELS } from "@/lib/pfos/schemas/pfos.schema";
 import { zoneLabel } from "@/lib/pfos/wizard/zone-labels";
+import { formatKwHucre } from "@/lib/pfos/teklif/format-v14";
 
 type Props = { sonuc: PFOSResponse };
 
@@ -84,18 +85,18 @@ export default function TeklifSonucu({ sonuc }: Props) {
                   <td style={s.tdR}>{k.adet}</td>
                   <td style={s.tdR}>
                     {k.urun?.elektrikGucuKw != null
-                      ? `${k.urun.elektrikGucuKw}`
+                      ? formatKwHucre(k.urun.elektrikGucuKw)
                       : k.elektrikGucuKwHint != null
                         ? (
-                            <span style={s.ipucu}>{k.elektrikGucuKwHint}~</span>
+                            <span style={s.ipucu}>{formatKwHucre(k.elektrikGucuKwHint)}~</span>
                           )
                         : "—"}
                   </td>
                   <td style={s.tdR}>
                     {k.urun?.gazGucuKw != null
-                      ? `${k.urun.gazGucuKw}`
+                      ? formatKwHucre(k.urun.gazGucuKw)
                       : k.gazGucuKwHint != null
-                        ? <span style={s.ipucu}>{k.gazGucuKwHint}~</span>
+                        ? <span style={s.ipucu}>{formatKwHucre(k.gazGucuKwHint)}~</span>
                         : "—"}
                   </td>
                   <td style={s.tdR}>

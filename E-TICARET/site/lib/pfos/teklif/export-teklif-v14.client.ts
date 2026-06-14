@@ -8,7 +8,7 @@ import {
   TEKLIF_BOLUM_ROW_FILL_ARGB,
 } from "./constants";
 import { groupTeklifV14Satirlar } from "./group-v14-bolumler";
-import { formatTarihTr, kwHucreExcelValue } from "./format-v14";
+import { formatTarihTr, kwHucreExcelValue, KW_HUCRE_EXCEL_NUMFMT } from "./format-v14";
 import { fetchTcmbKurForTeklif } from "./fetch-kur.client";
 import { sanitizeTeklifV14ModelForExport } from "./sanitize-teklif-v14-export";
 
@@ -77,9 +77,9 @@ function writeDataRow(
   ws.getCell(rowNum, 3).alignment = { horizontal: "left", vertical: "top" };
   ws.getCell(rowNum, 4).value = satir.tanim;
   ws.getCell(rowNum, 5).value = kwHucreExcelValue(satir.elkKw);
-  ws.getCell(rowNum, 5).numFmt = "0.0";
+  ws.getCell(rowNum, 5).numFmt = KW_HUCRE_EXCEL_NUMFMT;
   ws.getCell(rowNum, 6).value = kwHucreExcelValue(satir.gazKw);
-  ws.getCell(rowNum, 6).numFmt = "0.0";
+  ws.getCell(rowNum, 6).numFmt = KW_HUCRE_EXCEL_NUMFMT;
   ws.getCell(rowNum, 7).value = satir.adet;
   ws.getCell(rowNum, 8).value = satir.birimSatis ?? 0;
   ws.getCell(rowNum, 8).numFmt = "#,##0.00";
@@ -236,7 +236,7 @@ async function buildProductBlock(
   ws.getCell(rowNum, 4).value = "Gazlı cihaz toplam bağlantısı (kW)";
   if (gazParts.length) {
     ws.getCell(rowNum, 6).value = { formula: gazSum };
-    ws.getCell(rowNum, 6).numFmt = "0.0";
+    ws.getCell(rowNum, 6).numFmt = KW_HUCRE_EXCEL_NUMFMT;
   }
   rowNum++;
 
@@ -245,11 +245,11 @@ async function buildProductBlock(
   ws.getCell(rowNum, 4).value = "Sütun toplamları →";
   if (elkParts.length) {
     ws.getCell(rowNum, 5).value = { formula: elkSum };
-    ws.getCell(rowNum, 5).numFmt = "0.0";
+    ws.getCell(rowNum, 5).numFmt = KW_HUCRE_EXCEL_NUMFMT;
   }
   if (gazParts.length) {
     ws.getCell(rowNum, 6).value = { formula: gazSum };
-    ws.getCell(rowNum, 6).numFmt = "0.0";
+    ws.getCell(rowNum, 6).numFmt = KW_HUCRE_EXCEL_NUMFMT;
   }
   if (adetRefs.length) {
     ws.getCell(rowNum, 7).value = { formula: adetSum };
