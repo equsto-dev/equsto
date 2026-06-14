@@ -1,6 +1,6 @@
 {
-  "version": "2026-06-14T05-13-09",
-  "rebuiltAt": "2026-06-14T05:13:09.632Z",
+  "version": "2026-06-14T09-57-20",
+  "rebuiltAt": "2026-06-14T09:57:20.810Z",
   "ekipmanlar": 10501,
   "withImage": 10499,
   "brands": 23,
@@ -24,6 +24,6 @@
   "inoksanComDescriptions": 947,
   "inoksanShopDescriptions": 0,
   "inoksanMissing": 0,
-  "productsEnCount": 9694,
-  "productsEnStale": 807
+  "productsEnCount": 10501,
+  "productsEnStale": 0
 }
