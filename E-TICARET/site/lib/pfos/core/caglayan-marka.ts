@@ -3,6 +3,27 @@ import { resolveTipKodu } from "./tip-kodu";
 /** PFOS teşhir reyonu / vitrin — teklif markası Çağlayan Soğutma */
 export const CAGLAYAN_MARKA = "Çağlayan Soğutma";
 
+/** Tek projede teşhir reyonları — varsayılan seri (Açelya; alternatif: sardunya) */
+export const DEFAULT_CAGLAYAN_TESHIR_SERIES = "acelya";
+
+export const CAGLAYAN_TESHIR_SERIES_NAMES = [
+  "acelya",
+  "sardunya",
+  "gardenya",
+  "anemon",
+  "fulya",
+  "hercai",
+  "orkide",
+  "lale",
+  "krizantem",
+  "begonvil",
+  "iris",
+  "defne",
+  "inci",
+  "itir",
+  "yasemin",
+] as const;
+
 export const TESHIR_VITRIN_TIP_KODLARI = new Set(["teshir_vitrin"]);
 
 function norm(s: string | null | undefined): string {
@@ -86,4 +107,22 @@ export function isTeshirDisMarka(marka: string | null | undefined): boolean {
 
 export function isOztiTeshirSku(sku: string | null | undefined): boolean {
   return /^8919\.tsv|^8919\.ts/i.test(String(sku ?? "").trim());
+}
+
+export function extractCaglayanSeriesFromBlob(blob: string): string | null {
+  const n = norm(blob);
+  for (const s of CAGLAYAN_TESHIR_SERIES_NAMES) {
+    if (n.includes(s)) return s;
+  }
+  return null;
+}
+
+export function extractCaglayanSeriesFromRow(row: {
+  sku?: string | null;
+  kategori?: string | null;
+  ad?: string | null;
+}): string | null {
+  return extractCaglayanSeriesFromBlob(
+    `${row.sku ?? ""} ${row.kategori ?? ""} ${row.ad ?? ""}`,
+  );
 }

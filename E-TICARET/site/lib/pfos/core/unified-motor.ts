@@ -24,6 +24,7 @@ import { resolveTeklifKw } from "@/lib/catalog/kw-resolve";
 import type { KategoriKodu } from "../schemas/pfos.schema";
 import { isDynamicKonsept } from "./templates";
 import { matchProductForReferansKalem } from "../referans/match-referans-kalem";
+import { resetTeshirReyonSeriesPin } from "../referans/teshir-reyon-match";
 import { loadLegacyCatalogRows } from "@/lib/legacy-catalog";
 
 const YIKAMA_TIP_KODU = new Set([
@@ -98,6 +99,7 @@ async function buildTemplateKalemler(
   });
 
   await loadLegacyCatalogRows();
+  resetTeshirReyonSeriesPin();
 
   const kalemler: PFOSKalemi[] = [];
 
@@ -199,6 +201,7 @@ export async function calculateUnifiedQuote(
   req: PFOSRequest,
   template: ConceptTemplate,
 ): Promise<PFOSResponse> {
+  resetTeshirReyonSeriesPin();
   const { konsept, sehir } = req;
   const fiyatStratejisi: FiyatStratejisi =
     req.fiyatStratejisi ?? "orta";

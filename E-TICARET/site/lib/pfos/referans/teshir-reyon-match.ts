@@ -5,9 +5,11 @@ import {
 import { katalogRowToEslesmis } from "../core/katalog-row-eslesmis";
 import {
   CAGLAYAN_MARKA,
+  CAGLAYAN_TESHIR_SERIES_NAMES,
+  DEFAULT_CAGLAYAN_TESHIR_SERIES,
+  extractCaglayanSeriesFromRow,
   isCaglayanKatalogMarka,
   isCaglayanTeshirRow,
-  isEtTeshirReyonReferans,
   isPastaDolabiReferans,
 } from "../core/caglayan-marka";
 import { displayIsimFromSablon } from "../core/ozel-imalat";
@@ -28,6 +30,28 @@ function norm(s: string): string {
 export function isTeshirReyonReferans(isim: string): boolean {
   const n = norm(isim);
   return /teshir|teşhir|vitrin|reyon|mostra/.test(n);
+}
+
+/** Tek teklif oturumunda aynı Çağlayan serisi (Açelya vb.) */
+let pinnedTeshirSeries: string | null = null;
+
+export function resetTeshirReyonSeriesPin(): void {
+  pinnedTeshirSeries = null;
+}
+
+export function getPinnedTeshirReyonSeries(): string | null {
+  return pinnedTeshirSeries;
+}
+
+export function pinTeshirReyonSeries(series: string): void {
+  const s = norm(series);
+  if (CAGLAYAN_TESHIR_SERIES_NAMES.some((name) => name === s)) {
+    pinnedTeshirSeries = s;
+  }
+}
+
+function preferredTeshirSeries(): string {
+  return pinnedTeshirSeries ?? DEFAULT_CAGLAYAN_TESHIR_SERIES;
 }
 
 function dimsFromOlcu(olcu: string): [number, number, number] | null {
@@ -66,33 +90,23 @@ function seriesBoost(category: string | null | undefined, isim: string): number 
   const n = norm(isim);
   let score = 0;
 
-  const meatSeries = [
-    "acelya",
-    "gardenya",
-    "anemon",
-    "fulya",
-    "hercai",
-    "orkide",
-    "sardunya",
-    "lale",
-  ];
-  const pastrySeries = ["krizantem", "begonvil", "iris", "defne", "inci", "itir"];
-
   if (isPastaDolabiReferans(isim)) {
     if (cat.includes("yasemin")) score += 95;
     const blob = `${cat} ${norm(String(category ?? ""))}`;
     if (blob.includes("yasemin") && blob.includes("cl")) score += 30;
+    return score;
   }
-  if (isEtTeshirReyonReferans(isim) || /kasap|sarkuteri|et\s*teshir/.test(n)) {
-    for (const s of meatSeries) {
-      if (cat.includes(s)) score += 45;
-    }
+
+  if (!isTeshirReyonReferans(isim)) return score;
+
+  const pref = preferredTeshirSeries();
+  for (const s of CAGLAYAN_TESHIR_SERIES_NAMES) {
+    if (!cat.includes(s)) continue;
+    if (s === pref) score += 220;
+    else score -= 160;
+    break;
   }
-  if (/pastane|pasta|tatli|tatlı|borek|börek|kurabiye/.test(n) && !isPastaDolabiReferans(isim)) {
-    for (const s of pastrySeries) {
-      if (cat.includes(s)) score += 35;
-    }
-  }
+
   if (/motoru\s*disar|motoru\s*dışar|remote/.test(n) && /gl-|lm-/.test(cat)) {
     score += 20;
   }
@@ -160,7 +174,20 @@ export async function matchTeshirReyonByReferans(
     .sort((a, b) => b.score - a.score);
 
   if (scored.length > 0) {
-    const matched = katalogRowToEslesmis(scored[0].row, {
+    const pref = preferredTeshirSeries();
+    let pool = scored;
+    if (!isPastaDolabiReferans(isim)) {
+      const prefOnly = scored.filter(
+        (x) => extractCaglayanSeriesFromRow(x.row) === pref,
+      );
+      if (prefOnly.length > 0) pool = prefOnly;
+    }
+    const best = pool[0].row;
+    if (!isPastaDolabiReferans(isim)) {
+      const series = extractCaglayanSeriesFromRow(best);
+      if (series) pinTeshirReyonSeries(series);
+    }
+    const matched = katalogRowToEslesmis(best, {
       linkMarka: CAGLAYAN_MARKA,
       sablonIsim: isim,
       urunTipi: urunTipi ?? undefined,
@@ -170,8 +197,8 @@ export async function matchTeshirReyonByReferans(
       ad: displayIsimFromSablon(isim),
       marka: CAGLAYAN_MARKA,
       olcu: olcuDisplay,
-      fiyat: scored[0].row.fiyat_tl > 0 ? scored[0].row.fiyat_tl : 0,
-      fiyatEur: scored[0].row.fiyat_tl > 0 ? matched.fiyatEur : null,
+      fiyat: best.fiyat_tl > 0 ? best.fiyat_tl : 0,
+      fiyatEur: best.fiyat_tl > 0 ? matched.fiyatEur : null,
     };
   }
 
