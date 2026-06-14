@@ -17,9 +17,7 @@ import {
   findPdfListPrice,
   findVoscoSitePrice,
   loadVoscoPdfCatalog,
-  pricingFromVoscoListeEur,
-  resolveListeEur,
-  usdToEurRate,
+  pricingFromVoscoPdfMatch,
   VOSCO_ISKONTO_ORAN,
   VOSCO_SATIS_ORAN,
 } from "./lib/vosco-pdf-prices.mjs";
@@ -103,21 +101,23 @@ function formatSpecs(p, px, pdfMatch) {
       lines.push(`${label}: ₺${px.fiyat_tl.toLocaleString("tr-TR")}`, `KDV %${KDV}`);
       if (px.site_fiyat_str) lines.push(`Site: ${px.site_fiyat_str}`);
     } else {
-      const kurUsdEur = px.kur_usd_eur ?? usdToEurRate(px.kur_usd_try, px.kur_eur_try);
       if (px.liste_fiyati_usd_pdf) {
         lines.push(
           `Liste fiyatı (USD, Vosco PDF 2026): $${px.liste_fiyati_usd_pdf}`,
-          `TCMB çevrim: 1 USD = ${kurUsdEur?.toFixed(4) || "?"} EUR → liste ${px.liste_fiyati_eur} EUR`,
+          `TCMB çevrim: 1 USD = ${px.kur_usd_try} TRY → liste ${px.liste_fiyati_tl?.toLocaleString("tr-TR")} TRY`,
         );
       } else if (px.liste_fiyati_eur_pdf) {
-        lines.push(`Liste fiyatı (EUR, Vosco PDF 2026): ${px.liste_fiyati_eur_pdf} EUR`);
+        lines.push(
+          `Liste fiyatı (EUR, Vosco PDF 2026): ${px.liste_fiyati_eur_pdf} EUR`,
+          `TCMB çevrim: 1 EUR = ${px.kur_eur_try} TRY → liste ${px.liste_fiyati_tl?.toLocaleString("tr-TR")} TRY`,
+        );
       } else {
-        lines.push(`Liste fiyatı (EUR): ${px.liste_fiyati_eur} EUR`);
+        lines.push(`Liste fiyatı (TL): ${px.liste_fiyati_tl?.toLocaleString("tr-TR")} TRY`);
       }
       lines.push(
         `Bayi iskonto: %${Math.round(VOSCO_ISKONTO_ORAN * 100)}`,
-        `Equsto satış (EUR): liste × ${Math.round(SATIS_ORAN * 100)}% = ${px.satis_fiyati_eur} EUR`,
-        `Kur: 1 EUR = ${px.kur_eur_try} TRY (KDV %${KDV})`,
+        `Equsto satış (TL): liste × ${Math.round(SATIS_ORAN * 100)}% = ${px.satis_fiyati_tl?.toLocaleString("tr-TR")} TRY (KDV hariç)`,
+        `KDV %${KDV}`,
       );
       if (pdfMatch?.matchKey) lines.push(`PDF eşleşme: ${pdfMatch.matchKey}${pdfMatch.fuzzy ? " (yakın)" : ""}`);
     }
@@ -177,18 +177,9 @@ async function toRow(p, eurTry, usdTry, pdfIndex, pdfProducts) {
   const mapped = mapDeptCategory(p);
   const manualPx = findManualVoscoPrice(p);
   const pdfMatch = manualPx ? null : findPdfListPrice(p, pdfIndex, pdfProducts);
-  const listeEur = manualPx ? 0 : resolveListeEur(pdfMatch, usdTry, eurTry);
-  const sitePx = manualPx || listeEur > 0 ? null : findVoscoSitePrice(p, KDV);
-  const px =
-    manualPx ||
-    (listeEur > 0
-      ? pricingFromVoscoListeEur(listeEur, eurTry, KDV, SATIS_ORAN, {
-          listeUsd: pdfMatch?.listeUsd,
-          listeEur: pdfMatch?.listeEur,
-          usdTry,
-          kurUsdEur: usdToEurRate(usdTry, eurTry),
-        })
-      : sitePx);
+  const pdfPx = manualPx || !pdfMatch ? null : pricingFromVoscoPdfMatch(pdfMatch, usdTry, eurTry, KDV, SATIS_ORAN);
+  const sitePx = manualPx || pdfPx ? null : findVoscoSitePrice(p, KDV);
+  const px = manualPx || pdfPx || sitePx;
   const images = await copyImage(p);
   const teknikList = Object.entries(p.teknik_ozellikler || {}).map(([k, v]) => `${k}: ${v}`);
   return {
@@ -255,11 +246,10 @@ async function main() {
     Number(process.env.EQUSTO_EUR_TRY) > 0 ? Number(process.env.EQUSTO_EUR_TRY) : tcmb.eurTry;
   const usdTry =
     Number(process.env.EQUSTO_USD_TRY) > 0 ? Number(process.env.EQUSTO_USD_TRY) : tcmb.usdTry;
-  const usdEur = usdTry / eurTry;
 
   const pdfCatalog = loadVoscoPdfCatalog();
   console.log(`[vosco-import] PDF: ${pdfCatalog.products.length} ürün, ${pdfCatalog.index.size} kod`);
-  console.log(`[vosco-import] kur: 1 EUR = ${eurTry} TRY, 1 USD = ${usdTry} TRY, 1 USD = ${usdEur.toFixed(4)} EUR`);
+  console.log(`[vosco-import] kur: 1 USD = ${usdTry} TRY, 1 EUR = ${eurTry} TRY`);
 
   const rows = [];
   for (const p of products) {
@@ -290,7 +280,7 @@ async function main() {
   const priced = rows.filter((r) => !r.fiyat_bekleniyor).length;
   console.log(`[vosco-import] ${dryRun ? "DRY-RUN" : "OK"} ${rows.length} ürün`);
   console.log(`  fiyatlı: ${priced} | PDF eşleşmeyen: ${unmatched.length}`);
-  console.log(`  satış: PDF USD→EUR (TCMB), liste × ${SATIS_ORAN} (%${Math.round(VOSCO_ISKONTO_ORAN * 100)} iskonto) → TL + KDV %${KDV}`);
+  console.log(`  satış: PDF USD/EUR → TL (TCMB), liste × ${SATIS_ORAN} (%${Math.round(VOSCO_ISKONTO_ORAN * 100)} iskonto) + KDV %${KDV}`);
 
   if (!dryRun) {
     execFileSync(process.execPath, ["scripts/rebuild-ekipmanlar-from-dept.mjs"], {
