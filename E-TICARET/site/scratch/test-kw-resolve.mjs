@@ -51,4 +51,34 @@ describe("kw-resolve", () => {
       isPasifPfosEkipman({ isim: "İSTİF RAFI 4 KATLI", sku: "53-X-152-X-183" }),
     );
   });
+
+  it("gazli ozti ocak — Güç yalnızca gaz sütunu", () => {
+    const specs =
+      "700 SERİ SET ÜSTÜ DÖRTLÜ OCAK GAZLI 80*70*30\nGüç: 6 kW";
+    const r = parseKwFromText(specs);
+    assert.equal(r.elektrikGucuKw, null);
+    assert.equal(r.gazGucuKw, 6);
+  });
+
+  it("gazli ozti izgara — Güç yalnızca gaz sütunu", () => {
+    const specs =
+      "700 SERİ SET ÜSTÜ GRİLL PLATE DÜZ GAZLI 80*70*30\nGüç: 14 kW";
+    const r = parseKwFromText(specs);
+    assert.equal(r.elektrikGucuKw, null);
+    assert.equal(r.gazGucuKw, 14);
+  });
+
+  it("resolveTeklifKw moves misassigned gaz power off elk column", () => {
+    const r = resolveTeklifKw({
+      isim: "DÖKÜM IZGARA, GAZLI, SETÜSTÜ",
+      urun: {
+        sku: "7864.N1.80703.72",
+        ad: "700 SERİ SET ÜSTÜ DOKUM IZGARA GAZLI",
+        elektrikGucuKw: 14,
+        gazGucuKw: 14,
+      },
+    });
+    assert.equal(r.elektrikGucuKw, null);
+    assert.equal(r.gazGucuKw, 14);
+  });
 });

@@ -32,11 +32,72 @@ export function parseKwNumber(raw: string | number | null | undefined): number |
   return Number.isFinite(n) && n > 0 && n <= 200 ? n : null;
 }
 
+type FuelContext = "gaz" | "elk" | "mixed" | "unknown";
+
+/** Metinden yakıt bağlamı — GAZLI ürünlerde Güç yalnızca gaz sütununa gider */
+export function fuelContextFromText(text: string): FuelContext {
+  const t = String(text ?? "");
+  const isGazli =
+    /gazl[ıi]|gazli\s|\/\s*gaz\b|dogalgaz|doğalgaz|\blpg\b|komurlu|kömürlü|gazli\s*izgar|gazli\s*ocak|gazli\s*fritoz|gazli\s*firin|gaz\s*baglant|acik alev|açık alev|mavi alev/i.test(
+      t,
+    );
+  const isElk =
+    /elektr[ıi]kl[ıi]|induksiyon|indüksiyon|\b230\s*v\b|\b380\s*v\b|\b400\s*v\b|elektrik\s*baglant/i.test(
+      t,
+    );
+  if (isGazli && !isElk) return "gaz";
+  if (isElk && !isGazli) return "elk";
+  if (isGazli && isElk) return "mixed";
+  return "unknown";
+}
+
+function assignGenericGucKw(
+  kw: number | null,
+  fuel: FuelContext,
+): Pick<ResolvedKw, "elektrikGucuKw" | "gazGucuKw"> {
+  if (kw == null) return { elektrikGucuKw: null, gazGucuKw: null };
+  if (fuel === "gaz") return { elektrikGucuKw: null, gazGucuKw: kw };
+  if (fuel === "elk") return { elektrikGucuKw: kw, gazGucuKw: null };
+  return { elektrikGucuKw: kw, gazGucuKw: null };
+}
+
+/** Gazlı / elektrikli ayrımı — yanlış sütuna yazılmış kW düzelt */
+export function reconcileFuelKw(
+  kw: ResolvedKw,
+  fuel: FuelContext,
+): ResolvedKw {
+  let { elektrikGucuKw: elk, gazGucuKw: gaz } = kw;
+  if (fuel === "gaz") {
+    if (!gaz && elk) gaz = elk;
+    if (gaz && elk) elk = null;
+  } else if (fuel === "elk") {
+    if (!elk && gaz) elk = gaz;
+    if (elk && gaz) gaz = null;
+  }
+  return { elektrikGucuKw: elk, gazGucuKw: gaz };
+}
+
+function reconcileFuelKwFromContext(
+  kw: ResolvedKw,
+  ctx: {
+    isim?: string | null;
+    urunTipi?: string | null;
+    urunAd?: string | null;
+    urunAciklama?: string | null;
+  },
+): ResolvedKw {
+  const blob = [ctx.isim, ctx.urunTipi, ctx.urunAd, ctx.urunAciklama]
+    .filter(Boolean)
+    .join(" ");
+  return reconcileFuelKw(kw, fuelContextFromText(blob));
+}
+
 /** Specs / açıklama metninden elk. ve gaz kW */
 export function parseKwFromText(text: string): ResolvedKw {
   const t = String(text ?? "").replace(/\r/g, "");
   if (!t.trim()) return { elektrikGucuKw: null, gazGucuKw: null };
 
+  const fuel = fuelContextFromText(t);
   let elk: number | null = null;
   let gaz: number | null = null;
 
@@ -46,11 +107,27 @@ export function parseKwFromText(text: string): ResolvedKw {
   if (gazExplicit) gaz = parseKwNumber(gazExplicit[1]);
 
   const elkExplicit = t.match(
-    /(?:guc|güç|elektrik\s*gucu|elektrik\s*gücü|elektrik\s*baglantisi|elektrik\s*bağlantısı|elk\.?\s*kw)\s*[:=]?\s*([\d.,]+)\s*kW/i,
+    /(?:elektrik\s*gucu|elektrik\s*gücü|elektrik\s*baglantisi|elektrik\s*bağlantısı|elk\.?\s*kw)\s*[:=]?\s*([\d.,]+)\s*kW/i,
   );
   if (elkExplicit) elk = parseKwNumber(elkExplicit[1]);
 
-  if (!elk) {
+  if (!elk && !gaz && fuel !== "gaz") {
+    const genericGuc = t.match(
+      /(?:^|\n)\s*(?:guc|güc)\s*[:=]?\s*([\d.,]+)\s*kW/im,
+    );
+    if (genericGuc) {
+      const assigned = assignGenericGucKw(parseKwNumber(genericGuc[1]), fuel);
+      elk = assigned.elektrikGucuKw;
+      gaz = assigned.gazGucuKw;
+    }
+  } else if (!gaz && fuel === "gaz") {
+    const genericGuc = t.match(
+      /(?:^|\n)\s*(?:guc|güc)\s*[:=]?\s*([\d.,]+)\s*kW/im,
+    );
+    if (genericGuc) gaz = parseKwNumber(genericGuc[1]);
+  }
+
+  if (!elk && fuel !== "gaz") {
     for (const line of t.split("\n")) {
       const pimakKw = parsePimakGucFromTeknikLine(line);
       if (pimakKw != null) {
@@ -68,24 +145,12 @@ export function parseKwFromText(text: string): ResolvedKw {
     }
   }
 
-  if (!elk) {
-    for (const line of t.split("\n")) {
-      const trimmed = line.trim();
-      if (!/^guc|^güç/i.test(trimmed)) continue;
-      const m = trimmed.match(/([\d.,]+)\s*kW/i);
-      if (m) {
-        elk = parseKwNumber(m[1]);
-        break;
-      }
-    }
-  }
-
   const allKw = [...t.matchAll(/([\d.,]+)\s*kW/gi)]
     .map((m) => parseKwNumber(m[1]))
     .filter((n): n is number => n != null);
 
-  const isGazli = /gazl[ıi]|\/\s*gaz\b|dogalgaz|doğalgaz/i.test(t);
-  const isElk = /elektr|230\s*v|380\s*v|400\s*v/i.test(t);
+  const isGazli = fuel === "gaz" || fuel === "mixed";
+  const isElk = fuel === "elk" || fuel === "mixed";
 
   if (!gaz && isGazli && allKw.length > 0) {
     gaz = allKw[allKw.length - 1] ?? null;
@@ -94,11 +159,12 @@ export function parseKwFromText(text: string): ResolvedKw {
     elk = allKw[0] ?? null;
   }
   if (!elk && !gaz && allKw.length === 1) {
-    if (isGazli) gaz = allKw[0] ?? null;
+    if (fuel === "gaz") gaz = allKw[0] ?? null;
+    else if (fuel !== "unknown") elk = allKw[0] ?? null;
     else elk = allKw[0] ?? null;
   }
 
-  return { elektrikGucuKw: elk, gazGucuKw: gaz };
+  return reconcileFuelKw({ elektrikGucuKw: elk, gazGucuKw: gaz }, fuel);
 }
 
 type OlcuGuc = {
@@ -246,34 +312,50 @@ export function resolveTeklifKw(opts: {
   };
 
   if (fromUrun.elektrikGucuKw != null || fromUrun.gazGucuKw != null) {
-    return fromUrun;
+    return reconcileFuelKwFromContext(fromUrun, {
+      isim: opts.isim,
+      urunTipi: opts.urunTipi,
+      urunAd: opts.urun?.ad,
+      urunAciklama: opts.urun?.teklifAciklama,
+    });
   }
 
   const fromAciklama = parseKwFromText(
     decodeHtmlEntities(opts.urun?.teklifAciklama ?? ""),
   );
   if (fromAciklama.elektrikGucuKw != null || fromAciklama.gazGucuKw != null) {
-    return fromAciklama;
+    return reconcileFuelKwFromContext(fromAciklama, {
+      isim: opts.isim,
+      urunTipi: opts.urunTipi,
+      urunAd: opts.urun?.ad,
+    });
   }
 
   if (!isPoweredPfosEkipman(ctx)) {
     return { elektrikGucuKw: null, gazGucuKw: null };
   }
 
-  const hintElk = sanitizeKwHint(
+  const fuel = fuelContextFromText(
+    [opts.isim, opts.urunTipi, opts.urun?.ad].filter(Boolean).join(" "),
+  );
+  let hintElk = sanitizeKwHint(
     parseKwNumber(opts.elektrikGucuKwHint),
     opts.isim ?? "",
     "elk",
   );
-  const hintGaz = sanitizeKwHint(
+  let hintGaz = sanitizeKwHint(
     parseKwNumber(opts.gazGucuKwHint),
     opts.isim ?? "",
     "gaz",
   );
-  return {
-    elektrikGucuKw: hintElk,
-    gazGucuKw: hintGaz,
-  };
+  if (fuel === "gaz" && hintElk && !hintGaz) {
+    hintGaz = hintElk;
+    hintElk = null;
+  }
+  return reconcileFuelKw(
+    { elektrikGucuKw: hintElk, gazGucuKw: hintGaz },
+    fuel,
+  );
 }
 
 function sanitizeKwHint(
