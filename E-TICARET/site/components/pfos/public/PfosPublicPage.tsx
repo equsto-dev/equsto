@@ -28,8 +28,8 @@ export default function PfosPublicPage() {
 
           <PfosPublicWizard />
         </div>
-        <footer className="footer eq-mfoot" id="eq-shop-footer" />
         <PfosVersionBar />
+        <footer className="footer eq-mfoot" id="eq-shop-footer" />
       </div>
     </>
   );
