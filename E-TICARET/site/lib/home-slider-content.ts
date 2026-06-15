@@ -118,7 +118,7 @@ export type HomeMainSliderSlide =
 export const homeMainSliderSlides: HomeMainSliderSlide[] = [
   {
     id: "pfos",
-    href: "/pfos?mode=liste",
+    href: "/pfos",
     slideClass: "eq-mx-hero__slide eq-mx-hero__slide--pfos",
     thumbLabel: "Proje Fabrikası",
     kind: "sketch",

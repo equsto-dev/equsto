@@ -109,6 +109,47 @@
   line-height: 1.5;
 }
 
+.listeDropZoneRail {
+  margin-top: 0.5rem;
+  padding: 1.15rem 0.75rem;
+}
+
+.listeDropZoneRail .listeDropIcon {
+  font-size: 1.55rem;
+  margin-bottom: 0.45rem;
+}
+
+.listeDropZoneRail .listeDropTitle {
+  font-size: 0.86rem;
+}
+
+.listeDropZoneRail .listeDropHint {
+  font-size: 0.76rem;
+}
+
+.listeDropZoneBusy {
+  opacity: 0.88;
+  cursor: wait;
+}
+
+.listeFormatNoteRail {
+  margin: 0.65rem 0 0;
+  color: #6b7280;
+  font-size: 0.72rem;
+  line-height: 1.45;
+}
+
+.railError {
+  margin-top: 0.5rem;
+  padding: 0.45rem 0.6rem;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  color: #b91c1c;
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
 .listeSteps {
   margin: 0.5rem 0 0;
   padding-left: 1.2rem;

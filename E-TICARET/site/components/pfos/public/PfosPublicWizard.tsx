@@ -30,6 +30,8 @@ import {
 } from "@/lib/pfos/adres/tr-adres";
 import PfosAdresAutocomplete from "./PfosAdresAutocomplete";
 import PfosTeklifLoading from "./PfosTeklifLoading";
+import PfosListeUploadRail from "./PfosListeUploadRail";
+import { usePfosListeUpload } from "./usePfosListeUpload";
 import {
   defaultPublicQuestions,
   dukkanSecenekleri,
@@ -114,6 +116,7 @@ function parseKonsept(slug: string | null): string | null {
 
 export default function PfosPublicWizard({ initialQuestions }: Props) {
   const { t } = usePfosLabel();
+  const listeUpload = usePfosListeUpload();
   const [questions, setQuestions] = useState<WizardQuestion[]>(
     initialQuestions ?? defaultPublicQuestions(),
   );
@@ -817,6 +820,115 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     );
   }
 
+  function renderRightRail() {
+    return (
+      <aside className={styles.rightCol} aria-label={t("Referans ve notlar")}>
+        <PfosListeUploadRail
+          inputRef={listeUpload.inputRef}
+          drag={listeUpload.drag}
+          setDrag={listeUpload.setDrag}
+          file={listeUpload.file}
+          loadingKind={listeUpload.loadingKind}
+          error={listeUpload.error}
+          memberReady={listeUpload.memberReady}
+          memberLoggedIn={listeUpload.memberLoggedIn}
+          loginHref={listeUpload.loginHref}
+          onPick={listeUpload.onPick}
+        />
+        <section className={styles.railSection}>
+          <span className={styles.railKicker}>{t("Referans listesi")}</span>
+          <span className={styles.railTitle}>
+            {t("Kayıtlı proforma dosyası")}
+          </span>
+          {!motorGirdi.dukkanSecim ? (
+            <p className={styles.railPlaceholder}>
+              <b>{t("Henüz dükkan türü seçilmedi.")}</b>{" "}
+              {t(
+                "Dükkan türünü seçince proje-akis shopTypes kurallarına göre m² bandı ve referans JSON yüklenir.",
+              )}
+            </p>
+          ) : referansYukleniyor ? (
+            <p className={styles.railPlaceholder}>
+              {t("Referans dosyası aranıyor…")}
+            </p>
+          ) : referansOnizleme ? (
+            <div
+              className={`${styles.railReferans}${railEntering ? ` ${styles.secPending}` : ""}${railReveal ? ` ${styles.secReveal}` : ""}`}
+            >
+              <p className={styles.railReferansMeta}>
+                <b>{t(motorGirdi.dukkanSecim)}</b>
+                {" · "}
+                {referansOnizleme.bant.label} ({referansOnizleme.bant.referansM2}{" "}
+                m² ref.)
+              </p>
+              <p className={styles.railReferansDosya}>
+                {t("Liste")}: <code>{referansOnizleme.listeDosya}</code>
+              </p>
+              {referansOnizleme.kaynakDosya ? (
+                <p className={styles.railReferansDosya}>
+                  {t("Kaynak")}: {referansOnizleme.kaynakDosya}
+                </p>
+              ) : null}
+              {referansOnizleme.listeYolu ? (
+                <p className={styles.railReferansHint}>
+                  {referansOnizleme.listeYolu}
+                </p>
+              ) : null}
+              <p className={styles.railReferansKalem}>
+                {referansOnizleme.kalemSayisi}{" "}
+                {t("kalem (referans dosyasından)")}
+              </p>
+              <ul className={styles.railReferansList}>
+                {referansOnizleme.kalemlerOzet.map((k) => (
+                  <li key={`${k.poz}-${k.ad}`}>
+                    {k.poz ? `${k.poz} · ` : ""}
+                    {k.ad}
+                  </li>
+                ))}
+              </ul>
+              {referansOnizleme.kalemSayisi >
+              referansOnizleme.kalemlerOzet.length ? (
+                <p className={styles.railReferansHint}>
+                  +
+                  {referansOnizleme.kalemSayisi -
+                    referansOnizleme.kalemlerOzet.length}{" "}
+                  {t("kalem daha")}
+                </p>
+              ) : null}
+            </div>
+          ) : (
+            <p className={styles.railPlaceholder}>
+              <b>{t(motorGirdi.dukkanSecim)}</b>
+              {t(
+                " için kayıtlı referans listesi bulunamadı — yönetim panelinden shopTypes / bant tanımını kontrol edin.",
+              )}
+            </p>
+          )}
+        </section>
+        <section className={styles.railSection}>
+          <span className={styles.railKicker}>{t("Teklif motoru")}</span>
+          <span className={styles.railTitle}>{t("Bağlantı durumu")}</span>
+          <dl className={styles.railMeta}>
+            <dt>{t("Konsept")}</dt>
+            <dd>{motorGirdi.dukkanSecim ? t(motorGirdi.dukkanSecim) : "—"}</dd>
+            <dt>{t("Motor")}</dt>
+            <dd>{motorSlug || t("planlanan")}</dd>
+            <dt>{t("Alan")}</dt>
+            <dd>{motorGirdi.m2 ? `${motorGirdi.m2} m²` : "—"}</dd>
+            <dt>{t("Lokasyon")}</dt>
+            <dd>{motorGirdi.lokasyon || "—"}</dd>
+            {referansOnizleme?.bantKurali ? (
+              <>
+                <dt>{t("Bant kuralı")}</dt>
+                <dd>{referansOnizleme.bantKurali}</dd>
+              </>
+            ) : null}
+          </dl>
+        </section>
+      </aside>
+    );
+  }
+
   function renderMemberGate() {
     return (
       <div className={styles.layout}>
@@ -847,6 +959,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
             </p>
           </div>
         </div>
+        {renderRightRail()}
       </div>
     );
   }
@@ -884,6 +997,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
             {t("Yeni proje")}
           </button>
         </div>
+        {renderRightRail()}
       </div>
     );
   }
@@ -891,155 +1005,122 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   return (
     <div className={styles.layout}>
       <div className={styles.leftCol}>
-        <p className={styles.mreGreeting}>
-          {t("Ben Gastronomi Mekan Tasarımcısı Mr. Equsto. Hoş geldin.")}
-        </p>
-        <p className={styles.mreMotto}>
-          {t("Beş dakikada yapılır, hemen teslim edilir.")}
-        </p>
-
-        <div className={styles.pfProgress}>
-          <div className={styles.pfProgressTrack}>
-            <div
-              className={styles.pfProgressFill}
-              style={{ width: `${hint.pct}%` }}
-            />
-          </div>
-          <div className={styles.pfStepHint}>
-            <b>{hint.title}</b>
-            <small>{hint.sub}</small>
-          </div>
-        </div>
-
-        <div id="secs">{panels.map(renderPanel)}</div>
-
-        {error ? <div className={styles.error}>{error}</div> : null}
-
-        {finished && sonuc && teklifV14 ? (
+        {listeUpload.sonuc && listeUpload.teklifV14 ? (
           <>
             <section
-              className={`${styles.sec} ${styles.secVis} ${styles.secDone}${resultEntering ? ` ${styles.secPending}` : ""}${resultReveal ? ` ${styles.secReveal}` : ""}`}
+              className={`${styles.sec} ${styles.secVis} ${styles.secDone}`}
             >
               <div className={styles.secHd}>
                 <span className={styles.secNum}>✓</span>
                 <span className={styles.secInfo}>
-                  <span className={styles.secTitle}>Örnek listeniz hazır</span>
+                  <span className={styles.secTitle}>
+                    {t("Listeniz fiyatlandırıldı")}
+                  </span>
                   <span className={styles.secSub}>
-                    {sonuc.konseptLabel} · {motorGirdi.m2} m² ·{" "}
-                    {sonuc.kalemler?.length ?? 0} kalem
+                    {listeUpload.sonuc.konseptLabel} ·{" "}
+                    {listeUpload.sonuc.kalemler?.length ?? 0} {t("kalem")} ·{" "}
+                    {listeUpload.sonuc.ozet?.eslesmeSayisi ?? 0}{" "}
+                    {t("eşleşme")}
                   </span>
                   <span className={styles.teklifTotalInline}>
-                    {formatTry(sonuc.ozet?.toplamFiyat ?? 0)}{" "}
-                    <small>(tahmini, KDV hariç)</small>
+                    {formatTry(listeUpload.sonuc.ozet?.toplamFiyat ?? 0)}{" "}
+                    <small>({t("tahmini, KDV hariç")})</small>
                   </span>
                 </span>
               </div>
               <div className={styles.secBd}>
+                {listeUpload.sonuc.uyarilar?.length ? (
+                  <ul className={styles.listeUyarilar}>
+                    {listeUpload.sonuc.uyarilar.map((u) => (
+                      <li key={u}>{u}</li>
+                    ))}
+                  </ul>
+                ) : null}
                 <button
                   type="button"
                   className={`${styles.btn} ${styles.btnGhost}`}
-                  onClick={resetWizard}
+                  onClick={listeUpload.reset}
                 >
-                  {t("Yeni proje")}
+                  {t("Yeni liste yükle")}
                 </button>
               </div>
             </section>
-            <div
-              className={`${styles.proformaWrap}${resultEntering ? ` ${styles.secPending}` : ""}${resultReveal ? ` ${styles.secReveal}` : ""}`}
-            >
-              <TeklifV14Proforma model={teklifV14} deliveryOnly />
+            <div className={styles.proformaWrap}>
+              <TeklifV14Proforma
+                model={listeUpload.teklifV14}
+                deliveryOnly
+              />
             </div>
           </>
-        ) : null}
-      </div>
+        ) : (
+          <>
+            <p className={styles.mreGreeting}>
+              {t("Ben Gastronomi Mekan Tasarımcısı Mr. Equsto. Hoş geldin.")}
+            </p>
+            <p className={styles.mreMotto}>
+              {t("Beş dakikada yapılır, hemen teslim edilir.")}
+            </p>
 
-      <aside className={styles.rightCol} aria-label={t("Referans ve notlar")}>
-        <section className={styles.railSection}>
-          <span className={styles.railKicker}>{t("Referans listesi")}</span>
-          <span className={styles.railTitle}>
-            {t("Kayıtlı proforma dosyası")}
-          </span>
-          {!motorGirdi.dukkanSecim ? (
-            <p className={styles.railPlaceholder}>
-              <b>{t("Henüz dükkan türü seçilmedi.")}</b>{" "}
-              {t(
-                "Dükkan türünü seçince proje-akis shopTypes kurallarına göre m² bandı ve referans JSON yüklenir.",
-              )}
-            </p>
-          ) : referansYukleniyor ? (
-            <p className={styles.railPlaceholder}>{t("Referans dosyası aranıyor…")}</p>
-          ) : referansOnizleme ? (
-            <div
-              className={`${styles.railReferans}${railEntering ? ` ${styles.secPending}` : ""}${railReveal ? ` ${styles.secReveal}` : ""}`}
-            >
-              <p className={styles.railReferansMeta}>
-                <b>{t(motorGirdi.dukkanSecim)}</b>
-                {" · "}
-                {referansOnizleme.bant.label} ({referansOnizleme.bant.referansM2}{" "}
-                m² ref.)
-              </p>
-              <p className={styles.railReferansDosya}>
-                {t("Liste")}: <code>{referansOnizleme.listeDosya}</code>
-              </p>
-              {referansOnizleme.kaynakDosya ? (
-                <p className={styles.railReferansDosya}>
-                  {t("Kaynak")}: {referansOnizleme.kaynakDosya}
-                </p>
-              ) : null}
-              {referansOnizleme.listeYolu ? (
-                <p className={styles.railReferansHint}>
-                  {referansOnizleme.listeYolu}
-                </p>
-              ) : null}
-              <p className={styles.railReferansKalem}>
-                {referansOnizleme.kalemSayisi} {t("kalem (referans dosyasından)")}
-              </p>
-              <ul className={styles.railReferansList}>
-                {referansOnizleme.kalemlerOzet.map((k) => (
-                  <li key={`${k.poz}-${k.ad}`}>
-                    {k.poz ? `${k.poz} · ` : ""}
-                    {k.ad}
-                  </li>
-                ))}
-              </ul>
-              {referansOnizleme.kalemSayisi >
-              referansOnizleme.kalemlerOzet.length ? (
-                <p className={styles.railReferansHint}>
-                  +{referansOnizleme.kalemSayisi - referansOnizleme.kalemlerOzet.length}{" "}
-                  {t("kalem daha")}
-                </p>
-              ) : null}
+            <div className={styles.pfProgress}>
+              <div className={styles.pfProgressTrack}>
+                <div
+                  className={styles.pfProgressFill}
+                  style={{ width: `${hint.pct}%` }}
+                />
+              </div>
+              <div className={styles.pfStepHint}>
+                <b>{hint.title}</b>
+                <small>{hint.sub}</small>
+              </div>
             </div>
-          ) : (
-            <p className={styles.railPlaceholder}>
-              <b>{t(motorGirdi.dukkanSecim)}</b>
-              {t(
-                " için kayıtlı referans listesi bulunamadı — yönetim panelinden shopTypes / bant tanımını kontrol edin.",
-              )}
-            </p>
-          )}
-        </section>
-        <section className={styles.railSection}>
-          <span className={styles.railKicker}>{t("Teklif motoru")}</span>
-          <span className={styles.railTitle}>{t("Bağlantı durumu")}</span>
-          <dl className={styles.railMeta}>
-            <dt>{t("Konsept")}</dt>
-            <dd>{motorGirdi.dukkanSecim ? t(motorGirdi.dukkanSecim) : "—"}</dd>
-            <dt>{t("Motor")}</dt>
-            <dd>{motorSlug || t("planlanan")}</dd>
-            <dt>{t("Alan")}</dt>
-            <dd>{motorGirdi.m2 ? `${motorGirdi.m2} m²` : "—"}</dd>
-            <dt>{t("Lokasyon")}</dt>
-            <dd>{motorGirdi.lokasyon || "—"}</dd>
-            {referansOnizleme?.bantKurali ? (
+
+            <div id="secs">{panels.map(renderPanel)}</div>
+
+            {error ? <div className={styles.error}>{error}</div> : null}
+
+            {finished && sonuc && teklifV14 ? (
               <>
-                <dt>{t("Bant kuralı")}</dt>
-                <dd>{referansOnizleme.bantKurali}</dd>
+                <section
+                  className={`${styles.sec} ${styles.secVis} ${styles.secDone}${resultEntering ? ` ${styles.secPending}` : ""}${resultReveal ? ` ${styles.secReveal}` : ""}`}
+                >
+                  <div className={styles.secHd}>
+                    <span className={styles.secNum}>✓</span>
+                    <span className={styles.secInfo}>
+                      <span className={styles.secTitle}>
+                        Örnek listeniz hazır
+                      </span>
+                      <span className={styles.secSub}>
+                        {sonuc.konseptLabel} · {motorGirdi.m2} m² ·{" "}
+                        {sonuc.kalemler?.length ?? 0} kalem
+                      </span>
+                      <span className={styles.teklifTotalInline}>
+                        {formatTry(sonuc.ozet?.toplamFiyat ?? 0)}{" "}
+                        <small>(tahmini, KDV hariç)</small>
+                      </span>
+                    </span>
+                  </div>
+                  <div className={styles.secBd}>
+                    <button
+                      type="button"
+                      className={`${styles.btn} ${styles.btnGhost}`}
+                      onClick={resetWizard}
+                    >
+                      {t("Yeni proje")}
+                    </button>
+                  </div>
+                </section>
+                <div
+                  className={`${styles.proformaWrap}${resultEntering ? ` ${styles.secPending}` : ""}${resultReveal ? ` ${styles.secReveal}` : ""}`}
+                >
+                  <TeklifV14Proforma model={teklifV14} deliveryOnly />
+                </div>
               </>
             ) : null}
-          </dl>
-        </section>
-      </aside>
+          </>
+        )}
+      </div>
+
+      {renderRightRail()}
     </div>
   );
 }
