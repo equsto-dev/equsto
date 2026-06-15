@@ -74,7 +74,6 @@ export const PFOS_Q_NE_PISIR = [
 export const PFOS_Q_KARAR = [
   "Teklifi al (PDF çıktı)",
   "Projeyi detaylandır (altyapı ve yardımcı ekipman)",
-  "Bilmiyorum",
 ] as const;
 
 export const PFOS_Q_SERVIS = [
