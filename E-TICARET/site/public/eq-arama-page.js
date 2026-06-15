@@ -98,6 +98,103 @@
     return b.indexOf("inoksan") >= 0;
   }
 
+  function parseLenToMm(raw) {
+    var s = String(raw || "")
+      .trim()
+      .split("+")[0]
+      .trim();
+    var m = s.match(/([\d.,]+)\s*(mm|cm|m)?/i);
+    if (!m) return 0;
+    var v = parseFloat(String(m[1]).replace(",", "."));
+    if (!v) return 0;
+    var u = String(m[2] || "").toLowerCase();
+    if (u === "cm") return Math.round(v * 10);
+    if (u === "m") return Math.round(v * 1000);
+    if (u === "mm") return Math.round(v);
+    return v >= 300 ? Math.round(v) : Math.round(v * 10);
+  }
+
+  function dimLabelTezgahFromMm(g, d, y) {
+    if (!g || !d || !y) return "";
+    return Math.round(g / 10) + "×" + Math.round(d / 10) + "×" + Math.round(y / 10) + " cm";
+  }
+
+  function specLinesFromRaw(raw) {
+    if (raw && raw.teknik_ozellikler && raw.teknik_ozellikler.length) {
+      return raw.teknik_ozellikler;
+    }
+    if (raw && raw.specs) return String(raw.specs).split("\n");
+    return [];
+  }
+
+  function parseDimsFromSpecsOlcu(raw) {
+    var lines = specLinesFromRaw(raw);
+    for (var i = 0; i < lines.length; i++) {
+      var t = String(lines[i] || "");
+      var mCm = t.match(
+        /Ölçü\s*\(cm\):\s*(\d{2,4})\s*[xX×]\s*(\d{2,4})\s*[xX×]\s*(\d{2,4})/i
+      );
+      if (mCm) {
+        return dimLabelTezgahFromMm(+mCm[1] * 10, +mCm[2] * 10, +mCm[3] * 10);
+      }
+      var mMm = t.match(
+        /Ebat\s*\(mm\):\s*(\d{2,4})\s*[xX×]\s*(\d{2,4})\s*[xX×]\s*(\d{2,4})/i
+      );
+      if (mMm) return dimLabelFromMm(+mMm[1], +mMm[2], +mMm[3]);
+    }
+    return "";
+  }
+
+  function parseOztiEnBoyDims(raw) {
+    var lines = specLinesFromRaw(raw);
+    var g = 0;
+    var d = 0;
+    var y = 0;
+    for (var i = 0; i < lines.length; i++) {
+      var t = String(lines[i] || "");
+      var me = t.match(/En\s*\(mm\):\s*([\d.,]+)/i);
+      var mb = t.match(/Boy\s*\(mm\):\s*([\d.,]+)/i);
+      var my = t.match(/Yükseklik\s*\(mm\):\s*([\d.,]+)/i);
+      if (me) g = parseLenToMm(me[1] + " mm") || g;
+      if (mb) d = parseLenToMm(mb[1] + " mm") || d;
+      if (my) y = parseLenToMm(my[1] + " mm") || y;
+    }
+    if (g && d && y) return dimLabelFromMm(g, d, y);
+    return "";
+  }
+
+  function parseDimsFromTeknik(raw) {
+    var lines = specLinesFromRaw(raw);
+    var g = 0;
+    var d = 0;
+    var y = 0;
+    for (var i = 0; i < lines.length; i++) {
+      var t = String(lines[i] || "");
+      var mg = t.match(/Genişlik:\s*([^,\n]+)/i);
+      var md = t.match(/Derinlik:\s*([^,\n]+)/i);
+      var my = t.match(/Yükseklik:\s*([^,\n]+)/i);
+      if (mg) g = parseLenToMm(mg[1]) || g;
+      if (md) d = parseLenToMm(md[1]) || d;
+      if (my) y = parseLenToMm(my[1]) || y;
+    }
+    if (g && d && y) return dimLabelTezgahFromMm(g, d, y);
+    return "";
+  }
+
+  function isOztiRow(raw) {
+    if (!raw) return false;
+    var k = String(raw.kaynak || raw.kaynak_fiyat_listesi || "");
+    if (/^ozti/i.test(k)) return true;
+    if (String(raw.dept || "") === "set-ustu-mutfak") return true;
+    return false;
+  }
+
+  function isOztiBrandRow(raw) {
+    if (!raw) return false;
+    var b = lc(raw.brand || raw.oem_brand || "");
+    return b.indexOf("oztiryakiler") >= 0 || b.indexOf("öztiryakiler") >= 0;
+  }
+
   function formatOlculerLine(raw) {
     if (!raw) return "";
     if (raw.olcu_etiket) return String(raw.olcu_etiket);
@@ -116,6 +213,14 @@
       var d2 = Number(o2.derinlik_mm);
       var y2 = Number(o2.yukseklik_mm);
       if (g2 && d2 && y2) return dimLabelFromMm(g2, d2, y2);
+    }
+    var fromSpecsOlcu = parseDimsFromSpecsOlcu(raw);
+    if (fromSpecsOlcu) return fromSpecsOlcu;
+    if (isOztiRow(raw) || isOztiBrandRow(raw)) {
+      var oztiWeb = parseOztiEnBoyDims(raw);
+      if (oztiWeb) return oztiWeb;
+      var oztiTeknik = parseDimsFromTeknik(raw);
+      if (oztiTeknik) return oztiTeknik;
     }
     return "";
   }

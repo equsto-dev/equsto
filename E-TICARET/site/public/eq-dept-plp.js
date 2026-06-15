@@ -201,13 +201,16 @@
     return v >= 300 ? Math.round(v) : Math.round(v * 10);
   }
 
-  function parseDimsFromTeknik(raw) {
-    var lines = [];
+  function specLinesFromRaw(raw) {
     if (raw && raw.teknik_ozellikler && raw.teknik_ozellikler.length) {
-      lines = raw.teknik_ozellikler;
-    } else if (raw && raw.specs) {
-      lines = String(raw.specs).split('\n');
+      return raw.teknik_ozellikler;
     }
+    if (raw && raw.specs) return String(raw.specs).split('\n');
+    return [];
+  }
+
+  function parseDimsFromTeknik(raw) {
+    var lines = specLinesFromRaw(raw);
     var g = 0;
     var d = 0;
     var y = 0;
@@ -224,6 +227,50 @@
     if (g && d) return dimLabelTezgahFromMm(g, d, y || 850);
     if (g) return dimLabelTezgahFromMm(g, d || 700, y || 850);
     return '';
+  }
+
+  /** Yüksel / Portabianco specs — Ölçü (cm): 159x84x91 */
+  function parseDimsFromSpecsOlcu(raw) {
+    var lines = specLinesFromRaw(raw);
+    for (var i = 0; i < lines.length; i++) {
+      var t = String(lines[i] || '');
+      var mCm = t.match(
+        /Ölçü\s*\(cm\):\s*(\d{2,4})\s*[xX×]\s*(\d{2,4})\s*[xX×]\s*(\d{2,4})/i
+      );
+      if (mCm) {
+        return dimLabelTezgahFromMm(+mCm[1] * 10, +mCm[2] * 10, +mCm[3] * 10);
+      }
+      var mMm = t.match(
+        /Ebat\s*\(mm\):\s*(\d{2,4})\s*[xX×]\s*(\d{2,4})\s*[xX×]\s*(\d{2,4})/i
+      );
+      if (mMm) return dimLabelFromMm(+mMm[1], +mMm[2], +mMm[3]);
+    }
+    return '';
+  }
+
+  /** Öztiryakiler web specs — En/Boy/Yükseklik (mm) */
+  function parseOztiEnBoyDims(raw) {
+    var lines = specLinesFromRaw(raw);
+    var g = 0;
+    var d = 0;
+    var y = 0;
+    for (var i = 0; i < lines.length; i++) {
+      var t = String(lines[i] || '');
+      var me = t.match(/En\s*\(mm\):\s*([\d.,]+)/i);
+      var mb = t.match(/Boy\s*\(mm\):\s*([\d.,]+)/i);
+      var my = t.match(/Yükseklik\s*\(mm\):\s*([\d.,]+)/i);
+      if (me) g = parseLenToMm(me[1] + ' mm') || g;
+      if (mb) d = parseLenToMm(mb[1] + ' mm') || d;
+      if (my) y = parseLenToMm(my[1] + ' mm') || y;
+    }
+    if (g && d && y) return dimLabelFromMm(g, d, y);
+    return '';
+  }
+
+  function isOztiBrandRow(raw) {
+    if (!raw) return false;
+    var b = lc(raw.brand || raw.oem_brand || '');
+    return b.indexOf('oztiryakiler') >= 0 || b.indexOf('öztiryakiler') >= 0;
   }
 
   function parseOztiSkuDims(sku) {
@@ -450,8 +497,19 @@
       }
     }
 
+    var fromSpecsOlcu = parseDimsFromSpecsOlcu(raw);
+    if (fromSpecsOlcu) return fromSpecsOlcu;
+
     var fromName = parseDimsFromName(raw.name);
     if (fromName) return fromName;
+
+    if (isOztiRow(raw) || isOztiBrandRow(raw)) {
+      var oztiWeb = parseOztiEnBoyDims(raw);
+      if (oztiWeb) return oztiWeb;
+      var oztiTeknik = parseDimsFromTeknik(raw);
+      if (oztiTeknik) return oztiTeknik;
+    }
+
     var panel = oztiPanelDimsFromSku(raw.sku || raw.model || raw.urun_kodu);
     if (panel) return dimLabelFromMm(panel[0], panel[1], panel[2]);
     return '';
@@ -962,7 +1020,7 @@
     }
     var raw = u && u.raw;
     var b = String((u && u.b) || (raw && raw.brand) || '').trim();
-    if (/öztiryakiler|oztiryakiler/i.test(lc(b))) return 'Öztiryakiler';
+    if (/öztiryakiler|oztiryakiler/i.test(lc(b))) return '';
     return b;
   }
 

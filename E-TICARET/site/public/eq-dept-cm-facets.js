@@ -353,15 +353,13 @@
     return facetBrandKey(resolveFacetBrand(u.b, u.n, sku, oem));
   }
 
-  /** PLP kart marka satırı — Öztiryakiler bayi ürünlerinde kısa marka adı (OEM dahil). */
+  /** PLP kart marka satırı — Öztiryakiler bayi adı kartta gösterilmez. */
   function plpCardBrandLabel(u) {
     if (!u) return '';
     var raw = u.raw || u;
     var b = String(u.b || u.brand || raw.brand || '').trim();
     if (!b) return '';
-    if (OEM_RESELLER.test(lc(b))) {
-      return 'Öztiryakiler';
-    }
+    if (OEM_RESELLER.test(lc(b))) return '';
     return canonicalFacetBrand(b) || b;
   }
 
