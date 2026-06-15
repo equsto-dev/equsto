@@ -21,6 +21,7 @@ import {
   isSenoxVakumPfosKalem,
   isSenoxDilimlemeReferansIsim,
   isSenoxMeyveSikacagiReferansIsim,
+  isSenoxMikrodalgaReferansIsim,
 } from "../core/senox-marka";
 
 type SenoxCatalogProduct = {
@@ -220,6 +221,21 @@ function pickSenoxMeyveSikacagiSku(isim: string): string {
   const n = norm(isim);
   if (/kmp|pres\b|presi/.test(n) && !/km01|km-01/.test(n)) return "118.KMP.01";
   return "118.KM01";
+}
+
+function isSenoxMikrodalgaRow(row: AdminUrunRow): boolean {
+  const blob = norm(`${row.ad ?? ""} ${row.sku ?? ""} ${row.model ?? ""}`);
+  return (
+    isSenoxKatalogMarka(row.marka_ad) &&
+    (/mikrodalga|microwave|118\.mc/i.test(blob) ||
+      /^118\.MC/i.test(String(row.sku ?? "")))
+  );
+}
+
+function pickSenoxMikrodalgaSku(isim: string): string {
+  const n = norm(isim);
+  if (/25\s*lt|mc-?25|mc25|26[,.]8|45[,.]2/.test(n)) return "118.MC25";
+  return "118.MC30";
 }
 
 function hoseLengthMFromIsim(isim: string): number | null {
@@ -583,6 +599,54 @@ export async function matchSenoxMeyveSikacagiByReferans(
   return cat ? senoxProductToEslesmis(cat, isim) : null;
 }
 
+/** Mikrodalga fırın — Şenox MC30 (varsayılan 30L) / MC25 */
+export async function matchSenoxMikrodalgaByReferans(
+  isim: string,
+): Promise<EslesmisUrun | null> {
+  const targetSku = pickSenoxMikrodalgaSku(isim);
+  const rows = (await loadLegacyCatalogRows()).filter(
+    (r) =>
+      r.durum === "aktif" &&
+      r.fiyat_tl > 0 &&
+      isSenoxMikrodalgaRow(r),
+  );
+
+  const exact =
+    rows.find(
+      (r) => String(r.sku ?? "").toUpperCase() === targetSku.toUpperCase(),
+    ) ??
+    rows.find((r) =>
+      /mc30|mc-30/i.test(String(r.sku ?? r.model ?? "")),
+    ) ??
+    rows[0];
+
+  if (exact) {
+    const matched = rowToSenoxEslesmis(exact, isim);
+    return { ...matched, ad: isim.trim() || matched.ad };
+  }
+
+  const mutbex = await loadSenoxMutbexProducts();
+  const pick =
+    mutbex.find(
+      (p) =>
+        String(p.mutbexCode ?? "").toUpperCase() === targetSku.toUpperCase(),
+    ) ??
+    mutbex.find((p) => /mikrodalga|mc30|mc-30/i.test(String(p.title ?? "")));
+  if (pick) {
+    const matched = mutbexToEslesmis(pick, isim);
+    return { ...matched, ad: isim.trim() || matched.ad };
+  }
+
+  const products = await loadSenoxCatalogProducts(/mikrodalga|mc30|mc25/i);
+  const cat =
+    products.find((p) =>
+      targetSku.includes("MC25")
+        ? /mc25/i.test(norm(p.model ?? ""))
+        : /mc30/i.test(norm(p.model ?? "")),
+    ) ?? products[0];
+  return cat ? senoxProductToEslesmis(cat, isim) : null;
+}
+
 /** Şenox katalog eşlemesi — el yıkama, sinek, vakum, dilimleme */
 export async function matchSenoxByReferans(
   isim: string,
@@ -608,6 +672,10 @@ export async function matchSenoxByReferans(
   if (isSenoxMeyveSikacagiReferansIsim(isim, urunTipi, notlar)) {
     const sikac = await matchSenoxMeyveSikacagiByReferans(isim);
     if (sikac) return sikac;
+  }
+  if (isSenoxMikrodalgaReferansIsim(isim, urunTipi)) {
+    const mikrodalga = await matchSenoxMikrodalgaByReferans(isim);
+    if (mikrodalga) return mikrodalga;
   }
   if (isSenoxVakumPfosKalem({ isim, urunTipi })) {
     return matchSenoxVakumByReferans(isim);
