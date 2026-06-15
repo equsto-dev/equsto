@@ -655,26 +655,32 @@
   justify-content: center;
   align-items: baseline;
   gap: 0;
+  letter-spacing: 0.06em;
 }
 
 @media (min-width: 720px) {
   .versionBarText {
     flex-wrap: nowrap;
     white-space: nowrap;
+    letter-spacing: 0.08em;
   }
 }
 
 .versionBarDisclaimer {
   display: inline;
+  letter-spacing: 0.06em;
 }
 
 .versionBarVersion {
   font-weight: 600;
   color: #001e50;
+  letter-spacing: 0.1em;
 }
 
 .versionBarSep {
   color: #9ca3af;
+  margin: 0 0.45em;
+  letter-spacing: 0;
 }
 
 .versionBarLink {
@@ -682,6 +688,7 @@
   font-weight: 500;
   text-decoration: underline;
   text-underline-offset: 2px;
+  letter-spacing: 0.06em;
 }
 
 .versionBarLink:hover {
