@@ -142,6 +142,10 @@ export function preferredOztiPisirmeSkus(
     if (w <= 45) return ["7858.N1.40703.11", "7858.N1.80708.23"];
     return ["7858.N1.80708.23"];
   }
+  if (family === "mikrodalga") {
+    if (/34\s*lt|1800|rfs/i.test(refN)) return ["9891.RFS51.8TS"];
+    return ["9891.RMS51.0TS", "9890.D90D2.30"];
+  }
   if (family === "bainmarie") {
     const blob = norm(`${referansIsim} ${notlar ?? ""}`);
     const wantsGaz = /gazli|gazlı|\bgaz\b/.test(blob);

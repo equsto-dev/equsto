@@ -42,6 +42,7 @@ export function isPisirmeReferansIsim(isim: string | null | undefined): boolean 
   }
   return (
     /fritoz|fritöz|izgar|ocak|kuzine|salamander|firin|fırın|konveksiyon|combi|kombi/.test(n) ||
+    /mikrodalga|microwave|menumaster/.test(n) ||
     /patates\s*dinlendir|scuttle|wok|benmari|bain\s*marie|bainmarie|sos\s*bain|döner\s*ocak|doner\s*ocak|makarna\s*pisir|makarna\s*pişir/.test(n) ||
     /plate\s*izgar|char\s*broil|lavash|dokum\s*izgar|döküm\s*ızgara|tost\s*mak|waffle|krep/.test(n) ||
     /pizza\s*firin|pizza\s*fırın|combi\s*firin|kombili\s*firin/.test(n) ||
@@ -86,7 +87,8 @@ export function isAtalayPisirmeRow(row: {
 }
 
 export function isOztiPisirmeSku(sku: string | null | undefined): boolean {
-  return /^78[0-9]{2}\./i.test(String(sku ?? "").trim());
+  const s = String(sku ?? "").trim();
+  return /^78[0-9]{2}\./i.test(s) || /^989[01]\./i.test(s);
 }
 
 export function isPisirmeDisMarka(marka: string | null | undefined): boolean {

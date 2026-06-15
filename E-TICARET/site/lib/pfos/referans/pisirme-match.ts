@@ -82,12 +82,19 @@ export function oztiPisirmeKatalogUyumsuz(
   if (/tost\s*mak/.test(s) && /^78\d{2}\./.test(String(katalogSku ?? ""))) {
     return true;
   }
+  if (
+    /mikrodalga|microwave|menumaster/i.test(s) &&
+    (/kuzine|firinli|brulor|brülör|acik\s*ates|açık\s*ateş|4\s*kare\s*plate/i.test(k) ||
+      /^7865\./i.test(String(katalogSku ?? "")))
+  ) {
+    return true;
+  }
   return false;
 }
 
 export function isPisirmeReferans(isim: string): boolean {
   const n = norm(isim);
-  return /fritoz|fritöz|izgar|ocak|kuzine|salamander|firin|fırın|patates\s*dinlendir|wok|benmari|bain\s*marie|bainmarie|sos\s*bain|makarna\s*pisir|tost|waffle|pizza\s*firin/.test(
+  return /fritoz|fritöz|izgar|ocak|kuzine|salamander|firin|fırın|patates\s*dinlendir|wok|benmari|bain\s*marie|bainmarie|sos\s*bain|makarna\s*pisir|tost|waffle|pizza\s*firin|mikrodalga|microwave|menumaster/.test(
     n,
   );
 }
@@ -100,6 +107,7 @@ type PisirmeFamily =
   | "kuzine"
   | "salamander"
   | "firin"
+  | "mikrodalga"
   | "pizza_firin"
   | "wok"
   | "doner"
@@ -112,6 +120,9 @@ function parsePisirmeFamily(isim: string, urunTipi?: string | null): PisirmeFami
   const n = norm(`${isim} ${urunTipi ?? ""}`);
   if (/patates\s*dinlendir|scuttle|sicak\s*tutucu.*patates/.test(n)) {
     return "patates_dinlendirme";
+  }
+  if (/mikrodalga|microwave|menumaster|merry\s*chef|speed\s*oven/i.test(n)) {
+    return "mikrodalga";
   }
   if ((/komurlu|kömürlü/.test(n) && /izgar/.test(n)) || urunTipi === "komurlu-izgara") {
     return "komurlu_izgara";
@@ -213,6 +224,11 @@ function rowMatchesFamily(row: AdminUrunRow, family: PisirmeFamily): boolean {
       return cat.includes("kuzine") || /kuzine/.test(ad);
     case "salamander":
       return /salamander/.test(ad);
+    case "mikrodalga":
+      return (
+        cat.includes("mikrodalga") ||
+        /mikrodalga|microwave|menumaster/i.test(ad)
+      );
     case "firin":
       return (
         (cat.includes("firin") || /firin|fırın|konveksiyon/.test(ad)) &&
@@ -316,6 +332,10 @@ function scoreOztiPisirmeRow(
     if (/elektrik|elk|elektr/.test(refBlob) && /gazli|gazlı|\bgaz\b/.test(ad) && !/elektrik/.test(ad)) {
       score -= 5000;
     }
+  }
+  if (family === "mikrodalga") {
+    if (/mikrodalga|microwave|menumaster/i.test(ad)) score += 120;
+    if (/kuzine|firinli|brulor|brülör/i.test(ad)) score -= 8000;
   }
   if (row.gorsel_url) score += 5;
   if (row.fiyat_tl > 0) score += 5;
