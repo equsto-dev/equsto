@@ -288,7 +288,7 @@ export function referansKatalogUyumsuz(
   }
   if (
     /portakal|narenciye|citrus/i.test(s) &&
-    /kati\s*meyve|katı\s*meyve|centrifugal/i.test(k)
+    (/kati\s*meyve|katı\s*meyve|centrifugal|118\.km/i.test(k))
   ) {
     return true;
   }

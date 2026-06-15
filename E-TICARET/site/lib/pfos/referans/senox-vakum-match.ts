@@ -21,6 +21,7 @@ import {
   isSenoxVakumPfosKalem,
   isSenoxDilimlemeReferansIsim,
   isSenoxMeyveSikacagiReferansIsim,
+  isSenoxPortakalSikacagiReferansIsim,
   isSenoxMikrodalgaReferansIsim,
 } from "../core/senox-marka";
 
@@ -213,7 +214,17 @@ function isSenoxMeyveSikacagiRow(row: AdminUrunRow): boolean {
   return (
     isSenoxKatalogMarka(row.marka_ad) &&
     (/118\.km|kati meyve|katı meyve|km01|kmp/i.test(blob) ||
-      /^118\.(KM|KMP)/i.test(String(row.sku ?? "")))
+      /^118\.(KM|KMP)/i.test(String(row.sku ?? ""))) &&
+    !/portakal|118\.ps/i.test(blob)
+  );
+}
+
+function isSenoxPortakalSikacagiRow(row: AdminUrunRow): boolean {
+  const blob = norm(`${row.ad ?? ""} ${row.sku ?? ""} ${row.model ?? ""}`);
+  return (
+    isSenoxKatalogMarka(row.marka_ad) &&
+    (/118\.ps|portakal sik|motorlu portakal/i.test(blob) ||
+      /^118\.PS/i.test(String(row.sku ?? "")))
   );
 }
 
@@ -647,6 +658,49 @@ export async function matchSenoxMikrodalgaByReferans(
   return cat ? senoxProductToEslesmis(cat, isim) : null;
 }
 
+/** Motorlu portakal sıkma — Şenox PS.01 */
+export async function matchSenoxPortakalSikacagiByReferans(
+  isim: string,
+): Promise<EslesmisUrun | null> {
+  const targetSku = "118.PS.01";
+  const rows = (await loadLegacyCatalogRows()).filter(
+    (r) =>
+      r.durum === "aktif" &&
+      isSenoxKatalogMarka(r.marka_ad) &&
+      isSenoxPortakalSikacagiRow(r),
+  );
+
+  const exact =
+    rows.find(
+      (r) => String(r.sku ?? "").toUpperCase() === targetSku.toUpperCase(),
+    ) ?? rows.find((r) => isSenoxPortakalSikacagiRow(r));
+
+  if (exact && (exact.fiyat_tl > 0 || equstoSatisEurFromRow(exact))) {
+    const matched = rowToSenoxEslesmis(exact, isim);
+    return { ...matched, ad: isim.trim() || matched.ad };
+  }
+
+  const mutbex = await loadSenoxMutbexProducts();
+  const pick =
+    mutbex.find(
+      (p) =>
+        String(p.mutbexCode ?? "").toUpperCase() === targetSku.toUpperCase(),
+    ) ??
+    mutbex.find((p) =>
+      /portakal sik|motorlu portakal|118\.ps/i.test(String(p.title ?? "")),
+    );
+  if (pick) {
+    const matched = mutbexToEslesmis(pick, isim);
+    return { ...matched, ad: isim.trim() || matched.ad };
+  }
+
+  const products = await loadSenoxCatalogProducts(/ps\.01|portakal sik/i);
+  const cat =
+    products.find((p) => /ps\.01|ps01/i.test(norm(p.model ?? ""))) ??
+    products[0];
+  return cat ? senoxProductToEslesmis(cat, isim) : null;
+}
+
 /** Şenox katalog eşlemesi — el yıkama, sinek, vakum, dilimleme */
 export async function matchSenoxByReferans(
   isim: string,
@@ -668,6 +722,10 @@ export async function matchSenoxByReferans(
   if (isSenoxOnYikamaDusuReferansIsim(isim, notlar)) {
     const dus = await matchSenoxOnYikamaDusuByReferans(isim);
     if (dus) return dus;
+  }
+  if (isSenoxPortakalSikacagiReferansIsim(isim, urunTipi, notlar)) {
+    const portakal = await matchSenoxPortakalSikacagiByReferans(isim);
+    if (portakal) return portakal;
   }
   if (isSenoxMeyveSikacagiReferansIsim(isim, urunTipi, notlar)) {
     const sikac = await matchSenoxMeyveSikacagiByReferans(isim);

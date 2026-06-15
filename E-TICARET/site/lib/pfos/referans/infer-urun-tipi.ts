@@ -181,10 +181,17 @@ const TIP_RULES: TipRule[] = [
     test: (n) => n.includes("patates") && n.includes("soy"),
   },
   {
+    tip: "portakal-sikacagi",
+    test: (n) =>
+      /portakal|narenciye|citrus|greyfurt|mandalina|motorlu portakal/.test(n) &&
+      (n.includes("sik") || n.includes("sık") || n.includes("mak")),
+  },
+  {
     tip: "kati-meyve-sikacagi",
     test: (n) =>
       n.includes("meyve") &&
-      (n.includes("sik") || n.includes("sık") || n.includes("portakal")),
+      (n.includes("sik") || n.includes("sık")) &&
+      !/portakal|narenciye|citrus/.test(n),
   },
   {
     tip: "calisma-tezgahi-kasa-kahve",
@@ -309,8 +316,16 @@ const TIP_RULES: TipRule[] = [
     test: (n) => n.includes("kokteyl istasyon") || n.includes("kokteyl tezgah"),
   },
   {
+    tip: "portakal-sikacagi",
+    test: (n) =>
+      /portakal|narenciye|citrus|greyfurt|motorlu portakal/.test(n) &&
+      (n.includes("sik") || n.includes("sık") || n.includes("mak")),
+  },
+  {
     tip: "kati-meyve-sikacagi",
-    test: (n) => n.includes("meyve sik") || n.includes("portakal sik"),
+    test: (n) =>
+      (n.includes("meyve sik") || n.includes("meyve sık") || n.includes("kati meyve")) &&
+      !/portakal|narenciye|citrus/.test(n),
   },
   {
     tip: "yer-izgara-kucuk",

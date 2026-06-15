@@ -129,21 +129,39 @@ export function isSenoxMikrodalgaReferansIsim(
   return /mikrodalga|microwave|mc-?30|mc-?25/.test(n);
 }
 
+/** Motorlu portakal / narenciye sıkma — Şenox PS.01 */
+export function isSenoxPortakalSikacagiReferansIsim(
+  isim: string | null | undefined,
+  urunTipi?: string | null,
+  notlar?: string | null,
+): boolean {
+  const rawTip = String(urunTipi ?? "").trim();
+  if (/portakal[-_]?sik|portakal_sikacagi|portakal-sikacagi|portakal-sikma/i.test(rawTip)) {
+    return true;
+  }
+  const n = norm(`${isim ?? ""} ${notlar ?? ""}`);
+  if (!n) return false;
+  if (/kati\s*meyve|katı\s*meyve|santrifuj|centrifugal|meyve\s*pres\b/.test(n)) {
+    return false;
+  }
+  return /portakal|narenciye|citrus|greyfurt|motorlu portakal/.test(n);
+}
+
 /** Katı meyve sıkacağı / presi — Şenox KM01 / KMP; portakal (citrus) hariç */
 export function isSenoxMeyveSikacagiReferansIsim(
   isim: string | null | undefined,
   urunTipi?: string | null,
   notlar?: string | null,
 ): boolean {
+  const n = norm(`${isim ?? ""} ${notlar ?? ""}`);
+  if (/portakal|narenciye|citrus|9860\.00011|santos\s*no\s*11|motorlu portakal/.test(n)) {
+    return false;
+  }
   const rawTip = String(urunTipi ?? "").trim();
   if (/kati-meyve|kati_meyve|meyve-pres|meyve_pres/i.test(rawTip)) {
     return true;
   }
-  const n = norm(`${isim ?? ""} ${notlar ?? ""}`);
   if (!n) return false;
-  if (/portakal|narenciye|citrus|9860\.00011|santos\s*no\s*11|motorlu portakal/.test(n)) {
-    return false;
-  }
   return /kati\s*meyve|katı\s*meyve|meyve\s*pres|meyve\s*sikac|meyve\s*sıkac|extractor|santrifuj/.test(
     n,
   );
@@ -162,6 +180,11 @@ export function isSenoxPfosKalem(opts: {
   if (isSenoxOnYikamaDusuReferansIsim(opts.isim, opts.notlar)) return true;
   if (isSenoxMikrodalgaReferansIsim(opts.isim, opts.urunTipi)) return true;
   if (isSenoxDilimlemeReferansIsim(opts.isim) || opts.urunTipi === "dilimleme_makinesi") return true;
+  if (
+    isSenoxPortakalSikacagiReferansIsim(opts.isim, opts.urunTipi, opts.notlar)
+  ) {
+    return true;
+  }
   if (
     isSenoxMeyveSikacagiReferansIsim(opts.isim, opts.urunTipi, opts.notlar)
   ) {
