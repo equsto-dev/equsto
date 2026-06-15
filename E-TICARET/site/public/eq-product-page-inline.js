@@ -3826,6 +3826,41 @@ window.searchFilter = window.searchFilter || function () {};
       return g;
     }
 
+    function epdpCartAddButtonHtml(cartU) {
+      if (!cartU) return "";
+      var label = esc(__pdpT("pdp.add_to_cart_cmf", "Sepete Ekle"));
+      var attrs =
+        window.EqustoCart && typeof EqustoCart.cartAddButtonAttrs === "function"
+          ? EqustoCart.cartAddButtonAttrs(cartU)
+          : 'type="button" class="eq-cart-add" data-equsto-cart="1" data-eq-n="' +
+            esc(cartU.n) +
+            '" data-eq-b="' +
+            esc(cartU.b) +
+            '" data-eq-c="' +
+            esc(cartU.c) +
+            '" data-eq-p="' +
+            esc(cartU.p) +
+            '"' +
+            (cartU.img ? ' data-eq-img="' + esc(cartU.img) + '"' : "") +
+            ' aria-label="' +
+            label +
+            '"';
+      return (
+        "<button " +
+        attrs +
+        ' data-eq-cart-toast="1" class="eq-cart-add eq-cmf-btn eq-cmf-btn--cart">' +
+        label +
+        "</button>"
+      );
+    }
+
+    function hydrateEpdpBuyboxCartBtn(cartU) {
+      if (!cartU) return;
+      var primary = document.querySelector(".eq-cmf-buybox .eq-cmf-actions--primary");
+      if (!primary || primary.querySelector(".eq-cmf-btn--cart, .eq-cart-add")) return;
+      primary.insertAdjacentHTML("afterbegin", epdpCartAddButtonHtml(cartU));
+    }
+
     /** KİLİT: public/pdp-buybox-cafemarkt-KILIT.txt — Cafemarkt tarzı buybox */
     function pdpWhatsAppPrefill(x) {
       var sku = (x && (x.sku || x.model)) || "";
@@ -3858,14 +3893,7 @@ window.searchFilter = window.searchFilter || function () {};
           esc(__pdpT("pdp.price_preparing", "Fiyat listesi hazırlanıyor — sepete ekleyip teklif isteyebilirsiniz.")) +
           "</p>"
         : "";
-      var cartBtnSolid =
-        window.EqustoCart && EqustoCart.cartAddButtonAttrs
-          ? "<button " +
-            EqustoCart.cartAddButtonAttrs(cartU) +
-            ' data-eq-cart-toast="1" class="eq-cart-add eq-cmf-btn eq-cmf-btn--cart">' +
-            esc(__pdpT("pdp.add_to_cart_cmf", "Sepete Ekle")) +
-            "</button>"
-          : "";
+      var cartBtnSolid = epdpCartAddButtonHtml(cartU);
       var actionsHtml =
         '<div class="eq-cmf-actions eq-cmf-actions--primary">' +
         cartBtnSolid +
@@ -3935,9 +3963,10 @@ window.searchFilter = window.searchFilter || function () {};
       );
     }
 
-    function bindEpdpBuybox() {
+    function bindEpdpBuybox(cartU) {
       var box = document.querySelector(".eq-cmf-buybox");
       if (!box) return;
+      hydrateEpdpBuyboxCartBtn(cartU);
       var valEl = box.querySelector(".eq-cmf-qty__val");
       var minus = box.querySelector(".eq-cmf-qty__minus");
       var plus = box.querySelector(".eq-cmf-qty__plus");
@@ -4562,7 +4591,7 @@ window.searchFilter = window.searchFilter || function () {};
         renderRecentlyViewed(x, all);
 
       bindEpdpGallery();
-      bindEpdpBuybox();
+      bindEpdpBuybox(cartU);
       bindFamilyRailFit();
       eqMbgBindRelated();
       (function bindPdpLightbox() {
@@ -4639,6 +4668,20 @@ window.searchFilter = window.searchFilter || function () {};
       }, 50);
     }
 
+    function waitForEqustoCart(fn, attempt) {
+      if (window.EqustoCart && typeof window.EqustoCart.cartAddButtonAttrs === "function") {
+        fn();
+        return;
+      }
+      if ((attempt || 0) >= 120) {
+        fn();
+        return;
+      }
+      setTimeout(function () {
+        waitForEqustoCart(fn, (attempt || 0) + 1);
+      }, 50);
+    }
+
     function tryRenderFromSeed() {
       var seed = null;
       try {
@@ -4652,12 +4695,12 @@ window.searchFilter = window.searchFilter || function () {};
           window.EqFiyatlarBridge.applyToRaw(seed);
         } catch (_) {}
       }
-      try {
-        renderProduct(seed, [seed]);
-        return true;
-      } catch (_) {
-        return false;
-      }
+      waitForEqustoCart(function () {
+        try {
+          renderProduct(seed, [seed]);
+        } catch (_) {}
+      });
+      return true;
     }
 
     function bootProductPage() {
@@ -4752,17 +4795,21 @@ window.searchFilter = window.searchFilter || function () {};
             window.EqFiyatlarBridge.applyToRaw(x);
           }
           try {
-            renderProduct(x, all);
-            /* Son görüntülenen ürünleri localStorage'a kaydet (max 12) */
-            try {
-              var _slug = productSlugEq(x);
-              var _key = 'eq_recently_viewed';
-              var _rv = JSON.parse(localStorage.getItem(_key) || '[]');
-              _rv = _rv.filter(function(s){ return s !== _slug; });
-              _rv.unshift(_slug);
-              if (_rv.length > 12) _rv.length = 12;
-              localStorage.setItem(_key, JSON.stringify(_rv));
-            } catch(_) {}
+            waitForEqustoCart(function () {
+              renderProduct(x, all);
+              /* Son görüntülenen ürünleri localStorage'a kaydet (max 12) */
+              try {
+                var _slug = productSlugEq(x);
+                var _key = "eq_recently_viewed";
+                var _rv = JSON.parse(localStorage.getItem(_key) || "[]");
+                _rv = _rv.filter(function (s) {
+                  return s !== _slug;
+                });
+                _rv.unshift(_slug);
+                if (_rv.length > 12) _rv.length = 12;
+                localStorage.setItem(_key, JSON.stringify(_rv));
+              } catch (_) {}
+            });
           } catch (renderErr) {
             var msg = renderErr && renderErr.message ? String(renderErr.message) : String(renderErr);
             document.getElementById("eq-product-root").innerHTML =

@@ -409,25 +409,25 @@ nav.topnav {
 
 /* Sticky Bottom Buybox / CTA on PDP */
 @media (max-width: 768px) {
-  body.eq-pdp-page #eq-bottom-tabbar {
+  body.eq-shop:is(.eq-pdp-page, :has(#eq-product-root.eq-epdp)) #eq-bottom-tabbar {
     display: none !important;
   }
 
-  body.eq-pdp-page {
+  body.eq-shop:is(.eq-pdp-page, :has(#eq-product-root.eq-epdp)) {
     padding-bottom: calc(60px + env(safe-area-inset-bottom, 0px)) !important;
   }
 
-  body.eq-pdp-page #equsto-contact-fab,
-  body.eq-pdp-page .equsto-contact-fab {
+  body.eq-shop:is(.eq-pdp-page, :has(#eq-product-root.eq-epdp)) #equsto-contact-fab,
+  body.eq-shop:is(.eq-pdp-page, :has(#eq-product-root.eq-epdp)) .equsto-contact-fab {
     bottom: calc(72px + env(safe-area-inset-bottom, 0px)) !important;
   }
 
-  body.eq-pdp-page .eq-cmf-buybox {
+  body.eq-shop:is(.eq-pdp-page, :has(#eq-product-root.eq-epdp)) .eq-cmf-buybox {
     position: fixed !important;
     bottom: 0 !important;
     left: 0 !important;
     right: 0 !important;
-    z-index: 1000 !important;
+    z-index: 500 !important;
     background: #ffffff !important;
     box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.1) !important;
     border-top: 1px solid #e5e7eb !important;
@@ -441,15 +441,15 @@ nav.topnav {
     border-radius: 0 !important;
   }
 
-  body.eq-pdp-page .eq-cmf-buybox .eq-cmf-topbar,
-  body.eq-pdp-page .eq-cmf-buybox .eq-cmf-ship-banner,
-  body.eq-pdp-page .eq-cmf-buybox .eq-cmf-quote-note,
-  body.eq-pdp-page .eq-cmf-buybox .eq-cmf-actions--secondary,
-  body.eq-pdp-page .eq-cmf-buybox .eq-cmf-pay-panel {
+  body.eq-shop:is(.eq-pdp-page, :has(#eq-product-root.eq-epdp)) .eq-cmf-buybox .eq-cmf-topbar,
+  body.eq-shop:is(.eq-pdp-page, :has(#eq-product-root.eq-epdp)) .eq-cmf-buybox .eq-cmf-ship-banner,
+  body.eq-shop:is(.eq-pdp-page, :has(#eq-product-root.eq-epdp)) .eq-cmf-buybox .eq-cmf-quote-note,
+  body.eq-shop:is(.eq-pdp-page, :has(#eq-product-root.eq-epdp)) .eq-cmf-buybox .eq-cmf-actions--secondary,
+  body.eq-shop:is(.eq-pdp-page, :has(#eq-product-root.eq-epdp)) .eq-cmf-buybox .eq-cmf-pay-panel {
     display: none !important;
   }
 
-  body.eq-pdp-page .eq-cmf-buybox .eq-cmf-price {
+  body.eq-shop:is(.eq-pdp-page, :has(#eq-product-root.eq-epdp)) .eq-cmf-buybox .eq-cmf-price {
     margin: 0 !important;
     display: flex !important;
     flex-direction: column !important;
@@ -458,44 +458,44 @@ nav.topnav {
     flex-shrink: 0 !important;
   }
 
-  body.eq-pdp-page .eq-cmf-buybox .eq-cmf-price__amount {
+  body.eq-shop:is(.eq-pdp-page, :has(#eq-product-root.eq-epdp)) .eq-cmf-buybox .eq-cmf-price__amount {
     font-size: 18px !important;
     font-weight: 700 !important;
   }
 
-  body.eq-pdp-page .eq-cmf-buybox .eq-cmf-price__vat-tag {
+  body.eq-shop:is(.eq-pdp-page, :has(#eq-product-root.eq-epdp)) .eq-cmf-buybox .eq-cmf-price__vat-tag {
     font-size: 10px !important;
   }
 
-  body.eq-pdp-page .eq-cmf-buybox .eq-cmf-price--quote {
+  body.eq-shop:is(.eq-pdp-page, :has(#eq-product-root.eq-epdp)) .eq-cmf-buybox .eq-cmf-price--quote {
     font-size: 13px !important;
     font-weight: 600 !important;
   }
 
-  body.eq-pdp-page .eq-cmf-buybox .eq-cmf-purchase {
+  body.eq-shop:is(.eq-pdp-page, :has(#eq-product-root.eq-epdp)) .eq-cmf-buybox .eq-cmf-purchase {
     margin: 0 !important;
     display: flex !important;
     align-items: center !important;
     flex-shrink: 0 !important;
   }
 
-  body.eq-pdp-page .eq-cmf-buybox .eq-cmf-qty {
+  body.eq-shop:is(.eq-pdp-page, :has(#eq-product-root.eq-epdp)) .eq-cmf-buybox .eq-cmf-qty {
     height: 38px !important;
     border-radius: 4px !important;
     border: 1px solid #d1d5db !important;
   }
 
-  body.eq-pdp-page .eq-cmf-buybox .eq-cmf-qty__btn {
+  body.eq-shop:is(.eq-pdp-page, :has(#eq-product-root.eq-epdp)) .eq-cmf-buybox .eq-cmf-qty__btn {
     width: 32px !important;
     font-size: 16px !important;
   }
 
-  body.eq-pdp-page .eq-cmf-buybox .eq-cmf-qty__val {
+  body.eq-shop:is(.eq-pdp-page, :has(#eq-product-root.eq-epdp)) .eq-cmf-buybox .eq-cmf-qty__val {
     min-width: 32px !important;
     font-size: 13px !important;
   }
 
-  body.eq-pdp-page .eq-cmf-buybox .eq-cmf-actions--primary {
+  body.eq-shop:is(.eq-pdp-page, :has(#eq-product-root.eq-epdp)) .eq-cmf-buybox .eq-cmf-actions--primary {
     margin: 0 !important;
     display: flex !important;
     gap: 8px !important;
@@ -503,7 +503,7 @@ nav.topnav {
     justify-content: flex-end !important;
   }
 
-  body.eq-pdp-page .eq-cmf-buybox .eq-cmf-btn--cart {
+  body.eq-shop:is(.eq-pdp-page, :has(#eq-product-root.eq-epdp)) .eq-cmf-buybox .eq-cmf-btn--cart {
     width: 100% !important;
     min-height: 38px !important;
     height: 38px !important;
@@ -515,7 +515,7 @@ nav.topnav {
     max-width: 160px !important;
   }
 
-  body.eq-pdp-page .eq-cmf-buybox .eq-cmf-btn--pay {
+  body.eq-shop:is(.eq-pdp-page, :has(#eq-product-root.eq-epdp)) .eq-cmf-buybox .eq-cmf-btn--pay {
     display: none !important;
   }
 }
