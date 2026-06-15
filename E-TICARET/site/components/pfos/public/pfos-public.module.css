@@ -110,21 +110,55 @@
 }
 
 .listeDropZoneRail {
-  margin-top: 0.5rem;
-  padding: 1.15rem 0.75rem;
+  margin-top: 0.7rem;
+  padding: 1.6rem 1.05rem;
+  min-height: 8.75rem;
 }
 
 .listeDropZoneRail .listeDropIcon {
-  font-size: 1.55rem;
-  margin-bottom: 0.45rem;
+  font-size: 2.17rem;
+  margin-bottom: 0.63rem;
 }
 
 .listeDropZoneRail .listeDropTitle {
-  font-size: 0.86rem;
+  font-size: 1.2rem;
+  line-height: 1.35;
 }
 
 .listeDropZoneRail .listeDropHint {
-  font-size: 0.76rem;
+  font-size: 1.06rem;
+  line-height: 1.45;
+}
+
+.railSectionUpload {
+  padding: 1.4rem 1.55rem;
+}
+
+.railSectionUpload .railKicker {
+  font-size: 0.91rem;
+  margin-bottom: 0.28rem;
+}
+
+.railSectionUpload .railTitle {
+  font-size: 1.26rem;
+  line-height: 1.35;
+  margin-bottom: 0.9rem;
+}
+
+.railSectionUpload .railPlaceholder {
+  font-size: 1.15rem;
+  line-height: 1.5;
+}
+
+.railSectionUpload .listeFormatNoteRail {
+  font-size: 1.01rem;
+  line-height: 1.5;
+  margin-top: 0.9rem;
+}
+
+.railSectionUpload .railError {
+  font-size: 1.09rem;
+  padding: 0.63rem 0.84rem;
 }
 
 .listeDropZoneBusy {
@@ -589,7 +623,7 @@
 /* ── pfos.html legacy layout ── */
 .layout {
   display: grid;
-  grid-template-columns: minmax(280px, 3fr) minmax(0, 2fr);
+  grid-template-columns: minmax(280px, 3fr) minmax(0, 2.8fr);
   gap: 1.25rem;
   align-items: start;
 }

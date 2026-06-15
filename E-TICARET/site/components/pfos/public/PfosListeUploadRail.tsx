@@ -38,7 +38,10 @@ export default function PfosListeUploadRail({
   if (!memberReady) return null;
 
   return (
-    <section className={styles.railSection} aria-label={t("Liste yükleme")}>
+    <section
+      className={`${styles.railSection} ${styles.railSectionUpload}`}
+      aria-label={t("Liste yükleme")}
+    >
       <span className={styles.railKicker}>{t("Liste yükleme")}</span>
       <span className={styles.railTitle}>
         {t("Ekipman listenizi yükleyin — PFOS katalogdan fiyatlasın.")}
