@@ -379,7 +379,7 @@
         scheduleShopCartPush(payload);
         return;
       }
-      pushShopCartNow(payload);
+      pushShopCartNow(payload, { replace: true });
     }, 250);
   }
 
@@ -400,7 +400,7 @@
     if (!shopCartPushTimer) return; // Prevent overwriting newer server state with stale local state on reload
     var payload = load();
     if (!payload.length) return;
-    pushShopCartNow(payload, { keepalive: true });
+    pushShopCartNow(payload, { replace: true, keepalive: true });
   }
 
   function memberAuthUrl() {
