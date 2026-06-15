@@ -8,7 +8,7 @@ import { buildCatalogTeklifAciklama } from "../teklif/catalog-teklif-aciklama";
 
 type EnrichOpts = Parameters<typeof enrichEslesmisFromKatalogRow>[1];
 
-function teklifAciklamaFromAdminRow(row: AdminUrunRow): string | null {
+export function teklifAciklamaFromAdminRow(row: AdminUrunRow): string | null {
   const text = buildCatalogTeklifAciklama({
     description: row.detay,
     ozti_web_description: row.ozti_web_description,

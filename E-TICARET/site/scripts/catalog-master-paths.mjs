@@ -22,7 +22,11 @@ export const MASTER_JSON_PATH = path.join(
   SITE_ROOT,
   "public/data/equsto-katalog-master.json",
 );
-export const EKIPMANLAR_PATH = path.join(SITE_ROOT, "public/data/ekipmanlar.json");
+export const EKIPMANLAR_PATH = path.join(SITE_ROOT, "var/catalog/ekipmanlar.json");
+export const EKIPMANLAR_LEGACY_PUBLIC_PATH = path.join(
+  SITE_ROOT,
+  "public/data/ekipmanlar.json",
+);
 export const DEPT_DIR = path.join(SITE_ROOT, "public/data/dept");
 
 export { SITE_ROOT, REPO_ROOT };

@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import { PUBLIC_BLOCKED_DATA_PATHS } from "@/lib/catalog-paths";
 import { resolveBrandRedirectPath } from "./lib/brand-shop-redirect";
 
 /** Eski ?b= / ?slug= marka sorguları → /shop/marka/{slug} veya departman ?marka= */
@@ -109,7 +110,22 @@ function wwwToApexRedirect(request: NextRequest): NextResponse | null {
   return NextResponse.redirect(url, 308);
 }
 
+/** Tam katalog JSON — yalnızca sunucu (var/catalog); /data/ekipmanlar*.json engelli */
+function blockPublicEkipmanlarJson(request: NextRequest): NextResponse | null {
+  const path = request.nextUrl.pathname;
+  if (
+    PUBLIC_BLOCKED_DATA_PATHS.includes(path as (typeof PUBLIC_BLOCKED_DATA_PATHS)[number]) ||
+    (/^\/data\/ekipmanlar/i.test(path) && path.endsWith(".json"))
+  ) {
+    return new NextResponse(null, { status: 404 });
+  }
+  return null;
+}
+
 export function proxy(request: NextRequest) {
+  const blocked = blockPublicEkipmanlarJson(request);
+  if (blocked) return blocked;
+
   const wwwRedir = wwwToApexRedirect(request);
   if (wwwRedir) return wwwRedir;
 

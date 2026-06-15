@@ -16,7 +16,7 @@ export async function GET(req: NextRequest) {
       stats.source === "catalog-meta.json"
         ? "public/data/catalog-meta.json"
         : stats.source === "ekipmanlar.json"
-          ? "public/data/ekipmanlar.json (meta eksik — rebuild çalıştırın)"
+          ? "var/catalog/ekipmanlar.json (meta eksik — rebuild çalıştırın)"
           : "dept/*.json → rebuild",
   });
 }

@@ -1,4 +1,5 @@
-import { dataRel, readJsonFile } from "@/lib/legacy-data";
+import { readJsonFile } from "@/lib/legacy-data";
+import { EKIPMANLAR_JSON } from "@/lib/catalog-paths";
 import { getSiteOrigin } from "@/lib/site-origin";
 
 function safeDeptSlug(dept: string): string {
@@ -20,14 +21,13 @@ async function fetchDataJson<T>(rel: string): Promise<T> {
 
 let ekipmanlarCache: Promise<unknown> | null = null;
 
-/** Önce disk (Hetzner/Docker), yoksa origin fetch; tek parse — bellek taşması önleme */
+/** Önce disk (Hetzner/Docker var/catalog), HTTP fetch yok */
 export async function loadEkipmanlarJson(): Promise<unknown> {
   if (!ekipmanlarCache) {
-    ekipmanlarCache = (async () => {
-      const local = await readJsonFile<unknown>(dataRel("ekipmanlar.json"));
+    ekipmanlarCache = readJsonFile<unknown>(EKIPMANLAR_JSON).then((local) => {
       if (local != null) return local;
-      return fetchDataJson("ekipmanlar.json");
-    })();
+      throw new Error("ekipmanlar.json sunucuda bulunamadı (var/catalog)");
+    });
   }
   return ekipmanlarCache;
 }

@@ -460,18 +460,12 @@
     }
 
     var loader = null;
-    if (window.EqustoEcomData && typeof window.EqustoEcomData.loadEkipmanlar === "function") {
+    if (window.EqustoShopCatalog && typeof window.EqustoShopCatalog.loadMergedCatalog === "function") {
+      loader = window.EqustoShopCatalog.loadMergedCatalog().then(buildMap);
+    } else if (window.EqustoEcomData && typeof window.EqustoEcomData.loadEkipmanlar === "function") {
       loader = window.EqustoEcomData.loadEkipmanlar().then(buildMap);
     } else {
-      loader = fetch("/data/ekipmanlar.json?v=" + CATALOG_V, {
-        cache: "default",
-        headers: { Accept: "application/json" },
-      })
-        .then(function (r) {
-          if (!r.ok) throw new Error("ekipmanlar HTTP " + r.status);
-          return r.json();
-        })
-        .then(buildMap);
+      loader = Promise.resolve(Object.create(null));
     }
 
     var timeout = new Promise(function (resolve) {

@@ -834,14 +834,16 @@ function pfosEnsureCatalogPool() {
     window.__PFOS_CATALOG_READY__ = true;
   }
   function loadAll() {
+    if (window.EqustoShopCatalog && typeof EqustoShopCatalog.loadMergedCatalog === 'function') {
+      return EqustoShopCatalog.loadMergedCatalog();
+    }
     if (window.EqustoShopCatalog && typeof EqustoShopCatalog.load === 'function') {
       return EqustoShopCatalog.load();
     }
     if (window.EqustoEcomData && typeof EqustoEcomData.loadEkipmanlar === 'function') {
       return EqustoEcomData.loadEkipmanlar();
     }
-    return fetch('/data/ekipmanlar.json', { cache: 'default', headers: { Accept: 'application/json' } })
-      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); });
+    return Promise.reject(new Error('katalog yükleyici yok'));
   }
   return Promise.all([loadAll(), pfosLoadTipShopLinks()])
     .then(function (results) { applyList(results[0]); })

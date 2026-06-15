@@ -1,6 +1,6 @@
-
 import fs from "node:fs/promises";
 import { existsSync } from "node:fs";
+import { EKIPMANLAR_JSON, privateCatalogPath } from "@/lib/catalog-paths";
 
 function dataRel(...parts: string[]): string {
   return parts
@@ -11,15 +11,23 @@ function dataRel(...parts: string[]): string {
 
 function siteRoot(): string {
   const cwd = process.cwd().replace(/\\/g, "/");
-  if (existsSync(`${cwd}/public/data`)) return cwd;
+  if (existsSync(`${cwd}/public/data`) || existsSync(`${cwd}/var/catalog`)) {
+    return cwd;
+  }
   const nested = `${cwd}/E-TICARET/site`;
-  if (existsSync(`${nested}/public/data`)) return nested;
+  if (existsSync(`${nested}/public/data`) || existsSync(`${nested}/var/catalog`)) {
+    return nested;
+  }
   return cwd;
 }
 
 /** Yerel yazma — yalnızca admin API (path.join dynamic trace yok) */
 export function dataPath(...parts: string[]): string {
-  return `${siteRoot()}/public/data/${dataRel(...parts)}`;
+  const rel = dataRel(...parts);
+  if (rel === EKIPMANLAR_JSON) {
+    return privateCatalogPath(EKIPMANLAR_JSON);
+  }
+  return `${siteRoot()}/public/data/${rel}`;
 }
 
 export async function writeJsonFile(file: string, data: unknown) {

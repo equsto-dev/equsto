@@ -449,7 +449,7 @@ export type PublishCheckItem = {
 
 export async function fetchPublishChecks(): Promise<PublishCheckItem[]> {
   const endpoints: Omit<PublishCheckItem, "ok" | "detail">[] = [
-    { id: "ekipmanlar", label: "Vitrin kataloğu", url: "/data/ekipmanlar.json" },
+    { id: "ekipmanlar", label: "Vitrin kataloğu", url: "/api/catalog/stats?verify=1" },
     { id: "fiyatlar", label: "Fiyat listesi", url: "/data/fiyatlar.json" },
     { id: "eticaret", label: "E-ticaret içeriği", url: "/api/eticaret-icerik" },
     { id: "search", label: "Meilisearch API", url: "/api/search?check=1" },
@@ -468,6 +468,12 @@ export async function fetchPublishChecks(): Promise<PublishCheckItem[]> {
 
         if (item.id === "ekipmanlar" && res.ok) {
           try {
+            const body = await res.json();
+            const stats = body?.data as { ekipmanlar?: number; liveDrift?: number } | undefined;
+            if (stats && typeof stats.ekipmanlar === "number") {
+              detail = `${stats.ekipmanlar} satır`;
+              ok = !stats.liveDrift;
+            }
             const metaRes = await fetch("/data/catalog-meta.json", {
               cache: "no-store",
             });
@@ -478,10 +484,6 @@ export async function fetchPublishChecks(): Promise<PublishCheckItem[]> {
                 ? ` · ${new Date(meta.rebuiltAt).toLocaleString("tr-TR")}`
                 : "";
               detail = `${n} ürün (catalog-meta)${rebuilt}`;
-            } else {
-              const rows = await res.json();
-              const count = Array.isArray(rows) ? rows.length : 0;
-              detail = `${count} ürün`;
             }
           } catch {
             detail = "katalog okunamadı";
@@ -587,6 +589,7 @@ export type EkipmanRow = {
   dept?: string;
   category?: string;
   images?: string[];
+  price?: string;
   specs?: string;
   aciklama?: string;
   keywords?: string[];
@@ -595,9 +598,145 @@ export type EkipmanRow = {
   urun_kodu?: string;
   sku?: string;
   model?: string;
+  equsto_kod?: string;
   kaynak?: string;
   kaynak_fiyat_listesi?: string;
+  fiyat_tl?: number;
+  fiyat_bekleniyor?: boolean;
+  liste_fiyati_eur?: number;
+  satis_fiyati_eur?: number;
+  satis_eur_indirimli?: number;
+  iskonto_oran?: number;
+  bayi_iskonto?: number;
 };
+
+export type EkipmanFiyatKaynak =
+  | "map"
+  | "katalog"
+  | "eur"
+  | "bekleniyor"
+  | "eksik";
+
+export type EkipmanFiyatResolved = {
+  fiyatTl: number | null;
+  kdvDahil: boolean;
+  listeEur: number | null;
+  satisEur: number | null;
+  kaynak: EkipmanFiyatKaynak;
+  kaynakListe: string;
+  mapKey: string | null;
+};
+
+function ekipmanPriceKdvDahil(row: EkipmanRow): boolean {
+  const p = String(row.price || "");
+  if (/KDV\s*[Dd]ahil/i.test(p) && !/\+\s*KDV/i.test(p)) return true;
+  if (/KDV\s*dahil/i.test(p) && !/\+/.test(p.split("KDV")[0] || "")) return true;
+  return false;
+}
+
+function ekipmanSatisEur(row: EkipmanRow): number | null {
+  const satis =
+    Number(row.satis_fiyati_eur) > 0
+      ? Number(row.satis_fiyati_eur)
+      : Number(row.satis_eur_indirimli) > 0
+        ? Number(row.satis_eur_indirimli)
+        : 0;
+  if (satis > 0) return satis;
+  const liste = Number(row.liste_fiyati_eur);
+  const isk = Number(row.bayi_iskonto);
+  if (liste > 0 && isk > 0 && isk < 1) return Math.round(liste * (1 - isk) * 100) / 100;
+  const oran = Number(row.iskonto_oran);
+  if (liste > 0 && oran > 0 && oran < 100) {
+    return Math.round(liste * (1 - oran / 100) * 100) / 100;
+  }
+  return null;
+}
+
+/** Katalog + fiyatlar.json + EUR — mağaza fiyat çözümlemesi (admin panel). */
+export function resolveEkipmanFiyat(
+  row: EkipmanRow,
+  map: Record<string, number>,
+  kur?: number | null,
+): EkipmanFiyatResolved {
+  const kaynakListe = String(row.kaynak_fiyat_listesi || row.kaynak || "").trim();
+  const listeEur = Number(row.liste_fiyati_eur) > 0 ? Number(row.liste_fiyati_eur) : null;
+  const satisEur = ekipmanSatisEur(row);
+
+  if (row.fiyat_bekleniyor) {
+    return {
+      fiyatTl: null,
+      kdvDahil: false,
+      listeEur,
+      satisEur,
+      kaynak: "bekleniyor",
+      kaynakListe,
+      mapKey: null,
+    };
+  }
+
+  for (const k of resolveEkipmanPriceKeys(row)) {
+    const v = map[k];
+    if (Number.isFinite(v) && v > 0) {
+      return {
+        fiyatTl: v,
+        kdvDahil: false,
+        listeEur,
+        satisEur,
+        kaynak: "map",
+        kaynakListe: kaynakListe || "fiyatlar.json",
+        mapKey: k,
+      };
+    }
+  }
+
+  if (Number(row.fiyat_tl) > 0) {
+    return {
+      fiyatTl: Number(row.fiyat_tl),
+      kdvDahil: ekipmanPriceKdvDahil(row),
+      listeEur,
+      satisEur,
+      kaynak: "katalog",
+      kaynakListe,
+      mapKey: null,
+    };
+  }
+
+  const brand = String(row.brand || "").toLowerCase();
+  if (/öztiryaki|oztiryaki|ozti/.test(brand) && satisEur != null && kur != null && kur > 0) {
+    const kdv = 1.2;
+    return {
+      fiyatTl: Math.round(satisEur * kur * kdv),
+      kdvDahil: true,
+      listeEur,
+      satisEur,
+      kaynak: "eur",
+      kaynakListe,
+      mapKey: null,
+    };
+  }
+
+  if (/öztiryaki|oztiryaki|ozti/.test(brand) && satisEur != null) {
+    return {
+      fiyatTl: null,
+      kdvDahil: true,
+      listeEur,
+      satisEur,
+      kaynak: "eur",
+      kaynakListe,
+      mapKey: null,
+    };
+  }
+
+  return {
+    fiyatTl: null,
+    kdvDahil: false,
+    listeEur,
+    satisEur,
+    kaynak: "eksik",
+    kaynakListe,
+    mapKey: null,
+  };
+}
 
 export type ProjeAkisData = {
   questions?: unknown[];
@@ -633,28 +772,10 @@ export function resolveEkipmanPriceKeys(row: EkipmanRow): string[] {
 export function ekipmanHasFiyat(
   row: EkipmanRow,
   map: Record<string, number>,
+  kur?: number | null,
 ): boolean {
-  for (const k of resolveEkipmanPriceKeys(row)) {
-    const v = map[k];
-    if (Number.isFinite(v) && v > 0) return true;
-  }
-  const brand = String(row.brand || "").toLowerCase();
-  if (/öztiryaki|oztiryaki|ozti/.test(brand)) {
-    const raw = row as EkipmanRow & {
-      satis_fiyati_eur?: number;
-      liste_fiyati_eur?: number;
-      bayi_iskonto?: number;
-    };
-    if (
-      Number(raw.satis_fiyati_eur) > 0 ||
-      (Number(raw.liste_fiyati_eur) > 0 &&
-        Number(raw.bayi_iskonto) > 0 &&
-        Number(raw.bayi_iskonto) < 1)
-    ) {
-      return true;
-    }
-  }
-  return false;
+  const px = resolveEkipmanFiyat(row, map, kur);
+  return px.kaynak !== "eksik" && px.kaynak !== "bekleniyor";
 }
 
 /** Öztiryakiler web yolu veya sku → ax-images önizleme URL. */
@@ -684,12 +805,9 @@ export function ekipmanPreviewSrc(row: EkipmanRow): string {
 }
 
 export async function fetchEkipmanlarCatalog(): Promise<EkipmanRow[]> {
-  const res = await fetch(`/data/ekipmanlar.json?v=${CATALOG_DATA_V}`, {
-    cache: "no-store",
-  });
-  if (!res.ok) throw new Error("ekipmanlar.json yüklenemedi");
-  const rows = await res.json();
-  return Array.isArray(rows) ? rows : [];
+  const { rows, error } = await fetchUrunler();
+  if (error) throw new Error(error);
+  return rows as EkipmanRow[];
 }
 
 export type PfosKategoriBantMeta = {

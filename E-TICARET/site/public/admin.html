@@ -2727,10 +2727,10 @@ async function loadCatalogProductsFromJson(){
       }
     } else if (window.EqustoEcomData && typeof window.EqustoEcomData.loadEkipmanlar === 'function') {
       raw = await window.EqustoEcomData.loadEkipmanlar();
+    } else if (window.EqustoShopCatalog && typeof window.EqustoShopCatalog.loadMergedCatalog === 'function') {
+      raw = await window.EqustoShopCatalog.loadMergedCatalog();
     } else {
-      let r = await fetch('./data/ekipmanlar.json', { cache: 'no-store', headers: { Accept: 'application/json' } });
-      if (!r.ok) throw new Error('HTTP ' + r.status);
-      raw = await r.json();
+      throw new Error('Katalog yükleyici yok — EqustoEcomData veya EqustoShopCatalog gerekli');
     }
     return raw;
   }

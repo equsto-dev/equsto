@@ -195,7 +195,8 @@ function rowToDoc(row, deptFallback) {
 function loadCatalogRows() {
   const docs = [];
   const seen = new Set();
-  const ekipPath = path.join(ROOT, "public/data/ekipmanlar.json");
+  const ekipPath = path.join(ROOT, "var/catalog/ekipmanlar.json");
+  const ekipLegacy = path.join(ROOT, "public/data/ekipmanlar.json");
 
   function pushRow(row, deptFallback) {
     if (isBarDesignShopProduct(row)) return;
@@ -209,7 +210,16 @@ function loadCatalogRows() {
     const rows = JSON.parse(fs.readFileSync(ekipPath, "utf8"));
     if (Array.isArray(rows) && rows.length) {
       for (const row of rows) pushRow(row, "");
-      console.log("[search:index] kaynak: public/data/ekipmanlar.json");
+      console.log("[search:index] kaynak: var/catalog/ekipmanlar.json");
+      return docs;
+    }
+  }
+
+  if (fs.existsSync(ekipLegacy)) {
+    const rows = JSON.parse(fs.readFileSync(ekipLegacy, "utf8"));
+    if (Array.isArray(rows) && rows.length) {
+      for (const row of rows) pushRow(row, "");
+      console.log("[search:index] kaynak: public/data/ekipmanlar.json (legacy)");
       return docs;
     }
   }

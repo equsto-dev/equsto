@@ -170,6 +170,22 @@ describe("kw-resolve", () => {
     assert.equal(r.gazGucuKw, 8.35);
   });
 
+  it("resolveTeklifKw merges partial urun kW with teklifAciklama", () => {
+    const r = resolveTeklifKw({
+      isim: "KONVEKSİYONLU FIRIN, GAZLI",
+      urun: {
+        sku: "260813",
+        ad: "Crosswise Konveksiyon Fırın Gazlı",
+        elektrikGucuKw: 0.35,
+        gazGucuKw: null,
+        teklifAciklama:
+          "Elektrik gücü max: 0.35 kW\nGaz Gücü: 8.35 kW",
+      },
+    });
+    assert.equal(r.elektrikGucuKw, 0.35);
+    assert.equal(r.gazGucuKw, 8.35);
+  });
+
   it("estimates Çağlayan teşhir reyonu kW from length when catalog has none", () => {
     const r = resolveKwFromSources({
       sku: "EQ-AÇELYA-EQ26",

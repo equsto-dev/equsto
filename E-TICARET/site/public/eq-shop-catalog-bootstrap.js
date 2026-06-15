@@ -1,12 +1,12 @@
 /**
  * Ürün / marka / sepet — katalog yükleyici (EqustoShopCatalog).
  * PDP: /shop/{dept}/{slug} → yalnızca data/dept/{dept}.json (hızlı).
- * Tam liste: EqustoEcomData.loadEkipmanlar() → data/ekipmanlar.json
+ * Tam liste: EqustoShopCatalog.loadMergedCatalog() → data/dept/*.json
  */
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260613-tezgah-buz-3k-v1";
+  var CATALOG_V = "20260615-catalog-private-v1";
   var __fullMem = null;
   var __fullInflight = null;
   var __deptMem = Object.create(null);
@@ -98,42 +98,31 @@
     return __deptInflight[dept];
   }
 
+  /** Tüm departman JSON birleşimi (public ekipmanlar.json yok) */
+  function loadMergedCatalog() {
+    var jobs = [];
+    DEPT_IDS.forEach(function (d) {
+      jobs.push(
+        fetchDeptJson(d).catch(function () {
+          return [];
+        })
+      );
+    });
+    return Promise.all(jobs).then(mergeCatalogRows);
+  }
+
   function loadFullCatalog() {
     if (__fullMem) return Promise.resolve(__fullMem);
     if (__fullInflight) return __fullInflight;
 
-    if (window.EqustoEcomData && typeof window.EqustoEcomData.loadEkipmanlar === "function") {
-      __fullInflight = window.EqustoEcomData.loadEkipmanlar()
-        .then(function (data) {
-          __fullMem = data;
-          return data;
-        })
-        .finally(function () {
-          __fullInflight = null;
-        });
-      return __fullInflight;
-    }
-
-    var url = "/data/ekipmanlar.json?v=" + CATALOG_V;
-    __fullInflight = fetch(url, {
-      cache: "default",
-      headers: { Accept: "application/json" },
-    })
-      .then(function (r) {
-        if (!r.ok) throw new Error("ekipmanlar HTTP " + r.status);
-        return r.json();
-      })
+    __fullInflight = loadMergedCatalog()
       .then(function (data) {
-        if (!Array.isArray(data)) {
-          throw new Error("ekipmanlar boş");
-        }
         __fullMem = data;
         return data;
       })
       .finally(function () {
         __fullInflight = null;
       });
-
     return __fullInflight;
   }
 
@@ -147,23 +136,6 @@
 
   function load() {
     return loadFullCatalog();
-  }
-
-  /** Marka PLP — ekipmanlar + tüm departman JSON birleşimi */
-  function loadMergedCatalog() {
-    var jobs = [
-      loadFullCatalog().catch(function () {
-        return [];
-      }),
-    ];
-    DEPT_IDS.forEach(function (d) {
-      jobs.push(
-        fetchDeptJson(d).catch(function () {
-          return [];
-        })
-      );
-    });
-    return Promise.all(jobs).then(mergeCatalogRows);
   }
 
   window.EqustoShopCatalog = {

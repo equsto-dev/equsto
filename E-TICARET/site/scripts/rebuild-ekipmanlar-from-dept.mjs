@@ -1,6 +1,5 @@
 /**
- * public/data/dept/*.json → tek public/data/ekipmanlar.json (mağaza + /api/urunler).
- * PFOS/BESOS HTML’e dokunmaz; pfos hâlâ /data/ekipmanlar.json okur (tüm dept birleşimi).
+ * public/data/dept/*.json → var/catalog/ekipmanlar.json (sunucu-yalnız; public’te servis edilmez).
  *
  *   node scripts/rebuild-ekipmanlar-from-dept.mjs
  */
@@ -11,9 +10,9 @@ import { isBarDesignShopProduct } from "./lib/bar-design-shop-exclude.mjs";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DEPT_DIR = path.join(ROOT, "public/data/dept");
-const OUT = path.join(ROOT, "public/data/ekipmanlar.json");
+const OUT = path.join(ROOT, "var/catalog/ekipmanlar.json");
 const META_OUT = path.join(ROOT, "public/data/catalog-meta.json");
-const ARCHIVE = path.join(ROOT, "public/data/ekipmanlar-full-archive.json");
+const ARCHIVE = path.join(ROOT, "var/catalog/ekipmanlar-full-archive.json");
 const INOKSAN_REPORT = path.join(ROOT, "scripts/data/inoksan-shop-desc-report.json");
 const PRODUCTS_EN = path.join(ROOT, "public/data/i18n/products-en-by-id.json");
 
@@ -48,6 +47,7 @@ if (fs.existsSync(OUT) && !fs.existsSync(ARCHIVE)) {
 }
 
 const tmp = `${OUT}.tmp-${process.pid}`;
+fs.mkdirSync(path.dirname(OUT), { recursive: true });
 fs.writeFileSync(tmp, JSON.stringify(merged), "utf8");
 try {
   if (fs.existsSync(OUT)) fs.unlinkSync(OUT);

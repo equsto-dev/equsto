@@ -939,27 +939,23 @@
   }
 
   function loadSiteCatalog() {
-    if (window.EqustoShopCatalog && typeof window.EqustoShopCatalog.load === 'function') {
+    if (window.EqustoShopCatalog && typeof window.EqustoShopCatalog.loadMergedCatalog === "function") {
+      return window.EqustoShopCatalog.loadMergedCatalog();
+    }
+    if (window.EqustoShopCatalog && typeof window.EqustoShopCatalog.load === "function") {
       return window.EqustoShopCatalog.load();
     }
-    if (window.EqustoEcomData && typeof window.EqustoEcomData.loadEkipmanlar === 'function') {
+    if (window.EqustoEcomData && typeof window.EqustoEcomData.loadEkipmanlar === "function") {
       return window.EqustoEcomData.loadEkipmanlar().then(function (j) {
         if (Array.isArray(j)) return j;
         if (j && Array.isArray(j.items)) return j.items;
         return [];
       });
     }
-    return fetch('./data/ekipmanlar.json', { cache: 'no-store', headers: { Accept: 'application/json' } })
-      .then(function (r) {
-        if (!r.ok) throw new Error('HTTP ' + r.status);
-        return r.json();
-      })
-      .then(function (j) {
-        return Array.isArray(j) ? j : j && Array.isArray(j.items) ? j.items : [];
-      });
+    return Promise.reject(new Error("katalog yükleyici yok (dept birleşimi)"));
   }
 
-  /** Sitedeki tüm katalog (ekipmanlar.json) → sepet; üst sınır BULK_MAX_LINES */
+  /** Sitedeki tüm katalog (dept birleşimi) → sepet; üst sınır BULK_MAX_LINES */
   function addAllSiteCatalog(opts) {
     opts = opts || {};
     var cap = opts.maxLines != null ? opts.maxLines : BULK_MAX_LINES;

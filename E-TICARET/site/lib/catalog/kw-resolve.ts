@@ -500,25 +500,18 @@ export function resolveTeklifKw(opts: {
         : null,
   };
 
-  if (fromUrun.elektrikGucuKw != null || fromUrun.gazGucuKw != null) {
-    return reconcileFuelKwFromContext(fromUrun, {
-      isim: opts.isim,
-      urunTipi: opts.urunTipi,
-      urunAd: opts.urun?.ad,
-      urunAciklama: opts.urun?.teklifAciklama,
-    });
-  }
-
   const fromAciklama = mergeResolvedKw(
     parseKwFromText(decodeHtmlEntities(opts.urun?.teklifAciklama ?? "")),
     parseKwFromText(decodeHtmlEntities(opts.urun?.ad ?? "")),
     parseKwFromText(decodeHtmlEntities(opts.isim ?? "")),
   );
-  if (fromAciklama.elektrikGucuKw != null || fromAciklama.gazGucuKw != null) {
-    return reconcileFuelKwFromContext(fromAciklama, {
+  const merged = mergeResolvedKw(fromUrun, fromAciklama);
+  if (merged.elektrikGucuKw != null || merged.gazGucuKw != null) {
+    return reconcileFuelKwFromContext(merged, {
       isim: opts.isim,
       urunTipi: opts.urunTipi,
       urunAd: opts.urun?.ad,
+      urunAciklama: opts.urun?.teklifAciklama,
     });
   }
 
