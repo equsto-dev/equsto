@@ -1,4 +1,4 @@
-import { createHash, randomBytes, scryptSync, timingSafeEqual } from "node:crypto";
+import crypto, { createHash, randomBytes, scryptSync, timingSafeEqual } from "node:crypto";
 import { NextRequest } from "next/server";
 import { adminErr } from "@/lib/admin-response";
 import { db } from "@/lib/db";
@@ -88,31 +88,132 @@ export function googleClientId(): string {
   );
 }
 
+type GoogleJwk = {
+  kid: string;
+  kty: string;
+  alg: string;
+  use: string;
+  n: string;
+  e: string;
+};
+
+type GoogleCertsCache = {
+  keys: GoogleJwk[];
+  expiresAt: number;
+};
+
+const globalWithCerts = global as typeof globalThis & {
+  _googleCertsCache?: GoogleCertsCache;
+};
+
+async function getGooglePublicKeys(): Promise<GoogleJwk[]> {
+  const now = Date.now();
+  if (globalWithCerts._googleCertsCache && globalWithCerts._googleCertsCache.expiresAt > now) {
+    return globalWithCerts._googleCertsCache.keys;
+  }
+
+  try {
+    const res = await fetch("https://www.googleapis.com/oauth2/v3/certs", {
+      cache: "no-store",
+      signal: AbortSignal.timeout(6000),
+    });
+    if (!res.ok) throw new Error("Google certs fetch failed");
+    const data = (await res.json()) as { keys: GoogleJwk[] };
+    
+    // Cache for 1 hour
+    globalWithCerts._googleCertsCache = {
+      keys: data.keys,
+      expiresAt: now + 3600 * 1000,
+    };
+    return data.keys;
+  } catch (err) {
+    if (globalWithCerts._googleCertsCache) return globalWithCerts._googleCertsCache.keys;
+    throw err;
+  }
+}
+
+function base64urlDecode(str: string): string {
+  return Buffer.from(str, "base64url").toString("utf8");
+}
+
 export async function verifyGoogleIdToken(idToken: string): Promise<{
   email: string;
   name: string;
   picture: string;
   sub: string;
 }> {
-  const res = await fetch(
-    `https://oauth2.googleapis.com/tokeninfo?id_token=${encodeURIComponent(idToken)}`,
-    { cache: "no-store", signal: AbortSignal.timeout(8000) },
-  );
-  if (!res.ok) throw new Error("Google token geçersiz");
-  const data = (await res.json()) as Record<string, string>;
+  const parts = idToken.split(".");
+  if (parts.length !== 3) {
+    throw new Error("Geçersiz JWT formatı");
+  }
+
+  const [headerB64, payloadB64, signatureB64] = parts;
+  
+  // 1. Parse payload and verify claims
+  const payload = JSON.parse(base64urlDecode(payloadB64)) as {
+    iss?: string;
+    aud?: string;
+    exp?: number;
+    email?: string;
+    email_verified?: boolean | string;
+    name?: string;
+    picture?: string;
+    sub?: string;
+  };
+
   const clientId = googleClientId();
-  if (clientId && data.aud !== clientId) {
+  if (clientId && payload.aud !== clientId) {
     throw new Error("Google istemci kimliği uyuşmuyor");
   }
-  const email = normalizeEmail(data.email || "");
-  if (!email || data.email_verified === "false") {
+
+  const iss = payload.iss || "";
+  if (iss !== "accounts.google.com" && iss !== "https://accounts.google.com") {
+    throw new Error("Geçersiz Google JWT sağlayıcısı");
+  }
+
+  const exp = payload.exp || 0;
+  const nowSec = Math.floor(Date.now() / 1000);
+  if (exp < nowSec - 300) { // 5 minutes clock skew tolerance
+    throw new Error("Google token süresi dolmuş");
+  }
+
+  const email = normalizeEmail(payload.email || "");
+  if (!email || payload.email_verified === false || payload.email_verified === "false") {
     throw new Error("Google e-posta doğrulanamadı");
   }
+
+  // 2. Verify signature locally
+  const header = JSON.parse(base64urlDecode(headerB64)) as { kid?: string; alg?: string };
+  const kid = header.kid;
+  if (!kid) {
+    throw new Error("Google JWT kid bulunamadı");
+  }
+
+  const keys = await getGooglePublicKeys();
+  const jwk = keys.find((k) => k.kid === kid);
+  if (!jwk) {
+    throw new Error("Eşleşen Google sertifikası bulunamadı");
+  }
+
+  const publicKey = crypto.createPublicKey({
+    format: "jwk",
+    key: jwk,
+  });
+
+  const verify = crypto.createVerify("RSA-SHA256");
+  verify.update(`${headerB64}.${payloadB64}`);
+  
+  const signature = Buffer.from(signatureB64, "base64url");
+  const isValid = verify.verify(publicKey, signature);
+  if (!isValid) {
+    throw new Error("Google JWT imzası doğrulanamadı");
+  }
+
   return {
     email,
-    name: data.name || email.split("@")[0] || "",
-    picture: data.picture || "",
-    sub: data.sub || "",
+    name: payload.name || email.split("@")[0] || "",
+    picture: payload.picture || "",
+    sub: payload.sub || "",
   };
 }
 
@@ -152,23 +253,28 @@ export function requireValidTrMemberPhone(raw: string): string {
 
 export async function createSessionForMember(
   memberId: string,
-  preloaded?: any | null,
+  preloaded?: {
+    id: string;
+    email: string;
+    name: string;
+    telefon?: string | null;
+    teslimatAdres?: unknown;
+    provider: string;
+    picture: string | null;
+  } | null,
 ): Promise<MemberSessionPayload> {
   const member =
     preloaded ?? (await db.shopMember.findUnique({ where: { id: memberId } }));
   if (!member) throw new Error("Üye bulunamadı");
   const token = newSessionToken();
   const expiresAt = sessionExpiry();
-  const [_, items] = await Promise.all([
-    db.shopMemberSession.create({
-      data: { token, memberId, expiresAt },
-    }),
-    loadUnifiedShopCart({
-      memberEmail: member.email,
-      memberId: member.id,
-      preloadedMember: member,
-    }),
-  ]);
+  await db.shopMemberSession.create({
+    data: { token, memberId, expiresAt },
+  });
+  const items = await loadUnifiedShopCart({
+    memberEmail: member.email,
+    memberId: member.id,
+  });
   return {
     token,
     expiresAt: expiresAt.getTime(),
@@ -237,8 +343,8 @@ export async function loginWithEmail(
   if (!member || !member.passwordHash) throw new Error("E-posta veya şifre hatalı");
   if (!verifyPassword(password, member.passwordHash)) throw new Error("E-posta veya şifre hatalı");
   await mergeGuestShopCartIntoMember(syncToken, norm);
-  await syncMemberCartFromShopEmail(member.id, norm, member);
-  return createSessionForMember(member.id, member);
+  await syncMemberCartFromShopEmail(member.id, norm);
+  return createSessionForMember(member.id);
 }
 
 export async function registerWithEmail(
@@ -264,8 +370,8 @@ export async function registerWithEmail(
     },
   });
   await mergeGuestShopCartIntoMember(syncToken, norm);
-  await syncMemberCartFromShopEmail(member.id, norm, member);
-  return createSessionForMember(member.id, member);
+  await syncMemberCartFromShopEmail(member.id, norm);
+  return createSessionForMember(member.id);
 }
 
 export async function loginWithGoogle(
@@ -296,7 +402,7 @@ export async function loginWithGoogle(
     }
   }
   await mergeGuestShopCartIntoMember(syncToken, g.email);
-  await syncMemberCartFromShopEmail(member.id, g.email, member);
+  await syncMemberCartFromShopEmail(member.id, g.email);
   return createSessionForMember(member.id, member);
 }
 
@@ -370,26 +476,16 @@ export async function mergeGuestShopCartIntoMember(
   });
 }
 
-async function syncMemberCartFromShopEmail(
-  memberId: string,
-  email: string,
-  preloadedMember?: any
-): Promise<void> {
+async function syncMemberCartFromShopEmail(memberId: string, email: string): Promise<void> {
   const normEmail = normalizeEmail(email);
-  const member = preloadedMember ?? (await db.shopMember.findUnique({ where: { id: memberId } }));
-  if (!member) return;
-  let items = normalizeShopCartItems(member.cartItems ?? []);
+  const member = await db.shopMember.findUnique({ where: { id: memberId } });
+  let items = normalizeShopCartItems(member?.cartItems ?? []);
   const emailKey = resolveShopCartKey(null, normEmail);
   if (emailKey) {
     const row = await db.shopCart.findUnique({ where: { cartKey: emailKey } });
     items = mergeShopCartItems(items, row?.items ?? []);
   }
-  await persistUnifiedShopCart({
-    memberId,
-    memberEmail: normEmail,
-    items,
-    preloadedMember: member
-  });
+  await persistUnifiedShopCart({ memberId, memberEmail: normEmail, items });
 }
 
 /** Oturumlu üye → shopMember; misafir → guest; yalnız e-posta → email ShopCart (üçlü birleştirme yok). */
@@ -397,12 +493,8 @@ export async function loadUnifiedShopCart(opts: {
   syncToken?: string | null;
   memberEmail?: string | null;
   memberId?: string | null;
-  preloadedMember?: any;
 }): Promise<ShopCartLine[]> {
-  const { syncToken, memberEmail, memberId, preloadedMember } = opts;
-  if (preloadedMember) {
-    return normalizeShopCartItems(preloadedMember.cartItems ?? []);
-  }
+  const { syncToken, memberEmail, memberId } = opts;
   if (memberId) {
     const member = await db.shopMember.findUnique({ where: { id: memberId } });
     return normalizeShopCartItems(member?.cartItems ?? []);
@@ -428,33 +520,21 @@ export async function persistUnifiedShopCart(opts: {
   memberId?: string | null;
   memberEmail?: string | null;
   items: ShopCartLine[];
-  preloadedMember?: any;
 }): Promise<ShopCartLine[]> {
   const items = normalizeShopCartItems(opts.items);
   const emailKey = resolveShopCartKey(null, opts.memberEmail);
-
-  let changed = true;
-  if (opts.preloadedMember) {
-    const existing = normalizeShopCartItems(opts.preloadedMember.cartItems ?? []);
-    if (JSON.stringify(existing) === JSON.stringify(items)) {
-      changed = false;
-    }
+  if (emailKey) {
+    await db.shopCart.upsert({
+      where: { cartKey: emailKey },
+      create: { cartKey: emailKey, items: shopCartItemsToJson(items) },
+      update: { items: shopCartItemsToJson(items) },
+    });
   }
-
-  if (changed) {
-    if (emailKey) {
-      await db.shopCart.upsert({
-        where: { cartKey: emailKey },
-        create: { cartKey: emailKey, items: shopCartItemsToJson(items) },
-        update: { items: shopCartItemsToJson(items) },
-      });
-    }
-    if (opts.memberId) {
-      await db.shopMember.update({
-        where: { id: opts.memberId },
-        data: { cartItems: shopCartItemsToJson(items) },
-      });
-    }
+  if (opts.memberId) {
+    await db.shopMember.update({
+      where: { id: opts.memberId },
+      data: { cartItems: shopCartItemsToJson(items) },
+    });
   }
   return items;
 }
