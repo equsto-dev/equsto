@@ -690,10 +690,13 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
 
     if (q.id === "q_karar") {
       const val = String(answers[id] ?? "");
+      const opts = ((q.options as string[]) ?? []).filter(
+        (o) => o !== "Bilmiyorum",
+      );
       return (
         <>
           <div className={styles.options}>
-            {((q.options as string[]) ?? []).map((opt, i) => (
+            {opts.map((opt) => (
               <button
                 key={opt}
                 type="button"
