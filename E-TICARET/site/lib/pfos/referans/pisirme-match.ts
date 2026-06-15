@@ -17,6 +17,7 @@ import {
 } from "../core/ozti-pisirme-spec";
 import { resolveTipKodu } from "../core/tip-kodu";
 import { isSenoxMikrodalgaReferansIsim } from "../core/senox-marka";
+import { isKombiKonveksiyonReferans } from "./firin-match";
 import { referansKatalogCeliski } from "./referans-nitelikleri";
 import { extractOlcuFromNotlar } from "./yer-izgara-match";
 
