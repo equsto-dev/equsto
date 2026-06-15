@@ -804,3 +804,17 @@ body.eq-cart-page .eq-cart-layout__aside.is-empty {
   flex-shrink: 0;
 }
 
+#eq-cart-pair-qr-wrap {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 767px) {
+  .eq-cart-sync__row--send {
+    display: none !important;
+  }
+}
+

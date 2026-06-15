@@ -15,6 +15,7 @@ function refreshCartUi() {
           render?: () => void;
           bindPageActions?: () => void;
           prefillCheckout?: () => void;
+          syncFromServer?: (opts?: { force?: boolean }) => Promise<boolean>;
         };
       }
     ).EqustoCart;
@@ -23,6 +24,12 @@ function refreshCartUi() {
       cart?.bindPageActions?.();
       cart?.prefillCheckout?.();
       cart?.render?.();
+      // Auto-pull from server on page mount to sync cart (like Amazon)
+      cart?.syncFromServer?.({ force: true }).then(() => {
+        cart?.render?.();
+        cart?.prefillCheckout?.();
+        cart?.syncBadge?.();
+      });
     }
   } catch (_) {}
 }
