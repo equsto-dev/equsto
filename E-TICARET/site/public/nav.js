@@ -703,14 +703,17 @@
       return w.__EQUSTO_REF_MARKALAR_SIRASI.slice();
     }
     return [
-      "Electrolux Professional",
-      "Öztiryakiler",
-      "CAMBRO",
-      "Rational",
-      "Hobart",
-      "Winterhalter",
-      "UNOX",
       "İnoksan",
+      "Electrolux Professional",
+      "Şenox",
+      "Rational",
+      "Öztiryakiler",
+      "Robot Coupe",
+      "Atalay",
+      "Faema",
+      "Sanremo",
+      "Gtech",
+      "La Cimbali",
     ];
   }
 
