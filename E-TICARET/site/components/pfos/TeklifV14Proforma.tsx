@@ -604,18 +604,16 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
                   type={teklifFeedback === "up" ? "primary" : "default"}
                   onClick={() => submitTeklifFeedback("up")}
                   disabled={teklifFeedback !== null}
-                >
-                  Beğendim
-                </Button>
+                  aria-label="Beğendim"
+                />
                 <Button
                   icon={<DislikeOutlined />}
                   danger={teklifFeedback === "down"}
                   type={teklifFeedback === "down" ? "primary" : "default"}
                   onClick={() => submitTeklifFeedback("down")}
                   disabled={teklifFeedback !== null}
-                >
-                  Beğenmedim
-                </Button>
+                  aria-label="Beğenmedim"
+                />
                 {teklifFeedback ? (
                   <Typography.Text type="secondary" style={{ fontSize: 12 }}>
                     Teşekkürler — geri bildiriminiz kaydedildi.
