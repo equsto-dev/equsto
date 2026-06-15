@@ -193,79 +193,59 @@ export default function MemberAddressSection({
       )}
 
       {!editing && book.addresses.length > 0 && (
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "16px", marginTop: "12px" }}>
+        <div className={styles.addressCards}>
           {book.addresses.map((addr) => {
             const isDefault = addr.id === book.defaultAddressId;
             return (
               <div
                 key={addr.id}
-                style={{
-                  border: isDefault ? "2px solid #001e50" : "1px solid #d5dbe6",
-                  borderRadius: "10px",
-                  padding: "16px",
-                  background: "#fff",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-between",
-                  boxShadow: isDefault ? "0 4px 12px rgba(0, 30, 80, 0.05)" : "none",
-                }}
+                className={`${styles.addressCard} ${isDefault ? styles.addressCardDefault : ""}`}
               >
                 <div>
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "8px" }}>
-                    <h3 style={{ margin: 0, fontSize: "0.95rem", fontWeight: "600", color: "#001e50" }}>
+                  <div className={styles.infoCardHead}>
+                    <h3 className={styles.infoCardTitle}>
                       {addr.title || "Adres"}
                     </h3>
-                    {isDefault && (
-                      <span
-                        style={{
-                          background: "#eef3fb",
-                          color: "#001e50",
-                          fontSize: "0.7rem",
-                          fontWeight: "600",
-                          padding: "2px 8px",
-                          borderRadius: "10px",
-                        }}
-                      >
-                        Varsayılan
-                      </span>
-                    )}
+                    {isDefault ? (
+                      <span className={styles.infoCardBadge}>Varsayılan</span>
+                    ) : null}
                   </div>
-                  <p style={{ margin: 0, fontSize: "0.85rem", color: "#1a1d2b", fontWeight: "500", marginBottom: "4px" }}>
+                  <p className={styles.infoCardLine}>
                     {addr.il} / {addr.ilce}
                   </p>
-                  <p style={{ margin: 0, fontSize: "0.82rem", color: "#5c6378", lineHeight: "1.4" }}>
-                    {addr.acikAdres}
-                  </p>
+                  <p className={styles.infoCardLineMuted}>{addr.acikAdres}</p>
                 </div>
 
-                <div style={{ display: "flex", gap: "10px", marginTop: "14px", borderTop: "1px solid #eef3fb", paddingTop: "10px" }}>
+                <div className={styles.infoCardFoot}>
                   <button
                     type="button"
-                    style={{ background: "none", border: "none", color: "#2563a8", fontSize: "0.78rem", fontWeight: "600", cursor: "pointer", padding: 0 }}
+                    className={styles.infoCardAction}
                     onClick={() => startEdit(addr)}
                   >
                     Düzenle
                   </button>
-                  {book.addresses.length > 1 && (
+                  {book.addresses.length > 1 ? (
                     <button
                       type="button"
-                      style={{ background: "none", border: "none", color: "#c0392b", fontSize: "0.78rem", fontWeight: "600", cursor: "pointer", padding: 0 }}
+                      className={styles.infoCardAction}
+                      style={{ color: "#c0392b" }}
                       onClick={() => void deleteAddress(addr.id || "")}
                       disabled={saving}
                     >
                       Sil
                     </button>
-                  )}
-                  {!isDefault && (
+                  ) : null}
+                  {!isDefault ? (
                     <button
                       type="button"
-                      style={{ background: "none", border: "none", color: "#5c6378", fontSize: "0.78rem", fontWeight: "600", cursor: "pointer", padding: 0, marginLeft: "auto" }}
+                      className={styles.infoCardAction}
+                      style={{ marginLeft: "auto", color: "#5c6378" }}
                       onClick={() => void setDefaultAddress(addr.id || "")}
                       disabled={saving}
                     >
                       Varsayılan Yap
                     </button>
-                  )}
+                  ) : null}
                 </div>
               </div>
             );
