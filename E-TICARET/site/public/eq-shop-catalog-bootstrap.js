@@ -6,7 +6,7 @@
 ;(function () {
   "use strict";
 
-  var CATALOG_V = "20260615-catalog-private-v1";
+  var CATALOG_V = "20260615-brand-order-v2";
   var __fullMem = null;
   var __fullInflight = null;
   var __deptMem = Object.create(null);

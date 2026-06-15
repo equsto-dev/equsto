@@ -416,18 +416,7 @@
     return parts.join(" · ");
   }
 
-  /** Çekmece «Markalarımız» — eq-filter-column.js defaultRefMarkalarSirasi ile aynı sıra */
-  var DRAWER_MARKALAR_REF = [
-    "Electrolux Professional",
-    "Öztiryakiler",
-    "CAMBRO",
-    "Rational",
-    "Hobart",
-    "Winterhalter",
-    "UNOX",
-    "İnoksan",
-  ];
-
+  /** Çekmece «Markalarımız» — eq-brand-order.js / defaultRefMarkalarSirasi ile aynı sıra */
   // Tüm sayfalarda (PFOS dahil) sol menü alt dalları sağa flyout olarak açılır.
   var SIMPLE_SIDEBAR = false;
 
