@@ -41,6 +41,12 @@
     if (typeof window.equstoRefreshMemberHeader === 'function') {
       window.equstoRefreshMemberHeader();
     }
+    if (data.items && Array.isArray(data.items)) {
+      try {
+        localStorage.setItem('equsto-ecom-cart-v1', JSON.stringify(data.items));
+        window.dispatchEvent(new CustomEvent('equsto-cart-changed'));
+      } catch (e) {}
+    }
     try {
       document.dispatchEvent(
         new CustomEvent('equsto-member-session', {
