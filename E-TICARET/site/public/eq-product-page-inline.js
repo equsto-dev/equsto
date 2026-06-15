@@ -3856,9 +3856,114 @@ window.searchFilter = window.searchFilter || function () {};
 
     function hydrateEpdpBuyboxCartBtn(cartU) {
       if (!cartU) return;
-      var primary = document.querySelector(".eq-cmf-buybox .eq-cmf-actions--primary");
-      if (!primary || primary.querySelector(".eq-cmf-btn--cart, .eq-cart-add")) return;
-      primary.insertAdjacentHTML("afterbegin", epdpCartAddButtonHtml(cartU));
+      var primaries = document.querySelectorAll(".eq-cmf-buybox .eq-cmf-actions--primary");
+      for (var i = 0; i < primaries.length; i++) {
+        var primary = primaries[i];
+        if (!primary || primary.querySelector(".eq-cmf-btn--cart, .eq-cart-add")) continue;
+        primary.insertAdjacentHTML("afterbegin", epdpCartAddButtonHtml(cartU));
+      }
+    }
+
+    function clearEpdpMobileBuybar() {
+      var bar = document.getElementById("eq-pdp-mobile-buybar");
+      if (bar) bar.remove();
+      try {
+        document.body.classList.remove("eq-pdp-mobile-buybar-on");
+      } catch (_) {}
+    }
+
+    function isEpdpMobileBuybarViewport() {
+      try {
+        return window.matchMedia("(max-width: 768px)").matches;
+      } catch (_) {
+        return false;
+      }
+    }
+
+    function bindEpdpQtyControls(box) {
+      if (!box) return;
+      var valEl = box.querySelector(".eq-cmf-qty__val");
+      var minus = box.querySelector(".eq-cmf-qty__minus");
+      var plus = box.querySelector(".eq-cmf-qty__plus");
+      if (!valEl || !minus || !plus) return;
+      function qty() {
+        return Math.max(1, Math.min(99, parseInt(valEl.textContent, 10) || 1));
+      }
+      function syncQtyElsewhere(q) {
+        var vals = document.querySelectorAll(".eq-cmf-buybox .eq-cmf-qty__val");
+        for (var j = 0; j < vals.length; j++) {
+          if (vals[j] !== valEl) vals[j].textContent = String(q);
+        }
+      }
+      function setQty(q) {
+        q = Math.max(1, Math.min(99, q));
+        valEl.textContent = String(q);
+        minus.disabled = q <= 1;
+        plus.disabled = q >= 99;
+        syncQtyElsewhere(q);
+      }
+      minus.addEventListener("click", function (e) {
+        e.preventDefault();
+        setQty(qty() - 1);
+      });
+      plus.addEventListener("click", function (e) {
+        e.preventDefault();
+        setQty(qty() + 1);
+      });
+      setQty(qty());
+    }
+
+    function mountEpdpMobileBuybar(box, cartU) {
+      clearEpdpMobileBuybar();
+      if (!box || !cartU || !isEpdpMobileBuybarViewport()) return;
+      var priceEl = box.querySelector(".eq-cmf-price");
+      var priceHtml = priceEl ? priceEl.outerHTML : "";
+      var bar = document.createElement("div");
+      bar.id = "eq-pdp-mobile-buybar";
+      bar.className = "eq-pdp-mobile-buybar eq-cmf-buybox eq-epdp-buybox";
+      bar.setAttribute(
+        "aria-label",
+        box.getAttribute("aria-label") || __pdpT("pdp.buybox_aria", "Satın al")
+      );
+      bar.innerHTML =
+        '<div class="eq-pdp-mobile-buybar__inner">' +
+        priceHtml +
+        '<div class="eq-pdp-mobile-buybar__actions">' +
+        '<div class="eq-cmf-purchase">' +
+        '<div class="eq-cmf-qty" role="group" aria-label="' +
+        esc(__pdpT("pdp.qty_aria", "Adet")) +
+        '">' +
+        '<button type="button" class="eq-cmf-qty__btn eq-cmf-qty__minus" aria-label="' +
+        esc(__pdpT("pdp.qty_minus", "Azalt")) +
+        '">−</button>' +
+        '<span class="eq-cmf-qty__val">1</span>' +
+        '<button type="button" class="eq-cmf-qty__btn eq-cmf-qty__plus" aria-label="' +
+        esc(__pdpT("pdp.qty_plus", "Artır")) +
+        '">+</button>' +
+        "</div></div>" +
+        '<div class="eq-cmf-actions eq-cmf-actions--primary">' +
+        epdpCartAddButtonHtml(cartU) +
+        "</div></div></div>";
+      document.body.appendChild(bar);
+      document.body.classList.add("eq-pdp-mobile-buybar-on");
+      var inlineVal = box.querySelector(".eq-cmf-qty__val");
+      var barVal = bar.querySelector(".eq-cmf-qty__val");
+      if (inlineVal && barVal) barVal.textContent = inlineVal.textContent;
+      bindEpdpQtyControls(bar);
+      if (!window.__eqEpdpMobileBuybarResize) {
+        window.__eqEpdpMobileBuybarResize = true;
+        window.addEventListener("resize", function () {
+          var heroBox =
+            document.querySelector(".eq-epdp-hero .eq-cmf-buybox") ||
+            document.querySelector(".eq-cmf-buybox");
+          var lastU = window.__eqEpdpLastCartU;
+          if (heroBox && lastU && isEpdpMobileBuybarViewport()) {
+            mountEpdpMobileBuybar(heroBox, lastU);
+          } else {
+            clearEpdpMobileBuybar();
+          }
+        });
+      }
     }
 
     /** KİLİT: public/pdp-buybox-cafemarkt-KILIT.txt — Cafemarkt tarzı buybox */
@@ -3964,32 +4069,14 @@ window.searchFilter = window.searchFilter || function () {};
     }
 
     function bindEpdpBuybox(cartU) {
-      var box = document.querySelector(".eq-cmf-buybox");
+      var box =
+        document.querySelector(".eq-epdp-hero .eq-cmf-buybox") ||
+        document.querySelector(".eq-cmf-buybox");
       if (!box) return;
+      window.__eqEpdpLastCartU = cartU;
       hydrateEpdpBuyboxCartBtn(cartU);
-      var valEl = box.querySelector(".eq-cmf-qty__val");
-      var minus = box.querySelector(".eq-cmf-qty__minus");
-      var plus = box.querySelector(".eq-cmf-qty__plus");
-      if (valEl && minus && plus) {
-        function qty() {
-          return Math.max(1, Math.min(99, parseInt(valEl.textContent, 10) || 1));
-        }
-        function setQty(q) {
-          q = Math.max(1, Math.min(99, q));
-          valEl.textContent = String(q);
-          minus.disabled = q <= 1;
-          plus.disabled = q >= 99;
-        }
-        minus.addEventListener("click", function (e) {
-          e.preventDefault();
-          setQty(qty() - 1);
-        });
-        plus.addEventListener("click", function (e) {
-          e.preventDefault();
-          setQty(qty() + 1);
-        });
-        setQty(1);
-      }
+      bindEpdpQtyControls(box);
+      mountEpdpMobileBuybar(box, cartU);
       var payBtn = box.querySelector(".eq-cmf-btn--pay");
       var payPanel = box.querySelector(".eq-cmf-pay-panel");
       if (payBtn && payPanel) {
@@ -4326,6 +4413,7 @@ window.searchFilter = window.searchFilter || function () {};
     }
 
     function renderEpdpProduct(x, all) {
+      clearEpdpMobileBuybar();
       var visBrandTitle = pdpVisibleBrand(x.brand);
       var prodTitle = ((visBrandTitle ? visBrandTitle + " " : "") + (x.name || "Ürün")).slice(0, 80);
       document.title = prodTitle + " — Equsto";
