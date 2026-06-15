@@ -149,7 +149,10 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
   const prevOpenPanelIdRef = useRef("s1");
   const enterTimerRef = useRef<number | null>(null);
   const leftColRef = useRef<HTMLDivElement>(null);
-  const [uploadAlignPx, setUploadAlignPx] = useState<number | null>(null);
+  const [uploadAlign, setUploadAlign] = useState<{
+    marginTop: number;
+    height: number;
+  } | null>(null);
 
   useEffect(() => {
     const syncMember = () => setMemberLoggedIn(memberLoggedInNow());
@@ -214,27 +217,35 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
 
   useLayoutEffect(() => {
     if (wizardListeMode || !memberLoggedIn) {
-      setUploadAlignPx(null);
+      setUploadAlign(null);
       return;
     }
 
     const leftCol = leftColRef.current;
+    const progress = document.getElementById("pfos-progress");
     const meslek = document.getElementById("pfos-sec-s1");
-    if (!leftCol || !meslek) {
-      setUploadAlignPx(null);
+    if (!leftCol || !progress || !meslek) {
+      setUploadAlign(null);
       return;
     }
 
     const measure = () => {
       const colTop = leftCol.getBoundingClientRect().top;
+      const progressTop = progress.getBoundingClientRect().top;
       const meslekBottom = meslek.getBoundingClientRect().bottom;
-      const h = Math.round(meslekBottom - colTop);
-      setUploadAlignPx(h > 120 ? h : null);
+      const marginTop = Math.round(progressTop - colTop);
+      const height = Math.round(meslekBottom - progressTop);
+      setUploadAlign(
+        marginTop >= 0 && height > 120
+          ? { marginTop, height }
+          : null,
+      );
     };
 
     measure();
     const ro = new ResizeObserver(measure);
     ro.observe(leftCol);
+    ro.observe(progress);
     ro.observe(meslek);
     window.addEventListener("resize", measure);
     return () => {
@@ -878,13 +889,16 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
         <div
           className={alignUpload ? styles.uploadRailAlign : undefined}
           style={
-            alignUpload && uploadAlignPx != null
-              ? { height: uploadAlignPx }
+            alignUpload && uploadAlign != null
+              ? {
+                  marginTop: uploadAlign.marginTop,
+                  height: uploadAlign.height,
+                }
               : undefined
           }
         >
           <PfosListeUploadRail
-            fillHeight={alignUpload && uploadAlignPx != null}
+            fillHeight={alignUpload && uploadAlign != null}
             inputRef={listeUpload.inputRef}
           drag={listeUpload.drag}
           setDrag={listeUpload.setDrag}
@@ -1123,7 +1137,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
               {t("Beş dakikada yapılır, hemen teslim edilir.")}
             </p>
 
-            <div className={styles.pfProgress}>
+            <div id="pfos-progress" className={styles.pfProgress}>
               <div className={styles.pfProgressTrack}>
                 <div
                   className={styles.pfProgressFill}
