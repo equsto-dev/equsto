@@ -1,7 +1,7 @@
 /** SEO geo / rehber slug listesi — next.config ile senkron tutulmalı */
 export const GEO_TR_SLUGS = [
   "steakhouse-kurulumu",
-  "balik-restorani-mutfak-projesi-ve-gerekli-ekipmanlar",
+  "balik-restorani-mutfak-projesi-kurulumu",
   "bulut-mutfak-kurulumu",
   "cafe-kurulumu",
   "catering-mutfagi",
