@@ -273,8 +273,7 @@
         "required": "true",
         "options": [
           "Teklifi al (PDF çıktı)",
-          "Projeyi detaylandır (altyapı ve yardımcı ekipman)",
-          "Bilmiyorum"
+          "Projeyi detaylandır (altyapı ve yardımcı ekipman)"
         ],
         "gosterIf": "q_m2",
         "mapsTo": "cikti.mod",

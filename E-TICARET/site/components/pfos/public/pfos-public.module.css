@@ -1208,6 +1208,122 @@
   color: #1a1d2b;
 }
 
+.detayPanel {
+  margin-top: 1rem;
+  padding: 1rem 1.05rem;
+  border: 1px solid #c7d2e0;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.detayPanelLead {
+  margin: 0 0 0.75rem;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: #4b5563;
+}
+
+.detayPanelLead b {
+  color: #001e50;
+}
+
+.detayPanelSub {
+  margin: 1rem 0 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #001e50;
+}
+
+.detayChipGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.detayChip {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  text-align: left;
+  font-size: 0.86rem;
+  color: #1a1d2b;
+  background: #fff;
+  border: 1px solid #d1d9e6;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.detayChip:hover {
+  border-color: #001e50;
+}
+
+.detayChipSelected {
+  border-color: #001e50;
+  background: #eef4ff;
+}
+
+.detayChipMark {
+  flex: 0 0 1.1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #001e50;
+}
+
+.detayCheckGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.detayCheck {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.55rem 0.7rem;
+  font-size: 0.84rem;
+  color: #374151;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.detayCheckSelected {
+  border-color: #001e50;
+  background: #eef4ff;
+}
+
+.detayCheck input {
+  margin-top: 0.15rem;
+  accent-color: #001e50;
+}
+
+.detayPanelBtn {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.detayOzetBaslik {
+  margin: 0 0 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #001e50;
+}
+
+.detayOzetList {
+  margin: 0 0 0.75rem;
+  padding-left: 1.1rem;
+  font-size: 0.84rem;
+  color: #4b5563;
+}
+
+.detayOzetList li {
+  margin-bottom: 0.2rem;
+}
+
 @media (max-width: 900px) {
   .layout {
     grid-template-columns: 1fr;

@@ -20,6 +20,8 @@ export type SoruCevapHaritasi = {
   q_lokasyon?: string;
   q_acik_adres?: string;
   q_karar?: string;
+  q_yardimci_ekipman?: string[];
+  q_elektrik_gaz?: string[];
 };
 
 export type MotorGirdi = {

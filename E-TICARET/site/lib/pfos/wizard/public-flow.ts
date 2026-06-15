@@ -111,6 +111,16 @@ export function defaultPublicQuestions(): WizardQuestion[] {
 }
 
 /** API’den gelen eksik/bozuk soru setine karşı — zorunlu PFOS adımları korunur */
+const BILMIYORUM_KALDIR_IDS = new Set(["q_karar", "q_ust_segment"]);
+
+function stripBilmiyorum(q: WizardQuestion): WizardQuestion {
+  if (!BILMIYORUM_KALDIR_IDS.has(q.id) || !Array.isArray(q.options)) return q;
+  return {
+    ...q,
+    options: q.options.filter((o) => o !== "Bilmiyorum"),
+  };
+}
+
 export function mergePublicWizardQuestions(
   fromApi: WizardQuestion[],
 ): WizardQuestion[] {
@@ -120,7 +130,7 @@ export function mergePublicWizardQuestions(
   for (const q of fromApi) {
     if (!q?.id) continue;
     const base = byId.get(q.id);
-    byId.set(q.id, base ? { ...base, ...q } : q);
+    byId.set(q.id, stripBilmiyorum(base ? { ...base, ...q } : q));
   }
-  return sortWizardQuestions([...byId.values()]);
+  return sortWizardQuestions([...byId.values()].map(stripBilmiyorum));
 }
