@@ -49,61 +49,38 @@ export default function ShopCartMain() {
             Ödeme bu sayfada alınmaz; Equsto Satış Mühendisliği teklif ve sipariş sürecini yürütür.
           </p>
 
-          <div className="eq-cart-sync">
-            <h2 className="eq-cart-sync__title" data-i18n="cart.sync_title">Cihazlar Arası Sepet Eşleştirme</h2>
-            <p className="eq-cart-sync__lead" data-i18n="cart.sync_lead">
-              Telefonunuzdaki sepeti bilgisayarınızla eşitlemek (veya tam tersi) için aşağıdaki eşleştirme alanlarını kullanabilirsiniz.
+          <div className="eq-cart-sync" style={{ padding: "20px", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
+            <h2 className="eq-cart-sync__title" data-i18n="cart.sync_title" style={{ margin: "0 0 8px 0", fontSize: "1.1rem" }}>Cihazlar Arası Sepet Eşleştirme</h2>
+            <p className="eq-cart-sync__lead" data-i18n="cart.sync_lead" style={{ margin: "0 0 16px 0", fontSize: "0.85rem", color: "#5c6378", maxWidth: "420px" }}>
+              Sepetinizi diğer cihazınızla eşitlemek için bu QR kodu telefonunuzun kamerasıyla taratabilir veya eşleştirme bağlantısını WhatsApp ile gönderebilirsiniz.
             </p>
-            <div className="eq-cart-sync__row">
-              <span className="eq-cart-sync__label" data-i18n="cart.sync_gen_label">A. Bu Cihazın Sepetini Aktar (Diğer Cihaz için Kod Üret)</span>
-              <button type="button" id="eq-cart-pair-gen-btn" className="eq-cart-sync__btn" data-i18n="cart.sync_gen_btn">
-                Eşleştirme Kodu Üret
-              </button>
-              <div id="eq-cart-pair-code-display" className="eq-cart-sync__code" hidden>
-                KOD: <strong id="eq-cart-pair-code-val">------</strong>
-                <div id="eq-cart-pair-qr-wrap" style={{ marginTop: "14px", display: "flex", flexDirection: "column", alignItems: "center", gap: "10px" }}>
-                  <img id="eq-cart-pair-qr-img" src="" alt="QR" style={{ background: "#fff", padding: "6px", border: "1px solid #d5dbe6", borderRadius: "8px", width: "140px", height: "140px" }} />
-                  <p style={{ margin: 0, fontSize: "0.78rem", color: "#5c6378" }}>Kameranızla taratarak anında eşleştirebilirsiniz.</p>
-                  <a
-                    id="eq-cart-pair-wa-btn"
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{
-                      background: "#25d366",
-                      color: "#fff",
-                      border: "none",
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: "6px",
-                      textDecoration: "none",
-                      padding: "8px 14px",
-                      fontSize: "0.82rem",
-                      fontWeight: "600",
-                      borderRadius: "8px",
-                      marginTop: "4px"
-                    }}
-                  >
-                    WhatsApp ile Gönder
-                  </a>
-                </div>
-              </div>
+            
+            <div id="eq-cart-pair-qr-wrap" style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "10px" }}>
+              <img id="eq-cart-pair-qr-img" src="" alt="QR Yükleniyor..." style={{ background: "#fff", padding: "6px", border: "1px solid #d5dbe6", borderRadius: "8px", width: "130px", height: "130px" }} />
+              <a
+                id="eq-cart-pair-wa-btn"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  background: "#25d366",
+                  color: "#fff",
+                  border: "none",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "6px",
+                  textDecoration: "none",
+                  padding: "8px 14px",
+                  fontSize: "0.82rem",
+                  fontWeight: "600",
+                  borderRadius: "8px",
+                  marginTop: "6px"
+                }}
+              >
+                WhatsApp ile Bağlantı Gönder
+              </a>
             </div>
-            <div className="eq-cart-sync__row eq-cart-sync__row--join">
-              <span className="eq-cart-sync__label" data-i18n="cart.sync_join_label">B. Diğer Cihazın Sepetini Buraya Al</span>
-              <input
-                type="text"
-                id="eq-cart-pair-input"
-                className="eq-cart-sync__input"
-                maxLength={6}
-                placeholder="6 HANELİ KOD"
-                autoComplete="off"
-              />
-              <button type="button" id="eq-cart-pair-join-btn" className="eq-cart-sync__btn" data-i18n="cart.sync_join_btn">
-                Eşleştir
-              </button>
-            </div>
-            <div id="eq-cart-pair-status" className="eq-cart-sync__msg" hidden />
+            <div id="eq-cart-pair-status" className="eq-cart-sync__msg" style={{ marginTop: "12px", fontSize: "0.85rem" }} hidden />
           </div>
         </div>
       </main>

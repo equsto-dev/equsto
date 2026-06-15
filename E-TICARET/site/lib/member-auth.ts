@@ -152,28 +152,23 @@ export function requireValidTrMemberPhone(raw: string): string {
 
 export async function createSessionForMember(
   memberId: string,
-  preloaded?: {
-    id: string;
-    email: string;
-    name: string;
-    telefon?: string | null;
-    teslimatAdres?: unknown;
-    provider: string;
-    picture: string | null;
-  } | null,
+  preloaded?: any | null,
 ): Promise<MemberSessionPayload> {
   const member =
     preloaded ?? (await db.shopMember.findUnique({ where: { id: memberId } }));
   if (!member) throw new Error("Üye bulunamadı");
   const token = newSessionToken();
   const expiresAt = sessionExpiry();
-  await db.shopMemberSession.create({
-    data: { token, memberId, expiresAt },
-  });
-  const items = await loadUnifiedShopCart({
-    memberEmail: member.email,
-    memberId: member.id,
-  });
+  const [_, items] = await Promise.all([
+    db.shopMemberSession.create({
+      data: { token, memberId, expiresAt },
+    }),
+    loadUnifiedShopCart({
+      memberEmail: member.email,
+      memberId: member.id,
+      preloadedMember: member,
+    }),
+  ]);
   return {
     token,
     expiresAt: expiresAt.getTime(),
@@ -242,8 +237,8 @@ export async function loginWithEmail(
   if (!member || !member.passwordHash) throw new Error("E-posta veya şifre hatalı");
   if (!verifyPassword(password, member.passwordHash)) throw new Error("E-posta veya şifre hatalı");
   await mergeGuestShopCartIntoMember(syncToken, norm);
-  await syncMemberCartFromShopEmail(member.id, norm);
-  return createSessionForMember(member.id);
+  await syncMemberCartFromShopEmail(member.id, norm, member);
+  return createSessionForMember(member.id, member);
 }
 
 export async function registerWithEmail(
@@ -269,8 +264,8 @@ export async function registerWithEmail(
     },
   });
   await mergeGuestShopCartIntoMember(syncToken, norm);
-  await syncMemberCartFromShopEmail(member.id, norm);
-  return createSessionForMember(member.id);
+  await syncMemberCartFromShopEmail(member.id, norm, member);
+  return createSessionForMember(member.id, member);
 }
 
 export async function loginWithGoogle(
@@ -301,7 +296,7 @@ export async function loginWithGoogle(
     }
   }
   await mergeGuestShopCartIntoMember(syncToken, g.email);
-  await syncMemberCartFromShopEmail(member.id, g.email);
+  await syncMemberCartFromShopEmail(member.id, g.email, member);
   return createSessionForMember(member.id, member);
 }
 
@@ -375,16 +370,26 @@ export async function mergeGuestShopCartIntoMember(
   });
 }
 
-async function syncMemberCartFromShopEmail(memberId: string, email: string): Promise<void> {
+async function syncMemberCartFromShopEmail(
+  memberId: string,
+  email: string,
+  preloadedMember?: any
+): Promise<void> {
   const normEmail = normalizeEmail(email);
-  const member = await db.shopMember.findUnique({ where: { id: memberId } });
-  let items = normalizeShopCartItems(member?.cartItems ?? []);
+  const member = preloadedMember ?? (await db.shopMember.findUnique({ where: { id: memberId } }));
+  if (!member) return;
+  let items = normalizeShopCartItems(member.cartItems ?? []);
   const emailKey = resolveShopCartKey(null, normEmail);
   if (emailKey) {
     const row = await db.shopCart.findUnique({ where: { cartKey: emailKey } });
     items = mergeShopCartItems(items, row?.items ?? []);
   }
-  await persistUnifiedShopCart({ memberId, memberEmail: normEmail, items });
+  await persistUnifiedShopCart({
+    memberId,
+    memberEmail: normEmail,
+    items,
+    preloadedMember: member
+  });
 }
 
 /** Oturumlu üye → shopMember; misafir → guest; yalnız e-posta → email ShopCart (üçlü birleştirme yok). */
@@ -392,8 +397,12 @@ export async function loadUnifiedShopCart(opts: {
   syncToken?: string | null;
   memberEmail?: string | null;
   memberId?: string | null;
+  preloadedMember?: any;
 }): Promise<ShopCartLine[]> {
-  const { syncToken, memberEmail, memberId } = opts;
+  const { syncToken, memberEmail, memberId, preloadedMember } = opts;
+  if (preloadedMember) {
+    return normalizeShopCartItems(preloadedMember.cartItems ?? []);
+  }
   if (memberId) {
     const member = await db.shopMember.findUnique({ where: { id: memberId } });
     return normalizeShopCartItems(member?.cartItems ?? []);
@@ -419,21 +428,33 @@ export async function persistUnifiedShopCart(opts: {
   memberId?: string | null;
   memberEmail?: string | null;
   items: ShopCartLine[];
+  preloadedMember?: any;
 }): Promise<ShopCartLine[]> {
   const items = normalizeShopCartItems(opts.items);
   const emailKey = resolveShopCartKey(null, opts.memberEmail);
-  if (emailKey) {
-    await db.shopCart.upsert({
-      where: { cartKey: emailKey },
-      create: { cartKey: emailKey, items: shopCartItemsToJson(items) },
-      update: { items: shopCartItemsToJson(items) },
-    });
+
+  let changed = true;
+  if (opts.preloadedMember) {
+    const existing = normalizeShopCartItems(opts.preloadedMember.cartItems ?? []);
+    if (JSON.stringify(existing) === JSON.stringify(items)) {
+      changed = false;
+    }
   }
-  if (opts.memberId) {
-    await db.shopMember.update({
-      where: { id: opts.memberId },
-      data: { cartItems: shopCartItemsToJson(items) },
-    });
+
+  if (changed) {
+    if (emailKey) {
+      await db.shopCart.upsert({
+        where: { cartKey: emailKey },
+        create: { cartKey: emailKey, items: shopCartItemsToJson(items) },
+        update: { items: shopCartItemsToJson(items) },
+      });
+    }
+    if (opts.memberId) {
+      await db.shopMember.update({
+        where: { id: opts.memberId },
+        data: { cartItems: shopCartItemsToJson(items) },
+      });
+    }
   }
   return items;
 }
