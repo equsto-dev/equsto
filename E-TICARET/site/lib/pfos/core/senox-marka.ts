@@ -117,6 +117,18 @@ export function isSenoxDilimlemeReferansIsim(
   return /dilimleme\s*mak|gida\s*dilim|gıda\s*dilim|slicing\s*mach|slicer/.test(n);
 }
 
+/** Mikrodalga fırın — Şenox MC30 (varsayılan) / MC25 */
+export function isSenoxMikrodalgaReferansIsim(
+  isim: string | null | undefined,
+  urunTipi?: string | null,
+): boolean {
+  if (resolveTipKodu(String(urunTipi ?? "").trim()) === "mikrodalga_firin") {
+    return true;
+  }
+  const n = norm(isim);
+  return /mikrodalga|microwave|mc-?30|mc-?25/.test(n);
+}
+
 /** Katı meyve sıkacağı / presi — Şenox KM01 / KMP; portakal (citrus) hariç */
 export function isSenoxMeyveSikacagiReferansIsim(
   isim: string | null | undefined,
@@ -148,6 +160,7 @@ export function isSenoxPfosKalem(opts: {
   if (isSenoxSinekReferansIsim(opts.isim)) return true;
   if (isSenoxYerYikamaHortumuReferansIsim(opts.isim, opts.notlar)) return true;
   if (isSenoxOnYikamaDusuReferansIsim(opts.isim, opts.notlar)) return true;
+  if (isSenoxMikrodalgaReferansIsim(opts.isim, opts.urunTipi)) return true;
   if (isSenoxDilimlemeReferansIsim(opts.isim) || opts.urunTipi === "dilimleme_makinesi") return true;
   if (
     isSenoxMeyveSikacagiReferansIsim(opts.isim, opts.urunTipi, opts.notlar)
