@@ -1,7 +1,4 @@
-import {
-  formatGeoTableEur,
-  type GeoLandingTableData,
-} from "@/lib/geo/geo-landing-table";
+import type { GeoLandingTableData } from "@/lib/geo/geo-landing-table";
 
 type Props = {
   table: GeoLandingTableData;
@@ -10,88 +7,46 @@ type Props = {
 
 const UI = {
   tr: {
-    h2: "Referans proforma ekipman tablosu",
-    meta: (no: string, count: number) =>
-      `Proforma ${no} · ${count} kalem · KDV hariç EUR özet`,
+    h2: "Referans proforma ekipman listesi",
+    meta: (no: string) => `Proforma ${no}`,
     download: "Excel dosyasını indir",
-    thName: "Ekipman",
-    thDim: "Ölçü",
-    thQty: "Adet",
-    thList: "Liste tutar",
-    thQuote: "Proforma tutar",
-    thZone: "Bölüm",
-    total: "Toplam",
   },
   en: {
-    h2: "Reference proforma equipment table",
-    meta: (no: string, count: number) =>
-      `Proforma ${no} · ${count} line items · EUR summary excl. VAT`,
+    h2: "Reference proforma equipment list",
+    meta: (no: string) => `Proforma ${no}`,
     download: "Download Excel file",
-    thName: "Equipment",
-    thDim: "Dimensions",
-    thQty: "Qty",
-    thList: "List total",
-    thQuote: "Proforma total",
-    thZone: "Zone",
-    total: "Total",
   },
 } as const;
+
+function zoneHeading(zone: string): string {
+  return zone.toLocaleLowerCase("tr-TR");
+}
 
 export default function GeoLandingEquipmentTable({ table, lang }: Props) {
   const u = UI[lang];
   const xlsxHref = `/data/geo/${table.kaynakDosya}`;
+  const zones = table.zones.filter((z) => z.zone !== "Ek kalemler");
 
   return (
-    <section className="eq-geo-table-wrap" aria-label={u.h2}>
+    <section className="eq-geo-proforma" aria-label={u.h2}>
       <h2>{u.h2}</h2>
-      <p className="eq-geo-table-meta">
-        {u.meta(table.proformaNo, table.ozet.kalemSayisi)}{" "}
-        <a href={xlsxHref} download className="eq-geo-table-dl">
+      <p className="eq-geo-proforma-meta">
+        {u.meta(table.proformaNo)}{" "}
+        <a href={xlsxHref} download className="eq-geo-proforma-dl">
           {u.download}
         </a>
       </p>
-      <div className="eq-geo-table-scroll">
-        <table className="eq-geo-table eq-geo-table--proforma">
-          <thead>
-            <tr>
-              <th>{u.thZone}</th>
-              <th>{u.thName}</th>
-              <th>{u.thDim}</th>
-              <th className="eq-geo-num">{u.thQty}</th>
-              <th className="eq-geo-num">{u.thList}</th>
-              <th className="eq-geo-num">{u.thQuote}</th>
-            </tr>
-          </thead>
-          <tbody>
-            {table.zones.map((zone) =>
-              zone.items.map((item, idx) => (
-                <tr key={`${zone.zone}-${idx}-${item.ad}`}>
-                  <td>{idx === 0 ? zone.zone : ""}</td>
-                  <td>{item.ad}</td>
-                  <td>{item.olcu && item.olcu !== "-" ? item.olcu : "—"}</td>
-                  <td className="eq-geo-num">{item.adet}</td>
-                  <td className="eq-geo-num">
-                    {formatGeoTableEur(item.listeTutarEur, lang)}
-                  </td>
-                  <td className="eq-geo-num">
-                    {formatGeoTableEur(item.satisTutarEur, lang)}
-                  </td>
-                </tr>
-              )),
-            )}
-          </tbody>
-          <tfoot>
-            <tr>
-              <th colSpan={4}>{u.total}</th>
-              <th className="eq-geo-num">
-                {formatGeoTableEur(table.ozet.listeToplamEur, lang)}
-              </th>
-              <th className="eq-geo-num">
-                {formatGeoTableEur(table.ozet.satisToplamEur, lang)}
-              </th>
-            </tr>
-          </tfoot>
-        </table>
+      <div className="eq-geo-proforma-zones">
+        {zones.map((zone) => (
+          <section key={zone.zone} className="eq-geo-proforma-zone">
+            <h3>{zoneHeading(zone.zone)}</h3>
+            <ul className="eq-geo-proforma-items">
+              {zone.items.map((item, idx) => (
+                <li key={`${zone.zone}-${idx}-${item.ad}`}>{item.ad}</li>
+              ))}
+            </ul>
+          </section>
+        ))}
       </div>
     </section>
   );

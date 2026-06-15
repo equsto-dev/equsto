@@ -7,7 +7,7 @@
     "title": "Steakhouse kitchen planning guide | Equsto",
     "description": "Steakhouse kitchen setup: reference proforma 2018-199-3 table (63 items), dry-age, grilling, refrigeration and warewashing. Quote via Project Factory.",
     "h1": "Steakhouse kitchen setup",
-    "lead": "High-heat cooking, dry-age refrigeration and the hygiene line are modelled on one plan. The table below is reference proforma 2018-199-3; the Excel file is attached.",
+    "lead": "High-heat cooking, dry-age refrigeration and the hygiene line are modelled on one plan. The list below is the reference proforma 2018-199-3 equipment schedule.",
     "tableRef": "geo/steakhouse-2018-199-3-table.json",
     "skipBudget": true,
     "body": "<p>In a steakhouse kitchen, dry-age cabinets, high-heat grills and range lines, and meat prep modules are arranged in one flow. Hood static pressure and refrigeration run length are validated early; service pace drives how many cooking stations you need.</p><p>Cooking and holding zones stay separate; warewashing speed must carry peak covers. Grinding and slicing modules follow short-travel rules between prep and service.</p><p>The sample table links to catalogue SKUs. Expand the list in Project Factory by capacity and menu; installation and commissioning are planned with sales engineering. Complete the equipment list in Project Factory or via our contact channel.</p>",
