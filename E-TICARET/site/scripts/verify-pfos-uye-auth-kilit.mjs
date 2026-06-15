@@ -164,7 +164,7 @@ if (!eqMember.includes('equstoUrl("account")')) fail("equsto-member.js: account 
 if (!eqMember.includes("equstoMemberHasPhone")) fail("equsto-member.js: equstoMemberHasPhone yok");
 
 const accountHub = read("components/account/MemberAccountHub.tsx");
-if (!accountHub.includes("sectionHead")) fail("MemberAccountHub: Giriş ve güvenlik başlık satırı yok");
+if (!accountHub.includes("sectionFoot")) fail("MemberAccountHub: guvenlik karti alt satiri yok");
 if (!accountHub.includes("logoutBtn")) fail("MemberAccountHub: Çıkış yap butonu yok");
 if (!accountHub.includes("phoneRequiredBanner")) fail("MemberAccountHub: telefon zorunlu banner yok");
 
