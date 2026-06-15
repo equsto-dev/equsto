@@ -1,4 +1,5 @@
 import { getSiteOrigin } from "@/lib/site-origin";
+import { EKIPMANLAR_JSON } from "@/lib/catalog-paths";
 
 /** public/data altında göreli yol (path.join yok — Turbopack trace güvenli) */
 export function dataRel(...parts: string[]): string {
@@ -45,6 +46,10 @@ export async function readJsonFile<T>(fileOrRel: string): Promise<T | null> {
   if (local != null) return local;
 
   if (canReadLocalPublicData()) {
+    return null;
+  }
+
+  if (rel === EKIPMANLAR_JSON || rel === "ekipmanlar-full-archive.json") {
     return null;
   }
 

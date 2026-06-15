@@ -5,6 +5,7 @@ import {
 } from "@/lib/catalog/kw-resolve";
 import { loadLegacyCatalogRows } from "@/lib/legacy-catalog";
 import type { EslesmisUrun } from "../schemas/pfos.schema";
+import { teklifAciklamaFromAdminRow } from "./katalog-row-eslesmis";
 
 function normSku(s: string | null | undefined): string {
   return String(s ?? "")
@@ -24,9 +25,14 @@ function kwFromAdminRow(row: AdminUrunRow) {
     description: row.description,
     ozti_web_description: row.ozti_web_description,
     inoksan_shop_description: row.inoksan_shop_description,
+    pimak_web_description: row.pimak_web_description,
     teknik_ozellikler: row.teknik_ozellikler,
     olculer: row.olculer,
   });
+}
+
+function kwMissing(v: number | null | undefined): boolean {
+  return v == null || !Number.isFinite(v) || v <= 0;
 }
 
 /** Eşleşmiş ürüne katalogdan kW zenginleştirme */
@@ -49,20 +55,29 @@ export async function enrichEslesmisUrunKw(
 
   let elk = urun.elektrikGucuKw;
   let gaz = urun.gazGucuKw;
+  let teklifAciklama = urun.teklifAciklama;
 
-  if ((elk == null || elk <= 0) && (gaz == null || gaz <= 0) && urun.sku?.trim()) {
+  const needsElk = kwMissing(elk);
+  const needsGaz = kwMissing(gaz);
+  const needsAciklama = !teklifAciklama?.trim();
+
+  if ((needsElk || needsGaz || needsAciklama) && urun.sku?.trim()) {
     const rows = await loadLegacyCatalogRows();
     const row = rows.find((r) => normSku(r.sku) === normSku(urun.sku));
     if (row) {
       const kw = kwFromAdminRow(row);
-      if (elk == null || elk <= 0) elk = kw.elektrikGucuKw;
-      if (gaz == null || gaz <= 0) gaz = kw.gazGucuKw;
+      if (needsElk && kw.elektrikGucuKw != null) elk = kw.elektrikGucuKw;
+      if (needsGaz && kw.gazGucuKw != null) gaz = kw.gazGucuKw;
+      if (needsAciklama) {
+        teklifAciklama = teklifAciklamaFromAdminRow(row) ?? teklifAciklama;
+      }
     }
   }
 
   return {
     ...urun,
-    elektrikGucuKw: elk != null && elk > 0 ? elk : null,
-    gazGucuKw: gaz != null && gaz > 0 ? gaz : null,
+    teklifAciklama: teklifAciklama ?? urun.teklifAciklama,
+    elektrikGucuKw: !kwMissing(elk) ? elk : null,
+    gazGucuKw: !kwMissing(gaz) ? gaz : null,
   };
 }

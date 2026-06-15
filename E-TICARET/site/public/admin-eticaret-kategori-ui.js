@@ -788,9 +788,10 @@
     try {
       if (global.EqustoEcomData && global.EqustoEcomData.fetchFresh) {
         rows = await global.EqustoEcomData.fetchFresh();
+      } else if (global.EqustoShopCatalog && global.EqustoShopCatalog.loadMergedCatalog) {
+        rows = await global.EqustoShopCatalog.loadMergedCatalog();
       } else {
-        var r = await fetch("./data/ekipmanlar.json", { cache: "no-store" });
-        rows = await r.json();
+        throw new Error("Katalog yükleyici yok");
       }
     } catch (e) {
       alert("Katalog okunamadı: " + (e.message || e));

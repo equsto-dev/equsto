@@ -156,13 +156,50 @@
     if (fb) try { fb.remove(); } catch (_) {}
   }
 
-  /** Tek doğru kayıt dosyası: public/data/ekipmanlar.json */
-  function fetchUrlCandidates(){
-    var out = ['/data/ekipmanlar.json', publicDataFileHref('data/ekipmanlar.json')];
-    if (typeof location !== 'undefined' && location.protocol === 'file:') {
-      out.push('./data/ekipmanlar.json', 'data/ekipmanlar.json', DEFAULT_URL);
+  /** Tam katalog: departman JSON birleşimi (ekipmanlar.json artık public değil) */
+  var DEPT_IDS = [
+    "pisirme", "sogutma", "kahve", "yikama", "hazirlik", "icecek", "tezgah",
+    "dolap", "davlumbaz", "tasima", "araba", "istif", "set-ustu-mutfak",
+    "market-reyon", "kuvetler", "servis",
+  ];
+
+  function fetchDeptCatalogJson(dept) {
+    var url = publicDataFileHref("data/dept/" + encodeURIComponent(dept) + ".json");
+    return fetch(url, { cache: "default", headers: { Accept: "application/json" } }).then(function (r) {
+      if (!r.ok) throw new Error("dept " + dept + " HTTP " + r.status);
+      return r.json();
+    });
+  }
+
+  function loadMergedDeptCatalog() {
+    if (window.EqustoShopCatalog && typeof window.EqustoShopCatalog.loadMergedCatalog === "function") {
+      return window.EqustoShopCatalog.loadMergedCatalog();
     }
-    return out.filter(function (u, i, a) { return u && a.indexOf(u) === i; });
+    return Promise.all(
+      DEPT_IDS.map(function (d) {
+        return fetchDeptCatalogJson(d).catch(function () {
+          return [];
+        });
+      })
+    ).then(function (parts) {
+      var seen = Object.create(null);
+      var out = [];
+      parts.forEach(function (arr) {
+        (arr || []).forEach(function (row) {
+          if (!row) return;
+          var key = String(row.id || row.sku || row.model || row.name || "").trim();
+          if (!key || seen[key]) return;
+          seen[key] = 1;
+          out.push(row);
+        });
+      });
+      return out;
+    });
+  }
+
+  /** Tek doğru kayıt dosyası: var/catalog/ekipmanlar.json (sunucu); istemci dept birleşimi */
+  function fetchUrlCandidates(){
+    return [];
   }
 
   async function fetchEkipmanlarFromNetwork(){
@@ -188,8 +225,19 @@
       throw emptyErr;
     }
 
-    var urls = fetchUrlCandidates();
     var errors = [];
+    try {
+      var merged = await loadMergedDeptCatalog();
+      if (Array.isArray(merged) && merged.length) {
+        clearFilePreviewUI();
+        return merged;
+      }
+      errors.push("dept birleşimi → boş");
+    } catch (e) {
+      errors.push("dept birleşimi → " + (e && e.message ? e.message : String(e)));
+    }
+
+    var urls = fetchUrlCandidates();
     for (var i = 0; i < urls.length; i++) {
       try {
         var r = await fetch(urls[i], { cache: 'default', headers: { Accept: 'application/json' } });
