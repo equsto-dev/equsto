@@ -16,7 +16,11 @@ function countInFile(file) {
   return rows.filter((r) => r && r.kaynak === KAYNAK).length;
 }
 
-const ekipPath = path.join(ROOT, "public/data/ekipmanlar.json");
+const ekipCandidates = [
+  path.join(ROOT, "var/catalog/ekipmanlar.json"),
+  path.join(ROOT, "public/data/ekipmanlar.json"),
+];
+const ekipPath = ekipCandidates.find((p) => fs.existsSync(p)) ?? ekipCandidates[0];
 const pisirmePath = path.join(ROOT, "public/data/dept/pisirme.json");
 const ekipN = countInFile(ekipPath);
 const pisirmeN = countInFile(pisirmePath);
