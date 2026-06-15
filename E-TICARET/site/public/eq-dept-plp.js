@@ -962,8 +962,7 @@
     }
     var raw = u && u.raw;
     var b = String((u && u.b) || (raw && raw.brand) || '').trim();
-    var oem = raw && String(raw.oem_brand || '').trim();
-    if (oem && /öztiryakiler|oztiryakiler/i.test(b)) return '';
+    if (/öztiryakiler|oztiryakiler/i.test(lc(b))) return 'Öztiryakiler';
     return b;
   }
 
