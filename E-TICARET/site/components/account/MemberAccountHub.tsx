@@ -297,16 +297,7 @@ export default function MemberAccountHub() {
       </div>
 
       <section className={styles.section} id="guvenlik">
-        <div className={styles.sectionHead}>
-          <h2 className={styles.sectionTitle}>Giriş ve güvenlik</h2>
-          <button
-            type="button"
-            className={styles.logoutBtn}
-            onClick={() => void onLogout()}
-          >
-            Çıkış yap
-          </button>
-        </div>
+        <h2 className={styles.sectionTitle}>Giriş ve güvenlik</h2>
         <div className={styles.profileGrid}>
           <div>
             <span className={styles.profileLabel}>Ad Soyad</span>
@@ -382,6 +373,15 @@ export default function MemberAccountHub() {
                   : profile.provider || "—"}
             </span>
           </div>
+        </div>
+        <div className={styles.sectionFoot}>
+          <button
+            type="button"
+            className={styles.logoutBtn}
+            onClick={() => void onLogout()}
+          >
+            Çıkış yap
+          </button>
         </div>
       </section>
 
