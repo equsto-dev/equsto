@@ -1306,21 +1306,13 @@
     return head.concat(shuffleDeptList("istif", tail, "products-tail"));
   }
 
-  /** Kahve: espresso → değirmen → filtre → türk; yıkama: 500/1000 tb/s + marka karışımı. */
+  /** Kahve: karışık vitrin; yıkama: 500/1000 tb/s + marka karışımı. */
   function sortProductsDefault(dept, list) {
     if (dept === "yikama") {
       return sortYikamaProducts(list);
     }
     if (dept === "istif") {
       return sortIstifProducts(list);
-    }
-    if (dept === "kahve") {
-      return list.slice().sort(function (a, b) {
-        var ra = productRank(dept, a);
-        var rb = productRank(dept, b);
-        if (ra !== rb) return ra - rb;
-        return String(a.n || "").localeCompare(String(b.n || ""), "tr");
-      });
     }
     if (dept === "hazirlik") {
       var rcN = 0;
