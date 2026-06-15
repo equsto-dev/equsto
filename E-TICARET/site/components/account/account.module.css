@@ -92,6 +92,118 @@
   color: #5c6378;
 }
 
+.profileRow {
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) minmax(280px, 1.35fr);
+  gap: 20px;
+  align-items: start;
+  margin-bottom: 36px;
+}
+
+.profileCol {
+  min-width: 0;
+}
+
+.profileCol .section {
+  margin-bottom: 0;
+}
+
+.infoCard {
+  border: 2px solid #001e50;
+  border-radius: 10px;
+  padding: 16px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+  box-shadow: 0 4px 12px rgba(0, 30, 80, 0.05);
+  scroll-margin-top: calc(var(--eq-shop-chrome-h, 118px) + 16px);
+}
+
+.infoCardHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.infoCardTitle {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #001e50;
+}
+
+.infoCardBadge {
+  flex-shrink: 0;
+  background: #eef3fb;
+  color: #001e50;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.infoCardMeta {
+  margin: 0 0 6px;
+  font-size: 0.85rem;
+  color: #1a1d2b;
+  font-weight: 500;
+}
+
+.infoCardLine {
+  margin: 0 0 4px;
+  font-size: 0.85rem;
+  color: #1a1d2b;
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.infoCardLineMuted {
+  margin: 0;
+  font-size: 0.82rem;
+  color: #5c6378;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.infoCardPhoneForm {
+  margin-top: 8px;
+}
+
+.infoCardFoot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  border-top: 1px solid #eef3fb;
+  padding-top: 10px;
+}
+
+.infoCardAction {
+  background: none;
+  border: none;
+  color: #2563a8;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.infoCardAction:hover {
+  color: #001e50;
+  text-decoration: underline;
+}
+
+.infoCardFoot .logoutBtn {
+  margin-left: auto;
+  padding: 6px 14px;
+  font-size: 0.78rem;
+}
+
 .section {
   margin-bottom: 36px;
   padding: 22px 20px;
@@ -114,6 +226,28 @@
   margin-top: 20px;
   padding-top: 16px;
   border-top: 1px solid #e8ecf2;
+}
+
+.addressCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.addressCard {
+  border: 1px solid #d5dbe6;
+  border-radius: 10px;
+  padding: 16px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.addressCardDefault {
+  border: 2px solid #001e50;
+  box-shadow: 0 4px 12px rgba(0, 30, 80, 0.05);
 }
 
 .profileGrid {
@@ -375,6 +509,10 @@
 @media (max-width: 960px) {
   .grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .profileRow {
+    grid-template-columns: 1fr;
   }
 
   .linkColumns {

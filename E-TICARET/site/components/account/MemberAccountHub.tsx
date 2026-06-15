@@ -91,6 +91,12 @@ function formatPhone(t: string) {
   return t || "—";
 }
 
+function providerLabel(provider: string) {
+  if (provider === "google") return "Google";
+  if (provider === "email") return "E-posta";
+  return provider || "—";
+}
+
 export default function MemberAccountHub() {
   const [profile, setProfile] = useState<MemberProfile | null>(null);
   const [ready, setReady] = useState(false);
@@ -296,102 +302,95 @@ export default function MemberAccountHub() {
         ))}
       </div>
 
-      <section className={styles.section} id="guvenlik">
-        <h2 className={styles.sectionTitle}>Giriş ve güvenlik</h2>
-        <div className={styles.profileGrid}>
-          <div>
-            <span className={styles.profileLabel}>Ad Soyad</span>
-            <span className={styles.profileValue}>{profile.name || "—"}</span>
-          </div>
-          <div>
-            <span className={styles.profileLabel}>E-posta</span>
-            <span className={styles.profileValue}>{profile.email}</span>
-          </div>
-          <div className={styles.phoneField}>
-            <span className={styles.profileLabel}>Cep telefonu</span>
-            {phoneEditing ? (
-              <div className={styles.phoneForm}>
-                <input
-                  type="tel"
-                  className={styles.phoneInput}
-                  value={phoneInput}
-                  onChange={(e) => setPhoneInput(e.target.value)}
-                  placeholder="5xx xxx xx xx"
-                  autoComplete="tel"
-                  inputMode="tel"
-                  disabled={phoneSaving}
-                />
-                <div className={styles.phoneActions}>
-                  <button
-                    type="button"
-                    className={styles.phoneSaveBtn}
-                    onClick={() => void savePhone()}
-                    disabled={phoneSaving}
-                  >
-                    {phoneSaving ? "Kaydediliyor…" : "Kaydet"}
-                  </button>
-                  <button
-                    type="button"
-                    className={styles.phoneCancelBtn}
-                    onClick={cancelPhoneEdit}
-                    disabled={phoneSaving}
-                  >
-                    İptal
-                  </button>
-                </div>
-                {phoneError ? (
-                  <p className={styles.phoneError}>{phoneError}</p>
-                ) : (
-                  <p className={styles.phoneHint}>
-                    WhatsApp mesajları, PFOS teklif PDF&apos;i ve Equsto ekibinin
-                    size dönüş yapması için zorunludur.
-                  </p>
-                )}
-              </div>
-            ) : (
-              <div className={styles.phoneDisplay}>
-                <span className={styles.profileValue}>
-                  {formatPhone(profile.telefon)}
+      <div className={styles.profileRow}>
+        <div className={styles.profileCol} id="guvenlik">
+          <div className={styles.infoCard}>
+            <div>
+              <div className={styles.infoCardHead}>
+                <h3 className={styles.infoCardTitle}>Giriş ve güvenlik</h3>
+                <span className={styles.infoCardBadge}>
+                  {providerLabel(profile.provider)}
                 </span>
+              </div>
+              <p className={styles.infoCardMeta}>{profile.name || "—"}</p>
+              <p className={styles.infoCardLine}>{profile.email}</p>
+              {phoneEditing ? (
+                <div className={styles.infoCardPhoneForm}>
+                  <span className={styles.profileLabel}>Cep telefonu</span>
+                  <input
+                    type="tel"
+                    className={styles.phoneInput}
+                    value={phoneInput}
+                    onChange={(e) => setPhoneInput(e.target.value)}
+                    placeholder="5xx xxx xx xx"
+                    autoComplete="tel"
+                    inputMode="tel"
+                    disabled={phoneSaving}
+                  />
+                  <div className={styles.phoneActions}>
+                    <button
+                      type="button"
+                      className={styles.phoneSaveBtn}
+                      onClick={() => void savePhone()}
+                      disabled={phoneSaving}
+                    >
+                      {phoneSaving ? "Kaydediliyor…" : "Kaydet"}
+                    </button>
+                    <button
+                      type="button"
+                      className={styles.phoneCancelBtn}
+                      onClick={cancelPhoneEdit}
+                      disabled={phoneSaving}
+                    >
+                      İptal
+                    </button>
+                  </div>
+                  {phoneError ? (
+                    <p className={styles.phoneError}>{phoneError}</p>
+                  ) : (
+                    <p className={styles.phoneHint}>
+                      WhatsApp mesajları, PFOS teklif PDF&apos;i ve Equsto ekibinin
+                      size dönüş yapması için zorunludur.
+                    </p>
+                  )}
+                </div>
+              ) : (
+                <p className={styles.infoCardLineMuted}>
+                  {formatPhone(profile.telefon)}
+                </p>
+              )}
+            </div>
+            <div className={styles.infoCardFoot}>
+              {!phoneEditing ? (
                 <button
                   type="button"
-                  className={styles.phoneEditBtn}
+                  className={styles.infoCardAction}
                   onClick={startPhoneEdit}
                 >
-                  {profile.telefon ? "Düzenle" : "Ekle"}
+                  {profile.telefon ? "Telefonu düzenle" : "Telefon ekle"}
                 </button>
-              </div>
-            )}
-          </div>
-          <div>
-            <span className={styles.profileLabel}>Giriş yöntemi</span>
-            <span className={styles.profileValue}>
-              {profile.provider === "google"
-                ? "Google"
-                : profile.provider === "email"
-                  ? "E-posta"
-                  : profile.provider || "—"}
-            </span>
+              ) : null}
+              <button
+                type="button"
+                className={styles.logoutBtn}
+                onClick={() => void onLogout()}
+              >
+                Çıkış yap
+              </button>
+            </div>
           </div>
         </div>
-        <div className={styles.sectionFoot}>
-          <button
-            type="button"
-            className={styles.logoutBtn}
-            onClick={() => void onLogout()}
-          >
-            Çıkış yap
-          </button>
-        </div>
-      </section>
 
-      <MemberAddressSection
-        value={profile.teslimatAdres || EMPTY_MEMBER_TESLIMAT_ADRES}
-        autoEdit={addressAutoEdit}
-        onSaved={(teslimatAdres) =>
-          setProfile((prev) => (prev ? { ...prev, teslimatAdres } : prev))
-        }
-      />
+        <div className={styles.profileCol}>
+          <MemberAddressSection
+            value={profile.teslimatAdres || EMPTY_MEMBER_TESLIMAT_ADRES}
+            autoEdit={addressAutoEdit}
+            onSaved={(teslimatAdres) =>
+              setProfile((prev) => (prev ? { ...prev, teslimatAdres } : prev))
+            }
+          />
+        </div>
+      </div>
 
       {/* Siparişlerim Section */}
       <section className={styles.section} id="siparislerim">
