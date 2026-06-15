@@ -37,7 +37,7 @@ kayıt (telefon + şifre tekrar) ve Amazon tarzı /hesabim merkezini korur.
 
 ── 5. Hesabım merkezi ────────────────────────────────────────────────────
   • /hesabim — Amazon tarzı kart + link sütunları (MemberAccountHub)
-  • Üst sağ: «Çıkış yap» + alt link sütununda Çıkış yap
+  • Üst başlıkta çıkış yok; «Giriş ve güvenlik» kartı başlığı sağında Çıkış yap + alt link sütununda Çıkış yap
   • Telefon yoksa sarı banner + otomatik düzenleme; Google giriş sonrası #guvenlik
   • eq-site-urls.js: account → /hesabim (EN: /en/account)
   • equsto-member.js: girişli header → equstoUrl("account"); equstoMemberHasPhone()
