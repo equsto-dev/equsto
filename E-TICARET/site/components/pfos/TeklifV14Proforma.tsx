@@ -1,6 +1,6 @@
 "use client";
 
-import { DownloadOutlined, MailOutlined, PrinterOutlined } from "@ant-design/icons";
+import { DislikeOutlined, DownloadOutlined, LikeOutlined, MailOutlined, PrinterOutlined } from "@ant-design/icons";
 import { Button, Collapse, Form, Modal, Typography } from "antd";
 import { Fragment, useEffect, useState, type CSSProperties } from "react";
 import type { TeklifModelV14 } from "@/lib/pfos/teklif/teklif-v14.types";
@@ -20,6 +20,8 @@ type Props = {
 };
 
 type SendKanal = "email" | "whatsapp";
+
+type TeklifFeedback = "up" | "down";
 
 type DeliveryResult = {
   kind: "ok";
@@ -83,6 +85,7 @@ type EqustoMemberWindow = Window & {
     error?: string;
   }) => void;
   equstoTrackConversion?: (type: string, params?: Record<string, unknown>) => void;
+  equstoTrackEvent?: (name: string, params?: Record<string, unknown>) => void;
 };
 
 export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props) {
@@ -91,6 +94,7 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
   const [sendResult, setSendResult] = useState<
     DeliveryResult | { kind: "err"; message: string } | null
   >(null);
+  const [teklifFeedback, setTeklifFeedback] = useState<TeklifFeedback | null>(null);
   const [form] = Form.useForm<{
     ad: string;
     telefon: string;
@@ -124,6 +128,37 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps -- form doldurma: mount + üye oturumu
   }, [deliveryOnly, ust.musteri]);
+
+  useEffect(() => {
+    if (!deliveryOnly || typeof window === "undefined") return;
+    try {
+      const saved = localStorage.getItem(`pfos_teklif_fb_${ust.sayi}`);
+      if (saved === "up" || saved === "down") setTeklifFeedback(saved);
+    } catch {
+      /* ignore */
+    }
+  }, [deliveryOnly, ust.sayi]);
+
+  function submitTeklifFeedback(vote: TeklifFeedback) {
+    if (teklifFeedback) return;
+    setTeklifFeedback(vote);
+    try {
+      localStorage.setItem(`pfos_teklif_fb_${ust.sayi}`, vote);
+    } catch {
+      /* ignore */
+    }
+    const w = window as EqustoMemberWindow;
+    const payload = {
+      vote,
+      teklif: ust.sayi,
+      konsept: meta.konsept,
+      konsept_label: meta.konseptLabel,
+      genel_toplam: ozet.genelToplam,
+      doviz: ozet.doviz,
+    };
+    w.equstoTrackEvent?.("pfos_teklif_feedback", payload);
+    w.equstoTrackConversion?.("pfos_teklif_feedback", payload);
+  }
 
   async function handleExport() {
     setExporting(true);
@@ -549,6 +584,44 @@ export default function TeklifV14Proforma({ model, deliveryOnly = false }: Props
               >
                 WhatsApp&apos;ıma gönder (PDF)
               </Button>
+            </div>
+            <div
+              style={{
+                marginTop: 14,
+                paddingTop: 14,
+                borderTop: "1px solid #d9f7be",
+              }}
+            >
+              <Typography.Text
+                type="secondary"
+                style={{ display: "block", marginBottom: 8, fontSize: 13 }}
+              >
+                Bu teklif size yardımcı oldu mu?
+              </Typography.Text>
+              <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
+                <Button
+                  icon={<LikeOutlined />}
+                  type={teklifFeedback === "up" ? "primary" : "default"}
+                  onClick={() => submitTeklifFeedback("up")}
+                  disabled={teklifFeedback !== null}
+                >
+                  Beğendim
+                </Button>
+                <Button
+                  icon={<DislikeOutlined />}
+                  danger={teklifFeedback === "down"}
+                  type={teklifFeedback === "down" ? "primary" : "default"}
+                  onClick={() => submitTeklifFeedback("down")}
+                  disabled={teklifFeedback !== null}
+                >
+                  Beğenmedim
+                </Button>
+                {teklifFeedback ? (
+                  <Typography.Text type="secondary" style={{ fontSize: 12 }}>
+                    Teşekkürler — geri bildiriminiz kaydedildi.
+                  </Typography.Text>
+                ) : null}
+              </div>
             </div>
           </Form>
         </div>
