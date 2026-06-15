@@ -76,7 +76,11 @@ type Props = {
   initialQuestions?: WizardQuestion[];
 };
 
-const M2_PRESETS = [40, 80, 120, 200, 350];
+const M2_PRESETS = [40, 80, 120, 200, 350, 500, 750, 1000];
+
+function formatM2Preset(n: number) {
+  return `${n.toLocaleString("tr-TR")} m²`;
+}
 
 /** Panel geçiş süreleri (CSS transition ile eşleşmeli) */
 const PFOS_PANEL_FADE_MS = 580;
@@ -640,7 +644,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
             type="number"
             className={styles.alanInput}
             min={minM2}
-            max={2000}
+            max={10000}
             value={val}
             onChange={(e) => setM2Value(e.target.value)}
           />
@@ -654,7 +658,7 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
               className={`${styles.presetBtn}${val === n ? ` ${styles.presetBtnActive}` : ""}`}
               onClick={() => setM2Value(String(n))}
             >
-              {n} m²
+              {formatM2Preset(n)}
             </button>
           ))}
         </div>
@@ -697,10 +701,14 @@ export default function PfosPublicWizard({ initialQuestions }: Props) {
     }
 
     if (q.type === "select" || q.type === "select_conditional") {
-      const opts =
+      const rawOpts =
         q.type === "select_conditional"
           ? dukkanSecenekleri(q, answers)
           : ((q.options as string[]) ?? []);
+      const opts =
+        q.id === "q_ust_segment"
+          ? rawOpts.filter((o) => o !== "Bilmiyorum")
+          : rawOpts;
       const val = String(answers[id] ?? "");
       const twoCol = opts.length > 6;
       const bulutKompakt =
