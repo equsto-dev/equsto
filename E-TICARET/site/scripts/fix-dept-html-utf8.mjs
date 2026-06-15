@@ -153,8 +153,10 @@ const DEPT = {
 };
 
 const MARKA_BY_DEPT = {
-  icecek: "['Ateşe', 'Öztiryakiler']",
-  kahve: "['WMF', 'Nuova Simonelli', 'Bravilor Bonamat', 'Öztiryakiler']",
+  icecek:
+    "['İnoksan', 'Electrolux Professional', 'Şenox', 'Rational', 'Öztiryakiler', 'Robot Coupe', 'Atalay', 'Faema', 'Sanremo', 'Gtech', 'La Cimbali']",
+  kahve:
+    "['İnoksan', 'Electrolux Professional', 'Şenox', 'Rational', 'Öztiryakiler', 'Robot Coupe', 'Atalay', 'Faema', 'Sanremo', 'Gtech', 'La Cimbali']",
 };
 
 const FILE_DEPT = {

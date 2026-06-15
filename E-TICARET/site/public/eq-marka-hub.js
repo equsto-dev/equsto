@@ -164,10 +164,33 @@
       "</div></section></div>";
   }
 
+  function brandSortKey(brand) {
+    var name = String((brand && (brand.catalogName || brand.name)) || "").trim();
+    return name.toLocaleLowerCase("tr");
+  }
+
+  function sortBrandsByPriority(brands) {
+    var list = Array.isArray(brands) ? brands.slice() : [];
+    var w = typeof window !== "undefined" ? window : {};
+    var order = w.__EQUSTO_REF_MARKALAR_SIRASI;
+    if (!order || !Array.isArray(order) || !order.length) return list;
+    var rank = {};
+    order.forEach(function (name, i) {
+      rank[String(name || "").trim().toLocaleLowerCase("tr")] = i;
+    });
+    list.sort(function (a, b) {
+      var ia = Object.prototype.hasOwnProperty.call(rank, brandSortKey(a)) ? rank[brandSortKey(a)] : 1e9;
+      var ib = Object.prototype.hasOwnProperty.call(rank, brandSortKey(b)) ? rank[brandSortKey(b)] : 1e9;
+      if (ia !== ib) return ia - ib;
+      return brandSortKey(a).localeCompare(brandSortKey(b), "tr");
+    });
+    return list;
+  }
+
   function loadBrands() {
     var w = typeof window !== "undefined" ? window : {};
     if (w.__EQUSTO_MARKA_HUB_BRANDS && Array.isArray(w.__EQUSTO_MARKA_HUB_BRANDS)) {
-      return Promise.resolve(w.__EQUSTO_MARKA_HUB_BRANDS);
+      return Promise.resolve(sortBrandsByPriority(w.__EQUSTO_MARKA_HUB_BRANDS));
     }
     return fetch(BRANDS_JSON, { credentials: "same-origin", cache: "default" })
       .then(function (r) {
@@ -175,7 +198,7 @@
         return r.json();
       })
       .then(function (j) {
-        return (j && j.brands) || [];
+        return sortBrandsByPriority((j && j.brands) || []);
       })
       .catch(function () {
         return [];
