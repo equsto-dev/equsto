@@ -17,6 +17,7 @@ function refreshCartUi() {
           bindPageActions?: () => void;
           prefillCheckout?: () => void;
           syncFromServer?: (opts?: { force?: boolean }) => Promise<boolean>;
+          startPolling?: () => void;
         };
       }
     ).EqustoCart;
@@ -25,6 +26,7 @@ function refreshCartUi() {
       cart?.bindPageActions?.();
       cart?.prefillCheckout?.();
       cart?.render?.();
+      cart?.startPolling?.();
       // Auto-pull from server on page mount to sync cart (like Amazon)
       cart?.syncFromServer?.({ force: true }).then(() => {
         cart?.render?.();

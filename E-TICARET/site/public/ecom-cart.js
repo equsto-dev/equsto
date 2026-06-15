@@ -397,6 +397,7 @@
       pushShopCartNow([], { replace: true, clear: true, keepalive: true });
       return;
     }
+    if (!shopCartPushTimer) return; // Prevent overwriting newer server state with stale local state on reload
     var payload = load();
     if (!payload.length) return;
     pushShopCartNow(payload, { keepalive: true });
@@ -2202,8 +2203,24 @@
   }
 
   var visibleSyncTimer = null;
+  var pollInterval = null;
   function pullCartFromServer(opts) {
     return shopCartPull(opts || {});
+  }
+
+  function startCartPagePolling() {
+    if (pollInterval) clearInterval(pollInterval);
+    if (!isCartPage()) return;
+    pollInterval = setInterval(function () {
+      if (!isCartPage()) {
+        clearInterval(pollInterval);
+        pollInterval = null;
+        return;
+      }
+      if (document.visibilityState === 'visible' && usesAuthCartSync() && !shopCartPullInFlight) {
+        pullCartFromServer({ force: true });
+      }
+    }, 8000);
   }
 
   function onAppForeground() {
@@ -2308,6 +2325,7 @@
       bindCheckoutUi();
       renderPanelList();
       prefillCheckoutForm();
+      startCartPagePolling();
     }
     bootCartSync();
   }
@@ -2377,6 +2395,7 @@
     prefillCheckout: prefillCheckoutForm,
     syncFromServer: syncFromServer,
     render: renderPanelList,
+    startPolling: startCartPagePolling,
     _load: load,
   };
 
