@@ -205,6 +205,8 @@ export const PFOS_LABELS_EN = {
   "PFOS sürüm bilgisi": "PFOS version information",
   "Equsto.com yapay zekadan yardım alır; hata yapabilir.":
     "Equsto.com uses AI assistance; it may make mistakes.",
+  "Equsto.com yapay zekadan yardım alır, hata yapabilir.":
+    "Equsto.com uses AI assistance; it may make mistakes.",
   "Lütfen iletişime geçin.": "Please contact us.",
   "Güncellenmiş fiyat teklifi": "Updated price quote",
   "Henüz konsept seçilmedi.": "No concept selected yet.",
